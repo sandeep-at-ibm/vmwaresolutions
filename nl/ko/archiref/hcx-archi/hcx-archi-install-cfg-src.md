@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-15"
 
+subcollection: vmwaresolutions
+
+
 ---
 # 소스에 HCX 설치 및 구성
 {: #hcx-archi-install-cfg-src}

@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-01"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # 네트워킹, 백업, 재해 복구 및 확장성
@@ -140,7 +143,7 @@ BCR로 전달됩니다.
 ### NSX 백업
 {: #vcsiks-overview-network-nsx-backup}
 
-모든 NSX 컴포넌트의 적절한 백업은 장애가 발생하는 경우 시스템을 해당 작업 상태로 복원하는 데 매우 중요합니다. NSX VM을 백업하는 것만으로는 충분하지 않습니다. 적절한 백업을 위해서는 NSX Manager 내의 NSX 백업 기능을 사용해야 합니다. 이 백업을 위해서는 FTP 또는 SFTP 서버가 NSX 백업 데이터의 저장소에 대해 지정되어야 합니다. NSX 관리자 백업에는 제어기, 엔티티의 논리적 전환 및 라우팅, 보안, 방화벽 규칙 및 NSX 관리자 UI 또는 API 내에서 구성하는 모든 것을 포함하여 모든 NSX 구성이 포함됩니다. vCenter 데이터베이스와 관련 요소(예: 가상 스위치)는 별도로 백업됩니다. NSX 구성은 vCenter 백업과 함께 백업해야 합니다.
+모든 NSX 컴포넌트의 적절한 백업은 장애가 발생하는 경우 시스템을 해당 작업 상태로 복원하는 데 매우 중요합니다. NSX VM을 백업하는 것만으로는 충분하지 않습니다. 적절한 백업을 위해서는 NSX Manager 내의 NSX 백업 기능을 사용해야 합니다. 이 백업을 위해서는 FTP 또는 SFTP 서버가 NSX 백업 데이터의 저장소에 대해 지정되어야 합니다. NSX Manager 백업에는 제어기, 엔티티의 논리적 전환 및 라우팅, 보안, 방화벽 규칙 및 NSX Manager UI 또는 API 내에서 구성하는 모든 것을 포함하여 모든 NSX 구성이 포함됩니다. vCenter 데이터베이스와 관련 요소(예: 가상 스위치)는 별도로 백업됩니다. NSX 구성은 vCenter 백업과 함께 백업해야 합니다.
 
 ### IBM Cloud Kubernetes Service에 대한 백업 및 DR
 {: #vcsiks-overview-network-backup-dr-iks}

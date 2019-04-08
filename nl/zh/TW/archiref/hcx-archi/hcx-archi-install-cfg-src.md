@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-15"
 
+subcollection: vmwaresolutions
+
+
 ---
 # 在來源上安裝及配置 HCX
 {: #hcx-archi-install-cfg-src}

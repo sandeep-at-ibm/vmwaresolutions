@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-22"
+lastupdated: "2019-03-14"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -77,7 +80,6 @@ lastupdated: "2019-02-22"
 |嘗試的變更        |受影響的作業         |嚴重性    |回復方法         |
 |:------------- |:------------- |:--------------|:--------------|
 | 停用 vCenter Server 或 PSC 的 SSH 或 Shell 存取。| 主要及次要實例的配對可能會失敗。|重要|N/A    |
-| 停用 ESXi 的 SSH 或 Shell 存取。| 在實例中新增及移除主機、服務及網路儲存空間可能會失敗。|重要|N/A    |
 
 如果您選擇要停用 SSH 或 Shell 存取，在執行指示的作業之前您應該暫時將它重新啟用。
 

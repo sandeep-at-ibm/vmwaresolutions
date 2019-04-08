@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -53,6 +56,7 @@ lastupdated: "2019-03-01"
 디자인에서 각각의 실제 호스트에는 각 {{site.data.keyword.cloud_notm}} ToR(Top of Rack) 스위치(공용 및 사설)로 유입되는 10Gbps 이더넷 연결의 2개 중복 쌍이 있습니다. 어댑터는 총 4 × 10Gbps 연결을 위해 개별 연결(비부착)로 설정됩니다. 이렇게 하면 네트워킹 인터페이스 카드(NIC) 연결이 서로 독립적으로 작동할 수 있습니다.
 
 그림 2. 실제 호스트 연결
+</br>
 ![실제 호스트 연결](vcsnsxt-host-connections.svg)
 
 ## VLAN

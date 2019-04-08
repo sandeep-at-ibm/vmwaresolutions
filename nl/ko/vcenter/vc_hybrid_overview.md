@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-11"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -78,7 +81,7 @@ vCenter Server with Hybridity Bundle 인스턴스에는 다음 컴포넌트가 �
 ### Bare Metal Server
 {: #vc_hybrid_overview-bare-metal}
 
-4개의 {{site.data.keyword.baremetal_short}}가 vCenter Server with Hybridity Bundle 인스턴스 주문과 함께 제공됩니다. 다음 구성이 사용 가능합니다. 
+4개의 {{site.data.keyword.baremetal_short}}가 vCenter Server with Hybridity Bundle 인스턴스 주문과 함께 제공됩니다. 다음 구성이 사용 가능합니다.
   * **Skylake**: 선택한 CPU 모델 및 RAM 크기를 사용하는 두 개의 CPU Intel Skylake 세대 서버(Intel Xeon 4100/5100/6100 시리즈)
   * **Broadwell**: 선택한 CPU 모델 및 RAM 크기를 사용하는 두 개의 Intel Broadwell 세대 서버(IntelXeon E5-2600/E7-4800 시리즈)
 

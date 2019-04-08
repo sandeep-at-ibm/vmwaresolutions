@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-05"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # HCX 组件和术语的词汇表

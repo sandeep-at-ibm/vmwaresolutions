@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-13"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Acerca del almacenamiento adjunto para vCenter Server

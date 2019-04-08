@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-04"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Fehlerbehebung für HCX
@@ -44,14 +47,14 @@ Wenn ein Problem mit der WAN-Konnektivität auftritt, überprüfen Sie die Anzei
 Wenn es Fixes und Aktualisierungen gibt, die auf die HCX-Manager (Client und Cloud) angewendet wurden, und diese Aktualisierungen auch Programmkorrekturen an den Paketkomponenten bewirken, müssen Sie das Cloud-Gateway und alle bereitgestellten L2Cs erneut bereitstellen. Es ist möglich, ein weiteres Debugging des Tunnelstatus vorzunehmen, indem eine Verbindung zum HCX-Manager über einen SSH-Client wie z. B. 'ccli' hergestellt wird.  
 
 1. Stellen Sie eine SSH-Verbindung zum HCX-Manager mithilfe des Administratorkontos und des angegebenen Kennworts her.
-2. Führen Sie den Befehl `su –` aus und geben Sie das Kennwort des Benutzers `root` (identisch mit dem Administratorkennwort) ein, um zu 'Root' zu wechseln. 
+2. Führen Sie den Befehl `su –` aus und geben Sie das Kennwort des Benutzers `root` (identisch mit dem Administratorkennwort) ein, um zu 'Root' zu wechseln.
 3. Ändern Sie das Verzeichnis in `/opt/vmware/bin` und führen Sie den Befehl `./ccli` aus. Wenn dies nicht erfolgreich ist, weil die Umgebung nicht für 'Root' konfiguriert ist, führen Sie den Befehl `./ccliSetup.pl` aus.
-4. Führen Sie den Befehl `list` in der `ccli`-Shell aus, um die Paketkomponenten aufzulisten, die beim HCX-Manager registriert sind. 
+4. Führen Sie den Befehl `list` in der `ccli`-Shell aus, um die Paketkomponenten aufzulisten, die beim HCX-Manager registriert sind.
 5. Geben Sie die Paket-ID für `ccli` an, indem Sie die für die Paketkomponente aufgelistete ID eingeben. Beispiel: `go 8`.
-6. Führen Sie den Befehl `debug remoteaccess enable` aus, um über SSH eine Verbindung zu der gewünschten Paketkomponente herzustellen. 
-7. Verlassen Sie `ccli` und stellen Sie über SSH eine Verbindung zu der IP-Adresse der SSH-fähigen Paketkomponente her. 
+6. Führen Sie den Befehl `debug remoteaccess enable` aus, um über SSH eine Verbindung zu der gewünschten Paketkomponente herzustellen.
+7. Verlassen Sie `ccli` und stellen Sie über SSH eine Verbindung zu der IP-Adresse der SSH-fähigen Paketkomponente her.
 9. Fahren Sie mit der Fehlerbehebung fort.
-10. Kehren Sie zu `ccli` zurück und inaktivieren Sie den `ssh`-Service für die Komponente. 
+10. Kehren Sie zu `ccli` zurück und inaktivieren Sie den `ssh`-Service für die Komponente.
 11. Verwenden Sie bei Bedarf den ccli-Befehl `hc`, um eine Zustandsprüfung der Komponenten auszuführen.
 
 ## Kompatibilitätsproblem mit der Zielhardware

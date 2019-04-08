@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-01"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -53,11 +56,11 @@ La siguiente información se aplica a las redes VLAN privadas:
 
 Cada clúster de Kubernetes se configura con un plugin de red llamado Calico.
 
-Las políticas de red predeterminadas se configuran para proteger la interfaz de red pública de cada nodo trabajador en {{site.data.keyword.containerlong_notm}}. Si tiene requisitos de seguridad exclusivos o tiene un clúster multizona con la expansión de VLAN habilitada, puede utilizar Calico y Kubernetes para crear políticas de red para un clúster. Con las políticas de red de Kubernetes, puede especificar el tráfico de red que desea permitir o bloquear a y desde un pod dentro de un clúster. 
+Las políticas de red predeterminadas se configuran para proteger la interfaz de red pública de cada nodo trabajador en {{site.data.keyword.containerlong_notm}}. Si tiene requisitos de seguridad exclusivos o tiene un clúster multizona con la expansión de VLAN o el direccionamiento virtual y reenvío (VRF) habilitado, puede utilizar Calico y Kubernetes para crear políticas de red para un clúster. Con las políticas de red de Kubernetes, puede especificar el tráfico de red que desea permitir o bloquear a y desde un pod dentro de un clúster.
 
 Para establecer políticas de red más avanzadas, como por ejemplo para bloquear el tráfico de entrada (ingress) a los servicios de LoadBalancer, utilice políticas de red de Calico.
 
-Las políticas de red de Kubernetes especifican el modo en que los pods se pueden comunicar con otros pods y con puntos finales externos. El tráfico también se puede filtrar según etiquetas de pod y de espacio de nombres. Las políticas de red de Kubernetes se aplican mediante mandatos kubectl o mediante las API de Kubernetes. Cuando se aplican estas políticas, se convierten automáticamente en políticas de red de Calico y Calico impone estas políticas.
+Las políticas de red de Kubernetes especifican el modo en que los pods se pueden comunicar con otros pods y con puntos finales de servicio de red públicos. El tráfico también se puede filtrar según etiquetas de pod y de espacio de nombres. Las políticas de red de Kubernetes se aplican mediante mandatos kubectl o mediante las API de Kubernetes. Cuando se aplican estas políticas, se convierten automáticamente en políticas de red de Calico y Calico impone estas políticas.
 
 Las políticas de red de Calico para Kubernetes son un superconjunto de políticas de red de Kubernetes y se aplican mediante mandatos calicoctl.
 
@@ -136,7 +139,7 @@ Como parte de {{site.data.keyword.vmwaresolutions_short}}, el software de copia 
 ### Copia de seguridad NSX
 {: #vcsiks-overview-network-nsx-backup}
 
-La copia de seguridad adecuada de todos los componentes de NSX es crucial para restaurar el sistema a su estado de trabajo si se produce una anomalía. Realizar una copia de seguridad de las máquinas virtuales NSX no es suficiente. Se debe utilizar la función de copia de seguridad NSX dentro del gestor de NSX para realizar copia de seguridad adecuada. Esta copia de seguridad requiere que se especifique un servidor FTP o SFTP para el repositorio de datos de copia de seguridad NSX. La copia de seguridad de NSX Manager contiene toda la configuración de NSX, incluidos controladores, entidades de conmutación y de direccionamiento lógicos, seguridad, reglas de cortafuegos y todo lo demás que configure dentro de la interfaz de usuario o API de NSX Manager. Se hace copia de seguridad por separado de la base de datos de vCenter y de los elementos relacionados, como los conmutadores virtuales. Se debe hacer una copia de seguridad de la configuración de NSX junto con una copia de seguridad de vCenter.
+La copia de seguridad adecuada de todos los componentes de NSX es crucial para restaurar el sistema a su estado de funcionamiento si se produce una anomalía. Realizar una copia de seguridad de las máquinas virtuales NSX no es suficiente. Se debe utilizar la función de copia de seguridad NSX dentro del gestor de NSX para realizar copia de seguridad adecuada. Esta copia de seguridad requiere que se especifique un servidor FTP o SFTP para el repositorio de datos de copia de seguridad NSX. La copia de seguridad de NSX Manager contiene toda la configuración de NSX, incluidos controladores, entidades de conmutación y de direccionamiento lógicos, seguridad, reglas de cortafuegos y todo lo demás que configure dentro de la interfaz de usuario o API de NSX Manager. Se hace copia de seguridad por separado de la base de datos de vCenter y de los elementos relacionados, como los conmutadores virtuales. Se debe hacer una copia de seguridad de la configuración de NSX junto con una copia de seguridad de vCenter.
 
 ### Copia de seguridad y DR para el servicio IBM Cloud Kubernetes
 {: #vcsiks-overview-network-backup-dr-iks}

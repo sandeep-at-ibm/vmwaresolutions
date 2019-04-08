@@ -4,11 +4,14 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
-# Actualizaciones coordinadas
+#	Actualizaciones coordinadas
 {: #vum-orchestr-updates}
 
 Puede utilizar actualizaciones coordinadas para actualizar el hardware virtual y las herramientas de VMware de máquinas virtuales en el inventario después de actualizar los hosts ESXi de vSphere. Una vez que se han actualizado los hosts, primero se ejecuta la línea base de actualización de VMware Tools, seguido de la línea base de actualización de hardware de la máquina virtual. Puede utilizar actualizaciones coordinadas a nivel de clúster, de carpeta o de centro de datos.
@@ -64,5 +67,5 @@ Ahora puede utilizar estos grupos de línea base en los procesos de exploración
 ## Enlaces relacionados
 {: #vum-orchestr-updates-related}
 
-* [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demostraciones)

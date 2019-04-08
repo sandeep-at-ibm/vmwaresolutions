@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-04"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Schritt 4 - Anwendungskonfiguration
@@ -19,7 +22,7 @@ Dieser Schritt wird zunächst von der IC4VS-Automatisierung anhand von Informati
 
 Die Konfiguration des Service-Providers erfolgt in acht Unterschritten:
 -	Schritt 1: Organisationsdetails - Fügen Sie die Details für die übergeordnete Organisation für Ihren Cloud-Service-Provider hinzu. Diese Organisation kann über mehrere physische Standorte und mehrere Rechenzentren verfügen. Organisationen für Ihre Tenants und Unterorganisationen für Ihren Service-Provider werden später hinzugefügt.
--	Schritt 2: Standorte - Ordnen Sie die Infrastruktur unter "Locations" in RiskForesight zu. Die Assets sind nach Standort, Cloud-Provider und Asset-Repository gruppiert. 
+-	Schritt 2: Standorte - Ordnen Sie die Infrastruktur unter "Locations" in RiskForesight zu. Die Assets sind nach Standort, Cloud-Provider und Asset-Repository gruppiert.
 -	Schritt 3: Umgebungen - Optional. Umgebungen sind eine Möglichkeit, Assets zu gruppieren. Beispiel: DevOps, DR Site oder Produktion.
 -	Schritt 4: Cloud-Provider - Fügen Sie die "Provider" hinzu, die die Infrastruktur bereitstellen, auf der Ihre Anwendung ausgeführt wird.
 -	Schritt 5: Asset-Repositorys - Ein Asset-Repository verknüpft eine Gruppe von Assets mit einer Organisation, einem Cloud-Provider und einem Standort.

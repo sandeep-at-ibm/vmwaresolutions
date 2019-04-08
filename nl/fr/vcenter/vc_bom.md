@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-20"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -28,7 +31,7 @@ Tableau 1. Nomenclature des réseaux locaux virtuels des instances vCenter Serve
 |:---------- |:---------- |:------------- |
 | VLAN1     | Public, Principal | Affectés à des serveurs ESXi physiques pour accès au réseau public. Inutilisés après le déploiement initial. Disponibles pour l'accès Internet. |
 | VLAN2     | Privé A, Principal | Affectés par {{site.data.keyword.cloud}} à des serveurs ESXi physiques. Utilisés par l'interface de gestion pour le trafic de gestion VMware vSphere.<br><br>Affectés à des machines virtuelles qui fonctionnent en tant que composants de gestion.<br><br>Affectés à VMware NSX VTEP (point d'extrémité du tunnel VXLAN) |
-| VLAN3     | Privé B, Portable | Affectés à VMware vSAN, si utilisés.<br><br>Affectés à VMware NFS, si utilisés.<br><br>Affectés à VMware vSphere vMotion. |
+| VLAN3     | Privé B, Portable | Affectés à VMware vSAN, si utilisés.<br><br>Affectés à VMware NFS, si utilisés.<br><br>Affectés à VMware vSphere vMotion.<br><br>Pour NSX-T, affectés à VMware NSX VTEP (point d'extrémité du tunnel VXLAN).|
 
 ## Nomenclature logicielle pour les instances vCenter Server
 {: #vc_bom-software}
@@ -40,10 +43,13 @@ Tableau 2. Nomenclature des composants logiciels des instances vCenter Server
 | Fabricant  | Composant                      | Version    |
 |:------------- |:------------------------------ |:------------- |
 | VMware       | vSphere ESXi                    | 6.7 Update 1 (build 6.7.0-11675023) ou <br/>6.5 Update 2 (build 6.5.0-11925212) |
+| VMware       | vSphere 6.7                     | Distributed vSwitch 6.6.0 |
+| VMware       | vSphere 6.5                     | Distributed vSwitch 6.5.0 |
 | VMware       | vCenter Server Appliance        | 6.7 Update 1 (build 6.7.0-10244745) ou <br/>6.5 Update 2d (build 6.5.0-10964411) |
 | VMware       | Contrôleur PSC (Platform Services Controller)    | 6.7 Update 1 (build 6.7.0-10244745) ou <br/>6.5 Update 2d (build 6.5.0-10964411) |
 | VMware       | vSAN                            | 6.7 Update 1 ou <br/>6.6.1       |
 | VMware       | NSX for vSphere                 | 6.4.4 (build 11197766)    |
+| VMware       | NSX-T for vSphere               | 2.4                       |
 | Microsoft    | Windows Server édition Standard | 2012R2       |
 
 VMware vSAN est un composant optionnel.

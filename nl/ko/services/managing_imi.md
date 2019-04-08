@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-08"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # IMI의 관리 서비스 요청

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-03-22"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -50,7 +53,7 @@ vCenter Server with NSX-T インスタンスにクラスターを追加すると
 ### ベア・メタル・サーバーの設定
 {: #vc_nsx-t_addingviewingclusters-bare-metal-settings}
 
-**「Skylake」**、**「SAP 認定」**、または**「Broadwell」**のいずれかを選択できます。
+**「Skylake」**または**「Broadwell」**のいずれかを選択できます。
 
 #### Skylake
 {: #vc_nsx-t_addingviewingclusters-adding-skylake}
@@ -65,20 +68,6 @@ vCenter Server with NSX-T インスタンスにクラスターを追加すると
 | Dual Intel Xeon Gold 5120 Processor / 合計 28 コア、2.2 GHz | 128 GB、192 GB、384 GB、768 GB、1.5 TB |
 | Dual Intel Xeon Gold 6140 Processor / 合計 36 コア、2.3 GHz | 128 GB、192 GB、384 GB、768 GB、1.5 TB |
 
-#### SAP 認定
-{: #vc_nsx-t_addingviewingclusters-adding-sap}
-
-**「SAP 認定」**を選択した場合、CPU や RAM の設定は変更できません。
-
-要件に基づいて、以下のベア・メタル・サーバー構成を選択します。
-* Dual Intel Xeon Gold 6140 プロセッサー / 合計 36 コア、2.3 GHz / 192 GB RAM
-* Dual Intel Xeon Gold 6140 プロセッサー / 合計 36 コア、2.3 GHz / 384 GB RAM
-* Dual Intel Xeon Gold 6140 プロセッサー / 合計 36 コア、2.3 GHz / 768 GB RAM
-* Dual Intel Xeon E5-2690 v4 プロセッサー / 合計 28 コア、2.6 GHz / 512 GB RAM
-* Quad Intel Xeon E7-8890 v4 プロセッサー / 合計 96 コア、2.2 GHz / 1024 GB RAM
-* Quad Intel Xeon E7-8890 v4 プロセッサー / 合計 96 コア、2.2 GHz / 2048 GB RAM
-* Quad Intel Xeon E7-8890 v4 プロセッサー / 合計 96 コア、2.2 GHz / 4096 GB RAM
-
 #### Broadwell
 {: #vc_nsx-t_addingviewingclusters-adding-broadwell}
 
@@ -88,9 +77,6 @@ vCenter Server with NSX-T インスタンスにクラスターを追加すると
 
 | CPU モデル・オプション        | RAM オプション       |
 |:------------- |:------------- |
-| デュアル Intel Xeon E5-2620 v4 / 合計 16 コア、2.1 GHz | 128 GB、256 GB、512 GB、768 GB、1.5 TB |
-| デュアル Intel Xeon E5-2650 v4 / 合計 24 コア、2.2 GHz | 128 GB、256 GB、512 GB、768 GB、1.5 TB |
-| デュアル Intel Xeon E5-2690 v4 / 合計 28 コア、2.6 GHz | 128 GB、256 GB、512 GB、768 GB、1.5 TB |
 | クワッド Intel Xeon E7-4820 v4 / 合計 40 コア、1.9 GHz | 128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 | クワッド Intel Xeon E7-4850 v4 / 合計 64 コア、2.2 GHz | 128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 
@@ -99,7 +85,7 @@ vCenter Server with NSX-T インスタンスにクラスターを追加すると
 
 クラスターには 3 台以上の{{site.data.keyword.baremetal_short}}が必要です。
 
-1 つのクラスターに最大 59 の {{site.data.keyword.baremetal_short}} を追加できます。一度に 1 台から 59 台の ESXi サーバーを追加できます。
+1 つのクラスターに最大 59 の {{site.data.keyword.baremetal_short}} を追加できます。 一度に 1 台から 59 台の ESXi サーバーを追加できます。
 
 デプロイメント後に、最大 4 つのクラスターを追加で作成できます。 **「Skylake」**または**「Broadwell」**のベアメタル・サーバー構成と VMware vSAN ストレージを選択した場合は、初期クラスターとデプロイメント後のクラスターの両方に 4 つのサーバーが必要です。
 
@@ -147,13 +133,6 @@ vCenter Server with NSX-T インスタンスにクラスターを追加すると
   | 4 IOPS/GB | このオプションは、同時に高い割合のデータがアクティブになる高負荷のワークロード用に設計されています。 例えば、トランザクション・データベースなどの用途があります。 |
   | 10 IOPS/GB | このオプションは、分析などの最も要求の厳しいワークロード・タイプ用に設計されています。 例えば、トランザクションの多いデータベースやその他のパフォーマンス重視のデータベースなどの用途があります。 このパフォーマンス・レベルは、ファイル共有あたり最大 4 TB の容量に制限されています。 |
 
-### ローカル・ディスク
-{: #vc_nsx-t_addingviewingclusters-adding-local-disks}
-
-ローカル・ディスク・オプションは、**SAP 認定**のクワッド Intel Xeon E7-8890 v4 プロセッサーのベアメタル構成でのみ使用できます。 以下のオプションを指定します。
-* **ディスク数 (Disk Count)**: 追加するディスクの数を選択します。
-* **ディスク・タイプ**: 必要なディスク・タイプのオプションを選択します。
-
 ### ライセンス交付の設定
 {: #vc_nsx-t_addingviewingclusters-adding-licensing-settings}
 
@@ -182,14 +161,11 @@ vCenter Server with NSX-T インスタンスにクラスターを追加すると
 3. 左側のナビゲーション・ペインにある**「インフラストラクチャー」**をクリックし、**「クラスター」**テーブルの右上隅にある**「追加」**をクリックします。
 4. **「Add Cluster」**ページで、クラスター名を入力します。
 5. インスタンスのホスト以外の {{site.data.keyword.CloudDataCent_notm}} でクラスターをホストする場合は、**「Bare Metal Server」**で**「Select a different location」**チェック・ボックスにチェック・マークを付けて、インスタンスをホストする {{site.data.keyword.CloudDataCent_notm}} を選択します。
-6. ベア・メタル構成を次の手順で実行します。
-   * **「Skylake」**または**「Broadwell」**を選択した場合は、**CPU モデル**、**RAM** 量、**{{site.data.keyword.baremetal_short}}の数**を指定します。
-   * **「SAP 認定」**を選択した場合は、CPU モデルを指定します。
+6. ベア・メタル構成を次の手順で実行します。 **CPU モデル**、**RAM** の量、**{{site.data.keyword.baremetal_short}} の数**を指定します。
 7. ストレージ構成を次の手順で実行します。
   * **「vSAN Storage」**を選択した場合は、容量ディスクおよびキャッシュ・ディスクのディスク・タイプ、ディスク数、vSAN ライセンス・エディションを指定します。 さらにストレージが必要な場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。
   * **「NFS ストレージ」**を選択し、すべてのファイル共有に同じ設定を構成して追加する場合は、**「共有の数」**、**「パフォーマンス」**、**「サイズ (GB)」**を指定します。
   * **「NFS Storage」**を選択してファイル共有を個別に追加して構成する場合は、**「Configure shares individually」**を選択します。 その後、ファイル共有ごとに、**「共有ストレージの追加」**ラベルの横にある**「+」**アイコンをクリックして、**「パフォーマンス」**と**「サイズ (GB)」**を選択します。 少なくとも 1 つのファイル共有を選択する必要があります。
-  * **「ローカル・ディスク」**を選択した場合は、ディスク数とディスク・タイプを指定します。
 8. ネットワーク・インターフェースの設定を行います。
 8. vSphere ライセンス・キーの提供方法を指定します。
   * ビジネス・パートナーであるユーザーの場合、vSphere ライセンス (Enterprise Plus エディション) が自動的に含められて購入されます。
@@ -259,6 +235,33 @@ vCenter Server with NSX-T インスタンスにクラスターを追加すると
 | サイズ | ストレージの容量。 |
 | IOPS/GB | ストレージのパフォーマンス・レベル。 |
 | NFS プロトコル | ストレージの NFS バージョン。 |
+
+表 6. ネットワーク・インターフェース - VLAN の詳細
+
+| 項目        | 説明       |  
+|:------------- |:------------- |
+| VLAN 番号 | 固有の VLAN 番号。  |
+| 説明 | VLAN の説明。  |
+| ロケーション | データ・センターのロケーション。 |
+| 1 次経路 | VLAN の 1 次経路。 |
+
+VLAN の詳細にアクセスするには**「リソースの表示」**をクリックします。
+
+表 7. ネットワーク・インターフェース - サブネットの詳細
+
+| 項目        | 説明       |  
+|:------------- |:------------- |
+| 名前 | サブネット名。 サブネットの詳細にアクセスするには名前をクリックします。 |
+| タイプ | サブネットのタイプ: 1 次またはポータブル。 |
+| 説明 | サブネットの説明。 |
+
+表 8. ネットワーク・インターフェース - IP の詳細
+
+| 項目        | 説明       |  
+|:------------- |:------------- |
+| IP | IP アドレス。 |
+| 状況 | IP アドレスの状況。 |
+| 説明 |IP アドレスの説明。  |
 
 ## vCenter Server with NSX-T インスタンスからのクラスターの削除
 {: #vc_nsx-t_addingviewingclusters-deleting}

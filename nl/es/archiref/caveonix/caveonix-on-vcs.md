@@ -4,14 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-28"
+
+subcollection: vmwaresolutions
+
 
 ---
 
 # Caveonix RiskForesight on IBM Cloud for VMware Solutions
 {: #caveonix-on-vcs}
 
-Caveonix RiskForesight on {{site.data.keyword.vmwaresolutions_full}} proporciona un despliegue automatizado de la solución Caveonix RiskForesight en un despliegue de máquina virtual (VM) “todo en uno”. Inicialmente se configura con un proveedor de servicios y un arrendatario y se integra en vCenter y NSX Manager. El repositorio de activos se llena con los componentes de infraestructura de VMware vCenter Server y una aplicación y una subaplicación configuradas que representan la plataforma de infraestructura de VMware. En el panel de control, están disponibles las puntuaciones de riesgo de conformidad y ciberriesgos, así como los informes de conformidad para los regímenes de conformidad necesarios.
+Caveonix RiskForesight on {{site.data.keyword.vmwaresolutions_full}} proporciona un despliegue automatizado de la solución Caveonix RiskForesight en un despliegue de máquina virtual (VM) “todo en uno”. Inicialmente se configura con un proveedor de servicios y un arrendatario y se integra en vCenter y NSX Manager. El repositorio de activos se llena con los componentes de infraestructura de VMware vCenter Server y se configura una aplicación y una subaplicación que representan la plataforma de infraestructura de VMware. En el panel de control, están disponibles las puntuaciones de riesgo de conformidad y ciberriesgos, así como los informes de conformidad para los regímenes de conformidad necesarios.
 
 En la lista siguiente se proporciona una visión general de los flujos de trabajo iniciales:
 1.	El cliente solicita el servicio e inicia una instalación automatizada de la aplicación RiskForesight.

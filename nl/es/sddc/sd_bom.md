@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-12"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Lista de materiales de Cloud Foundation
@@ -62,7 +65,7 @@ Tabla 3. Valores de configuración avanzada de servidores ESXi para clústeres e
 | Tamaño muestra cola completa | **QFullSampleSize** = 32 | **/Disk/QFullSampleSize** = 32 |
 | Umbral cola completa | **QFullThreshold** = 8 | **/Disk/QFullThreshold** = 8 |
 
-### Notes
+### Notas
 {: #sd_bom-notes}
 
 * El valor **MaxVolumes** es obligatorio para el servicio IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} porque el servicio puede utilizar más del número predeterminado de montajes de NFS en el servidor ESXi.

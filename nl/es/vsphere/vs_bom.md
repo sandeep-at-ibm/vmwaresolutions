@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-05"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -17,7 +20,7 @@ Tabla 1. Lista de materiales para clústeres de VMware vSphere
 
 | Fabricante | Componente                       | Versión |
 |:-------------|:--------------------------------|:--------|
-| VMware       | vSphere ESXi                    | 6.5 Actualización 1 o 6.0 Actualización 2 |
+| VMware       | vSphere ESXi                    | 6.7 Actualización 1 o 6.5 Actualización 2 |
 
 ## Enlaces relacionados
 {: #vs_bom-related}

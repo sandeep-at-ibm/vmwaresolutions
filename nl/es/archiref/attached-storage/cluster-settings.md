@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-13"
+lastupdated: "2019-02-28"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -89,7 +92,7 @@ Tabla 2. Condiciones de error y valores de respuesta de máquina virtual para HA
 Para obtener más información sobre la configuración de estos valores en el cliente web de vSphere, consulte [Configuración de respuestas de máquina virtual](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.avail.doc/GUID-3DAED2B1-55B8-4877-BD0F-BC57C10A516C.html).
 
 #### Control de admisiones
-{: #cluster-settings-admission-control}
+{: #cluster-settings-admin-control}
 
 vCenter Server utiliza el control de admisiones para garantizar que hay suficientes recursos disponibles en un clúster para ofrecer protección de migración tras error y para asegurar que se respetan las reservas de recursos de VM. En este diseño, la capacidad de migración tras error se reserva mediante la especificación de un porcentaje de los recursos del clúster. La capacidad de migración tras error definida se establece en 25% de CPU y 25% de memoria.
 

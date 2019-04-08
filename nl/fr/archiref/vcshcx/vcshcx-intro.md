@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-06"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Introduction à VMware Hybrid Cloud Services

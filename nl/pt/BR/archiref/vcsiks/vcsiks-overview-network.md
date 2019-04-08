@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-01"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Rede, backup, recuperação de desastre e escalabilidade
@@ -53,7 +56,7 @@ As informações a seguir se aplicam a sub-redes de VLAN privada:
 
 Cada cluster do Kubernetes é configurado com um plug-in de rede chamado Calico.
 
-As políticas de rede padrão são configuradas para assegurar a interface de rede pública de cada nó do trabalhador no {{site.data.keyword.containerlong_notm}}. Se você tiver requisitos de segurança exclusivos ou tiver um cluster multizona com ampliação de VLAN ou Virtual Routing and Forwarding (VRF) ativado, será possível usar o Calico e o Kubernetes para criar políticas de rede para um cluster. Com políticas de rede do Kubernetes, é possível especificar o tráfego de rede que você deseja permitir ou bloquear para/de um pod em um cluster.
+As políticas de rede padrão são configuradas para assegurar a interface de rede pública de cada nó do trabalhador no {{site.data.keyword.containerlong_notm}}. Se você tiver requisitos de segurança exclusivos ou tiver um cluster de múltiplas zonas com ampliação de VLAN ou Virtual Routing e Forwarding (VRF) ativado, será possível usar o Calico e o Kubernetes para criar políticas de rede para um cluster. Com políticas de rede do Kubernetes, é possível especificar o tráfego de rede que você deseja permitir ou bloquear para/de um pod em um cluster.
 
 Para configurar políticas de rede mais avançadas, como bloquear o tráfego de entrada (ingresso) para serviços LoadBalancer, use políticas de rede do Calico.
 

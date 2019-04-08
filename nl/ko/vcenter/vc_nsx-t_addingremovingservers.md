@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-06"
+lastupdated: "2019-03-18"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -17,12 +20,12 @@ lastupdated: "2019-03-06"
 
 비즈니스 요구사항에 따라 ESXi 서버 또는 네트워크 파일 시스템(NFS) 스토리지를 추가하거나 제거하여 VMware vCenter Server with NSX-T 인스턴스의 용량을 확장하거나 축소할 수 있습니다.
 
-클러스터가 유지보수 모드에 있는 동안 새 ESXi 서버를 클러스터에 추가할 수 있습니다. 또한 여러 클러스터에서 ESXi 서버를 동시에 추가 또는 제거할 수 있습니다. 다음 동시 조작을 사용할 수 있습니다. 
+클러스터가 유지보수 모드에 있는 동안 새 ESXi 서버를 클러스터에 추가할 수 있습니다. 또한 여러 클러스터에서 ESXi 서버를 동시에 추가 또는 제거할 수 있습니다. 다음 동시 조작을 사용할 수 있습니다.
 
-* 호스트를 **cluster1**에 추가하고 호스트를 추가 클러스터에 추가하십시오. 
-* **cluster1**에서 호스트를 제거하고 호스트를 추가 클러스터에서 제거하십시오. 
-* 호스트를 **cluster1**에 추가하고 호스트를 추가 클러스터에서 제거하십시오. 
-* **cluster1**에서 호스트를 제거하고 호스트를 추가 클러스터에 추가하십시오. 
+* 호스트를 클러스터에 추가하고 호스트를 추가 클러스터에 추가하십시오.
+* 호스트를 클러스터에서 제거하고 호스트를 추가 클러스터에서 제거하십시오.
+* 호스트를 클러스터에 추가하고 호스트를 추가 클러스터에서 제거하십시오.
+* 호스트를 클러스터에서 제거하고 호스트를 추가 클러스터에 추가하십시오(https://github.ibm.com/tornado/tracker/issues/14183).
 
 NFS 스토리지 공유를 기존 NFS 또는 vSAN vCenter Server wiht NSX-T 클러스터에 추가하거나 기존 NFS 또는 vSAN vCenter Server 클러스터에서 제거할 수 있습니다.
 {:note}
@@ -37,7 +40,7 @@ NFS 스토리지 공유를 기존 NFS 또는 vSAN vCenter Server wiht NSX-T 클�
 
 * VMware vSphere Web Client에서 ESXi 서버를 추가하지 마십시오. vSphere Web Client에서 수행하는 변경사항은 {{site.data.keyword.vmwaresolutions_full}} 콘솔과 동기화되지 않습니다.
 * NFS 스토리지가 포함된 vCenter Server with NSX-T 인스턴스에는 최소 세 개의 ESXi 서버가 있어야 합니다. 최대 51개의 ESXi 서버를 보유하도록 기본 클러스터를 확장할 수 있습니다. 기본이 아닌 각 클러스터는 최대 59개의 ESXi 서버를 보유하도록 확장할 수 있습니다.
-* vSAN 스토리지가 포함된 vCenter Server with NSX-T 인스턴스에는 최소 네 개의 ESXi 서버가 있어야 합니다. 
+* vSAN 스토리지가 포함된 vCenter Server with NSX-T 인스턴스에는 최소 네 개의 ESXi 서버가 있어야 합니다.
 
 ### ESXi 서버를 추가하는 프로시저
 {: #vc_nsx-t_addingremovingservers-adding-procedure}
@@ -47,8 +50,8 @@ NFS 스토리지 공유를 기존 NFS 또는 vSAN vCenter Server wiht NSX-T 클�
 3. 왼쪽 탐색 분할창에서 **인프라**를 클릭하십시오.
 4. **클러스터** 테이블에서 ESXi 서버를 추가할 클러스터를 클릭하십시오.
 5. **ESXi 서버** 섹션에서 **추가**를 클릭하십시오.
-6. **서버 추가** 창에서 추가할 서버의 수를 입력하십시오. 
-7. 또는 유지보수 모드 동안 서버를 추가하려면 선택란을 선택하십시오. 
+6. **서버 추가** 창에서 추가할 서버의 수를 입력하십시오.
+7. 또는 유지보수 모드 동안 서버를 추가하려면 선택란을 선택하십시오.
 8. 예상 비용을 검토하고 **추가**를 클릭하십시오.
 
 ### ESXi 서버를 추가한 후의 결과
@@ -58,7 +61,7 @@ NFS 스토리지 공유를 기존 NFS 또는 vSAN vCenter Server wiht NSX-T 클�
 2. ESXi 서버를 추가하는 요청이 처리 중이라는 알림을 이메일로 받습니다. 콘솔에서 ESXi 서버와 연관된 클러스터의 상태가 **수정 중**으로 변경되었습니다.
 3. 클러스터의 목록에 추가된 새 ESXi 서버가 표시되지 않으면 이메일 또는 콘솔 알림을 확인하여 실패에 대한 추가 세부사항을 찾을 수 있습니다.
 
-유지보수 모드 동안 ESXi 서버를 추가하는 경우, 클러스터를 유지보수 모드에서 제거할 때까지 가상 머신(VM)이 새 서버에 마이그레이션되지 않습니다.    
+유지보수 모드 동안 ESXi 서버를 추가하는 경우, 클러스터를 유지보수 모드에서 제거할 때까지 가상 머신(VM)이 새 서버에 마이그레이션되지 않습니다.   
 {:important}
 
 ## vCenter Server with NSX-T 인스턴스에서 ESXi 서버 제거
@@ -90,7 +93,7 @@ NFS 스토리지 공유를 기존 NFS 또는 vSAN vCenter Server wiht NSX-T 클�
    제거된 ESXi 서버에 대한 {{site.data.keyword.cloud_notm}} 인프라 비용 청구 주기 종료 시까지 비용이 청구됩니다.
    {:note}
 
-## vCenter Server with NSX-T 인스턴스에 NFS 스토리지 추가 
+## vCenter Server with NSX-T 인스턴스에 NFS 스토리지 추가
 {: #vc_nsx-t_addingremovingservers-adding-nfs-storage-to-vcs-nsx-t}
 
 ### NFS 스토리지를 추가하기 전에

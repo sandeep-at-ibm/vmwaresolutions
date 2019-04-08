@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-11"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:note: .note}
@@ -61,13 +64,13 @@ lastupdated: "2019-03-11"
 
 您可以刪除已不再需要的 Caveonix RiskForesight 授權。
 
-刪除 Caveonix RiskForesight 授權之前，請確定您已經檢閱[刪除 Caveonix RiskForesight 授權時的考量](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_license_considerations-remove)中的考量{:note}
+刪除 Caveonix RiskForesight 授權之前，請確定您已檢閱[刪除 Caveonix RiskForesight 授權時的考量](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_license_considerations-remove)中的考量。
+{:note}
 
 1. 從左導覽窗格中，按一下**資源**。
 2. 向下捲動至 **Caveonix RiskForesight 授權**表格並尋找要刪除的授權。
 3. 在**動作**直欄中，按一下刪除圖示。
-4. 在**刪除授權**視窗中，按一下**確定**。授權的狀態會變更為**正在移除**。
-授權完成刪除後，**Caveonix RiskForesight 授權**表格中將不再提供該授權。
+4. 在**刪除授權**視窗中，按一下**確定**。授權的狀態會變更為**正在移除**。授權完成刪除後，**Caveonix RiskForesight 授權**表格中將不再提供該授權。
 
 ## 相關鏈結
 {: #caveonix_license_managing-related}

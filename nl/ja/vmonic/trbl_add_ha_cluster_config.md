@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-14"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # HA クラスターを追加するときに vSphere コンソールに構成の問題が表示される

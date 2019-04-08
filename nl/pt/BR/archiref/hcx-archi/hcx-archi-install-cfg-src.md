@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-15"
 
+subcollection: vmwaresolutions
+
+
 ---
 # Instalando e configurando o HCX na origem
 {: #hcx-archi-install-cfg-src}

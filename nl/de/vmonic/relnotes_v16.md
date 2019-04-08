@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2017-05-22"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Releaseinformationen für V1.6

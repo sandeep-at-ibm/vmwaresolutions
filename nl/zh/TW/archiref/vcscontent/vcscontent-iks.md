@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-15"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # 使用 IBM Cloud Kubernetes Service 的 True Hybrid 

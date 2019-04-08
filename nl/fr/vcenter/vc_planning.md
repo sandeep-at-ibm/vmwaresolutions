@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-03-20"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -35,9 +38,11 @@ Tableau 1. {{site.data.keyword.CloudDataCents_notm}} disponibles pour les instan
 | DAL13 | Dallas | Sud des Etats-Unis | Skylake, Certifié SAP, Broadwell |
 | FRA02 | Francfort | Europe | Skylake, Certifié SAP, Broadwell |
 | FRA04 | Francfort | Europe | Skylake, Certifié SAP, Broadwell |
+| FRA05 | Francfort | Europe | Skylake, Broadwell |
 | HKG02 | Hong Kong | Asie-Pacifique | Skylake, Broadwell |
 | LON02 | Londres | Europe | Skylake, Broadwell |
 | LON04 | Londres | Europe | Skylake, Certifié SAP, Broadwell |
+| LON05 | Londres | Europe | Skylake, Broadwell |
 | LON06 | Londres | Europe | Skylake, Certifié SAP, Broadwell |
 | MEL01 | Melbourne | Asie-Pacifique | Skylake, Certifié SAP, Broadwell |
 | MEX01 | Querétaro | Sud des Etats-Unis | Skylake, Certifié SAP, Broadwell |

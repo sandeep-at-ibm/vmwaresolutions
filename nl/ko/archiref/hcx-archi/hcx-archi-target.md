@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-15"
 
+subcollection: vmwaresolutions
+
+
 ---
 # VMware HCX on IBM Cloud 컴포넌트 레벨 대상 아키텍처
 {: #hcx-archi-target}

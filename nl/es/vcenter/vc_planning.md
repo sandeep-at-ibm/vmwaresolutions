@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-03-20"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -35,9 +38,11 @@ Tabla 1. {{site.data.keyword.CloudDataCents_notm}} disponibles para instancias d
 | DAL13 | Dallas | América del Norte sur | Skylake, Certificado por SAP, Broadwell |
 | FRA02 | Frankfurt | Europa | Skylake, Certificado por SAP, Broadwell |
 | FRA04 | Frankfurt | Europa | Skylake, Certificado por SAP, Broadwell |
+| FRA05 | Frankfurt | Europa | Skylake, Broadwell |
 | HKG02 | Hong Kong | Asia Pacífico | Skylake, Broadwell |
 | LON02 | Londres | Europa | Skylake, Broadwell |
 | LON04 | Londres | Europa | Skylake, Certificado por SAP, Broadwell |
+| LON05 | Londres | Europa | Skylake, Broadwell |
 | LON06 | Londres | Europa | Skylake, Certificado por SAP, Broadwell |
 | MEL01 | Melbourne | Asia Pacífico | Skylake, Certificado por SAP, Broadwell |
 | MEX01 | Queretaro | América del Norte sur | Skylake, Certificado por SAP, Broadwell |

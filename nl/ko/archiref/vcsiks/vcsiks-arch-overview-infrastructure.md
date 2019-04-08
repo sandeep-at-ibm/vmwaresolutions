@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -134,6 +137,7 @@ Edge 크기 압축 | vCPU 수 1
 {: #vcsiks-arch-overview-infrastructure-iks-comp}
 
 그림 3. {{site.data.keyword.containerlong_notm}} 컴포넌트
+</br>
 ![{{site.data.keyword.containerlong_notm}} 컴포넌트 다이어그램](vcsiks-iks-components.svg)
 
 ### Kubernetes 마스터

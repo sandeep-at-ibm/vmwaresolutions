@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -92,7 +95,7 @@ SDDC-Dswitch-Public	  |SDDC-DPortGroup-External	|來源虛擬埠| 作用中：0�
 ## NSX-V
 {: #vcsnsxt-overview-ic4vnsxv-nsx-v}
 
-此設計指定 NSX 元件的配置，但不會套用任何網路層疊元件配置。客戶可根據需求自行決定設計網路層疊。
+此設計指定 NSX 元件的配置，但不會套用任何網路套版元件配置。客戶可根據需求自行決定設計網路套版。
 
 已配置下列元件：
 -	管理伺服器及控制器已安裝並整合至 vCenter Web 使用者介面。
@@ -113,7 +116,7 @@ SDDC-Dswitch-Public	  |SDDC-DPortGroup-External	|來源虛擬埠| 作用中：0�
 NSX for vSphere 可讓組織將資料中心劃分為不同的安全區段，並往下探查至個別工作負載的層次，但與工作負載執行所在無關。IT 團隊可以根據應用程式及使用者環境定義來定義每個工作負載的原則，這確保立即回應資料中心內的威脅，並向下強制執行到應用程式。
 
 下列是一些主要 NSX 元件：
--	NSX 分散式有狀態防火牆內嵌在每個 Hypervisor 主機最多有 20 Gbps 防火牆容量的 Hypervisor 核心內。透過 NSX Edge 提供南北向防火牆功能。
+-	NSX 分散式有狀態防火牆內嵌在每部 Hypervisor 主機最多有 20 Gbps 防火牆容量的 Hypervisor 核心內。透過 NSX Edge 提供縱向防火牆功能。
 -	NSX 會將動態安全群組及相關聯原則建立到不只是 IP 位址及 MAC。這些原則包括 vCenter 物件和標籤、作業系統類型以及「第 7 層」應用程式資訊，以根據應用程式的環境定義來啟用微分段。
 -	使用來自 VM、Active Directory 及 Mobile Device Management 整合之登入資訊的身分型原則，可根據使用者來容許安全（包括遠端及虛擬桌面環境中的階段作業層次安全）。
 - Application Rule Manager 及 Endpoint Monitoring 可啟用最多「第 7 層」的端對端網路資料流量視覺化，並容許應用程式團隊識別資料中心內及資料中心間端點，以及建立適當的安全規則予以回應。
@@ -122,6 +125,7 @@ NSX for vSphere 可讓組織將資料中心劃分為不同的安全區段，並�
 下圖顯示如何建立安全群組來實作一些 NSX-V 微分段特性的高階圖。在此範例中，production 及 development 是安全群組，並根據這些群組來指派安全規則。
 
 圖 3. NSX-V 安全
+</br>
 ![NSX-V 安全](vcsnsxt-vsecurity.svg)
 
 ## 相關鏈結

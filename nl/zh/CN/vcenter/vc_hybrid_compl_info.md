@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-12"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # vCenter Server with Hybridity Bundle 实例的合规性信息

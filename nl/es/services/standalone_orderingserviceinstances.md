@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -23,7 +26,7 @@ Asegúrese de haber realizado las tareas siguientes:
 ## Procedimiento para solicitar instancias locales de VMware HCX on IBM Cloud
 {: #standalone_orderingserviceinstances-procedure}
 
-1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
+1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Recursos** en el panel de navegación izquierdo.
 2. Desplácese a la tabla **Instancias locales de HCX** y pulse **Suministrar nuevo**.
 3. Especifique el **Nombre de instancia en local**.
 4. Pulse el enlace o enlaces de los términos que se aplican a su pedido y asegúrese de que acepta estos términos antes de solicitar la instancia.

@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2017-03-08"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -40,7 +43,8 @@ lastupdated: "2017-03-08"
 
 在 NSX 安裝過程中，會在已部署的所有新實例上安裝及授權 NSN Manager。此外，會針對實例管理建立一個 NSX Edge，但如有需要，您可以建立自己的 NSX Edge 元件。如需 NSX Edge 的相關資訊，請參閱此頁面上的 _VMware NSX Edge_ 小節。
 
-NSX Controller 未安裝在 vCenter Server 實例上（像它安裝在 Cloud Foundation 實例上那樣）。如果您是針對 vCenter Server 實例使用 VXLAN 或分散式邏輯路由器，則必須自行安裝 NSX Controller。{:note}
+NSX Controller 未安裝在 vCenter Server 實例上（像它安裝在 Cloud Foundation 實例上那樣）。如果您是針對 vCenter Server 實例使用 VXLAN 或分散式邏輯路由器，則必須自行安裝 NSX Controller。
+{:note}
 
 如需 VMware NSX for vSphere 6.2.4 所引進之加強功能、其需求和已知問題的相關資訊，請參閱 [NSX for vSphere 6.2.4 版本注意事項](http://pubs.vmware.com/Release_Notes/en/nsx/6.2.4/releasenotes_nsx_vsphere_624.html){:new_window}。
 
@@ -85,7 +89,8 @@ NSX Controller 未安裝在 vCenter Server 實例上（像它安裝在 Cloud Fou
 * 對於 Cloud Foundation 實例和 vCenter Server 實例：最佳化網路配置，也就是說，只有 SoftLayer® 指派的主要公用和專用 IP 位址會連接至 ESXi 伺服器。對於管理資料流量，不再部署可攜式專用位址。
 * 僅適用於 Cloud Foundation 實例：Windows AD SSO (Active Directory Single Sign-On) 和「網域名稱系統 (DNS)」伺服器
 
-由於這些變更，您無法在現行版本中使用您現有的 1.4 版之前的實例。若要重複使用現有實例的配置，您必須將它們升級至現行版本。{:note}
+由於這些變更，您無法在現行版本中使用您現有的 1.4 版之前的實例。若要重複使用現有實例的配置，您必須將它們升級至現行版本。
+{:note}
 
 ## Cloud Foundation 實例的多站台配置支援
 {: #relnotes_v14-vcf-multisite}

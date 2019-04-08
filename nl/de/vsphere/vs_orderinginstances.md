@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-11"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -270,7 +273,7 @@ Auf Basis Ihrer Konfigurationen werden die geschätzten Kosten sofort generiert 
    1. Wählen Sie das {{site.data.keyword.CloudDataCent_notm}} als Host für den Cluster aus.
    2. Wählen Sie die Bare Metal Server-Konfiguration aus.
       * Wenn Sie **Skylake** oder **Broadwell** auswählen, dann müssen Sie das CPU-Modell und die RAM-Größe angeben.
-      * Wenn Sie **SAP-zertifiziert** auswählen, müssen Sie eine der voreingestellten Konfigurationen auswählen. 
+      * Wenn Sie **SAP-zertifiziert** auswählen, müssen Sie eine der voreingestellten Konfigurationen auswählen.
    3. Geben Sie die Anzahl der Bare Metal Server an.
 6. Wenn Sie die Komponente **VMware vSAN** ausgewählt haben, müssen Sie die vSAN-Speicherkonfiguration ausführen. Geben Sie die Plattentypen für die Kapazitäts- und Cacheplatten sowie die Anzahl der Platten an. Falls Sie mehr Speicher benötigen, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen.
 7. Geben Sie die Netzschnittstelleneinstellungen an:

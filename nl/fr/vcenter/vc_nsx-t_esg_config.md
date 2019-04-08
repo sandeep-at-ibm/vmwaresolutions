@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-21"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -25,10 +28,11 @@ Dans le cadre du processus de commande de votre instance vCenter Server with NSX
 * Commande d'un sous-réseau client public pour permettre à vos machines virtuelles d'accéder à Internet.
 * Déploiement et configuration de NSX-T dans votre instance vCenter Server with NSX-T.
 * Déploiement d'un exemple de commutateur logique NSX-T à l'usage des machines virtuelles des charges de travail client.
-* Déploiement d'un exemple de routeur logique distribué (DLR) NSX-T pour éventuelle communication d'est en ouest entre des charges de travail locales connectées à des réseaux de la couche 2 (L2).
+* Déploiement d'un exemple de routeur NSX-T de niveau 1 pour éventuelle communication d'est en ouest entre des charges de travail locales connectées à des réseaux de la couche 2 (L2).
 * Déploiement et configuration d'un dispositif NSX-T Edge pour la conversion des adresses réseau de la plage d'adresses IP du commutateur logique de charge de travail en une adresse IP publique sur les règles de conversion d'adresses réseau.
 
-  NSX-T Edge n'est pas déployé pour les instances qui sont privées uniquement. {:note}
+  NSX-T Edge n'est pas déployé pour les instances qui sont privées uniquement.
+  {:note}
 
 ## Procédure de configuration des paramètres réseau pour vos machines virtuelles
 {: #vc_nsx-t_esg_config-procedure-config-networking}
@@ -38,8 +42,7 @@ Pour profiter des avantages de NSX-T sur vos machines virtuelles de charge de tr
 1. Définissez l'adaptateur de réseau de la machine virtuelle sur le commutateur logique de la charge de travail :
    1. Dans la boîte de dialogue **New Virtual Machine**, cliquez sur l'onglet **Customize Hardware**.
    2. Dans le menu **new device**, sélectionnez **Network**, puis cliquez sur **Add**.
-   3. Sur l'adaptateur de réseau que vous venez d'ajouter, sélectionnez le commutateur logique de la charge de travail dans le menu. Exemple de nom de commutateur logique de charge de travail :
-   **vxw-dvs-17-virtualwire-1-sid-6000-Workload**.
+   3. Sur l'adaptateur de réseau que vous venez d'ajouter, sélectionnez le commutateur logique de réseau dissocié de la charge de travail dans le menu. L'exemple de nom de commutateur est **overlay-ls**.
 
    Veillez à ne pas sélectionner le commutateur **Workload Transit**.
    {:important}
@@ -52,35 +55,29 @@ Pour profiter des avantages de NSX-T sur vos machines virtuelles de charge de tr
    Vous êtes responsable de la gestion de la plage des adresses IP que vous affectez à vos machines virtuelles.
    {:note}
 
-3. Affectez la passerelle par défaut de la machine virtuelle avec `192.168.10.1`. Cette adresse IP est celle de NSX DLR sur le même commutateur logique que les machines virtuelles de la charge de travail.
+3. Affectez la passerelle par défaut de la machine virtuelle avec `192.168.10.1`. Il s'agit de l'adresse IP du port du routeur de liaison descendante sur le routeur logique de niveau 1 du client connecté sur même commutateur logique de réseau dissocié que les machines virtuelles de la charge de travail.
 
-## Procédure d'activation de la règle SNAT
+## Activation de la règle SNAT
 {: #vc_nsx-t_esg_config-procedure-enable-snat-rule}
 
-Si vous voulez que vos machines virtuelles de charge de travail bénéficient d'un accès sortant à Internet, vous devez activer la règle de conversion d'adresses réseau source (SNAT) associée. L'activation de la règle SNAT permet de convertir l'accès à Internet depuis vos machines virtuelles en une seule adresse IP publique. Effectuez les opérations suivantes sur le client VMware vSphere Web Client :
-
-1. Cliquez sur **Home > Networking & Security**.
-2. Dans le volet de navigation, cliquez sur **NSX Edges**, puis cliquez deux fois sur le serveur de périphérie nommé **customer-nsx-edge**.
-3. Cliquez sur **Management > NAT** pour ouvrir l'onglet **NAT**.
-4. Sélectionnez dans la table la règle de conversion d'adresses réseau source par défaut, puis cliquez sur la coche verte au-dessus de la table pour activer la règle.
-
-Pour plus d'informations sur les règles de conversion d'adresses réseau source de NSX-T Edge, voir [Gestion des règles de conversion d'adresses réseau](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.
+NSX-T active par défaut la règle SNAT. Pour plus d'informations sur la modification de règles existantes, voir [Configuration d'une règle NAT et de destination sur in routeur logique de niveau 0](https://docs.vmware.com/en/VMware-NSX-T-Data-Center/2.4/administration/GUID-45949ACD-9029-4674-B29C-C2EABEB39E1D.html){:new_window}.
 
 ## Procédure d'identification des détails des sous-réseaux client
 {: #vc_nsx-t_esg_config-procedure-identify-customer-subnets-details}
 
-Etant donné que le serveur de périphérie **customer-nsx-edge** est conçu pour votre usage exclusif, vous pouvez le modifier afin de définir d'autres règles de conversion d'adresses réseau pour le trafic entrant ou sortant. Ces règles doivent utiliser uniquement les adresses IP des sous-réseaux client publics ou privés commandés pour vous.
+Etant donné que les routeurs logiques **Customer-T1-LR** et **Customer-T0-LR** ainsi que les serveurs Edge **cust-nsx-edge0** et **cust-nsx-edge1** sont conçus pour votre usage exclusif, vous pouvez les modifier afin de définir d'autres règles de conversion d'adresses réseau (NAT) pour le trafic entrant ou sortant. Ces règles doivent utiliser uniquement les adresses IP des sous-réseaux client publics ou privés commandés pour vous.
 
-Pour identifier les détails des sous-réseaux client de manière à pouvoir utiliser les adresses IP commandées, effectuez les opérations suivantes dans le client Web VMware vSphere :
+Pour identifier les détails des sous-réseaux client de manière à pouvoir utiliser les adresses IP commandées, effectuez les opérations suivantes dans le client Web NSX-T :
 
-1. Cliquez sur **Home > Networking & Security**.
-2. Dans le volet de navigation, cliquez sur **NSX Edges**, puis localisez **customer-nsx-edge edge** dans la liste de serveurs de périphérie sur la droite. 
-3. Dans la colonne **Description**, passez en revue la description du serveur de périphérie **customer-nsx-edge** pour voir les identificateurs de sous-réseau à la fois pour les sous-réseaux client privés et publics.
+1. Cliquez sur l'onglet **Advanced Networking & Security**.
+2. Dans le volet gauche, cliquez sur **Fabric**, puis dans la liste déroulante, sélectionnez **Nodes**.
+3. Dans l'onglet, sélectionnez **Edge Transport Nodes**.
+4. Cliquez sur les serveurs Edge du client. Par exemple, **cust-nsx-edge0**. Les sous-réseaux client public et privé s'affichent dans la zone **Description**.
 
-Vous trouverez d'autres détails concernant les sous-réseau client en effectuant les opérations suivantes dans le portail	{{site.data.keyword.slportal}} :
+Vous trouverez d'autres détails concernant les sous-réseaux client en effectuant les opérations suivantes dans le portail	{{site.data.keyword.slportal}} :
 
 1. Cliquez sur **Networking > IP Management > Subnets**.
-2. Cliquez sur le menu de filtre et, dans la zone Subnet, entrez l'identificateur tel qu'indiqué dans la description du serveur de périphérie **customer-nsx-edge** sur l'onglet **Summary** dans le client Web VMware vSphere.
+2. Cliquez sur le menu de filtre et, dans la zone **Subnet**, entrez l'identificateur tel qu'indiqué dans la description du serveur Edge **customer-nsx-edge0** dans le client Web NSX-T.
 3. Passez en revue les remarques affichées pour les adresses IP. Ces remarques identifient les sous-réseaux et adresses IP commandés et utilisés au cours de la configuration initiale.
 
    N'utilisez pas les adresses IP commandées et utilisées au cours de la configuration initiale. Toutefois, vous pouvez, au besoin, utiliser d'autres adresses IP sur ces sous-réseaux. Pour définir des règles de conversion d'adresses réseau supplémentaires, voir [Gestion des règles de conversion d'adresses réseau](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.

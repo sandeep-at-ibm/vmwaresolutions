@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-06"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Cloud Foundation インスタンス用サービスの注文、表示、削除

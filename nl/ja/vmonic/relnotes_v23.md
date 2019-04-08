@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2018-05-28"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -55,7 +58,7 @@ vCenter Server with Hybridity Bundle について詳しくは、以下のトピ�
 
 V2.3 リリース以降、**カスタマイズ型** のベア・メタル設定を選択した場合に、以下の新しい CPU モデルをデプロイメントできるようになりました。
 * Dual Intel Xeon Silver 4110 プロセッサー / 合計 16 コア、2.1 GHz
-* Dual Intel Xeon Gold 5120 プロセッサー / 合計 28 コア、2.2 GHz
+*  Dual Intel Xeon Gold 5120 Processor / 合計 28 コア、2.2 GHz 
 
 詳しくは、以下のトピックを参照してください。
 

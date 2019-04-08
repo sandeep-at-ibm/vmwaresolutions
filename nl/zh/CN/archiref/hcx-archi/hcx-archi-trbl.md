@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-15"
 
+subcollection: vmwaresolutions
+
+
 ---
 # 关于 HCX on IBM Cloud 的故障诊断
 {: #hcx-archi-trbl}

@@ -203,6 +203,7 @@ IBM Cloud for VMware Solutions
     Veeam on IBM Cloud
         services/veeam_considerations.md
         services/veeam_ordering.md
+        services/icos_ordering.md
         services/managingveeam.md
         services/managing_veeam_services.md
 
@@ -247,22 +248,23 @@ IBM Cloud for VMware Solutions
         vmonic/trbl_sec_inst_not_visible.md
         vmonic/trbl_add_ha_cluster_config.md
         vmonic/trbl_no_zerto_vra.md
+        vmonic/trbl_zerto_vra.md
         vmonic/trbl_host_displays_warning_msg.md
         vmonic/trbl_deploy_ovf.md
         vmonic/trbl_vsan_alerts.md
-        vmonic/getting-started.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     vmonic/at-events.md
-    [Referencia de API](https://console.bluemix.net/apidocs/vmware-solutions)
+    [Referencia de API](https://cloud.ibm.com/apidocs/vmware-solutions)
 
     {: .topicgroup}
-    Arquitectura de IBM Cloud for VMware Solutions
+    Arquitectura de IBM Cloud for VMware Solutions (con NSX-V y NSX-T)
         archiref/solution/solution_overview.md
         archiref/solution/design_overview.md
         archiref/solution/design_physicalinfrastructure.md
         archiref/solution/design_virtualinfrastructure.md
+        archiref/solution/nsx-t-design.md
         archiref/solution/design_commonservice.md
         archiref/solution/design_infrastructuremgmt.md
         archiref/solution/solution_scaling.md
@@ -286,7 +288,7 @@ IBM Cloud for VMware Solutions
         archiref/caveonix/caveonix-detailed.md
         archiref/caveonix/caveonix-deploy.md
         archiref/caveonix/caveonix-allinone.md
-        archiref/caveonix/caveonix-partial.md
+        archiref/caveonix/caveonix-partially.md
         archiref/caveonix/caveonix-fully.md
         archiref/caveonix/caveonix-step1.md
         archiref/caveonix/caveonix-step2.md
@@ -373,7 +375,7 @@ IBM Cloud for VMware Solutions
         archiref/vcscar/vcscar-concepts.md
         archiref/vcscar/vcscar-logical.md
         archiref/vcscar/vcscar-physical.md
-        archiref/vcscar/vcscar-vcscar-arch-overview-solution.md
+        archiref/vcscar/vcscar-arch-overview-solution.md
         archiref/vcscar/vcscar-arch-overview-infrastructure.md
         archiref/vcscar/vcscar-commonservices.md
 

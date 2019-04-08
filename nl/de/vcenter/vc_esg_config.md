@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-11"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -74,13 +77,13 @@ Die Edge **customer-nsx-edge** ist für Ihre eigene Verwendung vorgesehen. Sie k
 Führen Sie die folgenden Schritte in VMware vSphere Web Client aus, um die Details für die Kundenteilnetze anzugeben, damit Sie die bestellten IP-Adressen verwenden können:
 
 1. Klicken Sie auf **Home > Networking & Security**.
-2. Klicken Sie im Navigatorfenster auf **NSX Edges** und suchen Sie **customer-nsx-edge edge** in der Liste der Edges im rechten Fenster. 
-3. Bewegen Sie den Mauszeiger in der Spalte **Description** über die Edge-Beschreibung für **customer-nsx-edge**, um die Teilnetz-IDs für das private und das öffentliche Kundenteilnetz anzuzeigen. 
+2. Klicken Sie im Navigatorfenster auf **NSX Edges** und suchen Sie **customer-nsx-edge edge** in der Liste der Edges im rechten Fenster.
+3. Bewegen Sie den Mauszeiger in der Spalte **Description** über die Edge-Beschreibung für **customer-nsx-edge**, um die Teilnetz-IDs für das private und das öffentliche Kundenteilnetz anzuzeigen.
 
 Weitere Details über die Kundenteilnetze können Sie außerdem mit den folgenden Schritten im {{site.data.keyword.slportal}} ermitteln:
 
 1. Klicken Sie auf **Networking > IP-Management > Teilnetze**.
-2. Klicken Sie auf das Filtermenü und geben Sie im Feld **Teilnetz** die ID ein, die in der Beschreibung für **customer-nsx-edge** im VMware vSphere Web Client angezeigt wird. 
+2. Klicken Sie auf das Filtermenü und geben Sie im Feld **Teilnetz** die ID ein, die in der Beschreibung für **customer-nsx-edge** im VMware vSphere Web Client angezeigt wird.
 3. Lesen Sie die Hinweise, die für die IP-Adressen angezeigt werden. Diese Hinweise geben an, welche der Teilnetze und IP-Adressen bestellt und während der Erstkonfiguration verwendet werden.
 
    Verwenden Sie nicht die IP-Adressen, die bestellt und während der Erstkonfiguration verwendet werden. Sie können jedoch nach Bedarf andere IP-Adressen in diesen Teilnetzen verwenden. Informationen zum Konfigurieren zusätzlicher Regeln für die Netzadressumsetzung finden Sie auf der Seite [Managing NAT rules](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.

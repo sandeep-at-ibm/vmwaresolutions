@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -16,7 +19,7 @@ lastupdated: "2019-02-15"
 * **確保可存取性資料撤除**模式是預設選項，而且在 vSphere ESXi 主機進入維護模式時，vSAN 可確保主機上的所有可存取的 VM 或應用裝置仍可供存取。由於僅發生局部資料撤除，所以 VM 或應用裝置在撤除期間可能不再完全遵循 VM 儲存空間原則，而且可能無法存取其所有抄本。如果在主機處於維護模式時發生失敗，且要容忍的主要失敗層次設為 1，則會發生資料流失，而且 VM 或應用裝置可能無法使用。
 * 在**無資料移轉**模式中，vSAN 在進入維護模式時不會撤除主機中的任何資料。雖然這樣會縮短進入維護模式的時間，因而縮減維護時間的持續時間，但部分 VM 或應用裝置可能會變成無法存取。
 
-本節會建立新的 VM 儲存空間原則，容許選取**確保可存取性資料撤除**模式來縮減維護時間，但也降低當某個主機處於維護模式時另一個主機的失敗導致 VM 或應用裝置無法存取的風險。對於不接受 vSAN 主機進入維護模式而變成非備用的任何 VM 或應用裝置，在完成任何補救動作之前，請先完成下列處理程序。需要至少有 6 部主機的叢集。
+本節會建立新的 VM 儲存空間原則，容許選取**確保可存取性資料撤除**模式來縮減維護時間，但也降低當某部主機處於維護模式時另一部主機的失敗導致 VM 或應用裝置無法存取的風險。對於不接受 vSAN 主機進入維護模式而變成非備用的任何 VM 或應用裝置，在完成任何補救動作之前，請先完成下列處理程序。需要至少有 6 部主機的叢集。
 
 1. 建立設定為 RAID 5/6 及 FTT =2 (RAID 6) 的新 vSAN 設定檔，然後針對必要的 VM 或應用裝置套用此原則。
 
@@ -25,5 +28,5 @@ lastupdated: "2019-02-15"
 ## 相關鏈結
 {: #vum-vsan-redundancy-related}
 
-* [VMware HCX on {{site.data.keyword.cloud}} 解決方案架構](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} 解決方案架構](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware)（示範）

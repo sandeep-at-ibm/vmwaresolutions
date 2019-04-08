@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-12"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -17,7 +20,8 @@ lastupdated: "2019-03-12"
 
 請檢閱下列資訊以取得 VMware vCenter Server 實例的法規遵循相關詳細資料。
 
-對於 HIPAA 客戶，不提供 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with NSX-T 供應項目的支援。{:important}
+對於 HIPAA 客戶，不提供 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with NSX-T 供應項目的支援。
+{:important}
 
 ## 客戶與 IBM 對於 vCenter Server on IBM Cloud 的責任
 {: #vc_compl_info-responsibility}

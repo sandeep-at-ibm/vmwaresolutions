@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -124,8 +127,8 @@ trabalhador  |  3 | IP (x3)  |  4-8 |16-20   |  150
 
 O {{site.data.keyword.cloud_notm}} Automation Manager (CAM) é uma plataforma de gerenciamento de autoatendimento multinuvem, executada no {{site.data.keyword.icpfull_notm}}, que confere poderes aos Desenvolvedores e administradores para atender às demandas de negócios.
 
-Figura 3. Referência do componente CAM
-![Referência do componente CAM](vcsicp-cam-component-ref.svg)
+Figura 3. Referência de componente do CAM</br>
+![Referência de componente do CAM](vcsicp-cam-component-ref.svg)
 
 ### Proxy CAM
 {: #vcsicp-arch-overview-solution-cam-proxy}

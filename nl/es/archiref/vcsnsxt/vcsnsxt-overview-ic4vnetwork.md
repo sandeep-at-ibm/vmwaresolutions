@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -40,24 +43,19 @@ Junto con las redes públicas y privadas, cada servidor de {{site.data.keyword.c
 * Las direcciones IP primarias se asignan a los dispositivos, a los servidores nativos y virtuales suministrados por {{site.data.keyword.cloud_notm}}. Los usuarios no deben asignar ninguna dirección IP en estos bloques.
 * Las direcciones IP portátiles se proporcionan para que asigne y gestione según sea necesario.
 
-Las direcciones IP primarias o portátiles se pueden convertir en direccionables a cualquier VLAN dentro de la cuenta del cliente si se ha habilitado la expansión de VLAN dentro de la cuenta o si la cuenta está configurada como una cuenta de direccionamiento y reenvío virtual (VRF).
-
-## Distribución de VLAN
-{: #vcsnsxt-overview-ic4vnetwork-vlan-spanning}
-
-La expansión de VLAN es un valor de cuenta global de {{site.data.keyword.cloud_notm}} que permite que cada bloque de IP de subred primaria y portátil dentro de todas las VLAN de la cuenta se pueda direccionarse entre sí. Aunque este valor no esté disponible, los bloques de IP se pueden direccionar a los servicios de {{site.data.keyword.cloud_notm}}, pero no entre sí. Esta arquitectura requiere que la expansión de VLAN esté habilitada dentro de la cuenta en la que se despliega VMware vCenter Server para que las conexiones se realicen de forma transparente entre las distintas subredes en las que residen los componentes de la solución.
+Las direcciones IP primarias o portátiles se pueden convertir en direccionables a cualquier VLAN dentro de la cuenta de cliente si la cuenta está configurada como una cuenta de direccionamiento virtual y reenvío (VRF).
 
 ## Direccionamiento virtual y reenvío
 {: #vcsnsxt-overview-ic4vnetwork-vrf}
 
-Las cuentas de {{site.data.keyword.cloud_notm}} también se pueden configurar como cuentas de direccionamiento virtual y reenvío (VRF). Una cuenta VRF proporciona funciones similares a la expansión de VLAN, que permite el direccionamiento automático entre bloques IP de subred. Todas las cuentas con las conexiones de Direct-Link deben convertirse a, o crearse como, una cuenta de VRF.
+Las cuentas de {{site.data.keyword.cloud_notm}} también se pueden configurar como cuentas de direccionamiento virtual y reenvío (VRF). Una cuenta VRF habilita el direccionamiento global automático entre bloques de IP de subred dentro de la cuenta. Todas las cuentas con las conexiones de Direct-Link deben convertirse a, o crearse como, una cuenta de VRF.
 
 ## Conexiones de host físico
 {: #vcsnsxt-overview-ic4vnetwork-host-connect}
 
 Cada host físico del diseño tiene dos pares redundantes de conexiones Ethernet de 10 Gbps en cada conmutador Top of Rack (ToR) de {{site.data.keyword.cloud_notm}} (público y privado). Los adaptadores se configuran como conexiones individuales (no enlazadas) para un total de conexiones de 4 conexiones de 10 Gbps. Esto permite que cada conexión de tarjeta de interfaz de red (NIC) funcione de forma independiente de las demás.
 
-Figura 2. Conexiones de host físico
+Figura 2. Conexiones de host físico</br>
 ![Conexiones de host físico](vcsnsxt-host-connections.svg)
 
 ## VLAN

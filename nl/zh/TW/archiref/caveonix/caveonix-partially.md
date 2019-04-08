@@ -6,12 +6,15 @@ copyright:
 
 lastupdated: "2019-02-14"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # 局部分散
 {: #caveonix-partially}
 
-自動化部署完成之後，您可以在起始虛擬機器 (VM) 中增加 RAM 及磁碟，並新增三個橫向擴充 VM，來手動橫向擴充。您可以執行 Riskforesight 配置 Script，在所有四個 VM 上啟用及配置應用程式元件。
+自動化部署完成之後，您可以在起始虛擬機器 (VM) 中增加 RAM 及磁碟，並新增三部橫向擴充 VM，來手動橫向擴充。您可以執行 Riskforesight 配置 Script，在所有四部 VM 上啟用及配置應用程式元件。
 
 此部署模型預期可服務多達 500 個「資產」，以及最多 30 天的資料檢索。
 

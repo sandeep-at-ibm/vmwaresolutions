@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -14,7 +17,7 @@ lastupdated: "2019-03-01"
 ## Virtual Routing and Forwarding
 {: #vcsiks-arch-overview-infrastructure-vrf}
 
-As contas do {{site.data.keyword.cloud}} podem ser configuradas como uma conta do Virtual Routing and Forwarding (VRF). As contas VRF ativam o roteamento global automático entre blocos de IP de sub-rede. Todas as contas com conexões de Link direto devem ser convertidas ou criadas como uma conta do VRF.
+As contas do {{site.data.keyword.cloud}} podem ser configuradas como uma conta de Virtual Routing and Forwarding (VRF). As contas de VRF ativam o roteamento global automático entre blocos de IP de sub-rede. Todas as contas com conexões de Link direto devem ser convertidas ou criadas como uma conta do VRF.
 
 ## Link Direto
 {: #vcsiks-arch-overview-infrastructure-direct-link}
@@ -141,8 +144,8 @@ Disk	| 1000 GB no armazenamento de dados local
 ## Componentes do IBM Cloud Kubernetes Service
 {: #vcsiks-arch-overview-infrastructure-iks-comp}
 
-Figure 3. Componentes do {{site.data.keyword.containerlong_notm}}
-![{{site.data.keyword.containerlong_notm}} - diagrama de componentes](vcsiks-iks-components.svg)
+Figura 3. Componentes do {{site.data.keyword.containerlong_notm}}</br>
+![Diagrama de componentes do {{site.data.keyword.containerlong_notm}}](vcsiks-iks-components.svg)
 
 ### Mestre do Kubernetes
 {: #vcsiks-arch-overview-infrastructure-kube-master}

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-21"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -32,7 +35,7 @@ vCenter Server with NSX-T 인스턴스는 개념 증명(POC) 또는 샌드박스
 다음 그림은 3-노드 vCenter Server with NSX-T 배치의 상위 레벨 아키텍처 및 컴포넌트를 나타냅니다.
 
 그림 1. 3 노드 클러스터에 대한 vCenter Server with NSX-T 상위 레벨 아키텍처
-![vCenter Server with NSX-T 아키텍처](vc_architecture.svg "3 노드 클러스터에 대한 vCenter Server 상위 레벨 아키텍처")
+![vCenter Server with NSX-T 아키텍처](vc_nsx-t_architecture.svg "3 노드 클러스터에 대한 vCenter Server 상위 레벨 아키텍처")
 
 ### 실제 인프라
 {: #vc_nsx-t_overview-physical-infras}
@@ -49,7 +52,7 @@ vCenter Server with NSX-T 인스턴스는 개념 증명(POC) 또는 샌드박스
 ### 가상화 관리
 {: #vc_nsx-t_overview-virtualization-mgmt}
 
-이 계층은 임베디드 PSC(Platform Services Controller)가 있는 vCSA(vCenter Server Appliance), 3개의 NSX 노드, 4개의 NSX Edge Services Gateway(ESG) 및 IBM CloudDriver 가상 서버 인스턴스(VSI)로 구성됩니다. CloudDriver VSI는 환경에 호스트 추가 등과 같은 특정 오퍼레이션에 필요하면 요청 시에 배치됩니다.
+이 계층은 임베디드 PSC(Platform Services Controller)가 있는 vCSA(vCenter Server Appliance), 3개의 NSX 노드, 3개의 NSX Edge Services Gateway(ESG) 및 IBM CloudDriver 가상 서버 인스턴스(VSI)로 구성됩니다. CloudDriver VSI는 환경에 호스트 추가 등과 같은 특정 오퍼레이션에 필요하면 요청 시에 배치됩니다.
 
 기본 오퍼링은 최대 400개의 호스트와 최대 4000개의 VM이 포함된 환경을 지원하도록 크기가 조정된 vCenter Server 어플라이언스로 배치됩니다. 동일한 vSphere API 호환 도구 및 스크립트는 IBM 호스팅 VMware 환경을 관리하는 데 사용될 수 있습니다.
 
@@ -70,8 +73,7 @@ vCenter Server with NSX-T 인스턴스는 개념 증명(POC) 또는 샌드박스
 
 다음 구성 중 하나로 세 개 이상의 {{site.data.keyword.baremetal_short}}를 주문할 수 있습니다.
 * **Skylake**: 선택한 CPU 모델 및 RAM 크기를 사용하는 두 개의 CPU Intel Skylake 세대 서버(Intel Xeon 4100/5100/6100 시리즈)  
-* **SAP-certified**: 선택한 CPU 모델을 사용하는 Intel Skylake 또는 Intel Broadwell 세대 서버(Intel Xeon 6140/E5-2690/E7-8890 시리즈)
-* **Broadwell**: 선택한 CPU 모델 및 RAM 크기를 사용하는 두 개의 Intel Broadwell 세대 서버(IntelXeon E5-2600/E7-4800 시리즈)
+* **Broadwell**: 선택한 CPU 모델 및 RAM 크기를 사용하는 네 개의 Intel Broadwell 세대 서버(Intel Xeon E7-4800 시리즈)
 
      vSAN 스토리지를 사용하려는 경우 구성에 4개의 {{site.data.keyword.baremetal_short}}가 필요합니다.
 {:note}
@@ -82,12 +84,12 @@ vCenter Server with NSX-T 인스턴스는 개념 증명(POC) 또는 샌드박스
 다음 네트워킹 컴포넌트가 주문됩니다.
 *  10Gbps 듀얼 공용 및 사설 네트워크 업링크
 *  세 개의 VLAN(Virtual LANs): 한 개의 공용 VLAN 및 두 개의 사설 VLAN
-* 계층 2(L2) 네트워크에 연결된 로컬 워크로드 간의 잠재적인 동쪽-서쪽 통신을 위한 T1 및 T0 라우터가 있는 하나의 오버레이 네트워크. 이는 수정, 빌드 또는 제거할 수 있는 샘플 라우팅 토폴로지로 배치됩니다. 
-*  4개의 VMware NSX-T Edge Services Gateway:
-  * 관리 네트워킹 토폴로지의 일부로 IBM에서 배치되는 아웃바운드 HTTP 관리 트래픽을 위한 두 개의 보안 관리 서비스 VMware NSX ESG. 이 ESG는 자동화와 관련된 특정 외부 IBM 관리 컴포넌트와 통신하기 위해 IBM 관리 VM에서 사용됩니다. 자세한 정보는 [VM에서 고객 관리 NSX ESG를 사용하도록 네트워크 구성](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_esg_config)을 참조하십시오.
+* 계층 2(L2) 네트워크에 연결된 로컬 워크로드 간의 잠재적인 동쪽-서쪽 통신을 위한 T1 및 T0 라우터가 있는 하나의 오버레이 네트워크. 이는 수정, 빌드 또는 제거할 수 있는 샘플 라우팅 토폴로지로 배치됩니다.
+*  3개의 VMware NSX-T Edge Services Gateway:
+  * 관리 네트워킹 토폴로지의 일부로 IBM에서 배치되는 아웃바운드 HTTP 관리 트래픽을 위한 1개의 보안 관리 서비스 VMware NSX ESG. 이 ESG는 자동화와 관련된 특정 외부 IBM 관리 컴포넌트와 통신하기 위해 IBM 관리 VM에서 사용됩니다. 자세한 정보는 [VM에서 고객 관리 NSX ESG를 사용하도록 네트워크 구성](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_esg_config)을 참조하십시오.
   * 아웃바운드 및 인바운드 HTTPS 워크로드 트래픽에 대한 2개의 보안 고객 관리 VMware NSX ESG. 이 게이트웨이는 VPN 액세스 또는 공용 액세스를 제공하기 위해 사용자가 수정할 수 있는 템플리트로 IBM에 의해 배치됩니다. 자세한 정보는 [고객 관리 NSX Edge는 보안 문제점을 발생시킵니까?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq-customer-nsx)를 참조하십시오.
 
-  이러한 ESG를 각각 **mgmt-nsx-edge0** 및 **mgmt-nsx-edge1**이라 합니다. 이러한 ESG는 액세스할 수 없으므로 사용할 수 없습니다. 수정하는 경우 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 vCenter Server 인스턴스를 관리하지 못할 수 있습니다. 또한 방화벽을 사용하거나 외부 IBM 관리 컴포넌트에 대한 ESG 통신을 사용 안함으로 설정하면 {{site.data.keyword.vmwaresolutions_short}}를 사용할 수 없게 됩니다.
+  이 ESG는 **mgmt-nsx-edge0**으로 이름이 지정되었습니다. 사용자는 이 ESG에 액세스할 수 없고 사용할 수 없습니다. 수정하는 경우 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 vCenter Server 인스턴스를 관리하지 못할 수 있습니다. 또한 방화벽을 사용하거나 외부 IBM 관리 컴포넌트에 대한 ESG 통신을 사용 안함으로 설정하면 {{site.data.keyword.vmwaresolutions_short}}를 사용할 수 없게 됩니다.
   {:important}
 
 ### Virtual Server 인스턴스
@@ -130,11 +132,6 @@ NFS 옵션은 크기 및 성능에 대한 다양한 옵션을 포함하여 워�
   {:note}
 
 NFS 옵션을 선택한 경우에는 관리 컴포넌트용으로 하나의 2TB 및 4 IOPS/GB 파일 공유가 주문됩니다.
-
-#### 로컬 디스크 스토리지
-{: #vc_nsx-t_overview-local-disk-storage}
-
-**SAP 인증** 쿼드 Intel Xeon E7-8890 v4 프로세서 베어메탈 구성에만 사용 가능한 로컬 디스크 옵션은 디스크 수 및 디스크 유형에 적합한 여러 옵션을 사용하여 사용자 정의된 구성을 제공합니다.
 
 ### 라이센스(IBM 제공 또는 BYOL) 및 요금
 {: #vc_nsx-t_overview-license-and-fee}

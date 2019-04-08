@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-04"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Etapa 3-Configuração do aplicativo
@@ -13,7 +16,7 @@ lastupdated: "2019-03-04"
 
 Esta etapa usa o script de configuração do Caveonix RiskForesight. Para a implementação "tudo em um", esse script é iniciado por meio da automação do IC4VS.
 
-Para o ajuste de escala, o cliente precisa chamar o script para fornecer as topologias parcialmente ou totalmente distribuídas. O script configura os serviços RiskForesight:
+Para o ajuste de escala, o cliente precisa chamar o script para provisionar as topologias parcialmente ou totalmente distribuídas. O script configura os serviços RiskForesight:
 - Apps Caveonix (API, Coletor Central)
 - Procura Elástica
 - PostgresSQL

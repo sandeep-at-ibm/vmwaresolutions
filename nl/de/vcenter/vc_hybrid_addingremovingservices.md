@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-07"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -53,7 +56,7 @@ Nachdem die Installation des Service erfolgreich abgeschlossen wurde, werden Sie
 ## Vorgehensweise zum Anzeigen von Services für vCenter Server with Hybridity Bundle-Instanzen
 {: #vc_hybrid_addingremovingservices-viewing-procedure}
 
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**. 
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**.
 2. Klicken Sie in der Tabelle **vCenter Server-Instanzen** auf die Instanz, für die Sie Services anzeigen wollen.
 3. Klicken Sie im linken Navigationsfenster auf **Services**.
 4. Klicken Sie auf der Seite **Services** auf einen Service, um die zugehörigen Informationen, beispielsweise den Servicestatus und andere Details, zu prüfen.
@@ -62,7 +65,7 @@ Nachdem die Installation des Service erfolgreich abgeschlossen wurde, werden Sie
 ## Vorgehensweise zum Entfernen von Services für vCenter Server with Hybridity Bundle-Instanzen
 {: #vc_hybrid_addingremovingservices-removing-procedure}
 
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**. 
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**.
 2. Klicken Sie in der Tabelle **vCenter Server-Instanzen** auf die Instanz, für die Sie Services entfernen wollen.
 3. Klicken Sie im linken Navigationsfenster auf **Services**.
 4. Suchen Sie auf der Seite **Services** die Serviceinstanz, die entfernt werden soll, und klicken Sie anschließend auf das Symbol **Löschen**.

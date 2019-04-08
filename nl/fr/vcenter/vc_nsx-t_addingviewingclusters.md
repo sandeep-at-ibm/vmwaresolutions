@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-03-22"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -50,7 +53,7 @@ Si vous déployez le cluster dans un autre {{site.data.keyword.CloudDataCent_not
 ### Paramètres de serveur bare metal
 {: #vc_nsx-t_addingviewingclusters-bare-metal-settings}
 
-Vous pouvez choisir l'option **Skylake**, **Certifiés SAP** ou **Broadwell**.
+Vous pouvez choisir l'option **Skylake** ou **Broadwell**.
 
 #### Skylake
 {: #vc_nsx-t_addingviewingclusters-adding-skylake}
@@ -65,20 +68,6 @@ Tableau 1. Options pour les serveurs Skylake {{site.data.keyword.baremetal_short
 | Processeur Dual Intel Xeon Gold 5120/28 coeurs au total, 2,2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 To |
 | Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 To |
 
-#### Certifiés SAP
-{: #vc_nsx-t_addingviewingclusters-adding-sap}
-
-Lorsque vous sélectionnez **Certifiés SAP**, vous ne pouvez pas modifier les paramètres d'UC ou de mémoire RAM.
-
-En fonction de vos besoins, sélectionnez une configuration de serveur bare metal :
-* Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz/192 Go de mémoire RAM
-* Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz/384 Go de mémoire RAM
-* Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz/768 Go de mémoire RAM
-* Processeur Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz/512 Go de mémoire RAM
-* Processeur Quad Intel Xeon E7-8890 v4/96 coeurs au total, 2,2 GHz/1024 Go de mémoire RAM
-* Processeur Quad Intel Xeon E7-8890 v4/96 coeurs au total, 2,2 GHz/2048 Go de mémoire RAM
-* Processeur Quad Intel Xeon E7-8890 v4/96 coeurs au total, 2,2 GHz/4096 Go de mémoire RAM
-
 #### Broadwell
 {: #vc_nsx-t_addingviewingclusters-adding-broadwell}
 
@@ -88,9 +77,6 @@ Tableau 2. Options pour les serveurs Broadwell {{site.data.keyword.baremetal_sho
 
 | Options de modèle d'UC        | Options de RAM       |
 |:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4/16 coeurs au total, 2,1 GHz | 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
-| Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz | 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
-| Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz | 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
 | Quad Intel Xeon E7-4820 v4/40 coeurs au total, 1,9 GHz | 128 Go, 256 Go, 512 Go, 1 To, 2 To, 3 To |
 | Quad Intel Xeon E7-4850 v4/64 coeurs au total, 2,2 GHz | 128 Go, 256 Go, 512 Go, 1 To, 2 To, 3 To |
 
@@ -147,13 +133,6 @@ Tableau 3. Options de niveau de performance NFS
   | 4 IOPS/Go | Cette option est adaptée aux charges de travail de grande intensité qui ont un pourcentage élevé de données actives simultanément. Les bases de données transactionnelles en sont un exemple. |
   | 10 IOPS/Go | Cette option est adaptée aux types de charge de travail les plus exigeants, tels que les analyses. Les bases de données à transactions élevées et autres bases de données sensibles aux performances en sont des exemples. Ce niveau de performance est limité à une capacité maximale de 4 To par partage de fichiers. |
 
-### Disques locaux
-{: #vc_nsx-t_addingviewingclusters-adding-local-disks}
-
-L'option Disques locaux est disponible uniquement pour la configuration de processeur Quad Intel Xeon E7-8890 v4 Bare Metal **certifié SAP**. Indiquez les options suivantes :
-* **Nombre de disques **: sélectionnez le nombre de disques que vous voulez ajouter.
-* **Type de disque **: sélectionnez une option pour le type de disque dont vous avez besoin.
-
 ### Paramètres d'octroi de licence
 {: #vc_nsx-t_addingviewingclusters-adding-licensing-settings}
 
@@ -182,14 +161,11 @@ Selon la configuration que vous avez sélectionnée pour le cluster, le coût es
 3. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche et cliquez sur **Ajouter** dans l'angle supérieur droit du tableau **CLUSTERS**.
 4. Sur la page **Ajouter un cluster**, entrez le nom du cluster.
 5. Si vous souhaitez héberger le cluster dans un autre {{site.data.keyword.CloudDataCent_notm}} que celui dans lequel l'instance est hébergée, sous **Serveur bare metal**, cochez la case **Sélectionner un autre emplacement** et choisissez l'{{site.data.keyword.CloudDataCent_notm}} dans lequel héberger l'instance.
-6. Procédez à la configuration du serveur bare metal.
-   * Si vous avez sélectionné **Skylake** ou **Broadwell**, renseignez les zones **Modèle d'UC**, **Mémoire RAM** et **Nombre de serveurs {{site.data.keyword.baremetal_short}}**.
-   * Si vous avez sélectionné **Certifiés SAP**, spécifiez le modèle d'UC.
+6. Procédez à la configuration du serveur bare metal. Renseignez les zones **Modèle UC**, **Mémoire RAM** et **Nombre de {{site.data.keyword.baremetal_short}}**.
 7. Procédez à la configuration du stockage.
   * Si vous sélectionnez **Stockage vSAN**, spécifiez les types de disque pour les disques de cache et de capacité, le nombre de disques et l'édition de licence vSAN. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**.
   * Si vous sélectionnez **Stockage NFS** et que vous souhaitez ajouter et configurer les mêmes paramètres pour tous les partages de fichiers, renseignez les zones **Nombre de partages**, **Performances** et **Taille (Go)**.
   * Si vous sélectionnez **Stockage NFS** et que vous souhaitez ajouter et configurer des partages de fichiers individuellement, sélectionnez **Configurer les partages individuellement**. Ensuite, cliquez sur l'icône **+** en regard du libellé **Ajout de stockage partagé** et sélectionnez une valeur pour les zones **Performances** et **Taille (Go)** pour chaque partage de fichiers. Vous devez sélectionner au moins un partage de fichiers.
-  * Si vous sélectionnez **Disques locaux**, indiquez le nombre et le type de disque.
 8. Spécifiez les paramètres d'interface réseau.
 8. Spécifiez de quelle manière la clé de licence vSphere est fournie :
   * Si vous êtes un partenaire commercial, la licence vCenter (édition Enterprise Plus) est incluse et achetée en votre nom.
@@ -259,6 +235,33 @@ Tableau 5. Informations relatives au stockage
 | Taille | Capacité du stockage. |
 | IOPS/Go | Niveau de performance du stockage. |
 | Protocole NFS | Version NFS du stockage. |
+
+Tableau 6. Interface réseau - Détails VLAN
+
+| Elément        | Description       |  
+|:------------- |:------------- |
+| Numéro de VLAN | Numéro unique de VLAN.  |
+| Description | Description du réseau local virtuel.  |
+| Emplacement | Emplacement du centre de données. |
+| Route principale | Route principale du VLAN. |
+
+Cliquez sur **Afficher la ressource** pour accéder aux détails du réseau local virtuel.
+
+Tableau 7. Interface réseau - Détails de sous-réseau
+
+| Elément        | Description       |  
+|:------------- |:------------- |
+| Nom | Nom du sous-réseau. Cliquez sur le nom pour accéder aux détails du sous-réseau.|
+| Type | Type de sous-réseau : principal ou portable. |
+| Description | Description du sous-réseau. |
+
+Tableau 8. Interface réseau - Détails d'adresse IP
+
+| Elément        | Description       |  
+|:------------- |:------------- |
+| IP | Adresse IP. |
+| Statut | Statut de l'adresse IP. |
+| Description |Description de l'adresse IP.  |
 
 ## Suppression de clusters des instances vCenter Server with NSX-T
 {: #vc_nsx-t_addingviewingclusters-deleting}

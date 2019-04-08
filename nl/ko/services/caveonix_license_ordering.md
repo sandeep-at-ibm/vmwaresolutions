@@ -6,12 +6,15 @@ copyright:
 
 lastupdated: "2019-03-11"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Caveonix RiskForesight 라이센스 주문
 {: #caveonix_license_ordering}
 
-온프레미스 워크로드의 라이센싱 및 활성화를 위해 Caveonix RiskForesight 라이센스를 vCenter Server 인스턴스와 연관시키지 않고 주문할 수 있습니다. 
+온프레미스 워크로드의 라이센싱 및 활성화를 위해 Caveonix RiskForesight 라이센스를 vCenter Server 인스턴스와 연관시키지 않고 주문할 수 있습니다.
 
 ## 시작하기 전에
 {: #caveonix_license_ordering-reqs}
@@ -23,7 +26,7 @@ lastupdated: "2019-03-11"
 
 1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **리소스**를 클릭하십시오.
 2. **Caveonix RiskForesight 라이센스** 테이블로 스크롤하여 **새로 프로비저닝**을 클릭하십시오.
-3. 라이센스 이름, 라이센스 참고 및 라이센스용 VM 수를 지정하십시오. 
+3. 라이센스 이름, 라이센스 참고 및 라이센스용 VM 수를 지정하십시오.
 4. 주문에 적용되는 이용 약관의 링크를 클릭하고 라이센스를 주문하기 전에 이 이용 약관에 동의하는지 확인하십시오.
 5. **프로비저닝**을 클릭하십시오.
 

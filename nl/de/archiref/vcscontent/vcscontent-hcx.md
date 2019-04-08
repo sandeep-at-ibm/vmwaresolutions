@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-15"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Lift-and-shift für virtuelle Maschinen von Stock Trader in IBM Cloud durchführen

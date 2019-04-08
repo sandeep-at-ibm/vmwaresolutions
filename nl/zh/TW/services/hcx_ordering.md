@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-15"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -59,7 +62,8 @@ lastupdated: "2019-02-15"
    * 一個專用可攜式子網路，以進行 HCX 交互連接。針對 **HCX 交互連接類型**選取**專用網路**選項時，會使用此子網路。
    * 一個公用可攜式子網路，以使用 VMware 啟動及維護。如果針對 **HCX 交互連接類型**選取**公用網路**選項，則此子網路也用於 HCX 交互連接。
 
-   為 HCX 訂購的子網路中的 IP 位址，是要由 VMware on {{site.data.keyword.cloud_notm}} 自動化進行管理。這些 IP 位址無法指派給您建立的 VMware 資源（例如 VM 及 NSX Edge）。如果您需要 VMware 構件的其他 IP 位址，則必須從 {{site.data.keyword.cloud_notm}} 訂購自己的子網路。{:important}
+   為 HCX 訂購的子網路中的 IP 位址，是要由 VMware on {{site.data.keyword.cloud_notm}} 自動化進行管理。這些 IP 位址無法指派給您建立的 VMware 資源（例如 VM 及 NSX Edge）。如果您需要 VMware 構件的其他 IP 位址，則必須從 {{site.data.keyword.cloud_notm}} 訂購自己的子網路。
+   {:important}
 2. 如果已針對 **HCX 交互連接類型**選取**專用網路**，即會在專用「分散式虛擬交換器 (DVS)」上建立一個名為 **SDDC-DPortGroup-HCX-Private** 的埠群組。
 3. 從 VMware 訂購 HCX 啟動金鑰。
 4. 為 HCX 建立三個資源儲存區及 VM 資料夾，而 HCX 交互連接、本端 HCX 元件及遠端 HCX 元件需要這些資源儲存區及 VM 資料夾。
@@ -70,7 +74,8 @@ lastupdated: "2019-02-15"
    * 配置負載平衡器規則及資源儲存區。這些規則及資源儲存區用來將 HCX 相關入埠資料流量轉遞至 HCX Manager 及 vCenter Server（具有內嵌的 Platform Services Controller）的適當虛擬應用裝置。
    * 套用 SSL 憑證，以加密來自 ESG 的 HCX 相關入埠 HTTPS 資料流量。
 
-   HCX 管理邊緣專用於內部部署 HCX 元件與雲端 HCX 元件之間的 HCX 管理資料流量。請不要修改 HCX 管理邊緣，或對 HCX 網路延伸使用它。請改為建立網路延伸的個別邊緣。此外，使用防火牆或停用與專用 IBM 管理元件或公用網際網路的 HCX 管理邊緣通訊，可能會對 HCX 功能造成負面影響。{:important}
+   HCX 管理邊緣專用於內部部署 HCX 元件與雲端 HCX 元件之間的 HCX 管理資料流量。請不要修改 HCX 管理邊緣，或對 HCX 網路延伸使用它。請改為建立網路延伸的個別邊緣。此外，使用防火牆或停用與專用 IBM 管理元件或公用網際網路的 HCX 管理邊緣通訊，可能會對 HCX 功能造成負面影響。
+   {:important}
 
 6. 部署、啟動及配置 HCX Manager on {{site.data.keyword.cloud_notm}}：
    * 向 vCenter Server 登錄 HCX Manager。

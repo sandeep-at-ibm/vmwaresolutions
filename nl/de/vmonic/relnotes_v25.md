@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2018-08-30"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -73,7 +76,7 @@ Verwenden Sie für Cloud Foundation-Instanzen die Hostbenutzer-ID **customerroot
 
 Verwenden Sie für vCenter Server-Instanzen weiterhin die Hostbenutzer-ID **root**. Die Hostbenutzer-ID **ic4vroot** wurde ausschließlich zur Verwendung durch IBM erstellt.
 
-Weitere Informationen zu Benutzerkonten finden Sie unter [Hinweise zum Ändern von vCenter Server-Artefakten](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter_chg_impact). 
+Weitere Informationen zu Benutzerkonten finden Sie unter [Hinweise zum Ändern von vCenter Server-Artefakten](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter_chg_impact).
 
 ## Updates für Add-on-Services
 {: #relnotes_v25-services}

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-02-26"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -47,22 +50,24 @@ Tabla 1. Permisos necesarios para la cuenta de infraestructura de {{site.data.ke
 | Ver contraseñas | Este permiso es necesario para poder administrar las VSI solicitadas. |
 | Gestionar supervisión de servidor | Este permiso no es necesario realizar un pedido, pero sí que se necesita para recuperar y validar el estado de supervisión de los {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} en los que se ejecutan los servidores VMware ESXi en la instancia. |
 
-## Requisito de Virtual Routing and Forwarding (VRF)
-{: #slaccountrequirement-vrf}
+## VRF con puntos finales de servicio habilitados
+{: #slaccountrequirement-vrf-se}
 
-La cuenta de infraestructura de {{site.data.keyword.cloud_notm}} debe ser una cuenta VRF o, si es una cuenta no VRF, debe tener habilitada la expansión de VLAN. Para obtener más información sobre cómo convertir su cuenta no VRF a una cuenta VRF, consulte [Visión general de VRF on IBM Cloud](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud).
+Su cuenta de infraestructura de {{site.data.keyword.cloud_notm}} debe ser una cuenta de direccionamiento virtual y reenvío (VRF) con puntos finales de servicio habilitados. Si su cuenta no es VRF, debe convertirla en una cuenta VRF. Además, debe habilitar su cuenta VRF para el uso de puntos finales de servicio.
 
-## Expansión de VLAN para cuentas no VRF
-{: #slaccountrequirement-vlan-spanning}
+Para obtener más información, consulte:
+* [Visión general de VRF on IBM Cloud](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
+* [Habilitar la cuenta para el uso de puntos finales de servicio](/docs/services/service-endpoint?topic=services/service-endpoint-cs_cli_install_steps#cs_cli_install_steps)
 
-Si utiliza una cuenta de infraestructura de {{site.data.keyword.cloud_notm}} no VRF, la expansión de VLAN debe estar habilitada. Si la expansión de VLAN no está habilitada para cuentas no VRF, es posible que los diversos componentes del entorno de virtualización de VMware no se puedan comunicar entre sí.
+## Fin del soporte para la expansión de VLAN
+{: #slaccountrequirement-vlan-eos}
 
-Para habilitar la expansión de VLAN en su cuenta, consulte [Expansión de VLAN](/docs/infrastructure/vlans?topic=vlans-vlan-spanning){:new_window}.
+A partir de agosto de 2019, ya no habrá soporte para la expansión de VLAN. Antes de finales de julio de 2019, debe convertir su cuenta de infraestructura de {{site.data.keyword.cloud_notm}} a VRF y habilitar los puntos finales de servicio.
+{:important}
 
 ## Enlaces relacionados
 {: #slaccountrequirement-related}
 
-* [Requisitos para las instancias de Cloud Foundation](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_planning)
 * [Requisitos para las instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [Cuenta de usuario y valores](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)
 * [Visión general de VRF on IBM Cloud](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)

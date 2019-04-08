@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-27"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -23,7 +26,7 @@ O gráfico a seguir descreve a arquitetura geral do armazenamento conectado na i
 
 Figura 1. Arquitetura de alto nível do armazenamento conectado no {{site.data.keyword.cloud_notm}}
 
-![Arquitetura de armazenamento conectado](../solution/physical_nfs.svg "Arquitetura de alto nível do armazenamento conectado no IBM Cloud")
+![Arquitetura de armazenamento conectado](../solution/vcsv4radiagrams-ra-nfs-shares.svg "Arquitetura de alto nível do armazenamento conectado no IBM Cloud")
 
 ## Design da infraestrutura física
 {: #storage-infra-design-phys-infra-design}
@@ -66,7 +69,7 @@ O desempenho e o armazenamento do Endurance são soluções de armazenamento do 
 
 Os IOPS que variam de 100 a 96.000 podem ser pedidos com tamanhos de armazenamento de 20 GB a 24 TB. Os volumes de armazenamento do Performance e do Endurance estão disponíveis para armazenamento de bloco e armazenamento de arquivo.
 
-Nesse design, a solução do vCenter Server oferece armazenamento do Endurance para armazenamento conectado. Como resultado, é possível selecionar e anexar (por meio da automação) as exportações de NFS do Endurance que variam de 20 GB a um máximo de 24 TB. O {{site.data.keyword.cloud_notm}} permite que até 64 hosts do vSphere ESXi se conectem a uma única exportação de NFS do Endurance.
+Nesse design, a solução do vCenter Server oferece armazenamento do Endurance para armazenamento conectado. Como resultado, é possível selecionar e anexar (por meio de automação) as exportações do NFS do Endurance que variam de 20 GB a um máximo de 24 TB. O {{site.data.keyword.cloud_notm}} permite que até 64 hosts do vSphere ESXi se conectem a uma única exportação de NFS do Endurance.
 
 A Resistência está disponível em três camadas de desempenho de IOPS para suportar diferentes necessidades
 do aplicativo.

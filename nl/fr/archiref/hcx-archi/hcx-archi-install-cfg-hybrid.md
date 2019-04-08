@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-15"
 
+subcollection: vmwaresolutions
+
+
 ---
 # Installation et configuration de services hybrides
 {: #hcx-archi-install-cfg-hybrid}

@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-26"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Recursos adicionais
@@ -15,7 +18,7 @@ Revise os recursos a seguir para iniciar mais rápido ou obter informações té
 * Vídeos e demonstrações
 * Análise técnica aprofundada
 * Tutoriais
-* Conteúdo da Comunidade Contribuída
+* Conteúdo contribuído da comunidade
 
 ## Folhas de dados
 {: #additional_resources-data-sheets}
@@ -30,7 +33,7 @@ Revise os recursos a seguir para iniciar mais rápido ou obter informações té
 ## Padrões do IBM Cloud
 {: #additional_resources-patterns}
 
-* [ Padrões do IBM Cloud ](https://ibmcloudpatterns.mybluemix.net/#862581F800007C53/862581F800007DD5/862581D000837B23)
+* [Padrões do IBM Cloud](https://ibmcloudpatterns.mybluemix.net/#862581F800007C53/862581F800007DD5/862581D000837B23)
 
 ## Extensões da plataforma
 {: #additional_resources-plat-extensions}
@@ -55,7 +58,7 @@ do Virtualization Platform](https://www.ibm.com/cloud/garage/architectures/virtu
 ## Test drive do IBM Cloud for VMware Solutions
 {: #additional_resources-test-drive}
 
-Quer ver por si mesmo? Faça um test drive do produto seguindo a demonstração guiada passo a passo do {{site.data.keyword.vmwaresolutions_short}} [Experimente o VMware vCenter Server](https://cloudcontent.mybluemix.net/cloud/garage/demo/try-vmware-solutions){:new_window}.
+Quer ver por si mesmo? Faça um teste curto do produto seguindo a demonstração guiada passo a passo {{site.data.keyword.vmwaresolutions_short}}[Experimente o VMware vCenter Server](https://cloudcontent.mybluemix.net/cloud/garage/demo/try-vmware-solutions){:new_window}.
 
 ## Documentação do VMware
 {: #additional_resources-VMware-doc}

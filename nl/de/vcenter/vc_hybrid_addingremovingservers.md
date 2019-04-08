@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-06"
+lastupdated: "2019-03-18"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -17,12 +20,12 @@ lastupdated: "2019-03-06"
 
 Sie können die Kapazität Ihrer VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle-Instanz entsprechend Ihren Geschäftsanforderungen erweitern oder verringern, indem Sie ESXi-Server hinzufügen oder entfernen.
 
-Ab dem Release V2.9 können Sie einem Cluster neue ESXi-Server hinzufügen, während sich der Cluster im Wartungsmodus befindet. Darüber hinaus können Sie ESXi-Server über mehrere Cluster hinweg gleichzeitig hinzufügen oder entfernen. Die folgenden gleichzeitigen Operationen sind verfügbar: 
+Ab dem Release V2.9 können Sie einem Cluster neue ESXi-Server hinzufügen, während sich der Cluster im Wartungsmodus befindet. Darüber hinaus können Sie ESXi-Server über mehrere Cluster hinweg gleichzeitig hinzufügen oder entfernen. Die folgenden gleichzeitigen Operationen sind verfügbar:
 
-* Hosts zu **cluster1** hinzufügen und Hosts zu weiteren Clustern hinzufügen. 
-* Hosts aus **cluster1** entfernen und Hosts aus weiteren Clustern entfernen. 
-* Hosts zu **cluster1** hinzufügen und Hosts aus weiteren Clustern entfernen. 
-* Hosts aus **cluster1** entfernen und Hosts zu weiteren Clustern hinzufügen. 
+* Hosts zu einem Cluster hinzufügen und Hosts zu weiteren Clustern hinzufügen.
+* Hosts aus einem Cluster entfernen und Hosts aus weiteren Clustern entfernen.
+* Hosts zu einem Cluster hinzufügen und Hosts aus weiteren Clustern entfernen.
+* Hosts aus einem Cluster entfernen und Hosts zu weiteren Clustern hinzufügen.
 
 Da Ihr erster Cluster vSAN als Speicher verwendet, kann das Hinzufügen einzelner oder mehrerer ESXi-Server nach der Bereitstellung die Speicherkapazität des Clusters erhöhen.
 
@@ -37,12 +40,14 @@ Da Ihr erster Cluster vSAN als Speicher verwendet, kann das Hinzufügen einzelne
 ## Vorgehensweise beim Hinzufügen von ESXi-Servern
 {: #vc_hybrid_addingremovingservers-adding-procedure}
 
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**. 
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**.
 2. Klicken Sie in der Tabelle **vCenter Server-Instanzen** auf die Instanz, für die die Kapazität erweitert werden soll.
 3. Klicken Sie im linken Navigationsfenster auf **Infrastruktur**.
 4. Klicken Sie in der Tabelle **CLUSTER** auf den Cluster, zu dem ESXi-Server hinzugefügt werden sollen.
 5. Klicken Sie in der Tabelle **ESXi-Server** auf **Hinzufügen**.
-6. Wählen Sie im Fenster **Server hinzufügen** die Anzahl der Server aus, die Sie hinzufügen wollen, klicken Sie auf den Link "Preis", um die geschätzten Kosten zu prüfen, und klicken Sie dann auf **Hinzufügen**.
+6. Geben Sie im Fenster **Server hinzufügen** die Anzahl der Server an, die hinzugefügt werden sollen.
+7. Wählen Sie optional das Kontrollkästchen zum Hinzufügen von Servern während des Wartungsmodus aus.
+8. Überprüfen Sie die geschätzten Kosten und klicken Sie auf **Hinzufügen**.
 
 ### Ergebnisse nach dem Hinzufügen von ESXi-Servern
 {: #vc_hybrid_addingremovingservers-adding-results}
@@ -50,6 +55,9 @@ Da Ihr erster Cluster vSAN als Speicher verwendet, kann das Hinzufügen einzelne
 1. Es kann eine leichte Verzögerung in der Konsole auftreten, während sich der Instanzstatus von **Bereit** in **Wird geändert** ändert. Warten Sie, bis die Operation vollständig abgeschlossen ist, bevor Sie weitere Änderungen an der Instanz vornehmen.
 2. Sie werden per E-Mail benachrichtigt, dass Ihre Anforderung zum Hinzufügen von ESXi-Servern verarbeitet wird. In der Konsole wird der Status des Clusters, der den ESXi-Servern zugeordnet ist, in **Wird geändert** geändert.
 3. Wenn die neuen ESXi-Server nicht zur Liste im Cluster hinzugefügt werden, überprüfen Sie die E-Mail- oder Konsolenbenachrichtigungen, um weitere Details über den Fehler zu ermitteln.
+
+Wenn Sie ESXi-Server während des Wartungsmodus hinzufügen, werden virtuelle Maschinen (VMs) erst dann auf die neuen Server migriert, wenn Sie den Wartungsmodus für den Cluster beenden.   
+{:important}
 
 ## ESXi-Server in vCenter Server with Hybridity Bundle-Instanzen entfernen
 {: #vc_hybrid_addingremovingservers-removing}
@@ -66,7 +74,7 @@ Da Ihr erster Cluster vSAN als Speicher verwendet, kann das Hinzufügen einzelne
 ## Vorgehensweise beim Entfernen von ESXi-Servern
 {: #vc_hybrid_addingremovingservers-removing-procedure}
 
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**. 
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**.
 2. Klicken Sie in der Tabelle **vCenter Server-Instanzen** auf die Instanz, für die die Kapazität verringert werden soll.
 3. Klicken Sie im linken Navigationsfenster auf **Infrastruktur**.
 4. Klicken Sie in der Tabelle **CLUSTER** auf den Cluster, in dem ESXi-Server entfernt werden sollen.

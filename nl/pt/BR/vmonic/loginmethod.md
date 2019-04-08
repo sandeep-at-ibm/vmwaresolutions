@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-25"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -18,7 +21,7 @@ Revise os pontos de entrada no console do {{site.data.keyword.vmwaresolutions_fu
 
 Para acessar o console diretamente, conclua as etapas a seguir:
 1. Acesse
-   https://console.cloud.ibm.com/infrastructure/vmware-solutions/console.
+   https://cloud.ibm.com/infrastructure/vmware-solutions/console.
 2. Efetue login no console com sua conta **IBMid**.
 
 ## Acessando do catálogo do IBM Cloud

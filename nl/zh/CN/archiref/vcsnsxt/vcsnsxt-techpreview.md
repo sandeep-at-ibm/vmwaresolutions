@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -150,6 +153,7 @@ Calico 基于分布式扩展体系结构构建，因此能够顺利地从单个�
 -	BIRD，用于在同时托管 Felix 的每个节点上提供 BGP 客户机功能。Felix 将路径插入到 Linux 内核中时，BGP 客户机会选取这些路径，并将其分配给部署中的其他节点。对于大型环境，还会部署 BGP 路由反射器，以充当中央点供 BGP 客户机连接。这样每个客户机就无需与其他各个客户机进行对话，并且会将路径分发给部署中的其他节点。
 
 图 3. Calico 概览图
+</br>
 ![Calico 概览图](vcsnsxt-calico-cni.svg)
 
 ### NSX-T 和 Calico
@@ -187,6 +191,7 @@ NSX-T 支持在易于理解的 Web 界面中，对整个 VM 和容器环境进�
 在下图中，提供了两个 Kubernetes 名称空间，即 Acme 和 Skateboards；对于每个名称空间，都有专用的逻辑交换机、第 1 层路由器以及用于将其连接到第 0 层逻辑路由器的 IP 分段。
 
 图 5. Kubernetes NCP
+</br>
 ![Kubernetes NCP](vcsnsxt-ncpk8sapi.svg)
 
 ### NSX 安全策略管理器
@@ -207,6 +212,7 @@ NSX-T 支持在易于理解的 Web 界面中，对整个 VM 和容器环境进�
 -	交换机安全性，用于提供风暴控制和防范未经授权流量的功能。
 
 图 6. NSX-T 微分段
+</br>
 ![示例 NSX-T 微分段](vcsnsxt-tsecurity.svg)
 
 ### NSX-T 与 NSX-V 之间的差异
@@ -242,6 +248,7 @@ VMware NSX 提供的功能与 VMware vSphere 环境中 NSX-V 提供的相同。N
 为了将 NSX 与 Kubernetes 集成，{{site.data.keyword.cloud_notm}} 自动化会在 vCenter Server 实例上安装 {{site.data.keyword.icpfull_notm}}。将专门为 Kubernetes 网络创建专用交换机/VXLAN、DLR 和 ESG。{{site.data.keyword.icpfull_notm}} 的 Day 1 覆盖网络是一个 192.168.20.0/24 子网，路由设置为通过 ESG 对底层网络进行访问。
 
 图 7. NSX-V 和 Kubernetes
+</br>
 ![NSX-V 和 Kubernetes](vcsnsxt-transitnet.svg)
 
 #### 与 NSX-T 集成
@@ -252,6 +259,7 @@ NSX-T 与 Kubernetes 集成是通过 NSX-T 容器插件 (NCP) 进行的。NCP �
 NSX-T 分布式防火墙支持创建针对 Kubernetes 集群实施的网络策略。它支持流入和流出策略、标签和表达式匹配策略，并且具有负载均衡器功能，这些功能全部可应用于 Kubernetes 基础架构。
 
 图 8. NSX-T 和 Kubernetes
+</br>
 ![NSX-T 和 Kubernetes](vcsnsxt-t1t0router.svg)
 
 ## 相关链接

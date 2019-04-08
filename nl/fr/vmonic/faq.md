@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-12"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -84,7 +87,8 @@ Non, ce n'est pas recommandé. Vous risquez des incidents au niveau des fonction
 
 Pour les instances vCenter Server, le premier cluster créé lors du déploiement est, par défaut, nommé **cluster1**. Vous pouvez le renommer dans le client VMware vSphere. Lorsque vous ajoutez un cluster à une instance vCenter Server, vous pouvez spécifier le nom de votre choix sur la console {{site.data.keyword.vmwaresolutions_short}}.
 
-Pour les instances Cloud Foundation, le nom de cluster par défaut n'est pas modifiable. {:note}
+Pour les instances Cloud Foundation, le nom de cluster par défaut n'est pas modifiable.
+{:note}
 
 ## Comment sont gérés les modules de correction ?
 {: #faq-patches}

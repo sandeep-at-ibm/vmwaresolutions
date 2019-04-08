@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-13"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Sobre Armazenamento Anexado para o Servidor vCenter

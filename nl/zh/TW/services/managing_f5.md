@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-08"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # 管理 F5 on IBM Cloud
@@ -16,7 +19,7 @@ lastupdated: "2019-03-08"
 
 若要管理 F5 on {{site.data.keyword.cloud}} 服務，請使用您可以在 F5 on {{site.data.keyword.cloud_notm}} 服務詳細資料頁面上找到的對應認證，登入主要或次要 BIG-IP Web 使用者介面主控台。
 
-如需檢視服務詳細資料的相關資訊，請參閱[訂購、檢視及移除 vCenter Server 實例的服務](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
+如需檢視服務詳細資料的相關資訊，請參閱[訂購、檢視及移除 vCenter Server 實例的服務](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)。
 
 ## 相關鏈結
 {: #managing_f5-related}

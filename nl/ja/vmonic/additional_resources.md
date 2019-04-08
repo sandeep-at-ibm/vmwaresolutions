@@ -6,16 +6,19 @@ copyright:
 
 lastupdated: "2019-02-26"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # 追加リソース
 {: #additional_resources}
 
-円滑に作業を開始できるように、また、{{site.data.keyword.vmwaresolutions_full}} のより詳しい技術情報を取得するために、以下のリソースを確認してください。
+以下のリソースを確認してください。円滑に作業を開始したり、{{site.data.keyword.vmwaresolutions_full}} に関する詳細な技術情報を入手したりするのに役立ちます。
 * ビデオおよびデモンストレーション
 * 技術面での詳細な分析
 * チュートリアル
-* コミュニティーに寄せられたコンテンツ
+* コミュニティーで取り上げられているコンテンツ
 
 ## データ・シート
 {: #additional_resources-data-sheets}
@@ -27,10 +30,10 @@ lastupdated: "2019-02-26"
 
 * [developerWorks レシピ](https://developer.ibm.com/recipes/tutorials/?s=VMware+Solutions){:new_window}
 
-## IBM Cloud パターン
+## IBM Cloud のパターン
 {: #additional_resources-patterns}
 
-* [IBM Cloud パターン](https://ibmcloudpatterns.mybluemix.net/#862581F800007C53/862581F800007DD5/862581D000837B23)
+* [IBM Cloud のパターン](https://ibmcloudpatterns.mybluemix.net/#862581F800007C53/862581F800007DD5/862581D000837B23)
 
 ## プラットフォーム拡張
 {: #additional_resources-plat-extensions}

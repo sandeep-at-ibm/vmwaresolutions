@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-03-18"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -185,7 +188,7 @@ Não é possível mudar o nome do cluster. Mudar o nome do cluster pode causar f
         <dt class="dt dlterm">Excluído</dt>
         <dd class="dd">O cluster é excluído.</dd>
     </dl>
-4. Clique em um nome de cluster para visualizar os detalhes de servidores ESXi e armazenamento:
+4. Clique em um nome de cluster para visualizar os servidores do ESXi, o armazenamento e os detalhes da interface de rede:
 
   * Detalhes de servidores ESXi:
      * **Nome**: o nome do servidor ESXi está no formato `<host_prefix><n>.<subdomain_label>.<root_domain>`, em que:
@@ -215,6 +218,20 @@ Não é possível mudar o nome do cluster. Mudar o nome do cluster pode causar f
     * **Tamanho**: a capacidade do armazenamento.
     * **IOPS/GB**: o nível de desempenho do armazenamento.
     * **Protocolo NFS**: a versão NFS do armazenamento.
+  * Interface de rede - Detalhes da VLAN:
+    * **Número da VLAN**: o número da VLAN exclusivo.
+    * **Descrição**: a descrição da VLAN.
+    * **Local**: o local do data center.
+    * **Rota primária**: a rota primária da VLAN.
+    Clique em **Visualizar recurso** para acessar os detalhes da VLAN.
+  * Interface de rede - Detalhes da sub-rede:
+    * **Nome**: o nome da sub-rede. Clique no nome para acessar os detalhes da sub-rede.
+    * **Tipo**: o tipo de sub-rede: primária ou móvel.
+    * **Descrição**: a descrição da sub-rede.
+  * Interface de rede - Detalhes do IP:
+    * **IP**: o endereço IP.
+    * **Status**: o status do endereço IP.
+    * **Descrição**: a descrição do endereço IP.
 
 ## Excluindo os clusters de instâncias do vCenter Server with Hybridity Bundle
 {: #vc_hybrid_addingviewingclusters-deleting}

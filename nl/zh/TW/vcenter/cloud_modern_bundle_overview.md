@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-11"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -40,25 +43,25 @@ lastupdated: "2019-03-11"
 ### Bare Metal Server
 {: #cloud_modern_bundle_overview-bare-metal}
 
-雙重 Intel Xeon Gold 5120 處理器 / 總計 28 核心，含 384 GB RAM 的 2.2 GHz，最多大約 20 個 VM
+雙重 Intel Xeon Gold 5120 處理器 / 總計 28 核心，含 384 GB RAM 的 2.2 GHz，最多大約 20 部 VM
 
 #### CPU 過度確認
 {: #cloud_modern_bundle_overview-cpu}
 
-* 16:1 CPU 過度確認，適用於 vCenter Server 管理、HCX 及 20 個客戶工作負載 VM
+* 16:1 CPU 過度確認，適用於 vCenter Server 管理、HCX 及 20 部客戶工作負載 VM
 * 11:1 CPU 過度確認，適用於 IBM Cloud Private
 
 #### RAM 過度確認
 {: #cloud_modern_bundle_overview-ram}
 
-* 1.22:1 RAM 過度確認，適用於各含 8 GB 之 20 個工作負載 VM 的客戶部署
-* 1:1（無過度確認），適用於各含 8 GB 之 9 個工作負載 VM 的客戶部署
+* 1.22:1 RAM 過度確認，適用於各含 8 GB 之 20 部工作負載 VM 的客戶部署
+* 1:1（無過度確認），適用於各含 8 GB 之 9 部工作負載 VM 的客戶部署
 
 ### NFS 儲存空間
 {: #cloud_modern_bundle_overview-nfs-storage}
 
 * 2 TB 用於管理
-* 1 TB 用於客戶工作負載（適用於 20 個客戶 VM）
+* 1 TB 用於客戶工作負載（適用於 20 部客戶 VM）
 * 4 TB 用於 IBM Cloud Private Hosted
 
 ### 單一節點試用版移轉及應用程式現代化實例的網路規格

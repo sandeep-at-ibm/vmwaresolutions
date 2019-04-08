@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-03-20"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -35,9 +38,11 @@ vCenter Server のデプロイメントには、物理インフラストラク�
 | DAL13 | ダラス | 北米南部 | Skylake、SAP 認定、Broadwell |
 | FRA02 | フランクフルト | ヨーロッパ | Skylake、SAP 認定、Broadwell |
 | FRA04 | フランクフルト | ヨーロッパ | Skylake、SAP 認定、Broadwell |
+| FRA05 | フランクフルト | ヨーロッパ | Skylake、Broadwell |
 | HKG02 | 香港 | アジア太平洋 | Skylake、Broadwell |
 | LON02 | London (ロンドン) | ヨーロッパ | Skylake、Broadwell |
 | LON04 | London (ロンドン) | ヨーロッパ | Skylake、SAP 認定、Broadwell |
+| LON05 | London (ロンドン) | ヨーロッパ | Skylake、Broadwell |
 | LON06 | London (ロンドン) | ヨーロッパ | Skylake、SAP 認定、Broadwell |
 | MEL01 | メルボルン | アジア太平洋 | Skylake、SAP 認定、Broadwell |
 | MEX01 | ケレタロ | 北米南部 | Skylake、SAP 認定、Broadwell |

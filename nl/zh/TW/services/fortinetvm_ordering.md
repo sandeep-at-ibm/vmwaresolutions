@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-08"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -73,9 +76,11 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 的授權模型�
         <dd class="dd">除了下列服務之外，此組合還包括所有標準防火牆和 UTM 服務：<ul><li>雲端存取安全分配管理系統 (CASB) - 此服務為雲端型服務提供可見性、相符性、資料安全及威脅保護。</li><li>工業安全 - 此服務為一般 ICS/SCADA 通訊協定提供簽章。</li><li>安全評級 - 此服務提供審核功能，以識別重要漏洞和配置弱點，並實作最佳作法建議。</li></ul></dd>
 </dl>
 
-在 2018 年第三季，Fortinet 在其企業組合中新增了三項新服務（CASB、「工業安全」和「安全評級」）。這些服務僅適用於 FortiGate 6.0。{:note}
+在 2018 年第三季，Fortinet 在其企業組合中新增了三項新服務（CASB、「工業安全」和「安全評級」）。這些服務僅適用於 FortiGate 6.0。
+{:note}
 
-您無法在安裝服務之後變更授權模型。若要變更授權模型，您必須移除現有服務，然後選取不同的授權選項來重新安裝服務。{:important}
+您無法在安裝服務之後變更授權模型。若要變更授權模型，您必須移除現有服務，然後選取不同的授權選項來重新安裝服務。
+{:important}
 
 ## 相關鏈結
 {: #fortinetvm_ordering-related}

@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-04"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Traitement des incidents dans HCX
@@ -46,10 +49,10 @@ Si des correctifs et des mises à jour ont été appliqués aux gestionnaires HC
 1. Accédez via SSH au gestionnaire HCX en utilisant le compte administrateur et le mot de passe fourni.
 2. Exécutez la commande `su –` et entrez le mot de passe de l'utilisateur `root` (identique au mot de passe administrateur) pour passer au mode superutilisateur.
 3. Accédez à `/opt/vmware/bin` et exécutez la commande `./ccli`. Si cette opération échoue car l'environnement n'est pas configuré pour un superutilisateur, exécutez la commande `./ccliSetup.pl`.
-4. Exécutez la commande `list` dans l'interpréteur de commandes `ccli` pour répertorier les composants de flotte enregistrés auprès du gestionnaire HCX. 
+4. Exécutez la commande `list` dans l'interpréteur de commandes `ccli` pour répertorier les composants de flotte enregistrés auprès du gestionnaire HCX.
 5. Spécifiez l'ID de flotte de l'interface `ccli` en tapant l'ID indiqué pour le composant de flotte. Par exemple, `go 8`.
-6. Exécutez la commande `debug remoteaccess enable` pour vous connecter au composant de flotte désiré via SSH. 
-7. Quittez l'interface `ccli` et connectez-vous via SSH à l'adresse IP du composant de flotte activé pour SSH. 
+6. Exécutez la commande `debug remoteaccess enable` pour vous connecter au composant de flotte désiré via SSH.
+7. Quittez l'interface `ccli` et connectez-vous via SSH à l'adresse IP du composant de flotte activé pour SSH.
 9. Poursuivez le traitement des incidents.
 10. Retournez à l'interface `ccli` et désactivez le service `ssh` pour le composant.
 11. Si nécessaire, utilisez la commande ccli `hc` pour exécuter un diagnostic d'intégrité sur les composants.

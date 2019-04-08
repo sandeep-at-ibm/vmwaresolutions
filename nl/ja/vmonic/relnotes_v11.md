@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2016-11-04"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # V1.1 のリリース・ノート

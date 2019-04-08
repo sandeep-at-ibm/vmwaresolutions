@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-14"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # vSphere Web Client 자원 명세에 보조 vCenter Server 시스템이 표시되지 않음

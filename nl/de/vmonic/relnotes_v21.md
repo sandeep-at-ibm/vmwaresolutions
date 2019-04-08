@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2018-04-16"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -120,7 +123,7 @@ In der gesamten Benutzerschnittstelle wurden Verbesserungen vorgenommen:
 * Die Option **Instanz bestellen** steht nicht mehr im linken Navigationsfenster zur Verfügung. Klicken Sie auf **Einführung**, um die Schritte zum Bestellen einer Instanz auszuführen.
 * Das Feld **Unterdomänenpräfix**, das auf der Seite **Allgemein** beim Bestellen einer Instanz angezeigt wurde, heißt jetzt **Unterdomänenbezeichnung**.
 * Beim Bestellen einer primären bzw. sekundären vCenter Server- oder Cloud Foundation-Instanz können Sie den Kostenvoranschlag jetzt nicht nur auf der Seite **Zusammenfassung** einsehen, sondern auch auf jeder beliebigen Seite bei der Angabe der Details für Ihre Instanzbestellung berechnen lassen.
-* Die Seite **Ressourcen** wurde mit der Breadcrumb-Navigation als alternativer Navigationsmethode ausgestattet, was die Anzahl der erforderlichen Schritte zum Aufrufen von übergeordneten Seiten verringert. 
+* Die Seite **Ressourcen** wurde mit der Breadcrumb-Navigation als alternativer Navigationsmethode ausgestattet, was die Anzahl der erforderlichen Schritte zum Aufrufen von übergeordneten Seiten verringert.
 * Es sind verschiedene Fehlernachrichten und QuickInfos verfügbar, die Sie bei der Auswahl der geeigneten Einstellung in der Benutzerschnittstelle unterstützen.
 
 ## Neue und aktualisierte Dokumentation

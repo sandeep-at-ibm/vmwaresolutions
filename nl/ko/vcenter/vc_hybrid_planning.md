@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-03-20"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -35,9 +38,11 @@ vCenter Server with Hybridity Bundle 배치에는 실제 인프라에 대한 엄
 |DAL13 |댈러스 |북미 남부 |
 |FRA02 |프랑크푸르트 |유럽 |
 | FRA04 |프랑크푸르트 |유럽 |
+|FRA05 |프랑크푸르트 |유럽 |
 |HKG02 |홍콩 |아시아 태평양 |
 |LON02 |런던 |유럽 |
 |LON04 |런던 |유럽 |
+|LON05 |런던 |유럽 |
 |LON06 |런던 |유럽 |
 |MEL01 |멜버른 |아시아 태평양 |
 |MEX01 |케레타로 |북미 남부 |

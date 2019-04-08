@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-03-25"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -75,7 +78,7 @@ Pour plus d'informations, voir [Présentation de NetApp ONTAP Select](/docs/serv
 ### Caveonix RiskForesight on IBM Cloud
 {: #prod_overview-caveonix}
 
-Le service Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} gère la cybersécurité et le risque de conformité à l'aide de contrôles de surveillance proactive et de défense automatisée destinés à assurer une protection contre les menaces et à permettre la conformité aux réglementations de l'industrie et du gouvernement. 
+Le service Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} gère la cybersécurité et le risque de conformité à l'aide de contrôles de surveillance proactive et de défense automatisée destinés à assurer une protection contre les menaces et à permettre la conformité aux réglementations de l'industrie et du gouvernement.
 
 ### F5 on IBM Cloud
 {: #prod_overview-f5}
@@ -152,7 +155,7 @@ Pour plus d'informations, voir [Présentation de Veeam on {{site.data.keyword.cl
 
 Le service HCX on {{site.data.keyword.cloud_notm}} peut en toute transparence étendre les réseaux des centres de données local dans {{site.data.keyword.cloud_notm}}, ce qui permet de migrer les machines virtuelles vers et depuis {{site.data.keyword.cloud_notm}} sans aucune conversion ni modification.
 
-Pour plus d'informations, voir [Présentation de VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview).
+Pour plus d'informations, voir [Présentation de VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations).
 
 ### Zerto on IBM Cloud
 {: #prod_overview-zerto}

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -14,9 +17,21 @@ lastupdated: "2019-02-15"
 ## Comparação de Edição do VMware NSX
 {: #solution-appendix-nsx-editions}
 
-A Tabela 1 lista os recursos disponíveis para as edições **Base**, **Advanced** e **Enterprise** do VMware NSX que a solução suporta.
+Dentro desse design, há múltiplos componentes que requerem licenças. Essas informações capturam as licenças mínimas que são necessárias para que o ambiente opere corretamente.
 
-Tabela 1. Gráfico de comparação de edição do VMware NSX
+Tabela 1. Requisitos de licença
+
+Componente | Propósito | Licença
+----------|---------|-------------
+**vSphere** | Virtualização de cálculo | vSphere 6.7 Enterprise Plus
+**vCenter Server** | Gerenciamento de infraestrutura | vCenter Server 6.7 Standard
+**NSX** | Virtualização de rede | NSX Base for Service Providers 6.4
+**vSAN** | Virtualização de armazenamento | vSAN 6.6 Advanced  
+
+A edição do NSX Base for Service Providers está disponível somente para provedores de serviço por meio da VMware vCloud Air Network (vCAN). Os recursos nesta edição podem ser localizados na tabela a seguir.
+{:note}
+
+Tabela 2. Gráfico de comparação de edição do VMware NSX
 
 | Recurso NSX                                   | Base | Avançado | Corporativo |
 |-----------------------------------------------|------|----------|------------|
@@ -45,9 +60,9 @@ Tabela 1. Gráfico de comparação de edição do VMware NSX
 ## Comparação de edição do VMware vSAN
 {: #solution-appendix-vsan-editions}
 
-A Tabela 2 lista os recursos disponíveis para as edições **Advanced** e **Enterprise** do VMware vSAN que a solução suporta.
+A tabela a seguir lista os recursos disponíveis para as edições **Advanced** e **Enterprise** do VMware vSAN que a solução suporta.
 
-Tabela 2. Gráfico de comparação de edição do VMware vSAN
+Tabela 3. Gráfico de comparação de edição do VMware vSAN
 
 | Recurso do vSAN                                    | Avançado | Corporativo |
 |-------------------------------------------------|----------|------------|

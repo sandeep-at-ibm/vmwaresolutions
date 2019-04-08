@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2018-10-19"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -55,7 +58,8 @@ lastupdated: "2018-10-19"
 
 對於 2.2 版以及更新版本，您現在可以將 ESXi 伺服器的數目增加至起始叢集的上限 51，並將其他叢集增加到最多 59。
 
-如果是部署在 2.1 版或更早版本中的實例，您必須啟用必要的 vSAN 支援，才能將叢集大小增加到超過 32。如需增加 ESXi 伺服器數目之步驟的相關資訊，請參閱[關於 ESXi 伺服器的常見問題](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_esxi#how-many-esxi-servers-can-i-add-to-a-cluster-)中的_我可以新增多少部 ESXi 伺服器至叢集？_。{:important}
+如果是部署在 2.1 版或更早版本中的實例，您必須啟用必要的 vSAN 支援，才能將叢集大小增加到超過 32。如需增加 ESXi 伺服器數目之步驟的相關資訊，請參閱[關於 ESXi 伺服器的常見問題](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_esxi#how-many-esxi-servers-can-i-add-to-a-cluster-)中的_我可以新增多少部 ESXi 伺服器至叢集？_。
+{:important}
 
 ## vCenter Server 及 Cloud Foundation 實例的其他網路配置選項
 {: #relnotes_v22-network-config}
@@ -79,7 +83,8 @@ lastupdated: "2018-10-19"
 
 您現在可以選擇在管理叢集裡部署適用於 Microsoft Active Directory (AD) 的單一 Microsoft Windows Server 虛擬伺服器實例 (VSI)，或兩部高可用性 Microsoft Windows 虛擬機器。在 2.2 版之前的版本，依預設，會自動部署單一 Microsoft Windows VSI for Microsoft AD。可選取兩部 Microsoft Windows 虛擬機器的新選項提供更多隱私權，並可選擇使用 Veeam 服務來備份及還原虛擬機器。
 
-如果您將實例配置為使用兩部 Microsoft Windows 虛擬機器，則必須提供 2 份 Microsoft Windows Server 2012 R2 授權。請使用 Microsoft Windows Server 2012 R2 Standard 版本授權及/或 Microsoft Windows Server 2012 R2 Datacenter 版本授權。您有 30 天的時間可啟動 (activate) 虛擬機器。{:note}
+如果您將實例配置為使用兩部 Microsoft Windows 虛擬機器，則必須提供 2 份 Microsoft Windows Server 2012 R2 授權。請使用 Microsoft Windows Server 2012 R2 Standard 版本授權及/或 Microsoft Windows Server 2012 R2 Datacenter 版本授權。您有 30 天的時間可啟動 (activate) 虛擬機器。
+{:note}
 
 如需相關資訊，請參閱[訂購 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance#system-settings)中的 *系統設定*區段。
 
@@ -108,7 +113,7 @@ lastupdated: "2018-10-19"
 
 現在 NetApp ONTAP Select 高容量 {{site.data.keyword.baremetal_short}} 有 34 個 SATA 磁碟機可供使用。如需相關資訊，請參閱 [NetApp ONTAP Select 實例的技術規格](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#specs)。
 
-## 附加服務的更新項目
+## 附加服務的更新
 {: #relnotes_v22-services}
 
 ### 已增加 F5 on IBM Cloud 的頻寬選項

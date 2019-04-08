@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-14"
+lastupdated: "2019-03-25"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -31,7 +34,9 @@ lastupdated: "2019-03-14"
 ## VMware Cloud Foundation on IBM Cloud의 지원 종료
 {: #relnotes_v29-vcf-eos}
 
-보다 나은 고객 경험을 위해 오퍼링을 통합하기 위해 {{site.data.keyword.cloud_notm}}에서는 2019년 5월 13일부터 더 이상 VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}에 대한 지원을 제공하지 않습니다. 앞으로 모든 고객은 VMware vCenter Server on {{site.data.keyword.cloud_notm}}로 이동하여 스토리지 및 라이센싱 옵션을 보다 유연성 있게 사용할 수 있습니다. VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}를 사용하는 기존 고객은 지원 종료 날짜인 2019년 5월 13일까지 VMware vCenter Server on {{site.data.keyword.cloud_notm}}로의 마이그레이션을 지원받게 됩니다. 
+보다 나은 고객 경험을 위해 오퍼링을 통합하기 위해 {{site.data.keyword.cloud_notm}}에서는 2019년 5월 13일부터 더 이상 VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}에 대한 지원을 제공하지 않습니다.
+앞으로 모든 고객은 VMware vCenter Server on {{site.data.keyword.cloud_notm}}로 이동하여 스토리지 및 라이센싱 옵션을 보다 유연성 있게 사용할 수 있습니다. 
+VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}를 사용하는 기존 고객은 지원 종료 날짜인 2019년 5월 13일까지 VMware vCenter Server on {{site.data.keyword.cloud_notm}}로의 마이그레이션을 지원받게 됩니다.
 
 5월 13일 이후에는 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}에 대한 관리 기능이 제거됩니다. VMware vCenter Server on {{site.data.keyword.cloud_notm}}로 마이그레이션되지 않은 인스턴스는 IBM Cloud 인프라 콘솔을 통해 액세스할 수 있습니다.
 
@@ -42,13 +47,13 @@ lastupdated: "2019-03-14"
 ## VMware vSphere 6.7 Update 1 지원
 {: #relnotes_v29-vsphere}
 
-이제 VMware vCenter Server, VMware vCenter Server with Hybridity Bundle 및 VMware vSphere on {{site.data.keyword.cloud_notm}} 인스턴스와 함께 VMware vSphere 버전 6.7 Update 1을 주문할 수 있습니다. 
+이제 VMware vCenter Server, VMware vCenter Server with Hybridity Bundle 및 VMware vSphere on {{site.data.keyword.cloud_notm}} 인스턴스와 함께 VMware vSphere 버전 6.7 Update 1을 주문할 수 있습니다.
 
 또한 마이그레이션 및 앱 현대화 인스턴스에 대한 단일 노드 평가판을 vSphere Enterprise Plus 6.7u1과 함께 주문합니다.
 
-vSphere Enterprise Plus 6.7u1은 Broadwell 및 Skylake {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}용으로만 사용 가능합니다. 
+vSphere Enterprise Plus 6.7u1은 Broadwell 및 Skylake {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}용으로만 사용 가능합니다.
 
-자세한 정보는 다음의 _라이센스 설정_ 섹션을 참조하십시오. 
+자세한 정보는 다음의 _라이센스 설정_ 섹션을 참조하십시오.
 
 * [vCenter Server 인스턴스 주문](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
 * [vCenter Server with Hybridity Bundle 인스턴스 주문](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
@@ -62,14 +67,14 @@ vSphere Enterprise Plus 6.7u1은 Broadwell 및 Skylake {{site.data.keyword.cloud
 자세한 정보는 다음을 참조하십시오.
 
 * [IBM Cloud의 VRF(Virtual Routing and Forwarding) 개요](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-* [IBM Cloud CLI를 사용하여 서비스 엔드포인트를 사용할 계정 사용](/docs/services/service-endpoint?topic=services/service-endpoint-cs_cli_install_steps)
+* [IBM Cloud CLI를 사용하여 서비스 엔드포인트를 사용할 계정 사용](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
 
 ## API(Application Programming Interface)에 대한 지원
 {: #relnotes_v29-api}
 
 이제 API(Application Programming Interface)를 사용하여 인스턴스를 배치하고, 인스턴스를 삭제하고, ESXi 서버 및 클러스터를 추가 및 제거할 수 있습니다.
 
-REST API 문서는 사용자 문서의 *참조* 섹션에서도 사용할 수 있습니다. 자세한 정보는 [{{site.data.keyword.vmwaresolutions_short}} API](https://console.bluemix.net/apidocs/vmware-solutions)의 내용을 참조하십시오.
+REST API 문서는 사용자 문서의 *참조* 섹션에서도 사용할 수 있습니다. 자세한 정보는 [{{site.data.keyword.vmwaresolutions_short}} API](https://cloud.ibm.com/apidocs/vmware-solutions)의 내용을 참조하십시오.
 
 ## VMware vCenter Server 인스턴스에 대한 업데이트
 {: #relnotes_v29-vcs}
@@ -83,17 +88,22 @@ REST API 문서는 사용자 문서의 *참조* 섹션에서도 사용할 수 �
 * vCenter Server Appliance 6.7 U1(빌드 6.7.0-10244745)
 * vSAN 6.7.0 U1
 * NSX for vSphere 6.4.4(빌드 11197766)
-* vSphere 2.4용 NSX-T 
+* vSphere 2.4용 NSX-T
 
 VMware 컴포넌트 선택에 대한 자세한 정보는 [vCenter Server 명세서](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)를 참조하십시오.
+
+### 데이터 센터에 대한 업데이트
+{: #relnotes_v29-dc}
+
+**FRA-05 - 프랑크푸르트** 및 **LON-05 - 런던**과 같은 새 데이터 센터를 배치에 사용할 수 있습니다. 자세한 정보는 [vCenter Server 인스턴스 요구사항 및 계획](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)을 참조하십시오.
 
 ### ESXi 서버 개선사항
 {: #relnotes_v29-vcs-esxi}
 
 * SSH(Secure Shell) 프로토콜은 인스턴스 전달 전에 ESXi 서버에 대해 사용 안함으로 설정됩니다.
-* V2.9 릴리스부터는 다음 ESXi 서버 조작을 사용할 수 있습니다. 
+* V2.9 릴리스부터는 다음 ESXi 서버 조작을 사용할 수 있습니다.
 
-   * 서버가 유지보수 모드에 있는 동안 새 ESXi 서버를 기존 클러스터에 추가합니다. 가상 머신은 유지보수 모드에서 이를 제거할 때까지는 새 서버로 마이그레이션되지 않습니다. 
+   * 서버가 유지보수 모드에 있는 동안 새 ESXi 서버를 기존 클러스터에 추가합니다. 가상 머신은 유지보수 모드에서 이를 제거할 때까지는 새 서버로 마이그레이션되지 않습니다.
    * 동시에 인스턴스의 여러 클러스터에서 ESXi 서버를 추가 또는 제거합니다.
 
 자세한 정보는 [vCenter Server 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)를 참조하십시오.
@@ -114,9 +124,9 @@ vCenter Server 인스턴스 주문의 경우, 0.25, 2및 4 IOPS/GB의 성능 레
 
 이제 {{site.data.keyword.cloud_notm}}의 Caveonix RiskForesight 서비스는 V2.9 이상 릴리스에 배치되거나 업그레이드된 VMware vCenter Server 인스턴스에 사용할 수 있습니다. 이 서비스는 위협으로부터 보호하고 업계 또는 정부 규제를 충족하도록 하기 위해 사전 모니터링 및 자동화된 방어 제어를 통해 사이버 및 규제 준수 위험을 관리하는 데 도움이 될 수 있습니다.
 
-{{site.data.keyword.cloud_notm}}의 Caveonix RiskForesight 서비스가 포함된 vCenter Server 인스턴스를 주문하거나 인스턴스 세부사항 페이지의 **서비스** 탭에서 나중에 이 서비스를 기존 vCenter Server 인스턴스에 추가할 수 있습니다. 
+{{site.data.keyword.cloud_notm}}의 Caveonix RiskForesight 서비스가 포함된 vCenter Server 인스턴스를 주문하거나 인스턴스 세부사항 페이지의 **서비스** 탭에서 나중에 이 서비스를 기존 vCenter Server 인스턴스에 추가할 수 있습니다.
 
-온프레미스 워크로드의 라이센싱 및 활성화를 위해 독립형 Caveonix RiskForesight 라이센스를 VMware 인스턴스와 연관시키지 않고 주문할 수도 있습니다. 
+온프레미스 워크로드의 라이센싱 및 활성화를 위해 독립형 Caveonix RiskForesight 라이센스를 VMware 인스턴스와 연관시키지 않고 주문할 수도 있습니다.
 
 자세한 정보는 다음을 참조하십시오.
 * [{{site.data.keyword.cloud_notm}}의 Caveonix RiskForesight에 대한 고려사항](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_considerations)
@@ -154,5 +164,5 @@ vCenter Server 인스턴스 주문의 경우, 0.25, 2및 4 IOPS/GB의 성능 레
 
 사용자 인터페이스가 업데이트되었으며 다음 개선사항을 제공합니다.
 
-* **인프라** 페이지에서는 새 **네트워크 인터페이스** 테이블이 클러스터에 대한 VLAN, 서브넷 및 IP 주소 세부사항을 제공합니다. 
+* **인프라** 페이지에서는 새 **네트워크 인터페이스** 테이블이 클러스터에 대한 VLAN, 서브넷 및 IP 주소 세부사항을 제공합니다.
 * 사용자 인터페이스에서 적절한 설정을 선택하는 데 도움이 되는 다양한 오류 메시지 및 도구 팁 개선사항을 사용할 수 있습니다.

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-03-22"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -14,7 +17,7 @@ lastupdated: "2019-03-01"
 ## Virtual Routing and Forwarding
 {: #vcscar-arch-overview-infrastructure-vrf}
 
-{{site.data.keyword.cloud}} アカウントは、Virtual Routing and Forwarding (VRF) アカウントとして構成することができます。 VRF アカウントにより、サブネット IP ブロック間の自動グローバル・ルーティングが有効になります。Direct Link 接続を使用するアカウントはすべて、VRF アカウントに変換するか、VRF アカウントとして作成する必要があります。
+{{site.data.keyword.cloud}} アカウントは、Virtual Routing and Forwarding (VRF) アカウントとして構成することができます。 VRF アカウントを使用すると、サブネット IP ブロック間の自動グローバル・ルーティングが可能になります。Direct Link 接続を使用するアカウントはすべて、VRF アカウントに変換するか、VRF アカウントとして作成する必要があります。
 
 ## Direct Link
 {: #vcscar-arch-overview-infrastructure-direct-link}
@@ -43,12 +46,12 @@ VMware vCenter Server on {{site.data.keyword.cloud_notm}} Hybridity Bundle サ�
 
 表 1. {{site.data.keyword.icpfull_notm}} のための vCenter Server 仕様
 
-| NFS デプロイメント  |  vSAN デプロイメント |
-:--|:----:|:----:
-サーバー数  |  3 |  4
-CPU | 28 コア 2.2 GHz | 28 コア 2.2 GHz
-メモリー | 384 GB | 384 GB
-ストレージ | 2000 GB 2IOPS/GB 管理、2000 GB 4IOPS/GB ワークロード、4000 GB 4IOPS/GB {{site.data.keyword.icpfull_notm}} | 最小 960-GB SSD x 2
+| | NFS デプロイメント | vSAN デプロイメント |
+|:---------- |:---------- |:---------- |
+| サーバーの数 | 3 | 4 |
+| CPU | 28 コア 2.2 GHz | 28 コア 2.2 GHz |
+| メモリー | 384 GB | 384 GB |
+| ストレージ | 2000 GB 2IOPS/GB 管理、2000 GB 4IOPS/GB ワークロード、4000 GB 4IOPS/GB {{site.data.keyword.icpfull_notm}} | 最小 960-GB SSD x 2 |
 
 {{site.data.keyword.cloud_notm}} Private のハードウェア要件に加え、Cloud Automation Manager (CAM) のデータベースとログ・データを格納するために、{{site.data.keyword.icpfull_notm}} 環境に永続ボリュームを作成する必要があります。 CAM は {{site.data.keyword.icpfull_notm}} がサポートするすべての永続ボリューム・タイプをサポートしますが、CAM で推奨される 2 つのストレージ構成は NFS および GlusterFS です。
 

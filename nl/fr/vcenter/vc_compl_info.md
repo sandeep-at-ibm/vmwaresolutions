@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-12"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -15,7 +18,7 @@ lastupdated: "2019-03-12"
 # Informations de conformité relatives aux instances vCenter Server
 {: #vc_compl_info}
 
-Passez en revue les informations suivantes pour obtenir des détails relatifs à la conformité pour les instances VMware vCenter Server. 
+Passez en revue les informations suivantes pour obtenir des détails relatifs à la conformité pour les instances VMware vCenter Server.
 
 L'offre VMware vCenter Server on {{site.data.keyword.cloud_notm}} with NSX-T n'est pas prise en charge pour les clients HIPAA.
 {:important}

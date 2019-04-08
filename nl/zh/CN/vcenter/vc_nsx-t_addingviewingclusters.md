@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-03-22"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -50,7 +53,7 @@ lastupdated: "2019-03-04"
 ### 裸机服务器设置
 {: #vc_nsx-t_addingviewingclusters-bare-metal-settings}
 
-您可以选择 **Skylake**、**SAP 认证**或 **Broadwell**。
+可以选择 **Skylake** 或 **Broadwell**。
 
 #### Skylake
 {: #vc_nsx-t_addingviewingclusters-adding-skylake}
@@ -65,20 +68,6 @@ lastupdated: "2019-03-04"
 |双 Intel Xeon Gold 5120 处理器 / 共 28 个核心，2.2 GHz|128 GB、192 GB、384 GB、768 GB、1.5 TB|
 |双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz|128 GB、192 GB、384 GB、768 GB、1.5 TB|
 
-#### SAP 认证
-{: #vc_nsx-t_addingviewingclusters-adding-sap}
-
-选择 **SAP 认证**后，无法变更 CPU 或 RAM 设置。
-
-根据需求，选择裸机服务器配置：
-* 双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz / 192 GB RAM
-* 双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz / 384 GB RAM
-* 双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz / 768 GB RAM
-* 双 Intel Xeon E5-2690 V4 处理器 / 共 28 个核心，2.6 GHz / 512 GB RAM
-* 四核 Intel Xeon E7-8890 V4 处理器 / 共 96 个核心，2.2 GHz / 1024 GB RAM
-* 四核 Intel Xeon E7-8890 V4 处理器 / 共 96 个核心，2.2 GHz / 2048 GB RAM
-* 四核 Intel Xeon E7-8890 V4 处理器 / 共 96 个核心，2.2 GHz / 4096 GB RAM
-
 #### Broadwell
 {: #vc_nsx-t_addingviewingclusters-adding-broadwell}
 
@@ -88,9 +77,6 @@ lastupdated: "2019-03-04"
 
 | CPU 模型选项   |RAM 选项|
 |:------------- |:------------- |
-|双 Intel Xeon E5-2620 V4 / 共 16 个核心，2.1 GHz|128 GB、256 GB、512 GB、768 GB、1.5 TB|
-|双 Intel Xeon E5-2650 V4 / 共 24 个核心，2.2 GHz|128 GB、256 GB、512 GB、768 GB、1.5 TB|
-|双 Intel Xeon E5-2690 V4 / 共 28 个核心，2.6 GHz|128 GB、256 GB、512 GB、768 GB、1.5 TB|
 |四核 Intel Xeon E7-4820 V4 / 共 40 个核心，1.9 GHz|128 GB、256 GB、512 GB、1 TB、2 TB、3 TB|
 |四核 Intel Xeon E7-4850 V4 / 共 64 个核心，2.2 GHz|128 GB、256 GB、512 GB、1 TB、2 TB、3 TB|
 
@@ -147,14 +133,6 @@ lastupdated: "2019-03-04"
   |4 IOPS/GB|此选项旨在用于同时活动数据百分比高的更高强度工作负载。示例应用包括：事务性数据库。|
   |10 IOPS/GB|此选项旨在用于要求最苛刻的工作负载类型（如分析）。示例应用包括：高事务数据库和其他性能敏感型数据库。此性能级别限制为每个文件共享的最大容量为 4 TB。|
 
-### 本地磁盘
-{: #vc_nsx-t_addingviewingclusters-adding-local-disks}
-
-本地磁盘选项仅可用于 **SAP 认证**的四核 Intel Xeon E7-8890 V4 处理器裸机配置。
-请指定以下选项：
-* **磁盘计数**：选择要添加的磁盘数。
-* **磁盘类型**：选择与所需磁盘类型相应的选项。
-
 ### 许可证设置
 {: #vc_nsx-t_addingviewingclusters-adding-licensing-settings}
 
@@ -183,14 +161,11 @@ lastupdated: "2019-03-04"
 3. 单击左侧导航窗格上的**基础架构**，然后单击**集群**表右上角的**添加**。
 4. 在**添加集群**页面上，输入集群名称。
 5. 如果希望托管集群的 {{site.data.keyword.CloudDataCent_notm}} 与托管实例的不同，请在**裸机服务器**下选中**选择其他位置**复选框，然后选择要托管实例的 {{site.data.keyword.CloudDataCent_notm}}。
-6. 填写裸机配置。
-   * 如果选择的是 **Skylake** 或 **Broadwell**，请指定 **CPU 型号**、**RAM** 量和 **{{site.data.keyword.baremetal_short}} 数**。
-   * 如果选择的是 **SAP 认证**，请指定 CPU 型号。
+6. 填写裸机配置。指定 **CPU 型号**、**RAM** 量和 **{{site.data.keyword.baremetal_short}} 数**。
 7. 填写存储配置。
   * 如果选择 **vSAN 存储器**，请指定容量和高速缓存磁盘的磁盘类型、磁盘数和 vSAN 许可证版本。如果需要更多存储器，请选中**高性能 Intel Optane** 框。
   * 如果选择 **NFS 存储器**，并且要向所有文件共享添加和配置相同设置，请指定**共享数**、**性能**和**大小 (GB)**。
   * 如果选择 **NFS 存储器**，并且要单独添加和配置文件共享，请选择**单独配置共享**。接着，单击**添加共享存储器**标签旁边的 **+** 图标，然后为每个文件共享选择**性能**和**大小 (GB)**。必须至少选择一个文件共享。
-  * 如果选择**本地磁盘**，请指定磁盘计数和磁盘类型。
 8. 完成网络接口设置。
 8. 指定 vSphere 许可证密钥的提供方式：
   * 对于业务合作伙伴用户，会包含 vSphere 许可证 (Enterprise Plus Edition)，该许可证以您的名义购买。
@@ -260,6 +235,33 @@ lastupdated: "2019-03-04"
 |大小|存储的容量。|
 |IOPS/GB|存储的性能级别。|
 |NFS 协议|存储的 NFS 版本。|
+
+表 6. 网络接口 - VLAN 详细信息
+
+|项|描述|  
+|:------------- |:------------- |
+|VLAN 编号| 唯一的 VLAN 编号。|
+|描述|VLAN 的描述。|
+|位置| 数据中心位置。|
+|主路由|VLAN 的主路由。|
+
+单击**查看资源**以访问 VLAN 详细信息。
+
+表 7. 网络接口 - 子网详细信息
+
+|项|描述|  
+|:------------- |:------------- |
+|名称|子网名称。单击名称以访问子网详细信息。|
+|类型| 子网的类型：主子网或可移植子网。|
+|描述|子网的描述。|
+
+表 8. 网络接口 - IP 详细信息
+
+|项|描述|  
+|:------------- |:------------- |
+|IP 数|IP 地址。|
+|状态|IP 地址的状态。|
+|描述|IP 地址的描述。|
 
 ## 从 vCenter Server with NSX-T 实例中删除集群
 {: #vc_nsx-t_addingviewingclusters-deleting}

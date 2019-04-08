@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-16"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # HCX 移除

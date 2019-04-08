@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-12"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:faq: data-hd-content-type='faq'}
@@ -31,7 +34,7 @@ Cloud Foundation インスタンス内に組み込まれているネットワー
 {: #sd_networkingoncloudfoundation-using-nsx-with-vm}
 {: faq}
 
-Cloud Foundation インスタンスのデプロイ時に、インスタンス内で VMware NSX の注文、インストール、ライセンス交付、および構成が行われています。また、NSX Manager、NSX Controllers、および NSX Transport Zone がセットアップされ、各 ESXi サーバーに NSX コンポーネントが構成されます。
+Cloud Foundation インスタンスのデプロイ時に、インスタンス内で VMware NSX の注文、インストール、ライセンス交付、および構成が行われています。 また、NSX Manager、NSX Controllers、および NSX Transport Zone がセットアップされ、各 ESXi サーバーに NSX コンポーネントが構成されます。
 
 しかし、ワークロード VM が相互に通信したりインターネットにアクセスしたりする必要がある場合は、VM で使用できる NSX をユーザーの責任で構成する必要があります。
 

@@ -6,12 +6,15 @@ copyright:
 
 lastupdated: "2019-03-12"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Angebotsvergleichsdiagramm
 {: #inst_comp_chart}
 
-Das folgende Diagramm gibt Aufschluss über die Unterschiede bei der Funktionsunterstützung für VMware vCenter Server-Instanzen, VMware vCenter Server with Hybridity Bundle-Instanzen und VMware vSphere-Clustern. 
+Das folgende Diagramm gibt Aufschluss über die Unterschiede bei der Funktionsunterstützung für VMware vCenter Server-Instanzen, VMware vCenter Server with Hybridity Bundle-Instanzen und VMware vSphere-Clustern.
 
 Tabelle 1. Unterstützte Funktionen für vCenter Server, vCenter Server with Hybridity Bundle und vSphere-Cluster
 
@@ -39,7 +42,7 @@ Tabelle 1. Unterstützte Funktionen für vCenter Server, vCenter Server with Hyb
 
 <sup>1</sup> Entsprechend einem geprüften Design und mit Verifizierung während der Bereitstellung.
 
-<sup>2</sup> vSAN nur für neue vCenter Server with Hybridity-Instanzen und Cluster. Nach der Bereitstellung können Sie NFS-Speicher hinzufügen. 
+<sup>2</sup> vSAN nur für neue vCenter Server with Hybridity-Instanzen und Cluster. Nach der Bereitstellung können Sie NFS-Speicher hinzufügen.
 
 <sup>3</sup> Sie können die Anzahl der ESXi-Server in einem vSAN-Cluster auf maximal 64 erhöhen. Weitere Informationen finden Sie unter _Wie viele ESXi-Server kann ich zu einem Cluster hinzufügen?_ im Abschnitt [Häufig gestellte Fragen zu ESXi-Servern](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_esxi).
 

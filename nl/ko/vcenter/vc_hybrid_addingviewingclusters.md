@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-03-18"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -185,7 +188,7 @@ vCenter Server with Hybridity Bundle 인스턴스 주문에는 VMware vSAN 6.6�
         <dt class="dt dlterm">삭제됨</dt>
         <dd class="dd">클러스터가 삭제되었습니다.</dd>
     </dl>
-4. 클러스터 이름을 클릭하여 ESXi 서버 및 스토리지의 세부사항을 보십시오.
+4. 클러스터 이름을 클릭하여 ESXi 서버, 스토리지 및 네트워크 인터페이스 세부사항을 보십시오.
 
   * ESXi 서버 세부사항:
      * **이름**: ESXi 서버의 이름으로, 형식은 `<host_prefix><n>.<subdomain_label>.<root_domain>`이며 여기서
@@ -215,6 +218,20 @@ vCenter Server with Hybridity Bundle 인스턴스 주문에는 VMware vSAN 6.6�
     * **크기**: 스토리지의 용량입니다.
     * **IOPS/GB**: 스토리지의 성능 레벨입니다.
     * **NFS 프로토콜**: 스토리지의 NFS 버전입니다.
+  * 네트워크 인터페이스 - VLAN 세부사항:
+    * **VLAN 번호**: 고유한 VLAN 번호입니다. 
+    * **설명**: VLAN의 설명입니다. 
+    * **위치**: 데이터 센터 위치입니다. 
+    * **기본 라우트**: VLAN의 기본 라우트입니다.
+    VLAN 세부사항에 액세스하려면 **리소스 보기**를 클릭하십시오. 
+  * 네트워크 인터페이스 - 서브넷 세부사항:
+    * **이름**: 서브넷 이름입니다. 서브넷 세부사항에 액세스하려면 이름을 클릭하십시오. 
+    * **유형**: 서브넷의 유형: 기본 또는 포터블. 
+    * **설명**: 서브넷의 설명입니다. 
+  * 네트워크 인터페이스 - IP 세부사항:
+    * **IP**: IP 주소입니다. 
+    * **상태**: IP 주소의 상태입니다. 
+    * **설명**: IP 주소의 설명입니다. 
 
 ## vCenter Server with Hybridity Bundle 인스턴스에서 클러스터 삭제
 {: #vc_hybrid_addingviewingclusters-deleting}

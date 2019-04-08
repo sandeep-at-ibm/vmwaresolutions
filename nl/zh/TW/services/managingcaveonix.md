@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-13"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -23,10 +26,10 @@ lastupdated: "2019-03-13"
 1. 使用 IBM Cloud 基礎架構 VPN 或跳躍伺服器來容許存取 Caveonix RiskForesight 虛擬機器 (VM) 的 IP 位址。您可以在 {{site.data.keyword.vmwaresolutions_short}} 主控台的 Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} 的服務詳細資料頁面上找到 IP 位址。具體方法如下：
    1. 從 {{site.data.keyword.cloud_notm}} 基礎架構客戶入口網站建立 VPN 密碼。
    2. 使用 {{site.data.keyword.cloud_notm}} 基礎架構 VPN 認證登入資料中心 VPN 入口網站。
-   3. 使用下列格式，將 IP 位址和主機名稱對映新增至您本端主機檔案；
+   3. 從本端電腦將 IP 位址和主機名稱對映新增至 `hosts` 檔。請使用下列格式：
 
       ```javascript
-      IPAddress              HostName
+      RiskForesight_VM_IP_Address      RiskForesight_FQDN
       ```
 2. 若要存取 Caveonix RiskForesight 主控台，請按一下 Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} 服務詳細資料頁面上的**檢視 RiskForesight 主控台**，然後使用同一服務詳細資料頁面上列出的認證進行登入。
 

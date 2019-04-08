@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-04"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Etapa 4-Configuração do aplicativo
@@ -19,7 +22,7 @@ Essa etapa é inicialmente concluída pela automação do IC4VS que usa informa�
 
 A configuração do Provedor de serviços tem oito subetapas:
 -	Etapa 1: Detalhe da organização - Inclua os detalhes da organização pai para o seu provedor de serviço de nuvem. Essa organização pode ter múltiplos locais físicos e múltiplos data centers. As organizações para seus locatários e suborganizações de seu provedor de serviços são incluídas posteriormente.
--	Etapa 2: Localizações - Mapeie a infraestrutura em "Localizações" do RiskForesight. Os ativos são agrupados por localização, provedor em nuvem e repositório de ativos.
+-	Etapa 2: Locais – Mapeie a infraestrutura em "Locais” do RiskForesight. Os recursos são agrupados por local, provedor de nuvem e repositório de ativos.
 -	Etapa 3: Ambientes-Opcional. Ambientes são uma maneira de agrupar ativos. Por exemplo, DevOps, Site Site, Produção.
 -	Etapa 4: Provedor em nuvem - Incluir os "provedores" que fornecem a infraestrutura em que seu aplicativo é executado.
 -	Etapa 5: Repositórios de ativos - Um Repositório de ativos associa um conjunto de ativos a uma Organização, um Provedor em nuvem e um Local.

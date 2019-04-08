@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-14"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Problèmes de configuration de la console vSphere rencontré lors de l'ajout d'un cluster haute disponibilité

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -25,7 +28,7 @@ Para obtener más información sobre cómo enlazar su cuenta de Iaas-only con su
 ## Procedimiento para migrar instancias
 {: #np_addinstancetousraccount-procedure}
 
-1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
+1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Recursos** en el panel de navegación izquierdo.
 2. En el banner de la consola, pulse el icono de cuenta de usuario y, a continuación, pulse el campo **Cuenta** para seleccionar la cuenta de usuario a la que desea migrar la instancia.
 3. En la tabla **Instancias de NetApp ONTAP Select**, busque la instancia anterior a V2.5.
 4. En la columna **Acciones**, pulse el icono de menú de desbordamiento y, a continuación, pulse **Migrar instancia a la cuenta**.
@@ -35,7 +38,7 @@ Para obtener más información sobre cómo enlazar su cuenta de Iaas-only con su
 {: #np_addinstancetousraccount-results}
 
 1. Se obtiene una notificación de consola en la que se acepta la solicitud para migrar la instancia a la cuenta {{site.data.keyword.cloud_notm}} especificada.
-2. Cuando se completa la migración de la instancia, la instancia se visualiza en la página **Instancias desplegadas** bajo la cuenta en la que se ha migrado. La instancia migrada ya no se visualiza en la cuenta original desde la que se ha migrado.
+2. Cuando se completa la migración de la instancia, la instancia se visualiza en la página **Recursos** de la cuenta en la que se ha migrado. La instancia migrada ya no se visualiza en la cuenta original desde la que se ha migrado.
 
 ## Enlaces relacionados
 {: #np_addinstancetousraccount-related}

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-03-25"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -136,7 +139,8 @@ Para obter mais informações, consulte [Visão geral do IBM Spectrum Protect Pl
 ### KMIP for VMware on IBM Cloud
 {: #prod_overview-kmip}
 
-O serviço KMIP para VMware no {{site.data.keyword.cloud_notm}} fornece um serviço altamente disponível 24 horas por dia, 7 dias por semana para gerenciar chaves de criptografia que são usadas pelo VMware no {{site.data.keyword.cloud_notm}}. Esse serviço oferece a capacidade de tempo de execução para permitir que os clientes criem, recuperem, ativem, revoguem e destruam as chaves de criptografia. Ele também fornece a capacidade de gerenciamento para manter as associações entre as credenciais do cliente e as chaves de criptografia.
+O serviço KMIP para VMware no {{site.data.keyword.cloud_notm}} fornece um serviço altamente disponível 24 horas por dia, 7 dias por semana para gerenciar chaves de criptografia que são usadas pelo VMware no {{site.data.keyword.cloud_notm}}. Esse serviço oferece a capacidade de tempo de execução para permitir que os clientes criem, recuperem, ativem, revoguem e destruam as chaves de criptografia. Ele também fornece a capacidade de gerenciamento para manter as
+associações entre as credenciais do cliente e as chaves de criptografia.
 
 Para obter mais informações, consulte [Visão geral do KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations).
 
@@ -150,9 +154,9 @@ Para obter mais informações, consulte [Visão geral do Veeam on {{site.data.ke
 ### VMware HCX on IBM Cloud
 {: #prod_overview-hcx}
 
-O serviço HCX no {{site.data.keyword.cloud_notm}} pode ampliar continuamente as redes de data centers no local para o {{site.data.keyword.cloud_notm}}, que permite que máquinas virtuais (MVs) sejam migradas para e do {{site.data.keyword.cloud_notm}} sem nenhuma conversão ou mudança.
+O serviço HCX no {{site.data.keyword.cloud_notm}} pode ampliar continuamente as redes de data centers no local para o {{site.data.keyword.cloud_notm}}, que permite que máquinas virtuais (VMs) sejam migradas para e do {{site.data.keyword.cloud_notm}} sem nenhuma conversão ou mudança.
 
-Para obter mais informações, consulte [Visão geral do VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview).
+Para obter mais informações, consulte [Visão geral do VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations).
 
 ### Zerto on IBM Cloud
 {: #prod_overview-zerto}

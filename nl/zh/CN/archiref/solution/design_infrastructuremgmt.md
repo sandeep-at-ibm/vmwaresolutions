@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -15,47 +18,32 @@ lastupdated: "2019-02-15"
 # 基础架构管理设计
 {: #design_infrastructuremgmt}
 
-基础架构管理是指用于管理 VMware 基础架构的组件。此设计使用一个外部 Platform Services Controller (PSC) 实例和一个 vCenter Server 实例：
-* vCenter Server 是用于管理 vSphere 环境的集中式平台，也是此解决方案中的其中一个基本组件。
+基础架构管理是指用于管理 VMware 基础架构的组件。
+* 具有嵌入式 Platform Services Controller (PSC) 的 vCenter Server 是用于管理 vSphere 环境的集中式平台，也是此解决方案中的其中一个基本组件。
 * 在此解决方案中将使用 PSC 来提供一组基础架构服务，包括 VMware vCenter Single Sign On、许可服务、查找服务和 VMware Certificate Authority。
 
-PSC 实例和 vCenter Server 实例是不同的虚拟机 (VM)。
+此设计使用集成到 vCenter Server 实例中的 PSC 功能。PSC 和 vCenter Server 位于同一虚拟机 (VM) 中。
 
-## PSC 设计
-{: #design_infrastructuremgmt-psc}
-
-此设计将一个外部 PSC 部署为与管理 VM 关联的专用 VLAN 上可移植子网中的虚拟设备。其缺省网关设置为后端客户路由器 (BCR)。虚拟设备使用下表中的规范进行配置。
-
-这些值是在部署时设置的，无法更改。
-{:note}
-
-表 1. Platform Services Controller 规范
-
-|属性|规范|
-|------------------------------|--------------------------------|
-|Platform Services Controller|虚拟设备|
-|vCPU 数量|2|
-|内存|4 GB |
-|磁盘|本地 VMFS 数据存储上 114 GB|
-|磁盘类型|自动精简配置|
+图 1. 基础架构管理</br>
+![基础架构管理](vcsv4radiagrams-ra-inframgmt.svg)
 
 位于主实例中的 PSC 分配有缺省 SSO 域 `vsphere.local`。
 
 ## vCenter Server 设计
 {: #design_infrastructuremgmt-vcenter}
 
-vCenter Server 也部署为虚拟设备。此外，vCenter Server 将安装在与管理 VM 关联的专用 VLAN 上的可移植子网中。其缺省网关设置为该特定子网的 BCR 上分配的 IP 地址。虚拟设备使用下表中的规范进行配置。
+此外，具有嵌入式 PSC 的 vCenter Server 将安装在与管理 VM 关联的专用 VLAN 上的可移植子网中。其缺省网关设置为该特定子网的 BCR 上分配的 IP 地址。虚拟设备使用下表中的规范进行配置。
 
-表 2. vCenter Server Appliance 规范
+表 1. vCenter Server Appliance 规范
 
 |属性|规范|
 |------------------------------|-------------------------------------|
 |vCenter Server|虚拟设备|
-|设备安装大小|中（最多 400 个主机，4000 个 VM）|
-|Platform Services Controller|外部|
-|vCPU 数量|8|
-|内存|24 GB |
-|磁盘|本地数据存储上 400 GB|
+|设备安装大小|大型（最多 1,000 个主机和 10,000 个 VM）|
+|Platform Services Controller|集成|
+|vCPU 数量|16|
+|内存|32 GB|
+|磁盘|本地数据存储上 990 GB（大型磁盘部署）|
 |磁盘类型|自动精简配置|
 
 ### vCenter Server 数据库
@@ -86,55 +74,47 @@ vCenter Server 配置使用设备随附的本地嵌入式 PostgreSQL 数据库�
 
 缺省情况下，**VM 重新启动优先级**选项设置为“中”，**主机隔离响应**选项处于禁用状态。此外，**VM 监视**处于禁用状态，并且**数据存储脉动信号传递**功能已配置为包含任何集群数据存储。此方法使用 NAS 数据存储（如果存在）。
 
-## 自动化
-{: #design_infrastructuremgmt-automation}
+## 增强型 vMotion 兼容性
+{: #design_infrastructuremgmt-evc}
 
-这些解决方案的基石是自动化。自动化提供了以下优点：
-* 降低部署的复杂性。
-* 大幅缩短部署时间。
-* 确保以一致的方式部署 VMware 实例。
+为了在具有潜在不同 CPU 功能的各集群节点中简化 vMotion 兼容性，在 Skylake 级别启用了增强型 vMotion 兼容性 (EVC) 方式，以在 {{site.data.keyword.cloud_notm}} 库存中有更新的处理器时确保各集群节点中的 vMotion 兼容性，并且未来支持在库存中没有 Skylake 处理器服务器时进行集群扩展。
 
-{{site.data.keyword.IBM}} CloudBuilder、IBM CloudDriver 和 SDDC Manager VM 协同工作，以启动新的 VMware 实例并执行生命周期管理功能。
+### IBM CloudDriver
+{: #design_infrastructuremgmt-cloud-driver}
 
-### IBM CloudBuilder 和 IBM CloudDriver
-{: #design_infrastructuremgmt-cloud-builder-driver}
+这些解决方案的基石是自动化。自动化可降低部署的复杂性，大大缩短部署时间，并确保以一致的方式部署 VMware 实例。
 
-IBM CloudBuilder 和 IBM CloudDriver 虚拟服务器实例 (VSI) 是 IBM 开发的组件，您无法对其进行访问。
-* IBM CloudBuilder 是临时的 {{site.data.keyword.cloud_notm}} 虚拟服务器实例 (VSI)，用于引导在供应的裸机 ESXi 主机中对解决方案组件的部署、配置和验证。
-* 将部署 IBM CloudDriver VSI 以创建实例，然后根据需要定期部署操作（例如，部署更多节点、集群或服务）的最新 {{site.data.keyword.cloud_notm}} for VMware 代码。IBM CloudDriver 通过专用于管理实例而部署的 VMware NSX Edge 服务网关与 {{site.data.keyword.vmwaresolutions_short}} 控制台进行通信，并充当维护实例的代理程序。IBM CloudDriver 负责执行持续操作，例如将新的裸机主机添加到集群以及将附加组件服务部署到实例中。对于 Cloud Foundation 实例，IBM CloudDriver 会与 VMware SDDC Manager VM 进行通信，以执行添加主机和补丁安装等功能。
+IBM CloudBuilder 是一种临时 {{site.data.keyword.cloud_notm}} VM 虚拟服务器实例 (VSI)，用于启动新的 VMware 实例并执行生命周期管理功能。它在需要总体 vCenter Server 实例管理时进行部署，在该过程完成后被销毁。
 
-用户有可能删除或损坏 VM，如以下部分中所述。除去 VM、关闭 VM 或使其变为不可操作时，会中断 {{site.data.keyword.vmwaresolutions_short}} 控制台上的以下 Cloud Foundation 或 vCenter Server 操作：
-* 查看实例或主机状态
-* 添加或除去集群
-* 添加或除去 ESXi 主机
-* 添加或除去服务
-* 补丁安装
+IBM CloudDriver 可以配置为通过公共网络连接或（可选）通过作为消息队列的 {{site.data.keyword.cloud_notm}} Object Storage 使用专用网络连接来与 {{site.data.keyword.vmwaresolutions_short}} 管理基础架构进行通信。IBM CloudDriver 是 IBM 开发的组件，用户不可访问；此组件具有以下属性和功能：
 
-### SDDC Manager
-{: #design_infrastructuremgmt-sddc-manager}
-
-对于 Cloud Foundation 实例，SDDC Manager VM 是由 VMware 开发并维护的组件。在整个生命周期内，它始终作为实例的一部分。它负责实例的以下生命周期功能：
-* 管理 VMware 组件：vCenter Server、Platform Services Controller (PSC)、vSAN 和 NSX，包括 IP 地址分配和主机名解析。
-* 扩展和收缩集群中的 ESXi 主机，包括任何受影响的服务，例如 NSX VTEP、vSAN 和资源池。
-
-对于 vCenter Server 实例，这些活动由 IBM CloudDriver 执行，因为没有 SDDC Manager。
+- 在用户帐户中部署和配置 vCenter Server 实例。
+- 在 vCenter Server 集群中添加和除去主机。
+- 在 vCenter Server 实例中添加和除去集群。
+- 在 vCenter Server 实例中添加和除去附加服务或功能。
 
 ### 自动化流程
 {: #design_infrastructuremgmt-auto-flow}
 
-以下过程描述了通过 {{site.data.keyword.vmwaresolutions_short}} 控制台订购 VMware 实例时的事件顺序：
-1.  订购 VLAN 和子网以通过 {{site.data.keyword.cloud_notm}} 联网。
-2.  订购安装了 vSphere Hypervisor 的 {{site.data.keyword.baremetal_short}}。
-3.  （如果适用）订购 Microsoft Windows 虚拟服务器实例 (VSI)，以充当 Active Directory 域控制器。
-4.  验证联网情况和部署的硬件。
-5.  （如果适用）初始配置单节点 vSAN。
-6.  （如果适用）部署并配置两个 Microsoft Windows 虚拟机，以充当 Active Directory 域控制器。
-7.  部署并配置 vCenter、PSC 和 NSX。
-8.  对剩余 ESXi 节点建立集群，扩展 vSAN（如果适用）以及配置 NSX 组件 (VTEP)。
-9.  部署 VMware Cloud Foundation SDDC Manager VM（如果适用）和 IBM CloudDriver VSI。
-10.  验证环境的安装和配置。
-11. 除去 CloudBuilder VSI。
-12. 部署可选服务，例如备份服务器和存储器。
+下面描述了使用 {{site.data.keyword.vmwaresolutions_short}} 控制台订购 VMware 实例时的事件顺序：
+1. 订购 VLAN 和子网以通过 {{site.data.keyword.cloud_notm}} 联网。
+2. 订购安装了 vSphere Hypervisor 的 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}。
+3. 订购 Microsoft Windows VSI 以充当 Active Directory 域控制器。
+4. 部署 Cloud Driver VSI。
+5. 验证联网情况和部署的硬件。
+6. （如果适用）初始配置单节点 vSAN。
+7. 部署并配置 vCenter（具有嵌入式 PSC）和 NSX。
+8. 对剩余 ESXi 节点建立集群，扩展 vSAN（如果适用）以及配置 NSX 组件 (VTEP)。
+9. 验证环境的安装和配置。
+10. 部署可选服务，例如备份服务器和存储器。
+11. 除去 Cloud Driver VSI。
+
+## 标识和密码
+{: #design_infrastructuremgmt-ids-pwd}
+
+IC4V 管理基础架构将所有 vCenter Server 包含的标识和密码以加密形式存储在 {{site.data.keyword.cloud_notm}} 管理平面中。用户对这些密码进行的任何更改都可能会中断 vCenter Server 中的自动化功能。
+
+可以在 IC4V 解决方案门户网站中提供更改的密码，这样自动化就可以不间断地处理功能。解决方案门户网站（可选）支持验证输入的密码。
 
 ## 相关链接
 {: #design_infrastructuremgmt-related}

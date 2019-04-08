@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2018-10-19"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -48,7 +51,7 @@ Bei Instanzen, für die ausgehend von einem Vorgängerrelease ein Upgrade auf V2
 
 Es wird empfohlen, die verbleibenden Konfigurationseinstellungen auf die neuen Werte zu setzen, um eine instanzübergreifende Konsistenz zu erreichen und eine adäquate Unterstützung für die Speichererweiterung zu ermöglichen. IBM plant, Tests ausschließlich mit diesen neuen Einstellungen für alle künftigen Releases von {{site.data.keyword.cloud_notm}} for VMware Solutions vorzunehmen.
 
-Weitere Informationen finden Sie unter _Erweiterte Konfigurationseinstellungen für ESXi-Server_ in [vCenter Server-Teileliste](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom#advanced-configuration-settings-for-esxi-servers). 
+Weitere Informationen finden Sie unter _Erweiterte Konfigurationseinstellungen für ESXi-Server_ in [vCenter Server-Teileliste](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom#advanced-configuration-settings-for-esxi-servers).
 
 ## Unterstützung von bis zu 51 ESXi-Servern für ersten Cluster und bis zu 59 ESXi-Servern für zusätzliche Cluster
 {: #relnotes_v22-esxi-cluster}
@@ -63,7 +66,7 @@ Bei Instanzen, die in V2.1 oder früheren Releases bereitgestellt wurden, müsse
 
 Bei Bestellungen von vCenter Server- und Cloud Foundation-Instanzen können Sie nun vorhandene private und öffentliche VLANs für Ihre Netzkonfiguration wiederverwenden. Wenn keine vorhandenen VLANs verfügbar sind, können Sie ein neues öffentliches und zwei private VLANs bestellen.
 
-Wichtige Hinweise, die Sie vor der Auswahl vorhandener VLANs lesen sollten, enthalten die Abschnitte *Netzschnittstelleneinstellungen* in [vCenter Server-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance). 
+Wichtige Hinweise, die Sie vor der Auswahl vorhandener VLANs lesen sollten, enthalten die Abschnitte *Netzschnittstelleneinstellungen* in [vCenter Server-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance).
 
 ## Updates für VMware vCenter Server-Instanzen
 {: #relnotes_v22-vcs}

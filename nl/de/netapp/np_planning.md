@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-14"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Voraussetzungen und Planung für NetApp ONTAP Select-Instanzen

@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-15"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Consideraciones operativas de la red de vCenter Server
@@ -19,14 +22,14 @@ lastupdated: "2019-02-15"
 
 Como parte de {{site.data.keyword.vmwaresolutions_full}}, el software de copia de seguridad de Veeam se puede desplegar de forma opcional en una instancia de servidor virtual de {{site.data.keyword.cloud_notm}} (VSI) mediante el uso del almacenamiento de resistencia (Endurance) de {{site.data.keyword.cloud_notm}} fuera del clúster VMware. El objetivo de este software es hacer copia de seguridad de los componentes de gestión de la solución. En [Visión general de Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations) encontrará detalles sobre la oferta.
 
-La copia de seguridad de todos los componentes de NSX es crucial para restaurar el sistema a su estado de trabajo si se produce una anomalía. No es suficiente realizar una copia de seguridad de los dispositivos virtuales NSX; se debe utilizar la función de copia de seguridad NSX del gestor de NSX para realizar copia de seguridad efectiva. Esta operación requiere que se especifique un servidor FTP o SFTP para el repositorio de datos de copia de seguridad NSX.
+La copia de seguridad de todos los componentes de NSX es crucial para restaurar el sistema a su estado de funcionamiento si se produce una anomalía. No es suficiente realizar una copia de seguridad de los dispositivos virtuales NSX; se debe utilizar la función de copia de seguridad NSX del gestor de NSX para realizar copia de seguridad efectiva. Esta operación requiere que se especifique un servidor FTP o SFTP para el repositorio de datos de copia de seguridad NSX.
 
 La copia de seguridad de NSX Manager contiene toda la configuración de NSX, incluidos controladores, entidades de conmutación y de direccionamiento lógicos, seguridad, reglas de cortafuegos y todo lo demás que configure dentro de la interfaz de usuario o API de NSX Manager. Se debe hacer copia de seguridad por separado de la base de datos de vCenter y de los elementos relacionados, como los conmutadores virtuales. Consulte [Copia de seguridad basada en archivo NSX](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup#nsx-file-based-backup) para obtener más información. Se debe realizar una copia de seguridad de la configuración de NSX junto con una [copia de seguridad basada en archivos de vCenter](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup#vcenter-file-based-backup).
 
 ### Copia de seguridad y recuperación en caso de error para IBM Cloud Private
 {: #vcsnsxt-operations-backup-dr-icp}
 
-Las copias de seguridad de un despliegue de {{site.data.keyword.icpfull_notm}} resultan cruciales para restaurar el sistema a su estado de trabajo si se produce una anomalía. En el caso de una copia de seguridad de VM tradicional, hay un punto conflictivo: cada nodo maestro de {{site.data.keyword.icpfull_notm}} ejecuta un servicio *etcd* y en la documentación de *etcd* se indica claramente que no se utilice la copia de seguridad de VM tradicional para restaurarlo.
+Las copias de seguridad de un despliegue de {{site.data.keyword.icpfull_notm}} resultan cruciales para restaurar el sistema a su estado de funcionamiento si se produce una anomalía. En el caso de una copia de seguridad de VM tradicional, hay un punto conflictivo: cada nodo maestro de {{site.data.keyword.icpfull_notm}} ejecuta un servicio *etcd* y en la documentación de *etcd* se indica claramente que no se utilice la copia de seguridad de VM tradicional para restaurarlo.
 
 En {{site.data.keyword.cloud_notm}} Private a nivel de plataforma, deberá realizar una copia de seguridad de estos componentes.
 - **etcd** - etcd se utiliza para almacenar recursos de Kubernetes y la información de estado de Calico.
@@ -42,7 +45,7 @@ Puede utilizar la tecnología de copia de seguridad o restauración que proporci
 ### Copia de seguridad y recuperación en caso de error para CAM
 {: #vcsnsxt-operations-backup-dr-cam}
 
-Las copias de seguridad de un despliegue de CAM resultan cruciales para restaurar el sistema a su estado de trabajo si se produce una anomalía. La copia de seguridad de CAM requiere que el cliente realice una copia de seguridad de los componentes siguientes:
+Las copias de seguridad de un despliegue de CAM resultan cruciales para restaurar el sistema a su estado de funcionamiento si se produce una anomalía. La copia de seguridad de CAM requiere que el cliente realice una copia de seguridad de los componentes siguientes:
 -	**Base de datos Mongo**: base de datos principal de CAM.
 -	**Base de datos de Maria**: utilizada por CAM Blueprint Designer.
 -	**Sistemas de archivos NFS/Gluster**: los datos de CAM residen en cuatro volúmenes persistentes.

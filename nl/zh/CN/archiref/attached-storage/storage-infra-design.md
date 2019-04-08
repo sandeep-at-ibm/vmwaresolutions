@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-27"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -23,7 +26,7 @@ lastupdated: "2019-02-27"
 
 图 1.{{site.data.keyword.cloud_notm}} 上连接的存储器的高级别体系结构
 
-![连接的存储器的体系结构](../solution/physical_nfs.svg "IBM Cloud 上连接的存储器的高级别体系结构")
+![连接的存储器的体系结构](../solution/vcsv4radiagrams-ra-nfs-shares.svg "IBM Cloud 上连接的存储器的高级别体系结构")
 
 ## 物理基础架构设计
 {: #storage-infra-design-phys-infra-design}

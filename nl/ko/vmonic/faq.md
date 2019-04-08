@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-12"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -38,7 +41,7 @@ lastupdated: "2019-03-12"
 
 실제 및 가상 인프라의 모든 비용과 인스턴스에서 발생한 라이센스는 {{site.data.keyword.cloud_notm}} 계정에 비용이 청구됩니다. 인스턴스를 주문할 때 {{site.data.keyword.cloud_notm}} 계정이 있어야 하고 계정과 연관된 {{site.data.keyword.slapi_short}} 키를 제공해야 합니다.
 
-## vCenter Server 인스턴스 및 VMware vSphere 클러스터 간 차이는 무엇입니까? 
+## vCenter Server 인스턴스 및 VMware vSphere 클러스터 간 차이는 무엇입니까?
 {: #faq-vcs-cf-vss}
 {: faq}
 

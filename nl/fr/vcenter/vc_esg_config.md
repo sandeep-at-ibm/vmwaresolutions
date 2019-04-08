@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-11"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -29,7 +32,8 @@ Dans le cadre du processus de commande de votre instance vCenter Server, les act
 * Déploiement et configuration d'un dispositif NSX Edge pour la conversion des adresses réseau de la plage d'adresses IP du
 commutateur logique de charge de travail en une adresse IP publique sur les règles de conversion d'adresses réseau.
 
-  NSX Edge n'est pas déployé pour les instances qui sont privées uniquement. {:note}
+  NSX Edge n'est pas déployé pour les instances qui sont privées uniquement.
+  {:note}
 
 * Si vous avez installé le service Veeam on {{site.data.keyword.cloud_notm}}, NSX Manager est configuré de manière à effectuer une sauvegarde quotidienne des configurations NSX. Pour plus d'informations, voir [Remarques relatives à l'installation de Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations#considerations-when-you-install-veeam-on-ibm-cloud).
 
@@ -65,9 +69,9 @@ Si vous voulez que vos machines virtuelles de charge de travail bénéficient d'
 1. Cliquez sur **Home > Networking & Security**.
 2. Dans le volet de navigation, cliquez sur **NSX Edges**, puis cliquez deux fois sur le serveur de périphérie nommé **customer-nsx-edge**.
 3. Cliquez sur **Management > NAT** pour ouvrir l'onglet **NAT**.
-4. Sélectionnez dans la table la règle de conversion d'adresses réseau source par défaut, puis cliquez sur la coche verte au-dessus de la table pour activer la règle.
+4. Sélectionnez dans la table la règle de conversion d'adresses réseau source (SNAT) par défaut, puis cliquez sur la coche verte au-dessus de la table pour activer la règle.
 
-Pour plus d'informations sur les règles de conversion d'adresses réseau source de NSX Edge, voir [Gestion des règles de conversion d'adresses réseau](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.
+Pour plus d'informations sur les règles de conversion d'adresses réseau (NAT) de NSX Edge, voir [Gestion des règles de conversion d'adresses réseau](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.
 
 ## Procédure d'identification des détails des sous-réseaux client
 {: #vc_esg_config-procedure-identify-customer-subnets-details}
@@ -77,7 +81,7 @@ Etant donné que le serveur de périphérie **customer-nsx-edge** est conçu pou
 Pour identifier les détails des sous-réseaux client de manière à pouvoir utiliser les adresses IP commandées, effectuez les opérations suivantes dans le client Web VMware vSphere :
 
 1. Cliquez sur **Home > Networking & Security**.
-2. Dans le volet de navigation, cliquez sur **NSX Edges**, puis localisez **customer-nsx-edge edge** dans la liste de serveurs de périphérie sur la droite. 
+2. Dans le volet de navigation, cliquez sur **NSX Edges**, puis localisez **customer-nsx-edge edge** dans la liste de serveurs de périphérie sur la droite.
 3. Dans la colonne **Description**, passez en revue la description du serveur de périphérie **customer-nsx-edge** pour voir les identificateurs de sous-réseau à la fois pour les sous-réseaux client privés et publics.
 
 Vous trouverez d'autres détails concernant les sous-réseau client en effectuant les opérations suivantes dans le portail	{{site.data.keyword.slportal}} :

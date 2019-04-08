@@ -4,30 +4,23 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-15"
+
+subcollection: vmwaresolutions
+
 
 ---
-# Übersicht über das Design
+# Komponenten von IBM Cloud for VMware Solutions
 {: #design_overview}
 
 {{site.data.keyword.vmwaresolutions_full}} stellt eine Automatisierung zur weltweiten Bereitstellung von VMware-Technologiekomponenten in {{site.data.keyword.CloudDataCents_notm}} bereit.
 
-## Lösungsangebote
-{: #design_overview-offerings}
+Zu den Angeboten in diesem Lösungsportfolio gehören VMware vSphere-Produkte in einem automatisch bereitgestellten und konfigurierten Cluster: VMware vSphere ESXi, VMware vCenter Server Appliance mit integriertem Platform Services Controller (PSC), VMware NSX-V oder NSX-T und optional VMware vSAN.
 
-Die Lösungsangebote beinhalten die folgenden VMware vSphere-Produkte in einem automatisch bereitgestellten und konfigurierten Cluster:
-* VMware Cloud Foundation: vSphere ESXi, Platform Services Controller (PSC), VMware vCenter Server Appliance, SDDC Manager, VMware NSX und VMware vSAN.
-* VMware vCenter Server: vSphere ESXi, Platform Services Controller (PSC), vCenter Server Appliance, NSX und optional vSAN.
+Die Architektur besteht aus einer einzelnen Cloudregion und unterstützt die Erweiterung in weitere Cloudregionen, die sich in einem anderen geografischen Gebiet und in einem anderen {{site.data.keyword.cloud_notm}}-Pod innerhalb desselben Rechenzentrums befinden. Eine Region wird als eindeutige vCenter Serverinstanz definiert. Das Design ermöglicht außerdem eine automatisierte Erweiterung und Verkleinerung der virtuellen Kapazität in einer vCenter Server-Instanz.
 
-In diesem Design wird bei der Erstbestellung eine Instanz in einem einzelnen Pod in einem {{site.data.keyword.CloudDataCent_notm}} (Rechenzentrum) bereitgestellt. Nach der Erstbereitstellung können Sie die virtuelle Umgebung auf weitere Pods im selben Rechenzentrum oder in anderen Rechenzentren erweitern.
-
-Das Design ermöglicht außerdem eine automatisierte Erweiterung und Verkleinerung der virtuellen Kapazität in einer Cloud Foundation- oder vCenter Server-Instanz.
-
-## VMware on IBM Cloud-Komponenten
-{: #design_overview-comp}
-
-Abbildung 1. Komponenten von VMware on {{site.data.keyword.cloud_notm}}
-![Komponenten von VMware on {{site.data.keyword.cloud_notm}}](design_overview.svg "Die Lösung umfasst die physische Infrastruktur, die virtuelle Infrastruktur, das Infrastrukturmanagement und allgemeine Services.")
+Abbildung 1. Lösungskomponenten von {{site.data.keyword.vmwaresolutions_short}}
+![Lösungskomponenten von {{site.data.keyword.vmwaresolutions_short}}](vcsv4radiagrams-ra-full.svg "Die Lösung umfasst die physische Infrastruktur, die virtuelle Infrastruktur, das Infrastrukturmanagement und allgemeine Services.")
 
 ## Zugehörige Links
 {: #design_overview-related}

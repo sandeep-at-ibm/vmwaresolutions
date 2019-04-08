@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -52,7 +55,7 @@ O gráfico a seguir descreve a visão geral da implementação de vários sites 
 
 Figura 1. Implementação de vários sites do Cloud Foundation
 
-![Implementação multissite do Cloud Foundation](multisite-hub-spoke.svg "Implementação multissite do Cloud Foundation")
+![Implementação de múltiplos sites do Cloud Foundation](../vcenter/multisite-hub-spoke.svg "Implementação de múltiplos sites do Cloud Foundation")
 
 O modelo contém as camadas a seguir:
 

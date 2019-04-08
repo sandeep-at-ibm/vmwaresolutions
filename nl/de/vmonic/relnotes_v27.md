@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2018-12-14"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -104,5 +107,5 @@ Die Benutzerschnittstelle wurde aktualisiert und bietet die folgenden Erweiterun
 
 * Die Registerkarte **Angepasst**, in der Sie das CPU-Modell und das RAM für {{site.data.keyword.baremetal_short_sing}}-Einstellungen angeben, wenn Sie Instanzen bestellen, wird in die Registerkarte **Skylake** und die Registerkarte **Broadwell** entsprechend dem Servertyp aufgeteilt, um Sie bei der Serverauswahl zu unterstützen.
 * Die Optionen für **Vorkonfiguriert** für Bare-Metal-Serverkonfigurationen sind nicht mehr verfügbar.
-* Die Spalte **Typ** ist jetzt in der Tabelle **vCenter Server-Instanzen** auf der Seite **Ressourcen** enthalten, um vCenter Server-, vCenter Server with Hybridity Bundle- und vCenter Limited Test Drive-Instanzen anzugeben. 
+* Die Spalte **Typ** ist jetzt in der Tabelle **vCenter Server-Instanzen** auf der Seite **Ressourcen** enthalten, um vCenter Server-, vCenter Server with Hybridity Bundle- und vCenter Limited Test Drive-Instanzen anzugeben.
 * Es sind verschiedene Fehlernachrichten und QuickInfos verfügbar, die Sie bei der Auswahl der geeigneten Einstellung in der Benutzerschnittstelle unterstützen.

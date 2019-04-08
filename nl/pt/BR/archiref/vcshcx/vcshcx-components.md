@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-05"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Glossário de componentes e termos do HCX
@@ -66,14 +69,17 @@ a capacidade da largura de banda externa for maior que 4 Gbps, o uso de
 mais pares de L2C permitirá maior utilização da rede
 subjacente.
 - WAN Optimizer - O HCX inclui um dispositivo de otimização WAN Silver Peak™
-opcionalmente implementado. Ele é implementado como um dispositivo da MV. Quando implementado, o tráfego do túnel CGW é redirecionado para atravessar o WAN Optimizer.
+opcionalmente implementado. Ele é implementado como um dispositivo da MV. Quando implementado,
+o tráfego do túnel do CGW é redirecionado para atravessar o WAN Optimizer.
 Como o WAN Optimizer diminui significativamente o tráfego ao longo da WAN
 (geralmente observa-se 3:1 a 6:1) enquanto aumenta a confiabilidade da conexão,
 recomenda-se sempre implementar o WAN Optimizer com o CGW. O
 benefício adicional de implementação do WAN Optimizer é estendido para limitar a
 largura de banda da WAN consumida pelo tráfego de migração da MV. A interface de
 gerenciamento do WAN Optimizer não é configurada por padrão.
-- Host ESXi do proxy - sempre que o CGW estiver configurado para se conectar ao site do HCX do lado da nuvem, um host ESXi do proxy aparecerá no vCenter fora de qualquer cluster. Esse host ESXi tem o mesmo endereço IP de gerenciamento e do vMotion
+- Host do ESXi do proxy - Sempre que o CGW estiver configurado para se conectar ao site
+do HCX do lado da nuvem, um host do ESXi do proxy aparecerá no vCenter fora de qualquer
+cluster. Esse host ESXi tem o mesmo endereço IP de gerenciamento e do vMotion
 que o dispositivo CGW correspondente. Isso permite que o ambiente do
 vSphere nos lados do cliente e da nuvem funcione como se estivesse
 executando um vMotion local. Benefícios para este método:
@@ -94,8 +100,8 @@ usa o login de SSO do vSphere do lado da nuvem (` administrator@vsphere.local`).
 instalação e modificar alguma configuração de rede. Ela também é usada
 para construir redes virtuais dentro do HCX.
 
-- IU de gerenciamento de dispositivo do gerenciador HCX do cliente/nuvem - Acessar a IU de gerenciamento de dispositivo para a nuvem ou o lado do cliente por meio do endereço IP privado da VM conforme visualizado no vCenter `https://<hcxmanager_IP>: 9443 `. O ID (geralmente "admin") e a senha
-são fornecidos por meio do portal do {{site.data.keyword.vmwaresolutions_short}}. A IU de gerenciamento é usada para iniciar e parar os serviços do HCX Manager, configurar o monitoramento de log, configuração de rede básica, upgrades manuais, coleta do log de suporte quando a IU da web não está funcionando, o registro com os componentes do vSphere (vCenter, PSC, NSX Manager) e o gerenciamento de certificado.
+- IU de gerenciamento de dispositivo do gerenciador do HCX do Cliente/Nuvem – Acesse a IU de gerenciamento de dispositivo para a nuvem ou o lado do cliente por meio do endereço IP privado da VM, conforme visualizado no vCenter `https://<hcxmanager_IP>: 9443 `. O ID (geralmente "admin") e a senha
+são fornecidos por meio do portal do {{site.data.keyword.vmwaresolutions_short}}. A IU de gerenciamento é usada para iniciar e parar os serviços do HCX Manager, configurar o monitoramento de log, a configuração de rede básica, os upgrades manuais, suportar a reunião de log quando a IU da web não está funcionando, o registro com os componentes do vSphere (vCenter, PSC, NSX Manager) e o gerenciamento de certificado.
 
 ## Links relacionados
 {: #vcshcx-components-related}

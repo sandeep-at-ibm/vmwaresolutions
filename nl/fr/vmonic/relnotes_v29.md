@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-14"
+lastupdated: "2019-03-25"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -33,9 +36,9 @@ Pour plus d'informations, voir les rubriques suivantes :
 
 Afin de consolider nos offres pour une meilleure expérience client, {{site.data.keyword.cloud_notm}} a décidé de cesser la prise en charge de VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} à compter du 13 mai 2019.    
 Ainsi, tous les clients seront dirigés vers VMware vCenter Server on {{site.data.keyword.cloud_notm}}, qui offre davantage de souplesse grâce à des options de stockage et d'octroi de licence.   
-Une assistance sera fournie aux clients existants qui utilisent VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} afin de les aider à migrer vers VMware vCenter Server on {{site.data.keyword.cloud_notm}} avant la date de fin de la prise en charge fixée au 13 mai 2019. 
+Une assistance sera fournie aux clients existants qui utilisent VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} afin de les aider à migrer vers VMware vCenter Server on {{site.data.keyword.cloud_notm}} avant la date de fin de la prise en charge fixée au 13 mai 2019.
 
-Après le 13 mai, les fonctions de gestion pour VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} seront retirées de la console {{site.data.keyword.vmwaresolutions_short}}. Les instances qui n'auront pas été migrées vers VMware vCenter Server on {{site.data.keyword.cloud_notm}} ne seront pas accessibles via la console d'infrastructure IBM Cloud. 
+Après le 13 mai, les fonctions de gestion pour VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} seront retirées de la console {{site.data.keyword.vmwaresolutions_short}}. Les instances qui n'auront pas été migrées vers VMware vCenter Server on {{site.data.keyword.cloud_notm}} ne seront pas accessibles via la console d'infrastructure IBM Cloud.
 
 Les clients seront contactés par le support {{site.data.keyword.cloud_notm}} avant le 25 mars 2019 pour commencer la migration à partir de VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}. Pour plus d'informations sur les options de migration pour les clients existants, voir la [page wiki {{site.data.keyword.vmwaresolutions_short}}](https://w3-connections.ibm.com/wikis/home?lang=en-us#!/wiki/Wf58c4c538dbf_45b4_b7a7_5003d0ceb79b/page/IBM%20Cloud%20for%20VMware%20Solutions){:new_window}.
  
@@ -44,12 +47,11 @@ Les clients peuvent afficher leur instance VMware Cloud Foundation on {{site.dat
 ## Prise en charge de VMware vSphere 6.7 Update 1
 {: #relnotes_v29-vsphere}
 
-Vous avez désormais la possibilité de commander VMware vSphere version 6.7 Update 1 avec vos instances VMware vCenter Server, VMware vCenter Server with Hybridity Bundle et VMware vSphere on {{site.data.keyword.cloud_notm}}. 
+Vous avez désormais la possibilité de commander VMware vSphere version 6.7 Update 1 avec vos instances VMware vCenter Server, VMware vCenter Server with Hybridity Bundle et VMware vSphere on {{site.data.keyword.cloud_notm}}.
 
 De plus, les instances Version d'essai à noeud unique pour la migration et la modernisation des applications sont désormais commandées avec vSphere Enterprise Plus 6.7u1.
 
-
-vSphere Enterprise Plus 6.7u1 est disponible uniquement pour les serveurs {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} Broadwell et Skylake. 
+vSphere Enterprise Plus 6.7u1 est disponible uniquement pour les serveurs {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} Broadwell et Skylake.
 
 Pour plus d'informations, voir les sections _Paramètres de licence_ dans les rubriques suivantes :
 
@@ -62,18 +64,17 @@ Pour plus d'informations, voir les sections _Paramètres de licence_ dans les ru
 
 A compter d'août 2019, le spanning VLAN ne sera plus pris en charge par {{site.data.keyword.vmwaresolutions_short}}. D'ici la fin juillet 2019, vous devez convertir votre compte d'infrastructure {{site.data.keyword.cloud_notm}} en un compte VRF et activer les points finaux de service pour votre compte.
 
-
 Pour plus d'informations, voir :
 
 * [Aperçu du service Routage et transfert virtuel (VRF) on IBM Cloud](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-* [Activation de votre compte pour l'utilisation des noeuds finaux de service à l'aide de l'interface CLI IBM Cloud](/docs/services/service-endpoint?topic=services/service-endpoint-cs_cli_install_steps)
+* [Activation de votre compte pour l'utilisation des noeuds finaux de service à l'aide de l'interface CLI IBM Cloud](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
 
 ## Prise en charge d'API
 {: #relnotes_v29-api}
 
 Des API sont désormais disponibles pour le déploiement d'instances, la suppression d'instances et l'ajout ou le retrait de serveurs ESXi et de clusters.
 
-La documentation API REST est également disponible dans la section *Référence* de la documentation utilisateur. Pour plus d'informations, voir [API {{site.data.keyword.vmwaresolutions_short}}](https://console.bluemix.net/apidocs/vmware-solutions).
+La documentation API REST est également disponible dans la section *Référence* de la documentation utilisateur. Pour plus d'informations, voir [API {{site.data.keyword.vmwaresolutions_short}}](https://cloud.ibm.com/apidocs/vmware-solutions).
 
 ## Mises à jour des instances VMware vCenter Server
 {: #relnotes_v29-vcs}
@@ -91,14 +92,19 @@ Cette édition applique les mises à niveau et améliorations suivantes :
 
 Pour plus d'informations sur la sélection de vos composants VMware, voir [Nomenclature de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
 
+### Mises à jour des centres de données
+{: #relnotes_v29-dc}
+
+Les nouveaux centres de données suivants sont disponibles pour déploiement : **FRA-05 - Francfort** et **LON-05 - Londres**. Pour plus d'informations, voir [Exigences et planification pour les instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning).
+
 ### Améliorations apportées au serveur ESXi
 {: #relnotes_v29-vcs-esxi}
 
-* Le protocole SSH (Secure Shell) est désormais désactivé pour les serveurs ESXi avant la distribution d'instance. 
+* Le protocole SSH (Secure Shell) est désormais désactivé pour les serveurs ESXi avant la distribution d'instance.
 * A compter de l''édition V2.9, les opérations de serveur ESXi suivantes seront disponibles :
 
-   * Ajout de nouveaux serveurs ESXi à un cluster existant tandis que ces serveurs sont en mode maintenance. Les machines virtuelles ne sont pas migrées vers les nouveaux serveurs tant que le mode maintenance n'est pas désactivé. 
-   * Ajout ou retrait simultané de serveurs ESXi sur plusieurs clusters dans votre instance. 
+   * Ajout de nouveaux serveurs ESXi à un cluster existant tandis que ces serveurs sont en mode maintenance. Les machines virtuelles ne sont pas migrées vers les nouveaux serveurs tant que le mode maintenance n'est pas désactivé.
+   * Ajout ou retrait simultané de serveurs ESXi sur plusieurs clusters dans votre instance.
 
 Pour plus d'informations, voir [Extension et réduction de capacité pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers).
 
@@ -107,7 +113,8 @@ Pour plus d'informations, voir [Extension et réduction de capacité pour des in
 
 Pour les commandes d'instance vCenter Server, vous pouvez désormais ajouter jusqu'à 24 To de stockage NFS pour les niveaux de performance 0,25, 2, et 4 IOPS/Go.
 
-Le niveau de performance 10 IOPS/Go est toujours limité à une capacité maximale de 4 To par partage de fichiers. {:note}
+Le niveau de performance 10 IOPS/Go est toujours limité à une capacité maximale de 4 To par partage de fichiers.
+{:note}
 
 ## Mises à jour apportées aux services complémentaires
 {: #relnotes_v29-services}
@@ -115,11 +122,11 @@ Le niveau de performance 10 IOPS/Go est toujours limité à une capacité maxima
 ### Caveonix RiskForesight on IBM Cloud
 {: #relnotes_v29-services-caveonix}
 
-Le service Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} est désormais disponible pour les instances VMware vCenter Server qui sont déployées dans, ou mises à niveau vers, la version 2.9 ou des éditions ultérieures. Ce service peut vous aider à gérer la cybersécurité et le risque de conformité à l'aide de contrôles de surveillance proactive et de défense automatisée destinés à assurer une protection contre les menaces et à permettre la conformité aux réglementations de l'industrie et du gouvernement. 
+Le service Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} est désormais disponible pour les instances VMware vCenter Server qui sont déployées dans, ou mises à niveau vers, la version 2.9 ou des éditions ultérieures. Ce service peut vous aider à gérer la cybersécurité et le risque de conformité à l'aide de contrôles de surveillance proactive et de défense automatisée destinés à assurer une protection contre les menaces et à permettre la conformité aux réglementations de l'industrie et du gouvernement.
 
 Vous pouvez commander des instances vCenter Server avec le service Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} déjà inclus ou vous pouvez ajouter ultérieurement ce service à vos instances vCenter Server existantes à partir de l'onglet **Services** de la page des détails d'instance.
 
-Vous pouvez également commander une licence Caveonix RiskForesight autonome sans l'associer à une instance VMware pour l'octroi de licence et l'activation de vos charges de travail locales. 
+Vous pouvez également commander une licence Caveonix RiskForesight autonome sans l'associer à une instance VMware pour l'octroi de licence et l'activation de vos charges de travail locales.
 
 Pour plus d'informations, voir :
 * [Remarques relatives à Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_considerations)
@@ -157,5 +164,5 @@ Dans l'édition en cours, Zerto Virtual Replication 6.5 update 3 est installé s
 
 L'interface utilisateur a été mise à jour et présente les améliorations suivantes :
 
-* Sur la page **Infrastructure**, un nouveau tableau **Interface réseau** contient des détails de réseau VLAN, de sous-réseau et d'adresse IP pour votre cluster. 
+* Sur la page **Infrastructure**, un nouveau tableau **Interface réseau** contient des détails de réseau VLAN, de sous-réseau et d'adresse IP pour votre cluster.
 * Diverses améliorations ont été apportées au niveau des messages d'erreur et des infobulles pour vous aider à sélectionner le paramétrage approprié sur l'interface utilisateur.

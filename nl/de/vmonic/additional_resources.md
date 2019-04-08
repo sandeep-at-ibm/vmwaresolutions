@@ -6,12 +6,15 @@ copyright:
 
 lastupdated: "2019-02-26"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Zusätzliche Ressourcen
 {: #additional_resources}
 
-Nutzen Sie die folgenden Ressourcen, um den Einstieg zu beschleunigen oder auf detaillierte technische Informationen zu {{site.data.keyword.vmwaresolutions_full}} zuzugreifen. 
+Nutzen Sie die folgenden Ressourcen, um den Einstieg zu beschleunigen oder auf detaillierte technische Informationen zu {{site.data.keyword.vmwaresolutions_full}} zuzugreifen.
 * Videos und Demonstrationen
 * Detaillierte technische Analysen
 * Lerntexte

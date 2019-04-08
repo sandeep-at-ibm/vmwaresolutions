@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-12"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Gráfico de comparación de ofertas
@@ -34,7 +37,7 @@ Tabla 1. Funciones soportadas para vCenter Server, vCenter Server con el paquete
 | Ediciones de licencias de vSAN | vSAN Advanced o Enterprise | vSAN Advanced o Enterprise | vSAN Advanced o Enterprise  |
 | Servicios complementarios | Soportado, sin incluir HCX on {{site.data.keyword.cloud_notm}}. Está disponible la actualización a vCenter Server con el paquete híbrido (Hybridity). | Soportado, incluido HCX on {{site.data.keyword.cloud_notm}}. | No soportado por la automatización de esta solución, pero puede traer e instalar su propio software. |
 
-## Notes
+## Notas
 {: #inst_comp_chart-notes}
 
 <sup>1</sup> Según un diseño validado y con verificación durante el despliegue.

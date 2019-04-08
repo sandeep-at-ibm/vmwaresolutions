@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -131,7 +134,7 @@ ESG 和 vRouter 中的路由表填充方式取决于集成方法。请参阅“{
 * [容器白皮书](https://communities.vmware.com/servlet/JiveServlet/download/2741654-198902/Containers%20and%20Container%20Networking%20for%20Network%20Engineers.pdf)（下载 PDF）
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 博客](https://www.ibm.com/blogs/bluemix/2018/01/vmware-hcx-ibm-cloud-aka-really-cool-space-age-kind-now-available/)
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 数据表](https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=26012526USEN)
-* [VMware HCX on {{site.data.keyword.cloud_notm}} 解决方案体系结构](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} 解决方案体系结构](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
 * [NSX for vSphere 6.4.3 配置最大值](https://configmax.vmware.com/guest)
 * [{{site.data.keyword.cloud_notm}} 平台文档](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.0/kc_welcome_containers.html)
 * [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-container_index)

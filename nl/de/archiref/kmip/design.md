@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-13"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -34,7 +37,6 @@ Da die vSAN-Verschlüsselung auf Datenspeicherebene angewendet wird, besteht ihr
 * Die vSAN-Verschlüsselung ist nicht auf andere Speicherlösungen wie {{site.data.keyword.cloud_notm}} Endurance-Dateispeicher und Blockspeicher anwendbar.
 * Für die vSAN-Verschlüsselung ist die vSAN Enterprise-Lizenz erforderlich.
 * Bei der vSAN-Statusprüfung werden möglicherweise in regelmäßigem Abstand Warnungen ausgegeben, die besagen, dass von keinem Ihrer vSphere-Hosts eine Verbindung zum KMS-Cluster hergestellt werden kann. Diese Warnungen treten auf, da es für die Verbindung der vSAN-Statusprüfung zu schnell zu einer Zeitlimitüberschreitung kommt. Sie können diese Warnungen ignorieren. Weitere Informationen finden Sie in [vSAN KMS Health Check intermittently fails with SSL Handshake Timeout error](https://kb.vmware.com/s/article/67115){:new_window}.
-
 
 ### vSphere-Verschlüsselung
 {: #kmip-design-vsphere-encrypt}
@@ -103,7 +105,7 @@ KMIP for VMware ist in einer Reihe von {{site.data.keyword.cloud_notm}}-Regionen
 
 Innerhalb jeder MZR stellt KMIP for VMware zwei Netzserviceendpunkte im privaten {{site.data.keyword.cloud_notm}}-Netz für hohe Verfügbarkeit bereit. Konfigurieren Sie beide Endpunkte in Ihrer Konfiguration des vCenter-Schlüsselmanagementservers (KMS) als KMS-Cluster. Eine Liste der Endpunkte in den einzelnen MZR sowie die KMIP-Serverzertifikatsignaturen finden Sie unter [KMIP for VMware-Service](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering).
 
-KMIP for VMware stellt auch eine Verbindung zu {{site.data.keyword.cloud_notm}} Key Protect über das private {{site.data.keyword.cloud_notm}}-Netz und nicht über das öffentliche Internet her. 
+KMIP for VMware stellt auch eine Verbindung zu {{site.data.keyword.cloud_notm}} Key Protect über das private {{site.data.keyword.cloud_notm}}-Netz und nicht über das öffentliche Internet her.
 
 Für den Zugriff auf KMIP for VMware über das private Netz muss Ihr {{site.data.keyword.cloud_notm}}-Infrastrukturkonto für VRF (Virtual Routing and Forwarding) aktiviert sein und die Routen für {{site.data.keyword.cloud_notm}}-Netzserviceendpunkte müssen den VRF-Routen Ihres Kontos hinzugefügt werden. Weitere Informationen finden Sie unter [Konto für Serviceendpunkte aktivieren](/docs/services/service-endpoint?topic=services/service-endpoint-getting-started#cs_cli_install_steps).
 

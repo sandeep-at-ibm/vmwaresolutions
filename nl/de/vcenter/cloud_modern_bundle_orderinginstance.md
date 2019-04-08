@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-04"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -100,7 +103,7 @@ Die Bereitstellung von HCX on {{site.data.keyword.cloud_notm}} ist automatisiert
 #### Instanzdetails anzeigen
 {: #cloud_modern_bundle_orderinginstance-view-inst-details}
 
-Sie können den Status der Bereitstellung prüfen, indem Sie die Instanzdetails anzeigen. Klicken Sie im linken Navigationsfenster auf **Ressourcen** und suchen Sie die Tabelle **vCenter Server-Instanzen** oder **Lokale HCX-Instanzen**, um Informationen zu den bestellten Instanzen anzuzeigen. 
+Sie können den Status der Bereitstellung prüfen, indem Sie die Instanzdetails anzeigen. Klicken Sie im linken Navigationsfenster auf **Ressourcen** und suchen Sie die Tabelle **vCenter Server-Instanzen** oder **Lokale HCX-Instanzen**, um Informationen zu den bestellten Instanzen anzuzeigen.
 
 Wenn die Instanz erfolgreich bereitgestellt wurde, werden die in den Abschnitten *Technische Spezifikationen* dieses Themas beschriebenen Komponenten auf Ihrer virtuellen VMware-Plattform installiert und der Aktivierungsschlüssel für den lokalen HCX on {{site.data.keyword.cloud_notm}}-Service in der Tabelle **Lokale HCX-Instanzen** aufgeführt.
 
@@ -111,8 +114,8 @@ Der Status der Instanz ändert sich in **Bereit** und Sie erhalten eine Benachri
 
 Installieren Sie den lokalen HCX Enterprise Manager und konfigurieren Sie die Verbindung zu Ihrer HCX on {{site.data.keyword.cloud_notm}}-Instanz.
 
-1. Suchen Sie den lokalen Aktivierungsschlüssel auf der Seite **Ressourcen**. 
-  1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**. 
+1. Suchen Sie den lokalen Aktivierungsschlüssel auf der Seite **Ressourcen**.
+  1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**.
   2. Zeigen Sie in der Tabelle **vCenter Server-Instanzen** die Spalte **Typ** an, um die Single-node Trial-Instanz für Migration und Anwendungsmodernisierung zu finden, und notieren Sie sich den Instanznamen.
   3. Blättern Sie zur Tabelle **Lokale HCX-Instanzen** und suchen Sie in der Spalte **Name** nach der Instanz mit demselben Namen wie die bestellte Einzelknoteninstanz mit dem Suffix *-OnPrem*.
   4. Notieren Sie den Schlüssel im Feld **Aktivierungsschlüssel**.
@@ -170,7 +173,7 @@ Die gelöschten Instanzen werden Ihnen bis zum Ende des Abrechnungszyklus für d
 
 Führen Sie folgende Schritte aus, um eine Single-node Trial-Instanz für Migration und Anwendungsmodernisierung zu löschen:
 
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**. 
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**.
 2. Suchen Sie in der Tabelle **vCenter Server-Instanzen** nach der Instanz, die Sie löschen wollen.
 3. Klicken Sie in der Spalte **Aktionen** auf das Symbol "Löschen".
    Der Status der Instanz ändert sich in **Wird gelöscht**. Nachdem die Instanz erfolgreich gelöscht wurde, werden die Komponenten der Instanz freigegeben und der Status der Instanz ändert sich in **Gelöscht**.

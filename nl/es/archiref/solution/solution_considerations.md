@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-25"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -15,7 +18,7 @@ lastupdated: "2019-02-15"
 # Consideraciones posteriores al despliegue para la instancia de VMware
 {: #solution_considerations}
 
-Las ofertas de {{site.data.keyword.vmwaresolutions_full}}, VMware vCenter Server y VMware Cloud Foundation no son servicios gestionados. Usted es responsable de la configuración, la seguridad, la gestión y la supervisión de todos los componentes de software. Con el acceso administrativo completo a la solución, tiene una gran potencia y flexibilidad que requiere conocimientos técnicos, administrativos y operativos significativos en varios dominios. La gestión de una instancia de VMware en el {{site.data.keyword.cloud_notm}} requiere la misma planificación y experiencia que la planificación de una instancia local. Las tecnologías definidas por software, como VMware NSX y VMware vSAN, simplifican considerablemente algunos aspectos de la gestión de instancias, pero pueden requerir nuevas habilidades y herramientas para gestionarse y operarse correctamente. Combinar la potencia, la velocidad y la fiabilidad del despliegue de VMware automatizado de {{site.data.keyword.cloud_notm}} con la planificación operativa adecuada y las pruebas garantiza una navegación rápida y satisfactoria en la nube híbrida.
+Las ofertas de {{site.data.keyword.vmwaresolutions_full}} no son servicios gestionados. Usted es responsable de la configuración, la seguridad, la gestión y la supervisión de todos los componentes de software. Con el acceso administrativo completo a la solución, tiene una gran potencia y flexibilidad que requiere conocimientos técnicos, administrativos y operativos significativos en varios dominios. La gestión de una instancia de VMware en el {{site.data.keyword.cloud_notm}} requiere la misma planificación y experiencia que la planificación de una instancia local. Las tecnologías definidas por software, como VMware NSX y VMware vSAN, simplifican considerablemente algunos aspectos de la gestión de instancias, pero pueden requerir nuevas habilidades y herramientas para gestionarse y operarse correctamente. Combinar la potencia, la velocidad y la fiabilidad del despliegue de VMware automatizado de {{site.data.keyword.cloud_notm}} con la planificación operativa adecuada y las pruebas garantiza una navegación rápida y satisfactoria en la nube híbrida.
 
 Revise las siguientes consideraciones para comprender las responsabilidades que tiene para gestionar y operar con la instancia antes y después de que se haya desplegado.
 
@@ -44,7 +47,7 @@ Complete los pasos siguientes para gestionar el acceso a la red de {{site.data.k
 - Acceda a los puntos finales de gestión de la instancia utilizando la [VPN de {{site.data.keyword.cloud_notm}}](https://www.softlayer.com/vpn-access) o la [Conexión de Direct-Link de {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/direct-link).
 - Idee una estrategia para la conectividad de red pública desde dentro de su instancia. Entre sus opciones se incluyen: el cliente de ejemplo VMware NSX Edge Services Gateway (ESG), dispositivos de pasarela tales como Vyatta y FortiGate, y servidores proxy desplegados en la red de {{site.data.keyword.cloud_notm}} o en su propia red a la que se accede a través de DirectLink.
 - Planifique si desea desplegar la carga de trabajo en VLAN de {{site.data.keyword.cloud_notm}} con [direcciones IP portátiles de {{site.data.keyword.cloud_notm}}](/docs/infrastructure/subnets?topic=subnets-getting-started-with-subnets-and-ips) o [en conmutadores lógicos NSX (VXLAN) utilizando sus propias direcciones IP](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_overview). Tenga en cuenta que el uso de redes definidas por software (SDN) de NSX le proporciona la mayor flexibilidad para gestionar y proteger la red de carga de trabajo en el {{site.data.keyword.cloud_notm}}.
-- Utilice ESG de NSX, [IBM Cloud Vyatta](https://console.cloud.ibm.com/catalog/infrastructure/virtual-router-appliance) y la interconexión de DirectLink para planificar la conectividad con cargas de trabajo (Network Address Translation, Virtual Private Network, direccionamiento).
+- Utilice ESG de NSX, [IBM Cloud Vyatta](https://cloud.ibm.com/catalog/infrastructure/virtual-router-appliance) y la interconexión de DirectLink para planificar la conectividad con cargas de trabajo (Network Address Translation, Virtual Private Network, direccionamiento).
 - Si implementa Cross-vCenter NSX, asegúrese de que los rangos de ID de segmento local no se solapen antes de desplegar las cargas de trabajo locales.
 
 ## Planificación y refuerzo de la seguridad
@@ -55,7 +58,7 @@ El usuario es responsable de proteger, cifrar y supervisar la instancia de VMwar
 - Cambie todas las contraseñas visualizadas en la consola de {{site.data.keyword.vmwaresolutions_short}} y utilice su propio sistema de gestión de contraseñas. Tenga en cuenta que IBM mantiene los ID de usuario distintos necesarios para la automatización y el soporte en curso.
 - Revise las políticas de contraseñas, como por ejemplo la complejidad y el período de caducidad, en todos los componentes.
 - Revise los valores de cifrado en todos los componentes.
-- Planifique e implemente soluciones de cortafuegos físicas o virtuales adecuadas, como por ejemplo NSX Distributed Firewall (DFW), NSX ESG, [Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations) e [IBM Cloud Vyatta](https://console.cloud.ibm.com/catalog/infrastructure/virtual-router-appliance).
+- Planifique e implemente soluciones de cortafuegos físicas o virtuales adecuadas, como por ejemplo NSX Distributed Firewall (DFW), NSX ESG, [Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations) e [IBM Cloud Vyatta](https://cloud.ibm.com/catalog/infrastructure/virtual-router-appliance).
 - Planifique e implemente las soluciones adecuadas de equilibrio de carga de aplicaciones y de seguridad, como [F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations).
 - Planifique e implemente las soluciones adecuadas de información de seguridad y de gestión de sucesos (SIEM), como por ejemplo [IBM QRadar](https://www.ibm.com/us-en/marketplace/hosted-security-intelligence).
 - Planifique e implemente la exploración de vulnerabilidades adecuada.
@@ -66,7 +69,7 @@ El usuario es responsable de proteger, cifrar y supervisar la instancia de VMwar
 
 Complete los pasos siguientes para personalizar la instalación de la instancia de VMware base para que se ajuste a sus requisitos.
 
-- Utilice su propia entidad emisora de certificados (CA) para generar certificados para componentes como, por ejemplo, vCenter, VMware Platform Services Controller (PSC) y NSX Manager.
+- Utilice su propia entidad emisora de certificados (CA) para generar certificados para componentes como, por ejemplo, vCenter (con PSC incorporado) y NSX Manager.
 - Configure los servicios desplegados. Por ejemplo:
   - Para HyTrust CloudControl on {{site.data.keyword.cloud_notm}}, configure la integración de AD, el control de acceso, los valores de SMTP (Simple Mail Transfer Protocol) y las políticas de conformidad.
   - Para Zerto on {{site.data.keyword.cloud_notm}}, el plan de direccionamiento y direccionamiento de IP de las comunicaciones Zerto VRA (Virtual Replication Appliance) desde el cruce de conversores de direcciones de red (NAT) no está soportado. Considere el tunelado o el redespliegue de los VRA para el direccionamiento y el direccionamiento adecuados.

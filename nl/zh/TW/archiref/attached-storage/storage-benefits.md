@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-13"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # 關於 vCenter Server 的連接儲存空間

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-25"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -15,7 +18,7 @@ lastupdated: "2019-02-15"
 # Nach der Bereitstellung zu beachtende Aspekte für Ihre VMware-Instanz
 {: #solution_considerations}
 
-Bei den Produktangeboten {{site.data.keyword.vmwaresolutions_full}}, VMware vCenter Server und VMware Cloud Foundation handelt es sich um nicht verwaltetes Services. Sie selbst sind für die Konfiguration, Sicherheit, Verwaltung und Überwachung sämtlicher Softwarekomponenten verantwortlich. Aufgrund Ihres vollständigen Verwaltungszugriffs auf die Lösung verfügen Sie über großes Potenzial und Flexibilität, für die fundiertes technisches, verwaltungstechnisches und operatives Fachwissen zu mehreren Domänen erforderlich ist. Die Verwaltung einer VMware-Instanz in {{site.data.keyword.cloud_notm}} erfordert dieselbe Planung und dasselbe Fachwissen, wie sie auch für eine lokale Instanz erforderlich sind. Softwaredefinierte Technologien wie VMware NSX und VMware vSAN vereinfachen einige Aspekte der Instanzenverwaltung erheblich, erfordern jedoch neue Kenntnisse zur ordnungsgemäßen Verwaltung sowie den Betrieb von Tools. Durch die Kombination aus Leistung, Geschwindigkeit sowie Zuverlässigkeit der durch {{site.data.keyword.cloud_notm}} automatisierten VMware-Bereitstellung und der entsprechenden Betriebsplanung und Tests wird eine schnelle und erfolgreiche Navigation zur Hybrid-Cloud sichergestellt.
+Bei den Angeboten von {{site.data.keyword.vmwaresolutions_full}} handelt es sich um nicht verwaltetes Services. Sie selbst sind für die Konfiguration, Sicherheit, Verwaltung und Überwachung sämtlicher Softwarekomponenten verantwortlich. Aufgrund Ihres vollständigen Verwaltungszugriffs auf die Lösung verfügen Sie über großes Potenzial und Flexibilität, für die fundiertes technisches, verwaltungstechnisches und operatives Fachwissen zu mehreren Domänen erforderlich ist. Die Verwaltung einer VMware-Instanz in {{site.data.keyword.cloud_notm}} erfordert dieselbe Planung und dasselbe Fachwissen, wie sie auch für eine lokale Instanz erforderlich sind. Softwaredefinierte Technologien wie VMware NSX und VMware vSAN vereinfachen einige Aspekte der Instanzenverwaltung erheblich, erfordern jedoch neue Kenntnisse zur ordnungsgemäßen Verwaltung sowie den Betrieb von Tools. Durch die Kombination aus Leistung, Geschwindigkeit sowie Zuverlässigkeit der durch {{site.data.keyword.cloud_notm}} automatisierten VMware-Bereitstellung und der entsprechenden Betriebsplanung und Tests wird eine schnelle und erfolgreiche Navigation zur Hybrid-Cloud sichergestellt.
 
 Lesen Sie die folgenden Hinweise, denen Sie die Verantwortlichkeiten des Kunden bei Verwaltung und Betrieb der Instanz vor und nach der Bereitstellung entnehmen können.
 
@@ -44,7 +47,7 @@ Führen Sie folgende Schritte aus, um den Zugriff auf Ihr {{site.data.keyword.cl
 - Greifen Sie mithilfe des [{{site.data.keyword.cloud_notm}}-VPNs](https://www.softlayer.com/vpn-access) oder Ihrer [{{site.data.keyword.cloud_notm}} Direct Link-Verbindung](https://www.ibm.com/cloud/direct-link) auf die Endpunkte des Instanzmanagements zu.
 - Erarbeiten Sie eine Strategie für die Konnektivität zum öffentlichen Netz aus Ihrer Instanz heraus. Zu Ihren Optionen gehören Folgende: das VMware NSX Edge Services Beispiel-Gateway (ESG) für Kunden, Gateway-Appliances wie Vyatta und FortiGate sowie Proxy-Server, die über Direct Link im {{site.data.keyword.cloud_notm}}-Netz oder Ihrem eigenen Netz bereitgestellt werden.
 - Planen Sie, ob Ihre Workload in {{site.data.keyword.cloud_notm}}-VLANs mit [portierbaren {{site.data.keyword.cloud_notm}}-IP-Adressen](/docs/infrastructure/subnets?topic=subnets-getting-started-with-subnets-and-ips) oder [ unter Verwendung Ihrer eigenen IP-Adresse über logische NSX-Switches (VXLANs)](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_overview) bereitgestellt werden soll. Beachten Sie, dass die Verwendung von Software-Defined Networking (SDN) von NSX Ihnen größte Flexibilität bei der Verwaltung und Sicherung Ihres Workload-Netzes in {{site.data.keyword.cloud_notm}} bietet.
-- Verwenden Sie NSX Edge Services Gateways (ESGs), [IBM Cloud Vyatta](https://console.cloud.ibm.com/catalog/infrastructure/virtual-router-appliance) und das Direct Link-Peering, um die Konnektivität zu Workloads (Netzadressumsetzung, Virtual Private Network, Routing) zu planen.
+- Verwenden Sie NSX Edge Services Gateways (ESGs), [IBM Cloud Vyatta](https://cloud.ibm.com/catalog/infrastructure/virtual-router-appliance) und das Direct Link-Peering, um die Konnektivität zu Workloads (Netzadressumsetzung, Virtual Private Network, Routing) zu planen.
 - Wenn Sie Cross-vCenter NSX implementieren, müssen Sie vor der Bereitstellung lokaler Workloads sicherstellen, dass sich die Bereiche der IDs lokaler Segmente nicht überschneiden.
 
 ## Sicherheitsplanung und Abschottung des Systems
@@ -55,7 +58,7 @@ Sie selbst sind dafür verantwortlich, dass Ihre VMware-Instanz und -Workloads g
 - Ändern Sie alle Kennwörter, die in der {{site.data.keyword.vmwaresolutions_short}}-Konsole angezeigt werden und verwenden Sie Ihr eigenes Kennwortmanagementsystem. Beachten Sie, dass IBM eigene Benutzer-IDs beibehält, die für die laufende Automatisierung und Unterstützung benötigt werden.
 - Beachten Sie für alle Komponenten die geltenden Kennwortrichtlinien, wie z. B. für Komplexität und Ablaufzeitraum.
 - Beachten Sie die für die einzelnen Komponenten geltenden Verschlüsselungseinstellungen.
-- Planen und implementieren Sie geeignete physische oder virtuelle Firewalllösungen wie z. B. NSX Distributed Firewall (DFW), NSX Edge Services Gateways (ESGs), [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations) und [IBM Cloud Vyatta](https://console.cloud.ibm.com/catalog/infrastructure/virtual-router-appliance).
+- Planen und implementieren Sie geeignete physische oder virtuelle Firewalllösungen wie z. B. NSX Distributed Firewall (DFW), NSX Edge Services Gateways (ESGs), [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations) und [IBM Cloud Vyatta](https://cloud.ibm.com/catalog/infrastructure/virtual-router-appliance).
 - Planen und implementieren Sie geeignete Lösungen für den Anwendungslastausgleich und die Sicherheit, wie z. B. [F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations).
 - Planen und implementieren Sie geeignete SIEM-Lösungen (SIEM - Security Information and Event Management, Sicherheitsinformationen und Ereignismanagement) wie z. B. [IBM QRadar](https://www.ibm.com/us-en/marketplace/hosted-security-intelligence).
 - Planen und implementieren Sie geeignete Möglichkeiten zum Ermitteln von Sicherheitslücken.
@@ -66,7 +69,7 @@ Sie selbst sind dafür verantwortlich, dass Ihre VMware-Instanz und -Workloads g
 
 Führen Sie folgende Schritte aus, um die Basisinstallation der VMware-Instanz an Ihre Anforderungen anzupassen.
 
-- Verwenden Sie Ihre eigene Zertifizierungsstelle, um Zertifikate für Komponenten wie vCenter, VMware Platform Services Controller (PSC) und den NSX-Manager zu generieren.
+- Verwenden Sie Ihre eigene Zertifizierungsstelle (CA), um Zertifikate für Komponenten wie vCenter (mit integriertem PSC) und NSX Manager zu generieren.
 - Konfigurieren Sie bereitgestellte Services. Beispiel:
   - Konfigurieren Sie für HyTrust CloudControl on {{site.data.keyword.cloud_notm}} die Active Directory-Integration, die Zugriffssteuerung, die Einstellungen für Simple Mail Transfer Protocol (SMTP) und die Konformitätsrichtlinien.
   - Planen Sie für Zerto on {{site.data.keyword.cloud_notm}} die IP-Adressierung und das Routing der Virtual Replication Appliance-Kommunikation (VRA) für Zerto ein, da die NAT-Traversierung nicht unterstützt wird. Damit die Adressierung und das Routing geeignet sind, müssen Sie möglicherweise die Tunnelung oder die erneute Bereitstellung Ihrer Virtual Replication Appliances (VRAs) in Betracht ziehen.

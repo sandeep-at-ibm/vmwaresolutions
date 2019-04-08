@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-15"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Enrichissement grâce à l'intelligence artificielle, aux analyses et à d'autres services cloud publics

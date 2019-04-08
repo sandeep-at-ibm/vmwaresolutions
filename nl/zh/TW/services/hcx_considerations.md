@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -12,16 +15,18 @@ lastupdated: "2019-03-08"
 {:note: .note}
 {:important: .important}
 
-# VMware HCX on IBM Cloud 規格及考量
+# VMware HCX on IBM Cloud 概觀
 {: #hcx_considerations}
 
 HCX on {{site.data.keyword.cloud}} 服務會將內部部署資料中心的網路無縫地擴充至 {{site.data.keyword.cloud_notm}}，這容許您將虛擬機器 (VM) 移轉至 {{site.data.keyword.cloud_notm}} 或從該處移轉，而不需要進行任何轉換或變更。
 
-只有部署在 2.3 版及更新版本中的 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 實例，才能使用此服務。{:note}
+只有部署在 2.3 版及更新版本中的 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 實例，才能使用此服務。
+{:note}
 
 您可以將現有 vCenter Server 實例升級至 vCenter Server with Hybridity Bundle 實例。如需升級實例及部署 HCX on {{site.data.keyword.cloud_notm}} 服務的相關資訊，請參閱[升級至 vCenter Server with Hybridity Bundle 實例的程序](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates#procedure-to-upgrade-to-the-vcenter-server-with-hybridity-bundle-instance)。
 
-具有 HCX on {{site.data.keyword.cloud_notm}} 的 vCenter Server 實例限制為來自內部部署站台只能有三個同時連線。{:note}
+具有 HCX on {{site.data.keyword.cloud_notm}} 的 vCenter Server 實例限制為來自內部部署站台只能有三個同時連線。
+{:note}
 
 ## HCX on IBM Cloud 的技術規格
 {: #hcx_considerations-specs}
@@ -67,7 +72,7 @@ HCX on {{site.data.keyword.cloud_notm}} 服務無法安裝至預設叢集具有�
 ### 防火牆規則的需求
 {: #hcx_considerations-firewall}
 
-安裝 HCX on {{site.data.keyword.cloud_notm}} 服務之前，您必須先將防火牆規則新增至任何現有防火牆，以容許所有出埠 HTTPS 資料流量，讓 HCX Manager 虛擬應用裝置 (HCX Manager) 可以登錄它自己。完成 HCX Manager 安裝之後，即可移除防火牆規則。此外，您還必須配置防火牆規則，以容許 HCX 正常運作。如需相關資訊，請參閱 [HCX on {{site.data.keyword.cloud_notm}} 架構](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)中的*附錄 A - 埠存取需求*。
+安裝 HCX on {{site.data.keyword.cloud_notm}} 服務之前，您必須先將防火牆規則新增至任何現有防火牆，以容許所有出埠 HTTPS 資料流量，讓 HCX Manager 虛擬應用裝置 (HCX Manager) 可以登錄它自己。完成 HCX Manager 安裝之後，即可移除防火牆規則。此外，您還必須配置防火牆規則，以容許 HCX 正常運作。如需相關資訊，請參閱 [VMware HCX on {{site.data.keyword.cloud_notm}} 埠存取需求](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-port-req#hcx-archi-port-req)。
 
 ## 移除 HCX on IBM Cloud 時的考量
 {: #hcx_considerations-delete}

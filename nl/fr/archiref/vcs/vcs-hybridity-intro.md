@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 # Présentation de vCenter Server on IBM Cloud with Hybridity Bundle
@@ -33,4 +36,4 @@ Le portefeuille complet de services et d'offres d'intégration multi-offre dispo
 ## Liens connexes
 {: #vcs-hybridity-intro-related}
 
-* [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)

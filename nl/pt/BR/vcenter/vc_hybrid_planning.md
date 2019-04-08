@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-03-20"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -35,9 +38,11 @@ Tabela 1. Instâncias disponíveis do {{site.data.keyword.CloudDataCents_notm}} 
 | DAL13 | Dallas | NA Sul |
 | FRA02 | Frankfurt | Europa |
 | FRA04 | Frankfurt | Europa |
+| FRA05 | Frankfurt | Europa |
 | HKG02 | Hong Kong | Ásia-Pacífico |
 | LON02 | Londres | Europa |
 | LON04 | Londres | Europa |
+| LON05 | Londres | Europa |
 | LON06 | Londres | Europa |
 | MEL01 | Melbourne | Ásia-Pacífico |
 | MEX01 | Querétaro | NA Sul |
@@ -63,7 +68,7 @@ Dependendo da disponibilidade e do fornecimento do inventário, o {{site.data.ke
 
 Tabela 2. Indicadores de status para {{site.data.keyword.CloudDataCents_notm}} ao pedir instâncias do vCenter Server with Hybridity Bundle
 
-| Status | Detalhes do status |
+| Barra de Status | Detalhes do status |
 |:------------------------------|:--------------------------------------------------|
 | Em breve                   | O {{site.data.keyword.CloudDataCent_notm}} não está disponível atualmente. |
 | Provisoriamente fora do inventário  | O  {{site.data.keyword.CloudDataCent_notm}}  não tem nenhuma disponibilidade atualmente. |

@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-13"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -51,10 +54,10 @@ Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} サービスをイン
 {: #caveonix_considerations-remove}
 
 Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} サービスを削除する前に、以下の考慮事項を確認してください。
-* Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} サービスを削除しても、Caveonix RiskForesight ライセンスは取り消されません。{{site.data.keyword.vmwaresolutions_short}} コンソールの**「リソース」**ページで、Caveonix RiskForesight ライセンスを**「Caveonix RiskForesight Licenses」**テーブルから削除する必要があります。
-* このサービスを削除すると、{{site.data.keyword.vmwaresolutions_short}} の自動処理機能によって、デプロイされた唯一の「オールインワン」Caveonix VM とそれに対して注文された専用プライベート・サブネットが削除されてしまいます。そのため、以下の点を考慮してください。
-   * Caveonix VM をスケールアウトして複数の VM にした場合、それらの追加の VM は削除されません。 
-   * 追加の VM で専用プライベート・サブネットの IP アドレスを使用していた場合、それらの VM が引き続き機能するために、新しい IP アドレスを割り当てる必要があります。 
+* Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} サービスを削除しても、Caveonix RiskForesight ライセンスは取り消されません。 {{site.data.keyword.vmwaresolutions_short}} コンソールの**「リソース」**ページで、Caveonix RiskForesight ライセンスを**「Caveonix RiskForesight Licenses」**テーブルから削除する必要があります。
+* このサービスを削除すると、{{site.data.keyword.vmwaresolutions_short}} の自動処理機能によって、デプロイされた唯一の「オールインワン」Caveonix VM とそれに対して注文された専用プライベート・サブネットが削除されてしまいます。 そのため、以下の点を考慮してください。
+   * Caveonix VM をスケールアウトして複数の VM にした場合、それらの追加の VM は削除されません。
+   * 追加の VM で専用プライベート・サブネットの IP アドレスを使用していた場合、それらの VM が引き続き機能するために、新しい IP アドレスを割り当てる必要があります。
    * Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} サービスがインストールされている vCenter Server インスタンス A を削除するときに、このサービス用に注文された専用プライベート・サブネットの IP アドレスを vCenter Server インスタンス B で使用していた場合は、vCenter Server インスタンス A の削除時に専用プライベート・サブネットが取り消されます。
 
 ## 関連リンク

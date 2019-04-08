@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -47,7 +50,7 @@ Tabela 2. Sistemas
 
 Ator | Descrição
 ---|---
-vCenter | O vCenter é a interface primária para que o administrador do sistema gerencie as MVs no local e acesse o plug-in HCX para estender redes e migrar MVs. Com o vCenter Server with Hybridity Bundle, o administrador de sistemas pode integrar de forma contínua as redes do vSphere no local à instância do vCenter Server que é executada no {{site.data.keyword.cloud_notm}}. A rede híbrida amplia as redes no local para o {{site.data.keyword.cloud_notm}} permitindo que os clientes migrem seus aplicativos para uma instância do vCenter Server que é executada no {{site.data.keyword.cloud_notm}} e de volta no local, se necessário. Para obter mais detalhes sobre o vCenter Server with Hybridity Bundle, consulte o documento [Arquitetura da solução VMware HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf).
+vCenter | O vCenter é a interface primária para que o administrador do sistema gerencie as MVs no local e acesse o plug-in HCX para estender redes e migrar MVs. Com o vCenter Server with Hybridity Bundle, o administrador de sistemas pode integrar de forma contínua as redes do vSphere no local à instância do vCenter Server que é executada no {{site.data.keyword.cloud_notm}}. A rede híbrida amplia as redes no local para o {{site.data.keyword.cloud_notm}} permitindo que os clientes migrem seus aplicativos para uma instância do vCenter Server que é executada no {{site.data.keyword.cloud_notm}} e de volta no local, se necessário. Para obter mais detalhes sobre o vCenter Server with Hybridity Bundle, consulte [Arquitetura de solução do VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro).
 MVs em pré-mise | As MVs no local hospedam os aplicativos que estão migrando para a nuvem. Inicialmente, eles são migrados como MVs e, em seguida, por meio da jornada de modernização de aplicativo migrada de MVs para contêineres.
 Nas MVs em nuvem | Nas MVs em nuvem, os aplicativos de host que foram migrados de no local. Elas se comunicam com os aplicativos no local por meio da rede L2 estendida. Para essa arquitetura de referência e nesse exemplo para o Acme Skateboards, uma das MVs em nuvem é um servidor de banco de dados, que faz parte da carga de trabalho de presença on-line.
 NSX-V | O NSX-V no vCenter Server fornece a rede de sobreposição definida pelo software que é gerenciada pelo administrador do sistema. A rede de sobreposição é o destino para redes estendidas do HCX, uma vez que ela manipula o tráfego das MVs para o {{site.data.keyword.icpfull_notm}}. O NSX-V fornece a arquitetura de referência com recursos, como implementação, reconfiguração e destruição de redes virtuais sob demanda e serviços de microssegmentação no VMware usando vSphere distributed switches (vDS). Para obter mais informações, veja [Visão geral do NSX-V](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv).

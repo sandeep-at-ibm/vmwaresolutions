@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -17,27 +20,32 @@ lastupdated: "2019-02-15"
 
 Allgemeine Services stellen die Services bereit, die von anderen Services auf der Cloud-Management-Plattform verwendet werden. Zu den allgemeinen Services der Lösung gehören Identitäts- und Zugriffsservices, Domänennamensservices, NTP-Services, SMTP-Services und Zertifizierungsstellenservices.
 
+Abbildung 1. Allgemeine Services</br>
+![Allgemeine Services](vcsv4radiagrams-ra-commonservices.svg)
+
 ## Identitäts- und Zugriffsservices
 {: #design_commonservice-identity-access}
 
-In diesem Design wird Microsoft Active Directory (AD) für das Identitätsmanagement verwendet. In diesem Design werden eine oder zwei virtuelle Maschinen für Windows Active Directory im Rahmen der Cloud Foundation- und vCenter Server-Bereitstellungsautomatisierung bereitgestellt. vCenter wird zur Verwendung der AD-Authentifizierung konfiguriert.
+In diesem Design wird Microsoft Active Directory (MSAD) für das Identitätsmanagement verwendet. In diesem Design werden eine oder zwei virtuelle Maschinen für Active Directory im Rahmen der vCenter Server-Bereitstellungsautomatisierung bereitgestellt. vCenter wird zur Verwendung der MSAD-Authentifizierung konfiguriert.
 
 ### Microsoft Active Directory
 {: #design_commonservice-msad}
 
-Standardmäßig wird eine einzelne Active Directory-VSI (VSI - Virtual Server Instance) auf der {{site.data.keyword.cloud}}-Infrastruktur bereitgestellt. Das Design bietet darüber hinaus die Option, zwei hoch verfügbare Microsoft Active Directory-Server als dedizierte Windows Server-VMs im Management-Cluster bereitzustellen.
+Standardmäßig wird eine einzelne Active Directory-VSI (VSI - Virtual Server Instance) auf der {{site.data.keyword.cloud}}-Infrastruktur bereitgestellt.
 
-Wenn Sie diese Option wählen, sind Sie für die Microsoft-Lizenzierung und -Aktivierung verantwortlich.
+Das Design bietet darüber hinaus die Option, zwei hoch verfügbare MSAD-Server als dedizierte Windows Server-VMs im Management-Cluster bereitzustellen.
+
+Wenn Sie die Option mit zwei hoch verfügbaren MSAD-Servern auswählen, sind Sie für die Bereitstellung der Microsoft-Lizenzierung und -Aktivierung verantwortlich.
 {:note}
 
-Active Directory dient nur zur Authentifizierung von Zugriffen für die Verwaltung der VMware-Instanz und nicht zur Speicherung von Benutzern der Workloads in bereitgestellten Instanzen. Der Gesamtstrukturrootname des Active Directory-Servers stimmt mit dem DNS-Domänennamen überein, den Sie angeben. Dieser Domänenname wird nur für die primäre Cloud Foundation- und vCenter Server-Instanz angegeben, wenn mehrere Instanzen verknüpft sind. Bei verknüpften Instanzen enthält jede Instanz einen Active Directory Server, der sich im Rootreplikatring der Gesamtstruktur befindet. Die DNS-Zonendateien werden ebenfalls auf die Active Directory Server repliziert.
+Active Directory dient nur zur Authentifizierung von Zugriffen für die Verwaltung der VMware-Instanz und nicht zur Speicherung von Benutzern der Workloads in bereitgestellten Instanzen. Der Gesamtstrukturrootname des Active Directory-Servers stimmt mit dem DNS-Domänennamen überein, den Sie angeben. Dieser Domänenname wird nur für die primäre vCenter Server-Instanz angegeben, wenn mehrere Instanzen verknüpft sind. Bei verknüpften Instanzen enthält jede Instanz einen Active Directory Server, der sich im Rootreplikatring der Gesamtstruktur befindet. Die DNS-Zonendateien werden ebenfalls auf die Active Directory Server repliziert.
 
 ### vSphere-SSO-Domäne
 {: #design_commonservice-vsphere-sso}
 
-Die SSO-Domäne (Single Sign On) für vSphere wird als erster Authentifizierungsmechanismus für eine einzelne Instanz oder mehrere verknüpfte Instanzen verwendet. Die SSO-Domäne dient außerdem dazu, eine VMware-Instanz oder mehrere verknüpfte Instanzen mit dem Microsoft Active Directory-Server zu verbinden. Die folgende SSO-Konfiguration wird angewendet:  
+Die SSO-Domäne (Single Sign On) für vSphere wird als erster Authentifizierungsmechanismus für eine einzelne Instanz oder mehrere verknüpfte Instanzen verwendet. Die SSO-Domäne dient außerdem dazu, eine VMware-Instanz oder mehrere verknüpfte Instanzen mit dem MSAD-Server zu verbinden. Die folgende SSO-Konfiguration wird angewendet:  
 * Die SSO-Domäne von `vsphere.local` wird immer verwendet.
-* Für VMware-Instanzen, die an eine vorhandene Instanz gebunden sind, wird Platform Services Controller (PSC) mit der SSO-Domäne der vorhandenen Instanz verknüpft.
+* Für VMware-Instanzen, die an eine vorhandene Instanz gebunden sind, wird der integrierte Platform Services Controller (PSC) mit der SSO-Domäne der vorhandenen Instanz verknüpft.
 * Der SSO-Standortname stimmt mit dem Instanznamen überein.
 
 ## Domänennamensservices
@@ -45,45 +53,32 @@ Die SSO-Domäne (Single Sign On) für vSphere wird als erster Authentifizierungs
 
 DNS (Domänennamensservices) in diesem Design wird nur für das Cloud-Management und die Infrastrukturkomponenten verwendet.
 
-### VMware vCenter Server
-{: #design_commonservice-vcenter}
+### Primäre vCenter Server-Instanz
+{: #design_commonservice-primary-vcs}
 
-Die vCenter Server-Bereitstellung verwendet die bereitgestellten Active Directory-Server als DNS-Server für die Instanz. Alle bereitgestellten Komponenten (vCenter, PSC, NSX und ESXi-Hosts) werden so konfiguriert, dass sie auf den Active Directory-Server als DNS-Standardserver verweisen. Sie können die Konfiguration der DNS-Zone anpassen, sofern Ihre Konfiguration die Konfiguration der bereitgestellten Komponenten nicht beeinträchtigt.
+Die vCenter Server-Bereitstellung verwendet die bereitgestellten AD-VSIs als DNS-Server für die Instanz. Alle bereitgestellten Komponenten (vCenter mit integriertem PSC, NSX und ESXi-Hosts) werden so konfiguriert, dass sie auf den Active Directory-Server als DNS-Standardserver verweisen. Sie können die Konfiguration der DNS-Zone anpassen, sofern Ihre Konfiguration die Konfiguration der bereitgestellten Komponenten nicht beeinträchtigt.
+- In diesem Design werden DNS-Services auf den AD-VSIs durch die folgende Konfiguration integriert:
+- Die Domänenstruktur wird vom Benutzer angegeben. Der Domänenname kann eine beliebige Anzahl von Ebenen umfassen, bis zu dem Maximum, das alle vCenter Server-Komponenten verarbeiten können. So wird sichergestellt, dass die unterste Ebene die Unterdomäne für die Instanz ist.
+    - Der von Ihnen angegebene DNS-Domänenname wird als Rootdomänenname der vCenter Server Active Directory-Gesamtstruktur verwendet. Wenn der DNS-Domänenname zum Beispiel "cloud.ibm.com" lautet, ist der Rootname der Active Directory-Gesamtstruktur "cloud.ibm.com". Die DNS-Domäne und die AD-Domäne sind für alle föderierten Instanzen von vCenter Server identisch.
+    - Wählen Sie einen zusätzlichen Namen als Subdomäne der vCenter Server-Instanz aus. Dieser Unterdomänenname muss unter allen verknüpften vCenter Serverinstanzen eindeutig sein.
+- Die DNS-Server für Active Directory werden so konfiguriert, dass sie für den DNS-Domänenbereich und den Unterdomänenbereich maßgeblich sind.
+- Die DNS-Server für Active Directory werden so konfiguriert, dass sie auf die {{site.data.keyword.cloud_notm}}-DNS-Server für alle anderen Zonen verweisen.
+- Alle sekundären Cloud-Regionen, die in die erste oder in die Ziel-Cloud-Region integriert sind, müssen dieselbe DNS-Namensstruktur über der Unterdomäne verwenden. 
+- Implementieren Sie optional redundante DNS-Server innerhalb des vCenter Server-Clusters. Zwei AD/DNS-Server sind nicht lizenziert konfiguriert. Es liegt in der Verantwortung des Benutzers, Lizenzen für die Windows-Betriebssysteme für diese Server bereitzustellen.
+- Wenn für einen einzelnen Standort nur ein AD/DNS-Server bereitgestellt wird, dürfen alle konfigurierten vCenter Server-Komponenten NUR diese einzelne IP-Adresse als DNS-Eintrag haben. 
 
-In diesem Design werden DNS-Services auf den Active Directory-Servern durch die folgende Konfiguration integriert:
-* Sie können die Domänenstruktur angeben. Der Domänenname kann eine beliebige Anzahl von Ebenen umfassen (bis zu dem Maximum, das die vCenter-Serverkomponenten verarbeiten können). Die unterste Ebene ist die Unterdomäne für die Instanz.
-   * Der von Ihnen angegebene DNS-Domänenname wird als Rootdomänenname der Active Directory-Gesamtstruktur verwendet. Wenn der DNS-Domänenname zum Beispiel `cloud.ibm.com` lautet, ist der Rootdomänenname der Active Directory-Gesamtstruktur `cloud.ibm.com`. Dieser DNS- und Active Directory-Domänenname ist über alle verknüpften vCenter Server-Instanzen hinweg identisch.
-   * Sie können zusätzlich einen Unterdomänennamen für die Instanz angeben. Der Unterdomänenname muss unter allen verknüpften vCenter-Serverinstanzen eindeutig sein.
-* Die DNS-Server für Active Directory werden so konfiguriert, dass sie für die DNS-Domänenbereich und den Unterdomänenbereich maßgeblich sind.
-* Die DNS-Server für Active Directory werden so konfiguriert, dass sie auf die {{site.data.keyword.cloud_notm}}-DNS-Server für alle anderen Zonen verweisen.
-* Jede Instanz, die in eine vorhandene Zielinstanz integriert werden soll, muss denselben Domänennamen wie die primäre Instanz verwenden.
+### Sekundäre vCenter Server-Instanzen
+{: #design_commonservice-secondary-vcs}
 
-### VMware Cloud Foundation
-{: #design_commonservice-cf}
-
-Die Cloud Foundation-Bereitstellung arbeitet mit der VMware Cloud Foundation-Automatisierung, bei der ein eigener DNS-Server verwendet wird, der sich in der VM-Komponente für SDDC Manager befindet. Cloud Foundation-Komponenten, die von SDDC Manager verwaltet werden, wie vCenter, PSC, NSX und ESXi-Hosts, werden durch das Design zur Verwendung der IP-Adresse der SDDC Manager-VM als Standard-DNS konfiguriert.
-
-Da SDDC Manager die Hostnamen für die zugehörigen verwalteten Komponenten generiert und pflegt, wird empfohlen, die zugehörige DNS-Zonendatei nicht direkt zum Hinzufügen und Entfernen von Hosts zu manipulieren.
-
-In diesem Design werden DNS-Services auf den Active Directory-Servern mit der SDDC Manager-VM in der folgenden Konfiguration integriert:
-* Sie können die Domänenstruktur angeben. Der Domänenname kann eine beliebige Anzahl von Ebenen umfassen (bis zu dem Maximum, das die Cloud Foundation-Komponenten verarbeiten können).
-* Die unterste Ebene ist die Unterdomäne, für SDDC Manager maßgeblich ist.
-* Der von Ihnen angegebene DNS-Domänenname wird als Rootdomänenname der Active Directory-Gesamtstruktur verwendet. Wenn der DNS-Domänenname zum Beispiel `cloud.ibm.com` lautet, ist der Rootname der Active Directory-Gesamtstruktur `cloud.ibm.com`. Diese DNS-Domäne und diese Active Directory-Domäne sind über alle verknüpften Cloud Foundation-Instanzen hinweg identisch.
-* Sie können zusätzlich einen Unterdomänennamen für die Instanz angeben. Der Unterdomänenname muss unter allen verknüpften Cloud Foundation-Instanzen eindeutig sein.  
-* Die DNS-Konfiguration für SDDC Manager wird so geändert, dass sie auf die Active Directory-Server für alle Zonen mit Ausnahme der Zone verweist, für die sie verantwortlich ist.
-* Die DNS-Server für Active Directory werden so konfiguriert, dass sie für den DNS-Domänenbereich über der Unterdomäne für die SDDC Manager und die Cloud Foundation-Instanz maßgeblich sind.
-* Die DNS-Server für Active Directory werden so konfiguriert, dass sie auf die IP-Adresse von SDDC Manager für die Unterdomänendelegierung der Zone verweisen, für die SDDC Manager maßgeblich ist.
-* Die DNS-Server für Active Directory werden so konfiguriert, dass sie auf die {{site.data.keyword.cloud_notm}}-DNS-Server für alle anderen Zonen verweisen.
-* Jede sekundäre Instanz, die in die erste oder Zielinstanz integriert werden soll, muss dieselbe DNS-Namensstruktur über der SDDC Manager-Unterdomäne verwenden.
+Für die instanzenübergreifende Redundanz: Wenn die erste sekundäre vCenter Server-Instanz einer vorhandenen primären vCenter Server-Instanz oder der aktuellen eigenständigen vCenter Server-Instanz hinzugefügt wird, wird die IP-Adresse der primären AD/DNS-Server-Instanz in der sekundären vCenter Server-Instanz und allen nachfolgenden sekundären vCenter Server-Instanzen verwendet - "sekundärer DNS"-Eintrag für alle Komponenten, die einen DNS-Servereintrag erfordern. Beispiel: ESXi, vCenter und NSX Manager. Dazu gehören Add-on-Komponenten, wie z. B. HCX, Zerto und Veeam. Der sekundäre DNS-Eintrag des primären Standortes wird dann zur AD/DNS-IP-Adresse der ersten sekundären vCenter Server-Instanz geändert.
 
 ## NTP-Services
 {: #design_commonservice-ntp}
 
 In diesem Design werden die NTP-Server der {{site.data.keyword.cloud_notm}}-Infrastruktur verwendet. Alle bereitgestellten Komponenten werden so konfiguriert, dass sie diese NTP-Server verwenden. Die Tatsache, dass alle Komponenten im Design denselben NTP-Server verwenden, ist für die korrekte Funktion von Zertifikaten und der Active Directory-Authentifizierung von kritischer Bedeutung.
 
-Abbildung 1. NTP-Services
-
-![NTP-Services](commonservice_ntp.svg "In diesem Design verwenden alle Komponenten einer Instanz denselben NTP-Server der {{site.data.keyword.cloud_notm}}-Infrastruktur über den NTP-Service.")
+Abbildung 2. NTP- und DNS-Services</br>
+![NTP- und DNS-Services](vcsv4radiagrams-ra-servicesinterconnections.svg)
 
 ## Zertifizierungsstellenservices
 {: #design_commonservice-cas}

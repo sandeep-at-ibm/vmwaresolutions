@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -13,7 +16,7 @@ lastupdated: "2019-02-15"
 
 公共服务提供由云管理平台中其他服务使用的服务。公共服务包括身份和访问权服务、域名服务和 NTP 服务。
 
-图 1. {{site.data.keyword.icpfull_notm}} 公共服务
+图 1. {{site.data.keyword.icpfull_notm}} 公共服务</br>
 ![{{site.data.keyword.icpfull_notm}} 公共服务](vcscar-common-services.svg)
 
 ## 身份和访问权服务

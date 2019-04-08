@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2017-08-28"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # 1.8 版的版本注意事項

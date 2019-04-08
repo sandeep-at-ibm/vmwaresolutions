@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-03-18"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -156,7 +159,8 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。請指
 1. 會自動啟動叢集的部署，而且叢集的狀態變更為**正在起始設定**。您可以在實例的**摘要**頁面上檢視部署歷程，以檢查部署的狀態。
 2. 叢集備妥可用時，其狀態會變更為**備妥使用**。新增的叢集已啟用「vSphere 高可用性 (HA)」及「vSphere 分散式資源排程器 (DRS)」。
 
-您不能變更叢集名稱。變更叢集名稱可能會導致在叢集裡新增或移除 ESXi 伺服器的作業失敗。{:important}
+您不能變更叢集名稱。變更叢集名稱可能會導致在叢集裡新增或移除 ESXi 伺服器的作業失敗。
+{:important}
 
 ## 檢視 vCenter Server with Hybridity Bundle 實例中叢集的程序
 {: #vc_hybrid_addingviewingclusters-viewing-procedure}
@@ -184,7 +188,7 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。請指
         <dt class="dt dlterm">已刪除</dt>
         <dd class="dd">已刪除叢集。</dd>
     </dl>
-4. 按一下叢集名稱，以檢視 ESXi 伺服器及儲存空間的詳細資料：
+4. 按一下叢集名稱來檢視 ESXi 伺服器、儲存空間和網路介面詳細資料：
 
   * ESXi 伺服器詳細資料：
      * **名稱**：ESXi 伺服器的名稱格式為 `<host_prefix><n>.<subdomain_label>.<root_domain>`，其中：
@@ -214,6 +218,20 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。請指
     * **大小**：儲存空間的容量。
     * **IOPS/GB**：儲存空間的效能層次。
     * **NFS 通訊協定**：儲存空間的 NFS 版本。
+  * 網路介面 - VLAN 詳細資料：
+    * **VLAN 號碼**：唯一的 VLAN 號碼。
+    * **說明**：VLAN 的說明。
+    * **位置**：資料中心位置。
+    * **主要路徑**：VLAN 的主要路徑。
+    按一下**檢視資源**來存取 VLAN 詳細資料。
+  * 網路介面 - 子網路詳細資料：
+    * **名稱**：子網路名稱。按一下名稱來存取子網路詳細資料。
+    * **類型**：子網路的類型：主要或可攜式。
+    * **說明**：子網路的說明。
+  * 網路介面 - IP 詳細資料：
+    * **IP**：IP 位址。
+    * **狀態**：IP 位址的狀態。
+    * **說明**：IP 位址的說明。
 
 ## 從 vCenter Server with Hybridity Bundle 實例刪除叢集
 {: #vc_hybrid_addingviewingclusters-deleting}
@@ -234,7 +252,8 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。請指
 1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**資源**。
 2. 在 **vCenter Server 實例**表格中，按一下您要從中刪除叢集的實例。
 
-   請確定實例處於**備妥使用**狀態。否則，您無法從實例移除叢集。{:note}
+   請確定實例處於**備妥使用**狀態。否則，您無法從實例移除叢集。
+   {:note}
 
 3. 在左導覽窗格上，按一下**基礎架構**。在**叢集**表格中，找出您要刪除的叢集，然後按一下**動作**直欄中的**刪除**圖示。
 

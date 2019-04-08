@@ -38,7 +38,7 @@
    id="namedview67"
    showgrid="false"
    inkscape:zoom="1.5670352"
-   inkscape:cx="383.19318"
+   inkscape:cx="276.6225"
    inkscape:cy="157.1"
    inkscape:window-x="-8"
    inkscape:window-y="-8"
@@ -110,16 +110,17 @@
    id="rect14" />
 </g>
 <text
-   style="font-size:22.7166996px;font-family:Roboto-Light;fill:#ffffff"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.36800003px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff"
    id="text17"
    class="st4 st5 st6"
-   x="20.815855"
+   x="86.815857"
    y="36.47905">共通サービス</text>
+
 <text
    id="text27"
    x="84.237503"
    y="79.816734"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.33333397px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1"><tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.36800003px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr;text-anchor:middle;fill:#ffffff;fill-opacity:1;"><tspan
      sodipodi:role="line"
      id="tspan884"
      x="84.237503"
@@ -137,9 +138,10 @@
      x="84.237503"
      y="146.06551">認証局</tspan></text>
 
+
 <text
    id="text34"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.66666603px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.36800003px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr;text-anchor:middle;fill:#ffffff;fill-opacity:1;"
    x="456.32291"
    y="38.8409"><tspan
      sodipodi:role="line"
@@ -151,9 +153,10 @@
      x="456.32291"
      y="62.174232">VMware vCenter Server</tspan></text>
 
+
 <text
    id="text40"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr;text-anchor:middle;fill:#ffffff;fill-opacity:1;"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.36800003px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr;text-anchor:middle;fill:#ffffff;fill-opacity:1;"
    x="281.06018"
    y="139.9747"><tspan
      sodipodi:role="line"
@@ -165,17 +168,19 @@
      x="281.06018"
      y="154.9747">VMware vSphere</tspan></text>
 
+
 <text
-   transform="scale(0.91411478,1.0939545)"
+   transform="scale(0.88440934,1.1306981)"
    class="st4 st5 st10"
    id="text42"
-   x="614.80688"
-   y="129.28664"
-   style="font-size:14.62583637px;font-family:Roboto-Light;fill:#ffffff;stroke-width:0.91411477">NetApp  ONTAP  Select</text>
+   x="720.77527"
+   y="125.08528"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.77110481px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.88440931">NetApp  ONTAP  Select</text>
+
 
 <text
    id="text50"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr;text-anchor:middle;fill:#ffffff;fill-opacity:1;"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.36800003px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr;text-anchor:middle;fill:#ffffff;fill-opacity:1;"
    x="461.24911"
    y="140.9747"><tspan
      sodipodi:role="line"
@@ -187,29 +192,40 @@
      x="463.35849"
      y="155.9747">VMware NSX  </tspan></text>
 
+
 <text
    id="text58"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.33333397px;font-family:Roboto-Light;-inkscape-font-specification:'Roboto-Light, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1"
-   x="163.5363"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.36800003px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1"
+   x="365.53632"
    y="246.7403"><tspan
      sodipodi:role="line"
      id="tspan904"
-     x="163.5363"
+     x="365.53632"
      y="246.7403">IBM Cloud 上の物理インフラストラクチャー</tspan></text>
 
-<text
-   transform="matrix(1 0 0 1 200.6517 294.1616)"
-   class="st4 st5 st15"
-   id="text60">コンピュート</text>
 
 <text
-   transform="matrix(1 0 0 1 334.018 294.1616)"
    class="st4 st5 st15"
-   id="text62">ストレージ </text>
+   id="text60"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.36800003px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff"
+   x="238.6517"
+   y="294.16159">コンピュート</text>
+
 
 <text
-   transform="matrix(1 0 0 1 449.0178 293.2401)"
    class="st4 st5 st15"
-   id="text64">ネットワーク</text>
+   id="text62"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.36800003px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff"
+   x="372.01801"
+   y="294.16159">ストレージ </text>
+
+
+<text
+   class="st4 st5 st15"
+   id="text64"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.36800003px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff"
+   x="487.01779"
+   y="293.24011">ネットワーク</text>
+
 
 </svg>

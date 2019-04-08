@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -122,6 +125,7 @@ NSX for vSphere를 사용하면 조직은 데이터 센터를 별개의 보안 �
 다음 다이어그램에서는 보안 그룹을 작성하여 NSX-V의 마이크로 세그먼트화 기능 중 일부를 구현할 수 있는 방법에 대한 상위 레벨 다이어그램을 보여줍니다. 이 예에서, 프로덕션 및 개발은 보안 그룹이며 이 그룹을 기반으로 보안 규칙이 지정됩니다.
 
 그림 3. NSX-V 보안
+</br>
 ![NSX-V 보안](vcsnsxt-vsecurity.svg)
 
 ## 관련 링크

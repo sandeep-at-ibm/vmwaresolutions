@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -17,27 +20,32 @@ lastupdated: "2019-02-15"
 
 Los servicios comunes proporcionan los servicios que utilizan otros servicios en la plataforma de gestión de nube. Los servicios comunes de la solución incluyen servicios de identidad y acceso, servicios de nombres de dominio, servicios NTP, servicios SMTP y servicios de autoridad de certificados.
 
+Figura 1. Servicios comunes</br>
+![Servicios comunes](vcsv4radiagrams-ra-commonservices.svg)
+
 ## Servicios de identidad y acceso
 {: #design_commonservice-identity-access}
 
-En este diseño, Microsoft Active Directory (AD) se utiliza para la gestión de identidades. El diseño despliega una o dos máquinas virtuales de Windows Active Directory como parte de la automatización de despliegue de Cloud Foundation y vCenter Server. vCenter se configura de modo que utilice la autenticación de AD.
+En este diseño, se utiliza Microsoft Active Directory (MSAD) para la gestión de identidades. El diseño despliega una o dos máquinas virtuales de Active Directory como parte de la automatización del despliegue de vCenter Server. vCenter está configurado para utilizar la autenticación de MSAD.
 
 ### Microsoft Active Directory
 {: #design_commonservice-msad}
 
-De forma predeterminada, un único VSI de Active Directory se despliega en la infraestructura de {{site.data.keyword.cloud}}. El diseño también proporciona la opción de desplegar dos servidores de Microsoft Active Directory de alta disponibilidad como VM de Windows Server dedicadas en el clúster de gestión.
+De forma predeterminada, un único VSI de Active Directory se despliega en la infraestructura de {{site.data.keyword.cloud}}.
 
-Es responsable de proporcionar la licencia y activación de Microsoft si elige esta opción.
+El diseño también proporciona la opción de desplegar dos servidores de MSAD de alta disponibilidad como máquinas virtuales de Windows Server dedicadas en el clúster de gestión.
+
+Si elige la opción con dos servidores MSAD de alta disponibilidad, tendrá la responsabilidad de proporcionar las licencias y activación de Microsoft.
 {:note}
 
-Active Directory sirve para autenticar los accesos para gestionar solo la instancia de VMware y no para alojar a los usuarios de las cargas de trabajo en las instancias desplegadas. El nombre de dominio raíz del bosque del servidor de Active Directory es igual al nombre de dominio DNS que especifique. Este nombre de dominio se especifica únicamente para la instancia de Cloud Foundation y vCenter Server primaria si se enlazan varias instancias. En el caso de las instancias enlazadas, cada instancia contiene un servidor de Active Directory que se encuentra en el anillo de réplica raíz del grupo. Los archivos de la zona de DNS también se replican en los servidores de Active Directory.
+Active Directory sirve para autenticar los accesos para gestionar solo la instancia de VMware y no para alojar a los usuarios de las cargas de trabajo en las instancias desplegadas. El nombre de dominio raíz del bosque del servidor de Active Directory es igual al nombre de dominio DNS que especifique. Este nombre de dominio se especifica únicamente para la instancia de vCenter Server primaria si se enlazan varias instancias. En el caso de las instancias enlazadas, cada instancia contiene un servidor de Active Directory que se encuentra en el anillo de réplica raíz del grupo. Los archivos de la zona de DNS también se replican en los servidores de Active Directory.
 
 ### Dominio SSO de vSphere
 {: #design_commonservice-vsphere-sso}
 
-El dominio de inicio de sesión único de vSphere (SSO) se utiliza como el mecanismo de autenticación inicial para una única instancia o varias instancias enlazadas. El dominio SSO también sirve para conectar una instancia de VMware o varias instancias enlazadas con el servidor de Microsoft Active Directory. Se aplica la siguiente configuración de SSO:  
+El dominio de inicio de sesión único de vSphere (SSO) se utiliza como el mecanismo de autenticación inicial para una única instancia o varias instancias enlazadas. El dominio SSO también sirve para conectar una instancia de VMware o varias instancias enlazadas con el servidor de MSAD. Se aplica la siguiente configuración de SSO:  
 * El dominio de SSO de `vsphere.local` siempre se utiliza
-* Para las instancias de VMware que están enlazadas a una instancia existente, el PSC se une al dominio SSO de la instancia existente
+* Para las instancias de VMware que están enlazadas a una instancia existente, el PSC integrado se une al dominio SSO de la instancia existente
 * El nombre de sitio SSO es igual al nombre de instancia
 
 ## Servicios de nombres de dominio
@@ -45,45 +53,33 @@ El dominio de inicio de sesión único de vSphere (SSO) se utiliza como el mecan
 
 Los servicios de nombres de dominio (DNS) en este diseño son solo para los componentes de gestión de nube y de infraestructura.
 
-### VMware vCenter Server
-{: #design_commonservice-vcenter}
+### Instancia primaria de vCenter Server
+{: #design_commonservice-primary-vcs}
 
-El despliegue de vCenter Server utiliza los servidores desplegados de Active Directory como servidores DNS para la instancia. Todos los componentes desplegados (vCenter, PSC, NSX, y hosts de ESXi) están configurados para apuntar al servidor de Active Directory como su servidor DNS predeterminado. Puede personalizar la configuración de zona de DNS si la configuración no interfiere con la configuración de los componentes desplegados.
+El despliegue de vCenter Server utiliza los AD VSI como servidores DNS para la instancia. Todos los componentes desplegados
+(vCenter con hosts PSC, NSX y ESXi incorporados) están configuradas para apuntar a AD como DNS predeterminado. Puede personalizar la configuración de zona de DNS si no interfiere con la configuración de los componentes desplegados.
+- Este diseño integra servicios DNS en las VSI de AD en la configuración siguiente:
+- La estructura del dominio la especifica el usuario. El nombre de dominio puede ser cualquier número de niveles hasta el máximo que gestionen todos los componentes de vCenter Server, lo que garantiza que el nivel más bajo sea el subdominio de la instancia.
+    - El nombre de dominio DNS que proporcione se utiliza como el nombre de dominio de bosque raíz de AD desplegado por vCenter Server. Por ejemplo, si el nombre de dominio DNS es cloud.ibm.com, la raíz de bosque de dominio de AD será cloud.ibm.com. El dominio DNS y el dominio AD son los mismos en todas las instancias federadas de vCenter Server.
+    - Seleccione un nombre adicional como subdominio de la instancia de vCenter Server. Este nombre de subdominio debe ser exclusivo en todas las instancias enlazadas de vCenter Server.
+- Los servidores DNS de AD están configurados para que se autoricen tanto en el dominio de DNS como en el espacio de subdominio.
+- Los servidores DNS de AD están configurados para que apunten a los servidores DNS de {{site.data.keyword.cloud_notm}} para todas las demás zonas.
+- Las regiones de nube secundarias que estén integradas en la región de nube desplegada de destino o en la primera, deben utilizar la misma estructura de nombres DNS por encima del subdominio.
+- También puede desplegar servidores DNS redundantes dentro del clúster de vCenter Server. Se configuran dos servidores AD/DNS sin licencia. Es responsabilidad del usuario proporcionar licencias para los sistemas operativos Windows de estos servidores.
+- Si se suministra un sitio individual con un solo servidor AD/DNS, todos los componentes de vCenter Server configurados deben tener únicamente dicha IP individual como entrada de DNS.
 
-Este diseño integra los servicios DNS en los servidores de Active Directory a través de la configuración siguiente:
-* Puede especificar la estructura del dominio. El nombre de dominio puede ser cualquier número de niveles (hasta el máximo que puedan manejar los componentes de vCenter Server). El nivel más bajo es el subdominio para la instancia.
-   * El nombre de dominio DNS que especifique se utiliza como el nombre de dominio del grupo raíz de Active Directory. Por ejemplo, si el nombre de dominio DNS es `cloud.ibm.com`, el nombre de dominio raíz del grupo de Active Directory será `cloud.ibm.com`. Este nombre de dominio de DNS y Active Directory es el mismo en todas las instancias enlazadas de vCenter Server.
-   * Además, puede especificar un nombre de subdominio para la instancia. El nombre de subdominio debe ser exclusivo en todas las instancias enlazadas de vCenter Server.
-* Los servidores DNS de Active Directory están configurados para ser autorizados tanto para el dominio de DNS como para el espacio de subdominio.
-* Los servidores DNS de Active Directory están configurados para que apunten a los servidores DNS de {{site.data.keyword.cloud_notm}} para todas las demás zonas.
-* Cualquier instancia que se va a integrar en una instancia de destino existente debe utilizar el mismo nombre de dominio que la instancia primaria.
+### Instancias secundarias de vCenter Server
+{: #design_commonservice-secondary-vcs}
 
-### VMware Cloud Foundation
-{: #design_commonservice-cf}
-
-El despliegue de Cloud Foundation utiliza la automatización de VMware Cloud Foundation, que utiliza su propio servidor DNS que reside dentro del componente VM de SDDC Manager. Los componentes de Cloud Foundation gestionados por SDDC Manager, incluidos vCenter, PSC, NSX, y hosts de ESXi, están configurados para utilizar la dirección IP de VM de SDDC Manager como su DNS predeterminado por diseño.
-
-Puesto que el SDDC Manager genera y mantiene los nombres de host para los componentes que gestiona, no se recomienda que altere el archivo de zona DNS directamente para añadir ni eliminar hosts.
-
-Este diseño integra los servicios DNS en los servidores de Active Directory con la VM de SDDC Manager en la configuración siguiente:
-* Puede especificar la estructura del dominio. El nombre de dominio puede ser cualquier número de niveles (hasta el máximo que manejarán los componentes de Cloud Foundation).
-* El nivel más bajo es el subdominio para el que está autorizado el SDDC Manager.
-* El nombre de dominio DNS que especifique se utilizará como el nombre de dominio del grupo raíz de Active Directory. Por ejemplo, si el nombre de dominio DNS es `cloud.ibm.com`, la raíz del grupo del dominio de Active Directory será `cloud.ibm.com`. Este dominio DNS y el dominio Active Directory coinciden en todas las instancias enlazadas de Cloud Foundation.
-* Además, puede especificar un nombre de subdominio para la instancia. El nombre de subdominio debe ser exclusivo en todas las instancias enlazadas de Cloud Foundation.  
-* La configuración de DNS de SDDC Manager se modifica para que apunte a los servidores de Active Directory para todas las zonas, excepto para la zona de la que es responsable.
-* Los servidores DNS de Active Directory se configuran para ser autorizados para el espacio de dominio de DNS sobre el subdominio de instancia de SDDC Manager y Cloud Foundation.
-* Los servidores DNS de Active Directory están configurados para que apunten a la dirección IP de SDDC Manager para la delegación de subdominio de la zona para la que el SDDC Manager está autorizado.
-* Los servidores DNS de Active Directory están configurados para que apunten a los servidores DNS de {{site.data.keyword.cloud_notm}} para todas las demás zonas.
-* Cualquier instancia secundaria que se va a integrar en la primera instancia o en la instancia de destino debe utilizar la misma estructura de nombres DNS sobre el subdominio de SDDC Manager.
+Para la redundancia de instancias cruzadas, cuando se añade la primera instancia secundaria de vCenter Server a una instancia primaria de vCenter Server existente o a una instancia autónoma de vCenter Server actual, se utiliza esa dirección IP del servidor AD DNS de la instancia primaria en la instancia secundaria de vCenter Server y en cualquier entrada "DNS secundaria" posterior de la instancia secundaria de vCenter Server para todos los componentes que requieran una entrada del servidor DNS. Por ejemplo, ESXi, vCenter y el gestor NSX. Esto incluye componentes añadidos, como HCX, Zerto y Veeam. A continuación, la entrada DNS secundaria del sitio primario se cambia a la primera dirección IP de AD/DNS de las instancias de vCenter Server secundarias.
 
 ## Servicios NTP
 {: #design_commonservice-ntp}
 
 Este diseño utiliza los servidores NTP de la infraestructura de {{site.data.keyword.cloud_notm}}. Todos los componentes desplegados se configuran para utilizar estos servidores NTP. El hecho de tener todos los componentes dentro del diseño utilizando el mismo servidor NTP es crítico para que los certificados y la autenticación de Active Directory funcionen correctamente.
 
-Figura 1. Servicios NTP
-
-![Servicios de NTP](commonservice_ntp.svg "En este diseño, todos los componentes de una instancia utilizan el mismo servidor NTP de la infraestructura de {{site.data.keyword.cloud_notm}} mediante el servicio NTP.")
+Figura 2. Servicios NTP y DNS</br>
+![Servicios NTP y DNS](vcsv4radiagrams-ra-servicesinterconnections.svg)
 
 ## Servicio de entidad emisora de certificados
 {: #design_commonservice-cas}

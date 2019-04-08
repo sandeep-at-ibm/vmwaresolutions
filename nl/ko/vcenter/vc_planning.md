@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-03-20"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -35,9 +38,11 @@ vCenter Server 배치에는 실제 인프라에 대한 엄격한 요구사항이
 |DAL13 |댈러스 |북미 남부 | Skylake, SAP 인증, Broadwell |
 |FRA02 |프랑크푸르트 |유럽 | Skylake, SAP 인증, Broadwell |
 | FRA04 |프랑크푸르트 |유럽 | Skylake, SAP 인증, Broadwell |
+|FRA05 |프랑크푸르트 |유럽 | Skylake, Broadwell |
 |HKG02 |홍콩 |아시아 태평양 | Skylake, Broadwell |
 |LON02 |런던 |유럽 | Skylake, Broadwell |
 |LON04 |런던 |유럽 | Skylake, SAP 인증, Broadwell |
+|LON05 |런던 |유럽 | Skylake, Broadwell |
 |LON06 |런던 |유럽 | Skylake, SAP 인증, Broadwell |
 |MEL01 |멜버른 |아시아 태평양 | Skylake, SAP 인증, Broadwell |
 |MEX01 |케레타로 |북미 남부 | Skylake, SAP 인증, Broadwell |

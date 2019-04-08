@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -14,7 +17,7 @@ lastupdated: "2019-02-15"
 ## IBM Cloud Private 及 VMware vCenter Server on IBM Cloud 整合
 {: #vcsnsxt-overview-integration-icp-vcs-integration}
 
-{{site.data.keyword.cloud}} Private 安裝在 vCenter Server 實例的數個虛擬機器 (VM) 上。在 vCenter Server 實例內，會使用專用 NSX Edge Services Gateway (ESG) 及「分散式邏輯路由器 (DLR)」來部署 {{site.data.keyword.icpfull_notm}} 實例，並使用 VXLAN。
+{{site.data.keyword.cloud}} Private 安裝在 vCenter Server 實例的數部虛擬機器 (VM) 上。在 vCenter Server 實例內，會使用專用 NSX Edge Services Gateway (ESG) 及「分散式邏輯路由器 (DLR)」來部署 {{site.data.keyword.icpfull_notm}} 實例，並使用 VXLAN。
 
 ESG 配置成具有來源 NAT 規則 (SNAT) 以容許出埠資料流量，這會啟用網際網路連線功能來下載 {{site.data.keyword.icpfull_notm}} 必要條件，以及連接至 GitHub 及 Docker。或者，您也可以使用 Web Proxy 來提供網際網路連線功能。ESG 配置成使用專用連線功能來存取 DNS 及 NTP 服務。ESG 也配置成具有 DNAT 規則，以從 {{site.data.keyword.cloud_notm}} 10.x 網路存取 {{site.data.keyword.icpfull_notm}} Master 及 Proxy vIP。
 
@@ -131,7 +134,7 @@ ESG 和 vRouter 中的路徑表格移入方式，取決於整合的方法。請�
 * [容器白皮書](https://communities.vmware.com/servlet/JiveServlet/download/2741654-198902/Containers%20and%20Container%20Networking%20for%20Network%20Engineers.pdf)（PDF 下載）
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 部落格](https://www.ibm.com/blogs/bluemix/2018/01/vmware-hcx-ibm-cloud-aka-really-cool-space-age-kind-now-available/)
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 資料工作表](https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=26012526USEN)
-* [VMware HCX on {{site.data.keyword.cloud_notm}} 解決方案架構](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} 解決方案架構](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
 * [NSX for vSphere 6.4.3 配置上限](https://configmax.vmware.com/guest)
 * [{{site.data.keyword.cloud_notm}} 平台文件](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.0/kc_welcome_containers.html)
 * [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-container_index)

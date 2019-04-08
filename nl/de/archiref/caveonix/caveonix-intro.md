@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-04"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Caveonix RiskForesight
@@ -19,7 +22,7 @@ Caveonix RiskForesight bietet proaktiven Workloadschutz vor Risiken aufgrund von
 
 Die Plattform ist voll in den VMware-Technologie-Stack von vCD, vRA, vCenter in NSX und vielen öffentlichen Clouds integriert. Die RiskForesight-Plattform besitzt drei Hauptmodule - Erkennung, Vorhersage und Aktionen -, die eine 360-Grad-Transparenz in Hybrid-Cloud-Workloads in Echtzeit durch die native Integration in Hybrid-Cloud-Orchestrierungsmodule bieten. Es ist die erste nahtlose Hybrid-Cloud-Schutzplattform der Branche, die es Kunden ermöglicht, IT-, Cyber- und Konformitätsrisiken über die gesamten Cyber-Steuerebenen - Netz, Sicherheit, Berechnung und Konformität - einzusehen.
 
-Caveonix RiskForesight ermöglicht es dem Unternehmen, Industriestandards und behördliche Vorschriften wie PCI, FISMA, HIPAA, GDPR, ISO, NESA und andere zu erfüllen.
+Caveonix RiskForesight ermöglicht es dem Unternehmen, Industriestandards und behördliche Vorschriften wie PCI, FISMA, HIPAA, DSGVO, ISO, NESA und andere zu erfüllen.
 
 Caveonix RiskForesight ist eine Multi-Tenant-Plattform für Cyberrisiko- und Konformitätsmanagement für die Hybrid-Cloud, die einem Unternehmen und seinen Geschäftsbereichen kontinuierliche Cybersicherheit und Einsicht in die Konformität in ihren Workloads ermöglicht. Die Module für Erkennung, Vorhersage und Aktionen ergänzen das NIST Management Framework (RMF; NIST = National Institute of Standards and Technology) durch kontinuierliche Überwachung, quantitative Risikoanalyse und Schutzaktionen in dem Risikomanagement-Kontinuum von Erkennung, Vorhersage und Aktionen.
 

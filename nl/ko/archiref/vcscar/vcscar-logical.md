@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -76,6 +79,7 @@ Skate Advisor의 핵심 데이터 요소는 트릭입니다. 트릭 언어는 �
 챗봇은 다음 방법으로 시스템과 상호작용합니다.
 
 그림 2. 일반적인 챗봇 조회
+</br>
 ![일반적인 챗봇 조회](vcscar-query.svg)
 
 표 2. 챗봇 상호작용
@@ -133,6 +137,7 @@ Skate Advisor 서비스는 요청을 렌더링하기 위해 API 서비스 세트
 Watson Discovery는 기계 학습 모델을 통해 훈련되어야 합니다. 이 모델은 분야 전문가가 Watson Knowledge Studio를 사용하여 반복적인 스타일로 작성됩니다.
 
 그림 3. Discovery Service 훈련
+</br>
 ![Discovery Service 훈련](vcscar-training.svg)
 
 Skate Advisor의 경우, 모델은 모델 작성을 위한 규칙 기반 훈련과 사전 기반 훈련이 조합된 엔티티 유형 간의 관계로 구성됩니다. 이 모델을 사용하면 Discovery Service가 훈련 세트로 사용되는 문서와 동영상 설명에서 수집된 트릭을 인식하고 분류할 수 있습니다.

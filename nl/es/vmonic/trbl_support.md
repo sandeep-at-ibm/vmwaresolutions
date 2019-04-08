@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-25"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -20,7 +23,7 @@ Si necesita ayuda con {{site.data.keyword.vmwaresolutions_full}}, cree una incid
 ## Procedimiento para enviar una incidencia de soporte desde la consola de IBM Cloud for VMware Solutions
 {: #trbl_support-procedure}
 
-1. Vaya a https://console.cloud.ibm.com/infrastructure/vmware-solutions/console.
+1. Vaya a https://cloud.ibm.com/infrastructure/vmware-solutions/console.
 2. Inicie una sesión en la consola con su cuenta de **IBMid**.
 3. Pulse **Soporte** en la barra de menús.
 4. En la página **Obtener soporte**, pulse **Crear un caso**.

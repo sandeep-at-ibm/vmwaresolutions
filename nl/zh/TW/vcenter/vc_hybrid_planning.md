@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-03-20"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -35,9 +38,11 @@ vCenter Server with Hybridity Bundle 部署具有嚴格的實體基礎架構需�
 |DAL13 |達拉斯|NA 南部|
 |FRA02 |法蘭克福|歐洲|
 |FRA04 |法蘭克福|歐洲|
+|FRA05 |法蘭克福|歐洲|
 |HKG02 |香港|亞太地區|
 |LON02 |倫敦|歐洲|
 |LON04 |倫敦|歐洲|
+|LON05 |倫敦|歐洲|
 |LON06 |倫敦|歐洲|
 |MEL01 |墨爾本|亞太地區|
 |MEX01 |克雷塔羅|NA 南部|

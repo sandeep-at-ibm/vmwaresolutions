@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-06"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -19,7 +22,8 @@ F5 on {{site.data.keyword.cloud}} 服務 (F5 BIG-IP® Virtual Edition) 提供區
 
 您可以視需要安裝此服務的多個實例。
 
-只有在 1.9 版或更新版本中部署的實例，才能使用此服務。現行安裝的 BIG-IP VE 版本是 v14.1.0.2。{:note}
+只有在 1.9 版或更新版本中部署的實例，才能使用此服務。現行安裝的 BIG-IP VE 版本是 v14.1.0.2。
+{:note}
 
 ## F5 on IBM Cloud 的技術規格
 {: #f5_considerations-specs}
@@ -44,7 +48,8 @@ F5 on {{site.data.keyword.cloud_notm}} 服務隨附下列元件：
 
 每部 VM 的授權費用都會套用至每個計費週期，取決於授權選項（「良好」、「更佳」或「最佳」）及選取的頻寬。
 
-您無法在安裝服務之後變更授權層次。若要變更授權層次，您必須移除現有服務，然後使用不同的授權選項來重新安裝服務。{:important}
+您無法在安裝服務之後變更授權層次。若要變更授權層次，您必須移除現有服務，然後使用不同的授權選項來重新安裝服務。
+{:important}
 
 ## F5 on IBM Cloud 的安裝考量
 {: #f5_considerations-install}
@@ -57,7 +62,7 @@ F5 on {{site.data.keyword.cloud_notm}} 服務隨附下列元件：
 
 |頻寬上限          |授權模型：良好      |授權模型：更佳        |授權模型：最佳      |
 |:------------------|:--------------------|:----------------------|:--------------------|
-|25 Mbps           |2 個 vCPU、4 GB RAM |4 個 vCPU、8 GB RAM   |8 個 vCPU、16 GB RAM|
+|25 Mbps           |2 個 vCPU、4 GB RAM |4 個 vCPU、8 GB RAM   |8 個 vCPU、16 GB RAM  |
 |200 Mbps          |2 個 vCPU、4 GB RAM |4 個 vCPU、8 GB RAM   |8 個 vCPU、16 GB RAM|
 |1 Gbps            |2 個 vCPU、4 GB RAM |4 個 vCPU、8 GB RAM   |8 個 vCPU、16 GB RAM|
 |3 Gbps            |8 個 vCPU、16 GB RAM|8 個 vCPU、16 GB RAM|8 個 vCPU、16 GB RAM|

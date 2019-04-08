@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-11"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Caveonix RiskForesight ライセンスの注文
@@ -16,7 +19,7 @@ Caveonix RiskForesight ライセンスを注文するときに、オンプレミ
 ## 始める前に
 {: #caveonix_license_ordering-reqs}
 
-**「設定」**ページで {{site.data.keyword.cloud_notm}} インフラストラクチャーの資格情報を構成したことを確認してください。詳しくは、[ユーザー・アカウントと設定の管理](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)を参照してください。
+**「設定」**ページで {{site.data.keyword.cloud_notm}} インフラストラクチャーの資格情報を構成したことを確認してください。 詳しくは、[ユーザー・アカウントと設定の管理](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)を参照してください。
 
 ## Caveonix RiskForesight ライセンスを注文する手順
 {: #caveonix_license_ordering-procedure}

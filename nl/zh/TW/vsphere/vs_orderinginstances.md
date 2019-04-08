@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-11"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -60,7 +63,8 @@ lastupdated: "2019-03-11"
 * VMware Site Recovery Manager
 * VMware vRealize Automation Enterprise
 
-對於「IBM 事業夥伴」使用者，無法使用「自帶授權 (BYOL)」選項。{:note}
+對於「IBM 事業夥伴」使用者，無法使用「自帶授權 (BYOL)」選項。
+{:note}
 
 ### 非事業夥伴使用者的個別元件
 {: #vs_orderinginstances-individual-components-for-non-bp-users}
@@ -75,7 +79,8 @@ lastupdated: "2019-03-11"
 * VMware vRealize Operation Enterprise
 * VMware vRealize Log Insight
 
-當您訂購 VMware vSphere Enterprise Plus 6.0 時，VMware vSAN 元件無法使用。如果您打算使用自己的 VMware vSphere Enterprise Plus 6.0 授權，則會代表您開立 {{site.data.keyword.cloud_notm}} 基礎架構問題單。此問題單要求將已訂購的 {{site.data.keyword.baremetal_short}} 的 vSphere 授權取代為您提供的授權。{:note}
+當您訂購 VMware vSphere Enterprise Plus 6.0 時，VMware vSAN 元件無法使用。如果您打算使用自己的 VMware vSphere Enterprise Plus 6.0 授權，則會代表您開立 {{site.data.keyword.cloud_notm}} 基礎架構問題單。此問題單要求將已訂購的 {{site.data.keyword.baremetal_short}} 的 vSphere 授權取代為您提供的授權。
+{:note}
 
 ### 授權選項
 {: #vs_orderinginstances-licensing-options}
@@ -86,7 +91,8 @@ lastupdated: "2019-03-11"
 
 如果您選擇購買任何授權（除了 vSphere Enterprise Plus 及 vCenter Server 以外），且您訂購多部 ESXi 伺服器，則會代表您自動開立 {{site.data.keyword.cloud_notm}} 問題單，以結合授權碼。您負責追蹤問題單，以確保您只使用 DevOps 團隊所產生的授權碼。
 
-將個別授權碼與結合的授權碼一起使用，不符合您所需授權的付款需求。{:important}
+將個別授權碼與結合的授權碼一起使用，不符合您所需授權的付款需求。
+{:important}
 
 ## Bare Metal Server 設定
 {: #vs_orderinginstances-bare-metal-settings}
@@ -280,7 +286,8 @@ lastupdated: "2019-03-11"
    * 若要將配置儲存為範本而不下訂單，請按一下**儲存配置**。
    * 若要下訂單，請確定要收費的帳戶正確，請檢閱並接受條款，然後按一下**佈建**。
 
-   僅安裝 {{site.data.keyword.baremetal_short}}。您負責在叢集部署之後安裝及配置各種元件，例如 VMware vCenter、VMware NSX、VMware vSAN。{:note}
+   僅安裝 {{site.data.keyword.baremetal_short}}。您負責在叢集部署之後安裝及配置各種元件，例如 VMware vCenter、VMware NSX、VMware vSAN。
+   {:note}
 
 ### 結果
 {: #vs_orderinginstances-results}

@@ -4,29 +4,42 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-02-26"
+
+subcollection: vmwaresolutions
+
 
 ---
 
 # Recursos adicionales
 {: #additional_resources}
 
-Revise los recursos siguientes para empezar a acelerar el proceso.
-* Información de referencia de arquitectura
-* Vídeos
-* Demostraciones
+Revise los recursos siguientes para empezar más rápido o para obtener información técnica más detallada sobre
+{{site.data.keyword.vmwaresolutions_full}}.
+* Vídeos y demostraciones
 * Análisis técnico y en profundidad
 * Guías de aprendizaje
+* Contenido contribuido por la comunidad
 
 ## Hojas de datos
 {: #additional_resources-data-sheets}
 
-* [Hoja de protección de datos de {{site.data.keyword.vmwaresolutions_full}}](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040)
+* [Hoja de protección de datos de {{site.data.keyword.vmwaresolutions_short}}](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:new_window}
+
+## Recetas de developerWorks
+{: #additional_resources-dWrecipes}
+
+* [Recetas de developerWorks](https://developer.ibm.com/recipes/tutorials/?s=VMware+Solutions){:new_window}
+
+## IBM Cloud Patterns
+{: #additional_resources-patterns}
+
+* [IBM Cloud Patterns](https://ibmcloudpatterns.mybluemix.net/#862581F800007C53/862581F800007DD5/862581D000837B23)
 
 ## Extensiones de la plataforma
 {: #additional_resources-plat-extensions}
 
-Revise la arquitectura de todas las [Extensiones de plataforma de virtualización](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/allvirtualizationextensions), como por ejemplo:
+Revise la arquitectura de todas las [Extensiones de plataforma de virtualización](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/allvirtualizationextensions){:new_window}, como por ejemplo:
 * FortiGate Security Appliance
 * Almacenamiento en bloque y de archivos de {{site.data.keyword.cloud_notm}}
 * NSX Edge Services Gateway
@@ -38,22 +51,16 @@ Revise la arquitectura de todas las [Extensiones de plataforma de virtualizació
 ## Vídeos y demostraciones
 {: #additional_resources-demos}
 
-* [Recursos y vídeos](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/resources)
-* [Compromiso técnico digital](https://ibm-dte.mybluemix.net/ibm-vmware)
-* [Recursos destacados y estudios de casos](https://www.ibm.com/cloud/vmware/resources)
+* [Recursos y vídeos](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/resources){:new_window}
+* [Compromiso técnico digital](https://ibm-dte.mybluemix.net/ibm-vmware){:new_window}
+* [Recursos destacados y estudios de casos](https://www.ibm.com/cloud/vmware/resources){:new_window}
 
 ## Prueba de la unidad de IBM Cloud for VMware Solutions
 {: #additional_resources-test-drive}
 
-¿Quiere verlo por sí mismo? Realice una breve prueba del producto siguiendo la demostración guiada paso a paso de {{site.data.keyword.vmwaresolutions_short}} [Probar VMware vCenter Server](https://cloudcontent.mybluemix.net/cloud/garage/demo/try-vmware-solutions).
-
-## Recetas de developerWorks
-{: #additional_resources-dwrecipes}
-
-* [{{site.data.keyword.vmwaresolutions_short}} - Visión general](https://www.ibm.com/developerworks/cloud/library/cl-ibm-cloud-for-vmware-solutions-trs/)
-* [Pasos para conectar el almacenamiento dedicado a VMware Solutions on {{site.data.keyword.cloud_notm}}](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)
+¿Quiere verlo por sí mismo? Realice una breve prueba del producto siguiendo la demostración guiada paso a paso de {{site.data.keyword.vmwaresolutions_short}} [Probar VMware vCenter Server](https://cloudcontent.mybluemix.net/cloud/garage/demo/try-vmware-solutions){:new_window}.
 
 ## Documentación de VMware
-{: #additional_resources-vmware-doc}
+{: #additional_resources-VMware-doc}
 
-* [Documentación de VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)
+* [Documentación de VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources){:new_window}

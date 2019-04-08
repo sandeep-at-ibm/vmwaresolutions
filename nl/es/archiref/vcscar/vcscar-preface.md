@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-15"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Prólogo
@@ -45,7 +48,7 @@ skateboarding también pueden adoptar nuestros convenios. Por tanto, Watson Assi
 ## Codificación del lenguaje
 {: #vcscar-preface-codification}
 
-Como en cualquier otro lenguaje, el nuestro se ha ido desarrollando a lo largo del tiempo, adoptando nuevas palabras y usos, lo que ha ocasionado redundancias ocasionales y excepciones. Dicho esto, esta nomenclatura es notablemente coherente, duradera y específica. Es este rigor y consistencia lo que afronta el problema, aparentemente insuperable, de convertir grabaciones en texto mediante machine learning. Para los skaters, cada matiz de un movimiento completo tiene su propia nomenclatura. De hecho, este lenguaje es tan potente que también lo han adoptado no solo los esquiadores de snowboard, sino también los surferos.
+Como en cualquier otro lenguaje, el nuestro se ha ido desarrollando a lo largo del tiempo, adoptando nuevas palabras y usos, lo que ha ocasionado redundancias ocasionales y excepciones. Dicho esto, esta nomenclatura es notablemente coherente, duradera y específica. Es este rigor y coherencia lo que afronta el problema, aparentemente insuperable, de convertir grabaciones en texto mediante machine learning. Para los skaters, cada matiz de un movimiento completo tiene su propia nomenclatura. De hecho, este lenguaje es tan potente que también lo han adoptado no solo los esquiadores de snowboard, sino también los surferos.
 
 Sin embargo, a pesar de toda esta complejidad y potencia, la codificación del lenguaje es sencilla y concisa. Cada *truco básico* tiene un componente de sentido (*directional*) y de rotación (*rotational*), junto con uno de aterrizaje (*landing*), que determina si se concatena o no con el siguiente truco básico y cómo lo hace para formar combinaciones; estos son los cuatro *elementos principales*. Se utilizan otros dos modificadores (*modifiers*): un prefijo de giro (*turn prefix*) para orientar el giro del skater (en el sentido de las agujas del reloj o en el sentido contrario), y un componente *varial* que especifica cómo gira la tabla, en relación con el cuerpo (hacia dentro o inward, o hacia fuera u outward). Con esta codificación, se puede aplicar de forma repetida un conjunto de reglas concisas que permiten combinaciones tan largas como se desee.
 

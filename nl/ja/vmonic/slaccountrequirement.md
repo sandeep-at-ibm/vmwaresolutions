@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-26"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -47,19 +50,19 @@ lastupdated: "2019-02-26"
 | パスワードの表示 | この許可は注文した VSI を管理するために必要です。 |
 | サーバー・モニタリングの管理 | この権限は、注文を実行するときには不要ですが、インスタンス内で VMware ESXi サーバーを実行している {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}のモニタリング状況を取得して確認するときに必要です。 |
 
-## サービス・エンドポイントが有効になっている VRF
+## サービス・エンドポイントを有効にした VRF
 {: #slaccountrequirement-vrf-se}
 
-{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントは、サービス・エンドポイントが有効になっている Virtual Routing and Forwarding (VRF) アカウントである必要があります。アカウントが非 VRF である場合は、VRF アカウントに変換する必要があります。さらに、VRF アカウントでサービス・エンドポイントの使用を有効にする必要があります。
+{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントは、サービス・エンドポイントを有効にした Virtual Routing and Forwarding (VRF) アカウントでなければなりません。VRF 以外のアカウントは、VRF アカウントに変換する必要があります。さらに、VRF アカウントでサービス・エンドポイントを使用できるようにすることも必要です。
 
 詳しくは、以下を参照してください。
 * [IBM Cloud での VRF の概要](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-* [サービス・エンドポイントを使用できるよう、ご使用のアカウントを有効にする](/docs/services/service-endpoint?topic=services/service-endpoint-cs_cli_install_steps#cs_cli_install_steps)
+* [アカウントでサービス・エンドポイントを使用できるようにする方法](/docs/services/service-endpoint?topic=services/service-endpoint-cs_cli_install_steps#cs_cli_install_steps)
 
 ## VLAN スパンニングのサポート終了
 {: #slaccountrequirement-vlan-eos}
 
-2019 年 8 月以降、VLAN スパンニングはサポートされなくなります。2019 年 7 月末までに、ご使用の {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントを VRF に変換し、サービス・エンドポイントを有効にする必要があります。
+2019 年 8 月から、VLAN スパンニングはサポートされなくなります。2019 年 7 月末までに、{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントを VRF に変換してサービス・エンドポイントを有効にする必要があります。
 {:important}
 
 ## 関連リンク

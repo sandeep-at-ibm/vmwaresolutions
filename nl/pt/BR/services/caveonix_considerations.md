@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-13"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -53,8 +56,8 @@ Antes de instalar o serviço Caveonix RiskForesight on {{site.data.keyword.cloud
 Revise as considerações a seguir antes de remover o serviço Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}:
 * A remoção do serviço Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} não cancela a licença do Caveonix RiskForesight. Deve-se excluir a licença do Caveonix RiskForesight por meio da tabela **Licenças do Caveonix RiskForesight** na página **Recursos** no console do {{site.data.keyword.vmwaresolutions_short}}.
 * Ao remover o serviço, a automação do {{site.data.keyword.vmwaresolutions_short}} exclui apenas a única VM do Caveonix "tudo em um" que foi implementada e a sub-rede privada dedicada que foi pedida para ele. Portanto,
-   * Se você escalou a VM do Caveonix em múltiplas VMs, essas VMs adicionais não serão removidas. 
-   * Se você usou os endereços IP da sub-rede privada dedicada em VMs adicionais, essas VMs deverão ser designadas a novos endereços IP para continuarem a funcionar. 
+   * Se você escalou a VM do Caveonix em múltiplas VMs, essas VMs adicionais não serão removidas.
+   * Se você usou os endereços IP da sub-rede privada dedicada em VMs adicionais, essas VMs deverão ser designadas a novos endereços IP para continuarem a funcionar.
    * Se você excluir a instância A do servidor do vCenter com o serviço do Caveonix RiskForesight no {{site.data.keyword.cloud_notm}} instalado e você usou os endereços IP da sub-rede privada dedicada pedida para o serviço na instância B do servidor do vCenter, a sub-rede privada dedicada será cancelada na exclusão da instância A do servidor vCenter.
 
 ## Links relacionados

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-06"
+lastupdated: "2019-03-18"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -19,10 +22,10 @@ lastupdated: "2019-03-06"
 
 您可以在集群处于维护模式时将新的 ESXi 服务器添加到集群。此外，您还可以跨多个集群同时添加或除去 ESXi 服务器。可同时进行以下操作：
 
-* 将主机添加到 **cluster1**，并将主机添加到其他集群。
-* 从 **cluster1** 中除去主机，并从其他集群中除去主机。
-* 将主机添加到 **cluster1**，并从其他集群除去主机。
-* 从 **cluster1** 中除去主机，并将主机添加到其他集群。
+* 向一个集群添加主机，并向其他集群添加主机。
+* 从一个集群中除去主机，并从其他集群中除去主机。
+* 向一个集群添加主机，并从其他集群除去主机。
+* 从一个集群除去主机，并向其他集群添加主机。https://github.ibm.com/tornado/tracker/issues/14183
 
 可以在现有 NFS 或 vSAN vCenter Server with NSX-T 集群中添加或除去 NFS 存储共享。
 {:note}

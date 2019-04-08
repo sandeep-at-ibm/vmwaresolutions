@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -22,7 +25,8 @@ Esta arquitectura híbrida permite a Acme Skateboards:
 -	Utilizar Cloud Automation Manager (CAM) para disponer de una infraestructura como código (IaC) para componer y coordinar servicios en los que intervienen tanto de máquinas virtuales como contenedores para integrarlos en sus cadenas de herramientas de DevOps y en su solución ITSM.
 
 En lo que respecta a la arquitectura de red, la arquitectura de referencia comprende los siguientes componentes principales:
-- **Virtualización local**: un clúster VMware que actualmente aloja las VM de Acme Skateboards. Son estas máquinas virtuales las que actualmente alojan las aplicaciones que se modernizarán. Este clúster se necesita para cumplir los requisitos previos, tal como se indica en el documento [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf), para permitir que los clientes migren las VM a la instancia de VMware vCenter Server on {{site.data.keyword.cloud_notm}} que se ejecuta en {{site.data.keyword.cloud_notm}} y viceversa si es necesario.
+- **Virtualización local**: un clúster VMware que actualmente aloja las VM de Acme Skateboards. Son estas máquinas virtuales las que actualmente alojan las aplicaciones que se modernizarán. Este clúster debe cumplir los requisitos previos, tal como está documentado en la
+[Arquitectura de la solución de VMware HCX on {{site.data.keyword.cloud_notm}}](https://test.cloud.ibm.com/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro) para permitir que los clientes puedan migrar máquinas virtuales a la instancia de VMware vCenter Server on {{site.data.keyword.cloud_notm}} que se ejecuta en {{site.data.keyword.cloud_notm}}, y en sentido inverso si fuera necesario.
 - **VMware vCenter Server on IBM Cloud**: vCenter Server proporciona los componentes fundamentales de VMware: vSphere, vCenter Server, NSX-V y opciones de almacenamiento que incluyen vSAN o almacenamiento {{site.data.keyword.cloud_notm}} Endurance, necesarios para desplegar automáticamente una solución VMware Software Defined Data Center (SDDC). Este clúster VMware es el destino de las máquinas virtuales migradas y de algunas de las aplicaciones modernizadas en los contenedores alojados en {{site.data.keyword.icpfull_notm}}.
 
 Los componentes clave de la arquitectura son:
@@ -39,7 +43,7 @@ Los componentes clave de la arquitectura son:
 {: #vcsnsxt-appmod-benefits}
 
 - Aceleración en la entrega de proyectos de TI a desarrolladores y líneas de negocio, reduciendo el tiempo necesario para la adquisición, la arquitectura, la implementación y el despliegue de recursos de semanas, o incluso meses, a horas. El tiempo de rentabilización de la aplicación desciende si los clientes tienen que esperar hasta que los equipos de red o de seguridad puedan solicitar servicios como equilibradores de carga, cortafuegos, conmutadores y direccionadores.
-- Mejora en la seguridad con servidores nativos dedicados en una nube privada alojada, incluido el despliegue de puntos finales privados en servicios de {{site.data.keyword.cloud_notm}}, como {{site.data.keyword.containerlong_notm}} y KMIP.
+- Mejora en la seguridad con servidores nativos dedicados en una nube privada alojada, incluido el despliegue de puntos finales de red privados en servicios de {{site.data.keyword.cloud_notm}}, como {{site.data.keyword.containerlong_notm}} y KMIP.
 - Gestión y gobierno coherentes de la nube híbrida desplegada, proporcionando acceso administrativo completo a la gestión de virtualización, conservando las herramientas de VMware existentes, los scripts y las inversiones en formación.
 - Experiencia de VMware a escala global con IBM Professional y Servicios gestionados que abarcan más de 30 {{site.data.keyword.CloudDataCents_notm}} en todo el mundo.
 

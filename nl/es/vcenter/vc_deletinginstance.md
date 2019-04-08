@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -30,10 +33,10 @@ Debido a las dependencias entre recursos, los componentes de la instancia no se 
 Se le facturará por la instancia suprimida hasta el final del ciclo de facturación de la infraestructura {{site.data.keyword.cloud_notm}}.
 {:note}
 
-## Procedimiento para suprimir instancias de la página Instancias desplegadas
+## Procedimiento para suprimir instancias de la página Recursos
 {: #vc_deletinginstance-procedure1}
 
-1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
+1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Recursos** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de vCenter Server**, busque la instancia que desea suprimir.
 3. En la columna **Acciones**, pulse el icono Suprimir.
    El estado de la instancia pasa a ser **Suprimiendo**. Cuando la instancia se haya suprimido correctamente, los componentes de la instancia se liberarán y el estado de la instancia pasará a ser **Suprimido**.
@@ -44,7 +47,7 @@ Se le facturará por la instancia suprimida hasta el final del ciclo de facturac
 ## Procedimiento para suprimir instancias de la página de detalles de la instancia
 {: #vc_deletinginstance-procedure2}
 
-1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
+1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Recursos** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de vCenter Server**, pulse la instancia que desea suprimir.
 3. Pulse el icono de menú de desbordamiento junto a la **consola de vCenter** y pulse **Suprimir instancia**.
    El estado de la instancia pasa a ser **Suprimiendo**. Cuando la instancia se haya suprimido correctamente, los componentes de la instancia se liberarán y el estado de la instancia pasará a ser **Suprimido**.

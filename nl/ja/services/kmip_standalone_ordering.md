@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-21"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # KMIP for VMware on IBM Cloud インスタンスの注文
@@ -72,7 +75,7 @@ IBM Key Protect Service インスタンスへのアクセスに使用する {{si
 ## 結果
 {: #kmip_standalone_ordering-results}
 
-KMIP for VMware on {{site.data.keyword.cloud_notm}} インスタンスの注文が自動的に開始します。お客様は、注文を処理していることを示す確認メッセージを受信します。インスタンスの詳細を参照して、注文状況を確認できます。
+KMIP for VMware on {{site.data.keyword.cloud_notm}} インスタンスの注文が自動的に開始します。 お客様は、注文を処理していることを示す確認メッセージを受信します。インスタンスの詳細を参照して、注文状況を確認できます。
 
 インスタンスを使用する準備ができると、インスタンスの状況が**「インストール済み」**に変更され、お客様は E メールで通知を受け取ります。
 

@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-28"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:faq: data-hd-content-type='faq'}

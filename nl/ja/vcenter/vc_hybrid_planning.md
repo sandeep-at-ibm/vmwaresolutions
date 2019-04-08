@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-03-20"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -35,9 +38,11 @@ vCenter Server with Hybridity Bundle のデプロイメントには、物理イ�
 | DAL13 | ダラス | 北米南部 |
 | FRA02 | フランクフルト | ヨーロッパ |
 | FRA04 | フランクフルト | ヨーロッパ |
+| FRA05 | フランクフルト | ヨーロッパ |
 | HKG02 | 香港 | アジア太平洋 |
 | LON02 | London (ロンドン) | ヨーロッパ |
 | LON04 | London (ロンドン) | ヨーロッパ |
+| LON05 | London (ロンドン) | ヨーロッパ |
 | LON06 | London (ロンドン) | ヨーロッパ |
 | MEL01 | メルボルン | アジア太平洋 |
 | MEX01 | ケレタロ | 北米南部 |

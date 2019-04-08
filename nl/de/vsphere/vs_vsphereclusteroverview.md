@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-11"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -48,7 +51,7 @@ Wählen Sie für folgende VMware-Komponenten (von IBM bereitgestellt oder eigene
 ### Bare Metal Server
 {: #vs_vsphereclusteroverview-specs-bare-metal}
 
-Mit einer der folgenden Konfigurationen können Sie mindestens eine {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}-Instanz bestellen: 
+Mit einer der folgenden Konfigurationen können Sie mindestens eine {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}-Instanz bestellen:
 * **Skylake**: 2-CPU Intel Skylake Generation-Server (Intel Xeon 4100/5100/6100 Series) mit dem ausgewählten CPU-Modell und der RAM-Größe.
 * **SAP-zertifiziert**: Intel Skylake oder Intel Broadwell Generation-Server (Intel Xeon 6140/E5-2690/E7-8890 Series) mit dem ausgewählten CPU-Modell.
 * **Broadwell**: 2-CPU Intel Broadwell Generation-Server (Intel Xeon E5-2600/E7-4800 Series) mit dem ausgewählten CPU-Modell und der RAM-Größe.
@@ -96,7 +99,7 @@ Jeder vSphere-Clustererweiterungsknoten stellt folgende Komponenten in Ihrem {{s
 ### VMware-Komponenten für Erweiterungsknoten
 {: #vs_vsphereclusteroverview-expansion-node-specs-vmware-components}
 
-* Eine {{site.data.keyword.cloud_notm}} Bare Metal Server-Instanz mit VMware vSphere Enterprise Plus 6.7u1 oder 6.5u2.   
+* Eine {{site.data.keyword.cloud_notm}} Bare Metal Server-Instanz mit VMware vSphere Enterprise Plus 6.7u1 oder 6.5u2.  
 * Optionale VMware-Komponenten, die unter [Technische Spezifikationen für VMware vSphere on {{site.data.keyword.cloud_notm}}-Cluster](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#specs) aufgeführt sind.
 
 Sie dürfen die ESXi-Server, die optionalen VMware-Komponenten und die zusätzliche Hardware, die bestellt und Ihrem {{site.data.keyword.cloud_notm}}-Konto übergeben wurden, nur im {{site.data.keyword.slportal}} verwalten. Nachdem Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole einen neuen Cluster erstellt haben, können Sie die Konsole erneut aufrufen, um den neuen Cluster unter Verwendung der gespeicherten Konfiguration zu skalieren. Weitere Informationen finden Sie unter [Vorhandene vSphere-Cluster skalieren](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters).

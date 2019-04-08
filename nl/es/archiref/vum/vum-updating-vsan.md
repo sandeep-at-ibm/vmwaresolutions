@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -53,7 +56,8 @@ El primer paso consiste en añadir las credenciales de my.vmware.com al motor de
 
 Ha habido informes en los que la información de proxy solo se establece para HTTP pero no para HTTPS. Para configurar la información de proxy también para el tráfico HTTPS, debe habilitarse en primer lugar. Después de iniciar una sesión en el VCSA mediante SSH, utilice el mandato proxy.get para ver la configuración y confirme que los parámetros HTTPS no están establecidos.
 
-Si los parámetros HTTPS no están establecidos, utilice el mandato siguiente: `proxy.set -- protocol https -- server ``<proxy ip>``--port 3128`
+Si los parámetros HTTPS no están establecidos, utilice el mandato siguiente:
+  `proxy.set --protocol https --server``<proxy ip>`` --port 3128`
 
 ### Configure vSAN para utilizar el proxy
 {: #vum-updating-vsan-config-vsan-proxy}
@@ -105,12 +109,12 @@ Antes de comenzar el proceso de actualización de vSAN, asegúrese de que se cum
 
 Para obtener más información, consulte [Actualización de VCSA y vCenters enlazados con SSO](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vcsa).
 
-## Actualizar los hosts ESXi de vSphere
+##	Actualizar los hosts ESXi de vSphere
 {: #vum-updating-vsan-upgrade-hosts}
 
 Para obtener más información, consulte [Creación de líneas base y cómo adjuntarlas a objetos de inventario](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-baselines).
 
-## Actualizar el formato de disco de vSAN
+##	Actualizar el formato de disco de vSAN
 {: #vum-updating-vsan-upgrade-vsan}
 
 La consola de Ruby vSphere (RVC) es una interfaz de línea de mandatos basada en Ruby para vSphere y se puede utilizar para gestionar VMware vSphere ESXi y vCenter. El inventario de vSphere se presenta en una estructura de árbol, lo que le permite navegar y ejecutar mandatos en objetos de vCenter.
@@ -141,5 +145,5 @@ Muchas tareas administrativas básicas se pueden realizar de forma mucho más ef
 ## Enlaces relacionados
 {: #vum-updating-vsan-related}
 
-* [Arquitectura de la solución VMware HCX on IBM Cloud](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
 * [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demostraciones)

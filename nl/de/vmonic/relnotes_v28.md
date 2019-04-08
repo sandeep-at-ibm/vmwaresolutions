@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-08"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Releaseinformationen für Version 2.8
@@ -75,7 +78,7 @@ Weitere Informationen finden Sie im Abschnitt *vCenter Server-Architektur* unter
 
 Mit diesem Release werden die folgenden Upgrades und Verbesserungen angewendet:
 
-* vSphere ESXi 6.5 Update P3 (Build 6.5.0-10884925)
+* vSphere ESXi 6.5 Update EP11 (Build 6.5.0-10719125)
 * vCenter Server 6.5 Update 2d (Build 6.5.0-10964411)
 * Platform Services Controller 6.5 Update 2d (Build 6.5.0-10964411)
 
@@ -101,16 +104,17 @@ Das aktuelle Release installiert IBM Spectrum Protect™ Plus V10.1.2 auf allen 
 
 Zuvor konnten Sie eine Cloud Foundation- oder vCenter Server-Instanz mit integriertem Service "KMIP for VMware on {{site.data.keyword.cloud_notm}}" bestellen oder den Service nach der Erstbereitstellung zu einer vorhandenen Cloud Foundation- oder vCenter Server-Instanz hinzufügen.
 
-Ab dem Release V2.8 ist der Service als eigenständiger Service verfügbar, ohne einer VMware-Instanz zugeordnet zu sein. Jede Instanz des Service kann eine oder mehrere Cloud Foundation-Instanzen, vCenter-Serverinstanzen oder vSphere-Cluster bedienen.
+Ab dem Release V2.8 ist der Service als eigenständiger Service verfügbar, ohne einer VMware-Instanz zugeordnet zu sein. Jede Instanz des Service kann eine oder mehrere Cloud Foundation-Instanzen, vCenter Serverinstanzen oder vSphere-Cluster bedienen.
 
 Weitere Informationen finden Sie unter [KMIP for VMware on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations).
 
 ## Referenzdokumentation zur Architektur
 {: #relnotes_v28-ref}
 
-(Aktualisiert am 08. Februar 2019) Die folgenden technischen Dokumente stehen nun im Abschnitt *Referenz* der Benutzerdokumentation zur Verfügung:
+(Aktualisiert am 08. Februar 2019) Die folgenden technischen Dokumente sind neu oder wurden im Abschnitt *Referenz* der Benutzerdokumentation aktualisiert:
 
-* [{{site.data.keyword.vmwaresolutions_short}} mit NSX-T-Architektur](/docs/services/vmwaresolutions/archiref/vcsarch?topic=vmware-solutions-vcsarch-overview)
+* [{{site.data.keyword.vmwaresolutions_short}}-Architektur (mit NSX-V und NSX-T)
+](/docs/services/vmwaresolutions/services?topic=vmware-solutions-solution_overview#solution_overview)
 * [Caveonix RiskForesight-Referenzarchitektur](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-on-vcs)
 * [HCX on {{site.data.keyword.cloud_notm}} - Handbuch zur Bereitstellung und Inbetriebnahme](/docs/services/vmwaresolutions/archiref/vcshcx?topic=vmware-solutions-vcshcx-intro)
 

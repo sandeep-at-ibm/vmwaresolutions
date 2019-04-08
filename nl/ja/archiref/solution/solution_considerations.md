@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-25"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -15,7 +18,7 @@ lastupdated: "2019-02-15"
 # デプロイメント後の VMware インスタンスの考慮事項
 {: #solution_considerations}
 
-{{site.data.keyword.vmwaresolutions_full}}、VMware vCenter Server、および VMware Cloud Foundation オファリングは、マネージド・サービスではありません。 お客様は、すべてのソフトウェア・コンポーネントの構成、セキュリティー、管理、モニタリングについての責任があります。 ソリューションに対して完全な管理アクセス権限を持つことで、高い制御性と柔軟性を獲得できますが、各種ドメインにおける技術、管理、運用面での高度な専門知識が必要となります。 {{site.data.keyword.cloud_notm}} で VMware インスタンスを管理するには、オンプレミス・インスタンスの計画と同様の計画および専門知識が必要です。 ソフトウェアで定義されたテクノロジー (VMware NSX、VMware vSAN など) は、インスタンス管理におけるいくつかの側面を大幅に簡素化しますが、適切な管理と操作のためには、新しいスキルやツールが必要になる場合があります。 {{site.data.keyword.cloud_notm}} の自動化された VMware デプロイメントのパワー、スピード、信頼性を、適切な運用計画およびテストと組み合わせることで、ハイブリッド・クラウドへの迅速かつ効率的なナビゲーションが保証されます。
+{{site.data.keyword.vmwaresolutions_full}} オファリングはマネージド・サービスではありません。お客様は、すべてのソフトウェア・コンポーネントの構成、セキュリティー、管理、モニタリングについての責任があります。 ソリューションに対して完全な管理アクセス権限を持つことで、高い制御性と柔軟性を獲得できますが、各種ドメインにおける技術、管理、運用面での高度な専門知識が必要となります。 {{site.data.keyword.cloud_notm}} で VMware インスタンスを管理するには、オンプレミス・インスタンスの計画と同様の計画および専門知識が必要です。 ソフトウェアで定義されたテクノロジー (VMware NSX、VMware vSAN など) は、インスタンス管理におけるいくつかの側面を大幅に簡素化しますが、適切な管理と操作のためには、新しいスキルやツールが必要になる場合があります。 {{site.data.keyword.cloud_notm}} の自動化された VMware デプロイメントのパワー、スピード、信頼性を、適切な運用計画およびテストと組み合わせることで、ハイブリッド・クラウドへの迅速かつ効率的なナビゲーションが保証されます。
 
 デプロイ前およびデプロイ後に、以下の考慮事項を検討して、インスタンスを管理および操作する自分の責任について理解してください。
 
@@ -44,7 +47,7 @@ lastupdated: "2019-02-15"
 - [{{site.data.keyword.cloud_notm}} VPN](https://www.softlayer.com/vpn-access) または [{{site.data.keyword.cloud_notm}}Direct-Link 接続](https://www.ibm.com/cloud/direct-link)を使用してインスタンス管理エンドポイントにアクセスします。
 - インスタンス内からのパブリック・ネットワーク接続のための戦略を策定します。 選択肢として、サンプルのカスタマー向け VMware NSX Edge Services Gateway (ESG)、ゲートウェイ・アプライアンス (Vyatta、FortiGate など)、{{site.data.keyword.cloud_notm}} ネットワークまたは DirectLink を介してアクセスする独自のネットワークのいずれかにデプロイされたプロキシー・サーバーがあります。
 - [{{site.data.keyword.cloud_notm}} ポータブル IP アドレス](/docs/infrastructure/subnets?topic=subnets-getting-started-with-subnets-and-ips)を使用して {{site.data.keyword.cloud_notm}} VLAN にワークロードをデプロイするか、または[独自の IP アドレスを使用して NSX 論理スイッチ (VXLAN)](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_overview) にデプロイするのかを計画します。 NSX ソフトウェア定義ネットワーク (SDN) を使用すると、{{site.data.keyword.cloud_notm}} 内でワークロード・ネットワークを非常に柔軟に管理および保護することができます。
-- NSX ESG、[IBM Cloud Vyatta](https://console.cloud.ibm.com/catalog/infrastructure/virtual-router-appliance)、および DirectLink ピアリングを使用して、ワークロードへの接続の計画 (ネットワーク・アドレス変換、仮想プライベート・ネットワーク、ルーティング) を立てます。
+- NSX ESG、[IBM Cloud Vyatta](https://cloud.ibm.com/catalog/infrastructure/virtual-router-appliance)、および DirectLink ピアリングを使用して、ワークロードへの接続の計画 (ネットワーク・アドレス変換、仮想プライベート・ネットワーク、ルーティング) を立てます。
 - Cross-vCenter NSX を実装する場合は、ローカル・ワークロードをデプロイする前に、ローカル・セグメントの ID 範囲が重複していないことを確認してください。
 
 ## セキュリティーの計画と強化
@@ -55,7 +58,7 @@ lastupdated: "2019-02-15"
 - {{site.data.keyword.vmwaresolutions_short}} コンソールに表示されるすべてのパスワードを変更し、独自のパスワード管理システムを使用します。 IBM は、継続的な自動化とサポートに必要とされる、個別のユーザー ID を保持しています。
 - すべてのコンポーネントでパスワード・ポリシー (複雑さ、有効期限など) を確認します。
 - すべてのコンポーネントの暗号化設定を確認します。
-- NSX Distributed Firewall (DFW)、NSX ESG、[Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations)、[IBM Cloud Vyatta](https://console.cloud.ibm.com/catalog/infrastructure/virtual-router-appliance) など、適切な物理または仮想のファイアウォール・ソリューションを計画し、実装します。
+- NSX Distributed Firewall (DFW)、NSX ESG、[Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations)、[IBM Cloud Vyatta](https://cloud.ibm.com/catalog/infrastructure/virtual-router-appliance) など、適切な物理または仮想のファイアウォール・ソリューションを計画し、実装します。
 - 適切なアプリケーション・ロード・バランシング・ソリューションとセキュリティー・ソリューション ([F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations) など) を計画し、実装します。
 - 適切なセキュリティー情報およびイベント管理 (SIEM) ソリューション ([IBM QRadar](https://www.ibm.com/us-en/marketplace/hosted-security-intelligence) など) を計画し、実装します。
 - 適切な脆弱性スキャンを計画し、実装します。
@@ -66,7 +69,7 @@ lastupdated: "2019-02-15"
 
 以下の手順を実行して、要件に合わせて VMware インスタンスの基本インストールをカスタマイズしてください。
 
-- 独自の認証局 (CA) を使用して、vCenter、VMware Platform Services Controller (PSC)、NSX Manager などのコンポーネントの証明書を生成します。
+- 独自の認証局 (CA) を使用して、vCenter (組み込み PSC あり) および NSX Manager などのコンポーネントの証明書を生成します。
 - デプロイされたサービスを構成します。 例えば次のようにします。
   - HyTrust CloudControl on {{site.data.keyword.cloud_notm}} の場合は、AD 統合、アクセス制御、Simple Mail Transfer Protocol (SMTP) 設定、およびコンプライアンス・ポリシーを構成します。
   - Zerto on {{site.data.keyword.cloud_notm}} の場合は、ネットワーク・アドレス変換機構 (NAT) のトラバーサルがサポートされないため、Zerto Virtual Replication Appliance (VRA) の通信の IP アドレッシングとルーティングを計画します。 アドレッシングとルーティングが適切に行われるように、VRA のトンネリングまたは再デプロイメントを検討してください。

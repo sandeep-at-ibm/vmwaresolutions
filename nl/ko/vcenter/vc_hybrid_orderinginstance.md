@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-11"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -237,7 +240,7 @@ vCenter Server with Hybridity Bundle 인스턴스를 주문할 때 추가 서비
 1. {{site.data.keyword.cloud_notm}} 카탈로그의 왼쪽 탐색 분할창에서 **VMware**를 클릭한 후 **가상 데이터 센터** 섹션에 있는 **vCenter Server**를 클릭하십시오.
 2. **VMware vCenter Server on IBM Cloud** 페이지에서 **vCenter Server with Hybridity Bundle** 카드를 클릭하고 **작성**을 클릭하십시오.
 3. **vCenter Server** 페이지에서 인스턴스 이름을 입력하십시오.
-5. vSphere 버전을 선택하십시오. 
+5. vSphere 버전을 선택하십시오.
 4. 인스턴스 유형을 선택하십시오.
    * 환경에 하나의 인스턴스를 배치하거나 다중 사이트 토폴로지에 첫 번째 인스턴스를 배치하려면 **기본 인스턴스**를 클릭하십시오.
    * 고가용성을 위해 인스턴스를 환경의 기존(기본) 인스턴스에 연결하려면 **보조 인스턴스**를 클릭하고 다음 단계를 완료하십시오.

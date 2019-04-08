@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-03-15"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -22,7 +25,7 @@ lastupdated: "2019-02-21"
 - {{site.data.keyword.cloud_notm}} Automation Manager(CAM)를 사용하여 DevOps 도구 체인과 ITSM 솔루션을 통합하기 위해 VM 및 컨테이너 둘 다에서 작성된 서비스를 작성하고 조정하도록 IaC(Infrastructure as Code)를 스크립팅할 수 있습니다.
 
 참조 아키텍처에는 다음 주요 컴포넌트가 있습니다.
-- **온프레미스 가상화** - Acme Skateboards VM을 현재 호스팅하고 있는 VMware 클러스터입니다. 이러한 VM은 현대화시킬 애플리케이션을 현재 호스트하고 있습니다. 이 클러스터는 HCX를 실행할 수 있도록 [VMware HCX on {{site.data.keyword.cloud_notm}} 솔루션 아키텍처](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)의 전제조건을 충족해야 합니다. HCX는 고객이 {{site.data.keyword.cloud_notm}}에서 실행 중인 VMware vCenter Server on {{site.data.keyword.cloud_notm}}(VCS) 인스턴스로 VM을 마이그레이션할 수 있는 {{site.data.keyword.cloud_notm}}로 온프레미스 네트워크를 확장하며 필요한 경우 확장을 취소합니다.
+- **온프레미스 가상화** - Acme Skateboards VM을 현재 호스팅하고 있는 VMware 클러스터입니다. 이러한 VM은 현대화시킬 애플리케이션을 현재 호스트하고 있습니다. 이 클러스터는 HCX를 실행할 수 있도록 [VMware HCX on {{site.data.keyword.cloud_notm}} 솔루션 아키텍처](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)의 전제조건을 충족해야 합니다.HCX는 고객이 {{site.data.keyword.cloud_notm}}에서 실행 중인 VMware vCenter Server on {{site.data.keyword.cloud_notm}}(VCS) 인스턴스로 VM을 마이그레이션할 수 있는 {{site.data.keyword.cloud_notm}}로 온프레미스 네트워크를 확장하며 필요한 경우 확장을 취소합니다.
 
 - **{{site.data.keyword.vmwaresolutions_short}}** - vCenter 인스턴스는 vSphere, vCenter Server, NSX-V와 같은 기본적인 VMware 빌딩 블록을 제공하며, VMware SDDC(Software Defined Data Center) 솔루션을 자동으로 배치하는 데 필요한 vSAN 또는 {{site.data.keyword.cloud_notm}} Endurance 스토리지가 포함된 스토리지 옵션을 제공합니다. VMware 클러스터는 {{site.data.keyword.icpfull_notm}}에서 호스팅되는 컨테이너의 일부 현대화된 애플리케이션 및 마이그레이션된 VM에 대한 대상입니다. vCenter Server의 주요 컴포넌트는 다음과 같습니다.
     - **NSX-V** - NSX-V는 Acme Skateboards VM에 대한 네트워크 오버레이를 제공하는 VCS의 네트워크 가상화 계층을 제공합니다. NSX-V는 BYOIP를 사용으로 설정하고 IBM Cloud 네트워크에서 워크로드 네트워크를 격리합니다. NSX-V는 Acme Skateboards가 온프레미스에서 확장하는 네트워크를 작성하기 위해 HCX로 프로그래밍됩니다.

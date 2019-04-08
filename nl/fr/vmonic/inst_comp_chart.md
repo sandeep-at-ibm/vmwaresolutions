@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-12"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Graphique de comparaison des offres
@@ -39,7 +42,7 @@ Tableau 1. Fonctions prises en charge pour les instances vCenter Server et vCent
 
 <sup>1</sup> Conformément à une conception validée et avec une vérification durant le déploiement.
 
-<sup>2</sup> vSAN uniquement pour les nouvelles instances et les nouveaux clusters vCenter Server with Hybridity. Après le déploiement, vous pouvez ajouter du stockage NFS. 
+<sup>2</sup> vSAN uniquement pour les nouvelles instances et les nouveaux clusters vCenter Server with Hybridity. Après le déploiement, vous pouvez ajouter du stockage NFS.
 
 <sup>3</sup> Vous pouvez augmenter le nombre de serveurs ESXi dans un cluster vSAN et le porter à un maximum de 64. Pour plus d'informations, voir _Combien de serveurs ESXi puis-je ajouter à un cluster ?_ dans la [Foire aux questions sur les serveurs ESXi](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_esxi).
 

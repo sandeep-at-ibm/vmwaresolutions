@@ -6,12 +6,15 @@ copyright:
 
 lastupdated: "2019-03-06"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Glossar der Caveonix-Begriffe
 {: #caveonix-terminology}
 
-Dieses Glossar enthält einige Beschreibungen für Begriffe, die zu der Caveonix RiskForesight-Lösung gehören: 
+Dieses Glossar enthält einige Beschreibungen für Begriffe, die zu der Caveonix RiskForesight-Lösung gehören:
 
 -	**NIST Special Publication 800-53:** Ein Risikomanagement-Framework für die Adressen-Sicherheitssteuerung.
 -	**Security Content Automation Protocol (SCAP):** Eine Methode zur Verwendung bestimmter Standards, die das automatisierte Schwachstellenmanagement, die Messung und die Bewertung der Richtlinienkonformität von Systemen ermöglichen, die in einer Organisation bereitgestellt sind. Prüflisten standardisieren und ermöglichen die Automatisierung der Verbindung zwischen Computer-Sicherheitskonfigurationen und dem Kontroll-Framework NIST Special Publication 800-53.
@@ -55,7 +58,7 @@ Dieses Glossar enthält einige Beschreibungen für Begriffe, die zu der Caveonix
   - **AMQP-Task:** Diese AMQP-Task wird für die Erfassung von Live-Ereignissen aus VCD verwendet, um die Echtzeitsynchronisation zu ermöglichen. RiskForesight verarbeitet Ereignisse von Hinzufügungen, Löschungen und Aktualisierungen und veranlasst entsprechende Aktionen. Wird z. B. ein neues Asset hinzugefügt und RiskForesight hat diese Benachrichtigung über AMQP erhalten, aktualisiert es die Datenbank sofort und startet die Überprüfung der Konformitäts- und Cyberrisiken.
   - **VMware-Infrastruktur-Scan:** Dieser Scan führt eine Infrastrukturüberprüfung der VMware-Assets durch.
   -	**VMware-Schwachstellenscan:** Dieser Scan führt eine Schwachstellenprüfung der VMware-Assets durch.
--	**Konformitätsvorschriften:** Nur mit Lizenz verfügbar; NIST, NESA, PCI, ISO, HIPAA, GDPR, Custom, FFIEC, FedRAMP Low, FedRAMP Moderate, FedRAMP High
+-	**Konformitätsvorschriften:** Nur mit Lizenz verfügbar; NIST, NESA, PCI, ISO, HIPAA, DSGVO, Custom, FFIEC, FedRAMP Low, FedRAMP Moderate, FedRAMP High
 -	**Richtlinienmanager:** Der Richtlinienmanager dient der Funktion zur Richtlinienerstellung für eine Organisation auf Grundlage der Ausgabe des maschinellen Lernens. Caveonix stellt standardmäßig drei Typen von Maschinenlernjobs pro Organisation bereit. Diese sind nicht bearbeitbar; weitere Jobs werden noch nicht unterstützt. Folgende Typen von Maschinenlernjobs werden derzeit unterstützt:
   -	Caveo-Protokolle
   -	Caveo-Netze

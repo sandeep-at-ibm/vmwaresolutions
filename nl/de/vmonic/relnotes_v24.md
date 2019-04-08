@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2018-06-22"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -52,7 +55,7 @@ Ab dem Release von V2.4 sind die folgenden neuen Bare Metal Server-CPU-Modelle z
 * Dual Intel Skylake Xeon Gold 5120-Prozessor / 28 Cores insgesamt, 2,2 GHz
 * Dual Intel Skylake Xeon Gold 6140-Prozessor / 36 Cores insgesamt, 2,3 GHz
 
-Weitere Informationen finden Sie im Abschnitt zu *Einstellungen für Bare Metal Server* unter [Neue vSphere-Cluster bestellen](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances#bare-metal-server-settings). 
+Weitere Informationen finden Sie im Abschnitt zu *Einstellungen für Bare Metal Server* unter [Neue vSphere-Cluster bestellen](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances#bare-metal-server-settings).
 
 ## Updates für VMware vCenter Server-Instanzen
 {: #relnotes_v24-vcs}

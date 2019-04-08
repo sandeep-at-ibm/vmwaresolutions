@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-28"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # 叢集設定
@@ -40,7 +43,7 @@ lastupdated: "2019-02-28"
 
 如需在 vSphere Web Client 中配置這些設定的相關資訊，請參閱 [Set a Custom Automation Level for a Virtual Machine in the vSphere Web Client](https://docs.vmware.com/en/VMware-vSphere/5.5/com.vmware.vsphere.resmgmt.doc/GUID-C21C0609-923B-46FB-920C-887F00DBCAB9.html)。
 
-除了叢集的自動化層次和移轉臨界值之外，本設計也會啟用 VM 自動化，讓您可以置換每個個別 VM 的值。更精細地控制 VM 可以進一步設定 VM 負載平衡的優先順序。
+除了叢集的自動化層次和移轉臨界值之外，本設計也會啟用 VM 自動化，讓您可以置換每部個別 VM 的值。更精細地控制 VM 可以進一步設定 VM 負載平衡的優先順序。
 
 ### 電源管理
 {: #cluster-settings-power-mgmt}
@@ -81,7 +84,7 @@ VM 監視特性使用 VMware 工具擷取的活動訊號資訊作為 Proxy，以
 | VM 監視靈敏度 | 自訂 |
 | 失敗間隔 | 50 秒 |
 | 執行時間下限 | 90 秒 |
-| 每個 VM 重設上限 | 10 |
+| 每部 VM 重設上限 | 10 |
 | 重設時間範圍上限 | 1 小時內 |
 
 如需在 vSphere Web Client 中配置這些設定的相關資訊，請參閱 [Configure Virtual Machine Responses](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.avail.doc/GUID-3DAED2B1-55B8-4877-BD0F-BC57C10A516C.html)。

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -15,47 +18,32 @@ lastupdated: "2019-02-15"
 # Conception de gestion d'infrastructure
 {: #design_infrastructuremgmt}
 
-La gestion d'infrastructure fait référence aux composants qui gèrent l'infrastructure VMware. Cette conception utilise une seule instance PSC (Platform Services Controller) externe et une seule instance vCenter Server :
-* vCenter Server est la plateforme centralisée dédiée à la gestion des environnements vSphere ; il s'agit de l'un des composants fondamentaux de cette solution.
+La gestion d'infrastructure fait référence aux composants qui gèrent l'infrastructure VMware.
+* vCenter Server avec contrôleur PSC (Platform Services Controller) intégré est la plateforme centralisée dédiée à la gestion des environnements vSphere ; il s'agit de l'un des composants fondamentaux de cette solution.
 * Le contrôleur PSC est utilisé dans cette solution pour fournir un ensemble de services d'infrastructure, y compris VMware vCenter Single Sign On, un service de licence, un service de consultation et l'autorité de certification VMware.
 
-Les instances PSC et les instances vCenter Server sont des machines virtuelles distinctes.
+Cette conception utilise une fonction PSC intégrée dans une instance vCenter Server. La fonction PSC et l'instance vCenter Server sont hébergées sur la même machine virtuelle.
 
-## Conception de PSC
-{: #design_infrastructuremgmt-psc}
-
-Cette conception déploie une seule instance PSC externe en tant que dispositif virtuel sur un sous-réseau portable, sur le VLAN privé qui est associé aux machines virtuelles de gestion. Le routeur BCR (Back-end Customer Router) lui sert de passerelle par défaut. Le dispositif virtuel est configuré avec les spécifications décrites dans le tableau suivant.
-
-Ces valeurs sont définies au moment du déploiement et elles ne peuvent pas être modifiées.
-{:note}
-
-Tableau 1. Spécifications PSC (Platform Services Controller)
-
-| Attribut                    | Spécification                  |
-|------------------------------|--------------------------------|
-| Contrôleur PSC (Platform Services Controller) | Dispositif virtuel              |
-| Nombre d'unités centrales virtuelles              | 2                              |
-| Mémoire                       | 4 Go                           |
-| Disque                         | 114 Go sur le magasin de données VMFS local |
-| Type de disque                    | A allocation dynamique               |
+Figure 1. Gestion d'infrastructure</br>
+![Gestion d'infrastructure](vcsv4radiagrams-ra-inframgmt.svg)
 
 Le domaine SSO par défaut `vsphere.local` est affecté au contrôleur PSC situé dans l'instance principale.
 
 ## Conception de vCenter Server
 {: #design_infrastructuremgmt-vcenter}
 
-vCenter Server est également déployé en tant que dispositif virtuel. En outre, vCenter Server est installé sur un sous-réseau portable, sur le VLAN privé qui est associé aux machines virtuelles de gestion. L'adresse IP affectée sur le routeur BCR pour ce sous-réseau spécifique lui sert de passerelle par défaut. Le dispositif virtuel est configuré avec les spécifications décrites dans le tableau suivant.
+vCenter Server avec contrôleur PSC intégré est installé sur un sous-réseau portable sur le réseau local virtuel (VLAN) privé associé aux machines virtuelles de gestion. L'adresse IP affectée sur le routeur BCR pour ce sous-réseau spécifique lui sert de passerelle par défaut. Le dispositif virtuel est configuré avec les spécifications décrites dans le tableau suivant.
 
-Tableau 2. Spécifications vCenter Server Appliance
+Tableau 1. Spécifications vCenter Server Appliance
 
 | Attribut                    | Spécification                       |
 |------------------------------|-------------------------------------|
 | vCenter Server               | Dispositif virtuel                   |
-| Taille d'installation du dispositif  | Moyenne (jusqu'à 400 hôtes, 4 000 machines virtuelles) |
-| Contrôleur PSC (Platform Services Controller) | Externe                            |
-| Nombre d'unités centrales virtuelles              | 8                                   |
-| Mémoire                       | 24 Go                               |
-| Disque                         | 400 Go sur magasin de données local           |
+| Taille d'installation du dispositif  | Grand (jusqu'à 1 000 hôtes et 10 000 machines virtuelles) |
+| Contrôleur PSC (Platform Services Controller) | Intégré                            |
+| Nombre d'unités centrales virtuelles              | 16                                   |
+| Mémoire                       | 32 Go                               |
+| Disque                         | 990 Go sur le magasin de données local (déploiement de disque de grande taille) |
 | Type de disque                    | A allocation dynamique                    |
 
 ### Base de données vCenter Server
@@ -86,55 +74,47 @@ Vous êtes chargé d'ajuster la règle de contrôle d'admission lorsque le clust
 
 Par défaut, une valeur moyenne est affectée à l'option de **priorité de redémarrage des machines virtuelles** et l'option de **réponse d'isolement hôte** est désactivée. De plus, l'option de **surveillance des machines virtuelles** est désactivée et la fonction de **pulsation de magasin de données** est configurée pour inclure n'importe lequel des magasins de données de cluster. Cette approche utilise les magasins de données NAS éventuellement présents.
 
-## Automatisation
-{: #design_infrastructuremgmt-automation}
+## EVC (Enhanced vMotion Compatibility)
+{: #design_infrastructuremgmt-evc}
 
-L'automatisation est l'élément central de ces solutions. Elle offre les avantages suivants :
-* Elle réduit la complexité du déploiement
-* Elle réduit le temps de déploiement
-* Elle assure un déploiement cohérent de l'instance VMware
+Pour simplifier la compatibilité vMotion entre les noeuds de cluster ayant des fonctionnalités d'UC potentiellement différentes, le mode EVC (Enhanced vMotion Compatibility, compatibilité vMotion étendue) est activé au niveau Skylake afin de garantir la compatibilité vMotion entre les noeuds de cluster lorsque de nouveaux processeurs sont ajoutés à l'inventaire {{site.data.keyword.cloud_notm}} et permettre l'extension ultérieure du cluster si les serveurs à processeur Skylake ne figurent pas dans l'inventaire.
 
-Les machines virtuelles {{site.data.keyword.IBM}} CloudBuilder, IBM CloudDriver et SDDC Manager fonctionnent conjointement pour démarrer une nouvelle instance VMware et effectuer des fonctions de gestion de cycle de vie.
+### IBM CloudDriver
+{: #design_infrastructuremgmt-cloud-driver}
 
-### IBM CloudBuilder et IBM CloudDriver
-{: #design_infrastructuremgmt-cloud-builder-driver}
+La pierre angulaire de ces solutions est l'automatisation. L'automatisation réduit la complexité du déploiement, réduit considérablement le temps nécessaire au déploiement et garantir que l'instance VMware est déployée de manière cohérente.
 
-Les instances de serveur virtuel IBM CloudBuilder et IBM CloudDriver sont des composants développés par IBM auxquels vous ne pouvez pas accéder.
-* IBM CloudBuilder est une instance de serveur virtuel {{site.data.keyword.cloud_notm}} temporaire qui amorce le déploiement, la configuration et la validation des composants de solution dans les hôtes ESXi bare metal mis à disposition.
-* L'instance de serveur virtuel IBM CloudDriver est déployée pour la création d'instance, puis régulièrement, selon les besoins, avec le dernier code {{site.data.keyword.cloud_notm}} pour VMware pour les opérations, telles que le déploiement de noeuds, de clusters ou de services supplémentaires. IBM CloudDriver communique avec la console {{site.data.keyword.vmwaresolutions_short}} via une passerelle VMware NSX Edge Services déployée exclusivement à des fins de gestion d'instance, et agit en tant qu'agent chargé de gérer l'instance. IBM CloudDriver est responsable des actions en cours, telles que l'ajout de nouveaux hôtes bare metal au cluster et le déploiement de services complémentaires dans l'instance. Pour les instances Cloud Foundation, IBM CloudDriver communique avec la machine virtuelle VMware SDDC Manager pour effectuer des fonctions, telles que l'ajout d'hôtes et l'application de modules de correction à des hôtes.
+IBM CloudBuilder est une instance de serveur virtuel de machine virtuelle {{site.data.keyword.cloud_notm}} qui s'emploie à activer une nouvelle à instance VMware et qui exécute des fonctions de gestion du cycle de vie. Cette instance est déployée lorsqu'une gestion globale des instances vCenter Server est requise puis supprimée une fois le processus achevé.
 
-L'utilisateur peut supprimer ou endommager les machines virtuelles décrites dans les sections ci-dessous. Lorsqu'une machine virtuelle est retirée, arrêtée ou lorsqu'elle devient inutilisable, les opérations Cloud Foundation ou vCenter Server suivantes sur la console {{site.data.keyword.vmwaresolutions_short}} sont interrompues :
-* Affichage de l'état de l'hôte ou de l'instance
-* Ajout ou retrait de clusters
-* Ajout ou retrait d'hôtes ESXi
-* Ajout ou retrait de services
-* Application de correctif
+Le composant IBM CloudDriver peut être configuré de manière à répondre à l'infrastructure de gestion {{site.data.keyword.vmwaresolutions_short}} sur une connexion de réseau public, ou éventuellement privé, via un stockage d'objets {{site.data.keyword.cloud_notm}} faisant office de file d'attente de messages. IBM CloudDriver est un composant développé par IBM, non accessible aux utilisateurs, dont la fonction et les attributs sont les suivants :
 
-### SDDC Manager
-{: #design_infrastructuremgmt-sddc-manager}
-
-Pour les instances Cloud Foundation, la machine virtuelle SDDC Manager est un composant qui est développé et géré par VMware. Il continue de faire partie de l'instance tout au long de son cycle de vie. Il est responsable des fonctions de cycle de vie suivantes pour les instances :
-* Gestion des composants VMware : vCenter Server, Platform Services Controller (PSC), vSAN et NSX, y compris l'allocation d'adresse IP et la résolution de nom d'hôte
-* Développement et rétraction d'hôtes ESXi dans le cluster, y compris les services concernés, tels que NSX VTEP, vSAN et les pools de ressources
-
-Pour les instances vCenter Server, ces activités sont effectuées par IBM CloudDriver en l'absence de gestionnaire SDDC Manager.
+- Déploiement et configuration de l'instance vCenter Server dans le compte utilisateur.
+- Ajout et suppression d'hôtes dans les clusters vCenter Server.
+- Ajout et suppression de clusters dans des instances vCenter Server.
+- Ajout et suppression de services ou de fonctions dans des instances vCenter Server.
 
 ### Flux d'automatisation
 {: #design_infrastructuremgmt-auto-flow}
 
-La procédure suivante décrit l'ordre dans lequel les événements se déroulent lorsqu'une instance VMware est commandée via la console {{site.data.keyword.vmwaresolutions_short}} :
-1.  Commande de VLAN et de sous-réseaux pour la mise en réseau à partir d'{{site.data.keyword.cloud_notm}}
-2.  Commande de serveurs bare metal avec vSphere Hypervisor installé
-3.  Le cas échéant, commande de l'instance de serveur virtuel Microsoft Windows qui servira de contrôleur de domaine Active Directory
-4.  Validation du matériel mis en réseau et déployé
-5.  Le cas échéant, configuration initiale d'un réseau de stockage virtuel de noeud unique
-6.  Le cas échéant, déploiement et configuration de deux machines virtuelles Microsoft Windows qui serviront de contrôleurs de domaine Active Directory
-7.  Déploiement et configuration de vCenter, PSC et NSX
-8.  Regroupement en cluster des autres noeuds ESXi, développement de vSAN, le cas échéant, et configuration des composants NSX (VTEP)
-9.  Déploiement de machine virtuelle DDC Manager VMware Cloud Foundation, le cas échéant, et de l'instance de serveur virtuel IBM CloudDriver
-10.  Validation de l'installation et de la configuration de l'environnement
-11. Retrait de l'instance de serveur virtuel CloudBuilder
-12. Déploiement de services facultatifs, tels que le serveur de sauvegarde et le stockage
+La procédure suivante décrit l'ordre dans lequel les événements se déroulent lorsque vous utilisez la console {{site.data.keyword.vmwaresolutions_short}} pour commander une instance VMware :
+1. Commande de VLAN et de sous-réseaux pour la mise en réseau à partir d'{{site.data.keyword.cloud_notm}}
+2. Commande d'{{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} avec vSphere Hypervisor installé.
+3. Commande d'une instance de serveur virtuel Microsoft Windows qui servira de contrôleur de domaine Active Directory.
+4. Déploiement de l'instance de serveur virtuel Cloud Driver.
+5. Validation du matériel mis en réseau et déployé
+6. Le cas échéant, configuration initiale d'un réseau de stockage virtuel (vSAN) de noeud unique.
+7. Déploiement et configuration de vCenter (avec contrôleur PSC intégré) et de NSX.
+8. Regroupement en cluster des autres noeuds ESXi, développement de vSAN, le cas échéant, et configuration des composants NSX (VTEP)
+9. Validation de l'installation et de la configuration de l'environnement
+10. Déploiement de services facultatifs, tels que le serveur de sauvegarde et le stockage
+11. Suppression de l'instance de serveur virtuel Cloud Driver.
+
+## ID et mots de passe
+{: #design_infrastructuremgmt-ids-pwd}
+
+L'infrastructure de gestion IC4V stocke tous les ID et mots de passe chiffrés que contient vCenter Server dans le plan de gestion {{site.data.keyword.cloud_notm}}. Toute modification apportée à ces mots de passe par l'utilisateur peut perturber les capacités d'automatisation au sein de vCenter Server.
+
+Vous pouvez fournir des mots de passe modifiés dans le portail de solutions IC4V de sorte que le processus d'automatisation puisse traiter des fonctions sans interruption. Le portail de solutions offre la possibilité de vérifier les mots de passe entrés.
 
 ## Liens connexes
 {: #design_infrastructuremgmt-related}

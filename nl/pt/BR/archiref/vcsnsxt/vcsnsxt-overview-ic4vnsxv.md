@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -121,7 +124,7 @@ A seguir estão alguns componentes chave do NSX:
 
 O diagrama a seguir mostra um diagrama de alto nível de como é possível implementar alguns dos recursos de microssegmentação do NSX-V, criando grupos de segurança. Neste exemplo, a produção e o desenvolvimento são os grupos de segurança e as regras de segurança são designadas com base nesses grupos.
 
-Figura 3. Segurança do NSX-V
+Figura 3. Segurança do NSX-V</br>
 ![Segurança do NSX-V](vcsnsxt-vsecurity.svg)
 
 ## Links relacionados

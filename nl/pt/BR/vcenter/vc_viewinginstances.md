@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-04"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -35,13 +38,13 @@ Tabela 1. Itens de instância do vCenter Server
 | Versão | A versão de liberação na qual a instância foi implementada ou submetida a upgrade |  
 | Localização | O {{site.data.keyword.CloudDataCent_notm}} no qual a instância é hospedada |  
 | Horário de criação | A data e hora em que a instância foi criada |
-| Status | O status da instância |   
+| Barra de Status | O status da instância |   
 
 A instância pode ter um intervalo de status.
 
 Tabela 2. Descrições do status de instâncias do vCenter Server
 
-| Status        | Descrição       |
+| Barra de Status        | Descrição       |
 |:------------- |:------------- |
 | Criando | A instância está sendo criada. |
 | Construindo | A instância está sendo configurada. |
@@ -76,7 +79,7 @@ Tabela 3. Propriedades da instância do vCenter Server
 | DNS, domínio SSO | O domínio SSO é o domínio de Conexão única do vSphere. O nome de domínio SSO é corrigido para todas as instâncias implementadas do vCenter Server com um valor de <samp class="ph codeph">vsphere.local</samp>. |
 | DNS, subdomínio | O subdomínio é o nome do subdomínio do DNS no nome de domínio-raiz no qual os nomes de host da instância local do vCenter Server residem. O nome do subdomínio está no formato <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp>. |
 | Hybridity Bundle | Indica se o Pacote configurável vCenter Server with Hybridity está instalado. |
-| Status  | O status da instância.<br><br>As informações exibidas fornecem uma atualização sobre o progresso da implementação ou a ação que é executada na instância. Se houver problemas, uma mensagem poderá ser exibida para ajudá-lo a investigar e resolver o problema. |
+| Barra de Status  | O status da instância.<br><br>As informações exibidas fornecem uma atualização sobre o progresso da implementação ou a ação que é executada na instância. Se houver problemas, uma mensagem poderá ser exibida para ajudá-lo a investigar e resolver o problema. |
 
 ## Procedimento para visualizar as informações de acesso para instâncias do vCenter Server
 {: #vc_viewinginstances-procedure-view-access-info}

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -122,6 +125,7 @@ Die NSX-Schlüsselkomponenten sind unter anderem Folgende:
 Die folgende Abbildung zeigt in einem übergeordneten Diagramm, wie Sie einige der Mikrosegmentierungsfunktionen von NSX-V durch die Erstellung von Sicherheitsgruppen implementieren können. In diesem Beispiel heißen die Sicherheitsgruppen "Produktion" und "Entwicklung"; die Sicherheitsregeln werden basierend auf diesen Gruppen zugeordnet.
 
 Abbildung 3. Sicherheit von NSX-V
+</br>
 ![Sicherheit von NSX-V](vcsnsxt-vsecurity.svg)
 
 ## Zugehörige Links

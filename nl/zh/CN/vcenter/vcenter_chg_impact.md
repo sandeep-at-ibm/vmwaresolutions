@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-22"
+lastupdated: "2019-03-14"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -77,7 +80,6 @@ lastupdated: "2019-02-22"
 |尝试的更改|影响的操作|严重性|恢复方法|
 |:------------- |:------------- |:--------------|:--------------|
 |禁用对 vCenter Server 或 PSC 的 SSH 或 shell 访问。|对主实例和辅助实例进行配对可能会失败。|重要|不适用|
-|禁用对 ESXi 的 SSH 或 shell 访问。|在实例中添加和除去主机、服务和网络存储器可能会失败。|重要|不适用|
 
 如果选择禁用 SSH 或 shell 访问，那么应该在执行指示的操作之前，临时重新启用 SSH 或 shell 访问。
 

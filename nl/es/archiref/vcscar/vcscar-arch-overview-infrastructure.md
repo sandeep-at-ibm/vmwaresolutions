@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-22"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -14,7 +17,7 @@ lastupdated: "2019-02-15"
 ## Direccionamiento virtual y reenvío
 {: #vcscar-arch-overview-infrastructure-vrf}
 
-Las cuentas de {{site.data.keyword.cloud}} también se pueden configurar como cuentas de direccionamiento virtual y reenvío (VRF). Una cuenta VRF proporciona funciones similares a la expansión de VLAN, que permite el direccionamiento automático entre bloques IP de subred. Todas las cuentas con las conexiones de Direct-Link deben convertirse a, o crearse como, una cuenta de VRF.
+Las cuentas de {{site.data.keyword.cloud}} se pueden configurar como cuentas de direccionamiento virtual y reenvío (VRF). Una cuenta VRF habilita el direccionamiento global automático entre bloques de IP de subred. Todas las cuentas con las conexiones de Direct-Link deben convertirse a, o crearse como, una cuenta de VRF.
 
 ## Direct Link
 {: #vcscar-arch-overview-infrastructure-direct-link}
@@ -43,12 +46,13 @@ La infraestructura física necesaria para desplegar una instancia de producción
 
 Tabla 1. Especificación de vCenter Server para {{site.data.keyword.icpfull_notm}}
 
-| Despliegue de NFS | Despliegue de vSAN |
-:--|:----:|:----:
-Número de servidores | 3 | 4
-CPU | 28 núcleos 2,2 GHz | 28 núcleos 2,2 GHz
-Memoria | 384 GB | 384 GB
-Almacenamiento | 2000 GB 2IOPS/GB de gestión, 2000 GB 4IOPS/GB de carga de trabajo, 4000 GB 4IOPS/GB de {{site.data.keyword.icpfull_notm}} | Mín 960-GB SSD x 2
+| | Despliegue NFS | Despliegue vSAN |
+|:---------- |:---------- |:---------- |
+| Número de servidores | 3 | 4 |
+| CPU | 28 núcleos de 2,2 GHz | 28 núcleos de 2,2 GHz |
+| Memoria | 384 GB | 384 GB |
+| Almacenamiento | 2000 GB para gestión a 2IOPS/GB, 2000 GB para carga de trabajo a 4IOPS/GB, 4000 GB para
+{{site.data.keyword.icpfull_notm}} a 4IOPS/GB | Mín. 960 GB SSD x 2 |
 
 Además de los requisitos de hardware de {{site.data.keyword.cloud_notm}} Private, debe crear volúmenes persistentes en el entorno {{site.data.keyword.icpfull_notm}} para almacenar la base de datos de Cloud Automation Manager (CAM) y los datos de registro. Aunque CAM da soporte a todos los tipos de volúmenes persistentes a los que da soporte {{site.data.keyword.icpfull_notm}}, las dos configuraciones de almacenamiento recomendadas para CAM son NFS y GlusterFS.
 

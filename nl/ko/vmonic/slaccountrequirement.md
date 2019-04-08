@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-26"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -50,7 +53,7 @@ lastupdated: "2019-02-26"
 ## 서비스 엔드포인트가 사용으로 설정된 VRF
 {: #slaccountrequirement-vrf-se}
 
-{{site.data.keyword.cloud_notm}} 인프라 계정은 서비스 엔드포인트가 사용으로 설정된 VRF(Virtual Routing and Forwarding) 계정이어야 합니다. 사용자 계정이 비 VRF인 경우, VRF 계정으로 변환해야 합니다. 또한 서비스 엔드포인트를 사용하여 VRF 계정을 사용으로 설정해야 합니다. 
+{{site.data.keyword.cloud_notm}} 인프라 계정은 서비스 엔드포인트가 사용으로 설정된 VRF(Virtual Routing and Forwarding) 계정이어야 합니다. 사용자 계정이 비 VRF인 경우, VRF 계정으로 변환해야 합니다. 또한 서비스 엔드포인트를 사용하여 VRF 계정을 사용으로 설정해야 합니다.
 
 자세한 정보는 다음을 참조하십시오.
 * [IBM Cloud의 VRF 개요](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)

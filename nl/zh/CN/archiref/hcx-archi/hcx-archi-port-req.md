@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-15"
 
+subcollection: vmwaresolutions
+
+
 ---
 # VMware HCX on IBM Cloud 端口访问需求
 {: #hcx-archi-port-req}

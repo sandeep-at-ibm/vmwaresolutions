@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -27,10 +30,10 @@ lastupdated: "2019-03-12"
    1. 为浏览器安装 Adobe Flash Player 插件。   
    2. 在 {{site.data.keyword.slportal_full}} 中创建 VPN 密码。    
    3. 使用 {{site.data.keyword.cloud_notm}} 基础架构 VPN 凭证[登录到数据中心 VPN](/docs/infrastructure/iaas-vpn?topic=VPN-gettingstarted-with-virtual-private-networking#login-to-the-vpn)。    
-   4. 从本地计算机将 PSC (Platform Services Controller) 的 IP 地址和主机名映射添加到 hosts 文件中。使用以下格式：
+   4. 将 PSC (Platform Services Controller) 的 IP 地址和主机名映射添加到本地计算机的 `hosts` 文件中。使用以下格式：
 
       ```javascript
-      IPAddress              HostName
+      IP_Address              Host_Name
       ```
 
 2. 记下显示的 IP 地址，因为在接下来的某个步骤中需要使用该地址。

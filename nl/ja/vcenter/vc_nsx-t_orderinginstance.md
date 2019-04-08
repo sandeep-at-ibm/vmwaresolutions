@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-07"
+lastupdated: "2019-03-20"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -106,20 +109,6 @@ vCenter Server インスタンスを注文する際には、以下のシステ�
 | Dual Intel Xeon Gold 5120 Processor / 合計 28 コア、2.2 GHz | 128 GB、192 GB、384 GB、768 GB、1.5 TB |
 | Dual Intel Xeon Gold 6140 Processor / 合計 36 コア、2.3 GHz | 128 GB、192 GB、384 GB、768 GB、1.5 TB |
 
-### SAP 認定
-{: #vc_nsx-t_orderinginstance-sap}
-
-**「SAP 認定」**を選択した場合、CPU や RAM の設定は変更できません。
-
-要件に基づいて、以下のベア・メタル・サーバー構成を選択します。
-  * Dual Intel Xeon Gold 6140 プロセッサー / 合計 36 コア、2.3 GHz / 192 GB RAM
-  * Dual Intel Xeon Gold 6140 プロセッサー / 合計 36 コア、2.3 GHz / 384 GB RAM
-  * Dual Intel Xeon Gold 6140 プロセッサー / 合計 36 コア、2.3 GHz / 768 GB RAM
-  * Dual Intel Xeon E5-2690 v4 プロセッサー / 合計 28 コア、2.6 GHz / 512 GB RAM
-  * Quad Intel Xeon E7-8890 v4 プロセッサー / 合計 96 コア、2.2 GHz / 1024 GB RAM
-  * Quad Intel Xeon E7-8890 v4 プロセッサー / 合計 96 コア、2.2 GHz / 2048 GB RAM
-  * Quad Intel Xeon E7-8890 v4 プロセッサー / 合計 96 コア、2.2 GHz / 4096 GB RAM
-
 ### Broadwell
 {: #vc_nsx-t_orderinginstance-broadwell}
 
@@ -129,9 +118,6 @@ vCenter Server インスタンスを注文する際には、以下のシステ�
 
 | CPU モデル・オプション        | RAM オプション       |
 |:------------- |:------------- |
-| デュアル Intel Xeon E5-2620 v4 / 合計 16 コア、2.1 GHz | 128 GB、256 GB、512 GB、768 GB、1.5 TB |
-| デュアル Intel Xeon E5-2650 v4 / 合計 24 コア、2.2 GHz | 128 GB、256 GB、512 GB、768 GB、1.5 TB |
-| デュアル Intel Xeon E5-2690 v4 / 合計 28 コア、2.6 GHz | 128 GB、256 GB、512 GB、768 GB、1.5 TB |
 | クワッド Intel Xeon E7-4820 v4 / 合計 40 コア、2.0 GHz | 128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 | クワッド Intel Xeon E7-4850 v4 / 合計 64 コア、2.1 GHz | 128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 
@@ -147,7 +133,7 @@ vCenter Server インスタンスを注文する際には、以下のシステ�
 
 ストレージ設定は、選択したベア・メタル・サーバー構成とストレージ・タイプによって異なります。
 
-デプロイ済みインスタンスの場合、NFS ストレージ共有を既存の NFS クラスターまたは vSAN クラスターに追加できます。詳しくは、[vCenter Server インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers#adding-nfs-storage-to-vcenter-server-instances)の *vCenter Server インスタンスへの NFS ストレージの追加* のセクションを参照してください。
+デプロイ済みインスタンスの場合、NFS ストレージ共有を既存の NFS クラスターまたは vSAN クラスターに追加できます。 詳しくは、[vCenter Server インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers#adding-nfs-storage-to-vcenter-server-instances)の *vCenter Server インスタンスへの NFS ストレージの追加* のセクションを参照してください。
 {:note}
 
 ### vSAN ストレージ
@@ -186,13 +172,6 @@ vSAN は、**「Skylake」**と**「Broadwell」**のベアメタル構成での
   | 2 IOPS/GB | このオプションは、最も汎用的なワークロード用に設計されています。 例えば、小規模なデータベースのホスト、Web アプリケーションのバックアップ、ハイパーバイザーの仮想マシン・ディスク・イメージなどの用途があります。 |
   | 4 IOPS/GB | このオプションは、同時に高い割合のデータがアクティブになる高負荷のワークロード用に設計されています。 例えば、トランザクション・データベースなどの用途があります。 |
   | 10 IOPS/GB | このオプションは、分析などの最も要求の厳しいワークロード・タイプ用に設計されています。 例えば、トランザクションの多いデータベースやその他のパフォーマンス重視のデータベースなどの用途があります。 このパフォーマンス・レベルは、ファイル共有あたり最大 4 TB の容量に制限されています。 |
-
-### ローカル・ディスク
-{: #vc_nsx-t_orderinginstance-local-disks}
-
-ローカル・ディスク・オプションは、**SAP 認定**のクワッド Intel Xeon E7-8890 v4 プロセッサーのベアメタル構成でのみ使用できます。 以下のオプションを指定します。
-* **ディスク数 (Disk Count)**: 追加するディスクの数を選択します。
-* **ディスク・タイプ**: 必要なディスク・タイプのオプションを選択します。
 
 ## ネットワーク・インターフェースの設定
 {: #vc_nsx-t_orderinginstance-network-interface-settings}
@@ -301,15 +280,12 @@ Windows のライセンスについて詳しくは、[Windows Server 2012 R2 の
    *  所有しているライセンスを使用するには、**「自分で提供する」**を選択し、ライセンス・キーを入力します。
 7. ベア・メタル・サーバーの設定を次の手順で実行します。
     1. インスタンスをホストする {{site.data.keyword.CloudDataCent_notm}}を選択します。
-    2. ベア・メタル・サーバー構成を選択します。
-       * **「Skylake」**または**「Broadwell」**を選択した場合は、CPU モデルと RAM サイズを指定します。
-       * **「SAP 認定」**を選択した場合は、CPU モデルを選択します。
+    2. ベア・メタル・サーバー構成を選択し、CPU モデルと RAM サイズを指定します。
     3. {{site.data.keyword.baremetal_short}}の数を指定します。 vSAN をストレージ・ソリューションとして使用する場合は、4 台以上の{{site.data.keyword.baremetal_short}}が必要です。  
 8. ストレージ構成を次の手順で実行します。
   * **「vSAN Storage」**を選択した場合は、容量ディスクおよびキャッシュ・ディスクのディスク・タイプ、ディスク数、vSAN ライセンス・エディションを指定します。 さらにストレージが必要な場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。
   * **「NFS ストレージ」**を選択し、すべてのファイル共有に同じ設定を構成して追加する場合は、**「共有の数」**、**「パフォーマンス」**、**「サイズ (GB)」**を指定します。
   * **「NFS Storage」**を選択してファイル共有を個別に追加して構成する場合は、**「Configure shares individually」**を選択します。 その後、ファイル共有ごとに、**「共有ストレージの追加」**ラベルの横にある**「+」**アイコンをクリックして、**「パフォーマンス」**と**「サイズ (GB)」**を選択します。 少なくとも 1 つのファイル共有を選択する必要があります。
-  * **「ローカル・ディスク」**を選択した場合は、ディスク数とディスク・タイプを指定します。
 9. ネットワーク・インターフェースの設定を行います。
    1. ホスト名接頭部、サブドメイン・ラベル、ルート・ドメイン・ネームを入力します。 セカンダリー・インスタンスの場合、ドメイン・ネームは自動的に入力されます。
    2. **「パブリック・ネットワークとプライベート・ネットワーク (Public and Private Network)」**と**「プライベート・ネットワークのみ」**のいずれかのネットワーク設定を選択します。

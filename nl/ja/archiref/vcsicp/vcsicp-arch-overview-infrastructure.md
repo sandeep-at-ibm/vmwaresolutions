@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-01"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 
@@ -15,7 +18,7 @@ lastupdated: "2019-03-01"
 ## Virtual Routing and Forwarding
 {: #vcsicp-arch-overview-infrastructure-vrf}
 
-{{site.data.keyword.cloud}} アカウントを Virtual Routing and Forwarding (VRF) アカウントとして構成して、サブネット IP ブロック間の自動グローバル・ルーティングを有効にすることができます。Direct Link 接続を使用するアカウントはすべて、VRF アカウントに変換するか、VRF アカウントとして作成する必要があります。
+{{site.data.keyword.cloud}} アカウントを Virtual Routing and Forwarding (VRF) アカウントとして構成すると、サブネット IP ブロック間の自動グローバル・ルーティングが可能になります。Direct Link 接続を使用するアカウントはすべて、VRF アカウントに変換するか、VRF アカウントとして作成する必要があります。
 
 ## Direct Link
 {: #vcsicp-arch-overview-infrastructure-direct-link}

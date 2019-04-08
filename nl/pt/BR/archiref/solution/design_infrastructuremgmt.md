@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -15,47 +18,32 @@ lastupdated: "2019-02-15"
 # Design de gerenciamento de infraestrutura
 {: #design_infrastructuremgmt}
 
-O gerenciamento de infraestrutura se refere aos componentes que estão gerenciando a infraestrutura do VMware. Esse design usa uma única instância externa do Platform Services Controller (PSC) e uma única instância do vCenter Server:
-* O vCenter Server é a plataforma centralizada para gerenciar ambientes do vSphere e é um dos componentes fundamentais nessa solução.
+O gerenciamento de infraestrutura se refere aos componentes que estão gerenciando a infraestrutura do VMware.
+* O vCenter Server com um Platform Services Controller (PSC) integrado é a plataforma centralizada para gerenciar ambientes do vSphere e é um dos componentes fundamentais nessa solução.
 * O PSC é usado nesta solução para fornecer um conjunto de serviços de infraestrutura, que incluem o VMware vCenter Single Sign On, o serviço de licença, o serviço de consulta e a autoridade de certificação do VMware.
 
-As instâncias do PSC e as instâncias do vCenter Server são máquinas virtuais (MVs) separadas.
+Esse design usa uma função do PSC que é integrada a uma instância do vCenter Server. O PSC e o vCenter Server são alojados dentro da mesma máquina virtual (VM).
 
-## Design do PSC
-{: #design_infrastructuremgmt-psc}
-
-Esse design implementa um único PSC externo como um dispositivo virtual em uma sub-rede móvel na VLAN privada que está associada às MVs de gerenciamento. Seu gateway padrão é configurado para o Back-end Customer Router (BCR). O dispositivo virtual é configurado com as especificações na tabela a seguir.
-
-Esses valores são configurados no momento da implementação e não podem ser mudados.
-{:note}
-
-Tabela 1. Especificações do Platform Services Controller
-
-| Atributo                    | Especificação                  |
-|------------------------------|--------------------------------|
-| Platform Services Controller | Dispositivo Virtual              |
-| Número de vCPUs              | 2                              |
-| Memória                       | 4 GB                           |
-| Disco                         | 114 GB no armazenamento de dados VMFS local |
-| Tipo de disco                    | Thin provisioned               |
+Figura 1. Gerenciamento de infraestrutura</br>
+![Gerenciamento de infraestrutura](vcsv4radiagrams-ra-inframgmt.svg)
 
 O PSC localizado na instância primária é designado ao domínio de SSO padrão de `vsphere.local`.
 
 ## Design do vCenter Server
 {: #design_infrastructuremgmt-vcenter}
 
-O vCenter Server também é implementado como um dispositivo virtual. Além disso, o vCenter Server é instalado em uma sub-rede móvel na VLAN privada que está associada a MVs de gerenciamento. Seu gateway padrão é configurado para o endereço IP designado no BCR para essa sub-rede específica. O dispositivo virtual é configurado com as especificações na tabela a seguir.
+O vCenter Server com um PSC integrado é instalado em uma sub-rede móvel na VLAN privada que está associada a VMs de gerenciamento. Seu gateway padrão é configurado para o endereço IP designado no BCR para essa sub-rede específica. O dispositivo virtual é configurado com as especificações na tabela a seguir.
 
-Tabela 2. Especificações do vCenter Server Appliance
+Tabela 1. Especificações do vCenter Server Appliance
 
 | Atributo                    | Especificação                       |
 |------------------------------|-------------------------------------|
 | vCenter Server               | Dispositivo Virtual                   |
-| Tamanho da instalação do dispositivo  | Médio (até 400 hosts, 4.000 MVs) |
-| Platform Services Controller | Externo                            |
-| Número de vCPUs              | 8                                   |
-| Memória                       | 24 GB                               |
-| Disco                         | 400 GB no armazenamento de dados local           |
+| Tamanho da instalação do dispositivo  | Grande (até 1.000 hosts e 10.000 VMs) |
+| Platform Services Controller | Integrado                            |
+| Número de vCPUs              | 16                                   |
+| Memória                       | 32 GB                               |
+| Disco                         | 990 GB no armazenamento de dados local (Implementação de disco grande) |
 | Tipo de disco                    | Thin provisioned                    |
 
 ### Banco de dados do vCenter Server
@@ -86,55 +74,49 @@ Você será responsável por ajustar a política de controle de admissão quando
 
 Por padrão, a opção **Prioridade de reinicialização da VM** está configurada como média e a opção **Resposta de isolamento do host** está desativada. Além disso, o **Monitoramento de VM** está desativado e o recurso **Pulsação de armazenamento de dados** está configurado para incluir qualquer um dos armazenamentos de dados do cluster. Essa abordagem usará os armazenamentos de dados NAS se eles estiverem presentes.
 
-## Automação
-{: #design_infrastructuremgmt-automation}
+## Compatibilidade de vMotion aprimorada
+{: #design_infrastructuremgmt-evc}
 
-O elemento fundamental para essas soluções é a automação. A automação traz os benefícios a seguir:
-* Reduz a complexidade da implementação.
-* Drasticamente reduz o tempo de implementação.
-* Assegura que a instância do VMware seja implementada de maneira consistente.
+Para simplificar a compatibilidade do vMotion entre os nós do cluster com recursos potencialmente diferentes de CPU, o modo Enhanced vMotion Compatibility (EVC) é ativado em um nível do Skylake para assegurar a compatibilidade do vMotion entre os nós do cluster quando os processadores mais novos chegam dentro do inventário do {{site.data.keyword.cloud_notm}} e permite a expansão do cluster no futuro caso os servidores do processador Skylake não estejam no inventário.
 
-As MVs do {{site.data.keyword.IBM}} CloudBuilder, do IBM CloudDriver e do SDDC Manager trabalham juntas para iniciar uma nova instância do VMware e executar funções de gerenciamento de ciclo de vida.
+### IBM CloudDriver
+{: #design_infrastructuremgmt-cloud-driver}
 
-### IBM CloudBuilder e IBM CloudDriver
-{: #design_infrastructuremgmt-cloud-builder-driver}
+O fundamento dessas soluções é a automação. A automação reduz a complexidade da implementação, reduz drasticamente o tempo de implementação e assegura que a instância do VMware seja implementada de uma maneira consistente.
 
-O IBM CloudBuilder e o IBM CloudDriver Virtual Server Instance (VSI) são componentes desenvolvidos pela IBM que você não pode acessar.
-* O IBM CloudBuilder é uma Virtual Server Instance (VSI) provisória do {{site.data.keyword.cloud_notm}} que autoinicializa a implementação, a configuração e a validação dos componentes da solução dentro dos hosts ESXi bare metal provisionados.
-* O IBM CloudDriver VSI é implementado para criação de instância e então periodicamente, conforme necessário, com o código mais recente do {{site.data.keyword.cloud_notm}} for VMware para operações, como a implementação de mais nós, clusters ou serviços. O IBM CloudDriver se comunica com o console do {{site.data.keyword.vmwaresolutions_short}} por meio de um VMware NSX Edge Services Gateway, que é implementado exclusivamente para propósito de gerenciamento de instância e atua como um agente para manter a instância. O IBM CloudDriver é responsável por ações contínuas, como a adição de novos hosts bare metal ao cluster e a implementação de serviços de complemento para a instância. Para instâncias do Cloud Foundation, o IBM CloudDriver se comunica com a MV do VMware SDDC Manager para executar funções, como adição de host e correção.
+O IBM CloudBuilder é uma instância de servidor virtual (VSI) da VM do {{site.data.keyword.cloud_notm}} efêmera que
+funciona para criar uma nova instância do VMware e executar funções de gerenciamento de ciclo de vida. Ele é implementado quando o gerenciamento de instância do vCenter Server geral é necessário e é destruído quando o processo é concluído.
 
-É possível para o usuário excluir ou danificar as MVs descritas nas seções a seguir. Quando uma MV é removida, encerrada ou ela se torna inoperável, as operações a seguir do Cloud Foundation ou do vCenter Server no console do {{site.data.keyword.vmwaresolutions_short}} são interrompidas:
-* Visualizando o status da instância ou do host
-* Incluindo ou removendo clusters
-* Incluindo ou removendo hosts ESXi
-* Incluindo ou removendo serviços
-* Corrigindo
+O IBM CloudDriver pode ser configurado para se comunicar de volta com a infraestrutura de gerenciamento do {{site.data.keyword.vmwaresolutions_short}} por uma conexão de rede pública ou privada por meio do {{site.data.keyword.cloud_notm}} Object Storage como a fila de mensagens. O IBM CloudDriver é um componente desenvolvido pela IBM, não é acessível pelo usuário e tem os atributos e as funções a seguir:
 
-### SDDC Manager
-{: #design_infrastructuremgmt-sddc-manager}
-
-Para instâncias do Cloud Foundation, a MV do SDDC Manager é um componente que é desenvolvido e mantido pelo VMware. Ela permanece como parte da instância durante seu ciclo de vida inteiro. Ela é responsável pelas funções de ciclo de vida a seguir das instâncias:
-* Gerenciamento de componentes do VMware: vCenter Server, Platform Services Controller (PSC), vSAN e NSX, incluindo alocação de endereço IP e resolução do nome do host.
-* Expansão e retração de hosts ESXi dentro do cluster, que inclui qualquer serviço afetado, como NSX VTEP, vSAN e conjuntos de recursos.
-
-Para instâncias do vCenter Server, essas atividades são executadas pelo IBM CloudDriver, uma vez que não há nenhum SDDC Manager.
+- Implementação e configuração da instância do vCenter Server dentro da conta do usuário.
+- Inclusão e remoção de hosts dos clusters do vCenter Server.
+- Inclusão e remoção de clusters de instâncias do vCenter Server.
+- Inclusão e remoção de serviços ou funções complementares em instâncias do vCenter
+Server.
 
 ### Fluxo de automação
 {: #design_infrastructuremgmt-auto-flow}
 
-O procedimento a seguir descreve a ordem de eventos quando uma instância do VMware é solicitada por meio do console do {{site.data.keyword.vmwaresolutions_short}}:
-1.  Pedindo VLANs e sub-redes para rede do {{site.data.keyword.cloud_notm}}.
-2.  Pedindo o  {{site.data.keyword.baremetal_short}}  com o vSphere Hypervisor instalado.
-3.  Se aplicável, pedir o Microsoft Windows Virtual Server Instance (VSI) para servir como controlador de domínio do Active Directory.
-4.  Validação da rede e do hardware implementado.
-5.  Se aplicável, configuração inicial do vSAN de nó único.
-6.  Se aplicável, implementação e configuração de duas máquinas virtuais do Microsoft Windows para servir como controladores de domínio do Active Directory.
-7.  Implementação e configuração do vCenter, PSC e NSX.
-8.  Armazenamento em cluster de nós ESXi restantes, expansão de vSAN se aplicável e configuração de componentes NSX (VTEP).
-9.  Implementando a MV do VMware Cloud Foundation SDDC Manager, se aplicável, e o VSI do IBM CloudDriver.
-10.  Validando a instalação e a configuração do ambiente.
-11. Remoção do VSI do CloudBuilder.
-12. Implementação de serviços opcionais, como servidor de backup e armazenamento.
+O seguinte descreve a ordem de eventos quando você usa o console do {{site.data.keyword.vmwaresolutions_short}} para pedir uma instância do VMware:
+1. Pedindo VLANs e sub-redes para rede do {{site.data.keyword.cloud_notm}}.
+2. Pedindo o {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} com o vSphere Hypervisor instalado.
+3. Pedido da Microsoft Windows VSI para servir como controlador de domínio do Active Directory.
+4. Implementação da VSI do Driver de nuvem.
+5. Validação da rede e do hardware implementado.
+6. Se aplicável, a configuração inicial da vSAN de nó único.
+7. Implementação e configuração do vCenter (com o PSC integrado) e do NSX.
+8. Armazenamento em cluster de nós ESXi restantes, expansão de vSAN se aplicável e configuração de componentes NSX (VTEP).
+9. Validando a instalação e a configuração do ambiente.
+10. Implementação de serviços opcionais, como servidor de backup e armazenamento.
+11. Remoção da VSI do Driver de nuvem.
+
+## IDs e senhas
+{: #design_infrastructuremgmt-ids-pwd}
+
+A infraestrutura de gerenciamento do IC4V armazena todos os IDs e senhas contidos no vCenter Server criptografados dentro do plano de gerenciamento do {{site.data.keyword.cloud_notm}}. Qualquer mudança nessas senhas pelo usuário pode interromper os recursos de automação dentro do vCenter Server.
+
+É possível fornecer senhas mudadas no portal de soluções do IC4V para que a automação possa processar funções ininterruptas. O portal de soluções permite, opcionalmente, a verificação das senhas inseridas.
 
 ## Links relacionados
 {: #design_infrastructuremgmt-related}

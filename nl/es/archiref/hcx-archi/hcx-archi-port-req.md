@@ -6,13 +6,16 @@ copyright:
 
 lastupdated: "2019-02-15"
 
+subcollection: vmwaresolutions
+
+
 ---
 # Requisitos de acceso a puertos de HCX on IBM Cloud
 {: #hcx-archi-port-req}
 
 HCX debe cruzar internet público y líneas privadas, y conectar con los componentes del centro de datos, como redes, conmutadores y grupos de puertos.
 
-En la tabla siguiente encontrará los puertos que deben estar abiertos para que los dispositivos virtuales de Hybrid Cloud Services se puedan instalar correctamente. Tanto el entorno de vSphere como el entorno de IBM Cloud deben permitir la sincronización de reloj de Network Time Protocol (NTP) entre los dispositivos locales de vSphere y los dispositivos de IBM Cloud. El puerto UDP 123 debe resultar accesible para los dispositivos virtuales y las redes de Hybrid Cloud Services. Se pueden especificar servidores NTP instalados cuando se instalada el dispositivo Hybrid Cloud Services.
+En la tabla siguiente encontrará los puertos que deben estar abiertos para que los dispositivos virtuales de Hybrid Cloud Services se puedan instalar correctamente. Tanto el entorno de vSphere como el entorno de IBM Cloud deben permitir la sincronización de reloj de Network Time Protocol (NTP) entre los dispositivos locales de vSphere y los dispositivos de IBM Cloud. El puerto UDP 123 debe resultar accesible para los dispositivos virtuales y las redes de Hybrid Cloud Services. Se pueden especificar servidores NTP instalados cuando se instala el dispositivo Hybrid Cloud Services.
 
 Tabla 1. Requisitos de acceso a puertos
 

@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2017-10-13"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Notas sobre a liberação para V1.9

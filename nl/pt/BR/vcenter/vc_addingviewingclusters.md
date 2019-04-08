@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-18"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -241,7 +244,7 @@ Não é possível mudar o nome do cluster. Mudar o nome do cluster pode causar f
   * **Pod**: o pod no qual o cluster é implementado.
   * **Status**: o status do cluster. O status pode ter um dos valores a seguir:
     <dl class="dl">
-        <dt class="dt dlterm">Inicializando</dt>
+        <dt class="dt dlterm">Inicialização</dt>
         <dd class="dd">O cluster está sendo criado e configurado.</dd>
         <dt class="dt dlterm">Modificando</dt>
         <dd class="dd">O cluster está sendo modificado.</dd>
@@ -263,7 +266,7 @@ Tabela 4. Detalhes do servidor ESXi
 | Versão | A versão do servidor ESXi. |
 | Credenciais | O nome de usuário e a senha para acessar o servidor ESXi. |
 | IP privado | O endereço IP privado do servidor ESXi. |
-| Status | O status do servidor ESXi, que pode ser um dos valores a seguir:<br> **Incluído** o servidor do ESXi foi incluído e está pronto para uso.<br> **Incluindo** o servidor do ESXi está sendo incluído.<br> **Excluindo** o servidor do ESXi está sendo excluído. |
+| Barra de Status | O status do servidor ESXi, que pode ser um dos valores a seguir:<br> **Incluído** o servidor do ESXi foi incluído e está pronto para uso.<br> **Incluindo** o servidor do ESXi está sendo incluído.<br> **Excluindo** o servidor do ESXi está sendo excluído. |
 
 Tabela 5. Detalhes do armazenamento
 
@@ -279,26 +282,27 @@ Tabela 6. Interface de rede - detalhes da VLAN
 | Item        | Descrição       |  
 |:------------- |:------------- |
 | Número da VLAN | O número exclusivo da VLAN.  |
-| Descrição | O tipo de VLAN.  |
+| Descrição | A descrição da VLAN.  |
 | Localização | O local do data center. |
 | Rota primária | A rota primária da VLAN. |
+
+Clique em **Visualizar recurso** para acessar os detalhes da VLAN.
 
 Tabela 7. Interface de rede - detalhes de sub-rede
 
 | Item        | Descrição       |  
 |:------------- |:------------- |
-| Nome | O nome da sub-rede. Clique no nome para acessar os detalhes completos do endereço IP. |
+| Nome | O nome da sub-rede. Clique no nome para acessar os detalhes da sub-rede. |
 | Tipo | O tipo de sub-rede: primária ou móvel. |
-| Descrição | O propósito da sub-rede. |
+| Descrição | A descrição da sub-rede. |
 
 Tabela 8. Interface de rede - detalhes do IP
 
 | Item        | Descrição       |  
 |:------------- |:------------- |
 | IP | O endereço IP. |
-| Status | O status do endereço IP. |
-| Descrição |O host do endereço IP.  |
-
+| Barra de Status | O status do endereço IP. |
+| Descrição |A descrição do endereço IP.  |
 
 ## Excluindo os clusters de instâncias do vCenter Server
 {: #vc_addingviewingclusters-deleting}

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-03-22"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -43,12 +46,12 @@ L'infrastructure physique nécessaire pour déployer une instance de production 
 
 Tableau 1. Spécification vCenter Server for {{site.data.keyword.icpfull_notm}}
 
-| Déploiement NFS | Déploiement vSAN |
-:--|:----:|:----:
-Nombre de serveurs | 3 | 4
-UC | 28 coeurs 2,2 GHz | 28 coeurs 2,2 GHz
-Mémoire | 384 Go | 384 Go
-Stockage | 2000 GB 2IOPS/GB Management, Charge de travail 2000 GB 4IOPS/GB, 4000 GB 4IOPS/GB {{site.data.keyword.icpfull_notm}} | Min 960-GB SSD x 2
+| | Déploiement NFS | Déploiement vSAN |
+|:---------- |:---------- |:---------- |
+| Nombre de serveurs | 3 | 4 |
+| UC | 28 coeurs 2,2 GHz | 28 coeurs 2,2 GHz |
+| Mémoire | 384 Go | 384 Go |
+| Stockage | 2000 GoB 2IOPS/Go de gestion, 2000 Go 4IOPS/Go de charge de travail, 4000 Go 4IOPS/Go {{site.data.keyword.icpfull_notm}} | Au moins 2 unités SSD de 960Go |
 
 En plus de la configuration matérielle {{site.data.keyword.cloud_notm}} requise, vous devez créer des volumes persistants dans l'environnement {{site.data.keyword.icpfull_notm}} pour stocker les données de journal et la base de données Cloud Automation Manager (CAM). CAM prend en charge tous les types de volume persistant pris en charge par {{site.data.keyword.icpfull_notm}}, mais les deux configurations de stockage recommandées pour CAM sont NFS et GlusterFS.
 

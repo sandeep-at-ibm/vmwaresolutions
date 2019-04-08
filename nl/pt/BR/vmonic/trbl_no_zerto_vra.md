@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-14"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Os Zerto Virtual Replication Appliances não são exibidos para servidores ESXi recém-criados.

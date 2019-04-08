@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2018-10-01"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # V2.6의 릴리스 정보

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -40,7 +43,7 @@ Outre les réseaux publics et privés, chaque serveur {{site.data.keyword.cloud_
 * Les adresses IP principales sont affectées aux unités, aux serveurs bare metal et aux serveurs virtuels qui sont mis à disposition par {{site.data.keyword.cloud_notm}}. Les utilisateurs ne doivent pas affecter d'adresses IP dans ces blocs.
 * Des adresses IP portables sont fournies à l'utilisateur et il peut les affecter et les gérer en fonction de ses besoins.
 
-Les adresses IP principales ou portables peuvent devenir routables vers n'importe quel VLAN au sein du compte client si celui-ci est configuré en tant que compte VRF (Virtual Routing and Forwarding). 
+Les adresses IP principales ou portables peuvent devenir routables vers n'importe quel VLAN au sein du compte client si celui-ci est configuré en tant que compte VRF (Virtual Routing and Forwarding).
 
 ## Virtual Routing and Forwarding (VRF)
 {: #vcsnsxt-overview-ic4vnetwork-vrf}
@@ -53,6 +56,7 @@ Les comptes {{site.data.keyword.cloud_notm}} peuvent également être configuré
 Chaque hôte physique de la conception possède deux paires redondantes de connexions Ethernet 10 Gbps dans chaque commutateur {{site.data.keyword.cloud_notm}} de niveau supérieur (ToR) (public et privé). Les adaptateurs sont configurés comme des connexions individuelles (non liées) pour un total de 4 connexions 10 Gbps. Cela permet à chacune des connexions NIC de mise en réseau de fonctionner indépendamment des autres.
 
 Figure 2. Connexions hôte physiques
+</br>
 ![Connexions hôte physique](vcsnsxt-host-connections.svg)
 
 ## Réseaux locaux virtuels

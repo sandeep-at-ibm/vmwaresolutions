@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -14,7 +17,7 @@ lastupdated: "2019-02-15"
 ## Direccionamiento virtual y reenvío
 {: #vcsiks-arch-overview-infrastructure-vrf}
 
-Las cuentas de {{site.data.keyword.cloud}} también se pueden configurar como cuentas de direccionamiento virtual y reenvío (VRF). Las cuentas VRF proporcionan funciones similares a la expansión de VLAN, que permite el direccionamiento automático entre bloques IP de subred. Todas las cuentas con las conexiones de Direct-Link deben convertirse a, o crearse como, una cuenta de VRF.
+Las cuentas de {{site.data.keyword.cloud}} se pueden configurar como cuentas de direccionamiento virtual y reenvío (VRF). Las cuentas VRF habilitan el direccionamiento global automático entre bloques de IP de subred. Todas las cuentas con las conexiones de Direct-Link deben convertirse a, o crearse como, una cuenta de VRF.
 
 ## Direct Link
 {: #vcsiks-arch-overview-infrastructure-direct-link}
@@ -127,7 +130,7 @@ Disco	| 1000 GB en almacén de datos local
 ## Componentes del servicio IBM Cloud Kubernetes
 {: #vcsiks-arch-overview-infrastructure-iks-comp}
 
-Figura 3. Componentes de {{site.data.keyword.containerlong_notm}}
+Figura 3. Componentes de {{site.data.keyword.containerlong_notm}}</br>
 ![Diagrama de componentes de {{site.data.keyword.containerlong_notm}}](vcsiks-iks-components.svg)
 
 ### Kubernetes maestro

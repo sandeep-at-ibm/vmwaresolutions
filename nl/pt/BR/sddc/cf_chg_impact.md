@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-22"
+lastupdated: "2019-03-14"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -60,7 +63,6 @@ Tabela 2. Operações que são impactadas pelo SSH e acesso de shell (local)
 | Mudança tentada  | Operações afetadas  | Severidade  | Método de recuperação  |
 |:------------- |:------------- |:--------------|:--------------|
 | Desative o SSH ou o acesso de shell para o vCenter Server ou o PSC.    | O emparelhamento de uma instância primária e secundária pode falhar. A aplicação de correções nos recursos pode falhar.    | Importante    | N/A    |
-| Desative o SSH ou o acesso de shell para ESXi.    | A inclusão e a remoção de hosts, serviços e armazenamento de rede na instância podem falhar. A aplicação de correções nos recursos pode falhar.    | Importante    | N/A    |
 
 Se você escolher desativar o SSH ou o acesso de shell, deverá reativá-lo temporariamente antes de executar as operações indicadas.
 

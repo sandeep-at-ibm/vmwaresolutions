@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-25"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -18,7 +21,7 @@ lastupdated: "2019-02-14"
 
 コンソールに直接アクセスするには、以下の手順を実行します。
 1. 次の URL にアクセスします。
-   https://console.cloud.ibm.com/infrastructure/vmware-solutions/console.
+   https://cloud.ibm.com/infrastructure/vmware-solutions/console.
 2. **IBM ID** アカウントでコンソールにログインします。
 
 ## IBM Cloud カタログからアクセスする

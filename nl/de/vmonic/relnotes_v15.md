@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2017-03-30"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Releaseinformationen für V1.5
@@ -34,5 +37,5 @@ Für Cloud Foundation-Instanztypen wird eine neue Lizenz des Typs _SDDC Manager_
 
 In der gesamten Benutzerschnittstelle wurden Verbesserungen vorgenommen:
 
-* In der Benutzerschnittstelle ist eindeutig angegeben, welche {{site.data.keyword.CloudDataCents_notm}} verfügbar sind und ob der Bestand in diesen Rechenzentren zur Erfüllung der Bestellung ausreicht. Verwenden Sie diese Details, um während der Instanzbestellung eine fundierte Entscheidung über das auszuwählende {{site.data.keyword.CloudDataCent_notm}} treffen zu können. Weitere Informationen finden Sie unter [Voraussetzungen und Planung für vCenter Server-Instanzen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning). 
+* In der Benutzerschnittstelle ist eindeutig angegeben, welche {{site.data.keyword.CloudDataCents_notm}} verfügbar sind und ob der Bestand in diesen Rechenzentren zur Erfüllung der Bestellung ausreicht. Verwenden Sie diese Details, um während der Instanzbestellung eine fundierte Entscheidung über das auszuwählende {{site.data.keyword.CloudDataCent_notm}} treffen zu können. Weitere Informationen finden Sie unter [Voraussetzungen und Planung für vCenter Server-Instanzen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning).
 * Für Cloud Foundation-Instanzen werden Informationen wie der Instanzname, der Domänen- und Unterdomänenname sowie der Standort des Rechenzentrums automatisch im Grafikformat angezeigt, während Sie die erforderlichen Informationen in die Eingabefelder eingeben.

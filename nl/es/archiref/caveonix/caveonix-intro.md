@@ -4,14 +4,19 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
+
+subcollection: vmwaresolutions
+
 
 ---
 
 # Caveonix RiskForesight
 {: #caveonix-intro}
 
-Las empresas que están realizando una transformación digital adoptan una estrategia de nube híbrida, que incluye cargas de trabajo tanto en la nube privada como en múltiples entornos de nube externos, concretamente, la nube pública o una nube gestionada por un proveedor de servicios. La mayoría de las empresas también afrontan el reto que supone proteger una superficie de ataque cada vez mayor y al mismo tiempo mantener la conformidad con los requisitos de cumplimiento normativo y sectorial. A fin de proteger esta superficie de ataque en expansión, las empresas necesitan visibilidad continua sobre las cargas de trabajo desde el momento en que se ejecutan y hasta su cierre. Para ello, las empresas deben mantener un conocimiento total de las vulnerabilidades de las cargas de trabajo y los problemas de configuración a nivel de infraestructura, plataforma y aplicaciones en el contexto de las amenazas y los requisitos de conformidad. Las empresas necesitan aplicar analítica predictiva para “conectar los puntos” y obtener así una vista proactiva del grado de exposición al riesgo en torno a la conformidad y la ciberseguridad en este nuevo mundo híbrido de grandes magnitudes.
+Las empresas que están realizando una transformación digital adoptan una estrategia de nube híbrida, que incluye cargas de trabajo tanto en la nube privada como en múltiples entornos de nube externos, concretamente, la nube pública o una nube gestionada por un proveedor de servicios. La mayoría de las empresas también afrontan el reto que supone proteger una superficie de ataque cada vez mayor y al mismo tiempo mantener la conformidad con los requisitos de cumplimiento normativo y sectorial.
+
+A fin de proteger esta superficie de ataque en expansión, las empresas necesitan visibilidad continua sobre las cargas de trabajo desde el principio hasta el final de su ciclo de vida. Para ello, las empresas deben mantener un conocimiento total de las vulnerabilidades de las cargas de trabajo y los problemas de configuración a nivel de infraestructura, plataforma y aplicaciones en el contexto de las amenazas y los requisitos de conformidad. Las empresas necesitan aplicar analítica predictiva para “conectar los puntos” y obtener así una vista proactiva del grado de exposición al riesgo en torno a la conformidad y la ciberseguridad en este nuevo mundo híbrido de grandes magnitudes.
 
 Caveonix RiskForesight proporciona una protección proactiva para las cargas de trabajo ante los riesgos causados por ciberamenazas y problemas de conformidad con la normativa. Ofrece visibilidad en tiempo real sobre lo que se ejecuta en la nube híbrida de una empresa mediante la integración nativa en las plataformas de orquestación de nube. Al combinar esta visibilidad con los modelos de reducción de riesgos y las acciones de imposición automatizables, RiskForesight desarrolla rápidamente una lista de acciones priorizadas para mitigar riesgos. RiskForesight es una plataforma de protección de cargas de trabajo de nube híbrida basada en el modelo multiarrendatario que implementa una infraestructura de gestión de riesgos proactiva capaz de operar en varios planos de control; red, cálculo, seguridad y conformidad, además de automatizar la implementación de la infraestructura a escala de la nube.
 
@@ -47,7 +52,7 @@ Los tres servicios principales disponibles a través de la GUI de RiskForesight 
 -	Visualización gráfica de los resultados
 -	Agregación de datos de diversos orígenes
 -	Analítica basada en sucesos
--	Capacidad para obtener información detallada para el análisis basado en sucesos/registros
+-	Capacidad para obtener información detallada para el análisis basado en registros y sucesos
 -	Alertas y notificaciones
 
 ## Enlaces relacionados

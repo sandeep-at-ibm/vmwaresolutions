@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-14"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -22,7 +25,7 @@ Componentes de solução diferentes requerem estratégias diferentes para backup
 ## Servidor de arquivo para backup baseado em arquivo
 {: #solution_backingup-fileserver-backup}
 
-Alguns componentes, como o VMware vCenter Server, o Platform Services Controller (PSC) e o VMware NSX, requerem que a sua configuração seja submetida a backup em um servidor de arquivos.
+Alguns componentes, como o VMware vCenter Server com um Platform Services Controller (PSC) integrado e o VMware NSX, requerem que a sua configuração seja submetida a backup para um servidor de arquivos.
 
 Para hospedar esses backups, implemente um servidor de arquivos Linux em seu cluster usando as etapas a seguir:
 
@@ -35,7 +38,7 @@ Para hospedar esses backups, implemente um servidor de arquivos Linux em seu clu
 ## Backup baseado em arquivo do vCenter
 {: #solution_backingup-vcenter}
 
-O VMware vCenter Server e o PSC fornecem uma [interface com o usuário de gerenciamento de dispositivo e API para exportar o banco de dados e a configuração para um servidor de arquivos](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.install.doc/GUID-3EAED005-B0A3-40CF-B40D-85AD247D7EA4.html){:new_window} usando vários protocolos. O VMware documenta um exemplo de como é possível configurar isso para [ ser executado periodicamente como uma tarefa cron](https://pubs.vmware.com/vsphere-6-5/index.jsp?topic=%2Fcom.vmware.vsphere.vcsapg-rest.doc%2FGUID-222400F3-678E-4028-874F-1F83036D2E85.html){:new_window} diretamente no vCenter Server Appliance e no PSC, que você pode adaptar para seu uso.
+O VMware vCenter Server com o PSC integrado fornece uma interface com o usuário de gerenciamento de dispositivo do [ e a API para exportar o banco de dados e a configuração para um servidor de arquivos ](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.install.doc/GUID-3EAED005-B0A3-40CF-B40D-85AD247D7EA4.html){:new_window} usando vários protocolos. O VMware documenta um exemplo de como é possível configurar isso para [ ser executado periodicamente como uma tarefa cron](https://pubs.vmware.com/vsphere-6-5/index.jsp?topic=%2Fcom.vmware.vsphere.vcsapg-rest.doc%2FGUID-222400F3-678E-4028-874F-1F83036D2E85.html){:new_window} diretamente no vCenter Server Appliance e no PSC, que você pode adaptar para seu uso.
 
 Se você tiver um PSC externo, deverá fazer backup do vCenter Server Appliance e do PSC separadamente usando essa
 técnica. Se você tiver um PSC integrado, o backup do PSC será incluído no backup do vCenter. Familiarize-se e planeje as considerações e limitações documentadas pelo VMware. Além disso, planeje uma rotação e expiração regulares dos backups de arquivos em seu servidor de arquivos.
@@ -83,8 +86,7 @@ A partir do VMware vCenter 6.5u2, o VMware suporta o backup do banco de dados Po
 Há várias considerações especiais ao restaurar os backups de gerenciamento:
 
 * Para vCenter e PSC, o VMware fornece um instalador que pode implementar um novo dispositivo virtual e restaurar a configuração por meio de backup.
-* Quando você restaura um dispositivo do backup, o instalador detecta o tipo de dispositivo (vCenter Server, PSC
-ou vCenter com o PSC integrado) com base nas informações de backup que você fornece.
+* Quando você restaura um dispositivo por meio do backup, o instalador detecta o tipo de dispositivo (vCenter Server com o PSC integrado) com base nas informações de backup que você fornece.
 * Como você implementa diretamente em um de seus hosts, talvez não seja capaz de implementar em um comutador ou grupo de portas distribuído. Talvez seja necessário criar um comutador padrão temporário e um grupo de portas para implementar os dispositivos recuperados e migrar um de seus vmnics temporariamente para esse comutador para fornecer conectividade de rede para suas MVs. Após a implementação, é possível migrar as MVs para o grupo de portas distribuído e retornar o vmnic para o dvSwitch.
 * Para o NSX, talvez seja necessário reimplementar o NSX Manager e os controladores antes de restaurar a configuração por meio de backup.
 * Assegure-se de familiarizar-se com as considerações e limitações do VMware para backup e restauração do vCenter.

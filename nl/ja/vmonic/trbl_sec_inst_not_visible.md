@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-14"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # vSphere Web Client のインベントリーにセカンダリー vCenter Server システムが表示されない

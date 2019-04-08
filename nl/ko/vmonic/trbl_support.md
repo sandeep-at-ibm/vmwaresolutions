@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-25"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -20,7 +23,7 @@ lastupdated: "2019-02-14"
 ## IBM Cloud for VMware Solutions 콘솔에서 지원 티켓을 제출하는 프로시저
 {: #trbl_support-procedure}
 
-1. https://console.cloud.ibm.com/infrastructure/vmware-solutions/console로 이동하십시오.
+1. https://cloud.ibm.com/infrastructure/vmware-solutions/console로 이동하십시오.
 2. **IBM ID** 계정으로 콘솔에 로그인하십시오.
 3. 메뉴 표시줄에서 **지원**을 클릭하십시오.
 4. **지원 받기** 페이지에서 **사례 작성**을 클릭하십시오.

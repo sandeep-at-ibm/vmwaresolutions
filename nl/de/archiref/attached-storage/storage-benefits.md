@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-13"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Informationen zum angehängten Speicher für vCenter Server

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-03-22"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -50,7 +53,7 @@ vCenter Server with NSX-T 인스턴스에 클러스터를 추가할 때는 다�
 ### Bare Metal Server 설정
 {: #vc_nsx-t_addingviewingclusters-bare-metal-settings}
 
-**Skylake**, **SAP 인증** 또는 **Broadwell**을 선택할 수 있습니다.
+**Skylake** 또는 **Broadwell**을 선택할 수 있습니다.
 
 #### Skylake
 {: #vc_nsx-t_addingviewingclusters-adding-skylake}
@@ -65,20 +68,6 @@ vCenter Server with NSX-T 인스턴스에 클러스터를 추가할 때는 다�
 |듀얼 Intel Xeon Gold 5120 프로세서 / 총 28개의 코어, 2.2GHz | 128GB, 192GB, 384GB, 768GB, 1.5TB |
 |듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개의 코어, 2.3GHz | 128GB, 192GB, 384GB, 768GB, 1.5TB |
 
-#### SAP 인증
-{: #vc_nsx-t_addingviewingclusters-adding-sap}
-
-**SAP 인증**을 선택하는 경우 CPU 또는 RAM 설정을 변경할 수 없습니다.
-
-자신의 요구사항에 따라 Bare Metal Server 구성을 선택하십시오.
-* 듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개 코어, 2.3GHz / 192GB RAM
-* 듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개 코어, 2.3GHz / 384GB RAM
-* 듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개 코어, 2.3GHz / 768GB RAM
-* 듀얼 Intel Xeon E5-2690 v4 프로세서 / 총 28개의 코어, 2.6GHz / 512GB RAM
-* 쿼드 Intel Xeon E7-8890 v4 프로세서 / 총 96개의 코어, 2.2GHz / 1024GB RAM
-* 쿼드 Intel Xeon E7-8890 v4 프로세서 / 총 96개의 코어, 2.2GHz / 2048GB RAM
-* 쿼드 Intel Xeon E7-8890 v4 프로세서 / 총 96개의 코어, 2.2GHz / 4096GB RAM
-
 #### Broadwell
 {: #vc_nsx-t_addingviewingclusters-adding-broadwell}
 
@@ -88,9 +77,6 @@ vCenter Server with NSX-T 인스턴스에 클러스터를 추가할 때는 다�
 
 | CPU 모델 옵션        |RAM 옵션       |
 |:------------- |:------------- |
-| 듀얼 Intel Xeon E5-2620 v4 / 총 16개의 코어, 2.1GHz |128GB, 256GB, 512GB, 768GB, 1.5TB |
-| 듀얼 Intel Xeon E5-2650 v4 / 총 24개의 코어, 2.2GHz |128GB, 256GB, 512GB, 768GB, 1.5TB |
-| 듀얼 Intel Xeon E5-2690 v4 / 총 28개의 코어, 2.6GHz |128GB, 256GB, 512GB, 768GB, 1.5TB |
 | 쿼드 Intel Xeon E7-4820 v4 / 총 40개의 코어, 1.9GHz |128GB, 256GB, 512GB, 1TB, 2TB, 3TB |
 | 쿼드 Intel Xeon E7-4850 v4 / 총 64개의 코어, 2.2GHz |128GB, 256GB, 512GB, 1TB, 2TB, 3TB |
 
@@ -147,13 +133,6 @@ vCenter Server with NSX-T 인스턴스에 클러스터를 추가할 때는 다�
   |4IOPS/GB |이 옵션은 동시에 활성 데이터의 높은 백분율을 보유한 고강도 워크로드를 위해 설계되었습니다. 애플리케이션 예로 트랜잭션 데이터베이스가 있습니다. |
   |10IOPS/GB |이 옵션은 분석과 같이 가장 처리가 어려운 워크로드 유형을 위해 설계되었습니다. 애플리케이션 예로 높은 트랜잭션 데이터베이스 및 기타 성능에 민감한 데이터베이스가 있습니다. 이 성능 레벨은 파일 공유당 4TB의 최대 용량으로 제한됩니다. |
 
-### 로컬 디스크
-{: #vc_nsx-t_addingviewingclusters-adding-local-disks}
-
-로컬 디스크 옵션은 **SAP 인증** 쿼드 Intel Xeon E7-8890 v4 프로세서 베어메탈 구성에만 사용할 수 있습니다. 다음 옵션을 지정하십시오.
-* **디스크 수**: 추가할 용량 디스크 수를 선택하십시오.
-* **디스크 유형**: 필요한 디스크 유형에 대한 옵션을 선택하십시오.
-
 ### 라이센스 부여 설정
 {: #vc_nsx-t_addingviewingclusters-adding-licensing-settings}
 
@@ -164,7 +143,7 @@ vCenter Server with NSX-T 인스턴스에 클러스터를 추가할 때는 다�
 ### 네트워크 인터페이스 설정
 {: #vc_nsx-t_addingviewingclusters-adding-network-interface-settings}
 
-네트워크 인터페이스 카드(NIC) 인에이블먼트 설정은 **공용 및 사설 네트워크** 또는 **사설 네트워크 전용** 중 사용자의 선택을 기반으로 합니다. 
+네트워크 인터페이스 카드(NIC) 인에이블먼트 설정은 **공용 및 사설 네트워크** 또는 **사설 네트워크 전용** 중 사용자의 선택을 기반으로 합니다.
 
 ### 주문 요약
 {: #vc_nsx-t_addingviewingclusters-adding-order-summary}
@@ -182,14 +161,11 @@ vCenter Server with NSX-T 인스턴스에 클러스터를 추가할 때는 다�
 3. 왼쪽 탐색 분할창의 **인프라**를 클릭하고 **클러스터** 테이블의 오른쪽 상단 모서리에 있는 **추가**를 클릭하십시오.
 4. **클러스터 추가** 페이지에서 인스턴스 이름을 입력하십시오.
 5. 인스턴스가 호스팅되는 {{site.data.keyword.CloudDataCent_notm}}와 다른 IBM Cloud Data Center에서 클러스터를 호스팅하려면 **Bare Metal Server**에서 **다른 위치 선택** 선택란을 선택하고 인스턴스를 호스팅할 {{site.data.keyword.CloudDataCent_notm}}를 선택하십시오.
-6. 베어메탈 구성을 완료하십시오.
-   * **Skylake** 또는 **Broadwell**을 선택한 경우 **CPU 모델**, **RAM** 크기 및 **{{site.data.keyword.baremetal_short}} 수**를 지정하십시오.
-   * **SAP 인증**을 선택한 경우 CPU 모델을 지정하십시오.
+6. 베어메탈 구성을 완료하십시오. **CPU 모델**, **RAM**의 양 및 **{{site.data.keyword.baremetal_short}} 수**를 지정하십시오.
 7. 스토리지 구성을 완료하십시오.
   * **vSAN 스토리지**를 선택하는 경우 용량 및 캐시 디스크의 디스크 유형과 디스크 수 및 vSAN License 에디션을 지정하십시오. 더 많은 스토리지를 원하는 경우 **고성능 Intel Optane** 상자를 선택하십시오.
   * **NFS 스토리지**를 선택하고 모든 파일 공유에 동일한 설정을 추가하여 구성하려는 경우에는 **공유 수**, **성능** 및 **크기(GB)**를 지정하십시오.
   * **NFS 스토리지**를 선택하고 개별적으로 파일 공유를 추가하고 구성하려는 경우에는 **개별 공유 구성**을 선택하십시오. 그런 다음, **공유 스토리지 추가** 레이블 옆에 있는 **+** 아이콘을 클릭하고 각 파일 공유에 대해 **성능** 및 **크기(GB)**를 선택하십시오. 하나 이상의 파일 공유를 선택해야 합니다.
-  * **로컬 디스크**를 선택하는 경우 디스크 수와 디스크 유형을 지정하십시오.
 8. 네트워크 인터페이스 설정을 완료하십시오.
 8. vSphere 라이센스 키의 제공 방법을 지정하십시오.
   * 비즈니스 파트너 사용자의 경우, vSphere 라이센스(Enterprise Plus 에디션)가 사용자를 대신하여 포함 및 구매됩니다.
@@ -259,6 +235,33 @@ vCenter Server with NSX-T 인스턴스에 클러스터를 추가할 때는 다�
 |크기 |스토리지의 용량입니다. |
 |IOPS/GB |스토리지의 성능 레벨입니다. |
 |NFS 프로토콜 |스토리지의 NFS 버전입니다. |
+
+표 6. 네트워크 인터페이스 - VLAN 세부사항
+
+| 항목        | 설명       |  
+|:------------- |:------------- |
+| VLAN 번호 | 고유한 VLAN 번호입니다.  |
+| 설명 | VLAN의 설명입니다. |
+| 위치 | 데이터 센터 위치입니다. |
+| 기본 라우트 | VLAN의 기본 라우트입니다. |
+
+VLAN 세부사항에 액세스하려면 **리소스 보기**를 클릭하십시오. 
+
+표 7. 네트워크 인터페이스 - 서브넷 세부사항
+
+|항목        |설명       |  
+|:------------- |:------------- |
+|이름 | 서브넷 이름입니다. 서브넷 세부사항에 액세스하려면 이름을 클릭하십시오. |
+|유형 | 서브넷의 유형: 기본 또는 포터블. |
+|설명 | 서브넷의 설명입니다. |
+
+표 8. 네트워크 인터페이스 - IP 세부사항
+
+|항목        |설명       |  
+|:------------- |:------------- |
+| IP | IP 주소입니다. |
+|상태 | IP 주소의 상태입니다. |
+|설명 | IP 주소의 설명입니다. |
 
 ## vCenter Server with NSX-T 인스턴스에서 클러스터 삭제
 {: #vc_nsx-t_addingviewingclusters-deleting}

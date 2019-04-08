@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-04"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -15,7 +18,7 @@ lastupdated: "2019-03-04"
 # Mise à l'échelle de clusters vSphere existants
 {: #vs_scalingexistingclusters}
 
-Vous pouvez mettre à l'échelle un cluster VMware vSphere existant commandé ou sauvegardé dans la console {{site.data.keyword.vmwaresolutions_full}}. Pour ce faire, ajoutez des serveurs ESXi ou commandez une paire de dispositifs FortiGate Security Appliance série 300 à haute disponibilité pour le cluster.
+Vous pouvez, dans la console {{site.data.keyword.vmwaresolutions_full}}, mettre à l'échelle un cluster VMware vSphere existant que vous avez commandé ou sauvegardé. Pour ce faire, ajoutez des serveurs ESXi ou commandez une paire de dispositifs FortiGate Security Appliance série 300 à haute disponibilité pour le cluster.
 
 ## Conditions requises
 {: #vs_scalingexistingclusters-req}
@@ -45,7 +48,8 @@ La mise à l'échelle du cluster démarre automatiquement. Une conformation par 
 
 Si le cluster que vous mettez à l'échelle n'est pas prêt à être utilisé, il se peut qu'un message d'erreur s'affiche.
 
-Contrairement aux instances vCenter Server et Cloud Foundation, les clusters vSphere ne s'affichent pas sur la page **Ressources**.{:note}
+Contrairement aux instances vCenter Server et Cloud Foundation, les clusters vSphere ne s'affichent pas sur la page **Ressources**.
+{:note}
 
 ## Liens connexes
 {: #vs_scalingexistingclusters-related}

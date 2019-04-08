@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -14,7 +17,7 @@ lastupdated: "2019-03-01"
 ## Virtual Routing and Forwarding
 {: #vcsiks-arch-overview-infrastructure-vrf}
 
-{{site.data.keyword.cloud}} アカウントは、Virtual Routing and Forwarding (VRF) アカウントとして構成することができます。 VRF アカウントにより、サブネット IP ブロック間の自動グローバル・ルーティングが有効になります。Direct Link 接続を使用するアカウントはすべて、VRF アカウントに変換するか、VRF アカウントとして作成する必要があります。
+{{site.data.keyword.cloud}} アカウントは、Virtual Routing and Forwarding (VRF) アカウントとして構成することができます。 VRF アカウントを使用すると、サブネット IP ブロック間の自動グローバル・ルーティングが可能になります。Direct Link 接続を使用するアカウントはすべて、VRF アカウントに変換するか、VRF アカウントとして作成する必要があります。
 
 ## Direct Link
 {: #vcsiks-arch-overview-infrastructure-direct-link}
@@ -130,6 +133,7 @@ Edge サイズ「コンパクト」 | vCPU 数	1
 {: #vcsiks-arch-overview-infrastructure-iks-comp}
 
 図 3. {{site.data.keyword.containerlong_notm}} コンポーネント
+</br>
 ![{{site.data.keyword.containerlong_notm}} コンポーネントの図](vcsiks-iks-components.svg)
 
 ### Kubernetes マスター

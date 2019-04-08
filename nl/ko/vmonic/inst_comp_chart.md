@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-12"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # 오퍼링 비교 차트
@@ -39,7 +42,7 @@ VMware vCenter Server 인스턴스, VMware vCenter Server with Hybridity Bundle 
 
 <sup>1</sup> 유효성 검증된 디자인에 따라 그리고 배치 중에 확인하여.
 
-<sup>2</sup> Hybridity 인스턴스 및 클러스터가 포함된 새 vCenter Server용으로만 vSAN을 사용하십시오. 배치 후에는 NFS 스토리지를 추가할 수 있습니다. 
+<sup>2</sup> Hybridity 인스턴스 및 클러스터가 포함된 새 vCenter Server용으로만 vSAN을 사용하십시오. 배치 후에는 NFS 스토리지를 추가할 수 있습니다.
 
 <sup>3</sup> vSAN 클러스터에서 최대 64개까지 ESXi 서버 수를 늘릴 수 있습니다. 자세한 정보는 [ESXi 서버에 대한 FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_esxi)의 _몇 개의 ESXi 서버를 클러스터에 추가할 수 있습니까?_를 참조하십시오.
 

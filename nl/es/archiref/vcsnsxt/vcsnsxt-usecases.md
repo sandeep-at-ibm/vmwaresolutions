@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -51,7 +54,7 @@ Mediante la automatización de {{site.data.keyword.cloud_notm}}, Acme Skateboard
 
 Para obtener más información sobre NSX-V, consulte [Visión general de NSX-V](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv). Para obtener más información sobre las ofertas vCenter e {{site.data.keyword.icpfull_notm}}, consulte [vCenter Server e {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro).
 
-Figura 2. vCenter Server con {{site.data.keyword.icpfull_notm}}
+Figura 2. vCenter Server con {{site.data.keyword.icpfull_notm}}</br>
 ![vCenter Server con {{site.data.keyword.icpfull_notm}}](vcsnsxt-nsxvhl.svg)
 
 Esto crea una interconectividad ligeramente acoplada entre un entorno local e {{site.data.keyword.cloud_notm}} y ofrece prestaciones como las siguientes:
@@ -65,7 +68,8 @@ Esto crea una interconectividad ligeramente acoplada entre un entorno local e {{
 -	**Migración planificada**: se puede replicar el número deseado de VM en el sitio de destino y luego se pueden activar en dicho sitio en el momento planificado para que sustituyan a los sistemas que se ejecutan en el sitio de origen.
 -	**Migración de políticas de seguridad**: si NSX se utiliza en local, las políticas de seguridad, los cortafuegos, etc., se trasladan junto con la carga de trabajo.
 
-Con esta solución, Acme Skateboards ha podido migrar correctamente sus cargas de trabajo locales de VMware a {{site.data.keyword.cloud_notm}}, cumpliendo con los requisitos de tiempo de inactividad bajo y sin tener que volver a configurar las aplicaciones. Para obtener más información sobre vCenter Server con el paquete híbrido (Hybridity), consulte [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf).
+Con esta solución, Acme Skateboards ha podido migrar correctamente sus cargas de trabajo locales de VMware a {{site.data.keyword.cloud_notm}}, cumpliendo con los requisitos de tiempo de inactividad bajo y sin tener que volver a configurar las aplicaciones. Para obtener más información sobre vCenter Server con Hybridity Bundle, consulte
+[Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro).
 
 ## Enlaces relacionados
 {: #vcsnsxt-usecases-related}

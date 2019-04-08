@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-13"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -33,9 +36,7 @@ vSAN 加密在資料儲存庫層次操作，因此其主要目標是在遺失實
 * vSAN 加密未加密您叢集內的主機到主機 vSAN 抄寫通訊。
 * vSAN 加密不適用於其他儲存空間解決方案，例如「{{site.data.keyword.cloud_notm}} 耐久性」檔案及區塊儲存空間。
 * vSAN 加密需要 vSAN Enterprise 授權。
-
-* vSAN 性能檢查可能會定期發出警告，指出它無法從您的一個以上 vSphere 主機連接至 KMS 叢集。這些警告發生的原因是 vSAN 性能檢查連線太快逾時。您可以忽略這些警告。
-如需相關資訊，請參閱 [因出現「SSL 信號交換逾時」錯誤，而發生 vSAN KMS 性能檢查間歇性失敗](https://kb.vmware.com/s/article/67115){:new_window}。
+* vSAN 性能檢查可能會定期發出警告，指出它無法從您的一部以上 vSphere 主機連接至 KMS 叢集。這些警告發生的原因是 vSAN 性能檢查連線太快逾時。您可以忽略這些警告。如需相關資訊，請參閱 [因出現「SSL 信號交換逾時」錯誤，而發生 vSAN KMS 性能檢查間歇性失敗](https://kb.vmware.com/s/article/67115){:new_window}。
 
 ### vSphere 加密
 {: #kmip-design-vsphere-encrypt}

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-18"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -56,7 +59,7 @@ Wenn Sie den Cluster in einem anderen {{site.data.keyword.CloudDataCent_notm}}- 
 ### Einstellungen für Bare Metal Server
 {: #vc_addingviewingclusters-bare-metal-settings}
 
-Sie können **Skylake**, **SAP-zertifiziert** oder **Broadwell** auswählen. Die Optionen können je nach der Version, in der Ihre Instanz ursprünglich bereitgestellt wurde, variieren. 
+Sie können **Skylake**, **SAP-zertifiziert** oder **Broadwell** auswählen. Die Optionen können je nach der Version, in der Ihre Instanz ursprünglich bereitgestellt wurde, variieren.
 
 #### Skylake
 {: #vc_addingviewingclusters-adding-skylake}
@@ -187,7 +190,7 @@ Auf Basis der für den Cluster ausgewählten Konfiguration werden die geschätzt
 ## Vorgehensweise zum Hinzufügen von Clustern zu vCenter Server-Instanzen
 {: #vc_addingviewingclusters-adding-procedure}
 
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**. 
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**.
 2. Klicken Sie in der Tabelle **vCenter Server-Instanzen** auf die Instanz, zu der Cluster hinzugefügt werden sollen.
 
    Vergewissern Sie sich, dass sich die Instanz im Status **Bereit** befindet. Andernfalls können Sie keine Cluster zur Instanz hinzufügen.
@@ -228,7 +231,7 @@ Der Clustername kann nicht geändert werden. Wenn Sie den Clusternamen ändern, 
 ## Vorgehensweise zum Anzeigen von Clustern in vCenter Server-Instanzen
 {: #vc_addingviewingclusters-viewing-procedure}
 
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**. 
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**.
 2. Klicken Sie in der Tabelle **vCenter Server-Instanzen** auf eine Instanz, um die Cluster in dieser Instanz anzuzeigen.
 3. Klicken Sie im linken Navigationsfenster auf **Infrastruktur**. Prüfen Sie in der Tabelle **CLUSTER** die Zusammenfassung für die Cluster:
   * **Name**: Der Name des Clusters.
@@ -252,7 +255,7 @@ Der Clustername kann nicht geändert werden. Wenn Sie den Clusternamen ändern, 
         <dd class="dd">Der Cluster wurde gelöscht.</dd>
     </dl>
   * **Aktionen**: Klicken Sie auf das Symbol **Löschen**, um den Cluster zu löschen.
-4. Klicken Sie auf einen Clusternamen, um die Details zum ESXi-Server, zum Speicher und zur Netzschnittstelle anzuzeigen: 
+4. Klicken Sie auf einen Clusternamen, um die Details zum ESXi-Server, zum Speicher und zur Netzschnittstelle anzuzeigen:
 
 Tabelle 4. Details zum ESXi-Server
 
@@ -262,7 +265,7 @@ Tabelle 4. Details zum ESXi-Server
 | Version | Die Version des ESXi-Servers. |
 | Berechtigungsnachweise | Der Benutzername und das Kennwort für den Zugriff auf den ESXi-Server. |
 | Private IP | Die private IP-Adresse des ESXi-Servers. |
-| Status | Der Status des ESXi-Servers, der einen der folgenden Werte aufweisen kann:<br> **Hinzugefügt** Der ESXi-Server wurde hinzugefügt und kann verwendet werden. <br> **Wird hinzugefügt** Der ESXi-Server wird gerade hinzugefügt. <br> **Wird gelöscht** Der ESXi-Server wird gerade gelöscht. |
+| Status | Der Status des ESXi-Servers, der einen der folgenden Werte aufweisen kann:<br> **Hinzugefügt** Der ESXi-Server wurde hinzugefügt und kann verwendet werden.<br> **Wird hinzugefügt** Der ESXi-Server wird gerade hinzugefügt.<br> **Wird gelöscht** Der ESXi-Server wird gerade gelöscht. |
 
 Tabelle 5. Speicherdetails
 
@@ -278,17 +281,19 @@ Tabelle 6. Netzschnittstelle - VLAN-Details
 | Element        | Beschreibung       |  
 |:------------- |:------------- |
 | VLAN-Nummer | Die eindeutige VLAN-Nummer.  |
-| Beschreibung | Der Typ des VLAN.  |
+| Beschreibung | Die Beschreibung des VLAN.  |
 | Standort | Der Standort des Rechenzentrums. |
 | Primäre Route | Die primäre Route des VLAN. |
+
+Klicken Sie auf **Ressourcen anzeigen**, um auf die VLAN-Details zuzugreifen.
 
 Tabelle 7. Netzschnittstelle - Teilnetzdetails
 
 | Element        | Beschreibung       |  
 |:------------- |:------------- |
-| Name | Der Teilnetzname. Klicken Sie auf den Namen, um auf die vollständigen IP-Adressdetails zuzugreifen. |
+| Name | Der Teilnetzname. Klicken Sie auf den Namen, um auf die Teilnetzdetails zuzugreifen.|
 | Typ | Der Typ des Teilnetzes: primär oder portierbar. |
-| Beschreibung | Der Zweck des Teilnetzes. |
+| Beschreibung | Die Beschreibung des Teilnetzes. |
 
 Tabelle 8. Netzschnittstelle - IP-Details
 
@@ -296,8 +301,7 @@ Tabelle 8. Netzschnittstelle - IP-Details
 |:------------- |:------------- |
 | IP | Die IP-Adresse. |
 | Status | Der Status der IP-Adresse. |
-| Beschreibung |Der IP-Adresshost.  |
-
+| Beschreibung |Die Beschreibung der IP-Adresse.  |
 
 ## Cluster aus vCenter Server-Instanzen löschen
 {: #vc_addingviewingclusters-deleting}
@@ -317,7 +321,7 @@ Wird ein Cluster nicht mehr benötigt, kann er aus einer Instanz gelöscht werde
 ### Vorgehensweise zum Löschen von Clustern aus vCenter Server-Instanzen
 {: #vc_addingviewingclusters-deleting-procedure}
 
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**. 
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**.
 2. Klicken Sie in der Tabelle **vCenter Server-Instanzen** auf die Instanz, aus der Cluster gelöscht werden sollen.
 
    Vergewissern Sie sich, dass sich die Instanz im Status **Bereit** befindet. Andernfalls können Sie keine Cluster aus der Instanz löschen.

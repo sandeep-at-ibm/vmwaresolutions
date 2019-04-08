@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-03-22"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -43,12 +46,12 @@ VMware vCenter Server on {{site.data.keyword.cloud_notm}} Hybridity Bundle 服�
 
 表 1. {{site.data.keyword.icpfull_notm}} 的 vCenter Server 规范
 
-| NFS 部署|vSAN 部署|
-:--|:----:|:----:
-服务器数|3|4
-CPU|28 个核心，2.2 GHz| 28 个核心，2.2 GHz
-内存|384 GB |384 GB
-存储器|2000 GB，2 IOPS/GB（用于管理）；2000 GB，4 IOPS/GB（用于工作负载）；4000 GB，4 IOPS/GB（用于 {{site.data.keyword.icpfull_notm}}）|最少 960 GB SSD（2个）
+| |NFS 部署|vSAN 部署|
+|:---------- |:---------- |:---------- |
+|服务器数|3|4|
+|CPU|28 个核心，2.2 GHz|28 个核心，2.2 GHz|
+|内存|384 GB|384 GB|
+|存储|2000 GB 2 IOPS/GB（管理），2000 GB 4 IOPS/GB（工作负载），4000 GB 4 IOPS/GB ({{site.data.keyword.icpfull_notm}})|最少 2 个 960 GB SSD|
 
 除了 {{site.data.keyword.cloud_notm}} Private 硬件需求外，您还必须在 {{site.data.keyword.icpfull_notm}} 环境中创建持久性卷，以用于存储 Cloud Automation Manager (CAM) 数据库和日志数据。虽然 CAM 支持 {{site.data.keyword.icpfull_notm}} 所支持的全部持久性卷类型，但建议用于 CAM 的两种存储配置是 NFS 和 GlusterFS。
 

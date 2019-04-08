@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -40,12 +43,12 @@ lastupdated: "2019-03-01"
 * プライマリー IP アドレスは、{{site.data.keyword.cloud_notm}} によってプロビジョンされるデバイス、ベア・メタル・サーバー、仮想サーバーに割り当てられます。 これらのブロックの IP アドレスをユーザーが割り当ててはいけません。
 * ポータブル IP アドレスは、ユーザーが必要に応じて割り当て、管理できるように用意されています。
 
-アカウントを Virtual Routing and Forwarding (VRF) アカウントとして構成すると、お客様のアカウントの VLAN にプライマリー IP アドレスまたはポータブル IP アドレスをルーティングできるようになります。
+アカウントを Virtual Routing and Forwarding (VRF) アカウントとして構成すると、お客様のアカウントに属する VLAN にプライマリー IP アドレスまたはポータブル IP アドレスをルーティングできるようになります。
 
 ## Virtual Routing and Forwarding
 {: #vcsnsxt-overview-ic4vnetwork-vrf}
 
-{{site.data.keyword.cloud_notm}} アカウントは、Virtual Routing and Forwarding (VRF) アカウントとして構成することもできます。 VRF アカウントにより、アカウント内でのサブネット IP ブロック間の自動グローバル・ルーティングが有効になります。Direct Link 接続を使用するアカウントはすべて、VRF アカウントに変換するか、VRF アカウントとして作成する必要があります。
+{{site.data.keyword.cloud_notm}} アカウントは、Virtual Routing and Forwarding (VRF) アカウントとして構成することもできます。 VRF アカウントを使用すると、そのアカウントに属するサブネット IP ブロック間の自動グローバル・ルーティングが可能になります。Direct Link 接続を使用するアカウントはすべて、VRF アカウントに変換するか、VRF アカウントとして作成する必要があります。
 
 ## 物理ホスト接続
 {: #vcsnsxt-overview-ic4vnetwork-host-connect}
@@ -53,6 +56,7 @@ lastupdated: "2019-03-01"
 設計に含まれる各物理ホストは、各 {{site.data.keyword.cloud_notm}} 最上位ラック (ToR) スイッチ (パブリックとプライベート) への 10 Gbps イーサネット接続の冗長ペアを 2 つ備えています。 合計 4 つの 10 Gbps 接続のためのアダプターが個々の接続 (非結合) としてセットアップされます。 これにより、各ネットワーキング・インターフェース・カード (NIC) 接続が他の NIC から独立して機能できるようになります。
 
 図 2. 物理ホスト接続
+</br>
 ![物理ホスト接続](vcsnsxt-host-connections.svg)
 
 ## VLAN

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-05"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -36,9 +39,9 @@ Figura 1. Componentes de la aplicación ![Componentes de la aplicación](caveoni
     - Resultados de exploración
     - Software
     - Conjunto de datos agregado a diario o semanalmente
--	Almacén de datos de mensajería - RiskForesight utiliza la cola de mensajería persistente para proporcionar cero pérdida de datos y descargar la presión de fondo a los componentes. La carga útil de datos de entrada es persistente en el primero y, a continuación, se toma del persistente para el próximo procesamiento.
--	Almacén de datos de índice - Indexa y almacena los datos en bruto de entrada para cada arrendatario para que la analítica adicional admita la capacidad multiarrendatario.
--	Plugins – Residen en el servicio de direccionamiento de aplicaciones e incluye la configuración y la integración con los componentes de VMware para sincronizar todas las máquinas virtuales junto con su información de arrendatario.
+- Almacén de datos de mensajería - RiskForesight utiliza la cola de mensajería persistente para proporcionar cero pérdida de datos y descargar la presión de fondo a los componentes.
+- Almacén de datos de índice - Indexa y almacena los datos en bruto de entrada para cada arrendatario para que el análisis adicional admita la capacidad multiarrendatario.
+- Plugins – Residen en el servidor de direccionamiento de aplicaciones e incluyen la configuración y la integración con los componentes de VMware para sincronizar todas las máquinas virtuales junto con su información de arrendatario.
 
 En la tabla siguiente se muestran los puertos y los protocolos necesarios para cada componente.
 

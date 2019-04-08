@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2018-04-16"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -90,7 +93,8 @@ lastupdated: "2018-04-16"
 
 對於實例中的預設叢集，您可以部署或擴充最多 51 部伺服器。對於實例中的所有後續叢集，您可以部署或擴充最多 59 部伺服器。如需相關資訊，請參閱[新增及檢視 vCenter Server 實例的叢集](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)。
 
-只有在 2.1 版及更新版本中部署的實例，才能使用此功能。從 2.1 版之前的版本升級至 2.1 版的實例沒有這個選項。{:note}
+只有在 2.1 版及更新版本中部署的實例，才能使用此功能。從 2.1 版之前的版本升級至 2.1 版的實例沒有這個選項。
+{:note}
 
 ### 使用者自訂的 IBM Cloud Bare Metal Server 配置選項
 {: #relnotes_v21-bare-metal}

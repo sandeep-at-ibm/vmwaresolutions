@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -63,7 +66,7 @@ El flujo de trabajo es el siguiente:
   - Después de que el NSX Edge se actualice correctamente, el estado está Desplegado y la columna Versión muestra la nueva versión de NSX. Si un Edge no se actualiza y no vuelve a la versión antigua, pulse el icono **Redesplegar Edge NSX Edge** y, a continuación, vuelva a intentar la actualización.
 
 ## Enlaces relacionados
-{: #vum-type-updates-related}
+{: #vum-updating-nsx-related}
 
-* [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demostraciones)

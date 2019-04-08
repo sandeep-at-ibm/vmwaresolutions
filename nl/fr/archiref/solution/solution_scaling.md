@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -31,10 +34,9 @@ Dans cette conception, la définition d'un déploiement multisite comprend les �
    * Nouveau nom de site SSO
    * Nouveau site/sous-domaine DNS lié à la racine du domaine principal
    * Configuration de la réplication DNS et AD entre les machines virtuelles AD du site principal et du site secondaire
-   * Contrôleur PSC déployé et configuré pour la synchronisation avec le contrôleur PSC du site principal
    * Configuration vCenter en mode lien étendu (Enhanced Linked) sur le serveur vCenter du site principal
 
-De plus, le gestionnaire NSX sur les sites secondaires peut être configuré en tant que gestionnaires NSX secondaires pour le gestionnaire NSX sur le site principal.
+De plus, le gestionnaire NSX sur les sites secondaires peut être configuré en tant que gestionnaire NSX secondaire pour le gestionnaire NSX sur le site principal. Il s'agit d'un processus manuel que vous devez efectuer.
 
 ## Ajout de nouveaux clusters
 {: #solution_scaling-clusters}
@@ -47,7 +49,7 @@ Cette méthode vous permet de réaliser les opérations suivantes :
 * Séparation des charges de travail en fonction d'autres caractéristiques, par exemple, un cluster de base de données Microsoft SQL
 * Déploiement d'applications dans des topologies à haute disponibilité
 
-Lorsque le cluster initial est converti en un cluster de gestion uniquement, la migration des charges de travail existantes implique des étapes que l'utilisateur doit réaliser manuellement. Il peut s'agir de réassocier les magasins de données au nouveau cluster ou d'effectuer une migration de stockage. Les adresses IP des charges de travail devront peut-être être modifiées si le nouveau cluster réside dans un autre pod {{site.data.keyword.cloud_notm}} ou si un autre ID VLAN lui est affecté.
+Lorsque le cluster initial est converti en un cluster de gestion uniquement, la migration des charges de travail existantes implique des étapes que l'utilisateur doit réaliser manuellement. Il peut s'agir de réassocier les magasins de données au nouveau cluster ou d'effectuer une migration de stockage. Les adresses IP des charges de travail devront peut-être être modifiées si le nouveau cluster réside dans un autre pod {{site.data.keyword.cloud_notm}} ou si un autre ID VLAN est affecté au cluster.
 {:note}
 
 ## Ajout d'hôtes ESXi dans des clusters existants

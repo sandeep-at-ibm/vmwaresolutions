@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-14"
+lastupdated: "2019-03-25"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -66,14 +69,14 @@ A partir de agosto de 2019, {{site.data.keyword.vmwaresolutions_short}} ya no so
 Para obtener más información, consulte:
 
 * [Visión general de Virtual Routing and Forwarding (VRF) en IBM Cloud](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-* [Habilite la cuenta para utilizar puntos finales de servicio mediante la CLI de IBM Cloud](/docs/services/service-endpoint?topic=services/service-endpoint-cs_cli_install_steps)
+* [Habilite la cuenta para utilizar puntos finales de servicio mediante la CLI de IBM Cloud](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
 
 ## Soporte para interfaces de programación de aplicaciones
 {: #relnotes_v29-api}
 
 Las interfaces de programación de aplicaciones (API) están ahora disponibles para desplegar instancias, suprimir instancias y añadir y eliminar servidores ESXi y clústeres.
 
-La documentación de la API REST también está disponible en la sección *Referencia* de la documentación de usuario. Para obtener más información, consulte [API de {{site.data.keyword.vmwaresolutions_short}}](https://console.bluemix.net/apidocs/vmware-solutions).
+La documentación de la API REST también está disponible en la sección *Referencia* de la documentación de usuario. Para obtener más información, consulte [API de {{site.data.keyword.vmwaresolutions_short}}](https://cloud.ibm.com/apidocs/vmware-solutions).
 
 ## Actualizaciones de instancias de VMware vCenter Server
 {: #relnotes_v29-vcs}
@@ -90,6 +93,11 @@ Este release se aplica a las siguientes actualizaciones y mejoras:
 * NSX-T for vSphere 2.4
 
 Para obtener más información sobre la selección de los componentes de VMware, consulte [Lista de materiales de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
+
+### Actualizaciones de centros de datos
+{: #relnotes_v29-dc}
+
+Los nuevos centros de datos siguientes están disponibles para el despliegue: **FRA-05 - Frankfurt** y **LON-05 - Londres**. Para obtener más información, consulte [Requisitos y planificación de instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning).
 
 ### Mejoras en el servidor ESXi
 {: #relnotes_v29-vcs-esxi}

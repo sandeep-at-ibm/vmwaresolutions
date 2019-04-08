@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-03-22"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -22,16 +25,16 @@ lastupdated: "2019-02-21"
 - 使用 Cloud Automation Manager (CAM) 来编写基础架构即代码 (IaC) 的脚本，以编写和编排通过 VM 和容器创建的服务，从而与其 DevOps 工具链及其 ITSM 解决方案集成。
 
 参考体系结构具有以下关键组件：
-- **内部部署虚拟化** - 内部部署虚拟化是当前托管 Acme Skateboards VM 的 VMware 集群。这些 VM 当前托管的是要进行现代化的应用程序。此集群需要满足 [VMware HCX on {{site.data.keyword.cloud_notm}} 解决方案体系结构](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)的先决条件，才能运行 HCX。
+- **内部部署虚拟化** - 内部部署虚拟化是当前托管 Acme Skateboards VM 的 VMware 集群。这些 VM 当前托管的是要进行现代化的应用程序。此集群需要满足 [VMware HCX on {{site.data.keyword.cloud_notm}} 解决方案体系结构](https://test.cloud.ibm.com/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)的先决条件，才能运行 HCX。
 
 HCX 将内部部署网络扩展到 {{site.data.keyword.cloud_notm}} 中，支持客户将 VM 迁移到在 {{site.data.keyword.cloud_notm}} 上运行的 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 实例中，并支持根据需要迁移回原来的位置。
 - **{{site.data.keyword.cloud_notm}} for VMware Solutions** - vCenter Server 实例提供自动部署 VMware 软件定义的数据中心 (SDDC) 解决方案所需的基本 VMware 构建块，例如 vSphere、vCenter Server、NSX-V 和存储选项（包括 vSAN 或 {{site.data.keyword.cloud_notm}} 耐久性存储器）。VMware 集群是已迁移 VM 的目标以及在 {{site.data.keyword.icpfull_notm}} 中托管的容器中某些现代化应用程序的目标。vCenter Server 中的关键组件如下：
   - **NSX-V** - NSX-V 在 vCenter 中提供网络虚拟化层，用于为 Acme Skateboards VM 提供网络覆盖。NSX-V 支持 BYOIP，并使工作负载网络与 {{site.data.keyword.cloud_notm}} 网络相隔离。NSX-V 由 HCX 编程为创建 Acme Skateboards 将从内部部署扩展的网络。
   - **NSX-T** - NSX-T 提供了一组通用工具，用于管理容器和 VM 上的网络和安全性。NSX-T 与 Kubernetes 容器联网接口 (CNI) 完全兼容，并与 CNI 集成以提供容器联网。NSX-T 提供了现代化应用程序使用的覆盖网络，并将取代由 {{site.data.keyword.icpfull_notm}} 和 {{site.data.keyword.containerlong_notm}} 本机使用的 Calico。
 
-- **{{site.data.keyword.icpfull_notm}}** - {{site.data.keyword.icpfull_notm}} 是一种用于开发和管理容器化应用程序的应用程序平台。{{site.data.keyword.icpfull_notm}} 是一个集成环境，包含容器编排器 Kubernetes、专用映像存储库、管理控制台、监视框架和图形用户界面，该界面提供了一个集中位置供 Acme Skateboards 部署、管理、监视和扩展其应用程序。vCenter Server 实例托管 {{site.data.keyword.icpfull_notm}} 组件、主节点和工作程序节点等，并将这些项作为 VM 运行。{{site.data.keyword.icpfull_notm}} 主机：
-- **{{site.data.keyword.cloud_notm}} Automation Manager** - CAM 是一种企业就绪型基础架构即代码 (IaC) 平台，它提供了一个窗格，可使用模板来供应 VM 工作负载（内部部署或在 vCenter Server 上）以及 Kubernetes 工作负载（在 {{site.data.keyword.icpfull_notm}} 或 {{site.data.keyword.containerlong_notm}} 中）。CAM 是一种 Docker 容器化应用程序，在 {{site.data.keyword.icpfull_notm}} 安装上运行，并紧密集成以用于授权、基于角色的访问控制 (RBAC) 和其他功能。
-    - 客户要部署在此环境中的容器化 Acme Skateboards 应用程序。
+- **{{site.data.keyword.icpfull_notm}}** - {{site.data.keyword.icpfull_notm}} 是一种用于开发和管理容器化应用程序的应用程序平台。{{site.data.keyword.icpfull_notm}} 是一个集成环境，包含容器编排器 Kubernetes、专用映像存储库、管理控制台、监视框架和图形用户界面，该界面提供了一个集中位置供 Acme Skateboards 部署、管理、监视和扩展其应用程序。vCenter Server 实例托管 {{site.data.keyword.icpfull_notm}} 组件、主节点和工作程序节点等，并将这些项作为 VM 运行。{{site.data.keyword.icpfull_notm}} 托管以下组件：
+  - **{{site.data.keyword.cloud_notm}} Automation Manager** - CAM 是一种企业就绪型基础架构即代码 (IaC) 平台，它提供了一个窗格，可使用模板来供应 VM 工作负载（内部部署或在 vCenter Server 上）以及 Kubernetes 工作负载（在 {{site.data.keyword.icpfull_notm}} 或 {{site.data.keyword.containerlong_notm}} 中）。CAM 是一种 Docker 容器化应用程序，在 {{site.data.keyword.icpfull_notm}} 安装上运行，并紧密集成以用于授权、基于角色的访问控制 (RBAC) 和其他功能。
+  - 客户要部署在此环境中的容器化 **Acme Skateboards 应用程序**。
 
 - **{{site.data.keyword.containerlong_notm}}** - {{site.data.keyword.containerlong_notm}} 支持 Acme Skateboards 将其现代化应用程序部署到在 Kubernetes 集群中运行的 Docker 容器中。主节点由 IBM 完全管理，而工作程序池中的工作程序节点将部署到与其 vCenter Server 实例相同的 {{site.data.keyword.cloud_notm}} 帐户中。工作程序节点可以是：裸机、公共或专用虚拟服务器实例。Calico 将在 {{site.data.keyword.containerlong_notm}} 中自动安装和配置。Calico 为容器提供安全网络连接，在 {{site.data.keyword.containerlong_notm}} 中配置为对在子网之间传输的包使用 IP-in-IP 封装，并将 NAT 用于容器的传出连接。
 

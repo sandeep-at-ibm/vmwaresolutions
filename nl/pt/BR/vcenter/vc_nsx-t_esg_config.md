@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-21"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -24,7 +27,7 @@ Como parte do processo de pedido para a sua instância do vCenter Server com NSX
 * Uma sub-rede pública do cliente é pedida para permitir que suas MVs acessem a Internet.
 * O NSX-T é implementado e configurado em sua instância do vCenter Server com NSX-T.
 * Um comutador lógico do NSX-T de amostra é implementado para ser usado pelas VMs de carga de trabalho do cliente.
-* Um roteador lógico distribuído (DLR) do NSX-T de amostra é implementado para uma potencial comunicação leste-oeste entre as cargas de trabalho locais que estão conectadas às redes da camada 2 (L2).
+* Um roteador da Camada 1 do NSX-T de amostra é implementado para a potencial comunicação leste-oeste entre as cargas de trabalho locais que estão conectadas às redes da camada 2 (L2).
 * Um dispositivo de borda do NSX-T é implementado e configurado para executar a conversão de endereço de rede (NAT) desde o intervalo de endereços IP do
 comutador lógico de carga de trabalho até um endereço IP público nas regras NAT.
 
@@ -39,8 +42,7 @@ Para aproveitar o NSX-T para suas VMs de carga de trabalho, deve-se definir dive
 1. Configure o adaptador de rede da MV para o comutador lógico de carga de trabalho:
    1. Na caixa de diálogo **Nova Máquina Virtual**, clique na guia **Customizar Hardware**.
    2. No menu **novo dispositivo**, selecione **Rede** e clique em **Incluir**.
-   3. No adaptador de rede recém-incluído, selecione o comutador lógico de carga de trabalho no menu. Um nome de exemplo do comutador lógico de carga de trabalho
-   é **vxw-dvs-17-virtualwire-1-sid-6000-Workload**.
+   3. No adaptador de rede recém-incluído, selecione o comutador lógico de sobreposição da carga de trabalho no menu. O nome de exemplo do comutador é **overlay-ls**.
 
    Assegure-se de não selecionar o comutador **Trânsito de carga de trabalho**.
    {:important}
@@ -53,35 +55,29 @@ Para aproveitar o NSX-T para suas VMs de carga de trabalho, deve-se definir dive
    Você é responsável por gerenciar o intervalo de endereços IP para os quais designou suas MVs.
    {:note}
 
-3. Designe o gateway padrão da MV como `192.168.10.1`. Este é o endereço IP do NSX DLR no mesmo comutador lógico das MVs de carga de trabalho.
+3. Designe o gateway padrão da MV como `192.168.10.1`. Esse é o endereço IP da porta do roteador de downlink no roteador lógico da Camada 1 do cliente e está conectado ao mesmo comutador lógico de sobreposição que as VMs de carga de trabalho.
 
-## Procedimento para ativar a regra SNAT
+## Ativando a regra SNAT
 {: #vc_nsx-t_esg_config-procedure-enable-snat-rule}
 
-Se você quiser que suas MVs de carga de trabalho tenham acesso de saída para a Internet, deverá ativar a regra SNAT (Source Network Address Translation) associada. Ativar a regra SNAT permite que o acesso à Internet de suas MVs seja convertido em um único endereço IP público. Conclua as seguintes etapas no VMware vSphere Web Client:
-
-1. Clique em **Início > Rede e segurança**.
-2. Na área de janela do navegador, clique em **NSX Edges** e dê um clique duplo no limite denominado **customer-nsx-edge**.
-3. Clique em **Gerenciamento > NAT** para abrir a guia **NAT**.
-4. Selecione a regra SNAT padrão na tabela e clique na marca de seleção verde acima da tabela para ativar a regra.
-
-Para obter mais informações sobre as regras de NAT do NSX-T Edge, consulte [Gerenciando regras do NAT](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.
+O NSX-T ativa a regra do SNAT por padrão. Para obter informações sobre a modificação das regras existentes, consulte [Configurar a NAT de origem e de destino em um roteador lógico da camada 0](https://docs.vmware.com/en/VMware-NSX-T-Data-Center/2.4/administration/GUID-45949ACD-9029-4674-B29C-C2EABEB39E1D.html){:new_window}.
 
 ## Procedimento para identificar detalhes de sub-redes do cliente
 {: #vc_nsx-t_esg_config-procedure-identify-customer-subnets-details}
 
-O limite **customer-nsx-edge** destina-se ao seu próprio uso, então, você pode modificá-lo para definir mais regras NAT para o tráfego de entrada ou de saída. Essas regras devem usar apenas os endereços IP nas sub-redes públicas ou privadas do cliente que são ordenadas em seu nome.
+Os roteadores lógicos **Customer-T1-LR** e **Customer-T0-LR**, bem como as bordas **cust-nsx-edge0** e **cust-nsx-edge1** são destinados para o seu próprio uso, para que seja possível modificá-lo para definir mais regras de NAT para tráfego de entrada ou de saída. Essas regras devem usar apenas os endereços IP nas sub-redes públicas ou privadas do cliente que são ordenadas em seu nome.
 
-Para identificar os detalhes para as sub-redes do cliente para que seja possível usar os endereços IP pedidos, conclua as etapas a seguir no VMware vSphere Web Client:
+Para identificar os detalhes para as sub-redes do cliente para que seja possível usar os endereços IP pedidos, conclua as etapas a seguir no NSX-T Web Client:
 
-1. Clique em **Início > Rede e segurança**.
-2. Na área de janela do navegador, clique em **Bordas do NSX** e localize **borda customer-nsx-edge** na lista de bordas na área de janela à direita.
-3. Na coluna **Descrição**, passe o mouse sobre a descrição de borda para **customer-nsx-edge** para ver os identificadores de sub-rede para as sub-redes do cliente privadas e públicas.
+1. Clique na guia **Rede avançada e segurança**.
+2. Na área de janela esquerda, clique em **Malha** e, em seguida, na lista suspensa, selecione **Nós**.
+3. Na guia, selecione **Nós de transporte de borda**.
+4. Clique em uma das bordas do cliente. Por exemplo, **cust-nsx-edge0**. As sub-redes de cliente públicas e privadas são exibidas no campo **Descrição**.
 
 Além disso, é possível localizar mais detalhes sobre as sub-redes do cliente concluindo as etapas a seguir no {{site.data.keyword.slportal}}:
 
 1. Clique em **Rede > Gerenciamento de IP > Subnets**.
-2. Clique no menu de filtro e, no campo Sub-rede, insira o identificador como visto na descrição do limite **customer-nsx-edge** na guia **Resumo** no VMware vSphere Web Client.
+2. Clique no menu de filtro e no campo **Sub-rede** insira o identificador conforme visto na descrição de **customer-nsx-edge0** no NSX-T Web Client.
 3. Revise as notas que são mostradas para os endereços IP. Essas notas identificam quais das sub-redes e endereços IP são ordenados e usados durante a configuração inicial.
 
    Não use os endereços IP que são pedidos e usados durante a configuração inicial. No entanto, é possível usar outros endereços IP nessas

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -124,7 +127,7 @@ CAM 需要工作者節點具有較高的 vCPU 和記憶體配置。
 
 {{site.data.keyword.cloud_notm}} Automation Manager (CAM) 是在 {{site.data.keyword.icpfull_notm}} 上執行的多重雲端自助式管理平台，讓開發人員與管理者能夠滿足商業需求。
 
-圖 3. CAM 元件參照
+圖 3. CAM 元件參照</br>
 ![CAM 元件參照](vcsicp-cam-component-ref.svg)
 
 ### CAM Proxy

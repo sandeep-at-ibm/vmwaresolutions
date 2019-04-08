@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-04"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -50,7 +53,8 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud}} 服務會將一組 Fo
 
 每部虛擬機器的授權費用都會套用至每個計費週期，取決於選取的部署大小及每月訂閱授權模型。
 
-您無法在安裝服務之後變更授權層次。若要變更授權層次，您必須移除現有服務，然後使用不同的授權選項來重新安裝服務。{:important}
+您無法在安裝服務之後變更授權層次。若要變更授權層次，您必須移除現有服務，然後使用不同的授權選項來重新安裝服務。
+{:important}
 
 ## 安裝 FortiGate Virtual Appliance on IBM Cloud 時的考量
 {: #fortinetvm_considerations-install}

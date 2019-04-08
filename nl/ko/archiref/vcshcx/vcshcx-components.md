@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-05"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # HCX 컴포넌트 용어집
@@ -98,7 +101,7 @@ Fleet 컴포넌트 배치, 네트워크 확대 및 클라우드에/에서 VM 마
 가상 네트워크를 빌드하는 데도 사용합니다.
 
 - 클라이언트 / 클라우드 HCX 관리자 어플라이언스 관리 UI – vCenter(`https://<hcxmanager_IP>:9443`)에서 본 대로 VM 사설 IP 주소를 통해 클라우드 또는 클라이언트 측의 어플라이언스 관리 UI에 액세스합니다. ID(일반적으로 “admin”)와 비밀번호는
-{{site.data.keyword.vmwaresolutions_short}} 포털을 통해 제공됩니다. 관리 UI는 HCX Manager 서비스를 시작하고 중지하며, 로그 모니터링 구성, 기본 네트워킹 구성, 수동 업그레이드, 웹 UI가 작동하지 않을 때 지원 로그 수집, vSphere 컴포넌트(vCenter, PSC, NSX 관리자) 등록 및 인증서 관리에 사용합니다.
+{{site.data.keyword.vmwaresolutions_short}} 포털을 통해 제공됩니다. 관리 UI는 HCX Manager 서비스를 시작하고 중지하며, 로그 모니터링 구성, 기본 네트워킹 구성, 수동 업그레이드, 웹 UI가 작동하지 않을 때 지원 로그 수집, vSphere 컴포넌트(vCenter, PSC, NSX Manager) 등록 및 인증서 관리에 사용합니다.
 
 ## 관련 링크
 {: #vcshcx-components-related}

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -12,7 +15,7 @@ lastupdated: "2019-03-08"
 {:note: .note}
 {:important: .important}
 
-# Especificações e considerações do VMware HCX on IBM Cloud
+# VMware HCX on IBM Cloud Visão Geral
 {: #hcx_considerations}
 
 O serviço HCX on {{site.data.keyword.cloud}} amplia perfeitamente as redes de data centers no local para o {{site.data.keyword.cloud_notm}}, o que permite que você migre máquinas virtuais (MVs) para e do {{site.data.keyword.cloud_notm}} sem nenhuma conversão ou mudança.
@@ -69,7 +72,7 @@ O serviço HCX no {{site.data.keyword.cloud_notm}} não pode ser instalado em um
 ### Requisitos em regras de firewall
 {: #hcx_considerations-firewall}
 
-Antes de instalar o serviço HCX on {{site.data.keyword.cloud_notm}}, deve-se incluir uma regra de firewall em quaisquer firewalls existentes para permitir todo o tráfego HTTPS de saída para que o dispositivo virtual HCX Manager (HCX Manager) possa se registrar. Após a conclusão da instalação do HCX Manager, você poderá remover a regra de firewall. Além disso, deve-se configurar regras de firewall para permitir que o HCX funcione corretamente. Para obter mais informações, veja *Apêndice A - Requisitos de acesso de porta* em [Arquitetura do HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf).
+Antes de instalar o serviço HCX on {{site.data.keyword.cloud_notm}}, deve-se incluir uma regra de firewall em quaisquer firewalls existentes para permitir todo o tráfego HTTPS de saída para que o dispositivo virtual HCX Manager (HCX Manager) possa se registrar. Após a conclusão da instalação do HCX Manager, você poderá remover a regra de firewall. Além disso, deve-se configurar regras de firewall para permitir que o HCX funcione corretamente. Para obter mais informações, consulte [Requisitos de acesso à porta do VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-port-req#hcx-archi-port-req).
 
 ## Considerações ao remover o HCX on IBM Cloud
 {: #hcx_considerations-delete}

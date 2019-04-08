@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-08"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # V2.8 릴리스 정보
@@ -75,7 +78,7 @@ PSC를 외부에서 임베드된 PSC로 수동 변환하는 기본 인스턴스�
 
 이 릴리스는 다음 업그레이드 및 개선사항을 적용합니다.
 
-* vSphere ESXi 6.5 Update P3(6.5.0-10884925 빌드)
+* vSphere ESXi 6.5 Update EP11(6.5.0-10719125 빌드)
 * vCenter Server 6.5 U2d(6.5.0-10964411 빌드)
 * Platform Services Controller 6.5 U2d(6.5.0-10964411 빌드)
 
@@ -108,9 +111,10 @@ V2.8 릴리스부터 서비스는 VMware 인스턴스와 연관되지 않고 독
 ## 참조 아키텍처 문서
 {: #relnotes_v28-ref}
 
-(2019년 2월 8일에 업데이트) 이제 다음 기술 문서는 사용자 문서의 *참조서* 섹션에서 사용할 수 있습니다.
+(2019년 2월 8일에 업데이트) 이제 다음 기술 문서는 사용자 문서의 *참조서* 섹션에서 새로 작성되거나 업데이트됩니다.
 
-* [{{site.data.keyword.vmwaresolutions_short}}(NSX-T 아키텍처 사용)](/docs/services/vmwaresolutions/archiref/vcsarch?topic=vmware-solutions-vcsarch-overview)
+* [{{site.data.keyword.vmwaresolutions_short}} 아키텍처(NSX-V 및 NSX-T 사용)
+](/docs/services/vmwaresolutions/services?topic=vmware-solutions-solution_overview#solution_overview)
 * [Caveonix RiskForesight 참조 아키텍처](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-on-vcs)
 * [HCX on {{site.data.keyword.cloud_notm}} 배치 및 오퍼레이션 안내서](/docs/services/vmwaresolutions/archiref/vcshcx?topic=vmware-solutions-vcshcx-intro)
 

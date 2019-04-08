@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-04"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -20,7 +23,7 @@ Wenn Ihre KMIP for VMware on {{site.data.keyword.cloud}}-Instanz bereit ist, mü
 ## Vorgehensweise zum Hinzufügen von Zertifikaten zu KMIP for VMware on IBM Cloud-Instanzen
 {: #kmip_standalone_addingdeletingcert-add}
 
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**. 
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**.
 2. Blättern Sie in der Tabelle **KMIP for VMware on IBM Cloud-Instanzen** zu der Instanz, für die Sie Zertifikate hinzufügen wollen.
 3. Klicken Sie auf **Hinzufügen**.
 4. Geben Sie im Fenster **Client-SSL-Zertifikat hinzufügen** den Namen und Inhalt des Zertifikats an.
@@ -32,7 +35,7 @@ Wenn Ihre KMIP for VMware on {{site.data.keyword.cloud}}-Instanz bereit ist, mü
 ## Vorgehensweise zum Anzeigen von Zertifikaten für KMIP for VMware on IBM Cloud-Instanzen
 {: #kmip_standalone_addingdeletingcert-view}
 
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**. 
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**.
 2. Blättern Sie in der Tabelle **KMIP for VMware on IBM Cloud-Instanzen** zu der Instanz, für die die Zertifikate angezeigt werden sollen.
 3. Zeigen Sie die Liste der hinzugefügten Zertifikate unter dem Abschnitt **Client-SSL-Zertifikate** an.
 4. Zum Anzeigen des Inhalts eines bestimmten Zertifikats klicken Sie auf **Download**.
@@ -40,7 +43,7 @@ Wenn Ihre KMIP for VMware on {{site.data.keyword.cloud}}-Instanz bereit ist, mü
 ## Vorgehensweise zum Löschen von Zertifikaten aus KMIP for VMware on IBM Cloud-Instanzen
 {: #kmip_standalone_addingdeletingcert-delete}
 
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**. 
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**.
 2. Blättern Sie in der Tabelle **KMIP for VMware on IBM Cloud-Instanzen** auf die Instanz, aus der Sie Zertifikate löschen möchten.
 3. Suchen Sie in der Tabelle **Client-SSL-Zertifikate** das zu löschende Zertifikat und klicken Sie auf das Symbol **Löschen**.
 

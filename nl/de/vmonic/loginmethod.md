@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-25"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -18,7 +21,7 @@ In diesem Abschnitt erfahren Sie, welche Einstiegspunkte es für die {{site.data
 
 Führen Sie die folgenden Schritte aus, um direkt auf die Konsole zuzugreifen:
 1. Rufen Sie die folgende Adresse auf:
-   https://console.cloud.ibm.com/infrastructure/vmware-solutions/console.
+   https://cloud.ibm.com/infrastructure/vmware-solutions/console.
 2. Melden Sie sich mit Ihrem **IBMid**-Konto bei der Konsole an.
 
 ## Über den IBM Cloud-Katalog zugreifen

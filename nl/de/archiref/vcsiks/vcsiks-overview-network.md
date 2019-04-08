@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-01"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Netzbetrieb, Sicherung, Disaster-Recovery und Skalierbarkeit

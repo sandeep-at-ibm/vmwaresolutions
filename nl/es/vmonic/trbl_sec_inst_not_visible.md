@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-14"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # El sistema vCenter Server secundario no aparece en el inventario del cliente web de vSphere

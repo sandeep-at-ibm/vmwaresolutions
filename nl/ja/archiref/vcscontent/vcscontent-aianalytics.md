@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-15"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # AI、分析、およびその他のパブリック・クラウド・サービスによるエンリッチ

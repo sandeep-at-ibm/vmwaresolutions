@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-03-22"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -50,7 +53,7 @@ Se você implementar o cluster em um pod de infraestrutura diferente do {{site.d
 ### Configurações do Bare Metal Server
 {: #vc_nsx-t_addingviewingclusters-bare-metal-settings}
 
-É possível escolher **Skylake**, **Certificado pelo SAP** ou **Broadwell**.
+É possível escolher **Skylake** ou **Broadwell**.
 
 #### Skylake
 {: #vc_nsx-t_addingviewingclusters-adding-skylake}
@@ -65,20 +68,6 @@ Tabela 1. Opções para Skylake  {{site.data.keyword.baremetal_short}}
 | Processador Dual Intel Xeon Gold 5120/total de 28 núcleos, 2,2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Processador Dual Intel Xeon Gold 6140/Total de 36 núcleos, 2,3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 
-#### SAP-certificado
-{: #vc_nsx-t_addingviewingclusters-adding-sap}
-
-Quando você seleciona **Certificado por SAP**, não é possível alterar as configurações de CPU ou RAM.
-
-Com base em seus requisitos, selecione uma configuração do Bare Metal Server:
-* Processador Dual Intel Xeon Gold 6140 / total de 36 núcleos, 2.3 GHz / 192 GB de RAM
-* Processador Dual Intel Xeon Gold 6140 / total de 36 núcleos, 2.3 GHz / 384 GB de RAM
-* Processador Dual Intel Xeon Gold 6140 / total de 36 núcleos, 2.3 GHz / 768 GB de RAM
-* Processador Dual Intel Xeon E5-2690 v4/total de 28 núcleos, 2.6 GHz/512 GB de RAM
-* Processador Quad Intel Xeon E7-8890 v4/total de 96 núcleos, 2.2 GHz/1024 GB de RAM
-* Processador Quad Intel Xeon E7-8890 v4/total de 96 núcleos, 2.2 GHz/2048 GB de RAM
-* Processador Quad Intel Xeon E7-8890 v4/total de 96 núcleos, 2.2 GHz/4096 GB de RAM
-
 #### Broadwell
 {: #vc_nsx-t_addingviewingclusters-adding-broadwell}
 
@@ -88,9 +77,6 @@ Tabela 2. Opções para Broadwell  {{site.data.keyword.baremetal_short}}
 
 | Opções de modelo da CPU        | Opções de RAM       |
 |:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4/total de 16 núcleos, 2.1 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2650 v4/total de 24 núcleos, 2.2 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2690 v4/total de 28 núcleos, 2.6 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Quad Intel Xeon E7-4820 v4/total de 40 núcleos, 1.9 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4/total de 64 núcleos, 2.2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
@@ -148,13 +134,6 @@ Tabela 3. Opções de nível de desempenho do NFS
   | 4 IOPS/GB | Esta opção foi projetada para cargas de trabalho de maior intensidade que possuem uma alta porcentagem de dados ativos de cada vez. Os aplicativos de exemplo incluem: bancos de dados transacionais. |
   | 10 IOPS/GB | Esta opção foi projetada para os tipos de carga de trabalho mais exigentes, como analítica. Os aplicativos de exemplo incluem: bancos de dados de alta transação e outros bancos de dados sensíveis ao desempenho. Esse nível de desempenho é limitado a uma capacidade máxima de 4 TB por compartilhamento de arquivo. |
 
-### Discos Locais
-{: #vc_nsx-t_addingviewingclusters-adding-local-disks}
-
-A opção de discos locais está disponível somente para a configuração Bare Metal do processador Quad Intel Xeon E7-8890 v4 **certificado pelo SAP**. Especifique as seguintes opções:
-* **Contagem de discos**: selecione o número de discos que você deseja incluir.
-* **Tipo de disco**: selecione uma opção para o tipo de disco que você precisa.
-
 ### Configurações de licenciamento
 {: #vc_nsx-t_addingviewingclusters-adding-licensing-settings}
 
@@ -165,7 +144,7 @@ Especifique a opção de licenciamento para o componente VMware vSphere no clust
 ### Configurações da interface de rede
 {: #vc_nsx-t_addingviewingclusters-adding-network-interface-settings}
 
-As configurações de ativação da placa da interface de rede (NIC) são baseadas em sua seleção de **Rede pública e privada** ou **Somente rede privada**.rd.cloud_notm}}
+As configurações de ativação da Placa da interface de rede (NIC) baseiam-se em sua seleção de **Rede pública e privada** ou **Somente rede privada**.
 
 ### Resumo do Pedido
 {: #vc_nsx-t_addingviewingclusters-adding-order-summary}
@@ -183,14 +162,11 @@ Com base em sua configuração selecionada para o cluster, o custo estimado é g
 3. Clique em **Infraestrutura** na área de janela de navegação esquerda e clique em **Incluir** no canto superior direito da tabela **CLUSTERS**.
 4. Na página **Incluir cluster**, insira o nome do cluster.
 5. Se você desejar hospedar o cluster em um {{site.data.keyword.CloudDataCent_notm}} diferente daquele no qual a instância está hospedada, sob **Bare Metal Server**, marque a caixa de seleção **Selecionar um local diferente** e escolha o {{site.data.keyword.CloudDataCent_notm}} para hospedar a instância.
-6. Conclua a configuração do Bare Metal.
-   * Se você selecionou **Skylake** ou **Broadwell**, especifique o **Modelo de CPU**, a quantia de **RAM** e o **Número de {{site.data.keyword.baremetal_short}}**.
-   * Se você selecionou **Certificado pelo SAP**, especifique o modelo de CPU.
+6. Conclua a configuração do Bare Metal. Especifique o **Modelo de CPU**, a quantia de **RAM** e o **Número de {{site.data.keyword.baremetal_short}}**.
 7. Conclua a configuração de armazenamento.
   * Se você selecionar **Armazenamento vSAN**, especifique os tipos de disco para os discos de capacidade e de cache, o número de discos e a edição de licença vSAN. Se desejar mais armazenamento, marque a caixa **Intel Optane de alto desempenho**.
   * Se você selecionar **Armazenamento NFS** e desejar incluir e configurar as mesmas definições para todos os compartilhamentos de arquivo, especifique o **Número de compartilhamentos**, o **Desempenho** e o **Tamanho (GB)**.
   * Se você selecionar **Armazenamento NFS** e quiser incluir e configurar compartilhamentos de arquivo individualmente, selecione **Configurar compartilhamentos individualmente**. Em seguida, clique no ícone **+** ao lado do rótulo **Incluir armazenamento compartilhado** e selecione o **Desempenho** e o **Tamanho (GB)** para cada compartilhamento de arquivo. Deve-se selecionar pelo menos um compartilhamento de arquivo.
-  * Se você selecionar **Discos locais**, especifique a contagem de discos e o tipo de disco.
 8. Conclua as configurações da interface de rede.
 8. Especifique como a chave de licença do vSphere é fornecida:
   * Para usuários do Parceiro de Negócios, a licença do vSphere (Enterprise Plus edition) é incluída e comprada em seu nome.
@@ -250,7 +226,7 @@ Tabela 4. Detalhes do servidor ESXi
 | Versão | A versão do servidor ESXi. |
 | Credenciais | O nome de usuário e a senha para acessar o servidor ESXi. |
 | IP privado | O endereço IP privado do servidor ESXi. |
-| Status | O status do servidor ESXi, que pode ser um dos valores a seguir:<br> **Incluído** o servidor do ESXi foi incluído e está pronto para uso.<br> **Incluindo** o servidor do ESXi está sendo incluído.<br> **Excluindo** o servidor do ESXi está sendo excluído. |
+| Barra de Status | O status do servidor ESXi, que pode ser um dos valores a seguir:<br> **Incluído** o servidor do ESXi foi incluído e está pronto para uso.<br> **Incluindo** o servidor do ESXi está sendo incluído.<br> **Excluindo** o servidor do ESXi está sendo excluído. |
 
 Tabela 5. Detalhes do armazenamento
 
@@ -260,6 +236,33 @@ Tabela 5. Detalhes do armazenamento
 | Tamanho | A capacidade do armazenamento. |
 | IOPS/GB | O nível de desempenho do armazenamento. |
 | Protocolo do NFS | A versão NFS do armazenamento. |
+
+Tabela 6. Interface de rede - detalhes da VLAN
+
+| Item        | Descrição       |  
+|:------------- |:------------- |
+| Número da VLAN | O número exclusivo da VLAN.  |
+| Descrição | A descrição da VLAN.  |
+| Localização | O local do data center. |
+| Rota primária | A rota primária da VLAN. |
+
+Clique em **Visualizar recurso** para acessar os detalhes da VLAN.
+
+Tabela 7. Interface de rede - detalhes de sub-rede
+
+| Item        | Descrição       |  
+|:------------- |:------------- |
+| Nome | O nome da sub-rede. Clique no nome para acessar os detalhes da sub-rede. |
+| Tipo | O tipo de sub-rede: primária ou móvel. |
+| Descrição | A descrição da sub-rede. |
+
+Tabela 8. Interface de rede - detalhes do IP
+
+| Item        | Descrição       |  
+|:------------- |:------------- |
+| IP | O endereço IP. |
+| Barra de Status | O status do endereço IP. |
+| Descrição |A descrição do endereço IP. |
 
 ## Excluindo clusters das instâncias do vCenter Server com NSX-T
 {: #vc_nsx-t_addingviewingclusters-deleting}

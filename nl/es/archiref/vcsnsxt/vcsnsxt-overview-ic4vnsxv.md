@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -122,6 +125,7 @@ Estos son algunos de los principales componentes de NSX:
 En el siguiente diagrama se muestra cómo puede implementar algunas de las características de microsegmentación de NSX-V mediante la creación de grupos de seguridad. En este ejemplo, producción y desarrollo son los grupos de seguridad y las reglas de seguridad se asignan en función de estos grupos.
 
 Figura 3. Seguridad de NSX-V
+</br>
 ![Seguridad de NSX-V](vcsnsxt-vsecurity.svg)
 
 ## Enlaces relacionados

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -28,7 +31,7 @@ Antes de poder iniciar esta tarea, debe recopilar información para rellenar la 
 
 Tabla 1. Valores de despliegue
 
-| Parámetro | Valores sugeridos | Notes |
+| Parámetro | Valores sugeridos | Notas |
 |:--------- |:-------------- |:------ |
 | CPU de proxy | 1 vCPU | Squid no tiene requisitos mínimos |
 | RAM de proxy | 2 GB | Squid no tiene requisitos mínimos |
@@ -37,7 +40,7 @@ Tabla 1. Valores de despliegue
 | Dirección | ip proxy | Se debe utilizar una dirección IP de repuesto de la subred portátil privada del cliente asignada durante el proceso de suministro. Solo se reservarían dos direcciones IP en esta subred; una para el BCR y otra para el cliente-esg
 | Máscara de red | 255.255.255.192 | |
 | Pasarela| ip enlace ascendente privada customer-nsx-edge | Este es el valor de pasarela predeterminado para el servidor proxy, que es la dirección IP de enlace ascendente privada de customer-nsx-edge. Para encontrar la dirección IP, consulte el separador **Configuración** de **customer-nsx-edge**. |
-| Servidor DNS | ip de AD/DNS | Encontrará esta dirección IP en la página de la instancia de la consola de {{site.data.keyword.vmwaresolutions_short}}, en la página **Instancias desplegadas**. |
+| Servidor DNS | ip de AD/DNS | Encontrará esta dirección IP en la página de la instancia de la consola de {{site.data.keyword.vmwaresolutions_short}}, en la página **Recursos**. |
 | IP de BCR | ip de bcr | Es la dirección IP del direccionador de cliente de {{site.data.keyword.cloud_notm}} Backend y es la pasarela para 10.0.0.0/8 y 161.26.0.0/16. Esta dirección se utiliza en una ruta estática en el servidor proxy para que pueda llegar a la VCSA y al servidor de AD/DNS. |
 
 ## Configuración de NSX
@@ -172,5 +175,5 @@ Configure VUM para que utilice el servidor proxy para acceder a los repositorios
 ## Enlaces relacionados
 {: #vum-init-config-related}
 
-* [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demostraciones)

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-03-22"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -29,7 +32,7 @@ Weitere Informationen zu maximalen Grenzwerten finden Sie in [VMware Configurati
 ### Systemeinstellungen
 {: #vc_nsx-t_addingviewingclusters-adding-sys-settings}
 
-Wenn Sie einen Cluster für eine vCenter Server with NSX-T-Instanz hinzufügen, müssen Sie die folgenden Einstellungen angeben. 
+Wenn Sie einen Cluster für eine vCenter Server with NSX-T-Instanz hinzufügen, müssen Sie die folgenden Einstellungen angeben.
 
 #### Clustername
 {: #vc_nsx-t_addingviewingclusters-adding-cluster-name}
@@ -50,7 +53,7 @@ Wenn Sie den Cluster in einem anderen {{site.data.keyword.CloudDataCent_notm}}- 
 ### Einstellungen für Bare Metal Server
 {: #vc_nsx-t_addingviewingclusters-bare-metal-settings}
 
-Sie können **Skylake**, **SAP-zertifiziert** oder **Broadwell** auswählen.
+Sie können **Skylake** oder **Broadwell** auswählen.
 
 #### Skylake
 {: #vc_nsx-t_addingviewingclusters-adding-skylake}
@@ -65,20 +68,6 @@ Tabelle 1. Optionen für Skylake {{site.data.keyword.baremetal_short}}
 | Dual Intel Xeon Gold 5120-Prozessor / 28 Kerne insgesamt, 2,2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 
-#### SAP-zertifiziert
-{: #vc_nsx-t_addingviewingclusters-adding-sap}
-
-Wenn Sie **SAP-zertifiziert** auswählen, dann können Sie die CPU- oder RAM-Einstellungen nicht ändern.
-
-Wählen Sie gemäß Ihren Anforderungen eine Bare Metal Server-Konfiguration aus:
-* Dual Intel Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,3 GHzDual / 192 GB RAM
-* Dual Intel Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,3 GHzDual / 384 GB RAM
-* Dual Intel Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,3 GHzDual / 768 GB RAM
-* Dual Intel Xeon E5-2690 v4-Prozessor / 28 Kerne insgesamt, 2,6 GHz / 512 GB RAM
-* Quad Intel Xeon E7-8890 v4-Prozessor / 96 Kerne insgesamt, 2,2 GHz / 1024 GB RAM
-* Quad Intel Xeon E7-8890 v4-Prozessor / 96 Kerne insgesamt, 2,2 GHz / 2048 GB RAM
-* Quad Intel Xeon E7-8890 v4-Prozessor / 96 Kerne insgesamt, 2,2 GHz / 4096 GB RAM
-
 #### Broadwell
 {: #vc_nsx-t_addingviewingclusters-adding-broadwell}
 
@@ -88,16 +77,13 @@ Tabelle 2. Optionen für Broadwell {{site.data.keyword.baremetal_short}}
 
 | CPU-Modelloptionen        | RAM-Optionen       |
 |:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4 / 16 Kerne insgesamt, 2,1 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2650 v4 / 24 Kerne insgesamt, 2,2 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2690 v4 / 28 Kerne insgesamt, 2,6 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Quad Intel Xeon E7-4820 v4 / 40 Kerne insgesamt, 1,9 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 Kerne insgesamt, 2,2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 #### Bare Metal Server-Anzahl
 {: #vc_nsx-t_addingviewingclusters-adding-bare-metal-number}
 
-Für Cluster sind mindestens drei {{site.data.keyword.baremetal_short}}-Instanzen erforderlich. 
+Für Cluster sind mindestens drei {{site.data.keyword.baremetal_short}}-Instanzen erforderlich.
 
 Sie können bis zu 59 {{site.data.keyword.baremetal_short}}-Instanzen für einen Cluster hinzufügen. Sie können gleichzeitig 1 bis 59 ESXi-Server hinzufügen.
 
@@ -147,13 +133,6 @@ Tabelle 3. Optionen für die NFS-Leistungsstufe
   | 4 IOPS/GB | Diese Option ist für Workloads mit höherer Intensität geeignet, die zu einem bestimmten Zeitpunkt einen hohen Prozentsatz an aktiven Daten aufweisen. Anwendungsbeispiele sind transaktionsorientierte Datenbanken. |
   | 10 IOPS/GB | Diese Option ist für die aufwändigsten Workloadtypen wie beispielsweise die Analyse gedacht. Anwendungsbeispiele sind Hochtransaktionsdatenbanken und andere leistungskritische Datenbanken. Diese Leistungsstufe ist auf eine maximale Kapazität von 4 TB pro gemeinsam genutzte Dateiressource begrenzt. |
 
-### Lokale Platten
-{: #vc_nsx-t_addingviewingclusters-adding-local-disks}
-
-Die Option für lokale Festplatten steht nur für die Bare-Metal-Konfiguration des **SAP-zertifizierten** Quad Intel Xeon E7-8890 v4-Prozessors zur Verfügung. Geben Sie die folgenden Optionen an:
-* **Plattenanzahl**: Wählen Sie die Anzahl der Platten aus, die hinzugefügt werden sollen.
-* **Plattentyp**: Wählen Sie eine Option für den Plattentyp aus, den Sie benötigen.
-
 ### Lizenzierungseinstellungen
 {: #vc_nsx-t_addingviewingclusters-adding-licensing-settings}
 
@@ -164,7 +143,7 @@ Geben Sie die Lizenzierungsoption für die Komponente "VMware vSphere" im Cluste
 ### Netzschnittstelleneinstellungen
 {: #vc_nsx-t_addingviewingclusters-adding-network-interface-settings}
 
-Die Einstellungen für die Aktivierung der Netzschnittstellenkarte (NIC - Network Interface Card) basieren darauf, ob Sie **Öffentliches und privates Netz** oder **Nur privates Netz**.rd.cloud_notm}} auswählen. 
+Die Einstellungen für die Aktivierung der Netzschnittstellenkarte (NIC - Network Interface Card) basieren darauf, ob Sie **Öffentliches und privates Netz** oder **Nur privates Netz** auswählen.
 
 ### Bestellübersicht
 {: #vc_nsx-t_addingviewingclusters-adding-order-summary}
@@ -174,7 +153,7 @@ Auf Basis der für den Cluster ausgewählten Konfiguration werden die geschätzt
 ## Vorgehensweise zum Hinzufügen von Clustern zu vCenter Server with NSX-T-Instanzen
 {: #vc_nsx-t_addingviewingclusters-adding-procedure}
 
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**. 
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**.
 2. Klicken Sie in der Tabelle **vCenter Server-Instanzen** auf die Instanz, zu der Cluster hinzugefügt werden sollen.
 
    Vergewissern Sie sich, dass sich die Instanz im Status **Bereit** befindet. Andernfalls können Sie keine Cluster zur Instanz hinzufügen.
@@ -182,14 +161,11 @@ Auf Basis der für den Cluster ausgewählten Konfiguration werden die geschätzt
 3. Klicken Sie im linken Navigationsfenster auf **Infrastruktur** und anschließend in der rechten oberen Ecke der Tabelle **CLUSTER** auf **Hinzufügen**.
 4. Geben Sie auf der Seite **Cluster hinzufügen** den Clusternamen ein.
 5. Wenn Sie für den Cluster ein anderes {{site.data.keyword.CloudDataCent_notm}} als Host verwenden möchten als das, in dem die Instanz gehostet wird, aktivieren Sie unter **Bare Metal Server** das Kontrollkästchen **Anderen Standort auswählen** und wählen Sie dann das gewünschte {{site.data.keyword.CloudDataCent_notm}} als Host für die Instanz aus.
-6. Führen Sie die Bare-Metal-Konfiguration durch.
-   * Wenn Sie **Skylake** oder **Broadwell** ausgewählt haben, geben Sie das **CPU-Modell**, die Größe des **RAM** und die **Anzahl der {{site.data.keyword.baremetal_short}}-Instanzen** an.
-   * Wenn Sie **SAP-zertifiziert** ausgewählt haben, geben Sie das CPU-Modell an.
+6. Führen Sie die Bare-Metal-Konfiguration durch. Geben Sie das **CPU-Modell**, die **RAM**-Größe und die **Anzahl der {{site.data.keyword.baremetal_short}}** an.
 7. Führen Sie die Speicherkonfiguration durch.
   * Wenn Sie **vSAN-Speicher** auswählen, geben Sie die Plattentypen für die Kapazitäts- und Cacheplatten, die Anzahl der Platten und die vSAN-Lizenzedition an. Falls Sie mehr Speicher benötigen, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen.
   * Wenn Sie **NFS-Speicher** auswählen und für alle gemeinsam genutzten Dateiressourcen dieselben Einstellungen konfigurieren möchten, geben Sie die **Anzahl der gemeinsam genutzten Ressourcen**, die **Leistung**und die **Größe (GB)** an.
   * Wenn Sie **NFS-Speicher** auswählen und alle gemeinsam genutzten Dateiressourcen einzeln hinzufügen und konfigurieren möchten, wählen Sie **Gemeinsam genutzte Ressourcen einzeln konfigurieren** aus. Klicken Sie anschließend auf das Symbol **+** neben der Bezeichnung **Gemeinsam genutzten Speicher hinzufügen** und wählen Sie für jede Dateifreigabe die Optionen **Leistung** und **Größe (GB)** aus. Sie müssen mindestens eine gemeinsam genutzte Dateiressource auswählen.
-  * Wenn Sie **Lokale Platten** auswählen, geben Sie die Plattenanzahl und den Plattentyp an.
 8. Geben Sie die Netzschnittstelleneinstellungen an.
 8. Geben Sie an, wie der vSphere-Lizenzschlüssel bereitgestellt wird:
   * Für Benutzer der Kategorie "Business Partner" ist die vSphere-Lizenz (Enterprise Plus Edition) enthalten und wird in Ihrem Namen erworben.
@@ -200,7 +176,7 @@ Auf Basis der für den Cluster ausgewählten Konfiguration werden die geschätzt
 10. Überprüfen Sie im Fenster **Bestellübersicht** die Clusterkonfiguration, bevor Sie den Cluster hinzufügen.
    1. Überprüfen Sie die Einstellungen für den Cluster.
    2. Überprüfen Sie die geschätzten Kosten des Clusters. Klicken Sie auf **Preisdetails**, um eine PDF-Datei mit der Zusammenfassung zu generieren. Ihre Bestellübersicht können Sie speichern oder drucken, indem Sie rechts oben im PDF-Fenster auf das Symbol **Drucken** bzw. **Herunterladen** klicken.
-   3. Klicken Sie auf den Link bzw. die Links für die Bedingungen, die für Ihre Bestellung gelten, und bestätigen Sie, dass Sie mit diesen Bedingungen einverstanden sind, bevor Sie den Cluster hinzufügen. 
+   3. Klicken Sie auf den Link bzw. die Links für die Bedingungen, die für Ihre Bestellung gelten, und bestätigen Sie, dass Sie mit diesen Bedingungen einverstanden sind, bevor Sie den Cluster hinzufügen.
    4. Klicken Sie auf **Bereitstellung**.
 
 ### Ergebnisse nach Hinzufügen von Clustern zu vCenter Server with NSX-T-Instanzen
@@ -215,7 +191,7 @@ Der Clustername kann nicht geändert werden. Wenn Sie den Clusternamen ändern, 
 ## Vorgehensweise zum Anzeigen von Clustern in vCenter Server with NSX-T-Instanzen
 {: #vc_nsx-t_addingviewingclusters-viewing-procedure}
 
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**. 
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**.
 2. Klicken Sie in der Tabelle **vCenter Server-Instanzen** auf eine Instanz, um die Cluster in dieser Instanz anzuzeigen.
 3. Klicken Sie im linken Navigationsfenster auf **Infrastruktur**. Prüfen Sie in der Tabelle **CLUSTER** die Zusammenfassung für die Cluster:
   * **Name**: Der Name des Clusters.
@@ -239,7 +215,7 @@ Der Clustername kann nicht geändert werden. Wenn Sie den Clusternamen ändern, 
         <dd class="dd">Der Cluster wurde gelöscht.</dd>
     </dl>
   * **Aktionen**: Klicken Sie auf das Symbol **Löschen**, um den Cluster zu löschen.
-4. Klicken Sie auf einen Clusternamen, um die Details zum ESXi-Server, zum Speicher und zur Netzschnittstelle anzuzeigen: 
+4. Klicken Sie auf einen Clusternamen, um die Details zum ESXi-Server, zum Speicher und zur Netzschnittstelle anzuzeigen:
 
 Tabelle 4. Details zum ESXi-Server
 
@@ -249,7 +225,7 @@ Tabelle 4. Details zum ESXi-Server
 | Version | Die Version des ESXi-Servers. |
 | Berechtigungsnachweise | Der Benutzername und das Kennwort für den Zugriff auf den ESXi-Server. |
 | Private IP | Die private IP-Adresse des ESXi-Servers. |
-| Status | Der Status des ESXi-Servers, der einen der folgenden Werte aufweisen kann:<br> **Hinzugefügt** Der ESXi-Server wurde hinzugefügt und kann verwendet werden. <br> **Wird hinzugefügt** Der ESXi-Server wird gerade hinzugefügt. <br> **Wird gelöscht** Der ESXi-Server wird gerade gelöscht. |
+| Status | Der Status des ESXi-Servers, der einen der folgenden Werte aufweisen kann:<br> **Hinzugefügt** Der ESXi-Server wurde hinzugefügt und kann verwendet werden.<br> **Wird hinzugefügt** Der ESXi-Server wird gerade hinzugefügt.<br> **Wird gelöscht** Der ESXi-Server wird gerade gelöscht. |
 
 Tabelle 5. Speicherdetails
 
@@ -259,6 +235,33 @@ Tabelle 5. Speicherdetails
 | Größe | Die Kapazität des Speichers. |
 | IOPS/GB | Die Leistungsstufe des Speichers. |
 | NFS-Protokoll | Die NFS-Version des Speichers. |
+
+Tabelle 6. Netzschnittstelle - VLAN-Details
+
+| Element        | Beschreibung       |  
+|:------------- |:------------- |
+| VLAN-Nummer | Die eindeutige VLAN-Nummer.  |
+| Beschreibung | Die Beschreibung des VLAN.  |
+| Standort | Der Standort des Rechenzentrums. |
+| Primäre Route | Die primäre Route des VLAN. |
+
+Klicken Sie auf **Ressourcen anzeigen**, um auf die VLAN-Details zuzugreifen.
+
+Tabelle 7. Netzschnittstelle - Teilnetzdetails
+
+| Element        | Beschreibung       |  
+|:------------- |:------------- |
+| Name | Der Teilnetzname. Klicken Sie auf den Namen, um auf die Teilnetzdetails zuzugreifen.|
+| Typ | Der Typ des Teilnetzes: primär oder portierbar. |
+| Beschreibung | Die Beschreibung des Teilnetzes. |
+
+Tabelle 8. Netzschnittstelle - IP-Details
+
+| Element        | Beschreibung       |  
+|:------------- |:------------- |
+| IP | Die IP-Adresse. |
+| Status | Der Status der IP-Adresse. |
+| Beschreibung |Die Beschreibung der IP-Adresse.  |
 
 ## Cluster aus vCenter Server with NSX-T-Instanzen löschen
 {: #vc_nsx-t_addingviewingclusters-deleting}
@@ -276,7 +279,7 @@ Wird ein Cluster nicht mehr benötigt, kann er aus einer Instanz gelöscht werde
 ### Vorgehensweise zum Löschen von Clustern aus vCenter Server with NSX-T-Instanzen
 {: #vc_nsx-t_addingviewingclusters-deleting-procedure}
 
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**. 
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen**.
 2. Klicken Sie in der Tabelle **vCenter Server-Instanzen** auf die Instanz, aus der Cluster gelöscht werden sollen.
 
    Vergewissern Sie sich, dass sich die Instanz im Status **Bereit** befindet. Andernfalls können Sie keine Cluster aus der Instanz löschen.

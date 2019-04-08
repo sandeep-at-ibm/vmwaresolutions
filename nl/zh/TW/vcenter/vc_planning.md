@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-03-20"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -35,9 +38,11 @@ vCenter Server 部署具有嚴格的實體基礎架構需求。因此，您只�
 |DAL13 |達拉斯|NA 南部| Skylake、SAP 認證、Broadwell |
 |FRA02 |法蘭克福|歐洲| Skylake、SAP 認證、Broadwell |
 |FRA04 |法蘭克福|歐洲| Skylake、SAP 認證、Broadwell |
+|FRA05 |法蘭克福|歐洲| Skylake、Broadwell |
 |HKG02 |香港|亞太地區| Skylake、Broadwell |
 |LON02 |倫敦|歐洲| Skylake、Broadwell |
 |LON04 |倫敦|歐洲| Skylake、SAP 認證、Broadwell |
+|LON05 |倫敦|歐洲| Skylake、Broadwell |
 |LON06 |倫敦|歐洲| Skylake、SAP 認證、Broadwell |
 |MEL01 |墨爾本|亞太地區| Skylake、SAP 認證、Broadwell |
 |MEX01 |克雷塔羅|NA 南部| Skylake、SAP 認證、Broadwell |
@@ -78,7 +83,8 @@ vCenter Server 部署具有嚴格的實體基礎架構需求。因此，您只�
 
 您可以根據需要來訂購實例基礎的附加程式服務（例如災難回復）。如需相關資訊，請參閱[訂購、檢視及移除 vCenter Server 實例的服務](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)。
 
-對 vCenter Server with NSX-T 實例提供服務。{:note}
+對 vCenter Server with NSX-T 實例提供服務。
+{:note}
 
 ## 容量考量
 {: #vc_planning-capacity-considerations}

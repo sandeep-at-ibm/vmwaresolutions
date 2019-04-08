@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -52,7 +55,7 @@ lastupdated: "2019-03-12"
 
 그림 1. Cloud Foundation 다중 사이트 배치
 
-![Cloud Foundation 다중 사이트 배치](multisite-hub-spoke.svg "Cloud Foundation 다중 사이트 배치")
+![Cloud Foundation 다중 사이트 배치](../vcenter/multisite-hub-spoke.svg "Cloud Foundation 다중 사이트 배치")
 
 모델에는 다음 계층이 포함됩니다.
 

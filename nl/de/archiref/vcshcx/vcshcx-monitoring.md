@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-05"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -45,7 +48,7 @@ So konfigurieren Sie die Webbenutzerschnittstelle für die WAN-Optimierung:
 14.	Rufen Sie folgende Adresse auf: `https://<configured_WAN_OPT_IP>`.
 15.	Melden Sie sich mit dem `admin`-Standardbenutzer und dem `admin`-Kennwort an.
 
-Sie können jetzt die Webbenutzerschnittstelle des WAN-Optimierungsprogramms verwenden, um Durchsatzraten und Komprimierungsverhältnisse zu überwachen sowie um Einschränkungen der Bandbreite festzulegen. 
+Sie können jetzt die Webbenutzerschnittstelle des WAN-Optimierungsprogramms verwenden, um Durchsatzraten und Komprimierungsverhältnisse zu überwachen sowie um Einschränkungen der Bandbreite festzulegen.
 
 ### Bandbreitenregulierung bei der Migration
 {: #vcshcx-monitoring-mig-bandwidth}
@@ -58,9 +61,9 @@ Dies ist dann angebracht, wenn Sie die Paketkomponenten in der HCX-Client-Benutz
 Dadurch werden Bandbreitengrenzwerte nur für den Migrationsdatenverkehr festgelegt. Erweiterter L2-Datenverkehr wird von dieser Einstellung nicht beeinflusst.
 {:note}
 
-1. Melden Sie sich bei der Webbenutzerschnittstelle für das WAN-Optimierungsprogramm an. 
+1. Melden Sie sich bei der Webbenutzerschnittstelle für das WAN-Optimierungsprogramm an.
 2. Wählen Sie auf der Registerkarte **Konfiguration** die Option **Shaper** aus dem Dropdown-Menü aus.
-3. Legen Sie im Feld **Max. Bandbreite** die maximale Bandbreite in Kb/s fest, die für die WAN-Optimierungs-Appliance verfügbar ist. Überschreiten Sie nicht die maximale Bandbreite der WAN-Verbindung. Um den Wert in Mb/s festzulegen, multiplizieren Sie die Zahl mit 1.000. Um den Wert in Gb/s festzulegen, multiplizieren Sie die Zahl mit 1.000.000. Der Standardwert ist 10 Gb/s (10.000.000 Kb/s). 
+3. Legen Sie im Feld **Max. Bandbreite** die maximale Bandbreite in Kb/s fest, die für die WAN-Optimierungs-Appliance verfügbar ist. Überschreiten Sie nicht die maximale Bandbreite der WAN-Verbindung. Um den Wert in Mb/s festzulegen, multiplizieren Sie die Zahl mit 1.000. Um den Wert in Gb/s festzulegen, multiplizieren Sie die Zahl mit 1.000.000. Der Standardwert ist 10 Gb/s (10.000.000 Kb/s).
 4. Klicken Sie auf **Anwenden**.
 
 Zur Bandbreitenregulierung für erweitertes L2 kann QoS für UDP 500 und 4500 für den Tunnelverkehr zwischen den L2C-Appliances eingesetzt werden.
@@ -80,12 +83,12 @@ IP>:9443` auszuführen.
 
 Mit den folgenden Methoden können Sie die Bandbreitennutzung und die Latenzzeit überwachen.
 
-- vMotion Traffic wird am besten über die Webbenutzerschnittstelle für das WAN-Optimierungsprogramm realisiert. Das WAN-Optimierungsprogramm reduziert den Datenverkehr, der über das WAN geht, drastisch und reduziert den Paketverlust durch das Senden von redundanten Paketen. Es wurde beobachtet, dass das typische Verhältnis von LAN- zu WAN-Bandbreite ungefähr 3:1 beträgt (350 Mb/s LAN = 90-120 Mb/s WAN). 
+- vMotion Traffic wird am besten über die Webbenutzerschnittstelle für das WAN-Optimierungsprogramm realisiert. Das WAN-Optimierungsprogramm reduziert den Datenverkehr, der über das WAN geht, drastisch und reduziert den Paketverlust durch das Senden von redundanten Paketen. Es wurde beobachtet, dass das typische Verhältnis von LAN- zu WAN-Bandbreite ungefähr 3:1 beträgt (350 Mb/s LAN = 90-120 Mb/s WAN).
 
-- Die replikationsbasierte (Massen-)Migration von VMs in HCX führt zur Verschiebung von VMs mit Thick Provisioning. Während dies nicht wünschenswert ist, zeigt die Benutzerschnittstelle des WAN-Optimierungsprogramms ein hohes Verhältnis zwischen LAN- und WAN-Nutzung an, wenn Sie die Daten nicht verwendeter Platten verschieben. Umgekehrt ist zu beobachten, dass bei der Migration von nicht komprimierbaren Daten wie DB-Daten und digitalen Medien die WAN-Nutzung am höchsten ist und der LAN-Nutzung näher kommt. 
+- Die replikationsbasierte (Massen-)Migration von VMs in HCX führt zur Verschiebung von VMs mit Thick Provisioning. Während dies nicht wünschenswert ist, zeigt die Benutzerschnittstelle des WAN-Optimierungsprogramms ein hohes Verhältnis zwischen LAN- und WAN-Nutzung an, wenn Sie die Daten nicht verwendeter Platten verschieben. Umgekehrt ist zu beobachten, dass bei der Migration von nicht komprimierbaren Daten wie DB-Daten und digitalen Medien die WAN-Nutzung am höchsten ist und der LAN-Nutzung näher kommt.
 
 Beobachtungen:
-- Die vMotion-Migration einer VM innerhalb von HCX erzeugt nicht mehr Durchsatz als der vMotion-Netzbetrieb für einen einzelnen ESXi-Host. 
+- Die vMotion-Migration einer VM innerhalb von HCX erzeugt nicht mehr Durchsatz als der vMotion-Netzbetrieb für einen einzelnen ESXi-Host.
 - Da bei der Massenmigration mehrere Migrationen gleichzeitig ausgeführt werden können, erreicht sie eine höhere Bandbreitennutzung als die vMotion-Migration. Das auf Kundenseite beobachtete Verhältnis mit vMotion-Links von 1 Gb/s zu den ESX-Hosts betrug acht Replikationen = Bandbreitennutzung von 1 vMotion.
 - Das Verschieben von leerem Bereich auf die Platte führt zur Anzeige einer hohen LAN-Nutzung mit einem hohen Verhältnis und daher niedrigen WAN-Nutzung. Beachten Sie, dass 1 Gb/s der Grenzwert zu sein scheint. In diesem speziellen Fall ist das vMotion-Netz nur zu 1 Gb/s in der Lage, stellt also den Engpass dar.
 - vMotion-Migration einer Oracle-Datenbank von mehreren TB. Bei einer WAN-Verbindung von 1 Gb/s ist die Begrenzung das vMotion-Netz mit 1 Gb/s.

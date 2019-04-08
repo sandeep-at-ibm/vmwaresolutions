@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-04"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # KMIP for VMware on IBM Cloud-Instanzen anzeigen
@@ -16,7 +19,7 @@ Mit dem hier beschriebenen Verfahren können Sie die lokalen KMIP for VMware on 
 ## Vorgehensweise zum Anzeigen von KMIP HCX on IBM Cloud-Instanzen
 {: #kmip_standalone_viewing-procedure}
 
-Klicken Sie im linken Navigationsfenster auf **Ressourcen** und blättern Sie abwärts zur Tabelle **KMIP for VMware on {{site.data.keyword.cloud_notm}}-Instanzen**, um die Informationen zu den von Ihnen bestellten Instanzen anzuzeigen: 
+Klicken Sie im linken Navigationsfenster auf **Ressourcen** und blättern Sie abwärts zur Tabelle **KMIP for VMware on {{site.data.keyword.cloud_notm}}-Instanzen**, um die Informationen zu den von Ihnen bestellten Instanzen anzuzeigen:
 
 Tabelle 1. Elemente von KMIP for VMware on {{site.data.keyword.cloud_notm}}-Instanzen
 

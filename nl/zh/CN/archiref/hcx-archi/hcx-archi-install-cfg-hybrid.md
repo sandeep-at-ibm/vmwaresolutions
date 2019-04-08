@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-15"
 
+subcollection: vmwaresolutions
+
+
 ---
 # 安装和配置混合服务
 {: #hcx-archi-install-cfg-hybrid}

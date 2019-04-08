@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -40,7 +43,7 @@ Neben dem öffentlichen und dem privaten Netz ist jeder {{site.data.keyword.clou
 * Primäre IP-Adressen werden Einheiten (Geräten), bare metal Servern und virtuellen Servern zugeordnet, die von {{site.data.keyword.cloud_notm}} bereitgestellt werden. Benutzer sollten keine IP-Adressen in diesen Blöcken zuweisen.
 * Portierbare IP-Adressen werden zur Verfügung gestellt, die ein Benutzer nach Bedarf zuweisen und verwalten kann.
 
-Primäre oder portierbare IP-Adressen können an ein beliebiges VLAN im Kundenkonto weiterleitbar gemacht werden, wenn das Konto als VRF-Konto (VRF - Virtual Routing and Forwarding) konfiguriert ist. 
+Primäre oder portierbare IP-Adressen können an ein beliebiges VLAN im Kundenkonto weiterleitbar gemacht werden, wenn das Konto als VRF-Konto (VRF - Virtual Routing and Forwarding) konfiguriert ist.
 
 ## Virtual Routing and Forwarding
 {: #vcsnsxt-overview-ic4vnetwork-vrf}
@@ -53,6 +56,7 @@ Primäre oder portierbare IP-Adressen können an ein beliebiges VLAN im Kundenko
 Jeder physische Host im Design verfügt über zwei redundante Paare von Ethernet-Verbindungen mit 10 Gb/s zu jedem (öffentlichen und privaten) {{site.data.keyword.cloud_notm}} Top of Rack-Switch (ToR-Switch). Die Adapter sind als einzelne Verbindungen (ohne Bonding) für Verbindungen mit insgesamt 4 × 10 Gb/s eingerichtet. Hierdurch kann jede NIC-Verbindung (NIC - Networking Interface Card, Netzschnittstellenkarte) unabhängig von den anderen Verbindungen arbeiten.
 
 Abbildung 2. Physische Hostverbindungen
+</br>
 ![Physische Hostverbindungen](vcsnsxt-host-connections.svg)
 
 ## VLANs

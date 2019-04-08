@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-14"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # 辅助 vCenter Server 系统未显示在 vSphere Web Client 库存中

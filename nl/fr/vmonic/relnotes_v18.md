@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2017-08-28"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Notes sur l'édition pour la version 1.8

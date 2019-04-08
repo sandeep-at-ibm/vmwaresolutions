@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-04"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # 将 V2.5 之前的 vCenter Server 实例迁移到 IBM Cloud 帐户

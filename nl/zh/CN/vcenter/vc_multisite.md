@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-08"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -33,9 +36,9 @@ lastupdated: "2019-03-08"
 * **辅助实例**：一个或多个辅助 vCenter Server 实例，这些实例与主实例相链接，配置如下：
    *  SSO 站点名称
    *  链接到主实例上根域的 DNS 子域
-   *  DNS 和 AD 复制在主实例和辅助实例上的 AD 虚拟机之间设置。
-   *  对于在 V2.8 或更高版本中部署的主实例：部署并配置了具有嵌入式 Platform Services Controller (PSC) 的 vCenter Server Appliance (vCSA)。
-   *  辅助实例上的 VMware vCenter 设置为以“增强链接方式”与主实例上的 vCenter 相链接。
+   *  主实例和辅助实例上 AD 虚拟机之间的 DNS 和 AD 复制设置
+   *  对于在 V2.8 或更高版本中部署的主实例：部署并配置了具有嵌入式 Platform Services Controller (PSC) 的 vCenter Server Appliance (vCSA)
+   *  辅助实例上的 VMware vCenter 设置为以“增强链接方式”与主实例上的 vCenter 相链接
 
 ## vCenter Server 多站点部署
 {: #vc_multisite-deployment}

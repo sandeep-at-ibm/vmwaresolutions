@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-08"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -34,7 +37,7 @@ Un déploiement multisite est constitué des composants suivants.
    *  Nom de site de connexion unique
    *  Sous-domaine DNS lié au domaine racine sur l'instance principale
    *  Réplication DNS et AD configurée entre les machines virtuelles AD de l'instance principale et des instances secondaires
-   *  Pour les instances principales qui sont déployées dans la version 2.8 ou une version ultérieure : vCenter Server Appliance (vCSA) avec Platform Services Controller (PSC) intégré, déployé et configuré.
+   *  Pour les instances principales qui sont déployées dans la version 2.8 ou une version ultérieure : vCenter Server Appliance (vCSA) avec contrôleur PSC (Platform Services Controller) intégré, déployé et configuré
    *  VMware vCenter sur les instances secondaires configuré en mode lien étendu (Enhanced Linked) sur le serveur vCenter de l'instance principale
 
 ## Déploiement multisite vCenter Server

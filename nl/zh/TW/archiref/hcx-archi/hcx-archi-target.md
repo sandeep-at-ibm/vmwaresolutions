@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-15"
 
+subcollection: vmwaresolutions
+
+
 ---
 # VMware HCX on IBM Cloud 元件層次目標架構
 {: #hcx-archi-target}

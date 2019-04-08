@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -22,7 +25,7 @@ lastupdated: "2019-02-21"
 -	使用 Cloud Automation Manager (CAM) 来编写基础架构即代码 (IaC) 的脚本，以编写和编排通过 VM 和容器创建的服务，从而与其 DevOps 工具链及其 ITSM 解决方案集成。
 
 参考体系结构侧重于网络体系结构，具有以下关键组件：
-- **内部部署虚拟化** - 当前托管 Acme Skateboards VM 的 VMware 集群。要现代化的正是当前托管应用程序的这些 VM。需要此集群来满足 [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf) 文档中所述的先决条件，以支持客户将 VM 迁移到在 {{site.data.keyword.cloud_notm}} 上运行的 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 实例中，并支持根据需要迁移回原来的位置。
+- **内部部署虚拟化** - 当前托管 Acme Skateboards VM 的 VMware 集群。要现代化的正是当前托管应用程序的这些 VM。此集群需要满足 [VMware HCX on {{site.data.keyword.cloud_notm}} 解决方案体系结构](https://test.cloud.ibm.com/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)文档中所述的先决条件，以支持客户将 VM 迁移到在 {{site.data.keyword.cloud_notm}} 上运行的 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 实例中，并支持根据需要迁移回原来的位置。
 - **VMware vCenter Server on IBM Cloud** - vCenter Server 提供自动部署 VMware 软件定义的数据中心 (SDDC) 解决方案所需的基本 VMware 构建块：vSphere、vCenter Server、NSX-V 和存储选项（包括 vSAN 或 {{site.data.keyword.cloud_notm}} 耐久性存储器）。此 VMware 集群是所迁移 VM 的目标以及在 {{site.data.keyword.icpfull_notm}} 中托管的容器中某些现代化应用程序的目标。
 
 体系结构的关键组件包括：

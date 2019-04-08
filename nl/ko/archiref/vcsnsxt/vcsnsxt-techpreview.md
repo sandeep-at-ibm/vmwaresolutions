@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -90,7 +93,7 @@ vSAN 트래픽	|무제한	|100	| 0
 -	전송 노드는 VLAN과 오버레이 전송 구역 모두에 대해 구성됩니다.
 -	N-VDS가 ESXi 전송 노드에 작성됩니다.
 -	VMkernel 포트가 VSS/VDS에서 N-VDS로 마이그레이션됩니다.
--	관리 컴포넌트에서 사용하기 위한 계층 0 라우터가 구성됩니다.
+-	관리 컴포넌트에서 사용하기 위한 티어 0 라우터가 구성됩니다.
 
 다음은 구성되지 않습니다.
 -	오버레이 논리 스위치.
@@ -150,6 +153,7 @@ Calico는 분산 스케일 확장 아키텍처를 기반으로 빌드되며, 단
 -	BIRD는 Felix도 호스트하는 모든 노드에 BGP 클라이언트 기능을 제공합니다. Felix가 Linux 커널에 라우트를 삽입할 때 BGP 클라이언트는 라우트를 선택하여 배치의 다른 노드에 분배합니다. 대규모 환경의 경우 연결할 BGP 클라이언트의 중심점 역할을 하는 BGP 라우트 리플렉터도 배치됩니다. 이를 통해 각 클라이언트는 다른 모든 클라이언트 프로그램과 통신하고 라우트를 배치의 다른 노드에 분배할 필요가 없습니다.
 
 그림 3. Calico 개요
+</br>
 ![Calico 개요](vcsnsxt-calico-cni.svg)
 
 ### NSX-T 및 Calico
@@ -187,6 +191,7 @@ Kubernetes와 NSX 관리자 간에 통합을 제공하는 코어 컴포넌트는
 다음에는 Acme 및 Skateboards의 두 가지 Kubernetes 네임스페이스가 제공됩니다. 각 네임스페이스에는 전용 논리 스위치, 티어 1 라우터, 및 TO 논리 라우터에 연결하는 IP 세그먼트가 있습니다.
 
 그림 5. Kubernetes NCP
+</br>
 ![Kubernetes NCP](vcsnsxt-ncpk8sapi.svg)
 
 ### NSX Security Policy Manager
@@ -207,6 +212,7 @@ NSX-T는 네트워크 가상화를 제공할 뿐만 아니라, 보안 솔루션�
 -	스위치 보안은 무단 트래픽에 대한 강력한 제어와 보안을 제공합니다.
 
 그림 6. NSX-T 마이크로 세그먼트화
+</br>
 ![NSX-T 마이크로 세그먼트화의 예](vcsnsxt-tsecurity.svg)
 
 ### NSX–T 및 NSX-V 간의 차이점
@@ -242,6 +248,7 @@ VMware NSX-T는 VMware vSphere 환경에서 NSX-V와 같은 기능을 제공합�
 NSX-V와 Kubernetes의 통합을 위해 {{site.data.keyword.cloud_notm}} 자동화에서는 vCenter Server 인스턴스에 {{site.data.keyword.icpfull_notm}}를 설치합니다. 전용 스위치/VXLAN, DLR 및 ESG는 특히 Kubernetes 네트워크를 위해 작성됩니다. {{site.data.keyword.icpfull_notm}}를 위한 1일 오버레이 네트워크는 192.168.20.0/24 서브넷으로, 언더레이 네트워크에 액세스하기 위해 ESG를 통한 라우팅 설정을 사용합니다.
 
 그림 7. NSX-V 및 Kubernetes
+</br>
 ![NSX-V 및 Kubernetes](vcsnsxt-transitnet.svg)
 
 #### NSX-T와의 통합
@@ -252,6 +259,7 @@ NSX-T와 Kubernetes의 통합은 NCP(NSX-T container plug-in)를 통해 수행�
 NSX-T 분산 방화벽은 Kubernetes 클러스터를 위해 구현되는 네트워크 정책을 작성할 수 있습니다. 유입(ingress) 및 유출(egress) 정책, 레이블 및 표현식 일치 정책을 지원하고, 모두 Kubernetes 인프라에 적용할 수 있는 로드 밸런서 기능을 가지고 있습니다.
 
 그림 8. NSX-T 및 Kubernetes
+</br>
 ![NSX-T 및 Kubernetes](vcsnsxt-t1t0router.svg)
 
 ## 관련 링크

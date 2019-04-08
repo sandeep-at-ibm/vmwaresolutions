@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-27"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -23,7 +26,7 @@ lastupdated: "2019-02-27"
 
 図 1. {{site.data.keyword.cloud_notm}} 上の接続ストレージのアーキテクチャーの全体像
 
-![接続ストレージのアーキテクチャー](../solution/physical_nfs.svg "IBM Cloud 上の接続ストレージのアーキテクチャーの全体像")
+![接続ストレージのアーキテクチャー](../solution/vcsv4radiagrams-ra-nfs-shares.svg "IBM Cloud 上の接続ストレージのアーキテクチャーの全体像")
 
 ## 物理インフラストラクチャー設計
 {: #storage-infra-design-phys-infra-design}

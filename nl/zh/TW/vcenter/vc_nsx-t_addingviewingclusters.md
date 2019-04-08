@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-03-22"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -50,7 +53,7 @@ lastupdated: "2019-03-04"
 ### Bare Metal Server 設定
 {: #vc_nsx-t_addingviewingclusters-bare-metal-settings}
 
-您可以選擇 **Skylake**、**SAP 認證**或 **Broadwell**。
+您可以選擇 **Skylake** 或 **Broadwell**。
 
 #### Skylake
 {: #vc_nsx-t_addingviewingclusters-adding-skylake}
@@ -65,20 +68,6 @@ lastupdated: "2019-03-04"
 |雙重 Intel Xeon Gold 5120 處理器 / 總計 28 核心，2.2 GHz| 128 GB、192 GB、384 GB、768 GB、1.5 TB |
 |雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz| 128 GB、192 GB、384 GB、768 GB、1.5 TB |
 
-#### SAP 認證
-{: #vc_nsx-t_addingviewingclusters-adding-sap}
-
-當您選取 **SAP 認證**時，無法變更 CPU 或 RAM 設定。
-
-根據您的需求，選取 Bare Metal Server 配置：
-* 雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz / 192 GB RAM
-* 雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz / 384 GB RAM
-* 雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz / 768 GB RAM
-* 雙重 Intel Xeon E5-2690 v4 處理器 / 總計 28 核心，2.6 GHz / 512 GB RAM
-* 四重 Intel Xeon E7-8890 v4 處理器 / 總計 96 核心，2.2 GHz / 1024 GB RAM
-* 四重 Intel Xeon E7-8890 v4 處理器 / 總計 96 核心，2.2 GHz / 2048 GB RAM
-* 四重 Intel Xeon E7-8890 v4 處理器 / 總計 96 核心，2.2 GHz / 4096 GB RAM
-
 #### Broadwell
 {: #vc_nsx-t_addingviewingclusters-adding-broadwell}
 
@@ -88,9 +77,6 @@ lastupdated: "2019-03-04"
 
 | CPU 型號選項             |RAM 選項          |
 |:------------- |:------------- |
-|雙重 Intel Xeon E5-2620 v4 / 總計 16 核心，2.1 GHz |128 GB、256 GB、512 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon E5-2650 v4 / 總計 24 核心，2.2 GHz |128 GB、256 GB、512 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon E5-2690 v4 / 總計 28 核心，2.6 GHz |128 GB、256 GB、512 GB、768 GB、1.5 TB |
 |四重 Intel Xeon E7-4820 v4 / 總計 40 核心，1.9 GHz |128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 |四重 Intel Xeon E7-4850 v4 / 總計 64 核心，2.2 GHz |128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 
@@ -147,13 +133,6 @@ lastupdated: "2019-03-04"
   |4 IOPS/GB |這個選項是為一次擁有高百分比作用中資料的高密度工作負載而設計。應用的範例包括：交易式資料庫。|
   |10 IOPS/GB |這個選項是為要求最嚴苛的工作負載類型而設計，例如分析。應用的範例包括：高交易量資料庫，以及其他對效能敏感的資料庫。此效能層次限制為每個檔案共用的容量上限為 4 TB。|
 
-### 本端磁碟
-{: #vc_nsx-t_addingviewingclusters-adding-local-disks}
-
-本端磁碟選項僅適用於 **SAP 認證**四重 Intel Xeon E7-8890 v4 處理器「裸機」配置。指定下列選項：
-* **磁碟計數**：選取您要新增的磁碟數目。
-* **磁碟類型**：選取所需磁碟類型的選項。
-
 ### 授權設定
 {: #vc_nsx-t_addingviewingclusters-adding-licensing-settings}
 
@@ -164,7 +143,7 @@ lastupdated: "2019-03-04"
 ### 網路介面設定
 {: #vc_nsx-t_addingviewingclusters-adding-network-interface-settings}
 
-網路介面卡 (NIC) 啟用設定由您選擇**公用及專用網路**或**僅限專用網路**.rd.cloud_notm}}決定。
+網路介面卡 (NIC) 啟用設定是根據您選取**公用及專用網路**或**僅限專用網路**而定。
 
 ### 訂單摘要
 {: #vc_nsx-t_addingviewingclusters-adding-order-summary}
@@ -177,18 +156,16 @@ lastupdated: "2019-03-04"
 1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**資源**。
 2. 在 **vCenter Server 實例**表格中，按一下您要新增叢集的實例。
 
-   請確定實例處於**備妥使用**狀態。否則，您無法將叢集新增至實例。{:note}
+   請確定實例處於**備妥使用**狀態。否則，您無法將叢集新增至實例。
+   {:note}
 3. 按一下左導覽窗格上的**基礎架構**，然後按一下**叢集**表格右上角的**新增**。
 4. 在**新增叢集**頁面上，輸入叢集名稱。
 5. 如果您要在與實例管理所在不同的 {{site.data.keyword.CloudDataCent_notm}} 中管理叢集，請勾選 **Bare Metal Server** 下的**選取不同的位置**勾選框，然後選擇 {{site.data.keyword.CloudDataCent_notm}} 來管理實例。
-6. 完成 Bare Metal Server 配置。
-   * 如果您選取 **Skylake** 或 **Broadwell**，請指定 **CPU 型號**、**RAM** 數量，以及 **{{site.data.keyword.baremetal_short}} 數目**。
-   * 如果您選取 **SAP 認證**，請指定 CPU 型號。
+6. 完成 Bare Metal Server 配置。指定 **CPU 模型**、**RAM** 數量，以及 **{{site.data.keyword.baremetal_short}} 數目**。
 7. 完成儲存空間配置。
   * 如果您選取 **vSAN 儲存空間**，請指定容量及快取磁碟的磁碟類型、磁碟數目以及「vSAN 授權」版本。如果您要更多儲存空間，請勾選**高效能 Intel Optane** 方框。
   * 如果您選取 **NFS 儲存空間**，而且要對所有檔案共用新增及配置相同的設定，請指定**共用數目**、**效能**及**大小 (GB)**。
   * 如果您選取 **NFS 儲存空間**，而且要個別新增及配置檔案共用，請選取**個別配置共用**。然後，按一下**新增共用儲存空間**標籤旁的 **+** 圖示，並針對每個檔案共用選取**效能**及**大小 (GB)**。您必須至少選取一個檔案共用。
-  * 如果您選取**本端磁碟**，請指定磁碟計數及磁碟類型。
 8. 完成網路介面設定。
 8. 指定如何提供 vSphere 授權碼：
   * 對於「事業夥伴」使用者，已包含 vSphere 授權（Enterprise Plus 版本），並代表您購買。
@@ -208,7 +185,8 @@ lastupdated: "2019-03-04"
 1. 會自動啟動叢集的部署，而且叢集的狀態變更為**正在起始設定**。您可以從實例的**摘要**頁面檢視部署歷程，以檢查部署的狀態。
 2. 叢集備妥可用時，其狀態會變更為**備妥使用**。新增的叢集已啟用「vSphere 高可用性 (HA)」及「vSphere 分散式資源排程器 (DRS)」。
 
-您不能變更叢集名稱。變更叢集名稱可能會導致在叢集裡新增或移除 ESXi 伺服器的作業失敗。{:important}
+您不能變更叢集名稱。變更叢集名稱可能會導致在叢集裡新增或移除 ESXi 伺服器的作業失敗。
+{:important}
 
 ## 檢視 vCenter Server with NSX-T 實例中的叢集的程序
 {: #vc_nsx-t_addingviewingclusters-viewing-procedure}
@@ -258,6 +236,33 @@ lastupdated: "2019-03-04"
 | IOPS/GB |儲存空間的效能層次。|
 | NFS 通訊協定| 儲存空間的 NFS 版本。|
 
+表 6. 網路介面 - VLAN 詳細資料
+
+|項目        |說明       |  
+|:------------- |:------------- |
+| VLAN 號碼 | 唯一的 VLAN 號碼。 |
+|說明              | VLAN 的說明。|
+|位置| 資料中心位置。 |
+| 主要路徑 | VLAN 的主要路徑。 |
+
+按一下**檢視資源**來存取 VLAN 詳細資料。
+
+表 7. 網路介面 - 子網路詳細資料
+
+|項目        |說明       |  
+|:------------- |:------------- |
+|名稱 | 子網路名稱。按一下名稱來存取子網路詳細資料。|
+|類型      | 子網路的類型：主要或可攜式。 |
+|說明              | 子網路的說明。|
+
+表 8. 網路介面 - IP 詳細資料
+
+|項目        |說明       |  
+|:------------- |:------------- |
+| IP    | IP 位址。 |
+|狀態| IP 位址的狀態。 |
+|說明              |IP 位址的說明。|
+
 ## 從 vCenter Server with NSX-T 實例刪除叢集
 {: #vc_nsx-t_addingviewingclusters-deleting}
 
@@ -277,7 +282,8 @@ lastupdated: "2019-03-04"
 1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**資源**。
 2. 在 **vCenter Server 實例**表格中，按一下您要從中刪除叢集的實例。
 
-   請確定實例處於**備妥使用**狀態。否則，您無法從實例刪除叢集。{:note}
+   請確定實例處於**備妥使用**狀態。否則，您無法從實例刪除叢集。
+   {:note}
 
 3. 在左導覽窗格上，按一下**基礎架構**。在**叢集**表格中，找出您要刪除的叢集，然後按一下**動作**直欄中的**刪除**圖示。
 4. 確認您已完成將 VM 移轉至其他叢集（必要的話），以及您要刪除叢集。

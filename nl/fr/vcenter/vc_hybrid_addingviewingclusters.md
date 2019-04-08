@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-03-18"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -143,7 +146,7 @@ Selon la configuration que vous avez sélectionnée pour le cluster, le coût es
 6. Renseignez les zones **Modèle UC**, **Mémoire RAM** et **Nombre de serveurs bare metal** pour la configuration de serveur bare metal.
 7.  Sélectionnez **Stockage vSAN** et spécifiez les types de disque pour les disques de cache et de capacité, ainsi que le nombre de disques. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**.
 8. Sélectionnez l'édition de licence pour VMware vSAN pour la configuration de licence.
-9. Sélectionnez le paramètre réseau **Réseau public et réseau privé** ou **réseau privé uniquement**.
+9. Sélectionnez le paramètre réseau **Réseau public et réseau privé** ou **Réseau privé uniquement**.
 10. Sur la page **Récapitulatif de la commande**, vérifiez la configuration du cluster avant d'ajouter celui-ci.
    1. Passez en revue les paramètres du cluster.
    2. Passez en revue le coût estimé du cluster. Cliquez sur **Détails concernant la tarification** pour générer un récapitulatif au format PDF. Pour sauvegarder ou imprimer votre récapitulatif de commande, cliquez sur l'icône d'**impression** ou de **téléchargement** dans l'angle supérieur droit de la fenêtre du PDF.
@@ -185,7 +188,7 @@ Vous ne pouvez pas modifier le nom du cluster. La modification du nom du cluster
         <dt class="dt dlterm">Supprimé</dt>
         <dd class="dd">Le cluster est supprimé.</dd>
     </dl>
-4. Cliquez sur un nom de cluster pour afficher les détails relatifs aux serveurs ESXi et au stockage :
+4. Cliquez sur un nom de cluster pour afficher les détails relatifs aux serveurs ESXi, au stockage et à l'interface réseau :
 
   * Détails relatifs aux serveurs ESXi :
      * **Nom** : nom du serveur ESXi au format `<host_prefix><n>.<subdomain_label>.<root_domain>`, où :
@@ -215,6 +218,20 @@ Vous ne pouvez pas modifier le nom du cluster. La modification du nom du cluster
     * **Taille** : capacité du stockage.
     * **IOPS/Go** : niveau de performance du stockage.
     * **Protocole NFS** : version NFS du stockage.
+  * Interface réseau - détails du réseau local virtuel (VLAN) : 
+    * **Numéro VLAN** : numéro unique de réseau local virtuel.
+    * **Description** : description du réseau local virtuel.
+    * **Emplacement** : emplacement du centre de données.
+    * **Route principale** : route principale du réseau local virtuel.
+    Cliquez sur **Afficher la ressource** pour accéder aux détails du réseau local virtuel.
+  * Interface réseau - détails du sous-réseau :
+    * **Nom** : nom du sous-réseau. Cliquez sur le nom pour accéder aux détails du sous-réseau.
+    * **Type** : type de sous-réseau, principal ou portable.
+    * **Description** : description du sous-réseau.
+  * Interface réseau - Détails d'adresse IP :
+    * **IP** : adresse IP.
+    * **Statut** : statut de l'adresse IP.
+    * **Description** : description de l'adresse IP.
 
 ## Suppression de clusters des instances vCenter Server with Hybridity Bundle
 {: #vc_hybrid_addingviewingclusters-deleting}

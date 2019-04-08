@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-25"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -18,7 +21,7 @@ lastupdated: "2019-02-14"
 
 若要直接存取主控台，請完成下列步驟：
 1. 移至
-   https://console.cloud.ibm.com/infrastructure/vmware-solutions/console.
+   https://cloud.ibm.com/infrastructure/vmware-solutions/console.
 2. 使用您的 **IBM ID** 帳戶登入主控台。
 
 ## 從 IBM Cloud 型錄存取

@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-07"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -74,7 +77,8 @@ lastupdated: "2019-03-07"
 
 順利完成服務的移除之後，會透過電子郵件通知您，且會從實例的**服務**頁面移除服務。
 
-將針對已移除的服務，向您收取到 {{site.data.keyword.cloud_notm}} 基礎架構計費週期結束為止的費用。{:note}
+將針對已移除的服務，向您收取到 {{site.data.keyword.cloud_notm}} 基礎架構計費週期結束為止的費用。
+{:note}
 
 ## 相關鏈結
 {: #vc_addingremovingservices-related}

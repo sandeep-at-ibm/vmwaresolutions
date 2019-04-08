@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-12"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -38,7 +41,7 @@ Wenn Sie Ihre Instanz erstmalig bestellen, befolgen Sie die Anweisungen auf der 
 
 Alle Kosten für die physische und virtuelle Infrastruktur sowie die aus der Instanz resultierenden Lizenzen werden Ihrem {{site.data.keyword.cloud_notm}}-Konto in Rechnung gestellt. Wenn Sie eine Instanz bestellen, müssen Sie über ein {{site.data.keyword.cloud_notm}}-Konto verfügen und den {{site.data.keyword.slapi_short}}-Schlüssel angeben, der dem Konto zugeordnet ist.
 
-## Was sind die Unterschiede zwischen einer vCenter Server-Instanz und einem VMware vSphere-Cluster? 
+## Was sind die Unterschiede zwischen einer vCenter Server-Instanz und einem VMware vSphere-Cluster?
 {: #faq-vcs-cf-vss}
 {: faq}
 

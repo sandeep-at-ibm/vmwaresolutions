@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-03-25"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -75,7 +78,7 @@ NetApp ONTAP Select 오퍼링은 NetApp ONTAP Select 기반의 전용 및 고가
 ### IBM Cloud의 Caveonix RiskForesight
 {: #prod_overview-caveonix}
 
-{{site.data.keyword.cloud_notm}}의 Caveonix RiskForesight 서비스는 위협으로부터 보호하고 업계 또는 정부 규제를 충족하도록 하기 위해 사전 모니터링 및 자동화된 방어 제어를 통해 사이버 및 규제 준수 위험을 관리합니다. 
+{{site.data.keyword.cloud_notm}}의 Caveonix RiskForesight 서비스는 위협으로부터 보호하고 업계 또는 정부 규제를 충족하도록 하기 위해 사전 모니터링 및 자동화된 방어 제어를 통해 사이버 및 규제 준수 위험을 관리합니다.
 
 ### F5 on IBM Cloud
 {: #prod_overview-f5}
@@ -152,7 +155,7 @@ Veeam on {{site.data.keyword.cloud_notm}} 서비스는 엔터프라이즈가 고
 
 HCX on {{site.data.keyword.cloud_notm}} 서비스는 {{site.data.keyword.cloud_notm}}로 온프레미스 데이터 센터의 네트워크를 원활하게 확장할 수 있으며, 이를 통해 변환이나 변경 없이 {{site.data.keyword.cloud_notm}}에서 가상 머신(VM)을 마이그레이션할 수 있습니다.
 
-자세한 정보는 [VMware HCX on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview)를 참조하십시오.
+자세한 정보는 [VMware HCX on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations)를 참조하십시오.
 
 ### Zerto on IBM Cloud
 {: #prod_overview-zerto}

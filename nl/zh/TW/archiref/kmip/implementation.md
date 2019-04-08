@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-13"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -34,8 +37,7 @@ lastupdated: "2019-03-13"
 
 若要使用 vSAN 加密，請編輯 vCenter 叢集中的 vSAN 一般設定，並選取加密勾選框。
 
-vSAN 性能檢查可能會定期發出警告，指出它無法從您的一個以上 vSphere 主機連接至 KMS 叢集。這些警告發生的原因是 vSAN 性能檢查連線太快逾時。您可以忽略這些警告。
-如需相關資訊，請參閱 [因出現「SSL 信號交換逾時」錯誤，而發生 vSAN KMS 性能檢查間歇性失敗](https://kb.vmware.com/s/article/67115){:new_window}。
+vSAN 性能檢查可能會定期發出警告，指出它無法從您的一部以上 vSphere 主機連接至 KMS 叢集。這些警告發生的原因是 vSAN 性能檢查連線太快逾時。您可以忽略這些警告。如需相關資訊，請參閱 [因出現「SSL 信號交換逾時」錯誤，而發生 vSAN KMS 性能檢查間歇性失敗](https://kb.vmware.com/s/article/67115){:new_window}。
 {:note}
 
 若要使用 vSphere 加密，請編輯虛擬機器儲存空間原則，以要求磁碟加密。

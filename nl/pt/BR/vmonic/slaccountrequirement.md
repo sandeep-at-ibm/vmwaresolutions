@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-26"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -50,16 +53,16 @@ Tabela 1. Permissões necessárias para a conta de infraestrutura do {{site.data
 ## VRF com terminais em serviço ativados
 {: #slaccountrequirement-vrf-se}
 
-A sua conta de infraestrutura do {{site.data.keyword.cloud_notm}} deve ser uma conta Virtual Routing and Forwarding (VRF) com os terminais em serviço ativados. Se a sua conta for não VRF, você deverá convertê-la para uma conta VRF. Além disso, deve-se ativar a conta VRF para usar os terminais em serviço.
+A sua conta de infraestrutura do {{site.data.keyword.cloud_notm}} deve ser uma conta de Virtual Routing and Forwarding (VRF) com Terminais em serviço ativados. Se a sua conta não for de VRF, você deverá convertê-la para uma conta de VRF. Além disso, deve-se ativar a sua conta de VRF para usar Terminais em serviço.
 
 Para obter mais informações, veja:
 * [ Visão geral do VRF no IBM Cloud ](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-* [Ativar sua conta para usar terminais em serviço](/docs/services/service-endpoint?topic=services/service-endpoint-cs_cli_install_steps#cs_cli_install_steps)
+* [Ative a sua conta para usar Terminais em serviço](/docs/services/service-endpoint?topic=services/service-endpoint-cs_cli_install_steps#cs_cli_install_steps)
 
-## VLAN Spanning end of support
+## Término do suporte de ampliação da VLAN
 {: #slaccountrequirement-vlan-eos}
 
-A partir de agosto de 2019, a ampliação de VLAN não será mais suportada. Até o final de julho de 2019, deve-se converter sua conta de infraestrutura do {{site.data.keyword.cloud_notm}} para VRF e ativar os terminais em serviço.
+A partir de agosto de 2019, a ampliação da VLAN não será mais suportada. Até o término de julho de 2019, deve-se converter a sua conta de infraestrutura do {{site.data.keyword.cloud_notm}} para VRF e ativar os Terminais em serviço.
 {:important}
 
 ## Links relacionados

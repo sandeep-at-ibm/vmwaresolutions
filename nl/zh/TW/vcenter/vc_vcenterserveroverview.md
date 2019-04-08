@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-11"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -63,7 +66,8 @@ VMware vSAN 也以專用儲存空間選項提供。若要增加 vSAN 叢集的 v
 
 下列元件已包含在 vCenter Server 實例中。
 
-標準化硬體配置的可用性及定價可能會根據選取以用於部署的 {{site.data.keyword.CloudDataCent_notm}} 而有所不同。{:note}
+標準化硬體配置的可用性及定價可能會根據選取以用於部署的 {{site.data.keyword.CloudDataCent_notm}} 而有所不同。
+{:note}
 
 ### Bare Metal Server
 {: #vc_vcenterserveroverview-bare-metal}
@@ -73,7 +77,8 @@ VMware vSAN 也以專用儲存空間選項提供。若要增加 vSAN 叢集的 v
 * **SAP 認證**：Intel Skylake 或 Intel Broadwell 產生伺服器（Intel Xeon 6140/E5-2690/E7-8890 系列），搭配您選取的 CPU 型號。
 * **Broadwell**：2-CPU Intel Broadwell 產生伺服器（Intel Xeon E5-2600/E7-4800 系列），搭配您選取的 CPU 型號及 RAM 大小。
 
-如果您計劃使用 vSAN 儲存空間，則配置需要四個 {{site.data.keyword.baremetal_short}}。{:note}
+如果您計劃使用 vSAN 儲存空間，則配置需要四個 {{site.data.keyword.baremetal_short}}。
+{:note}
 
 ### 網路
 {: #vc_vcenterserveroverview-networking}
@@ -85,8 +90,8 @@ VMware vSAN 也以專用儲存空間選項提供。若要增加 vSAN 叢集的 v
 *  兩個 VMware NSX Edge Services Gateway：
   * 用於出埠 HTTPS 管理資料流量的安全管理服務 VMware NSX Edge Services Gateway (ESG)，IBM 將它部署為管理網路拓蹼的一部分。IBM 管理虛擬機器會利用此 ESG，來和與自動化相關的特定外部 IBM 管理元件進行通訊。如需相關資訊，請參閱[將您的網路配置成使用客戶管理的 ESG](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_esg_config#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)。
 
-此 ESG 名為 **mgmt-nsx-edge**，您無法存取此 ESG，因此無法使用它。如果您修改它，則可能無法從 {{site.data.keyword.vmwaresolutions_short}} 主控台管理 vCenter Server 實例。此外，使用防火牆或停用與外部 IBM 管理元件的 ESG 通訊，可能會導致 {{site.data.keyword.vmwaresolutions_short}} 變成無法使用。
-{:important}
+    此 ESG 名為 **mgmt-nsx-edge**，您無法存取此 ESG，因此無法使用它。如果您修改它，則可能無法從 {{site.data.keyword.vmwaresolutions_short}} 主控台管理 vCenter Server 實例。此外，使用防火牆或停用與外部 IBM 管理元件的 ESG 通訊，可能會導致 {{site.data.keyword.vmwaresolutions_short}} 變成無法使用。
+    {:important}
   * 用於出埠和入埠 HTTPS 工作負載資料流量的安全客戶管理 VMware NSX Edge Services Gateway。IBM 將此閘道部署為範本，您可以修改它來提供 VPN 存取或公用存取。如需相關資訊，請參閱[客戶管理的 NSX Edge 是否造成安全風險？](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-customer-managed-nsx-edge-pose-a-security-risk-)。
 
 ### 虛擬伺服器實例
@@ -115,7 +120,8 @@ vSAN 選項提供自訂的配置，以及磁碟類型、大小和數量的各種
 
   此外，還為每部主機訂購 2 個 960 GB 的快取磁碟。
 
-  當 3.8 TB SSD（固態硬碟）磁碟機在正式發行至資料中心時，就會予以支援。{:note}
+  當 3.8 TB SSD（固態硬碟）磁碟機在正式發行至資料中心時，就會予以支援。
+  {:note}
 * 「高效能 Intel Optane」選項，提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟。這個選項取決於 CPU 型號。
 
 #### NFS 儲存空間
@@ -126,7 +132,8 @@ NFS 選項為工作負載提供自訂的共用檔案層次儲存空間，以及�
 * 效能：0.25、2、4 或 10 IOPS/GB。
 * 檔案共用的個別配置。
 
-  10 IOPS/GB 效能層次限制為每個檔案共用的容量上限為 4 TB。{:note}
+  10 IOPS/GB 效能層次限制為每個檔案共用的容量上限為 4 TB。
+  {:note}
 
 如果您選擇 NFS 選項，則會訂購用於管理元件的一個 2 TB 及 4 IOPS/GB 檔案共用。
 
@@ -167,7 +174,8 @@ NFS 選項為工作負載提供自訂的共用檔案層次儲存空間，以及�
 *  透過新增或移除 ESXi 伺服器來擴充或縮減實例容量
 *  關閉元件電源
 *  重新啟動服務
-這些活動的例外包括從 {{site.data.keyword.slportal}} 管理共用儲存空間檔案共用。這類活動包括：訂購、刪除（這可能會影響已裝載的資料儲存庫）、授權及裝載共用儲存空間檔案共用。{:important}
+   這些活動的例外包括從 {{site.data.keyword.slportal}} 管理共用儲存空間檔案共用。這類活動包括：訂購、刪除（這可能會影響已裝載的資料儲存庫）、授權及裝載共用儲存空間檔案共用。
+   {:important}
 
 ## 相關鏈結
 {: #vc_vcenterserveroverview-related}

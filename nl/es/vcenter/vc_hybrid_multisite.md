@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-08"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -30,9 +33,9 @@ Un despliegue de varios sitios consta de los siguientes componentes.
 * **Instancia o instancias secundarias**: Una o varias instancias secundarias de vCenter Server con el paquete híbrido (Hybridity), enlazadas a la instancia primaria, con la configuración siguiente:
    *  Nombre del sitio SSO
    *  Subdominio DNS enlazado al dominio raíz en la instancia primaria
-   *  Réplica de DNS y AD configurada entre las máquinas virtuales AD en las instancias primaria y secundarias.
-   *  Para instancias primarias que se han desplegado en V2.8 o posteriores: Se despliega y configura vCenter Server Appliance (vCSA) con Platform Services Controller (PSC) incorporado.
-   *  VMware vCenter en las instancias secundarias se configura con la modalidad de enlace mejorada con el vCenter en la instancia primaria.
+   *  Réplica de DNS y AD configurada entre las máquinas virtuales AD en las instancias primaria y secundarias
+   *  Para instancias primarias que se han desplegado en V2.8 o posteriores: Se despliega y configura vCenter Server Appliance (vCSA) con Platform Services Controller (PSC) incorporado
+   *  VMware vCenter en las instancias secundarias se configura con la modalidad enlazada mejorada con el vCenter en la instancia primaria
 
 ## Despliegue de varios sitios de vCenter Server con el paquete híbrido (Hybridity)
 {: #vc_hybrid_multisite-deployment}

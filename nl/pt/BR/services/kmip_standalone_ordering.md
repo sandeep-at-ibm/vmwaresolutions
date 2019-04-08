@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-21"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Pedindo instâncias do KMIP for VMware on IBM Cloud

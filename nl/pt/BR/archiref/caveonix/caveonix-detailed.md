@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-05"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Design Detalhado
@@ -38,8 +41,8 @@ Figura 1. Componentes de aplicativo
     - Software
     - Conjunto de dados agregados diários ou semanais
 - Messaging Datastore - O RiskForesight usa a fila do sistema de mensagens persistente para fornecer perda de dados zero e pressão de retorno de transferência para os componentes.
-- Index Datastore - Indexa e armazena os dados brutos recebidos para cada locatário para análise adicional para suportar o recurso de vários locatários.
-- Plug-ins - Residem no servidor de roteamento de aplicativo e incluem a configuração e a integração com os componentes do VMware para sincronizar todas as VMs juntamente com suas informações de locatário.
+- Index Datastore - Ele indexa e armazena os dados brutos recebidos para cada locatário para análise adicional a fim de suportar o recurso de múltiplos locatários.
+- Plug-ins – Residem no servidor do Roteamento do aplicativo e incluem a configuração e a integração com os componentes do VMware para sincronizar todas as VMs junto com as suas informações de locatário.
 
 A tabela a seguir mostra as portas e os protocolos necessários para cada componente.
 

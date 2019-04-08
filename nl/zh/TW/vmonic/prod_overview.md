@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-03-25"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -152,7 +155,7 @@ Veeam on {{site.data.keyword.cloud_notm}} 服務與 VMware Hypervisor 無縫整�
 
 HCX on {{site.data.keyword.cloud_notm}} 服務可以將內部部署資料中心的網路無縫地擴充至 {{site.data.keyword.cloud_notm}}，這容許將虛擬機器 (VM) 移轉至 {{site.data.keyword.cloud_notm}} 或從該處移轉，而不需要進行任何轉換或變更。
 
-如需相關資訊，請參閱 [VMware HCX on {{site.data.keyword.cloud_notm}} 概觀](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview)。
+如需相關資訊，請參閱 [VMware HCX on {{site.data.keyword.cloud_notm}} 概觀](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations)。
 
 ### Zerto on IBM Cloud
 {: #prod_overview-zerto}

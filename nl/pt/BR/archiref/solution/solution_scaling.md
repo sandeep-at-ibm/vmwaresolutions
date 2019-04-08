@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -31,10 +34,9 @@ Nesse design, a definição de uma implementação multissite é composta do seg
    * Novo nome do site SSO
    * Novo site/subdomínio DNS vinculado à raiz do domínio primário
    * Configuração de replicação do DNS e AD entre as MVs do AD do site secundário e primário
-   * PSC implementado e configurado para sincronizar com o PSC do site primário
    * Configuração do vCenter com o Enhanced Linked Mode para o vCenter do site primário
 
-Além disso, o NSX Manager em sites secundários pode ser configurado como NSX Managers secundários para o NSX Manager no site primário.
+Além disso, o NSX Manager em sites secundários pode ser configurado como NSX Managers secundários para o NSX Manager no site primário. Este é um processo manual que você precisa concluir.
 
 ## Incluindo novos clusters
 {: #solution_scaling-clusters}
@@ -47,7 +49,7 @@ Esse método permite que você realize as coisas a seguir:
 * Segregando cargas de trabalho com base em outras características, por exemplo, cluster do banco de dados Microsoft SQL.
 * Implementando aplicativos em topologias altamente disponíveis.
 
-Quando o cluster inicial for convertido em um cluster somente de gerenciamento, a migração de cargas de trabalho existentes envolverá etapas manuais a serem executadas pelo usuário. Isso pode envolver a reconexão de armazenamentos de dados ao novo cluster ou, alternadamente, a migração de armazenamento. Os endereços IP das cargas de trabalho poderão precisar ser mudados se o novo cluster residir em um pod do {{site.data.keyword.cloud_notm}} diferente ou se for designado para um ID de VLAN diferente.
+Quando o cluster inicial for convertido em um cluster somente de gerenciamento, a migração de cargas de trabalho existentes envolverá etapas manuais a serem executadas pelo usuário. Isso pode envolver a reconexão de armazenamentos de dados ao novo cluster ou, alternadamente, a migração de armazenamento. Os endereços IP das cargas de trabalho poderão precisar ser mudados se o novo cluster residir em um pod do {{site.data.keyword.cloud_notm}} diferente ou se o cluster estiver designado a um ID de VLAN diferente.
 {:note}
 
 ## Incluindo hosts ESXi em clusters existentes

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-03-22"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -43,12 +46,12 @@ VMware vCenter Server on {{site.data.keyword.cloud_notm}} Hybridity Bundle 서�
 
 표 1. {{site.data.keyword.icpfull_notm}}에 대한 vCenter Server 스펙
 
-| NFS 배치  |  vSAN 배치 |
-:--|:----:|:----:
-서버 수 | 3 | 4
-CPU | 28개 코어 2.2GHz | 28개 코어 2.2GHz
-메모리 | 384GB | 384GB
-스토리지 | 2000GB 2IOPS/GB 관리, 2000GB 4IOPS/GB 워크로드, 4000GB 4IOPS/GB {{site.data.keyword.icpfull_notm}} | 최소 960GB SSD x 2
+| | NFS 배치 | vSAN 배치 |
+|:---------- |:---------- |:---------- |
+| 서버 수 | 3 | 4 |
+|CPU | 28개의 코어 2.2 GHz | 28개의 코어 2.2 GHz |
+| 메모리 | 384GB | 384GB |
+|스토리지 | 2000GB 2IOPS/GB 관리, 2000GB 4IOPS/GB 워크로드, 4000GB 4IOPS/GB {{site.data.keyword.icpfull_notm}} | 최소 960-GB SSD x 2 |
 
 {{site.data.keyword.cloud_notm}} 하드웨어 요구사항 외에도 {{site.data.keyword.icpfull_notm}} Private 환경에 지속적 볼륨을 작성하여 CAM(Cloud Automation Manager) 데이터베이스 및 로그 데이터를 저장해야 합니다. {{site.data.keyword.icpfull_notm}}가 지원하는 모든 지속적 볼륨 유형을 CAM에서 지원하지만, CAM에 대해 권장되는 두 가지 스토리지 구성은 NFS 및 GlusterFS입니다.
 

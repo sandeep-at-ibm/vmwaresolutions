@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-13"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -34,7 +37,6 @@ Comme le chiffrement vSAN opère au niveau du magasin de données, son principal
 * Le chiffrement vSAN ne s'applique pas aux autres solutions de stockage comme le stockage par fichier et par blocs {{site.data.keyword.cloud_notm}} Endurance.
 * Le chiffrement vSAN requiert la licence vSAN Enterprise.
 * Le diagnostic d'intégrité vSAN peut générer des avertissement périodiques indiquant l'impossibilité de se connecter au cluster KMS depuis un ou plusieurs de vos hôtes vSphere. Ces avertissements se produisent parce que le diagnostic d'intégrité vSAN dépasse le délai d'attente trop rapidement. Vous pouvez ignorer ces avertissements. Pour plus d'informations, voir [vSAN KMS Health Check intermittently fails with SSL Handshake Timeout error](https://kb.vmware.com/s/article/67115){:new_window}.
-
 
 ### Chiffrement vSphere
 {: #kmip-design-vsphere-encrypt}

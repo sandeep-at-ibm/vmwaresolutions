@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-04"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -20,11 +23,13 @@ lastupdated: "2019-03-04"
 ## 開始之前
 {: #vc_applyingupdates-prereq}
 
-將 vCenter Server 實例升級至 vCenter Server with Hybridity Bundle 實例時，您必須先至少套用基礎 vCenter Server 2.3 版軟體更新。必須先執行此動作，才能執行授權升級至 Hybridity Bundle。{:important}
+將 vCenter Server 實例升級至 vCenter Server with Hybridity Bundle 實例時，您必須先至少套用基礎 vCenter Server 2.3 版軟體更新。必須先執行此動作，才能執行授權升級至 Hybridity Bundle。
+{:important}
 
 「事業夥伴」使用者無法選擇將現有 vCenter Server 實例升級至 vCenter Server with Hybridity Bundle 實例。
 
-因為已啟用自動更新，所以從 2.5 版開始，不再列出 IBM CloudDriver 更新。例如新增主機、新增叢集及訂購服務等動作，會自動將實例更新至最新版本。如需自動更新的相關資訊，請參閱 [2.5 版的版本注意事項](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-relnotes_v25)中的 *IBM CloudDriver 備援* 小節。{:note}
+因為已啟用自動更新，所以從 2.5 版開始，不再列出 IBM CloudDriver 更新。例如新增主機、新增叢集及訂購服務等動作，會自動將實例更新至最新版本。如需自動更新的相關資訊，請參閱 [2.5 版的版本注意事項](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-relnotes_v25)中的 *IBM CloudDriver 備援* 小節。
+{:note}
 
 在您嘗試套用更新之前，請按一下向下箭頭來展開更新項目，並驗證下列資訊：
 * 更新的版本。您必須依最早到最新的時間順序來套用更新。套用最新的更新之前，請確定已套用所有先前的更新。例如，嘗試套用 2.4 版更新之前，您必須套用 2.3 版更新。
@@ -73,7 +78,8 @@ lastupdated: "2019-03-04"
 
 5. 若要升級 NSX 授權，請按一下**升級**。在**升級 NSX 授權版本**視窗中，選取您要升級至的版本，然後按一下**升級**。無法進行授權版本降級。
 
-   授權升級會取代實例上的所有現有 NSX 授權。如果您在計費週期中途進行升級，則可能因為新舊授權重疊而產生其他費用。為了避免產生其他費用，建議在計費週期結束時升級授權。{:note}
+   授權升級會取代實例上的所有現有 NSX 授權。如果您在計費週期中途進行升級，則可能因為新舊授權重疊而產生其他費用。為了避免產生其他費用，建議在計費週期結束時升級授權。
+   {:note}
 
 6. 對於軟體更新，請按一下向下箭頭來展開您要套用的更新，然後完成下列其中一個步驟：
    *  若要立即啟動更新，請按一下更新項目之**動作**直欄中的溢位功能表圖示，然後按一下**立即更新**。
@@ -85,7 +91,8 @@ lastupdated: "2019-03-04"
 
 在授權升級至 Hybridity Bundle 期間，如果您的 vCenter Server 實例目前使用 VMware NSX Base 版本，則會自動升級至 VMware NSX Advanced 版本。
 
-如果您升級至 Hybridity Bundle，而且 vCenter Server 實例已有 NFS 檔案儲存空間，則不會向您收取 VMware vSAN 儲存空間的費用。會向您收取 vSAN 授權的費用，因為它包含在 Hybridity Bundle 中。{:note}
+如果您升級至 Hybridity Bundle，而且 vCenter Server 實例已有 NFS 檔案儲存空間，則不會向您收取 VMware vSAN 儲存空間的費用。會向您收取 vSAN 授權的費用，因為它包含在 Hybridity Bundle 中。
+{:note}
 
 完成下列步驟，以將 vCenter Server 實例升級至 vCenter Server with Hybridity Bundle。
 

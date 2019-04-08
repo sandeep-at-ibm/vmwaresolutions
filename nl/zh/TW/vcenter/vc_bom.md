@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-20"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -28,7 +31,7 @@ lastupdated: "2019-03-12"
 |:---------- |:---------- |:------------- |
 |VLAN1     |公用、主要|指派給實體 ESXi 伺服器，以進行公用網路存取。在起始部署之後不會使用。可用於網際網路存取。|
 |VLAN2     |專用 A、主要|由 {{site.data.keyword.cloud}} 指派給實體 ESXi 伺服器。由管理介面用於 VMware vSphere 管理資料流量。<br><br>指派給充當管理元件的 VM（虛擬機器）。<br><br>指派給 VMware NSX VTEP（VXLAN 通道端點）。|
-|VLAN3     |專用 B、可攜式|指派給 VMware vSAN（如果使用的話）。<br><br>指派給 VMware NFS（如果使用的話）。<br><br>指派給 VMware vSphere vMotion。|
+|VLAN3     |專用 B、可攜式|指派給 VMware vSAN（如果使用的話）。<br><br>指派給 VMware NFS（如果使用的話）。<br><br>指派給 VMware vSphere vMotion。<br><br>若為 NSX-T，指派給 VMware NSX VTEP（VXLAN 通道端點）。|
 
 ## vCenter Server 實例的軟體 BOM
 {: #vc_bom-software}
@@ -40,10 +43,13 @@ lastupdated: "2019-03-12"
 |製造商       |元件                            |版本|
 |:------------- |:------------------------------ |:------------- |
 |VMware       |vSphere ESXi                    | 6.7 Update 1（建置 6.7.0-11675023）或 <br/>6.5 Update 2（建置 6.5.0-11925212）|
+|VMware       | vSphere 6.7                     | Distributed vSwitch 6.6.0 |
+|VMware       | vSphere 6.5                     | Distributed vSwitch 6.5.0 |
 |VMware       |vCenter Server Appliance        | 6.7 Update 1（建置 6.7.0-10244745）或 <br/>6.5 Update 2d（建置 6.5.0-10964411）|
 |VMware       |Platform Services Controller    | 6.7 Update 1（建置 6.7.0-10244745）或 <br/>6.5 Update 2d（建置 6.5.0-10964411）|
 |VMware       |vSAN                            | 6.7 Update 1 或 <br/>6.6.1        |
 |VMware       |NSX for vSphere                 | 6.4.4（建置 11197766）   |
+|VMware       | NSX-T for vSphere               |2.4          |
 |Microsoft    |Windows Server Standard Edition |2012R2       |
 
 VMware vSAN 是選用元件。

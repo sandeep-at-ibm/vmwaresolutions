@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-21"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -24,7 +27,7 @@ VMware NSX-T 是一个网络虚拟化平台，支持对隔离的网络进行虚�
 * 订购公用客户子网以允许 VM 访问因特网。
 * 在 vCenter Server with NSX-T 实例中部署和配置 NSX-T。
 * 部署样本 NSX-T 逻辑交换机，以供客户工作负载 VM 使用。
-* 部署样本 NSX-T 分布式逻辑路由器 (DLR)，以用于处理连接到第 2 层 (L2) 网络的本地工作负载之间的潜在东-西通信。
+* 部署样本 NSX-T 第 1 层路由器，以用于处理连接到第 2 层 (L2) 网络的本地工作负载之间的潜在东-西通信。
 * 部署 NSX-T Edge 设备并将其配置为执行从工作负载逻辑交换机的 IP 地址范围到 NAT 规则上公共 IP 地址的网络地址转换 (NAT)。
 
   不会为仅供专用的实例部署 NSX-T Edge。
@@ -38,7 +41,7 @@ VMware NSX-T 是一个网络虚拟化平台，支持对隔离的网络进行虚�
 1. 设置 VM 到工作负载逻辑交换机的网络适配器：
    1. 在**新建虚拟机**对话框中，单击**定制硬件**选项卡。
    2. 在**新建设备**菜单中，选择**网络**，然后单击**添加**。
-   3. 在新添加的网络适配器上，从菜单中选择工作负载逻辑交换机。工作负载逻辑交换机的示例名称为 **vxw-dvs-17-virtualwire-1-sid-6000-Workload**。
+   3. 在新添加的网络适配器上，从菜单中选择工作负载覆盖逻辑交换机。交换机的示例名称为 **overlay-ls**。
 
    请确保未选中**工作负载转移**开关。
    {:important}
@@ -50,35 +53,29 @@ VMware NSX-T 是一个网络虚拟化平台，支持对隔离的网络进行虚�
    您负责管理分配给 VM 的 IP 地址范围。
    {:note}
 
-3. 将 VM 的缺省网关分配为 `192.168.10.1`。此地址是工作负载 VM 所在逻辑交换机上的 NSX DLR 的 IP 地址。
+3. 将 VM 的缺省网关分配为 `192.168.10.1`。这是客户第 1 层逻辑路由器的下行链路路由器端口的 IP 地址，此地址连接到工作负载 VM 所在的覆盖逻辑交换机。
 
-## 启用 SNAT 规则的过程
+## 启用 SNAT 规则
 {: #vc_nsx-t_esg_config-procedure-enable-snat-rule}
 
-如果希望工作负载 VM 具有对因特网的出站访问权，那么必须启用关联的 SNAT（源网络地址转换）规则。通过启用 SNAT 规则，可将 VM 对因特网的访问转换到单个公共 IP 地址。在 VMware vSphere Web Client 中完成以下步骤：
-
-1. 单击**主页 > 联网和安全性**。
-2. 在导航器窗格上，单击 **NSX Edge**，然后双击名为 **customer-nsx-edge** 的边缘。
-3. 单击**管理 > NAT** 以打开 **NAT** 选项卡。
-4. 在表中选择缺省 SNAT 规则，然后单击表上方的绿色复选标记以启用规则。
-
-有关 NSX-T Edge NAT 规则的更多信息，请参阅[管理 NAT 规则](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}。
+缺省情况下，NSX-T 支持 SNAT 规则。有关修改现有规则的信息，请参阅 [Configure Source and Destination NAT on a Tier-0 Logical Router](https://docs.vmware.com/en/VMware-NSX-T-Data-Center/2.4/administration/GUID-45949ACD-9029-4674-B29C-C2EABEB39E1D.html){:new_window}。
 
 ## 确定客户子网详细信息的过程
 {: #vc_nsx-t_esg_config-procedure-identify-customer-subnets-details}
 
-**customer-nsx-edge** 边缘旨在供您自己使用，因此您可以对其进行修改，以定义更多 NAT 规则用于入站或出站流量。这些规则必须仅使用以您的名义订购的公用或专用客户子网上的 IP 地址。
+逻辑路由器 **Customer-T1-LR** 和 **Customer-T0-LR** 以及边缘 **cust-nsx-edge0** 和 **cust-nsx-edge1** 旨在供您自己使用，因此您可以对其进行修改，以定义更多 NAT 规则用于入站或出站流量。这些规则必须仅使用以您的名义订购的公用或专用客户子网上的 IP 地址。
 
-要确定客户子网的详细信息，以便可以使用订购的 IP 地址，请在 VMware vSphere Web Client 中完成以下步骤：
+要确定客户子网的详细信息，以便可以使用订购的 IP 地址，请在 NSX-T Web 客户机中完成以下步骤：
 
-1. 单击**主页 > 联网和安全性**。
-2. 在导航器窗格上，单击 **NSX Edge**，然后在右侧窗格的边缘列表中找到 **customer-nsx-edge**。
-3. 在**描述**列中，将鼠标悬停在 **customer-nsx-edge** 的边缘描述上，以查看专用和公用客户子网的子网标识。
+1. 单击**高级联网和安全性**选项卡。
+2. 在左侧窗格上，单击**光纤网**，然后在下拉列表上选择**节点**。
+3. 在选项卡上，选择**边缘传输节点**。
+4. 单击其中一个客户边缘。例如，**cust-nsx-edge0**。公用和专用客户子网会显示在**描述**字段中。
 
 此外，还可以通过在 {{site.data.keyword.slportal}} 中完成以下步骤，找到有关客户子网的更多详细信息：
 
 1. 单击**联网 > IP 管理 > 子网**。
-2. 单击过滤器菜单，并在“子网”字段中输入标识，如 VMware vSphere Web Client 中**摘要**选项卡上 **customer-nsx-edge** 边缘的描述中所示。
+2. 单击过滤器菜单，在**子网**字段中输入标识，如 NSX-T Web 客户机中 **customer-nsx-edge0** 的描述中所示。
 3. 查看为 IP 地址显示的注释。这些注释用于确定在初始设置期间订购和使用的子网和 IP 地址。
 
    不要使用初始设置期间订购和使用的 IP 地址。但是，可以根据需求使用这些子网上的其他 IP 地址。要设置其他网络地址转换规则，请参阅[管理 NAT 规则](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}。

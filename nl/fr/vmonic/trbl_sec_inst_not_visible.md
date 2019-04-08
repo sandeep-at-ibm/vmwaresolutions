@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-14"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Le système vCenter Server secondaire ne figure pas dans l'inventaire du client Web vSphere

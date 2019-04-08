@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -150,6 +153,7 @@ Calico baut auf einer verteilten Scale-out-Architektur auf und kann dadurch eine
 -	BIRD stellt BGP-Client-Funktionen auf jedem Knoten bereit, der auch Felix hostet. Wenn Routen von Felix in den Linux-Kernel eingefügt werden, entnimmt sie der BGP-Client und verteilt sie an die anderen Knoten in der Bereitstellung. In umfangreichen Umgebungen wird außerdem ein BGP-Routenreflektor bereitgestellt, der für BGP als zentrale Stelle zum Herstellen einer Verbindung dient. Hierdurch ist jeder Client nicht gezwungen, mit jedem anderen Client zu kommunizieren und die Routen an die anderen Knoten in der Bereitstellung zu verteilen.
 
 Abbildung 3. Übersicht über Calico
+</br>
 ![Übersicht über Calico](vcsnsxt-calico-cni.svg)
 
 ### NSX-T und Calico
@@ -187,6 +191,7 @@ Kernkomponente für die Integration zwischen Kubernetes und dem NSX-Manager ist 
 Die folgende Abbildung zeigt zwei Kubernetes-Namensbereiche (Acme und Skateboards), die jeweils einen dedizierten logischen Switch, einen Tier-1-Router sowie ein IP-Segment besitzen, das die Verbindung zu einem logischen T0-Router herstellt.
 
 Abbildung 5. Kubernetes-NCP
+</br>
 ![Kubernetes-NCP](vcsnsxt-ncpk8sapi.svg)
 
 ### NSX-Sicherheitsrichtlinienmanager
@@ -207,6 +212,7 @@ Zu den zentralen Konzepten für die Überprüfung gehören unter anderem:
 -	Die Switch-Sicherheit bietet eine Steuerung von erhöhtem Datenverkehrsaufkommen und Sicherheit vor nicht autorisiertem Datenverkehr.
 
 Abbildung 6. Mikrosegmentierung von NSX-T
+</br>
 ![Beispiel für Mikrosegmentierung von NSX-T](vcsnsxt-tsecurity.svg)
 
 ### Unterschiede zwischen NSX-T und NSX-V
@@ -242,6 +248,7 @@ VMware NSX-T bietet dieselbe Funktionalität wie NSX-V in einer VMware vSphere-U
 Zur Integration von NSX-V bei Kubernetes installiert die {{site.data.keyword.cloud_notm}}-Automation {{site.data.keyword.icpfull_notm}} zusätzlich zu einer vCenter Server-Instanz. Ein dedizierter Switch/dediziertes VXLAN, DLR und ESG werden speziell für das Kubernetes-Netz erstellt. Das Day-1-Overlay-Netz für {{site.data.keyword.icpfull_notm}} ist ein Teilnetz mit dem Bereich 192.168.20.0/24 und konfiguriertem Routing durch das ESG für den Zugriff auf das Underlay-Netz.
 
 Abbildung 7. NSX-V und Kubernetes
+</br>
 ![NSX-V und Kubernetes](vcsnsxt-transitnet.svg)
 
 #### Integration mit NSX-T
@@ -252,6 +259,7 @@ Die Integration von NSX-T bei Kubernetes erfolgt durch das Container-Plug-in von
 Die verteilte Firewall von NSX-T ermöglicht die Erstellung von Netzrichtlinien, die für den Kubernetes-Cluster implementiert werden. Sie unterstützt Ingress- und Egress-Richtlinien sowie Richtlinien für Bezeichnungen und den Ausdrucksabgleich und besitzt Funktionen für den Lastausgleich; all dies kann auf die Kubernetes-Infrastruktur angewendet werden.
 
 Abbildung 8. NSX-T und Kubernetes
+</br>
 ![NSX-T und Kubernetes](vcsnsxt-t1t0router.svg)
 
 ## Zugehörige Links

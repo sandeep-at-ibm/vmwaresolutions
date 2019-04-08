@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-21"
 
+subcollection: vmwaresolutions
+
+
 ---
 # vCenter에 HCX Manager 등록
 {: #hcx-archi-reg-vcenter}

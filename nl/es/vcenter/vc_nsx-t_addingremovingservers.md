@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-06"
+lastupdated: "2019-03-18"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -19,10 +22,10 @@ Puede ampliar o reducir la capacidad de la instancia de VMware vCenter Server co
 
 Puede añadir nuevos servidores ESXi a un clúster mientras el clúster esté en modalidad de mantenimiento. Además, puede añadir o eliminar simultáneamente servidores ESXi en varios clústeres. Están disponibles las siguientes operaciones simultáneas:
 
-* Añadir hosts a **cluster1** y añadir hosts a clústeres adicionales.
-* Eliminar hosts de **cluster1** y eliminar hosts de clústeres adicionales.
-* Añadir hosts a **cluster1** y eliminar hosts de clústeres adicionales.
-* Eliminar hosts de **cluster1** y añadir hosts de clústeres adicionales.
+* Añadir hosts a un clúster y añadir hosts a clústeres adicionales.
+* Eliminar hosts de un clúster y eliminar hosts de clústeres adicionales.
+* Añadir hosts a un clúster y eliminar hosts de clústeres adicionales.
+* Eliminar hosts de un clúster y añadir hosts a clústeres adicionales. https://github.ibm.com/tornado/tracker/issues/14183
 
 Puede añadir o eliminar comparticiones de almacenamiento NFS a o desde un clúster NFS o vSAN vCenter Server con NSX-T existente.
 {:note}

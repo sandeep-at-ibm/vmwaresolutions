@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -150,6 +153,7 @@ Calico est créé sur une architecture évolutive distribuée en raison de sa ca
 -	BIRD, qui fournit des fonctions client BGP sur chaque noeud qui héberge également Felix. Lorsque Felix insère une route dans le noyau Linux, le client BGP la récupère et la distribue aux autres noeuds du déploiement. Dans des environnements d'envergure, un réflecteur de routes BGP est également déployé pour agir en tant que point central auquel les clients BGP peuvent se connecter. Ainsi, chaque client n'a pas besoin de parler avec chacun des autres clients ni de distribuer les routes aux autres noeuds du déploiement.
 
 Figure 3. Présentation de Calico
+</br>
 ![Présentation de Calico](vcsnsxt-calico-cni.svg)
 
 ### NSX-T et Calico
@@ -187,6 +191,7 @@ Le composant de base qui fournit l'intégration entre Kubernetes et NSX Manager 
 Dans la figure ci-après, deux espaces de nom Kubernetes sont illustrés, Acme et Skateboards, chacun ayant un commutateur logique dédié, un routeur de niveau 1 et un segment IP permettant de le connecter à un routeur logique T0.
 
 Figure 5. NCP Kubernetes
+</br>
 ![NCP Kubernetes](vcsnsxt-ncpk8sapi.svg)
 
 ### Gestionnaire de politiques de sécurité NSX
@@ -207,6 +212,7 @@ Principaux concepts :
 -	La sécurité Switch fournit les fonctions de contrôle et de sécurité Storm contre le trafic non autorisé.
 
 Figure 6. Micro-segmentation NSX-T
+</br>
 ![Exemple de micro-segmentation NSX-T](vcsnsxt-tsecurity.svg)
 
 ### Différences entre NSX–T et NSX-V
@@ -242,6 +248,7 @@ VMware NSX-T fournit les mêmes fonctions que NSX-V dans un environnement VMware
 Pour l'intégration NSX-V à Kubernetes, l'automatisation d'{{site.data.keyword.cloud_notm}} installe {{site.data.keyword.icpfull_notm}} sur une instance vCenter. Un commutateur/réseau VXLAN dédié, un routeur DLR et une passerelle ESG sont créés spécifiquement pour le réseau Kubernetes. Le réseau dissocié du jour 1 pour {{site.data.keyword.icpfull_notm}} est un sous-réseau 192.168.20.0/24 avec une configuration de routage via la passerelle ESG pour un accès au réseau sous-jacent.
 
 Figure 7. NSX-V et Kubernetes
+</br>
 ![NSX-V et Kubernetes](vcsnsxt-transitnet.svg)
 
 #### Intégration NSX-T
@@ -252,6 +259,7 @@ L'intégration NSX-T à Kubernetes s'effectue via NCP (NSX-T Container Plug-in).
 Le pare-feu distribué NSX-T permet la création de politiques de réseau, qui sont implémentées pour le cluster Kubernetes. Il prend en charge des politiques de sortie et d'entrée, des libellés et des politiques de correspondance d'expression, ainsi que des fonctionnalités d'équilibrage de charge, qui peuvent toutes être appliquées à l'infrastructure Kubernetes.
 
 Figure 8. NSX-T et Kubernetes
+</br>
 ![NSX-T et Kubernetes](vcsnsxt-t1t0router.svg)
 
 ## Liens connexes

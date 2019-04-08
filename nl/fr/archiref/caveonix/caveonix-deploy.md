@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-13"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -104,8 +107,8 @@ Tableau 4. Récapitulatif
 **Remarques :**
 Lorsque vous retirez le service Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}, l'automatisation {{site.data.keyword.vmwaresolutions_short}} supprime uniquement la seule machine virtuelle Caveonix "tout-en-un" qui a été déployée et le sous-réseau privé dédié qui a été commandé pour elle. Par conséquent,
 * si vous avez scindé la machine virtuelle Caveonix en plusieurs machines virtuelles, ces dernières ne sont pas retirées. 
-* Si vous avez utilisé les adresses IP du sous-réseau privé dédié sur des machines virtuelles supplémentaires, de nouvelles adresses IP doivent être affectées à ces dernières pour qu'elles puissent continuer à fonctionner.  
-* Si vous supprimez l'instance vCenter Server A avec le service Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} installé et que vous avez utilisé les adresses IP du sous-réseau privé dédié commandé pour le service dans l'instance vCenter Server B, le sous-réseau privé dédié est annulé lors de la suppression de l'instance vCenter Server A. 
+* Si vous avez utilisé les adresses IP du sous-réseau privé dédié sur des machines virtuelles supplémentaires, de nouvelles adresses IP doivent être affectées à ces dernières pour qu'elles puissent continuer à fonctionner. 
+* Si vous supprimez l'instance vCenter Server A avec le service Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} installé et que vous avez utilisé les adresses IP du sous-réseau privé dédié commandé pour le service dans l'instance vCenter Server B, le sous-réseau privé dédié est annulé lors de la suppression de l'instance vCenter Server A.
 
 ## Liens connexes
 {: #caveonix-deploy-related}

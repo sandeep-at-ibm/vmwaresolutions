@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-04"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -56,7 +59,8 @@ lastupdated: "2019-03-04"
 4. 輸入實例名稱。
 5. 選取 {{site.data.keyword.CloudDataCent_notm}} 來管理實例。  
 
- 依預設，會預先選取 DAL09 {{site.data.keyword.CloudDataCent_notm}}。必要的話，可選取不同的 {{site.data.keyword.CloudDataCent_notm}} 位置。{:note}
+ 依預設，會預先選取 DAL09 {{site.data.keyword.CloudDataCent_notm}}。必要的話，可選取不同的 {{site.data.keyword.CloudDataCent_notm}} 位置。
+ {:note}
 6. 在**訂單摘要**窗格上，先驗證實例配置，再下訂單。
    1. 檢閱實例的設定。
    2. 檢閱預估實例成本。按一下**定價詳細資料**以產生 PDF 摘要。若要儲存或列印訂單摘要，請按一下 PDF 視窗右上方的**列印**或**下載**圖示。
@@ -147,7 +151,8 @@ lastupdated: "2019-03-04"
 7. 將 VMware HCX 中的網路從內部部署延伸到 {{site.data.keyword.cloud_notm}}。如需相關資訊，請參閱[透過 VMware HCX 延伸網路](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-DD9C3316-D01C-4088-B3EA-84ADB9FED573.html?hWord=N4IghgNiBcIKIA8AuBTAdgEwJZoOYAI0UkB3AewCcBrAZxAF8g)。
 8. 在內部部署與 {{site.data.keyword.cloud_notm}} 之間移轉 VM。如需相關資訊，請參閱[透過 VMware HCX 移轉虛擬機器](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-D0CD0CC6-3802-42C9-9718-6DA5FEC246C6.html?hWord=N4IghgNiBcILIEsDmAnMAXBA7JACAagiugK6S5xgDGAFtgKYDOuA7gujQXC2CvbgAkAwgA0QAXyA)。
 
-您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台，而不能從 {{site.data.keyword.slportal}} 或透過主控台以外的任何其他方法，來管理在 {{site.data.keyword.cloud_notm}} 帳戶中建立的 {{site.data.keyword.vmwaresolutions_short}} 基礎架構元件。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台之外變更這些元件，這些變更不會與主控台同步化，而且會使您的環境不穩定。{:important}
+您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台，而不能從 {{site.data.keyword.slportal}} 或透過主控台以外的任何其他方法，來管理在 {{site.data.keyword.cloud_notm}} 帳戶中建立的 {{site.data.keyword.vmwaresolutions_short}} 基礎架構元件。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台之外變更這些元件，這些變更不會與主控台同步化，而且會使您的環境不穩定。
+{:important}
 
 ## 刪除單一節點試用版移轉及應用程式現代化實例的程序
 {: #cloud_modern_bundle_orderinginstance-deleting-procedure}

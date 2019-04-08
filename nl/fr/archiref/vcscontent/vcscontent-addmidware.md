@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-15"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Restructuration et ajout de logiciels intermédiaires dans IBM Cloud Private

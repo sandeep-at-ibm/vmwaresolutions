@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -41,7 +44,7 @@ Existen tres modelos de despliegue de Caveonix RiskForesight:
   -	Almacén de datos de índice que se despliega con los nodos maestros y de datos.
   -	Se utilizan más nodos de datos para el escalado porque aumenta el número de activos.
 
-Todos los componentes deben tener un FQDN y registrarse en DNS antes de cualquier despliegue de máquina virtual. Este paso lo realiza la automatización de IC4VS para el despliegue "todo en uno" inicial, pero es responsabilidad del cliente cuándo escalar el despliegue.
+Todos los componentes deben tener un FQDN y registrarse en DNS antes de cualquier despliegue de máquina virtual. Este paso lo realiza la automatización de IBM Cloud for VMware Solutions para el despliegue "todo en uno" inicial, pero es responsabilidad del usuario elegir cuándo escalar el despliegue.
 
 ## Enlaces relacionados
 {: #caveonix-step1-related}

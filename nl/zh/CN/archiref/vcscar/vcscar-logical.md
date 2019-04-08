@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -75,6 +78,7 @@ Skate Advisor 的核心数据元素是技巧。技巧语言唯一地定义了技
 聊天机器人通过以下方式与系统交互：
 
 图 2. 典型的聊天机器人查询
+</br>
 ![典型的聊天机器人查询](vcscar-query.svg)
 
 表 2. 聊天机器人交互
@@ -132,6 +136,7 @@ Skate Advisor 服务是一个应用程序组件，提供用于呈现请求的一
 Watson Discovery 必须通过机器学习模型进行训练，该模型是由主题专家使用 Watson Knowledge Studio 以迭代方式创建的。
 
 图 3. Discovery 服务训练
+</br>
 ![Discovery 服务训练](vcscar-training.svg)
 
 对于 Skate Advisor，模型包含实体类型之间的关系，并组合使用基于规则的训练和基于字典的训练来创建模型。此模型支持 Discovery 服务识别从用作训练集的文章和视频描述中摄入的技巧并对其分类。

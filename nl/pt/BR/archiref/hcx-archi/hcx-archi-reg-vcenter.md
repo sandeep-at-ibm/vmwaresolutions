@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-21"
 
+subcollection: vmwaresolutions
+
+
 ---
 # Registrando o HCX Manager com o vCenter
 {: #hcx-archi-reg-vcenter}

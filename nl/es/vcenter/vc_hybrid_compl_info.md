@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-12"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Información de conformidad para vCenter Server con el paquete híbrido (Hybridity)

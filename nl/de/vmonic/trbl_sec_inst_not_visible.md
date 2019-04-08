@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-14"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Sekundäres vCenter Server-System ist im Bestand von vSphere Web Client nicht angegeben

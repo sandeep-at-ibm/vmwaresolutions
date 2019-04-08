@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-14"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -22,7 +25,7 @@ Distintos componentes de solución requieren distintas estrategias para la copia
 ## Servidor de archivos para copia de seguridad basada en archivos
 {: #solution_backingup-fileserver-backup}
 
-Algunos componentes, como por ejemplo VMware vCenter Server, Platform Services Controller (PSC) y VMware NSX, requieren la copia de seguridad de su configuración en un servidor de archivos.
+Algunos componentes, como VMware vCenter Server con un PSC (Platform Services Controller) incorporado y VMware NSX, requieren que se realice una copia de seguridad de su configuración en un servidor de archivos.
 
 Para alojar estas copias de seguridad, despliegue un servidor de archivos de Linux en el clúster utilizando los pasos siguientes:
 
@@ -35,7 +38,7 @@ Para alojar estas copias de seguridad, despliegue un servidor de archivos de Lin
 ## Copia de seguridad basada en archivos de vCenter
 {: #solution_backingup-vcenter}
 
-VMware vCenter Server y PSC proporcionan una [interfaz de usuario de gestión de dispositivos y una API para exportar la base de datos y la configuración a un servidor de archivos](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.install.doc/GUID-3EAED005-B0A3-40CF-B40D-85AD247D7EA4.html){:new_window} utilizando varios protocolos. VMware documenta un ejemplo de cómo puede configurar esto para [ejecutarlo periódicamente como un trabajo cron](https://pubs.vmware.com/vsphere-6-5/index.jsp?topic=%2Fcom.vmware.vsphere.vcsapg-rest.doc%2FGUID-222400F3-678E-4028-874F-1F83036D2E85.html){:new_window} directamente en el vCenter Server Appliance y PSC, que puede adaptar para su uso.
+VMware vCenter Server con PSC incorporado proporciona una [interfaz de usuario de gestión de dispositivos y una API para exportar la base de datos y la configuración a un servidor de archivos](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.install.doc/GUID-3EAED005-B0A3-40CF-B40D-85AD247D7EA4.html){:new_window} utilizando varios protocolos. VMware documenta un ejemplo de cómo puede configurar esto para [ejecutarlo periódicamente como un trabajo cron](https://pubs.vmware.com/vsphere-6-5/index.jsp?topic=%2Fcom.vmware.vsphere.vcsapg-rest.doc%2FGUID-222400F3-678E-4028-874F-1F83036D2E85.html){:new_window} directamente en el vCenter Server Appliance y PSC, que puede adaptar para su uso.
 
 Si tiene un dispositivo PSC externo, debe realizar una copia de seguridad de vCenter Server Appliance y del dispositivo PSC por separado utilizando esta técnica. Si tiene un dispositivo PSC incorporado, la copia de seguridad del dispositivo PSC está incluida en la copia de seguridad de vCenter. Familiarícese con y tenga en cuenta las consideraciones y limitaciones documentadas por VMware. Además, planifique una rotación y caducidad regular de las copias de seguridad de archivos en el servidor de archivos.
 
@@ -45,7 +48,7 @@ VMware requiere que la ubicación de la copia de seguridad sea una carpeta vací
 ## Copia de seguridad basada en archivos NSX
 {: #solution_backingup-nsx}
 
-La copia de seguridad adecuada de todos los componentes de NSX es crucial para restaurar el sistema a su estado de trabajo si se produce una anomalía. El diseño requiere que configure la copia de seguridad de NSX a través de la función de copia de seguridad del gestor de NSX. Con este fin, puede [configurar el gestor de NSX para realizar copias de seguridad de forma regular](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window} en el servidor de archivos. Asegúrese de que el servidor de archivos o sus datos estén copiados correctamente, y de garantizar la rotación de las copias de seguridad de NSX antiguas.
+La copia de seguridad adecuada de todos los componentes de NSX es crucial para restaurar el sistema a su estado de funcionamiento si se produce una anomalía. El diseño requiere que configure la copia de seguridad de NSX a través de la función de copia de seguridad del gestor de NSX. Con este fin, puede [configurar el gestor de NSX para realizar copias de seguridad de forma regular](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window} en el servidor de archivos. Asegúrese de que el servidor de archivos o sus datos estén copiados correctamente, y de garantizar la rotación de las copias de seguridad de NSX antiguas.
 
 ## Copia de seguridad basada en imágenes de máquinas virtuales de gestión
 {: #solution_backingup-image}
@@ -82,7 +85,7 @@ A partir de VMware vCenter 6.5u2, VMware da soporte a la copia de seguridad de l
 Hay varias consideraciones especiales al restaurar las copias de seguridad de gestión:
 
 * Para vCenter y PSC, VMware proporciona un instalador que puede desplegar un nuevo dispositivo virtual y restaurar la configuración a partir de la copia de seguridad.
-* Al restaurar un dispositivo a partir de la copia de seguridad, el instalador detecta el tipo de dispositivo (vCenter Server, PSC o vCenter con PSC incorporado) en función de la información de copia de seguridad que proporcione.
+* Al restaurar un dispositivo a partir de la copia de seguridad, el instalador detecta el tipo de dispositivo (vCenter Server con PSC incorporado) en función de la información de copia de seguridad que proporcione.
 * Puesto que se despliega directamente en uno de los hosts, es posible que no pueda desplegar en un conmutador o grupo de puertos distribuidos. Es posible que tenga que crear un conmutador estándar temporal y un grupo de puertos para desplegar los dispositivos recuperados y migrar uno de los vmnics temporalmente a este conmutador para proporcionar conectividad de red para las máquinas virtuales. Después del despliegue, puede migrar las máquinas virtuales al grupo de puertos distribuidos y devolver el vmnic a dvSwitch.
 * Para NSX, es posible que tenga que volver a desplegar el NSX Manager y los controladores antes de restaurar la configuración a partir de la copia de seguridad.
 * Asegúrese de que se familiarice con las consideraciones y limitaciones de VMware para la copia de seguridad y la restauración de vCenter.

@@ -4,7 +4,12 @@ copyright:
 
   years: 2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-22"
+
+keywords: IBM Cloud for VMware Solutions, getting started, deployment offerings, add-on services, use case
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -18,7 +23,7 @@ lastupdated: "2019-03-12"
 {:tip: .tip}
 {:table: .aria-labeledby="caption"}
 
-# IBM Cloud for VMware Solutions の概説
+# 概説チュートリアル
 {: #getting-started}
 
 この概説チュートリアルでは、インスタンスおよびそれに使用するいくつかのアドオン・サービスを注文するプロセスについて説明します。
@@ -192,18 +197,4 @@ Microsoft Internet Explorer はサポートされていません。
 注文したインスタンスを表示する方法について詳しくは、以下のトピックを参照してください。
 * [vCenter Server インスタンスの表示](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
 * [vCenter Server with Hybridity Bundle インスタンスの表示](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
-* [NetApp ONTAP Select インスタンスの表示](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_viewinginstances)
-
-## ステップ 5: インスタンスのアドオン・サービスの管理
-{: #getting-started-step5}
-
-インスタンスのアドオン・サービスを注文した場合、サービスも管理できます。
-
-サービスを管理する方法について詳しくは、以下のトピックを参照してください。
-* [vCenter Server インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
-* [vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
-
-## 次のステップ
-{: #getting-started-next}
-
-{{site.data.keyword.vmwaresolutions_short}} コンソールまたは VMware vSphere Web Client からインスタンスを管理します。
+* [NetApp ONTAP Select インスタンスの表示](/docs/services/vmwaresolutions/services?topic=vmware-solutions-np_viewinginstances#np_viewinginstances)

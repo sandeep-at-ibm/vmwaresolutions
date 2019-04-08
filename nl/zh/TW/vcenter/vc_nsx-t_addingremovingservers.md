@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-06"
+lastupdated: "2019-03-18"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -19,12 +22,13 @@ lastupdated: "2019-03-06"
 
 您可以在叢集處於維護模式時將新的 ESXi 伺服器新增至叢集。此外，您還可以跨越多個叢集同時新增或移除 ESXi 伺服器。以下是可同時進行的作業：
 
-* 將主機新增至 **cluster1** 以及將主機新增至其他叢集。
-* 從 **cluster1** 移除主機以及從其他叢集移除主機。
-* 將主機新增至 **cluster1** 以及從其他叢集移除主機。
-*  從 **cluster1** 移除主機以及將主機新增至其他叢集。
+* 將主機新增至叢集以及將主機新增至其他叢集。
+* 從叢集中移除主機以及從其他叢集移除主機。
+* 將主機新增至叢集以及從其他叢集移除主機。
+* 從叢集中移除主機以及將主機新增至其他叢集：https://github.ibm.com/tornado/tracker/issues/14183
 
-您可以對具有 NSX-T 叢集的現有 NFS 或 vSAN vCenter Server 進行新增或移除 NFS 儲存空間共用。{:note}
+您可以對具有 NSX-T 叢集的現有 NFS 或 vSAN vCenter Server 進行新增或移除 NFS 儲存空間共用。
+{:note}
 
 如果您的起始叢集以 vSAN 作為其儲存空間，則在部署之後新增一部以上的 ESXi 伺服器，可增加叢集儲存空間容量。
 
@@ -86,7 +90,8 @@ lastupdated: "2019-03-06"
 2. 您將會收到電子郵件，通知正在處理您的移除 ESXi 伺服器要求。在主控台上，與 ESXi 伺服器相關聯的叢集狀態會變更為**正在修改**。
 3. 在 {{site.data.keyword.cloud_notm}} 基礎架構計費週期（通常是 30 天）結束時，{{site.data.keyword.cloud_notm}} 基礎架構會完全收回 ESXi 伺服器。
 
-   將針對已移除的 ESXi 伺服器，向您收取到 {{site.data.keyword.cloud_notm}} 基礎架構計費週期結束為止的費用。{:note}
+   將針對已移除的 ESXi 伺服器，向您收取到 {{site.data.keyword.cloud_notm}} 基礎架構計費週期結束為止的費用。
+   {:note}
 
 ## 將 NFS 儲存空間新增至 vCenter Server with NSX-T 實例
 {: #vc_nsx-t_addingremovingservers-adding-nfs-storage-to-vcs-nsx-t}

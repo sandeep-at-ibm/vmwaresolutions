@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-22"
+lastupdated: "2019-03-14"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -77,8 +80,7 @@ Tabelle 2. Operationen, die vom SSH und Shell-Zugriff betroffen sind (lokal)
 
 | Versuchte Änderung  | Betroffene Operationen  | Bewertung  | Wiederherstellungsmethode  |
 |:------------- |:------------- |:--------------|:--------------|
-| SSH- oder Shell-Zugriffs für vCenter Server oder PSC inaktivieren.    | Die Paarung einer primären und sekundären Instanz kann fehlschlagen.    | Wichtig    | Nicht verfügbar.    |
-| SSH- oder Shell-Zugriff für ESXi inaktivieren.    | Das Hinzufügen und Entfernen von Hosts, Services und Netzspeicher für die Instanz kann fehlschlagen.    | Wichtig    | Nicht verfügbar.    |
+| SSH- oder Shell-Zugriffs für vCenter Server oder PSC inaktivieren. | Die Paarung einer primären und sekundären Instanz kann fehlschlagen.    | Wichtig    | Nicht verfügbar.    |
 
 Wenn Sie den SSH- oder Shell-Zugriff inaktivieren, sollten Sie ihn vorübergehend erneut aktivieren, bevor Sie die angegebenen Operationen ausführen.
 

@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-06"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Caveonix 용어집
@@ -36,7 +39,7 @@ lastupdated: "2019-03-06"
 -	**조직 사용자(Organization Users):** 테넌트 조직 및 하위 조직의 사용자입니다.
 -	**자산 저장소(Asset Repository):** RiskForesight를 사용하여 CSP 관리 구역 및 고객 구역 전체에서 현재 자산을 동기화할 수 있는 통합 지점입니다. 현재 버전의 RisForesight에서는 VMware vCloud Director 및 vCenter Server의 동기화를 지원합니다. VMware NSX Manager의 데이터 콜렉션도 지원합니다. 자산은 자산 저장소에서 수집합니다. 서비스 제공자가 vCenter에서 수집한 자산을 서비스 제공자의 테넌트 조직 및 하위 조직에 지정합니다. 자산은 하나의 조직에만 지정할 수 있습니다.
 -	**원격 액세스(Remote Access):** 취약성 및 규제 준수 모니터링을 위해 스캔을 사용하고 시스템 이벤트 로그를 수집하도록 엔드 머신에 인증 정보를 제공합니다. 서비스 제공자는 고유 자산에 대해 원격 액세스만 사용으로 설정할 수 있습니다. 테넌트는 자산으로부터의 원격 액세스를 제어합니다.
--	**애플리케이션(Applications) 및 하위 애플리케이션(Subapplications):** 자산을 그룹화하는 논리적 방법입니다. 예제 애플리케이션: SAP, 예제 하위 애플리케이션: SAP 프론트 엔드, SAP 중간 계층, SAP 백엔드
+-	**애플리케이션(Applications) 및 하위 애플리케이션(Subapplications):** 자산을 그룹화하는 논리적 방법입니다. 예제 애플리케이션: SAP, 예제 하위 애플리케이션: SAP 프론트 엔드, SAP 중간 티어, SAP 백엔드
 -	**위치(Locations):** 자산은 위치, 클라우드 제공자 및 자산 저장소별로 고유하게 그룹화됩니다.
 -	**환경(Environments):** 자산과 애플리케이션을 그룹화하는 방법입니다. 각 환경에는 위험 계수 1 - 10이 지정됩니다. 이 계수는 위험 점수 계산에 적용됩니다. 서비스 제공자가 환경을 정의합니다.
 -	**태스크(Tasks):** RiskForesight에서 사용되어 다음을 수행합니다.

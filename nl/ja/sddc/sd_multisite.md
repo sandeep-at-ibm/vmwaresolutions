@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -52,7 +55,7 @@ lastupdated: "2019-03-12"
 
 図 1. Cloud Foundation のマルチサイト・デプロイメント
 
-![Cloud Foundation のマルチサイト・デプロイメント](multisite-hub-spoke.svg "Cloud Foundation のマルチサイト・デプロイメント")
+![Cloud Foundation のマルチサイト・デプロイメント](../vcenter/multisite-hub-spoke.svg "Cloud Foundation のマルチサイト・デプロイメント")
 
 このモデルには以下の層が含まれています。
 

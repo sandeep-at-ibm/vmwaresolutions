@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -44,14 +47,14 @@ Si hay un problema con la conectividad de WAN, compruebe siempre la pantalla **I
 Si hay arreglos y actualizaciones que se han aplicado a los gestores de HCX (cliente y nube) y estas actualizaciones también corrigen problemas con los componentes de flota, deberá volver a desplegar Cloud Gateway y cualquier L2C desplegada. Es posible realizar una depuración adicional del estado del túnel, conectándose a HCX Manager a través de un cliente SSH como ccli  
 
 1. Ejecute SSH en HCX Manager utilizando la cuenta de administrador y la contraseña proporcionada.
-2. Ejecute el mandato `su -` y la contraseña raíz (igual que la contraseña de administrador) para cambiar a raíz.
+2. Ejecute el mandato `su –` y especifique la contraseña del usuario `root` (la misma que la contraseña de admin) para cambiar a root.
 3. Cambie el directorio a `/opt/vmware/bin` y ejecute el mandato `./ccli`. Si esto no funciona porque el entorno no está configurado para raíz, ejecute el mandato `./ccliSetup.pl`.
-4. Ejecute el mandato `list` dentro del shell de ccli para listar los componentes de flota registrados con HCX Manager.
-5. Seleccione el foco de la ccli escribiendo el ID de la lista para el componente de flota. Por ejemplo, `go 8`.
-6. Ejecute el mandato `debug remoteaccess enable` para conectarse utilizando SSH en el entorno SSH utilizando el componente de flota SSH deseado.
-7. Salga de ccli y conéctese utilizando SSH a la dirección IP del componente de flota habilitado para SSH.
+4. Ejecute el mandato `list` dentro del shell de `ccli` para mostrar una lista de los componentes de flota registrados con HCX Manager.
+5. Especifique el ID de flota para la `ccli` escribiendo el ID listado para el componente de flota. Por ejemplo, `go 8`.
+6. Ejecute el mandato `debug remoteaccess enable` para establecer la conexión mediante SSH con el componente de flota deseado.
+7. Salga de la `ccli` y establezca la conexión mediante SSH con la dirección IP del componente de flota habilitado para SSH.
 9. Continúe para resolver el problema.
-10. Vuelva a la ccli e inhabilite el servicio ssh para el componente.
+10. Vuelva a la `ccli` e inhabilite el servicio `ssh` para el componente.
 11. Si es necesario, utilice el mandato de ccli `hc` para ejecutar una comprobación de estado en los componentes.
 
 ## Problemas de compatibilidad del hardware de destino
@@ -59,10 +62,10 @@ Si hay arreglos y actualizaciones que se han aplicado a los gestores de HCX (cli
 
 La migración de vMotion puede ser un problema cuando el lado de origen del cliente es de una versión de hardware y un release de vSphere más recientes que la nube. Como la migración basada en réplica copia datos a una máquina virtual creada recientemente en el lado de destino, cambiar el tipo de migración a "Migración masiva" debería facilitar el éxito de la migración en la mayoría de los casos.
 
-## Problemas de la L2 extendida
+## Problemas del concentrador L2 extendido
 {: #vcshcx-troubleshooting-stretched-l2}
 
-Pocos, si es que se ha experimentado algún problema con la operación del concentrador L2. De forma similar a CGW, si L2C pierde la conectividad, se vuelve a conectar automáticamente después de restaurar la conectividad de red. Utilice el shell de ccli para comprobar el estado y el funcionamiento. Después de habilitar SSH y conectar L2C, ejecute los mandatos `ip tunnel` e `ip link |grep t_` para visualizar el estado de los túneles.
+Se han experimentado muy pocos problemas con el funcionamiento del concentrador L2 (L2C). De forma similar a CGW, si L2C pierde la conectividad, se vuelve a conectar automáticamente después de restaurar la conectividad de red. Utilice el shell de ccli para comprobar el estado y el funcionamiento. Después de habilitar SSH y conectar L2C, ejecute los mandatos `ip tunnel` e `ip link |grep t_` para visualizar el estado de los túneles.
 
 ## Enlaces relacionados
 {: #vcshcx-troubleshooting-related}

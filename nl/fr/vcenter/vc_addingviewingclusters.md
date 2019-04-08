@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-18"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -277,27 +280,28 @@ Tableau 6. Interface réseau - Détails VLAN
 
 | Elément        | Description       |  
 |:------------- |:------------- |
-| Numéro de VLAN |Numéro unique de VLAN.  |
-| Description | Type de VLAN.  |
+| Numéro de VLAN | Numéro unique de VLAN.  |
+| Description | Description du réseau local virtuel.  |
 | Emplacement | Emplacement du centre de données. |
-|Route principale| Route principale du VLAN. |
+| Route principale | Route principale du VLAN. |
+
+Cliquez sur **Afficher la ressource** pour accéder aux détails du réseau local virtuel.
 
 Tableau 7. Interface réseau - Détails de sous-réseau
 
 | Elément        | Description       |  
 |:------------- |:------------- |
-| Nom | Nom du sous-réseau. Cliquez sur le nom pour accéder à tous les détails d'adresse IP. |
+| Nom | Nom du sous-réseau. Cliquez sur le nom pour accéder aux détails du sous-réseau.|
 | Type | Type de sous-réseau : principal ou portable. |
-| Description | Objectif du sous-réseau. |
+| Description | Description du sous-réseau. |
 
 Tableau 8. Interface réseau - Détails d'adresse IP
 
 | Elément        | Description       |  
 |:------------- |:------------- |
-| IP |Adresse IP. |
+| IP | Adresse IP. |
 | Statut | Statut de l'adresse IP. |
-| Description |Hôte de l'adresse IP. |
-
+| Description |Description de l'adresse IP.  |
 
 ## Suppression de clusters des instances vCenter Server
 {: #vc_addingviewingclusters-deleting}

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-04"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -20,7 +23,7 @@ Cuando la instancia de KMIP for VMware on {{site.data.keyword.cloud}} esté list
 ## Procedimiento para añadir certificados a instancias de KMIP for VMware on IBM Cloud
 {: #kmip_standalone_addingdeletingcert-add}
 
-1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
+1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Recursos** en el panel de navegación izquierdo.
 2. Desplácese hacia abajo en la tabla **Instancias de KMIP for VMware on IBM Cloud** y pulse la instancia a la que desea añadir certificados.
 3. Pulse **Añadir**.
 4. En la ventana **Añadir certificado SSL de cliente**, especifique el nombre y el contenido del certificado.
@@ -32,7 +35,7 @@ Cuando la instancia de KMIP for VMware on {{site.data.keyword.cloud}} esté list
 ## Procedimiento para ver certificados de instancias de KMIP for VMware on IBM Cloud
 {: #kmip_standalone_addingdeletingcert-view}
 
-1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
+1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Recursos** en el panel de navegación izquierdo.
 2. Desplácese hacia abajo en la tabla **Instancias de KMIP for VMware on IBM Cloud** y pulse la instancia cuyos certificados desea ver.
 3. Visualice la lista de certificados añadidos bajo la sección **Certificados SSL de cliente**.
 4. Para ver el contenido de un determinado certificado, pulse **Descargar**.
@@ -40,7 +43,7 @@ Cuando la instancia de KMIP for VMware on {{site.data.keyword.cloud}} esté list
 ## Procedimiento para suprimir certificados de instancias de KMIP for VMware on IBM Cloud
 {: #kmip_standalone_addingdeletingcert-delete}
 
-1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
+1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Recursos** en el panel de navegación izquierdo.
 2. Desplácese hacia abajo en la tabla **Instancias de KMIP for VMware on IBM Cloud** y pulse la instancia cuyos certificados desea suprimir.
 3. En la tabla **Certificados SSL de cliente**, localice el certificado que desea suprimir y pulse el icono **Suprimir**.
 

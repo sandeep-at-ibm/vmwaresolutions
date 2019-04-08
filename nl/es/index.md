@@ -4,7 +4,12 @@ copyright:
 
   years: 2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-22"
+
+keywords: IBM Cloud for VMware Solutions, getting started, deployment offerings, add-on services, use case
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -18,7 +23,7 @@ lastupdated: "2019-03-12"
 {:tip: .tip}
 {:table: .aria-labeledby="caption"}
 
-# Iniciación IBM Cloud for VMware Solutions
+# Guía de aprendizaje de iniciación
 {: #getting-started}
 
 En esta guía de aprendizaje de inicio, le guiamos a través del proceso de pedido de una instancia y algunos servicios adicionales para el mismo.
@@ -192,18 +197,4 @@ Después de colocar un pedido de instancia en el **Paso 3**, el despliegue de la
 Para obtener información sobre cómo ver la instancia que ha solicitado, consulte los temas siguientes:
 * [Visualización de instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
 * [Visualización de instancias de vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
-* [Visualización de instancias de NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_viewinginstances)
-
-## Paso 5: Gestión de servicios de complemento para la instancia
-{: #getting-started-step5}
-
-Si ha solicitado servicios de complemento para su instancia, puede gestionar los servicios también.
-
-Para obtener información sobre cómo gestionar los servicios, consulte los temas siguientes:
-* [Solicitud, visualización y eliminación de servicios para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
-* [Solicitud, visualización y eliminación de servicios para instancias de vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
-
-## Paso siguiente
-{: #getting-started-next}
-
-Gestione la instancia desde la consola de {{site.data.keyword.vmwaresolutions_short}} o desde el cliente web de VMware vSphere.
+* [Visualización de instancias de NetApp ONTAP Select](/docs/services/vmwaresolutions/services?topic=vmware-solutions-np_viewinginstances#np_viewinginstances)

@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-15"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # 將中介軟體重構及新增至 IBM Cloud Private
@@ -176,7 +179,8 @@ path = /shared/db2trader1`
 
 Todd 及 Jane 需要傳訊軟體，而且，因為他們已使用 MQ，所以這是一個絕佳選項。此外，它還可以在小覆蓋區中執行，並可針對每個「開發人員」啟動開發版本，以節省寶貴的「正式作業」資料流量。安裝 MQ 相當簡單。Todd 建立儲存空間的方式就像使用 Db2 時一樣，然後安裝 Helm 圖表：
 
-{{site.data.keyword.icpfull_notm}} 儀表板 > 型錄 > 開始在 MQ 中鍵入 > 選取 ibm-mqadvanced-server-dev 請檢閱 Readme 檔，然後按一下「配置」提供或驗證下列輸入值：
+{{site.data.keyword.icpfull_notm}} 儀表板 > 型錄 > 開始在 MQ 中鍵入 > 選取 ibm-mqadvanced-server-dev 請檢閱 Readme 檔，然後按一下「配置」
+提供或驗證下列輸入值：
 
 `release name = mqtrader1
 target namespace = stock-trader

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-14"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -22,7 +25,7 @@ Verschiedene Lösungskomponenten erfordern unterschiedliche Strategien für die 
 ## Dateiserver für dateibasierte Sicherung
 {: #solution_backingup-fileserver-backup}
 
-Für einige Komponenten, wie VMware vCenter Server, Platform Services Controller (PSC) und VMware NSX muss die Konfiguration auf einem Dateiserver gesichert werden.
+Für einige Komponenten, wie VMware vCenter Server mit integriertem Platform Services Controller (PSC) und VMware NSX muss die Konfiguration auf einem Dateiserver gesichert werden.
 
 Stellen Sie zur Speicherung dieser Sicherungen einen Linux-Dateiserver in Ihrem Cluster mithilfe der folgenden Schritte bereit:
 
@@ -35,7 +38,7 @@ Stellen Sie zur Speicherung dieser Sicherungen einen Linux-Dateiserver in Ihrem 
 ## Dateibasierte vCenter-Sicherung
 {: #solution_backingup-vcenter}
 
-VMware vCenter Server und PSC stellen eine [Benutzerschnittstelle für das Appliance-Management und eine API zum Exportieren der Datenbank und der Konfiguration auf einen Dateiserver ](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.install.doc/GUID-3EAED005-B0A3-40CF-B40D-85AD247D7EA4.html){:new_window} unter Verwendung verschiedener Protokolle zur Verfügung. VMware dokumentiert ein Beispiel dafür, wie diese zur [regelmäßigen Ausführung als Cron-Job](https://pubs.vmware.com/vsphere-6-5/index.jsp?topic=%2Fcom.vmware.vsphere.vcsapg-rest.doc%2FGUID-222400F3-678E-4028-874F-1F83036D2E85.html){:new_window} direkt auf der vCenter Server Appliance und dem PSC konfiguriert werden kann. Sie können dieses Beispiel für Ihren Verwendungszweck anpassen.
+VMware vCenter Server mit integriertem PSC stellt eine [Benutzerschnittstelle für das Appliance-Management und eine API zum Exportieren der Datenbank und der Konfiguration auf einen Dateiserver ](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.install.doc/GUID-3EAED005-B0A3-40CF-B40D-85AD247D7EA4.html){:new_window} unter Verwendung verschiedener Protokolle zur Verfügung. VMware dokumentiert ein Beispiel dafür, wie diese zur [regelmäßigen Ausführung als Cron-Job](https://pubs.vmware.com/vsphere-6-5/index.jsp?topic=%2Fcom.vmware.vsphere.vcsapg-rest.doc%2FGUID-222400F3-678E-4028-874F-1F83036D2E85.html){:new_window} direkt auf der vCenter Server Appliance und dem PSC konfiguriert werden kann. Sie können dieses Beispiel für Ihren Verwendungszweck anpassen.
 
 Bei der Verwendung eines externen PSC müssen Sie sowohl die vCenter Server Appliance als auch den PSC separat mit dieser Methode sichern. Bei der Verwendung eines integrierten PSC ist die PSC-Sicherung in der vCenter-Sicherung enthalten. Machen Sie sich mit den von VMware dokumentierten Aspekten und Einschränkungen vertraut und planen Sie entsprechend. Sehen Sie außerdem eine regelmäßige Rotation und einen regelmäßigen Gültigkeitsablauf für die Dateisicherungen auf Ihrem Dateiserver vor.
 
@@ -45,7 +48,7 @@ VMware setzt voraus, dass die Sicherungsposition ein leerer Ordner ist. Daher m�
 ## Dateibasierte NSX-Sicherung
 {: #solution_backingup-nsx}
 
-Eine geeignete Sicherung aller NSX-Komponenten ist für die Wiederherstellung des Betriebsstatus des Systems im Falle eines Ausfalls von entscheidender Bedeutung. Für das Design müssen Sie die NSX-Sicherung über die NSX-Manager-Sicherungsfunktion konfigurieren. Zu diesem Zweck können Sie den [NSX-Manager zur regelmäßigen Ausführung von Sicherungen auf Ihren Dateiserver konfigurieren](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window}. Stellen Sie sicher, dass Ihr Dateiserver oder die zugehörigen Daten ordnungsgemäß gesichert werden, und stellen Sie die Rotation alter NSX-Sicherungen sicher.
+Eine geeignete Sicherung aller NSX-Komponenten ist für die Wiederherstellung des Betriebsstatus des Systems im Falle eines Ausfalls von entscheidender Bedeutung. Für das Design müssen Sie die NSX-Sicherung über die NSX Manager-Sicherungsfunktion konfigurieren. Zu diesem Zweck können Sie den [NSX Manager zur regelmäßigen Ausführung von Sicherungen auf Ihren Dateiserver konfigurieren](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window}. Stellen Sie sicher, dass Ihr Dateiserver oder die zugehörigen Daten ordnungsgemäß gesichert werden, und stellen Sie die Rotation alter NSX-Sicherungen sicher.
 
 ## Imagebasierte Sicherung von virtuellen Maschinen für das Management
 {: #solution_backingup-image}
@@ -82,9 +85,9 @@ Ab VMware vCenter 6.5u2 unterstützt VMware die Sicherung der vCenter-Postgres-D
 Beim Wiederherstellen Ihrer Managementsicherungen sind einige besondere Aspekte zu beachten:
 
 * Für vCenter und PSC stellt VMware ein Installationsprogramm zur Verfügung, das eine neue virtuelle Appliance bereitstellen und die Konfiguration von einer Sicherung wiederherstellen kann.
-* Bei der Wiederherstellung einer Appliance auf der Basis einer Sicherung stellt das Installationsprogramm den Typ der Appliance (vCenter Server, PSC oder vCenter mit integriertem PSC) anhand der von Ihnen angegebenen Sicherungsinformationen fest.
+* Bei der Wiederherstellung einer Appliance auf der Basis einer Sicherung stellt das Installationsprogramm den Typ der Appliance (vCenter Server mit integriertem PSC) anhand der von Ihnen angegebenen Sicherungsinformationen fest.
 * Da Sie die Bereitstellung direkt auf einem Ihrer Hosts durchführen, können Sie die Bereitstellung möglicherweise nicht auf einem verteilten Switch oder einer verteilten Portgruppe durchführen. Sie müssen möglicherweise einen temporären Standardswitch und eine Portgruppe für die Bereitstellung der wiederhergestellten Appliances erstellen und eine Ihrer VM-NICs zeitweilig auf diesen Switch migrieren, um Netzkonnektivität für Ihre VMs bereitzustellen. Nach der Bereitstellung können Sie die VMs auf die verteilte Portgruppe migrieren und die VM-NIC auf den verteilten virtuellen Switch zurückverlegen.
-* Für NSX müssen Sie Ihren NSX-Manager und Ihre Controller möglicherweise erneut bereitstellen, bevor Sie die Konfiguration aus einer Sicherung wiederherstellen.
+* Für NSX müssen Sie Ihren NSX Manager und Ihre Controller möglicherweise erneut bereitstellen, bevor Sie die Konfiguration aus einer Sicherung wiederherstellen.
 * Stellen Sie sicher, dass Sie sich mit den VMware-Aspekten und -Einschränkungen für die vCenter-Sicherung und -Wiederherstellung vertraut machen.
 
 ## Zusammenfassung

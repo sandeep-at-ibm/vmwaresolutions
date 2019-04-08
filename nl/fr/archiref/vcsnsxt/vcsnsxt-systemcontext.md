@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -47,7 +50,7 @@ Tableau 2. Systèmes
 
 Acteur | Description
 ---|---
-vCenter | vCenter est la principale interface qu'utilise l'administrateur système pour gérer les machines virtuelles sur site et accéder au plug-in HCX afin d'étendre les réseaux et faire migrer les machines virtuelles. Grâce à vCenter Server with Hybridity Bundle, l'administrateur système peut intégrer en toute transparence des réseaux vSphere locaux dans l'instance vCenter Server qui s'exécute sur {{site.data.keyword.cloud_notm}}. La mise en réseau hybride étend les réseaux locaux à {{site.data.keyword.cloud_notm}} afin de permettre aux clients de faire migrer leurs applications dans une instance vCenter Server qui s'exécute sur {{site.data.keyword.cloud_notm}}, et dans l'autre sens si besoin. Pour plus d'informations sur vCenter Server with Hybridity Bundle, voir le document [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf).
+vCenter | vCenter est la principale interface qu'utilise l'administrateur système pour gérer les machines virtuelles sur site et accéder au plug-in HCX afin d'étendre les réseaux et faire migrer les machines virtuelles. Grâce à vCenter Server with Hybridity Bundle, l'administrateur système peut intégrer en toute transparence des réseaux vSphere locaux dans l'instance vCenter Server qui s'exécute sur {{site.data.keyword.cloud_notm}}. La mise en réseau hybride étend les réseaux locaux à {{site.data.keyword.cloud_notm}} afin de permettre aux clients de faire migrer leurs applications dans une instance vCenter Server qui s'exécute sur {{site.data.keyword.cloud_notm}}, et dans l'autre sens si besoin. Pour plus d'informations sur vCenter Server with Hybridity Bundle, voir [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro).
 Machines virtuelles sur site | Les machines virtuelles sur site hébergent les applications qui font l'objet d'une migration vers le cloud. Initialement, elles sont migrées en tant que machines virtuelles, puis elles sont migrées des machines virtuelles vers les conteneurs via le parcours de modernisation des applications.
 Machines virtuelles sur cloud | Les machines virtuelles sur cloud hébergent les applications qui ont fait l'objet d'une migration depuis l'environnement local. Elles communiquent avec les applications locales via le réseau L2 étendu. Dans le cas de cette architecture de référence et pour Acme Skateboards, l'une des machines virtuelles sur cloud est un serveur de base de données, qui fait partie de la charge de travail de présence en ligne.
 NSX-V | NSX-V on vCenter Server fournit le réseau dissocié défini par le logiciel qui est géré par l'administrateur système. Le réseau dissocié est la cible des réseaux étendus HCX pour gérer le trafic provenant des machines virtuelles pour {{site.data.keyword.icpfull_notm}}. NSX-V offre à l'architecture de référence des fonctions telles que le déploiement, la reconfiguration et la destruction de réseaux virtuels à la demande et de services de micro-segmentation dans VMware à l'aide de commutateurs vDS. Pour plus d'informations, voir [Présentation de NSX–V](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv).

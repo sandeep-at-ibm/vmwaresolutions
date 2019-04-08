@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -129,6 +132,7 @@ Disk	| 1000 Go sur magasin de données local
 {: #vcsiks-arch-overview-infrastructure-iks-comp}
 
 Figure 3. Composants {{site.data.keyword.containerlong_notm}} components
+</br>
 ![{{site.data.keyword.containerlong_notm}} - Diagramme des composants](vcsiks-iks-components.svg)
 
 ### Maître Kubernetes

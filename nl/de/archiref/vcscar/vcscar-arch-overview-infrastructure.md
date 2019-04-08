@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-03-22"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -43,12 +46,12 @@ Die physische Infrastruktur, die zur Bereitstellung einer {{site.data.keyword.ic
 
 Tabelle 1. vCenter Server-Spezifikation für {{site.data.keyword.icpfull_notm}}
 
-| NFS-Bereitstellung | vSAN-Bereitstellung |
-:--|:----:|:----:
-Anzahl Server | 3 | 4
-CPU | 28 Kerne 2,2 GHz | 28 Kerne 2,2 GHz
-RAM | 384 GB | 384 GB
-Speicher | 2000 GB 2IOPS/GB Management, 2000 GB 4 IOPS/GB Workload, 4000 GB 4 IOPS/GB {{site.data.keyword.icpfull_notm}} | Mindest-SSD 960 GB x 2
+| | NFS-Bereitstellung | vSAN-Bereitstellung |
+|:---------- |:---------- |:---------- |
+| Anzahl der Server | 3 | 4 |
+| CPU | 28 Kerne 2,2 GHz | 28 Kerne 2,2 GHz |
+| Speicher | 384 GB | 384 GB |
+| Speicher | 2000 GB 2IOPS/GB Management, 2000 GB 4IOPS/GB Workload, 4000 GB 4IOPS/GB {{site.data.keyword.icpfull_notm}} | Mindest-SSD 960-GB x 2 |
 
 Zusätzlich zu der Hardware, die für {{site.data.keyword.cloud_notm}} Private vorausgesetzt wird, müssen Sie persistente Datenträger in der {{site.data.keyword.cloud_notm}}-Umgebung erstellen, um die CAM-Datenbank- und -Protokolldaten (CAM = Cloud Automation Manager) zu speichern. CAM unterstützt zwar alle persistenten Datenträgertypen, die von {{site.data.keyword.cloud_notm}} unterstützt werden, für CAM empfohlen werden aber die Speicherkonfigurationen NFS und GlusterFS.
 

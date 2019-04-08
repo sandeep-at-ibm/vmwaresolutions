@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-12"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # オファリングの比較表
@@ -39,7 +42,7 @@ lastupdated: "2019-03-12"
 
 <sup>1</sup> 設計の検証とデプロイメント時の検証に基づきます。
 
-<sup>2</sup> 新規 vCenter Server with Hybridity のインスタンスとクラスターについては、vSAN のみ。デプロイメント後に NFS ストレージを追加できます。
+<sup>2</sup> 新規 vCenter Server with Hybridity のインスタンスとクラスターについては、vSAN のみ。 デプロイメント後に NFS ストレージを追加できます。
 
 <sup>3</sup> vSAN クラスターの ESXi サーバー数は最大 64 台まで増やすことができます。 詳しくは、[ESXi サーバーに関するよくある質問](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_esxi)の_クラスターには ESXi サーバーをいくつ追加できますか?_ を参照してください。
 

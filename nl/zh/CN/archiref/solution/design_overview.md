@@ -4,30 +4,23 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-15"
+
+subcollection: vmwaresolutions
+
 
 ---
-# 设计概述
+# IBM Cloud for VMware Solutions 组件
 {: #design_overview}
 
 {{site.data.keyword.vmwaresolutions_full}} 提供了自动化功能，可将 VMware 技术组件部署到全球范围的 {{site.data.keyword.CloudDataCents_notm}} 中。
 
-## 解决方案产品
-{: #design_overview-offerings}
+此解决方案产品服务组合中的产品包括自动部署和配置的集群中的 VMware vSphere 产品：VMware vSphere ESXi、具有嵌入式 Platform Services Controller (PSC) 的 VMware vCenter Server Appliance、VMware NSX-V 或 NSX-T 以及（可选）VMware vSAN。
 
-解决方案产品在自动部署并配置的集群中包含以下 VMware vSphere 产品：
-* VMware Cloud Foundation：vSphere ESXi、Platform Services Controller (PSC)、VMware vCenter Server Appliance、SDDC Manager、VMware NSX 和 VMware vSAN。
-* VMware vCenter Server：vSphere ESXi、Platform Services Controller (PSC)、vCenter Server Appliance、NSX 和（可选）vSAN。
+该体系结构包含一个云区域，并支持扩展到其他地理位置中的更多云区域，也支持扩展到同一数据中心内的其他 {{site.data.keyword.cloud_notm}} pod 中。区域定义为唯一的 vCenter Server 实例。此设计还支持在 vCenter Server 实例中自动扩展和收缩虚拟容量。
 
-在此设计中，实例部署在初始订购的 {{site.data.keyword.CloudDataCent_notm}} 中的单个 pod 中。初始部署后，可以将虚拟环境扩展到同一数据中心内的其他 pod 中或扩展到其他数据中心内。
-
-该设计还支持在 Cloud Foundation 或 vCenter Server 实例中自动扩展和收缩虚拟容量。
-
-## VMware on IBM Cloud 组件
-{: #design_overview-comp}
-
-图 1. VMware on {{site.data.keyword.cloud_notm}} 的组件
-![VMware on {{site.data.keyword.cloud_notm}} 的组件](design_overview.svg "该解决方案包括物理基础架构、虚拟基础架构、基础架构管理和公共服务。")
+图 1. {{site.data.keyword.vmwaresolutions_short}} 的解决方案组件
+![{{site.data.keyword.vmwaresolutions_short}} 的解决方案组件](vcsv4radiagrams-ra-full.svg "该解决方案包括物理基础架构、虚拟基础架构、基础架构管理和公共服务。")
 
 ## 相关链接
 {: #design_overview-related}

@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-15"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # vCenter Server ネットワーキングの操作上の考慮事項
@@ -61,7 +64,7 @@ etcd データベースのバックアップは、マネージド・サービス
 初期ホストをデプロイした後に、ユーザーは {{site.data.keyword.cloud_notm}} for VMware ポータルで計算容量をスケールアウトできます。
 
 環境をスケールアウトするには、次の 3 つの方法があります。
--	別の vCenter Server が管理する新規サイトを追加する。
+-	別々の vCenter Server が管理する新規サイトを追加する。
 -	新規クラスターを追加する。
 -	既存クラスターに新規ホストを追加する。
 

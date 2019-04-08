@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -22,7 +25,7 @@ lastupdated: "2019-02-21"
 -	Cloud Automation Manager (CAM) を使用して Infrastructure as Code (IaC) をスクリプト化し、VM とコンテナーの両方から作成された各種サービスを構成および調整して、DevOps ツールチェーンおよび ITSM ソリューションと統合する。
 
 ネットワーク・アーキテクチャーに注目すると、このリファレンス・アーキテクチャーには次の重要なコンポーネントがあります。
-- **オンプレミス仮想化** – Acme Skateboards 社の VM を現在ホストしている VMware クラスター。 モダナイズ対象となるアプリケーションを現在ホストしているのは、これらの VM です。 {{site.data.keyword.cloud_notm}} で実行される VMware vCenter Server on {{site.data.keyword.cloud_notm}} インスタンスに VM をマイグレーションしたり、必要に応じて元に戻したりできるようにするためには、このクラスターは、[VMware HCX on {{site.data.keyword.cloud_notm}} ソリューション・アーキテクチャー](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)のドキュメントに記載している前提条件を満たしている必要があります。
+- **オンプレミス仮想化** – Acme Skateboards 社の VM を現在ホストしている VMware クラスター。 モダナイズ対象となるアプリケーションを現在ホストしているのは、これらの VM です。 {{site.data.keyword.cloud_notm}} で実行する VMware vCenter Server on {{site.data.keyword.cloud_notm}} インスタンスに VM をマイグレーションしたり、必要に応じて元に戻したりするには、このクラスターが、[VMware HCX on {{site.data.keyword.cloud_notm}} ソリューション・アーキテクチャー](https://test.cloud.ibm.com/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)に記載されている前提条件を満たしている必要があります。
 - **VMware vCenter Server on IBM Cloud** – vCenter Server には、VMware Software Defined Data Center (SDDC) ソリューションを自動的にデプロイするために必要な基本的な VMware ビルディング・ブロック (vSphere、vCenter Server、NSX-V、および vSAN や {{site.data.keyword.cloud_notm}} エンデュランス・ストレージなどのストレージ・オプション) が用意されています。 この VMware クラスターが、VM のマイグレーション先であり、{{site.data.keyword.icpfull_notm}} でホストされるモダナイズ後のコンテナー化アプリケーションのいくつかのターゲットでもあります。
 
 このアーキテクチャーの重要なコンポーネントは以下のとおりです。
@@ -40,7 +43,7 @@ lastupdated: "2019-02-21"
 {: #vcsnsxt-appmod-benefits}
 
 - リソースの調達、設計、実装、デプロイメントに数週間から数カ月もかかっていた時間を数時間に短縮し、IT プロジェクトが開発者および基幹業務に迅速にデリバリーされます。 ロード・バランサー、ファイアウォール、スイッチ、ルーターなどのサービスをネットワーキング・チームやセキュリティー・チームが注文するまで待たなければならないとしたら、アプリケーションの時間対価値は下がってしまいます。
-- ホステッド・プライベート・クラウドの専用ベアメタル・サーバーでセキュリティーが強化されます。{{site.data.keyword.containerlong_notm}} や KMIP を含む {{site.data.keyword.cloud_notm}} サービスへのプライベート・ネットワーク・サービス・エンドポイントのデプロイメントも、その対象に含まれます。
+- ホステッド・プライベート・クラウドの専用ベアメタル・サーバーでセキュリティーが強化されます。{{site.data.keyword.containerlong_notm}} や KMIP などの {{site.data.keyword.cloud_notm}} サービスへのプライベート・ネットワーク・サービスのエンドポイントのデプロイメントを含みます。
 - 仮想化管理への完全な管理アクセスを可能にして、デプロイされたハイブリッド・クラウドを一貫して管理およびガバナンスできるようにします。既存の VMware ツール、スクリプト、研修への投資を活用できます。
 - 世界中に配置された 30 以上の {{site.data.keyword.CloudDataCents_notm}}をまたぐ IBM プロフェッショナル・サービスおよびマネージド・サービスにより、世界規模で VMware 専門知識を利用できます。
 

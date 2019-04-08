@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -44,7 +47,7 @@ Es gilt folgender Workflow:
   - Melden Sie sich bei der virtuellen Appliance von NSX Manager an, indem Sie die IP-Adresse und die Berechtigungsnachweise verwenden, die in der IC4VS-Konsole dokumentiert sind, und klicken Sie auf die Schaltfläche "Upgrade" auf der Startseite.
   - Melden Sie sich bei NSX Manager an.
   - Klicken Sie unter **Appliance-Management** auf **Sicherung und Wiederherstellung**.
-  - Klicken Sie auf "Sichern" und geben Sie einen entsprechenden Dateinamen ein. VMware empfiehlt, die NSX-Manager-Appliance erneut zu installieren, bevor Sie NSX Manager-Daten wiederherstellen. Auch wenn eine Wiederherstellungsoperation für eine vorhandene NSX Manager-Appliance möglicherweise ausgeführt werden kann, wird dies doch offiziell nicht unterstützt. Am besten ist es, sich die IP-Einstellungen für die NSX Manager-Appliance zu notieren, sodass sie verwendet werden können, um Informationen zu IP-Adressen und Sicherungsposition für die neu bereitgestellte NSX Manager-Appliance anzugeben.
+  - Klicken Sie auf "Sichern" und geben Sie einen entsprechenden Dateinamen ein. VMware empfiehlt, die NSX Manager-Appliance erneut zu installieren, bevor Sie NSX Manager-Daten wiederherstellen. Auch wenn eine Wiederherstellungsoperation für eine vorhandene NSX Manager-Appliance möglicherweise ausgeführt werden kann, wird dies doch offiziell nicht unterstützt. Am besten ist es, sich die IP-Einstellungen für die NSX Manager-Appliance zu notieren, sodass sie verwendet werden können, um Informationen zu IP-Adressen und Sicherungsposition für die neu bereitgestellte NSX Manager-Appliance anzugeben.
   - Klicken Sie in der rechten oberen Ecke auf **Bundle hochladen** und laden Sie die Datei hoch, die Sie von _my.vmware.com_ heruntergeladen haben.
   - Lesen Sie die Upgradeinformationen und wählen Sie, ob Sie SSH aktivieren und am VMware Customer Experience Improvement Program teilnehmen möchten.
   - Klicken Sie auf **Upgrade**.
@@ -65,5 +68,5 @@ Es gilt folgender Workflow:
 ## Zugehörige Links
 {: #vum-updating-nsx-related}
 
-* [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
 * [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demonstrationen)

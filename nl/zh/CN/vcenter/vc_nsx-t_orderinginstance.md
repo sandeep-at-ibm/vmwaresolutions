@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-07"
+lastupdated: "2019-03-20"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -107,20 +110,6 @@ lastupdated: "2019-03-07"
 |双 Intel Xeon Gold 5120 处理器 / 共 28 个核心，2.2 GHz|128 GB、192 GB、384 GB、768 GB、1.5 TB|
 |双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz|128 GB、192 GB、384 GB、768 GB、1.5 TB|
 
-### SAP 认证
-{: #vc_nsx-t_orderinginstance-sap}
-
-选择 **SAP 认证**后，无法变更 CPU 或 RAM 设置。
-
-根据需求，选择裸机服务器配置：
-  * 双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz / 192 GB RAM
-  * 双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz / 384 GB RAM
-  * 双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz / 768 GB RAM
-  * 双 Intel Xeon E5-2690 V4 处理器 / 共 28 个核心，2.6 GHz / 512 GB RAM
-  * 四核 Intel Xeon E7-8890 V4 处理器 / 共 96 个核心，2.2 GHz / 1024 GB RAM
-  * 四核 Intel Xeon E7-8890 V4 处理器 / 共 96 个核心，2.2 GHz / 2048 GB RAM
-  * 四核 Intel Xeon E7-8890 V4 处理器 / 共 96 个核心，2.2 GHz / 4096 GB RAM
-
 ### Broadwell
 {: #vc_nsx-t_orderinginstance-broadwell}
 
@@ -130,9 +119,6 @@ lastupdated: "2019-03-07"
 
 | CPU 模型选项   |RAM 选项|
 |:------------- |:------------- |
-|双 Intel Xeon E5-2620 V4 / 共 16 个核心，2.1 GHz|128 GB、256 GB、512 GB、768 GB、1.5 TB|
-|双 Intel Xeon E5-2650 V4 / 共 24 个核心，2.2 GHz|128 GB、256 GB、512 GB、768 GB、1.5 TB|
-|双 Intel Xeon E5-2690 V4 / 共 28 个核心，2.6 GHz|128 GB、256 GB、512 GB、768 GB、1.5 TB|
 |四核 Intel Xeon E7-4820 V4 / 共 40 个核心，2.0 GHz|128 GB、256 GB、512 GB、1 TB、2 TB、3 TB|
 |四核 Intel Xeon E7-4850 V4 / 共 64 个核心，2.1 GHz|128 GB、256 GB、512 GB、1 TB、2 TB、3 TB|
 
@@ -187,14 +173,6 @@ vSAN 仅可用于 **Skylake** 和 **Broadwell** 裸机配置。请指定以下 v
   |2 IOPS/GB|此选项旨在用于大多数通用工作负载。示例应用包括：托管小型数据库、备份 Web 应用程序或系统管理程序的虚拟机磁盘映像。|
   |4 IOPS/GB|此选项旨在用于同时活动数据百分比高的更高强度工作负载。示例应用包括：事务性数据库。|
   |10 IOPS/GB|此选项旨在用于要求最苛刻的工作负载类型（如分析）。示例应用包括：高事务数据库和其他性能敏感型数据库。此性能级别限制为每个文件共享的最大容量为 4 TB。|
-
-### 本地磁盘
-{: #vc_nsx-t_orderinginstance-local-disks}
-
-本地磁盘选项仅可用于 **SAP 认证**的四核 Intel Xeon E7-8890 V4 处理器裸机配置。
-请指定以下选项：
-* **磁盘计数**：选择要添加的磁盘数。
-* **磁盘类型**：选择与所需磁盘类型相应的选项。
 
 ## 网络接口设置
 {: #vc_nsx-t_orderinginstance-network-interface-settings}
@@ -303,15 +281,12 @@ vSAN 仅可用于 **Skylake** 和 **Broadwell** 裸机配置。请指定以下 v
    *  要使用您自己的许可证，请选择**我将提供**并输入许可证密钥。
 7. 完成裸机服务器设置。
     1. 选择要托管实例的 {{site.data.keyword.CloudDataCent_notm}}。
-    2. 选择裸机服务器配置。
-       * 选择 **Skylake** 或 **Broadwell** 时，请指定 CPU 型号和 RAM 大小。
-       * 选择的是 **SAP 认证**时，请选择 CPU 型号。
+    2. 选择裸机服务器配置，然后指定 CPU 型号和 RAM 大小。
     3. 指定 {{site.data.keyword.baremetal_short}} 数。如果计划将 vSAN 用作存储解决方案，那么至少需要 4 个 {{site.data.keyword.baremetal_short}}。  
 8. 填写存储配置。
   * 如果选择 **vSAN 存储器**，请指定容量和高速缓存磁盘的磁盘类型、磁盘数和 vSAN 许可证版本。如果需要更多存储器，请选中**高性能 Intel Optane** 框。
   * 如果选择 **NFS 存储器**，并且要向所有文件共享添加和配置相同设置，请指定**共享数**、**性能**和**大小 (GB)**。
   * 如果选择 **NFS 存储器**，并且要单独添加和配置文件共享，请选择**单独配置共享**。接着，单击**添加共享存储器**标签旁边的 **+** 图标，然后为每个文件共享选择**性能**和**大小 (GB)**。必须至少选择一个文件共享。
-  * 如果选择**本地磁盘**，请指定磁盘计数和磁盘类型。
 9. 完成网络接口设置。
    1. 输入主机名前缀、子域标签和根域名。对于辅助实例，系统会自动填写域名。
    2. 选择网络设置**公用和专用网络**或**仅专用网络**。

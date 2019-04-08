@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-13"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -25,7 +28,7 @@ Cette solution est considérée comme un composant supplémentaire et une extens
 Tandis que de nombreuses solutions de chiffrement de stockage sont disponibles pour votre charge de travail VMware, KMIP for VMware présente les avantages suivants :
 
 * Intégration au chiffrement VMware vSAN et au chiffrement vSphere, lesquels sont implémentés dans la couche de l'hyperviseur et non dans la couche de stockage ou dans la couche de la machine virtuelle. Cette approche garantit une gestion facile et la transparence pour votre solution et application de stockage.
-* Serveur de gestion des clés entièrement géré et disponible dans de nombreuses régions multi-zone (MZR) {{site.data.keyword.cloud_notm}}. 
+* Serveur de gestion des clés entièrement géré et disponible dans de nombreuses régions multi-zone (MZR) {{site.data.keyword.cloud_notm}}.
 * Avec l'intégration de votre cluster VMware à {{site.data.keyword.cloud_notm}} Key Protect, vous disposez de clés entièrement gérées par le client et que vous pouvez révoquer à tout moment.
 
 ## Liens connexes

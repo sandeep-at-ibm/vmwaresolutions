@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-14"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # No se muestran los dispositivos de réplica virtual de Zerto para los servidores ESXi recién creados

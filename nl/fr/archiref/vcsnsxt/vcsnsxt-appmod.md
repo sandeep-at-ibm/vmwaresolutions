@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -22,7 +25,7 @@ Cette architecture hybride permet à Acme Skateboards de :
 -	se servir de Cloud Automation Manager (CAM) pour écrire un script IaC (Infrastructure as Code) afin de composer et d'orchestrer les services qui sont réalisés à partir de machines virtuelles et de conteneurs en vue de les intégrer à ses chaînes d'outils DevOps et sa solution ITSM.
 
 Du point de vue de l'architecture de réseau, l'architecture de référence est composée des principaux composants suivants :
-- **Virtualisation sur site** – Cluster VMware qui héberge actuellement les machines virtuelles Acme Skateboards. Ce sont ces machines virtuelles qui hébergent actuellement les applications qui seront modernisées. Ce cluster doit respecter les prérequis décrits dans le document [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf) pour permettre aux clients de faire migrer des machines virtuelles dans l'instance VMware vCenter Server on {{site.data.keyword.cloud_notm}} qui s'exécute sur {{site.data.keyword.cloud_notm}}, et dans l'autre sens si besoin.
+- **Virtualisation sur site** – Cluster VMware qui héberge actuellement les machines virtuelles Acme Skateboards. Ce sont ces machines virtuelles qui hébergent actuellement les applications qui seront modernisées. Ce cluster doit respecter les prérequis décrits dans le document [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](https://test.cloud.ibm.com/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro) afin de permettre aux clients de faire migrer des machines virtuelles dans l'instance VMware vCenter Server on {{site.data.keyword.cloud_notm}} qui s'exécute sur {{site.data.keyword.cloud_notm}}, et dans l'autre sens si besoin.
 - **VMware vCenter Server on IBM Cloud** – vCenter Server fournit les blocs de construction VMware fondamentaux, à savoir vSphere, vCenter Server, NSX-V, et des options de stockage, telles que vSAN ou {{site.data.keyword.cloud_notm}} Endurance, nécessaires pour déployer automatiquement une solution VMware Software Defined Data Center (SDDC). Ce cluster VMware est la cible des machines virtuelles migrées et certaines des applications modernisées dans les conteneurs hébergés dans {{site.data.keyword.icpfull_notm}}.
 
 Les principaux composants de l'architecture sont les suivants :

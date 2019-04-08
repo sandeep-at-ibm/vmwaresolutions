@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -44,7 +47,7 @@ O diagrama a seguir descreve a implementação de referência do aplicativo
 Acme Skate Advisor em uma implementação de infraestrutura de modernização de
 aplicativo.
 
-Figura 1. Componentes físicos do Skate Advisor
+Figura 1. Componentes físicos do Skate Advisor</br>
 ![Componentes físicos do Skate Advisor](vcscar-physical.svg)
 
 O aplicativo Skate Advisor amplia o aplicativo da web Acme existente
@@ -84,6 +87,7 @@ descrito.
 e o esquema do banco de dados pré-instalados.
 
 Figura 2. Orquestração do CAM
+</br>
 ![Orquestração do CAM](vcscar-cam.svg)
 
 ### Balanceamento de carga e proxy
@@ -138,7 +142,7 @@ implementação.
 A plataforma de modernização de aplicativo foi projetada com os
 componentes a seguir para atingir esse objetivo.
 
-Figura 3. Acesso à rede pública
+Figura 3. Acesso à rede pública</br>
 ![Acesso à rede pública](vcscar-network.svg)
 
 O {{site.data.keyword.cloud_notm}} tem duas redes. A rede pública permite que os servidores sejam acessados da Internet e a rede privada permite que os servidores se comuniquem entre si por meio de um backbone de alta velocidade em todos os {{site.data.keyword.CloudDataCents_notm}}.
@@ -163,6 +167,7 @@ O aplicativo Skate Advisor usa os componentes de software
 a seguir.
 
 Figura 4. Mapeamento de software do Skate Advisor
+</br>
 ![Mapeamento de software do Skate Advisor](vcscar-sw-mapping.svg)
 
 Os componentes de software a seguir são usados:

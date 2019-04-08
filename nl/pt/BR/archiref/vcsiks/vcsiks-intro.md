@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-15"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Introdução ao vCenter Server e ao IBM Cloud Kubernetes Service

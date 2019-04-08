@@ -30,8 +30,8 @@
      id="namedview310"
      showgrid="false"
      inkscape:zoom="1.0047393"
-     inkscape:cx="548"
-     inkscape:cy="420.5"
+     inkscape:cx="548.00002"
+     inkscape:cy="420.50002"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -461,10 +461,11 @@
      id="rect146"
      style="font-size:medium;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke-width:0" />
   <text
-     style="font-size:12.08000056px;font-family:'MS UI Gothic';text-anchor:middle;-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-     x="589.5"
-     y="374.5"
-     id="text148">デプロイ / ライフサイクル</text>
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.70137119px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.88587505"
+     x="665.50677"
+     y="331.76019"
+     id="text148"
+     transform="scale(0.88587504,1.1288274)">デプロイ / ライフサイクル</text>
   <text
      style="font-size:12.08000056px;font-family:'MS UI Gothic';text-anchor:middle;-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
      x="589.5"
@@ -478,10 +479,11 @@
      id="rect154"
      style="font-size:medium;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke-width:0" />
   <text
-     style="font-size:12.08000056px;font-family:'MS UI Gothic';text-anchor:middle;-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-     x="490.5"
-     y="600.5"
-     id="text156">デプロイ / ライフサイクル</text>
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.70137119px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.88587505"
+     x="553.75287"
+     y="531.96796"
+     id="text156"
+     transform="scale(0.88587504,1.1288274)">デプロイ / ライフサイクル</text>
   <text
      style="font-size:12.08000056px;font-family:'MS UI Gothic';text-anchor:middle;-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
      x="490.5"
@@ -823,10 +825,11 @@
      id="rect280"
      style="font-size:medium;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke-width:0" />
   <text
-     style="font-size:12.08000056px;font-family:'MS UI Gothic';text-anchor:middle;-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
-     x="290.5"
-     y="667.5"
-     id="text282">コンシューム・</text>
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.53598785px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.8721844"
+     x="332.8905"
+     y="582.18311"
+     id="text282"
+     transform="scale(0.8721844,1.1465465)">コンシューム・</text>
   <text
      style="font-size:12.08000056px;font-family:'MS UI Gothic';text-anchor:middle;-inkscape-font-specification:'MS UI Gothic, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-align:center;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
      x="290.5"

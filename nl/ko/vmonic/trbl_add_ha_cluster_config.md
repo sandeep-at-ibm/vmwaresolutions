@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-14"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # HA 클러스터 추가 시 발생하는 vSphere 콘솔 구성 문제

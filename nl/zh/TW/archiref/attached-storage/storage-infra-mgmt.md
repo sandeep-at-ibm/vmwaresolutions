@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-13"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -43,7 +46,7 @@ lastupdated: "2019-02-13"
 | 負載平衡           | 根據來源虛擬埠遞送 |
 | 作用中的上行鏈路 | Uplink1 和 uplink2 |
 
-除了為 NFS 儲存空間資料流量建立 vDS 埠群組之外，還會在部署期間於每個 vSphere ESXi 主機上建立 VMkernel 埠，並指派至 SDDC-DPG-NFS 埠群組。VMkernel 埠也獲指派一個來自專用可攜式子網路的 IP 位址，其與連接儲存空間 VLAN 相關聯，亦即，專用 VLAN B 及其 MTU 是設為 9000 以支援巨大訊框。
+除了為 NFS 儲存空間資料流量建立 vDS 埠群組之外，還會在部署期間於每部 vSphere ESXi 主機上建立 VMkernel 埠，並指派至 SDDC-DPG-NFS 埠群組。VMkernel 埠也獲指派一個來自專用可攜式子網路的 IP 位址，其與連接儲存空間 VLAN 相關聯，亦即，專用 VLAN B 及其 MTU 是設為 9000 以支援巨大訊框。
 
 圖 1. 專用 vDS 埠群組及上行鏈路
 

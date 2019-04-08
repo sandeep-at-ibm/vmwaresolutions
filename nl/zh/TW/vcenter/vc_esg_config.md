@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-11"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -27,7 +30,8 @@ VMware NSX 是一種網路虛擬化平台，可將隔離的網路虛擬化，並
 * 在連接至第 2 層 (L2) 網路的本端工作負載之間，會針對潛在的東西向通訊而部署範例「NSX 分散式邏輯路由器 (DLR)」。
 * 部署及配置 NSX Edge 應用裝置，以執行從工作負載邏輯交換器之 IP 位址範圍到 NAT 規則上之公用 IP 位址的網址轉換 (NAT)。
 
-  對於僅限專用的實例，不會部署 NSX Edge。{:note}
+  對於僅限專用的實例，不會部署 NSX Edge。
+  {:note}
 
 * 如果您已安裝 Veeam on {{site.data.keyword.cloud_notm}} 服務，則會配置 NSX Manager 執行 NSX 配置的每日備份。如需相關資訊，請參閱[安裝 Veeam on {{site.data.keyword.cloud_notm}} 時的考量](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations#considerations-when-you-install-veeam-on-ibm-cloud)。
 
@@ -41,7 +45,8 @@ VMware NSX 是一種網路虛擬化平台，可將隔離的網路虛擬化，並
    2. 在**新裝置**功能表上，選取**網路**，然後按一下**新增**。
    3. 在新增的網路配接卡上，從功能表中選取工作負載邏輯交換器。**vxw-dvs-17-virtualwire-1-sid-6000-Workload** 為工作負載邏輯交換器的名稱範例。
 
-   請確定您未選取**工作負載傳輸**交換器。{:important}
+   請確定您未選取**工作負載傳輸**交換器。
+   {:important}
 
 2. 識別 VM 的可用 IP 位址：
    *  IP 位址的範圍必須是 `192.168.10.0/24`。請注意，已保留 IP 位址 `192.168.10.1`（請參閱**步驟 3**）。

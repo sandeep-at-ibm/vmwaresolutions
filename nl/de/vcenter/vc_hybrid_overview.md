@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-11"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -78,7 +81,7 @@ Verfügbarkeit und Preisgestaltung standardisierter Hardwarekonfigurationen kön
 ### Bare Metal Server
 {: #vc_hybrid_overview-bare-metal}
 
-Vier {{site.data.keyword.baremetal_short}}-Instanzen erhalten Sie für Ihre Bestellung einer vCenter Server with Hybridity Bundle-Instanz. Die folgenden Konfigurationen sind verfügbar: 
+Vier {{site.data.keyword.baremetal_short}}-Instanzen erhalten Sie für Ihre Bestellung einer vCenter Server with Hybridity Bundle-Instanz. Die folgenden Konfigurationen sind verfügbar:
   * **Skylake**: 2-CPU Intel Skylake Generation-Server (Intel Xeon 4100/5100/6100 Series) mit dem ausgewählten CPU-Modell und der RAM-Größe.
   * **Broadwell**: 2-CPU Intel Broadwell Generation-Server (Intel Xeon E5-2600/E7-4800 Series) mit dem ausgewählten CPU-Modell und der RAM-Größe.
 

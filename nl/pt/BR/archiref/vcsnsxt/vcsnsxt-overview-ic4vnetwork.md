@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -40,19 +43,19 @@ O {{site.data.keyword.cloud_notm}} aloca dois tipos de endereços IP para serem 
 * Os endereços IP primários são designados a dispositivos, bare metal e servidores virtuais fornecidos pelo {{site.data.keyword.cloud_notm}}. Os usuários não devem designar nenhum endereço IP nesses blocos.
 * Os endereços IP móveis são fornecidos ao usuário para designar e gerenciar conforme necessário.
 
-Os endereços IP primários ou móveis poderão ser transformados em roteáveis para qualquer VLAN dentro da conta do cliente se a conta estiver configurada como uma conta de Virtual Routing and Forwarding (VRF).
+Os endereços IP primários ou móveis poderão ser tornados roteáveis para qualquer VLAN dentro da conta do cliente se a conta estiver configurada como uma conta de Virtual Routing and Forwarding (VRF).
 
 ## Virtual Routing and Forwarding
 {: #vcsnsxt-overview-ic4vnetwork-vrf}
 
-As contas do {{site.data.keyword.cloud_notm}} também podem ser configuradas como uma conta Virtual Routing and Forwarding (VRF). Uma conta do VRF ativa o roteamento global automático entre blocos de IP de sub-rede dentro da conta. Todas as contas com conexões de Link direto devem ser convertidas ou criadas como uma conta do VRF.
+As contas do {{site.data.keyword.cloud_notm}} também podem ser configuradas como uma conta Virtual Routing and Forwarding (VRF). Uma conta de VRF ativa o roteamento global automático entre blocos de IP de sub-rede dentro da conta. Todas as contas com conexões de Link direto devem ser convertidas ou criadas como uma conta do VRF.
 
 ## Conexões físicas do host
 {: #vcsnsxt-overview-ic4vnetwork-host-connect}
 
 Cada host físico dentro do design tem dois pares redundantes de conexões Ethernet de 10 Gbps em cada comutador Top of Rack (ToR) do {{site.data.keyword.cloud_notm}} (público e privado). Os adaptadores são configurados como conexões individuais (desvinculadas) para um total de 4 × conexões de 10 Gbps. Isso permite que cada conexão da placa de interface de rede (NIC) funcione independentemente das outras.
 
-Figura 2. Conexões de host físico
+Figura 2. Conexões de host físico</br>
 ![Conexões de host físico](vcsnsxt-host-connections.svg)
 
 ## VLANs

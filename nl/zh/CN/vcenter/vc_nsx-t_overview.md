@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-21"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -32,7 +35,7 @@ vCenter Server with NSX-T 实例仅用于概念验证 (POC) 或沙箱测试。�
 下图描绘了三节点 vCenter Server with NSX-T 部署的高级别体系结构和组件。
 
 图 1. 三节点集群的 vCenter Server with NSX-T 高级别体系结构
-![vCenter Server with NSX-T 体系结构](vc_architecture.svg "三节点集群的 vCenter Server 高级别体系结构")
+![vCenter Server with NSX-T 体系结构](vc_nsx-t_architecture.svg "三节点集群的 vCenter Server 高级别体系结构")
 
 ### 物理基础架构
 {: #vc_nsx-t_overview-physical-infras}
@@ -49,7 +52,7 @@ vCenter Server with NSX-T 实例仅用于概念验证 (POC) 或沙箱测试。�
 ### 虚拟化管理
 {: #vc_nsx-t_overview-virtualization-mgmt}
 
-此层由具有嵌入式 Platform Services Controller (PSC) 的 vCenter Server Appliance (vCSA)、三个 NSX Node、四个 NSX Edge 服务网关 (ESG) 以及 IBM CloudDriver 虚拟服务器实例 (VSI) 组成。对于某些操作（例如，向环境添加主机），将根据需要部署 CloudDriver VSI。
+此层由具有嵌入式 Platform Services Controller (PSC) 的 vCenter Server Appliance (vCSA)、三个 NSX Node、三个 NSX Edge 服务网关 (ESG) 以及 IBM CloudDriver 虚拟服务器实例 (VSI) 组成。对于某些操作（例如，向环境添加主机），将根据需要部署 CloudDriver VSI。
 
 基本产品随 vCenter Server Appliance 一起部署，后者的大小设置为支持具有最多 400 个主机和最多 4000 个 VM 的环境。可以使用与 vSphere API 兼容的相同工具和脚本来管理 IBM 托管的 VMware 环境。
 
@@ -70,8 +73,7 @@ vCenter Server with NSX-T 实例中包含以下组件。
 
 可以使用下列其中一个配置来订购三个或更多 {{site.data.keyword.baremetal_short}}：
 * **Skylake**：具有所选 CPU 型号和 RAM 大小的 2 个 CPU Intel Skylake 代服务器（Intel Xeon 4100/5100/6100 系列）。  
-* **SAP 认证**：具有所选 CPU 型号的 Intel Skylake 或 Intel Broadwell 代服务器（Intel Xeon 6140/E5-2690/E7-8890 系列）。
-* **Broadwell**：具有所选 CPU 型号和 RAM 大小的 2 个 CPU 的 Intel Broadwell 代服务器（Intel Xeon E5-2600/E7-4800 系列）。
+* **Broadwell**：具有所选 CPU 型号和 RAM 大小的 4 个 CPU 的 Intel Broadwell 代服务器（Intel Xeon E7-4800 系列）。
 
      如果计划使用 vSAN 存储器，那么配置需要 4 个 {{site.data.keyword.baremetal_short}}。
      {:note}
@@ -83,11 +85,11 @@ vCenter Server with NSX-T 实例中包含以下组件。
 *  10 Gbps 双公用和专用网络上行链路
 *  三个 VLAN（虚拟 LAN）：一个公用 VLAN 和两个专用 VLAN
 * 一个覆盖网络，具有 T1 和 T0 路由器，以用于处理连接到第 2 层 (L2) 网络的本地工作负载之间的潜在东-西通信。这将部署为样本路由拓扑，可以基于该拓扑进行构建，或者对其进行修改或将其除去。
-*  四个 VMware NSX-T Edge 服务网关：
-  * 两个用于出站 HTTPS 管理流量的安全管理服务 VMware NSX ESG，由 IBM 部署为管理联网拓扑的一部分。IBM 管理 VM 使用此 ESG 来与自动化相关的特定外部 IBM 管理组件进行通信。有关更多信息，请参阅[配置网络以将客户管理的 NSX ESG 用于 VM](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_esg_config)。
+*  三个 VMware NSX-T Edge 服务网关：
+  * 一个用于出站 HTTPS 管理流量的安全管理服务 VMware NSX ESG，由 IBM 部署为管理联网拓扑的一部分。IBM 管理 VM 使用此 ESG 来与自动化相关的特定外部 IBM 管理组件进行通信。有关更多信息，请参阅[配置网络以将客户管理的 NSX ESG 用于 VM](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_esg_config)。
   * 两个用于出站和入站 HTTPS 工作负载流量的客户管理的安全 VMware NSX ESG。此网关由 IBM 部署为模板，您可修改此模板来提供 VPN 访问或公共访问。有关更多信息，请参阅[客户管理的 NSX Edge 会构成安全风险吗？](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq-customer-nsx)
 
-  这些 ESG 名为 **mgmt-nsx-edge0** 和 **mgmt-nsx-edge1**。您无法访问这些 ESG，也无法加以使用。如果对其进行修改，那么可能无法在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理 vCenter Server 实例。此外，使用防火墙或禁用与外部 IBM 管理组件的 ESG 通信可能导致 {{site.data.keyword.vmwaresolutions_short}} 无法使用。
+  此 ESG 名为 **mgmt-nsx-edge0**。您无法访问此 ESG，也无法加以使用。如果对其进行修改，那么可能无法在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理 vCenter Server 实例。此外，使用防火墙或禁用与外部 IBM 管理组件的 ESG 通信可能导致 {{site.data.keyword.vmwaresolutions_short}} 无法使用。
 {:important}
 
 ### 虚拟服务器实例
@@ -123,18 +125,13 @@ vSAN 选项提供定制配置，具有各种磁盘类型、大小和数量的选
 
 NFS 选项为工作负载提供定制的共享文件级别存储器，具有各种大小和性能的选项：
 * 大小：20 GB 到 24 TB
-* 性能：0.25、2、4 或 10 IOPS/GB。
-* 单独配置文件共享。
+* 性能：0.25、2、4 或 10 IOPS/GB
+* 不同配置的文件共享
 
   此 10 IOPS/GB 性能级别限制为每个文件共享的最大容量为 4 TB。
   {:note}
 
 如果选择 NFS 选项，那么会为管理组件订购一个 2 TB、4 IOPS/GB 文件共享。
-
-#### 本地磁盘存储器
-{: #vc_nsx-t_overview-local-disk-storage}
-
-本地磁盘选项仅可用于 **SAP 认证**的四核 Intel Xeon E7-8890 V4 处理器裸机配置，提供定制配置，有各种磁盘计数和磁盘类型可供选择。
 
 ### 许可证（IBM 提供或 BYOL）和费用
 {: #vc_nsx-t_overview-license-and-fee}

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -15,47 +18,32 @@ lastupdated: "2019-02-15"
 # インフラストラクチャーの管理の設計
 {: #design_infrastructuremgmt}
 
-インフラストラクチャーの管理とは、VMware インフラストラクチャーを管理するコンポーネントのことを指します。 この設計では 1 つの外部 Platform Services Controller (PSC) インスタンスと 1 つの vCenter Server インスタンスを使用します。
-* vCenter Server は vSphere 環境を管理するための中央プラットフォームで、このソリューションの基本的なコンポーネントの 1 つです。
+インフラストラクチャーの管理とは、VMware インフラストラクチャーを管理するコンポーネントのことを指します。
+* Platform Services Controller (PSC) を組み込んだ vCenter Server は、vSphere 環境を管理するための中央プラットフォームで、このソリューションの基本的なコンポーネントの 1 つです。
 * このソリューションでは PSC を使用して、VMware vCenter のシングル・サインオン、ライセンス・サービス、ルックアップ・サービス、VMware 認証局など、一連のインフラストラクチャー・サービスを提供します。
 
-PSC インスタンスと vCenter Server インスタンスは別々の仮想マシン (VM) です。
+この設計では、vCenter Server インスタンスに統合した PSC 機能を使用します。PSC と vCenter Server は同じ仮想マシン (VM) に配置されます。
 
-## PSC の設計
-{: #design_infrastructuremgmt-psc}
-
-この設計では、管理 VM と関連付けられたプライベート VLAN のポータブル・サブネット上に、1 つの外部 PSC が仮想アプライアンスとしてデプロイされます。 このデフォルト・ゲートウェイは、バックエンド・カスタマー・ルーター (BCR) に設定されます。 仮想アプライアンスは、次の表の仕様を使って構成されます。
-
-これらの値はデプロイメント時に設定され、変更できません。
-{:note}
-
-表 1. Platform Services Controller の仕様
-
-| 属性                    | 仕様                  |
-|------------------------------|--------------------------------|
-| Platform Services Controller | 仮想アプライアンス              |
-| vCPU の数              | 2                              |
-| メモリー                       | 4 GB                           |
-| ディスク                         | 114 GB (ローカル VMFS データストア) |
-| ディスク・タイプ                    | シン (プロビジョン済み)               |
+図 1. インフラストラクチャー管理</br>
+![インフラストラクチャー管理](vcsv4radiagrams-ra-inframgmt.svg)
 
 プライマリー・インスタンスにある PSC には、デフォルトの SSO ドメインである `vsphere.local` が割り当てられます。
 
 ## vCenter Server の設計
 {: #design_infrastructuremgmt-vcenter}
 
-vCenter Server も仮想アプライアンスとしてデプロイされます。 さらに、vCenter Server は管理 VM と関連付けられたプライベート VLAN のポータブル・サブネット上にインストールされます。 そのデフォルト・ゲートウェイは、その特定のサブネットの BCR に割り当てられた IP アドレスに設定されます。 仮想アプライアンスは、次の表の仕様を使って構成されます。
+PSC を組み込んだ vCenter Server は、管理 VM と関連付けられたプライベート VLAN のポータブル・サブネット上にインストールされます。そのデフォルト・ゲートウェイは、その特定のサブネットの BCR に割り当てられた IP アドレスに設定されます。 仮想アプライアンスは、次の表の仕様を使って構成されます。
 
-表 2. vCenter Server アプライアンスの仕様
+表 1. vCenter Server アプライアンスの仕様
 
 | 属性                    | 仕様                       |
 |------------------------------|-------------------------------------|
 | vCenter Server               | 仮想アプライアンス                   |
-| アプライアンスのインストール・サイズ  | メディア (最大でホスト 400 個、VM 4,000 個) |
-| Platform Services Controller | 外部                            |
-| vCPU の数              | 8                                   |
-| メモリー                       | 24 GB                               |
-| ディスク                         | ローカル・データストアに 400 GB           |
+| アプライアンスのインストール・サイズ  | 大 (最大 1,000 ホスト、10,000 VM) |
+| Platform Services Controller | 統合                            |
+| vCPU の数              | 16                                   |
+| メモリー                       | 32 GB                               |
+| ディスク                         | ローカル・データ・ストアに 990 GB (ラージ・ディスク・デプロイメント) |
 | ディスク・タイプ                    | シン (プロビジョン済み)                    |
 
 ### vCenter Server データベース
@@ -86,55 +74,47 @@ vCenter Server の構成では、アプライアンスに含まれているロ�
 
 デフォルトで、「**VM 再起動優先順位 (VM restart priority)**」オプションは「中 (medium)」に、「**ホスト分離応答 (Host isolation response)**」オプションは無効に設定されています。 さらに、「**VM のモニタリング (VM monitoring)**」は無効に設定され、「**データストア・ハートビート (Datastore Heartbeating)**」フィーチャーはすべてのクラスター・データ・ストアを含めるように構成されます。 この方法では、NAS データ・ストアがあるときにはそれらを使用します。
 
-## 自動化
-{: #design_infrastructuremgmt-automation}
+## Enhanced vMotion Compatibility
+{: #design_infrastructuremgmt-evc}
 
-これらのソリューションの要となるのは自動化です。 自動化では次のようなメリットがあります。
-* デプロイメントの複雑性を軽減します。
-* デプロイメントの時間を劇的に短縮します。
-* VMware インスタンスが一貫した方法でデプロイされることが保証されます。
+CPU の機能が異なる可能性のあるクラスター・ノード間で vMotion の互換性の処理を簡略化するために、Skylake レベルで Enhanced vMotion Compatibility (EVC) モードが有効になります。その結果、{{site.data.keyword.cloud_notm}} インベントリーに新しいプロセッサーが届いた時に、クラスター・ノード間で vMotion の互換性が確保され、Skylake プロセッサー・サーバーがインベントリーにない場合でも、将来のクラスター拡張が可能になります。
 
-{{site.data.keyword.IBM}} CloudBuilder、IBM CloudDriver、および SDDC Manager の VM は、連携して新たな VMware インスタンスを開始し、ライフサイクル管理機能を実行します。
+### IBM CloudDriver
+{: #design_infrastructuremgmt-cloud-driver}
 
-### IBM CloudBuilder と IBM CloudDriver
-{: #design_infrastructuremgmt-cloud-builder-driver}
+こうしたソリューションの基礎になっているのが自動処理です。自動処理によってデプロイメントの複雑さが解消され、デプロイメント時間が大幅に短縮され、VMware インスタンスが一貫した方法でデプロイされるようになります。
 
-IBM CloudBuilder と IBM CloudDriver の仮想サーバー・インスタンス (VSI) は、ユーザーがアクセスできない IBM 開発コンポーネントです。
-* IBM CloudBuilder は、プロビジョニングされたベア・メタル ESXi ホスト内でソリューション・コンポーネントのデプロイメント、構成、妥当性検査をブートストラップする、一時的な {{site.data.keyword.cloud_notm}} 仮想サーバー・インスタンス (VSI) です。
-* IBM CloudDriver VSI はインスタンス作成のためにデプロイされ、その後は、追加のノード、クラスター、またはサービスのデプロイなどの操作のために {{site.data.keyword.cloud_notm}} for VMware の最新コードで必要に応じて定期的にデプロイされます。 IBM CloudDriver は、インスタンスを管理する目的のためにだけデプロイされた VMware NSX Edge Services Gateway を介して {{site.data.keyword.vmwaresolutions_short}} コンソールと通信し、インスタンスを保守するためのエージェントとして機能します。 IBM CloudDriver は、クラスターへの新しいベア・メタル・ホストの追加や、インスタンスへのアドオン・サービスのデプロイなど、進行中のアクションに対して責任を負います。 Cloud Foundation インスタンスの場合は、IBM CloudDriver は VMware SDDC Manager VM と通信して、ホストの追加やパッチ適用などの機能を実行します。
+IBM CloudBuilder は、一時的な {{site.data.keyword.cloud_notm}} VM 仮想サーバー・インスタンス (VSI) です。新しい VMware インスタンスを起動して、ライフサイクル管理機能を実行する、という役割を果たします。それは、全体的な vCenter Server インスタンス管理が必要になるとデプロイされ、そのプロセスが完了すると破棄されます。
 
-以降のセクションで説明する VM は、ユーザーによって削除されたり損傷されたりする可能性があります。 VM が削除されたり、シャットダウンされたり、稼働不能になったりすると、{{site.data.keyword.vmwaresolutions_short}} コンソール上の Cloud Foundation または vCenter Server の次の操作は中断されます。
-* インスタンスやホストの状態の表示
-* クラスターの追加や削除
-* ESXi ホストの追加や削除
-* サービスの追加や削除
-* パッチ適用
+{{site.data.keyword.cloud_notm}} オブジェクト・ストレージをメッセージ・キューとして使用し、パブリック・ネットワーク接続かオプションのプライベート・ネットワーク接続によって {{site.data.keyword.vmwaresolutions_short}} 管理インフラストラクチャーと通信できるように IBM CloudDriver を構成できます。IBM CloudDriver は IBM が開発したコンポーネントで、お客様がアクセスすることはできません。以下の属性や機能があります。
 
-### SDDC Manager
-{: #design_infrastructuremgmt-sddc-manager}
-
-Cloud Foundation インスタンスの場合、SDDC Manager VM は、VMware によって開発され、保守されるコンポーネントです。 そのライフサイクル全体にわたって、インスタンスの一部となります。 これは、インスタンスの次のライフサイクル機能に対して責任を負います。
-* VMware コンポーネント (vCenter Server、Platform Services Controller (PSC)、vSAN、および NSX) の管理。これには、IP アドレスの割り振りとホスト名の解決などが含まれます。
-* NSX VTEP、vSAN、リソース・プールなどの、影響を受けるサービスが含まれるクラスター内の ESXi ホストの拡張または縮小。
-
-vCenter Server インスタンスでは SDDC Manager がないため、これらのアクティビティーは IBM CloudDriver によって実行されます。
+- ユーザー・アカウントに属する vCenter Server インスタンスのデプロイメントと構成。
+- vCenter Server クラスターでのホストの追加と削除。
+- vCenter Server インスタンスでのクラスターの追加と削除。
+- vCenter Server インスタンスでのアドオン・サービスや機能の追加と削除。
 
 ### 自動化フロー
 {: #design_infrastructuremgmt-auto-flow}
 
-次の手順は、VMware インスタンスが {{site.data.keyword.vmwaresolutions_short}} コンソールを介して注文される場合のイベントの注文について説明しています。
-1.  {{site.data.keyword.cloud_notm}} からネットワーキングのための VLAN とサブネットの注文。
-2.  vSphere Hypervisor をインストールした {{site.data.keyword.baremetal_short}} の注文。
-3.  該当する場合、Active Directory ドメイン・コントローラーとして機能する Microsoft Windows 仮想サーバー・インスタンス (VSI) の注文。
-4.  ネットワーキングとデプロイ済みハードウェアの妥当性検査。
-5.  該当する場合、単一ノード vSAN の初期構成。
-6.  該当する場合、Active Directory ドメイン・コントローラーとして機能する 2 台の Microsoft Windows 仮想マシンのデプロイメントと構成。
-7.  vCenter、PSC、および NSX のデプロイメントと構成。
-8.  残りの ESXi ノードのクラスター化、vSAN の拡張 (該当する場合)、および NSX コンポーネント (VTEP) の構成。
-9.  VMware Cloud Foundation SDDC Manager VM (該当する場合) および IBM CloudDriver VSI のデプロイメント。
-10.  環境のインストールおよび構成の妥当性検査。
-11. CloudBuilder VSI の削除。
-12. バックアップ・サーバーやストレージなど、オプション・サービスのデプロイメント。
+{{site.data.keyword.vmwaresolutions_short}} コンソールから VMware インスタンスを注文する場合のイベントの順序を以下にまとめます。
+1. {{site.data.keyword.cloud_notm}} からネットワーキングのための VLAN とサブネットの注文。
+2. vSphere Hypervisor をインストールした {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} の注文。
+3. Active Directory ドメイン・コントローラーとして使用する Microsoft Windows VSI の注文。
+4. Cloud Driver VSI のデプロイメント。
+5. ネットワーキングとデプロイ済みハードウェアの妥当性検査。
+6. 該当する場合、単一ノード vSAN の初期構成。
+7. PSC を組み込んだ vCenter と NSX のデプロイメントと構成。
+8. 残りの ESXi ノードのクラスター化、vSAN の拡張 (該当する場合)、および NSX コンポーネント (VTEP) の構成。
+9. 環境のインストールおよび構成の妥当性検査。
+10. バックアップ・サーバーやストレージなど、オプション・サービスのデプロイメント。
+11. Cloud Driver VSI の削除。
+
+## ID とパスワード
+{: #design_infrastructuremgmt-ids-pwd}
+
+vCenter Server に含まれているすべての ID とパスワードが {{site.data.keyword.cloud_notm}} 管理面で暗号化され、IC4V 管理インフラストラクチャーに保管されます。ユーザーがそのパスワードを変更すると、vCenter Server の自動処理機能が中断することがあります。
+
+自動処理を中断なしで進めるために、変更したパスワードを IC4V ソリューション・ポータルで指定できます。そのソリューション・ポータルで、入力したパスワードの確認を行うこともできます。
 
 ## 関連リンク
 {: #design_infrastructuremgmt-related}

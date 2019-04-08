@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-04"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Migration d'instances NetApp ONTAP Select antérieures à la version 2.5 vers des comptes IBM Cloud

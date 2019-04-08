@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-08"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Demande de services gérés pour Zerto on IBM Cloud
@@ -43,7 +46,7 @@ Pour plus d'informations, voir [IBM Resiliency Disaster Recovery as a Service](h
 3. Sur la page **Zerto on IBM Cloud**, passez en revue la description et les spécifications techniques concernant Zerto on {{site.data.keyword.cloud_notm}} en tant que service géré, puis cliquez sur **Créer**.
 4. Spécifiez les paramètres de configuration en fonction de vos exigences ou acceptez les valeurs par défaut.
 5. Cliquez sur **vCenter Server** ou **Cloud Foundation** pour ajouter le service à l'une de vos instances.
-6. Pour ajouter le service pendant que vous commandez une nouvelle instance, cliquez sur **Ajouter à une nouvelle instance** et poursuivez votre commande d'instance [vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance) ou [vCenter Server with Hybridity](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance). 
+6. Pour ajouter le service pendant que vous commandez une nouvelle instance, cliquez sur **Ajouter à une nouvelle instance** et poursuivez votre commande d'instance [vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance) ou [vCenter Server with Hybridity](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance).
 7. Pour ajouter le service à une instance existante, cliquez sur l'option **Ajouter à une instance existante**, sélectionnez dans la liste l'instance à laquelle vous voulez ajouter le service, puis confirmez que vous souhaitez poursuivre la commande en cliquant sur **Mettre à disposition**.
 
 ## Liens connexes

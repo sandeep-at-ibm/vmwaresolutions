@@ -4,7 +4,12 @@ copyright:
 
   years: 2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-22"
+
+keywords: IBM Cloud for VMware Solutions, getting started, deployment offerings, add-on services, use case
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -18,7 +23,7 @@ lastupdated: "2019-03-12"
 {:tip: .tip}
 {:table: .aria-labeledby="caption"}
 
-# Einführung in IBM Cloud for VMware Solutions
+# Lernprogramm zur Einführung
 {: #getting-started}
 
 In diesem Einführungslerntext erfahren Sie, wie Sie eine Instanz sowie verfügbare Add-on-Services für diese Instanz bestellen können.
@@ -63,7 +68,7 @@ Sie benötigen ein {{site.data.keyword.cloud_notm}}-Konto und ein Konto für die
    </tr>
    <tr>
       <td>Konto für die IBM Cloud-Infrastruktur (SoftLayer)</td>
-      <td>Das Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) wurde früher als IBM SoftLayer-Konto bezeichnet.  Weitere Informationen zu den Anforderungen, die das Konto erfüllen muss, finden Sie unter [Anforderungen für das {{site.data.keyword.cloud_notm}}-Infrastrukturkonto](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement). <br><br>Sie können Konten für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) mit {{site.data.keyword.cloud_notm}}-Konten verknüpfen, um kombinierte Infrastructure as a Service-Ressourcen (IaaS) und Platform as a Service-Ressourcen (PaaS) zu nutzen. Anschließend können Sie auf IaaS-Ressourcen und PaaS-Ressourcen über ein und dieselbe Anmeldung zugreifen. Das Verknüpfen Ihrer Konten hat außerdem zur Folge, dass Sie nur eine Rechnung für alle PaaS- und IaaS-Ressourcen erhalten, die Sie nutzen.<ul><li>Wenn Sie kein Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) haben, können Sie eines anfordern, indem Sie die unter [Für ein IBM Cloud-Infrastrukturkonto (SoftLayer-Konto) registrieren](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account#signing_softlayer_account-infra) beschriebene Prozedur ausführen. Verknüpfen Sie anschließend Ihr Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) mit Ihrem {{site.data.keyword.cloud_notm}}-Konto, indem Sie die unter [Zur IBMid wechseln und Konten verknüpfen](/docs/account?topic=account-unifyingaccounts#unifyingaccounts) beschriebene Prozedur ausführen. </li><li>Wenn Sie ein Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) haben, können Sie es mit Ihrem {{site.data.keyword.cloud_notm}}-Konto verknüpfen, indem Sie die unter [Zur IBMid wechseln und Konten verknüpfen](/docs/account?topic=account-unifyingaccounts#unifyingaccounts) beschriebene Prozedur ausführen. </li></ul></td>
+      <td>Das Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) wurde früher als IBM SoftLayer-Konto bezeichnet.  Weitere Informationen zu den Anforderungen, die das Konto erfüllen muss, finden Sie unter [Anforderungen für das {{site.data.keyword.cloud_notm}}-Infrastrukturkonto](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).<br><br>Sie können Konten für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) mit {{site.data.keyword.cloud_notm}}-Konten verknüpfen, um kombinierte Infrastructure as a Service-Ressourcen (IaaS) und Platform as a Service-Ressourcen (PaaS) zu nutzen. Anschließend können Sie auf IaaS-Ressourcen und PaaS-Ressourcen über ein und dieselbe Anmeldung zugreifen. Das Verknüpfen Ihrer Konten hat außerdem zur Folge, dass Sie nur eine Rechnung für alle PaaS- und IaaS-Ressourcen erhalten, die Sie nutzen.<ul><li>Wenn Sie kein Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) haben, können Sie eines anfordern, indem Sie die unter [Für ein IBM Cloud-Infrastrukturkonto (SoftLayer-Konto) registrieren](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account#signing_softlayer_account-infra) beschriebene Prozedur ausführen. Verknüpfen Sie anschließend Ihr Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) mit Ihrem {{site.data.keyword.cloud_notm}}-Konto, indem Sie die unter [Zur IBMid wechseln und Konten verknüpfen](/docs/account?topic=account-unifyingaccounts#unifyingaccounts) beschriebene Prozedur ausführen.</li><li>Wenn Sie ein Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) haben, können Sie es mit Ihrem {{site.data.keyword.cloud_notm}}-Konto verknüpfen, indem Sie die unter [Zur IBMid wechseln und Konten verknüpfen](/docs/account?topic=account-unifyingaccounts#unifyingaccounts) beschriebene Prozedur ausführen.</li></ul></td>
    </tr>
    </table>
 
@@ -192,18 +197,4 @@ Sobald Sie wie unter **Schritt 3** beschrieben eine Instanz bestellt haben, wird
 Informationen zum Anzeigen der bestellten Instanz finden Sie in den folgenden Abschnitten:
 * [vCenter Server-Instanzen anzeigen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
 * [vCenter Server with Hybridity Bundle-Instanzen anzeigen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
-* [NetApp ONTAP Select-Instanzen anzeigen](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_viewinginstances)
-
-## Schritt 5: Add-on-Services für die Instanz verwalten
-{: #getting-started-step5}
-
-Wenn Sie Add-on-Services für Ihre Instanz bestellt haben, können Sie auch diese Services verwalten.
-
-Informationen zum Verwalten der Services finden Sie in den folgenden Abschnitten:
-* [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
-* [Services für vCenter Server with Hybridity Bundle-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
-
-## Nächster Schritt
-{: #getting-started-next}
-
-Nun können Sie Ihre Instanz über die {{site.data.keyword.vmwaresolutions_short}}-Konsole oder VMware vSphere Web Client verwalten.
+* [NetApp ONTAP Select-Instanzen anzeigen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-np_viewinginstances#np_viewinginstances)

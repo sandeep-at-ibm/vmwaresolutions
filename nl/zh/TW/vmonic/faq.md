@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-12"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -84,7 +87,8 @@ lastupdated: "2019-03-12"
 
 對於 vCenter Server 實例，在部署期間建立的第一個叢集，其預設名稱為 **cluster1**。您可以在 VMware vSphere Client 中將預設叢集重新命名。當您將叢集新增至 vCenter Server 實例時，可以在 {{site.data.keyword.vmwaresolutions_short}} 主控台上指定您想要的名稱。
 
-對於 Cloud Foundation 實例，無法變更預設叢集名稱。{:note}
+對於 Cloud Foundation 實例，無法變更預設叢集名稱。
+{:note}
 
 ## 如何管理修補程式？
 {: #faq-patches}
@@ -104,7 +108,8 @@ IBM 提供 IBM 程式碼的持續更新，方法是隨需應變部署 IBM CloudD
 
 對於已部署在或升級至 2.1 版或更新版本的實例，新部署的 ESXi 伺服器和叢集會以 VMware 最近但未必最新的 ESXi 更新進行修補。
 
-您必須負責處理 VMware 元件的所有其他更新，包括確保新部署的 ESXi 伺服器和叢集具有您需要的所有最近更新。{:important}
+您必須負責處理 VMware 元件的所有其他更新，包括確保新部署的 ESXi 伺服器和叢集具有您需要的所有最近更新。
+{:important}
 
 對於在 2.0 版或更新版本上部署的實例，VMware Update Manager (VUM) 已整合至 vCenter Server。您可以配置 VUM 來下載 VMware 的 ESXi 更新。
 

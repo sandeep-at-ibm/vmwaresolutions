@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -49,7 +52,7 @@ Acme Skateboards 想要在由 vCenter Server with Hybridity Bundle 與 {{site.da
 
 如需 NSX-V 的相關資訊，請參閱 [NSX-V 概觀](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv)。如需 vCenter Server 及 {{site.data.keyword.icpfull_notm}} 供應項目的相關資訊，請參閱 [vCenter Server 及 {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)。
 
-圖 2. 具有 {{site.data.keyword.icpfull_notm}} 的 vCenter Server
+圖 2. 具有 {{site.data.keyword.icpfull_notm}} 的 vCenter Server</br>
 ![具有 {{site.data.keyword.icpfull_notm}} 的 vCenter Server](vcsnsxt-nsxvhl.svg)
 
 這會在內部部署與 {{site.data.keyword.cloud_notm}} 之間建立鬆散耦合的交互連線，並且啟用下列這類功能：
@@ -63,7 +66,7 @@ Acme Skateboards 想要在由 vCenter Server with Hybridity Bundle 與 {{site.da
 -	**排定的移轉** - 可以將任意數目的 VM 抄寫至目的地站台，然後在該站台上依指定時間啟動，並取代起始站台上所執行的系統。
 -	**安全原則的移轉** - 如果在內部部署使用 NSX，則任何安全原則、防火牆等等，都會隨著工作負載一起移動。
 
-使用這個解決方案，Acme Skateboards 已順利將其內部部署 VMware 工作負載移轉至 {{site.data.keyword.cloud_notm}}，以滿足極短或沒有任何關閉時間且不需重新配置應用程式的需求。如需 vCenter Server with Hybridity Bundle 的相關資訊，請參閱 [VMware HCX on {{site.data.keyword.cloud_notm}} 解決方案架構](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)。
+使用這個解決方案，Acme Skateboards 已順利將其內部部署 VMware 工作負載移轉至 {{site.data.keyword.cloud_notm}}，以滿足極短或沒有任何關閉時間且不需重新配置應用程式的需求。如需 vCenter Server with Hybridity Bundle 的相關資訊，請參閱 [VMware HCX on {{site.data.keyword.cloud_notm}} 解決方案架構](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)。
 
 ## 相關鏈結
 {: #vcsnsxt-usecases-related}

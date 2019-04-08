@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-25"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -20,7 +23,7 @@ lastupdated: "2019-02-14"
 ## IBM Cloud for VMware Solutions コンソールでサポート・チケットを送信する手順
 {: #trbl_support-procedure}
 
-1. https://console.cloud.ibm.com/infrastructure/vmware-solutions/console にアクセスします。
+1. https://cloud.ibm.com/infrastructure/vmware-solutions/console にアクセスします。
 2. **IBM ID** アカウントでコンソールにログインします。
 3. メニュー・バーで**「サポート」**をクリックします。
 4. **「サポートの利用 (Get support)」**ページで、**「ケースの作成 (Create a case)」**をクリックします。

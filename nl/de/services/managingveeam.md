@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-08"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Veeam on IBM Cloud verwalten
@@ -74,7 +77,7 @@ Aufgrund dieser Änderung wurde die vorherige Registerkarte **Sicherung und Wied
 Sie müssen ein {{site.data.keyword.cloud_notm}}-Support-Ticket erstellen, um Unterstützung bei einer Wiederherstellung zu erhalten. Darüber hinaus lief die Lizenz der virtuellen Serverinstanz für Veeam in Instanzen aus Releases vor V1.8 am 14. Oktober 2017 ab. Daher müssen Sie die vorherige virtuelle Serverinstanz für Veeam durch den neuen Service "Veeam on {{site.data.keyword.cloud_notm}}" ersetzen.
 
 Führen Sie die folgenden Schritte aus:
-1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen** und klicken Sie dann auf die Zielinstanz. 
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Ressourcen** und klicken Sie dann auf die Zielinstanz.
 2. Klicken Sie auf der Seite mit den Instanzdetails auf die Registerkarte **Update und Patch**. Vergewissern Sie sich, dass für die Instanz ein Upgrade auf das Release V1.8 durchgeführt worden ist.
 3. Klicken Sie auf die Registerkarte **Services**.
 4. Installieren Sie auf der Registerkarte **Services hinzufügen** den Service "Veeam on {{site.data.keyword.cloud_notm}}".

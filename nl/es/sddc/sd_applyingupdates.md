@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-12"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -89,7 +92,7 @@ Tabla 1. Niveles de actualización e impacto
       </tr>
       <tr>
         <td>Disponible</td>
-        <td>La actualización está lista para se aplicada. No puede seleccionar una actualización disponible hasta que se hayan aplicado sus actualizaciones anteriores.</td>
+        <td>La actualización está lista para aplicarse. No puede seleccionar una actualización disponible hasta que se hayan aplicado sus actualizaciones anteriores.</td>
       </tr>
       <tr>
         <td>En curso</td>

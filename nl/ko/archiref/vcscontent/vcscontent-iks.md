@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-15"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # IBM Cloud Kubernetes Service와의 진정한 하이브리드 구현

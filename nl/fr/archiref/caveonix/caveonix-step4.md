@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-04"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Etape 4 - Configuration de l'application
@@ -19,7 +22,7 @@ Cette étape est initialement exécutée par l'automatisation IC4VS qui utilise 
 
 La configuration du fournisseur de service comporte huit sous-étapes :
 -	Etape 1 : Détails de l'organisation - Ajoutez les détails de l'organisation parent de votre fournisseur de service de cloud. Cette organisation peut avoir plusieurs emplacements physiques et plusieurs centres de données. Les organisations de vos locataires et les sous-organisations de votre fournisseur de service sont ajoutées ultérieurement.
--	Etape 2 : Emplacements – Mappez l'infrastructure dans des "emplacements" RiskForesight. Les actifs sont regroupés par emplacement, fournisseur de cloud et référentiel d'actifs. 
+-	Etape 2 : Emplacements – Mappez l'infrastructure dans des "emplacements" RiskForesight. Les actifs sont regroupés par emplacement, fournisseur de cloud et référentiel d'actifs.
 -	Etape 3 : Environnements - Facultatif. Les environnements constituent un moyen de grouper les actifs. Par exemple, DevOps, Site DR, Production.
 -	Etape 4 : Fournisseur de cloud - Ajoutez les “fournisseurs” qui fournissent l'infrastructure sur laquelle votre application s'exécute.
 -	Etape 5 : Référentiels d'actifs - Un référentiel d'actifs associe un ensemble d'actifs à une organisation, à une fournisseur de cloud et à un emplacement.

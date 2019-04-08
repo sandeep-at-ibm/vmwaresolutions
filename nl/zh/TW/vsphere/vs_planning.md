@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-01"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -17,7 +20,8 @@ lastupdated: "2019-03-01"
 
 在訂購 VMware vSphere on {{site.data.keyword.cloud}} 之前，請檢閱下列需求。根據 {{site.data.keyword.CloudDataCent_notm}} 位置及工作負載容量需求來規劃 VMware vSphere 叢集。
 
-部署 ESXi 伺服器之後，您要負責設定環境、安裝和配置各種 VMware 元件。下列範例是 VMware 元件：VMware vCenter Server、VMware NSX 及 VMware vSAN。{:note}
+部署 ESXi 伺服器之後，您要負責設定環境、安裝和配置各種 VMware 元件。下列範例是 VMware 元件：VMware vCenter Server、VMware NSX 及 VMware vSAN。
+{:note}
 
 ## IBM Cloud 帳戶需求
 {: #vs_planning-account-req}
@@ -29,7 +33,8 @@ lastupdated: "2019-03-01"
 
 vSphere 部署對實體基礎架構有嚴格的需求。因此，您只能在符合需求的 {{site.data.keyword.CloudDataCents_notm}} 中部署叢集。下列 {{site.data.keyword.CloudDataCent_notm}} 可用於 vSphere 部署。
 
-如果您選取 vSAN 元件，則會依 SSD（固態硬碟）可用性來過濾位置清單。{:note}
+如果您選取 vSAN 元件，則會依 SSD（固態硬碟）可用性來過濾位置清單。
+{:note}
 
 表 1. vSphere 叢集可用的 {{site.data.keyword.CloudDataCents_notm}}
 

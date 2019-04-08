@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-15"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # AI, 분석 및 기타 퍼블릭 클라우드 서비스로 강화

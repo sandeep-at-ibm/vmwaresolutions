@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-11"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -55,7 +58,7 @@ Der Instanzname muss die folgenden Anforderungen erfüllen:
 ### VMware vSphere-Lizenzen
 {: #vc_orderinginstance-vsphere-license}
 
-Wählen Sie aus, ob vSphere Enterprise Plus 6.7u1 oder vSphere Enterprise Plus 6.5u2 bestellt werden soll. 
+Wählen Sie aus, ob vSphere Enterprise Plus 6.7u1 oder vSphere Enterprise Plus 6.5u2 bestellt werden soll.
 
 vSphere Enterprise Plus 6.7u1 ist nur für Broadwell und Skylake {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} verfügbar.
 {:note}
@@ -302,7 +305,7 @@ Auf Basis der für die Instanz und die Add-on-Services ausgewählten Konfigurati
 1. Klicken Sie im {{site.data.keyword.cloud_notm}}-Katalog im linken Navigationsfenster auf **VMware** und klicken Sie anschließend im Abschnitt **Virtuelle Rechenzentren** auf **vCenter Server**.
 2. Klicken Sie auf der Seite **VMware vCenter Server on IBM Cloud** auf die Karte **vCenter Server** und dann auf **Erstellen**.
 3. Geben Sie auf der Seite **vCenter Server** den Instanznamen ein.
-5. Wählen Sie die vSphere-Version aus. 
+5. Wählen Sie die vSphere-Version aus.
 4. Wählen Sie den Instanztyp aus:
    * Klicken Sie auf **Primäre Instanz**, um eine einzelne Instanz in der Umgebung bereitzustellen oder um die erste Instanz in einer Topologie mit mehreren Standorten bereitzustellen.
    * Klicken Sie auf **Sekundäre Instanz**, um die Instanz mit einer vorhandenen (primären) Instanz in der Umgebung zu verbinden, um eine hohe Verfügbarkeit zu erreichen, und führen Sie dann die folgenden Schritte aus:
@@ -317,7 +320,7 @@ Auf Basis der für die Instanz und die Add-on-Services ausgewählten Konfigurati
     1. Wählen Sie das {{site.data.keyword.CloudDataCent_notm}} als Host für die Instanz aus.
     2. Wählen Sie die Bare Metal Server-Konfiguration aus.
        * Wenn Sie **Skylake** oder **Broadwell** auswählen, dann müssen Sie das CPU-Modell und die RAM-Größe angeben.
-       * Wenn Sie **SAP-zertifiziert** auswählen, müssen Sie eine der voreingestellten Konfigurationen auswählen. 
+       * Wenn Sie **SAP-zertifiziert** auswählen, müssen Sie eine der voreingestellten Konfigurationen auswählen.
     3. Geben Sie die Anzahl der {{site.data.keyword.baremetal_short}}-Instanzen an. Wenn vSAN als Speicherlösung verwendet werden soll, sind mindestens vier {{site.data.keyword.baremetal_short}}-Instanzen erforderlich.  
 8. Führen Sie die Speicherkonfiguration durch.
   * Wenn Sie **vSAN-Speicher** auswählen, geben Sie die Plattentypen für die Kapazitäts- und Cacheplatten, die Anzahl der Platten und die vSAN-Lizenzedition an. Falls Sie mehr Speicher benötigen, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen.

@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-12"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -49,7 +52,7 @@ Si votre cluster initial dispose d'un stockage vSAN, l'ajout d'un ou plusieurs s
 3. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche.
 4. Dans le tableau **CLUSTERS**, cliquez sur le cluster auquel vous désirez ajouter des serveurs ESXi.
 5. Dans la section **Serveurs ESXi**, cliquez sur **Ajouter**.
-6. Dans la fenêtre **Ajouter un serveur**, entrez le nombre de serveurs que vous voulez ajouter. 
+6. Dans la fenêtre **Ajouter un serveur**, entrez le nombre de serveurs que vous voulez ajouter.
 7. Le cas échéant, cochez la case permettant d'ajouter des serveurs alors que le mode maintenance est actif.
 8. Passez en revue le coût estimé et cliquez sur **Ajouter**.
 
@@ -60,11 +63,10 @@ Si votre cluster initial dispose d'un stockage vSAN, l'ajout d'un ou plusieurs s
 2. Un courrier électronique vous avise que votre demande d'ajout de serveurs ESXi est en cours de traitement. Sur la console, le statut du cluster qui est associé aux serveurs ESXi passe à **Modification en cours**.
 3. Si vous ne voyez pas les serveurs ESXi ajoutés dans la liste du cluster, consultez vos courriers électroniques ou les notifications de la console pour obtenir plus de détails sur la cause de l'échec.
 4. Vous devez utiliser la console Zerto Virtual Manager (ZVM) et l'adresse IP Zerto Virtual Replication Appliance (VRA) préremplie pour déployer manuellement la machine virtuelle VRA dans les situations suivantes :
+   * Si vous ajoutez des serveurs ESXi à un cluster par défaut alors que les serveurs sont en mode maintenance et que Zerto for {{site.data.keyword.cloud_notm}} est installé.
+   * Si vous ajoutez Zerto for {{site.data.keyword.cloud_notm}} à une instance vCenter Server dont un serveur ESXi est en mode maintenance.
 
-   * Si vous ajoutez des serveurs ESXi à un cluster par défaut alors que les serveurs sont en mode maintenance et que Zerto for {{site.data.keyword.cloud_notm}} est installé. 
-   * Si vous ajoutez Zerto for {{site.data.keyword.cloud_notm}} à une instance vCenter Server dont un serveur ESXi est en mode maintenance. 
-
-Si vous ajoutez des serveurs ESXi alors que le mode maintenance est actif, les machines virtuelles ne sont pas migrées vers les nouveaux serveurs tant que le mode maintenance n'est pas désactivé.    
+Si vous ajoutez des serveurs ESXi alors que le mode maintenance est actif, les machines virtuelles ne sont pas migrées vers les nouveaux serveurs tant que le mode maintenance n'est pas désactivé.   
 {:important}
 
 ## Retrait de serveurs ESXi dans des instances vCenter Server

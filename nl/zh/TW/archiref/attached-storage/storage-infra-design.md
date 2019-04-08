@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-27"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -23,7 +26,7 @@ lastupdated: "2019-02-27"
 
 圖 1. {{site.data.keyword.cloud_notm}} 上連接儲存空間的高階架構
 
-![連接儲存空間架構](../solution/physical_nfs.svg "IBM Cloud 上連接儲存空間的高階架構")
+![連接儲存空間架構](../solution/vcsv4radiagrams-ra-nfs-shares.svg "IBM Cloud 上連接儲存空間的高階架構")
 
 ## 實體基礎架構設計
 {: #storage-infra-design-phys-infra-design}

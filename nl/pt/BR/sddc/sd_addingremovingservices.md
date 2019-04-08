@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-06"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Pedindo, visualizando e removendo serviços para instâncias do Cloud Foundation

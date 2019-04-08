@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -17,27 +20,32 @@ lastupdated: "2019-02-15"
 
 公共服务提供由云管理平台中其他服务使用的服务。解决方案的公共服务包括身份和访问权服务、域名服务、NTP 服务、SMTP 服务和认证中心服务。
 
+图 1. 公共服务</br>
+![公共服务](vcsv4radiagrams-ra-commonservices.svg)
+
 ## 身份和访问权服务
 {: #design_commonservice-identity-access}
 
-在此设计中，Microsoft Active Directory (AD) 用于身份管理。此设计将一个或两个 Windows Active Directory 虚拟机部署为 Cloud Foundation 和 vCenter Server 部署自动化的一部分。vCenter 配置为使用 AD 认证。
+在此设计中，Microsoft Active Directory (MSAD) 用于身份管理。此设计将一个或两个 Active Directory 虚拟机部署为 vCenter Server 部署自动化的一部分。vCenter 配置为使用 MSAD 认证。
 
 ### Microsoft Active Directory
 {: #design_commonservice-msad}
 
-缺省情况下，会将单个 Active Directory VSI 部署到 {{site.data.keyword.cloud}} 基础架构上。此设计还提供了用于将两个高可用性 Microsoft Active Directory 服务器部署为管理集群中专用 Windows Server VM 的选项。
+缺省情况下，会将单个 Active Directory VSI 部署到 {{site.data.keyword.cloud}} 基础架构上。
 
-如果选择此选项，那么您将负责提供 Microsoft 许可和激活。
+此设计还提供了用于将两个高可用性 MSAD 服务器部署为管理集群中专用 Windows Server VM 的选项。
+
+如果选择具有两个高可用性 MSAD 服务器的选项，那么您负责提供 Microsoft 许可和激活。
 {:note}
 
-Active Directory 用于认证的访问权仅要求管理 VMware 实例，而不是容纳已部署实例中工作负载的用户。Active Directory 服务器的林根域名与您指定的 DNS 域名相同。如果链接了多个 Cloud Foundation 和 vCenter Server 实例，将仅为主 Cloud Foundation 和 vCenter Server 实例指定此域名。对于链接的实例，每个实例都包含位于林根副本环中的一个 Active Directory 服务器。此外，还会在 Active Directory 服务器上复制 DNS 区域文件。
+Active Directory 用于认证的访问权仅要求管理 VMware 实例，而不是容纳已部署实例中工作负载的用户。Active Directory 服务器的林根域名与您指定的 DNS 域名相同。如果链接了多个 vCenter Server 实例，将仅为主实例指定此域名。对于链接的实例，每个实例都包含位于林根副本环中的一个 Active Directory 服务器。此外，还会在 Active Directory 服务器上复制 DNS 区域文件。
 
 ### vSphere SSO 域
 {: #design_commonservice-vsphere-sso}
 
-vSphere Single Sign On (SSO) 域用作单个实例或多个链接实例的初始认证机制。SSO 域还用于将 VMware 实例或多个链接的实例连接到 Microsoft Active Directory 服务器。将应用以下 SSO 配置：  
+vSphere Single Sign On (SSO) 域用作单个实例或多个链接实例的初始认证机制。SSO 域还用于将一个 VMware 实例或多个链接的实例连接到 MSAD 服务器。将应用以下 SSO 配置：  
 * 始终使用 SSO 域 `vsphere.local`
-* 对于绑定到现有实例的 VMware 实例，会将 PSC 连接到现有实例的 SSO 域
+* 对于绑定到现有实例的 VMware 实例，会将集成的 PSC 连接到现有实例的 SSO 域
 * SSO 站点名称与实例名称相同
 
 ## 域名服务
@@ -45,45 +53,32 @@ vSphere Single Sign On (SSO) 域用作单个实例或多个链接实例的初始
 
 此设计中的域名服务 (DNS) 仅适用于云管理和基础架构组件。
 
-### VMware vCenter Server
-{: #design_commonservice-vcenter}
+### 主 vCenter Server 实例
+{: #design_commonservice-primary-vcs}
 
-vCenter Server 部署将部署的 Active Directory 服务器用作实例的 DNS 服务器。所有部署的组件（vCenter、PSC、NSX 和 ESXi 主机）都配置为指向作为其缺省 DNS 服务器的 Active Directory 服务器。如果 DNS 区域配置不影响已部署组件的配置，那么可以定制 DNS 区域配置。
+vCenter Server 部署使用已部署的 AD VSI 作为实例的 DNS 服务器。所有部署的组件（具有嵌入式 PSC 的 vCenter、NSX 和 ESXi 主机）都配置为指向作为其缺省 DNS 的 AD。如果 DNS 区域配置不影响已部署组件的配置，那么可以定制 DNS 区域配置。
+- 此设计通过以下配置在 AD VSI 上集成 DNS 服务：
+- 域结构由用户指定。域名可以有任意级别数（最多为所有 vCenter Server 组件可以处理的最大级别数），但应确保最低级别是实例的子域。
+    - 提供的 DNS 域名将用作 vCenter Server 部署的 AD 林根域名。例如，如果 DNS 域名为 cloud.ibm.com，那么 AD 域林根为 cloud.ibm.com。在 vCenter Server 的所有联合实例中，DNS 域和 AD 域相同。
+    - 选择一个额外的名称作为 vCenter Server 实例子域。此子域名在所有链接的 vCenter Server 实例中必须唯一。
+- AD DNS 服务器配置为对于 DNS 域和子域空间都具有权威性。
+- AD DNS 服务器配置为指向其他所有专区的 {{site.data.keyword.cloud_notm}} DNS 服务器。
+- 集成到第一个部署的云区域或目标部署的云区域的任何辅助云区域，在子域之上必须使用相同的 DNS 名称结构。
+- （可选）在 vCenter Server 集群中部署冗余 DNS 服务器。两个 AD/DNS 服务器均配置为未许可。用户负责为这些服务器提供 Windows 操作系统的许可证。
+- 如果一个站点仅供应有一个 AD/DNS 服务器，那么所有配置的 vCenter Server 组件都只能将该单个 IP 作为 DNS 条目。
 
-此设计通过以下配置在 Active Directory 服务器上集成 DNS 服务：
-* 可以指定域结构。域名可以有任意级别数（最多为 vCenter Server 组件可以处理的最大级别数）。最低级别是实例的子域。
-   * 指定的 DNS 域名将用作 Active Directory 林根域名。例如，如果 DNS 域名为 `cloud.ibm.com`，那么 Active Directory 林根域名为 `cloud.ibm.com`。此 DNS 和 Active Directory 域名在所有链接的 vCenter Server 实例中都相同。
-   * 此外，可以为实例指定子域名。子域名在所有链接的 vCenter Server 实例中必须唯一。
-* Active Directory DNS 服务器配置为对于 DNS 域和子域空间都具有权威性。
-* Active Directory DNS 服务器配置为指向其他所有区域的 {{site.data.keyword.cloud_notm}} DNS 服务器。
-* 要集成到现有目标实例的任何实例必须使用与主实例相同的域名。
+### 辅助 vCenter Server 实例
+{: #design_commonservice-secondary-vcs}
 
-### VMware Cloud Foundation
-{: #design_commonservice-cf}
-
-Cloud Foundation 部署使用 VMware Cloud Foundation 自动化，后者使用自己的位于 SDDC Manager VM 组件内的 DNS 服务器。根据设计，由 SDDC Manager 管理的 Cloud Foundation 组件（包括 vCenter、PSC、NSX 和 ESXi 主机）配置为使用 SDDC Manager VM IP 地址作为其缺省 DNS。
-
-由于 SDDC Manager 会为自己管理的组件生成并维护主机名，因此建议不要直接篡改其 DNS 区域文件来添加和除去主机。
-
-此设计通过以下配置将 Active Directory 服务器上的 DNS 服务与 SDDC Manager VM 相集成：
-* 可以指定域结构。域名可以有任意级别数（最多为 Cloud Foundation 组件将处理的最大级别数）。
-* 最低级别是 SDDC Manager 对其具有权威性的子域。
-* 指定的 DNS 域名将用作 Active Directory 林根域名。例如，如果 DNS 域名为 `cloud.ibm.com`，那么 Active Directory 林根域为 `cloud.ibm.com`。此 DNS 域和 Active Directory 域在所有链接的 Cloud Foundation 实例中都相同。
-* 此外，可以为实例指定子域名。子域名在所有链接的 Cloud Foundation 实例中必须唯一。  
-* SDDC Manager DNS 配置变更为指向除了自己所负责区域以外的其他所有区域的 Active Directory 服务器。
-* Active Directory DNS 服务器配置为对 SDDC Manager 和 Cloud Foundation 实例子域上级的 DNS 域空间具有权威性。
-* Active Directory DNS 服务器配置为指向 SDDC Manager 对其具有权威性的区域的子域授权的 SDDC Manager IP 地址。
-* Active Directory DNS 服务器配置为指向其他所有区域的 {{site.data.keyword.cloud_notm}} DNS 服务器。
-* 要集成到第一个实例或目标实例的任何辅助实例都必须在 SDDC Manager 子域上级使用相同的 DNS 名称结构。
+为了实现跨实例冗余，将第一个辅助 vCenter Server 实例添加到现有主 vCenter Server 实例或当前独立的 vCenter Server 实例时，该主实例 AD DNS 服务器 IP 地址将用于需要 DNS 服务器条目的所有组件的辅助 vCenter Server 实例和任何后续辅助 vCenter Server 实例“辅助 DNS”条目。例如，ESXi、vCenter 和 NSX Manager。这包括附加组件，例如 HCX、Zerto 和 Veeam。然后，主站点辅助 DNS 条目会更改为第一个辅助 vCenter Server 实例 AD/DNS IP 地址。
 
 ## NTP 服务
 {: #design_commonservice-ntp}
 
 此设计利用 {{site.data.keyword.cloud_notm}} 基础架构 NTP 服务器。所有部署的组件均配置为利用这些 NTP 服务器。使设计中的所有组件都使用相同的 NTP 服务器对于证书和 Active Directory 认证正确运行至关重要。
 
-图 1. NTP 服务
-
-![NTP 服务](commonservice_ntp.svg "在此设计中，实例的所有组件都通过 NTP 服务使用相同的 {{site.data.keyword.cloud_notm}} 基础架构 NTP 服务器。")
+图 2. NTP 和 DNS 服务</br>
+![NTP 和 DNS 服务](vcsv4radiagrams-ra-servicesinterconnections.svg)
 
 ## 认证中心服务
 {: #design_commonservice-cas}

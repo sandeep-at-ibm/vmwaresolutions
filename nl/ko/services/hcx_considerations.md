@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -12,7 +15,7 @@ lastupdated: "2019-03-08"
 {:note: .note}
 {:important: .important}
 
-# VMware HCX on IBM Cloud 스펙 및 고려사항
+# VMware HCX on IBM Cloud 개요
 {: #hcx_considerations}
 
 HCX on {{site.data.keyword.cloud}} 서비스는 온프레미스 데이터 센터의 네트워크를 {{site.data.keyword.cloud_notm}}로 원활하게 확장하며, 이를 통해 변환이나 변경 없이 {{site.data.keyword.cloud_notm}} 간에 가상 머신(VM)을 마이그레이션할 수 있습니다.
@@ -69,7 +72,7 @@ HCX on {{site.data.keyword.cloud_notm}} 서비스는 기본 클러스터에 52�
 ### 방화벽 규칙에 대한 요구사항
 {: #hcx_considerations-firewall}
 
-HCX on {{site.data.keyword.cloud_notm}} 서비스를 설치하기 전에 HCX Manager 가상 어플라이언스(HCX Manager)가 자체적으로 등록할 수 있도록 모든 아웃바운드 HTTPS 트래픽을 허용하려면 방화벽 규칙을 기존 방화벽에 추가해야 합니다. HCX Manager 설치가 완료되면 방화벽 규칙을 제거할 수 있습니다. 또한 HCX가 올바르게 작동하도록 방화벽 규칙을 구성해야 합니다. 자세한 정보는 [VMWare HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)의 *Appendix A - Port Access Requirements*를 참조하십시오.
+HCX on {{site.data.keyword.cloud_notm}} 서비스를 설치하기 전에 HCX Manager 가상 어플라이언스(HCX Manager)가 자체적으로 등록할 수 있도록 모든 아웃바운드 HTTPS 트래픽을 허용하려면 방화벽 규칙을 기존 방화벽에 추가해야 합니다. HCX Manager 설치가 완료되면 방화벽 규칙을 제거할 수 있습니다. 또한 HCX가 올바르게 작동하도록 방화벽 규칙을 구성해야 합니다. 자세한 정보는 [VMware HCX on {{site.data.keyword.cloud_notm}} 포트 액세스 요구사항](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-port-req#hcx-archi-port-req)을 참조하십시오.
 
 ## HCX on IBM Cloud 제거 시 고려사항
 {: #hcx_considerations-delete}

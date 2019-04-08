@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-11"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -20,7 +23,7 @@ lastupdated: "2019-03-11"
 ## Caveonix RiskForesight ライセンスを削除する際の考慮事項
 {: #caveonix_license_considerations-remove}
 
-Caveonix RiskForesight ライセンスを削除しても、vCenter Server インスタンスにインストールされている Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} サービスは削除されません。新しい Caveonix RiskForesight ライセンスを注文するか、{{site.data.keyword.vmwaresolutions_short}} コンソールで vCenter Server インスタンスから Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} サービスを削除する必要があります。詳しくは、[vCenter Server インスタンス用サービスを削除する手順](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices-removing-procedure)を参照してください。
+Caveonix RiskForesight ライセンスを削除しても、vCenter Server インスタンスにインストールされている Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} サービスは削除されません。 新しい Caveonix RiskForesight ライセンスを注文するか、{{site.data.keyword.vmwaresolutions_short}} コンソールで vCenter Server インスタンスから Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} サービスを削除する必要があります。 詳しくは、[vCenter Server インスタンス用サービスを削除する手順](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices-removing-procedure)を参照してください。
 
 ## 関連リンク
 {: #caveonix_license_considerations-related}

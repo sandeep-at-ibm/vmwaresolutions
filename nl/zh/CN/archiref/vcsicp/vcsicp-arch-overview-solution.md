@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -126,7 +129,7 @@ CAM 需要工作程序节点具有更高的 vCPU 和内存配置。
 
 {{site.data.keyword.cloud_notm}} Automation Manager (CAM) 是在 {{site.data.keyword.icpfull_notm}} 上运行的多云自助服务管理平台，支持开发者和管理者满足其业务需求。
 
-图 3. CAM 组件参考
+图 3. CAM 组件参考</br>
 ![CAM 组件参考](vcsicp-cam-component-ref.svg)
 
 ### CAM 代理

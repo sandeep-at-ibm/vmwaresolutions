@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-25"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -15,7 +18,7 @@ lastupdated: "2019-02-15"
 # VMware 實例的部署後考量
 {: #solution_considerations}
 
-{{site.data.keyword.vmwaresolutions_full}}、VMware vCenter Server 及 VMware Cloud Foundation 供應項目不是受管理服務。您負責配置、保護、管理及監視所有軟體元件。您具備對解決方案的完整管理存取權，因此擁有非常強大的能力和彈性，但需要跨各種領域的大量技術、管理及作業專門知識。在 {{site.data.keyword.cloud_notm}} 中管理 VMware 實例，需要與規劃內部部署實例相同的規劃及專門知識。VMware NSX 及 VMware vSAN 這類軟體定義的技術可大幅簡化實例管理的某些方面，但可能需要適當地管理及操作新的技能及工具。結合 {{site.data.keyword.cloud_notm}} 自動化 VMware 部署的能力、速度和可靠性，與適當的作業規劃和測試，可確保快速而成功地導覽至混合式雲端。
+{{site.data.keyword.vmwaresolutions_full}} 供應項目不是受管理服務。您負責配置、保護、管理及監視所有軟體元件。您具備對解決方案的完整管理存取權，因此擁有非常強大的能力和彈性，但需要跨各種領域的大量技術、管理及作業專門知識。在 {{site.data.keyword.cloud_notm}} 中管理 VMware 實例，需要與規劃內部部署實例相同的規劃及專門知識。VMware NSX 及 VMware vSAN 這類軟體定義的技術可大幅簡化實例管理的某些方面，但可能需要適當地管理及操作新的技能及工具。結合 {{site.data.keyword.cloud_notm}} 自動化 VMware 部署的能力、速度和可靠性，與適當的作業規劃和測試，可確保快速而成功地導覽至混合式雲端。
 
 請檢閱下列考量，以瞭解您在部署實例前後的實例管理及操作責任。
 
@@ -44,7 +47,7 @@ lastupdated: "2019-02-15"
 - 使用 [{{site.data.keyword.cloud_notm}} VPN](https://www.softlayer.com/vpn-access) 或 [{{site.data.keyword.cloud_notm}} DirectLink 連線](https://www.ibm.com/cloud/direct-link)來存取實例管理端點。
 - 設計您實例內的公用網路連線功能策略。您的選項包括：範例客戶 VMware NSX Edge Services Gateway (ESG)、閘道應用裝置（例如 Vyatta 和 FortiGate），以及在 {{site.data.keyword.cloud_notm}} 網路中或透過 DirectLink 存取的專屬網路上所部署的 Proxy 伺服器。
 - 規劃要在具有 [{{site.data.keyword.cloud_notm}} 可攜式 IP 位址](/docs/infrastructure/subnets?topic=subnets-getting-started-with-subnets-and-ips)的 {{site.data.keyword.cloud_notm}} VLAN 上部署工作負載，還是[在 NSX 邏輯交換器 (VXLAN) 上使用您自己的 IP 位址](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_overview)來部署工作負載。請注意，使用 NSX 軟體定義網路 (SDN) 可讓您具有在 {{site.data.keyword.cloud_notm}} 中管理及保護工作負載網路的最大彈性。
-- 使用 NSX ESG、[IBM Cloud Vyatta](https://console.cloud.ibm.com/catalog/infrastructure/virtual-router-appliance) 及 DirectLink 對等作業，來規劃與工作負載的連線功能（網址轉換、虛擬專用網路、遞送）。
+- 使用 NSX ESG、[IBM Cloud Vyatta](https://cloud.ibm.com/catalog/infrastructure/virtual-router-appliance) 及 DirectLink 對等作業，來規劃與工作負載的連線功能（網址轉換、虛擬專用網路、遞送）。
 - 如果實作「跨 vCenter NSX」，請先確定本端區段 ID 範圍未重疊，再部署任何本端工作負載。
 
 ## 安全規劃及強化
@@ -55,7 +58,7 @@ lastupdated: "2019-02-15"
 - 變更 {{site.data.keyword.vmwaresolutions_short}} 主控台中顯示的所有密碼，並使用您自己的密碼管理系統。請注意，IBM 會保留進行持續自動化及支援所需的不同使用者 ID。
 - 檢閱所有元件的密碼原則（例如複雜性及有效期限）。
 - 檢閱所有元件的加密設定。
-- 規劃並實作適當的實體或虛擬防火牆解決方案（例如 NSX Distributed Firewall (DFW)、NSX ESG、[Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations) 及 [IBM Cloud Vyatta](https://console.cloud.ibm.com/catalog/infrastructure/virtual-router-appliance)）。
+- 規劃並實作適當的實體或虛擬防火牆解決方案（例如 NSX Distributed Firewall (DFW)、NSX ESG、[Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations) 及 [IBM Cloud Vyatta](https://cloud.ibm.com/catalog/infrastructure/virtual-router-appliance)）。
 - 規劃並實作適當的應用程式負載平衡及安全解決方案（例如 [F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations)）。
 - 規劃並實作適當的安全資訊及事件管理 (SIEM) 解決方案（例如 [IBM QRadar](https://www.ibm.com/us-en/marketplace/hosted-security-intelligence)）。
 - 規劃並實作適當的漏洞掃描。
@@ -66,7 +69,7 @@ lastupdated: "2019-02-15"
 
 請完成下列步驟來自訂基礎 VMware 實例安裝，以符合您的需求。
 
-- 使用您自己的憑證管理中心 (CA)，為例如 vCenter、VMware Platform Services Controller (PSC) 及 NSX Manager 等元件產生憑證。
+- 使用您自己的憑證管理中心 (CA)，為 vCenter（內嵌 PSC）及 NSX Manager 這類元件產生憑證。
 - 配置已部署的服務。例如：
   - 針對 HyTrust CloudControl on {{site.data.keyword.cloud_notm}}，配置 AD 整合、存取控制、「簡易郵件傳送通訊協定 (SMTP)」設定及法規遵循原則。
   - 針對 Zerto on {{site.data.keyword.cloud_notm}}，規劃「Zerto Virtual Replication 應用裝置 (VRA)」通訊的 IP 定址及遞送，因為不支援網址轉換器 (NAT) 遍訪。請考量通道處理或重新部署您的 VRA，以進行適當的定址及遞送。

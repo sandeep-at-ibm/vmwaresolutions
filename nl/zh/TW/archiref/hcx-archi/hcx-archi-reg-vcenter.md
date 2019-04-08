@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-21"
 
+subcollection: vmwaresolutions
+
+
 ---
 # 向 vCenter 登錄 HCX Manager
 {: #hcx-archi-reg-vcenter}

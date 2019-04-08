@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -53,6 +56,7 @@ lastupdated: "2019-03-01"
 此设计中的每个物理主机都有两对冗余的 10 Gbps 以太网连接，用于连接到每个 {{site.data.keyword.cloud_notm}} 机顶接入 (ToR) 交换机（公共和专用）。适配器设置为独立连接（未绑定），共有 4 个 10 Gbps 连接。这允许每个网络接口卡 (NIC) 连接彼此独立工作。
 
 图 2. 物理主机连接
+</br>
 ![物理主机连接](vcsnsxt-host-connections.svg)
 
 ## VLAN

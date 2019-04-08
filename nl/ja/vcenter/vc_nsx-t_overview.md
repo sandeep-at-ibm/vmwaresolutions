@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-21"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -23,7 +26,7 @@ VMware vCenter Server with NSX-T on {{site.data.keyword.cloud}} は、VMware vSp
 
 VMware vSAN は専用ストレージのオプションとしても利用できます。 vSAN クラスターの vSAN ベース・ストレージの容量を増やすには、デプロイメント後に ESXi サーバーをさらに追加します。
 
-vCenter Server with NSX-T インスタンスは、PoC (概念検証) とサンドボックス・テストのみを目的としています。この環境では実動ワークロードを実行しないでください。 アドオン・サービスの注文、更新の適用などの管理機能はサポートされません。
+vCenter Server with NSX-T インスタンスは、PoC (概念検証) とサンドボックス・テストのみを目的としています。 この環境では実動ワークロードを実行しないでください。 アドオン・サービスの注文、更新の適用などの管理機能はサポートされません。
 {:important}
 
 ## vCenter Server with NSX-T アーキテクチャー
@@ -32,7 +35,7 @@ vCenter Server with NSX-T インスタンスは、PoC (概念検証) とサン�
 次の図は、3 ノードの vCenter Server with NSX-T デプロイメントのアーキテクチャーとコンポーネントの全体像を示しています。
 
 図 1. 3 ノードのクラスターの vCenter Server with NSX-T アーキテクチャーの全体像
-![vCenter Server with NSX-T アーキテクチャー](vc_architecture.svg "3 ノードのクラスターの vCenter Server アーキテクチャーの全体像")
+![vCenter Server with NSX-T アーキテクチャー](vc_nsx-t_architecture.svg "3 ノードのクラスターの vCenter Server アーキテクチャーの全体像")
 
 ### 物理インフラストラクチャー
 {: #vc_nsx-t_overview-physical-infras}
@@ -49,7 +52,7 @@ vCenter Server with NSX-T インスタンスは、PoC (概念検証) とサン�
 ### 仮想化管理
 {: #vc_nsx-t_overview-virtualization-mgmt}
 
-この層は、Platform Services Controller (PSC) が組み込まれた vCenter Server Appliance (vCSA)、3 つの NSX ノード、4 つの NSX Edge Services Gateways (ESG)、および IBM CloudDriver 仮想サーバー・インスタンス (VSI) で構成されます。CloudDriver VSI は、環境へのホストの追加などの特定の操作のために必要に応じてオンデマンドでデプロイします。
+この層は、Platform Services Controller (PSC) が組み込まれた vCenter Server Appliance (vCSA)、3 つの NSX ノード、3 つの NSX Edge Services Gateways (ESG)、および IBM CloudDriver 仮想サーバー・インスタンス (VSI) で構成されます。 CloudDriver VSI は、環境へのホストの追加などの特定の操作のために必要に応じてオンデマンドでデプロイします。
 
 基本オファリングでは、最大 400 台のホストと最大 4000 個の VM が存在する環境をサポートできる規模の vCenter Server アプライアンスがデプロイされます。 vSphere API と互換性のある同じツールとスクリプトを使用して、IBM がホストする VMware 環境を管理できます。
 
@@ -70,8 +73,7 @@ vCenter Server with NSX-T インスタンスには、以下のコンポーネン
 
 以下のいずれかの構成で{{site.data.keyword.baremetal_short}}を 3 つ以上注文できます。
 * **Skylake**: 選択した CPU モデルおよび RAM サイズの 2 CPU Intel Skylake 世代サーバー (Intel Xeon 4100/5100/6100 シリーズ)。  
-* **SAP 認定**: 選択した CPU モデルの Intel Skylake または Intel Broadwell 世代サーバー (Intel Xeon 6140/E5-2690/E7-8890 シリーズ)。
-* **Broadwell**: 選択した CPU モデルおよび RAM サイズの 2 CPU Intel Broadwell 世代サーバー (Intel Xeon E5-2600/E7-4800 シリーズ)。
+* **Broadwell**: 選択した CPU モデルおよび RAM サイズの 4 CPU Intel Broadwell 世代サーバー (Intel Xeon E7-4800 シリーズ)。
 
 vSAN ストレージを使用する計画がある場合は、構成に 4 つの{{site.data.keyword.baremetal_short}}が必要です。
 {:note}
@@ -82,12 +84,12 @@ vSAN ストレージを使用する計画がある場合は、構成に 4 つの
 以下のネットワーキング・コンポーネントが注文されます。
 *  10 Gbps デュアル・ネットワーク・アップリンク (パブリックとプライベート)
 *  VLAN (仮想 LAN) 3 つ: パブリック VLAN 1 つとプライベート VLAN 2 つ
-* T1 ルーターと T0 ルーターを備えたオーバーレイ・ネットワーク 1 つ (レイヤー 2 (L2) ネットワークに接続されたローカル・ワークロード間で実行される可能性のある東西通信用)。これはサンプルのルーティング・トポロジーとしてデプロイされるので、変更したり、作成の基礎として使用したり、削除したりできます。
-*  以下の 4 つの VMware NSX-T Edge Services Gateway
-  * アウトバウンド HTTPS 管理トラフィック用のセキュアな管理サービス VMware NSX ESG 2 つ。これは、管理ネットワーキング類型の一部として IBM がデプロイします。この ESG は、IBM 管理 VM が、自動化に関連する特定の外部 IBM 管理コンポーネントと通信するために使用します。 詳しくは、[ユーザー管理の NSX ESG を VM で使用するためのネットワークの構成](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_esg_config)を参照してください。
-  * アウトバウンドとインバウンドの HTTPS ワークロード・トラフィック用のユーザー管理のセキュアな VMware NSX ESG 2 つ。このゲートウェイは、VPN アクセスまたはパブリック・アクセスを提供するためにユーザーが変更可能なテンプレートとして IBM がデプロイします。 詳しくは、[ユーザー管理の NSX Edge にはセキュリティーのリスクがありますか?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq-customer-nsx) を参照してください。
+* T1 ルーターと T0 ルーターを備えたオーバーレイ・ネットワーク 1 つ (レイヤー 2 (L2) ネットワークに接続されたローカル・ワークロード間で実行される可能性のある東西通信用)。 これはサンプルのルーティング・トポロジーとしてデプロイされるので、変更したり、作成の基礎として使用したり、削除したりできます。
+*  以下の 3 つの VMware NSX-T Edge Services Gateway
+  * アウトバウンド HTTPS 管理トラフィック用のセキュアな管理サービス VMware NSX ESG 1 つ。これは、管理ネットワーキング類型の一部として IBM がデプロイします。この ESG は、IBM 管理 VM が、自動化に関連する特定の外部 IBM 管理コンポーネントと通信するために使用します。 詳しくは、[ユーザー管理の NSX ESG を VM で使用するためのネットワークの構成](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_esg_config)を参照してください。
+  * アウトバウンドとインバウンドの HTTPS ワークロード・トラフィック用のユーザー管理のセキュアな VMware NSX ESG 2 つ。 このゲートウェイは、VPN アクセスまたはパブリック・アクセスを提供するためにユーザーが変更可能なテンプレートとして IBM がデプロイします。 詳しくは、[ユーザー管理の NSX Edge にはセキュリティーのリスクがありますか?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq-customer-nsx) を参照してください。
 
-  これらの ESG の名前は、**mgmt-nsx-edge0** と **mgmt-nsx-edge1** です。お客様からは、これらの ESG にアクセスや使用ができません。これらを変更すると、{{site.data.keyword.vmwaresolutions_short}} コンソールから vCenter Server インスタンスを管理できなくなる可能性があります。 また、ファイアウォールを使用したり、外部 IBM 管理コンポーネントへの ESG 通信を無効にしたりすると、{{site.data.keyword.vmwaresolutions_short}} が使用できなくなる可能性があります。
+  この ESG は **mgmt-nsx-edge0** という名前です。お客様がこの ESG にアクセスしたり使用したりすることはできません。これを変更すると、{{site.data.keyword.vmwaresolutions_short}} コンソールから vCenter Server インスタンスを管理できなくなる可能性があります。 また、ファイアウォールを使用したり、外部 IBM 管理コンポーネントへの ESG 通信を無効にしたりすると、{{site.data.keyword.vmwaresolutions_short}} が使用できなくなる可能性があります。
   {:important}
 
 ### 仮想サーバー・インスタンス
@@ -102,7 +104,7 @@ vSAN ストレージを使用する計画がある場合は、構成に 4 つの
 
 最初のデプロイメントのときに、vSAN と NFS のどちらかのストレージ・オプションを選択できます。
 
-デプロイの後、NFS ストレージ共有を既存の NFS クラスターまたは vSAN クラスターに追加できます。詳しくは、[vCenter Server インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)の *vCenter Server インスタンスへの NFS ストレージの追加* のセクションを参照してください。
+デプロイの後、NFS ストレージ共有を既存の NFS クラスターまたは vSAN クラスターに追加できます。 詳しくは、[vCenter Server インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)の *vCenter Server インスタンスへの NFS ストレージの追加* のセクションを参照してください。
 {:note}
 
 #### vSAN ストレージ
@@ -123,18 +125,13 @@ vSAN オプションでは、構成をカスタマイズできます。ディス
 
 NFS オプションでは、ワークロード用のファイル・レベルの共有ストレージをカスタマイズできます。サイズとパフォーマンスをさまざまなオプションから選択できます。
 * サイズ: 20 GB から 24 TB
-* パフォーマンス: 0.25、2、4、または 10 IOPS/GB。
-* ファイル共有の個々の構成。
+* パフォーマンス: 0.25、2、4、または 10 IOPS/GB
+* ファイル共有の個々の構成
 
   10 IOPS/GB パフォーマンス・レベルは、ファイル共有あたり最大 4 TB の容量に制限されています。
   {:note}
 
 NFS オプションを選択すると、管理コンポーネント用の 2 TB および 4 IOPS/GB ファイル共有が 1 つ注文されます。
-
-#### ローカル・ディスク・ストレージ
-{: #vc_nsx-t_overview-local-disk-storage}
-
-ローカル・ディスク・オプションは、**SAP 認定**のクワッド Intel Xeon E7-8890 v4 プロセッサーのベアメタル構成でのみ使用できます。ディスク数とディスク・タイプをさまざまなオプションから選択して、構成をカスタマイズできます。
 
 ### ライセンス (IBM 提供または BYOL) および料金
 {: #vc_nsx-t_overview-license-and-fee}

@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-04"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -17,7 +20,8 @@ lastupdated: "2019-03-04"
 
 HyTrust CloudControl on {{site.data.keyword.cloud}} 服務會施行並控制是否符合安全標準，其中包括角色型存取控制 (RBAC)、核准及審核。此服務與 HyTrust DataControl 結合時，此服務確定虛擬機器及工作負載資料不會離開 {{site.data.keyword.CloudDataCent_notm}} 內的特定地區、叢集或 ESXi 伺服器。
 
-只有執行 vSphere 6.5 以及部署在（或升級至）2.3 版或更新版本的實例，才能使用此服務。現行安裝的 HyTrust CloudControl 版本是 5.4.2。{:note}
+只有執行 vSphere 6.5 以及部署在（或升級至）2.3 版或更新版本的實例，才能使用此服務。現行安裝的 HyTrust CloudControl 版本是 5.4.2。
+{:note}
 
 ## HyTrust CloudControl on IBM Cloud 的技術規格
 {: #htcc_considerations-specs}

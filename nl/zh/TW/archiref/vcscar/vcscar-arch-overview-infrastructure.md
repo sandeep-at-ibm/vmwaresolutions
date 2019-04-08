@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-03-22"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -44,12 +47,12 @@ VMware vCenter Server on {{site.data.keyword.cloud_notm}} Hybridity Bundle 服�
 
 表 1. {{site.data.keyword.icpfull_notm}} 的 vCenter Server 規格
 
-| NFS 部署 | vSAN 部署 |
-:--|:----:|:----:
-伺服器數目 |  3 |  4
-CPU | 28 核心 2.2 GHz | 28 核心 2.2 GHz
-記憶體 | 384 GB | 384 GB
-儲存空間 | 2000 GB 2IOPS/GB 管理、2000 GB 4IOPS/GB 工作負載、4000 GB 4IOPS/GB {{site.data.keyword.icpfull_notm}} | 至少 960-GB SSD x 2
+| | NFS 部署 | vSAN 部署 |
+|:---------- |:---------- |:---------- |
+| 伺服器數目 | 3 |4 |
+|CPU | 28 核心 2.2 GHz | 28 核心 2.2 GHz |
+|記憶體| 384 GB | 384 GB |
+|儲存空間| 2000 GB 2IOPS/GB 管理、2000 GB 4IOPS/GB 工作負載、4000 GB 4IOPS/GB {{site.data.keyword.icpfull_notm}} | 最低 960-GB SSD x 2 |
 
 除了 {{site.data.keyword.cloud_notm}} Private 硬體需求之外，您還必須在 {{site.data.keyword.icpfull_notm}} 環境中建立持續性磁區，以儲存 Cloud Automation Manager (CAM) 資料庫和日誌資料。雖然 CAM 可支援 {{site.data.keyword.icpfull_notm}} 所支援的所有持續性磁區類型，但建議用於 CAM 的兩種儲存空間配置為 NFS 和 GlusterFS。
 

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-03-18"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -185,7 +188,7 @@ No puede cambiar el nombre de clúster. Si se cambia el nombre del clúster, es 
         <dt class="dt dlterm">Suprimido</dt>
         <dd class="dd">El clúster se ha suprimido.</dd>
     </dl>
-4. Pulse un nombre de clúster para ver los detalles de los servidores ESXi y el almacenamiento:
+4. Pulse un nombre de clúster para ver los detalles de los servidores ESXi, el almacenamiento y la interfaz de red:
 
   * Detalles de servidores ESXi:
      * **Nombre**: el nombre del servidor ESXi está en el formato `<host_prefix><n>.<subdomain_label>.<root_domain>`, donde:
@@ -215,6 +218,20 @@ No puede cambiar el nombre de clúster. Si se cambia el nombre del clúster, es 
     * **Tamaño**: la capacidad del almacenamiento.
     * **IOPS/GB**: el nivel de rendimiento del almacenamiento.
     * **Protocolo NFS**: la versión de NFS del almacenamiento.
+  * Interfaz de red - Detalles de VLAN:
+    * **Número de VLAN**: número de VLAN exclusivo.
+    * **Descripción**: descripción de la VLAN.
+    * **Ubicación**: ubicación del centro de datos.
+    * **Ruta principal**: la ruta principal de la VLAN.
+    Pulse **Ver recurso** para acceder a los detalles de la VLAN.
+  * Interfaz de red - Detalles de subred:
+    * **Nombre**: nombre de la subred. Pulse sobre el nombre para acceder a los detalles de la subred.
+    * **Tipo**: tipo de subred (primaria o portátil).
+    * **Descripción**: descripción de la subred.
+  * Interfaz de red - Detalles de IP:
+    * **IP**: dirección IP.
+    * **Estado**: estado de la dirección IP.
+    * **Descripción**: descripción de la dirección IP.
 
 ## Supresión de clústeres de instancias de vCenter Server con el paquete híbrido (Hybridity)
 {: #vc_hybrid_addingviewingclusters-deleting}

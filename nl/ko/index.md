@@ -4,7 +4,12 @@ copyright:
 
   years: 2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-22"
+
+keywords: IBM Cloud for VMware Solutions, getting started, deployment offerings, add-on services, use case
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -18,7 +23,7 @@ lastupdated: "2019-03-12"
 {:tip: .tip}
 {:table: .aria-labeledby="caption"}
 
-# IBM Cloud for VMware Solutions 시작하기
+# 시작하기 튜토리얼
 {: #getting-started}
 
 이 시작하기 튜토리얼에서 인스턴스 및 이에 대한 몇 가지 추가 기능 서비스 주문 프로세스를 안내합니다.
@@ -55,7 +60,7 @@ Microsoft Internet Explorer가 지원되지 않습니다.
    </tr>
    <tr>
       <td>IBM ID</td>
-      <td>**IBM ID**를 사용하면 {{site.data.keyword.cloud_notm}}를 포함하여 사용하는 모든 IBM 제품과 서비스에 하나의 로그인 사용자 이름을 사용할 수 있습니다. {{site.data.keyword.vmwaresolutions_short}}는 {{site.data.keyword.cloud_notm}} 카탈로그의 인프라 솔루션으로 제공됩니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔에 액세스하려면 **IBM ID**가 있어야 합니다.<br><br>**IBM ID**를 사용하여 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 로그인하려면 **IBM ID**를 {{site.data.keyword.cloud_notm}} 계정과 연관시켜야 합니다. 처음 콘솔에 로그인하면 기존 **IBM ID**를 {{site.data.keyword.cloud_notm}} 계정과 연관시키거나 새 {{site.data.keyword.cloud_notm}} 계정을 등록하도록 안내를 받습니다. 새 {{site.data.keyword.cloud_notm}} 계정은 **IBM ID**와 자동으로 연관됩니다. 이 프로세스를 한 번만 수행해야 합니다.<br><br>**IBMid**를 {{site.data.keyword.cloud_notm}} 계정과 연관시키는 데 문제점이 있는 경우, [{{site.data.keyword.cloud_notm}} 액세스의 문제점 해결](/docs/account?topic=account-accessing#accessing)을 참조하십시오. </td>
+      <td>**IBM ID**를 사용하면 {{site.data.keyword.cloud_notm}}를 포함하여 사용하는 모든 IBM 제품과 서비스에 하나의 로그인 사용자 이름을 사용할 수 있습니다. {{site.data.keyword.vmwaresolutions_short}}는 {{site.data.keyword.cloud_notm}} 카탈로그의 인프라 솔루션으로 제공됩니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔에 액세스하려면 **IBM ID**가 있어야 합니다.<br><br>**IBM ID**를 사용하여 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 로그인하려면 **IBM ID**를 {{site.data.keyword.cloud_notm}} 계정과 연관시켜야 합니다. 처음 콘솔에 로그인하면 기존 **IBM ID**를 {{site.data.keyword.cloud_notm}} 계정과 연관시키거나 새 {{site.data.keyword.cloud_notm}} 계정을 등록하도록 안내를 받습니다. 새 {{site.data.keyword.cloud_notm}} 계정은 **IBM ID**와 자동으로 연관됩니다. 이 프로세스를 한 번만 수행해야 합니다.<br><br>**IBMid**를 {{site.data.keyword.cloud_notm}} 계정과 연관시키는 데 문제점이 있는 경우, [{{site.data.keyword.cloud_notm}} 액세스의 문제점 해결](/docs/account?topic=account-accessing#accessing)을 참조하십시오.</td>
    </tr>
    <tr>
       <td>IBM Cloud 계정</td>
@@ -63,7 +68,7 @@ Microsoft Internet Explorer가 지원되지 않습니다.
    </tr>
    <tr>
       <td>IBM Cloud 인프라(SoftLayer) 계정</td>
-      <td>{{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정을 이전에는 IBM SoftLayer 계정이라고 했습니다.  계정이 충족해야 하는 요구사항에 대한 자세한 정보는 [{{site.data.keyword.cloud_notm}} 인프라 계정의 요구사항](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)을 참조하십시오. <br><br>{{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정과 {{site.data.keyword.cloud_notm}} 계정을 링크하여 결합된 IaaS(Infrastructure as a Service) 및 PaaS(Platform as a Service) 리소스를 사용할 수 있습니다. 그리고 단일 로그인에서 IaaS 리소스와 PaaS 리소스에 액세스할 수 있습니다. 또한 계정을 연결하면 사용하는 모든 PaaS 및 IaaS 리소스에 대한 하나의 송장이 사용자에게 제공됩니다.<ul><li>{{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정이 없는 경우에는 [IBM Cloud 인프라(SoftLayer) 계정 등록](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account#signing_softlayer_account-infra)의 프로시저에 따라 계정을 요청한 후에 [IBM ID로 전환 및 계정 연결](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)의 프로시저에 따라 {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정을 {{site.data.keyword.cloud_notm}} 계정과 링크하십시오. </li><li>{{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정이 있는 경우에는 [IBM ID로 전환 및 계정 연결](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)의 프로시저에 따라 이를 {{site.data.keyword.cloud_notm}} 계정과 연결할 수 있습니다.</li></ul></td>
+      <td>{{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정을 이전에는 IBM SoftLayer 계정이라고 했습니다.  계정이 충족해야 하는 요구사항에 대한 자세한 정보는 [{{site.data.keyword.cloud_notm}} 인프라 계정의 요구사항](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)을 참조하십시오.<br><br>{{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정과 {{site.data.keyword.cloud_notm}} 계정을 링크하여 결합된 IaaS(Infrastructure as a Service) 및 PaaS(Platform as a Service) 리소스를 사용할 수 있습니다. 그리고 단일 로그인에서 IaaS 리소스와 PaaS 리소스에 액세스할 수 있습니다. 또한 계정을 연결하면 사용하는 모든 PaaS 및 IaaS 리소스에 대한 하나의 송장이 사용자에게 제공됩니다.<ul><li>{{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정이 없는 경우에는 [IBM Cloud 인프라(SoftLayer) 계정 등록](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account#signing_softlayer_account-infra)의 프로시저에 따라 계정을 요청한 후에 [IBM ID로 전환 및 계정 연결](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)의 프로시저에 따라 {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정을 {{site.data.keyword.cloud_notm}} 계정과 링크하십시오.</li><li>{{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정이 있는 경우에는 [IBM ID로 전환 및 계정 연결](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)의 프로시저에 따라 이를 {{site.data.keyword.cloud_notm}} 계정과 연결할 수 있습니다.</li></ul></td>
    </tr>
    </table>
 
@@ -192,18 +197,4 @@ Microsoft Internet Explorer가 지원되지 않습니다.
 주문한 인스턴스를 보는 방법에 대한 정보는 다음 주제를 참조하십시오.
 * [vCenter Server 인스턴스 보기](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
 * [vCenter Server with Hybridity Bundle 인스턴스 보기](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
-* [NetApp ONTAP Select 인스턴스 보기](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_viewinginstances)
-
-## 5단계: 인스턴스의 추가 기능 서비스 관리
-{: #getting-started-step5}
-
-인스턴스의 추가 기능 서비스를 주문한 경우 서비스도 관리할 수 있습니다.
-
-서비스를 관리하는 방법에 대한 정보는 다음 주제를 참조하십시오.
-* [vCenter Server 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
-* [vCenter Server with Hybridity Bundle 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
-
-## 다음 단계
-{: #getting-started-next}
-
-{{site.data.keyword.vmwaresolutions_short}} 콘솔 또는 VMware vSphere Web Client에서 인스턴스를 관리하십시오.
+* [NetApp ONTAP Select 인스턴스 보기](/docs/services/vmwaresolutions/services?topic=vmware-solutions-np_viewinginstances#np_viewinginstances)

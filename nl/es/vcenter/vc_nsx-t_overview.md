@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-21"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -32,7 +35,7 @@ Las instancias de vCenter Server con NSX-T son sólo para pruebas de concepto (P
 En el gráfico siguiente se muestra la arquitectura general y los componentes del despliegue de tres nodos de vCenter Server con NSX-T.
 
 Figura 1. Arquitectura general de vCenter Server con NSX-T para un clúster de tres nodos
-![Arquitectura de vCenter Server con NSX-T](vc_architecture.svg "Arquitectura general de vCenter Server para un clúster de tres nodos")
+![Arquitectura de vCenter Server con NSX-T](vc_nsx-t_architecture.svg "Arquitectura general de vCenter Server para un clúster de tres nodos")
 
 ### Infraestructura física
 {: #vc_nsx-t_overview-physical-infras}
@@ -49,7 +52,7 @@ Esta capa virtualiza la infraestructura física mediante diversos productos de V
 ### Gestión de la virtualización
 {: #vc_nsx-t_overview-virtualization-mgmt}
 
-Esta capa consta de vCenter Server Appliance (vCSA) con Platform Services Controller (PSC) incorporado, tres nodos NSX, cuatro NSX Edge Services Gateways (ESG) y la instancia de servidor virtual (VSI) de IBM CloudDriver. La VSI de CloudDriver se despliega a petición según sea necesario para determinadas operaciones, como por ejemplo, añadir hosts al entorno.
+Esta capa consta de vCenter Server Appliance (vCSA) con Platform Services Controller (PSC) incorporado, tres nodos NSX, tres NSX Edge Services Gateways (ESG) y la instancia de servidor virtual (VSI) de IBM CloudDriver. La VSI de CloudDriver se despliega a petición según sea necesario para determinadas operaciones, como por ejemplo, añadir hosts al entorno.
 
 La oferta básica se despliega con un dispositivo vCenter Server cuyo tamaño se ajusta para dar soporte a un entorno con un máximo de 400 hosts y hasta 4000 máquinas virtuales. Se pueden utilizar las mismas herramientas y scripts compatibles con la API de vSphere para gestionar el entorno VMware alojado por IBM.
 
@@ -70,8 +73,7 @@ La disponibilidad y los precios de las configuraciones estandarizadas de hardwar
 
 Puede solicitar tres o más {{site.data.keyword.baremetal_short}} con una de las siguientes configuraciones:
 * **Skylake**: servidores de generación Intel Skylake de 2 CPU (Intel Xeon serie 4100/5100/6100) con el modelo de CPU y el tamaño de RAM que seleccione.  
-* **Certificado por SAP**: servidores de generación Intel Skylake o Intel Broadwell (Intel Xeon serie 6140/E5-2690/E7-8890) con el modelo de CPU que elija.
-* **Broadwell**: servidores de generación Intel Broadwell de 2 CPU (Intel Xeon serie E5-2600/E7-4800) con el modelo de CPU y el tamaño de RAM que seleccione.
+* **Broadwell**: servidores de generación Intel Broadwell de 4 CPU (Intel Xeon serie E7-4800) con el modelo de CPU y el tamaño de RAM que seleccione.
 
 Si tiene pensado utilizar almacenamiento vSAN, la configuración necesita cuatro {{site.data.keyword.baremetal_short}}.
 {:note}
@@ -83,11 +85,11 @@ Se solicitan los siguientes componentes del sistema de redes:
 *  Enlaces ascendentes de red pública y privada de 10 Gbps
 *  Tres VLAN (LAN virtuales): una VLAN pública y dos VLAN privadas
 * Una red superpuesta con un direccionador T1 y T0 para una potencial comunicación este-oeste entre cargas de trabajo locales conectadas a redes de la capa 2 (L2). Se despliega como una topología de direccionamiento de ejemplo, que puede modificar o eliminar o a la que puede añadir componentes.
-*  Cuatro VMware NSX-T Edge Services Gateways:
-  * Dos VMware NSX ESG de servicios de gestión segura para el tráfico de gestión de HTTPS saliente, desplegado por IBM como parte de la topología del sistema de redes de gestión. Las VM de gestión de IBM utilizan esta ESG para comunicarse con componentes externos específicos de gestión de IBM que están relacionados con la automatización. Para obtener más información, consulte [Configuración de la red para que utilice la ESG NSX gestionada por el cliente con las VM](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_esg_config).
+*  Tres VMware NSX-T Edge Services Gateways:
+  * Un VMware NSX ESG de servicios de gestión segura para el tráfico de gestión de HTTPS saliente, desplegado por IBM como parte de la topología del sistema de redes de gestión. Las VM de gestión de IBM utilizan esta ESG para comunicarse con componentes externos específicos de gestión de IBM que están relacionados con la automatización. Para obtener más información, consulte [Configuración de la red para que utilice la ESG NSX gestionada por el cliente con las VM](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_esg_config).
   * Dos VMware NSX ESG seguras gestionadas por el cliente para el tráfico de salida y de entrada de carga de trabajo HTTPS. IBM despliega esta pasarela como plantilla que puede modificar para proporcionar acceso VPN o acceso público. Para obtener más información, consulte [¿Representa NSX Edge gestionado por el cliente un riesgo para la seguridad?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq-customer-nsx)
 
-  Estas ESG se denominan **mgmt-nsx-edge0** y **mgmt-nsx-edge1**. No puede acceder a estas ESG ni puede utilizarlas. Si las modifica, es posible que no pueda gestionar la instancia de vCenter Server desde la consola de {{site.data.keyword.vmwaresolutions_short}}. Además, el uso de un cortafuegos o la inhabilitación de las comunicaciones de ESG a los componentes de gestión externa de IBM hará que {{site.data.keyword.vmwaresolutions_short}} quede inutilizable.
+  Este ESG se denomina **mgmt-nsx-edge0**. No puede acceder al ESG ni tampoco utilizarlo. Si lo modifica, es posible que no pueda gestionar la instancia de vCenter Server desde la consola de {{site.data.keyword.vmwaresolutions_short}}. Además, el uso de un cortafuegos o la inhabilitación de las comunicaciones de ESG a los componentes de gestión externa de IBM hará que {{site.data.keyword.vmwaresolutions_short}} quede inutilizable.
   {:important}
 
 ### Instancias de servidor virtual
@@ -123,18 +125,13 @@ La opción vSAN ofrece configuraciones personalizadas, con diversas opciones par
 
 La opción NFS ofrece almacenamiento a nivel de archivo compartido personalizado para cargas de trabajo con distintas opciones de tamaño y de rendimiento:
 * Tamaño: de 20 GB a 24 TB
-* Rendimiento: 0,25, 2, 4 o 10 IOPS/GB.
-* Configuración individual de comparticiones de archivos.
+* Rendimiento: 0,25, 2, 4 o 10 IOPS/GB
+* Configuración individual de comparticiones de archivos
 
   El nivel de rendimiento de 10 IOPS/GB está limitado a una capacidad máxima de 4 TB por compartición de archivo.
   {:note}
 
 Si selecciona la opción NFS, se solicita una compartición de archivos de 2 TB y de 4 IOPS/GB para los componentes de gestión.
-
-#### Almacenamiento de disco local
-{: #vc_nsx-t_overview-local-disk-storage}
-
-La opción de discos locales, que solo está disponible para las configuraciones de procesador nativo Quad Intel Xeon E7-8890 v4 **certificado por SAP**, ofrece configuraciones personalizadas con diversas opciones para recuento de discos y tipo de disco.
 
 ### Licencias (proporcionadas por IBM o BYOL) y cuotas
 {: #vc_nsx-t_overview-license-and-fee}

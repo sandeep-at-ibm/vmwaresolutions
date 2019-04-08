@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -15,47 +18,32 @@ lastupdated: "2019-02-15"
 # Design des Infrastrukturmanagements
 {: #design_infrastructuremgmt}
 
-Das Infrastrukturmanagement bezieht sich auf die Komponenten, die die VMware-Infrastruktur verwalten. Dieses Design arbeitet mit einer einzelnen externen PSC-Instanz (PSC - Platform Services Controller) und einer einzelnen vCenter Server-Instanz:
-* Der vCenter Server ist die zentrale Plattform für die Verwaltung von vSphere-Umgebungen und gehört zu den grundlegenden Komponenten dieser Lösung.
+Das Infrastrukturmanagement bezieht sich auf die Komponenten, die die VMware-Infrastruktur verwalten.
+* Der vCenter Server mit integriertem Platform Services Controller (PSC) ist die zentrale Plattform für die Verwaltung von vSphere-Umgebungen und gehört zu den grundlegenden Komponenten dieser Lösung.
 * Der PSC wird in dieser Lösung dazu verwendet, eine Reihe von Infrastrukturservices wie den VMware vCenter Single Sign On-Service, den Lizenzservice, den Suchservice und die VMware-Zertifizierungsstelle bereitzustellen.
 
-Die PSC-Instanzen und die vCenter Server-Instanzen sind separate virtuelle Maschinen (VMs).
+Dieses Design verwendet eine PSC-Funktion, die in eine Instanz von vCenter Server integriert ist. Der PSC und der vCenter Server sind in derselben virtuellen Maschine (VM) enthalten.
 
-## PSC-Design
-{: #design_infrastructuremgmt-psc}
-
-In diesem Design wird ein einzelner externer PSC als virtuelle Appliance in einem portierbaren Teilnetz im privaten VLAN bereitgestellt, das den Management-VMs zugeordnet ist. Das zugehörige Standardgateway wird auf den Back-End-Kundenrouter (BCR - Back-end Customer Router) eingestellt. Die virtuelle Appliance wird mit den Spezifikationen in der folgenden Tabelle konfiguriert.
-
-Diese Werte werden bei der Bereitstellung festgelegt und können nicht geändert werden.
-{:note}
-
-Tabelle 1. Spezifikationen für Platform Services Controller
-
-| Attribut                    | Spezifikation                  |
-|------------------------------|--------------------------------|
-| Platform Services Controller | Virtual Appliance              |
-| Anzahl vCPUs              | 2                              |
-| Speicher                       | 4 GB                           |
-| Festplattenspeicher                         | 114 GB in lokalem VMFS-Datenspeicher |
-| Plattentyp                    | Thin Provisioning-Platte               |
+Abbildung 1. Infrastrukturmanagement</br>
+![Infrastrukturmanagement](vcsv4radiagrams-ra-inframgmt.svg)
 
 Dem PSC, der sich in der primären Instanz befindet, wird die SSO-Standarddomäne `vsphere.local` zugeordnet.
 
 ## vCenter Server-Design
 {: #design_infrastructuremgmt-vcenter}
 
-Der vCenter Server wird ebenfalls als virtuelle Appliance bereitgestellt. Darüber hinaus wird der vCenter Server in einem portierbaren Teilnetz im privaten VLAN installiert, das den Management-VMs zugeordnet ist. Das zugehörige Standardgateway wird auf die IP-Adresse eingestellt, die auf dem Back-End-Kundenrouter (BCR) für dieses bestimmte Teilnetz zugeordnet wurde. Die virtuelle Appliance wird mit den Spezifikationen in der folgenden Tabelle konfiguriert.
+vCenter Server mit integriertem PSC wird in einem portierbaren Teilnetz im privaten VLAN installiert, das den Management-VMs zugeordnet ist. Das zugehörige Standardgateway wird auf die IP-Adresse eingestellt, die auf dem Back-End-Kundenrouter (BCR) für dieses bestimmte Teilnetz zugeordnet wurde. Die virtuelle Appliance wird mit den Spezifikationen in der folgenden Tabelle konfiguriert.
 
-Tabelle 2. vCenter Server Appliance-Spezifikationen
+Tabelle 1. vCenter Server Appliance-Spezifikationen
 
 | Attribut                    | Spezifikation                       |
 |------------------------------|-------------------------------------|
 | vCenter Server               | Virtual Appliance                   |
-| Appliance-Installationsgröße  | Mittel (bis zu 400 Hosts, 4000 VMs) |
-| Platform Services Controller | Extern                            |
-| Anzahl vCPUs              | 8                                   |
-| Speicher                       | 24 GB                               |
-| Festplattenspeicher                         | 400 GB auf lokalem Datenspeicher           |
+| Appliance-Installationsgröße  | Groß (bis zu 1.000 Hosts und 10.000 VMs) |
+| Platform Services Controller | Integriert                            |
+| Anzahl vCPUs              | 16                                   |
+| Speicher                       | 32 GB                               |
+| Festplattenspeicher                         | 990 GB auf lokalem Datenspeicher (große Plattenbereitstellung) |
 | Plattentyp                    | Thin Provisioning-Platte                    |
 
 ### vCenter Server-Datenbank
@@ -86,55 +74,47 @@ Sie sind dafür verantwortlich, die Zugangssteuerungsrichtlinie anzupassen, wenn
 
 Die Option der VM-Neustartpriorität (**VM restart priority**) wird standardmäßig auf Mittel ("medium") gesetzt und die Option der Antwort für Hostisolation (**Host isolation response**) wird inaktiviert. Darüber hinaus wird die VM-Überwachung (**VM monitoring**) inaktiviert und die Funktion zum Austausch von Datenspeicherüberwachungssignalen (**Datastore Heartbeating**) wird so konfiguriert, dass alle Clusterdatenspeicher einbezogen werden. Dieses Konzept verwendet die NAS-Datenspeicher, wenn sie vorhanden sind.
 
-## Automatisierung
-{: #design_infrastructuremgmt-automation}
+## Enhanced vMotion Compatibility (EVC)
+{: #design_infrastructuremgmt-evc}
 
-Das wesentliche Kennzeichen für diese Lösungen ist die Automatisierung. Die Automatisierung bietet die folgenden Vorteile:
-* Vereinfachung der Bereitstellung.
-* Drastische Verkürzung der Bereitstellungszeit.
-* Sicherstellung, dass die VMware-Instanz in konsistenter Weise bereitgestellt wird.
+Zur Vereinfachung der vMotion-Kompatibilität zwischen Clusterknoten mit potenziell unterschiedlichen CPU-Funktionen wird der erweiterte vMotion-Kompatibilitätsmodus (EVC) auf Skylake-Ebene aktiviert, um sicherzustellen, dass der vMotion-Kompatibilitätsmodus (EVC) auf Skylake-Ebene aktiviert ist, um die vMotion-Kompatibilität zwischen Clusterknoten zu gewährleisten, wenn neuere Prozessoren innerhalb des {{site.data.keyword.cloud_notm}}-Bestands verwendet werden und dazukommen und die spätere Clustererweiterung ermöglichen, wenn keine Skylake-Prozessorserver nicht im Bestand sind.
 
-{{site.data.keyword.IBM}} CloudBuilder-, IBM CloudDriver- und SDDC Manager-VMs arbeiten zusammen, um eine neue VMware-Instanz zu starten und Lebenszyklusmanagementfunktionen auszuführen.
+### IBM CloudDriver
+{: #design_infrastructuremgmt-cloud-driver}
 
-### IBM CloudBuilder und IBM CloudDriver
-{: #design_infrastructuremgmt-cloud-builder-driver}
+Die wichtige Voraussetzung für diese Lösungen ist die Automatisierung. Die Automatisierung reduziert die Komplexität der Bereitstellung, reduziert die Bereitstellungszeit deutlich und stellt sicher, dass die VMware-Instanz in konsistenter Weise bereitgestellt wird. 
 
-Die virtuellen Serverinstanzen (VSI) für IBM CloudBuilder und IBM CloudDriver sind von IBM entwickelte Komponenten, auf die Sie nicht zugreifen können.
-* Die IBM CloudBuilder-Instanz ist eine temporäre {{site.data.keyword.cloud_notm}}-VSI, die die Bereitstellung, Konfiguration und Validierung der Lösungskomponenten innerhalb der bereitgestellten Bare Metal-ESXi-Hosts startet.
-* Die IBM CloudDriver-VSI wird für die Instanzerstellung bereitgestellt und anschließend nach Bedarf in regelmäßigen Abständen mit dem neuesten {{site.data.keyword.cloud_notm}} for VMware-Code für Operationen wie das Bereitstellen weiterer Knoten, Cluster oder Services verwendet. IBM CloudDriver kommuniziert mit der Konsole von {{site.data.keyword.vmwaresolutions_short}} über ein VMware NSX Edge Services Gateway, das exklusiv für Instanzmanagementzwecke bereitgestellt wurde, und fungiert als Agent zur Verwaltung der Instanz. IBM CloudDriver ist für laufende Aktionen verantwortlich, wie das Hinzufügen neuer Bare-Metal-Hosts zum Cluster und das Bereitstellen von Add-on-Services in der Instanz. Bei Cloud Foundation-Instanzen kommuniziert IBM CloudDriver mit der VMware SDDC Manager-VM, um Funktionen wie das Hinzufügen von Hosts oder Aktualisierungen von Hosts auszuführen.
+IBM CloudBuilder ist eine kurzlebige virtuelle {{site.data.keyword.cloud_notm}}-Server-Instanz (VSI), die zum Erstellen einer neuen VMware-Instanz und zum Ausführen von Funktionen für das Lebenszyklusmanagement verwendet wird. Sie wird bereitgestellt, wenn eine allgemeine Verwaltung der vCenter Server-Instanz erforderlich ist, und wird wieder gelöscht, wenn dieser Prozess abgeschlossen ist.
 
-Es ist möglich, dass der Benutzer die in den folgenden Abschnitten beschriebenen VMs löscht oder beschädigt. Wenn eine VM entfernt, heruntergefahren oder nicht funktionsfähig wird, werden die folgenden Cloud Foundation- oder vCenter Server-Operationen in der Konsole von {{site.data.keyword.vmwaresolutions_short}} unterbrochen:
-* Anzeigen des Instanz- oder Hoststatus
-* Hinzufügen oder Entfernen von Clustern
-* Hinzufügen oder Entfernen von ESXi-Hosts
-* Hinzufügen oder Entfernen von Services
-* Patches
+IBM CloudDriver kann so konfiguriert werden, dass die Kommunikation mit der {{site.data.keyword.vmwaresolutions_short}}-Managementinfrastruktur über die öffentliche oder optional über eine private Netzverbindung über den {{site.data.keyword.cloud_notm}}-Objektspeicher als Nachrichtenwarteschlange erfolgt. BM CloudDriver ist eine von IBM entwickelte Komponente, auf die kein Benutzer zugreifen kann, und verfügt über die folgenden Attribute und Funktionen:
 
-### SDDC Manager
-{: #design_infrastructuremgmt-sddc-manager}
-
-Bei Cloud Foundation-Instanzen ist die SDDC Manager-VM eine Komponente, die von VMware entwickelt und gewartet wird. Sie bleibt während ihres gesamten Lebenszyklus ein Teil der Instanz. Sie ist für die folgenden Lebenszyklusfunktionen von Instanzen verantwortlich:
-* Management von VMware-Komponenten: vCenter Server, Platform Services Controller (PSC), vSAN und NSX, einschließlich IP-Adresszuordnung und Hostnamensauflösung.
-* Erweiterung und Zurückziehung von ESXi-Hosts im Cluster, einschließlich betroffener Services wie NSX-VTEP, vSAN und Ressourcenpools.
-
-Bei vCenter Server-Instanzen werden diese Aktivitäten durch IBM CloudDriver ausgeführt, da kein SDDC Manager vorhanden ist.
+- Bereitstellung und Konfiguration der vCenter Server-Instanz im Benutzerkonto.
+- Hinzufügen von Hosts zu den vCenter Server-Clustern und entfernen von Host aus den vCenter Server-Clustern.
+- Hinzufügen von Clustern zu den vCenter Server-Instanzen und entfernen von Clustern aus den vCenter Server-Instanzen.
+- Hinzufügen von Add-on-Services und Funktionen zu den vCenter Server-Instanzen oder entfernen von Add-on-Services und Funktionen aus den vCenter Server-Instanzen.
 
 ### Automatisierungsablauf
 {: #design_infrastructuremgmt-auto-flow}
 
-Die folgende Prozedur beschreibt die Reihenfolge der Ereignisse, wenn eine VMware-Instanz über die Konsole von {{site.data.keyword.vmwaresolutions_short}} bestellt wird:
-1.  Bestellung von VLANs und Teilnetzen für den Netzbetrieb von {{site.data.keyword.cloud_notm}}.
-2.  Bestellung von {{site.data.keyword.baremetal_short}} mit installiertem vSphere Hypervisor.
-3.  Sofern zutreffend: Bestellung von Microsoft Windows Virtual Server Instance (VSI) für die Funktion als Active Directory-Domänencontroller.
-4.  Validierung der Vernetzung und der bereitgestellten Hardware.
-5.  Sofern zutreffend: Erstkonfiguration eines vSAN mit einzelnem Knoten.
-6.  Sofern zutreffend: Bereitstellung und Konfiguration von zwei virtuellen Microsoft Windows-Maschinen für die Funktion als Active Directory-Domänencontroller.
-7.  Bereitstellung und Konfiguration von vCenter, PSC und NSX.
-8.  Clustering der übrigen ESXi-Knoten, Erweiterung von vSAN, sofern zutreffend, und Konfiguration von NSX-Komponenten (VTEP).
-9.  Bereitstellung der VMware Cloud Foundation-SDDC Manager-VM, sofern zutreffend, und der IBM CloudDriver-VSI.
-10.  Validierung der Installation und Konfiguration der Umgebung.
-11. Entfernung der CloudBuilder-VSI.
-12. Bereitstellung optionaler Services, wie Sicherungsserver und -speicher.
+Im Folgenden wird die Reihenfolge der Ereignisse beschrieben, wenn Sie die {{site.data.keyword.vmwaresolutions_short}}-Konsole verwenden, um eine VMware-Instanz zu bestellen:
+1. Bestellung von VLANs und Teilnetzen für den Netzbetrieb von {{site.data.keyword.cloud_notm}}.
+2. Bestellung von {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} mit installiertem vSphere Hypervisor.
+3. Bestellung der Microsoft Windows-VSI als Active Directory-Domänencontroller.
+4. Bereitstellung der CloudDriver-VSI.
+5. Validierung der Vernetzung und der bereitgestellten Hardware.
+6. Sofern zutreffend: Erstkonfiguration eines vSAN mit einzelnem Knoten.
+7. Bereitstellung und Konfiguration von vCenter mit integriertem PSC und NSX.
+8. Clustering der übrigen ESXi-Knoten, Erweiterung von vSAN, sofern zutreffend, und Konfiguration von NSX-Komponenten (VTEP).
+9. Validierung der Installation und Konfiguration der Umgebung.
+10. Bereitstellung optionaler Services, wie Sicherungsserver und -speicher.
+11. Entfernung der CloudDriver-VSI.
+
+## IDs und Kennwörter
+{: #design_infrastructuremgmt-ids-pwd}
+
+Die IC4V-Managementinfrastruktur speichert alle in der {{site.data.keyword.cloud_notm}}-Managementebene enthaltenen IDs und verschlüsselten Kennwörter des vCenter Servers. Alle Änderungen an diesen Kennwörtern durch den Benutzer können die Automatisierungsfunktionen in vCenter Server unterbrechen.
+
+Sie können geänderte Kennwörter im IC4V-Lösungsportal bereitstellen, damit die Automatisierung die Funktionen ununterbrochen verarbeiten kann. Das Lösungsportal ermöglicht optional die Verifizierung der eingegebenen Passwörter. 
 
 ## Zugehörige Links
 {: #design_infrastructuremgmt-related}

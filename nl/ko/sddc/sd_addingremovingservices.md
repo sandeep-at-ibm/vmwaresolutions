@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-06"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Cloud Foundation 인스턴스에 대한 서비스 주문, 보기 및 제거
@@ -55,7 +58,7 @@ Cloud Foundation 인스턴스에 서비스를 추가하려면 이전 테이블�
 ## Cloud Foundation 인스턴스에 대한 서비스를 제거하는 프로시저
 {: #sd_addingremovingservices-removing-procedure}
 
-1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **리소스**를 클릭하십시오. 
+1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **리소스**를 클릭하십시오.
 2. **Cloud Foundation 인스턴스** 테이블에서 서비스를 제거할 인스턴스를 클릭하십시오.
 3. 왼쪽 탐색 분할창에서 **서비스**를 클릭하십시오.
 4. **서비스** 페이지에서 제거할 서비스 인스턴스를 찾고 **삭제** 아이콘을 클릭하십시오.

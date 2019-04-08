@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-12"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -59,7 +62,7 @@ Die für Hardware, Netzbetrieb, virtuelle Maschinen und Speicher anfallenden Geb
 ### Bare Metal Server
 {: #sd_cloudfoundationoverview-bare-metal}
 
-Ihre Instanz kann {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} mit einer der folgenden Konfigurationen beinhalten: 
+Ihre Instanz kann {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} mit einer der folgenden Konfigurationen beinhalten:
 *  **Skylake**: 2-CPU Intel Skylake Generation-Server (Intel Xeon 4100/5100/6100 Series) mit dem ausgewählten CPU-Modell und der RAM-Größe.   
 *  **Broadwell**: 2-CPU Intel Broadwell Generation-Server (Intel Xeon E5-2600/E7-4800 Series) mit dem ausgewählten CPU-Modell und der RAM-Größe.
 
@@ -69,7 +72,7 @@ Wenn Sie vSAN-Speicher verwenden möchten, sind für die Konfiguration vier {{si
 ### Vernetzung
 {: #sd_cloudfoundationoverview-networking}
 
-Ihre Instanz enthält die folgenden Netzkomponenten: 
+Ihre Instanz enthält die folgenden Netzkomponenten:
 * 10-Gbps-Uplinks für öffentliche und private Netze
 * 3 VLANs (virtuelle LANs): 1 öffentliches VLAN und 2 private VLANs
 * Sicheres VMware NSX Edge Services Gateway (ESG) für die Management-Services für abgehenden HTTPS-Managementdatenverkehr, das von IBM im Rahmen der Managementnetztypologie bereitgestellt wird. Über dieses ESG kommunizieren virtuelle IBM Management-Maschinen mit bestimmten externen IBM Managementkomponenten, die mit der Automatisierung zusammenhängen. Weitere Information finden Sie im Abschnitt [Stellt das NSX Edge für Management-Services ein Sicherheitsrisiko dar?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)
@@ -82,7 +85,7 @@ Ihre Instanz enthält die folgenden Netzkomponenten:
 ### Virtual Server-Instanzen
 {: #sd_cloudfoundationoverview-vsi}
 
-Ihre Instanz enthält die folgenden VSIs (Virtual Server-Instanzen): 
+Ihre Instanz enthält die folgenden VSIs (Virtual Server-Instanzen):
 * 1 VSI für Microsoft Active Directory (AD) und DNS-Services Die virtuelle Serverinstanz (VSI) ist für die Unterstützung von Konfigurationen mit mehreren Standorten erforderlich. Spezifikation dieser VSI: Windows 2012 R2 (8 GB RAM / 2 CPU-Kerne / 100 GB Plattenspeicher / Duale 1-Gbps-Uplinks für private Netze).
 * 1 VSI für IBM CloudBuilder (wird nach vollständiger Bereitstellung der Instanz beendet).
 * (Bei Bestellung von Veeam on {{site.data.keyword.cloud_notm}}) 1 VSI für den Veeam-Sicherungsservice wird bestellt.
@@ -90,7 +93,7 @@ Ihre Instanz enthält die folgenden VSIs (Virtual Server-Instanzen):
 ### Speicher
 {: #sd_cloudfoundationoverview-storage}
 
-Ihre Instanz kann abhängig von der ausgewählten {{site.data.keyword.baremetal_short}}-Konfiguration den folgenden Speicher enthalten: 
+Ihre Instanz kann abhängig von der ausgewählten {{site.data.keyword.baremetal_short}}-Konfiguration den folgenden Speicher enthalten:
 * 2 1-TB-SATA-Bootlaufwerke
 * 2 Solid-State-Cacheplatten mit 960 GB
 * 1 RAID-Plattencontroller

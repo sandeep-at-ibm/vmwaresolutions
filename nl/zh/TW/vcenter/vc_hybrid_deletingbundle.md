@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-14"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -17,7 +20,8 @@ lastupdated: "2019-02-14"
 
 若要從 vCenter Server 實例移除 Hybridity Bundle 授權，您必須在 VMware vSphere Web Client 中將 VMware NSX 及 VMware vSAN 租賃授權碼取代為「自帶授權 (BYOL)」碼。此外，您還必須開立支援問題單，以取消租賃授權的費用。
 
-降級授權可能會導致 vCenter Server 實例失敗。您可以選擇自行承擔降級授權的風險，但是請先考量降級時無法使用的功能。如需相關資訊，請參閱 [VMware 元件版本的比較圖表](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution-appendix)。{:important}
+降級授權可能會導致 vCenter Server 實例失敗。您可以選擇自行承擔降級授權的風險，但是請先考量降級時無法使用的功能。如需相關資訊，請參閱 [VMware 元件版本的比較圖表](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution-appendix)。
+{:important}
 
 ## 從多站台環境移除 Hybridity Bundle 之前的重要考量
 {: #vc_hybrid_deletingbundle-considerations}
@@ -56,7 +60,8 @@ lastupdated: "2019-02-14"
    5. 選取新的授權碼。
    6. 寫下所套用授權及所取代授權的完整授權碼。
 
-   您必須提供授權詳細資料，以供稍後在此程序中使用。{:important}
+   您必須提供授權詳細資料，以供稍後在此程序中使用。
+   {:important}
    7. 按一下**確定**，以指派授權。
 5. 完成下列步驟，以安裝 VMware vSAN BYOL：
    1. 按一下**叢集**標籤。
@@ -67,7 +72,8 @@ lastupdated: "2019-02-14"
     4. 選取新的授權碼。
     5. 寫下叢集名稱及所套用授權及所取代授權的完整授權碼。
 
-您必須提供授權詳細資料，以供稍後在此程序中使用。{:important}
+    您必須提供授權詳細資料，以供稍後在此程序中使用。
+    {:important}
     6. 按一下**確定**，以指派授權。
 6. （選用）完成下列步驟，以安裝 VMware vCenter Server BYOL：
    1. 按一下 **vCenter Server 系統**標籤。
@@ -77,7 +83,8 @@ lastupdated: "2019-02-14"
    5. 選取新的授權碼。
    6. 寫下所套用授權及所取代授權的完整授權碼。
 
-   您必須提供授權詳細資料，以供稍後在此程序中使用。{:important}
+   您必須提供授權詳細資料，以供稍後在此程序中使用。
+   {:important}
 
    7. 按一下**確定**，以指派授權。
 7. （選用）完成下列步驟，以安裝 VMware vSphere Enterprise Plus BYOL：
@@ -89,7 +96,8 @@ lastupdated: "2019-02-14"
     4. 選取新的授權碼。
     5. 寫下叢集名稱及所套用授權及所取代授權的完整授權碼。
 
-    您必須提供授權詳細資料，以供稍後在此程序中使用。如果所有叢集的授權碼不盡相同，則請務必寫下與每個授權碼相關聯的叢集名稱。{:important}
+    您必須提供授權詳細資料，以供稍後在此程序中使用。如果所有叢集的授權碼不盡相同，則請務必寫下與每個授權碼相關聯的叢集名稱。
+    {:important}
 
     6. 按一下**確定**，以指派授權。
 8. 移除租賃授權。
@@ -102,7 +110,8 @@ lastupdated: "2019-02-14"
   * 您在此程序中安裝的 BYOL 授權碼清單。如果適用，請提供具有 vSphere 及 vSAN 叢集授權碼的實例及叢集名稱。
   * 您在此程序中移除的租賃授權碼清單。如果適用，請提供具有 vSphere 及 vSAN 叢集授權碼的實例及叢集名稱。
 
-  「IBM 支援及作業」團隊會存取 {{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) 帳戶的 vCenter 管理層，以驗證已先移除租賃授權，然後才取消 Hybridity Bundle 租賃授權費用。{:note}
+  「IBM 支援及作業」團隊會存取 {{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) 帳戶的 vCenter 管理層，以驗證已先移除租賃授權，然後才取消 Hybridity Bundle 租賃授權費用。
+  {:note}
 
 ## 相關鏈結
 {: #vc_hybrid_deletingbundle-related}

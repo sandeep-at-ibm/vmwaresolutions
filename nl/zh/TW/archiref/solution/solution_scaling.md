@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -31,10 +34,9 @@ lastupdated: "2019-02-15"
    * 新的 SSO 站台名稱
    * 關聯至主要網域根的新 DNS 站台/子網域
    * 次要與主要站台 AD VM 之間的 DNS 及 AD 抄寫設定
-   * 已部署並配置成與主要站台 PSC 同步化的 PSC
    * 「加強型鏈結模式」設為主要站台 vCenter 的 vCenter 設定
 
-此外，次要站台中的 NSX Manager 可能設定為主要站台上 NSX Manager 的次要 NSX Manager。
+此外，次要站台中的 NSX Manager 可能設定為主要站台上 NSX Manager 的次要 NSX Manager。這是您需要完成的手動處理程序。
 
 ## 新增叢集
 {: #solution_scaling-clusters}
@@ -47,7 +49,7 @@ lastupdated: "2019-02-15"
 * 根據其他特徵（例如，Microsoft SQL 資料庫叢集）來隔離工作負載。
 * 在高可用性拓蹼中部署應用程式。
 
-將起始叢集轉換為僅限管理叢集時，移轉現有工作負載會涉及使用者所要採取的手動步驟。這可能涉及將資料儲存庫重新連接至新的叢集，或是交替地儲存空間移轉。如果新叢集位於不同的 {{site.data.keyword.cloud_notm}} Pod，或獲指派不同的 VLAN ID，則可能需要變更工作負載的 IP 位址。
+將起始叢集轉換為僅限管理叢集時，移轉現有工作負載會涉及使用者所要採取的手動步驟。這可能涉及將資料儲存庫重新連接至新的叢集，或是交替地儲存空間移轉。如果新叢集位於不同的 {{site.data.keyword.cloud_notm}} Pod，或如果叢集指派給不同的 VLAN ID，則可能需要變更工作負載的 IP 位址。
 {:note}
 
 ## 將 ESXi 主機新增至現有叢集

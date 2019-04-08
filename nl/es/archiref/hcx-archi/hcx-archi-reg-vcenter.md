@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-21"
+
+subcollection: vmwaresolutions
+
 
 ---
 # Registro de HCX Manager con vCenter
@@ -30,7 +33,7 @@ El dispositivo virtual Hybrid Cloud Services debe estar encendido para que se pu
 3. Configure el servicio de búsqueda.
   1. Pulse el separador **Gestionar**.
   2. Pulse el botón **Editar** en la parte derecha del recuadro de texto **URL de servicio de búsqueda**.
-  3. Especifique el punto final del servicio de búsqueda en el formato siguiente:
+  3. Especifique el punto final de servicio de red de búsqueda en el formato siguiente:
     * Para vCenter Server 5.5u3 `https://ssoip:/7444/lookupservice/sdk`
     * Para vCenter Server 6.0u2 `https://ssoip/lookupservice/sdk`
   4. Pulse **Aceptar**. No reinicie cuando aparezca un mensaje para reiniciar el motor web.

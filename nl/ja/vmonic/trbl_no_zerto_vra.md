@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-14"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # 新しく作成した ESXi サーバーに Zerto Virtual Replication Appliance が表示されない

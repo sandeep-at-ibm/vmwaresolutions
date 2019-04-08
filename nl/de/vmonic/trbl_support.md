@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-25"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -20,7 +23,7 @@ Wenn Sie bei der Verwendung von {{site.data.keyword.vmwaresolutions_full}} Unter
 ## Vorgehensweise zum Einreichen eines Support-Tickets über die IBM Cloud for VMware Solutions-Konsole
 {: #trbl_support-procedure}
 
-1. Rufen Sie https://console.cloud.ibm.com/infrastructure/vmware-solutions/console auf.
+1. Rufen Sie "https://cloud.ibm.com/infrastructure/vmware-solutions/console" auf.
 2. Melden Sie sich mit Ihrem **IBMid**-Konto bei der Konsole an.
 3. Klicken Sie in der Menüleiste auf **Support**.
 4. Klicken Sie auf der Seite **Unterstützung anfordern** auf **Erstellen Sie einen Fall**.

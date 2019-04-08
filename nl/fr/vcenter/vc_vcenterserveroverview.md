@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-11"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -128,7 +131,8 @@ L'option NFS offre un stockage de niveau fichier partagé personnalisé pour les
 * Performances : 0.25, 2, 4 ou 10 IOPS/Go.
 * Configuration individuelle des partages de fichiers.
 
-  Le niveau de performance 10 IOPS/Go est limité à une capacité maximale de 4 To par partage de fichiers. {:note}
+  Le niveau de performance 10 IOPS/Go est limité à une capacité maximale de 4 To par partage de fichiers.
+  {:note}
 
 Si vous sélectionnez l'option NFS, un partage de fichiers de 2 To et 4 IOPS/Go pour les composants de gestion est commandé.
 

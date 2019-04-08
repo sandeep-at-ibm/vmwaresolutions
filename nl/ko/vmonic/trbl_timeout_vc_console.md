@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -28,10 +31,10 @@ vSphere Web Client로 연결을 시도할 때 다음 제한시간 초과 오류�
    1. 브라우저용 Adobe Flash Player 플러그인을 설치하십시오.   
    2. {{site.data.keyword.slportal_full}}에서 VPN 비밀번호를 작성하십시오.    
    3. {{site.data.keyword.cloud_notm}} 인프라 VPN 인증 정보를 사용하여 [데이터 센터 VPN에 로그인](/docs/infrastructure/iaas-vpn?topic=VPN-gettingstarted-with-virtual-private-networking#login-to-the-vpn)하십시오.    
-   4. 로컬 컴퓨터에서 IP 주소 및 PSC(Platform Services Controller)의 호스트 이름 맵핑을 호스트 파일에 추가하십시오. 다음 형식을 사용하십시오. 
+   4. 로컬 컴퓨터에서 IP 주소 및 PSC(Platform Services Controller)의 호스트 이름 맵핑을 `hosts` 파일에 추가하십시오. 다음 형식을 사용하십시오.
 
       ```javascript
-      IPAddress              HostName
+      IP_Address              Host_Name
       ```
 
 2. 다음 단계에서 필요하므로 표시되는 IP 주소를 기록해 놓으십시오.

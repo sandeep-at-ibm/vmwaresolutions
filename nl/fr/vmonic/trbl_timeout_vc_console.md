@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -27,11 +30,11 @@ Procédez comme suit pour identifier et résoudre le problème.
    commodité, ces opérations sont également répertoriées ci-dessous :   
    1. Installez le plug-in Adobe Flash Player pour votre navigateur.   
    2. Créez un mot de passe de réseau privé virtuel à partir du portail {{site.data.keyword.slportal_full}}.    
-   3. [Connectez-vous au réseau privé virtuel du centre de données](/docs/infrastructure/iaas-vpn?topic=VPN-gettingstarted-with-virtual-private-networking#login-to-the-vpn) à l'aide des données d'identification de réseau privé virtuel de l'infrastructure {{site.data.keyword.cloud_notm}}.     
-   4. Ajoutez le mappage d'adresse IP et de nom d'hôte du contrôleur PSC (Platform Services Controller) dans le fichier hosts à partir de votre ordinateur local. Utilisez le format suivant :
+   3. [Connectez-vous au réseau privé virtuel du centre de données](/docs/infrastructure/iaas-vpn?topic=VPN-gettingstarted-with-virtual-private-networking#login-to-the-vpn) à l'aide des données d'identification de réseau privé virtuel de l'infrastructure {{site.data.keyword.cloud_notm}}.    
+   4. Ajoutez le mappage d'adresse IP et de nom d'hôte du contrôleur PSC (Platform Services Controller) dans le fichier `hosts` à partir de votre ordinateur local. Utilisez le format suivant :
 
       ```javascript
-      IPAddress              HostName
+      IP_Address              Host_Name
       ```
 
 2. Notez l'adresse IP affichée car vous en aurez besoin dans l'une des prochaines étapes.

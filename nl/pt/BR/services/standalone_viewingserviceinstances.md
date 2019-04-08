@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-04"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Visualizando instâncias do VMware HCX on IBM Cloud no local
@@ -16,7 +19,7 @@ Use este procedimento para visualizar as instâncias do HCX on {{site.data.keywo
 ## Procedimento para visualizar as instâncias do VMware HCX on IBM Cloud no local
 {: #standalone_viewingserviceinstances-procedure}
 
-Clique em **Recursos** na área de janela de navegação à esquerda e role para baixo até a tabela **Instâncias do HCX no local** para visualizar informações sobre as instâncias que você pediu:
+Clique em **Recursos** na área de janela de navegação esquerda e role para baixo até a tabela **Instâncias do HCX no local** para visualizar informações sobre as instâncias que você pediu:
 
 Tabela 1. Itens de instâncias do HCX on {{site.data.keyword.cloud_notm}} no local
 
@@ -25,14 +28,14 @@ Tabela 1. Itens de instâncias do HCX on {{site.data.keyword.cloud_notm}} no loc
 | Nome | O nome da instância. |
 | Chave de ativação | A chave de ativação da instância do HCX on {{site.data.keyword.cloud_notm}} no local. |  
 | Horário de criação | A data e hora em que a instância foi criada. |
-| Status | O status da instância. |  
+| Barra de Status | O status da instância. |  
 | Ações | Clique no ícone **Excluir** para excluir a instância. |
 
 O status da instância pode ter uma gama de opções.
 
 Tabela 2. Descrições de status de instâncias do HCX on {{site.data.keyword.cloud_notm}} no local
 
-| Status        | Descrição       |
+| Barra de Status        | Descrição       |
 |:------------- |:------------- |
 | Modificando | A instância está sendo criada. |
 | Instalado | A instância está pronta para uso. |

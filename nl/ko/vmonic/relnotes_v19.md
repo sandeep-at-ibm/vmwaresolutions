@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2017-10-13"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # V1.9 릴리스 정보

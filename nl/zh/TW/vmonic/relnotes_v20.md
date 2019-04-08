@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2017-11-20"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -104,7 +107,8 @@ lastupdated: "2017-11-20"
 * 小型（雙重 Intel Xeon E5-2650 v4 / 總計 24 核心，2.2 GHz / 128 GB RAM / 12 個磁碟）
 * 大型（雙重 Intel Xeon E5-2690 v4 / 總計 28 核心，2.6 GHz / 512 GB RAM / 12 個磁碟）
 
-機箱有 12 個磁碟的空間。並非所有插槽都已填滿。**小型**配置提供兩個 1.9 TB Micron 5100 MAX 磁碟機，**大型**配置提供四個 3.8 TB Micron 5100 PRO 磁碟機。{:note}
+機箱有 12 個磁碟的空間。並非所有插槽都已填滿。**小型**配置提供兩個 1.9 TB Micron 5100 MAX 磁碟機，**大型**配置提供四個 3.8 TB Micron 5100 PRO 磁碟機。
+{:note}
 
 ## VMware vCenter Server 實例的更新
 {: #relnotes_v20-vcs}
@@ -116,7 +120,8 @@ lastupdated: "2017-11-20"
 * VMware vSAN 6.6.1
 * VMware NSX for vSphere 6.3.4
 
-vCenter Server 自訂的訂單不管有沒有 VMware vSAN 元件，一律會包含一部具有 12 個磁碟的機箱伺服器。此伺服器在價格預估 PDF 中，會使得非 vSAN 訂單案例的 {{site.data.keyword.baremetal_short}} 成本略為提高。{:note}
+vCenter Server 自訂的訂單不管有沒有 VMware vSAN 元件，一律會包含一部具有 12 個磁碟的機箱伺服器。此伺服器在價格預估 PDF 中，會使得非 vSAN 訂單案例的 {{site.data.keyword.baremetal_short}} 成本略為提高。
+{:note}
 
 如需元件的相關資訊，請參閱 [vCenter Server 概觀](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)。
 

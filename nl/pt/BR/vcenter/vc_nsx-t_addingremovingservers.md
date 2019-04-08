@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-06"
+lastupdated: "2019-03-18"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -19,10 +22,10 @@ lastupdated: "2019-03-06"
 
 é possível incluir novos servidores ESXi em um cluster enquanto ele está no modo de manutenção. Além disso, é possível incluir ou remover simultaneamente servidores do ESXi em múltiplos clusters. As operações simultâneas a seguir estão disponíveis:
 
-* Inclua hosts no **cluster1** e inclua hosts em clusters adicionais.
-* Remova hosts do **cluster1** e remova hosts para clusters adicionais.
-* Inclua hosts no **cluster1** e remova hosts para clusters adicionais.
-* Remova hosts do **cluster1** e inclua hosts em clusters adicionais.
+* Incluir hosts em um cluster e incluir hosts em clusters adicionais.
+* Remover hosts de um cluster e remover hosts de clusters adicionais.
+* Incluir hosts em um cluster e remover hosts de clusters adicionais.
+* Remover hosts de um cluster e incluir hosts em clusters adicionais.https://github.ibm.com/tornado/tracker/issues/14183
 
 É possível incluir ou remover compartilhamentos de armazenamento NFS para ou de um cluster NFS ou vSAN vCenter Server com NSX-T existente.
 {:note}

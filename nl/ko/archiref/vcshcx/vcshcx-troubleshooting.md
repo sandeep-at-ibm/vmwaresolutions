@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-04"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # HCX 문제점 해결
@@ -50,7 +53,7 @@ HCX Manager(클라이언트와 클라우드)에 적용된 업데이트와 수정
 4. `ccli` 쉘에서 `list` 명령을 실행하여 HCX 관리자에 등록된 Fleet 컴포넌트를 나열하십시오.
 5. Fleet 컴포넌트용으로 나열된 ID를 입력하여 `ccli`의 Fleet ID를 지정하십시오. 예를 들어 `go 8`입니다.
 6. SSH를 사용하여 원하는 Fleet 컴포넌트에 연결하려면 `debug remoteaccess enable` 명령을 실행합니다.
-7. `ccli`를 종료하고 SSH를 사용하여 SSH 사용 Fleet 컴포넌트의 IP 주소에 연결합니다. 
+7. `ccli`를 종료하고 SSH를 사용하여 SSH 사용 Fleet 컴포넌트의 IP 주소에 연결합니다.
 9. 계속하여 문제를 해결합니다.
 10. `ccli`로 돌아와서 컴포넌트의 `ssh` 서비스를 사용 안함으로 설정합니다.
 11. 필요한 경우 `hc` ccli 명령을 사용하여 컴포넌트의 상태 검사를 실행합니다.

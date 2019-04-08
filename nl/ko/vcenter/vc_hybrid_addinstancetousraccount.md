@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-04"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # IBM Cloud 계정으로 V2.5 이전 vCenter Server with Hybridity Bundle 인스턴스 마이그레이션

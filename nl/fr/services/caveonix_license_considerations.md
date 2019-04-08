@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-11"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -15,7 +18,7 @@ lastupdated: "2019-03-11"
 # Remarques relatives aux licences Caveonix RiskForesight
 {: #caveonix_license_considerations}
 
-Passez en revue les remarques suivantes avant de supprimer les licences Caveonix RiskForesight que vous avez commandées pour une utilisation autonome. 
+Passez en revue les remarques suivantes avant de supprimer les licences Caveonix RiskForesight que vous avez commandées pour une utilisation autonome.
 
 ## Remarques relatives à la suppression de licences Caveonix RiskForesight
 {: #caveonix_license_considerations-remove}

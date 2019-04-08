@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -19,7 +22,7 @@ Este paso se completa inicialmente mediante la automatización de IC4VS, que uti
 
 La configuración del proveedor de servicios tiene ocho subpasos:
 -	Paso 1: Detalle de organización - Añada los detalles de la organización padre para su proveedor de servicios de nube. Esta organización puede tener múltiples ubicaciones físicas y múltiples centros de datos. Las organizaciones para sus arrendatarios y las suborganizaciones para su proveedor de servicios se añaden más tarde.
--	Paso 2: Ubicaciones – Correlacione la infraestructura en las "Ubicaciones" de RiskForesight, ya que los activos se agrupan por ubicación, proveedor de nube y repositorio de activos.
+-	Paso 2: Ubicaciones – Correlacione la infraestructura en las "Ubicaciones" de RiskForesight. Los activos se agrupan por ubicación, proveedor de nube y repositorio de activos.
 -	Paso 3: Entornos - Opcional. Los entornos son una forma de agrupar activos. Por ejemplo, DevOps, Sitio de recuperación tras desastre, Producción.
 -	Paso 4: Proveedor de nube - Añada los “proveedores” que proporcionan la infraestructura en la que se ejecuta su aplicación.
 -	Paso 5: Repositorios de activos - Un repositorio de activos asocia un conjunto de activos con una organización, un proveedor de nube y una ubicación.

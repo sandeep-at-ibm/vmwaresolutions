@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -75,6 +78,7 @@ Skate Advisor の中核となるデータ・エレメントはトリックです
 チャットボットは、以下の方法でシステムと対話します。
 
 図 2. チャットボットへの標準的な照会
+</br>
 ![チャットボットへの標準的な照会](vcscar-query.svg)
 
 表 2. チャットボットの対話
@@ -132,6 +136,7 @@ Skate Advisor サービスは、要求に応えるための一連の API サー�
 Watson Discovery は、機械学習モデルを使用してトレーニングする必要があります。機械学習モデルは、対象分野の専門家が Watson Knowledge Studio を使用して繰り返し作成します。
 
 図 3. Discovery Service のトレーニング
+</br>
 ![Discovery Service のトレーニング](vcscar-training.svg)
 
 Skate Advisor のモデルは、モデルを作成するためのルール・ベースのトレーニングと辞書ベースのトレーニングを組み合わせて、エンティティー・タイプ間の関係で構成されています。 このモデルにより、Discovery Service は、トレーニング・セットとして使用した記事やビデオの説明から取り込まれたトリックを認識して分類することができます。

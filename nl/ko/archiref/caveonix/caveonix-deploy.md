@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-13"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -78,7 +81,7 @@ RiskForesight 설치는 다음과 같은 상위 레벨 단계로 구성됩니다
 
 -	스캔 데이터는 규제 준수 관리에서 사용합니다.
 -	로그 데이터는 사후조사 관리에서 사용합니다.
--	정책 및 플로우 데이터는 위험 관리에서 사용하며 플로우 데이터는 NSX 관리자에서만 사용할 수 있습니다.
+-	정책 및 플로우 데이터는 위험 관리에서 사용하며 플로우 데이터는 NSX Manager에서만 사용할 수 있습니다.
 
 데이터 스토리지에는 다음과 같은 세 개의 티어가 있습니다.
 
@@ -102,10 +105,10 @@ RiskForesight 설치는 다음과 같은 상위 레벨 단계로 구성됩니다
 |VM 총계	|1	|4	|48 |
 
 **참고:**
-{{site.data.keyword.cloud_notm}}의 Caveonix RiskForesight 서비스를 제거하면 {{site.data.keyword.vmwaresolutions_short}} 자동화는 배치되어 있는 단일 "일체형" Caveonix VM 및 이를 위해 주문된 데디케이티드 사설 서브넷만 삭제합니다. 따라서 다음에 유의하십시오. 
-* Caveonix VM을 여러 VM으로 확장한 경우, 이러한 추가 VM은 제거되지 않습니다.  
+{{site.data.keyword.cloud_notm}}의 Caveonix RiskForesight 서비스를 제거하면 {{site.data.keyword.vmwaresolutions_short}} 자동화는 배치되어 있는 단일 "일체형" Caveonix VM 및 이를 위해 주문된 데디케이티드 사설 서브넷만 삭제합니다. 따라서 다음에 유의하십시오.
+* Caveonix VM을 여러 VM으로 확장한 경우, 이러한 추가 VM은 제거되지 않습니다. 
 * 추가 VM에서 데디케이티드 사설 서브넷의 IP 주소를 사용한 경우에는 기능을 계속 수행하도록 이러한 VM에 새 IP 주소를 지정해야 합니다. 
-* {{site.data.keyword.cloud_notm}}의 Caveonix RiskForesight 서비스가 설치되어 있는 vCenter Server 인스턴스 A를 삭제할 경우 vCenter Server 인스턴스 B의 서비스에 대해 주문된 데디케이티드 사설 서브넷의 IP 주소를 사용했다면 vCenter Server  인스턴스 A 삭제 시에 데디케이티드 사설 서브넷이 취소됩니다. 
+* {{site.data.keyword.cloud_notm}}의 Caveonix RiskForesight 서비스가 설치되어 있는 vCenter Server 인스턴스 A를 삭제할 경우 vCenter Server 인스턴스 B의 서비스에 대해 주문된 데디케이티드 사설 서브넷의 IP 주소를 사용했다면 vCenter Server  인스턴스 A 삭제 시에 데디케이티드 사설 서브넷이 취소됩니다.
 
 ## 관련 링크
 {: #caveonix-deploy-related}

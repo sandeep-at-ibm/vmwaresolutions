@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-14"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Beim Hinzufügen eines HA-Clusters festgestelltes Konfigurationsproblem für die vSphere-Konsole

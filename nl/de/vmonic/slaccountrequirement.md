@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-26"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -50,7 +53,7 @@ Tabelle 1. Erforderliche Berechtigungen für das {{site.data.keyword.cloud_notm}
 ## VRF mit aktivierten Serviceendpunkten
 {: #slaccountrequirement-vrf-se}
 
-Ihr {{site.data.keyword.cloud_notm}}-Infrastrukturkonto muss ein VRF-Konto (Virtual Routing and Forwarding) mit aktivierten Serviceendpunkten sein. Wenn Ihr Konto kein VRF-Konto ist, müssen Sie es in ein VRF-Konto konvertieren. Darüber hinaus müssen Sie Ihr VRF-Konto für die Verwendung von Serviceendpunkten aktivieren. 
+Ihr {{site.data.keyword.cloud_notm}}-Infrastrukturkonto muss ein VRF-Konto (Virtual Routing and Forwarding) mit aktivierten Serviceendpunkten sein. Wenn Ihr Konto kein VRF-Konto ist, müssen Sie es in ein VRF-Konto konvertieren. Darüber hinaus müssen Sie Ihr VRF-Konto für die Verwendung von Serviceendpunkten aktivieren.
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [Übersicht über VRF on IBM Cloud](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)

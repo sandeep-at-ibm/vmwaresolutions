@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-08"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # V2.8 のリリース・ノート
@@ -75,7 +78,7 @@ V2.8 リリース以降、vCenter Server は、組み込み PSC (Platform Servic
 
 このリリースでは、以下のアップグレードと機能改善が適用されます。
 
-* vSphere ESXi 6.5 Update P3 (ビルド 6.5.0-10884925)
+* vSphere ESXi 6.5 Update EP11 (ビルド 6.5.0-10719125)
 * vCenter Server 6.5 U2d (ビルド 6.5.0-10964411)
 * Platform Services Controller 6.5 U2d (ビルド 6.5.0-10964411)
 
@@ -108,9 +111,10 @@ V2.8 リリース以降、このサービスは、VMware インスタンスと�
 ## リファレンス・アーキテクチャー資料
 {: #relnotes_v28-ref}
 
-(2019 年 2 月 8 日更新) 以下の技術資料が、ユーザー資料の『*リファレンス*』セクションに用意されています。
+(2019 年 2 月 8 日更新) 以下の技術資料がユーザー資料の『*リファレンス*』セクションで新しく追加されているか更新されています。
 
-* [{{site.data.keyword.vmwaresolutions_short}} (NSX-T アーキテクチャー)](/docs/services/vmwaresolutions/archiref/vcsarch?topic=vmware-solutions-vcsarch-overview)
+* [{{site.data.keyword.vmwaresolutions_short}} アーキテクチャー (NSX-V、NSX-T)
+](/docs/services/vmwaresolutions/services?topic=vmware-solutions-solution_overview#solution_overview)
 * [Caveonix RiskForesight リファレンス・アーキテクチャー](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-on-vcs)
 * [HCX on {{site.data.keyword.cloud_notm}} のデプロイメントと操作のガイド](/docs/services/vmwaresolutions/archiref/vcshcx?topic=vmware-solutions-vcshcx-intro)
 

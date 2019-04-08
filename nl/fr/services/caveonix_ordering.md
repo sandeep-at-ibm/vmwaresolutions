@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-11"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -15,7 +18,7 @@ lastupdated: "2019-03-11"
 # Commande de Caveonix RiskForesight on IBM Cloud
 {: #caveonix_ordering}
 
-Vous pouvez commander le service Caveonix RiskForesight on {{site.data.keyword.cloud}} lors de la commande d'une nouvelle instance VMware vCenter Server avec le service déjà inclus ou vous pouvez ajouter ce service à votre instance existante. 
+Vous pouvez commander le service Caveonix RiskForesight on {{site.data.keyword.cloud}} lors de la commande d'une nouvelle instance VMware vCenter Server avec le service déjà inclus ou vous pouvez ajouter ce service à votre instance existante.
 
 ## Commande de Caveonix RiskForesight on IBM Cloud pour une nouvelle instance
 {: #caveonix_ordering-new}
@@ -35,7 +38,7 @@ Lorsque vous commandez le service Caveonix RiskForesight on {{site.data.keyword.
 ### Nom de licence
 {: #caveonix_ordering-config-license-name}
 
-Indiquez un nom unique pour la licence. 
+Indiquez un nom unique pour la licence.
 
 ### Remarques sur la licence
 {: #caveonix_ordering-config-license-notes}

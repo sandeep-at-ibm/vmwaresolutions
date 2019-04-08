@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-12"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # vCenter Server with Hybridity Bundle 인스턴스에 대한 규제 준수 정보
@@ -13,7 +16,7 @@ lastupdated: "2019-03-12"
 
 VMware vCenter Server with Hybridity Bundle 인스턴스에 대한 규제 준수 세부사항은 다음 정보를 검토하십시오.
 
-## vCenter Server IBM Cloud with Hybridity Bundle에 대한 고객 대 IBM 책임 
+## vCenter Server IBM Cloud with Hybridity Bundle에 대한 고객 대 IBM 책임
 {: #vc_hybrid_compl_info-responsibility}
 
 다음 다이어그램은 규제 준수 활동에 대한 고객(사용자) 및 IBM 책임의 세부사항을 제공합니다.

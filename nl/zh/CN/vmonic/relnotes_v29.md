@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-14"
+lastupdated: "2019-03-25"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -64,14 +67,14 @@ vSphere Enterprise Plus 6.7u1 仅可用于 Broadwell 和 Skylake {{site.data.key
 有关更多信息，请参阅：
 
 * [IBM Cloud 上的虚拟路由和转发 (VRF) 概述](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-* [使用 IBM Cloud CLI 支持帐户使用服务端点](/docs/services/service-endpoint?topic=services/service-endpoint-cs_cli_install_steps)
+* [使用 IBM Cloud CLI 支持帐户使用服务端点](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
 
 ## 支持应用程序编程接口
 {: #relnotes_v29-api}
 
 应用程序编程接口 (API) 现在可用于部署实例，删除实例以及添加和除去 ESXi 服务器和集群。
 
-现在，用户文档的*参考*部分中还提供了 REST API 文档。有关更多信息，请参阅 [{{site.data.keyword.vmwaresolutions_short}} API](https://console.bluemix.net/apidocs/vmware-solutions)。
+现在，用户文档的*参考*部分中还提供了 REST API 文档。有关更多信息，请参阅 [{{site.data.keyword.vmwaresolutions_short}} API](https://cloud.ibm.com/apidocs/vmware-solutions)。
 
 ## 对 VMware vCenter Server 实例的更新
 {: #relnotes_v29-vcs}
@@ -88,6 +91,11 @@ vSphere Enterprise Plus 6.7u1 仅可用于 Broadwell 和 Skylake {{site.data.key
 * NSX-T for vSphere 2.4
 
 有关选择 VMware 组件的更多信息，请参阅 [vCenter Server 材料清单](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)。
+
+### 对数据中心的更新
+{: #relnotes_v29-dc}
+
+以下新的数据中心可用于部署：**FRA-05 - 法兰克福**和 **LON-05 - 伦敦**。 有关更多信息，请参阅[针对 vCenter Server 实例的需求和规划](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)。
 
 ### ESXi 服务器增强功能
 {: #relnotes_v29-vcs-esxi}

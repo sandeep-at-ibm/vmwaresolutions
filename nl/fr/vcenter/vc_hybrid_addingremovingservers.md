@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-06"
+lastupdated: "2019-03-18"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -19,10 +22,10 @@ Vous pouvez accroître ou réduire la capacité de votre instance VMware vCenter
 
 A compter de l'édition V2.9, vous pouvez ajouter de nouveaux serveurs ESXi à un cluster tandis que celui-ci est en mode maintenance. De plus, vous pouvez ajouter ou retirer simultanément des serveurs ESXi sur plusieurs clusters. Les opérations simultanées suivantes sont disponibles :
 
-* Ajout d'hôtes à **cluster1** et ajout d'hôtes à d'autres clusters.
-* Retrait d'hôtes de **cluster1** et retrait d'hôtes d'autres clusters.
-* Ajout d'hôtes à **cluster1** et retrait d'hôtes d'autres clusters.
-* Retrait d'hôtes de **cluster1** et ajout d'hôtes à d'autres clusters.
+* Ajout d'hôtes à un cluster et ajout d'hôtes à d'autres clusters.
+* Retrait d'hôtes d'un cluster et retrait d'hôtes d'autres clusters.
+* Ajout d'hôtes à un cluster et retrait d'hôtes d'autres clusters.
+* Retrait d'hôtes d'un cluster et ajout d'hôtes à d'autres clusters.
 
 Etant donné que votre cluster initial dispose d'un stockage vSAN, l'ajout d'un ou de plusieurs serveurs ESXi après le déploiement peut permettre d'augmenter la capacité de stockage du cluster.
 
@@ -42,7 +45,9 @@ Etant donné que votre cluster initial dispose d'un stockage vSAN, l'ajout d'un 
 3. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche.
 4. Dans le tableau **CLUSTERS**, cliquez sur le cluster auquel vous désirez ajouter des serveurs ESXi.
 5. Dans le tableau **Serveurs ESXi**, cliquez sur **Ajouter**.
-6. Dans la fenêtre **Ajouter un serveur**, indiquez le nombre de serveurs que vous voulez ajouter, cliquez sur le lien correspondant au prix pour passer en revue le coût estimé, puis cliquez sur **Ajouter**.
+6. Dans la fenêtre **Ajouter un serveur**, entrez le nombre de serveurs que vous voulez ajouter.
+7. Le cas échéant, cochez la case permettant d'ajouter des serveurs alors que le mode maintenance est actif.
+8. Passez en revue le coût estimé et cliquez sur **Ajouter**.
 
 ### Résultats après l'ajout de serveurs ESXi
 {: #vc_hybrid_addingremovingservers-adding-results}
@@ -50,6 +55,9 @@ Etant donné que votre cluster initial dispose d'un stockage vSAN, l'ajout d'un 
 1. Un bref délai peut être observé sur la console entre le passage du statut **Prêt à l'emploi** au statut **Modification en cours**. Laissez l'opération s'exécuter complètement avant d'apporter d'autres modifications à l'instance.
 2. Un courrier électronique vous avise que votre demande d'ajout de serveurs ESXi est en cours de traitement. Sur la console, le statut du cluster qui est associé aux serveurs ESXi passe à **Modification en cours**.
 3. Si vous ne voyez pas les nouveaux serveurs ESXi ajoutés dans la liste du cluster, consultez vos courriers électroniques ou les notifications de la console pour obtenir plus de détails sur la cause de l'échec.
+
+Si vous ajoutez des serveurs ESXi alors que le mode maintenance est actif, les machines virtuelles ne sont pas migrées vers les nouveaux serveurs tant que le mode maintenance n'est pas désactivé pour le cluster.   
+{:important}
 
 ## Retrait de serveurs ESXi sur des instances vCenter Server with Hybridity Bundle
 {: #vc_hybrid_addingremovingservers-removing}

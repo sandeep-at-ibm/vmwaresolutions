@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -14,9 +17,22 @@ lastupdated: "2019-02-15"
 ## VMware NSX 版本比较
 {: #solution-appendix-nsx-editions}
 
-表 1 列出了解决方案支持的 VMware NSX 的 **Base**、**Advanced** 和 **Enterprise** 版本的可用功能。
+在此设计中，有多个组件需要许可证。以下信息说明了环境正常运行所需的最低许可证。
 
-表 1. VMware NSX 版本比较图表
+表 1. 许可证需求
+
+组件|用途|许可证
+----------|---------|-------------
+**vSphere**|计算虚拟化|vSphere 6.7 Enterprise Plus
+**vCenter Server**
+   |基础架构管理|vCenter Server 6.7 Standard
+**NSX**|网络虚拟化|NSX Base for Service Providers 6.4
+**vSAN**|存储虚拟化|vSAN 6.6 Advanced
+
+NSX Base for Service Providers 版本仅可通过 VMware vCloud Air Network (vCAN) 供服务提供者使用。此版本中的功能可以在下表中找到。
+{:note}
+
+表 2. VMware NSX 版本比较图表
 
 |NSX 功能| Base | Advanced | Enterprise |
 |-----------------------------------------------|------|----------|------------|
@@ -45,9 +61,9 @@ lastupdated: "2019-02-15"
 ## VMware vSAN 版本比较
 {: #solution-appendix-vsan-editions}
 
-表 2 列出了解决方案支持的 VMware vSAN 的 **Advanced** 和 **Enterprise** 版本的可用功能。
+下表列出了解决方案支持的 VMware vSAN 的 **Advanced** 和 **Enterprise** 版本的可用功能。
 
-表 2. VMware vSAN 版本比较图表
+表 3. VMware vSAN 版本比较图表
 
 |vSAN 功能| Advanced | Enterprise |
 |-------------------------------------------------|----------|------------|

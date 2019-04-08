@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -45,7 +48,7 @@ La interfaz de cliente VUM proporciona dos vistas principales:
 *	Vista de administración
 *	Vista de conformidad
 
-## Vista de administración
+##	Vista de administración
 {: #vum-overview-admin-view}
 
 Se accede a la vista de administración navegando a **Inicio** > **Gestor de actualizaciones** y seleccionando las direcciones IP de la instancia de Update Manager. En la vista Administración, puede realizar las tareas siguientes:
@@ -56,7 +59,7 @@ Se accede a la vista de administración navegando a **Inicio** > **Gestor de act
 *	Revisar y comprobar notificaciones
 *	Importar imágenes ESXi
 
-## Vista de conformidad
+##	Vista de conformidad
 {: #vum-overview-compliance-view}
 
 Se accede a la vista de conformidad de un objeto de inventario seleccionado desde **Hosts y clústeres** o **Máquinas y plantillas** y pulsando el **separador Update Manager**. En la vista Conformidad de Update Manager, puede realizar las tareas siguientes:
@@ -69,5 +72,5 @@ Se accede a la vista de conformidad de un objeto de inventario seleccionado desd
 ## Enlaces relacionados
 {: #vum-overview-related}
 
-* [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demostraciones)

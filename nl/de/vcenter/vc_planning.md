@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-03-20"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -35,9 +38,11 @@ Tabelle 1. Verfügbare {{site.data.keyword.CloudDataCents_notm}} für vCenter Se
 | DAL13 | Dallas | NA Süd | Skylake, SAP-zertifiziert, Broadwell |
 | FRA02 | Frankfurt | Europa | Skylake, SAP-zertifiziert, Broadwell |
 | FRA04 | Frankfurt | Europa | Skylake, SAP-zertifiziert, Broadwell |
+| FRA05 | Frankfurt | Europa | Skylake, Broadwell |
 | HKG02 | Hongkong | Asien/Pazifik | Skylake, Broadwell |
 | LON02 | London | Europa | Skylake, Broadwell |
 | LON04 | London | Europa | Skylake, SAP-zertifiziert, Broadwell |
+| LON05 | London | Europa | Skylake, Broadwell |
 | LON06 | London | Europa | Skylake, SAP-zertifiziert, Broadwell |
 | MEL01 | Melbourne | Asien/Pazifik | Skylake, SAP-zertifiziert, Broadwell |
 | MEX01 | Queretaro | NA Süd | Skylake, SAP-zertifiziert, Broadwell |

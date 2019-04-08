@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-16"
+lastupdated: "2019-03-05"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -19,13 +22,13 @@ lastupdated: "2019-02-16"
 
 El pegamento que une la red del lado del cliente con la VXLAN del lado de la nube es una red privada virtual (VPN) sofisticada de varios túneles basada en tecnología HCX patentada. No se basa en NSX, pero sí funciona con NSX y amplía su capacidad. Este proceso está controlado por la interfaz de usuario web de vCenter del lado del cliente y automatiza el despliegue y activa ambos puntos finales en el lado del cliente y de la nube. La selección de la red que se va a extender se realiza de forma individual o por lotes.
 
-Además, como parte del flujo de trabajo de extensión de red, NSX en el lado de la nube debe crear una VXLAN que luego se conecta a una interfaz creada en el dispositivo L3 del lado de la nube especificado (DLR o ESG dejado en un estado no conectado) y el dispositivo L2C del lado de la nube.
+Además, como parte del flujo de trabajo de extensión de red, NSX en el lado de la nube tiene autorización para crear una VXLAN que luego se conecta a una interfaz creada en el dispositivo L3 del lado de la nube especificado (DLR o ESG dejado en un estado no conectado) y el dispositivo L2C del lado de la nube.
 
-Al migrar una aplicación determinada, todas las redes en uso por las máquinas virtuales (VM) aplicables normalmente deben extenderse a la instancia de {{site.data.keyword.cloud}}.
+Normalmente, al migrar una aplicación concreta, todas las redes que utilizan las máquinas virtuales (VM) aplicables deben extenderse en la instancia de {{site.data.keyword.cloud}}.
 
 ¿Por qué normalmente y no siempre? Puede ser beneficioso desconectar determinado tráfico desde el lado del cliente después de migrar la máquina virtual. Por ejemplo, los clientes de copia de seguridad de invitado de máquina virtual, que pueden provocar un alto uso de ancho de banda cuando se mueven a la nube. El cliente de copia de seguridad en el invitado no es necesario cuando se migra la máquina virtual, ya que se recoge automáticamente mediante una copia de seguridad de nivel de bloque más moderna en el lado de la nube.
 
-En lugar de acceder a cada máquina virtual para apagar la planificación de la copia de seguridad del cliente en el invitado, no conectar el adaptador de red de copia de seguridad del cliente (si se utiliza una red de copia de seguridad) provoca que la copia de seguridad falle. Se trata de una situación temporal hasta que se puedan alcanzar todas las máquinas virtuales después de la migración para inhabilitar el cliente de copia de seguridad en el invitado.
+El adaptador de red de copia de seguridad del cliente, debido a que esto implicaría acceder a cada máquina virtual para concluir la planificación de copia de seguridad del cliente en el invitado. Por lo tanto, si se utiliza una red de copia de seguridad, es posible que falle la copia de seguridad. Se trata de una situación temporal hasta que se puedan alcanzar todas las máquinas virtuales después de la migración para inhabilitar el cliente de copia de seguridad en el invitado.
 
 El ancho de banda de una sola L2C es teóricamente de 4 Gbps, sin embargo, este puede ser el límite para todas las redes extendidas dentro de un solo par de L2C y no es alcanzable por una sola red extendida. Una sola red extendida puede alcanzar un máximo de ~1 Gbps, dado que hay suficiente ancho de banda subyacente asignado y la latencia es baja (< ~ 10 ms).
 
@@ -55,13 +58,13 @@ La función vMotion dentro de HCX amplía la función de vSphere vMotion para qu
 
 HCX es básicamente un proxy bidireccional de vMotion. Cada instancia de HCX emula un único host ESXi dentro del centro de datos de vSphere, fuera de cualquier clúster que sea en sí mismo un "frontal" para el componente de flota de pasarela de nube (CGW). Aparece un host de proxy para cada sitio de HCX enlazado con el sitio visualizado actualmente. Cuando se inicia un vMotion a un host remoto, el host ESXi local aplica vMotion para la máquina virtual al host ESXi de proxy local frontal al CGW, que también está manteniendo un túnel cifrado con el CGW en el lado remoto.
 
-Al mismo tiempo, se inicia un vMotion desde el host de proxy ESXi remoto al host ESXi físico de vSphere de destino, ya que recibe datos del CGW de origen a través del túnel. Cuando se utiliza vMotion, a diferencia de la opción de migración masiva, solo se ejecuta una operación de migración de máquina virtual a la vez. Debido a esto, para migrar grandes cantidades de máquinas virtuales, se recomienda que solo se utilice cuando el tiempo de inactividad no sea una opción o hay riesgo de rearranque de la máquina virtual. Sin embargo, como vMotion estándar, la máquina virtual puede estar en directo durante el proceso.
+Al mismo tiempo, se inicia una migración de vMotion desde el host de proxy ESXi remoto al host ESXi físico de vSphere de destino, mientras recibe datos del CGW de origen a través del túnel. Cuando se utiliza vMotion, a diferencia de la opción de migración masiva, solo se ejecuta una operación de migración de máquina virtual a la vez. Debido a esto, para migrar grandes cantidades de máquinas virtuales, se recomienda que solo se utilice cuando el tiempo de inactividad no sea una opción o hay riesgo de rearranque de la máquina virtual. Sin embargo, como vMotion estándar, la máquina virtual puede estar en directo durante el proceso.
 
-Se ha observado que un solo vMotion se desplazará a alrededor de 1,7 Gbps en la LAN y entre 300 y 400 Mbps en la WAN a través del optimizador de WAN. Esto no significa que 1,7 Gbps en la LAN equivale a 400 Mbps en la LAN, pero son los máximos detectados por entorno observado. El entorno que se ha observado consistía en 10 GB de red vMotion LAN, un enlace ascendente de 1 GB de Internet, compartido con el tráfico web de producción.
+Se ha observado que un solo vMotion se desplazará a alrededor de 1,7 Gbps en la LAN y entre 300 y 400 Mbps en la WAN a través del optimizador de WAN. Esto no implica que 1,7 Gbps en la LAN sean equivalentes a 400 Mbps en la WAN a través del optimizador de WAN, sino más bien que estos valores máximos se han observado en entornos específicos. Un entorno de este tipo constaba de una red vMotion LAN de 10 GB y un enlace ascendente de Internet de 1 GB, compartido con el tráfico web de producción.
 
 Utilice vMotion cuando:
 - Puede causar problemas apagar o iniciar la máquina virtual o si el tiempo de funcionamiento puede extenderse demasiado, con riesgo de que se apague.
-- Cualquier aplicación de tipo de clúster que requiera UUID de disco, como los clústeres de Oracle Rac. vMotion no cambia los UUID de disco en el destino.
+- Cualquier aplicación de tipo de clúster requiera UUID de disco, como los clústeres de Oracle RAC. Tenga en cuenta que vMotion no cambia los UUID de disco en el destino.
 - Quiera mover una sola máquina virtual lo más rápido posible.
 - No se necesite una migración planificado.
 
@@ -84,14 +87,14 @@ La función de migración masiva de HCX utiliza la réplica de vSphere para migr
 - Apagar la máquina virtual original.
 - Durante el periodo de apagado, se produce la réplica final de cualquier cambio de datos.
 - Encender la nueva máquina virtual en el lado de destino.
-- Cambiar el nombre y mover la máquina virtual original a la carpeta trasladada a la nube.
+- Renombrar y mover la máquina virtual original a la carpeta en la nube a la que se haya movido.
 
 A continuación se exponen las ventajas de la migración masiva sobre vMotion:
-- Migración de muchas máquinas virtuales simultáneamente.
+- Migración de varias máquinas virtuales simultáneamente.
 - Uso de ancho de banda más coherente. vMotion puede generar fluctuaciones en el uso del ancho de banda que serían visibles como picos y valles dentro de las herramientas de supervisión de red o la interfaz de usuario del optimizador de WAN.
 - Utilice la migración masiva para obtener un uso superior de una capacidad de ancho de banda de red, en comparación con el de un solo vMotion.
 - Planifique la migración masiva para cambiar a las máquinas virtuales recién migradas durante una ventana de parada planificada.
-- Puede permitir la migración de máquinas virtuales que actualmente estén utilizando características de CPU virtuales que difieren del lado de la nube, situación en la cual vMotion falla.
+- Permita la migración de máquinas virtuales que estén utilizando actualmente características de CPU que difieren del lado de la nube. La migración de vMotion puede fallar en estos casos.
 
 A continuación se exponen los inconvenientes de la migración masiva sobre vMotion:
 - Las máquinas virtuales a nivel individual se migran de forma mucho más lenta que con vMotion.
@@ -109,24 +112,24 @@ Los clústeres de Oracle RAC, MS Exchange y MS-SQL son ejemplos de aplicaciones 
 Migración de un clúster habilitado para discos virtuales de varios escritores:
 - Utiliza vMotion ya que se mantienen las correlaciones de UUID y disco de máquina virtual originales.
 - El clúster permanece activo en un estado degradado (nodo único) durante la migración.
-- El clúster genera tiempo de inactividad antes de iniciar la migración y una vez completada la migración para volver a ensamblar la configuración de varios escritores entre los nodos de máquina virtual del clúster.
+- El clúster genera tiempo de inactividad antes de iniciar la migración y una vez completada la migración para volver a ensamblar la configuración de varios escritores entre las máquinas virtuales del clúster.
 
 Complete los pasos siguientes para migrar un clúster habilitado para discos de varios escritores:
-1. Desactive el clúster y todos los nodos para la práctica recomendada de la aplicación.
+1. Apague el clúster y todos los nodos para la práctica recomendada de la aplicación.
 2. Tome nota del orden de discos, si la aplicación lo requiere, en cada máquina virtual de nodo para los discos virtuales configurados de varios escritores.
 3. Para Oracle y cualquier otra aplicación que utilice la característica de UUID de disco virtual, inicie sesión en un host ESXi determinado y ejecute el mandato `vmkfstools -J getuuid /vmfs/volumes/datastore/VM/vm.vmdk` para obtener el UUID de cada archivo de disco virtual que requiera establecer el distintivo de varios escritores para el clúster.
   Esta acción es necesaria si la práctica recomendada alinea los órdenes de disco con el modo en que se visualiza la vía de acceso en el sistema operativo. vMotion puede reordenar los discos (disk1, disk2, disk3), pero los UUID siguen siendo los mismos.
-  Utilice el UUID anotado para la información de correlación de discos para volver a crear el orden de denominación de discos. ID de SCSI cuando se complete la migración, en caso necesario. La aplicación debería funcionar de cualquier forma. Se utiliza cuando una instancia de Oracle tiene muchos discos virtuales que se correlacionan para la resolución de problemas de la aplicación.
-4. Elimine los discos virtuales de todos los nodos de máquina virtual del clúster, excepto el que se considera primario.
-5. Elimine el distintivo de varios escritores del nodo de clúster de máquina virtual primario que debe ser el único propietario de los discos de clúster.
-6. Traiga la copia de seguridad del nodo de clúster primario, si es necesario para un tiempo de inactividad mínimo.
-7. Migrar todos los nodos de clúster con vMotion. Migre primero el clúster primario y todos los demás nodos cuando se apague.
+  Cuando finalice la migración, utilice el UUID anotado para correlacionar la información de disco, para volver a crear el orden de denominación de discos, y el ID SCSI, si fuera necesario. La aplicación debería funcionar de cualquier forma. Se utiliza cuando una instancia de Oracle tiene muchos discos virtuales que se correlacionan para la resolución de problemas de la aplicación.
+4. Elimine los discos virtuales de todas las máquinas virtuales del clúster, excepto el que se considera primario.
+5. Elimine el distintivo de varios escritores de la máquina virtual de clúster primaria que debe ser la única propietaria de los discos de clúster.
+6. Encienda el clúster primario, si es necesario para que el tiempo de inactividad sea mínimo.
+7. Migre todos los nodos de clúster con vMotion. Migre el clúster primario en primer lugar. Migre los demás nodos después de que se hayan apagado.
 8. Cuando el nodo propietario del disco primario complete la migración, apáguelo.
 9. Si es necesario, vuelva a correlacionar el orden de disco con el UUID de disco y el ID de SCSI adecuados. No es necesario realizar ningún reajuste para que la aplicación funcione.
 10. Vuelva a habilitar el distintivo de varios escritores en el nodo primario.
 11. Inicie el nodo primario y verifique su funcionamiento.
-12. Correlacione el disco / habilite el distintivo de varios escritores en el resto de las máquinas virtuales del nodo del clúster y enciéndalas.
-13. Verifique el funcionamiento de los demás nodos de clúster.
+12. Correlacione el disco / habilite el distintivo de varios escritores en el resto de las máquinas virtuales del clúster y enciéndalas.
+13. Verifique otras funciones del clúster.
 
 ### Máquinas virtuales generales
 {: #vcshcx-stretching-general-vms}
@@ -145,28 +148,33 @@ Después de la migración, los volúmenes de iSCSI se pueden duplicar con el sis
 - Ancho de banda (~ 1 Gbps por red extendida)
 - Ancho de banda de enlace subyacente
 
-Después del ciclo de vida de la migración, asegúrese de probar con las aplicaciones de desarrollo o transferencia antes de intentar con la producción. Se puede utilizar la calidad de servicio para el tráfico de túnel subyacente (udp 500/4500) entre los dispositivos L2C HCX que transportan redes L2 extendidas sensibles a la latencia.
+Después del ciclo de vida de la migración, pruebe las aplicaciones de desarrollo o transferencia antes de intentarlo en producción. Se puede utilizar la calidad de servicio para el tráfico de túnel subyacente (udp 500/4500) entre los dispositivos L2C HCX que admitan redes L2 extendidas sensibles a la latencia.
 
 ## Oscilación de red
 {: #vcshcx-stretching-network-swing}
 
 Si el objetivo es la evacuación del centro de datos a {{site.data.keyword.cloud_notm}}, el siguiente paso antes de eliminar HCX es la oscilación de red. La oscilación de red consigue la migración de la subred de red que aloja las máquinas virtuales migradas desde el centro de datos de origen a una red subyacente NSX dentro de {{site.data.keyword.cloud_notm}}.
 
-La oscilación de red implica lo siguiente:
+La oscilación de red implica los pasos siguientes:
 - Verificar que la red ha evacuado todas las cargas de trabajo y que los dispositivos en red que no sean de máquina virtual se hayan movido a otra red, que se hayan migrado funcionalmente a la nube o que hayan quedado en desuso.
 - Verificar que cualquier topología de NSX o topología de red con soporte de {{site.data.keyword.cloud_notm}} se haya completado para dar soporte a la oscilación de red. Por ejemplo, los cortafuegos y los protocolos de direccionamiento dinámico.
-- Ejecutar un flujo de trabajo de red para eliminar la extensión de HCX en la interfaz de usuario y seleccionar el dispositivo NSX de direccionamiento adecuado para controlar la pasarela predeterminada de las redes no extendidas.
-- Ejecutar cualquier cambio de direccionamiento externo, que puede incluir: insertar el direccionamiento cambiado para redes que se han migrado, eliminar ritas a sitios de origen a la red migrada y garantizar el direccionamiento a dicha subred migrada en la WAN para aplicaciones no migradas, en caso necesario.
+- Ejecutar un flujo de trabajo de red para eliminar la extensión de HCX en la interfaz de usuario y seleccionar el dispositivo NSX de direccionamiento adecuado para tomar el control de la pasarela predeterminada de las redes no extendidas.
+- Ejecutar cualquier cambio de direccionamiento externo, que puede incluir: insertar el direccionamiento cambiado para redes que se han migrado, eliminar rutas a sitios de origen de la red migrada y garantizar que el direccionamiento a dicha subred migrada en la WAN todavía funciona para las aplicaciones que no se hayan migrado.
 - Pruebas del propietario de la aplicación de las aplicaciones migradas desde todos los puntos de acceso posibles: Internet, intranet y VPN.
 
-Consideraciones sobre la oscilación de red de una aplicación determinada con todas las máquinas virtuales completamente migradas a la nube: si utiliza vyatta en el lado de la red privada para insertar rutas en la nube de MPLS y el túnel a los dispositivos de direccionamiento de extremo en MPLS para evitar el espacio de IP de {{site.data.keyword.cloud_notm}}. Tiene la cuenta establecida con un VRF de {{site.data.keyword.cloud_notm}}. Algunas de las aplicaciones están detrás de una IP virtual (vIP) de carga equilibrada de red. Estas vIP se encuentran en su subred que reside en un F5 virtual detrás de vyatta. Aunque la publicidad de un direccionamiento más específico al MPLS para las redes que se han intercambiado a {{site.data.keyword.cloud_notm}} a través de HCX funciona correctamente para otras redes, no funciona para las vIP individuales, ya que se inserta una ruta /32.
+Supongamos que desea realizar la oscilación de red para una aplicación concreta cuyas máquinas virtuales se han migrado completamente a la nube. Por ejemplo:
+- Utiliza Vyatta en el lado de la red privada para insertar rutas en la nube MPLS y para establecer un túnel a los dispositivos de direccionamiento de extremo en MPLS para evitar el espacio de IP de {{site.data.keyword.cloud_notm}}.
+- Tiene la cuenta establecida con un VRF de {{site.data.keyword.cloud_notm}}.
+- Algunas aplicaciones están detrás de una IP virtual (vIP) de carga equilibrada de red. Estas vIP se encuentran en su subred que reside en un F5 virtual detrás de vyatta.
 
-Solución: es frecuente que los proveedores de WAN filtren las rutas /32 que se anuncian. Trátelo con el proveedor de WAN para permitirlo.
+Aunque la adición de un direccionamiento más específico al MPLS para las redes que se han intercambiado a {{site.data.keyword.cloud_notm}} a través de HCX funciona correctamente para otras redes, no funciona para las vIP individuales, ya que se añade una ruta /32.
+
+Solución: es frecuente que los proveedores de WAN filtren las rutas /32 que se añaden. Trátelo con el proveedor de WAN para permitirlo.
 
 A continuación se indican algunas consideraciones e implicaciones:
 - Las aplicaciones que comparten subred, vLAN y VXLAN tienen que moverse juntas.
 - Las aplicaciones detrás de un equilibrador de carga que utiliza una IP direccionable interna pueden requerir cambios de direccionamiento si no se pueden mover juntas o no es deseable hacerlo. Por ejemplo, si se percibe demasiado implicando demasiadas aplicaciones en una sola oscilación.
-- Los administradores de VMware, los administradores de red (incluidos los proveedores de cliente/WAN) y los propietarios de las aplicaciones deben estar implicados. Incluso aunque no esté previsto que los cambios afecten a un sistema determinado o a un equipo de red.
+- Los administradores de VMware, los administradores de red (incluidos los clientes y proveedores de WAN) y los propietarios de las aplicaciones deben estar implicados, incluso aunque no se haya planificado que haya un impacto en un sistema o equipamiento de red concreto.
 
 ## Enlaces relacionados
 {: #vcshcx-stretching-related}

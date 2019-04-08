@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -14,9 +17,21 @@ lastupdated: "2019-02-15"
 ## VMware NSX 에디션 비교
 {: #solution-appendix-nsx-editions}
 
-표 1에는 솔루션이 지원하는 VMware NSX의 **Base**, **Advanced** 및 **Enterprise** 에디션의 사용 가능한 기능이 나열되어 있습니다.
+이 디자인 내에는 라이센스가 필요한 여러 컴포넌트가 있습니다. 이 정보는 환경이 올바르게 작동하는 데 필요한 최소 라이센스를 캡처합니다.
 
-표 1. VMware NSX 에디션 비교 차트
+표 1. 라이센스 요구사항
+
+컴포넌트 | 용도 |라이센스
+----------|---------|-------------
+**vSphere** | 컴퓨팅 가상화 | vSphere 6.7 Enterprise Plus
+**vCenter Server** |인프라 관리 | vCenter Server 6.7 Standard
+**NSX** | 네트워크 가상화 | NSX Base for Service Providers 6.4
+**vSAN** | 스토리지 가상화 | vSAN 6.6 Advanced  
+
+NSX Base for Service Providers 에디션은 VMware vCloud Air Network(vCAN)를 통해 서비스 제공자만 사용할 수 있습니다. 이 에디션의 기능은 다음 표에서 찾을 수 있습니다.
+{:note}
+
+표 2. VMware NSX 에디션 비교 차트
 
 | NSX 기능                                   | Base | Advanced |Enterprise |
 |-----------------------------------------------|------|----------|------------|
@@ -45,9 +60,9 @@ lastupdated: "2019-02-15"
 ## VMware vSAN 에디션 비교
 {: #solution-appendix-vsan-editions}
 
-표 2에는 솔루션이 지원하는 VMware vSAN의 **Advanced** 및 **Enterprise** 에디션의 사용 가능한 기능이 나열되어 있습니다.
+다음 표에는 솔루션이 지원하는 VMware vSAN의 **Advanced** 및 **Enterprise** 에디션의 사용 가능한 기능이 나열되어 있습니다.
 
-표 2. VMware vSAN 에디션 비교 차트
+표 3. VMware vSAN 에디션 비교 차트
 
 | vSAN 기능                                    | Advanced |Enterprise |
 |-------------------------------------------------|----------|------------|

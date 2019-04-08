@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-04"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # IBM Cloud 계정으로 V2.5 이전 NetApp ONTAP Select 인스턴스 마이그레이션
@@ -25,7 +28,7 @@ IaaS 전용 계정을 PaaS 계정에 연결하는 방법에 대한 자세한 정
 ## 인스턴스를 마이그레이션하는 프로시저
 {: #np_addinstancetousraccount-procedure}
 
-1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **리소스**를 클릭하십시오. 
+1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **리소스**를 클릭하십시오.
 2. 콘솔 배너에서 사용자 계정 아이콘을 클릭한 다음 **계정** 필드를 클릭하여 인스턴스를 마이그레이션하려는 사용자 계정을 선택하십시오.
 3. **NetApp ONTAP Select 인스턴스** 테이블에서 V2.5 이전 인스턴스를 찾으십시오.
 4. **조치** 열에서 오버플로우 메뉴 아이콘을 클릭한 후에 **계정으로 인스턴스 마이그레이션**을 클릭하십시오.

@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-11"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -151,7 +154,7 @@ Die Option für lokale Festplatten, die nur für die Bare-Metal-Konfiguration de
 ## Technische Spezifikationen für vCenter Server-Erweiterungsknoten
 {: #vc_vcenterserveroverview-expansion-node-specs}
 
-Jeder vCenter Server-Erweiterungsknoten stellt folgende Komponenten in Ihrem {{site.data.keyword.cloud_notm}}-Konto mit den entsprechenden anfallenden Gebühren bereit. 
+Jeder vCenter Server-Erweiterungsknoten stellt folgende Komponenten in Ihrem {{site.data.keyword.cloud_notm}}-Konto mit den entsprechenden anfallenden Gebühren bereit.
 
 ### Hardware für Erweiterungsknoten
 {: #vc_vcenterserveroverview-expansion-node-hardware}

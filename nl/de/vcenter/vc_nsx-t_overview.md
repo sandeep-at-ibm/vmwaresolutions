@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-21"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -15,7 +18,7 @@ lastupdated: "2019-03-12"
 # Übersicht über vCenter Server with NSX-T
 {: #vc_nsx-t_overview}
 
-VMware vCenter Server with NSX-T on {{site.data.keyword.cloud}} ist eine gehostete private Cloud, die den VMware vSphere-Stack als Service bereitstellt. Die VMware-Umgebung basiert auf mindestens drei {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}-Instanzen, bietet gemeinsam genutzten NAS-Speicher sowie Optionen für dedizierten softwaredefinierten Speicher und beinhaltet die automatische Bereitstellung und Konfiguration einer auf VMware NSX-T basierenden, leicht zu verwaltenden logischen Edge-Firewall. 
+VMware vCenter Server with NSX-T on {{site.data.keyword.cloud}} ist eine gehostete private Cloud, die den VMware vSphere-Stack als Service bereitstellt. Die VMware-Umgebung basiert auf mindestens drei {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}-Instanzen, bietet gemeinsam genutzten NAS-Speicher sowie Optionen für dedizierten softwaredefinierten Speicher und beinhaltet die automatische Bereitstellung und Konfiguration einer auf VMware NSX-T basierenden, leicht zu verwaltenden logischen Edge-Firewall.
 
 In zahlreichen Fällen kann die gesamte Umgebung in weniger als einem Tag bereitgestellt werden und die Bare-Metal-Infrastruktur kann die Rechenkapazität nach Bedarf schnell und flexibel skalieren.
 
@@ -29,10 +32,10 @@ vCenter Server with NSX-T-Instanzen sind nur für den Konzeptnachweis oder Sandb
 ## Architektur von vCenter Server with NSX-T
 {: #vc_nsx-t_overview-archi}
 
-Die folgende Abbildung zeigt die allgemeine Architektur und die Komponenten einer vCenter Server with NSX-T-Bereitstellung mit drei Knoten. 
+Die folgende Abbildung zeigt die allgemeine Architektur und die Komponenten einer vCenter Server with NSX-T-Bereitstellung mit drei Knoten.
 
 Abbildung 1. Allgemeine Architektur von vCenter Server with NSX-T für einen Cluster mit drei Knoten
-![Architektur von vCenter Server with NSX-T](vc_architecture.svg "Allgemeine vCenter Server-Architektur für einen Cluster mit drei Knoten")
+![Architektur von vCenter Server with NSX-T](vc_nsx-t_architecture.svg "Allgemeine vCenter Server-Architektur für einen Cluster mit drei Knoten")
 
 ### Physische Infrastruktur
 {: #vc_nsx-t_overview-physical-infras}
@@ -44,23 +47,23 @@ Auf dieser Schicht wird die physische Infrastruktur (Rechen-, Speicher- und Netz
 
 Diese Schicht virtualisiert die physische Infrastruktur durch verschiedene VMware-Produkte:
 * VMware vSphere virtualisiert die physischen Rechenressourcen.
-* VMware NSX-T ist die Netzvirtualisierungsplattform, die logische Netzkomponenten und virtuelle Netze bereitstellt. 
+* VMware NSX-T ist die Netzvirtualisierungsplattform, die logische Netzkomponenten und virtuelle Netze bereitstellt.
 
 ### Virtualisierungsmanagement
 {: #vc_nsx-t_overview-virtualization-mgmt}
 
-Diese Schicht besteht aus vCenter Server Appliance (vCSA) mit integriertem Platform Services Controller (PSC), drei NSX-Knoten, vier NSX Edge Services Gateways (ESGs) und der virtuellen Serverinstanz (VSI) für IBM CloudDriver. Die CloudDriver-VSI wird bei Bedarf auf Anforderung für bestimmte Operationen, wie zum Beispiel für das Hinzufügen von Hosts zur Umgebung, bereitgestellt.
+Diese Schicht besteht aus vCenter Server Appliance (vCSA) mit integriertem Platform Services Controller (PSC), drei NSX-Knoten, drei NSX Edge Services Gateways (ESGs) und der virtuellen Serverinstanz (VSI) für IBM CloudDriver. Die CloudDriver-VSI wird bei Bedarf auf Anforderung für bestimmte Operationen, wie zum Beispiel für das Hinzufügen von Hosts zur Umgebung, bereitgestellt.
 
 Das Basisangebot wird mit einer vCenter Server-Appliance bereitgestellt, deren Größe für die Unterstützung einer Umgebung mit bis zu 400 Hosts und bis zu 4000 VMs ausgelegt ist. Zum Verwalten der von IBM gehosteten VMware-Umgebung können Sie dieselben mit der vSphere-API kompatiblen Tools und Scripts verwenden.
 
-Insgesamt benötigt das Basisangebot 38 virtuelle CPUs und 128 GB virtuellen RAM, die für die Virtualisierungsmanagementschicht reserviert sind. Die verbleibende Hostkapazität für Ihre VMs hängt von mehreren Faktoren ab, beispielsweise der Übersubskriptionsrate, der Dimensionierung der virtuellen Maschinen (VMs) und den Anforderungen an die Workloadleistung. 
+Insgesamt benötigt das Basisangebot 38 virtuelle CPUs und 128 GB virtuellen RAM, die für die Virtualisierungsmanagementschicht reserviert sind. Die verbleibende Hostkapazität für Ihre VMs hängt von mehreren Faktoren ab, beispielsweise der Übersubskriptionsrate, der Dimensionierung der virtuellen Maschinen (VMs) und den Anforderungen an die Workloadleistung.
 
 Weitere Informationen zur Architektur enthält die [Referenzdokumentation zur Architektur von {{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview).
 
 ## Technische Spezifikationen für vCenter Server with NSX-T-Instanzen
 {: #vc_nsx-t_overview-specs}
 
-Ihre vCenter Server with NSX-T-Instanz enthält die folgenden Komponenten. 
+Ihre vCenter Server with NSX-T-Instanz enthält die folgenden Komponenten.
 
 Verfügbarkeit und Preisgestaltung standardisierter Hardwarekonfigurationen können abhängig vom {{site.data.keyword.CloudDataCent_notm}}, das für die Bereitstellung ausgewählt wird, variieren.
 {:note}
@@ -70,8 +73,7 @@ Verfügbarkeit und Preisgestaltung standardisierter Hardwarekonfigurationen kön
 
 Sie können drei oder mehr {{site.data.keyword.baremetal_short}}-Instanzen mit einer der folgenden Konfigurationen bestellen:
 * **Skylake**: 2-CPU Intel Skylake Generation-Server (Intel Xeon 4100/5100/6100 Series) mit dem ausgewählten CPU-Modell und der RAM-Größe.  
-* **SAP-zertifiziert**: Intel Skylake oder Intel Broadwell Generation-Server (Intel Xeon 6140/E5-2690/E7-8890 Series) mit dem ausgewählten CPU-Modell.
-* **Broadwell**: 2-CPU Intel Broadwell Generation-Server (Intel Xeon E5-2600/E7-4800 Series) mit dem ausgewählten CPU-Modell und der RAM-Größe.
+* **Broadwell**: 4-CPU Intel Broadwell Generation-Server (Intel Xeon E7-4800 Series) mit dem ausgewählten CPU-Modell und der RAM-Größe.
 
 Wenn Sie vSAN-Speicher verwenden möchten, sind für die Konfiguration vier {{site.data.keyword.baremetal_short}}-Instanzen erforderlich.
 {:note}
@@ -82,19 +84,19 @@ Wenn Sie vSAN-Speicher verwenden möchten, sind für die Konfiguration vier {{si
 Die folgenden Netzkomponenten werden bestellt:
 *  10-Gbps-Uplinks für öffentliche und private Netze
 *  3 VLANs (virtuelle LANs): 1 öffentliches VLAN und 2 private VLANs
-* 1 Overlay-Netz mit einem T1- und T0-Router für die potenzielle Ost-West-Kommunikation zwischen lokalen Workloads, die mit L2-Netzen (Layer 2) verbunden sind. Dieses Netz wird als Muster für die Routingtopologie bereitgestellt, das Sie ändern, als Ausgangspunkt für Erstellungen verwenden oder entfernen können. 
-*  4 VMware NSX-T Edge Services Gateways: 
-  * 2 sichere VMware NSX ESGs für Management-Services für abgehenden HTTPS-Managementdatenverkehr, die von IBM im Rahmen der Managementnetztypologie bereitgestellt werden. Dieses ESG wird von den IBM Management-VMs für die Kommunikation mit bestimmten externen IBM Managementkomponenten verwendet, die mit der Automatisierung zusammenhängen. Weitere Informationen finden Sie unter [Netz zur Verwendung des vom Kunden verwalteten NSX ESG mit eigenen virtuellen Maschinen konfigurieren](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_esg_config).
+* 1 Overlay-Netz mit einem T1- und T0-Router für die potenzielle Ost-West-Kommunikation zwischen lokalen Workloads, die mit L2-Netzen (Layer 2) verbunden sind. Dieses Netz wird als Muster für die Routingtopologie bereitgestellt, das Sie ändern, als Ausgangspunkt für Erstellungen verwenden oder entfernen können.
+*  3 VMware NSX-T Edge Services Gateways: 
+  * 1 sichere VMware NSX ESGs für Management-Services für abgehenden HTTPS-Managementdatenverkehr, die von IBM im Rahmen der Managementnetztypologie bereitgestellt werden. Dieses ESG wird von den IBM Management-VMs für die Kommunikation mit bestimmten externen IBM Managementkomponenten verwendet, die mit der Automatisierung zusammenhängen. Weitere Informationen finden Sie unter [Netz zur Verwendung des vom Kunden verwalteten NSX ESG mit eigenen virtuellen Maschinen konfigurieren](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_esg_config).
   * 2 sichere vom Kunden verwaltete VMware NSX ESGs für eingehenden und abgehenden HTTPS-Workloaddatenverkehr. Dieses Gateway wird von IBM als Vorlage bereitgestellt, die von Ihnen geändert werden kann, um den VPN-Zugriff oder den öffentlichen Zugriff zu ermöglichen. Weitere Informationen finden Sie im Abschnitt [Stellt das vom Kunden verwaltete NSX Edge ein Sicherheitsrisiko dar?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq-customer-nsx)
 
-  Die Namen dieser ESGs lauten **mgmt-nsx-edge0** und **mgmt-nsx-edge1**. Diese ESGs sind für Sie nicht zugänglich und Sie können sie nicht verwenden. Falls Sie sie ändern, sind Sie möglicherweise nicht in der Lage, die vCenter Server-Instanz über die {{site.data.keyword.vmwaresolutions_short}}-Konsole zu verwalten. Außerdem führt die Verwendung einer Firewall oder die Inaktivierung der ESG-Kommunikation mit den externen IBM Managementkomponenten dazu, dass {{site.data.keyword.vmwaresolutions_short}} möglicherweise unbrauchbar wird.
+  Dieses ESG hat den Namen **mgmt-nsx-edge0**. Dieses ESG ist für Sie weder zugänglich, noch können Sie es verwenden. Falls Sie es ändern, sind Sie möglicherweise nicht in der Lage, die vCenter Server-Instanz über die {{site.data.keyword.vmwaresolutions_short}}-Konsole zu verwalten. Außerdem führt die Verwendung einer Firewall oder die Inaktivierung der ESG-Kommunikation mit den externen IBM Managementkomponenten dazu, dass {{site.data.keyword.vmwaresolutions_short}} möglicherweise unbrauchbar wird.
   {:important}
 
 ### Virtual Server-Instanzen
 {: #vc_nsx-t_overview-vsi}
 
 Die folgenden VSIs (Virtual Server-Instanzen) werden bestellt:
-* 1 VSI für IBM CloudBuilder (wird nach vollständiger Bereitstellung der Instanz beendet). 
+* 1 VSI für IBM CloudBuilder (wird nach vollständiger Bereitstellung der Instanz beendet).
 * Sie haben die Möglichkeit, die Bereitstellung einer einzigen Virtual Server-Instanz (VSI) von Microsoft Windows für Microsoft Active Directory (AD) oder aber von zwei virtuellen Microsoft Windows-Maschinen für die Hochverfügbarkeit im Management-Cluster auszuwählen, um die Sicherheit und Leistungsfähigkeit zu erhöhen.
 
 ### Speicher
@@ -123,18 +125,13 @@ Die Option "vSAN" bietet angepasste Konfigurationen mit unterschiedlichen Option
 
 Die Option "NFS" bietet angepassten gemeinsam genutzten Speicher auf Dateiebene für Workloads mit verschiedenen Optionen für Größe und Leistung:
 * Größe: 20 GB bis 24 TB
-* Leistung: 0,25, 2, 4 oder 10 IOPS/GB.
-* Die gemeinsam genutzten Dateiressourcen werden einzeln konfiguriert.
+* Leistung: 0,25, 2, 4 oder 10 IOPS/GB
+* Die gemeinsam genutzten Dateiressourcen werden einzeln konfiguriert
 
   Die Leistungsstufe 10 IOPS/GB ist auf eine maximale Kapazität von 4 TB pro gemeinsam genutzte Dateiressource begrenzt.
   {:note}
 
 Wenn Sie die Option "NFS" auswählen, wird 1 gemeinsam genutzte Dateiressource mit 2 TB und 4 IOPS/GB für Managementkomponenten bestellt.
-
-#### Lokaler Plattenspeicher
-{: #vc_nsx-t_overview-local-disk-storage}
-
-Die Option für lokale Festplatten, die nur für die Bare-Metal-Konfiguration des **SAP-zertifizierten** Quad Intel Xeon E7-8890 v4-Prozessors verfügbar ist, bietet kundenspezifische Konfigurationen mit verschiedenen Optionen für Plattenanzahl und Plattentyp.
 
 ### Lizenzen (von IBM bereitgestellt oder eigene) und Gebühren
 {: #vc_nsx-t_overview-license-and-fee}
@@ -148,12 +145,12 @@ Die Option für lokale Festplatten, die nur für die Bare-Metal-Konfiguration de
 ## Technische Spezifikationen für vCenter Server with NSX-T-Erweiterungsknoten
 {: #vc_nsx-t_overview-expansion-node-specs}
 
-Jeder vCenter Server with NSX-T-Erweiterungsknoten stellt folgende Komponenten in Ihrem {{site.data.keyword.cloud_notm}}-Konto mit den entsprechenden anfallenden Gebühren bereit. 
+Jeder vCenter Server with NSX-T-Erweiterungsknoten stellt folgende Komponenten in Ihrem {{site.data.keyword.cloud_notm}}-Konto mit den entsprechenden anfallenden Gebühren bereit.
 
 ### Hardware für Erweiterungsknoten
 {: #vc_nsx-t_overview-expansion-node-hardware}
 
-1 Bare-Metal-Server mit der unter [Technische Spezifikationen für vCenter Server with NSX-T-Instanzen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_overview-specs) aufgeführten Konfiguration. 
+1 Bare-Metal-Server mit der unter [Technische Spezifikationen für vCenter Server with NSX-T-Instanzen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_overview-specs) aufgeführten Konfiguration.
 
 ### Lizenzen und Gebühren für Erweiterungsknoten
 {: #vc_nsx-t_overview-expansion-node-license-and-fee}

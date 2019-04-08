@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-02-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -122,6 +125,7 @@ SDDC-Dswitch-Public|SDDC-DPortGroup-External|发起虚拟端口|活动：0、1|V
 下图显示了如何通过创建安全组来实现 NSX-V 的一些微分段功能的高级别图。在此示例中，“生产”和“开发”是安全组，并且基于这些组来分配安全规则。
 
 图 3. NSX-V 安全性
+</br>
 ![NSX-V 安全性](vcsnsxt-vsecurity.svg)
 
 ## 相关链接

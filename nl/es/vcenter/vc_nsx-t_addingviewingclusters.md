@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-03-22"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -50,7 +53,7 @@ Si despliega el clúster en otro {{site.data.keyword.CloudDataCent_notm}} o en o
 ### Valores de Servidor nativo
 {: #vc_nsx-t_addingviewingclusters-bare-metal-settings}
 
-Puede elegir **Skylake**, **Certificado por SAP** o **Broadwell**.
+Puede elegir **Skylake** o **Broadwell**.
 
 #### Skylake
 {: #vc_nsx-t_addingviewingclusters-adding-skylake}
@@ -65,20 +68,6 @@ Tabla 1. Opciones para {{site.data.keyword.baremetal_short}} Skylake
 | Procesador Dual Intel Xeon Gold 5120 / 28 núcleos en total, 2,2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon Gold Procesador 6140 / 36 núcleos en total, 2,3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 
-#### Certificado por SAP
-{: #vc_nsx-t_addingviewingclusters-adding-sap}
-
-Si selecciona **Certificado por SAP**, no puede modificar los valores de CPU o RAM.
-
-En función de sus requisitos, seleccione una configuración de servidor nativo:
-* Procesador Dual Intel Xeon Gold 6140 / 36 núcleos en total, 2,3 GHz / 192 GB de RAM
-* Procesador Dual Intel Xeon Gold 6140 / 36 núcleos en total, 2,3 GHz / 384 GB de RAM
-* Procesador Dual Intel Xeon Gold 6140 / 36 núcleos en total, 2,3 GHz / 768 GB de RAM
-* Procesador Dual Intel Xeon E5-2690 v4 / 28 núcleos en total, 2,6 GHz / 512 GB de RAM
-* Procesador Quad Intel Xeon E7-8890 v4 / 96 núcleos en total, 2,2 GHz / 1024 GB de RAM
-* Procesador Quad Intel Xeon E7-8890 v4 / 96 núcleos en total, 2,2 GHz / 2048 GB de RAM
-* Procesador Quad Intel Xeon E7-8890 v4 / 96 núcleos en total, 2,2 GHz / 4096 GB de RAM
-
 #### Broadwell
 {: #vc_nsx-t_addingviewingclusters-adding-broadwell}
 
@@ -88,9 +77,6 @@ Tabla 2. Opciones para {{site.data.keyword.baremetal_short}} Broadwell
 
 | Opciones de modelo de CPU        | Opciones de RAM       |
 |:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4 / 16 núcleos en total, 2,1 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2650 v4 / 24 núcleos en total, 2,2 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2690 v4 / 28 núcleos en total, 2,6 GHz | 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Quad Intel Xeon E7-4820 v4 / 40 núcleos en total, 1,9 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 núcleos en total, 2,2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
@@ -147,13 +133,6 @@ Tabla 3. Opciones de nivel de rendimiento de NFS
   | 4 IOPS/GB | Esta opción está diseñada para cargas de trabajo de mayor intensidad que tienen un alto porcentaje de datos activos en un momento determinado. Las aplicaciones de ejemplo incluyen bases de datos transaccionales. |
   | 10 IOPS/GB | Esta opción está diseñada para los tipos de carga de trabajo más exigentes, como las analíticas. Las aplicaciones de ejemplo incluyen bases de datos con un gran número de transacciones y otras bases de datos sensibles al rendimiento. Este nivel de rendimiento está limitado a una capacidad máxima de 4 TB por compartición de archivo. |
 
-### Discos locales
-{: #vc_nsx-t_addingviewingclusters-adding-local-disks}
-
-La opción de discos locales solo está disponible para la configuración de tipo procesador nativo Quad Intel Xeon E7-8890 v4 **certificado por SAP**. Especifique las siguientes opciones:
-* **Recuento de discos**: seleccione el número de discos que desea añadir.
-* **Tipo de disco**: seleccione una opción para el tipo de disco que necesita.
-
 ### Valores de licencia
 {: #vc_nsx-t_addingviewingclusters-adding-licensing-settings}
 
@@ -164,7 +143,7 @@ Especifique la opción de licencia para el componente VMware vSphere en el clús
 ### Valores de interfaz de red
 {: #vc_nsx-t_addingviewingclusters-adding-network-interface-settings}
 
-Los valores de habilitación de la tarjeta de interfaz de red (NIC) se basan en la selección de **Red pública y privada** o de **Solo red privada**.rd.cloud_notm}}
+Los valores de habilitación de la tarjeta de interfaz de red (NIC) se basan en la selección de **Red pública y privada** o de **Solo red privada**.
 
 ### Resumen del pedido
 {: #vc_nsx-t_addingviewingclusters-adding-order-summary}
@@ -182,14 +161,13 @@ En función de la configuración seleccionada para el clúster, el coste estimad
 3. Pulse **Infraestructura** en el panel de navegación izquierdo y pulse **Añadir** en la esquina superior derecha de la tabla **CLÚSTERES**.
 4. En la página **Añadir clúster**, escriba el nombre de clúster.
 5. Si desea alojar el clúster en un {{site.data.keyword.CloudDataCent_notm}} diferente al que se aloja la instancia, en **Servidor nativo**, marque el recuadro de selección **Seleccione otra ubicación** y elija el {{site.data.keyword.CloudDataCent_notm}} para alojar la instancia.
-6. Complete la configuración del servidor nativo.
-   * Si ha seleccionado **Skylake** o **Broadwell**, especifique el valor de **Modelo de CPU**, la cantidad de **RAM** y el valor de **Número de {{site.data.keyword.baremetal_short}}**.
-   * Si ha seleccionado **Certificado por SAP**, especifique el modelo de CPU.
+6. Complete la configuración del servidor nativo. Especifique el **Modelo de CPU**, la cantidad de
+**RAM** y el
+**Número de {{site.data.keyword.baremetal_short}}**.
 7. Complete la configuración del almacenamiento.
   * Si selecciona **Almacenamiento vSAN**, especifique los tipos de disco para la capacidad y los discos de memoria caché, el número de discos y la edición de licencia vSAN. Si desea más almacenamiento, marque el recuadro **Intel Optane de alto rendimiento**.
   * Si selecciona **Almacenamiento NFS** y desea añadir y configurar los mismos valores para todas las comparticiones de archivos, especifique el **Número de comparticiones**, el **Rendimiento** y el **Tamaño (GB)**.
   * Si selecciona **Almacenamiento NFS** y desea añadir y configurar comparticiones de archivos individualmente, seleccione **Configurar comparticiones individualmente**. A continuación, pulse el icono **+** situado junto a la etiqueta **Añadir almacenamiento compartido** y seleccione el **Rendimiento** y el **Tamaño (GB)** de cada compartición de archivos. Debe seleccionar al menos una unidad compartida de archivo.
-  * Si selecciona **Discos locales**, especifique el recuento de discos y el tipo de disco.
 8. Complete los valores de interfaz de red.
 8. Especifique cómo se proporciona la clave de licencia de vSphere:
   * Para los usuarios de Business Partners, se incluye y se adquiere en su nombre la licencia de vSphere (edición Enterprise Plus).
@@ -259,6 +237,33 @@ Tabla 5. Detalles de almacenamiento
 | Tamaño | La capacidad de almacenamiento. |
 | IOPS/GB | El nivel de rendimiento del almacenamiento. |
 | Protocolo NFS | La versión NFS del almacenamiento. |
+
+Tabla 6. Interfaz de red - Detalles de VLAN
+
+| Elemento        | Descripción       |  
+|:------------- |:------------- |
+| Número de VLAN | El número exclusivo de VLAN.  |
+| Descripción | La descripción de la VLAN.  |
+| Ubicación | La ubicación del centro de datos. |
+| Ruta primaria | La ruta primaria de la VLAN. |
+
+Pulse **Ver recurso** para acceder a los detalles de la VLAN.
+
+Tabla 7. Interfaz de red - Detalles de subred
+
+| Elemento        | Descripción       |  
+|:------------- |:------------- |
+| Nombre | El nombre de la subred. Pulse sobre el nombre para acceder a los detalles de la subred. |
+| Tipo | El tipo de subred: primario o portátil. |
+| Descripción | La descripción de la subred. |
+
+Tabla 8. Interfaz de red - Detalles de IP
+
+| Elemento        | Descripción       |  
+|:------------- |:------------- |
+| IP | Dirección IP. |
+| Estado | El estado de la dirección IP. |
+| Descripción |La descripción de la dirección IP.  |
 
 ## Supresión de clústeres de instancias de vCenter Server con NSX-T
 {: #vc_nsx-t_addingviewingclusters-deleting}

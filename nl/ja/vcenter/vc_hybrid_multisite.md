@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-08"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -30,9 +33,9 @@ lastupdated: "2019-03-08"
 * **セカンダリー・インスタンス**: プライマリー・インスタンスにリンクされた 1 つ以上の vCenter Server with Hybridity Bundle セカンダリー・インスタンス。構成は次のとおりです。
    *  SSO サイト名
    *  プライマリー・インスタンスのルート・ドメインにリンクされた DNS サブドメイン
-   *  プライマリー・インスタンスとセカンダリー・インスタンスの AD 仮想マシン間にセットアップされた DNS および AD のレプリケーション。
-   *  V2.8 以降でデプロイされたプライマリー・インスタンスの場合: 組み込み Platform Services Controller (PSC) を備えた vCenter Server Appliance (vCSA) がデプロイされ、構成されます。
-   *  セカンダリー・インスタンスの VMware vCenter には、プライマリー・インスタンスの vCenter との拡張リンク・モードがセットアップされます。
+   *  プライマリー・インスタンスとセカンダリー・インスタンスの AD 仮想マシン間にセットアップされた DNS および AD のレプリケーション
+   *  V2.8 以降でデプロイされたプライマリー・インスタンスの場合: 組み込み Platform Services Controller (PSC) を備えた vCenter Server Appliance (vCSA) がデプロイされ、構成されます
+   *  セカンダリー・インスタンスの VMware vCenter には、プライマリー・インスタンスの vCenter との拡張リンク・モードがセットアップされます
 
 ## vCenter Server with Hybridity Bundle のマルチサイト・デプロイメント
 {: #vc_hybrid_multisite-deployment}

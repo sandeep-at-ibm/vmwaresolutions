@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -17,7 +20,7 @@ lastupdated: "2019-03-12"
 
 {{site.data.keyword.vmwaresolutions_full}} permite desplegar instancias en diferentes ubicaciones y conseguir que se activen y se ejecuten en un breve periodo de tiempo.
 
-## Notes
+## Notas
 {: #sd_multisite-notes}
 
 * No puede establecer enlaces entre instancias de VMware Cloud Foundation y VMware vCenter Server en una configuración de varios sitios.
@@ -52,7 +55,7 @@ En el siguiente gráfico se muestra una visión general del despliegue de varios
 
 Figura 1. Despliegue de varios sitios de Cloud Foundation
 
-![Despliegue de varios sitios de Cloud Foundation](multisite-hub-spoke.svg "Despliegue de varios sitios de Cloud Foundation")
+![Despliegue de varios sitios de Cloud Foundation](../vcenter/multisite-hub-spoke.svg "Despliegue de varios sitios de Cloud Foundation")
 
 El modelo contiene las siguientes capas:
 

@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2018-10-19"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -48,7 +51,7 @@ V2.2 이상 릴리스에서 새 인스턴스는 ESXi 서버에 대한 새 고급
 
 모든 인스턴스의 일관성과 스토리지 확장에 필요한 충분한 지원을 허용하기 위해 남아 있는 구성 설정을 새 값으로 변경하는 것이 좋습니다. IBM은 모든 {{site.data.keyword.cloud_notm}} for VMware Solutions 이후 릴리스의 새 설정에 대해서만 테스트하도록 계획하고 있습니다.
 
-자세한 정보는 [vCenter Server 명세서](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom#advanced-configuration-settings-for-esxi-servers)의 _ESXi 서버의 고급 구성 설정_을 참조하십시오. 
+자세한 정보는 [vCenter Server 명세서](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom#advanced-configuration-settings-for-esxi-servers)의 _ESXi 서버의 고급 구성 설정_을 참조하십시오.
 
 ## 초기 클러스터에 최대 51개의 ESXi 서버를 지원하고 추가 클러스터에 최대 59개의 ESXi 서버를 지원함
 {: #relnotes_v22-esxi-cluster}

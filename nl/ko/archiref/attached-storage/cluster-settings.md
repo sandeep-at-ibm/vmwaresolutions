@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-28"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # 클러스터 설정

@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-08"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # 2.8 版的版本注意事項
@@ -75,7 +78,7 @@ lastupdated: "2019-02-08"
 
 此版本會套用下列升級及改善：
 
-* vSphere ESXi 6.5 Update P3（建置 6.5.0-10884925）
+* vSphere ESXi 6.5 Update EP11（建置 6.5.0-10719125）
 * vCenter Server 6.5 U2d（建置 6.5.0-10964411）
 * Platform Services Controller 6.5 U2d（建置 6.5.0-10964411）
 
@@ -108,9 +111,9 @@ lastupdated: "2019-02-08"
 ## 參照架構文件
 {: #relnotes_v28-ref}
 
-（2019 年 2 月 8 日更新）現在可於使用者說明文件的*參照* 小節中取得下列技術文件：
+（2019 年 2 月 8 日更新）在使用者說明文件的*參照* 小節中，下列技術文件是新的或已更新：
 
-* [{{site.data.keyword.vmwaresolutions_short}} 與 NSX-T 架構](/docs/services/vmwaresolutions/archiref/vcsarch?topic=vmware-solutions-vcsarch-overview)
+* [{{site.data.keyword.vmwaresolutions_short}} 架構（含 NSX-V 和 NSX-T）](/docs/services/vmwaresolutions/services?topic=vmware-solutions-solution_overview#solution_overview)
 * [Caveonix RiskForesight 參照架構](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-on-vcs)
 * [HCX on {{site.data.keyword.cloud_notm}} 部署及作業手冊](/docs/services/vmwaresolutions/archiref/vcshcx?topic=vmware-solutions-vcshcx-intro)
 

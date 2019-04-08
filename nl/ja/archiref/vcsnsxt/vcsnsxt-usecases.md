@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -49,7 +52,7 @@ Acme Skateboards 社は、アプリケーション・モダナイゼーション
 
 NSX-V について詳しくは、[NSX-V の概要](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv)を参照してください。 vCenter Server および {{site.data.keyword.icpfull_notm}} オファリングについて詳しくは、[vCenter Server および {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro) を参照してください。
 
-図 2. {{site.data.keyword.icpfull_notm}} を使用する vCenter Server
+図 2. {{site.data.keyword.icpfull_notm}} を使用する vCenter Server</br>
 ![{{site.data.keyword.icpfull_notm}} を使用する vCenter Server](vcsnsxt-nsxvhl.svg)
 
 これにより、オンプレミスと {{site.data.keyword.cloud_notm}} 間の疎結合された相互接続が作成され、以下のような機能を使用できるようになります。
@@ -63,7 +66,7 @@ NSX-V について詳しくは、[NSX-V の概要](/docs/services/vmwaresolution
 -	**スケジュールされたマイグレーション** – 任意の数の仮想マシンを宛先サイトに複製してから、指定した時刻にそのサイトでアクティブ化して、元のサイトで実行されているシステムを置き換えることができます。
 -	**セキュリティー・ポリシーのマイグレーション** - NSX をオンプレミスで使用する場合、セキュリティー・ポリシーやファイアウォールなどはすべてワークロードとともに移動されます。
 
-Acme Skateboards 社は、このソリューションを使用してオンプレミスの VMware ワークロードを {{site.data.keyword.cloud_notm}} に正常にマイグレーションし、ダウン時間をゼロまたはほぼゼロにしてアプリケーションは再構成しないという要件に応えることができました。 vCenter Server with Hybridity Bundle について詳しくは、[VMware HCX on {{site.data.keyword.cloud_notm}} ソリューション・アーキテクチャー](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)を参照してください。
+Acme Skateboards 社は、このソリューションを使用してオンプレミスの VMware ワークロードを {{site.data.keyword.cloud_notm}} に正常にマイグレーションし、ダウン時間をゼロまたはほぼゼロにしてアプリケーションは再構成しないという要件に応えることができました。 vCenter Server with Hybridity Bundle について詳しくは、[VMware HCX on {{site.data.keyword.cloud_notm}} ソリューション・アーキテクチャー](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)を参照してください。
 
 ## 関連リンク
 {: #vcsnsxt-usecases-related}

@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-14"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -17,7 +20,8 @@ lastupdated: "2019-02-14"
 
 {{site.data.keyword.vmwaresolutions_full}} 透過 {{site.data.keyword.slapi_short}} 呼叫，與 {{site.data.keyword.cloud_notm}} 基礎架構進行通訊。若要安全地存取 {{site.data.keyword.slapi_short}}，您必須將 {{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) 帳戶的認證鏈結至 {{site.data.keyword.cloud_notm}} 帳戶。
 
-{{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) 帳戶先前稱為 IBM SoftLayer 帳戶。{:note}
+{{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) 帳戶先前稱為 IBM SoftLayer 帳戶。
+{:note}
 
 您也可以指定是否要接收各種事件的電子郵件及主控台通知。
 

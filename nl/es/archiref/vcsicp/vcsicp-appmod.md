@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-15"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -22,7 +25,8 @@ Esta arquitectura híbrida permite a Acme Skateboards alcanzar los siguientes ob
 - Utilizar {{site.data.keyword.cloud_notm}} Automation Manager (CAM) para disponer de una infraestructura como código (IaC) para componer y coordinar servicios en los que intervienen tanto de máquinas virtuales como contenedores para integrarlos en sus cadenas de herramientas de DevOps y en su solución ITSM.
 
 La arquitectura de referencia comprende los siguientes componentes principales:
-- **Virtualización local**: un clúster VMware que actualmente aloja las VM de Acme Skateboards. Estas máquinas virtuales alojan actualmente las aplicaciones que se van a modernizar. Este clúster debe cumplir con los requisitos previos de la arquitectura de la [solución VMware HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf) para poder ejecutar HCX. HCX amplía las redes locales a {{site.data.keyword.cloud_notm}}, permitiendo a los clientes migrar las VM a la instancia de VMware vCenter Server on {{site.data.keyword.cloud_notm}} que se ejecuta en {{site.data.keyword.cloud_notm}} y viceversa si es necesario.
+- **Virtualización local**: un clúster VMware que actualmente aloja las VM de Acme Skateboards. Estas máquinas virtuales alojan actualmente las aplicaciones que se van a modernizar. Este clúster debe cumplir los requisitos previos de la
+[Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro) para que pueda ejecutar HCX. HCX amplía las redes locales a {{site.data.keyword.cloud_notm}}, permitiendo a los clientes migrar las VM a la instancia de VMware vCenter Server on {{site.data.keyword.cloud_notm}} que se ejecuta en {{site.data.keyword.cloud_notm}} y viceversa si es necesario.
 
 - **{{site.data.keyword.vmwaresolutions_short}}**: la instancia de vCenter Server proporciona los componentes fundamentales de VMware, como vSphere, vCenter Server, NSX-V y opciones de almacenamiento que incluyen vSAN o almacenamiento {{site.data.keyword.cloud_notm}} Endurance, necesarios para desplegar automáticamente una solución VMware Software Defined Data Center (SDDC). El clúster VMware es el destino de las máquinas virtuales migradas y de algunas de las aplicaciones modernizadas en los contenedores alojados en {{site.data.keyword.icpfull_notm}}. Estos son los componentes clave de vCenter Server:
     - **NSX-V**: NSX-V ofrece la capa de virtualización de red en VCS que proporciona una superposición de red para las VM de Acme Skateboards. NSX-V habilita BYOIP y aísla las redes de carga de trabajo de las redes de IBM Cloud. NSX-V está programado por HCX para crear las redes que Acme Skateboards extiende desde el entorno local.
@@ -31,7 +35,7 @@ La arquitectura de referencia comprende los siguientes componentes principales:
 
 - **{{site.data.keyword.icpfull_notm}}**: {{site.data.keyword.icpfull_notm}} es una plataforma de aplicaciones para desarrollar y gestionar aplicaciones contenerizadas. {{site.data.keyword.icpfull_notm}} es un entorno integrado que incluye el coordinador de contenedores Kubernetes, un repositorio de imágenes privadas, una consola de gestión, infraestructuras de supervisión y una interfaz gráfica de usuario, que proporciona una ubicación centralizada desde la que Acme Skateboards puede desplegar, gestionar, supervisar y escalar aplicaciones. La instancia de vCenter Server aloja los componentes de {{site.data.keyword.icpfull_notm}}, los nodos maestros, los nodos trabajadores, y los ejecuta como máquinas virtuales. {{site.data.keyword.icpfull_notm}} contiene lo siguiente:
     - **{{site.data.keyword.cloud_notm}} Automation Manager**: CAM es una plataforma de código como infraestructura (IaC) preparada para la empresa que proporciona un único panel para suministrar cargas de trabajo de VM, locales o en VCS, junto con cargas de trabajo Kubernetes, en {{site.data.keyword.icpfull_notm}} o {{site.data.keyword.containerlong_notm}}, utilizando plantillas. CAM es una aplicación Docker que se ejecuta en una instalación {{site.data.keyword.icpfull_notm}} y que está estrechamente integrada para la autorización, el control de acceso basado en roles (RBAC) y otras funciones.
-    - Las aplicaciones contenerizadas de Acme Skateboards que los clientes desean desplegar en este entorno.
+    - Las aplicaciones de Acme Skateboards contenerizadas que los clientes desean desplegar en este entorno.
 
 - **{{site.data.keyword.containerlong_notm}}**: {{site.data.keyword.containerlong_notm}} permite a Acme Skateboards desplegar sus aplicaciones modernizadas en contenedores Docker que se ejecutan en clústeres Kubernetes. IBM gestiona por completo los nodos maestros, mientras que los nodos trabajadores de la agrupación de nodos trabajadores se despliegan en la misma cuenta de {{site.data.keyword.cloud_notm}} que su instancia de vCenter Server. Los nodos trabajadores pueden ser nativos, públicos o instancias de servidor virtual dedicado. Calico se instala y se configura automáticamente en {{site.data.keyword.containerlong_notm}}. Calico proporciona conectividad de red segura para contenedores y se configura en {{site.data.keyword.containerlong_notm}} para utilizar la encapsulación IP en IP para los paquetes que viajan a través de subredes y para utilizar NAT para las conexiones salientes de los contenedores.
 
@@ -48,7 +52,7 @@ vCenter Server ofrece los bloques básicos fundamentales que incluyen VMware vSp
 En resumen, las ofertas de {{site.data.keyword.vmwaresolutions_short}} proporcionan las ventajas siguientes:
 
 * Aceleran la entrega de proyectos de TI a desarrolladores y líneas de negocio, reduciendo el tiempo necesario para la adquisición, la arquitectura, la implementación y el despliegue de recursos de semanas o meses a horas.
-* Mejoran la seguridad con servidores nativos dedicados en una nube privada alojada, incluido el despliegue de puntos finales privados en servicios de {{site.data.keyword.cloud_notm}}, como {{site.data.keyword.containerlong_notm}} y KMIP.
+* Mejoran la seguridad con servidores nativos dedicados en una nube privada alojada, incluido el despliegue de puntos finales de red privados en servicios de {{site.data.keyword.cloud_notm}}, como {{site.data.keyword.containerlong_notm}} y KMIP.
 * Permiten llevar a cabo una gestión y gobierno coherentes de la nube híbrida desplegada, proporcionando acceso administrativo completo a la gestión de virtualización, conservando así las herramientas de VMware existentes, los scripts y las inversiones en formación.
 * Aprovechan la experiencia de VMware a escala global con IBM Professional y Servicios gestionados que abarcan más de 30 {{site.data.keyword.CloudDataCents_notm}} en todo el mundo.
 

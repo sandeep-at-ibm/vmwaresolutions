@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-15"
 
+subcollection: vmwaresolutions
+
+
 ---
 # Préparation de l'environnement d'installation
 {: #hcx-archi-prep-install}

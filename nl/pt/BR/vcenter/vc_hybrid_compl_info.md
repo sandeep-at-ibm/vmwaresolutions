@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-12"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Informações de conformidade para instâncias do vCenter Server with Hybridity Bundle

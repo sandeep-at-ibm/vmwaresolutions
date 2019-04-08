@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-13"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -34,7 +37,6 @@ vSAN 암호화가 데이터 저장소 레벨에서 작동하므로 기본 목표
 * vSAN 암호화는 기타 스토리지 솔루션(예: {{site.data.keyword.cloud_notm}} Endurance 파일 및 블록 스토리지)에 적용되지 않습니다.
 * vSAN 암호화에는 vSAN Enterprise 라이센스가 필요합니다.
 * vSAN 상태 검사 시 하나 이상의 vSphere 호스트에서 KMS 클러스터에 연결할 수 없다는 경고가 주기적으로 나타날 수 있습니다. 이러한 경고는 vSAN 상태 검사 연결 제한시간이 너무 빨리 초과하기 때문에 발생합니다. 이 경고는 무시해도 됩니다. 자세한 정보는 [vSAN KMS 상태 검사가 간헐적으로 SSL Handshake Timeout 오류와 함께 실패](https://kb.vmware.com/s/article/67115){:new_window}를 참조하십시오.
-
 
 ### vSphere 암호화
 {: #kmip-design-vsphere-encrypt}
@@ -105,7 +107,7 @@ KMIP for VMware는 많은 {{site.data.keyword.cloud_notm}} 다중 영역 지역(
 
 KMIP for VMware는 사설 인터넷이 아닌 {{site.data.keyword.cloud_notm}} 사설 네트워크를 사용하여 {{site.data.keyword.cloud_notm}} Key Protect에도 연결합니다.
 
-사설 네트워크를 통해 KMIP for VMware에 액세스하려면 {{site.data.keyword.cloud_notm}} 인프라 계정은 VRF(Virtual Routing and Forwarding)에 사용으로 설정되어야 하고 IBM network 서비스 엔드포인트 라우트는 사용자 계정의 VRF 라우트에 추가되어야 합니다. 자세한 정보는 [서비스 엔드포인트에 대한 계정 사용](/docs/services/service-endpoint?topic=services/service-endpoint-getting-started#cs_cli_install_steps)을 참조하십시오.
+사설 네트워크를 통해 KMIP for VMware에 액세스하려면 {{site.data.keyword.cloud_notm}} 인프라 계정이 VRF(Virtual Routing and Forwarding)에 대해 사용으로 설정되어야 하고 {{site.data.keyword.cloud_notm}} 네트워크 서비스 엔드포인트 라우트가 사용자 계정의 VRF 라우트에 추가되어야 합니다. 자세한 정보는 [서비스 엔드포인트에 대한 계정 사용](/docs/services/service-endpoint?topic=services/service-endpoint-getting-started#cs_cli_install_steps)을 참조하십시오.
 
 ## 관련 링크
 {: #kmip-design-related}

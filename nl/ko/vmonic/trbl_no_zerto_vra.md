@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-14"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Zerto Virtual Replication Appliances가 새로 작성된 ESXi 서버에 대해 표시되지 않음

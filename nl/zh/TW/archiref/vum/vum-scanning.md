@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -21,7 +24,7 @@ lastupdated: "2019-02-15"
 {: #vum-scanning-scan-hosts}
 
 1. 按一下**掃描更新**，選取**修補程式、延伸規格及升級**，然後按一下**確定**。
-2. 掃描完成時，請選取**重要主機修補程式**。在下方窗格中，按一下**修補程式數**中的數目，以檢閱每個主機的修補程式詳細資料。視窗會顯示修補程式資訊。
+2. 掃描完成時，請選取**重要主機修補程式**。在下方窗格中，按一下**修補程式數**中的數目，以檢閱每部主機的修補程式詳細資料。視窗會顯示修補程式資訊。
 3. 針對**非重要修補程式**，進行檢閱並重複。
 
   VUM 日誌檔位於下列路徑：_/var/log/vmware/vmware-updatemgr/vum-server/vmware-vum-server-log4cpp.log_
@@ -61,5 +64,5 @@ lastupdated: "2019-02-15"
 ## 相關鏈結
 {: #vum-scanning-related}
 
-* [VMware HCX on {{site.data.keyword.cloud}} 解決方案架構](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} 解決方案架構](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware)（示範）

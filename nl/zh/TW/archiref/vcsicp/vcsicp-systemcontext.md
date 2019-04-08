@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-15"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # 系統環境定義
@@ -52,7 +55,7 @@ vCenter Server | 系統管理者用來在 vCenter Server 實例中管理內部�
 Terraform | 使用 VMware vSphere、{{site.data.keyword.cloud_notm}}、Microsoft Azure、Amazon Web Services、Google Cloud Platform 和 OpenStack 這類提供者，來處理雲端和基礎架構資源的佈建。
 HELM |  Kubernetes 的套件管理程式。Helm 圖表可用來定義 Kubernetes 資源及部署應用程式。
 Chef |負責配置管理及規範自動化。Terraform 完成起始佈建之後，Chef 會部署並配置中介軟體和應用程式。
-服務| 代表「服務編製器」，管理者會在這裡編寫、組合及設計從 Kubernetes 資源及一個以上 VM 建構的服務。
+服務| 代表「服務編製器」，管理者會在這裡編寫、組合及設計從 Kubernetes 資源及一部以上 VM 建構的服務。
 容器化應用程式 |已完成應用程式現代化旅程且目前執行為容器的應用程式。對於此參照架構和 Acme Skateboards，其中一個容器化應用程式是 Web 伺服器，它是線上呈現工作負載的一部分。
 Watson | 對於此參照架構和 Acme Skateboards，Watson 代表「概念車」架構中使用的 AI 服務。
 

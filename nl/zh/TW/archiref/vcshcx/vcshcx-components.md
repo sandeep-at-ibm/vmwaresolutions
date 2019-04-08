@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-05"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # HCX 元件和術語的名詞解釋
@@ -46,7 +49,7 @@ HCX 是雲端（目標）及用戶端（來源）的概念。
 
 - 雲端使用者介面 - 可透過提供給 HCX 用戶端登錄的公用登錄 URL，來存取雲端 HCX 使用者介面。依預設，它會使用雲端 vSphere SSO 登入 (`administrator@vsphere.local`)。它通常是用來升級安裝及修改部分網路配置。它也用於 HCX 中建置虛擬網路。
 
-- 用戶端 / 雲端 HCX Manager 應用裝置管理使用者介面 - 透過在 `https://<hcxmanager_IP>:9443` 中所看見的 VM 專用 IP 位址，存取雲端或用戶端的應用裝置管理使用者介面。 ID（通常是“admin”）和密碼是透過 {{site.data.keyword.vmwaresolutions_short}} 入口網站提供。管理使用者介面用來啟動和停止 HCX Manager 服務、配置日誌監視、基本網路配置、手動升級、Web 使用者介面無法運作時支援日誌收集、向 vSphere 元件（vCenter、PSC、NSX Manager）登錄，以及憑證管理。
+- 用戶端 / 雲端 HCX Manager 應用裝置管理使用者介面 - 透過在 vCenter `https://<hcxmanager_IP>:9443` 中所看見的 VM 專用 IP 位址，存取雲端或用戶端的應用裝置管理使用者介面。ID（通常是“admin”）和密碼是透過 {{site.data.keyword.vmwaresolutions_short}} 入口網站提供。管理使用者介面用來啟動和停止 HCX Manager 服務、配置日誌監視、基本網路配置、手動升級、Web 使用者介面無法運作時支援日誌收集、向 vSphere 元件（vCenter、PSC、NSX Manager）登錄，以及憑證管理。
 
 ## 相關鏈結
 {: #vcshcx-components-related}

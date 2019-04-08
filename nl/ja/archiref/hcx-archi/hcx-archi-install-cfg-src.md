@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-15"
 
+subcollection: vmwaresolutions
+
+
 ---
 # ソースでの HCX の構成およびインストール
 {: #hcx-archi-install-cfg-src}

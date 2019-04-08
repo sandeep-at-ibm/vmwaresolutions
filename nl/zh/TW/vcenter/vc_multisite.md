@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-08"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -33,9 +36,9 @@ lastupdated: "2019-03-08"
 * **次要實例**：一個以上鏈結至主要實例的次要 vCenter Server 實例，其具有下列配置：
    *  SSO 站台名稱
    *  鏈結至主要實例上之根網域的 DNS 子網域
-   *  主要實例及次要實例上的 AD 虛擬機器之間的 DNS 及 AD 抄寫設定。
-   *  若為 2.8 版或更新版本中部署的主要實例：部署及配置具有內嵌 Platform Services Controller (PSC) 的 vCenter Server Appliance (vCSA)。
-   *  使用「加強型鏈結模式」將次要實例上的 VMware vCenter 設定為主要實例上的 vCenter。
+   *  主要實例及次要實例上的 AD 虛擬機器之間的 DNS 及 AD 抄寫設定
+   *  若為 2.8 版或更新版本中部署的主要實例：部署及配置具有內嵌 Platform Services Controller (PSC) 的 vCenter Server Appliance (vCSA)
+   *  使用「加強型鏈結模式」將次要實例上的 VMware vCenter 設定為主要實例上的 vCenter
 
 ## vCenter Server 多站台部署
 {: #vc_multisite-deployment}

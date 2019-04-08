@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -26,6 +29,7 @@ VUM을 사용하면 VMware vSphere에 대한 자동화된 중앙 집중식 패�
 이 문서에서는 VUM에서 VMware 저장소에 액세스할 수 있도록 CentOS 및 Squid 기반의 프록시 서버 구현을 사용하는 방법에 대해 설명합니다. VUM이 VMware에 있는 업데이트 서버의 리소스를 요청하면 먼저 요청이 프록시 서버로 전송된 다음 프록시 서버가 ESG(External Services Gateway)를 통해 해당 요청을 업데이트 서버로 전송합니다. 프록시 서버가 리소스를 얻은 후 해당 리소스를 VUM으로 전송합니다.
 
 그림 1. 개요 다이어그램
+</br>
 ![개요 다이어그램](vum-vcsproxy.svg)
 
 vCenter Server는 현재 vSphere 6.5를 배치합니다. 즉, 이제 VUM이 VCSA(vCenter Server Appliance) 내에 통합되었으며 VUM 클라이언트 컴포넌트는 vSphere Web Client에서 실행되는 플러그인이므로 VCSA 배치 후 자동으로 사용으로 설정됩니다. 그러나 VUM에서는 VMware 저장소에 액세스하기 위해 인터넷에 액세스할 수 없습니다.
@@ -67,5 +71,5 @@ vSAN을 사용하여 vCenter Server를 배치한 경우 먼저 [vSAN 클러스�
 ## 관련 링크
 {: #vum-intro-related}
 
-* [VMware HCX on {{site.data.keyword.cloud_notm}} 솔루션 아키텍처](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} 솔루션 아키텍처](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} 디지털 기술 업무](https://ibm-dte.mybluemix.net/ibm-vmware)(데모)

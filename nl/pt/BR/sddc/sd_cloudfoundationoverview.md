@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-12"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -66,7 +69,7 @@ Sua instância pode ter o {{site.data.keyword.cloud_notm}} {{site.data.keyword.b
 Se você planeja usar o armazenamento vSAN, a configuração requer quatro {{site.data.keyword.baremetal_short}}.
 {:note}
 
-### Rede
+### Redes
 {: #sd_cloudfoundationoverview-networking}
 
 Sua instância contém os componentes de rede a seguir:

@@ -4,6 +4,9 @@ copyright:
   years: 2016, 2019
 lastupdated: "2019-03-12"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Evénements d'Activity Tracker

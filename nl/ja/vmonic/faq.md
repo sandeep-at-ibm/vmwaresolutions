@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-12"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -46,7 +49,7 @@ lastupdated: "2019-03-12"
 
 * VMware vCenter Server インスタンスを注文した場合は、カスタマイズしたコンピュート、ストレージ、ネットワークのリソースを備えた VMware 仮想環境がデプロイされます。 デプロイされるコンポーネントについて詳しくは、[vCenter Server インスタンスの技術仕様](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs)を参照してください。
 * VMware vSphere クラスターを注文すると、ホスト対象の VMware 環境を、VMware 互換ハードウェアを組み込みながら設計して構築するための柔軟性が最大化されます。 ただし、{{site.data.keyword.cloud_notm}} では、VMware vSphere クラスターのオプションの VMware コンポーネントのインストールや構成や起動が自動化されません。
-* vCenter Server インスタンスと vSphere クラスターとでは、サポートされる機能が異なります。詳しくは、[オファリングの比較表](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-inst_comp_chart)を参照してください。
+* vCenter Server インスタンスと vSphere クラスターとでは、サポートされる機能が異なります。 詳しくは、[オファリングの比較表](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-inst_comp_chart)を参照してください。
 
 ## vCenter Server インスタンスには何が含まれていますか?
 {: #faq-vcs}

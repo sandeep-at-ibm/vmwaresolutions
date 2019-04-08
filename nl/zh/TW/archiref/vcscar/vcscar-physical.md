@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -31,6 +34,7 @@ IBM Multi-Cluster Manager 提供使用者可見性、以應用程式為中心的
 下圖說明應用程式現代化基礎架構實作中 ACME Skate Advisor 應用程式的參照實作。
 
 圖 1. Skate Advisor 實體元件
+</br>
 ![Skate Advisor 實體元件](vcscar-physical.svg)
 
 Skate Advisor 應用程式使用與 Watson 互動的微服務型元件以及 nginx 容器來延伸現有的 Acme Web 應用程式，以對 Web 及微服務容器的要求進行 Proxy 處理。
@@ -54,6 +58,7 @@ Skate Advisor 應用程式利用應用程式現代化平台來提供必要的管
 * VMWare 範本 - VMWare 範本是已預先安裝 mysql 及資料庫綱目的 Ubuntu 範本。
 
 圖 2. CAM 編排
+</br>
 ![CAM 編排](vcscar-cam.svg)
 
 ### 負載平衡與 Proxy 處理
@@ -99,6 +104,7 @@ Skate Advisor 需要下列通訊：
 應用程式現代化平台已設計提供下列元件，來
 
 圖 3. 公用網路存取
+</br>
 ![公用網路存取](vcscar-network.svg)
 
 {{site.data.keyword.cloud_notm}} 有兩個網路。公用網路容許從網際網路連接伺服器，而專用網路容許伺服器透過高速骨幹在所有 {{site.data.keyword.CloudDataCents_notm}} 中彼此通訊。
@@ -113,6 +119,7 @@ Skate Advisor 需要下列通訊：
 Skate Advisor 應用程式使用下列軟體元件。
 
 圖 4. Skate Advisor 軟體對映
+</br>
 ![Skate Advisor 軟體對映](vcscar-sw-mapping.svg)
 
 會使用下列軟體元件：

@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-04"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -46,7 +49,8 @@ lastupdated: "2019-03-04"
 
 叢集的部署會自動啟動，且您會收到電子郵件確認，指出正在處理該訂單。當叢集已備妥可供使用時，會透過電子郵件通知您。
 
-vSphere 叢集不會連同 vCenter Server 實例及 Cloud Foundation 實例顯示在**資源**頁面上。{:note}
+vSphere 叢集不會連同 vCenter Server 實例及 Cloud Foundation 實例顯示在**資源**頁面上。
+{:note}
 
 ## 相關鏈結
 {: #vs_orderingforclustersoutside-related}

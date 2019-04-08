@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -43,7 +46,7 @@ Tabla 1. Niveles de actualización e impacto
 ## Procedimiento para aplicar actualizaciones a instancias de vCenter Server con el paquete híbrido (Hybridity)
 {: #vc_hybrid_applyingupdates-procedure}
 
-1. En la consola de {{site.data.keyword.vmwaresolutions_full}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
+1. En la consola de {{site.data.keyword.vmwaresolutions_full}}, pulse **Recursos** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de vCenter Server**, pulse la instancia que desea actualizar.
 3. En la página **Resumen**, verifique que todos los detalles de la instancia se muestren correctamente. A continuación, pulse **Infraestructura** en el panel de navegación de la izquierda para verificar los detalles en la página **Infraestructura**.
    Si no se visualizan los detalles, esto podría indicar un problema de conectividad con la Instancia de servidor virtual (VSI) de IBM CloudDriver, como resultado de una regla de cortafuegos u otro problema de la red. Resuelva el problema antes de continuar con el siguiente paso; de lo contrario, la actualización puede fallar.
@@ -76,7 +79,7 @@ Tabla 1. Niveles de actualización e impacto
 2. Para ver detalles sobre los estados de una actualización, consulte la siguiente lista:
 <dl class="dl">
 <dt class="dt dlterm">Disponible</dt>
-<dd class="dd">La actualización está lista para se aplicada. No puede seleccionar una actualización disponible hasta que se hayan aplicado sus actualizaciones anteriores.
+<dd class="dd">La actualización está lista para aplicarse. No puede seleccionar una actualización disponible hasta que se hayan aplicado sus actualizaciones anteriores.
 </dd>
 <dt class="dt dlterm">En curso</dt>
 <dd class="dd">El trabajo de actualización se ha iniciado pero todavía no ha finalizado. No puede aplicar ninguna otra actualización hasta que finalice el trabajo de actualización actual.</dd>

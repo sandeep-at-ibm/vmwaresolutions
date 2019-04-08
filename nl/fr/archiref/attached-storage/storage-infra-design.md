@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-27"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -23,7 +26,7 @@ Le graphique suivant décrit l'architecture globale du stockage connecté sur un
 
 Figure 1. Architecture de haut niveau de stockage connecté sur {{site.data.keyword.cloud_notm}}
 
-![Architecture de stockage connecté](../solution/physical_nfs.svg "Architecture de haut niveau de stockage connecté sur IBM Cloud")
+![Architecture de stockage connecté](../solution/vcsv4radiagrams-ra-nfs-shares.svg "Architecture de haut niveau de stockage connecté sur IBM Cloud")
 
 ## Conception d'infrastructure physique
 {: #storage-infra-design-phys-infra-design}

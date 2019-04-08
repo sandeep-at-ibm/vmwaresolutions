@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-13"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -23,10 +26,10 @@ RiskForesight 安裝包含下列高階步驟：
 
 1. [起始規劃和必要條件](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step1) - 瞭解並選取部署選項，配置 DNS 來提供應用程式元件的 FQDN/IP 解析。
 2. [虛擬機器部署](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step2) - 從 OVF 範本部署 VM。VM 上已安裝所有應用程式元件。
-3. [應用程式配置](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step3) - 執行 Caveonix 配置 Script，它會在每一個 VM 上配置應用程式元件。
+3. [應用程式配置](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step3) - 執行 Caveonix 配置 Script，它會在每一部 VM 上配置應用程式元件。
 4. [應用程式設定](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step4) - 設定「服務提供者」及「承租戶」或「組織」，以便使用者可以存取應用程式。
 
-自動安裝，會佈建一個 VM，並在該 VM 上配置所有應用程式元件。
+自動安裝，會佈建一部 VM，並在該 VM 上配置所有應用程式元件。
 {:note}
 
 ## 部署大小
@@ -102,7 +105,7 @@ RiskForesight 安裝包含下列高階步驟：
 |VM 總計|1	|4	|48 |
 
 **附註：**當您移除 {{site.data.keyword.cloud_notm}} 服務上的 Caveonix RiskForesight 時，{{site.data.keyword.vmwaresolutions_short}} 自動化只會刪除已部署的單一「全功能」的 Caveonix VM，以及針對其訂購的專用子網路。因此，
-* 如果您將 Caveonix VM 擴充為多個 VM，額外的 VM 不會被移除。 
+* 如果您將 Caveonix VM 擴充為多部 VM，額外的 VM 不會被移除。 
 * 如果您已使用額外 VM 上的專用子網路的 IP 位址，必須對那些 VM 指派新的 IP 位址，才能夠繼續運作。 
 * 如果您刪除已安裝 Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} 服務的 vCenter Server 實例 A，而且您使用針對 vCenter Server 實例 B 中的服務所訂購的專用子網路的 IP 位址，則專用子網路會在刪除 vCenter Server 實例 A 時立即被取消。
 

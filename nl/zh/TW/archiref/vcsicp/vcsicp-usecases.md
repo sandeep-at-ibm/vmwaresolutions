@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-18"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # 使用案例

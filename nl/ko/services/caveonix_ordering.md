@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-11"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -15,12 +18,12 @@ lastupdated: "2019-03-11"
 # IBM Cloud의 Caveonix RiskForesight 주문
 {: #caveonix_ordering}
 
-서비스가 포함된 새 VMware vCenter Server 인스턴스를 주문할 때 또는 기존 인스턴스에 서비스를 추가하여 {{site.data.keyword.cloud}}의 Caveonix RiskForesight 서비스를 주문할 수 있습니다. 
+서비스가 포함된 새 VMware vCenter Server 인스턴스를 주문할 때 또는 기존 인스턴스에 서비스를 추가하여 {{site.data.keyword.cloud}}의 Caveonix RiskForesight 서비스를 주문할 수 있습니다.
 
 ## 새 인스턴스에 대한 IBM Cloud의 Caveonix RiskForesight 주문
 {: #caveonix_ordering-new}
 
-{{site.data.keyword.cloud_notm}}의 Caveonix RiskForesight와 함께 새 VMware vCenter Server on {{site.data.keyword.cloud_notm}}를 주문하려면 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 인스턴스를 주문할 때 **서비스** 섹션에서 **IBM Cloud의 Caveonix RiskForesight**를 선택하십시오. 
+{{site.data.keyword.cloud_notm}}의 Caveonix RiskForesight와 함께 새 VMware vCenter Server on {{site.data.keyword.cloud_notm}}를 주문하려면 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 인스턴스를 주문할 때 **서비스** 섹션에서 **IBM Cloud의 Caveonix RiskForesight**를 선택하십시오.
 
 ## 기존 인스턴스에 대한 IBM Cloud의 Caveonix RiskForesight 주문
 {: #caveonix_ordering-existing}
@@ -35,7 +38,7 @@ lastupdated: "2019-03-11"
 ### 라이센스 이름
 {: #caveonix_ordering-config-license-name}
 
-라이센스에 대한 고유 이름을 지정하십시오. 
+라이센스에 대한 고유 이름을 지정하십시오.
 
 ### 라이센스 참고
 {: #caveonix_ordering-config-license-notes}

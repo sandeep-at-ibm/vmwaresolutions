@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-14"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # 次要 vCenter Server 系統未出現在 vSphere Web Client 庫存中

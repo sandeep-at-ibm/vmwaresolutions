@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-08"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Notas del release para V2.8
@@ -16,7 +19,7 @@ Este release incluye nuevas características, actualizaciones de componentes, me
 ## Instancias de prueba de un solo nodo para migración y modernización de apps
 {: #relnotes_v28-single-node-trial}
 
-La prueba de un solo nodo para la migración y modernización de apps constituye una forma sencilla de realizar una prueba de {{site.data.keyword.cloud_notm}} para migrar cargas de trabajo de VMware a {{site.data.keyword.cloud_notm}} y, a continuación, modernizar las cargas de trabajo simples utilizando contenedores. Esta versión de prueba es una versión de {{site.data.keyword.icpfull_notm}} Hosted on VMware vCenter Server on {{site.data.keyword.cloud_notm}} que proporciona la plataforma de gestión de Kubernetes para contenedores y la plataforma VMware de un solo arrendatario que se puede gestionar utilizando las mismas herramientas que se emplean en entornos locales.
+La prueba de un solo nodo para la migración y modernización de apps constituye una forma sencilla de realizar una prueba de {{site.data.keyword.cloud_notm}} para migrar cargas de trabajo de VMware a {{site.data.keyword.cloud_notm}} y, a continuación, modernizar las cargas de trabajo utilizando contenedores. Esta versión de prueba es una versión de {{site.data.keyword.icpfull_notm}} Hosted on VMware vCenter Server on {{site.data.keyword.cloud_notm}} que proporciona la plataforma de gestión de Kubernetes para contenedores y la plataforma VMware de un solo arrendatario que se puede gestionar utilizando las mismas herramientas que se emplean en entornos locales.
 
 Para obtener más información, consulte [Visión general de la prueba de un solo nodo para la migración y la modernización de apps](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-single-node-trial-for-migration-and-app-modernization-overview).
 
@@ -75,7 +78,7 @@ Para obtener más información, consulte la sección *Arquitectura de vCenter Se
 
 Este release se aplica a las siguientes actualizaciones y mejoras:
 
-* vSphere ESXi 6.5 Actualización P3 (compilación 6.5.0-10884925)
+* vSphere ESXi 6.5 Actualización EP11 (compilación 6.5.0-10719125)
 * vCenter Server 6.5 U2d (compilación 6.5.0-10964411)
 * Platform Services Controller 6.5 U2d (compilación 6.5.0-10964411)
 
@@ -108,9 +111,10 @@ Para obtener más información, consulte [Visión general de KMIP for VMware on 
 ## Documentación de arquitectura de referencia
 {: #relnotes_v28-ref}
 
-(Actualizado el 8 de febrero de 2019) Los siguientes documentos técnicos están ahora disponibles en la sección *Consulta* de la documentación del usuario:
+(Actualizado el 8 de febrero de 2019) Los siguientes documentos técnicos son nuevos o se han actualizado en la sección *Consulta* de la documentación del usuario:
 
-* [{{site.data.keyword.vmwaresolutions_short}} con arquitectura NSX-T](/docs/services/vmwaresolutions/archiref/vcsarch?topic=vmware-solutions-vcsarch-overview)
+* [Arquitectura de {{site.data.keyword.vmwaresolutions_short}} (con NSX-V y NSX-T)
+](/docs/services/vmwaresolutions/services?topic=vmware-solutions-solution_overview#solution_overview)
 * [Arquitectura de referencia de Caveonix RiskForesight](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-on-vcs)
 * [Guía de despliegue y operaciones de HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/archiref/vcshcx?topic=vmware-solutions-vcshcx-intro)
 

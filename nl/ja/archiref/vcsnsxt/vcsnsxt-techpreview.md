@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -150,6 +153,7 @@ Calico は分散スケールアウト・アーキテクチャーを基にして�
 -	BIRD。Felix もホストするすべてのノードで BGP クライアント機能を提供します。 Felix が Linux カーネルにルートを挿入すると、BGP クライアントがルートを取得してデプロイメント内の他のノードに配布します。 大規模環境では、BGP ルート・リフレクターもデプロイされ、BGP クライアントが接続するための中心点として機能します。 これにより、各クライアントが他のすべてのクライアントと対話してデプロイメント内の他のノードにルートを配布する必要がなくなります。
 
 図 3. Calico の概要
+</br>
 ![Calico の概要](vcsnsxt-calico-cni.svg)
 
 ### NSX-T および Calico
@@ -187,6 +191,7 @@ Kubernetes と NSX Manager の統合を実現するコア・コンポーネン�
 以下の例では、Acme と Skateboards という 2 つの Kubernetes 名前空間が使用されています。それぞれの名前空間に、専用の論理スイッチおよび Tier-1 ルーターと、T0 論理ルーターに接続するための IP セグメントがあります。
 
 図 5. Kubernetes NCP
+</br>
 ![Kubernetes NCP](vcsnsxt-ncpk8sapi.svg)
 
 ### NSX Security Policy Manager
@@ -207,6 +212,7 @@ Kubernetes と NSX Manager の統合を実現するコア・コンポーネン�
 -	スイッチ・セキュリティーは、無許可トラフィックに対するストーム制御およびセキュリティーを提供します。
 
 図 6. NSX-T マイクロ・セグメンテーション
+</br>
 ![NSX-T マイクロ・セグメンテーションの例](vcsnsxt-tsecurity.svg)
 
 ### NSX-T と NSX-V の違い
@@ -242,6 +248,7 @@ VMware vSphere 環境では、VMware NSX-T は NSX-V と同じ機能を提供し
 Kubernetes と NSX-V の統合では、{{site.data.keyword.cloud_notm}} 自動化機能により、vCenter Server インスタンス上に {{site.data.keyword.icpfull_notm}} がインストールされます。 専用のスイッチ/VXLAN、DLR、および ESG が Kubernetes ネットワークのためだけに作成されます。 Day 1 の {{site.data.keyword.icpfull_notm}} のオーバーレイ・ネットワークは、アンダーレイ・ネットワークにアクセスするために ESG を介してルーティングがセットアップされた 192.168.20.0/ 24 サブネットです。
 
 図 7. NSX-V および Kubernetes
+</br>
 ![NSX-V および Kubernetes](vcsnsxt-transitnet.svg)
 
 #### NSX-T との統合
@@ -252,6 +259,7 @@ Kubernetes と NSX-T の統合は、NSX-T コンテナー・プラグイン (NCP
 NSX-T 分散ファイアウォールでは、Kubernetes クラスターのために実装されるネットワーク・ポリシーを作成できます。 入口および出口ポリシー、ラベル、および式マッチング・ポリシーをサポートし、ロード・バランサー機能を備えており、これらはすべて Kubernetes インフラストラクチャーに適用できます。
 
 図 8. NSX-T および Kubernetes
+</br>
 ![NSX-T および Kubernetes](vcsnsxt-t1t0router.svg)
 
 ## 関連リンク

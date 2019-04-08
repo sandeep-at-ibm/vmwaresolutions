@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 # vCenter Server on IBM Cloud with Hybridity Bundle 개요
@@ -33,4 +36,4 @@ vCenter Server Hybridity Bundle에 사용 가능한 서비스 및 다중 오퍼�
 ## 관련 링크
 {: #vcs-hybridity-intro-related}
 
-* [VMware HCX on {{site.data.keyword.cloud_notm}} 솔루션 아키텍처](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} 솔루션 아키텍처](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)

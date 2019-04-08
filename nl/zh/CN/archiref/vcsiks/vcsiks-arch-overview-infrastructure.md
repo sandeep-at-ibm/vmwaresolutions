@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -127,6 +130,7 @@ Edge 大小 - 精简|1 个 vCPU
 {: #vcsiks-arch-overview-infrastructure-iks-comp}
 
 图 3. {{site.data.keyword.containerlong_notm}} 组件
+</br>
 ![{{site.data.keyword.containerlong_notm}} 组件图](vcsiks-iks-components.svg)
 
 ### Kubernetes 主节点

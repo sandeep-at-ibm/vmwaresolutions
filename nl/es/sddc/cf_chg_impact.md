@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-14"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -38,6 +41,7 @@ El ID de usuario de esta cuenta está en el formato `<service_name>-<truncated s
 
 ## Recursos de VMware correspondientes a instancias de Cloud Foundation
 {: #cf_chg_impact-vmware-resources}
+{: faq}
 
 En la tabla siguiente se muestran las operaciones que podrían verse afectadas si cambia los recursos de VMware fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}. Si se dispone de una solución de recuperación, también se muestra.
 
@@ -59,12 +63,12 @@ Tabla 2. Operaciones afectadas por el acceso SSH y shell (local)
 | Cambio intentado  | Operaciones afectadas  | Gravedad  | Método recuperación  |
 |:------------- |:------------- |:--------------|:--------------|
 | Inhabilitar el acceso SSH o shell para vCenter Server o PSC.    | El emparejamiento de una instancia primaria y secundaria puede fallar. La aplicación de parches a los recursos puede fallar.    | Importante    | N/D    |
-| Inhabilite el acceso SSH o shell para ESXi.    | La adición y eliminación de hosts, servicios y almacenamiento de red en la instancia puede fallar. La aplicación de parches a los recursos puede fallar.    | Importante    | N/D    |
 
 Si opta por inhabilitar el acceso SSH o shell, debe volver a habilitarlo temporalmente antes de realizar las operaciones indicadas.
 
 ## Gestión de subredes correspondientes a instancias de Cloud Foundation
 {: #cf_chg_impact-mgmt-subnets}
+{: faq}
 
 En la siguiente información se describen las subredes solicitadas por {{site.data.keyword.vmwaresolutions_short}} y se muestran opciones para que pueda solicitar subredes adicionales para su propio uso.
 

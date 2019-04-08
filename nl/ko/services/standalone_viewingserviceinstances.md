@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-04"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # 온프레미스 VMware HCX on IBM Cloud 인스턴스 보기

@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-15"
 
+subcollection: vmwaresolutions
+
+
 ---
 # Preparación del entorno de instalación
 {: #hcx-archi-prep-install}
@@ -16,14 +19,14 @@ La instalación de VMware HCX on IBM Cloud tiene los siguientes requisitos de so
 * Para utilizar vMotion entre nubes, se aplican las mismas restricciones de afinidad entre nubes que las que se aplican en entornos locales. Para obtener más información, consulte las [Preguntas frecuentes sobre la compatibilidad entre EVC y CPU](http://bit.ly/2vK6Sp5).
 
 ## Configuración de la conectividad de red
-{: #hcx-archi-port-req-config-net}
+{: #hcx-archi-prep-install-config-net}
 
 HCX debe cruzar internet público y líneas privadas, y conectar con los componentes del centro de datos, como redes, conmutadores y grupos de puertos.
 * En [Requisitos de acceso a puertos](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-port-req) encontrará los puertos que deben estar abiertos para que los dispositivos virtuales HCX se puedan instalar correctamente.
 * Tanto el entorno de vSphere local como el entorno de VCF/VCS HCX Cloud deben permitir la sincronización de reloj de Network Time Protocol (NTP) entre los dispositivos locales de vSphere y los dispositivos de VCF/VCS HCX. El puerto UDP 123 debe resultar accesible para los dispositivos virtuales y las redes de HCX.
 
 ## Entorno local
-{: #hcx-archi-port-req-on-prem-env}
+{: #hcx-archi-prep-install-on-prem-env}
 
 Antes de instalar HCX, verifique que el entorno puede dar soporte a las tareas que desea llevar a cabo. El entorno local debe dar soporte a las tareas siguientes para que se pueda instalar HCX.
 * Virtual Center con vSphere 5.5 Actualización 3 o 6.0 Actualización 2.
@@ -38,7 +41,7 @@ Antes de instalar HCX, verifique que el entorno puede dar soporte a las tareas q
   * vCenter está en modalidad enlazada (donde el vCenter secundario utiliza el servicio SSO desde el vCenter primario o un servicio de SSO externo).
 
 ## Verificación del entorno de instalación de capa 2
-{: #hcx-archi-port-req-verify-layer-2-inst}
+{: #hcx-archi-prep-install-verify-layer-2-inst}
 
 La extensión de red de capa 2 tiene los requisitos siguientes:
 * vSphere Enterprise Plus Edition.
@@ -50,7 +53,7 @@ La extensión de red de capa 2 tiene los requisitos siguientes:
   * Si se desean varios concentradores de capa 2, cada uno de ellos debe tener una dirección IP local y en la nube.
 
 ## Enlaces relacionados
-{: #hcx-archi-port-req-related}
+{: #hcx-archi-prep-install-related}
 
 * [Instalación y configuración de HCX en el origen](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-install-cfg-src)
 * [Preguntas frecuentes sobre la compatibilidad entre VMware EVC y CPU](http://bit.ly/2vK6Sp5)

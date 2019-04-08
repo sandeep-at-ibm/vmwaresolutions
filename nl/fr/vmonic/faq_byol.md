@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-08"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -131,7 +134,7 @@ Oui. Lorsque vous ajoutez des serveurs ESXi à une instance déployée, la capac
 {: faq}
 
 Pour identifier le nombre d'UC utilisables avec votre clé de licence, procédez comme suit :
-1. Accédez à la page **Ressources**. 
+1. Accédez à la page **Ressources**.
 2. Localisez et cliquez sur l'instance.
 3. Sur l'onglet **Infrastructure**, cliquez sur le cluster pour lequel vous désirez vérifier la capacité de licence.
    Le nombre d'UC disponibles est indiqué dans le tableau **Licence fournie par l'utilisateur**.

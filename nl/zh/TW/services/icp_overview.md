@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-08"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -87,10 +90,10 @@ lastupdated: "2019-03-08"
 |:--------- |:----------- |:---- |:------------- |:----------- |
 | AvailableCores |	可供環境中工作負載和服務使用的實際核心數 |	核心 |	38	| 43 |
 | HostCount	| 預設叢集中的主機數目	| 主機 | 4	|4 |
-| HostCoreCount	| 預設叢集中每一個主機可用的原始核心數 |	核心 |	16 | 16 |
+| HostCoreCount	| 預設叢集中每一部主機可用的原始核心數 |	核心 |	16 | 16 |
 | HostOverheadCores	| ESXi 伺服器保留給額外需要的核心數（等於 0.1 核心）| 核心	| 0.1 |	0.1 |
 | MgmtOverheadCores | vCenter Server 管理元件（vCenter Server、PSC、AD/DNS、Edges）保留的核心數（等於 5 核心）| 核心	| 5	| 5 |
-| vSphereHAHostTolerance |	vSphere HA 配置中容忍的主機數（等於一個主機）|	主機	 |1 |1 |
+| vSphereHAHostTolerance |	vSphere HA 配置中容忍的主機數（等於一部主機）|	主機	 |1 |1 |
 | HostVsanOverheadCorePercentage | vSAN 所使用的主機核心百分比，其等於 10%，如果主機非 vSAN，則等於 0%| % | 10% |	0% |
 
 #### 公式 2
@@ -104,20 +107,20 @@ lastupdated: "2019-03-08"
 |:--------- |:----------- |:---- |:------------- |:----------- |
 | AvailableMemory	| 可供環境中工作負載和服務使用的記憶體 GB 數 | GB | 	693	| 860 |
 | HostCount	| 預設叢集中的主機數目	| 主機  | 6	| 6 |
-| HostMemory |	 預設叢集中每一個主機可用的原始 GB 數 |	GB	| 192 |	192 |
+| HostMemory |	 預設叢集中每一部主機可用的原始 GB 數 |	GB	| 192 |	192 |
 | HostVsanCapacityDiskSize | 在此主機上每一個 vSAN 容量 SSD 磁碟容量的 GB 數（等於 960、1,946 或 3,891），如果主機非 vSAN，則等於 0 GB| GB |	960 | 0 |
 | HostOverheadMemory |	ESXi 伺服器保留給額外需要的記憶體 GB 數（等於 4.6 GB）|	GB	| 4.6 |	4.6 |
 | MgmtOverheadMemory |	vCenter Server 管理元件（vCenter Server、PSC、AD/DNS、Edges）保留的記憶體 GB 數（等於 77 GB）| GB | 77 | 77 |
-| vSphereHAHostTolerance |vSphere HA 配置中容忍的主機數（等於一個主機）| 主機	|1 |1 |
-| HostVsanOverheadMemoryDiskPercentage | vSAN 管理所保留的記憶體 GB 數（以其中一個容量 vSAN 磁碟的百分比表示），其等於 2.75%|	% | 2.75%	| 2.75% |
+| vSphereHAHostTolerance |vSphere HA 配置中容忍的主機數（等於一部主機）| 主機	|1 |1 |
+| HostVsanOverheadMemoryDiskPercentage | vSAN 管理所保留的記憶體 GB 數（以其中一個容量 vSAN 磁碟的百分比表示），其等於 2.75%|	% | 2.75% | 2.75% |
 | HostVsanOverheadMemory | vSAN 管理所保留的記憶體 GB 數（不論磁碟大小為何）（等於 7 GB），如果主機非 vSAN，則等於 0 GB| GB |  7	| 0 |
 
 ## 安裝 IBM Cloud Private Hosted 時的考量
 {: #icp_overview-install}
 
 * 請先收集必要的授權，再安裝 {{site.data.keyword.cloud_notm}} Private Hosted 服務。建議您確保授權不僅可以支援起始 {{site.data.keyword.cloud_notm}} Private Hosted 部署，還可以支援基礎架構中未來的 {{site.data.keyword.cloud_notm}} Private Hosted 大小擴充。
-* 對於「正式作業就緒」環境中的 {{site.data.keyword.cloud_notm}} Private Hosted 部署，不支援每個主機 64 GB RAM。因此，您必須對 **RAM** 選取大於 64 GB 的選項。
-* 在您的環境中安裝 {{site.data.keyword.cloud_notm}} Private Hosted 服務之前，會針對環境中預設叢集的可用容量執行檢查，以確保服務元件適合。如果容量檢查未通過，則不會安裝該服務，且主控台上的服務狀態會設為**容量驗證失敗**。此外，還會顯示具有更多詳細資料的主控台訊息，並透過電子郵件通知您。若要安裝服務，您必須新增多個主機，或者透過釋放 RAM、CPU 或磁碟空間來增加預設叢集中的容量，然後在主控台中再次新增服務。之後，您可以按一下它旁邊的**刪除**圖示，來移除處於**容量驗證失敗**狀態中的現有服務。
+* 對於「正式作業就緒」環境中的 {{site.data.keyword.cloud_notm}} Private Hosted 部署，不支援每部主機 64 GB RAM。因此，您必須對 **RAM** 選取大於 64 GB 的選項。
+* 在您的環境中安裝 {{site.data.keyword.cloud_notm}} Private Hosted 服務之前，會針對環境中預設叢集的可用容量執行檢查，以確保服務元件適合。如果容量檢查未通過，則不會安裝該服務，且主控台上的服務狀態會設為**容量驗證失敗**。此外，還會顯示具有更多詳細資料的主控台訊息，並透過電子郵件通知您。若要安裝服務，您必須新增多部主機，或者透過釋放 RAM、CPU 或磁碟空間來增加預設叢集中的容量，然後在主控台中再次新增服務。之後，您可以按一下它旁邊的**刪除**圖示，來移除處於**容量驗證失敗**狀態中的現有服務。
 
 ## 移除 IBM Cloud Private Hosted 時的考量
 {: #icp_overview-remove}

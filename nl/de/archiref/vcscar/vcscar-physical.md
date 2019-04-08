@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -31,6 +34,7 @@ IBM Multi-Cluster Manager (MCM) bietet Benutzertransparenz, anwendungsorientiert
 Das folgende Diagramm beschreibt die Referenzimplementierung der Anwendung "Acme Skate Advisor" in einer Implementierung der Anwendungsmodernisierungsinfrastruktur.
 
 Abbildung 1. Physische Komponenten von Skate Advisor
+</br>
 ![Physische Komponenten von Skate Advisor](vcscar-physical.svg)
 
 Die Anwendung "Skate Advisor" erweitert die vorhandene Acme-Webanwendung durch eine auf Mikroservices basierende Komponente, die mit Watson und einem nginx-Container interagiert, um Anforderungen an den Web- und Mikroservices-Container weiterzuleiten.
@@ -54,6 +58,7 @@ Die Anwendung wird als CAM-Orchestrierung bereitgestellt, die die folgenden Elem
 * VMware-Vorlage - Die VMware-Vorlage ist eine Ubuntu-Vorlage mit vorinstalliertem mysql und Datenbankschema.
 
 Abbildung 2. CAM-Orchestrierung
+</br>
 ![CAM-Orchestrierung](vcscar-cam.svg)
 
 ### Lastausgleich und Weiterleitung
@@ -99,6 +104,7 @@ Skate Advisor macht die folgende Kommunikation erforderlich:
 Zur Umsetzung dieses Ziels ist die Anwendungsmodernisierungsplattform mit den folgenden Komponenten ausgestattet.
 
 Abbildung 3. Zugriff auf öffentliches Netz
+</br>
 ![Zugriff auf öffentliches Netz](vcscar-network.svg)
 
 {{site.data.keyword.cloud_notm}} verfügt über zwei Netze. Über das öffentliche Netz können Server aus dem Internet erreicht werden. Das private Netz ermöglicht Servern über einen Hochgeschwindigkeitsbackbone in allen {{site.data.keyword.CloudDataCents_notm}} die Kommunikation miteinander.
@@ -114,6 +120,7 @@ Für alle definierten NSX-VXLANs ist in der {{site.data.keyword.containerlong_no
 Die Anwendung "Skate Advisor" verwendet die folgenden Softwarekomponenten.
 
 Abbildung 4. Softwarezuordnung bei Skate Advisor
+</br>
 ![Softwarezuordnung bei Skate Advisor](vcscar-sw-mapping.svg)
 
 Die folgenden Softwarekomponenten werden verwendet:

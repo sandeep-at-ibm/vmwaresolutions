@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-03-20"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -35,9 +38,11 @@ vCenter Server 部署对物理基础架构有严格要求。因此，只能将�
 |DAL13|达拉斯|北美南部|Skylake、SAP 认证、Broadwell|
 |FRA02|法兰克福|欧洲|Skylake、SAP 认证、Broadwell|
 |FRA04|法兰克福|欧洲|Skylake、SAP 认证、Broadwell|
+|FRA05|法兰克福|欧洲|Skylake、Broadwell|
 |HKG02|中国香港特别行政区|亚太地区|Skylake、Broadwell|
 |LON02|伦敦|欧洲|Skylake、Broadwell|
 |LON04|伦敦|欧洲|Skylake、SAP 认证、Broadwell|
+|LON05|伦敦|欧洲|Skylake、Broadwell|
 |LON06|伦敦|欧洲|Skylake、SAP 认证、Broadwell|
 |MEL01|墨尔本|亚太地区|Skylake、SAP 认证、Broadwell|
 |MEX01|克雷塔罗|北美南部|Skylake、SAP 认证、Broadwell|

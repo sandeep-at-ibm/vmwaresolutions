@@ -4,7 +4,12 @@ copyright:
 
   years: 2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-22"
+
+keywords: IBM Cloud for VMware Solutions, getting started, deployment offerings, add-on services, use case
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -18,7 +23,7 @@ lastupdated: "2019-03-12"
 {:tip: .tip}
 {:table: .aria-labeledby="caption"}
 
-# Initiation à IBM Cloud for VMware Solutions
+# Tutoriel d'initiation
 {: #getting-started}
 
 Ce tutoriel d'initiation décrit la procédure de commande d'une instance et de services complémentaires.
@@ -192,18 +197,4 @@ Après avoir passé une commande d'instance à l'**étape 3**, le déploiement d
 Pour plus d'informations sur l'affichage de l'instance que vous avez commandée, voir les rubriques suivantes :
 * [Affichage des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
 * [Affichage des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
-* [Affichage des instances NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_viewinginstances)
-
-## Etape 5 : Gestion des services complémentaires pour l'instance
-{: #getting-started-step5}
-
-Si vous avez commandé des services complémentaires pour votre instance, vous pouvez également gérer ces services.
-
-Pour plus d'informations sur la gestion des services, voir les rubriques suivantes :
-* [Commande, affichage et retrait de services pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
-* [Commande, affichage et retrait de services pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
-
-## Etape suivante
-{: #getting-started-next}
-
-Gérez votre instance depuis la console {{site.data.keyword.vmwaresolutions_short}} ou le client Web VMware vSphere.
+* [Affichage des instances NetApp ONTAP Select](/docs/services/vmwaresolutions/services?topic=vmware-solutions-np_viewinginstances#np_viewinginstances)

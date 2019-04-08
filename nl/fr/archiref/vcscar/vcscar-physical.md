@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -31,6 +34,7 @@ IBM Multi-Cluster Manager fournit la visibilité utilisateur, la gestion orient�
 Le diagramme ci-après décrit l'implémentation de référence de l'application Acme Skate Advisor dans une implémentation d'infrastructure de modernisation des applications.
 
 Figure 1. Composants physiques de Skate Advisor
+</br>
 ![Composants physiques de Skate Advisor](vcscar-physical.svg)
 
 L'application Skate Advisor étend l'application Web Acme existante avec un composant basé sur des micro-services qui interagit avec Watson et un conteneur nginx pour mettre en proxy des demandes vers le conteneur de micro-services et Web.
@@ -54,6 +58,7 @@ L'application est déployée sous la forme d'une orchestration CAM contenant les
 * Modèle VMWare - Le modèle VMWare est un modèle Ubuntu préinstallé avec mysql et le schéma de base de données.
 
 Figure 2. Orchestration CAM
+</br>
 ![Orchestration CAM](vcscar-cam.svg)
 
 ### Equilibrage de charge et mise en proxy
@@ -100,6 +105,7 @@ Skate Advisor requiert les communications suivantes :
 La plateforme de modernisation des applications est conçue avec les composants énumérés ci-après pour atteindre cet objectif.
 
 Figure 3. Accès au réseau public
+</br>
 ![Accès au réseau public](vcscar-network.svg)
 
 {{site.data.keyword.cloud_notm}} comporte deux réseaux. Le réseau public permet d'atteindre les serveurs à partir d'Internet et le réseau privé permet aux serveurs de communiquer entre eux via un réseau principal haute vitesse dans tous les {{site.data.keyword.CloudDataCents_notm}}.
@@ -115,6 +121,7 @@ Une route statique est requise sur l'infrastructure {{site.data.keyword.containe
 L'application Skate Advisor utilise les composants logiciels énumérés ci-après.
 
 Figure 4. mappage de logiciel Skate Advisor
+</br>
 ![Mappage de logiciel Skate Advisor](vcscar-sw-mapping.svg)
 
 Les composants logiciels suivants sont utilisés :

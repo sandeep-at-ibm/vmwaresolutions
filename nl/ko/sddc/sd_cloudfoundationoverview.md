@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-12"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -59,7 +62,7 @@ VMware Cloud Foundation on {{site.data.keyword.cloud}} 기본 배치는 통합�
 ### Bare Metal Server
 {: #sd_cloudfoundationoverview-bare-metal}
 
-사용자 인스턴스는 다음 구성 중 하나로 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}를 가질 수 있습니다. 
+사용자 인스턴스는 다음 구성 중 하나로 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}를 가질 수 있습니다.
 *  **Skylake**: 선택한 CPU 모델 및 RAM 크기를 사용하는 두 개의 CPU Intel Skylake 세대 서버(Intel Xeon 4100/5100/6100 시리즈)   
 *  **Broadwell**: 선택한 CPU 모델 및 RAM 크기를 사용하는 두 개의 Intel Broadwell 세대 서버(IntelXeon E5-2600/E7-4800 시리즈)
 
@@ -69,7 +72,7 @@ vSAN 스토리지를 사용하려는 경우 구성에 4개의 {{site.data.keywor
 ### 네트워킹
 {: #sd_cloudfoundationoverview-networking}
 
-사용자 인스턴스에는 다음 네트워킹 컴포넌트가 포함되어 있습니다. 
+사용자 인스턴스에는 다음 네트워킹 컴포넌트가 포함되어 있습니다.
 * 10Gbps 듀얼 공용 및 사설 네트워크 업링크
 * 세 개의 VLAN(Virtual LANs): 한 개의 공용 VLAN 및 두 개의 사설 VLAN
 * 관리 네트워킹 토폴로지의 일부로 IBM에서 배치되는 아웃바운드 HTTPS 관리 트래픽을 위한 보안 관리 서비스 VMware NSX Edge Services Gateway(ESG). 이 ESG는 자동화와 관련된 특정 외부 IBM 관리 컴포넌트와 통신하기 위해 IBM 관리 가상 머신에서 사용됩니다. 자세한 정보는 [관리 서비스 NSX Edge는 보안 문제점을 발생시킵니까?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)를 참조하십시오.
@@ -82,7 +85,7 @@ vSAN 스토리지를 사용하려는 경우 구성에 4개의 {{site.data.keywor
 ### Virtual Server 인스턴스
 {: #sd_cloudfoundationoverview-vsi}
 
-사용자 인스턴스는 다음 VSI(Virtual Server Instances)를 가집니다. 
+사용자 인스턴스는 다음 VSI(Virtual Server Instances)를 가집니다.
 * Microsoft Active Directory(AD) 및 DNS(Domain Name System) 서비스용 VSI. VSI는 다중 사이트 구성 지원에 필요합니다. 이 VSI 스펙은 Windows 2012 R2(8GB RAM / 두 개의 CPU 코어 / 100GB 디스크 / 듀얼 1Gbps 사설 업링크)입니다.
 * 인스턴스 배치가 완료된 후 시스템이 종료되는 IBM CloudBuilder용 VSI
 * (Veeam on {{site.data.keyword.cloud_notm}}가 주문된 경우) Veeam 백업 서비스용 VSI가 주문됨

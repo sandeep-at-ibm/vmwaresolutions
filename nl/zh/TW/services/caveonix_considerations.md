@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-13"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -17,7 +20,8 @@ lastupdated: "2019-03-13"
 
 Caveonix RiskForesight on {{site.data.keyword.cloud}} 服務可以透過主動監視和自動化防禦控制來防範威脅及因應業界或政府規章，以協助管理網路和法規遵循風險。
 
-只有部署在 2.9 版及更新版本中的 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 實例，才能使用此服務。{:note}
+只有部署在 2.9 版及更新版本中的 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 實例，才能使用此服務。
+{:note}
 
 ## Caveonix RiskForesight on IBM Cloud 的技術規格
 {: #caveonix_considerations-specs}
@@ -52,8 +56,8 @@ Caveonix RiskForesight on {{site.data.keyword.cloud}} 服務可以透過主動�
 請先檢閱下列考量，然後再移除 Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} 服務：
 * 移除 Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} 服務並不會取消 Caveonix RiskForesight 授權。您必須從 {{site.data.keyword.vmwaresolutions_short}} 主控台的**資源**頁面中的 **Caveonix RiskForesight Licenses** 表格刪除 Caveonix RiskForesight 授權。
 * 當您移除服務時，{{site.data.keyword.vmwaresolutions_short}} 自動化只會刪除已部署的單一「全功能」的 Caveonix VM，以及針對其訂購的專用子網路。因此，
-   * 如果您將 Caveonix VM 擴充為多個 VM，額外的 VM 不會被移除。 
-   * 如果您已使用額外 VM 上的專用子網路的 IP 位址，必須對那些 VM 指派新的 IP 位址，才能夠繼續運作。 
+   * 如果您將 Caveonix VM 擴充為多部 VM，額外的 VM 不會被移除。
+   * 如果您已使用額外 VM 上的專用子網路的 IP 位址，必須對那些 VM 指派新的 IP 位址，才能夠繼續運作。
    * 如果您刪除已安裝 Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} 服務的 vCenter Server 實例 A，而且您使用針對 vCenter Server 實例 B 中的服務所訂購的專用子網路的 IP 位址，則專用子網路會在刪除 vCenter Server 實例 A 時立即被取消。
 
 ## 相關鏈結

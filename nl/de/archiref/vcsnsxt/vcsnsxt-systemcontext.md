@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -47,7 +50,7 @@ Tabelle 2. Systeme
 
 Akteur | Beschreibung
 ---|---
-vCenter | vCenter ist die primäre Schnittstelle für den Systemadministrator zur Verwaltung der lokalen VMs und zum Zugriff auf das HCX-Plug-in für die Erweiterung von Netzen und die VM-Migration. Mit vCenter Server with Hybridity Bundle kann der Systemadministrator lokale vCenter-Netze nahtlos in die vCenter Server-Instanz integrieren, die in {{site.data.keyword.cloud_notm}} ausgeführt wird. Der Hybridnetzbetrieb erweitert die lokalen Netze in die {{site.data.keyword.cloud_notm}}. Das ermöglicht es den Kunden, ihre Anwendungen in eine {{site.data.keyword.containerlong_notm}}-Instanz zu migrieren, die in {{site.data.keyword.cloud_notm}} ausgeführt wird; eine Migration zurück ist bei Bedarf ebenfalls möglich. Weitere Details zu vCenter Server with Hybridity Bundle finden Sie im Dokument [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf).
+vCenter | vCenter ist die primäre Schnittstelle für den Systemadministrator zur Verwaltung der lokalen VMs und zum Zugriff auf das HCX-Plug-in für die Erweiterung von Netzen und die VM-Migration. Mit vCenter Server with Hybridity Bundle kann der Systemadministrator lokale vCenter-Netze nahtlos in die vCenter Server-Instanz integrieren, die in {{site.data.keyword.cloud_notm}} ausgeführt wird. Der Hybridnetzbetrieb erweitert die lokalen Netze in die {{site.data.keyword.cloud_notm}}. Das ermöglicht es den Kunden, ihre Anwendungen in eine {{site.data.keyword.containerlong_notm}}-Instanz zu migrieren, die in {{site.data.keyword.cloud_notm}} ausgeführt wird; eine Migration zurück ist bei Bedarf ebenfalls möglich. Weitere Informationen zu vCenter Server with Hybridity Bundle finden Sie unter [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro).
 Lokale VMs | Die lokalen VMs hosten die Anwendungen, die in die Cloud migriert werden. Sie werden zunächst als VMs migriert und anschließend im Anwendungsmodernisierungprozess aus VMs in Container migriert.
 Cloud-VMs | Cloud-VMs hosten Anwendungen, die aus lokalen VMs migriert wurden. Sie kommunizieren mit lokalen Anwendungen über das erweiterte L2-Netz. Bei dieser Referenzarchitektur und diesem Beispiel für Acme Skateboards ist eine der Cloud-VMs ein Datenbankserver, der Teil der Workload der Onlinepräsenz ist.
 NSX-V | NSX-V auf vCenter Server stellt das vom System definierte Overlay-Netz bereit, das vom Systemadministrator verwaltet wird. Das Overlay-Netz ist das Ziel für erweiterte HCX-Netze, da es von den VMs ausgehenden Datenverkehr für {{site.data.keyword.icpfull_notm}} abwickelt. NSX-V stellt die Referenzarchitektur mit Funktionen wie Bereitstellung, Rekonfiguration und Löschung von bedarfsgesteuerten virtuellen Netzen und Mikrosegmentierungsservices in VMware unter Verwendung von vSphere-Switches (vSphere) zur Verfügung. Weitere Informationen enthält der Abschnitt [Übersicht über NSX-V](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv).

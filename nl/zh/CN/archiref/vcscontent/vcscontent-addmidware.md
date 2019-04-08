@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-15"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # 重构中间件并将中间件添加到 IBM Cloud Private 中
@@ -230,7 +233,7 @@ App password = LEAVE BLANK`
 
 通过使用 Kubernetes 私钥，Jane 在每个私钥中配置了明确定义的私钥名称和参数，以确保在部署微服务时，可选取唯一的主机名、用户标识、密码或其他任何敏感凭证，从而使其应用程序可移植。
 
-Jane 需要一个统一的代码库，即使 Stock Trader 可能会在多个云上运行。下图中的私钥 DB2 具有不同的路由详细信息，但格式相同。在 Jane 的投资组合微服务部署时，该微服务会查找 Db2 私钥端点参数以连接到相应的 Db2 实例。Stock Trader 应用程序不关心自己是在 VMware 虚拟机中运行、容器化服务中运行，还是作为云管理的服务运行。
+Jane 需要一个统一的代码库，即使 Stock Trader 可能会在多个云上运行。下图中的私钥 Db2 具有不同的路由详细信息，但格式相同。在 Jane 的投资组合微服务部署时，该微服务会查找 Db2 私钥端点参数以连接到相应的 Db2 实例。Stock Trader 应用程序不关心自己是在 VMware 虚拟机中运行、容器化服务中运行，还是作为云管理的服务运行。
 
 图 2. Stock Trader - 数据透视服务
 ![Stock Trader 数据透视服务](vcscontent-pivot-services.svg)

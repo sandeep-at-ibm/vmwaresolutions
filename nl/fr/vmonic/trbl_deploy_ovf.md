@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-14"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Déploiement d'un fichier OVF à l'aide du client Web VMware vSphere

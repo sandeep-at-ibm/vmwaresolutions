@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-03-18"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -185,7 +188,7 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
         <dt class="dt dlterm">已删除</dt>
         <dd class="dd">集群已删除。</dd>
     </dl>
-4. 单击集群名称以查看 ESXi 服务器及其存储的详细信息：
+4. 单击集群名称以查看 ESXi 服务器、存储和网络接口详细信息：
 
   * ESXi 服务器详细信息：
      * **名称**：ESXi 服务器名称的格式为 `<host_prefix><n>.<subdomain_label>.<root_domain>`，其中：
@@ -215,6 +218,20 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
     * **大小**：存储器的容量。
     * **IOPS/GB**：存储器的性能级别。
     * **NFS 协议**：存储器的 NFS 版本。
+  * 网络接口 - VLAN 详细信息：
+    * **VLAN 编号**：唯一的 VLAN 编号。
+    * **描述**：VLAN 的描述。
+    * **位置**：数据中心位置。
+    * **主路径**：VLAN 的主路径。
+    单击**查看资源**以访问 VLAN 详细信息。
+  * 网络接口 - 子网详细信息：
+    * **名称**：子网名称。单击名称以访问子网详细信息。
+    * **类型**：子网的类型：主子网或可移植子网。
+    * **描述**：子网的描述。
+  * 网络接口 - IP 详细信息：
+    * **IP**：IP 地址。
+    * **状态**：IP 地址的状态。
+    * **描述**：IP 地址的描述。
 
 ## 从 vCenter Server with Hybridity Bundle 实例中删除集群
 {: #vc_hybrid_addingviewingclusters-deleting}

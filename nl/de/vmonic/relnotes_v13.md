@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2017-01-23"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Releaseinformationen für V1.3
@@ -52,7 +55,7 @@ Weitere Informationen finden Sie unter [vCenter Server-Instanzen bestellen](/doc
 
 Der Instanzmanagementprozess wurde folgendermaßen erweitert und verbessert:
 
-* Bei Cloud Foundation- und vCenter Server-Instanzen können Sie die geschätzten Kosten für Ihre ESXi-Server anzeigen und prüfen, bevor Sie sie definitiv zur Instanz hinzufügen. Nachdem Sie angegeben haben, wie viele Server hinzugefügt werden sollen, werden die geschätzten Kosten pro Server und pro Monat in der Konsole angezeigt. Weitere Informationen finden Sie unter [Kapazität für vCenter Server-Instanzen erweitern und verringern](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers). 
+* Bei Cloud Foundation- und vCenter Server-Instanzen können Sie die geschätzten Kosten für Ihre ESXi-Server anzeigen und prüfen, bevor Sie sie definitiv zur Instanz hinzufügen. Nachdem Sie angegeben haben, wie viele Server hinzugefügt werden sollen, werden die geschätzten Kosten pro Server und pro Monat in der Konsole angezeigt. Weitere Informationen finden Sie unter [Kapazität für vCenter Server-Instanzen erweitern und verringern](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers).
 * Bei Cloud Foundation- und vCenter Server-Instanzen wird oben auf der Seite "Zusammenfassung" die Gesamtzahl der Instanzen angezeigt. Sie können außerdem eine Instanz durch einen einzigen Klick ausgehend von der Seite mit der Instanzzusammenfassung bestellen. Darüber hinaus können Sie auf der Seite "Zusammenfassung" während der Bereitstellung detaillierte Informationen zum Bestellstatus einsehen. Wenn Sie den Mauszeiger auf den angezeigten Status bewegen, werden bei Verfügbarkeit weitere Details über den aktuellen Schritt oder den Fehler angezeigt.
 * Bei Cloud Foundation-Instanzen wird auf der Seite mit den Instanzdetails der Bereitstellungsverlauf der Instanz zusammen mit Informationen zu den einzelnen Schritten für den Bereitstellungsstatus angezeigt.
 * Bei Cloud Foundation-Instanzen wurde der Bedienungskomfort des Prozesses für Updates und Patches dadurch verbessert, dass auf der Seite **Update und Patch** mehr Details über das Update angezeigt werden. Beispiele hierfür sind die für ein Patch benötigte Ausfallzeit, der Zeitpunkt für ein geplantes Update sowie ein optischer Hinweis, falls vor dem aktuellen Patch ein erforderliches Patch angewendet werden muss.

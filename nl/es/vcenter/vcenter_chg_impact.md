@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-14"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -32,6 +35,7 @@ Los usuarios y las contraseñas correspondientes a las operaciones automáticas 
 
 ## Cuentas de usuario específicas de servicio
 {: #vcenter_chg_impact-service-usr-account}
+{: faq}
 
 Cada servicio crea una cuenta de usuario interna en vCenter Server. Esta cuenta es necesaria para que las operaciones de gestión que están asociadas a un servicio se puedan conectar con vCenter Server para realizar las operaciones en el servicio.
 
@@ -45,6 +49,7 @@ El ID de usuario de esta cuenta está en el formato `<service_name>-<truncated s
 
 ## Recursos de VMware para instancias de vCenter Server (V1.9 y posteriores)
 {: #vcenter_chg_impact-vmware-resources-for-inst-v1.9-and-later}
+{: faq}
 
 Para las instancias desplegadas en V1.9 y posteriores, si la instancia de vCenter Server está en el estado **Listo para su uso**, puede modificar los nombres del centro de datos virtual de VMware, del clúster, de los conmutadores, de los grupos de puertos y de los almacenes de datos del cliente desde el cliente web de VMware vSphere.
 
@@ -52,6 +57,7 @@ Sin embargo, no debe modificar el valor predeterminado del nombre del almacén d
 
 ## Recursos de VMware para instancias de vCenter Server (V1.8 y anteriores)
 {: #vcenter_chg_impact-vmware-resources-for-inst-v1.8-and-earlier}
+{: faq}
 
 En la tabla siguiente se muestran las operaciones que podrían verse afectadas si cambia el administrador de SSO cambia los recursos de VMware vCenter Server fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}. Si se dispone de una solución de recuperación, también se muestra.
 
@@ -74,13 +80,13 @@ Tabla 2. Operaciones afectadas por el acceso SSH y shell (local)
 
 | Cambio intentado  | Operaciones afectadas  | Gravedad  | Método recuperación  |
 |:------------- |:------------- |:--------------|:--------------|
-| Inhabilitar el acceso SSH o shell para vCenter Server o PSC.    | El emparejamiento de una instancia primaria y secundaria puede fallar.    | Importante    | N/D    |
-| Inhabilite el acceso SSH o shell para ESXi.    | La adición y eliminación de hosts, servicios y almacenamiento de red en la instancia puede fallar.    | Importante    | N/D    |
+| Inhabilitar el acceso SSH o shell para vCenter Server o PSC. | El emparejamiento de una instancia primaria y secundaria puede fallar.    | Importante    | N/D    |
 
 Si opta por inhabilitar el acceso SSH o shell, debe volver a habilitarlo temporalmente antes de realizar las operaciones indicadas.
 
 ## Subredes de gestión para instancias de vCenter Server
 {: #vcenter_chg_impact-mgmt-subnets}
+{: faq}
 
 En la siguiente información se describen las subredes solicitadas por {{site.data.keyword.vmwaresolutions_short}} y se muestran opciones para que pueda solicitar subredes adicionales para su propio uso.
 

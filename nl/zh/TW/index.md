@@ -4,7 +4,12 @@ copyright:
 
   years: 2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-22"
+
+keywords: IBM Cloud for VMware Solutions, getting started, deployment offerings, add-on services, use case
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -18,7 +23,7 @@ lastupdated: "2019-03-12"
 {:tip: .tip}
 {:table: .aria-labeledby="caption"}
 
-# 開始使用 IBM Cloud for VMware Solutions
+# 入門指導教學
 {: #getting-started}
 
 在此入門指導教學中，我們將逐步引導您完成訂購實例和其一些附加程式服務的處理程序。
@@ -192,18 +197,4 @@ lastupdated: "2019-03-12"
 如需如何檢視所訂購實例的相關資訊，請參閱下列主題：
 * [檢視 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
 * [檢視 vCenter Server with Hybridity Bundle 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
-* [檢視 NetApp ONTAP Select 實例](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_viewinginstances)
-
-## 步驟 5：管理實例的附加程式服務
-{: #getting-started-step5}
-
-如果您已訂購實例的附加程式服務，則也可以管理服務。
-
-如需如何管理服務的相關資訊，請參閱下列主題：
-* [訂購、檢視及移除 vCenter Server 實例的服務](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
-* [訂購、檢視及移除 vCenter Server with Hybridity Bundle 實例的服務](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
-
-## 下一步
-{: #getting-started-next}
-
-從 {{site.data.keyword.vmwaresolutions_short}} 主控台或 VMware vSphere Web Client 管理實例。
+* [檢視 NetApp ONTAP Select 實例](/docs/services/vmwaresolutions/services?topic=vmware-solutions-np_viewinginstances#np_viewinginstances)

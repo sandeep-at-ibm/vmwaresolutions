@@ -4,14 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-05"
+lastupdated: "2019-03-22"
+
+subcollection: vmwaresolutions
+
 
 ---
 
 # Planification de prédéploiement
 {: #vcshcx-planning}
 
-Une grande partie du temps consacré au déploiement du HCX correspond à la phase de pré-déploiement. Alors que les projets de migration des systèmes d'information prennent généralement plusieurs mois voire plusieurs années, HCX permet une migration très rapide et un début de connectivité du réseau vers le cloud immédiatement après le déploiement. 
+Une grande partie du temps consacré au déploiement du HCX correspond à la phase de pré-déploiement. Alors que les projets de migration des systèmes d'information prennent généralement plusieurs mois voire plusieurs années, HCX permet une migration très rapide et un début de connectivité du réseau vers le cloud immédiatement après le déploiement.
 
 Etant donné que le déploiement de HCX pour un client au niveau de l'entreprise implique généralement des équipes de sécurité, de réseau, de stockage et d'infrastructure vSphere, il est logique d'impliquer ces équipes dans la preuve de concept si possible. Une gestion de projet efficace et l'inclusion précoce des parties prenantes sont essentielles pour assurer la rapidité du déploiement et de l'exploitation du HCX.
 
@@ -25,8 +28,7 @@ HCX permet la migration croisée d'instances vSphere d'une machine virtuelle ou 
 ## Réseaux étendus
 {: #vcshcx-planning-stretched-net}
 
-Les composants d'extension du réseau de la flotte HCX sont très stables. Chez un client particulier ayant plus de 20 VLANs répartis dans le {{site.data.keyword.cloud}} sur un réseau WAN de 1 Gbit/s partagé avec d'autres tunnels de trafic et de migration HCX, il n'y a aucun problème applicatif attribué au réseau.
-Les liaisons réseau ont une durée de vie supérieure à 6 mois de cette façon.
+Les composants d'extension du réseau de la flotte HCX sont très stables. Chez un client particulier ayant plus de 20 VLANs répartis dans le {{site.data.keyword.cloud}} sur un réseau WAN de 1 Gbit/s partagé avec d'autres tunnels de trafic et de migration HCX, il n'y a aucun problème applicatif attribué au réseau. Les liaisons réseau ont une durée de vie supérieure à 6 mois de cette façon.
 
 D'autres réseaux étendus ont été ajoutés et supprimés sans problème. Le choix d'un {{site.data.keyword.CloudDataCent_notm}} à proximité immédiate (latence < 6 ms pour ce client particulier) joue également un rôle dans la stabilité réseau d'un réseau étendu. Laisser les réseaux étendus à long terme ne devrait pas être un facteur négatif dans votre conception étant donné que vous disposez d'une bande passante suffisante et d'une latence suffisamment faible pour vos applications.
 
@@ -39,7 +41,7 @@ Les sections suivantes décrivent les phases d'un cycle de migration HCX typique
 {: #vcshcx-planning-vsphere-planning}
 
 - Evaluation grossière des machines virtuelles au sein d'une application à migrer. Ce processus implique la compréhension des machines virtuelles qui participent à une application, sans entrer dans les détails.
-- Si vous prévoyez de migrer de nombreuses machines virtuelles et que la bande passante réseau est limitée entre les sites source et cloud, regroupez les machines virtuelles par VLAN ou VXLAN si NSX est utilisé à la source. Cela permet un plan de migration HCX en cascade où les groupes de machines virtuelles par VLAN sont migrés et les réseaux L2 sur lesquels ils résident ne sont étendus que jusqu'au point où les VLAN sont libérés. 
+- Si vous prévoyez de migrer de nombreuses machines virtuelles et que la bande passante réseau est limitée entre les sites source et cloud, regroupez les machines virtuelles par VLAN ou VXLAN si NSX est utilisé à la source. Cela permet un plan de migration HCX en cascade où les groupes de machines virtuelles par VLAN sont migrés et les réseaux L2 sur lesquels ils résident ne sont étendus que jusqu'au point où les VLAN sont libérés.
 
 Cela signifie que le groupe initial de réseaux étendus L2 connexes ne peut être libéré que lorsque la conception du réseau côté cloud est finalisée et déployée. Le déblocage implique de faire basculer le trafic VXLAN particulier vers l'infrastructure NSX de l'instance de cloud.
 
@@ -76,7 +78,9 @@ Pendant que les migrations se poursuivent, la connectivité du réseau WAN priv�
 ## Serveurs physiques
 {: #vcshcx-planning-physical-servers}
 
-Lorsque l'objectif est la migration du centre de données dans le cloud, tous les serveurs physiques qui interagissent avec les machines virtuelles en cours de migration peuvent être évalués pour la migration dans {{site.data.keyword.cloud_notm}} en tant que machines virtuelles (P2V), bare metal ou rester à la source. Si le serveur physique doit rester à la source, et HCX ne sera utilisé que pendant la migration jusqu'à ce qu'un réseau dédié soit établi, il est important de comprendre s'il réside sur un réseau qui est étendu dans le cloud avec HCX. Dans ce scénario, HCX permet non seulement aux machines virtuelles, mais à l'ensemble du sous-réseau de migrer dans le cloud. Pour supprimer HCX à la fin de la migration, le sous-réseau ne peut pas exister dans la source et la destination si la connexion entre les dispositifs physiques et les machines virtuelles migrées doit être maintenue. Cela implique que tous les dispositifs physiques laissés sur le site source qui existent sur des réseaux L2 étendus doivent être migrés vers un autre sous-réseau du réseau qui pourrait être routé vers le côté cloud. L'exception à cette règle est l'utilisation d'une autre technologie L2 étendue, telle que le VPN NSX L2, pour remplacer les noeuds finaux L2 étendus de HCX.
+Lorsque l'objectif est la migration du centre de données dans le cloud, tous les serveurs physiques qui interagissent avec les machines virtuelles en cours de migration peuvent être évalués pour la migration dans {{site.data.keyword.cloud_notm}} en tant que machines virtuelles (P2V), bare metal ou rester à la source. Si le serveur physique doit rester à la source, et HCX ne sera utilisé que pendant la migration jusqu'à ce qu'un réseau dédié soit établi, il est important de comprendre s'il réside sur un réseau qui est étendu dans le cloud avec HCX. Dans ce scénario, HCX permet non seulement aux machines virtuelles, mais à l'ensemble du sous-réseau de migrer dans le cloud.
+
+Pour supprimer HCX à la fin de la migration, le sous-réseau ne peut pas exister dans la source et la destination si la connexion entre les dispositifs physiques et les machines virtuelles migrées doit être maintenue. Cela implique que tous les dispositifs physiques laissés sur le site source qui existent sur des réseaux L2 étendus doivent être migrés vers un autre sous-réseau du réseau qui pourrait être routé vers le côté cloud. L'exception à cette règle est l'utilisation d'une autre technologie L2 étendue, telle que le VPN NSX L2, pour remplacer les noeuds finaux L2 étendus de HCX.
 
 ## Migration de la production et des applications complexes
 {: #vcshcx-planning-mig-prod-complex-app}

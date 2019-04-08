@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-11"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -40,14 +43,14 @@ Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} サービスを注文
 ### ライセンス・メモ
 {: #caveonix_ordering-config-license-notes}
 
-サービス・インスタンスに関するメモを入力します。メモは後でライセンス詳細ページで編集できます。
+サービス・インスタンスに関するメモを入力します。 メモは後でライセンス詳細ページで編集できます。
 
 ### ライセンス用の VM の数
 {: #caveonix_ordering-config-vms}
 
-ライセンスを交付する VM 数を選択します (10 個単位で増分可能な、10 個から 1000 個までの VM ライセンス)。ライセンス管理には 10 個以上の VM が必要です。
+ライセンスを交付する VM 数を選択します (10 個単位で増分可能な、10 個から 1000 個までの VM ライセンス)。 ライセンス管理には 10 個以上の VM が必要です。
 
-Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} サービスを注文した後、注文で指定した数より多くの VM にライセンスを交付する場合は、Caveonix RiskForesight ライセンスを置き換えることができます。その方法として、より大きなライセンスを注文し、ライセンスを Caveonix RiskForesight コンソールにコピーしてから以前のライセンスを {{site.data.keyword.vmwaresolutions_short}} コンソールから削除します。詳しくは、[Caveonix RiskForesight ライセンスを注文する手順](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix_license_ordering#caveonix_license_ordering-procedure)および [Caveonix RiskForesight ライセンスを削除する手順](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix_license_managing#caveonix_license_managing_procedure-delete)を参照してください。
+Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} サービスを注文した後、注文で指定した数より多くの VM にライセンスを交付する場合は、Caveonix RiskForesight ライセンスを置き換えることができます。その方法として、より大きなライセンスを注文し、ライセンスを Caveonix RiskForesight コンソールにコピーしてから以前のライセンスを {{site.data.keyword.vmwaresolutions_short}} コンソールから削除します。 詳しくは、[Caveonix RiskForesight ライセンスを注文する手順](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix_license_ordering#caveonix_license_ordering-procedure)および [Caveonix RiskForesight ライセンスを削除する手順](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix_license_managing#caveonix_license_managing_procedure-delete)を参照してください。
 {:note}
 
 ## 関連リンク

@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-13"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -18,22 +21,22 @@ lastupdated: "2019-03-13"
 ## Caveonix RiskForesight 콘솔에 액세스
 {: #managingcaveonix-access-console}
 
-{{site.data.keyword.cloud}}의 Caveonix RiskForesight 서비스를 관리하려면 다음 단계를 완료하여 Caveonix RiskForesight 콘솔에 액세스해야 합니다. 
+{{site.data.keyword.cloud}}의 Caveonix RiskForesight 서비스를 관리하려면 다음 단계를 완료하여 Caveonix RiskForesight 콘솔에 액세스해야 합니다.
 
-1. IBM Cloud 인프라 VPN 또는 점프 서버를 사용하여 Caveonix RiskForesight 가상 머신(VM)의 IP 주소에 대한 액세스를 허용하십시오. {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 {{site.data.keyword.cloud_notm}}의 Caveonix RiskForesight에 대한 서비스 세부사항 페이지에서 IP 주소를 찾을 수 있습니다. 구체적으로는 다음과 같습니다. 
-   1. {{site.data.keyword.cloud_notm}} 인프라 고객 포털에서 VPN 비밀번호를 작성하십시오. 
+1. IBM Cloud 인프라 VPN 또는 점프 서버를 사용하여 Caveonix RiskForesight 가상 머신(VM)의 IP 주소에 대한 액세스를 허용하십시오. {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 {{site.data.keyword.cloud_notm}}의 Caveonix RiskForesight에 대한 서비스 세부사항 페이지에서 IP 주소를 찾을 수 있습니다. 구체적으로는 다음과 같습니다.
+   1. {{site.data.keyword.cloud_notm}} 인프라 고객 포털에서 VPN 비밀번호를 작성하십시오.
    2. {{site.data.keyword.cloud_notm}} 인프라 VPN 인증 정보를 사용하여 데이터 센터 VPN 포털에 로그인하십시오.
-   3. 다음 형식을 사용하여 IP 주소 및 호스트 맵핑을 로컬 호스트 파일에 추가하십시오.
+   3. 로컬 컴퓨터에서 IP 주소 및 호스트 이름 맵핑을 `hosts` 파일에 추가하십시오. 다음 형식을 사용하십시오.
 
       ```javascript
-      IPAddress              HostName
+      RiskForesight_VM_IP_Address      RiskForesight_FQDN
       ```
 2. Caveonix RiskForesight 콘솔에 액세스하려면 {{site.data.keyword.cloud_notm}}의 Caveonix RiskForesight에 대한 서비스 세부사항 페이지에서 **RiskForesight 콘솔 보기**를 클릭한 후 동일한 서비스 세부사항 페이지에 나열된 인증 정보를 사용하여 로그인하십시오.
 
-## IBM Cloud의 Caveonix RiskForesight에 업데이트 적용 
+## IBM Cloud의 Caveonix RiskForesight에 업데이트 적용
 {: #managingcaveonix-update}
 
-사용자는 Caveonix RiskForesight가 항상 최신 버전으로 업데이트되어 있도록 유지보수해야 합니다. [Caveonix Service Provider Portal](https://support.caveonix.com)에서 필수 업데이트를 다운로드할 수 있습니다. 
+사용자는 Caveonix RiskForesight가 항상 최신 버전으로 업데이트되어 있도록 유지보수해야 합니다. [Caveonix Service Provider Portal](https://support.caveonix.com)에서 필수 업데이트를 다운로드할 수 있습니다.
 
 ## Caveonix RiskForesight 라이센스 업데이트
 

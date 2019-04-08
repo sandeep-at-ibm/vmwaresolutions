@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-06"
+lastupdated: "2019-03-18"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -19,10 +22,10 @@ Puede ampliar o reducir la capacidad de la instancia de VMware vCenter Server on
 
 A partir del release V2.9, puede añadir nuevos servidores ESXi a un clúster mientras el clúster esté en modalidad de mantenimiento. Además, puede añadir o eliminar simultáneamente servidores ESXi en varios clústeres. Están disponibles las siguientes operaciones simultáneas:
 
-* Añadir hosts a **cluster1** y añadir hosts a clústeres adicionales.
-* Eliminar hosts de **cluster1** y eliminar hosts de clústeres adicionales.
-* Añadir hosts a **cluster1** y eliminar hosts de clústeres adicionales.
-* Eliminar hosts de **cluster1** y añadir hosts de clústeres adicionales.
+* Añadir hosts a un clúster y añadir hosts a clústeres adicionales.
+* Eliminar hosts de un clúster y eliminar hosts de clústeres adicionales.
+* Añadir hosts a un clúster y eliminar hosts de clústeres adicionales.
+* Eliminar hosts de un clúster y añadir hosts a clústeres adicionales.
 
 Puesto que el clúster inicial tiene vSAN como almacenamiento, el hecho de añadir uno o varios servidores ESXi después del despliegue puede aumentar la capacidad de almacenamiento del clúster.
 
@@ -42,7 +45,9 @@ Puesto que el clúster inicial tiene vSAN como almacenamiento, el hecho de añad
 3. Pulse **Infraestructura** en el panel de navegación izquierdo.
 4. En la tabla **CLÚSTERES**, pulse el clúster al que desea añadir servidores ESXi.
 5. En la tabla **Servidores ESXi**, pulse **Añadir**.
-6. En la ventana **Añadir servidor**, escriba el número de servidores que desea añadir, pulse el enlace de precios para revisar el coste estimado y pulse **Añadir**.
+6. En la ventana **Añadir servidor**, escriba el número de servidores que desea añadir.
+7. Opcionalmente, marque el recuadro de selección para añadir servidores durante la modalidad de mantenimiento.
+8. Revise el coste estimado y pulse **Añadir**.
 
 ### Resultados después de añadir servidores ESXi
 {: #vc_hybrid_addingremovingservers-adding-results}
@@ -50,6 +55,9 @@ Puesto que el clúster inicial tiene vSAN como almacenamiento, el hecho de añad
 1. Puede experimentar un ligero retardo en la consola mientras el estado de instancia pasa de **Listo para su uso** a **Modificando**. Permita que la operación finalice por completo antes de realizar más cambios en la instancia.
 2. Se le notificará por correo electrónico de que su solicitud para añadir servidores ESXi se está procesando. En la consola, el estado del clúster asociado con los servidores ESXi se cambia a **Modificando**.
 3. Si no ve que los nuevos servidores ESXi se han añadido a la lista del clúster, compruebe las notificaciones de correo electrónico o de la consola para ver más detalles sobre la anomalía.
+
+Si va a añadir servidores ESXi durante la modalidad de mantenimiento, las máquinas virtuales (VM) no se migran a los nuevos servidores hasta que se elimina el clúster de la modalidad de mantenimiento.   
+{:important}
 
 ## Eliminación de servidores ESXi de vCenter Server con instancias del paquete híbrido (Hybridity)
 {: #vc_hybrid_addingremovingservers-removing}

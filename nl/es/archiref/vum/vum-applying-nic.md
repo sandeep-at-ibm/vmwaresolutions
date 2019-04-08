@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -20,11 +23,15 @@ Antes de iniciar esta tarea, recupere todos los hosts físicos de direcciones IP
 Para cada host, de forma sucesiva:
 1. Utilice el cliente web de vSphere para colocar el host de vSphere ESXi en modalidad de mantenimiento, seleccionando **Inicio** > **Hosts y clústeres**. En el panel Navegador, seleccione el host de ESXi de vSphere y pulse con el botón derecho del ratón en el host y seleccione **Modalidad de mantenimiento** > **Entrar en modalidad de mantenimiento**. Como el host forma parte de un clúster DRS automatizado, las máquinas virtuales se migran a hosts diferentes cuando el host entra en modalidad de mantenimiento.
 2. Ejecute SSH en el host de vSphere ESXi con los detalles de la consola de IC4VS.
-3. Ejecute el mandato vCLI siguiente para habilite los controladores nativos ixgben:  `esxcli system module set --enabled=true --module=ixgben`
-4. Ejecute el siguiente mandato vCLI para rearrancar el host de vSphere ESXi: `system shutdown reboot -- reason "Install ixgben driver"`
-5. Después de que el host vSphere ESXI se rearranque de nuevo en el host utilizando el registro SSH, emita el siguiente mandato vCLI y compruebe que el controlador de ixgben esté "cargado" (la primera columna) y "habilitado" (segunda columna): `esxcli system module list |grep ixg`
+3. Ejecute el mandato vCLI siguiente para habilite los controladores nativos ixgben:
+  `esxcli system module set --enabled=true --module=ixgben`
+4. Ejecute el siguiente mandato vCLI para rearrancar el host de vSphere ESXi:
+  `system shutdown reboot --reason "Install ixgben driver"`
+5. Después de que el host vSphere ESXI se rearranque de nuevo en el host utilizando el registro SSH, emita el siguiente mandato vCLI y compruebe que el controlador de ixgben esté "cargado" (la primera columna) y "habilitado" (segunda columna):
+  `esxcli system module list |grep ixg`
 6. Si los controladores están habilitados, con el cliente web de vSphere seleccione el host en el panel Navegador, pulse con el botón derecho del ratón y seleccione **Modalidad de mantenimiento** > **Salir de la modalidad de mantenimiento**. Seleccione el siguiente host y habilite los controladores hasta que se hayan realizado todos los hosts.
-7. Si el cambio no funciona, ejecute el mandato siguiente para revertirlo: `esxcli system module set -- enabled=false -- module=ixgben`
+7. Si el cambio no funciona, ejecute el mandato siguiente para revertirlo:
+  `esxcli system module set --enabled=false --module=ixgben`
 
 8. Si no puede conectar con el host a través de la red, ejecute el mandato anterior desde la consola de IPMI mediante la ventana de control de {{site.data.keyword.cloud_notm}}.
 9. Después de rearrancar el host ESXi de vSphere, ahora observará el controlador ixgbe predeterminado que se ha cargado y habilitado.
@@ -46,5 +53,5 @@ Utilice el ID y la contraseña que aparecen en la lista de la ventana de control
 ## Enlaces relacionados
 {: #vum-applying-nic-related}
 
-* [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demostraciones)

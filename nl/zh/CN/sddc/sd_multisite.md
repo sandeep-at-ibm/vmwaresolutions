@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -52,7 +55,7 @@ lastupdated: "2019-03-12"
 
 图 1. Cloud Foundation 多站点部署
 
-![Cloud Foundation 多站点部署](multisite-hub-spoke.svg "Cloud Foundation 多站点部署")
+![Cloud Foundation 多站点部署](../vcenter/multisite-hub-spoke.svg "Cloud Foundation 多站点部署")
 
 该模型包含以下层：
 

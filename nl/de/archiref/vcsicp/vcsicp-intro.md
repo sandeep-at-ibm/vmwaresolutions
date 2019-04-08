@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-15"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Einführung in VMware vCenter Server on IBM Cloud und IBM Cloud Private

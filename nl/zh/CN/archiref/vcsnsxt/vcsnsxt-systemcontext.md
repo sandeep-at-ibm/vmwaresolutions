@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -47,7 +50,7 @@ lastupdated: "2019-02-15"
 
 参与者|描述
 ---|---
-vCenter|vCenter 是系统管理员用于管理内部部署 VM 和访问 HCX 插件以延伸网络和迁移 VM 的主要界面。通过 vCenter Server with Hybridity Bundle，系统管理员可以无缝地将内部部署 vSphere 网络集成到在 {{site.data.keyword.cloud_notm}} 上运行的 vCenter Server 实例中。混合联网将内部部署网络扩展到 {{site.data.keyword.cloud_notm}} 中，支持客户将自己的应用程序迁移到在 {{site.data.keyword.cloud_notm}} 上运行的 vCenter Server 实例中，并支持根据需要迁移回内部部署。有关 vCenter Server with Hybridity Bundle 的更多详细信息，请参阅 [VMware HCX on {{site.data.keyword.cloud_notm}} 解决方案体系结构](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)文档。
+vCenter|vCenter 是系统管理员用于管理内部部署 VM 和访问 HCX 插件以延伸网络和迁移 VM 的主要界面。通过 vCenter Server with Hybridity Bundle，系统管理员可以无缝地将内部部署 vSphere 网络集成到在 {{site.data.keyword.cloud_notm}} 上运行的 vCenter Server 实例中。混合联网将内部部署网络扩展到 {{site.data.keyword.cloud_notm}} 中，支持客户将自己的应用程序迁移到在 {{site.data.keyword.cloud_notm}} 上运行的 vCenter Server 实例中，并支持根据需要迁移回内部部署。有关 vCenter Server with Hybridity Bundle 的更多详细信息，请参阅 [VMware HCX on {{site.data.keyword.cloud_notm}} 解决方案体系结构](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)。
 内部部署 VM|内部部署 VM 托管迁移到云的应用程序。最初，应用程序会迁移为 VM，然后通过应用程序现代化之旅从 VM 迁移到容器。
 云上的 VM|云上的 VM 托管从内部部署迁移的应用程序。它们通过延伸的 L2 网络与内部部署应用程序进行通信。对于此参考体系结构以及此 Acme Skateboards 示例，其中一个云上 VM 是数据库服务器，这是联机在线工作负载的一部分。
 NSX-V|vCenter Server 上的 NSX-V 提供软件定义的覆盖网络，该覆盖网络由系统管理员进行管理。覆盖网络是 HCX 延伸网络的目标，用于处理来自 {{site.data.keyword.icpfull_notm}} 的 VM 的流量。NSX-V 使用 vSphere 分布式交换机 (vDS) 为参考体系结构提供了部署、重新配置和销毁随需应变虚拟网络和 VMware 内微分段服务等功能。有关更多信息，请参阅 [NSX-V 概述](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv)。

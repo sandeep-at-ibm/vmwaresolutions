@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-11"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -15,7 +18,7 @@ lastupdated: "2019-03-11"
 # Caveonix RiskForesight 라이센스에 대한 고려사항
 {: #caveonix_license_considerations}
 
-독립형 사용을 위해 주문한 Caveonix RiskForesight 라이센스를 삭제하기 전에 다음 고려사항을 검토하십시오. 
+독립형 사용을 위해 주문한 Caveonix RiskForesight 라이센스를 삭제하기 전에 다음 고려사항을 검토하십시오.
 
 ## Caveonix RiskForesight 라이센스 삭제 시 고려사항
 {: #caveonix_license_considerations-remove}

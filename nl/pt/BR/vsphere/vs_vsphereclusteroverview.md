@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-11"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -59,7 +62,7 @@ Além disso, as especificações de disco e de rede a seguir:
 * Uplinks duais de rede pública e privada de 10 Gbps
 * Um controlador de disco RAID
 
-### Rede
+### Redes
 {: #vs_vsphereclusteroverview-specs-network}
 
 * Uma VLAN pública de VLAN (Virtual LAN) e duas VLANs privadas

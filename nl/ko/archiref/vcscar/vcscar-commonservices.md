@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -13,7 +16,7 @@ lastupdated: "2019-02-15"
 
 공통 서비스는 클라우드 관리 플랫폼의 기타 서비스에서 사용하는 서비스를 제공합니다. 공통 서비스는 ID 및 액세스 서비스, Domain Name Service 및 NTP 서비스가 포함됩니다.
 
-그림 1. {{site.data.keyword.icpfull_notm}} 공통 서비스
+그림 1. {{site.data.keyword.icpfull_notm}} 공통 서비스</br>
 ![{{site.data.keyword.icpfull_notm}} 공통 서비스](vcscar-common-services.svg)
 
 ## ID 및 액세스 서비스

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -125,6 +128,7 @@ Edge Services Gateway| 虛擬應用裝置
 {: #vcsiks-arch-overview-infrastructure-iks-comp}
 
 圖 3. {{site.data.keyword.containerlong_notm}} 元件
+</br>
 ![{{site.data.keyword.containerlong_notm}} 元件圖](vcsiks-iks-components.svg)
 
 ### Kubernetes 主節點

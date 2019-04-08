@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-18"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -278,17 +281,19 @@ Tabla 6. Interfaz de red - Detalles de VLAN
 | Elemento        | Descripción       |  
 |:------------- |:------------- |
 | Número de VLAN | El número exclusivo de VLAN.  |
-| Descripción | El tipo de VLAN.  |
+| Descripción | La descripción de la VLAN.  |
 | Ubicación | La ubicación del centro de datos. |
 | Ruta primaria | La ruta primaria de la VLAN. |
+
+Pulse **Ver recurso** para acceder a los detalles de la VLAN.
 
 Tabla 7. Interfaz de red - Detalles de subred
 
 | Elemento        | Descripción       |  
 |:------------- |:------------- |
-| Nombre | El nombre de la subred. Pulse el nombre para acceder a los detalles de la dirección IP completa. |
+| Nombre | El nombre de la subred. Pulse sobre el nombre para acceder a los detalles de la subred. |
 | Tipo | El tipo de subred: primario o portátil. |
-| Descripción | El propósito de la subred. |
+| Descripción | La descripción de la subred. |
 
 Tabla 8. Interfaz de red - Detalles de IP
 
@@ -296,8 +301,7 @@ Tabla 8. Interfaz de red - Detalles de IP
 |:------------- |:------------- |
 | IP | Dirección IP. |
 | Estado | El estado de la dirección IP. |
-| Descripción |El host de la dirección IP.  |
-
+| Descripción |La descripción de la dirección IP.  |
 
 ## Supresión de clústeres de instancias de vCenter Server
 {: #vc_addingviewingclusters-deleting}

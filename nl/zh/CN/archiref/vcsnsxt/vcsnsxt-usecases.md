@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -49,7 +52,7 @@ Acme Skateboards 希望在其应用程序现代化之旅中，在 {{site.data.ke
 
 有关 NSX-V 的更多信息，请参阅 [NSX-V 概述](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv)。有关 vCenter Server 和 {{site.data.keyword.icpfull_notm}} 产品的更多信息，请参阅 [vCenter Server 和 {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)。
 
-图 2. 使用 {{site.data.keyword.icpfull_notm}} 的 vCenter Server
+图 2. 使用 {{site.data.keyword.icpfull_notm}} 的 vCenter Server</br>
 ![使用 {{site.data.keyword.icpfull_notm}} 的 vCenter Server](vcsnsxt-nsxvhl.svg)
 
 这将在内部部署和 {{site.data.keyword.cloud_notm}} 之间创建松散耦合的互连，并支持以下功能：
@@ -63,7 +66,7 @@ Acme Skateboards 希望在其应用程序现代化之旅中，在 {{site.data.ke
 -	**安排的迁移** - 可以将任意数量的 VM 复制到目标站点，然后在该站点上的指定时间激活，以替换在源站点上运行的系统。
 -	**安全策略迁移** - 如果 NSX 是以内部部署方式使用的，那么任何安全策略、防火墙等都会随工作负载一起移动。
 
-通过使用此解决方案，Acme Skateboards 能够成功地将其内部部署 VMware 工作负载迁移到 {{site.data.keyword.cloud_notm}}，满足了几乎或完全不发生停机时间，也无需重新配置应用程序的要求。有关 vCenter Server with Hybridity Bundle 的更多信息，请参阅 [VMware HCX on {{site.data.keyword.cloud_notm}} 解决方案体系结构](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)。
+通过使用此解决方案，Acme Skateboards 能够成功地将其内部部署 VMware 工作负载迁移到 {{site.data.keyword.cloud_notm}}，满足了几乎或完全不发生停机时间，也无需重新配置应用程序的要求。有关 vCenter Server with Hybridity Bundle 的更多信息，请参阅 [VMware HCX on {{site.data.keyword.cloud_notm}} 解决方案体系结构](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)。
 
 ## 相关链接
 {: #vcsnsxt-usecases-related}

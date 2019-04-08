@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -45,7 +48,7 @@ El escalado de clúster se inicia automáticamente. El usuario recibirá una con
 
 Si el clúster que está escalando no está listo para que lo utilice, es posible que reciba un mensaje de error.
 
-A diferencia de las instancias de vCenter Server y Cloud Foundation, los clústeres de vSphere no se muestran en la página **Instancias desplegadas**.
+A diferencia de las instancias de vCenter Server y Cloud Foundation, los clústeres de vSphere no se muestran en la página **Recursos**.
 {:note}
 
 ## Enlaces relacionados

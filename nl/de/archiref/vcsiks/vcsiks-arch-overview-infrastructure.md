@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -128,6 +131,7 @@ Platte	| 1000 GB auf lokalem Datenspeicher
 {: #vcsiks-arch-overview-infrastructure-iks-comp}
 
 Abbildung 3. {{site.data.keyword.containerlong_notm}}-Komponenten
+</br>
 ![{{site.data.keyword.containerlong_notm}}-Komponenten - Diagramm](vcsiks-iks-components.svg)
 
 ### Kubernetes-Master

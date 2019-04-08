@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-21"
 
+subcollection: vmwaresolutions
+
+
 ---
 # HCX Manager bei vCenter registrieren
 {: #hcx-archi-reg-vcenter}
@@ -30,7 +33,7 @@ Damit die virtuelle Hybrid-Cloud-Services-Appliance registriert werden kann, mus
 3. Konfigurieren Sie den Suchservice.
   1. Klicken Sie auf die Registerkarte **Verwalten**.
   2. Klicken Sie auf die Schaltfläche **Bearbeiten** ganz rechts von dem Textfeld **URL des Suchservice**.
-  3. Geben Sie den Netzserviceendpunkt für die Suche im folgenden Format an: 
+  3. Geben Sie den Netzserviceendpunkt für die Suche im folgenden Format an:
     * Für vCenter Server 5.5u3: `https://ssoip:/7444/lookupservice/sdk`
     * Für vCenter Server 6.0 Update 2: `https://ssoip/lookupservice/sdk`
   4. Klicken Sie auf **OK**. Führen Sie keinen Neustart aus, wenn eine Nachricht zum Neustart der Web-Engine angezeigt wird.

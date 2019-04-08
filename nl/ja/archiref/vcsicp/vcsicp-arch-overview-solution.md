@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -124,7 +127,7 @@ CAM が機能するためには、ワーカー・ノードの vCPU とメモリ�
 
 {{site.data.keyword.cloud_notm}} Automation Manager (CAM) は、{{site.data.keyword.icpfull_notm}} 上で実行されるマルチクラウド・セルフサービス管理プラットフォームであり、開発者と管理者がビジネス要求に対応できるようにします。
 
-図 3. CAM コンポーネント・リファレンス
+図 3. CAM コンポーネント・リファレンス</br>
 ![CAM コンポーネント・リファレンス](vcsicp-cam-component-ref.svg)
 
 ### CAM プロキシー

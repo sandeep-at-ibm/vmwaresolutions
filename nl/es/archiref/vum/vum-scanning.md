@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -36,7 +39,7 @@ Puede explorar VM y dispositivos virtuales en el inventario de vSphere frente a 
 3.	Seleccione los tipos de actualizaciones que desee explorar. Las opciones son _Actualizaciones de dispositivos virtuales, actualizaciones de hardware de máquina virtual_ y _actualizaciones de VMware Tools_.
 4.	Pulse **Explorar**.
 
-## Iniciación manual de una exploración de un objeto contenedor
+##	Iniciación manual de una exploración de un objeto contenedor
 {: #vum-scanning-scan-container}
 
 Iniciar una exploración simultánea de hosts, VM virtuales y dispositivos virtuales explorando un objeto de contenedor que es un centro de datos o una carpeta de centro de datos.
@@ -45,7 +48,7 @@ Iniciar una exploración simultánea de hosts, VM virtuales y dispositivos virtu
 3.	Seleccione los tipos de actualizaciones que desee explorar. Las opciones son _Actualizaciones de dispositivos virtuales, actualizaciones de hardware de máquina virtual_ y _actualizaciones de VMware Tools_.
 4.	Pulse **Explorar**.
 
-## Planificación de una exploración
+##	Planificación de una exploración
 {: #vum-scanning-schedule}
 
 Puede configurar el cliente web de vSphere para explorar VM, dispositivos virtuales y hosts ESXi de vSphere en momentos específicos o a los intervalos que le convengan.
@@ -61,5 +64,5 @@ Puede configurar el cliente web de vSphere para explorar VM, dispositivos virtua
 ## Enlaces relacionados
 {: #vum-scanning-related}
 
-* [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
 * [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demostraciones)

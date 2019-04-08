@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -52,7 +55,7 @@ Le graphique suivant décrit l'architecture globale d'un déploiement Cloud Foun
 
 Figure 1. Déploiement Cloud Foundation multisite
 
-![Déploiement multisite de Cloud Foundation](multisite-hub-spoke.svg "Déploiement multisite de Cloud Foundation")
+![Déploiement multisite de Cloud Foundation](../vcenter/multisite-hub-spoke.svg "Déploiement multisite de Cloud Foundation")
 
 Le modèle contient les couches suivantes :
 

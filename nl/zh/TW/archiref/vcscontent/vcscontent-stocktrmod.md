@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-15"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -51,7 +54,7 @@ Todd 執行下列指令，以建立新的 NFS 伺服器：
 
 `systemctl restart nfs-kernel-server`
 
-Todd 接著會在每個 VM 上執行下列指令，以將 NFS 安裝至每個 {{site.data.keyword.icpfull_notm}} 工作者節點 VM：
+Todd 接著會在每部 VM 上執行下列指令，以將 NFS 安裝至每部 {{site.data.keyword.icpfull_notm}} 工作者節點 VM：
 
 `sudo apt-get update`
 

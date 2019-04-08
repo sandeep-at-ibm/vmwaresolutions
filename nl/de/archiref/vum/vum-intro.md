@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -18,7 +21,7 @@ VUM ermöglicht ein zentrales, automatisiertes Patch- und Versionsmanagement fü
 * Installieren und Aktualisieren von Software anderer Anbieter auf den Hosts.
 * Durchführen von Upgrades für VM-Hardware, VMware Tools und virtuelle Appliances.
 
-In diesem Dokument werden auch die Prozesse beschrieben, mit deren Hilfe die folgenden Komponenten Ihrer vCenter-Serverinstanz verwaltet werden:
+In diesem Dokument werden auch die Prozesse beschrieben, mit deren Hilfe die folgenden Komponenten Ihrer vCenter Serverinstanz verwaltet werden:
 * vCenter Server Appliance
 * NSX
 * vSAN
@@ -26,6 +29,7 @@ In diesem Dokument werden auch die Prozesse beschrieben, mit deren Hilfe die fol
 Dieses Dokument beschreibt die Verwendung einer Proxy-Server-Implementierung auf der Basis von CentOS und Squid, sodass VUM auf die VMware-Repositorys zugreifen kann. Wenn VUM eine Ressource vom Update-Server bei VMware anfordert, wird die Anforderung zuerst an den Proxy-Server gesendet und der Proxy-Server sendet die Anforderung dann über das External Services Gateway (ESG) an den Update-Server. Sobald die Ressource vom Proxy-Server empfangen wurde, sendet er die Ressource an VUM.
 
 Abbildung 1. Übersichtsdiagramm
+</br>
 ![Übersichtsdiagramm](vum-vcsproxy.svg)
 
 vCenter Server stellt derzeit vSphere 6.5 bereit. Das bedeutet, dass VUM nun in die vCenter Server Appliance (VCSA) integriert ist, und da die VUM-Clientkomponente ein Plug-in ist, das auf dem vSphere Web Client ausgeführt wird, wird sie nach der Bereitstellung von VCSA automatisch aktiviert. VUM erhält jedoch keinen Zugriff auf das Internet, um auf die VMware-Repositorys zuzugreifen.
@@ -67,5 +71,5 @@ Diese Funktion ermöglicht die automatisierte Aktualisierung nur für die Manage
 ## Zugehörige Links
 {: #vum-intro-related}
 
-* [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
 * [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demonstrationen)

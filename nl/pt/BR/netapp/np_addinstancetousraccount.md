@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-04"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Migrando instâncias do NetApp ONTAP Select pré-V2.5 para contas do IBM Cloud
@@ -35,7 +38,7 @@ Para obter mais informações sobre como vincular sua conta somente IaaS à sua 
 {: #np_addinstancetousraccount-results}
 
 1. Você obtém uma notificação do console de que sua solicitação para migrar a instância para a conta especificada do {{site.data.keyword.cloud_notm}} foi aceita.
-2. Quando a migração da instância for concluída, a instância será exibida na página **Recursos** sob a conta para a qual ela é migrada. A instância migrada não é mais exibida na conta original da qual foi migrada.
+2. Quando a migração da instância for concluída, a instância será exibida na página **Recursos** sob a conta para a qual ela foi migrada. A instância migrada não é mais exibida na conta original da qual foi migrada.
 
 ## Links relacionados
 {: #np_addinstancetousraccount-related}

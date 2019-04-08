@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-28"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:faq: data-hd-content-type='faq'}
@@ -19,7 +22,7 @@ Die folgenden Informationen enthalten Hinweise und Voraussetzungen für den Netz
 {: #vc_nsx-t_networkingonvcenterserver-networking-components}
 {: faq}
 
-Informationen zu den Netzkomponenten, die in Ihrer vCenter Server with NSX-T-Instanz enthalten sind, finden Sie unter [Technische Spezifikationen für vCenter Server with NSX-T-Instanzen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_overview-specs). 
+Informationen zu den Netzkomponenten, die in Ihrer vCenter Server with NSX-T-Instanz enthalten sind, finden Sie unter [Technische Spezifikationen für vCenter Server with NSX-T-Instanzen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_overview-specs).
 
 ## Hinweise zur Firewall
 {: #vc_nsx-t_networkingonvcenterserver-firewall-considerations}

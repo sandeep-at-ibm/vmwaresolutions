@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-25"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -15,7 +18,7 @@ lastupdated: "2019-02-15"
 # VMware 인스턴스에 대한 배치 후 고려사항
 {: #solution_considerations}
 
-{{site.data.keyword.vmwaresolutions_full}}, VMware vCenter Server 및 VMware Cloud Foundation 오퍼링은 관리 서비스가 아닙니다. 사용자는 모든 소프트웨어 컴포넌트의 구성, 보안, 관리 및 모니터링에 책임이 있습니다. 솔루션에 대한 완전한 관리 액세스 권한을 사용하여, 다양한 도메인에서 중요한 기술, 관리 및 운영 전문 지식이 필요한 강력한 성능과 유연성을 제공합니다. {{site.data.keyword.cloud_notm}}에서 VMware 인스턴스를 관리하려면 온프레미스 인스턴스에 대한 계획과 동일한 계획 및 전문 지식이 필요합니다. VMware NSX 및 VMware vSAN과 같은 소프트웨어 정의 기술은 인스턴스 관리의 일부 측면을 크게 단순화하지만, 적절하게 관리 및 운영하기 위해서는 새로운 기술과 도구가 필요할 수 있습니다. {{site.data.keyword.cloud_notm}} 자동화된 VMware 배치의 성능, 속도 및 신뢰성을 적절한 운영 계획 및 테스트에 결합하면 빠르고 성공적인 탐색이 가능합니다.
+{{site.data.keyword.vmwaresolutions_full}} 오퍼링은 관리 서비스가 아닙니다. 사용자는 모든 소프트웨어 컴포넌트의 구성, 보안, 관리 및 모니터링에 책임이 있습니다. 솔루션에 대한 완전한 관리 액세스 권한을 사용하여, 다양한 도메인에서 중요한 기술, 관리 및 운영 전문 지식이 필요한 강력한 성능과 유연성을 제공합니다. {{site.data.keyword.cloud_notm}}에서 VMware 인스턴스를 관리하려면 온프레미스 인스턴스에 대한 계획과 동일한 계획 및 전문 지식이 필요합니다. VMware NSX 및 VMware vSAN과 같은 소프트웨어 정의 기술은 인스턴스 관리의 일부 측면을 크게 단순화하지만, 적절하게 관리 및 운영하기 위해서는 새로운 기술과 도구가 필요할 수 있습니다. {{site.data.keyword.cloud_notm}} 자동화된 VMware 배치의 성능, 속도 및 신뢰성을 적절한 운영 계획 및 테스트에 결합하면 빠르고 성공적인 탐색이 가능합니다.
 
 다음 고려사항을 검토하여 인스턴스 배치 전후의 인스턴스 관리 및 운영에 대한 책임을 이해하십시오.
 
@@ -44,7 +47,7 @@ lastupdated: "2019-02-15"
 - [{{site.data.keyword.cloud_notm}} VPN](https://www.softlayer.com/vpn-access) 또는 [{{site.data.keyword.cloud_notm}} Direct-Link 연결](https://www.ibm.com/cloud/direct-link)을 사용하여 인스턴스 관리 엔드포인트에 액세스하십시오.
 - 인스턴스 내에서 공용 네트워크 연결에 대한 전략을 설계하십시오. 옵션에는 샘플 고객 VMware NSX Edge Services Gateway(ESG), 게이트웨이 어플라이언스(예: Vyatta 및 FortiGate) 및 {{site.data.keyword.cloud_notm}} 네트워크 또는 DirectLink를 통해 액세스한 자체 네트워크에 배치된 프록시 서버가 포함됩니다.
 - [{{site.data.keyword.cloud_notm}} 휴대용 IP 주소](/docs/infrastructure/subnets?topic=subnets-getting-started-with-subnets-and-ips)를 사용하여 {{site.data.keyword.cloud_notm}} VLAN에 또는 [고유 IP 주소를 사용하여 NSX 논리 스위치(VXLANs)](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_overview)에 워크로드를 배치할지 계획하십시오. NSX SDN(Software-Defined Networking)을 사용하면 강력한 유연성을 제공하여 {{site.data.keyword.cloud_notm}}에서 워크로드 네트워크를 관리하고 보안을 설정할 수 있습니다.
-- NSX ESG, [IBM Cloud Vyatta](https://console.cloud.ibm.com/catalog/infrastructure/virtual-router-appliance) 및 DirectLink 피어링을 사용하여 워크로드(네트워크 주소 변환, 가상 사설망(VPN), 라우팅)에 대한 연결을 계획하십시오.
+- NSX ESG, [IBM Cloud Vyatta](https://cloud.ibm.com/catalog/infrastructure/virtual-router-appliance) 및 DirectLink 피어링을 사용하여 워크로드(네트워크 주소 변환, 가상 사설망(VPN), 라우팅)에 대한 연결을 계획하십시오.
 - 교차 vCenter NSX를 구현하는 경우 로컬 워크로드를 배치하기 전에 로컬 세그먼트 ID 범위가 겹치지 않는지 확인하십시오.
 
 ## 보안 계획 및 기록
@@ -55,7 +58,7 @@ lastupdated: "2019-02-15"
 - {{site.data.keyword.vmwaresolutions_short}} 콘솔에 표시되는 모든 비밀번호를 변경하고 자체 비밀번호 관리 시스템을 사용하십시오. IBM은 진행 중인 자동화 및 지원에 필요한 개별 사용자 ID를 보유하고 있습니다.
 - 모든 컴포넌트에서 복잡도 및 만료 기간과 같은 비밀번호 정책을 검토하십시오.
 - 모든 컴포넌트에서 암호화 설정을 검토하십시오.
-- 적절한 실제 또는 가상 방화벽 솔루션(예: NSX DFW(Distributed Firewall), NSX ESG, [Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations) 및 [IBM Cloud Vyatta](https://console.cloud.ibm.com/catalog/infrastructure/virtual-router-appliance))을 계획 및 구현하십시오.
+- 적절한 실제 또는 가상 방화벽 솔루션(예: NSX DFW(Distributed Firewall), NSX ESG, [Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations) 및 [IBM Cloud Vyatta](https://cloud.ibm.com/catalog/infrastructure/virtual-router-appliance))을 계획 및 구현하십시오.
 - 적절한 애플리케이션 로드 밸런싱 및 보안 솔루션(예: [F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations))을 계획 및 구현하십시오.
 - 적절한 보안 정보 및 이벤트 관리(SIEM) 솔루션(예: [IBM QRadar](https://www.ibm.com/us-en/marketplace/hosted-security-intelligence))을 계획 및 구현하십시오.
 - 적절한 취약성 스캔을 계획하고 구현하십시오.
@@ -66,7 +69,7 @@ lastupdated: "2019-02-15"
 
 다음 단계를 완료하여 기본 VMware 인스턴스 설치를 요구사항에 맞게 사용자 정의하십시오.
 
-- 자체 인증 기관(CA)을 사용하여 vCenter, VMware Platform Services Controller(PSC) 및 NSX Manager와 같은 컴포넌트의 인증서를 생성하십시오.
+- 자체 인증 기관(CA)을 사용하여 vCenter(임베디드 PSC 포함) 및 NSX Manager와 같은 컴포넌트의 인증서를 생성하십시오.
 - 배치된 서비스를 구성하십시오. 예를 들어 다음과 같습니다.
   - HyTrust CloudControl on {{site.data.keyword.cloud_notm}}의 경우, AD 통합, 액세스 제어, SMTP(Simple Mail Transfer Protocol) 설정 및 규제 준수 정책을 구성하십시오.
   - Zerto on {{site.data.keyword.cloud_notm}}의 경우, NAT(Network Address Translator) 순회가 지원되지 않으므로 Zerto VRA(Virtual Replication Appliance) 통신의 IP 주소 지정 및 라우팅을 계획하십시오. 적절한 주소 지정과 라우팅을 위해 VRA의 터널링 또는 재배치를 고려하십시오.

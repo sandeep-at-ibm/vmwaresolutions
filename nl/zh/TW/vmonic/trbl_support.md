@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-25"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -20,7 +23,7 @@ lastupdated: "2019-02-14"
 ## 從 IBM Cloud for VMware Solutions 主控台提交支援問題單的程序
 {: #trbl_support-procedure}
 
-1. 移至 https://console.cloud.ibm.com/infrastructure/vmware-solutions/console。
+1. 移至 https://cloud.ibm.com/infrastructure/vmware-solutions/console。
 2. 使用您的 **IBM ID** 帳戶登入主控台。
 3. 按一下功能表列上的**支援**。
 4. 在**取得支援**頁面上，按一下**建立案例**。

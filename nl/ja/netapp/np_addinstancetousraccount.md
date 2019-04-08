@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-04"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # V2.5 以前の NetApp ONTAP Select インスタンスの IBM Cloud アカウントへのマイグレーション

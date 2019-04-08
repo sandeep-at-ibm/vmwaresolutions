@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-12"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -19,7 +22,8 @@ lastupdated: "2019-03-12"
 
 可用的更新是實例的軟體更新清單中的記錄，可立即套用或排定稍後進行。更新是一個組合，包含一個以上用來更新 IBM 管理元件及 VMware 元件的套件。
 
-由於已啟用自動更新，因此不再列出 IBM CloudDriver 更新。新增 ESXi 伺服器、新增叢集，以及訂購服務等的動作會自動將實例更新至最新版本。如需自動更新的相關資訊，請參閱 [2.5 版的版本注意事項](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-relnotes_v25)中的 *IBM CloudDriver 備援* 小節。{:note}
+由於已啟用自動更新，因此不再列出 IBM CloudDriver 更新。新增 ESXi 伺服器、新增叢集，以及訂購服務等的動作會自動將實例更新至最新版本。如需自動更新的相關資訊，請參閱 [2.5 版的版本注意事項](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-relnotes_v25)中的 *IBM CloudDriver 備援* 小節。
+{:note}
 
 ## 開始之前
 {: #sd_applyingupdates-prereq}

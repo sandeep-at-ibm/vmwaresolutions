@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-12"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -15,7 +18,7 @@ lastupdated: "2019-03-12"
 # Konformitätsinformationen für vCenter Server-Instanzen
 {: #vc_compl_info}
 
-Die folgenden Informationen enthalten Details zur Konformität für VMware vCenter Server-Instanzen. 
+Die folgenden Informationen enthalten Details zur Konformität für VMware vCenter Server-Instanzen.
 
 Das VMware vCenter Server on {{site.data.keyword.cloud_notm}} with NSX-T-Angebot wird für HIPAA-Kunden nicht unterstützt.
 {:important}
@@ -28,7 +31,7 @@ Das folgende Diagramm enthält Details zu den Verantwortlichkeiten des Kunden (S
 Abbildung 1. Verantwortlichkeitsmatrix für Kunden und IBM für vCenter Server on IBM Cloud im Vergleich
 ![Verantwortlichkeitsmatrix für Kunden und IBM im Vergleich](customer_ibm_responsibility_matrix.svg "Customer versus IBM responsibility matrix")
 
-## Einschränkungen für Statusdaten
+## Einschränkungen für Gesundheitsdaten
 {: #vc_compl_info-health-data-restrictions}
 
 Die Bedingungen in diesem Abschnitt gelten für das gesamte Portfolio von {{site.data.keyword.vmwaresolutions_full}}.
@@ -36,18 +39,18 @@ Die Bedingungen in diesem Abschnitt gelten für das gesamte Portfolio von {{site
 ### HIPAA
 {: #vc_compl_info-hipaa}
 
-Ungeachtet der Informationen im Datenblatt für diesen Cloud-Service bezüglich dem Health Information Portability and Accountability Act von 1996 ("HIPAA") und der zulässigen Verwendung von Statusinformationen und Statusdaten als Typen persönlicher Daten und/oder Spezialkategorien persönlicher Daten (nachstehend zusammenfassend als "Statusdaten" bezeichnet) für diesen Cloud-Service unterliegt die Verwendung von Statusdaten im Zusammenhang mit diesem Cloud-Service den folgenden Einschränkungen und Bedingungen:
+Ungeachtet der Informationen im Datenblatt für diesen Cloud-Service bezüglich dem Health Information Portability and Accountability Act von 1996 ("HIPAA") und der zulässigen Verwendung von Gesundheitsinformationen und Gesundheitsdaten als Typen personenbezogener Daten und/oder besonderer Kategorien personenbezogener Daten (nachstehend zusammenfassend als "Gesundheitsdaten" bezeichnet) für diesen Cloud-Service unterliegt die Verwendung von Gesundheitsdaten im Zusammenhang mit diesem Cloud-Service den folgenden Einschränkungen und Bedingungen:
 
 {{site.data.keyword.vmwaresolutions_short}}
 
-Nur die Angebote, die oben aufgeführt sind, können bereitgestellt werden, um die HIPAA-Steuerelemente für Vertraulichkeit und Sicherheit für die Verwendung mit Statusdaten zu implementieren, wenn der Kunde IBM im Voraus darüber benachrichtigt, dass der Kunde Statusdaten mit dem Cloud-Service verwendet und IBM schriftlich bestätigt, dass der Cloud-Service für die Nutzung von Statusdaten bereitgestellt wird. Daher darf der Cloud-Service nicht für die Übertragung, Speicherung oder sonstige Nutzung von Statusdaten eingesetzt werden, die dem HIPAA unterliegen, es sei denn, (i) der Kunde stellt IBM eine solche Benachrichtigung bereit; (ii) IBM und der Kunde sind eine entsprechende Geschäftspartnervereinbarung (BAA, Business Associate Agreement) eingegangen; und (iii) IBM stellt dem Kunden eine ausdrückliche schriftliche Bestätigung bereit, dass der Cloud-Service mit Statusdaten verwendet werden darf. In keinem Fall darf der Cloud-Service für die Verarbeitung von persönlichen Statusinformationen als Clearinghouse im Rahmen der Bedeutung des HIPAA verwendet werden.
+Nur die Angebote, die oben aufgeführt sind, können bereitgestellt werden, um die HIPAA-Kontrollmechanismen für Vertraulichkeit und Sicherheit für die Verwendung mit Gesundheitsdaten zu implementieren, wenn der Kunde IBM im Voraus darüber benachrichtigt, dass der Kunde Gesundheitsdaten mit dem Cloud-Service verwendet und IBM schriftlich bestätigt, dass der Cloud-Service für die Nutzung von Gesundheitsdaten bereitgestellt wird. Daher darf der Cloud-Service nicht für die Übertragung, Speicherung oder sonstige Nutzung von Gesundheitsdaten eingesetzt werden, die dem HIPAA unterliegen, es sei denn, (i) der Kunde stellt IBM eine solche Benachrichtigung bereit; (ii) IBM und der Kunde sind eine entsprechende Geschäftspartnervereinbarung (BAA, Business Associate Agreement) eingegangen; und (iii) IBM stellt dem Kunden eine ausdrückliche schriftliche Bestätigung bereit, dass der Cloud-Service mit Gesundheitsdaten verwendet werden darf. In keinem Fall darf der Cloud-Service für die Verarbeitung von geschützte Gesundheitsdaten als Clearinghouse gemäß HIPAA verwendet werden.
 
 Im Falle eines Systemausfalls kann ein Service-Provider eines anderen Anbieters das Debugging von Artefakten vom Kunden anfordern (Protokolle, Kernspeicherauszüge usw.). Es liegt in der alleinigen Verantwortung des Kunden, diese Artefakte zu erfassen und an den Drittanbieter zu übertragen. Das IBM Support Team kann Sie durch die Bereitstellung von Links zu Dokumentationen oder richtungsweisenden Anweisungen über Sitzungen mit gemeinsamer Anzeigennutzung unterstützen. Der Kunde ist jedoch für die Bereinigung von PHI-Daten und für die ordnungsgemäße Verschlüsselung dieser Daten vor der Übertragung verantwortlich. Es liegt auch in der Verantwortung des Kunden, zu bewerten, ob vor dem Senden von Daten eine Geschäftspartnervereinbarung mit dem Drittanbieter getroffen werden muss.
 
-## Persönliche Daten und regulierte Daten
+## Personenbezogene Daten und schutzwürdige Daten
 {: #vc_compl_info-personal-info-and-regulated-data}
 
-Dieser Cloud-Service ist nicht auf spezielle Sicherheitsanforderungen für regulierte Inhalte ausgelegt, wie z. B. persönliche Informationen oder sensible persönliche Daten. Der Kunde ist dafür verantwortlich festzustellen, ob dieser Cloud-Service den Kundenanforderungen bezüglich der Art des Inhalts entspricht, die der Kunde in Verbindung mit dem Cloud-Service verwendet.
+Dieser Cloud-Service ist nicht auf spezielle Sicherheitsanforderungen für schutzwürdige Inhalte ausgelegt, wie z. B. personenbezogene Daten oder sensible personenbezogene Daten. Der Kunde ist dafür verantwortlich festzustellen, ob dieser Cloud-Service den Kundenanforderungen bezüglich der Art des Inhalts entspricht, die der Kunde in Verbindung mit dem Cloud-Service verwendet.
 
 ## Richtlinien für den Zugriff auf Kundeninstanzen
 {: #vc_compl_info-policy-for-access-client-inst}
@@ -74,7 +77,7 @@ VMware vCenter Server-Umgebungen, die als {{site.data.keyword.vmwaresolutions_sh
 ### Support-Tickets
 {: #vc_compl_info-support-tickets}
 
-* vCenter Server-Umgebungen werden nicht aktiv von IBM überwacht und der IBM Support greift im Normalbetrieb nicht ohne ein vom Kunden geöffnetes Support-Ticket auf die VMware-Managementschicht zu. 
+* vCenter Server-Umgebungen werden nicht aktiv von IBM überwacht und der IBM Support greift im Normalbetrieb nicht ohne ein vom Kunden geöffnetes Support-Ticket auf die VMware-Managementschicht zu.
 * Wenn ein Kunde ein Support-Ticket für ein Instanz-, Service- oder Bereitstellungsproblem öffnet, wird das Ticket schnell dem zuständigen IBM Support Team zugewiesen, das primär für die Lösung des Problems verantwortlich ist.
 * Aufgrund des Grades an Spezialisierung, der erforderlich ist, um das technische Know-how auf Teamebene aufrecht zu erhalten, ist es in manchen Fällen nötig, dass mehr als ein Support-Team an der Lösung eines bestimmten Softwareproblems beteiligt ist. Dies ist ohne großen Aufwand durchsetzbar, da unsere Support-Teams gut miteinander vernetzt sind und Hand in Hand an aufgetretenen Probleme arbeiten.
 * Um das Problem zu untersuchen, muss IBM möglicherweise auf Informationen zu Ihrem System in Bezug auf den Fehler zugreifen oder den Fehler erneut generieren, um zusätzliche Informationen zu erhalten.

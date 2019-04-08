@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-04"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Lokale VMware HCX on IBM Cloud-Instanzen löschen
@@ -21,7 +24,7 @@ Lesen Sie unbedingt alle Hinweise im Abschnitt [Hinweise zum Löschen von lokale
 ## Vorgehensweise zum Löschen von VMware HCX on IBM Cloud-Instanzen
 {: #standalone_deletingserviceinstances-procedure}
 
-1. Klicken Sie im linken Navigationsfenster auf **Ressourcen**. 
+1. Klicken Sie im linken Navigationsfenster auf **Ressourcen**.
 2. Blättern Sie abwärts zur Tabelle **Lokale HCX-Instanzen** und suchen Sie die Instanz, die gelöscht werden soll.
 3. Klicken Sie in der Spalte **Aktionen** auf das Symbol "Löschen".
 4. Klicken Sie im Fenster **Instanz löschen** auf **OK**.

@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-15"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Migration "lift-and-shift" des machines virtuelles Stock Trader vers IBM Cloud

@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-13"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -98,9 +101,9 @@ KMIP for VMware インスタンスは、Key Protect インスタンスへのア�
 図 1. KMIP for VMware on {{site.data.keyword.cloud_notm}} のコンポーネント
 ![KMIP for VMware on {{site.data.keyword.cloud_notm}}](kmip-key-protect.svg "このソリューションは、IBM Key Protect 内に保管されたルート鍵を使用して、VMware の vSphere 暗号化と vSAN 暗号化を可能にします。")
 
-KMIP for VMware は、多数の {{site.data.keyword.cloud_notm}} マルチゾーン領域 (MZR) で提供されています。完全なリストについては、[KMIP for VMware の注文](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)を参照してください。
+KMIP for VMware は、多数の {{site.data.keyword.cloud_notm}} マルチゾーン領域 (MZR) で提供されています。 完全なリストについては、[KMIP for VMware の注文](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)を参照してください。
 
-KMIP for VMware では、高可用性を実現するために、MZR ごとに 2 つのネットワーク・サービス・エンドポイントが {{site.data.keyword.cloud_notm}} プライベート・ネットワーク上に用意されています。これらの両方のエンドポイントを KMS クラスターとして vCenter 鍵管理サーバー (KMS) 構成に構成してください。 各 MZR 内のエンドポイントのリストと、KMIP サーバー証明書の署名については、[KMIP for VMware サービスの資料](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)を参照してください。
+KMIP for VMware では、高可用性を実現するために、MZR ごとに 2 つのネットワーク・サービス・エンドポイントが {{site.data.keyword.cloud_notm}} プライベート・ネットワーク上に用意されています。 これらの両方のエンドポイントを KMS クラスターとして vCenter 鍵管理サーバー (KMS) 構成に構成してください。 各 MZR 内のエンドポイントのリストと、KMIP サーバー証明書の署名については、[KMIP for VMware サービスの資料](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)を参照してください。
 
 また、KMIP for VMware は、公衆インターネットではなく {{site.data.keyword.cloud_notm}} プライベート・ネットワークを使用して {{site.data.keyword.cloud_notm}} Key Protect に接続します。
 

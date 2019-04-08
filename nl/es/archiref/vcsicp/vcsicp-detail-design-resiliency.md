@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-15"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Copia de seguridad, recuperación tras desastre y escalabilidad
@@ -22,13 +25,13 @@ Como parte de {{site.data.keyword.vmwaresolutions_full}}, el software de copia d
 ### Copia de seguridad NSX
 {: #vcsicp-detail-design-resiliency-nsx-backup}
 
-La copia de seguridad adecuada de todos los componentes de NSX es crucial para restaurar el sistema a su estado de trabajo si se produce una anomalía. No es suficiente hacer una copia de seguridad de las máquinas virtuales (VM) NSX. Se debe utilizar la función de copia de seguridad NSX dentro del NSX Manager para realizar copia de seguridad adecuada. Se debe especificar un servidor FTP o SFTP para el repositorio de datos de copia de seguridad NSX.
+La copia de seguridad adecuada de todos los componentes de NSX es crucial para restaurar el sistema a su estado de funcionamiento si se produce una anomalía. No es suficiente hacer una copia de seguridad de las máquinas virtuales (VM) NSX. Se debe utilizar la función de copia de seguridad NSX dentro del NSX Manager para realizar copia de seguridad adecuada. Se debe especificar un servidor FTP o SFTP para el repositorio de datos de copia de seguridad NSX.
 La copia de seguridad de NSX Manager contiene toda la configuración de NSX, incluidos controladores, entidades de conmutación y de direccionamiento lógicos, seguridad, reglas de cortafuegos y todo lo demás que configure dentro de la interfaz de usuario o API de NSX Manager. Se debe hacer copia de seguridad por separado de la base de datos de vCenter y de los elementos relacionados, como los conmutadores virtuales. Se debe hacer una copia de seguridad de la configuración de NSX junto con una copia de seguridad de vCenter.
 
 ### Copia de seguridad y DR para IBM Cloud Private
 {: #vcsicp-detail-design-resiliency-backup-dr-icp}
 
-Las copias de seguridad de un despliegue de {{site.data.keyword.icpfull_notm}} resultan cruciales para restaurar el sistema a su estado de trabajo si se produce una anomalía. Además de una copia de seguridad de máquina virtual tradicional, cada nodo maestro de {{site.data.keyword.icpfull_notm}} ejecuta etcd. En la documentación de etcd se indica claramente que no se utilice la copia de seguridad de VM tradicional para restaurarla.
+Las copias de seguridad de un despliegue de {{site.data.keyword.icpfull_notm}} resultan cruciales para restaurar el sistema a su estado de funcionamiento si se produce una anomalía. Además de una copia de seguridad de máquina virtual tradicional, cada nodo maestro de {{site.data.keyword.icpfull_notm}} ejecuta etcd. En la documentación de etcd se indica claramente que no se utilice la copia de seguridad de VM tradicional para restaurarla.
 
 Para {{site.data.keyword.icpfull_notm}} a nivel de plataforma, necesita realizar una copia de seguridad de estos componentes:
 - **Etcd** se utiliza para almacenar recursos de Kubernetes y la información de estado de Calico.
@@ -42,7 +45,7 @@ Para {{site.data.keyword.icpfull_notm}} a nivel de plataforma, necesita realizar
 ### Copia de seguridad y DR para CAM
 {: #vcsicp-detail-design-resiliency-backup-dr-cam}
 
-La copia de seguridad para un despliegue de CAM resulta crucial para restaurar el sistema a su estado de trabajo si se produce una anomalía. La copia de seguridad de CAM requiere que el cliente realice una copia de seguridad de los componentes siguientes:
+La copia de seguridad para un despliegue de CAM resulta crucial para restaurar el sistema a su estado de funcionamiento si se produce una anomalía. La copia de seguridad de CAM requiere que el cliente realice una copia de seguridad de los componentes siguientes:
 - La **base de datos Mongo** es base de datos principal de CAM.
 - La **base de datos de Maria** es la base de datos que utiliza CAM Blueprint Designer.
 - **NFS/GlusterFS** es donde residen los datos de CAM en cuatro volúmenes persistentes.

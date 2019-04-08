@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-13"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -53,8 +56,8 @@ Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} 服务中订购并包
 除去 Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} 服务之前，请查看以下注意事项：
 * 除去 Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} 服务不会取消 Caveonix RiskForesight 许可证。必须从 {{site.data.keyword.vmwaresolutions_short}} 控制台的**资源**页面上的 **Caveonix RiskForesight 许可证**表中删除 Caveonix RiskForesight 许可证。
 * 除去服务时，{{site.data.keyword.vmwaresolutions_short}} 自动化仅删除已部署的单个“一体化”Caveonix VM 以及为其订购的专用子网。因此，
-   * 如果 Caveonix VM 已横向扩展为多个 VM，那么不会除去这些额外的 VM。 
-   * 如果在额外的 VM 上使用专用子网的 IP 地址，那么这些 VM 必须分配有新的 IP 地址才能继续正常运行。 
+   * 如果 Caveonix VM 已横向扩展为多个 VM，那么不会除去这些额外的 VM。
+   * 如果在额外的 VM 上使用专用子网的 IP 地址，那么这些 VM 必须分配有新的 IP 地址才能继续正常运行。
    * 如果删除已安装了 Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} 服务的 vCenter Server 实例 A，并且您已使用在 vCenter Server 实例 B 中为该服务订购的专用子网的 IP 地址，那么在删除 vCenter Server 实例 A 时将取消该专用子网。
 
 ## 相关链接

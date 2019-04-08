@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-15"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -17,7 +20,8 @@ lastupdated: "2019-02-15"
 
 請先檢閱下列考量，再安裝或刪除您針對內部部署使用所訂購的 HCX on {{site.data.keyword.cloud}} 實例。
 
-具有 HCX on {{site.data.keyword.cloud_notm}} 的 vCenter Server 實例限制為來自內部部署站台只能有三個同時連線。{:note}
+具有 HCX on {{site.data.keyword.cloud_notm}} 的 vCenter Server 實例限制為來自內部部署站台只能有三個同時連線。
+{:note}
 
 ## 安裝內部部署 HCX on IBM Cloud 實例時的考量
 {: #standalone_considerations-install}
@@ -40,7 +44,8 @@ HCX on {{site.data.keyword.cloud_notm}} 元件必須同時安裝在 {{site.data.
     3. 按一下**複製鏈結**，然後使用此鏈結將 HCX Enterprise Client 下載至內部部署環境，而且可以存取您的內部部署 vSphere 環境。
 3. 在 VMware vSphere Web Client 中，將 HCX Enterprise Client 當成 HCX Manager 虛擬應用裝置 (HCX Manager) 部署至內部部署環境。
 
-   您必須在專用網路上部署內部部署 HCX Manager，並容許它存取公用網路。您可以使用 NSX Edge、Vyatta 或類似閘道，容許透過網際網路存取內部部署 HCX Manager。如果用於專用網路存取及公用網路存取的閘道不同，則建議您使用預設閘道來容許公用網路存取及內部部署 **HCX Manager 管理主控台**，以建立進行專用網路存取的靜態路徑。{:note}
+   您必須在專用網路上部署內部部署 HCX Manager，並容許它存取公用網路。您可以使用 NSX Edge、Vyatta 或類似閘道，容許透過網際網路存取內部部署 HCX Manager。如果用於專用網路存取及公用網路存取的閘道不同，則建議您使用預設閘道來容許公用網路存取及內部部署 **HCX Manager 管理主控台**，以建立進行專用網路存取的靜態路徑。
+   {:note}
 4. 完成 HCX Manager 部署之後，請使用 **HCX Manager 管理主控台**來啟動內部部署 HCX Manager。若要取得內部部署 HCX Manager 的啟動金鑰，請在 {{site.data.keyword.vmwaresolutions_short}} 主控台中訂購內部部署 HCX on {{site.data.keyword.cloud_notm}} 實例。如需相關資訊，請參閱[訂購內部部署 HCX 實例](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_orderingserviceinstances)。
 5. 如果您已在訂購 HCX on {{site.data.keyword.cloud_notm}} 服務時使用自簽 SSL 憑證，則必須完成下列步驟，將憑證匯入至內部部署 HCX Manager：
     1. 在內部部署 **HCX Manager 管理主控台**中，按一下**管理**標籤。

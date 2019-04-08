@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-06"
+lastupdated: "2019-03-18"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -19,10 +22,10 @@ Vous pouvez accroître ou réduire la capacité de votre instance VMware vCenter
 
 Vous pouvez ajouter de nouveaux serveurs ESXi à un cluster tandis que celui-ci est en mode maintenance. De plus, vous pouvez ajouter ou retirer simultanément des serveurs ESXi sur plusieurs clusters. Les opérations simultanées suivantes sont disponibles :
 
-* Ajout d'hôtes à **cluster1** et ajout d'hôtes à d'autres clusters.
-* Retrait d'hôtes de **cluster1** et retrait d'hôtes d'autres clusters.
-* Ajout d'hôtes à **cluster1** et retrait d'hôtes d'autres clusters.
-* Retrait d'hôtes de **cluster1** et ajout d'hôtes à d'autres clusters.
+* Ajout d'hôtes à un cluster et ajout d'hôtes à d'autres clusters.
+* Retrait d'hôtes d'un cluster et retrait d'hôtes d'autres clusters.
+* Ajout d'hôtes à un cluster et retrait d'hôtes d'autres clusters.
+* Retrait d'hôtes d'un cluster et ajout d'hôtes à d'autres clusters.https://github.ibm.com/tornado/tracker/issues/14183
 
 Vous pouvez ajouter ou retirer des partages de stockage NFS vers ou à partir d'un cluster NFS ou vSAN vCenter Server with NSX-T.
 {:note}
@@ -37,7 +40,7 @@ Si votre cluster initial dispose d'un stockage vSAN, l'ajout d'un ou plusieurs s
 
 * N'ajoutez pas de serveurs ESXi depuis le client Web VMware vSphere. Les modifications apportées sur le client Web vSphere ne sont pas synchronisées avec la console {{site.data.keyword.vmwaresolutions_full}}.
 * Une instance vCenter Server with NSX-T avec un stockage NFS doit disposer au minimum de 3 serveurs ESXi. Vous pouvez développer le cluster par défaut jusqu'à contenir 51 serveurs ESXi. Chacun des autres clusters peut contenir jusqu'à 59 serveurs ESXi.
-* Une instance vCenter Server with NSX-T avec un stockage vSAN doit disposer au minimum de 4 serveurs ESXi. 
+* Une instance vCenter Server with NSX-T avec un stockage vSAN doit disposer au minimum de 4 serveurs ESXi.
 
 ### Procédure d'ajout de serveurs ESXi
 {: #vc_nsx-t_addingremovingservers-adding-procedure}
@@ -47,7 +50,7 @@ Si votre cluster initial dispose d'un stockage vSAN, l'ajout d'un ou plusieurs s
 3. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche.
 4. Dans le tableau **CLUSTERS**, cliquez sur le cluster auquel vous désirez ajouter des serveurs ESXi.
 5. Dans la section **Serveurs ESXi**, cliquez sur **Ajouter**.
-6. Dans la fenêtre **Ajouter un serveur**, entrez le nombre de serveurs que vous voulez ajouter. 
+6. Dans la fenêtre **Ajouter un serveur**, entrez le nombre de serveurs que vous voulez ajouter.
 7. Le cas échéant, cochez la case permettant d'ajouter des serveurs alors que le mode maintenance est actif.
 8. Passez en revue le coût estimé et cliquez sur **Ajouter**.
 
@@ -58,7 +61,7 @@ Si votre cluster initial dispose d'un stockage vSAN, l'ajout d'un ou plusieurs s
 2. Un courrier électronique vous avise que votre demande d'ajout de serveurs ESXi est en cours de traitement. Sur la console, le statut du cluster qui est associé aux serveurs ESXi passe à **Modification en cours**.
 3. Si vous ne voyez pas les serveurs ESXi ajoutés dans la liste du cluster, consultez vos courriers électroniques ou les notifications de la console pour obtenir plus de détails sur la cause de l'échec.
 
-Si vous ajoutez des serveurs ESXi alors que le mode maintenance est actif, les machines virtuelles ne sont pas migrées vers les nouveaux serveurs tant que le mode maintenance n'est pas désactivé pour le cluster.    
+Si vous ajoutez des serveurs ESXi alors que le mode maintenance est actif, les machines virtuelles ne sont pas migrées vers les nouveaux serveurs tant que le mode maintenance n'est pas désactivé pour le cluster.   
 {:important}
 
 ## Retrait de serveurs ESXi sur des instances vCenter Server with NSX-T

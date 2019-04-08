@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-21"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # KMIP for VMware on IBM Cloud 인스턴스 주문
@@ -67,7 +70,7 @@ IBM Key Protect Service 인스턴스에 액세스하는 데 사용되는 {{site.
 ### 고객 루트 키
 {: #kmip_standalone_ordering-config-root-key}
 
-**검색**을 클릭하여 선택된 키 관리자 인스턴스에 저장된 고객 루트 키를 가져오십시오. 
+**검색**을 클릭하여 선택된 키 관리자 인스턴스에 저장된 고객 루트 키를 가져오십시오.
 
 ## 결과
 {: #kmip_standalone_ordering-results}

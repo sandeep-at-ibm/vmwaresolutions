@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-27"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -23,7 +26,7 @@ lastupdated: "2019-02-27"
 
 그림 1. {{site.data.keyword.cloud_notm}}의 연결된 스토리지에 대한 상위 레벨 아키텍처
 
-![연결된 스토리지 아키텍처](../solution/physical_nfs.svg "IBM Cloud의 연결된 스토리지에 대한 상위 레벨 아키텍처")
+![연결된 스토리지 아키텍처](../solution/vcsv4radiagrams-ra-nfs-shares.svg "IBM Cloud의 연결된 스토리지에 대한 상위 레벨 아키텍처")
 
 ## 실제 인프라 디자인
 {: #storage-infra-design-phys-infra-design}

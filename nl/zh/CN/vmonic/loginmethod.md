@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-25"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -18,7 +21,7 @@ lastupdated: "2019-02-14"
 
 要直接访问控制台，请完成以下步骤：
 1. 转至
-   https://console.cloud.ibm.com/infrastructure/vmware-solutions/console.
+   https://cloud.ibm.com/infrastructure/vmware-solutions/console.
 2. 使用 **IBM 标识**帐户登录到控制台。
 
 ## 通过 IBM Cloud 目录访问

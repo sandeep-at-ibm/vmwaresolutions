@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-14"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # NetApp ONTAP Select 인스턴스에 대한 요구사항 및 계획

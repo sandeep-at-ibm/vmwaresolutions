@@ -6,12 +6,15 @@ copyright:
 
 lastupdated: "2019-02-28"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # IBM Cloud for VMware Solutions의 Caveonix RiskForesight
 {: #caveonix-on-vcs}
 
-{{site.data.keyword.vmwaresolutions_full}}의 Caveonix RiskForesight에서는 "일체형" 가상 머신(VM) 배치를 통해 Caveonix RiskForesight 솔루션의 자동화된 배치를 제공합니다. 처음에는 서비스 제공자와 테넌트로 구성된 다음 vCenter와 NSX 관리자에 통합됩니다. 자산 저장소는 VMware vCenter Server 인프라 컴포넌트로 채워져 있으며 VMware 인프라 플랫폼을 나타내는 애플리케이션 및 하위 애플리케이션이 구성되어 있습니다. 대시보드에서 필수 규제 준수 제도에 맞는 규제 준수 보고서 외에도 사이버 위험 및 규제 준수 위험 점수를 사용할 수 있습니다.
+{{site.data.keyword.vmwaresolutions_full}}의 Caveonix RiskForesight에서는 "일체형" 가상 머신(VM) 배치를 통해 Caveonix RiskForesight 솔루션의 자동화된 배치를 제공합니다. 처음에는 서비스 제공자와 테넌트로 구성된 다음 vCenter와 NSX Manager에 통합됩니다. 자산 저장소는 VMware vCenter Server 인프라 컴포넌트로 채워져 있으며 VMware 인프라 플랫폼을 나타내는 애플리케이션 및 하위 애플리케이션이 구성되어 있습니다. 대시보드에서 필수 규제 준수 제도에 맞는 규제 준수 보고서 외에도 사이버 위험 및 규제 준수 위험 점수를 사용할 수 있습니다.
 
 다음 목록은 초기 워크플로우의 개요입니다.
 1.	클라이언트가 서비스를 주문하고 RiskForesight 애플리케이션의 자동화된 설치를 시작합니다.

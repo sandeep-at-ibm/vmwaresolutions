@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 # vCenter Server on IBM Cloud with Hybridity Bundle 概述
@@ -33,4 +36,4 @@ vCenter Server Hybridity Bundle 的平台集成选项不仅包含 VMware 提供�
 ## 相关链接
 {: #vcs-hybridity-intro-related}
 
-* [VMware HCX on {{site.data.keyword.cloud_notm}} 解决方案体系结构](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} 解决方案体系结构](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)

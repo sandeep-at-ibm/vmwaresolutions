@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-13"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -23,7 +26,7 @@ En el siguiente gráfico se muestra la arquitectura general del almacenamiento a
 
 Figura 1. Arquitectura de alto nivel del almacenamiento conectado en {{site.data.keyword.cloud_notm}}
 
-![Arquitectura de almacenamiento conectado](../solution/physical_nfs.svg "Arquitectura de alto nivel de almacenamiento conectado en IBM Cloud")
+![Arquitectura de almacenamiento conectado](../solution/vcsv4radiagrams-ra-nfs-shares.svg "Arquitectura de alto nivel de almacenamiento conectado en IBM Cloud")
 
 ## Diseño de infraestructura física
 {: #storage-infra-design-phys-infra-design}
@@ -64,9 +67,9 @@ En la siguiente sección se describe la configuración del dispositivo de almace
 
 El almacenamiento de rendimiento y el resistente son soluciones de almacenamiento de {{site.data.keyword.cloud_notm}} diseñadas para dar soporte a aplicaciones con gran cantidad de E/S que requieren niveles de rendimiento predecibles. Este rendimiento predecible se consigue con la asignación de operaciones de entrada/salida de nivel de protocolo por segundo (IOPS) a volúmenes individuales.
 
-Se puede solicitar un IOPS comprendido entre 100 y 48.000 con tamaños de almacenamiento que oscilan entre 20 GB y 12 TB. Los volúmenes de almacenamiento de rendimiento y resistentes están disponibles tanto para almacenamiento en bloque como para almacenamiento de archivos.
+Se puede solicitar un IOPS comprendido entre 100 y 96 000 con tamaños de almacenamiento que oscilan entre 20 GB y 24 TB. Los volúmenes de almacenamiento de rendimiento y resistentes están disponibles tanto para almacenamiento en bloque como para almacenamiento de archivos.
 
-En este diseño, la solución de vCenter Server ofrece almacenamiento resistente para el almacenamiento adjunto. Como resultado, puede seleccionar y adjuntar (mediante automatización) exportaciones de NFS resistente comprendidas entre 20 GB y 12 TB. {{site.data.keyword.cloud_notm}} permite conectar un máximo de 64 hosts ESXi de vSphere a una sola exportación de NFS resistente.
+En este diseño, la solución de vCenter Server ofrece almacenamiento resistente para el almacenamiento adjunto. Como resultado, puede seleccionar y adjuntar (mediante automatización) exportaciones de NFS resistente comprendidas entre 20 GB y 24 TB. {{site.data.keyword.cloud_notm}} permite conectar un máximo de 64 hosts ESXi de vSphere a una sola exportación de NFS resistente.
 
 La resistencia está disponible en tres niveles de rendimiento de IOPS para dar soporte a requisitos de aplicaciones variables.
 

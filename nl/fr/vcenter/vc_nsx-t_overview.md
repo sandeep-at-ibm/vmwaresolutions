@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-21"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -31,7 +34,7 @@ Les instances vCenter Server with NSX-T sont uniquement destinées à des tests 
 
 Le graphique suivant décrit l'architecture de haut niveau et les composants d'un déploiement vCenter Server with NSX-T à trois noeuds :
 
-Figure 1. Architecture vCenter Server with NSX-T de haut niveau pour un cluster à trois noeuds ![Architecture vCenter Server with NSX-T](vc_architecture.svg "Architecture vCenter Server de haut niveau pour un cluster à trois noeuds")
+Figure 1. Architecture vCenter Server with NSX-T de haut niveau pour un cluster à trois noeuds ![Architecture vCenter Server with NSX-T](vc_nsx-t_architecture.svg "Architecture vCenter Server de haut niveau pour un cluster à trois noeuds")
 
 ### Infrastructure physique
 {: #vc_nsx-t_overview-physical-infras}
@@ -48,7 +51,7 @@ Cette couche virtualise l'infrastructure physique par le biais de différents pr
 ### Gestion de la virtualisation
 {: #vc_nsx-t_overview-virtualization-mgmt}
 
-Cette couche se compose d'un dispositif vCenter Server Appliance (vCSA) avec un contrôleur Platform Services Controller (PSC) intégré, de trois noeuds NSX, de quatre passerelles NSX ESG et de l'instance de serveur virtuel (VSI) IBM CloudDriver. L'instance de serveur virtuel CloudDriver est déployée à la demande en fonction des besoins de certaines opérations, telles que l'ajout d'hôtes à l'environnement.
+Cette couche se compose d'un dispositif vCenter Server Appliance (vCSA) avec contrôleur PSC (Platform Services Controller) intégré, de trois noeuds NSX, de trois passerelles NSX ESG et de l'instance de serveur virtuel (VSI)IBM CloudDriver. L'instance de serveur virtuel CloudDriver est déployée à la demande en fonction des besoins de certaines opérations, telles que l'ajout d'hôtes à l'environnement.
 
 L'offre de base est déployée avec un dispositif vCenter Server dimensionné de manière à prendre en charge un environnement comportant jusqu'à 400 hôtes et jusqu'à 4000 machines virtuelles. Les mêmes outils et scripts compatibles API vSphere peuvent être utilisés pour gérer l'environnement VMware hébergé par IBM.
 
@@ -69,8 +72,7 @@ La disponibilité et la tarification des configurations matérielles normalisée
 
 Vous pouvez commander trois serveurs {{site.data.keyword.baremetal_short}} ou plus dans l'une des configurations suivantes :
 * **Skylake** : Génération Intel Skylake 2 UC (série Intel Xeon 4100/5100/6100) avec le modèle d'UC et la taille de mémoire RAM que vous avez sélectionnés.  
-* **Certifiés SAP** : Génération Intel Skylake ou Intel Broadwell (série Intel Xeon 6140/E5-2690/E7-8890) avec votre modèle d'UC sélectionné.
-* **Broadwell** : Génération Intel Broadwell 2 UC (série Intel Xeon E5-2600/E7-4800) avec le modèle d'UC et la taille de mémoire RAM que vous avez sélectionnés.
+* **Broadwell** : serveurs des générations Intel Broadwell à 4 UC (Intel série Xeon E7-4800) avec vos modèle d'UC et taille de RAM sélectionnés.
 
 Si vous prévoyez d'utiliser un stockage vSAN, la configuration requiert quatre serveurs {{site.data.keyword.baremetal_short}}.
 {:note}
@@ -81,12 +83,12 @@ Si vous prévoyez d'utiliser un stockage vSAN, la configuration requiert quatre 
 Les composants réseau suivants sont commandés :
 *  Liaisons montantes réseau public et privé double de 10 Gbps
 *  Trois VLAN (réseaux locaux virtuels) : un VLAN public et deux VLAN privés
-* Un réseau dissocié avec un routeur T1 et T0 pour éventuelle communication d'est en ouest entre des charges de travail locales connectées à des réseaux de la couche 2 (L2). Cela est déployé en tant qu'exemple de topologie de routage, que vous pouvez modifier ou retirer et à partir duquel vous pouvez construire. 
-*  Quatre passerelles VMware NSX-T Edge Services Gateway :
-  * Deux passerelles de gestion VMware NSX ESG sécurisées pour le trafic de gestion HTTPS sortant, déployées par IBM dans le cadre de la topologie de réseau de gestion. Les machines virtuelles de gestion IBM utilisent cette passerelle ESG pour communiquer avec des composants de gestion IBM externes spécifiques liés à l'automatisation. Pour plus d'informations, voir [Configuration du réseau en vue d'utiliser la passerelle NSX ESG gérée par le client avec vos machines virtuelles](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_esg_config).
+* Un réseau dissocié avec un routeur T1 et T0 pour éventuelle communication d'est en ouest entre des charges de travail locales connectées à des réseaux de la couche 2 (L2). Cela est déployé en tant qu'exemple de topologie de routage, que vous pouvez modifier ou retirer et à partir duquel vous pouvez construire.
+*  Trois passerelles ESG (Edge Services Gateway) VMware NSX-T :
+  * Une passerelle de gestion sécurisée VMware NSX ESG pour le trafic de gestion HTTPS sortant, déployées par IBM dans le cadre de la topologie de réseau de gestion. Les machines virtuelles de gestion IBM utilisent cette passerelle ESG pour communiquer avec des composants de gestion IBM externes spécifiques liés à l'automatisation. Pour plus d'informations, voir [Configuration du réseau en vue d'utiliser la passerelle NSX ESG gérée par le client avec vos machines virtuelles](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_esg_config).
   * Deux passerelles VMware NSX ESG sécurisées gérée par le client pour le trafic de charge de travail HTTPS sortant et entrant. Cette passerelle est déployée par IBM en tant que modèle que vous pouvez modifier pour fournir un accès au réseau privé virtuel ou un accès public. Pour plus d'informations, voir [La passerelle NSX Edge gérée par le client présente-t-elle un risque pour la sécurité ?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq-customer-nsx)
 
-  Ces passerelles ESG se nomment **mgmt-nsx-edge0** et **mgmt-nsx-edge1**. Vous n'avez pas accès à ces passerelles ESG et vous ne pouvez pas les utiliser. Si vous les modifiez, vous ne pourrez plus gérer l'instance vCenter Server depuis la console {{site.data.keyword.vmwaresolutions_short}}. De plus, si vous utilisez un pare-feu ou désactivez les communications ESG vers des composants de gestion IBM externes, {{site.data.keyword.vmwaresolutions_short}} sera inutilisable.
+  Cette passerelle ESG se nomme **mgmt-nsx-edge0**. Vous n'avez pas accès à la passerelle ESG et vous ne pouvez pas l'utiliser. Si vous la modifiez, vous ne pourrez plus gérer l'instance vCenter Server depuis la console {{site.data.keyword.vmwaresolutions_short}}. De plus, si vous utilisez un pare-feu ou désactivez les communications ESG vers des composants de gestion IBM externes, {{site.data.keyword.vmwaresolutions_short}} sera inutilisable.
   {:important}
 
 ### Instance de serveur virtuel
@@ -122,17 +124,13 @@ L'option vSAN offre des configurations personnalisées, avec différentes option
 
 L'option NFS offre un stockage de niveau fichier partagé personnalisé pour les charges de travail avec diverses options de taille et de performance :
 * Taille : 20 Go à 24 To
-* Performances : 0.25, 2, 4 ou 10 IOPS/Go.
-* Configuration individuelle des partages de fichiers.
+* Performances : 0.25, 2, 4 ou 10 IOPS/Go
+* Configuration individuelle des partages de fichiers
 
-  Le niveau de performance 10 IOPS/Go est limité à une capacité maximale de 4 To par partage de fichiers. {:note}
+  Le niveau de performance 10 IOPS/Go est limité à une capacité maximale de 4 To par partage de fichiers.
+  {:note}
 
 Si vous sélectionnez l'option NFS, un partage de fichiers de 2 To et 4 IOPS/Go pour les composants de gestion est commandé.
-
-#### Stockage sur disque local
-{: #vc_nsx-t_overview-local-disk-storage}
-
-L'option Disques locaux, disponible uniquement pour la configuration de processeur Quad Intel Xeon E7-8890 v4 Bare Metal **certifié SAP**, offre des configurations personnalisées avec différentes options relatives au nombre et au type de disque.
 
 ### Licences (fournies par IBM ou BYOL) et frais
 {: #vc_nsx-t_overview-license-and-fee}

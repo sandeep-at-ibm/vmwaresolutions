@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-08"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -45,7 +48,8 @@ lastupdated: "2019-03-08"
 * **Proxy IP 位址**：Proxy 伺服器的 IPv4 位址。
 * **Proxy 埠號**：Proxy 伺服器的埠號，通常是 8080 或 3128。
 
-不支援已鑑別的 Proxy。{:note}
+不支援已鑑別的 Proxy。
+{:note}
 
 ### 名稱 
 {: #f5_ordering-config-name}
@@ -70,7 +74,8 @@ F5 on {{site.data.keyword.cloud_notm}} 服務的授權模型提供下列選項�
         <dd class="dd">除了**良好**及**更佳**供應項目之外，BIG-IP Application Security Manager™ (ASM) 還提供 L7 DDoS（開放性 Web 應用程式安全專案 (OWASP) 前 10 大威脅和一般應用程式漏洞）的完整應用程式保護。BIG-IP Access Policy Manager™ (APM) 將位在多雲端環境內任何位置之應用程式的安全且簡化存取權提供給使用者，而此環境包含 SSO（單一登入）及 MFA（多因子鑑別）這類特性。</dd>
 </dl>
 
-您無法在安裝服務之後變更授權模型。若要變更授權模型，您必須移除現有服務，然後選擇不同的授權模型來重新安裝服務。{:important}
+您無法在安裝服務之後變更授權模型。若要變更授權模型，您必須移除現有服務，然後選擇不同的授權模型來重新安裝服務。
+{:important}
 
 ## 相關鏈結
 {: #f5_ordering-releated}

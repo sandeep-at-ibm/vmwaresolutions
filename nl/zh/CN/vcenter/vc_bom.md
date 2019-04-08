@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-20"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -28,7 +31,7 @@ lastupdated: "2019-03-12"
 |:---------- |:---------- |:------------- |
 |VLAN1|公用，主|分配给物理 ESXi 服务器以用于公用网络访问。在初始部署后未使用。可用于因特网访问。|
 |VLAN2|专用 A，主|由 {{site.data.keyword.cloud}} 分配给物理 ESXi 服务器。通过管理界面用于 VMware vSphere 管理流量。<br><br>分配给充当管理组件的 VM（虚拟机）。<br><br>分配给 VMware NSX VTEP（VXLAN 隧道端点）|
-|VLAN3|专用 B，可移植|分配给 VMware vSAN（如果使用）。<br><br>分配给 VMware NFS（如果使用）。<br><br>分配给 VMware vSphere vMotion。|
+|VLAN3|专用 B，可移植|分配给 VMware vSAN（如果使用）。<br><br>分配给 VMware NFS（如果使用）。<br><br>分配给 VMware vSphere vMotion。<br><br>对于 NSX-T，分配给 VMware NSX VTEP（VXLAN 隧道端点）。|
 
 ## vCenter Server 实例的软件 BOM
 {: #vc_bom-software}
@@ -40,10 +43,13 @@ lastupdated: "2019-03-12"
 |制造商|组件|版本|
 |:------------- |:------------------------------ |:------------- |
 |VMware|vSphere ESXi| 6.7 Update 1（构建 6.7.0-11675023）或<br/>6.5 Update 2（构建 6.5.0-11925212）|
+|VMware|vSphere 6.7|Distributed vSwitch 6.6.0|
+|VMware|vSphere 6.5|Distributed vSwitch 6.5.0|
 |VMware|vCenter Server Appliance| 6.7 Update 1（构建 6.7.0-10244745）或<br/>6.5 Update 2d（构建 6.5.0-10964411）|
 |VMware|Platform Services Controller| 6.7 Update 1（构建 6.7.0-10244745）或<br/>6.5 Update 2d（构建 6.5.0-10964411）|
 |VMware|vSAN| 6.7 Update 1 或 <br/>6.6.1|
 |VMware|NSX for vSphere| 6.4.4（构建 11197766）|
+|VMware|NSX-T for vSphere|2.4|
 |Microsoft|Windows Server Standard Edition|2012R2|
 
 VMware vSAN 是可选组件。

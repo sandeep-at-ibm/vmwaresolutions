@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-08"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -33,10 +36,9 @@ Uma implementação de vários sites consiste nos componentes a seguir.
 * **Instância ou instâncias secundárias**: uma ou mais instâncias secundárias do vCenter Server, ligadas à instância primária, com a seguinte configuração:
    *  Nome do site SSO
    *  Subdomínio do DNS que é vinculado ao domínio-raiz na instância primária
-   *  Configuração de replicação DNS e AD entre as máquinas virtuais AD nas instâncias primárias e secundárias.
-   *  Para instâncias primárias implementadas na V2.8 ou mais recente: o vCenter Server Appliance (vCSA) com o Platform
-Services Controller (PSC) integrado é implementado e configurado.
-   *  O VMware vCenter nas instâncias secundárias é configurado com o Modo vinculado avançado para o vCenter na instância primária.
+   *  Configuração de replicação do DNS e AD entre as máquinas virtuais do AD nas instâncias primárias e secundárias
+   *  Para instâncias primárias que são implementadas na V2.8 ou mais recente: o vCenter Server Appliance (vCSA) com o Platform Services Controller (PSC) integrado é implementado e configurado
+   *  O VMware vCenter nas instâncias secundárias é configurado com o Modo vinculado aprimorado para o vCenter na instância primária
 
 ## Implementação de vários sites do vCenter Server
 {: #vc_multisite-deployment}

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -52,12 +55,12 @@ Die folgende Abbildung zeigt eine vollständige Cloud Foundation-Bereitstellung 
 
 Abbildung 1. Cloud Foundation-Bereitstellung mit mehreren Standorten
 
-![Cloud Foundation-Bereitstellung mit mehreren Standorten](multisite-hub-spoke.svg "Cloud Foundation-Bereitstellung mit mehreren Standorten")
+![Cloud Foundation-Bereitstellung mit mehreren Standorten](../vcenter/multisite-hub-spoke.svg "Cloud Foundation-Bereitstellung mit mehreren Standorten")
 
 Das Modell enthält die folgenden Schichten:
 
-* **Primäre Instanz**: In einer Konfiguration mit mehreren Standorten wurde die erste Instanz während des Bestellprozesses für die Instanz als primäre Instanz definiert. 
-* **Sekundäre Instanzen**: In einer Konfiguration mit mehreren Standorten wurden die Instanzen, die der primären Instanz zugeordnet sind, während des Bestellprozesses als sekundäre Instanzen definiert. 
+* **Primäre Instanz**: In einer Konfiguration mit mehreren Standorten wurde die erste Instanz während des Bestellprozesses für die Instanz als primäre Instanz definiert.
+* **Sekundäre Instanzen**: In einer Konfiguration mit mehreren Standorten wurden die Instanzen, die der primären Instanz zugeordnet sind, während des Bestellprozesses als sekundäre Instanzen definiert.
 
 Sie können maximal 8 Instanzen (1 primäre und 7 sekundäre) in einer Konfiguration mit mehreren Standorten bereitstellen.
 

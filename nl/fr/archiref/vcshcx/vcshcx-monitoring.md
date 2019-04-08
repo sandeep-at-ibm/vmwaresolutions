@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-05"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -58,7 +61,7 @@ Les modifications sont perdues si vous redéployez la passerelle CGW de HCX depu
 Ceci définit uniquement les limites de la bande passante pour le trafic de migration. Le trafic L2 étendu n'est pas affecté par cette configuration.
 {:note}
 
-1. Connectez-vous à l'interface utilisateur Web de l'optimiseur de réseau WAN. 
+1. Connectez-vous à l'interface utilisateur Web de l'optimiseur de réseau WAN.
 2. Dans l'onglet **Configuration**, sélectionnez **Shaper** dans le menu déroulant.
 3. Dans la zone **Max bandwidth**, définissez la bande passante maximale disponible pour l'optimiseur de réseau WAN en kbits/s. Ne dépassez pas la bande passante maximale de la liaison WAN. Pour définir la valeur en mégabits par seconde, multipliez-la par 1 000. Pour définir la valeur en gigabits par seconde, multipliez-la par 1 000 000. La valeur par défaut est 10 gigabits par seconde (10 000 000 kilobits par seconde).
 4. Cliquez sur **Apply**.
@@ -85,7 +88,7 @@ Utilisez les méthodes suivantes pour surveiller l'utilisation de la bande passa
 - La migration des machines virtuelles basée sur la réplication (migration en bloc) dans HCX entraîne le déplacement de machines virtuelles avec une mise à disposition de type "thick". Bien que cela ne soit pas souhaitable, l'interface utilisateur de l'optimiseur de réseau WAN révèle un rapport élevé entre le réseau LAN et le réseau WAN lorsque des données de disques inutilisées sont déplacées. Inversement, on observe que lorsque des données non compressibles sont migrées, comme les données de base de données et les médias numériques, l'utilisation du WAN est à son maximum et pratiquement égale à celle du LAN.
 
 Remarques :
-- La migration vMotion d'une machine virtuelle dans HCX ne génère pas davantage de débit que la mise en réseau vMotion pour un hôte ESXi. 
+- La migration vMotion d'une machine virtuelle dans HCX ne génère pas davantage de débit que la mise en réseau vMotion pour un hôte ESXi.
 - Comme la migration en bloc peut avoir plusieurs migrations en cours simultanément, elle permet une utilisation de la bande passante plus élevée qu'une migration vMotion. Le rapport observé côté client avec des liaisons vMotion de 1 Gbits/s aux hôtes ESX était de : 8 réplications = utilisation de la bande passante de 1 vMotion.
 - Le déplacement de l'espace vide sur le disque entraîne l'affichage d'une utilisation élevée du réseau LAN avec un rapport élevé et, par conséquent, une faible utilisation du réseau WAN. Notez que 1 Gbits/s semble être la limite. En effet, dans ce cas particulier, le réseau vMotion n'est capable que de 1 Gbits/s, ce qui est le goulot d'étranglement.
 - Migration vMotion d'une base de données Oracle de plusieurs To. Avec une liaison WAN de 1 Gbits/s, la limitation est le réseau vMotion de 1 Gbits/s.

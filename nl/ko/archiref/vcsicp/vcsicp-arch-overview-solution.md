@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -126,7 +129,7 @@ CAM에서는 작업자 노드가 더 높은 vCPU 및 메모리 구성을 포함�
 
 {{site.data.keyword.cloud_notm}} Automation Manager(CAM)은 개발자와 관리자가 비즈니스 요구를 충족시킬 수 있도록 도움을 주는 {{site.data.keyword.icpfull_notm}}에서 실행되는 다중 클라우드의 셀프 서비스 관리 플랫폼입니다.
 
-그림 3. CAM 컴포넌트 참조
+그림 3. CAM 컴포넌트 참조</br>
 ![CAM 컴포넌트 참조](vcsicp-cam-component-ref.svg)
 
 ### CAM 프록시

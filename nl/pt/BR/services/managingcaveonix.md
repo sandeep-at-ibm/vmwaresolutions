@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-13"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -23,10 +26,10 @@ Para gerenciar o serviço Caveonix RiskForesight on {{site.data.keyword.cloud}},
 1. Use a VPN de infraestrutura do IBM Cloud ou um servidor de salto para permitir acesso ao endereço IP da máquina virtual (VM) do Caveonix RiskForesight. É possível localizar o endereço IP na página de detalhes do serviço para o Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} no console do {{site.data.keyword.vmwaresolutions_short}}. Para ser específico:
    1. Crie uma senha de VPN por meio do portal do cliente de infraestrutura do {{site.data.keyword.cloud_notm}}.
    2. Efetue login no portal de VPN do data center usando as credenciais de VPN de infraestrutura do {{site.data.keyword.cloud_notm}}.
-   3. Inclua o endereço IP e o mapeamento de nome do host em seu arquivo de hosts locais usando o formato a seguir:
+   3. Inclua o endereço IP e o mapeamento do nome do host no arquivo `hosts` por meio de seu computador local. Use o formato a seguir:
 
       ```javascript
-      IPAddress              HostName
+      RiskForesight_VM_IP_Address      RiskForesight_FQDN
       ```
 2. Para acessar o console do Caveonix RiskForesight, clique em **Visualizar console do RiskForesight** na página de detalhes do serviço para o Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} e, em seguida, efetue login usando as credenciais listadas na mesma página de detalhes do serviço.
 

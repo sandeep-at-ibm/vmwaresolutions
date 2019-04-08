@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -47,7 +50,7 @@ lastupdated: "2019-02-15"
 
 アクター | 説明
 ---|---
-vCenter | vCenter は、システム管理者がオンプレミス VM を管理したり、HCX プラグインにアクセスしてネットワークを拡張したり、VM をマイグレーションしたりできる主要なインターフェースです。 vCenter Server with Hybridity Bundle を使用すると、システム管理者は、オンプレミス vSphere ネットワークを {{site.data.keyword.cloud_notm}} で稼働する vCenter Server インスタンスにシームレスに統合できます。 Hybrid ネットワーキングにより、オンプレミス・ネットワークが {{site.data.keyword.cloud_notm}} に拡張されるので、お客様のアプリケーションを {{site.data.keyword.cloud_notm}} 上で稼働する vCenter Server インスタンスにマイグレーションしたり、必要に応じてオンプレミスに戻したりすることができます。 vCenter Server with Hybridity Bundle について詳しくは、[VMware HCX on {{site.data.keyword.cloud_notm}} ソリューション・アーキテクチャー](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)のドキュメントを参照してください。
+vCenter | vCenter は、システム管理者がオンプレミス VM を管理したり、HCX プラグインにアクセスしてネットワークを拡張したり、VM をマイグレーションしたりできる主要なインターフェースです。 vCenter Server with Hybridity Bundle を使用すると、システム管理者は、オンプレミス vSphere ネットワークを {{site.data.keyword.cloud_notm}} で稼働する vCenter Server インスタンスにシームレスに統合できます。 Hybrid ネットワーキングにより、オンプレミス・ネットワークが {{site.data.keyword.cloud_notm}} に拡張されるので、お客様のアプリケーションを {{site.data.keyword.cloud_notm}} 上で稼働する vCenter Server インスタンスにマイグレーションしたり、必要に応じてオンプレミスに戻したりすることができます。 vCenter Server with Hybridity Bundle について詳しくは、[VMware HCX on {{site.data.keyword.cloud_notm}} ソリューション・アーキテクチャー](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)を参照してください。
 オンプレミス VM | オンプレミス VM は、クラウドにマイグレーションするアプリケーションをホストします。 最初は VM としてマイグレーションされますが、その後、アプリケーション・モダナイゼーション・ジャーニーを経て VM からコンテナーにマイグレーションされます。
 クラウド VM 上 | クラウド VM は、オンプレミスからマイグレーションされたアプリケーションをホストします。 拡張された L2 ネットワークを介して、オンプレミス・アプリケーションと通信します。 このリファレンス・アーキテクチャーの Acme Skateboards 社の例では、クラウド VM の 1 つは、オンライン・プレゼンス・ワークロードの一部であるデータベース・サーバーです。
 NSX-V | vCenter Server の NSX-V は、システム管理者が管理するソフトウェア定義オーバーレイ・ネットワークを提供します。 このオーバーレイ・ネットワークが、HCX で拡張されるネットワークのターゲットであり、{{site.data.keyword.icpfull_notm}} の VM からのトラフィックを処理します。 NSX-V には、vSphere 分散スイッチ (vDS) を使用した、VMware 内のオンデマンド仮想ネットワークおよびマイクロ・セグメンテーション・サービスのデプロイ、再構成、破棄などの機能を備えたリファレンス・アーキテクチャーが用意されています。 詳しくは、[NSX–V の概要](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv)を参照してください。

@@ -4,7 +4,12 @@ copyright:
 
   years: 2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-22"
+
+keywords: IBM Cloud for VMware Solutions, getting started, deployment offerings, add-on services, use case
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -18,7 +23,7 @@ lastupdated: "2019-03-12"
 {:tip: .tip}
 {:table: .aria-labeledby="caption"}
 
-# Introdução ao IBM Cloud for VMware Solutions
+# Tutorial de introdução
 {: #getting-started}
 
 Neste tutorial de introdução, levaremos você pelo processo de solicitação de uma instância e de alguns serviços complementares para ela.
@@ -194,18 +199,4 @@ Depois de efetuar um pedido de instância na **Etapa 3**, a implementação da i
 Para obter informações sobre como visualizar a instância que você solicitou, consulte os tópicos a seguir:
 * [Visualizando instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
 * [Visualizando instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
-* [Visualizando instâncias do NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_viewinginstances)
-
-## Etapa 5: Gerenciando serviços complementares para a instância
-{: #getting-started-step5}
-
-Se você solicitou serviços complementares para sua instância, é possível gerenciar os serviços também.
-
-Para obter informações sobre como gerenciar os serviços, consulte os tópicos a seguir:
-* [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
-* [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
-
-## Próxima etapa
-{: #getting-started-next}
-
-Gerencie sua instância por meio do console do {{site.data.keyword.vmwaresolutions_short}} ou do Web client do VMware vSphere.
+* [Visualizando instâncias do NetApp ONTAP Select](/docs/services/vmwaresolutions/services?topic=vmware-solutions-np_viewinginstances#np_viewinginstances)

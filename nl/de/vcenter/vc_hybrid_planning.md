@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-03-20"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -35,9 +38,11 @@ Tabelle 1. Verfügbare {{site.data.keyword.CloudDataCents_notm}} für vCenter Se
 | DAL13 | Dallas | NA Süd |
 | FRA02 | Frankfurt | Europa |
 | FRA04 | Frankfurt | Europa |
+| FRA05 | Frankfurt | Europa |
 | HKG02 | Hongkong | Asien/Pazifik |
 | LON02 | London | Europa |
 | LON04 | London | Europa |
+| LON05 | London | Europa |
 | LON06 | London | Europa |
 | MEL01 | Melbourne | Asien/Pazifik |
 | MEX01 | Queretaro | NA Süd |

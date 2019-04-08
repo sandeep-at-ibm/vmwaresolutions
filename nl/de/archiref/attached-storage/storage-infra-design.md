@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-27"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -23,7 +26,7 @@ In der folgenden Abbildung ist die Gesamtarchitektur des angehängten Speichers 
 
 Abbildung 1. Allgemeine Architektur des angehängten Speichers in {{site.data.keyword.cloud_notm}}
 
-![Angehängter Speicher - Architektur](../solution/physical_nfs.svg "Allgemeine Architektur des angehängten Speichers in IBM Cloud")
+![Angehängter Speicher - Architektur](../solution/vcsv4radiagrams-ra-nfs-shares.svg "Allgemeine Architektur des angehängten Speichers in IBM Cloud")
 
 ## Design der physischen Infrastruktur
 {: #storage-infra-design-phys-infra-design}

@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-14"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # 对于新创建的 ESXi 服务器，未显示 Zerto Virtual Replication 设备

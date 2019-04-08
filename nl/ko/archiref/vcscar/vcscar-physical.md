@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-03-19"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -40,6 +43,7 @@ IBM Multi-Cluster Manager는 클라우드 및 클러스터에서 사용자 가�
 다음 다이어그램은 애플리케이션 현대화 인프라 구현에서 Acme Skate Advisor 애플리케이션의 참조 구현을 설명합니다.
 
 그림 1. Skate Advisor 물리적 컴포넌트
+</br>
 ![Skate Advisor 물리적 컴포넌트](vcscar-physical.svg)
 
 Skate Advisor 애플리케이션은 웹과 마이크로 서비스 컨테이너에 요청을 프록시하기 위해 nginx 컨테이너 및 Watson과 상호작용하는
@@ -55,7 +59,7 @@ Skate Advisor 애플리케이션은 필수 호스팅 인프라를 제공하는 �
 * Helm 차트 - Helm 차트는 로컬 {{site.data.keyword.icpfull_notm}} 저장소에 상주하며 컨테이너와 기타 리소스를 {{site.data.keyword.icpfull_notm}}에 배치합니다. Helm 차트는
 포함된 Kubernetes 리소스를 설명합니다.
   - 컨테이너 배치
-  - Services
+  - 이용
   - Ingress
   - 규칙
   - 엔드포인트
@@ -66,6 +70,7 @@ Skate Advisor와 Skate Store 코드가 포함됩니다. Docker 이미지는 실�
 * VMWare 템플리트 - VMWare 템플리트는 mysql과 데이터베이스 스키마가 사전 설치된 Ubuntu 템플리트입니다.
 
 그림 2. CAM 오케스트레이션
+</br>
 ![CAM 오케스트레이션](vcscar-cam.svg)
 
 ### 로드 밸런싱 및 프록싱
@@ -114,6 +119,7 @@ Skate Advisor에는 다음 통신이 필요합니다.
 애플리케이션 현대화 플랫폼은 이러한 목표를 달성하기 위해 다음 컴포넌트를 사용하여 설계되었습니다.
 
 그림 3. 공용 네트워크 액세스
+</br>
 ![공용 네트워크 액세스](vcscar-network.svg)
 
 {{site.data.keyword.cloud_notm}}에는 두 가지 네트워크가 있습니다. 공용 네트워크를 사용하면 인터넷에서 서버에 도달할 수 있으며 사설 네트워크를 사용하면 서버가 모든 {{site.data.keyword.CloudDataCents_notm}}의
@@ -135,6 +141,7 @@ vCenter Server 서버 NSX Edge와 {{site.data.keyword.containerlong_notm}} 인�
 Skate Advisor 애플리케이션은 다음 소프트웨어 컴포넌트를 사용합니다.
 
 그림 4. Skate Advisor 소프트웨어 맵핑
+</br>
 ![Skate Advisor 소프트웨어 맵핑](vcscar-sw-mapping.svg)
 
 다음 소프트웨어 컴포넌트가 사용됩니다.

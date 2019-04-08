@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-21"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # KMIP for VMware on IBM Cloud-Instanzen bestellen
@@ -36,14 +39,14 @@ Geben Sie beim Bestellen des Service die folgenden Einstellungen an:
 ### Instanzname
 {: #kmip_standalone_ordering-config-instance-name}
 
-Geben Sie einen Namen für Ihre KMIP for VMware on {{site.data.keyword.cloud_notm}}-Instanz an. 
+Geben Sie einen Namen für Ihre KMIP for VMware on {{site.data.keyword.cloud_notm}}-Instanz an.
 
 ### Serviceregion
 {: #kmip_standalone_ordering-config-service-region}
 
-Wählen Sie die {{site.data.keyword.cloud_notm}}-Region aus, in der Ihre KMIP for VMware on {{site.data.keyword.cloud_notm}}-Instanz gehostet werden soll. 
+Wählen Sie die {{site.data.keyword.cloud_notm}}-Region aus, in der Ihre KMIP for VMware on {{site.data.keyword.cloud_notm}}-Instanz gehostet werden soll.
 
-{{site.data.keyword.cloud_notm}} verwaltet einen hoch verfügbaren Netzserviceendpunkt für KMIP for VMware on {{site.data.keyword.cloud_notm}} in jeder Region, in der der Service verfügbar ist. 
+{{site.data.keyword.cloud_notm}} verwaltet einen hoch verfügbaren Netzserviceendpunkt für KMIP for VMware on {{site.data.keyword.cloud_notm}} in jeder Region, in der der Service verfügbar ist.
 
 Tabelle 1. Netzserviceendpunkte und Regionen für KMIP for VMware on {{site.data.keyword.cloud_notm}}
 
@@ -67,7 +70,7 @@ Klicken Sie auf **Abrufen**, um eine Liste der verfügbaren IBM Key Protect Serv
 ### Stammschlüssel für Kunden
 {: #kmip_standalone_ordering-config-root-key}
 
-Klicken Sie auf **Abrufen**, um den Stammschlüssel für Kunden abzurufen, der in der ausgewählten Schlüsselmanagerinstanz gespeichert ist. 
+Klicken Sie auf **Abrufen**, um den Stammschlüssel für Kunden abzurufen, der in der ausgewählten Schlüsselmanagerinstanz gespeichert ist.
 
 ## Ergebnisse
 {: #kmip_standalone_ordering-results}

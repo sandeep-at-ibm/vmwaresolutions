@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-04"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -19,15 +22,17 @@ Revise la siguiente información para obtener detalles sobre las consideraciones
 {: #vc_networkingonvcenterserver-networking-components}
 {: faq}
 
-Para revisar los componentes de red que se incluyen en la instancia de vCenter Server, consulte [Especificaciones técnicas para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#technical-specifications-for-vcenter-server-instances).
+Para revisar los componentes de red que se incluyen en la instancia de vCenter Server, consulte [Especificaciones técnicas para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs).
 
 ## Consideraciones sobre cortafuegos
 {: #vc_networkingonvcenterserver-firewall-considerations}
+{: faq}
 
 Si utiliza cortafuegos, debe configurar reglas para todas las comunicaciones desde la Instancia de servidor virtual (VSI) de {{site.data.keyword.IBM}} CloudDriver y las máquinas virtuales (VM) de SDDC Manager. Estas reglas deben permitir que todos los protocolos se comuniquen en las direcciones IP `10.0.0.0/8` y `161.26.0.0/16`. Los ejemplos de estos cortafuegos son NSX Distributed Firewalls (DFW) o cortafuegos Vyatta.
 
 ## Utilización de NSX con máquinas virtuales
 {: #vc_networkingonvcenterserver-using-nsx-with-vm}
+{: faq}
 
 Durante el despliegue de la instancia de vCenter Server, VMware NSX se solicita, se adquiere una licencia del mismo, se instala y se configura en la instancia. Además, se configuran NSX Manager, controladores NSX y NSX Transport Zone y cada servidor ESXi se configura con componentes de NSX.
 
@@ -35,6 +40,7 @@ También se despliega una NSX Edge Services Gateway para que la utilicen las má
 
 ## Consideraciones al cambiar contraseñas para los componentes de NSX
 {: #vc_networkingonvcenterserver-change-nsx-component-password-considerations}
+{: faq}
 
 Revise las siguientes consideraciones antes de cambiar las contraseñas de NSX Manager, controladores NSX y NSX Edges:
 * No cambie la contraseña de NSX Manager que encontrará en la página **Resumen** de la instancia en la consola de {{site.data.keyword.vmwaresolutions_short}}.

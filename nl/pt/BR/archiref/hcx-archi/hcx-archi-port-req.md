@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-15"
 
+subcollection: vmwaresolutions
+
+
 ---
 # Requisitos de acesso à porta do VMware HCX on IBM Cloud
 {: #hcx-archi-port-req}

@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-06"
+lastupdated: "2019-03-18"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -19,10 +22,10 @@ lastupdated: "2019-03-06"
 
 Iniciando com a liberação V2.9, é possível incluir novos servidores ESXi em um cluster enquanto o cluster está no modo de manutenção. Além disso, é possível incluir ou remover simultaneamente servidores do ESXi em múltiplos clusters. As operações simultâneas a seguir estão disponíveis:
 
-* Inclua hosts no **cluster1** e inclua hosts em clusters adicionais.
-* Remova hosts do **cluster1** e remova hosts para clusters adicionais.
-* Inclua hosts no **cluster1** e remova hosts para clusters adicionais.
-* Remova hosts do **cluster1** e inclua hosts em clusters adicionais.
+* Incluir hosts em um cluster e incluir hosts em clusters adicionais.
+* Remover hosts de um cluster e remover hosts de clusters adicionais.
+* Incluir hosts em um cluster e remover hosts de clusters adicionais.
+* Remover hosts de um cluster e incluir hosts em clusters adicionais.
 
 Como seu cluster inicial tem o vSAN como seu armazenamento, incluir um ou mais servidores ESXi após a implementação pode aumentar a capacidade de armazenamento do cluster.
 
@@ -42,7 +45,9 @@ Como seu cluster inicial tem o vSAN como seu armazenamento, incluir um ou mais s
 3. Clique em **Infraestrutura** na área de janela de navegação esquerda.
 4. Na tabela **CLUSTERS**, clique no cluster no qual você deseja incluir servidores ESXi.
 5. Na tabela **Servidores ESXi**, clique em **Incluir**.
-6. Na janela **Incluir servidor** janela, selecione o número de servidores que você deseja incluir, clique no link de preço para revisar o custo estimado e, em seguida, clique em **Incluir**.
+6. Na janela **Incluir servidor**, insira o número de servidores que você deseja incluir.
+7. Opcionalmente, marque a caixa de seleção para incluir servidores durante o modo de manutenção.
+8. Revise o custo estimado e clique em **Incluir**.
 
 ### Resultados após a inclusão de servidores ESXi
 {: #vc_hybrid_addingremovingservers-adding-results}
@@ -50,6 +55,9 @@ Como seu cluster inicial tem o vSAN como seu armazenamento, incluir um ou mais s
 1. Você pode ter um pequeno atraso no console enquanto o status da instância é mudado de **Pronto para o uso** para **Modificando**. Permita que a operação seja totalmente concluída antes de fazer mais mudanças na instância.
 2. Você é notificado por e-mail de que sua solicitação para incluir servidores ESXi está sendo processada. No console, o status do cluster que está associado a servidores ESXi foi mudado para **Modificando**.
 3. Caso não veja os novos servidores ESXi incluídos na lista no cluster, verifique as notificações por e-mail ou no console para localizar mais detalhes sobre a falha.
+
+Se você estiver incluindo servidores ESXi durante o modo de manutenção, as máquinas virtuais (VMs) não serão migradas para os novos servidores até que você remova o cluster do modo de manutenção.   
+{:important}
 
 ## Removendo servidores ESXi de instâncias do vCenter Server with Hybridity Bundle
 {: #vc_hybrid_addingremovingservers-removing}

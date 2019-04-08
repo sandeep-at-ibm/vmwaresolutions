@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-13"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -47,7 +50,8 @@ Tabla 2. Sistemas
 
 Actor | Descripción
 ---|---
-vCenter | vCenter es la interfaz primaria que utiliza el administrador del sistema para gestionar las VM locales y para acceder al plugin HCX para ampliar las redes y migrar las VM. Con vCenter Server con el paquete híbrido (Hybridity), el administrador del sistema puede integrar fácilmente redes vSphere locales en instancias de vCenter Server que se ejecutan en {{site.data.keyword.cloud_notm}}. La red híbrida amplía las redes locales a {{site.data.keyword.cloud_notm}}, lo que permite a los clientes migrar sus aplicaciones a una instancia de vCenter Server que se ejecuta en {{site.data.keyword.cloud_notm}} y de nuevo al entorno local si es necesario. Para ver detalles sobre vCenter Server con el paquete híbrido (Hybridity), consulte el documento sobre la [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf).
+vCenter | vCenter es la interfaz primaria que utiliza el administrador del sistema para gestionar las VM locales y para acceder al plugin HCX para ampliar las redes y migrar las VM. Con vCenter Server con el paquete híbrido (Hybridity), el administrador del sistema puede integrar fácilmente redes vSphere locales en instancias de vCenter Server que se ejecutan en {{site.data.keyword.cloud_notm}}. La red híbrida amplía las redes locales a {{site.data.keyword.cloud_notm}}, lo que permite a los clientes migrar sus aplicaciones a una instancia de vCenter Server que se ejecuta en {{site.data.keyword.cloud_notm}} y de nuevo al entorno local si es necesario. Para obtener más detalles sobre vCenter Server con Hybridity Bundle, consulte
+[Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro).
 VM locales | Las VM locales alojan las aplicaciones que se migran a la nube. Inicialmente, se migran como VM y luego mediante el proceso de modernización de aplicaciones migradas desde las VM a los contenedores.
 VM en la nube | Las VM en la nube alojan las aplicaciones que se han migrado desde el entorno local. Se comunican con aplicaciones locales a través de la red L2 ampliada. En el caso de esta arquitectura de referencia y en este ejemplo de Acme Skateboards, una de las VM de la nube es un servidor de bases de datos, que forma parte de la carga de trabajo con presencia en línea.
 NSX-V | NSX-V en vCenter Server proporciona la red de superposición definida por software que gestiona el administrador del sistema. La red de superposición es el destino de las redes ampliadas HCX, ya que maneja el tráfico procedente de las VM para {{site.data.keyword.icpfull_notm}}. NSX-V proporciona la arquitectura de referencia con características como, por ejemplo, el despliegue, la reconfiguración y la destrucción de redes virtuales bajo demanda y servicios de microsegmentación dentro de VMware utilizando los conmutadores distribuidos de vSphere (vDS). Para obtener más información, consulte [Visión general de NSX-V](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv).

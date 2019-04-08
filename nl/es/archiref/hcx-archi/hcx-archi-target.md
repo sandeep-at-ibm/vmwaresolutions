@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-15"
 
+subcollection: vmwaresolutions
+
+
 ---
 # Arquitectura de destino a nivel de componente de VMware HCX on IBM Cloud
 {: #hcx-archi-target}

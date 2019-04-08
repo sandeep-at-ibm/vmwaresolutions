@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-03-07"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 {:tip: .tip}
@@ -52,7 +55,7 @@ vCenter Server 인스턴스에 서비스를 추가하려면 이전 테이블의 
 ## vCenter Server 인스턴스에 대한 서비스를 보는 프로시저
 {: #vc_addingremovingservices-viewing-procedure}
 
-1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **리소스**를 클릭하십시오. 
+1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **리소스**를 클릭하십시오.
 2. **vCenter Server 인스턴스** 테이블에서 서비스를 볼 인스턴스를 클릭하십시오.
 3. 왼쪽 탐색 분할창에서 **서비스**를 클릭하십시오.
 4. **서비스** 페이지에서 하나의 서비스를 클릭하여 서비스 상태 및 기타 세부사항과 같은 정보를 검토하십시오.

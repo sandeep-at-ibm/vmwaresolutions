@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-22"
+lastupdated: "2019-03-14"
+
+subcollection: vmwaresolutions
+
 
 ---
 
@@ -77,8 +80,7 @@ Tableau 2. Opérations affectées pour l'accès à SSH et à l'interpréteur de 
 
 | Modification  | Opérations affectées  | Gravité  | Méthode de récupération  |
 |:------------- |:------------- |:--------------|:--------------|
-| Désactiver l'accès à SSH ou à l'interpréteur de commandes pour vCenter Server ou PSC.    | L'appariement d'une instance principale et d'une instance secondaire peut échouer.    | Important    | Non applicable    |
-| Désactiver l'accès à SSH ou à l'interpréteur de commandes pour ESXi.    | L'ajout et le retrait d'hôtes, de services et de stockage réseau à l'instance peut échouer.    | Important    | Non applicable    |
+| Désactiver l'accès à SSH ou à l'interpréteur de commandes pour vCenter Server ou PSC. | L'appariement d'une instance principale et d'une instance secondaire peut échouer.    | Important    | Non applicable    |
 
 Si vous choisissez de désactiver l'accès à SSH ou à l'interpréteur de commandes, vous devez le réactiver temporairement avant d'effectuer les opérations indiquées.
 
