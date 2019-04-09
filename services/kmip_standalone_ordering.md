@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-04-09"
 
 subcollection: vmware-solutions
 
@@ -21,7 +21,7 @@ You can order a KMIP for VMware on {{site.data.keyword.cloud}} instance without 
 
 Ensure that you completed the following tasks:
 * You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount).
-* You reviewed all the considerations in [Considerations when installing KMIP for VMware on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations-install).
+* You reviewed all the considerations in [Considerations when installing KMIP for VMware on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip_standalone_considerations#kmip_standalone_considerations-install).
 
 ## Procedure to order KMIP for VMware on IBM Cloud instances
 {: #kmip_standalone_ordering-procedure}
@@ -60,12 +60,12 @@ Table 1. KMIP for VMware on {{site.data.keyword.cloud_notm}} network service end
 ### API Key for Service ID
 {: #kmip_standalone_ordering-config-api-key}
 
-Enter the API key for the {{site.data.keyword.cloud_notm}} Service ID that is used to access the IBM Key Protect Service instance.
+Enter the API key for the {{site.data.keyword.cloud_notm}} Service ID that is used to access the service instance of Key Protect or Hyper Protect Crypto Services.
 
-### Key Protect Instance
+### Key Manager Instance
 {: #kmip_standalone_ordering-config-key-protect}
 
-Click **Retrieve** to get the list of available IBM Key Protect Service instances and select the one to use for key management.
+Click **Retrieve** to get the list of available key manager instances and select the one to use for key management.
 
 ### Customer Root Key
 {: #kmip_standalone_ordering-config-root-key}
