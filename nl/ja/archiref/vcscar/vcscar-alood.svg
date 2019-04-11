@@ -10,7 +10,7 @@
   </rdf:RDF>
  </metadata>
  <g transform="translate(.5 .5)">
-  <g font-family="MS UI Gothic" text-anchor="middle">
+  <g font-family="Helvetica" text-anchor="middle">
    <g fill="#00f" font-size="41px">
     <text x="492" y="36.5">独自に考案した言語</text>
    </g>
@@ -37,7 +37,7 @@
    <path d="m57.5 198.5-0.5-34.5"/>
    <path d="m136.5 68.5-39 24"/>
   </g>
-  <g font-family="MS UI Gothic">
+  <g font-family="Helvetica">
    <g font-size="12px" text-anchor="middle">
     <text x="150" y="71">CH3</text>
    </g>
@@ -48,7 +48,7 @@
     <text x="115" y="214">m-hydroxymethylbenzene</text>
    </g>
   </g>
-  <g font-family="MS UI Gothic">
+  <g font-family="Helvetica">
    <g font-size="24px">
     <g fill="#fc9" text-anchor="end">
      <text x="511" y="227">sw-bs-kfuf</text>
@@ -81,7 +81,7 @@
     </g>
    </g>
   </g>
-  <g font-family="MS UI Gothic">
+  <g font-family="Helvetica">
    <g font-size="20px">
     <text x="232" y="496">diphenyl peroxide</text>
    </g>
@@ -92,7 +92,7 @@
     <text x="244" y="546">sw-fs-180-sw-n-bluntside-bs-ollie-sw-fs-bluntside</text>
    </g>
   </g>
-  <g font-family="MS UI Gothic">
+  <g font-family="Helvetica">
    <g fill="#39f" font-size="24px">
     <text x="274" y="616">hf-fs-crooks-nollie-inward-hf</text>
    </g>
@@ -113,11 +113,11 @@
   <g transform="translate(137.5,326.5)">
    <switch>
     <foreignObject width="14" height="19" overflow="visible" pointer-events="all" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-     <xhtml:div color="rgb(0, 0, 0)" display="inline-block" font-family="MS UI Gothic" font-size="18px" text-align="center" style="line-height:1.2;vertical-align:top;white-space:nowrap;width:16px;word-wrap:normal">
+     <xhtml:div color="rgb(0, 0, 0)" display="inline-block" font-family="Helvetica" font-size="18px" text-align="center" style="line-height:1.2;vertical-align:top;white-space:nowrap;width:16px;word-wrap:normal">
       <xhtml:div display="inline-block" text-align="inherit" text-decoration="inherit">O</xhtml:div>
      </xhtml:div>
     </foreignObject>
-    <text x="7" y="19" fill="#000000" font-family="MS UI Gothic" font-size="18px" text-anchor="middle">O</text>
+    <text x="7" y="19" fill="#000000" font-family="Helvetica" font-size="18px" text-anchor="middle">O</text>
    </switch>
   </g>
   <g fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10">
@@ -129,11 +129,11 @@
   <g transform="translate(182.5,346.5)">
    <switch>
     <foreignObject width="14" height="19" overflow="visible" pointer-events="all" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-     <xhtml:div color="rgb(0, 0, 0)" display="inline-block" font-family="MS UI Gothic" font-size="18px" text-align="center" style="line-height:1.2;vertical-align:top;white-space:nowrap;width:16px;word-wrap:normal">
+     <xhtml:div color="rgb(0, 0, 0)" display="inline-block" font-family="Helvetica" font-size="18px" text-align="center" style="line-height:1.2;vertical-align:top;white-space:nowrap;width:16px;word-wrap:normal">
       <xhtml:div display="inline-block" text-align="inherit" text-decoration="inherit">O</xhtml:div>
      </xhtml:div>
     </foreignObject>
-    <text x="7" y="19" fill="#000000" font-family="MS UI Gothic" font-size="18px" text-anchor="middle">O</text>
+    <text x="7" y="19" fill="#000000" font-family="Helvetica" font-size="18px" text-anchor="middle">O</text>
    </switch>
   </g>
   <g fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10">
@@ -149,7 +149,7 @@
    <path d="m703.5 613 34 17"/>
    <path d="m709.5 605 34 17"/>
   </g>
-  <g font-family="MS UI Gothic" text-anchor="middle">
+  <g font-family="Helvetica" text-anchor="middle">
    <g font-size="18px">
     <text x="623" y="604.5">HO</text>
    </g>
@@ -162,18 +162,18 @@
   </g>
   <path d="m91.5 706.5 22-31" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
   <path d="m85.5 556.5 28 40" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
-  <g font-family="MS UI Gothic" font-size="12px" text-anchor="middle">
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
    <text x="72" y="553">H3C</text>
   </g>
-  <g font-family="MS UI Gothic" font-size="12px" text-anchor="middle">
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
    <text x="81" y="709">H3C</text>
   </g>
   <path d="m45.5 636.5 45.5-0.5" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
-  <g font-family="MS UI Gothic" font-size="12px" text-anchor="middle">
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
    <text x="33" y="634">H3C</text>
   </g>
   <path d="m185.5 566.5-26 30" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
-  <g font-family="MS UI Gothic" font-size="12px" text-anchor="middle">
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
    <text x="197" y="563">CH3</text>
   </g>
   <g fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10">
@@ -186,10 +186,10 @@
    <path d="m602 130 20 15"/>
    <path d="m660 104.5v16.5"/>
   </g>
-  <g font-family="MS UI Gothic" font-size="16px" text-anchor="middle">
+  <g font-family="Helvetica" font-size="16px" text-anchor="middle">
    <text x="659.5" y="94">OH</text>
   </g>
-  <g font-family="MS UI Gothic" font-size="16px" text-anchor="middle">
+  <g font-family="Helvetica" font-size="16px" text-anchor="middle">
    <text x="597" y="123">F</text>
   </g>
   <g fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10">

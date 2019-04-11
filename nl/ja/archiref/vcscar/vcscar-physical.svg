@@ -1,619 +1,141 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="611px"
-   height="589px"
-   version="1.1"
-   id="svg200"
-   sodipodi:docname="vcscar-physical.svg"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)">
-  <defs
-     id="defs204" />
-  <sodipodi:namedview
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1017"
-     id="namedview202"
-     showgrid="false"
-     inkscape:zoom="4.0824959"
-     inkscape:cx="291.51943"
-     inkscape:cy="128.84969"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg200" />
-  <metadata
-     id="metadata2">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <rect
-     style="fill:#dae8fc;stroke:#6c8ebf;stroke-width:2"
-     id="rect4"
-     pointer-events="none"
-     height="558"
-     width="609"
-     y="29.5"
-     x="1" />
-  <rect
-     style="fill:#d5e8d4;stroke:#82b366"
-     id="rect6"
-     pointer-events="none"
-     height="365"
-     width="552"
-     y="107.5"
-     x="24.5" />
-  <g
-     style="font-size:10px;font-family:'MS UI Gothic';text-anchor:middle"
-     id="g10"
-     font-size="10px"
-     transform="translate(0.5,0.5)">
-    <text
-       id="text8"
-       y="51"
-       x="45">VCS クラスター</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="611px" height="589px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(.5 .5)">
+  <rect x=".5" y="29" width="609" height="558" fill="#dae8fc" pointer-events="none" stroke="#6c8ebf" stroke-width="2"/>
+  <rect x="24" y="107" width="552" height="365" fill="#d5e8d4" pointer-events="none" stroke="#82b366"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="45" y="51">VCS クラスター</text>
   </g>
-  <g
-     style="font-size:10px;font-family:'MS UI Gothic';text-anchor:middle"
-     id="g14"
-     font-size="10px"
-     transform="translate(0.5,0.5)">
-    <text
-       id="text12"
-       y="125.5"
-       x="70">ICP クラスター</text>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="70" y="125.5">ICP クラスター</text>
   </g>
-  <rect
-     style="fill:#eeeeee;stroke:#36393d"
-     id="rect16"
-     pointer-events="none"
-     height="70"
-     width="150"
-     y="120"
-     x="228.5" />
-  <g
-     style="font-size:10px;font-family:'MS UI Gothic';text-anchor:middle"
-     id="g20"
-     font-size="10px"
-     transform="translate(0.5,0.5)">
-    <text
-       id="text18"
-       y="182"
-       x="302.5">プロキシー・ノード</text>
+  <rect x="228" y="119.5" width="150" height="70" fill="#eee" pointer-events="none" stroke="#36393d"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="302.5" y="182">プロキシー・ノード</text>
   </g>
-  <rect
-     style="fill:#ffffff;stroke:#000000"
-     id="rect22"
-     pointer-events="none"
-     height="30"
-     width="120"
-     y="130"
-     x="243.5" />
-  <g
-     style="font-size:10px;font-family:'MS UI Gothic';text-anchor:middle"
-     id="g26"
-     font-size="10px"
-     transform="translate(0.5,0.5)">
-    <text
-       id="text24"
-       y="147"
-       x="302.5">Ingress コントローラー</text>
+  <rect x="243" y="129.5" width="120" height="30" fill="#fff" pointer-events="none" stroke="#000"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="302.5" y="147">Ingress コントローラー</text>
   </g>
-  <rect
-     style="fill:#ffffff;stroke:#000000"
-     id="rect28"
-     pointer-events="none"
-     height="30"
-     width="120"
-     y="44"
-     x="244" />
-  <g
-     style="font-size:10px;font-family:'MS UI Gothic';text-anchor:middle"
-     id="g32"
-     font-size="10px"
-     transform="translate(0.5,0.5)">
-    <text
-       id="text30"
-       y="61"
-       x="303">10.xx (NAT 対象)</text>
+  <rect x="243.5" y="43.5" width="120" height="30" fill="#fff" pointer-events="none" stroke="#000"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="303" y="61">10.xx (NAT 対象)</text>
   </g>
-  <g
-     style="fill:none;stroke:#008a00;stroke-width:2;stroke-miterlimit:10"
-     id="g40"
-     stroke-miterlimit="10"
-     pointer-events="none"
-     transform="translate(0.5,0.5)">
-    <path
-       inkscape:connector-curvature="0"
-       id="path34"
-       d="m 123.5,271 180,-81" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path36"
-       d="M 302.11,271 303,189.33" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path38"
-       d="M 471.66,270.72 303,189.33" />
+  <g fill="none" pointer-events="none" stroke="#008a00" stroke-miterlimit="10" stroke-width="2">
+   <path d="m123.5 271 180-81"/>
+   <path d="m302.11 271 0.89-81.67"/>
+   <path d="m471.66 270.72-168.66-81.39"/>
   </g>
-  <rect
-     style="fill:#eeeeee;stroke:#36393d;stroke-width:2"
-     id="rect42"
-     pointer-events="none"
-     height="71"
-     width="150"
-     y="502"
-     x="225" />
-  <rect
-     style="fill:#ffffff;stroke:#000000"
-     id="rect44"
-     pointer-events="none"
-     height="30"
-     width="122"
-     y="512"
-     x="244" />
-  <g
-     style="font-size:10px;font-family:'MS UI Gothic';text-anchor:middle"
-     id="g48"
-     font-size="10px"
-     transform="translate(0.5,4.5)">
-    <text
-       id="text46"
-       y="523"
-       x="304">MySQL</text>
+  <rect x="224.5" y="501.5" width="150" height="71" fill="#eee" pointer-events="none" stroke="#36393d" stroke-width="2"/>
+  <rect x="243.5" y="511.5" width="122" height="30" fill="#fff" pointer-events="none" stroke="#000"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="304" y="523">MySQL</text>
   </g>
-  <g
-     style="font-size:10px;font-family:'MS UI Gothic';text-anchor:middle"
-     id="g52"
-     font-size="10px"
-     transform="translate(0.5,0.5)">
-    <text
-       id="text50"
-       y="565"
-       x="304">仮想マシン</text>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="304" y="565">仮想マシン</text>
   </g>
-  <g
-     style="fill:none;stroke-width:2;stroke-miterlimit:10"
-     id="g62"
-     stroke-miterlimit="10"
-     pointer-events="none"
-     transform="translate(0.5,0.5)">
-    <path
-       style="stroke:#fa6800"
-       inkscape:connector-curvature="0"
-       id="path54"
-       d="m 299.67,501.33 1.64,-94.05" />
-    <path
-       style="stroke:#fa6800"
-       inkscape:connector-curvature="0"
-       id="path56"
-       d="M 448.33,456.67 448,531 l -73,0.33" />
-    <path
-       style="stroke:#008a00"
-       inkscape:connector-curvature="0"
-       id="path58"
-       d="M 303.08,129.57 303.5,73.5" />
-    <path
-       style="stroke:#008a00"
-       inkscape:connector-curvature="0"
-       id="path60"
-       d="m 302.08,43.5 0.42,-43" />
+  <g fill="none" pointer-events="none" stroke-miterlimit="10" stroke-width="2">
+   <path d="m299.67 501.33 1.64-94.05" stroke="#fa6800"/>
+   <path d="m448.33 456.67-0.33 74.33-73 0.33" stroke="#fa6800"/>
+   <path d="m303.08 129.57 0.42-56.07" stroke="#008a00"/>
+   <path d="m302.08 43.5 0.42-43" stroke="#008a00"/>
   </g>
-  <rect
-     style="fill:#eeeeee;stroke:#36393d;stroke-width:2"
-     id="rect64"
-     pointer-events="none"
-     height="217"
-     width="124"
-     y="241"
-     x="79.5" />
-  <rect
-     style="fill:#ffffff;stroke:#000000"
-     id="rect66"
-     pointer-events="none"
-     height="58"
-     width="95"
-     y="379"
-     x="94" />
-  <g
-     style="font-size:10px;font-family:'MS UI Gothic';text-anchor:middle"
-     id="g70"
-     font-size="10px"
-     transform="translate(0.5,4.5)">
-    <text
-       id="text68"
-       y="443"
-       x="138">ワーカー・ノード</text>
+  <rect x="79" y="240.5" width="124" height="217" fill="#eee" pointer-events="none" stroke="#36393d" stroke-width="2"/>
+  <rect x="93.5" y="378.5" width="95" height="58" fill="#fff" pointer-events="none" stroke="#000"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="138" y="443">ワーカー・ノード</text>
   </g>
-  <g
-     style="font-size:12px;font-family:'MS UI Gothic';text-anchor:middle"
-     id="g74"
-     font-size="12px"
-     transform="translate(0.5,0.5)">
-    <text
-       id="text72"
-       y="430"
-       x="145">ポッド</text>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <text x="145" y="430">ポッド</text>
   </g>
-  <rect
-     style="fill:#ccffff;stroke:#36393d"
-     id="rect76"
-     pointer-events="none"
-     height="30"
-     width="79"
-     y="388"
-     x="101.5" />
-  <g
-     style="font-size:10px;font-family:'MS UI Gothic';text-anchor:middle"
-     id="g80"
-     font-size="10px"
-     transform="translate(0.5,0.5)">
-    <text
-       id="text78"
-       y="404"
-       x="140">Web コンテナー</text>
+  <rect x="101" y="387.5" width="79" height="30" fill="#cff" pointer-events="none" stroke="#36393d"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="140" y="404">Web コンテナー</text>
   </g>
-  <rect
-     style="fill:#ffffff;stroke:#000000"
-     id="rect82"
-     pointer-events="none"
-     height="58"
-     width="95"
-     y="314"
-     x="94" />
-  <g
-     style="font-size:12px;font-family:'MS UI Gothic';text-anchor:middle"
-     id="g86"
-     font-size="12px"
-     transform="translate(0.5,0.5)">
-    <text
-       id="text84"
-       y="365"
-       x="145">ポッド</text>
+  <rect x="93.5" y="313.5" width="95" height="58" fill="#fff" pointer-events="none" stroke="#000"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <text x="145" y="365">ポッド</text>
   </g>
-  <rect
-     style="fill:#ccffff;stroke:#36393d"
-     id="rect88"
-     pointer-events="none"
-     height="30"
-     width="79"
-     y="323"
-     x="101.5" />
-  <g
-     style="font-size:10px;font-family:'MS UI Gothic';text-anchor:middle"
-     id="g94"
-     font-size="10px"
-     transform="translate(0.5,6.5)">
-    <text
-       id="text90"
-       y="328"
-       x="140">アドバイザー</text>
-    <text
-       id="text92"
-       y="340"
-       x="140">コンテナー</text>
+  <rect x="101" y="322.5" width="79" height="30" fill="#cff" pointer-events="none" stroke="#36393d"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="140" y="328">アドバイザー</text>
+   <text x="140" y="340">コンテナー</text>
   </g>
-  <rect
-     style="fill:#ffffff;stroke:#000000"
-     id="rect96"
-     pointer-events="none"
-     height="58"
-     width="95"
-     y="250"
-     x="94" />
-  <g
-     style="font-size:12px;font-family:'MS UI Gothic';text-anchor:middle"
-     id="g100"
-     font-size="12px"
-     transform="translate(0.5,0.5)">
-    <text
-       id="text98"
-       y="301.5"
-       x="145">ポッド</text>
+  <rect x="93.5" y="249.5" width="95" height="58" fill="#fff" pointer-events="none" stroke="#000"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <text x="145" y="301.5">ポッド</text>
   </g>
-  <rect
-     style="fill:#ccffff;stroke:#36393d"
-     id="rect102"
-     pointer-events="none"
-     height="30"
-     width="79"
-     y="259"
-     x="101.5" />
-  <g
-     style="font-size:10px;font-family:'MS UI Gothic';text-anchor:middle"
-     id="g106"
-     font-size="10px"
-     transform="translate(0.5,0.5)">
-    <text
-       id="text104"
-       y="270"
-       x="140.5">nginx コンテナー</text>
+  <rect x="101" y="258.5" width="79" height="30" fill="#cff" pointer-events="none" stroke="#36393d"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="140.5" y="270">nginx コンテナー</text>
   </g>
-  <rect
-     style="fill:#eeeeee;stroke:#36393d;stroke-width:2"
-     id="rect108"
-     pointer-events="none"
-     height="217"
-     width="124"
-     y="241"
-     x="244" />
-  <rect
-     style="fill:#ffffff;stroke:#000000"
-     id="rect110"
-     pointer-events="none"
-     height="58"
-     width="95"
-     y="379"
-     x="258.5" />
-  <g
-     style="font-size:10px;font-family:'MS UI Gothic';text-anchor:middle"
-     id="g114"
-     font-size="10px"
-     transform="translate(0.5,4.5)">
-    <text
-       id="text112"
-       y="443"
-       x="302.5">ワーカー・ノード</text>
+  <rect x="243.5" y="240.5" width="124" height="217" fill="#eee" pointer-events="none" stroke="#36393d" stroke-width="2"/>
+  <rect x="258" y="378.5" width="95" height="58" fill="#fff" pointer-events="none" stroke="#000"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="302.5" y="443">ワーカー・ノード</text>
   </g>
-  <g
-     style="font-size:12px;font-family:'MS UI Gothic';text-anchor:middle"
-     id="g118"
-     font-size="12px"
-     transform="translate(0.5,0.5)">
-    <text
-       id="text116"
-       y="430"
-       x="309.5">ポッド</text>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <text x="309.5" y="430">ポッド</text>
   </g>
-  <rect
-     style="fill:#ccffff;stroke:#36393d"
-     id="rect120"
-     pointer-events="none"
-     height="30"
-     width="79"
-     y="388"
-     x="266" />
-  <g
-     style="font-size:10px;font-family:'MS UI Gothic';text-anchor:middle"
-     id="g124"
-     font-size="10px"
-     transform="translate(0.5,0.5)">
-    <text
-       id="text122"
-       y="404"
-       x="304.5">Web コンテナー</text>
+  <rect x="265.5" y="387.5" width="79" height="30" fill="#cff" pointer-events="none" stroke="#36393d"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="304.5" y="404">Web コンテナー</text>
   </g>
-  <rect
-     style="fill:#ffffff;stroke:#000000"
-     id="rect126"
-     pointer-events="none"
-     height="58"
-     width="95"
-     y="314"
-     x="258.5" />
-  <g
-     style="font-size:12px;font-family:'MS UI Gothic';text-anchor:middle"
-     id="g130"
-     font-size="12px"
-     transform="translate(0.5,0.5)">
-    <text
-       id="text128"
-       y="364.5"
-       x="309.5">ポッド</text>
+  <rect x="258" y="313.5" width="95" height="58" fill="#fff" pointer-events="none" stroke="#000"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <text x="309.5" y="364.5">ポッド</text>
   </g>
-  <rect
-     style="fill:#ccffff;stroke:#36393d"
-     id="rect132"
-     pointer-events="none"
-     height="30"
-     width="79"
-     y="323"
-     x="266" />
-  <g
-     style="font-size:10px;font-family:'MS UI Gothic';text-anchor:middle"
-     id="g138"
-     font-size="10px"
-     transform="translate(0.5,6.5)">
-    <text
-       id="text134"
-       y="328"
-       x="304.5">アドバイザー</text>
-    <text
-       id="text136"
-       y="340"
-       x="304.5">コンテナー</text>
+  <rect x="265.5" y="322.5" width="79" height="30" fill="#cff" pointer-events="none" stroke="#36393d"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="304.5" y="328">アドバイザー</text>
+   <text x="304.5" y="340">コンテナー</text>
   </g>
-  <rect
-     style="fill:#ffffff;stroke:#000000"
-     id="rect140"
-     pointer-events="none"
-     height="58"
-     width="95"
-     y="250"
-     x="258.5" />
-  <g
-     style="font-size:10px;font-family:'MS UI Gothic';text-anchor:middle"
-     id="g144"
-     font-size="10px"
-     transform="translate(0.5,6.5)">
-    <text
-       id="text142"
-       y="294"
-       x="309">ポッド</text>
+  <rect x="258" y="249.5" width="95" height="58" fill="#fff" pointer-events="none" stroke="#000"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="309" y="294">ポッド</text>
   </g>
-  <rect
-     style="fill:#ccffff;stroke:#36393d"
-     id="rect146"
-     pointer-events="none"
-     height="30"
-     width="79"
-     y="259"
-     x="266" />
-  <g
-     style="font-size:10px;font-family:'MS UI Gothic';text-anchor:middle"
-     id="g150"
-     font-size="10px"
-     transform="translate(0.5,0.5)">
-    <text
-       id="text148"
-       y="270"
-       x="304.5">nginx コンテナー</text>
+  <rect x="265.5" y="258.5" width="79" height="30" fill="#cff" pointer-events="none" stroke="#36393d"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="304.5" y="270">nginx コンテナー</text>
   </g>
-  <rect
-     style="fill:#eeeeee;stroke:#36393d;stroke-width:2"
-     id="rect152"
-     pointer-events="none"
-     height="217"
-     width="124"
-     y="241"
-     x="389" />
-  <rect
-     style="fill:#ffffff;stroke:#000000"
-     id="rect154"
-     pointer-events="none"
-     height="58"
-     width="95"
-     y="379"
-     x="403.5" />
-  <g
-     style="font-size:10px;font-family:'MS UI Gothic';text-anchor:middle"
-     id="g158"
-     font-size="10px"
-     transform="translate(0.5,4.5)">
-    <text
-       id="text156"
-       y="443"
-       x="447.5">ワーカー・ノード</text>
+  <rect x="388.5" y="240.5" width="124" height="217" fill="#eee" pointer-events="none" stroke="#36393d" stroke-width="2"/>
+  <rect x="403" y="378.5" width="95" height="58" fill="#fff" pointer-events="none" stroke="#000"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="447.5" y="443">ワーカー・ノード</text>
   </g>
-  <g
-     style="font-size:12px;font-family:'MS UI Gothic';text-anchor:middle"
-     id="g162"
-     font-size="12px"
-     transform="translate(0.5,0.5)">
-    <text
-       id="text160"
-       y="430"
-       x="454.5">ポッド</text>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <text x="454.5" y="430">ポッド</text>
   </g>
-  <rect
-     style="fill:#ccffff;stroke:#36393d"
-     id="rect164"
-     pointer-events="none"
-     height="30"
-     width="79"
-     y="388"
-     x="411" />
-  <g
-     style="font-size:10px;font-family:'MS UI Gothic';text-anchor:middle"
-     id="g168"
-     font-size="10px"
-     transform="translate(0.5,0.5)">
-    <text
-       id="text166"
-       y="404"
-       x="449.5">Web コンテナー</text>
+  <rect x="410.5" y="387.5" width="79" height="30" fill="#cff" pointer-events="none" stroke="#36393d"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="449.5" y="404">Web コンテナー</text>
   </g>
-  <rect
-     style="fill:#ffffff;stroke:#000000"
-     id="rect170"
-     pointer-events="none"
-     height="58"
-     width="95"
-     y="314"
-     x="403.5" />
-  <g
-     style="font-size:12px;font-family:'MS UI Gothic';text-anchor:middle"
-     id="g174"
-     font-size="12px"
-     transform="translate(0.5,0.5)">
-    <text
-       id="text172"
-       y="365"
-       x="454.5">ポッド</text>
+  <rect x="403" y="313.5" width="95" height="58" fill="#fff" pointer-events="none" stroke="#000"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <text x="454.5" y="365">ポッド</text>
   </g>
-  <rect
-     style="fill:#ccffff;stroke:#36393d"
-     id="rect176"
-     pointer-events="none"
-     height="30"
-     width="79"
-     y="323"
-     x="411" />
-  <g
-     style="font-size:10px;font-family:'MS UI Gothic';text-anchor:middle"
-     id="g182"
-     font-size="10px"
-     transform="translate(0.5,6.5)">
-    <text
-       id="text178"
-       y="328"
-       x="449.5">アドバイザー</text>
-    <text
-       id="text180"
-       y="340"
-       x="449.5">コンテナー</text>
+  <rect x="410.5" y="322.5" width="79" height="30" fill="#cff" pointer-events="none" stroke="#36393d"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="449.5" y="328">アドバイザー</text>
+   <text x="449.5" y="340">コンテナー</text>
   </g>
-  <rect
-     style="fill:#ffffff;stroke:#000000"
-     id="rect184"
-     pointer-events="none"
-     height="58"
-     width="95"
-     y="250"
-     x="403.5" />
-  <g
-     style="font-size:12px;font-family:'MS UI Gothic';text-anchor:middle"
-     id="g188"
-     font-size="12px"
-     transform="translate(0.5,0.5)">
-    <text
-       id="text186"
-       y="300"
-       x="454.5">ポッド</text>
+  <rect x="403" y="249.5" width="95" height="58" fill="#fff" pointer-events="none" stroke="#000"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <text x="454.5" y="300">ポッド</text>
   </g>
-  <rect
-     style="fill:#ccffff;stroke:#36393d"
-     id="rect190"
-     pointer-events="none"
-     height="30"
-     width="79"
-     y="259"
-     x="411" />
-  <g
-     style="font-size:10px;font-family:'MS UI Gothic';text-anchor:middle"
-     id="g194"
-     font-size="10px"
-     transform="translate(0.5,0.5)">
-    <text
-       id="text192"
-       y="270"
-       x="449.5">nginx コンテナー</text>
+  <rect x="410.5" y="258.5" width="79" height="30" fill="#cff" pointer-events="none" stroke="#36393d"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="449.5" y="270">nginx コンテナー</text>
   </g>
-  <path
-     style="fill:none;stroke:#fa6800;stroke-width:2;stroke-miterlimit:10"
-     inkscape:connector-curvature="0"
-     id="path196"
-     stroke-miterlimit="10"
-     pointer-events="none"
-     d="M 224.83,537.83 139.5,537.5 138.83,457.17" />
+  <path d="m224.33 537.33-85.33-0.33-0.67-80.33" fill="none" pointer-events="none" stroke="#fa6800" stroke-miterlimit="10" stroke-width="2"/>
+ </g>
 </svg>

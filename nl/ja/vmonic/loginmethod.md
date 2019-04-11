@@ -22,14 +22,14 @@ subcollection: vmwaresolutions
 コンソールに直接アクセスするには、以下の手順を実行します。
 1. 次の URL にアクセスします。
    https://cloud.ibm.com/infrastructure/vmware-solutions/console.
-2. **IBM ID** アカウントでコンソールにログインします。
+2. **IBMid** アカウントでコンソールにログインします。
 
 ## IBM Cloud カタログからアクセスする
 {: #loginmethod-cloud-catalog}
 
 {{site.data.keyword.cloud_notm}} カタログからコンソールにアクセスするには、以下の手順を実行します。
 1. https://console.cloud.ibm.com にアクセスします。
-2. **IBM ID** アカウントを使用して {{site.data.keyword.cloud_notm}} にログインします。
+2. **IBMid** アカウントを使用して {{site.data.keyword.cloud_notm}} にログインします。
 3. バナーの左側の**「カタログ」**をクリックします。
 4. **「カタログ」**ページの上部にある検索ボックスに、**VMware Solutions** と入力します。
 5. **「VMware Solutions」**カードをクリックします。

@@ -24,9 +24,9 @@ subcollection: vmwaresolutions
 {: #trbl_support-procedure}
 
 1. https://cloud.ibm.com/infrastructure/vmware-solutions/console にアクセスします。
-2. **IBM ID** アカウントでコンソールにログインします。
+2. **IBMid** アカウントでコンソールにログインします。
 3. メニュー・バーで**「サポート」**をクリックします。
-4. **「サポートの利用 (Get support)」**ページで、**「ケースの作成 (Create a case)」**をクリックします。
+4. **「サポートの利用 (Get support)」**ページで、**「Case の作成 (Create a case)」**をクリックします。
 5. **「新規サポート・ケース (New support case)」**ページで、以下の情報を入力します。
    1. 必要なサポートのタイプとして、**「技術 (Technical)」**を選択します。   
    2. **「カテゴリー (Category)」**リストから**「VMware」**を選択します。  

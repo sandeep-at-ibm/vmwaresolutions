@@ -11,54 +11,54 @@
  </metadata>
  <g transform="translate(.5 .5)">
   <ellipse cx="700" cy="347" rx="170" ry="160" fill="#d5e8d4" pointer-events="none" stroke="#82b366"/>
-  <g font-family="MS UI Gothic" font-size="12px" text-anchor="middle">
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
    <text x="699.5" y="205.5">IKS</text>
   </g>
   <ellipse cx="700" cy="367" rx="120" ry="80" fill="#60a917" pointer-events="none" stroke="#60a917"/>
-  <g font-family="MS UI Gothic" font-size="12px" font-weight="bold" text-anchor="middle">
+  <g font-family="Helvetica" font-size="12px" font-weight="bold" text-anchor="middle">
    <text x="699.5" y="305.5">クラスター</text>
   </g>
   <ellipse cx="700" cy="362" rx="90" ry="45" fill="#1ba1e2" pointer-events="none" stroke="#1ba1e2"/>
-  <g font-family="MS UI Gothic" font-size="12px" font-weight="bold" text-anchor="middle">
+  <g font-family="Helvetica" font-size="12px" font-weight="bold" text-anchor="middle">
    <text x="699.5" y="335.5">ワーカー・ノード</text>
   </g>
   <ellipse cx="455" cy="517" rx="95" ry="20" fill="#fff" pointer-events="none" stroke="#000"/>
-  <g font-family="MS UI Gothic" font-size="12px" text-anchor="middle">
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
    <text x="454.5" y="520.5">VRA</text>
   </g>
   <ellipse cx="290" cy="802" rx="270" ry="125" fill="#dae8fc" pointer-events="none" stroke="#6c8ebf"/>
-  <g font-family="MS UI Gothic" font-size="14px" font-weight="bold" text-anchor="middle">
+  <g font-family="Helvetica" font-size="14px" font-weight="bold" text-anchor="middle">
    <text x="289.5" y="697.5">VCS</text>
   </g>
   <ellipse transform="rotate(-1,366,811)" cx="366" cy="811" rx="136" ry="95" fill="#f8cecc" pointer-events="none" stroke="#b85450"/>
-  <g transform="rotate(-1,364.48,724.01)" font-family="MS UI Gothic" font-size="14px" font-weight="bold" text-anchor="middle">
+  <g transform="rotate(-1,364.48,724.01)" font-family="Helvetica" font-size="14px" font-weight="bold" text-anchor="middle">
    <text x="363.98" y="736.51">ICP</text>
   </g>
   <ellipse cx="115" cy="147" rx="115" ry="70" fill="#e1d5e7" pointer-events="none" stroke="#9673a6"/>
-  <g font-family="MS UI Gothic" font-size="12px" text-anchor="middle">
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
    <text x="114.5" y="101.5">オンプレミス仮想化</text>
   </g>
   <ellipse cx="328" cy="787" rx="67.5" ry="30" fill="#3ff" pointer-events="none" stroke="#82b366"/>
-  <g font-family="MS UI Gothic" font-size="12px" text-anchor="middle">
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
    <text x="327" y="790.5">CAM</text>
   </g>
   <rect x="640" y="347" width="120" height="40" fill="#fff" pointer-events="none" stroke="#000"/>
-  <g font-family="MS UI Gothic" font-size="12px" text-anchor="middle">
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
    <text x="699.5" y="370.5">コンテナー化されたアプリ</text>
   </g>
   <ellipse cx="925" cy="15" rx="7.5" ry="7.5" fill="#fff" pointer-events="none" stroke="#000"/>
   <path d="m925 22v25m0-20h-15m15 0h15m-15 20-15 20m15-20 15 20" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
-  <g font-family="MS UI Gothic" font-size="12px" text-anchor="middle">
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
    <rect x="899" y="76" width="54" height="15" fill="#fff" stroke-width="0"/>
    <text x="924.5" y="85.5">お客様</text>
   </g>
   <ellipse cx="820" cy="758" rx="80" ry="41" fill="#b266ff" pointer-events="none" stroke="#82b366"/>
-  <g font-family="MS UI Gothic" font-size="12px" text-anchor="middle">
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
    <text x="819.5" y="754.5">IBM Cloud</text>
    <text x="819.5" y="768.5">サービス</text>
   </g>
   <path d="m123.84 688.46 10.5-0.09-15.34 19.13-15.66-18.87 10.5-0.09-3.68-452-10.5 0.09 15.34-19.13 15.66 18.87-10.5 0.09z" fill="#fff" pointer-events="none" stroke="#00f" stroke-dasharray="3 3" stroke-linejoin="round" stroke-miterlimit="10"/>
-  <g font-family="MS UI Gothic" font-size="12px" text-anchor="middle">
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
    <rect x="91" y="426" width="49" height="15" fill="#fff" stroke-width="0"/>
    <text x="114.45" y="435.52">ハイブリッド性</text>
   </g>
@@ -66,14 +66,14 @@
   <g transform="translate(472.5,569.5)">
    <switch>
     <foreignObject width="23" height="5" overflow="visible" pointer-events="all" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-     <xhtml:div color="rgb(0, 0, 0)" display="inline-block" font-family="MS UI Gothic" font-size="6px" text-align="center" style="line-height:1.2;vertical-align:top;white-space:nowrap">
+     <xhtml:div color="rgb(0, 0, 0)" display="inline-block" font-family="Helvetica" font-size="6px" text-align="center" style="line-height:1.2;vertical-align:top;white-space:nowrap">
       <xhtml:div display="inline-block" text-align="inherit" text-decoration="inherit" style="background-color:#ffffff">Hybridity</xhtml:div>
      </xhtml:div>
     </foreignObject>
-    <text x="12" y="6" fill="#000000" font-family="MS UI Gothic" font-size="6px" text-anchor="middle">ハイブリッド性</text>
+    <text x="12" y="6" fill="#000000" font-family="Helvetica" font-size="6px" text-anchor="middle">ハイブリッド性</text>
    </switch>
   </g>
-  <g font-family="MS UI Gothic" font-size="12px" text-anchor="middle">
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
    <rect x="433" y="570" width="87" height="29" fill="#fff" stroke-width="0"/>
    <text x="475.21" y="572.57">IBM Cloud</text>
    <text x="475.21" y="586.57">プライベート・ネットワーク</text>
@@ -82,91 +82,91 @@
   <g transform="translate(807.5,585.5)">
    <switch>
     <foreignObject width="23" height="5" overflow="visible" pointer-events="all" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-     <xhtml:div color="rgb(0, 0, 0)" display="inline-block" font-family="MS UI Gothic" font-size="6px" text-align="center" style="line-height:1.2;vertical-align:top;white-space:nowrap">
+     <xhtml:div color="rgb(0, 0, 0)" display="inline-block" font-family="Helvetica" font-size="6px" text-align="center" style="line-height:1.2;vertical-align:top;white-space:nowrap">
       <xhtml:div display="inline-block" text-align="inherit" text-decoration="inherit" style="background-color:#ffffff">Hybridity</xhtml:div>
      </xhtml:div>
     </foreignObject>
-    <text x="12" y="6" fill="#000000" font-family="MS UI Gothic" font-size="6px" text-anchor="middle">ハイブリッド性</text>
+    <text x="12" y="6" fill="#000000" font-family="Helvetica" font-size="6px" text-anchor="middle">ハイブリッド性</text>
    </switch>
   </g>
-  <g font-family="MS UI Gothic" font-size="12px" text-anchor="middle">
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
    <rect x="779" y="576" width="82" height="29" fill="#fff" stroke-width="0"/>
    <text x="818.5" y="578.5">IBM Cloud</text>
    <text x="818.5" y="592.5">パブリック・ネットワーク</text>
   </g>
   <path d="m550.15 746.2-0.65 10.48-18-16.65 19.93-14.29-0.66 10.48 170.66 10.63 0.66-10.48 18 16.65-19.93 14.29 0.65-10.48z" fill="#fff" pointer-events="none" stroke="#00f" stroke-dasharray="3 3" stroke-linejoin="round" stroke-miterlimit="10"/>
-  <g font-family="MS UI Gothic" font-size="12px" text-anchor="middle">
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
    <rect x="606" y="736" width="87" height="29" fill="#fff" stroke-width="0"/>
    <text x="648.85" y="738.72">IBM Cloud</text>
    <text x="648.85" y="752.72">プライベート・ネットワーク</text>
   </g>
   <path d="m400 17h-255q-10 0-10 10v33.63" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
   <path d="m135 65.88-3.5-7 3.5 1.75 3.5-1.75z" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
-  <g font-family="MS UI Gothic" font-size="12px" text-anchor="middle">
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
    <rect x="230" y="1" width="123" height="15" fill="#fff" stroke-width="0"/>
    <text x="290" y="11">アプリケーションのデプロイ / 管理</text>
   </g>
   <path d="m930 197v40q0 10-10 10h-151.88" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
   <path d="m761.12 247 7-3.5v7z" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
-  <g font-family="MS UI Gothic" font-size="12px" text-anchor="middle">
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
    <rect x="872" y="241" width="45" height="15" fill="#fff" stroke-width="0"/>
    <text x="893" y="251">管理</text>
   </g>
   <path d="m470 17h220q10 0 10 10v153.63" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
   <path d="m700 185.88-3.5-7 3.5 1.75 3.5-1.75z" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
-  <g font-family="MS UI Gothic" font-size="11px" text-anchor="middle">
+  <g font-family="Helvetica" font-size="11px" text-anchor="middle">
    <rect x="510" y="1" width="116" height="14" fill="#fff" stroke-width="0"/>
    <text x="566.5" y="10">アプリケーションのデプロイ / ライフサイクル</text>
   </g>
   <path d="m622 347-1.9-190q-0.1-10-10.1-10h-428.63" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
   <path d="m176.12 147 7-3.5-1.75 3.5 1.75 3.5z" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
-  <g font-family="MS UI Gothic" font-size="12px" text-anchor="middle">
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
    <rect x="382" y="136" width="103" height="15" fill="#fff" stroke-width="0"/>
    <text x="432.01" y="146">サービスの利用</text>
   </g>
   <rect x="55" y="127" width="120" height="40" fill="#fff" pointer-events="none" stroke="#000"/>
-  <g font-family="MS UI Gothic" font-size="12px" text-anchor="middle">
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
    <text x="114.5" y="150.5">オンプレミス VM</text>
   </g>
   <ellipse cx="700" cy="247" rx="60" ry="20" fill="#60a917" pointer-events="none" stroke="#60a917"/>
-  <g font-family="MS UI Gothic" font-size="12px" text-anchor="middle">
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
    <text x="699.5" y="250.5">マスター・ノード</text>
   </g>
   <path d="m305.51 664.17 8.49 6.18-23.71 6.25-1.36-24.49 8.5 6.18 217.06-298.46-8.49-6.18 23.71-6.25 1.36 24.49-8.5-6.18z" fill="#fff" pointer-events="none" stroke="#00f" stroke-dasharray="3 3" stroke-linejoin="round" stroke-miterlimit="10"/>
-  <g font-family="MS UI Gothic" font-size="12px" text-anchor="middle">
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
    <rect x="406" y="424" width="82" height="29" fill="#fff" stroke-width="0"/>
    <text x="446.21" y="427.08">IBM Cloud</text>
    <text x="446.21" y="441.08">パブリック・ネットワーク</text>
   </g>
   <ellipse cx="445" cy="15" rx="7.5" ry="7.5" fill="#fff" pointer-events="none" stroke="#000"/>
   <path d="m445 22v25m0-20h-15m15 0h15m-15 20-15 20m15-20 15 20" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
-  <g font-family="MS UI Gothic" font-size="12px" text-anchor="middle">
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
    <rect x="417" y="76" width="57" height="15" fill="#fff" stroke-width="0"/>
    <text x="444.5" y="85.5">開発者</text>
   </g>
   <path d="m381.9 483.82 8.9-5.57-3.07 24.33-23.21-7.89 8.9-5.57-171.32-273.94-8.9 5.57 3.07-24.33 23.21 7.89-8.9 5.57z" fill="#fff" pointer-events="none" stroke="#00f" stroke-dasharray="3 3" stroke-linejoin="round" stroke-miterlimit="10"/>
-  <g transform="rotate(-30,290.71,347.01)" font-family="MS UI Gothic" font-size="12px" text-anchor="middle">
+  <g transform="rotate(-30,290.71,347.01)" font-family="Helvetica" font-size="12px" text-anchor="middle">
    <rect x="262" y="341" width="59" height="15" fill="#fff" stroke-width="0"/>
    <text x="290.21" y="343.51">Direct Link</text>
   </g>
   <path d="m980 17h30q10 0 10 10v170q0 10 0 20v136q0 10-10 9.96l-211.88-0.92" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
   <path d="m791.12 362 7.01-3.46-0.03 7z" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
-  <g font-family="MS UI Gothic" font-size="12px" text-anchor="middle">
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
    <rect x="970" y="215" width="103" height="15" fill="#fff" stroke-width="0"/>
    <text x="1020" y="225">サービスの利用</text>
   </g>
   <rect x="70" y="766.5" width="120" height="41" fill="#fff" pointer-events="none" stroke="#000"/>
-  <g font-family="MS UI Gothic" font-size="12px" text-anchor="middle">
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
    <text x="129.5" y="790.5">クラウド VM 上</text>
   </g>
   <ellipse cx="925" cy="120" rx="7.5" ry="7.5" fill="#fff" pointer-events="none" stroke="#000"/>
   <path d="m925 127v25m0-20h-15m15 0h15m-15 20-15 20m15-20 15 20" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
-  <g font-family="MS UI Gothic" font-size="12px" text-anchor="middle">
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
    <rect x="903" y="181" width="46" height="15" fill="#fff" stroke-width="0"/>
    <text x="924.5" y="190.5">IBM IKS</text>
   </g>
   <ellipse cx="420" cy="847" rx="60" ry="30" fill="#fff2cc" pointer-events="none" stroke="#d6b656"/>
-  <g font-family="MS UI Gothic" font-size="13px" text-anchor="middle">
+  <g font-family="Helvetica" font-size="13px" text-anchor="middle">
    <text x="419.5" y="851">MCM</text>
   </g>
   <path d="m130 808v139q0 10 10 10h550q10 0 10-10v-533.63" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
@@ -174,16 +174,16 @@
   <g transform="translate(644.5,913.5)">
    <switch>
     <foreignObject width="101" height="12" overflow="visible" pointer-events="all" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-     <xhtml:div color="rgb(0, 0, 0)" display="inline-block" font-family="MS UI Gothic" font-size="12px" text-align="center" style="line-height:1.2;vertical-align:top;white-space:nowrap">
+     <xhtml:div color="rgb(0, 0, 0)" display="inline-block" font-family="Helvetica" font-size="12px" text-align="center" style="line-height:1.2;vertical-align:top;white-space:nowrap">
       <xhtml:div display="inline-block" text-align="inherit" text-decoration="inherit" style="background-color:#ffffff">Consume Services</xhtml:div>
      </xhtml:div>
     </foreignObject>
-    <text x="51" y="12" fill="#000000" font-family="MS UI Gothic" font-size="12px" text-anchor="middle">サービスの利用</text>
+    <text x="51" y="12" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">サービスの利用</text>
    </switch>
   </g>
   <path d="m395 787h215q10 0 10.08-10l2.87-337.63" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
   <path d="m622.99 434.12 3.44 7.03-3.48-1.78-3.52 1.72z" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
-  <g font-family="MS UI Gothic" font-size="12px" text-anchor="middle">
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
    <rect x="575" y="588" width="101" height="15" fill="#fff" stroke-width="0"/>
    <text x="624.64" y="598.03">コンテナーのデプロイ</text>
   </g>
