@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -165,5 +165,5 @@ You must manage the {{site.data.keyword.vmwaresolutions_short}} components that 
 * [vCenter Server Software Bill of Materials](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
 * [Requirements and planning for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)
 * [Ordering vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
-* [HCX on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview)
+* [HCX on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-hcx_considerations)
 * [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
