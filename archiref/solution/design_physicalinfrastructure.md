@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -33,8 +33,7 @@ For more information about the physical components, see [vCenter Server Bill of 
 
 For more information about storage, see [Shared storage architecture](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits).
 
-Figure 1. Physical infrastructure</br>
-![Physical infrastructure](vcsv4radiagrams-ra-physinfra.svg)
+![Physical infrastructure](../../images/vcsv4radiagrams-ra-physinfra.svg "Physical infrastructure"){: caption="Figure 1. Physical infrastructure" caption-side="bottom"}
 
 ## Physical compute design
 {: #design_physicalinfrastructure-host-design}
@@ -49,7 +48,7 @@ Each vCenter Server instance begins with a 3- or 4-host deployment, depending on
 The physical host employs two locally attached disks that are allocated to the vSphere ESXi hypervisor. You can allocate more disks by using vSAN as described in the _Physical storage design_ section or by using NetApp ONTAP as described in [NetApp ONTAP Select architecture](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf). Each physical host has redundant 10-Gbps network connections for both public and private network access.
 
 The Bare Metal Server has the following specifications:
-* CPU: Dual Intel Xeon, varying core and speed configuration
+* CPU: Dual or Quad Intel Xeon, varying core and speed configuration
 * Memory: Varying configuration, 64 GB or larger
 * Network: 4 x 10 Gbps
 * Number of Drives: 2 or more
@@ -62,10 +61,9 @@ Physical networking is handled by {{site.data.keyword.cloud_notm}}. Review the f
 ### IBM Cloud network overview
 {: #design_physicalinfrastructure-ibm-cloud-network}
 
-The physical network of {{site.data.keyword.cloud_notm}} is separated into two distinct networks: public and private. The private network contains the out of band management Intelligent Platform Management Interface (IPMI) traffic to the physical servers.
+The physical network of {{site.data.keyword.cloud_notm}} is separated into two distinct networks: public and private. The private network also contains the management Intelligent Platform Management Interface (IPMI) traffic to the physical servers.
 
-Figure 2. {{site.data.keyword.cloud_notm}} high–level network
-![{{site.data.keyword.cloud_notm}} high–level network](vcsv4radiagrams-ra-ibmcloudnetwork.svg)
+![{{site.data.keyword.cloud_notm}} high–level network](../../images/vcsv4radiagrams-ra-ibmcloudnetwork.svg "{{site.data.keyword.cloud_notm}} high–level network"){: caption="Figure 2. {{site.data.keyword.cloud_notm}} high–level network" caption-side="bottom"}
 
 #### Public network
 {: #design_physicalinfrastructure-public-net}
@@ -86,7 +84,7 @@ Similar to the public network, the private network is multi-tiered in that serve
 #### Management network
 {: #design_physicalinfrastructure-mgmt-net}
 
-In addition to the public and private networks, each {{site.data.keyword.cloud_notm}} server is connected for out–of–band management to the private primary network subnet. This connection allows Intelligent Platform Management Interface (IPMI) access to the server independently of its CPU, firmware, and operating system, for maintenance and administration purposes.
+In addition to the public and private networks, each {{site.data.keyword.cloud_notm}} server is connected for management to the private primary network subnet. This connection allows Intelligent Platform Management Interface (IPMI) access to the server independently of its CPU, firmware, and operating system, for maintenance and administration purposes.
 
 #### Primary and portable IP blocks
 {: #design_physicalinfrastructure-ip-blocks}
@@ -111,15 +109,14 @@ Each physical host in this design has two redundant pairs of 10 Gbps Ethernet co
 
 Removing physical network connectivity to the public or private network for the bare metal servers that are used within the vCenter Server offering is not possible. Physical ports on the internal NIC of the bare metal can be disabled, but there is no support for unplugging the cables.
 
-Figure 3. Physical host connections</br>
-![Physical host connections](vcsv4radiagrams-ra-physical-host-connections.svg "Physical host connections")
+![Physical host connections](../../images/vcsv4radiagrams-ra-physical-host-connections.svg "Physical host connections"){: caption="Figure 3. Physical host connections" caption-side="bottom"}
 
-#### VLANs and under- to overlay routing
+#### VLANs and underlay to overlay routing
 {: #design_physicalinfrastructure-vlans}
 
-The {{site.data.keyword.vmwaresolutions_short}} offerings are designed with 3 VLANs, one public and two private, assigned upon deployment. As shown in the previous figure, the public VLAN is assigned to eth1 and eth3, and the private VLANs are assigned to eth0 and eth2.
+The {{site.data.keyword.vmwaresolutions_short}} offerings are designed with 3 VLANs, one public and two private, assigned upon deployment. As shown in the previous figure, the public VLAN is assigned to `eth1` and `eth3`, and the private VLANs are assigned to `eth0` and `eth2`.
 
-The public and the first private VLAN created and assigned in this design are untagged by default within the {{site.data.keyword.cloud_notm}}. THen, the additional private VLAN is trunked on the physical switch ports and tagged within the VMware port groups that are using these subnets.
+The public and the first private VLAN created and assigned in this design are untagged by default within the {{site.data.keyword.cloud_notm}}. Then, the additional private VLAN is trunked on the physical switch ports and tagged within the VMware port groups that are using these subnets.
 
 The private network consists of two VLANs within this design. Three subnets are allocated to the first of these VLANs (here designated Private VLAN A):
 * The first subnet is a primary private IP subnet range that {{site.data.keyword.cloud_notm}} assigns to the physical hosts.
@@ -133,7 +130,7 @@ In addition to Private VLAN A, a second private VLAN (here designated Private VL
    * When using NFS attached NAS, a subnet is assigned to a port group that is dedicated to NFS traffic.
    * For iSCSI attachment, two port groups are created to allow multipathing active-active across both private NIC ports as only one NIC port can be active at a time per the VMware iSCSI documentation.
 
-All subnets that are configured as part of a vCenter Server or Cloud Foundation automated deployment use {{site.data.keyword.cloud_notm}} managed ranges. This is to ensure that any IP address can be routed to any data center within the {{site.data.keyword.cloud_notm}} account when you need the connection now or in the future.
+All subnets that are configured as part of a vCenter Server automated deployment use {{site.data.keyword.cloud_notm}} managed ranges. This is to ensure that any IP address can be routed to any data center within the {{site.data.keyword.cloud_notm}} account when you need the connection now or in the future.
 
 Review the following table for a summary.
 
@@ -145,7 +142,7 @@ Table 1. VLAN and subnet summary
 | Private A | Primary  | Single subnet assigned to physical hosts assigned by {{site.data.keyword.cloud_notm}}. Used by the management interface for vSphere management traffic. |
 | Private A | Portable | Single subnet assigned to virtual machines that function as management components |
 | Private A | Portable | Single subnet that is assigned to NSX-V or NSX-T VTEP |
-| Private A | Portable | Single subnet that is assigned for vSAN, if in use |
+| Private B | Portable | Single subnet that is assigned for vSAN, if in use |
 | Private B | Portable | Single subnet assigned for NAS, if in use |
 | Private B | Portable | Two subnets assigned for iSCSI NAS, if in use (one per physical NIC port) |
 | Private B | Portable | Single subnet assigned for vMotion |
@@ -159,7 +156,7 @@ The private network connections are configured to use a jumbo frame MTU size of 
 ## Physical storage design
 {: #design_physicalinfrastructure-storage-design}
 
-Physical storage design consists of the configuration of the physical disks that are installed in the physical hosts and the configuration of the shared file-level storage. This includes the operating system (vSphere ESXi) and the disks that are used for storage of the virtual machines (VMs). Storage for VMs can consist of local disks that are virtualized by VMware vSAN, shared file–level storage, or shared block-level storage.
+Physical storage design consists of the configuration of the physical disks that are installed in the physical hosts and the configuration of the shared network-attached storage. This includes the operating system (vSphere ESXi) and the disks that are used for storage of the virtual machines (VMs). Storage for VMs can consist of local disks that are virtualized by VMware vSAN, shared file–level storage, or shared block-level storage.
 
 ### Operating system disks
 {: #design_physicalinfrastructure-os-disks}
@@ -169,7 +166,7 @@ The vSphere ESXi hypervisor is installed in a persistent location. As a result, 
 ### vSAN disks
 {: #design_physicalinfrastructure-vsan-disks}
 
-This design allows for the option of using either VMware vSAN or shared file–level storage as the primary datastore for virtual machines. For VMware vSAN, it is configured by using an all–flash configuration. This design allows for several configuration options, including 2U and 4U chassis, various numbers of disks, and various disk sizes. All configurations use two vSAN disk groups, with one solid-state disk (SSD) for cache and one or more SSDs for capacity. All drives that are allocated for vSAN consumption are configured in single-disk RAID-0.
+This design allows for the option of using either VMware vSAN or shared network-attached storage as the primary datastore for virtual machines. For VMware vSAN, it is configured by using an all–flash configuration. This design allows for several configuration options, including 2U and 4U chassis, various numbers of disks, and various disk sizes. All configurations use two vSAN disk groups, with one solid-state disk (SSD) for cache and one or more SSDs for capacity. All drives that are allocated for vSAN consumption are configured in single-disk RAID-0.
 
 For more information about the supported configurations, see the [vCenter Server Bill of Materials](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
 
@@ -180,9 +177,7 @@ When using shared file-level storage, a 2-TB NFS share is attached to the hosts 
 
 The storage is attached by using the NFSv3 protocol at a 2 IOPS per GB level from IBM Cloud. IBM normalizes the IOP level that is provisioned at a 16 K block size such that larger block sizes see a lower limit and smaller block sizes a higher limit.
 
-Figure 4. NFS shares that are attached to VMware deployment
-
-![NFS shares that are attached to VMware deployment](vcsv4radiagrams-ra-nfs-shares.svg "NFS shares that are attached to VMware deployment: management share and customer specified share")
+![NFS shares that are attached to VMware deployment](../../images/vcsv4radiagrams-ra-nfs-shares.svg "NFS shares that are attached to VMware deployment: management share and customer specified share"){: caption="Figure 4. NFS shares that are attached to VMware deployment" caption-side="bottom"}
 
 You can allocate and mount more file shares across all hosts for your workloads at the time of purchase or later within the console. You can select from the available {{site.data.keyword.cloud_notm}} Endurance file storage capacity options and performance tiers in the corresponding {{site.data.keyword.CloudDataCent_notm}}. All shares are attached by using the NFSv3 protocol. Additionally, it is possible to attach NFSv3 file shares by applying the NetApp ONTAP Select offering.
 
@@ -195,8 +190,7 @@ Similar to NFS, for shared iSCSI storage, one 2-TB iSCSI LUN is attached to the 
 
 IBM normalizes the IOP level provisioned at a 16 K block size such that larger block sizes see a lower limit and smaller block sizes a higher limit.
 
-Figure 5. iSCSI LUNs attached to VMware deployment</br>
-![iSCSI LUNs attached to VMware deployment](vcsv4radiagrams-ra-iscsi-lun.svg "iSCSI LUNs attached to VMware deployment")
+![iSCSI LUNs attached to VMware deployment](../../images/vcsv4radiagrams-ra-iscsi-lun.svg "iSCSI LUNs attached to VMware deployment"){: caption="Figure 5. iSCSI LUNs attached to VMware deployment" caption-side="bottom"}
 
 Additional iSCSI LUNs for workloads can also be allocated and mounted across all hosts at the time of purchase or later within the console. Select from the available IBM Cloud Endurance block storage capacity options and performance tiers in the corresponding IBM Cloud Data Center. All LUNs are attached by using the iSCSI protocol. Additionally, it is possible to attach iSCSI LUNs from the NetApp ONTAP Select offering.
 

@@ -4,9 +4,9 @@ copyright:
 
   years: 2016, 2019
 
-lastupdated: "2019-03-22"
+lastupdated: "2019-04-16"
 
-keywords: IBM Cloud for VMware Solutions, getting started, deployment offerings, add-on services, use case
+keywords: IBM Cloud for VMware Solutions, getting started, vmware solutions offerings, add-on services for vmwaresolutions, vmwaresolutions use cases
 
 subcollection: vmware-solutions
 
@@ -50,7 +50,7 @@ For optimal viewing and working on the {{site.data.keyword.vmwaresolutions_short
 ### User accounts
 {: #getting-started-user-accts}
 
-You need an {{site.data.keyword.cloud_notm}} account and an {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account. These accounts must meet certain requirements.
+You need an {{site.data.keyword.cloud_notm}} account and an {{site.data.keyword.cloud_notm}} infrastructure account. These accounts must meet certain requirements.
 
    Table 1. Required user accounts
    <table>
@@ -67,8 +67,8 @@ You need an {{site.data.keyword.cloud_notm}} account and an {{site.data.keyword.
       <td>To order and use {{site.data.keyword.cloud_notm}} services, an {{site.data.keyword.cloud_notm}} account is required. Billing information is associated with the {{site.data.keyword.cloud_notm}} account. The cost of the physical and virtual infrastructure and the resulting licenses are charged to your {{site.data.keyword.cloud_notm}} account.</td>
    </tr>
    <tr>
-      <td>IBM Cloud infrastructure (SoftLayer) account</td>
-      <td>The {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account was previously known as the IBM SoftLayer account.  For more information about the  that the account must meet, see [Requirements for the {{site.data.keyword.cloud_notm}} infrastructure account](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).<br><br>You can link {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) accounts with {{site.data.keyword.cloud_notm}} accounts to use combined infrastructure as a service (IaaS) and platform as a service (PaaS) resources. Then, you can access IaaS resources and PaaS resources from a single login. Linking your accounts also provides you with a single invoice for all the PaaS and IaaS resources that you use.<ul><li>If you do not have an {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account, request one by following the procedure in [Signing up for an IBM Cloud infrastructure (SoftLayer) account](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account#signing_softlayer_account-infra), and then link your {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account with your {{site.data.keyword.cloud_notm}} account by following the procedure in [Switching to IBMid and linking accounts](/docs/account?topic=account-unifyingaccounts#unifyingaccounts).</li><li>If you have an {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account, you can link it with your {{site.data.keyword.cloud_notm}} account by following the procedure in [Switching to IBMid and linking accounts](/docs/account?topic=account-unifyingaccounts#unifyingaccounts).</li></ul></td>
+      <td>IBM Cloud infrastructure account</td>
+      <td>For information about the requirements for an {{site.data.keyword.cloud_notm}} infrastructure account, see [Requirements for the {{site.data.keyword.cloud_notm}} infrastructure account](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).<br><br>You can link {{site.data.keyword.cloud_notm}} infrastructure accounts with {{site.data.keyword.cloud_notm}} accounts to use combined infrastructure as a service (IaaS) and platform as a service (PaaS) resources. Then, you can access IaaS resources and PaaS resources from a single login. Linking your accounts also provides you with a single invoice for all the PaaS and IaaS resources that you use.<ul><li>If you do not have an {{site.data.keyword.cloud_notm}} infrastructure account, request one by following the procedure in [Signing up for an IBM Cloud infrastructure account](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account#signing_softlayer_account-infra), and then link your {{site.data.keyword.cloud_notm}} infrastructure account with your {{site.data.keyword.cloud_notm}} account by following the procedure in [Switching to IBMid and linking accounts](/docs/account?topic=account-unifyingaccounts#unifyingaccounts).</li><li>If you have an {{site.data.keyword.cloud_notm}} infrastructure account, you can link it with your {{site.data.keyword.cloud_notm}} account by following the procedure in [Switching to IBMid and linking accounts](/docs/account?topic=account-unifyingaccounts#unifyingaccounts).</li></ul></td>
    </tr>
    </table>
 
@@ -168,13 +168,13 @@ Review and choose add-on services for your deployment offering.
 The {{site.data.keyword.vmwaresolutions_short}} console is the interface where you order and manage your deployments. Each deployment is managed as an instance in the console. The console is a stand-alone user interface that is separate from the {{site.data.keyword.cloud_notm}} infrastructure customer portal.
 
 To access the {{site.data.keyword.vmwaresolutions_short}} console:
-1. Go to https://console.cloud.ibm.com/infrastructure/vmware-solutions/console.
+1. Go to https://cloud.ibm.com/infrastructure/vmware-solutions/console.
 2. Log in to the console with your **IBMid**.
 
 ## Step 2: Configuring your user account and settings
 {: #getting-started-step2}
 
-Before you order an instance, you must enter the user name and API key of your {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account on the **Settings** page of the console.
+Before you order an instance, you must enter the user name and API key of your {{site.data.keyword.cloud_notm}} infrastructure account on the **Settings** page of the console.
 
 For information about how to configure your user account and settings, see [Managing user accounts and settings](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount).
 

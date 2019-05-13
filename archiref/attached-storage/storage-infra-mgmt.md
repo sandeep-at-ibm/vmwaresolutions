@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-13"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -48,9 +48,7 @@ Table 1. NFS port group summary
 
 In addition to the creation of the vDS port group for NFS storage traffic, a VMkernel port is created on each vSphere ESXi host during the deployment and assigned to the SDDC-DPG-NFS port group. The VMkernel port is also assigned an IP address from the private portable subnet that is associated with the attached storage VLAN, that is, Private VLAN B and its MTU is set to 9000 to support jumbo frames.
 
-Figure 1. Private vDS Port groups and Uplinks
-
-![Private vDS Port groups and Uplinks](private_vds_portgroups_and_uplinks.svg "Private vDS port groups and uplinks")
+![Private vDS Port groups and uplinks](../../images/private_vds_portgroups_and_uplinks.svg "Private vDS Port groups and uplinks"){: caption="Figure 1. Private vDS Port groups and uplinks" caption-side="bottom"}
 
 ### vSphere host static routing
 {: #storage-infra-mgmt-vsphere-routing}

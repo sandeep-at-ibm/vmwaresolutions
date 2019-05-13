@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-26"
 
 subcollection: vmware-solutions
 
@@ -104,8 +104,8 @@ Select the {{site.data.keyword.CloudDataCent_notm}} where the cluster is to be h
 
 **Notes:**
 * If you select a vSAN component, the location list is filtered by SSD availability.
-* The FRA05 data center does not support Broadwell bare metal server.
-* The LON05 data center does not support SAP-certified or Broadwell bare metal server.
+* Broadwell Bare Metal Servers are not available for the **FRA05 - Frankfurt** Data Center location.
+* SAP-certified and Broadwell Bare Metal Servers are not available for the **LON05 - London** Data Center location.
 
 ### Skylake
 {: #vs_orderinginstances-skylake}
@@ -143,9 +143,6 @@ Table 3. Options for Broadwell {{site.data.keyword.baremetal_short}}
 
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
 | Quad Intel Xeon E7-4820 v4 / 40 cores total, 2.0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 cores total, 2.1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
@@ -168,7 +165,7 @@ If you select the VMware vSAN component for the cluster, specify the following s
 * **Number of vSAN Capacity Disks**: Specify the number of capacity disks that you want to add.
 * If you want to add capacity disks over the limit of eight, check the **High-Performance Intel Optane** box. This option provides two extra capacity disk bays for a total of 10 capacity disks and is useful for workloads that require less latency and higher IOPS throughput.
 
-  The **High-Performance Intel Optane** option is available only for the Skylake CPU models Dual Intel Xeon Gold 5120 and Dual Intel Xeon Gold 6140.
+  The **High-Performance Intel Optane** option is available only for the Skylake CPU models.
   {:note}
 
 * Review the **Disk Type for vSAN Cache Disks** and **Number of vSAN Cache Disks** values. These values depend on whether you checked the **High-Performance Intel Optane** box.
@@ -211,12 +208,7 @@ The domain name is used for all {{site.data.keyword.baremetal_short}} and must m
 ### Public or private network
 {: #vs_orderinginstances-public-private-network}
 
-Network interface card (NIC) enablement settings are based on your selection of either **Public and Private Network** or **Private Network Only**. The following add-on services require public NICs and are not available if you select the private option:
-
-* F5 on {{site.data.keyword.cloud_notm}}
-* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
-* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
-* Zerto on {{site.data.keyword.cloud_notm}}
+Network interface card (NIC) enablement settings are based on your selection of either **Public and Private Network** or **Private Network Only**.
 
 ### VLANs
 {: #vs_orderinginstances-vlans}
@@ -297,7 +289,7 @@ If you saved the cluster configuration as a template, you get a console notifica
 
 If you placed an order, the deployment of the cluster starts automatically, and you receive an email confirmation that the order is being processed. When the cluster is ready to use, you are notified by email.
 
-The vSphere clusters, unlike the vCenter Server and Cloud Foundation instances, are not displayed on the **Resources** page.
+The vSphere clusters, unlike the vCenter Server instances, are not displayed on the **Resources** page.
 {:note}
 
 ## Related links

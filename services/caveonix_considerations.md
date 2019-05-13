@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-12"
 
 subcollection: vmware-solutions
 
@@ -56,8 +56,8 @@ Before you install the Caveonix RiskForesight on {{site.data.keyword.cloud_notm}
 Review the following considerations before you remove the Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} service:
 * Removing the Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} service does not cancel the Caveonix RiskForesight license. You must delete the Caveonix RiskForesight license from the **Caveonix RiskForesight Licenses** table on the **Resources** page in the {{site.data.keyword.vmwaresolutions_short}} console.
 * When you remove the service, the {{site.data.keyword.vmwaresolutions_short}} automation deletes only the single "all-in-one" Caveonix VM that was deployed and the dedicated private subnet that was ordered for it. Therefore,
-   * If you scaled out the Caveonix VM into multiple VMs, those additional VMs are not removed. 
-   * If you used the IP addresses of the dedicated private subnet on additional VMs, those VMs must be assigned new IP addresses to continue to function. 
+   * If you scaled out the Caveonix VM into multiple VMs, those additional VMs are not removed.
+   * If you used the IP addresses of the dedicated private subnet on additional VMs, those VMs must be assigned new IP addresses to continue to function.
    * If you delete vCenter Server instance A with the Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} service installed, and you used the IP addresses of the dedicated private subnet ordered for the service in vCenter Server instance B, the dedicated private subnet is canceled upon deletion of vCenter Server instance A.
 
 ## Related links

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
 subcollection: vmware-solutions
 
@@ -40,8 +40,8 @@ The following workflow describes the process to perform an orchestrated upgrade:
 {: #vum-orchestr-updates-step1}
 
 1. Use the vSphere Web Client to log in to the VCSA.
-2. Select **Home** > **Update Manager**, from the **Objects tab**, select an **Update Manager instance**.
-3. Click the **Manage tab**, then the **Host Baselines tab** and click **New Baseline Group**.
+2. Select **Home** > **Update Manager**, from the **Objects** tab, select an **Update Manager instance**.
+3. Click the **Manage** tab, then the **Host Baselines** tab and click **New Baseline Group**.
 4. Enter a unique name for the baseline group and click **Next**.
 5. Select a host upgrade baseline to include it in the baseline group.
 6. Optionally, create a new host upgrade baseline by clicking **Create a new Host Upgrade Baseline** at the bottom of the Upgrades page, and complete the New Baseline wizard. Click **Next**.
@@ -68,4 +68,4 @@ You can now use these baseline groups in the scan, review, staging, and remediat
 {: #vum-orchestr-updates-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrations)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (demonstrations)

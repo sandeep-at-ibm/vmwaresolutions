@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -20,8 +20,7 @@ elements of a system, the boundary of the system, the entities that
 interact with it along with the interaction. It's a high-level diagram
 that provides the reader with an initial view of the system.
 
-Figure 1. System context
-![System context](vcscar-system-context.svg)
+![System context](../../images/vcscar-system-context.svg "System context"){: caption="Figure 1. System context" caption-side="bottom"}
 
 The following are the core components of system context:
 -	vCenter Server – VMware vCenter Server on {{site.data.keyword.cloud_notm}} is an {{site.data.keyword.cloud_notm}} for VMware

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
 subcollection: vmware-solutions
 
@@ -54,11 +54,11 @@ The workflow is as follows:
   - When the upload completes, you are redirected to the NSX Manager login page. Login back in and verify that the current software version displays is correct.
 7. **Upgrade the NSX Controller Cluster**:
   - Open the vSphere Web Client and log in to the VCSA.
-  - Navigate to **Home** > **Networking & Security** > **Installation**, select the **Management tab**, and click **Upgrade Available** in the Controller Cluster Status column.
+  - Navigate to **Home** > **Networking & Security** > **Installation**, select the **Management** tab, and click **Upgrade Available** in the Controller Cluster Status column.
   - The controllers in your environment are upgraded and rebooted one at a time. After you initiate the upgrade, the system downloads the upgrade file, upgrades each controller, restarts each controller, and updates the upgrade status of each controller.
 8. **Upgrade NSX Host Clusters**:
   - After upgrading NSX Manager and NSX Controllers, the host clusters are updated the NSX VIBs on the vSphere ESXi hosts.
-  - In the vSphere Web Client, navigate to **Home** > **Networking & Security** > **Installation**, select the **Host Preparation tab**. For each cluster that you want to upgrade, click **Upgrade available**. The Installation Status displays Installing.
+  - In the vSphere Web Client, navigate to **Home** > **Networking & Security** > **Installation**, select the **Host Preparation** tab. For each cluster that you want to upgrade, click **Upgrade available**. The Installation Status displays Installing.
   - The cluster Installation Status displays _Not Ready_. Click **Not Ready** to display more information and click **Resolve all** to attempt to complete the VIB installation. The host is put in maintenance mode and rebooted if required, to complete the upgrade. The Installation Status column displays Installing. After the upgrade is complete the Installation Status column displays a green check mark and the upgraded NSX version.
 9. **Edge Services Gateways**:
   - During the upgrade process, a new Edge virtual appliance is deployed alongside the existing one. When the new Edge is ready, the old Edge's vNICs are disconnected and the new Edge's vNICs are connected. The new Edge then sends gratuitous ARP (GARP) packets to update the ARP cache of connected switches. When HA is deployed, the upgrade process is performed twice. This process can temporarily affect packet forwarding.
@@ -69,4 +69,4 @@ The workflow is as follows:
 {: #vum-updating-nsx-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrations)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (demonstrations)

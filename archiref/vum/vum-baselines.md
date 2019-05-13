@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-29"
 
 subcollection: vmware-solutions
 
@@ -16,7 +16,7 @@ subcollection: vmware-solutions
 
 Baselines have a collection of one or more patches, extensions, service packs, bug fixes, or upgrades, and can be classified as patch, extension, or upgrade baselines. Baseline groups are assembled from existing baselines. Host baseline groups can have a single upgrade baseline, and various patch and extension baselines. Virtual machine and virtual appliance baseline groups can have up to three upgrade baselines: one VMware Tools upgrade baseline, one virtual machine hardware upgrade baseline, and one virtual appliance upgrade baseline.
 
-VUM includes predefined baselines, which you cannot edit or delete. You can use the predefined baselines, or create patch, extension, and upgrade baselines that meet your criteria. Custom baselines that you create, and the predefined baselines, can be combined in baseline groups.
+VMware Update Manager (VUM) includes predefined baselines, which you cannot edit or delete. You can use the predefined baselines, or create patch, extension, and upgrade baselines that meet your criteria. Custom baselines that you create, and the predefined baselines, can be combined in baseline groups.
 
 VUM includes default baselines that you can use to scan any of the following devices to determine whether the hosts in your environment are updated with the latest patches, or whether the virtual appliances and virtual machines are upgraded to the latest version:
 * Any virtual machine
@@ -34,10 +34,10 @@ To use baselines and baseline groups, you must attach them to selected inventory
 
 1. Using the vSphere web Client, go to **Home** > **Hosts and Clusters**.
 2. Click the cluster object that you want to scan.
-3. Click **Attach Baseline**, and then select the two pre-defined Patch Baselines, then click **OK**.
+3. Go to VUM, click **Attach Baseline**, and then select the two pre-defined Patch Baselines. Click **OK**.
 
 ## Related links
 {: #vum-baselines-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrations)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (demonstrations)

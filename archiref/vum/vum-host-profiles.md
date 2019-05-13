@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
 subcollection: vmware-solutions
 
@@ -57,13 +57,13 @@ The following sequence is required to check compliance:
 
 1.	Navigate to the Host Profile that was previously completed.
 2.	Click the Check **Host Profile Compliance icon**.
-3.	In the **Objects tab**, the compliance status is updated as; _Compliant, Unknown, or _Non-compliant_. A non-compliant status indicates a discovered and specific inconsistency between the profile and the new host.
+3.	On the **Objects** tab, the compliance status is updated as; _Compliant, Unknown, or _Non-compliant_. A non-compliant status indicates a discovered and specific inconsistency between the profile and the new host.
 
 ##	Reviewing compliance failures and remediation
 {: #vum-host-profiles-review-compliance}
 
 1. To see more detail on compliance failures, select the **Host Profile** from the **Objects** tab that is used in the compliance check.
-2. In order to see specific detail on which parameters differ between the host that failed compliance and the Host Profile, click the **Monitor tab** and select the **Compliance view**.
+2. In order to see specific detail on which parameters differ between the host that failed compliance and the Host Profile, click the **Monitor** tab and select the **Compliance** view.
 3. Expand the object hierarchy and select the failing host.
 4. The differing parameters are displayed in the Compliance window, under the hierarchy.
 5. Review the parameters and understand why the new host can vary from the reference host. For parameters where the compliance isn't acceptable, remediate before moving the new host from maintenance mode. For example, where configuration drift is caused by system administrator action.
@@ -72,4 +72,4 @@ The following sequence is required to check compliance:
 {: #vum-host-profiles-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrations)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (demonstrations)

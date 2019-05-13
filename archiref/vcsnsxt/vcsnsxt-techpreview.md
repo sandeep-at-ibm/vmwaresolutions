@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-09"
 
 subcollection: vmware-solutions
 
@@ -38,8 +38,7 @@ Network	|Private A portable designated for management components.	|Private A por
 
 \* **Note**: Check the hardware compatibility list for specific requirements.
 
-Figure 1. NSX-V and T management component layout
-![NSX-V and T management component layout](vcsnsxt-combined-mgmt.svg)
+![NSX-V and T management component layout](../../images/vcsnsxt-combined-mgmt.svg "NSX-V and T management component layout"){: caption="Figure 1. NSX-V and T management component layout" caption-side="bottom"}
 
 ### Initial configuration
 {: #vcsnsxt-techpreview-init-config}
@@ -79,8 +78,7 @@ vMotion traffic	|Unlimited	|50	|0
 NFS traffic	|Unlimited	|100	|0
 vSAN traffic	|Unlimited	|100	|0
 
-Figure 2. Logical VLAN switch to vmkernel interface
-![Logical VLAN switch to vmkernel interface](vcsnsxt-tnkernel.svg)
+![Logical VLAN switch to vmkernel interface](../../images/vcsnsxt-tnkernel.svg "Logical VLAN switch to vmkernel interface"){: caption="Figure 2. Logical VLAN switch to vmkernel interface" caption-side="bottom"}
 
 ## NSX-T
 {: #vcsnsxt-techpreview-nsx-t}
@@ -152,8 +150,7 @@ Calico is built on a distributed scale-out architecture that gives it the abilit
 -	etcd, provides the communication between components and stored in a consistent data store, which ensures Calico can always build an accurate network.
 -	BIRD, provides BGP client functions on every node that also hosts Felix. When Felix inserts a route into the Linux kernel, the BGP client picks up the routes and distributes them to other nodes in the deployment. For large environments, a BGP route reflector is also deployed which acts as a central point for BGP clients to connect. This prevents each client from needing to talk to every other client and distribute the routes to the other nodes in the deployment.
 
-Figure 3. Calico overview</br>
-![Calico overview](vcsnsxt-calico-cni.svg)
+![Calico overview](../../images/vcsnsxt-calico-cni.svg "Calico overview"){: caption="Figure 3. Calico overview" caption-side="bottom"}
 
 ### NSX-T and Calico
 {: #vcsnsxt-techpreview-nsx-t-calico}
@@ -179,8 +176,7 @@ NSX-T is a stand-alone solution for vCenter and vSphere environments, it also su
 
 NSX-T allows network and security policy management across a vm and container environment in an easy to understand web interface.
 
-Figure 4. High-level comparison between the NSX-T and Calico components
-![NSX-T and Kubernetes Networking](vcsnsxt-calico.svg)
+![NSX-T and Kubernetes Networking](../../images/vcsnsxt-calico.svg "NSX-T and Kubernetes Networking"){: caption="Figure 4. High-level comparison between the NSX-T and Calico components" caption-side="bottom"}
 
 ## NSX-T and Kubernetes
 {: #vcsnsxt-techpreview-nsx-t-kube}
@@ -189,8 +185,7 @@ The core component that provides the integration between the Kubernetes and the 
 
 In the following, two Kubernetes namespaces are provided, Acme and Skateboards, for each namespace we have a dedicated logical switch, Tier-1 router, and an IP segment that connects it to a T0 logical router.
 
-Figure 5. Kubernetes NCP</br>
-![Kubernetes NCP](vcsnsxt-ncpk8sapi.svg)
+![Kubernetes NCP](../../images/vcsnsxt-ncpk8sapi.svg "Kubernetes NCP"){: caption="Figure 5. Kubernetes NCP" caption-side="bottom"}
 
 ### NSX Security Policy Manager
 {: #vcsnsxt-techpreview-nsx-sec-policy-manager}
@@ -209,8 +204,7 @@ Key concepts for examination include:
 -	SpoofGuard blocks IP spoofing at vNIC level.
 -	Switch security provides storm control and security against unauthorized traffic.
 
-Figure 6. NSX-T Micro-segmentation</br>
-![Example NSX-T Micro-segmentation](vcsnsxt-tsecurity.svg)
+![Example NSX-T Micro-segmentation](../../images/vcsnsxt-tsecurity.svg "Example NSX-T Micro-segmentation"){: caption="Figure 6. NSX-T Micro-segmentation" caption-side="bottom"}
 
 ### Differences between NSX–T and NSX-V
 {: #vcsnsxt-techpreview-diff-nsx-t-nsx-v}
@@ -244,8 +238,7 @@ VMware NSX-T provides the same capabilities as NSX-V with in a VMware vSphere en
 
 For NSX-V integration with Kubernetes {{site.data.keyword.cloud_notm}} automation installs {{site.data.keyword.icpfull_notm}} on a vCenter Server instance. A dedicated switch/VXLAN, DLR, and ESG are created specifically for the Kubernetes network. Day 1 overlay network for {{site.data.keyword.icpfull_notm}} is a 192.168.20.0/24 subnet with routing setup through the ESG for access to the underlay network.
 
-Figure 7. NSX-V and Kubernetes</br>
-![NSX-V and Kubernetes](vcsnsxt-transitnet.svg)
+![NSX-V and Kubernetes](../../images/vcsnsxt-transitnet.svg "NSX-V and Kubernetes"){: caption="Figure 7. NSX-V and Kubernetes" caption-side="bottom"}
 
 #### Integration with NSX-T
 {: #vcsnsxt-techpreview-integration-nsx-t}
@@ -254,10 +247,9 @@ NSX-T integration with Kubernetes is through the NSX-T container plug-in (NCP). 
 
 NSX-T distributed firewall allows creation of network policies, which are implemented for the Kubernetes cluster. It supports ingress and egress policies, label, and expression matching policies and has load balancer capabilities, which can all be applied to the Kubernetes infrastructure.
 
-Figure 8. NSX-T and Kubernetes</br>
-![NSX-T and Kubernetes](vcsnsxt-t1t0router.svg)
+![NSX-T and Kubernetes](../../images/vcsnsxt-t1t0router.svg "NSX-T and Kubernetes"){: caption="Figure 8. NSX-T and Kubernetes" caption-side="bottom"}
 
-## Relater links
+## Related links
 {: #vcsnsxt-techpreview-related}
 
 * [VMware NSX-T reference design guide](https://communities.vmware.com/servlet/JiveServlet/download/37591-3-195840/VMware%20NSX-T%20Reference%20Design%20Guide.pdf) (PDF download)

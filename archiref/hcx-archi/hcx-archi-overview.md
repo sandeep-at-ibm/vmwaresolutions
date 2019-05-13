@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -22,9 +22,9 @@ This offering creates an optimized, software-defined WAN to increase stretched n
 ## Layer 2 Network Extension
 {: #hcx-archi-overview-layer-2-net}
 
-HCX allows an existing on-premises vSphere estate to securely stretch a network from its on-premises vCenter to an IBM Cloud data center that runs VMware Cloud Foundation or vCenter Server. This feature is enabled by the following items:
+HCX allows an existing on-premises vSphere estate to securely stretch a network from its on-premises vCenter to an IBM Cloud data center that runs VMware vCenter Server. This feature is enabled by the following items:
 * HCX provides an appliance that is called a Layer 2 Concentrator (L2C).
-* Extended networks link to IBM Cloud NSX edge appliances deployed on VMware Cloud Foundation or vCenter Server.
+* Extended networks link to IBM Cloud NSX edge appliances deployed on VMware vCenter Server.
 * One can deploy multiple standard Layer 2 concentrators to achieve scalability and increase throughput from the on-premises vCenter.
 * Virtual machines that are migrated through the Cloud Gateway and over stretched Layer 2 can retain their IP and MAC addresses.
 
@@ -130,13 +130,11 @@ The Layer 2 concentrators (L2C) appliances allow the extension of a Layer 2 netw
 
 This section describes the layout of the HCX components within the IBM Cloud and with client on-premises. In this design, the architecture specifies a hub-and-spoke model that exists between the source environment and the IBM Cloud. Thus, the source estate serves as the hub with connections to different IBM Cloud environments as shown in the following figure.
 
-Figure 1. HCX with single source
-![HCX with single source](hcx_single_source.svg)
+![HCX with single source](../../images/cloudfoundation_hybrid_cloud_services.svg "HCX with single source"){: caption="Figure 1. HCX with single source" caption-side="bottom"}
 
 The source can be placed within the IBM Cloud environment as well; spokes are always cloud deployments within this design as shown in the following figure.
 
-Figure 2. HCX with multiple sources
-![HCX with multiple sources](hcx_multiple_sources.svg)
+![HCX with multiple sources](../../images/hcx_multiple_sources.svg "HCX with multiple sources"){: caption="Figure 2. HCX with multiple sources" caption-side="bottom"}
 
 ### Usage overview
 {: #hcx-archi-overview-usage-ovw}
@@ -155,7 +153,7 @@ Before the components are described in more detail, it is imperative to understa
 * If cross-cloud vMotion is intended, the same affinity restrictions apply across clouds as they do on-premises.
 * The source environment must have a method to connect to cloud environments. This includes public internet access or private connections by using IBM Cloud Direct link. Connections, other than public internet, to other cloud vendors will not be discussed.
 * The source environment VM’s and networks to be migrated or stretched must be on portgroups within a Virtual Distributed Switch or Cisco Nexus 1000v Virtual Distributed Switch.
-* The IBM Cloud must contain at least one instance of either a VMware Cloud Foundation or vCenter Server deployment.
+* The IBM Cloud must contain at least one instance of VMware vCenter Server.
 * Sufficient resources for the virtual appliances.
 * The networks must permit the appliances to communicate with both local and remote virtual appliances, and other virtual machines.
 * Port Access Requirements (Appendix A) lists ports that must be opened so that Hybrid Cloud Services virtual appliances can install successfully.

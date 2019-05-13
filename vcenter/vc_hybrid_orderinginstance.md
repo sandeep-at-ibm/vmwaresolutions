@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-25"
 
 subcollection: vmware-solutions
 
@@ -118,16 +118,14 @@ Table 3. Options for Broadwell {{site.data.keyword.baremetal_short}}
 
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
 | Quad Intel Xeon E7-4820 v4 / 40 cores total, 2.0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 cores total, 2.1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 ### Number of Bare Metal Servers
 {: #vc_hybrid_orderinginstance-bare-metal-number}
 
-Four ESXi servers are selected by default and cannot be changed.
+* All servers that you order have the same configuration.
+* You can order between 4 and 20 servers.
 
 ## Storage settings
 {: #vc_hybrid_orderinginstance-storage-settings}
@@ -135,9 +133,9 @@ Four ESXi servers are selected by default and cannot be changed.
 VMware vSAN 6.6 is included with your vCenter Server with Hybridity Bundle instance order. Specify the following vSAN options:
 * **Disk Type and Size for vSAN Capacity Disks**: Select an option for the capacity disks that you need.
 * **Number of vSAN Capacity Disks**: Specify the number of capacity disks that you want to add.
-* If you want to add capacity disks over the limit of eight, check the **High-Performance Intel Optane** box. This option provides two extra capacity disk bays for a total of 10 capacity disks and is useful for workloads that require less latency and higher IOPS throughput.
+* If you want to add capacity disks over the limit of 10, check the **High-Performance Intel Optane** box. This option provides two extra capacity disk bays for a total of 12 capacity disks and is useful for workloads that require less latency and higher IOPS throughput.
 
-  The **High-Performance Intel Optane** option is available only for the Skylake CPU models Dual Intel Xeon Gold 5120 and Dual Intel Xeon Gold 6140.
+  The **High-Performance Intel Optane** option is available only for the Skylake CPU models.
   {:note}
 
 * Review the **Disk Type for vSAN Cache Disks** and **Number of vSAN Cache Disks** values. These values depend on whether you checked the **High-Performance Intel Optane** box.
@@ -180,12 +178,14 @@ The maximum length of the FQDN (Fully Qualified Domain Name) for hosts and VMs (
 ### Public or private network
 {: #vc_hybrid_orderinginstance-public-private-network}
 
-Network interface card (NIC) enablement settings are based on your selection of either **Public and Private Network** or **Private Network Only**. The following add-on services require public NICs and are not available if you select the private option:
+Network interface card (NIC) enablement settings are based on your selection of either **Public and Private Network** or **Private Network Only**.
 
-* F5 on {{site.data.keyword.cloud_notm}}
-* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
-* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
-* Zerto on {{site.data.keyword.cloud_notm}}
+If you select the **Private Network Only** option:
+* VMware NSX Edge Services Gateways (ESG) are not provisioned (neither the management services ESG nor the customer-managed ESG).
+* The following add-on services, which require public NICs, are not available:
+  * F5 on {{site.data.keyword.cloud_notm}}
+  * Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
+  * Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
 
 ### Order New VLANs
 {: #vc_hybrid_orderinginstance-new-vlans}
@@ -215,14 +215,14 @@ Select the Domain Name System (DNS) configuration for your instance:
 * **Single Public Windows VSI for Active Directory/DNS**: A single Microsoft Windows Server VSI for Microsoft Active Directory (AD), which functions as the DNS for the instance where the hosts and VMs are registered, is deployed and can be looked up.
 * **Two highly available dedicated Windows Server VMs on the management cluster**: Two Microsoft Windows VMs are deployed, helping enhance security and robustness.
 
-You must provide two Microsoft Windows Server 2012 R2 licenses if you configure your instance to use the two Microsoft Windows VMs. Use the Microsoft Windows Server 2012 R2 Standard edition license, or the Microsoft Windows Server 2012 R2 Datacenter edition license, or both.
+You must provide two Microsoft Windows Server 2016 licenses if you configure your instance to use the two Microsoft Windows VMs. Use the Microsoft Windows Server 2016 Standard edition license, or the Microsoft Windows Server 2016 Datacenter edition license, or both.
 {:important}
 
 Each license can be assigned only to one single physical server and covers up to two physical processors. One Standard edition license is capable of running two virtualized Microsoft Windows VMs per 2-processor server. Therefore, two licenses are required since two Microsoft Windows VMs are deployed in two different hosts.
 
 You have 30 days to activate the VMs.
 
-For more information on ordering Windows licensing, see [Windows Server 2012 R2 documentation](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2).
+For more information on ordering Windows Server 2016 licenses, see [Get started with Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:new_window}.
 
 ## Services settings
 {: #vc_hybrid_orderinginstance-addon-services}
@@ -251,12 +251,9 @@ Based on your selected configuration for the instance and add-on services, the e
 7. Complete the Bare Metal Server settings.
   1. Select the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
   2. Select the **Skylake** or **Broadwell** CPU model and the amount of **RAM**.
-
-  The **Number of Bare Metal Servers** is set to four by default and cannot be changed.
-  {:note}
 8. Complete the storage configuration. Specify the disk types for the capacity and cache disks, and the number of disks. If you want more storage, check the **High-Performance Intel Optane** box.
 9. Complete the network interface configuration.
-  1. Enter the host name prefix, subdomain label, and root domain name.
+  1. Enter the host name prefix for the instance being provisioned, the subdomain label, and the root domain name.
   2. Select the network setting of either **Public and Private Network** or **Private Network Only**.
   3. Select the VLAN configuration.
      *  If you want to order new public and private VLANs, click **Order New VLANs**.

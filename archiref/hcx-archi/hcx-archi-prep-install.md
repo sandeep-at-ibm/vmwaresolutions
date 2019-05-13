@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-25"
 
 subcollection: vmware-solutions
 
@@ -16,14 +16,14 @@ subcollection: vmware-solutions
 The installation of VMware HCX on IBM Cloud has the following software requirements:
 * vSphere 5.5 U3, or vSphere 6.0u2 or higher.
 * If NSX is used, version 6.2.2 or higher. NSX is required for policy migration.
-* To use cross-cloud vMotion, the same affinity restrictions apply across clouds as they do on-premises. For more information, see the [VMware EVC and CPU Compatibility FAQ](http://bit.ly/2vK6Sp5).
+* To use cross-cloud vMotion, the same affinity restrictions apply across clouds as they do on-premises. For more information, see the [VMware EVC and CPU Compatibility FAQ](https://kb.vmware.com/s/article/1005764).
 
 ## Configuring network connectivity
 {: #hcx-archi-prep-install-config-net}
 
 HCX must traverse the public internet and private lines, and connect to data center components, such as networks, switches, and port groups.
 * [Port access requirements](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-port-req) lists ports that must be opened so that HCX virtual appliances can install successfully.
-* Both the on-premises vSphere environment and the VCF/VCS HCX Cloud environment must permit Network Time Protocol (NTP) clock synchronization among vSphere on-premises devices and the VCF/VCS HCX devices. UDP port 123 must be accessible to HCX virtual appliances and networks.
+* Both the on-premises vSphere environment and the VCS HCX Cloud environment must permit Network Time Protocol (NTP) clock synchronization among vSphere on-premises devices and the VCS HCX devices. UDP port 123 must be accessible to HCX virtual appliances and networks.
 
 ## On-premises environment
 {: #hcx-archi-prep-install-on-prem-env}
@@ -49,11 +49,11 @@ Layer 2 network stretching has the following requirements:
   * vSphere Enterprise Plus license
   * Must have a vSphere Distributed Switch (vDS). The distributed switch is available with vSphere Enterprise Plus Edition.
   * When installed, the on-premises Layer 2 concentrator service appliance must have access to a vNIC port and any VLANs to be stretched.
-  * If the network is to be stretched over the public internet or a VPN (on an alternative path) the L2C virtual machine in VCF/VCS requires an IP address. The remote IP address is required to configure the Layer 2 concentrator.
+  * If the network is to be stretched over the public internet or a VPN (on an alternative path) the L2C virtual machine in VCS requires an IP address. The remote IP address is required to configure the Layer 2 concentrator.
   * If multiple Layer 2 concentrators are wanted, each must have an IP address on-premises and in the cloud.
 
 ## Related links
 {: #hcx-archi-prep-install-related}
 
 * [Installing and configuring HCX on the source](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-install-cfg-src)
-* [VMware EVC and CPU Compatibility FAQ](http://bit.ly/2vK6Sp5)
+* [VMware EVC and CPU Compatibility FAQ](https://kb.vmware.com/s/article/1005764)

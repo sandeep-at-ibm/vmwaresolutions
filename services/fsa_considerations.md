@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-04-04"
 
 subcollection: vmware-solutions
 
@@ -75,4 +75,4 @@ Review the following considerations before you remove the FortiGate Security App
 * [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [Fortinet website](https://www.fortinet.com/){:new_window}
-* [Fortinet Document Library](http://docs.fortinet.com/fortigate/admin-guides){:new_window}
+* [Fortinet Document Library](https://docs.fortinet.com/product/fortigate/6.2){:new_window}

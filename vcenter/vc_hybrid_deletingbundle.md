@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-04-16"
 
 subcollection: vmware-solutions
 
@@ -110,7 +110,7 @@ Verify the following requirements before you remove the Hybridity Bundle:
   * A list of the BYOL license keys that you installed in this procedure. Where applicable, provide the instance and cluster name with license keys for vSphere and the vSAN clusters.
   * A list of the rental license keys that you removed in this procedure. Where applicable, provide the instance and cluster name with license keys for vSphere and vSAN clusters.
 
-  The IBM Support and Operations teams access the vCenter management layer of your {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account to verify that the rental licenses have been removed before canceling the Hybridity Bundle rental license charges.
+  The IBM Support and Operations teams access the vCenter management layer of your {{site.data.keyword.cloud_notm}} infrastructure account to verify that the rental licenses have been removed before canceling the Hybridity Bundle rental license charges.
   {:note}
 
 ## Related links

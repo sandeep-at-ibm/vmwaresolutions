@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -28,8 +28,7 @@ as virtual machines in the {{site.data.keyword.cloud_notm}} VMware target site e
 establishment of a connection with the HCX components that are installed to
 the peer on-premises source site.
 
-Figure 1. vCenter Server with Hybridity Bundle
-![vCenter Server with Hybridity Bundle](vcscontent-hcx.svg)
+![vCenter Server with Hybridity Bundle](../../images/vcscontent-hcx.svg "vCenter Server with Hybridity Bundle"){: caption="Figure 1. vCenter Server with Hybridity Bundle" caption-side="bottom"}
 
 Hybridity creates a loosely coupled interconnection between on-premises
 and {{site.data.keyword.cloud_notm}} and enables the following capabilities:

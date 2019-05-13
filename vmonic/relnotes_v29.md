@@ -61,16 +61,6 @@ For more information, see the _License settings_ sections in:
 * [Ordering vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
 * [Ordering new vSphere clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
 
-## End of support for VLAN spanning
-{: #relnotes_v29-vlan}
-
-Starting August 2019, {{site.data.keyword.vmwaresolutions_short}} will no longer support VLAN spanning. By the end of July 2019, you must convert your {{site.data.keyword.cloud_notm}} infrastructure account to Virtual Routing and Forwarding (VRF) and enable Service Endpoints for your account.
-
-For more information, see:
-
-* [Overview of Virtual Routing and Forwarding (VRF) on IBM Cloud](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-* [Enabling your account for using Service Endpoints](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
-
 ## Support for Application Programming Interfaces
 {: #relnotes_v29-api}
 
@@ -102,7 +92,7 @@ The following new data centers are available for deployment: **FRA-05 - Frankfur
 ### ESXi server enhancements
 {: #relnotes_v29-vcs-esxi}
 
-* The Secure Shell (SSH) Protocol is now disabled for ESXi servers prior to instance delivery.
+* The Secure Shell (SSH) Protocol is now disabled for ESXi servers prior to instance delivery. If you want to enable SSH, see [Enable SSH from the vSphere Web Client](https://pubs.vmware.com/vsphere-6-5/index.jsp?topic=%2Fcom.vmware.vcli.getstart.doc%2FGUID-C3A44A30-EEA5-4359-A248-D13927A94CCE.html).
 * Starting with the V2.9 release, the following ESXi server operations are available:
 
    * Add new ESXi servers to an existing cluster while the servers are in maintenance mode. Virtual machines are not migrated to the new servers until you remove them from maintenance mode.
@@ -139,7 +129,7 @@ For more information, see:
 ### F5 on IBM Cloud
 {: #relnotes_v29-services-f5}
 
-In the current release, F5-BigIP VE V14.1.0.2 is installed on all newly deployed instances. For more information about the new features in F5-BigIP VE V14.1.0.2, see [Release Note: BIG-IP 14.1.0 New and Installation](https://support.f5.com/kb/en-us/products/big-ip_ltm/releasenotes/product/relnote-bigip-14-1-0.html){:new_window}.
+In the current release, F5-BigIP VE V14.1.0.2 is installed on all newly deployed instances. For more information about the new features in F5-BigIP VE V14.1.0.2, see [Release Note: BIG-IP 14.1.0 New and Installation](https://techdocs.f5.com/kb/en-us/products/big-ip_ltm/releasenotes/product/relnote-bigip-14-1-0.html){:new_window}.
 
 ### HyTrust CloudControl on IBM Cloud
 {: #relnotes_v29-services-htcc}
@@ -149,9 +139,9 @@ In the current release, HyTrust CloudControl 5.4.2 is installed on all newly dep
 ### KMIP for VMware on IBM Cloud
 {: #relnotes_v29-services-kmip}
 
-Two new endpoints are now available in Sydney for the KMIP for VMware on {{site.data.keyword.cloud_notm}} service. For more information, see [KMIP for VMware on {{site.data.keyword.cloud_notm}} service configuration](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering-config).
+Two new endpoints are now available in Sydney for the KMIP for VMware on {{site.data.keyword.cloud_notm}} service. For more information, see [KMIP for VMware on {{site.data.keyword.cloud_notm}} service configuration](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering#kmip_standalone_ordering-config).
 
-(Updated on April 9, 2019) Previously, KMIP for VMware on {{site.data.keyword.cloud_notm}} used IBM Key Protect for {{site.data.keyword.cloud_notm}} to create, encrypt, and decrypt encryption keys. Starting with the V2.9 release, KMIP for VMware on {{site.data.keyword.cloud_notm}} can also use {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services, a complete set of encryption and key management services, to manage encryption keys that are used by VMware in the {{site.data.keyword.cloud_notm}}. For more information, see [KMIP for VMware on IBM Cloud overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations) and [{{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-get-started).
+(Updated on April 09, 2019) Previously, KMIP for VMware on {{site.data.keyword.cloud_notm}} used IBM Key Protect for {{site.data.keyword.cloud_notm}} to create, encrypt, and decrypt encryption keys. Starting with the V2.9 release, KMIP for VMware on {{site.data.keyword.cloud_notm}} can also use {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services, a complete set of encryption and key management services, to manage encryption keys that are used by VMware in the {{site.data.keyword.cloud_notm}}. For more information, see [KMIP for VMware on IBM Cloud overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations) and [{{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-get-started).
 
 ### Veeam on IBM Cloud
 {: #relnotes_v29-services-veeam}

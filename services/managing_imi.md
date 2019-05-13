@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-03-28"
 
 subcollection: vmware-solutions
 
@@ -16,9 +16,9 @@ subcollection: vmware-solutions
 
 {{site.data.keyword.IBM}} Integrated Managed Infrastructure (IMI) can simplify VMware virtual infrastructure management with modular services. IMI uses advanced automation and analytics to manage critical infrastructure components worldwide and to deliver dynamic remote management services for a broad range of traditional and cloud virtual infrastructures.
 
-IMI can serve as a single, trusted provider to reduce complexity of monitoring and managing virtual IT infrastructures by offering single-pane-of-glass managed services for VMware Cloud Foundation and VMware vCenter Server environments.
+IMI can serve as a single, trusted provider to reduce complexity of monitoring and managing virtual IT infrastructures by offering single-pane-of-glass managed services for VMware vCenter Server environments.
 
-IMI provides managed services for your Cloud Foundation instances and vCenter Server instances. These managed services include advanced VMware vSphere management, full VMware NSX coverage to ensure highly available and secure virtual network infrastructure, and VMware vSAN monitoring to ensure availability of data.
+IMI provides managed services for your vCenter Server instances. These managed services include advanced VMware vSphere management, full VMware NSX coverage to ensure highly available and secure virtual network infrastructure, and VMware vSAN monitoring to ensure availability of data.
 
 ## Technical specifications for IMI
 {: #managing_imi-specs}

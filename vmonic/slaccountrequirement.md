@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-26"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -18,10 +18,7 @@ subcollection: vmware-solutions
 # Requirements for the IBM Cloud infrastructure account
 {: #slaccountrequirement}
 
-To use {{site.data.keyword.vmwaresolutions_full}} to order instances, you must have an {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account. The cost of the components that are ordered in your instances is billed to that {{site.data.keyword.cloud_notm}} account.
-
-The {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account was previously known as the IBM SoftLayer account.
-{:note}
+To use {{site.data.keyword.vmwaresolutions_full}} to order instances, you must have an {{site.data.keyword.cloud_notm}} infrastructure account. The cost of the components that are ordered in your instances is billed to that {{site.data.keyword.cloud_notm}} account.
 
 ## Permissions for the IBM Cloud infrastructure account
 {: #slaccountrequirement-permissions}
@@ -46,6 +43,7 @@ Table 1. Required permissions for the {{site.data.keyword.cloud_notm}} infrastru
 | Edit Tickets | This permission is required to edit the service tickets that are created on your behalf. |
 | View Tickets | This permission is required to monitor the service tickets that are related to the components in your instance for {{site.data.keyword.cloud_notm}} infrastructure provisioning delays and problems. |
 | View Hardware Details | This permission is required to retrieve the hardware details, which are needed for order validation and automated configuration. |
+| Reboot/Control | This permission is required to power off the hardware during the hardware cancellation process when you delete an instance. |
 | View Licenses | This permission is required to retrieve and validate the licenses that are used by your instance. |
 | View Passwords | This permission is required to be able to administer the ordered VSIs. |
 | Manage Server Monitoring | This permission is not required to place an order but it is required to retrieve and validate the monitoring status of the {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} on which the VMware ESXi servers are running in your instance. |
@@ -53,17 +51,11 @@ Table 1. Required permissions for the {{site.data.keyword.cloud_notm}} infrastru
 ## VRF with Service Endpoints enabled
 {: #slaccountrequirement-vrf-se}
 
-Your {{site.data.keyword.cloud_notm}} infrastructure account must be a Virtual Routing and Forwarding (VRF) account with Service Endpoints enabled. If your account is non-VRF, you must convert to a VRF account. In addition, you must enable your VRF account for using Service Endpoints.
+Your {{site.data.keyword.cloud_notm}} infrastructure account must be a Virtual Routing and Forwarding (VRF) account. If your account is non-VRF, you must convert to a VRF account. It's also recommended to enable your VRF account for using Service Endpoints.
 
 For more information, see:
 * [Overview of VRF on IBM Cloud](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
 * [Enabling your account for using Service Endpoints](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
-
-## VLAN spanning end of support
-{: #slaccountrequirement-vlan-eos}
-
-Starting August 2019, VLAN spanning will no longer be supported. By the end of July 2019, you must convert your {{site.data.keyword.cloud_notm}} infrastructure account to VRF and enable Service Endpoints.
-{:important}
 
 ## Related links
 {: #slaccountrequirement-related}

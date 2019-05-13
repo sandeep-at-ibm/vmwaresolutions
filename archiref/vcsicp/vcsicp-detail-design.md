@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-09"
 
 subcollection: vmware-solutions
 
@@ -19,9 +19,7 @@ subcollection: vmware-solutions
 
 Common services provide the services that are used by other services in the cloud management platform. Common services include identity and access services, domain name services, and NTP services.
 
-Figure 1. {{site.data.keyword.icpfull_notm}} common services
-
-![{{site.data.keyword.icpfull_notm}} Common Services](vcsicp-icp-commonservices.svg)
+![{{site.data.keyword.icpfull_notm}} Common Services](../../images/vcsicp-icp-commonservices.svg "{{site.data.keyword.icpfull_notm}} Common Services"){: caption="Figure 1. {{site.data.keyword.icpfull_notm}} common services" caption-side="bottom"}
 
 ### Identity and access services
 {: #vcsicp-detail-design-identity}
@@ -50,9 +48,7 @@ Using the NSX-V networking included in the VCS deployment, we can deploy {{site.
 
 {{site.data.keyword.icpfull_notm}} is deployed with the default Calico networking stack for Kubernetes, which provides network isolation within your cluster.
 
-Figure 2. {{site.data.keyword.icpfull_notm}} with NSX-V networking
-
-![{{site.data.keyword.icpfull_notm}} with NSX-V Networking](vcsicp-nsxv-networking.svg)
+![{{site.data.keyword.icpfull_notm}} with NSX-V Networking](../../images/vcsicp-nsxv-networking.svg "{{site.data.keyword.icpfull_notm}} with NSX-V Networking"){: caption="Figure 2. {{site.data.keyword.icpfull_notm}} with NSX-V networking" caption-side="bottom"}
 
 For more information, see [vCenter Server networking guide](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro).
 
@@ -63,9 +59,7 @@ NSX-T is designed so that a single networking platform that can connect to any t
 
 {{site.data.keyword.icpfull_notm}} provides an option to replace the Calico networking with an NSX-T instance, providing a single location for managing networking and security.
 
-Figure 3. {{site.data.keyword.icpfull_notm}} with NSX-T networking
-
-![{{site.data.keyword.icpfull_notm}} with NSX-T Networking](vcsicp-icp-nsxt-networking.svg)
+![{{site.data.keyword.icpfull_notm}} with NSX-T Networking](../../images/vcsicp-icp-nsxt-networking.svg "{{site.data.keyword.icpfull_notm}} with NSX-T Networking"){: caption="Figure 3. {{site.data.keyword.icpfull_notm}} with NSX-T networking" caption-side="bottom"}
 
 ## Related links
 {: #vcsicp-detail-design-related}

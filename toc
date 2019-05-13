@@ -11,6 +11,7 @@ IBM Cloud for VMware Solutions
 
     {: .topicgroup}
     Release notes
+        vmonic/relnotes_v30.md
         vmonic/relnotes_v29.md
         vmonic/relnotes_v28.md
         vmonic/relnotes_v27.md
@@ -49,6 +50,7 @@ IBM Cloud for VMware Solutions
     vCenter Server on IBM Cloud
         vcenter/vc_vcenterserveroverview.md
         vcenter/vc_bom.md
+        vcenter/vc_vsphere_upgrade.md
         vcenter/vc_planning.md
         vcenter/vc_networkingonvcenterserver.md
         vcenter/vc_esg_config.md
@@ -57,9 +59,10 @@ IBM Cloud for VMware Solutions
         vcenter/vc_orderinginstance.md
         vcenter/vc_addingviewingclusters.md
         vcenter/vc_addingremovingservers.md
-        vcenter/vc_applyingupdates.md
         vcenter/vc_addingremovingservices.md
         vcenter/vc_viewinginstances.md
+        vcenter/vc_applyingupdates.md
+        vcenter/vc_upgrade-lic.md
         vcenter/vc_addinstancetousraccount.md
         vcenter/vc_deletinginstance.md
         vcenter/vc_deletinginstance_multi.md
@@ -75,6 +78,7 @@ IBM Cloud for VMware Solutions
         vcenter/vc_hybrid_addingviewingclusters.md
         vcenter/vc_hybrid_addingremovingservers.md
         vcenter/vc_hybrid_applyingupdates.md
+        vcenter/vc_hybrid_upgrade-lic.md
         vcenter/vc_hybrid_addingremovingservices.md
         vcenter/vc_hybrid_viewinginstances.md
         vcenter/vc_hybrid_addinstancetousraccount.md
@@ -96,20 +100,6 @@ IBM Cloud for VMware Solutions
     Single-node Trial for Migration and App Modernization
         vcenter/cloud_modern_bundle_overview.md
         vcenter/cloud_modern_bundle_orderinginstance.md
-
-    {: .topicgroup}
-    Cloud Foundation on IBM Cloud
-        sddc/sd_cloudfoundationoverview.md
-        sddc/sd_bom.md
-        sddc/sd_networkingoncloudfoundation.md
-        sddc/sd_multisite.md
-        sddc/sd_addingviewingclusters.md
-        sddc/sd_addingremovingservers.md
-        sddc/sd_applyingupdates.md
-        sddc/sd_addingremovingservices.md
-        sddc/sd_viewinginstances.md
-        sddc/sd_deletinginstance.md
-        sddc/sd_deletinginstance_multi.md
 
     {: .topicgroup}
     VMware vSphere on IBM Cloud
@@ -239,7 +229,6 @@ IBM Cloud for VMware Solutions
         vmonic/faq_esxi.md
         vmonic/faq_byol.md
         vcenter/vcenter_chg_impact.md
-        sddc/cf_chg_impact.md
         vmonic/trbl_limitations.md
 
     {: .topicgroup}
@@ -257,6 +246,11 @@ IBM Cloud for VMware Solutions
     {: .navgroup id="reference"}
     vmonic/at-events.md
     [API reference](https://cloud.ibm.com/apidocs/vmware-solutions)
+
+    {: .topicgroup}
+    Auditing
+        vmonic/audit_user_ids.md
+        vmonic/audit_messages.md
 
     {: .topicgroup}
     IBM Cloud for VMware Solutions architecture (with NSX-V and NSX-T)

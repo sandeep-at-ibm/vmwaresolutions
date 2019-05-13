@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
 subcollection: vmware-solutions
 
@@ -54,7 +54,7 @@ Start a simultaneous scan of hosts, VMs, and virtual appliances, by scanning a c
 You can configure the vSphere Web Client to scan VMs, virtual appliances, and vSphere ESXi hosts at specific times or at intervals that are convenient for you.
 
 1.	Using the vSphere Web Client, select an object from the inventory. All child objects of the object that you select are also scanned.
-2.	Select the **Monitor tab** and click **Task & Events**.
+2.	Select the **Monitor** tab and click **Task & Events**.
 3.	Select **Scheduled Tasks** and click **Schedule a New Task**.
 4.	Select **Scan for Updates** from the drop-down list that appears. The Scan for Updates wizard opens.
 5.	On the Edit Settings page, select the types of updates to scan the inventory object for. You must select at least one scan type. On the Scheduling options page, describe and schedule the scan task.
@@ -65,4 +65,4 @@ You can configure the vSphere Web Client to scan VMs, virtual appliances, and vS
 {: #vum-scanning-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on 	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrations)
+* [VMware Solutions on 	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (demonstrations)

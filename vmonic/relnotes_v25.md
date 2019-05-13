@@ -63,7 +63,7 @@ Starting with the V2.5 release, {{site.data.keyword.vmwaresolutions_short}} is i
 
 For more information, see the following topics:
 * [Inviting users to access services and resources](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-iamuserinvite)
-* [Managing user access with IAM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-access-with-iam)
+* [Managing user access with IAM](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-iam#iam)
 
 ## Changes to user accounts and groups for VMware vCenter Server and VMware Cloud Foundation instances
 {: #relnotes_v25-user-acct}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-19"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -31,8 +31,7 @@ Network | **Private A** portable designated for management components
 
 The NSX-V Manager following network overview shows the placement of the NSX Manager in relation to the other components in this architecture.
 
-Figure 1. NSX-V Manager network overview
-![NSX-V Manager network overview](vcsnsxt-vmgmt.svg)
+![NSX-V Manager network overview](../../images/vcsnsxt-vmgmt.svg "NSX-V Manager network overview"){: caption="Figure 1. NSX-V Manager network overview" caption-side="bottom"}
 
 After initial deployment, the {{site.data.keyword.cloud}} automation deploys three NSX Controllers within the initial cluster. The controllers are assigned an IP address from the **Private A** portable subnet that is designated for management components. VM–VM anti–affinity rules are created such that controllers are separated among the hosts in the cluster. The initial cluster must be deployed with a minimum of three nodes to ensure high availability for the controllers.
 
@@ -78,8 +77,7 @@ Failover order | Active uplinks: Uplink1, Uplink2 \*
 \* The vSAN port group uses explicit failover with active or standby because it does not support load balancing of vSAN storage traffic.
 {:note}
 
-Figure 2. Cluster VM kernel interface port group-mapping
-![Cluster VM kernel interface port group mapping](vcsnsxt-vds-kernel-Int.svg)
+![Cluster VM kernel interface port group mapping](../../images/vcsnsxt-vds-kernel-Int.svg "Cluster VM kernel interface port group mapping"){: caption="Figure 2. Cluster VM kernel interface port group-mapping" caption-side="bottom"}
 
 Table 5. Cluster virtual switch port groups, VLANs, and teaming policy
 
@@ -124,8 +122,7 @@ The following are some key NSX components:
 
 The following diagram shows a high-level diagram of how you can implement some of the micro-segmentation features of NSX-V by creating security groups. In this example, production and development are the security groups and security rules are assigned based on those groups.
 
-Figure 3. NSX-V security</br>
-![NSX-V security](vcsnsxt-vsecurity.svg)
+![NSX-V security](../../images/vcsnsxt-vsecurity.svg "NSX-V security"){: caption="Figure 3. NSX-V security" caption-side="bottom"}
 
 ## Related links
 {: #vcsnsxt-overview-ic4vnsxv-related}

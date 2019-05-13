@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -53,8 +53,7 @@ Service Composer enables you to expose hybrid cloud services in the {{site.data.
 
 The following diagram describes the reference implementation of the Acme Skate Advisor application in an application modernization infrastructure implementation.
 
-Figure 1. Skate Advisor physical components</br>
-![Skate Advisor physical components](vcscar-physical.svg)
+![Skate Advisor physical components](../../images/vcscar-physical.svg "Skate Advisor physical components"){: caption="Figure 1. Skate Advisor physical components" caption-side="bottom"}
 
 The Skate Advisor application extends the existing Acme web application
 with a micro-services based component that interacts with Watson and an
@@ -82,8 +81,7 @@ into running containers.
 * Terraform Template - A Terraform template is a file that describes cloud resources to be deployed. For Skate Advisor, a ubuntu template, which is preinstalled with mysql and the database schema is described.
 * VMWare Template - The VMWare template is an Ubuntu template with mysql and the database schema preinstalled.
 
-Figure 2. CAM orchestration</br>
-![CAM orchestration](vcscar-cam.svg)
+![CAM orchestration](../../images/vcscar-cam.svg "CAM orchestration"){: caption="Figure 2. CAM orchestration" caption-side="bottom"}
 
 ### Load balancing and proxying
 {: #vcscar-physical-load-balance-proxy}
@@ -136,8 +134,7 @@ The Skate Advisor requires the following communications:
 The application modernization platform is designed with the
 following components to achieve this goal.
 
-Figure 3. Public network access</br>
-![Public network access](vcscar-network.svg)
+![Public network access](../../images/vcscar-network.svg "Public network access"){: caption="Figure 3. Public network access" caption-side="bottom"}
 
 {{site.data.keyword.cloud_notm}} has two networks. The public network allows servers to be
 reached from the internet and the private network allows servers to
@@ -162,8 +159,7 @@ vice versa.
 The Skate Advisor application uses the following software
 components.
 
-Figure 4. Skate Advisor software-mapping</br>
-![Skate Advisor software mapping](vcscar-sw-mapping.svg)
+![Skate Advisor software mapping](../../images/vcscar-sw-mapping.svg "Skate Advisor software mapping"){: caption="Figure 4. Skate Advisor software-mapping" caption-side="bottom"}
 
 The following software components are used:
 
@@ -186,8 +182,7 @@ The Acme Skate Advisor resides on the {{site.data.keyword.cloud_notm}} and as su
 critical aspect of the Architecture. The {{site.data.keyword.cloud_notm}} has the following
 architecture.
 
-Figure 5. Cloud management
-![On-cloud management](vcscar-cloud-management.svg)
+![On-cloud management](../../images/vcscar-cloud-management.svg "On-cloud management"){: caption="Figure 5. Cloud management" caption-side="bottom"}
 
 This diagram represents {{site.data.keyword.icpfull_notm}} and CAM deployed on a vCenter
 Server instance, with connections to the on-premises vCenter and the {{site.data.keyword.containerlong_notm}}

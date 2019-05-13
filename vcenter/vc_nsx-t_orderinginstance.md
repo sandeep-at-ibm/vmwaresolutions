@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-20"
+lastupdated: "2019-04-26"
 
 subcollection: vmware-solutions
 
@@ -124,9 +124,9 @@ Table 3. Options for Broadwell {{site.data.keyword.baremetal_short}}
 ### Number of Bare Metal Servers
 {: #vc_nsx-t_orderinginstance-bare-metal-number}
 
-For the initial cluster in the instance, you can configure the number of ESXi servers in the range 3 - 20. All ESXi servers share the set configuration.
-
-After initial deployment, you can add four more clusters. If you selected the **Skylake** or **Broadwell** configuration for VMware vSAN, 4 ESXi servers are required for both the initial and post-deployment clusters. For more information about minimum of ESXi servers, see [Is a two-node vCenter Server instance highly available](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-).
+* All servers that you order have the same configuration.
+* If you're planning to use vSAN storage, you can order between 4 and 20 servers.
+* If you're planning to use NFS storage, you can order between 2 and 20 servers. However, for production workloads, a minimum of 3 servers is recommended. For more information, see [Is a two-node vCenter Server instance highly available?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-).
 
 ## Storage settings
 {: #vc_nsx-t_orderinginstance-storage-settings}
@@ -139,12 +139,12 @@ For deployed instances, you can add NFS storage shares to an existing NFS or vSA
 ### vSAN storage
 {: #vc_nsx-t_orderinginstance-vsan-storage}
 
-vSAN is available for the **Skylake** and **Broadwell** Bare Metal configuration only. Specify the following vSAN options:
+vSAN is available for the **Skylake** and **Broadwell** Bare Metal configurations only. Specify the following vSAN options:
 * **Disk Type and Size for vSAN Capacity Disks**: Select an option for the capacity disks that you need.
 * **Number of vSAN Capacity Disks**: Specify the number of capacity disks that you want to add.
-* If you want to add capacity disks over the limit of eight, check the **High-Performance Intel Optane** box. This option provides two extra capacity disk bays for a total of 10 capacity disks and is useful for workloads that require less latency and higher IOPS throughput.
+* If you want to add capacity disks over the limit of 10, check the **High-Performance Intel Optane** box. This option provides two extra capacity disk bays for a total of 12 capacity disks and is useful for workloads that require less latency and higher IOPS throughput.
 
-  The **High-Performance Intel Optane** option is available only for the Skylake CPU models Dual Intel Xeon Gold 5120 and Dual Intel Xeon Gold 6140.
+  The **High-Performance Intel Optane** option is available only for the Skylake CPU models.
   {:note}
 
 * Review the **Disk Type for vSAN Cache Disks** and **Number of vSAN Cache Disks** values. These values depend on whether you checked the **High-Performance Intel Optane** box.
@@ -248,14 +248,14 @@ Select the Domain Name System (DNS) configuration for your instance:
 * **Single Public Windows VSI for Active Directory/DNS**: A single Microsoft Windows Server VSI for Microsoft Active Directory (AD), which functions as the DNS for the instance where the hosts and VMs are registered, is deployed and can be looked up. This option has been deployed by default for V1.9 and later instances.
 * **Two highly available dedicated Windows Server VMs on the management cluster**: Two Microsoft Windows VMs are deployed, helping enhance security and robustness.
 
-You must provide two Microsoft Windows Server 2012 R2 licenses if you configure your instance to use the two Microsoft Windows VMs. Use the Microsoft Windows Server 2012 R2 Standard edition license, or the Microsoft Windows Server 2012 R2 Datacenter edition license, or both.
+You must provide two Microsoft Windows Server 2016 licenses if you configure your instance to use the two Microsoft Windows VMs. Use the Microsoft Windows Server 2016 Standard edition license, or the Microsoft Windows Server 2016 Datacenter edition license, or both.
 {:important}
 
 Each license can be assigned only to one single physical server and covers up to two physical processors. One Standard edition license can run two virtualized Microsoft Windows VMs per 2-processor server. Therefore, two licenses are required since two Microsoft Windows VMs are deployed in two different hosts.
 
 You have 30 days to activate the VMs.
 
-For more information about Windows licensing, see [Windows Server 2012 R2 documentation](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2).
+For more information on ordering Windows Server 2016 licenses, see [Get started with Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:new_window}.
 
 ## Order summary
 {: #vc_nsx-t_orderinginstance-order-summary}
@@ -287,7 +287,7 @@ Based on your selected configuration for the instance, the estimated cost is ins
   * If you select **NFS Storage** and want to add and configure the same settings to all file shares, specify the **Number of Shares**, **Performance**, and **Size (GB)**.
   * If you select **NFS Storage** and want to add and configure file shares individually, select **Configure shares individually**. Then, click the **+** icon next to the **Add Shared Storage** label and select the **Performance** and **Size (GB)** for each file share. You must select at least one file share.
 9. Complete the network interface settings.
-   1. Enter the host name prefix, subdomain label, and root domain name. For a secondary instance, the domain name is automatically completed.
+   1. Enter the host name prefix for the instance being provisioned, the subdomain label, and the root domain name. For a secondary instance, the domain name is automatically completed.
    2. Select the network setting of either **Public and Private Network** or **Private Network Only**.
    3. Select the VLAN settings:
       * If you want to order new public and private VLANs, click **Order New VLANs**.
@@ -305,7 +305,7 @@ Based on your selected configuration for the instance, the estimated cost is ins
 
 The deployment of the instance starts automatically. You receive confirmation that the order is being processed and you can check the status of the deployment by viewing the instance details.
 
-When the instance is successfully deployed, the components that are described in [Technical specifications for vCenter Server with NSX-T instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_overview-specs) are installed on your VMware virtual platform. The ESXi servers that you ordered are grouped as **cluster1** by default.
+When the instance is successfully deployed, the components that are described in [Technical specifications for vCenter Server with NSX-T instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_overview#vc_nsx-t_overview-specs) are installed on your VMware virtual platform. The ESXi servers that you ordered are grouped as **cluster1** by default.
 
 When the instance is ready to use, the status of the instance is changed to **Ready to Use** and you receive a notification by email.
 
@@ -334,6 +334,6 @@ If you change these components outside of the {{site.data.keyword.vmwaresolution
 * [Signing up for an {{site.data.keyword.cloud_notm}} account](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)
 * [Viewing vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
 * [Multi-site configuration for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_multisite)
-* [Adding, viewing, and deleting clusters for vCenter Server with NSX-T instances](/docs/services/vmwaresolutions/vcenter?topic=vc_nsx-t_deletinginstance)
+* [Adding, viewing, and deleting clusters for vCenter Server with NSX-T instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_nsx-t_addingviewingcluster#vc_nsx-t_addingviewingcluster)
 * [Expanding and contracting capacity for vCenter Server with NSX-T instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_addingremovingservers)
 * [Deleting vCenter Server with NSX-T instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_deletinginstance)

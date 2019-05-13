@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -23,8 +23,7 @@ The VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bun
 
 The VMware HCX components, which are deployed as virtual machines (VMs) in the vCenter Server target site enable the establishment of a connection with the VMware HCX components that are installed in the peer on-premises source site.
 
-Figure 1. VMware Hybrid Cloud Extension service
-![VMware Hybrid Cloud Extension service](vcsnsxt-hcx-1.svg)
+![VMware Hybrid Cloud Extension service](../../images/vcsnsxt-hcx-1.svg "VMware Hybrid Cloud Extension service"){: caption="Figure 1. VMware Hybrid Cloud Extension service" caption-side="bottom"}
 
 The loosely coupled interconnectivity between on-premises and {{site.data.keyword.cloud_notm}} enables capabilities such as:
 - **Simple interconnectivity** – logical network connections are established easily over any physical connection that includes public internet, private VPN, or direct link.
@@ -52,8 +51,7 @@ Using {{site.data.keyword.cloud_notm}} automation, Acme Skateboards can provisio
 
 For more information about NSX-V, see [NSX-V overview](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv). For more information about the vCenter Server and {{site.data.keyword.icpfull_notm}} offering, see [vCenter Server and {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro).
 
-Figure 2. vCenter Server with {{site.data.keyword.icpfull_notm}}</br>
-![vCenter Server with {{site.data.keyword.icpfull_notm}}](vcsnsxt-nsxvhl.svg)
+![vCenter Server with {{site.data.keyword.icpfull_notm}}](../../images/vcsnsxt-nsxvhl.svg "vCenter Server with {{site.data.keyword.icpfull_notm}}"){: caption="Figure 2. vCenter Server with {{site.data.keyword.icpfull_notm}}" caption-side="bottom"}
 
 This creates a loosely coupled interconnectivity between on-premises and {{site.data.keyword.cloud_notm}} and enables capabilities such as:
 -	**Simple interconnectivity** – logical network connections are established easily over any physical connection including public internet, private VPN, or direct link.

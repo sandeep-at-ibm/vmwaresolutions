@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
 subcollection: vmware-solutions
 
@@ -62,7 +62,7 @@ If the HTTPS parameters are not set, then use the following command:
 ### Configure vSAN to use the proxy
 {: #vum-updating-vsan-config-vsan-proxy}
 
-1. Navigate to **Home** > **Hosts and Clusters**, select the **vSAN cluster** in the Navigation pane and then select the **Configure tab** and navigate to **vSAN** and then **General**. Scroll to the **Internet Connectivity** section and click **Edit**.
+1. Navigate to **Home** > **Hosts and Clusters**, select the **vSAN cluster** in the Navigation pane and then select the **Configure** tab and navigate to **vSAN** and then **General**. Scroll to the **Internet Connectivity** section and click **Edit**.
 2. Enter the IP address and port number of the proxy, click **OK**.
 
 ### Enable Customer Experience Improvement Program (CEIP)
@@ -73,13 +73,13 @@ This is an optional step. By using the vSphere Web Client, navigate to **Home** 
 ### Complete a test upload and validate that the upload worked
 {: #vum-updating-vsan-complete-upload}
 
-1. Using the vSphere Web Client navigate to **Home** > **Hosts and Clusters**. Select the required cluster and then select **Monitor tab** and the **vSAN** page, then click **Health**. Click **Enable Online Health**.
+1. Using the vSphere Web Client navigate to **Home** > **Hosts and Clusters**. Select the required cluster and then select the **Monitor** tab and the **vSAN** page, then click **Health**. Click **Enable Online Health**.
 2. Click **Retest** and wait for the process to complete.
 3. A new check appears in Health that is called _Online health connectivity_, and **Enable Online Health** changes to **Retest with Online Health**.
 4. Click **Retest with Online Health** to start the first upload and wait for the process to complete, by reviewing the status in the Recent Tasks pane. The Test Name changes to Online health (Last check: just now).
 5. When completed, in the Health window, scroll to and expand the vSAN Build Recommendation, and click **vSAN Build Recommendation Engine Health**.
 6. Click **Login to my.vmware.com** and enter your credentials. When the process completes, the **Test Result** changes to a **Passed** state.
-7. Press the **Update Manager tab**, and the vSAN Cluster is added to the Baselines.
+7. Click the **Update Manager** tab, and the vSAN Cluster is added to the Baselines.
 
 ## Prerequisites
 {: #vum-updating-vsan-prereq}
@@ -90,9 +90,9 @@ Before you start the vSAN upgrade process, ensure that the following requirement
   - The VCSA must be at an equal or higher patch level than the vSphere ESXi hosts. Update the VCSA if required
   - All hosts must be running the same build of ESXi. If the vSphere ESXi host versions are not matched, then update
 * **All vSAN disks should be healthy**:
-  - No disk is failed or absent. This can be determined via the **vSAN Disk Management** view in the vSphere Web Client. **Home** > **Hosts and Clusters**, then select the **vSAN Cluster** and click **vSAN tab** and then **Physical Disks**. Scroll through all the disks and review the vSAN Health Status.
-  - No inaccessible vSAN objects. This can be verified with the **vSAN Health Service** by clicking **Home** > **Hosts and Clusters**, then select the **vSAN Cluster**. Click **Monitor tab**, **vSAN** and then click **Health**. Review the Test Results.
-  - No active resync at the start of the upgrade process by clicking **Home** > **Hosts and Clusters**, then select the **vSAN Cluster** and click **vSAN tab** and then click **Resync Components**. _The Resync components count should be 0_. Some resync activity is expected during the upgrade process, as data needs to be synchronized following host restarts.
+  - No disk is failed or absent. This can be determined via the **vSAN Disk Management** view in the vSphere Web Client. **Home** > **Hosts and Clusters**, then select the **vSAN Cluster** and click the **vSAN** tab and then **Physical Disks**. Scroll through all the disks and review the vSAN Health Status.
+  - No inaccessible vSAN objects. This can be verified with the **vSAN Health Service** by clicking **Home** > **Hosts and Clusters**, then select the **vSAN Cluster**. Click the **Monitor** tab, **vSAN** and then click **Health**. Review the Test Results.
+  - No active resync at the start of the upgrade process by clicking **Home** > **Hosts and Clusters**, then select the **vSAN Cluster** and click the **vSAN** tab and then click **Resync Components**. _The Resync components count should be 0_. Some resync activity is expected during the upgrade process, as data needs to be synchronized following host restarts.
 * **vSphere ESXi host preparation** - When you move a host into maintenance mode in a vSAN cluster, you have three options to choose:
   - **No data migration** - If you select this option, vSAN does not evacuate any data from this host. If you power off or remove the host from the cluster, some virtual machines (VMs) might become inaccessible.
   - **Ensure availability** - If you select this option, vSAN allows you to move the host into maintenance mode faster than Full data migration and allows access to the VMs in the environment.
@@ -153,4 +153,4 @@ Many basic administrative tasks can be done much more efficiently than clicking 
 {: #vum-updating-vsan-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrations)
+* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (demonstrations)

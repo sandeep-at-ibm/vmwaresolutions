@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-03-12"
+lastupdated: "2019-04-03"
 
 subcollection: vmware-solutions
 
@@ -14,7 +14,7 @@ subcollection: vmware-solutions
 
 Use the {{site.data.keyword.cloudaccesstrailfull}} service to track how users and applications interact with {{site.data.keyword.vmwaresolutions_short}} in {{site.data.keyword.Bluemix_notm}}.
 
-The {{site.data.keyword.cloudaccesstrailfull_notm}} service records user-initiated activities that change the state of a service in {{site.data.keyword.Bluemix_notm}}. For more information, see the [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started-with-cla#getting-started-with-cla).
+The {{site.data.keyword.cloudaccesstrailfull_notm}} service records user-initiated activities that change the state of a service in {{site.data.keyword.Bluemix_notm}}. For more information, see the [About {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov#activity_tracker_ov).
 
 ## Activity Tracker events table
 {: #at-events-table}
@@ -51,12 +51,6 @@ Table 2. Description of actions that generate management events
 | `vmware-solutions.notification.update` | <ul><li>The request to update notifications is received.</li><li>The request to update notifications is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
 | `vmware-solutions.secure_data.wipe`       | <ul><li>The request to wipe secure data is received.</li><li>The request to wipe secure data is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
 | `vmware-solutions.bss_account.migrate` | <ul><li>The request to migrate to bss account is received.</li><li>The request to migrate to bss account is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
-| `vmware-solutions.vcf.delete`                | <ul><li>The request to delete a Cloud Foundation instance is received.</li><li>The request to delete a Cloud Foundation instance is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
-| `vmware-solutions.vcf.add_hosts`             | <ul><li>The request to add ESXi servers to a Cloud Foundation instance is received.</li><li>The request to add ESXi servers to a Cloud Foundation instance is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
-| `vmware-solutions.vcf.remove_hosts`          | <ul><li>The request to delete ESXi servers from a Cloud Foundation instance is received.</li><li>The request to delete ESXi servers from a Cloud Foundation instance is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
-| `vmware-solutions.vcf.create_cluster`        | <ul><li>The request to create a cluster for a Cloud Foundation instance is received.</li> <li>The request to create a cluster for a Cloud Foundation instance is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
-| `vmware-solutions.vcf.delete_cluster`        | <ul><li>The request to delete a cluster from a Cloud Foundation instance is received.</li><li>The request to delete a cluster from a Cloud Foundation instance is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
-| `vmware-solutions.vcf.schedule_update`       | <ul><li>The request to schedule an update for a Cloud Foundation instance is received.</li><li>The request to schedule an update for a Cloud Foundation instance is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
 | `vmware-solutions.vcs.order`                 | <ul><li>The request to order a vCenter Server instance is received.</li><li>The request to order a vCenter Server instance is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
 | `vmware-solutions.vcs.delete`                | <ul><li>The request to delete a vCenter Server instance is received.</li><li>The request to delete a vCenter Server instance is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
 | `vmware-solutions.vcs.add_host`              | <ul><li>The request to add ESXi servers to a vCenter Server instance is received.</li><li>The request to add ESXi servers to a vCenter Server instance is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |

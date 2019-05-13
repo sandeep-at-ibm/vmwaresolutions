@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-03-28"
 
 subcollection: vmware-solutions
 
@@ -50,7 +50,7 @@ If you saved the cluster configuration as a template, you get a console notifica
 
 If you placed an order, the deployment of the cluster starts automatically. You receive an email confirmation that the order is being processed. When the cluster is ready to use, you're also notified by email.
 
-The vSphere clusters, unlike the vCenter Server and Cloud Foundation instances, are not displayed on the **Resources** page.
+The vSphere clusters, unlike the vCenter Server instances, are not displayed on the **Resources** page.
 {:note}
 
 ## Related links

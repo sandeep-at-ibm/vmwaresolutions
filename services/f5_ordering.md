@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-05-09"
 
 subcollection: vmware-solutions
 
@@ -33,6 +33,16 @@ You can order a new instance with F5 on {{site.data.keyword.cloud_notm}} by usin
 You can add the F5 on {{site.data.keyword.cloud_notm}} service into an existing instance by using one the following methods:
 * From the {{site.data.keyword.vmwaresolutions_short}} console, view the instance that you want to add the service for, click **Services** on the left navigation pane, and click **Add**.
 * From the {{site.data.keyword.cloud_notm}} catalog, select **F5 on IBM Cloud**, specify the service settings, and select **Add to Existing Instance**.
+
+## Ordering F5 on IBM Cloud for private instances
+{: #f5_ordering-private}
+
+When you order F5 on {{site.data.keyword.cloud_notm}} for instances that are not configured with public interfaces, you must provide a proxy server to complete the installation. The HTTP proxy server must be configured and available via Virtual Routing and Forwarding (VRF) before the F5 on {{site.data.keyword.cloud_notm}} installation can begin.
+
+The BigIP Virtual Edition (VE) endpoints must be able to activate their license before becoming operational. After the BigIP VE endpoints are installed, they no longer require the use of the proxy server.
+
+The F5 on {{site.data.keyword.cloud_notm}} service cannot be added without a working proxy server at the time of service installation.
+{:note}
 
 ## F5 on IBM Cloud service configuration
 {: #f5_ordering-config}
@@ -86,4 +96,4 @@ You cannot change the license model after service installation. To change the li
 * [Ordering, viewing, and removing services for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
 * [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [F5 Deployment Guides](https://f5.com/solutions/deployment-guides){:new_window}
+* [F5 Deployment Guides](https://www.f5.com/services/resources/deployment-guides){:new_window}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -14,8 +14,7 @@ subcollection: vmware-solutions
 # Preface
 {: #vcscar-preface}
 
-Figure 1. A language of our own devising
-![A Language of our own devising](vcscar-alood.svg)
+![A Language of our own devising](../../images/vcscar-alood.svg "A Language of our own devising"){: caption="Figure 1. A language of our own devising" caption-side="bottom"}
 
 ## Intro to skateboarding language
 {: #vcscar-preface-intro}

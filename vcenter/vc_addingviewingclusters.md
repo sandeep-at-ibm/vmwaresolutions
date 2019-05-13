@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-18"
+lastupdated: "2019-04-18"
 
 subcollection: vmware-solutions
 
@@ -28,12 +28,13 @@ The delete cluster feature is available only to instances that are deployed in (
 ## Adding clusters to vCenter Server instances
 {: #vc_addingviewingclusters-adding}
 
-The number of clusters that can be added to an instance depends on the instance version:
-* For instances that were deployed in (or upgraded to) V2.5 and later, the number of clusters, hosts, and VMs determines the maximum limit for the number of clusters you can add. You must remain within the VMware sizing guidelines and limits for your deployment.
-* For instances that were deployed in (or upgraded to) V2.2 and later, you can add up to 10 clusters.
-* For instances that were deployed in V2.1 or earlier, you can add up to five clusters.
+### Before you add clusters
+{: #vc_addingviewingclusters-before-add}
 
-For more information about maximum limits, see [VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window}.
+* Whenever possible, add clusters by using the {{site.data.keyword.vmwaresolutions_full}} console, because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, add clusters to vCenter Server only for on-premises clusters or clusters that you can't or won't manage in the {{site.data.keyword.vmwaresolutions_short}} console.
+* For instances that were deployed in (or upgraded to) V2.5 and later, the number of clusters, hosts, and VMs determines the maximum limit for the number of clusters you can add. You must remain within the VMware sizing guidelines and limits for your deployment. For more information about maximum limits, see [VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window}.
+* For instances that were deployed in (or upgraded to) V2.2, 2.3, or 2.4, you can add up to 10 clusters.
+* For instances that were deployed in V2.1 or earlier, you can add up to five clusters.
 
 ### System settings
 {: #vc_addingviewingclusters-adding-sys-settings}
@@ -52,7 +53,7 @@ The cluster name must meet the following requirements:
 #### Data center location
 {: #vc_addingviewingclusters-adding-dc-location}
 
-The {{site.data.keyword.CloudDataCent}} location of the cluster is set to the {{site.data.keyword.CloudDataCent_notm}} of the vCenter Server instance by default. You can deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}} than the deployed instance, but you must ensure that the network latency between the two {{site.data.keyword.CloudDataCents_notm}} is less than 150 ms. To check the network latency, you can use a tool such as [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/).
+The {{site.data.keyword.CloudDataCent}} location of the cluster is set to the {{site.data.keyword.CloudDataCent_notm}} of the vCenter Server instance by default. You can deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}} than the deployed instance, but you must ensure that the network latency between the two {{site.data.keyword.CloudDataCents_notm}} is less than 150 ms. To check the network latency, you can use a tool such as [Looking Glass](/docs/infrastructure/network-tools?topic=network-tools-about-looking-glass#about-looking-glass).
 
 If you deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}} or {{site.data.keyword.cloud_notm}} infrastructure pod, three extra VLANs are ordered for use with the ordered {{site.data.keyword.baremetal_short}}.
 
@@ -97,22 +98,15 @@ Table 2. Options for Broadwell {{site.data.keyword.baremetal_short}}
 
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1.5 TB |
 | Quad Intel Xeon E7-4820 v4 / 40 cores total, 1.9 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 cores total, 2.2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 #### Number of Bare Metal Servers
 {: #vc_addingviewingclusters-adding-bare-metal-number}
 
-Clusters require at least two {{site.data.keyword.baremetal_short}}.
-
-For vCenter Server instances that are deployed in V2.1 or later, you can add up to 59 {{site.data.keyword.baremetal_short}} for a cluster. You can add 1 - 59 ESXi servers at a time.
-
-For vCenter Server instances that were deployed in V2.0 or earlier, you can add up to 32 {{site.data.keyword.baremetal_short}} for a cluster. You can add 1 - 20 ESXi servers at a time for the **Skylake**, **SAP-certified**, and **Broadwell** Bare Metal Server configuration.
-
-After deployment, you can create up to four more clusters. If you select the **Skylake** or **Broadwell** Bare Metal Server configuration with VMware vSAN storage, four servers are required for both the initial cluster and post-deployment clusters.
+* All servers that you order have the same configuration.
+* For vSAN storage, you can order between 4 and 59 servers.
+* For NFS storage, you can order between 2 and 59 servers. However, for production workloads, a minimum of 3 servers is recommended. For more information, see [Is a two-node vCenter Server instance highly available?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-).
 
 ### Storage settings
 {: #vc_addingviewingclusters-adding-storage-settings}
@@ -125,9 +119,9 @@ Storage settings are based on your selection of Bare Metal Server configuration 
 Specify the following vSAN options:
 * **Disk Type and Size for vSAN Capacity Disks**: Select an option for the capacity disks that you need.
 * **Number of vSAN Capacity Disks**: Specify the number of capacity disks that you want to add.
-* If you want to add capacity disks over the limit of eight, check the **High-Performance Intel Optane** box. This option provides two extra capacity disk bays for a total of 10 capacity disks and is useful for workloads that require less latency and higher IOPS throughput.
+* If you want to add capacity disks over the limit of 10, check the **High-Performance Intel Optane** box. This option provides two extra capacity disk bays for a total of 12 capacity disks and is useful for workloads that require less latency and higher IOPS throughput.
 
-  The **High-Performance Intel Optane** option is available only for the Skylake CPU models Dual Intel Xeon Gold 5120 and Dual Intel Xeon Gold 6140.
+  The **High-Performance Intel Optane** option is available only for the Skylake CPU models.
   {:note}
 
 * Review the **Disk Type for vSAN Cache Disks** and **Number of vSAN Cache Disks** values. These values depend on whether you checked the **High-Performance Intel Optane** box.
@@ -180,7 +174,6 @@ Network interface card (NIC) enablement settings are based on your selection of 
 * F5 on {{site.data.keyword.cloud_notm}}
 * Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
 * Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
-* Zerto on {{site.data.keyword.cloud_notm}}
 
 ### Order summary
 {: #vc_addingviewingclusters-adding-order-summary}
@@ -308,11 +301,12 @@ Table 8. Network Interface - IP details
 
 You might want to delete a cluster from an instance when it's no longer needed.
 
-### Before you delete
+### Before you delete clusters
 {: #vc_addingviewingclusters-deleting-prereq}
 
 * Use this procedure to delete clusters from instances that are deployed in V2.3 or later.
 * For clusters deployed in V2.2 or earlier instances, you must upgrade the instance to V2.3 if you want to delete the clusters that you added to the instance.
+* Whenever possible, delete clusters by using the {{site.data.keyword.vmwaresolutions_full}} console, because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, delete clusters from vCenter Server only for on-premises clusters or clusters that you can't or won't manage in the {{site.data.keyword.vmwaresolutions_short}} console.
 * You can delete a single cluster at a time. To delete more than one cluster, you must do it in sequence. Wait for the previous cluster to be deleted before you delete the next cluster.
 * Ensure that all nodes in a cluster are powered on and operational before you delete the cluster.
 * When you delete a cluster, all VMs from the cluster are also deleted and they can't be recovered. If you want to keep the VMs, migrate them to other clusters.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-28"
 
 subcollection: vmware-solutions
 
@@ -34,7 +34,7 @@ When you're replicating between different {{site.data.keyword.cloud_notm}} Zerto
 
 Zerto replication doesn't support Network Address Translation (NAT) traversal. Establishing connectivity between the {{site.data.keyword.cloud_notm}} Zerto instance and your own data center might require customization of routes on the Zerto Virtual Manager (ZVM) appliances or Zerto Virtual Replication Appliances (VRAs) on either side. Establishing connectivity might also require secure tunneling between the sites. When you're configuring or reconfiguring routes on ZVM appliances, you must ensure that all ZVM appliances can connect successfully to `zerto.com` for usage reporting. You can verify this connection by opening a browser session to `https://www.zerto.com` from the ZVM appliance.
 
-The Management VMware NSX Edge Services Gateway (ESG) of Cloud Foundation instances and vCenter Server instances on {{site.data.keyword.cloud_notm}} is preconfigured to allow outbound HTTPS (TCP port 443) communications that originate from ZVM.
+The Management VMware NSX Edge Services Gateway (ESG) is preconfigured to allow outbound HTTPS (TCP port 443) communications that originate from ZVM.
 {:note}
 
 ## Updating Zerto Virtual Replication

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -18,16 +18,16 @@ subcollection: vmware-solutions
 # Single-node Trial for Migration and App Modernization overview
 {: #cloud_modern_bundle_overview}
 
-The Single-node Trial for Migration and App Modernization allows you to test drive IBM Cloud to migrate VMware workloads to the IBM Cloud and then modernize simple workloads using containers.
+The Single-node Trial for Migration and App Modernization allows you to test drive {{site.data.keyword.cloud_notm}} to migrate VMware workloads to the {{site.data.keyword.cloud}} and then modernize simple workloads using containers.
 
-The Single-node Trial is a trial version of IBM Cloud Private Hosted on VMware vCenter Server on IBM Cloud that provides the Kubernetes management platform for containers and the single-tenant VMware platform that can be managed using the same tools as in on-premises environments. You can take advantage of the speed and scale of the cloud while maintaining the same level of control and visibility that is provided on-premises.
+The Single-node Trial is a trial version of {{site.data.keyword.cloud_notm}} Private Hosted on VMware vCenter Server on {{site.data.keyword.cloud_notm}} that provides the Kubernetes management platform for containers and the single-tenant VMware platform that can be managed using the same tools as in on-premises environments. You can take advantage of the speed and scale of the cloud while maintaining the same level of control and visibility that is provided on-premises.
 
-The trial is designed for migration of up to 20 simple development or test workloads using vCenter Server on IBM Cloud with Hybridity Bundle and containerization of those workloads with the Kubernetes-based IBM Cloud Private Hosted application development platform. Automation will install and configure VMware HCX in the IBM Cloud, provide an on-premises HCX activation key, and install and configure a small development/test topology of IBM Cloud Private Hosted in a matter of hours.
+The trial is designed for migration of up to 20 simple development or test workloads using vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle and containerization of those workloads with the Kubernetes-based {{site.data.keyword.cloud_notm}} Private Hosted application development platform. Automation will install and configure VMware HCX in the {{site.data.keyword.cloud_notm}}, provide an on-premises HCX activation key, and install and configure a small development/test topology of {{site.data.keyword.cloud_notm}} Private Hosted in a matter of hours.
 
 The Single-node Trial for Migration and App Modernization is for proof of concept (POC) only. Do not run production workloads on this environment. Management functions such as adding and removing hosts and clusters, ordering add-on services, and applying updates are not supported.
 {:important}
 
-To get the most out of the Single-node Trial instance, you can use [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf) from [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html), who can help you migrate your VMware workloads to the IBM Cloud. Additionally, [IBM Cloud Garage Services](https://www.ibm.com/cloud/garage/) can help you accelerate application modernization through the latest cloud native practices.
+To get the most out of the Single-node Trial instance, you can use [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:new_window} from [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:new_window}, who can help you migrate your VMware workloads to the {{site.data.keyword.cloud_notm}}. Additionally, [{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/){:new_window} can help you accelerate application modernization through the latest cloud native practices.
 
 This trial is intended for use up to 90 days. When you are finished with the trial, you can delete this environment and provision a new environment that meets your capacity needs.
 {:note}
@@ -49,7 +49,7 @@ Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz with 384 GB RAM) f
 {: #cloud_modern_bundle_overview-cpu}
 
 * 16:1 CPU over-commit for vCenter Server management, HCX, and 20 customer workload VMs
-* 11:1 CPU over-commit for IBM Cloud Private
+* 11:1 CPU over-commit for {{site.data.keyword.cloud_notm}} Private
 
 #### RAM over-commits
 {: #cloud_modern_bundle_overview-ram}
@@ -62,7 +62,7 @@ Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz with 384 GB RAM) f
 
 * 2 TB for management
 * 1 TB for customer workload (for 20 customer VMs)
-* 4 TB for IBM Cloud Private Hosted
+* 4 TB for {{site.data.keyword.cloud_notm}} Private Hosted
 
 ### Networking specifications for Single-node Trial for Migration and App Modernization instances
 {: #cloud_modern_bundle_overview-networking-specs}
@@ -94,7 +94,8 @@ The following licenses are included with your Single-node Trial for Migration an
 * VMware vSphere Enterprise Plus 6.7u1
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Advanced Edition 6.4
-* IBM Cloud Private Hosted V3.1
+* {{site.data.keyword.cloud_notm}} Private Hosted 3.1.2
+* {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2
 
 Single-node Trial for Migration and App Modernization instances do not support Bring Your Own License.
 {:note}
@@ -114,7 +115,7 @@ On-premises HCX instances include only licensing and activation.
 * RAM: 8 GB
 * Disk: 3 GB VMDK
 
-### HCX Management Appliance - virtual machine
+### HCX Management Appliance - Virtual Machine
 {: #cloud_modern_bundle_overview-hcx-mgmt-appliance}
 
 * CPU: 4 vCPU
@@ -123,7 +124,7 @@ On-premises HCX instances include only licensing and activation.
 
 Additional HCX appliances are deployed during configuration as necessary for L2 connectivity, WAN optimization, and gateway connections.
 
-### Networking specifications for the HCX on IBM Cloud service
+### Networking specifications for HCX on IBM Cloud
 {: #cloud_modern_bundle_overview-hcx-networking-specs}
 
 * One public portable subnet with 16 IP addresses
@@ -133,12 +134,17 @@ Additional HCX appliances are deployed during configuration as necessary for L2 
 ## Technical specifications for IBM Cloud Private Hosted
 {: #cloud_modern_bundle_overview-icp-tech-specs}
 
-IBM Cloud Private Hosted V3.1 is installed using the Development/Test topology on all Single-node Trial for Migration and App Modernization instances. For more information about IBM Cloud Private Hosted, see [IBM Cloud Private Hosted overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_overview).
+{{site.data.keyword.cloud_notm}} Private Hosted 3.1.2 is installed using the Development/Test topology on all Single-node Trial for Migration and App Modernization instances. For more information about {{site.data.keyword.cloud_notm}} Private Hosted, see [{{site.data.keyword.cloud_notm}} Private Hosted overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_overview).
+
+## Technical specifications for IBM Cloud Automation Manager
+{: #cloud_modern_bundle_overview-cam-tech-specs}
+
+{{site.data.keyword.cloud_notm}} Automation Manager 3.1.2 is installed using the Development/Test topology on all Single-node Trial for Migration and App Modernization instances. For more information about {{site.data.keyword.cloud_notm}} Automation Manager, see [{{site.data.keyword.cloud_notm}} Automation Manager documentation](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: new_window}.
 
 ## Related links
 {: #cloud_modern_bundle_overview-related}
 
-* [vCenter Server and IBM Cloud Private guide](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [Open a Ticket for IBM Cloud Private](https://www.ibm.com/mysupport/s/?language=en_US)
-* [VMware Hybrid Cloud Extension documentation](https://hcx.vmware.com/#/vm-documentation)
-* [Obtaining the HCX OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html)
+* [vCenter Server and {{site.data.keyword.cloud_notm}} Private guide](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
+* [Open a Ticket for {{site.data.keyword.cloud_notm}} Private](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
+* [VMware HCX resources](https://hcx.vmware.com/#/docs){:new_window}
+* [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}

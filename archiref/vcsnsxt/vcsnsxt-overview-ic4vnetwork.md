@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -18,8 +18,7 @@ subcollection: vmware-solutions
 
 The physical network of {{site.data.keyword.cloud_notm}} is separated into three distinct networks: public, private, and management.
 
-Figure 1. {{site.data.keyword.cloud_notm}} high-level network view
-![{{site.data.keyword.cloud_notm}} high-level network view](vcsnsxt-ic4vcloud.svg)
+![{{site.data.keyword.cloud_notm}} high-level network view](../../images/vcsnsxt-ic4vcloud.svg "{{site.data.keyword.cloud_notm}} high-level network view"){: caption="Figure 1. {{site.data.keyword.cloud_notm}} high-level network view" caption-side="bottom"}
 
 ## Public network
 {: #vcsnsxt-overview-ic4vnetwork-public-net}
@@ -55,8 +54,7 @@ Primary or Portable IP addresses can be made routable to any VLAN within the cus
 
 Each physical host within the design has two redundant pairs of 10-Gbps Ethernet connections into each {{site.data.keyword.cloud_notm}} Top of Rack (ToR) switch (public and private). The adapters are set up as individual connections (unbonded) for a total of 4 × 10-Gbps connections. This allows each networking interface card (NIC) connection to work independently of the others.
 
-Figure 2. Physical host connections</br>
-![Physical host connections](vcsnsxt-host-connections.svg)
+![Physical host connections](../../images/vcsnsxt-host-connections.svg "Physical host connections"){: caption="Figure 2. Physical host connections" caption-side="bottom"}
 
 ## VLANs
 {: #vcsnsxt-overview-ic4vnetwork-vlans}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
 subcollection: vmware-solutions
 
@@ -62,7 +62,7 @@ The administration view is accessed by navigating to; **Home** > **Update Manage
 ##	Compliance View
 {: #vum-overview-compliance-view}
 
-The compliance view of a selected inventory object is accessed by navigating to **Hosts and Clusters** or **VMs and Templates** and clicking the **Update Manager tab**. In the Update Manager Compliance view, you can do the following tasks:
+The compliance view of a selected inventory object is accessed by navigating to **Hosts and Clusters** or **VMs and Templates** and clicking the **Update Manager** tab. In the Update Manager Compliance view, you can do the following tasks:
 *	View compliance and scan results for each selected inventory object
 *	Attach and detach baselines and baseline groups from a selected inventory object
 *	Scan a selected inventory object
@@ -73,4 +73,4 @@ The compliance view of a selected inventory object is accessed by navigating to 
 {: #vum-overview-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrations)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (demonstrations)

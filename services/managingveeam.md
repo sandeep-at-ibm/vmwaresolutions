@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-03-28"
 
 subcollection: vmware-solutions
 
@@ -70,7 +70,7 @@ If the Veeam service is installed on an instance with private network only, you
 ## Replacing the Veeam VSI of pre-V1.8 instances with Veeam on IBM Cloud
 {: #managingveeam-replace-vsi}
 
-The Veeam on {{site.data.keyword.cloud_notm}} service, which can back up both management components and workloads, supersedes the previous Veeam VSI that was integrated into VMware Cloud Foundation and VMware vCenter Server in releases earlier than V1.8 for the backup of management components only.
+The Veeam on {{site.data.keyword.cloud_notm}} service, which can back up both management components and workloads, supersedes the previous Veeam VSI that was integrated into VMware vCenter Server in releases earlier than V1.8 for the backup of management components only.
 
 Because of this change, the previous **Backup and Restore** tab on the instance details page was removed and the backup points for the instances are no longer available in the {{site.data.keyword.vmwaresolutions_short}} console, although the Veeam VSI in the pre-V1.8 instances keeps working.
 

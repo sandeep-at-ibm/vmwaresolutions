@@ -39,7 +39,7 @@ You can order Cloud Foundation or vCenter Server instances with the HCX on {{sit
 You can also order an on-premises HCX instance for licensing and activation of your on-premises HCX installation.
 
 For more information, see the following topics:
-* [Considerations for HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview)
+* [Considerations for HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations)
 * [Managing HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghcx)
 * [Considerations for on-premises HCX instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_considerations)
 * [Ordering on-premises HCX instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_orderingserviceinstances)
@@ -53,7 +53,7 @@ Additionally, when you add nodes to a cluster that is licensed with your key, th
 
 For more information, see the following topics:
 
-* [Adding and viewing clusters for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 * [FAQ about BYOL](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_byol)
 
 ## Zerto on IBM Cloud service component updates
@@ -91,7 +91,7 @@ For more information, see [vCenter Server overview](/docs/services/vmwaresolutio
 ### Maximum servers per cluster increases from 32
 {: #relnotes_v21-max-clusters}
 
-For the default cluster in an instance, you can deploy or expand up to 51 servers. For all subsequent clusters in an instance, you can deploy or expand up to 59 servers. For more information, see [Adding and viewing clusters for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances).
+For the default cluster in an instance, you can deploy or expand up to 51 servers. For all subsequent clusters in an instance, you can deploy or expand up to 59 servers. For more information, see [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters).
 
 This capability is available only to instances that are deployed in V2.1 and later. Instances that are upgraded to V2.1 from pre-V2.1 releases do not have this option.
 {:note}
@@ -113,7 +113,7 @@ You can now configure NFS file shares on an individual basis. Select the file si
 For more information, see the following topics:
 * [vCenter Server overview](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
 * [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [Adding and viewing clusters for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 
 ## User interface updates and enhancements
 {: #relnotes_v21-ui}

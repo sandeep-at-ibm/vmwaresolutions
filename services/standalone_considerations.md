@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-23"
 
 subcollection: vmware-solutions
 
@@ -23,21 +23,21 @@ Review the following considerations before you install or delete the HCX on {{si
 A vCenter Server instance with HCX on {{site.data.keyword.cloud_notm}} is limited to three simultaneous connections from on-premises sites.
 {:note}
 
-## Considerations when installing on-premises HCX on IBM Cloud instances
+## Considerations before you install on-premises HCX on IBM Cloud instances
 {: #standalone_considerations-install}
 
-The HCX on {{site.data.keyword.cloud_notm}} components must be installed both on {{site.data.keyword.cloud_notm}} and in your on-premises vSphere environment. It is recommended that you install the HCX on {{site.data.keyword.cloud_notm}} service into your vCenter Server with Hybridity Bundle instance on {{site.data.keyword.cloud_notm}} before you install the on-premises HCX on {{site.data.keyword.cloud_notm}} instance. For more information, see [Considerations for HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview).
+The HCX on {{site.data.keyword.cloud_notm}} components must be installed both on {{site.data.keyword.cloud_notm}} and in your on-premises vSphere environment. It is recommended that you install the HCX on {{site.data.keyword.cloud_notm}} service into your vCenter Server with Hybridity Bundle instance on {{site.data.keyword.cloud_notm}} before you install the on-premises HCX on {{site.data.keyword.cloud_notm}} instance. For more information, see [Considerations when you install HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-hcx_considerations#hcx_considerations-install).
 
-### Requirements on IP addresses
-{: #standalone_considerations-IP}
+### IP address requirements
+{: #standalone_considerations-ip}
 
-For full HCX functionality, you need at least five private IP addresses and you must allow them to access the Internet.
+For full HCX functionality, you need at least five private IP addresses that have internet access.
 
 ### Deployment process for on-premises HCX on IBM Cloud instances
 {: #standalone_considerations-deploy}
 
 You must complete the following tasks for a successful installation of the on-premises HCX on {{site.data.keyword.cloud_notm}} instance:
-1. In the {{site.data.keyword.vmwaresolutions_short}} console, order the on-premises HCX on {{site.data.keyword.cloud_notm}} instance. For more information, see [Ordering on-premises VMware HCX on IBM Cloud instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_orderingserviceinstances).
+1. In the {{site.data.keyword.vmwaresolutions_short}} console, order the on-premises HCX on {{site.data.keyword.cloud_notm}} instance. For more information, see [Ordering on-premises HCX instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_orderingserviceinstances).
 2. In the **HCX Cloud Console**, complete the following steps:
     1. Click the **Administration** tab.
     2. On the **System Updates** tab, click **REQUEST DOWNLOAD LINK**.
@@ -57,16 +57,16 @@ You now completed the basic setup of the on-premises HCX Manager. You can procee
 
 For more information, see [VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx).
 
-## Considerations when deleting on-premises HCX on IBM Cloud instances
-{: #considerations-when-deleting-on-premises-hcx-instances}
+## Considerations before you delete on-premises HCX on IBM Cloud instances
+{: #standalone_considerations-delete}
 
 Review the following considerations before you delete an HCX on {{site.data.keyword.cloud_notm}} instance that was ordered for on-premises use:
-1. In the VMware vSphere Web Client, go to the HCX user interface, and then check the following items:
+1. In the VMware vSphere Web Client, go to the HCX user interface and check the following items:
     1. Ensure that no HCX migration or disaster recovery operation is running.
     2. Ensure that all the extended networks are removed.
     3. Ensure that all the interconnect components with paired cloud sites are removed.
 
-   You must complete all the considerations before you proceed to the next step. Otherwise, the license for the on-premises HCX on {{site.data.keyword.cloud_notm}} instance is canceled, because of which migrations cannot be performed and errors might occur to the HCX components.  
+   You must complete all the previous steps before you proceed to the next step. Otherwise, the license for the on-premises HCX on {{site.data.keyword.cloud_notm}} instance is canceled. If the license is canceled, migrations can't be performed and errors might occur for HCX components.  
    {:important}
 2. In the {{site.data.keyword.vmwaresolutions_short}} console, delete the on-premises HCX on {{site.data.keyword.cloud_notm}} instance that was ordered to obtain the activation key for the on-premises HCX Manager. Ensure that the deleted instance is no longer available in the console before you proceed to the next step.
 

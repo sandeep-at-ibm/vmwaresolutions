@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-05-02"
 
 subcollection: vmware-solutions
 
@@ -47,9 +47,7 @@ If your configuration requires a multi-site deployment with more than 128 ESXi s
 
 The following graphic depicts the overall view of the vCenter Server with Hybridity Bundle multi-site deployment.
 
-Figure 1. vCenter Server with Hybridity Bundle multi-site deployment
-
-![vCenter Server with Hybridity Bundle multi-site deployment](../vcenter/multisite-hub-spoke.svg "vCenter Server with Hybridity Bundle multi-site deployment")
+![vCenter Server with Hybridity Bundle multi-site deployment](../images/multisite-hub-spoke.svg "vCenter Server with Hybridity Bundle multi-site deployment"){: caption="Figure 1. vCenter Server with Hybridity Bundle multi-site deployment" caption-side="bottom"}
 
 The model contains the following layers:
 
@@ -66,7 +64,6 @@ Deleting vCenter Server with Hybridity Bundle instances that are part of a multi
 ## Related links
 {: #vc_hybrid_multisite-related}
 
-* [Assign Primary Role to NSX Manager](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-44E8AE16-BA3F-4DD9-B582-FC1E137E6CFC.html){:new_window}
+* [Assign Primary Role to NSX Manager](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/com.vmware.nsx-cross-vcenter-install.doc/GUID-44E8AE16-BA3F-4DD9-B582-FC1E137E6CFC.html){:new_window}
 * [Configuring Secondary NSX Managers](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-9E48BC57-15E3-49C7-8BC5-F94ED8918BBE.html){:new_window}
-* [AD trusts supported with vCenter Single Sign-On](https://kb.vmware.com/kb/2064250){:new_window}
-* [Securely connect your private VMware workloads in the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}
+* [Microsoft Active Directory Trusts supported with VMware vCenter Single Sign-On](https://kb.vmware.com/s/article/2064250){:new_window}

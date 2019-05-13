@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-03-28"
 
 subcollection: vmware-solutions
 
@@ -49,7 +49,7 @@ Ensure that you completed the following tasks:
 
 The deployment of the cluster starts automatically, and you receive an email confirmation that the order is being processed. When the cluster is ready to use, you are notified by email.
 
-The vSphere clusters are not displayed on the **Resources** page, together with the vCenter Server and Cloud Foundation instances.
+The vSphere clusters are not displayed on the **Resources** page, together with the vCenter Server instances.
 {:note}
 
 ## Related links

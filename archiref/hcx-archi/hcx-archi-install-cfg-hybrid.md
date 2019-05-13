@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
 subcollection: vmware-solutions
 
@@ -18,7 +18,7 @@ The installer provisions and configures a virtual machine for each service virtu
 ## Prerequisites
 {: #hcx-archi-install-cfg-hybrid-prereq}
 
-* The HCX Manager must be installed on premises, and registered with a VCF/VCS HCX enabled cloud endpoint.
+* The HCX Manager must be installed on premises, and registered with a VCS HCX enabled cloud endpoint.
 * The target virtual data center must have sufficient resources.
 
 ## Configuration overview
@@ -34,7 +34,7 @@ The configuration procedure assumes that all service virtual appliances will be 
 
 The simple web interface is used to install the service virtual appliances and to configure more Layer 2 Concentrators.
 
-The HCX Manager must be installed and registered with the VCF/VCS HCX enabled cloud endpoint.
+The HCX Manager must be installed and registered with the VCS HCX enabled cloud endpoint.
 
 ### Procedure to install and configure the Hybrid Service Virtual Appliance
 {: #hcx-archi-install-cfg-hybrid-proc-install}
@@ -119,7 +119,7 @@ View the Cloud Gateway tunnel status. The network extension service must be up b
 
 ## Stretching a Layer 2 Network to IBM Cloud
 
-Extend a Layer 2 network from the on-premises data center to VCF/VCS HCX enabled cloud.
+Extend a Layer 2 network from the on-premises data center to VCS HCX enabled cloud.
 {: #hcx-archi-install-cfg-hybrid-stretch-layer-2}
 
 ### Prerequisites for stretching a Layer 2 Network to IBM Cloud
@@ -136,9 +136,9 @@ Extend a Layer 2 network from the on-premises data center to VCF/VCS HCX enabled
 3. Right-click the port group, and from the menu, select **Hybridity Actions** and select **Extend Network**.
 4. On the **Select source port groups** page, confirm the port group information and enter the **Gateway IP address** and prefix for the network. Click **Next**.
 5. On the **Select destination gateway** page, complete the following steps:
-  1. Select the VCF/VCS Hybrid Cloud Services Cloud Organization from the **Organization** menu.
-  2. Select the VCF/VCS Hybrid Cloud Services Cloud virtual data center from the menu.
-  3. Leave **Proximity Routing** disabled to force a VM within VCF/VCS Hybrid Cloud Services enabled cloud to always use the on-premises gateway to access the internet. By default, the traffic that originates from a VM in VCF/VCS Hybrid Cloud Services enabled cloud traverses the Layer 2 data path back to the on-premises data center and out to the default gateway. If **Proximity Routing** is checked, a VM within VCF/VCS Hybrid Cloud Services enabled cloud can access the internet without traversing the Layer 2 data path to vSphere.
+  1. Select the VCS Hybrid Cloud Services Cloud Organization from the **Organization** menu.
+  2. Select the VCS Hybrid Cloud Services Cloud virtual data center from the menu.
+  3. Leave **Proximity Routing** disabled to force a VM within VCS Hybrid Cloud Services enabled cloud to always use the on-premises gateway to access the internet. By default, the traffic that originates from a VM in VCS Hybrid Cloud Services enabled cloud traverses the Layer 2 data path back to the on-premises data center and out to the default gateway. If **Proximity Routing** is checked, a VM within VCS Hybrid Cloud Services enabled cloud can access the internet without traversing the Layer 2 data path to vSphere.
   4. Select the remote destination gateway from the list of gateways by clicking the row. Click **Next**.
 6. On the **Ready to complete** page, review all values provided. Click **Finish**.
 7. To track the progress of the network extension, go to the **Recent Tasks** window, click the **All** tab, and view **All Users’ Tasks**.

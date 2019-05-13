@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -56,8 +56,7 @@ For the CNI to add a container to a network, the container runtime must first cr
 
 From a network traffic perspective, we differentiate between four types in {{site.data.keyword.containerlong_notm}}, as shown in the following diagram.
 
-Figure 1. Container network traffic types
-![Container network traffic types](vcsnsxt-traffictypes.svg)
+![Container network traffic types](../../images/vcsnsxt-traffictypes.svg "Container network traffic types"){: caption="Figure 1. Container network traffic types" caption-side="bottom"}
 
 - **Intra-pod networking** – Also known as container to container communications. All containers within a pod share a network namespace, the same IP address and see each other on localhost. Traffic for each app is differentiated with a different port number. The Developer must make sure that containers within a pod don't conflict with each other with the used ports. Within a pod, there exists a so-called infrastructure container. This is the first container that the kubelet launches, and it acquires the pod’s IP and sets up the network namespace. Then, all the other containers in the pod join the infrastructure container’s network and IPC namespace. The container has network bridge mode that is enabled and all the other containers in the pod join this namespace via container mode. If the infrastructure container dies, kubelet kills all the containers in the pod and then reprovisions, typically with a new IP address. We won't provide any more detail on this traffic flow in this document.
 
@@ -109,8 +108,7 @@ In Calico, IP packets to or from a pod are routed and firewalled by the Linux ro
 -	For a workload that is sending packets, Calico ensures that the worker node is always returned as the next hop MAC address regardless of whatever routing the workload itself might configure.
 -	For packets addressed to a workload, the last IP hop is that from the destination workload’s worker node to the workload itself.
 
-Figure 2. Calico CNI
-![Calico CNI](vcsnsxt-calico-cni.svg)
+![Calico CNI](../../images/vcsnsxt-calico-cni.svg "Calico CNI"){: caption="Figure 2. Calico CNI" caption-side="bottom"}
 
 The previous diagram shows the following Calico components:
 -	**calicoctl** - command-line interface.

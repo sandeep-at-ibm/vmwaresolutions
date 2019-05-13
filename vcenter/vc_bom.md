@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-20"
+lastupdated: "2019-04-25"
 
 subcollection: vmware-solutions
 
@@ -42,15 +42,15 @@ Table 2. BOM for the software components in vCenter Server instances
 
 | Manufacturer  | Component                      | Version    |
 |:------------- |:------------------------------ |:------------- |
-| VMware       | vSphere ESXi                    | 6.7 Update 1 (build 6.7.0-11675023) or <br/>6.5 Update 2 (build 6.5.0-11925212) |
+| VMware       | vSphere ESXi                    | 6.7 Update 1 (build 6.7.0-13004448) or <br/>6.5 Update 2 (build 6.5.0-13004031) |
 | VMware       | vSphere 6.7                     | Distributed vSwitch 6.6.0 |
 | VMware       | vSphere 6.5                     | Distributed vSwitch 6.5.0 |
-| VMware       | vCenter Server Appliance        | 6.7 Update 1 (build 6.7.0-10244745) or <br/>6.5 Update 2d (build 6.5.0-10964411) |
-| VMware       | Platform Services Controller    | 6.7 Update 1 (build 6.7.0-10244745) or <br/>6.5 Update 2d (build 6.5.0-10964411) |
+| VMware       | vCenter Server Appliance        | 6.7 Update 1b (build 6.7.0-11727113) or <br/>6.5 Update 2d (build 6.5.0-10964411) |
+| VMware       | Platform Services Controller    | 6.7 Update 1b (build 6.7.0-11727113) or <br/>6.5 Update 2d (build 6.5.0-10964411) |
 | VMware       | vSAN                            | 6.7 Update 1 or <br/>6.6.1       |
 | VMware       | NSX for vSphere                 | 6.4.4 (build 11197766)    |
 | VMware       | NSX-T for vSphere               | 2.4                       |
-| Microsoft    | Windows Server Standard edition | 2012R2       |
+| Microsoft    | Windows Server Standard edition | 2016       |
 
 VMware vSAN is an optional component.
 {:note}
@@ -132,7 +132,7 @@ For instances that were deployed in V2.0 or earlier, it is recommended that you 
 
 To update the MTU setting for the Public Switch, complete the following steps in the VMware vSphere Web Client:
 1. Right-click the vDS and click **Edit Settings**.
-2. On the **Properties tab**, select the **Advanced** option.
+2. On the **Properties** tab, select the **Advanced** option.
 3. Ensure that the **Maximum MTU** value is set to 1500.
 
    When the MTU size in a vDS is changed, the attached uplinks (physical NICs) are brought down and up again. As a result, a brief outage occurs for the VMs that are using the uplink. Therefore, it is recommended to plan the MTU setting update during scheduled downtime.

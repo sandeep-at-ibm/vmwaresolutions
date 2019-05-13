@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-04-04"
 
 subcollection: vmware-solutions
 
@@ -47,7 +47,7 @@ At least 10 VMs are required for license management.
 ### Storage Size
 {: #veeam_ordering-config-storage-size}
 
-The capacity that meets your storage needs. For considerations to estimate storage size, see [Estimating Repository Capacity](https://bp.veeam.expert/resource_planning/repository_planning_sizing.html).
+The capacity that meets your storage needs. For considerations to estimate storage size, see [Estimating Repository Capacity](https://bp.veeam.expert/repository_server/repository_planning/repository_planning_sizing).
 
 ### Storage Performance
 {: #veeam_ordering-config-storage-performance}

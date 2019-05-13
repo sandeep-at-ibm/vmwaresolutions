@@ -64,7 +64,7 @@ Table 2. Default information used in application setup
 |---|---|
 |Environment |Environment Name is set to “Initial”|
 |Environment | Score is set to 5|
-|Asset Repository |Two Asset Repositories are configured; vCenter and NSX Manager. Host URL set to https://*vCenter fqdn* and https://*NSX Manager fqdn*|
+|Asset Repository | Two Asset Repositories are configured; vCenter and NSX Manager. Host URL set to `https://vCenter_fqdn` and `https://*NSX Manager_fqdn` |
 |Asset Repository |Two Asset Repositories are configured; vCenter and NSX Manager, both use the same user name. User name set to vCenter administrator user name|
 |Asset Repository |Two Asset Repositories are configured; vCenter and NSX Manager, both use the same password. Password is set to vCenter administrator password
 |Asset Repository |Two Asset Repositories are configured; vCenter and NSX Manager, both use the same password. Type is set to vCenter for one repository and NSX for the other

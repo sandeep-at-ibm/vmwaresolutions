@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 Now that Stock Trader is running in a container, and Jane is satisfied with the current micro-services, she and Todd work on how to enhance the application with extra capabilities. By refactoring Stock Trader micro-services to handle increased activity and scalability, they both see the need to add middleware into {{site.data.keyword.cloud}} Private. Some of the middleware existed in their data center, so it becomes more of a replatform exercise with some new middleware added.
 
-Figure 1. Refactoring of Stock Trader
-![Stock Trader refactoring](vcscontent-refactor.svg)
+![Stock Trader refactoring](../../images/vcscontent-refactor.svg "Stock Trader refactoring"){: caption="Figure 1. Refactoring of Stock Trader" caption-side="bottom"}
 
 This refactoring of the solution brings a common platform to run the application and the required services, bringing in a simpler management plane.
 
@@ -133,7 +132,7 @@ source)
   -	Web Terminal (open source)
   -	Skydive – network analyzer (open source)
 
-For Stock Trader, based on Jane’s solution architecture, Todd is going to start with [Db2](https://console.cloud.ibm.com/catalog/services/db2-hosted), [MQ](https://console.cloud.ibm.com/catalog/services/mq), and [Redis](https://console.cloud.ibm.com/catalog/services/databases-for-redis).
+For Stock Trader, based on Jane’s solution architecture, Todd is going to start with [Db2](https://cloud.ibm.com/catalog/services/db2-hosted), [MQ](https://cloud.ibm.com/catalog/services/mq), and [Redis](https://cloud.ibm.com/catalog/services/databases-for-redis).
 
 ## Adding middleware
 {: #vcscontent-addmidware-add-middleware}
@@ -282,8 +281,7 @@ routing details but in the same format. When Jane's portfolio micro-service depl
 to the appropriate Db2 instance. The Stock Trader application doesn't care if it's running in a VMware virtual machine, a containerized service,
 or as a cloud-managed service.
 
-Figure 2. Stock Trader - pivot services
-![Stock Trader pivot services](vcscontent-pivot-services.svg)
+![Stock Trader pivot services](../../images/vcscontent-pivot-services.svg "Stock Trader pivot services"){: caption="Figure 2. Stock Trader - pivot services" caption-side="bottom"}
 
 ## Result
 {: #vcscontent-addmidware-result}
@@ -295,9 +293,7 @@ adds more micro-services such a Twitter notification service. Istio
 routing rules enable dynamic loyalty level messaging via an internal
 Slack channel or a public Twitter channel.
 
-Figure 3. Enrichment of Stock Trader
-
-![Stock Trader enrichment](vcscontent-enrich.svg)
+![Stock Trader enrichment](../../images/vcscontent-enrich.svg "Stock Trader enrichment"){: caption="Figure 3. Enrichment of Stock Trader" caption-side="bottom"}
 
 ## Related links
 {: #vcscontent-addmidware-related}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-04-01"
 
 subcollection: vmware-solutions
 
@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 {: #iamuserinvite-reqs}
 
 * Ensure that you are the account owner or that your platform management role for the **VMware Solutions** service is **Administrator**.
-* Ensure that you reviewed the user roles and permissions in [Managing user access with Identity and Access Management](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-access-with-iam).
+* Ensure that you reviewed the user roles and permissions in [Managing user access with Identity and Access Management](/docs/services/vmwaresolutions?topic=vmware-solutions-iam#iam).
 
 ## Procedure to invite users to access services and resources
 {: #iamuserinvite-procedure}

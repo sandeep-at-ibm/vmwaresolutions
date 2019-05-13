@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-05-09"
 
 subcollection: vmware-solutions
 
@@ -33,6 +33,13 @@ You can order a new instance with FortiGate Virtual Appliance on {{site.data.key
 You can add the FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} service into an existing instance by using one the following methods:
 * From the {{site.data.keyword.vmwaresolutions_short}} console, view the instance that you want to add the service for, click **Services** on the left navigation pane, and click **Add**.
 * From the {{site.data.keyword.cloud_notm}} catalog, select **FortiGate Virtual Appliance on IBM Cloud**, specify the service settings, and select **Add to Existing Instance**.
+
+## Ordering FortiGate Virtual Appliance on IBM Cloud for private instances
+{: #fortinetvm_ordering-private}
+
+When you order FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} for instances that are not configured with public interfaces, you must provide a proxy server to complete the installation. The HTTP proxy server must be configured and available via Virtual Routing and Forwarding (VRF) before the Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}} installation can start.
+
+To ensure continued operation, FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} must have persistent access to the Fortigate license server via the internet.
 
 ## FortiGate Virtual Appliance on IBM Cloud service configuration
 {: #fortinetvm_ordering-config}
@@ -92,4 +99,4 @@ You can't change the license model after service installation. To change the lic
 * [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [Fortinet website](https://www.fortinet.com/){:new_window}
-* [Fortinet Document Library](http://docs.fortinet.com/fortigate/admin-guides){:new_window}
+* [Fortinet Document Library](https://docs.fortinet.com/product/fortigate/6.2){:new_window}

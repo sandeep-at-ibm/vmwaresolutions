@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-04-30"
 
 subcollection: vmware-solutions
 
@@ -15,23 +15,27 @@ subcollection: vmware-solutions
 {:note: .note}
 {:important: .important}
 
-# Applying updates to vCenter Server instances
+# Applying IBM management component updates to vCenter Server instances
 {: #vc_applyingupdates}
 
-The process of applying patches and updates to vCenter Server instances is automated for the management components only. The VMware updates must be applied manually.
+The procedure in this section applies to updating IBM management components for instances that are deployed in V2.1 to V2.4 releases.
 
-## Before you begin
-{: #vc_applyingupdates-prereq}
+For instances deployed in (or upgraded to) V2.5 or later, updates and patches for the IBM management components are applied automatically, as needed.
 
-When you upgrade a vCenter Server instance to a vCenter Server with Hybridity Bundle instance, you must first apply at least the base vCenter Server V2.3 software update. You must do so before you can perform the license upgrade to the Hybridity Bundle.
+For instances that are deployed in V2.0 and earlier, you must apply the updates manually.
+
+In addition, note the following behavior when you complete certain operations on your instance:
+* When you order new services, the instance is updated to the latest version.
+* When you add new clusters, these clusters are provisioned with the latest VMware components, but the existing clusters are not.
+* When you add new ESXi servers, these ESXi servers are provisioned with the latest VMware components, but the existing ESXi servers are not.
+
+{{site.data.keyword.vmwaresolutions_short}} does not offer support for applying updates and patches for VMware components. You must monitor and apply these updates yourself.
 {:important}
 
-Business Partner users do not have the option to upgrade an existing vCenter Server instance to a vCenter Server with Hybridity Bundle instance.
+## Before you apply IBM management component updates
+{: #vc_applyingupdates-prereq}
 
-Beginning with V2.5, IBM CloudDriver updates are no longer listed because automatic updates are enabled. Actions such as adding a host, adding a cluster, and ordering a service automatically updates the instance to the latest version. For more information about automatic updates, see the *IBM CloudDriver resiliency* section in [Release notes for V2.5](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-relnotes_v25).
-{:note}
-
-Before you attempt to apply an update, expand the update entry by clicking the down arrow and verify the following information:
+Expand the update entry by clicking the down arrow and verify the following information:
 * The version of the update. You must apply the updates in chronological sequence that is from the earliest one to the most recent one. Ensure that you applied all the previous updates before you apply the most recent one. For example, you must apply the V2.3 update before attempting to apply the V2.4 update.
 * Whether downtime is required.
 * The total estimated time to complete the update.
@@ -59,56 +63,21 @@ Table 1. Update levels and impact
   </tr>
 </table>
 
-## Procedure to apply updates and patches to vCenter Server instances (V2.1 or later)
+## Procedure to apply IBM management component updates (instances V2.1 to V2.4)
 {: #vc_applyingupdates-procedure}
 
-This procedure applies to instances that are deployed in V2.1 or later. For instances that are deployed in V2.0 and earlier, you must apply the VMware updates manually.
-
-1. From the {{site.data.keyword.vmwaresolutions_full}} console, click **Resources** from the left navigation pane.
+1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
 2. In the **vCenter Server Instances** table, click the instance to update.
 3. On the **Summary** page, verify that all instance details are displayed correctly. Then click **Infrastructure** on the left navigation pane to verify the details on the **Infrastructure** page.
-   If the details are not displayed, this might indicate a connectivity problem with the IBM CloudDriver Virtual Server Instance (VSI), as a result of a firewall rule or other networking issue. Resolve the problem before continuing with the next step, otherwise the update might fail.
-4. Click **Update and Patch** on the left navigation pane.
 
-   The **Update and Patch** page for an instance contains only the packages for updating the IBM management components, and not the VMware updates. VMware updates must be applied manually.   {{site.data.keyword.vmwaresolutions_short}} applies VMware updates for the following operations:
-   * When a new vCenter Server instance is deployed.
-   * When new ESXi servers are added, the new ESXi servers are provisioned with VMware updates, but the existing ESXi servers are not updated.
-   * When new clusters are added, the new clusters are provisioned with VMware updates, but the existing clusters are not updated.
-   {:note}
+   If the details are not displayed, this might indicate a connectivity problem with the IBM CloudDriver Virtual Server Instance (VSI), as a result of a firewall rule or a networking issue. Resolve the problem before continuing with the next step, otherwise the update might fail.
 
-5. For NSX license upgrades, click **Upgrade**. In the **Upgrade NSX License Edition** window, select the edition that you want to upgrade to and click **Upgrade**. License edition downgrades are not available.
+4. Click **Update and Patch** on the left navigation pane and click the down arrow to expand the IBM management update that you want to apply and then complete one of the following steps:
+   * To start the update immediately, click the overflow menu icon in the **Actions** column of the update entry, and then click **Update Now**.
+   * To schedule a future update, click the overflow menu icon in the **Actions** column of the update entry, and then click **Schedule update**. Select the date, time, and time zone when you want the update to be started. Click **OK**.
+5. If you are applying updates to instances in multi-site deployment configuration, a section titled **Steps Required to Update** is displayed. This section lists the update operations required for all instances in the multi-site deployment. You must complete the steps in sequence by clicking **Apply Update** for each step. You must wait for the previous step to complete before you start the next step.
 
-   The license upgrade replaces all existing NSX licenses on the instance. Additional charges may be incurred from an overlap of old and new licenses if you upgrade in the middle of a billing cycle. To avoid additional charges, it is recommended to upgrade the license at the end of the billing cycle.
-   {:note}
-
-6. For software updates, click the down arrow to expand the update that you want to apply and then complete one of the following steps:
-   *  To start the update immediately, click the overflow menu icon in the **Actions** column of the update entry, and then click **Update Now**.
-   *  To schedule a future update, click the overflow menu icon in the **Actions** column of the update entry, and then click **Schedule update**. Select the date, time, and time zone when you want the update to be started. Click **OK**.
-7. If you are applying updates to vCenter servers instances in multi-site deployment configuration, a section titled **Steps Required to Update** is displayed. This section lists the update operations required for all instances in the multi-site deployment. You must complete the steps in sequence by clicking **Apply Update** for each step. You must wait for the previous step to complete before you start the next step.   
-
-## Procedure to upgrade to the vCenter Server with Hybridity Bundle instance
-{: #vc_applyingupdates-procedure-upgrade-to-hybridity}
-
-During the license upgrade to the Hybridity Bundle, you are automatically upgraded to the VMware NSX Advanced edition if your vCenter Server instance is currently using the VMware NSX Base edition.
-
-If you upgrade to the Hybridity Bundle and your vCenter Server instance already has NFS file storage, you are not charged for the VMware vSAN storage. You are charged for the vSAN license because it is included with the Hybridity Bundle.
-{:note}
-
-Complete the following steps to upgrade a vCenter Server instance to the vCenter Server with Hybridity Bundle.
-
-1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
-2. In the **vCenter Server Instances** table, click the instance to upgrade.
-3. On the **Summary** page, verify that all instance details are displayed correctly. Then click **Infrastructure** on the left navigation pane to verify the details on the **Infrastructure** page.
-   If the details are not displayed, this might indicate a connectivity problem with the IBM CloudDriver VSI, as a result of a firewall rule or other networking issue. Resolve the problem before continuing with the next step, otherwise the update might fail.
-4. Click **Update and Patch** on the left navigation pane.
-5. Apply the Hybridity Bundle license upgrade. In the **License Upgrades** table, click **Upgrade** in the **Action** column, review the estimated cost, and click **Upgrade**.
-6. Optionally deploy the VMware HCX on {{site.data.keyword.cloud_notm}} service. When the Hybridity Bundle is enabled on the **License Upgrades** table, complete the following steps:
-  1. In the **License Upgrades** table, click **Deploy HCX on {{site.data.keyword.cloud_notm}}** in the **Action** column.
-  2. Scroll to the **HCX on {{site.data.keyword.cloud_notm}}** card and click **Select Service**.
-  3. Scroll down and specify the required settings for the service and click **Next**.
-  4. Review the terms that apply to the service, review the estimated cost, and click **Place Order**.
-
-## Results
+## Results after you apply IBM management component updates
 {: #vc_applyingupdates-results}
 
 1. After you apply an update, a record appears in the software update status list, where you can view the detailed progress and status of the update. When the update is completed successfully, a record appears in the installed software updates list.
@@ -151,11 +120,12 @@ Complete the following steps to upgrade a vCenter Server instance to the vCenter
       </tr>
     </table>
 
-3. If the update process fails at a specific step, [contact IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support) for assistance. You will be advised how to resolve the problem and guided to attempt the upgrade again from the step that failed.
+3. If the update process fails at a specific step, [contact IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support) for assistance. You will be advised how to resolve the problem and guided to apply the updates and patches from the step that failed.
 
 ## Related links
 {: #vc_applyingupdates-related}
 
 * [vCenter Server overview](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
+* [Upgrading licenses for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_upgrade-lic)
 * [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [FAQs](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)

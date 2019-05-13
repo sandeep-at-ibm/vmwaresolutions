@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -24,9 +24,7 @@ The architecture that is presented here complements the vCenter Server solution 
 
 The following graphic provides the overall architecture of the attached storage on vCenter Server deployment.
 
-Figure 1. High-level architecture of attached storage on {{site.data.keyword.cloud_notm}}
-
-![Attached storage architecture](../solution/vcsv4radiagrams-ra-nfs-shares.svg "High-level architecture of attached storage on IBM Cloud")
+![Attached storage architecture](../../images/vcsv4radiagrams-ra-nfs-shares.svg "Attached storage architecture"){: caption="Figure 1. High-level architecture of attached storage on {{site.data.keyword.cloud_notm}}" caption-side="bottom"}
 
 ## Physical infrastructure design
 {: #storage-infra-design-phys-infra-design}
@@ -43,7 +41,7 @@ Physical networking is handled by {{site.data.keyword.cloud_notm}}. The followin
 
 The physical network of {{site.data.keyword.cloud_notm}} is separated into three distinct networks: Public, Private, and Management. For more information about the public, private, and management networks, see [Solution overview](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview).
 
-For more information about the {{site.data.keyword.cloud_notm}} network, see [The {{site.data.keyword.cloud_notm}} network](https://www.ibm.com/cloud-computing/bluemix/our-network){:new_window}.
+For more information about the {{site.data.keyword.cloud_notm}} network, see [{{site.data.keyword.cloud_notm}} global data centers](https://www.ibm.com/cloud/data-centers/){:new_window}.
 
 Review the following information for a description of the services network that is part of the private network.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -64,8 +64,7 @@ Attribute | Specification
 
 The following figure shows the placement of the NSX Manager-controllers in relation to the other components in this architecture.
 
-Figure 1. NSX-T Manager network overview
-![NSX-T Manager network overview](vcsv4radiagrams-ra-vcs-nsx-overview.svg)
+![NSX-T Manager network overview](../../images/vcsv4radiagrams-ra-vcs-nsx-overview.svg "NSX-T Manager network overview"){: caption="Figure 1. NSX-T Manager network overview" caption-side="bottom"}
 
 ## Deployment considerations
 {: #nsx-t-design-deployment}
@@ -176,11 +175,9 @@ Logical switch name | VLAN |Transport zone | Uplink teaming policy
 
 Within this design, a single virtual edge cluster is provisioned for use by management and customer workloads. The virtual edge cluster can house multiple instances of T0 Gateways. As described earlier, multiple T0 edge gateway instances can be instantiated on a single edge cluster, each with its own routing tables. See the following figure which diagrams the functional components of an NSX-T edge cluster.
 
-Figure 2. NSX-T Edge cluster example of T0 to T1 scale
-![NSX-T Edge cluster example of T0 to T1 scale](vcsv4radiagrams-ra-nsx-t-edge-cluster-t0-to-t1-scale.svg)
+![NSX-T Edge cluster example of T0 to T1 scale](../../images/vcsv4radiagrams-ra-nsx-t-edge-cluster-t0-to-t1-scale.svg "NSX-T Edge cluster example of T0 to T1 scale"){: caption="Figure 2. NSX-T Edge cluster example of T0 to T1 scale" caption-side="bottom"}
 
-Figure 3. Management T0 gateway</br>
-![Management T0 Gateway](vcsv4radiagrams-topology-0.svg)
+![Management T0 Gateway](../../images/vcsv4radiagrams-topology-0.svg "Management T0 Gateway"){: caption="Figure 3. Management T0 gateway" caption-side="bottom"}
 
 #### Tier 0 logical gateway
 {: #nsx-t-design-tier-0}
@@ -202,8 +199,7 @@ To provide Layer three connectivity between VMs connected to logical switches th
 
 Workload to T1 to T0 gateway – virtual edge cluster
 
-Figure 4. NSX-T deployed topology virtual T0 Edge Gateway
-![NSX-T deployed topology virtual T0 Edge Gateway](vcsv4radiagrams-topology-1.svg)
+![NSX-T deployed topology virtual T0 Edge Gateway](../../images/vcsv4radiagrams-topology-1.svg "NSX-T deployed topology virtual T0 Edge Gateway"){: caption="Figure 4. NSX-T deployed topology virtual T0 Edge Gateway" caption-side="bottom"}
 
 IC4V deployed Topology 1 is basically the same topology that is deployed with NSX-V DLR and Edge gateways. With NSX-T, no dynamic routing protocol configuration between T1 and T0. RFC-1891 IP address space is used for the workload overlay network and transit overlay network. A customer private and public portable IP space is assigned for customer use. A customer designated {{site.data.keyword.cloud_notm}} private and public portable IP space is assigned to the T0 for customer use.
 
@@ -211,8 +207,7 @@ As of this design, you have the option not to delete these IP ranges if the vCen
 
 Workload to T1 to T0 gateway – physical edge cluster:
 
-Figure 5. NSX-T deployed topology physical T0 Edge Gateway
-![NSX-T deployed topology physical T0 Edge Gateway](vcsv4radiagrams-topology-2.svg)
+![[NSX-T deployed topology physical T0 Edge Gateway](../../images/vcsv4radiagrams-ra-vcs-nsx-overview.svg "[NSX-T deployed topology physical T0 Edge Gateway"){: caption="Figure 5. NSX-T deployed topology physical T0 Edge Gateway" caption-side="bottom"}
 
 The deployed Topology 2 is similar to the exception replacing the VM-based edge cluster with a pair of bare metal servers that run Red Hat Server. A customer designated {{site.data.keyword.cloud_notm}} private and public portable IP space is assigned to the T0 for customer use. As of this design, you have the option not to delete these IP ranges if the vCenter Server instance is decommissioned and deleted.
 
@@ -220,8 +215,7 @@ See a separate document or link for bill of materials on the hardware and OS spe
 
 Workload with ICP to T0 gateway – virtual edge cluster:
 
-Figure 6. NSX-T deployed topology with ICP NSX-T integration and virtual T0 Edge Gateway
-![NSX-T deployed topology with ICP NSX-T integration and virtual T0 Edge Gateway](vcsv4radiagrams-topology-3.svg)
+![[NSX-T deployed topology with ICP NSX-T integration and virtual T0 Edge Gateway](../../images/vcsv4radiagrams-topology-3.svg "[NSX-T deployed topology with ICP NSX-T integration and virtual T0 Edge Gateway"){: caption="Figure 6. NSX-T deployed topology with ICP NSX-T integration and virtual T0 Edge Gateway" caption-side="bottom"}
 
 The deployed Topology 3 contains Topology 1 with the addition of an ICP deployment that features the NSX-T integration in place of Calico, which is the default networking stack within an ICP deployment. The customer can provision additional container name spaces within ICP, which automates the creation of logical switches, IP subnetting, and T1 Gateway instances per each namespace.
 

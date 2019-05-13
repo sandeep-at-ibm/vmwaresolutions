@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-04-16"
 
 subcollection: vmware-solutions
 
@@ -21,7 +21,7 @@ For instances that were deployed in V2.4 and earlier releases, you can migrate t
 ## Before you begin
 {: #vc_addinstancetousraccount-prereq}
 
-Ensure that the {{site.data.keyword.cloud_notm}} account that you want to migrate the instance to is not an IaaS-only account. An IaaS-only account is an {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account that is not linked to an {{site.data.keyword.cloud_notm}} account.
+Ensure that the {{site.data.keyword.cloud_notm}} account that you want to migrate the instance to is not an IaaS-only account. An IaaS-only account is an {{site.data.keyword.cloud_notm}} infrastructure account that is not linked to an {{site.data.keyword.cloud_notm}} account.
 
 For more information about how to link your Iaas-only account to your PaaS account, see [Follow these steps to link your IaaS and PaaS accounts](https://www.ibm.com/blogs/bluemix/2018/03/follow-steps-link-iaas-paas-accounts/).
 
@@ -43,6 +43,6 @@ For more information about how to link your Iaas-only account to your PaaS accou
 ## Related links
 {: #vc_addinstancetousraccount-related}
 
-* [Managing user access with IAM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-access-with-iam)
+* [Managing user access with IAM](/docs/services/vmwaresolutions/services?topic=vmware-solutions-iam#iam)
 * [Inviting users to access services and resources](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-iamuserinvite)
 * [What is IBM Cloud IAM](/docs/iam?topic=iam-iamoverview)

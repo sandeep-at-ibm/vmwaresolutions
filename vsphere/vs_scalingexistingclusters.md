@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-03-28"
 
 subcollection: vmware-solutions
 
@@ -48,7 +48,7 @@ The cluster scaling starts automatically. You receive an email confirmation that
 
 If the cluster you are scaling is not ready to use, you might receive an error message.
 
-The vSphere clusters, unlike the vCenter Server and Cloud Foundation instances, are not displayed on the **Resources** page.
+The vSphere clusters, unlike the vCenter Server instances, are not displayed on the **Resources** page.
 {:note}
 
 ## Related links

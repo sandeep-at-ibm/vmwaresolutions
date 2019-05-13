@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -104,8 +104,7 @@ Additionally, it is configured to access vCenter and NSX with a specific user. I
 
 After the HCX Manager cloud component is deployed and configured, the source components create a connection to the HCX Manager via the VIP addresses configured in the NSX ESG. Once this connection is made, the cloud gateway and WAN optimizer appliances are deployed within the IBM Cloud.
 
-Figure 1. Target - Hybrid Cloud services appliance
-![Target - Hybrid Cloud services appliance](target_hybrid_cloud_services_appliance.svg)
+![Target - Hybrid Cloud services appliance](../../images/target_hybrid_cloud_services_appliance.svg "Target - Hybrid Cloud services appliance"){: caption="Figure 1. Target - Hybrid Cloud services appliance" caption-side="bottom"}
 
 ## Cloud Gateway
 {: #hcx-archi-target-cloud-gateway}
@@ -126,15 +125,14 @@ This logical switch is a private, non-routable network that is used as a communi
 
 The following figure depicts a high-level component diagram of the cloud gateway appliance and assigned connections.
 
-Figure 2. Cloud Gateway deployment
-![Cloud Gateway deployment](cloud_gateway_deployment.svg)
+![Cloud Gateway deployment](../../images/cloud_gateway_deployment.svg "Cloud Gateway deployment"){: caption="Figure 2. Cloud Gateway deployment" caption-side="bottom"}
 
 ## WAN Optimizer
 {: #hcx-archi-target-wan-opt}
 
 The second component that is deployed is the WAN Optimization appliance. While the WAN Optimization appliance is optional, it performs WAN conditioning to reduce effects of latency. It also incorporates Forward Error Correction to negate packet loss scenarios, and deduplication of redundant traffic patterns.
 
-Altogether, these reduce bandwidth use and ensure the best use of available network capacity to expedite data transfer to and from the IBM Cloud. The WAN Optimizer is disk intensive and requires sufficient amount of IOPS to function properly. As a result, the WAN optimizer resides on vSAN storage within the VCF environment and Endurance storage and supports over 2,000 IOPS within a vCenter Server deployment. The sizing specification for the WAN Optimization appliance is the following table.
+Altogether, these reduce bandwidth use and ensure the best use of available network capacity to expedite data transfer to and from the IBM Cloud. The WAN Optimizer is disk intensive and requires sufficient amount of IOPS to function properly. As a result, the WAN optimizer resides on vSAN storage if present, or on Endurance storage with 2,000 IOPS. The sizing specification for the WAN Optimization appliance is the following table.
 
 Table 9. WAN Optimizer appliance sizing
 
@@ -146,8 +144,7 @@ Table 9. WAN Optimizer appliance sizing
 
 Unlike the Cloud Gateway, the WAN Optimization appliance is only attached to a logical switch to enable communication between itself and the Cloud Gateway. This appliance is required if WAN optimization is in use within the source environment. See the following figure for a view of the network layout.
 
-Figure 3. WAN Optimizer deployment
-![WAN Optimizer deployment](wan_optimizer_deployment.svg)
+![WAN Optimizer deployment](../../images/wan_optimizer_deployment.svg "WAN Optimizer deployment"){: caption="Figure 3. WAN Optimizer deployment" caption-side="bottom"}
 
 ## Layer 2 Concentrator
 {: #hcx-archi-target-layer-2-conc}
@@ -166,8 +163,8 @@ Table 10. HT L2C appliance sizing
 
 The L2C appliance is deployed on the management VLAN as well as the public VLAN. The public interface is used for application traffic that bound for the source of the extended network. More connections such as the extended networks, are created and attached to the L2C appliance after the source administrator initiates the network extension into the IBM Cloud. Examples of these networks and connections are depicted in the following figure.
 
-Figure 4. L2 Concentrator deployment
-![L2 Concentrator deployment](l2_concentrator_deployment.svg)
+![L2 Concentrator deployment](../../images/l2_concentrator_deployment.svg "L2 Concentrator deployment"){: caption="Figure 4. L2 Concentrator deployment" caption-side="bottom"}
+
 
 ## Related links
 {: #hcx-archi-target-related}

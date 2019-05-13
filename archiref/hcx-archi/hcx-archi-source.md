@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -23,7 +23,7 @@ This section describes the architecture of each HCX component that is deployed i
 ## Introducing HCX
 {: #hcx-archi-source-intro-hcx}
 
-HCX technology seamlessly integrates vSphere vCenter networks into IBM Cloud VCF or VCS platforms. Hybrid networking extends on-premises vSphere vCenter networks into IBM Cloud, supporting bidirectional virtual machine (VM) mobility.
+HCX technology seamlessly integrates vSphere vCenter networks into IBM Cloud VCS platform. Hybrid networking extends on-premises vSphere vCenter networks into IBM Cloud, supporting bidirectional virtual machine (VM) mobility.
 
 This introduction summarizes the tasks that can be accomplished and the features that support and enhance migration and network extension.
 
@@ -125,8 +125,7 @@ There can be only one HCX deployment per vCenter. This restriction applies to li
 registered vCenters in linked mode.
 {:note}
 
-Figure 1. Source Hybrid Cloud services
-![Source Hybrid Cloud services](source_hybrid_cloud_services.svg)
+![Source Hybrid Cloud services](../../images/source_hybrid_cloud_services.svg "Source Hybrid Cloud services"){: caption="Figure 1. Source Hybrid Cloud services" caption-side="bottom"}
 
 ### HCX Virtual Appliances
 {: #hcx-archi-source-hcxva}
@@ -156,8 +155,7 @@ HCX uses strong encryption to bootstrap a site-to-site connection to IBM Cloud. 
 
 The Cloud Gateway also incorporates vSphere replication technology to perform bidirectional migration.
 
-Figure 2. Source Cloud Gateway
-![Source Cloud Gateway](source_cloud_gateway.svg)
+![Source Cloud Gateway](../../images/source_cloud_gateway.svg "Source Cloud Gateway"){: caption="Figure 2. Source Cloud Gateway" caption-side="bottom"}
 
 ### WAN Optimizer
 {: #hcx-archi-source-wan-opt}
@@ -166,8 +164,7 @@ HCX also provides software-defined WAN Optimization. The WAN Optimization applia
 
 Virtual machine migration relies on the combination of Cloud Gateway and WAN Optimization appliance to achieve unparalleled mobility between vSphere on-premises and IBM Cloud.
 
-Figure 3. Source WAN Optimizer
-![Source WAN Optimizer](source_wan_optimizer.svg)
+![Source WAN Optimizer](../../images/source_wan_optimizer.svg "Source WAN Optimizer"){: caption="Figure 3. Source WAN Optimizer" caption-side="bottom"}
 
 ### Layer 2 Concentrator
 {: #hcx-archi-source-layer-2-conc}
@@ -178,8 +175,7 @@ The Layer 2 Concentrator appliance has two interfaces:
 * Internal trunk interface: Handles virtual machine traffic on-premises for the extended networks using a translational bridge mapping to a corresponding stretched network in IBM Cloud.
 * Uplink interface: HCX uses this interface to send encapsulated overlay traffic to and from IBM Cloud. Application data travels through this interface.
 
-Figure 4. Source L2 Concentrator
-![Source L2 Concentrator](source_l2_concentrator.svg)
+![Source L2 Concentrator](../../images/source_l2_concentrator.svg "Source L2 Concentrator"){: caption="Figure 4. Source L2 Concentrator" caption-side="bottom"}
 
 ### Migration only
 {: #hcx-archi-source-mig-only}
@@ -220,7 +216,7 @@ configured between the customer premises and the cloud.
 
 When users extend their networks to the cloud, Layer 2 connectivity is stretched onto IBM Cloud. However, without route optimization, Layer 3 communication requests must return to the on-premises network origin to be routed. This return trip is called "tromboning" or "hairpinning."
 
-Tromboning is inefficient because packets must travel back and forth between the network origin and the Cloud, even when both source and destination virtual machines reside in the Cloud. In addition to inefficiency, if the forwarding path includes stateful firewalls, or other inline equipment that must see both sides of the connection, communication might fail. Virtual machine communication (without route optimization) failure occurs when the egress path exiting the cloud can be either the stretched Layer 2 network or through the VCS/VCF NSX Edge Gateway. The on-premises network does not know about the stretched network "shortcut." This problem is called asymmetric routing. The solution is to enable proximity routing so the on-premises network can learn the routes from IBM Cloud.
+Tromboning is inefficient because packets must travel back and forth between the network origin and the Cloud, even when both source and destination virtual machines reside in the Cloud. In addition to inefficiency, if the forwarding path includes stateful firewalls, or other inline equipment that must see both sides of the connection, communication might fail. Virtual machine communication (without route optimization) failure occurs when the egress path exiting the cloud can be either the stretched Layer 2 network or through the VCS NSX Edge Gateway. The on-premises network does not know about the stretched network "shortcut." This problem is called asymmetric routing. The solution is to enable proximity routing so the on-premises network can learn the routes from IBM Cloud.
 
 To prevent tromboning, HCX uses intelligent route management to choose routes appropriate to the virtual machine state.The Cloud Gateway maintains an inventory of virtual machines in the cloud. It also understands the virtual machine state, which can be:
 * Transferred to the cloud with vMotion (zero-downtime migration).
@@ -233,14 +229,13 @@ To prevent tromboning, HCX uses intelligent route management to choose routes ap
 In the diagram, the `N*a` components on the left reside in the on-premises data center, and the `N*b`
 component on the right reside in the cloud.
 
-R1 is the default gateway for N1-b, therefore, N1-b must return to R1 to route traffic through R2. To prevent asymmetric routing, HCX injects host routes into within the NSX overlay of the IBM Cloud VCS/VCF deployment If the virtual machine was newly created in the cloud, or it was moved with low downtime migration, the host route is injected immediately.
+R1 is the default gateway for N1-b, therefore, N1-b must return to R1 to route traffic through R2. To prevent asymmetric routing, HCX injects host routes into within the NSX overlay of the IBM Cloud VCS deployment If the virtual machine was newly created in the cloud, or it was moved with low downtime migration, the host route is injected immediately.
 
 If the virtual machine was transferred using vMotion, the route is not injected until the virtual machine reboots. Waiting until after the reboot ensures that the on-premises stateful devices continue to service the existing session until the virtual machine reboots. After the reboot, the routing information is consistent both on-premises and in the cloud.
 
 That is, R1 can use routing to reach a specific virtual machine through R2, rather than using the locally connected extended Network. R2 fully owns the path for other networks to reach virtual machines with Proximity Routing enabled.
 
-Figure 5. Asymmetric Routing with Proximity Routing solution
-![Asymmetric Routing with Proximity Routing solution](asymmetric_routing_proximity_routing_solution.svg)
+![Asymmetric Routing with Proximity Routing solution](../../images/asymmetric_routing_proximity_routing_solution.svg "Asymmetric Routing with Proximity Routing solution"){: caption="Figure 5. Asymmetric Routing with Proximity Routing solution" caption-side="bottom"}
 
 ### MAC address retention
 {: #hcx-archi-source-mac-addr-ret}
@@ -256,7 +251,7 @@ Figure 5. Asymmetric Routing with Proximity Routing solution
 ### Security Policy Migration
 {: #hcx-archi-source-sec-policy-mig}
 
-The Policy Migration feature enables NSX distributed firewall rules to be moved from an on-premises   vCenter to a VCF/VCS HCX enabled Cloud. Policy Migration is possible when using low downtime migration or vMotion to move a virtual machine over a network stretched with the High Throughput Layer 2 Concentrator.
+The Policy Migration feature enables NSX distributed firewall rules to be moved from an on-premises vCenter to a VCS HCX enabled Cloud. Policy Migration is possible when using low downtime migration or vMotion to move a virtual machine over a network stretched with the High Throughput Layer 2 Concentrator.
 * The on-premises data center must be running NSX 6.2.2 or greater.
 * In vSphere, the security policy is a single NSX Section, which can contain many rules. There can be only one Section (policy) per Org vDC.
 * A Set of IP addresses or MAC addresses can be identified to participate in the policy. The name of the   MAC Set or IP Set cannot exceed 218 characters.

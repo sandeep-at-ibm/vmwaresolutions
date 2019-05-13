@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-01"
 
 subcollection: vmware-solutions
 
@@ -95,6 +95,6 @@ Additionally, you can find more details about the customer subnets by completing
 ## Related links
 {: #vc_esg_config-related}
 
-* [Troubleshooting](/docs/services/vmwaresolutions/vcenter//vcenter_chg_impact.html)
+* [Troubleshooting](/docs/services/vmwaresolutions?topic=vmware-solutions-vcenter_chg_impact#vcenter_chg_impact)
 * [FAQs](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -19,8 +19,7 @@ The following information details those application elements that form the logic
 ## System components
 {: #vcscar-logical-sys-comp}
 
-Figure 1. Skate Advisor components
-![Skate Advisor Components](vcscar-components.svg)
+![Skate Advisor Components](../../images/vcscar-components.svg "Skate Advisor Components"){: caption="Figure 1. Skate Advisor components" caption-side="bottom"}
 
 The Skate Advisor consists primarily of a chatbot that can either accept text or speech recognition to interact with the system in a structured manner.
 
@@ -77,8 +76,7 @@ The chatbot is a web component that converses with the user. The chatbot can eit
 
 Chatbots interact with the system in the following manner:
 
-Figure 2. Typical chatbot query</br>
-![Typical Chatbot Query](vcscar-query.svg)
+![Typical Chatbot Query](../../images/vcscar-query.svg "Typical Chatbot Query"){: caption="Figure 2. Typical chatbot query" caption-side="bottom"}
 
 Table 2. Chatbot interactions
 
@@ -135,8 +133,7 @@ API exposed has the following general categories:
 
 Watson Discovery must be trained via a machine learning model, which is created in an iterative fashion by a subject matter expert by using the Watson Knowledge Studio.
 
-Figure 3. Discovery service training</br>
-![Discovery Service Training](vcscar-training.svg)
+![Discovery Service Training](../../images/vcscar-training.svg "Discovery Service Training"){: caption="Figure 3. Discovery service training" caption-side="bottom"}
 
 For Skate Advisor, the model consists of the relationship between entity types with a combination of rule-based training and dictionary-based training to create a model. This model allows the Discovery Service to recognize and classify tricks that are ingested from articles and video descriptions that are used as the training set.
 

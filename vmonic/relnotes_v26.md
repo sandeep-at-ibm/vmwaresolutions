@@ -135,7 +135,7 @@ For more information on Veeam on {{site.data.keyword.cloud_notm}}, see [Veeam on
 ### VMware HCX on IBM Cloud
 {: #relnotes_v26-hcx}
 
-The current release installs VMware HCX 3.5.1 on all newly deployed instances.
+The current release installs VMware HCX 3.5.1 on all newly deployed instances. For more information about the new features in HCX 3.5.1, see [VMware HCX Documentation](https://docs.vmware.com/en/VMware-HCX/index.html).
 
 ### Zerto on IBM Cloud support for vSphere ESXi V6.5 update 2c
 {: #relnotes_v26-zerto}

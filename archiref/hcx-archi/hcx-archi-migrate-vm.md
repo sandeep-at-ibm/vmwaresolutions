@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
 subcollection: vmware-solutions
 
@@ -25,7 +25,7 @@ HCX enables bidirectional migration: from on-premises to the cloud, or from the 
 Low downtime migration uses host-based replication to move a live virtual machine from a vCenter to a virtual data center or the opposite direction. To reduce downtime, the source VM remains online during the replication and is bootstrapped on the destination ESX host after replication completes.
 
 1. A migration request triggers the following actions:
-  * Replication begins a full synchronization transfer into a VCF/VCS HCX virtual data center. The time that it takes to replicate depends on the size of the VM and available bandwidth.
+  * Replication begins a full synchronization transfer into a VCS HCX virtual data center. The time that it takes to replicate depends on the size of the VM and available bandwidth.
   * Replication bandwidth consumption varies depending on how the workload changes blocks on the disk.
 2. When full synchronization finishes, a delta synchronization occurs.
 3. When the delta synchronization finishes, HCX triggers a switchover. The switchover can start immediately or scheduled until a specific time.
@@ -37,7 +37,7 @@ Low downtime migration uses host-based replication to move a live virtual machin
 ## No downtime vMotion
 {: #hcx-archi-migrate-vm-no-downtime-vm}
 
-vMotion transfers a live virtual machine from a vSphere vCenter to a VCF/VCS Cloud. This vMotion requires a stretched network. The vMotion transfer captures the virtual machine's active memory, its execution state, its IP address, and its MAC address.
+vMotion transfers a live virtual machine from a vSphere vCenter to a VCS Cloud. This vMotion requires a stretched network. The vMotion transfer captures the virtual machine's active memory, its execution state, its IP address, and its MAC address.
 
 The virtual machine hardware version must be at least version 9, or cross-cloud vMotion might fail.
 {:note}
@@ -53,8 +53,8 @@ Cold migration uses the same data plane as cross-cloud vMotion to transfer a pow
 Using the vSphere Web Client, the bidirectional migration wizard is accessible from the Hybrid Cloud Services Getting Started tab. This wizard handles all migration details, including multiple virtual machines.
 
 From the vSphere Web Client, the bidirectional migration wizard can be accessed from the Hybrid Cloud Services Getting Started tab. This wizard handles all migration details, including multiple virtual machines.
-* From vSphere to VCF/VCS Hybrid Cloud Services
-* From VCF/VCS HCX Cloud to vSphere
+* From vSphere to VCS Hybrid Cloud Services
+* From VCS HCX Cloud to vSphere
 
 ### Checking the VMs before migration
 {: #hcx-archi-migrate-vm-check-vms}

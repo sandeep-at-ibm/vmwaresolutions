@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-05"
+lastupdated: "2019-04-18"
 
 subcollection: vmware-solutions
 
@@ -56,7 +56,7 @@ For the client-side, use the **Tasks** menu to monitor the deployment of the Fle
 
 If there is a deployment failure on either side, the fleet component deployments are backed out and deleted. After you determine the cause of the failure, click the **Interconnect** tab in the HCX vCenter web UI on the client-side, then select **Install HCX Components** at the top of the screen.
 
-After successful deployment of the fleet components and after several minutes, the tunnel status for CGW and the L2C components is displayed as **Up** in the **Interconnect** tab.
+After successful deployment of the fleet components and after several minutes, the tunnel status for CGW and the L2C components is displayed as **Up** on the **Interconnect** tab.
 
 ## Related links
 {: #vcshcx-deployment-related}

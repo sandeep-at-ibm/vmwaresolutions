@@ -21,7 +21,7 @@ This release includes new features, component updates, usability enhancements, a
 
 The Single-node Trial for Migration and App Modernization is a quick way to test drive {{site.data.keyword.cloud_notm}} to migrate VMware workloads into the {{site.data.keyword.cloud_notm}} and then modernize workloads using containers. This trial is a version of {{site.data.keyword.icpfull_notm}} Hosted on VMware vCenter Server on {{site.data.keyword.cloud_notm}} that provides the Kubernetes management platform for containers and the single-tenant VMware platform that can be managed using the same familiar tools as on-premises environments.
 
-For more information, see [Single-node Trial for Migration and App Modernization overview](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-single-node-trial-for-migration-and-app-modernization-overview).
+For more information, see [Single-node Trial for Migration and App Modernization overview](/docs/services/vmwaresolutions?topic=vmware-solutions-cloud_modern_bundle_overview#cloud_modern_bundle_overview).
 
 ## Adding and removing network file system storage
 {: #relnotes_v28-nfs}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -24,8 +24,7 @@ Infrastructure management refers to the components that are managing the VMware 
 
 This design uses a PSC function that is integrated into an instance of vCenter Server. The PSC and vCenter Server are housed within the same virtual machine (VM).
 
-Figure 1. Infrastructure management</br>
-![Infrastructure management](vcsv4radiagrams-ra-inframgmt.svg)
+![Infrastructure management](../../images/vcsv4radiagrams-ra-inframgmt.svg "Infrastructure management"){: caption="Figure 1. Infrastructure management" caption-side="bottom"}
 
 The PSC located in the primary instance is assigned the default SSO domain of `vsphere.local`.
 
@@ -74,12 +73,12 @@ You are responsible to adjust the admission control policy when the cluster is l
 
 By default, the **VM restart priority** option is set to medium and the **Host isolation response** option is disabled. Additionally, **VM monitoring** is disabled and the **Datastore Heartbeating** feature is configured to include any of the cluster data stores. This approach uses the NAS data stores if they are present.
 
-## Enhanced vMotion compatibility
+### Enhanced vMotion compatibility
 {: #design_infrastructuremgmt-evc}
 
 To simplify vMotion compatibility across cluster nodes with potentially differing CPU capabilities, Enhanced vMotion Compatibility (EVC) mode is enabled at a Skylake level to ensure vMotion compatibility across cluster nodes when newer processors arrive within {{site.data.keyword.cloud_notm}} inventory and allows for cluster expansion in the future if Skylake processor servers aren't in inventory.
 
-### IBM CloudDriver
+## IBM CloudDriver
 {: #design_infrastructuremgmt-cloud-driver}
 
 Cornerstone to these solutions is automation. Automation reduces the complexity of deployment, drastically reduces deployment time, and ensures the VMware instance is deployed in a consistent manner.
@@ -87,13 +86,13 @@ Cornerstone to these solutions is automation. Automation reduces the complexity 
 IBM CloudBuilder is an ephemeral {{site.data.keyword.cloud_notm}} VM virtual server instance (VSI) which
 works to bring up a new VMware instance and perform lifecycle management functions. It is deployed when overall vCenter Server instance management is required and is destroyed when the process is complete.
 
-IBM CloudDriver can be configured to communicate back to the {{site.data.keyword.vmwaresolutions_short}}  management infrastructure over public or optionally, over a private network connection through {{site.data.keyword.cloud_notm}} object storage as the message queue. IBM CloudDriver is an IBM developed component, is not user accessible, and has the following attributes and function:
+IBM CloudDriver is an ephemeral {{site.data.keyword.cloud_notm}} VM virtual server instance (VSI) which is deployed as needed for day 2 operations such as adding hosts, clusters, or add-on services to your VMware instance.
 
-- Deployment and configuration of the vCenter Server instance within the user account.
-- Add and remove hosts from the vCenter Server clusters.
-- Add and remove clusters from vCenter Server instances.
-- Add and remove add on services or function to vCenter Server
-instances.
+The CloudBuilder and CloudDriver are deployed only on the private network connecting to the IBM management plane over a private message queue. They are IBM developed components, are not user accessible, and have the following attributes and functions:
+* Deployment and configuration of the vCenter Server instance within the user account.
+* Add and remove hosts from the vCenter Server clusters.
+* Add and remove clusters from vCenter Server instances.
+* Add and remove add on services or function to vCenter Server instances.
 
 ### Automation flow
 {: #design_infrastructuremgmt-auto-flow}

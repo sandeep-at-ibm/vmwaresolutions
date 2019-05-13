@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -14,8 +14,7 @@ subcollection: vmware-solutions
 # System context
 {: #vcsicp-systemcontext}
 
-Figure 1. System context diagram
-![System context diagram - vCenter Server {{site.data.keyword.icpfull_notm}} CAM](vcsicp-syscontext-vcs-icp-cam.svg)
+![System context diagram - vCenter Server {{site.data.keyword.icpfull_notm}} CAM](../../images/vcsicp-syscontext-vcs-icp-cam.svg "System context diagram - vCenter Server {{site.data.keyword.icpfull_notm}} CAM"){: caption="Figure 1. System context diagram" caption-side="bottom"}
 
 The following are the core components:
 

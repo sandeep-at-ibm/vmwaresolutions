@@ -78,7 +78,7 @@ A user-customized server option is available alongside the pre-built and tested 
 
 In order to enhance the scale out of your hosted VMware environment, you can now create a new cluster in a different {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) pod, or a different {{site.data.keyword.CloudDataCent_notm}} than the initial cluster deployed in the instance.
 
-For more information, see [Adding and viewing clusters for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances).
+For more information, see [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters).
 
 ### Changing components
 {: #relnotes_v19-change-comp}
@@ -117,5 +117,4 @@ The Microsoft Active Directory (AD) / Domain Name Server (DNS) is automatically 
 ## New and updated documentation
 {: #relnotes_v19-new-docs}
 
-* Learn how to safeguard your private multi-site Cloud Foundation instances while extending your VMware applications to use public {{site.data.keyword.cloud_notm}} services. For more information, see [Securely connect your private VMware workloads in the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}.
 * More documentation is provided for configuring firewalls that permit all protocol communication from the IBM CloudDriver and the SDDC Manager virtual machines. For more information, see [Components and considerations for Fortinet on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations).

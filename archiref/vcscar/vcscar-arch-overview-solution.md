@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -17,8 +17,7 @@ subcollection: vmware-solutions
 ## VMware vCenter Server on IBM Cloud components
 {: #vcscar-arch-overview-solution-vcs-comp}
 
-Figure 1. vCenter Server environment diagram
-![vCenter Server environment](vcscar-vcs.svg)
+![vCenter Server environment](../../images/vcscar-vcs.svg "vCenter Server environment"){: caption="Figure 1. vCenter Server environment diagram" caption-side="bottom"}
 
 ### Platform Service Controller
 {: #vcscar-arch-overview-solution-psc}
@@ -84,8 +83,7 @@ Disk    | 1000 GB on local datastore
 
 {{site.data.keyword.icpfull_notm}} is an application platform for developing and managing on-premises, containerized applications. {{site.data.keyword.icpfull_notm}} is an integrated environment for managing containers that includes the container orchestrator Kubernetes, a private image repository, a management console, and monitoring frameworks.
 
-Figure 2. Virtual {{site.data.keyword.icpfull_notm}} deployment with vCenter Server
-![Virtual {{site.data.keyword.icpfull_notm}} Deployment with vCenter Server](vcscar-icp.svg)
+![Virtual {{site.data.keyword.icpfull_notm}} Deployment with vCenter Server](../../images/vcscar-icp.svg "Virtual {{site.data.keyword.icpfull_notm}} Deployment with vCenter Server"){: caption="Figure 2. Virtual {{site.data.keyword.icpfull_notm}} deployment with vCenter Server" caption-side="bottom"}
 
 ### Boot node
 {: #vcscar-arch-overview-solution-boot-node}
@@ -148,8 +146,7 @@ Worker  |  3 | IP (x3)  |  4-8 |16-20   |  150
 
 {{site.data.keyword.cloud_notm}} Automation Manager (CAM) is a multi-cloud, self-service management platform that runs on {{site.data.keyword.icpfull_notm}} that helps Developers and administrators to meet business demands.
 
-Figure 3. CAM component reference
-![CAM Component Reference](vcscar-cam-components.svg)
+![CAM Component Reference](../../images/vcscar-cam-components.svg "CAM Component Reference"){: caption="Figure 3. CAM component reference" caption-side="bottom"}
 
 ### CAM proxy
 {: #vcscar-arch-overview-solution-cam-proxy}

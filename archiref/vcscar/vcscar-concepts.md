@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -75,8 +75,7 @@ trick = 'combo \+ \[“to” + combo\] \+ \[“to” \+ landing_combo\]'
 
 The following diagram is a visual summary of the rule engine.
 
-Figure 1. Skate language overview
-![Skate Language Overview](vcscar-skate-language.svg)
+![Skate Language Overview](../../images/vcscar-skate-language.svg "Skate Language Overview"){: caption="Figure 1. Skate language overview" caption-side="bottom"}
 
 ## Sample trick language
 {: #vcscar-concepts-sample-trick}

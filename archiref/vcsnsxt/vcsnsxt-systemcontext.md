@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 The system context diagram defines the key elements of a system, the boundary of the system and the entities that interact with it along with the interactions. It is a high-level diagram that provides the reader with an initial view of the system.
 
-Figure 1. System context
-![System context diagram](vcsnsxt-networking.svg)
+![System context diagram](../../images/vcsnsxt-networking.svg "System context diagram"){: caption="Figure 1. System context" caption-side="bottom"}
 
 The four core components, from a network perspective, are as follows:
 - **On-premises virtualization** - a VMware environment that is hosted on the client’s premises or a third party and currently hosts the virtual machines (VMs) running the applications to be modernized. It's the source environment for VM migrations and is loosely coupled to {{site.data.keyword.cloud}} via VMware HCX.

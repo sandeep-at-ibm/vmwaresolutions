@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-09"
 
 subcollection: vmware-solutions
 
@@ -30,9 +30,7 @@ Use Cloud Automation Manager Service Composer to display hybrid cloud services i
 
 The following diagram is an example of an {{site.data.keyword.icpfull_notm}} and CAM deployment with the {{site.data.keyword.cloud_notm}} infrastructure, with connections to the on-premises vCenter and {{site.data.keyword.containerlong_notm}} deployed on {{site.data.keyword.cloud_notm}}. Users can deploy virtual machines (VMs) on-premises and VMs into a vCenter Server instance, and containers to the {{site.data.keyword.icpfull_notm}} and {{site.data.keyword.containerlong_notm}} cluster.
 
-Figure 1. Cloud management from cloud side
-
-![On cloud - cloud management](vcsicp-oncloud-cloudmgt.svg)
+![On cloud - cloud management](../../images/vcsicp-oncloud-cloudmgt.svg "On cloud - cloud management"){: caption="Figure 1. Cloud management from cloud side" caption-side="bottom"}
 
 In the diagram, CAM logically creates cloud connections to the vCenters, cloud providers, {{site.data.keyword.icpfull_notm}}, and {{site.data.keyword.containerlong_notm}} environments. {{site.data.keyword.icpfull_notm}} Clusters must be deployed to each data center cloud environment, with MCM providing the mechanism to connect the {{site.data.keyword.icpfull_notm}} clusters into a single management view.
 
@@ -45,8 +43,7 @@ You can deploy {{site.data.keyword.icpfull_notm}} with NSX-V or NSX-T components
 
 The following diagram in an example of an {{site.data.keyword.icpfull_notm}} and CAM deployment in the on-premises infrastructure, with connections to the vCenter and {{site.data.keyword.containerlong_notm}} deployed on {{site.data.keyword.cloud_notm}}. Users can deploy VMs and containers on-premises, VMs into vCenter Server instances, and containers to the {{site.data.keyword.containerlong_notm}} cluster.
 
-Figure 2. Cloud management from on-premises side
-![On-premises cloud management](vcsicp-onprem-cloudmgt.svg)
+![On-premises cloud management](../../images/vcsicp-onprem-cloudmgt.svg "On-premises cloud management"){: caption="Figure 2. CAM component reference" caption-side="bottom"}
 
 The strongSwan VPN is used to established connectivity with the deployed {{site.data.keyword.containerlong_notm}} containers. The strongSwan VPM might be replaced with Direct link connectivity.
 

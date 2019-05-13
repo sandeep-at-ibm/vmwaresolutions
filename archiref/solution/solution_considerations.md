@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-25"
+lastupdated: "2019-04-01"
 
 subcollection: vmware-solutions
 
@@ -46,7 +46,7 @@ Complete the following steps to manage access to your {{site.data.keyword.cloud_
 
 - Access instance management endpoints by using the [{{site.data.keyword.cloud_notm}} VPN](https://www.softlayer.com/vpn-access) or your [{{site.data.keyword.cloud_notm}} Direct-Link connection](https://www.ibm.com/cloud/direct-link).
 - Devise a strategy for public network connectivity from within your instance. Your options include: the sample customer VMware NSX Edge Services Gateway (ESG), gateway appliances such as Vyatta and FortiGate, and proxy servers deployed in the {{site.data.keyword.cloud_notm}} network or on your own network accessed through DirectLink.
-- Plan whether to deploy your workload on {{site.data.keyword.cloud_notm}} VLANs with [{{site.data.keyword.cloud_notm}} portable IP addresses](/docs/infrastructure/subnets?topic=subnets-getting-started-with-subnets-and-ips) or [on NSX logical switches (VXLANs) using your own IP addresses](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_overview). Note that using NSX software-defined networking (SDN) gives you the greatest flexibility to manage and secure your workload network in the {{site.data.keyword.cloud_notm}}.
+- Plan whether to deploy your workload on {{site.data.keyword.cloud_notm}} VLANs with [{{site.data.keyword.cloud_notm}} portable IP addresses](/docs/infrastructure/subnets?topic=subnets-getting-started-subnets-ips#getting-started-subnets-ips) or [on NSX logical switches (VXLANs) using your own IP addresses](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_overview). Note that using NSX software-defined networking (SDN) gives you the greatest flexibility to manage and secure your workload network in the {{site.data.keyword.cloud_notm}}.
 - Use NSX ESGs, [IBM Cloud Vyatta](https://cloud.ibm.com/catalog/infrastructure/virtual-router-appliance), and DirectLink peering to plan for connectivity to workloads (Network Address Translation, Virtual Private Network, routing).
 - If implementing Cross-vCenter NSX, ensure that your local segment ID ranges are not overlapping before deploying any local workloads.
 
@@ -107,7 +107,7 @@ Ensure to plan for and implement the following solutions for monitoring your ins
 - An alert infrastructure, including configuration of the SMTP server and short message service (SMS) gateway, as needed.
 - Proactive monitoring of hosts, drives, management software, and network.
 - vSAN monitoring, if applicable.
-- Capacity monitoring and planning. You can [add and remove clusters](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances) and [add and remove hosts](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers) to your instance from the {{site.data.keyword.vmwaresolutions_short}} console.
+- Capacity monitoring and planning. You can [add and remove clusters](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters) and [add and remove hosts](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers) to your instance from the {{site.data.keyword.vmwaresolutions_short}} console.
 - Monitoring your backup infrastructure and backup jobs.
 
 ## Business continuity and availability

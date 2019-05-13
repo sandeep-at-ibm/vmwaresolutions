@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
 subcollection: vmware-solutions
 
@@ -17,7 +17,7 @@ subcollection: vmware-solutions
 {: #hcx-archi-trbl-cloud-reg}
 
 * Hybrid Cloud Services does not retry if credentials are incorrect. The credentials must authenticate before Hybrid Cloud Services attempts to log in and start the cloud registration.
-* Cloud registration can fail if the credentials are mistyped or if the VCF/VCS Hybrid Cloud Services Cloud credentials are changed after Hybrid Cloud Services registers with VCF/VCS Hybrid Cloud Services Cloud, causing a mismatch.
+* Cloud registration can fail if the credentials are mistyped or if the VCS Hybrid Cloud Services Cloud credentials are changed after Hybrid Cloud Services registers with VCS Hybrid Cloud Services Cloud, causing a mismatch.
 * To update the credentials in the web client, go to the Hybrid Cloud Services Getting Started tab, and under **Basic tasks** choose **Register new Cloud**.
 
 ## Duplicate MAC address

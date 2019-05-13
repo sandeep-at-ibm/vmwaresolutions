@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -28,8 +28,7 @@ By default, {{site.data.keyword.containerlong_notm}} sets up the cluster with ac
 - A private IP address for each worker node, which gives worker nodes a private network interface
 - An automatic, secure OpenVPN connection between all worker nodes and the master node
 
-Figure 1. vCenter Server and {{site.data.keyword.containerlong_notm}} network
-![vCenter Server-{{site.data.keyword.containerlong_notm}} networking diagram](vcsiks-networking.svg)
+![vCenter Server-{{site.data.keyword.containerlong_notm}} networking diagram](../../images/vcsiks-networking.svg "vCenter Server-{{site.data.keyword.containerlong_notm}} networking diagram"){: caption="Figure 1. vCenter Server and {{site.data.keyword.containerlong_notm}} network" caption-side="bottom"}
 
 ### IBM Cloud Kubernetes Service and vCenter Server integration
 {: #vcsiks-overview-network-iks-vcs-integration}

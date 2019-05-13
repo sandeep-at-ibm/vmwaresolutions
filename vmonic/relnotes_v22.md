@@ -39,7 +39,7 @@ During the V2.2 upgrade process, the IBM CloudDriver virtual machine is redeploy
 * If you are using a backup solution that references the IBM CloudDriver virtual machine, after you upgrade to V2.2, ensure that the backup solution is referencing the new IBM CloudDriver virtual machine.
 * Before you upgrade to V2.2, ensure that you replace the Legacy Veeam VSI with the Veeam on {{site.data.keyword.cloud_notm}} service. Legacy Veeam is no longer supported in V2.2 and future releases, therefore the management component backups that are associated with Legacy Veeam are not available for a restore.
 
-For more information about using the Veeam on {{site.data.keyword.cloud_notm}} service, see the following topics:
+For more information about using the Veeam on {{site.data.keyword.cloud_notm}} service, see:
 * [Components and considerations for Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)
 * [Managing Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
 
@@ -91,7 +91,7 @@ For more information, see the *System settings* section in [Ordering vCenter Ser
 ### Increased number of clusters per instance
 {: #relnotes_v22-clusters-per-inst}
 
-You can now add up to 10 clusters to VMware vCenter Server instances that are deployed in or upgraded to V2.2. and later releases. For more information, see [Adding and viewing clusters for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)​.
+You can now add up to 10 clusters to VMware vCenter Server instances that are deployed in or upgraded to V2.2. and later releases. For more information, see [Adding and viewing clusters for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)​.
 
 ## Updates for VMware vSphere clusters
 {: #relnotes_v22-vss}

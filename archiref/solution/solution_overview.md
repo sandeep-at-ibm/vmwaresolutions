@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-15"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -22,8 +22,7 @@ Review this information for the design of the {{site.data.keyword.vmwaresolution
 
 This design serves as a baseline architecture that provides the foundation for other internal or vendor specific components to be added for specific use cases.
 
-Figure 1. Overview of VMware on {{site.data.keyword.cloud_notm}}
-![Overview of VMware on {{site.data.keyword.cloud_notm}}](vcsv4radiagrams-ra-variationsonatheme.svg "The solution virtualizes compute, network, and optionally storage resources to be consumed by VMs where you can run your applications.")
+![Overview of VMware on {{site.data.keyword.cloud_notm}}](../../images/vcsv4radiagrams-ra-variationsonatheme.svg "The solution virtualizes compute, network, and optionally storage resources to be consumed by VMs where you can run your applications."){: caption="Figure 1. Overview of VMware on {{site.data.keyword.cloud_notm}}" caption-side="bottom"}
 
 ## Key benefits of IBM Cloud for VMware Solutions
 {: #solution_overview-benefits}

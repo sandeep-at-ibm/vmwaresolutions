@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-28"
 
 subcollection: vmware-solutions
 
@@ -54,7 +54,7 @@ You can check notifications for the status of system or user operations. You can
        </tr>
        <tr>
          <td>Type</td>
-         <td>The type of component that the reported event is related to:<ul><li>vCenter Server instances</li><li>Cloud Foundation instances</li><li>Services</li><li>System</li></ul></td>
+         <td>The type of component that the reported event is related to:<ul><li>vCenter Server instances</li><li>Services</li><li>System</li></ul></td>
        </tr>
        <tr>
          <td>Resource</td>

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -57,8 +57,7 @@ In addition to the {{site.data.keyword.icpfull_notm}} hardware requirements, you
 ## Virtual structure
 {: #vcsicp-arch-overview-infrastructure-virtual-struct}
 
-Figure 1. Physical structure of vCenter Server and {{site.data.keyword.icpfull_notm}} deployment
-![Physical structure of VCS and {{site.data.keyword.icpfull_notm}} deployment](vcsicp-phy-ics-icp-deployment.svg)
+![Physical structure of vCenter Server and {{site.data.keyword.icpfull_notm}} deployment](../../images/vcsicp-phy-ics-icp-deployment.svg "Physical structure of vCenter Server and {{site.data.keyword.icpfull_notm}} deployment"){: caption="Figure 1. Physical structure of vCenter Server and {{site.data.keyword.icpfull_notm}} deployment" caption-side="bottom"}
 
 Within the vCenter Server instance, the {{site.data.keyword.icpfull_notm}} instance is deployed with a dedicated NSX Edge Services Gateway (ESG) and Distributed Logical Router (DLR). The {{site.data.keyword.icpfull_notm}} installation is loaded into the VXLAN subnet that is defined in the previous components.
 

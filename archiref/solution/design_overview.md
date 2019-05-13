@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-15"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -19,8 +19,7 @@ The offerings in this solution portfolio include VMware vSphere products within 
 
 The architecture consists of a single cloud region and supports the ability to extend into more cloud regions that are located in another geography and into another {{site.data.keyword.cloud_notm}} pod within the same data center. A region is defined as a unique vCenter Server instance. This design also allows for automated expansion and contraction of virtual capacity within a vCenter Server instance.
 
-Figure 1. Solution components of {{site.data.keyword.vmwaresolutions_short}}
-![Solution components of {{site.data.keyword.vmwaresolutions_short}}](vcsv4radiagrams-ra-full.svg "The solution comprises physical infrastructure, virtual infrastructure, infrastructure management, and common services.")
+![Solution components of {{site.data.keyword.vmwaresolutions_short}}](../../images/vcsv4radiagrams-ra-full.svg "The solution comprises physical infrastructure, virtual infrastructure, infrastructure management, and common services."){: caption="Figure 1. Solution components of {{site.data.keyword.vmwaresolutions_short}}" caption-side="bottom"}
 
 ## Related links
 {: #design_overview-related}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-29"
 
 subcollection: vmware-solutions
 
@@ -59,9 +59,9 @@ To remediate hosts and clusters, follow these steps:
 6. Optionally, on the **Advanced options** page, select the option to schedule the remediation to run later and specify a unique name and an optional description for the task. The time that you set for the scheduled task is the time on the VCSA. Optionally, select the option to ignore warnings about unsupported devices on the host, or no longer supported VMFS datastore to continue with the remediation. Click **Next**.
 7. On the Host **Remediation Options** page, from the **VM Power state** drop-down menu, you can select the change in the power state of the VMs and virtual appliances that are running on the hosts to be remediated. A host cannot enter maintenance mode until VMs on the host are powered off, suspended, or migrated with vMotion to other hosts in a DRS cluster. Some updates require that a host enters maintenance mode before remediation. VMs and appliances cannot run when a host is in maintenance mode. To reduce the host remediation downtime at the expense of VM availability, you can choose to shut down or suspend VMs and virtual appliances before remediation. In a DRS cluster, if you do not power off the VMs, the remediation takes longer but the VMs are available during the entire remediation process because they are migrated with vMotion to other hosts. The selections are as follows:
 
-- **Power Off virtual machines** - Power off all VMs and virtual appliances before remediation.
-- **Suspend virtual machines** - Suspend all running VMs and virtual appliances before remediation.
-- **Do Not Change VM Power State** - Leave VMs and virtual appliances in their current power state.
+  * **Power Off virtual machines** - Power off all VMs and virtual appliances before remediation.
+  * **Suspend virtual machines** - Suspend all running VMs and virtual appliances before remediation.
+  * **Do Not Change VM Power State** - Leave VMs and virtual appliances in their current power state.
 
 8. Optionally, select **Disable any removable media devices connected to the virtual machine on the host**. VUM does not remediate hosts on which VMs have connected CD, DVD, or diskette drives. In cluster environments, connected media devices might prevent vMotion if the destination host does not have an identical device or mounted ISO image, which in turn prevents the source host from entering maintenance mode. After remediation, VUM reconnects the removable media devices if they are still available.
 9. Optionally, select **Retry entering maintenance mode in case of failure**, specify the number of retries, and specify the time to wait between retries. VUM waits for the retry delay period and retries putting the host into maintenance mode as many times as you indicate in Number of retries field.
@@ -83,4 +83,4 @@ There is no requirement in a vCenter Server instance to select the check box und
 {: #vum-staging-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on 	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrations)
+* [VMware Solutions on 	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (demonstrations)

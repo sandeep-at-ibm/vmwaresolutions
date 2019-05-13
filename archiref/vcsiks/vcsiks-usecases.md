@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -23,8 +23,7 @@ The VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bun
 
 The vCenter Server with Hybridity Bundle offering from {{site.data.keyword.cloud_notm}} enables secure connections between the peer on-premises source site and the {{site.data.keyword.cloud_notm}} target site.
 
-Figure 1. VMware Hybridity services
-![VMware Hybrid Cloud Extension Services](vcsiks-hcx.svg)
+![VMware Hybrid Cloud Extension Services](../../images/vcsiks-hcx.svg "VMware Hybrid Cloud Extension Services"){: caption="Figure 1. VMware Hybridity services" caption-side="bottom"}
 
 The vCenter Server with Hybridity Bundle creates a loosely coupled interconnectivity between on-premises and {{site.data.keyword.cloud_notm}} and enables capabilities such as:
 - **Simple interconnectivity** – logical network connections are established easily over any physical connection that includes public internet, private VPN, or {{site.data.keyword.cloud_notm}} Direct Link.
@@ -44,8 +43,7 @@ Using this solution Acme Skateboards successfully migrated their on-premises VMw
 
 Acme Skateboards wants to deploy a hybrid architecture on {{site.data.keyword.cloud_notm}} consisting of vCenter Server and {{site.data.keyword.icpfull_notm}}, for their journey to application modernization. Their requirements are to run their databases on virtual machines, the applications and web services in containers, and use a common set of tools for network and security management.
 
-Figure 2. Acme Skateboards hybrid application
-![Acme Skateboards hybrid application diagram](vcsiks-acme-app-arch.svg)
+![Acme Skateboards hybrid application diagram](../../images/vcsiks-acme-app-arch.svg "Acme Skateboards hybrid application diagram"){: caption="Figure 2. Acme Skateboards hybrid application" caption-side="bottom"}
 
 {{site.data.keyword.vmwaresolutions_short}} provides automation to deploy VMware technology components in {{site.data.keyword.CloudDataCents_notm}} across the globe. The architecture consists of a single cloud region and supports the ability to extend into more cloud regions that are located in another geography or into another {{site.data.keyword.cloud_notm}} pod within the same data center.
 
