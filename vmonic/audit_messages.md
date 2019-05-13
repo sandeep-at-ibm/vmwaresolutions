@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-05-03"
+lastupdated: "2019-05-13"
 
 subcollection: vmware-solutions
 
@@ -245,7 +245,7 @@ The following sections provide all of the possible messages that can be issued t
 * ``Cancelling the vCenter Server with Hybridity Bundle conversion...``
 
 ## Related links
-{: #ibm_use-related}
+{: #audit_messages-related}
 
 * [Considerations about changing vCenter Server artifacts](/docs/services/vmwaresolutions?topic=vmware-solutions-vcenter_chg_impact#vcenter_chg_impact-automation-id)
 * [Activity Tracker events](/docs/services/vmwaresolutions?topic=vmware-solutions-at-events#at-events)

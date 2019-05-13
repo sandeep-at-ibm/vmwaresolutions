@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-05-13"
 
 subcollection: vmware-solutions
 
@@ -207,7 +207,7 @@ As of this design, you have the option not to delete these IP ranges if the vCen
 
 Workload to T1 to T0 gateway – physical edge cluster:
 
-![[NSX-T deployed topology physical T0 Edge Gateway](../../images/vcsv4radiagrams-ra-vcs-nsx-overview.svg "[NSX-T deployed topology physical T0 Edge Gateway"){: caption="Figure 5. NSX-T deployed topology physical T0 Edge Gateway" caption-side="bottom"}
+![NSX-T deployed topology physical T0 Edge Gateway](../../images/vcsv4radiagrams-ra-vcs-nsx-overview.svg "[NSX-T deployed topology physical T0 Edge Gateway"){: caption="Figure 5. NSX-T deployed topology physical T0 Edge Gateway" caption-side="bottom"}
 
 The deployed Topology 2 is similar to the exception replacing the VM-based edge cluster with a pair of bare metal servers that run Red Hat Server. A customer designated {{site.data.keyword.cloud_notm}} private and public portable IP space is assigned to the T0 for customer use. As of this design, you have the option not to delete these IP ranges if the vCenter Server instance is decommissioned and deleted.
 
@@ -215,7 +215,7 @@ See a separate document or link for bill of materials on the hardware and OS spe
 
 Workload with ICP to T0 gateway – virtual edge cluster:
 
-![[NSX-T deployed topology with ICP NSX-T integration and virtual T0 Edge Gateway](../../images/vcsv4radiagrams-topology-3.svg "[NSX-T deployed topology with ICP NSX-T integration and virtual T0 Edge Gateway"){: caption="Figure 6. NSX-T deployed topology with ICP NSX-T integration and virtual T0 Edge Gateway" caption-side="bottom"}
+![NSX-T deployed topology with ICP NSX-T integration and virtual T0 Edge Gateway](../../images/vcsv4radiagrams-topology-3.svg "[NSX-T deployed topology with ICP NSX-T integration and virtual T0 Edge Gateway"){: caption="Figure 6. NSX-T deployed topology with ICP NSX-T integration and virtual T0 Edge Gateway" caption-side="bottom"}
 
 The deployed Topology 3 contains Topology 1 with the addition of an ICP deployment that features the NSX-T integration in place of Calico, which is the default networking stack within an ICP deployment. The customer can provision additional container name spaces within ICP, which automates the creation of logical switches, IP subnetting, and T1 Gateway instances per each namespace.
 

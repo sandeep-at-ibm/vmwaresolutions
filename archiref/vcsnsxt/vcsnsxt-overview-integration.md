@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-06"
+lastupdated: "2019-05-13"
 
 subcollection: vmware-solutions
 
@@ -132,7 +132,7 @@ How the route tables in the ESG and vRouters are populated depends on the method
 
 * [{{site.data.keyword.cloud_notm}} global data centers](https://www.ibm.com/cloud/data-centers/){:new_window}
 * [Container white paper](https://communities.vmware.com/servlet/JiveServlet/download/2741654-198902/Containers%20and%20Container%20Networking%20for%20Network%20Engineers.pdf){:new_window} (PDF download)
-* [VMware HCX on {{site.data.keyword.cloud_notm}} blog](https://www.ibm.com/blogs/bluemix/2018/01/vmware-hcx-ibm-cloud-aka-really-cool-space-age-kind-now-available/){:new_window}
+* [VMware HCX on {{site.data.keyword.cloud_notm}} blog](https://www.ibm.com/cloud/blog/announcements/vmware-hcx-ibm-cloud-aka-really-cool-space-age-kind-now-available){:new_window}
 * [VMware HCX on {{site.data.keyword.cloud_notm}} data sheet](https://www.ibm.com/downloads/cas/MPVXKWNM){:new_window}
 * [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
 * [NSX for vSphere 6.4.3 configuration maximums](https://configmax.vmware.com/guest){:new_window}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-05-02"
+lastupdated: "2019-05-13"
 
 subcollection: vmware-solutions
 
@@ -69,7 +69,7 @@ Table 4. Active Directory user IDs
 | Customer | Administrator | Created for customer use only. |
 
 ## Related links
-{: #ibm_use-related}
+{: #audit_user_ids-related}
 
 * [Considerations about changing vCenter Server artifacts](/docs/services/vmwaresolutions?topic=vmware-solutions-vcenter_chg_impact#vcenter_chg_impact-automation-id)
 * [Activity Tracker events](/docs/services/vmwaresolutions?topic=vmware-solutions-at-events#at-events)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-16"
+lastupdated: "2019-05-13"
 
 subcollection: vmware-solutions
 
@@ -23,7 +23,7 @@ For instances that were deployed in V2.4 and earlier releases, you can migrate t
 
 Ensure that the {{site.data.keyword.cloud_notm}} account that you want to migrate the instance to is not an IaaS-only account. An IaaS-only account is an {{site.data.keyword.cloud_notm}} infrastructure account that is not linked to an {{site.data.keyword.cloud_notm}} account.
 
-For more information about how to link your Iaas-only account to your PaaS account, see [Follow these steps to link your IaaS and PaaS accounts](https://www.ibm.com/blogs/bluemix/2018/03/follow-steps-link-iaas-paas-accounts/).
+For more information about how to link your Iaas-only account to your PaaS account, see [Follow these steps to link your IaaS and PaaS accounts](https://www.ibm.com/cloud/blog/follow-steps-link-iaas-paas-accounts){:new_window}.
 
 ## Procedure to migrate instances
 {: #vc_addinstancetousraccount-procedure}
