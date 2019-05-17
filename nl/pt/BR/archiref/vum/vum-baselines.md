@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-29"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -16,7 +16,7 @@ subcollection: vmwaresolutions
 
 As linhas de base têm uma coleção de uma ou mais correções, extensões, service packs, correções de bug ou upgrades e podem ser classificadas como linhas de base de correção, extensão ou upgrade. Os grupos de linhas de base são montados por meio de linhas de base existentes. Os grupos de linhas de base do host podem ter uma única linha de base de upgrade e várias linhas de base de correção e extensão. Os grupos de linhas de base da máquina virtual e do dispositivo virtual podem ter até três linhas de base de upgrade: uma linha de base de upgrade do VMware Tools, uma linha de base de upgrade de hardware de máquina virtual e uma linha de base de upgrade de dispositivo virtual.
 
-O VUM inclui linhas de base predefinidas, que não podem ser editadas nem excluídas. É possível usar as linhas de base predefinidas, ou criar linhas de base de correção, extensão e upgrade que atendem a seus critérios. As linhas de base customizadas que você cria e as linhas de base predefinidas podem ser combinadas em grupos de linhas de base.
+O VMware Update Manager (VUM) inclui linhas de base predefinidas, que não podem ser editadas ou excluídas. É possível usar as linhas de base predefinidas, ou criar linhas de base de correção, extensão e upgrade que atendem a seus critérios. As linhas de base customizadas que você cria e as linhas de base predefinidas podem ser combinadas em grupos de linhas de base.
 
 O VUM inclui linhas de base padrão que podem ser usadas para varrer qualquer um dos dispositivos a seguir, a fim de determinar se os hosts em seu ambiente são atualizados com as correções mais recentes ou se os dispositivos virtuais e as máquinas virtuais são submetidos a upgrade para a versão mais recente:
 * Qualquer máquina virtual
@@ -34,10 +34,10 @@ Para usar linhas de base e grupos de linhas de base, deve-se anexá-los a objeto
 
 1. Usando o vSphere Web Client, acesse **Página inicial** > **Hosts e clusters**.
 2. Clique no objeto de cluster que você deseja varrer.
-3. Clique em **Anexar linha de base** e, em seguida, selecione as duas Linhas de base de correção predefinidas, em seguida, clique em **OK**.
+3. Acesse o VUM, clique em **Anexar linha de base** e, em seguida, selecione as duas Linhas de base de correção predefinidas. Clique em **OK**.
 
 ## Links relacionados
 {: #vum-baselines-related}
 
-* [Arquitetura de solução do VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrações)
+* [Arquitetura da solução VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
+* [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (demonstrações)

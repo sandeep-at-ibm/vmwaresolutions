@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -15,7 +15,7 @@ subcollection: vmwaresolutions
 {:note: .note}
 {:important: .important}
 
-# Zerto on IBM Cloud Visão Geral
+# Visão geral do Zerto on IBM Cloud
 {: #addingzertodr}
 
 O serviço Zerto on {{site.data.keyword.cloud}} integra os recursos de replicação e de recuperação de desastre às ofertas de implementação para proteger e recuperar dados no ambiente virtual do VMware no {{site.data.keyword.cloud_notm}}.
@@ -58,7 +58,6 @@ Licença do Zerto Replication V6.5 atualização 3
 ## Links relacionados
 {: #addingzertodr-related}
 
-* [Sobre o {{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-prod_overview)
 * [Solicitando on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-zerto_ordering)
 * [Gerenciando o Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingzertodr)
 * [Solicitando serviços gerenciados para o Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)

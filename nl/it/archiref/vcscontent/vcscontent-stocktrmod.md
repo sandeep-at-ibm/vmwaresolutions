@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-23"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -88,7 +88,7 @@ Center](https://www.ibm.com/support/knowledgecenter/SSBS6K_3.1.0/manage_cluster/
 ## Distribuisci Transformation Advisor e Microclimate
 {: #vcscontent-stocktrmod-deploy-tam}
 
-Una volta che Todd ha eseguito {{site.data.keyword.icpfull_notm}}, installa Transformation Advisor insieme a Microclimate. Todd apre il [catalogo](https://www.ibm.com/cloud/private/developer) e visualizza tutti i contenuti disponibili.
+Una volta che Todd ha eseguito {{site.data.keyword.icpfull_notm}}, installa Transformation Advisor insieme a Microclimate. Todd apre il [catalogo](https://www.ibm.com/cloud/private/architecture) e visualizza tutti i contenuti disponibili.
 
 Todd cerca Transformation Advisor e Microclimate e li installa utilizzando le istruzioni del file readme fornite quando fa clic sul grafico Helm.
 
@@ -110,5 +110,4 @@ Todd non ha modificato l'origine dati durante la fase di trasformazione. Transfo
 ## Link correlati
 {: #vcscontent-stocktrmod-related}
 
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

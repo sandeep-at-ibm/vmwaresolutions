@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-26"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -105,8 +105,8 @@ subcollection: vmwaresolutions
 **注：**
 * 如果选择的是 vSAN 组件，那么位置列表将按 SSD 可用性进行过滤。
 
-* FRA05 数据中心不支持 Broadwell 裸机服务器。
-* LON05 数据中心不支持 SAP 认证或 Broadwell 裸机服务器。
+* Broadwell 裸机服务器不可用于 **FRA05 - 法兰克福**数据中心位置。
+* SAP 认证的裸机服务器和 Broadwell 裸机服务器不可用于 **LON05 - 伦敦**数据中心位置。
 
 ### Skylake
 {: #vs_orderinginstances-skylake}
@@ -144,9 +144,6 @@ subcollection: vmwaresolutions
 
 | CPU 模型选项   |RAM 选项|
 |:------------- |:------------- |
-|双 Intel Xeon E5-2620 V4 / 共 16 个核心，2.1 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
-|双 Intel Xeon E5-2650 V4 / 共 24 个核心，2.2 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
-|双 Intel Xeon E5-2690 V4 / 共 28 个核心，2.6 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
 |四核 Intel Xeon E7-4820 V4 / 共 40 个核心，2.0 GHz|128 GB、256 GB、512 GB、1 TB、2 TB、3 TB|
 |四核 Intel Xeon E7-4850 V4 / 共 64 个核心，2.1 GHz|128 GB、256 GB、512 GB、1 TB、2 TB、3 TB|
 
@@ -169,8 +166,8 @@ subcollection: vmwaresolutions
 * **vSAN 容量磁盘数**：指定要添加的容量磁盘数。
 * 如果要添加的容量磁盘数超过 8 个的限制，请选中**高性能 Intel Optane** 框。此选项用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘；此选项对于需要更短等待时间和更高 IOPS 吞吐量的工作负载而言非常有用。
 
-  **高性能 Intel Optane** 选项仅可用于 Skylake CPU 型号双 Intel Xeon Gold 5120 和双 Intel Xeon Gold 6140。
-  {:note}
+  **高性能 Intel Optane** 选项仅可用于 Skylake CPU 型号。
+{:note}
 
 * 查看 **vSAN 高速缓存磁盘的磁盘类型**和 **vSAN 高速缓存磁盘数**值。这些值依赖于是否选中了**高性能 Intel Optane** 框。
 
@@ -212,12 +209,7 @@ subcollection: vmwaresolutions
 ### 公用或专用网络
 {: #vs_orderinginstances-public-private-network}
 
-网络接口卡 (NIC) 启用设置基于您选择的是**公用和专用网络**还是**仅专用网络**。以下附加组件服务需要公共 NIC，并且这些服务在您选择专用选项时不可用：
-
-* F5 on {{site.data.keyword.cloud_notm}}
-* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
-* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
-* Zerto on {{site.data.keyword.cloud_notm}}
+网络接口卡 (NIC) 启用设置基于您选择的是**公用和专用网络**还是**仅专用网络**。
 
 ### VLAN
 {: #vs_orderinginstances-vlans}
@@ -297,7 +289,7 @@ subcollection: vmwaresolutions
 
 如果已下订单，那么集群的部署将自动启动，并且您将收到电子邮件确认，指示正在处理订单。集群准备就绪可供使用时，将通过电子邮件通知您。
 
-与 vCenter Server 和 Cloud Foundation 实例不同，vSphere 集群不会显示在**资源**页面上。
+与 vCenter Server 实例不同，vSphere 集群不会显示在**资源**页面上。
 {:note}
 
 ## 相关链接

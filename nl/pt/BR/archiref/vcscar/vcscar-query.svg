@@ -25,7 +25,7 @@
   <path d="m12.5 15v16.67m0-13.34h-10.5m10.5 0h10.5m-10.5 13.34-10.5 13.33m10.5-13.33 10.5 13.33" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
   <g font-family="Helvetica" font-size="10px" text-anchor="middle">
    <rect x="2" y="54" width="23" height="13" fill="#fff" stroke-width="0"/>
-   <text x="12" y="61.5">User</text>
+   <text x="12" y="61.5">Usuário</text>
   </g>
   <g pointer-events="none" stroke="#000">
    <g stroke-miterlimit="10">
@@ -91,7 +91,7 @@
   </g>
   <g font-family="Helvetica" font-size="10px" text-anchor="middle">
    <rect x="527" y="186" width="23" height="13" fill="#fff" stroke-width="0"/>
-   <text x="537" y="194">User</text>
+   <text x="537" y="194">Usuário</text>
   </g>
   <g pointer-events="none" stroke="#000">
    <path d="m468.5 162.5h51.97" fill="none" stroke-miterlimit="10"/>

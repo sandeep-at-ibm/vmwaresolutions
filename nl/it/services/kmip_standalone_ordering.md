@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-04-03"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -21,7 +21,7 @@ Puoi ordinare un'istanza KMIP for VMware on {{site.data.keyword.cloud}} senza as
 
 Assicurati di aver completato le seguenti attività:
 * Hai configurato le credenziali dell'infrastruttura {{site.data.keyword.cloud_notm}} nella pagina **Impostazioni**. Per ulteriori informazioni, vedi [Account utente e impostazioni](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount).
-* Hai esaminato tutte le considerazioni in [Considerazioni sull'istallazione delle istanze KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations-install).
+* Hai esaminato tutte le considerazioni in [Considerazioni sull'installazione delle istanze KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip_standalone_considerations#kmip_standalone_considerations-install).
 
 ## Procedura per ordinare le istanze KMIP for VMware on IBM Cloud
 {: #kmip_standalone_ordering-procedure}
@@ -55,17 +55,19 @@ Tabella 1. Regioni degli endpoint del servizio di rete KMIP for VMware on {{site
 | Germania        |  <ul><li><code>kmip-1.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
 | Sydney        |  <ul><li><code>kmip-1.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
 | Tokyo          | <ul><li><code>kmip-1.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
-| Stati Uniti Sud       |  <ul><li><code>kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+| Regno Unito Sud| <ul><li><code>kmip-1.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+| Stati Uniti Est| <ul><li><code>kmip-1.private.us-east.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-east.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+| Stati Uniti Sud       | <ul><li><code>kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
 
 ### Chiave API per ID servizio
 {: #kmip_standalone_ordering-config-api-key}
 
-Immetti la chiave API per l'ID del servizio {{site.data.keyword.cloud_notm}} utilizzato per accedere all'istanza del servizio IBM Key Protect.
+Immetti la chiave API per l'ID del servizio {{site.data.keyword.cloud_notm}} utilizzato per accedere all'istanza del servizio di Key Protect o Hyper Protect Crypto Services.
 
-### Istanza Key Protect
+### Istanza del gestore chiavi
 {: #kmip_standalone_ordering-config-key-protect}
 
-Fai clic su **Recupera** per ottenere l'elenco delle istanze del servizio IBM Key Protect disponibili e seleziona quella da utilizzare per la gestione delle chiavi.
+Fai clic su **Recupera** per ottenere l'elenco delle istanze del gestore chiavi disponibili e seleziona quella da utilizzare per la gestione delle chiavi. 
 
 ### Chiave root del cliente
 {: #kmip_standalone_ordering-config-root-key}

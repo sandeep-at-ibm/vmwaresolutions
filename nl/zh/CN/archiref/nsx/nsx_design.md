@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -23,7 +23,7 @@ NSX Edge Services Gateway on {{site.data.keyword.cloud}} 解决方案提供了�
 ## 内部体系结构设计
 {: #nsx_design-internal-archi}
 
-内部体系结构指定在 VMware Cloud Foundation 融合集群或 VMware vCenter Server 集群的资源池中必需 NSX Edge 组件的部署。
+内部体系结构指定在 VMware vCenter Server 集群的资源池中必需 NSX Edge 组件的部署。
 
 在下图中 VMware vSAN 是可选的。
 {:note}
@@ -48,7 +48,7 @@ NSX Edge Services Gateway on {{site.data.keyword.cloud}} 解决方案提供了�
 
 RFC1918 专用 IP 地址范围专门保留了网络范围供组织内部使用，这些范围从不用于因特网。{{site.data.keyword.cloud_notm}} 物理网络基础架构在所有全球位置中使用特定 RFC1918 专用地址空间 10.x.x.x/8。这些 IP 地址范围不会在不同客户帐户之间或在某个 {{site.data.keyword.cloud_notm}} 客户帐户内重叠。在一个客户帐户中，如果启用了虚拟路由和转发 (VRF)，那么 {{site.data.keyword.cloud_notm}} 分配的任何专用 IP 地址空间都可以路由到任何 {{site.data.keyword.CloudDataCents_notm}} 中的其他任何 {{site.data.keyword.cloud_notm}} 专用 IP 地址范围。
 
-虽然这会使得在您的帐户内设置全球范围连接的基础架构变得简单，但当您要使用与 {{site.data.keyword.cloud_notm}} 相同的专用地址空间通过路由将数据中心扩展到 {{site.data.keyword.cloud_notm}} 时，固定 IP 地址空间可能会发生问题。解决方案是使用 NSX 在 Cloud Foundation 或 vCenter Server 基础架构上创建覆盖拓扑，从而将您的自带 IP (BYOIP) 地址空间与使用 {{site.data.keyword.cloud_notm}} 分配的专用 IP 地址空间进行的交互相隔离。NSX 可以提供 L2 VPN，以在外部可能重叠的 IP 地址空间上的隧道内跨越内部 BYOIP 地址空间。
+虽然这会使得在您的帐户内设置全球范围连接的基础架构变得简单，但当您要使用与 {{site.data.keyword.cloud_notm}} 相同的专用地址空间通过路由将数据中心扩展到 {{site.data.keyword.cloud_notm}} 时，固定 IP 地址空间可能会发生问题。解决方案是使用 NSX 在 vCenter Server 基础架构上创建覆盖拓扑，从而将您的自带 IP (BYOIP) 地址空间与使用 {{site.data.keyword.cloud_notm}} 分配的专用 IP 地址空间进行的交互相隔离。NSX 可以提供 L2 VPN，以在外部可能重叠的 IP 地址空间上的隧道内跨越内部 BYOIP 地址空间。
 
 ## 相关链接
 {: #nsx_design-related}

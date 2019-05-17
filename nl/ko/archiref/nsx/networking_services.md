@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -20,36 +20,36 @@ subcollection: vmwaresolutions
 
 {{site.data.keyword.cloud}}의 네트워킹 서비스는 가상 사설망(VPN)을 통해 {{site.data.keyword.cloud_notm}}와 공용 인터넷 또는 고객 온프레미스 네트워크 간에 통신하기 위한 두 개의 VMware NSX ESG(Edge Services Gateway) 쌍으로 구성됩니다. 이러한 ESG는 내부 {{site.data.keyword.cloud_notm}} 관리 기능 및 유출 트래픽, 고객 관련 네트워크 트래픽의 유입을 지원하도록 분리됩니다.
 
-다음 그래픽은 관리 쌍 및 워크로드 ESG 쌍을 나타내는 단순화된 네트워크 다이어그램입니다. 또한 NSX DLR(Distributed Logical Router) 및 워크로드 VXLAN을 보여줍니다. 이러한 컴포넌트는 NSX 내에서 설정하기 위한 특정 지식 없이도 고객 워크로드에 대한 초기 랜딩 지점으로 사용됩니다. 일반적으로 DLR은 VMware Cloud Foundation 또는 VMware vCenter Server 간의 트래픽 및 인스턴스 내의 개별 계층 2 네트워크 간의 동쪽-서쪽 트래픽을 라우팅하는 데 사용됩니다. 이 동작은 Cloud Foundation 또는 vCenter Server 인스턴스 내부 및 외부에서 순회하는 북쪽-남쪽 네트워크 트래픽을 용이하게 하도록 작동하는 ESG와 대조됩니다.
+다음 그래픽은 관리 쌍 및 워크로드 ESG 쌍을 나타내는 단순화된 네트워크 다이어그램입니다. 또한 NSX DLR(Distributed Logical Router) 및 워크로드 VXLAN을 보여줍니다. 이러한 컴포넌트는 NSX 내에서 설정하기 위한 특정 지식 없이도 고객 워크로드에 대한 초기 랜딩 지점으로 사용됩니다. 일반적으로 DLR은 VMware vCenter Server 간의 트래픽 및 인스턴스 내의 개별 계층 2 네트워크 간의 동쪽-서쪽 트래픽을 라우팅하는 데 사용됩니다. 이 동작은 vCenter Server 인스턴스 내부 및 외부에서 순회하는 북쪽-남쪽 네트워크 트래픽을 용이하게 하도록 작동하는 ESG와 대조됩니다.
 
-그림 1. Cloud Foundation의 클라우드 네트워킹 서비스
+그림 1. vCenter Server의 클라우드 네트워킹 서비스
 
-![Cloud Foundation의 클라우드 네트워킹 서비스](cloudnetworkingservicesdiagram.svg "Cloud Foundation의 클라우드 네트워킹 서비스")
+![vCenter Server의 클라우드 네트워킹 서비스](cloudnetworkingservicesdiagram.svg "vCenter Server의 클라우드 네트워킹 서비스")
 
 단일 ESG가 관리 및 고객 워크로드 트래픽 모두에 충분할 수 있지만 관리 및 고객 트래픽을 분리하는 것은 실수로 관리 ESG를 잘못 구성하지 못하도록 하기 위한 디자인 의사결정입니다.
 
-관리 ESG를 잘못 구성하거나 사용 안함으로 설정해도 Cloud Foundation 또는 vCenter Server 인스턴스가 계속 작동하지만 모든 포털 관리 기능이 사용 안함으로 설정됩니다.
+관리 ESG를 잘못 구성하거나 사용 안함으로 설정해도 vCenter Server 인스턴스가 계속 작동하지만 모든 포털 관리 기능이 사용 안함으로 설정됩니다.
 {:note}
 
 ## IBM 관리 서비스 NSX Edge
 {: #nsx-networking_services-mgmt-serv-nsx-edge}
 
-IBM 관리 ESG는 {{site.data.keyword.cloud_notm}} 관리 네트워크 트래픽 전용 NSX Edge 클러스터입니다. Cloud Foundation 또는 vCenter Server 자동화를 통해 배치 및 관리되지 않는 컴포넌트의 트래픽 순회에는 사용되지 않습니다.
+IBM 관리 ESG는 {{site.data.keyword.cloud_notm}} 관리 네트워크 트래픽 전용 NSX Edge 클러스터입니다. vCenter Server 자동화를 통해 배치 및 관리되지 않는 컴포넌트의 트래픽 순회에는 사용되지 않습니다.
 
-다음 그래픽에서 Cloud Foundation에 대해 표시된 대로 관리 ESG는 Cloud Foundation 또는 vCenter Server 인스턴스 내에 있는 추가 기능 서비스 가상 머신(VM) 간의 통신 경로와 {{site.data.keyword.cloud_notm}}의 IBM 자동화 인프라를 제공합니다.
+다음 그래픽에서 vCenter Server에 대해 표시된 대로 관리 ESG는 vCenter Server 인스턴스 내에 있는 추가 기능 서비스 가상 머신(VM) 간의 통신 경로와 {{site.data.keyword.cloud_notm}}의 IBM 자동화 인프라를 제공합니다.
 
-그림 2. Cloud Foundation의 관리 에지 통신
+그림 2. vCenter Server의 관리 에지 통신
 
-![Cloud Foundation의 관리 에지 통신](mgmtvmcommunication.svg "Cloud Foundation의 관리 에지 통신")
+![vCenter Server의 관리 에지 통신](mgmtvmcommunication.svg "vCenter Server의 관리 에지 통신")
 
-특정 추가 기능 서비스 VM과 해당 라이센싱 및 측정 시스템 간의 경량 통신의 결과로 NSX ESG는 활성-수동 고가용성(HA) 쌍의 대규모 구성에서 크기가 조정되고 Cloud Foundation 통합 클러스터 또는 vCenter Server 클러스터의 관리 리소스 풀에 배치됩니다. 다음 표는 IBM 관리 NSX ESG 배치의 요약을 제공합니다.
+특정 추가 기능 서비스 VM과 해당 라이센싱 및 측정 시스템 간의 경량 통신의 결과로 NSX ESG는 활성-수동 고가용성(HA) 쌍의 대규모 구성에서 크기가 조정되고 vCenter Server 클러스터의 관리 리소스 풀에 배치됩니다. 다음 표는 IBM 관리 NSX ESG 배치의 요약을 제공합니다.
 
 표 1. IBM 관리 NSX ESG 스펙
 
 |IBM 관리 NSX Edge |vCPU | 메모리 |디스크 크기 |스토리지 위치 |
 |:----------------------- |:---- |:------ |:--------- |:---------------- |
-|IBM 관리 NSX ESG 1 |2 |1GB |1GB | vSAN 데이터 저장소(Cloud Foundation), 관리용 공유 연결 스토리지(vCenter Server) |
-|IBM 관리 NSX ESG 2 |2 |1GB |1GB | vSAN 데이터 저장소(Cloud Foundation), 관리용 공유 연결 스토리지(vCenter Server) |
+|IBM 관리 NSX ESG 1 |2 |1GB |1GB | vSAN 데이터 저장소 또는 관리용 공유 연결 스토리지 |
+|IBM 관리 NSX ESG 2 |2 |1GB |1GB | vSAN 데이터 저장소 또는 관리용 공유 연결 스토리지 |
 
 ### 관리 서비스
 {: #nsx-networking_services-mgmt-services}
@@ -64,7 +64,7 @@ IBM 관리 ESG는 {{site.data.keyword.cloud_notm}} 관리 네트워크 트래픽
 ### 에지 인터페이스
 {: #nsx-networking_services-edge-interfaces}
 
-ESG 인터페이스의 구성은 ESG에서 액세스할 수 있는 L2 네트워크를 정의합니다. Cloud Foundation 및 vCenter Server 라이프사이클 관리에서는 관리 VLAN에 배치된 특정 VM이 공용 VLAN으로 순회할 수 있어야 합니다. 배치 시 다음 인터페이스가 정의됩니다.
+ESG 인터페이스의 구성은 ESG에서 액세스할 수 있는 L2 네트워크를 정의합니다. vCenter Server 라이프사이클 관리에서는 관리 VLAN에 배치된 특정 VM이 공용 VLAN으로 순회할 수 있어야 합니다. 배치 시 다음 인터페이스가 정의됩니다.
 
 표 2. NSX ESG 인터페이스 구성
 
@@ -90,7 +90,7 @@ ESG 인터페이스의 구성은 ESG에서 액세스할 수 있는 L2 네트워�
 ### NAT(Network Address Translation) 정의
 {: #nsx-networking_services-nat-definitions}
 
-NAT(Network Address Translation)는 관리 ESG에서 네트워크 트래픽이 하나의 IP 주소 공간과 다른 IP 주소 공간 사이를 순회할 수 있도록 하는 방법으로 사용됩니다. 일반적으로 인터넷에서 라우트 가능한 IP를 보호하거나 보안을 이유로 내부 IP를 공인 IP로부터 숨기기 위해 수행됩니다. 또한 NAT는 TCP(Transmission Control Protocol) 및 UDP(User Datagram Protocol) 포트 경로 재지정을 허용하기 위해 사용됩니다. 관리 트래픽은 항상 Cloud Foundation 및 vCenter Server 인스턴스 내부에서 시작되므로 하나의 소스 NAT(SNAT)만 관리 ESG에 정의되어야 합니다. 인스턴스에서 유출되어야 하는 서비스를 호스팅하는 각 내부 VM에 대한 개별 SNAT가 작성되지 않습니다.
+NAT(Network Address Translation)는 관리 ESG에서 네트워크 트래픽이 하나의 IP 주소 공간과 다른 IP 주소 공간 사이를 순회할 수 있도록 하는 방법으로 사용됩니다. 일반적으로 인터넷에서 라우트 가능한 IP를 보호하거나 보안을 이유로 내부 IP를 공인 IP로부터 숨기기 위해 수행됩니다. 또한 NAT는 TCP(Transmission Control Protocol) 및 UDP(User Datagram Protocol) 포트 경로 재지정을 허용하기 위해 사용됩니다. 관리 트래픽은 항상 vCenter Server 인스턴스 내부에서 시작되므로 하나의 소스 NAT(SNAT)만 관리 ESG에 정의되어야 합니다. 인스턴스에서 유출되어야 하는 서비스를 호스팅하는 각 내부 VM에 대한 개별 SNAT가 작성되지 않습니다.
 
 표 4. NSX ESG NAT 구성
 
@@ -105,7 +105,7 @@ NAT(Network Address Translation)는 관리 ESG에서 네트워크 트래픽이 �
 
 인터넷 접속 연결에 대한 대상으로 필요한 대상 IP 범위를 예측하기는 어렵지만 {{site.data.keyword.cloud_notm}}에서 배치되고 관리되는 모든 서비스는 관리 ESG를 해당 대상 게이트웨이로 가리킵니다. 서비스에 필요한 외부 네트워크 연결을 위해 {{site.data.keyword.cloud_notm}} BCR을 통한 트래픽을 강제로 적용하려면 정적 라우트가 필요합니다.
 
-관리 ESG를 사용하여 Cloud Foundation 또는 vCenter Server 외부로 순회하는 서비스의 경우 다음과 같은 구성이 권장됩니다.
+관리 ESG를 사용하여 vCenter Server 외부로 순회하는 서비스의 경우 다음과 같은 구성이 권장됩니다.
 * 기본 게이트웨이는 관리 ESG입니다.
 * 내부 {{site.data.keyword.cloud_notm}}에는 정적 라우트가 필요합니다.
 
@@ -146,9 +146,9 @@ NAT(Network Address Translation)는 관리 ESG에서 네트워크 트래픽이 �
 ## IBM 워크로드 NSX Edge
 {: #nsx-networking_services-wkld-nsx-edge}
 
-IBM 워크로드 ESG는 워크로드 네트워크 통신을 목적으로 하는 단순 토폴로지입니다. 다음 섹션에서는 Cloud Foundation 또는 vCenter Server 인스턴스 내에서 워크로드를 네트워크에 연결하는 디자인 의도에 대해 설명합니다. 이는 온프레미스 네트워크 및 IP 공간을 특정 Cloud Foundation 또는 vCenter Center 인스턴스에 연결하기 위한 시작점이며 진정한 하이브리드 클라우드 아키텍처에 대한 기초입니다.
+IBM 워크로드 ESG는 워크로드 네트워크 통신을 목적으로 하는 단순 토폴로지입니다. 다음 섹션에서는 vCenter Server 인스턴스 내에서 워크로드를 네트워크에 연결하는 디자인 의도에 대해 설명합니다. 이는 온프레미스 네트워크 및 IP 공간을 특정 vCenter Center 인스턴스에 연결하기 위한 시작점이며 진정한 하이브리드 클라우드 아키텍처에 대한 기초입니다.
 
-공용 및 사설 {{site.data.keyword.cloud_notm}} 네트워크 모두에 연결된 고객 네트워크는 인터넷 연결 트래픽에 대한 워크로드 액세스를 허용하지만 공용 또는 사설 {{site.data.keyword.cloud_notm}} 네트워크에서 사이트 간 VPN이 작성되도록 허용합니다. 고객 보안 요구사항으로 인해 전용 광역 네트워크(WAN)를 가동하는 데 몇 개월이 걸릴 수 있으므로 이를 통해 온프레미스 네트워크에 연결하는 것과 관련한 가치 창출 시간이 크게 단축될 수 있습니다. 그러나 전용 링크가 준비된 후 VPN 터널 내부에서나 Cloud Foundation 또는 vCenter Server 인스턴스에 내에서 오버레이 네트워크에 영향을 미치지 않고 해당 링크를 순회하도록 VPN을 전환할 수 있습니다. 이 작업이 완료된 후 보안 관점에서 필요한 경우 워크로드 ESG에 대한 공용 인터페이스를 제거할 수 있습니다.
+공용 및 사설 {{site.data.keyword.cloud_notm}} 네트워크 모두에 연결된 고객 네트워크는 인터넷 연결 트래픽에 대한 워크로드 액세스를 허용하지만 공용 또는 사설 {{site.data.keyword.cloud_notm}} 네트워크에서 사이트 간 VPN이 작성되도록 허용합니다. 고객 보안 요구사항으로 인해 전용 광역 네트워크(WAN)를 가동하는 데 몇 개월이 걸릴 수 있으므로 이를 통해 온프레미스 네트워크에 연결하는 것과 관련한 가치 창출 시간이 크게 단축될 수 있습니다. 그러나 전용 링크가 준비된 후 VPN 터널 내부에서나 vCenter Server 인스턴스에 내에서 오버레이 네트워크에 영향을 미치지 않고 해당 링크를 순회하도록 VPN을 전환할 수 있습니다. 이 작업이 완료된 후 보안 관점에서 필요한 경우 워크로드 ESG에 대한 공용 인터페이스를 제거할 수 있습니다.
 
 다음 그림의 토폴로지는 다음과 같은 NSX 컴포넌트로 구성되어 있습니다.
 * NSX Edge 어플라이언스(ESG)
@@ -203,7 +203,7 @@ IBM 워크로드 ESG는 워크로드 네트워크 통신을 목적으로 하는 
 
 NAT는 워크로드 ESG에서 네트워크 트래픽이 하나의 IP 주소 공간과 다른 IP 주소 공간 사이를 순회할 수 있도록 하는 방법으로 사용됩니다. 워크로드 ESG의 경우 NAT는 인터넷 대상에 대한 통신을 허용하기 위해서만이 아니라 모든 {{site.data.keyword.cloud_notm}} 소스 IP 범위와 통신하는 데 필요합니다. 이 디자인의 경우 워크로드 트래픽이 인터넷으로 나갈 수 있지만 관리 또는 모든 {{site.data.keyword.cloud_notm}} 네트워크로 나갈 수는 없습니다. 따라서 하나의 SNAT만 워크로드 ESG에 정의되어야 합니다. 전체 워크로드 포터블 서브넷이 해당 SNAT를 통해 순회하도록 구성됩니다.
 
-NAT를 사용하여 Cloud Foundation 또는 vCenter Server의 여러 인스턴스에서 워크로드 통신을 허용할 수 있지만 인스턴스 간에 많은 워크로드가 연결되어야 하는 경우에는 적합하지 않습니다. 고급 NSX 기능을 사용하여 Cloud Foundation 또는 vCeter Server 인스턴스에서 L2 오버레이 전송 네트워크를 작성하는 예는 [다중 사이트 아키텍처](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx-multi_site)를 참조하십시오.
+NAT를 사용하여 vCenter Server의 여러 인스턴스에서 워크로드 통신을 허용할 수 있지만 인스턴스 간에 많은 워크로드가 연결되어야 하는 경우에는 적합하지 않습니다. 고급 NSX 기능을 사용하여 vCeter Server 인스턴스에서 L2 오버레이 전송 네트워크를 작성하는 예는 [다중 사이트 아키텍처](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx-multi_site)를 참조하십시오.
 
 표 10. 워크로드 ESG NAT 규칙
 
@@ -247,7 +247,7 @@ NAT를 사용하여 Cloud Foundation 또는 vCenter Server의 여러 인스턴�
 
 표 13. 워크로드 ESG 내부 인터페이스
 
-|VXLAN 이름 |Cloud Foundation 또는 vCenter Server 전송 구역 |유형 |
+|VXLAN 이름 | vCenter Server 전송 구역 |유형 |
 |:---------- |:------------------------------------------------- |:---- |
 |워크로드 HA |transit-1 | 글로벌 |
 |워크로드 전송 |transit-1 | 글로벌 |

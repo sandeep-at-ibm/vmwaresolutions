@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-06-22"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -55,7 +55,7 @@ subcollection: vmwaresolutions
 * 雙重 Intel Skylake Xeon Gold 5120 處理器 / 總計 28 核心，2.2 GHz
 * 雙重 Intel Skylake Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz
 
-如需相關資訊，請參閱[訂購新的 vSphere 叢集](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances#bare-metal-server-settings)中的 *Bare Metal Server 設定*。
+如需相關資訊，請參閱 [Bare Metal Server 設定](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vs_orderinginstances#vs_orderinginstances-bare-metal-settings)。
 
 ## VMware vCenter Server 實例的更新
 {: #relnotes_v24-vcs}
@@ -63,7 +63,7 @@ subcollection: vmwaresolutions
 ### 網路檔案系統效能加強功能
 {: #relnotes_v24-nfs}
 
-效能層次 10 IOPS/GB 是針對要求最嚴苛的工作負載類型所設計，並且不再限制為特定 {{site.data.keyword.CloudDataCent_notm}}，現在可用於所有項目。如需相關資訊，請參閱 [vCenter Server 概觀](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#technical-specifications-for-vcenter-server-instances)中的*儲存空間* 小節。
+效能層次 10 IOPS/GB 是針對要求最嚴苛的工作負載類型所設計，並且不再限制為特定 {{site.data.keyword.CloudDataCent_notm}}，現在可用於所有項目。如需相關資訊，請參閱[儲存空間](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#vc_vcenterserveroverview-storage)。
 
 ## 附加服務的更新
 {: #relnotes_v24-services}

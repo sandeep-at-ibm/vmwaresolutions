@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -67,7 +67,7 @@ vSphere Enterprise Plus 6.7u1은 Broadwell 및 Skylake {{site.data.keyword.cloud
 자세한 정보는 다음을 참조하십시오.
 
 * [IBM Cloud의 VRF(Virtual Routing and Forwarding) 개요](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-* [IBM Cloud CLI를 사용하여 서비스 엔드포인트를 사용할 계정 사용](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
+* [서비스 엔드포인트 사용을 위해 계정 사용](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
 
 ## API(Application Programming Interface)에 대한 지원
 {: #relnotes_v29-api}
@@ -100,7 +100,7 @@ VMware 컴포넌트 선택에 대한 자세한 정보는 [vCenter Server 명세�
 ### ESXi 서버 개선사항
 {: #relnotes_v29-vcs-esxi}
 
-* SSH(Secure Shell) 프로토콜은 인스턴스 전달 전에 ESXi 서버에 대해 사용 안함으로 설정됩니다.
+* SSH(Secure Shell) 프로토콜은 인스턴스 전달 전에 ESXi 서버에 대해 사용 안함으로 설정됩니다. SSH를 사용으로 설정하려면 [Enable SSH from the vSphere Web Client](https://pubs.vmware.com/vsphere-6-5/index.jsp?topic=%2Fcom.vmware.vcli.getstart.doc%2FGUID-C3A44A30-EEA5-4359-A248-D13927A94CCE.html)를 참조하십시오.
 * V2.9 릴리스부터는 다음 ESXi 서버 조작을 사용할 수 있습니다.
 
    * 서버가 유지보수 모드에 있는 동안 새 ESXi 서버를 기존 클러스터에 추가합니다. 가상 머신은 유지보수 모드에서 이를 제거할 때까지는 새 서버로 마이그레이션되지 않습니다.
@@ -147,7 +147,9 @@ vCenter Server 인스턴스 주문의 경우, 0.25, 2및 4 IOPS/GB의 성능 레
 ### KMIP for VMware on IBM Cloud
 {: #relnotes_v29-services-kmip}
 
-이제 VMware on {{site.data.keyword.cloud_notm}} 서비스에 대해 KMIP용으로 Sydney에서 두 개의 새 엔드포인트를 사용할 수 있습니다. 자세한 정보는 [KMIP for VMware on {{site.data.keyword.cloud_notm}} 서비스 구성](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering-config)을 참조하십시오.
+이제 VMware on {{site.data.keyword.cloud_notm}} 서비스에 대해 KMIP용으로 Sydney에서 두 개의 새 엔드포인트를 사용할 수 있습니다. 자세한 정보는 [KMIP for VMware on {{site.data.keyword.cloud_notm}} 서비스 구성](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering#kmip_standalone_ordering-config)을 참조하십시오.
+
+(2019년 4월 9일에 업데이트됨) 이전에는 KMIP for VMware on {{site.data.keyword.cloud_notm}}가 IBM Key Protect for {{site.data.keyword.cloud_notm}}를 사용하여 암호화 키를 작성하고, 암호화 및 복호화했습니다. V2.9 릴리스부터 KMIP for VMware on {{site.data.keyword.cloud_notm}}는 완전한 암호화 세트와 키 관리 서비스인 {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services를 사용하여 {{site.data.keyword.cloud_notm}}의 VMware에서 사용되는 암호화 키도 관리할 수 있습니다. 자세한 정보는 [KMIP for VMware on IBM Cloud 개요](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations) 및 [{{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-get-started)를 참조하십시오.
 
 ### Veeam on IBM Cloud
 {: #relnotes_v29-services-veeam}

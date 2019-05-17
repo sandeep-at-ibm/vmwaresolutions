@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -104,7 +104,7 @@ subcollection: vmwaresolutions
 ## 查看 vCenter Server 实例的部署历史记录的过程
 {: #vc_viewinginstances-procedure-view-deploy-history}
 
-单击左侧导航窗格上的**部署历史记录**，以查看实例的部署历史记录。
+单击左侧导航窗格中的**部署历史记录**，以查看实例的部署历史记录。
 
 表 5. vCenter Server 实例部署历史记录
 
@@ -135,6 +135,6 @@ subcollection: vmwaresolutions
 {: #vc_viewinginstances-related}
 
 * [订购 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [添加、查看和删除 vCenter Server 实例的集群](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [添加、查看和删除 vCenter Server 实例的集群](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 * [扩展和收缩 vCenter Server 实例的容量](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
 * [删除 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_deletinginstance)

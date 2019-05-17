@@ -4,16 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
 # 소스에 HCX 설치 및 구성
 {: #hcx-archi-install-cfg-src}
 
-온프레미스 설치에는 HCX 관리 어플라이언스 배치와 vCenter 및 하나 이상의 VCF/VCS HCX 사용 클라우드 엔드포인트에 HCX 관리 어플라이언스 등록이 포함됩니다.
+온프레미스 설치에는 HCX 관리 어플라이언스 배치와 vCenter 및 하나 이상의 VCS HCX 사용 클라우드 엔드포인트에 HCX 관리 어플라이언스 등록이 포함됩니다.
 
 ## HCX Manager 어플라이언스 설치
 {: #hcx-archi-install-cfg-src-install-hma}

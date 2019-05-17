@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-05"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -37,7 +37,7 @@ subcollection: vmwaresolutions
 
 要通过 HCX 延伸网络（VLAN 或 VXLAN），请在客户机端 vCenter Web UI 中完成以下步骤。
 
-1. 对于单个选择的端口组，在 vCenter Web UI 中浏览至**网络**选项卡，右键单击要延伸的网络，然后选择**混合操作 -> 将网络扩展至云**。
+1. 对于单个选择的端口组，在 vCenter Web UI 中导航至**网络**选项卡，右键单击要延伸的网络，然后选择**混合操作 -> 将网络扩展至云**。
 2. 选择要连接到的云端 L3 设备以及将使用的 L2C 设备。以 CIDR 格式输入当前缺省网关和子网掩码。
 3. 单击屏幕底部的**延伸**以开始网络延伸工作流程。
 

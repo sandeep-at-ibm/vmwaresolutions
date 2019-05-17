@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-04-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -47,7 +47,7 @@ Per la gestione delle licenze sono richieste almeno 10 VM.
 ### Dimensione storage
 {: #veeam_ordering-config-storage-size}
 
-La capacità che soddisfa le tue esigenze di archiviazione. Per considerazioni sulla stima della dimensione di archiviazione, vedi [Stima della capacità del repository](https://bp.veeam.expert/resource_planning/repository_planning_sizing.html).
+La capacità che soddisfa le tue esigenze di archiviazione. Per considerazioni sulla stima della dimensione di archiviazione, vedi [Stima della capacità del repository](https://bp.veeam.expert/repository_server/repository_planning/repository_planning_sizing).
 
 ### Prestazioni Storage
 {: #veeam_ordering-config-storage-performance}

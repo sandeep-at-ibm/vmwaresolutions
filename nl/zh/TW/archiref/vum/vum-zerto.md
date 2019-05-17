@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,11 +18,11 @@ subcollection: vmwaresolutions
 
 1. 登入 Zerto Web 使用者介面。
 2. 從下拉功能表中選取**站台設定**。
-3. 選取**原則標籤**，並確定已選取**容許 Zerto 在補救期間一律讓主機進入維護模式**。
+3. 選取**原則**標籤，並確定已選取**容許 Zerto 在補救期間一律讓主機進入維護模式**。
 4. 登出 Zerto。
 
 ## 相關鏈結
 {: #vum-zerto-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 解決方案架構](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware)（示範）
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware)（示範）

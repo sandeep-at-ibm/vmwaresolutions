@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-29"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -16,7 +16,7 @@ subcollection: vmwaresolutions
 
 기준선에는 하나 이상의 패치, 확장, 서비스 팩, 버그 수정 또는 업그레이드의 콜렉션이 있으며 패치, 확장 또는 업그레이드 기준선으로 분류될 수 있습니다. 기준선 그룹은 기존 기준선에서 구성됩니다. 호스트 기준선 그룹에는 단일 업그레이드 기준선과 다양한 패치 및 확장 기준선이 있을 수 있습니다. 가상 머신 및 가상 어플라이언스 기준선 그룹에는 최대 세 개의 업그레이드 기준선(하나의 VMware Tools 업그레이드 기준선, 하나의 가상 머신 하드웨어 업그레이드 기준선 및 하나의 가상 어플라이언스 업그레이드 기준선)이 있을 수 있습니다.
 
-VUM에는 편집하거나 삭제할 수 없는 사전 정의된 기준선이 포함되어 있습니다. 사전 정의된 기준선을 사용하거나 해당 조건을 충족하는 패치, 확장 및 업그레이드 기준선을 작성할 수 있습니다. 사용자가 작성한 사용자 정의 기준선과 사전 정의된 기준선을 기준선 그룹으로 결합할 수 있습니다.
+VUM(VMware Update Manager)에는 편집하거나 삭제할 수 없는 사전 정의된 기준선이 포함되어 있습니다. 사전 정의된 기준선을 사용하거나 해당 조건을 충족하는 패치, 확장 및 업그레이드 기준선을 작성할 수 있습니다. 사용자가 작성한 사용자 정의 기준선과 사전 정의된 기준선을 기준선 그룹으로 결합할 수 있습니다.
 
 VUM에는 다음 디바이스 중 하나를 스캔하여 사용자 환경의 호스트가 최신 패치로 업데이트되었는지 여부 또는 가상 어플라이언스 및 가상 머신이 최신 버전으로 업그레이드되었는지 여부를 판별하는 데 사용할 수 있는 기본 기준선이 포함되어 있습니다.
 * 모든 가상 머신
@@ -34,10 +34,10 @@ VUM에는 다음 디바이스 중 하나를 스캔하여 사용자 환경의 호
 
 1. vSphere Web Client를 사용하여 **홈** > **호스트 및 클러스터**로 이동하십시오.
 2. 스캔할 클러스터 오브젝트를 클릭하십시오.
-3. **기준선 연결**을 클릭하고 두 개의 사전 정의된 패치 기준선을 선택한 후 **확인**을 클릭하십시오.
+3. VUM으로 이동하여 **기준선 연결**을 클릭한 후 두 개의 사전 정의된 패치 기준선을 선택하십시오. **확인**을 클릭하십시오.
 
 ## 관련 링크
 {: #vum-baselines-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 솔루션 아키텍처](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} 디지털 기술 업무](https://ibm-dte.mybluemix.net/ibm-vmware)(데모)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} 디지털 기술 업무](https://ibm-dte.mybluemix.net/vmware)(데모)

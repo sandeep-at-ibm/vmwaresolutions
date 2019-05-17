@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -54,7 +54,7 @@ vSphere 인벤토리에서 가상 어플라이언스를 삭제하지 마십시�
 4. 오른쪽 하단에서 삭제 아이콘을 클릭하여 어플라이언스를 제거하십시오.
 5. 확장된 네트워크가 하이브리드 클라우드 게이트웨이와 IP 주소를 공유하지 않는 경우 별도로 제거해야 합니다. 네트워크 확장 서비스 세부사항을 펼치고 삭제 아이콘을 클릭하여 Layer 2 Concentrator를 제거하십시오.
 
-하이브리드 클라우드 게이트웨이와 하이브리드 클라우드 게이트웨이를 사용하는 하이브리드 서비스 가상 어플라언스는 vCenter 및 VCF/VCS 하이브리드 클라우드 서비스 클라우드 모두에서 제거됩니다.
+하이브리드 클라우드 게이트웨이와 하이브리드 클라우드 게이트웨이를 사용하는 하이브리드 서비스 가상 어플라언스는 vCenter 및 VCS 하이브리드 클라우드 서비스 클라우드 모두에서 제거됩니다.
 
 ## HCX Manager 설치 제거
 {: #hcx-archi-mod-uninstall-unist-hcxm}

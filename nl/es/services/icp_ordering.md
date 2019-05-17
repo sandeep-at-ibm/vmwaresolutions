@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-26"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -36,6 +36,11 @@ Puede añadir el servicio {{site.data.keyword.cloud_notm}} Private Hosted a una 
 Cuando solicite el servicio, especifique los valores siguientes:
 * Seleccione **Preparado para producción** o **Desarrollo/Prueba** según necesite.
 * Marque el recuadro de selección adecuado para certificar que ya ha obtenido la licencia necesaria para desplegar el servicio {{site.data.keyword.cloud_notm}} Private Hosted.
+
+Si desea desplegar nodos adicionales, utilice la plantilla de Ubuntu de
+{{site.data.keyword.cloud_notm}} Private (Ubuntu1604) que se despliega con su instalación inicial de
+{{site.data.keyword.cloud_notm}} Private Hosted. Para encontrar la plantilla, en el cliente web de VMware vSphere, vaya al separador
+**Máquinas virtuales y plantillas**, en la carpeta `cam`. La contraseña predeterminada para la plantilla de Ubuntu es `icponcloud`, y se recomienda que la cambie antes de utilizar la plantilla.
 
 ## Enlaces relacionados
 {: #icp_ordering-related}

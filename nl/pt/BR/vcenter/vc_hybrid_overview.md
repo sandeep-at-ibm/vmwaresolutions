@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -20,7 +20,7 @@ subcollection: vmwaresolutions
 
 O VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle é uma instância disponível na V2.3 e liberações mais recentes. A partir da V2.6, a instância do vCenter Server with Hybridity Bundle está disponível para os Parceiros de Negócios.
 
-O vCenter Server with Hybridity Bundle é uma nuvem particular host que entrega a pilha do VMware vSphere como um serviço. O ambiente do VMware é construído no topo de quatro {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}, inclui o VMware vSAN como armazenamento dedicado, fornece implementação automática e configuração de um firewall de borda lógica fácil de gerenciar que é desenvolvido pelo VMware NSX e inclui o serviço VMware HCX on {{site.data.keyword.cloud_notm}}.
+O vCenter Server with Hybridity Bundle é uma nuvem particular host que entrega a pilha do VMware vSphere como um serviço. O ambiente do VMware é construído sobre um mínimo de quatro {{site.data.keyword.cloud_notm}}{{site.data.keyword.baremetal_short}}, inclui o VMware vSAN como armazenamento dedicado, fornece a implementação e a configuração automáticas de um firewall de borda lógica fácil de gerenciar que é desenvolvido com o VMware NSX e inclui o serviço VMware HCX on {{site.data.keyword.cloud_notm}}.
 
 Em muitos casos, o ambiente inteiro pode ser provisionado em menos de um dia e a infraestrutura bare metal pode aumentar e diminuir rápida e elasticamente a capacidade de cálculo, conforme necessário.
 
@@ -61,7 +61,7 @@ A oferta de base é implementada com um dispositivo vCenter Server que é dimens
 
 No total, a oferta de base requer 38 vCPU e 67 GB de vRAM que são reservados para a camada de gerenciamento de virtualização. A capacidade restante do host para suas MVs depende de vários fatores, como a taxa de alocação excessiva, o dimensionamento da MV e os requisitos de desempenho de carga de trabalho.
 
-Para obter os requisitos de recursos de gerenciamento adicionais ao implementar o serviço HCX on {{site.data.keyword.cloud_notm}}, consulte [Visão geral do VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview).
+Para obter os requisitos de recurso de gerenciamento adicionais ao implementar o serviço HCX on {{site.data.keyword.cloud_notm}}, consulte [Visão geral do VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations).
 
 ### Hibridismo de infraestrutura
 {: #vc_hybrid_overview-infras-hybrid}
@@ -81,9 +81,9 @@ A disponibilidade e a precificação de configurações padronizadas de hardware
 ### Bare Metal Server
 {: #vc_hybrid_overview-bare-metal}
 
-Quatro {{site.data.keyword.baremetal_short}} vêm com o pedido de instância do vCenter Server with Hybridity Bundle. As configurações a seguir estão disponíveis:
+É possível pedir quatro ou mais {{site.data.keyword.baremetal_short}} com uma das configurações a seguir:
   * **Skylake**: servidores de geração do Intel Skylake de 2 CPUs (série Intel Xeon 4100/5100/6100) com o seu modelo de CPU selecionado e o tamanho de RAM.
-  * **Broadwell**: servidores de geração Intel Broadwell de 2 CPUs (Série Intel Xeon E5-2600/E7-4800 ) com seu modelo de CPU e tamanho de RAM selecionados.
+  * **Broadwell**: servidores de geração Intel Broadwell de 4 CPUs (Intel Xeon série E7-4800) com o seu modelo de CPU e tamanho de RAM selecionados.
 
 ### Rede
 {: #vc_hybrid_overview-networking}
@@ -97,9 +97,9 @@ Os componentes de rede a seguir são pedidos:
 
     Este ESG não está acessível a você e não pode ser usado. Se você o modificar, poderá não ser capaz de gerenciar a instância do vCenter Server with Hybridity Bundle por meio do console do {{site.data.keyword.vmwaresolutions_short}}. Além disso, observe que usar um firewall ou desativar as comunicações ESG para os componentes de gerenciamento externo da IBM fará com que o {{site.data.keyword.vmwaresolutions_short}} se torne inutilizável.
     {:important}
-  * Um VMware NSX Edge Services Gateway seguro e gerenciado pelo cliente para tráfego de carga de trabalho de entrada e saída HTTPS, que é implementado pela IBM como um modelo que pode ser modificado por você para fornecer acesso VPN ou acesso público. Para obter mais informações, veja [O NSX Edge gerenciado pelo cliente representa um risco de segurança?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-customer-managed-nsx-edge-pose-a-security-risk-)
+  * Um VMware NSX Edge Services Gateway seguro e gerenciado pelo cliente para tráfego de carga de trabalho de entrada e saída HTTPS, que é implementado pela IBM como um modelo que pode ser modificado por você para fornecer acesso VPN ou acesso público. Para obter mais informações, veja [O NSX Edge gerenciado pelo cliente representa um risco de segurança?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#faq-customer-nsx)
 
-Para obter mais informações sobre componentes de rede pedidos ao implementar o serviço HCX on {{site.data.keyword.cloud_notm}}, consulte [Visão geral do HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview).
+Para obter mais informações sobre componentes de rede pedidos ao implementar o serviço HCX on {{site.data.keyword.cloud_notm}}, consulte [Visão geral do HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations).
 
 ### Virtual Server Instances
 {: #vc_hybrid_overview-vsi}
@@ -116,7 +116,7 @@ O armazenamento vSAN oferece configurações customizadas, com várias opções 
 * Disco de armazenamento: SSD SED de 960 GB, SSD SED de 1,9 TB ou SSD SED de 3,8 TB.
 
   Além disso, são pedidos dois discos de cache de 960 GB por host.
-* Opção Intel Optane de alto desempenho, que fornece dois compartimentos de disco de capacidade extras para um total de 10 discos de capacidade. Essa opção depende do modelo de CPU.
+* Opção Intel Optane de alto desempenho, que fornece dois compartimentos de disco de capacidade extra para um total de 12 discos de capacidade. Essa opção depende do modelo de CPU.
 
 ### Licenças e taxas fornecidas pela IBM
 {: #vc_hybrid_overview-license-and-fee}
@@ -138,7 +138,7 @@ Cada nó de expansão do vCenter Server with Hybridity Bundle implementará e in
 ### Hardware para nós de expansão
 {: #vc_hybrid_overview-expansion-node-hardware}
 
-Um Bare Metal Server com a configuração apresentada em [Especificações técnicas para instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances).
+Um Bare Metal Server com a configuração apresentada em [Especificações técnicas para instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#vc_hybrid_overview-specs).
 
 ### Licenças e taxas para os nós de expansão
 {: #vc_hybrid_overview-expansion-node-license-and-fee}
@@ -154,11 +154,11 @@ Deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} 
 
 **CUIDADO:** gerenciar quaisquer componentes do {{site.data.keyword.vmwaresolutions_short}}, que foram instalados em sua conta do {{site.data.keyword.cloud_notm}} quando você solicitou a instância, fora do console do {{site.data.keyword.vmwaresolutions_short}} pode tornar seu ambiente instável. Estas atividades de gerenciamento incluem:
 *  Incluindo, modificando, retornando ou removendo componentes
-*  Expandindo ou contraindo a capacidade da instância por meio da inclusão ou remoção de servidores ESXi
+*  Expansão ou redução da capacidade da instância por meio da inclusão ou remoção de servidores ESXi
 *  Desativando componentes
 *  Reinício dos serviços
 
-   As exceções a essas atividades incluem o gerenciamento de compartilhamentos de arquivos de armazenamento compartilhado por meio do {{site.data.keyword.slportal}}. Essas atividades incluem: pedido, exclusão (que poderá afetar armazenamentos de dados, se montado), autorização e montagem de compartilhamentos de arquivos de armazenamento compartilhados.
+   As exceções a essas atividades incluem o gerenciamento de compartilhamentos de arquivos de armazenamento compartilhado por meio do {{site.data.keyword.slportal}}. Essas atividades incluem: pedido, exclusão (que poderá afetar armazenamentos de dados, se montado), autorização e montagem de compartilhamentos de arquivos de armazenamento compartilhado.
 
 ## Links relacionados
 {: #vc_hybrid_overview-related}
@@ -166,5 +166,5 @@ Deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} 
 * [Lista de materiais do software vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
 * [Requisitos e planejamento para instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)
 * [Pedindo instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
-* [HCX no {{site.data.keyword.cloud_notm}} visão geral](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview)
+* [HCX no {{site.data.keyword.cloud_notm}} visão geral](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations)
 * [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

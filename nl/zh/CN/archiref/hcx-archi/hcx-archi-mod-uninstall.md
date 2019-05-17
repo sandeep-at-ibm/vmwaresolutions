@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -54,7 +54,7 @@ subcollection: vmwaresolutions
 4. 单击右下角的“删除”图标以除去该设备。
 5. 如果延伸网络与 Hybrid Cloud Gateway 不共享 IP 地址，那么必须单独将其除去。展开 Network Extensions 服务详细信息，然后单击“删除”图标以除去第 2 层集中器。
 
-Hybrid Cloud Gateway 和使用 Hybrid Cloud Gateway 的任何混合服务虚拟设备都将从 vCenter 和 VCF/VCS Hybrid Cloud Services Cloud 中除去。
+Hybrid Cloud Gateway 和使用 Hybrid Cloud Gateway 的任何混合服务虚拟设备都将从 vCenter 和 VCS Hybrid Cloud Services Cloud 中除去。
 
 ## 卸载 HCX Manager
 {: #hcx-archi-mod-uninstall-unist-hcxm}

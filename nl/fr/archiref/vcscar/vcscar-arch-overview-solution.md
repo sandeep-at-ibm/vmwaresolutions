@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -38,7 +38,7 @@ NSX Manager est déployé sur le cluster initial. De plus, NSX Manager se voit a
 ### Contrôleurs NSX
 {: #vcscar-arch-overview-solution-nsx-controllers}
 
-L'automatisation d'{{site.data.keyword.cloud}} déploie trois contrôleurs NSX dans le cluster initial. Les contrôleurs se voient affecter une adresse IP VLAN provenant du sous-réseau portable destiné aux composants de gestion.
+L'automatisation {{site.data.keyword.cloud}} déploie trois contrôleurs NSX dans le cluster initial. Les contrôleurs se voient affecter une adresse IP VLAN provenant du sous-réseau portable destiné aux composants de gestion.
 
 ### NSX Edge et Distributed Logical Router
 {: #vcscar-arch-overview-solution-nsx-edge}

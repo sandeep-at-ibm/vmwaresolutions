@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -21,7 +21,7 @@ subcollection: vmwaresolutions
 ## 开始之前
 {: #vc_addinstancetousraccount-prereq}
 
-确保要将实例迁移到的 {{site.data.keyword.cloud_notm}} 帐户不是仅 IaaS 帐户。仅 IaaS 帐户是未链接到 {{site.data.keyword.cloud_notm}} 帐户的 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户。
+确保要将实例迁移到的 {{site.data.keyword.cloud_notm}} 帐户不是仅 IaaS 帐户。仅 IaaS 帐户是未链接到 {{site.data.keyword.cloud_notm}} 帐户的 {{site.data.keyword.cloud_notm}} 基础架构帐户。
 
 有关如何将仅 IaaS 帐户链接到 PaaS 帐户的更多信息，请参阅[执行以下步骤来链接 IaaS 和 PaaS 帐户](https://www.ibm.com/blogs/bluemix/2018/03/follow-steps-link-iaas-paas-accounts/)。
 
@@ -43,6 +43,6 @@ subcollection: vmwaresolutions
 ## 相关链接
 {: #vc_addinstancetousraccount-related}
 
-* [使用 IAM 管理用户访问权](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-access-with-iam)
+* [使用 IAM 管理用户访问权](/docs/services/vmwaresolutions/services?topic=vmware-solutions-iam#iam)
 * [邀请用户访问服务和资源](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-iamuserinvite)
 * [什么是 IBM Cloud IAM](/docs/iam?topic=iam-iamoverview)

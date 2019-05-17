@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-02-15"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -36,7 +36,7 @@ Actor | Descripción
 --|--
 Administrador del sistema | Recurso especializado en VMware vSphere que utiliza vCenter Server para gestionar la virtualización local y la instancia de vCenter Server.
 Desarrollador | Recurso especializado en contenedores que utiliza la consola de CAM para crear y gestionar contenedores. Crean los nuevos servicios como parte de la modernización de la aplicación. Mediante CAM, el desarrollador ofrece cargas de trabajo en vCenter Server, {{site.data.keyword.icpfull_notm}} o {{site.data.keyword.containerlong_notm}}, compone y coordina los servicios que se crean con máquinas virtuales y contenedores e integra las cadenas de herramientas DevOps y las soluciones ITSM de fase 2.
-Cliente | Actor externo que consume los servicios de la empresa. Para Acme Skateboards, el cliente es un skater que quiere comprar productos de skateboard. El cliente requiere acceso seguro a internet para acceder al catálogo.
+Cliente | Actor externo que consume los servicios de la empresa. Para Acme Skateboards, el cliente es un skater que quiere comprar productos de skateboard. El cliente requiere acceso seguro a Internet para acceder al catálogo.
 {{site.data.keyword.containerlong_notm}} | Recurso de IBM que gestiona el nodo maestro {{site.data.keyword.containerlong_notm}} para el servicio.
 
 ## Sistemas

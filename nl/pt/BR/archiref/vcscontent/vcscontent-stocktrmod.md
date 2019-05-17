@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-23"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -88,7 +88,7 @@ Center](https://www.ibm.com/support/knowledgecenter/SSBS6K_3.1.0/manage_cluster/
 ## Implementar o Transformation Advisor e o Microclimate
 {: #vcscontent-stocktrmod-deploy-tam}
 
-Depois que Todd tiver o {{site.data.keyword.icpfull_notm}} em execução, ele instalará o Transformation Advisor junto com o Microclimate. Todd abre o [catálogo](https://www.ibm.com/cloud/private/developer) e visualiza todo o conteúdo disponível.
+Depois que Todd tiver o {{site.data.keyword.icpfull_notm}} em execução, ele instalará o Transformation Advisor junto com o Microclimate. Todd abre o [catálogo](https://www.ibm.com/cloud/private/architecture) e visualiza todo o conteúdo disponível.
 
 Todd procura o Transformation Advisor e o Microclimate e os instala usando as instruções do arquivo leia-me fornecido quando ele clica no gráfico helm.
 

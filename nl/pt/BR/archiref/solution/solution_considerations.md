@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-25"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -46,7 +46,7 @@ Conclua as etapas a seguir para gerenciar o acesso à rede do {{site.data.keywor
 
 - Acesse os terminais de gerenciamento de instância usando a [VPN do {{site.data.keyword.cloud_notm}}](https://www.softlayer.com/vpn-access) ou a sua [Conexão do {{site.data.keyword.cloud_notm}} Direct-Link](https://www.ibm.com/cloud/direct-link).
 - Conceba uma estratégia para conectividade de rede pública de dentro de sua instância. Suas opções incluem: a amostra do VMware NSX Edge Services Gateway (ESG) do cliente, dispositivos de gateway, como o Vyatta e o FortiGate, além de servidores proxy implementados na rede do {{site.data.keyword.cloud_notm}} ou em sua própria rede acessada por meio do DirectLink.
-- Planeje se quer implementar sua carga de trabalho em VLANs {{site.data.keyword.cloud_notm}} com os [endereços IP móveis do {{site.data.keyword.cloud_notm}}](/docs/infrastructure/subnets?topic=subnets-getting-started-with-subnets-and-ips) ou [em comutadores lógicos NSX (VXLANs) usando seus próprios endereços IP](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_overview). Observe que o uso da rede definida por software (SDN) do NSX oferece a maior flexibilidade para gerenciar e proteger sua rede de carga de trabalho no {{site.data.keyword.cloud_notm}}.
+- Planeje se você deve implementar sua carga de trabalho em VLANs do {{site.data.keyword.cloud_notm}} com [endereços IP móveis do {{site.data.keyword.cloud_notm}}](/docs/infrastructure/subnets?topic=subnets-getting-started-subnets-ips#getting-started-subnets-ips) ou [em comutadores lógicos NSX (VXLANs) usando seus próprios endereços IP](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_overview). Observe que o uso da rede definida por software (SDN) do NSX oferece a maior flexibilidade para gerenciar e proteger sua rede de carga de trabalho no {{site.data.keyword.cloud_notm}}.
 - Use ESGs do NSX, o [IBM Cloud Vyatta](https://cloud.ibm.com/catalog/infrastructure/virtual-router-appliance) e o peer DirectLink para planejar a conectividade para cargas de trabalho (Conversão de endereço de rede, Rede privada virtual, roteamento).
 - Se estiver implementando o Cross-vCenter NSX, assegure-se de que os intervalos de ID do segmento local não estejam sendo sobrepostos antes da implementação de cargas de trabalho locais.
 
@@ -107,7 +107,7 @@ Assegure-se de planejar e implementar as soluções a seguir para monitorar sua 
 - Uma infraestrutura de alerta, incluindo a configuração do servidor SMTP e o gateway de Serviço de mensagens curtas (SMS), conforme necessário.
 - Monitoramento proativo de hosts, unidades, software de gerenciamento e rede.
 - Monitoramento do vSAN, se aplicável.
-- Monitoramento e planejamento de capacidade. É possível [incluir e remover clusters](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances) e [incluir e remover hosts](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers) de sua instância do console do {{site.data.keyword.vmwaresolutions_short}}.
+- Monitoramento e planejamento de capacidade. É possível [incluir e remover clusters](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters) e [incluir e remover hosts](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers) de sua instância do console do {{site.data.keyword.vmwaresolutions_short}}.
 - Monitoramento de sua infraestrutura de backup e tarefas de backup.
 
 ## Continuidade e disponibilidade de negócios
@@ -141,5 +141,5 @@ Além disso, veja a receita do developerWorks mostrando como [incluir mais armaz
 {: #solution_considerations-related}
 
 * [Visão geral da solução](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)
-* [Visão geral do design](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_overview)
+* [ Visão geral do design ](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_overview)
 * [ Capacidade de Escalação ](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_scaling)

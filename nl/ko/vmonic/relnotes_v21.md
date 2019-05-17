@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -39,7 +39,7 @@ HCX on {{site.data.keyword.cloud_notm}} 서비스는 이제 vSphere 6.5에서 �
 온프레미스 HCX 설치의 라이센스 부여 및 활성화를 위해 온프레미스 HCX 인스턴스도 주문할 수 있습니다.
 
 자세한 정보는 다음 주제를 참조하십시오.
-* [HCX on {{site.data.keyword.cloud_notm}}에 대한 고려사항](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview)
+* [HCX on {{site.data.keyword.cloud_notm}}에 대한 고려사항](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations)
 * [HCX on {{site.data.keyword.cloud_notm}} 관리](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghcx)
 * [온프레미스 HCX 인스턴스에 대한 고려사항](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_considerations)
 * [온프레미스 HCX 인스턴스 주문](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_orderingserviceinstances)
@@ -53,7 +53,7 @@ HCX on {{site.data.keyword.cloud_notm}} 서비스는 이제 vSphere 6.5에서 �
 
 자세한 정보는 다음 주제를 참조하십시오.
 
-* [vCenter Server 인스턴스에 대한 클러스터 추가 및 보기](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [vCenter Server 인스턴스의 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 * [BYOL에 대한 FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_byol)
 
 ## Zerto on IBM Cloud 서비스 컴포넌트 업데이트
@@ -91,7 +91,7 @@ VMware 패치 및 업데이트가 향후 릴리스에서 사용 가능할 때 �
 ### 클러스터 최대 서버가 32개에서 증가함
 {: #relnotes_v21-max-clusters}
 
-인스턴스의 기본 클러스터의 경우, 최대 51개의 서버를 배치하거나 확장할 수 있습니다. 인스턴스의 모든 후속 클러스터의 경우, 최대 59개의 서버를 배치하거나 확장할 수 있습니다. 자세한 정보는 [vCenter Server 인스턴스에 대한 클러스터 추가 및 보기](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)를 참조하십시오.
+인스턴스의 기본 클러스터의 경우, 최대 51개의 서버를 배치하거나 확장할 수 있습니다. 인스턴스의 모든 후속 클러스터의 경우, 최대 59개의 서버를 배치하거나 확장할 수 있습니다. 자세한 정보는 [vCenter Server 인스턴스의 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)를 참조하십시오.
 
 이 기능은 V2.1 이상에 배치되는 인스턴스에 대해서만 사용 가능합니다. V2.1 이전 릴리스에서 V2.1로 업그레이드된 인스턴스에는 이 옵션이 없습니다.
 {:note}
@@ -113,7 +113,7 @@ Bare Metal Server 구성을 사용자 정의한 사용자는 이제 듀얼 Intel
 자세한 정보는 다음 주제를 참조하십시오.
 * [vCenter Server 개요](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
 * [vCenter Server 인스턴스 주문](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [vCenter Server 인스턴스에 대한 클러스터 추가 및 보기](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [vCenter Server 인스턴스의 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 
 ## 사용자 인터페이스 업데이트 및 개선사항
 {: #relnotes_v21-ui}

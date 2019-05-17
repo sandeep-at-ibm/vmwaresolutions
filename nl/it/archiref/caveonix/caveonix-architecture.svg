@@ -1,590 +1,127 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="816px"
-   height="216px"
-   version="1.1"
-   viewBox="-.5 -.5 816 216"
-   id="svg186"
-   sodipodi:docname="caveonix-architecture.svg"
-   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
-  <defs
-     id="defs190" />
-  <sodipodi:namedview
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1027"
-     id="namedview188"
-     showgrid="false"
-     inkscape:zoom="1.7794118"
-     inkscape:cx="446.85524"
-     inkscape:cy="123.27567"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg186" />
-  <metadata
-     id="metadata2">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g
-     fill="#f5f5f5"
-     pointer-events="none"
-     stroke="#e6e6e6"
-     id="g12">
-    <rect
-       x="185"
-       y="165.5"
-       width="630"
-       height="50"
-       id="rect4" />
-    <rect
-       x="185"
-       y="110.5"
-       width="630"
-       height="50"
-       id="rect6" />
-    <rect
-       x="185"
-       y="55.5"
-       width="630"
-       height="50"
-       id="rect8" />
-    <rect
-       x="185"
-       y=".5"
-       width="630"
-       height="50"
-       id="rect10" />
-  </g>
-  <rect
-     x="25"
-     y=".5"
-     width="160"
-     height="50"
-     fill="#007fff"
-     pointer-events="none"
-     id="rect14" />
-  <g
-     fill="#fff"
-     font-family="Helvetica"
-     font-size="10px"
-     text-anchor="middle"
-     id="g20">
-    <text
-       x="104.5"
-       y="22"
-       id="text16">Dashboard</text>
-    <text
-       x="104.5"
-       y="34"
-       id="text18">RiskForesight</text>
-  </g>
-  <rect
-     x="25"
-     y="55.5"
-     width="160"
-     height="50"
-     fill="#007fff"
-     pointer-events="none"
-     id="rect22" />
-  <g
-     font-size="10px"
-     id="g28"
-     transform="matrix(0.83549091,0,0,1,29.841049,0)"
-     style="font-size:10px;font-family:Helvetica;text-anchor:middle;fill:#ffffff">
-    <text
-       x="104.5"
-       y="77"
-       id="text24">Orchestrazione e implementazione</text>
-    <text
-       x="104.5"
-       y="89"
-       id="text26">delle politiche</text>
-  </g>
-  <rect
-     x="25"
-     y="110.5"
-     width="160"
-     height="50"
-     fill="#007fff"
-     pointer-events="none"
-     id="rect30" />
-  <g
-     fill="#fff"
-     font-family="Helvetica"
-     font-size="10px"
-     text-anchor="middle"
-     id="g36">
-    <text
-       x="104.5"
-       y="132"
-       id="text32">Motore di analisi</text>
-    <text
-       x="104.5"
-       y="144"
-       id="text34">CaveoIQ</text>
-  </g>
-  <rect
-     x="25"
-     y="165.5"
-     width="160"
-     height="50"
-     fill="#007fff"
-     pointer-events="none"
-     id="rect38" />
-  <g
-     fill="#fff"
-     font-family="Helvetica"
-     font-size="10px"
-     text-anchor="middle"
-     id="g44">
-    <text
-       x="104.5"
-       y="187"
-       id="text40">Carico di lavoro, rete</text>
-    <text
-       x="104.5"
-       y="199"
-       id="text42">e sicurezza</text>
-  </g>
-  <rect
-     x="223"
-     y="5.5"
-     width="80"
-     height="40"
-     fill="#007fff"
-     pointer-events="none"
-     id="rect46" />
-  <g
-     fill="#fff"
-     font-family="Helvetica"
-     font-size="10px"
-     text-anchor="middle"
-     id="g52">
-    <text
-       x="262.5"
-       y="22"
-       id="text48">Portale</text>
-    <text
-       x="262.5"
-       y="34"
-       id="text50">provider di servizi</text>
-  </g>
-  <rect
-     x="343"
-     y="5.5"
-     width="80"
-     height="40"
-     fill="#007fff"
-     pointer-events="none"
-     id="rect54" />
-  <g
-     fill="#fff"
-     font-family="Helvetica"
-     font-size="10px"
-     text-anchor="middle"
-     id="g60">
-    <text
-       x="382.5"
-       y="22"
-       id="text56">Portale</text>
-    <text
-       x="382.5"
-       y="34"
-       id="text58">tenant</text>
-  </g>
-  <rect
-     x="463"
-     y="5.5"
-     width="80"
-     height="40"
-     fill="#007fff"
-     pointer-events="none"
-     id="rect62" />
-  <g
-     font-size="10px"
-     id="g66"
-     transform="matrix(0.8651819,0,0,1,66.649778,0)"
-     style="font-size:10px;font-family:Helvetica;text-anchor:middle;fill:#ffffff">
-    <text
-       x="502.5"
-       y="28"
-       id="text64">Rischio informatico</text>
-  </g>
-  <rect
-     x="583"
-     y="5.5"
-     width="80"
-     height="40"
-     fill="#007fff"
-     pointer-events="none"
-     id="rect68" />
-  <g
-     fill="#fff"
-     font-family="Helvetica"
-     font-size="10px"
-     text-anchor="middle"
-     id="g74">
-    <text
-       x="622.5"
-       y="22"
-       id="text70">Rischio</text>
-    <text
-       x="622.5"
-       y="34"
-       id="text72">conformità</text>
-  </g>
-  <rect
-     x="703"
-     y="5.5"
-     width="80"
-     height="40"
-     fill="#007fff"
-     pointer-events="none"
-     id="rect76" />
-  <g
-     fill="#fff"
-     font-family="Helvetica"
-     font-size="10px"
-     text-anchor="middle"
-     id="g82">
-    <text
-       x="742.5"
-       y="22"
-       id="text78">Analisi</text>
-    <text
-       x="742.5"
-       y="34"
-       id="text80">d'indagine</text>
-  </g>
-  <rect
-     x="263"
-     y="60.5"
-     width="80"
-     height="40"
-     fill="#007fff"
-     pointer-events="none"
-     id="rect84" />
-  <g
-     fill="#fff"
-     font-family="Helvetica"
-     font-size="10px"
-     text-anchor="middle"
-     id="g88">
-    <text
-       x="302.5"
-       y="83"
-       id="text86">RMCP</text>
-  </g>
-  <rect
-     x="393"
-     y="60.5"
-     width="80"
-     height="40"
-     fill="#007fff"
-     pointer-events="none"
-     id="rect90" />
-  <g
-     fill="#fff"
-     font-family="Helvetica"
-     font-size="10px"
-     text-anchor="middle"
-     id="g96">
-    <text
-       x="432.5"
-       y="77"
-       id="text92">Implementazione</text>
-    <text
-       x="432.5"
-       y="89"
-       id="text94">delle politiche</text>
-  </g>
-  <rect
-     x="523"
-     y="60.5"
-     width="80"
-     height="40"
-     fill="#007fff"
-     pointer-events="none"
-     id="rect98" />
-  <g
-     fill="#fff"
-     font-family="Helvetica"
-     font-size="10px"
-     text-anchor="middle"
-     id="g104">
-    <text
-       x="562.5"
-       y="77"
-       id="text100">Analisi</text>
-    <text
-       x="562.5"
-       y="89"
-       id="text102">delle politiche</text>
-  </g>
-  <rect
-     x="653"
-     y="60.5"
-     width="80"
-     height="40"
-     fill="#007fff"
-     pointer-events="none"
-     id="rect106" />
-  <g
-     fill="#fff"
-     font-family="Helvetica"
-     font-size="10px"
-     text-anchor="middle"
-     id="g112">
-    <text
-       x="692.5"
-       y="77"
-       id="text108">Modellazione</text>
-    <text
-       x="692.5"
-       y="89"
-       id="text110">delle politiche</text>
-  </g>
-  <rect
-     x="323"
-     y="116.5"
-     width="80"
-     height="40"
-     fill="#007fff"
-     pointer-events="none"
-     id="rect114" />
-  <g
-     fill="#fff"
-     font-family="Helvetica"
-     font-size="10px"
-     text-anchor="middle"
-     id="g120">
-    <text
-       x="362.5"
-       y="133"
-       id="text116">Machine</text>
-    <text
-       x="362.5"
-       y="145"
-       id="text118">Learning</text>
-  </g>
-  <rect
-     x="463"
-     y="116.5"
-     width="80"
-     height="40"
-     fill="#007fff"
-     pointer-events="none"
-     id="rect122" />
-  <g
-     fill="#fff"
-     font-family="Helvetica"
-     font-size="10px"
-     text-anchor="middle"
-     id="g128">
-    <text
-       x="502.5"
-       y="133"
-       id="text124">Analisi</text>
-    <text
-       x="502.5"
-       y="145"
-       id="text126">multidimensionale</text>
-  </g>
-  <rect
-     x="603"
-     y="116.5"
-     width="80"
-     height="40"
-     fill="#007fff"
-     pointer-events="none"
-     id="rect130" />
-  <g
-     fill="#fff"
-     font-family="Helvetica"
-     font-size="10px"
-     text-anchor="middle"
-     id="g134">
-    <text
-       x="642.5"
-       y="139"
-       id="text132">Analisi dei rischi</text>
-  </g>
-  <rect
-     x="263"
-     y="170.5"
-     width="80"
-     height="40"
-     fill="#007fff"
-     pointer-events="none"
-     id="rect136" />
-  <g
-     fill="#fff"
-     font-family="Helvetica"
-     font-size="10px"
-     text-anchor="middle"
-     id="g142">
-    <text
-       x="302.5"
-       y="187"
-       id="text138">Raccoglitore</text>
-    <text
-       x="302.5"
-       y="199"
-       id="text140">remoto</text>
-  </g>
-  <rect
-     x="393"
-     y="170.5"
-     width="80"
-     height="40"
-     fill="#007fff"
-     pointer-events="none"
-     id="rect144" />
-  <g
-     fill="#fff"
-     font-family="Helvetica"
-     font-size="10px"
-     text-anchor="middle"
-     id="g150">
-    <text
-       x="432.5"
-       y="187"
-       id="text146">Integrazione</text>
-    <text
-       x="432.5"
-       y="199"
-       id="text148">VMware</text>
-  </g>
-  <rect
-     x="523"
-     y="170.5"
-     width="80"
-     height="40"
-     fill="#007fff"
-     pointer-events="none"
-     id="rect152" />
-  <g
-     fill="#fff"
-     font-family="Helvetica"
-     font-size="10px"
-     text-anchor="middle"
-     id="g158">
-    <text
-       x="562.5"
-       y="187"
-       id="text154">Integrazione</text>
-    <text
-       x="562.5"
-       y="199"
-       id="text156">contenitori</text>
-  </g>
-  <rect
-     x="653"
-     y="170.5"
-     width="80"
-     height="40"
-     fill="#007fff"
-     pointer-events="none"
-     id="rect160" />
-  <g
-     fill="#fff"
-     font-family="Helvetica"
-     font-size="10px"
-     text-anchor="middle"
-     id="g166">
-    <text
-       x="692.5"
-       y="187"
-       id="text162">Integrazione</text>
-    <text
-       x="692.5"
-       y="199"
-       id="text164">cloud pubblico</text>
-  </g>
-  <ellipse
-     cx="26"
-     cy="191"
-     rx="25"
-     ry="25"
-     fill="#fff"
-     pointer-events="none"
-     stroke="#007fff"
-     id="ellipse168" />
-  <g
-     fill="#06c"
-     font-family="Helvetica"
-     font-size="12px"
-     font-weight="bold"
-     text-anchor="middle"
-     id="g172">
-    <text
-       x="25.5"
-       y="194"
-       id="text170">Detect</text>
-  </g>
-  <ellipse
-     cx="25"
-     cy="136"
-     rx="25"
-     ry="25"
-     fill="#fff"
-     pointer-events="none"
-     stroke="#007fff"
-     id="ellipse174" />
-  <g
-     fill="#06c"
-     font-family="Helvetica"
-     font-size="12px"
-     font-weight="bold"
-     text-anchor="middle"
-     id="g178">
-    <text
-       x="24.5"
-       y="139"
-       id="text176">Predict</text>
-  </g>
-  <ellipse
-     cx="26"
-     cy="81"
-     rx="25"
-     ry="25"
-     fill="#fff"
-     pointer-events="none"
-     stroke="#007fff"
-     id="ellipse180" />
-  <g
-     fill="#06c"
-     font-family="Helvetica"
-     font-size="12px"
-     font-weight="bold"
-     text-anchor="middle"
-     id="g184">
-    <text
-       x="25.5"
-       y="84"
-       id="text182">Act</text>
-  </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="816px" height="216px" version="1.1" viewBox="-.5 -.5 816 216" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g fill="#f5f5f5" pointer-events="none" stroke="#e6e6e6">
+  <rect x="185" y="165.5" width="630" height="50"/>
+  <rect x="185" y="110.5" width="630" height="50"/>
+  <rect x="185" y="55.5" width="630" height="50"/>
+  <rect x="185" y=".5" width="630" height="50"/>
+ </g>
+ <rect x="25" y=".5" width="160" height="50" fill="#007fff" pointer-events="none"/>
+ <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <text x="104.5" y="22">RiskForesight</text>
+  <text x="104.5" y="34">Dashboard</text>
+ </g>
+ <rect x="25" y="55.5" width="160" height="50" fill="#007fff" pointer-events="none"/>
+ <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <text x="104.5" y="77">Orchestrazione delle politiche</text>
+  <text x="104.5" y="89">e applicazione</text>
+ </g>
+ <rect x="25" y="110.5" width="160" height="50" fill="#007fff" pointer-events="none"/>
+ <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <text x="104.5" y="132">CaveoIQ</text>
+  <text x="104.5" y="144">Motore di analisi</text>
+ </g>
+ <rect x="25" y="165.5" width="160" height="50" fill="#007fff" pointer-events="none"/>
+ <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <text x="104.5" y="187">Carico di lavoro, rete</text>
+  <text x="104.5" y="199">e sicurezza</text>
+ </g>
+ <rect x="223" y="5.5" width="80" height="40" fill="#007fff" pointer-events="none"/>
+ <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <text x="262.5" y="22">Provider di servizi</text>
+  <text x="262.5" y="34">Portale</text>
+ </g>
+ <rect x="343" y="5.5" width="80" height="40" fill="#007fff" pointer-events="none"/>
+ <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <text x="382.5" y="22">Tentant</text>
+  <text x="382.5" y="34">Portale</text>
+ </g>
+ <rect x="463" y="5.5" width="80" height="40" fill="#007fff" pointer-events="none"/>
+ <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <text x="502.5" y="28">Rischio informatico</text>
+ </g>
+ <rect x="583" y="5.5" width="80" height="40" fill="#007fff" pointer-events="none"/>
+ <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <text x="622.5" y="22">Conformità</text>
+  <text x="622.5" y="34">Rischio</text>
+ </g>
+ <rect x="703" y="5.5" width="80" height="40" fill="#007fff" pointer-events="none"/>
+ <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <text x="742.5" y="22">Indagine</text>
+  <text x="742.5" y="34">Analisi</text>
+ </g>
+ <rect x="263" y="60.5" width="80" height="40" fill="#007fff" pointer-events="none"/>
+ <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <text x="302.5" y="83">RMCP</text>
+ </g>
+ <rect x="393" y="60.5" width="80" height="40" fill="#007fff" pointer-events="none"/>
+ <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <text x="432.5" y="77">Politica</text>
+  <text x="432.5" y="89">Implementazione</text>
+ </g>
+ <rect x="523" y="60.5" width="80" height="40" fill="#007fff" pointer-events="none"/>
+ <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <text x="562.5" y="77">Politica</text>
+  <text x="562.5" y="89">Analisi</text>
+ </g>
+ <rect x="653" y="60.5" width="80" height="40" fill="#007fff" pointer-events="none"/>
+ <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <text x="692.5" y="77">Politica</text>
+  <text x="692.5" y="89">Modellazione</text>
+ </g>
+ <rect x="323" y="116.5" width="80" height="40" fill="#007fff" pointer-events="none"/>
+ <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <text x="362.5" y="133">Machine</text>
+  <text x="362.5" y="145">Learning</text>
+ </g>
+ <rect x="463" y="116.5" width="80" height="40" fill="#007fff" pointer-events="none"/>
+ <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <text x="502.5" y="133">Multidimensionale</text>
+  <text x="502.5" y="145">Analisi</text>
+ </g>
+ <rect x="603" y="116.5" width="80" height="40" fill="#007fff" pointer-events="none"/>
+ <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <text x="642.5" y="139">Analisi dei rischi</text>
+ </g>
+ <rect x="263" y="170.5" width="80" height="40" fill="#007fff" pointer-events="none"/>
+ <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <text x="302.5" y="187">Remoto</text>
+  <text x="302.5" y="199">Raccoglitore</text>
+ </g>
+ <rect x="393" y="170.5" width="80" height="40" fill="#007fff" pointer-events="none"/>
+ <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <text x="432.5" y="187">VMware</text>
+  <text x="432.5" y="199">Integrazione</text>
+ </g>
+ <rect x="523" y="170.5" width="80" height="40" fill="#007fff" pointer-events="none"/>
+ <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <text x="562.5" y="187">Contenitore</text>
+  <text x="562.5" y="199">Integrazione</text>
+ </g>
+ <rect x="653" y="170.5" width="80" height="40" fill="#007fff" pointer-events="none"/>
+ <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <text x="692.5" y="187">Cloud pubblico</text>
+  <text x="692.5" y="199">Integrazione</text>
+ </g>
+ <ellipse cx="26" cy="191" rx="25" ry="25" fill="#fff" pointer-events="none" stroke="#007fff"/>
+ <g fill="#06c" font-family="Helvetica" font-size="12px" font-weight="bold" text-anchor="middle">
+  <text x="25.5" y="194">Detect</text>
+ </g>
+ <ellipse cx="25" cy="136" rx="25" ry="25" fill="#fff" pointer-events="none" stroke="#007fff"/>
+ <g fill="#06c" font-family="Helvetica" font-size="12px" font-weight="bold" text-anchor="middle">
+  <text x="24.5" y="139">Predict</text>
+ </g>
+ <ellipse cx="26" cy="81" rx="25" ry="25" fill="#fff" pointer-events="none" stroke="#007fff"/>
+ <g fill="#06c" font-family="Helvetica" font-size="12px" font-weight="bold" text-anchor="middle">
+  <text x="25.5" y="84">Act</text>
+ </g>
 </svg>

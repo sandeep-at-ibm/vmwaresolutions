@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-02-15"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -40,8 +40,8 @@ Table 1. Accès aux ports requis
 | Passerelle cloud | Hôtes ESXi | 80, 902  | TCP | Gestion et déploiement OVF | Interne |
 | Hôtes ESXi | Passerelle cloud | 31031, 44046 | TCP | Trafic de réplication basée sur l'hôte interne | Interne |
 | Passerelle cloud | Hôtes ESXi | 8000  | TCP | vMotion (migration sans interruption) |  |
-| Passerelle cloud (locale) | Passerelle cloud</br>(distante) | 4500  | UDP | Echange de clés Internet (IKEv2) pour l'encapsulage des charges de travail pour le tunnel bidirectionnel | IPSEC |
-| Passerelle cloud (locale) | Passerelle cloud</br>(distante) | 500  | UDP | Echange de clés Internet (ISAKMP) pour le tunnel bidirectionnel | IPSEC |
+| Passerelle cloud (locale) | Passerelle cloud </br>(distante) | 4500  | UDP | Echange de clés Internet (IKEv2) pour l'encapsulage des charges de travail pour le tunnel bidirectionnel | IPSEC |
+| Passerelle cloud (locale) | Passerelle cloud </br>(distante) | 500  | UDP | Echange de clés Internet (ISAKMP) pour le tunnel bidirectionnel | IPSEC |
 
 ## Liens connexes
 {: #hcx-archi-port-req-related}

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -76,7 +76,7 @@ para sua licença e [entrar em contato com o suporte IBM](/docs/services/vmwares
 ## Substituindo a VSI do Veeam de instâncias anteriores à V1.8 por Veeam no IBM Cloud
 {: #managingveeam-replace-vsi}
 
-O serviço Veeam no {{site.data.keyword.cloud_notm}}, que pode fazer backup dos componentes de gerenciamento e das cargas de trabalho, suplanta a VSI do Veeam anterior que foi integrado ao VMware Cloud Foundation e ao VMware vCenter Server em liberações anteriores à V1.8 apenas para o backup de componentes de gerenciamento.
+O serviço Veeam on {{site.data.keyword.cloud_notm}}, que pode fazer backup de componentes de gerenciamento e de cargas de trabalho, substitui o Veeam VSI anterior que foi integrada ao VMware vCenter Server em liberações anteriores à V1.8 somente para o backup de componentes de gerenciamento.
 
 Por causa dessa mudança, a guia **Backup e restauração** anterior na página de detalhes da instância
 foi removida e os pontos de backup para as instâncias não estão mais disponíveis no

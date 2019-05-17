@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -87,7 +87,9 @@ O fundamento dessas soluções é a automação. A automação reduz a complexid
 O IBM CloudBuilder é uma instância de servidor virtual (VSI) da VM do {{site.data.keyword.cloud_notm}} efêmera que
 funciona para criar uma nova instância do VMware e executar funções de gerenciamento de ciclo de vida. Ele é implementado quando o gerenciamento de instância do vCenter Server geral é necessário e é destruído quando o processo é concluído.
 
-O IBM CloudDriver pode ser configurado para se comunicar de volta com a infraestrutura de gerenciamento do {{site.data.keyword.vmwaresolutions_short}} por uma conexão de rede pública ou privada por meio do {{site.data.keyword.cloud_notm}} Object Storage como a fila de mensagens. O IBM CloudDriver é um componente desenvolvido pela IBM, não é acessível pelo usuário e tem os atributos e as funções a seguir:
+O IBM CloudDriver é uma instância de servidor virtual (VSI) efêmera da VM do {{site.data.keyword.cloud_notm}} que é implementada, conforme necessário, para operações do dia 2, como incluir hosts, clusters ou serviços complementares para sua instância do VMware.
+
+O CloudBuilder e o CloudDriver são implementados somente na rede privada conectando-se ao plano de gerenciamento IBM por meio de uma fila de mensagens privadas. Eles são componentes desenvolvidos pela IBM, não são acessíveis ao usuário e têm os atributos e a função a seguir:
 
 - Implementação e configuração da instância do vCenter Server dentro da conta do usuário.
 - Inclusão e remoção de hosts dos clusters do vCenter Server.
@@ -100,7 +102,7 @@ Server.
 
 O seguinte descreve a ordem de eventos quando você usa o console do {{site.data.keyword.vmwaresolutions_short}} para pedir uma instância do VMware:
 1. Pedindo VLANs e sub-redes para rede do {{site.data.keyword.cloud_notm}}.
-2. Pedindo o {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} com o vSphere Hypervisor instalado.
+2. Pedindo o  {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}  com o vSphere Hypervisor instalado.
 3. Pedido da Microsoft Windows VSI para servir como controlador de domínio do Active Directory.
 4. Implementação da VSI do Driver de nuvem.
 5. Validação da rede e do hardware implementado.

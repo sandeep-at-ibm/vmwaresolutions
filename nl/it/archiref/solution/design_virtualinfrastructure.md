@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-04-09"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -35,7 +35,7 @@ La configurazione di vSphere ESXi comprende i seguenti aspetti:
 
 La seguente tabella delinea le specifiche per ciascun aspetto. Dopo la configurazione e l'installazione di ESXi, l'host viene aggiunto a un VMware vCenter Server ed è gestito da lì.
 
-Con questa progettazione, puoi accedere agli host virtuali tramite l'interfaccia utente della console diretta (DCUI), la shell ESXi e SSH (Secure Shell).
+Con questa progettazione, puoi accedere agli host virtuali tramite l'interfaccia utente della console diretta (DCUI) e il client web vSphere. SSH (Secure Shell) e ESXi Shell vengono disabilitati dopo il provisioning come procedura consigliata. 
 
 Per impostazione predefinita, gli unici utenti che possono accedere direttamente sono gli utenti _root_ e _ibmvmadmin_ per la macchina fisica dell'host. L'amministratore può aggiungere utenti dal dominio Microsoft Active Directory (MSAD) per abilitare l'accesso dell'utente all'host. Tutti gli host nella progettazione della soluzione vCenter Server sono configurati per la sincronizzazione con un server NTP centrale.
 
@@ -45,20 +45,20 @@ Tabella 1. Configurazione di vSphere ESXi
 |:---------------------- |:----------------------- |
 | Posizione di avvio ESXi     | Utilizza i dischi locali configurati in RAID-1 |
 | Sincronizzazione temporale   | Utilizza il server NTP {{site.data.keyword.cloud}} |
-| Accesso host            | Supporta DCUI, Shell ESXi o SSH, se abilitato |
+| Accesso host            | Supporta DCUI. SSH e ESXi Shell sono supportati ma non abilitati per impostazione predefinita |
 | Accesso utente            | Autenticazione locale e MSAD |
 | Risoluzione nomi di dominio | Utilizza DNS come descritto in [Progettazione di servizi comuni](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_commonservice). |
 | Modalità EVC | Skylake (solo per “nuove” distribuzioni vSphere 6.7) |
 
 Il cluster vSphere ospita le macchine virtuali (VM) che gestiscono l'istanza vCenter Server così come le risorse di calcolo per i carichi di lavoro dell'utente.
 
-* Se un'istanza vCenter Server utilizza vSAN, il numero minimo di host ESXi nella distribuzione iniziale è 4. 
-* Se un'istanza vCenter Server utilizza l'archiviazione al livello di file o al livello di blocchi condivisa, il numero minimo di host ESXi nella distribuzione iniziale è 3. 
+* Se un'istanza vCenter Server utilizza vSAN, il numero minimo di host ESXi nella distribuzione iniziale è 4.
+* Se un'istanza vCenter Server utilizza l'archiviazione al livello di file o al livello di blocchi condivisa, il numero minimo di host ESXi nella distribuzione iniziale è 3.
 
 Puoi ridimensionare fino a un massimo di 59 host ESXi durante o dopo la distribuzione iniziale.
 
 Per supportare più carichi di lavoro dell'utente, puoi ridimensionare l'ambiente attraverso le seguenti modalità:  
-* Distribuzione di ulteriori host di calcolo dei cluster esistenti
+* Distribuzione di ulteriori host di calcolo nei cluster esistenti
 * Distribuzione di ulteriori cluster che vengono gestiti dallo stesso vCenter Server Appliance
 * Distribuzione di nuove istanze vCenter Server con il relativo vCenter Server Appliance
 
@@ -77,7 +77,7 @@ Figura 2. Concetto vSAN
 
 vSAN utilizza i seguenti componenti:
 * Progettazione vSAN a due gruppi di dischi; ogni gruppo di dischi con due o più dischi. Nel gruppo, un'unità SSD o NVMe dalle dimensioni più piccole funge da livello di cache e gli SSD rimanenti fungono da livello di capacità.
-* Il controller RAID integrato è configurato per ogni unità tranne che per le due unità del sistema operativo (SO), che sono configurate in un array RAID–0 per unità.
+* Il controller RAID integrato è configurato in un array RAID-0 per ogni unità tranne che per le due unità del sistema operativo (SO).
 * Un singolo archivio dati vSAN creato da tutta l'archiviazione.
 
 Le funzioni vSAN disponibili dipendono dall'edizione della licenza che selezioni quando ordini l'istanza. Per ulteriori informazioni, vedi [Confronto delle edizioni di VMware vSAN](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution-appendix#vmware-vsan-edition-comparison).
@@ -121,9 +121,9 @@ Le impostazioni vSAN sono configurate in base alle procedure ottimali per la dis
 
 A differenza dell'archiviazione collegata a NFS v3, l'archiviazione collegata a iSCSI supporta i percorsi attivo-attivo tra tutte le porte di scheda NIC configurate e le porte di destinazione. Per tale motivo, può essere ottenuta una velocità effettiva superiore e questa è un'alternativa desiderabile all'archiviazione di collegamento NFS. Non comporta un costo superiore di complessità.
 
-L'archiviazione a blocchi {{site.data.keyword.cloud_notm}} Endurance supporta solo un massimo di otto host collegati per LUN. È concepito per documentare la funzionalità che verrà aggiunta a vCenter Server al passaggio all'architettura a blocchi {{site.data.keyword.cloud_notm}} Endurance quando cambia l'archiviazione Endurance nel primo trimestre per consentire il collegamento di massimo 64 host o iniziatori iSCSI, mentre ogni host ESXi avrà minimo due iniziatori.
+L'archiviazione blocchi {{site.data.keyword.cloud_notm}} Endurance supporta massimo 64 IP collegati per LUN quando utilizzi VMware, che consente fino a 32 host in  base a questa progettazione. 
 
-Un LUN iSCSI di 2-TB viene collegato a vCenter Server per l'utilizzo dei componenti di gestione e un minimo di un altro LUN iSCSI viene configurato per l'utilizzo del carico di lavoro del cliente. Questa archiviazione è formattata come un file system VMFS 6.x per ogni LUN.
+Un LUN iSCSI di 2-TB viene collegato al cluster vSphere per l'utilizzo dei componenti di gestione e almeno un altro LUN iSCSI viene configurato per l'utilizzo del carico di lavoro del cliente. Questa archiviazione è formattata come un file system VMFS 6.x per ogni LUN.
 
 ### Configurazione della rete virtuale per iSCSI
 {: #design_virtualinfrastructure-setup-iscsi}
@@ -161,9 +161,9 @@ Dopo la distribuzione iniziale, l'automazione di {{site.data.keyword.cloud_notm}
 
 Oltre ai controller, l'automazione di {{site.data.keyword.cloud_notm}} prepara gli host vSphere distribuiti con NSX VIB per abilitare l'uso di una rete virtualizzata tramite i VTEP (VXLAN Tunnel Endpoint). Ai VTEP vengono assegnati indirizzi IP supportati dalla VLAN dall'intervallo di indirizzi IP della rete portatile **Privata A** specificata per i VTEP, come indicato in [VLAN](/docs/services/vmwaresolutions/services?topic=vmware-solutions-design_physicalinfrastructure#design_physicalinfrastructure-vlans). Il traffico VXLAN risiede sulla VLAN senza tag ed è assegnato al vDS privato.
 
-Successivamente, viene assegnato un pool di ID segmento e gli host nel cluster vengono aggiunti alla zona di trasporto. Nella zona di trasporto viene utilizzato solo unicast poiché lo snooping IGMP (Internet Group Management Protocol) non è configurato all'interno di {{site.data.keyword.cloud_notm}}. Vengono configurate due porte kernel vTEP per host sulla stessa sottorete dedicata VTEP per procedura consigliata VMW.
+Successivamente, viene assegnato un pool di ID segmento e gli host nel cluster vengono aggiunti alla zona di trasporto. Nella zona di trasporto viene utilizzato solo unicast poiché lo snooping IGMP (Internet Group Management Protocol) non è configurato all'interno di {{site.data.keyword.cloud_notm}}. Vengono configurate due porte kernel VTEP per host sulla stessa sottorete dedicata VTEP per procedura consigliata VMW. 
 
-Dopo di che, vengono distribuite le coppie di gateway dei servizi edge NSX. In tutti i casi, una coppia di gateway viene utilizzata per il traffico in uscita dai componenti di automazione che risiedono nella rete privata. Un secondo gateway noto come edge gestito dal cliente, viene distribuito e configurato con un uplink alla rete pubblica e un'interfaccia che è assegnata alla rete privata. Per ulteriori informazioni sui gateway dei servizi edge NSX che vengono distribuiti come parte della soluzione, vedi [Architettura della soluzione NSX Edge Services Gateway](/docs/services/vmwaresolutions/services?topic=vmware-solutions-nsx_overview#nsx_overview).
+Dopo di che, se l'istanza dispone di interfacce di rete pubbliche, vengono distribuite due coppie di Gateway dei servizi edge NSX. Una coppia gateway viene utilizzata per il traffico in uscita dai componenti di automazione che risiedono sulla rete privata. Un secondo gateway noto come edge gestito dal cliente, viene distribuito e configurato con un uplink alla rete pubblica e un'interfaccia che è assegnata alla rete privata. Per ulteriori informazioni sui gateway dei servizi edge NSX che vengono distribuiti come parte della soluzione, vedi [Architettura della soluzione NSX Edge Services Gateway](/docs/services/vmwaresolutions/services?topic=vmware-solutions-nsx_overview#nsx_overview).
 
 Gli amministratori cloud possono configurare qualsiasi componente NSX richiesto, come ad esempio DLR (Distributed Logical Router), switch logici e firewall. Le funzioni NSX disponibili dipendono dall'edizione della licenza NSX che scegli quando ordini l'istanza. Per ulteriori informazioni, vedi [Confronto delle edizioni di VMware NSX](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution-appendix#vmware-nsx-edition-comparison).
 
@@ -189,7 +189,7 @@ Figura 4. Progettazione di switch distribuiti
 
 ![Progettazione di switch distribuiti](vcsv4radiagrams-distributed-switch-design.svg "Progettazione di vDS")
 
-Come mostrato nella precedente figura, un vDS è configurato per la connettività alla rete pubblica (SDDC-Dswitch-Public) e l'altro vDS è configurato per la connettività alla rete privata (SDDC-Dswitch-Private).Separare i diversi tipi di traffico è necessario per ridurre il conflitto e la latenza e aumentare la sicurezza.
+Come mostrato nella precedente figura, un vDS è configurato per la connettività alla rete pubblica (SDDC-Dswitch-Public) e l'altro vDS è configurato per la connettività alla rete privata (SDDC-Dswitch-Private). Separare i diversi tipi di traffico è necessario per ridurre il conflitto e la latenza e aumentare la sicurezza.
 
 Le VLAN vengono utilizzate per segmentare le funzioni della rete fisica. Questa progettazione utilizza tre VLAN: due per il traffico della rete privata e una per il traffico della rete pubblica. La seguente tabella mostra la separazione del traffico.
 
@@ -228,7 +228,7 @@ Tabella 6. Impostazioni di configurazione del gruppo di porte degli switch distr
 \* Il gruppo di porte vSAN utilizza il failover esplicito con attivo o standby perché non supporta il bilanciamento del carico del traffico di archiviazione vSAN. I gruppi di porte iSCSI hanno solo un uplink attivo alla volta (iSCSI A - Uplink1, iSCSI B - Uplink 2).
 {:note}
 
-Tabella 7. Gruppi di porte e VLAN degli switch virtuali del cluster convergente, switch distribuito **SDDC-Dswitch-Private** 
+Tabella 7. Gruppi di porte e VLAN degli switch virtuali del cluster convergente, switch distribuito **SDDC-Dswitch-Private**
 
 Gruppo di porte|Teaming|Uplink|ID VLAN
 ---|---|---|--
@@ -248,7 +248,7 @@ Scopo|Gruppo di porte connesse|Servizi abilitati|MTU
 Gestione|SDDC-DPortGroup-Mgmt|Traffico di gestione|1500 (predefinito)
 vMotion|SDDC-DPortGroup-vMotion|Traffico vMotion|9000
 VTEP|NSX generato|-|9000
-VSAN|SDDC-DPortGroup-VSAN|VSAN|9000
+vSAN|SDDC-DPortGroup-VSAN|vSAN|9000
 NAS|SDDC-DPortGroup-NFS|NAS|9000
 iSCSI|SDDC-DPortGroup-iSCSI-A|iSCSI|9000
 iSCSI|SDDC-DPortGroup-iSCSI-B|iSCSI|9000
@@ -263,7 +263,7 @@ Gli aspetti elencati di seguito sono preconfigurati:
 * Gli agent ESXi sono installati e gli indirizzi IP VTEP sono configurati per ogni host ESXi
 * Configurazione VTEP, configurazione dei controller e configurazione VXLAN (zona di trasporto)
 * Dispositivi Gateway dei servizi edge NSX utilizzabili dai componenti di gestione
-* Dispositivi Gateway dei servizi edge NSX utilizzabili dal cliente 
+* Dispositivi Gateway dei servizi edge NSX utilizzabili dal cliente
 * I carichi di lavoro del cliente che utilizzano la VXLAN NSX collegata a un DLR (distributed local router) con una VXLAN di transito tra il DLR e l'ESG del cliente.
 * Lo spazio di indirizzo RFC 1918 per le VXLAN e lo spazio dell'IP portatile pubblico e privato IBM Cloud utilizzabile come rete in uscita sull'ESG del cliente.
 
@@ -273,6 +273,22 @@ I seguenti aspetti non sono configurati:
 
 Figura 5. Topologia NSX del cliente di esempio distribuita
 ![Topologia NSX del cliente di esempio distribuita](vcsv4radiagrams-ra-vcs-nsx-topology-customer-example.svg)
+
+## Connettività di rete pubblica
+
+Ci sono vari motivi per cui puoi aver bisogno della connettività di rete pubblica per la tua istanza. Ciò può includere l'accesso ai servizi di aggiornamento pubblici o ad altri servizi pubblici per il tuo carico di lavoro come ad esempio i database di geolocalizzazione o i dati meteo. Anche i tuoi servizi aggiuntivi e di gestione della virtualizzazione possono richiedere o beneficiare della connettività pubblica. Ad esempio, vCenter può aggiornare il suo database HCL e ottenere aggiornamenti [VMware Update Manager (VUM)](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-intro) sulla rete pubblica. Zerto, Veeam, VMware HCX, F5 BIG-IP e FortiGate-VM utilizzano tutti la connettività di rete pubblica per alcune parti della loro licenza del prodotto, attivazione o creazione di report sull'utilizzo. In aggiunta a ciò, potresti utilizzare i tunnel sulla rete pubblica per la connettività ai tuoi data center in loco a scopo di replica. 
+
+Di norma, queste comunicazioni vengono instradate in modo selettivo e associate tramite NAT alla rete pubblica attraverso il Gateway dei servizi edge (ESG) di gestione o del cliente. Tuttavia, potresti avere requisiti di sicurezza aggiuntivi o preferire l'utilizzo di un proxy per semplificare il percorso della comunicazione. Inoltre, se hai distribuito la tua istanza con le interfacce pubbliche disabilitate, non sarai in grado di utilizzare gli ESG per l'instradamento alla rete pubblica.
+
+Questa architettura consente le seguenti opzioni per instradare il tuo traffico alla rete pubblica o per utilizzare un proxy per eseguire tale operazione: 
+
+Metodo|Descrizione|Limitazioni
+--|--|--
+Gateway virtualizzato|Distribuisce un gateway virtualizzato (ad esempio, NSX ESG, F5 BIG-IP, FortiGate-VM o un dispositivo virtuale di tua scelta) attraverso la rete privata e pubblica. Configura l'instradamento sul sistema di origine (ad esempio, vCenter, Zerto, il tuo carico di lavoro) per indirizzare solo il traffico di rete pubblico al gateway e per configurare il gateway a seconda delle tue esigenze. |Applicabile solo alle istanze con interfacce pubbliche abilitate. Questa configurazione è consentita sia per i modelli di traffico in uscita che in entrata. 
+Gateway virtualizzato con proxy|Distribuisce un gateway virtualizzato come detto sopra. Dietro questo gateway, [distribuisce un server proxy](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-init-config#vum-init-config) e configura i tuoi servizi e le tue applicazioni per connettersi alla rete pubblica tramite questo proxy.|Applicabile solo alle istanze con interfacce pubbliche abilitate. I modelli di traffico in uscita possono utilizzare il proxy ma quelli in entrata devono essere gestiti nel gateway. 
+Gateway hardware|Distribuisce un [dispositivo gateway hardware](https://cloud.ibm.com/catalog/infrastructure/gateway-appliance) nella tua VLAN di gestione. Configura il gateway per NAT in uscita sulla rete pubblica in base alle tue esigenze. |Applicabile a tutte le istanze, con o senza interfacce pubbliche abilitate. Questa configurazione è consentita sia per i modelli di traffico in uscita che in entrata. 
+Gateway hardware con proxy|Distribuisce un dispositivo gateway come detto sopra. Dietro questo gateway, [distribuisce un server proxy](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-init-config#vum-init-config) e configura i tuoi servizi e le tue applicazioni per connettersi alla rete pubblica tramite questo proxy.|Applicabile a tutte le istanze, con o senza interfacce pubbliche abilitate. I modelli di traffico in uscita possono utilizzare il proxy ma quelli in entrata devono essere gestiti dal gateway.
+Programma di bilanciamento del carico|IBM Cloud offre diversi [servizi del programma di bilanciamento del carico](https://cloud.ibm.com/catalog/infrastructure/load-balancer-group) che puoi utilizzare per fornire l'accesso di rete in entrata alle tue applicazioni. |Applicabile a tutte le istanze, ma limitato ai modelli di traffico in entrata. 
 
 ## Link correlati
 {: #design_virtualinfrastructure-related}

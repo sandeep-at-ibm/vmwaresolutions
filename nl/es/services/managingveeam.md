@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -70,7 +70,7 @@ Si el servicio Veeam está instalado en una instancia solo con red privada, debe
 ## Sustitución de la VSI de Veeam de instancias anteriores a V1.8 con Veeam on IBM Cloud
 {: #managingveeam-replace-vsi}
 
-El servicio Veeam on {{site.data.keyword.cloud_notm}}, que puede hacer copia de seguridad de componentes de gestión y de cargas de trabajo, sustituye la VSI de Veeam anterior que venía integrada con VMware Cloud Foundation y VMware vCenter Server en los releases anteriores a V1.8 solo para los componentes de copia de seguridad y de gestión.
+El servicio Veeam on {{site.data.keyword.cloud_notm}}, que puede hacer copia de seguridad de componentes de gestión y de cargas de trabajo, sustituye la VSI de Veeam anterior que venía integrada con VMware vCenter Server en los releases anteriores a V1.8 solo para los componentes de copia de seguridad y de gestión.
 
 Debido a este cambio, el separador **Copia de seguridad y restauración** anterior de la página de detalles de la instancia se eliminó y los puntos de copia de seguridad para las instancias ya no están disponibles en la consola de {{site.data.keyword.vmwaresolutions_short}}, aunque la VSI de Veeam en instancias anteriores a V1.8 sigue funcionando.
 

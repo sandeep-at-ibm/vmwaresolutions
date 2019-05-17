@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2017-10-13"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -78,7 +78,7 @@ F5 BIG-IP Virtual Edition(VE) on {{site.data.keyword.cloud_notm}} 서비스는 �
 
 호스팅된 VMware 환경의 용량 확장을 개선하기 위해, 이제는 인스턴스에 배치된 초기 클러스터가 아닌 다른 {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 팟(Pod) 또는 다른 {{site.data.keyword.CloudDataCent_notm}}에서 새 클러스터를 작성할 수 있습니다.
 
-자세한 정보는 [vCenter Server 인스턴스에 대한 클러스터 추가 및 보기](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)를 참조하십시오.
+자세한 정보는 [vCenter Server 인스턴스의 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)를 참조하십시오.
 
 ### 컴포넌트 변경
 {: #relnotes_v19-change-comp}

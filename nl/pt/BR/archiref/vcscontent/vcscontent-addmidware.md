@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -139,7 +139,7 @@ livre)
   -	Web Terminal (software livre)
   -	Skydive – analisador de rede (software livre)
 
-Para o Stock Trader, com base na arquitetura de solução de Jane, Todd iniciará com o [Db2](https://console.cloud.ibm.com/catalog/services/db2-hosted), o [MQ](https://console.cloud.ibm.com/catalog/services/mq) e o [Redis](https://console.cloud.ibm.com/catalog/services/databases-for-redis).
+Para o Stock Trader, com base na arquitetura de solução de Jane, Todd iniciará com o [Db2](https://cloud.ibm.com/catalog/services/db2-hosted), o [MQ](https://cloud.ibm.com/catalog/services/mq) e o [Redis](https://cloud.ibm.com/catalog/services/databases-for-redis).
 
 ## Incluindo middleware
 {: #vcscontent-addmidware-add-middleware}

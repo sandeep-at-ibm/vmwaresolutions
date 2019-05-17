@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -40,8 +40,8 @@ Il seguente flusso di lavoro descrive il processo per eseguire un aggiornamento 
 {: #vum-orchestr-updates-step1}
 
 1. Utilizza il client web vSphere per accedere al VCSA.
-2. Seleziona **Home** > **Update Manager** e, dalla **scheda Objects**, seleziona un'**istanza Update Manager**.
-3. Fai clic sulla **scheda Manage**, quindi sulla **scheda Host Baselines** e fai clic su **New Baseline Group**.
+2. Seleziona **Home** > **Update Manager**, dalla scheda **Objects**, seleziona un'**istanza Update Manager**.
+3. Fai clic sulla scheda **Manage**, quindi sulla scheda **Host Baselines** e fai clic su **New Baseline Group**.
 4. Immetti un nome univoco per il gruppo di baseline e fai clic su **Next**.
 5. Seleziona una baseline di aggiornamento dell'host per includerla nel gruppo di baseline.
 6. Facoltativamente, crea una nuova baseline di aggiornamento dell'host facendo clic su **Create a new Host Upgrade Baseline** nella parte inferiore della pagina Upgrades e completa la procedura guidata per la nuova baseline. Fai clic su **Next**.
@@ -68,4 +68,4 @@ Puoi ora utilizzare questi gruppi di baseline nei processi di scansione, revisio
 {: #vum-orchestr-updates-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (dimostrazioni)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (dimostrazioni)

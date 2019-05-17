@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -70,7 +70,7 @@ Veeam on {{site.data.keyword.cloud_notm}} 服務可以配置成使用 Veeam 主�
 ## 將 1.8 版之前的實例的 Veeam VSI 取代為 Veeam on IBM Cloud
 {: #managingveeam-replace-vsi}
 
-Veeam on {{site.data.keyword.cloud_notm}} 服務可以備份管理元件及工作負載，並取代舊版 Veeam VSI，而其已整合至 1.8 版之前版本中的 VMware Cloud Foundation 及 VMware vCenter Server，並且僅用於備份管理元件。
+Veeam on {{site.data.keyword.cloud_notm}} 服務可以備份管理元件及工作負載，並取代舊版 Veeam VSI，而其已整合至 1.8 版之前版本中的 VMware vCenter Server，並且僅用於備份管理元件。
 
 基於這項變更，已移除實例詳細資料頁面上的先前**備份及還原**標籤，而且 {{site.data.keyword.vmwaresolutions_short}} 主控台中不再有實例的備份點，雖然 1.8 版前之實例中的 Veeam VSI 仍然保持運作。
 

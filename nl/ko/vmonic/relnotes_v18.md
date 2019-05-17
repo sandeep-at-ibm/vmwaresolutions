@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2017-08-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -60,7 +60,7 @@ V1.8 릴리스부터 Cloud Foundation 인스턴스를 주문하는 경우 vSpher
 
 자세한 정보는 다음 주제를 참조하십시오.
 * [vCenter Server 인스턴스 주문](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [vCenter Server 인스턴스에 대한 클러스터 추가 및 보기](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [vCenter Server 인스턴스의 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 
 ### 여덟 개 이상의 NFS 파일 공유를 추가하는 지원
 {: #relnotes_v18-nfs}
@@ -69,7 +69,7 @@ V1.8 릴리스부터 Cloud Foundation 인스턴스를 주문하는 경우 vSpher
 
  자세한 정보는 다음 주제를 참조하십시오.
 * [vCenter Server 인스턴스 주문](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [vCenter Server 인스턴스에 대한 클러스터 추가 및 보기](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [vCenter Server 인스턴스의 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 
 ### 데이터 센터에 대한 업데이트
 {: #relnotes_v18-dc}

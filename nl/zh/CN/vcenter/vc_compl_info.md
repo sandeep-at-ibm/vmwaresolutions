@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -82,7 +82,7 @@ VMware vCenter Server 环境作为 {{site.data.keyword.vmwaresolutions_short}} �
 * 由于在团队级别维护高级技术专业知识所需的专业水平，有时需要多个支持团队参与解决特定软件问题。这一点可轻松得到解决，因为我们的支持团队全部联网在一起，可以作为一个整体通力合作来解决出现的任何问题。
 * 为了调查问题，IBM 可能需要访问您系统上与故障相关的信息，或者可能需要再现故障以获取其他信息。
 * 客户生成的支持凭单用作确认，表明客户同意 IBM 支持人员访问 VMware 管理层进行调查、调试和分类。如果需要维护中断或对环境进行更改，IBM 支持人员将要求客户通过凭单进行额外书面确认，以将此作为变更管理流程的一部分。
-* 有关支持凭单的更多信息，请参阅 [Software Support Handbook](https://www-304.ibm.com/support/customercare/sas/f/handbook/getsupport.html) 和[联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)。
+* 有关支持凭单的更多信息，请参阅 [IBM Support Guide](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923) 和[联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)。
 
 ## 客户责任
 {: #vc_compl_info-client-responsibilities}
@@ -93,7 +93,7 @@ VMware vCenter Server 环境作为 {{site.data.keyword.vmwaresolutions_short}} �
 * 初始部署时，产品的自动化和客户的帐户是分开的。允许并鼓励客户更改 IBM 在门户网站中提供的所有密码。
 * vCenter 访问权和凭证在初始部署期间创建，并提供给客户。作为产品需求的一部分，IBM 支持人员必须保留对管理层的完全访问权，以提供生命周期管理以及对客户的支持。
 * 如果在任何时间更改了凭证（例如，密码），那么 IBM 支持人员可能无法再帮助客户恢复丢失或遗忘的凭证，或者甚至无法对客户的环境进行故障诊断。
-* 有关此问题和相关问题的重要性的更多信息，请参阅[关于更改 NSX 组件密码时的注意事项](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_networkingonvcenterserver#considerations-when-changing-passwords-for-nsx-components)和[关于更改 vCenter Server 工件的注意事项](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter_chg_impact)。
+* 有关此问题和相关问题的重要性的更多信息，请参阅[关于更改 NSX 组件密码时的注意事项](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_networkingonvcenterserver#vc_networkingonvcenterserver-change-nsx-component-password-considerations)和[关于更改 vCenter Server 工件的注意事项](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter_chg_impact)。
 
 ### 沟通和故障诊断
 {: #vc_compl_info-communication-troubleshooting}
@@ -121,7 +121,7 @@ VMware vCenter Server 环境作为 {{site.data.keyword.vmwaresolutions_short}} �
 * 这些非 IBM 程序由其提供者直接许可。客户同意依据提供者的条款和条件来使用这些非 IBM 程序。这些条款和条件在购买 IBM 产品时随附的 IBM 许可协议中提供。
 * IBM 会进行测试，以确保第三方产品能与 IBM 程序和功能相应地配合使用。
 * IBM 软件支持人员将利用我们的 IBM 产品如何与第三方软件配合使用的知识来诊断与客户问题相关的问题。一旦认定 IBM 程序工作正常，但该问题仍然存在，IBM 必须向客户推荐第三方供应商以做进一步诊断。
-* 有关第三方软件或代码的客户责任的进一步信息，请参阅 [Software Support Handbook](https://www-304.ibm.com/support/customercare/sas/f/handbook/policies.html)。
+* 有关第三方软件或代码的客户责任的进一步信息，请参阅 [IBM Support Guide](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923)。
 
 ## 同意访问客户环境
 {: #vc_compl_info-consent-to-access-client-environment}

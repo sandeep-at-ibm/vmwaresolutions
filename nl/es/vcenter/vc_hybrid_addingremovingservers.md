@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-18"
+lastupdated: "2019-04-18"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -30,11 +30,13 @@ A partir del release V2.9, puede añadir nuevos servidores ESXi a un clúster mi
 Puesto que el clúster inicial tiene vSAN como almacenamiento, el hecho de añadir uno o varios servidores ESXi después del despliegue puede aumentar la capacidad de almacenamiento del clúster.
 
 ## Adición de servidores ESXi a vCenter Server con instancias del paquete híbrido (Hybridity)
+{: #vc_hybrid_addingremovingservers-adding}
 
 ### Antes de añadir servidores ESXi
 {: #vc_hybrid_addingremovingservers-adding-prereq}
 
-* No añada servidores ESXi desde el cliente web de VMware vSphere. Los cambios que realice en el cliente web de vSphere no se sincronizan con la consola de {{site.data.keyword.vmwaresolutions_short}}.
+* Siempre que sea posible, añada servidores ESXi utilizando la consola de {{site.data.keyword.vmwaresolutions_full}}, ya que los cambios que realice en el cliente web de VMware vSphere no se sincronizan con la consola de {{site.data.keyword.vmwaresolutions_short}}. Por lo tanto, añada servidores ESXi a vCenter Server solo para servidores ESXi locales o servidores ESXi que no pueda o no vaya a gestionar en la consola de
+{{site.data.keyword.vmwaresolutions_short}}.
 * El almacenamiento vSAN requiere al menos 4 servidores ESXi.
 
 ## Procedimiento para añadir servidores ESXi
@@ -65,7 +67,8 @@ Si va a añadir servidores ESXi durante la modalidad de mantenimiento, las máqu
 ### Antes de eliminar los servidores ESXi
 {: #vc_hybrid_addingremovingservers-removing-prereq}
 
-* No elimine servidores ESXi desde el cliente web de VMware vSphere. Los cambios que realice en el cliente web de vSphere no se sincronizan con la consola de {{site.data.keyword.vmwaresolutions_short}}.
+* Siempre que sea posible, elimine servidores ESXi utilizando la consola de {{site.data.keyword.vmwaresolutions_full}}, ya que los cambios que realice en el cliente web de vSphere no se sincronizan con la consola de {{site.data.keyword.vmwaresolutions_short}}. Por lo tanto, elimine servidores ESXi de vCenter Server solo para servidores ESXi locales o servidores ESXi que no pueda o no vaya a gestionar en la consola de
+{{site.data.keyword.vmwaresolutions_short}}.
 * El almacenamiento vSAN requiere al menos 4 servidores ESXi.
 * Antes de eliminar servidores ESXi con el servicio de F5 on {{site.data.keyword.cloud_notm}} o FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} instalado, debe migrar las máquinas virtuales de F5 BIG-IP y FortiGate a un servidor ESXi distinto al que está alojando las máquinas virtuales.
 * Antes de eliminar los servidores ESXi con el servicio de IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} instalado, asegúrese de que no haya operaciones de copia de seguridad o restauración activas (anómalas o en curso), porque estas operaciones activas podrían impedir que se eliminen los servidores ESXi.
@@ -96,5 +99,5 @@ Si va a añadir servidores ESXi durante la modalidad de mantenimiento, las máqu
 * [Lista de materiales de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
 * [Requisitos y planificación de instancias de vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)
 * [Adición, visualización y supresión de clústeres para instancias de vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingviewingclusters)
-* [Colocación de un host en modalidad de mantenimiento](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
-* [Soporte del procesador Enhanced vMotion Compatibility (EVC)](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003212){:new_window}
+* [Colocación de un host en modalidad de mantenimiento](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.resmgmt.doc/GUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
+* [Soporte del procesador Enhanced vMotion Compatibility (EVC)](https://kb.vmware.com/s/article/1003212){:new_window}

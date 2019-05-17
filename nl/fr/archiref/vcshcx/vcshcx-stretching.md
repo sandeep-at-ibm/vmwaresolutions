@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-05"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -141,7 +141,7 @@ Une fois que la confiance s'est construite autour du fonctionnement de HCX, la m
 
 La technologie NFS est généralement utilisée pour partager des données sur de nombreux serveurs, tels que des contenus de serveurs Web. La technologie iSCSI peut être utilisée sur tous les noeuds de machine virtuelle qui comprennent un cluster d'applications comme la messagerie ou les SGBDR, et elle est généralement plus sensible à la latence que NFS.
 
-Dans un cas comme dans l'autre, si la latence peut être maintenue faible dans {{site.data.keyword.CloudDataCent_notm}} (< ~7 ms pour iSCSI et ce que l'application tolère pour NFS) et si l'application fonctionne avec un débit de 1 Gbits/s ou inférieur, alors le réseau NAS peut être étendu avec HCX à un emplacement {{site.data.keyword.clou_notm}}. Après cela, les machines virtuelles peuvent être migrées / transférées via vMotion avec HCX comme d'habitude.
+Dans un cas comme dans l'autre, si la latence peut être maintenue faible dans {{site.data.keyword.CloudDataCent_notm}} (< ~7 ms pour iSCSI et ce que l'application tolère pour NFS) et si l'application fonctionne avec un débit de 1 Gbits/s ou inférieur, alors le réseau NAS peut être étendu avec HCX à un emplacement {{site.data.keyword.cloud_notm}}. Après cela, les machines virtuelles peuvent être migrées / transférées via vMotion avec HCX comme d'habitude.
 
 Après la migration, les volumes iSCSI peuvent être dupliqués avec le système d'exploitation vers une autre solution de stockage en cloud local et les données NFS peuvent être répliquées vers n'importe quelle solution de cloud. Les considérations suivantes doivent être prises en compte :
 - Latence (iSCSI ou tolérance d'application pour NFS)

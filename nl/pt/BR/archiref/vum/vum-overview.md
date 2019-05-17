@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -62,7 +62,7 @@ A visualização de administração é acessada navegando para **Página inicial
 ##	Visualização de conformidade
 {: #vum-overview-compliance-view}
 
-A visualização de conformidade de um objeto de inventário selecionado é acessada navegando para **Hosts e clusters** ou **MVs e modelos** e clicando na **guia Update Manager**. Na visualização Conformidade do Update Manager, é possível executar as tarefas a seguir:
+A visualização de conformidade de um objeto de inventário selecionado é acessada navegando para **Hosts e clusters** ou **VMs e modelos** e clicando na guia **Update Manager**. Na visualização Conformidade do Update Manager, é possível executar as tarefas a seguir:
 *	Visualizar a conformidade e varrer os resultados para cada objeto de inventário selecionado
 *	Anexar e remover linhas de base e grupos de linhas de base de um objeto de inventário selecionado
 *	Varrer um objeto de inventário selecionado
@@ -72,5 +72,5 @@ A visualização de conformidade de um objeto de inventário selecionado é aces
 ## Links relacionados
 {: #vum-overview-related}
 
-* [Arquitetura de solução do VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrações)
+* [Arquitetura da solução VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
+* [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (demonstrações)

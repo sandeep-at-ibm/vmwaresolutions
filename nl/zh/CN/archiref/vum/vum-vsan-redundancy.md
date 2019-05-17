@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -23,10 +23,10 @@ subcollection: vmwaresolutions
 
 1. 创建具有 RAID 5/6 和 FTT =2 (RAID 6) 设置的新 vSAN 概要文件，然后针对必需的 VM 或设备应用此策略。
 
-2. 等待 vSAN 完成同步后，再启动任何修复操作。可以通过浏览至集群的 **vSAN 虚拟对象监视页面**并查看**完成状态**来检查完成状态。
+2. 等待 vSAN 完成同步后，再启动任何修复操作。可以通过导航至集群的 **vSAN 虚拟对象监视页面**并查看**完成状态**来检查完成状态。
 
 ## 相关链接
 {: #vum-vsan-redundancy-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 解决方案体系结构](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} 数字技术互动](https://ibm-dte.mybluemix.net/ibm-vmware)（演示）
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} 数字技术互动](https://ibm-dte.mybluemix.net/vmware)（演示）

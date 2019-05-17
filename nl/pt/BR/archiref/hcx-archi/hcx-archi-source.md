@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -23,7 +23,7 @@ Esta seção descreve a arquitetura de cada componente do HCX que é implementad
 ## Introducing HCX
 {: #hcx-archi-source-intro-hcx}
 
-A tecnologia HCX integra de forma contínua as redes vSphere vCenter às plataformas IBM Cloud VCF ou VCS. A rede híbrida amplia as redes vSphere vCenter no local para o IBM Cloud, suportando a mobilidade bidirecional da máquina virtual (MV).
+A tecnologia HCX integra de forma contínua as redes vSphere vCenter à plataforma IBM Cloud VCS. A rede híbrida amplia as redes vSphere vCenter no local para o IBM Cloud, suportando a mobilidade bidirecional da máquina virtual (MV).
 
 Esta introdução resume as tarefas que podem ser realizadas e os recursos que suportam e aprimoram a migração e a extensão de rede.
 
@@ -220,7 +220,7 @@ seja configurado entre as instalações do cliente e a nuvem.
 
 Quando os usuários estendem suas redes para a nuvem, a conectividade da Camada 2 é estendida para o IBM Cloud. No entanto, sem a otimização de rota, as solicitações de comunicação da Camada 3 devem retornar para a origem de rede no local para serem roteadas. Essa viagem de retorno é chamada de "tromboning" ou "hairpinning".
 
-O tromboning é ineficiente porque os pacotes devem viajar entre a origem de rede e a Nuvem, mesmo quando as máquinas virtuais de origem e de destino residem na Nuvem. Além da ineficiência, se o caminho de encaminhamento incluir firewalls stateful ou outro equipamento sequencial que deva ver ambos os lados da conexão, a comunicação poderá falhar. A falha na comunicação da máquina virtual (sem otimização da rota) ocorre quando o caminho de egresso que sai da nuvem pode ser a rede estendida da Camada 2 ou por meio do VCS/VCF NSX Edge Gateway. A rede local não conhece o "atalho" de rede estendida. Esse problema é chamado de roteamento assimétrico. A solução é ativar o roteamento de proximidade para que a rede no local possa aprender as rotas do IBM Cloud.
+O tromboning é ineficiente porque os pacotes devem viajar entre a origem de rede e a Nuvem, mesmo quando as máquinas virtuais de origem e de destino residem na Nuvem. Além da ineficiência, se o caminho de encaminhamento incluir firewalls stateful ou outro equipamento sequencial que deva ver ambos os lados da conexão, a comunicação poderá falhar. A falha na comunicação da máquina virtual (sem otimização de rota) ocorre quando o caminho de egresso que está saindo da nuvem pode ser a rede da Camada 2 estendida ou por meio do VCS NSX Edge Gateway. A rede local não conhece o "atalho" de rede estendida. Esse problema é chamado de roteamento assimétrico. A solução é ativar o roteamento de proximidade para que a rede no local possa aprender as rotas do IBM Cloud.
 
 Para evitar o tromboning, o HCX usa o gerenciamento de rota inteligente para escolher as rotas apropriadas para o estado da máquina virtual. O Cloud Gateway mantém um inventário de máquinas virtuais na nuvem. Ele também entende o estado da máquina virtual, que pode ser:
 * Transferido para a nuvem com o vMotion (migração de tempo de inatividade zero).
@@ -232,7 +232,7 @@ Para evitar o tromboning, o HCX usa o gerenciamento de rota inteligente para esc
 
 No diagrama, os componentes `N*a` à esquerda residem no data center no local, e o componente `N*b` à direita reside na nuvem.
 
-R1 é o gateway padrão para N1-b, portanto, N1-b deve retornar para R1 para rotear o tráfego por meio de R2. Para evitar o roteamento assimétrico, o HCX injeta as rotas de host dentro da sobreposição do NSX da implementação do IBM Cloud VCS/VCF. Se a máquina virtual tiver sido recém-criada na nuvem ou ela tiver sido movida com migração de tempo de inatividade baixo, a rota de host será injetada imediatamente.
+R1 é o gateway padrão para N1-b, portanto, N1-b deve retornar para R1 para rotear o tráfego por meio de R2. Para evitar o roteamento assimétrico, o HCX injeta rotas de host dentro da sobreposição de NSX da implementação do IBM Cloud VCS. Se a máquina virtual tiver sido recém-criada na nuvem ou ela tiver sido movida com migração de tempo de inatividade baixo, a rota de host será injetada imediatamente.
 
 Se a máquina virtual foi transferida usando o vMotion, a rota não será injetada até que a máquina virtual seja reinicializada. Aguardar até após a reinicialização assegura que os dispositivos stateful no local continuem a atender a sessão existente até que a máquina virtual seja reinicializada. Após a reinicialização, as informações de roteamento são consistentes no local e na nuvem.
 
@@ -256,7 +256,7 @@ Figura 5. Roteamento assimétrico com solução de Roteamento de proximidade
 ### Migração de política de
 {: #hcx-archi-source-sec-policy-mig}
 
-O recurso de Migração de política permite que as regras de firewall distribuído NSX sejam movidas de um vCenter no local para uma Nuvem ativada para VCF/VCS HCX. A Migração de política é possível ao usar a migração de tempo de inatividade baixo ou o vMotion para mover uma máquina virtual por meio de uma rede estendida com o High Throughput Layer 2 Concentrator.
+O recurso de Migração de política permite que as regras de firewall distribuídas do NSX sejam movidas de um vCenter no local para uma Nuvem ativada para VCS HCX. A Migração de política é possível ao usar a migração de tempo de inatividade baixo ou o vMotion para mover uma máquina virtual por meio de uma rede estendida com o High Throughput Layer 2 Concentrator.
 * O data center local deve estar executando o NSX 6.2.2 ou superior.
 * No vSphere, a política de segurança é uma única Seção NSX, que pode conter muitas regras. Pode haver somente uma Seção (política) por vDC de Organização.
 * Um Conjunto de endereços IP ou endereços MAC pode ser identificado para participar da política. O nome do Conjunto MAC ou do Conjunto de IP não pode exceder 218 caracteres.

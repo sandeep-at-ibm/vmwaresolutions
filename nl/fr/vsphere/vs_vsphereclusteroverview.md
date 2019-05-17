@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-10"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -54,7 +54,7 @@ Sélectionnez des licences (fournies par IBM ou BYOL) pour les composants VMware
 Vous pouvez commander un ou plusieurs serveurs {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} dans l'une des configurations suivantes :
 * **Skylake** : Génération Intel Skylake 2 UC (série Intel Xeon 4100/5100/6100) avec le modèle d'UC et la taille de mémoire RAM que vous avez sélectionnés.
 * **Certifiés SAP** : Génération Intel Skylake ou Intel Broadwell (série Intel Xeon 6140/E5-2690/E7-8890) avec votre modèle d'UC sélectionné.
-* **Broadwell** : Génération Intel Broadwell 2 UC (série Intel Xeon E5-2600/E7-4800) avec le modèle d'UC et la taille de mémoire RAM que vous avez sélectionnés.
+* **Broadwell** : serveurs des générations Intel Broadwell à 4 UC (Intel série Xeon E7-4800) avec vos modèle d'UC et taille de RAM sélectionnés.
 
 Les options disponibles varient selon que vous avez ou non sélectionné le composant VMware vSAN.
 

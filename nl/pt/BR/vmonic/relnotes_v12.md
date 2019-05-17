@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2016-12-12"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -27,7 +27,7 @@ A nova versão do VMware ESXi é vSphere 6.0 u2 p03, atualizada do ESXi 6.0 u2 n
 O {{site.data.keyword.vmwaresolutions_full}} é fornecido como uma solução de infraestrutura no catálogo do IBM Bluemix®. Deve-se associar a conta **IBMid** a uma conta do Bluemix para usar a conta **IBMid** para efetuar login no console do {{site.data.keyword.vmwaresolutions_short}}.
 
 Para obter mais informações, veja os tópicos a seguir:
-* [Introdução](/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started)
+* [Iniciar](/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started)
 * [Resolução de problemas para acessar o Bluemix](/docs/account?topic=account-accessing){:new_window}
 
 ## Recuperação de desastre Zerto

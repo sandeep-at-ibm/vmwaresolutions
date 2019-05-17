@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -69,7 +69,7 @@ A partir de agosto de 2019, {{site.data.keyword.vmwaresolutions_short}} ya no so
 Para obtener más información, consulte:
 
 * [Visión general de Virtual Routing and Forwarding (VRF) en IBM Cloud](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-* [Habilite la cuenta para utilizar puntos finales de servicio mediante la CLI de IBM Cloud](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
+* [Habilitación de la cuenta para el uso de puntos finales de servicio](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
 
 ## Soporte para interfaces de programación de aplicaciones
 {: #relnotes_v29-api}
@@ -102,7 +102,8 @@ Los nuevos centros de datos siguientes están disponibles para el despliegue: **
 ### Mejoras en el servidor ESXi
 {: #relnotes_v29-vcs-esxi}
 
-* El protocolo SSH (Secure Shell) está ahora inhabilitado para los servidores ESXi antes de la entrega de la instancia.
+* El protocolo SSH (Secure Shell) está ahora inhabilitado para los servidores ESXi antes de la entrega de la instancia. Si desea habilitar SSH, consulte
+[Habilitar SSH desde el cliente web de vSphere](https://pubs.vmware.com/vsphere-6-5/index.jsp?topic=%2Fcom.vmware.vcli.getstart.doc%2FGUID-C3A44A30-EEA5-4359-A248-D13927A94CCE.html).
 * A partir del release V2.9, están disponibles las siguientes operaciones de servidor ESXi:
 
    * Añada nuevos servidores ESXi a un clúster existente mientras los servidores están en modalidad de mantenimiento. Las máquinas virtuales no se migran a los nuevos servidores hasta que se eliminan de la modalidad de mantenimiento.
@@ -149,7 +150,11 @@ En el release actual, se ha instalado HyTrust CloudControl 5.4.2 en todas las in
 ### KMIP for VMware on IBM Cloud
 {: #relnotes_v29-services-kmip}
 
-Ahora hay disponibles dos nuevos puntos finales en Sídney para el servicio de KMIP for VMware on {{site.data.keyword.cloud_notm}}. Para obtener más información, consulte [Configuración de servicio de KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering-config).
+Ahora hay disponibles dos nuevos puntos finales en Sídney para el servicio de KMIP for VMware on {{site.data.keyword.cloud_notm}}. Para obtener más información, consulte [Configuración de servicio de KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering#kmip_standalone_ordering-config).
+
+(Actualizado el 09 de abril de 2019) Anteriormente, KMIP for VMware on {{site.data.keyword.cloud_notm}} utilizaba IBM Key Protect for {{site.data.keyword.cloud_notm}} para crear, cifrar y descifrar claves de cifrado. A partir del release V2.9, KMIP for VMware on {{site.data.keyword.cloud_notm}} también puede utilizar {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services, un conjunto completo de servicios de gestión de claves y cifrado, para gestionar las claves de cifrado utilizadas por VMware en
+{{site.data.keyword.cloud_notm}}. Para obtener más información, consulte
+[Visión general de KMIP for VMware on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations) e [{{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-get-started).
 
 ### Veeam on IBM Cloud
 {: #relnotes_v29-services-veeam}

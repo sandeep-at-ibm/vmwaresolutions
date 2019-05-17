@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -22,9 +22,9 @@ Figura 1. Ulteriore arricchimento di Stock Trader
 ## AI Watson Tone Analyzer
 {: #vcscontent-aianalytics-ai-watson}
 
-Il seguente esempio è un modo semplice per arricchire un'applicazione, ma è ingannevolmente potente. Jane sfoglia il [catalogo {{site.data.keyword.cloud}}](https://console.cloud.ibm.com/catalog/) per i servizi [AI](https://console.cloud.ibm.com/catalog/?category=ai) e [Analytics](https://console.cloud.ibm.com/catalog/?category=analytics) e trova il catalogo ricco di contenuti.
+Il seguente esempio è un modo semplice per arricchire un'applicazione, ma è ingannevolmente potente. Jane sfoglia il [catalogo {{site.data.keyword.cloud}}](https://cloud.ibm.com/catalog/) per i servizi [AI](https://cloud.ibm.com/catalog/?category=ai) e [Analytics](https://cloud.ibm.com/catalog/?category=analytics) e trova il catalogo ricco di contenuti. 
 
-Jane seleziona [Tone Analyzer](https://console.cloud.ibm.com/catalog/services/tone-analyzer), optando per il piano Standard e quindi riceve le credenziali per chiamare.
+Jane seleziona [Tone Analyzer](https://cloud.ibm.com/catalog/services/tone-analyzer), optando per il piano Standard e quindi riceve le credenziali per chiamare.
 Jane ha effettuato il refactoring di Stock Trader e crea solo un segreto Kubernetes per Tone Analyzer. In questo modo, anche se Jane cambia piani o regioni, non è necessario ricostruire il codice.
 
 Grazie al refactoring, Jane ha sperimentato vari framework di interfacce utente senza interrompere l'esperienza dell'utente. Di conseguenza, la nuova interfaccia utente è disponibile per l'uso e aiuta a comprendere il tono del feedback degli utenti.
@@ -41,7 +41,7 @@ di scaricare tale decisione in una regola di business che il direttore marketing
 può modificare senza il coinvolgimento di Jane.
 
 Jane ha parlato con Todd, che ha aggiunto il
-[servizio](https://console.cloud.ibm.com/catalog/services/decision-optimization) e quindi ha creato la decisione.
+[servizio](https://cloud.ibm.com/catalog/services/decision-optimization) e quindi ha creato la decisione.
 
 Ora, Margaret, il direttore marketing, può accedere e modificare gli intervalli del livello di fedeltà ogni volta che è in corso una campagna senza modificare alcun codice.
 
@@ -50,8 +50,7 @@ Ora, Margaret, il direttore marketing, può accedere e modificare gli intervalli
 
 Potresti notare che il servizio azionario è stato modificato.
 Questo può accadere quando un servizio pubblico cambia proprietario o la sua struttura
-API. Per fortuna, Jane usava [API
-Connect](https://console.cloud.ibm.com/catalog/services/api-connect).
+API. Per fortuna, Jane utilizzava [API Connect](https://cloud.ibm.com/catalog/services/api-connect).
 Inizialmente, utilizzava API Connect per semplificare la risposta dal
 servizio azionario originale poiché era un po' complicato ricevere e
 formattare i dati che desiderava attraverso l'API non elaborata che le era stata fornita.

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -26,7 +26,7 @@ VUM 未更新 PSC/VCSA。下列資訊說明更新這些應用裝置的處理程�
 您必須在更新之前起始應用裝置的 Snapshot 或 PSC/VCSA 的備份。請確定所有工作都如預期般運作，然後在幾天內移除 Snapshot，以避免效能降低。此外，在嘗試任何升級之前，請先檢閱 VMware 版本注意事項，以瞭解所指定版本的任何特定指示。
 
 若要更新 PSC/VCSA，請遵循下列步驟：
-1. 您可以移至 VMware 修補程式[下載中心](https://my.vmware.com/group/vmware/patch#search)、登入並從**依產品搜尋**功能表中選擇 VC，來下載更新。選取適當的修補程式，然後按一下**下載**。
+1. 您可以移至 [VMware 修補程式下載中心](https://www.vmware.com/patchmgr/findPatchByReleaseName.portal)、登入並從**依產品搜尋**功能表中選擇 VC，來下載更新項目。選取適當的修補程式，然後按一下**下載**。
 2. 使用 vSphere Web Client，將 ISO 檔案上傳至 vCenter 資料儲存庫。
 3. 將更新 ISO 檔案裝載至 vCenter Server。
 4. 建立 vCenter Server 的 Snapshot。
@@ -48,4 +48,4 @@ VUM 未更新 PSC/VCSA。下列資訊說明更新這些應用裝置的處理程�
 {: #vum-updating-vcsa-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 解決方案架構](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware)（示範）
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware)（示範）

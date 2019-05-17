@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -20,7 +20,7 @@ En esta sección se describe la arquitectura de cada componente de HCX que se de
 
 El primer componente que se configura en IBM Cloud es un par de máquinas virtuales NSX Edge. Es importante tener en cuenta que todos los despliegues de soluciones IBM Cloud for VMware instalan y configuran un dispositivo de extremo (Edge) para la comunicación de salida de IBM CloudDriver. Sin embargo, si bien este ESG se puede reutilizar para las comunicaciones de Hybrid Cloud Services, se recomienda que se despliegue un par nuevo.
 
-Las máquinas virtuales NSX Edge se configuran como un par Activo/Pasivo de dispositivos X-Large NSX Edge. Estos dispositivos se utilizan para conectar con el entorno de IBM Cloud VMware utilizando una conexión pública a internet. El dispositivo X-Large NSX Edge se ha elegido para el entorno interno ya que se adapta a entornos que tienen equilibrador de carga con millones de sesiones simultáneas que no necesariamente requieren un alto rendimiento. Como parte del proceso de configuración, el dispositivo NSX Edge se conecta a la VLAN pública de IBM Cloud y a la VLAN privada de IBM Cloud diseñada para la infraestructura de gestión.
+Las máquinas virtuales NSX Edge se configuran como un par Activo/Pasivo de dispositivos X-Large NSX Edge. Estos dispositivos se utilizan para conectar con el entorno de IBM Cloud VMware utilizando una conexión pública a Internet. El dispositivo X-Large NSX Edge se ha elegido para el entorno interno ya que se adapta a entornos que tienen equilibrador de carga con millones de sesiones simultáneas que no necesariamente requieren un alto rendimiento. Como parte del proceso de configuración, el dispositivo NSX Edge se conecta a la VLAN pública de IBM Cloud y a la VLAN privada de IBM Cloud diseñada para la infraestructura de gestión.
 
 Tabla 1. Despliegue de NSX Edge
 
@@ -134,7 +134,7 @@ Figura 2. Despliegue de la pasarela de nube
 
 El segundo componente que se despliega es el dispositivo de optimización de WAN. Aunque el dispositivo de optimización de WAN es opcional, realiza el acondicionamiento de la WAN para reducir los efectos de la latencia. También incorpora correcciones de errores de reenvío para evitar escenarios de pérdida de paquetes y desduplicación de los patrones de tráfico redundantes.
 
-En conjunto, estos recursos reducen el uso de ancho de banda y garantizan un uso eficiente de la capacidad de red disponible para acelerar la transferencia de datos a y desde IBM Cloud. El optimizador de WAN utiliza mucho disco y necesita la cantidad suficiente de IOPS para funcionar correctamente. Como resultado, el optimizador de WAN reside en el almacenamiento vSAN en el entorno VCF y en el almacenamiento de resistencia y da soporte a más de 2.000 IOPS en un despliegue de vCenter Server. La especificación de tamaño del dispositivo de optimización de WAN se muestra en la tabla siguiente.
+En conjunto, estos recursos reducen el uso de ancho de banda y garantizan un uso eficiente de la capacidad de red disponible para acelerar la transferencia de datos a y desde IBM Cloud. El optimizador de WAN utiliza mucho disco y necesita la cantidad suficiente de IOPS para funcionar correctamente. Como resultado, el optimizador de WAN reside en el almacenamiento vSAN si está presente, o en el almacenamiento resistente con 2000 IOPS. La especificación de tamaño del dispositivo de optimización de WAN se muestra en la tabla siguiente.
 
 Tabla 9. tamaño del dispositivo optimizador de WAN
 

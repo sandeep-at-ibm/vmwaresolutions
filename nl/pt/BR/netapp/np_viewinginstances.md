@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -62,7 +62,7 @@ Tabela 2. Propriedades de instância do NetApp ONTAP Select
 | Tipo de licença do NetApp | O tipo da licença do NetApp ONTAP Select. |
 | DNS, domínio-raiz | O nome de domínio-raiz é o nome de domínio DNS (Sistema de Nomes de Domínio) e o nome raiz da floresta do Microsoft Active Directory (AD) para a instância. |
 | DNS, domínio SSO | O domínio SSO é o domínio de Conexão única do vSphere. O nome de domínio SSO é configurado para todas as instâncias implementadas do NetApp ONTAP Select com um valor de `vsphere.local`. |
-| DNS, subdomínio | O subdomínio é o nome de subdomínio DNS do nome de domínio-raiz no qual os nomes de host da instância do NetApp ONTAP Select local residem. O nome de subdomínio está no formato `<subdomain_label>.<root_domain>`. |
+| DNS, subdomínio | O subdomínio é o nome de subdomínio DNS do nome de domínio-raiz no qual os nomes de host da instância do NetApp ONTAP Select local residem. O nome do subdomínio está no formato `<subdomain_label>.<root_domain>`. |
 | Status | O status da instância. |
 
 ## Procedimento para visualizar informações de acesso para instâncias do NetApp ONTAP Select
@@ -139,7 +139,7 @@ Se ocorrerem erros durante a implementação ou exclusão da instância, a equip
 	      <td>O tamanho da memória total dos servidores ESXi no cluster.</td>
 	   </tr>
 	   <tr>
-	      <td>Local do data center</td>
+	      <td>Local do datacenter</td>
 	      <td>O data center no qual o cluster está hospedado. É o mesmo com o local do data center da instância.</td>
 	   </tr>
 		 <tr>

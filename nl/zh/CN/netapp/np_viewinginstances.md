@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -63,7 +63,7 @@ subcollection: vmwaresolutions
 |NetApp 许可证类型|NetApp ONTAP Select 许可证的类型。|
 |DNS - 根域|根域名是实例的 DNS（域名系统）域名和 Microsoft Active Directory (AD) 林根名称。|
 |DNS - SSO 域|SSO 域是 vSphere Single Sign-On 域。SSO 域名针对所有部署的 NetApp ONTAP Select 实例设置为值 `vsphere.local`。|
-|DNS - 子域|子域是本地 NetApp ONTAP Select 实例主机名所在的根域名的 DNS 子域名。子域名的格式为 `<subdomain_label>.<root_domain>`. |
+|DNS - 子域|子域是本地 NetApp ONTAP Select 实例主机名所在的根域名的 DNS 子域名。子域名的格式为 `<subdomain_label>.<root_domain>`。|
 |状态|实例的状态。|
 
 ## 查看 NetApp ONTAP Select 实例的访问信息的过程
@@ -164,7 +164,7 @@ subcollection: vmwaresolutions
 
 |项|描述|  
 |:------------|:----------------- |
-|名称|ESXi 服务器的名称，格式为 `<host_prefix><n>.<subdomain_label>.<root_domain>`，其中：<br><br>`host_prefix` 是主机名前缀，`n` 是服务器的序列，`subdomain_label` 是子域标签，`root_domain` 是根域名。|
+|名称|ESXi 服务器名称的格式为 `<host_prefix><n>.<subdomain_label>.<root_domain>`，其中：<br><br>`host_prefix` 是主机名前缀，`n` 是服务器的序列，`subdomain_label` 是子域标签，`root_domain` 是根域名。|
 |版本|ESXi 服务器的版本。|
 |凭证|用于访问 ESXi 服务器的用户名和密码。|
 |专用 IP|ESXi 服务器的专用 IP 地址。|

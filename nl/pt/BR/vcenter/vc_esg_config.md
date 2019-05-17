@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -97,6 +97,6 @@ Além disso, é possível localizar mais detalhes sobre as sub-redes do cliente 
 ## Links relacionados
 {: #vc_esg_config-related}
 
-* [Resolução de problemas](/docs/services/vmwaresolutions/vcenter//vcenter_chg_impact.html)
+* [Resolução de problemas](/docs/services/vmwaresolutions?topic=vmware-solutions-vcenter_chg_impact#vcenter_chg_impact)
 * [Perguntas Mais Frequentes](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [Gateway de Serviços de Edge NSX](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}

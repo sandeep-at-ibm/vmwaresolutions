@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-26"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -104,8 +104,8 @@ vSphere Enterprise Plus 및 vCenter Server를 제외한 라이센스를 구매�
 
 **참고:**
 * vSAN 컴포넌트를 선택하는 경우 SSD 가용성을 기준으로 위치 목록이 필터링됩니다.
-* FRA05 데이터 센터는 Broadwell Bare Metal Server를 지원하지 않습니다.
-* LON05 데이터 센터는 SAP 인증 또는 Broadwell Bare Metal Server를 지원하지 않습니다.
+* Broadwell Bare Metal Server는 **FRA05 - 프랑크푸르트** 데이터 센터 위치에서 사용할 수 없습니다. 
+* SAP 인증 및 Broadwell Bare Metal Server는 **LON05 - 런던** 데이터 센터 위치에서 사용할 수 없습니다. 
 
 ### Skylake
 {: #vs_orderinginstances-skylake}
@@ -143,9 +143,6 @@ vSphere Enterprise Plus 및 vCenter Server를 제외한 라이센스를 구매�
 
 | CPU 모델 옵션        |RAM 옵션       |
 |:------------- |:------------- |
-| 듀얼 Intel Xeon E5-2620 v4 / 총 16개의 코어, 2.1GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
-| 듀얼 Intel Xeon E5-2650 v4 / 총 24개의 코어, 2.2GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
-| 듀얼 Intel Xeon E5-2690 v4 / 총 28개의 코어, 2.6GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
 | 쿼드 Intel Xeon E7-4820 v4 / 총 40개의 코어, 2.0GHz |128GB, 256GB, 512GB, 1TB, 2TB, 3TB |
 | 쿼드 Intel Xeon E7-4850 v4 / 총 64개의 코어, 2.1GHz |128GB, 256GB, 512GB, 1TB, 2TB, 3TB |
 
@@ -168,7 +165,7 @@ vSAN이 포함된 주문의 경우, 주문된 12개의 디스크 섀시와 4개�
 * **vSAN 용량 디스크 수**: 추가할 용량 디스크 수를 지정하십시오.
 * 용량 디스크를 8개 한계 이상으로 추가하려는 경우 **고성능 Intel Optane** 상자를 선택하십시오. 이 옵션은 총 10개 용량 디스크에 대해 2개의 추가 용량 디스크 베이를 제공하며 짧은 대기 시간과 높은 IOPS 처리량이 필요한 워크로드에 유용합니다.
 
-  **고성능 Intel Optane** 옵션은 Skylake CPU 모델 듀얼 Intel Xeon Gold 5120 및 듀얼 Intel Xeon Gold 6140에 대해서만 사용 가능합니다.
+  **고성능 Intel Optane** 옵션은 Skylake CPU 모델에 대해서만 사용 가능합니다.
   {:note}
 
 * **vSAN 캐시 디스크의 디스크 유형** 및 **vSAN 캐시 디스크 수** 값을 검토하십시오. 이러한 값은 **고성능 Intel Optane** 상자를 선택했는지 여부에 따라 달라집니다.
@@ -211,12 +208,7 @@ vSAN이 포함된 주문의 경우, 주문된 12개의 디스크 섀시와 4개�
 ### 공용 또는 사설 네트워크
 {: #vs_orderinginstances-public-private-network}
 
-네트워크 인터페이스 카드(NIC) 인에이블먼트 설정은 **공용 및 사설 네트워크** 또는 **사설 네트워크 전용** 중 사용자의 선택을 기반으로 합니다. 다음과 같은 추가 기능 서비스에는 공용 NIC가 필요하며 개인용 옵션을 선택하는 경우에는 서비스를 사용할 수 없습니다.
-
-* F5 on {{site.data.keyword.cloud_notm}}
-* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
-* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
-* Zerto on {{site.data.keyword.cloud_notm}}
+네트워크 인터페이스 카드(NIC) 인에이블먼트 설정은 **공용 및 사설 네트워크** 또는 **사설 네트워크 전용** 중 사용자의 선택을 기반으로 합니다.
 
 ### VLAN
 {: #vs_orderinginstances-vlans}
@@ -297,7 +289,7 @@ vSAN이 포함된 주문의 경우, 주문된 12개의 디스크 섀시와 4개�
 
 주문한 경우 클러스터의 배치가 자동으로 시작되고 주문이 처리 중이라는 이메일 확인을 수신합니다. 클러스터를 사용할 준비가 되면 이메일로 알림을 받습니다.
 
-vSphere 클러스터는 vCenter Server 및 Cloud Foundation 인스턴스와 달리 **리소스** 페이지에 표시되지 않습니다.
+vSphere 클러스터는 vCenter Server 인스턴스와 달리 **리소스** 페이지에 표시되지 않습니다.
 {:note}
 
 ## 관련 링크

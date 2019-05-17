@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -21,7 +21,7 @@ subcollection: vmwaresolutions
 ## 開始之前
 {: #vc_hybrid_addinstancetousraccount-prereq}
 
-請確定您要將實例移轉至的 {{site.data.keyword.cloud_notm}} 帳戶不是僅限 IaaS 帳戶。僅限 IaaS 帳戶是未鏈結至 {{site.data.keyword.cloud_notm}} 帳戶的 {{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) 帳戶。
+請確定您要將實例移轉至的 {{site.data.keyword.cloud_notm}} 帳戶不是僅限 IaaS 帳戶。僅限 IaaS 帳戶是未鏈結至 {{site.data.keyword.cloud_notm}} 帳戶的 {{site.data.keyword.cloud_notm}} 基礎架構帳戶。
 
 如需如何將僅限 IaaS 帳戶鏈結至 PaaS 帳戶的相關資訊，請參閱 [Follow these steps to link your IaaS and PaaS accounts](https://www.ibm.com/blogs/bluemix/2018/03/follow-steps-link-iaas-paas-accounts/)。
 
@@ -43,6 +43,6 @@ subcollection: vmwaresolutions
 ## 相關鏈結
 {: #vc_hybrid_addinstancetousraccount-related}
 
-* [利用 IAM 管理使用者存取](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-access-with-iam)
+* [利用 IAM 管理使用者存取](/docs/services/vmwaresolutions?topic=vmware-solutions-iam#iam)
 * [邀請使用者存取服務及資源](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-iamuserinvite)
 * [何謂 IBM Cloud IAM](/docs/iam?topic=iam-iamoverview)

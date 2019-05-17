@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,7 +18,7 @@ ESXi 6.5 contiene muchos controladores nativos nuevos que sustituyen los control
 
 ixgben es un controlador nativo que sustituye al controlador vmklinux net-ixgbe, pero no admite SR-IOV y SW FcOE. La automatización de ICVS no debe habilitar este controlador al suministrar el host ESXi de vSphere. Se recomienda habilitar este controlador por los beneficios de rendimientos que aporta. El procedimiento siguiente que se describe en este apéndice muestra cómo habilitar e inhabilitar los controladores nativos mediante el mandato vSphere Command-Line (vCLI).
 
-Antes de iniciar esta tarea, recupere todos los hosts físicos de direcciones IP de IPMI, los ID de inicio de sesión y las contraseñas del [portal de infraestructura de {{site.data.keyword.cloud}}](https://control.softlayer.com/devices). Esto es necesario en una copia de seguridad o para comprobar el progreso de una actualización, donde no existe ningún acceso de red directa al host.
+Antes de iniciar esta tarea, recupere todos los hosts físicos de direcciones IP de IPMI, los ID de inicio de sesión y las contraseñas del [portal de clientes de infraestructura de {{site.data.keyword.cloud}}](https://control.softlayer.com/devices). Esto es necesario en una copia de seguridad o para comprobar el progreso de una actualización, donde no existe ningún acceso de red directa al host.
 
 Para cada host, de forma sucesiva:
 1. Utilice el cliente web de vSphere para colocar el host de vSphere ESXi en modalidad de mantenimiento, seleccionando **Inicio** > **Hosts y clústeres**. En el panel Navegador, seleccione el host de ESXi de vSphere y pulse con el botón derecho del ratón en el host y seleccione **Modalidad de mantenimiento** > **Entrar en modalidad de mantenimiento**. Como el host forma parte de un clúster DRS automatizado, las máquinas virtuales se migran a hosts diferentes cuando el host entra en modalidad de mantenimiento.
@@ -39,7 +39,7 @@ Para cada host, de forma sucesiva:
 Si tiene que revertirlo y no puede ejecutar SSH en el host de vSphere ESXi, deberá iniciar la sesión en la consola de KVM para el host que necesita la reversión mediante la ventana de control de {{site.data.keyword.cloud_notm}}.
 
 Utilice el ID y la contraseña que aparecen en la lista de la ventana de control de {{site.data.keyword.cloud_notm}} con la dirección IP de IPMI para iniciar sesión en la interfaz web de IPMI. Debe estar conectado al centro de datos en el que se encuentra el host mediante una VPN. Para obtener más información, consulte
-[Iniciación a VPN](/docs/infrastructure/iaas-vpn?topic=VPN-getting-started-with-virtual-private-networking-vpn-).
+[Iniciación a VPN](/docs/infrastructure/iaas-vpn?topic=VPN-gettingstarted-with-virtual-private-networking#gettingstarted-with-virtual-private-networking).
 
 1. Vaya a los detalles del dispositivo, página Gestión remota del host ESXi de vSphere y seleccione **Acciones** > **Consola de KVM**. Se abre otra ventana para que especifique el usuario y la contraseña de IPMI.
 2. Seleccione **Control remoto** > **iKVM/HTML5** y pulse **iKVM/HTML5** para volver a iniciar la sesión. Ahora puede acceder a la consola del host ESXi de vSphere.
@@ -54,4 +54,4 @@ Utilice el ID y la contraseña que aparecen en la lista de la ventana de control
 {: #vum-applying-nic-related}
 
 * [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demostraciones)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (demostraciones)

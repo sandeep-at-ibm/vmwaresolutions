@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-21"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,11 +18,11 @@ subcollection: vmwaresolutions
 # vCenter Server with NSX-T 概述
 {: #vc_nsx-t_overview}
 
-VMware vCenter Server with NSX-T on {{site.data.keyword.cloud}} 是一种托管的专用云，可将 VMware vSphere 堆栈作为服务交付。VMware 环境至少基于三个 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} 而构建，提供共享的网络连接存储器和专用的软件定义存储器选项，包括自动部署和配置基于 VMware NSX-T 技术的易于管理的逻辑边缘防火墙。
+VMware vCenter Server with NSX-T on {{site.data.keyword.cloud}} 是一种托管的专用云，可将 VMware vSphere 堆栈作为服务交付。VMware 环境至少基于三个 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} 而构建，提供共享的网络连接存储器和专用的软件定义存储器选项，并包括自动部署和配置基于 VMware NSX-T 技术的易于管理的逻辑边缘防火墙。
 
 在许多情况下，整个环境可以在一天内供应完，而裸机基础架构可根据需要，快速、弹性地向上和向下扩展计算容量。
 
-部署后，可以通过在 {{site.data.keyword.slportal}} 中订购更多 NFS（网络文件系统）文件共享，并手动将其连接到集群中的所有 ESXi 服务器，从而增加共享存储器。
+部署后，可以通过在 {{site.data.keyword.slportal}} 中订购更多网络文件系统 (NFS) 文件共享，并手动将其连接到集群中的所有 ESXi 服务器，从而增加共享存储器。
 
 VMware vSAN 还可作为专用存储器选项提供。要增大 vSAN 集群的基于 vSAN 的存储容量，可以在部署后添加更多 ESXi 服务器。
 
@@ -75,8 +75,8 @@ vCenter Server with NSX-T 实例中包含以下组件。
 * **Skylake**：具有所选 CPU 型号和 RAM 大小的 2 个 CPU Intel Skylake 代服务器（Intel Xeon 4100/5100/6100 系列）。  
 * **Broadwell**：具有所选 CPU 型号和 RAM 大小的 4 个 CPU 的 Intel Broadwell 代服务器（Intel Xeon E7-4800 系列）。
 
-     如果计划使用 vSAN 存储器，那么配置需要 4 个 {{site.data.keyword.baremetal_short}}。
-     {:note}
+如果计划使用 vSAN 存储器，那么配置至少需要 4 个 {{site.data.keyword.baremetal_short}}。
+{:note}
 
 ### 联网
 {: #vc_nsx-t_overview-networking}
@@ -87,7 +87,7 @@ vCenter Server with NSX-T 实例中包含以下组件。
 * 一个覆盖网络，具有 T1 和 T0 路由器，以用于处理连接到第 2 层 (L2) 网络的本地工作负载之间的潜在东-西通信。这将部署为样本路由拓扑，可以基于该拓扑进行构建，或者对其进行修改或将其除去。
 *  三个 VMware NSX-T Edge 服务网关：
   * 一个用于出站 HTTPS 管理流量的安全管理服务 VMware NSX ESG，由 IBM 部署为管理联网拓扑的一部分。IBM 管理 VM 使用此 ESG 来与自动化相关的特定外部 IBM 管理组件进行通信。有关更多信息，请参阅[配置网络以将客户管理的 NSX ESG 用于 VM](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_esg_config)。
-  * 两个用于出站和入站 HTTPS 工作负载流量的客户管理的安全 VMware NSX ESG。此网关由 IBM 部署为模板，您可修改此模板来提供 VPN 访问或公共访问。有关更多信息，请参阅[客户管理的 NSX Edge 会构成安全风险吗？](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq-customer-nsx)
+  * 两个用于出站和入站 HTTPS 工作负载流量的客户管理的安全 VMware NSX ESG。此网关由 IBM 部署为模板，您可修改此模板来提供 VPN 访问或公共访问。有关更多信息，请参阅[客户管理的 NSX Edge 会构成安全风险吗？](/docs/services/vmwaresolutions?topic=vmware-solutions-faq#faq-customer-nsx)
 
   此 ESG 名为 **mgmt-nsx-edge0**。您无法访问此 ESG，也无法加以使用。如果对其进行修改，那么可能无法在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理 vCenter Server 实例。此外，使用防火墙或禁用与外部 IBM 管理组件的 ESG 通信可能导致 {{site.data.keyword.vmwaresolutions_short}} 无法使用。
 {:important}
@@ -118,7 +118,7 @@ vSAN 选项提供定制配置，具有各种磁盘类型、大小和数量的选
 
   3.8 TB SSD（固态磁盘）驱动器在数据中心内普遍可用后就会受到支持。
   {:note}
-* 高性能 Intel Optane 选项，用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘。此选项取决于 CPU 型号。
+* 高性能 Intel Optane 选项，用于提供两个额外的容量磁盘托架，总共可容纳 12 个容量磁盘。此选项取决于 CPU 型号。
 
 #### NFS 存储器
 {: #vc_nsx-t_overview-nfs-storage}
@@ -150,7 +150,7 @@ NFS 选项为工作负载提供定制的共享文件级别存储器，具有各�
 ### 扩展节点的硬件
 {: #vc_nsx-t_overview-expansion-node-hardware}
 
-一个裸机服务器，其配置在 [vCenter Server with NSX-T 实例的技术规范](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_overview-specs)中提供。
+一个裸机服务器，其配置在 [vCenter Server with NSX-T 实例的技术规范](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_overview#vc_nsx-t_overview-specs)中提供。
 
 ### 扩展节点的许可证和费用
 {: #vc_nsx-t_overview-expansion-node-license-and-fee}
@@ -175,5 +175,5 @@ NFS 选项为工作负载提供定制的共享文件级别存储器，具有各�
 * [vCenter Server 软件材料清单](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
 * [规划 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [订购 vCenter Server with NSX-T 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_orderinginstance)
-* [{{site.data.keyword.cloud_notm}} 文件和块存储器](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage){:new_window}
+* [vCenter Server 的连接存储器](/docs/services/vmwaresolutions/services?topic=vmware-solutions-storage-benefits#storage-benefits)
 * [扩展文件共享容量](/docs/infrastructure/FileStorage?topic=FileStorage-expandCapacity#expandCapacity)

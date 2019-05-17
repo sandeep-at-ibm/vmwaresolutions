@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2017-10-13"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -23,7 +23,7 @@ subcollection: vmwaresolutions
 
 有关更多信息，请参阅以下主题：
 * [订购新的 vSphere 集群](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
-* [扩展现有 vSphere 集群](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters)
+* [缩放现有 vSphere 集群](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters)
 
 ## NetApp ONTAP Select on IBM Cloud
 {: #relnotes_v19-netapp}
@@ -77,7 +77,7 @@ IBM-Integrated Managed Infrastructure (IMI) 中的受管服务现在可用于 VM
 
 为了增强托管 VMware 环境的向外扩展，现在可在其他 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) pod 中创建新集群，或在与实例中部署的初始集群不同的 {{site.data.keyword.CloudDataCent_notm}} 中创建新集群。
 
-有关更多信息，请参阅[添加和查看 vCenter Server 实例的集群](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)。
+有关更多信息，请参阅[添加、查看和删除 vCenter Server 实例的集群](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)。
 
 ### 更改组件
 {: #relnotes_v19-change-comp}

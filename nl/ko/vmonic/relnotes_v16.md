@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2017-05-22"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -34,7 +34,7 @@ subcollection: vmwaresolutions
 
 V1.6 릴리스부터 vCenter Server 인스턴스에 대한 여러 개선사항을 사용할 수 있습니다.
 
-*  vCenter Server 오퍼링에 대한 V2.0 스펙의 전체 구현. 자세한 정보는 [VMware vCenter Server on {{site.data.keyword.cloud_notm}} 솔루션 아키텍처](https://www.ibm.com/devops/method/content/architecture/virtualizationArchitecture#2_0)를 참조하십시오.
+*  vCenter Server 오퍼링에 대한 V2.0 스펙의 전체 구현.
 *  새 하드웨어 스펙: 사용자 요구사항에 따른 **소형**, **중형** 또는 **대형**
 *  배치에 사용 가능한 새 데이터 센터: **HKG02 - 홍콩**, **OSL01 - 오슬로**, **SEO01 - 서울**, **SNG01 - 싱가포르** 및 **SYD04 - 시드니**
 *  기본적으로 VMware vSphere DRS(Distributed Resource Scheduler) 및 VMware HA(High Availability)가 사용으로 설정된 상태에서 인스턴스 주문에 최소 두 개의 ESXi 서버를 사용할 수 있음

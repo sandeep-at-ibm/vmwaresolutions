@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-04-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,7 +18,7 @@ subcollection: vmwaresolutions
 # Panoramica di FortiGate Security Appliance on IBM Cloud
 {: #fsa_considerations}
 
-Il servizio FortiGate Security Appliance on {{site.data.keyword.cloud}} distribuisce una coppia di dispositivi FortiGate Security Appliance (FSA) della serie 300 in una modalità altamente disponibile per fornire servizi di firewall, instradamento, NAT e VPN per proteggere ogni server e VM (Virtual Machine) sulla VLAN pubblica delle tue istanze.
+Il servizio FortiGate Security Appliance on {{site.data.keyword.cloud}} distribuisce una coppia di dispositivi FortiGate Security Appliance (FSA) della serie 300 in una modalità altamente disponibile per fornire servizi di firewall, instradamento, NAT e VPN per proteggere ogni server e macchina virtuale sulla VLAN pubblica delle tue istanze.
 
 Puoi gestire questo servizio utilizzando il client web FortiOS o l'interfaccia della riga di comando tramite SSH.
 
@@ -47,7 +47,7 @@ Vengono distribuiti due dispositivi in una configurazione attiva-passiva.
 * Una nuova VLAN pubblica {{site.data.keyword.cloud_notm}} upstream
 * Una VLAN pubblica {{site.data.keyword.cloud_notm}} downstream esistente
 
-## Considerazioni sull'istallazione di FortiGate Security Appliance on IBM Cloud
+## Considerazioni sull'installazione di FortiGate Security Appliance on IBM Cloud
 {: #fsa_considerations-install}
 
 Esamina le seguenti considerazioni prima di installare il servizio FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}:
@@ -75,4 +75,4 @@ Esamina le seguenti considerazioni prima di rimuovere il servizio FortiGate Secu
 * [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [Domande frequenti](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [Sito web Fortinet](https://www.fortinet.com/){:new_window}
-* [Libreria di documenti Fortinet](http://docs.fortinet.com/fortigate/admin-guides){:new_window}
+* [Libreria di documenti Fortinet](https://docs.fortinet.com/product/fortigate/6.2){:new_window}

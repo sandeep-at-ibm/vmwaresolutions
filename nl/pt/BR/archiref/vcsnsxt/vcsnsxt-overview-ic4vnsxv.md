@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-02-19"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -54,7 +54,7 @@ VLAN |Designação |Tipo de Tráfego
 ---|---|---
 VLAN1 | Pública | Disponível para acesso à Internet
 VLAN2 | Privada A | Gerenciamento do ESXi, Gerenciamento, VXLAN (VTEP)
-VLAN3 | Privada B | vSAN, NFS, vMotion
+VLAN3 | Privado B | vSAN, NFS, vMotion
 
 O tráfego de cargas de trabalho viaja em comutadores lógicos do NSX. O cluster vSphere usa dois vSphere Distributed Switches (vDS) para o cluster convergido.
 
@@ -124,7 +124,8 @@ A seguir estão alguns componentes chave do NSX:
 
 O diagrama a seguir mostra um diagrama de alto nível de como é possível implementar alguns dos recursos de microssegmentação do NSX-V, criando grupos de segurança. Neste exemplo, a produção e o desenvolvimento são os grupos de segurança e as regras de segurança são designadas com base nesses grupos.
 
-Figura 3. Segurança do NSX-V</br>
+Figura 3. Segurança do NSX-V
+</br>
 ![Segurança do NSX-V](vcsnsxt-vsecurity.svg)
 
 ## Links relacionados

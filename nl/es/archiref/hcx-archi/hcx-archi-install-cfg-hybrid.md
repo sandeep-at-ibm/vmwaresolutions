@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,7 +18,7 @@ El instalador suministra y configura una máquina virtual para cada dispositivo 
 ## Requisitos previos
 {: #hcx-archi-install-cfg-hybrid-prereq}
 
-* HCX Manager debe estar instalado de forma local y registrado con un punto final de nube habilitado para HCX de VCF/VCS.
+* HCX Manager debe estar instalado de forma local y registrado con un punto final de nube habilitado para HCX de VCS.
 * El centro de datos virtual de destino debe tener recursos suficientes.
 
 ## Visión general de la configuración
@@ -35,7 +35,7 @@ adicional.
 
 Se utiliza la interfaz web sencilla para instalar los dispositivos virtuales de servicio y para configurar más concentradores de capa 2.
 
-HCX Manager debe estar instalado y registrado con el punto final de nube habilitado para HCX de VCF/VCS.
+HCX Manager debe estar instalado y registrado con el punto final de nube habilitado para HCX de VCS.
 
 ### Procedimiento para instalar y configurar el dispositivo virtual de servicio híbrido
 {: #hcx-archi-install-cfg-hybrid-proc-install}
@@ -120,7 +120,7 @@ Consulte el estado del túnel de la pasarela de nube. El servicio de extensión 
 
 ## Extensión de una red de capa 2 a IBM Cloud
 
-Amplíe una red de capa 2 desde el centro de datos local a la nube habilitada para VCF/VCS HCX.
+Amplíe una red de capa 2 desde el centro de datos local a la nube habilitada para HCX de VCS.
 {: #hcx-archi-install-cfg-hybrid-stretch-layer-2}
 
 ### Requisitos previos para extender una red de capa 2 a IBM Cloud
@@ -137,9 +137,9 @@ Amplíe una red de capa 2 desde el centro de datos local a la nube habilitada pa
 3. Pulse con el botón derecho del ratón en el grupo de puertos, y en el menú, seleccione **Acciones de Hybridity** y seleccione **Ampliar red**.
 4. En la página **Seleccionar grupos de puertos de origen**, confirme la información de grupo de puertos y especifique la **Dirección IP de pasarela** y el prefijo de la red. Pulse **Siguiente**.
 5. En la página **Seleccionar pasarela de destino**, siga estos pasos:
-  1. Seleccione VCF/VCS Hybrid Cloud Services Cloud Organization en el menú **Organización**.
-  2. Seleccione el centro de datos virtual de VCF/VCS Hybrid Cloud Services Cloud en el menú.
-  3. Deje inhabilitado **Direccionamiento de proximidad** para imponer que una VM de la nube habilitada para VCF/VCS Hybrid Cloud Services siempre utilice la pasarela local para acceder a internet. De forma predeterminada, el tráfico que se origina en una máquina virtual en una nube habilitada para VCF/VCS Hybrid Cloud Services atraviesa la vía de acceso de datos de capa 2 para volver al centro de datos local y para dirigirse a la pasarela predeterminada. Si **Direccionamiento de proximidad** está seleccionado, una máquina virtual de una nube habilitada para VCF/VCS Hybrid Cloud Services puede acceder a internet sin atravesar la vía de acceso de datos de capa 2 a vSphere.
+  1. Seleccione Organización de VCS Hybrid Cloud Services Cloud en el menú **Organización**.
+  2. Seleccione el centro de datos virtual de VCS Hybrid Cloud Services Cloud en el menú.
+  3. Deje inhabilitado **Direccionamiento de proximidad** para imponer que una VM de la nube habilitada para VCS Hybrid Cloud Services siempre utilice la pasarela local para acceder a Internet. De forma predeterminada, el tráfico que se origina en una máquina virtual en una nube habilitada para VCS Hybrid Cloud Services atraviesa la vía de acceso de datos de capa 2 para volver al centro de datos local y para dirigirse a la pasarela predeterminada. Si **Direccionamiento de proximidad** está seleccionado, una máquina virtual de una nube habilitada para VCS Hybrid Cloud Services puede acceder a Internet sin atravesar la vía de acceso de datos de capa 2 a vSphere.
   4. Seleccione la pasarela de destino remota en la lista de pasarelas pulsando en la fila. Pulse **Siguiente**.
 6. En la página **Preparado para completar**, revise los valores especificados. Pulse **Finalizar**.
 7. Para realizar un seguimiento del progreso de la extensión de red, vaya a la ventana **Tareas recientes**, pulse el separador **Todas** y visualice **Todas las tareas de usuario**.

@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-05"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -58,8 +58,7 @@ sia sul lato client che su quello cloud come se stesse eseguendo un vMotion loca
 
 - IU lato cloud – l'IU HCX lato cloud è accessibile tramite l'URL di registrazione pubblico fornito per la registrazione client HCX. Per impostazione predefinita, utilizza l'accesso SSO vSphere lato cloud (` administrator@vsphere.local`). Viene di norma utilizzato per eseguire l'upgrade dell'installazione e la modifica di qualche configurazione di rete. Viene utilizzato anche per creare VM (Virtual Machine) all'interno di HCX.
 
-- IU di gestione del dispositivo di HCX Manager client/cloud – Accesso all'IU di gestione del dispositivo per il lato cloud o quello client tramite l'indirizzo IP privato VM come visualizzato in vCenter
-`https://<hcxmanager_IP>:9443`. L'ID (di norma “admin”) e la password sono forniti tramite il portale {{site.data.keyword.vmwaresolutions_short}}. L'IU di gestione viene utilizzata per avviare e arrestare i servizi di HCX Manager, configurare il monitoraggio dei log, la configurazione di rete di base, gli upgrade manuali, la raccolta di log di supporto quando l'IU web non funziona, la registrazione presso i componenti vSphere (vCenter, PSC e NSX Manager) e la gestione dei certificati.
+- IU di gestione del dispositivo di HCX Manager client/cloud – Accesso all'IU di gestione del dispositivo per il lato cloud o quello client tramite l'indirizzo IP privato VM come visualizzato in vCenter `https://<hcxmanager_IP>:9443`. L'ID (di norma “admin”) e la password sono forniti tramite il portale {{site.data.keyword.vmwaresolutions_short}}. L'IU di gestione viene utilizzata per avviare e arrestare i servizi di HCX Manager, configurare il monitoraggio dei log, la configurazione di rete di base, gli upgrade manuali, la raccolta di log di supporto quando l'IU web non funziona, la registrazione presso i componenti vSphere (vCenter, PSC e NSX Manager) e la gestione dei certificati.
 
 ## Link correlati
 {: #vcshcx-components-related}

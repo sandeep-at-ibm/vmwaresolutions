@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -23,7 +23,7 @@ Cette section décrit l'architecture de chaque composant HCX déployé dans l'en
 ## Présentation de HCX
 {: #hcx-archi-source-intro-hcx}
 
-La technologie HCX s'intègre en toute transparence aux réseaux vSphere vCenter dans les plateformes IBM Cloud VCF ou VCS. La mise en réseau hybride s'étend aux réseaux vSphere vCenter locaux dans IBM Cloud, en prenant en charge la mobilité de machine virtuelle bidirectionnelle.
+La technologie HCX s'intègre en toute transparence aux réseaux vSphere vCenter dans la plateforme IBM Cloud VCS. La mise en réseau hybride s'étend aux réseaux vSphere vCenter locaux dans IBM Cloud, en prenant en charge la mobilité de machine virtuelle bidirectionnelle.
 
 Cette introduction récapitule les tâches qui peuvent être accomplies et les fonctions qui prennent en charge et améliorent la migration et l'extension réseau.
 
@@ -217,7 +217,7 @@ Le routage de proximité garantit que l'acheminement entre les machines virtuell
 
 Lorsque des utilisateurs étendent leurs réseaux au cloud, la connectivité de couche 2 est étendue sur IBM Cloud. Toutefois, sans optimisation de route, les demandes de communication de couche 3 doivent retourner vers l'origine du réseau local pour être routées. Ce trajet retour est appelé "tromboning" ou "hairpinning".
 
-Le trajet de type Tromboning est inefficace car les paquets doivent transiter entre l'origine du réseau et le cloud, même lorsque les machines virtuelles source et destination résident dans le cloud. En plus de cette inefficacité, si le chemin d'acheminement inclut des pare-feux sans état, ou d'autre équipements en ligne qui doivent voir les deux côtés de la connexion, la communication peut échouer. Une défaillance de communication de machine virtuelle (sans optimisation de route) se produit lorsque le chemin d'entrée qui quitte le cloud peut être le réseau de couche 2 étendu ou via la passerelle de périphérie VCS/VCF NSX. Le réseau local ne connaît pas le "raccourci" du réseau étendu. Ce problème est appelé routage asymétrique. La solution est d'activer le routage de proximité de sorte que le réseau local puisse apprendre les routes depuis IBM Cloud.
+Le trajet de type Tromboning est inefficace car les paquets doivent transiter entre l'origine du réseau et le cloud, même lorsque les machines virtuelles source et destination résident dans le cloud. En plus de cette inefficacité, si le chemin d'acheminement inclut des pare-feux sans état, ou d'autre équipements en ligne qui doivent voir les deux côtés de la connexion, la communication peut échouer. Une défaillance de communication de machine virtuelle (sans optimisation de route) se produit lorsque le chemin d'entrée qui quitte le cloud peut être le réseau de couche 2 étendu ou via la passerelle de périphérie VCS NSX. Le réseau local ne connaît pas le "raccourci" du réseau étendu. Ce problème est appelé routage asymétrique. La solution est d'activer le routage de proximité de sorte que le réseau local puisse apprendre les routes depuis IBM Cloud.
 
 Pour éviter le "tromboning", HCX utilise la gestion de route intelligente pour choisir les routes appropriées à l'état de la machine virtuelle. La passerelle cloud gère un inventaire des machines virtuelles dans le cloud. Elle comprend également l'état de la machine virtuelle, qui peut être l'un des suivants :
 * Machine virtuelle transférée vers le cloud avec vMotion (migration sans interruption).
@@ -229,7 +229,7 @@ Pour éviter le "tromboning", HCX utilise la gestion de route intelligente pour 
 
 Dans le diagramme, les composants `N*a` sur la gauche résident dans le centre de données local et le composant `N*b` sur la droite réside dans le cloud.
 
-R1 est la passerelle par défaut pour N1-b ; par conséquent, N1-b doit revenir à R1 pour router le trafic via R2. Pour éviter un routage asymétrique, HCX injecte des routes hôtes au sein de la surcouche NSX du déploiement d'IBM Cloud VCS/VCF. Si la machine virtuelle venait d'être créée dans le cloud, ou si elle a été déplacée dans le cadre d'une migration avec peu d'interruption, la route hôte est injectée immédiatement.
+R1 est la passerelle par défaut pour N1-b ; par conséquent, N1-b doit revenir à R1 pour router le trafic via R2. Pour éviter un routage asymétrique, HCX injecte des routes hôtes au sein de la surcouche NSX du déploiement d'IBM Cloud VCS. Si la machine virtuelle venait d'être créée dans le cloud, ou si elle a été déplacée dans le cadre d'une migration avec peu d'interruption, la route hôte est injectée immédiatement.
 
 Si la machine virtuelle a été transférée à l'aide de vMotion, la route n'est pas injectée jusqu'au redémarrage de la machine virtuelle. Cette attente jusqu'après le redémarrage garantit que les unités sans état locales continuent de servir la session existante jusqu'au redémarrage de la machine virtuelle. Après le redémarrage, les informations de routage sont cohérentes aussi bien en local que dans le cloud.
 
@@ -252,7 +252,7 @@ Figure 5. Routage asymétrique avec solution de routage de proximité
 ### Migration de la politique de sécurité
 {: #hcx-archi-source-sec-policy-mig}
 
-La fonction de migration de politique permet de déplacer des règles de pare-feu distribué NSX d'un site vCenter local vers un cloud compatible VCF/VCS HCX. La migration de politique est possible lors de l'utilisation d'une migration avec peu d'interruption ou d'une migration vMotion pour le déplacement d'une machine virtuelle sur un réseau étendu avec le concentrateur de couche 2 à haut débit.
+La fonction de migration de politique permet de déplacer des règles de pare-feu distribué NSX d'un site vCenter local vers un cloud compatible VCS HCX. La migration de politique est possible lors de l'utilisation d'une migration avec peu d'interruption ou d'une migration vMotion pour le déplacement d'une machine virtuelle sur un réseau étendu avec le concentrateur de couche 2 à haut débit.
 * Le centre de données local doit exécuter NSX 6.2.2 ou supérieur.
 * Dans vSphere, la politique de sécurité est une section NSX unique qui peut contenir un grand nombre de règles. Il ne peut y avoir qu'une section (politique) par CDV Org.
 * Un ensemble d'adresses IP ou d'adresses MAC peut être identifié pour participer à la politique. Le nom de l'ensemble de règles MAC ou IP ne peut pas dépasser 218 caractères.

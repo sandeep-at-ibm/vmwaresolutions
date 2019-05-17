@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,10 +18,7 @@ subcollection: vmwaresolutions
 # Requisitos para a conta de infraestrutura do IBM Cloud
 {: #slaccountrequirement}
 
-Para usar {{site.data.keyword.vmwaresolutions_full}} para pedir instâncias, deve-se ter uma conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer). O custo dos componentes que são pedidos em suas instâncias é faturado para aquela conta {{site.data.keyword.cloud_notm}}.
-
-A conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer) era conhecida anteriormente como a conta do IBM SoftLayer.
-{:note}
+Para usar o {{site.data.keyword.vmwaresolutions_full}} para pedir instâncias, deve-se ter uma conta de infraestrutura do {{site.data.keyword.cloud_notm}}. O custo dos componentes que são pedidos em suas instâncias é faturado para aquela conta {{site.data.keyword.cloud_notm}}.
 
 ## Permissões para a conta de infraestrutura do IBM Cloud
 {: #slaccountrequirement-permissions}
@@ -43,9 +40,10 @@ Tabela 1. Permissões necessárias para a conta de infraestrutura do {{site.data
 | Incluir Compute com Porta de Rede Pública | Essa permissão é necessária para pedir hardware e VSIs (Virtual Server Instances) com portas de rede pública. |
 | Incluir endereços IP | Essa permissão é necessária para pedir intervalos de sub-rede privada móvel em seu nome, o que é necessário para gerenciar as máquinas virtuais que são executadas em um cluster vSphere. Quando mais serviços são incluídos em sua instância, os endereços IP privados móveis são designados a servidores VMware ESXi para isolar e alocar a largura da banda. |
 | Incluir chamados | Essa permissão é necessária para abrir chamados de serviços em seu nome. Os chamados podem ser criados para as seguintes operações: para iniciar operações de restauração e para iniciar processos de resolução de problemas automaticamente quando forem encontrados problemas. |
-| Editar chamados | Essa permissão é necessária para editar os tickets de serviço que são criados em seu nome. |
-| Visualizar chamados | Essa permissão é necessária para monitorar os tickets de serviço que estão relacionados aos componentes em sua instância para atrasos e problemas de fornecimento de infraestrutura do {{site.data.keyword.cloud_notm}}. |
+| Editar chamados | Essa permissão é necessária para editar os chamados de serviço que são criados em seu nome. |
+| Visualizar chamados | Essa permissão é necessária para monitorar os chamados de serviço que estão relacionados aos componentes em sua instância para atrasos e problemas de fornecimento de infraestrutura do {{site.data.keyword.cloud_notm}}. |
 | Visualizar detalhes do hardware | Essa permissão é necessária para recuperar os detalhes do hardware, que são necessários para a validação do pedido e a configuração automatizada. |
+| Reinicialização/Controle | Essa permissão é necessária para desligar o hardware durante o processo de cancelamento de hardware quando você exclui uma instância. |
 | Visualizar licenças | Essa permissão é necessária para recuperar e validar as licenças que são usadas pela sua instância. |
 | Visualizar senhas | Essa permissão é necessária para poder administrar os VSIs pedidos. |
 | Gerenciar Monitoramento do Servidor | Essa permissão não é necessária para fazer um pedido, mas é necessária para recuperar e validar o status de monitoramento do {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} no qual os servidores VMware ESXi estão em execução em sua instância. |
@@ -57,7 +55,7 @@ A sua conta de infraestrutura do {{site.data.keyword.cloud_notm}} deve ser uma c
 
 Para obter mais informações, veja:
 * [ Visão geral do VRF no IBM Cloud ](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-* [Ative a sua conta para usar Terminais em serviço](/docs/services/service-endpoint?topic=services/service-endpoint-cs_cli_install_steps#cs_cli_install_steps)
+* [Ativando sua conta para usar Terminais em serviço](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
 
 ## Término do suporte de ampliação da VLAN
 {: #slaccountrequirement-vlan-eos}

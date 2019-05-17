@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -16,14 +16,14 @@ subcollection: vmwaresolutions
 L'installation de VMware HCX on IBM Cloud exige la configuration logicielle suivante :
 * vSphere 5.5 U3 ou vSphere 6.0u2 ou supérieur.
 * Si NSX est utilisé, version 6.2.2 ou supérieure. NSX est requis pour la migration de politique.
-* Pour utiliser une migration vMotion entre clouds, les mêmes restrictions d'affinité s'appliquent entre les clouds comme c'est le cas en local. Pour plus d'informations, voir [Foire aux questions relatives à la compatibilité entre VMware EVC et UC](http://bit.ly/2vK6Sp5).
+* Pour utiliser une migration vMotion entre clouds, les mêmes restrictions d'affinité s'appliquent entre les clouds comme c'est le cas en local. Pour plus d'informations, voir [Foire aux questions relatives à la compatibilité entre VMware EVC et UC](https://kb.vmware.com/s/article/1005764).
 
 ## Configuration de la connectivité du réseau
 {: #hcx-archi-prep-install-config-net}
 
 HCX doit traverser l'Internet public et des lignes privées, et se connecter à des composants de centre de données, comme des réseaux, des commutateurs et des groupes de ports.
 * La section [Accès aux ports requis](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-port-req) répertorie les ports qui doivent être ouverts afin que des dispositifs virtuels HCX puissent être installés.
-* L'environnement vSphere local et l'environnement VCF/VCS HCX Cloud doivent permettre une synchronisation des horloges NTP (Network Time Protocol) entre les unités vSphere locales et les unités VCF/VCS HCX. Le port UDP 123 doit être accessible aux dispositifs virtuels et aux réseaux HCX.
+* L'environnement vSphere local et l'environnement VCS HCX Cloud doivent permettre une synchronisation des horloges NTP (Network Time Protocol) entre les unités vSphere locales et les unités VCS HCX. Le port UDP 123 doit être accessible aux dispositifs virtuels et aux réseaux HCX.
 
 ## Environnement local
 {: #hcx-archi-prep-install-on-prem-env}
@@ -49,11 +49,11 @@ L'extension de réseau de couche 2 doit respecter les règles suivantes :
   * Licence vSphere Enterprise Plus
   * vSphere Distributed Switch (vDS) Obligatoire. Ce commutateur distribué est fourni avec vSphere Enterprise Plus Edition.
   * Une fois installé, le dispositif de service du concentrateur local de couche 2 doit avoir accès à un port vNIC et aux réseaux VLAN à étendre.
-  * Si le réseau doit être étendu sur l'Internet public ou un réseau VPN (dans un chemin secondaire), la machine virtuelle L2C dans VCF/VCS requiert une adresse IP. L'adresse IP distante est obligatoire pour configurer le concentrateur de couche 2.
+  * Si le réseau doit être étendu sur l'Internet public ou un réseau VPN (dans un chemin secondaire), la machine virtuelle L2C dans VCS requiert une adresse IP. L'adresse IP distante est obligatoire pour configurer le concentrateur de couche 2.
   * Si plusieurs concentrateurs de couche 2 sont nécessaires, chacun doit avoir une adresse IP en local et dans le cloud.
 
 ## Liens connexes
 {: #hcx-archi-prep-install-related}
 
 * [Installation et configuration de HCX sur la source](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-install-cfg-src)
-* [Foire aux questions relatives à la compatibilité entre VMware EVC et UC](http://bit.ly/2vK6Sp5)
+* [Foire aux questions relatives à la compatibilité entre VMware EVC et UC](https://kb.vmware.com/s/article/1005764)

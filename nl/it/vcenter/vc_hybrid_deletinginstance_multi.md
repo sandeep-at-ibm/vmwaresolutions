@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -38,8 +38,8 @@ Per l'istanza eliminata ti vengono addebitati costi fino alla fine del ciclo di 
 
 1. Rimuovi tutti i servizi dall'istanza secondaria di vCenter Server with Hybridity Bundle.
 2. Assicurati di non avere oggetti NSX espansi nell'istanza secondaria che vuoi eliminare.
-3. Elimina il vCenter Server secondario dal dominio SSO (Single Sign-On) primario. Per ulteriori informazioni, vedi [Unregister vCenter Server from Single Sign-On](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2106736){:new_window}.
-4. Riduci il livello dell'istanza di servizio virtuale (o VSI, Virtual Service Instance) del controller di dominio locale. Per ulteriori informazioni, vedi [Demoting domain controllers and domains](https://technet.microsoft.com/en-us/windows-server-docs/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-){:new_window}.
+3. Elimina il vCenter Server secondario dal dominio SSO (Single Sign-On) primario. Per ulteriori informazioni, vedi [Unregister vCenter Server from Single Sign-On](https://kb.vmware.com/s/article/2106736){:new_window}.
+4. Riduci il livello dell'istanza di servizio virtuale (o VSI, Virtual Service Instance) del controller di dominio locale. Per ulteriori informazioni, vedi [Demoting domain controllers and domains](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-){:new_window}.
 5. Elimina l'istanza secondaria di  vCenter Server with Hybridity Bundle dalla console {{site.data.keyword.vmwaresolutions_short}}.
 6. Ripeti i passi da 1 a 5 per tutte le istanze vCenter Server with Hybridity Bundle secondarie nella tua configurazione multisito.
 7. Dopo aver eliminato tutte le istanze secondarie, puoi anche eliminare l'istanza primaria dalla console {{site.data.keyword.vmwaresolutions_short}}.

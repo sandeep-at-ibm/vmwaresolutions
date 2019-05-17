@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-05"
+lastupdated: "2019-04-18"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -54,7 +54,7 @@ subcollection: vmwaresolutions
 
 如果任一端發生部署失敗，則會取消並刪除機群元件部署。判斷失敗原因之後，請按一下用戶端中 HCX vCenter Web 使用者介面的**交互連接**標籤，然後選取畫面頂端的**安裝 HCX 元件**。
 
-順利部署機群元件並經過幾分鐘之後，**交互連接**標籤中的 CGW 及 L2C 元件的通道狀態會顯示為**啟動**。
+順利部署機群元件並經過幾分鐘之後，**交互連接**標籤上的 CGW 及 L2C 元件的通道狀態會顯示為**啟動**。
 
 ## 相關鏈結
 {: #vcshcx-deployment-related}

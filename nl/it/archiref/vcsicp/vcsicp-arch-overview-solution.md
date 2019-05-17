@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-19"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -28,7 +28,7 @@ La distribuzione vCenter Server utilizza un solo controller di servizi della pia
 ### vCenter Server
 {: #vcsicp-arch-overview-solution-vcs}
 
-Come il controller dei servizi della piattaforma, il vCenter Server viene distribuito come un'applicazione. Inoltre, vCenter Server viene installato su una sottorete portatile nella VLAN privata associata alle VM di gestione. Il suo gateway predefinito è impostato sull'indirizzo IP assegnato sul BCR per quella particolare sottorete.
+Come il controller dei servizi della piattaforma, il vCenter Server viene distribuito come un dispositivo. Inoltre, vCenter Server viene installato su una sottorete portatile nella VLAN privata associata alle VM di gestione. Il suo gateway predefinito è impostato sull'indirizzo IP assegnato sul BCR per quella particolare sottorete.
 
 ### NSX Manager
 {: #vcsicp-arch-overview-solution-nsx-manager}

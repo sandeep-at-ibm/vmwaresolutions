@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-22"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -25,7 +25,7 @@ subcollection: vmwaresolutions
 - 使用 Cloud Automation Manager (CAM) 來編寫「基礎架構即程式碼 (IaC)」，以組合並編排從 VM 和容器建立的服務，使其與 DevOps 工具鏈和 ITSM 解決方案整合。
 
 參照架構具有下列主要元件：
-- **內部部署虛擬化** - 內部部署虛擬化是目前管理 Acme Skateboards VM 的 VMware 叢集。這些 VM 目前正在管理要現代化的應用程式。此叢集必須符合 [VMware HCX on {{site.data.keyword.cloud_notm}} 解決方案架構](https://test.cloud.ibm.com/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)的必要條件，才能執行 HCX。
+- **內部部署虛擬化** - 內部部署虛擬化是目前管理 Acme Skateboards VM 的 VMware 叢集。這些 VM 目前正在管理要現代化的應用程式。此叢集必須符合 [VMware HCX on {{site.data.keyword.cloud_notm}} 解決方案架構](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)的必要條件，才能執行 HCX。
 
 HCX 會將內部部署網路延伸至 {{site.data.keyword.cloud_notm}}，讓客戶可以將 VM 移轉至在 {{site.data.keyword.cloud_notm}} 上執行的 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 實例，並視需要移轉回來。
 - **{{site.data.keyword.cloud_notm}} for VMware Solutions** - vCenter Server 實例提供必要的基礎 VMware 構成要素，例如 vSphere、vCenter Server、NSX-V 及儲存空間選項（包括 vSAN 或「{{site.data.keyword.cloud_notm}} 耐久性」儲存空間），以自動部署「VMware 軟體定義資料中心 (SDDC)」解決方案。VMware 叢集是移轉 VM 的目標，也是 {{site.data.keyword.icpfull_notm}} 所管理容器中部分現代化應用程式的目標。vCenter Server 中的主要元件如下：

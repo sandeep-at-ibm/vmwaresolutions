@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-05-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -47,7 +47,7 @@ Per ulteriori informazioni su vCenter Server with Hybridity Bundle, vedi i segue
 
 Puoi ora eliminare i cluster da un'istanza senza dover eliminare l'intera istanza. Per i cluster distribuiti nelle istanze della V2.2 o precedenti, devi aggiornare l'istanza alla V2.3 per poter eliminare i cluster che hai aggiunto all'istanza.
 
-Per ulteriori informazioni, vedi [Aggiunta, visualizzazione ed eliminazione di cluster per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances#deleting-clusters-from-vcenter-server-instances).
+Per ulteriori informazioni, vedi [Aggiunta, visualizzazione ed eliminazione di cluster per le istanze vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters).
 
 ## Aggiornamenti per le istanze VMware vCenter Server
 {: #relnotes_v23-vcs}
@@ -63,7 +63,7 @@ A partire dalla release della V2.3, per la distribuzione sono disponibili i segu
 Per ulteriori informazioni, consulta i seguenti argomenti:
 
 * [Ordine di istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [Aggiunta, visualizzazione ed eliminazione di cluster per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [Aggiunta, visualizzazione ed eliminazione di cluster per le istanze vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 
 ## Aggiornamenti per le istanze VMware Cloud Foundation
 {: #relnotes_v23-vcf}
@@ -79,7 +79,7 @@ Questa release applica i seguenti aggiornamenti e miglioramenti:
 ### HyTrust CloudControl on IBM Cloud
 {: #relnotes_v23-htcc}
 
-Il servizio HyTrust CloudControl on {{site.data.keyword.cloud_notm}} è ora disponibile per le istanze VMware Cloud Foundation e VMware vCenter Server che eseguono vSphere 6.5 e che sono distribuite o aggiornate alle release della V2.3 o successive. Il servizio applica e controlla la conformità rispetto agli standard di sicurezza e fornisce il controllo degli accessi in base al ruolo (RBAC). Se combinato con HyTrust DataControl, il servizio può garantire che le VM (Virtual Machine) e i dati del carico di lavoro non lascino una particolare regione, cluster o server ESXi all'interno del data center {{site.data.keyword.cloud_notm}}.
+Il servizio HyTrust CloudControl on {{site.data.keyword.cloud_notm}} è ora disponibile per le istanze VMware Cloud Foundation e VMware vCenter Server che eseguono vSphere 6.5 e che sono state distribuite o di cui è stato eseguito l'upgrade alle release della V2.3 o successive. Il servizio applica e controlla la conformità rispetto agli standard di sicurezza e fornisce il controllo degli accessi in base al ruolo (RBAC). Se combinato con HyTrust DataControl, il servizio può garantire che le VM (Virtual Machine) e i dati del carico di lavoro non lascino una particolare regione, cluster o server ESXi all'interno del data center {{site.data.keyword.cloud_notm}}.
 
 Puoi ordinare le istanze con il servizio incluso al momento dell'ordine della tua istanza o aggiungere questo servizio alle tue istanze esistenti in un secondo momento.
 
@@ -90,7 +90,7 @@ Per ulteriori informazioni, consulta i seguenti argomenti:
 ### HyTrust DataControl on IBM Cloud
 {: #relnotes_v23-htdc}
 
-Il servizio HyTrust DataControl on {{site.data.keyword.cloud_notm}} è ora disponibile per le istanze VMware Cloud Foundation e VMware vCenter Server che eseguono vSphere 6.5 e che sono distribuite o aggiornate alle release della V2.3 o successive. Il servizio offre una potente crittografia con gestione delle chiavi integrata per proteggere i carichi di lavoro per tutto il loro ciclo di vita. Il servizio può fornire la crittografia sia a livello di sistema operativo che a livello di dati, il che significa che è possibile crittografare e decrittografare qualsiasi directory, cartella o file all'interno di un carico di lavoro.
+Il servizio HyTrust DataControl on {{site.data.keyword.cloud_notm}} è ora disponibile per le istanze VMware Cloud Foundation e VMware vCenter Server che eseguono vSphere 6.5 e che sono state distribuite o di cui è stato eseguito l'upgrade alle release della V2.3 o successive. Il servizio offre una potente crittografia con gestione delle chiavi integrata per proteggere i carichi di lavoro per tutto il loro ciclo di vita. Il servizio può fornire la crittografia sia a livello di sistema operativo che a livello di dati, il che significa che è possibile crittografare e decrittografare qualsiasi directory, cartella o file all'interno di un carico di lavoro.
 
 Puoi ordinare le istanze con il servizio incluso al momento dell'ordine della tua istanza o aggiungere questo servizio alle tue istanze esistenti in un secondo momento.
 

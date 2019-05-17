@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-20"
+lastupdated: "2019-04-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -93,7 +93,7 @@ Quando você implementar esse serviço, conclua as configurações a seguir:
   * **Chave privada**: insira a chave privada do certificado de autoridade de certificação.
   * (Opcional) **Senha**: insira a senha para a chave privada se ela estiver criptografada.
   * (Opcional) **Inserir a senha novamente**: insira a senha para a chave privada novamente.
-  * (Opcional) **Nome do host**: insira o nome do host a ser mapeado para o nome comum (CN) do certificado de autoridade de certificação. O HCX on {{site.data.keyword.cloud_notm}} requer o certificado de autoridade de certificação para estar em um formato que seja aceito pelo NSX Edge. Para obter mais informações sobre os formatos de certificados do NSX Edge, veja [Importando SSL Certificates](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html).
+  * (Opcional) **Nome do host**: insira o nome do host a ser mapeado para o nome comum (CN) do certificado de autoridade de certificação. O HCX on {{site.data.keyword.cloud_notm}} requer o certificado de autoridade de certificação para estar em um formato que seja aceito pelo NSX Edge. Para obter mais informações sobre os formatos de certificados do NSX Edge, veja [Importando SSL Certificates](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html).
 
 É possível pedir outros serviços de complemento para sua instância com base em suas necessidades, por exemplo, recuperação de desastre. Para obter mais informações, veja [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices).
 

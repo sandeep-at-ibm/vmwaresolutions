@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -39,7 +39,7 @@ Puede solicitar instancias de Cloud Foundation o de vCenter Server con el servic
 Puede solicitar una instancia local de HCX local para la obtención de licencias y la activación de la instalación local de HCX.
 
 Para obtener más información, consulte los temas siguientes:
-* [Consideraciones sobre HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview)
+* [Consideraciones sobre HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations)
 * [Gestión de HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghcx)
 * [Consideraciones sobre instancias locales de HCX](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_considerations)
 * [Solicitud de instancias locales de HCX](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_orderingserviceinstances)
@@ -53,7 +53,7 @@ Además, cuando añada nodos a un clúster cuya licencia ha conseguido con su cl
 
 Para obtener más información, consulte los temas siguientes:
 
-* [Adición y visualización de clústeres correspondientes a instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [Adición, visualización y supresión de clústeres para instancias de vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 * [Preguntas frecuentes sobre BYOL](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_byol)
 
 ## Actualizaciones de componentes del servicio Zerto on IBM Cloud
@@ -91,7 +91,7 @@ Para obtener más información, consulte [Visión general de vCenter Server](/do
 ### Se ha aumentado el número máximo de servidores por clúster, 32
 {: #relnotes_v21-max-clusters}
 
-Para el clúster predeterminado de una instancia, puede desplegar o ampliar hasta 51 servidores. Para todos los siguientes clústeres de una instancia, puede desplegar o ampliar hasta 59 servidores. Para obtener más información, consulte [Adición y visualización de clústeres para instancias vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances).
+Para el clúster predeterminado de una instancia, puede desplegar o ampliar hasta 51 servidores. Para todos los siguientes clústeres de una instancia, puede desplegar o ampliar hasta 59 servidores. Para obtener más información, consulte [Adición, visualización y supresión de clústeres para instancias de vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters).
 
 Esta función solo está disponible para las instancias desplegadas en la versión V2.1 o posterior. Las instancias que se han actualizado a V2.1 desde releases anteriores a V2.1 no tienen esta opción.
 {:note}
@@ -113,7 +113,7 @@ Ahora puede configurar comparticiones de archivos NFS de forma individual. Selec
 Para obtener más información, consulte los temas siguientes:
 * [Visión general de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
 * [Pedido de instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [Adición y visualización de clústeres correspondientes a instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [Adición, visualización y supresión de clústeres para instancias de vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 
 ## Actualizaciones y mejoras de la interfaz de usuario
 {: #relnotes_v21-ui}

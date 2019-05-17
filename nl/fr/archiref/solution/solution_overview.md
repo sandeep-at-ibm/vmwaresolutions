@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-15"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -38,7 +38,7 @@ Vous êtes également en charge des sauvegardes, de l'application des correctifs
 
 De plus, des services professionnels et gérés d'{{site.data.keyword.cloud_notm}} sont également disponibles pour vous aider à accélérer votre transition vers le cloud avec des offres de services de migration, d'implémentation et d'intégration.
 
-Contrairement à une offre de service géré, vCenter Server vous offre un accès total et complet à tous les composants de sorte que vous bénéficiez de plus de souplesse qu'avec un service géré. Cependant, certaines contraintes s'appliquent après le déploiement de vCenter Server pour que l'automatisation d'IBM Cloud for VMware Solutions fonctionne.
+Contrairement à une offre de service géré, vCenter Server vous offre un accès total et complet à tous les composants de sorte que vous bénéficiez de plus de souplesse qu'avec un service géré. Cependant, certaines contraintes s'appliquent après le déploiement de vCenter Server pour que l'automatisation IBM Cloud for VMware Solutions fonctionne.
 
 Les offres VMware on {{site.data.keyword.cloud_notm}} présentent les avantages suivants :
 

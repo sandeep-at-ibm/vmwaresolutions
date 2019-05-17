@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-20"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -31,7 +31,7 @@ VMware vCenter Server 인스턴스에 대한 BOM(Bill of Materials) 정보를 �
 |:---------- |:---------- |:------------- |
 |VLAN1     |공인, 기본 |공용 네트워크 액세스를 위한 실제 ESXi 서버에 지정됩니다. 초기 배치 후에 사용되지 않습니다. 인터넷 액세스에 사용 가능합니다. |
 |VLAN2     |사설 A, 기본 |{{site.data.keyword.cloud}}에 의해 실제 ESXi 서버에 지정됩니다. VMware vSphere 관리 트래픽에 대한 관리 인터페이스에서 사용됩니다.<br><br>관리 컴포넌트로 작동하는 가상 머신(VM)에 지정됩니다.<br><br>VMware NSX VTEP(VXLAN Tunnel Endpoint)에 지정됩니다. |
-|VLAN3     |사설 B, 포터블 |VMware vSAN에 지정됩니다(사용된 경우).<br><br>VMware NFS에 지정됩니다(사용된 경우).<br><br>VMware vSphere vMotion에 지정됩니다.<br><br>NSX-T의 경우 VMware NSX VTEP(VXLAN Tunnel Endpoint)에 지정됩니다. |
+|VLAN3     |사설 B, 포터블 |VMware vSAN에 지정됩니다(사용된 경우).<br><br>VMware NFS에 지정됩니다(사용된 경우).<br><br>VMware vSphere vMotion에 지정됩니다.<br><br>NSX-T의 경우 VMware NSX VTEP(VXLAN Tunnel Endpoint)에 지정됩니다.|
 
 ## vCenter Server 인스턴스에 대한 소프트웨어 BOM
 {: #vc_bom-software}
@@ -42,15 +42,15 @@ VMware vCenter Server 인스턴스에 대한 BOM(Bill of Materials) 정보를 �
 
 |제조업체  |컴포넌트                      |버전    |
 |:------------- |:------------------------------ |:------------- |
-|VMware       |vSphere ESXi                    | 6.7 Update 1(빌드 6.7.0-11675023) 또는 <br/>6.5 Update 2(빌드 6.5.0-11925212) |
+|VMware       |vSphere ESXi                    | 6.7 Update 1(빌드 6.7.0-13004448) 또는 <br/>6.5 Update 2(빌드 6.5.0-13004031) |
 |VMware       | vSphere 6.7                     | Distributed vSwitch 6.6.0 |
 |VMware       | vSphere 6.5                     | Distributed vSwitch 6.5.0 |
-|VMware       |vCenter Server Appliance        | 6.7 Update 1(빌드 6.7.0-10244745) 또는 <br/>6.5 Update 2d(빌드 6.5.0-10964411) |
-|VMware       |Platform Services Controller    | 6.7 Update 1(빌드 6.7.0-10244745) 또는 <br/>6.5 Update 2d(빌드 6.5.0-10964411) |
+|VMware       |vCenter Server Appliance        | 6.7 Update 1b(빌드 6.7.0-11727113) 또는 <br/>6.5 Update 2d(빌드 6.5.0-10964411) |
+|VMware       |Platform Services Controller    | 6.7 Update 1b(빌드 6.7.0-11727113) 또는 <br/>6.5 Update 2d(빌드 6.5.0-10964411) |
 |VMware       |vSAN                            | 6.7 Update 1 또는 <br/>6.6.1       |
 |VMware       |NSX for vSphere                 | 6.4.4(빌드 11197766)    |
 |VMware       | NSX-T for vSphere               |2.4                       |
-|Microsoft    |Windows Server Standard 에디션 |2012R2       |
+|Microsoft    |Windows Server Standard 에디션 | 2016       |
 
 VMware vSAN은 선택적 컴포넌트입니다.
 {:note}
@@ -132,7 +132,7 @@ V2.0 이하로 배치된 인스턴스의 경우에는 공용 스위치 MTU 설�
 
 공용 스위치의 MTU 설정을 업데이트하려면 VMware vSphere Web Client에서 다음 단계를 완료하십시오.
 1. vDS를 마우스 오른쪽 단추로 클릭하고 **설정 편집**을 클릭하십시오.
-2. **특성 탭**에서 **고급** 옵션을 선택하십시오.
+2. **특성** 탭에서 **고급** 옵션을 선택하십시오.
 3. **최대 MTU** 값이 1500으로 설정되었는지 확인하십시오.
 
    vDS의 MTU 크기가 변경되면 연결된 업링크(실제 NIC)의 작동이 중지되었다가 재개됩니다. 따라서 해당 업링크를 사용 중인 VM에서 잠시 동안의 가동 중단이 발생합니다. 따라서 MTU 설정 업데이트는 스케줄된 작동 중단 동안 수행하도록 계획하는 것이 좋습니다.

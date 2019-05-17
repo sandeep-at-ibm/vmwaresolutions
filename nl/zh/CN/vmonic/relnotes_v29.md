@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -67,7 +67,7 @@ vSphere Enterprise Plus 6.7u1 仅可用于 Broadwell 和 Skylake {{site.data.key
 有关更多信息，请参阅：
 
 * [IBM Cloud 上的虚拟路由和转发 (VRF) 概述](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-* [使用 IBM Cloud CLI 支持帐户使用服务端点](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
+* [支持帐户使用服务端点](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
 
 ## 支持应用程序编程接口
 {: #relnotes_v29-api}
@@ -100,7 +100,7 @@ vSphere Enterprise Plus 6.7u1 仅可用于 Broadwell 和 Skylake {{site.data.key
 ### ESXi 服务器增强功能
 {: #relnotes_v29-vcs-esxi}
 
-* 现在，在交付实例之前，已针对 ESXi 服务器禁用安全 Shell (SSH) 协议。
+* 现在，在交付实例之前，已针对 ESXi 服务器禁用安全 Shell (SSH) 协议。如果要启用 SSH，请参阅[通过 vSphere Web Client 启用 SSH](https://pubs.vmware.com/vsphere-6-5/index.jsp?topic=%2Fcom.vmware.vcli.getstart.doc%2FGUID-C3A44A30-EEA5-4359-A248-D13927A94CCE.html)。
 * 从 V2.9 发行版开始，以下 ESXi 服务器操作可用：
 
    * 在服务器处于维护模式时，向现有集群添加新的 ESXi 服务器。在您除去虚拟机的维护模式之前，这些虚拟机不会迁移到新服务器。
@@ -148,7 +148,9 @@ Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} 服务现在可用于
 ### KMIP for VMware on IBM Cloud
 {: #relnotes_v29-services-kmip}
 
-现在，在悉尼有可用于 KMIP for VMware on {{site.data.keyword.cloud_notm}} 服务的两个新端点。有关更多信息，请参阅 [KMIP for VMware on {{site.data.keyword.cloud_notm}} 服务配置](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering-config)。
+现在，在悉尼有可用于 KMIP for VMware on {{site.data.keyword.cloud_notm}} 服务的两个新端点。有关更多信息，请参阅 [KMIP for VMware on {{site.data.keyword.cloud_notm}} 服务配置](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering#kmip_standalone_ordering-config)。
+
+（2019 年 4 月 9 日更新）先前，KMIP for VMware on {{site.data.keyword.cloud_notm}} 使用 IBM Key Protect for {{site.data.keyword.cloud_notm}} 来创建、加密和解密加密密钥。从 V2.9 发行版开始，KMIP for VMware on {{site.data.keyword.cloud_notm}} 还可以使用 {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services（一整套加密和密钥管理服务）来管理 {{site.data.keyword.cloud_notm}} 中 VMware 使用的加密密钥。有关更多信息，请参阅 [KMIP for VMware on IBM Cloud 概述](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations)和 [{{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-get-started)。
 
 ### Veeam on IBM Cloud
 {: #relnotes_v29-services-veeam}

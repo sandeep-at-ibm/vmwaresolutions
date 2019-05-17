@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-10-19"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -39,7 +39,7 @@ V2.2 업그레이드 프로세스 중에 IBM CloudDriver 가상 머신이 CentOS
 * IBM CloudDriver 가상 머신을 참조하는 백업 솔루션을 사용 중인 경우 V2.2로 업그레이드한 후 백업 솔루션이 새 IBM CloudDriver 가상 머신을 참조하고 있는지 확인하십시오.
 * V2.2로 업그레이드하기 전에 Legacy Veeam VSI를 Veeam on {{site.data.keyword.cloud_notm}} 서비스로 대체하는지 확인하십시오. Legacy Veeam은 더 이상 V2.2 및 이후 릴리스에서 지원되지 않으며 이에 따라 Legacy Veeam과 연관된 관리 컴포넌트 백업을 복원에 사용할 수 없습니다.
 
-Veeam on {{site.data.keyword.cloud_notm}} 서비스 사용에 대한 자세한 정보는 다음 주제를 참조하십시오.
+Veeam on {{site.data.keyword.cloud_notm}} 서비스 사용에 대한 자세한 정보는 다음을 참조하십시오.
 * [Veeam on {{site.data.keyword.cloud_notm}}에 대한 컴포넌트 및 고려사항](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)
 * [Veeam on {{site.data.keyword.cloud_notm}} 관리](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
 
@@ -91,7 +91,7 @@ V2.2 이상 릴리스에 배치된 VMware vCenter Server 인스턴스의 경우,
 ### 인스턴스당 늘어난 클러스터 수
 {: #relnotes_v22-clusters-per-inst}
 
-이제 V2.2 이상 릴리스에 배치되거나 V2.2 이상 릴리스로 업그레이드된 VMware vCenter Server 인스턴스에 최대 10개의 클러스터를 추가할 수 있습니다. 자세한 정보는 [vCenter Server 인스턴스에 대한 클러스터 추가 및 보기](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)​를 참조하십시오.
+이제 V2.2 이상 릴리스에 배치되거나 V2.2 이상 릴리스로 업그레이드된 VMware vCenter Server 인스턴스에 최대 10개의 클러스터를 추가할 수 있습니다. 자세한 정보는 [vCenter Server 인스턴스에 대한 클러스터 추가 및 보기](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)​를 참조하십시오.
 
 ## VMware vSphere 클러스터에 대한 업데이트
 {: #relnotes_v22-vss}

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,10 +18,7 @@ subcollection: vmwaresolutions
 # IBM Cloud 基礎架構帳戶的需求
 {: #slaccountrequirement}
 
-若要使用 {{site.data.keyword.vmwaresolutions_full}} 來訂購實例，您必須具有 {{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) 帳戶。實例中訂購的元件費用會向該 {{site.data.keyword.cloud_notm}}帳戶收費。
-
-{{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) 帳戶先前稱為 IBM SoftLayer 帳戶。
-{:note}
+若要使用 {{site.data.keyword.vmwaresolutions_full}} 來訂購實例，您必須具有 {{site.data.keyword.cloud_notm}} 基礎架構帳戶。實例中訂購的元件費用會向該 {{site.data.keyword.cloud_notm}}帳戶收費。
 
 ## IBM Cloud 基礎架構帳戶的許可權
 {: #slaccountrequirement-permissions}
@@ -46,6 +43,7 @@ subcollection: vmwaresolutions
 |編輯問題單|需要此許可權，才能代表您編輯所建立的服務問題單。|
 |檢視問題單|需要此許可權，才能監視與實例中的元件相關的服務問題單，以處理 {{site.data.keyword.cloud_notm}} 基礎架構佈建延遲及問題。|
 |檢視硬體詳細資料|需要此許可權才能擷取硬體詳細資料，這些是訂單驗證和自動化配置所需要的。|
+|重新開機/控制|刪除實例時，需要此許可權才能在取消硬體過程中關閉硬體電源。|
 |檢視授權|需要此許可權，才能擷取及驗證實例所使用的授權。|
 |檢視密碼|需要此許可權，才能管理已訂購的 VSI。|
 |管理伺服器監視|下訂單不需要此許可權，但需要它才能擷取及驗證在實例中執行 VMware ESXi 伺服器的 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} 的監視狀態。|
@@ -57,7 +55,7 @@ subcollection: vmwaresolutions
 
 如需相關資訊，請參閱：
 * [VRF on IBM Cloud 概觀](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-* [啟用您的帳戶以使用服務端點](/docs/services/service-endpoint?topic=services/service-endpoint-cs_cli_install_steps#cs_cli_install_steps)
+* [啟用您的帳戶來使用服務端點](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
 
 ## VLAN Spanning 終止支援
 {: #slaccountrequirement-vlan-eos}

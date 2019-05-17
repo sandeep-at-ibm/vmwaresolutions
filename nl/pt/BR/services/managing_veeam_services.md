@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-04-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -29,7 +29,7 @@ Ao solicitar serviços gerenciados para o Veeam on {{site.data.keyword.cloud_not
 2. Role para baixo na página e clique no cartão **Serviços gerenciados para o Veeam on IBM Cloud**, que está localizado em **Pedir serviços gerenciados adicionais**.
 3. Na página **Veeam on IBM Cloud**, revise a descrição e as especificações técnicas para o Veeam on {{site.data.keyword.cloud_notm}} como um serviço gerenciado e, em seguida, clique em **Criar**.
 4. Especifique as definições de configuração de acordo com seus requisitos ou aceite os valores padrão.
-5. Clique em **vCenter Server** ou **Cloud Foundation** para incluir o serviço em uma de suas instâncias.
+5. Clique em **vCenter Server** para incluir o serviço em uma de suas instâncias.
 6. Para incluir o serviço enquanto você pede uma nova instância, clique em **Incluir na nova instância** e, em seguida, continue com a solicitação de uma nova instância do [servidor do vCenter](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance) ou [do servidor do vCenter com Hybridity](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance).
 7. Para incluir o serviço em uma instância existente, clique em **Incluir na instância existente**, selecione a instância desejada na lista e, em seguida, confirme se deseja continuar com o pedido clicando em **Provisão**.
 
@@ -38,4 +38,4 @@ Ao solicitar serviços gerenciados para o Veeam on {{site.data.keyword.cloud_not
 
 * [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
 * [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
-* [Serviços de backup e proteção de dados](https://www-935.ibm.com/services/business-continuity/backup-and-data-protection-services/)
+* [Serviços de backup e proteção de dados](https://www.ibm.com/services/business-continuity/backup-data-protection)

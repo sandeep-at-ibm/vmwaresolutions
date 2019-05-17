@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-03-12"
+lastupdated: "2019-04-03"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -14,7 +14,7 @@ subcollection: vmwaresolutions
 
 {{site.data.keyword.cloudaccesstrailfull}} 서비스를 사용하여 사용자 및 애플리케이션이 {{site.data.keyword.Bluemix_notm}}에서 {{site.data.keyword.vmwaresolutions_short}}와 상호작용하는 방법을 추적하십시오.
 
-{{site.data.keyword.cloudaccesstrailfull_notm}} 서비스는 {{site.data.keyword.Bluemix_notm}}에서 서비스 상태가 변경된 사용자 시작 활동을 기록합니다. 자세한 정보는 [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started-with-cla#getting-started-with-cla)의 내용을 참조하십시오.
+{{site.data.keyword.cloudaccesstrailfull_notm}} 서비스는 {{site.data.keyword.Bluemix_notm}}에서 서비스 상태가 변경된 사용자 시작 활동을 기록합니다. 자세한 정보는 [{{site.data.keyword.cloudaccesstrailshort}} 정보](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov#activity_tracker_ov)를 참조하십시오.
 
 ## Activity Tracker 이벤트 테이블
 {: #at-events-table}
@@ -51,12 +51,6 @@ subcollection: vmwaresolutions
 | `vmware-solutions.notification.update` | <ul><li>알림 업데이트 요청을 수신합니다.</li><li>알림 업데이트 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
 | `vmware-solutions.secure_data.wipe`       | <ul><li>보안 데이터 삭제 요청을 수신합니다.</li><li>보안 데이터 삭제 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
 | `vmware-solutions.bss_account.migrate` | <ul><li>bss 계정 마이그레이션 요청을 수신합니다.</li><li>bss 계정 마이그레이션 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
-| `vmware-solutions.vcf.delete`                | <ul><li>Cloud Foundation 인스턴스 삭제 요청을 수신합니다.</li><li>Cloud Foundation 인스턴스 삭제 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
-| `vmware-solutions.vcf.add_hosts`             | <ul><li>Cloud Foundation 인스턴스에 ESXi 서버 추가 요청을 수신합니다.</li><li>Cloud Foundation 인스턴스에 ESXi 서버 추가 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
-| `vmware-solutions.vcf.remove_hosts`          | <ul><li>Cloud Foundation 인스턴스에 ESXi 서버 삭제 요청을 수신합니다.</li><li>Cloud Foundation 인스턴스에 ESXi 서버 삭제 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
-| `vmware-solutions.vcf.create_cluster`        | <ul><li>Cloud Foundation 인스턴스에 대한 클러스터 작성 요청을 수신합니다.</li> <li>Cloud Foundation 인스턴스에 대한 클러스터 작성 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
-| `vmware-solutions.vcf.delete_cluster`        | <ul><li>Cloud Foundation 인스턴스에서 클러스터 삭제 요청을 수신합니다.</li><li>Cloud Foundation 인스턴스에서 클러스터 삭제 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
-| `vmware-solutions.vcf.schedule_update`       | <ul><li>Cloud Foundation 인스턴스에 대한 업데이트 스케줄 요청을 수신합니다.</li><li>Cloud Foundation 인스턴스에 대한 업데이트 스케줄 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
 | `vmware-solutions.vcs.order`                 | <ul><li>vCenter Server 인스턴스 주문 요청을 수신합니다.</li><li>vCenter Server 인스턴스 주문 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
 | `vmware-solutions.vcs.delete`                | <ul><li>vCenter Server 인스턴스 삭제 요청을 수신합니다.</li><li>vCenter Server 인스턴스 삭제 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
 | `vmware-solutions.vcs.add_host`              | <ul><li>vCenter Server 인스턴스에 ESXi 서버 추가 요청을 수신합니다.</li><li>vCenter Server 인스턴스에 ESXi 서버 추가 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |

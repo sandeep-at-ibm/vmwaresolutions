@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-04-30"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -15,18 +15,25 @@ subcollection: vmwaresolutions
 {:note: .note}
 {:important: .important}
 
-# Aplicando atualizações a instâncias do vCenter Server with Hybridity Bundle
+# Aplicando atualizações de componente de gerenciamento da IBM às instâncias do vCenter Server with Hybridity Bundle
 {: #vc_hybrid_applyingupdates}
 
-O processo de aplicação de correções e atualizações a instâncias do vCenter Server with Hybridity Bundle é automatizado somente para os componentes de gerenciamento. As atualizações do VMware devem ser aplicadas manualmente.
+O procedimento nesta seção se aplica à atualização de componentes de gerenciamento da IBM para instâncias que são implementadas na V2.3 e V2.4.
 
-## Antes de iniciar
+Para instâncias implementadas em (ou submetidas a upgrade para) V2.5 ou mais recente, as atualizações e correções para os componentes de gerenciamento da IBM são aplicadas automaticamente, conforme necessário.
+
+Além disso, observe o comportamento a seguir quando concluir determinadas operações em sua instância:
+* Quando você pede novos serviços, a instância é atualizada para a versão mais recente.
+* Quando você inclui novos clusters, esses clusters são provisionados com os componentes mais recentes do VMware, mas os clusters existentes não são.
+* Ao incluir novos servidores ESXi, esses servidores ESXi são provisionados com os componentes mais recentes do VMware, mas os servidores ESXi existentes não são.
+
+O {{site.data.keyword.vmwaresolutions_short}} não oferece suporte para aplicar atualizações e correções aos componentes do VMware. Deve-se monitorar e aplicar essas atualizações sozinho.
+{:important}
+
+## Antes de aplicar as atualizações de componente de gerenciamento da IBM
 {: #vc_hybrid_applyingupdates-prereq}
 
-Iniciando com a V2.5, as atualizações do IBM CloudDriver não são mais listadas porque as atualizações automáticas estão ativadas. Ações como a inclusão de um host, a inclusão de um cluster e a solicitação de um serviço atualizam automaticamente a instância para a versão mais recente. Para obter mais informações sobre atualizações automáticas, consulte a seção *Resiliência do IBM CloudDriver* em Notas sobre a liberação do [ para a V2.5](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-relnotes_v25).
-{:note}
-
-Antes de tentar aplicar uma atualização, expanda a entrada de atualização clicando na seta para baixo e verifique as informações a seguir:
+Expanda a entrada de atualização clicando na seta para baixo e verifique as informações a seguir:
 * A versão da atualização. Deve-se aplicar as atualizações em sequência cronológica que é da mais antiga para a mais recente. Assegure-se de que tenha aplicado todas as atualizações anteriores antes de aplicar a mais recente. Por exemplo, deve-se aplicar a atualização V2.3 antes de tentar aplicar a atualização V2.4.
 * Se o tempo de inatividade é necessário.
 * O tempo estimado total para concluir a atualização.
@@ -43,32 +50,22 @@ Tabela 1. Atualize os níveis e o impacto
 | Médio | Esta atualização pode afetar alguns sistemas. Recomenda-se aplicar durante o tempo de inatividade planejado. |  
 | Grave  | Esta atualização afeta alguns ou todos os sistemas. Deve-se aplicá-lo durante o tempo de inatividade planejado. |  
 
-## Procedimento para aplicar atualizações a instâncias do vCenter Server with Hybridity Bundle
+## Procedimento para aplicar as atualizações de componente de gerenciamento da IBM (instâncias V2.3 e V2.4)
 {: #vc_hybrid_applyingupdates-procedure}
 
 1. No console do {{site.data.keyword.vmwaresolutions_full}}, clique em **Recursos** na área de janela de navegação esquerda.
 2. Na tabela **Instâncias do vCenter Server**, clique na instância a ser atualizada.
 3. Na página **Resumo**, verifique se todos os detalhes da instância são exibidos corretamente. Em seguida, clique em **Infraestrutura** na área de janela de navegação esquerda para verificar os detalhes na página **Infraestrutura**.
+
    Se os detalhes não forem exibidos, isso poderá indicar um problema de conectividade com a Virtual Server Instance (VSI) do IBM CloudDriver, como resultado de uma regra de firewall ou outro problema de rede. Resolva o problema antes de continuar com a próxima etapa, caso contrário, a atualização poderá falhar.
-4. Clique em **Atualização e correção** na área de janela de navegação esquerda.
 
-   A página **Atualização e correção** contém somente os pacotes para atualizar os componentes de gerenciamento da IBM, não as atualizações do VMware. O {{site.data.keyword.vmwaresolutions_short}} aplica atualizações do VMware às operações a seguir:
-   * Quando uma nova instância do vCenter Server é implementada.
-   * Quando novos servidores do ESXi forem incluídos, os novos servidores do ESXi serão provisionados com atualizações do VMware, mas os servidores do ESXi existentes não serão atualizados.
-   * Quando novos clusters forem incluídos, os novos clusters serão provisionados com atualizações do VMware, mas os clusters existentes não serão atualizados.
-   {:note}
+4. Clique em **Atualizar e corrigir** na área de janela de navegação esquerda e clique na seta para baixo para expandir a atualização de gerenciamento da IBM que você deseja aplicar e, em seguida, conclua uma das etapas a seguir:
+   * Para iniciar a atualização imediatamente, clique no ícone de menu overflow na coluna **Ações** da entrada de atualização e, em seguida, clique em **Atualizar agora**.
+   * Para planejar uma atualização futura, clique no ícone de menu overflow na coluna **Ações** da entrada de atualização e, em seguida, clique em **Planejar atualização**. Selecione a data, o horário e o fuso horário quando desejar que a atualização seja iniciada. Clique em **OK**.
 
-5. Para upgrades de licença, clique em  ** Atualizar **. Selecione a edição para a qual você deseja fazer upgrade na lista e clique em **Fazer upgrade**. Downgrades da edição da licença não estão disponíveis.
+5. Se você estiver aplicando atualizações a instâncias na configuração de implementação multissite, uma seção intitulada **Etapas necessárias para atualizar** será exibida. Esta seção lista as operações de atualização necessárias para todas as instâncias na implementação de vários sites. Deve-se concluir as etapas em sequência clicando em **Aplicar atualização** para cada etapa. Deve-se aguardar a conclusão da etapa anterior antes de iniciar a próxima etapa.
 
-   O upgrade de licença substitui todas as licenças NSX existentes na instância. Encargos adicionais poderão incorrer de uma sobreposição de licenças antigas e novas, se você fizer upgrade no meio de um ciclo de faturamento. Para evitar encargos adicionais, recomenda-se fazer upgrade da licença no final do ciclo de faturamento.
-   {:note}
-
-6. Para atualizações de software, clique na seta para baixo para expandir a atualização que você deseja aplicar e, em seguida, conclua uma das etapas a seguir:
-   *  Para iniciar a atualização imediatamente, clique no ícone de menu overflow na coluna **Ações** da entrada de atualização e, em seguida, clique em **Atualizar agora**.
-   *  Para planejar uma atualização futura, clique no ícone de menu overflow na coluna **Ações** da entrada de atualização e, em seguida, clique em **Planejar atualização**. Selecione a data, o horário e o fuso horário quando desejar que a atualização seja iniciada. Clique em **OK**.
-7. Se você estiver aplicando atualizações a instâncias do vCenter Server na configuração de implementação multissite, uma seção intitulada **Etapas necessárias para atualização** será exibida. Esta seção lista as operações de atualização necessárias para todas as instâncias na implementação de vários sites. Deve-se concluir as etapas em sequência clicando em **Aplicar atualização** para cada etapa. Deve-se aguardar a conclusão da etapa anterior antes de iniciar a próxima etapa.   
-
-## Resultados
+## Resultados após a aplicação de atualizações de componente de gerenciamento da IBM
 {: #vc_hybrid_applyingupdates-results}
 
 1. Depois que uma atualização for aplicada, aparecerá um registro na lista de status de atualização de software, no qual é possível visualizar o progresso detalhado e o status da atualização. Quando a atualização for concluída com êxito, um registro aparecerá na lista de atualizações de softwares instalados.
@@ -99,5 +96,6 @@ Tabela 1. Atualize os níveis e o impacto
 {: #vc_hybrid_applyingupdates-related}
 
 * [VCenter Server with Hybridity Bundle Visão Geral](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)
+* [Fazendo upgrade de licenças para instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_upgrade-lic)
 * [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [Perguntas Mais Frequentes](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)

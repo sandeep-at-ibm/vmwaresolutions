@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2017-08-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -60,7 +60,7 @@ Fortinet on {{site.data.keyword.cloud_notm}} 服务现在可用于 Cloud Foundat
 
 有关更多信息，请参阅以下主题：
 * [订购 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [添加和查看 vCenter Server 实例的集群](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [添加、查看和删除 vCenter Server 实例的集群](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 
 ### 支持添加 7 个以上的 NFS 文件共享
 {: #relnotes_v18-nfs}
@@ -69,7 +69,7 @@ Fortinet on {{site.data.keyword.cloud_notm}} 服务现在可用于 Cloud Foundat
 
  有关更多信息，请参阅以下主题：
 * [订购 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [添加和查看 vCenter Server 实例的集群](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [添加、查看和删除 vCenter Server 实例的集群](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 
 ### 对数据中心的更新
 {: #relnotes_v18-dc}

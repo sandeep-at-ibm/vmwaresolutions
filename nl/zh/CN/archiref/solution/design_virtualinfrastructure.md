@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-04-09"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -35,7 +35,7 @@ vSphere ESXi 配置由以下方面构成：
 
 下表概述了各个方面的规范。在配置和安装 ESXi 之后，该主机会添加到 VMware vCenter Server，并在其中对该主机进行管理。
 
-借助此设计，您可以通过直接控制台用户界面 (DCUI)、ESXi Shell 和安全 Shell (SSH) 来访问虚拟主机。
+借助此设计，您可以通过直接控制台用户界面 (DCUI) 和 vSphere Web Client 来访问虚拟主机。作为最佳实践，安全 Shell (SSH) 和 ESXi Shell 在供应后均已禁用。
 
 缺省情况下，唯一可以直接登录的用户是主机物理机器的 _root_ 和 _ibmvmadmin_ 用户。管理员可以添加 Microsoft Active Directory (MSAD) 域中的用户，以允许用户访问主机。vCenter Server 解决方案设计中的所有主机都配置为与中央 NTP 服务器同步。
 
@@ -45,7 +45,7 @@ vSphere ESXi 配置由以下方面构成：
 |:---------------------- |:----------------------- |
 |ESXi 引导位置|使用以 RAID-1 方式配置的本地磁盘|
 |时间同步| 使用 {{site.data.keyword.cloud}} NTP 服务器 |
-|主机访问|支持 DCUI、ESXi Shell 或 SSH（如果启用了这些项）|
+|主机访问|支持 DCUI。SSH 和 ESXi Shell 受支持，但缺省情况下未启用|
 |用户访问| 本地认证和 MSAD |
 | 域名解析 |使用 DNS，如[公共服务设计](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_commonservice)中所述。|
 |EVC 方式|Skylake（仅限“绿地”vSphere 6.7 部署）|
@@ -58,7 +58,7 @@ vSphere 集群包含用于管理 vCenter Server 实例的虚拟机 (VM) 以及�
 在初始部署期间或初始部署后，可以扩展到最多 59 个 ESXi 主机。
 
 要支持更多用户工作负载，可以通过以下方式扩展环境：  
-* 为现有集群部署更多计算主机
+* 在现有集群中部署更多计算主机
 * 部署由同一 vCenter Server Appliance 管理的更多集群
 * 使用自己的 vCenter Server Appliance 部署新的 vCenter Server 实例
 
@@ -77,7 +77,7 @@ vSphere 集群包含用于管理 vCenter Server 实例的虚拟机 (VM) 以及�
 
 vSAN 采用以下组件：
 * 双磁盘组 vSAN 设计，每个磁盘组包含两个或更多磁盘。组中最小大小的一个 SSD 或 NVMe 驱动器充当高速缓存层，其余 SSD 充当容量层。
-* 为每个驱动器配置板载 RAID 控制器，但两个操作系统驱动器除外，这两个驱动器会分别配置为 RAID-0 阵列。
+* 为每个驱动器配置了采用 RAID-0 阵列的板载 RAID 控制器，但两个操作系统驱动器除外。
 * 基于所有存储器创建一个 vSAN 数据存储。
 
 可用的 vSAN 功能部件取决于订购实例时选择的许可证版本。有关更多信息，请参阅 [VMware vSAN 版本比较](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution-appendix#vmware-vsan-edition-comparison)。
@@ -121,9 +121,9 @@ vSAN 设置是根据在 {{site.data.keyword.cloud_notm}} 中部署 VMware 解决
 
 与 NFS V3 连接的存储器不同，iSCSI 连接的存储器在所有配置的 NIC 卡端口和目标端口上支持活动/活动路径。因此，可以实现更高的吞吐量，也因而是 NFS 连接存储器的理想替代方法。但使用这种存储器的代价是复杂性更高。
 
-{{site.data.keyword.cloud_notm}} 耐久性块存储器仅支持每个 LUN 最多 8 个主机连接。这旨在记录 1 季度要对 {{site.data.keyword.cloud_notm}} 耐久性存储器进行更改时，将向 vCenter Server 添加（以允许连接最多 64 个主机或 iSCSI 启动器，因为每个 ESXi 主机至少要有两个启动器）的功能。
+使用 VMware 时，{{site.data.keyword.cloud_notm}} 耐久性块存储器最多支持每个 LUN 64 个 IP，根据此设计，最多允许 32 个主机。
 
-一个 2 TB iSCSI LUN 连接到 vCenter Server 以用于管理组件，并且至少再配置了一个 iSCSI LUN，以供客户工作负载使用。此存储器的格式设置为每个 LUN 的 VMFS 6.x 文件系统。
+一个 2 TB iSCSI LUN 连接到 vSphere 集群以用于管理组件，并且至少再配置一个 iSCSI LUN，以供客户工作负载使用。此存储器的格式设置为每个 LUN 的 VMFS 6.x 文件系统。
 
 ### iSCSI 的虚拟网络设置
 {: #design_virtualinfrastructure-setup-iscsi}
@@ -161,9 +161,9 @@ iSCSI LUN 已供应并且格式设置为每个 LUN 的单个文件 VMFS 文件�
 
 除了控制器之外，{{site.data.keyword.cloud_notm}} 自动化还会为部署的 vSphere 主机准备 NSX VIBS，以支持通过 VXLAN 隧道端点（VTEP）使用虚拟化网络。从为 VTEP 指定的**专用 A** 可移植 IP 地址范围中为 VTEP 分配支持 VLAN 的 IP 地址，如 [VLAN](/docs/services/vmwaresolutions/services?topic=vmware-solutions-design_physicalinfrastructure#design_physicalinfrastructure-vlans) 中所列示。VXLAN 流量驻留在未标记的 VLAN 上，并且分配给专用 vDS。
 
-然后，将分配分段标识池，并且将集群中的主机添加到传输区域。由于在 {{site.data.keyword.cloud_notm}} 中未配置因特网组管理协议 (IGMP) 监听，因此在传输区域中仅使用单点广播。根据 VMW 最佳实践，会在同一 VTEP 专用子网上为每个主机配置两个 vTEP 内核端口。
+然后，将分配分段标识池，并且将集群中的主机添加到传输区域。由于在 {{site.data.keyword.cloud_notm}} 中未配置因特网组管理协议 (IGMP) 监听，因此在传输区域中仅使用单点广播。根据 VMW 最佳实践，会在同一 VTEP 专用子网上为每个主机配置两个 VTEP 内核端口。
 
-在此之后，将部署 NSX Edge 服务网关对。在所有情况下，都会使用一个网关对来处理位于专用网络中的自动化组件的出站流量。将部署另一个称为客户管理的 Edge 的网关，并将其配置为使用上行链路连接公用网络，还会配置一个分配给专用网络的接口。有关作为解决方案一部分部署的 NSX Edge 服务网关的更多信息，请参阅 [NSX Edge 服务网关解决方案体系结构](/docs/services/vmwaresolutions/services?topic=vmware-solutions-nsx_overview#nsx_overview)。
+在此之后，如果实例具有公用网络接口，那么将部署两个 NSX Edge 服务网关对。一个网关对用于处理位于专用网络中的自动化组件的出站流量。将部署另一个称为客户管理的 Edge 的网关，并将其配置为使用上行链路连接公用网络，还会配置一个分配给专用网络的接口。有关作为解决方案一部分部署的 NSX Edge 服务网关的更多信息，请参阅 [NSX Edge 服务网关解决方案体系结构](/docs/services/vmwaresolutions/services?topic=vmware-solutions-nsx_overview#nsx_overview)。
 
 云管理员可以配置任何必需的 NSX 组件，例如分布式逻辑路由器 (DLR)、逻辑交换机和防火墙。可用的 NSX 功能部件取决于在订购实例时选择的 NSX 许可证版本。有关更多信息，请参阅 [VMware NSX 版本比较](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution-appendix#vmware-nsx-edition-comparison)。
 
@@ -250,7 +250,7 @@ SDDC-DPortGroup-iSCSI-B|发起虚拟端口|活动：0|VLAN 2
 管理|SDDC-DPortGroup-Mgmt|管理流量|1500（缺省值）
 vMotion|SDDC-DPortGroup-vMotion|vMotion 流量|9000
 VTEP|NSX 生成|-|9000
-VSAN|SDDC-DPortGroup-VSAN|VSAN|9000
+vSAN|SDDC-DPortGroup-VSAN|vSAN|9000
 NAS|SDDC-DPortGroup-NFS|NAS|9000
 iSCSI|SDDC-DPortGroup-iSCSI-A|iSCSI|9000
 iSCSI|SDDC-DPortGroup-iSCSI-B|iSCSI|9000
@@ -274,6 +274,22 @@ iSCSI|SDDC-DPortGroup-iSCSI-B|iSCSI|9000
 * 将 NSX Management 链接到其他 VMware 实例
 
 图 5. 部署的示例客户 NSX 拓扑 ![部署的示例客户 NSX 拓扑](vcsv4radiagrams-ra-vcs-nsx-topology-customer-example.svg)
+
+## 公用网络连接
+
+有多种原因可能需要将公用网络连接用于实例。这可能包括访问公共更新服务或其他公共服务以处理工作负载，例如地理位置数据库或天气数据。此外，虚拟化管理和附加组件服务也可能需要或受益于公共连接。例如，vCenter 可以通过公用网络更新其 HCL 数据库并获取 [VMware Update Manager (VUM)](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-intro) 更新。Zerto、Veeam、VMware HCX、F5 BIG-IP 和 FortiGate-VM 在其产品许可、激活或使用情况报告的某些部分，都会使用公用网络连接。在此基础上，您还可以通过公用网络使用隧道来连接到内部部署数据中心以进行复制。
+
+通常，这些通信通过管理或客户 Edge 服务网关 (ESG) 来选择性路由并通过 NAT 传输到公用网络。但是，您可能具有其他安全需求，或者可能更愿意使用代理来简化通信路径。此外，如果您在禁用公共接口的情况下部署了实例，那么无法使用 ESG 来路由到公用网络。
+
+此体系结构支持用于将流量路由到或通过代理连接到公用网络的以下选项：
+
+方法|描述|限制
+--|--|--
+虚拟化网关|跨专用和公用网络部署虚拟化网关（例如，NSX ESG、F5 BIG-IP、FortiGate-VM 或您选择的虚拟设备）。配置源系统（例如，vCenter、Zerto 和工作负载）上的路由，以仅将公用网络流量定向到网关，并根据需要配置网关。|仅适用于启用了公共接口的实例。此配置同时支持出站和入站流量模式。
+使用代理的虚拟化网关|如上所述部署虚拟化网关。在此网关后面，[部署代理服务器](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-init-config#vum-init-config)，然后将服务和应用程序配置为通过此代理连接到公用网络。|仅适用于启用了公共接口的实例。出站流量模式可以使用代理，但入站流量模式必须在网关处进行管理。
+硬件网关|将[硬件网关设备](https://cloud.ibm.com/catalog/infrastructure/gateway-appliance)部署到管理 VLAN。根据需要，将网关配置为以 NAT 方式传输面向公用网络的出站流量。|适用于所有实例，不管是否启用了公共接口。此配置同时支持出站和入站流量模式。
+使用代理的硬件网关|如上所述部署网关设备。在此网关后面，[部署代理服务器](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-init-config#vum-init-config)，然后将服务和应用程序配置为通过此代理连接到公用网络。|适用于所有实例，不管是否启用了公共接口。出站流量模式可以使用代理，但入站流量模式必须由网关进行管理。
+负载均衡器|IBM Cloud 提供了多个 [LoadBalancer 服务](https://cloud.ibm.com/catalog/infrastructure/load-balancer-group)，可用于提供对应用程序的入站网络访问权。|适用于所有实例，但仅限于入站流量模式。
 
 ## 相关链接
 {: #design_virtualinfrastructure-related}

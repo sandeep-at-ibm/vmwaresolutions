@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -36,7 +36,7 @@ vCenter 具有称为“主机概要文件”的功能。此功能可创建概要
 {: #vum-host-profiles-create-host-profile}
 
 1.	在 vSphere Web Client 的主页中，单击**策略和概要文件**。
-2.	单击**主机概要文件**，并浏览至“主机概要文件”视图。
+2.	单击**主机概要文件**，并导航至“主机概要文件”视图。
 3.	单击**从主机中抽取概要文件**图标。
 4.	选择将充当参考主机的现有主机，然后单击**下一步**。
 5.	输入新概要文件的名称和描述，然后单击**下一步**。
@@ -55,15 +55,15 @@ vCenter 具有称为“主机概要文件”的功能。此功能可创建概要
 ##	使用主机概要文件检查新主机的一致性
 {: #vum-host-profiles-check-compliance}
 
-1.	浏览至先前已完成的主机概要文件。
+1.	导航至先前已完成的主机概要文件。
 2.	单击**检查主机概要文件一致性**图标。
-3.	在**对象**选项卡中，一致性状态会更新为：_一致、未知或不一致_。不一致状态指示发现概要文件和新主机之间有特定的不一致问题。
+3.	在**对象**选项卡上，一致性状态会更新为：_一致、未知或不一致_。不一致状态指示发现概要文件和新主机之间有特定的不一致问题。
 
 ##	复查一致性不符合情况并进行修复
 {: #vum-host-profiles-review-compliance}
 
 1. 要查看有关一致性不符合情况的更多详细信息，请在一致性检查中使用的**对象**选项卡中，选择**主机概要文件**。
-2. 要查看关于不符合一致性的主机与主机概要文件之间有哪些参数不同的具体详细信息，请单击**监视器**选项卡，然后选择**一致性**视图。
+2. 要查看关于不符合一致性的主机与主机概要文件之间有哪些参数不同的具体详细信息，请单击**监视**选项卡，然后选择**一致性**视图。
 3. 展开对象层次结构，然后选择不符合的主机。
 4. 有差异的参数会显示在“一致性”窗口中的层次结构下面。
 5. 复查参数并了解为何新主机可能会与参考主机有所不同。对于一致性不可接受的参数，请先进行修复，然后使新主机退出维护模式。例如，由系统管理员操作引起配置漂移的情况。
@@ -72,4 +72,4 @@ vCenter 具有称为“主机概要文件”的功能。此功能可创建概要
 {: #vum-host-profiles-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 解决方案体系结构](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} 数字技术互动](https://ibm-dte.mybluemix.net/ibm-vmware)（演示）
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} 数字技术互动](https://ibm-dte.mybluemix.net/vmware)（演示）

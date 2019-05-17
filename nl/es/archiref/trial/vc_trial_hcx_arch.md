@@ -85,7 +85,7 @@ Las siguientes características de red están integradas en la pasarela de nube 
 #### Direccionamiento inteligente de flujos
 {: #vc_trial_hcx_arch-intel-flow}
 
-El direccionamiento inteligente de flujos selecciona automáticamente la mejor conexión en función de la vía de acceso a internet, aprovechando de forma eficiente toda la conexión de modo que las cargas de trabajo se muevan lo más rápido posible. Cuando flujos de gran tamaño, como copias de seguridad o réplicas, provocan una contención de la CPU, los flujos más pequeños se direccionan a las CPU menos ocupadas, lo que mejora el rendimiento del tráfico interactivo.
+El direccionamiento inteligente de flujos selecciona automáticamente la mejor conexión en función de la vía de acceso a Internet, aprovechando de forma eficiente toda la conexión de modo que las cargas de trabajo se muevan lo más rápido posible. Cuando flujos de gran tamaño, como copias de seguridad o réplicas, provocan una contención de la CPU, los flujos más pequeños se direccionan a las CPU menos ocupadas, lo que mejora el rendimiento del tráfico interactivo.
 
 #### Direccionamiento de proximidad
 {: #vc_trial_hcx_arch-prox-routing}

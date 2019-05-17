@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -87,9 +87,9 @@ La piedra angular de estas soluciones es la automatización. La automatización 
 
 IBM CloudBuilder es una instancia de servidor virtual (VSI) efímera de una máquina virtual de {{site.data.keyword.cloud_notm}} cuyo trabajo es crear una nueva instancia de VMware y realizar funciones de gestión del ciclo de vida. Se despliega cuando es necesaria una gestión de instancias de vCenter Server global y se destruye cuando finaliza el proceso.
 
-IBM CloudDriver se puede configurar para que se vuelva a comunicar con la infraestructura de gestión de
-{{site.data.keyword.vmwaresolutions_short}} en una red pública o, de manera opcional, en una red privada a través del almacén de objetos de
-{{site.data.keyword.cloud_notm}} como cola de mensajes. IBM CloudDriver es un componente desarrollado por IBM, no es accesible para el usuario, y tiene los atributos y funciones siguientes:
+IBM CloudDriver es una instancia de servidor virtual (VSI) de máquina virtual de {{site.data.keyword.cloud_notm}} efímera que se despliega según convenga para las operaciones de día 2 como la adición de hosts, clústeres o servicios de complemento a la instancia de VMware.
+
+CloudBuilder y CloudDriver se despliegan únicamente en la red privada que se conecta al plano de gestión de IBM a través de una cola de mensajes privada. Son componentes desarrollados por IBM, no son accesibles para el usuario y tienen los atributos y el funcionamiento siguientes:
 
 - Despliegue y configuración de la instancia de vCenter Server dentro de la cuenta de usuario.
 - Añadir y eliminar hosts de los clústeres de vCenter Server.

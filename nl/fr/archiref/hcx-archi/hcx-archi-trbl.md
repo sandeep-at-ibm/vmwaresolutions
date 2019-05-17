@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -17,7 +17,7 @@ subcollection: vmwaresolutions
 {: #hcx-archi-trbl-cloud-reg}
 
 * Les Services cloud hybrides ne réessaient pas si les données d'identification sont incorrectes. Les données d'identification doivent permettre d'authentifier avant que les Services cloud hybrides essaient de se connecter et de commencer l'enregistrement de cloud.
-* L'enregistrement du cloud peut échouer en cas de saisie incorrecte des données d'identification ou si les données d'identification de cloud des Services cloud hybrides VCF/VCS sont modifiées après que ces derniers se soient enregistrés auprès des Services cloud hybrides VCF/VCS, ce qui peut entraîner une non concordance.
+* L'enregistrement du cloud peut échouer en cas de saisie incorrecte des données d'identification ou si les données d'identification de cloud des services cloud hybrides VCS sont modifiées après que ces derniers se soient enregistrés auprès des services cloud hybrides VCS, ce qui peut entraîner une non concordance.
 * Pour mettre à jour les données d'identification dans le client Web, accédez à l'onglet de mise en route des Services cloud hybrides et, sous **Basic tasks**, choisissez **Register new Cloud**.
 
 ## Adresse MAC en double
@@ -37,7 +37,7 @@ L'adresse MAC de la machine virtuelle en cours de migration migrée peut être m
 ## Consommation de ressources hôte élevée
 {: #hcx-archi-trbl-high-host-resource}
 
-Dans de rare cas, si tous les dispositifs virtuels de service résident sur le même hôte, les machines virtuelles du service Services cloud peuvent épuiser les ressources de disque et l'UC d'un hôte.
+Dans de rare cas, si tous les dispositifs virtuels de service résident sur le même hôte, les machines virtuelles du service cloud hybride peuvent épuiser les ressources de disque et l'UC d'un hôte.
 
 Certains utilisateurs ont constaté ce problème lorsque tous les dispositifs virtuels ont été installés sur un hôte physique. Compte tenu de cette configuration, les performances se dégradent lorsque les éléments suivants se produisent de manière simultanée :
 * Le réseau présente une latence élevée et/ou une perte de paquet. La migration ou le transport de données est lent lorsque vous utilisez l'Internet public ou un réseau occupé.

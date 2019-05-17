@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-14"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -43,7 +43,7 @@ subcollection: vmwaresolutions
 
 此帐户的用户标识的格式为 `<service_name>-<truncated service_uuid>@test.local` 或 `<service_name>-<truncated service_uuid>@example-domain.local`。例如，Veeam on {{site.data.keyword.cloud_notm}} 服务用于连接到 vCenter Server 以执行安排的备份的用户标识为 `Veeam-<Veeam_uuid>@test.local`。
 
-`<service_name>` 和 `<service_uuid>` 一起被截断为 20 个字符。
+`<service_name>` 与 `<service_uuid>` 一起被截断为 20 个字符。
 {:note}
 
 ## vCenter Server 实例（V1.9 和更高版本）的 VMware 资源

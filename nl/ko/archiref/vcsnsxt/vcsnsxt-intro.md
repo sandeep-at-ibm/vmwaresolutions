@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-02-15"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -46,7 +46,7 @@ IBM은 프라이빗 클라우드 도입의 70%가 애플리케이션 환경을 �
 - SOR(System of Record)에 사용되는 x86 환경, 보안에 민감한 애플리케이션 및 조정된 워크로드는 가상화된 인프라 또는 프라이빗 클라우드에 배치됩니다.
 - SAP 또는 고성능 컴퓨팅과 같은 애플리케이션은 베어메탈 리소스를 사용합니다.
 - 퍼블릭 클라우드로 이동할 수 있는 보안에 민감하고 일부 조정된 워크로드는 데디케이티드 환경으로 이동됩니다.
-- 웹, 모바일, IoT, AI 또는 비디오 등의 SOE(System of Engagment)는 퍼블릭 클라우드로 이동합니다.
+- 웹, 모바일, IoT, AI 또는 동영상 등의 SOE(System of Engagment)는 퍼블릭 클라우드로 이동합니다.
 
 예를 들어, 공통적인 패턴은 데이터베이스와 함께 컨테이너로서 배치되는 프론트 엔드 SoE 애플리케이션과 프라이빗 클라우드에서 VM에 배치되는 레거시 미들웨어를 포함하는 것입니다.
 

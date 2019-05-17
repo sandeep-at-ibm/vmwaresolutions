@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-22"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -51,7 +51,7 @@ Tabela 1. Especificação do vCenter Server para o  {{site.data.keyword.icpfull_
 | Número de servidores | 3 | 4 |
 | CPU | 28 Núcleos de 2,2 GHz | 28 Núcleos de 2,2 GHz |
 | Memória | 384 GB | 384 GB |
-| Armazenamento | Gerenciamento de 2IOPS/GB de 2000 GB, Carga de trabalho de 4IOPS/GB de 2000 GB, {{site.data.keyword.icpfull_notm}} de 4IOPS/GB de 4000 GB |SSD x 2 com no mínimo 960 GB |
+| Armazenamento | Gerenciamento de 2IOPS/GB de 2000 GB, Carga de trabalho de 4IOPS/GB de 2000 GB, {{site.data.keyword.icpfull_notm}} de 4IOPS/GB de 4000 GB | SSD x 2 com no mínimo 960 GB |
 
 Além dos requisitos de hardware do {{site.data.keyword.cloud_notm}} Private, deve-se criar volumes persistentes no ambiente do {{site.data.keyword.icpfull_notm}} para armazenar dados do banco de dados e do log do Cloud Automation Manager (CAM). Embora o CAM suporte todos os tipos de volume persistente suportados pelo {{site.data.keyword.icpfull_notm}}, as duas configurações de armazenamento recomendadas para o CAM são NFS e GlusterFS.
 

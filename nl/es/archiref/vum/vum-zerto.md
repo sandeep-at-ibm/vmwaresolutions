@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,11 +18,11 @@ Si detecta que un host de vSphere ESXi no puede entrar en la modalidad de manten
 
 1. Inicie una sesión en la interfaz de usuario web de Zerto.
 2. Seleccione **Valores de sitio** en el menú desplegable.
-3. Seleccione el **separador de políticas** y asegúrese de que la opción **Permitir a Zerto pasar hosts a la modalidad de mantenimiento durante la corrección** esté seleccionada.
+3. Seleccione el separador **Políticas** y asegúrese de que **Permitir siempre a Zerto pasar hosts a la modalidad de mantenimiento durante la corrección** esté seleccionado.
 4. Cerrar la sesión de Zerto.
 
 ## Enlaces relacionados
 {: #vum-zerto-related}
 
 * [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demostraciones)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (demostraciones)

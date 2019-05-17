@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -82,7 +82,7 @@ Les environnements VMware vCenter Server, distribués en tant que solutions {{si
 * En raison du niveau de spécialisation requis pour maintenir une expertise technique optimale au niveau de l'équipe, il peut s'avérer nécessaire de faire appel à plus d'une équipe de support pour résoudre un problème logiciel spécifique. Cette situation est facilement gérée, car nos équipes de support sont toutes regroupées en réseau et fonctionnement comme une seule et même équipe pour résoudre tous les problèmes.
 * Pour déterminer la cause du problème, IBM peut avoir besoin d'accéder aux informations liées à la panne qui sont contenues sur votre système ou de recréer l'incident pour obtenir des informations supplémentaires.
 * Un ticket de demande de service créé par le client sert de confirmation attestant que le support IBM peut accéder à la couche de gestion VMware à des fins d'investigation, de débogage et d'analyse des besoins. En cas d'indisponibilité liée à des opérations de maintenance ou si des modifications doivent être apportées à l'environnement, le support IBM demande au client une confirmation écrite supplémentaire via des tickets dans le cadre du processus de gestion des modifications.
-* Pour plus d'informations sur les tickets de demande de service, voir [Software Support Handbook](https://www-304.ibm.com/support/customercare/sas/f/handbook/getsupport.html) et [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
+* Pour plus d'informations sur les tickets de demande de service, voir [Guide du support IBM](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923) et [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
 
 ## Responsabilités du client
 {: #vc_compl_info-client-responsibilities}
@@ -93,7 +93,7 @@ Les environnements VMware vCenter Server, distribués en tant que solutions {{si
 * Après le déploiement initial, l'automatisation de l'offre et le compte du client sont dissociés. Le client est autorisé et encouragé à modifier tous les mots de passe fournis par IBM dans le portail.
 * Les données d'identification et les droits d'accès à vCenter sont créés durant les déploiements initiaux et fournis au client. Dans le cadre des conditions requises pour notre offre, le support IBM doit conserver un accès complet à la couche de gestion pour fournir une gestion du cycle de vie et un support à nos clients.
 * Si des données d'identification, telles que des mots de passe, sont modifiées, le support IBM ne peut plus aider le client à récupérer des données d'identification perdues ou oubliées ni identifier et résoudre les incidents sur les environnements du client.
-* Pour plus d'informations sur l'importance de ce sujet et sur les questions connexes, voir [Remarques relatives à la modification de mots de passe pour des composants NSX](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_networkingonvcenterserver#considerations-when-changing-passwords-for-nsx-components) et [Remarques relatives à la modification des artefacts vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter_chg_impact).
+* Pour plus d'informations sur l'importance de ce sujet et sur les questions connexes, voir [Remarques relatives à la modification de mots de passe pour des composants NSX](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_networkingonvcenterserver#vc_networkingonvcenterserver-change-nsx-component-password-considerations) et [Remarques relatives à la modification des artefacts vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter_chg_impact).
 
 ### Communication et identification et résolution des problèmes
 {: #vc_compl_info-communication-troubleshooting}
@@ -121,7 +121,7 @@ Les environnements VMware vCenter Server, distribués en tant que solutions {{si
 * Ces Logiciels non IBM sont directement proposés sous licence par leurs fournisseurs. Le client accepte d'utiliser les Logiciels non IBM conformément aux dispositions du fournisseur. Ils sont fournis dans le cadre du contrat de licence IBM qui accompagne l'offre IBM au moment de l'achat.
 * IBM effectue des tests visant à garantir la compatibilité des produits tiers avec les Logiciels IBM et leur bon fonctionnement.
 * Le support des Logiciels IBM effectuera un diagnostic des problèmes du client en utilisant sa connaissance du fonctionnement de nos offres IBM avec les Logiciels tiers. Une fois qu'il est établi que le Logiciel IBM fonctionne correctement, si le problème persiste, IBM doit diriger le client vers le fournisseur tiers pour obtenir un diagnostic plus approfondi.
-* Pour plus d'informations sur les responsabilités du client concernant les logiciels ou le code tiers, voir [Software Support Handbook](https://www-304.ibm.com/support/customercare/sas/f/handbook/policies.html).
+* Pour plus d'informations sur les responsabilités du client concernant les logiciels ou le code tiers, voir [Guide du support IBM](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923).
 
 ## Consentement pour l'accès aux environnements du client
 {: #vc_compl_info-consent-to-access-client-environment}

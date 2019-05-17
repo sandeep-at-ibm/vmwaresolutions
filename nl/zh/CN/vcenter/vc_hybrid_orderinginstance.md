@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -33,8 +33,8 @@ subcollection: vmwaresolutions
 |名称|值格式|
   |:------------- |:------------- |
   |域名| `<root_domain>` |  
-  |vCenter Server 登录用户名| `<user_id>@<root_domain>`（Microsoft Active Directory 用户）或 `administrator@vsphere.local`|
-  | vCenter Server（具有嵌入式 PSC）FQDN| `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. 最大长度为 50 个字符。|
+  |vCenter Server 登录用户名|`<user_id>@<root_domain>`（Microsoft Active Directory 用户）或 `administrator@vsphere.local`|
+  | vCenter Server（具有嵌入式 PSC）FQDN|`vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`。最大长度为 50 个字符。|
   |Single Sign-On (SSO) 站点名称| `<subdomain_label>` |
   |标准 ESXi 服务器名称| `<host_prefix><n>.<subdomain_label>.<root_domain>`，其中 `<n>` 是 ESXi 服务器的序列。最大长度为 50 个字符。|
 
@@ -118,16 +118,14 @@ vCenter Server with Hybridity Bundle 实例订单中包含以下 VMware 许可�
 
 | CPU 模型选项   |RAM 选项|
 |:------------- |:------------- |
-|双 Intel Xeon E5-2620 V4 / 共 16 个核心，2.1 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
-|双 Intel Xeon E5-2650 V4 / 共 24 个核心，2.2 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
-|双 Intel Xeon E5-2690 V4 / 共 28 个核心，2.6 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
 |四核 Intel Xeon E7-4820 V4 / 共 40 个核心，2.0 GHz|128 GB、256 GB、512 GB、1 TB、2 TB、3 TB|
 |四核 Intel Xeon E7-4850 V4 / 共 64 个核心，2.1 GHz|128 GB、256 GB、512 GB、1 TB、2 TB、3 TB|
 
 ### 裸机服务器的数量
 {: #vc_hybrid_orderinginstance-bare-metal-number}
 
-缺省情况下已选择 4 个 ESXi 服务器，对此无法进行更改。
+* 订购的所有服务器的配置都相同。
+* 可以订购 4 到 20 个服务器。
 
 ## 存储设置
 {: #vc_hybrid_orderinginstance-storage-settings}
@@ -135,10 +133,10 @@ vCenter Server with Hybridity Bundle 实例订单中包含以下 VMware 许可�
 vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请指定以下 vSAN 选项：
 * **vSAN 容量磁盘的磁盘类型和大小**：选择与所需容量磁盘相应的选项。
 * **vSAN 容量磁盘数**：指定要添加的容量磁盘数。
-* 如果要添加的容量磁盘数超过 8 个的限制，请选中**高性能 Intel Optane** 框。此选项用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘；此选项对于需要更短等待时间和更高 IOPS 吞吐量的工作负载而言非常有用。
+* 如果要添加的容量磁盘数超过 10 个的限制，请选中**高性能 Intel Optane** 框。此选项用于提供两个额外的容量磁盘托架，总共可容纳 12 个容量磁盘；此选项对于需要更短等待时间和更高 IOPS 吞吐量的工作负载而言非常有用。
 
-  **高性能 Intel Optane** 选项仅可用于 Skylake CPU 型号双 Intel Xeon Gold 5120 和双 Intel Xeon Gold 6140。
-  {:note}
+  **高性能 Intel Optane** 选项仅可用于 Skylake CPU 型号。
+{:note}
 
 * 查看 **vSAN 高速缓存磁盘的磁盘类型**和 **vSAN 高速缓存磁盘数**值。这些值依赖于是否选中了**高性能 Intel Optane** 框。
 
@@ -180,12 +178,14 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
 ### 公用或专用网络
 {: #vc_hybrid_orderinginstance-public-private-network}
 
-网络接口卡 (NIC) 启用设置基于您选择的是**公用和专用网络**还是**仅专用网络**。以下附加组件服务需要公共 NIC，并且这些服务在您选择专用选项时不可用：
+网络接口卡 (NIC) 启用设置基于您选择的是**公用和专用网络**还是**仅专用网络**。
 
-* F5 on {{site.data.keyword.cloud_notm}}
-* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
-* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
-* Zerto on {{site.data.keyword.cloud_notm}}
+如果选择**仅专用网络**选项：
+* 未供应 VMware NSX Edge 服务网关 (ESG)（包括管理服务 ESG 和客户管理的 ESG）。
+* 以下附加组件服务（需要公共 NIC）不可用：
+  * F5 on {{site.data.keyword.cloud_notm}}
+  * Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
+  * Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
 
 ### 订购新的 VLAN
 {: #vc_hybrid_orderinginstance-new-vlans}
@@ -215,14 +215,14 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
 * **一个用于 Active Directory/DNS 的公共 Windows VSI**：一个用于 Microsoft Active Directory (AD) 的 Microsoft Windows Server VSI，充当在其中注册主机和 VM 的实例的 DNS，已部署并且可进行查找。
 * **管理集群上两个高可用性专用 Windows Server VM**：部署了两个 Microsoft Windows 虚拟机，以帮助增强安全性和稳健性。
 
-如果将实例配置为使用两个 Microsoft Windows VM，那么必须提供两个 Microsoft Windows Server 2012 R2 许可证。使用 Microsoft Windows Server 2012 R2 Standard Edition 许可证和/或 Microsoft Windows Server 2012 R2 Datacenter Edition 许可证。
+如果将实例配置为使用两个 Microsoft Windows VM，那么必须提供两个 Microsoft Windows Server 2016 许可证。使用 Microsoft Windows Server 2016 Standard Edition 许可证和/或 Microsoft Windows Server 2016 Datacenter Edition 许可证。
 {:important}
 
 每个许可证只能分配给一个物理服务器，并且最多包含两个物理处理器。一个 Standard Edition 许可证支持每个双处理器服务器运行两个虚拟化的 Microsoft Windows VM。因此，需要两个许可证，因为两个 Microsoft Windows VM 会部署在两个不同的主机中。
 
 您有 30 天的时间来激活 VM。
 
-有关订购 Windows 许可的更多信息，请参阅 [Windows Server 2012 R2 文档](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2)。
+有关订购 Windows Server 2016 许可证的更多信息，请参阅 [Windows Server 2016 入门](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:new_window}。
 
 ## 服务设置
 {: #vc_hybrid_orderinginstance-addon-services}
@@ -237,7 +237,7 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
 ## 订购 vCenter Server with Hybridity Bundle 实例的过程
 {: #vc_hybrid_orderinginstance-procedure}
 
-1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格上的 **VMware**，然后单击**虚拟数据中心**部分中的 **vCenter Server**。
+1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格中的 **VMware**，然后单击**虚拟数据中心**部分中的 **vCenter Server**。
 2. 在 **VMware vCenter Server on IBM Cloud** 页面上，单击 **vCenter Server with Hybridity Bundle** 卡，然后单击**创建**。
 3. 在 **vCenter Server** 页面上，输入实例名称。
 5. 选择 vSphere 版本。
@@ -251,12 +251,9 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
 7. 完成裸机服务器设置。
   1. 选择要托管实例的 {{site.data.keyword.CloudDataCent_notm}}。
   2. 选择 **Skylake** 或 **Broadwell** CPU 型号以及 **RAM** 量。
-
-  缺省情况下，**裸机服务器数**设置为 4，且无法更改。
-{:note}
 8. 填写存储配置。指定容量和高速缓存磁盘的磁盘类型以及磁盘数。如果需要更多存储器，请选中**高性能 Intel Optane** 框。
 9. 完成网络接口配置。
-  1. 输入主机名前缀、子域标签和根域名。
+  1. 输入要供应的实例的主机名前缀、子域标签和根域名。
   2. 选择网络设置**公用和专用网络**或**仅专用网络**。
   3. 选择 VLAN 配置。
      *  如果要订购新的公用和专用 VLAN，请单击**订购新的 VLAN**。

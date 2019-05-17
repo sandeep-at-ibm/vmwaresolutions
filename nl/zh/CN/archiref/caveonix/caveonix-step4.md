@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -64,7 +64,7 @@ subcollection: vmwaresolutions
 |---|---|
 |环境|环境名称设置为“Initial”|
 |环境|分数设置为 5|
-|资产存储库|配置了两个资产存储库：vCenter 和 NSX Manager。主机 URL 设置为 https://*vCenter fqdn* 和 https://*NSX Manager fqdn*|
+|资产存储库|配置了两个资产存储库：vCenter 和 NSX Manager。主机 URL 设置为 `https://vCenter_fqdn` 和 `https://*NSX Manager_fqdn`|
 |资产存储库|配置了两个资产存储库：vCenter 和 NSX Manager，两者使用相同的用户名。用户名设置为 vCenter 管理员用户名|
 |资产存储库|配置了两个资产存储库：vCenter 和 NSX Manager，两者使用相同的密码。密码设置为 vCenter 管理员密码
 |资产存储库|配置了两个资产存储库：vCenter 和 NSX Manager，两者使用相同的密码。一个存储库的类型设置为 vCenter，另一个设置为 NSX

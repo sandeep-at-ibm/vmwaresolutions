@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-04-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -47,7 +47,7 @@ Un minimum de 10 machines virtuelles est requis pour la gestion des licences.
 ### Taille de stockage
 {: #veeam_ordering-config-storage-size}
 
-Capacité répondant à vos besoins en matière de stockage. Pour toute question concernant l'estimation de la taille de l'espace de stockage, voir [Estimation de la capacité de référentiel](https://bp.veeam.expert/resource_planning/repository_planning_sizing.html).
+Capacité répondant à vos besoins en matière de stockage. Pour toute question concernant l'estimation de la taille de l'espace de stockage, voir [Estimation de la capacité de référentiel](https://bp.veeam.expert/repository_server/repository_planning/repository_planning_sizing).
 
 ### Performances de stockage
 {: #veeam_ordering-config-storage-performance}

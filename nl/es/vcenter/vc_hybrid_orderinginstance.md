@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -118,16 +118,14 @@ Tabla 3. Opciones para {{site.data.keyword.baremetal_short}} Broadwell
 
 | Opciones de modelo de CPU        | Opciones de RAM       |
 |:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4 / 16 núcleos en total, 2,1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2650 v4 / 24 núcleos en total, 2,2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2690 v4 / 28 núcleos en total, 2,6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Quad Intel Xeon E7-4820 v4 / 40 núcleos en total, 2,0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 núcleos en total, 2,1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 ### Número de servidores nativos
 {: #vc_hybrid_orderinginstance-bare-metal-number}
 
-De forma predeterminada, se seleccionan cuatro servidores ESXi, y esto no se puede cambiar.
+* Todos los servidores que solicite tienen la misma configuración.
+* Puede solicitar entre 4 y 20 servidores.
 
 ## Valores de almacenamiento
 {: #vc_hybrid_orderinginstance-storage-settings}
@@ -135,9 +133,9 @@ De forma predeterminada, se seleccionan cuatro servidores ESXi, y esto no se pue
 Se incluye VMware vSAN 6.6 en el pedido de la instancia de vCenter Server con el paquete híbrido (Hybridity). Especifique las siguientes opciones de vSAN:
 * **Tipo y tamaño de disco para discos de capacidad vSAN**: Seleccione una opción para los discos de capacidad que necesite.
 * **Número de discos de capacidad de vSAN**: Especifique el número de discos de capacidad que desea añadir.
-* Si desea añadir discos de capacidad por encima del límite de ocho, marque el recuadro **Intel Optane de alto rendimiento**. Esta opción proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad y es útil para cargas de trabajo que requieren menos latencia y un rendimiento de IOPS más alto.
+* Si desea añadir discos de capacidad por encima del límite de 10, marque el recuadro **Intel Optane de alto rendimiento**. Esta opción proporciona dos bahías de disco de capacidad adicional para un total de 12 discos de capacidad y es útil para cargas de trabajo que requieren menos latencia y un rendimiento de IOPS más alto.
 
-  La opción **Intel Optane de alto rendimiento** solo está disponible para los modelos de CPU de Skylake Dual Intel Xeon Gold 5120 y Dual Intel Xeon Gold 6140.
+  La opción **Alto rendimiento con Intel Optane** está disponible únicamente para los modelos de CPU Skylake.
   {:note}
 
 * Revise los valores **Tipo de disco para discos de memoria caché vSAN** y **Número de discos de memoria caché de vSAN**. Estos valores dependen de si ha marcado el recuadro **Intel Optane de alto rendimiento**.
@@ -180,12 +178,14 @@ La longitud máxima del FQDN (nombre de dominio completo) para hosts y máquinas
 ### Red pública o privada
 {: #vc_hybrid_orderinginstance-public-private-network}
 
-Los valores de habilitación de la tarjeta de interfaz de red (NIC) se basan en la selección de **Red pública y privada** o de **Solo red privada**. Los siguientes servicios de complemento necesitan NIC públicos y no están disponibles si selecciona la opción privada:
+Los valores de habilitación de la tarjeta de interfaz de red (NIC) se basan en la selección de **Red pública y privada** o de **Solo red privada**.
 
-* F5 on {{site.data.keyword.cloud_notm}}
-* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
-* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
-* Zerto on {{site.data.keyword.cloud_notm}}
+Si selecciona la opción **Solo red privada**:
+* No se suministrarán VMware NSX Edge Services Gateways (ESG) (ni ESG de servicios de gestión ni ESG gestionadas por el cliente).
+* Los servicios de complemento siguientes, que requieren NIC públicas, no están disponibles:
+  * F5 on {{site.data.keyword.cloud_notm}}
+  * Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
+  * Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
 
 ### Realizar pedido de nuevas VLAN
 {: #vc_hybrid_orderinginstance-new-vlans}
@@ -215,14 +215,14 @@ Seleccione la configuración de DNS (sistema de nombres de dominio) para la inst
 * **Una sola VSI pública de Windows para Active Directory/DNS**: Se despliega y se puede consultar una sola VSI de Microsoft Windows Server para Microsoft Active Directory (AD), que funciona como DNS para la instancia en la que se han registrado los hosts y VM.
 * **Dos VM dedicadas y altamente disponibles de Windows Server en el clúster de gestión**: Se despliegan dos VM Microsoft Windows, que ayudan a mejorar la seguridad y la solidez.
 
-Debe proporcionar dos licencias de Microsoft Windows Server 2012 R2 si configura la instancia de modo que utilice las dos VM Microsoft Windows. Utilice la licencia de Microsoft Windows Server 2012 R2 Standard Edition, o la licencia de Microsoft Windows Server 2012 R2 Datacenter Edition, o ambas.
+Debe proporcionar dos licencias de Microsoft Windows Server 2016 si configura la instancia de modo que utilice las dos máquinas virtuales Microsoft Windows. Utilice la licencia de Microsoft Windows Server 2016 Standard Edition, o la licencia de Microsoft Windows Server 2016 Datacenter Edition, o ambas.
 {:important}
 
 Cada licencia solo se puede asignar a un solo servidor físico y cubre un máximo de dos procesadores físicos. Una licencia de Standard Edition puede ejecutar dos VM Microsoft Windows virtualizadas por servidor de 2 procesadores. Por lo tanto, se necesitan dos licencias, ya que se despliegan dos VM Microsoft Windows en dos hosts distintos.
 
 Tiene 30 días para activar las VM.
 
-Para obtener más información sobre cómo solicitar licencias de Windows, consulte la [documentación de Windows Server 2012 R2](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2).
+Para obtener más información sobre cómo solicitar licencias de Windows Server 2016, consulte [Iniciación a Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:new_window}.
 
 ## Valores de servicios
 {: #vc_hybrid_orderinginstance-addon-services}
@@ -251,12 +251,9 @@ En función de la configuración seleccionada para la instancia y los servicios 
 7. Complete los valores del servidor nativo.
   1. Seleccione el {{site.data.keyword.CloudDataCent_notm}} que va a alojar la instancia.
   2. Seleccione el modelo de CPU y la cantidad de **RAM** de **Skylake** o **Broadwell**.
-
-  El **Número de servidores nativos** se establece en cuatro de forma predeterminada y no se puede cambiar.
-  {:note}
 8. Complete la configuración del almacenamiento. Especifique los tipos de disco para la capacidad y los discos de memoria caché y el número de discos. Si desea más almacenamiento, marque el recuadro **Intel Optane de alto rendimiento**.
 9. Complete la configuración de interfaz de red.
-  1. Especifique el prefijo de nombre de host, la etiqueta de subdominio y el nombre de dominio raíz.
+  1. Especifique el prefijo de nombre de host para la instancia que se va a suministrar, la etiqueta de subdominio y el nombre de dominio raíz.
   2. Seleccione el valor de red de **Red pública y privada** o **Solo red privada**.
   3. Seleccione la configuración de VLAN.
      *  Si desea solicitar nuevas VLAN públicas y privadas, pulse **Realizar pedido de nuevas VLAN**.

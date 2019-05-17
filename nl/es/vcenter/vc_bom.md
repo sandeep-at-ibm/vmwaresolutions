@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-20"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -29,7 +29,7 @@ Tabla 1. Lista de materiales para las VLAN de instancias de vCenter Server
 
 | VLAN       | Tipo       | Detalles       |
 |:---------- |:---------- |:------------- |
-| VLAN1     | Pública, Primaria | Asignada a servidores ESXi físicos para acceso público de red. No se utiliza tras el despliegue inicial. Disponible para el acceso a internet. |
+| VLAN1     | Pública, Primaria | Asignada a servidores ESXi físicos para acceso público de red. No se utiliza tras el despliegue inicial. Disponible para el acceso a Internet. |
 | VLAN2     | Privada A, Primaria | Asignado por {{site.data.keyword.cloud}} a servidores físicos de ESXi. La utiliza la interfaz de gestión para el tráfico de gestión de VMware vSphere.<br><br>Asignada a VM (máquinas virtuales) que funcionan como componentes de gestión.<br><br>Asignada a VMware NSX VTEP (punto final de túnel VXLAN) |
 | VLAN3     | Privada B, Portátil | Asignada a VMware vSAN, si se utiliza.<br><br>Asignada a VMware NFS, si se utiliza.<br><br>Asignada a VMware vSphere vMotion.<br><br>Para NSX-T, asignada a VMware NSX VTEP (punto final de túnel de VXLAN).|
 
@@ -42,15 +42,15 @@ Tabla 2. Lista de materiales para los componentes de software de instancias de v
 
 | Fabricante  | Componente                      | Versión    |
 |:------------- |:------------------------------ |:------------- |
-| VMware       | vSphere ESXi                    | 6.7 Actualización 1 (build 6.7.0-11675023) o <br/>6.5 Actualización 2 (build 6.5.0-11925212) |
+| VMware       | vSphere ESXi                    | 6.7 Actualización 1 (compilación 6.7.0-13004448) o <br/>6.5 Actualización 2 (compilación 6.5.0-13004031) |
 | VMware       | vSphere 6.7                     | vSwitch distribuido 6.6.0 |
 | VMware       | vSphere 6.5                     | vSwitch distribuido 6.5.0 |
-| VMware       | vCenter Server Appliance        | 6.7 Actualización 1 (build 6.7.0-10244745) o <br/>6.5 Actualización 2d (build 6.5.0-10964411) |
-| VMware       | Platform Services Controller    | 6.7 Actualización 1 (build 6.7.0-10244745) o <br/>6.5 Actualización 2d (build 6.5.0-10964411) |
+| VMware       | vCenter Server Appliance        | 6.7 Actualización 1b (compilación 6.7.0-11727113) o <br/>6.5 Actualización 2d (compilación 6.5.0-10964411) |
+| VMware       | Platform Services Controller    | 6.7 Actualización 1b (compilación 6.7.0-11727113) o <br/>6.5 Actualización 2d (compilación 6.5.0-10964411) |
 | VMware       | vSAN                            | 6.7 Actualización 1 o <br/>6.6.1       |
 | VMware       | NSX for vSphere                 | 6.4.4 (build 11197766)    |
 | VMware       | NSX-T for vSphere               | 2.4                       |
-| Microsoft    | Windows Server Standard Edition | 2012R2       |
+| Microsoft    | Windows Server Standard Edition | 2016       |
 
 VMware vSAN es un componente opcional.
 {:note}
@@ -132,7 +132,7 @@ Para instancias desplegadas en V2.0 o anterior, se recomienda que actualice uste
 
 Para actualizar el valor de MTU del conmutador público, siga estos pasos en el cliente web de VMware vSphere:
 1. Pulse con el botón derecho del ratón en el vDS y pulse **Editar valores**.
-2. En el separador **Propiedades**, seleccione la opción **Avanzadas**.
+2. En el separador **Propiedades**, seleccione la opción **Avanzado**.
 3. Asegúrese de que el valor de **MTU máxima** está establecido en 1500.
 
    Cuando se cambia el tamaño de MTU en un vDS, los enlaces ascendentes adjuntos (NIC físicos) se detienen y se vuelven a iniciar. Como resultado se produce una breve parada para las máquinas virtuales que están utilizando el enlace ascendente. Por lo tanto se recomienda planear la actualización del valor de la MTU durante una parada planificada.

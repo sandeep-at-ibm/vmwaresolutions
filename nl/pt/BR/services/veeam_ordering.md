@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-04-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -47,7 +47,7 @@ Pelo menos 10 MVs são necessárias para gerenciamento de licença.
 ### Tamanho do Armazenamento
 {: #veeam_ordering-config-storage-size}
 
-A capacidade que atenda às suas necessidades de armazenamento. Para obter considerações sobre estimativa do tamanho do armazenamento, veja [Estimando a capacidade do repositório](https://bp.veeam.expert/resource_planning/repository_planning_sizing.html).
+A capacidade que atenda às suas necessidades de armazenamento. Para obter considerações sobre estimativa do tamanho do armazenamento, veja [Estimando a capacidade do repositório](https://bp.veeam.expert/repository_server/repository_planning/repository_planning_sizing).
 
 ### Desempenho de Armazenamento
 {: #veeam_ordering-config-storage-performance}

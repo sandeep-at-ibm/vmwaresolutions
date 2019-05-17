@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -19,7 +19,7 @@ Lo scopo di questo documento è quello di fornirti, in qualità di amministrator
 VUM consente la gestione centralizzata e automatizzata di patch e versioni per VMware vSphere e ti consente di completare le seguenti attività nel tuo ambiente VMware vCenter Server on {{site.data.keyword.cloud_notm}}:
 * Aggiornare e applicare patch agli host vSphere ESXi.
 * Installare e aggiornare software di terze parti sugli host.
-* Aggiornare l'hardware delle VM (Virtual Machine), i VMware Tools e le applicazioni virtuali.
+* Aggiornare l'hardware delle VM (Virtual Machine), i VMware Tools e i dispositivi virtuali.
 
 Questo documento descrive anche i processi per conservare i seguenti componenti della tua istanza vCenter Server:
 * vCenter Server Appliance
@@ -60,7 +60,7 @@ Se hai distribuito un vCenter Server utilizzando vSAN, vedi prima [Aggiornamento
 
 Se vuoi aggiornare l'automazione della gestione dell'infrastruttura {{site.data.keyword.cloud_notm}}, utilizza la console {{site.data.keyword.vmwaresolutions_short}}.
 
-La [Console {{site.data.keyword.vmwaresolutions_short}}](https://console.cloud.ibm.com/infrastructure/vmware-solutions/console) ti consente di effettuare le seguenti azioni:
+La [console {{site.data.keyword.vmwaresolutions_short}}](https://cloud.ibm.com/infrastructure/vmware-solutions/console) ti consente di effettuare le seguenti azioni: 
 *	Aggiornare le licenze, ad esempio aggiornare NSX Base a un'altra versione
 *	Avviare gli aggiornamenti alla piattaforma vCenter Server, ad esempio, passare alla versione 2.5
 *	Visualizzare lo stato degli aggiornamenti
@@ -72,4 +72,4 @@ Questa funzione consente l'aggiornamento automatizzato solo per i componenti di 
 {: #vum-intro-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (dimostrazioni)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (dimostrazioni)

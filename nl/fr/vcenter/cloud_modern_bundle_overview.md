@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-24"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,18 +18,18 @@ subcollection: vmwaresolutions
 # Présentation de la version d'essai à noeud unique pour la migration et la modernisation des applications
 {: #cloud_modern_bundle_overview}
 
-La version d'essai à noeud unique pour la migration et la modernisation des applications permet de tester l'utilisation d'IBM Cloud pour migrer les charges de travail VMware vers IBM Cloud, puis de moderniser ces simples charges de travail à l'aide de conteneurs.
+La version d'essai à noeud unique pour la migration et la modernisation des applications permet de tester l'utilisation d'{{site.data.keyword.cloud_notm}} pour migrer les charges de travail VMware vers {{site.data.keyword.cloud}}, puis de moderniser ces simples charges de travail à l'aide de conteneurs.
 
-La version à noeud unique est une version d'essai d'IBM Cloud Private Hosted sur VMware vCenter Server on IBM Cloud qui fournit la plateforme de gestion Kubernetes pour les conteneurs et la plateforme VMware à service exclusif qui peut être gérée à l'aide des mêmes outils connus que dans les environnements locaux. Vous pouvez ainsi bénéficier de la vitesse et de l'échelle du cloud tout en conservant le même niveau de contrôle et la visibilité disponibles en local.
+La version à noeud unique est une version d'essai d'{{site.data.keyword.cloud_notm}} Private Hosted sur VMware vCenter Server on {{site.data.keyword.cloud_notm}} qui fournit la plateforme de gestion Kubernetes pour les conteneurs et la plateforme VMware à service exclusif qui peut être gérée à l'aide des mêmes outils que dans les environnements locaux. Vous pouvez ainsi bénéficier de la vitesse et de l'échelle du cloud tout en conservant le même niveau de contrôle et de visibilité que dans un environnement local.
 
-La version d'essai permet de migrer jusqu'à 20 charges de travail simples de développement ou de test à l'aide de vCenter Server on IBM Cloud with Hybridity Bundle et de conteneuriser ces charges de travail avec la plateforme de développement d'applications IBM Cloud Private Hosted basée sur Kubernetes. L'automatisation installe et configure VMware HCX dans IBM Cloud, fournit une clé d'activation HCX sur site, puis installe et configure une petite topologie de développement/test d'IBM Cloud Private Hosted en quelques heures seulement.
+La version d'essai permet de migrer jusqu'à 20 charges de travail simples de développement ou de test à l'aide de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle et de conteneuriser ces charges de travail avec la plateforme de développement d'applications {{site.data.keyword.cloud_notm}} Private Hosted basée sur Kubernetes. L'automatisation installe et configure VMware HCX dans {{site.data.keyword.cloud_notm}}, fournit une clé d'activation HCX sur site, puis installe et configure une petite topologie de développement/test d'{{site.data.keyword.cloud_notm}} Private Hosted en quelques heures seulement.
 
 La version d'essai à noeud unique pour la migration et la modernisation des applications est destinée à une démonstration de faisabilité uniquement. N'exécutez pas de charges de travail de production dans cet environnement. Les fonctions de gestion, telles que l'ajout et le retrait d'hôtes et de clusters, la commande de services complémentaires et l'application de mises à jour ne sont pas prises en charge.
 {:important}
 
-Pour tirer le meilleur parti d'une instance Version d'essai à noeud unique pour la migration et la modernisation des applications, vous pouvez utiliser [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf) dans [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html), pour vous aider à migrer vos charges de travail VMware vers IBM Cloud. En outre, [IBM Cloud Garage Services](https://www.ibm.com/cloud/garage/) peut vous aider à accélérer la modernisation des applications grâce aux meilleures pratiques les plus récentes pour le cloud natif.
+Pour tirer le meilleur parti de l'instance Version d'essai à noeud unique pour la migration et la modernisation des applications, vous pouvez utiliser [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf) dans [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html), pour vous aider à migrer vos charges de travail VMware vers {{site.data.keyword.cloud_notm}}. En outre, [{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/) peut vous aider à accélérer la modernisation des applications grâce aux dernières recommandations pour le cloud natif.
 
-Cette version d'essai peut être utilisée pendant 90 jours au maximum. Une fois qu'elle a expiré, vous pouvez supprimer cet environnement, puis mettre à disposition un nouvel environnement répondant à vos besoins en matière de capacité.
+Cette version d'essai peut être utilisée pendant un maximum de 90 jours. Une fois qu'elle a expiré, vous pouvez supprimer cet environnement, puis mettre à disposition un nouvel environnement répondant à vos besoins en matière de capacité.
 {:note}
 
 ## Spécifications techniques relatives aux instances Version d'essai à noeud unique pour la migration et la modernisation des applications
@@ -49,7 +49,7 @@ Processeur Dual Intel Xeon Gold 5120/28 coeurs au total, 2,2 GHz avec 384 GB de 
 {: #cloud_modern_bundle_overview-cpu}
 
 * Surallocation d'UC 16:1 pour la gestion vCenter Server, HCX et 20 MV de charge de travail client
-* Surallocation d'UC 11:1 pour IBM Cloud Private
+* Surallocation d'UC 11:1 pour {{site.data.keyword.cloud_notm}} Private
 
 #### Surallocations de mémoire RAM
 {: #cloud_modern_bundle_overview-ram}
@@ -62,7 +62,7 @@ Processeur Dual Intel Xeon Gold 5120/28 coeurs au total, 2,2 GHz avec 384 GB de 
 
 * 2 To pour la gestion
 * 1 To pour la charge de travail client (pour 20 MV client)
-* 4 To pour IBM Cloud Private Hosted
+* 4 To pour {{site.data.keyword.cloud_notm}} Private Hosted
 
 ### Spécifications de mise en réseau relatives aux instances Version d'essai à noeud unique pour la migration et la modernisation des applications
 {: #cloud_modern_bundle_overview-networking-specs}
@@ -94,7 +94,8 @@ Les licences suivantes sont incluses avec votre commande d'instance Version d'es
 * VMware vSphere Enterprise Plus 6.7u1
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Advanced Edition 6.4
-* IBM Cloud Private Hosted V3.1
+* {{site.data.keyword.cloud_notm}} Private Hosted 3.1.2
+* {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2
 
 Les instances Version d'essai à noeud unique pour la migration et la modernisation des applications ne prennent pas en charge le mode BYOL (Bring Your Own License).
 {:note}
@@ -123,7 +124,7 @@ Les instances HCX locales incluent uniquement l'octroi de licence et l'activatio
 
 Des dispositifs HCX supplémentaires sont déployés durant la configuration s'il y a lieu pour la connectivité L2, l'optimisation WAN et les connexions de passerelle.
 
-### Spécifications relatives à la mise en réseau du service HCX on IBM Cloud
+### Spécifications de réseau pour HCX on IBM Cloud
 {: #cloud_modern_bundle_overview-hcx-networking-specs}
 
 * Un sous-réseau portable public avec 16 adresses IP
@@ -133,12 +134,17 @@ Des dispositifs HCX supplémentaires sont déployés durant la configuration s'i
 ## Spécifications techniques relatives à IBM Cloud Private Hosted
 {: #cloud_modern_bundle_overview-icp-tech-specs}
 
-IBM Cloud Private Hosted V3.1 est installé à l'aide de la topologie Développement/Test sur toutes les instances Version d'essai à noeud unique pour la migration et la modernisation des applications. Pour plus d'informations sur IBM Cloud Private Hosted, voir [Présentation d'IBM Cloud Private Hosted](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_overview).
+{{site.data.keyword.cloud_notm}} Private Hosted 3.1.2 est installé à l'aide de la topologie Développement/Test sur toutes les instances Version d'essai à noeud unique pour la migration et la modernisation des applications. Pour plus d'informations sur {{site.data.keyword.cloud_notm}} Private Hosted, voir [Présentation de {{site.data.keyword.cloud_notm}} Private Hosted](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_overview).
+
+## Spécifications techniques pour IBM Cloud Automation Manager
+{: #cloud_modern_bundle_overview-cam-tech-specs}
+
+{{site.data.keyword.cloud_notm}} Automation Manager 3.1.2 est installé à l'aide de la topologie Développement/Test sur toutes les instances Version d'essai à noeud unique pour la migration et la modernisation des applications. Pour plus d'informations sur {{site.data.keyword.cloud_notm}} Automation Manager, voir [Documentation d'{{site.data.keyword.cloud_notm}} Automation Manager](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: new_window}.
 
 ## Liens connexes
 {: #cloud_modern_bundle_overview-related}
 
-* [Guide vCenter Server et IBM Cloud Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [Ouvrir un ticket au sujet d'IBM Cloud Private](https://www.ibm.com/mysupport/s/?language=fr_FR)
-* [Documentation VMware Hybrid Cloud Extension](https://hcx.vmware.com/#/vm-documentation)
-* [Obtaining the HCX OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html)
+* [Guide vCenter Server et {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
+* [Ouvrir un ticket au sujet d'{{site.data.keyword.cloud_notm}} Private](https://www.ibm.com/mysupport/s/?language=en_US)
+* [Ressources VMware HCX](https://hcx.vmware.com/#/docs)
+* [Obtaining the VMware HCX OVA](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html?hWord=N4IghgNiBcIPICMAuYCWA7DBzABEgFgKY4ASAwgBo5wBqAgiAL5A)

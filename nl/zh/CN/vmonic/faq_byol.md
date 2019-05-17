@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -25,7 +25,7 @@ subcollection: vmwaresolutions
 {: #faq_byol-def}
 {: faq}
 
-自带许可证 (BYOL) 是向 V1.8 和更高版本中 VMware Cloud Foundation 实例以及 V2.0 和更高版本中 VMware vCenter Server 和 VMware vSphere 集群提供的一项功能。利用 BYOL，您可以将自己的 VMware 许可证用于以下一个或多个 VMware 软件组件：
+自带许可证 (BYOL) 是向 V2.0 和更高版本中 VMware vCenter Server 和 VMware vSphere 集群提供的一项功能。利用 BYOL，您可以将自己的 VMware 许可证用于以下一个或多个 VMware 软件组件：
 * VMware vCenter Server
 * VMware vSphere
 * VMware NSX
@@ -63,18 +63,6 @@ BYOL 功能不可用于业务合作伙伴用户。
   |vSAN|Advanced 或 Enterprise|8 个 CPU|
   |NSX|Standard、Advanced 或 Enterprise|8 个 CPU|
 
-### Cloud Foundation 实例的 BYOL 需求
-{: #faq_byol-cf-reqs}
-
-表 2. Cloud Foundation 实例的许可证版本和 CPU 最低需求
-
-  |VMware 组件|需要的许可证版本|需要的最少 CPU 数
-  |:-------------  |:-------------  |:-------|
-  |vCenter Server|Standard|不适用|
-  |vSphere|Enterprise Plus|8 个 CPU|
-  |vSAN|Advanced 或 Enterprise|8 个 CPU|
-  |NSX| Enterprise |8 个 CPU|
-
 ## 如果我提供的许可证密钥不正确，会发生什么情况？
 {: #faq_byol-incorrect-license}
 {: faq}
@@ -85,13 +73,7 @@ BYOL 功能不可用于业务合作伙伴用户。
 {: #faq_byol-license-key}
 {: faq}
 
-可以。对于每个 VMware 组件，需要每个 CPU 一个许可证。目前，所有 vCenter Server 和 Cloud Foundation 服务器都有两个 CPU。因此，每个服务器都需要两个许可证。建议您提供可以支持基本实例以及未来要添加到该实例的任何扩展节点的许可证密钥。
-
-## 使用 BYOL 功能时，可以提供 SDDC Manager 许可证吗？
-{: #faq_byol-sddc}
-{: faq}
-
-不行。我们与 VMware 的协议要求我们必须接受客户的实际许可证密钥。虽然 Cloud Foundation 部署包含 SDDC Manager 许可证，但我们不接受 SDDC Manager 许可证密钥文件，也不会针对 BYOL 验证这些文件。因此，IBM 会对所有实例收取 SDDC Manager 许可证费用。SDDC Manager 许可证的费用在 Cloud Foundation 实例的总体许可证费用中所占比例不大。
+可以。对于每个 VMware 组件，需要每个 CPU 一个许可证。目前，所有 vCenter Server 服务器都有两个 CPU。因此，每个服务器都需要两个许可证。建议您提供可以支持基本实例以及未来要添加到该实例的任何扩展节点的许可证密钥。
 
 ## 可以将 BYOL 功能用于某些 VMware 组件，而为其他组件购买每月许可证吗？
 {: #faq_byol-mthly-license}
@@ -128,7 +110,7 @@ BYOL 功能不可用于业务合作伙伴用户。
 {: #faq_byol-add-esxi}
 {: faq}
 
-会的。向已部署的实例添加更多 ESXi 服务器时，会自动根据指定的 ESXi 服务器数来检查 BYOL 许可证的容量。如果容量不足，那么不会添加 ESXi 服务器，并且您将收到控制台通知。
+可以。向已部署的实例添加更多 ESXi 服务器时，会自动根据指定的 ESXi 服务器数来检查 BYOL 许可证的容量。如果容量不足，那么不会添加 ESXi 服务器，并且您将收到控制台通知。
 
 ## 如何确定在使用 BYOL 的集群上有多少许可容量可用？
 {: #faq_byol-capacity}

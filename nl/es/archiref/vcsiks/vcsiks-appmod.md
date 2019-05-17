@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-22"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -26,7 +26,7 @@ Esta arquitectura híbrida permite a Acme Skateboards:
 
 La arquitectura de referencia comprende los siguientes componentes principales:
 - **Virtualización local**: la virtualización local es un clúster VMware que actualmente aloja las VM de Acme Skateboards. Estas máquinas virtuales alojan actualmente las aplicaciones que se van a modernizar. Este clúster debe cumplir los requisitos previos de la
-[Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](https://test.cloud.ibm.com/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro) para que pueda ejecutar HCX.
+[Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro) para que pueda ejecutar HCX.
 
 HCX amplía las redes locales a {{site.data.keyword.cloud_notm}}, permitiendo a los clientes migrar las VM a la instancia de VMware vCenter Server on {{site.data.keyword.cloud_notm}} que se ejecuta en {{site.data.keyword.cloud_notm}} y viceversa si es necesario.
 - **{{site.data.keyword.cloud_notm}} for VMware Solutions**: la instancia de vCenter Server proporciona los componentes fundamentales de VMware, como vSphere, vCenter Server, NSX-V y opciones de almacenamiento que incluyen vSAN o almacenamiento {{site.data.keyword.cloud_notm}} Endurance, necesarios para desplegar automáticamente una solución VMware Software Defined Data Center (SDDC). El clúster VMware es el destino de las máquinas virtuales migradas y de algunas de las aplicaciones modernizadas en los contenedores alojados en {{site.data.keyword.icpfull_notm}}. Los componentes principales de vCenter Server son los siguientes:

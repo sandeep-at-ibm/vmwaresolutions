@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,7 +18,7 @@ O ESXi 6.5 contém muitos novos drivers nativos que são uma substituição aos 
 
 O ixgben é um driver nativo que substitui o driver vmklinux net-ixgbe, mas não suporta SR-IOV e SW FcOE. A automação do ICVS não ativaria esse driver quando o host vSphere ESXi fosse provisionado. É aconselhável ativar esse driver para os benefícios de desempenho que ele traz. O procedimento a seguir descrito neste apêndice mostra como ativar e desativar os drivers nativos usando o vSphere Command-Line (vCLI).
 
-Antes de iniciar esta tarefa, recupere todos os endereços IP, IDs de login e senhas IPMI dos hosts físicos do [portal de infraestrutura do {{site.data.keyword.cloud}}](https://control.softlayer.com/devices). Isso é necessário em uma restauração ou para verificar o progresso de um upgrade, em que não existe acesso direto de rede ao host.
+Antes de iniciar esta tarefa, recupere todos os endereços IP do IPMI de hosts físicos, IDs de login e senhas por meio do [portal do cliente de infraestrutura do {{site.data.keyword.cloud}}](https://control.softlayer.com/devices). Isso é necessário em uma restauração ou para verificar o progresso de um upgrade, em que não existe acesso direto de rede ao host.
 
 Para cada host, sucessivamente:
 1. Use o vSphere Web Client para colocar o host vSphere ESXi no modo de manutenção, selecionando **Página inicial** > **Hosts e clusters**. Na área de janela do Navegador, selecione o host vSphere ESXi e clique com o botão direito no host e selecione **Modo de manutenção** > **Entrar no modo de manutenção**. Como o host faz parte de um cluster DRS automatizado, as máquinas virtuais são migradas para hosts diferentes quando o host entra no modo de manutenção.
@@ -38,7 +38,7 @@ Para cada host, sucessivamente:
 
 Se for necessário reverter e não for possível usar SSH para o host vSphere ESXi, será necessário efetuar login no console do KVM para o host que precisa da reversão por meio da janela de controle do {{site.data.keyword.cloud_notm}}.
 
-Use o ID e a senha listados na janela de controle do {{site.data.keyword.cloud_notm}} com o endereço IP IPMI para efetuar login na interface da web do IPMI. É necessário estar conectado ao data center no qual o host está localizado por meio da VPN. Para obter mais informações, veja [Introdução à VPN](/docs/infrastructure/iaas-vpn?topic=VPN-getting-started-with-virtual-private-networking-vpn-).
+Use o ID e a senha listados na janela de controle do {{site.data.keyword.cloud_notm}} com o endereço IP IPMI para efetuar login na interface da web do IPMI. É necessário estar conectado ao data center no qual o host está localizado por meio da VPN. Para obter mais informações, veja [Introdução à VPN](/docs/infrastructure/iaas-vpn?topic=VPN-gettingstarted-with-virtual-private-networking#gettingstarted-with-virtual-private-networking).
 
 1. Acesse a página Detalhes do dispositivo, gerenciamento remoto para o host vSphere ESXi e selecione **Ações** > **Console do KVM**. Outra janela é aberta para você inserir o Usuário e a Senha do IPMI.
 2. Selecione **Controle remoto** > **iKVM/HTML5** e clique em **iKVM/HTML5** para ativar novamente. Agora é possível você acessar o console do host vSphere ESXi.
@@ -52,5 +52,5 @@ Use o ID e a senha listados na janela de controle do {{site.data.keyword.cloud_n
 ## Links relacionados
 {: #vum-applying-nic-related}
 
-* [Arquitetura de solução do VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrações)
+* [Arquitetura da solução VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
+* [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (demonstrações)

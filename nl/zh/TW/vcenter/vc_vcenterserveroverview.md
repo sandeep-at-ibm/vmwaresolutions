@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,11 +18,11 @@ subcollection: vmwaresolutions
 # vCenter Server 概觀
 {: #vc_vcenterserveroverview}
 
-VMware vCenter Server on {{site.data.keyword.cloud}} 是一個提供 VMware vSphere 堆疊作為服務的受管理專用雲。VMware 環境建置在至少兩部（建議三部）{{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} 上，提供共用網路連接儲存空間及專用軟體定義儲存空間選項，而且它能自動部署及配置容易管理的邏輯 Edge 防火牆（其採用 VMware NSX 技術）。
+VMware vCenter Server on {{site.data.keyword.cloud}} 是一個提供 VMware vSphere 堆疊作為服務的受管理專用雲。VMWare 環境建置在 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} 上，可提供共用網路連接儲存空間以及專用軟體定義儲存空間選項，而且包含自動部署及配置採用 VMware NSX 技術的容易管理的邏輯 Edge 防火牆。
 
 在許多情況下，整個環境可以在一天內佈建完成，且裸機基礎架構可以快速而彈性地擴充運算容量，並依需要擴增及縮減。
 
-部署後，您可以藉由從 {{site.data.keyword.slportal}} 訂購其他 NFS（網路檔案系統）檔案共用，以及將它們手動連接至叢集裡的所有 ESXi 伺服器，來增加共用儲存空間。如果您需要專用儲存空間，我們以高效能（所有 SSD）及高容量（所有 SATA）兩種配置提供 [NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview)。
+部署後，您可以藉由從 {{site.data.keyword.slportal}} 訂購其他「網路檔案系統 (NFS)」檔案共用，以及將它們手動連接至叢集中的所有 ESXi 伺服器，來增加共用儲存空間。如果您需要專用儲存空間，我們以高效能（所有 SSD）及高容量（所有 SATA）兩種配置提供 [NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview)。
 
 VMware vSAN 也以專用儲存空間選項提供。若要增加 vSAN 叢集的 vSAN 型儲存空間容量，您可以在部署後新增更多 ESXi 伺服器。
 
@@ -75,9 +75,9 @@ VMware vSAN 也以專用儲存空間選項提供。若要增加 vSAN 叢集的 v
 您可以使用下列其中一項配置，訂購三部以上的 {{site.data.keyword.baremetal_short}}：
 * **Skylake**：2-CPU Intel Skylake 產生伺服器（Intel Xeon 4100/5100/6100 系列），搭配您選取的 CPU 型號及 RAM 大小。
 * **SAP 認證**：Intel Skylake 或 Intel Broadwell 產生伺服器（Intel Xeon 6140/E5-2690/E7-8890 系列），搭配您選取的 CPU 型號。
-* **Broadwell**：2-CPU Intel Broadwell 產生伺服器（Intel Xeon E5-2600/E7-4800 系列），搭配您選取的 CPU 型號及 RAM 大小。
+* **Broadwell**：4-CPU Intel Broadwell 世代伺服器（Intel Xeon E7-4800 系列），搭配您選取的 CPU 型號及 RAM 大小。
 
-如果您計劃使用 vSAN 儲存空間，則配置需要四個 {{site.data.keyword.baremetal_short}}。
+如果您計劃使用 vSAN 儲存空間，則配置需要至少四個 {{site.data.keyword.baremetal_short}}。
 {:note}
 
 ### 網路
@@ -92,7 +92,7 @@ VMware vSAN 也以專用儲存空間選項提供。若要增加 vSAN 叢集的 v
 
     此 ESG 名為 **mgmt-nsx-edge**，您無法存取此 ESG，因此無法使用它。如果您修改它，則可能無法從 {{site.data.keyword.vmwaresolutions_short}} 主控台管理 vCenter Server 實例。此外，使用防火牆或停用與外部 IBM 管理元件的 ESG 通訊，可能會導致 {{site.data.keyword.vmwaresolutions_short}} 變成無法使用。
     {:important}
-  * 用於出埠和入埠 HTTPS 工作負載資料流量的安全客戶管理 VMware NSX Edge Services Gateway。IBM 將此閘道部署為範本，您可以修改它來提供 VPN 存取或公用存取。如需相關資訊，請參閱[客戶管理的 NSX Edge 是否造成安全風險？](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-customer-managed-nsx-edge-pose-a-security-risk-)。
+  * 用於出埠和入埠 HTTPS 工作負載資料流量的安全客戶管理 VMware NSX Edge Services Gateway。IBM 將此閘道部署為範本，您可以修改它來提供 VPN 存取或公用存取。如需相關資訊，請參閱[客戶管理的 NSX Edge 是否造成安全風險？](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#faq-customer-nsx)
 
 ### 虛擬伺服器實例
 {: #vc_vcenterserveroverview-vsi}
@@ -122,7 +122,7 @@ vSAN 選項提供自訂的配置，以及磁碟類型、大小和數量的各種
 
   當 3.8 TB SSD（固態硬碟）磁碟機在正式發行至資料中心時，就會予以支援。
   {:note}
-* 「高效能 Intel Optane」選項，提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟。這個選項取決於 CPU 型號。
+* 「高效能 Intel Optane」選項，提供 2 個額外容量磁碟機槽來放置共 12 個容量磁碟。這個選項取決於 CPU 型號。
 
 #### NFS 儲存空間
 {: #vc_vcenterserveroverview-nfs-storage}
@@ -159,7 +159,7 @@ NFS 選項為工作負載提供自訂的共用檔案層次儲存空間，以及�
 ### 擴充節點的硬體
 {: #vc_vcenterserveroverview-expansion-node-hardware}
 
-一部具有 [vCenter Server 實例的技術規格](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs)中所呈現之配置的 Bare Metal Server。
+一部具有 [vCenter Server 實例的技術規格](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#vc_vcenterserveroverview-specs)中所呈現之配置的 Bare Metal Server。
 
 ### 擴充節點的授權與費用
 {: #vc_vcenterserveroverview-expansion-node-license-and-fee}
@@ -183,5 +183,5 @@ NFS 選項為工作負載提供自訂的共用檔案層次儲存空間，以及�
 * [vCenter Server 軟體資料清單](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
 * [規劃 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [訂購 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [{{site.data.keyword.cloud_notm}} file and block storage](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage){:new_window}
+* [vCenter Server 的連接儲存空間](/docs/services/vmwaresolutions/services?topic=vmware-solutions-storage-benefits#storage-benefits)
 * [擴充檔案共用容量](/docs/infrastructure/FileStorage?topic=FileStorage-expandCapacity#expandCapacity)

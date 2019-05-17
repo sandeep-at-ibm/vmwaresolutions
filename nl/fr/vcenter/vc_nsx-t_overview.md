@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-21"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -74,7 +74,7 @@ Vous pouvez commander trois serveurs {{site.data.keyword.baremetal_short}} ou pl
 * **Skylake** : Génération Intel Skylake 2 UC (série Intel Xeon 4100/5100/6100) avec le modèle d'UC et la taille de mémoire RAM que vous avez sélectionnés.  
 * **Broadwell** : serveurs des générations Intel Broadwell à 4 UC (Intel série Xeon E7-4800) avec vos modèle d'UC et taille de RAM sélectionnés.
 
-Si vous prévoyez d'utiliser un stockage vSAN, la configuration requiert quatre serveurs {{site.data.keyword.baremetal_short}}.
+Si vous prévoyez d'utiliser un stockage vSAN, la configuration requiert un minimum de quatre serveurs {{site.data.keyword.baremetal_short}}.
 {:note}
 
 ### Mise en réseau
@@ -86,7 +86,7 @@ Les composants réseau suivants sont commandés :
 * Un réseau dissocié avec un routeur T1 et T0 pour éventuelle communication d'est en ouest entre des charges de travail locales connectées à des réseaux de la couche 2 (L2). Cela est déployé en tant qu'exemple de topologie de routage, que vous pouvez modifier ou retirer et à partir duquel vous pouvez construire.
 *  Trois passerelles ESG (Edge Services Gateway) VMware NSX-T :
   * Une passerelle de gestion sécurisée VMware NSX ESG pour le trafic de gestion HTTPS sortant, déployées par IBM dans le cadre de la topologie de réseau de gestion. Les machines virtuelles de gestion IBM utilisent cette passerelle ESG pour communiquer avec des composants de gestion IBM externes spécifiques liés à l'automatisation. Pour plus d'informations, voir [Configuration du réseau en vue d'utiliser la passerelle NSX ESG gérée par le client avec vos machines virtuelles](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_esg_config).
-  * Deux passerelles VMware NSX ESG sécurisées gérée par le client pour le trafic de charge de travail HTTPS sortant et entrant. Cette passerelle est déployée par IBM en tant que modèle que vous pouvez modifier pour fournir un accès au réseau privé virtuel ou un accès public. Pour plus d'informations, voir [La passerelle NSX Edge gérée par le client présente-t-elle un risque pour la sécurité ?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq-customer-nsx)
+  * Deux passerelles VMware NSX ESG sécurisées gérée par le client pour le trafic de charge de travail HTTPS sortant et entrant. Cette passerelle est déployée par IBM en tant que modèle que vous pouvez modifier pour fournir un accès au réseau privé virtuel ou un accès public. Pour plus d'informations, voir [La passerelle NSX Edge gérée par le client présente-t-elle un risque pour la sécurité ?](/docs/services/vmwaresolutions?topic=vmware-solutions-faq#faq-customer-nsx)
 
   Cette passerelle ESG se nomme **mgmt-nsx-edge0**. Vous n'avez pas accès à la passerelle ESG et vous ne pouvez pas l'utiliser. Si vous la modifiez, vous ne pourrez plus gérer l'instance vCenter Server depuis la console {{site.data.keyword.vmwaresolutions_short}}. De plus, si vous utilisez un pare-feu ou désactivez les communications ESG vers des composants de gestion IBM externes, {{site.data.keyword.vmwaresolutions_short}} sera inutilisable.
   {:important}
@@ -117,7 +117,7 @@ L'option vSAN offre des configurations personnalisées, avec différentes option
 
   Les unités SSD (Solid State Disk) de 3,8 To sont prises en charge une fois qu'elles sont officiellement disponibles dans un centre de données.
   {:note}
-* L'option Hautes performances avec Intel Optane, qui fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Cette option dépend du modèle d'UC.
+* L'option Hautes performances avec Intel Optane, qui fournit deux baies de disques de capacité supplémentaires pour un total de 12 disques de capacité. Cette option dépend du modèle d'UC.
 
 #### Stockage NFS
 {: #vc_nsx-t_overview-nfs-storage}
@@ -149,7 +149,7 @@ Chaque noeud d'extension vCenter Server with NSX-T déploie et génère des frai
 ### Matériel pour les noeuds d'extension
 {: #vc_nsx-t_overview-expansion-node-hardware}
 
-Un serveur bare metal doté de la configuration présentée dans [Spécifications techniques relatives aux instances vCenter Server with NSX-T](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_overview-specs).
+Un serveur bare metal doté de la configuration présentée dans [Spécifications techniques relatives aux instances vCenter Server with NSX-T](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_overview#vc_nsx-t_overview-specs).
 
 ### Licences et frais pour les noeuds d'extension
 {: #vc_nsx-t_overview-expansion-node-license-and-fee}
@@ -174,5 +174,5 @@ Gérer des composants {{site.data.keyword.vmwaresolutions_short}} (installés da
 * [Nomenclature du logiciel vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
 * [Planification des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [Commande d'instances vCenter Server with NSX-T](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_orderinginstance)
-* [Stockage de fichiers et de blocs d'{{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage){:new_window}
+* [Stockage connecté pour vCenter Server](/docs/services/vmwaresolutions/services?topic=vmware-solutions-storage-benefits#storage-benefits)
 * [Extension de la capacité de partage de fichiers](/docs/infrastructure/FileStorage?topic=FileStorage-expandCapacity#expandCapacity)

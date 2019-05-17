@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-08-30"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -63,7 +63,7 @@ V2.5 릴리스 이상에서 {{site.data.keyword.vmwaresolutions_short}}는 {{sit
 
 자세한 정보는 다음 주제를 참조하십시오.
 * [서비스 및 리소스에 액세스하기 위한 사용자 초대](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-iamuserinvite)
-* [IAM에서 사용자 액세스 관리](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-access-with-iam)
+* [IAM에서 사용자 액세스 관리](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-iam#iam)
 
 ## VMware vCenter Server 및 VMware Cloud Foundation 인스턴스의 사용자 계정 및 그룹에 대한 변경사항
 {: #relnotes_v25-user-acct}

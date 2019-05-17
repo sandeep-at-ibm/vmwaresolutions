@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -26,7 +26,7 @@ PSC/VCSA 是通过设备管理控制台（而不是 vSphere Web Client）进行�
 更新之前，您必须启动设备的快照或 PSC/VCSA 的备份。确保一切运行正常，然后在几天内除去快照，以避免性能下降。此外，在尝试任何升级之前，请先查看 VMware 发行说明，以了解针对指定发行版的任何特定指示信息。
 
 要更新 PSC/VCSA，请执行以下步骤：
-1. 可以通过转至 VMware 补丁[下载中心](https://my.vmware.com/group/vmware/patch#search)，登录并从**按产品搜索**菜单中选择 VC 来下载更新。选择相应的补丁，然后单击**下载**。
+1. 可以通过转至 [VMware 补丁下载中心](https://www.vmware.com/patchmgr/findPatchByReleaseName.portal)，登录并从**按产品搜索**菜单中选择 VC 来下载更新。选择相应的补丁，然后单击**下载**。
 2. 使用 vSphere Web Client 将 ISO 文件上传到 vCenter 数据存储库。
 3. 将更新 ISO 文件安装到 vCenter Server。
 4. 生成 vCenter Server 的快照。
@@ -48,4 +48,4 @@ PSC/VCSA 是通过设备管理控制台（而不是 vSphere Web Client）进行�
 {: #vum-updating-vcsa-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 解决方案体系结构](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} 数字技术互动](https://ibm-dte.mybluemix.net/ibm-vmware)（演示）
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} 数字技术互动](https://ibm-dte.mybluemix.net/vmware)（演示）

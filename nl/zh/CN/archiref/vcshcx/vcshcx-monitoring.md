@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-05"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -45,7 +45,7 @@ subcollection: vmwaresolutions
 11.	编辑 VM 上的设置。
 12.	单击复选框以连接网络适配器 1。
 13.	单击**确定**。
-14.	转至 `https://<configured_WAN_OPT_IP>`.
+14.	转至 `https://<configured_WAN_OPT_IP>`。
 15.	使用 `admin` 缺省用户和 `admin` 密码登录。
 
 现在，可以使用 WAN Opt Web UI 来监视吞吐量速率、压缩比率以及设置带宽限制。

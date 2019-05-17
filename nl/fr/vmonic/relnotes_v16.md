@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2017-05-22"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -34,7 +34,7 @@ Les composants suivants sont nouveaux ou ont été mis à jour :
 
 A compter de la version 1.6, plusieurs améliorations sont disponibles pour vos instances vCenter Server.
 
-*  Implémentation totale de la spécification de la version 2.0 pour l'offre vCenter Server. Pour plus d'informations, voir l'[architecture de la solution VMware vCenter Server on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/devops/method/content/architecture/virtualizationArchitecture#2_0).
+*  Implémentation totale de la spécification de la version 2.0 pour l'offre vCenter Server.
 *  Nouvelles spécifications matérielles : **Petite**, **Moyenne** ou **Grande**, en fonction de vos besoins.
 *  Nouveaux centres de données disponibles pour déploiement : **HKG02 - Hong Kong**, **OSL01 - Oslo**, **SEO01 - Séoul**, **SNG01 - Singapour** et **SYD04 - Sydney**.
 *  Au moins deux serveurs ESXi dans votre commande d'instance, avec VMware vSphere DRS (Distributed Resource Scheduler) et VMware HA (High Availability) activés par défaut.

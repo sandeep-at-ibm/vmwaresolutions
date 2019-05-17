@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -110,7 +110,7 @@ Vérifiez que les conditions requises suivantes sont respectées avant de retire
   * La liste des clés de licence BYOL que vous avez installées au cours de cette procédure. Le cas échéant, indiquez le nom de l'instance et du cluster avec les clés de licence pour vSphere et les clusters vSAN.
   * La liste des clés de licence locative que vous avez retirées au cours de cette procédure. Le cas échéant, indiquez le nom de l'instance et du cluster avec les clés de licence pour vSphere et les clusters vSAN.
 
-  Avant d'annuler les frais liés à la licence locative Hybridity Bundle, les équipes chargées du support et des opérations IBM accèdent à la couche de gestion vCenter de votre compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) pour s'assurer que les licences locatives ont été retirées.
+  Avant d'annuler les frais liés à la licence locative Hybridity Bundle, les équipes chargées du support et des opérations IBM accèdent à la couche de gestion vCenter de votre compte d'infrastructure {{site.data.keyword.cloud_notm}} pour s'assurer que les licences locatives ont été retirées.
   {:note}
 
 ## Liens connexes

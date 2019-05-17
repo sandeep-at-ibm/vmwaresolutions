@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-10-19"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -39,7 +39,7 @@ Lors de la procédure de mise à niveau vers la version 2.2, la machine virtuell
 * Si vous utilisez une solution de sauvegarde qui référence la machine virtuelle IBM CloudDriver, après mise à niveau vers la version 2.2, vérifiez que la solution de sauvegarde référence la nouvelle machine virtuelle IBM CloudDriver.
 * Avant d'effectuer une mise à niveau vers la version 2.2, vérifiez que vous avez remplacé l'instance de serveur virtuel Veeam existante par le service Veeam on {{site.data.keyword.cloud_notm}}. L'instance de serveur virtuel Veeam existante n'est plus prise en charge en version 2.2 et dans les versions ultérieures, de sorte que les sauvegardes de composant de gestion associées à l'instance de serveur virtuel Veeam existante ne sont pas disponible pour une restauration.
 
-Pour plus d'informations sur l'utilisation du service Veeam sur {{site.data.keyword.cloud_notm}}, voir les rubriques suivantes :
+Pour plus d'informations sur l'utilisation de Veeam sur le service {{site.data.keyword.cloud_notm}}, voir :
 * [Composants et remarques pour Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)
 * [Gestion de Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
 
@@ -51,7 +51,7 @@ Pour les instances mises au niveau depuis une édition antérieure vers la versi
 
 Il est recommandé de modifier les paramètres de configuration restants avec les nouvelles valeurs afin de garantir la cohérence entre toutes les instances et permettre la prise en charge de l'extension de stockage. IBM prévoit de n'effectuer ses tests qu'avec ces nouvelles valeurs pour toutes les éditions ultérieures des solutions {{site.data.keyword.cloud_notm}} pour VMware.
 
-Pour plus d'informations, voir la section _Paramètres de configuration avancée pour les serveurs ESXi_ dans la rubrique [Nomenclature vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom#advanced-configuration-settings-for-esxi-servers).
+Pour plus d'informations, voir la section _Paramètres de configuration avancée pour les serveurs ESXi_ dans la rubrique [Nomenclature de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom#advanced-configuration-settings-for-esxi-servers).
 
 ## Prise en charge de 51 serveurs ESXi pour un cluster initial et de 59 serveurs ESXi pour les clusters additionnels
 {: #relnotes_v22-esxi-cluster}
@@ -64,9 +64,9 @@ Pour les instances déployées dans la version 2.1 ou des éditions antérieures
 ## Autres options de configuration réseau pour les instances vCenter Server et Cloud Foundation
 {: #relnotes_v22-network-config}
 
-Pour les commandes d'instance vCenter Server et Cloud Foundation, vous pouvez désormais réutiliser les VLAN publics et privés existants pour votre configuration réseau. Lorsqu'aucun VLAN existant n'est disponible, vous pouvez commander un nouveau VLAN public et deux nouveaux VLAN privés.
+Pour les commandes d'instance vCenter Server et Cloud Foundation, vous pouvez désormais réutiliser les VLAN publics et privés existants pour votre configuration réseau. Lorsque aucun VLAN existant n'est disponible, vous pouvez commander un nouveau VLAN public et deux nouveaux VLAN privés.
 
-Pour prendre connaissance des remarques importantes à connaître avant de sélectionner des VLAN existants, voir les sections *Paramètres d'interface réseau* dans la rubrique [Commande d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance).:
+Pour prendre connaissance des remarques importantes à connaître avant de sélectionner des VLAN existants, voir les sections *Paramètres d'interface réseau* dans la rubrique [Commande d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance) :
 
 ## Mises à jour des instances VMware vCenter Server
 {: #relnotes_v22-vcs}
@@ -86,12 +86,12 @@ Vous pouvez désormais sélectionner le déploiement d'une seule instance de ser
 Vous devez fournir 2 licences Microsoft Windows Server 2012 R2 si vous configurez votre instance de manière à utiliser les deux machines virtuelles Microsoft Windows. Utilisez la licence d'édition Microsoft Windows Server 2012 R2 Standard et/ou la licence d'édition Microsoft Windows Server 2012 R2 Datacenter. Vous disposez de 30 jours pour activer les machines virtuelles.
 {:note}
 
-Pour plus d'informations, voir la section *Paramètres de configuration du système* dans [Commande d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance#system-settings)​.
+Pour plus d'informations, voir la section *Paramètres de configuration du système* dans [Commande d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance#system-settings).
 
 ### Augmentation du nombre de clusters par instance
 {: #relnotes_v22-clusters-per-inst}
 
-Vous pouvez désormais ajouter jusqu'à 10 clusters aux instances VMware vCenter Server déployées dans (ou mises à niveau vers) la version 2.2. et dans des éditions ultérieures. Pour plus d'informations, voir [Ajout et affichage de clusters pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)​.
+Vous pouvez désormais ajouter jusqu'à 10 clusters aux instances VMware vCenter Server déployées dans (ou mises à niveau vers) la version 2.2. et dans des éditions ultérieures. Pour plus d'informations, voir [Ajout et affichage de clusters pour des instances vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)​.
 
 ## Mises à jour des clusters VMware vSphere
 {: #relnotes_v22-vss}
@@ -101,7 +101,7 @@ Vous pouvez désormais ajouter jusqu'à 10 clusters aux instances VMware vCenter
 
 Les partenaires commerciaux ont désormais le choix entre quatre offres groupées de licence de composant lorsqu'ils commandent un nouveau cluster vSphere. Les choix possibles sont les suivants : Standard with Management, Advanced, Advanced with Networking ou Advanced with Networking and Management. Vous pouvez également inclure des composants VMware supplémentaires dans votre commande. Le mode BYOL (Bring Your Own License) n'est toutefois pas disponible.
 
-Pour plus d'informations, voir la section *Paramètres d'octroi de licence* dans la rubrique [Commande de nouveaux clusters vSphere ](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances).
+Pour plus d'informations, voir la section *Paramètres d'octroi de licence* dans la rubrique [Commande de nouveaux clusters vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances).
 
 ## Mises à jour des instances NetApp ONTAP Select
 {: #relnotes_v22-netapp}

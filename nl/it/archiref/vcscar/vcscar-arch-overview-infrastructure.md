@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-22"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -48,7 +48,7 @@ Tabella 1. Specifica di vCenter Server per {{site.data.keyword.icpfull_notm}}
 
 | | Distribuzione NFS | Distribuzione vSAN |
 |:---------- |:---------- |:---------- |
-|Numero di server| 3 | 4 |
+| Numero di server | 3 | 4 |
 | CPU | 28 core 2.2 GHz | 28 core 2.2 GHz |
 | Memoria | 384 GB | 384 GB |
 | Archiviazione | Gestione 2000 GB 2IOPS/GB, Carico di lavoro 2000 GB 4IOPS/GB, 4000 GB 4IOPS/GB {{site.data.keyword.icpfull_notm}} | Minimo 960-GB SSD x 2 |

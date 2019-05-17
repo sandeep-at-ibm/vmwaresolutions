@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-13"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -36,4 +36,4 @@ O extenso portfólio de serviços e opções de integração de várias ofertas 
 ## Links relacionados
 {: #vcs-hybridity-intro-related}
 
-* [Arquitetura de solução do VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
+* [Arquitetura da solução VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)

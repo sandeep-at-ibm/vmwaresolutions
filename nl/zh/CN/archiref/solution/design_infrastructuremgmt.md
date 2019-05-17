@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -86,7 +86,9 @@ vCenter Server 配置使用设备随附的本地嵌入式 PostgreSQL 数据库�
 
 IBM CloudBuilder 是一种临时 {{site.data.keyword.cloud_notm}} VM 虚拟服务器实例 (VSI)，用于启动新的 VMware 实例并执行生命周期管理功能。它在需要总体 vCenter Server 实例管理时进行部署，在该过程完成后被销毁。
 
-IBM CloudDriver 可以配置为通过公共网络连接或（可选）通过作为消息队列的 {{site.data.keyword.cloud_notm}} Object Storage 使用专用网络连接来与 {{site.data.keyword.vmwaresolutions_short}} 管理基础架构进行通信。IBM CloudDriver 是 IBM 开发的组件，用户不可访问；此组件具有以下属性和功能：
+IBM CloudBuilder 是一种临时 {{site.data.keyword.cloud_notm}} VM 虚拟服务器实例 (VSI)，用于根据 Day-2 操作（例如，将主机、集群或附加组件服务添加到 VMware 实例）的需要进行部署。
+
+CloudBuilder 和 CloudDriver 仅部署在通过专用消息队列连接到 IBM 管理平面的专用网络上。它们是 IBM 开发的组件，不可由用户访问，并具有以下属性和功能：
 
 - 在用户帐户中部署和配置 vCenter Server 实例。
 - 在 vCenter Server 集群中添加和除去主机。

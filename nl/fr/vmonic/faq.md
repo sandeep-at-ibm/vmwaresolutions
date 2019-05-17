@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -27,7 +27,7 @@ Trouvez les réponses aux questions fréquemment posées concernant {{site.data.
 
 * **Compte IBMid**. Ce compte est nécessaire pour accéder à la console {{site.data.keyword.vmwaresolutions_short}}. La console est une interface utilisateur autonome distincte du portail {{site.data.keyword.slportal}}. Pour plus d'informations, voir [Initiation](/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started).
 * **Compte {{site.data.keyword.cloud_notm}}**. Ce compte est nécessaire pour la mise à disposition. Vous pouvez vous inscrire pour obtenir un compte {{site.data.keyword.cloud_notm}} en effectuant une utilisant un **IBMid** existant ou en créant un nouvel **IBMid**.
-* **Compte d'infrastructure {{site.data.keyword.cloud_notm}}**. Ce compte, auparavant appelé compte **IBM SoftLayer**, permet de se connecter au portail client d'infrastructure {{site.data.keyword.cloud_notm}} qui fournit certaines fonctions supplémentaires pour gérer des produits et des services d'infrastructure. Vous pouvez obtenir un compte d'infrastructure {{site.data.keyword.cloud_notm}} en effectuant une mise à niveau de votre **compte {{site.data.keyword.cloud_notm}}** vers un compte de paiement à la carte ou en établissant un lien entre votre compte d'infrastructure {{site.data.keyword.cloud_notm}} (SoftLayer) et votre compte {{site.data.keyword.cloud_notm}}. Le compte d'infrastructure {{site.data.keyword.cloud_notm}} que vous utilisez doit répondre à certaines exigences. Pour plus d'informations, voir [Inscription à des comptes requis](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account) et [Exigences concernant le compte d'infrastructure {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).
+* **Compte d'infrastructure {{site.data.keyword.cloud_notm}}**. Ce compte est utilisé pour se connecter à portail client d'infrastructure {{site.data.keyword.cloud_notm}} qui fournit des fonctions supplémentaires pour gérer des produits et des services d'infrastructure. Vous pouvez obtenir un compte d'infrastructure {{site.data.keyword.cloud_notm}} en effectuant une mise à niveau de votre **compte {{site.data.keyword.cloud_notm}}** vers un compte de paiement à la carte ou en établissant un lien entre votre compte d'infrastructure {{site.data.keyword.cloud_notm}} et votre compte {{site.data.keyword.cloud_notm}}. Le compte d'infrastructure {{site.data.keyword.cloud_notm}} que vous utilisez doit répondre à certaines exigences. Pour plus d'informations, voir [Inscription à des comptes requis](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account) et [Exigences concernant le compte d'infrastructure {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).
 
 ## Comment associer mes données d'identification d'infrastructure IBM Cloud à la console IBM Cloud for VMware Solutions ?
 {: #faq-associate-credentials}
@@ -85,10 +85,7 @@ Non, ce n'est pas recommandé. Vous risquez des incidents au niveau des fonction
 {: #faq-rename-cluster}
 {: faq}
 
-Pour les instances vCenter Server, le premier cluster créé lors du déploiement est, par défaut, nommé **cluster1**. Vous pouvez le renommer dans le client VMware vSphere. Lorsque vous ajoutez un cluster à une instance vCenter Server, vous pouvez spécifier le nom de votre choix sur la console {{site.data.keyword.vmwaresolutions_short}}.
-
-Pour les instances Cloud Foundation, le nom de cluster par défaut n'est pas modifiable.
-{:note}
+Pour une nouvelle instance vCenter Server, le premier cluster créé lors du déploiement est, par défaut, nommé **cluster1**. Vous pouvez le renommer dans le client VMware vSphere. Lorsque vous ajoutez un cluster à une instance vCenter Server, vous pouvez spécifier le nom de votre choix sur la console {{site.data.keyword.vmwaresolutions_short}}.
 
 ## Comment sont gérés les modules de correction ?
 {: #faq-patches}
@@ -96,17 +93,7 @@ Pour les instances Cloud Foundation, le nom de cluster par défaut n'est pas mod
 
 IBM fournit des mises à jour permanentes du code en déployant l'instance de serveur virtuel (VSI) IBM CloudDriver (VSI) à la demande. IBM ne fournit pas de mises à jour permanentes pour les services complémentaires tels que Zerto on {{site.data.keyword.cloud_notm}} ou Veeam on {{site.data.keyword.cloud_notm}}. L'obtention et l'installation de ces mises à jour est de votre responsabilité.
 
-Les mises à jour de VMware sont appliquées différemment selon le type d'instance.
-
-### Instances VMware Cloud Foundation
-{: #faq-patches-cf}
-
-Les mises à jour des composants vSphere ESXi, NSX, vCenter, contrôleur PSC (Platform Services Controller) et gestionnaire SDDC sont fournies via la console {{site.data.keyword.vmwaresolutions_short}}.
-
-### Instances VMware vCenter Server
-{: #faq-patches-vcs}
-
-Pour les instances déployées en ou mise à niveau vers la version 2.1 ou ultérieure, les nouveaux clusters et serveurs ESXi déployés reçoivent de VMware des mises à jour ESXi récentes, mais pas nécessairement les toutes dernières.
+Pour les instances VMware vCenter Server déployées dans ou mises à niveau vers la version 2.1 ou une version ultérieure, les nouveaux clusters et serveurs ESXi déployés reçoivent de VMware des mises à jour ESXi récentes, mais pas nécessairement les toutes dernières.
 
 Vous êtes responsable de toutes les autres mises à jour des composants VMware, y compris de vous assurer que les nouveaux clusters et serveurs ESXi déployés disposent de toutes les mises à jour les plus récentes dont vous avez besoin.
 {:important}
@@ -124,7 +111,7 @@ Pour plus d'informations, consultez les ressources suivantes :
 
 Bien que la passerelle VMware NSX Edge des services de gestion se trouve sur un sous-réseau public, des mesures de sécurité ont été prises afin de garantir qu'elle ne présente aucun risque pour la sécurité:
 *  Le pare-feu NSX Edge est configuré de manière à n'autoriser que le trafic HTTPS sortant (port TCP 443) initié par les machines virtuelles de gestion.
-*  Le conversion d'adresses réseau (SNAT) est utilisée de sorte que les adresses IP privées ne soient pas visibles à l'extérieur du réseau privé.
+*  La conversion d'adresses réseau (SNAT) est utilisée afin que les adresses IP privées ne soient pas visibles à l'extérieur du réseau privé.
 *  L'accès distant pour le dispositif NSX Edge des services de gestion est désactivé.
 *  Les mots de passe d'accès à la passerelle NSX Edge des services de gestion depuis le réseau privé sont rendus aléatoires et chiffrés.
 
@@ -134,7 +121,7 @@ Bien que la passerelle VMware NSX Edge des services de gestion se trouve sur un 
 
 Bien que la passerelle NSX Edge gérée par le client soit connectée au VLAN public, des mesures de sécurité ont été prises afin de garantir qu'elle ne présente aucun risque pour la sécurité. Les mesures de sécurité suivantes sont en place :
 *  Une règle de pare-feu est en vigueur afin de n'autoriser que le trafic sortant issu de la plage d'adresses IP du sous-réseau privé.
-*  Une règle SNAT (désactivée par défaut) est en vigueur afin de convertir toutes les adresses IP issues du sous-réseau privé en une unique adresse IP sur le sous-réseau public.
+*  Une règle SNAT (désactivée par défaut) est en place pour convertir toutes les adresses IP du sous-réseau privé en une seule adresse IP sur le sous-réseau public.
 *  L'accès distant pour le dispositif NSX Edge géré par le client est désactivé.
 *  Les mots de passe d'accès à la passerelle NSX Edge gérée par le client depuis le réseau privé sont rendus aléatoires et chiffrés.
 
@@ -160,7 +147,7 @@ Vous pouvez vérifier le statut du déploiement de l'instance en affichant l'his
 {: #faq-vss-automation}
 {: faq}
 
-Non. VMware vSphere on {{site.data.keyword.cloud_notm}} n'utilise pas l'automatisation avancée des plateformes Cloud Foundation et vCenter Server. Selon les éléments commandés, la plateforme distribue des licences VMware facultatives, des serveurs ESXi et, en option, une paire à haute disponibilité de pare-feu physiques FortiGate. Si un nouveau cluster est créé, trois nouveaux VLAN sont également mis à disposition : un VLAN public et deux privés.
+Non. VMware vSphere on {{site.data.keyword.cloud_notm}} n'utilise pas l'automatisation avancée de la plateforme vCenter Server. Selon les éléments commandés, la plateforme distribue des licences VMware facultatives, des serveurs ESXi et, en option, une paire à haute disponibilité de pare-feu physiques FortiGate. Si un nouveau cluster est créé, trois nouveaux VLAN sont également mis à disposition : un VLAN public et deux privés.
 
 VMware ESXi est automatiquement installé sur chaque serveur bare metal, mais c'est à vous d'installer les composants VMware supplémentaires, tels que vCenter Server ou NSX. Bien que vSphere sur {{site.data.keyword.cloud_notm}} veille à ce que le matériel commandé soit compatible avec VMware compte tenu des composants VMware sélectionnés, aucune automatisation ne permet de configurer et d'installer l'environnement VMware. Vous êtes responsable de la conception et de l'architecture de l'environnement hébergé IBM.
 

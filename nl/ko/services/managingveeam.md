@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -70,7 +70,7 @@ Veeam 서비스가 사설 네트워크만의 인스턴스에 설치된 경우에
 ## V1.8 이전 인스턴스의 Veeam VSI를 Veeam on IBM Cloud로 대체
 {: #managingveeam-replace-vsi}
 
-관리 컴포넌트와 워크로드를 모두 백업할 수 있는 Veeam on {{site.data.keyword.cloud_notm}} 서비스는 관리 컴포넌트의 백업을 목적으로만 V1.8 이전 릴리스에서 VMware Cloud Foundation 및 VMware vCenter Server로 통합된 이전 Veeam VSI를 대체합니다.
+관리 컴포넌트와 워크로드를 모두 백업할 수 있는 Veeam on {{site.data.keyword.cloud_notm}} 서비스는 관리 컴포넌트의 백업을 목적으로만 V1.8 이전 릴리스에서 VMware vCenter Server로 통합된 이전 Veeam VSI를 대체합니다.
 
 이 변경으로 인해, 인스턴스 세부사항 페이지의 이전 **백업 및 복원** 탭이 제거되었으며 인스턴스의 복원 지점은 더 이상 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 사용할 수 없게 되었습니다. 그러나 V1.8 이전 인스턴스의 Veeam VSI는 계속 작동합니다.
 

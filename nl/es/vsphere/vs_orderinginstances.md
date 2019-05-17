@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-26"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -104,8 +104,9 @@ Seleccione el {{site.data.keyword.CloudDataCent_notm}} en el que se va a alojar 
 
 **Notas:**
 * Si selecciona un componente vSAN, la lista de ubicaciones se filtra por disponibilidad de SSD.
-* El centro de datos FRA05 no da soporte al servidor nativo Broadwell.
-* El centro de datos LON05 no da soporte al servidor nativo Certificado por SAP ni Broadwell.
+* Los servidores nativos Broadwell no están disponibles para la ubicación del centro de datos **FRA05 - Frankfurt**.
+* Los servidores nativos Broadwell y certificados por SAP no están disponibles para la ubicación del centro de datos
+**LON05 - London**.
 
 ### Skylake
 {: #vs_orderinginstances-skylake}
@@ -143,9 +144,6 @@ Tabla 3. Opciones para {{site.data.keyword.baremetal_short}} Broadwell
 
 | Opciones de modelo de CPU        | Opciones de RAM       |
 |:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4 / 16 núcleos en total, 2,1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2650 v4 / 24 núcleos en total, 2,2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2690 v4 / 28 núcleos en total, 2,6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Quad Intel Xeon E7-4820 v4 / 40 núcleos en total, 2,0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 núcleos en total, 2,1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
@@ -168,7 +166,7 @@ Si selecciona el componente VMware vSAN para el clúster, especifique los valore
 * **Número de discos de capacidad de vSAN**: Especifique el número de discos de capacidad que desea añadir.
 * Si desea añadir discos de capacidad por encima del límite de ocho, marque el recuadro **Intel Optane de alto rendimiento**. Esta opción proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad y es útil para cargas de trabajo que requieren menos latencia y un rendimiento de IOPS más alto.
 
-  La opción **Intel Optane de alto rendimiento** solo está disponible para los modelos de CPU de Skylake Dual Intel Xeon Gold 5120 y Dual Intel Xeon Gold 6140.
+  La opción **Alto rendimiento con Intel Optane** está disponible únicamente para los modelos de CPU Skylake.
   {:note}
 
 * Revise los valores **Tipo de disco para discos de memoria caché vSAN** y **Número de discos de memoria caché de vSAN**. Estos valores dependen de si ha marcado el recuadro **Intel Optane de alto rendimiento**.
@@ -211,12 +209,7 @@ El nombre de dominio se utiliza para todos los {{site.data.keyword.baremetal_sho
 ### Red pública o privada
 {: #vs_orderinginstances-public-private-network}
 
-Los valores de habilitación de la tarjeta de interfaz de red (NIC) se basan en la selección de **Red pública y privada** o de **Solo red privada**. Los siguientes servicios de complemento necesitan NIC públicos y no están disponibles si selecciona la opción privada:
-
-* F5 on {{site.data.keyword.cloud_notm}}
-* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
-* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
-* Zerto on {{site.data.keyword.cloud_notm}}
+Los valores de habilitación de la tarjeta de interfaz de red (NIC) se basan en la selección de **Red pública y privada** o de **Solo red privada**.
 
 ### VLAN
 {: #vs_orderinginstances-vlans}
@@ -297,7 +290,7 @@ Si ha guardado la configuración del clúster como una plantilla, recibirá una 
 
 Si ha realizado un pedido, el despliegue del clúster se inicia automáticamente y el usuario recibe una confirmación por correo electrónico de que el pedido se está procesando. Cuando el clúster esté listo para ser utilizado, se le notificará por correo electrónico.
 
-A diferencia de las instancias de vCenter Server y Cloud Foundation, los clústeres de vSphere no se muestran en la página **Recursos**.
+A diferencia de las instancias de vCenter Server, los clústeres de vSphere no se muestran en la página **Recursos**.
 {:note}
 
 ## Enlaces relacionados

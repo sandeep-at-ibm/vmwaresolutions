@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -110,7 +110,7 @@ Verifica i seguenti requisiti prima di rimuovere Hybridity Bundle:
   * Un elenco delle chiavi di licenza BYOL che hai installato in questa procedura. Laddove applicabile, fornisci il nome dell'istanza e del cluster con le chiavi di licenza per i cluster vSphere e vSAN.
   * Un elenco delle chiavi di licenza a noleggio che hai rimosso in questa procedura. Laddove applicabile, fornisci il nome dell'istanza e del cluster con le chiavi di licenza per i cluster vSphere e vSAN.
 
-  I team di supporto e operazioni IBM accedono al livello di gestione vCenter del tuo account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) per verificare che le licenze a noleggio siano state rimosse prima di annullare i costi della licenza a noleggio di Hybridity Bundle.
+  I team di supporto e operazioni IBM accedono al livello di gestione vCenter del tuo account dell'infrastruttura {{site.data.keyword.cloud_notm}} per verificare che le licenze a noleggio siano state rimosse prima di annullare i costi della licenza a noleggio di Hybridity Bundle.
   {:note}
 
 ## Link correlati

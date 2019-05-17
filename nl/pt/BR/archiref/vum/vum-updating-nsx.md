@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -54,11 +54,11 @@ O fluxo de trabalho é o seguinte:
   - Quando o upload for concluído, você será redirecionado para a página de login do NSX Manager. Efetue login novamente e verifique se a versão de software atual exibida está correta.
 7. ** Fazer upgrade do NSX Controller Cluster **:
   - Abra o vSphere Web Client e efetue login no VCSA.
-  - Navegue para **Página inicial** > **Rede e segurança** > **Instalação**, selecione a **guia Gerenciamento** e clique em **Upgrade disponível** na coluna Status do cluster do controlador.
+  - Navegue para **Página inicial** > **Rede e segurança** > **Instalação**, selecione a guia **Gerenciamento** e clique em **Upgrade disponível** na coluna Status do cluster do controlador.
   - Os controladores em seu ambiente são submetidos a upgrade e reinicializados um de cada vez. Depois de iniciar o upgrade, o sistema faz download do arquivo de upgrade, faz upgrade de cada controlador, reinicia cada controlador e atualiza o status de upgrade de cada controlador.
 8. ** Fazer Upgrade de Clusters de Host NSX **:
   - Após o upgrade do NSX Manager e dos NSX Controllers, os clusters do host são atualizados nos VIBs do NSX nos hosts vSphere ESXi.
-  - No vSphere Web Client, navegue para **Página inicial** > **Rede e segurança** > **Instalação**, selecione a **guia Preparação do host**. Para cada cluster do qual você deseja fazer upgrade, clique em **Upgrade disponível**. O Status de Instalação exibe Instalando.
+  - No vSphere Web Client, navegue para **Página inicial** > **Rede e segurança** > **Instalação**, selecione a guia **Preparação do host**. Para cada cluster do qual você deseja fazer upgrade, clique em **Upgrade disponível**. O Status de Instalação exibe Instalando.
   - O Status da instalação do cluster exibe _Não pronto_. Clique em **Não pronto** para exibir mais informações e clique em **Resolver todos** para tentar concluir a instalação do VIB. O host é colocado no modo de manutenção e reinicializado, se necessário, para concluir o upgrade. A coluna Status da instalação exibe Instalando. Depois que o upgrade for concluído, a coluna Status da instalação exibirá uma marca de seleção verde e a versão do NSX submetida a upgrade.
 9. ** Gateways de Serviços de Edge Services **:
   - Durante o processo de upgrade, um novo dispositivo virtual do Edge é implementado ao lado do existente. Quando o novo Edge estiver pronto, os vNICs do Edge antigo serão desconectados e os vNICs do novo Edge serão conectados. O novo Edge, então, envia pacotes de ARP gratuito (GARP) para atualizar o cache do ARP de comutadores conectados. Quando o HA é implementado, o processo de upgrade é executado duas vezes. Esse processo pode afetar temporariamente o encaminhamento de pacotes.
@@ -68,5 +68,5 @@ O fluxo de trabalho é o seguinte:
 ## Links relacionados
 {: #vum-updating-nsx-related}
 
-* [Arquitetura de solução do VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrações)
+* [Arquitetura da solução VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
+* [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (demonstrações)

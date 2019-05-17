@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -50,7 +50,7 @@ on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere?topi
 
 A implementação do cluster começa automaticamente e você recebe uma confirmação por e-mail de que o pedido está sendo processado. Quando o cluster estiver pronto para usar, você será notificado por e-mail.
 
-Os clusters do vSphere não são exibidos na página **Recursos**, junto com as instâncias do vCenter Server e do Cloud Foundation.
+Os clusters vSphere não são exibidos na página **Recursos** junto com as instâncias do vCenter Server.
 {:note}
 
 ## Links relacionados

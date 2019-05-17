@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -54,7 +54,7 @@ Puoi controllare le notifiche per verificare lo stato delle operazioni di sistem
        </tr>
        <tr>
          <td>Tipo</td>
-         <td>Il tipo di componente a cui è correlato l'evento segnalato:<ul><li>Istanze vCenter Server</li><li>Istanze Cloud Foundation</li><li>Servizi</li><li>Sistema</li></ul></td>
+         <td>Il tipo di componente a cui è correlato l'evento segnalato:<ul><li>Istanze vCenter Server</li><li>Servizi</li><li>Sistema</li></ul></td>
        </tr>
        <tr>
          <td>Risorsa</td>

@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-19"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -36,7 +36,7 @@ Todos os {{site.data.keyword.CloudDataCents_notm}} e os PoPs são conectados pel
 
 Junto com as redes públicas e privadas, cada servidor {{site.data.keyword.cloud_notm}} é conectado a uma rede de gerenciamento fora da banda. Essa rede de gerenciamento, acessível via VPN, permite acesso do Intelligent Platform Management Interface (IPMI) ao servidor independentemente de sua CPU, do firmware e do sistema operacional para propósitos de manutenção e administração.
 
-## Blocos IP primários e portáteis
+## Blocos IP primários e móveis
 {: #vcsnsxt-overview-ic4vnetwork-ip-blocks}
 
 O {{site.data.keyword.cloud_notm}} aloca dois tipos de endereços IP para serem usados dentro da infraestrutura do {{site.data.keyword.cloud_notm}}:
@@ -55,7 +55,8 @@ As contas do {{site.data.keyword.cloud_notm}} também podem ser configuradas com
 
 Cada host físico dentro do design tem dois pares redundantes de conexões Ethernet de 10 Gbps em cada comutador Top of Rack (ToR) do {{site.data.keyword.cloud_notm}} (público e privado). Os adaptadores são configurados como conexões individuais (desvinculadas) para um total de 4 × conexões de 10 Gbps. Isso permite que cada conexão da placa de interface de rede (NIC) funcione independentemente das outras.
 
-Figura 2. Conexões de host físico</br>
+Figura 2. Conexões de host físico
+</br>
 ![Conexões de host físico](vcsnsxt-host-connections.svg)
 
 ## VLANs

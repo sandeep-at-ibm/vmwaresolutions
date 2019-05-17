@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -60,7 +60,7 @@ vSphere 部署对物理基础架构有严格要求。因此，只能将集群部
 |MON01|蒙特利尔|北美东部|
 |OSL01|奥斯陆|欧洲|
 |PAR01|巴黎|欧洲|
-|SAO01|圣保罗|南美|
+|SAO01|圣保罗|南美洲|
 |SEO01|首尔|亚太地区|
 |SJC03|圣何塞|北美西部|
 |SJC04|圣何塞|北美西部|

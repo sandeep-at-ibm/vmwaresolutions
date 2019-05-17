@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -55,7 +55,7 @@ subcollection: vmwaresolutions
        </tr>
        <tr>
          <td>Tipo</td>
-         <td>O tipo de componente ao qual o evento relatado está relacionado:<ul><li>Instâncias do vCenter Server</li><li>Instâncias do Cloud Foundation</li><li>Serviços</li><li>Sistema</li></ul></td>
+         <td>O tipo de componente ao qual o evento relatado está relacionado:<ul><li>Instâncias do vCenter Server</li><li>Serviços</li><li>Sistema</li></ul></td>
        </tr>
        <tr>
          <td>Recursos</td>

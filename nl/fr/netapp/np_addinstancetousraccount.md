@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-04-18"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -30,7 +30,7 @@ Pour savoir comment lier votre compte Iaas-only à votre compte PaaS, voir [Foll
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Ressources** dans le panneau de navigation de gauche.
 2. A partir de la bannière de la console, cliquez sur l'icône de votre compte utilisateur, puis cliquez dans la zone **Compte** pour sélectionner le compte utilisateur vers lequel vous souhaitez faire migrer l'instance.
-3. Dans le tableau **Instances NetApp ONTAP Select**, recherchez l'instance antérieure à la version 2.5.
+3. Sur le tableau **Instances NetApp ONTAP Select**, recherchez l'instance antérieure à la version V2.5.
 4. Dans la colonne **Actions**, cliquez sur l'icône de menu déroulant dynamique, puis cliquez sur **Migrer une instance vers un compte**.
 5. Dans la fenêtre **Migrer une instance vers un compte**, confirmez le compte vers lequel vous souhaitez faire migrer l'instance, puis cliquez sur **Migrer**.
 
@@ -43,6 +43,6 @@ Pour savoir comment lier votre compte Iaas-only à votre compte PaaS, voir [Foll
 ## Liens connexes
 {: #np_addinstancetousraccount-related}
 
-* [Gestion des accès utilisateur à l'aide d'IAM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-access-with-iam)
+* [Gestion des accès utilisateur à l'aide d'IAM](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-iam#iam)
 * [Invitation des utilisateurs à accéder à des services et des ressources](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-iamuserinvite)
 * [Présentation d'IBM Cloud IAM](/docs/iam?topic=iam-iamoverview)

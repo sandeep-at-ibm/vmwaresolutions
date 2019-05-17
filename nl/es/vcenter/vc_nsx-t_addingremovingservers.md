@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-18"
+lastupdated: "2019-04-22"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -20,17 +20,12 @@ subcollection: vmwaresolutions
 
 Puede ampliar o reducir la capacidad de la instancia de VMware vCenter Server con NSX-T según sus necesidades empresariales añadiendo o eliminando servidores ESXi o almacenamiento del sistema de archivos de red (NFS).
 
-Puede añadir nuevos servidores ESXi a un clúster mientras el clúster esté en modalidad de mantenimiento. Además, puede añadir o eliminar simultáneamente servidores ESXi en varios clústeres. Están disponibles las siguientes operaciones simultáneas:
+* A partir del release V3.0, puede añadir o eliminar de forma simultánea almacenamiento NFS en varios clústeres.
+* A partir del release V2.9, puede añadir nuevos servidores ESXi a un clúster mientras los servidores estén en modalidad de mantenimiento. Además, puede añadir o eliminar simultáneamente servidores ESXi en varios clústeres.
 
-* Añadir hosts a un clúster y añadir hosts a clústeres adicionales.
-* Eliminar hosts de un clúster y eliminar hosts de clústeres adicionales.
-* Añadir hosts a un clúster y eliminar hosts de clústeres adicionales.
-* Eliminar hosts de un clúster y añadir hosts a clústeres adicionales. https://github.ibm.com/tornado/tracker/issues/14183
-
-Puede añadir o eliminar comparticiones de almacenamiento NFS a o desde un clúster NFS o vSAN vCenter Server con NSX-T existente.
-{:note}
-
-Si el clúster inicial tiene vSAN como almacenamiento, el hecho de añadir uno o varios servidores ESXi después del despliegue puede aumentar la capacidad de almacenamiento del clúster.
+**Notas**:
+* Si el clúster inicial tiene vSAN como almacenamiento, el hecho de añadir uno o varios servidores ESXi después del despliegue puede aumentar la capacidad de almacenamiento del clúster.
+* Puede añadir o eliminar comparticiones de almacenamiento NFS a o desde un clúster de vCenter Server NFS o vSAN con NSX-T existente.
 
 ## Adición de servidores ESXi a instancias de vCenter Server con NSX-T
 {: #vc_nsx-t_addingremovingservers-adding}
@@ -38,7 +33,8 @@ Si el clúster inicial tiene vSAN como almacenamiento, el hecho de añadir uno o
 ### Antes de añadir servidores ESXi
 {: #vc_nsx-t_addingremovingservers-adding-prereq}
 
-* No añada servidores ESXi desde el cliente web de VMware vSphere. Los cambios que realice en el cliente web de vSphere no se sincronizan con la consola de {{site.data.keyword.vmwaresolutions_full}}.
+* Siempre que sea posible, añada servidores ESXi utilizando la consola de {{site.data.keyword.vmwaresolutions_full}}, ya que los cambios que realice en el cliente web de VMware vSphere no se sincronizan con la consola de {{site.data.keyword.vmwaresolutions_short}}. Por lo tanto, añada servidores ESXi a vCenter Server solo para servidores ESXi locales o servidores ESXi que no pueda o no vaya a gestionar en la consola de
+{{site.data.keyword.vmwaresolutions_short}}.
 * Una instancia de vCenter Server con NSX-T con almacenamiento NFS debe tener como mínimo 3 servidores ESXi. Puede ampliar el clúster predeterminado para que tenga hasta un máximo de 51 servidores ESXi. Cada uno de los clústeres no predeterminados se puede ampliar hasta tener un máximo de 59 servidores ESXi.
 * Una instancia de vCenter Server con NSX-T con almacenamiento vSAN debe tener como mínimo 4 servidores ESXi.
 
@@ -70,7 +66,8 @@ Si va a añadir servidores ESXi durante la modalidad de mantenimiento, las máqu
 ### Antes de eliminar los servidores ESXi
 {: #vc_nsx-t_addingremovingservers-removing-prereq}
 
-* No elimine servidores ESXi desde el cliente web de VMware vSphere. Los cambios que realice en el cliente web de vSphere no se sincronizan con la consola de {{site.data.keyword.vmwaresolutions_short}}.
+* Siempre que sea posible, elimine servidores ESXi utilizando la consola de {{site.data.keyword.vmwaresolutions_full}}, ya que los cambios que realice en el cliente web de vSphere no se sincronizan con la consola de {{site.data.keyword.vmwaresolutions_short}}. Por lo tanto, elimine servidores ESXi de vCenter Server solo para servidores ESXi locales o servidores ESXi que no pueda o no vaya a gestionar en la consola de
+{{site.data.keyword.vmwaresolutions_short}}.
 * Una instancia de vCenter Server con NSX-T con almacenamiento NFS debe tener como mínimo 3 servidores ESXi y una instancia de vCenter Server con NSX-T con almacenamiento vSAN debe tener como mínimo 4 servidores ESXi.
 * Si se eliminan servidores ESXi, los servidores se colocan en modalidad de mantenimiento, y, después de eso, todas las VM que se ejecutan en los servidores se migran antes de que se eliminen de vCenter Server. Para tener el máximo control sobre la reubicación de las VM, se recomienda colocar los servidores ESXi que se van a eliminar en modalidad de mantenimiento y migrar manualmente las VM que se ejecutan en los mismos mediante el cliente web de VMware vSphere. Después de eso, elimine los servidores ESXi utilizando la consola de {{site.data.keyword.vmwaresolutions_short}}.
 
@@ -158,6 +155,6 @@ No añada almacenamiento NFS desde el cliente web de VMware vSphere. Los cambios
 * [Lista de materiales de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
 * [Requisitos y planificación de instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [Solicitud de instancias de vCenter Server con NSX-T](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_orderinginstance)
-* [Adición, visualización y supresión de clústeres para instancias de vCenter Server con NSX-T](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_deletinginstance)
-* [Colocación de un host en modalidad de mantenimiento](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
-* [Soporte del procesador Enhanced vMotion Compatibility (EVC)](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003212){:new_window}
+* [Adición, visualización y supresión de clústeres para instancias de vCenter Server con NSX-T](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_nsx-t_addingviewingcluster#vc_nsx-t_addingviewingcluster)
+* [Colocación de un host en modalidad de mantenimiento](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.resmgmt.doc/GUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
+* [Soporte del procesador Enhanced vMotion Compatibility (EVC)](https://kb.vmware.com/s/article/1003212){:new_window}

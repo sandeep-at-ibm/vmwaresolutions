@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,10 +18,7 @@ subcollection: vmwaresolutions
 # IBM Cloud 인프라 계정에 대한 요구사항
 {: #slaccountrequirement}
 
-{{site.data.keyword.vmwaresolutions_full}}를 사용하여 인스턴스를 주문하려면 {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정이 있어야 합니다. 인스턴스에 주문된 컴포넌트의 비용이 해당 {{site.data.keyword.cloud_notm}} 계정으로 청구됩니다.
-
-{{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정을 이전에는 IBM SoftLayer 계정이라고 했습니다.
-{:note}
+{{site.data.keyword.vmwaresolutions_full}}를 사용하여 인스턴스를 주문하려면 {{site.data.keyword.cloud_notm}} 인프라 계정이 있어야 합니다. 인스턴스에 주문된 컴포넌트의 비용이 해당 {{site.data.keyword.cloud_notm}} 계정으로 청구됩니다.
 
 ## IBM Cloud 인프라 계정에 대한 권한
 {: #slaccountrequirement-permissions}
@@ -46,6 +43,7 @@ subcollection: vmwaresolutions
 |티켓 편집 |이 권한은 사용자 대신 작성되는 서비스 티켓을 편집하는 데 필요합니다. |
 |티켓 보기 |이 권한은 {{site.data.keyword.cloud_notm}} 인프라 프로비저닝 지연 및 문제점에 대해 인스턴스의 컴포넌트와 관련된 서비스 티켓을 모니터링하는 데 필요합니다. |
 |하드웨어 세부사항 보기 |이 권한은 주문 유효성 검증 및 자동화된 구성에 필요한 하드웨어 세부사항을 검색하는 데 필요합니다. |
+| 다시 부팅/제어 | 이 권한은 인스턴스를 삭제할 때 하드웨어 취소 프로세스 중에 하드웨어의 전원을 끄는 데 필요합니다. |
 |라이센스 보기 |이 권한은 인스턴스에서 사용되는 라이센스를 검색하고 유효성 검증하는 데 필요합니다. |
 |비밀번호 보기 |이 권한은 주문된 VSI를 관리하는 데 필요합니다. |
 | 서버 모니터링 관리 |이 권한은 주문하는 데 필요하지 않지만 인스턴스에서 VMware ESXi 서버가 실행되는 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}의 모니터링 상태를 검색하고 유효성 검증하는 데 필요합니다. |
@@ -57,7 +55,7 @@ subcollection: vmwaresolutions
 
 자세한 정보는 다음을 참조하십시오.
 * [IBM Cloud의 VRF 개요](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-* [서비스 엔드포인트 사용을 위해 계정 사용](/docs/services/service-endpoint?topic=services/service-endpoint-cs_cli_install_steps#cs_cli_install_steps)
+* [서비스 엔드포인트 사용을 위해 계정 사용](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
 
 ## VLAN Spanning 지원 종료
 {: #slaccountrequirement-vlan-eos}

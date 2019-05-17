@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-10-19"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -39,7 +39,7 @@ Durante o processo de upgrade da V2.2, a máquina virtual do IBM CloudDriver é 
 * Se você estiver usando uma solução de backup que faça referência à máquina virtual do IBM CloudDriver, depois de fazer upgrade para a V2.2, assegure-se de que a solução de backup esteja fazendo referência à nova máquina virtual do IBM CloudDriver.
 * Antes de fazer upgrade para a V2.2, assegure-se de substituir o VSI do Legacy Veeam pelo serviço Veeam on {{site.data.keyword.cloud_notm}}. O Legacy Veeam não é mais suportado na V2.2 e liberações futuras, portanto, os backups de componente de gerenciamento associados ao Legacy Veeam não estão disponíveis para restauração.
 
-Para obter mais informações sobre como usar o Veeam no serviço do {{site.data.keyword.cloud_notm}}, consulte os tópicos a seguir:
+Para obter mais informações sobre o uso do serviço Veeam on {{site.data.keyword.cloud_notm}}, consulte:
 * [Componentes e considerações para o Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)
 * [Gerenciando o Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
 
@@ -91,7 +91,7 @@ Para obter mais informações, veja a seção *Configurações do sistema* em [P
 ### Maior número de clusters por instância
 {: #relnotes_v22-clusters-per-inst}
 
-É possível incluir até 10 clusters nas instâncias do VMware vCenter Server que são implementadas em ou têm upgrade feito para a V2.2. e liberações mais recentes. Para obter mais informações, veja [Incluindo e visualizando clusters para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)​.
+É possível incluir até 10 clusters nas instâncias do VMware vCenter Server que são implementadas em ou têm upgrade feito para a V2.2. e liberações mais recentes. Para obter mais informações, veja [Incluindo e visualizando clusters para instâncias do vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)​.
 
 ## Atualizações para clusters do VMware vSphere
 {: #relnotes_v22-vss}

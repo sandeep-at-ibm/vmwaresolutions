@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-19"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -53,7 +53,7 @@ Acme Skateboards 想要在由 vCenter Server with Hybridity Bundle 與 {{site.da
 如需 NSX-V 的相關資訊，請參閱 [NSX-V 概觀](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv)。如需 vCenter Server 及 {{site.data.keyword.icpfull_notm}} 供應項目的相關資訊，請參閱 [vCenter Server 及 {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)。
 
 圖 2. 具有 {{site.data.keyword.icpfull_notm}} 的 vCenter Server</br>
-![具有 {{site.data.keyword.icpfull_notm}} 的 vCenter Server](vcsnsxt-nsxvhl.svg)
+![具有 {{site.data.keyword.icpfull_notm}}](vcsnsxt-nsxvhl.svg)
 
 這會在內部部署與 {{site.data.keyword.cloud_notm}} 之間建立鬆散耦合的交互連線，並且啟用下列這類功能：
 -	**簡單交互連線** - 可透過任何實體連線（包括公用網際網路、專用 VPN 或 Direct Link），輕鬆建立邏輯網路連線。

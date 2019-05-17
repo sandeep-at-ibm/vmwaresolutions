@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -124,7 +124,7 @@ subcollection: vmwaresolutions
   -	Web Terminal（開放程式碼）
   -	Skydive - 網路分析器（開放程式碼）
 
-對於 Stock Trader，根據 Jane 的解決方案架構，Todd 將從 [Db2](https://console.cloud.ibm.com/catalog/services/db2-hosted)、[MQ](https://console.cloud.ibm.com/catalog/services/mq) 及 [Redis](https://console.cloud.ibm.com/catalog/services/databases-for-redis) 開始。
+對於 Stock Trader，根據 Jane 的解決方案架構，Todd 將從 [Db2](https://cloud.ibm.com/catalog/services/db2-hosted)、[MQ](https://cloud.ibm.com/catalog/services/mq) 及 [Redis](https://cloud.ibm.com/catalog/services/databases-for-redis) 開始。
 
 ## 新增中介軟體
 {: #vcscontent-addmidware-add-middleware}

@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -22,7 +22,7 @@ Revise as informações a seguir para obter detalhes sobre as considerações de
 {: #vc_networkingonvcenterserver-networking-components}
 {: faq}
 
-Para revisar os componentes de rede que estão incluídos em sua instância do vCenter Server, consulte [Especificações técnicas para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs).
+Para revisar os componentes de rede que estão incluídos em sua instância do vCenter Server, veja [Especificações técnicas para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs).
 
 ## Considerações de firewall
 {: #vc_networkingonvcenterserver-firewall-considerations}

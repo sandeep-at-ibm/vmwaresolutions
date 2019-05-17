@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-04-24"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -35,7 +35,7 @@ subcollection: vmwaresolutions
 ### IBM Cloud 基础架构帐户
 {: #cloud_modern_bundle_orderinginstance-account-req}
 
-* 要使用 {{site.data.keyword.vmwaresolutions_short}} 订购实例，您必须具有 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户。在实例中订购的组件的成本将计入到该 {{site.data.keyword.cloud_notm}} 帐户。
+* 要使用 {{site.data.keyword.vmwaresolutions_short}} 订购实例，您必须具有 {{site.data.keyword.cloud_notm}} 基础架构帐户。在实例中订购的组件的成本将计入到该 {{site.data.keyword.cloud_notm}} 帐户。
 *  在**设置**页面上配置 {{site.data.keyword.cloud_notm}} 基础架构凭证。在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**设置**。
 
 ### 实例名称需求
@@ -132,7 +132,7 @@ subcollection: vmwaresolutions
       1. 单击**管理**选项卡。
       2. 在**系统更新**选项卡上，单击**请求下载链接**。
       3. 单击**复制链接**，然后使用此链接将 HCX Enterprise Client 下载到有权访问内部部署 vSphere 环境的内部部署环境中。
-3. 在 VMware vSphere Web Client 中，将 HCX Enterprise Client 作为 HCX Manager 虚拟设备 (HCX Manager) 部署到内部部署环境中。有关更多信息，请参阅[安装 HCX Enterprise Manager OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-C61E107C-1F5F-4615-9BA9-351900CDB69E.html)。
+3. 在 VMware vSphere Web Client 中，将 HCX Enterprise Client 作为 HCX Manager 虚拟设备 (HCX Manager) 部署到内部部署环境中。有关更多信息，请参阅[安装 VMware HCX Enterprise Manager OVA](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-C61E107C-1F5F-4615-9BA9-351900CDB69E.html)。
 
     必须在专用网络上部署此内部部署 HCX Manager，并允许它访问公用网络。可以使用 NSX Edge、Vyatta 或类似网关，以允许通过因特网访问内部部署 HCX Manager。如果用于专用网络访问和公用网络访问的网关不同，那么建议您使用缺省网关来允许公用网络访问，并通过内部部署的 **HCX Manager 管理控制台**创建静态路由以用于专用网络访问。  
     {:note}
@@ -140,16 +140,16 @@ subcollection: vmwaresolutions
   1. 使用部署 OVA 时指定的凭证登录到内部部署 HCX Enterprise Manager VM。
   2. 在提示时输入激活密钥。
 
-  有关更多信息，请参阅 [HCX 激活和初始配置](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-6A4740C1-2225-444C-8ADC-CBE54F181536.html)。
+  有关更多信息，请参阅 [VMware HCX 激活和初始配置](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-6A4740C1-2225-444C-8ADC-CBE54F181536.html)。
   {:note}
 5. 自签名 SSL 证书已在 HCX on {{site.data.keyword.cloud_notm}} 服务上生成。您必须通过完成以下步骤将该证书导入到内部部署 HCX Manager：
     1. 在内部部署 **HCX Manager 管理控制台**中，单击**管理**选项卡。
     2. 在左侧导航窗格中，单击**可信 CA 证书**，然后单击右侧的**导入**。
     3. 单击 **URL**，然后输入要应用的证书的 URL。这是 **HCX 云 IP** (``https://<cloud-side public IP>``)，可以在 {{site.data.keyword.vmwaresolutions_short}} 控制台的 HCX on {{site.data.keyword.cloud_notm}} 服务详细信息页面上找到该 IP。
     4. 单击**应用**。
-6. 继续执行初始配置并构建互连。有关更多信息，请参阅[安装和配置 VMware HCX Enterprise](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-A26BFB16-FA94-426F-8E18-15BAD4BF840E.html)。
-7. 将 VMware HCX 中的网络从内部部署扩展到 {{site.data.keyword.cloud_notm}}。有关更多信息，请参阅[通过 VMware HCX 扩展网络](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-DD9C3316-D01C-4088-B3EA-84ADB9FED573.html?hWord=N4IghgNiBcIKIA8AuBTAdgEwJZoOYAI0UkB3AewCcBrAZxAF8g)。
-8. 在内部部署和 {{site.data.keyword.cloud_notm}} 之间迁移 VM。有关更多信息，请参阅[通过 VMware HCX 迁移虚拟机](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-D0CD0CC6-3802-42C9-9718-6DA5FEC246C6.html?hWord=N4IghgNiBcILIEsDmAnMAXBA7JACAagiugK6S5xgDGAFtgKYDOuA7gujQXC2CvbgAkAwgA0QAXyA)。
+6. 继续执行初始配置并构建互连。有关更多信息，请参阅[安装和配置 VMware HCX Enterprise](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-A26BFB16-FA94-426F-8E18-15BAD4BF840E.html)。
+7. 将 VMware HCX 中的网络从内部部署扩展到 {{site.data.keyword.cloud_notm}}。有关更多信息，请参阅[通过 VMware HCX 扩展网络](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-DD9C3316-D01C-4088-B3EA-84ADB9FED573.html)。
+8. 在内部部署和 {{site.data.keyword.cloud_notm}} 之间迁移 VM。有关更多信息，请参阅[通过 VMware HCX 迁移虚拟机](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-D0CD0CC6-3802-42C9-9718-6DA5FEC246C6.html)。
 
 您只能在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理在 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 基础架构组件，而不能在 {{site.data.keyword.slportal}} 中或在该控制台外部通过其他任何方法对这些组件进行管理。如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步，并且会使环境变得不稳定。
 {:important}
@@ -185,5 +185,5 @@ subcollection: vmwaresolutions
 
 * [vCenter Server 和 IBM Cloud Private 指南](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
 * [开具有关 IBM Cloud Private 的凭单](https://www.ibm.com/mysupport/s/?language=en_US)
-* [VMware Hybrid Cloud Extension 文档](https://hcx.vmware.com/#/vm-documentation)
-* [获取 HCX OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html)
+* [VMware HCX 资源](https://hcx.vmware.com/#/docs)
+* [Obtaining the VMware HCX OVA](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html?hWord=N4IghgNiBcIPICMAuYCWA7DBzABEgFgKY4ASAwgBo5wBqAgiAL5A)

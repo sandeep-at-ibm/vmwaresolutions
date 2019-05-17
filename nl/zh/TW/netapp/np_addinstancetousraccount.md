@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-04-18"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -30,7 +30,7 @@ subcollection: vmwaresolutions
 
 1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**資源**。
 2. 從主控台橫幅，按一下您的使用者帳戶圖示，然後按一下**帳戶**欄位，以選取您要將實例移轉至其中的使用者帳戶。
-3. 在 **NetApp ONTAP Select 實例**表格中，尋找 2.5 版之前的實例。
+3. 在 **NetApp ONTAP Select 實例**表格上，尋找 2.5 版之前的實例。
 4. 在**動作**直欄中，按一下溢位功能表圖示，然後按一下**將實例移轉至帳戶**。
 5. 在**將實例移轉至帳戶**視窗中，確認要將實例移轉至其中的帳戶，然後按一下**移轉**。
 
@@ -43,6 +43,6 @@ subcollection: vmwaresolutions
 ## 相關鏈結
 {: #np_addinstancetousraccount-related}
 
-* [利用 IAM 管理使用者存取](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-access-with-iam)
+* [利用 IAM 管理使用者存取](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-iam#iam)
 * [邀請使用者存取服務及資源](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-iamuserinvite)
 * [何謂 IBM Cloud IAM](/docs/iam?topic=iam-iamoverview)

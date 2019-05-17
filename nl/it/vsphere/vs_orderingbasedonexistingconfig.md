@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -50,7 +50,7 @@ Se hai salvato la configurazione del cluster come template, ricevi una notifica 
 
 Se hai effettuato un ordine, la distribuzione del cluster inizia automaticamente. Riceverai un'e-mail di conferma che ti indica che l'ordine è in fase di elaborazione. Quando il cluster è pronto per l'uso, ti viene inviata un'altra notifica e-mail.
 
-I cluster vSphere, a differenza delle istanze vCenter Server e Cloud Foundation, non vengono visualizzati nella pagina **Risorse**.
+I cluster vSphere, a differenza delle istanze vCenter Server, non vengono visualizzati nella pagina **Risorse**.
 {:note}
 
 ## Link correlati

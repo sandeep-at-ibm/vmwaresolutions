@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -40,8 +40,8 @@ O fluxo de trabalho a seguir descreve o processo para executar um upgrade orques
 {: #vum-orchestr-updates-step1}
 
 1. Use o vSphere Web Client para efetuar login no VCSA.
-2. Selecione **Página inicial** > **Update Manager**, na guia **Objetos**, selecione uma **instância do Update Manager**.
-3. Clique na **guia Gerenciar**, em seguida, na **guia Linhas de base do host** e clique em **Novo grupo de linhas de base**.
+2. Selecione **Página Inicial** > **Update Manager**, na guia **Objetos**, selecione uma **Instância do Update Manager**.
+3. Clique na guia **Gerenciar**, em seguida, na guia **Linhas de base do host** e clique em **Novo grupo de linhas de base**.
 4. Insira um nome exclusivo para o grupo de linhas de base e clique em **Avançar**.
 5. Selecione uma linha de base de upgrade do host para incluí-la no grupo de linhas de base.
 6. Opcionalmente, crie uma nova linha de base de upgrade do host clicando em **Criar uma nova linha de base de upgrade do host** na parte inferior da página Upgrades e preencha o assistente de Nova linha de base. Clique em **Avançar**.
@@ -67,5 +67,5 @@ Agora é possível usar esses grupos de linha de base nos processos de varredura
 ## Links relacionados
 {: #vum-orchestr-updates-related}
 
-* [Arquitetura de solução do VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrações)
+* [Arquitetura da solução VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
+* [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (demonstrações)

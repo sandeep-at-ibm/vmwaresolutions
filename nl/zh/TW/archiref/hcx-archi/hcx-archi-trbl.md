@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -17,7 +17,7 @@ subcollection: vmwaresolutions
 {: #hcx-archi-trbl-cloud-reg}
 
 * 如果認證不正確，則 Hybrid Cloud Services 不會重試。認證必須在 Hybrid Cloud Services 嘗試登入並啟動雲端登錄之前鑑別。
-* 如果認證拼寫錯誤，或 VCF/VCS Hybrid Cloud Services Cloud 認證在 Hybrid Cloud Services 向 VCF/VCS Hybrid Cloud Services Cloud 登錄之後變更因而導致不符，則雲端登錄可能會失敗。
+* 如果認證拼寫錯誤，或 VCS Hybrid Cloud Services Cloud 認證在 Hybrid Cloud Services 向 VCS Hybrid Cloud Services Cloud 進行登錄之後變更因而導致不符，則雲端登錄可能會失敗。
 * 若要更新 Web 用戶端中的認證，請移至 Hybrid Cloud Services「開始使用」標籤，然後在**基本作業**下選擇**登錄新雲端**。
 
 ## 重複 MAC 位址

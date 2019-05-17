@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-10-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -135,7 +135,7 @@ Para obter mais informações sobre o Veeam on {{site.data.keyword.cloud_notm}},
 ### VMware HCX on IBM Cloud
 {: #relnotes_v26-hcx}
 
-A liberação atual instala o VMware HCX 3.5.1 em todas as instâncias recém-implementadas. Para obter mais informações sobre os novos recursos no HCX 3.5.1, veja [Documentação do VMware NSX Hybrid Connect](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/index.html).
+A liberação atual instala o VMware HCX 3.5.1 em todas as instâncias recém-implementadas. Para obter mais informações sobre os novos recursos no HCX 3.5.1, consulte [Documentação do VMware HCX](https://docs.vmware.com/en/VMware-HCX/index.html).
 
 ### Suporte do Zerto on IBM Cloud para a atualização 2c do vSphere ESXi V6.5
 {: #relnotes_v26-zerto}

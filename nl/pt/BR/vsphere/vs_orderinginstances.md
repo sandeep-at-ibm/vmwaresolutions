@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-26"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -97,15 +97,15 @@ O uso de chaves de licença individuais junto com as chaves de licença combinad
 ## Configurações do Bare Metal Server
 {: #vs_orderinginstances-bare-metal-settings}
 
-### Local do data center
+### Local do datacenter
 {: #vs_orderinginstances-dc-location}
 
 Selecione o {{site.data.keyword.CloudDataCent_notm}} em que o cluster deve ser hospedado.
 
 **Notas:**
 * Se você selecionar um componente vSAN, a lista de locais será filtrada pela disponibilidade do SSD.
-* O data center FRA05 não suporta o servidor bare metal Broadwell.
-* O data center LON05 não suporta o servidor bare metal certificado pelo SAP ou Broadwell.
+* Os Broadwell Bare Metal Servers não estão disponíveis para o local do Data Center **FRA05 - Frankfurt**.
+* Os Broadwell Bare Metal Servers certificados pela SAP não estão disponíveis para o local do Data Center **LON05 - Londres**.
 
 ### Skylake
 {: #vs_orderinginstances-skylake}
@@ -143,9 +143,6 @@ Tabela 3. Opções para o Broadwell {{site.data.keyword.baremetal_short}}
 
 | Opções de modelo da CPU        | Opções de RAM       |
 |:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4/total de 16 núcleos, 2.1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2650 v4/total de 24 núcleos, 2.2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2690 v4/total de 28 núcleos, 2.6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Quad Intel Xeon E7-4820 v4/total de 40 núcleos, 2.0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4/total de 64 núcleos, 2.1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
@@ -168,7 +165,7 @@ Se você selecionar o componente VMware vSAN para o cluster, especifique as conf
 * **Número de discos de capacidade vSAN**: especifique o número de discos de capacidade que deseja incluir.
 * Se você desejar incluir discos de capacidade além do limite de oito, marque a caixa **Intel Optane de alto desempenho**. Essa opção fornece dois compartimentos de disco de capacidade extras para um total de 10 discos de capacidade e é útil para cargas de trabalho que requerem menos latência e maior rendimento de IOPS.
 
-  A opção **Intel Optane de alto desempenho** está disponível apenas para os modelos de CPU Dual Intel Xeon Gold 5120 e Dual Intel Xeon Gold 6140 do Skylake.
+  A opção **Intel Optane de alto desempenho** está disponível somente para os modelos de CPU Skylake.
   {:note}
 
 * Revise os valores **Tipo de disco para discos de cache vSAN** e **Número de discos de cache vSAN**. Esses valores dependem de a caixa **Intel Optane de alto desempenho** estar ou não marcada.
@@ -211,12 +208,7 @@ O nome de domínio é usado para todos os {{site.data.keyword.baremetal_short}} 
 ### Rede pública ou privada
 {: #vs_orderinginstances-public-private-network}
 
-As configurações de ativação da Placa da interface de rede (NIC) baseiam-se em sua seleção de **Rede pública e privada** ou **Somente rede privada**. Os serviços complementares a seguir requerem NICs públicas e não estarão disponíveis se você selecionar a opção privada:
-
-* F5 on {{site.data.keyword.cloud_notm}}
-* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
-* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
-* Zerto on {{site.data.keyword.cloud_notm}}
+As configurações de ativação da Placa da interface de rede (NIC) baseiam-se em sua seleção de **Rede pública e privada** ou **Somente rede privada**.
 
 ### VLANs
 {: #vs_orderinginstances-vlans}
@@ -297,7 +289,7 @@ Se você salvou a configuração de cluster como um modelo, obterá uma notifica
 
 Se tiver feito um pedido, a implementação do cluster será iniciada automaticamente e você receberá uma confirmação por e-mail de que o pedido está sendo processado. Quando o cluster estiver pronto para usar, você será notificado por e-mail.
 
-Os clusters do vSphere, ao contrário das instâncias do servidor vCenter e do Cloud Foundation, não são exibidos na página **Recursos**.
+Os clusters do vSphere, ao contrário das instâncias do vCenter Server, não são exibidos na página **Recursos**.
 {:note}
 
 ## Links relacionados

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,7 +18,7 @@ subcollection: vmwaresolutions
 # Diseño de KMIP for VMware
 {: #kmip-design}
 
-KMIP for VMware on {{site.data.keyword.cloud}} proporciona un servicio de gestión de claves compatible con el cifrado de VMware vSAN y con el cifrado de VMware vSphere, mediante el uso de [IBM Key Protect](/docs/services/key-protect?topic=key-protect-getting-started-tutorial) para proporcionar almacenamiento de claves raíz y de claves de datos.
+KMIP for VMware on {{site.data.keyword.cloud}} proporciona un servicio de gestión de claves compatible con el cifrado de VMware vSAN y con el cifrado de VMware vSphere, mediante el uso de [IBM Key Protect](/docs/services/key-protect?topic=key-protect-getting-started-tutorial) o [IBM Cloud Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-get-started#get-started) para proporcionar almacenamiento de claves raíz y de claves de datos. Key Protect e Hyper Protect Crypto Services funcionan como el servicio de gestión de claves de esta solución.
 
 ## Opciones de cifrado de almacenamiento
 {: #kmip-design-storage-options}
@@ -57,7 +57,7 @@ Cuando hay algún tipo de cifrado habilitado en el clúster de vSphere, VMware c
 Si se utiliza KMIP for VMware con el cifrado de vSAN o el cifrado de vSphere, existen varias capas de protección de claves.
 
 Si tiene intención de rotar las claves, examine la siguiente información sobre los niveles en los que se pueden rotar las claves:
-* La clave raíz del cliente (CRK) protege todas las claves de VMware. Las claves se pueden rotar en la instancia de IBM Key Protect asociada a la instancia de KMIP for VMware.
+* La clave raíz del cliente (CRK) protege todas las claves de VMware. Las claves se pueden rotar en la instancia de IBM Key Protect o Hyper Protect Crypto Services asociada a la instancia de KMIP for VMware.
 * KMIP for VMware utiliza su CRK para proteger las claves que genera y distribuye a VMware. VMware considera que estas son "claves de cifrado clave" (KEK).
   * Si utiliza cifrado de vSphere, puede rotar las claves con el mandato de PowerShell **Set-VMEncryptionKey**.
   * Si utiliza cifrado de vSAN, puede rotar las claves en la interfaz de usuario de vSAN.
@@ -68,46 +68,49 @@ Si tiene intención de rotar las claves, examine la siguiente información sobre
 ## KMIP for VMware
 {: #kmip-design-kmip-for-vmware}
 
-El cifrado de VMware vSAN y el cifrado de vSphere son compatibles con muchos servidores de gestión de claves. KMIP for VMware proporciona un servicio de gestión de claves gestionado por IBM que utiliza IBM Key Protect para proporcionarle control completo sobre las claves. Otros servicios de {{site.data.keyword.cloud_notm}}, como por ejemplo Cloud Object Storage, también se integran con Key Protect, convirtiéndolo en su punto central de control para la gestión de claves en {{site.data.keyword.cloud_notm}}.
+El cifrado de VMware vSAN y el cifrado de vSphere son compatibles con muchos servidores de gestión de claves. KMIP for VMware proporciona un servicio de gestión de claves gestionado por IBM que utiliza IBM Key Protect o Hyper Protect Crypto Services para proporcionarle control completo sobre las claves. Otros servicios de {{site.data.keyword.cloud_notm}}, como por ejemplo Cloud Object Storage, también se integran con Key Protect e Hyper Protect Crypto Services, convirtiéndolo en su punto central de control para la gestión de claves en {{site.data.keyword.cloud_notm}}.
 
 ### Claves dentro de claves
 {: #kmip-design-keys}
 
 Los sistemas de gestión de claves suelen utilizar una técnica conocida como *cifrado de sobre* para envolver o proteger las claves con otras claves. Estas claves se denominan *claves raíz* o *claves de cifrado de claves* (KEK). Para acceder a una clave, es necesario descifrar o desenvolver la clave utilizando su clave raíz correspondiente. Destruir la clave raíz es una forma eficaz de invalidar todas las claves que protege. Estas claves no se deben almacenar cerca de la clave raíz. Es importante controlar el acceso a la clave raíz.
 
-{{site.data.keyword.cloud_notm}} Key Protect proporciona este servicio utilizando una *clave raíz de cliente* (CRK). Key Protect almacena las CRK exclusivamente en el hardware de {{site.data.keyword.cloud_notm}} CloudHSM, desde donde no se pueden extraer. Estas CRK se utilizan para envolver más claves de cifrado, como las que genera KMIP for VMware para la instancia de VMware.
+{{site.data.keyword.cloud_notm}} Key Protect e Hyper Protect Crypto Services proporcionan este servicio utilizando una *clave raíz de cliente* (CRK). Key Protect almacena las CRK exclusivamente en el hardware de {{site.data.keyword.cloud_notm}} CloudHSM, desde donde no se pueden extraer; Hyper Protect Crypto Services almacena claves en HSM de IBM zSeries. Estas CRK se utilizan para envolver más claves de cifrado, como las que genera KMIP for VMware para la instancia de VMware.
 
 VMware implementa este mismo concepto para sus claves. KMIP for VMware proporciona una clave a VMware previa solicitud, y VMware a su vez utiliza esta clave como KEK para envolver o cifrar las claves finales que se utilizan para cifrar las unidades de disco vSAN o los discos de máquina virtual. Estas claves finales se denominan claves de cifrado de datos (DEK).
 
 Por lo tanto, terminamos con la siguiente cadena de cifrado:
-* Clave raíz de cliente (CRK) almacenada de forma permanente en IBM Key Protect.
+* Clave raíz de cliente (CRK) almacenada de forma permanente en IBM Key Protect o Hyper Protect Crypto Services.
 * Clave de cifrado de clave (KEK) generada por KMIP for VMware y suministrada a vCenter Server y a los hosts ESXi en la instancia.
 * Clave de cifrado de datos (DEK) generada por VMware y almacenada junto con el disco de vSAN o el disco de máquina virtual.
 
-KMIP for VMware almacena la forma envuelta de las KEK en IBM Key Protect. Aunque las KEK están protegidas criptográficamente por la CRK y no es necesario que se almacenen dentro de HSM, si las almacena en IBM Key Protect su presencia es visible y puede suprimirlas si necesita revocar claves individuales.
+KMIP for VMware almacena la forma envuelta de las KEK en IBM Key Protect o Hyper Protect Crypto Services. Aunque las KEK están protegidas criptográficamente por la CRK y no es necesario que se almacenen dentro de HSM, si las almacena en el servicio de gestión de claves su presencia es visible y puede suprimirlas si necesita revocar claves individuales.
 
 ### Autenticación y autorización
 {: #kmip-design-authentication}
 
-Tres componentes componen la solución de cifrado de almacenamiento: el clúster de VMware, la instancia de KMIP for VMware y la instancia de Key Protect.
+Tres componentes componen la solución de cifrado de almacenamiento: el clúster de VMware, la instancia de KMIP for VMware y la instancia de Key Protect o Hyper Protect Crypto Services.
 
 VMware vCenter y ESXi se autentican con la instancia de KMIP for VMware utilizando los certificados que se instalan o se generan en VMware vCenter cuando se crea una conexión de servidor de gestión de claves (KMS). Puede instalar el certificado público en KMIP for VMware para identificar el cliente o los clientes de vCenter a los que se permite conectarse. Cada cliente está autorizado a todas las claves almacenadas en dicha instancia de KMIP for VMware.
 
-La instancia de KMIP for VMware está autorizada a la instancia de Key Protect utilizando un ID de servicio de {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) al que se ha otorgado acceso a la instancia de Key Protect. El ID de servicio debe tener un acceso mínimo de visor de la plataforma y de gestor de servicios sobre la instancia de Key Protect. KMIP for VMware utiliza la clave raíz del cliente (CRK) que elija en la instancia de Key Protect, y almacena todas las KEK generadas en nombre de VMware, en formato envuelto, en la instancia de Key Protect.
+La instancia de KMIP for VMware está autorizada a la instancia de Key Protect o Hyper Protect Crypto Services utilizando un ID de servicio de {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) al que se ha otorgado acceso a la instancia. El ID de servicio debe tener un acceso mínimo de visor de la plataforma y de gestor de servicios sobre la instancia del gestor de claves. KMIP for VMware utiliza la clave raíz del cliente (CRK) que elija en la instancia del gestor de claves, y almacena todas las KEK generadas en nombre de VMware, en formato envuelto, en la instancia del gestor de claves.
 
 ### Topología
 {: #kmip-design-topology}
-
-Figura 1. Componentes de KMIP for VMware on {{site.data.keyword.cloud_notm}}
-![Componentes de KMIP for VMware on {{site.data.keyword.cloud_notm}}](kmip-key-protect.svg "La solución habilita el cifrado de VMware vSphere y el cifrado de vSAN utilizando las claves raíz almacenadas en IBM Key Protect.")
 
 KMIP for VMware está disponible en una serie de regiones multizona (MZR) de {{site.data.keyword.cloud_notm}}. Para ver la lista completa, consulte [Solicitud de KMIP para VMware](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering).
 
 Dentro de cada MZR, KMIP for VMware proporciona dos puntos finales de servicio de red en la red privada de {{site.data.keyword.cloud_notm}} para ofrecer una alta disponibilidad. Configure ambos puntos finales en la configuración del servidor de gestión de claves de vCenter (KMS) como un clúster de KMS. Para ver una lista de los puntos finales de cada MZR y de las firmas de certificado de servidor KMIP, consulte la [documentación del servicio KMIP for VMware](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering).
 
+Para acceder a KMIP for VMware a través de la red privada, la cuenta de infraestructura de {{site.data.keyword.cloud_notm}} debe estar habilitada para el direccionamiento y el reenvío virtuales (VRF) y las rutas de punto final de servicio de red de {{site.data.keyword.cloud_notm}} se deben añadir a las rutas VRF de la cuenta. Para obtener más información, consulte
+[Habilitación de la cuenta para que utilice puntos finales de servicio mediante la CLI de IBM Cloud](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps).
+
 KMIP for VMware también se conecta a {{site.data.keyword.cloud_notm}} Key Protect utilizando la red privada de {{site.data.keyword.cloud_notm}} en lugar de Internet público.
 
-Para acceder a KMIP for VMware a través de la red privada, la cuenta de infraestructura de {{site.data.keyword.cloud_notm}} debe estar habilitada para el direccionamiento y el reenvío virtuales (VRF) y las rutas de punto final de servicio de red de {{site.data.keyword.cloud_notm}} se deben añadir a las rutas VRF de la cuenta. Para obtener más información, consulte [habilitación de la cuenta para puntos finales de servicio](/docs/services/service-endpoint?topic=services/service-endpoint-getting-started#cs_cli_install_steps).
+Figura 1. Componentes de KMIP for VMware on {{site.data.keyword.cloud_notm}} cuando se utiliza IBM Key Protect
+![Componentes de KMIP for VMware on {{site.data.keyword.cloud_notm}}](kmip-key-protect.svg "La solución permite el cifrado de VMware vSphere y el cifrado vSAN utilizando claves raíz que se almacenan en IBM Key Protect.")
+
+Al utilizar IBM Cloud Hyper Protect Crypto Services, las claves se almacenan en un HSM de IBM zSeries en lugar de en CloudHSM. Además, la conexión entre KMIP for VMware e {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services fluye a través de la red pública, pero está protegida por el cifrado y la autenticación TLS.
 
 ## Enlaces relacionados
 {: #kmip-design-related}

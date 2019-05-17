@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -134,7 +134,7 @@ Figure 2. Déploiement de passerelle cloud
 
 Le second composant qui est déployé est le dispositif d'optimisation de réseau WAN. Ce dispositif d'optimisation du réseau WAN est optionnel et il effectue un conditionnement de réseau WAN pour réduire les effets de latence. Il incorpore également la correction d'erreur en aval (Forward Error Correction) pour annuler les scénarios de perte de paquet, et le dédoublonnage de modèles de trafic redondant.
 
-Ensemble, tout cela réduit l'utilisation de bande passante et garantit la meilleure utilisation de la capacité réseau disponible pour l'expédition du transfert de données vers et depuis IBM Cloud. L'optimiseur de réseau WAN utilise beaucoup de ressources de disque et il requiert un nombre suffisant d'IOPS pour fonctionner correctement. Par conséquent, l'optimiseur de réseau WAN réside sur le stockage vSAN au sein de l'environnement VCF et du stockage Endurance et il prend en charge plus de 2 000 IOPS au sein d'un déploiement vCenter Server. La spécification de dimensionnement pour le dispositif d'optimisation de réseau WAN est indiquée dans le tableau ci-après.
+Ensemble, tout cela réduit l'utilisation de bande passante et garantit la meilleure utilisation de la capacité réseau disponible pour l'expédition du transfert de données vers et depuis IBM Cloud. L'optimiseur de réseau WAN utilise beaucoup de ressources de disque et il requiert un nombre suffisant d'IOPS pour fonctionner correctement. Par conséquent, l'optimiseur de réseau WAN réside sur le stockage vSAN s'il est présent, ou sur le stockage Endurance avec 2 000 IOPS. La spécification de dimensionnement pour le dispositif d'optimisation de réseau WAN est indiquée dans le tableau ci-après.
 
 Table 9. Dimensionnement de dispositif de l'optimiseur de réseau WAN
 

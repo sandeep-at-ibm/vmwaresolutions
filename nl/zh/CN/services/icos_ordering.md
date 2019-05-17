@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-20"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -30,7 +30,7 @@ Veeam Availability Suite 9.5 Update 4 发布后，现在 Veeam 与 IBM Cloud Obj
 ## 创建存储区
 {: #icos_ordering-bucket}
 
-要创建存储区，请参阅[步骤 1：创建一些存储区来存储数据](https://cloud.ibm.com/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-getting-started-console-#create-buckets)。执行其中的步骤，然后返回到此部分以继续执行以下任务。
+要创建存储区，请参阅[创建一些存储区来存储数据](/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-getting-started-tutorial#gs-create-buckets)。执行其中的步骤，然后返回到此部分以继续执行以下任务。
 
 ## 创建服务凭证
 {: #icos_ordering-service-cred}

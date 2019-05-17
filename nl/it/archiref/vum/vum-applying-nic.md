@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,7 +18,7 @@ ESXi 6.5 contiene molti nuovi driver nativi che sostituiscono i driver vmklinux 
 
 ixgben è un driver nativo che sostituisce il driver vmklinux net-ixgbe ma non supporta SR-IOV e SW FcOE. L'automazione di ICVS non abilita questo driver quando viene eseguito il provisioning del tuo host vSphere ESXi. Si consiglia di abilitare questo driver per i benefici prestazionali che offre. La seguente procedura descritta in questa appendice ti mostra come abilitare e disabilitare i driver nativi utilizzando la riga di comando vSphere (vCLI).
 
-Prima di iniziare questa attività, recupera tutti gli indirizzi IP degli host fisici, gli ID di accesso e le password dal [{{site.data.keyword.cloud}}portale dell'infrastruttura](https://control.softlayer.com/devices). Ciò è necessario in caso di ripristino o per controllare l'avanzamento di un aggiornamento, in cui non esiste un accesso di rete diretto all'host.
+Prima di iniziare questa attività, recupera tutti gli indirizzi IP IPMI degli host fisici, gli ID di accesso e le password dal [portale del cliente dell'infrastruttura {{site.data.keyword.cloud}}](https://control.softlayer.com/devices). Ciò è necessario in caso di ripristino o per controllare l'avanzamento di un aggiornamento, in cui non esiste un accesso di rete diretto all'host.
 
 Per ogni host, effettua le seguenti operazioni in successione:
 1. Utilizza il client web vSphere per mettere l'host vSphere ESXi in modalità di manutenzione selezionando **Home** > **Hosts and Clusters**. Nel riquadro di navigazione, seleziona l'host vSphere ESXi, fai clic con il tasto destro del mouse sull'host e seleziona **Maintenance Mode** > **Enter Maintenance Mode**. Poiché l'host fa parte di un cluster DRS automatizzato, le VM (Virtual Machine) vengono migrate su host diversi quando l'host entra in modalità di manutenzione.
@@ -38,7 +38,7 @@ Per ogni host, effettua le seguenti operazioni in successione:
 
 Se hai bisogno di ripristinare e non puoi eseguire l'SSH nell'host vSphere ESXi, devi accedere alla console KVM per l'host che richiede il ripristino tramite la finestra di controllo di {{site.data.keyword.cloud_notm}}.
 
-Utilizza l'ID e la password elencati nella finestra di controllo di {{site.data.keyword.cloud_notm}} con l'indirizzo IP IPMI per accedere all'interfaccia web IPMI. Devi essere connesso al data center in cui si trova l'host tramite VPN. Per ulteriori informazioni, vedi [Introduzione a VPN](/docs/infrastructure/iaas-vpn?topic=VPN-getting-started-with-virtual-private-networking-vpn-).
+Utilizza l'ID e la password elencati nella finestra di controllo di {{site.data.keyword.cloud_notm}} con l'indirizzo IP IPMI per accedere all'interfaccia web IPMI. Devi essere connesso al data center in cui si trova l'host tramite VPN. Per ulteriori informazioni, vedi [Introduzione a VPN](/docs/infrastructure/iaas-vpn?topic=VPN-gettingstarted-with-virtual-private-networking#gettingstarted-with-virtual-private-networking).
 
 1. Vai alla pagina Device Details, Remote Mgmt per l'host vSphere ESXi e seleziona **Actions** > **KVM Console**. Si apre un'altra finestra in cui dovrai immettere utente e password IPMI.
 2. Seleziona **Remote Control** > **iKVM/HTML5** e fai clic su **iKVM/HTML5** per riavviare. Puoi ora accedere alla console dell'host vSphere ESXi.
@@ -53,4 +53,4 @@ Utilizza l'ID e la password elencati nella finestra di controllo di {{site.data.
 {: #vum-applying-nic-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (dimostrazioni)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (dimostrazioni)

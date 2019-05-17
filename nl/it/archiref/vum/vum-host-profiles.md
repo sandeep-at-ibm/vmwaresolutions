@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -21,7 +21,7 @@ Poiché più host vSphere ESXi di VMware vCenter Server on {{site.data.keyword.c
 Per aggiungere altri host al tuo cluster vCenter Server, vedi [Espansione e contrazione della capacità per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers).
 
 Nota:
-*	Per le istanze distribuite o aggiornate alla V2.1 o superiore, i cluster e i server ESXi appena distribuiti vengono corretti con i recenti aggiornamenti ESXi da VMware, ma non necessariamente con gli aggiornamenti più recenti.
+*	Per le istanze distribuite o di cui è stato eseguito l'upgrade alla V2.1 o superiore, i cluster e i server ESXi appena distribuiti vengono corretti con i recenti aggiornamenti ESXi da VMware, ma non necessariamente con gli aggiornamenti più recenti.
 *	Sei responsabile di tutti gli altri aggiornamenti ai componenti VMware, inclusa la garanzia che i cluster e i server ESXi appena distribuiti abbiano tutti gli aggiornamenti più recenti necessari.
 
 Consigliamo che dopo l'aggiunta di un nuovo host nel cluster, esso venga messo in modalità di manutenzione in modo che possa essere riesaminato per verificare lo scostamento di conformità e corretto prima di ospitare qualsiasi carico di lavoro.
@@ -57,13 +57,13 @@ Per verificare la conformità è necessaria la seguente sequenza di operazioni:
 
 1.	Passa al profilo host che è stato precedentemente completato.
 2.	Fai clic sull'**icona Check Host Profile Compliance**.
-3.	Nella **scheda Objects**, lo stato di conformità viene aggiornato come _Compliant, Unknown o _Non-compliant_. Uno stato non conforme indica che è stata rilevata un'incongruenza specifica tra il profilo e il nuovo host.
+3.	Nella scheda **Objects**, lo stato di conformità viene aggiornato come _Compliant, Unknown o _Non-compliant_. Uno stato non conforme indica che è stata rilevata un'incongruenza specifica tra il profilo e il nuovo host.
 
 ##	Riesame degli errori di conformità e correzione
 {: #vum-host-profiles-review-compliance}
 
 1. Per visualizzare ulteriori dettagli sugli errori di conformità, seleziona **Host Profile** dalla scheda **Objects** utilizzata nella verifica di conformità.
-2. Per visualizzare dettagli specifici su quali parametri differiscono tra l'host che non ha rispettato la conformità e il profilo host, fai clic sulla **scheda Monitor** e seleziona la **vista Compliance**.
+2. Per visualizzare dettagli specifici su quali parametri differiscono tra l'host che non ha rispettato la conformità e il profilo host, fai clic sulla scheda **Monitor** e seleziona la vista **Compliance**.
 3. Espandi la gerarchia degli oggetti e seleziona l'host in errore.
 4. I parametri che differiscono vengono visualizzati nella finestra Compliance, sotto la gerarchia.
 5. Esamina i parametri e comprendi il motivo per cui il nuovo host può variare dall'host di riferimento. Per i parametri in cui la conformità non è accettabile, correggi prima di spostare il nuovo host dalla modalità di manutenzione. Ad esempio, laddove lo scostamento della configurazione sia provocato dall'azione dell'amministratore di sistema.
@@ -72,4 +72,4 @@ Per verificare la conformità è necessaria la seguente sequenza di operazioni:
 {: #vum-host-profiles-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (dimostrazioni)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (dimostrazioni)

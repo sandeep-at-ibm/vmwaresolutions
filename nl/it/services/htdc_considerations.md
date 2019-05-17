@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -20,7 +20,7 @@ subcollection: vmwaresolutions
 
 Il servizio HyTrust DataControl on {{site.data.keyword.cloud}} offre una potente crittografia con gestione delle chiavi integrata per proteggere i carichi di lavoro per tutto il loro ciclo di vita. Il servizio fornisce la crittografia sia a livello di sistema operativo che a livello di dati. Ciò consente di crittografare e decrittografare qualsiasi directory, cartella o file all'interno di un carico di lavoro.
 
-Questo servizio è disponibile solo per le istanze che eseguono vSphere 6.5 e che sono distribuite o aggiornate alla V2.3 o successive. La versione HyTrust DataControl corrente installata è la 4.2.1.
+Questo servizio è disponibile solo per le istanze che eseguono vSphere 6.5 e che sono distribuite o di cui è stato eseguito l'upgrade alla V2.3 o successive. La versione HyTrust DataControl corrente installata è la 4.3.
 {:note}
 
 ## Specifiche tecniche per HyTrust DataControl on IBM Cloud

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-20"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -30,7 +30,7 @@ subcollection: vmwaresolutions
 ## 建立儲存區
 {: #icos_ordering-bucket}
 
-若要建立儲存區，請參閱[步驟 1：建立一些儲存區來儲存資料](https://cloud.ibm.com/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-getting-started-console-#create-buckets)。請遵循這些步驟並回到本節，以繼續執行下列作業。
+若要建立儲存區，請參閱[建立一些儲存區來儲存資料](/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-getting-started-tutorial#gs-create-buckets)。請遵循這些步驟並回到本節，以繼續執行下列作業。
 
 ## 建立服務認證
 {: #icos_ordering-service-cred}

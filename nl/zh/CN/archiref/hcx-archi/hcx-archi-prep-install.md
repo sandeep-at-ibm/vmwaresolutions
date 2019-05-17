@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -16,14 +16,14 @@ subcollection: vmwaresolutions
 安装 VMware HCX on IBM Cloud 具有以下软件需求：
 * vSphere 5.5 U3 或者 vSphere 6.0u2 或更高版本。
 * 如果使用了 NSX，版本须为 V6.2.2 或更高版本。策略迁移需要 NSX。
-* 要使用跨云 vMotion，适用于内部部署的相同亲缘关系限制也适用于跨云的情况。有关更多信息，请参阅 [VMware EVC 和 CPU 兼容性常见问题](http://bit.ly/2vK6Sp5)。
+* 要使用跨云 vMotion，适用于内部部署的相同亲缘关系限制也适用于跨云的情况。有关更多信息，请参阅 [VMware EVC 和 CPU 兼容性常见问题](https://kb.vmware.com/s/article/1005764)。
 
 ## 配置网络连接
 {: #hcx-archi-prep-install-config-net}
 
 HCX 必须遍历公用因特网和专用线路，并连接到数据中心组件，例如网络、交换机和端口组。
 * [端口访问需求](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-port-req)列出了必须打开的端口，只有打开这些端口，HCX 虚拟设备才能成功安装。
-* 内部部署 vSphere 环境和 VCF/VCS HCX 云环境都必须允许 vSphere 内部部署设备和 VCF/VCS HCX 设备之间进行网络时间协议 (NTP) 时钟同步。UDP 端口 123 必须可由 HCX 虚拟设备和网络访问。
+* 内部部署 vSphere 环境和 VCS HCX 云环境都必须允许 vSphere 内部部署设备和 VCS HCX 设备之间进行网络时间协议 (NTP) 时钟同步。UDP 端口 123 必须可由 HCX 虚拟设备和网络访问。
 
 ## 内部部署环境
 {: #hcx-archi-prep-install-on-prem-env}
@@ -49,11 +49,11 @@ HCX 必须遍历公用因特网和专用线路，并连接到数据中心组件�
   * vSphere Enterprise Plus 许可证
   * 必须具有 vSphere 分布式交换机 (vDS)。分布式交换机可与 vSphere Enterprise Plus Edition 一起使用。
   * 安装后，内部部署第 2 层集中器服务设备必须有权访问 vNIC 端口和要延伸的任何 VLAN。
-  * 如果要通过公用因特网或 VPN（在备用路径上）延伸网络，那么 VCF/VCS 中的 L2C 虚拟机需要 IP 地址。配置第 2 层集中器需要该远程 IP 地址。
+  * 如果要通过公用因特网或 VPN（在备用路径上）延伸网络，那么 VCS 中的 L2C 虚拟机需要 IP 地址。配置第 2 层集中器需要该远程 IP 地址。
   * 如果需要多个第 2 层集中器，那么每个集中器都必须具有内部部署和云中的 IP 地址。
 
 ## 相关链接
 {: #hcx-archi-prep-install-related}
 
 * [在源上安装和配置 HCX](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-install-cfg-src)
-* [VMware EVC 和 CPU 兼容性常见问题](http://bit.ly/2vK6Sp5)
+* [VMware EVC 和 CPU 兼容性常见问题](https://kb.vmware.com/s/article/1005764)

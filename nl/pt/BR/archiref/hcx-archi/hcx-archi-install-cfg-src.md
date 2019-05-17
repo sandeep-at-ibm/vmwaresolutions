@@ -4,16 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
 # Instalando e configurando o HCX na origem
 {: #hcx-archi-install-cfg-src}
 
-A instalação no local acarreta a implementação do dispositivo de gerenciamento HCX e no registro dele no vCenter e em um ou mais terminais de nuvem ativados para VCF/VCS HCX.
+A instalação no local acarreta a implementação do dispositivo de gerenciamento HCX e no registro dele com o vCenter e um ou mais terminais em nuvem ativados para VCS HCX.
 
 ## Instalando o HCX Manager Appliance
 {: #hcx-archi-install-cfg-src-install-hma}

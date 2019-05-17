@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -64,7 +64,7 @@ subcollection: vmwaresolutions
 |---|---|
 |환경 |환경 이름이 "Initial" 로 설정됨|
 |환경 | 점수가 5로 설정됨|
-|자산 저장소 |두 개의 자산 저장소(vCenter 및 NSX Manager)가 구성됩니다. 호스트 URL이 https://*vCenter fqdn* 및 https://*NSX Manager fqdn*로 설정됩니다.|
+|자산 저장소 |두 개의 자산 저장소(vCenter 및 NSX Manager)가 구성됩니다. 호스트 URL이 `https://vCenter_fqdn` 및 `https://*NSX Manager_fqdn`으로 설정됩니다. |
 |자산 저장소 |두 개의 자산(vCenter 및 NSX Manager)이 구성되며, 둘 다 동일한 사용자 이름을 사용합니다. 사용자 이름이 vCenter 관리자 사용자 이름으로 설정됩니다.|
 |자산 저장소 |두 개의 자산(vCenter 및 NSX Manager)이 구성되며, 둘 다 동일한 비밀번호를 사용합니다. 비밀번호가 vCenter 관리자 비밀번호로 설정됩니다.
 |자산 저장소 |두 개의 자산(vCenter 및 NSX Manager)이 구성되며, 둘 다 동일한 비밀번호를 사용합니다. 한 저장소의 유형은 vCenter로 다른 저장소의 유형은 NSX로 설정됩니다.

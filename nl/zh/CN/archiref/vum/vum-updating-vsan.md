@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -48,7 +48,7 @@ vSAN 集群升级将按以下顺序执行任务：
 ### 配置 VCSA 以使用代理
 {: #vum-updating-vsan-config-vcsa-proxy}
 
-1.	通过跳板机 Web 浏览器连接到 VCSA 管理界面 `https://<vCenter ip>:5480`。
+1.	通过跳板机 Web 浏览器连接到 VCSA 管理界面 `https://<vCenter ip>:5480`
 2.	通过使用 IC4VS 控制台中的凭证，以 root 用户身份登录到 VCSA 管理界面。
 3.	在 vCenter Server Appliance 管理界面中，单击**联网**，然后单击**管理**。
 4.	要配置代理服务器，请在“代理设置”窗格中，单击**编辑**。
@@ -62,24 +62,24 @@ vSAN 集群升级将按以下顺序执行任务：
 ### 配置 vSAN 以使用代理
 {: #vum-updating-vsan-config-vsan-proxy}
 
-1. 浏览至**主页** > **主机和集群**，选择“导航”窗格中的 **vSAN 集群**，选择**配置**选项卡并浏览至 **vSAN**，然后选择**常规**。滚动到**因特网连接**部分，然后单击**编辑**。
+1. 导航至**主页** > **主机和集群**，选择“导航”窗格中的 **vSAN 集群**，选择**配置**选项卡并导航至 **vSAN**，然后选择**常规**。滚动到**因特网连接**部分，然后单击**编辑**。
 2. 输入代理的 IP 地址和端口号，然后单击**确定**。
 
 ### 启用客户体验改善计划 (CEIP)
 {: #vum-updating-vsan-enable-ceip}
 
-这是可选步骤。使用 vSphere Web Client，浏览至**主页** > **管理** > **客户体验改善计划**，然后单击**加入**。
+这是可选步骤。使用 vSphere Web Client，导航至**主页** > **管理** > **客户体验改善计划**，然后单击**加入**。
 
 ### 完成测试上传并验证上传是否有效
 {: #vum-updating-vsan-complete-upload}
 
-1. 使用 vSphere Web Client，浏览至**主页** > **主机和集群**。选择所需的集群，然后选择**监视**选项卡和 **vSAN** 页面，然后单击**运行状况**。单击**启用联机运行状况**。
+1. 使用 vSphere Web Client，导航至**主页** > **主机和集群**。选择所需的集群，然后选择**监视**选项卡和 **vSAN** 页面，然后单击**运行状况**。单击**启用联机运行状况**。
 2. 单击**重新测试**并等待此过程完成。
 3. “运行状况”中会显示名为_联机运行状况连接_的新检查，并且**启用联机运行状况**会更改为**重新测试联机运行状况**。
 4. 单击**重新测试联机运行状况**来启动第一次上传，然后通过在“最近的任务”窗格中查看状态来等待此过程完成。“测试名称”会更改为“联机运行状况（上次检查时间：刚才）”。
 5. 完成后，在“运行状况”窗口中滚动至“vSAN 构建建议”并将其展开，然后单击 **vSAN 构建建议引擎运行状况**。
 6. 单击**登录到 my.vmware.com**，并输入凭证。此过程完成后，**测试结果**将更改为**已通过**状态。
-7. 按 **Update Manager** 选项卡，vSAN 集群已添加到“基线”。
+7. 单击 **Update Manager** 选项卡，vSAN 集群已添加到“基线”。
 
 ## 先决条件
 {: #vum-updating-vsan-prereq}
@@ -92,7 +92,7 @@ vSAN 集群升级将按以下顺序执行任务：
 * **所有 vSAN 磁盘都应该运行正常**：
   - 没有磁盘处于故障或缺失状态。这可以通过 vSphere Web Client 中的 **vSAN 磁盘管理**视图进行确定。单击**主页** > **主机和集群**，选择 **vSAN 集群**，单击 **vSAN** 选项卡，然后单击**物理磁盘**。滚动浏览所有磁盘并查看 vSAN 运行状态。
   - 没有不可访问的 vSAN 对象。这可以通过 **vSAN 运行状况服务**来进行验证，方法是单击**主页** > **主机和集群**，然后选择 **vSAN 集群**。单击**监视**选项卡，单击 **vSAN**，然后单击**运行状况**。复查测试结果。
-  - 在升级过程启动时，没有任何活动的再同步，检查方法是单击**主页** > **主机和集群**，选择 **vSAN 集群**，单击 **vSAN** 选项卡，然后单击**再同步组件**。_再同步组件计数应为 0_。由于数据需要在主机重新启动后同步，因此在升级过程中应该会有一些再同步活动。
+  - 在升级过程刚启动时，没有任何活动的再同步，检查方法是单击**主页** > **主机和集群**，选择 **vSAN 集群**，单击 **vSAN** 选项卡，然后单击**再同步组件**。_再同步组件计数应为 0_。由于数据需要在主机重新启动后同步，因此在升级过程中应该会有一些再同步活动。
 * **vSphere ESXi 主机准备** - 在 vSAN 集群中将主机移至维护模式后，有三个选项可供选择：
   - **无数据迁移** - 如果选择此选项，那么 vSAN 不会从此主机转移任何数据。如果关闭主机的电源或从集群中除去主机，那么某些虚拟机 (VM) 可能会变得不可访问。
   - **确保可用性** - 如果选择此选项，那么 vSAN 允许您比“完全数据迁移”更快地将主机移至维护模式，并允许访问环境中的 VM。
@@ -152,4 +152,4 @@ Ruby vSphere Console (RVC) 是面向 vSphere 的基于 Ruby 的命令行界面�
 {: #vum-updating-vsan-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 解决方案体系结构](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on IBM Cloud 数字技术互动](https://ibm-dte.mybluemix.net/ibm-vmware)（演示）
+* [VMware Solutions on IBM Cloud 数字技术互动](https://ibm-dte.mybluemix.net/vmware)（演示）

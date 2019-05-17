@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-25"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -46,7 +46,7 @@ subcollection: vmwaresolutions
 
 - 使用 [{{site.data.keyword.cloud_notm}} VPN](https://www.softlayer.com/vpn-access) 或 [{{site.data.keyword.cloud_notm}} DirectLink 連線](https://www.ibm.com/cloud/direct-link)來存取實例管理端點。
 - 設計您實例內的公用網路連線功能策略。您的選項包括：範例客戶 VMware NSX Edge Services Gateway (ESG)、閘道應用裝置（例如 Vyatta 和 FortiGate），以及在 {{site.data.keyword.cloud_notm}} 網路中或透過 DirectLink 存取的專屬網路上所部署的 Proxy 伺服器。
-- 規劃要在具有 [{{site.data.keyword.cloud_notm}} 可攜式 IP 位址](/docs/infrastructure/subnets?topic=subnets-getting-started-with-subnets-and-ips)的 {{site.data.keyword.cloud_notm}} VLAN 上部署工作負載，還是[在 NSX 邏輯交換器 (VXLAN) 上使用您自己的 IP 位址](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_overview)來部署工作負載。請注意，使用 NSX 軟體定義網路 (SDN) 可讓您具有在 {{site.data.keyword.cloud_notm}} 中管理及保護工作負載網路的最大彈性。
+- 規劃要在具有 [{{site.data.keyword.cloud_notm}} 可攜式 IP 位址](/docs/infrastructure/subnets?topic=subnets-getting-started-subnets-ips#getting-started-subnets-ips)的 {{site.data.keyword.cloud_notm}} VLAN 上部署工作負載，還是[在 NSX 邏輯交換器 (VXLAN) 上使用您自己的 IP 位址](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_overview)來部署工作負載。請注意，使用 NSX 軟體定義網路 (SDN) 可讓您具有在 {{site.data.keyword.cloud_notm}} 中管理及保護工作負載網路的最大彈性。
 - 使用 NSX ESG、[IBM Cloud Vyatta](https://cloud.ibm.com/catalog/infrastructure/virtual-router-appliance) 及 DirectLink 對等作業，來規劃與工作負載的連線功能（網址轉換、虛擬專用網路、遞送）。
 - 如果實作「跨 vCenter NSX」，請先確定本端區段 ID 範圍未重疊，再部署任何本端工作負載。
 
@@ -107,7 +107,7 @@ subcollection: vmwaresolutions
 - 警示基礎架構，包含配置 SMTP 伺服器及簡訊服務 (SMS) 閘道（視需要）。
 - 主動監視主機、磁碟機、管理軟體及網路。
 - vSAN 監視（適用時）。
-- 容量監視及規劃。您可以從 {{site.data.keyword.vmwaresolutions_short}} 主控台，在實例中[新增及移除叢集](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)以及[新增及移除主機](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)。
+- 容量監視及規劃。您可以從 {{site.data.keyword.vmwaresolutions_short}} 主控台，在實例中[新增及移除叢集](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)以及[新增及移除主機](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)。
 - 監視備份基礎架構及備份工作。
 
 ## 營運持續及可用性

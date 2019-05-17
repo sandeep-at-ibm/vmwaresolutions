@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -26,4 +26,4 @@ Lorsque vous ajoutez une configuration de cluster à haute disponibilité doté 
 
 Ce problème se produit en l'absence de redondance au niveau du stockage partagé de manière à activer le signal de présence des magasins de données.
 
-Pour obtenir plus d'informations et pour connaître la procédure permettant de corriger ce problème, voir [HA error: "The number of heartbeat data stores for host is 1, which is less than required: 2" (2004739)](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2004739).
+Pour obtenir plus d'informations et pour connaître la procédure permettant de corriger ce problème, voir [HA error: "The number of heartbeat data stores for host is 1, which is less than required: 2" (2004739)](https://kb.vmware.com/s/article/2004739).

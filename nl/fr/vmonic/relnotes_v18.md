@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2017-08-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -60,7 +60,7 @@ Une option de serveur personnalisable est disponible avec les options Petite, Mo
 
 Pour plus d'informations, voir les rubriques suivantes :
 * [Commande d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [Ajout et affichage de clusters pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [Ajout, affichage et suppression de clusters pour des instances vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 
 ### Prise en charge pour l'ajout de plus de 7 partages de fichiers NFS
 {: #relnotes_v18-nfs}
@@ -69,7 +69,7 @@ Pour plus d'informations, voir les rubriques suivantes :
 
  Pour plus d'informations, voir les rubriques suivantes :
 * [Commande d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [Ajout et affichage de clusters pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [Ajout, affichage et suppression de clusters pour des instances vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 
 ### Mises à jour des centres de données
 {: #relnotes_v18-dc}

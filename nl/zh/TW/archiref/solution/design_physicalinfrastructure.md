@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -49,7 +49,7 @@ subcollection: vmwaresolutions
 實體主機採用兩個配置給 vSphere ESXi Hypervisor 的本端連接磁碟。您可以使用 vSAN（如_實體儲存空間設計_ 小節所述）或使用 NetApp ONTAP（如 [NetApp ONTAP Select 架構](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)所述）來配置更多磁碟。每部實體主機都具有備用的 10 Gbps 網路連線，以進行公用及專用網路存取。
 
 Bare Metal Server 的規格如下：
-* CPU：雙 Intel Xeon，各種核心及速度配置
+* CPU：雙重或四重 Intel Xeon，各種核心及速度配置
 * 記憶體：各種配置，64 GB 或更大
 * 網路：4 x 10 Gbps
 * 磁碟機數目：2 台以上
@@ -62,7 +62,7 @@ Bare Metal Server 的規格如下：
 ### IBM Cloud 網路概觀
 {: #design_physicalinfrastructure-ibm-cloud-network}
 
-{{site.data.keyword.cloud_notm}} 的實體網路分成兩個不同的網路：公用和專用。專用網路包含實體伺服器的頻外管理「智慧型平台管理介面 (IPMI)」資料流量。
+{{site.data.keyword.cloud_notm}} 的實體網路分成兩個不同的網路：公用和專用。專用網路也包含實體伺服器的管理「智慧型平台管理介面 (IPMI)」資料流量。
 
 圖 2. {{site.data.keyword.cloud_notm}} 高階網路
 ![{{site.data.keyword.cloud_notm}} 高階網路](vcsv4radiagrams-ra-ibmcloudnetwork.svg)
@@ -86,7 +86,7 @@ Bare Metal Server 的規格如下：
 #### 管理網路
 {: #design_physicalinfrastructure-mgmt-net}
 
-除了公用和專用網路之外，每部 {{site.data.keyword.cloud_notm}} 伺服器還會連接至專用主要網路子網路，以進行頻外管理。此連線容許「智慧型平台管理介面 (IPMI)」存取伺服器以進行維護及管理，而不論其 CPU、韌體及作業系統為何。
+除了公用和專用網路之外，每部 {{site.data.keyword.cloud_notm}} 伺服器還會連接至專用主要網路子網路，以進行管理。此連線容許「智慧型平台管理介面 (IPMI)」存取伺服器以進行維護及管理，而不論其 CPU、韌體及作業系統為何。
 
 #### 主要及可攜式 IP 區塊
 {: #design_physicalinfrastructure-ip-blocks}
@@ -117,7 +117,7 @@ Bare Metal Server 的規格如下：
 #### VLAN 與基礎至層疊遞送
 {: #design_physicalinfrastructure-vlans}
 
-{{site.data.keyword.vmwaresolutions_short}} 供應項目設計成在部署時指派 3 個 VLAN（一個公用及兩個專用）。如前一個圖中所示，公用 VLAN 會指派給 eth1 及 eth3，而專用 VLAN 會指派給 eth0 及 eth2。
+{{site.data.keyword.vmwaresolutions_short}} 供應項目設計成在部署時指派 3 個 VLAN（一個公用及兩個專用）。如前一個圖中所示，公用 VLAN 會指派給 `eth1` 及 `eth3`，而專用 VLAN 會指派給 `eth0` 及 `eth2`。
 
 依預設，在此設計中，{{site.data.keyword.cloud_notm}} 內建立及指派的公用 VLAN 及第一個專用 VLAN 不會加上標籤。然後，額外的專用 VLAN 會成為實體交換器埠的主幹，並在使用這些子網路的 VMware 埠群組內加上標籤。
 
@@ -133,7 +133,7 @@ Bare Metal Server 的規格如下：
    * 使用 NAS 連接的 NAS 時，會將子網路指派給 NFS 資料流量專用的埠群組。
    * 對於 iSCSI 連接，會建立兩個埠群組，以容許在兩個專用 NIC 埠之間有多個主動-主動路徑，因為根據 VMware iSCSI 文件，一次只能有一個 NIC 埠作用中。
 
-在 vCenter Server 或 Cloud Foundation 自動化部署過程中配置的所有子網路，都會使用 {{site.data.keyword.cloud_notm}} 管理的範圍。這是要確保，在您現在或未來需要連線時，任何 IP 位址都可以遞送給 {{site.data.keyword.cloud_notm}} 帳戶內的任何資料中心。
+在 vCenter Server 自動化部署過程中配置的所有子網路，都會使用 {{site.data.keyword.cloud_notm}} 管理的範圍。這是要確保，在您現在或未來需要連線時，任何 IP 位址都可以遞送給 {{site.data.keyword.cloud_notm}} 帳戶內的任何資料中心。
 
 檢閱下列表格以取得摘要。
 
@@ -145,7 +145,7 @@ Bare Metal Server 的規格如下：
 | 專用 A    | 主要     | 指派給 {{site.data.keyword.cloud_notm}} 所指派之實體主機的單一子網路。由管理介面用於 vSphere 管理資料流量。|
 | 專用 A    | 可攜式   | 指派給充當管理元件之虛擬機器的單一子網路 |
 | 專用 A    | 可攜式   | 指派給 NSX-V 或 NSX-T VTEP 的單一子網路 |
-| 專用 A    | 可攜式   | 為 vSAN 指派的單一子網路（如果使用的話）|
+| 專用 B    | 可攜式   | 為 vSAN 指派的單一子網路（如果使用的話）|
 | 專用 B    | 可攜式   | 為 NAS 指派的單一子網路（如果使用的話）|
 | 專用 B    | 可攜式   | 為 iSCSI NAS 指派的兩個子網路（如果使用的話，每個實體 NIC 埠各一個）|
 | 專用 B    | 可攜式   | 為 vMotion 指派的單一子網路 |
@@ -159,7 +159,7 @@ Bare Metal Server 的規格如下：
 ## 實體儲存空間設計
 {: #design_physicalinfrastructure-storage-design}
 
-實體儲存空間設計包含實體主機中所安裝實體磁碟的配置，以及共用檔案層次儲存空間的配置。這包括作業系統磁碟 (vSphere ESXi)，以及用於虛擬機器 (VM) 儲存空間的磁碟。VM 的儲存空間可以包含 VMware vSAN 所虛擬化的本端磁碟、共用檔案層次儲存空間，或共用區塊層次儲存空間。
+實體儲存空間設計包含實體主機中所安裝實體磁碟的配置，以及共用的網路連結儲存空間的配置。這包括作業系統磁碟 (vSphere ESXi)，以及用於虛擬機器 (VM) 儲存空間的磁碟。VM 的儲存空間可以包含 VMware vSAN 所虛擬化的本端磁碟、共用檔案層次儲存空間，或共用區塊層次儲存空間。
 
 ### 作業系統磁碟
 {: #design_physicalinfrastructure-os-disks}
@@ -169,7 +169,7 @@ vSphere ESXi Hypervisor 會安裝在持續性位置中。因此，實體主機�
 ### vSAN 磁碟
 {: #design_physicalinfrastructure-vsan-disks}
 
-此設計容許選擇使用 VMware vSAN 或共用檔案層次儲存空間作為虛擬機器的主要資料儲存庫。若為 VMware vSAN，它是使用全快閃記憶體配置所配置的。此設計容許數個配置選項（包括 2U 和 4U 機箱）、各種磁碟數量，以及各種磁碟大小。所有配置都會使用兩個 vSAN 磁碟群組，搭配一個固態硬碟 (SSD) 用於快取，和一個以上的 SSD 用於容量。所有配置供 vSAN 耗用的磁碟機，都以單一磁碟 RAID-0 進行配置。
+此設計容許選擇使用 VMware vSAN 或共用的網路連結儲存空間作為虛擬機器的主要資料儲存庫。若為 VMware vSAN，它是使用全快閃記憶體配置所配置的。此設計容許數個配置選項（包括 2U 和 4U 機箱）、各種磁碟數量，以及各種磁碟大小。所有配置都會使用兩個 vSAN 磁碟群組，搭配一個固態硬碟 (SSD) 用於快取，和一個以上的 SSD 用於容量。所有配置供 vSAN 耗用的磁碟機，都以單一磁碟 RAID-0 進行配置。
 
 如需支援之配置的相關資訊，請參閱 [vCenter Server 資料清單](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)。
 

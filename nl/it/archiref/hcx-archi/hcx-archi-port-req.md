@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-02-15"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -15,7 +15,7 @@ subcollection: vmwaresolutions
 
 HCX deve attraversare internet pubblico e le linee private e connettersi ai componenti del data center, come ad esempio le reti, gli switch e i gruppi di porte.
 
-La seguente tabella elenca le porte che devono essere aperte in modo che le applicazioni virtuali Hybrid Cloud Services possano essere installate correttamente. Sia l'ambiente vSphere che IBM Cloud devono consentire la sincronizzazione dell'orologio NTP (Network Time Protocol) con i dispositivi in loco vSphere e IBM Cloud. La porta UDP 123 deve essere accessibile alle reti e alle applicazioni virtuali Hybrid Cloud Services. Possono essere specificati dei server NTP installati quando viene installa l'applicazione Hybrid Cloud Services.
+La seguente tabella elenca le porte che devono essere aperte in modo che i dispositivi virtuali Hybrid Cloud Services possano essere installati correttamente. Sia l'ambiente vSphere che IBM Cloud devono consentire la sincronizzazione dell'orologio NTP (Network Time Protocol) con i dispositivi in loco vSphere e IBM Cloud. La porta UDP 123 deve essere accessibile alle reti e ai dispositivi virtuali Hybrid Cloud Services. Possono essere specificati dei server NTP installati quando viene installato il dispositivo Hybrid Cloud Services.
 
 Tabella 1. Requisiti di accesso alla porta
 
@@ -26,7 +26,7 @@ Tabella 1. Requisiti di accesso alla porta
 | HCX    | vCenter in IBM Cloud | 443 | TCP | Servizio HCX REST | HTTPS |
 | HCX    | PSC in IBM Cloud | 443 | TCP | Servizio HCX REST | HTTPS |
 | HCX    | connect.hcx.vmware.com | 443 | TCP | Servizio di registrazione | HTTPS |
-| Browser web | HCX | 9443 | TCP | Interfaccia di gestione dell'applicazione virtuale HCX per la configurazione del sistema HCX | HTTPS |
+| Browser web | HCX | 9443 | TCP | Interfaccia di gestione del dispositivo virtuale HCX per la configurazione del sistema HCX | HTTPS |
 | Rete di gestione | HCX | 22 | SSH | Accesso SSH di amministrazione a Hybrid Cloud Services | SSH |
 | HCX | Host ESXi | 902 | TCP | Invio delle istruzioni di provisioning e gestione da HCX agli host ESXi in IBM Cloud. | Interna |
 | HCX | vCenter SSO Server | 7444 | TCP | vSphere Lookup Service |  |

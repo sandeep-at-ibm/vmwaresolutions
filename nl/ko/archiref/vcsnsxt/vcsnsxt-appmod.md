@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -25,7 +25,7 @@ subcollection: vmwaresolutions
 -	CAM(Cloud Automation Manager)을 사용하여 DevOps 도구 체인과 ITSM 솔루션을 통합하기 위해 VM 및 컨테이너 둘 다에서 작성된 서비스를 작성하고 조정하도록 IaC(Infrastructure as Code)를 스크립팅할 수 있습니다.
 
 네트워크 아키텍처의 관점에서 참조 아키텍처에는 다음 주요 컴포넌트가 있습니다.
-- **온프레미스 가상화** - Acme Skateboards VM을 현재 호스팅하고 있는 VMware 클러스터입니다. 현대화될 애플리케이션을 현재 호스팅하고 있는 VM입니다. 이 클러스터는 고객이 VM을 {{site.data.keyword.cloud_notm}}를 실행 중인 {{site.data.keyword.cloud_notm}} 인스턴스의 VMware vCenter Server에 마이그레이션할 수 있도록(필요한 경우 다시 마이그레이션함) [VMware HCX on {{site.data.keyword.cloud_notm}} 솔루션 아키텍처](https://test.cloud.ibm.com/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)에 설명된 전제조건을 충족해야 합니다.
+- **온프레미스 가상화** - Acme Skateboards VM을 현재 호스팅하고 있는 VMware 클러스터입니다. 현대화될 애플리케이션을 현재 호스팅하고 있는 VM입니다. 이 클러스터는 고객이 VM을 {{site.data.keyword.cloud_notm}}를 실행 중인 {{site.data.keyword.cloud_notm}} 인스턴스의 VMware vCenter Server에 마이그레이션할 수 있도록(필요한 경우 다시 마이그레이션함) [VMware HCX on {{site.data.keyword.cloud_notm}} 솔루션 아키텍처](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)에 설명된 전제조건을 충족해야 합니다.
 - **VMware vCenter Server on IBM Cloud** – vCenter Server는 vSphere, vCenter Server, NSX-V와 같은 기본적인 VMware 빌딩 블록을 제공하며, vSAN 또는 {{site.data.keyword.cloud_notm}} Endurance 스토리지 등 SDDC(VMware Software Defined Data Center) 솔루션을 자동으로 배치하는 데 필요한 스토리지 옵션을 제공합니다. 이 VMware 클러스터는 {{site.data.keyword.icpfull_notm}}에서 호스팅되는 컨테이너의 일부 현대화된 애플리케이션 및 마이그레이션된 VM의 대상입니다.
 
 아키텍처의 주요 컴포넌트는 다음과 같습니다.
@@ -54,4 +54,4 @@ Managed Services를 사용하여 전세계적으로 VMware 전문 지식을 사�
 ## 관련 링크
 {: #vcsnsxt-appmod-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vcs-hybridity-intro#vcs-hybridity-intro)

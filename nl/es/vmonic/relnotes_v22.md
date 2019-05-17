@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-10-19"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -39,7 +39,7 @@ Durante el proceso de actualización a V2.2, la máquina virtual IBM CloudDriver
 * Si utiliza una solución de copia de seguridad que hace referencia a la máquina virtual IBM CloudDriver, después de actualizar a V2.2, asegúrese de que la solución de copia de seguridad haga referencia a la nueva máquina virtual IBM CloudDriver.
 * Antes de actualizar a V2.2, asegúrese de sustituir la VSI Legacy Veeam por el servicio Veeam on {{site.data.keyword.cloud_notm}}. Legacy Veeam ya no recibe soporte en V2.2 y futuros releases, por lo que las copias de seguridad de componentes de gestión asociadas a Legacy Veeam no se pueden restaurar.
 
-Para obtener más información sobre cómo utilizar el servicio Veeam on {{site.data.keyword.cloud_notm}}, consulte los temas siguientes:
+Para obtener más información sobre cómo utilizar el servicio Veeam on {{site.data.keyword.cloud_notm}}, consulte:
 * [Componentes y consideraciones sobre Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)
 * [Gestión de Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
 
@@ -91,7 +91,7 @@ Para obtener más información, consulte la sección *Valores del sistema* del a
 ### Aumento del número de clústeres por instancia
 {: #relnotes_v22-clusters-per-inst}
 
-Ahora puede añadir un máximo de 10 clústeres a las instancias de VMware vCenter Server que se han desplegado en la V2.2 o posteriores o que se han actualizado a las mismas. Para obtener más información, consulte [Adición y visualización de clústeres para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances).
+Ahora puede añadir un máximo de 10 clústeres a las instancias de VMware vCenter Server que se han desplegado en la V2.2 o posteriores o que se han actualizado a las mismas. Para obtener más información, consulte [Adición y visualización de clústeres para instancias de vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters).
 
 ## Actualizaciones de clústeres de VMware vSphere
 {: #relnotes_v22-vss}

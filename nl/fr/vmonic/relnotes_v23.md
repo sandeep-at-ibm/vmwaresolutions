@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-05-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -47,7 +47,7 @@ Pour plus d'informations sur vCenter Server with Hybridity Bundle, voir les rubr
 
 Vous pouvez désormais supprimer des clusters sur une instance sans avoir à supprimer celle-ci. Pour les clusters déployés dans des instances V2.2 ou antérieures, vous devez mettre à niveau l'instance vers la version 2.3 pour pouvoir supprimer les clusters que vous lui avez ajoutés.
 
-Pour plus d'informations, voir [Ajout, affichage et suppression de clusters pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances#deleting-clusters-from-vcenter-server-instances).
+Pour plus d'informations, voir [Ajout, affichage et suppression de clusters pour des instances vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters).
 
 ## Mises à jour des instances VMware vCenter Server
 {: #relnotes_v23-vcs}
@@ -63,7 +63,7 @@ A compter de la version 2.3, les nouveaux modèles d'UC suivants sont disponible
 Pour plus d'informations, voir les rubriques suivantes :
 
 * [Commande d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [Ajout, affichage et suppression de clusters pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [Ajout, affichage et suppression de clusters pour des instances vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 
 ## Mises à jour des instances VMware Cloud Foundation
 {: #relnotes_v23-vcf}

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-23"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -21,9 +21,10 @@ subcollection: vmwaresolutions
 HCX on {{site.data.keyword.cloud}} 服务可将内部部署数据中心的网络无缝扩展到 {{site.data.keyword.cloud_notm}}，这允许虚拟机 (VM) 在不进行任何转换或更改的情况下，迁移到 {{site.data.keyword.cloud_notm}} 或从中迁移出来。
 
 此服务仅可用于在 V2.3 和更高发行版中部署的 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 实例。
+当前安装的 HCX on {{site.data.keyword.cloud_notm}} 版本为 3.5.1。
 {:note}
 
-可以将现有 vCenter Server 实例升级到 vCenter Server with Hybridity Bundle 实例。有关升级实例和部署 HCX on {{site.data.keyword.cloud_notm}} 服务的更多信息，请参阅[升级到 vCenter Server with Hybridity Bundle 实例的过程](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates#procedure-to-upgrade-to-the-vcenter-server-with-hybridity-bundle-instance)。
+可以将现有 vCenter Server 实例升级到 vCenter Server with Hybridity Bundle 实例。有关升级实例和部署 HCX on {{site.data.keyword.cloud_notm}} 服务的更多信息，请参阅[升级到 Hybridity Bundle 的过程](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_upgrade-lic#vc_upgrade-lic-procedure-upgrade-to-hybridity)。
 
 具有 HCX on {{site.data.keyword.cloud_notm}} 的 vCenter Server 实例限制为可同时从内部部署站点建立三个连接。
 {:note}
@@ -43,7 +44,7 @@ HCX on {{site.data.keyword.cloud_notm}} 服务中订购并包含了以下组件�
 * RAM：8 GB
 * 磁盘：3 GB VMDK
 
-### HCX Management Appliance - 虚拟机
+### HCX 管理设备 - 虚拟机
 {: #hcx_considerations-vm}
 
 * CPU：4 个 vCPU

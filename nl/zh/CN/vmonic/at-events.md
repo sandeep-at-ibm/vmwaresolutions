@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-03-12"
+lastupdated: "2019-04-03"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -14,7 +14,7 @@ subcollection: vmwaresolutions
 
 使用 {{site.data.keyword.cloudaccesstrailfull}} 服务可跟踪用户和应用程序如何与 {{site.data.keyword.Bluemix_notm}} 中的 {{site.data.keyword.vmwaresolutions_short}} 进行交互。
 
-{{site.data.keyword.cloudaccesstrailfull_notm}} 服务将记录用户启动的会更改 {{site.data.keyword.Bluemix_notm}} 中服务状态的活动。有关更多信息，请参阅 [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started-with-cla#getting-started-with-cla)。
+{{site.data.keyword.cloudaccesstrailfull_notm}} 服务将记录用户启动的会更改 {{site.data.keyword.Bluemix_notm}} 中服务状态的活动。有关更多信息，请参阅[关于 {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov#activity_tracker_ov)。
 
 ## Activity Tracker 事件表
 {: #at-events-table}
@@ -51,12 +51,6 @@ subcollection: vmwaresolutions
 |`vmware-solutions.notification.update`| <ul><li>收到更新通知的请求。</li><li>应答了更新通知的请求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
 |`vmware-solutions.secure_data.wipe`| <ul><li>收到擦除安全数据的请求。</li><li>应答了擦除安全数据的请求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
 |`vmware-solutions.bss_account.migrate`| <ul><li>收到迁移到 BSS 帐户的请求。</li><li>应答了迁移到 BSS 帐户的请求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-|`vmware-solutions.vcf.delete`| <ul><li>收到删除 Cloud Foundation 实例的请求。</li><li>应答了删除 Cloud Foundation 实例的请求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-|`vmware-solutions.vcf.add_hosts`| <ul><li>收到将 ESXi 服务器添加到 Cloud Foundation 实例的请求。</li><li>应答了将 ESXi 服务器添加到 Cloud Foundation 实例的请求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-|`vmware-solutions.vcf.remove_hosts`| <ul><li>收到从 Cloud Foundation 实例中删除 ESXi 服务器的请求。</li><li>应答了从 Cloud Foundation 实例中删除 ESXi 服务器的请求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-|`vmware-solutions.vcf.create_cluster`| <ul><li>收到为 Cloud Foundation 实例创建集群的请求。</li> <li>应答了为 Cloud Foundation 实例创建集群的请求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-|`vmware-solutions.vcf.delete_cluster`| <ul><li>收到从 Cloud Foundation 实例中删除集群的请求。</li><li>应答了从 Cloud Foundation 实例中删除集群的请求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-|`vmware-solutions.vcf.schedule_update`| <ul><li>收到安排 Cloud Foundation 实例更新的请求。</li><li>应答了安排 Cloud Foundation 实例更新的请求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
 |`vmware-solutions.vcs.order`| <ul><li>收到订购 vCenter Server 实例的请求。</li><li>应答了订购 vCenter Server 实例的请求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
 |`vmware-solutions.vcs.delete`| <ul><li>收到删除 vCenter Server 实例的请求。</li><li>应答了删除 vCenter Server 实例的请求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
 |`vmware-solutions.vcs.add_host`| <ul><li>收到将 ESXi 服务器添加到 vCenter Server 实例的请求。</li><li>应答了将 ESXi 服务器添加到 vCenter Server 实例的请求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
@@ -97,7 +91,7 @@ subcollection: vmwaresolutions
 |`vmware-solutions.key.destroy`| <ul><li>收到销毁密钥的请求。</li><li>应答了销毁密钥的请求。</li></ul> |  <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
 |`vmware-solutions.key.discover_versions`| <ul><li>收到查找 KMIP for VMware on {{site.data.keyword.cloud_notm}} 服务版本的请求。</li><li>应答了查找 KMIP for VMware on {{site.data.keyword.cloud_notm}} 服务版本的请求。</li></ul> |  <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
 
-## 查看事件的位置
+## 在何处查看事件
 {: #at-events-viewing}
 
 {{site.data.keyword.cloudaccesstrailshort}} 事件在生成事件的 {{site.data.keyword.Bluemix_notm}} 区域中可用的 {{site.data.keyword.cloudaccesstrailshort}} **帐户域**中提供。
@@ -106,5 +100,5 @@ subcollection: vmwaresolutions
 {: #at-events-related}
 
 * [供应 Activity Tracker](/docs/services/cloud-activity-tracker/how-to?topic=cloud-activity-tracker-provision)
-* [在 {{site.data.keyword.cloud_notm}} 控制台中浏览至 Activity Tracker 仪表板](/docs/services/cloud-activity-tracker/how-to/manage-events-ui?topic=cloud-activity-tracker-launch_at_ui)
+* [在 {{site.data.keyword.cloud_notm}} 控制台中导航至 Activity Tracker 仪表板](/docs/services/cloud-activity-tracker/how-to/manage-events-ui?topic=cloud-activity-tracker-launch_at_ui)
 * [KMIP for VMware on {{site.data.keyword.cloud_notm}} 概述](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations)

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -78,7 +78,7 @@ vSAN 叢集升級會依下列作業序列執行：
 4. 按一下**使用線上性能重新測試**來開始第一次上傳，並等待處理程序完成，方法是檢閱「最近作業」窗格中的狀態。「測試名稱」會變更為 Online health (Last check: just now)。
 5. 完成時，請在「性能」視窗中捲動並展開「vSAN 建置建議」，然後按一下 **vSAN 建置建議引擎性能**。
 6. 按一下**登入 my.vmware.com**，然後輸入您的認證。處理程序完成時，**測試結果**會變更為**通過**狀態。
-7. 按 **Update Manager** 標籤，而且「vSAN 叢集」會新增至「基準線」。
+7. 按一下 **Update Manager** 標籤，「vSAN 叢集」即會新增至「基準線」。
 
 ## 必要條件
 {: #vum-updating-vsan-prereq}
@@ -91,7 +91,7 @@ vSAN 叢集升級會依下列作業序列執行：
 * **所有 vSAN 磁碟都應該性能良好**：
   - 沒有磁碟故障或不存在。這可以透過 vSphere Web Client 中的 **vSAN 磁碟管理**視圖來決定。**首頁** > **主機及叢集**，選取 **vSAN 叢集**，然後按一下 **vSAN** 標籤，再按一下**實體磁碟**。捲動所有磁碟，並檢閱「vSAN 性能狀態」。
   - 沒有無法存取的 vSAN 物件。這可以使用 **vSAN 性能服務**進行驗證，方法是按一下**首頁** > **主機及叢集**，然後選取 **vSAN 叢集**。按一下**監視**標籤，並按一下 **vSAN**，然後按一下**性能**。檢閱「測試結果」。
-  - 在升級處理程序開始時，沒有作用中重新同步，方法是按一下**首頁** > **主機及叢集**，選取 **vSAN 叢集**，然後依序按一下 **vSAN** 標籤及**重新同步元件**。_「重新同步元件」計數應該為 0_。在升級處理程序期間，預期會有一些重新同步活動，因為在主機重新啟動之後需要同步處理資料。
+  - 在升級處理程序開始時，沒有任何作用中重新同步，方法是按一下**首頁** > **主機及叢集**，選取 **vSAN 叢集**，然後依序按一下 **vSAN** 標籤及**重新同步元件**。_「重新同步元件」計數應該為 0_。在升級處理程序期間，預期會有一些重新同步活動，因為在主機重新啟動之後需要同步處理資料。
 * **vSphere ESXi 主機準備** - 當您將主機移至 vSAN 叢集裡的維護模式時，有三個選項可供選擇：
   - **無資料移轉** - 如果您選取這個選項，vSAN 不會從此主機撤除任何資料。如果您關閉主機電源，或從叢集中移除主機，則部分虛擬機器 (VM) 可能變成無法存取。
   - **確保可用性** - 如果您選取這個選項，則 vSAN 容許您將主機移至維護模式的速度比「完整資料移轉」更快，並容許存取環境中的 VM。
@@ -151,4 +151,4 @@ vSAN 叢集升級會依下列作業序列執行：
 {: #vum-updating-vsan-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 解決方案架構](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware)（示範）
+* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware)（示範）

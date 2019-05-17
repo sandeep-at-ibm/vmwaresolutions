@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-12"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -19,7 +19,7 @@ subcollection: vmwaresolutions
 
 當您嘗試連接至 vSphere Web Client 時，可能發生下列逾時錯誤：
 
-`The server at <IP_address> is taking too long to respond.`
+`<IP_address> 中的伺服器的回應時間過長。`
 
 ## 解決方法
 {: #trbl_timeout_vc_console-resolution}

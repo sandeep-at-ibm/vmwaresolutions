@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -54,8 +54,7 @@ NSX-V 또는 NSX-T 컴포넌트로 {{site.data.keyword.icpfull_notm}}를 배치�
 내부 네트워킹을 사용할 수 있습니다.
 
 NSX-T를 사용하는 {{site.data.keyword.icpfull_notm}}의 경우 사용자가 중앙 UI(NSX-T 관리자)에서
-네트워킹, 서브넷, 정책을 제어하고 구성할 수 있습니다. NSX-V와 NSX-T 간의 차이점에 대한 정보는 [{{site.data.keyword.cloud_notm}} VCS 네트워킹 참조 아키텍처](/docs/services/vmwaresolutions/archiref/
-vcsnsxt/vcsnsxt-intro.html)를 참조하십시오.
+네트워킹, 서브넷, 정책을 제어하고 구성할 수 있습니다. NSX-V와 NSX-T 간의 차이점에 대한 정보는 [{{site.data.keyword.cloud_notm}} VCS 네트워킹 참조 아키텍처](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsnsxt-intro#vcsnsxt-intro)를 참조하십시오.
 
 ## 온프레미스 클라우드 관리 플랫폼
 {: #vcsiks-arch-overview-on-premises}
@@ -79,4 +78,4 @@ strongSwan VPN은 배치된 {{site.data.keyword.containerlong_notm}} 컨테이�
 ## 관련 링크
 {: #vcsiks-arch-overview-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-hybridity-intro#vcs-hybridity-intro)

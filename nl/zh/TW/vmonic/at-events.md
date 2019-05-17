@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-03-12"
+lastupdated: "2019-04-03"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -14,7 +14,7 @@ subcollection: vmwaresolutions
 
 使用 {{site.data.keyword.cloudaccesstrailfull}} 服務，追蹤使用者及應用程式如何在 {{site.data.keyword.Bluemix_notm}} 中與 {{site.data.keyword.vmwaresolutions_short}} 互動。
 
-{{site.data.keyword.cloudaccesstrailfull_notm}} 服務會記錄由使用者起始並且會變更 {{site.data.keyword.Bluemix_notm}} 中服務狀態的活動。如需相關資訊，請參閱 [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started-with-cla#getting-started-with-cla)。
+{{site.data.keyword.cloudaccesstrailfull_notm}} 服務會記錄由使用者起始並且會變更 {{site.data.keyword.Bluemix_notm}} 中服務狀態的活動。如需相關資訊，請參閱[關於 {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov#activity_tracker_ov)。
 
 ## Activity Tracker 事件表格
 {: #at-events-table}
@@ -51,12 +51,6 @@ subcollection: vmwaresolutions
 | `vmware-solutions.notification.update` | <ul><li>接收到更新通知的要求。</li><li>已答覆更新通知的要求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
 | `vmware-solutions.secure_data.wipe`       | <ul><li>接收到清除安全資料的要求。</li><li>已答覆清除安全資料的要求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
 | `vmware-solutions.bss_account.migrate` | <ul><li>接收到移轉至 bss 帳戶的要求。</li><li>已答覆移轉至 bss 帳戶的要求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-| `vmware-solutions.vcf.delete`                | <ul><li>接收到刪除 Cloud Foundation 實例的要求。</li><li>已答覆刪除 Cloud Foundation 實例的要求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-| `vmware-solutions.vcf.add_hosts`             | <ul><li>接收到將 ESXi 伺服器新增至 Cloud Foundation 實例的要求。</li><li>已答覆將 ESXi 伺服器新增至 Cloud Foundation 實例的要求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-| `vmware-solutions.vcf.remove_hosts`          | <ul><li>接收到從 Cloud Foundation 實例刪除 ESXi 伺服器的要求。</li><li>已答覆從 Cloud Foundation 實例刪除 ESXi 伺服器的要求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-| `vmware-solutions.vcf.create_cluster`        | <ul><li>接收到為 Cloud Foundation 實例建立叢集的要求。</li> <li>已答覆為 Cloud Foundation 實例建立叢集的要求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-| `vmware-solutions.vcf.delete_cluster`        | <ul><li>接收到從 Cloud Foundation 實例刪除叢集的要求。</li><li>已答覆從 Cloud Foundation 實例刪除叢集的要求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-| `vmware-solutions.vcf.schedule_update`       | <ul><li>接收到為 Cloud Foundation 實例排定更新的要求。</li><li>已答覆為 Cloud Foundation 實例排定更新的要求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
 | `vmware-solutions.vcs.order`                 | <ul><li>接收到訂購 vCenter Server 實例的要求。</li><li>已答覆訂購 vCenter Server 實例的要求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
 | `vmware-solutions.vcs.delete`                | <ul><li>接收到刪除 vCenter Server 實例的要求。</li><li>已答覆刪除 vCenter Server 實例的要求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
 | `vmware-solutions.vcs.add_host`              | <ul><li>接收到將 ESXi 伺服器新增至 vCenter Server 實例的要求。</li><li>已答覆將 ESXi 伺服器新增至 vCenter Server 實例的要求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |

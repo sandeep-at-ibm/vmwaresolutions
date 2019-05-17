@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -25,7 +25,7 @@ HCX permite la migración bidireccional: desde el entorno local a la nube o desd
 La migración con bajo tiempo de inactividad utiliza la réplica basada en host para trasladar una máquina virtual activa de un vCenter a un centro de datos virtual o viceversa. Para reducir el tiempo de inactividad, la máquina virtual de origen permanece en línea durante la réplica y se inicia en el host ESX de destino después de que se complete la réplica.
 
 1. Una solicitud de migración desencadena las acciones siguientes:
-  * La réplica inicia una transferencia de sincronización completa en un centro de datos virtual HCX VCF/VCS. El tiempo que se tarda en realizar la réplica depende del tamaño de la VM y del ancho de banda disponible.
+  * La réplica inicia una transferencia de sincronización completa en un centro de datos virtual HCX de VCS. El tiempo que se tarda en realizar la réplica depende del tamaño de la VM y del ancho de banda disponible.
   * El consumo de ancho de banda de réplica varía en función de cómo la carga de trabajo cambia los bloques en el disco.
 2. Cuando finaliza la sincronización completa, se produce una sincronización delta.
 3. Cuando la sincronización delta finaliza, HCX desencadena una acción de conmutación (switchover). La acción de conmutación se puede iniciar de forma inmediata o se puede planificar para un momento específico.
@@ -37,7 +37,7 @@ La migración con bajo tiempo de inactividad utiliza la réplica basada en host 
 ## vMotion sin tiempo de inactividad
 {: #hcx-archi-migrate-vm-no-downtime-vm}
 
-vMotion transfiere una máquina virtual activa desde un vSphere vCenter a una nube VCF/VCS. Este vMotion requiere una red extendida. La transferencia vMotion captura la memoria activa de la máquina virtual, su estado de ejecución, su dirección IP y su dirección MAC.
+vMotion transfiere una máquina virtual activa desde un vSphere vCenter a una nube VCS. Este vMotion requiere una red extendida. La transferencia vMotion captura la memoria activa de la máquina virtual, su estado de ejecución, su dirección IP y su dirección MAC.
 
 La versión del hardware de la máquina virtual debe ser como mínimo la versión 9; de lo contrario vMotion entre nubes puede fallar.
 {:note}
@@ -53,8 +53,8 @@ La migración en frío utiliza el mismo plano de datos que vMotion entre nubes p
 Si se utiliza el web de vSphere, se puede acceder al asistente de migración bidireccional desde el separador Iniciación de Hybrid Cloud Services. Este asistente gestiona todos los detalles de la migración, incluidas varias máquinas virtuales.
 
 Desde el cliente web de vSphere, se puede acceder al asistente de migración bidireccional desde el separador Iniciación de Hybrid Cloud Services. Este asistente gestiona todos los detalles de la migración, incluidas varias máquinas virtuales.
-* De vSphere a VCF/VCS Hybrid Cloud Services
-* De VCF/VCS HCX Cloud a vSphere
+* De vSphere a VCS Hybrid Cloud Services
+* De VCS HCX Cloud a vSphere
 
 ### Comprobación de las VM antes de la migración
 {: #hcx-archi-migrate-vm-check-vms}

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -14,7 +14,7 @@ subcollection: vmwaresolutions
 # 多站点体系结构
 {: #nsx-multi_site}
 
-{{site.data.keyword.cloud}} 与其他云产品之间的一个关键区别在于，它能够在全球供应专用计算能力，并自动将随需应变的基础架构与专用 {{site.data.keyword.cloud_notm}} 帐户中的网络相连接。VMware vCenter Server 和 VMware Cloud Foundation 的软件定义的网络功能与 {{site.data.keyword.cloud_notm}} 一起提供了可以在数天内完成构建的精细全球基础架构。以下各部分描述了多站点体系结构示例，说明可以通过 vCenter Server 或 Cloud Foundation 的开箱即用功能实现哪些内容。
+{{site.data.keyword.cloud}} 与其他云产品之间的一个关键区别在于，它能够在全球供应专用计算能力，并自动将随需应变的基础架构与专用 {{site.data.keyword.cloud_notm}} 帐户中的网络相连接。VMware vCenter Server 的软件定义的网络功能与 {{site.data.keyword.cloud_notm}} 一起提供了可以在数天内完成构建的精细全球基础架构。以下各部分描述了多站点体系结构示例，说明可以通过 vCenter Server 的开箱即用功能实现哪些内容。
 
 ## 跨 vCenter NSX 环境
 {: #nsx-multi_site-cross-env}
@@ -22,7 +22,7 @@ subcollection: vmwaresolutions
 跨 vCenter NSX 功能支持以主/辅助关系链接最多 9 个 NSX Manager：1 个主 NSX Manager 和 8 个辅助 NSX Manager。虽然整个 vCenter NSX 正常运行无需采用增强链接方式 (ELM) 关系的 vCenter Server，但具有这样的 vCenter Server 可提供以下优点：
 
 * 使用单点登录 (SSO) 凭证简化了主/辅助关系创建
-* vCenter Server 和 Cloud Foundation 自动配置 DNS 名称解析以用于链接在一起的所有站点
+* vCenter Server 自动配置 DNS 名称解析以用于链接在一起的所有站点
 * 在所有站点中，通过一个窗格，对 NSX 和常规 vCenter 功能进行管理
 
 ## 多站点示例

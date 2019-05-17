@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-28"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -22,7 +22,7 @@ Passez en revue les informations suivantes pour obtenir des détails relatifs au
 {: #vc_nsx-t_networkingonvcenterserver-networking-components}
 {: faq}
 
-Pour passer en revue les composants de mise en réseau inclus dans votre instance vCenter Server with NSX-T, voir [Spécifications techniques relatives aux instances vCenter Server with NSX-T](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_overview-specs).
+Pour passer en revue les composants de mise en réseau inclus dans votre instance vCenter Server with NSX-T, voir [Spécifications techniques relatives aux instances vCenter Server with NSX-T](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_overview#vc_nsx-t_overview-specs).
 
 ## Remarques relatives aux pare-feu
 {: #vc_nsx-t_networkingonvcenterserver-firewall-considerations}

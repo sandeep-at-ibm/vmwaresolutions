@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -54,11 +54,11 @@ El flujo de trabajo es el siguiente:
   - Cuando se complete la carga, se le redirigirá a la página de inicio de sesión de NSX Manager. Inicie la sesión de nuevo y verifique que la versión de software actual que se muestra es correcta.
 7. **Actualizar el clúster de controlador NSX**:
   - Utilice el cliente web de vSphere e inicie sesión en VCSA.
-  - Vaya a **Inicio** > **Redes y seguridad** > **Instalación**, seleccione el **separador Gestión** y pulse **Actualizar disponible** en la columna Estado de clúster del controlador.
+  - Vaya a **Inicio** > **Redes y seguridad** > **Instalación**, seleccione el separador **Gestión** y pulse **Actualizar disponible** en la columna Estado de clúster del controlador.
   - Los controladores del entorno se actualizan y se rearrancan uno por uno. Después de iniciar la actualización, el sistema descarga el archivo de actualización, actualiza los controladores, los vuelve a iniciar y actualiza su estado de actualización.
 8. **Actualizar clústeres de host NSX**:
   - Después de actualizar los controladores NSX Manager y NSX, los clústeres de host se actualizan con los VIB de NSX en los hosts ESXi de vSphere.
-  - En el cliente web de vSphere, vaya a **Inicio** > **Redes y seguridad** > **Instalación**, seleccione el **separador Preparación del host**. Para cada clúster que desee actualizar, pulse **Actualizar disponible**. El estado de instalación muestra Instalando.
+  - En el cliente web de vSphere, vaya a **Inicio** > **Redes y seguridad** > **Instalación**, seleccione el separador **Preparación del host**. Para cada clúster que desee actualizar, pulse **Actualizar disponible**. El estado de instalación muestra Instalando.
   - El estado de instalación del clúster muestra _No preparado_. Pulse **No preparado** para ver más información y pulse **Resolver todo** para intentar completar la instalación de VIB. El host se coloca en modalidad de mantenimiento y si es necesario se rearranca para completar la actualización. La columna Estado de instalación muestra Instalando. Una vez que se haya completado la actualización, la columna Estado de la instalación muestra una marca de selección verde y la versión actualizada de NSX.
 9. **Pasarelas de Edge Services**:
   - Durante el proceso de actualización se despliega un nuevo dispositivo virtual Edge junto con el existente. Cuando el nuevo Edge está listo, las vNIC antiguas de Edge están desconectadas y las nuevas están conectadas. El nuevo Edge envía paquetes de ARP gratuitos (GARP) para actualizar la memoria caché ARP de los conmutadores conectados. Cuando se despliega la alta disponibilidad, el proceso de actualización se realiza dos veces. Este proceso puede afectar temporalmente al reenvío de paquetes.
@@ -69,4 +69,4 @@ El flujo de trabajo es el siguiente:
 {: #vum-updating-nsx-related}
 
 * [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demostraciones)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (demostraciones)

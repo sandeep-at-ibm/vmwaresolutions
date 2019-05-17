@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -60,7 +60,7 @@ La arquitectura de herramientas y tecnológica tiene las siguientes especificaci
 * Operaciones vRealize, vRealize Log Insight y vRealize Network Insight para ofrecer operaciones y funciones de gestión específicas de los productos VMware utilizados, como por ejemplo NSX, vSAN y vSphere
 * IBM Software Defined Environment Automation Tool Health Check (SAT HC) para validar los despliegues frente a las mejores prácticas y políticas de seguridad
 * Recuperación tras desastre (DR) opcional de entrada y salida del sitio {{site.data.keyword.cloud_notm}} de la región
-* Fortigate Security Appliance o similar para proteger cualquier acceso a internet y para facilitar la integración de red activa-activa con la red local
+* Fortigate Security Appliance o similar para proteger cualquier acceso a Internet y para facilitar la integración de red activa-activa con la red local
 
 ### Especificaciones de la arquitectura de clúster extendido vSphere + vSAN
 {: #mcv_overview-stretched-cluster-specs}

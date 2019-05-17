@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2017-11-20"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -192,6 +192,6 @@ Gli utenti di VMware Cloud Foundation possono utilizzare le istruzioni dettaglia
 {: #relnotes_v20-ui}
 
 * Il numero massimo di server ESXi che possono essere aggiunti a un cluster è ora aggiornato a 32 server. Il numero massimo di cluster continua ad essere cinque.
-* Nella pagina **Risorse**, la colonna **Server ESXi** nelle tabelle di riepilogo dell'istanza è sostituita dalla colonna **Versione**, in cui puoi trovare la versione di release in cui le istanze sono state distribuite o aggiornate.
+* Nella pagina **Risorse**, la colonna **Server ESXi** nelle tabelle di riepilogo dell'istanza è sostituita dalla colonna **Versione**, in cui puoi trovare la versione di release in cui le istanze sono state distribuite o ne è stato eseguito l'upgrade.
 * La versione di SDDC Manager per le istanze Cloud Foundation è ora disponibile nella pagina dei dettagli dell'istanza.
 * Sono disponibili vari messaggi di errore e miglioramenti delle descrizioni a comparsa per aiutarti a selezionare le impostazioni appropriate nell'interfaccia utente.

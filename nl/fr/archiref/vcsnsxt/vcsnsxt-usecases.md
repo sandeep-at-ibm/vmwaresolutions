@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-19"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -48,7 +48,7 @@ Les produits {{site.data.keyword.icpfull_notm}} et Cloud Automation Manager (CAM
 
 Le diagramme ci-dessous représente {{site.data.keyword.icpfull_notm}} s'exécutant par dessus une instance vCenter Server. NSX-V est configuré avec un commutateur/réseau VXLAN dédié, un routeur DLR et une passerelle ESG spécifiquement pour le réseau dissocié {{site.data.keyword.icpfull_notm}}. Le routage est configuré via la passerelle ESG pour accéder au réseau sous-jacent.
 
-A l'aide de l'automatisation d'{{site.data.keyword.cloud_notm}}, l'entreprise Acme Skateboards peut mettre à disposition une solution hybride comprenant vCenter afin d'exécuter ses machines virtuelles de base de données et {{site.data.keyword.icpfull_notm}} sur vCenter Server pour exécuter ses applications et des services Web frontaux dans des conteneurs. NSX lui fournit un jeu commun d'outils de gestion pour la mise en réseau et la sécurité dans le réseau dissocié.
+A l'aide de l'automatisation {{site.data.keyword.cloud_notm}}, l'entreprise Acme Skateboards peut mettre à disposition une solution hybride comprenant vCenter afin d'exécuter ses machines virtuelles de base de données et {{site.data.keyword.icpfull_notm}} sur vCenter Server pour exécuter ses applications et des services Web frontaux dans des conteneurs. NSX lui fournit un jeu commun d'outils de gestion pour la mise en réseau et la sécurité dans le réseau dissocié.
 
 Pour plus d'informations sur NSX-V, voir [Présentation de NSX-V](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv). Pour plus d'informations sur l'offre vCenter Server et {{site.data.keyword.icpfull_notm}}, voir [vCenter Server et {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro).
 

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-04-03"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -43,7 +43,8 @@ La red física la gestiona {{site.data.keyword.cloud_notm}}. En la siguiente sec
 
 La red física de {{site.data.keyword.cloud_notm}} está separada en tres redes distintas: pública, privada y de gestión. Para obtener más información sobre las redes pública, privada y de gestión, consulte [Visión general de la solución](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview).
 
-Para obtener más información sobre la red de {{site.data.keyword.cloud_notm}}, consulte [La red de {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud-computing/bluemix/our-network){:new_window}.
+Para obtener más información sobre la red de {{site.data.keyword.cloud_notm}}, consulte
+[Centros de datos globales de {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/data-centers/){:new_window}.
 
 Revise la información siguiente para ver una descripción de la red de servicios que forma parte de la red privada.
 

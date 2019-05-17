@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-07"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -59,7 +59,7 @@ Veeam Backup and Replication 9.5 Enterprise Plus (licenza da 10, 25, 50, 100 o 2
 
 Backup di gestione configurati per impostazione predefinita con un massimo di 5 VM e 2000 GB di archiviazione.
 
-## Considerazioni sull'istallazione di Veeam on IBM Cloud
+## Considerazioni sull'installazione di Veeam on IBM Cloud
 {: #veeam_considerations-install}
 
 Il repository di archiviazione e il server Veeam si trovano nel pod e nel data center originali. Pertanto, le prestazioni delle operazioni di backup per i cluster remoti potrebbero ridursi.

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,7 +18,7 @@ vSAN genera líneas base de sistema y grupos de línea base para su uso con VUM 
 
 Estas actualizaciones recomendadas proporcionan el mejor release disponible para mantener el hardware en un estado admitido.
 * **Líneas base de sistema VSAN**: las recomendaciones de compilación de vSAN se proporcionan a través de las líneas base del sistema vSAN para VUM. vSAN genera un grupo de línea base para cada clúster vSAN, que se muestran en el panel Líneas base del separador Líneas base y grupos. VUM explora automáticamente cada clúster vSAN para comprobar la conformidad con el grupo de línea base. Sin embargo, para actualizar el clúster vSAN, debe corregir manualmente la línea base del sistema. Mediante VUM, puede solucionar la línea base del sistema vSAN en un único host o en todo el clúster.
-* **Catálogo de release vSAN**: el catálogo de releases de vSAN mantiene información sobre los releases disponibles, el orden de preferencias para los releases y los parches críticos necesarios para cada release. vSAN requiere conectividad a internet para acceder al catálogo de releases. No es necesario estar inscrito en el Programa de mejora de la experiencia del cliente (CEIP) para que vSAN acceda al catálogo de releases.
+* **Catálogo de release vSAN**: el catálogo de releases de vSAN mantiene información sobre los releases disponibles, el orden de preferencias para los releases y los parches críticos necesarios para cada release. vSAN requiere conectividad a Internet para acceder al catálogo de releases. No es necesario estar inscrito en el Programa de mejora de la experiencia del cliente (CEIP) para que vSAN acceda al catálogo de releases.
 * Trabajar con **Recomendaciones de compilaciones de vSAN**:VUM comprueba los releases de ESXi de vSphere instalados en la información de la lista de compatibilidad de hardware (HCL) en la guía de compatibilidad de VMware. Determina la vía de acceso de actualización correcta para cada clúster vSAN, basándose en el catálogo de release vSAN actual. vSAN también incluye las actualizaciones de controladores y parches para el release recomendado en su línea base de sistema. Las recomendaciones de compilación vSAN garantizan que cada clúster vSAN permanece en el estado de compatibilidad de hardware actual o mejor. Si el hardware del clúster vSAN no se incluye en HCL, vSAN recomienda una actualización a la última versión.
 
 La actualización del clúster de vSAN se realiza en la secuencia de tareas siguientes:
@@ -57,12 +57,12 @@ El primer paso consiste en añadir las credenciales de my.vmware.com al motor de
 Ha habido informes en los que la información de proxy solo se establece para HTTP pero no para HTTPS. Para configurar la información de proxy también para el tráfico HTTPS, debe habilitarse en primer lugar. Después de iniciar una sesión en el VCSA mediante SSH, utilice el mandato proxy.get para ver la configuración y confirme que los parámetros HTTPS no están establecidos.
 
 Si los parámetros HTTPS no están establecidos, utilice el mandato siguiente:
-  `proxy.set --protocol https --server``<proxy ip>`` --port 3128`
+  `proxy.set --protocol https --server ``<proxy ip>`` --port 3128`
 
 ### Configure vSAN para utilizar el proxy
 {: #vum-updating-vsan-config-vsan-proxy}
 
-1. Vaya a **Inicio** > **Hosts y clústeres**, seleccione el **clúster vSAN** en el panel de navegación y, a continuación, seleccione el **separador Configurar** y vaya a **vSAN** y, a continuación, **General**. Desplácese hasta la sección **Conectividad de Internet** y pulse **Editar**.
+1. Vaya a **Inicio** > **Hosts y clústeres**, seleccione el **clúster vSAN** en el panel de navegación y, a continuación, seleccione el separador **Configurar** y vaya a **vSAN** y, a continuación, **General**. Desplácese hasta la sección **Conectividad de Internet** y pulse **Editar**.
 2. Especifique la dirección IP y el número de puerto del proxy, pulse **Aceptar**.
 
 ### Habilitar el Programa de mejora de la experiencia del cliente (CEIP)
@@ -73,13 +73,14 @@ Este es un paso opcional. Al utilizar el cliente web de vSphere, vaya a **Inicio
 ### Realizar una carga de prueba y validar que la carga ha funcionado
 {: #vum-updating-vsan-complete-upload}
 
-1. Al utilizar el cliente web de vSphere, vaya a **Inicio** > **Hosts y clústeres**. Seleccione el clúster necesario y, a continuación, seleccione el **separador Supervisar** y la página **vSAN** y pulse **Estado**. Pulse **Habilitar estado en línea**.
+1. Al utilizar el cliente web de vSphere, vaya a **Inicio** > **Hosts y clústeres**. Seleccione el clúster necesario, seleccione a continuación el separador **Supervisar** y la página **vSAN** y, a continuación, pulse
+**Estado**. Pulse **Habilitar estado en línea**.
 2. Pulse **Volver a probar** y espere a que se complete el proceso.
 3. Aparece una nueva marca de comprobación en Estado denominada _Conectividad de estado en línea_ y **Habilitar estado en línea** cambia a **Volver a probar con estado en línea**.
 4. Pulse **Volver a probar con estado en línea** para iniciar la primera carga y espere a que se complete el proceso, revisando el estado en el panel Tareas recientes. El nombre de la prueba cambia a Estado en línea (última comprobación: ahora mismo).
 5. Cuando se haya completado, en la ventana Estado, desplácese hasta la Recomendación de compilación de vSAN, expándala y pulse **Estado de motor de recomendación de compilación de vSAN**.
 6. Pulse **Iniciar sesión en my.vmware.com** y especifique sus credenciales. Cuando se completa el proceso, el **Resultado de la prueba** cambia al estado **Pasado**.
-7. Pulse el **separador Actualizar gestor** y el clúster vSAN se añadirá a las líneas base.
+7. Pulse el separador **Update Manager** y el clúster vSAN se añadirá a las líneas base.
 
 ## Requisitos previos
 {: #vum-updating-vsan-prereq}
@@ -90,9 +91,9 @@ Antes de comenzar el proceso de actualización de vSAN, asegúrese de que se cum
   - El VCSA debe estar en un nivel de parche igual o superior al de los hosts de ESXi de vSphere. Actualice VCSA si es necesario
   - Todos los hosts deben ejecutar la misma versión de ESXi. Si las versiones del host ESXi de vSphere no coinciden, actualícelo
 * **Todos los discos vSAN deben estar en buen estado**:
-  - No hay ningún disco que falle ni falta ningún disco. Esto se puede determinar en la vista **Gestión de discos vSAN** en el cliente web de vSphere. **Inicio** > **Hosts y clústeres** y, a continuación, seleccione el **clúster vSAN** y pulse **Separador vSAN** y, a continuación, **Discos físicos**. Desplácese por todos los discos y revise el estado de salud de vSAN.
-  - No hay objetos vSAN inaccesibles. Esto se puede verificar con el **Servicio de estado vSAN** pulsando **Inicio** > **Hosts y clústeres** y, a continuación, seleccione el **clúster vSAN**. Pulse el **separador Supervisor**, **vSAN** y, a continuación, pulse **Estado**. Revise los resultados de la prueba.
-  - No hay ninguna resincronización activa al principio del proceso de actualización; pulse **Inicio** > **Hosts y clústeres** y seleccione el **clúster vSAN**, pulse el **separador vSAN** y, a continuación, pulse **Componentes de resincronización**. _El recuento de componentes de resincronización debe ser 0_. Se espera cierta actividad de resincronización durante el proceso de actualización, ya que los datos deben sincronizarse después de que se haya reiniciado el host.
+  - No hay ningún disco que falle ni falta ningún disco. Esto se puede determinar en la vista **Gestión de discos vSAN** en el cliente web de vSphere. **Inicio** > **Hosts y clústeres**, seleccione luego el **Clúster vSAN** y pulse el separador **vSAN** y, a continuación, **Discos físicos**. Desplácese por todos los discos y revise el estado de salud de vSAN.
+  - No hay objetos vSAN inaccesibles. Esto se puede verificar con el **Servicio de estado vSAN** pulsando **Inicio** > **Hosts y clústeres** y, a continuación, seleccione el **clúster vSAN**. Pulse el separador **Supervisar**, **vSAN** y, a continuación, pulse **Estado**. Revise los resultados de la prueba.
+  - No hay ninguna resincronización activa al principio del proceso de actualización; pulse **Inicio** > **Hosts y clústeres** y seleccione el **Clúster vSAN**, pulse el separador **vSAN** y, a continuación, pulse **Componentes de resincronización**. _El recuento de componentes de resincronización debe ser 0_. Se espera cierta actividad de resincronización durante el proceso de actualización, ya que los datos deben sincronizarse después de que se haya reiniciado el host.
 * **Preparación del host ESXi de vSphere**: cuando mueva un host a la modalidad de mantenimiento en un clúster vSAN, tiene tres opciones:
   - **Sin migración de datos**: si selecciona esta opción, vSAN no evacuará ningún dato de este host. Si apaga o elimina el host del clúster, es posible que no pueda acceder a algunas máquinas virtuales (VM).
   - **Garantizar la disponibilidad**: si selecciona esta opción, vSAN le permite mover el host a la modalidad de mantenimiento más rápidamente que la migración de datos completa y permite el acceso a las VM del entorno.
@@ -146,4 +147,4 @@ Muchas tareas administrativas básicas se pueden realizar de forma mucho más ef
 {: #vum-updating-vsan-related}
 
 * [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demostraciones)
+* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (demostraciones)

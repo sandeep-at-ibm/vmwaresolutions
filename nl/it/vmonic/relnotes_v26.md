@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-10-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -105,7 +105,7 @@ Questa release applica i seguenti aggiornamenti e miglioramenti:
 ### HyTrust KeyControl on IBM Cloud
 {: #relnotes_v26-htkc}
 
-Il servizio HyTrust KeyControl on {{site.data.keyword.cloud_notm}} è ora disponibile per le istanze VMware Cloud Foundation e VMware vCenter Server che eseguono vSphere 6.5 e che sono distribuite o aggiornate alle release della V2.5 o successive. Il servizio semplifica la gestione dei carichi di lavoro crittografati automatizzando e semplificando il ciclo di vita delle chiavi di crittografia. Il servizio può facilmente gestire le chiavi di crittografia in scala utilizzando la crittografia conforme a FIPS 140-2. Utilizzando questo servizio, puoi gestire le chiavi di crittografia per tutte le tue VM (Virtual Machine) e gli archivi di dati crittografati e ridimensionarli per supportare migliaia di carichi di lavoro crittografati nelle grandi distribuzioni.
+Il servizio HyTrust KeyControl on {{site.data.keyword.cloud_notm}} è ora disponibile per le istanze VMware Cloud Foundation e VMware vCenter Server che eseguono vSphere 6.5 e che sono state distribuite o di cui è stato eseguito l'upgrade alle release della V2.5 o successive. Il servizio semplifica la gestione dei carichi di lavoro crittografati automatizzando e semplificando il ciclo di vita delle chiavi di crittografia. Il servizio può facilmente gestire le chiavi di crittografia in scala utilizzando la crittografia conforme a FIPS 140-2. Utilizzando questo servizio, puoi gestire le chiavi di crittografia per tutte le tue VM (Virtual Machine) e gli archivi di dati crittografati e ridimensionarli per supportare migliaia di carichi di lavoro crittografati nelle grandi distribuzioni.
 
 Puoi ordinare le istanze con il servizio incluso al momento dell'ordine della tua istanza o aggiungere questo servizio alle tue istanze esistenti in un secondo momento.
 
@@ -135,7 +135,7 @@ Per ulteriori informazioni su Veeam on {{site.data.keyword.cloud_notm}}, vedi [P
 ### VMware HCX on IBM Cloud
 {: #relnotes_v26-hcx}
 
-La release corrente installa VMware HCX 3.5.1 su tutte le istanze appena distribuite. Per ulteriori informazioni sulle nuove funzioni di HCX 3.5.1, vedi la [documentazione di VMware NSX Hybrid Connect](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/index.html).
+La release corrente installa VMware HCX 3.5.1 su tutte le istanze appena distribuite. Per ulteriori informazioni sulle nuove funzioni in HCX 3.5.1, vedi la [documentazione di VMware HCX](https://docs.vmware.com/en/VMware-HCX/index.html).
 
 ### Supporto di Zerto on IBM Cloud per vSphere ESXi V6.5 Aggiornamento 2c
 {: #relnotes_v26-zerto}

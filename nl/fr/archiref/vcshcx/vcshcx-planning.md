@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-22"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -104,7 +104,7 @@ Pour l'extension du réseau, seuls les groupes de ports avec un commutateur dist
 ## Plateformes cloud prises en charge
 {: #vcshcx-planning-cloud-platforms}
 
-Le côté cloud de HCX est fournit par l'automatisation d'{{site.data.keyword.cloud_notm}}.
+Le côté cloud de HCX est fournit par l'automatisation {{site.data.keyword.cloud_notm}}.
 
 ## Options de connectivité
 {: #vcshcx-planning-connect-options}
@@ -112,7 +112,7 @@ Le côté cloud de HCX est fournit par l'automatisation d'{{site.data.keyword.cl
 ### Connectivité HCX standard
 {: #vcshcx-planning-standard-connect}
 
-Déployée par l'automatisation d'{{site.data.keyword.vmwaresolutions_short}}, l'installation du côté cloud de HCX est configurée par défaut pour se connecter à l'internet public.
+Déployée par l'automatisation {{site.data.keyword.vmwaresolutions_short}}, l'installation du côté cloud de HCX est configurée par défaut pour se connecter à l'internet public.
 
 ### Connectivité facultative
 {: #vcshcx-planning-optional-connect}

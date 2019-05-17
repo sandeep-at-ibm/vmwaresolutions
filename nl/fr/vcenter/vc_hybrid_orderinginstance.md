@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -34,7 +34,7 @@ Tableau 1. Format de la valeur des noms d'instance et de domaine
   |:------------- |:------------- |
   | Nom de domaine | `<root_domain>` |  
   | Nom d'utilisateur de connexion vCenter Server | `<user_id>@<root_domain>` (utilisateur Microsoft Active Directory) ou `administrator@vsphere.local` |
-  | vCenter Server (avec PSC intégré) FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. La longueur maximale admise est de 50 caractères. |
+  | vCenter Server (avec PSC intégré) FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. La longueur maximale est de 50 caractères. |
   | Nom du site de connexion unique | `<subdomain_label>` |
   | Nom de serveur ESXi qualifié complet | `<host_prefix><n>.<subdomain_label>.<root_domain>`, où `<n>` est la séquence du serveur ESXi. La longueur maximale admise est de 50 caractères. |
 
@@ -118,16 +118,14 @@ Tableau 3. Options pour les serveurs Broadwell {{site.data.keyword.baremetal_sho
 
 | Options de modèle d'UC        | Options de RAM       |
 |:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4/16 coeurs au total, 2,1 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
-| Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
-| Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
 | Quad Intel Xeon E7-4820 v4/40 coeurs au total, 2,0 GHz | 128 Go, 256 Go, 512 Go, 1 To, 2 To, 3 To |
 | Quad Intel Xeon E7-4850 v4/64 coeurs au total, 2,1 GHz | 128 Go, 256 Go, 512 Go, 1 To, 2 To, 3 To |
 
 ### Nombre de serveurs bare metal
 {: #vc_hybrid_orderinginstance-bare-metal-number}
 
-Quatre serveurs ESXi sont sélectionnés par défaut et ne sont pas modifiables.
+* Tous les serveurs que vous commandez ont la même configuration.
+* Vous pouvez commander entre 4 et 20 serveurs.
 
 ## Paramètres de stockage
 {: #vc_hybrid_orderinginstance-storage-settings}
@@ -135,9 +133,9 @@ Quatre serveurs ESXi sont sélectionnés par défaut et ne sont pas modifiables.
 VMware vSAN 6.6 est inclus avec votre commande d'instance vCenter Server with Hybridity Bundle. Spécifiez les options vSAN suivantes :
 * **Type et taille de disque pour disques de capacité vSAN** : sélectionnez une option correspond aux disques de capacité dont vous avez besoin.
 * **Nombre de disques de capacité vSAN** : indiquez le nombre de disques de capacité que vous souhaitez ajouter.
-* Pour ajouter des disques de capacité au-delà de la limite fixée à huit, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée.
+* Si vous souhaitez augmenter la capacité au-delà de la limite de 10 disques, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de 12 disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée.
 
-  L'option **Hautes performances Intel Optane** est disponible uniquement pour les modèles d'UC Skylake Dual Intel Xeon Gold 5120 et Dual Intel Xeon Gold 6140.
+  L'option **Hautes performances avec Intel Optane** n'est disponible que pour les modèles d'unités centrales Skylake.
   {:note}
 
 * Passez en revue les valeurs de **type de disque pour les disques de cache vSAN** et de **nombre de disques de cache vSAN**. Ces valeurs dépendent de la sélection de la case **Hautes performances avec Intel Optane**.
@@ -180,12 +178,14 @@ La longueur maximale du nom de domaine complet des hôtes et des machines virtue
 ### Réseau public ou privé
 {: #vc_hybrid_orderinginstance-public-private-network}
 
-Les paramètres d'activation de carte d'interface réseau varient selon que vous sélectionnez **Réseau public et réseau privé** ou **Réseau privé uniquement**. Les services complémentaires suivants requièrent des cartes d'interface réseau public et ne sont pas disponibles si vous sélectionnez l'option de réseau privé :
+Les paramètres d'activation de carte d'interface réseau varient selon que vous sélectionnez **Réseau public et réseau privé** ou **Réseau privé uniquement**.
 
-* F5 on {{site.data.keyword.cloud_notm}}
-* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
-* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
-* Zerto on {{site.data.keyword.cloud_notm}}
+Si vous sélectionnez l'option **Réseau privé uniquement** :
+* Les passerelles ESG VMware NSX ne sont pas mises à disposition (ni la passerelle ESG des services de gestion ni la passerelle ESG gérée par le client).
+* Les services complémentaires suivants, qui nécessitent des cartes d'interface réseau publiques, ne sont pas disponibles :
+  * F5 on {{site.data.keyword.cloud_notm}}
+  * Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
+  * Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
 
 ### Commander de nouveaux VLAN
 {: #vc_hybrid_orderinginstance-new-vlans}
@@ -215,14 +215,14 @@ Sélectionnez la configuration de système de noms de domaine (DNS, Domain Name 
 * **Une instance de serveur virtuel Windows publique pour Active Directory/DNS** : une unique instance de serveur virtuel Windows Microsoft pour Microsoft Active Directory (AD), qui fonctionne en tant que serveur de noms de domaine pour l'instance où sont enregistrés les hôtes et les machines virtuelles, est déployée et peut être interrogée.
 * **Deux machines virtuelles Windows Server dédiées à haute disponibilité sur le cluster de gestion** : deux machines virtuelles Microsoft Windows sont déployées, pour plus de sécurité et de robustesse.
 
-Vous devez fournir deux licences Microsoft Windows Server 2012 R2 si vous configurez votre instance de manière à utiliser les deux machines virtuelles Microsoft Windows. Utilisez la licence d'édition Microsoft Windows Server 2012 R2 Standard et/ou la licence d'édition Microsoft Windows Server 2012 R2 Datacenter.
+Vous devez fournir deux licences Microsoft Windows Server 2016 si vous configurez votre instance de manière à utiliser les deux machines virtuelles Microsoft Windows. Utilisez la licence d'édition Microsoft Windows Server 2016 Standard et/ou la licence d'édition Microsoft Windows Server 2016 Datacenter.
 {:important}
 
 Chaque licence ne peut être affectée qu'à un seul serveur physique et couvre jusqu'à deux processeurs physiques. Une licence d'édition Standard est à même d'exécuter deux machines virtuelles Microsoft Windows virtualisées par serveur à 2 processeurs. Par conséquent, deux licences sont nécessaires puisque deux machines virtuelles Microsoft Windows sont déployées sur deux hôtes différents.
 
 Vous disposez de 30 jours pour activer les machines virtuelles.
 
-Pour plus d'informations sur la commande de licence Windows, voir la [documentation Windows Server 2012 R2](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2).
+Pour en savoir plus sur la commande des licences Windows Server 2016, voir [Prise en main de Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:new_window}.
 
 ## Paramètres de services
 {: #vc_hybrid_orderinginstance-addon-services}
@@ -251,12 +251,9 @@ Selon la configuration que vous avez sélectionnée pour l'instance et les servi
 7. Spécifiez les paramètres de serveur bare metal.
   1. Sélectionnez l'{{site.data.keyword.CloudDataCent_notm}} qui doit héberger l'instance.
   2. Sélectionnez le modèle d'UC **Skylake** ou **Broadwell** et la quantité de mémoire **RAM**.
-
-  La valeur quatre, affectée par défaut à la zone **Nombre de serveurs bare metal**, ne peut pas être modifiée.
-  {:note}
 8. Procédez à la configuration du stockage. Spécifiez les types de disque pour les disques de cache et de capacité, ainsi que le nombre de disques. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**.
 9. Procédez à la configuration de l'interface réseau.
-  1. Renseignez les zones Préfixe de nom d'hôte, Libelle de sous-domaine et Nom de domaine racine.
+  1. Entrez le préfixe du nom d'hôte de l'instance mise à disposition, le libellé de sous-domaine et le nom du domaine racine. 
   2. Sélectionnez le paramètre réseau **Réseau public et réseau privé** ou **réseau privé uniquement**.
   3. Sélectionnez la configuration VLAN.
      *  Si vous voulez commander de nouveaux VLAN publics et privés, cliquez sur **Commander de nouveaux VLAN**.

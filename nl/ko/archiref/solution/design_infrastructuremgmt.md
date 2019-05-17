@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -22,7 +22,7 @@ subcollection: vmwaresolutions
 * 임베디드 PSC(Platform Services Controller)가 포함된 vCenter Server는 vSphere 환경 관리를 위한 중앙 집중식 플랫폼이며 이 솔루션의 기반 컴포넌트 중 하나입니다.
 * 이 솔루션에서 PSC를 사용하여 VMware vCenter 싱글 사인온, 라이센스 서비스, 검색 서비스 및 VMware 인증 기관을 포함하는 인프라 서비스 세트를 제공할 수 있습니다.
 
-이 디자인은 vCenter Server의 인스턴스로 통합된 PSC 기능을 사용합니다. PSC 및 vCenter Server는 동일한 가상 머신(VM) 내에 수용됩니다. 
+이 디자인은 vCenter Server의 인스턴스로 통합된 PSC 기능을 사용합니다. PSC 및 vCenter Server는 동일한 가상 머신(VM) 내에 수용됩니다.
 
 그림 1. 인프라 관리</br>
 ![인프라 관리](vcsv4radiagrams-ra-inframgmt.svg)
@@ -77,7 +77,7 @@ vCenter Server 구성에서는 어플라이언스에 포함된 로컬, 임베디
 ## Enhanced vMotion Compatibility
 {: #design_infrastructuremgmt-evc}
 
-잠재적으로 다른 CPU 기능이 있는 클러스터 노드에서 vMotion 호환성을 단순화하기 위해 EVC(Enhanced vMotion Compatibility) 모드는 최신 프로세서가 {{site.data.keyword.cloud_notm}} 인벤토리 내에서 도달할 때 클러스터 노드에서 vMotion 호환성을 보장하도록 Skylake 레벨에서 사용으로 설정되고 Skylake 프로세서가 인벤토리에 없는 경우 향후 클러스터 확장을 허용합니다. 
+잠재적으로 다른 CPU 기능이 있는 클러스터 노드에서 vMotion 호환성을 단순화하기 위해 EVC(Enhanced vMotion Compatibility) 모드는 최신 프로세서가 {{site.data.keyword.cloud_notm}} 인벤토리 내에서 도달할 때 클러스터 노드에서 vMotion 호환성을 보장하도록 Skylake 레벨에서 사용으로 설정되고 Skylake 프로세서가 인벤토리에 없는 경우 향후 클러스터 확장을 허용합니다.
 
 ### IBM CloudDriver
 {: #design_infrastructuremgmt-cloud-driver}
@@ -85,9 +85,11 @@ vCenter Server 구성에서는 어플라이언스에 포함된 로컬, 임베디
 이러한 솔루션의 초석은 자동화입니다. 자동화는 배치의 복잡도를 감소시키고, 배치 시간을 크게 줄이며, VMware 인스턴스가 일관된 방식으로 배치되도록 보장합니다.
 
 IBM CloudBuilder는 새 VMware 인스턴스를 가져오고 라이프사이클 관리 기능을 수행하는 일시적인
-{{site.data.keyword.cloud_notm}} VM 가상 서버 인스턴스(VSI)입니다. 전체 vCenter Server 인스턴스 관리가 필요할 때 배치되고, 프로세스가 완료될 때 영구 삭제됩니다. 
+{{site.data.keyword.cloud_notm}} VM 가상 서버 인스턴스(VSI)입니다. 전체 vCenter Server 인스턴스 관리가 필요할 때 배치되고, 프로세스가 완료될 때 영구 삭제됩니다.
 
-IBM CloudDriver는 메시지 큐로서 {{site.data.keyword.cloud_notm}} 오브젝트 스토리지를 통한 사설 네트워크 연결을 통해(선택적으로) 또는 공용 네트워크 연결을 통해 {{site.data.keyword.vmwaresolutions_short}} 관리 인프라로 다시 전달하도록 구성될 수 있습니다. IBM CloudDriver는 IBM 개발 컴포넌트이며 사용자가 액세스할 수 없고 다음 속성 및 기능을 갖고 있습니다. 
+IBM CloudDriver는 2일차 오퍼레이션(예: 호스트 클러스터 또는 추가 서비스를 VMware 인스턴스에 추가)의 필요에 따라 배치되는 일시적인 {{site.data.keyword.cloud_notm}} VM 가상 서버 인스턴스(VSI)입니다. 
+
+CloudBuilder 및 CloudDriver는 사설 메시지 큐를 통해 IBM 관리 플레인에 연결하는 사설 네트워크에만 배치됩니다. 이는 IBM 개발 컴포넌트이며 사용자가 액세스할 수 없고 다음 속성 및 기능을 갖고 있습니다. 
 
 - 사용자 계정 내 vCenter Server 인스턴스의 배치 및 구성
 - vCenter Server 클러스터에서 호스트 추가 및 제거
@@ -116,7 +118,7 @@ IBM CloudDriver는 메시지 큐로서 {{site.data.keyword.cloud_notm}} 오브�
 
 IC4V 관리 인프라에서는 {{site.data.keyword.cloud_notm}} 관리 플레인 내에 암호화된 상태로 ID 및 비밀번호가 포함된 모든 vCenter Server를 저장합니다. 사용자가 이 비밀번호를 변경하면 vCenter Server 내의 자동화 기능이 중단될 수 있습니다.
 
-자동화가 인터럽트되지 않은 기능을 처리할 수 있도록 IC4V 솔루션 포털에서 변경된 비밀번호를 제공할 수 있습니다. 선택적으로 솔루션 포털은 입력된 비밀번호의 확인을 허용합니다. 
+자동화가 인터럽트되지 않은 기능을 처리할 수 있도록 IC4V 솔루션 포털에서 변경된 비밀번호를 제공할 수 있습니다. 선택적으로 솔루션 포털은 입력된 비밀번호의 확인을 허용합니다.
 
 ## 관련 링크
 {: #design_infrastructuremgmt-related}

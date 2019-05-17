@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2017-10-13"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -78,7 +78,7 @@ Dispone de una opción de servidor personalizado por el usuario junto con las op
 
 Para mejorar la capacidad de escalado del entorno VMware alojado, ahora puede crear un nuevo clúster en otro pod de la infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer) o en un {{site.data.keyword.CloudDataCent_notm}} distinto del correspondiente al clúster inicial desplegado en la instancia.
 
-Para obtener más información, consulte [Adición y visualización de clústeres para instancias vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances).
+Para obtener más información, consulte [Adición, visualización y supresión de clústeres para instancias de vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters).
 
 ### Cambio de componentes
 {: #relnotes_v19-change-comp}

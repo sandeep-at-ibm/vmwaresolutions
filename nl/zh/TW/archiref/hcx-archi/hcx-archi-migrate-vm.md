@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -25,7 +25,7 @@ HCX 啟用雙向移轉：從內部部署至雲端，或從雲端至內部部署�
 低關閉時間移轉使用主機型抄寫，將即時虛擬機器從 vCenter 移至虛擬資料中心或相反方向。為了減少關閉時間，來源 VM 會在抄寫期間保持連線，並在抄寫完成之後於目的地 ESX 主機上予以引導。
 
 1. 移轉要求會觸發下列動作：
-  * 抄寫開始完整同步傳送至 VCF/VCS HCX 虛擬資料中心。抄寫所需的時間取決於 VM 的大小及可用頻寬。
+  * 抄寫開始完整同步傳送至 VCS HCX 虛擬資料中心。抄寫所需的時間取決於 VM 的大小及可用頻寬。
   * 根據工作負載如何變更磁碟上的區塊，抄寫頻寬的耗用量會不同。
 2. 完整同步化完成時，會發生差異同步化。
 3. 差異同步化完成時，HCX 會觸發切換。切換可以立即啟動或排定到特定的時間啟動。
@@ -37,7 +37,7 @@ HCX 啟用雙向移轉：從內部部署至雲端，或從雲端至內部部署�
 ## 無關閉時間 vMotion
 {: #hcx-archi-migrate-vm-no-downtime-vm}
 
-vMotion 會將即時虛擬機器從 vSphere vCenter 傳送至 VCF/VCS Cloud。此 vMotion 需要延伸網路。vMotion 傳送會擷取虛擬機器的作用中記憶體、其執行狀態、其 IP 位址及其 MAC 位址。
+vMotion 會將即時虛擬機器從 vSphere vCenter 傳送至 VCS Cloud。此 vMotion 需要延伸網路。vMotion 傳送會擷取虛擬機器的作用中記憶體、其執行狀態、其 IP 位址及其 MAC 位址。
 
 虛擬機器硬體版本必須至少為第 9 版，否則跨雲端 vMotion 可能會失敗。
 {:note}
@@ -53,8 +53,8 @@ vMotion 會將即時虛擬機器從 vSphere vCenter 傳送至 VCF/VCS Cloud。�
 使用 vSphere Web Client，可以從 Hybrid Cloud Services「開始使用」標籤存取雙向移轉精靈。此精靈會處理所有移轉詳細資料，包括多個虛擬機器。
 
 從 vSphere Web Client 中，可以從 Hybrid Cloud Services「開始使用」標籤存取雙向移轉精靈。此精靈會處理所有移轉詳細資料，包括多個虛擬機器。
-* 從 vSphere 至 VCF/VCS Hybrid Cloud Services
-* 從 VCF/VCS HCX Cloud 至 vSphere
+* 從 vSphere 至 VCS Hybrid Cloud Services
+* 從 VCS HCX Cloud 至 vSphere
 
 ### 先檢查 VM 再移轉
 {: #hcx-archi-migrate-vm-check-vms}

@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-06-22"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -55,7 +55,7 @@ A compter de la version 2.4, les nouveaux modèles d'UC de serveur bare metal su
 * Processeur Dual Intel Skylake Xeon Gold 5120/28 coeurs au total, 2,2 GHz
 * Processeur Dual Intel Skylake Xeon Gold 6140/36 coeurs au total, 2,3 GHz
 
-Pour plus d'informations, voir la section *Paramètres de serveur bare metal* dans la rubrique [Commande de nouveaux clusters vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances#bare-metal-server-settings).
+Pour plus d'informations, voir [Paramètres de serveur bare metal](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vs_orderinginstances#vs_orderinginstances-bare-metal-settings).
 
 ## Mises à jour des instances VMware vCenter Server
 {: #relnotes_v24-vcs}
@@ -63,7 +63,7 @@ Pour plus d'informations, voir la section *Paramètres de serveur bare metal* da
 ### Amélioration apportées aux performances du système NFS
 {: #relnotes_v24-nfs}
 
-Le niveau de performance de 10 IOPS/Go, conçu pour les types de charge de travail les plus exigeants, n'est plus limité à un {{site.data.keyword.CloudDataCent_notm}} spécifique; il est désormais disponible pour tous les centres de données. Pour plus d'informations, voir la section *Stockage* dans [Présentation de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#technical-specifications-for-vcenter-server-instances).
+Le niveau de performance de 10 IOPS/Go, conçu pour les types de charge de travail les plus exigeants, n'est plus limité à un {{site.data.keyword.CloudDataCent_notm}} spécifique; il est désormais disponible pour tous les centres de données. Pour plus d'informations, voir [Stockage](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#vc_vcenterserveroverview-storage).
 
 ## Mises à jour apportées aux services complémentaires
 {: #relnotes_v24-services}

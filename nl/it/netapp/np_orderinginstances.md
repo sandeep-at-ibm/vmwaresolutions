@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,7 +18,7 @@ subcollection: vmwaresolutions
 # Ordine di istanze NetApp ONTAP Select
 {: #np_orderinginstances}
 
-Per distribuire una piattaforma virtualizzata VMware con un'applicazione di archiviazione definita dal software dedicata e altamente disponibile, ordina un'istanza NetApp ONTAP Select.
+Per distribuire una piattaforma virtualizzata VMware con un dispositivo di archiviazione definito dal software dedicato e altamente disponibile, ordina un'istanza NetApp ONTAP Select. 
 
 ## Requisiti
 {: #np_orderinginstances-req}

@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2017-10-13"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -78,7 +78,7 @@ Uma opção do servidor customizado pelo usuário está disponível junto com as
 
 Para aprimorar a ampliação de seu ambiente VMware hospedado, agora é possível criar um novo cluster em um pod de Infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer) ou em um {{site.data.keyword.CloudDataCent_notm}} diferente do cluster inicial implementado na instância.
 
-Para obter mais informações, veja [Incluindo e visualizando clusters para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances).
+Para obter mais informações, consulte [Incluindo, visualizando e excluindo clusters para instâncias do vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters).
 
 ### Mudando componentes
 {: #relnotes_v19-change-comp}

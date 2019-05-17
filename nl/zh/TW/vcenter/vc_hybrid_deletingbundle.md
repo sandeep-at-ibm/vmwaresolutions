@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -110,7 +110,7 @@ subcollection: vmwaresolutions
   * 您在此程序中安裝的 BYOL 授權碼清單。如果適用，請提供具有 vSphere 及 vSAN 叢集授權碼的實例及叢集名稱。
   * 您在此程序中移除的租賃授權碼清單。如果適用，請提供具有 vSphere 及 vSAN 叢集授權碼的實例及叢集名稱。
 
-  「IBM 支援及作業」團隊會存取 {{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) 帳戶的 vCenter 管理層，以驗證已先移除租賃授權，然後才取消 Hybridity Bundle 租賃授權費用。
+  「IBM 支援及作業」團隊會存取 {{site.data.keyword.cloud_notm}} 基礎架構帳戶的 vCenter 管理層，以驗證已先移除租賃授權，然後才取消 Hybridity Bundle 租賃授權費用。
   {:note}
 
 ## 相關鏈結

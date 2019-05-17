@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2017-07-05"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -47,7 +47,7 @@ subcollection: vmwaresolutions
 ### 集群支持
 {: #relnotes_v17-cluster}
 
-从 V1.7 发行版开始，可以使用集群来管理 vCenter Server 实例中的 ESXi 服务器，以更好地管理资源，并实现高可用性。缺省情况下，订购实例时配置的 ESXi 服务器会分组为 **cluster1**。可以在实例详细信息页面上新引入的**基础架构**选项卡中，查看集群详细信息或向实例最多添加共五个集群。展开或收缩实例的容量时，可以选择要向其添加 ESXi 服务器或要从中除去 ESXi 服务器的集群。有关更多信息，请参阅[添加和查看 vCenter Server 实例的集群](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)。
+从 V1.7 发行版开始，可以使用集群来管理 vCenter Server 实例中的 ESXi 服务器，以更好地管理资源，并实现高可用性。缺省情况下，订购实例时配置的 ESXi 服务器会分组为 **cluster1**。可以在实例详细信息页面上新引入的**基础架构**选项卡中，查看集群详细信息或向实例最多添加共五个集群。展开或收缩实例的容量时，可以选择要向其添加 ESXi 服务器或要从中除去 ESXi 服务器的集群。有关更多信息，请参阅[添加、查看和删除 vCenter Server 实例的集群](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)。
 
 ### Zerto 灾难恢复部署的增强功能
 {: #relnotes_v17-zerto}

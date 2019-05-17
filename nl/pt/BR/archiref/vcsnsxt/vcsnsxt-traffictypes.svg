@@ -32,7 +32,7 @@
   <path d="m531 15v25m0-20h-15m15 0h15m-15 20-15 20m15-20 15 20" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10"/>
   <g font-family="Helvetica" font-size="12px" text-anchor="middle">
    <rect x="518" y="69" width="27" height="15" fill="#fff" stroke-width="0"/>
-   <text x="530.5" y="78.5">User</text>
+   <text x="530.5" y="78.5">Usuário</text>
   </g>
   <rect x="20" y="260" width="240" height="160" fill="#fff" pointer-events="none" stroke="#0c0"/>
   <g font-family="Helvetica" font-size="12px" text-anchor="middle">

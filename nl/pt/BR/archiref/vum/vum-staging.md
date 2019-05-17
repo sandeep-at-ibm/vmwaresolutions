@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-29"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -59,9 +59,9 @@ Para corrigir hosts e clusters, siga estas etapas:
 6. Opcionalmente, na página **Opções avançadas**, selecione a opção para planejar que a correção seja executada posteriormente e especifique um nome exclusivo e uma descrição opcional para a tarefa. O horário que você configura para a tarefa planejada é o horário no VCSA. Opcionalmente, selecione a opção para ignorar avisos sobre dispositivos não suportados no host ou o armazenamento de dados VMFS não mais suportado para continuar com a correção. Clique em **Avançar**.
 7. Na página **Opções de correção** do host, no menu suspenso **Estado de energia da VM**, é possível selecionar a mudança no estado de energia das MVs e dispositivos virtuais que estão em execução nos hosts a serem corrigidos. Um host não pode entrar no modo de manutenção até que as MVs no host sejam desativadas, suspensas ou migradas com vMotion para outros hosts em um cluster do DRS. Algumas atualizações requerem que um host entre no modo de manutenção antes da correção. As MVs e os dispositivos não podem ser executados quando um host está no modo de manutenção. Para reduzir o tempo de inatividade de correção do host em detrimento da disponibilidade da MV, é possível optar por encerrar ou suspender MVs e dispositivos virtuais antes da correção. Em um cluster do DRS, se você não desativar as MVs, a correção demorará mais, mas elas ficarão disponíveis durante todo o processo de correção porque são migradas com vMotion para outros hosts. As seleções são as seguintes:
 
-- **Desativar máquinas virtuais** - Desative todas as MVs e os dispositivos virtuais antes da correção.
-- **Suspender máquinas virtuais** - Suspenda todas as MVs e dispositivos virtuais em execução antes da correção.
-- **Não mudar o estado de energia da VM** - Deixe as MVs e os dispositivos virtuais em seu estado de energia atual.
+  * **Desativar máquinas virtuais** - Desative todas as MVs e os dispositivos virtuais antes da correção.
+  * **Suspender máquinas virtuais** - Suspenda todas as MVs e dispositivos virtuais em execução antes da correção.
+  * **Não mudar o estado de energia da VM** - Deixe as MVs e os dispositivos virtuais em seu estado de energia atual.
 
 8. Opcionalmente, selecione **Desativar quaisquer dispositivos de mídia removível conectados à máquina virtual no host**. O VUM não corrige os hosts nos quais as MVs conectaram unidades de CD, de DVD ou de disquete. Em ambientes em cluster, os dispositivos de mídia conectados poderão evitar o vMotion se o host de destino não tiver um dispositivo idêntico ou uma imagem ISO montada, o que, por sua vez, evita que o host de origem entre no modo de manutenção. Após a correção, o VUM reconectará os dispositivos de mídia removível se eles ainda estiverem disponíveis.
 9. Opcionalmente, selecione **Tentar novamente entrar no modo de manutenção no caso de falha**, especifique o número de novas tentativas e especifique o tempo de espera entre as novas tentativas. O VUM aguarda o período de atraso de nova tentativa e tenta novamente colocar o host no modo de manutenção tantas vezes quanto você indicar no campo Número de novas tentativas.
@@ -82,5 +82,5 @@ Não há nenhum requisito em uma instância do vCenter Server para marcar a caix
 ## Links relacionados
 {: #vum-staging-related}
 
-* [Arquitetura de solução do VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrações)
+* [Arquitetura da solução VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
+* [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (demonstrações)

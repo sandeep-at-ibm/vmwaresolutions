@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-04-09"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -37,13 +37,18 @@ subcollection: vmwaresolutions
 유지보수 모드의 ESXi 서버가 있는 vCenter Server 인스턴스에 {{site.data.keyword.cloud_notm}}용 Zerto를 추가할 경우 ZVM(Zerto Virtual Manager) 콘솔 및 사전에 채워진 Zerto Virtual Replication Appliance(VRA) IP 주소를 사용하여 수동으로 VRA 가상 머신(VM)을 배치해야 합니다.
 {:note}
 
+## 사설 전용 인스턴스에 대한 Zerto on IBM Cloud 주문
+{: #zerto_ordering-private-only}
+
+Zerto on {{site.data.keyword.cloud_notm}}를 사설 전용 인스턴스에 추가할 경우 다음 요구사항이 충족되는지 확인하십시오. 
+* 사용자는 인터넷에 연결하도록 고유한 프록시 서버를 설정해야 합니다. 자세한 정보는 [공용 네트워크 연결](/docs/services/vmwaresolutions/services?topic=vmware-solutions-design_virtualinfrastructure#public-network-connectivity)을 참조하십시오.
+* Zerto용 콜홈 기능도 구성해야 합니다. Zerto 콜홈에 대한 자세한 정보는 [엔터프라이즈를 위한 Zerto 보고 환경(콜홈)](https://www.zerto.com/myzerto/knowledge-base/zerto-reporting-for-enterprise-environments-call-home/){:new_window}을 참조하십시오.
+
 ## 관련 링크
 {: #zerto_ordering-related}
 
 * [Zerto on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)
 * [Zerto on {{site.data.keyword.cloud_notm}} 관리](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingzertodr)
-* [vCenter Server 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
-* [vCenter Server with Hybridity Bundle 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
 * [Zerto on {{site.data.keyword.cloud_notm}}에 대한 관리 서비스 요청](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
 * [zerto.com 웹 사이트](https://www.zerto.com){:new_window}
 * [Zerto 기술 문서](https://www.zerto.com/myzerto/technical-documentation/){:new_window}

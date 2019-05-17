@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -28,7 +28,7 @@ Tabela 1. Itens de instâncias do HCX on {{site.data.keyword.cloud_notm}} no loc
 | Nome | O nome da instância. |
 | Chave de ativação | A chave de ativação da instância do HCX on {{site.data.keyword.cloud_notm}} no local. |  
 | Horário de criação | A data e hora em que a instância foi criada. |
-| Barra de Status | O status da instância. |  
+| Status | O status da instância. |  
 | Ações | Clique no ícone **Excluir** para excluir a instância. |
 
 O status da instância pode ter uma gama de opções.

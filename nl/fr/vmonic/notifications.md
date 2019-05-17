@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -54,7 +54,7 @@ Les notifications vous permettent de vérifier le statut des opérations systèm
        </tr>
        <tr>
          <td>Type</td>
-         <td>Type du composant concerné par l'événement signalé :<ul><li>Instances vCenter Server</li><li>Instances Cloud Foundation</li><li>Services</li><li>Système</li></ul></td>
+         <td>Type du composant concerné par l'événement signalé :<ul><li>Instances vCenter Server</li><li>Services</li><li>Système</li></ul></td>
        </tr>
        <tr>
          <td>Ressource</td>

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-12"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -23,7 +23,7 @@ Revise as considerações a seguir antes de excluir as licenças do Caveonix Ris
 ## Considerações ao excluir licenças do Caveonix RiskForesight
 {: #caveonix_license_considerations-remove}
 
-A remoção de uma licença do Caveonix RiskForesight não remove o serviço Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} que é instalado em uma instância do vCenter Server. Deve-se pedir uma nova licença do Caveonix RiskForesight ou remover o serviço Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} por meio da instância do vCenter Server no console do {{site.data.keyword.vmwaresolutions_short}}. Para obter mais informações, consulte [Procedimento para remover serviços para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices-removing-procedure).
+A remoção de uma licença do Caveonix RiskForesight não remove o serviço Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} que é instalado em uma instância do vCenter Server. Deve-se pedir uma nova licença do Caveonix RiskForesight ou remover o serviço Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} por meio da instância do vCenter Server no console do {{site.data.keyword.vmwaresolutions_short}}. Para obter mais informações, consulte [Procedimento para remover serviços para instâncias do vCenter Server](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-removing-procedure).
 
 ## Links relacionados
 {: #caveonix_license_considerations-related}

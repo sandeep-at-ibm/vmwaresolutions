@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-02-08"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -21,7 +21,7 @@ subcollection: vmwaresolutions
 
 「單一節點試用版移轉及應用程式現代化」是一種快速方式，用來測試磁碟機 {{site.data.keyword.cloud_notm}} 以將 VMware 工作負載移轉至 {{site.data.keyword.cloud_notm}}，然後使用容器來現代化工作負載。此試用版是 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 上的 {{site.data.keyword.icpfull_notm}} Hosted 版本，提供容器的 Kubernetes 管理平台，以及可使用與內部部署環境相同之熟悉工具所管理的單一承租戶 VMware 平台。
 
-如需相關資訊，請參閱[單一節點試用版移轉及應用程式現代化概觀](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-single-node-trial-for-migration-and-app-modernization-overview)。
+如需相關資訊，請參閱[單一節點試用版移轉及應用程式現代化概觀](/docs/services/vmwaresolutions?topic=vmware-solutions-cloud_modern_bundle_overview#cloud_modern_bundle_overview)。
 
 ## 新增及移除網路檔案系統儲存空間
 {: #relnotes_v28-nfs}

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -25,7 +25,7 @@ HCX는 양방향 마이그레이션(온프레미스에서 클라우드로 또는
 짧은 작동 중단 마이그레이션은 호스트 기반 복제를 사용하여 라이브 가상 머신을 vCenter에서 가상 데이터 센터로 또는 반대 방향으로 이동시킵니다. 작동 중단을 줄이기 위해 소스 VM이 복제 중에 온라인 상태로 유지되고 복제 완료 후 대상 ESX 호스트에서 부트스트랩됩니다.
 
 1. 마이그레이션 요청은 다음과 같은 조치를 트리거합니다.
-  * 복제는 VCF/VCS HCX 가상 데이터 센터에 대한 전체 동기화 전송을 시작합니다. 복제에 걸리는 시간은 VM의 크기와 사용 가능한 대역폭에 따라 다릅니다.
+  * 복제는 VCS HCX 가상 데이터 센터에 대한 전체 동기화 전송을 시작합니다. 복제에 걸리는 시간은 VM의 크기와 사용 가능한 대역폭에 따라 다릅니다.
   * 복제 대역폭 이용은 워크로드가 디스크의 블록을 변경하는 방법에 따라 달라집니다.
 2. 전체 동기화가 완료되면 델타 동기화가 발생합니다.
 3. 델타 동기화가 완료되면 HCX는 전환을 트리거합니다. 전환은 즉시 시작되거나 특정 시간까지 스케줄될 수 있습니다.
@@ -37,7 +37,7 @@ HCX는 양방향 마이그레이션(온프레미스에서 클라우드로 또는
 ## 중단 없는 vMotion
 {: #hcx-archi-migrate-vm-no-downtime-vm}
 
-vMotion은 라이브 가상 머신을 vSphere vCenter에서 VCF/VCS 클라우드로 전송합니다. 이 vMotion에는 확장된 네트워크가 필요합니다. vMotion 전송은 가상 머신의 활성 메모리, 실행 상태, IP 주소 및 MAC 주소를 캡처합니다.
+vMotion은 라이브 가상 머신을 vSphere vCenter에서 VCS 클라우드로 전송합니다. 이 vMotion에는 확장된 네트워크가 필요합니다. vMotion 전송은 가상 머신의 활성 메모리, 실행 상태, IP 주소 및 MAC 주소를 캡처합니다.
 
 가상 머신 하드웨어 버전은 9 이상이어야 하며 교차 클라우드 vMotion은 실패할 수 있습니다.
 {:note}
@@ -53,8 +53,8 @@ vMotion은 라이브 가상 머신을 vSphere vCenter에서 VCF/VCS 클라우드
 vSphere Web Client를 사용하여 하이브리드 클라우드 서비스 시작하기 탭에서 양방향 마이그레이션 마법사에 액세스할 수 있습니다. 이 마법사는 다중 가상 머신을 포함하여 모든 마이그레이션 세부사항을 처리합니다.
 
 vSphere Web Client의 하이브리드 클라우드 서비스 시작하기 탭에서 양방향 마이그레이션 마법사에 액세스할 수 있습니다. 이 마법사는 다중 가상 머신을 포함하여 모든 마이그레이션 세부사항을 처리합니다.
-* vSphere에서 VCF/VCS 하이브리드 클라우드 서비스로
-* VCF/VCS HCX Cloud에서 vSphere로
+* vSphere에서 VCS 하이브리드 클라우드 서비스로
+* VCS HCX Cloud에서 vSphere로
 
 ### 마이그레이션 전에 VM 확인
 {: #hcx-archi-migrate-vm-check-vms}

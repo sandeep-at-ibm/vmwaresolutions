@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-26"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -36,6 +36,8 @@ subcollection: vmwaresolutions
 서비스를 주문할 때 다음 설정을 제공하십시오.
 * 사용자의 요구에 따라 **프로덕션에 사용 가능** 또는 **개발/테스트**를 선택하십시오.
 * {{site.data.keyword.cloud_notm}} Private Hosted 서비스를 배치하는 데 필요한 라이센스를 이미 확보했음을 인증하려면 필수 선택란을 선택하십시오.
+
+추가 노드를 설치할 경우 초기 {{site.data.keyword.cloud_notm}} Private Hosted 설치로 배치되는 {{site.data.keyword.cloud_notm}} Private Ubuntu 템플리트(Ubuntu1604)를 사용하십시오. 템플리트를 찾으려면 VMware vSphere Web Client의 `cam` 아래에 있는 **VM 및 템플리트** 탭으로 이동하십시오. Ubuntu 템플리트의 기본 비밀번호는 `icponcloud`이고 템플리트 사용 전에 변경하는 것이 좋습니다. 
 
 ## 관련 링크
 {: #icp_ordering-related}

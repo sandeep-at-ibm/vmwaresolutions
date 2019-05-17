@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -20,7 +20,7 @@ subcollection: vmwaresolutions
 {: #iamuserinvite-reqs}
 
 * 确保您是帐户所有者，或者确保您的 **VMware Solutions** 服务的平台管理角色是**管理员**。
-* 确保查看了[使用 Identity and Access Management 管理用户访问权](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-access-with-iam)中的用户角色和许可权。
+* 确保查看了[使用 Identity and Access Management 管理用户访问权](/docs/services/vmwaresolutions?topic=vmware-solutions-iam#iam)中的用户角色和许可权。
 
 ## 邀请用户访问服务和资源的过程
 {: #iamuserinvite-procedure}

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -22,9 +22,9 @@ Figura 1. Maior enriquecimento do Stock Trader
 ## AI Watson Tone Analyzer
 {: #vcscontent-aianalytics-ai-watson}
 
-A amostra a seguir é uma maneira simples de enriquecer um aplicativo, mas é aparentemente poderosa. Jane procura no [catálogo do {{site.data.keyword.cloud}}](https://console.cloud.ibm.com/catalog/) os serviços [AI](https://console.cloud.ibm.com/catalog/?category=ai) e [Analytics](https://console.cloud.ibm.com/catalog/?category=analytics) e acha o catálogo rico em conteúdo.
+A amostra a seguir é uma maneira simples de enriquecer um aplicativo, mas é aparentemente poderosa. Jane navega no [catálogo do {{site.data.keyword.cloud}}](https://cloud.ibm.com/catalog/) para os serviços [AI](https://cloud.ibm.com/catalog/?category=ai) e [Analytics](https://cloud.ibm.com/catalog/?category=analytics) e localiza o catálogo rico em conteúdo.
 
-Jane seleciona [Tone Analyzer](https://console.cloud.ibm.com/catalog/services/tone-analyzer), optando pelo plano Padrão e, em seguida, as credenciais para chamada são fornecidas.
+Jane seleciona [Tone Analyzer](https://cloud.ibm.com/catalog/services/tone-analyzer), optando pelo plano Padrão e, em seguida, as credenciais para chamada são fornecidas.
 Jane refatorou o Stock Trader e apenas cria um segredo de Kubernetes para o Tone Analyzer. Dessa forma, mesmo que Jane mude os planos ou regiões, não é necessário reconstruir o código.
 
 Graças à refatoração, Jane experimentou várias estruturas de interface com o usuário sem interromper a experiência do usuário. Como resultado, a nova interface com o usuário está disponível para ser usada e para ajudar a entender o tom do feedback do usuário.
@@ -41,7 +41,7 @@ transferir essa decisão para uma regra de negócios que a diretora de
 marketing pode alterar sem o envolvimento de Jane.
 
 Jane falou com Todd, que incluiu o
-[serviço](https://console.cloud.ibm.com/catalog/services/decision-optimization) e, em seguida, criou a decisão.
+[serviço](https://cloud.ibm.com/catalog/services/decision-optimization) e, em seguida, criou a decisão.
 
 Agora, Margaret, a diretora de marketing, pode efetuar login e mudar os intervalos de níveis de fidelidade sempre que uma campanha está ocorrendo sem mudar nenhum código.
 
@@ -50,8 +50,7 @@ Agora, Margaret, a diretora de marketing, pode efetuar login e mudar os interval
 
 Você pode observar que o serviço de ações foi mudado.
 Isso pode acontecer quando um serviço público muda o proprietário ou sua estrutura
-de API. Felizmente, Jane usou [API
-Connect](https://console.cloud.ibm.com/catalog/services/api-connect).
+de API. Felizmente, Jane usou o [API Connect](https://cloud.ibm.com/catalog/services/api-connect).
 Originalmente, ela usou o API Connect para simplificar a resposta do
 serviço de ações original, já que era um pouco incômodo receber e
 formatar os dados que ela desejava da API bruta fornecida.

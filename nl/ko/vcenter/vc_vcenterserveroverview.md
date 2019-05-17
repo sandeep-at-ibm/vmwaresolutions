@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,11 +18,11 @@ subcollection: vmwaresolutions
 # vCenter Server 개요
 {: #vc_vcenterserveroverview}
 
-VMware vCenter Server on {{site.data.keyword.cloud}}는 서비스로 VMware vSphere 스택을 제공하는 호스팅된 프라이빗 클라우드입니다. VMware 환경은 최소 두 개(세 개 권장)의 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} 맨 위에 빌드되고, 공유 네트워크 연결 스토리지와 전용 소프트웨어 정의 스토리지 옵션을 제공하며, VMware 환경에는 자동화 배치와 VMware NSX로 작동되며 관리하기 쉬운 로지컬 에지 방화벽의 구성이 포함됩니다.
+VMware vCenter Server on {{site.data.keyword.cloud}}는 서비스로 VMware vSphere 스택을 제공하는 호스팅된 프라이빗 클라우드입니다. VMware 환경은 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} 맨 위에 빌드되고, 공유 네트워크 연결 스토리지와 전용 소프트웨어 정의 스토리지 옵션을 제공하며, VMware 환경에는 자동화 배치와 VMware NSX로 작동되며 관리하기 쉬운 논리적 에지 방화벽의 구성이 포함됩니다.
 
 대부분의 경우 전체 환경은 하루 내에 프로비저닝할 수 있으며, 베어메탈 인프라는 필요에 따라 신속하고 탄력적으로 컴퓨팅 용량을 늘리거나 줄이도록 스케일링할 수 있습니다.
 
-배치 후 {{site.data.keyword.slportal}}에서 추가 NFS(Network File System) 파일 공유를 주문하고 클러스터의 모든 ESXi 서버에 해당 파일 공유를 수동으로 연결하여 공유 스토리지를 늘릴 수 있습니다. 전용 스토리지가 필요한 경우, [NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview)가 고성능(모두 SSD) 및 고용량(모두 SATA) 구성 모두에서 제공됩니다.
+배치 후 {{site.data.keyword.slportal}}에서 추가 NFS(Network File System) 파일 공유를 주문하고 클러스터의 모든 ESXi 서버에 해당 파일 공유를 수동으로 연결하여 공유 스토리지를 늘릴 수 있습니다.전용 스토리지가 필요한 경우, [NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview)가 고성능(모두 SSD) 및 고용량(모두 SATA) 구성 모두에서 제공됩니다.
 
 또한 VMware vSAN은 전용 스토리지 옵션으로도 사용할 수 있습니다. vSAN 클러스터의 vSAN 기반 스토리지 용량을 늘리기 위해 배치 후 더 많은 ESXi 서버를 추가할 수 있습니다.
 
@@ -75,9 +75,9 @@ IBM 제공 VMware 라이센스를 구매한 경우, VMware NSX Base 에디션을
 다음 구성 중 하나로 세 개 이상의 {{site.data.keyword.baremetal_short}}를 주문할 수 있습니다.
 * **Skylake**: 선택한 CPU 모델 및 RAM 크기를 사용하는 두 개의 CPU Intel Skylake 세대 서버(Intel Xeon 4100/5100/6100 시리즈)
 * **SAP-certified**: 선택한 CPU 모델을 사용하는 Intel Skylake 또는 Intel Broadwell 세대 서버(Intel Xeon 6140/E5-2690/E7-8890 시리즈)
-* **Broadwell**: 선택한 CPU 모델 및 RAM 크기를 사용하는 두 개의 Intel Broadwell 세대 서버(IntelXeon E5-2600/E7-4800 시리즈)
+* **Broadwell**: 선택한 CPU 모델 및 RAM 크기를 사용하는 네 개의 Intel Broadwell 세대 서버(Intel Xeon E7-4800 시리즈)
 
-     vSAN 스토리지를 사용하려는 경우 구성에 4개의 {{site.data.keyword.baremetal_short}}가 필요합니다.
+vSAN 스토리지를 사용하려는 경우 구성에 최소 4개의 {{site.data.keyword.baremetal_short}}가 필요합니다.
 {:note}
 
 ### 네트워킹
@@ -92,7 +92,7 @@ IBM 제공 VMware 라이센스를 구매한 경우, VMware NSX Base 에디션을
 
     이 ESG는 **mgmt-nsx-edge**로 이름이 지정되고 사용자가 액세스할 수 없으며 사용자는 ESG를 사용할 수 없습니다. 수정하는 경우 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 vCenter Server 인스턴스를 관리하지 못할 수 있습니다. 또한 방화벽을 사용하거나 외부 IBM 관리 컴포넌트에 대한 ESG 통신을 사용 안함으로 설정하면 {{site.data.keyword.vmwaresolutions_short}}를 사용할 수 없게 됩니다.
     {:important}
-  * 아웃바운드 및 인바운드 HTTPS 워크로드 트래픽에 대한 보안 고객 관리 VMware NSX Edge Services Gateway. 이 게이트웨이는 VPN 액세스 또는 공용 액세스를 제공하기 위해 사용자가 수정할 수 있는 템플리트로 IBM에 의해 배치됩니다. 자세한 정보는 [고객 관리 NSX Edge는 보안 문제점을 발생시킵니까?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-customer-managed-nsx-edge-pose-a-security-risk-)를 참조하십시오.
+  * 아웃바운드 및 인바운드 HTTPS 워크로드 트래픽에 대한 보안 고객 관리 VMware NSX Edge Services Gateway. 이 게이트웨이는 VPN 액세스 또는 공용 액세스를 제공하기 위해 사용자가 수정할 수 있는 템플리트로 IBM에 의해 배치됩니다. 자세한 정보는 [고객 관리 NSX Edge는 보안 문제점을 발생시킵니까?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#faq-customer-nsx)를 참조하십시오.
 
 ### Virtual Server 인스턴스
 {: #vc_vcenterserveroverview-vsi}
@@ -122,7 +122,7 @@ vSAN 옵션은 디스크 유형, 크기 및 양에 대한 다양한 옵션을 �
 
   3.8TB SSD(Solid State Disk) 드라이브는 데이터 센터에서 일반적으로 사용 가능하게 되는 경우 지원됩니다.
   {:note}
-* 고성능 Intel Optane 옵션은 총 10개의 용량 디스크에 대해 2개의 추가 용량 디스크 베이를 제공합니다. 이 옵션은 CPU 모델에 따라 달라집니다.
+* 고성능 Intel Optane 옵션은 총 12개의 용량 디스크에 대해 2개의 추가 용량 디스크 베이를 제공합니다. 이 옵션은 CPU 모델에 따라 달라집니다.
 
 #### NFS 스토리지
 {: #vc_vcenterserveroverview-nfs-storage}
@@ -159,7 +159,7 @@ NFS 옵션을 선택한 경우에는 관리 컴포넌트용으로 하나의 2TB 
 ### 확장 노드를 위한 하드웨어
 {: #vc_vcenterserveroverview-expansion-node-hardware}
 
-[vCenter Server 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs)에 제시된 구성을 지닌 하나의 Bare Metal Server.
+[vCenter Server 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#vc_vcenterserveroverview-specs)에 제시된 구성을 지닌 하나의 Bare Metal Server.
 
 ### 확장 노드의 라이센스 및 요금
 {: #vc_vcenterserveroverview-expansion-node-license-and-fee}
@@ -184,5 +184,5 @@ NFS 옵션을 선택한 경우에는 관리 컴포넌트용으로 하나의 2TB 
 * [vCenter Server 소프트웨어 명세서](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
 * [vCenter Server 인스턴스 계획](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [vCenter Server 인스턴스 주문](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [{{site.data.keyword.cloud_notm}} file and block storage](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage){:new_window}
+* [vCenter Server의 연결된 스토리지 ](/docs/services/vmwaresolutions/services?topic=vmware-solutions-storage-benefits#storage-benefits)
 * [파일 공유 용량 확장](/docs/infrastructure/FileStorage?topic=FileStorage-expandCapacity#expandCapacity)

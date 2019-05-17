@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -39,7 +39,7 @@ subcollection: vmwaresolutions
 您也可以訂購內部部署 HCX 實例，以進行內部部署 HCX 安裝的授權和啟動。
 
 如需相關資訊，請參閱下列主題：
-* [HCX on {{site.data.keyword.cloud_notm}} 的考量](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview)
+* [HCX on {{site.data.keyword.cloud_notm}} 的考量](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations)
 * [管理 HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghcx)
 * [內部部署的 HCX 實例的考量](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_considerations)
 * [訂購內部部署的 HCX 實例](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_orderingserviceinstances)
@@ -53,7 +53,7 @@ subcollection: vmwaresolutions
 
 如需相關資訊，請參閱下列主題：
 
-* [新增及檢視 vCenter Server 實例的叢集](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [新增、檢視及刪除 vCenter Server 實例的叢集](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 * [關於 BYOL 的常見問題](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_byol)
 
 ## Zerto on IBM Cloud 服務元件更新
@@ -91,7 +91,7 @@ subcollection: vmwaresolutions
 ### 每個叢集的伺服器數目上限從 32 開始增加
 {: #relnotes_v21-max-clusters}
 
-對於實例中的預設叢集，您可以部署或擴充最多 51 部伺服器。對於實例中的所有後續叢集，您可以部署或擴充最多 59 部伺服器。如需相關資訊，請參閱[新增及檢視 vCenter Server 實例的叢集](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)。
+對於實例中的預設叢集，您可以部署或擴充最多 51 部伺服器。對於實例中的所有後續叢集，您可以部署或擴充最多 59 部伺服器。如需相關資訊，請參閱[新增、檢視及刪除 vCenter Server 實例的叢集](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)。
 
 只有在 2.1 版及更新版本中部署的實例，才能使用此功能。從 2.1 版之前的版本升級至 2.1 版的實例沒有這個選項。
 {:note}
@@ -113,7 +113,7 @@ subcollection: vmwaresolutions
 如需相關資訊，請參閱下列主題：
 * [vCenter Server 概觀](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
 * [訂購 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [新增及檢視 vCenter Server 實例的叢集](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [新增、檢視及刪除 vCenter Server 實例的叢集](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 
 ## 使用者介面更新和加強功能
 {: #relnotes_v21-ui}

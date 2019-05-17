@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-21"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -22,7 +22,8 @@ VMware vCenter Server con NSX-T on {{site.data.keyword.cloud}} es una nube priva
 
 En muchos casos, todo el entorno se puede suministrar en menos de un día, y la capacidad de cálculo de la infraestructura de servidores nativos se puede aumentar y reducir de forma rápida y elástica según las necesidades.
 
-Después del despliegue, puede aumentar el almacenamiento compartido solicitando más comparticiones de archivos NFS (sistema de archivos de red, Network File System) desde el {{site.data.keyword.slportal}} y conectándolas manualmente a todos los servidores ESXi de un clúster.
+Después del despliegue, puede aumentar el almacenamiento compartido solicitando más comparticiones de archivos NFS
+(Network File System) desde el {{site.data.keyword.slportal}} y conectándolas manualmente a todos los servidores ESXi de un clúster.
 
 VMware vSAN también está disponible como opción de almacenamiento dedicado. Para aumentar la capacidad de almacenamiento basado en vSAN de un clúster vSAN, puede añadir más servidores ESXi después del despliegue.
 
@@ -75,7 +76,7 @@ Puede solicitar tres o más {{site.data.keyword.baremetal_short}} con una de las
 * **Skylake**: servidores de generación Intel Skylake de 2 CPU (Intel Xeon serie 4100/5100/6100) con el modelo de CPU y el tamaño de RAM que seleccione.  
 * **Broadwell**: servidores de generación Intel Broadwell de 4 CPU (Intel Xeon serie E7-4800) con el modelo de CPU y el tamaño de RAM que seleccione.
 
-Si tiene pensado utilizar almacenamiento vSAN, la configuración necesita cuatro {{site.data.keyword.baremetal_short}}.
+Si tiene pensado utilizar almacenamiento vSAN, la configuración necesita un mínimo de cuatro {{site.data.keyword.baremetal_short}}.
 {:note}
 
 ### Redes
@@ -87,7 +88,7 @@ Se solicitan los siguientes componentes del sistema de redes:
 * Una red superpuesta con un direccionador T1 y T0 para una potencial comunicación este-oeste entre cargas de trabajo locales conectadas a redes de la capa 2 (L2). Se despliega como una topología de direccionamiento de ejemplo, que puede modificar o eliminar o a la que puede añadir componentes.
 *  Tres VMware NSX-T Edge Services Gateways:
   * Un VMware NSX ESG de servicios de gestión segura para el tráfico de gestión de HTTPS saliente, desplegado por IBM como parte de la topología del sistema de redes de gestión. Las VM de gestión de IBM utilizan esta ESG para comunicarse con componentes externos específicos de gestión de IBM que están relacionados con la automatización. Para obtener más información, consulte [Configuración de la red para que utilice la ESG NSX gestionada por el cliente con las VM](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_esg_config).
-  * Dos VMware NSX ESG seguras gestionadas por el cliente para el tráfico de salida y de entrada de carga de trabajo HTTPS. IBM despliega esta pasarela como plantilla que puede modificar para proporcionar acceso VPN o acceso público. Para obtener más información, consulte [¿Representa NSX Edge gestionado por el cliente un riesgo para la seguridad?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq-customer-nsx)
+  * Dos VMware NSX ESG seguras gestionadas por el cliente para el tráfico de salida y de entrada de carga de trabajo HTTPS. IBM despliega esta pasarela como plantilla que puede modificar para proporcionar acceso VPN o acceso público. Para obtener más información, consulte [¿Representa NSX Edge gestionado por el cliente un riesgo para la seguridad?](/docs/services/vmwaresolutions?topic=vmware-solutions-faq#faq-customer-nsx)
 
   Este ESG se denomina **mgmt-nsx-edge0**. No puede acceder al ESG ni tampoco utilizarlo. Si lo modifica, es posible que no pueda gestionar la instancia de vCenter Server desde la consola de {{site.data.keyword.vmwaresolutions_short}}. Además, el uso de un cortafuegos o la inhabilitación de las comunicaciones de ESG a los componentes de gestión externa de IBM hará que {{site.data.keyword.vmwaresolutions_short}} quede inutilizable.
   {:important}
@@ -118,7 +119,7 @@ La opción vSAN ofrece configuraciones personalizadas, con diversas opciones par
 
   Las unidades SSD (disco de estado sólido) de 3,8 TB recibirán soporte cuando estén disponibles a nivel general en un centro de datos.
   {:note}
-* Opción de Intel Optane de alto rendimiento, que proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad. Esta opción depende del modelo de CPU.
+* Opción de Intel Optane de alto rendimiento, que proporciona dos bahías de disco de capacidad adicional para un total de 12 discos de capacidad. Esta opción depende del modelo de CPU.
 
 #### Almacenamiento NFS
 {: #vc_nsx-t_overview-nfs-storage}
@@ -150,7 +151,7 @@ Cada nodo de expansión de vCenter Server con NSX-T desplegará e incurrirá en 
 ### Hardware para nodos de expansión
 {: #vc_nsx-t_overview-expansion-node-hardware}
 
-Un servidor nativo con la configuración presentada en [Especificaciones técnicas para instancias de vCenter Server con NSX-T](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_overview-specs).
+Un servidor nativo con la configuración presentada en [Especificaciones técnicas para instancias de vCenter Server con NSX-T](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_overview#vc_nsx-t_overview-specs).
 
 ### Licencias y tarifas correspondientes a nodos de expansión
 {: #vc_nsx-t_overview-expansion-node-license-and-fee}
@@ -175,5 +176,5 @@ Las Excepciones de servicios de reinicio de estas actividades incluyen la gesti�
 * [Lista de materiales de software de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
 * [Planificación de instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [Solicitud de instancias de vCenter Server con NSX-T](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_orderinginstance)
-* [Almacenamiento en bloque y de archivos de {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage){:new_window}
+* [Almacenamiento adjunto para vCenter Server](/docs/services/vmwaresolutions/services?topic=vmware-solutions-storage-benefits#storage-benefits)
 * [Ampliación de la capacidad de compartición de archivos](/docs/infrastructure/FileStorage?topic=FileStorage-expandCapacity#expandCapacity)

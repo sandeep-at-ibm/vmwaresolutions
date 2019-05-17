@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -57,13 +57,13 @@ A sequência a seguir é necessária para verificar a conformidade:
 
 1.	Navegue para o Perfil do host que foi concluído anteriormente.
 2.	Clique no ícone **Verificar conformidade do perfil do host**.
-3.	Na guia **Objetos**, o status de conformidade é atualizado como _Em conformidade, Desconhecido ou _Fora de conformidade_. Um status fora de conformidade indica uma inconsistência descoberta e específica entre o perfil e o novo host.
+3.	Na guia **Objetos**, o status de conformidade é atualizado como _Compliant, Unknown ou _Non-compliant_. Um status fora de conformidade indica uma inconsistência descoberta e específica entre o perfil e o novo host.
 
 ##	Revisando falhas de conformidade e correção
 {: #vum-host-profiles-review-compliance}
 
 1. Para ver mais detalhes sobre falhas de conformidade, selecione o **Perfil do host** na guia **Objetos** que é usada na verificação de conformidade.
-2. Para ver detalhes específicos sobre quais parâmetros diferem entre o host que falhou na conformidade e o Perfil do host, clique na **guia Monitor** e selecione a **visualização Conformidade**.
+2. Para ver detalhes específicos sobre quais parâmetros diferem entre o host que falhou na conformidade e o Perfil do host, clique na guia **Monitorar** e selecione a visualização **Conformidade**.
 3. Expanda a hierarquia de objeto e selecione o host com falha.
 4. Os parâmetros diferentes são exibidos na janela Conformidade, sob a hierarquia.
 5. Revise os parâmetros e entenda por que o novo host pode variar do host de referência. Para parâmetros em que a conformidade não é aceitável, faça a correção antes de mover o novo host do modo de manutenção. Por exemplo, onde o desvio de configuração é causado pela ação do administrador do sistema.
@@ -71,5 +71,5 @@ A sequência a seguir é necessária para verificar a conformidade:
 ## Links relacionados
 {: #vum-host-profiles-related}
 
-* [Arquitetura de solução do VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrações)
+* [Arquitetura da solução VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
+* [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (demonstrações)

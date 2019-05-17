@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -54,7 +54,7 @@ Le workflow se présente comme suit :
   - Une fois le chargement terminé, vous êtes redirigé vers la page de connexion de NSX Manager. Reconnectez-vous et vérifiez que la version actuelle du logiciel affichée est correcte.
 7. **Mettez à niveau le cluster de contrôleurs NSX** :
   - Ouvrez vSphere Web Client et connectez-vous au dispositif VCSA.
-  - Accédez à **Home** > **Networking & Security** > **Installation**, sélectionnez l'onglet **Management** et cliquez sur **Upgrade Available** dans la colonne Controller Cluster Status.
+  - Accédez à **Home** > **Networking & Security** > **Installation**, sélectionnez l'onglet **Management** et cliquez sur **Upgrade Available** dans la colonne Controller Cluster Statu s.
   - Les contrôleurs figurant dans votre environnement sont mis à niveau et redémarrés un par un. Dès que vous avez initié la mise à niveau, le système télécharge le fichier de mise à niveau, procède à la mise à niveau, puis au redémarrage de chaque contrôleur et met à jour du statut de mise à niveau de chaque contrôleur.
 8. **Mettez à niveau les clusters d'hôtes NSX** :
   - Après avoir mis à niveau NSX Manager et les contrôleurs NSX, les clusters d'hôtes sont mis à jour dans les bundles VIB NSX sur les hôtes vSphere ESXi.
@@ -69,4 +69,4 @@ Le workflow se présente comme suit :
 {: #vum-updating-nsx-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (démonstrations)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (démonstrations)

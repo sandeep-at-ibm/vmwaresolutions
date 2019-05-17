@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-04-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -20,8 +20,7 @@ subcollection: vmwaresolutions
 
 {{site.data.keyword.vmwaresolutions_full}} permet de déployer des instances dans différents emplacements et de les rendre actives et opérationnelles très rapidement.
 
-La configuration multisite pour des instances vCenter Server est prise en charge uniquement en version 2.0 et éditions ultérieures. Vous ne pouvez pas lier des instances VMware Cloud Foundation à des instances VMware vCenter Server dans une configuration multisite.
-{:note}
+La configuration multisite pour des instances vCenter Server est uniquement prise en charge dans les instances de la version 2.0 et des versions ultérieures. {:note}
 
 ## Composants d'un déploiement multisite
 {: #vc_multisite-deployment-components}
@@ -69,7 +68,7 @@ La suppression d'instances vCenter Server qui font partie d'une configuration mu
 ## Liens connexes
 {: #vc_multisite-related}
 
-* [Attribuer un rôle principal à NSX Manager](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-44E8AE16-BA3F-4DD9-B582-FC1E137E6CFC.html){:new_window}
+* [Attribuer un rôle principal à NSX Manager](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/com.vmware.nsx-cross-vcenter-install.doc/GUID-44E8AE16-BA3F-4DD9-B582-FC1E137E6CFC.html){:new_window}
 * [Configurer les NSX Manager secondaires](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-9E48BC57-15E3-49C7-8BC5-F94ED8918BBE.html){:new_window}
-* [AD trusts supported with vCenter Single Sign-On](https://kb.vmware.com/kb/2064250){:new_window}
+* [Approbations Microsoft Active Directory prises en charge avec VMware vCenter SSO](https://kb.vmware.com/s/article/2064250){:new_window}
 * [Securely connect your private VMware workloads in the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}

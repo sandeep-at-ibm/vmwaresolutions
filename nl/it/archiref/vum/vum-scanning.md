@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -54,7 +54,7 @@ Avvia una scansione simultanea di host, VM e dispositivi virtuali, eseguendo la 
 Puoi configurare il client web vSphere per eseguire la scansione di VM, dispositivi virtuali e host vSphere ESXi in momenti specifici o a intervalli appropriati.
 
 1.	Utilizzando il client web vSphere, seleziona un oggetto dall'inventario. Vengono scansionati anche tutti gli oggetti figlio dell'oggetto selezionato.
-2.	Seleziona la **scheda Monitor** e fai clic su **Task & Events**.
+2.	Seleziona la scheda **Monitor** e fai clic su **Task & Events**.
 3.	Seleziona **Scheduled Tasks** e fai clic su **Schedule a New Task**.
 4.	Seleziona **Scan for Updates** dall'elenco a discesa che viene visualizzato. Viene visualizzata la procedura guidata Scan for Updates.
 5.	Nella pagina Edit Settings, seleziona i tipi di aggiornamenti per la scansione dell'oggetto di inventario. Devi selezionare almeno un tipo di scansione. Nella pagina Scheduling options, descrivi e pianifica l'attività di scansione.
@@ -65,4 +65,4 @@ Puoi configurare il client web vSphere per eseguire la scansione di VM, disposit
 {: #vum-scanning-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (dimostrazioni)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (dimostrazioni)

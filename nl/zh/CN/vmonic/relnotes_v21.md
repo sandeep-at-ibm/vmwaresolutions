@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -39,7 +39,7 @@ HCX on {{site.data.keyword.cloud_notm}} 服务现在可用于运行 vSphere 6.5 
 还可以订购内部部署 HCX 实例，以对内部部署 HCX 安装进行许可和激活。
 
 有关更多信息，请参阅以下主题：
-* [HCX on {{site.data.keyword.cloud_notm}} 的注意事项](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview)
+* [HCX on {{site.data.keyword.cloud_notm}} 的注意事项](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations)
 * [管理 HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghcx)
 * [内部部署 HCX 实例的注意事项](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_considerations)
 * [订购内部部署 HCX 实例](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_orderingserviceinstances)
@@ -53,7 +53,7 @@ HCX on {{site.data.keyword.cloud_notm}} 服务现在可用于运行 vSphere 6.5 
 
 有关更多信息，请参阅以下主题：
 
-* [添加和查看 vCenter Server 实例的集群](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [添加、查看和删除 vCenter Server 实例的集群](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 * [关于 BYOL 的常见问题](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_byol)
 
 ## Zerto on IBM Cloud 服务组件更新
@@ -92,7 +92,7 @@ VMware 补丁和更新在未来发行版中可用时，自动化将扫描现有�
 ### 每个集群的最大服务器数从 32 增加
 {: #relnotes_v21-max-clusters}
 
-对于实例中的缺省集群，最多可以部署或扩展至 51 个服务器。对于实例中的所有后续集群，最多可以部署或扩展至 59 个服务器。有关更多信息，请参阅[添加和查看 vCenter Server 实例的集群](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)。
+对于实例中的缺省集群，最多可以部署或扩展至 51 个服务器。对于实例中的所有后续集群，最多可以部署或扩展至 59 个服务器。有关更多信息，请参阅[添加、查看和删除 vCenter Server 实例的集群](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)。
 
 此功能仅可用于在 V2.1 和更高发行版中部署的实例。从 V2.1 之前的发行版升级到 V2.1 的实例没有此选项。
 {:note}
@@ -114,7 +114,7 @@ VMware 补丁和更新在未来发行版中可用时，自动化将扫描现有�
 有关更多信息，请参阅以下主题：
 * [vCenter Server 概述](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
 * [订购 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [添加和查看 vCenter Server 实例的集群](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [添加、查看和删除 vCenter Server 实例的集群](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 
 ## 用户界面更新和增强功能
 {: #relnotes_v21-ui}

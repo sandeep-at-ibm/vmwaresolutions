@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -23,7 +23,7 @@ En esta sección se describe la arquitectura de cada componente de HCX que se de
 ## Introducción a HCX
 {: #hcx-archi-source-intro-hcx}
 
-La tecnología HCX integra fácilmente redes vSphere vCenter en plataformas VCF o VCS de IBM Cloud. La red híbrida amplía las redes de vSphere locales en IBM Cloud, lo que da soporte a la movilidad bidireccional de máquinas virtuales (VM).
+La tecnología HCX integra fácilmente redes vSphere vCenter en la plataforma VCS de IBM Cloud. La red híbrida amplía las redes de vSphere locales en IBM Cloud, lo que da soporte a la movilidad bidireccional de máquinas virtuales (VM).
 
 En esta introducción encontrará un resumen de las tareas que se pueden llevar a cabo y las características que dan soporte y mejoran la migración y la extensión de red.
 
@@ -73,7 +73,7 @@ Transfiera una máquina virtual apagada a IBM Cloud a través de una red extendi
 
 Las siguientes características de red están integradas en la pasarela de nube y en los concentradores de capa 2.
 
-* Direccionamiento inteligente de flujos: Selecciona automáticamente la mejor conexión en función de la vía de acceso a internet, aprovechando de forma eficiente toda la conexión de modo que las cargas de trabajo se muevan lo más rápido posible. Cuando flujos de gran tamaño, como copias de seguridad o réplicas, provocan una contención de la CPU, los flujos más pequeños se direccionan a las CPU menos ocupadas, lo que mejora el rendimiento del tráfico interactivo.
+* Direccionamiento inteligente de flujos: Selecciona automáticamente la mejor conexión en función de la vía de acceso a Internet, aprovechando de forma eficiente toda la conexión de modo que las cargas de trabajo se muevan lo más rápido posible. Cuando flujos de gran tamaño, como copias de seguridad o réplicas, provocan una contención de la CPU, los flujos más pequeños se direccionan a las CPU menos ocupadas, lo que mejora el rendimiento del tráfico interactivo.
 * Direccionamiento de proximidad: Garantiza que el reenvío entre máquinas virtuales que están conectadas a redes extendidas y direccionadas, tanto en el entorno local como en la nube, es simétrico.
 * Seguridad: La pasarela de nube ofrece AES-GCM compatible con Suite B con IKEv2, descarga AES-NI y control de admisiones basado en flujo. HCX es propietario de los procesos de cifrado y de descifrado de origen y de destino, lo que garantiza la seguridad y proporciona métodos de admisión para flujos de trabajo híbridos, como migración de máquinas virtuales y extensión de red.
   Una política de seguridad definida en el vCenter local y asignada a una máquina virtual local se puede migrar con la máquina virtual.
@@ -216,7 +216,7 @@ El direccionamiento de proximidad garantiza que el reenvío entre máquinas virt
 
 Cuando los usuarios extienden sus redes a la nube, la conectividad de capa 2 se extiende a IBM Cloud. Sin embargo, sin la optimización de direccionamiento, las solicitudes de comunicación de capa 3 deben volver al origen de red local que se direccionen. Este viaje de retorno se denomina "tromboning" o "hairpinning".
 
-El método tromboning no resulta eficiente porque los paquetes deben realizar un viaje de ida y vuelta entre el origen de red y la nube, aunque tanto la máquina virtual de origen como la de destino residan en la nube. Además de la falta de eficiencia, si la vía de acceso reenvío incluye cortafuegos con estado u otro equipo en línea que deba ver los dos lados de la conexión, es posible que la comunicación falle. Se produce un error de comunicación de máquina virtual (sin optimización de rutas) cuando la vía de acceso de salida de la nube puede ser la red extendida de capa 2 o la pasarela de borde VCS/VCF NSX. La red local no conoce el "acceso directo" de la red extendida. Este problema se denomina direccionamiento asimétrico. La solución consiste en habilitar el direccionamiento de proximidad para que la red local pueda conocer las rutas desde IBM Cloud.
+El método tromboning no resulta eficiente porque los paquetes deben realizar un viaje de ida y vuelta entre el origen de red y la nube, aunque tanto la máquina virtual de origen como la de destino residan en la nube. Además de la falta de eficiencia, si la vía de acceso reenvío incluye cortafuegos con estado u otro equipo en línea que deba ver los dos lados de la conexión, es posible que la comunicación falle. Se produce un error de comunicación de máquina virtual (sin optimización de rutas) cuando la vía de acceso de salida de la nube puede ser la red extendida de capa 2 o la pasarela de borde VCS NSX. La red local no conoce el "acceso directo" de la red extendida. Este problema se denomina direccionamiento asimétrico. La solución consiste en habilitar el direccionamiento de proximidad para que la red local pueda conocer las rutas desde IBM Cloud.
 
 Para evitar el tromboning, HCX utiliza la gestión de rutas inteligentes para elegir rutas adecuadas para el estado de la máquina virtual. La pasarela de nube mantiene un inventario de máquinas virtuales en la nube. También conoce el estado de la máquina virtual, que puede ser uno de los siguientes:
 * Transferida a la nube con vMotion (migración con tiempo de inactividad cero).
@@ -228,7 +228,7 @@ Para evitar el tromboning, HCX utiliza la gestión de rutas inteligentes para el
 
 En el diagrama, los componentes `N*a` de la izquierda residen en el centro de datos local y el componente `N*b` de la derecha reside en la nube.
 
-R1 es la pasarela predeterminada para N1-b, por lo que N1-b debe volver a R1 para direccionar el tráfico a través de R2. Para evitar el direccionamiento asimétrico, HCX inyecta rutas de host en la superposición de NSX del despliegue de IBM Cloud VCS/VCF. Si la máquina virtual se ha creado recientemente en la nube, o se ha transferido con una migración con bajo tiempo de inactividad, la ruta de host se inyecta inmediatamente.
+R1 es la pasarela predeterminada para N1-b, por lo que N1-b debe volver a R1 para direccionar el tráfico a través de R2. Para evitar el direccionamiento asimétrico, HCX inyecta rutas de host en la superposición de NSX del despliegue de IBM Cloud VCS. Si la máquina virtual se ha creado recientemente en la nube, o se ha transferido con una migración con bajo tiempo de inactividad, la ruta de host se inyecta inmediatamente.
 
 Si la máquina virtual se ha transferido mediante vMotion, la ruta no se inyecta hasta que se rearranca la máquina virtual. El hecho de esperar a que se realice el rearranque garantiza que los dispositivos locales con estado siguen prestando servicio en la sesión existente hasta que se rearranca la máquina virtual. Después del rearranque, la información de direccionamiento es coherente tanto en el entorno local como en la nube.
 
@@ -251,7 +251,7 @@ Figura 5. Solución de direccionamiento asimétrico con direccionamiento de prox
 ### Migración de políticas de seguridad
 {: #hcx-archi-source-sec-policy-mig}
 
-La característica de migración de políticas permite transferir reglas de cortafuegos distribuido de NSX del vCenter local a una nube habilitada para VCF/VCS HCX. La migración de políticas es posible cuando se utiliza una migración con baja tiempo de inactividad o vMotion para transferir una máquina virtual a través de una red extendida con el Concentrador de capa 2 de alto rendimiento.
+La característica de migración de políticas permite transferir reglas de cortafuegos distribuido de NSX del vCenter local a una nube habilitada para VCS HCX. La migración de políticas es posible cuando se utiliza una migración con baja tiempo de inactividad o vMotion para transferir una máquina virtual a través de una red extendida con el Concentrador de capa 2 de alto rendimiento.
 * El centro de datos local debe ejecutar NSX 6.2.2 o superior.
 * En vSphere, la política de seguridad es una sola sección de NSX que puede contener muchas reglas. Solo puede haber una sección (política) por vDC de la organización.
 * Se puede identificar un conjunto de direcciones IP o direcciones MAC para que participen en la política. El nombre del conjunto de MAC o del conjunto de IP no puede superar los 218 caracteres.

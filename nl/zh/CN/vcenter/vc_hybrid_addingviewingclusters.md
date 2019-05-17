@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-18"
+lastupdated: "2019-04-18"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -25,11 +25,12 @@ subcollection: vmwaresolutions
 ## 向 vCenter Server with Hybridity Bundle 实例添加集群
 {: #vc_hybrid_addingviewingclusters-adding}
 
-可添加到实例的集群数取决于实例版本：
-* 对于部署在（或已升级到）V2.5 和更高版本中的实例，集群数、主机数和 VM 数将决定可以添加的最大集群数限制。您必须遵守适用于部署的 VMware 大小调整准则和限制。
-* 对于部署在（或已升级到）V2.3 和更高版本中的实例，最多可以添加 10 个集群。
+### 添加集群之前
+{: #vc_hybrid_addingviewingclusters-before-add}
 
-有关最大限制的更多信息，请参阅 [VMware 配置最大值](https://configmax.vmware.com/home){:new_window}。
+* 尽可能使用 {{site.data.keyword.vmwaresolutions_full}} 控制台添加集群，因为在 VMware vSphere Web Client 上所做的更改不会与 {{site.data.keyword.vmwaresolutions_short}} 控制台同步。因此，将集群添加到 vCenter Server 仅适用于内部部署集群，或者无法或不会在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理的集群。
+* 对于部署在（或已升级到）V2.5 和更高版本中的实例，集群数、主机数和 VM 数将决定可以添加的最大集群数限制。您必须遵守适用于部署的 VMware 大小调整准则和限制。有关最大限制的更多信息，请参阅 [VMware 配置最大值](https://configmax.vmware.com/home){:new_window}。
+* 对于部署在（或已升级到）V2.3 和 V2.4 的实例，最多可以添加 10 个集群。
 
 ### 系统设置
 {: #vc_hybrid_addingviewingclusters-adding-sys-settings}
@@ -48,7 +49,7 @@ subcollection: vmwaresolutions
 #### 数据中心位置
 {: #vc_hybrid_addingviewingclusters-adding-dc-location}
 
-缺省情况下，集群的 {{site.data.keyword.CloudDataCent_notm}} 位置设置为 vCenter Server 实例的 {{site.data.keyword.CloudDataCent_notm}}。可以将集群部署到与所部署实例不同的 {{site.data.keyword.CloudDataCent_notm}}，但必须确保这两个 {{site.data.keyword.CloudDataCents_notm}} 之间的网络等待时间少于 150 毫秒。要检查网络等待时间，请使用 [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window} 等工具。
+缺省情况下，集群的 {{site.data.keyword.CloudDataCent_notm}} 位置设置为 vCenter Server 实例的 {{site.data.keyword.CloudDataCent_notm}}。可以将集群部署到与所部署实例不同的 {{site.data.keyword.CloudDataCent_notm}}，但必须确保这两个 {{site.data.keyword.CloudDataCents_notm}} 之间的网络等待时间少于 150 毫秒。要检查网络等待时间，请使用 [Looking Glass](/docs/infrastructure/network-tools?topic=network-tools-about-looking-glass#about-looking-glass) 等工具。
 
 如果将集群部署到其他 {{site.data.keyword.CloudDataCent_notm}} 或 {{site.data.keyword.cloud_notm}} 基础架构 pod，应再订购三个 VLAN 用于已订购的 {{site.data.keyword.baremetal_short}}。
 
@@ -79,20 +80,14 @@ subcollection: vmwaresolutions
 
 | CPU 模型选项   |RAM 选项|
 |:------------- |:------------- |
-|双 Intel Xeon E5-2620 V4 / 共 16 个核心，2.1 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
-|双 Intel Xeon E5-2650 V4 / 共 24 个核心，2.2 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
-|双 Intel Xeon E5-2690 V4 / 共 28 个核心，2.6 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
 |四核 Intel Xeon E7-4820 V4 / 共 40 个核心，1.9 GHz|128 GB、256 GB、512 GB、1 TB、2 TB、3 TB|
 |四核 Intel Xeon E7-4850 V4 / 共 64 个核心，2.2 GHz|128 GB、256 GB、512 GB、1 TB、2 TB、3 TB|
 
 #### 裸机服务器的数量
 {: #vc_hybrid_addingviewingclusters-adding-bare-metal-number}
 
-一个集群至少需要两个 {{site.data.keyword.baremetal_short}}。
-
-可以为一个集群最多添加 59 个 {{site.data.keyword.baremetal_short}}，并且一次可以添加 1 到 59 个 ESXi 服务器。
-
-部署后，最多可以再创建四个集群。对于 VMware vSAN 存储器，初始集群和部署后集群都需要 4 个服务器。
+* 订购的所有服务器的配置都相同。
+* 可以订购 4 到 59 个服务器。
 
 ### vSAN 存储器设置
 {: #vc_hybrid_addingviewingclusters-adding-vsan-storage-settings}
@@ -100,10 +95,10 @@ subcollection: vmwaresolutions
 vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请指定以下 vSAN 选项：
 * **vSAN 容量磁盘的磁盘类型和大小**：选择与所需容量磁盘相应的选项。
 * **vSAN 容量磁盘数**：指定要添加的容量磁盘数。
-* 如果要添加的容量磁盘数超过 8 个的限制，请选中**高性能 Intel Optane** 框。此选项用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘；此选项对于需要更短等待时间和更高 IOPS 吞吐量的工作负载而言非常有用。
+* 如果要添加的容量磁盘数超过 10 个的限制，请选中**高性能 Intel Optane** 框。此选项用于提供两个额外的容量磁盘托架，总共可容纳 12 个容量磁盘；此选项对于需要更短等待时间和更高 IOPS 吞吐量的工作负载而言非常有用。
 
-  **高性能 Intel Optane** 选项仅可用于 Skylake CPU 型号双 Intel Xeon Gold 5120 和双 Intel Xeon Gold 6140。
-  {:note}
+  **高性能 Intel Optane** 选项仅可用于 Skylake CPU 型号。
+{:note}
 
 * 查看 **vSAN 高速缓存磁盘的磁盘类型**和 **vSAN 高速缓存磁盘数**值。这些值依赖于是否选中了**高性能 Intel Optane** 框。
 * **vSAN 许可证**：选择 VMware vSAN 6.6 许可证版本（Advanced 或 Enterprise）。
@@ -124,7 +119,6 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
 * F5 on {{site.data.keyword.cloud_notm}}
 * Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
 * Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
-* Zerto on {{site.data.keyword.cloud_notm}}
 
 ### 订单摘要
 {: #vc_hybrid_addingviewingclusters-adding-order-summary}
@@ -241,6 +235,7 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
 ### 删除之前
 {: #vc_hybrid_addingviewingclusters-deleting-prereq}
 
+* 尽可能使用 {{site.data.keyword.vmwaresolutions_full}} 控制台删除集群，因为在 VMware vSphere Web Client 上所做的更改不会与 {{site.data.keyword.vmwaresolutions_short}} 控制台同步。因此，从 vCenter Server 中删除集群仅适用于内部部署集群，或者无法或不会在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理的集群。
 * 一次可以删除一个集群。要删除多个集群，必须按顺序依次执行；请等待前一个集群删除后，再删除下一个集群。
 * 删除集群之前，请确保集群中的所有节点都已打开电源且正常运行。
 * 删除集群时，集群中的所有 VM（虚拟机）也会一起删除且无法恢复。如果要保留这些 VM，请将其迁移到其他集群。

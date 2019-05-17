@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-22"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -86,7 +86,7 @@ VXLAN 트래픽을 전환하는 것을 나타냅니다.
 방화벽 규칙 또는 업링크 토폴로지를 작성할 필요가
 없습니다.
 
-## 	네트워크 확장기능
+## 	네트워크 확장
 {: #vcshcx-planning-net-extension}
 
 네트워크를 확장하면 가상 분산 스위치 포트
@@ -163,7 +163,7 @@ Oracle RAC 또는 MS Exchange / SQL 클러스터와 같은 공유 다중
 ## 지원되는 클라이언트 플랫폼
 {: #vcshcx-planning-client-platforms}
 
-네트워크 확장기능의 경우 vSphere vDS(virtual Distributed Switch)가
+네트워크 확장의 경우 vSphere vDS(virtual Distributed Switch)가
 있는 포트 그룹만 지원됩니다. 즉, vCenter에서 ESXi 호스트를 관리할 때만
 vDS가 있을 수 있으므로 독립형 ESXi 호스트는 지원되지 않습니다.
 - vSphere 5.1(API를 통한 vCenter 5.1의 명령행만)

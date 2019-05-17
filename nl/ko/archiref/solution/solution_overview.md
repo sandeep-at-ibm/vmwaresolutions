@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-15"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -32,13 +32,13 @@ VMware vCenter Server on {{site.data.keyword.cloud_notm}}는 기본 구성 요�
 
 고급 자동화 및 싱글 테넌트 베어메탈 인프라를 적용함으로써 몇 시간 내에 전체 VMware 환경을 {{site.data.keyword.cloud_notm}}에 신속하게 배치할 수 있습니다. 그런 다음 고유 VMware 클라이언트, 명령행 인터페이스(CLI), 기존 스크립트 또는 기타 친숙한 vSphere API 호환 도구를 통해 IBM 호스팅 환경에 액세스하고 이를 관리할 수 있습니다.
 
-배치 후에는 {{site.data.keyword.vmwaresolutions_short}} 콘솔을 사용하여 인스턴스의 ESXi 서버에 추가(및 제거)하고, 클러스터를 추가 및 제거하고, 추가 vCenter Server 인스턴스를 기존 인스턴스에 결합하고, 제품 및 서비스를 추가할 수 있습니다. 사용자는 vCenter Server 인스턴스를 모니터하고 관리해야 합니다. 
+배치 후에는 {{site.data.keyword.vmwaresolutions_short}} 콘솔을 사용하여 인스턴스의 ESXi 서버에 추가(및 제거)하고, 클러스터를 추가 및 제거하고, 추가 vCenter Server 인스턴스를 기존 인스턴스에 결합하고, 제품 및 서비스를 추가할 수 있습니다. 사용자는 vCenter Server 인스턴스를 모니터하고 관리해야 합니다.
 
-사용자는 VMware 소프트웨어 및 기본 하이퍼바이저 하드웨어를 백업하고, 패치하고, 구성하고, 모니터해야 합니다. {{site.data.keyword.vmwaresolutions_short}}는 vCenter Server 인스턴스를 지속적으로 관리하고 모니터하는 데 도움이 되는 자동화된 솔루션을 제공합니다. 
+사용자는 VMware 소프트웨어 및 기본 하이퍼바이저 하드웨어를 백업하고, 패치하고, 구성하고, 모니터해야 합니다. {{site.data.keyword.vmwaresolutions_short}}는 vCenter Server 인스턴스를 지속적으로 관리하고 모니터하는 데 도움이 되는 자동화된 솔루션을 제공합니다.
 
 또한 {{site.data.keyword.cloud_notm}} Professional Services 및 Managed Services를 활용하면 마이그레이션, 구현 및 온보딩 서비스 등의 오퍼링을 사용하여 클라우드로의 이동 속도를 높이는 데 도움이 됩니다.
 
-관리 서비스 오퍼링과는 달리 vCenter Server는 모든 컴포넌트에 대한 완전한 액세스를 제공하여 관리 서비스가 제공할 수 있는 유연성보다 더 큰 유연성을 허용합니다. 그러나 vCenter Server 배치 후에 IBM Cloud for VMware Solutions 자동화가 작동될 수 있도록 적용되는 특정 제한조건이 있습니다. 
+관리 서비스 오퍼링과는 달리 vCenter Server는 모든 컴포넌트에 대한 완전한 액세스를 제공하여 관리 서비스가 제공할 수 있는 유연성보다 더 큰 유연성을 허용합니다. 그러나 vCenter Server 배치 후에 IBM Cloud for VMware Solutions 자동화가 작동될 수 있도록 적용되는 특정 제한조건이 있습니다.
 
 VMware on {{site.data.keyword.cloud_notm}} 오퍼링은 다음과 같은 이점을 제공합니다.
 

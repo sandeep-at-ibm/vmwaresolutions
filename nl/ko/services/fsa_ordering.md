@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-04-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -40,4 +40,4 @@ FSA 300 시리즈의 HA 이중화가 포함된 새 인스턴스를 주문할 때
 * [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [Fortinet 웹 사이트](https://www.fortinet.com/){:new_window}
-* [Fortinet Document Library](http://docs.fortinet.com/fortigate/admin-guides){:new_window}
+* [Fortinet Document Library](https://docs.fortinet.com/product/fortigate/6.2){:new_window}

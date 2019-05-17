@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -22,9 +22,9 @@ Esta oferta crea una WAN optimizada definida por software para aumentar el rendi
 ## Extensión de red de capa 2
 {: #hcx-archi-overview-layer-2-net}
 
-HCX habilita una propiedad de vSphere local existente para extender de forma segura una red desde su vCenter local a un centro de datos de IBM Cloud que ejecute VMware Cloud Foundation o vCenter Server. Los siguientes factores habilitan esta característica:
+HCX habilita una propiedad de vSphere local existente para extender de forma segura una red desde su vCenter local a un centro de datos de IBM Cloud que ejecute VMware vCenter Server. Los siguientes factores habilitan esta característica:
 * HCX proporciona un dispositivo denominado concentrador de capa 2 (L2C).
-* Enlace de redes ampliadas con dispositivos de NSX Edge de IBM Cloud desplegados en VMware Cloud Foundation o en vCenter Server.
+* Enlace de redes ampliadas con dispositivos de NSX Edge de IBM Cloud desplegados en VMware vCenter Server.
 * Se pueden desplegar varios concentradores de capa 2 estándar para lograr la escalabilidad y aumentar el rendimiento desde el vCenter local.
 * Las máquinas virtuales que se migran a través de la pasarela de nube y sobre la capa 2 extendida pueden conservar sus direcciones IP y MAC.
 
@@ -65,7 +65,7 @@ Las siguientes características de red están integradas en la pasarela de nube 
 ### Direccionamiento inteligente de flujos
 {: #hcx-archi-overview-intel-flow-routing}
 
-Esta característica selecciona automáticamente la mejor conexión en función de la vía de acceso a internet, aprovechando de forma eficiente toda la conexión de modo que las cargas de trabajo se muevan lo más rápido posible. Cuando flujos de gran tamaño, como copias de seguridad o réplicas, provocan una contención de la CPU, los flujos más pequeños se direccionan a las CPU menos ocupadas, lo que mejora el rendimiento del tráfico interactivo.
+Esta característica selecciona automáticamente la mejor conexión en función de la vía de acceso a Internet, aprovechando de forma eficiente toda la conexión de modo que las cargas de trabajo se muevan lo más rápido posible. Cuando flujos de gran tamaño, como copias de seguridad o réplicas, provocan una contención de la CPU, los flujos más pequeños se direccionan a las CPU menos ocupadas, lo que mejora el rendimiento del tráfico interactivo.
 
 ### Direccionamiento de proximidad
 {: #hcx-archi-overview-prox-routing}
@@ -153,9 +153,9 @@ Antes de describir detalladamente los componentes, es importante comprender el d
 * El entorno de origen debe contener una implementación de vSphere que esté gestionada por un vCenter Server. Se necesita un vCenter soportado de 5.5U3 o vCenter 6.0U2 y superior, con ESXi 5.5 o superior, para Hybrid Cloud Services.
 * Si se utiliza NSX, versión 6.2.2 o superior. NSX se necesita para la migración de políticas.
 * Si se desea vMotion entre nubes, se aplican las mismas restricciones de afinidad entre nubes que las que se aplican en entornos locales.
-* El entorno de origen debe tener un método para conectarse a entornos de nube. Esto incluye acceso a internet público o conexiones privadas mediante el enlace IBM Cloud Direct. No se describirán las conexiones, excepto internet público, con otros proveedores de nube.
+* El entorno de origen debe tener un método para conectarse a entornos de nube. Esto incluye acceso a Internet público o conexiones privadas mediante el enlace IBM Cloud Direct. No se describirán las conexiones, excepto internet público, con otros proveedores de nube.
 * Las VM y las redes del entorno de origen que se van a migrar o extender deben estar en grupos de puertos dentro de un conmutador distribuido virtual o un conmutador distribuido virtual Cisco Nexus 1000v.
-* IBM Cloud debe contener al menos una instancia de un despliegue de VMware Cloud Foundation o vCenter Server.
+* IBM Cloud debe contener al menos una instancia de VMware vCenter Server.
 * Suficientes recursos para los dispositivos virtuales.
 * Las redes deben permitir que los dispositivos se comuniquen con dispositivos virtuales locales y remotos y con otras máquinas virtuales.
 * En los requisitos de acceso a puertos (Apéndice A) encontrará los puertos que deben estar abiertos para que los dispositivos virtuales de Hybrid Cloud Services se puedan instalar correctamente.

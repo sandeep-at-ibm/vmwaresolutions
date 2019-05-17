@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -22,9 +22,9 @@ HCX는 소스 및 대상 암호화와 복호화 프로세스를 소유하며, �
 ## 계층 2 네트워크 확장
 {: #hcx-archi-overview-layer-2-net}
 
-HCX는 기존 온프레미스 vCenter에서 VMware Cloud Foundation 또는 vCenter Server를 실행하는 IBM Cloud 데이터 센터까지 네트워크를 안전하게 확장하도록 기존의 온프레미스 vSphere 자산을 허용합니다. 이 기능은 다음 항목으로 사용 가능합니다.
+HCX는 기존 온프레미스 vCenter에서 VMware vCenter Server를 실행하는 IBM Cloud 데이터 센터까지 네트워크를 안전하게 확장하도록 기존의 온프레미스 vSphere 자산을 허용합니다. 이 기능은 다음 항목으로 사용 가능합니다.
 * HCX는 Layer 2 Concentrator(L2C)라고 하는 어플라이언스를 제공합니다.
-* 확장된 네트워크는 VMware Cloud Foundation 또는 vCenter Server에 배치된 IBM Cloud NSX Edge 어플라이언스에 연결합니다.
+* 확장된 네트워크는 VMware vCenter Server에 배치된 IBM Cloud NSX Edge 어플라이언스에 연결합니다.
 * 확장성을 확보하고 온프레미스 vCenter에서 처리량을 늘리기 위해 다중 표준 Layer 2 Concentrator를 배치할 수 있습니다.
 * 클라우드 게이트웨이와 확장된 계층 2를 통해 마이그레이션된 가상 머신은 IP와 MAC 주소를 보유할 수 있습니다.
 
@@ -155,7 +155,7 @@ Layer 2 Concentrator(L2C) 어플라이언스는 온프레미스 vSphere 데이�
 * 교차 클라우드 vMotion을 사용하는 경우 동일한 유사성 제한사항이 온프레미스에서와 같이 클라우드에 적용됩니다.
 * 소스 환경에는 클라우드 환경에 연결하기 위한 방법이 필요합니다. 이 방법에는 IBM Cloud Direct 링크를 사용한 공용 인터넷 액세스 또는 사설 연결이 포함됩니다. 공용 인터넷을 제외한 기타 클라우드 공급업체에 대한 연결은 논의되지 않습니다.
 * 소스 환경 VM 및 마이그레이션되거나 확장될 네트워크는 Virtual Distributed Switch 또는 Cisco Nexus 1000v Virtual Distributed Switch 내의 포트 그룹에 있어야 합니다.
-* IBM Cloud에는 VMware Cloud Foundation 또는 vCenter Server 배치 중 최소 하나의 인스턴스가 포함되어야 합니다.
+* IBM Cloud에는 VMware vCenter Server의 최소 하나의 인스턴스가 포함되어야 합니다.
 * 가상 어플라이언스에 적합한 충분한 리소스
 * 네트워크는 로컬 및 원격 가상 어플라이언스, 기타 가상 머신과 통신하도록 어플라이언스를 허용해야 합니다.
 * 포트 액세스 요구사항(부록 A)에는 하이브리드 클라우드 서비스 가상 어플라이언스가 설치될 수 있도록 열려 있어야 하는 포트가 나열되어 있습니다.

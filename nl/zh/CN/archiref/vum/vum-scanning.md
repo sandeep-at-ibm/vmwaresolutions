@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -54,7 +54,7 @@ subcollection: vmwaresolutions
 可以配置 vSphere Web Client 以在特定时间扫描 VM、虚拟设备和 vSphere ESXi 主机，或按您方便的时间间隔对这些对象进行扫描。
 
 1.	使用 vSphere Web Client 从库存中选择对象。系统还会扫描您选择的对象的所有子对象。
-2.	选择**监视器**选项卡，然后单击**任务和事件**。
+2.	选择**监视**选项卡，然后单击**任务和事件**。
 3.	选择**安排的任务**，然后单击**安排新任务**。
 4.	从显示的下拉列表中，选择**扫描更新**。这将打开“扫描更新”向导。
 5.	在“编辑设置”页面上，选择要扫描库存对象以查找其更新的类型。必须至少选择一种扫描类型。在“安排选项”页面上，描述扫描任务并对其进行安排。
@@ -65,4 +65,4 @@ subcollection: vmwaresolutions
 {: #vum-scanning-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 解决方案体系结构](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} 数字技术互动](https://ibm-dte.mybluemix.net/ibm-vmware)（演示）
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} 数字技术互动](https://ibm-dte.mybluemix.net/vmware)（演示）

@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-02-13"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -20,9 +20,9 @@ subcollection: vmwaresolutions
 
 La gestion d'infrastructure fait référence aux composants VMware qui gèrent l'infrastructure vSphere ESXi.
 
-Pour plus d'informations sur les composants, voir Figure 2. Présentation du réseau NSX Manager dans [Conception d'infrastructure virtuelle](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_virtualinfrastructure).
+Pour plus d'informations sur les composants, voir Figure 2. Présentation du réseau NSX Manager dans [Conception de l'infrastructure virtuelle](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_virtualinfrastructure).
 
-## Conception de mise en réseau virtuelle
+## Conception de la mise en réseau virtuelle
 {: #storage-infra-mgmt-visual-net-design}
 
 La virtualisation de réseau qui est utilisée dans cette conception utilise le commutateur vDS (vSphere Distributed Switch) existant qui est associé au réseau privé et qui est spécifié dans la rubrique [Architecture {{site.data.keyword.vmwaresolutions_full}}](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview).

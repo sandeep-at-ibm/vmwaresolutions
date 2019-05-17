@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-19"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -77,9 +77,9 @@ Per la ridondanza tra le istanze; quando viene aggiunta la prima istanza vCenter
 ## Servizi NTP
 {: #design_commonservice-ntp}
 
-Questa progettazione utilizza i server NTP dell'infrastruttura {{site.data.keyword.cloud_notm}}. Tutti i componenti distribuiti sono configurati per utilizzare questi server NTP. Per il corretto funzionamento dei certificati e dell'autenticazione di Active Directory, è fondamentale che tutti i componenti all'interno della progettazione utilizzino lo stesso server NTP.
+Questa progettazione utilizza i server NTP dell'infrastruttura {{site.data.keyword.cloud_notm}}. Tutti i componenti distribuiti sono configurati per utilizzare questi server NTP. Per il corretto funzionamento dei certificati e dell'autenticazione di Active Directory è fondamentale che tutti i componenti all'interno della progettazione utilizzino lo stesso server NTP.
 
-Figura 2. Servizi NTP e DNS </br>
+Figura 2. Servizi NTP e DNS</br>
 ![Servizi NTP e DNS](vcsv4radiagrams-ra-servicesinterconnections.svg)
 
 ## Servizi CA (Certificate Authority)

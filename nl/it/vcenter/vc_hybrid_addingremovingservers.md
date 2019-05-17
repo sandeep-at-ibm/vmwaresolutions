@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-18"
+lastupdated: "2019-04-18"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -30,11 +30,12 @@ A partire dalla release V2.9, puoi aggiungere dei nuovi server ESXi a un cluster
 Poiché il tuo cluster iniziale ha vSAN come archiviazione, l'aggiunta di uno o più server ESXi dopo la distribuzione può aumentare la capacità di archiviazione del cluster.
 
 ## Aggiunta di server ESXi alle istanze vCenter Server with Hybridity Bundle
+{: #vc_hybrid_addingremovingservers-adding}
 
 ### Prima di aggiungere i server ESXi
 {: #vc_hybrid_addingremovingservers-adding-prereq}
 
-* Non aggiungere i server ESXi dal client web VMware vSphere. Le modifiche che apporti al client web vSphere non vengono sincronizzate con la console {{site.data.keyword.vmwaresolutions_short}}.
+* Quando possibile, aggiungi i server ESXi utilizzando la console {{site.data.keyword.vmwaresolutions_full}}, poiché le modifiche che apporti al client web VMware vSphere non sono sincronizzate con la console {{site.data.keyword.vmwaresolutions_short}}. Pertanto, aggiungi i server ESXi a vCenter Server solo per i server ESXi in loco o per i server ESXi che non puoi gestire o che non gestirai nella console {{site.data.keyword.vmwaresolutions_short}}.
 * L'archiviazione vSAN richiede almeno 4 server ESXi.
 
 ## Procedura per aggiungere i server ESXi
@@ -65,7 +66,7 @@ Se stai aggiungendo dei server ESXi durante la modalità di manutenzione, le VM 
 ### Prima di rimuovere i server ESXi
 {: #vc_hybrid_addingremovingservers-removing-prereq}
 
-* Non rimuovere i server ESXi dal client web VMware vSphere. Le modifiche che apporti al client web vSphere non vengono sincronizzate con la console {{site.data.keyword.vmwaresolutions_short}}.
+* Quando possibile, rimuovi i server ESXi utilizzando la console {{site.data.keyword.vmwaresolutions_full}}, poiché le modifiche che apporti al client web VMware vSphere non sono sincronizzate con la console {{site.data.keyword.vmwaresolutions_short}}. Pertanto, rimuovi i server ESXi da vCenter Server solo per i server ESXi in loco o per i server ESXi che non puoi gestire o che non gestirai nella console {{site.data.keyword.vmwaresolutions_short}}.
 * L'archiviazione vSAN richiede almeno 4 server ESXi.
 * Prima di rimuovere i server ESXi con il servizio F5 on {{site.data.keyword.cloud_notm}} o FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} installato, devi migrare le VM di F5 BIG-IP e FortiGate in un server ESXi diverso rispetto a quello che ospita le VM.
 * Prima di rimuovere i server ESXi con il servizio IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} installato, assicurati che non vi siano operazioni di backup o ripristino attive (non riuscite o in corso), poiché queste operazioni attive potrebbero impedire la rimozione dei server ESXi.
@@ -96,5 +97,5 @@ Se stai aggiungendo dei server ESXi durante la modalità di manutenzione, le VM 
 * [Distinta base di vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
 * [Requisiti e pianificazione per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)
 * [Aggiunta, visualizzazione ed eliminazione di cluster per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingviewingclusters)
-* [Metti un host in modalità di manutenzione](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
-* [Supporto del processore EVC (Enhanced vMotion Compatibility)](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003212){:new_window}
+* [Metti un host in modalità di manutenzione](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.resmgmt.doc/GUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
+* [Supporto del processore EVC (Enhanced vMotion Compatibility)](https://kb.vmware.com/s/article/1003212){:new_window}

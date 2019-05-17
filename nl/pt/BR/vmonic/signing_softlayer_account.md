@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -19,12 +19,12 @@ subcollection: vmwaresolutions
 
 É possível inscrever-se para uma conta do {{site.data.keyword.cloud}} usando um **IBMid** existente ou criando um novo **IBMid**. Para obter mais informações sobre como se inscrever para uma conta do {{site.data.keyword.cloud_notm}}, consulte [Inscrevendo-se no {{site.data.keyword.cloud_notm}}](/docs/account?topic=account-signup).
 
-## Inscrevendo-se para uma conta de infraestrutura do IBM Cloud (SoftLayer)
+## Inscrevendo-se para uma conta de infraestrutura do IBM Cloud
 {: #signing_softlayer_account-infra}
 
-A conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer), que era conhecida anteriormente como a conta do IBM SoftLayer, é usada para efetuar login no portal do cliente de infraestrutura do {{site.data.keyword.cloud_notm}} que fornece alguma função adicional para gerenciar produtos e serviços de infraestrutura.
+A conta de infraestrutura do {{site.data.keyword.cloud_notm}} é usada para efetuar login no portal do cliente de infraestrutura do {{site.data.keyword.cloud_notm}} que fornece alguma função adicional para gerenciar produtos e serviços de infraestrutura.
 
-Para inscrever-se para uma conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer), faça upgrade de sua conta do {{site.data.keyword.cloud_notm}} para o tipo de conta Pagamento conforme uso. Para obter mais informações, veja [Como fazer upgrade ou mudar meu tipo de conta?](/docs/account?topic=account-accountfaqs)
+Para inscrever-se para uma conta de infraestrutura do {{site.data.keyword.cloud_notm}}, faça upgrade de sua conta do {{site.data.keyword.cloud_notm}} para o tipo de conta Pagamento conforme uso. Para obter mais informações, veja [Como fazer upgrade ou mudar meu tipo de conta?](/docs/account?topic=account-accountfaqs)
 
 ## Links relacionados
 {: #signing_softlayer_account-related}

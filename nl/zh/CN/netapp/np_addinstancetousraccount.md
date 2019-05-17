@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-04-18"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -43,6 +43,6 @@ subcollection: vmwaresolutions
 ## 相关链接
 {: #np_addinstancetousraccount-related}
 
-* [使用 IAM 管理用户访问权](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-access-with-iam)
+* [使用 IAM 管理用户访问权](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-iam#iam)
 * [邀请用户访问服务和资源](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-iamuserinvite)
 * [什么是 IBM Cloud IAM](/docs/iam?topic=iam-iamoverview)

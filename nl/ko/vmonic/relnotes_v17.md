@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2017-07-05"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -47,7 +47,7 @@ Cloud Foundation 인스턴스 배치의 복잡도 및 다중 사이트 구성의
 ### 클러스터 지원
 {: #relnotes_v17-cluster}
 
-더 나은 리소스 관리 및 고가용성을 위해 V1.7 릴리스부터 클러스터를 사용하여 vCenter Server 인스턴스의 ESXi 서버를 관리할 수 있습니다. 인스턴스를 주문할 때 구성한 ESXi 서버는 기본적으로 **cluster1**로 그룹화됩니다. 클러스터 새부사항을 보거나 인스턴스 세부사항 페이지에 있는 새로 도입된 **인프라** 탭의 인스턴스에 총 다섯 개의 클러스터를 추가할 수 있습니다. 인스턴스의 용량을 확장하거나 축소하는 경우 ESXi 서버를 추가할 클러스터 또는 ESXi 서버를 제거할 클러스터를 선택할 수 있습니다. 자세한 정보는 [vCenter Server 인스턴스에 대한 클러스터 추가 및 보기](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)를 참조하십시오.
+더 나은 리소스 관리 및 고가용성을 위해 V1.7 릴리스부터 클러스터를 사용하여 vCenter Server 인스턴스의 ESXi 서버를 관리할 수 있습니다. 인스턴스를 주문할 때 구성한 ESXi 서버는 기본적으로 **cluster1**로 그룹화됩니다. 클러스터 새부사항을 보거나 인스턴스 세부사항 페이지에 있는 새로 도입된 **인프라** 탭의 인스턴스에 총 다섯 개의 클러스터를 추가할 수 있습니다. 인스턴스의 용량을 확장하거나 축소하는 경우 ESXi 서버를 추가할 클러스터 또는 ESXi 서버를 제거할 클러스터를 선택할 수 있습니다. 자세한 정보는 [vCenter Server 인스턴스의 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)를 참조하십시오.
 
 ### Zerto 재해 복구의 배치에 대한 개선사항
 {: #relnotes_v17-zerto}

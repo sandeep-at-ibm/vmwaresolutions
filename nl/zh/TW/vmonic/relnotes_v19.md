@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2017-10-13"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -78,7 +78,7 @@ subcollection: vmwaresolutions
 
 為了加強擴充受管理的 VMware 環境，您現在可以在不同的 {{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) Pod 中，或在與實例中已部署的起始叢集不同的 {{site.data.keyword.CloudDataCent_notm}} 內建立新叢集。
 
-如需相關資訊，請參閱[新增及檢視 vCenter Server 實例的叢集](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)。
+如需相關資訊，請參閱[新增、檢視及刪除 vCenter Server 實例的叢集](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)。
 
 ### 變更元件
 {: #relnotes_v19-change-comp}

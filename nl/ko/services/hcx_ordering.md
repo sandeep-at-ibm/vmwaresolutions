@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -50,7 +50,7 @@ HCX on {{site.data.keyword.cloud_notm}}를 설치하려면 다음 설정을 완�
   * **개인 키:** CA 인증서의 개인 키를 입력하십시오.
   * (선택사항) **비밀번호:** 개인 키가 암호화된 경우 개인 키의 비밀번호를 입력하십시오.
   * (선택사항) **비밀번호 다시 입력:** 개인 키의 비밀번호를 다시 입력하십시오.
-  * (선택사항) **호스트 이름:** CA 인증서의 공통 이름(CN)에 맵핑될 호스트 이름입니다. HCX on {{site.data.keyword.cloud_notm}}에서는 NSX Edge가 CA 인증서의 형식을 허용해야 합니다. NSX Edge 인증서 형식에 대한 자세한 정보는 [SSL 인증서 가져오기](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html)를 참조하십시오.
+  * (선택사항) **호스트 이름:** CA 인증서의 공통 이름(CN)에 맵핑될 호스트 이름입니다. HCX on {{site.data.keyword.cloud_notm}}에서는 NSX Edge가 CA 인증서의 형식을 허용해야 합니다. NSX Edge 인증서 형식에 대한 자세한 정보는 [SSL 인증서 가져오기](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html)를 참조하십시오.
   <!--Need enhancement, it is still not clear what the key pair is used for, is it for connecting to NSX? This is not in architecture doc either. -->
 
 ## HCX on IBM Cloud에 대한 배치 프로세스
@@ -87,7 +87,7 @@ HCX on {{site.data.keyword.cloud_notm}}의 배치가 자동화됩니다. 서비�
 ## 관련 링크
 {: #hcx_ordering-related}
 
-* [HCX on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview)
+* [HCX on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_considerations#hcx_considerations)
 * [HCX on {{site.data.keyword.cloud_notm}} 관리](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghcx)
 * [vCenter Server with Hybridity Bundle 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
 * [HCX 용어집](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)

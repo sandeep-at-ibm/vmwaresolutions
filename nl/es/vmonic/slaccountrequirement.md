@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,10 +18,7 @@ subcollection: vmwaresolutions
 # Requisitos para la cuenta de infraestructura de IBM Cloud
 {: #slaccountrequirement}
 
-Para utilizar {{site.data.keyword.vmwaresolutions_full}} para solicitar instancias, debe tener una cuenta de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer). El coste de los componentes que se solicitan en las instancias se factura a dicha cuenta de {{site.data.keyword.cloud_notm}}.
-
-La cuenta de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer) se conocía anteriormente como la cuenta de IBM SoftLayer.
-{:note}
+Para utilizar {{site.data.keyword.vmwaresolutions_full}} para solicitar instancias, debe tener una cuenta de infraestructura de {{site.data.keyword.cloud_notm}}. El coste de los componentes que se solicitan en las instancias se factura a dicha cuenta de {{site.data.keyword.cloud_notm}}.
 
 ## Permisos para la cuenta de infraestructura de IBM Cloud
 {: #slaccountrequirement-permissions}
@@ -46,6 +43,7 @@ Tabla 1. Permisos necesarios para la cuenta de infraestructura de {{site.data.ke
 | Editar incidencias | Este permiso es necesario para editar las incidencias de servicio creadas en su nombre. |
 | Ver incidencias | Este permiso es necesario para supervisar las incidencias de servicio relacionadas con los componentes de su instancia en relación con problemas y retrasos de suministro de la infraestructura de {{site.data.keyword.cloud_notm}}. |
 | Ver detalles de hardware | Este permiso es necesario para recuperar detalles de hardware, que se necesitan para la validación de pedidos y para la configuración automática. |
+| Rearrancar/Controlar | Este permiso es necesario para apagar el hardware durante el proceso de cancelación de hardware al suprimir una instancia. |
 | Ver licencias | Este permiso es necesario para recuperar y validar las licencias que utiliza su instancia. |
 | Ver contraseñas | Este permiso es necesario para poder administrar las VSI solicitadas. |
 | Gestionar supervisión de servidor | Este permiso no es necesario realizar un pedido, pero sí que se necesita para recuperar y validar el estado de supervisión de los {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} en los que se ejecutan los servidores VMware ESXi en la instancia. |
@@ -57,7 +55,7 @@ Su cuenta de infraestructura de {{site.data.keyword.cloud_notm}} debe ser una cu
 
 Para obtener más información, consulte:
 * [Visión general de VRF on IBM Cloud](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-* [Habilitar la cuenta para el uso de puntos finales de servicio](/docs/services/service-endpoint?topic=services/service-endpoint-cs_cli_install_steps#cs_cli_install_steps)
+* [Habilitación de la cuenta para el uso de puntos finales de servicio](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
 
 ## Fin del soporte para la expansión de VLAN
 {: #slaccountrequirement-vlan-eos}

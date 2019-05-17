@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -48,7 +48,7 @@ La mise à l'échelle du cluster démarre automatiquement. Une conformation par 
 
 Si le cluster que vous mettez à l'échelle n'est pas prêt à être utilisé, il se peut qu'un message d'erreur s'affiche.
 
-Contrairement aux instances vCenter Server et Cloud Foundation, les clusters vSphere ne s'affichent pas sur la page **Ressources**.
+Les clusters vSphere, contrairement aux instances vCenter Server, ne s'affichent pas sur la page **Ressources**.
 {:note}
 
 ## Liens connexes

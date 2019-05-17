@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -25,7 +25,7 @@ subcollection: vmwaresolutions
 {: #faq_byol-def}
 {: faq}
 
-「自帶授權」或 BYOL 是 1.8 版及更新版本中的 VMware Cloud Foundation 實例以及 2.0 版及更新版本中的 VMware vCenter Server 和 VMware vSphere 叢集可用的特性。使用 BYOL，您可以對下列一個以上的 VMware 軟體元件使用您自己的 VMware 授權：
+「自帶授權 (BYOL)」是可供 2.0 版及更新版本中 VMware vCenter Server 及 VMware vSphere 叢集使用的特性。使用 BYOL，您可以對下列一個以上的 VMware 軟體元件使用您自己的 VMware 授權：
 * VMware vCenter Server
 * VMware vSphere
 * VMware NSX
@@ -62,18 +62,6 @@ BYOL 特性不適用於「事業夥伴」使用者。
   |vSAN           |Advanced 或 Enterprise |8 CPU |
   |NSX            |Standard、Advanced 或 Enterprise |8 CPU |
 
-### Cloud Foundation 實例的 BYOL 需求
-{: #faq_byol-cf-reqs}
-
-表 2. Cloud Foundation 實例的授權版本及 CPU 最低需求
-
-  |VMware 元件|需要的授權版本|需要的最低 CPU
-  |:-------------  |:-------------  |:-------|
-  |vCenter Server |Standard |N/A |
-  |vSphere        |Enterprise Plus |8 CPU |
-  |vSAN           |Advanced 或 Enterprise |8 CPU |
-  |NSX            |Enterprise |8 CPU |
-
 ## 如果我提供的授權碼不正確會發生生什麼情況？
 {: #faq_byol-incorrect-license}
 {: faq}
@@ -84,13 +72,7 @@ BYOL 特性不適用於「事業夥伴」使用者。
 {: #faq_byol-license-key}
 {: faq}
 
-是的。對於每一個 VMware 元件，需要每個 CPU 一份授權。目前，所有 vCenter Server 和 Cloud Foundation 伺服器都有兩個 CPU。因此，每部伺服器都需要兩份授權。建議您提供的授權碼能支援基礎實例，以及您未來要新增至該實例的任何擴充節點。
-
-## 如果使用 BYOL 特性，是否可以提供 SDDC Manager 授權？
-{: #faq_byol-sddc}
-{: faq}
-
-否。我們與 VMware 的合約規定我們必須接受客戶的實際授權碼。雖然 Cloud Foundation 部署包括 SDDC Manager 授權，但我們無法接受 SDDC Manager 授權碼檔案並驗證其 BYOL。因此，IBM 會針對所有實例的 SDDC Manager 授權收費。SDDC Manager 授權代表 Cloud Foundation 實例整體授權費用中的一小部分。
+是的。對於每一個 VMware 元件，需要每個 CPU 一份授權。目前，所有 vCenter Server 伺服器都有兩個 CPU。因此，每部伺服器都需要兩份授權。建議您提供的授權碼能支援基礎實例，以及您未來要新增至該實例的任何擴充節點。
 
 ## 我可以對某些 VMware 元件使用 BYOL 特性，並對某些元件購買每月授權嗎？
 {: #faq_byol-mthly-license}

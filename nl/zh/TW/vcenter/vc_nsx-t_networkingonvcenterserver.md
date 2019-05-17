@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-28"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -22,7 +22,7 @@ subcollection: vmwaresolutions
 {: #vc_nsx-t_networkingonvcenterserver-networking-components}
 {: faq}
 
-若要檢閱您的 vCenter Server with NSX-T 實例包含的網路元件，請參閱 [vCenter Server with NSX-T 實例的技術規格](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_overview-specs)。
+若要檢閱您的 vCenter Server with NSX-T 實例包含的網路元件，請參閱 [vCenter Server with NSX-T 實例的技術規格](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_overview#vc_nsx-t_overview-specs)。
 
 ## 防火牆考量
 {: #vc_nsx-t_networkingonvcenterserver-firewall-considerations}

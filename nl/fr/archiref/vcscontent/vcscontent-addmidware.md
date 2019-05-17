@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -126,7 +126,7 @@ Cloud Private (ILAN sous licence pour découverte et tests à partir du catalogu
   -	Terminal Web (open source)
   -	Skydive – Analyseur de réseau (open source)
 
-Pour Stock Trader, à partir de l'architecture de solution de Jane, Todd va commencer avec [Db2](https://console.cloud.ibm.com/catalog/services/db2-hosted), [MQ](https://console.cloud.ibm.com/catalog/services/mq) et [Redis](https://console.cloud.ibm.com/catalog/services/databases-for-redis).
+Pour Stock Trader, à partir de l'architecture de solution de Jane, Todd va commencer avec [Db2](https://cloud.ibm.com/catalog/services/db2-hosted), [MQ](https://cloud.ibm.com/catalog/services/mq) et [Redis](https://cloud.ibm.com/catalog/services/databases-for-redis).
 
 ## Ajout de logiciels intermédiaires
 {: #vcscontent-addmidware-add-middleware}

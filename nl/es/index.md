@@ -4,11 +4,11 @@ copyright:
 
   years: 2016, 2019
 
-lastupdated: "2019-03-22"
+lastupdated: "2019-04-16"
 
-keywords: IBM Cloud for VMware Solutions, getting started, deployment offerings, add-on services, use case
+keywords: IBM Cloud for VMware Solutions, getting started, vmware solutions offerings, add-on services for vmwaresolutions, vmwaresolutions use cases
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -50,7 +50,7 @@ Para ver y trabajar mejor con la consola de {{site.data.keyword.vmwaresolutions_
 ### Cuentas de usuario
 {: #getting-started-user-accts}
 
-Necesita una cuenta de {{site.data.keyword.cloud_notm}} y una cuenta de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer). Estas cuentas deben cumplir ciertos requisitos.
+Necesita una cuenta de {{site.data.keyword.cloud_notm}} y una cuenta de infraestructura de {{site.data.keyword.cloud_notm}}. Estas cuentas deben cumplir ciertos requisitos.
 
    Tabla 1. Cuentas de usuario necesarias
    <table>
@@ -67,8 +67,8 @@ Necesita una cuenta de {{site.data.keyword.cloud_notm}} y una cuenta de infraest
       <td>Para solicitar y utilizar servicios de {{site.data.keyword.cloud_notm}}, se necesita una cuenta de {{site.data.keyword.cloud_notm}}. La información de facturación está asociada a la cuenta de {{site.data.keyword.cloud_notm}}. El coste de la infraestructura física y virtual y las licencias resultantes se cargarán a su cuenta de {{site.data.keyword.cloud_notm}}.</td>
    </tr>
    <tr>
-      <td>Cuenta de infraestructura de IBM Cloud (SoftLayer)</td>
-      <td>La cuenta de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer) se conocía anteriormente como la cuenta de IBM SoftLayer.  Para obtener más información sobre los requisitos que debe cumplir la cuenta, consulte [Requisitos de la cuenta de infraestructura de {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).<br><br>Puede enlazar las cuentas de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer) con las cuentas de {{site.data.keyword.cloud_notm}} para utilizar la infraestructura combinada como servicio (IaaS) y los recursos de la plataforma como servicio (PaaS). A continuación, puede acceder a los recursos de IaaS y a los recursos de PaaS desde un solo inicio de sesión. El enlace de las cuentas también le proporciona una sola factura para todos los recursos de PaaS e IaaS que utiliza.<ul><li>Si no tiene una cuenta de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer), solicite una siguiendo el procedimiento de [Inicio de sesión para una cuenta de infraestructura de IBM Cloud (SoftLayer)](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account#signing_softlayer_account-infra) y, a continuación, enlace la cuenta de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer) con la cuenta de {{site.data.keyword.cloud_notm}} siguiendo el procedimiento de [Cómo cambiar a IBMid y enlazar cuentas](/docs/account?topic=account-unifyingaccounts#unifyingaccounts).</li><li>Si tiene una cuenta de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer), puede enlazarla con la cuenta de {{site.data.keyword.cloud_notm}} siguiendo el procedimiento de [Cómo cambiar a IBMid y enlazar cuentas](/docs/account?topic=account-unifyingaccounts#unifyingaccounts).</li></ul></td>
+      <td>Cuenta de la infraestructura IBM Cloud</td>
+      <td>Para obtener información sobre los requisitos de una cuenta de infraestructura de {{site.data.keyword.cloud_notm}}, consulte [Requisitos de la cuenta de infraestructura de {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).<br><br>Puede enlazar las cuentas de infraestructura de {{site.data.keyword.cloud_notm}} con las cuentas de {{site.data.keyword.cloud_notm}} para utilizar la infraestructura combinada como servicio (IaaS) y los recursos de la plataforma como servicio (PaaS). A continuación, puede acceder a los recursos de IaaS y a los recursos de PaaS desde un solo inicio de sesión. El enlace de las cuentas también le proporciona una sola factura para todos los recursos de PaaS e IaaS que utiliza.<ul><li>Si no tiene una cuenta de infraestructura de {{site.data.keyword.cloud_notm}}, solicite una siguiendo el procedimiento de [Inicio de sesión para una cuenta de infraestructura de IBM Cloud](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account#signing_softlayer_account-infra) y, a continuación, enlace la cuenta de infraestructura de {{site.data.keyword.cloud_notm}} con la cuenta de {{site.data.keyword.cloud_notm}} siguiendo el procedimiento de [Cómo cambiar a IBMid y enlazar cuentas](/docs/account?topic=account-unifyingaccounts#unifyingaccounts).</li><li>Si tiene una cuenta de infraestructura de {{site.data.keyword.cloud_notm}}, puede enlazarla con la cuenta de {{site.data.keyword.cloud_notm}} siguiendo el procedimiento de [Cómo cambiar a IBMid y enlazar cuentas](/docs/account?topic=account-unifyingaccounts#unifyingaccounts).</li></ul></td>
    </tr>
    </table>
 
@@ -168,13 +168,13 @@ Revise y elija los servicios de complemento para la oferta de despliegue.
 La consola de {{site.data.keyword.vmwaresolutions_short}} es la interfaz con la que solicita y gestiona sus despliegues. Cada despliegue se gestiona como una instancia en la consola. La consola es una interfaz de usuario autónoma, independiente del portal de clientes de infraestructura de {{site.data.keyword.cloud_notm}}.
 
 Para acceder a la consola de {{site.data.keyword.vmwaresolutions_short}}:
-1. Vaya a https://console.cloud.ibm.com/infrastructure/vmware-solutions/console.
+1. Vaya a https://cloud.ibm.com/infrastructure/vmware-solutions/console.
 2. Inicie sesión en la consola con su **IBMid**.
 
 ## Paso 2: Configuración de la cuenta de usuario y valores
 {: #getting-started-step2}
 
-Antes de solicitar una instancia, debe escribir el nombre de usuario y la clave de API de la cuenta de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer) en la página **Valores** de la consola.
+Antes de solicitar una instancia, debe escribir el nombre de usuario y la clave de API de la cuenta de infraestructura de {{site.data.keyword.cloud_notm}} en la página **Valores** de la consola.
 
 Para obtener información sobre cómo configurar la cuenta de usuario y los valores, consulte [Gestión de cuentas de usuario y valores](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount).
 

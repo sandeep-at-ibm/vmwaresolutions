@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -14,7 +14,7 @@ subcollection: vmwaresolutions
 # 다중 사이트 아키텍처
 {: #nsx-multi_site}
 
-{{site.data.keyword.cloud}} 및 기타 클라우드 오퍼링 간의 한 가지 주요 차별화 요소는 전세계에 걸쳐 전용 컴퓨팅 기능을 프로비저닝하고 사설 {{site.data.keyword.cloud_notm}} 계정 내의 네트워크와 On-Demand 인프라를 자동으로 연결하는 것입니다. VMware vCenter Server 및 VMware Cloud Foundation의 소프트웨어 정의 네트워크 기능은 {{site.data.keyword.cloud_notm}}와 함께 며칠 내에 빌드할 수 있는 세부 단위의 글로벌 인프라를 제공합니다. 다음 섹션에서는 vCenter Server 또는 Cloud Foundation의 즉시 사용 가능한 기능을 사용하여 달성할 수 있는 작업의 다중 사이트 아키텍처 예를 설명합니다.
+{{site.data.keyword.cloud}} 및 기타 클라우드 오퍼링 간의 한 가지 주요 차별화 요소는 전세계에 걸쳐 전용 컴퓨팅 기능을 프로비저닝하고 사설 {{site.data.keyword.cloud_notm}} 계정 내의 네트워크와 On-Demand 인프라를 자동으로 연결하는 것입니다. VMware vCenter Server의 소프트웨어 정의 네트워크 기능은 {{site.data.keyword.cloud_notm}}와 함께 며칠 내에 빌드할 수 있는 세부 단위의 글로벌 인프라를 제공합니다. 다음 섹션에서는 vCenter Server의 즉시 사용 가능한 기능을 사용하여 달성할 수 있는 작업의 다중 사이트 아키텍처 예를 설명합니다.
 
 ## 교차 vCenter NSX 환경
 {: #nsx-multi_site-cross-env}
@@ -22,7 +22,7 @@ subcollection: vmwaresolutions
 교차 vCenter NSX 기능을 사용하면 최대 9개의 NSX Manager를 기본, 보조 관계로 링크할 수 있습니다(기본 1개 및 보조 8개). 교차 vCenter NSX가 작동하기 위해 vCenter Server가 ELM(Enhanced Linked Mode) 관계로 설정될 필요는 없지만 다음과 같은 이점을 제공합니다.
 
 * 싱글 사인온(SSO) 인증 정보를 사용하여 간소화된 기본, 보조 관계 작성
-* 함께 링크되는 모든 사이트의 DNS 이름 분석에 대한 vCenter Server 및 Cloud Foundation 자동화 구성
+* 함께 링크되는 모든 사이트의 DNS 이름 분석에 대한 vCenter Server 자동화 구성
 * 모든 사이트에서 NSX 및 일반 vCenter 기능 모두에 대한 단일 분할창 방식(Single Pane of Glass)의 관리
 
 ## 다중 사이트 예

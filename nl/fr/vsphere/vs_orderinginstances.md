@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-26"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -104,8 +104,8 @@ Sélectionnez l'{{site.data.keyword.CloudDataCent_notm}} dans lequel le cluster 
 
 **Remarques :**
 * Si vous sélectionnez un composant vSAN, la liste des emplacements est filtrée par disponibilité SSD.
-* Le centre de données FRA05 ne prend pas en charge les serveurs bare metal Broadwell.
-* Le centre de données LON05 ne prend pas en charge les serveurs bare metal certifiés SAP ou Broadwell.
+* Les serveurs bare metal Broadwell ne sont pas disponible dans le centre de données **FRA05 de Francfort**.
+* Les serveurs bare metal Broadwell certifiés SAP ne sont pas disponible dans le centre de données **LON05 de Londres**.
 
 ### Skylake
 {: #vs_orderinginstances-skylake}
@@ -143,9 +143,6 @@ Tableau 3. Options pour les serveurs Broadwell {{site.data.keyword.baremetal_sho
 
 | Options de modèle d'UC        | Options de RAM       |
 |:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4/16 coeurs au total, 2,1 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
-| Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
-| Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
 | Quad Intel Xeon E7-4820 v4/40 coeurs au total, 2,0 GHz | 128 Go, 256 Go, 512 Go, 1 To, 2 To, 3 To |
 | Quad Intel Xeon E7-4850 v4/64 coeurs au total, 2,1 GHz | 128 Go, 256 Go, 512 Go, 1 To, 2 To, 3 To |
 
@@ -166,9 +163,9 @@ Pour les commandes avec vSAN, les serveurs ESXi sont commandés avec un châssis
 Si vous sélectionnez le composant VMware vSAN pour le cluster, spécifiez les paramètres suivants :
 * **Type et taille de disque pour disques de capacité vSAN** : sélectionnez une option correspond aux disques de capacité dont vous avez besoin.
 * **Nombre de disques de capacité vSAN** : indiquez le nombre de disques de capacité que vous souhaitez ajouter.
-* Pour ajouter des disques de capacité au-delà de la limite fixée à huit, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée.
+* Si vous souhaitez augmenter la capacité au-delà de la limite de huit disques, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée.
 
-  L'option **Hautes performances Intel Optane** est disponible uniquement pour les modèles d'UC Skylake Dual Intel Xeon Gold 5120 et Dual Intel Xeon Gold 6140.
+  L'option **Hautes performances avec Intel Optane** n'est disponible que pour les modèles d'unités centrales Skylake.
   {:note}
 
 * Passez en revue les valeurs de **type de disque pour les disques de cache vSAN** et de **nombre de disques de cache vSAN**. Ces valeurs dépendent de la sélection de la case **Hautes performances avec Intel Optane**.
@@ -211,12 +208,7 @@ Le nom de domaine utilisé pour tous les serveurs {{site.data.keyword.baremetal_
 ### Réseau public ou privé
 {: #vs_orderinginstances-public-private-network}
 
-Les paramètres d'activation de carte d'interface réseau varient selon que vous sélectionnez **Réseau public et réseau privé** ou **Réseau privé uniquement**. Les services complémentaires suivants requièrent des cartes d'interface réseau public et ne sont pas disponibles si vous sélectionnez l'option de réseau privé :
-
-* F5 on {{site.data.keyword.cloud_notm}}
-* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
-* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
-* Zerto on {{site.data.keyword.cloud_notm}}
+Les paramètres d'activation de carte d'interface réseau varient selon que vous sélectionnez **Réseau public et réseau privé** ou **Réseau privé uniquement**.
 
 ### Réseaux locaux virtuels
 {: #vs_orderinginstances-vlans}
@@ -297,7 +289,7 @@ Si vous avez sauvegardé la configuration en tant que modèle, vous obtenez une 
 
 Si vous avez passé la commande, le déploiement du cluster démarre automatiquement et vous recevez par courrier électronique la confirmation que la commande est en cours de traitement. Lorsque le cluster est prêt pour utilisation, un courrier électronique vous en avertit.
 
-Contrairement aux instances vCenter Server et Cloud Foundation, les clusters vSphere ne s'affichent pas sur la page **Ressources**.
+Les clusters vSphere, contrairement aux instances vCenter Server, ne s'affichent pas sur la page **Ressources**.
 {:note}
 
 ## Liens connexes

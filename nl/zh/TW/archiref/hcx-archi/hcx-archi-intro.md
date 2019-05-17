@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -15,14 +15,14 @@ subcollection: vmwaresolutions
 
 VMware HCX on IBM Cloud 服務可在 IBM Cloud for VMware Solutions 實例與內部部署 VMware 虛擬化資料中心之間建立無縫連線。
 
-IBM Cloud for VMware Solutions 包括 IBM Cloud 中 VMware vCenter Server on IBM Cloud (VCS) 或 VMware Cloud Foundation on IBM Cloud (VCF) 配置的全自動快速部署。這些供應項目補足內部部署基礎架構，並容許現有及未來工作負載在未轉換的情況下於 IBM Cloud 中執行，方法是使用它們在內部部署使用的相同工具、技能及處理程序。如需相關資訊，請參閱 [IBM Architecture Center](https://www.ibm.com/devops/method/content/architecture/virtualizationArchitecture)。
+IBM Cloud for VMware Solutions 包括 IBM Cloud 中 VMware vCenter Server (VCS) 的全自動快速部署。這些供應項目補足內部部署基礎架構，並容許現有及未來工作負載在未轉換的情況下於 IBM Cloud 中執行，方法是使用它們在內部部署使用的相同工具、技能及處理程序。如需相關資訊，請參閱[用於延伸虛擬化專用雲端的虛擬化](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture)。
 
-VMware HCX on IBM Cloud 服務會將此混合帶到下一步，並混合 VCS 或 VCF 實例與現有內部部署虛擬化資料中心，方法是啟用建立無縫網路延伸及雙向移轉工作負載。
+VMware HCX on IBM Cloud 服務會將此混合帶到下一步，並混合 VCS 實例與現有內部部署虛擬化資料中心，方法是啟用建立無縫網路延伸及雙向移轉工作負載。
 
 部署為 IBM Cloud VMware 目標站台中虛擬機器的 VMware HCX on IBM Cloud 元件，能夠建立與安裝在對等節點內部部署來源站台之 VMware HCX on IBM Cloud 元件的連線。
 
-圖 1. VMware Cloud Foundation - Hybrid Cloud Services
-![VMware Cloud Foundation - Hybrid Cloud Services](cloudfoundation_hybrid_cloud_services.svg)
+圖 1. VMware vCenter Server - Hybrid Cloud Services
+![VMware vCenter Server – Hybrid Cloud Services](cloudfoundation_hybrid_cloud_services.svg)
 
 此連線會在內部部署與 IBM Cloud 之間建立鬆散耦合的交互連線，並且啟用下列這類功能：
 * 簡單交互連線 - 可透過任何實體連線（例如公用網際網路、專用 VPN 或直接鏈結），輕鬆建立邏輯網路連線。
@@ -37,4 +37,4 @@ VMware HCX on IBM Cloud 服務會將此混合帶到下一步，並混合 VCS 或
 ## 相關鏈結
 {: #hcx-archi-intro-related}
 
-* [IBM Architecture Center](https://www.ibm.com/devops/method/content/architecture/virtualizationArchitecture)
+* [用於延伸虛擬化專用雲端的虛擬化](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture)

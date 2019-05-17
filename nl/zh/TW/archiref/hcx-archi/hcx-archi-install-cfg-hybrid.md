@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,7 +18,7 @@ subcollection: vmwaresolutions
 ## 必要條件
 {: #hcx-archi-install-cfg-hybrid-prereq}
 
-* HCX Manager 必須安裝在內部部署，並向已啟用 VCF/VCS HCX 功能的雲端端點進行登錄。
+* HCX Manager 必須安裝在內部部署，並向已啟用 VCS HCX 功能的雲端端點進行登錄。
 * 目標虛擬資料中心必須具有足夠的資源。
 
 ## 配置概觀
@@ -34,7 +34,7 @@ subcollection: vmwaresolutions
 
 簡單的 Web 介面用來安裝服務虛擬應用裝置，以及配置其他「第 2 層集中器」。
 
-必須安裝 HCX Manager，並向已啟用 VCF/VCS HCX 功能的雲端端點進行登錄。
+必須安裝 HCX Manager，並向已啟用 VCS HCX 功能的雲端端點進行登錄。
 
 ### 混合式服務虛擬應用裝置的安裝及配置程序
 {: #hcx-archi-install-cfg-hybrid-proc-install}
@@ -119,7 +119,7 @@ subcollection: vmwaresolutions
 
 ## 將第 2 層網路延伸至 IBM Cloud
 
-將第 2 層網路從內部部署資料中心擴充至已啟用 VCF/VCS HCX 功能的雲端。
+將第 2 層網路從內部部署資料中心擴充至已啟用 VCS HCX 功能的雲端。
 {: #hcx-archi-install-cfg-hybrid-stretch-layer-2}
 
 ### 將第 2 層網路延伸至 IBM Cloud 的必要條件
@@ -136,9 +136,9 @@ subcollection: vmwaresolutions
 3. 在埠群組按一下滑鼠右鍵、從功能表選取**混合動作**，然後選取**擴充網路**。
 4. 在**選取來源埠群組**頁面上，確認埠群組資訊，然後輸入網路的**閘道 IP 位址**及字首。按**下一步**。
 5. 在**選取目的地閘道**頁面上，完成下列步驟：
-  1. 從**組織**功能表，選取「VCF/VCS Hybrid Cloud Services 雲端組織」。
-  2. 從功能表，選取「VCF/VCS Hybrid Cloud Services 雲端」虛擬資料中心。
-  3. 將**鄰近遞送**保留為已停用，以強制已啟用 VCF/VCS Hybrid Cloud Services 功能之雲端內的 VM 一律使用內部部署閘道來存取網際網路。依預設，源自已啟用 VCF/VCS Hybrid Cloud Services 功能之雲端中 VM 的資料流量，會遍訪第 2 層資料路徑回到內部部署資料中心，和遍訪出去到預設閘道。如果勾選**鄰近遞送**，則已啟用 VCF/VCS Hybrid Cloud Services 功能之雲端內的 VM 可以存取網際網路，而不需要遍訪第 2 層資料路徑至 vSphere。
+  1. 從**組織**功能表，選取「VCS Hybrid Cloud Services 雲端組織」。
+  2. 從功能表，選取「VCS Hybrid Cloud Services 雲端」虛擬資料中心。
+  3. 將**鄰近遞送**保留為已停用，以強制已啟用 VCS Hybrid Cloud Services 功能之雲端內的 VM 一律使用內部部署閘道來存取網際網路。依預設，源自已啟用 VCS Hybrid Cloud Services 功能之雲端中 VM 的資料流量，會遍訪第 2 層資料路徑回到內部部署資料中心，和遍訪出去到預設閘道。如果勾選**鄰近遞送**，則已啟用 VCS Hybrid Cloud Services 功能之雲端內的 VM 可以存取網際網路，而不需要遍訪第 2 層資料路徑至 vSphere。
   4. 按一下該列，以從閘道清單選取遠端目的地閘道。按**下一步**。
 6. 在**準備完成**頁面上，檢閱所有提供的值。按一下**完成**。
 7. 若要追蹤網路延伸的進度，請移至**最近作業**視窗，按一下**全部**標籤，然後檢視**所有使用者的作業**。

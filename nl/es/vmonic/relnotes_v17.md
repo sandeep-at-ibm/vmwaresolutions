@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2017-07-05"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -47,7 +47,7 @@ En función de la complejidad del despliegue de la instancia de Cloud Foundation
 ### Soporte de clústeres
 {: #relnotes_v17-cluster}
 
-A partir del release V1.7, puede utilizar clústeres para gestionar servidores ESXi en instancias de vCenter Server para mejorar la gestión de recursos y la alta disponibilidad. Los servidores ESXi que ha configurado al solicitar una instancia se agrupan como **cluster1** de forma predeterminada. Puede ver los detalles del clúster o añadir hasta un total de cinco clústeres a una instancia desde el nuevo separador **Infraestructura** de la página de detalles de la instancia. Cuando amplíe o reduzca la capacidad de una instancia, puede seleccionar el clúster al que se van a añadir los servidores ESXi o del que se van a eliminar los servidores ESXi. Para obtener más información, consulte [Adición y visualización de clústeres para instancias vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances).
+A partir del release V1.7, puede utilizar clústeres para gestionar servidores ESXi en instancias de vCenter Server para mejorar la gestión de recursos y la alta disponibilidad. Los servidores ESXi que ha configurado al solicitar una instancia se agrupan como **cluster1** de forma predeterminada. Puede ver los detalles del clúster o añadir hasta un total de cinco clústeres a una instancia desde el nuevo separador **Infraestructura** de la página de detalles de la instancia. Cuando amplíe o reduzca la capacidad de una instancia, puede seleccionar el clúster al que se van a añadir los servidores ESXi o del que se van a eliminar los servidores ESXi. Para obtener más información, consulte [Adición, visualización y supresión de clústeres para instancias de vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters).
 
 ### Mejoras en el despliegue de la recuperación tras desastre de Zerto
 {: #relnotes_v17-zerto}

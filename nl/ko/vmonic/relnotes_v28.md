@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-02-08"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -21,7 +21,7 @@ subcollection: vmwaresolutions
 
 마이그레이션 및 앱 현대화를 위한 단일 노드 평가판은 {{site.data.keyword.cloud_notm}}를 시범 작동하여 VMware 워크로드를 {{site.data.keyword.cloud_notm}}에 마이그레이션한 후 컨테이너를 사용하여 워크로드를 현대화할 수 있는 가장 빠른 방법입니다. 이 팽가판은 컨테이너를 위한 Kubernetes 관리 플랫폼 및 온프레미스 환경과 동일한 익숙한 도구를 사용하여 관리될 수 있는 싱글 테넌트 VMware 플랫폼을 제공하는 {{site.data.keyword.cloud_notm}}의 {{site.data.keyword.icpfull_notm}} Hosted on VMware vCenter Server 버전입니다.
 
-자세한 정보는 [마이그레이션 및 앱 현대화를 위한 단일 노드 평가판 개요](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-single-node-trial-for-migration-and-app-modernization-overview)를 참조하십시오.
+자세한 정보는 [마이그레이션 및 앱 현대화를 위한 단일 노드 평가판 개요](/docs/services/vmwaresolutions?topic=vmware-solutions-cloud_modern_bundle_overview#cloud_modern_bundle_overview)를 참조하십시오.
 
 ## 네트워크 파일 시스템 스토리지 추가 및 제거
 {: #relnotes_v28-nfs}

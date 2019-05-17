@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-02-15"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -40,8 +40,8 @@ Tabela 1. Requisitos de acesso à porta
 | Gateway em nuvem | Hosts ESXi | 80, 902  | TCP | Gerenciamento e implementação do OVF | Interno |
 | Hosts ESXi | Gateway em nuvem | 31031, 44046 | TCP | Tráfego de replicação baseado em host interno | Interno |
 | Gateway em nuvem | Hosts ESXi | 8000  | TCP | vMotion (zero de migração de tempo de inatividade) |  |
-| Gateway de nuvem (local) | Gateway em nuvem</br>(remoto) | 4500  | UDP | Troca de chave da Internet (IKEv2) para encapsular cargas de trabalho para o túnel bidirecional | IPSEC |
-| Gateway de nuvem (local) | Gateway em nuvem</br>(remoto) | 500  | UDP | Troca de chave da Internet (ISAKMP) para o túnel bidirecional | IPSEC |
+| Gateway de nuvem (local) | Gateway de nuvem</br>(remoto) | 4500  | UDP | Troca de chave da Internet (IKEv2) para encapsular cargas de trabalho para o túnel bidirecional | IPSEC |
+| Gateway de nuvem (local) | Gateway de nuvem</br>(remoto) | 500  | UDP | Troca de chave da Internet (ISAKMP) para o túnel bidirecional | IPSEC |
 
 ## Links relacionados
 {: #hcx-archi-port-req-related}

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-20"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -30,7 +30,7 @@ Pour créer une instance Object Storage, voir [Création d'une instance de servi
 ## Création d'un compartiment
 {: #icos_ordering-bucket}
 
-Pour créer un compartiment, voir [Etape 1 : Création de compartiments pour stocker vos données](https://cloud.ibm.com/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-getting-started-console-#create-buckets). Suivez la procédure puis revenez à cette section pour passer aux autres tâches.
+Pour créer un compartiment, voir [Création de compartiments pour stocker vos données](/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-getting-started-tutorial#gs-create-buckets). Suivez la procédure puis revenez à cette section pour passer aux autres tâches.
 
 ## Création de données d'identification de service
 {: #icos_ordering-service-cred}

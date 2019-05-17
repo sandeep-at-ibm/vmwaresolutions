@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -25,7 +25,7 @@ subcollection: vmwaresolutions
 {: #faq_byol-def}
 {: faq}
 
-고유한 라이센스 가져오기, 즉 BYOL은 V1.8 이상의 VMware Cloud Foundation 인스턴스와 V2.0 이상의 VMware vCenter Server 및 VMware vSphere 클러스터에 사용 가능한 기능입니다. BYOL을 통해 다음 VMware 소프트웨어 컴포넌트 중 하나 이상에 대한 고유한 VMware 라이센스를 사용할 수 있습니다.
+BYOL(Bring Your Own License)은 V2.0 이상에서 VMware vCenter Server 및 VMware vSphere 클러스터에 사용할 수 있는 기능입니다. BYOL을 통해 다음 VMware 소프트웨어 컴포넌트 중 하나 이상에 대한 고유한 VMware 라이센스를 사용할 수 있습니다.
 * VMware vCenter Server
 * VMware vSphere
 * VMware NSX
@@ -62,18 +62,6 @@ VMware vSphere on {{site.data.keyword.cloud_notm}}에 대한 새 클러스터를
   |vSAN           |Advanced 또는 Enterprise |8개의 CPU |
   |NSX            |Standard, Advanced 또는 Enterprise |8개의 CPU |
 
-### Cloud Foundation 인스턴스에 대한 BYOL 요구사항
-{: #faq_byol-cf-reqs}
-
-표 2. Cloud Foundation 인스턴스에 대한 라이센스 에디션 및 CPU 최소 요구사항
-
-  |VMware 컴포넌트 |필요한 라이센스 에디션 |필요한 최소 CPU
-  |:-------------  |:-------------  |:-------|
-  |vCenter Server |Standard |해당사항 없음 |
-  |vSphere        |Enterprise Plus |8개의 CPU |
-  |vSAN           |Advanced 또는 Enterprise |8개의 CPU |
-  |NSX            |Enterprise |8개의 CPU |
-
 ## 제공한 라이센스 키가 올바르지 않으면 어떻게 됩니까?
 {: #faq_byol-incorrect-license}
 {: faq}
@@ -84,13 +72,7 @@ VMware vSphere on {{site.data.keyword.cloud_notm}}에 대한 새 클러스터를
 {: #faq_byol-license-key}
 {: faq}
 
-예. 각 VMware 컴포넌트의 경우 CPU당 하나의 라이센스가 필요합니다. 현재 모든 vCenter Server 및 Cloud Foundation 서버에 두 개의 CPU가 있습니다. 따라서 각 서버에 두 개의 라이센스가 필요합니다. 나중에 인스턴스에 추가할 기본 인스턴스 및 확장 노드를 지원할 수 있는 라이센스 키를 제공하는 것이 좋습니다.
-
-## BYOL 기능을 사용하는 경우 SDDC Manager 라이센스를 제공할 수 있습니까?
-{: #faq_byol-sddc}
-{: faq}
-
-아니오. VMware과의 계약에는 클라이언트의 실제 라이센스 키를 승인해야 하는 내용이 포함됩니다. Cloud Foundation 배치에 SDDC Manager 라이센스가 포함되어 있지만 SDDC Manager 라이센스 키 파일을 승인할 수 없고 BYOL에 대해 이 파일을 유효성 검증할 수 없습니다. 그러므로 IBM에서 모든 인스턴스에 대한 SDDC Manager 라이센스 비용을 청구합니다. SDDC Manager 라이센스는 Cloud Foundation 인스턴스에 대한 전체 라이센스 비용 중 극히 일부만 표시합니다.
+예. 각 VMware 컴포넌트의 경우 CPU당 하나의 라이센스가 필요합니다. 현재 모든 vCenter Server 서버에 두 개의 CPU가 있습니다. 따라서 각 서버에 두 개의 라이센스가 필요합니다. 나중에 인스턴스에 추가할 기본 인스턴스 및 확장 노드를 지원할 수 있는 라이센스 키를 제공하는 것이 좋습니다.
 
 ## 일부 VMware 컴포넌트의 경우 BYOL 기능을 사용하고, 다른 컴포넌트의 경우 월별 라이센스를 구매할 수 있습니까?
 {: #faq_byol-mthly-license}

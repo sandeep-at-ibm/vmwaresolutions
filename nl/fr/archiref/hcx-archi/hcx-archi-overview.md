@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -22,9 +22,9 @@ Cette offre crée un réseau WAN optimisé, défini par les logiciels pour l'aug
 ## Extension de réseau de couche 2
 {: #hcx-archi-overview-layer-2-net}
 
-HCX permet à un site existant en local vSphere d'étendre en toute sécurité un réseau depuis son site vCenter local vers un centre de données IBM Cloud qui exécute VMware Cloud Foundation ou vCenter Server. Cette fonction est activée par les éléments suivants :
+HCX permet à un site existant en local vSphere d'étendre en toute sécurité un réseau depuis son site vCenter local vers un centre de données IBM Cloud qui exécute VMware vCenter Server. Cette fonction est activée par les éléments suivants :
 * HCX fournit un dispositif qui est appelé Concentrateur de couche 2 (L2C).
-* Les réseaux étendus se relient aux dispositifs de serveur de périphérie IBM Cloud NSX déployés dans VMware Cloud Foundation ou vCenter Server.
+* Les réseaux étendus se relient aux dispositifs de serveur de périphérie IBM Cloud NSX déployés dans VMware vCenter Server.
 * Il est possible de déployer plusieurs concentrateurs de couche 2 pour atteindre l'évolutivité et un débit accru depuis le site vCenter local.
 * Les machines virtuelles qui sont migrées via la passerelle cloud et sur la couche 2 étendue peuvent conserver leurs adresses IP et MAC.
 
@@ -155,7 +155,7 @@ Avant que les composants soient décrits plus en détail, il est impératif de c
 * Si une migration vMotion entre clouds est prévue, les mêmes restrictions d'affinité s'appliquent entre les clouds comme c'est le cas en local.
 * L'environnement source doit disposer d'une méthode pour se connecter aux environnements de cloud. Cela inclut un accès à l'Internet public ou des connexions privées à l'aide d'une liaison directe IBM Cloud. Les connexions, autres que l'Internet public, aux autres fournisseurs de cloud, ne seront pas présentées.
 * Les machines virtuelles et les réseaux de l'environnement source à migrer ou a étendre doivent se trouver sur des groupes de ports au sein d'un commutateur distribué virtuel ou d'un commutateur distribué virtuel Cisco Nexus 1000v.
-* IBM Cloud doit contenir au moins une instance d'un déploiement VMware Cloud Foundation ou vCenter Server.
+* IBM Cloud doit contenir au moins une instance d'un déploiement VMware vCenter Server.
 * Les ressources doivent être suffisantes pour les dispositifs virtuels.
 * Les réseaux doivent autoriser les dispositifs à communiquer avec à la fois des dispositifs virtuels locaux et distants, et d'autres machines virtuelles.
 * L'annexe A (Port Access Requirements) répertorie les ports qui doivent être ouverts de manière à permettre l'installation de dispositifs virtuels Services cloud hybrides.

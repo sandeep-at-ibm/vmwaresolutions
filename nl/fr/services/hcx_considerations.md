@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-23"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -20,10 +20,10 @@ subcollection: vmwaresolutions
 
 Le service HCX on {{site.data.keyword.cloud}} étend en toute transparence les réseaux des centres de données locaux dans {{site.data.keyword.cloud_notm}}, ce qui vous permet de migrer les machines virtuelles (VM) vers et depuis {{site.data.keyword.cloud_notm}} sans aucune conversion ni modification.
 
-Ce service est disponible uniquement pour les instances VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle qui sont déployées dans la version 2.3 ou ultérieure.
+Ce service est disponible uniquement pour les instances VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle qui sont déployées dans la version 2.3 ou ultérieure. La version de HCX on {{site.data.keyword.cloud_notm}} qui est installée est 3.5.1.
 {:note}
 
-Vous pouvez mettre à niveau votre instance vCenter Server existante vers une instance vCenter Server with Hybridity Bundle. Pour plus d'informations concernant la mise à niveau de votre instance et le déploiement du service HCX on {{site.data.keyword.cloud_notm}}, voir [Procédure de mise à niveau vers l'instance vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates#procedure-to-upgrade-to-the-vcenter-server-with-hybridity-bundle-instance).
+Vous pouvez mettre à niveau votre instance vCenter Server existante vers une instance vCenter Server with Hybridity Bundle. Pour plus d'informations sur la mise à niveau de votre instance et sur le déploiement du service HCX on {{site.data.keyword.cloud_notm}}, voir [Procédure de mise à niveau à Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_upgrade-lic#vc_upgrade-lic-procedure-upgrade-to-hybridity).
 
 Une instance vCenter Server avec HCX on {{site.data.keyword.cloud_notm}} est limitée à trois connexions simultanées à partir des sites locaux.
 {:note}

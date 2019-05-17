@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-19"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -112,7 +112,7 @@ Os nós de transporte definem os objetos do servidor físico ou VMs que particip
 
 Tabela 5. Nós de transporte do NSX-T
 
-Tipo de nó de transporte | N-VDS |Perfil de uplink | Designação de IP |  NICs
+Tipo de nó de transporte | N-VDS | Perfil de uplink | Designação de IP | NICs
 --|:--------|:--------|:---
 **ESXi** | SDDC-Privado | SDDC-Privado-uplink | Conjunto de IPs | vmnic0, vmnic2
 **Cluster de borda** | SDDC-Sobreposição | SDDC-Sobreposição-uplink | Conjunto de IPs | N/A
@@ -178,8 +178,8 @@ Dentro desse design, um único cluster de borda virtual é provisionado para uso
 Figura 2. Exemplo de cluster de borda do NSX-T de escala de T0 a T1
 ![Exemplo de cluster de borda do NSX-T de escala de T0 a T1](vcsv4radiagrams-ra-nsx-t-edge-cluster-t0-to-t1-scale.svg)
 
-Figura 3. Gateway T0 de gerenciamento</br>
-![Gateway T0 de gerenciamento](vcsv4radiagrams-topology-0.svg)
+Figura 3. Gateway de gerenciamento T0</br>
+![Gateway de gerenciamento T0](vcsv4radiagrams-topology-0.svg)
 
 #### Gateway lógico da Camada 0
 {: #nsx-t-design-tier-0}
@@ -226,7 +226,7 @@ A Topologia 3 implementada contém a Topologia 1 com a inclusão de uma implemen
 
 Para obter um entendimento completo de como o ICP funciona no vCenter Server, consulte o ICP na documentação de arquitetura do vCenter Server. Um espaço de IP móvel privado e público do {{site.data.keyword.cloud_notm}} designado pelo cliente é designado a cada T0 para uso do cliente.
 
-Desde esse design, você terá a opção de não excluir esses intervalos de IP se a instância do vCenter Server for desatribuída e excluída.
+A partir desse design, você terá a opção de não excluir esses intervalos de IP se a instância do vCenter Server for desatribuída e excluída.
 
 ## Links relacionados
 {: #nsx-t-design-related}

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -48,7 +48,7 @@ A primeira etapa é incluir suas credenciais do my.vmware.com no vSAN Build Reco
 ### Configurar o VCSA para usar o proxy
 {: #vum-updating-vsan-config-vcsa-proxy}
 
-1.	Em seu navegador da web do servidor de salto, conecte-se ao VCSA Management Interface `https://<vCenter ip>: 5480 `
+1.	Em seu navegador da web do servidor de salto, conecte-se ao VCSA Management Interface `https://<vCenter ip>:5480`
 2.	Usando as credenciais do Console do IC4VS, efetue login no VCSA Management Interface como raiz.
 3.	No vCenter Server Appliance Management Interface, clique em **Rede** e clique em **Gerenciar**.
 4.	Para configurar um servidor proxy, na área de janela Configurações de proxy, clique em **Editar**.
@@ -57,12 +57,12 @@ A primeira etapa é incluir suas credenciais do my.vmware.com no vSAN Build Reco
 Há relatórios em que as informações de proxy estão configuradas somente para HTTP, mas não para HTTPS. Para configurar as informações de proxy também para o tráfego HTTPS, ele deve ser ativado primeiro. Depois de efetuar login no VCSA via SSH, use o comando proxy.get para visualizar a configuração e confirmar se os parâmetros de HTTPS não estão configurados.
 
 Se os parâmetros HTTPS não estiverem configurados, use o comando a seguir:
-   `proxy.set --protocol https --server ``<proxy ip>` `  -- port 3128 `
+    `proxy.set --protocol https --server ``<proxy ip>`` --port 3128`
 
 ### Configure o vSAN para usar o proxy
 {: #vum-updating-vsan-config-vsan-proxy}
 
-1. Navegue para **Página inicial** > **Hosts e clusters**, selecione o **Cluster vSAN** na área de janela de Navegação e, em seguida, selecione a **guia Configurar** e navegue para **vSAN** e, em seguida, **Geral**. Role para a seção **Conectividade de Internet** e clique em **Editar**.
+1. Navegue para **Página inicial** > **Hosts e clusters**, selecione o **Cluster vSAN** na área de janela de Navegação e, em seguida, selecione a guia **Configurar** e navegue para **vSAN** e, em seguida, **Geral**. Role para a seção **Conectividade de Internet** e clique em **Editar**.
 2. Insira o endereço IP e o número da porta do proxy, clique em **OK**.
 
 ### Ativar o Customer Experience Improvement Program (CEIP)
@@ -73,13 +73,13 @@ Esta é uma etapa opcional. Usando o vSphere Web Client, navegue para **Página 
 ### Concluir um upload de teste e validar se o upload funcionou
 {: #vum-updating-vsan-complete-upload}
 
-1. Usando o vSphere Web Client, navegue para **Página inicial** > **Hosts e clusters**. Selecione o cluster necessário e, em seguida, selecione a **guia Monitorar** e a página **vSAN**, em seguida, clique em **Funcionamento**. Clique em  ** Ativar funcionamento on-line **.
+1. Usando o vSphere Web Client, navegue para **Página inicial** > **Hosts e clusters**. Selecione o cluster necessário e, em seguida, selecione a guia **Monitorar** e a página **vSAN** e, em seguida, clique em **Funcionamento**. Clique em  ** Ativar funcionamento on-line **.
 2. Clique em **Retestagem** e aguarde até que o processo seja concluído.
 3. Uma nova verificação aparece em Funcionamento que é chamada de _Conectividade de funcionamento on-line_ e **Ativar funcionamento on-line** muda para **Retestagem com funcionamento on-line**.
 4. Clique em **Retestagem com funcionamento on-line** para iniciar o primeiro upload e aguarde a conclusão do processo, revisando o status na área de janela Tarefas recentes. O Nome do teste muda para o Funcionamento On-line (última verificação: apenas agora).
 5. Quando concluído, na janela Funcionamento, role para vSAN Build Recommendation e expanda-o e clique em **vSAN Build Recommendation Engine Health**.
 6. Clique em **Efetuar login em my.vmware.com** e insira suas credenciais. Quando o processo for concluído, o **Resultado do teste** mudará para um estado **Aprovado**.
-7. Pressione a **guia Update Manager** e o Cluster do vSAN será incluído nas Linhas de base.
+7. Clique na guia **Update Manager** e o cluster vSAN será incluído nas Linhas de base.
 
 ## Pré-requisitos
 {: #vum-updating-vsan-prereq}
@@ -90,9 +90,9 @@ Antes de iniciar o processo de upgrade do vSAN, assegure-se de que os requisitos
   - O VCSA deve estar em um nível de correção igual ou maior do que os hosts vSphere ESXi. Atualize o VCSA se necessário
   - Todos os hosts devem estar executando a mesma construção de ESXi. Se as versões do host vSphere ESXi não forem correspondidas, atualize
 * ** Todos os discos vSAN devem estar saudáveis **:
-  - Nenhum disco está com falha ou ausente. Isso pode ser determinado por meio da visualização **Gerenciamento de disco vSAN** no vSphere Web Client. **Página inicial** > **Hosts e clusters **, em seguida, selecione o **Cluster vSAN** e clique na **guia vSAN** e, em seguida, em **Discos físicos**. Role por todos os discos e revise o Status de funcionamento do vSAN.
-  - Nenhum objeto vSAN inacessível. Isso pode ser verificado com o **Serviço de funcionamento do vSAN** clicando em **Página inicial** > **Hosts e clusters** e, em seguida, selecione o **Cluster vSAN**. Clique em **guia Monitorar**, **vSAN** e, em seguida, clique em **Funcionamento**. Revise os Resultados do Teste.
-  - Nenhuma ressincronização ativa no início do processo de upgrade quando se clica em **Página inicial** > **Hosts e clusters**, em seguida, seleciona-se o **Cluster do vSAN** e se clica na **guia vSAN** e, em seguida, em **Ressincronizar componentes**. _A contagem de componentes de Ressincronização deve ser 0_. Uma atividade de ressincronização é esperada durante o processo de upgrade, uma vez que os dados precisam ser sincronizados após a reinicialização do host.
+  - Nenhum disco está com falha ou ausente. Isso pode ser determinado por meio da visualização **Gerenciamento de disco vSAN** no vSphere Web Client. **Página inicial** > **Hosts e clusters**, em seguida, selecione o **Cluster vSAN** e clique na guia **vSAN** e, em seguida, **Discos físicos**. Role por todos os discos e revise o Status de funcionamento do vSAN.
+  - Nenhum objeto vSAN inacessível. Isso pode ser verificado com o **Serviço de funcionamento do vSAN** clicando em **Página inicial** > **Hosts e clusters** e, em seguida, selecione o **Cluster vSAN**. Clique na guia **Monitorar**, **vSAN** e, em seguida, clique em **Funcionamento**. Revise os Resultados do Teste.
+  - Nenhuma ressincronização ativa no início do processo de upgrade, clicando em **Página inicial** > **Hosts e clusters**, em seguida, selecione o **Cluster vSAN** e clique na guia **vSAN** e, em seguida, clique em **Ressincronizar componentes**. _A contagem de componentes de Ressincronização deve ser 0_. Uma atividade de ressincronização é esperada durante o processo de upgrade, uma vez que os dados precisam ser sincronizados após a reinicialização do host.
 * **Preparação do host vSphere ESXi** - ao mover um host para o modo de manutenção em um cluster vSAN, você tem três opções para escolher:
   - **Sem migração de dados** - se você selecionar essa opção, o vSAN não evacuará nenhum dado desse host. Se você desligar ou remover o host do cluster, algumas máquinas virtuais (MVs) poderão ficar inacessíveis.
   - **Assegurar disponibilidade** - Se você selecionar essa opção, o vSAN permitirá mover o host para o modo de manutenção mais rápido do que a migração de dados completa e permitirá acesso às MVs no ambiente.
@@ -152,5 +152,5 @@ Muitas tarefas administrativas básicas podem ser feitas muito mais eficientemen
 ## Links relacionados
 {: #vum-updating-vsan-related}
 
-* [Arquitetura de solução do VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [Soluções do VMware no IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrações)
+* [Arquitetura da solução VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
+* [Soluções do VMware no IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (demonstrações)

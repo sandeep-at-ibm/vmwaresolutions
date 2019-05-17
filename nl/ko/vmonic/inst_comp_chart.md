@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-12"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -28,7 +28,7 @@ VMware vCenter Server 인스턴스, VMware vCenter Server with Hybridity Bundle 
 |ESXi 서버 추가 |지원됨 |지원됨 |지원됨. 자동화된 구성이 포함되지 않음 |
 |ESXi 서버 제거 |지원됨 |지원됨 |지원됨. 자동화된 구성이 포함되지 않음 |
 |다중 클러스터 지원 | 최대 수는 VMware 크기 조정 가이드라인에 따라 다름 | 최대 수는 VMware 크기 조정 가이드라인에 따라 다름 |지원됨. 자동화된 구성이 포함되지 않음 |
-|VMware 스택의 클라이언트 관리 업데이트 및 패치 |클라이언트 관리 업데이트:<br/>원시 VMware 도구(VMware 업데이트 관리자) |클라이언트 관리 업데이트:<br/>원시 VMware 도구(VMware 업데이트 관리자) |클라이언트 관리 업데이트:<br/>원시 VMware 도구(VMware 업데이트 관리자) |
+|VMware 스택의 클라이언트 관리 업데이트 및 패치 | 클라이언트 관리 업데이트:<br/>원시 VMware 도구(VMware Update Manager) | 클라이언트 관리 업데이트:<br/>원시 VMware 도구(VMware Update Manager) | 클라이언트 관리 업데이트:<br/>원시 VMware 도구(VMware Update Manager) |
 |백업 및 복원 |수동으로 IBM Spectrum Protect Plus 또는 Veeam 사용 |수동으로 IBM Spectrum Protect Plus 또는 Veeam 사용 | 백업 및 복원 솔루션이 포함되지 않음 |
 |소프트웨어 정의 네트워킹 |NSX Base, Advanced 또는 Enterprise |NSX Advanced 또는 Enterprise |NSX Standard, Base 또는 Enterprise. 자동화된 구성이 포함되지 않음 |
 |vSphere 및 vSAN용 BYOL |클러스터당 전체 지원됨 |지원되지 않음 |지원됨 |

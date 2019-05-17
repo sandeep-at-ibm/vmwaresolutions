@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-10-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -135,7 +135,7 @@ subcollection: vmwaresolutions
 ### VMware HCX on IBM Cloud
 {: #relnotes_v26-hcx}
 
-当前发行版在所有新部署的实例上安装 VMware HCX 3.5.1。有关 HCX 3.5.1 中新增功能的更多信息，请参阅 [VMware NSX Hybrid Connect 文档](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/index.html)。
+当前发行版在所有新部署的实例上安装 VMware HCX 3.5.1。有关 HCX 3.5.1 中新增功能的更多信息，请参阅 [VMware HCX 文档](https://docs.vmware.com/en/VMware-HCX/index.html)。
 
 ### vSphere ESXi V6.5 update 2c 的 Zerto on IBM Cloud 支持
 {: #relnotes_v26-zerto}

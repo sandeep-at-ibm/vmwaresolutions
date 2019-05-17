@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-13"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -38,7 +38,7 @@ Actor  |  Descripción
 Administrador del sistema |Los administradores del sistema son los recursos de VMware de empresa que utilizan vCenter y el plugin HCX. Identifican los candidatos a la migración, amplían las redes, migran las VM y gestionan NSX-V. Utilizan la consola de {{site.data.keyword.cloud_notm}} para suministrar instancias de VMware vCenter Server en instancias de {{site.data.keyword.cloud_notm}} y para escalar la capacidad.
 Desarrollador	| Los desarrolladores son los recursos expertos en contenedores de la empresa que utilizan las consolas de {{site.data.keyword.containerlong_notm}}, {{site.data.keyword.icpfull_notm}} y CAM y las API para crear y gestionar contenedores. Crean los nuevos servicios como parte de la modernización de la aplicación.
 Usuario de empresa | Este recurso de empresa requiere acceso de red a las aplicaciones para llevar a cabo procesos de empresa, como por ejemplo la actualización de contenido.
-Cliente | El cliente es un actor externo que quiere consumir servicios de la empresa. Para Acme Skateboards, es un skater que quiere comprar productos de skating. El cliente requiere acceso seguro a internet para acceder al catálogo.
+Cliente | El cliente es un actor externo que quiere consumir servicios de la empresa. Para Acme Skateboards, es un skater que quiere comprar productos de skating. El cliente requiere acceso seguro a Internet para acceder al catálogo.
 {{site.data.keyword.containerlong_notm}} | Se trata de un recurso de IBM que gestiona el nodo maestro {{site.data.keyword.containerlong_notm}} del servicio.
 
 ## Sistemas

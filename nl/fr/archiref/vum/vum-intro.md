@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -59,7 +59,7 @@ Si vous avez déployé une instance vCenter Server à l'aide de vSAN, consultez 
 
 Si vous souhaitez mettre à jour l'automatisation de gestion de l'infrastructure {{site.data.keyword.cloud_notm}}, utilisez la console {{site.data.keyword.vmwaresolutions_short}}
 
-La [console {{site.data.keyword.vmwaresolutions_short}} ](https://console.cloud.ibm.com/infrastructure/vmware-solutions/console) vous permet d'effectuer les actions suivantes :
+La [console {{site.data.keyword.vmwaresolutions_short}}](https://cloud.ibm.com/infrastructure/vmware-solutions/console) vous permet d'effectuer les actions suivantes :
 *	Mettre à niveau les licences, par exemple, mettre à niveau NSX Base à une autre version
 *	Lancer des mises à jour sur la plateforme vCenter Server, par exemple passer à la version 2.5
 *	Afficher le statut des mises à jour
@@ -71,4 +71,4 @@ Cette fonction permet la mise à jour automatique des composants de gestion des 
 {: #vum-intro-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (démonstrations)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (démonstrations)

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -25,11 +25,7 @@ subcollection: vmwaresolutions
 {: #faq_esxi-instance}
 {: faq}
 
-* 對於 vCenter Server 實例，您可以將預設叢集擴充為具有多達 51 部 ESXi 伺服器。每一個非預設叢集可以擴充為具有多達 59 部 ESXi 伺服器。由於您最多可以將 10 個叢集新增至實例中，因此每一個已部署的實例在所有叢集裡最多可以有 51 + 9x59 = 582 部 ESXi 伺服器。
-* 若為 Cloud Foundation 實例，標準配置有四部 ESXi 伺服器。您最多可以新增 28 部伺服器（總共最多 32 部伺服器）。對於多站台配置中的 Cloud Foundation 實例，在所有實例中最多可以有 128 部 ESXi 伺服器。
-
-  如果 Cloud Foundation 配置需要超過 128 部 ESXi 伺服器的多站台部署，[請與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)以取得協助。
-  {:note}
+您的 vCenter Server 實例容許您將預設叢集擴充為具有多達 51 部 ESXi 伺服器。每一個非預設叢集可以擴充為具有多達 59 部 ESXi 伺服器。由於您最多可以將 10 個叢集新增至實例中，因此每一個已部署的實例在所有叢集裡最多可以有 51 + 9x59 = 582 部 ESXi 伺服器。
 
 ## 我可以新增多少部 ESXi 伺服器至叢集？
 {: #faq_esxi-cluster}
@@ -81,5 +77,5 @@ subcollection: vmwaresolutions
 {: #faq_esxi-related}
 
 * [擴充及縮減 vCenter Server 實例的容量](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
-* [新增、檢視及刪除 vCenter Server 實例的叢集](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [新增、檢視及刪除 vCenter Server 實例的叢集](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_hybrid_addingviewingclusters#vc_hybrid_addingviewingclusters)
 * [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

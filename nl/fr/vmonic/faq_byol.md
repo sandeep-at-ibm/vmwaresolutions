@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -25,7 +25,7 @@ Trouvez des réponses aux questions concernant l'octroi de licence, y compris la
 {: #faq_byol-def}
 {: faq}
 
-Bring Your Own License, ou BYOL, est une fonction disponible pour les instances VMware Cloud Foundation en V1.8 et dans des éditions ultérieures et pour les clusters VMware vCenter Server et vSphere en V2.0 et dans des éditions ultérieures. La fonction BYOL vous permet d'utiliser vos propres licences VMware pour un ou plusieurs des composants logiciels VMware suivants :
+Bring Your Own License (BYOL) est une fonction disponible dans les clusters VMware vCenter Server et VMware vSphere dans la version 2.0 et dans des éditions ultérieures. La fonction BYOL vous permet d'utiliser vos propres licences VMware pour un ou plusieurs des composants logiciels VMware suivants :
 * VMware vCenter Server
 * VMware vSphere
 * VMware NSX
@@ -62,18 +62,6 @@ Tableau 1. Exigences pour les éditions de licence et le minimum d'UC pour les i
   | vSAN           | Advanced ou Enterprise | 8 UC |
   | NSX            | Standard, Advanced ou Enterprise | 8 UC |
 
-### Exigences de BYOL pour les instances Cloud Foundation
-{: #faq_byol-cf-reqs}
-
-Tableau 2. Exigences pour les éditions de licence et le minimum d'UC pour les instances Cloud Foundation
-
-  | Composant VMware | Edition de licence requise | Nombre minimum d'UC requis
-  |:-------------  |:-------------  |:-------|
-  | vCenter Server | Standard | Non applicable |
-  | vSphere        | Entreprise Plus | 8 UC |
-  | vSAN           | Advanced ou Enterprise | 8 UC |
-  | NSX            | Enterprise | 8 UC |
-
 ## Que se passe-t-il si la clé de licence fournie est incorrecte ?
 {: #faq_byol-incorrect-license}
 {: faq}
@@ -84,13 +72,7 @@ Toutes les clés de licence que vous fournissez sont validées afin de garantir 
 {: #faq_byol-license-key}
 {: faq}
 
-Oui. Pour chaque composant VMware, une licence par UC est requise. Actuellement, tous les serveurs vCenter Server et Cloud Foundation disposent de deux UC. Par conséquent, deux licences sont requises pour chaque serveur. Il est recommandé de fournir une clé de licence à même de prendre en charge l'instance de base ainsi que tous les noeuds d'extension que vous pourriez vouloir ajouter ultérieurement à l'instance.
-
-## Puis-je fournir la licence du gestionnaire SDDC lorsque j'utilise la fonction BYOL ?
-{: #faq_byol-sddc}
-{: faq}
-
-Non. Notre accord avec VMware implique que vous devez accepter la clé de licence actuelle du client. Même si le déploiement de Cloud Foundation inclut des licences pour le gestionnaire SDDC, nous ne pouvons accepter et valider aucun fichier de clé de licence de gestionnaire SDDC pour BYOL. Par conséquent, les licences du gestionnaire SDDC sont facturées par IBM pour toutes les instances. Les licences du gestionnaire SDDC constituent une faible portion des frais de licence globaux pour une instance Cloud Foundation.
+Oui. Pour chaque composant VMware, une licence par UC est requise. Actuellement, tous les serveurs vCenter Server disposent de deux UC. Par conséquent, deux licences sont requises pour chaque serveur. Il est recommandé de fournir une clé de licence à même de prendre en charge l'instance de base ainsi que tous les noeuds d'extension que vous pourriez vouloir ajouter ultérieurement à l'instance.
 
 ## Puis-je utiliser la fonction BYOL pour certains composants VMware et acheter des licences mensuelles pour d'autres ?
 {: #faq_byol-mthly-license}

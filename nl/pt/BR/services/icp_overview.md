@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-04-26"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,11 +18,13 @@ subcollection: vmwaresolutions
 # Visão geral do IBM Cloud Private Hosted
 {: #icp_overview}
 
-O serviço {{site.data.keyword.cloud}} Private Hosted implementa automaticamente o {{site.data.keyword.cloud_notm}} Private Hosted em suas instâncias do VMware vCenter Server. Esse serviço traz o poder de microsserviços e contêineres para seu ambiente VMware no {{site.data.keyword.cloud_notm}}. Com esse serviço, é possível ampliar o mesmo VMware familiar, o modelo operacional e as ferramentas do {{site.data.keyword.cloud_notm}} Private, do local para o {{site.data.keyword.cloud_notm}}.
+O serviço {{site.data.keyword.cloud}} Private Hosted implementa automaticamente o {{site.data.keyword.cloud_notm}} Private Hosted e o {{site.data.keyword.cloud_notm}} Automation Manager em suas instâncias do VMware vCenter Server. Esse serviço traz o poder de microsserviços e contêineres para seu ambiente VMware no {{site.data.keyword.cloud_notm}}. Com esse serviço, é possível ampliar o mesmo VMware familiar, o modelo operacional e as ferramentas do {{site.data.keyword.cloud_notm}} Private, do local para o {{site.data.keyword.cloud_notm}}.
 
 Esse serviço está disponível para as instâncias a seguir:
-* Instâncias do vCenter Server que são implementadas ou submetidas a upgrade para a V2.5 e mais recente
-* Instâncias do vCenter Server with Hybridity Bundle implementadas ou submetidas a upgrade para a V2.7 e mais recente
+* Instâncias do vCenter Server with Hybridity Bundle que são implementadas em (ou submetidas a upgrade para) V2.7 e mais recente
+* Instâncias do vCenter Server que são implementadas em (ou submetidas a upgrade para) V2.5 e mais recente
+
+Para instâncias que são implementadas em (ou submetidas a upgrade para) V3.0 ou mais recente, o {{site.data.keyword.cloud_notm}} Automation Manager também é implementado como parte da ordem de serviço do {{site.data.keyword.cloud}} Private Hosted.
 {:note}
 
 ## Especificações técnicas para o IBM Cloud Private Hosted
@@ -53,7 +55,6 @@ Tabela 2. Requisitos de recursos do {{site.data.keyword.cloud_notm}} Private Hos
 | Trabalhador     | 4 | 16 | 200 | 300 | 6 |
 | Consultor de Vulnerabilidade | 8 | 16 | 500 | 1 | 1 |
 | GlusterFS  | 8 | 16 | 150 | 50 | 3 |
-| Bootstrap  {{site.data.keyword.icpfull_notm}} /CAM | 24 | 44 | 250 | 1 | 1 |
 | servidor NFS | 8 | 4  | 350 | 1 | 1 |
 | Gateway de Serviços de Edge NSX | 2 | 1 | 0,5 | 0,5 | 2 |
 | Restrições documentadas | 52 | 640 |  | 8.000 |   |
@@ -69,7 +70,6 @@ Tabela 3. Requisitos de recursos do {{site.data.keyword.cloud_notm}} Private Hos
 | Trabalhador     | 4 | 16 | 200 | 300 | 3 |
 | Consultor de Vulnerabilidade | 8 | 16 | 150 | 1 | 1 |
 | GlusterFS  | 8 | 16 | 150 | 50 | 3 |
-| Bootstrap  {{site.data.keyword.icpfull_notm}} /CAM | 24 | 44 | 250 | 1 | 1 |
 | servidor NFS | 8 | 4  | 350 | 1 | 1 |
 | Gateway de Serviços de Edge NSX | 2 | 1 | 0,5 | 0,5 | 2 |
 | Restrições documentadas | 30 | 200 |  | 4.000 |  |
@@ -88,13 +88,13 @@ Tabela 4. Descrição de variáveis na Fórmula 1
 
 | Variáveis	| Descrição |	Unidade |	Exemplo de vSAN | Exemplo de NFS |
 |:--------- |:----------- |:---- |:------------- |:----------- |
-| AvailableCores |	O número de núcleos reais disponíveis para cargas de trabalho e serviços no ambiente |	Núcleos |	38	| 43 |
-| HostCount	| O número de hosts no cluster padrão	| Hosts | 4	| 4 |
-| HostCoreCount	| O número de núcleos brutos disponíveis em cada host no cluster padrão |	Núcleos |	16 | 16 |
-| HostOverheadCores	| O número de núcleos que são reservados pelo servidor ESXi como sobrecarga, que é igual a 0,1 núcleos	| Núcleos	| 0,1 |	0,1 |
-| MgmtOverheadCores | O número de núcleos reservados pelos componentes de gerenciamento do vCenter Server (vCenter Server, PSC, AD/DNS, Edges), que é igual a cinco núcleos	| Núcleos	| 5	| 5 |
-| vSphereHAHostTolerance |	O número de hosts a serem tolerados na configuração do vSphere HA, que é igual a um host |	Hosts	 | 1 | 1 |
-| HostVsanOverheadCorePercentage | A porcentagem de núcleos de um host usada pelo vSAN, que será igual a 10% ou igual a 0% se o host não for vSAN | % | 10% |	0% |
+| AvailableCores | O número de núcleos reais disponíveis para cargas de trabalho e serviços no ambiente | Núcleos | 38 | 43 |
+| HostCount | O número de hosts no cluster padrão | Hosts | 4 | 4 |
+| HostCoreCount | O número de núcleos brutos disponíveis em cada host no cluster padrão | Núcleos | 16 | 16 |
+| HostOverheadCores | O número de núcleos que são reservados pelo servidor ESXi como sobrecarga, que é igual a 0,1 núcleos | Núcleos | 0,1 | 0,1 |
+| MgmtOverheadCores | O número de núcleos reservados pelos componentes de gerenciamento do vCenter Server (vCenter Server, PSC, AD/DNS, Edges), que é igual a cinco núcleos | Núcleos | 5 | 5 |
+| vSphereHAHostTolerance | O número de hosts a serem tolerados na configuração do vSphere HA, que é igual a um host |	Hosts	 | 1 | 1 |
+| HostVsanOverheadCorePercentage | A porcentagem de núcleos de um host usada pelo vSAN, que será igual a 10% ou igual a 0% se o host não for vSAN | % | 10% | 0% |
 
 #### Fórmula 2
 {: #icp_overview-formulas-2}
@@ -118,19 +118,22 @@ Tabela 5. Descrição de variáveis na Fórmula 2
 ## Considerações ao instalar o IBM Cloud Private Hosted
 {: #icp_overview-install}
 
-* Reúna a licença necessária antes de instalar o serviço {{site.data.keyword.cloud_notm}} Private Hosted. É recomendado assegurar que sua licença possa suportar não somente a implementação inicial do {{site.data.keyword.cloud_notm}} Private Hosted, mas também a futura expansão do tamanho do {{site.data.keyword.cloud_notm}} Private Hosted em sua infraestrutura.
-* Para as implementações do {{site.data.keyword.cloud_notm}} Private Hosted no ambiente Pronto para produção, 64 GB de RAM por host não é suportado. Portanto, deve-se selecionar uma opção que seja maior que 64 GB para **RAM**.
+* Reúna as licenças necessárias antes de instalar o serviço {{site.data.keyword.cloud_notm}} Private Hosted. Isso inclui as licenças do {{site.data.keyword.cloud_notm}} Private e do {{site.data.keyword.cloud_notm}} Automation Manager. Assegure-se de que suas licenças suportem não somente a implementação de serviço inicial, mas também a expansão de tamanho futuro em sua infraestrutura.
+* Para implementações do {{site.data.keyword.cloud_notm}} Private Hosted em ambientes Prontos para produção, 64 GB de RAM por host não é suportado. Portanto, deve-se selecionar uma opção que seja maior que 64 GB para **RAM**.
 * Antes que o serviço {{site.data.keyword.cloud_notm}} Private Hosted seja instalado em seu ambiente, é executada uma verificação com relação à capacidade disponível do cluster padrão no ambiente para assegurar que os componentes de serviço possam se ajustar. Se a verificação de capacidade falhar, o serviço não será instalado e o estado de serviço será configurado como **Falha na validação de capacidade** no console. Além disso, uma mensagem do console com mais detalhes será exibida e você será notificado por e-mail. Para instalar o serviço, deve-se aumentar a capacidade no cluster padrão, incluindo mais hosts ou liberando RAM, CPU ou espaço em disco e, em seguida, incluir o serviço novamente no console. Depois disso, é possível remover o serviço existente no estado **Falha na validação de capacidade** clicando no ícone **Excluir** próximo a ele.
+* Se desejar implementar nós adicionais, use o modelo do {{site.data.keyword.cloud_notm}} Private Ubuntu (Ubuntu1604) que é implementado com sua instalação inicial do {{site.data.keyword.cloud_notm}} Private Hosted. Para localizar o modelo, no VMware vSphere Web Client, acesse a guia **VMs e modelos**, sob a pasta `cam`. A senha padrão para o modelo Ubuntu é `icponcloud` e é recomendável que você a mude antes de usar o modelo.
 
 ## Considerações ao remover o IBM Cloud Private Hosted
 {: #icp_overview-remove}
 
-* O {{site.data.keyword.cloud_notm}} exclui somente as máquinas virtuais (MVs) que foram implementadas durante a instalação inicial do serviço {{site.data.keyword.cloud_notm}} Private Hosted. Qualquer nó que for implementado pós-instalação não será limpo.
-* O {{site.data.keyword.cloud_notm}} excluirá o VXLAN, o DLR e o gateway de borda que foi criado durante a implementação inicial do serviço {{site.data.keyword.cloud_notm}} Private Hosted. As MVs que você implementou na VXLAN perderão a conectividade depois que a remoção do serviço {{site.data.keyword.cloud_notm}} Private Hosted for iniciada.
+* Somente as máquinas virtuais (VMs) que foram implementadas durante a instalação inicial do serviço {{site.data.keyword.cloud_notm}} Private Hosted são excluídas. Qualquer nó que for implementado após a instalação não será limpo.
+* O{{site.data.keyword.cloud_notm}} excluirá o VXLAN, o DLR e o Edge Gateway que foi criado durante a implementação inicial do {{site.data.keyword.cloud_notm}} Private Hosted. As MVs que você implementou na VXLAN perderão a conectividade depois que a remoção do serviço {{site.data.keyword.cloud_notm}} Private Hosted for iniciada.
 
 ## Links relacionados
 {: #icp_overview-related}
 
-* [Pedindo o IBM Cloud Privado Hospedado](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_ordering)
-* [Guia do vCenter Server e do IBM Cloud Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [Abra um chamado para o IBM Cloud Private](https://www.ibm.com/mysupport/s/?language=en_US)
+* [ Ordenando  {{site.data.keyword.cloud_notm}}  Privado Hospedado ](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_ordering)
+* [Guia do vCenter Server e do {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
+* [Abrir um chamado para o {{site.data.keyword.cloud_notm}} Private](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
+* [Licenciamento do {{site.data.keyword.cloud_notm}} Automation Manager](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/licensing.html){:new_window}
+* [Componentes do {{site.data.keyword.cloud_notm}} Automation Manager](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/cam_managed_components.html){:new_window}

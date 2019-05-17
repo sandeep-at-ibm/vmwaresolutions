@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -64,7 +64,8 @@ Tabla 2. Información predeterminada utilizada en la configuración de la aplica
 |---|---|
 |Entorno |El nombre de entorno se establece en "Inicial"|
 |Entorno | La puntuación se establece en 5|
-|Repositorio de activos |Se configuran dos repositorios de activos; vCenter y NSX Manager. El URL de host se establece en https://*vCenter fqdn* y https://*NSX Manager fqdn*|
+|Repositorio de activos | Se configuran dos repositorios de activos; vCenter y NSX Manager. URL de host establecido en
+`https://vCenter_fqdn` y `https://*NSX Manager_fqdn` |
 |Repositorio de activos |Se configuran dos repositorios de activos; vCenter y NSX Manager, ambos utilizan el mismo nombre de usuario. El nombre de usuario se establece en el nombre de usuario administrador de vCenter|
 |Repositorio de activos |Se configuran dos Repositorios de activos; vCenter y NSX Manager, ambos utilizan la misma contraseña. La contraseña se establece en la contraseña del administrador de vCenter
 |Repositorio de activos |Se configuran dos Repositorios de activos; vCenter y NSX Manager, ambos utilizan la misma contraseña. El tipo se establece en vCenter para un repositorio y NSX para el otro

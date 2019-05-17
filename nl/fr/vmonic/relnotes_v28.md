@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-02-08"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -21,7 +21,7 @@ Cette édition inclut de nouvelles fonctionnalités, des mises à jour de compos
 
 La version d'essai à noeud unique pour la migration et la modernisation des applications permet de tester rapidement comment utiliser {{site.data.keyword.cloud_notm}} pour migrer les charges de travail VMware dans {{site.data.keyword.cloud_notm}}, puis moderniser ces charges de travail à l'aide de conteneurs. Il s'agit d'une version d'essai de {{site.data.keyword.icpfull_notm}} Hosted sur VMware vCenter Server on {{site.data.keyword.cloud_notm}} qui fournit la plateforme de gestion Kubernetes pour les conteneurs et la plateforme VMware à service exclusif qui peut être gérée à l'aide des mêmes outils connus que dans les environnements locaux.
 
-Pour plus d'informations, voir [Présentation de la version d'essai à noeud unique pour la migration et la modernisation des applications](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-single-node-trial-for-migration-and-app-modernization-overview).
+Pour plus d'informations, voir [Présentation de la version d'essai à noeud unique pour la migration et la modernisation des applications](/docs/services/vmwaresolutions?topic=vmware-solutions-cloud_modern_bundle_overview#cloud_modern_bundle_overview).
 
 ## Ajout et suppression de stockage de système NFS
 {: #relnotes_v28-nfs}

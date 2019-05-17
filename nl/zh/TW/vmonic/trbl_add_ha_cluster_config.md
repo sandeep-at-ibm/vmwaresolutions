@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -26,4 +26,4 @@ subcollection: vmwaresolutions
 
 如果共用儲存空間沒有備援空間可以供資料儲存庫活動訊號使用，則會發生此問題。
 
-如需相關資訊以及如何解決此問題的步驟，請參閱 [HA 錯誤：主機的活動訊號資料儲存庫數目為 1，這小於必要值：2 (2004739)](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2004739)。
+如需相關資訊以及如何解決此問題的步驟，請參閱 [HA 錯誤：主機的活動訊號資料儲存庫數目為 1，這小於必要值：2 (2004739)](https://kb.vmware.com/s/article/2004739)。

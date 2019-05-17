@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -39,7 +39,7 @@ Vous pouvez commander des instances Cloud Foundation ou vCenter Server avec le s
 Vous pouvez également commander une instance HCX locale pour l'octroi de licence et l'activation de votre installation HCX locale.
 
 Pour plus d'informations, voir les rubriques suivantes :
-* [Remarques relatives au service HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview)
+* [Remarques relatives au service HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations)
 * [Gestion de HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghcx)
 * [Remarques relatives aux instances HCX locales](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_considerations)
 * [Commande d'instances HCX locales](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_orderingserviceinstances)
@@ -53,7 +53,7 @@ De plus, lorsque vous ajoutez des noeuds à un cluster sous licence avec votre c
 
 Pour plus d'informations, voir les rubriques suivantes :
 
-* [Ajout et affichage de clusters pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [Ajout, affichage et suppression de clusters pour des instances vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 * [Foire aux questions sur le mode BYOL](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_byol)
 
 ## Mises à jour du composant de service Zerto on IBM Cloud
@@ -69,7 +69,7 @@ Pour plus d'informations, voir [Présentation de Zerto on {{site.data.keyword.cl
 ### Paramètres de configuration de MTU réseau
 {: #relnotes_v21-mtu}
 
-A partir de la version 2.1, de nouvelles instances vCenter Server sont commandées avec la valeur MTU 1500 définie par défaut pour le paramètre Distributed Virtual Switch (DVS) public. Pour plus d'informations, voir la section _Paramètres de configuration de MTU réseau_ dans la rubrique [Nomenclature vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
+A partir de la version 2.1, de nouvelles instances vCenter Server sont commandées avec la valeur MTU 1500 définie par défaut pour le paramètre Distributed Virtual Switch (DVS) public. Pour plus d'informations, voir la section _Paramètres de configuration de MTU réseau_ dans la rubrique [Nomenclature de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
 
 ### Réplication automatique des mises à jour et modules de correction VMware ESXi sur les hôtes
 {: #relnotes_v21-esxi-patches}
@@ -91,7 +91,7 @@ Pour plus d'informations, voir [Présentation de vCenter Server](/docs/services/
 ### Augmentation du nombre maximum de 32 serveurs par cluster
 {: #relnotes_v21-max-clusters}
 
-Vous pouvez déployer ou augmenter le nombre de serveurs du cluster par défaut d'une instance jusqu'à 51 serveurs. Pour tous les clusters suivants d'une instance, vous pouvez déployer ou augmenter jusqu'à 59 serveurs. Pour plus d'informations, voir [Ajout et affichage de clusters pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances).
+Vous pouvez déployer ou augmenter le nombre de serveurs du cluster par défaut d'une instance jusqu'à 51 serveurs. Pour tous les clusters suivants d'une instance, vous pouvez déployer ou augmenter jusqu'à 59 serveurs. Pour plus d'informations, voir [Ajout, affichage et suppression de clusters pour des instances vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters).
 
 Cette fonction est disponible uniquement sur les instances qui sont déployées en version 2.1 ou dans des versions ultérieures. Les instances mises à niveau vers la version 2.1 depuis des éditions antérieures ne disposent pas de cette option.
 {:note}
@@ -113,7 +113,7 @@ Vous pouvez désormais configurer des partages de fichiers NFS individuellement.
 Pour plus d'informations, voir les rubriques suivantes :
 * [Présentation de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
 * [Commande d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [Ajout et affichage de clusters pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [Ajout, affichage et suppression de clusters pour des instances vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 
 ## Améliorations et mises à jour apportées à l'interface utilisateur
 {: #relnotes_v21-ui}

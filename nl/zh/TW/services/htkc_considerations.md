@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -20,7 +20,7 @@ subcollection: vmwaresolutions
 
 HyTrust KeyControl on {{site.data.keyword.cloud}} 服務簡化加密工作負載的管理。此服務會自動化及簡化加密金鑰的生命週期，包括金鑰儲存空間、金鑰配送、金鑰輪替及金鑰撤銷。使用符合 FIPS 140-2 標準的加密，企業可以輕鬆地大規模管理加密金鑰。
 
-只有執行 vSphere 6.5 以及部署在（或升級至）2.5 版和更新版本的實例，才能使用此服務。目前安裝的 HyTrust KeyControl 版本為 4.2。
+只有執行 vSphere 6.5 以及部署在（或升級至）2.5 版和更新版本的實例，才能使用此服務。目前安裝的 HyTrust KeyControl 版本是 4.3。
 {:note}
 
 ## HyTrust KeyControl on IBM Cloud 的技術規格

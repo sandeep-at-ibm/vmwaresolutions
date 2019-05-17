@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-04-18"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -20,17 +20,12 @@ subcollection: vmwaresolutions
 
 É possível expandir ou contrair a capacidade de sua instância do VMware vCenter Server de acordo com suas necessidades de negócios, incluindo ou removendo servidores ESXi ou armazenamento network file system (NFS).
 
-Iniciando com a liberação V2.9, é possível incluir novos servidores ESXi em um cluster enquanto os servidores estão no modo de manutenção. Além disso, é possível incluir ou remover simultaneamente servidores do ESXi em múltiplos clusters. As operações simultâneas a seguir estão disponíveis:
+* Iniciando com a liberação da V3.0, é possível incluir ou remover simultaneamente o armazenamento NFS em múltiplos clusters.
+* Iniciando com a liberação V2.9, é possível incluir novos servidores ESXi em um cluster enquanto os servidores estão no modo de manutenção. Além disso, é possível incluir ou remover simultaneamente servidores do ESXi em múltiplos clusters.
 
-* Incluir hosts em um cluster e incluir hosts em clusters adicionais.
-* Remover hosts de um cluster e remover hosts de clusters adicionais.
-* Incluir hosts em um cluster e remover hosts de clusters adicionais.
-* Remover hosts de um cluster e incluir hosts em clusters adicionais.
-
-É possível incluir ou remover compartilhamentos de armazenamento NFS para ou de um cluster do NFS ou do vSAN vCenter Server existente.
-{:note}
-
-Se seu cluster inicial tiver vSAN como seu armazenamento, incluir um ou mais servidores ESXi após a implementação poderá aumentar a capacidade de armazenamento do cluster.
+**Notas**:
+* Se seu cluster inicial tiver vSAN como seu armazenamento, incluir um ou mais servidores ESXi após a implementação poderá aumentar a capacidade de armazenamento do cluster.
+* É possível incluir ou remover compartilhamentos de armazenamento NFS para ou de um cluster do NFS ou do vSAN vCenter Server existente.
 
 ## Incluindo servidores ESXi em instâncias do vCenter Server
 {: #vc_addingremovingservers-adding}
@@ -38,7 +33,7 @@ Se seu cluster inicial tiver vSAN como seu armazenamento, incluir um ou mais ser
 ### Antes de Incluir Servidores ESXi
 {: #vc_addingremovingservers-adding-prereq}
 
-* Não inclua servidores ESXi do Web client do VMware vSphere. As mudanças feitas no vSphere Web Client não são sincronizadas com o console do {{site.data.keyword.vmwaresolutions_full}}.
+* Sempre que possível, inclua servidores ESXi usando o console do {{site.data.keyword.vmwaresolutions_full}}, pois as mudanças feitas no VMware vSphere Web Client não são sincronizadas com o console do {{site.data.keyword.vmwaresolutions_short}}. Portanto, inclua servidores ESXi no vCenter Server somente para servidores ESXi no local ou servidores ESXi que você não possa ou não gerenciará no console do {{site.data.keyword.vmwaresolutions_short}}.
 * Uma instância do vCenter Server com armazenamento NFS deve ter pelo menos 2 servidores ESXi. Para instâncias que são implementadas na V2.1 ou mais recente, é possível expandir o cluster padrão para ter até 51 servidores ESXi. Cada um dos clusters não padrão pode ser expandido para ter até 59 servidores ESXi.
 * Uma instância do vCenter Server com armazenamento vSAN deve ter pelo menos 4 servidores ESXi.
 * Para instâncias do vCenter Server que foram implementadas na V2.0 ou anterior, é possível expandir cada cluster para ter até 32 servidores ESXi.
@@ -75,7 +70,7 @@ Se você estiver incluindo servidores ESXi durante o modo de manutenção, as m�
 ### Antes de remover servidores ESXi
 {: #vc_addingremovingservers-removing-prereq}
 
-* Não remova servidores ESXi do Web client do VMware vSphere. As mudanças feitas no vSphere Web Client não são sincronizadas com o console do {{site.data.keyword.vmwaresolutions_short}}.
+* Sempre que possível, remova os servidores ESXi usando o console do {{site.data.keyword.vmwaresolutions_full}}, pois as mudanças feitas no vSphere Web Client não são sincronizadas com o console do {{site.data.keyword.vmwaresolutions_short}}. Portanto, remova os servidores ESXi do vCenter Server somente para servidores ESXi no local ou servidores ESXi que você não possa ou não gerenciará no console do {{site.data.keyword.vmwaresolutions_short}}.
 * Uma instância do vCenter Server com armazenamento NFS deve ter pelo menos 2 servidores ESXi e uma instância do vCenter Server com armazenamento vSAN
 deve ter pelo menos 4 servidores ESXi.
 * Antes de remover os servidores ESXi com os serviços F5 on {{site.data.keyword.cloud_notm}} ou FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} instalados, deve-se migrar as MVs F5 BIG-IP e FortiGate para um servidor ESXi diferente daquele que está hospedando as MVs.
@@ -167,6 +162,6 @@ correta.
 * [Lista de materiais do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
 * [Requisitos e planejamento para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [Pedindo instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [Incluindo, visualizando e excluindo clusters para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
-* [Colocar um host no modo de manutenção](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
-* [Suporte ao processador Enhanced vMotion Compatibility (EVC)](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003212){:new_window}
+* [Incluindo, visualizando e excluindo clusters para instâncias do vCenter Server](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
+* [Colocar um host no modo de manutenção](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.resmgmt.doc/GUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
+* [Suporte ao processador Enhanced vMotion Compatibility (EVC)](https://kb.vmware.com/s/article/1003212){:new_window}

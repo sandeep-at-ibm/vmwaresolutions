@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-08-30"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -63,7 +63,7 @@ A partir de la version 2.5, {{site.data.keyword.vmwaresolutions_short}} est int�
 
 Pour plus d'informations, voir les rubriques suivantes :
 * [Invitation des utilisateurs à accéder à des services et des ressources](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-iamuserinvite)
-* [Gestion des accès utilisateur à l'aide d'IAM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-access-with-iam)
+* [Gestion des accès utilisateur à l'aide d'IAM](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-iam#iam)
 
 ## Modifications apportées aux comptes d'utilisateur et aux groupes pour les instances VMware vCenter Server et VMware Cloud Foundation
 {: #relnotes_v25-user-acct}

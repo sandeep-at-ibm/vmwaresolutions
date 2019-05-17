@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -73,7 +73,7 @@ Tabela 5. Configuração de VIP para NSX Edge - Regra
 |-----------|---------------|
 | ID de Regra | applicationRule-1 |
 | Nome | appRule1 |
-| Script | acl isHibridity url_beg /hibridity</br>    acl isWebSso url_beg /websso</br>    acl isVCenter url_beg /vsphere-client</br>    use_backend nspPool001 if isHybridity</br>    use_backend vcPool001 se isVCenter</br>    use_backend ssoPool001 se isWebSso |
+| Script | acl isHibridity url_beg /hibridity</br>    acl isWebSso url_beg /websso</br>    acl isVCenter url_beg /vsphere-client</br>    use_backend nspPool001 if isHybridity</br>    use_backend vcPool001 if isVCenter</br>    use_backend ssoPool001 if isWebSso |
 
 Tabela 6. Configuração do conjunto para NSX Edge - Resumo do conjunto
 
@@ -134,7 +134,7 @@ Figura 2. Implementação do Cloud Gateway
 
 O segundo componente implementado é o dispositivo WAN Optimization. Embora o dispositivo WAN Optimization seja opcional, ele executa o condicionamento de WAN para reduzir os efeitos de latência. Ele também incorpora a Correção de erro de encaminhamento para negar cenários de perda de pacote e deduplicação de padrões de tráfego redundantes.
 
-Juntos, elas reduzem o uso de largura de banda e asseguram o melhor uso da capacidade de rede disponível para expedir a transferência de dados para o IBM Cloud e a partir dele. O WAN Optimizer é um disco intenso e requer uma quantia suficiente de IOPS para funcionar corretamente. Como resultado, o WAN Optimizer reside no armazenamento vSAN dentro do ambiente VCF e no armazenamento do Endurance e suporta mais de 2.000 IOPS dentro de uma implementação do vCenter Server. A especificação de dimensionamento para o dispositivo WAN Optimization é a tabela a seguir.
+Juntos, elas reduzem o uso de largura de banda e asseguram o melhor uso da capacidade de rede disponível para expedir a transferência de dados para o IBM Cloud e a partir dele. O WAN Optimizer é um disco intenso e requer uma quantia suficiente de IOPS para funcionar corretamente. Como resultado, o otimizador WAN reside no armazenamento vSAN, se presente, ou no armazenamento do Endurance com 2.000 IOPS. A especificação de dimensionamento para o dispositivo WAN Optimization é a tabela a seguir.
 
 Tabela 9. Dimensionamento de dispositivo do WAN Optimizer
 

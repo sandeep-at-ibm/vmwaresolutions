@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-04-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -39,4 +39,4 @@ Pour plus d'informations, voir[Commande, affichage et retrait de services pour d
 * [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [Foire aux questions](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [Site Web fortinet.com](https://www.fortinet.com/)
-* [Documentation technique Fortinet](http://docs.fortinet.com/fortigate/admin-guides)
+* [Bibliothèque de documents Fortinet](https://docs.fortinet.com/product/fortigate/6.2)

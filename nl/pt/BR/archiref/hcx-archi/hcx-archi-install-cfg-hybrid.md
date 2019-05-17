@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,7 +18,7 @@ O instalador provisiona e configura uma máquina virtual para cada dispositivo v
 ## Pré-requisitos
 {: #hcx-archi-install-cfg-hybrid-prereq}
 
-* O HCX Manager deve ser instalado no local e registrado com um terminal de nuvem ativado para VCF/VCS HCX.
+* O HCX Manager deve ser instalado no local e registrado com um terminal de nuvem ativado para VCS HCX.
 * O datacenter virtual de destino deve ter recursos suficientes.
 
 ## Visão Geral da Configuração
@@ -34,7 +34,7 @@ O procedimento de configuração supõe que todos os dispositivos virtuais de se
 
 A interface da web simples é usada para instalar os dispositivos virtuais de serviço e para configurar mais Layer 2 Concentrators.
 
-O HCX Manager deve ser instalado e registrado com o terminal de nuvem ativado para VCF/VCS HCX.
+O HCX Manager deve ser instalado e registrado com o terminal de nuvem ativado para VCS HCX.
 
 ### Procedimento para instalar e configurar o Dispositivo virtual de serviço híbrido
 {: #hcx-archi-install-cfg-hybrid-proc-install}
@@ -119,7 +119,7 @@ Visualize o status do túnel do Cloud Gateway. O serviço Network Extension deve
 
 ## Estendendo uma Rede da Camada 2 para o IBM Cloud
 
-Amplie uma rede da Camada 2 do data center no local para a nuvem ativada para VCF/VCS HCX.
+Amplie uma rede da Camada 2 do data center no local para a nuvem ativada para VCS HCX.
 {: #hcx-archi-install-cfg-hybrid-stretch-layer-2}
 
 ### Pré-requisitos para estender uma Rede da Camada 2 para o IBM Cloud
@@ -136,9 +136,9 @@ Amplie uma rede da Camada 2 do data center no local para a nuvem ativada para VC
 3. Clique com o botão direito no grupo de portas e, no menu, selecione **Ações de hibridismo** e selecione **Ampliar rede**.
 4. Na página **Selecionar grupos de portas de origem**, confirme as informações sobre o grupo de portas e insira o **Endereço IP do gateway** e o prefixo da rede. Clique em **Avançar**.
 5. Na página **Selecionar gateway de destino**, conclua as etapas a seguir:
-  1. Selecione a Organização do VCF/VCS Hybrid Cloud Services Cloud no menu **Organização**.
-  2. Selecione o datacenter virtual do VCF/VCS Hybrid Cloud Services Cloud no menu.
-  3. Deixe **Roteamento de proximidade** desativado para forçar uma MV na nuvem ativada para VCF/VCS Hybrid Cloud Services para sempre usar o gateway no local para acessar a Internet. Por padrão, o tráfego que se origina de uma MV na nuvem ativada para VCF/VCS Hybrid Cloud Services atravessa o caminho de dados da Camada 2 de volta para o data center no local e para o gateway padrão. Se **Roteamento de proximidade** estiver marcado, uma MV na nuvem ativada para VCF/VCS Hybrid Cloud Services poderá acessar a Internet sem atravessar o caminho de dados da Camada 2 para o vSphere.
+  1. Selecione a Organização em nuvem do VCS Hybrid Cloud Services no menu **Organização**.
+  2. Selecione o datacenter virtual em Nuvem do VCS Hybrid Cloud Services no menu virtual.
+  3. Deixe **Roteamento de proximidade** desativado para forçar uma VM dentro do VCS Hybrid Cloud Services ativado para sempre usar o gateway no local para acessar a Internet. Por padrão, o tráfego que se origina de uma VM na nuvem ativada para o VCS Hybrid Cloud Services atravessa o caminho de dados da Camada 2 de volta para o data center no local e para o gateway padrão. Se **Roteamento de proximidade** estiver marcado, uma VM dentro da nuvem ativada para o VCS Hybrid Cloud Services poderá acessar a Internet sem atravessar o caminho de dados da Camada 2 para o vSphere.
   4. Selecione o gateway de destino remoto na lista de gateways clicando na linha. Clique em **Avançar**.
 6. Na página **Pronto para concluir**, revise todos os valores fornecidos. Clique em **Concluir**.
 7. Para rastrear o progresso da extensão de rede, acesse a janela **Tarefas recentes**, clique na guia **Todos** e visualize **Tarefas de todos os usuários**.

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-20"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -30,7 +30,7 @@ Per creare un'istanza Object Storage, vedi [Crea una nuova istanza del servizio]
 ## Creazione di un bucket
 {: #icos_ordering-bucket}
 
-Per creare un bucket, vedi [Step 1: Create some buckets to store your data](https://cloud.ibm.com/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-getting-started-console-#create-buckets). Segui le istruzioni e ritorna in questa sezione per continuare con le attività seguenti.
+Per creare un bucket, vedi [Create some buckets to store your data](/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-getting-started-tutorial#gs-create-buckets). Segui le istruzioni e ritorna in questa sezione per continuare con le attività seguenti.
 
 ## Creazione delle credenziali del sevizio
 {: #icos_ordering-service-cred}

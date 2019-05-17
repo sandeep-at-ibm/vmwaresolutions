@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -129,7 +129,7 @@ PowerVC)
   -	Web Terminal (código abierto)
   -	Skydive – analizador de red (código abierto)
 
-Para Stock Trader, que se basa en la arquitectura de la solución de Jane, Todd empezará con [Db2](https://console.cloud.ibm.com/catalog/services/db2-hosted), [MQ](https://console.cloud.ibm.com/catalog/services/mq) y [Redis](https://console.cloud.ibm.com/catalog/services/databases-for-redis).
+Para Stock Trader, que se basa en la arquitectura de la solución de Jane, Todd empezará con [Db2](https://cloud.ibm.com/catalog/services/db2-hosted), [MQ](https://cloud.ibm.com/catalog/services/mq) y [Redis](https://cloud.ibm.com/catalog/services/databases-for-redis).
 
 ## Adición de middleware
 {: #vcscontent-addmidware-add-middleware}

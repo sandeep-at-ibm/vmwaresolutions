@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -32,9 +32,9 @@ Figura 1. Diagrama de visión general
 </br>
 ![Diagrama de visión general](vum-vcsproxy.svg)
 
-Actualmente, vCenter Server despliega vSphere 6.5, lo que significa que VUM ahora está integrado en vCenter Server Appliance (VCSA), y como el componente de cliente VUM es un plug-in que se ejecuta en el cliente web de vSphere, se habilita automáticamente después del despliegue de VCSA. Sin embargo, VUM no tiene acceso a internet para acceder a los repositorios de VMware.
+Actualmente, vCenter Server despliega vSphere 6.5, lo que significa que VUM ahora está integrado en vCenter Server Appliance (VCSA), y como el componente de cliente VUM es un plug-in que se ejecuta en el cliente web de vSphere, se habilita automáticamente después del despliegue de VCSA. Sin embargo, VUM no tiene acceso a Internet para acceder a los repositorios de VMware.
 
-Esta configuración documentada utiliza el modelo de despliegue VUM "all-in-one" conectado a Internet que utiliza la red pública de {{site.data.keyword.cloud_notm}} para proporcionar acceso a internet para descargar actualizaciones y parches.
+Esta configuración documentada utiliza el modelo de despliegue VUM "all-in-one" conectado a Internet que utiliza la red pública de {{site.data.keyword.cloud_notm}} para proporcionar acceso a Internet para descargar actualizaciones y parches.
 
 Los clientes que requieren el uso de conexiones de internet alternativas deben investigar el servicio de descargas de VMware vSphere Update Manager (UMDS), que queda fuera del ámbito de esta publicación.
 
@@ -46,8 +46,8 @@ Este documento está organizado en las secciones siguientes:
 * [Visión general de VMware Update Manager](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-overview): se describe el proceso VUM y se ofrece una introducción a los términos clave necesarios para comprender las operaciones y la interfaz de usuario de la herramienta.
 * **Instalación, configuración y uso**: se describen los pasos necesarios para que VUM funcione en una instancia de vCenter Server:
   - [Configuración inicial](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-init-config): una tarea que se realiza una sola vez para:
-      - Configurar la red NSX para permitir que el servidor proxy acceda a internet.
-      - Instalar y configurar un servidor proxy para proporcionar acceso a internet para VUM.
+      - Configurar la red NSX para permitir que el servidor proxy acceda a Internet.
+      - Instalar y configurar un servidor proxy para proporcionar acceso a Internet para VUM.
       - Que la configuración inicial de VUM utilice el servidor proxy.
   - [Recopilación de los metadatos](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-metadata): VUM descarga metadatos sobre las actualizaciones, parches o extensiones mediante un proceso automático predefinido que puede modificar. A intervalos regulares configurables, VUM se pone en contacto con VMware o con orígenes de terceros, para recopilar los metadatos más recientes sobre actualizaciones, parches o extensiones disponibles.
   - [Creación de líneas base](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-baselines): utilice las líneas base predefinidas y los grupos de línea base o cree unos personalizados. Las líneas base y los grupos de línea base se adjuntan a los objetos de inventario.
@@ -60,7 +60,7 @@ Si ha desplegado un vCenter Server mediante vSAN, consulte primero [Actualizaci�
 
 Si desea actualizar la automatización de la gestión de la infraestructura de {{site.data.keyword.cloud_notm}}, utilice la consola de {{site.data.keyword.vmwaresolutions_short}}.
 
-La [consola de {{site.data.keyword.vmwaresolutions_short}}](https://console.cloud.ibm.com/infrastructure/vmware-solutions/console) le permite llevar a cabo las siguientes acciones:
+La [consola de {{site.data.keyword.vmwaresolutions_short}}](https://cloud.ibm.com/infrastructure/vmware-solutions/console) le permite llevar a cabo las siguientes acciones:
 *	Actualizar licencias por ejemplo, actualizar NSX Base a otra versión
 *	Iniciar actualizaciones en la plataforma vCenter Server, por ejemplo pasar a la versión 2.5
 *	Ver el estado de las actualizaciones
@@ -72,4 +72,4 @@ Este recurso solo habilita la actualización automatizada de los componentes de 
 {: #vum-intro-related}
 
 * [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demostraciones)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (demostraciones)

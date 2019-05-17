@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -14,7 +14,7 @@ subcollection: vmwaresolutions
 # Architecture multisite
 {: #nsx-multi_site}
 
-Un facteur clé de différentiation entre {{site.data.keyword.cloud}} et d'autres offres de cloud est la capacité de mettre à disposition une capacité de calcul dédiée au niveau mondial automatiquement pour connecter l'infrastructure à la demande au réseau situé dans votre compte {{site.data.keyword.cloud_notm}} privé. Les fonctionnalités SDN (Software Defined Networking) de VMware vCenter Server et VMware Cloud Foundation associées à {{site.data.keyword.cloud_notm}} fournissent une architecture globale granulaire pouvant être réalisée en quelques jours. Les sections suivantes décrivent un exemple d'architecture multisite de ce que l'on peut obtenir avec les fonctionnalités prêtes à l'emploi de vCenter Server ou Cloud Foundation.
+Un facteur clé de différentiation entre {{site.data.keyword.cloud}} et d'autres offres de cloud est la capacité de mettre à disposition une capacité de calcul dédiée au niveau mondial automatiquement pour connecter l'infrastructure à la demande au réseau situé dans votre compte {{site.data.keyword.cloud_notm}} privé. Les fonctionnalités SDN (Software Defined Networking) de VMware vCenter Server et {{site.data.keyword.cloud_notm}} fournissent une architecture globale granulaire qui peut être construite en quelques jours. Les sections suivantes décrivent un exemple d'architecture multisite de ce que l'on peut obtenir avec les fonctionnalités prêtes à l'emploi de vCenter Server.
 
 ## Environnement Cross-vCenter NSX
 {: #nsx-multi_site-cross-env}
@@ -22,7 +22,7 @@ Un facteur clé de différentiation entre {{site.data.keyword.cloud}} et d'autre
 La fonctionnalité cross-vCenter NSX permet d'effectuer une liaison dans des relations principales et secondaires pouvant aller jusqu'à neuf instances de NSX Manager : une principale et huit secondaires. Alors qu'il n'est pas nécessaire que les serveurs vCenter Server soient reliés en mode ELM (Enhanced Linked Mode) pour que cross-vCenter NSX soit opérationnel, ce mode offre les avantages suivants :
 
 * La création de relations principales et secondaires en utilisant les données d'identification SSO (Single Sign-On)
-* La configuration de l'automatisation de vCenter Server et Cloud Foundation pour la résolution de nom DNS pour tous les sites qui sont reliés ensemble
+* La configuration de l'automatisation de vCenter Server pour la résolution de nom DNS pour tous les sites qui sont reliés ensemble
 * La gestion à partir d'un point unique sur tous les sites pour NSX et les fonctions normales de vCenter
 
 ## Exemple de topologie multisite

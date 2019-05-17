@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -15,14 +15,14 @@ subcollection: vmwaresolutions
 
 Il servizio VMware HCX on IBM Cloud abilita la creazione di una connessione trasparente tra le istanze di IBM Cloud for VMware Solutions e il data center virtualizzato VMware in loco.
 
-IBM Cloud for VMware Solutions include distribuzioni rapide e completamente automatizzate per le configurazioni di VMware vCenter Server on IBM Cloud (VCS) o VMware Cloud Foundation on IBM Cloud (VCF) in IBM Cloud. Queste offerte integrano l'infrastruttura in loco e consentono ai carichi di lavoro esistenti e futuri di essere eseguiti in IBM Cloud senza dover essere convertiti tramite gli stessi strumenti, competenze e processi che utilizzano in loco. Per ulteriori informazioni, consulta [IBM Architecture Center](https://www.ibm.com/devops/method/content/architecture/virtualizationArchitecture).
+IBM Cloud for VMware Solutions include distribuzioni rapide e completamente automatizzate di VCS (VMware vCenter Server) in IBM Cloud. Queste offerte integrano l'infrastruttura in loco e consentono ai carichi di lavoro esistenti e futuri di essere eseguiti in IBM Cloud senza dover essere convertiti tramite gli stessi strumenti, competenze e processi che utilizzano in loco. Per ulteriori informazioni, consulta [Virtualization for extending virtualized private cloud](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture).
 
-Il servizio VMware HCX on IBM Cloud porta questa ibridità alla fase successiva, combinando le istanze di VCS o VCF con i data center virtualizzati in loco esistenti abilitando la creazione di estensioni d rete trasparenti e la migrazione bidirezionale dei carichi di lavoro.
+Il servizio VMware HCX on IBM Cloud porta questa ibridità alla fase successiva, combinando le istanze di VCS con i data center virtualizzati in loco esistenti abilitando la creazione di estensioni di rete trasparenti e la migrazione bidirezionale dei carichi di lavoro. 
 
 I componenti di VMware HCX on IBM Cloud che vengono distribuiti come delle VM (Virtual Machine) nel sito di destinazione IBM Cloud VMware consentono di stabilire una connessione con i componenti VMware HCX on IBM Cloud installati nel sito di origine in loco peer.
 
-Figura 1. VMware Cloud Foundation – Hybrid Cloud Services
-![VMware Cloud Foundation – Hybrid Cloud Services](cloudfoundation_hybrid_cloud_services.svg)
+Figura 1. VMware vCenter Server – Hybrid Cloud Services
+![VMware vCenter Server – Hybrid Cloud Services](cloudfoundation_hybrid_cloud_services.svg)
 
 Questa connessione crea una interconnettività accoppiata approssimativamente tra il locale e IBM Cloud e abilita funzionalità come:
 * Interconnettività semplice – le connessioni alla rete logica vengono stabilite facilmente tramite una qualsiasi connessione fisica come l'Internet pubblico, la VPN privata o direct link.
@@ -40,4 +40,4 @@ di sicurezza vengono spostati insieme al carico di lavoro.
 ## Link correlati
 {: #hcx-archi-intro-related}
 
-* [IBM Architecture Center](https://www.ibm.com/devops/method/content/architecture/virtualizationArchitecture)
+* [Virtualization for extending virtualized private cloud](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture)

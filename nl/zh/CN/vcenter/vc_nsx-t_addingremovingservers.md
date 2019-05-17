@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-18"
+lastupdated: "2019-04-22"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -20,17 +20,13 @@ subcollection: vmwaresolutions
 
 可以根据业务需求，通过添加或除去 ESXi 服务器或网络文件系统 (NFS) 存储器，扩展或收缩 VMware vCenter Server with NSX-T 实例的容量。
 
-您可以在集群处于维护模式时将新的 ESXi 服务器添加到集群。此外，您还可以跨多个集群同时添加或除去 ESXi 服务器。可同时进行以下操作：
+* 从 V3.0 发行版开始，您可以在多个集群中同时添加或除去 NFS 存储器。
+* 从 V2.9 发行版开始，您可以在新的 ESXi 服务器处于维护模式时将这些服务器添加到集群。此外，您还可以跨多个集群同时添加或除去 ESXi 服务器。
 
-* 向一个集群添加主机，并向其他集群添加主机。
-* 从一个集群中除去主机，并从其他集群中除去主机。
-* 向一个集群添加主机，并从其他集群除去主机。
-* 从一个集群除去主机，并向其他集群添加主机。https://github.ibm.com/tornado/tracker/issues/14183
+**注**：
+* 如果初始集群将 vSAN 作为其存储器，那么在部署后添加一个或多个 ESXi 服务器可以增加集群存储容量。
+* 可以在现有 NFS 或 vSAN vCenter Server with NSX-T 集群中添加或除去 NFS 存储共享。
 
-可以在现有 NFS 或 vSAN vCenter Server with NSX-T 集群中添加或除去 NFS 存储共享。
-{:note}
-
-如果初始集群将 vSAN 作为其存储器，那么在部署后添加一个或多个 ESXi 服务器可以增加集群存储容量。
 
 ## 向 vCenter Server with NSX-T 实例添加 ESXi 服务器
 {: #vc_nsx-t_addingremovingservers-adding}
@@ -38,7 +34,7 @@ subcollection: vmwaresolutions
 ### 在添加 ESXi 服务器之前
 {: #vc_nsx-t_addingremovingservers-adding-prereq}
 
-* 不要通过 VMware vSphere Web Client 来添加 ESXi 服务器。在 vSphere Web Client 上所做的更改不会与 {{site.data.keyword.vmwaresolutions_full}} 控制台同步。
+* 尽可能使用 {{site.data.keyword.vmwaresolutions_full}} 控制台添加 ESXi 服务器，因为在 VMware vSphere Web Client 上所做的更改不会与 {{site.data.keyword.vmwaresolutions_short}} 控制台同步。因此，将 ESXi 服务器添加到 vCenter Server 仅适用于内部部署 ESXi 服务器，或者无法或不会在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理的 ESXi 服务器。
 * 使用 NFS 存储器的 vCenter Server with NSX-T 实例必须至少具有 3 个 ESXi 服务器。可以将缺省集群扩展为最多具有 51 个 ESXi 服务器。每个非缺省集群可以扩展为最多具有 59 个 ESXi 服务器。
 * 使用 vSAN 存储器的 vCenter Server with NSX-T 实例必须至少具有 4 个 ESXi 服务器。
 
@@ -70,7 +66,7 @@ subcollection: vmwaresolutions
 ### 在除去 ESXi 服务器之前
 {: #vc_nsx-t_addingremovingservers-removing-prereq}
 
-* 不要通过 VMware vSphere Web Client 来除去 ESXi 服务器。在 vSphere Web Client 上所做的更改不会与 {{site.data.keyword.vmwaresolutions_short}} 控制台同步。
+* 尽可能使用 {{site.data.keyword.vmwaresolutions_full}} 控制台除去 ESXi 服务器，因为在 vSphere Web Client 上所做的更改不会与 {{site.data.keyword.vmwaresolutions_short}} 控制台同步。因此，从 vCenter Server 中除去 ESXi 服务器仅适用于内部部署 ESXi 服务器，或者无法或不会在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理的 ESXi 服务器。
 * 使用 NFS 存储器的 vCenter Server with NSX-T 实例必须至少有 3 个 ESXi 服务器，使用 vSAN 存储器的 vCenter Server with NSX-T 实例必须至少有 4 个 ESXi 服务器。
 * 除去 ESXi 服务器时，会将这些服务器置于维护模式，接着会迁移在这些服务器上运行的所有 VM，然后从 vCenter Server 中除去这些服务器。为了最大程度地控制 VM 的重新定位，建议您先将要除去的 ESXi 服务器置于维护模式，然后使用 VMware vSphere Web Client 来手动迁移在这些 ESXi 服务器上运行的 VM。在此之后，使用 {{site.data.keyword.vmwaresolutions_short}} 控制台来除去 ESXi 服务器。
 
@@ -158,6 +154,6 @@ subcollection: vmwaresolutions
 * [vCenter Server 材料清单](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
 * [针对 vCenter Server 实例的需求和规划](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [订购 vCenter Server with NSX-T 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_orderinginstance)
-* [添加、查看和删除 vCenter Server with NSX-T 实例的集群](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_deletinginstance)
-* [将主机置于维护模式](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
-* [Enhanced vMotion Compatibility (EVC) 处理器支持](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003212){:new_window}
+* [添加、查看和删除 vCenter Server with NSX-T 实例的集群](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_nsx-t_addingviewingcluster#vc_nsx-t_addingviewingcluster)
+* [将主机置于维护模式](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.resmgmt.doc/GUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
+* [Enhanced vMotion Compatibility (EVC) 处理器支持](https://kb.vmware.com/s/article/1003212){:new_window}

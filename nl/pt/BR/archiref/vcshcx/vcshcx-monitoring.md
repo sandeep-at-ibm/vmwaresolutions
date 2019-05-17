@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-05"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -52,7 +52,7 @@ Para configurar a IU da web do WAN Opt:
 11.	Edite as configurações na MV.
 12.	Clique na caixa de seleção para conectar o Adaptador de rede 1.
 13.	Clique em **OK**.
-14.	Acesse  ` https://<configured_WAN_OPT_IP>`.
+14.	Acesse `https://<configured_WAN_OPT_IP>`.
 15.	Efetue login com o usuário padrão `admin` e a senha `admin`.
 
 Agora é possível usar a IU da web do WAN Opt para monitorar as taxas de rendimento e as taxas de compactação, além de configurar restrições de largura da banda.
@@ -91,7 +91,7 @@ Monitore componentes do HCX, como HCX Manager, Cloud Gateway, WAN Opt e as opera
 Layer 2 Concentrator das maneiras a seguir:
 
 - Configure o HCX Manager para enviar logs para um servidor de syslog. Use
-o utilitário de gerenciamento de dispositivo do gerenciador do HCX para executar o comando `https://<hcxhostname or
+o utilitário de gerenciamento de dispositivo do gerenciador HCX para executar o comando `https://<hcxhostname or
 IP>:9443`.
 - Configure um ping para uma MV que é migrada antes da troca de rede
 para cada rede L2 estendida.

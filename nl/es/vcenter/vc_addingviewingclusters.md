@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-18"
+lastupdated: "2019-04-18"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -28,12 +28,14 @@ La característica de supresión de clúster solo está disponible para las inst
 ## Adición de clústeres a instancias de vCenter Server
 {: #vc_addingviewingclusters-adding}
 
-El número de clústeres que pueden añadirse a una instancia depende de la versión de la instancia:
-* Para las instancias que se han desplegado en V2.5 y posteriores o que se han actualizado a las mismas, el número de clústeres, hosts y máquinas virtuales determina el límite máximo para el número de clústeres que puede añadir. Debe respetar las directrices de dimensionamiento de VMware y los límites para el despliegue.
-* Para instancias que se han desplegado en (o se han actualizado a) V2.2 y posteriores, puede añadir hasta 10 clústeres.
-* Para instancias que se han desplegado en V2.1 o anteriores, puede añadir hasta cinco clústeres.
+### Antes de añadir clústeres
+{: #vc_addingviewingclusters-before-add}
 
-Para obtener más información sobre los límites máximos, consulte [Máximos de configuración de VMware](https://configmax.vmware.com/home){:new_window}.
+* Siempre que sea posible, añada clústeres utilizando la consola de {{site.data.keyword.vmwaresolutions_full}}, ya que los cambios que realice en el cliente web de VMware vSphere no se sincronizan con la consola de {{site.data.keyword.vmwaresolutions_short}}. Por lo tanto, añada clústeres a vCenter Server solo para clústeres locales o clústeres que no pueda o no vaya a gestionar en la consola de
+{{site.data.keyword.vmwaresolutions_short}}.
+* Para las instancias que se han desplegado en V2.5 y posteriores o que se han actualizado a las mismas, el número de clústeres, hosts y máquinas virtuales determina el límite máximo para el número de clústeres que puede añadir. Debe respetar las directrices de dimensionamiento de VMware y los límites para el despliegue. Para obtener más información sobre los límites máximos, consulte [Máximos de configuración de VMware](https://configmax.vmware.com/home){:new_window}.
+* Para instancia que se hayan desplegado en (o actualizado a) V2.2, V2.3 o V2.4, puede añadir hasta 10 clústeres.
+* Para instancias que se han desplegado en V2.1 o anteriores, puede añadir hasta cinco clústeres.
 
 ### Valores del sistema
 {: #vc_addingviewingclusters-adding-sys-settings}
@@ -52,7 +54,7 @@ El nombre del clúster debe cumplir los siguientes requisitos:
 #### Ubicación del centro de datos
 {: #vc_addingviewingclusters-adding-dc-location}
 
-La ubicación del {{site.data.keyword.CloudDataCent}} del clúster está definido en {{site.data.keyword.CloudDataCent_notm}} en la instancia de vCenter Server de forma predeterminada. Puede desplegar el clúster en un {{site.data.keyword.CloudDataCent_notm}} distinto del de la instancia desplegada, pero debe asegurarse de que la latencia de red entre los dos {{site.data.keyword.CloudDataCents_notm}} sea inferior a 150 ms. Para comprobar la latencia de red, puede utilizar una herramienta como [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/).
+La ubicación del {{site.data.keyword.CloudDataCent}} del clúster está definido en {{site.data.keyword.CloudDataCent_notm}} en la instancia de vCenter Server de forma predeterminada. Puede desplegar el clúster en un {{site.data.keyword.CloudDataCent_notm}} distinto del de la instancia desplegada, pero debe asegurarse de que la latencia de red entre los dos {{site.data.keyword.CloudDataCents_notm}} sea inferior a 150 ms. Para comprobar la latencia de red, puede utilizar una herramienta como [Looking Glass](/docs/infrastructure/network-tools?topic=network-tools-about-looking-glass#about-looking-glass).
 
 Si despliega el clúster en otro {{site.data.keyword.CloudDataCent_notm}} o en otro pod de la infraestructura de {{site.data.keyword.cloud_notm}}, se solicitan tres VLAN adicionales para su uso con el {{site.data.keyword.baremetal_short}} solicitado.
 
@@ -97,22 +99,16 @@ Tabla 2. Opciones para {{site.data.keyword.baremetal_short}} Broadwell
 
 | Opciones de modelo de CPU        | Opciones de RAM       |
 |:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4 / 16 núcleos en total, 2,1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2650 v4 / 24 núcleos en total, 2,2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2690 v4 / 28 núcleos en total, 2,6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Quad Intel Xeon E7-4820 v4 / 40 núcleos en total, 1,9 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 núcleos en total, 2,2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 #### Número de servidores nativos
 {: #vc_addingviewingclusters-adding-bare-metal-number}
 
-Los clústeres necesitan al menos dos {{site.data.keyword.baremetal_short}}.
-
-Para instancias de vCenter Server desplegadas en V2.1 o posteriores, puede añadir un máximo de 59 {{site.data.keyword.baremetal_short}} para un clúster. Puede añadir entre 1 y 59 servidores ESXi a la vez.
-
-Para instancias de vCenter Server desplegadas en V2.0 o anteriores, puede añadir un máximo de 32 {{site.data.keyword.baremetal_short}} para un clúster. Puede añadir entre 1 y 20 servidores ESXi a la vez para la configuración de servidor nativo **Skylake**, **Certificado por SAP** y **Broadwell**.
-
-Después del despliegue, puede crear un máximo de cuatro clústeres más. Si selecciona la configuración de servidor nativo **Skylake** o **Broadwell** con el almacenamiento VMware vSAN, se necesitan cuatro servidores para el clúster inicial y los clústeres posteriores al despliegue.
+* Todos los servidores que solicite tienen la misma configuración.
+* Para el almacenamiento vSAN, puede solicitar entre 4 y 59 servidores.
+* Para el almacenamiento NFS, puede solicitar entre 2 y 59 servidores. No obstante, para cargas de trabajo de producción, se recomienda un mínimo de 3 servidores. Para obtener más información, consulte
+[¿Está altamente disponible una instancia de vCenter Server de dos nodos?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-).
 
 ### Valores de almacenamiento
 {: #vc_addingviewingclusters-adding-storage-settings}
@@ -125,9 +121,9 @@ Los valores de almacenamiento dependen de la opción que seleccione de configura
 Especifique las siguientes opciones de vSAN:
 * **Tipo y tamaño de disco para discos de capacidad vSAN**: Seleccione una opción para los discos de capacidad que necesite.
 * **Número de discos de capacidad de vSAN**: Especifique el número de discos de capacidad que desea añadir.
-* Si desea añadir discos de capacidad por encima del límite de ocho, marque el recuadro **Intel Optane de alto rendimiento**. Esta opción proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad y es útil para cargas de trabajo que requieren menos latencia y un rendimiento de IOPS más alto.
+* Si desea añadir discos de capacidad por encima del límite de 10, marque el recuadro **Intel Optane de alto rendimiento**. Esta opción proporciona dos bahías de disco de capacidad adicional para un total de 12 discos de capacidad y es útil para cargas de trabajo que requieren menos latencia y un rendimiento de IOPS más alto.
 
-  La opción **Intel Optane de alto rendimiento** solo está disponible para los modelos de CPU de Skylake Dual Intel Xeon Gold 5120 y Dual Intel Xeon Gold 6140.
+  La opción **Alto rendimiento con Intel Optane** está disponible únicamente para los modelos de CPU Skylake.
   {:note}
 
 * Revise los valores **Tipo de disco para discos de memoria caché vSAN** y **Número de discos de memoria caché de vSAN**. Estos valores dependen de si ha marcado el recuadro **Intel Optane de alto rendimiento**.
@@ -180,7 +176,6 @@ Los valores de habilitación de la tarjeta de interfaz de red (NIC) se basan en 
 * F5 on {{site.data.keyword.cloud_notm}}
 * Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
 * Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
-* Zerto on {{site.data.keyword.cloud_notm}}
 
 ### Resumen del pedido
 {: #vc_addingviewingclusters-adding-order-summary}
@@ -308,11 +303,13 @@ Tabla 8. Interfaz de red - Detalles de IP
 
 Puede que desee suprimir un clúster de una instancia cuando ya no sea necesario.
 
-### Antes de suprimir
+### Antes de suprimir clústeres
 {: #vc_addingviewingclusters-deleting-prereq}
 
 * Utilice este procedimiento para suprimir clústeres de instancias que se han desplegado en V2.3 o posterior.
 * Para los clústeres desplegados en V2.2 o instancias anteriores, debe actualizar la instancia a V2.3 si desea suprimir los clústeres que ha añadido a la instancia.
+* Siempre que sea posible, suprima los clústeres utilizando la consola de {{site.data.keyword.vmwaresolutions_full}}, ya que los cambios que realice en el cliente web de VMware vSphere no se sincronizan con la consola de {{site.data.keyword.vmwaresolutions_short}}. Por lo tanto, suprima clústeres de vCenter Server solo para clústeres locales o clústeres que no pueda o no vaya a gestionar en la consola de
+{{site.data.keyword.vmwaresolutions_short}}.
 * Puede suprimir un único clúster al mismo tiempo. Para suprimir más de un clúster, debe hacerlo en secuencia. Espere a que el clúster anterior se suprima antes de suprimir el clúster siguiente.
 * Asegúrese de que todos los nodos de un clúster estén encendidos y operativos antes de suprimir el clúster.
 * Cuando se suprime un clúster, todas las VM del clúster también se suprimen y no se pueden recuperar. Si desea mantener las VM, mígrelas a otros clústeres.

@@ -10,26 +10,26 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
-   id="Layer_1"
    x="0px"
    y="0px"
-   viewBox="0 0 602 322"
-   style="enable-background:new 0 0 602 322;"
+   viewBox="0 0 500 254"
+   style="enable-background:new 0 0 500 254;"
    xml:space="preserve"
+   id="svg2"
    inkscape:version="0.47 r22583"
    width="100%"
    height="100%"
    sodipodi:docname="vcscar-skate-language.svg"><metadata
-   id="metadata95"><rdf:RDF><cc:Work
+   id="metadata160"><rdf:RDF><cc:Work
        rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
-   id="defs93"><inkscape:perspective
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+   id="defs158"><inkscape:perspective
      sodipodi:type="inkscape:persp3d"
-     inkscape:vp_x="0 : 161 : 1"
+     inkscape:vp_x="0 : 127 : 1"
      inkscape:vp_y="0 : 1000 : 0"
-     inkscape:vp_z="602 : 161 : 1"
-     inkscape:persp3d-origin="301 : 107.33333 : 1"
-     id="perspective97" /></defs><sodipodi:namedview
+     inkscape:vp_z="500 : 127 : 1"
+     inkscape:persp3d-origin="250 : 84.666667 : 1"
+     id="perspective162" /></defs><sodipodi:namedview
    pagecolor="#ffffff"
    bordercolor="#666666"
    borderopacity="1"
@@ -40,224 +40,359 @@
    inkscape:pageshadow="2"
    inkscape:window-width="1440"
    inkscape:window-height="838"
-   id="namedview91"
+   id="namedview156"
    showgrid="false"
-   inkscape:zoom="1.4658385"
-   inkscape:cx="301"
-   inkscape:cy="161"
+   inkscape:zoom="0.92913386"
+   inkscape:cx="250"
+   inkscape:cy="127"
    inkscape:window-x="-8"
    inkscape:window-y="-8"
    inkscape:window-maximized="1"
-   inkscape:current-layer="Layer_1" />
+   inkscape:current-layer="svg2" />
 <style
    type="text/css"
-   id="style3">
-	.st0{fill:none;stroke:#7EA6E0;stroke-width:2;}
-	.st1{font-family:'ArialMT';}
-	.st2{font-size:10px;}
-	.st3{fill:none;stroke:#000000;stroke-miterlimit:10;}
-	.st4{stroke:#000000;stroke-miterlimit:10;}
-	.st5{stroke:#000000;stroke-width:2;}
-	.st6{fill:none;stroke:#000000;stroke-width:2;}
+   id="style4">
+	.st0{fill:none;stroke:#000000;stroke-width:0.75;stroke-miterlimit:10;}
+	.st1{fill:#FFFFFF;}
+	.st2{font-family:'IBMPlexSans';}
+	.st3{font-size:12px;}
+	.st4{fill:#FFFFFF;stroke:#29ABE2;stroke-miterlimit:10;}
+	.st5{font-size:14px;}
 </style>
 <g
-   transform="translate(.5 .5)"
-   id="g5">
-	<path
-   pointer-events="none"
+   id="line_from_base_to_trick_complete">
+	<g
+   id="g7">
+		<line
    class="st0"
-   d="M8.5,81h75c4.1,0,7.5,3.4,7.5,7.5v35c0,4.1-3.4,7.5-7.5,7.5h-75c-4.1,0-7.5-3.4-7.5-7.5   v-35C1,84.4,4.4,81,8.5,81z"
-   id="path7" />
-	<g
-   id="g9">
-		<text
-   transform="matrix(1 0 0 1 16.8696 108.5)"
-   class="st1 st2"
-   id="text11">base_combo</text>
-
-	</g>
-	<path
-   pointer-events="none"
-   class="st0"
-   d="M188.5,81h75c4.1,0,7.5,3.4,7.5,7.5v35c0,4.1-3.4,7.5-7.5,7.5h-75   c-4.1,0-7.5-3.4-7.5-7.5v-35C181,84.4,184.4,81,188.5,81z"
-   id="path13" />
-	<g
-   id="g15">
-		<text
-   transform="matrix(1 0 0 1 198.2612 108.5)"
-   class="st1 st2"
-   id="text17">next_combo</text>
-
-	</g>
-	<g
-   pointer-events="none"
-   id="g19">
+   x1="108.5"
+   y1="91.5"
+   x2="453.5"
+   y2="91.5"
+   id="line9" />
 		<g
-   id="g21">
+   id="g11">
 			<g
-   id="g23">
-				<path
-   class="st3"
-   d="M131,116v192.7h381.9"
-   id="path25" />
-				<path
-   class="st4"
-   d="M519.9,308.7l-7,3.5v-7L519.9,308.7z"
-   id="path27" />
-				<path
-   class="st3"
-   d="M131,116v60c0,6.7,3.3,10,10,10h127.2"
-   id="path29" />
-				<path
-   class="st4"
-   d="M275.2,186l-7,3.5v-7L275.2,186z"
-   id="path31" />
-			</g>
-			<circle
-   class="st5"
-   cx="131"
-   cy="106"
-   r="0"
-   id="circle33" />
-			<g
-   id="g35">
-				<path
-   class="st3"
-   d="M321,211.3v72h191.9"
-   id="path37" />
-				<path
-   class="st4"
-   d="M519.9,283.3l-7,3.5v-7L519.9,283.3z"
-   id="path39" />
-				<path
-   class="st3"
-   d="M331,106h230v157.2"
-   id="path41" />
-				<path
-   class="st4"
-   d="M561,270.2l-3.5-7h7L561,270.2z"
-   id="path43" />
+   id="g13">
+				<line
+   class="st0"
+   x1="453.5"
+   y1="91.5"
+   x2="453.5"
+   y2="202.1"
+   id="line15" />
+				<g
+   id="g17">
+					<polygon
+   points="449.8,201 453.5,207.5 457.2,201      "
+   id="polygon19" />
+				</g>
 			</g>
 		</g>
-		<path
-   class="st0"
-   d="M283.5,161h75c4.1,0,7.5,3.4,7.5,7.5v35c0,4.1-3.4,7.5-7.5,7.5h-75c-4.1,0-7.5-3.4-7.5-7.5v-35    C276,164.4,279.4,161,283.5,161z"
-   id="path45" />
 	</g>
+</g>
+<g
+   id="trick_complete">
 	<g
-   id="g47">
-		<text
-   transform="matrix(1 0 0 1 286.5864 188.5)"
-   class="st1 st2"
-   id="text49">landing_combo</text>
-
-	</g>
-	<rect
-   x="521"
-   y="271"
-   pointer-events="none"
-   class="st6"
-   width="80"
-   height="50"
-   id="rect51" />
-	<g
-   transform="translate(533.5,284.5)"
-   id="g53">
-		<text
-   class="st1 st2"
-   id="text55"
-   x="14.5724"
-   y="23.4827"
-   style="font-size:10px;font-family:ArialMT"><tspan
-     style="font-family:SimHei;-inkscape-font-specification:SimHei"
-     id="tspan2909">完成</tspan></text>
-
-		<text
-   class="st1 st2"
-   id="text57"
-   x="13.8305"
-   y="12.1017"
-   style="font-size:10px;font-family:ArialMT"><tspan
-     style="font-family:SimHei;-inkscape-font-specification:SimHei"
-     id="tspan2907">技巧</tspan></text>
-
-	</g>
-	<g
-   pointer-events="none"
-   id="g59">
-		<path
-   class="st3"
-   d="M91,106h30"
-   id="path61" />
-		<path
-   class="st3"
-   d="M140.9,105.9L181,106"
-   id="path63" />
-		<circle
-   class="st5"
-   cx="321"
-   cy="106"
-   r="0"
-   id="circle65" />
+   id="g22">
 		<g
-   id="g67">
+   id="g24">
+			<rect
+   x="417.5"
+   y="207.5"
+   class="st1"
+   width="74"
+   height="42"
+   id="rect26" />
 			<path
-   class="st3"
-   d="M270.9,105.4h40"
-   id="path69" />
-			<path
-   class="st3"
-   d="M321,96V71c0-6.7-3.3-10-10-10h-79c-6.7,0-10,1.8-10.1,5.4l-0.1,5.4"
-   id="path71" />
-			<path
-   class="st4"
-   d="M221.7,78.9l-3.4-7.1l7,0.1L221.7,78.9z"
-   id="path73" />
-			<path
-   class="st3"
-   d="M321,153.2V116"
-   id="path75" />
-			<path
-   class="st4"
-   d="M321,160.2l-3.5-7h7L321,160.2z"
-   id="path77" />
-			<path
-   class="st3"
-   d="M46.3,51.3v21.9"
-   id="path79" />
-			<path
-   class="st4"
-   d="M46.3,80.2l-3.5-7h7L46.3,80.2z"
-   id="path81" />
+   d="M491,208v41h-73v-41H491 M492,207h-75v43h75V207L492,207z"
+   id="path28" />
 		</g>
-		<rect
-   x="11"
-   y="1"
-   class="st6"
-   width="70"
-   height="50"
-   id="rect83" />
-	</g>
-	<g
-   id="g85">
 		<text
-   class="st1 st2"
-   id="text87"
-   x="36.5"
-   y="23.5"
-   style="font-size:10px;font-family:ArialMT"><tspan
+   class="st2 st3"
+   id="text30"
+   x="441.5"
+   y="240"
+   style="font-size:12px;font-family:IBMPlexSans"><tspan
      style="font-family:SimHei;-inkscape-font-specification:SimHei"
-     id="tspan2903">技巧</tspan></text>
+     id="tspan2980">完成</tspan></text>
 
 		<text
-   class="st1 st2"
-   id="text89"
-   x="35.5723"
-   y="35.5"
-   style="font-size:10px;font-family:ArialMT"><tspan
+   class="st2 st3"
+   id="text32"
+   x="442"
+   y="225"
+   style="font-size:12px;font-family:IBMPlexSans"><tspan
      style="font-family:SimHei;-inkscape-font-specification:SimHei"
-     id="tspan2905">开始</tspan></text>
+     id="tspan2978">技巧</tspan></text>
 
 	</g>
 </g>
+<g
+   id="left_black_dot">
+	<circle
+   cx="139.5"
+   cy="92.5"
+   r="8.5"
+   id="circle35" />
+</g>
+<g
+   id="right_black_dot">
+	<circle
+   cx="300.5"
+   cy="92.5"
+   r="8.5"
+   id="circle38" />
+</g>
+<g
+   id="line_from_trick_start_to_base">
+	<g
+   id="g41">
+		<g
+   id="g43">
+			<line
+   class="st0"
+   x1="55"
+   y1="46"
+   x2="55"
+   y2="69.6"
+   id="line45" />
+			<g
+   id="g47">
+				<polygon
+   points="51.3,68.5 55,75 58.7,68.5     "
+   id="polygon49" />
+			</g>
+		</g>
+	</g>
+</g>
+<g
+   id="line_from_left_black_dot_to_trick_complete">
+	<g
+   id="g52">
+		<g
+   id="g54">
+			<g
+   id="g56">
+				<line
+   class="st0"
+   x1="410.6"
+   y1="236.5"
+   x2="139.5"
+   y2="236.5"
+   id="line58" />
+				<g
+   id="g60">
+					<polygon
+   points="409.5,232.8 416,236.5 409.5,240.2      "
+   id="polygon62" />
+				</g>
+			</g>
+		</g>
+		<line
+   class="st0"
+   x1="139.5"
+   y1="98.5"
+   x2="139.5"
+   y2="236.5"
+   id="line64" />
+	</g>
+</g>
+<g
+   id="left_line_to_landing">
+	<g
+   id="g67">
+		<g
+   id="g69">
+			<line
+   class="st0"
+   x1="152.5"
+   y1="156.5"
+   x2="238.1"
+   y2="156.5"
+   id="line71" />
+			<g
+   id="g73">
+				<polygon
+   points="237,160.2 243.5,156.5 237,152.8     "
+   id="polygon75" />
+			</g>
+		</g>
+	</g>
+	<path
+   class="st0"
+   d="M291,156.5H149c-5.2,0-9.5-4.3-9.5-9.5v-46c0-5.2,4.3-9.5,9.5-9.5h142c5.2,0,9.5,4.3,9.5,9.5v46   C300.5,152.2,296.2,156.5,291,156.5z"
+   id="path77" />
+</g>
+<g
+   id="top_line_to_landing">
+	<g
+   id="g80">
+		<g
+   id="g82">
+			<line
+   class="st0"
+   x1="300.5"
+   y1="96.5"
+   x2="300.5"
+   y2="133.1"
+   id="line84" />
+			<g
+   id="g86">
+				<polygon
+   points="296.8,132 300.5,138.5 304.2,132     "
+   id="polygon88" />
+			</g>
+		</g>
+	</g>
+</g>
+<g
+   id="line_from_landing_to_complete">
+	<g
+   id="g91">
+		<g
+   id="g93">
+			<g
+   id="g95">
+				<line
+   class="st0"
+   x1="411.1"
+   y1="221.5"
+   x2="300.5"
+   y2="221.5"
+   id="line97" />
+				<g
+   id="g99">
+					<polygon
+   points="410,217.8 416.5,221.5 410,225.2      "
+   id="polygon101" />
+				</g>
+			</g>
+		</g>
+		<line
+   class="st0"
+   x1="300.5"
+   y1="171.5"
+   x2="300.5"
+   y2="221.5"
+   id="line103" />
+	</g>
+</g>
+<g
+   id="Layer_16">
+	<g
+   id="g106">
+		<g
+   id="g108">
+			<line
+   class="st0"
+   x1="218.5"
+   y1="65.5"
+   x2="218.5"
+   y2="69.1"
+   id="line110" />
+			<g
+   id="g112">
+				<polygon
+   points="214.8,68 218.5,74.5 222.2,68     "
+   id="polygon114" />
+			</g>
+		</g>
+	</g>
+	<path
+   class="st0"
+   d="M294.8,91.5h-70.5c-3.2,0-5.8-2.6-5.8-5.8V62.3c0-3.2,2.6-5.8,5.8-5.8h70.5c3.2,0,5.8,2.6,5.8,5.8v23.5   C300.5,88.9,297.9,91.5,294.8,91.5z"
+   id="path116" />
+</g>
+<g
+   id="Layer_14">
+</g>
+<g
+   id="base_combo">
+	<g
+   id="g120">
+		<path
+   class="st4"
+   d="M97,107.5H23c-6.6,0-12-5.4-12-12V87c0-6.6,5.4-12,12-12h74c6.6,0,12,5.4,12,12v8.5    C109,102.1,103.6,107.5,97,107.5z"
+   id="path122" />
+		<text
+   transform="matrix(1 0 0 1 24.3335 96)"
+   class="st2 st5"
+   id="text124">base_combo</text>
+
+	</g>
+</g>
+<g
+   id="next_combo">
+	<g
+   id="g127">
+		<path
+   class="st4"
+   d="M255,107.5h-74c-6.6,0-12-5.4-12-12V87c0-6.6,5.4-12,12-12h74c6.6,0,12,5.4,12,12v8.5    C267,102.1,261.6,107.5,255,107.5z"
+   id="path129" />
+		<text
+   transform="matrix(1 0 0 1 183.6665 96)"
+   class="st2 st5"
+   id="text131">next_combo</text>
+
+	</g>
+</g>
+<g
+   id="landing_combo">
+	<g
+   id="g134">
+		<path
+   class="st4"
+   d="M344.5,171.5H257c-6.6,0-12-5.4-12-12V151c0-6.6,5.4-12,12-12h87.5c6.6,0,12,5.4,12,12v8.5    C356.5,166.1,351.1,171.5,344.5,171.5z"
+   id="path136" />
+		<text
+   transform="matrix(1 0 0 1 256.667 159.667)"
+   class="st2 st5"
+   id="text138">landing_combo</text>
+
+	</g>
+</g>
+<g
+   id="trick_start">
+	<g
+   id="g141">
+		<g
+   id="g143">
+			<rect
+   x="22.5"
+   y="4.5"
+   class="st1"
+   width="74"
+   height="41"
+   id="rect145" />
+			<path
+   d="M96,5v40H23V5H96 M97,4H22v42h75V4L97,4z"
+   id="path147" />
+		</g>
+		<text
+   id="text149"
+   x="43.819042"
+   y="21.6665"><tspan
+     x="43.819042"
+     y="21.6665"
+     class="st2 st3"
+     id="tspan151"
+     style="font-size:12px;font-family:SimHei;-inkscape-font-specification:SimHei">技巧</tspan></text>
+
+	</g>
+</g>
+<g
+   id="Layer_3">
+</g>
+<text
+   xml:space="preserve"
+   style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+   x="43.974579"
+   y="36.59322"
+   id="text2974"><tspan
+     sodipodi:role="line"
+     id="tspan2976"
+     x="43.974579"
+     y="36.59322"
+     style="font-size:12px;font-family:SimHei;-inkscape-font-specification:SimHei">开始</tspan></text>
 </svg>

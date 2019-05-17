@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-05-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -47,7 +47,7 @@ vCenter Server with Hybridity Bundle에 대한 자세한 정보는 다음 주제
 
 이제 전체 인스턴스를 삭제할 필요없이 인스턴스에서 클러스터를 삭제할 수 있습니다. V2.2 이하 인스턴스에 배치된 클러스터의 경우에는 인스턴스에 추가한 클러스터를 삭제하려면 인스턴스를 V2.3으로 업그레이드해야 합니다.
 
-자세한 정보는 [vCenter Server 인스턴스의 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances#deleting-clusters-from-vcenter-server-instances)를 참조하십시오.
+자세한 정보는 [vCenter Server 인스턴스의 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)를 참조하십시오.
 
 ## VMware vCenter Server 인스턴스에 대한 업데이트
 {: #relnotes_v23-vcs}
@@ -63,7 +63,7 @@ V2.3 릴리스부터, **사용자 정의됨** Bare Metal Server 설정을 선택
 자세한 정보는 다음 주제를 참조하십시오.
 
 * [vCenter Server 인스턴스 주문](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [vCenter Server 인스턴스의 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [vCenter Server 인스턴스의 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 
 ## VMware Cloud Foundation 인스턴스에 대한 업데이트
 {: #relnotes_v23-vcf}

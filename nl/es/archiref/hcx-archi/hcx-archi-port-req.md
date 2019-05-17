@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-02-15"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -40,8 +40,8 @@ Tabla 1. Requisitos de acceso a puertos
 | Pasarela de nube | Hosts ESXi | 80, 902  | TCP | Gestión y despliegue de OVF | Internos |
 | Hosts ESXi | Pasarela de nube | 31031, 44046 | TCP | Tráfico de réplica interno basado en host | Internos |
 | Pasarela de nube | Hosts ESXi | 8000  | TCP | vMotion (migración con tiempo de inactividad cero) |  |
-| Cloud Gateway (local) | Pasarela de nube</br>(remoto) | 4500  | UDP | Intercambio de claves de (IKEv2) para encapsular cargas de trabajo para el túnel bidireccional | IPSEC |
-| Cloud Gateway (local) | Pasarela de nube</br>(remoto) | 500  | UDP | Intercambio de claves de Internet (ISAKMP) para el túnel bidireccional | IPSEC |
+| Cloud Gateway (local) | Cloud Gateway</br>(remota) | 4500  | UDP | Intercambio de claves de (IKEv2) para encapsular cargas de trabajo para el túnel bidireccional | IPSEC |
+| Cloud Gateway (local) | Cloud Gateway</br>(remota) | 500  | UDP | Intercambio de claves de Internet (ISAKMP) para el túnel bidireccional | IPSEC |
 
 ## Enlaces relacionados
 {: #hcx-archi-port-req-related}

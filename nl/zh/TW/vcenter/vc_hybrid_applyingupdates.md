@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-04-30"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -15,18 +15,25 @@ subcollection: vmwaresolutions
 {:note: .note}
 {:important: .important}
 
-# 將更新套用至 vCenter Server with Hybridity Bundle 實例
+# 將 IBM 管理元件更新套用至 vCenter Server with Hybridity Bundle 實例
 {: #vc_hybrid_applyingupdates}
 
-只會針對管理元件，將修補程式及更新套用至 vCenter Server with Hybridity Bundle 實例的處理程序自動化。必須手動套用 VMware 更新。
+本節中的程序適用於針對部署在 2.3 版及 2.4 版的實例，來更新 IBM 管理元件。
 
-## 開始之前
+對於部署在（或升級至）2.5 或更新版本的實例，會視需要自動套用 IBM 管理元件的更新和修補程式。
+
+此外，當您在實例上完成特定作業時，請注意下列行為：
+* 當您訂購新服務時，實例會更新為最新版本。
+* 新增叢集時，會使用最新的 VMware 元件來佈建這些叢集，但不會佈建現有的叢集。
+* 新增 ESXi 伺服器時，會使用最新的 VMware 元件來佈建這些 ESXi 伺服器，但不會佈建現有的 ESXi 伺服器。
+
+{{site.data.keyword.vmwaresolutions_short}} 不支援套用 VMware 元件的更新及修補程式。您必須自行監視並套用這些更新。
+{:important}
+
+## 套用 IBM 管理元件更新之前
 {: #vc_hybrid_applyingupdates-prereq}
 
-因為已啟用自動更新，所以從 2.5 版開始，不再列出 IBM CloudDriver 更新。例如新增主機、新增叢集及訂購服務等動作，會自動將實例更新至最新版本。如需自動更新的相關資訊，請參閱 [2.5 版的版本注意事項](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-relnotes_v25)中的 *IBM CloudDriver 備援* 小節。
-{:note}
-
-在您嘗試套用更新之前，請按一下向下箭頭來展開更新項目，並驗證下列資訊：
+按一下向下箭頭來展開更新項目，然後驗證下列資訊：
 * 更新的版本。您必須依最早到最新的時間順序來套用更新。套用最新的更新之前，請確定已套用所有先前的更新。例如，嘗試套用 2.4 版更新之前，您必須套用 2.3 版更新。
 * 是否需要關閉時間。
 * 完成更新的總估計時間。
@@ -43,31 +50,22 @@ subcollection: vmwaresolutions
 |中|此更新可能會影響部分系統。建議您在排定的關閉時間套用它。|  
 |重大|此更新會影響部分或所有系統。您必須在排定的關閉時間套用它。|  
 
-## 將更新套用至 vCenter Server with Hybridity Bundle 實例的程序
+## 套用 IBM 管理元件更新的程序（實例 2.3 版及 2.4 版）
 {: #vc_hybrid_applyingupdates-procedure}
 
 1. 從 {{site.data.keyword.vmwaresolutions_full}} 主控台中，按一下左導覽窗格中的**資源**。
 2. 在 **vCenter Server 實例**表格中，按一下要更新的實例。
-3. 在**摘要**頁面上，驗證所有實例詳細資料都已正確顯示。然後，按一下左導覽窗格上的**基礎架構**，以驗證**基礎架構**頁面上的詳細資料。如果未顯示詳細資料，這可能表示因為防火牆規則或其他網路問題的緣故，而有 IBM CloudDriver 虛擬伺服器實例 (VSI) 連線問題。請先解決問題，再繼續下一步，否則更新可能會失敗。
-4. 在左導覽窗格上，按一下**更新及修補程式**。
+3. 在**摘要**頁面上，驗證所有實例詳細資料都已正確顯示。然後，按一下左導覽窗格上的**基礎架構**，以驗證**基礎架構**頁面上的詳細資料。
 
-   **更新及修補程式**頁面只包含用來更新 IBM 管理元件的套件，而不包含 VMware 更新。{{site.data.keyword.vmwaresolutions_short}} 會針對下列作業套用 VMware 更新：
-   * 部署新的 vCenter Server 實例時。
-   * 新增 ESXi 伺服器時，會使用 VMware 更新來佈建新的 ESXi 伺服器，但不會更新現有的 ESXi 伺服器。
-   * 新增叢集時，會使用 VMware 更新來佈建新的叢集，但不會更新現有的叢集。
-   {:note}
+   如果未顯示詳細資料，這可能表示因為防火牆規則或其他網路問題的緣故，而有 IBM CloudDriver 虛擬伺服器實例 (VSI) 連線問題。請先解決問題，再繼續下一步，否則更新可能會失敗。
 
-5. 若要升級授權，請按一下**升級**。從清單中選取您要升級至的版本，然後按一下**升級**。無法進行授權版本降級。
+4. 在左側導覽窗格上按一下**更新及修補程式**，並按一下向下箭頭來展開您要套用的 IBM 管理更新，然後完成下列其中一個步驟：
+   * 若要立即啟動更新，請按一下更新項目之**動作**直欄中的溢位功能表圖示，然後按一下**立即更新**。
+   * 若要排定未來的更新，請按一下更新項目之**動作**直欄中的溢位功能表圖示，然後按一下**排定更新**。選取您要啟動更新的日期、時間及時區。按一下**確定**。
 
-   授權升級會取代實例上的所有現有 NSX 授權。如果您在計費週期中途進行升級，則可能因為新舊授權重疊而產生其他費用。為了避免產生其他費用，建議在計費週期結束時升級授權。
-   {:note}
+5. 如果您要在多站台部署配置中將更新套用至實例，則會顯示標題為**更新所需的步驟**的區段。本節列出多站台部署中所有實例所需的更新作業。您必須對每個步驟按一下**套用更新**，來依序完成步驟。您必須先等待上一步完成，再開始下一步。
 
-6. 對於軟體更新，請按一下向下箭頭來展開您要套用的更新，然後完成下列其中一個步驟：
-   *  若要立即啟動更新，請按一下更新項目之**動作**直欄中的溢位功能表圖示，然後按一下**立即更新**。
-   *  若要排定未來的更新，請按一下更新項目之**動作**直欄中的溢位功能表圖示，然後按一下**排定更新**。選取您要啟動更新的日期、時間及時區。按一下**確定**。
-7. 如果您要在多站台部署配置中將更新套用至 vCenter Server 實例，則會顯示標題為**更新所需要的步驟**的區段。本節列出多站台部署中所有實例所需的更新作業。您必須對每個步驟按一下**套用更新**，來依序完成步驟。您必須先等待上一步完成，再開始下一步。   
-
-## 結果
+## 套用 IBM 管理元件更新之後的結果
 {: #vc_hybrid_applyingupdates-results}
 
 1. 在您套用更新之後，軟體更新狀態清單中會出現一筆記錄，您可以在其中檢視更新的詳細進度及狀態。更新順利完成時，已安裝的軟體更新清單中會出現一筆記錄。
@@ -97,5 +95,6 @@ subcollection: vmwaresolutions
 {: #vc_hybrid_applyingupdates-related}
 
 * [vCenter Server with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)
+* [升級 vCenter Server with Hybridity Bundle 實例的授權](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_upgrade-lic)
 * [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [常見問題](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)

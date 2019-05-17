@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -96,6 +96,6 @@ NSX Edge NAT 규칙에 대한 자세한 정보는 [Managing NAT rules](https://p
 ## 관련 링크
 {: #vc_esg_config-related}
 
-* [문제점 해결](/docs/services/vmwaresolutions/vcenter//vcenter_chg_impact.html)
+* [문제점 해결](/docs/services/vmwaresolutions?topic=vmware-solutions-vcenter_chg_impact#vcenter_chg_impact)
 * [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}

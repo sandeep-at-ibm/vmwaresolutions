@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-29"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -16,7 +16,7 @@ subcollection: vmwaresolutions
 
 Las líneas base tienen una colección de uno o varios parches, extensiones, paquetes de servicio, arreglos de errores o actualizaciones, y se pueden clasificar como líneas base de parches, extensiones o actualización. Los grupos de línea base se ensamblan desde las líneas base existentes. Los grupos de línea base de host pueden tener una sola línea base de actualización y varias líneas base de parche y extensión. Los grupos de línea base de la máquina virtual y del dispositivo virtual pueden tener hasta tres líneas base de actualización: una línea base de actualización de VMware Tools, una línea base de actualización de hardware de máquina virtual y una línea base de actualización de dispositivo virtual.
 
-VUM incluye líneas base predefinidas que no se pueden editar ni suprimir. Puede utilizar las líneas base predefinidas o crear las líneas base de parche, extensión y actualización que cumplan sus criterios. Las líneas base personalizadas que cree y las líneas base predefinidas se pueden combinar en grupos de línea base.
+VMware Update Manager (VUM) incluye líneas base predefinidas que no se pueden editar ni suprimir. Puede utilizar las líneas base predefinidas o crear las líneas base de parche, extensión y actualización que cumplan sus criterios. Las líneas base personalizadas que cree y las líneas base predefinidas se pueden combinar en grupos de línea base.
 
 VUM incluye líneas base predeterminadas que puede utilizar para explorar cualquiera de los dispositivos siguientes para determinar si los hosts de su entorno se actualizan con los últimos parches o si los dispositivos virtuales y las máquinas virtuales se actualizan a la última versión:
 * Cualquier máquina virtual
@@ -34,10 +34,10 @@ Para utilizar las líneas base y los grupos de línea base, debe adjuntarlos a l
 
 1. Mediante el cliente web de vSphere, vaya a **Inicio** > **Hosts y clústeres**.
 2. Pulse el objeto de clúster que desee explorar.
-3. Pulse **Adjuntar línea base**, seleccione las dos líneas base de parches predefinidas y, a continuación, pulse **Aceptar**.
+3. Vaya a VUM, pulse **Adjuntar línea base** y, a continuación, seleccione las dos líneas base de parches predefinidas. Pulse **Aceptar**.
 
 ## Enlaces relacionados
 {: #vum-baselines-related}
 
 * [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demostraciones)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (demostraciones)

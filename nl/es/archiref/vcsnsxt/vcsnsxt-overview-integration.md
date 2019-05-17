@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-03"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -41,7 +41,7 @@ En la integración de {{site.data.keyword.containerlong_notm}} e {{site.data.key
 Desde una perspectiva administrativa, la arquitectura de referencia tiene los siguientes rangos de red conceptual:
 -	**Red de pod de {{site.data.keyword.containerlong_notm}}**: todos los pods que se despliegan en un nodo trabajador tienen asignada una dirección IP privada en el rango 172.30.0.0/16 y se direccionan entre los nodos trabajadores. Para evitar conflictos, no utilice este rango de IP en ninguno de los nodos que se comuniquen con los nodos trabajadores. Los nodos trabajadores y los pods se pueden comunicar de forma segura en la red privada utilizando direcciones IP privadas. Sin embargo, cuando un pod se cuelga o cuando es necesario volver a crear un nodo trabajador, se asigna una nueva dirección IP privada.
 -	**Red del servicio {{site.data.keyword.containerlong_notm}}**: {{site.data.keyword.containerlong_notm}} utiliza 172.21.0.0/16 para las direcciones de servicio del clúster. Estos son los otros dos rangos de direcciones IP:
-    - Público: una subred portátil pública con un rango de direcciones IP proporcionado por {{site.data.keyword.cloud_notm}}. Este rango de direcciones IP se utiliza para exponer apps a internet a través de los servicios ALB o Ingress.
+    - Público: una subred portátil pública con un rango de direcciones IP proporcionado por {{site.data.keyword.cloud_notm}}. Este rango de direcciones IP se utiliza para exponer apps a Internet a través de los servicios ALB o Ingress.
     - Privado: una subred portátil privada con un rango de direcciones IP proporcionado por {{site.data.keyword.cloud_notm}}. Este rango de direcciones IP se utiliza para exponer apps a la red privada a través de los servicios ALB o Ingress.
 - **Red de nodos trabajadores de {{site.data.keyword.containerlong_notm}}**: hay dos rangos de direcciones IP de red de nodo trabajador:
     - Público: una subred primaria pública con un rango de direcciones IP proporcionado por {{site.data.keyword.cloud_notm}}.
@@ -130,14 +130,14 @@ El modo en que se llenan las tablas de rutas en el ESG y en los vRouters depende
 ## Enlaces relacionados
 {: #vcsnsxt-overview-integration-related}
 
-* [Red de {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud-computing/bluemix/our-network)
+* [Centros de datos globales de {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/data-centers/)
 * [Documento sobre contenedores](https://communities.vmware.com/servlet/JiveServlet/download/2741654-198902/Containers%20and%20Container%20Networking%20for%20Network%20Engineers.pdf) (descarga de PDF)
 * [Blog de VMware HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/blogs/bluemix/2018/01/vmware-hcx-ibm-cloud-aka-really-cool-space-age-kind-now-available/)
 * [Hoja de datos de VMware HCX on {{site.data.keyword.cloud_notm}}](https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=26012526USEN)
 * [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
 * [Máximos de la configuración de NSX for vSphere 6.4.3](https://configmax.vmware.com/guest)
 * [Documentación de la plataforma {{site.data.keyword.cloud_notm}}](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.0/kc_welcome_containers.html)
-* [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-container_index)
+* [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-getting-started#getting-started)
 * [Proyecto Calico](https://www.projectcalico.org/)
 * [GitHub-Calico](https://github.com/projectcalico/calico)
 * [Kubernetes](https://kubernetes.io/)

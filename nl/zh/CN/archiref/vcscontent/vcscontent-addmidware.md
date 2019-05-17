@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -126,7 +126,7 @@ subcollection: vmwaresolutions
   -	Web Terminal（开放式源代码）
   -	Skydive – 网络分析器（开放式源代码）
 
-对于 Stock Trader，根据 Jane 的解决方案体系结构，Todd 将从 [Db2](https://console.cloud.ibm.com/catalog/services/db2-hosted)、[MQ](https://console.cloud.ibm.com/catalog/services/mq) 和 [Redis](https://console.cloud.ibm.com/catalog/services/databases-for-redis) 着手。
+对于 Stock Trader，根据 Jane 的解决方案体系结构，Todd 将从 [Db2](https://cloud.ibm.com/catalog/services/db2-hosted)、[MQ](https://cloud.ibm.com/catalog/services/mq) 和 [Redis](https://cloud.ibm.com/catalog/services/databases-for-redis) 着手。
 
 ## 添加中间件
 {: #vcscontent-addmidware-add-middleware}

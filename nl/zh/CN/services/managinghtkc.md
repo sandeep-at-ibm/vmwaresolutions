@@ -4,12 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 管理 HyTrust KeyControl on IBM Cloud
 {: #managinghtkc}

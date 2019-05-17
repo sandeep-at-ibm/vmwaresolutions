@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -62,7 +62,7 @@ Si les paramètres HTTPS ne sont pas définis, utilisez la commande suivante :
 ### Configuration de vSAN pour utiliser le proxy
 {: #vum-updating-vsan-config-vsan-proxy}
 
-1. Accédez à **Home** > **Hosts and Clusters**, sélectionnez **vSAN cluster** dans le panneau de navigation, puis sélectionnez l'onglet **Configure** et accédez à **vSAN**, puis **General**. Faites défiler l'écran jusqu'à la section **Internet Connectivity** et cliquez sur **Edit**.
+1. Accédez à **Home** > **Hosts and Clusters**, sélectionnez **vSAN cluster** dans le panneau de navigation, puis sélectionnez l'onglet **Configure** et accédez à **vSAN**, puis à **General**. Faites défiler l'écran jusqu'à la section **Internet Connectivity** et cliquez sur **Edit**.
 2. Entrez l'adresse IP et le numéro de port du proxy, puis cliquez sur **OK**.
 
 ### Activation du programme d'amélioration de l'expérience client (CEIP)
@@ -90,9 +90,9 @@ Avant de lancer le processus de mise à niveau de vSAN, vérifiez que les condit
   - VCSA doit être au niveau de correctif supérieur ou égal aux hôtes vSphere ESXi. Mettez à jour VCSA si nécessaire
   - Tous les hôtes doivent exécuter la même génération d'ESXi. Si les versions de l'hôte vSphere ESXi ne correspondent pas, effectuez une mise à jour
 * **Tous les disques vSAN doivent être sains** :
-  - Aucun disque n'est à l'état d'échec ou absent. Vous pouvez le vérifier via la vue **vSAN Disk Management** dans le client vSphere Web Client. **Home** > **Hosts and Clusters**, en sélectionnant le **cluster vSAN** puis en cliquant sur l'onglet **vSAN**, puis sur **Physical Disks**. Faites défiler tous les disques et consultez le statut vSAN Health Status.
+  - Aucun disque n'est à l'état d'échec ou absent. Vous pouvez le vérifier via la vue **vSAN Disk Management** dans le client vSphere Web Client. Accédez à **Home** > **Hosts and Clusters**, sélectionnez **vSAN Cluster** et cliquez sur l'onglet **vSAN** puis sur **Physical Disks**. Faites défiler tous les disques et consultez le statut vSAN Health Status.
   - Aucun objet vSAN n'est inaccessible. Vous pouvez le vérifier avec le service **vSAN Health Service** en cliquant sur **Home** > **Hosts and Clusters**, puis en sélectionnant **vSAN Cluster**. Cliquez sur l'onglet **Monitor**, **vSAN**, puis sur **Health**. Consultez les résultats de test.
-  - Il n'y a aucune resynchronisation active au lancement du processus de mise à niveau en cliquant sur **Home** > **Hosts and Clusters**, puis en sélectionnant **vSAN Cluster** et en cliquant sur l'onglet **vSAN**, puis sur **Resync Components**. _Le nombre de composants de resynchronisation doit être 0_. Une activité de resynchronisation est attendue lors du processus de mise à niveau, car les données doivent être synchronisées après les redémarrages d'hôte.
+  - Il n'y a aucune resynchronisation active au lancement du processus de mise à niveau. Cliquez sur **Home** > **Hosts and Clusters**, sélectionnez **vSAN Cluster** et cliquez sur l'onglet **vSAN** puis sur **Resync Components**. _Le nombre de composants de resynchronisation doit être 0_. Une activité de resynchronisation est attendue lors du processus de mise à niveau, car les données doivent être synchronisées après les redémarrages d'hôte.
 * **Préparation de l'hôte vSphere ESXi** - Lorsque vous placez un hôte en mode maintenance dans un cluster vSAN, vous disposez de trois options au choix :
   - **No data migration** - Si vous sélectionnez cette option, vSAN n'évacue aucune données en provenance de cet hôte. Si vous mettez hors tension ou retirez l'hôte du cluster, certaines machines virtuelles risquent de ne plus être accessibles.
   - **Ensure availability** - Si vous sélectionnez cette option, vSAN vous permet de placer l'hôte en mode maintenance plus rapidement qu'avec l'option Full data migration et autorise l'accès aux machines virtuelles dans l'environnement.
@@ -153,4 +153,4 @@ De nombreuses tâches administratives de base peuvent s'effectuer avec plus d'ef
 {: #vum-updating-vsan-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (démonstrations)
+* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (démonstrations)

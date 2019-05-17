@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-20"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -63,7 +63,7 @@ vCenter Server 배치에는 실제 인프라에 대한 엄격한 요구사항이
 |WDC06 |워싱턴, DC |북미 동부 | Skylake, SAP 인증, Broadwell |
 |WDC07 |워싱턴, DC |북미 동부 | Skylake, SAP 인증, Broadwell |
 
-가용성 및 자원 명세 제공에 따라 {{site.data.keyword.CloudDataCents_notm}}는 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 상태 표시기를 표시하여 배치를 계획할 수 있습니다.
+가용성 및 인벤토리 제공에 따라 {{site.data.keyword.CloudDataCents_notm}}는 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 상태 표시기를 표시하여 배치를 계획할 수 있습니다.
 
 표 2. vCenter Server 인스턴스 주문 시 {{site.data.keyword.CloudDataCents_notm}}에 대한 상태 표시기
 
@@ -71,7 +71,7 @@ vCenter Server 배치에는 실제 인프라에 대한 엄격한 요구사항이
 |:------------------------------|:--------------------------------------------------|
 |서비스 예정                   |{{site.data.keyword.CloudDataCent_notm}}는 현재 사용할 수 없습니다. |
 |임시적으로 사용 불가능  |{{site.data.keyword.CloudDataCent_notm}}는 현재 사용 가능하지 않습니다. |
-|제한된 자원 명세             |{{site.data.keyword.CloudDataCent_notm}}에는 제한된 가용성이 있으며 주문이 완료되지 않을 수 있습니다. |
+|제한된 인벤토리             |{{site.data.keyword.CloudDataCent_notm}}에는 제한된 가용성이 있으며 주문이 완료되지 않을 수 있습니다. |
 
 ## 관리 컴포넌트의 백업
 {: #vc_planning-backup-mgmt-components}

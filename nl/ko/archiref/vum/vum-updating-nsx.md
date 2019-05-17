@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -54,11 +54,11 @@ NSX Manager를 업그레이드된 후 NSX를 다운그레이드할 수 없습니
   - 업로드가 완료되면 NSX Manager 로그인 페이지로 경로 재지정됩니다. 다시 로그인하여 현재 소프트웨어 버전 표시가 올바른지 확인하십시오.
 7. **NSX Controller 클러스터 업그레이드**:
   - vSphere Web Client를 열고 VCSA에 로그인하십시오.
-  - **홈** > **네트워킹 및 보안** > **설치**로 이동하여 **관리 탭**을 선택하고 제어기 클러스터 상태 열에서 **업그레이드 사용 가능**을 클릭하십시오.
+  - **홈** > **네트워킹 및 보안** > **설치**로 이동하여 **관리** 탭을 선택하고 제어기 클러스터 상태 열에서 **업그레이드 사용 가능**을 클릭하십시오.
   - 사용자 환경의 제어기가 차례로 업그레이드되고 다시 부팅됩니다. 업그레이드를 시작하면 시스템에서 업그레이드 파일을 다운로드하고, 각 제어기를 업그레이드하고, 각 제어기를 다시 시작하고, 각 제어기의 업그레이드 상태를 업데이트합니다.
 8. **NSX 호스트 클러스터 업그레이드**:
   - NSX Manager 및 NSX Controller를 업그레이드하면 호스트 클러스터가 vSphere ESXi 호스트의 NSX VIB로 업데이트됩니다.
-  - vSphere Web Client에서 **홈** > **네트워킹 및 보안** > **설치**로 이동하고 **호스트 준비 탭**을 선택하십시오. 업그레이드할 각 클러스터에 대해 **업그레이드 사용 가능**을 클릭하십시오. 설치 상태에 설치 중이 표시됩니다.
+  - vSphere Web Client에서 **홈** > **네트워킹 및 보안** > **설치**로 이동하고 **호스트 준비** 탭을 선택하십시오. 업그레이드할 각 클러스터에 대해 **업그레이드 사용 가능**을 클릭하십시오. 설치 상태에 설치 중이 표시됩니다.
   - 클러스터 설치 상태에 _준비되지 않음_이 표시됩니다. **준비되지 않음**을 클릭하여 자세한 정보를 표시하고 **모두 해결**을 클릭하여 VIB 설치를 완료하십시오. 호스트가 유지보수 모드로 전환되며 업그레이드 완료를 위해 필요한 경우 다시 부팅됩니다. 설치 상태 열에 설치 중이 표시됩니다. 업그레이드가 완료되면 설치 상태 열에 초록색 확인 표시와 업그레이드된 NSX 버전이 표시됩니다.
 9. **Edge Services Gateway**:
   - 업그레이드 프로세스 중에 새 Edge 가상 어플라이언스가 기존 Edge 가상 어플라이언스와 함께 배치됩니다. 새 Edge가 준비되면 이전 Edge의 vNIC 연결이 끊기고 새 Edge의 vNIC가 연결됩니다. 그런 다음 새 Edge가 GARP(Gratuitous ARP) 패킷을 전송하여 연결된 스위치의 ARP 캐시를 업데이트합니다. HA가 배치되는 경우 업그레이드 프로세스가 두 번 수행됩니다. 이 프로세스는 패킷 전달에 일시적으로 영향을 줄 수 있습니다.
@@ -69,4 +69,4 @@ NSX Manager를 업그레이드된 후 NSX를 다운그레이드할 수 없습니
 {: #vum-updating-nsx-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 솔루션 아키텍처](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} 디지털 기술 업무](https://ibm-dte.mybluemix.net/ibm-vmware)(데모)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} 디지털 기술 업무](https://ibm-dte.mybluemix.net/vmware)(데모)

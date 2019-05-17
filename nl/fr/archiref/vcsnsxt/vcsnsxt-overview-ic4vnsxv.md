@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-02-19"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -34,9 +34,9 @@ La vue d'ensemble de réseau NSX-V Manager présentée ci-dessous illustre l'emp
 Figure 1. Vue d'ensemble de réseau NSX-V Manager
 ![Vue d'ensemble de réseau NSX-V Manager](vcsnsxt-vmgmt.svg)
 
-Après le déploiement initial, l'automatisation d'{{site.data.keyword.cloud}} déploie trois contrôleurs NSX dans le cluster initial. Les contrôleurs se voient affecter une adresse IP provenant du sous-réseau portable **privé A** destiné aux composants de gestion. Les règles d'anti-affinité MV–MV sont créées de telle sorte que les contrôleurs soient répartis parmi les hôtes du cluster. Le cluster initial doit être déployé avec un minimum de trois noeuds pour garantir la haute disponibilité des contrôleurs.
+Après le déploiement initial, l'automatisation {{site.data.keyword.cloud}} déploie trois contrôleurs NSX dans le cluster initial. Les contrôleurs se voient affecter une adresse IP provenant du sous-réseau portable **privé A** destiné aux composants de gestion. Les règles d'anti-affinité MV–MV sont créées de telle sorte que les contrôleurs soient répartis parmi les hôtes du cluster. Le cluster initial doit être déployé avec un minimum de trois noeuds pour garantir la haute disponibilité des contrôleurs.
 
-Outre les contrôleurs, l'automatisation d'{{site.data.keyword.cloud_notm}} prépare les hôtes vSphere déployés avec NSX VIBS pour permettre l'utilisation d'un réseau virtuel via des point d'extrémité de tunnel VXLAN (VTEP). Les VTEP se voient affecter des adresses IP provenant de la plage d'adresses IP du sous-réseau portable **Privé A** qui est spécifié pour les VTEP. Le trafic VXLAN réside sur le réseau local virtuel non balisé et est affecté au commutateur vDS privé. Par la suite, un pool d'ID de segment est affecté et les hôtes du cluster sont ajoutés à la zone de transfert. Seul unicast est utilisé dans la zone de transfert car la surveillance IGMP n'est pas configurée dans {{site.data.keyword.cloud_notm}}.
+Outre les contrôleurs, l'automatisation {{site.data.keyword.cloud_notm}} prépare les hôtes vSphere déployés avec NSX VIBS pour permettre l'utilisation d'un réseau virtuel via des point d'extrémité de tunnel VXLAN (VTEP). Les VTEP se voient affecter des adresses IP provenant de la plage d'adresses IP du sous-réseau portable **Privé A** qui est spécifié pour les VTEP. Le trafic VXLAN réside sur le réseau local virtuel non balisé et est affecté au commutateur vDS privé. Par la suite, un pool d'ID de segment est affecté et les hôtes du cluster sont ajoutés à la zone de transfert. Seul unicast est utilisé dans la zone de transfert car la surveillance IGMP n'est pas configurée dans {{site.data.keyword.cloud_notm}}.
 
 Des paires de passerelles NSX ESG (Edge Services Gateway) sont ensuite déployées. Pour tous les déploiements, une paire de passerelles est utilisée pour le trafic sortant des composants d'automatisation qui résident sur le réseau privé. Les instances VMware vCenter Server on {{site.data.keyword.cloud_notm}} incluent une seconde passerelle, appelée serveur de périphérie géré par le client, qui est déployée et configurée avec une liaison montante au réseau public et une interface qui est affectée au réseau privé. Les composants NSX requis, tels que les routeurs DLR (Distributed Logical Router), les commutateurs logiques et les pare-feux peuvent être configurés par l'administrateur.
 

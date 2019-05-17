@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -16,14 +16,14 @@ subcollection: vmwaresolutions
 VMware HCX on IBM Cloud를 설치하려면 다음 소프트웨어 요구사항이 필요합니다.
 * vSphere 5.5 U3 또는 vSphere 6.0u2 이상
 * NSX가 사용된 경우 버전 6.2.2 이상이 필요합니다. 정책 마이그레이션에 NSX가 필요합니다.
-* 교차 클라우드 vMotion을 사용하기 위해 동일한 유사성 제한사항이 온프레미스에서와 같이 클라우드에 적용됩니다. 자세한 정보는 [VMware EVC 및 CPU 호환성 FAQ](http://bit.ly/2vK6Sp5)를 참조하십시오.
+* 교차 클라우드 vMotion을 사용하기 위해 동일한 유사성 제한사항이 온프레미스에서와 같이 클라우드에 적용됩니다. 자세한 정보는 [VMware EVC 및 CPU 호환성 FAQ](https://kb.vmware.com/s/article/1005764)를 참조하십시오.
 
 ## 네트워크 연결 구성
 {: #hcx-archi-prep-install-config-net}
 
 HCX는 공용 인터넷 및 사설 회선을 순회하고 네트워크, 스위치 및 포트 그룹과 같은 데이터 센터 컴포넌트에 연결해야 합니다.
 * [포트 액세스 요구사항](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-port-req)에는 HCX 가상 어플라이언스가 설치될 수 있도록 열려 있어야 하는 포트가 나열되어 있습니다.
-* 온프레미스 vSphere 환경 및 VCF/VCS HCX Cloud 환경은 모두 vSphere 온프레미스 디바이스와 VCF/VCS HCX 디바이스 사이에 NTP(Network Time Protocol) 클록 동기화를 허용해야 합니다. UDP 포트 123은 HCX 가상 어플라이언스 및 네트워크에 액세스할 수 있어야 합니다.
+* 온프레미스 vSphere 환경 및 VCS HCX Cloud 환경은 모두 vSphere 온프레미스 디바이스와 VCS HCX 디바이스 사이에 NTP(Network Time Protocol) 클럭 동기화를 허용해야 합니다. UDP 포트 123은 HCX 가상 어플라이언스 및 네트워크에 액세스할 수 있어야 합니다.
 
 ## 온프레미스 환경
 {: #hcx-archi-prep-install-on-prem-env}
@@ -49,11 +49,11 @@ HCX를 설치하기 전에 사용자의 환경이 수행할 태스크를 지원�
   * vSphere Enterprise Plus 라이센스
   * vDS(vSphere Distributed Switch)가 있어야 합니다. 분배 스위치는 vSphere Enterprise Plus Edition에 사용 가능합니다.
   * 설치된 경우 온프레미스 Layer 2 Concentrator 서비스 어플라이언스에는 확장될 vNIC 포트 및 VLAN에 액세스할 수 있는 권한이 있어야 합니다.
-  * 네트워크가 공용 인터넷 또는 VPN(대체 경로게 있음)을 통해 확장될 경우 VCF/VCS의 L2C 가상 머신에는 IP 주소가 필요합니다. Layer 2 Concentrator를 구성하려면 원격 IP 주소가 필요합니다.
+  * 네트워크가 공용 인터넷 또는 VPN(대체 경로에 있음)을 통해 확장될 경우 VCS의 L2C 가상 머신에는 IP 주소가 필요합니다. Layer 2 Concentrator를 구성하려면 원격 IP 주소가 필요합니다.
   * 다중 Layer 2 Concentrator가 필요한 경우 각 Layer 2 Concentrator에는 온프레미스 및 클라우드에 IP 주소가 있어야 합니다.
 
 ## 관련 링크
 {: #hcx-archi-prep-install-related}
 
 * [소스에 HCX 설치 및 구성](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-install-cfg-src)
-* [VMware EVC 및 CPU 호환성 FAQ](http://bit.ly/2vK6Sp5)
+* [VMware EVC 및 CPU 호환성 FAQ](https://kb.vmware.com/s/article/1005764)

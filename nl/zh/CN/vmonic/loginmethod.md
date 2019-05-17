@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -28,7 +28,7 @@ subcollection: vmwaresolutions
 {: #loginmethod-cloud-catalog}
 
 要在 {{site.data.keyword.cloud_notm}}“目录”中访问该控制台，请完成以下步骤：
-1. 转至 https://console.cloud.ibm.com。
+1. 转至 https://cloud.ibm.com。
 2. 使用 **IBM 标识**帐户登录到 {{site.data.keyword.cloud_notm}}。
 3. 单击条幅左侧的**目录**。
 4. 在**目录**页面顶部的搜索框中，输入 **VMware Solutions**。

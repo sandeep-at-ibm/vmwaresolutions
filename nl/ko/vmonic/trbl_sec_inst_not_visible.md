@@ -6,12 +6,12 @@ copyright:
 
 lastupdated: "2019-02-14"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
 
-# vSphere Web Client 자원 명세에 보조 vCenter Server 시스템이 표시되지 않음
+# vSphere Web Client 인벤토리에 보조 vCenter Server 시스템이 표시되지 않음
 {: #trbl_sec_inst_not_visible}
 
 ## 문제점

@@ -30,13 +30,13 @@
      inkscape:window-height="1027"
      id="namedview1047"
      showgrid="false"
-     inkscape:zoom="0.90941254"
-     inkscape:cx="608.07308"
-     inkscape:cy="330.43071"
-     inkscape:window-x="-32000"
-     inkscape:window-y="-32000"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="svg1045" /><metadata
+     inkscape:zoom="1.2861035"
+     inkscape:cx="635.94371"
+     inkscape:cy="416.57825"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g622" /><metadata
      id="metadata2"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><style
@@ -228,7 +228,7 @@
        transform="translate(43.666 465.67)"
        font-family="IBMPlexSans"
        font-size="12px"
-       id="text43">Gestione interna (sottorete protatile infrastruttura IBM Cloud)</text>
+       id="text43">Gestione interna (sottorete portatile infrastruttura IBM Cloud)</text>
 <line
        class="st7"
        x1="303"
@@ -827,8 +827,10 @@
          d="m859.5 542.1c-2-14.3-6.9-28.6-19.2-37.2-12.4-8.7-28.8-10.6-43.4-8.6-32.8 4.5-58 27.5-78.8 51.7-13.5 15.7-26.5 31.8-39.7 47.8 2.4 0.3 4.7 0.6 7.1 0.9-8.4-11.5-7-26.1-4.7-39.3 2.9-16.7 6.2-33.4 9.3-50.1 3.7-19.8 14.6-55.7-10.7-66.4-12.2-5.1-25.9-0.5-38.6-1.2-13.2-0.8-24.8-6.3-27.3-20.4-1.4-7.8-0.9-16.2-1-24.1-0.2-8.3-0.3-16.7-0.5-25-0.3-17.3-0.6-34.7-1-52-0.6-34-1.3-68-1.9-102-0.2-8.7-0.3-17.3-0.5-26-0.1-7.3 0.2-14.8-1.2-22-2.7-14-15.2-18.4-27.9-20.3-11.9-1.8-25.1-1.3-35.5 5.4-10.7 6.8-15.9 18.4-18.9 30.3-6.7 26-10.9 53.5-30.7 73.5-19.2 19.2-47.3 23.9-73.4 24.1-13.7 0.1-27.9-0.2-41.3-2.7-13.3-2.5-26.9-8.3-32.4-21.7-2.3-5.7-2.7-12 0.1-17.6 2.6-5.2-5.2-9.7-7.8-4.5-5.5 10.8-3.4 23.3 3.5 33.1 7.8 11.1 20.3 16.8 33.3 19.3 13.5 2.6 27.7 3.1 41.4 3.1 13.3 0 26.6-0.9 39.6-3.9 26.4-6.1 47.8-22 59.9-46.5 6-12.1 9.9-25.1 12.9-38.3 2.8-12.4 4.4-27 13.6-36.5 9.5-9.8 24.5-10.3 37-7.8 6.8 1.4 14.7 3.1 17.1 10.5 2.3 7 1.4 15.2 1.6 22.5 0.6 34.7 1.3 69.3 1.9 104s1.3 69.3 1.9 104c0.3 13.7-0.9 29.9 9.8 40.3 8.5 8.3 21.1 10.4 32.5 10.3 11.7-0.1 29.1-5.8 37 6 6.7 9.9 3.4 24.5 1.4 35.4-3.2 17-6.4 34.1-9.5 51.1-2.6 13.8-6 28.1-4 42.1 0.9 6.5 3.2 12.6 7.1 17.9 1.5 2.1 5 3.4 7.1 0.9 10.5-12.6 20.9-25.3 31.4-37.9 9.5-11.4 19.2-22.8 30.2-32.8 21-19 51.4-33.9 80-23.6 16.3 5.9 22.2 20.7 24.5 36.7 0.8 5.6 9.5 3.1 8.7-2.5z"
          id="path335" /></g><text
        class="st2 st5"
-       transform="translate(412.67 151.67)"
-       id="text338">VXLAN networkExchange</text>
+       id="text338"
+       x="390.67001"
+       y="151.67"
+       style="font-size:12px;font-family:IBMPlexSans">VXLAN networkExchange</text>
 <line
        class="st31"
        x1="481"
@@ -838,10 +840,10 @@
        id="line340" /><text
        class="st2 st5"
        id="text342"
-       x="374.94025"
-       y="246.36539"
-       style="font-size:11.29814053px;font-family:IBMPlexSans;stroke-width:0.94151175"
-       transform="scale(0.94151173,1.0621217)">VXLAN carico di lavoro</text>
+       x="355.16785"
+       y="257.12823"
+       style="font-size:11.79171753px;font-family:IBMPlexSans;stroke-width:0.98264307"
+       transform="scale(0.98264309,1.0176635)">VXLAN carico di lavoro</text>
 <line
        class="st31"
        x1="354"
@@ -1413,18 +1415,18 @@
          id="text616">VPN site to site</text>
 <text
          class="st11 st5"
-         x="817.39154"
-         y="232.91583"
+         x="818.57721"
+         y="232.57893"
          id="text618"
-         transform="scale(0.88225693,1.1334567)"
-         style="font-size:10.58708286px;font-family:MyriadPro-Regular;stroke-width:0.88225693">Carico di lavoro interno</text>
+         transform="scale(0.88098086,1.1350984)"
+         style="font-size:10.57177067px;font-family:MyriadPro-Regular;stroke-width:0.88098085">Carico di lavoro interno</text>
 <text
          class="st11 st5"
-         x="810.03784"
-         y="289.16263"
+         x="826.9397"
+         y="269.97186"
          id="text620"
-         transform="matrix(0.88902174,-0.01746742,0,1.1248319,0,0)"
-         style="font-size:10.66826057px;font-family:MyriadPro-Regular;stroke-width:0.88902175">Carico di lavoro esterno</text>
+         transform="scale(0.87087701,1.1482678)"
+         style="font-size:10.45052433px;font-family:MyriadPro-Regular;stroke-width:0.87087703">Carico di lavoro esterno</text>
 </g><g
        class="st46"
        transform="translate(0,-64)"
@@ -1599,7 +1601,7 @@
        class="st2 st5"
        x="0"
        y="0"
-       id="tspan701"> Applicazione</tspan><tspan
+       id="tspan701"> Dispositivo</tspan><tspan
        class="st2 st5"
        x="0"
        y="14.4"

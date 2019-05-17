@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -129,7 +129,7 @@ Cloud Private(카탈로그에서의 검색 및 시도를 위해 ILAN 라이센�
   -	Web Terminal(오픈 소스)
   -	Skydive – 네트워크 분석기(오픈 소스)
 
-Stock Trader의 경우 Jane의 솔루션 아키텍처를 기반으로 Todd는 [Db2](https://console.cloud.ibm.com/catalog/services/db2-hosted), [MQ](https://console.cloud.ibm.com/catalog/services/mq) 및 [Redis](https://console.cloud.ibm.com/catalog/services/databases-for-redis)를 사용하여 시작합니다.
+Stock Trader의 경우 Jane의 솔루션 아키텍처를 기반으로 Todd는 [Db2](https://cloud.ibm.com/catalog/services/db2-hosted), [MQ](https://cloud.ibm.com/catalog/services/mq) 및 [Redis](https://cloud.ibm.com/catalog/services/databases-for-redis)를 사용하여 시작합니다.
 
 ## 미들웨어 추가
 {: #vcscontent-addmidware-add-middleware}

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-04-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -75,4 +75,4 @@ FortiGate 300 系列 Security Appliance。
 * [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [常见问题](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [Fortinet Web 站点](https://www.fortinet.com/){:new_window}
-* [Fortinet 文档库](http://docs.fortinet.com/fortigate/admin-guides){:new_window}
+* [Fortinet 文档库](https://docs.fortinet.com/product/fortigate/6.2){:new_window}

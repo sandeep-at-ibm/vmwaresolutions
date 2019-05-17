@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-02-15"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -110,8 +110,8 @@ El modo en que se llenan las tablas de rutas en el ESG y en los vRouters depende
 ## Red de acceso público
 {: #vcsicp-detail-design-network-public-access-net}
 
-De forma predeterminada, {{site.data.keyword.icpfull_notm}} y CAM necesitan conectividad a internet para recuperar imágenes de Docker, diagramas de Helm, plantillas de Terraform y gestores de paquetes del sistema operativo.
-En los releases más recientes, se ofrece soporte para instalaciones basadas en proxy para instalaciones que no están conectadas directamente a internet y tienen opciones para instalar en modalidad fuera de línea.
+De forma predeterminada, {{site.data.keyword.icpfull_notm}} y CAM necesitan conectividad a Internet para recuperar imágenes de Docker, diagramas de Helm, plantillas de Terraform y gestores de paquetes del sistema operativo.
+En los releases más recientes, se ofrece soporte para instalaciones basadas en proxy para instalaciones que no están conectadas directamente a Internet y tienen opciones para instalar en modalidad fuera de línea.
 
 ###	Cortafuegos NSX
 {: #vcsicp-detail-design-network-nsx-firewall}

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-18"
+lastupdated: "2019-04-18"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -30,11 +30,12 @@ V2.9 릴리스부터는 클러스터가 유지보수 모드에 있는 동안 새
 초기 클러스터의 스토리지가 vSAN이었으므로, 배치 후 하나 이상의 ESXi 서버를 추가하면 클러스터 스토리지 용량을 늘릴 수 있습니다.
 
 ## vCenter Server with Hybridity Bundle 인스턴스에 ESXi 서버 추가
+{: #vc_hybrid_addingremovingservers-adding}
 
 ### ESXi 서버를 추가하기 전에
 {: #vc_hybrid_addingremovingservers-adding-prereq}
 
-* VMware vSphere Web Client에서 ESXi 서버를 추가하지 마십시오. vSphere Web Client에서 수행하는 변경사항은 {{site.data.keyword.vmwaresolutions_short}} 콘솔과 동기화되지 않습니다.
+* 가능하면 {{site.data.keyword.vmwaresolutions_full}} 콘솔을 사용하여 ESXi 서버를 추가하십시오. VMware vSphere Web Client에서 수행하는 변경사항은 {{site.data.keyword.vmwaresolutions_short}} 콘솔과 동기화되지 않습니다. 따라서 온프레미스 ESXi 서버 또는 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 관리할 수 없거나 관리하지 않을 ESXi 서버에 대해서만 ESXi 서버를 vCenter Server에 추가하십시오. 
 * vSAN 스토리지는 네 개 이상의 ESXi 서버를 필요로 합니다.
 
 ## ESXi 서버를 추가하는 프로시저
@@ -65,7 +66,7 @@ V2.9 릴리스부터는 클러스터가 유지보수 모드에 있는 동안 새
 ### ESXi 서버를 제거하기 전에
 {: #vc_hybrid_addingremovingservers-removing-prereq}
 
-* VMware vSphere Web Client에서 ESXi 서버를 제거하지 마십시오. vSphere Web Client에서 수행하는 변경사항은 {{site.data.keyword.vmwaresolutions_short}} 콘솔과 동기화되지 않습니다.
+* 가능하면 {{site.data.keyword.vmwaresolutions_full}} 콘솔을 사용하여 ESXi 서버를 제거하십시오. vSphere Web Client에서 수행하는 변경사항은 {{site.data.keyword.vmwaresolutions_short}} 콘솔과 동기화되지 않습니다. 따라서 온프레미스 ESXi 서버 또는 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 관리할 수 없거나 관리하지 않을 ESXi 서버에 대해서만 ESXi 서버를 vCenter Server에서 제거하십시오. 
 * vSAN 스토리지는 네 개 이상의 ESXi 서버를 필요로 합니다.
 * F5 on {{site.data.keyword.cloud_notm}} 또는 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스가 설치된 ESXi 서버를 제거하기 전에 VM을 호스팅하는 ESXi 서버와 다른 ESXi 서버로 F5 BIG-IP 및 FortiGate VM을 마이그레이션해야 합니다.
 * 활성 상태의 오퍼레이션으로 인해 ESXi 서버가 제거되지 않을 수 있으므로, IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 서비스가 설치된 상태에서 ESXi 서버를 제거하기 전에 활성 상태가 아닌(실패 또는 진행 중) 백업 또는 복원 오퍼레이션이 있는지 확인하십시오.
@@ -96,5 +97,5 @@ V2.9 릴리스부터는 클러스터가 유지보수 모드에 있는 동안 새
 * [vCenter Server 명세서](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
 * [vCenter Server with Hybridity Bundle 인스턴스에 대한 요구사항 및 계획](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)
 * [vCenter Server with Hybridity Bundle 인스턴스의 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingviewingclusters)
-* [Place a host in maintenance mode](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
-* [Enhanced vMotion Compatibility (EVC) processor support](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003212){:new_window}
+* [Place a host in maintenance mode](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.resmgmt.doc/GUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
+* [Enhanced vMotion Compatibility (EVC) processor support](https://kb.vmware.com/s/article/1003212){:new_window}

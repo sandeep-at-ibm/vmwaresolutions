@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-22"
+lastupdated: "2019-04-18"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -25,9 +25,11 @@ subcollection: vmwaresolutions
 ## 將叢集新增至 vCenter Server 實例
 {: #vc_nsx-t_addingviewingclusters-adding}
 
-叢集、主機及虛擬機器 (VM) 的數目決定您可以新增的叢集數目上限。您必須遵守 VMware 大小準則及部署限制。
+### 新增叢集之前
+{: #vc_nsx-t_addingviewingclusters-before-add}
 
-如需上限的相關資訊，請參閱 [VMware 配置上限](https://configmax.vmware.com/home){:new_window}。
+* 盡可能使用 {{site.data.keyword.vmwaresolutions_full}} 主控台新增叢集，因為您在 VMware vSphere Web Client 上所做的變更不會與 {{site.data.keyword.vmwaresolutions_short}} 主控台同步。因此，請只針對內部部署叢集或您在 {{site.data.keyword.vmwaresolutions_short}} 主控台中無法或不會管理的叢集，將叢集新增至 vCenter Server。
+* 叢集、主機及虛擬機器 (VM) 的數目決定您可以新增的叢集數目上限。您必須遵守 VMware 大小準則及部署限制。如需上限的相關資訊，請參閱 [VMware 配置上限](https://configmax.vmware.com/home){:new_window}。
 
 ### 系統設定
 {: #vc_nsx-t_addingviewingclusters-adding-sys-settings}
@@ -46,7 +48,7 @@ subcollection: vmwaresolutions
 #### 資料中心位置
 {: #vc_nsx-t_addingviewingclusters-adding-dc-location}
 
-依預設，叢集的 {{site.data.keyword.CloudDataCent}} 位置是設為 vCenter Server 實例的 {{site.data.keyword.CloudDataCent_notm}}。您可以將叢集部署至不同於已部署實例的 {{site.data.keyword.CloudDataCent_notm}}，但您必須確定兩個 {{site.data.keyword.CloudDataCents_notm}} 之間的網路延遲少於 150 毫秒。若要檢查網路延遲，您可以使用 [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/) 之類的工具。
+依預設，叢集的 {{site.data.keyword.CloudDataCent}} 位置是設為 vCenter Server 實例的 {{site.data.keyword.CloudDataCent_notm}}。您可以將叢集部署至不同於已部署實例的 {{site.data.keyword.CloudDataCent_notm}}，但您必須確定兩個 {{site.data.keyword.CloudDataCents_notm}} 之間的網路延遲少於 150 毫秒。若要檢查網路延遲，您可以使用 [Looking Glass](/docs/infrastructure/network-tools?topic=network-tools-about-looking-glass#about-looking-glass) 這類工具。
 
 如果您將叢集部署至不同的 {{site.data.keyword.CloudDataCent_notm}} 或 {{site.data.keyword.cloud_notm}} 基礎架構 Pod，則會額外訂購三個 VLAN，以便與已訂購的 {{site.data.keyword.baremetal_short}} 搭配使用。
 
@@ -83,11 +85,9 @@ subcollection: vmwaresolutions
 #### Bare Metal Server 數目
 {: #vc_nsx-t_addingviewingclusters-adding-bare-metal-number}
 
-叢集至少需要三部 {{site.data.keyword.baremetal_short}}。
-
-您最多可以將 59 部 {{site.data.keyword.baremetal_short}} 新增至一個叢集。您一次可以新增 1 - 59 部 ESXi 伺服器。
-
-部署之後，您最多可以另外建立四個叢集。如果您選取 **Skylake** 或 **Broadwell** Bare Metal Server 配置搭配 VMware vSAN 儲存空間，則起始叢集和部署後的叢集都需要 4 部伺服器。
+* 您訂購的所有伺服器都有相同的配置。
+* 若為 vSAN 儲存空間，您可以訂購 4 到 59 部伺服器。
+* 若為 NFS 儲存空間，您可以訂購 2 到 59 部伺服器。不過，對於正式作業工作負載，建議至少 3 部伺服器。如需相關資訊，請參閱[雙節點 vCenter Server 實例是否為高可用性？](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)。
 
 ### 儲存空間設定
 {: #vc_nsx-t_addingviewingclusters-adding-storage-settings}
@@ -100,9 +100,9 @@ subcollection: vmwaresolutions
 請指定下列 vSAN 選項：
 * **vSAN 容量磁碟的磁碟類型及大小**：選取所需容量磁碟的選項。
 * **vSAN 容量磁碟數目**：指定您要新增的容量磁碟數目。
-* 如果您要新增超過所限制的 8 個容量磁碟，請勾選**高效能 Intel Optane** 方框。這個選項提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟，並且適用於需要較少延遲且較高 IOPS 傳輸量的工作負載。
+* 如果您要新增超過所限制的 10 個容量磁碟，請勾選**高效能 Intel Optane** 方框。這個選項提供 2 個額外容量磁碟機槽來放置共 12 個容量磁碟，並且適用於需要較少延遲且較高 IOPS 傳輸量的工作負載。
 
-  **高效能 Intel Optane** 選項僅適用於 Skylake CPU 型號「雙重 Intel Xeon Gold 5120」及「雙重 Intel Xeon Gold 6140」。
+  **高效能 Intel Optane** 選項僅適用於 Skylake CPU 型號。
   {:note}
 
 * 檢閱 **vSAN 快取磁碟的磁碟類型**及 **vSAN 快取磁碟數目**值。這些值取決於您是否已勾選**高效能 Intel Optane** 方框。
@@ -271,6 +271,7 @@ subcollection: vmwaresolutions
 ### 刪除之前
 {: #vc_nsx-t_addingviewingclusters-deleting-prereq}
 
+* 盡可能使用 {{site.data.keyword.vmwaresolutions_full}} 主控台刪除叢集，因為您在 VMware vSphere Web Client 上所做的變更不會與 {{site.data.keyword.vmwaresolutions_short}} 主控台同步。因此，請只針對內部部署叢集或您在 {{site.data.keyword.vmwaresolutions_short}} 主控台中無法或不會管理的叢集，刪除 vCenter Server 中的叢集。
 * 您一次可以刪除單一叢集。若要刪除多個叢集，您必須依序進行。請等待前一個叢集刪除後，再刪除下一個叢集。
 * 在您刪除叢集之前，請確定叢集裡的所有節點都已開啟電源且正常運作。
 * 當您刪除叢集時，也會一併刪除叢集中的所有 VM，且無法回復。如果您要保留 VM，請將它們移轉至其他叢集。

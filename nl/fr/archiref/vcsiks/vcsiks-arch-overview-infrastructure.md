@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-19"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -100,7 +100,7 @@ NSX Manager est déployé sur le cluster vCenter Server initial. De plus, NSX Ma
 ### Contrôleurs NSX
 {: #vcsiks-arch-overview-infrastructure-nsx-controllers}
 
-L'automatisation d'{{site.data.keyword.cloud_notm}} déploie trois contrôleurs NSX dans le cluster initial. Les contrôleurs se voient affecter des adresses IP provenant du sous-réseau portable privé destiné aux composants de gestion.
+L'automatisation {{site.data.keyword.cloud_notm}} déploie trois contrôleurs NSX dans le cluster initial. Les contrôleurs se voient affecter des adresses IP provenant du sous-réseau portable privé destiné aux composants de gestion.
 
 ### Passerelles NSX ESG/Routeurs DLR
 {: #vcsiks-arch-overview-infrastructure-nsx-esg}

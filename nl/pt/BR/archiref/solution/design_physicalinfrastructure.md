@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -50,7 +50,7 @@ O host físico emprega dois discos conectados localmente que são alocados para 
 host físico tem conexões de rede redundantes de 10 Gbps para o acesso público e privado à rede.
 
 O Bare Metal Server tem as especificações a seguir:
-* CPU: Dual Intel Xeon, configuração variada de núcleo e velocidade
+* CPU: Dual ou Quad Intel Xeon, configuração variada de núcleo e velocidade
 * Memória: configuração variada, 64 GB ou maior
 * Rede: 4 x 10 Gbps
 * Número de unidades: 2 ou mais
@@ -63,7 +63,7 @@ A rede física é manipulada pelo {{site.data.keyword.cloud_notm}}. Revise as de
 ### Visão geral da rede do IBM Cloud
 {: #design_physicalinfrastructure-ibm-cloud-network}
 
-A rede física do {{site.data.keyword.cloud_notm}} é separada em duas redes distintas: pública e privada. A rede privada contém o tráfego da Intelligent Platform Management Interface (IPMI) do gerenciamento fora da banda para os servidores físicos.
+A rede física do {{site.data.keyword.cloud_notm}} é separada em duas redes distintas: pública e privada. A rede privada também contém o tráfego do Intelligent Platform Management Interface (IPMI) de gerenciamento para os servidores físicos.
 
 Figura 2. Rede de alto nível do {{site.data.keyword.cloud_notm}}
 ![Rede de alto nível do {{site.data.keyword.cloud_notm}}](vcsv4radiagrams-ra-ibmcloudnetwork.svg)
@@ -87,7 +87,7 @@ Semelhante à rede pública, a rede privada tem multicamadas nesses servidores e
 #### Rede de gerenciamento
 {: #design_physicalinfrastructure-mgmt-net}
 
-Além das redes pública e privada, cada servidor do {{site.data.keyword.cloud_notm}} é conectado para o gerenciamento fora da banda para a sub-rede de rede primária privada. Essa conexão permite o acesso da Intelligent Platform Management Interface (IPMI) ao servidor independentemente de sua CPU, firmware e sistema operacional, para propósitos de manutenção e administração.
+Além das redes pública e privada, cada servidor {{site.data.keyword.cloud_notm}} é conectado para gerenciamento à sub-rede de rede primária privada. Essa conexão permite o acesso da Intelligent Platform Management Interface (IPMI) ao servidor independentemente de sua CPU, firmware e sistema operacional, para propósitos de manutenção e administração.
 
 #### Blocos IP primários e móveis
 {: #design_physicalinfrastructure-ip-blocks}
@@ -115,12 +115,12 @@ A remoção da conectividade de rede física para a rede pública ou privada par
 Figura 3. Conexões de host físico</br>
 ![Conexões de host físico](vcsv4radiagrams-ra-physical-host-connections.svg "Conexões de host físico")
 
-#### VLANs e roteamento de subposição a sobreposição
+#### VLANs e roteamento de base para sobreposição
 {: #design_physicalinfrastructure-vlans}
 
-As ofertas do {{site.data.keyword.vmwaresolutions_short}} são projetadas com 3 VLANs, uma pública e duas privadas, designadas na implementação. Conforme mostrado na figura anterior, a VLAN pública é designada a eth1 e a eth3, e as VLANs privadas são designadas a eth0 e a eth2.
+As ofertas do {{site.data.keyword.vmwaresolutions_short}} são projetadas com 3 VLANs, uma pública e duas privadas, designadas na implementação. Conforme mostrado na figura anterior, a VLAN pública é designada a `eth1` e `eth3` e as VLANs privadas são designadas a `eth0` e `eth2`.
 
-A primeira VLAN privada e a pública criadas e designadas nesse design são não identificadas por padrão dentro do {{site.data.keyword.cloud_notm}}. Então, a VLAN privada adicional é truncada nas portas do comutador físico e identificada dentro dos grupos de portas do VMware que estão usando essas sub-redes.
+A primeira VLAN privada e a pública criadas e designadas nesse design são não identificadas por padrão dentro do {{site.data.keyword.cloud_notm}}. Em seguida, a VLAN privada adicional é truncada nas portas do comutador físico e identificada dentro dos grupos de portas do VMware que estão usando essas sub-redes.
 
 A rede privada consiste em duas VLANs dentro desse design. Três sub-redes são alocadas para a primeira dessas VLANs (aqui designada VLAN privada A):
 * A primeira sub-rede é um intervalo de sub-rede privada de IP primário que o {{site.data.keyword.cloud_notm}} designa aos hosts físicos.
@@ -134,7 +134,7 @@ Além da VLAN privada A, uma segunda VLAN privada (aqui designada VLAN privada B
    * Ao usar o NFS conectado ao NAS, uma sub-rede é designada a um grupo da porta que é dedicado ao tráfego do NFS.
    * Para o anexo da iSCSI, dois grupos de portas são criados para permitir os caminhos múltiplos ativos-ativos em ambas as portas do NIC privadas, uma vez que somente uma porta do NIC pode estar ativa de cada vez conforme a documentação da VMware iSCSI.
 
-Todas as sub-redes configuradas como parte de uma implementação automatizada do vCenter Server ou do Cloud Foundation usam os intervalos gerenciados do {{site.data.keyword.cloud_notm}}. Isso é para assegurar que qualquer endereço IP possa ser roteado para qualquer data center dentro da conta do {{site.data.keyword.cloud_notm}} quando você precisar da conexão agora ou no futuro.
+Todas as sub-redes que são configuradas como parte de uma implementação automatizada do vCenter Server usam intervalos gerenciados pelo {{site.data.keyword.cloud_notm}}. Isso é para assegurar que qualquer endereço IP possa ser roteado para qualquer data center dentro da conta do {{site.data.keyword.cloud_notm}} quando você precisar da conexão agora ou no futuro.
 
 Revise a tabela a seguir para obter um resumo.
 
@@ -143,10 +143,10 @@ Tabela 1. Resumo de VLAN e sub-rede
 | VLAN | Tipo | Descrição |
 |:---- |:---- |:----------- |
 | Pública| Primária  | Designada a hosts físicos para acesso à rede pública. Não usada na implementação inicial. |
-| Privado A | Primária  | Sub-rede única designada a hosts físicos designados pelo {{site.data.keyword.cloud_notm}}. Usada pela interface de gerenciamento para o tráfego de gerenciamento do vSphere. |
-| Privado A | Portable | Sub-rede única designada a máquinas virtuais que funcionam como componentes de gerenciamento |
-| Privado A | Portable | Sub-rede única que é designada ao NSX-V ou ao NSX-T VTEP |
-| Privado A | Portable | Sub-rede única que será designada para vSAN, se em uso |
+| Privada A | Primária  | Sub-rede única designada a hosts físicos designados pelo {{site.data.keyword.cloud_notm}}. Usada pela interface de gerenciamento para o tráfego de gerenciamento do vSphere. |
+| Privada A | Portable | Sub-rede única designada a máquinas virtuais que funcionam como componentes de gerenciamento |
+| Privada A | Portable | Sub-rede única que é designada ao NSX-V ou ao NSX-T VTEP |
+| Privado B | Portable | Sub-rede única que será designada para vSAN, se em uso |
 | Privado B | Portable | Sub-rede única designada para o NAS, se em uso |
 | Privado B | Portable | Duas sub-redes designadas para o iSCSI NAS, se em uso (uma por porta do NIC física) |
 | Privado B | Portable | Sub-rede única designada para vMotion |
@@ -160,7 +160,7 @@ As conexões de rede privada são configuradas para usar um tamanho de MTU de qu
 ## Design de armazenamento físico
 {: #design_physicalinfrastructure-storage-design}
 
-O design de armazenamento físico consiste na configuração dos discos físicos que são instalados nos hosts físicos e na configuração do armazenamento de nível de arquivo compartilhado. Isso inclui o sistema operacional (vSphere ESXi) e os discos que são usados para armazenamento das máquinas virtuais (VMs). O armazenamento para VMs pode consistir em discos locais que são virtualizados pelo VMware vSAN, pelo armazenamento de nível de arquivo compartilhado ou armazenamento de nível de bloco compartilhado.
+O design de armazenamento físico consiste na configuração dos discos físicos que estão instalados nos hosts físicos e na configuração do armazenamento conectado à rede compartilhada. Isso inclui o sistema operacional (vSphere ESXi) e os discos que são usados para armazenamento das máquinas virtuais (VMs). O armazenamento para VMs pode consistir em discos locais que são virtualizados pelo VMware vSAN, pelo armazenamento de nível de arquivo compartilhado ou armazenamento de nível de bloco compartilhado.
 
 ### Discos do sistema operacional
 {: #design_physicalinfrastructure-os-disks}
@@ -170,7 +170,7 @@ O hypervisor do vSphere ESXi é instalado em um local persistente. Como resultad
 ### discos vSAN
 {: #design_physicalinfrastructure-vsan-disks}
 
-Esse design permite a opção de usar o VMware vSAN ou o armazenamento de nível de arquivo compartilhado como o armazenamento de dados primário para máquinas virtuais. Para o VMware vSAN, ele é configurado usando uma configuração all-flash. Esse design permite várias opções de configuração, incluindo chassis 2U e 4U, além de vários números e tamanhos de disco. Todas as configurações usam dois grupos de discos vSAN, com um solid-state disk (SSD) para cache e um ou mais SSDs para capacidade. Todas as unidades alocadas para o consumo de vSAN são configuradas no RAID-0 de disco único.
+Esse design permite a opção de usar o VMware vSAN ou o armazenamento conectado à rede compartilhada como o armazenamento de dados primário para máquinas virtuais. Para o VMware vSAN, ele é configurado usando uma configuração all-flash. Esse design permite várias opções de configuração, incluindo chassis 2U e 4U, além de vários números e tamanhos de disco. Todas as configurações usam dois grupos de discos vSAN, com um solid-state disk (SSD) para cache e um ou mais SSDs para capacidade. Todas as unidades alocadas para o consumo de vSAN são configuradas no RAID-0 de disco único.
 
 Para obter mais informações sobre as configurações suportadas, consulte a [Lista de materiais do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
 
@@ -196,8 +196,8 @@ Semelhante ao NFS, para armazenamento de iSCSI compartilhado, um LUN de iSCSI de
 
 A IBM normaliza o nível de IOP provisionado em um tamanho de bloco de 16 K, de modo que tamanhos de bloco maiores veem um limite inferior e tamanhos de bloco menores um limite mais alto.
 
-Figura 5. LUNs da iSCSI conectados à implementação do VMware</br>
-![LUNs da iSCSI conectados à implementação do VMware](vcsv4radiagrams-ra-iscsi-lun.svg "LUNs da iSCSI conectados à implementação do VMware")
+Figura 5. LUNs do iSCSI conectados à implementação do VMware</br>
+![LUNs do iSCSI conectados à implementação do VMware](vcsv4radiagrams-ra-iscsi-lun.svg "LUNs do iSCSI conectados à implementação do VMware")
 
 LUNs de iSCSI adicionais para cargas de trabalho também podem ser alocados e montados em todos os hosts no momento da compra ou posterior dentro do console. Selecione dentre as opções de capacidade de armazenamento de bloco do IBM Cloud Endurance disponíveis e as camadas de desempenho no IBM Cloud Data Center correspondente. Todos os LUNs são conectados usando o protocolo da iSCSI. Além disso, é possível anexar LUNs da iSCSI por meio da oferta do NetApp ONTAP Select.
 

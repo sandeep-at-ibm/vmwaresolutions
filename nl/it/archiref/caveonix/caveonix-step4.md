@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -64,7 +64,7 @@ Tabella 2. Informazioni predefinite utilizzate nell'impostazione dell'applicazio
 |---|---|
 |Ambiente |Il Nome ambiente (Environment Name) è impostato su “Iniziale” (Initial)|
 |Ambiente | Il punteggio è impostato su 5|
-|Repository di asset |Sono configurati due repository di asset: vCenter e NSX Manager. URL host impostato su https://*vCenter fqdn* e https://*NSX Manager fqdn*|
+|Repository di asset | Sono configurati due repository di asset: vCenter e NSX Manager. L'URL host è impostato su `https://vCenter_fqdn` e `https://*NSX Manager_fqdn` |
 |Repository di asset |Sono configurati due repository di asset: vCenter e NSX Manager; entrambi utilizzano lo stesso nome utente. Il nome utente è impostato sul nome utente dell'amministratore vCenter|
 |Repository di asset |Sono configurati due repository di asset: vCenter e NSX Manager; entrambi utilizzano la stessa password. La password è impostata sulla password dell'amministratore vCenter.
 |Repository di asset |Sono configurati due repository di asset: vCenter e NSX Manager; entrambi utilizzano la stessa password. Il tipo (Type) è impostato su vCenter per un repository e NSX per l'altro

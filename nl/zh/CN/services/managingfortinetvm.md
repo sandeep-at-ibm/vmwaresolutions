@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-04-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -30,4 +30,4 @@ subcollection: vmwaresolutions
 * [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [常见问题](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [fortinet.com Web 站点](https://www.fortinet.com/)
-* [Fortinet 技术文档](http://docs.fortinet.com/fortigate/admin-guides)
+* [Fortinet 文档库](https://docs.fortinet.com/product/fortigate/6.2)

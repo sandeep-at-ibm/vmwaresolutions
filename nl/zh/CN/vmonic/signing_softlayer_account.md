@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -19,12 +19,12 @@ subcollection: vmwaresolutions
 
 您可以使用现有 **IBM 标识**或创建新的 **IBM 标识**来注册 {{site.data.keyword.cloud}} 帐户。有关如何注册 {{site.data.keyword.cloud_notm}} 帐户的更多信息，请参阅[注册 {{site.data.keyword.cloud_notm}}](/docs/account?topic=account-signup)。
 
-## 注册 IBM Cloud Infrastructure (SoftLayer) 帐户
+## 注册 IBM Cloud 基础架构帐户
 {: #signing_softlayer_account-infra}
 
-{{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户先前称为 IBM SoftLayer 帐户，用于登录到 {{site.data.keyword.cloud_notm}} 基础架构客户门户网站，该门户网站提供了某种额外的功能来管理基础架构产品和服务。
+{{site.data.keyword.cloud_notm}} 基础架构帐户用于登录到 {{site.data.keyword.cloud_notm}} 基础架构客户门户网站，该门户网站提供了某种额外的功能来管理基础架构产品和服务。
 
-要注册 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户，请将 {{site.data.keyword.cloud_notm}} 帐户升级到现收现付类型的帐户。有关更多信息，请参阅[如何升级或更改帐户类型？](/docs/account?topic=account-accountfaqs)
+要注册 {{site.data.keyword.cloud_notm}} 基础架构帐户，请将 {{site.data.keyword.cloud_notm}} 帐户升级到现收现付类型的帐户。有关更多信息，请参阅[如何升级或更改帐户类型？](/docs/account?topic=account-accountfaqs)
 
 ## 相关链接
 {: #signing_softlayer_account-related}

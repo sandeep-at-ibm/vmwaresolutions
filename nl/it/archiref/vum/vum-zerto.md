@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,11 +18,11 @@ Se noti che un host vSphere ESXi non può entrare in modalità di manutenzione d
 
 1. Accedi all'interfaccia utente web di Zerto.
 2. Seleziona **Site Settings** dal menu a discesa.
-3. Seleziona la **scheda Policies** e assicurati che la casella **Allow Zerto to always enter hosts to maintenance mode during remediation** sia selezionata.
+3. Seleziona la scheda **Policies** e assicurati che la casella **Allow Zerto to always enter hosts to maintenance mode during remediation** sia selezionata.
 4. Disconnettiti da Zerto.
 
 ## Link correlati
 {: #vum-zerto-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (dimostrazioni)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (dimostrazioni)

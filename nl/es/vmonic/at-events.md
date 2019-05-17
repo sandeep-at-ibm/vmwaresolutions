@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-03-12"
+lastupdated: "2019-04-03"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -14,8 +14,7 @@ subcollection: vmwaresolutions
 
 Utilice el servicio {{site.data.keyword.cloudaccesstrailfull}} para realizar el seguimiento de cómo interactúan los usuarios y las aplicaciones con {{site.data.keyword.vmwaresolutions_short}} en {{site.data.keyword.Bluemix_notm}}.
 
-El servicio {{site.data.keyword.cloudaccesstrailfull_notm}} registra las actividades iniciadas por el usuario que cambian el estado de un servicio en {{site.data.keyword.Bluemix_notm}}. Para obtener
-más información, consulte [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started-with-cla#getting-started-with-cla).
+El servicio {{site.data.keyword.cloudaccesstrailfull_notm}} registra las actividades iniciadas por el usuario que cambian el estado de un servicio en {{site.data.keyword.Bluemix_notm}}. Para obtener más información, consulte [Acerca de {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov#activity_tracker_ov).
 
 ## Tabla de sucesos de Activity Tracker
 {: #at-events-table}
@@ -52,12 +51,6 @@ Tabla 2. Descripción de las acciones que generan sucesos de gestión
 | `vmware-solutions.notification.update` | <ul><li>Se ha recibido la solicitud de actualizar notificaciones.</li><li>Se ha respondido a la solicitud de actualizar notificaciones.</li></ul> | <ul><li>`pending`</li><li>`success` o `failure`</li></ul> |
 | `vmware-solutions.secure_data.wipe`       | <ul><li>Se ha recibido la solicitud de borrar datos seguros.</li><li>Se ha respondido a la solicitud de borrar datos seguros.</li></ul> | <ul><li>`pending`</li><li>`success` o `failure`</li></ul> |
 | `vmware-solutions.bss_account.migrate` | <ul><li>Se ha recibido la solicitud de migrar a la cuenta bss.</li><li>Se ha respondido a la solicitud de migrar a la cuenta bss.</li></ul> | <ul><li>`pending`</li><li>`success` o `failure`</li></ul> |
-| `vmware-solutions.vcf.delete`                | <ul><li>Se ha recibido la solicitud de suprimir una instancia de Cloud Foundation.</li><li>Se ha respondido a la solicitud de suprimir una instancia de Cloud Foundation.</li></ul> | <ul><li>`pending`</li><li>`success` o `failure`</li></ul> |
-| `vmware-solutions.vcf.add_hosts`             | <ul><li>Se ha recibido la solicitud de añadir servidores ESXi a una instancia de Cloud Foundation.</li><li>Se ha respondido a la solicitud de añadir servidores ESXi a una instancia de Cloud Foundation.</li></ul> | <ul><li>`pending`</li><li>`success` o `failure`</li></ul> |
-| `vmware-solutions.vcf.remove_hosts`          | <ul><li>Se ha recibido la solicitud de suprimir servidores ESXi de una instancia de Cloud Foundation.</li><li>Se ha respondido a la solicitud de suprimir servidores ESXi de una instancia de Cloud Foundation.</li></ul> | <ul><li>`pending`</li><li>`success` o `failure`</li></ul> |
-| `vmware-solutions.vcf.create_cluster`        | <ul><li>Se ha recibido la solicitud de crear un clúster para una instancia de Cloud Foundation.</li> <li>Se ha respondido a la solicitud de crear un clúster para una instancia de Cloud Foundation.</li></ul> | <ul><li>`pending`</li><li>`success` o `failure`</li></ul> |
-| `vmware-solutions.vcf.delete_cluster`        | <ul><li>Se ha recibido la solicitud de suprimir un clúster de una instancia de Cloud Foundation.</li><li>Se ha respondido a la solicitud de suprimir un clúster de una instancia de Cloud Foundation.</li></ul> | <ul><li>`pending`</li><li>`success` o `failure`</li></ul> |
-| `vmware-solutions.vcf.schedule_update`       | <ul><li>Se ha recibido la solicitud de planificar una actualización para una instancia de Cloud Foundation.</li><li>Se ha respondido a la solicitud de planificar una actualización para una instancia de Cloud Foundation.</li></ul> | <ul><li>`pending`</li><li>`success` o `failure`</li></ul> |
 | `vmware-solutions.vcs.order`                 | <ul><li>Se ha recibido la solicitud de solicitar una instancia de vCenter Server.</li><li>Se ha respondido a la solicitud de solicitar una instancia de vCenter Server.</li></ul> | <ul><li>`pending`</li><li>`success` o `failure`</li></ul> |
 | `vmware-solutions.vcs.delete`                | <ul><li>Se ha recibido la solicitud de suprimir una instancia de vCenter Server.</li><li>Se ha respondido a la solicitud de suprimir una instancia de vCenter Server.</li></ul> | <ul><li>`pending`</li><li>`success` o `failure`</li></ul> |
 | `vmware-solutions.vcs.add_host`              | <ul><li>Se ha recibido la solicitud de añadir servidores ESXi a una instancia de vCenter Server.</li><li>Se ha respondido a la solicitud de añadir servidores ESXi a una instancia de vCenter Server.</li></ul> | <ul><li>`pending`</li><li>`success` o `failure`</li></ul> |

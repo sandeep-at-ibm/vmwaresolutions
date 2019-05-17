@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-04-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -29,7 +29,7 @@ Quando richiedi i servizi gestiti per Veeam on {{site.data.keyword.cloud_notm}},
 2. Scorri la pagina e fai clic sulla scheda **Servizi gestiti per Veeam on IBM Cloud**, che si trova in **Ordina servizi gestiti aggiuntivi**.
 3. Apri la pagina **Veeam on IBM Cloud**, controlla la descrizione e le specifiche tecniche per Veeam on {{site.data.keyword.cloud_notm}} come servizio gestito e fai clic su **Crea**.
 4. Specifica le impostazioni di configurazione in base ai tuoi requisiti o accetta i valori predefiniti.
-5. Fai clic su **vCenter Server** o **Cloud Foundation** per aggiungere il servizio a una delle tue istanze.
+5. Fai clic su **vCenter Server** per aggiungere il servizio a una delle tue istanze. 
 6. Per aggiungere il servizio mentre ordini una nuova istanza, fai clic su **Aggiungi alla nuova istanza** e continua quindi con l'ordine di una nuova istanza [vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance) o [vCenter Server with Hybridity](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance).
 7. Per aggiungere il servizio a un'istanza esistente, fai clic su **Aggiungi all'istanza esistente**, seleziona l'istanza desiderata dall'elenco, quindi conferma di voler procedere con l'ordine facendo clic su **Fornitura**.
 
@@ -38,4 +38,4 @@ Quando richiedi i servizi gestiti per Veeam on {{site.data.keyword.cloud_notm}},
 
 * [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
 * [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
-* [Servizi di backup e protezione dei dati](https://www-935.ibm.com/services/business-continuity/backup-and-data-protection-services/)
+* [Servizi di backup e protezione dei dati](https://www.ibm.com/services/business-continuity/backup-data-protection)

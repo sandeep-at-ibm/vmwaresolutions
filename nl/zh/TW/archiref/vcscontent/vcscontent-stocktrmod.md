@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-23"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -86,7 +86,7 @@ Todd 會執行下列指令，以確認已安裝的版本：
 ## 部署 Transformation Advisor 及 Microclimate
 {: #vcscontent-stocktrmod-deploy-tam}
 
-Todd 在執行 {{site.data.keyword.icpfull_notm}} 之後，會安裝 Transformation Advisor 及 Microclimate。Todd 會開啟[型錄](https://www.ibm.com/cloud/private/developer)，並檢視所有可用的內容。
+Todd 在執行 {{site.data.keyword.icpfull_notm}} 之後，會安裝 Transformation Advisor 及 Microclimate。Todd 會開啟[型錄](https://www.ibm.com/cloud/private/architecture)，並檢視所有可用的內容。
 
 Todd 會搜尋 Transformation Advisor 及 Microclimate，並在他按一下 Helm 圖表時，使用提供的 Readme 檔指示來安裝它們。
 

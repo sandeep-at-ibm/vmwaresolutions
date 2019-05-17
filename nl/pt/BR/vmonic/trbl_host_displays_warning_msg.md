@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -28,4 +28,4 @@ A mensagem será exibida mesmo que haja dois uplinks disponíveis para o comutad
 ## Resolução
 {: #trbl_host_displays_warning_msg-resolution}
 
-Esse é um problema conhecido do VMware. Para resolver o problema, siga as instruções em [O host ESX/ESXi exibe uma mensagem de aviso quando a condição de teste é falsa (2008602)](https://kb.vmware.com/selfservice/search.do?cmd=displayKC&docType=kc&docTypeID=DT_KB_1_1&externalId=2008602){:new_window}.
+Esse é um problema conhecido do VMware. Para resolver o problema, siga as instruções em [O host ESX/ESXi exibe uma mensagem de aviso quando a condição de teste é falsa (2008602)](https://kb.vmware.com/s/article/2008602){:new_window}.

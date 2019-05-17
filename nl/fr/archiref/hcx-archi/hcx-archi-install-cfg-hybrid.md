@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,7 +18,7 @@ Le programme d'installation met à disposition et configure une machine virtuell
 ## Prérequis
 {: #hcx-archi-install-cfg-hybrid-prereq}
 
-* HCX Manager doit être installé sur site et enregistré auprès d'un noeud final du cloud compatible VCF/VCS HCX.
+* HCX Manager doit être installé sur site et enregistré auprès d'un noeud final du cloud compatible VCS HCX.
 * Le centre de données virtuel cible doit disposer de ressources suffisantes.
 
 ## Présentation de la configuration
@@ -34,7 +34,7 @@ Le procédure de configuration suppose que tous les dispositifs virtuels de serv
 
 Une simple interface Web est utilisée pour installer les dispositifs virtuels de service et configurer d'autres concentrateurs de couche 2.
 
-HCX Manager doit être installé et enregistré auprès du noeud final du cloud compatible VCF/VCS HCX.
+HCX Manager doit être installé et enregistré auprès du noeud final du cloud compatible VCS HCX.
 
 ### Procédure pour l'installation et la configuration du dispositif virtuel de service hybride
 {: #hcx-archi-install-cfg-hybrid-proc-install}
@@ -119,7 +119,7 @@ Affichez l'état du tunnel de la passerelle cloud. Le service d'extension résea
 
 ## Extension d'un réseau de couche 2 dans IBM Cloud
 
-Etendez un réseau de couche 2 depuis le centre de données sur site vers un cloud compatible VCF/VCS HCX.
+Etendez un réseau de couche 2 depuis le centre de données sur site vers un cloud compatible VCS HCX.
 {: #hcx-archi-install-cfg-hybrid-stretch-layer-2}
 
 ### Prérequis pour l'extension d'un réseau de couche 2 dans IBM Cloud
@@ -136,9 +136,9 @@ Etendez un réseau de couche 2 depuis le centre de données sur site vers un clo
 3. Cliquez avec le bouton droit de la souris sur le groupe de ports, et dans le menu sélectionnez **Hybridity Actions**, puis **Extend Network**.
 4. Sur la page **Select source port groups**, confirmez les informations du groupe de ports et entrez l'**adresse IP de passerelle** ainsi que le préfixe du réseau. Cliquez sur **Next**.
 5. Sur la page **Select destination gateway**, effectuez les opérations suivantes :
-  1. Sélectionnez VCF/VCS Hybrid Cloud Services Cloud Organization dans le menu **Organization**.
-  2. Sélectionnez le centre de données virtuel VCF/VCS Hybrid Cloud Services Cloud dans le menu.
-  3. Laissez l'option **Proximity Routing** désactivée afin de forcer une machine virtuelle au sein du cloud VCF/VCS Hybrid Cloud Services afin de pouvoir toujours utiliser la passerelle sur site pour accéder à Internet. Par défaut, le trafic en provenance d'une machine virtuelle dans un cloud compatible VM in VCF/VCS Hybrid Cloud Services traverse le chemin de données de couche 2 vers le centre de données sur site et sort par la passerelle par défaut. Si l'option **Proximity Routing** est sélectionnée, une machine virtuelle au sein du cloud compatible VCF/VCS Hybrid Cloud Services peut accéder à Internet sans avoir à traverser le chemin de données de couche 2 vers vSphere.
+  1. Sélectionnez l'organisation du cloud VCS Hybrid Cloud Services dans le menu **Organization**.
+  2. Sélectionnez le centre de données virtuel du cloud VCS Hybrid Cloud Services dans le menu.
+  3. Laissez l'option **Proximity Routing** désactivée afin de forcer une machine virtuelle au sein du cloud VCS Hybrid Cloud Services afin de pouvoir toujours utiliser la passerelle sur site pour accéder à Internet. Par défaut, le trafic en provenance d'une machine virtuelle dans un cloud compatible VCS Hybrid Cloud Services traverse le chemin de données de couche 2 vers le centre de données sur site et sort par la passerelle par défaut. Si l'option **Proximity Routing** est sélectionnée, une machine virtuelle au sein du cloud compatible VCS Hybrid Cloud Services peut accéder à Internet sans avoir à traverser le chemin de données de couche 2 vers vSphere.
   4. Sélectionnez la passerelle de destination distante dans la liste des passerelles en cliquant sur la ligne correspondante. Cliquez sur **Next**.
 6. Sur la page **Ready to complete**, passez en revue toutes les valeurs fournies. Cliquez sur **Finish**.
 7. Pour suivre la progression de l'extension réseau, accédez à la fenêtre **Recent Tasks**, cliquez sur l'onglet **All**, puis consultez **All Users’ Tasks**.

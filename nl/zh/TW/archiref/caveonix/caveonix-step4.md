@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -64,7 +64,7 @@ subcollection: vmwaresolutions
 |---|---|
 |環境 |環境名稱設為「起始」|
 |環境 |評分設為 5|
-|資產儲存庫 |已配置兩個「資產儲存庫」：vCenter 及 NSX Manager。主機 URL 設為 https://*vCenter fqdn* 及 https://*NSX Manager fqdn*|
+|資產儲存庫 |已配置兩個「資產儲存庫」：vCenter 及 NSX Manager。主機 URL 設為 `https://vCenter_fqdn` 及 `https://*NSX Manager_fqdn` |
 |資產儲存庫 |已配置兩個「資產儲存庫」：vCenter 及 NSX Manager，兩者使用相同的使用者名稱。使用者名稱設為 vCenter 管理者使用者名稱|
 |資產儲存庫 |已配置兩個「資產儲存庫」：vCenter 及 NSX Manager，兩者使用相同的密碼。密碼設為 vCenter 管理者密碼
 |資產儲存庫 |已配置兩個「資產儲存庫」：vCenter 及 NSX Manager，兩者使用相同的密碼。一個儲存庫的類型設為 vCenter，另一個設為 NSX

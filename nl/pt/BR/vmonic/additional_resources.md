@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -23,7 +23,7 @@ Revise os recursos a seguir para iniciar mais rápido ou obter informações té
 ## Folhas de dados
 {: #additional_resources-data-sheets}
 
-* [ Proteção de Dados de Proteção do {{site.data.keyword.vmwaresolutions_short}}  ](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:new_window}
+* [Planilha de dados de proteção do {{site.data.keyword.vmwaresolutions_short}}](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:new_window}
 
 ## receitas do developerWorks
 {: #additional_resources-dWrecipes}
@@ -52,15 +52,15 @@ do Virtualization Platform](https://www.ibm.com/cloud/garage/architectures/virtu
 {: #additional_resources-demos}
 
 * [ Recursos e Vídeos ](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/resources){:new_window}
-* [ Compromisso Técnico Digital ](https://ibm-dte.mybluemix.net/ibm-vmware){:new_window}
+* [ Compromisso Técnico Digital ](https://ibm-dte.mybluemix.net/vmware){:new_window}
 * [ Recursos Apresentados e Estudos de Caso ](https://www.ibm.com/cloud/vmware/resources){:new_window}
 
 ## Test drive do IBM Cloud for VMware Solutions
 {: #additional_resources-test-drive}
 
-Quer ver por si mesmo? Faça um teste curto do produto seguindo a demonstração guiada passo a passo {{site.data.keyword.vmwaresolutions_short}}[Experimente o VMware vCenter Server](https://cloudcontent.mybluemix.net/cloud/garage/demo/try-vmware-solutions){:new_window}.
+Quer ver por si mesmo? Tome uma unidade de teste curta do produto seguindo a demonstração guiada passo a passo do {{site.data.keyword.vmwaresolutions_short}} [Experimentar o VMware vCenter Server](https://cloudcontent.mybluemix.net/cloud/garage/demo/try-vmware-solutions){:new_window}.
 
 ## Documentação do VMware
-{: #additional_resources-VMware-doc}
+{: #additional_resources-vmware-doc}
 
 * [Documentação do VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources){:new_window}

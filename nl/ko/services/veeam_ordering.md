@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-04-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -47,7 +47,7 @@ subcollection: vmwaresolutions
 ### 스토리지 크기
 {: #veeam_ordering-config-storage-size}
 
-스토리지 요구에 맞는 용량입니다. 스토리지 크기 예상 시 고려사항은 [Estimating Repository Capacity](https://bp.veeam.expert/resource_planning/repository_planning_sizing.html)를 참조하십시오.
+스토리지 요구에 맞는 용량입니다. 스토리지 크기 예상 시 고려사항은 [Estimating Repository Capacity](https://bp.veeam.expert/repository_server/repository_planning/repository_planning_sizing)를 참조하십시오.
 
 ### 스토리지 성능
 {: #veeam_ordering-config-storage-performance}

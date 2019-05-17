@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-26"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -36,6 +36,8 @@ subcollection: vmwaresolutions
 订购此服务时，请提供以下设置：
 * 根据需要选择**生产就绪**或**开发/测试**。
 * 选中必需的复选框以证明您已获得部署 {{site.data.keyword.cloud_notm}} Private Hosted 服务所需的许可证。
+
+如果要部署更多节点，请使用随初始 {{site.data.keyword.cloud_notm}} Private Hosted 安装一起部署的 {{site.data.keyword.cloud_notm}} Private Ubuntu 模板 (Ubuntu 1604)。要查找该模板，请在 VMware vSphere Web Client 中，转至 `cam` 文件夹下的 **VM 和模板**选项卡。Ubuntu 模板的缺省密码为 `icponcloud`，建议您在使用该模板之前更改该密码。
 
 ## 相关链接
 {: #icp_ordering-related}

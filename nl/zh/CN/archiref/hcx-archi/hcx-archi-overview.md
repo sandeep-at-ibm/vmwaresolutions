@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -22,9 +22,9 @@ HCX 拥有源和目标加密与解密过程，可确保一致的安全性，并�
 ## 第 2 层网络扩展
 {: #hcx-archi-overview-layer-2-net}
 
-HCX 允许现有的内部部署 vSphere 资产安全地将网络从其内部部署 vCenter 延伸到运行 VMware Cloud Foundation 或 vCenter Server 的 IBM Cloud Data Center。此功能通过以下各项启用：
+HCX 允许现有的内部部署 vSphere 资产安全地将网络从其内部部署 vCenter 延伸到运行 VMware vCenter Server 的 IBM Cloud Data Center。此功能通过以下各项启用：
 * HCX 提供称为第 2 层集中器 (L2C) 的设备。
-* 通过扩展网络链接到部署在 VMware Cloud Foundation 或 vCenter Server 上的 IBM Cloud NSX Edge 设备。
+* 通过扩展网络链接到部署在 VMware vCenter Server 上的 IBM Cloud NSX Edge 设备。
 * 可以部署多个标准第 2 层集中器，以实现可扩展性并提高内部部署 vCenter 的吞吐量。
 * 通过云网关和延伸的第 2 层迁移的虚拟机可以保留其 IP 和 MAC 地址。
 
@@ -156,7 +156,7 @@ WAN 优化设备是用于执行 WAN 调节以减少等待时间所产生影响�
 * 如果打算使用跨云 vMotion，那么适用于内部部署的相同亲缘关系限制也适用于跨云的情况。
 * 源环境必须有方法可连接到云环境。这包括使用 IBM Cloud Direct Link 进行公用因特网访问或专用连接。除了公用因特网外，与其他云供应商的连接将不作讨论。
 * 源环境 VM 和要迁移或延伸的网络必须位于虚拟分布式交换机或 Cisco Nexus 1000v 虚拟分布式交换机中的端口组上。
-* IBM Cloud 必须包含至少一个 VMware Cloud Foundation 或 vCenter Server 部署实例。
+* IBM Cloud 必须包含至少一个 VMware vCenter Server 实例。
 * 有足够的资源用于虚拟设备。
 * 网络必须允许设备与本地和远程虚拟设备以及其他虚拟机进行通信。
 * “端口访问需求”（附录 A）列出了必须打开的端口，只有打开这些端口，Hybrid Cloud Services 虚拟设备才能成功安装。

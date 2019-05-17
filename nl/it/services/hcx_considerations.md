@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-23"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -20,10 +20,10 @@ subcollection: vmwaresolutions
 
 Il servizio HCX on {{site.data.keyword.cloud}} estende senza problemi le reti dei data center in loco in {{site.data.keyword.cloud_notm}}, il che ti consente di migrare le VM (Virtual Machine) da e verso {{site.data.keyword.cloud_notm}} senza alcuna conversione o modifica.
 
-Questo servizio è disponibile solo per le istanze VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle distribuite nella V2.3 e successive.
+Questo servizio è disponibile solo per le istanze VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle distribuite nella V2.3 e successive. La versione corrente di HCX on {{site.data.keyword.cloud_notm}} installata è la 3.5.1.
 {:note}
 
-Puoi aggiornare la tua istanza vCenter Server esistente a un'istanza vCenter Server with Hybridity Bundle. Per ulteriori informazioni sull'aggiornamento della tua istanza e sulla distribuzione del servizio HCX on {{site.data.keyword.cloud_notm}}, vedi [Procedura per effettuare l'aggiornamento all'istanza vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates#procedure-to-upgrade-to-the-vcenter-server-with-hybridity-bundle-instance).
+Puoi aggiornare la tua istanza vCenter Server esistente a un'istanza vCenter Server with Hybridity Bundle. Per ulteriori informazioni sull'upgrade della tua istanza e sulla distribuzione del servizio HCX on {{site.data.keyword.cloud_notm}}, vedi [Procedura per eseguire l'upgrade a Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_upgrade-lic#vc_upgrade-lic-procedure-upgrade-to-hybridity).
 
 Un'istanza vCenter Server con HCX on {{site.data.keyword.cloud_notm}} è limitata a tre connessioni simultanee dai siti in loco.
 {:note}
@@ -59,7 +59,7 @@ Ulteriori dispositivi HCX vengono distribuiti durante la configurazione in base 
 * Due sottoreti portatili private con 64 indirizzi IP
 * Otto indirizzi IP dalla sottorete vMotion portatile privata
 
-## Considerazioni sull'istallazione di HCX on IBM Cloud
+## Considerazioni sull'installazione di HCX on IBM Cloud
 {: #hcx_considerations-install}
 
 Esamina le seguenti considerazioni prima di tentare l'installazione di HCX on {{site.data.keyword.cloud_notm}}.

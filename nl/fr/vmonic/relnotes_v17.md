@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2017-07-05"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -47,7 +47,7 @@ Selon la complexité de votre déploiement d'instance Cloud Foundation et si vou
 ### Prise en charge des clusters
 {: #relnotes_v17-cluster}
 
-A compter de la version 1.7, vous pouvez utiliser des clusters pour gérer des serveurs ESXi dans des instances vCenter Server pour bénéficier d'une meilleure gestion des ressources et de la haute disponibilité. Les serveurs ESXi que vous avez configurés lors de la commande d'une instance sont, par défaut, regroupés sous **cluster1**. Vous pouvez afficher les détails du cluster et ajouter jusqu'à cinq clusters à une instance à partir du nouvel onglet **Infrastructure** de la page des détails de l'instance. Lorsque vous augmentez ou réduisez la capacité d'une instance, vous pouvez sélectionner le cluster dans lequel ajouter ou retirer des serveurs ESXi. Pour plus d'informations, voir [Ajout et affichage de clusters pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances).
+A compter de la version 1.7, vous pouvez utiliser des clusters pour gérer des serveurs ESXi dans des instances vCenter Server pour bénéficier d'une meilleure gestion des ressources et de la haute disponibilité. Les serveurs ESXi que vous avez configurés lors de la commande d'une instance sont, par défaut, regroupés sous **cluster1**. Vous pouvez afficher les détails du cluster et ajouter jusqu'à cinq clusters à une instance à partir du nouvel onglet **Infrastructure** de la page des détails de l'instance. Lorsque vous augmentez ou réduisez la capacité d'une instance, vous pouvez sélectionner le cluster dans lequel ajouter ou retirer des serveurs ESXi. Pour plus d'informations, voir [Ajout, affichage et suppression de clusters pour des instances vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters).
 
 ### Améliorations au niveau du déploiement de la reprise après incident Zerto
 {: #relnotes_v17-zerto}

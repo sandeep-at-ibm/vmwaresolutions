@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-14"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -42,9 +42,9 @@ VMware vSphere Web Client의 **사용자 및 그룹** 페이지에서 **ic4v-vCe
 가동 중단 및 연결 문제점을 방지하려면 이 사용자 계정의 사용자 ID, 비밀번호 또는 비밀번호 만기 설정을 변경하는 경우 연관된 서비스에서도 해당 정보를 업데이트해야 합니다.
 {:important}
 
-이 계정의 사용자 ID 형식은 `<service_name>-<truncated service_uuid>@test.local` 또는 `<service_name>-<truncated service_uuid>@example-domain.local`입니다. 예를 들어, Veeam on {{site.data.keyword.cloud_notm}} 서비스가 스케줄된 백업을 수행하기 위해 vCenter Server에 연결하는 데 사용하는 사용자 ID는 `Veeam-<Veeam_uuid>@test.local`입니다.
+이 계정의 사용자 ID는 `<service_name>-<truncated service_uuid>@test.local` 또는 `<service_name>-<truncated service_uuid>@example-domain.local` 형식으로 되어 있습니다. 예를 들어, Veeam on {{site.data.keyword.cloud_notm}} 서비스가 스케줄된 백업을 수행하기 위해 vCenter Server에 연결하는 데 사용하는 사용자 ID는 `Veeam-<Veeam_uuid>@test.local`입니다.
 
-`<service_name>`은 `<service_uuid>`와 함께 20자에서 잘립니다.
+`<service_uuid>`가 포함된 `<service_name>`은 20자로 잘립니다.
 {:note}
 
 ## vCenter Server 인스턴스용 VMware 리소스(V1.9 이상)

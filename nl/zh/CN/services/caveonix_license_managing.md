@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-12"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -64,7 +64,7 @@ subcollection: vmwaresolutions
 
 当您不再需要 Caveonix RiskForesight 许可证时，可以将其删除。
 
-删除 Caveonix RiskForesight 许可证之前，确保您查看了[删除 Caveonix RiskForesight 许可证时的注意事项](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_license_considerations-remove)中的注意事项。
+删除 Caveonix RiskForesight 许可证之前，确保您查看了[删除 Caveonix RiskForesight 许可证时的注意事项](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_license_considerations#caveonix_license_considerations-remove)中的注意事项。
 {:note}
 
 1. 在左侧导航窗格中，单击**资源**。

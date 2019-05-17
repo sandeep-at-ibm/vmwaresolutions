@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-04-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -47,7 +47,7 @@ subcollection: vmwaresolutions
 ### 存储大小
 {: #veeam_ordering-config-storage-size}
 
-满足存储需求的容量。有关估算存储大小时的注意事项，请参阅[估算存储库容量](https://bp.veeam.expert/resource_planning/repository_planning_sizing.html)。
+满足存储需求的容量。有关估算存储大小时的注意事项，请参阅[估算存储库容量](https://bp.veeam.expert/repository_server/repository_planning/repository_planning_sizing)。
 
 ### 存储性能
 {: #veeam_ordering-config-storage-performance}

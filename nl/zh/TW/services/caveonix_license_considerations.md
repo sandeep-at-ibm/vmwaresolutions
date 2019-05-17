@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-12"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -23,7 +23,7 @@ subcollection: vmwaresolutions
 ## 刪除 Caveonix RiskForesight 授權時的考量
 {: #caveonix_license_considerations-remove}
 
-移除 Caveonix RiskForesight 授權並不會移除安裝在 vCenter Server 實例上的 Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} 服務。您必須從 {{site.data.keyword.vmwaresolutions_short}} 主控台中的 vCenter Server 實例來訂購新的 Caveonix RiskForesight 授權或者移除 Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} 服務。如需相關資訊，請參閱[移除 PvCenter Server 實例服務的程序](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices-removing-procedure)。
+移除 Caveonix RiskForesight 授權並不會移除安裝在 vCenter Server 實例上的 Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} 服務。您必須從 {{site.data.keyword.vmwaresolutions_short}} 主控台中的 vCenter Server 實例來訂購新的 Caveonix RiskForesight 授權或者移除 Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} 服務。如需相關資訊，請參閱[移除 PvCenter Server 實例服務的程序](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-removing-procedure)。
 
 ## 相關鏈結
 {: #caveonix_license_considerations-related}

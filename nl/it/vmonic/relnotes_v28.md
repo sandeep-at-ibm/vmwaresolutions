@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-02-08"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -21,7 +21,7 @@ Questa release include nuove funzioni, aggiornamenti dei componenti, miglioramen
 
 Single-node Trial for Migration and App Modernization è un modo rapido per eseguire un test drive di {{site.data.keyword.cloud_notm}} per migrare i carichi di lavoro VMware in {{site.data.keyword.cloud_notm}} e quindi modernizzare i carichi di lavoro utilizzando i contenitori. Questa prova è una versione di {{site.data.keyword.icpfull_notm}} Hosted su VMware vCenter Server on {{site.data.keyword.cloud_notm}} che fornisce la piattaforma di gestione di Kubernetes per i contenitori e la piattaforma VMware a singolo tenant che può essere gestita utilizzando gli stessi strumenti familiari degli ambienti in loco.
 
-Per ulteriori informazioni, vedi [Panoramica di Single-node Trial for Migration and App Modernization](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-single-node-trial-for-migration-and-app-modernization-overview).
+Per ulteriori informazioni, vedi [Panoramica di Single-node Trial for Migration and App Modernization](/docs/services/vmwaresolutions?topic=vmware-solutions-cloud_modern_bundle_overview#cloud_modern_bundle_overview).
 
 ## Aggiunta e rimozione dell'archiviazione NFS (Network File System)
 {: #relnotes_v28-nfs}

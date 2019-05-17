@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-25"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -46,7 +46,7 @@ Completa la seguente procedura per gestire l'accesso alla tua rete {{site.data.k
 
 - Accedi agli endpoint di gestione delle istanze utilizzando la [VPN {{site.data.keyword.cloud_notm}}](https://www.softlayer.com/vpn-access) o la tua [connessione Direct-Link {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/direct-link).
 - Definisci una strategia per la connettività di rete pubblica dall'interno della tua istanza. Le opzioni includono: il gateway dei servizi edge (ESG) VMware NSX del cliente di esempio, dispositivi gateway come Vyatta e FortiGate e i server proxy distribuiti nella rete {{site.data.keyword.cloud_notm}} o nella tua propria rete a cui si accede tramite DirectLink.
-- Pianifica se distribuire il tuo carico di lavoro sulle VLAN {{site.data.keyword.cloud_notm}} con [indirizzi IP portatili di {{site.data.keyword.cloud_notm}}](/docs/infrastructure/subnets?topic=subnets-getting-started-with-subnets-and-ips) o [su switch logici NSX (VXLAN) utilizzando i tuoi propri indirizzi IP](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_overview). Nota che l'utilizzo della SDN (software-defined networking) NSX ti fornisce la massima flessibilità per gestire e proteggere la tua rete del carico di lavoro in {{site.data.keyword.cloud_notm}}.
+- Pianifica se distribuire il tuo carico di lavoro sulle VLAN {{site.data.keyword.cloud_notm}} con [indirizzi IP portatili di {{site.data.keyword.cloud_notm}}](/docs/infrastructure/subnets?topic=subnets-getting-started-subnets-ips#getting-started-subnets-ips) o [su switch logici NSX (VXLAN) utilizzando i tuoi propri indirizzi IP](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_overview). Nota che l'utilizzo della SDN (software-defined networking) NSX ti fornisce la massima flessibilità per gestire e proteggere la tua rete del carico di lavoro in {{site.data.keyword.cloud_notm}}.
 - Utilizza ESG NSX, [IBM Cloud Vyatta](https://cloud.ibm.com/catalog/infrastructure/virtual-router-appliance) e peering DirectLink per pianificare la connettività ai carichi di lavoro (Network Address Translation, Virtual Private Network, instradamento).
 - Se si implementa Cross-vCenter NSX, assicurati che gli intervalli di ID del segmento locale non si sovrappongano prima di distribuire i carichi di lavoro locali.
 
@@ -107,7 +107,7 @@ Assicurati di pianificare e implementare le seguenti soluzioni per il monitoragg
 - Un'infrastruttura di avviso, inclusa la configurazione del server SMTP e del gateway SMS (Short Message Service), secondo necessità.
 - Monitoraggio proattivo di host, unità, software di gestione e rete.
 - Monitoraggio vSAN, se applicabile.
-- Monitoraggio e pianificazione della capacità. Puoi [aggiungere e rimuovere cluster](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances) e [aggiungere e rimuovere host](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers) nella tua istanza dalla console {{site.data.keyword.vmwaresolutions_short}}.
+- Monitoraggio e pianificazione della capacità. Puoi [aggiungere e rimuovere cluster](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters) e [aggiungere e rimuovere host](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers) nella tua istanza dalla console {{site.data.keyword.vmwaresolutions_short}}.
 - Monitoraggio dell'infrastruttura di backup e dei lavori di backup.
 
 ## Disponibilità e continuità delle operazioni di business

@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2017-11-20"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -52,7 +52,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스는 이
 ## 완전한 도메인 이름 형식 일관성
 {: #relnotes_v20-fqdn}
 
-이제 FQDN(Fully Qualified Domain Name)은 모든 인스턴스에 대해 일관성 있는 방식으로 표시됩니다. 주문할 때 FQDN 형식에 대한 업계 규칙을 따르도록 고유한 하위 도메인 접두부 및 호스트 이름 접두부를 입력할 수 있습니다. (예: `host-name-prefix<n>.subdomain-prefix.domain-name`).
+이제 FQDN(Fully Qualified Domain Name)은 모든 인스턴스에 대해 일관성 있는 방식으로 표시됩니다. 주문할 때 FQDN 형식에 대한 업계 규칙을 따르도록 고유한 하위 도메인 접두부 및 호스트 이름 접두부를 입력할 수 있습니다. 예를 들면, `host-name-prefix<n>.subdomain-prefix.domain-name`입니다.
 
 자세한 정보는 다음 주제를 참조하십시오.
 * [vCenter Server 인스턴스 주문](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)

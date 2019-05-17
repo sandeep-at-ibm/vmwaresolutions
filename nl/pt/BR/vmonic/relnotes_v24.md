@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-06-22"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -55,7 +55,7 @@ A partir da liberação da V2.4, os novos modelos de CPU do Bare Metal Server a 
 * Processador Dual Intel Skylake Xeon Gold 5120/Total de 28 núcleos, 2.2 GHz
 * Processador Dual Intel Skylake Xeon Gold 6140/Total de 36 núcleos, 2.3 GHz
 
-Para obter mais informações, consulte a seção *Configurações de Bare Metal Server* em [Pedindo novos clusters do vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances#bare-metal-server-settings).
+Para obter mais informações, consulte [Configurações do Bare Metal Server](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vs_orderinginstances#vs_orderinginstances-bare-metal-settings).
 
 ## Atualizações para instâncias do VMware vCenter Server
 {: #relnotes_v24-vcs}
@@ -63,7 +63,7 @@ Para obter mais informações, consulte a seção *Configurações de Bare Metal
 ### Network File System aprimoramento de desempenho
 {: #relnotes_v24-nfs}
 
-O nível de desempenho de 10 IOPS/GB, projetado para os tipos de carga de trabalho mais exigentes, não é mais limitado a um {{site.data.keyword.CloudDataCent_notm}} específico, mas agora está disponível para todos. Para obter mais informações, consulte a seção *Armazenamento* na [Visão geral do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#technical-specifications-for-vcenter-server-instances).
+O nível de desempenho de 10 IOPS/GB, projetado para os tipos de carga de trabalho mais exigentes, não é mais limitado a um {{site.data.keyword.CloudDataCent_notm}} específico, mas agora está disponível para todos. Para obter mais informações, consulte [Armazenamento](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#vc_vcenterserveroverview-storage).
 
 ## Atualizações para serviços complementares
 {: #relnotes_v24-services}

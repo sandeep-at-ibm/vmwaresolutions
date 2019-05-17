@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -15,14 +15,14 @@ subcollection: vmwaresolutions
 {:note: .note}
 {:important: .important}
 
-# Conception d'infrastructure physique
+# Conception de l'infrastructure physique
 {: #design_physicalinfrastructure}
 
 L'infrastructure physique est constituée des composants suivants :
 
 <dl class="dl">
   <dt class="dt dlterm">Calcul physique</dt>
-  <dd class="dd">Le calcul physique fournit le traitement et la mémoire physiques utilisés par l'infrastructure de virtualisation. Pour cette conception, les composants de calcul sont fournis par les serveurs bare metal IBM Cloud et sont répertoriés dans le document [VMware Hardware Compatibility Guide (HCG)](https://www.vmware.com/resources/compatibility/search.php).</dd>
+  <dd class="dd">Le calcul physique fournit le traitement et la mémoire physiques utilisés par l'infrastructure de virtualisation. Pour cette conception, les composants de calcul sont fournis par les serveurs {{site.data.keyword.baremetal_long}} et sont répertoriés dans le document [VMware Hardware Compatibility Guide (HCG)](https://www.vmware.com/resources/compatibility/search.php).</dd>
   <dt class="dt dlterm">Stockage physique</dt>
   <dd class="dd">Le stockage physique fournit la capacité de stockage brut qui est utilisée par l'infrastructure de virtualisation. Les composants de stockage sont fournis par les serveurs {{site.data.keyword.baremetal_short}} ou par la matrice NAS (Network Attached Storage) partagée qui utilise NFSv3 ou iSCSI.</dd>
   <dt class="dt dlterm">Réseau physique</dt>
@@ -36,7 +36,7 @@ Pour plus d'informations sur le stockage, voir la documentation sur l'[architect
 Figure 1. Infrastructure physique</br>
 ![Infrastructure physique](vcsv4radiagrams-ra-physinfra.svg)
 
-## Conception de calcul physique
+## Conception du calcul physique
 {: #design_physicalinfrastructure-host-design}
 
 Les configurations de serveur disponibles dans la solution sont conformes ou supérieures aux exigences minimales relatives à l'installation, la configuration et la gestion de vSphere ESXi. Différentes configurations sont disponibles pour satisfaire différentes exigences. Pour obtenir la liste détaillée des spécifications exactes utilisées pour la solution VMware on {{site.data.keyword.cloud_notm}}, voir la nomenclature pour l'[instance vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
@@ -46,15 +46,15 @@ Les serveurs {{site.data.keyword.baremetal_short}} résident dans {{site.data.ke
 
 Chaque instance vCenter Server commence avec un déploiement de 3 ou 4 hôtes, selon la solution de stockage choisie.
 
-L'hôte physique emploie deux disques connectés localement destinés à être alloués à l'hyperviseur vSphere ESXi. Vous pouvez allouer davantage de disques en utilisant vSAN comme indiqué dans la section _Conception de stockage physique_ ou en utilisant NetApp ONTAP comme indiqué dans la documentation sur l'[architecture NetApp ONTAP Select](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf). Chaque hôte physique comporte des connexions réseau 10 Gbps redondantes pour l'accès au réseau public et l'accès au réseau privé.
+L'hôte physique emploie deux disques connectés localement destinés à être alloués à l'hyperviseur vSphere ESXi. Vous pouvez allouer davantage de disques en utilisant vSAN comme indiqué dans la section _Conception du stockage physique_ ou en utilisant NetApp ONTAP comme indiqué dans la documentation sur l'[architecture NetApp ONTAP Select](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf). Chaque hôte physique comporte des connexions réseau 10 Gbps redondantes pour l'accès au réseau public et l'accès au réseau privé.
 
 Les spécifications du serveur bare metal sont les suivantes :
-* Unité centrale : Dual Intel Xeon, configuration coeur et vitesse variable
+* Unité centrale : Dual ou Quad Intel Xeon, configuration variable du coeur et de la vitesse 
 * Mémoire : Configuration variable, 64 Go ou plus
 * Réseau : 4 x 10 Gbps
 * Nombre d'unités : Au moins 2
 
-## Conception de réseau physique
+## Conception du réseau physique
 {: #design_physicalinfrastructure-net-design}
 
 La mise en réseau physique est gérée par {{site.data.keyword.cloud_notm}}. Revoyez les sections suivantes qui décrivent le réseau physique fourni par IBM Cloud et les connexions hôte physiques (VLAN, MTU) associées aux hôtes physiques.
@@ -62,7 +62,7 @@ La mise en réseau physique est gérée par {{site.data.keyword.cloud_notm}}. Re
 ### Présentation du réseau IBM Cloud
 {: #design_physicalinfrastructure-ibm-cloud-network}
 
-Le réseau physique d'{{site.data.keyword.cloud_notm}} est divisé en deux réseaux distincts : public et privé. Le réseau privé contient le trafic de gestion externe de l'interface IPMI (Intelligent Platform Management Interface) vers les serveurs physiques.
+Le réseau physique d'{{site.data.keyword.cloud_notm}} est divisé en deux réseaux distincts : public et privé. Le réseau privé contient également le trafic de gestion de l'interface IPMI (Intelligent Platform Management Interface) vers les serveurs physiques.
 
 Figure 2. Réseau de haut niveau {{site.data.keyword.cloud_notm}}
 ![{{site.data.keyword.cloud_notm}} Réseau de haut niveau](vcsv4radiagrams-ra-ibmcloudnetwork.svg)
@@ -86,7 +86,7 @@ Similaire au réseau public, le réseau privé est multiniveau, ce qui signifie 
 #### Réseau de gestion
 {: #design_physicalinfrastructure-mgmt-net}
 
-Outre les réseaux public et privé, chaque serveur {{site.data.keyword.cloud_notm}} est connecté pour la gestion externe au sous-réseau du réseau privé principal. Cette connexion permet un accès IPMI (Intelligent Platform Management Interface) au serveur, quels que soient son unité centrale, son microprogramme et son système d'exploitation, à des fins de maintenance et d'administration.
+Outre les réseaux public et privé, chaque serveur {{site.data.keyword.cloud_notm}} est connecté pour la gestion au sous-réseau du réseau privé principal. Cette connexion permet un accès IPMI (Intelligent Platform Management Interface) au serveur, quels que soient son unité centrale, son microprogramme et son système d'exploitation, à des fins de maintenance et d'administration.
 
 #### Blocs d'adresses IP principales et portables
 {: #design_physicalinfrastructure-ip-blocks}
@@ -95,7 +95,7 @@ Outre les réseaux public et privé, chaque serveur {{site.data.keyword.cloud_no
 * Les adresses IP principales sont affectées aux unités, aux serveurs bare metal et aux serveurs virtuels qui sont mis à disposition par {{site.data.keyword.cloud_notm}}. Vous ne devez pas affecter d'adresses IP dans ces blocs.
 * Des adresses IP portables vous sont fournies et vous pouvez les affecter et les gérer en fonction de vos besoins. vCenter Server met à disposition plusieurs plages d'adresses IP portables à cet effet. Utilisez uniquement les plages d'adresses portables affectées à des composants NSX-T ou NSX-V spécifiques désignés pour être utilisés par les clients. Par exemple, **Customer EDGE**.
 
-Les adresses IP principales ou portables peuvent devenir routables vers n'importe quel réseau local virtuel (VLAN) au sein de votre compte lorsque celui-ci est configuré en tant que compte **VRF (Virtual Routing and Forwarding)**. 
+Les adresses IP principales ou portables peuvent devenir routables vers n'importe quel réseau local virtuel (VLAN) au sein de votre compte lorsque celui-ci est configuré en tant que compte **VRF (Virtual Routing and Forwarding)**.
 
 #### Virtual Routing and Forwarding (VRF)
 {: #design_physicalinfrastructure-vrf}
@@ -111,15 +111,15 @@ Chaque hôte physique de cette conception possède deux paires redondantes de co
 
 Il est impossible de retirer la connectivité de réseau physique au réseau public ou privé pour les serveurs bare metal utilisés dans l'offre vCenter Server. Les ports physiques de la carte NIC interne du serveur bare metal peut être désactivée, mais aucun support n'est fourni concernant le débranchement des câbles.
 
-Figure 3. Connexions hôte physiques</br>
-![Physical host connections](vcsv4radiagrams-ra-physical-host-connections.svg "Connexions hôte physiques")
+Figure 3. Connexions hôtes physiques</br>
+![Connexions hôtes physiques](vcsv4radiagrams-ra-physical-host-connections.svg "Connexions hôtes physiques")
 
-#### Réseaux VLAN et sous-jacents au routage dissocié
+#### Réseaux locaux virtuels (VLAN) et routage du réseau sous-jacent au réseau dissocié
 {: #design_physicalinfrastructure-vlans}
 
-Les offres {{site.data.keyword.vmwaresolutions_short}} sont conçues avec 3 réseaux locaux virtuels, un public et deux privés, affectés lors du déploiement. Comme illustré dans la figure précédente, le réseau local virtuel public est affecté à eth1 et eth3 et les réseaux locaux virtuels privés sont affectés à eth0 et eth2.
+Les offres {{site.data.keyword.vmwaresolutions_short}} sont conçues avec 3 réseaux locaux virtuels, un public et deux privés, affectés lors du déploiement. Comme le montre la figure précédente, le réseau local virtuel public est affecté à `eth1` et à `eth3`, et les réseaux locaux virtuels privés sont affectés à `eth0` et `eth2`.
 
-Le réseau local virtuel public et le premier réseau local virtuel privé créés et affectés dans cette conception ne sont pas balisés dans {{site.data.keyword.cloud_notm}}. Ensuite, le réseau local virtuel privé supplémentaire est joint sur les ports de commutation physique et balisé dans les groupes de ports VMware qui utilisent ces sous-réseaux.
+Le réseau local virtuel public et le premier réseau local virtuel privé créés et affectés dans cette conception ne sont pas balisés dans {{site.data.keyword.cloud_notm}}. Ensuite, le réseau local virtuel privé supplémentaire est partagé sur les ports de commutation physique et balisé dans les groupes de ports VMware qui utilisent ces sous-réseaux.
 
 Le réseau privé est composé de deux réseaux locaux virtuels dans cette conception. Trois sous-réseaux sont alloués au premier de ces réseaux locaux virtuels (appelé ici VLAN privé A) :
 * Le premier sous-réseau est une plage de sous-réseaux d'adresses IP privées principales affectées par {{site.data.keyword.cloud_notm}} aux hôtes physiques.
@@ -133,7 +133,7 @@ Outre le VLAN privé A, il existe un deuxième réseau local virtuel (appelé ic
    * Lorsque NAS connecté NFS est utilisé, un sous-réseau est affecté au groupe de ports qui est dédié au trafic NFS.
    * Pour une connexion iSCSI, deux groupes de ports sont créés pour permettre une solution multi-accès active-active entre les deux ports NIC privés étant donné qu'un seul port NIC peut être actif à la fois conformément à la documentation iSCSI.
 
-Tous les sous-réseaux qui sont configurés dans le cadre d'un déploiement vCenter Server ou Cloud Foundation automatisé utilisent des plages gérées par {{site.data.keyword.cloud_notm}}. Cela garantit que toutes les adresses IP peuvent être routées vers n'importe quel centre de données dans le compte {{site.data.keyword.cloud_notm}} lorsque vous avez besoin de la connexion que ce soit immédiatement ou ultérieurement.
+Tous les sous-réseaux qui sont configurés dans le cadre d'un déploiement vCenter Server automatisé utilisent des plages gérées par {{site.data.keyword.cloud_notm}}. Cela garantit que toutes les adresses IP peuvent être routées vers n'importe quel centre de données dans le compte {{site.data.keyword.cloud_notm}} lorsque vous avez besoin de la connexion que ce soit immédiatement ou ultérieurement.
 
 Voir le tableau suivant pour un récapitulatif.
 
@@ -145,7 +145,7 @@ Tableau 1. Récapitulatif VLAN et sous-réseau
 | Privé A | Principal  | Sous-réseau unique affecté aux hôtes physiques affectés par {{site.data.keyword.cloud_notm}}. Utilisé par l'interface de gestion pour le trafic de gestion vSphere. |
 | Privé A | Portable | Sous-réseau unique affecté aux machines virtuelles qui fonctionnent comme des composants de gestion |
 | Privé A | Portable | Sous-réseau unique affecté à NSX-V ou NSX-T VTEP |
-| Privé A | Portable | Sous-réseau unique affecté pour vSAN, si utilisé. |
+| Privé B | Portable | Sous-réseau unique affecté pour vSAN, si utilisé. |
 | Privé B | Portable | Sous-réseau unique affecté pour NAS, si utilisé. |
 | Privé B | Portable | Deux sous-réseaux affectés pour iSCSI NAS, si utilisé (un par port NIC physique) |
 | Privé B | Portable | Sous-réseau unique affecté pour vMotion. |
@@ -156,10 +156,10 @@ Si vous voulez avoir un routage entre les réseaux dissocié et sous-jacent, vou
 
 Les connexions de réseau privé sont configurées pour utiliser 9000 comme taille MTU de trame jumbo afin d'améliorer les performances des transferts d'importantes quantités de données, comme le stockage et vMotion. Il s'agit de la MTU maximale autorisée dans VMware et par {{site.data.keyword.cloud_notm}}. Les connexions de réseau public utilisent 1500 comme taille MTU Ethernet standard. Cette valeur doit être conservée ; tout changement peut provoquer une fragmentation des paquets sur Internet.
 
-## Conception de stockage physique
+## Conception du stockage physique
 {: #design_physicalinfrastructure-storage-design}
 
-La conception de stockage physique fait référence à la configuration des disques physiques qui sont installés dans les hôtes physiques et à la configuration du stockage de niveau fichier partagé. Cela inclut le système d'exploitation (vSphere ESXi) et les disques utilisés pour le stockage des machines virtuelles. Le stockage des machines virtuelles peut être constitué de disques locaux virtualisés par VMware vSAN, d'un stockage de niveau fichier partagé ou d'un stockage de niveau bloc partagé.
+La conception du stockage physique fait référence à la configuration des disques physiques qui sont installés dans les hôtes physiques et à la configuration du stockage en réseau partagé. Cela inclut le système d'exploitation (vSphere ESXi) et les disques utilisés pour le stockage des machines virtuelles. Le stockage des machines virtuelles peut être constitué de disques locaux virtualisés par VMware vSAN, d'un stockage de niveau fichier partagé ou d'un stockage de niveau bloc partagé.
 
 ### Disques de système d'exploitation
 {: #design_physicalinfrastructure-os-disks}
@@ -169,7 +169,7 @@ L'hyperviseur vSphere ESXi est installé dans un emplacement persistant. Par con
 ### Disques vSAN
 {: #design_physicalinfrastructure-vsan-disks}
 
-Cette conception permet d'utiliser le stockage VMware vSAN ou le stockage de niveau fichier partagé comme magasin de données principal pour les machines virtuelles. VMware vSAN est configuré en utilisant une configuration all–flash. Cette conception offre plusieurs options de configuration, y compris les châssis 2U et 4U, différents nombres de disques et différentes tailles de disque. Toutes les configurations utilisent deux groupes de disques vSAN, avec un disque SSD pour le cache et un ou plusieurs disques SSD pour la capacité. Toutes les unités qui sont allouées pour la consommation vSAN sont configurées en RAID-0 à un disque.
+Cette conception permet d'utiliser le stockage VMware vSAN ou le stockage en réseau partagé comme magasin de données principal pour les machines virtuelles. VMware vSAN est configuré en utilisant une configuration all–flash. Cette conception offre plusieurs options de configuration, y compris les châssis 2U et 4U, différents nombres de disques et différentes tailles de disque. Toutes les configurations utilisent deux groupes de disques vSAN, avec un disque SSD pour le cache et un ou plusieurs disques SSD pour la capacité. Toutes les unités qui sont allouées pour la consommation vSAN sont configurées en RAID-0 à un disque.
 
 Pour plus d'informations sur les configurations prises en charge, voir la [Nomenclature vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
 

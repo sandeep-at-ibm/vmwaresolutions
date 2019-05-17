@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -20,7 +20,7 @@ subcollection: vmwaresolutions
 {: #iamuserinvite-reqs}
 
 * 確定您是帳戶擁有者，或 **VMware 解決方案**服務的平台管理角色是**管理者**。
-* 確定您已檢閱[利用 Identity and Access Management 管理使用者存取](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-access-with-iam)中的使用者角色及許可權。
+* 確定您已檢閱[利用 Identity and Access Management 管理使用者存取](/docs/services/vmwaresolutions?topic=vmware-solutions-iam#iam)中的使用者角色及許可權。
 
 ## 邀請使用者存取服務及資源的程序
 {: #iamuserinvite-procedure}

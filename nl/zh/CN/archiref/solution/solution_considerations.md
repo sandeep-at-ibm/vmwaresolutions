@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-25"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -46,7 +46,7 @@ subcollection: vmwaresolutions
 
 - 使用 [{{site.data.keyword.cloud_notm}} VPN](https://www.softlayer.com/vpn-access) 或 [{{site.data.keyword.cloud_notm}}“直接链路”连接](https://www.ibm.com/cloud/direct-link)来访问实例管理端点。
 - 设计从实例内部建立公用网络连接的策略。您的选项包括：样本客户 VMware NSX Edge 服务网关 (ESG)、网关设备（例如，Vyatta 和 FortiGate）以及在 {{site.data.keyword.cloud_notm}} 网络或在通过 DirectLink 访问的您自己的网络上部署的代理服务器。
-- 规划是在具有 [{{site.data.keyword.cloud_notm}} 可移植 IP 地址](/docs/infrastructure/subnets?topic=subnets-getting-started-with-subnets-and-ips)的 {{site.data.keyword.cloud_notm}} VLAN 上部署工作负载，还是[使用您自己的 IP 地址在 NSX 逻辑交换机 (VXLAN) 上](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_overview)部署工作负载。请注意，使用 NSX 软件定义的联网 (SDN) 可为您在 {{site.data.keyword.cloud_notm}} 中管理并确保工作负载网络安全提供最大的灵活性。
+- 规划是在具有 [{{site.data.keyword.cloud_notm}} 可移植 IP 地址](/docs/infrastructure/subnets?topic=subnets-getting-started-subnets-ips#getting-started-subnets-ips)的 {{site.data.keyword.cloud_notm}} VLAN 上部署工作负载，还是[使用您自己的 IP 地址在 NSX 逻辑交换机 (VXLAN) 上](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_overview)部署工作负载。请注意，使用 NSX 软件定义的联网 (SDN) 可为您在 {{site.data.keyword.cloud_notm}} 中管理并确保工作负载网络安全提供最大的灵活性。
 - 使用 NSX ESG、[IBM Cloud Vyatta](https://cloud.ibm.com/catalog/infrastructure/virtual-router-appliance) 和 DirectLink 对等连接来规划与工作负载的连接（网络地址转换、虚拟专用网和路由）。
 - 如果要实现跨 vCenter NSX，请确保在部署任何本地工作负载之前，本地分段标识范围不重叠。
 
@@ -107,7 +107,7 @@ subcollection: vmwaresolutions
 - 警报基础架构，包括根据需要配置 SMTP 服务器和短消息服务 (SMS) 网关。
 - 主动监视主机、驱动器、管理软件和网络。
 - vSAN 监视（如果适用）。
-- 容量监视和规划。您可以在 {{site.data.keyword.vmwaresolutions_short}} 控制台中针对实例[添加和除去集群](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)以及[添加和除去主机](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)。
+- 容量监视和规划。您可以在 {{site.data.keyword.vmwaresolutions_short}} 控制台中针对实例[添加和除去集群](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)以及[添加和除去主机](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)。
 - 监视备份基础架构和备份作业。
 
 ## 业务连续性和可用性

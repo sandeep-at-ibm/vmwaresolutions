@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -40,8 +40,8 @@ vSphere ESXI 호스트가 vSAN 클러스터의 일부이면 조치방안 마법�
 {: #vum-orchestr-updates-step1}
 
 1. vSphere Web Client를 사용하여 VCSA에 로그인하십시오.
-2. **홈** > **Update Manager**를 선택하고 **오브젝트 탭**에서 **Update Manager 인스턴스**를 선택하십시오.
-3. **관리 탭** 및 **호스트 기준선 탭**을 클릭하고 **새 기준선 그룹**을 클릭하십시오.
+2. **홈** > **Update Manager**를 선택하고 **오브젝트** 탭에서 **Update Manager 인스턴스**를 선택하십시오.
+3. **관리** 탭 및 **호스트 기준선** 탭을 클릭하고 **새 기준선 그룹**을 클릭하십시오.
 4. 기준선 그룹의 고유 이름을 입력하고 **다음**을 클릭하십시오.
 5. 기준선 그룹에 포함할 호스트 업그레이드 기준선을 선택하십시오.
 6. 선택적으로 업그레이드 페이지의 맨 아래에서 **새 호스트 업그레이드 기준선 작성**을 클릭하여 새 호스트 업그레이드 기준선을 작성한 후 새 기준선 마법사를 완료하십시오. **다음**을 클릭하십시오.
@@ -68,4 +68,4 @@ vSphere ESXI 호스트가 vSAN 클러스터의 일부이면 조치방안 마법�
 {: #vum-orchestr-updates-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 솔루션 아키텍처](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} 디지털 기술 업무](https://ibm-dte.mybluemix.net/ibm-vmware)(데모)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} 디지털 기술 업무](https://ibm-dte.mybluemix.net/vmware)(데모)

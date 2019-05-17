@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-19"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -55,7 +55,8 @@ Las cuentas de {{site.data.keyword.cloud_notm}} también se pueden configurar co
 
 Cada host físico del diseño tiene dos pares redundantes de conexiones Ethernet de 10 Gbps en cada conmutador Top of Rack (ToR) de {{site.data.keyword.cloud_notm}} (público y privado). Los adaptadores se configuran como conexiones individuales (no enlazadas) para un total de conexiones de 4 conexiones de 10 Gbps. Esto permite que cada conexión de tarjeta de interfaz de red (NIC) funcione de forma independiente de las demás.
 
-Figura 2. Conexiones de host físico</br>
+Figura 2. Conexiones de host físico
+</br>
 ![Conexiones de host físico](vcsnsxt-host-connections.svg)
 
 ## VLAN

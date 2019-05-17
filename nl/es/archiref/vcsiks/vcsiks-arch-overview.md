@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -37,7 +37,8 @@ En el diagrama, CAM crea de forma lógica conexiones en la nube con los entornos
 
 {{site.data.keyword.icpfull_notm}} se puede desplegar con los componentes NSX-V o NSX-T. {{site.data.keyword.icpfull_notm}} con NSX-V permite ejecutar VM {{site.data.keyword.icpfull_notm}} en la red VXLAN y utilizar el sistema de red interno de Calico de Kubernetes.
 
-{{site.data.keyword.icpfull_notm}} con NSX-T permite a los usuarios controlar y configurar el sistema de red, de subred y las políticas desde la interfaz de usuario central (NSX-T Manager). Para obtener información sobre las diferencias entre NSX-V y NSX-T, consulte la [arquitectura de referencia de red VCS de {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-intro.html).
+{{site.data.keyword.icpfull_notm}} con NSX-T permite a los usuarios controlar y configurar el sistema de red, de subred y las políticas desde la interfaz de usuario central (NSX-T Manager). Para obtener información sobre las diferencias entre NSX-V y NSX-T, consulte la
+[Arquitectura de referencia de red VCS de {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsnsxt-intro#vcsnsxt-intro).
 
 ## Plataforma de gestión de nube local
 {: #vcsiks-arch-overview-on-premises}
@@ -54,4 +55,4 @@ En el diagrama, CAM crea de forma lógica conexiones en la nube con los entornos
 ## Enlaces relacionados
 {: #vcsiks-arch-overview-related}
 
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-hybridity-intro#vcs-hybridity-intro)

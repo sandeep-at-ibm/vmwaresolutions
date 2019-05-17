@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -70,7 +70,7 @@ Si le service Veeam est installé sur une instance avec un réseau privé unique
 ## Remplacement des instances de serveur virtuel Veeam antérieures à V1.8 par Veeam on IBM Cloud
 {: #managingveeam-replace-vsi}
 
-Le service Veeam on {{site.data.keyword.cloud_notm}}, capable de sauvegarder aussi bien des composants de gestion que des charges de travail, remplace les instances de serveur virtuel Veeam précédentes intégrées à VMware Cloud Foundation et VMware vCenter Server dans les éditions antérieures à la version 1.8 uniquement pour les composants de sauvegarde et de gestion.
+Le service Veeam on {{site.data.keyword.cloud_notm}}, capable de sauvegarder aussi bien des composants de gestion que des charges de travail, remplace les instances de serveur virtuel Veeam précédentes intégrées à VMware vCenter Server dans les éditions antérieures à la version 1.8 uniquement pour les composants de sauvegarde et de gestion.
 
 En raison de cette modification, l'onglet **Sauvegarde et restauration** de la page des détails de l'instance a été retiré et les points de sauvegarde des instances ne sont plus disponibles sur la console {{site.data.keyword.vmwaresolutions_short}}. Cela dit, l'instance de serveur virtuel Veeam des instances de version antérieure à 1.8 fonctionne toujours.
 

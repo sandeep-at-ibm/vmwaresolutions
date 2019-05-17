@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -48,7 +48,7 @@ Il ridimensionamento del cluster inizia automaticamente. Riceverai un'e-mail di 
 
 Se il cluster che stai ridimensionando non è pronto per l'utilizzo, potresti ricevere un messaggio di errore.
 
-I cluster vSphere, a differenza delle istanze vCenter Server e Cloud Foundation, non vengono visualizzati nella pagina **Risorse**.
+I cluster vSphere, a differenza delle istanze vCenter Server, non vengono visualizzati nella pagina **Risorse**.
 {:note}
 
 ## Link correlati

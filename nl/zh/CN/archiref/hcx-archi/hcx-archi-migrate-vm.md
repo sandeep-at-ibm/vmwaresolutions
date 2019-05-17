@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -25,7 +25,7 @@ HCX 支持双向迁移：从内部部署迁移到云，或从云迁移到内部�
 短停机时间迁移使用基于主机的复制，将活动虚拟机从 vCenter 迁移到虚拟数据中心，或者从虚拟数据中心迁移到 vCenter。为了减少停机时间，源 VM 在复制期间保持联机状态，在复制完成后会在目标 ESX 主机上进行引导。
 
 1. 迁移请求会触发以下操作：
-  * 首先，复制会执行到 VCF/VCS HCX 虚拟数据中心的完全同步传输。复制所需的时间取决于 VM 大小和可用带宽。
+  * 首先，复制会执行到 VCS HCX 虚拟数据中心的完全同步传输。复制所需的时间取决于 VM 大小和可用带宽。
   * 复制带宽消耗量根据工作负载如何更改磁盘上的块而变化。
 2. 完全同步完成后，将执行增量同步。
 3. 增量同步完成时，HCX 会触发转换。转换可以立即启动，也可以安排在特定时间执行。
@@ -37,7 +37,7 @@ HCX 支持双向迁移：从内部部署迁移到云，或从云迁移到内部�
 ## 零停机时间 vMotion
 {: #hcx-archi-migrate-vm-no-downtime-vm}
 
-vMotion 将活动虚拟机从 vSphere vCenter 传输到 VCF/VCS Cloud。此 vMotion 需要延伸网络。vMotion 传输会捕获虚拟机的活动内存、执行状态、IP 地址和 MAC 地址。
+vMotion 将活动虚拟机从 vSphere vCenter 传输到 VCS Cloud。此 vMotion 需要延伸网络。vMotion 传输会捕获虚拟机的活动内存、执行状态、IP 地址和 MAC 地址。
 
 虚拟机硬件版本必须至少为 V9，否则跨云 vMotion 可能会失败。
 {:note}
@@ -53,8 +53,8 @@ vMotion 将活动虚拟机从 vSphere vCenter 传输到 VCF/VCS Cloud。此 vMot
 通过使用 vSphere Web Client，可以在“Hybrid Cloud Services 入门”选项卡中访问双向迁移向导。此向导处理所有迁移详细信息，包括多个虚拟机。
 
 在 vSphere Web Client 中的“Hybrid Cloud Services 入门”选项卡中，可以访问双向迁移向导。此向导处理所有迁移详细信息，包括多个虚拟机。
-* 从 vSphere 迁移到 VCF/VCS Hybrid Cloud Services
-* 从 VCF/VCS HCX Cloud 迁移到 vSphere
+* 从 vSphere 迁移到 VCS Hybrid Cloud Services
+* 从 VCS HCX Cloud 迁移到 vSphere
 
 ### 迁移前检查 VM
 {: #hcx-archi-migrate-vm-check-vms}

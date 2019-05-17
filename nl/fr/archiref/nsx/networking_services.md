@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -20,36 +20,36 @@ subcollection: vmwaresolutions
 
 Networking services on {{site.data.keyword.cloud}} est constitué de deux paires de passerelles VMware NSX Edge Services Gateway (ESG) pour la communication entre {{site.data.keyword.cloud_notm}} et l'Internet public ou le réseau local du client via un réseau privé virtuel (VPN). Ces passerelles ESG sont distinctes pour prendre en charge la fonction de gestion {{site.data.keyword.cloud_notm}} interne et le trafic sortant, ainsi que le trafic entrant sur le réseau associé au client.
 
-Le graphique suivant représente un diagramme réseau simplifié qui illustre la paire de passerelles ESG de gestion (Mgmt) et la paire de passerelles ESG de charge de travail (Workload). Il présente également un routeur logique distribué (DLR) NSX et un réseau VXLAN de charge de travail (Workload VXLAN). Ces composants sont conçus comme point d'arrivée des charges de travail du client sans nécessiter les connaissances spécifiques pour les configurer dans NSX. Un routeur DLR est employé en principe pour acheminer le trafic entre VMware Cloud Foundation ou VMware vCenter Server et le trafic est-ouest, entre les réseaux de couche 2 (L2) distincts au sein de l'instance. Ce comportement est différent de celui d'une passerelle ESG qui fonctionne pour faciliter le trafic réseau nord-sud entrant et sortant de l'instance Cloud Foundation ou vCenter Server.
+Le graphique suivant représente un diagramme réseau simplifié qui illustre la paire de passerelles ESG de gestion (Mgmt) et la paire de passerelles ESG de charge de travail (Workload). Il présente également un routeur logique distribué (DLR) NSX et un réseau VXLAN de charge de travail (Workload VXLAN). Ces composants sont conçus comme point d'arrivée des charges de travail du client sans nécessiter les connaissances spécifiques pour les configurer dans NSX. Un routeur DLR est généralement utilisé pour acheminer le trafic entre VMware vCenter Server et le trafic Est-Ouest, entre des réseaux de couche 2 séparés au sein de l'instance. Ce comportement est différent de celui d'une passerelle ESG qui fonctionne pour faciliter le trafic réseau nord-sud entrant et sortant de l'instance vCenter Server.
 
-Figure 1. Services de mise en réseau de cloud sur Cloud Foundation
+Figure 1. Services de mise en réseau de cloud sur vCenter Server
 
-![Services de mise en réseau de cloud sur Cloud Foundation](cloudnetworkingservicesdiagram.svg "Services de mise en réseau de cloud sur Cloud Foundation")
+![Services de mise en réseau de cloud sur vCenter Server](cloudnetworkingservicesdiagram.svg "Services de mise en réseau de cloud sur vCenter Server")
 
 Alors qu'une seule passerelle ESG peut suffire pour le trafic de gestion et de charge de travail du client, la séparation du trafic de gestion et du trafic du client est une décision en matière de conception prise pour empêcher une erreur de configuration accidentelle de la passerelle ESG de gestion.
 
-Une configuration incorrecte ou la désactivation de la passerelle ESG de gestion n'empêche pas l'instance Cloud Foundation ou vCenter Server de fonctionner, mais elle désactive toutes les fonctions de gestion du portail.
+Une configuration incorrecte ou la désactivation de la passerelle ESG de gestion n'empêche pas l'instance vCenter Server de fonctionner, mais elle désactive toutes les fonctions de gestion du portail.
 {:note}
 
 ## IBM Management Services NSX Edge
 {: #nsx-networking_services-mgmt-serv-nsx-edge}
 
-La passerelle IBM Management ESG est un cluster NSX Edge dédié uniquement au trafic réseau de gestion d'{{site.data.keyword.cloud_notm}}. Elle n'est pas conçue pour la circulation du trafic d'un composant non déployé et géré par la fonction d'automatisation de Cloud Foundation ou vCenter Server.
+La passerelle IBM Management ESG est un cluster NSX Edge dédié uniquement au trafic réseau de gestion d'{{site.data.keyword.cloud_notm}}. Elle n'est pas conçue pour la circulation du trafic d'un composant non déployé et géré par la fonction d'automatisation de vCenter Server.
 
-La passerelle ESG de gestion fournit un chemin de communication entre des machines virtuelles (VM) de services complémentaires résidant dans des instances de Cloud Foundation ou vCenter Server et l'infrastructure IBM Automation dans {{site.data.keyword.cloud_notm}} comme illustré pour Cloud Foundation dans le graphique suivant.
+La passerelle ESG de gestion fournit un chemin de communication entre des machines virtuelles (VM) de services complémentaires résidant dans des instances vCenter Server et l'infrastructure IBM Automation dans {{site.data.keyword.cloud_notm}} comme illustré pour vCenter Server dans le graphique suivant.
 
-Figure 2. Communications Management Edge sur Cloud Foundation
+Figure 2. Communications du serveur de périphérie de gestion sur vCenter Server
 
-![Communications Management Edge sur Cloud Foundation](mgmtvmcommunication.svg "Communications Management Edge sur Cloud Foundation")
+![Communications du serveur de périphérie de gestion sur vCenter Server](mgmtvmcommunication.svg "Communications du serveur de périphérie de gestion sur vCenter Server")
 
-En raison de la communication légère entre certaines machines virtuelles de services complémentaires et leurs systèmes de décompte et de licence correspondants, les passerelles NSX ESG sont dimensionnées dans une configuration de grande taille au sein d'une paire à haute disponibilité (HA) active et passive et déployées sur le pool de ressources de gestion du cluster Cloud Foundation convergé ou du cluster vCenter Server. Le tableau suivant présente un récapitulatif de déploiement des passerelles IBM Management NSX ESG.
+En raison de la faible communication entre certaines machines virtuelles de services complémentaires et leurs systèmes de décompte et de licence correspondants, les passerelles NSX ESG sont dimensionnées dans une configuration de grande taille au sein d'une paire à haute disponibilité (HA) active et passive et déployées sur le pool de ressources de gestion du cluster vCenter Server. Le tableau suivant présente un récapitulatif de déploiement des passerelles IBM Management NSX ESG.
 
 Tableau 1. Spécifications des passerelles IBM Management NSX ESG
 
 | IBM management NSX Edge | vCPU | Mémoire | Taille du disque | Emplacement de stockage |
 |:----------------------- |:---- |:------ |:--------- |:---------------- |
-| IBM Management NSX ESG 1 | 2 | 1 Go | 1 Go | Magasin de données vSAN (Cloud Foundation) ; stockage en réseau partagé pour la gestion (vCenter Server) |
-| IBM Management NSX ESG 2 | 2 | 1 Go | 1 Go | Magasin de données vSAN (Cloud Foundation) ; stockage en réseau partagé pour la gestion (vCenter Server) |
+| IBM Management NSX ESG 1 | 2 | 1 Go | 1 Go | Magasin de données vSAN ou stockage partagé connecté pour gestion |
+| IBM Management NSX ESG 2 | 2 | 1 Go | 1 Go | Magasin de données vSAN ou stockage partagé connecté pour gestion |
 
 ### Services de gestion
 {: #nsx-networking_services-mgmt-services}
@@ -64,7 +64,7 @@ Accès sortant requis pour les services suivants :
 ### Interfaces Edge
 {: #nsx-networking_services-edge-interfaces}
 
-La configuration des interfaces ESG définit quels sont les réseaux L2 auxquels la passerelle ESG a accès. Pour la gestion du cycle de vie de Cloud Foundation et vCenter Server, il est nécessaire que des machines virtuelles spécifiques placées sur le VLAN de gestion soient autorisées à atteindre le VLAN public. Les interfaces suivantes sont définies lors du déploiement :
+La configuration des interfaces ESG définit quels sont les réseaux L2 auxquels la passerelle ESG a accès. Pour la gestion du cycle de vie de vCenter Server, il est nécessaire que des machines virtuelles spécifiques placées sur le VLAN de gestion soient autorisées à atteindre le VLAN public. Les interfaces suivantes sont définies lors du déploiement :
 
 Tableau 2. Configuration des interfaces NSX ESG
 
@@ -90,7 +90,7 @@ Tableau 3. Configuration IP de NSX ESX
 ### Définitions de la conversion d'adresses réseau (NAT)
 {: #nsx-networking_services-nat-definitions}
 
-La conversion d'adresses réseau (NAT) est employée sur la passerelle Management ESG afin d'autoriser la circulation du trafic réseau d'un espace d'adresses IP à un autre. En principe, cette conversion est effectuée pour conserver des adresses IP routables Internet ou dissimuler des adresses IP internes aux adresses publiques par mesure de sécurité. La conversion NAT est également utilisée pour permettre la redirection des ports TCP (Transmission Control Protocol) et UDP (User Datagram Protocol). Le trafic de gestion est toujours initié à partir d'une instance Cloud Foundation et vCenter Server, ce qui nécessite qu'une conversion NAT source (SNAT) uniquement soit définie sur la passerelle ESG de gestion. Une conversion SNAT individuelle n'est pas créée pour chaque machine virtuelle interne hébergeant un service nécessitant de sortir de l'instance.
+La conversion d'adresses réseau (NAT) est employée sur la passerelle Management ESG afin d'autoriser la circulation du trafic réseau d'un espace d'adresses IP à un autre. En principe, cette conversion est effectuée pour conserver des adresses IP routables Internet ou dissimuler des adresses IP internes aux adresses publiques par mesure de sécurité. La conversion NAT est également utilisée pour permettre la redirection des ports TCP (Transmission Control Protocol) et UDP (User Datagram Protocol). Le trafic de gestion est toujours initié à partir d'une instance vCenter Server, ce qui nécessite qu'une conversion NAT source (SNAT) uniquement soit définie sur la passerelle ESG de gestion. Une conversion SNAT individuelle n'est pas créée pour chaque machine virtuelle interne hébergeant un service nécessitant de sortir de l'instance.
 
 Tableau 4. Configuration de la conversion NAT pour NSX ESG
 
@@ -105,7 +105,7 @@ Comme les services au sein des machines virtuelles devant passer par la passerel
 
 Alors qu'il est difficile de prédire la plage d'adresses IP de destination nécessaire comme destination pour les connexions Internet, tout service déployé et géré par {{site.data.keyword.cloud_notm}} pointe vers la passerelle Management ESG comme passerelle par défaut. Une route statique est obligatoire pour forcer le trafic via le routeur BCR {{site.data.keyword.cloud_notm}} pour les services qui nécessitent des connexions aux réseaux externes.
 
-Les configurations suivantes sont recommandées pour les services utilisant la passerelle Management ESG pour sortir d'une instance Cloud Foundation ou vCenter Server :
+Les configurations suivantes sont recommandées pour les services utilisant la passerelle Management ESG pour sortir d'une instance vCenter Server :
 * La passerelle par défaut est une passerelle ESG de gestion.
 * Une route statique est obligatoire pour les destinations {{site.data.keyword.cloud_notm}} internes.
 
@@ -146,9 +146,9 @@ Tableau 6. Configuration de pare-feu NSX ESG
 ## IBM Workload NSX Edge
 {: #nsx-networking_services-wkld-nsx-edge}
 
-la passerelle IBM Workload ESG fait partie d'une topologie simple conçue pour la communication des charges de travail sur le réseau. La section suivante décrit le plan de conception pour savoir où connecter les charges de travail à un réseau au sein d'une instance Cloud Foundation ou vCenter Server. Il s'agit du point de départ pour la connexion de réseaux locaux et d'espace d'adresses IP à une instance Cloud Foundation ou vCenter Server particulière et constitue la base d'une véritable architecture de cloud hybride.
+la passerelle IBM Workload ESG fait partie d'une topologie simple conçue pour la communication des charges de travail sur le réseau. La section suivante décrit le plan de conception pour savoir où connecter les charges de travail à un réseau au sein d'une instance vCenter Server. Il s'agit du point de départ pour la connexion de réseaux locaux et d'espace d'adresses IP à une instance vCenter Server particulière et constitue la base d'une véritable architecture de cloud hybride.
 
-Un réseau client connecté à la fois à des réseaux {{site.data.keyword.cloud_notm}} publics et privés permet l'accès des charges de travail au trafic entrant et sortant sur Internet, mais permet également la création d'un VPN de site à site à partir de réseaux {{site.data.keyword.cloud_notm}} publics ou privés. Cela contribue à diminuer considérablement la rentabilité en ce qui concerne la connexion aux réseaux locaux car il peut s'écouler des mois pour activer un réseau étendu (WAN) dédié en raison des exigences des clients en matière de sécurité. Cependant, une fois qu'un lien dédié est instauré, le VPN peut être inversé pour passer à travers ce lien sans affecter le réseau dissocié dans le tunnel VPN ou dans l'instance Cloud Foundation ou vCenter Server. Une fois cette opération effectuée, l'interface publique de la passerelle Workload ESG peut être supprimée par mesure de sécurité, si nécessaire.
+Un réseau client connecté à la fois à des réseaux {{site.data.keyword.cloud_notm}} publics et privés permet l'accès des charges de travail au trafic entrant et sortant sur Internet, mais permet également la création d'un VPN de site à site à partir de réseaux {{site.data.keyword.cloud_notm}} publics ou privés. Cela contribue à diminuer considérablement la rentabilité en ce qui concerne la connexion aux réseaux locaux car il peut s'écouler des mois pour activer un réseau étendu (WAN) dédié en raison des exigences des clients en matière de sécurité. Cependant, une fois qu'un lien dédié est instauré, le VPN peut être inversé pour passer à travers ce lien sans affecter le réseau dissocié dans le tunnel VPN ou dans l'instance vCenter Server. Une fois cette opération effectuée, l'interface publique de la passerelle Workload ESG peut être supprimée par mesure de sécurité, si nécessaire.
 
 La topologie présentée dans la figure suivante est constituée des composants NSX suivants :
 * Dispositif NSX Edge (ESG)
@@ -203,7 +203,7 @@ Tableau 9. Configuration du routeur DLR et de l'adresse IP de la passerelle Work
 
 La conversion NAT est employée sur la passerelle Workload ESG afin d'autoriser la circulation du trafic réseau d'un espace d'adresses IP à un autre. Pour la passerelle Workload ESG, la conversion NAT est nécessaire pour permettre la communication vers les destinations Internet, mais aussi pour communiquer avec n'importe quelles plages d'adresses IP sourcées {{site.data.keyword.cloud_notm}}. Pour cette conception, le trafic des charges de travail est autorisé pour la sortie sur Internet, mais pas pour la gestion ou tout autre réseau {{site.data.keyword.cloud_notm}}. Ainsi, seule une conversion SNAT doit être définie sur la passerelle Workload ESG. L'ensemble du sous-réseau portable Workload est configuré pour passer par la conversion SNAT.
 
-Alors qu'il est possible d'utiliser la conversion NAT pour autoriser la communication des charges de travail sur plusieurs instances Cloud Foundation ou vCenter Server, il n'est pas possible de l'utiliser lorsque plusieurs charges de travail doivent être connectées sur plusieurs instances. Pour consulter des exemples d'utilisation des fonctions avancées de NSX pour créer un réseau de transport de superposition L2 sur des instances Cloud Foundation ou vCenter Server, voir [Architecture multisite](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx-multi_site).
+Alors qu'il est possible d'utiliser la conversion NAT pour autoriser la communication des charges de travail sur plusieurs instances vCenter Server, il n'est pas possible de l'utiliser lorsque plusieurs charges de travail doivent être connectées sur plusieurs instances. Pour consulter des exemples d'utilisation des fonctions avancées de NSX pour créer un réseau de transport de superposition L2 sur des instances vCenter Server, voir [Architecture multisite](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx-multi_site).
 
 Tableau 10. Règles NAT de passerelle Workload ESG
 
@@ -247,7 +247,7 @@ Les paires à haute disponibilité (HA) de passerelles ESG et routeur DLR de la 
 
 Tableau 13. Interfaces internes de passerelle Workload ESG
 
-| Nom du réseau VXLAN | Zone de transport Cloud Foundation ou vCenter Server | Type |
+| Nom du réseau VXLAN | Zone de transport de vCenter Server | Type |
 |:---------- |:------------------------------------------------- |:---- |
 | Workload HA | transit-1 | Global |
 | Workload transit | transit-1 | Global |

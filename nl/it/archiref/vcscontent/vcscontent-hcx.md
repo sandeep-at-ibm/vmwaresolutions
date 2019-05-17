@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-02-15"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -24,7 +24,7 @@ connessione trasparente tra le istanze vCenter Server e un
 data center virtualizzato VMware installato in loco.
 
 I componenti di vCenter Server with Hybridity Bundle, che vengono distribuiti
-come VM (Virtual Machine) nel sito di destinazione {{site.data.keyword.cloud_notm}} VMware, consentono di
+come macchine virtuali nel sito di destinazione {{site.data.keyword.cloud_notm}} VMware, consentono di
 stabilire una connessione con i componenti HCX installati
 nel sito di origine in loco del peer.
 
@@ -49,7 +49,7 @@ modificare il gateway di rete in modo che il traffico di rete utilizzi
 il gateway del sito di destinazione e non ritorni al sito di origine.
 * Migrazione senza tempo di inattività – un sistema in esecuzione può essere spostato nel (o tolto
 dal) cloud utilizzando vMotion.
-* Migrazione pianificata – qualsiasi numero di VM (Virtual Machine) può essere replicato
+* Migrazione pianificata – qualsiasi numero di macchine virtuali può essere replicato
 nel sito di destinazione e quindi attivato su quel sito in un momento designato,
 sostituendo i sistemi in esecuzione sul sito di origine.
 * Migrazione delle politiche di sicurezza – se viene utilizzato NSX in loco, tutte

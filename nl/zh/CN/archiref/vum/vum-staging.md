@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-29"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -57,9 +57,9 @@ subcollection: vmwaresolutions
 6. （可选）在**高级选项**页面上，选择用于将修复安排在日后运行的选项，并为该任务指定唯一名称和可选描述。为安排的任务设置的时间是 VCSA 上的时间。（可选）选择用于忽略有关主机上不支持的设备或不再支持的 VMFS 数据存储的警告的选项，以继续进行修复。单击**下一步**。
 7. 在主机**修复选项**页面上，从 **VM 电源状态**下拉菜单中，可以选择更改要修复的主机上运行的 VM 和虚拟设备的电源状态。在主机上的 VM 已关闭电源、已暂挂或已通过 vMotion 迁移到 DRS 集群中的其他主机之后，该主机才能进入维护模式。某些更新需要主机在修复之前进入维护模式。主机处于维护模式时，VM 和设备无法运行。要以牺牲 VM 可用性为代价缩短主机修复停机时间，您可以选择在修复之前关闭或暂挂 VM 和虚拟设备。在 DRS 集群中，如果未关闭 VM 的电源，那么修复过程需要更长时间，但 VM 在整个修复过程中可用，因为这些 VM 已通过 vMotion 迁移到其他主机。选择如下所示：
 
-- **关闭虚拟机电源** - 修复之前，关闭所有 VM 和虚拟设备的电源。
-- **暂挂虚拟机** - 修复之前，暂挂所有正在运行的 VM 和虚拟设备。
-- **不更改 VM 电源状态** - 使 VM 和虚拟设备保持其当前电源状态不变。
+  * **关闭虚拟机电源** - 修复之前，关闭所有 VM 和虚拟设备的电源。
+  * **暂挂虚拟机** - 修复之前，暂挂所有正在运行的 VM 和虚拟设备。
+  * **不更改 VM 电源状态** - 使 VM 和虚拟设备保持其当前电源状态不变。
 
 8. （可选）选择**禁用连接到主机上虚拟机的任何可移动介质设备**。VUM 不会修复其上的 VM 已连接 CD、DVD 或软盘驱动器的主机。在集群环境中，如果目标主机没有完全相同的设备或未安装 ISO 映像，那么连接的介质设备可能会阻止 vMotion，进而会阻止源主机进入维护模式。修复后，VUM 将重新连接可移动介质设备（如果这些设备仍然可用）。
 9. （可选）选择**失败时重试进入维护模式**，指定重试次数，并指定重试之间的等待时间。VUM 会等待重试延迟时间段，并重试将主机置于维护模式，最大重试次数为您在“重试次数”字段中指示的次数。
@@ -81,4 +81,4 @@ subcollection: vmwaresolutions
 {: #vum-staging-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 解决方案体系结构](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} 数字技术互动](https://ibm-dte.mybluemix.net/ibm-vmware)（演示）
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} 数字技术互动](https://ibm-dte.mybluemix.net/vmware)（演示）

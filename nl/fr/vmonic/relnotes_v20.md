@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2017-11-20"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -52,7 +52,7 @@ Dans tous les cas, vous devez gérer la configuration des dispositifs FSA avec l
 ## Cohérence du format du nom de domaine complet
 {: #relnotes_v20-fqdn}
 
-Le nom de domaine complet est désormais représenté de manière cohérente pour toutes les instances. Lorsque vous passez une commande, vous pouvez entrer vos propres préfixe de sous-domaine et préfixe de nom d'hôte pour faire en sorte que la convention sur le format de nom de domaine complet (industrie) soit appliquée. Par exemple, `préfixe-nom-hôte<n>.préfixe-sousdomaine.nom-domaine`.
+Le nom de domaine complet est désormais représenté de manière cohérente pour toutes les instances. Lorsque vous passez une commande, vous pouvez entrer vos propres préfixe de sous-domaine et préfixe de nom d'hôte pour faire en sorte que la convention sur le format de nom de domaine complet (industrie) soit appliquée. Par exemple, `host-name-prefix<n>.subdomain-prefix.domain-name`.
 
 Pour plus d'informations, voir les rubriques suivantes :
 * [Commande d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)

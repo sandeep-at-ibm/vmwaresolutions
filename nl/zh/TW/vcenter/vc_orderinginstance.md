@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -36,7 +36,7 @@ subcollection: vmwaresolutions
   |vCenter Server 登入使用者名稱  | `<user_id>@<root_domain>`（Microsoft Active Directory 使用者）或 `administrator@vsphere.local` |
   |vCenter Server（具有內嵌的 PSC）FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`。長度上限為 50 個字元。|
   |單一登入 (SSO) 站台名稱| `<subdomain_label>` |
-  |完整的 ESXi 伺服器名稱| `<host_prefix><n>.<subdomain_label>.<root_domain>`，其中 `<n>` 是 ESXi 伺服器的序號。長度上限為 50 個字元。|
+  |完整的 ESXi 伺服器名稱| `<host_prefix><n>.<subdomain_label>.<root_domain>`，其中 `<n>` 是 ESXi 伺服器序列。長度上限為 50 個字元。|
 
 請不要修改在訂購或部署實例期間設定的任何值。這樣做會讓您的實例無法使用。例如，如果公用網路關閉、伺服器和虛擬伺服器實例 (VSI) 在佈建進行中移到 Vyatta 之後，或者 IBM CloudBuilder VSI 停止或遭到刪除。
 {:important}
@@ -135,18 +135,15 @@ Bare Metal 設定是根據您選取的資料中心，以及 Bare Metal Server �
 
 | CPU 型號選項             |RAM 選項          |
 |:------------- |:------------- |
-|雙重 Intel Xeon E5-2620 v4 / 總計 16 核心，2.1 GHz |64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon E5-2650 v4 / 總計 24 核心，2.2 GHz |64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon E5-2690 v4 / 總計 28 核心，2.6 GHz |64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
 |四重 Intel Xeon E7-4820 v4 / 總計 40 核心，2.0 GHz |128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 |四重 Intel Xeon E7-4850 v4 / 總計 64 核心，2.1 GHz |128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 
 ### Bare Metal Server 數目
 {: #vc_orderinginstance-bare-metal-number}
 
-對於實例中的起始叢集，您可以配置在 2 - 20 範圍內的 ESXi 伺服器數目。所有 ESXi 伺服器都會共用設定的配置。
-
-起始部署之後，您可以再新增四個叢集。如果您對 VMware vSAN 選取 **Skylake** 或 **Broadwell** 配置，則起始叢集和部署後的叢集都需要 4 部 ESXi 伺服器。如需最少 ESXi 伺服器數目的相關資訊，請參閱[雙節點 vCenter Server 實例是否為高可用性](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)。
+* 您訂購的所有伺服器都有相同的配置。
+* 如果規劃使用 vSAN 儲存空間，您可以訂購 4 到 20 部伺服器。
+* 如果規劃使用 NFS 儲存空間，您可以訂購 2 到 20 部伺服器。不過，對於正式作業工作負載，建議至少 3 部伺服器。如需相關資訊，請參閱[雙節點 vCenter Server 實例是否為高可用性？](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)。
 
 ## 儲存空間設定
 {: #vc_orderinginstance-storage-settings}
@@ -162,12 +159,12 @@ Bare Metal 設定是根據您選取的資料中心，以及 Bare Metal Server �
 vSAN 僅適用於 **Skylake** 或 **Broadwell** Bare Metal 配置。請指定下列 vSAN 選項：
 * **vSAN 容量磁碟的磁碟類型及大小**：選取所需容量磁碟的選項。
 * **vSAN 容量磁碟數目**：指定您要新增的容量磁碟數目。
-* 如果您要新增超過所限制的 8 個容量磁碟，請勾選**高效能 Intel Optane** 方框。這個選項提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟，並且適用於需要較少延遲且較高 IOPS 傳輸量的工作負載。
+* 如果您要新增的容量超過所限制的 10 個磁碟，請勾選 **Intel Optane 的高效能**方框。這個選項提供 2 個額外容量磁碟機槽來放置共 12 個容量磁碟，並且適用於需要較少延遲且較高 IOPS 傳輸量的工作負載。
 
-  **高效能 Intel Optane** 選項僅適用於 Skylake CPU 型號「雙重 Intel Xeon Gold 5120」及「雙重 Intel Xeon Gold 6140」。
+  **Intel Optane 的高效能**選項僅適用於 Skylake CPU 型號。
   {:note}
 
-* 檢閱 **vSAN 快取磁碟的磁碟類型**及 **vSAN 快取磁碟數目**值。這些值取決於您是否已勾選**高效能 Intel Optane** 方框。
+* 檢閱 **vSAN 快取磁碟的磁碟類型**及 **vSAN 快取磁碟數目**值。這些值取決於您是否已勾選 **Intel Optane 的高效能**方框。
 * **vSAN 授權**：選取**購買隨附**以將 IBM 提供的 VMware 授權用於 vSAN 元件，也可以選取**我將提供**並輸入自己的授權碼以「自帶授權 (BYOL)」。
 
 ### NFS 儲存空間
@@ -238,12 +235,14 @@ vSAN 僅適用於 **Skylake** 或 **Broadwell** Bare Metal 配置。請指定下
 ### 公用或專用網路
 {: #vc_orderinginstance-public-private-network}
 
-網路介面卡 (NIC) 啟用設定是根據您選取**公用及專用網路**或**僅限專用網路**而定。下列附加程式服務需要公用 NIC，如果您選取專用選項，則無法使用：
+網路介面卡 (NIC) 啟用設定是根據您選取**公用及專用網路**或**僅限專用網路**而定。
 
-* F5 on {{site.data.keyword.cloud_notm}}
-* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
-* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
-* Zerto on {{site.data.keyword.cloud_notm}}
+如果選取**僅限專用網路**選項：
+* 不會佈建 VMware NSX Edge Services Gateway (ESG)（也不會佈建管理服務 ESG 及客戶管理的 ESG）。
+* 無法使用下列附加程式服務，因為它們需要公用 NIC：
+  * F5 on {{site.data.keyword.cloud_notm}}
+  * Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
+  * Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
 
 ### VLAN
 {: #vc_orderinginstance-vlans}
@@ -280,14 +279,14 @@ vSAN 僅適用於 **Skylake** 或 **Broadwell** Bare Metal 配置。請指定下
 * **適用於 Active Directory/DNS 的單一公用 Windows VSI**：適用於 Microsoft Active Directory (AD) 的單一 Microsoft Windows Server VSI 充當登錄主機及 VM 之實例的 DNS，已部署並可查閱。依預設，已對 1.9 版以及更新版本的實例部署這個選項。
 * **管理叢集上有兩部高可用性的專用 Windows Server VM**：部署兩部 Microsoft Windows VM，協助加強安全及穩健性。
 
-如果您將實例配置為使用兩部 Microsoft Windows VM，則必須提供兩份 Microsoft Windows Server 2012 R2 授權。請使用 Microsoft Windows Server 2012 R2 Standard 版本授權及（或）Microsoft Windows Server 2012 R2 Datacenter 版本授權。
+如果您將實例配置為使用兩部 Microsoft Windows VM，則必須提供兩份 Microsoft Windows Server 2016 授權。請使用 Microsoft Windows Server 2016 Standard 版本授權及（或）Microsoft Windows Server 2016 Datacenter 版本授權。
 {:important}
 
 每一份授權都只能指派給一部單一實體伺服器，且最多涵蓋兩個實體處理器。以一份 Standard 版本授權而言，每部雙處理器伺服器都可以執行兩部虛擬化 Microsoft Windows VM。因此，必須有兩份授權，因為兩部 Microsoft Windows VM 部署在兩部不同的主機中。
 
 您有 30 天的時間可啟動 VM。
 
-如需 Windows 授權的相關資訊，請參閱 [Windows Server 2012 R2 文件](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2)。
+如需訂購 Windows Server 2016 授權的相關資訊，請參閱[開始使用 Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:new_window}。
 
 ## 服務設定
 {: #vc_orderinginstance-addon-services}
@@ -321,14 +320,14 @@ vSAN 僅適用於 **Skylake** 或 **Broadwell** Bare Metal 配置。請指定下
     2. 選取 Bare Metal Server 配置。
        * 當您選取 **Skylake** 或 **Broadwell** 時，請指定 CPU 型號及 RAM 大小。
        * 當您選取 **SAP 認證**時，請選取其中一個預設配置。
-    3. 指定 {{site.data.keyword.baremetal_short}} 數目。如果您打算使用 vSAN 作為儲存空間解決方案，則至少需要 4 部 {{site.data.keyword.baremetal_short}}。  
+    3. 指定 {{site.data.keyword.baremetal_short}} 數目。如果規劃使用 vSAN 儲存空間，則需要至少四個 {{site.data.keyword.baremetal_short}}。  
 8. 完成儲存空間配置。
   * 如果您選取 **vSAN 儲存空間**，請指定容量及快取磁碟的磁碟類型、磁碟數目以及「vSAN 授權」版本。如果您要更多儲存空間，請勾選**高效能 Intel Optane** 方框。
   * 如果您選取 **NFS 儲存空間**，而且要對所有檔案共用新增及配置相同的設定，請指定**共用數目**、**效能**及**大小 (GB)**。
   * 如果您選取 **NFS 儲存空間**，而且要個別新增及配置檔案共用，請選取**個別配置共用**。然後，按一下**新增共用儲存空間**標籤旁的 **+** 圖示，並針對每個檔案共用選取**效能**及**大小 (GB)**。您必須至少選取一個檔案共用。
   * 如果您選取**本端磁碟**，請指定磁碟計數及磁碟類型。
 9. 完成網路介面設定。
-   1. 輸入主機名稱字首、子網域標籤及根網域名稱。對於次要實例，會自動完成網域名稱。
+   1. 輸入要佈建之實例的主機名稱字首、子網域標籤，以及根網域名稱。對於次要實例，會自動完成網域名稱。
    2. 選取**公用及專用網路**或**僅限專用網路**的網路設定。
    3. 選取 VLAN 設定：
       * 如果您要訂購新的公用及專用 VLAN，則請按一下**訂購新的 VLAN**。
@@ -376,7 +375,7 @@ vSAN 僅適用於 **Skylake** 或 **Broadwell** Bare Metal 配置。請指定下
 * [註冊 {{site.data.keyword.cloud_notm}} 帳戶](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)
 * [檢視 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
 * [vCenter Server 實例的多站台配置](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_multisite)
-* [新增、檢視及刪除 vCenter Server 實例的叢集](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [新增、檢視及刪除 vCenter Server 實例的叢集](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 * [擴充及縮減 vCenter Server 實例的容量](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
 * [訂購、檢視及移除 vCenter Server 實例的服務](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
 * [刪除 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_deletinginstance)

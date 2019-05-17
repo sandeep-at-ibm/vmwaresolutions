@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-29"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -59,9 +59,9 @@ subcollection: vmwaresolutions
 6. 可選擇在**進階選項**頁面上，選取排定稍後執行補救的選項，然後指定作業的唯一名稱及選用說明。您針對已排定作業所設定的時間就是 VCSA 上的時間。可選擇選取忽略有關主機上不受支援裝置之警告的選項，或不再支援 VMFS 資料儲存庫繼續進行補救。按**下一步**。
 7. 您可以從**主機補救選項**頁面的 **VM 電源狀態**下拉功能表中，選取在要補救的主機上執行的 VM 及虛擬應用裝置的電源狀態變更。除非主機上的 VM 關閉電源、暫停或使用 vMotion 移轉至 DRS 叢集中的其他主機，否則主機無法進入維護模式。部分更新需要主機在補救之前進入維護模式。主機處於維護模式時，VM 及應用裝置無法執行。若要以犧牲 VM 可用性作為代價來減少主機補救關閉時間，您可以選擇在進行補救之前，關閉或暫停 VM 及虛擬應用裝置。在 DRS 叢集中，如果您未關閉 VM 的電源，則補救需要更久的時間，但 VM 在整個補救處理程序期間可供使用，因為它們是使用 vMotion 移轉至其他主機。選項如下：
 
-- **關閉虛擬機器電源** - 在進行補救之前，請關閉所有 VM 及虛擬應用裝置的電源。
-- **暫停虛擬機器** - 在進行補救之前，請暫停所有執行中的 VM 及虛擬應用裝置。
-- **不要變更 VM 電源狀態** - 讓 VM 及虛擬應用裝置處於其現行電源狀態。
+  * **關閉虛擬機器電源** - 在進行補救之前，請關閉所有 VM 及虛擬應用裝置的電源。
+  * **暫停虛擬機器** - 在進行補救之前，請暫停所有執行中的 VM 及虛擬應用裝置。
+  * **不要變更 VM 電源狀態** - 讓 VM 及虛擬應用裝置處於其現行電源狀態。
 
 8. 可選擇選取**停用任何連接至主機上虛擬機器的抽取式媒體裝置**。VUM 不會重新修補其 VM 已連接 CD、DVD 或軟式磁碟機的主機。在叢集環境中，如果目的地主機沒有相同的裝置或已裝載的 ISO 映像檔，則已連接的媒體裝置可能會阻止進行 vMotion，進而阻止來源主機進入維護模式。補救之後，VUM 會重新連接抽取式媒體裝置（如果它們仍然可用）。
 9. 可選擇選取**在失敗時重試進入維護模式**，指定重試次數，然後指定重試之間的等待時間。VUM 會等待重試延遲期間，並重試讓主機進入維護模式，而重試次數就是您在「重試次數」欄位中指出的次數。
@@ -83,4 +83,4 @@ subcollection: vmwaresolutions
 {: #vum-staging-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 解決方案架構](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware)（示範）
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware)（示範）

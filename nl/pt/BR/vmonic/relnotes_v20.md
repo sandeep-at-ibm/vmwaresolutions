@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2017-11-20"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -128,7 +128,7 @@ Para obter mais informações sobre os componentes, consulte [Visão geral do vC
 ### Suporte de configuração de vários sites para instâncias do vCenter Server
 {: #relnotes_v20-vcs-multisite}
 
-Agora, é possível implementar uma única instância do vCenter Server além das instâncias secundárias que estão conectadas a uma instância primária. O modelo de configuração multisite usa uma topologia hub-and-spoke com um site primário e um máximo de sete sites secundários.
+Agora, é possível implementar uma única instância do vCenter Server além das instâncias secundárias que estão conectadas a uma instância primária. O modelo de configuração multissite usa uma topologia hub-and-spoke com um site primário e um máximo de sete sites secundários.
 
 Para obter mais informações, veja [Configuração de vários sites para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_multisite).
 

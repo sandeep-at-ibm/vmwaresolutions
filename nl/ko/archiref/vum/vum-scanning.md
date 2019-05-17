@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -54,7 +54,7 @@ subcollection: vmwaresolutions
 특정 시간이나 사용자에게 편리한 간격으로 VM, 가상 어플라이언스 및 vSphere ESXi 호스트를 스캔하도록 vSphere Web Client를 구성할 수 있습니다.
 
 1.	vSphere Web Client를 사용하여 인벤토리에서 오브젝트를 선택하십시오. 선택한 오브젝트의 모든 하위 오브젝트도 스캔됩니다.
-2.	**모니터 탭**을 선택하고 **태스크 및 이벤트**를 클릭하십시오.
+2.	**모니터** 탭을 선택하고 **태스크 및 이벤트**를 클릭하십시오.
 3.	**스케줄된 태스크**를 선택하고 **새 태스크 스케줄**을 클릭하십시오.
 4.	표시되는 드롭 다운 목록에서 **업데이트 스캔**을 선택하십시오. 업데이트 스캔 마법사가 열립니다.
 5.	설정 편집 페이지에서 인벤토리 오브젝트를 스캔할 업데이트의 유형을 선택하십시오. 하나 이상의 스캔 유형을 선택해야 합니다. 스케줄링 옵션 페이지에서 스캔 태스크에 대해 설명하고 스케줄하십시오.
@@ -65,4 +65,4 @@ subcollection: vmwaresolutions
 {: #vum-scanning-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 솔루션 아키텍처](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} 디지털 기술 업무](https://ibm-dte.mybluemix.net/ibm-vmware)(데모)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} 디지털 기술 업무](https://ibm-dte.mybluemix.net/vmware)(데모)

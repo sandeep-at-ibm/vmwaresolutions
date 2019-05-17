@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-18"
+lastupdated: "2019-04-18"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -30,11 +30,12 @@ subcollection: vmwaresolutions
 因為您的起始叢集以 vSAN 作為其儲存空間，所以在部署之後新增一部以上的 ESXi 伺服器可以增加叢集儲存空間容量。
 
 ## 將 ESXi 伺服器新增至 vCenter Server with Hybridity Bundle 實例
+{: #vc_hybrid_addingremovingservers-adding}
 
 ### 新增 ESXi 伺服器之前
 {: #vc_hybrid_addingremovingservers-adding-prereq}
 
-* 不要從 VMware vSphere Web Client 新增 ESXi 伺服器。您在 vSphere Web Client 上所做的變更不會與 {{site.data.keyword.vmwaresolutions_short}} 主控台同步。
+* 盡可能使用 {{site.data.keyword.vmwaresolutions_full}} 主控台新增 ESXi 伺服器，因為您在 VMware vSphere Web Client 上所做的變更不會與 {{site.data.keyword.vmwaresolutions_short}} 主控台同步。因此，請只針對內部部署 ESXi 伺服器或您在 {{site.data.keyword.vmwaresolutions_short}} 主控台中無法或不會管理的 ESXi 伺服器，將 ESXi 伺服器新增至 vCenter Server。
 * vSAN 儲存空間需要至少 4 部 ESXi 伺服器。
 
 ## 新增 ESXi 伺服器的程序
@@ -65,7 +66,7 @@ subcollection: vmwaresolutions
 ### 移除 ESXi 伺服器之前
 {: #vc_hybrid_addingremovingservers-removing-prereq}
 
-* 不要從 VMware vSphere Web Client 移除 ESXi 伺服器。您在 vSphere Web Client 上所做的變更不會與 {{site.data.keyword.vmwaresolutions_short}} 主控台同步。
+* 盡可能使用 {{site.data.keyword.vmwaresolutions_full}} 主控台移除 ESXi 伺服器，因為您在 vSphere Web Client 上所做的變更不會與 {{site.data.keyword.vmwaresolutions_short}} 主控台同步。因此，請只針對內部部署 ESXi 伺服器或您在 {{site.data.keyword.vmwaresolutions_short}} 主控台中無法或不會管理的 ESXi 伺服器，移除 vCenter Server 中的 ESXi 伺服器。
 * vSAN 儲存空間需要至少 4 部 ESXi 伺服器。
 * 移除已安裝 F5 on {{site.data.keyword.cloud_notm}} 或 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服務的 ESXi 伺服器之前，您必須將 F5 BIG-IP 及 FortiGate VM 移轉至與管理 VM 不同的 ESXi 伺服器。
 * 移除已安裝 IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 服務的 ESXi 伺服器之前，請確定沒有作用中（失敗或進行中）的備份或還原作業，因為這些作用中作業可能會導致無法移除 ESXi 伺服器。
@@ -96,5 +97,5 @@ subcollection: vmwaresolutions
 * [vCenter Server 資料清單](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
 * [vCenter Server with Hybridity Bundle 實例的需求及規劃](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)
 * [新增、檢視及刪除 vCenter Server with Hybridity Bundle 實例的叢集](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingviewingclusters)
-* [Place a host in maintenance mode](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
-* [Enhanced vMotion Compatibility (EVC) processor support](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003212){:new_window}
+* [Place a host in maintenance mode](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.resmgmt.doc/GUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
+* [Enhanced vMotion Compatibility (EVC) processor support](https://kb.vmware.com/s/article/1003212){:new_window}

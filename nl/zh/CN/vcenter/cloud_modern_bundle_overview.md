@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-24"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,16 +18,16 @@ subcollection: vmwaresolutions
 # Migration and App Modernization 单节点试用版概述
 {: #cloud_modern_bundle_overview}
 
-通过 Migration and App Modernization 单节点试用版，您可以试用 IBM Cloud，以将 VMware 工作负载迁移到 IBM Cloud，然后使用容器对简单工作负载进行现代化。
+通过 Migration and App Modernization 单节点试用版，您可以试用 {{site.data.keyword.cloud_notm}}，以将 VMware 工作负载迁移到 {{site.data.keyword.cloud}}，然后使用容器对简单工作负载进行现代化。
 
-单节点试用版是 IBM Cloud Private Hosted on VMware vCenter Server on IBM Cloud 的试用版，提供了针对容器的 Kubernetes 管理平台，同时提供了可以使用与内部部署环境中相同的工具进行管理的单租户 VMware 平台。您可以利用云的速度和规模，同时保持内部部署提供的相同级别的控制和可视性。
+单节点试用版是 {{site.data.keyword.cloud_notm}} Private Hosted on VMware vCenter Server on {{site.data.keyword.cloud_notm}} 的试用版，提供了针对容器的 Kubernetes 管理平台，同时提供了可以使用与内部部署环境中相同的工具进行管理的单租户 VMware 平台。您可以利用云的速度和规模，同时保持内部部署提供的相同级别的控制和可视性。
 
-该试用版旨在使用 vCenter Server on IBM Cloud with Hybridity Bundle 来迁移最多 20 个简单的开发或测试工作负载，然后使用基于 Kubernetes 的 IBM Cloud Private Hosted 应用程序开发平台对这些工作负载进行容器化。自动化功能将在 IBM Cloud 中安装和配置 VMware HCX，提供内部部署 HCX 激活密钥，并在几小时内安装和配置 IBM Cloud Private Hosted 的小型开发/测试拓扑。
+该试用版旨在使用 vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 来迁移最多 20 个简单的开发或测试工作负载，然后使用基于 Kubernetes 的 {{site.data.keyword.cloud_notm}} Private Hosted 应用程序开发平台对这些工作负载进行容器化。自动化功能将在 {{site.data.keyword.cloud_notm}} 中安装和配置 VMware HCX，提供内部部署 HCX 激活密钥，并在几小时内安装和配置 {{site.data.keyword.cloud_notm}} Private Hosted 的小型开发/测试拓扑。
 
 Migration and App Modernization 单节点试用版仅适用于概念验证 (POC)。不要在此环境中运行生产工作负载。不支持添加和除去主机和集群、订购附加组件服务以及应用更新等管理功能。
 {:important}
 
-要最充分地利用单节点试用版实例，您可以使用 [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html)（可帮助您将 VMware 工作负载迁移到 IBM Cloud）提供的 [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf)。此外，[IBM Cloud Garage 服务](https://www.ibm.com/cloud/garage/)可以通过最新的云本机实践帮助您加速应用程序现代化。
+要最充分地利用单节点试用版实例，您可以使用 [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html)（可帮助您将 VMware 工作负载迁移到 {{site.data.keyword.cloud_notm}}）提供的 [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf)。此外，[{{site.data.keyword.cloud_notm}} Garage 服务](https://www.ibm.com/cloud/garage/)可以通过最新的云本机实践帮助您加速应用程序现代化。
 
 此试用版最长可使用 90 天。试用版使用时间到期后，可以删除此环境，然后供应满足您的容量需求的新环境。
 {:note}
@@ -49,7 +49,7 @@ Migration and App Modernization 单节点试用版实例中包含以下组件。
 {: #cloud_modern_bundle_overview-cpu}
 
 * 16:1 CPU 超配，适用于 vCenter Server 管理、HCX 和 20 个客户工作负载 VM
-* 11:1 CPU 超配，适用于 IBM Cloud Private
+* 11:1 CPU 超配，适用于 {{site.data.keyword.cloud_notm}} Private
 
 #### RAM 超配
 {: #cloud_modern_bundle_overview-ram}
@@ -62,7 +62,7 @@ Migration and App Modernization 单节点试用版实例中包含以下组件。
 
 * 2 TB，用于管理
 * 1 TB，用于客户工作负载（20 个客户 VM）
-* 4 TB，用于 IBM Cloud Private Hosted
+* 4 TB，用于 {{site.data.keyword.cloud_notm}} Private Hosted
 
 ### Migration and App Modernization 单节点试用版实例联网规范
 {: #cloud_modern_bundle_overview-networking-specs}
@@ -94,7 +94,8 @@ Migration and App Modernization 单节点试用版实例订单随附以下许可
 * VMware vSphere Enterprise Plus 6.7u1
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Advanced Edition 6.4
-* IBM Cloud Private Hosted V3.1
+* {{site.data.keyword.cloud_notm}} Private Hosted 3.1.2
+* {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2
 
 Migration and App Modernization 单节点试用版实例不支持自带许可证。
 {:note}
@@ -114,7 +115,7 @@ Migration and App Modernization 单节点试用版包含 HCX on {{site.data.keyw
 * RAM：8 GB
 * 磁盘：3 GB VMDK
 
-### HCX Management Appliance - 虚拟机
+### HCX 管理设备 - 虚拟机
 {: #cloud_modern_bundle_overview-hcx-mgmt-appliance}
 
 * CPU：4 个 vCPU
@@ -123,7 +124,7 @@ Migration and App Modernization 单节点试用版包含 HCX on {{site.data.keyw
 
 配置期间根据需要部署了更多 HCX 设备，以用于 L2 连接、WAN 优化和网关连接。
 
-### HCX on IBM Cloud 服务的联网规范
+### HCX on IBM Cloud 的联网规范
 {: #cloud_modern_bundle_overview-hcx-networking-specs}
 
 * 一个具有 16 个 IP 地址的公用可移植子网
@@ -133,12 +134,17 @@ Migration and App Modernization 单节点试用版包含 HCX on {{site.data.keyw
 ## IBM Cloud Private Hosted 的技术规范
 {: #cloud_modern_bundle_overview-icp-tech-specs}
 
-在所有 Migration and App Modernization 单节点试用版实例上，都会使用开发/测试拓扑安装 IBM Cloud Private Hosted V3.1。有关 IBM Cloud Private Hosted 的更多信息，请参阅 [IBM Cloud Private Hosted 概述](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_overview)。
+在所有 Migration and App Modernization 单节点试用版实例上，都会使用开发/测试拓扑安装 {{site.data.keyword.cloud_notm}} Private Hosted 3.1.2。有关 {{site.data.keyword.cloud_notm}} Private Hosted 的更多信息，请参阅 [{{site.data.keyword.cloud_notm}} Private Hosted 概述](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_overview)。
+
+## IBM Cloud Automation Manager 的技术规范
+{: #cloud_modern_bundle_overview-cam-tech-specs}
+
+在所有 Migration and App Modernization 单节点试用版实例上，都会使用开发/测试拓扑安装 {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2。有关 {{site.data.keyword.cloud_notm}} Automation Manager 的更多信息，请参阅 [{{site.data.keyword.cloud_notm}} Automation Manager 文档](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: new_window}。
 
 ## 相关链接
 {: #cloud_modern_bundle_overview-related}
 
-* [vCenter Server 和 IBM Cloud Private 指南](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [开具有关 IBM Cloud Private 的凭单](https://www.ibm.com/mysupport/s/?language=en_US)
-* [VMware Hybrid Cloud Extension 文档](https://hcx.vmware.com/#/vm-documentation)
-* [获取 HCX OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html)
+* [vCenter Server 和 {{site.data.keyword.cloud_notm}} Private 指南](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
+* [开具有关 {{site.data.keyword.cloud_notm}} Private 的凭单](https://www.ibm.com/mysupport/s/?language=en_US)
+* [VMware HCX 资源](https://hcx.vmware.com/#/docs)
+* [Obtaining the VMware HCX OVA](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html?hWord=N4IghgNiBcIPICMAuYCWA7DBzABEgFgKY4ASAwgBo5wBqAgiAL5A)

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-04-30"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -15,23 +15,27 @@ subcollection: vmwaresolutions
 {:note: .note}
 {:important: .important}
 
-# vCenter Server 인스턴스에 업데이트 적용
+# vCenter Server 인스턴스에 IBM 관리 컴포넌트 업데이트 적용
 {: #vc_applyingupdates}
 
-vCenter Server 인스턴스에 패치 및 업데이트를 적용하는 프로세스는 관리 컴포넌트에 대해서만 자동화되어 있습니다. VMware 업데이트는 수동으로 적용해야 합니다.
+이 절의 프로시저는 V2.1 - V2.4 릴리스에 배치되는 인스턴스에 대한 IBM 관리 컴포넌트를 업데이트하는 데 적용됩니다. 
 
-## 시작하기 전에
-{: #vc_applyingupdates-prereq}
+V2.5 이상으로 배치된(또는 이러한 릴리스로 업그레이드된) 인스턴스의 경우에는 필요에 따라 IBM 관리 컴포넌트에 대한 업데이트 및 패치가 자동으로 적용됩니다. 
 
-vCenter Server 인스턴스를 vCenter Server with Hybridity Bundle 인스턴스로 업그레이드하는 경우 먼저 최소한 기본 vCenter Server V2.3 소프트웨어 업데이트를 적용해야 합니다. 해당 작업을 수행해야 Hybridity Bundle로의 라이센스 업그레이드를 수행할 수 있습니다.
+V2.0 이전에 배치된 인스턴스의 경우, 업데이트를 수동으로 적용해야 합니다.
+
+또한 인스턴스에서 특정 오퍼레이션을 완료할 때 다음 동작에 유의하십시오. 
+* 새 서비스를 주문할 때 인스턴스가 최신 버전으로 업데이트됩니다.
+* 새 클러스터를 추가할 때 이러한 클러스터는 최신 VMware 컴포넌트로 프로비저닝되지만 기존 클러스터는 프로비저닝되지 않습니다. 
+* 새 ESXi 서버를 추가할 때 이러한 ESXi 서버는 최신 VMware 컴포넌트로 프로비저닝되지만 기존 ESXi 서버는 프로비저닝되지 않습니다. 
+
+{{site.data.keyword.vmwaresolutions_short}}는 VMware 컴포넌트의 업데이트 및 패치 적용에 대한 지원을 제공하지 않습니다. 이 업데이트를 자체적으로 모니터하고 적용해야 합니다.
 {:important}
 
-비즈니스 파트너 사용자에게는 기존 vCenter Server 인스턴스를 vCenter Server with Hybridity Bundle 인스턴스로 업그레이드하기 위한 옵션이 없습니다.
+## IBM 관리 컴포넌트 업데이트를 적용하기 전에
+{: #vc_applyingupdates-prereq}
 
-V2.5부터, 자동 업데이트가 사용되기 때문에 IBM CloudDriver 업데이트는 더 이상 나열되지 않습니다. 호스트 추가, 클러스터 추가 및 서비스 주문과 같은 조치를 수행하면 인스턴스가 최신 버전으로 자동 업데이트됩니다. 자동 업데이트에 대한 자세한 정보는 [V2.5 릴리스 정보](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-relnotes_v25)에서 *IBM CloudDriver 복원성* 섹션을 참조하십시오.
-{:note}
-
-업데이트를 적용하기 전에 아래로 화살표를 클릭하여 업데이트 항목을 펼치고 다음 정보를 확인하십시오.
+아래로 화살표를 클릭하여 업데이트 항목을 펼치고 다음 정보를 확인하십시오.
 * 업데이트의 버전입니다. 가장 이전 업데이트부터 최신 업데이트까지 시간 순으로 업데이트를 적용해야 합니다. 최신 업데이트를 적용하기 전에 이전 업데이트를 모두 적용했는지 확인하십시오. 예를 들면, V2.4 업데이트를 적용하기 전에 V2.3 업데이트를 적용해야 합니다.
 * 작동 중단의 필요 여부입니다.
 * 업데이트를 완료할 총 예상 시간입니다.
@@ -59,56 +63,21 @@ V2.5부터, 자동 업데이트가 사용되기 때문에 IBM CloudDriver 업데
   </tr>
 </table>
 
-## vCenter Server 인스턴스(V2.1 이상)에 업데이트 및 패치를 적용하는 프로시저
+## IBM 관리 컴포넌트 업데이트를 적용하는 프로시저(인스턴스 V2.1 - V2.4)
 {: #vc_applyingupdates-procedure}
 
-이 프로시저는 2.1 이상에 배치된 인스턴스에 적용됩니다. V2.0 이전에 배치된 인스턴스의 경우, VMware 업데이트를 수동으로 적용해야 합니다.
-
-1. {{site.data.keyword.vmwaresolutions_full}} 콘솔의 왼쪽 탐색 분할창에서 **리소스**를 클릭하십시오.
+1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **리소스**를 클릭하십시오.
 2. **vCenter Server 인스턴스** 테이블에서 업데이트할 인스턴스를 클릭하십시오.
 3. **요약** 페이지에서 모든 인스턴스 세부사항이 올바르게 표시되는지 확인하십시오. 그런 다음 왼쪽 탐색 분할창의 **인프라**를 클릭하여 **인프라** 페이지에서 세부사항을 확인하십시오.
-   세부사항이 표시되지 않는 경우, 이는 방화벽 규칙이나 기타 네트워킹 문제로 인한 IBM CloudDriver VSI(Virtual Server Instance)의 연결 문제점을 표시할 수 있습니다. 다음 단계를 계속하기 전에 문제점을 해결하십시오. 그렇지 않으면, 업데이트에 실패할 수 있습니다.
-4. 왼쪽 탐색 분할창에서 **업데이트 및 패치**를 클릭하십시오.
 
-   인스턴스에 대한 **업데이트 및 패치** 페이지에는 VMware 업데이트가 아닌, IBM 관리 컴포넌트 업데이트를 위한 패키지만 포함되어 있습니다. VMware 업데이트는 수동으로 적용해야 합니다.   {{site.data.keyword.vmwaresolutions_short}}에서는 다음 조작에 대한 VMware 업데이트를 적용합니다.
-   * 새 vCenter Server 인스턴스가 배치될 때.
-   * 새 ESXi 서버가 추가될 때 새 ESXi 서버가 VMware 업데이트로 프로비저닝되지만 기존 ESXi 서버는 업데이트되지 않습니다.
-   * 새 클러스터가 추가될 때 새 클러스터가 VMware 업데이트로 프로비저닝되지만 기존 클러스터는 업데이트되지 않습니다.
-   {:note}
+   세부사항이 표시되지 않는 경우, 이는 방화벽 규칙이나 네트워킹 문제로 인한 IBM CloudDriver VSI(Virtual Server Instance)의 연결 문제점을 표시할 수 있습니다. 다음 단계를 계속하기 전에 문제점을 해결하십시오. 그렇지 않으면, 업데이트에 실패할 수 있습니다.
 
-5. NSX 라이센스 업그레이드의 경우 **업그레이드**를 클릭하십시오. **NSX 라이센스 에디션 업그레이드** 창에서 업그레이드할 에디션을 선택하고 **업그레이드**를 클릭하십시오. 라이센스 에디션 다운그레이드는 사용할 수 없습니다.
+4. 왼쪽 탐색 분할창에서 **업데이트 및 패치**를 클릭하고 아래로 화살표를 클릭하여 적용할 IBM 관리 업데이트를 펼친 후 다음 단계 중 하나를 완료하십시오. 
+   * 업데이트를 즉시 시작하려면 업데이트 항목의 **조치** 열에 있는 오버플로우 메뉴 아이콘을 클릭한 후 **지금 업데이트**를 클릭하십시오.
+   * 이후 업데이트를 스케줄하려면 업데이트 항목의 **조치** 열에 있는 오버플로우 메뉴 아이콘을 클릭한 후 **업데이트 스케줄 설정**을 클릭하십시오. 업데이트를 시작할 경우 날짜, 시간 및 시간대를 선택하십시오. **확인**을 클릭하십시오.
+5. 다중 사이트 배치 구성의 인스턴스에 업데이트를 적용하는 경우에는 **업데이트하는 데 필요한 단계**라는 제목의 섹션이 표시됩니다. 이 섹션은 다중 사이트 배치에서 모든 인스턴스에 필요한 업데이트 오퍼레이션을 나열합니다. 각 단계마다 **업데이트 적용**을 클릭하여 순서대로 단계를 완료해야 합니다. 다음 단계를 시작하기 전에 이전 단계가 완료될 때까지 기다려야 합니다.
 
-   라이센스 업그레이드는 인스턴스에 있는 기존의 모든 NSX 라이센스를 대체합니다. 비용 청구 주기 중에 업그레이드하는 경우 이전 및 새 라이센스의 겹침으로 인해 추가 비용이 발생할 수 있습니다. 추가 비용이 발생하지 않도록 비용 청구 주기 종료 시 라이센스를 업그레이드하는 것이 좋습니다.
-   {:note}
-
-6. 소프트웨어 업그레이드의 경우, 아래로 화살표를 클릭하여 적용할 업데이트를 펼친 후 다음 단계 중 하나를 완료하십시오.
-   *  업데이트를 즉시 시작하려면 업데이트 항목의 **조치** 열에 있는 오버플로우 메뉴 아이콘을 클릭한 후 **지금 업데이트**를 클릭하십시오.
-   *  이후 업데이트를 스케줄하려면 업데이트 항목의 **조치** 열에 있는 오버플로우 메뉴 아이콘을 클릭한 후 **업데이트 스케줄 설정**을 클릭하십시오. 업데이트를 시작할 경우 날짜, 시간 및 시간대를 선택하십시오. **확인**을 클릭하십시오.
-7. 다중 사이트 배치 구성에서 업데이트를 vCenter Server 인스턴스에 적용하는 경우 **업데이트하는 데 필요한 단계**라는 제목의 섹션이 표시됩니다. 이 섹션은 다중 사이트 배치에서 모든 인스턴스에 필요한 업데이트 오퍼레이션을 나열합니다. 각 단계마다 **업데이트 적용**을 클릭하여 순서대로 단계를 완료해야 합니다. 다음 단계를 시작하기 전에 이전 단계가 완료될 때까지 기다려야 합니다.   
-
-## vCenter Server with Hybridity Bundle 인스턴스로 업그레이드하는 프로시저
-{: #vc_applyingupdates-procedure-upgrade-to-hybridity}
-
-사용자의 vCenter Server 인스턴스가 현재 VMware NSX Base 에디션을 사용하고 있는 경우 Hybridity Bundle로의 라이센스 업그레이드 중에 자동으로 VMware NSX Advanced 에디션으로 업그레이드됩니다.
-
-Hybridity Bundle로 업그레이드하고 vCenter Server 인스턴스에 이미 NFS 파일 스토리지가 있는 경우 VMware vSAN 스토리지에 대한 비용이 청구되지 않습니다. vSAN 라이센스가 Hybridity Bundle에 포함되어 있으므로 이 라이센스에 대한 비용은 청구됩니다.
-{:note}
-
-vCenter Server 인스턴스를 vCenter Server with Hybridity Bundle로 업그레이드하려면 다음 단계를 완료하십시오.
-
-1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **리소스**를 클릭하십시오.
-2. **vCenter Server 인스턴스** 테이블에서 업그레이드할 인스턴스를 클릭하십시오.
-3. **요약** 페이지에서 모든 인스턴스 세부사항이 올바르게 표시되는지 확인하십시오. 그런 다음 왼쪽 탐색 분할창의 **인프라**를 클릭하여 **인프라** 페이지에서 세부사항을 확인하십시오.
-   세부사항이 표시되지 않는 경우, 이는 방화벽 규칙이나 기타 네트워킹 문제로 인한 IBM CloudDriver VSI(Virtual Server Instance)의 연결 문제점을 표시할 수 있습니다. 다음 단계를 계속하기 전에 문제점을 해결하십시오. 그렇지 않으면, 업데이트에 실패할 수 있습니다.
-4. 왼쪽 탐색 분할창에서 **업데이트 및 패치**를 클릭하십시오.
-5. Hybridity Bundle 라이센스 업그레이드를 적용하십시오. **라이센스 업그레이드** 테이블에서 **조치** 열의 **업그레이드**를 클릭하고 예상 비용을 검토한 후 **업그레이드**를 클릭하십시오.
-6. 선택적으로 VMware HCX on {{site.data.keyword.cloud_notm}} 서비스를 배치하십시오. **라이센스 업그레이드** 테이블에서 Hybridity Bundle이 사용으로 설정되면 다음 단계를 완료하십시오.
-  1. **라이센스 업그레이드** 테이블에서 **조치** 열의 **HCX on {{site.data.keyword.cloud_notm}} 배치**를 클릭하십시오.
-  2. **HCX on {{site.data.keyword.cloud_notm}}** 카드로 스크롤하여 **서비스 선택**을 클릭하십시오.
-  3. 아래로 스크롤하여 서비스의 필수 설정을 지정하고 **다음**을 클릭하십시오.
-  4. 서비스에 적용되는 이용 약관과 예상 비용을 검토하고 **주문하기**를 클릭하십시오.
-
-## 결과
+## IBM 관리 컴포넌트 업데이트를 적용한 후의 결과
 {: #vc_applyingupdates-results}
 
 1. 업데이트를 적용한 후 자세한 진행상태 및 업데이트 상태를 볼 수 있는 소프트웨어 업데이트 상태 목록에 레코드가 표시됩니다. 업데이트가 완료되면 설치된 소프트웨어 업데이트 목록에 레코드가 표시됩니다.
@@ -151,11 +120,12 @@ vCenter Server 인스턴스를 vCenter Server with Hybridity Bundle로 업그레
       </tr>
     </table>
 
-3. 특정 단계에서 업데이트 프로세스에 실패하는 경우 [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)하여 도움을 받으십시오. 문제 해결 방법에 대한 정보를 얻고 실패한 단계에서 업그레이드를 다시 시도하도록 안내됩니다.
+3. 특정 단계에서 업데이트 프로세스에 실패하는 경우 [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)하여 도움을 받으십시오. 문제 해결 방법에 대한 정보를 얻고 실패한 단계에서 업그레이드 및 패치를 적용하도록 안내됩니다.
 
 ## 관련 링크
 {: #vc_applyingupdates-related}
 
 * [vCenter Server 개요](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
+* [vCenter Server 인스턴스에 대한 라이센스 업그레이드](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_upgrade-lic)
 * [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)

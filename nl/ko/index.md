@@ -4,11 +4,11 @@ copyright:
 
   years: 2016, 2019
 
-lastupdated: "2019-03-22"
+lastupdated: "2019-04-16"
 
-keywords: IBM Cloud for VMware Solutions, getting started, deployment offerings, add-on services, use case
+keywords: IBM Cloud for VMware Solutions, getting started, vmware solutions offerings, add-on services for vmwaresolutions, vmwaresolutions use cases
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -50,7 +50,7 @@ Microsoft Internet Explorer가 지원되지 않습니다.
 ### 사용자 계정
 {: #getting-started-user-accts}
 
-{{site.data.keyword.cloud_notm}} 계정 및 {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정이 있어야 합니다. 이러한 계정은 특정 요구사항을 충족해야 합니다.
+{{site.data.keyword.cloud_notm}} 계정 및 {{site.data.keyword.cloud_notm}} 인프라 계정이 있어야 합니다. 이러한 계정은 특정 요구사항을 충족해야 합니다.
 
    표 1. 필수 사용자 계정
    <table>
@@ -67,8 +67,8 @@ Microsoft Internet Explorer가 지원되지 않습니다.
       <td>{{site.data.keyword.cloud_notm}} 서비스를 주문하고 사용하려면 {{site.data.keyword.cloud_notm}} 계정이 필요합니다. 청구 정보는 {{site.data.keyword.cloud_notm}} 계정과 연관되어 있습니다. 실제 및 가상 인프라의 비용과 결과 라이센스는 {{site.data.keyword.cloud_notm}} 계정에 비용이 청구됩니다.</td>
    </tr>
    <tr>
-      <td>IBM Cloud 인프라(SoftLayer) 계정</td>
-      <td>{{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정을 이전에는 IBM SoftLayer 계정이라고 했습니다.  계정이 충족해야 하는 요구사항에 대한 자세한 정보는 [{{site.data.keyword.cloud_notm}} 인프라 계정의 요구사항](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)을 참조하십시오.<br><br>{{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정과 {{site.data.keyword.cloud_notm}} 계정을 링크하여 결합된 IaaS(Infrastructure as a Service) 및 PaaS(Platform as a Service) 리소스를 사용할 수 있습니다. 그리고 단일 로그인에서 IaaS 리소스와 PaaS 리소스에 액세스할 수 있습니다. 또한 계정을 연결하면 사용하는 모든 PaaS 및 IaaS 리소스에 대한 하나의 송장이 사용자에게 제공됩니다.<ul><li>{{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정이 없는 경우에는 [IBM Cloud 인프라(SoftLayer) 계정 등록](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account#signing_softlayer_account-infra)의 프로시저에 따라 계정을 요청한 후에 [IBM ID로 전환 및 계정 연결](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)의 프로시저에 따라 {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정을 {{site.data.keyword.cloud_notm}} 계정과 링크하십시오.</li><li>{{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정이 있는 경우에는 [IBM ID로 전환 및 계정 연결](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)의 프로시저에 따라 이를 {{site.data.keyword.cloud_notm}} 계정과 연결할 수 있습니다.</li></ul></td>
+      <td>IBM Cloud 인프라 계정</td>
+      <td>{{site.data.keyword.cloud_notm}} 인프라 계정의 요구사항에 대한 자세한 정보는 [{{site.data.keyword.cloud_notm}} 인프라 계정에 대한 요구사항](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)을 참조하십시오.<br><br>{{site.data.keyword.cloud_notm}} 인프라 계정과 {{site.data.keyword.cloud_notm}} 계정을 링크하여 결합된 IaaS(Infrastructure as a Service) 및 PaaS(Platform as a Service) 리소스를 사용할 수 있습니다. 그리고 단일 로그인에서 IaaS 리소스와 PaaS 리소스에 액세스할 수 있습니다. 또한 계정을 연결하면 사용하는 모든 PaaS 및 IaaS 리소스에 대한 하나의 송장이 사용자에게 제공됩니다.<ul><li>{{site.data.keyword.cloud_notm}} 인프라 계정이 없는 경우에는 [IBM Cloud 인프라 계정 등록](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account#signing_softlayer_account-infra)의 프로시저에 따라 계정을 요청한 후에 [IBM ID로 전환 및 계정 연결](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)의 프로시저에 따라 {{site.data.keyword.cloud_notm}} 인프라 계정을 {{site.data.keyword.cloud_notm}} 계정과 링크하십시오.</li><li>{{site.data.keyword.cloud_notm}} 인프라 계정이 있는 경우에는 [IBM ID로 전환 및 계정 연결](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)의 프로시저에 따라 이를 {{site.data.keyword.cloud_notm}} 계정과 연결할 수 있습니다.</li></ul></td>
    </tr>
    </table>
 
@@ -168,13 +168,13 @@ Microsoft Internet Explorer가 지원되지 않습니다.
 {{site.data.keyword.vmwaresolutions_short}} 콘솔은 배치를 주문하고 관리하는 인터페이스입니다. 각 배치는 콘솔의 인스턴스로 관리됩니다. 콘솔은 {{site.data.keyword.cloud_notm}} 인프라 고객 포털에서 분리된 독립형 사용자 인터페이스입니다.
 
 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 액세스하려면 다음을 수행하십시오.
-1. https://console.cloud.ibm.com/infrastructure/vmware-solutions/console로 이동하십시오.
+1. https://cloud.ibm.com/infrastructure/vmware-solutions/console로 이동하십시오.
 2. **IBM ID**로 콘솔에 로그인하십시오.
 
 ## 2단계: 사용자 계정 및 설정 구성
 {: #getting-started-step2}
 
-인스턴스를 주문하기 전에 콘솔의 **설정** 페이지에 {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정의 사용자 이름 및 API 키를 입력해야 합니다.
+인스턴스를 주문하기 전에 콘솔의 **설정** 페이지에 {{site.data.keyword.cloud_notm}} 인프라 계정의 사용자 이름 및 API 키를 입력해야 합니다.
 
 사용자 계정 및 설정을 구성하는 방법에 대한 정보는 [사용자 계정 및 설정 관리](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)를 참조하십시오.
 

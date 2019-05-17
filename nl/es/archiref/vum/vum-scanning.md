@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -54,7 +54,7 @@ Iniciar una exploración simultánea de hosts, VM virtuales y dispositivos virtu
 Puede configurar el cliente web de vSphere para explorar VM, dispositivos virtuales y hosts ESXi de vSphere en momentos específicos o a los intervalos que le convengan.
 
 1.	Mediante el cliente web de vSphere, seleccione un objeto del inventario. También se exploran todos los objetos hijo del objeto que seleccione.
-2.	Seleccione el **separador Supervisar** y pulse el botón **Valores**.
+2.	Seleccione el separador **Supervisar** y pulse el botón **Tareas y sucesos**.
 3.	Seleccione **Tareas planificadas** y pulse **Planificar una nueva tarea**.
 4.	Seleccione **Explorar para actualizaciones** en la lista desplegable que aparece. Se abre el asistente Explorar actualizaciones.
 5.	En la página Editar valores, seleccione los tipos de actualizaciones para los que desee explorar el objeto de inventario. Debe seleccionar al menos un tipo de exploración. En la página Planificar opciones, describa y planifique la tarea de exploración.
@@ -65,4 +65,4 @@ Puede configurar el cliente web de vSphere para explorar VM, dispositivos virtua
 {: #vum-scanning-related}
 
 * [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demostraciones)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (demostraciones)

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -14,7 +14,7 @@ subcollection: vmwaresolutions
 # Architettura multisito
 {: #nsx-multi_site}
 
-Un differenziatore chiave tra {{site.data.keyword.cloud}} e le altre offerte cloud è la capacità di fornire funzionalità di calcolo dedicate in tutto il mondo e di connettere automaticamente l'infrastruttura on-demand con la rete all'interno del tuo account {{site.data.keyword.cloud_notm}} privato. Le funzionalità di rete definita dal software di VMware vCenter Server e VMware Cloud Foundation insieme a {{site.data.keyword.cloud_notm}} forniscono un'infrastruttura globale granulare che può essere costruita in pochi giorni. Le seguenti sezioni descrivono un esempio di architettura multisito di ciò che può essere ottenuto con la funzionalità preconfigurata di vCenter Server o Cloud Foundation.
+Un differenziatore chiave tra {{site.data.keyword.cloud}} e le altre offerte cloud è la capacità di fornire funzionalità di calcolo dedicate in tutto il mondo e di connettere automaticamente l'infrastruttura on-demand con la rete all'interno del tuo account {{site.data.keyword.cloud_notm}} privato. Le funzionalità di rete definita dal software di VMware vCenter Server insieme a {{site.data.keyword.cloud_notm}} forniscono un'infrastruttura globale granulare che può essere costruita in pochi giorni. Le seguenti sezioni descrivono un esempio di architettura multisito di ciò che può essere ottenuto con la funzionalità preconfigurata di vCenter Server.
 
 ## Ambiente Cross-vCenter NSX
 {: #nsx-multi_site-cross-env}
@@ -22,7 +22,7 @@ Un differenziatore chiave tra {{site.data.keyword.cloud}} e le altre offerte clo
 La funzionalità Cross-vCenter NSX consente il collegamento in una relazione primaria e secondaria di fino a nove gestori NSX: uno primario e otto secondari. Sebbene non sia necessario che i server vCenter siano in una relazione ELM (Enhanced Linked Mode) per il funzionamento di Cross-vCenter NSX, offre comunque i seguenti vantaggi:
 
 * Creazione di relazioni primarie e secondarie semplificate mediante le credenziali SSO (Single sign-on)
-* L'automazione di vCenter Server e la configurazione dell'automazione di Cloud Foundation per la risoluzione dei nomi DNS per tutti i siti collegati tra loro
+* Configurazione dell'automazione di vCenter Server per la risoluzione dei nomi DNS per tutti i siti collegati tra loro
 * Gestione unificata tra tutti i siti sia per le funzioni NSX che per le funzioni vCenter normali
 
 ## Esempio di multisito

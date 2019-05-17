@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -45,7 +45,7 @@ Para obter mais informações, veja [IBM Resiliency Disaster Recovery as a Servi
 2. Role para baixo na página e em **Pedir serviços gerenciados adicionais**, clique no cartão **Serviços gerenciados para o Zerto on IBM Cloud**.
 3. Na página **Zerto on IBM Cloud**, revise a descrição e as especificações técnicas para o Zerto on {{site.data.keyword.cloud_notm}} como um serviço gerenciado e, em seguida, clique em **Criar**.
 4. Especifique as definições de configuração de acordo com seus requisitos ou aceite os valores padrão.
-5. Clique em **vCenter Server** ou **Cloud Foundation** para incluir o serviço em uma de suas instâncias.
+5. Clique em **vCenter Server** para incluir o serviço em uma de suas instâncias.
 6. Para incluir o serviço enquanto você pede uma nova instância, clique em **Incluir na nova instância** e, em seguida, continue com a solicitação de uma nova instância do [servidor do vCenter](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance) ou [do servidor do vCenter com Hybridity](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance).
 7. Para incluir o serviço em uma instância existente, clique em **Incluir na instância existente**, selecione a instância desejada na lista e, em seguida, confirme se deseja continuar com o pedido clicando em **Provisão**.
 

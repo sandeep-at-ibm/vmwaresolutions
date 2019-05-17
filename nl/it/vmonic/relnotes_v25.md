@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-08-30"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -49,7 +49,7 @@ Questa modifica non influisce sulle istanze distribuite prima della V2.5 su cui 
 ## Resilienza di IBM CloudDriver
 {: #relnotes_v25-cloud-driver}
 
-Per le istanze distribuite o aggiornate alle release della V2.5 o successive, il componente IBM CloudDriver non è più configurato come VM (Virtual Machine) all'interno del cluster vSphere. Viene invece distribuito, secondo necessità, come VSI (Virtual Server Instance) dell'infrastruttura {{site.data.keyword.cloud_notm}} con il codice di {{site.data.keyword.cloud_notm}} for VMware più recente per operazioni come la distribuzione di ulteriori nodi, cluster o servizi. Inoltre, IBM CloudDriver viene modificato per comunicare con il piano di gestione {{site.data.keyword.cloud_notm}} utilizzando la rete privata {{site.data.keyword.cloud_notm}}. Con questa modifica, le regole NAT (network address translation) e di firewall NSX ESG (Edge Services Gateway) che consentono a IBM CloudDriver di comunicare in uscita alla rete pubblica vengono rimosse.
+Per le istanze distribuite o di cui è stato eseguito l'upgrade alle release della V2.5 o successive, il componente IBM CloudDriver non è più configurato come VM (Virtual Machine) all'interno del cluster vSphere. Viene invece distribuito, secondo necessità, come VSI (Virtual Server Instance) dell'infrastruttura {{site.data.keyword.cloud_notm}} con il codice di {{site.data.keyword.cloud_notm}} for VMware più recente per operazioni come la distribuzione di ulteriori nodi, cluster o servizi. Inoltre, IBM CloudDriver viene modificato per comunicare con il piano di gestione {{site.data.keyword.cloud_notm}} utilizzando la rete privata {{site.data.keyword.cloud_notm}}. Con questa modifica, le regole NAT (network address translation) e di firewall NSX ESG (Edge Services Gateway) che consentono a IBM CloudDriver di comunicare in uscita alla rete pubblica vengono rimosse.
 
 Alcuni servizi aggiuntivi come F5 on {{site.data.keyword.cloud_notm}}, FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} e Zerto on {{site.data.keyword.cloud_notm}} richiedono ancora l'accesso alla rete pubblica, quindi l'ESG NSX di gestione rimane distribuito in tutte le istanze.
 
@@ -63,7 +63,7 @@ A partire dalla release della V2.5, {{site.data.keyword.vmwaresolutions_short}} 
 
 Per ulteriori informazioni, consulta i seguenti argomenti:
 * [Come invitare gli utenti ad accedere a servizi e risorse](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-iamuserinvite)
-* [Gestione dell'accesso utente con IAM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-access-with-iam)
+* [Gestione dell'accesso utente con IAM](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-iam#iam)
 
 ## Modifiche ad account e gruppi di utenti per le istanze VMware vCenter Server e VMware Cloud Foundation
 {: #relnotes_v25-user-acct}

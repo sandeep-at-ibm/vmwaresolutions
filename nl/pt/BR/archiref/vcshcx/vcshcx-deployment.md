@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-05"
+lastupdated: "2019-04-18"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -66,7 +66,7 @@ Se houver uma falha de implementação em
 ambos os lados, as implementações do componente de frota serão restauradas e
 excluídas. Depois de determinar a causa da falha, clique na guia **Interconexão** na IU da web do HCX vCenter no lado do cliente e, em seguida, selecione **Instalar componentes do HCX** na parte superior da tela.
 
-Após a implementação bem-sucedida dos componentes da frota e após vários minutos, o status do túnel para o CGW e os componentes L2C é exibido como **Ativo** na guia **Interconexão**.
+Após a implementação bem-sucedida dos componentes de frota e após vários minutos, o status do túnel para CGW e os componentes L2C é exibido como **Ativo** na guia **Interconexão**.
 
 ## Links relacionados
 {: #vcshcx-deployment-related}

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -20,7 +20,7 @@ subcollection: vmwaresolutions
 
 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 是可用于 V2.3 和更高发行版的实例。从 V2.6 开始，vCenter Server with Hybridity Bundle 实例可供业务合作伙伴使用。
 
-vCenter Server with Hybridity Bundle 是一种托管的专用云，可将 VMware vSphere 堆栈作为服务交付。VMware 环境基于四个 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} 而构建，该环境中包含作为专用存储器的 VMware vSAN，还可以自动部署并配置基于 VMware NSX 技术的易于管理的逻辑边缘防火墙，并且包含 VMware HCX on {{site.data.keyword.cloud_notm}} 服务。
+vCenter Server with Hybridity Bundle 是一种托管的专用云，可将 VMware vSphere 堆栈作为服务交付。VMware 环境基于至少四个 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} 而构建，该环境中包含作为专用存储器的 VMware vSAN，还可以自动部署并配置基于 VMware NSX 技术的易于管理的逻辑边缘防火墙，并且包含 VMware HCX on {{site.data.keyword.cloud_notm}} 服务。
 
 在许多情况下，整个环境可以在一天内供应完，而裸机基础架构可根据需要，快速、弹性地向上和向下扩展计算容量。
 
@@ -61,7 +61,7 @@ vCenter Server with Hybridity Bundle 是一种托管的专用云，可将 VMware
 
 基本产品总计需要 38 个 vCPU 和 67 GB vRAM，这些均保留用于虚拟化管理层。VM 的其余主机容量取决于若干因素，例如超额预订比率、VM 大小设置和工作负载性能需求。
 
-有关部署 HCX on {{site.data.keyword.cloud_notm}} 服务时的其他管理资源需求，请参阅 [VMware HCX on {{site.data.keyword.cloud_notm}} 概述](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview)。
+有关部署 HCX on {{site.data.keyword.cloud_notm}} 服务时的其他管理资源需求，请参阅 [VMware HCX on {{site.data.keyword.cloud_notm}} 概述](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations)。
 
 ### 基础架构混合
 {: #vc_hybrid_overview-infras-hybrid}
@@ -81,9 +81,9 @@ vCenter Server with Hybridity Bundle 实例中包含以下组件：
 ### 裸机服务器
 {: #vc_hybrid_overview-bare-metal}
 
-vCenter Server with Hybridity Bundle 实例订单中随附 4 个 {{site.data.keyword.baremetal_short}}。以下是可用的配置：
+可以使用下列其中一个配置来订购四个或更多 {{site.data.keyword.baremetal_short}}：
   * **Skylake**：具有所选 CPU 型号和 RAM 大小的 2 个 CPU Intel Skylake 代服务器（Intel Xeon 4100/5100/6100 系列）。
-  * **Broadwell**：具有所选 CPU 型号和 RAM 大小的 2 个 CPU 的 Intel Broadwell 代服务器（Intel Xeon E5-2600/E7-4800 系列）。
+  * **Broadwell**：具有所选 CPU 型号和 RAM 大小的 4 个 CPU 的 Intel Broadwell 代服务器（Intel Xeon E7-4800 系列）。
 
 ### 联网
 {: #vc_hybrid_overview-networking}
@@ -97,9 +97,9 @@ vCenter Server with Hybridity Bundle 实例订单中随附 4 个 {{site.data.key
 
     您无法访问此 ESG，也无法使用此 ESG。如果对其进行修改，那么可能无法在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理 vCenter Server with Hybridity Bundle 实例。此外，请注意，使用防火墙或禁用与外部 IBM 管理组件的 ESG 通信将导致 {{site.data.keyword.vmwaresolutions_short}} 无法使用。
 {:important}
-  * 用于出站和入站 HTTPS 工作负载流量的客户管理的安全 VMware NSX Edge 服务网关，由 IBM 部署为模板，您可修改此模板来提供 VPN 访问或公共访问。有关更多信息，请参阅[客户管理的 NSX Edge 会构成安全风险吗？](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-customer-managed-nsx-edge-pose-a-security-risk-)
+  * 用于出站和入站 HTTPS 工作负载流量的客户管理的安全 VMware NSX Edge 服务网关，由 IBM 部署为模板，您可修改此模板来提供 VPN 访问或公共访问。有关更多信息，请参阅[客户管理的 NSX Edge 会构成安全风险吗？](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#faq-customer-nsx)
 
-有关部署 HCX on {{site.data.keyword.cloud_notm}} 服务时订购的联网组件的更多信息，请参阅 [HCX on {{site.data.keyword.cloud_notm}} 概述](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview)。
+有关部署 HCX on {{site.data.keyword.cloud_notm}} 服务时订购的联网组件的更多信息，请参阅 [HCX on {{site.data.keyword.cloud_notm}} 概述](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations)。
 
 ### 虚拟服务器实例
 {: #vc_hybrid_overview-vsi}
@@ -116,7 +116,7 @@ vSAN 存储器提供定制配置，具有各种磁盘类型和数量的选项：
 * 存储磁盘：960 GB SSD SED、1.9 TB SSD SED 或 3.8 TB SSD SED。
 
   此外，每个主机会订购两个 960 GB 高速缓存磁盘。
-* 高性能 Intel Optane 选项，用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘。此选项取决于 CPU 型号。
+* 高性能 Intel Optane 选项，用于提供两个额外的容量磁盘托架，总共可容纳 12 个容量磁盘。此选项取决于 CPU 型号。
 
 ### IBM 提供的许可证和费用
 {: #vc_hybrid_overview-license-and-fee}
@@ -138,7 +138,7 @@ vCenter Server with Hybridity Bundle 实例订单中包含以下许可证。
 ### 扩展节点的硬件
 {: #vc_hybrid_overview-expansion-node-hardware}
 
-一个裸机服务器，其配置在 [vCenter Server with Hybridity Bundle 实例的技术规范](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances)中提供。
+一个裸机服务器，其配置在 [vCenter Server with Hybridity Bundle 实例的技术规范](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#vc_hybrid_overview-specs)中提供。
 
 ### 扩展节点的许可证和费用
 {: #vc_hybrid_overview-expansion-node-license-and-fee}
@@ -165,5 +165,5 @@ vCenter Server with Hybridity Bundle 实例订单中包含以下许可证。
 * [vCenter Server 软件材料清单](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
 * [针对 vCenter Server with Hybridity Bundle 实例的需求和规划](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)
 * [订购 vCenter Server with Hybridity Bundle 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
-* [HCX on {{site.data.keyword.cloud_notm}} 概述](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview)
+* [HCX on {{site.data.keyword.cloud_notm}} 概述](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations)
 * [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

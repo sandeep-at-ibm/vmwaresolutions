@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -62,7 +62,7 @@ Per accedere alla vista di amministrazione, passa a **Home** > **Update Manager*
 ##	Vista di compatibilità (Compliance)
 {: #vum-overview-compliance-view}
 
-Per accedere alla vista di conformità di un oggetto di inventario selezionato, passa a **Hosts and Clusters** o **VMs and Templates** e fai clic sulla **scheda Update Manager**. Nella vista di conformità di Update Manager, puoi effettuare le seguenti attività:
+Per accedere alla vista di conformità di un oggetto di inventario selezionato, passa a **Hosts and Clusters** o **VMs and Templates** e fai clic sulla scheda **Update Manager**. Nella vista di conformità di Update Manager, puoi effettuare le seguenti attività:
 *	Visualizzare la conformità ed eseguire la scansione dei risultati per ogni oggetto di inventario selezionato
 *	Collegare e scollegare baseline e gruppi di baseline da un oggetto di inventario selezionato
 *	Eseguire la scansione di un oggetto di inventario selezionato
@@ -73,4 +73,4 @@ Per accedere alla vista di conformità di un oggetto di inventario selezionato, 
 {: #vum-overview-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (dimostrazioni)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (dimostrazioni)

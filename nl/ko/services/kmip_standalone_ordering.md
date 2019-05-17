@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-04-03"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -21,7 +21,7 @@ subcollection: vmwaresolutions
 
 다음 태스크를 완료했는지 확인하십시오.
 * **설정** 페이지에 {{site.data.keyword.cloud_notm}} 인프라 인증 정보를 구성했습니다. 자세한 정보는 [사용자 계정 및 설정](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)을 참조하십시오.
-* [KMIP for VMware on {{site.data.keyword.cloud_notm}} 인스턴스 설치 시 고려사항](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations-install)의 모든 고려사항을 검토했습니다.
+* [KMIP for VMware on {{site.data.keyword.cloud_notm}} 인스턴스 설치 시 고려사항](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip_standalone_considerations#kmip_standalone_considerations-install)의 모든 고려사항을 검토했습니다.
 
 ## KMIP for VMware on IBM Cloud 인스턴스를 주문하는 프로시저
 {: #kmip_standalone_ordering-procedure}
@@ -55,17 +55,19 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} 인스턴스를 호스팅할
 |독일        |  <ul><li><code>kmip-1.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
 |시드니        |  <ul><li><code>kmip-1.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
 |도쿄          | <ul><li><code>kmip-1.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
-|미국 남부       |  <ul><li><code>kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+|영국 남부       | <ul><li><code>kmip-1.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+|미국 동부       | <ul><li><code>kmip-1.private.us-east.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-east.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+|미국 남부       | <ul><li><code>kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
 
 ### 서비스 ID의 API 키
 {: #kmip_standalone_ordering-config-api-key}
 
-IBM Key Protect Service 인스턴스에 액세스하는 데 사용되는 {{site.data.keyword.cloud_notm}} 서비스 ID의 API 키를 입력하십시오.
+Key Protect 또는 Hyper Protect Crypto Services의 인스턴스에 액세스하는 데 사용되는 {{site.data.keyword.cloud_notm}} 서비스 ID의 API 키를 입력하십시오.
 
-### Key Protect 인스턴스
+### Key Manager 인스턴스
 {: #kmip_standalone_ordering-config-key-protect}
 
-**검색**을 클릭하여 사용 가능한 IBM Key Protect Service 인스턴스의 목록을 가져온 후 키 관리에 사용할 인스턴스를 선택하십시오.
+**검색**을 클릭하여 사용 가능한 키 관리자 인스턴스의 목록을 가져온 후 키 관리에 사용할 인스턴스를 선택하십시오.
 
 ### 고객 루트 키
 {: #kmip_standalone_ordering-config-root-key}

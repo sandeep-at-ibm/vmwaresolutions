@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-20"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -30,7 +30,7 @@ Para criar uma instância do Object Storage, consulte [Criar uma nova instância
 ## Criando um depósito
 {: #icos_ordering-bucket}
 
-Para criar um depósito, consulte a [Etapa 1: Criar alguns depósitos para armazenar os seus dados](https://cloud.ibm.com/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-getting-started-console-#create-buckets). Siga as etapas e retorne para esta seção para continuar com as tarefas a seguir.
+Para criar um bucket, consulte [Criar alguns buckets para armazenar seus dados](/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-getting-started-tutorial#gs-create-buckets). Siga as etapas e retorne para esta seção para continuar com as tarefas a seguir.
 
 ## Criando credenciais de serviço
 {: #icos_ordering-service-cred}

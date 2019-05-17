@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-04-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -29,7 +29,7 @@ Veeam on {{site.data.keyword.cloud}} 服務與 VMware Hypervisor 無縫整合，
 2. 向下捲動頁面，然後按一下位在**訂購其他受管理服務**下的 **Veeam on IBM Cloud 的受管理服務**卡片。
 3. 在 **Veeam on IBM Cloud** 頁面上，檢閱 Veeam on {{site.data.keyword.cloud_notm}} 即受管理服務的說明及技術規格，然後按一下**建立**。
 4. 根據您的需求指定配置設定，或接受預設值。
-5. 按一下 **vCenter Server** 或 **Cloud Foundation**，將服務新增至其中一個實例。
+5. 按一下 **vCenter Server**，將服務新增至其中一個實例。
 6. 若要在訂購新實例時新增服務，請按一下**新增至新實例**，然後繼續訂購新的 [vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance) 或 [vCenter Server with Hybridity](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance) 實例。
 7. 若要將服務新增至現有實例，請按一下**新增至現有實例**，從清單中選取您要的實例，然後按一下**佈建**確認您要繼續訂購。
 
@@ -38,4 +38,4 @@ Veeam on {{site.data.keyword.cloud}} 服務與 VMware Hypervisor 無縫整合，
 
 * [訂購、檢視及移除 vCenter Server 實例的服務](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
 * [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
-* [資料備份及保護服務](https://www-935.ibm.com/services/business-continuity/backup-and-data-protection-services/)
+* [資料備份及保護服務](https://www.ibm.com/services/business-continuity/backup-data-protection)

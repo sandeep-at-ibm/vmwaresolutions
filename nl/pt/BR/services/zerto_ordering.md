@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-04-09"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -37,13 +37,18 @@ subcollection: vmwaresolutions
 Se você incluir o Zerto for {{site.data.keyword.cloud_notm}} em uma instância do vCenter Server que tenha um servidor ESXi no modo de manutenção, você deverá usar o console do Zerto Virtual Manager (ZVM) e o endereço IP do Zerto Virtual Replication Appliance (VRA) pré-preenchido para implementar manualmente a máquina virtual (VM) do VRA.
 {:note}
 
+## Pedindo o Zerto on IBM Cloud para instâncias somente privadas
+{: #zerto_ordering-private-only}
+
+Se desejar incluir o Zerto on {{site.data.keyword.cloud_notm}} em uma instância somente privada, assegure-se de que os requisitos a seguir sejam atendidos:
+* Você é responsável por configurar seu próprio servidor proxy para se conectar à Internet. Para obter mais informações, consulte [Conectividade de rede pública](/docs/services/vmwaresolutions/services?topic=vmware-solutions-design_virtualinfrastructure#public-network-connectivity).
+* Deve-se configurar também o recurso Call Home para o Zerto. Para obter mais informações sobre o Zerto Call Home, consulte [Relatório do Zerto para ambientes corporativos (Call Home)](https://www.zerto.com/myzerto/knowledge-base/zerto-reporting-for-enterprise-environments-call-home/){:new_window}.
+
 ## Links relacionados
 {: #zerto_ordering-related}
 
 * [ Zerto on  {{site.data.keyword.cloud_notm}}  visão geral ](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)
 * [Gerenciando o Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingzertodr)
-* [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
-* [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
 * [Solicitando serviços gerenciados para o Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
 * [Website zerto.com](https://www.zerto.com){:new_window}
 * [Documentação técnica do Zerto](https://www.zerto.com/myzerto/technical-documentation/){:new_window}

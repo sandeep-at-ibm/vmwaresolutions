@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-19"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -225,7 +225,7 @@ NSX Transformers (NSX-T) 是可支援多個 vCenter 及 vSphere 環境的獨立�
 #### NSX-V 的網路可調整性
 {: #vcsnsxt-techpreview-net-scalability-nsx-v}
 
-VMware NSX-V 設計成處理具有數千個端點及技術堆疊的應用程式架構，可讓它橫跨具有三部主機的單一 vSphere 叢集到超過數千部主機及數千部虛擬機器的跨 vCenter 部署。
+VMware NSX-V 設計成處理具有數千個端點及技術堆疊的應用程式架構，可讓它橫跨具有三個主機的單一 vSphere 叢集到超過數千個主機及數千個虛擬機器的跨 vCenter 部署。
 
 #### NSX-T 的網路可調整性
 {: #vcsnsxt-techpreview-net-scalability-nsx-t}

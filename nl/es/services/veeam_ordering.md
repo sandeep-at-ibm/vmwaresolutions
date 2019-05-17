@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-04-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -47,7 +47,7 @@ Se necesitan como mínimo 10 máquinas virtuales para la gestión de licencias.
 ### Tamaño de almacenamiento
 {: #veeam_ordering-config-storage-size}
 
-La capacidad que cumpla sus necesidades de almacenamiento. Para ver más información sobre cómo calcular el tamaño de almacenamiento, consulte [Estimación de la capacidad del repositorio](https://bp.veeam.expert/resource_planning/repository_planning_sizing.html).
+La capacidad que cumpla sus necesidades de almacenamiento. Para ver más información sobre cómo calcular el tamaño de almacenamiento, consulte [Estimación de la capacidad del repositorio](https://bp.veeam.expert/repository_server/repository_planning/repository_planning_sizing).
 
 ### Rendimiento de almacenamiento
 {: #veeam_ordering-config-storage-performance}

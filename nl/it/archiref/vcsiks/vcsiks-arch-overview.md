@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -62,8 +62,7 @@ consente alle VM {{site.data.keyword.icpfull_notm}} l'esecuzione sulla rete VXLA
 la rete interna Kubernetes Calico.
 
 {{site.data.keyword.icpfull_notm}} con NSX-T consente agli utenti di controllare e configurare la rete,
-la sottorete e le politiche dall'IU centrale (NSX-T Manager). Per informazioni sulle differenze tra NSX-V e NSX-T, vedi l'[architettura di riferimento di rete {{site.data.keyword.cloud_notm}} VCS](/docs/services/vmwaresolutions/archiref/
-vcsnsxt/vcsnsxt-intro.html).
+la sottorete e le politiche dall'IU centrale (NSX-T Manager). Per informazioni sulle differenze tra NSX-V e NSX-T, vedi l'[architettura di riferimento di rete {{site.data.keyword.cloud_notm}} VCS](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsnsxt-intro#vcsnsxt-intro).
 
 ## Piattaforma di gestione cloud in loco
 {: #vcsiks-arch-overview-on-premises}
@@ -88,5 +87,4 @@ meccanismo per connettere i cluster {{site.data.keyword.icpfull_notm}} in un'uni
 ## Link correlati
 {: #vcsiks-arch-overview-related}
 
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-hybridity-intro#vcs-hybridity-intro)

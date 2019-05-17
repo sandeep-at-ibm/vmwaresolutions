@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-18"
+lastupdated: "2019-04-18"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -22,18 +22,19 @@ I server ESXi che hai configurato quando hai ordinato un'istanza vengono raggrup
 
 Puoi aggiungere i tuoi propri cluster alle istanze VMware vCenter Server per espandere la capacità di calcolo e archiviazione. All'interno di un cluster, puoi gestire i server ESXi per una migliore allocazione delle risorse e alta disponibilità. Quando non sono più necessari, elimina i cluster aggiunti dalle tue istanze.
 
-La funzione di eliminazione cluster è disponibile solo per le istanze che sono state distribuite o aggiornate alla V2.3 e successive.
+La funzione di eliminazione cluster è disponibile solo per le istanze che sono state distribuite o di cui è stato eseguito l'upgrade alla V2.3 e successive.
 {:note}
 
 ## Aggiunta di cluster alle istanze vCenter Server
 {: #vc_addingviewingclusters-adding}
 
-Il numero di cluster che possono essere aggiunti a un'istanza dipende dalla versione dell'istanza:
-* Per le istanze che sono state distribuite o aggiornate alla V2.5 e versioni successive, il numero di cluster, host e VM determina il limite massimo per il numero di cluster che puoi aggiungere. Devi rispettare le direttive e i limiti di dimensionamento VMware per la tua distribuzione.
-* Per le istanze che sono state distribuite o aggiornate alla V2.2 e versioni successive, puoi aggiungere fino a 10 cluster.
-* Per le istanze che sono state distribuite nella V2.1 o versioni precedenti, puoi aggiungere fino a cinque cluster.
+### Prima di aggiungere i cluster
+{: #vc_addingviewingclusters-before-add}
 
-Per ulteriori informazioni sui limiti massimi, vedi [Valori massimi di configurazione di VMware](https://configmax.vmware.com/home){:new_window}.
+* Quando possibile, aggiungi i cluster utilizzando la console {{site.data.keyword.vmwaresolutions_full}}, poiché le modifiche che apporti al client web VMware vSphere non sono sincronizzate con la console {{site.data.keyword.vmwaresolutions_short}}. Pertanto, aggiungi i cluster a vCenter Server solo per i cluster in loco o per i cluster che non puoi gestire o che non gestirai nella console {{site.data.keyword.vmwaresolutions_short}}.
+* Per le istanze che sono state distribuite o di cui è stato eseguito l'upgrade alla V2.5 e versioni successive, il numero di cluster, host e VM determina il limite massimo per il numero di cluster che puoi aggiungere. Devi rispettare le direttive e i limiti di dimensionamento VMware per la tua distribuzione. Per ulteriori informazioni sui limiti massimi, vedi [Valori massimi di configurazione di VMware](https://configmax.vmware.com/home){:new_window}.
+* Per le istanze che sono state distribuite o di cui è stato eseguito l'upgrade alla V2.2, 2.3 o 2.4, puoi aggiungere fino a 10 cluster.
+* Per le istanze che sono state distribuite nella V2.1 o versioni precedenti, puoi aggiungere fino a cinque cluster.
 
 ### Impostazioni di sistema
 {: #vc_addingviewingclusters-adding-sys-settings}
@@ -52,7 +53,7 @@ Il nome del cluster deve rispettare i seguenti requisiti:
 #### Ubicazione data center
 {: #vc_addingviewingclusters-adding-dc-location}
 
-L'ubicazione del {{site.data.keyword.CloudDataCent}} del cluster è impostata sul {{site.data.keyword.CloudDataCent_notm}} dell'istanza vCenter Server per impostazione predefinita. Puoi distribuire il cluster in un {{site.data.keyword.CloudDataCent_notm}} diverso rispetto a quello dell'istanza distribuita, ma devi assicurarti che la latenza di rete tra i due {{site.data.keyword.CloudDataCents_notm}} sia inferiore a 150 ms. Per controllare la latenza di rete, puoi utilizzare uno strumento come [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/).
+L'ubicazione del {{site.data.keyword.CloudDataCent}} del cluster è impostata sul {{site.data.keyword.CloudDataCent_notm}} dell'istanza vCenter Server per impostazione predefinita. Puoi distribuire il cluster in un {{site.data.keyword.CloudDataCent_notm}} diverso rispetto a quello dell'istanza distribuita, ma devi assicurarti che la latenza di rete tra i due {{site.data.keyword.CloudDataCents_notm}} sia inferiore a 150 ms. Per controllare la latenza di rete, puoi utilizzare uno strumento come [Looking Glass](/docs/infrastructure/network-tools?topic=network-tools-about-looking-glass#about-looking-glass).
 
 Se distribuisci il cluster in un diverso {{site.data.keyword.CloudDataCent_notm}} o pod dell'infrastruttura {{site.data.keyword.cloud_notm}}, vengono ordinate tre VLAN supplementari da utilizzare con i {{site.data.keyword.baremetal_short}} ordinati.
 
@@ -97,22 +98,15 @@ Tabella 2. Opzioni per Broadwell {{site.data.keyword.baremetal_short}}
 
 | Opzioni del modello CPU        | Opzioni RAM       |
 |:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4 / 16 core totali, 2,1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2650 v4 / 24 core totali, 2,2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2690 v4 / 28 core totali, 2,6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Quad Intel Xeon E7-4820 v4 / 40 core totali, 1,9 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 core totali, 2,2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 #### Numero di server Bare Metal
 {: #vc_addingviewingclusters-adding-bare-metal-number}
 
-I cluster richiedono almeno due {{site.data.keyword.baremetal_short}}.
-
-Per le istanze vCenter Server distribuite nella V2.1 o successive, puoi aggiungere fino a 59 {{site.data.keyword.baremetal_short}} per un cluster. Puoi aggiungere da 1 a 59 server ESXi alla volta.
-
-Per le istanze vCenter Server distribuite nella V2.0 o precedenti, puoi aggiungere fino a 32 {{site.data.keyword.baremetal_short}} per un cluster. Puoi aggiungere da 1 a 20 server ESXi alla volta per la configurazione **Skylake**, **Certificata SAP** e **Broadwell** Bare Metal Server.
-
-Dopo la distribuzione, puoi creare fino a quattro ulteriori cluster. Se selezioni la configurazione **Skylake** o **Broadwell** di Bare Metal Server con l'archiviazione VMware vSAN, sono richiesti quattro server sia per il cluster iniziale che per i cluster di post-distribuzione.
+* Tutti i server che ordini hanno la stessa configurazione. 
+* Per l'archiviazione vSAN, puoi ordinare da 4 a 59 server.
+* Per l'archiviazione NFS, puoi ordinare da 2 a 59 server. Tuttavia, per i carichi di lavoro di produzione, ti consigliamo un numero minimo di 3 server. Per ulteriori informazioni, vedi [Un'istanza vCenter Server a due nodi è altamente disponibile?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-).
 
 ### Impostazioni di archiviazione
 {: #vc_addingviewingclusters-adding-storage-settings}
@@ -125,9 +119,9 @@ Le impostazioni di archiviazione si basano sulla tua selezione della configurazi
 Specifica le seguenti opzioni vSAN:
 * **Tipo e dimensioni del disco per i dischi vSAN**: seleziona un'opzione per i dischi di capacità di cui hai bisogno.
 * **Numero di dischi vSAN**: specifica il numero di dischi di capacità che vuoi aggiungere.
-* Se vuoi aggiungere dischi di capacità oltre il limite di otto, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 10 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS.
+* Se vuoi aggiungere dischi di capacità oltre il limite di 10, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 12 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS. 
 
-  L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i modelli di CPU Skylake Dual Intel Xeon Gold 5120 e Dual Intel Xeon Gold 6140.
+  L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i modelli di CPU Skylake.
   {:note}
 
 * Riesamina i valori di **Tipo di disco per i dischi cache vSAN** e **Numero di dischi cache vSAN**. Questi valori dipendono dalla selezione della casella **Alte prestazioni con Intel Optane**.
@@ -180,7 +174,6 @@ Le impostazioni di abilitazione della scheda di interfaccia di rete (NIC) si bas
 * F5 on {{site.data.keyword.cloud_notm}}
 * Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
 * Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
-* Zerto on {{site.data.keyword.cloud_notm}}
 
 ### Riepilogo ordine
 {: #vc_addingviewingclusters-adding-order-summary}
@@ -293,7 +286,7 @@ Tabella 7. Interfaccia Rete - Dettagli della sottorete
 |:------------- |:------------- |
 | Nome | Il nome della sottorete. Fai clic sul nome per accedere ai dettagli della sottorete. |
 | Tipo | Il tipo di sottorete: primaria o portatile. |
-| Descrizione | La descrizione della sottorete.  |
+| Descrizione | La descrizione della sottorete. |
 
 Tabella 8. Interfaccia di rete - Dettagli IP
 
@@ -301,18 +294,19 @@ Tabella 8. Interfaccia di rete - Dettagli IP
 |:------------- |:------------- |
 | IP | L'indirizzo IP. |
 | Stato | Lo stato dell'indirizzo IP. |
-| Descrizione |La descrizione dell'indirizzo IP. |
+| Descrizione |La descrizione dell'indirizzo IP.  |
 
 ## Eliminazione di cluster dalle istanze vCenter Server
 {: #vc_addingviewingclusters-deleting}
 
 Potresti voler eliminare un cluster da un'istanza quando non è più necessario.
 
-### Prima di eliminare
+### Prima di eliminare i cluster
 {: #vc_addingviewingclusters-deleting-prereq}
 
 * Utilizza questa procedura per eliminare i cluster dalle istanze distribuite nella V2.3 o versioni successive.
 * Per i cluster distribuiti nelle istanze della V2.2 o precedenti, devi aggiornare l'istanza alla V2.3 se vuoi eliminare i cluster che hai aggiunto all'istanza.
+* Quando possibile, elimina i cluster utilizzando la console {{site.data.keyword.vmwaresolutions_full}}, poiché le modifiche che apporti al client web VMware vSphere non sono sincronizzate con la console {{site.data.keyword.vmwaresolutions_short}}. Pertanto, elimina i cluster da vCenter Server solo per i cluster in loco o per i cluster che non puoi gestire o che non gestirai nella console {{site.data.keyword.vmwaresolutions_short}}.
 * Puoi eliminare un singolo cluster alla volta. Per eliminare più di un cluster, devi farlo in sequenza. Attendi che il cluster precedente venga eliminato prima di eliminare quello successivo.
 * Assicurati che tutti i nodi in un cluster siano accesi e operativi prima di eliminare il cluster.
 * Quando elimini un cluster, da questo vengono eliminate anche tutte le VM e non potranno essere ripristinate. Se vuoi mantenere le VM, migrale in altri cluster.

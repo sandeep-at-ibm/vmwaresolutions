@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-23"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -23,21 +23,21 @@ Revise as considerações a seguir antes de instalar ou excluir as instâncias d
 Uma instância do vCenter Server com HCX no {{site.data.keyword.cloud_notm}} é limitada a três conexões simultâneas por meio de sites no local.
 {:note}
 
-## Considerações ao instalar as instâncias do HCX on IBM Cloud no local
+## Considerações antes de instalar as instâncias do HCX on IBM Cloud no local
 {: #standalone_considerations-install}
 
-Os componentes do HCX on {{site.data.keyword.cloud_notm}} devem ser instalados no {{site.data.keyword.cloud_notm}} e no ambiente do vSphere no local. É recomendado que você instale o serviço HCX on {{site.data.keyword.cloud_notm}} em sua instância do vCenter Server with Hybridity Bundle on {{site.data.keyword.cloud_notm}} antes de instalar a instância do HCX on {{site.data.keyword.cloud_notm}} no local. Para obter mais informações, veja [Considerações para o HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview).
+Os componentes do HCX on {{site.data.keyword.cloud_notm}} devem ser instalados no {{site.data.keyword.cloud_notm}} e no ambiente do vSphere no local. É recomendado que você instale o serviço HCX on {{site.data.keyword.cloud_notm}} em sua instância do vCenter Server with Hybridity Bundle on {{site.data.keyword.cloud_notm}} antes de instalar a instância do HCX on {{site.data.keyword.cloud_notm}} no local. Para obter mais informações, consulte [Considerações ao instalar o HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-hcx_considerations#hcx_considerations-install).
 
-### Requisitos nos endereços IP
-{: #standalone_considerations-IP}
+### Requisitos de endereço IP
+{: #standalone_considerations-ip}
 
-Para funcionalidade completa do HCX, você precisa de pelo menos cinco endereços IP privados e deve permitir que eles acessem a Internet.
+Para a funcionalidade integral do HCX, são necessários pelo menos cinco endereços IP privados que tenham acesso à Internet.
 
 ### Processo de implementação para instâncias do HCX on IBM Cloud
 {: #standalone_considerations-deploy}
 
 Deve-se concluir as tarefas a seguir para uma instalação bem-sucedida da instância do HCX on {{site.data.keyword.cloud_notm}} no local:
-1. No console do {{site.data.keyword.vmwaresolutions_short}}, solicite o HCX no local na instância do {{site.data.keyword.cloud_notm}}. Para obter mais informações, consulte [Solicitando o VMware HCX no local nas instâncias do IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_orderingserviceinstances).
+1. No console do {{site.data.keyword.vmwaresolutions_short}}, solicite o HCX no local na instância do {{site.data.keyword.cloud_notm}}. Para obter mais informações, veja [Pedindo instâncias do HCX locais](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_orderingserviceinstances).
 2. Em **Console em Nuvem do HCX**, conclua as etapas a seguir:
     1. Clique na guia **Administração**.
     2. Na guia **Atualizações do Sistema**, clique em **SOLICITAR LINK DE DOWNLOAD**.
@@ -50,23 +50,23 @@ Deve-se concluir as tarefas a seguir para uma instalação bem-sucedida da inst�
 5. Se você usou um certificado SSL autoassinado ao pedir o HCX no serviço {{site.data.keyword.cloud_notm}}, deverá importar o certificado para o HCX Manager local concluindo as etapas a seguir:
     1. No **Console do Administrador do HCX Manager** local, clique na guia **Administração**.
     2. Na área de janela de navegação esquerda, clique em **Certificado CA confiável** e, em seguida, clique em **IMPORTAR** à direita.
-    3. Clique em **URL** e, em seguida, insira a URL do certificado que deseja aplicar, que é o **HCX Cloud IP** (``https://<cloud-side public IP>``), que pode ser localizado no HCX na página de detalhes do serviço {{site.data.keyword.cloud_notm}} no console do {{site.data.keyword.vmwaresolutions_short}}.
+    3. Clique em **URL** e, em seguida, insira a URL do certificado que você deseja aplicar, que é o **IP de nuvem do HCX** (``https://<cloud-side public IP>``), que é possível localizar na página de detalhes do serviço HCX on {{site.data.keyword.cloud_notm}} no console do {{site.data.keyword.vmwaresolutions_short}}.
     4. Clique em **APLICAR**.
 
 Agora, você concluiu a configuração básica do HCX Manager local. É possível continuar para emparelhar o site do HCX on {{site.data.keyword.cloud_notm}} no local com o site do HCX do lado da nuvem.
 
 Para obter mais informações, veja [VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx).
 
-## Considerações ao excluir instâncias do HCX on IBM Cloud no local
-{: #considerations-when-deleting-on-premises-hcx-instances}
+## Considerações antes de excluir as instâncias do HCX on IBM Cloud no local
+{: #standalone_considerations-delete}
 
 Revise as considerações a seguir antes de excluir uma instância do HCX on {{site.data.keyword.cloud_notm}} que foi pedida para uso no local:
-1. No VMware vSphere Web Client, acesse a interface com o usuário do HCX e, em seguida, verifique os itens a seguir:
+1. No VMware vSphere Web Client, acesse a interface com o usuário do HCX e verifique os itens a seguir:
     1. Assegure-se de que nenhuma operação de migração ou de recuperação de desastre do HCX esteja em execução.
     2. Assegure-se de que todas as redes estendidas sejam removidas.
     3. Assegure-se de que todos os componentes de interconexão com sites em nuvem emparelhados sejam removidos.
 
-   Deve-se concluir todas as considerações antes de continuar com a próxima etapa. Caso contrário, a licença para a instância do HCX on {{site.data.keyword.cloud_notm}} no local é cancelada, razão pela qual migrações não podem ser executadas e erros podem ocorrer nos componentes do HCX.  
+   Deve-se concluir todas as etapas anteriores antes de continuar com a próxima etapa. Caso contrário, a licença para a instância do HCX on {{site.data.keyword.cloud_notm}} no local será cancelada. Se a licença for cancelada, as migrações não poderão ser executadas e erros poderão ocorrer para os componentes do HCX.  
    {:important}
 2. No console do {{site.data.keyword.vmwaresolutions_short}}, exclua a instância do HCX on {{site.data.keyword.cloud_notm}} no local que foi pedida para obter a chave de ativação para o HCX Manager no local. Assegure-se de que a instância excluída não esteja mais disponível no console antes de passar para a próxima etapa.
 

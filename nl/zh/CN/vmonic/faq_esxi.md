@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -25,11 +25,7 @@ subcollection: vmwaresolutions
 {: #faq_esxi-instance}
 {: faq}
 
-* 对于 vCenter Server 实例，可以将缺省集群扩展为最多具有 51 个 ESXi 服务器。每个非缺省集群可以扩展为最多具有 59 个 ESXi 服务器。由于您最多可以向一个实例添加 10 个集群，因此每个部署的实例在所有集群中最多可以有 51 + 9x59 = 582 个 ESXi 服务器。
-* 对于 Cloud Foundation 实例，标准配置有 4 个 ESXi 服务器。最多可以添加 28 个服务器（总共 32 个服务器）。对于多站点配置中的 Cloud Foundation 实例，在所有实例中最多可以有 128 个 ESXi 服务器。
-
-  如果 Cloud Foundation 配置需要具有超过 128 个 ESXi 服务器的多站点部署，请[联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)以获取帮助。
-  {:note}
+通过 vCenter Server 实例，可以将缺省集群扩展为最多具有 51 个 ESXi 服务器。每个非缺省集群可以扩展为最多具有 59 个 ESXi 服务器。由于您最多可以向一个实例添加 10 个集群，因此每个部署的实例在所有集群中最多可以有 51 + 9x59 = 582 个 ESXi 服务器。
 
 ## 可以向集群添加多少个 ESXi 服务器？
 {: #faq_esxi-cluster}
@@ -81,5 +77,5 @@ subcollection: vmwaresolutions
 {: #faq_esxi-related}
 
 * [扩展和收缩 vCenter Server 实例的容量](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
-* [添加、查看和删除 vCenter Server 实例的集群](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [添加、查看和删除 vCenter Server 实例的集群](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_hybrid_addingviewingclusters#vc_hybrid_addingviewingclusters)
 * [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

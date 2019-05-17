@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-05"
+lastupdated: "2019-04-18"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -54,7 +54,7 @@ subcollection: vmwaresolutions
 
 如果任一端发生部署失败，那么将退出并删除系列组件部署。确定故障原因后，单击客户机端 HCX vCenter Web UI 中的**互连**选项卡，然后在屏幕顶部选择**安装 HCX 组件**。
 
-成功部署系列组件并等待几分钟后，在**互连**选项卡中，CGW 和 L2C 组件的隧道状态将显示为**正常运行**。
+成功部署系列组件并等待几分钟后，在**互连**选项卡上，CGW 和 L2C 组件的隧道状态将显示为**正常运行**。
 
 ## 相关链接
 {: #vcshcx-deployment-related}

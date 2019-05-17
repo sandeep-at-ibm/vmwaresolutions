@@ -2,21 +2,21 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-03-12"
+lastupdated: "2019-04-03"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
 
-# Evénements d'Activity Tracker
+# Evénements du service Activity Tracker
 {: #at-events}
 
 Le service {{site.data.keyword.cloudaccesstrailfull}} vous permet de suivre la manière dont les utilisateurs et les applications interagissent avec {{site.data.keyword.vmwaresolutions_short}} dans {{site.data.keyword.Bluemix_notm}}.
 
-Le service {{site.data.keyword.cloudaccesstrailfull_notm}} enregistre les activités initiées par l'utilisateur qui changent l'état d'un service dans {{site.data.keyword.Bluemix_notm}}. Pour plus d'information, voir le document [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started-with-cla#getting-started-with-cla).
+Le service {{site.data.keyword.cloudaccesstrailfull_notm}} enregistre les activités initiées par l'utilisateur qui changent l'état d'un service dans {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations, voir la section [A propos d'{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov#activity_tracker_ov).
 
-## Tableau d'événements d'Activity Tracker
+## Tableau Evénements du service Activity Tracker
 {: #at-events-table}
 
 Consultez le tableau suivant pour obtenir une description des colonnes du tableau Evénements du service Activity Tracker.
@@ -51,12 +51,6 @@ Table 2. Description des actions qui génèrent des événements de gestion
 | `vmware-solutions.notification.update` | <ul><li>La demande de mise à jour des notification est reçue.</li><li>La demande de mise à jour des notification reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
 | `vmware-solutions.secure_data.wipe`       | <ul><li>La demande de nettoyage des données sécurisées est reçue.</li><li>La demande de nettoyage des données sécurisées reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
 | `vmware-solutions.bss_account.migrate` | <ul><li>La demande de migration vers le compte bss compte est reçue.</li><li>La demande de migration vers le compte bss reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
-| `vmware-solutions.vcf.delete`                | <ul><li>La demande de suppression d'une instance Cloud Foundation est reçue.</li><li>La demande de suppression d'une instance Cloud Foundation reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
-| `vmware-solutions.vcf.add_hosts`             | <ul><li>La demande d'ajout de serveurs ESXi à une instance Cloud Foundation est reçue.</li><li>La demande d'ajout de serveurs ESXi à une instance Cloud Foundation reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
-| `vmware-solutions.vcf.remove_hosts`          | <ul><li>La demande de suppression de serveurs ESXi d'une instance Cloud Foundation est reçue.</li><li>La demande de suppression de serveurs ESXi d'une instance Cloud Foundation reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
-| `vmware-solutions.vcf.create_cluster`        | <ul><li>La demande de création d'un cluster pour une instance Cloud Foundation est reçue.</li> <li>La demande de création d'un cluster pour une instance Cloud Foundation reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
-| `vmware-solutions.vcf.delete_cluster`        | <ul><li>La demande de suppression d'un cluster pour une instance Cloud Foundation est reçue.</li><li>La demande de suppression d'un cluster pour une instance Cloud Foundation reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
-| `vmware-solutions.vcf.schedule_update`       | <ul><li>La demande d'une planification de mise à jour pour une instance Cloud Foundation est reçue.</li><li>La demande d'une planification de mise à jour pour une instance Cloud Foundation reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
 | `vmware-solutions.vcs.order`                 | <ul><li>La demande de commande d'une instance vCenter Server est reçue.</li><li>La demande de commande d'une instance vCenter Server reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
 | `vmware-solutions.vcs.delete`                | <ul><li>La demande de suppression d'une instance vCenter Server est reçue.</li><li>La demande de suppression d'une instance vCenter Server reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
 | `vmware-solutions.vcs.add_host`              | <ul><li>La demande d'ajout de serveurs ESXi à une instance vCenter Server est reçue.</li><li>La demande d'ajout de serveurs ESXi à une instance vCenter Server reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |

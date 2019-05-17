@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -34,7 +34,7 @@ Al realizar réplicas entre distintas instancias de {{site.data.keyword.cloud_no
 
 El servicio de réplica de Zerto no da soporte a Network Address Translation (NAT) transversal. Para establecer conectividad entre la instancia de {{site.data.keyword.cloud_notm}} Zerto y su propio centro de datos hay que personalizar las rutas en los dispositivos de Virtual Manager Zerto (ZVM) o en los dispositivos de réplica virtual (VRA) de Zerto en ambos extremos. El establecimiento de la conectividad también puede requerir un túnel entre los sitios. Cuando esté configurando o reconfigurando rutas en dispositivos ZVM, debe asegurarse de que todos los dispositivos ZVM se pueden conectar correctamente a `zerto.com` para la creación de informes de uso. Para verificar esta conexión, abra una sesión del navegador en `https://www.zerto.com` desde el dispositivo ZVM.
 
-La pasarela Management VMware NSX Edge Services Gateway (ESG) de las instancias de Cloud Foundation y de las instancias de vCenter Server on {{site.data.keyword.cloud_notm}} viene preconfigurada de modo que permite las comunicaciones HTTPS (puerto TCP 443) de salida que se originan en ZVM.
+La pasarela Management VMware NSX Edge Services Gateway (ESG) viene preconfigurada de modo que permite las comunicaciones HTTPS (puerto TCP 443) de salida que se originan en ZVM.
 {:note}
 
 ## Actualización de la réplica virtual de Zerto

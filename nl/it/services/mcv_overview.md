@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -67,7 +67,7 @@ L'architettura dello strumento e della tecnologia ha le seguenti specifiche:
 
 L'architettura cluster estesa vSphere + vSAN ha le seguenti specifiche:
 * Il cluster fornisce le funzionalità di archiviazione e di calcolo che si estendono su due siti per fornire una maggiore disponibilità.
-* Le richieste di scrittura da VM (Virtual Machine) sono scritte in modo sincrono su entrambi i siti incorrendo nella latenza della rete site-to-site.
+* Le richieste di scrittura da macchine virtuali (VM) sono scritte in modo sincrono su entrambi i siti incorrendo nella latenza della rete site-to-site.
 * Le richieste di lettura dalle VM sono realizzate localmente nell'ubicazione fisica in cui è ubicata la VM, evitando ulteriore latenza.
 * Il sito e l'host di controllo agiscono come split brain/quorum.
 * La codifica nativa vSAN (per la crittografia inattiva) può essere utilizzata insieme a questa architettura.

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -15,7 +15,7 @@ subcollection: vmwaresolutions
 {:note: .note}
 {:important: .important}
 
-# Conception de gestion d'infrastructure
+# Conception de la gestion d'infrastructure
 {: #design_infrastructuremgmt}
 
 La gestion d'infrastructure fait référence aux composants qui gèrent l'infrastructure VMware.
@@ -86,7 +86,9 @@ La pierre angulaire de ces solutions est l'automatisation. L'automatisation réd
 
 IBM CloudBuilder est une instance de serveur virtuel de machine virtuelle {{site.data.keyword.cloud_notm}} qui s'emploie à activer une nouvelle à instance VMware et qui exécute des fonctions de gestion du cycle de vie. Cette instance est déployée lorsqu'une gestion globale des instances vCenter Server est requise puis supprimée une fois le processus achevé.
 
-Le composant IBM CloudDriver peut être configuré de manière à répondre à l'infrastructure de gestion {{site.data.keyword.vmwaresolutions_short}} sur une connexion de réseau public, ou éventuellement privé, via un stockage d'objets {{site.data.keyword.cloud_notm}} faisant office de file d'attente de messages. IBM CloudDriver est un composant développé par IBM, non accessible aux utilisateurs, dont la fonction et les attributs sont les suivants :
+IBM CloudDriver est une instance de serveur virtuel de machine virtuelle {{site.data.keyword.cloud_notm}} qui est déployée au besoin pour les opérations de jour 2, par exemple pour ajouter des hôtes, des clusters ou des services complémentaires à votre instance VMware.
+
+CloudBuilder et CloudDriver sont uniquement déployés sur le réseau privé qui se connecte au plan de gestion IBM via une file de messages privés. Ces composants sont développés par IBM, ils ne sont pas accessibles par les utilisateurs et présentent les fonctions et les attributs suivants :
 
 - Déploiement et configuration de l'instance vCenter Server dans le compte utilisateur.
 - Ajout et suppression d'hôtes dans les clusters vCenter Server.
@@ -119,6 +121,6 @@ Vous pouvez fournir des mots de passe modifiés dans le portail de solutions IC4
 ## Liens connexes
 {: #design_infrastructuremgmt-related}
 
-* [Conception d'infrastructure physique](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_physicalinfrastructure)
-* [Conception d'infrastructure virtuelle](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_virtualinfrastructure)
+* [Conception de l'infrastructure physique](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_physicalinfrastructure)
+* [Conception de l'infrastructure virtuelle](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_virtualinfrastructure)
 * [Conception des services communs](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_commonservice)

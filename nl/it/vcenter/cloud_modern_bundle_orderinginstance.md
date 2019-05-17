@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-04-24"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -35,7 +35,7 @@ Assicurati di confermare i seguenti requisiti e di completare le seguenti attivi
 ### Account dell'infrastruttura IBM Cloud
 {: #cloud_modern_bundle_orderinginstance-account-req}
 
-* Per utilizzare {{site.data.keyword.vmwaresolutions_short}} per effettuare l'ordine di istanze, devi disporre di un account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer). Il costo dei componenti ordinati nelle tue istanze viene addebitato su tale account {{site.data.keyword.cloud_notm}}.
+* Per utilizzare {{site.data.keyword.vmwaresolutions_short}} per effettuare l'ordine di istanze, devi disporre di un account dell'infrastruttura {{site.data.keyword.cloud_notm}}. Il costo dei componenti ordinati nelle tue istanze viene addebitato su tale account {{site.data.keyword.cloud_notm}}.
 *  Configura le credenziali dell'infrastruttura {{site.data.keyword.cloud_notm}} nella pagina **Impostazioni**. Nella console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Impostazioni** dal riquadro di navigazione a sinistra.
 
 ### Requisiti del nome dell'istanza
@@ -133,7 +133,7 @@ Installa HCX Enterprise Manager in loco e configura la connessione alla tua ista
       1. Fai clic sulla scheda **Amministrazione**.
       2. Nella scheda **Aggiornamenti di sistema**, fai clic su **RICHIEDI LINK DI DOWNLOAD**.
       3. Fai clic su **COPIA LINK** e utilizza quindi questo link per scaricare HCX Enterprise Client in un ambiente in loco con accesso al tuo ambiente vSphere in loco.
-3. Nel client web VMware vSphere, distribuisci HCX Enterprise Client come dispositivo virtuale HCX Manager nel tuo ambiente in loco. Per ulteriori informazioni, consulta [Installazione di HCX Enterprise Manager OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-C61E107C-1F5F-4615-9BA9-351900CDB69E.html).
+3. Nel client web VMware vSphere, distribuisci HCX Enterprise Client come dispositivo virtuale HCX Manager nel tuo ambiente in loco. Per ulteriori informazioni, vedi [Installing the VMware HCX Enterprise Manager OVA](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-C61E107C-1F5F-4615-9BA9-351900CDB69E.html).
 
     Devi distribuire l'HCX Manager in loco su una rete privata e consentirgli l'accesso alla rete pubblica. Puoi utilizzare un gateway Edge NSX, Vyatta o simile per consentire l'accesso internet all'HCX Manager in loco. Se i gateway utilizzati per l'accesso alla rete privata e l'accesso alla rete pubblica sono diversi, si consiglia di utilizzare il gateway predefinito per consentire l'accesso alla rete pubblica e la **Console di gestione HCX Manager** per creare una rotta statica per l'accesso alla rete privata.  
     {:note}
@@ -141,16 +141,16 @@ Installa HCX Enterprise Manager in loco e configura la connessione alla tua ista
   1. Accedi alla tua VM HCX Enterprise Manager in loco utilizzando le credenziali specificate durante la distribuzione di OVA.
   2. Immetti la chiave di attivazione quando richiesto.
 
-  Per ulteriori informazioni, vedi [HCX Activation and Initial Configuration](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-6A4740C1-2225-444C-8ADC-CBE54F181536.html).
+  Per ulteriori informazioni, vedi [VMware HCX Activation and Initial Configuration](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-6A4740C1-2225-444C-8ADC-CBE54F181536.html).
   {:note}
 5. Un certificato SSL autofirmato è stato generato dal servizio HCX on {{site.data.keyword.cloud_notm}}. Devi importare il certificato nell'HCX Manager in loco completando le seguenti istruzioni:
     1. Nella **Console di gestione HCX Manager** in loco, fai clic sulla scheda **Amministrazione**.
     2. Dal riquadro di navigazione a sinistra, fai clic su **Certificato CA attendibile** e quindi su **IMPORTA** sulla destra.
-    3. Fai clic su **URL** e immetti quindi l'URL del certificato che vuoi applicare. Questo è l'**IP cloud HCX** (``https://<cloud-side public IP>``) che puoi trovare nella pagina dei dettagli del servizio HCX on {{site.data.keyword.cloud_notm}} nella console {{site.data.keyword.vmwaresolutions_short}}.
+    3. Fai clic su **URL** e immetti quindi l'URL del certificato che vuoi applicare. Si tratta dell'**IP cloud HCX** (``https://<cloud-side public IP>``) che puoi trovare nella pagina dei dettagli del servizio HCX on {{site.data.keyword.cloud_notm}} nella console {{site.data.keyword.vmwaresolutions_short}}.
     4. Fai clic su **APPLICA**.
-6. Continua la configurazione iniziale e crea l'interconnessione. Per ulteriori informazioni, vedi [Installing and Configuring VMware HCX Enterprise](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-A26BFB16-FA94-426F-8E18-15BAD4BF840E.html).
-7. Estendi le reti in VMware HCX dal locale a {{site.data.keyword.cloud_notm}}. Per ulteriori informazioni, consulta [Extending Networks with VMware HCX](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-DD9C3316-D01C-4088-B3EA-84ADB9FED573.html?hWord=N4IghgNiBcIKIA8AuBTAdgEwJZoOYAI0UkB3AewCcBrAZxAF8g).
-8. Migra le VM tra i locale e {{site.data.keyword.cloud_notm}}. Per ulteriori informazioni, consulta [Migrating Virtual Machines with VMware HCX](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-D0CD0CC6-3802-42C9-9718-6DA5FEC246C6.html?hWord=N4IghgNiBcILIEsDmAnMAXBA7JACAagiugK6S5xgDGAFtgKYDOuA7gujQXC2CvbgAkAwgA0QAXyA).
+6. Continua la configurazione iniziale e crea l'interconnessione. Per ulteriori informazioni, vedi [Installing and Configuring VMware HCX Enterprise](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-A26BFB16-FA94-426F-8E18-15BAD4BF840E.html).
+7. Estendi le reti in VMware HCX dal locale a {{site.data.keyword.cloud_notm}}. Per ulteriori informazioni, consulta [Extending Networks with VMware HCX](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-DD9C3316-D01C-4088-B3EA-84ADB9FED573.html).
+8. Migra le VM tra i locale e {{site.data.keyword.cloud_notm}}. Per ulteriori informazioni, consulta [Migrating Virtual Machines with VMware HCX](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-D0CD0CC6-3802-42C9-9718-6DA5FEC246C6.html).
 
 Devi gestire i componenti dell'infrastruttura {{site.data.keyword.vmwaresolutions_short}} creati nel tuo account {{site.data.keyword.cloud_notm}} solo attraverso la console {{site.data.keyword.vmwaresolutions_short}}, non il {{site.data.keyword.slportal}} o qualsiasi altro mezzo all'esterno della console.
 Se modifichi questi componenti al di fuori della console {{site.data.keyword.vmwaresolutions_short}}, le modifiche non saranno sincronizzate con la console e il tuo ambiente potrebbe diventare instabile.
@@ -187,5 +187,5 @@ Completa la seguente procedura per eliminare un'istanza Single-node Trial for Mi
 
 * [Guida di vCenter Server e IBM Cloud Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
 * [Apri un ticket per IBM Cloud privato](https://www.ibm.com/mysupport/s/?language=en_US)
-* [Documentazione di VMware Hybrid Cloud Extension](https://hcx.vmware.com/#/vm-documentation)
-* [Obtaining the HCX OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html)
+* [Risorse VMware HCX](https://hcx.vmware.com/#/docs)
+* [Obtaining the VMware HCX OVA](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html?hWord=N4IghgNiBcIPICMAuYCWA7DBzABEgFgKY4ASAwgBo5wBqAgiAL5A)

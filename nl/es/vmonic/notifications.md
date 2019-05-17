@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -54,7 +54,7 @@ Puede comprobar las notificaciones sobre el estado del sistema o sobre las opera
        </tr>
        <tr>
          <td>Tipo</td>
-         <td>El tipo de componente con el que está relacionado el suceso notificado:<ul><li>Instancias de vCenter Server</li><li>Instancias de Cloud Foundation</li><li>Servicios</li><li>Sistema</li></ul></td>
+         <td>El tipo de componente con el que está relacionado el suceso notificado:<ul><li>Instancias de vCenter Server</li><li>Servicios</li><li>Sistema</li></ul></td>
        </tr>
        <tr>
          <td>Recurso</td>

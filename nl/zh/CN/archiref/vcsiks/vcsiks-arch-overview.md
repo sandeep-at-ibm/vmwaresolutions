@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -36,8 +36,7 @@ IBM Multi-Cluster Manager 在各种云和集群中提供用户可视性、以应
 
 可以使用 NSX-V 或 NSX-T 组件来部署 {{site.data.keyword.icpfull_notm}}。通过使用 NSX-V 的 {{site.data.keyword.icpfull_notm}}，支持 {{site.data.keyword.icpfull_notm}} VM 在 VXLAN 网络上运行，并使用 Kubernetes Calico 内部联网。 
 
-通过使用 NSX-T 的 {{site.data.keyword.icpfull_notm}}，用户可以在中央 UI (NSX T Manager) 中控制和配置联网、子网和策略。有关 NSX-V 和 NSX-T 之间的差异的信息，请参阅 [{{site.data.keyword.cloud_notm}} VCS 联网参考体系结构](/docs/services/vmwaresolutions/archiref/
-vcsnsxt/vcsnsxt-intro.html)。
+通过使用 NSX-T 的 {{site.data.keyword.icpfull_notm}}，用户可以在中央 UI (NSX T Manager) 中控制和配置联网、子网和策略。有关 NSX-V 和 NSX-T 之间的差异的信息，请参阅 [{{site.data.keyword.cloud_notm}} VCS 联网参考体系结构](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsnsxt-intro#vcsnsxt-intro)。
 
 ## 内部部署云管理平台
 {: #vcsiks-arch-overview-on-premises}
@@ -54,4 +53,4 @@ strongSwan VPN 用于与部署的 {{site.data.keyword.containerlong_notm}} 容�
 ## 相关链接
 {: #vcsiks-arch-overview-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-hybridity-intro#vcs-hybridity-intro)

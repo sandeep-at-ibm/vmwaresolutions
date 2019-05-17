@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-02-08"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -21,7 +21,7 @@ Este release incluye nuevas características, actualizaciones de componentes, me
 
 La prueba de un solo nodo para la migración y modernización de apps constituye una forma sencilla de realizar una prueba de {{site.data.keyword.cloud_notm}} para migrar cargas de trabajo de VMware a {{site.data.keyword.cloud_notm}} y, a continuación, modernizar las cargas de trabajo utilizando contenedores. Esta versión de prueba es una versión de {{site.data.keyword.icpfull_notm}} Hosted on VMware vCenter Server on {{site.data.keyword.cloud_notm}} que proporciona la plataforma de gestión de Kubernetes para contenedores y la plataforma VMware de un solo arrendatario que se puede gestionar utilizando las mismas herramientas que se emplean en entornos locales.
 
-Para obtener más información, consulte [Visión general de la prueba de un solo nodo para la migración y la modernización de apps](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-single-node-trial-for-migration-and-app-modernization-overview).
+Para obtener más información, consulte [Visión general de la prueba de un solo nodo para la migración y la modernización de apps](/docs/services/vmwaresolutions?topic=vmware-solutions-cloud_modern_bundle_overview#cloud_modern_bundle_overview).
 
 ## Adición y eliminación del almacenamiento del sistema de archivos de red
 {: #relnotes_v28-nfs}

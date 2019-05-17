@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-06-22"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -55,7 +55,7 @@ A partir del release V2.4, están disponibles los siguientes modelos nuevos de C
 * Procesador Dual Intel Skylake Xeon Gold 5120 / 28 núcleos en total, 2,2 GHz
 * Procesador Dual Intel Skylake Xeon Gold 6140 / 36 núcleos en total, 2,3 GHz
 
-Para obtener más información, consulte la sección *Valores de Servidor nativo* en [Solicitud de clústeres nuevos de vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances#bare-metal-server-settings).
+Para obtener más información, consulte [Valores de servidor nativo](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vs_orderinginstances#vs_orderinginstances-bare-metal-settings).
 
 ## Actualizaciones de instancias de VMware vCenter Server
 {: #relnotes_v24-vcs}
@@ -63,7 +63,8 @@ Para obtener más información, consulte la sección *Valores de Servidor nativo
 ### Mejora del rendimiento de Network File System
 {: #relnotes_v24-nfs}
 
-El nivel de rendimiento de 10 IOPS/GB, diseñado para los tipos de cargas de trabajo más exigentes, ya no está limitado a {{site.data.keyword.CloudDataCent_notm}} específicos, pero ahora está disponible para todo el mundo. Para obtener más información, consulte la sección *Almacenamiento* en [Visión general de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#technical-specifications-for-vcenter-server-instances).
+El nivel de rendimiento de 10 IOPS/GB, diseñado para los tipos de cargas de trabajo más exigentes, ya no está limitado a {{site.data.keyword.CloudDataCent_notm}} específicos, pero ahora está disponible para todo el mundo. Para obtener más información, consulte
+[Almacenamiento](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#vc_vcenterserveroverview-storage).
 
 ## Actualizaciones de servicios complementarios
 {: #relnotes_v24-services}

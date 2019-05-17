@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-20"
+lastupdated: "2019-04-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -93,7 +93,7 @@ vCenter Server with Hybridity Bundle 實例包括可授權您使用 VMware HCX o
   * **私密金鑰**：輸入 CA 憑證的私密金鑰。
   * （選用）**密碼**：如果私密金鑰已加密，請輸入密碼。
   * （選用）**重新輸入密碼**：再次輸入私密金鑰的密碼。
-  * （選用）**主機名稱**：輸入要對映至 CA 憑證通用名稱 (CN) 的主機名稱。HCX on {{site.data.keyword.cloud_notm}} 要求 CA 憑證為 NSX Edge 接受的格式。如需 NSX Edge 憑證格式的相關資訊，請參閱 [Importing SSL Certificates](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html)。
+  * （選用）**主機名稱**：輸入要對映至 CA 憑證通用名稱 (CN) 的主機名稱。HCX on {{site.data.keyword.cloud_notm}} 要求 CA 憑證為 NSX Edge 接受的格式。如需 NSX Edge 憑證格式的相關資訊，請參閱[匯入 SSL 憑證](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html)。
 
 您可以根據需要來訂購實例基礎的其他附加程式服務（例如災難回復）。如需相關資訊，請參閱[訂購、檢視及移除 vCenter Server with Hybridity Bundle 實例的服務](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)。
 

@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-06-22"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -55,7 +55,7 @@ V2.4 릴리스부터 다음의 새 Bare Metal Server CPU 모델을 VMware Cloud 
 * 듀얼 Intel Skylake Xeon Gold 5120 프로세서/총 28개 코어, 2.2GHz
 * 듀얼 Intel Skylake Xeon Gold 6140 프로세서/총 36개의 코어, 2.3GHz
 
-자세한 정보는 [새 vSphere 클러스터 주문](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances#bare-metal-server-settings)의 *Bare Metal Server 설정* 절을 참조하십시오.
+자세한 정보는 [Bare Metal Server 설정](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vs_orderinginstances#vs_orderinginstances-bare-metal-settings)을 참조하십시오.
 
 ## VMware vCenter Server 인스턴스에 대한 업데이트
 {: #relnotes_v24-vcs}
@@ -63,7 +63,7 @@ V2.4 릴리스부터 다음의 새 Bare Metal Server CPU 모델을 VMware Cloud 
 ### Network File System 성능 개선
 {: #relnotes_v24-nfs}
 
-가장 까다로운 워크로드 유형에 맞게 디자인된 10IOPS/GB의 성능 레벨은 더 이상 특정 {{site.data.keyword.CloudDataCent_notm}}로 제한되지 않으며 이제 어디서든 사용 가능합니다. 자세한 정보는 [vCenter Server 개요](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#technical-specifications-for-vcenter-server-instances)에서 *스토리지* 절을 참조하십시오.
+가장 까다로운 워크로드 유형에 맞게 디자인된 10IOPS/GB의 성능 레벨은 더 이상 특정 {{site.data.keyword.CloudDataCent_notm}}로 제한되지 않으며 이제 어디서든 사용 가능합니다. 자세한 정보는 [스토리지](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#vc_vcenterserveroverview-storage)를 참조하십시오.
 
 ## 추가 서비스에 대한 업데이트
 {: #relnotes_v24-services}

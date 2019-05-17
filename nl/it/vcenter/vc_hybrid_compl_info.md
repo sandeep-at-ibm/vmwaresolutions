@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -75,7 +75,7 @@ Gli ambienti vCenter Server, che vengono forniti come {{site.data.keyword.vmware
 * A causa del livello di specializzazione richiesto per mantenere una competenza tecnica superiore a livello di team, a volte è necessario coinvolgere più di un team di supporto nella risoluzione di un particolare problema software. Questo è gestito facilmente, poiché i nostri team di supporto sono tutti collegati in rete e lavorano come una squadra per risolvere i problemi o le questioni che vengono individuati.
 * Per analizzare il problema, IBM potrebbe avere bisogno di accedere alle informazioni sul tuo sistema relative all'errore o potrebbe essere necessario ricreare l'errore per ottenere ulteriori informazioni.
 * Un certificato di supporto generato dal cliente serve come riconoscimento che il supporto IBM può accedere al livello di gestione VMware per le indagini, il debug e l'intervento. Se sono necessari l'interruzione della manutenzione o delle modifiche all'ambiente, il supporto IBM richiederà una ulteriore conferma documentata dal cliente tramite ticket come parte del nostro processo di gestione delle modifiche.
-* Per ulteriori informazioni sui ticket di supporto, consulta [Software Support Handbook](https://www-304.ibm.com/support/customercare/sas/f/handbook/getsupport.html) e [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
+* Per ulteriori informazioni sui ticket di supporto, consulta [IBM Support Guide](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923) e [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
 
 ## Responsabilità del cliente
 {: #vc_hybrid_compl_info-client-responsibilities}
@@ -86,7 +86,7 @@ Gli ambienti vCenter Server, che vengono forniti come {{site.data.keyword.vmware
 * Al momento della distribuzione iniziale, l'automazione dell'offerta e l'account del cliente sono separati. Al client viene consentito ed è incoraggiato a modificare tutte le password fornite da IBM nel portale.
 * L'accesso vCenter e le credenziali vengono create durante le distribuzioni iniziali e fornite al cliente. Come parte dei requisiti della nostra offerta, il supporto IBM deve mantenere l'accesso completo al livello di gestione per fornire la gestione del ciclo di vita nonché il supporto ai nostri clienti.
 * Se le credenziali come le password vengono modificate in qualsiasi momento, il supporto IBM potrebbe non essere più in grado di aiutare il cliente a recuperare le credenziali perse o dimenticate o anche a risolvere i problemi degli ambienti del cliente.
-* Per ulteriori informazioni sull'importanza di questo problema e sulle relative preoccupazioni, consulta [Considerazioni sulla modifica delle password per i componenti NSX](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_networkingonvcenterserver#considerations-when-changing-passwords-for-nsx-components) e [Considerazioni sulla modifica delle risorse vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter_chg_impact).
+* Per ulteriori informazioni sull'importanza di questo problema e sulle relative preoccupazioni, consulta [Considerazioni sulla modifica delle password per i componenti NSX](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_networkingonvcenterserver#vc_networkingonvcenterserver-change-nsx-component-password-considerations) e [Considerazioni sulla modifica delle risorse vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter_chg_impact).
 
 ### Comunicazione e risoluzione dei problemi
 {: #vc_hybrid_compl_info-communication-troubleshooting}
@@ -114,7 +114,7 @@ Gli ambienti vCenter Server, che vengono forniti come {{site.data.keyword.vmware
 * Questi programmi non IBM sono autorizzati direttamente dai loro provider. Il cliente accetta di utilizzare i programmi non IBM in base ai termini e alle condizioni del provider. Questi sono forniti nell'accordo di licenza IBM che accompagna l'offerta IBM al momento dell'acquisto.
 * IBM esegue test per garantire che i prodotti di terze parti funzionino con i programmi IBM e funzionino in modo appropriato.
 * Il supporto software IBM diagnosticherà i problemi relativi ai problemi del cliente utilizzando la conoscenza di come funzionano le nostre offerte IBM con il software di terze parti. Una volta concluso che il programma IBM funziona correttamente, ma il problema esiste ancora, IBM deve far fare riferimento al cliente al fornitore di terze parti per ulteriori diagnosi.
-* Ulteriori informazioni sulle responsabilità del cliente riguardo il codice o il software di terze parti possono essere trovate in [Software Support Handbook](https://www-304.ibm.com/support/customercare/sas/f/handbook/policies.html).
+* Ulteriori informazioni sulle responsabilità del cliente riguardo il codice o il software di terze parti possono essere trovate in [IBM Support Guide](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923).
 
 ## Consenso all'accesso agli ambienti client
 {: #vc_hybrid_compl_info-consent-to-access-client-environment}

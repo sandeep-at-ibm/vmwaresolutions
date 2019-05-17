@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-04-03"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -43,7 +43,7 @@ subcollection: vmwaresolutions
 
 {{site.data.keyword.cloud_notm}} 的實體網路分成三個不同的網路：公用、專用和管理。如需公用、專用和管理網路的相關資訊，請參閱[解決方案概觀](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)。
 
-如需 {{site.data.keyword.cloud_notm}} 網路的相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} 網路](https://www.ibm.com/cloud-computing/bluemix/our-network){:new_window}。
+如需 {{site.data.keyword.cloud_notm}} 網路的相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} 全球資料中心](https://www.ibm.com/cloud/data-centers/){:new_window}。
 
 如需屬於專用網路一部分之服務網路的說明，請檢閱下列資訊。
 

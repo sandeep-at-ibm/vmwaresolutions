@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-05"
+lastupdated: "2019-04-18"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -67,7 +67,7 @@ OVA를 다운로드하십시오.
 발생하면 Fleet 컴포넌트 배치가 취소되고
 삭제됩니다. 실패 원인을 판별하고 나면 클라이언트 측의 HCX vCenter 웹 UI에 있는 **상호 연결** 탭을 클릭한 다음 화면 맨 위에서 **HCX 컴포넌트 설치**를 선택하십시오.
 
-Fleet 컴포넌트를 성공적으로 배치한 후 몇 분이 지나면 CGW 및 L2C 컴포넌트의 터널 상태가 **상호 연결** 탭에서 **가동**으로 표시됩니다.
+Fleet 컴포넌트를 성공적으로 배치한 후 몇 분이 지나면 CGW 및 L2C 컴포넌트의 터널 상태가 **상호 연결** 탭에서 **작동**으로 표시됩니다.
 
 ## 관련 링크
 {: #vcshcx-deployment-related}

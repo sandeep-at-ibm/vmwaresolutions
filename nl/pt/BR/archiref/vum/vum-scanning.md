@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -54,7 +54,7 @@ Inicie uma varredura simultânea de hosts, MVs e dispositivos virtuais, varrendo
 É possível configurar o vSphere Web Client para varrer MVs, dispositivos virtuais e hosts vSphere ESXi em horários específicos ou em intervalos convenientes para você.
 
 1.	Usando o vSphere Web Client, selecione um objeto no inventário. Todos os objetos-filhos do objeto que você seleciona também são varridos.
-2.	Selecione a **guia Monitorar** e clique em **Tarefa e eventos**.
+2.	Selecione a guia **Monitorar** e clique em **Tarefa e eventos**.
 3.	Selecione **Tarefas planejadas** e clique em **Planejar uma nova tarefa**.
 4.	Selecione **Varrer atualizações** na lista suspensa que aparece. O assistente Varrer para Atualizações é aberto.
 5.	Na página Editar configurações, selecione os tipos de atualizações para as quais varrer o objeto de inventário. Deve-se selecionar pelo menos um tipo de varredura. Na página Opções de planejamento, descreva e planeje a tarefa de varredura.
@@ -64,5 +64,5 @@ Inicie uma varredura simultânea de hosts, MVs e dispositivos virtuais, varrendo
 ## Links relacionados
 {: #vum-scanning-related}
 
-* [Arquitetura de solução do VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrações)
+* [Arquitetura da solução VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
+* [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (demonstrações)

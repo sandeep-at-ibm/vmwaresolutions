@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -17,7 +17,7 @@ subcollection: vmwaresolutions
 {: #hcx-archi-trbl-cloud-reg}
 
 * 如果凭证不正确，Hybrid Cloud Services 不会重试。在 Hybrid Cloud Services 尝试登录并启动云注册之前，凭证必须进行认证。
-* 如果凭证输入错误，或者如果在 Hybrid Cloud Services 向 VCF/VCS Hybrid Cloud Services Cloud 注册后更改了 VCF/VCS Hybrid Cloud Services Cloud 凭证，而导致凭证不匹配，那么云注册会失败。
+* 如果凭证输入错误，或者如果在 Hybrid Cloud Services 向 VCS Hybrid Cloud Services Cloud 注册后更改了 VCS Hybrid Cloud Services Cloud 凭证，而导致凭证不匹配，那么云注册会失败。
 * 要在 Web Client 中更新凭证，请转至“Hybrid Cloud Services 入门”选项卡，然后在**基本任务**下，选择**注册新云**。
 
 ## MAC 地址重复

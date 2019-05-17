@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-04-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -47,7 +47,7 @@ subcollection: vmwaresolutions
 ### 儲存空間大小
 {: #veeam_ordering-config-storage-size}
 
-符合您儲存空間需求的容量。如需預估儲存空間大小的考量，請參閱[預估儲存庫容量](https://bp.veeam.expert/resource_planning/repository_planning_sizing.html)。
+符合您儲存空間需求的容量。如需預估儲存空間大小的考量，請參閱[預估儲存庫容量](https://bp.veeam.expert/repository_server/repository_planning/repository_planning_sizing)。
 
 ### 儲存空間效能
 {: #veeam_ordering-config-storage-performance}

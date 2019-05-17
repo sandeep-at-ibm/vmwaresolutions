@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-05"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -45,7 +45,7 @@ Silver Peak WAN 最佳化應用裝置是部署為 HCX 的一部分，它未配�
 11.	編輯 VM 上的設定。
 12.	按一下勾選框以連接網路配接卡 1。
 13.	按一下**確定**。
-14.	移至 `https://<configured_WAN_OPT_IP>`.
+14.	移至 `https://<configured_WAN_OPT_IP>`。
 15.	使用 `admin` 預設使用者及 `admin` 密碼登入。
 
 您現在可以使用 WAN 最佳化工具 Web 使用者介面監視傳輸率、壓縮比例，以及設定頻寬限制。

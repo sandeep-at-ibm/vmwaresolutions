@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-19"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -52,8 +52,8 @@ Acme Skateboards 希望在其应用程序现代化之旅中，在 {{site.data.ke
 
 有关 NSX-V 的更多信息，请参阅 [NSX-V 概述](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv)。有关 vCenter Server 和 {{site.data.keyword.icpfull_notm}} 产品的更多信息，请参阅 [vCenter Server 和 {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)。
 
-图 2. 使用 {{site.data.keyword.icpfull_notm}} 的 vCenter Server</br>
-![使用 {{site.data.keyword.icpfull_notm}} 的 vCenter Server](vcsnsxt-nsxvhl.svg)
+图 2. vCenter Server with {{site.data.keyword.icpfull_notm}}</br>
+![vCenter Server with {{site.data.keyword.icpfull_notm}}](vcsnsxt-nsxvhl.svg)
 
 这将在内部部署和 {{site.data.keyword.cloud_notm}} 之间创建松散耦合的互连，并支持以下功能：
 -	**简单互连** - 通过任何物理连接（包括公用因特网、专用 VPN 或直接链路）轻松建立逻辑网络连接。

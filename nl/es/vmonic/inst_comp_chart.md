@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-12"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -28,7 +28,7 @@ Tabla 1. Funciones soportadas para vCenter Server, vCenter Server con el paquete
 | Añadir servidores ESXi | Soportado | Soportado | Soportado. Configuración automática no incluida. |
 | Eliminar servidores ESXi | Soportado | Soportado | Soportado. Configuración automática no incluida. |
 | Soporte de varios clústeres | El número máximo depende de las directrices de dimensionamiento de VMware | El número máximo depende de las directrices de dimensionamiento de VMware | Soportado. Configuración automática no incluida. |
-| Actualización y aplicación parches gestionadas por cliente de pila VMware | Actualizaciones gestionadas por el cliente:<br/>Herramientas de VMware nativas (VMware Update Manager) | Actualizaciones gestionadas por el cliente:<br/>Herramientas de VMware nativas (VMware Update Manager) | Actualizaciones gestionadas por el cliente:<br/>Herramientas de VMware nativas (VMware Update Manager) |
+| Actualización y aplicación parches gestionadas por cliente de pila VMware | Actualizaciones gestionadas por el cliente:<br/>Herramientas nativas de VMware (VMware Update Manager) | Actualizaciones gestionadas por el cliente:<br/>Herramientas nativas de VMware (VMware Update Manager) | Actualizaciones gestionadas por el cliente:<br/>Herramientas nativas de VMware (VMware Update Manager) |
 | Copia de seguridad y restauración | Manualmente utilizando IBM Spectrum Protect Plus o Veeam | Manualmente utilizando IBM Spectrum Protect Plus o Veeam | Solución de copia de seguridad y restauración no incluida |
 | Sistema de redes definida por software | NSX Base, Advanced o Enterprise | NSX Advanced o Enterprise | NSX Standard, Base o Enterprise. Configuración automática no incluida. |
 | BYOL para vSphere y vSAN | Soporte completo por clúster | No soportado | Soportado |

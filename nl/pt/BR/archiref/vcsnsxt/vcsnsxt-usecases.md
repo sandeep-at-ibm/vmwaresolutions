@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-19"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -54,8 +54,8 @@ Usando a automação do {{site.data.keyword.cloud_notm}}, o Acme Skateboards pod
 
 Para obter mais informações sobre NSX-V, veja [Visão geral do NSX-V](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv). Para obter mais informações sobre o vCenter Server e a oferta {{site.data.keyword.icpfull_notm}}, veja [vCenter Server e {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro).
 
-Figura 2. vCenter Server com o {{site.data.keyword.icpfull_notm}}</br>
-![vCenter Server com o {{site.data.keyword.icpfull_notm}}](vcsnsxt-nsxvhl.svg)
+Figura 2. vCenter Server com {{site.data.keyword.icpfull_notm}}</br>
+![vCenter Server com {{site.data.keyword.icpfull_notm}}](vcsnsxt-nsxvhl.svg)
 
 Isso cria uma interconectividade fracamente acoplada entre o local e o {{site.data.keyword.cloud_notm}} e permite recursos como:
 -	**Interconectividade simples** - as conexões de rede lógica são estabelecidas facilmente sobre qualquer conexão física, incluindo a Internet pública, a VPN privada ou o link direto.

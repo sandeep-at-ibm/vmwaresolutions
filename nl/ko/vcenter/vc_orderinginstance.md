@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -135,18 +135,15 @@ Bare Metal Server 설정은 데이터 센터 선택 및 Bare Metal Server 구성
 
 | CPU 모델 옵션        |RAM 옵션       |
 |:------------- |:------------- |
-| 듀얼 Intel Xeon E5-2620 v4 / 총 16개의 코어, 2.1GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
-| 듀얼 Intel Xeon E5-2650 v4 / 총 24개의 코어, 2.2GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
-| 듀얼 Intel Xeon E5-2690 v4 / 총 28개의 코어, 2.6GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
 | 쿼드 Intel Xeon E7-4820 v4 / 총 40개의 코어, 2.0GHz |128GB, 256GB, 512GB, 1TB, 2TB, 3TB |
 | 쿼드 Intel Xeon E7-4850 v4 / 총 64개의 코어, 2.1GHz |128GB, 256GB, 512GB, 1TB, 2TB, 3TB |
 
 ### Bare Metal Server 수
 {: #vc_orderinginstance-bare-metal-number}
 
-인스턴스에 있는 초기 클러스터의 경우 ESXi 서버의 수를 2 - 20개 범위로 구성할 수 있습니다. 모든 ESXi 서버는 설정 구성을 공유한다.
-
-초기 배치 후에는 네 개의 클러스터를 추가할 수 있습니다. VMware vSAN에 대해 **Skylake** 또는 **Broadwell** 구성을 선택한 경우 초기 및 사후 배치 클러스터 둘 다를 위해 네 개의 ESXi 서버가 필요합니다. 최소 ESXi 서버에 대한 자세한 정보는 [두 개의 노드 vCenter Server 인스턴스가 고가용성입니까?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)를 참조하십시오.
+* 주문하는 모든 서버는 동일한 구성을 갖습니다.
+* vSAN 스토리지를 사용할 경우 4 - 20개의 서버를 주문할 수 있습니다. 
+* NFS 스토리지를 사용할 경우 2 - 20개의 서버를 주문할 수 있습니다. 그러나 프로덕션 워크로드의 경우 최소 3개의 서버가 권장됩니다. 자세한 정보는 [두 개의 노드 vCenter Server 인스턴스는 고가용성입니까?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)를 참조하십시오.
 
 ## 스토리지 설정
 {: #vc_orderinginstance-storage-settings}
@@ -162,12 +159,12 @@ Bare Metal Server 설정은 데이터 센터 선택 및 Bare Metal Server 구성
 vSAN은 **Skylake** 및 **Broadwell** Bare Metal Server 구성에만 사용할 수 있습니다. 다음 vSAN 옵션을 지정하십시오.
 * **vSAN 용량 디스크의 디스크 유형 및 크기**: 필요한 용량 디스크에 대한 옵션을 선택하십시오.
 * **vSAN 용량 디스크 수**: 추가할 용량 디스크 수를 지정하십시오.
-* 용량 디스크를 8개 한계 이상으로 추가하려는 경우 **고성능 Intel Optane** 상자를 선택하십시오. 이 옵션은 총 10개 용량 디스크에 대해 2개의 추가 용량 디스크 베이를 제공하며 짧은 대기 시간과 높은 IOPS 처리량이 필요한 워크로드에 유용합니다.
+* 용량 디스크를 10개 한계 이상으로 추가하려는 경우 **Intel Optane을 사용한 고성능** 상자를 선택하십시오. 이 옵션은 총 12개 용량 디스크에 대해 2개의 추가 용량 디스크 베이를 제공하며 짧은 대기 시간과 높은 IOPS 처리량이 필요한 워크로드에 유용합니다.
 
-  **고성능 Intel Optane** 옵션은 Skylake CPU 모델 듀얼 Intel Xeon Gold 5120 및 듀얼 Intel Xeon Gold 6140에 대해서만 사용 가능합니다.
+  **Intel Optane을 사용한 고성능** 옵션은 Skylake CPU 모델에 대해서만 사용 가능합니다.
   {:note}
 
-* **vSAN 캐시 디스크의 디스크 유형** 및 **vSAN 캐시 디스크 수** 값을 검토하십시오. 이러한 값은 **고성능 Intel Optane** 상자를 선택했는지 여부에 따라 달라집니다.
+* **vSAN 캐시 디스크의 디스크 유형** 및 **vSAN 캐시 디스크 수** 값을 검토하십시오. 이러한 값은 **Intel Optane을 사용한 고성능** 상자를 선택했는지 여부에 따라 달라집니다.
 * **vSAN 라이센스**: **구매에 포함**을 선택하여 vSAN 컴포넌트에 대한 IBM 제공 VMware 라이센스를 사용하거나, **라이센스를 제공함**을 선택하고 고유한 라이센스 키를 입력하여 고유한 라이센스를 가져오십시오(BYOL).
 
 ### NFS 스토리지
@@ -238,12 +235,14 @@ vCenter Server 인스턴스를 주문할 때는 다음 네트워크 인터페이
 ### 공용 또는 사설 네트워크
 {: #vc_orderinginstance-public-private-network}
 
-네트워크 인터페이스 카드(NIC) 인에이블먼트 설정은 **공용 및 사설 네트워크** 또는 **사설 네트워크 전용** 중 사용자의 선택을 기반으로 합니다. 다음과 같은 추가 기능 서비스에는 공용 NIC가 필요하며 개인용 옵션을 선택하는 경우에는 서비스를 사용할 수 없습니다.
+네트워크 인터페이스 카드(NIC) 인에이블먼트 설정은 **공용 및 사설 네트워크** 또는 **사설 네트워크 전용** 중 사용자의 선택을 기반으로 합니다.
 
-* F5 on {{site.data.keyword.cloud_notm}}
-* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
-* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
-* Zerto on {{site.data.keyword.cloud_notm}}
+**사설 네트워크 전용** 옵션을 선택하는 경우:
+* VMware NSX ESG(Edge Services Gateway)는 프로비저닝되지 않습니다(관리 서비스 ESG 또는 고객 관리 ESG 모두).
+* 공용 NIC가 필요한 다음 추가 서비스는 사용할 수 없습니다.
+  * F5 on {{site.data.keyword.cloud_notm}}
+  * Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
+  * Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
 
 ### VLAN
 {: #vc_orderinginstance-vlans}
@@ -280,14 +279,14 @@ vCenter Server 인스턴스를 주문할 때는 다음 네트워크 인터페이
 * **Active Directory/DNS용 단일 공용 Windows VSI**: 호스트 및 VM이 등록된 인스턴스를 위한 DNS로 작동하는 단일 Microsoft Active Directory(AD)용 Microsoft Windows Server VSI가 배치되고 검색될 수 있습니다. 기본적으로 이 옵션은 V1.9 이상 인스턴스를 위해 배치됩니다.
 * **관리 클러스터에 있는 두 개의 고가용성 전용 Windows Server VM**: 두 개의 Microsoft Windows VM이 배치되어 보안 및 강력한 추진력을 향상시킵니다.
 
-두 개의 Microsoft Windows VM을 사용하도록 인스턴스를 구성하는 경우 두 개의 Microsoft Windows Server 2012 R2 라이센스를 제공해야 합니다. Microsoft Windows Server 2012 R2 Standard 에디션 라이센스, Microsoft Windows Server 2012 R2 Datacenter 에디션 라이센스 또는 둘 다 사용하십시오.
+두 개의 Microsoft Windows VM을 사용하도록 인스턴스를 구성하는 경우 두 개의 Microsoft Windows Server 2016 라이센스를 제공해야 합니다. Microsoft Windows Server 2016 Standard 에디션 라이센스, Microsoft Windows Server 2016 Datacenter 에디션 라이센스 또는 둘 다 사용하십시오.
 {:important}
 
 각 라이센스는 하나의 실제 서버에만 지정될 수 있고 최대 두 개의 실제 프로세서에 적용됩니다. 하나의 Standard 에디션 라이센스는 2 프로세서 서버당 두 개의 가상화된 Microsoft Windows VM을 실행할 수 있습니다. 그러므로 두 개의 Microsoft Windows VM이 두 개의 서로 다른 호스트에 배치되기 때문에 두 개의 라이센스가 필요합니다.
 
 VM을 활성화할 수 있는 30일의 기간이 제공됩니다.
 
-Windows 라이센싱에 대한 자세한 정보는 [Windows Server 2012 R2 문서](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2)를 참조하십시오.
+Windows Server 2016 라이센스 주문에 대한 자세한 정보는 [Get started with Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:new_window}을 참조하십시오.
 
 ## 서비스 설정
 {: #vc_orderinginstance-addon-services}
@@ -321,14 +320,14 @@ vCenter Server 인스턴스를 주문하는 경우 추가 기능 서비스도 �
     2. Bare Metal Server 구성을 선택하십시오.
        * **Skylake** 또는 **Broadwell**을 선택하는 경우 CPU 모델 및 RAM 크기를 지정하십시오.
        * **SAP 인증**을 선택하는 경우, 사전 설정된 구성 중 하나를 선택하십시오.
-    3. {{site.data.keyword.baremetal_short}}의 수를 지정하십시오. 스토리지 솔루션으로 vSAN을 사용할 계획인 경우 최소 네 개의 {{site.data.keyword.baremetal_short}}가 필요합니다.  
+    3. {{site.data.keyword.baremetal_short}}의 수를 지정하십시오. vSAN 스토리지를 사용할 경우 최소 4개의 {{site.data.keyword.baremetal_short}}가 필요합니다.   
 8. 스토리지 구성을 완료하십시오.
   * **vSAN 스토리지**를 선택하는 경우 용량 및 캐시 디스크의 디스크 유형과 디스크 수 및 vSAN License 에디션을 지정하십시오. 더 많은 스토리지를 원하는 경우 **고성능 Intel Optane** 상자를 선택하십시오.
   * **NFS 스토리지**를 선택하고 모든 파일 공유에 동일한 설정을 추가하여 구성하려는 경우에는 **공유 수**, **성능** 및 **크기(GB)**를 지정하십시오.
   * **NFS 스토리지**를 선택하고 개별적으로 파일 공유를 추가하고 구성하려는 경우에는 **개별 공유 구성**을 선택하십시오. 그런 다음, **공유 스토리지 추가** 레이블 옆에 있는 **+** 아이콘을 클릭하고 각 파일 공유에 대해 **성능** 및 **크기(GB)**를 선택하십시오. 하나 이상의 파일 공유를 선택해야 합니다.
   * **로컬 디스크**를 선택하는 경우 디스크 수와 디스크 유형을 지정하십시오.
 9. 네트워크 인터페이스 설정을 완료하십시오.
-   1. 호스트 이름 접두부, 하위 도메인 레이블 및 루트 도메인 이름을 입력하십시오. 보조 인스턴스의 경우에는 도메인 이름이 자동으로 입력됩니다.
+   1. 호스트 이름 접두부(프로비저닝되는 인스턴스용), 하위 도메인 레이블 및 루트 도메인 이름을 입력하십시오. 보조 인스턴스의 경우에는 도메인 이름이 자동으로 입력됩니다.
    2. **공용 및 사설 네트워크** 또는 **사설 네트워크 전용** 중 네트워크 설정을 선택하십시오.
    3. VLAN 설정을 선택하십시오.
       * 새 공용 및 사설 VALN을 주문하려면 **새 VLAN 주문**을 클릭하십시오.
@@ -378,7 +377,7 @@ vCenter Server 인스턴스를 주문하는 경우 추가 기능 서비스도 �
 * [{{site.data.keyword.cloud_notm}} 계정 등록](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)
 * [vCenter Server 인스턴스 보기](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
 * [vCenter Server 인스턴스에 대한 다중 사이트 구성](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_multisite)
-* [vCenter Server 인스턴스의 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [vCenter Server 인스턴스의 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 * [vCenter Server 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
 * [vCenter Server 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
 * [vCenter Server 인스턴스 삭제](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_deletinginstance)

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -54,7 +54,7 @@ subcollection: vmwaresolutions
 4. 在右下方，按一下「刪除」圖示以移除應用裝置。
 5. 如果延伸網路未與「混合式雲端閘道」共用 IP 位址，則必須將它個別移除。展開「網路延伸服務」詳細資料，然後按一下「刪除」圖示以移除「第 2 層集中器」。
 
-即會從 vCenter 及 VCF/VCS Hybrid Cloud Services Cloud 中移除「混合式雲端閘道」以及任何使用「混合式雲端閘道」的混合式服務虛擬應用裝置。
+即會從 vCenter 及 VCS Hybrid Cloud Services Cloud 中移除「混合式雲端閘道」以及任何使用「混合式雲端閘道」的混合式服務虛擬應用裝置。
 
 ## 解除安裝 HCX Manager
 {: #hcx-archi-mod-uninstall-unist-hcxm}

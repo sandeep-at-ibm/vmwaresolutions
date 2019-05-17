@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -26,4 +26,4 @@ Quando você inclui uma configuração de cluster HA (Alta Disponibilidade) com 
 
 Esse problema ocorrerá se não houver redundância no armazenamento compartilhado para permitir pulsação de armazenamento de dados.
 
-Para obter mais informações e etapas sobre como corrigir o problema, veja [Erro de HA: o número de armazenamentos de dados de pulsação para o host é 1, que é menos que o necessário: 2 (2004739)](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2004739).
+Para obter mais informações e etapas sobre como corrigir o problema, veja [Erro de HA: o número de armazenamentos de dados de pulsação para o host é 1, que é menos que o necessário: 2 (2004739)](https://kb.vmware.com/s/article/2004739).

@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -68,7 +68,7 @@ A partire da agosto 2019, {{site.data.keyword.vmwaresolutions_short}} non suppor
 Per ulteriori informazioni, vedi:
 
 * [Panoramica di VRF (Virtual Routing and Forwarding) su IBM Cloud](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-* [Abilita il tuo account per l'utilizzo degli endpoint del servizio utilizzando la CLI IBM Cloud](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
+* [Abilitazione del tuo account per l'utilizzo degli endpoint del servizio](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
 
 ## Supporto per le API (Application Programming Interface)
 {: #relnotes_v29-api}
@@ -101,7 +101,7 @@ I seguenti nuovi data center sono disponibili per la distribuzione: **FRA-05 - F
 ### Miglioramenti del server ESXi
 {: #relnotes_v29-vcs-esxi}
 
-* Il protocollo SSH (Secure Shell) è ora disabilitato per i server ESXi prima della fornitura dell'istanza.
+* Il protocollo SSH (Secure Shell) è ora disabilitato per i server ESXi prima della fornitura dell'istanza. Se vuoi abilitare SSH, vedi [Enable SSH from the vSphere Web Client](https://pubs.vmware.com/vsphere-6-5/index.jsp?topic=%2Fcom.vmware.vcli.getstart.doc%2FGUID-C3A44A30-EEA5-4359-A248-D13927A94CCE.html).
 * A partire dalla release V2.9, sono disponibili le seguenti operazioni server ESXi:
 
    * Aggiungi nuovi server ESXi a un cluster esistente mentre i server sono in modalità di manutenzione. Le VM non vengono migrate ai nuovi server finché non ne esegui la rimozione dalla modalità di manutenzione.
@@ -127,7 +127,7 @@ Il servizio Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} è ora di
 
 Puoi ordinare le istanze vCenter Server con il servizio Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} includo oppure aggiungere questo servizio alle tue istanze vCenter Server esistenti in un secondo momento dalla scheda **Servizi** nella pagina dei dettagli dell'istanza.
 
-Puoi anche ordinare una licenza Caveonix RiskForesight autonoma senza associarla ad alcuna istanza VMware instance per la concessione della licenza e l'attivazione dei tuoi carichi di lavoro in loco.
+Puoi anche ordinare una licenza Caveonix RiskForesight autonoma senza associarla ad alcuna istanza VMware per la concessione della licenza e l'attivazione dei tuoi carichi di lavoro in loco.
 
 Per ulteriori informazioni, vedi:
 * [Considerazioni per Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_considerations)
@@ -148,7 +148,9 @@ Nella release corrente, HyTrust CloudControl 5.4.2 è installato su tutte le ist
 ### KMIP for VMware on IBM Cloud
 {: #relnotes_v29-services-kmip}
 
-Due nuovi endpoint sono ora disponibili a Sydney per il servizio KMIP for VMware on {{site.data.keyword.cloud_notm}}. Per ulteriori informazioni, vedi [Configurazione del servizio KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering-config).
+Due nuovi endpoint sono ora disponibili a Sydney per il servizio KMIP for VMware on {{site.data.keyword.cloud_notm}}. Per ulteriori informazioni, vedi [Configurazione del servizio KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering#kmip_standalone_ordering-config).
+
+(Aggiornato il 9 aprile 2019) In precedenza, KMIP for VMware on {{site.data.keyword.cloud_notm}} ha utilizzato IBM Key Protect for {{site.data.keyword.cloud_notm}} per creare, crittografare e decrittografare le chiavi di crittografia. A partire dalla release V2.9, KMIP for VMware on {{site.data.keyword.cloud_notm}} può utilizzare anche {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services, una serie completa di servizi di crittografia e gestione delle chiavi, per gestire le chiavi di crittografia utilizzate da VMware in {{site.data.keyword.cloud_notm}}. Per ulteriori informazioni, vedi [Panoramica di KMIP for VMware on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations) e [{{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-get-started).
 
 ### Veeam on IBM Cloud
 {: #relnotes_v29-services-veeam}

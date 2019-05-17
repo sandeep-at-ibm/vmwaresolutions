@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-04-18"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -43,6 +43,6 @@ Per ulteriori informazioni su come collegare il tuo account solo IaaS al tuo acc
 ## Link correlati
 {: #np_addinstancetousraccount-related}
 
-* [Gestione dell'accesso utente con IAM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-access-with-iam)
+* [Gestione dell'accesso utente con IAM](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-iam#iam)
 * [Come invitare gli utenti ad accedere a servizi e risorse](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-iamuserinvite)
 * [Cos'è IBM Cloud IAM](/docs/iam?topic=iam-iamoverview)

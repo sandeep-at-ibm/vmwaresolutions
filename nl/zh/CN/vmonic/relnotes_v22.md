@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-10-19"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -39,7 +39,7 @@ subcollection: vmwaresolutions
 * 如果使用的是引用 IBM CloudDriver 虚拟机的备份解决方案，那么在升级到 V2.2 后，请确保备份解决方案引用的是新 IBM CloudDriver 虚拟机。
 * 升级到 V2.2 之前，请确保将旧 Veeam VSI 替换为 Veeam on {{site.data.keyword.cloud_notm}} 服务。在 V2.2 和未来发行版中不再支持旧 Veeam，因此与旧 Veeam 关联的管理组件备份不可用于复原。
 
-有关使用 Veeam on {{site.data.keyword.cloud_notm}} 服务的更多信息，请参阅以下主题：
+有关使用 Veeam on {{site.data.keyword.cloud_notm}} 服务的更多信息，请参阅：
 * [Veeam on {{site.data.keyword.cloud_notm}} 的组件和注意事项](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)
 * [管理 Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
 
@@ -91,7 +91,7 @@ subcollection: vmwaresolutions
 ### 增加每个实例的集群数
 {: #relnotes_v22-clusters-per-inst}
 
-现在，对于部署在或已升级到 V2.2 和更高发行版中的 VMware vCenter Server 实例，最多可以添加 10 个集群。有关更多信息，请参阅[添加和查看 vCenter Server 实例的集群](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)。
+现在，对于部署在或已升级到 V2.2 和更高发行版中的 VMware vCenter Server 实例，最多可以添加 10 个集群。有关更多信息，请参阅[添加和查看 vCenter Server 实例的集群](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)。
 
 ## 对 VMware vSphere 集群的更新
 {: #relnotes_v22-vss}

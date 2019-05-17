@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -54,7 +54,7 @@ Ne supprimez jamais des dispositifs virtuels de l'inventaire vSphere. Utilisez t
 4. Dans la partie inférieure droite, cliquez sur l'icône de suppression pour supprimer le dispositif.
 5. Si un réseau étendu ne partage pas une adresse IP avec la passerelle de cloud hybride, vous devez le retirer séparément. Développez les détails du service d'extensions réseau, puis cliquez sur l'icône de suppression pour retirer le concentrateur de couche 2.
 
-La passerelle de cloud hybride et les dispositifs virtuels de service hybride qui utilisent cette passerelle sont retirés à la fois de vCenter et de VCF/VCS Hybrid Cloud Services Cloud.
+La passerelle de cloud hybride et les dispositifs virtuels de service hybride qui utilisent cette passerelle sont retirés à la fois du cloud vCenter et VCS Hybrid Cloud Services.
 
 ## Désinstallation de HCX Manager
 {: #hcx-archi-mod-uninstall-unist-hcxm}

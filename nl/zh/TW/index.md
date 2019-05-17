@@ -4,11 +4,11 @@ copyright:
 
   years: 2016, 2019
 
-lastupdated: "2019-03-22"
+lastupdated: "2019-04-16"
 
-keywords: IBM Cloud for VMware Solutions, getting started, deployment offerings, add-on services, use case
+keywords: IBM Cloud for VMware Solutions, getting started, vmware solutions offerings, add-on services for vmwaresolutions, vmwaresolutions use cases
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -50,7 +50,7 @@ subcollection: vmwaresolutions
 ### 使用者帳戶
 {: #getting-started-user-accts}
 
-您需要 {{site.data.keyword.cloud_notm}} 帳戶及 {{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) 帳戶。這些帳戶必須符合特定需求。
+您需要 {{site.data.keyword.cloud_notm}} 帳戶及 {{site.data.keyword.cloud_notm}} 基礎架構帳戶。這些帳戶必須符合特定需求。
 
    表 1. 必要使用者帳戶
    <table>
@@ -67,8 +67,8 @@ subcollection: vmwaresolutions
       <td>若要訂購及使用 {{site.data.keyword.cloud_notm}} 服務，需要 {{site.data.keyword.cloud_notm}} 帳戶。計費資訊與 {{site.data.keyword.cloud_notm}} 帳戶相關聯。實體及虛擬基礎架構以及所產生授權的成本會記入您的 {{site.data.keyword.cloud_notm}} 帳戶。</td>
    </tr>
    <tr>
-      <td>IBM Cloud 基礎架構 (SoftLayer) 帳戶</td>
-      <td>{{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) 帳戶先前稱為 IBM SoftLayer 帳戶。如需帳戶必須符合的需求的相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} 基礎架構帳戶的需求](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)。<br><br>您可以鏈結 {{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) 帳戶與 {{site.data.keyword.cloud_notm}} 帳戶，以使用結合的基礎架構即服務 (IaaS) 及平台即服務 (PaaS) 資源。然後，您就可以從單一登入存取 IaaS 資源及 PaaS 資源。鏈結您的帳戶也會提供您使用之所有 PaaS 及 IaaS 資源的單一發票。<ul><li>如果您沒有 {{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) 帳戶，請遵循[註冊 IBM Cloud 基礎架構 (SoftLayer) 帳戶](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account#signing_softlayer_account-infra)中的程序來要求帳戶，然後遵循[切換至 IBMid 和鏈結帳戶](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)中的程序，將 {{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) 帳戶鏈結至 {{site.data.keyword.cloud_notm}} 帳戶。</li><li>如果您有 {{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) 帳戶，您可以遵循[切換至 IBM ID 並鏈結帳戶](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)中的程序，來鏈結至 {{site.data.keyword.cloud_notm}} 帳戶。</li></ul></td>
+      <td>IBM Cloud 基礎架構帳戶</td>
+      <td>如需 {{site.data.keyword.cloud_notm}} 基礎架構帳戶之需求的相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} 基礎架構帳戶的需求](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)。<br><br>您可以鏈結 {{site.data.keyword.cloud_notm}} 基礎架構帳戶與 {{site.data.keyword.cloud_notm}} 帳戶，以使用結合的基礎架構即服務 (IaaS) 及平台即服務 (PaaS) 資源。然後，您就可以從單一登入存取 IaaS 資源及 PaaS 資源。鏈結您的帳戶也會提供您使用之所有 PaaS 及 IaaS 資源的單一發票。<ul><li>如果您沒有 {{site.data.keyword.cloud_notm}} 基礎架構帳戶，請遵循[註冊 IBM Cloud 基礎架構帳戶](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account#signing_softlayer_account-infra)中的程序來要求帳戶，然後遵循[切換至 IBMid 和鏈結帳戶](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)中的程序，將 {{site.data.keyword.cloud_notm}} 基礎架構帳戶鏈結至 {{site.data.keyword.cloud_notm}} 帳戶。</li><li>如果您有 {{site.data.keyword.cloud_notm}} 基礎架構帳戶，則可以遵循[切換至 IBM ID 並鏈結帳戶](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)中的程序，將它鏈結至 {{site.data.keyword.cloud_notm}} 帳戶。</li></ul></td>
    </tr>
    </table>
 
@@ -168,13 +168,13 @@ subcollection: vmwaresolutions
 {{site.data.keyword.vmwaresolutions_short}} 主控台是您訂購及管理部署的介面。在主控台中，每一個部署都會當成實例進行管理。主控台是與 {{site.data.keyword.cloud_notm}} 基礎架構客戶入口網站分開的獨立式使用者介面。
 
 若要存取 {{site.data.keyword.vmwaresolutions_short}} 主控台，請執行下列動作：
-1. 移至 https://console.cloud.ibm.com/infrastructure/vmware-solutions/console。
+1. 移至 https://cloud.ibm.com/infrastructure/vmware-solutions/console。
 2. 使用您的 **IBM ID** 登入主控台。
 
 ## 步驟 2：配置使用者帳戶及設定
 {: #getting-started-step2}
 
-在您訂購實例之前，必須在主控台的**設定**頁面上輸入 {{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) 帳戶的使用者名稱及 API 金鑰。
+在您訂購實例之前，必須在主控台的**設定**頁面上輸入 {{site.data.keyword.cloud_notm}} 基礎架構帳戶的使用者名稱及 API 金鑰。
 
 如需如何配置使用者帳戶及設定的相關資訊，請參閱[管理使用者帳戶及設定](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)。
 

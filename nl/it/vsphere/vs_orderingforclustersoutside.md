@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -49,7 +49,7 @@ Assicurati di aver completato le seguenti attività:
 
 La distribuzione del cluster inizia automaticamente e ricevi un'e-mail di conferma che ti indica che l'ordine è in fase di elaborazione. Quando il cluster è pronto per l'uso, ti viene inviata una notifica via e-mail.
 
-I cluster vSphere non vengono visualizzati nella pagina **Risorse** insieme alle istanze vCenter Server e Cloud Foundation.
+I cluster vSphere non vengono visualizzati nella pagina **Risorse** insieme alle istanze vCenter Server.
 {:note}
 
 ## Link correlati

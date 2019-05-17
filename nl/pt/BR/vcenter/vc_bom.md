@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-20"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -42,15 +42,15 @@ Tabela 2. BOM para os componentes de software em instâncias do vCenter Server
 
 | Fabricante  | Componente                      | Versão    |
 |:------------- |:------------------------------ |:------------- |
-| VMware       | vSphere ESXi                    | 6.7 Atualização 1 (construção 6.7.0-11675023) ou <br/>6,5 Atualização 2 (construção 6.5.0-11925212) |
+| VMware       | vSphere ESXi                    | 6.7 Atualização 1 (construção 6.7.0-13004448) ou <br/>6.5 Atualização 2 (construção 6.5.0-13004031) |
 | VMware       | vSphere 6.7                     | Distributed vSwitch 6.6.0 |
 | VMware       | vSphere 6.5                     | Distributed vSwitch 6.5.0 |
-| VMware       | vCenter Server Appliance        | 6.7 Atualização 1 (construção 6.7.0-10244745) ou <br/>6,5 Atualização 2d (construção 6.5.0-10964411) |
-| VMware       | Platform Services Controller    | 6.7 Atualização 1 (construção 6.7.0-10244745) ou <br/>6,5 Atualização 2d (construção 6.5.0-10964411) |
+| VMware       | vCenter Server Appliance        | 6.7 Atualização 1b (construção 6.7.0-11727113) ou <br/>6.5 Atualização 2d (construção 6.5.0-10964411) |
+| VMware       | Platform Services Controller    | 6.7 Atualização 1b (construção 6.7.0-11727113) ou <br/>6.5 Atualização 2d (construção 6.5.0-10964411) |
 | VMware       | vSAN                            | 6.7 Atualização 1 ou <br/>6.6.1       |
 | VMware       | NSX for vSphere                 | 6.4.4 (construção 11197766)    |
 | VMware       | NSX-T for vSphere               | 2.4                       |
-| Microsoft    | Windows Server Standard Edition | 2012R2       |
+| Microsoft    | Windows Server Standard Edition | 2016       |
 
 VMware vSAN é um componente opcional.
 {:note}
@@ -98,7 +98,7 @@ Tabela 4. Definições de configuração do grupo da porta e NSX para instância
 | Política de equipe de cluster NSX VXLAN | Failover | Balanceamento de carga - SRCID |
 | NSX VXLAN cluster VTEP | 1 | 2 |
 | Conjunto do ID de segmento para a instância primária | 6000-8000 | 6000-7999 |  
-| Conjunto do ID de segmento para instância ou instâncias secundárias subsequentes | 6000-8000 | Intervalo final anterior na configuração multisite + 1 para o intervalo final anterior na configuração multisite + 2000 |  
+| Conjunto do ID de segmento para instância ou instâncias secundárias subsequentes | 6000-8000 | Intervalo final anterior na configuração multissite + 1 para o intervalo final anterior na configuração multissite + 2000 |  
 | Grupo da porta SDDC-DPortGroup-VSAN (se aplicável) | **Uplinks ativos** configurados como **uplink1** e **Uplinks em espera** configurados como **uplink2** | **Uplinks ativos** configurados como **uplink2** e **Uplinks em espera** configurados como **uplink1** |  
 | Grupo da porta SDDC-DPortGroup-Mgmt | **Ligação da porta** configurada como **Efêmera - sem ligação** e **Balanceamento de carga** configurado como **Rota baseada na porta virtual de origem** | **Ligação da porta** configurada como **Ligação estática** e **Balanceamento de carga** configurado como **Rota baseada na carga NIC física** |  
 | Grupo da porta SDDC-DPortGroup-External | **Ligação da porta** configurada como **Ephemeral - sem ligação** | **Ligação da porta** configurada como **Ligação estática** |
@@ -133,7 +133,7 @@ comutador público para 1500.
 
 Para atualizar a configuração de MTU para o comutador público, conclua as seguintes etapas no VMware vSphere Web Client:
 1. Clique com o botão direito no vDS e clique em **Configurações de edição**.
-2. Na **guia Propriedades**, selecione a opção **Avançado**.
+2. Na guia **Propriedades**, selecione a opção **Avançado**.
 3. Certifique-se de que o valor de **MTU máximo** esteja configurado para 1500.
 
    Quando o tamanho de MTU em um vDS é mudado, os uplinks anexos (NICs físicos) são desativados e ativados novamente. Como resultado, uma breve interrupção ocorre para as MVs que estão usando o uplink. Portanto, é
@@ -146,6 +146,6 @@ recomendável planejar a atualização de configuração do MTU durante o tempo 
 * [Números de compilação e versões do VMware ESXi e do ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Números de compilação e versões do VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
 * [Ativando quadros gigantes em comutadores virtuais distribuídos](https://kb.vmware.com/s/article/1038827)
-* [ Proteção de Dados de Proteção do {{site.data.keyword.vmwaresolutions_short}}  ](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:new_window}
+* [Planilha de dados de proteção do {{site.data.keyword.vmwaresolutions_short}}](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:new_window}
 * [Visão geral do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
 * [Planejando instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)

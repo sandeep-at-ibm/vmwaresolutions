@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -51,7 +51,7 @@ Examinez l'architecture de toutes les [Extensions de la plateforme de visualisat
 {: #additional_resources-demos}
 
 * [Ressources et vidéos](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/resources){:new_window}
-* [Engagement technique numérique](https://ibm-dte.mybluemix.net/ibm-vmware){:new_window}
+* [Engagement technique numérique](https://ibm-dte.mybluemix.net/vmware){:new_window}
 * [Ressources et études de cas notables](https://www.ibm.com/cloud/vmware/resources){:new_window}
 
 ## Expérimentation d'IBM Cloud for VMware Solutions
@@ -60,6 +60,6 @@ Examinez l'architecture de toutes les [Extensions de la plateforme de visualisat
 Voulez-vous constater par vous-même ? Expérimentez brièvement ses fonctionnalités en suivant pas à pas la {{site.data.keyword.vmwaresolutions_short}} visite guidée de [VMware vCenter Server](https://cloudcontent.mybluemix.net/cloud/garage/demo/try-vmware-solutions){:new_window}.
 
 ## Documentation VMware
-{: #additional_resources-VMware-doc}
+{: #additional_resources-vmware-doc}
 
 * [Documentation VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources){:new_window}

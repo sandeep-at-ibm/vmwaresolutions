@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -50,7 +50,7 @@ Si ha guardado la configuración del clúster como una plantilla, recibirá una 
 
 Si ha realizado un pedido, el despliegue del clúster se inicia automáticamente. El usuario recibirá una confirmación por correo electrónico de que el pedido se está procesando. Cuando el clúster esté listo para ser utilizado, también se le notificará por correo electrónico.
 
-A diferencia de las instancias de vCenter Server y Cloud Foundation, los clústeres de vSphere no se muestran en la página **Recursos**.
+A diferencia de las instancias de vCenter Server, los clústeres de vSphere no se muestran en la página **Recursos**.
 {:note}
 
 ## Enlaces relacionados

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -35,7 +35,7 @@ disso, revise as notas sobre a liberação do VMware antes de tentar qualquer up
 instrução específica para a liberação especificada.
 
 Para atualizar o PSC/VCSA, siga estas etapas:
-1. É possível fazer download de atualizações acessando o [Centro de Download](https://my.vmware.com/group/vmware/patch#search) de Correções do VMware, efetuando login e escolhendo VC no menu **Procurar por produto**. Selecione a correção apropriada e clique em **Download**.
+1. É possível fazer download de atualizações acessando o [Centro de download de correções do VMware](https://www.vmware.com/patchmgr/findPatchByReleaseName.portal), efetuando login e escolhendo VC no menu **Procurar por produto**. Selecione a correção apropriada e clique em **Download**.
 2. Usando o vSphere Web Client, faça upload do arquivo ISO para o repositório de armazenamento de dados do vCenter.
 3. Monte o arquivo ISO de atualização para o servidor vCenter.
 4. Tome uma captura instantânea de seu servidor vCenter.
@@ -44,7 +44,7 @@ PSC) ou `https://vcenterip:5480` (para o VCSA)
 6. Acesse a seção **Atualização** e selecione **Verificar atualizações** e, em seguida, **Verificar CDROM**. A atualização está listada.
 7. Selecione **Instalar atualizações** e **Aceitar** o EULA. A atualização é instalada.
 8. Após a atualização ser concluída, deve-se voltar para o console de gerenciamento de dispositivo e selecionar para reiniciar o console.
-9. Efetue login de volta no Web client do vSphere e verifique qualquer erro. Conclua uma varredura manual de VUM, **Página inicial** > **Hosts e cluster**, em seguida, selecione um data center ou cluster e selecione **guia Update Manager** e, em seguida, clique em **Varrer para atualizações**. Se a varredura manual resultar em um erro, veja [Reconfigurando o banco de dados do VMware Update Manager em um dispositivo vCenter Server 6.5 (2147284)](https://kb.vmware.com/s/article/2147284).
+9. Efetue login de volta no Web client do vSphere e verifique qualquer erro. Conclua uma varredura manual do VUM, **Página inicial** > **Hosts e cluster**, em seguida, selecione um data center ou cluster e selecione a guia **Update Manager** e, em seguida, clique em **Varrer atualizações**. Se a varredura manual resultar em um erro, veja [Reconfigurando o banco de dados do VMware Update Manager em um dispositivo vCenter Server 6.5 (2147284)](https://kb.vmware.com/s/article/2147284).
 10. Após o teste, se precisar voltar, reverta para captura instantânea ou restaure o vCenter com um backup anterior.
 
 ## Instâncias do vCenter Server vinculadas por SSO
@@ -57,5 +57,5 @@ Se você tiver instâncias primárias e secundárias do vCenter Server, os VCSAs
 ## Links relacionados
 {: #vum-updating-vcsa-related}
 
-* [Arquitetura de solução do VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrações)
+* [Arquitetura da solução VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
+* [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (demonstrações)

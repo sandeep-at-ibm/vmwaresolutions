@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-08-30"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -63,7 +63,7 @@ Iniciando com a liberação V2.5, o {{site.data.keyword.vmwaresolutions_short}} 
 
 Para obter mais informações, veja os tópicos a seguir:
 * [Convidando usuários para acessar serviços e recursos](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-iamuserinvite)
-* [Gerenciando o acesso de usuário com o IAM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-access-with-iam)
+* [ Gerenciando o acesso de usuário com o IAM ](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-iam#iam)
 
 ## Mudanças nas contas do usuário e grupos para instâncias do VMware vCenter Server e do VMware Cloud Foundation
 {: #relnotes_v25-user-acct}

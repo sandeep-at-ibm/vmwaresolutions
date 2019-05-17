@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-28"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -22,7 +22,7 @@ Revise as informações a seguir para obter detalhes sobre as considerações e 
 {: #vc_nsx-t_networkingonvcenterserver-networking-components}
 {: faq}
 
-Para revisar os componentes de rede que estão incluídos em sua instância do vCenter Server com NSX-T, consulte [Especificações técnicas para as instâncias do vCenter Server com NSX-T](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_overview-specs).
+Para revisar os componentes de rede que estão incluídos em sua instância do vCenter Server com NSX-T, consulte [Especificações técnicas para as instâncias do vCenter Server com NSX-T](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_overview#vc_nsx-t_overview-specs).
 
 ## Considerações de firewall
 {: #vc_nsx-t_networkingonvcenterserver-firewall-considerations}

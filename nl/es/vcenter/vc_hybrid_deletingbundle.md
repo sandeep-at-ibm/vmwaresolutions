@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -110,7 +110,7 @@ Verifique los siguientes requisitos antes de eliminar el paquete híbrido (Hybri
   * Una lista de las claves de licencia de BYOL que ha instalado en este procedimiento. Cuando sea aplicable, proporcione la instancia y el nombre de clúster con las claves de licencia para los clústeres vSphere y vSAN.
   * Una lista de las claves de licencia de alquiler que ha eliminado en este procedimiento. Cuando sea aplicable, proporcione la instancia y el nombre de clúster con las claves de licencia para los clústeres vSphere y vSAN.
 
-  Los equipos de operaciones y soporte de IBM acceden a la capa de gestión de vCenter de la cuenta de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer) para verificar que se han eliminado las licencias de alquiler antes de cancelar los cargos de licencia de alquiler del paquete híbrido (Hybridity).
+  Los equipos de operaciones y soporte de IBM acceden a la capa de gestión de vCenter de la cuenta de infraestructura de {{site.data.keyword.cloud_notm}} para verificar que se han eliminado las licencias de alquiler antes de cancelar los cargos de licencia de alquiler del paquete híbrido (Hybridity).
   {:note}
 
 ## Enlaces relacionados

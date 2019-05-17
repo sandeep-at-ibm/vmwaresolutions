@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-12"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -28,7 +28,7 @@ Tabella 1. Funzioni supportate per le istanze vCenter Server, vCenter Server wit
 | Aggiunta di server ESXi | Supportato | Supportato | Supportato. Configurazione automatizzata non inclusa |
 | Rimozione di server ESXi | Supportato | Supportato | Supportato. Configurazione automatizzata non inclusa |
 | Supporto multicluster | Il numero massimo dipende dalle direttive di dimensionamento VMware | Il numero massimo dipende dalle direttive di dimensionamento VMware | Supportato. Configurazione automatizzata non inclusa |
-| Aggiornamento e correzione gestiti dal client dello stack VMware | Aggiornamenti gestiti dal client:<br/>Strumenti VMware nativi (VMware Update Manager) | Aggiornamenti gestiti dal client:<br/>Strumenti VMware nativi (VMware Update Manager) | Aggiornamenti gestiti dal client:<br/>Strumenti VMware nativi (VMware Update Manager) |
+| Aggiornamento e correzione gestiti dal client dello stack VMware | Aggiornamenti gestiti dal client:<br/>Strumenti Native VMware (VMware Update Manager) | Aggiornamenti gestiti dal client:<br/>Strumenti Native VMware (VMware Update Manager) | Aggiornamenti gestiti dal client:<br/>Strumenti Native VMware (VMware Update Manager) |
 | Backup e ripristino | Manualmente utilizzando IBM Spectrum Protect Plus o Veeam | Manualmente utilizzando IBM Spectrum Protect Plus o Veeam | Soluzione di backup e ripristino non inclusa |
 | SDN (software-defined networking) | NSX Base, Advanced o Enterprise | NSX Advanced o Enterprise | NSX Standard, Base o Enterprise. Configurazione automatizzata non inclusa |
 | BYOL per vSphere e vSAN | Completamente supportato per cluster | Non supportato | Supportato |

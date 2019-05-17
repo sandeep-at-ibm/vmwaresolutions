@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-14"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -42,9 +42,9 @@ Chaque service crée un compte utilisateur interne dans vCenter Server. Ce compt
 Pour éviter les indisponibilités et les problèmes de connexion, si vous modifiez l'ID utilisateur, le mot de passe ou les paramètres d'expiration de mot de passe pour ce compte utilisateur, prenez soin de mettre également à jour les informations dans le service associé.
 {:important}
 
-L'ID utilisateur de ce compte est au format `<service_name>-<truncated service_uuid>@test.local` ou `<service_name>-<truncated service_uuid>@example-domain.local`. Par exemple, l'ID utilisateur dont se sert le service Veeam on {{site.data.keyword.cloud_notm}} pour se connecter à vCenter Server afin d'effectuer des sauvegardes planifiées est `Veeam-<Veeam_uuid>@test.local`.
+L'ID utilisateur de ce compte est au format `<service_name>-<truncated service_uuid>@test.local` ou `<service_name>-<truncated service_uuid>@example-domain.local`. Par exemple, l'ID utilisateur dont se sert le service Veeam on {{site.data.keyword.cloud_notm}} pour se connecter à vCenter Server pour effectuer les sauvegardes planifiées est `Veeam-<Veeam_uuid>@test.local`.
 
-Le `<service_name>` avec `<service_uuid>` tronque à 20 caractères.
+Ensemble, le nom de service `<service_name>` et l'UUID du service `<service_uuid>` sont tronqués à 20 caractères.
 {:note}
 
 ## Ressources VMware pour des instances vCenter Server (version 1.9 et ultérieures)

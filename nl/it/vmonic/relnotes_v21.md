@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -32,14 +32,14 @@ Questa release include nuove funzioni, aggiornamenti dei componenti, miglioramen
 ## VMware HCX on IBM Cloud
 {: #relnotes_v21-hcx}
 
-Il servizio HCX on {{site.data.keyword.cloud_notm}} è ora disponibile per le istanze VMware Cloud Foundation e VMware vCenter Server che eseguono vSphere 6.5 e che sono distribuite o aggiornate alle release della V2.1 o successive. Questo servizio può estendere senza problemi le reti dei tuoi data center in loco in {{site.data.keyword.cloud_notm}}, il che consente la migrazione bidirezionale delle VM (Virtual Machine) tra i data center in loco e {{site.data.keyword.cloud_notm}} senza alcuna modifica. Stabilendo un bridge di livello 2, HCX utilizza l'ottimizzazione, la deduplicazione, la compressione e la crittografia WAN per migrare più rapidamente e in sicurezza i dati su un tunnel VPN o Direct Link. La migrazione in blocco delle VM è retrocompatibile con VMware vSphere 5.1 o superiore. Se utilizzi vSphere 6.0 o superiore in loco, puoi eseguire la migrazione live (alimentata) vMotion delle VM dalla posizione in loco a un {{site.data.keyword.CloudDataCent_notm}}. Non è necessario che VMware NSX sia installato nel tuo data center quando utilizzi HCX.
+Il servizio HCX on {{site.data.keyword.cloud_notm}} è ora disponibile per le istanze VMware Cloud Foundation e VMware vCenter Server che eseguono vSphere 6.5 e che sono state distribuite o di cui è stato eseguito l'upgrade alle release della V2.1 o successive. Questo servizio può estendere senza problemi le reti dei tuoi data center in loco in {{site.data.keyword.cloud_notm}}, il che consente la migrazione bidirezionale delle VM (Virtual Machine) tra i data center in loco e {{site.data.keyword.cloud_notm}} senza alcuna modifica. Stabilendo un bridge di livello 2, HCX utilizza l'ottimizzazione, la deduplicazione, la compressione e la crittografia WAN per migrare più rapidamente e in sicurezza i dati su un tunnel VPN o Direct Link. La migrazione in blocco delle VM è retrocompatibile con VMware vSphere 5.1 o superiore. Se utilizzi vSphere 6.0 o superiore in loco, puoi eseguire la migrazione live (alimentata) vMotion delle VM dalla posizione in loco a un {{site.data.keyword.CloudDataCent_notm}}. Non è necessario che VMware NSX sia installato nel tuo data center quando utilizzi HCX.
 
 Puoi ordinare le istanze Cloud Foundation o vCenter Server con il servizio HCX on {{site.data.keyword.cloud_notm}} incluso al momento dell'ordine della tua istanza o aggiungere questo servizio alle tue istanze esistenti in un secondo momento utilizzando la scheda **Servizi** nella pagina dei dettagli dell'istanza.
 
 Puoi anche ordinare un'istanza HCX in loco per la licenza e l'attivazione dell'installazione di HCX in loco.
 
 Per ulteriori informazioni, consulta i seguenti argomenti:
-* [Considerazioni su HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview)
+* [Considerazioni su HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations)
 * [Gestione di HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghcx)
 * [Considerazioni sulle istanze HCX in loco](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_considerations)
 * [Ordine di istanze HCX in loco](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_orderingserviceinstances)
@@ -53,7 +53,7 @@ Inoltre, quando aggiungi nodi a un cluster concesso in licenza con la tua chiave
 
 Per ulteriori informazioni, consulta i seguenti argomenti:
 
-* [Aggiunta e visualizzazione di cluster per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [Aggiunta, visualizzazione ed eliminazione di cluster per le istanze vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 * [Domande frequenti su BYOL](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_byol)
 
 ## Aggiornamenti dei componenti del servizio Zerto on IBM Cloud
@@ -91,7 +91,7 @@ Per ulteriori informazioni, vedi [Panoramica di vCenter Server](/docs/services/v
 ### Aumento del numero massimo di server per cluster a più di 32
 {: #relnotes_v21-max-clusters}
 
-Per il cluster predefinito in un'istanza, puoi distribuire o espandere fino a 51 server. Per tutti i cluster successivi in un'istanza, puoi distribuire o espandere fino a 59 server. Per ulteriori informazioni, vedi [Aggiunta e visualizzazione di cluster per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances).
+Per il cluster predefinito in un'istanza, puoi distribuire o espandere fino a 51 server. Per tutti i cluster successivi in un'istanza, puoi distribuire o espandere fino a 59 server. Per ulteriori informazioni, vedi [Aggiunta, visualizzazione ed eliminazione di cluster per le istanze vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters).
 
 Questa funzionalità è disponibile solo per le istanze distribuite nella V2.1 e successive. Le istanze che vengono aggiornate alla V2.1 da release precedenti non dispongono di questa opzione.
 {:note}
@@ -113,7 +113,7 @@ Puoi ora configurare le condivisioni file NFS su base individuale. Seleziona la 
 Per ulteriori informazioni, consulta i seguenti argomenti:
 * [Panoramica di vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
 * [Ordine di istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [Aggiunta e visualizzazione di cluster per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [Aggiunta, visualizzazione ed eliminazione di cluster per le istanze vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 
 ## Aggiornamenti e miglioramenti dell'interfaccia utente
 {: #relnotes_v21-ui}

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-21"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -22,7 +22,7 @@ VMware vCenter Server with NSX-T on {{site.data.keyword.cloud}} 是一個受管�
 
 在許多情況下，整個環境可以在一天內佈建完成，且裸機基礎架構可以快速而彈性地擴充運算容量，並依需要擴增及縮減。
 
-部署後，您可以藉由從 {{site.data.keyword.slportal}} 訂購其他 NFS（網路檔案系統）檔案共用，以及將它們手動連接至叢集裡的所有 ESXi 伺服器，來增加共用儲存空間。
+部署後，您可以藉由從 {{site.data.keyword.slportal}} 訂購其他「網路檔案系統 (NFS)」檔案共用，以及將它們手動連接至叢集中的所有 ESXi 伺服器，來增加共用儲存空間。
 
 VMware vSAN 也以專用儲存空間選項提供。若要增加 vSAN 叢集的 vSAN 型儲存空間容量，您可以在部署後新增更多 ESXi 伺服器。
 
@@ -74,7 +74,7 @@ vCenter Server with NSX-T 實例僅用於概念證明 (POC) 或沙盤推演測�
 * **Skylake**：2-CPU Intel Skylake 世代伺服器（Intel Xeon 4100/5100/6100 系列），搭配您選取的 CPU 型號及 RAM 大小。  
 * **Broadwell**：4-CPU Intel Broadwell 世代伺服器（Intel Xeon E7-4800 系列），搭配您選取的 CPU 型號及 RAM 大小。
 
-如果您計劃使用 vSAN 儲存空間，則配置需要四個 {{site.data.keyword.baremetal_short}}。
+如果您計劃使用 vSAN 儲存空間，則配置需要至少四個 {{site.data.keyword.baremetal_short}}。
 {:note}
 
 ### 網路
@@ -86,7 +86,7 @@ vCenter Server with NSX-T 實例僅用於概念證明 (POC) 或沙盤推演測�
 * 一個具有 T1 和 T0 路由器的層疊網路，以因應連接至第 2 層 (L2) 網路之間的潛在東西向通訊。它已部署成一個遞送拓蹼範例，您可以加以修改、在其上進行建置，或是移除。
 *  三個 VMware NSX-T Edge Services Gateway：
   * 一個用於出埠 HTTPS 管理資料流量的安全管理服務 VMware NSX ESG，由 IBM 部署為管理網路拓撲的一部分。IBM 管理 VM 使用此 ESG，以與跟自動化相關的特定外部 IBM 管理元件進行通訊。如需相關資訊，請參閱[配置網路以使用客戶管理的 NSX ESG 來搭配您的 VM](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_esg_config)。
-  * 兩個客戶管理的 VMware NSX ESG，用於出埠和入埠 HTTPS 工作負載資料流量。IBM 將此閘道部署為範本，您可以修改它來提供 VPN 存取或公用存取。如需相關資訊，請參閱[客戶管理的 NSX Edge 是否造成安全風險？](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq-customer-nsx)
+  * 兩個客戶管理的 VMware NSX ESG，用於出埠和入埠 HTTPS 工作負載資料流量。IBM 將此閘道部署為範本，您可以修改它來提供 VPN 存取或公用存取。如需相關資訊，請參閱[客戶管理的 NSX Edge 是否造成安全風險？](/docs/services/vmwaresolutions?topic=vmware-solutions-faq#faq-customer-nsx)
 
   此 ESG 名為 **mgmt-nsx-edge0**。您無法存取此 ESG，也無法使用它。如果您修改它，則可能無法從 {{site.data.keyword.vmwaresolutions_short}} 主控台管理 vCenter Server 實例。此外，使用防火牆或停用與外部 IBM 管理元件的 ESG 通訊，可能會導致 {{site.data.keyword.vmwaresolutions_short}} 變成無法使用。
   {:important}
@@ -117,7 +117,7 @@ vSAN 選項提供自訂的配置，以及磁碟類型、大小和數量的各種
 
   當 3.8 TB SSD（固態硬碟）磁碟機在正式發行至資料中心時，就會予以支援。
   {:note}
-* 「高效能 Intel Optane」選項，提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟。這個選項取決於 CPU 型號。
+* 「高效能 Intel Optane」選項，提供 2 個額外容量磁碟機槽來放置共 12 個容量磁碟。這個選項取決於 CPU 型號。
 
 #### NFS 儲存空間
 {: #vc_nsx-t_overview-nfs-storage}
@@ -149,7 +149,7 @@ NFS 選項為工作負載提供自訂的共用檔案層次儲存空間，以及�
 ### 擴充節點的硬體
 {: #vc_nsx-t_overview-expansion-node-hardware}
 
-一個其配置呈現在 [vCenter Server with NSX-T 實例的技術規格](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_overview-specs)中的 Bare Metal Server。
+一個其配置呈現在 [vCenter Server with NSX-T 實例的技術規格](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_overview#vc_nsx-t_overview-specs)中的 Bare Metal Server。
 
 ### 擴充節點的授權與費用
 {: #vc_nsx-t_overview-expansion-node-license-and-fee}
@@ -173,5 +173,5 @@ NFS 選項為工作負載提供自訂的共用檔案層次儲存空間，以及�
 * [vCenter Server 軟體資料清單](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
 * [規劃 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [訂購 vCenter Server with NSX-T 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_orderinginstance)
-* [{{site.data.keyword.cloud_notm}} file and block storage](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage){:new_window}
+* [vCenter Server 的連接儲存空間](/docs/services/vmwaresolutions/services?topic=vmware-solutions-storage-benefits#storage-benefits)
 * [擴充檔案共用容量](/docs/infrastructure/FileStorage?topic=FileStorage-expandCapacity#expandCapacity)

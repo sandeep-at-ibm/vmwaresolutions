@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-26"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -36,6 +36,8 @@ subcollection: vmwaresolutions
 當您訂購此服務時，請提供下列設定：
 * 根據您的需求，選取**正式作業就緒**或**開發/測試**。
 * 請選取必要的勾選框，以認證您已取得部署 {{site.data.keyword.cloud_notm}} Private Hosted 服務所需的授權。
+
+如果您想要部署其他節點，請使用 {{site.data.keyword.cloud_notm}} Private Ubuntu 範本，此範本是使用您的起始 {{site.data.keyword.cloud_notm}} Private Hosted 安裝所部署的。若要尋找範本，請在 VMware vSphere Web Client 中，移至 `cam` 資料夾下的 **VM 及範本**標籤。Ubuntu 範本的預設密碼是 `icponcloud`，建議您在使用範本之前先予以變更。
 
 ## 相關鏈結
 {: #icp_ordering-related}

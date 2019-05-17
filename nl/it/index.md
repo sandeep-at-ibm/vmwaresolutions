@@ -4,11 +4,11 @@ copyright:
 
   years: 2016, 2019
 
-lastupdated: "2019-03-22"
+lastupdated: "2019-04-16"
 
-keywords: IBM Cloud for VMware Solutions, getting started, deployment offerings, add-on services, use case
+keywords: IBM Cloud for VMware Solutions, getting started, vmware solutions offerings, add-on services for vmwaresolutions, vmwaresolutions use cases
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -23,7 +23,7 @@ subcollection: vmwaresolutions
 {:tip: .tip}
 {:table: .aria-labeledby="caption"}
 
-# Esercitazione introduttiva 
+# Esercitazione introduttiva
 {: #getting-started}
 
 In questa esercitazione introduttiva, ti guidiamo attraverso il processo di ordine di un'istanza e di alcuni servizi aggiuntivi per tale istanza.
@@ -50,7 +50,7 @@ Per una visualizzazione e un funzionamento ottimali della console {{site.data.ke
 ### Account utente
 {: #getting-started-user-accts}
 
-Devi avere un account {{site.data.keyword.cloud_notm}} e un account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer). Questi account devono soddisfare determinati requisiti.
+Devi avere un account {{site.data.keyword.cloud_notm}} e un account dell'infrastruttura {{site.data.keyword.cloud_notm}}. Questi account devono soddisfare determinati requisiti.
 
    Tabella 1. Account utente richiesti
    <table>
@@ -67,8 +67,8 @@ Devi avere un account {{site.data.keyword.cloud_notm}} e un account dell'infrast
       <td>Per ordinare e utilizzare i servizi {{site.data.keyword.cloud_notm}}, è richiesto un account {{site.data.keyword.cloud_notm}}. Le informazioni di fatturazione sono associate all'account {{site.data.keyword.cloud_notm}}. Il costo dell'infrastruttura fisica e virtuale e delle licenze risultanti viene addebitato sul tuo account {{site.data.keyword.cloud_notm}}.</td>
    </tr>
    <tr>
-      <td>Account dell'infrastruttura IBM Cloud (SoftLayer)</td>
-      <td>L'account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) era precedentemente noto come account IBM SoftLayer.  Per ulteriori informazioni sui requisiti che l'account deve soddisfare, vedi [Requisiti per l'account dell'infrastruttura {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).<br><br>Puoi collegare gli account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) agli account {{site.data.keyword.cloud_notm}} per utilizzare le risorse combinate IaaS (Infrastructure as a Service) e PaaS (Platform as a Service). Quindi, puoi accedere alle risorse IaaS e alle risorse PaaS effettuando un singolo accesso. Il collegamento dei tuoi account ti fornisce anche una singola fattura per tutte le risorse PaaS e IaaS che utilizzi.<ul><li>Se non disponi di un account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer), richiedine uno seguendo la procedura in [Registrazione di un account dell'infrastruttura IBM Cloud (SoftLayer)](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account#signing_softlayer_account-infra) e quindi collega il tuo account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) al tuo account {{site.data.keyword.cloud_notm}} seguendo la procedura in [Passaggio all'ID IBM e collegamento degli account](/docs/account?topic=account-unifyingaccounts#unifyingaccounts).</li><li>Se hai un account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer), puoi collegarlo al tuo account {{site.data.keyword.cloud_notm}} seguendo la procedura in [Passaggio all'ID IBM e collegamento degli account](/docs/account?topic=account-unifyingaccounts#unifyingaccounts).</li></ul></td>
+      <td>Account dell'infrastruttura IBM Cloud</td>
+      <td>Per informazioni sui requisiti per un account dell'infrastruttura {{site.data.keyword.cloud_notm}}, vedi [Requisiti per l'account dell'infrastruttura {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).<br><br>Puoi collegare gli account dell'infrastruttura {{site.data.keyword.cloud_notm}} agli account {{site.data.keyword.cloud_notm}} per utilizzare le risorse combinate IaaS (Infrastructure as a Service) e PaaS (Platform as a Service). Quindi, puoi accedere alle risorse IaaS e alle risorse PaaS effettuando un singolo accesso. Il collegamento dei tuoi account ti fornisce anche una singola fattura per tutte le risorse PaaS e IaaS che utilizzi.<ul><li>Se non disponi di un account dell'infrastruttura {{site.data.keyword.cloud_notm}}, richiedine uno seguendo la procedura in [Registrazione di un account dell'infrastruttura IBM Cloud](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account#signing_softlayer_account-infra) e quindi collega il tuo account dell'infrastruttura {{site.data.keyword.cloud_notm}} al tuo account {{site.data.keyword.cloud_notm}} seguendo la procedura in [Passaggio all'ID IBM e collegamento degli account](/docs/account?topic=account-unifyingaccounts#unifyingaccounts).</li><li>Se hai un account dell'infrastruttura {{site.data.keyword.cloud_notm}}, puoi collegarlo al tuo account {{site.data.keyword.cloud_notm}} seguendo la procedura in [Passaggio all'ID IBM e collegamento degli account](/docs/account?topic=account-unifyingaccounts#unifyingaccounts).</li></ul></td>
    </tr>
    </table>
 
@@ -97,7 +97,7 @@ Esamina e scegli la tua offerta di distribuzione.
     </tr>
     <tr>
        <td>[NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview)</td>
-       <td>L'offerta NetApp ONTAP Select ti consente di distribuire un cluster di archiviazione definita dal software che risponda alle tue esigenze di un'applicazione di archiviazione dedicata e altamente disponibile basata su NetApp ONTAP Select.</td>
+       <td>L'offerta NetApp ONTAP Select ti consente di distribuire un cluster di archiviazione definita dal software che risponda alle tue esigenze di un dispositivo di archiviazione dedicato e altamente disponibile basato su NetApp ONTAP Select. </td>
     </tr>
   </table>
 
@@ -168,13 +168,13 @@ Esamina e scegli i servizi aggiuntivi per la tua offerta di distribuzione.
 La console {{site.data.keyword.vmwaresolutions_short}} è l'interfaccia in cui ordini e gestisci le tue distribuzioni. Nella console, ogni distribuzione è gestita come un'istanza. La console è un'interfaccia utente autonoma separata dal portale del cliente dell'infrastruttura {{site.data.keyword.cloud_notm}}.
 
 Per accedere alla console {{site.data.keyword.vmwaresolutions_short}}:
-1. Vai al sito https://console.cloud.ibm.com/infrastructure/vmware-solutions/console.
+1. Vai all'indirizzo https://cloud.ibm.com/infrastructure/vmware-solutions/console.
 2. Accedi alla console con il tuo **ID IBM**.
 
 ## Passo 2: configurazione dell'account utente e delle impostazioni
 {: #getting-started-step2}
 
-Prima di ordinare un'istanza, devi immettere il nome utente e la chiave API del tuo account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) nella pagina **Impostazioni** della console.
+Prima di ordinare un'istanza, devi immettere il nome utente e la chiave API del tuo account dell'infrastruttura {{site.data.keyword.cloud_notm}} nella pagina **Impostazioni** della console.
 
 Per informazioni su come configurare il tuo account utente e le impostazioni, vedi [Gestione di account utente e impostazioni](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount).
 

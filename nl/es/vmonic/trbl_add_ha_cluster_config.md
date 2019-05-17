@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -26,4 +26,4 @@ Cuando se añade una configuración de clúster HA (alta disponibilidad) con una
 
 Este problema se produce cuando no hay redundancia en el almacenamiento compartido para permitir el control de latido del almacén de datos.
 
-Para obtener más información y ver los pasos a seguir para solucionar el problema, consulte [Error de HA: El número de almacenes de datos de latido para el host es 1, que es menor que el necesario: 2 (2004739)](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2004739).
+Para obtener más información y ver los pasos a seguir para solucionar el problema, consulte [Error de HA: El número de almacenes de datos de latido para el host es 1, que es menor que el necesario: 2 (2004739)](https://kb.vmware.com/s/article/2004739).

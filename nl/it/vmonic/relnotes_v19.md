@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2017-10-13"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -78,7 +78,7 @@ Insieme alle opzioni Small e Standard precostruite e testate, è disponibile un'
 
 Per migliorare il ridimensionamento del tuo ambiente VMware ospitato, puoi ora creare un nuovo cluster in un altro pod dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) o in un {{site.data.keyword.CloudDataCent_notm}} diverso rispetto al cluster iniziale distribuito nell'istanza.
 
-Per ulteriori informazioni, vedi [Aggiunta e visualizzazione di cluster per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances).
+Per ulteriori informazioni, vedi [Aggiunta, visualizzazione ed eliminazione di cluster per le istanze vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters).
 
 ### Modifica dei componenti
 {: #relnotes_v19-change-comp}

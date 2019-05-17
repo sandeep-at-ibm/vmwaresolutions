@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -57,7 +57,7 @@ vCenter 具有稱為「主機設定檔」的特性。此特性會建立設定檔
 
 1.	導覽至先前已完成的「主機設定檔」。
 2.	按一下**檢查主機設定檔法規遵循**圖示。
-3.	在**物件**標籤中，法規遵循狀態會更新為：_Compliant、Unknown 或 Non-compliant__。non-compliant 狀態指出設定檔與新主機之間發生探索到且特定的不一致。
+3.	在**物件**標籤上，法規遵循狀態會更新為：_Compliant、Unknown 或 Non-compliant__。non-compliant 狀態指出設定檔與新主機之間發生探索到且特定的不一致。
 
 ##	檢閱法規遵循失敗及補救
 {: #vum-host-profiles-review-compliance}
@@ -72,4 +72,4 @@ vCenter 具有稱為「主機設定檔」的特性。此特性會建立設定檔
 {: #vum-host-profiles-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 解決方案架構](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware)（示範）
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware)（示範）

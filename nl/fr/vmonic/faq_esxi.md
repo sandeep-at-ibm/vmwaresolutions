@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -25,11 +25,7 @@ Trouvez les réponses aux questions fréquemment posées au sujet des serveurs E
 {: #faq_esxi-instance}
 {: faq}
 
-* Pour les instances vCenter Server, vous pouvez développer le cluster par défaut jusqu'à contenir 51 serveurs ESXi. Chacun des autres clusters peut contenir jusqu'à 59 serveurs ESXi. Etant donné que vous pouvez ajouter jusqu'à 10 clusters à une instance, chaque instance déployée peut avoir un maximum de 51 + 9x59 = 582 serveurs ESXi pour l'ensemble des clusters.
-* Pour les instances Cloud Foundation, la configuration standard contient quatre serveurs ESXi. Vous pouvez ajouter jusqu'à 28 serveurs au maximum (soit un total de 32 serveurs). Pour les instances Cloud Foundation d'une configuration multisite, vous pouvez avoir jusqu'à 128 serveurs ESXi au maximum pour toutes les instances.
-
-  Si votre configuration Cloud Foundation nécessite un déploiement multisite de plus de 128 serveurs ESXi, [contactez le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support) pour obtenir de l'aide.
-  {:note}
+Votre instance vCenter Server vous permet d'étendre le cluster par défaut à un maximum de 51 serveurs ESXi. Chacun des autres clusters peut contenir jusqu'à 59 serveurs ESXi. Etant donné que vous pouvez ajouter jusqu'à 10 clusters à une instance, chaque instance déployée peut avoir un maximum de 51 + 9x59 = 582 serveurs ESXi pour l'ensemble des clusters.
 
 ## Combien de serveurs ESXi puis-je ajouter à un cluster ?
 {: #faq_esxi-cluster}
@@ -81,5 +77,5 @@ L'ajout de routes statiques n'est pas pris en charge pour vMotion. Une modificat
 {: #faq_esxi-related}
 
 * [Extension et réduction de capacité pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
-* [Ajout, affichage et suppression de clusters pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [Ajout, affichage et suppression de clusters pour des instances vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_hybrid_addingviewingclusters#vc_hybrid_addingviewingclusters)
 * [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

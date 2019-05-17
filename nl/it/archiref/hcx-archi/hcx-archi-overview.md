@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -22,9 +22,9 @@ Questa offerta crea una WAN definita dal software e ottimizzata per aumentare le
 ## Estensione della rete di livello 2
 {: #hcx-archi-overview-layer-2-net}
 
-HCX consente a una condizione vSphere in loco esistente di estendere in modo sicuro una rete dal suo vCenter in loco a un data center IBM Cloud che esegue VMware Cloud Foundation o vCenter Server. Questa funzione è abilitata dai seguenti elementi:
-* HCX fornisce un'applicazione denominata concentratore di livello 2 (L2C).
-* Link delle reti estese ai dispositivi edge NSX IBM Cloud distribuiti su VMware Cloud Foundation o vCenter Server.
+HCX consente a una condizione vSphere in loco esistente di estendere in modo sicuro una rete dal suo vCenter in loco a un data center IBM Cloud che esegue VMware vCenter Server. Questa funzione è abilitata dai seguenti elementi:
+* HCX fornisce un dispositivo denominato concentratore di livello 2 (L2C).
+* Link delle reti estese ai dispositivi edge NSX IBM Cloud distribuiti su VMware vCenter Server.
 * Puoi distribuire più concentratori di livello 2 standard per ottenere la scalabilità e aumentare la velocità effettiva dal vCenter in loco.
 * Le VM (Virtual Machine) migrate tramite il gateway cloud e attraverso il livello 2 esteso possono conservare i propri indirizzi IP e MAC.
 
@@ -97,12 +97,12 @@ La migrazione della politica è disponibile solo nelle seguenti condizioni:
 ## Componenti di HCX
 {: #hcx-archi-overview-comp-hcx}
 
-Il servizio VMware HCX on IBM Cloud distribuisce quattro applicazioni virtuali installate e configurate sul data center in loco e sulla destinazione IBM Cloud. Questa sezione descrive ognuna delle quattro applicazioni virtuali richieste. Facoltativamente, potrebbero essere necessari dei dispositivi edge a seconda della progettazione dell'implementazione.
+Il servizio VMware HCX on IBM Cloud distribuisce quattro dispositivi virtuali installati e configurati sul data center in loco e sulla destinazione IBM Cloud. Questa sezione descrive ognuno dei quattro dispositivi virtuali richiesti. Facoltativamente, potrebbero essere necessari dei dispositivi edge a seconda della progettazione dell'implementazione.
 
 ### HCX Manager
 {: #hcx-archi-overview-hcx-man}
 
-L'applicazione virtuale HCX Manager è un'estensione al vCenter in loco. Viene distribuita come una VM (Virtual Machine) e la sua struttura file contiene le altre applicazioni virtuali del servizio ibride. HCX Manager controlla la distribuzione e la configurazione del gateway cloud, i concentratori di livello 2 e l'applicazione virtuale WAN Optimization sia in loco che all'interno di IBM Cloud.
+Il dispositivo virtuale HCX Manager è un'estensione al vCenter in loco. Viene distribuito come una VM (Virtual Machine) e la sua struttura file contiene gli altri dispositivi virtuali del servizio ibridi. HCX Manager controlla la distribuzione e la configurazione del gateway cloud, i concentratori di livello 2 e il dispositivo virtuale WAN Optimization sia in loco che all'interno di IBM Cloud.
 
 ### Hybrid Cloud Gateway
 {: #hcx-archi-overview-hcg}
@@ -114,14 +114,14 @@ Il canale sicuro tra vSphere e IBM Cloud evita problemi di sicurezza "middle mil
 ### WAN Optimization
 {: #hcx-archi-overview-wan-opt}
 
-L'applicazione WAN Optimization è il componente che esegue il condizionamento WAN per ridurre gli effetti della latenza. Incorpora inoltre Forward Error Correction per negare gli scenari di perdita dei pacchetti e la deduplicazione dei pattern di traffico ridondanti. Complessivamente, viene ridotto l'utilizzo della larghezza di banda e garantito il migliore utilizzo della capacità di rete disponibile per velocizzare il trasferimento dei dati da/a IBM Cloud.
+Il dispositivo WAN Optimization è il componente che esegue il condizionamento WAN per ridurre gli effetti della latenza. Incorpora inoltre Forward Error Correction per negare gli scenari di perdita dei pacchetti e la deduplicazione dei pattern di traffico ridondanti. Complessivamente, viene ridotto l'utilizzo della larghezza di banda e garantito il migliore utilizzo della capacità di rete disponibile per velocizzare il trasferimento dei dati da/a IBM Cloud.
 
-È importante notare che la migrazione della VM (Virtual Machine) si basa sulla combinazione dell'applicazione WAN Optimization e del gateway cloud per ottenere una mobilità ineguagliabile tra vSphere in loco e IBM Cloud. Inoltre, l'estensione di livello 2 trae vantaggio dall'ottimizzazione WAN quando il percorso dei dati viene instradato tramite il gateway cloud.
+È importante notare che la migrazione della VM (Virtual Machine) si basa sulla combinazione del dispositivo WAN Optimization e del gateway cloud per ottenere una mobilità ineguagliabile tra vSphere in loco e IBM Cloud. Inoltre, l'estensione di livello 2 trae vantaggio dall'ottimizzazione WAN quando il percorso dei dati viene instradato tramite il gateway cloud.
 
 ### Concentratori di livello 2
 {: #hcx-archi-overview-layer-2-conc}
 
-Le applicazioni dei concentratori di livello 2 (L2C) permettono l'estensione di una rete di livello 2 dal data center vSphere in loco a IBM Cloud. I concentratori di livello 2 hanno due interfacce:
+I dispositivi dei concentratori di livello 2 (L2C) permettono l'estensione di una rete di livello 2 dal data center vSphere in loco a IBM Cloud. I concentratori di livello 2 hanno due interfacce:
 * Interfaccia trunk interna - Gestisce il traffico della VM (Virtual Machine) in loco per le reti estese utilizzando un'associazione bridge traslazionale a una rete estesa corrispondente in IBM Cloud.
 * Interfaccia uplink - HCX utilizza questa interfaccia per inviare il traffico di sovrapposizione incapsulato a/da IBM Cloud. I dati dell'applicazione passano attraverso questa interfaccia.
 
@@ -142,7 +142,7 @@ Figura 2. HCX con più origini
 {: #hcx-archi-overview-usage-ovw}
 
 Le seguenti attività vengono completate dal client web vSphere:
-* Distribuzione delle applicazioni virtuali HCX e configurazione dei componenti WAN definiti dal software.
+* Distribuzione dei dispositivi virtuali HCX e configurazione dei componenti WAN definiti dal software.
 * Estensione delle reti VLAN e VXLAN in loco dal vCenter in loco al cloud (IBM Cloud).
 * Migrazione dei carichi di lavoro al cloud e viceversa.
 
@@ -155,12 +155,12 @@ Prima che i componenti vengano descritti più dettagliatamente, è imperativo co
 * Se è previsto il vMotion tra cloud, si applicano le stesse limitazioni dell'affinità tra i cloud come se fossero in loco.
 * L'ambiente di origine deve avere un metodo di connessione agli ambienti cloud. Sono inclusi l'accesso internet pubblico o le connessioni private utilizzando IBM Cloud Direct Link. Le connessioni, diverse da internet pubblico, ad altri fornitori cloud non saranno discusse.
 * Le reti e le VM dell'ambiente di origine da migrare o estendere devono essere su gruppi di porte all'interno di uno switch distribuito virtuale o di uno switch distribuito virtuale Cisco Nexus 1000v.
-* IBM Cloud deve contenere almeno un'istanza di una distribuzione VMware Cloud Foundation o vCenter Server.
-* Risorse sufficienti per le applicazioni virtuali.
-* Le reti devono consentire alle applicazioni di comunicare con le applicazioni virtuali remote e locali e con altre VM (Virtual Machine).
-* I requisiti di accesso alla porta (appendice A) elencano le porte che devono essere aperte in modo che le applicazioni virtuali Hybrid Cloud Services possano essere installate correttamente.
+* IBM Cloud deve contenere almeno un'istanza di VMware vCenter Server.
+* Risorse sufficienti per i dispositivi virtuali.
+* Le reti devono consentire ai dispositivi di comunicare con i dispositivi virtuali remoti e locali e con altre VM (Virtual Machine).
+* I requisiti di accesso alla porta (appendice A) elencano le porte che devono essere aperte in modo che i dispositivi virtuali Hybrid Cloud Services possano essere installati correttamente.
 * Un account del servizio vSphere con il ruolo di sistema di amministratore vCenter Server assegnato.
-* Abbastanza spazio disco per l'installazione di Hybrid Cloud Services e delle applicazioni del servizio associate.
+* Abbastanza spazio disco per l'installazione di Hybrid Cloud Services e dei dispositivi del servizio associate.
 * Indirizzi IP sufficienti per le VM in loco di cui è stato eseguito il provisioning durante l'installazione.
 * Se il server SSO è remoto, devono essere identificati l'URL del vCenter, il server SSO esterno o il PSC (Platform Services Controller) che esegue il servizio di ricerca esterno. Quando il servizio HCX viene registrato con il vCenter, deve essere fornito questo URL.
 

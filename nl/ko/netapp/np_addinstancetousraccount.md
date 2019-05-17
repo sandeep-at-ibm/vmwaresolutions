@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-04-18"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -43,6 +43,6 @@ IaaS 전용 계정을 PaaS 계정에 연결하는 방법에 대한 자세한 정
 ## 관련 링크
 {: #np_addinstancetousraccount-related}
 
-* [IAM에서 사용자 액세스 관리](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-access-with-iam)
+* [IAM에서 사용자 액세스 관리](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-iam#iam)
 * [서비스 및 리소스에 액세스하기 위한 사용자 초대](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-iamuserinvite)
 * [IBM Cloud IAM 개념](/docs/iam?topic=iam-iamoverview)

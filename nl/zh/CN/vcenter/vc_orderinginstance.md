@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -33,8 +33,8 @@ subcollection: vmwaresolutions
 |名称|值格式|
   |:------------|:------------ |
   |域名| `<root_domain>` |  
-  |vCenter Server 登录用户名| `<user_id>@<root_domain>`（Microsoft Active Directory 用户）或 `administrator@vsphere.local`|
-  |vCenter Server（具有嵌入式 PSC）FQDN| `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. 最大长度为 50 个字符。|
+  |vCenter Server 登录用户名|`<user_id>@<root_domain>`（Microsoft Active Directory 用户）或 `administrator@vsphere.local`|
+  |vCenter Server（具有嵌入式 PSC）FQDN|`vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`。最大长度为 50 个字符。|
   |Single Sign-On (SSO) 站点名称| `<subdomain_label>` |
   |标准 ESXi 服务器名称| `<host_prefix><n>.<subdomain_label>.<root_domain>`，其中 `<n>` 是 ESXi 服务器的序列。最大长度为 50 个字符。|
 
@@ -136,18 +136,15 @@ vSphere Enterprise Plus 6.7u1 仅可用于 Broadwell 和 Skylake {{site.data.key
 
 | CPU 模型选项   |RAM 选项|
 |:------------- |:------------- |
-|双 Intel Xeon E5-2620 V4 / 共 16 个核心，2.1 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
-|双 Intel Xeon E5-2650 V4 / 共 24 个核心，2.2 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
-|双 Intel Xeon E5-2690 V4 / 共 28 个核心，2.6 GHz|64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB|
 |四核 Intel Xeon E7-4820 V4 / 共 40 个核心，2.0 GHz|128 GB、256 GB、512 GB、1 TB、2 TB、3 TB|
 |四核 Intel Xeon E7-4850 V4 / 共 64 个核心，2.1 GHz|128 GB、256 GB、512 GB、1 TB、2 TB、3 TB|
 
 ### 裸机服务器的数量
 {: #vc_orderinginstance-bare-metal-number}
 
-对于实例中的初始集群，可以配置的 ESXi 服务器数范围为 2 到 20 个。所有 ESXi 服务器共享所设置的配置。
-
-初始部署后，可以再添加四个集群。如果为 VMware vSAN 选择的是 **Skylake** 或 **Broadwell** 配置，那么初始集群和部署后集群都需要 4 个 ESXi 服务器。有关最少 ESXi 服务器数的更多信息，请参阅[双节点 vCenter Server 实例具有高可用性吗](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)。
+* 订购的所有服务器的配置都相同。
+* 如果计划使用 vSAN 存储器，那么可以订购 4 到 20 个服务器。
+* 如果计划使用 NFS 存储器，那么可以订购 2 到 20 个服务器。但是，对于生产工作负载，建议至少使用 3 个服务器。有关更多信息，请参阅[双节点 vCenter Server 实例具有高可用性吗？](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)。
 
 ## 存储设置
 {: #vc_orderinginstance-storage-settings}
@@ -163,12 +160,12 @@ vSphere Enterprise Plus 6.7u1 仅可用于 Broadwell 和 Skylake {{site.data.key
 vSAN 仅可用于 **Skylake** 和 **Broadwell** 裸机配置。请指定以下 vSAN 选项：
 * **vSAN 容量磁盘的磁盘类型和大小**：选择与所需容量磁盘相应的选项。
 * **vSAN 容量磁盘数**：指定要添加的容量磁盘数。
-* 如果要添加的容量磁盘数超过 8 个的限制，请选中**高性能 Intel Optane** 框。此选项用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘；此选项对于需要更短等待时间和更高 IOPS 吞吐量的工作负载而言非常有用。
+* 如果要添加的容量超过 10 个磁盘的限制，请选中**高性能（使用 Intel Optane）**框。此选项用于提供两个额外的容量磁盘托架，总共可容纳 12 个容量磁盘；此选项对于需要更短等待时间和更高 IOPS 吞吐量的工作负载而言非常有用。
 
-  **高性能 Intel Optane** 选项仅可用于 Skylake CPU 型号双 Intel Xeon Gold 5120 和双 Intel Xeon Gold 6140。
-  {:note}
+  **高性能（使用 Intel Optane）**选项仅可用于 Skylake CPU 型号。
+{:note}
 
-* 查看 **vSAN 高速缓存磁盘的磁盘类型**和 **vSAN 高速缓存磁盘数**值。这些值依赖于是否选中了**高性能 Intel Optane** 框。
+* 查看 **vSAN 高速缓存磁盘的磁盘类型**和 **vSAN 高速缓存磁盘数**值。这些值依赖于是否选中了**高性能（使用 Intel Optane）**框。
 * **vSAN 许可证**：通过选择**购买时包含**对 vSAN 组件使用 IBM 提供的 VMware 许可证，或者通过选择**我将提供**并输入您自己的许可证密钥以自带许可证 (BYOL)。
 
 ### NFS 存储器
@@ -240,12 +237,14 @@ vSAN 仅可用于 **Skylake** 和 **Broadwell** 裸机配置。请指定以下 v
 ### 公用或专用网络
 {: #vc_orderinginstance-public-private-network}
 
-网络接口卡 (NIC) 启用设置基于您选择的是**公用和专用网络**还是**仅专用网络**。以下附加组件服务需要公共 NIC，并且这些服务在您选择专用选项时不可用：
+网络接口卡 (NIC) 启用设置基于您选择的是**公用和专用网络**还是**仅专用网络**。
 
-* F5 on {{site.data.keyword.cloud_notm}}
-* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
-* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
-* Zerto on {{site.data.keyword.cloud_notm}}
+如果选择**仅专用网络**选项：
+* 未供应 VMware NSX Edge 服务网关 (ESG)（包括管理服务 ESG 和客户管理的 ESG）。
+* 以下附加组件服务（需要公共 NIC）不可用：
+  * F5 on {{site.data.keyword.cloud_notm}}
+  * Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
+  * Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
 
 ### VLAN
 {: #vc_orderinginstance-vlans}
@@ -282,14 +281,14 @@ vSAN 仅可用于 **Skylake** 和 **Broadwell** 裸机配置。请指定以下 v
 * **一个用于 Active Directory/DNS 的公共 Windows VSI**：一个用于 Microsoft Active Directory (AD) 的 Microsoft Windows Server VSI，充当在其中注册主机和 VM 的实例的 DNS，已部署并且可进行查找。对于 V1.9 和更高版本的实例，缺省情况下已部署此选项。
 * **管理集群上两个高可用性专用 Windows Server VM**：部署了两个 Microsoft Windows 虚拟机，以帮助增强安全性和稳健性。
 
-如果将实例配置为使用两个 Microsoft Windows VM，那么必须提供两个 Microsoft Windows Server 2012 R2 许可证。使用 Microsoft Windows Server 2012 R2 Standard Edition 许可证和/或 Microsoft Windows Server 2012 R2 Datacenter Edition 许可证。
+如果将实例配置为使用两个 Microsoft Windows VM，那么必须提供两个 Microsoft Windows Server 2016 许可证。使用 Microsoft Windows Server 2016 Standard Edition 许可证和/或 Microsoft Windows Server 2016 Datacenter Edition 许可证。
 {:important}
 
 每个许可证只能分配给一个物理服务器，并且最多包含两个物理处理器。一个 Standard Edition 许可证支持每个双处理器服务器运行两个虚拟化的 Microsoft Windows VM。因此，需要两个许可证，因为两个 Microsoft Windows VM 会部署在两个不同的主机中。
 
 您有 30 天的时间来激活 VM。
 
-有关 Windows 许可的更多信息，请参阅 [Windows Server 2012 R2 文档](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2)。
+有关订购 Windows Server 2016 许可证的更多信息，请参阅 [Windows Server 2016 入门](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:new_window}。
 
 ## 服务设置
 {: #vc_orderinginstance-addon-services}
@@ -304,7 +303,7 @@ vSAN 仅可用于 **Skylake** 和 **Broadwell** 裸机配置。请指定以下 v
 ## 订购 vCenter Server 实例的过程
 {: #vc_orderinginstance-procedure}
 
-1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格上的 **VMware**，然后单击**虚拟数据中心**部分中的 **vCenter Server**。
+1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格中的 **VMware**，然后单击**虚拟数据中心**部分中的 **vCenter Server**。
 2. 在 **VMware vCenter Server on IBM Cloud** 页面上，单击 **vCenter Server** 卡，然后单击**创建**。
 3. 在 **vCenter Server** 页面上，输入实例名称。
 5. 选择 vSphere 版本。
@@ -323,14 +322,14 @@ vSAN 仅可用于 **Skylake** 和 **Broadwell** 裸机配置。请指定以下 v
     2. 选择裸机服务器配置。
        * 选择 **Skylake** 或 **Broadwell** 时，请指定 CPU 型号和 RAM 大小。
        * 选择的是 **SAP 认证**时，请选择其中一个预设配置。
-    3. 指定 {{site.data.keyword.baremetal_short}} 数。如果计划将 vSAN 用作存储解决方案，那么至少需要 4 个 {{site.data.keyword.baremetal_short}}。  
+    3. 指定 {{site.data.keyword.baremetal_short}} 数。如果计划使用 vSAN 存储器，那么需要至少 4 个 {{site.data.keyword.baremetal_short}}。  
 8. 填写存储配置。
   * 如果选择 **vSAN 存储器**，请指定容量和高速缓存磁盘的磁盘类型、磁盘数和 vSAN 许可证版本。如果需要更多存储器，请选中**高性能 Intel Optane** 框。
   * 如果选择 **NFS 存储器**，并且要向所有文件共享添加和配置相同设置，请指定**共享数**、**性能**和**大小 (GB)**。
   * 如果选择 **NFS 存储器**，并且要单独添加和配置文件共享，请选择**单独配置共享**。接着，单击**添加共享存储器**标签旁边的 **+** 图标，然后为每个文件共享选择**性能**和**大小 (GB)**。必须至少选择一个文件共享。
   * 如果选择**本地磁盘**，请指定磁盘计数和磁盘类型。
 9. 完成网络接口设置。
-   1. 输入主机名前缀、子域标签和根域名。对于辅助实例，系统会自动填写域名。
+   1. 输入要供应的实例的主机名前缀、子域标签和根域名。对于辅助实例，系统会自动填写域名。
    2. 选择网络设置**公用和专用网络**或**仅专用网络**。
    3. 选择 VLAN 设置：
       * 如果要订购新的公用和专用 VLAN，请单击**订购新的 VLAN**。
@@ -378,7 +377,7 @@ vSAN 仅可用于 **Skylake** 和 **Broadwell** 裸机配置。请指定以下 v
 * [注册 {{site.data.keyword.cloud_notm}} 帐户](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)
 * [查看 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
 * [vCenter Server 实例的多站点配置](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_multisite)
-* [添加、查看和删除 vCenter Server 实例的集群](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [添加、查看和删除 vCenter Server 实例的集群](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 * [扩展和收缩 vCenter Server 实例的容量](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
 * [订购、查看和除去 vCenter Server 实例的服务](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
 * [删除 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_deletinginstance)

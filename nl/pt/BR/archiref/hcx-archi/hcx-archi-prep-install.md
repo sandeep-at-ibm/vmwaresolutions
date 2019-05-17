@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -16,14 +16,14 @@ subcollection: vmwaresolutions
 A instalação do VMware HCX on IBM Cloud tem os requisitos de software a seguir:
 * vSphere 5.5 U3 ou vSphere 6.0u2 ou superior.
 * Se o NSX for usado, versão 6.2.2 ou superior. O NSX é necessário para a migração de política.
-* Para usar o cross-cloud vMotion, as mesmas restrições de afinidade se aplicam às nuvens como fazem no local. Para obter mais informações, veja o [FAQ do VMware EVC e de Compatibilidade da CPU](http://bit.ly/2vK6Sp5).
+* Para usar o cross-cloud vMotion, as mesmas restrições de afinidade se aplicam às nuvens como fazem no local. Para obter mais informações, veja o [FAQ do VMware EVC e de Compatibilidade da CPU](https://kb.vmware.com/s/article/1005764).
 
 ## Configurando a conectividade de rede
 {: #hcx-archi-prep-install-config-net}
 
 O HCX deve atravessar a Internet pública e as linhas privadas e conectar-se a componentes do data center, como redes, comutadores e grupos de portas.
 * Os [Requisitos de acesso à porta](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-port-req) listam as portas que devem ser abertas para que os dispositivos virtuais HCX possam ser instalados com êxito.
-* O ambiente do vSphere no local e o ambiente VCF/VCS HCX Cloud devem permitir a sincronização de clock do Network Time Protocol (NTP) entre os dispositivos no local do vSphere e os dispositivos VCF/VCS HCX. A porta UDP 123 deve ser acessível a dispositivos virtuais e redes HCX.
+* O ambiente do vSphere no local e o ambiente do VCS HCX Cloud devem permitir a sincronização do clock do Network Time Protocol (NTP) entre os dispositivos no local do vSphere e os dispositivos VCS HCX. A porta UDP 123 deve ser acessível a dispositivos virtuais e redes HCX.
 
 ## Ambiente no local
 {: #hcx-archi-prep-install-on-prem-env}
@@ -49,11 +49,11 @@ O esticamento da rede da Camada 2 tem os requisitos a seguir:
   * licença do vSphere Enterprise Plus
   * Deve ter um vSphere Distributed Switch (vDS). O comutador distribuído está disponível com o vSphere Enterprise Plus Edition.
   * Quando instalado, o dispositivo de serviço Layer 2 Concentrator no local deve ter acesso a uma porta vNIC e quaisquer VLANs a serem estendidas.
-  * Se a rede deve ser estendida sobre a Internet pública ou uma VPN (em um caminho alternativo), a máquina virtual L2C no VCF/VCS requer um endereço IP. O endereço IP remoto é necessário para configurar o Layer 2 Concentrator.
+  * Se a rede precisar ser estendida por meio da Internet pública ou de uma VPN (em um caminho alternativo), a máquina virtual L2C no VCS requererá um endereço IP. O endereço IP remoto é necessário para configurar o Layer 2 Concentrator.
   * Se múltiplos Layer 2 Concentrators forem desejados, cada um deverá ter um endereço IP no local e na nuvem.
 
 ## Links relacionados
 {: #hcx-archi-prep-install-related}
 
 * [Instalando e configurando o HCX na origem](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-install-cfg-src)
-* [ FAQ de Compatibilidade de EVC e CPU do VMware ](http://bit.ly/2vK6Sp5)
+* [ FAQ de Compatibilidade de EVC e CPU do VMware ](https://kb.vmware.com/s/article/1005764)

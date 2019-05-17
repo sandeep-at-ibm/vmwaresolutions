@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -45,7 +45,7 @@ Zerto on {{site.data.keyword.cloud_notm}} 之受管理服務的下列模型可�
 2. 向下捲動頁面，然後按一下**訂購其他受管理服務**下的 **Zerto on IBM Cloud 的受管理服務**卡片。
 3. 在 **Zerto on IBM Cloud** 頁面上，檢閱 Zerto on {{site.data.keyword.cloud_notm}} 即受管理服務的說明及技術規格，然後按一下**建立**。
 4. 根據您的需求指定配置設定，或接受預設值。
-5. 按一下 **vCenter Server** 或 **Cloud Foundation**，將服務新增至其中一個實例。
+5. 按一下 **vCenter Server**，將服務新增至其中一個實例。
 6. 若要在訂購新實例時新增服務，請按一下**新增至新實例**，然後繼續訂購新的 [vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance) 或 [vCenter Server with Hybridity](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance) 實例。
 7. 若要將服務新增至現有實例，請按一下**新增至現有實例**，從清單中選取您要的實例，然後按一下**佈建**確認您要繼續訂購。
 

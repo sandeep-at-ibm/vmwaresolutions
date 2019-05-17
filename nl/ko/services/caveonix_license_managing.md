@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-12"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -64,7 +64,7 @@ subcollection: vmwaresolutions
 
 더 이상 필요하지 않은 Caveonix RiskForesight 라이센스는 삭제할 수 있습니다.
 
-Caveonix RiskForesight 라이센스를 삭제하기 전에 [Caveonix RiskForesight 라이센스 삭제 시 고려사항](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_license_considerations-remove)의 고려사항을 검토하도록 하십시오.
+Caveonix RiskForesight 라이센스를 삭제하기 전에 [Caveonix RiskForesight 라이센스 삭제 시 고려사항](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_license_considerations#caveonix_license_considerations-remove)의 고려사항을 검토하도록 하십시오.
 {:note}
 
 1. 왼쪽 탐색 분할창에서 **리소스**를 클릭하십시오.

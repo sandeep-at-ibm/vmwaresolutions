@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -20,7 +20,7 @@ O {{site.data.keyword.vmwaresolutions_full}} é integrado ao {{site.data.keyword
 {: #iamuserinvite-reqs}
 
 * Assegure-se de que você seja o proprietário da conta ou de que sua função de gerenciamento de plataforma para o serviço **VMware Solutions** seja **Administrador**.
-* Assegure-se de ter revisado as funções de usuário e as permissões em [Gerenciando o acesso de usuário com o Identity and Access Management](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-access-with-iam).
+* Assegure-se de ter revisado as funções de usuário e as permissões em [Gerenciando o acesso de usuário com o Identity and Access Management](/docs/services/vmwaresolutions?topic=vmware-solutions-iam#iam).
 
 ## Procedimento para convidar usuários para acessar serviços e recursos
 {: #iamuserinvite-procedure}

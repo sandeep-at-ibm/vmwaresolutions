@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-05-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -47,7 +47,7 @@ HCX on {{site.data.keyword.cloud_notm}} 服务仅通过 vCenter Server with Hybr
 
 现在，可以从实例中删除集群，而不必删除整个实例。对于在 V2.2 或更低版本实例中部署的集群，必须将实例升级到 V2.3，才能删除已添加到实例的集群。
 
-有关更多信息，请参阅[添加、查看和删除 vCenter Server 实例的集群](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances#deleting-clusters-from-vcenter-server-instances)。
+有关更多信息，请参阅[添加、查看和删除 vCenter Server 实例的集群](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)。
 
 ## 对 VMware vCenter Server 实例的更新
 {: #relnotes_v23-vcs}
@@ -63,7 +63,7 @@ HCX on {{site.data.keyword.cloud_notm}} 服务仅通过 vCenter Server with Hybr
 有关更多信息，请参阅以下主题：
 
 * [订购 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [添加、查看和删除 vCenter Server 实例的集群](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [添加、查看和删除 vCenter Server 实例的集群](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 
 ## 对 VMware Cloud Foundation 实例的更新
 {: #relnotes_v23-vcf}

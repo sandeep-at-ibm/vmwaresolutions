@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-15"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -50,6 +50,6 @@ As ofertas do VMware on {{site.data.keyword.cloud_notm}} trazem os benefícios a
 ## Links relacionados
 {: #solution_overview-related}
 
-* [Visão geral do design](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_overview)
+* [ Visão geral do design ](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_overview)
 * [ Capacidade de Escalação ](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_scaling)
 * [Fazendo backup de componentes](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup)

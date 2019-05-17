@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2017-07-05"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -47,7 +47,7 @@ A seconda della complessità della distribuzione della tua istanza Cloud Foundat
 ### Supporto cluster
 {: #relnotes_v17-cluster}
 
-A partire dalla release della V1.7, puoi utilizzare i cluster per gestire i server ESXi nelle istanze vCenter Server per una migliore gestione delle risorse e alta disponibilità. I server ESXi che hai configurato quando hai ordinato un'istanza vengono raggruppati sotto forma di **cluster1** per impostazione predefinita. Puoi visualizzare i dettagli del cluster o aggiungere fino a un totale di cinque cluster a un'istanza dalla scheda **Infrastruttura** appena introdotta nella pagina dei dettagli dell'istanza. Quando espandi o contrai la capacità di un'istanza, puoi selezionare il cluster a cui aggiungere o da cui rimuovere i server ESXi. Per ulteriori informazioni, vedi [Aggiunta e visualizzazione di cluster per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances).
+A partire dalla release della V1.7, puoi utilizzare i cluster per gestire i server ESXi nelle istanze vCenter Server per una migliore gestione delle risorse e alta disponibilità. I server ESXi che hai configurato quando hai ordinato un'istanza vengono raggruppati sotto forma di **cluster1** per impostazione predefinita. Puoi visualizzare i dettagli del cluster o aggiungere fino a un totale di cinque cluster a un'istanza dalla scheda **Infrastruttura** appena introdotta nella pagina dei dettagli dell'istanza. Quando espandi o contrai la capacità di un'istanza, puoi selezionare il cluster a cui aggiungere o da cui rimuovere i server ESXi. Per ulteriori informazioni, vedi [Aggiunta, visualizzazione ed eliminazione di cluster per le istanze vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters).
 
 ### Miglioramenti alla distribuzione del ripristino di emergenza Zerto
 {: #relnotes_v17-zerto}

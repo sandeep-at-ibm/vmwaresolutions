@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -101,7 +101,7 @@ subcollection: vmwaresolutions
 ## 查看 vCenter Server with Hybridity Bundle 实例的部署历史记录的过程
 {: #vc_hybrid_viewinginstances-procedure-view-deploy-history}
 
-单击左侧导航窗格上的**部署历史记录**，以查看实例的部署历史记录。
+单击左侧导航窗格中的**部署历史记录**，以查看实例的部署历史记录。
 
 表 5. vCenter Server with Hybridity Bundle 实例部署历史记录
 

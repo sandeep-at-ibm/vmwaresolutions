@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-28"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -22,7 +22,7 @@ Revise la siguiente información para obtener detalles sobre las consideraciones
 {: #vc_nsx-t_networkingonvcenterserver-networking-components}
 {: faq}
 
-Para revisar los componentes de red que se incluyen en la instancia de vCenter Server con NSX-T, consulte [Especificaciones técnicas para instancias de vCenter Server con NSX-T](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_overview-specs).
+Para revisar los componentes de red que se incluyen en la instancia de vCenter Server con NSX-T, consulte [Especificaciones técnicas para instancias de vCenter Server con NSX-T](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_overview#vc_nsx-t_overview-specs).
 
 ## Consideraciones sobre cortafuegos
 {: #vc_nsx-t_networkingonvcenterserver-firewall-considerations}

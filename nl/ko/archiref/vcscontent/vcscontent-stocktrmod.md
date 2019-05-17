@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-23"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -87,7 +87,7 @@ Center](https://www.ibm.com/support/knowledgecenter/SSBS6K_3.1.0/manage_cluster/
 ## Transformation Advisor 및 Microclimate 배치
 {: #vcscontent-stocktrmod-deploy-tam}
 
-Todd의 환경에서 {{site.data.keyword.icpfull_notm}}가 실행되면 Microclimate와 함께 Transformation Advisor를 설치합니다. Todd는 [카탈로그](https://www.ibm.com/cloud/private/developer)를 열고 사용 가능한 모든 컨텐츠를 봅니다.
+Todd의 환경에서 {{site.data.keyword.icpfull_notm}}가 실행되면 Microclimate와 함께 Transformation Advisor를 설치합니다. Todd는 [카탈로그](https://www.ibm.com/cloud/private/architecture)를 열고 사용 가능한 모든 컨텐츠를 봅니다.
 
 Todd는 Transformation Advisor와 Microclimate를 찾고, helm 설치 차트를 클릭하면 제공되는 readme 파일 지시사항을 통해 이를 설치합니다.
 

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-29"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -59,9 +59,9 @@ Per correggere host e cluster, completa la seguente procedura:
 6. Facoltativamente, nella pagina **Advanced options**, seleziona l'opzione per pianificare la correzione da eseguire in un secondo momento e specifica un nome univoco e una descrizione facoltativa per l'attività. L'ora che imposti per l'attività pianificata corrisponde all'ora in VCSA. Facoltativamente, seleziona l'opzione per ignorare le avvertenze relative ai dispositivi non supportati sull'host o all'archivio dati VMFS non più supportato per continuare con la correzione. Fai clic su **Avanti**.
 7. Nella pagina **Remediation Options** dell'host, dal menu a discesa **VM Power state**, puoi selezionare la modifica dello stato di alimentazione delle VM e dei dispositivi virtuali in esecuzione sugli host da correggere. Un host non può entrare in modalità di manutenzione fino a quando le VM sull'host non vengono spente, sospese o migrate con vMotion su altri host in un cluster DRS. Alcuni aggiornamenti richiedono che un host entri in modalità di manutenzione prima della correzione. Le macchine e i dispositivi virtuali non possono essere eseguiti quando un host è in modalità di manutenzione. Per ridurre i tempi di inattività della correzione degli host a scapito della disponibilità della VM, puoi scegliere di spegnere o sospendere le VM e i dispositivi virtuali prima del processo di correzione. In un cluster DRS, se non spegni le VM, la correzione richiede più tempo ma le VM sono disponibili durante l'intero processo di correzione poiché vengono migrate con vMotion su altri host. Le selezioni sono le seguenti:
 
-- **Spegni le VM (Virtual Machine)** - Spegni tutte le VM e i dispositivi virtuali prima della correzione.
-- **Sospendi VM (Virtual Machine)** - Sospendi tutte le VM e i dispositivi virtuali in esecuzione prima della correzione.
-- **Non modificare lo stato di alimentazione delle VM** - Lascia le VM e i dispositivi virtuali nello stato di alimentazione corrente.
+  * **Spegni le VM (Virtual Machine)** - Spegni tutte le VM e i dispositivi virtuali prima della correzione.
+  * **Sospendi VM (Virtual Machine)** - Sospendi tutte le VM e i dispositivi virtuali in esecuzione prima della correzione.
+  * **Non modificare lo stato di alimentazione delle VM** - Lascia le VM e i dispositivi virtuali nello stato di alimentazione corrente.
 
 8. Facoltativamente, seleziona **Disable any removable media devices connected to the virtual machine on the host**. VUM non corregge gli host su cui le VM hanno unità CD, DVD o minidisco collegate. Negli ambienti cluster, i dispositivi multimediali collegati potrebbero impedire vMotion se l'host di destinazione non dispone di un dispositivo identico o di un'immagine ISO montata corrispondente, il che a sua volta impedisce all'host di origine di entrare in modalità di manutenzione. Dopo la correzione, VUM ricollega i dispositivi multimediali rimovibili nel caso in cui siano ancora disponibili.
 9. Facoltativamente, seleziona **Retry entering maintenance mode in case of failure**, specifica il numero di tentativi e il tempo di attesa tra i tentativi. VUM attende il periodo di ritardo dei tentativi e riprova a mettere l'host in modalità di manutenzione tutte le volte che indichi nel campo Number of retries.
@@ -83,4 +83,4 @@ In un'istanza vCenter Server non è richiesto di selezionare la casella di spunt
 {: #vum-staging-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (dimostrazioni)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (dimostrazioni)

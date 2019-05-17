@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-08-30"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -63,7 +63,7 @@ subcollection: vmwaresolutions
 
 有关更多信息，请参阅以下主题：
 * [邀请用户访问服务和资源](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-iamuserinvite)
-* [使用 IAM 管理用户访问权](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-access-with-iam)
+* [使用 IAM 管理用户访问权](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-iam#iam)
 
 ## 更改了 VMware vCenter Server 和 VMware Cloud Foundation 实例的用户帐户和组
 {: #relnotes_v25-user-acct}

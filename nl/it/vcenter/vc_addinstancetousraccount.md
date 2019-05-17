@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -21,7 +21,7 @@ Le istanze che sono state distribuite nelle release della V2.4 e precedenti, pos
 ## Prima di iniziare
 {: #vc_addinstancetousraccount-prereq}
 
-Assicurati che l'account {{site.data.keyword.cloud_notm}} a cui vuoi migrare l'istanza non sia un account solo IaaS. Un account solo IaaS è un account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) che non è collegato a un account {{site.data.keyword.cloud_notm}}.
+Assicurati che l'account {{site.data.keyword.cloud_notm}} a cui vuoi migrare l'istanza non sia un account solo IaaS. Un account solo IaaS è un account dell'infrastruttura {{site.data.keyword.cloud_notm}} che non è collegato a un account {{site.data.keyword.cloud_notm}}.
 
 Per ulteriori informazioni su come collegare il tuo account solo IaaS al tuo account PaaS, vedi [Follow these steps to link your IaaS and PaaS accounts](https://www.ibm.com/blogs/bluemix/2018/03/follow-steps-link-iaas-paas-accounts/).
 
@@ -43,6 +43,6 @@ Per ulteriori informazioni su come collegare il tuo account solo IaaS al tuo acc
 ## Link correlati
 {: #vc_addinstancetousraccount-related}
 
-* [Gestione dell'accesso utente con IAM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-access-with-iam)
+* [Gestione dell'accesso utente con IAM](/docs/services/vmwaresolutions/services?topic=vmware-solutions-iam#iam)
 * [Come invitare gli utenti ad accedere a servizi e risorse](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-iamuserinvite)
 * [Cos'è IBM Cloud IAM](/docs/iam?topic=iam-iamoverview)

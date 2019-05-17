@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-12-14"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -30,8 +30,8 @@ A partire dalla release V2.7, i seguenti nuovi modelli CPU {{site.data.keyword.c
 * Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2.3 GHz / 768 GB RAM
 
 Per ulteriori informazioni, vedi la sezione *Impostazioni di {{site.data.keyword.baremetal_short_sing}}* in:
-* [Ordine di istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance#bare-metal-server-settings)
-* [Ordine di nuovi cluster vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances#bare-metal-server-settings)
+* [Ordine di istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance#vc_orderinginstance-bare-metal-settings)
+* [Ordine di nuovi cluster vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances#vs_orderinginstances-bare-metal-settings)
 
 ## Aggiornamenti per i servizi aggiuntivi
 {: #relnotes_v27-services}
@@ -39,7 +39,7 @@ Per ulteriori informazioni, vedi la sezione *Impostazioni di {{site.data.keyword
 ### IBM Cloud Private Hosted
 {: #relnotes_v27-icp}
 
-Il servizio {{site.data.keyword.cloud_notm}} Private Hosted è ora disponibile per le istanze VMware vCenter Server with Hybridity Bundle, oltre che per le istanze VMware vCenter Server distribuite nella (o aggiornate alla) V2.5 e nelle release successivi. Puoi ora ordinare un'istanza vCenter Server o un'istanza vCenter Server with Hybridity Bundle con il servizio incluso. Puoi inoltre aggiungere il servizio a un'istanza vCenter Server o vCenter Server with Hybridity Bundle esistente dopo la distribuzione iniziale.
+Il servizio {{site.data.keyword.cloud_notm}} Private Hosted è ora disponibile per le istanze VMware vCenter Server with Hybridity Bundle, oltre che per le istanze VMware vCenter Server distribuite o di cui è stato eseguito l'upgrade alla V2.5 e nelle release successive. Puoi ora ordinare un'istanza vCenter Server o un'istanza vCenter Server with Hybridity Bundle con il servizio incluso. Puoi inoltre aggiungere il servizio a un'istanza vCenter Server o vCenter Server with Hybridity Bundle esistente dopo la distribuzione iniziale.
 
 Per ulteriori informazioni, consulta i seguenti argomenti:
 * [{{site.data.keyword.cloud_notm}}Panoramica su Private Hosted](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_overview)
@@ -48,7 +48,7 @@ Per ulteriori informazioni, consulta i seguenti argomenti:
 ### Mission Critical VMware on IBM Cloud
 {: #relnotes_v27-mcv}
 
-Il servizio Mission Critical VMware on {{site.data.keyword.cloud_notm}} è ora disponibile per le istanze che sono distribuite o aggiornate alla V2.7 o alle release successive.
+Il servizio Mission Critical VMware on {{site.data.keyword.cloud_notm}} è ora disponibile per le istanze che sono state distribuite o di cui è stato eseguito l'upgrade alla V2.7 o alle release successive.
 
 Mission Critical VMware on {{site.data.keyword.cloud_notm}} offre un'architettura a più zone per aiutare le aziende ad evitare il tempo di inattività delle applicazioni cloud e ad automatizzare i failover in una regione cloud. Con questa architettura cloud, puoi raggiungere una maggiore disponibilità e una percentuale di successo di failover rispetto a quella che la maggior parte dei client VMware possono raggiungere con gli ambienti in loco o con le piattaforme cloud concorrenti.
 

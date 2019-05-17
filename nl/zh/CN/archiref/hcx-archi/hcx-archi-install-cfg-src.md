@@ -4,16 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
 # 在源上安装和配置 HCX
 {: #hcx-archi-install-cfg-src}
 
-内部部署安装需要部署 HCX 管理设备，并向 vCenter 以及一个或多个支持 VCF/VCS HCX 的云端点注册该设备。
+内部部署安装需要部署 HCX 管理设备，并向 vCenter 以及一个或多个支持 VCS HCX 的云端点注册该设备。
 
 ## 安装 HCX Manager 设备
 {: #hcx-archi-install-cfg-src-install-hma}

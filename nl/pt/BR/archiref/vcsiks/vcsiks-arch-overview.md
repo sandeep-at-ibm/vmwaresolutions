@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -48,8 +48,7 @@ mecanismo para conectar os clusters do {{site.data.keyword.icpfull_notm}} a uma 
 O {{site.data.keyword.icpfull_notm}} pode ser implementado com os componentes NSX-V ou NSX-T. O {{site.data.keyword.icpfull_notm}} com NSX-V permite que as MVs do {{site.data.keyword.icpfull_notm}} sejam executadas na rede VXLAN e usem a rede interna Calico do Kubernetes.
 
 O {{site.data.keyword.icpfull_notm}} com NSX-T, que permite que os usuários controlem e configurem a rede,
-a sub-rede, as políticas da IU central (Gerenciador NSX-T). Para obter informações sobre as diferenças entre NSX-V e NSX-T, consulte a [Arquitetura de referência de rede VCS do {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/archiref/
-vcsnsxt/vcsnsxt-intro.html).
+a sub-rede, as políticas da IU central (Gerenciador NSX-T). Para obter informações sobre as diferenças entre o NSX-V e o NSX-T, consulte a [Arquitetura de referência de rede do {{site.data.keyword.cloud_notm}} VCS](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsnsxt-intro#vcsnsxt-intro).
 
 ## Plataforma de gerenciamento de nuvem no local
 {: #vcsiks-arch-overview-on-premises}
@@ -72,4 +71,4 @@ mecanismo para conectar os clusters do {{site.data.keyword.icpfull_notm}} a uma 
 ## Links relacionados
 {: #vcsiks-arch-overview-related}
 
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-hybridity-intro#vcs-hybridity-intro)

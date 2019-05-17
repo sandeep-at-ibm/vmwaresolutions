@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -64,7 +64,7 @@ Tableau 2. Informations par défaut utilisées dans la configuration de l'applic
 |---|---|
 |Environnement |Le nom de l'environnement est défini sur “Initial”|
 |Environnement | Le score est défini sur 5|
-|Référentiel d'actifs |Deux référentiels d'actifs sont configurés : vCenter et NSX Manager. Les URL hôtes sont configurées sur https://*vCenter fqdn* et https://*NSX Manager fqdn*|
+|Référentiel d'actifs | Deux référentiels d'actifs sont configurés : vCenter et NSX Manager. URL de l'hôte défini sur `https://vCenter_fqdn` et `https://*NSX Manager_fqdn` |
 |Référentiel d'actifs |Deux référentiels d'actifs sont configurés : vCenter et NSX Manager. Les deux utilisent le même nom d'utilisateur. Le nom d'utilisateur est défini sur le nom de l'administrateur de vCenter|
 |Référentiel d'actifs |Deux référentiels d'actifs sont configurés : vCenter et NSX Manager. Les deux utilisent le même mot de passe. Le mot de passe est défini sur le mot de passe de l'administrateur de vCenter
 |Référentiel d'actifs |Deux référentiels d'actifs sont configurés : vCenter et NSX Manager. Les deux utilisent le même mot de passe. Le type est défini sur vCenter pour un référentiel et sur NSX pour l'autre

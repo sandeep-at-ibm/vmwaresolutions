@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-19"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -136,7 +136,7 @@ Disco	| 1000 GB sul datastore locale
 ## Componenti di IBM Cloud Kubernetes Service
 {: #vcsiks-arch-overview-infrastructure-iks-comp}
 
-Figura 3. Componenti di {{site.data.keyword.containerlong_notm}} </br>
+Figura 3. Componenti di {{site.data.keyword.containerlong_notm}}</br>
 ![{{site.data.keyword.containerlong_notm}} - Diagramma dei componenti](vcsiks-iks-components.svg)
 
 ### Master Kubernetes

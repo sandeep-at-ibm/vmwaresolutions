@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -62,7 +62,7 @@ Se accede a la vista de administración navegando a **Inicio** > **Gestor de act
 ##	Vista de conformidad
 {: #vum-overview-compliance-view}
 
-Se accede a la vista de conformidad de un objeto de inventario seleccionado desde **Hosts y clústeres** o **Máquinas y plantillas** y pulsando el **separador Update Manager**. En la vista Conformidad de Update Manager, puede realizar las tareas siguientes:
+Se accede a la vista de conformidad de un objeto de inventario seleccionado desde **Hosts y clústeres** o **Máquinas y plantillas** y pulsando el separador **Update Manager**. En la vista Conformidad de Update Manager, puede realizar las tareas siguientes:
 *	Ver la conformidad y los resultados de la exploración de cada objeto de inventario seleccionado
 *	Adjuntar y desconectar las líneas base y los grupos de línea base de un objeto de inventario seleccionado
 *	Explorar un objeto de inventario seleccionado
@@ -73,4 +73,4 @@ Se accede a la vista de conformidad de un objeto de inventario seleccionado desd
 {: #vum-overview-related}
 
 * [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demostraciones)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (demostraciones)

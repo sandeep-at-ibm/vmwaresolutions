@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -17,7 +17,7 @@ subcollection: vmwaresolutions
 {: #hcx-archi-trbl-cloud-reg}
 
 * O Hybrid Cloud Services não tentará novamente se as credenciais estiverem incorretas. As credenciais devem ser autenticadas antes que o Hybrid Cloud Services tente efetuar login e iniciar o registro em nuvem.
-* O registro em nuvem poderá falhar se as credenciais forem digitadas incorretamente ou se as credenciais do VCF/VCS Hybrid Cloud Services Cloud forem mudadas após o registro do Hybrid Cloud Services com o VCF/VCS Hybrid Cloud Services Cloud, causando uma incompatibilidade.
+* O registro em nuvem poderá falhar se as credenciais forem digitadas incorretamente ou se as credenciais da Nuvem do VCS Hybrid Cloud Services forem mudadas após o Hybrid Cloud Services se registrar com a Nuvem do VCS Hybrid Cloud Services, causando uma incompatibilidade.
 * Para atualizar as credenciais no Web client, acesse a guia Introdução ao Hybrid Cloud Services e, em **Tarefas básicas**, escolha **Registrar nova nuvem**.
 
 ## Duplicar endereço MAC

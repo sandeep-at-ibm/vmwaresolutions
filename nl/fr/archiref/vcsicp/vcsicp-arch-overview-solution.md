@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-19"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -37,7 +37,7 @@ NSX Manager est déployé sur le cluster initial. De plus, NSX Manager se voit a
 ### Contrôleurs NSX
 {: #vcsicp-arch-overview-solution-nsx-controllers}
 
-L'automatisation d'{{site.data.keyword.cloud}} déploie trois contrôleurs NSX dans le cluster initial. Les contrôleurs se voient affecter une adresse IP VLAN provenant du sous-réseau portable destiné aux composants de gestion.
+L'automatisation {{site.data.keyword.cloud}} déploie trois contrôleurs NSX dans le cluster initial. Les contrôleurs se voient affecter une adresse IP VLAN provenant du sous-réseau portable destiné aux composants de gestion.
 
 ### NSX Edge/DLR
 {: #vcsicp-arch-overview-solution-nsx-edge}
@@ -126,8 +126,8 @@ worker  |  3 | IP (x3)  |  4-8 |16-20   |  150
 
 {{site.data.keyword.cloud_notm}} Automation Manager (CAM) est une plateforme de gestion libre-service multi-cloud qui s'exécute sur {{site.data.keyword.icpfull_notm}} et permet aux développeurs et aux administrateurs de répondre aux besoins de l'entreprise.
 
-Figure 3. Références des composants CAM</br>
-![Références des composants CAM](vcsicp-cam-component-ref.svg)
+Figure 3. Référence des composants CAM</br>
+![Référence des composants CAM](vcsicp-cam-component-ref.svg)
 
 ### Proxy CAM
 {: #vcsicp-arch-overview-solution-cam-proxy}

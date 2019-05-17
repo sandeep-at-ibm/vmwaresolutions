@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -21,7 +21,7 @@ Para las instancias que se han desplegado en V2.4 y releases anteriores, puede m
 ## Antes de empezar
 {: #vc_hybrid_addinstancetousraccount-prereq}
 
-Asegúrese de que la cuenta de {{site.data.keyword.cloud_notm}} a la que desea migrar la instancia no sea una cuenta de IaaS-only. Una cuenta de IaaS-only es una cuenta de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer) que no está enlazada a una cuenta de {{site.data.keyword.cloud_notm}}.
+Asegúrese de que la cuenta de {{site.data.keyword.cloud_notm}} a la que desea migrar la instancia no sea una cuenta de IaaS-only. Una cuenta de IaaS-only es una cuenta de infraestructura de {{site.data.keyword.cloud_notm}} que no está enlazada a una cuenta de {{site.data.keyword.cloud_notm}}.
 
 Para obtener más información sobre cómo enlazar su cuenta de Iaas-only con su cuenta de PaaS, consulte [Siga estos pasos para enlazar sus cuentas de IaaS y PaaS](https://www.ibm.com/blogs/bluemix/2018/03/follow-steps-link-iaas-paas-accounts/).
 
@@ -43,6 +43,6 @@ Para obtener más información sobre cómo enlazar su cuenta de Iaas-only con su
 ## Enlaces relacionados
 {: #vc_hybrid_addinstancetousraccount-related}
 
-* [Gestión de acceso de usuario con IAM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-access-with-iam)
+* [Gestión de acceso de usuario con IAM](/docs/services/vmwaresolutions?topic=vmware-solutions-iam#iam)
 * [Invitación de usuarios para acceder a servicios y recursos](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-iamuserinvite)
 * [Qué es IBM Cloud IAM](/docs/iam?topic=iam-iamoverview)

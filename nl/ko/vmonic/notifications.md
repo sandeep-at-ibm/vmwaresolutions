@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -54,7 +54,7 @@ subcollection: vmwaresolutions
        </tr>
        <tr>
          <td>유형</td>
-         <td>보고된 이벤트가 관련된 컴포넌트의 유형입니다.<ul><li>vCenter Server 인스턴스</li><li>Cloud Foundation 인스턴스</li><li>Services</li><li>시스템</li></ul></td>
+         <td>보고된 이벤트가 관련된 컴포넌트의 유형입니다.<ul><li>vCenter Server 인스턴스</li><li>이용</li><li>시스템</li></ul></td>
        </tr>
        <tr>
          <td>리소스</td>

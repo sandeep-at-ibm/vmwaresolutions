@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -20,36 +20,36 @@ subcollection: vmwaresolutions
 
 {{site.data.keyword.cloud}} 上的網路服務包含兩對 VMware NSX Edge Services Gateway (ESG)，以在 {{site.data.keyword.cloud_notm}} 與公用網際網路或客戶內部部署網路之間透過「虛擬專用網路 (VPN)」進行通訊。這些 ESG 會隔離以支援內部 {{site.data.keyword.cloud_notm}} 管理功能及輸出資料流量，即客戶相關網路資料流量的入口。
 
-下圖是簡化的網路圖，其說明管理配對及工作負載 ESG 配對。它也會顯示「NSX 分散式邏輯路由器 (DLR)」及工作負載 VXLAN。這些元件是要作為客戶工作負載的起始登入點，並不需要特定的知識，即可在 NSX 內設定它們。DLR 一般用來遞送 VMware Cloud Foundation 或 VMware vCenter Server 與「東西向」資料流量之間的資料流量，而「東西向」資料流量位於實例內的不同第 2 層網路之間。此行為與 ESG 相反，ESG 的運作有助於進出 Cloud Foundation 或 vCenter Server 實例的「南北向」網路資料流量遍訪。
+下圖是簡化的網路圖，其說明管理配對及工作負載 ESG 配對。它也會顯示「NSX 分散式邏輯路由器 (DLR)」及工作負載 VXLAN。這些元件是要作為客戶工作負載的起始登入點，並不需要特定的知識，即可在 NSX 內設定它們。DLR 一般用來遞送 VMware vCenter Server 與「東西向」資料流量之間的資料流量，而「東西向」資料流量位於實例內的不同第 2 層網路之間。此行為與 ESG 相反，ESG 的運作有助於進出 vCenter Server 實例的「南北向」網路資料流量遍訪。
 
-圖 1. Cloud Foundation 上的雲端網路服務
+圖 1. vCenter Server 上的雲端網路服務
 
-![Cloud Foundation 上的雲端網路服務](cloudnetworkingservicesdiagram.svg "Cloud Foundation 上的雲端網路服務")
+![vCenter Server 上的雲端網路服務](cloudnetworkingservicesdiagram.svg "vCenter Server 上的雲端網路服務")
 
 雖然單一 ESG 可能就足以應付管理及客戶工作負載資料流量，但是分隔管理及客戶資料流量是一種設計決策，以期防止意外地錯誤配置管理 ESG。
 
-配置錯誤或停用管理 ESG 並不會讓 Cloud Foundation 或 vCenter Server 實例無法發揮作用，但會停用所有入口網站管理功能。
+配置錯誤或停用管理 ESG 並不會讓 vCenter Server 實例無法發揮作用，但會停用所有入口網站管理功能。
 {:note}
 
 ## IBM 管理服務 NSX Edge
 {: #nsx-networking_services-mgmt-serv-nsx-edge}
 
-IBM 管理 ESG 是僅適用於 {{site.data.keyword.cloud_notm}} 管理網路資料流量的專用 NSX Edge 叢集。它的用意並不是要讓資料流量遍訪不是由 Cloud Foundation 或 vCenter Server 自動化部署及管理的元件。
+IBM 管理 ESG 是僅適用於 {{site.data.keyword.cloud_notm}} 管理網路資料流量的專用 NSX Edge 叢集。它的用意並不是要讓資料流量遍訪任何不是由 vCenter Server 自動化部署及管理的元件。
 
-管理 ESG 提供附加服務虛擬機器 (VM)（位於 Cloud Foundation 或 vCenter Server 實例內）與「IBM 自動化」基礎架構（位於 {{site.data.keyword.cloud_notm}} 中）之間的通訊路徑，如下圖中的 Cloud Foundation 所示。
+管理 ESG 提供附加服務虛擬機器 (VM)（位於 vCenter Server 實例內）與「IBM 自動化」基礎架構（位於 {{site.data.keyword.cloud_notm}} 中）之間的通訊路徑，如下圖中的 vCenter Server 所示。
 
-圖 2. Cloud Foundation 上的管理邊緣通訊
+圖 2. vCenter Server 上的管理邊緣通訊
 
-![Cloud Foundation 上的管理邊緣通訊](mgmtvmcommunication.svg "Cloud Foundation 上的管理邊緣通訊")
+![vCenter Server 上的管理邊緣通訊](mgmtvmcommunication.svg "vCenter Server 上的管理邊緣通訊")
 
-基於特定附加服務 VM 與其對應授權和計量系統之間的輕量通訊，會調整主動-被動高可用性 (HA) 配對之大型配置中的 NSX ESG 大小，並且將 NSX ESG 部署於 Cloud Foundation 聚合叢集或 vCenter Server 叢集的管理資源儲存區上。下表提供 IBM 管理 NSX ESG 部署的摘要。
+基於特定附加服務 VM 與其對應授權和計量系統之間的輕量通訊，會調整主動-被動高可用性 (HA) 配對之大型配置中的 NSX ESG 大小，並且將 NSX ESG 部署於 vCenter Server 叢集的管理資源儲存區上。下表提供 IBM 管理 NSX ESG 部署的摘要。
 
 表 1. IBM 管理 NSX ESG 規格
 
 | IBM 管理 NSX Edge | vCPU |記憶體| 磁碟大小 | 儲存空間位置 |
 |:----------------------- |:---- |:------ |:--------- |:---------------- |
-| IBM 管理 NSX ESG 1 |2 | 1 GB | 1 GB | vSAN 資料儲存庫 (Cloud Foundation)；用於管理的共用連接儲存空間 (vCenter Server) |
-| IBM 管理 NSX ESG 2 |2 | 1 GB | 1 GB | vSAN 資料儲存庫 (Cloud Foundation)；用於管理的共用連接儲存空間 (vCenter Server) |
+| IBM 管理 NSX ESG 1 |2 | 1 GB | 1 GB | 用於管理的 vSAN 資料儲存庫或共用的連接儲存空間 |
+| IBM 管理 NSX ESG 2 |2 | 1 GB | 1 GB | 用於管理的 vSAN 資料儲存庫或共用的連接儲存空間 |
 
 ### 管理服務
 {: #nsx-networking_services-mgmt-services}
@@ -64,7 +64,7 @@ IBM 管理 ESG 是僅適用於 {{site.data.keyword.cloud_notm}} 管理網路資�
 ### Edge 介面
 {: #nsx-networking_services-edge-interfaces}
 
-ESG 介面的配置定義了 ESG 有權存取的 L2 網路。對於 Cloud Foundation 及 vCenter Server 生命週期管理，必須要容許放在管理 VLAN 上的特定 VM 能遍訪至公用 VLAN。以下是在部署上定義的介面：
+ESG 介面的配置定義了 ESG 有權存取的 L2 網路。對於 vCenter Server 生命週期管理，必須要容許放在管理 VLAN 上的特定 VM 能遍訪至公用 VLAN。以下是在部署上定義的介面：
 
 表 2. NSX ESG 介面配置
 
@@ -90,7 +90,7 @@ ESG 介面的配置定義了 ESG 有權存取的 L2 網路。對於 Cloud Founda
 ### 網址轉換定義
 {: #nsx-networking_services-nat-definitions}
 
-「管理 ESG」上採用「網址轉換 (NAT)」，以容許網路資料流量在一個 IP 位址空間與另一個 IP 位址空間之間遍訪。這通常用來節省網際網路可遞送 IP 位址，或是基於安全理由，對公用 IP 位址隱藏內部 IP 位址。NAT 也用來容許「傳輸控制通訊協定 (TCP)」及「使用者資料封包通訊協定 (UDP)」埠重新導向。管理資料流量一律從 Cloud Foundation 及 vCenter Server 實例內部起始，並且要求只在「管理 ESG」上定義一個來源 NAT (SNAT)。不會針對每個管理需要從實例輸出之服務的內部 VM，建立個別 SNAT。
+「管理 ESG」上採用「網址轉換 (NAT)」，以容許網路資料流量在一個 IP 位址空間與另一個 IP 位址空間之間遍訪。這通常用來節省網際網路可遞送 IP 位址，或是基於安全理由，對公用 IP 位址隱藏內部 IP 位址。NAT 也用來容許「傳輸控制通訊協定 (TCP)」及「使用者資料封包通訊協定 (UDP)」埠重新導向。管理資料流量一律從 vCenter Server 實例內部起始，並且要求只在「管理 ESG」上定義一個來源 NAT (SNAT)。不會針對每個管理需要從實例輸出之服務的內部 VM，建立個別 SNAT。
 
 表 4. NSX ESG NAT 配置
 
@@ -105,7 +105,7 @@ ESG 介面的配置定義了 ESG 有權存取的 L2 網路。對於 Cloud Founda
 
 雖然很難預測需要哪個目的地 IP 範圍作為面向網際網路之連線的目的地，但是任何由 {{site.data.keyword.cloud_notm}} 部署及管理的服務都會指向「管理 ESG」，以作為其預設閘道。針對需要外部網路連線的服務，需要靜態路徑以強制資料流量通過 {{site.data.keyword.cloud_notm}} BCR。
 
-針對任何將使用管理 ESG 遍訪 Cloud Foundation 或 vCenter Server 實例的服務，建議使用下列配置：
+針對任何將使用管理 ESG 遍訪 vCenter Server 實例的服務，建議使用下列配置：
 * 預設閘道是管理 ESG。
 * 內部 {{site.data.keyword.cloud_notm}} 目的地需要靜態路徑。
 
@@ -146,9 +146,9 @@ ESG 介面的配置定義了 ESG 有權存取的 L2 網路。對於 Cloud Founda
 ## IBM 工作負載 NSX Edge
 {: #nsx-networking_services-wkld-nsx-edge}
 
-IBM 工作負載 ESG 是簡單拓蹼的一部分，主要用於工作負載網路通訊。下節說明將工作負載連接至 Cloud Foundation 或 vCenter Server 實例內網路的設計目的。這是將內部部署網路及 IP 空間連接至特定 Cloud Foundation 或 vCenter Center 實例的起點，也是真正「混合式雲端」架構的基礎。
+IBM 工作負載 ESG 是簡單拓蹼的一部分，主要用於工作負載網路通訊。下節說明將工作負載連接至 vCenter Server 實例內網路的設計目的。這是將內部部署網路及 IP 空間連接至特定 vCenter Center 實例的起點，也是真正「混合式雲端」架構的基礎。
 
-連接至公用及專用 {{site.data.keyword.cloud_notm}} 網路的客戶網路，能容許進出面向網際網路之資料流量的工作負載存取，但也容許從公用或專用 {{site.data.keyword.cloud_notm}} 網路建立站台對站台 VPN。這可讓您大幅減少關於連接至內部部署網路的價值實現時間，因為基於客戶安全需求，建立專用廣域網路 (WAN) 可能需要數個月的時間。不過，專用鏈結備妥之後，即可翻轉 VPN 以遍訪該鏈結，而不會影響 VPN 通道內或是 Cloud Foundation 或 vCenter Server 實例內的層疊網路。完成此作業之後，如果從安全的角度來看需要的話，即可移除工作負載 ESG 的公用介面。
+連接至公用及專用 {{site.data.keyword.cloud_notm}} 網路的客戶網路，能容許進出面向網際網路之資料流量的工作負載存取，但也容許從公用或專用 {{site.data.keyword.cloud_notm}} 網路建立站台對站台 VPN。這可讓您大幅減少關於連接至內部部署網路的價值實現時間，因為基於客戶安全需求，建立專用廣域網路 (WAN) 可能需要數個月的時間。不過，專用鏈結備妥之後，即可翻轉 VPN 以遍訪該鏈結，而不會影響 VPN 通道內或是 vCenter Server 實例內的層疊網路。完成此作業之後，如果從安全的角度來看需要的話，即可移除工作負載 ESG 的公用介面。
 
 下圖中的拓蹼包含下列 NSX 元件：
 * NSX Edge 應用裝置 (ESG)
@@ -203,7 +203,7 @@ IBM 工作負載 ESG 是簡單拓蹼的一部分，主要用於工作負載網�
 
 「工作負載 ESG」上採用 NAT，以容許網路資料流量在一個 IP 位址空間與另一個 IP 位址空間之間遍訪。對於工作負載 ESG，需要 NAT 的目的，不僅在於容許與網際網路目的地的通訊，也容許與任何源自 {{site.data.keyword.cloud_notm}} 的 IP 範圍通訊。在此設計中，容許工作負載資料流量送出到網際網路，但不容許送到管理或任何 {{site.data.keyword.cloud_notm}} 網路。因此，「工作負載 ESG」上只需要定義一個 SNAT。整個工作負載可攜式子網路配置為透過 SNAT 進行遍訪。
 
-雖然可以使用 NAT 來容許跨多個 Cloud Foundation 或 vCenter Server 實例進行工作負載通訊，但當有許多工作負載需要跨實例連接時，這麼做會變得不切實際。如需使用進階 NSX 功能以建立跨 Cloud Foundation 或 vCeter Server 實例之 L2 覆蓋傳輸網路的範例，請參閱[多站台架構](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx-multi_site)。
+雖然可以使用 NAT 來容許跨多個 vCenter Server 實例進行工作負載通訊，但當有許多工作負載需要跨實例連接時，這麼做會變得不切實際。如需使用進階 NSX 功能以建立跨 vCeter Server 實例之 L2 覆蓋傳輸網路的範例，請參閱[多站台架構](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx-multi_site)。
 
 表 10. 工作負載 ESG NAT 規則
 
@@ -247,7 +247,7 @@ IBM 工作負載 ESG 是簡單拓蹼的一部分，主要用於工作負載網�
 
 表 13. 工作負載 ESG 內部介面
 
-| VXLAN 名稱 | Cloud Foundation 或 vCenter Server 傳輸區域 |類型      |
+| VXLAN 名稱 | vCenter Server 傳輸區域 |類型      |
 |:---------- |:------------------------------------------------- |:---- |
 | 工作負載 HA | transit-1 | 廣域 |
 | 工作負載傳輸 | transit-1 | 廣域 |

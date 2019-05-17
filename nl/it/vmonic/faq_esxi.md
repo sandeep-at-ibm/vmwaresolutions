@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -25,11 +25,7 @@ Trova le risposte alle domande frequenti sui server ESXi gestiti nella console {
 {: #faq_esxi-instance}
 {: faq}
 
-* Per le istanze vCenter Server, puoi espandere il cluster predefinito per avere fino a 51 server ESXi. Ciascuno dei cluster non predefiniti può essere espanso per avere fino a 59 server ESXi. Dal momento che puoi aggiungere fino a 10 cluster a un'istanza, ciascuna istanza distribuita può avere un massimo di 51 + 9x59 = 582 server ESXi tra tutti i cluster.
-* Per le istanze Cloud Foundation, la configurazione standard ha quattro server ESXi. Puoi aggiungere un massimo di 28 server (per un totale di 32 server). Per le istanze Cloud Foundation in una configurazione multisito, puoi avere un massimo di 128 server ESXi tra tutte le istanze.
-
-  Se la tua configurazione di Cloud Foundation richiede una distribuzione multisito con più di 128 server ESXi, [contatta il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support) per richiedere assistenza.
-  {:note}
+La tua istanza vCenter Server ti consente di espandere il cluster predefinito fino a 51 server ESXi. Ciascuno dei cluster non predefiniti può essere espanso per avere fino a 59 server ESXi. Dal momento che puoi aggiungere fino a 10 cluster a un'istanza, ciascuna istanza distribuita può avere un massimo di 51 + 9x59 = 582 server ESXi tra tutti i cluster.
 
 ## Quanti server ESXi posso aggiungere a un cluster?
 {: #faq_esxi-cluster}
@@ -81,5 +77,5 @@ L'aggiunta di rotte statiche per vMotion non è supportata. Le modifiche nella c
 {: #faq_esxi-related}
 
 * [Espansione e contrazione della capacità per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
-* [Aggiunta, visualizzazione ed eliminazione di cluster per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [Aggiunta, visualizzazione ed eliminazione di cluster per le istanze vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_hybrid_addingviewingclusters#vc_hybrid_addingviewingclusters)
 * [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

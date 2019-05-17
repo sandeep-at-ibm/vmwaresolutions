@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -23,7 +23,7 @@ NSX Edge Services Gateway on {{site.data.keyword.cloud}} 솔루션은 전세계 
 ## 내부 아키텍처 디자인
 {: #nsx_design-internal-archi}
 
-내부 아키텍처는 VMware Cloud Foundation 통합 클러스터 또는 VMware vCenter Server 클러스터의 리소스 풀에서 필요한 NSX Edge 컴포넌트의 배치를 지정합니다.
+내부 아키텍처는 VMware vCenter Server 클러스터의 리소스 풀에서 필요한 NSX Edge 컴포넌트의 배치를 지정합니다.
 
 다음 그림에서 VMware vSAN은 선택사항입니다.
 {:note}
@@ -48,7 +48,7 @@ NSX Edge Services Gateway on {{site.data.keyword.cloud}} 솔루션은 전세계 
 
 RFC1918 사설 IP 주소 범위는 인터넷이 아니라 조직 내부에서 사용하도록 네트워크 범위의 사용을 특별히 예약합니다. {{site.data.keyword.cloud_notm}} 실제 네트워크 인프라는 전세계 위치에서 특정 RFC1918 사설 주소 공간, 10.x.x.x/8을 사용합니다. 이러한 IP 주소 범위는 고객 계정 간에 또는 {{site.data.keyword.cloud_notm}} 고객 계정 내에서 겹치지 않습니다. 고객 계정 내에서 {{site.data.keyword.cloud_notm}}의 할당된 사설 IP 주소 공간은 VRF(Virtual Routing and Forwarding)가 사용으로 설정된 경우 {{site.data.keyword.CloudDataCents_notm}}의 다른 {{site.data.keyword.cloud_notm}} 사설 IP 주소 공간으로 라우팅할 수 있습니다.
 
-이렇게 하면 계정 내에서 전세계에 연결된 인프라를 쉽게 설정할 수 있지만 {{site.data.keyword.cloud_notm}}와 동일한 사설 주소 공간을 사용 중인 경우 라우팅을 통해 데이터 센터를 {{site.data.keyword.cloud_notm}}로 확장하려고 할 때 고정 IP 주소 공간에 문제가 발생할 수 있습니다. 솔루션은 NSX를 사용하여 Cloud Foundation 또는 vCenter Server 인프라에 오버레이 토폴로지를 작성하여 {{site.data.keyword.cloud_notm}}에 할당된 사설 IP 주소 공간과 상호작용하지 않도록 BYOIP(Bring Your Own IP) 주소 공간을 격리하는 것입니다. NSX는 터널 내의 내부 BYOIP 주소 공간이 중첩될 수 있는 외부 IP 주소 공간에 걸쳐 있도록 하는 L2 VPN을 제공할 수 있습니다.
+이렇게 하면 계정 내에서 전세계에 연결된 인프라를 쉽게 설정할 수 있지만 {{site.data.keyword.cloud_notm}}와 동일한 사설 주소 공간을 사용 중인 경우 라우팅을 통해 데이터 센터를 {{site.data.keyword.cloud_notm}}로 확장하려고 할 때 고정 IP 주소 공간에 문제가 발생할 수 있습니다. 솔루션은 NSX를 사용하여 vCenter Server 인프라에 오버레이 토폴로지를 작성하여 {{site.data.keyword.cloud_notm}}에 할당된 사설 IP 주소 공간과 상호작용하지 않도록 BYOIP(Bring Your Own IP) 주소 공간을 격리하는 것입니다. NSX는 터널 내의 내부 BYOIP 주소 공간이 중첩될 수 있는 외부 IP 주소 공간에 걸쳐 있도록 하는 L2 VPN을 제공할 수 있습니다.
 
 ## 관련 링크
 {: #nsx_design-related}

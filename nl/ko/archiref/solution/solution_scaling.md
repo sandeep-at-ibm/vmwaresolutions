@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-13"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -36,7 +36,7 @@ subcollection: vmwaresolutions
    * 보조 및 기본 사이트 AD VM 간의 DNS 및 AD 복제 설정
    * 기본 사이트 vCenter에 대한 향상된 연결 모드로 vCenter 설정
 
-또한 보조 사이트의 NSX 관리자는 기본 사이트에서 NSX 관리자의 보조 NSX 관리자로 설정될 수 있습니다. 이는 완료해야 하는 수동 프로세스입니다. 
+또한 보조 사이트의 NSX 관리자는 기본 사이트에서 NSX 관리자의 보조 NSX 관리자로 설정될 수 있습니다. 이는 완료해야 하는 수동 프로세스입니다.
 
 ## 새 클러스터 추가
 {: #solution_scaling-clusters}

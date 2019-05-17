@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-28"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -22,7 +22,7 @@ vCenter Server on {{site.data.keyword.cloud}} with NSX-T 인스턴스에 대한 
 {: #vc_nsx-t_networkingonvcenterserver-networking-components}
 {: faq}
 
-vCenter Server with NSX-T 인스턴스에 포함된 네트워킹 컴포넌트를 검토하려면 [vCenter Server with NSX-T 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_overview-specs)을 참조하십시오.
+vCenter Server with NSX-T 인스턴스에 포함된 네트워킹 컴포넌트를 검토하려면 [vCenter Server with NSX-T 인스턴스의 기술 스펙](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_overview#vc_nsx-t_overview-specs)을 참조하십시오.
 
 ## 방화벽 고려사항
 {: #vc_nsx-t_networkingonvcenterserver-firewall-considerations}

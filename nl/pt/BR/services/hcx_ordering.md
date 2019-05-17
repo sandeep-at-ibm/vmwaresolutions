@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -50,7 +50,7 @@ Para instalar o HCX on {{site.data.keyword.cloud_notm}}, conclua as configuraç�
   * **Chave privada:** insira a chave privada do certificado de autoridade de certificação.
   * (Opcional) **Senha:** insira a senha para a chave privada se ela estiver criptografada.
   * (Opcional) **Inserir a senha novamente:** insira a senha para a chave privada novamente.
-  * (Opcional) **Nome do host:** o nome do host a ser mapeado para o nome comum (CN) do certificado de autoridade de certificação. O HCX on {{site.data.keyword.cloud_notm}} requer que o formato do certificado de CA seja aceito pelo NSX Edge. Para obter mais informações sobre os formatos de certificados do NSX Edge, veja [Importando SSL Certificates](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html).
+  * (Opcional) **Nome do host:** o nome do host a ser mapeado para o nome comum (CN) do certificado de autoridade de certificação. O HCX on {{site.data.keyword.cloud_notm}} requer que o formato do certificado de CA seja aceito pelo NSX Edge. Para obter mais informações sobre os formatos de certificados do NSX Edge, veja [Importando SSL Certificates](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html).
   <!--Need enhancement, it is still not clear what the key pair is used for, is it for connecting to NSX? This is not in architecture doc either. -->
 
 ## Processo de implementação para HCX no IBM Cloud
@@ -88,7 +88,7 @@ HCX, os componentes do HCX local e os componentes do HCX remoto.
 ## Links relacionados
 {: #hcx_ordering-related}
 
-* [HCX no {{site.data.keyword.cloud_notm}} visão geral](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview)
+* [HCX no {{site.data.keyword.cloud_notm}} visão geral](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_considerations#hcx_considerations)
 * [Gerenciando o HCX no {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghcx)
 * [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
 * [Glossário de termos do HCX](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)

@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-19"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -45,10 +45,10 @@ Come segue:
 
 - A partire da NSX-T 2.4, le funzioni VM manager e VM controller vengono combinate. Di conseguenza vengono distribuite tre VM manager-controller. Se sono sulla stessa rete, utilizzano un programma di bilanciamento del carico della rete interno. Se sono in più sottoreti, è necessario un programma di bilanciamento del carico esterno.
 
-## Requisiti della risorsa 
+## Requisiti della risorsa
 {: #nsx-t-design-resource-req}
 
-In questa progettazione, la VM manager-controller NSX-T viene distribuita sul cluster iniziale. Inoltre, a ogni manager-controller viene assegnato un indirizzo IP di backend della VLAN dal blocco di indirizzi portatili privato progettato per i componenti di gestione e configurato con i server DNS e NTP di cui si è trattato nella sezione 0. Un riepilogo dell'installazione di NSX Manager viene mostrato nella seguente tabella. 
+In questa progettazione, la VM manager-controller NSX-T viene distribuita sul cluster iniziale. Inoltre, a ogni manager-controller viene assegnato un indirizzo IP di backend della VLAN dal blocco di indirizzi portatili privato progettato per i componenti di gestione e configurato con i server DNS e NTP di cui si è trattato nella sezione 0. Un riepilogo dell'installazione di NSX Manager viene mostrato nella seguente tabella.
 
 Tabella 2. Specifiche NSX-T Manager - controller
 
@@ -73,9 +73,9 @@ Con NSX-T on vSphere, l'N-VDS deve essere assegnato agli adattatori fisici all'i
 
 Per questo motivo, durante l'installazione di NSX-T e della relativa configurazione, una porta NIC fisica su un adattatore deve rimanere assegnata a un vSwitch locale o a un vDS (virtual distributed switch) vSphere. Dopo la distribuzione NSX-T, tutte le porte kernel ESX devono essere migrate a un N-VDS e trasferite da qualsiasi vSwitch locale o VDS. Dopo che sono state rimosse le porte kernel, le porte NIC fisiche rimanenti possono essere assegnate come un uplink N-VDS per il raggiungimento della ridondanza di N-VDS.
 
-Dopo la distribuzione iniziale, l'automazione di {{site.data.keyword.cloud_notm}} distribuisce tre dispositivi virtuali NSX-T Manager/Controller all'interno del cluster iniziale. Ai controller viene assegnato un indirizzo IP di backend della VLAN dalla sottorete portatile Privata A progettato per i componenti di gestione. Inoltre, le regole di anti–affinità VM–VM vengono create in modo che i controller siano separati tra gli host nel cluster. 
+Dopo la distribuzione iniziale, l'automazione di {{site.data.keyword.cloud_notm}} distribuisce tre dispositivi virtuali NSX-T Manager/Controller all'interno del cluster iniziale. Ai controller viene assegnato un indirizzo IP di backend della VLAN dalla sottorete portatile Privata A progettato per i componenti di gestione. Inoltre, le regole di anti–affinità VM–VM vengono create in modo che i controller siano separati tra gli host nel cluster.
 
-Devi distribuire il cluster iniziale con un minimo di tre nodi per garantire l'alta disponibilità per i Manager / Controller. Oltre ai manager / controller, l'automazione di {{site.data.keyword.cloud_notm}} prepara gli host vSphere distribuiti come nodi di trasporto NSX-T. Ai nodi di trasporto ESXi viene assegnato un indirizzo IP di backend della VLAN dall'intervallo di indirizzi IP portatili della rete Privata A che viene specificato da un intervallo di pool di IP NSX calcolato dalla VLAN e dal riepilogo della sottorete. Il traffico del nodo di trasporto risiede sulla VLAN senza tag ed è assegnato al N-VDS (NSX-T virtual distributed switch) privato. 
+Devi distribuire il cluster iniziale con un minimo di tre nodi per garantire l'alta disponibilità per i Manager / Controller. Oltre ai manager / controller, l'automazione di {{site.data.keyword.cloud_notm}} prepara gli host vSphere distribuiti come nodi di trasporto NSX-T. Ai nodi di trasporto ESXi viene assegnato un indirizzo IP di backend della VLAN dall'intervallo di indirizzi IP portatili della rete Privata A che viene specificato da un intervallo di pool di IP NSX calcolato dalla VLAN e dal riepilogo della sottorete. Il traffico del nodo di trasporto risiede sulla VLAN senza tag ed è assegnato al N-VDS (NSX-T virtual distributed switch) privato.
 
 A seconda della topologia NSX-T scelta dal cliente per la distribuzione, un cluster edge NSX-T viene distribuito come una coppia di VM o come un software distribuito sui nodi cluster bare metal. Indipendentemente se la coppia di cluster è virtuale o fisica, gli uplink vengono configurati per gli switch N-VDS per le reti privata e pubblica di {{site.data.keyword.cloud_notm}}.
 
@@ -101,8 +101,8 @@ Tabella 4. Zone di trasporto NSX-T e N-VDS
 
 Nome della zona di trasporto | VLAN/VXLAN | Nome N-VDS | Politica di teaming uplink
 --|:-------|:------|:-----
-**Private-Overlay** | VXLAN | SDDC-Overlay |Predefinita
-**Public-VLAN** | VLAN | SDDC-Public |Predefinita
+**Private-Overlay** | VXLAN | SDDC-Overlay | Predefinita
+**Public-VLAN** | VLAN | SDDC-Public | Predefinita
 **Private-VLAN** | VLAN | SDDC-Private | NFS,vSAN,iSCSI-A&B predefinita
 
 ## Nodi di trasporto
@@ -112,11 +112,11 @@ I nodi di trasporto definiscono le VM o gli oggetti server fisici che partecipan
 
 Tabella 5. Nodi di trasporto NSX-T
 
-Tipo di nodo di trasporto | N-VDS | Profilo di uplink | Assegnazione IP |NIC fisiche
+Tipo di nodo di trasporto | N-VDS | Profilo di uplink | Assegnazione IP | NIC fisiche
 --|:--------|:--------|:---
-**ESXi** | SDDC-Private | SDDC-Private-uplink |Pool IP| vmnic0, vmnic2
-**Cluster edge** | SDDC-Overlay | SDDC-Overlay-uplink |Pool IP| N/A
-**Edge fisico** | SDDC-Private | SDDC-Private-uplink |Pool IP| eth0, eth2
+**ESXi** | SDDC-Private | SDDC-Private-uplink | Pool IP | vmnic0, vmnic2
+**Cluster edge** | SDDC-Overlay | SDDC-Overlay-uplink | Pool IP | N/A
+**Edge fisico** | SDDC-Private | SDDC-Private-uplink | Pool IP | eth0, eth2
 
 ## Profili di uplink
 {: #nsx-t-design-uplink-profiles}
@@ -128,8 +128,8 @@ Tabella 6. Profili di uplink NSX-T
 Nome profilo di uplink | VLAN | Teaming inclusi | MTU
 --|:-----|:---|:---
 **SDDC-Private-Uplink** | predefinita | Predefinito, Gestione | 9000
-**SDDC-Public-Uplink** | predefinita |Predefinito| 1500
-**SDDC-Storage-Uplink** |VLAN di archiviazione | vSAN, iSCSI-A&B,NFS | 9000
+**SDDC-Public-Uplink** | predefinita| Predefinito | 1500
+**SDDC-Storage-Uplink** | VLAN di archiviazione | vSAN, iSCSI-A&B,NFS | 9000
 
 ## Teaming
 {: #nsx-t-design-teaming}
@@ -168,7 +168,7 @@ Nome switch logico | VLAN |Zona di trasporto | Politica di teaming uplink
 **SDDC-LS-iSCSI-A** | VLAN di archiviazione con tag | Private-VLAN| iSCSI-A
 **SDDC-LS-iSCSi-B** | VLAN di archiviazione con tag | Private-VLAN| iSCSi-B
 **SDDC-LS-TEP** | predefinita | Private-VLAN| TEP
-**SDDC-LS-External** |Predefinita| Public-VLAN |Predefinita
+**SDDC-LS-External** | Predefinita | Public-VLAN | Predefinita
 
 ### Cluster Edge
 {: #nsx-t-design-edge-cluster}
@@ -191,7 +191,7 @@ Un router logico NSX-T Tier-0 fornisce un servizio gateway di attivazione e disa
 
 Un gateway logico NSX-T Tier-1 ha porte di downlink per la connessione agli switch logici del data center NSX-T e porte di uplink per la connessione solo ai router logici Tier-0 del data center NSX-T. Vengono eseguiti al livello kernel dell'hypervisor per cui sono configurati e non come una macchina virtuale o fisica. Per questa progettazione, vengono creati uno o più gateway logici T-1 per le esigenze delle topologie scelte dal cliente.
 
-#### Annuncio di rotte da Tier 1 a Tier 0 
+#### Annuncio di rotte da Tier 1 a Tier 0
 {: #nsx-t-design-tier-1-tier-0}
 
 Per fornire la connettività a tre livelli tra le VM connesse agli switch logici collegate a gateway logici tier-1 diversi, è necessario abilitare l'annuncio di rotte tier-1 verso le tier-0. Non è necessario configurare un protocollo di instradamento o delle rotte statiche tra i router logici tier-1 e tier-0. NSX-T crea le rotte statiche automaticamente quando abiliti l'annuncio di rotte. Per questa progettazione, l'annuncio di rotte è sempre abilitato per tutti i gateway T-1 creati dall'automazione IC4V.
@@ -204,11 +204,11 @@ Carico di lavoro dal gateway T1 al T0 – Cluster edge virtuale
 Figura 4. Gateway edge T0 virtuale della topologia distribuita NSX-T
 ![Gateway edge T0 virtuale della topologia distribuita NSX-T](vcsv4radiagrams-topology-1.svg)
 
-La topologia 1 distribuita da IC4V è essenzialmente la stessa topologia distribuita con i gateway Edge e DLR NSX-V. Con NSX-T, non è presente alcuna configurazione del protocollo di instradamento dinamico tra T1 e T0. Viene utilizzato lo spazio di indirizzi IP RFC-1891 per la rete di sovrapposizione del carico di lavoro e di transito. Viene assegnato uno spazio dell'IP portatile pubblico e privato per l'utilizzo da parte del cliente. Viene assegnato uno spazio dell'IP portatile pubblico e privato {{site.data.keyword.cloud_notm}} designato al T0 per l'utilizzo da parte del cliente. 
+La topologia 1 distribuita da IC4V è essenzialmente la stessa topologia distribuita con i gateway Edge e DLR NSX-V. Con NSX-T, non è presente alcuna configurazione del protocollo di instradamento dinamico tra T1 e T0. Viene utilizzato lo spazio di indirizzi IP RFC-1891 per la rete di sovrapposizione del carico di lavoro e di transito. Viene assegnato uno spazio dell'IP portatile pubblico e privato per l'utilizzo da parte del cliente. Viene assegnato uno spazio dell'IP portatile pubblico e privato {{site.data.keyword.cloud_notm}} designato al T0 per l'utilizzo da parte del cliente.
 
 A partire da questa progettazione, hai l'opzione di non eliminare questi intervalli di IP se l'istanza vCenter Server viene disattivata ed eliminata.
 
-Carico di lavoro dal gateway T1 al T0 – Cluster edge fisico: 
+Carico di lavoro dal gateway T1 al T0 – Cluster edge fisico:
 
 Figura 5. Gateway edge T0 fisico della topologia distribuita NSX-T
 ![Gateway edge T0 fisico della topologia distribuita NSX-T](vcsv4radiagrams-topology-2.svg)
@@ -217,14 +217,14 @@ La topologia 2 distribuita è simile all'eccezione che sostituisce il cluster ed
 
 Vedi il documento o il link separato per la distinta base delle specifiche hardware e SO.
 
-Carico di lavoro con ICP al gateway T0 – Cluster edge virtuale: 
+Carico di lavoro con ICP al gateway T0 – Cluster edge virtuale:
 
 Figura 6. Topologia distribuita NSX-T con integrazione ICP NSX-T e gateway edge T0 virtuale
 ![Topologia distribuita NSX-T con integrazione ICP NSX-T e gateway edge T0 virtuale](vcsv4radiagrams-topology-3.svg)
 
 La topologia 3 distribuita contiene la topologia 1 con l'aggiunta di una distribuzione ICP che include l'integrazione NSX-T al posto di Calico, che è uno stack di rete predefinito all'interno di una distribuzione ICP. Il cliente può eseguire il provisioning di ulteriori spazi di nomi del contenitore all'interno di ICP, che automatizza la creazione di switch logici, sottorete di IP e istanze gateway T1 per ogni spazio dei nomi.
 
-Per una descrizione completa di come ICP funziona su vCenter Server, vedi la documentazione dell'architettura di ICP su vCenter Server. Viene assegnato uno spazio dell'IP portatile pubblico e privato {{site.data.keyword.cloud_notm}} designato ad ogni T0 per l'utilizzo da parte del cliente. 
+Per una descrizione completa di come ICP funziona su vCenter Server, vedi la documentazione dell'architettura di ICP su vCenter Server. Viene assegnato uno spazio dell'IP portatile pubblico e privato {{site.data.keyword.cloud_notm}} designato ad ogni T0 per l'utilizzo da parte del cliente.
 
 A partire da questa progettazione, hai l'opzione di non eliminare questi intervalli di IP se l'istanza vCenter Server viene disattivata ed eliminata.
 

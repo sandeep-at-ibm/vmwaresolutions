@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-20"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -32,7 +32,7 @@ Para crear una instancia de Object Storage, consulte
 {: #icos_ordering-bucket}
 
 Para crear un grupo, consulte
-[Paso 1: Crear algunos grupos para almacenar los datos](https://cloud.ibm.com/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-getting-started-console-#create-buckets). Siga los pasos y vuelva a esta sección para continuar con las tareas siguientes.
+[Crear algunos grupos para almacenar los datos](/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-getting-started-tutorial#gs-create-buckets). Siga los pasos y vuelva a esta sección para continuar con las tareas siguientes.
 
 ## Creación de credenciales de servicio
 {: #icos_ordering-service-cred}

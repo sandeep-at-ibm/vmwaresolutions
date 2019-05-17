@@ -4,21 +4,21 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
 # Installazione e configurazione dell'HCX sull'origine
 {: #hcx-archi-install-cfg-src}
 
-L'installazione in loco implica la distribuzione dell'applicazione di gestione HCX e la sua registrazione con il vCenter e uno o più endpoint cloud abilitati VCF/VCS HCX.
+L'installazione in loco implica la distribuzione del dispositivo di gestione HCX e la sua registrazione con il vCenter e uno o più endpoint cloud abilitati VCS HCX.
 
-## Installazione dell'applicazione HCX Manager
+## Installazione del dispositivo HCX Manager
 {: #hcx-archi-install-cfg-src-install-hma}
 
-Installa l'applicazione HCX Manager nel vCenter in loco.
+Installa il dispositivo HCX Manager nel vCenter in loco.
 
 1. Accedi a **My VMware** e scarica il file OVA di Hybrid Cloud Services dalla pagina di scaricamento del prodotto.
 2. Apri un browser e accedi al client web vSphere. Questa attività non può essere eseguita dal client vSphere. Visualizza la scheda **Home**.
@@ -53,7 +53,7 @@ Tabella 1. Valori di esempio per le proprietà di rete
 8. Controlla la pagina di bind vService. Fai clic su **Next** per continuare.
 9. Sulla pagina **Ready to complete**, segui questa procedura:
   * Seleziona la casella **Power on after deployment**.
-  * Controlla le impostazioni di Hybrid Cloud Services e fai clic su **Finish**. Potrebbero essere necessari diversi minuti per l'accensione dell'applicazione Hybrid Cloud Services.
+  * Controlla le impostazioni di Hybrid Cloud Services e fai clic su **Finish**. Potrebbero essere necessari diversi minuti per l'accensione del dispositivo Hybrid Cloud Services.
   * Per controllare lo stato, vai alla home page del client web e sulla scheda **Home**, vai a **Inventories** e fai clic su **Hosts and Clusters**. Espandi la gerarchia del data center e fai clic sulla VM (Virtual Machine) del servizio Hybrid Cloud Services per visualizzare un riepilogo nel pannello centrale.
   * Visualizza la scheda **Summary**, la console legge **Powered On** e il pulsante **Play** è verde.
 10. L'HCX Manager è acceso ed è pronto per essere registrato con il vCenter.

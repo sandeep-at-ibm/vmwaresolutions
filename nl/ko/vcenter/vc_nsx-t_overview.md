@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-21"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,7 +18,7 @@ subcollection: vmwaresolutions
 # vCenter Server with NSX-T 개요
 {: #vc_nsx-t_overview}
 
-VMware vCenter Server with NSX-T on {{site.data.keyword.cloud}}는 서비스로 VMware vSphere 스택을 제공하는 호스팅된 프라이빗 클라우드입니다. VMware 환경은 최소 세 개의 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} 맨 위에 빌드되고, 공유 네트워크 연결 스토리지와 전용 소프트웨어 정의 스토리지 옵션을 제공하며, VMware 환경에는 자동화 배치와 VMware NSX-T로 작동되며 관리하기 쉬운 로지컬 에지 방화벽의 구성이 포함됩니다.
+VMware vCenter Server with NSX-T on {{site.data.keyword.cloud}}는 서비스로 VMware vSphere 스택을 제공하는 호스팅된 프라이빗 클라우드입니다. VMware 환경은 최소 세 개의 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} 맨 위에 빌드되고, 공유 네트워크 연결 스토리지와 전용 소프트웨어 정의 스토리지 옵션을 제공하며, VMware 환경에는 자동화 배치와 VMware NSX-T로 작동되며 관리하기 쉬운 논리적 에지 방화벽의 구성이 포함됩니다.
 
 대부분의 경우 전체 환경은 하루 내에 프로비저닝할 수 있으며, 베어메탈 인프라는 필요에 따라 신속하고 탄력적으로 컴퓨팅 용량을 늘리거나 줄이도록 스케일링할 수 있습니다.
 
@@ -75,7 +75,7 @@ vCenter Server with NSX-T 인스턴스는 개념 증명(POC) 또는 샌드박스
 * **Skylake**: 선택한 CPU 모델 및 RAM 크기를 사용하는 두 개의 CPU Intel Skylake 세대 서버(Intel Xeon 4100/5100/6100 시리즈)  
 * **Broadwell**: 선택한 CPU 모델 및 RAM 크기를 사용하는 네 개의 Intel Broadwell 세대 서버(Intel Xeon E7-4800 시리즈)
 
-     vSAN 스토리지를 사용하려는 경우 구성에 4개의 {{site.data.keyword.baremetal_short}}가 필요합니다.
+vSAN 스토리지를 사용하려는 경우 구성에 최소 4개의 {{site.data.keyword.baremetal_short}}가 필요합니다.
 {:note}
 
 ### 네트워킹
@@ -87,7 +87,7 @@ vCenter Server with NSX-T 인스턴스는 개념 증명(POC) 또는 샌드박스
 * 계층 2(L2) 네트워크에 연결된 로컬 워크로드 간의 잠재적인 동쪽-서쪽 통신을 위한 T1 및 T0 라우터가 있는 하나의 오버레이 네트워크. 이는 수정, 빌드 또는 제거할 수 있는 샘플 라우팅 토폴로지로 배치됩니다.
 *  3개의 VMware NSX-T Edge Services Gateway:
   * 관리 네트워킹 토폴로지의 일부로 IBM에서 배치되는 아웃바운드 HTTP 관리 트래픽을 위한 1개의 보안 관리 서비스 VMware NSX ESG. 이 ESG는 자동화와 관련된 특정 외부 IBM 관리 컴포넌트와 통신하기 위해 IBM 관리 VM에서 사용됩니다. 자세한 정보는 [VM에서 고객 관리 NSX ESG를 사용하도록 네트워크 구성](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_esg_config)을 참조하십시오.
-  * 아웃바운드 및 인바운드 HTTPS 워크로드 트래픽에 대한 2개의 보안 고객 관리 VMware NSX ESG. 이 게이트웨이는 VPN 액세스 또는 공용 액세스를 제공하기 위해 사용자가 수정할 수 있는 템플리트로 IBM에 의해 배치됩니다. 자세한 정보는 [고객 관리 NSX Edge는 보안 문제점을 발생시킵니까?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq-customer-nsx)를 참조하십시오.
+  * 아웃바운드 및 인바운드 HTTPS 워크로드 트래픽에 대한 2개의 보안 고객 관리 VMware NSX ESG. 이 게이트웨이는 VPN 액세스 또는 공용 액세스를 제공하기 위해 사용자가 수정할 수 있는 템플리트로 IBM에 의해 배치됩니다. 자세한 정보는 [고객 관리 NSX Edge는 보안 문제점을 발생시킵니까?](/docs/services/vmwaresolutions?topic=vmware-solutions-faq#faq-customer-nsx)를 참조하십시오.
 
   이 ESG는 **mgmt-nsx-edge0**으로 이름이 지정되었습니다. 사용자는 이 ESG에 액세스할 수 없고 사용할 수 없습니다. 수정하는 경우 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 vCenter Server 인스턴스를 관리하지 못할 수 있습니다. 또한 방화벽을 사용하거나 외부 IBM 관리 컴포넌트에 대한 ESG 통신을 사용 안함으로 설정하면 {{site.data.keyword.vmwaresolutions_short}}를 사용할 수 없게 됩니다.
   {:important}
@@ -118,7 +118,7 @@ vSAN 옵션은 디스크 유형, 크기 및 양에 대한 다양한 옵션을 �
 
   3.8TB SSD(Solid State Disk) 드라이브는 데이터 센터에서 일반적으로 사용 가능하게 되는 경우 지원됩니다.
   {:note}
-* 고성능 Intel Optane 옵션은 총 10개의 용량 디스크에 대해 2개의 추가 용량 디스크 베이를 제공합니다. 이 옵션은 CPU 모델에 따라 달라집니다.
+* 고성능 Intel Optane 옵션은 총 12개의 용량 디스크에 대해 2개의 추가 용량 디스크 베이를 제공합니다. 이 옵션은 CPU 모델에 따라 달라집니다.
 
 #### NFS 스토리지
 {: #vc_nsx-t_overview-nfs-storage}
@@ -150,7 +150,7 @@ NFS 옵션을 선택한 경우에는 관리 컴포넌트용으로 하나의 2TB 
 ### 확장 노드를 위한 하드웨어
 {: #vc_nsx-t_overview-expansion-node-hardware}
 
-[vCenter Server with NSX-T 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_overview-specs)에 제시된 구성을 사용하는 하나의 Bare Metal Server.
+[vCenter Server with NSX-T 인스턴스의 기술 스펙](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_overview#vc_nsx-t_overview-specs)에 제시된 구성을 사용하는 하나의 Bare Metal Server.
 
 ### 확장 노드의 라이센스 및 요금
 {: #vc_nsx-t_overview-expansion-node-license-and-fee}
@@ -175,5 +175,5 @@ NFS 옵션을 선택한 경우에는 관리 컴포넌트용으로 하나의 2TB 
 * [vCenter Server 소프트웨어 명세서](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
 * [vCenter Server 인스턴스 계획](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [VMware vCenter Server with NSX-T 주문](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_orderinginstance)
-* [{{site.data.keyword.cloud_notm}} file and block storage](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage){:new_window}
+* [vCenter Server의 연결된 스토리지 ](/docs/services/vmwaresolutions/services?topic=vmware-solutions-storage-benefits#storage-benefits)
 * [파일 공유 용량 확장](/docs/infrastructure/FileStorage?topic=FileStorage-expandCapacity#expandCapacity)

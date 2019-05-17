@@ -30,7 +30,7 @@
    <text x="433" y="44">Nodi di lavoro ICP</text>
   </g>
   <g font-family="Helvetica" font-size="11px" font-weight="bold" text-anchor="middle">
-   <text x="430.5" y="284">CAM (Cloud Automation Manager) </text>
+   <text x="430.5" y="284">CAM (Cloud Automation Manager)</text>
   </g>
   <g fill="none" pointer-events="none" stroke-width="2">
    <path d="m248 315 148-214" stroke="#33f" stroke-miterlimit="10"/>

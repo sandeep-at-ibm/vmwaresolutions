@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-19"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -77,13 +77,13 @@ vCenter Server 部署會將已部署的 AD VSI 用作實例的 DNS 伺服器。�
 
 此設計利用 {{site.data.keyword.cloud_notm}} 基礎架構 NTP 伺服器。所有已部署的元件都已配置成利用這些 NTP 伺服器。為了讓憑證及 Active Directory 鑑別正常運作，使此設計內的所有元件都使用相同的 NTP 伺服器十分重要。
 
-圖 2. NTP 與 DNS 服務</br>
-![NTP 與 DNS 服務](vcsv4radiagrams-ra-servicesinterconnections.svg)
+圖 2. NTP 及 DNS 服務</br>
+![NTP 及 DNS 服務](vcsv4radiagrams-ra-servicesinterconnections.svg)
 
 ## 憑證管理中心服務
 {: #design_commonservice-cas}
 
-依預設，VMware vSphere 會使用位於 VMware Platform Services Controller 應用裝置之「VMware 憑證管理中心 (VMCA)」所簽署的 TLS 憑證。一般使用者裝置或瀏覽器不會信任這些憑證。將面對使用者的憑證取代為協力廠商或企業憑證管理中心 (CA) 所簽署的憑證，是一種安全最佳作法。機器對機器通訊的憑證可以保留作為 VMCA 所簽署的憑證，不過，建議您遵循組織的最佳作法，這通常涉及使用已識別的企業 CA。
+依預設，VMware vSphere 會使用位於 VMware Platform Services Controller 應用裝置之「VMware 憑證管理中心 (VMCA)」所簽署的 TLS 憑證。一般使用者裝置或瀏覽器不會信任這些憑證。將使用者面向的憑證取代為協力廠商或企業憑證管理中心 (CA) 所簽署的憑證，是一種安全最佳作法。機器對機器通訊的憑證可以保留作為 VMCA 所簽署的憑證，不過，建議您遵循組織的最佳作法，這通常涉及使用已識別的企業 CA。
 
 您可以使用此設計內的 Windows AD 伺服器來建立本端實例所簽署的憑證。不過，必要的話，您也可以選擇配置 CA 服務。
 

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -111,7 +111,7 @@ subcollection: vmwaresolutions
   * 在此过程中安装的 BYOL 许可证密钥的列表。（如果适用）为 vSphere 和 vSAN 集群提供带许可证密钥的实例和集群名称。
   * 在此过程中除去的租用许可证密钥的列表。（如果适用）为 vSphere 和 vSAN 集群提供带许可证密钥的实例和集群名称。
 
-  IBM 支持团队和运营团队会访问您的 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户的 vCenter 管理层，以验证租用许可证是否已除去。如果确定租用许可证已除去，即会取消 Hybridity Bundle 租用许可证费用。
+  IBM 支持团队和运营团队会访问您的 {{site.data.keyword.cloud_notm}} 基础架构帐户的 vCenter 管理层，以验证租用许可证是否已除去。如果确定租用许可证已除去，即会取消 Hybridity Bundle 租用许可证费用。
   {:note}
 
 ## 相关链接

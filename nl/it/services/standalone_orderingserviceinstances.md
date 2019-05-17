@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -21,7 +21,7 @@ Puoi ordinare un'istanza HCX on {{site.data.keyword.cloud}} in loco senza associ
 
 Assicurati di aver completato le seguenti attività:
 *  Hai configurato le credenziali dell'infrastruttura {{site.data.keyword.cloud_notm}} nella pagina **Impostazioni**. Per ulteriori informazioni, vedi [Account utente e impostazioni](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount).
-*  Hai esaminato tutte le considerazioni in [Considerazioni sull'istallazione delle istanze HCX on {{site.data.keyword.cloud_notm}} in loco](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_considerations).
+*  Hai esaminato tutte le considerazioni in [Considerazioni sull'installazione delle istanze HCX on {{site.data.keyword.cloud_notm}} in loco](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_considerations).
 
 ## Procedura per ordinare le istanze VMware HCX on IBM Cloud in loco
 {: #standalone_orderingserviceinstances-procedure}

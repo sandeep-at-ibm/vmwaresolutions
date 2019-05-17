@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -86,7 +86,9 @@ vCenter Server 配置會使用應用裝置隨附的本端內嵌 PostgreSQL 資�
 
 IBM CloudBuilder 是暫時的 {{site.data.keyword.cloud_notm}} VM 虛擬伺服器實例 (VSI)，其可用來啟動新的 VMware 實例並執行生命週期管理功能。需要整體 vCenter Server 實例管理時，即會部署它，而在處理程序完成時，即會將其破壞。
 
-透過 {{site.data.keyword.cloud_notm}} 物件儲存空間作為訊息佇列，IBM CloudDriver 可以配置為透過公用網路連線或（選擇性地）透過專用網路連線，與 {{site.data.keyword.vmwaresolutions_short}} 管理基礎架構進行通訊。IBM CloudDriver 是 IBM 開發的元件、使用者無法存取，而且具有下列屬性及功能：
+IBM CloudDriver 是暫時的 {{site.data.keyword.cloud_notm}} VM 虛擬伺服器實例 (VSI)，其會視需要針對第 2 天作業而部署，例如將主機、叢集或附加程式服務新增至 VMware 實例。
+
+CloudBuilder 和 CloudDriver 只會部署在透過專用訊息佇列連接至 IBM 管理平面的專用網路上。它們是 IBM 開發的元件、使用者無法存取，而且具有下列屬性及功能：
 
 - 在使用者帳戶內部署及配置 vCenter Server 實例。
 - 新增及移除 vCenter Server 叢集中的主機。

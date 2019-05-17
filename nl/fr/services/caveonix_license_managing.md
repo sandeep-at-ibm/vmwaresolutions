@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-12"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -64,7 +64,7 @@ Vous pouvez éditer les remarques relatives aux licences Caveonix RiskForesight 
 
 Vous pouvez supprimer les licences Caveonix RiskForesight lorsque vous n'en avez plus besoin.
 
-Avant de supprimer la licence Caveonix RiskForesight, prenez soin de passer en revue les remarques décrites dans la rubrique [Remarques relatives à la suppression de licences Caveonix RiskForesight](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_license_considerations-remove).
+Avant de supprimer la licence Caveonix RiskForesight, prenez soin de passer en revue les remarques décrites dans la rubrique [Remarques relatives à la suppression de licences Caveonix RiskForesight](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_license_considerations#caveonix_license_considerations-remove).
 {:note}
 
 1. Cliquez sur **Ressources** dans le panneau de navigation de gauche.

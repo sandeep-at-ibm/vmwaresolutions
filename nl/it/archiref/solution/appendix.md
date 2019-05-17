@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-13"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -23,10 +23,10 @@ Tabella 1. Requisiti di licenza
 
 Componente | Scopo | Licenza
 ----------|---------|-------------
-**vSphere** |Virtualizzazione di calcolo| vSphere 6.7 Enterprise Plus
+**vSphere** | Virtualizzazione di calcolo | vSphere 6.7 Enterprise Plus
 **vCenter Server** | Gestione infrastruttura | vCenter Server 6.7 Standard
-**NSX** |Virtualizzazione di rete| NSX Base for Service Providers 6.4
-**vSAN** |Virtualizzazione di archiviazione| vSAN 6.6 Advanced  
+**NSX** | Virtualizzazione di rete | NSX Base for Service Providers 6.4
+**vSAN** | Virtualizzazione di archiviazione | vSAN 6.6 Advanced  
 
 NSX Base for Service Providers edition è l'unica disponibile per i provider di servizi tramite VMware vCloud Air Network (vCAN). Le funzioni in questa edizione possono essere trovate nella seguente tabella.
 {:note}

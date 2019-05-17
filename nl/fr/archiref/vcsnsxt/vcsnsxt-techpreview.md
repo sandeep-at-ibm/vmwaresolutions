@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-19"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -121,7 +121,7 @@ Caractéristiques du produit NSX-V :
 -	Centré sur VMware.
 -	Conçu pour SDN au sein de vSphere (point unique pour la virtualisation de réseau dans l'interface utilisateur vSphere).
 -	Utilise le protocole d'encapsulation VXLAN (pris en charge par la plupart des fournisseurs tiers).
--	Les cartes NIC physiques ne sont pas la propriété de NSX-V ; elles sont affectées aux commutateurs distribués virtuels (vDS) SDDC-Dswitch-Private et SDDC-Dswitch-Public.
+-	Les cartes d'interface réseau physiques ne sont pas la propriété de NSX-V ; elles sont affectées aux commutateurs distribués virtuels (vDS) SDDC-Dswitch-Private et SDDC-Dswitch-Public.
 -	Différences de terminologie : routeur DLR (Distributed Logical Router) pour le trafic Est-Ouest et routeur ESG (Edge Service Gateway) pour le trafic Nord-Sud.
 
 #### Transformateurs NSX
@@ -140,7 +140,7 @@ Points forts de NSX-T
     - Annonces de routage au niveau du routeur de niveau 1
     - Redistribution de routage au niveau du routeur de niveau 0
 -	Utilise le protocole d'encapsulation Geneve.
--	Les cartes NIC sont la propriété du noeud de transport NSX-T et affectées à N-VDS.
+-	Les cartes d'interface réseau sont la propriété du noeud de transport NSX-T et affectées à N-VDS.
 -	Différences de terminologie : routeur logique de niveau 1 pour le trafic Est-Ouest et routeur logique de niveau 0 pour le trafic Nord-Sud.
 
 ## Calico
@@ -220,7 +220,7 @@ Figure 6. Micro-segmentation NSX-T
 
 NSX-V for vSphere (NSX-V) a été conçu pour les déploiements vSphere uniquement et son architecture est telle qu'une seule plateforme NSX-V Manager est associée à une seule instance VMware vCenter Server. En fait, si la virtualisation de réseau est requise dans votre environnement VMware, NSX-V est probablement la solution appropriée.
 
-NSX Transformers (NSX-T) est une solution autonome qui peut prendre en charge plusieurs environnements vCenter et vSphere, mais elle prend aussi en charge KVM, le cloud public, les conteneurs, et peut être intégrée dans des infrastructures, telles que IBM IKS et ICP, Redhat OpenShift, Pivotal, et bien d'autres. Vous avez ainsi la possibilité de gérer votre mise en réseau définie par logiciel sur plusieurs hyperviseurs, conteneurs et clouds à l'aide d'un même jeu d'outils.
+NSX Transformers (NSX-T) est une solution autonome qui peut prendre en charge plusieurs environnements vCenter et vSphere, mais elle prend aussi en charge KVM, le cloud public, les conteneurs, et peut être intégrée dans des infrastructures, telles que {{site.data.keyword.containerlong_notm}} et {{site.data.keyword.icpfull_notm}}, Redhat OpenShift, Pivotal, et bien d'autres. Vous avez ainsi la possibilité de gérer votre mise en réseau définie par logiciel sur plusieurs hyperviseurs, conteneurs et clouds à l'aide d'un même jeu d'outils.
 
 #### Evolutivité de réseau avec NSX-V
 {: #vcsnsxt-techpreview-net-scalability-nsx-v}
@@ -245,7 +245,7 @@ VMware NSX-T fournit les mêmes fonctions que NSX-V dans un environnement VMware
 #### Intégration NSX-V
 {: #vcsnsxt-techpreview-integration-nsx-v}
 
-Pour l'intégration NSX-V à Kubernetes, l'automatisation d'{{site.data.keyword.cloud_notm}} installe {{site.data.keyword.icpfull_notm}} sur une instance vCenter. Un commutateur/réseau VXLAN dédié, un routeur DLR et une passerelle ESG sont créés spécifiquement pour le réseau Kubernetes. Le réseau dissocié du jour 1 pour {{site.data.keyword.icpfull_notm}} est un sous-réseau 192.168.20.0/24 avec une configuration de routage via la passerelle ESG pour un accès au réseau sous-jacent.
+Pour l'intégration NSX-V à Kubernetes, l'automatisation {{site.data.keyword.cloud_notm}} installe {{site.data.keyword.icpfull_notm}} sur une instance vCenter. Un commutateur/réseau VXLAN dédié, un routeur DLR et une passerelle ESG sont créés spécifiquement pour le réseau Kubernetes. Le réseau dissocié du jour 1 pour {{site.data.keyword.icpfull_notm}} est un sous-réseau 192.168.20.0/24 avec une configuration de routage via la passerelle ESG pour un accès au réseau sous-jacent.
 
 Figure 7. NSX-V et Kubernetes
 </br>

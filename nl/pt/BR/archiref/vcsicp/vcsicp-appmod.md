@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-15"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -25,7 +25,7 @@ Essa arquitetura híbrida permite que o Acme Skateboards atinja os objetivos a s
 - Usar o {{site.data.keyword.cloud_notm}} Automation Manager (CAM) para o infrastructure as code (IaC) de script para editar e orquestrar serviços que são feitos por meio de MVs e contêineres para integração às suas cadeias de ferramentas do DevOps e sua solução ITSM.
 
 A arquitetura de referência tem os componentes principais a seguir:
-- **Virtualização no local** - um cluster do VMware que hospeda atualmente as MVs do Acme Skateboards. Essas MVs hospedam atualmente os aplicativos a serem modernizados. Esse cluster é necessário para atender aos pré-requisitos da [arquitetura de solução do VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro) para que ele possa executar o HCX. O HCX amplia as redes no local para o {{site.data.keyword.cloud_notm}}, permitindo que os clientes migrem MVs para a instância do VMware vCenter Server on {{site.data.keyword.cloud_notm}} que está em execução no {{site.data.keyword.cloud_notm}} e de volta se necessário.
+- **Virtualização no local** - um cluster do VMware que hospeda atualmente as MVs do Acme Skateboards. Essas MVs hospedam atualmente os aplicativos a serem modernizados. Esse cluster é necessário para atender aos pré-requisitos da [arquitetura da solução VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro) para que ele possa executar o HCX. O HCX amplia as redes no local para o {{site.data.keyword.cloud_notm}}, permitindo que os clientes migrem MVs para a instância do VMware vCenter Server on {{site.data.keyword.cloud_notm}} que está em execução no {{site.data.keyword.cloud_notm}} e de volta se necessário.
 
 - **{{site.data.keyword.vmwaresolutions_short}}** – a instância do vCenter Server fornece os blocos de construção fundamentais do VMware, como vSphere, vCenter Server, NSX-V e opções de armazenamento, incluindo o armazenamento do vSAN ou do Endurance do {{site.data.keyword.cloud_notm}}, necessários para implementar automaticamente uma solução VMware Software Defined Data Center (SDDC). O cluster do VMware é o destino para as MVs migradas e alguns dos aplicativos modernizados em contêineres hospedados no {{site.data.keyword.icpfull_notm}}. A seguir estão os componentes principais no vCenter Server:
     - **NSX-V** – o NSX-V fornece a camada de virtualização de rede no VCS que fornece uma sobreposição de rede para MVs da Acme Skateboards. O NSX-V ativa o BYOIP e isola as redes de carga de trabalho das redes do IBM Cloud. O NSX-V é programado pelo HCX para criar as redes ampliadas pela Acme Skateboards no local.

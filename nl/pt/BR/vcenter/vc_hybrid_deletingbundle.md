@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -23,14 +23,14 @@ Para remover a licença do Hybridity Bundle de sua instância do vCenter Server,
 Fazer downgrade de sua licença pode fazer com que a instância do vCenter Server falhe. É possível optar por fazer downgrade de uma licença por sua conta e risco, mas primeiro considere as funções que não estão disponíveis ao fazer o downgrade. Para obter mais informações, consulte [Gráfico de comparação para edições do componente VMware](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution-appendix).
 {:important}
 
-## Considerações importantes antes de remover o Hybridity Bundle de um ambiente multisite
+## Considerações importantes antes de remover o Hybridity Bundle de um ambiente multissite
 {: #vc_hybrid_deletingbundle-considerations}
 
-Revise as considerações a seguir antes de remover o Hybridity Bundle de um ambiente multisite:
+Revise as considerações a seguir antes de remover o Hybridity Bundle de um ambiente multissite:
 
-* Deve-se aplicar licenças BYOL a todas as implementações multisite antes de remover licenças de aluguel.
-* Deve-se combinar licenças do VMware NSX e ter capacidade suficiente para usar em todas as implementações multisite.
-* Deve-se criar um único chamado de suporte para remover o Hybridity Bundle de todas as implementações multisite.
+* Deve-se aplicar licenças BYOL a todas as implementações multissite antes de remover licenças de aluguel.
+* Deve-se combinar licenças do VMware NSX e ter capacidade suficiente para usar em todas as implementações multissite.
+* Deve-se criar um único chamado de suporte para remover o Hybridity Bundle de todas as implementações multissite.
 
 Ao remover o Hybridity Bundle de um ambiente multisite, licenças BYOL são aplicadas. É sua responsabilidade assegurar que as edições de licença sejam consistentes em todos os sites na configuração multisite.
 {:note}
@@ -110,7 +110,7 @@ Verifique os requisitos a seguir antes de remover o Hybridity Bundle:
   * Uma lista das chaves de licença de BYOL instaladas neste procedimento. Quando aplicável, forneça a instância e o nome do cluster com chaves de licença para o vSphere e os clusters vSAN.
   * Uma lista das chaves de licença de aluguel removidas neste procedimento. Quando aplicável, forneça a instância e o nome do cluster com chaves de licença para clusters vSphere e vSAN.
 
-  As equipes de Suporte e Operações da IBM acessam a camada de gerenciamento do vCenter de sua conta de infraestrutura do {{site.data.keyword.cloud_notm}} (SoftLayer) para verificar se as licenças de aluguel foram removidas antes de cancelar os encargos de licença de aluguel do Hybridity Bundle.
+  As equipes de Suporte e Operações da IBM acessam a camada de gerenciamento do vCenter da sua conta de infraestrutura do {{site.data.keyword.cloud_notm}} para verificar se as licenças de aluguel foram removidas antes de cancelar os encargos de licença de aluguel do Hybridity Bundle.
   {:note}
 
 ## Links relacionados

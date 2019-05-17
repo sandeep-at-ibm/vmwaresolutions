@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-04-03"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -15,7 +15,7 @@ subcollection: vmwaresolutions
 {:note: .note}
 {:important: .important}
 
-# Conception d'infrastructure de stockage connecté
+# Conception de l'infrastructure de stockage connecté
 {: #storage-infra-design}
 
 {{site.data.keyword.vmwaresolutions_full}} fournit la technologie VMware qui est déployée de façon automatisée dans {{site.data.keyword.CloudDataCents_notm}} partout dans le monde. Dans le portefeuille de solutions {{site.data.keyword.cloud_notm}}, l'offre VMware vCenter Server on {{site.data.keyword.cloud_notm}} de base comprend 10 clusters contenant chacun jusqu'à 59 hôtes vSphere, un contrôleur PSC (Platform Services Controller) et un dispositif vCenter Server Appliance pouvant gérer jusqu'à 400 hôtes et 4 000 machines virtuelles.
@@ -28,12 +28,12 @@ Figure 1. Architecture de haut niveau de stockage connecté sur {{site.data.keyw
 
 ![Architecture de stockage connecté](../solution/vcsv4radiagrams-ra-nfs-shares.svg "Architecture de haut niveau de stockage connecté sur IBM Cloud")
 
-## Conception d'infrastructure physique
+## Conception de l'infrastructure physique
 {: #storage-infra-design-phys-infra-design}
 
 L'infrastructure physique est constituée de trois composants principaux, le calcul physique, le stockage physique et le réseau physique. L'infrastructure physique inclut le réseau de services {{site.data.keyword.cloud_notm}} et le stockage physique qui est utilisé par l'infrastructure.
 
-## Conception de réseau physique
+## Conception du réseau physique
 {: #storage-infra-design-phys-net-design}
 
 La mise en réseau physique est gérée par {{site.data.keyword.cloud_notm}}. La section ci-après décrit le réseau physique qui est fourni par {{site.data.keyword.cloud_notm}} lorsqu'il est associé au stockage connecté.
@@ -43,7 +43,7 @@ La mise en réseau physique est gérée par {{site.data.keyword.cloud_notm}}. La
 
 Le réseau physique d'{{site.data.keyword.cloud_notm}} est séparé en trois réseaux distincts, un réseau public, un réseau privé et un réseau de gestion. Pour plus d'informations sur le réseau public, le réseau privé et le réseau de gestion, voir [Présentation de la solution](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview).
 
-Pour plus d'informations sur le réseau {{site.data.keyword.cloud_notm}}, voir [The {{site.data.keyword.cloud_notm}} network](https://www.ibm.com/cloud-computing/bluemix/our-network){:new_window}.
+Pour plus d'informations sur le réseau {{site.data.keyword.cloud_notm}}, voir [Centres de données {{site.data.keyword.cloud_notm}} dans le monde](https://www.ibm.com/cloud/data-centers/){:new_window}.
 
 Consultez les informations suivantes pour obtenir une description du réseau des services faisant partie du réseau privé.
 
@@ -55,9 +55,9 @@ Consultez les informations suivantes pour obtenir une description du réseau des
 ### Réseaux locaux virtuels
 {: #storage-infra-design-vlans}
 
-Pour plus d'informations sur les réseaux virtuels locaux, voir la section _Conception de réseau physique_ dans [Conception d'infrastructure physique](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_physicalinfrastructure).
+Pour plus d'informations sur les réseaux virtuels locaux, voir la section _Conception du réseau physique_ dans [Conception de l'infrastructure physique](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_physicalinfrastructure).
 
-## Conception de stockage physique
+## Conception du stockage physique
 {: #storage-infra-design-phys-storage-design}
 
 La section ci-après présente la configuration de l'unité de stockage connecté présente dans {{site.data.keyword.cloud_notm}}. L'unité de stockage connecté complète la solution vCenter Server existante. Par conséquent, les disques connectés localement qui sont internes aux hôtes physiques ne sont pas présentés.

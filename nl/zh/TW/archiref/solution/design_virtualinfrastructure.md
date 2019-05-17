@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-04-09"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -35,7 +35,7 @@ vSphere ESXi 配置包含下列層面：
 
 下表概述每個層面的規格。在配置及安裝 ESXi 之後，會將主機新增至 VMware vCenter Server，且會從該處管理該主機。
 
-此設計可讓您透過「直接主控台使用者介面 (DCUI)」、ESXi Shell 及「安全 Shell (SSH)」來存取虛擬主機。
+此設計可讓您透過「直接主控台使用者介面 (DCUI)」及 vSphere Web Client 來存取虛擬主機。「安全 Shell (SSH)」及 ESXi Shell 會在佈建為最佳作法之後停用。
 
 依預設，唯一可以直接登入的使用者就是主機實體機器的 _root_ 及 _ibmvmadmin_ 使用者。管理者可以從 Microsoft Active Directory (MSAD) 網域新增使用者，讓使用者能夠存取主機。vCenter Server 解決方案設計中的所有主機都會配置為與中央 NTP 伺服器同步化。
 
@@ -45,7 +45,7 @@ vSphere ESXi 配置包含下列層面：
 |:---------------------- |:----------------------- |
 | ESXi 開機位置          | 使用 RAID-1 中配置的本端磁碟 |
 | 時間同步化             | 使用 {{site.data.keyword.cloud}} NTP 伺服器 |
-| 主機存取               | 支援 DCUI、ESXi Shell 或 SSH（如果已啟用）|
+| 主機存取               | 支援 DCUI。支援 SSH 及 ESXi Shell，但依預設不會啟用 |
 | 使用者存取             | 本端鑑別及 MSAD |
 | 網域名稱解析 |使用 DNS（如[共用服務設計](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_commonservice)所述）。|
 | EVC 模式 | Skylake（僅適用於“greenfield”vSphere 6.7 部署）|
@@ -58,7 +58,7 @@ vSphere 叢集可存放虛擬機器 (VM)，它們會管理 vCenter Server 實例
 您可以在起始部署期間或起始部署後，擴增為最多 59 部 ESXi 主機。
 
 若要支援更多使用者工作負載，您可以執行下列動作來調整環境：  
-* 部署現有叢集的其他運算主機
+* 在現有叢集中部署其他運算主機
 * 部署相同 vCenter Server Appliance 所管理的其他叢集
 * 部署新的 vCenter Server 實例，搭配它們自己的 vCenter Server Appliance
 
@@ -77,7 +77,7 @@ vSphere 叢集可存放虛擬機器 (VM)，它們會管理 vCenter Server 實例
 
 vSAN 會採用下列元件：
 * 兩個磁碟群組的 vSAN 設計；每個磁碟群組各有兩個以上的磁碟。群組裡大小最小的一個 SSD 或 NVMe 會充當快取層級，而其餘的 SSD 則充當容量層級。
-* 除了 RAID–0 陣列中每個磁碟機配置的兩個作業系統磁碟機之外，每個磁碟機都會配置機載 RAID 控制器。
+* 針對兩個 OS 磁碟機除外的每個磁碟機，在 RAID-0 陣列中配置機載 RAID 控制器。
 * 會從所有儲存空間建立單一 vSAN 資料儲存庫。
 
 可用的 vSAN 特性取決於您在訂購實例時所選取的授權版本。如需相關資訊，請參閱 [VMware vSAN 版本比較](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution-appendix#vmware-vsan-edition-comparison)。
@@ -121,9 +121,9 @@ vSAN 設定是根據在 {{site.data.keyword.cloud_notm}} 內部署 VMware 解決
 
 與 NFS 第 3 版連接儲存空間不同，iSCSI 連接儲存空間支援所有已配置 NIC 卡埠與目標埠之間的主動-主動路徑。由於這個原因，可以達到更高的傳輸量，因此這是 NFS 連接儲存空間所需的替代方案。代價是更為複雜。
 
-「{{site.data.keyword.cloud_notm}} 耐久性」區塊儲存空間僅支援每個 LUN 最多連接八部主機。這是用來說明預計 Q1 變更為「{{site.data.keyword.cloud_notm}} 耐久性」儲存空間時將新增至 vCenter Server 的功能，以容許最多連接 64 部主機或 iSCSI 起始器，因為每部 ESXi 主機至少將有兩個起始器。
+在使用 VMware 時，「{{site.data.keyword.cloud_notm}} 耐久性」區塊儲存空間支援每個 LUN 最多連接 64 個 IP，而根據此設計最多支援 32 部主機。
 
-有一個 2-TB iSCSI LUN 會連接至 vCenter Server，以使用管理元件，而且至少會再配置一個 iSCSI LUN，以供客戶工作負載使用。此儲存空間會根據每個 LUN 格式化為 VMFS 6.x 檔案系統。
+有一個 2-TB iSCSI LUN 會連接至 vSphere 叢集，以使用管理元件，而且至少會再配置一個 iSCSI LUN，以供客戶工作負載使用。此儲存空間會根據每個 LUN 格式化為 VMFS 6.x 檔案系統。
 
 ### iSCSI 的虛擬網路設定
 {: #design_virtualinfrastructure-setup-iscsi}
@@ -161,9 +161,9 @@ iSCSI LUN 是根據 LUN 而佈建的，並格式化為單一檔案 VMFS 檔案�
 
 除了控制器之外，{{site.data.keyword.cloud_notm}} 自動化還會準備具有 NSX VIBS 的已部署 vSphere 主機，以便可以透過「VXLAN 通道端點 (VTEP)」來使用虛擬化網路。VTEP 會獲指派**專用 A** 可攜式 IP 位址範圍中的 VLAN 支援 IP 位址，而這個 IP 位址範圍是指定給 [VLAN](/docs/services/vmwaresolutions/services?topic=vmware-solutions-design_physicalinfrastructure#design_physicalinfrastructure-vlans) 中列出的 VTEP。VXLAN 資料流量位於未加上標籤的 VLAN，並且會指派給專用 vDS。
 
-然後，會指派區段 ID 儲存區，並將叢集裡的主機新增至傳輸區域。傳輸區域中只會使用單點播送，因為 {{site.data.keyword.cloud_notm}} 內未配置「網際網路群組管理通訊協定 (IGMP)」探查。根據 VMW 最佳作法，每部主機會在相同的 VTEP 專用子網路上配置兩個 vTEP 核心埠。
+然後，會指派區段 ID 儲存區，並將叢集裡的主機新增至傳輸區域。傳輸區域中只會使用單點播送，因為 {{site.data.keyword.cloud_notm}} 內未配置「網際網路群組管理通訊協定 (IGMP)」探查。根據 VMW 最佳作法，每部主機會在相同的 VTEP 專用子網路上配置兩個 VTEP 核心埠。
 
-之後，即會部署 NSX Edge Services Gateway 配對。無論如何，都會將一個閘道配對用於來自位於專用網路之自動化元件的出埠資料流量。系統會部署稱為客戶管理邊緣的第二個閘道，並為其配置連往公用網路的上行鏈路，以及指派給專用網路的介面。如需已部署為解決方案一部分之 NSX Edge Services Gateway 的相關資訊，請參閱 [NSX Edge Services Gateway 解決方案架構](/docs/services/vmwaresolutions/services?topic=vmware-solutions-nsx_overview#nsx_overview)。
+之後，如果實例具有公用網路介面，則會部署兩個 NSX Edge Services Gateway 配對。一個閘道配對用於來自位於專用網路之自動化元件的出埠資料流量。系統會部署稱為客戶管理邊緣的第二個閘道，並為其配置連往公用網路的上行鏈路，以及指派給專用網路的介面。如需已部署為解決方案一部分之 NSX Edge Services Gateway 的相關資訊，請參閱 [NSX Edge Services Gateway 解決方案架構](/docs/services/vmwaresolutions/services?topic=vmware-solutions-nsx_overview#nsx_overview)。
 
 雲端管理者可以配置任何必要的 NSX 元件，例如「分散式邏輯路由器 (DLR)」、邏輯交換器及防火牆。可用的 NSX 特性取決於您在訂購實例時所選擇的 NSX 授權版本。如需相關資訊，請參閱 [VMware NSX 版本比較](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution-appendix#vmware-nsx-edition-comparison)。
 
@@ -249,7 +249,7 @@ SDDC-DPortGroup-iSCSI-B|來源虛擬埠| 作用中：0|VLAN 2
 管理| SDDC-DPortGroup-Mgmt |管理資料流量|1500（預設值）
  vMotion | SDDC-DPortGroup-vMotion |vMotion 資料流量|9000
  VTEP |NSX 產生的|-|9000
- VSAN | SDDC-DPortGroup-VSAN | VSAN |9000
+vSAN| SDDC-DPortGroup-VSAN |vSAN|9000
  NAS | SDDC-DPortGroup-NFS | NAS |9000
 iSCSI|SDDC-DPortGroup-iSCSI-A|iSCSI|9000
 iSCSI|SDDC-DPortGroup-iSCSI-B|iSCSI|9000
@@ -274,6 +274,22 @@ iSCSI|SDDC-DPortGroup-iSCSI-B|iSCSI|9000
 
 圖 5. 已部署的範例客戶 NSX 拓蹼
 ![已部署的範例客戶 NSX 拓蹼](vcsv4radiagrams-ra-vcs-nsx-topology-customer-example.svg)
+
+## 公用網路連線功能
+
+有各種原因，您可能需要實例的公用網路連線功能。這可能包括針對您的工作負載存取公用更新服務或其他公用服務（例如地理定位資料庫或氣象資料）。您的虛擬化管理及附加程式服務也可能需要或受益於公用連線功能。例如，vCenter 可以更新其 HCL 資料庫，並透過公用網路取得 [VMware Update Manager (VUM)](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-intro) 更新項目。Zerto、Veeam、VMware HCX、F5 BIG-IP 及 FortiGate-VM 全都將公用網路連線功能用於其產品授權、啟動或用量報告的某一部分。除此之外，您可能基於抄寫目的使用公用網路上的通道，連線至內部部署資料中心。
+
+通常，透過管理或客戶 Edge Services Gateway (ESG)，選擇性地將這些通訊遞送及 NAT 至公用網路。不過，您可能有額外的安全需求，或偏好使用 Proxy 來簡化通訊的路徑。此外，如果您已在公用介面停用的情況下部署實例，則將無法使用 ESG 來遞送至公用網路。
+
+此架構容許使用下列選項將資料流量遞送或 Proxy 至公用網路：
+
+方法|說明       |限制
+--|--|--
+虛擬化閘道|跨專用及公用網路部署虛擬化閘道（例如，NSX ESG、F5 BIG-IP、FortiGate-VM，或您選擇的虛擬應用裝置）。在來源系統上配置遞送（例如，vCenter、Zerto、您的工作量），僅將公用網路資料流量導向至閘道，並根據您的需求配置閘道。|僅適用於已啟用公用介面的實例。此配置同時容許出埠及入埠資料流量型樣。
+搭配 Proxy 的虛擬化閘道|如上所述部署虛擬化閘道。在此閘道後面，[部署 Proxy 伺服器](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-init-config#vum-init-config)，並配置您的服務及應用程式，以透過此 Proxy 連接至公用網路。|僅適用於已啟用公用介面的實例。出埠資料流量型樣可以使用 Proxy，但必須在閘道上管理入埠資料流量型樣。
+硬體閘道|將[硬體閘道應用裝置](https://cloud.ibm.com/catalog/infrastructure/gateway-appliance)部署至您的管理 VLAN。根據您的需求，將閘道配置為以 NAT 出埠連接至公用網路。|適用於所有已啟用或未啟用公用介面的實例。此配置同時容許出埠及入埠資料流量型樣。
+搭配 Proxy 的硬體閘道|如上所述部署閘道應用裝置。在此閘道後面，[部署 Proxy 伺服器](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-init-config#vum-init-config)，並配置您的服務及應用程式，以透過此 Proxy 連接至公用網路。|適用於所有已啟用或未啟用公用介面的實例。出埠資料流量型樣可以使用 Proxy，但入埠資料流量型樣必須由閘道管理。
+負載平衡器|IBM Cloud 會提供數個[負載平衡器服務](https://cloud.ibm.com/catalog/infrastructure/load-balancer-group)，您可以用來提供對應用程式的入埠網路存取權。|適用於所有實例，但限制為入埠資料流量型樣。
 
 ## 相關鏈結
 {: #design_virtualinfrastructure-related}

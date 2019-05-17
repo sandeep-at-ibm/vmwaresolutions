@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-18"
+lastupdated: "2019-04-18"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -25,11 +25,12 @@ subcollection: vmwaresolutions
 ## vCenter Server with Hybridity Bundle 인스턴스에 클러스터 추가
 {: #vc_hybrid_addingviewingclusters-adding}
 
-인스턴스에 추가할 수 있는 클러스터의 수는 인스턴스 버전에 따라 달라집니다.
-* V2.5 이상에 배치된(또는 업그레이드된) 인스턴스의 경우에는 클러스터, 호스트 및 VM 수가 추가할 수 있는 클러스터 수의 최대 제한을 결정합니다. 배치를 위해 VMware 크기 조정 가이드라인 및 제한사항을 계속 준수해야 합니다.
-* V2.3 이상에 배치된(또는 업그레이드된) 인스턴스의 경우에는 최대 10개의 클러스터를 추가할 수 있습니다.
+### 클러스터를 추가하기 전에
+{: #vc_hybrid_addingviewingclusters-before-add}
 
-최대 제한에 대한 자세한 정보는 [VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window}를 참조하십시오.
+* 가능하면 {{site.data.keyword.vmwaresolutions_full}} 콘솔을 사용하여 클러스터를 추가하십시오. VMware vSphere Web Client에서 수행하는 변경사항은 {{site.data.keyword.vmwaresolutions_short}} 콘솔과 동기화되지 않기 때문입니다. 따라서 온프레미스 클러스터 서버 또는 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 관리할 수 없거나 관리하지 않을 클러스터에 대해서만 클러스터를 vCenter Server에 추가하십시오. 
+* V2.5 이상에 배치된(또는 업그레이드된) 인스턴스의 경우에는 클러스터, 호스트 및 VM 수가 추가할 수 있는 클러스터 수의 최대 제한을 결정합니다. 배치를 위해 VMware 크기 조정 가이드라인 및 제한사항을 계속 준수해야 합니다. 최대 제한에 대한 자세한 정보는 [VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window}를 참조하십시오.
+* V2.3 및 V2.4에 배치된(또는 업그레이드된) 인스턴스의 경우에는 최대 10개의 클러스터를 추가할 수 있습니다.
 
 ### 시스템 설정
 {: #vc_hybrid_addingviewingclusters-adding-sys-settings}
@@ -48,7 +49,7 @@ vCenter Server with Hybridity Bundle 인스턴스에 클러스터를 추가할 �
 #### 데이터 센터 위치
 {: #vc_hybrid_addingviewingclusters-adding-dc-location}
 
-기본적으로 클러스터의 {{site.data.keyword.CloudDataCent_notm}} 위치는 vCenter Server 인스턴스의 {{site.data.keyword.CloudDataCent_notm}}로 설정됩니다. 배치된 인스턴스와 다른 {{site.data.keyword.CloudDataCent_notm}}에 클러스터를 배치할 수 있으나 두 {{site.data.keyword.CloudDataCents_notm}} 간의 네트워크 대기 시간이 150밀리초 미만인지 확인해야 합니다. 네트워크 대기 시간을 확인하려면 [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}와 같은 도구를 사용하십시오.
+기본적으로 클러스터의 {{site.data.keyword.CloudDataCent_notm}} 위치는 vCenter Server 인스턴스의 {{site.data.keyword.CloudDataCent_notm}}로 설정됩니다. 배치된 인스턴스와 다른 {{site.data.keyword.CloudDataCent_notm}}에 클러스터를 배치할 수 있으나 두 {{site.data.keyword.CloudDataCents_notm}} 간의 네트워크 대기 시간이 150밀리초 미만인지 확인해야 합니다. 네트워크 대기 시간을 확인하기 위해 [Looking Glass](/docs/infrastructure/network-tools?topic=network-tools-about-looking-glass#about-looking-glass)와 같은 도구를 사용하십시오. 
 
 클러스터를 다른 {{site.data.keyword.CloudDataCent_notm}} 또는 {{site.data.keyword.cloud_notm}} 인프라 팟(Pod)에 배치하는 경우에는 주문된 {{site.data.keyword.baremetal_short}}와 함께 사용할 세 개의 추가 VLAN이 주문됩니다.
 
@@ -79,20 +80,14 @@ vCenter Server with Hybridity Bundle 인스턴스에 클러스터를 추가할 �
 
 | CPU 모델 옵션        |RAM 옵션       |
 |:------------- |:------------- |
-| 듀얼 Intel Xeon E5-2620 v4 / 총 16개의 코어, 2.1GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
-| 듀얼 Intel Xeon E5-2650 v4 / 총 24개의 코어, 2.2GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
-| 듀얼 Intel Xeon E5-2690 v4 / 총 28개의 코어, 2.6GHz |64GB, 128GB, 256GB, 512GB, 768GB, 1.5TB |
 | 쿼드 Intel Xeon E7-4820 v4 / 총 40개의 코어, 1.9GHz |128GB, 256GB, 512GB, 1TB, 2TB, 3TB |
 | 쿼드 Intel Xeon E7-4850 v4 / 총 64개의 코어, 2.2GHz |128GB, 256GB, 512GB, 1TB, 2TB, 3TB |
 
 #### Bare Metal Server 수
 {: #vc_hybrid_addingviewingclusters-adding-bare-metal-number}
 
-하나의 클러스터에 대해 두 개 이상의 {{site.data.keyword.baremetal_short}}가 필요합니다.
-
-클러스터에 대해 최대 59개의 {{site.data.keyword.baremetal_short}}를 추가할 수 있으며, 한 번에 1 - 59개의 ESXi 서버를 추가할 수 있습니다.
-
-배치 후 최대 네 개의 추가 클러스터를 작성할 수 있습니다. VMware vSAN 스토리지의 경우에는 초기 클러스터 및 사후 배치 클러스터 둘 다를 위해 네 개의 서버가 필요합니다.
+* 주문하는 모든 서버는 동일한 구성을 갖습니다.
+* 4 - 59개의 서버를 주문할 수 있습니다. 
 
 ### vSAN 스토리지 설정
 {: #vc_hybrid_addingviewingclusters-adding-vsan-storage-settings}
@@ -100,9 +95,9 @@ vCenter Server with Hybridity Bundle 인스턴스에 클러스터를 추가할 �
 vCenter Server with Hybridity Bundle 인스턴스 주문에는 VMware vSAN 6.6이 포함됩니다. 다음 vSAN 옵션을 지정하십시오.
 * **vSAN 용량 디스크의 디스크 유형 및 크기**: 필요한 용량 디스크에 대한 옵션을 선택하십시오.
 * **vSAN 용량 디스크 수**: 추가할 용량 디스크 수를 지정하십시오.
-* 용량 디스크를 8개 한계 이상으로 추가하려는 경우 **고성능 Intel Optane** 상자를 선택하십시오. 이 옵션은 총 10개 용량 디스크에 대해 2개의 추가 용량 디스크 베이를 제공하며 짧은 대기 시간과 높은 IOPS 처리량이 필요한 워크로드에 유용합니다.
+* 용량 디스크를 10개 한계 이상으로 추가하려는 경우 **고성능 Intel Optane** 상자를 선택하십시오. 이 옵션은 총 12개 용량 디스크에 대해 2개의 추가 용량 디스크 베이를 제공하며 짧은 대기 시간과 높은 IOPS 처리량이 필요한 워크로드에 유용합니다.
 
-  **고성능 Intel Optane** 옵션은 Skylake CPU 모델 듀얼 Intel Xeon Gold 5120 및 듀얼 Intel Xeon Gold 6140에 대해서만 사용 가능합니다.
+  **고성능 Intel Optane** 옵션은 Skylake CPU 모델에 대해서만 사용 가능합니다.
   {:note}
 
 * **vSAN 캐시 디스크의 디스크 유형** 및 **vSAN 캐시 디스크 수** 값을 검토하십시오. 이러한 값은 **고성능 Intel Optane** 상자를 선택했는지 여부에 따라 달라집니다.
@@ -124,7 +119,6 @@ vCenter Server with Hybridity Bundle 인스턴스 주문에는 VMware vSAN 6.6�
 * F5 on {{site.data.keyword.cloud_notm}}
 * Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
 * Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
-* Zerto on {{site.data.keyword.cloud_notm}}
 
 ### 주문 요약
 {: #vc_hybrid_addingviewingclusters-adding-order-summary}
@@ -191,7 +185,7 @@ vCenter Server with Hybridity Bundle 인스턴스 주문에는 VMware vSAN 6.6�
 4. 클러스터 이름을 클릭하여 ESXi 서버, 스토리지 및 네트워크 인터페이스 세부사항을 보십시오.
 
   * ESXi 서버 세부사항:
-     * **이름**: ESXi 서버의 이름으로, 형식은 `<host_prefix><n>.<subdomain_label>.<root_domain>`이며 여기서
+     * **이름**: ESXi 서버의 이름은 `<host_prefix><n>.<subdomain_label>.<root_domain>` 형식으로 되어 있습니다. 여기서, 
 
        `host_prefix`는 호스트 이름 접두부이고
 
@@ -219,19 +213,19 @@ vCenter Server with Hybridity Bundle 인스턴스 주문에는 VMware vSAN 6.6�
     * **IOPS/GB**: 스토리지의 성능 레벨입니다.
     * **NFS 프로토콜**: 스토리지의 NFS 버전입니다.
   * 네트워크 인터페이스 - VLAN 세부사항:
-    * **VLAN 번호**: 고유한 VLAN 번호입니다. 
-    * **설명**: VLAN의 설명입니다. 
-    * **위치**: 데이터 센터 위치입니다. 
+    * **VLAN 번호**: 고유한 VLAN 번호입니다.
+    * **설명**: VLAN의 설명입니다.
+    * **위치**: 데이터 센터 위치입니다.
     * **기본 라우트**: VLAN의 기본 라우트입니다.
-    VLAN 세부사항에 액세스하려면 **리소스 보기**를 클릭하십시오. 
+    VLAN 세부사항에 액세스하려면 **리소스 보기**를 클릭하십시오.
   * 네트워크 인터페이스 - 서브넷 세부사항:
-    * **이름**: 서브넷 이름입니다. 서브넷 세부사항에 액세스하려면 이름을 클릭하십시오. 
-    * **유형**: 서브넷의 유형: 기본 또는 포터블. 
-    * **설명**: 서브넷의 설명입니다. 
+    * **이름**: 서브넷 이름입니다. 서브넷 세부사항에 액세스하려면 이름을 클릭하십시오.
+    * **유형**: 서브넷의 유형: 기본 또는 포터블.
+    * **설명**: 서브넷의 설명입니다.
   * 네트워크 인터페이스 - IP 세부사항:
-    * **IP**: IP 주소입니다. 
-    * **상태**: IP 주소의 상태입니다. 
-    * **설명**: IP 주소의 설명입니다. 
+    * **IP**: IP 주소입니다.
+    * **상태**: IP 주소의 상태입니다.
+    * **설명**: IP 주소의 설명입니다.
 
 ## vCenter Server with Hybridity Bundle 인스턴스에서 클러스터 삭제
 {: #vc_hybrid_addingviewingclusters-deleting}
@@ -241,6 +235,7 @@ vCenter Server with Hybridity Bundle 인스턴스 주문에는 VMware vSAN 6.6�
 ### 삭제하기 전에
 {: #vc_hybrid_addingviewingclusters-deleting-prereq}
 
+* 가능하면 {{site.data.keyword.vmwaresolutions_full}} 콘솔을 사용하여 클러스터를 삭제하십시오. VMware vSphere Web Client에서 수행하는 변경사항은 {{site.data.keyword.vmwaresolutions_short}} 콘솔과 동기화되지 않습니다. 따라서 온프레미스 클러스터 서버 또는 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 관리할 수 없거나 관리하지 않을 클러스터에 대해서만 클러스터를 vCenter Server에서 제거하십시오. 
 * 한 번에 하나의 클러스터를 삭제할 수 있습니다. 여러 클러스터를 삭제하려면, 순서대로 수행해야 합니다(즉, 다음 클러스터를 삭제하려고 시도하기 전에 이전 클러스터가 삭제되기를 기다려야 함).
 * 클러스터를 삭제하기 전에 클러스터의 모든 노드가 켜져 있으며 가동 상태인지 확인하십시오.
 * 클러스터를 삭제하면 클러스터의 모든 가상 머신(VM)도 삭제되며 이는 복구할 수 없습니다. VM을 보존하려는 경우에는 이들을 다른 클러스터로 마이그레이션하십시오.

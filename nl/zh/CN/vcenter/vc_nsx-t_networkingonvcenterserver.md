@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-28"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -22,7 +22,7 @@ subcollection: vmwaresolutions
 {: #vc_nsx-t_networkingonvcenterserver-networking-components}
 {: faq}
 
-要查看 vCenter Server NSX-T 实例中包含的联网组件，请参阅 [vCenter Server NSX-T 实例的技术规范](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_overview-specs)。
+要查看 vCenter Server NSX-T 实例中包含的联网组件，请参阅 [vCenter Server NSX-T 实例的技术规范](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_overview#vc_nsx-t_overview-specs)。
 
 ## 防火墙注意事项
 {: #vc_nsx-t_networkingonvcenterserver-firewall-considerations}

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -22,9 +22,9 @@ HCX 擁有來源及目的地加密和解密處理程序，以確定一致安全�
 ## 第 2 層網路延伸
 {: #hcx-archi-overview-layer-2-net}
 
-HCX 容許現有內部部署 vSphere 財產將網路從其內部部署 vCenter 安全地延伸至執行 VMware Cloud Foundation 或 vCenter Server 的 IBM Cloud 資料中心。下列項目已啟用此特性：
+HCX 容許現有內部部署 vSphere 財產將網路從其內部部署 vCenter 安全地延伸至執行 VMware vCenter Server 的 IBM Cloud Data Center。下列項目已啟用此特性：
 * HCX 提供稱為「第 2 層集中器 (L2C)」的應用裝置。
-* 延伸網路鏈結至 VMware Cloud Foundation 或 vCenter Server 上所部署的 IBM Cloud NSX Edge 應用裝置。
+* 延伸網路鏈結至 VMware vCenter Server 上所部署的 IBM Cloud NSX Edge 應用裝置。
 * 可以部署多個標準第 2 層集中器，以達到可調整性並增加內部部署 vCenter 的傳輸量。
 * 透過「雲端閘道」及透過延伸第 2 層移轉的虛擬機器可以保留其 IP 及 MAC 位址。
 
@@ -155,7 +155,7 @@ vSphere 與 IBM Cloud 之間的安全頻道防止網路「中程傳輸」安全�
 * 如果想要執行跨雲端 vMotion，則相同親緣性限制會套用至雲端，就像在內部部署上一樣。
 * 來源環境必須有方法可連接至雲端環境。這包括公用網際網路存取或是使用 IBM Cloud Direct Link 的專用連線。不會討論與公用網際網路以外之其他雲端供應商的連線。
 * 來源環境 VM 與要移轉或延伸的網路必須位在「虛擬分散式交換器」或「Cisco Nexus 1000v 虛擬分散式交換器」的埠群組上。
-* IBM Cloud 必須至少包含一個 VMware Cloud Foundation 或 vCenter Server 部署實例。
+* IBM Cloud 必須至少包含一個 VMware vCenter Server 實例。
 * 足夠的虛擬應用裝置資源。
 * 網路必須允許應用裝置同時與本端及遠端虛擬應用裝置以及其他虛擬機器進行通訊。
 * 「埠存取需求（附錄 A）」列出的埠必須開啟，才能順利安裝 Hybrid Cloud Services 虛擬應用裝置。

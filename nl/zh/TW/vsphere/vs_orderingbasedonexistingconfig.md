@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -50,7 +50,7 @@ subcollection: vmwaresolutions
 
 如果您已下訂單，則會自動啟動叢集的部署。您會收到電子郵件確認，指出正在處理該訂單。當叢集已備妥可供使用時，也會透過電子郵件通知您。
 
-不同於 vCenter Server 和 Cloud Foundation 實例，vSphere 叢集並不會顯示在**資源**頁面上。
+不同於 vCenter Server 實例，vSphere 叢集並不會顯示在**資源**頁面上。
 {:note}
 
 ## 相關鏈結

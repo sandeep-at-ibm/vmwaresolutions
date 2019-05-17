@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -40,8 +40,8 @@ El flujo de trabajo siguiente describe el proceso para realizar una actualizaci�
 {: #vum-orchestr-updates-step1}
 
 1. Utilice el cliente web de vSphere para iniciar la sesión en VCSA.
-2. Seleccione **Inicio** > **Actualizar gestor** y en el **separador Objetos**, seleccione una **instancia de Update Manager**.
-3. Pulse el **separador Gestionar** y, a continuación, el **separador Líneas base de host** y pulse **Nuevo grupo de línea base**.
+2. Seleccione **Inicio** > **Actualizar gestor** y en el separador **Objetos**, seleccione una **instancia de Update Manager**.
+3. Pulse el separador **Gestionar** y, a continuación, el separador **Líneas base de host** y pulse **Nuevo grupo de línea base**.
 4. Especifique un nombre exclusivo para el grupo de línea base y pulse **Siguiente**.
 5. Seleccione una línea base de actualización de host para incluirlo en el grupo de línea base.
 6. Opcionalmente, cree una nueva línea base de actualización de host pulsando **Crear una nueva línea base de actualización de host** en la parte inferior de la página Actualizaciones y complete el asistente de Nueva línea base. Pulse **Siguiente**.
@@ -68,4 +68,4 @@ Ahora puede utilizar estos grupos de línea base en los procesos de exploración
 {: #vum-orchestr-updates-related}
 
 * [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demostraciones)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (demostraciones)

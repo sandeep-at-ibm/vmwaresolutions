@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-19"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -126,7 +126,7 @@ Skate Advisor 应用程序使用以下软件组件。
 
 * Nginx - 用于向应用程序提供逆向代理服务。微服务和应用程序请求会分发给正确的容器端点。
 * WebSphere Liberty - 用于托管 Acme 应用程序，这是基于 Spring 的 Java 平台企业修订版应用程序。
-* Node.js -  用于向聊天机器人提供微服务框架。此应用程序使用 Watson 提供的服务。
+* Node.js - 用于向聊天机器人提供微服务框架。此应用程序使用 Watson 提供的服务。
 * mysql - 应用程序数据库由 Oracle Mysql 提供。
 * JavaScript - 聊天机器人是在客户机浏览器中托管的基于 JavaScript 的应用程序。聊天机器人通过基于 Node.js 的微服务与 Watson 进行通信。
 

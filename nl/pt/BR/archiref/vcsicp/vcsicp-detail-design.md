@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-02-15"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -19,7 +19,7 @@ subcollection: vmwaresolutions
 
 Os serviços comuns fornecem os serviços que são usados por outros serviços na plataforma de gerenciamento de nuvem. Os serviços comuns incluem serviços de identidade e acesso, serviços de nome de domínio e serviços NTP.
 
-Figura 1. {{site.data.keyword.icpfull_notm}}  serviços comuns
+Figura 1. Serviços comuns do {{site.data.keyword.icpfull_notm}}
 
 ![{} Common Services](vcsicp-icp-commonservices.svg)
 

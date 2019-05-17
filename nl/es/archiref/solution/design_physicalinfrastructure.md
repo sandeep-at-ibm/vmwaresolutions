@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -50,7 +50,7 @@ El host físico emplea dos discos conectados localmente que se asignan al hiperv
 host físico tiene conexiones de red de 10 Gbps redundantes para el acceso de red público y privado.
 
 El servidor nativo tiene las especificaciones siguientes:
-* CPU: Dual Intel Xeon, configuración de núcleo y velocidad variable
+* CPU: Intel Xeon dual o cuádruple, con configuración de núcleos y velocidad variable
 * Memoria: configuración variable, 64 GB o más
 * Red: 4 x 10 Gbps
 * Número de unidades: 2 o más
@@ -63,7 +63,7 @@ La red física la gestiona {{site.data.keyword.cloud_notm}}. Revise las descripc
 ### Visión general de la red de IBM Cloud
 {: #design_physicalinfrastructure-ibm-cloud-network}
 
-La red física de {{site.data.keyword.cloud_notm}} está separada en dos redes distintas: pública y privada. La red privada contiene el tráfico IPMI (Intelligent Platform Management Interface) de gestión fuera de banda a los servidores físicos.
+La red física de {{site.data.keyword.cloud_notm}} está separada en dos redes distintas: pública y privada. La red privada también contiene el tráfico de gestión de Intelligent Platform Management Interface (IPMI) con los servidores físicos.
 
 Figura 2. Red de alto nivel de {{site.data.keyword.cloud_notm}}
 ![Red de alto nivel de {{site.data.keyword.cloud_notm}}](vcsv4radiagrams-ra-ibmcloudnetwork.svg)
@@ -87,7 +87,7 @@ De forma similar a la red pública, la red privada tiene varios niveles en que l
 #### Red de gestión
 {: #design_physicalinfrastructure-mgmt-net}
 
-Además de las redes públicas y privadas, cada servidor de {{site.data.keyword.cloud_notm}} se conecta a una subred de la red primaria privada para la gestión fuera de banda. Esta conexión permite el acceso de IPMI (Intelligent Platform Management Interface) al servidor, independientemente de su CPU, firmware y sistema operativo, para fines de mantenimiento y de administración.
+Además de las redes públicas y privadas, cada servidor de {{site.data.keyword.cloud_notm}} se conecta a una subred de la red primaria privada para la gestión. Esta conexión permite el acceso de IPMI (Intelligent Platform Management Interface) al servidor, independientemente de su CPU, firmware y sistema operativo, para fines de mantenimiento y de administración.
 
 #### Bloques de IP primarios y portátiles
 {: #design_physicalinfrastructure-ip-blocks}
@@ -120,7 +120,9 @@ Figura 3. Conexiones de host físico</br>
 #### VLAN y direccionamiento entre red subyacente y de superposición
 {: #design_physicalinfrastructure-vlans}
 
-Las ofertas de {{site.data.keyword.vmwaresolutions_short}} están diseñadas con 3 VLAN, una pública y dos privadas, asignadas al despliegue. Como se muestra en la figura anterior, la VLAN pública se asigna a eth1 y eth3, y las VLAN privadas se asignan a eth0 y eth2.
+Las ofertas de {{site.data.keyword.vmwaresolutions_short}} están diseñadas con 3 VLAN, una pública y dos privadas, asignadas al despliegue. Como se muestra en la figura anterior, la VLAN pública se asigna a `eth1` y
+`eth3`, y las VLAN privadas se asignan a
+`eth0` y `eth2`.
 
 La VLAN pública y la primera VLAN privada creadas y asignadas en este diseño se descodifican de forma predeterminada en la {{site.data.keyword.cloud_notm}}. A continuación, la VLAN privada adicional se trunca en los puertos de conmutador físico y se etiqueta dentro de los grupos de puertos de VMware que están utilizando estas subredes.
 
@@ -136,7 +138,7 @@ Además de la VLAN privada A, existe una segunda VLAN privada (aquí designada c
    * Cuando se utiliza NAS conectado con NFS, se asigna una subred a un grupo de puertos dedicado al tráfico de NFS.
    * Para la conexión iSCSI, se crean dos grupos de puertos para permitir múltiples vías activa-activa en los puertos de NIC privados, ya que solo puede haber un puerto de NIC activo al mismo tiempo según la documentación de iSCSI de VMware.
 
-Todas las subredes configuradas como parte de un despliegue automatizado de vCenter Server o Cloud Foundation utilizan rangos gestionados de {{site.data.keyword.cloud_notm}}. Esto es para asegurarse de que se pueda direccionar cualquier dirección IP a cualquier centro de datos dentro de la cuenta de {{site.data.keyword.cloud_notm}} cuando necesite la conexión ahora o en el futuro.
+Todas las subredes configuradas como parte de un despliegue automatizado de vCenter Server utilizan rangos gestionados de {{site.data.keyword.cloud_notm}}. Esto es para asegurarse de que se pueda direccionar cualquier dirección IP a cualquier centro de datos dentro de la cuenta de {{site.data.keyword.cloud_notm}} cuando necesite la conexión ahora o en el futuro.
 
 Revise la tabla siguiente para obtener un resumen.
 
@@ -148,7 +150,7 @@ Tabla 1. Resumen de VLAN y subred
 | Privada A | Primario  | Subred única asignada a hosts físicos asignados por {{site.data.keyword.cloud_notm}}. La utiliza la interfaz de gestión para el tráfico de gestión de vSphere. |
 | Privada A | Portátil | Subred única asignada a máquinas virtuales que funcionan como componentes de gestión |
 | Privada A | Portátil | Subred única asignada a NSX-V o NSX-T VTEP |
-| Privada A | Portátil | Subred única asignada para vSAN, si está en uso |
+| Privada B | Portátil | Subred única asignada para vSAN, si está en uso |
 | Privada B | Portátil | Subred única asignada para NAS, si está en uso |
 | Privada B | Portátil | Dos subredes asignadas para iSCSI NAS, si está en uso (una por cada puerto de NIC físico) |
 | Privada B | Portátil | Subred única asignada para vMotion |
@@ -162,7 +164,7 @@ Las conexiones de red privada están configuradas para utilizar un tamaño de MT
 ## Diseño de almacenamiento físico
 {: #design_physicalinfrastructure-storage-design}
 
-El diseño de almacenamiento físico consiste de la configuración de los discos físicos instalados en los hosts físicos y en la configuración del almacenamiento de nivel de archivo compartido. Esto incluye el sistema operativo (vSphere ESXi) y los discos utilizados para el almacenamiento de las máquinas virtuales (VM). El almacenamiento para las VM puede constar de discos locales virtualizados por la vSAN de VMware, el almacenamiento compartido a nivel de archivos o el almacenamiento compartido a nivel de bloque.
+El diseño de almacenamiento físico consiste de la configuración de los discos físicos instalados en los hosts físicos y en la configuración del almacenamiento compartido conectado a la red. Esto incluye el sistema operativo (vSphere ESXi) y los discos utilizados para el almacenamiento de las máquinas virtuales (VM). El almacenamiento para las VM puede constar de discos locales virtualizados por la vSAN de VMware, el almacenamiento compartido a nivel de archivos o el almacenamiento compartido a nivel de bloque.
 
 ### Discos del sistema operativo
 {: #design_physicalinfrastructure-os-disks}
@@ -172,7 +174,7 @@ El hipervisor de vSphere ESXi se instala en una ubicación persistente. Como res
 ### Discos vSAN
 {: #design_physicalinfrastructure-vsan-disks}
 
-Este diseño permite la opción de utilizar el almacenamiento de nivel de archivos compartido o de VMware vSAN como almacén de datos primario para las máquinas virtuales. En el caso de VMware vSAN, se configura utilizando una configuración enteramente flash. Este diseño permite varias opciones de configuración, incluyendo el chasis 2U y 4U, varios números de discos y varios tamaños de disco. Todas las configuraciones utilizan dos grupos de discos vSAN, con un disco de estado sólido (SSD) para la memoria caché y uno o más SSD para la capacidad. Todas las unidades asignadas para el consumo de vSAN se configuran en un RAID-0 de un solo disco.
+Este diseño permite la opción de utilizar el almacenamiento compartido conectado a la red o de VMware vSAN como almacén de datos primario para las máquinas virtuales. En el caso de VMware vSAN, se configura utilizando una configuración enteramente flash. Este diseño permite varias opciones de configuración, incluyendo el chasis 2U y 4U, varios números de discos y varios tamaños de disco. Todas las configuraciones utilizan dos grupos de discos vSAN, con un disco de estado sólido (SSD) para la memoria caché y uno o más SSD para la capacidad. Todas las unidades asignadas para el consumo de vSAN se configuran en un RAID-0 de un solo disco.
 
 Para obtener más información sobre las configuraciones admitidas, consulte la
 [Lista de materiales de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).

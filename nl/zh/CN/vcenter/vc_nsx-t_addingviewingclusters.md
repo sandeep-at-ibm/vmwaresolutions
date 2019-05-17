@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-22"
+lastupdated: "2019-04-18"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -25,9 +25,11 @@ subcollection: vmwaresolutions
 ## 向 vCenter Server 实例添加集群
 {: #vc_nsx-t_addingviewingclusters-adding}
 
-集群数、主机数和虚拟机 (VM) 数将决定可以添加的最大集群数限制。您必须遵守适用于部署的 VMware 大小调整准则和限制。
+### 添加集群之前
+{: #vc_nsx-t_addingviewingclusters-before-add}
 
-有关最大限制的更多信息，请参阅 [VMware 配置最大值](https://configmax.vmware.com/home){:new_window}。
+* 尽可能使用 {{site.data.keyword.vmwaresolutions_full}} 控制台添加集群，因为在 VMware vSphere Web Client 上所做的更改不会与 {{site.data.keyword.vmwaresolutions_short}} 控制台同步。因此，将集群添加到 vCenter Server 仅适用于内部部署集群，或者无法或不会在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理的集群。
+* 集群数、主机数和虚拟机 (VM) 数将决定可以添加的最大集群数限制。您必须遵守适用于部署的 VMware 大小调整准则和限制。有关最大限制的更多信息，请参阅 [VMware 配置最大值](https://configmax.vmware.com/home){:new_window}。
 
 ### 系统设置
 {: #vc_nsx-t_addingviewingclusters-adding-sys-settings}
@@ -46,7 +48,7 @@ subcollection: vmwaresolutions
 #### 数据中心位置
 {: #vc_nsx-t_addingviewingclusters-adding-dc-location}
 
-缺省情况下，集群的 {{site.data.keyword.CloudDataCent}} 位置设置为 vCenter Server 实例的 {{site.data.keyword.CloudDataCent_notm}}。可以将集群部署到与所部署实例不同的 {{site.data.keyword.CloudDataCent_notm}}，但必须确保这两个 {{site.data.keyword.CloudDataCents_notm}} 之间的网络等待时间少于 150 毫秒。要检查网络等待时间，可以使用 [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/) 等工具。
+缺省情况下，集群的 {{site.data.keyword.CloudDataCent}} 位置设置为 vCenter Server 实例的 {{site.data.keyword.CloudDataCent_notm}}。可以将集群部署到与所部署实例不同的 {{site.data.keyword.CloudDataCent_notm}}，但必须确保这两个 {{site.data.keyword.CloudDataCents_notm}} 之间的网络等待时间少于 150 毫秒。要检查网络等待时间，可以使用 [Looking Glass](/docs/infrastructure/network-tools?topic=network-tools-about-looking-glass#about-looking-glass) 等工具。
 
 如果将集群部署到其他 {{site.data.keyword.CloudDataCent_notm}} 或 {{site.data.keyword.cloud_notm}} 基础架构 pod，那么可订购三个额外的 VLAN 以用于订购的 {{site.data.keyword.baremetal_short}}。
 
@@ -83,11 +85,9 @@ subcollection: vmwaresolutions
 #### 裸机服务器的数量
 {: #vc_nsx-t_addingviewingclusters-adding-bare-metal-number}
 
-集群至少需要三个 {{site.data.keyword.baremetal_short}}。
-
-可以为一个集群添加最多 59 个 {{site.data.keyword.baremetal_short}}。一次可以添加 1 到 59 个 ESXi 服务器。
-
-部署后，最多可以再创建四个集群。如果选择使用 VMware vSAN 存储器的 **Skylake** 或 **Broadwell** 裸机服务器配置，那么初始集群和部署后集群都需要 4 个服务器。
+* 订购的所有服务器的配置都相同。
+* 对于 vSAN 存储器，可以订购 4 到 59 个服务器。
+* 对于 NFS 存储器，可以订购 2 到 59 个服务器。但是，对于生产工作负载，建议至少使用 3 个服务器。有关更多信息，请参阅[双节点 vCenter Server 实例具有高可用性吗？](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)。
 
 ### 存储设置
 {: #vc_nsx-t_addingviewingclusters-adding-storage-settings}
@@ -100,10 +100,10 @@ subcollection: vmwaresolutions
 请指定以下 vSAN 选项：
 * **vSAN 容量磁盘的磁盘类型和大小**：选择与所需容量磁盘相应的选项。
 * **vSAN 容量磁盘数**：指定要添加的容量磁盘数。
-* 如果要添加的容量磁盘数超过 8 个的限制，请选中**高性能 Intel Optane** 框。此选项用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘；此选项对于需要更短等待时间和更高 IOPS 吞吐量的工作负载而言非常有用。
+* 如果要添加的容量磁盘数超过 10 个的限制，请选中**高性能 Intel Optane** 框。此选项用于提供两个额外的容量磁盘托架，总共可容纳 12 个容量磁盘；此选项对于需要更短等待时间和更高 IOPS 吞吐量的工作负载而言非常有用。
 
-  **高性能 Intel Optane** 选项仅可用于 Skylake CPU 型号双 Intel Xeon Gold 5120 和双 Intel Xeon Gold 6140。
-  {:note}
+  **高性能 Intel Optane** 选项仅可用于 Skylake CPU 型号。
+{:note}
 
 * 查看 **vSAN 高速缓存磁盘的磁盘类型**和 **vSAN 高速缓存磁盘数**值。这些值依赖于是否选中了**高性能 Intel Optane** 框。
 * **vSAN 许可证**：通过选择**购买时包含**对 vSAN 组件使用 IBM 提供的 VMware 许可证，或者通过选择**我将提供**并输入您自己的许可证密钥以自带许可证 (BYOL)。
@@ -271,6 +271,7 @@ subcollection: vmwaresolutions
 ### 删除之前
 {: #vc_nsx-t_addingviewingclusters-deleting-prereq}
 
+* 尽可能使用 {{site.data.keyword.vmwaresolutions_full}} 控制台删除集群，因为在 VMware vSphere Web Client 上所做的更改不会与 {{site.data.keyword.vmwaresolutions_short}} 控制台同步。因此，从 vCenter Server 中删除集群仅适用于内部部署集群，或者无法或不会在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理的集群。
 * 一次可以删除一个集群。要删除多个集群，必须按顺序依次执行。请等待前一个集群删除后，再删除下一个集群。
 * 删除集群之前，请确保集群中的所有节点都已打开电源且正常运行。
 * 删除集群时，集群中的所有 VM 也会一起删除且无法恢复。如果要保留这些 VM，请将其迁移到其他集群。

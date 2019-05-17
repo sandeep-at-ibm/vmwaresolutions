@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-04-03"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -21,7 +21,7 @@ subcollection: vmwaresolutions
 
 請確定您已完成下列作業：
 * 您已在**設定**頁面上配置 {{site.data.keyword.cloud_notm}} 基礎架構認證。如需相關資訊，請參閱[使用者帳戶及設定](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)。
-* 您已檢閱[安裝 KMIP for VMware on {{site.data.keyword.cloud_notm}} 實例時的考量](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations-install)中的所有考量。
+* 您已檢閱[安裝 KMIP for VMware on {{site.data.keyword.cloud_notm}} 實例時的考量](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip_standalone_considerations#kmip_standalone_considerations-install)中的所有考量。
 
 ## 訂購 KMIP for VMware on IBM Cloud 實例的程序
 {: #kmip_standalone_ordering-procedure}
@@ -55,22 +55,24 @@ subcollection: vmwaresolutions
 |德國           |  <ul><li><code>kmip-1.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
 |雪梨           |  <ul><li><code>kmip-1.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
 |東京| <ul><li><code>kmip-1.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
-|美國南部       |  <ul><li><code>kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+| 英國南部       | <ul><li><code>kmip-1.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+| 美國東部       | <ul><li><code>kmip-1.private.us-east.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-east.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+|美國南部       | <ul><li><code>kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
 
 ### 服務 ID 的 API 金鑰
 {: #kmip_standalone_ordering-config-api-key}
 
-輸入用來存取 IBM Key Protect Service 實例之「{{site.data.keyword.cloud_notm}} 服務 ID」的 API 金鑰。
+輸入用來存取 Key Protect 或 Hyper Protect Crypto Services 服務實例之「{{site.data.keyword.cloud_notm}} 服務 ID」的 API 金鑰。
 
-### Key Protect 實例
+### 金鑰管理程式實例
 {: #kmip_standalone_ordering-config-key-protect}
 
-按一下**擷取**，以取得可用 IBM Key Protect Service 實例的清單，然後選取用於金鑰管理的實例。
+按一下**擷取**，以取得可用金鑰管理程式實例的清單，然後選取用於金鑰管理的實例。
 
-### 客戶主要金鑰
+### 客戶根金鑰
 {: #kmip_standalone_ordering-config-root-key}
 
-按一下**擷取**以取得儲存在您的所選金鑰管理程式實例中的客戶主要金鑰。
+按一下**擷取**，以取得儲存在您所選取金鑰管理程式實例中的客戶根金鑰。
 
 ## 結果
 {: #kmip_standalone_ordering-results}

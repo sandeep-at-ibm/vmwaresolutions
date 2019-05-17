@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-06-22"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -40,7 +40,7 @@ subcollection: vmwaresolutions
 * 法语
 * 意大利语
 * 日语
-* 韩国语
+* 韩语
 * 巴西葡萄牙语
 * 简体中文
 * 繁体中文
@@ -54,7 +54,7 @@ subcollection: vmwaresolutions
 * 双 Intel Skylake Xeon Gold 5120 处理器 / 共 28 个核心，2.2 GHz
 * 双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz
 
-有关更多信息，请参阅[订购新的 vSphere 集群](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances#bare-metal-server-settings)中的*裸机服务器设置*部分。
+有关更多信息，请参阅[裸机服务器设置](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vs_orderinginstances#vs_orderinginstances-bare-metal-settings)。
 
 ## 对 VMware vCenter Server 实例的更新
 {: #relnotes_v24-vcs}
@@ -62,7 +62,7 @@ subcollection: vmwaresolutions
 ### 网络文件系统性能增强
 {: #relnotes_v24-nfs}
 
-设计用于要求最苛刻的工作负载类型的性能级别 10 IOPS/GB 不再仅限于特定 {{site.data.keyword.CloudDataCent_notm}}，现在可用于所有数据中心。有关更多信息，请参阅 [vCenter Server 概述](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#technical-specifications-for-vcenter-server-instances)中的*存储*部分。
+设计用于要求最苛刻的工作负载类型的性能级别 10 IOPS/GB 不再仅限于特定 {{site.data.keyword.CloudDataCent_notm}}，现在可用于所有数据中心。有关更多信息，请参阅[存储器](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#vc_vcenterserveroverview-storage)。
 
 ## 对附加组件服务的更新
 {: #relnotes_v24-services}

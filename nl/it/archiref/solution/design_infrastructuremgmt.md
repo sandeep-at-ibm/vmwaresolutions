@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -40,7 +40,7 @@ Tabella 1. Specifiche di vCenter Server Appliance
 |------------------------------|-------------------------------------|
 | vCenter Server               | Dispositivo virtuale                   |
 | Dimensione installazione del dispositivo  | Grande (fino a 1.000 host e 10.000 VM) |
-| Platform Services Controller |Integrato|
+| Platform Services Controller | Integrato                            |
 | Numero di vCPU              | 16                                   |
 | Memoria                       | 32 GB                               |
 | Disco                         | 990 GB sull'archivio dati locale (distribuzione di dischi grandi) |
@@ -74,7 +74,7 @@ Sei responsabile di regolare la politica di controllo di ammissione quando il cl
 
 Per impostazione predefinita, l'opzione **VM restart priority** è impostata su medio e l'opzione **Host isolation response** è disabilitata. Inoltre, **VM monitoring** è disabilitata e la funzione **Datastore Heartbeating** è configurata per includere uno qualsiasi degli archivi dati del cluster. Questo approccio utilizza, se presenti, gli archivi dati NAS.
 
-## EVC (Enhanced vMotion Compatibility) 
+## EVC (Enhanced vMotion Compatibility)
 {: #design_infrastructuremgmt-evc}
 
 Per semplificare la compatibilità vMotion tra i nodi del cluster con funzionalità CPU potenzialmente differenti, la modalità EVC (Enhanced vMotion Compatibility) è abilitata al livello Skylake per garantire la compatibilità vMotion tra i nodi del cluster quando vengono inseriti dei processori più recenti nell'inventario {{site.data.keyword.cloud_notm}} e consente l'espansione del cluster futura se i server del processore Skylake non sono nell'inventario.
@@ -87,7 +87,9 @@ Il punto cardine di queste soluzioni è l'automazione. L'automazione riduce la c
 IBM CloudBuilder è una VSI (Virtual Server Instance) della VM {{site.data.keyword.cloud_notm}} effimera
 utilizzata per presentare una nuova istanza VMware ed eseguire le funzioni di gestione del ciclo di vita. Viene distribuito quando è richiesta la gestione dell'istanza vCenter Server generale ed eliminata in modo permanente quando viene completato il processo.
 
-IBM CloudDriver può essere configurato per comunicare con l'infrastruttura di gestione {{site.data.keyword.vmwaresolutions_short}} su una connessione di rete pubblica o facoltativamente privata tramite l'archivio oggetti {{site.data.keyword.cloud_notm}} come coda dei messaggi. IBM CloudDriver è un componente sviluppato da IBM, non è accessibile dall'utente e ha i seguenti attributi e funzioni:
+IBM CloudDriver è una VSI (Virtual Server Instance) della VM {{site.data.keyword.cloud_notm}} effimera distribuita in base alle esigenze per le operazioni day-2 come l'aggiunta di host, cluster o servizi aggiuntivi alla tua istanza VMware. 
+
+CloudBuilder e CloudDriver vengono distribuiti solo sulla rete privata che si collega al piano di gestione IBM tramite una coda messaggi privata. Sono componenti sviluppati da IBM, non sono accessibili dall'utente e hanno i seguenti attributi e funzioni: 
 
 - Distribuzione e configurazione dell'istanza vCenter Server all'interno dell'account utente.
 - Aggiungere e rimuovere gli host dai cluster vCenter Server.

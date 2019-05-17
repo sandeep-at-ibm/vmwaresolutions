@@ -1,179 +1,22 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- Generator: Adobe Illustrator 15.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="725px"
-   height="406.22px"
-   enable-background="new 0 0 725 406.219"
-   version="1.1"
-   viewBox="0 0 725 406.22"
-   xml:space="preserve"
-   id="svg64"
-   sodipodi:docname="architecture.svg"
-   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"><defs
-     id="defs68" /><sodipodi:namedview
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1027"
-     id="namedview66"
-     showgrid="false"
-     inkscape:zoom="1.4161642"
-     inkscape:cx="462.73581"
-     inkscape:cy="225.86625"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg64" /><metadata
-     id="metadata2"><rdf:RDF><cc:Work
-         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><rect
-     x="198.53"
-     y="108"
-     width="526.47"
-     height="89.113"
-     fill="#4B84C4"
-     id="rect4" /><rect
-     x="-.311"
-     y="309.8"
-     width="725.31"
-     height="96.383"
-     fill="#959595"
-     id="rect6" /><rect
-     x="198.53"
-     y="208.83"
-     width="526.65"
-     height="89.856"
-     fill="#1AA78D"
-     id="rect8" /><rect
-     x=".333"
-     y="108.16"
-     width="186.94"
-     height="190.53"
-     fill="#F59C57"
-     id="rect10" /><text
-     transform="translate(25.726 143.06)"
-     fill="#FFFFFF"
-     font-family="'IBMPlexSans-Bold'"
-     font-size="18"
-     id="text12">Servizi comuni</text>
-<text
-     font-size="16"
-     id="text22"
-     x="21.510401"
-     y="171.93721"
-     style="font-size:15.06816673px;font-family:IBMPlexSans;fill:#ffffff;stroke-width:0.94176042"
-     transform="scale(0.94176044,1.0618412)"><tspan
-       x="21.510401"
-       y="171.93721"
-       id="tspan14"
-       style="stroke-width:0.94176042">Autenticazione</tspan><tspan
-       x="55.052143"
-       y="201.52449"
-       id="tspan16"
-       style="stroke-width:0.94176042">DNS</tspan><tspan
-       x="56.030628"
-       y="231.11084"
-       id="tspan18"
-       style="stroke-width:0.94176042">NTP</tspan><tspan
-       x="5.2217121"
-       y="260.69812"
-       id="tspan20"
-       style="stroke-width:0.94176042">CA (Certificate Authority)</tspan></text>
-<rect
-     x=".343"
-     y=".627"
-     width="724.84"
-     height="97.386"
-     fill="#B97BBA"
-     id="rect24" /><text
-     transform="translate(341.29 146.06)"
-     fill="#FFFFFF"
-     id="text30"><tspan
-       x="0"
-       y="0"
-       font-family="'IBMPlexSans-Bold'"
-       font-size="21"
-       id="tspan26">Gestione infrastruttura</tspan><tspan
-       x="27.111"
-       y="29.833"
-       font-family="'IBMPlexSans'"
-       font-size="18"
-       id="tspan28">   VMware vCenter Server</tspan></text>
-<text
-     transform="translate(363.39 242.35)"
-     fill="#FFFFFF"
-     font-family="'IBMPlexSans-Bold'"
-     font-size="21"
-     id="text32">Infrastruttura virtuale</text>
-<text
-     transform="translate(410.74 283.1)"
-     fill="#FFFFFF"
-     font-family="'IBMPlexSans'"
-     font-size="18"
-     id="text34">VMware vSAN</text>
-<text
-     transform="translate(593.38 283.1)"
-     fill="#FFFFFF"
-     font-family="'IBMPlexSans'"
-     font-size="18"
-     id="text40"><tspan
-       x="0"
-       y="0"
-       id="tspan36">VMware NSX</tspan><tspan
-       x="96.155"
-       y="-2.633"
-       id="tspan38" /></text>
-<text
-     transform="translate(217.28 283.1)"
-     fill="#FFFFFF"
-     font-family="'IBMPlexSans'"
-     font-size="18"
-     id="text46"><tspan
-       x="0"
-       y="0"
-       id="tspan42">VMware vSphere</tspan><tspan
-       x="126.844"
-       y="-2.633"
-       id="tspan44" /></text>
-<g
-     fill="#FFFFFF"
-     id="g62"><text
-       transform="translate(265.65 343.96)"
-       font-family="'IBMPlexSans-Bold'"
-       font-size="21"
-       id="text48">Infrastruttura fisica</text>
-<text
-       transform="translate(246.17,38.078)"
-       font-size="21"
-       id="text50"
-       style="font-size:21px;font-family:IBMPlexSans-Bold">Servizi di rete cloud</text>
-<g
-       font-family="'IBMPlexSans'"
-       font-size="18"
-       id="g60"><text
-         transform="translate(124.18 388)"
-         id="text52">Calcolo</text>
-<text
-         transform="translate(335.75 388)"
-         id="text54">Archiviazione </text>
-<text
-         transform="translate(258.07 77.538)"
-         id="text56">Gateway dei servizi edge NSX</text>
-<text
-         transform="translate(529.8 388)"
-         id="text58">Rete</text>
+<svg width="725px" height="406.22px" enable-background="new 0 0 725 406.219" version="1.1" viewBox="0 0 725 406.22" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><metadata><rdf:RDF><cc:Work rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/><dc:title/></cc:Work></rdf:RDF></metadata>
+<rect x="198.53" y="108" width="526.47" height="89.113" fill="#4B84C4"/>
+<rect x="-.311" y="309.8" width="725.31" height="96.383" fill="#959595"/>
+<rect x="198.53" y="208.83" width="526.65" height="89.856" fill="#1AA78D"/>
+	<rect x=".333" y="108.16" width="186.94" height="190.53" fill="#F59C57"/>
+	<text transform="translate(25.726 143.06)" fill="#FFFFFF" font-family="'IBMPlexSans-Bold'" font-size="18">Servizi comuni</text>
+	<text transform="translate(42.112 182.57)" fill="#FFFFFF" font-family="'IBMPlexSans'" font-size="16"><tspan x="0" y="0">Autenticazione</tspan><tspan x="35.616" y="31.417">DNS</tspan><tspan x="36.655" y="62.833">NTP</tspan><tspan x="-17.296" y="94.25">CA (Certificate Authority)</tspan></text>
+	<rect x=".343" y=".627" width="724.84" height="97.386" fill="#B97BBA"/>
+<text transform="translate(341.29 146.06)" fill="#FFFFFF"><tspan x="0" y="0" font-family="'IBMPlexSans-Bold'" font-size="21">Gestione infrastruttura</tspan><tspan x="27.111" y="29.833" font-family="'IBMPlexSans'" font-size="18">   VMware vCenter Server</tspan></text>
+<text transform="translate(363.39 242.35)" fill="#FFFFFF" font-family="'IBMPlexSans-Bold'" font-size="21">Infrastruttura virtuale</text>
+<text transform="translate(410.74 283.1)" fill="#FFFFFF" font-family="'IBMPlexSans'" font-size="18">VMware vSAN</text>
+<text transform="translate(593.38 283.1)" fill="#FFFFFF" font-family="'IBMPlexSans'" font-size="18"><tspan x="0" y="0">VMware NSX</tspan><tspan x="96.155" y="-2.633">  </tspan></text>
+<text transform="translate(217.28 283.1)" fill="#FFFFFF" font-family="'IBMPlexSans'" font-size="18"><tspan x="0" y="0">VMware vSphere</tspan><tspan x="126.844" y="-2.633">  </tspan></text><g fill="#FFFFFF">
+<text transform="translate(265.65 343.96)" font-family="'IBMPlexSans-Bold'" font-size="21">Infrastruttura fisica</text>
+<text transform="translate(246.17 38.078)" font-family="'IBMPlexSans-Bold'" font-size="21">Cloud Networking Services</text><g font-family="'IBMPlexSans'" font-size="18">
+<text transform="translate(124.18 388)">Calcolo</text>
+<text transform="translate(335.75 388)">Archiviazione </text>
+<text transform="translate(258.07 77.538)">Gateway dei servizi edge NSX</text>
+<text transform="translate(529.8 388)">Rete</text>
 </g></g></svg>

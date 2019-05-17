@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-20"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,7 +18,7 @@ subcollection: vmwaresolutions
 # Veeam을 사용하여 IBM Cloud Object Storage 주문 및 구성
 {: #icos_ordering}
 
-Veeam Availability Suite 9.5 Update 4 릴리스를 사용하면 Veeam은 IBM Cloud Object Storage(ICOS)와 호환할 수 있습니다. Veeam on IBM Cloud 주문 시 IBM Cloud Object Storage 주문은 자동화되지 않지만 배치 후 추가될 수 있습니다. 
+Veeam Availability Suite 9.5 Update 4 릴리스를 사용하면 Veeam은 IBM Cloud Object Storage(ICOS)와 호환할 수 있습니다.Veeam on IBM Cloud 주문 시 IBM Cloud Object Storage 주문은 자동화되지 않지만 배치 후 추가될 수 있습니다.
 
 IBM Cloud Object Storage를 주문하려면 지정된 순서대로 다음 태스크를 완료하십시오.
 
@@ -30,7 +30,7 @@ Object Storage 인스턴스를 작성하려면 [새 서비스 인스턴스 작�
 ## 버킷 작성
 {: #icos_ordering-bucket}
 
-버킷을 작성하려면 [1단계: 일부 버킷을 작성하여 데이터 저장](https://cloud.ibm.com/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-getting-started-console-#create-buckets)을 참조하십시오. 다음 태스크를 계속 수행하려면 단계를 따르고 이 섹션으로 돌아가십시오.
+버킷을 작성하려면 [일부 버킷을 작성하여 데이터 저장](/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-getting-started-tutorial#gs-create-buckets)을 참조하십시오. 다음 태스크를 계속 수행하려면 단계를 따르고 이 섹션으로 돌아가십시오.
 
 ## 서비스 인증 정보 작성
 {: #icos_ordering-service-cred}

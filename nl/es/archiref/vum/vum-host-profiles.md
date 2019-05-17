@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -57,13 +57,13 @@ Se necesita la secuencia siguiente para comprobar la conformidad:
 
 1.	Vaya al Perfil de host completado anteriormente.
 2.	Pulse el icono de comprobación **Conformidad de perfil de host**.
-3.	En el **separador Objetos**, el estado de conformidad se actualiza como: _Conforme, Desconocido o _No conforme_. Un estado de no conformidad indica una incoherencia descubierta y específica entre el perfil y el nuevo host.
+3.	En el separador **Objetos**, el estado de conformidad se actualiza como: _Conforme, Desconocido o _No conforme_. Un estado de no conformidad indica una incoherencia descubierta y específica entre el perfil y el nuevo host.
 
 ##	Revisión y corrección de errores de conformidad
 {: #vum-host-profiles-review-compliance}
 
 1. Para ver más detalles sobre las anomalías de conformidad, seleccione el **Perfil de host** en el separador **Objetos** que se utiliza en la comprobación de conformidad.
-2. Para ver detalles específicos sobre qué parámetros difieren entre el host que no cumple con la conformidad y el Perfil de host, pulse el **separador Supervisor** y seleccione la **Vista de conformidad**.
+2. Para ver detalles específicos sobre qué parámetros difieren entre el host que no cumple con la conformidad y el Perfil de host, pulse el separador **Supervisor** y seleccione la vista **Conformidad**.
 3. Expanda la jerarquía de objetos y seleccione el host que falla.
 4. Los distintos parámetros se muestran en la ventana Conformidad, bajo la jerarquía.
 5. Revise los parámetros y comprenda por qué el nuevo host puede variar con respecto al host de referencia. En el caso de los parámetros para los que la conformidad no sea aceptable, corríjalo antes de mover el nuevo host desde la modalidad de mantenimiento. Por ejemplo, si el cambio en la configuración se debe a una acción del administrador del sistema.
@@ -72,4 +72,4 @@ Se necesita la secuencia siguiente para comprobar la conformidad:
 {: #vum-host-profiles-related}
 
 * [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demostraciones)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (demostraciones)

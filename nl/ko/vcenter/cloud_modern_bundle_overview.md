@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-24"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,16 +18,16 @@ subcollection: vmwaresolutions
 # 마이그레이션 및 앱 현대화를 위한 단일 노드 평가판 개요
 {: #cloud_modern_bundle_overview}
 
-마이그레이션 및 앱 현대화를 위한 단일 노드 평가판을 사용하면 IBM Cloud를 시범 작동하여 VMware 워크로드를 IBM Cloud에 마이그레이션한 후 컨테이너의 사용을 통해 워크로드를 현대화할 수 있습니다.
+마이그레이션 및 앱 현대화를 위한 단일 노드 평가판을 사용하면 {{site.data.keyword.cloud_notm}}를 시범 작동하여 VMware 워크로드를 {{site.data.keyword.cloud}}에 마이그레이션한 후 컨테이너의 사용을 통해 워크로드를 현대화할 수 있습니다.
 
-단일 노드 평가판은 컨테이너를 위한 Kubernetes 관리 플랫폼 및 온프레미스 환경과 같은 도구를 사용하여 관리될 수 있는 싱글 테넌트 VMware 플랫폼을 제공하는 IBM Cloud의 IBM Cloud Private Hosted on VMware vCenter Server 평가판 버전입니다. 온프레미스로 제공되는 동일한 레벨의 제어 및 가시성을 유지하면서 클라우드의 속도와 스케일의 이점을 이용할 수 있습니다.
+단일 노드 평가판은 컨테이너를 위한 Kubernetes 관리 플랫폼 및 온프레미스 환경과 같은 도구를 사용하여 관리될 수 있는 싱글 테넌트 VMware 플랫폼을 제공하는 {{site.data.keyword.cloud_notm}}의 {{site.data.keyword.cloud_notm}} Private Hosted on VMware vCenter Server 평가판 버전입니다. 온프레미스로 제공되는 동일한 레벨의 제어 및 가시성을 유지하면서 클라우드의 속도와 스케일의 이점을 이용할 수 있습니다.
 
-평가판은 최대 20개의 단순 개발에 대한 마이그레이션 또는 vCenter Server on IBM Cloud with Hybridity Bundle을 사용한 워크로드 테스트와 Kubernetes 기반 IBM Cloud Private Hosted 애플리케이션 개발 플랫폼을 사용한 해당 워크로드의 컨테이너화를 위해 설계되었습니다. 자동화는 몇 시간 내에 IBM Cloud에서 VMware HCX를 설치 및 구성하고, 온프레미스 HCX 활성화 키를 제공하고, IBM Cloud Private Hosted에서 소규모 개발/테스트 토폴로지를 설치 및 구성합니다.
+평가판은 최대 20개의 단순 개발에 대한 마이그레이션 또는 vCenter Server on IBM Cloud with Hybridity Bundle을 사용한 워크로드 테스트와 Kubernetes 기반 {{site.data.keyword.cloud_notm}} Private Hosted 애플리케이션 개발 플랫폼을 사용한 해당 워크로드의 컨테이너화를 위해 설계되었습니다. 자동화는 몇 시간 내에 {{site.data.keyword.cloud_notm}}에서 VMware HCX를 설치 및 구성하고, 온프레미스 HCX 활성화 키를 제공하고, {{site.data.keyword.cloud_notm}} Private Hosted에서 소규모 개발/테스트 토폴로지를 설치 및 구성합니다.
 
 마이그레이션 및 앱 현대화를 위한 단일 노드 평가판은 개념 증명(POC)에만 사용됩니다. 이 환경에 프로덕션 워크로드를 실행하지 마십시오. 호스트 및 클러스터 추가 및 제거, 추가 기능 서비스 주문 및 업데이트 적용과 같은 관리 기능은 지원되지 않습니다.
 {:important}
 
-최신 단일 노드 평가판 인스턴스를 가져오기 위해 [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html)에서 [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf)를 사용할 수 있으며, 이는 VMware 워크로드를 IBM Clou에 마이그레이션하는 데 도움이 됩니다. 또한 [IBM Cloud Garage Services](https://www.ibm.com/cloud/garage/)는 최신 클라우드 기본 사례를 통해 애플리케이션 현대화를 가속화하는 데 유용합니다.
+최신 단일 노드 평가판 인스턴스를 가져오기 위해 [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html)에서 [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf)를 사용할 수 있으며, 이는 VMware 워크로드를 {{site.data.keyword.cloud_notm}}에 마이그레이션하는 데 도움이 됩니다. 또한 [{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/)는 최신 클라우드 기본 사례를 통해 애플리케이션 현대화를 가속화하는 데 유용합니다.
 
 이 평가판은 최대 90일 동안 사용할 수 있습니다. 평가판 사용이 완료되면 이 환경을 삭제한 다음 용량 요구사항을 충족하는 새 환경을 프로비저닝할 수 있습니다.
 {:note}
@@ -49,7 +49,7 @@ subcollection: vmwaresolutions
 {: #cloud_modern_bundle_overview-cpu}
 
 * 16:1 CPU 과다 할당(vCenter Server 관리, HCX 및 20개의 고객 워크로드용)
-* 11:1 CPU 과다 할당(IBM Cloud Private용)
+* 11:1 CPU 과다 할당({{site.data.keyword.cloud_notm}} Private용)
 
 #### RAM 과다 할당
 {: #cloud_modern_bundle_overview-ram}
@@ -62,7 +62,7 @@ subcollection: vmwaresolutions
 
 * 관리를 위한 2TB
 * 고객 워크로드를 위한 1TB(20개의 고객 VM용)
-* IBM Cloud Private Hosted를 위한 4TB
+* {{site.data.keyword.cloud_notm}} Private Hosted를 위한 4TB
 
 ### 마이그레이션 및 앱 현대화를 위한 단일 노드 평가판 인스턴스의 네트워킹 스펙
 {: #cloud_modern_bundle_overview-networking-specs}
@@ -94,7 +94,8 @@ subcollection: vmwaresolutions
 * VMware vSphere Enterprise Plus 6.7u1
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Advanced Edition 6.4
-* IBM Cloud Private Hosted V3.1
+* {{site.data.keyword.cloud_notm}} Private Hosted 3.1.2
+* {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2
 
 마이그레이션 및 현대화를 위한 단일 노드 평가판 인스턴스는 BYOL(Bring Your Own License)을 지원하지 않습니다.
 {:note}
@@ -123,7 +124,7 @@ subcollection: vmwaresolutions
 
 L2 연결, WAN 최적화 및 게이트웨이 연결을 위해 필요에 따라 구성 중에 추가로 HCX 어플라이언스가 배치됩니다.
 
-### HCX on IBM Cloud 서비스에 대한 네트워킹 스펙
+### HCX on IBM Cloud의 네트워킹 스펙
 {: #cloud_modern_bundle_overview-hcx-networking-specs}
 
 * 16개 IP 주소가 포함된 한 개의 공인 포터블 서브넷
@@ -133,12 +134,17 @@ L2 연결, WAN 최적화 및 게이트웨이 연결을 위해 필요에 따라 �
 ## IBM Cloud Private Hosted의 기술 스펙
 {: #cloud_modern_bundle_overview-icp-tech-specs}
 
-IBM Cloud Private Hosted V3.1은 마이그레이션 및 앱 현대화를 위한 모든 단일 노드 평가판 인스턴스의 문서/테스트 토폴로지를 사용하여 설치됩니다. IBM Cloud Private Hosted에 대한 자세한 정보는 [IBM Cloud Private Hosted 개요](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_overview)를 참조하십시오.
+{{site.data.keyword.cloud_notm}} Private Hosted 3.1.2는 마이그레이션 및 앱 현대화를 위한 모든 단일 노드 평가판 인스턴스의 문서/테스트 토폴로지를 사용하여 설치됩니다. {{site.data.keyword.cloud_notm}} Private Hosted에 대한 자세한 정보는 [{{site.data.keyword.cloud_notm}} Private Hosted 개요](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_overview)를 참조하십시오.
+
+## IBM Cloud Automation Manager의 기술 스펙
+{: #cloud_modern_bundle_overview-cam-tech-specs}
+
+{{site.data.keyword.cloud_notm}} Automation Manager 3.1.2는 마이그레이션 및 앱 현대화를 위한 모든 단일 노드 평가판 인스턴스의 문서/테스트 토폴로지를 사용하여 설치됩니다. {{site.data.keyword.cloud_notm}} Automation Manager에 대한 자세한 정보는 [{{site.data.keyword.cloud_notm}} Automation Manager 문서](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: new_window}를 참조하십시오.
 
 ## 관련 링크
 {: #cloud_modern_bundle_overview-related}
 
-* [vCenter Server 및 IBM Cloud Private 안내서](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [IBM Cloud Private의 티켓 열기](https://www.ibm.com/mysupport/s/?language=en_US)
-* [VMware Hybrid Cloud Extension 문서](https://hcx.vmware.com/#/vm-documentation)
-* [Obtaining the HCX OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html)
+* [vCenter Server 및 {{site.data.keyword.cloud_notm}} Private 안내서](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
+* [{{site.data.keyword.cloud_notm}} Private의 티켓 열기](https://www.ibm.com/mysupport/s/?language=en_US)
+* [VMware HCX 리소스](https://hcx.vmware.com/#/docs)
+* [Obtaining the VMware HCX OVA](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html?hWord=N4IghgNiBcIPICMAuYCWA7DBzABEgFgKY4ASAwgBo5wBqAgiAL5A)

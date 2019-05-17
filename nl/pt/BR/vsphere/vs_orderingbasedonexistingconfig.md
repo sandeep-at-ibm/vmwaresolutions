@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -50,7 +50,7 @@ Se salvou a configuração de cluster como um modelo, você receberá uma notifi
 
 Se você fez um pedido, a implementação do cluster será iniciada automaticamente. Você recebe uma confirmação por e-mail de que a ordem está sendo processada. Quando o cluster estiver pronto para ser usado, você também será notificado por e-mail.
 
-Os clusters do vSphere, ao contrário das instâncias do servidor vCenter e do Cloud Foundation, não são exibidos na página **Recursos**.
+Os clusters do vSphere, ao contrário das instâncias do vCenter Server, não são exibidos na página **Recursos**.
 {:note}
 
 ## Links relacionados

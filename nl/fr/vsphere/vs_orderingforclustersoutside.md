@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -49,7 +49,7 @@ Assurez-vous que :
 
 Le déploiement du cluster démarre automatiquement et vous recevez par courrier électronique la confirmation que la commande est en cours de traitement. Lorsque le cluster est prêt pour utilisation, un courrier électronique vous en avertit.
 
-Les clusters vSphere ne s'affichent pas sur la page **Ressources**, avec les instances vCenter Server et Cloud Foundation.
+Les clusters vSphere ne s'affichent pas sur la page **Ressources**, avec les instances vCenter Server.
 {:note}
 
 ## Liens connexes

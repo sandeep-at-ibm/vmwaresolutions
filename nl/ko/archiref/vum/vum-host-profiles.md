@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -57,13 +57,13 @@ vCenter Server 클러스터에 호스트를 더 추가하려면 [vCenter Server 
 
 1.	이전에 완료된 호스트 프로파일로 이동하십시오.
 2.	**호스트 프로파일 준수 확인 아이콘**을 클릭하십시오.
-3.	**오브젝트 탭**에서 준수 상태가 _준수, 알 수 없음 또는 비준수_로 업데이트됩니다. 비준수 상태는 프로파일과 새 호스트 간의 검색된 특정 불일치를 나타냅니다.
+3.	**오브젝트** 탭에서 준수 상태가 _준수, 알 수 없음 또는 비준수_로 업데이트됩니다. 비준수 상태는 프로파일과 새 호스트 간의 검색된 특정 불일치를 나타냅니다.
 
 ##	규제 준수 실패 검토 및 수정
 {: #vum-host-profiles-review-compliance}
 
 1. 규제 준수 실패에 대한 세부사항을 보려면 **오브젝트** 탭에서 규제 준수 검사에 사용된 **호스트 프로파일**을 선택하십시오.
-2. 규제 준수에 실패한 호스트와 호스트 프로파일 간의 다른 매개변수에 대한 특정 세부사항을 보려면 **모니터 탭**을 클릭하고 **준수 보기**를 선택하십시오.
+2. 규제 준수에 실패한 호스트와 호스트 프로파일 간의 다른 매개변수에 대한 특정 세부사항을 보려면 **모니터** 탭을 클릭하고 **준수** 보기를 선택하십시오.
 3. 오브젝트 계층 구조를 펼치고 실패한 호스트를 선택하십시오.
 4. 다른 매개변수가 준수 창의 해당 계층 구조 아래에 표시됩니다.
 5. 매개변수를 검토하고 새 호스트가 참조 호스트와 다를 수 있는 이유를 이해하십시오. 준수가 허용되지 않는 매개변수의 경우 새 호스트를 유지보수 모드에서 이동하기 전에 수정하십시오. 예를 들어, 시스템 관리자 조치로 인해 구성 변경이 발생한 경우입니다.
@@ -72,4 +72,4 @@ vCenter Server 클러스터에 호스트를 더 추가하려면 [vCenter Server 
 {: #vum-host-profiles-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 솔루션 아키텍처](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} 디지털 기술 업무](https://ibm-dte.mybluemix.net/ibm-vmware)(데모)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} 디지털 기술 업무](https://ibm-dte.mybluemix.net/vmware)(데모)

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-20"
+lastupdated: "2019-04-26"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -33,8 +33,8 @@ Tabela 1. Formato de valor para nomes de instância e de domínio
 | Nome        | Formato do valor      |
   |:------------|:------------ |
   | Nome de domínio | `<root_domain>` |  
-  | Nome do usuário de login do vCenter Server | `<user_id>@<root_domain>` (Usuário do Microsoft Active Directory) ou `administrator@vsphere.local` |
-  | FQDN do vCenter Server (com PSC integrado) | ` vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. O comprimento máximo é de 50 caracteres. |
+  | Nome do usuário de login do vCenter Server | `<user_id>@<root_domain>` (usuário do Microsoft Active Directory) ou `administrator@vsphere.local` |
+  | FQDN do vCenter Server (com PSC integrado) | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. O comprimento máximo é 50 caracteres. |
   | Nome do site de Conexão única (SSO) | `<subdomain_label>` |
   | Nome do servidor ESXi totalmente qualificado | `<host_prefix><n>.<subdomain_label>.<root_domain>`, em que `<n>` é a sequência do servidor ESXi. O comprimento máximo é de 50 caracteres. |
 
@@ -124,9 +124,9 @@ Tabela 3. Opções para o Broadwell {{site.data.keyword.baremetal_short}}
 ### Número de Bare Metal Servers
 {: #vc_nsx-t_orderinginstance-bare-metal-number}
 
-Para o cluster inicial na instância, é possível configurar o número de servidores ESXi no intervalo de 3 a 20. Todos os servidores ESXi compartilham a configuração configurada.
-
-Após a implementação inicial, é possível incluir mais quatro clusters. Se você tiver selecionado a configuração **Skylake** ou **Broadwell** para o VMware vSAN, 4 servidores ESXi serão necessários para os clusters iniciais e pós-implementação. Para obter mais informações sobre o mínimo de servidores ESXi, veja [É uma instância de dois nós do vCenter Server altamente disponível](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-).
+* Todos os servidores que você pede têm a mesma configuração.
+* Se você estiver planejando usar o armazenamento vSAN, será possível pedir entre 4 e 20 servidores.
+* Se você estiver planejando usar o armazenamento NFS, será possível pedir entre 2 e 20 servidores. No entanto, para cargas de trabalho de produção, um mínimo de 3 servidores é recomendado. Para obter mais informações, consulte [Uma instância do vCenter Server de dois nós é altamente disponível?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-).
 
 ## Configurações de armazenamento
 {: #vc_nsx-t_orderinginstance-storage-settings}
@@ -142,12 +142,12 @@ e reduzindo capacidade para instâncias do vCenter Server](/docs/services/vmware
 ### Armazenamento vSAN
 {: #vc_nsx-t_orderinginstance-vsan-storage}
 
-O vSAN está disponível somente para a configuração de Bare Metal **Skylake** e **Broadwell**. Especifique as seguintes opções vSAN:
+O vSAN está disponível somente para as configurações de Bare Metal **Skylake** e **Broadwell**. Especifique as seguintes opções vSAN:
 * **Tipo de disco e tamanho para discos de capacidade vSAN**: selecione uma opção para os discos de capacidade necessários.
 * **Número de discos de capacidade vSAN**: especifique o número de discos de capacidade que deseja incluir.
-* Se você desejar incluir discos de capacidade além do limite de oito, marque a caixa **Intel Optane de alto desempenho**. Essa opção fornece dois compartimentos de disco de capacidade extras para um total de 10 discos de capacidade e é útil para cargas de trabalho que requerem menos latência e maior rendimento de IOPS.
+* Se você desejar incluir discos de capacidade acima do limite de 10, marque a caixa **Intel Optane de alto desempenho**. Essa opção fornece dois compartimentos de disco de capacidade extra para um total de 12 discos de capacidade e é útil para cargas de trabalho que requerem menos latência e rendimento superior de IOPS.
 
-  A opção **Intel Optane de alto desempenho** está disponível apenas para os modelos de CPU Dual Intel Xeon Gold 5120 e Dual Intel Xeon Gold 6140 do Skylake.
+  A opção **Intel Optane de alto desempenho** está disponível somente para os modelos de CPU Skylake.
   {:note}
 
 * Revise os valores **Tipo de disco para discos de cache vSAN** e **Número de discos de cache vSAN**. Esses valores dependem de a caixa **Intel Optane de alto desempenho** estar ou não marcada.
@@ -252,14 +252,14 @@ Selecione a configuração do Sistema de Nomes de Domínio (DNS) para sua instâ
 * **VSI pública única do Windows para o Active Directory/DNS**: uma VSI única do Microsoft Windows Server para o Microsoft Active Directory (AD), que funciona como o DNS para a instância na qual os hosts e as MVs são registrados, é implementada e pode ser consultada. Essa opção foi implementada por padrão para instâncias da V1.9 e mais recentes.
 * **Duas MVs do Windows Server dedicadas, altamente disponíveis no cluster de gerenciamento**: duas MVs do Microsoft Windows são implementadas, ajudando a aprimorar a segurança e a robustez.
 
-Deve-se fornecer duas licenças do Microsoft Windows Server 2012 R2 quando você configura sua instância para usar as duas MVs do Microsoft Windows. Use a licença de edição do Microsoft Windows Server 2012 R2 Standard ou a licença de edição do Microsoft Windows Server 2012 R2 Datacenter, ou ambas.
+Deve-se fornecer duas licenças do Microsoft Windows Server 2016 se sua instância é configurada para usar as duas VMs do Microsoft Windows. Use a licença do Microsoft Windows Server 2016 Standard Edition ou a licença do Microsoft Windows Server 2016 Datacenter Edition, ou ambas.
 {:important}
 
 Cada licença pode ser designada apenas a um único servidor físico e abrange até dois processadores físicos. Uma licença da edição Standard pode executar duas MVs virtualizadas do Microsoft Windows por servidor de 2 processadores. Portanto, duas licenças são necessárias, pois duas MVs do Microsoft Windows são implementadas em dois hosts diferentes.
 
 Você tem 30 dias para ativar as MVs.
 
-Para obter mais informações sobre licenciamento do Windows, veja [Documentação do Windows Server 2012 R2](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2).
+Para obter mais informações sobre o pedido de licenças do Windows Server 2016, consulte [Introdução ao Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:new_window}.
 
 ## Resumo do Pedido
 {: #vc_nsx-t_orderinginstance-order-summary}
@@ -291,7 +291,7 @@ Com base em sua configuração selecionada para a instância, o custo estimado �
   * Se você selecionar **Armazenamento NFS** e desejar incluir e configurar as mesmas definições para todos os compartilhamentos de arquivo, especifique o **Número de compartilhamentos**, o **Desempenho** e o **Tamanho (GB)**.
   * Se você selecionar **Armazenamento NFS** e quiser incluir e configurar compartilhamentos de arquivo individualmente, selecione **Configurar compartilhamentos individualmente**. Em seguida, clique no ícone **+** ao lado do rótulo **Incluir armazenamento compartilhado** e selecione o **Desempenho** e o **Tamanho (GB)** para cada compartilhamento de arquivo. Deve-se selecionar pelo menos um compartilhamento de arquivo.
 9. Conclua as configurações da interface de rede.
-   1. Insira o prefixo de nome do host, o rótulo do subdomínio e o nome do domínio-raiz. Para uma instância secundária, o nome de domínio é preenchido automaticamente.
+   1. Insira o prefixo do nome do host para a instância que está sendo provisionada, o rótulo do subdomínio e o nome de domínio-raiz. Para uma instância secundária, o nome de domínio é preenchido automaticamente.
    2. Selecione a configuração de rede de **Rede pública e privada** ou **Somente rede privada**.
    3. Selecione as configurações de VLAN:
       * Se desejar pedir novas VLANs públicas e privadas, clique em **Pedir novas VLANs**.
@@ -309,7 +309,7 @@ Com base em sua configuração selecionada para a instância, o custo estimado �
 
 A implementação da instância é iniciada automaticamente. Você recebe confirmação de que o pedido está sendo processado e pode verificar o status da implementação visualizando os detalhes da instância.
 
-Quando a instância for implementada com êxito, os componentes que estão descritos em [Especificações técnicas para instâncias do vCenter Server com NSX-T](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_overview-specs) serão instalados em sua plataforma virtual VMware. Os servidores ESXi pedidos são agrupados como **cluster1** por padrão.
+Quando a instância for implementada com êxito, os componentes que estão descritos em [Especificações técnicas para instâncias do vCenter Server com NSX-T](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_overview#vc_nsx-t_overview-specs) serão instalados em sua plataforma virtual VMware. Os servidores ESXi pedidos são agrupados como **cluster1** por padrão.
 
 Quando a instância estiver pronta para usar, seu status mudará para **Pronta para usar** e você receberá uma notificação por e-mail.
 
@@ -339,6 +339,6 @@ Se você mudar esses componentes fora do console do {{site.data.keyword.vmwareso
 * [Inscrevendo-se em uma conta do {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)
 * [Visualizando instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
 * [Configuração de vários sites para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_multisite)
-* [Incluindo, visualizando e excluindo clusters para instâncias do vCenter Server com NSX-T](/docs/services/vmwaresolutions/vcenter?topic=vc_nsx-t_deletinginstance)
+* [Incluindo, visualizando e excluindo clusters para instâncias do vCenter Server com NSX-T](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_nsx-t_addingviewingcluster#vc_nsx-t_addingviewingcluster)
 * [Expandindo e contraindo a capacidade para o servidor vCenter com instâncias do NSX-T](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_addingremovingservers)
 * [Excluindo o vCenter Server com instâncias do NSX-T](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_deletinginstance)

@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-19"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -16,7 +16,8 @@ subcollection: vmwaresolutions
 
 共用服務提供雲端管理平台中其他服務所使用的服務。共用服務包括身分及存取服務、網域名稱服務及 NTP 服務。
 
-圖 1. {{site.data.keyword.icpfull_notm}} 共用服務</br>
+圖 1. {{site.data.keyword.icpfull_notm}} 共用服務
+</br>
 ![{{site.data.keyword.icpfull_notm}} 共用服務](vcscar-common-services.svg)
 
 ## 身分及存取服務

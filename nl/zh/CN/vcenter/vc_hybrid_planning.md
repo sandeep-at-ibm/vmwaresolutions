@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-20"
+lastupdated: "2019-04-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -50,7 +50,7 @@ vCenter Server with Hybridity Bundle 部署对物理基础架构有严格要求�
 |MON01|蒙特利尔|北美东部|
 |OSL01|奥斯陆|欧洲|
 |PAR01|巴黎|欧洲|
-|SAO01|圣保罗|南美|
+|SAO01|圣保罗|南美洲|
 |SEO01|首尔|亚太地区|
 |SJC03|圣何塞|北美西部|
 |SJC04|圣何塞|北美西部|
@@ -93,7 +93,7 @@ vCenter Server with Hybridity Bundle 实例包含授权您使用 VMware HCX on {
   * **专用密钥**：输入 CA 证书的专用密钥。
   * （可选）**密码**：输入专用密钥的密码（如果对专用密钥进行了加密）。
   * （可选）**重新输入密码**：重新输入专用密钥的密码。
-  * （可选）**主机名**：输入要映射到 CA 证书的公共名称 (CN) 的主机名。HCX on {{site.data.keyword.cloud_notm}} 需要 CA 证书采用 NSX Edge 接受的格式。有关 NSX Edge 证书格式的更多信息，请参阅[导入 SSL 证书](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html)。
+  * （可选）**主机名**：输入要映射到 CA 证书的公共名称 (CN) 的主机名。HCX on {{site.data.keyword.cloud_notm}} 需要 CA 证书采用 NSX Edge 接受的格式。有关 NSX Edge 证书格式的更多信息，请参阅[导入 SSL 证书](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html)。
 
 您可以根据需要订购适用于实例的其他附加组件服务，例如灾难恢复。有关更多信息，请参阅[订购、查看和除去 vCenter Server with Hybridity Bundle 实例的服务](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)。
 

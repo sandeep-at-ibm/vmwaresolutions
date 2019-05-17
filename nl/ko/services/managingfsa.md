@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-04-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -39,4 +39,4 @@ FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 서비스를 �
 * [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [fortinet.com 웹 사이트](https://www.fortinet.com/)
-* [Fortinet 기술 문서](http://docs.fortinet.com/fortigate/admin-guides)
+* [Fortinet Document Library](https://docs.fortinet.com/product/fortigate/6.2)

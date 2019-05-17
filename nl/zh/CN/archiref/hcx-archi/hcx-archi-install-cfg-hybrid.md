@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,7 +18,7 @@ subcollection: vmwaresolutions
 ## 先决条件
 {: #hcx-archi-install-cfg-hybrid-prereq}
 
-* HCX Manager 必须以内部部署方式安装，并向支持 VCF/VCS HCX 的云端点进行注册。
+* HCX Manager 必须以内部部署方式安装，并向支持 VCS HCX 的云端点进行注册。
 * 目标虚拟数据中心必须有足够的资源。
 
 ## 配置概述
@@ -34,7 +34,7 @@ subcollection: vmwaresolutions
 
 可使用简单的 Web 界面来安装服务虚拟设备，并配置更多第 2 层集中器。
 
-HCX Manager 必须已安装，并向支持 VCF/VCS HCX 的云端点进行注册。
+HCX Manager 必须已安装，并向支持 VCS HCX 的云端点进行注册。
 
 ### 安装和配置混合服务虚拟设备的过程
 {: #hcx-archi-install-cfg-hybrid-proc-install}
@@ -119,7 +119,7 @@ HCX Manager 必须已安装，并向支持 VCF/VCS HCX 的云端点进行注册�
 
 ## 将第 2 层联网延伸到 IBM Cloud
 
-将第 2 层网络从内部部署数据中心扩展到支持 VCF/VCS HCX 的云。
+将第 2 层网络从内部部署数据中心扩展到支持 VCS HCX 的云。
 {: #hcx-archi-install-cfg-hybrid-stretch-layer-2}
 
 ### 将第 2 层网络延伸到 IBM Cloud 的先决条件
@@ -136,9 +136,9 @@ HCX Manager 必须已安装，并向支持 VCF/VCS HCX 的云端点进行注册�
 3. 右键单击端口组，然后从菜单中选择**混合操作**，再选择**扩展网络**。
 4. 在**选择源端口组**页面上，确认端口组信息并输入网络的**网关 IP 地址**和前缀。单击**下一步**。
 5. 在**选择目标网关**页面上，完成以下步骤：
-  1. 从**组织**菜单中，选择 VCF/VCS Hybrid Cloud Services Cloud 组织。
-  2. 从菜单中，选择 VCF/VCS Hybrid Cloud Services Cloud 虚拟数据中心。
-  3. 使**邻近路由**保持禁用状态，以强制支持 VCF/VCS Hybrid Cloud Services 的云中的 VM 始终使用内部部署网关来访问因特网。缺省情况下，源自支持 VCF/VCS Hybrid Cloud Services 的云中的 VM 的流量会沿第 2 层数据路径遍历回内部部署数据中心，然后流出至缺省网关。如果选中**邻近路由**，那么支持 VCF/VCS Hybrid Cloud Services 的云中的 VM 可以访问因特网，而无需遍历 vSphere 的第 2 层数据路径。
+  1. 从**组织**菜单中，选择 VCS Hybrid Cloud Services Cloud 组织。
+  2. 从菜单中，选择 VCS Hybrid Cloud Services Cloud 虚拟数据中心。
+  3. 使**邻近路由**保持禁用状态，以强制支持 VCS Hybrid Cloud Services 的云中的 VM 始终使用内部部署网关来访问因特网。缺省情况下，源自支持 VCS Hybrid Cloud Services 的云中 VM 的流量会沿第 2 层数据路径遍历回内部部署数据中心，然后流出至缺省网关。如果选中**邻近路由**，那么支持 VCS Hybrid Cloud Services 的云中的 VM 可以访问因特网，而无需遍历 vSphere 的第 2 层数据路径。
   4. 通过单击网关列表中远程目标网关所在的行以选择该网关。单击**下一步**。
 6. 在**即将完成**页面上，复查提供的所有值。单击**完成**。
 7. 要跟踪网络扩展的进度，请转至**最近任务**窗口，单击**所有**选项卡，然后查看**所有用户的任务**。

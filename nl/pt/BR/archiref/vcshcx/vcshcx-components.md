@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-05"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -100,7 +100,7 @@ usa o login de SSO do vSphere do lado da nuvem (` administrator@vsphere.local`).
 instalação e modificar alguma configuração de rede. Ela também é usada
 para construir redes virtuais dentro do HCX.
 
-- IU de gerenciamento de dispositivo do gerenciador do HCX do Cliente/Nuvem – Acesse a IU de gerenciamento de dispositivo para a nuvem ou o lado do cliente por meio do endereço IP privado da VM, conforme visualizado no vCenter `https://<hcxmanager_IP>: 9443 `. O ID (geralmente "admin") e a senha
+- IU de gerenciamento de dispositivo do cliente/gerenciador HCX de nuvem - Acesse a IU de gerenciamento de dispositivo para a nuvem ou o lado do cliente por meio do endereço IP privado da VM, conforme visualizado no vCenter `https://<hcxmanager_IP>:9443`. O ID (geralmente "admin") e a senha
 são fornecidos por meio do portal do {{site.data.keyword.vmwaresolutions_short}}. A IU de gerenciamento é usada para iniciar e parar os serviços do HCX Manager, configurar o monitoramento de log, a configuração de rede básica, os upgrades manuais, suportar a reunião de log quando a IU da web não está funcionando, o registro com os componentes do vSphere (vCenter, PSC, NSX Manager) e o gerenciamento de certificado.
 
 ## Links relacionados

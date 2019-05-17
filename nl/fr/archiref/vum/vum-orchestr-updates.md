@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -40,7 +40,7 @@ La procédure suivante décrit le processus pour exécuter une mise à niveau or
 {: #vum-orchestr-updates-step1}
 
 1. Utilisez le client vSphere Web Client pour vous connecter au dispositif VCSA.
-2. Sélectionnez **Home** > **Update Manager**, dans l'onglet **Objects**, sélectionnez une **instance Update Manager**.
+2. Sélectionnez **Home** > **Update Manager** puis, dans l'onglet **Objects**, sélectionnez une instance **Update Manager**.
 3. Cliquez sur l'onglet **Manage**, puis sur l'onglet **Host Baselines** et cliquez sur **New Baseline Group**.
 4. Entrez un nom unique pour le groupe de lignes de base et cliquez sur **Next**.
 5. Sélectionnez une ligne de base de mise à niveau d'hôte pour l'inclure dans le groupe de lignes de base.
@@ -68,4 +68,4 @@ Vous pouvez désormais utiliser ces groupes de lignes de base dans les processus
 {: #vum-orchestr-updates-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (démonstrations)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (démonstrations)

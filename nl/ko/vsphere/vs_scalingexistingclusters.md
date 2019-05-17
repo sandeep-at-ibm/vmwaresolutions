@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -48,7 +48,7 @@ subcollection: vmwaresolutions
 
 스케일링하는 클러스터가 사용할 준비가 되지 않은 경우 오류 메시지를 수신할 수 있습니다.
 
-vSphere 클러스터는 vCenter Server 및 Cloud Foundation 인스턴스와 달리 **리소스** 페이지에 표시되지 않습니다.
+vSphere 클러스터는 vCenter Server 인스턴스와 달리 **리소스** 페이지에 표시되지 않습니다.
 {:note}
 
 ## 관련 링크

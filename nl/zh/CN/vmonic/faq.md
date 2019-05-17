@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -27,7 +27,7 @@ subcollection: vmwaresolutions
 
 * **IBM 标识帐户**。需要此帐户才能访问 {{site.data.keyword.vmwaresolutions_short}} 控制台。控制台是与 {{site.data.keyword.slportal}} 分开的独立用户界面。有关更多信息，请参阅[入门](/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started)。
 * **{{site.data.keyword.cloud_notm}} 帐户**。需要此帐户才能进行供应。您可以使用现有 **IBM 标识**或创建新的 **IBM 标识**来注册 {{site.data.keyword.cloud_notm}} 帐户。
-* **{{site.data.keyword.cloud_notm}} 基础架构帐户**。此帐户先前称为 **IBM SoftLayer** 帐户，用于登录到 {{site.data.keyword.cloud_notm}} 基础架构客户门户网站，该门户网站提供了某种额外的功能来管理基础架构产品和服务。您可以通过将 **{{site.data.keyword.cloud_notm}} 帐户**升级到现收现付类型的帐户，或通过将现有 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户与 {{site.data.keyword.cloud_notm}} 帐户链接，获取 {{site.data.keyword.cloud_notm}} 基础架构帐户。要使用的 {{site.data.keyword.cloud_notm}} 基础架构帐户必须满足特定需求。有关更多信息，请参阅[注册必需的帐户](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)和 [{{site.data.keyword.cloud_notm}} 基础架构帐户需求](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)。
+* **{{site.data.keyword.cloud_notm}} 基础架构帐户**。此帐户用于登录到 {{site.data.keyword.cloud_notm}} 基础架构客户门户网站，该门户网站提供了某种额外的功能来管理基础架构产品和服务。您可以通过将 **{{site.data.keyword.cloud_notm}} 帐户**升级到现收现付类型的帐户，或通过将现有 {{site.data.keyword.cloud_notm}} 基础架构帐户与 {{site.data.keyword.cloud_notm}} 帐户链接，获取 {{site.data.keyword.cloud_notm}} 基础架构帐户。要使用的 {{site.data.keyword.cloud_notm}} 基础架构帐户必须满足特定需求。有关更多信息，请参阅[注册必需的帐户](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)和 [{{site.data.keyword.cloud_notm}} 基础架构帐户需求](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)。
 
 ## 如何将我的 IBM Cloud Infrastructure 凭证与 IBM Cloud for VMware Solutions 控制台相关联？
 {: #faq-associate-credentials}
@@ -85,10 +85,7 @@ subcollection: vmwaresolutions
 {: #faq-rename-cluster}
 {: faq}
 
-对于 vCenter Server 实例，在部署期间创建的第一个集群具有缺省名称 **cluster1**。可以在 VMware vSphere Client 中重命名缺省集群。在您将集群添加到 a vCenter Server 实例时，可以在 {{site.data.keyword.vmwaresolutions_short}} 控制台上指定所需名称。
-
-对于 Cloud Foundation 实例，无法更改缺省集群名称。
-{:note}
+对于新的 vCenter Server 实例，在部署期间创建的第一个集群具有缺省名称 **cluster1**。可以在 VMware vSphere Client 中重命名缺省集群。在您将集群添加到 a vCenter Server 实例时，可以在 {{site.data.keyword.vmwaresolutions_short}} 控制台上指定所需名称。
 
 ## 如何管理补丁？
 {: #faq-patches}
@@ -96,17 +93,7 @@ subcollection: vmwaresolutions
 
 IBM 通过按需部署 IBM CloudDriver 虚拟服务器实例 (VSI)，提供 IBM 代码的持续更新。IBM 不会提供附加组件服务（例如，Zerto on {{site.data.keyword.cloud_notm}} 或 Veeam on {{site.data.keyword.cloud_notm}}）的持续更新。获取并安装这些更新是您的责任。
 
-根据实例类型，VMware 更新会以不同方式应用。
-
-### VMware Cloud Foundation 实例
-{: #faq-patches-cf}
-
-对 vSphere ESXi、NSX、vCenter、Platform Services Controller 和 SDDC Manager 组件的更新将通过 {{site.data.keyword.vmwaresolutions_short}} 控制台提供。
-
-### VMware vCenter Server 实例
-{: #faq-patches-vcs}
-
-对于部署或升级到 V2.1 或更高版本的实例，将使用 VMware 中最近（但不一定是最新）的 ESXi 更新，对新部署的 ESXi 服务器和集群进行修补。
+对于部署在或已升级到 V2.1 或更高版本的 VMware vCenter Server 实例，将使用 VMware 中最近（但不一定是最新）的 ESXi 更新，对新部署的 ESXi 服务器和集群进行修补。
 
 您负责对 VMware 组件执行其他所有更新，包括确保新部署的 ESXi 服务器和集群都具有全部所需的最新更新。
 {:important}
@@ -124,7 +111,7 @@ IBM 通过按需部署 IBM CloudDriver 虚拟服务器实例 (VSI)，提供 IBM 
 
 虽然用于管理服务的 VMware NSX Edge 位于公用子网上，但已采用以下安全措施来确保它不会构成安全风险：
 *  NSX Edge 防火墙已配置为仅允许管理虚拟机发起的传出 HTTPS（TCP 端口 443）流量。
-*  使用了 SNAT（源网络地址转换），用于使专用 IP 地址在专用网络外部不可见。
+*  使用了 SNAT（源网络地址转换），以便专用 IP 地址在专用网络外部不可见。
 *  禁用了管理服务 NSX Edge 设备的远程访问。
 *  用于访问专用网络中管理服务 NSX Edge 的密码是随机的，并已加密。
 
@@ -134,7 +121,7 @@ IBM 通过按需部署 IBM CloudDriver 虚拟服务器实例 (VSI)，提供 IBM 
 
 虽然客户管理的 NSX Edge 位于公用 VLAN 上，但已采用安全措施来确保它不会构成安全风险。现有的安全措施如下：
 *  采用了防火墙规则，仅允许来自 IP 地址的专用子网范围的传出流量。
-*  采用了 SNAT（源网络地址转换）规则（缺省情况下禁用），用于将专用子网中的所有 IP 地址转换为公用子网上的单个 IP 地址。
+*  采用了 SNAT 规则（缺省情况下已禁用），以将专用子网中的所有 IP 地址转换为公用子网上的单个 IP 地址。
 *  禁用了客户管理的 NSX Edge 设备的远程访问。
 *  用于访问专用网络中客户管理的 NSX Edge 的密码是随机的，并已加密。
 
@@ -160,7 +147,7 @@ IBM 通过按需部署 IBM CloudDriver 虚拟服务器实例 (VSI)，提供 IBM 
 {: #faq-vss-automation}
 {: faq}
 
-不是，VMware vSphere on {{site.data.keyword.cloud_notm}} 未使用 Cloud Foundation 和 vCenter Server 平台中的高级自动化。根据您订购的内容，该平台会交付可选的 VMware 许可证以及 ESXi 服务器，还可以选择交付 FortiGate 物理防火墙的 HA 对。如果创建了一个新集群，那么还会供应三个新的 VLAN：一个公用 VLAN，两个专用 VLAN。
+不是，VMware vSphere on {{site.data.keyword.cloud_notm}} 未使用 vCenter Server 平台中的高级自动化。根据您订购的内容，该平台会交付可选的 VMware 许可证以及 ESXi 服务器，还可以选择交付 FortiGate 物理防火墙的 HA 对。如果创建了一个新集群，那么还会供应三个新的 VLAN：一个公用 VLAN，两个专用 VLAN。
 
 VMware ESXi 会自动安装在每个裸机服务器上，但您负责安装 vCenter Server 或 NSX 等其他任何 VMware 组件。虽然 vSphere on {{site.data.keyword.cloud_notm}} 会确保根据所选的 VMware 组件订购与 VMware 兼容的硬件，但不存在任何自动化来配置和启动 VMware 环境。您负责设计和构造 IBM 托管的环境。
 

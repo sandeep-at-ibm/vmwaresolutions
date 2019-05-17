@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-18"
+lastupdated: "2019-04-18"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -30,11 +30,12 @@ Iniciando com a liberação V2.9, é possível incluir novos servidores ESXi em 
 Como seu cluster inicial tem o vSAN como seu armazenamento, incluir um ou mais servidores ESXi após a implementação pode aumentar a capacidade de armazenamento do cluster.
 
 ## Incluindo servidores ESXi em instâncias do vCenter Server with Hybridity Bundle
+{: #vc_hybrid_addingremovingservers-adding}
 
 ### Antes de Incluir Servidores ESXi
 {: #vc_hybrid_addingremovingservers-adding-prereq}
 
-* Não inclua servidores ESXi do Web client do VMware vSphere. As mudanças feitas no vSphere Web Client não são sincronizadas com o console do {{site.data.keyword.vmwaresolutions_short}}.
+* Sempre que possível, inclua servidores ESXi usando o console do {{site.data.keyword.vmwaresolutions_full}}, pois as mudanças feitas no VMware vSphere Web Client não são sincronizadas com o console do {{site.data.keyword.vmwaresolutions_short}}. Portanto, inclua servidores ESXi no vCenter Server somente para servidores ESXi no local ou servidores ESXi que você não possa ou não gerenciará no console do {{site.data.keyword.vmwaresolutions_short}}.
 * O armazenamento vSAN requer pelo menos 4 servidores ESXi.
 
 ## Procedimento para Incluir Servidores ESXi
@@ -65,7 +66,7 @@ Se você estiver incluindo servidores ESXi durante o modo de manutenção, as m�
 ### Antes de remover servidores ESXi
 {: #vc_hybrid_addingremovingservers-removing-prereq}
 
-* Não remova servidores ESXi do Web client do VMware vSphere. As mudanças feitas no vSphere Web Client não são sincronizadas com o console do {{site.data.keyword.vmwaresolutions_short}}.
+* Sempre que possível, remova os servidores ESXi usando o console do {{site.data.keyword.vmwaresolutions_full}}, pois as mudanças feitas no vSphere Web Client não são sincronizadas com o console do {{site.data.keyword.vmwaresolutions_short}}. Portanto, remova os servidores ESXi do vCenter Server somente para servidores ESXi no local ou servidores ESXi que você não possa ou não gerenciará no console do {{site.data.keyword.vmwaresolutions_short}}.
 * O armazenamento vSAN requer pelo menos 4 servidores ESXi.
 * Antes de remover os servidores ESXi com os serviços F5 on {{site.data.keyword.cloud_notm}} ou FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} instalados, deve-se migrar as MVs F5 BIG-IP e FortiGate para um servidor ESXi diferente daquele que está hospedando as MVs.
 * Antes de remover servidores ESXi com o serviço IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} instalado, assegure-se de que não haja operações de backup ou de restauração (com falha ou em andamento) ativas porque essas operações ativas podem evitar a remoção dos servidores ESXi.
@@ -96,5 +97,5 @@ Se você estiver incluindo servidores ESXi durante o modo de manutenção, as m�
 * [Lista de materiais do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
 * [Requisitos e planejamento para instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)
 * [Incluindo, visualizando e excluindo clusters para instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingviewingclusters)
-* [Colocar um host no modo de manutenção](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
-* [Suporte ao processador Enhanced vMotion Compatibility (EVC)](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003212){:new_window}
+* [Colocar um host no modo de manutenção](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.resmgmt.doc/GUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
+* [Suporte ao processador Enhanced vMotion Compatibility (EVC)](https://kb.vmware.com/s/article/1003212){:new_window}

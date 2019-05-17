@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-04-09"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -37,13 +37,18 @@ subcollection: vmwaresolutions
 如果将 Zerto for {{site.data.keyword.cloud_notm}} 添加到具有处于维护模式的 ESXi 服务器的 vCenter Server 实例中，那么您必须使用 Zerto Virtual Manager (ZVM) 控制台和预填充的 Zerto Virtual Replication Appliance (VRA) IP 地址来手动部署 VRA 虚拟机 (VM)。
 {:note}
 
+## 为仅专用实例订购 Zerto on IBM Cloud
+{: #zerto_ordering-private-only}
+
+如果要将 Zerto on {{site.data.keyword.cloud_notm}} 添加到仅专用实例，请确保满足以下需求：
+* 您负责设置自己的代理服务器以连接到因特网。有关更多信息，请参阅[公用网络连接](/docs/services/vmwaresolutions/services?topic=vmware-solutions-design_virtualinfrastructure#public-network-connectivity)。
+* 您还必须为 Zerto 配置“回拨”功能。有关 Zerto“回拨”的更多信息，请参阅 [Zerto Reporting for Enterprise environments (Call Home)](https://www.zerto.com/myzerto/knowledge-base/zerto-reporting-for-enterprise-environments-call-home/){:new_window}。
+
 ## 相关链接
 {: #zerto_ordering-related}
 
 * [Zerto on {{site.data.keyword.cloud_notm}} 概述](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)
 * [管理 Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingzertodr)
-* [订购、查看和除去 vCenter Server 实例的服务](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
-* [订购、查看和除去 vCenter Server with Hybridity Bundle 实例的服务](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
 * [请求 Zerto on {{site.data.keyword.cloud_notm}} 的受管服务](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
 * [zerto.com Web 站点](https://www.zerto.com){:new_window}
 * [Zerto 技术文档](https://www.zerto.com/myzerto/technical-documentation/){:new_window}

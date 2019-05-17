@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-24"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,16 +18,16 @@ subcollection: vmwaresolutions
 # Visão geral do Single-node Trial for Migration and App Modernization
 {: #cloud_modern_bundle_overview}
 
-O Single-node Trial for Migration and App Modernization permite que você teste a unidade do IBM Cloud para migrar cargas de trabalho do VMware para o IBM Cloud e, em seguida, modernizar cargas de trabalho simples usando contêineres.
+O Single-node Trial for Migration and App Modernization permite testar a unidade {{site.data.keyword.cloud_notm}} para migrar cargas de trabalho do VMware para o {{site.data.keyword.cloud}} e, em seguida, modernizar cargas de trabalho simples usando contêineres.
 
-O Single-node Trial é uma versão de avaliação do IBM Cloud Private Hosted no VMware vCenter Server on IBM Cloud que fornece a plataforma de gerenciamento do Kubernetes para contêineres e a plataforma VMware de único locatário que pode ser gerenciada usando as mesmas ferramentas que em ambientes no local. É possível aproveitar a velocidade e a escala da nuvem enquanto mantém o mesmo nível de controle e visibilidade que é fornecido no local.
+O Single-node Trial é uma versão de avaliação do {{site.data.keyword.cloud_notm}} Private Hosted no VMware vCenter Server on {{site.data.keyword.cloud_notm}} que fornece a plataforma de gerenciamento do Kubernetes para contêineres e a plataforma VMware de locatário único que pode ser gerenciada usando as mesmas ferramentas que em ambientes no local. É possível aproveitar a velocidade e a escala da nuvem enquanto mantém o mesmo nível de controle e visibilidade que é fornecido no local.
 
-A avaliação é projetada para migração de até 20 cargas de trabalho de desenvolvimento ou de teste simples usando o vCenter Server on IBM Cloud with Hybridity Bundle e a conteinerização dessas cargas de trabalho com a plataforma de desenvolvimento de aplicativo IBM Cloud Private Hosted baseada em Kubernetes. A automação instalará e configurará o VMware HCX no IBM Cloud, fornecerá uma chave de ativação do HCX no local e instalará e configurará uma pequena topologia de desenvolvimento/teste do IBM Cloud Private Hosted em uma questão de horas.
+A avaliação é projetada para migração de até 20 cargas de trabalho de desenvolvimento ou de teste simples usando o vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle e conteinerização dessas cargas de trabalho com a plataforma de desenvolvimento de aplicativo do {{site.data.keyword.cloud_notm}} Private Hosted baseada no Kubernetes. A automação instalará e configurará o VMware HCX no {{site.data.keyword.cloud_notm}}, fornecerá uma chave de ativação do HCX no local e instalará e configurará uma pequena topologia de desenvolvimento/teste do {{site.data.keyword.cloud_notm}} Private Hosted em questão de horas.
 
 O Single-node Trial for Migration and App Modernization é somente para prova de conceito (POC). Não execute cargas de trabalho de trabalho de produção nesse ambiente. Funções de gerenciamento, como a inclusão e a remoção de hosts e clusters, o pedido de serviços complementares e a aplicação de atualizações, não são suportadas.
 {:important}
 
-Para obter o máximo da instância do Single-node Trial, é possível usar o [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf) por meio de [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html), que pode ajudar a migrar suas cargas de trabalho do VMware para o IBM Cloud. Além disso, o [IBM Cloud Garage Services](https://www.ibm.com/cloud/garage/) pode ajudar a acelerar a modernização de aplicativo por meio das práticas nativas de nuvem mais recentes.
+Para obter o máximo da instância do Single-node Trial, é possível usar o [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf) por meio do [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html), que pode ajudar a migrar suas cargas de trabalho do VMware para o {{site.data.keyword.cloud_notm}}. Além disso, o [{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/) pode ajudar a acelerar a modernização do aplicativo por meio das práticas nativas de nuvem mais recentes.
 
 Essa avaliação é destinada ao uso de até 90 dias. Quando você tiver concluído a avaliação, será possível excluir esse ambiente e provisionar um novo ambiente que atenda às suas necessidades de capacidade.
 {:note}
@@ -49,7 +49,7 @@ Processador Dual Intel Xeon Gold 5120/total de 28 núcleos, 2.2 GHz com 384 GB d
 {: #cloud_modern_bundle_overview-cpu}
 
 * Supercomprometimento da CPU de 16:1 para gerenciamento do vCenter Server, HCX e 20 MVs de carga de trabalho do cliente
-* Supercomprometimento da CPU de 11:1 para o IBM Cloud Private
+* Supercomprometimento da CPU de 11:1 para o {{site.data.keyword.cloud_notm}} Private
 
 #### Supercomprometimentos de RAM
 {: #cloud_modern_bundle_overview-ram}
@@ -62,7 +62,7 @@ Processador Dual Intel Xeon Gold 5120/total de 28 núcleos, 2.2 GHz com 384 GB d
 
 * 2 TB para gerenciamento
 * 1 TB para a carga de trabalho do cliente (para 20 MVs do cliente)
-* 4 TB para o IBM Cloud Private Hosted
+* 4 TB para o {{site.data.keyword.cloud_notm}} Private Hosted
 
 ### Especificações de rede para instâncias do Single-node Trial for Migration and App Modernization
 {: #cloud_modern_bundle_overview-networking-specs}
@@ -94,7 +94,8 @@ As licenças a seguir são incluídas com sua ordem de instância do Single-node
 * VMware vSphere Enterprise Plus 6.7u1
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Advanced Edition 6.4
-* IBM Cloud Privado Hospedado V3.1
+* {{site.data.keyword.cloud_notm}} Private Hosted 3.1.2
+* {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2
 
 As instâncias do Single-node Trial for Migration and App Modernization não suportam o Bring Your Own License.
 {:note}
@@ -114,7 +115,7 @@ As instâncias do HCX local incluem apenas licenciamento e ativação.
 * RAM: 8 GB
 * Disco: 3 GB VMDK
 
-### HCX Management Appliance-máquina virtual
+### Dispositivo de gerenciamento HCX - Máquina virtual
 {: #cloud_modern_bundle_overview-hcx-mgmt-appliance}
 
 * CPU: 4 vCPU
@@ -123,7 +124,7 @@ As instâncias do HCX local incluem apenas licenciamento e ativação.
 
 Os dispositivos HCX adicionais são implementados durante a configuração, conforme necessário, para conectividade L2, otimização de WAN e conexões de gateway.
 
-### Especificações de rede para o serviço HCX on IBM Cloud
+### Especificações de rede para o HCX on IBM Cloud
 {: #cloud_modern_bundle_overview-hcx-networking-specs}
 
 * Uma sub-rede móvel pública com 16 endereços IP
@@ -133,12 +134,17 @@ Os dispositivos HCX adicionais são implementados durante a configuração, conf
 ## Especificações técnicas para o IBM Cloud Private Hosted
 {: #cloud_modern_bundle_overview-icp-tech-specs}
 
-O IBM Cloud Private Hosted V3.1 é instalado usando a topologia de Desenvolvimento/Teste em todas as instâncias do Single-node Trial for Migration and App Modernization. Para obter mais informações sobre o IBM Cloud Private Hosted, veja [Visão geral do IBM Cloud Private Hosted](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_overview).
+O {{site.data.keyword.cloud_notm}} Private Hosted 3.1.2 é instalado usando a topologia de Desenvolvimento/Teste em todas as instâncias do Single-node Trial for Migration and App Modernization. Para obter mais informações sobre o {{site.data.keyword.cloud_notm}} Private Hosted, consulte [Visão geral do {{site.data.keyword.cloud_notm}} Private Hosted](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_overview).
+
+## Especificações técnicas para o IBM Cloud Automation Manager
+{: #cloud_modern_bundle_overview-cam-tech-specs}
+
+O {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2 é instalado usando a topologia de Desenvolvimento/Teste em todas as instâncias do Single-node Trial for Migration and App Modernization. Para obter mais informações sobre o {{site.data.keyword.cloud_notm}} Automation Manager, consulte a [documentação do{{site.data.keyword.cloud_notm}} Automation Manager](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: new_window}.
 
 ## Links relacionados
 {: #cloud_modern_bundle_overview-related}
 
-* [Guia do vCenter Server e do IBM Cloud Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [Abra um chamado para o IBM Cloud Private](https://www.ibm.com/mysupport/s/?language=en_US)
-* [Documentação do VMware Hybrid Cloud Extension](https://hcx.vmware.com/#/vm-documentation)
-* [Obtendo o HCX OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html)
+* [Guia do vCenter Server e do {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
+* [Abrir um chamado para o {{site.data.keyword.cloud_notm}} Private](https://www.ibm.com/mysupport/s/?language=en_US)
+* [Recursos do VMware HCX](https://hcx.vmware.com/#/docs)
+* [Obtendo o VMware HCX OVA](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html?hWord=N4IghgNiBcIPICMAuYCWA7DBzABEgFgKY4ASAwgBo5wBqAgiAL5A)

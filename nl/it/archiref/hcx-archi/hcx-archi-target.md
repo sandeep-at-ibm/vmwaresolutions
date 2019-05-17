@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -30,7 +30,7 @@ Tabella 1. Distribuzione Edge NSX
 | RAM       | 8 GB          |
 | Disco      | 4,5 GB VMDK residente sull'archiviazione condivisa con uno swap di 4 GB |
 
-Poiché gli Edge NSX sono configurati come attivi/passivi nella distribuzione interna o dedicata, devono essere create dall'utente delle regole di anti-affinità vSphere Distributed Resource Scheduler (DRS) per garantire che gli Edge NSX non siano eseguiti sullo stesso host della rispettiva applicazione peer.
+Poiché gli Edge NSX sono configurati come attivi/passivi nella distribuzione interna o dedicata, devono essere create dall'utente delle regole di anti-affinità vSphere Distributed Resource Scheduler (DRS) per garantire che gli Edge NSX non siano eseguiti sullo stesso host del rispettivo dispositivo peer.
 
 Tabella 2. Regole anti-affinità Edge NSX
 
@@ -41,7 +41,7 @@ Tabella 2. Regole anti-affinità Edge NSX
 | Membri   | Edge NSX 1 |
 |           | Edge NSX 2 |
 
-Oltre alle applicazioni Edge NSX distribuite all'interno di IBM Cloud, viene distribuita l'applicazione virtuale HCX Manager se viene ordinato il servizio VMware HCX on IBM Cloud. Dopo la distribuzione di questa applicazione, l'Edge NSX viene abilitato per utilizzare il bilanciamento del carico e viene configurato con i profili dell'applicazione che utilizzano un certificato per la connessione in entrata dall'origine. L'Edge NSX viene inoltre configurato con i pool di bilanciamento del carico per puntare alle applicazioni HCX Manager, vCenter e PSC. Inoltre, viene creato un server virtuale con un indirizzo IP virtuale (VIP) sull'interfaccia pubblica con delle regole che collegano i pool al VIP. Nelle seguenti tabelle viene mostrato un esempio di configurazione del server virtuale e del pool sull'Edge NSX.
+Oltre ai dispositivi Edge NSX distribuiti all'interno di IBM Cloud, viene distribuito il dispositivo virtuale HCX Manager se viene ordinato il servizio VMware HCX on IBM Cloud. Dopo la distribuzione di questo dispositivo, l'Edge NSX viene abilitato per utilizzare il bilanciamento del carico e viene configurato con i profili dell'applicazione che utilizzano un certificato per la connessione in entrata dall'origine. L'Edge NSX viene inoltre configurato con i pool di bilanciamento del carico per puntare ai dispositivi HCX Manager, vCenter e PSC. Inoltre, viene creato un server virtuale con un indirizzo IP virtuale (VIP) sull'interfaccia pubblica con delle regole che collegano i pool al VIP. Nelle seguenti tabelle viene mostrato un esempio di configurazione del server virtuale e del pool sull'Edge NSX.
 
 Tabella 3. Configurazione VIP per l'Edge NSX - Server virtuali
 
@@ -98,19 +98,19 @@ Tabella 7. Configurazione pool per Edge NSX - Dettagli pool
 ## HCX Manager
 {: #hcx-archi-target-hcxm}
 
-Il componente HCX Manager è la prima applicazione che viene distribuita dopo la configurazione delle applicazioni Edge NSX sulla destinazione. Questa applicazione viene utilizzata come interfaccia principale nell'ambiente cloud per i componenti di origine e fornisce un'interfaccia utente di rete astratta che può essere utilizzata per aggiungere, modificare ed eliminare le reti nonché progettare e configurare l'instradamento senza l'uso diretto di NSX. In seguito all'integrazione del vCenter e di NSX, all'applicazione HCX Manager viene assegnato un indirizzo IP portatile privato sulla VLAN di gestione.
+Il componente HCX Manager è il primo dispositivo che viene distribuito dopo la configurazione dei dispositivi Edge NSX sulla destinazione. Questo dispositivo viene utilizzato come interfaccia principale nell'ambiente cloud per i componenti di origine e fornisce un'interfaccia utente di rete astratta che può essere utilizzata per aggiungere, modificare ed eliminare le reti nonché progettare e configurare l'instradamento senza l'uso diretto di NSX. In seguito all'integrazione del vCenter e di NSX, al dispositivo HCX Manager viene assegnato un indirizzo IP portatile privato sulla VLAN di gestione.
 
-Inoltre, viene configurata per accedere al vCenter e a NSX con un utente specifico. È importante notare che l'indirizzo IP dell'HCX Manager è lo stesso di quello utilizzato nell'Edge NSX per il bilanciamento del carico.
+Inoltre, viene configurato per accedere al vCenter e a NSX con un utente specifico. È importante notare che l'indirizzo IP dell'HCX Manager è lo stesso di quello utilizzato nell'Edge NSX per il bilanciamento del carico.
 
-Dopo che il componente cloud HCX Manager è stato distribuito e configurato, i componenti di origine creano una connessione all'HCX Manager tramite gli indirizzi VIP configurati nell'ESG NSX. Una volta effettuata questa connessione, le applicazioni gateway cloud e WAN optimizer vengono distribuite all'interno dell'IBM Cloud.
+Dopo che il componente cloud HCX Manager è stato distribuito e configurato, i componenti di origine creano una connessione all'HCX Manager tramite gli indirizzi VIP configurati nell'ESG NSX. Una volta effettuata questa connessione, i dispositivi gateway cloud e WAN optimizer vengono distribuiti all'interno dell'IBM Cloud.
 
-Figura 1. Destinazione - Applicazione Hybrid Cloud services
-![Destinazione - Applicazione Hybrid Cloud services](target_hybrid_cloud_services_appliance.svg)
+Figura 1. Destinazione - Dispositivo Hybrid Cloud services
+![Destinazione - Dispositivo Hybrid Cloud services](target_hybrid_cloud_services_appliance.svg)
 
 ## Gateway cloud
 {: #hcx-archi-target-cloud-gateway}
 
-Viene distribuita un'applicazione virtuale dopo che viene stabilita una connessione dall'origine al cloud di destinazione. Questa applicazione è il gateway cloud (CGW) e viene utilizzata per mantenere un canale sicuro tra l'ambiente vSphere designato come l'origine e IBM Cloud. La specifica di ridimensionamento dell'applicazione CGW distribuita all'interno dell'IBM Cloud viene elencata nella Tabella 3 Distribuzione gateway cloud.
+Viene distribuito un dispositivo virtuale dopo che viene stabilita una connessione dall'origine al cloud di destinazione. Questo dispositivo è il gateway cloud (CGW) e viene utilizzato per mantenere un canale sicuro tra l'ambiente vSphere designato come l'origine e IBM Cloud. La specifica di ridimensionamento del dispositivo CGW distribuito all'interno dell'IBM Cloud viene elencata nella Tabella 3 Distribuzione gateway cloud.
 
 Tabella 8. Distribuzione gateway cloud
 
@@ -124,7 +124,7 @@ Questo gateway cloud viene distribuito e configurato per risiedere sulla VLAN di
 
 Questo switch logico è una rete privata e non instradabile utilizzata come un canale di comunicazione tra il gateway privato e il WAN Optimizer di cui si è trattato in 4.1.4 WAN (TBD).
 
-La seguente figura illustra un diagramma del componente di alto livello dell'applicazione gateway cloud e delle connessioni assegnate.
+La seguente figura illustra un diagramma del componente di alto livello del dispositivo gateway cloud e delle connessioni assegnate.
 
 Figura 2. Distribuzione gateway cloud
 ![Distribuzione gateway cloud](cloud_gateway_deployment.svg)
@@ -132,11 +132,11 @@ Figura 2. Distribuzione gateway cloud
 ## WAN Optimizer
 {: #hcx-archi-target-wan-opt}
 
-Il secondo componente che viene distribuito è l'applicazione WAN Optimization. Anche se l'applicazione WAN Optimization è facoltativa, esegue il condizionamento WAN per ridurre gli effetti della latenza. Incorpora inoltre Forward Error Correction per negare gli scenari di perdita dei pacchetti e la deduplicazione dei pattern di traffico ridondanti.
+Il secondo componente che viene distribuito è il dispositivo WAN Optimization. Anche se il dispositivo WAN Optimization è facoltativo, esegue il condizionamento WAN per ridurre gli effetti della latenza. Incorpora inoltre Forward Error Correction per negare gli scenari di perdita dei pacchetti e la deduplicazione dei pattern di traffico ridondanti.
 
-Complessivamente, viene ridotto l'utilizzo della larghezza di banda e garantito il migliore utilizzo della capacità di rete disponibile per velocizzare il trasferimento dei dati da/a IBM Cloud. WAN Optimizer comporta un uso intensivo del disco e richiede una quantità sufficiente di IOPS per funzionare correttamente. Di conseguenza, WAN optimizer risiede sull'archiviazione vSAN all'interno dell'ambiente VCF e dell'archiviazione Endurance e supporta più di 2.000 IOPS in una distribuzione vCenter Server. La specifica di ridimensionamento per l'applicazione WAN Optimization è la seguente tabella.
+Complessivamente, viene ridotto l'utilizzo della larghezza di banda e garantito il migliore utilizzo della capacità di rete disponibile per velocizzare il trasferimento dei dati da/a IBM Cloud. WAN Optimizer comporta un uso intensivo del disco e richiede una quantità sufficiente di IOPS per funzionare correttamente. Di conseguenza, WAN optimizer risiede sull'archiviazione vSAN, se presente, oppure sull'archiviazione Endurance con 2.000 IOPS. La specifica di ridimensionamento per il dispositivo WAN Optimization è la seguente tabella.
 
-Tabella 9. Ridimensionamento applicazione WAN Optimizer
+Tabella 9. Ridimensionamento dispositivo WAN Optimizer
 
 | Componente | Configurazione |
 |-----------|---------------|
@@ -144,7 +144,7 @@ Tabella 9. Ridimensionamento applicazione WAN Optimizer
 | RAM       | 14 GB          |
 | Disco      | 30 GB VMDK + 70 GB VMDK residente sull'archiviazione condivisa |
 
-A differenza del gateway cloud, l'applicazione WAN Optimization è collegata solo a uno switch logico per abilitare la comunicazione tra sé stessa e il gateway cloud. Questa applicazione è obbligatoria se WAN optimization viene utilizzata nell'ambiente di origine. Consulta la seguente figura per una vista del layout di rete.
+A differenza del gateway cloud, il dispositivo WAN Optimization è collegato solo a uno switch logico per abilitare la comunicazione tra se stessa e il gateway cloud. Questo dispositivo è obbligatorio se WAN optimization viene utilizzato nell'ambiente di origine. Consulta la seguente figura per una vista del layout di rete.
 
 Figura 3. Distribuzione WAN Optimizer
 ![Distribuzione WAN Optimizer](wan_optimizer_deployment.svg)
@@ -152,11 +152,11 @@ Figura 3. Distribuzione WAN Optimizer
 ## Concentratore di livello 2
 {: #hcx-archi-target-layer-2-conc}
 
-Il terzo componente è noto come concentratore di livello 2 (L2C) e fa parte dei Network Extension Service. L2C è la VM (Virtual Machine) che consente l'estensione delle reti del data center in loco a IBM Cloud. L2C estende le VLAN in loco e/o le VXLAN. Ogni L2C può estendere fino a 4096 VLAN. Ogni L2C, quando accoppiato con il proprio partner in loco, può fornire fino a 1 Gbps per “flusso” e fino a una aggregazione di 4 Gbps per VLAN (o VXLAN). La distribuzione di più applicazioni L2C è supportata se sono necessarie più velocità effettive di rete.
+Il terzo componente è noto come concentratore di livello 2 (L2C) e fa parte dei Network Extension Service. L2C è la VM (Virtual Machine) che consente l'estensione delle reti del data center in loco a IBM Cloud. L2C estende le VLAN in loco e/o le VXLAN. Ogni L2C può estendere fino a 4096 VLAN. Ogni L2C, quando accoppiato con il proprio partner in loco, può fornire fino a 1 Gbps per “flusso” e fino a una aggregazione di 4 Gbps per VLAN (o VXLAN). La distribuzione di più dispositivi L2C è supportata se sono necessarie più velocità effettive di rete.
 
-Come parte di questa progettazione, l'applicazione L2C viene distribuita in modo tale che un cliente possa estendere più VLAN e VLXAN in IBM Cloud su internet pubblico o tramite la rete privata utilizzando Direct Link. La specifica di ridimensionamento dell'applicazione L2C su IBM Cloud viene elencata nella seguente tabella.
+Come parte di questa progettazione, il dispositivo L2C viene distribuito in modo tale che un cliente possa estendere più VLAN e VLXAN in IBM Cloud su internet pubblico o tramite la rete privata utilizzando Direct Link. La specifica di ridimensionamento del dispositivo L2C su IBM Cloud viene elencata nella seguente tabella.
 
-Tabella 10. Ridimensionamento applicazione HT L2C
+Tabella 10. Ridimensionamento dispositivo HT L2C
 
 | Componente | Configurazione |
 |-----------|---------------|
@@ -164,7 +164,7 @@ Tabella 10. Ridimensionamento applicazione HT L2C
 | RAM       | 38 GB          |
 | Disco      | 2 GB VMDK sull'archiviazione condivisa |
 
-L'applicazione L2C viene distribuita sulla VLAN di gestione e sulla VLAN pubblica. L'interfaccia pubblica viene utilizzata per il traffico dell'applicazione associato all'origine della rete estesa. Vengono create e collegate delle ulteriori connessioni come le reti estese all'applicazione L2C, dopo che l'amministratore dell'origine avvia l'estensione della rete in IBM Cloud. Sono illustrati degli esempi di queste reti e connessioni nella seguente figura.
+Il dispositivo L2C viene distribuito sulla VLAN di gestione e sulla VLAN pubblica. L'interfaccia pubblica viene utilizzata per il traffico dell'applicazione associato all'origine della rete estesa. Vengono create e collegate delle ulteriori connessioni come le reti estese al dispositivo L2C, dopo che l'amministratore dell'origine avvia l'estensione della rete in IBM Cloud. Sono illustrati degli esempi di queste reti e connessioni nella seguente figura.
 
 Figure 4. Distribuzione concentratore L2
 ![Distribuzione concentratore L2](l2_concentrator_deployment.svg)

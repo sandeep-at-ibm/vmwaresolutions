@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-12"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -28,7 +28,7 @@ Tableau 1. Fonctions prises en charge pour les instances vCenter Server et vCent
 | Ajout de serveurs ESXi | Pris en charge | Pris en charge | Pris en charge. Configuration automatisée non incluse |
 | Suppression de serveurs ESXi | Pris en charge | Pris en charge | Pris en charge. Configuration automatisée non incluse |
 | Prise en charge de multiples clusters | Le nombre maximal dépend des instructions de dimensionnement de VMware | Le nombre maximal dépend des instructions de dimensionnement de VMware | Pris en charge. Configuration automatisée non incluse |
-| Mise à jour et application de correctif de la pile VMware gérées par le client | Mises à jour gérées par le client:<br/>Outils VMware natifs (VMware Update Manager) | Mises à jour gérées par le client:<br/>Outils VMware natifs (VMware Update Manager) | Mises à jour gérées par le client:<br/>Outils VMware natifs (VMware Update Manager) |
+| Mise à jour et application de correctif de la pile VMware gérées par le client | Mises à jour gérées par le client :<br/>outils VMware natifs (VMware Update Manager) | Mises à jour gérées par le client :<br/>outils VMware natifs (VMware Update Manager) | Mises à jour gérées par le client :<br/>outils VMware natifs (VMware Update Manager) |
 | Sauvegarde et restauration | Utilisation manuelle d'IBM Spectrum Protect Plus ou de Veeam | Utilisation manuelle d'IBM Spectrum Protect Plus ou de Veeam | Solution de sauvegarde et de restauration non incluse |
 | Mise en réseau définie par logiciel (SDN) | NSX Base, Advanced ou Enterprise | NSX Advanced ou Enterprise | NSX Standard, Base ou Enterprise. Configuration automatisée non incluse |
 | BYOL pour vSphere et vSAN | Intégralement pris en charge par cluster | Non pris en charge | Pris en charge |

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-26"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -104,8 +104,8 @@ subcollection: vmwaresolutions
 
 **附註：**
 * 如果您選取 vSAN 元件，則會依 SSD 可用性來過濾位置清單。
-* FRA05 資料中心不支援 Broadwell Bare Metal Server。
-* LON05 資料中心不支援 SAP 認證或 Broadwell Bare Metal Server。
+* Broadwell Bare Metal Server 不適用於 **FRA05 - 法蘭克福**資料中心位置。
+* SAP 認證及 Broadwell Bare Metal Server 不適用於 **LON05 - 倫敦**資料中心位置。
 
 ### Skylake
 {: #vs_orderinginstances-skylake}
@@ -143,9 +143,6 @@ subcollection: vmwaresolutions
 
 | CPU 型號選項             |RAM 選項          |
 |:------------- |:------------- |
-|雙重 Intel Xeon E5-2620 v4 / 總計 16 核心，2.1 GHz |64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon E5-2650 v4 / 總計 24 核心，2.2 GHz |64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
-|雙重 Intel Xeon E5-2690 v4 / 總計 28 核心，2.6 GHz |64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
 |四重 Intel Xeon E7-4820 v4 / 總計 40 核心，2.0 GHz |128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 |四重 Intel Xeon E7-4850 v4 / 總計 64 核心，2.1 GHz |128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 
@@ -168,7 +165,7 @@ subcollection: vmwaresolutions
 * **vSAN 容量磁碟數目**：指定您要新增的容量磁碟數目。
 * 如果您要新增超過所限制的 8 個容量磁碟，請勾選**高效能 Intel Optane** 方框。這個選項提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟，並且適用於需要較少延遲且較高 IOPS 傳輸量的工作負載。
 
-  **高效能 Intel Optane** 選項僅適用於 Skylake CPU 型號「雙重 Intel Xeon Gold 5120」及「雙重 Intel Xeon Gold 6140」。
+  **高效能 Intel Optane** 選項僅適用於 Skylake CPU 型號。
   {:note}
 
 * 檢閱 **vSAN 快取磁碟的磁碟類型**及 **vSAN 快取磁碟數目**值。這些值取決於您是否已勾選**高效能 Intel Optane** 方框。
@@ -211,12 +208,7 @@ subcollection: vmwaresolutions
 ### 公用或專用網路
 {: #vs_orderinginstances-public-private-network}
 
-網路介面卡 (NIC) 啟用設定是根據您選取**公用及專用網路**或**僅限專用網路**而定。下列附加程式服務需要公用 NIC，如果您選取專用選項，則無法使用：
-
-* F5 on {{site.data.keyword.cloud_notm}}
-* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
-* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
-* Zerto on {{site.data.keyword.cloud_notm}}
+網路介面卡 (NIC) 啟用設定是根據您選取**公用及專用網路**或**僅限專用網路**而定。
 
 ### VLAN
 {: #vs_orderinginstances-vlans}
@@ -296,7 +288,7 @@ subcollection: vmwaresolutions
 
 如果您已下訂單，則會自動啟動叢集的部署，且您會收到電子郵件確認，指出正在處理該訂單。當叢集已備妥可供使用時，會透過電子郵件通知您。
 
-不同於 vCenter Server 和 Cloud Foundation 實例，vSphere 叢集並不會顯示在**資源**頁面上。
+不同於 vCenter Server 實例，vSphere 叢集並不會顯示在**資源**頁面上。
 {:note}
 
 ## 相關鏈結

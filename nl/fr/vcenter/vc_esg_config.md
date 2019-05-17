@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -96,6 +96,6 @@ Vous trouverez d'autres détails concernant les sous-réseau client en effectuan
 ## Liens connexes
 {: #vc_esg_config-related}
 
-* [Traitement des incidents](/docs/services/vmwaresolutions/vcenter//vcenter_chg_impact.html)
+* [Traitement des incidents](/docs/services/vmwaresolutions?topic=vmware-solutions-vcenter_chg_impact#vcenter_chg_impact)
 * [Foire aux questions](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [Passerelle NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}

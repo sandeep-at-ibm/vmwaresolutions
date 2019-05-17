@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -20,7 +20,7 @@ subcollection: vmwaresolutions
 {: #iamuserinvite-reqs}
 
 * 자신이 계정 소유자인지 또는 **VMware Solutions** 서비스에 대한 플랫폼 관리 역할이 **관리자**인지 확인하십시오.
-* [IAM(Identity and Access Management)으로 사용자 액세스 관리](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-access-with-iam)에서 사용자 역할 및 권한을 검토했는지 확인하십시오.
+* [IAM(Identity and Access Management)으로 사용자 액세스 관리](/docs/services/vmwaresolutions?topic=vmware-solutions-iam#iam)에서 사용자 역할 및 권한을 검토했는지 확인하십시오.
 
 ## 서비스 및 리소스에 액세스하도록 사용자를 초대하는 프로시저
 {: #iamuserinvite-procedure}

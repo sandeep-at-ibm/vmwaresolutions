@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-05"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -46,7 +46,7 @@ Per configurare l'IU web dell'ottimizzatore WAN:
 11.	Modifica le impostazioni sulla VM.
 12.	Fai clic sulla casella di spunta per connettere l'adattatore di rete 1.
 13.	Fai clic su **OK**.
-14.	Vai a `https://<configured_WAN_OPT_IP>`.
+14.	Vai all'indirizzo `https://<configured_WAN_OPT_IP>`.
 15.	Accedi con l'utente predefinito `admin` e la password `admin`.
 
 Puoi ora utilizzare l'IU web dell'ottimizzatore WAN per monitorare le velocità di trasmissione e i rapporti di compressione e impostare le limitazioni della larghezza di banda.
@@ -75,7 +75,8 @@ QoS per UDP 500 e 4500 per il traffico di tunnel tra i dispositivi L2C.
 
 Monitora i componenti HCX quali HCX Manager, il gateway cloud, l'ottimizzatore WAN e le operazioni di L2C (Layer 2 Concentrator) nei seguenti modi:
 
-- Configura HCX Manager per inviare i log a un server syslog. utilizza il programma di utilità di gestione del dispositivo di HCX Manager per eseguire il comando `https://<hcxhostname or
+- Configura HCX Manager per inviare i log a un server syslog. Utilizza il programma di
+utilità di gestione del dispositivo di HCX Manager per eseguire il comando `https://<hcxhostname or
 IP>:9443`.
 - Imposta un ping a una VM migrata prima del passaggio (swing) di rete per ciascuna rete L2 estesa.
 - Monitora l'integrità della VM del componente HCX con VMware vRealize Operations
@@ -115,5 +116,4 @@ Monitora il traffico su tutte le interfacce che utilizzano la scheda Monitoring 
 ## Link correlati
 {: #vcshcx-monitoring-related}
 
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro) 
+* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)   

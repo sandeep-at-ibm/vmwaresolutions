@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -36,8 +36,7 @@ Dans le diagramme, CAM crée des connexions de cloud aux services vCenter, aux f
 
 {{site.data.keyword.icpfull_notm}} peut être déployé avec des composants NSX-V ou NSX-T. {{site.data.keyword.icpfull_notm}} avec NSX-V permet d'exécuter les machines virtuelles {{site.data.keyword.icpfull_notm}} sur le réseau VXLAN et d'utiliser la mise en réseau interne Kubernetes Calico.
 
-{{site.data.keyword.icpfull_notm}} with NSX-T permet aux utilisateurs de contrôler et configurer la mise en réseau, le sous-réseau et les règles à partir d'une interface utilisateur centralisée (NSX-T Manager). Pour plus d'informations sur les différences entre NSX-V et NSX-T, voir [Architecture de référence de la mise en réseau VCS {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/archiref/
-vcsnsxt/vcsnsxt-intro.html).
+{{site.data.keyword.icpfull_notm}} with NSX-T permet aux utilisateurs de contrôler et configurer la mise en réseau, le sous-réseau et les règles à partir d'une interface utilisateur centralisée (NSX-T Manager). Pour obtenir des informations sur les différences entre NSX-V et NSX-T, voir [Architecture de référence de la mise en réseau de VCS sur {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsnsxt-intro#vcsnsxt-intro).
 
 ## Plateforme de gestion du cloud sur site
 {: #vcsiks-arch-overview-on-premises}
@@ -54,4 +53,4 @@ Dans le diagramme, CAM crée des connexions de cloud aux services vCenter, aux f
 ## Liens connexes
 {: #vcsiks-arch-overview-related}
 
-* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-hybridity-intro#vcs-hybridity-intro)

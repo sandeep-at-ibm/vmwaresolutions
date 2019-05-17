@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2017-07-05"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -47,7 +47,7 @@ Dependendo da complexidade de sua implementação de instância do Cloud Foundat
 ### Suporte de cluster
 {: #relnotes_v17-cluster}
 
-Começando com a liberação V1.7, é possível usar clusters para gerenciar servidores ESXi em instâncias do vCenter Server para um melhor gerenciamento de recursos e alta disponibilidade. Os servidores ESXi configurados quando você pediu uma instância são agrupados como **cluster1** por padrão. É possível visualizar os detalhes do cluster ou incluir até um total de cinco clusters em uma instância da guia **Infraestrutura** recém-introduzida na página de detalhes da instância. Quando você estiver expandindo ou contraindo a capacidade de uma instância, será possível selecionar em qual cluster incluir ou de qual cluster remover servidores ESXi. Para obter mais informações, veja [Incluindo e visualizando clusters para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances).
+Começando com a liberação V1.7, é possível usar clusters para gerenciar servidores ESXi em instâncias do vCenter Server para um melhor gerenciamento de recursos e alta disponibilidade. Os servidores ESXi configurados quando você pediu uma instância são agrupados como **cluster1** por padrão. É possível visualizar os detalhes do cluster ou incluir até um total de cinco clusters em uma instância da guia **Infraestrutura** recém-introduzida na página de detalhes da instância. Quando você estiver expandindo ou contraindo a capacidade de uma instância, será possível selecionar em qual cluster incluir ou de qual cluster remover servidores ESXi. Para obter mais informações, consulte [Incluindo, visualizando e excluindo clusters para instâncias do vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters).
 
 ### Aprimoramentos para a implementação de recuperação de desastre do Zerto
 {: #relnotes_v17-zerto}

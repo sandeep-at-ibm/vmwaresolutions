@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -17,7 +17,7 @@ subcollection: vmwaresolutions
 {: #hcx-archi-trbl-cloud-reg}
 
 * Hybrid Cloud Services no realiza un reintento si las credenciales son incorrectas. Las credenciales deben autenticarse antes de que Hybrid Cloud Services intente iniciar la sesión e iniciar el registro de la nube.
-* El registro de nube puede fallar si las credenciales están mal escritas o si las credenciales de VCF/VCS Hybrid Cloud Services Cloud se modifican después de que Hybrid Cloud Services se registre con VCF/VCS Hybrid Cloud Services Cloud, lo que ocasiona una discrepancia.
+* El registro de nube puede fallar si las credenciales están mal escritas o si las credenciales de VCS Hybrid Cloud Services Cloud se modifican después de que Hybrid Cloud Services se registre con VCS Hybrid Cloud Services Cloud, lo que ocasiona una discrepancia.
 * Para actualizar las credenciales en el cliente web, vaya al separador Iniciación a Hybrid Cloud Services y, en **Tareas básicas**, seleccione **Registrar nueva nube**.
 
 ## Dirección MAC duplicada
@@ -40,7 +40,7 @@ La dirección MAC de la máquina virtual migrada se puede cambiar para resolver 
 En casos excepcionales, si todos los dispositivos virtuales de servicio residen en el mismo host, las máquinas virtuales del servicio Hybrid Cloud Services pueden agotar los recursos de CPU y de disco de un host.
 
 Algunos usuarios han experimentado este problema cuando todos los dispositivos virtuales estaban instalados en un host físico. Dada esta configuración, el rendimiento se degrada cuando sucede lo siguiente simultáneamente:
-* La red tiene alta latencia, o pérdida de paquete, o ambas. La migración o el transporte de datos es lento cuando se utiliza internet público o una red ocupada.
+* La red tiene alta latencia, o pérdida de paquete, o ambas. La migración o el transporte de datos es lento cuando se utiliza Internet público o una red ocupada.
 * El optimizador de WAN está consumiendo ancho de banda para cifrar y comprimir (o descifrar y descomprimir) cargas de trabajo de gran tamaño.
 * El tráfico de aplicaciones es intenso entre las máquinas virtuales locales y las VM migradas.
 

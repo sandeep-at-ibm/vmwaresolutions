@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-04-03"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -21,7 +21,7 @@ subcollection: vmwaresolutions
 
 Assegure-se de que tenha concluído as tarefas a seguir:
 * Você configurou as credenciais de infraestrutura do {{site.data.keyword.cloud_notm}} na página **Configurações**. Para obter mais informações, veja [Contas e configurações do usuário](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount).
-* Você revisou todas as considerações em [Considerações ao instalar as instâncias do KMIP for VMware on {{site.data.keyword.cloud_notm}} ](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations-install).
+* Você revisou todas as considerações em [Considerações ao instalar as instâncias do KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip_standalone_considerations#kmip_standalone_considerations-install).
 
 ## Procedimento para pedir instâncias do KMIP for VMware on IBM Cloud
 {: #kmip_standalone_ordering-procedure}
@@ -55,17 +55,19 @@ Tabela 1. Regiões de terminal em serviço de rede do KMIP for VMware on {{site.
 | Alemanha        |  <ul><li><code> kmip-1.private.eu-central.vmware-solutions.cloud.ibm.com:5696 </code></li><li><code> kmip-2.private.eu-central.vmware-solutions.cloud.ibm.com:5696 </code></li></ul> |
 | Sydney        |  <ul><li><code> kmip-1.private.ap-south.vmware-solutions.cloud.ibm.com:5696 </code></li><li><code> kmip-2.private.ap-south.vmware-solutions.cloud.ibm.com:5696 </code></li></ul> |
 | Tóquio          | <ul><li><code> kmip-1.private.ap-north.vmware-solutions.cloud.ibm.com:5696 </code></li><li><code> kmip-2.private.ap-north.vmware-solutions.cloud.ibm.com:5696 </code></li></ul> |
-| Sul dos EUA       |  <ul><li><code> kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696 </code></li><li><code> kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696 </code></li></ul> |
+| Sul do Reino Unido | <ul><li><code>kmip-1.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+| Leste dos EUA   | <ul><li><code>kmip-1.private.us-east.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-east.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+| Sul dos EUA       | <ul><li><code> kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696 </code></li><li><code> kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696 </code></li></ul> |
 
 ### Chave API para o ID do serviço
 {: #kmip_standalone_ordering-config-api-key}
 
-Insira a chave API para o ID do serviço do {{site.data.keyword.cloud_notm}} que é usado para acessar a instância do IBM Key Protect Service.
+Insira a chave de API para o ID de serviço do {{site.data.keyword.cloud_notm}} que é usado para acessar a instância de serviço do Protect Key ou do Hyper Protect Crypto Services.
 
-### Instância do Key Protect
+### Instância do gerenciador de chave
 {: #kmip_standalone_ordering-config-key-protect}
 
-Clique em **Recuperar** para obter a lista de instâncias disponíveis do IBM Key Protect Service e selecione aquela a ser usada para o gerenciamento de chave.
+Clique em **Recuperar** para obter a lista de instâncias do gerenciador de chave disponíveis e selecione a que deve ser usada para o gerenciamento de chave.
 
 ### Chave raiz do cliente
 {: #kmip_standalone_ordering-config-root-key}
@@ -89,4 +91,4 @@ Inclua certificados de cliente para a instância do KMIP for VMware on {{site.da
 
 * [Visualizando instâncias do KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_viewing)
 * [Excluindo o KMIP for VMware em {{site.data.keyword.cloud_notm}} instâncias](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_deleting)
-* [Eventos de rastreador de atividade](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-at-events)
+* [Eventos do Activity Tracker](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-at-events)

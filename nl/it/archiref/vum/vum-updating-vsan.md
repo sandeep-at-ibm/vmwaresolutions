@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -62,7 +62,7 @@ Se i parametri HTTPS non sono impostati, utilizza il seguente comando:
 ### Configura vSAN per utilizzare il proxy
 {: #vum-updating-vsan-config-vsan-proxy}
 
-1. Passa a **Home** > **Hosts and Clusters**, seleziona il **Cluster vSAN** nel riquadro di navigazione, seleziona la **scheda Configure** e passa a **vSAN** e quindi a **General**. Scorri fino alla sezione **Internet Connectivity** e fai clic su **Edit**.
+1. Passa a **Home** > **Hosts and Clusters**, seleziona il **cluster vSAN** nel riquadro di navigazione, poi seleziona la scheda **Configure** e passa a **vSAN** e quindi a **General**. Scorri fino alla sezione **Internet Connectivity** e fai clic su **Edit**.
 2. Immetti l'indirizzo IP e il numero di porta del proxy e fai clic su **OK**.
 
 ### Abilita il programma per il miglioramento dell'esperienza del cliente (Customer Experience Improvement Program, CEIP)
@@ -73,13 +73,13 @@ Questo passo è facoltativo. Utilizzando il client web vSphere, passa a **Home**
 ### Completa un caricamento di prova e verifica che il caricamento abbia funzionato
 {: #vum-updating-vsan-complete-upload}
 
-1. Utilizzando il client web vSphere, passa a **Home** > **Hosts and Clusters**. Seleziona il cluster richiesto, seleziona la **scheda Monitor** e la pagina **vSAN**, quindi fai clic su **Health**. Fai clic su **Enable Online Health**.
+1. Utilizzando il client web vSphere, passa a **Home** > **Hosts and Clusters**. Seleziona il cluster richiesto, seleziona la scheda **Monitor** e la pagina **vSAN**, poi fai clic su **Health**. Fai clic su **Enable Online Health**.
 2. Fai clic su **Retest** e attendi il completamento del processo.
 3. In Health viene visualizzato un nuovo controllo chiamato _Online health connectivity_ e **Enable Online Health** cambia in **Retest with Online Health**.
 4. Fai clic su **Retest with Online Health** per avviare il primo caricamento e attendi il completamento del processo, esaminando lo stato nel riquadro Recent Tasks. Il nome del test cambia in Online health (Last check: just now).
 5. Al termine, nella finestra Health, scorri ed espandi la sezione vSAN Build Recommendation e fai clic su **vSAN Build Recommendation Engine Health**.
 6. Fai clic su **Login to my.vmware.com** e immetti le tue credenziali. Al termine del processo, lo stato di **Test Result** diventa **Passed**.
-7. Fai clic sulla **scheda Update Manager** e nota che il cluster vSAN è stato aggiunto alle baseline.
+7. Fai clic sulla scheda **Update Manager** e il cluster vSAN viene aggiunto alle baseline. 
 
 ## Prerequisiti
 {: #vum-updating-vsan-prereq}
@@ -90,9 +90,9 @@ Prima di avviare il processo di aggiornamento vSAN, assicurati che siano soddisf
   - Il VCSA deve essere a un livello di patch uguale o superiore rispetto agli host vSphere ESXi. Aggiorna il VCSA secondo necessità
   - Tutti gli host devono eseguire la stessa build di ESXi. Se le versioni degli host vSphere ESXi non corrispondono, esegui l'aggiornamento
 * **Tutti i dischi vSAN devono essere integri**:
-  - Nessun disco è guasto o assente. Questo può essere determinato tramite la vista **vSAN Disk Management** nel client web vSphere. **Home** > **Hosts and Clusters**, seleziona il **Cluster vSAN** e fai clic sulla **scheda vSAN** e su **Physical Disks**. Scorri tutti i dischi ed esamina lo stato di integrità di vSAN.
-  - Nessun oggetto vSAN è inaccessibile. Questo può essere verificato con il **vSAN Health Service** facendo clic su **Home** > **Hosts and Clusters** e selezionando quindi il **Cluster vSAN**. Fai clic sulla **scheda Monitor**, **vSAN** e su **Health**. Esamina i risultati del test.
-  - Nessuna risincronizzazione attiva all'inizio del processo di aggiornamento; per verificarlo fai clic su **Home** > **Hosts and Clusters**, seleziona quindi il **Cluster vSAN**, fai clic sulla **scheda vSAN** e su **Resync Components**. _Il conteggio di risincronizzazione dei componenti dovrebbe essere 0_. Alcune attività di risincronizzazione sono previste durante il processo di aggiornamento, poiché i dati devono essere sincronizzati dopo il riavvio dell'host.
+  - Nessun disco è guasto o assente. Questo può essere determinato tramite la vista **vSAN Disk Management** nel client web vSphere. **Home** > **Hosts and Clusters**, poi seleziona il **Cluster vSAN** e fai clic sulla scheda **vSAN** e poi su **Physical Disks**. Scorri tutti i dischi ed esamina lo stato di integrità di vSAN.
+  - Nessun oggetto vSAN è inaccessibile. Questo può essere verificato con il **vSAN Health Service** facendo clic su **Home** > **Hosts and Clusters** e selezionando quindi il **Cluster vSAN**. Fai clic sulla scheda **Monitor**, su **vSAN** e poi fai clic su **Health**. Esamina i risultati del test.
+  - Nessuna risincronizzazione attiva all'inizio del processo di upgrade quando fai clic su **Home** > **Hosts and Clusters**, poi selezioni il **Cluster vSAN**, fai clic sulla scheda **vSAN** e poi fai clic su **Resync Components**. _Il conteggio di risincronizzazione dei componenti dovrebbe essere 0_. Alcune attività di risincronizzazione sono previste durante il processo di aggiornamento, poiché i dati devono essere sincronizzati dopo il riavvio dell'host.
 * **Preparazione dell'host vSphere ESXi** - Quando sposti un host in modalità di manutenzione in un cluster vSAN, sono disponibili tre opzioni:
   - **No data migration** - Se selezioni questa opzione, vSAN non rimuove alcun dato da questo host. Se spegni o rimuovi l'host dal cluster, alcune VM (Virtual Machine) potrebbero diventare inaccessibili.
   - **Ensure availability** - Se selezioni questa opzione, vSAN ti consente di spostare l'host in modalità di manutenzione più velocemente rispetto alla migrazione completa dei dati e consente l'accesso alle VM nell'ambiente.
@@ -153,4 +153,4 @@ Molte attività amministrative di base possono essere eseguite in modo molto pi�
 {: #vum-updating-vsan-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (dimostrazioni)
+* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (dimostrazioni)

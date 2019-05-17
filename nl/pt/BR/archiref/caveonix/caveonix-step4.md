@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -64,7 +64,7 @@ Tabela 2. Informações padrão usadas na configuração do aplicativo
 |---|---|
 |Ambiente |O nome do ambiente é configurado como "Inicial"|
 |Ambiente | O Score está configurado como 5|
-|Repositório de Recursos |Dois Repositórios de ativos são configurados: vCenter e NSX Manager. A URL do host é configurada como https://*vCenter fqdn* e https://*NSX Manager fqdn*|
+|Repositório de Recursos | Dois Repositórios de ativos são configurados: vCenter e NSX Manager. URL do host configurada como `https://vCenter_fqdn` e `https://*NSX Manager_fqdn` |
 |Repositório de Recursos |Dois Repositórios de ativos são configurados: vCenter e NSX Manager. Ambos usam o mesmo nome de usuário. O nome do usuário é configurado como o nome do usuário administrador do vCenter|
 |Repositório de Recursos |Dois repositórios de ativos são configurados: vCenter e NSX Manager. Ambos usam a mesma senha. A senha é configurada como a senha do administrador do vCenter
 |Repositório de Recursos |Dois repositórios de ativos são configurados: vCenter e NSX Manager. Ambos usam a mesma senha. O tipo é configurado como vCenter para um repositório e NSX para o outro

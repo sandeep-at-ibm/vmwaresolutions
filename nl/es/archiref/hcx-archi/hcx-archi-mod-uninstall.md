@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -54,7 +54,7 @@ Nunca suprima dispositivos virtuales desde el inventario de vSphere. Utilice sie
 4. En la parte inferior derecha, pulse el icono Suprimir para eliminar el dispositivo.
 5. Si una red extendida no comparte una dirección IP con el dispositivo Hybrid Cloud Gateway, debe eliminarla por separado. Amplíe los detalles del servicio de extensiones de red y pulse el icono Suprimir para eliminar el concentrador de capa 2.
 
-Hybrid Cloud Gateway y cualquier dispositivo virtual de servicio híbrido que utilice Hybrid Cloud Gateway se eliminan tanto de vCenter como de VCF/VCS Hybrid Cloud Services Cloud.
+Hybrid Cloud Gateway y cualquier dispositivo virtual de servicio híbrido que utilice Hybrid Cloud Gateway se eliminan tanto de vCenter como de VCS Hybrid Cloud Services Cloud.
 
 ## Desinstalación de HCX Manager
 {: #hcx-archi-mod-uninstall-unist-hcxm}

@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-19"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -79,8 +79,8 @@ Para redundância de instância cruzada, quando a primeira instância secundári
 
 Esse design utiliza os servidores NTP de infraestrutura do {{site.data.keyword.cloud_notm}}. Todos os componentes implementados são configurados para utilizar esses servidores NTP. Ter todos os componentes dentro do design usando o mesmo servidor NTP é crítico para que os certificados e a autenticação do Active Directory funcionem corretamente.
 
-Figura 2. Serviços do NTP e do DNS</br>
-![Serviços do NTP e do DNS](vcsv4radiagrams-ra-servicesinterconnections.svg)
+Figura 2. Serviços NTP e DNS</br>
+![Serviços NTP e DNS](vcsv4radiagrams-ra-servicesinterconnections.svg)
 
 ## Serviços de autoridade de certificação
 {: #design_commonservice-cas}
@@ -94,4 +94,4 @@ Por padrão, o VMware vSphere usa certificados TLS que são assinados pela VMwar
 
 * [ Design da infraestrutura física ](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_physicalinfrastructure)
 * [ Design de infraestrutura virtual ](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_virtualinfrastructure)
-* [ Design de gerenciamento de infraestrutura ](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_infrastructuremgmt)
+* [Design de gerenciamento de infraestrutura](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_infrastructuremgmt)

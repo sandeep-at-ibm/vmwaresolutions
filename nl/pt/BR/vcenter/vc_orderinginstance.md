@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -33,8 +33,8 @@ Tabela 1. Formato de valor para nomes de instância e de domínio
 | Nome        | Formato do valor      |
   |:------------|:------------ |
   | Nome de domínio | `<root_domain>` |  
-  | Nome do usuário de login do vCenter Server | `<user_id>@<root_domain>` (Usuário do Microsoft Active Directory) ou `administrator@vsphere.local` |
-  | FQDN do vCenter Server (com PSC integrado) | ` vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. O comprimento máximo é de 50 caracteres. |
+  | Nome do usuário de login do vCenter Server | `<user_id>@<root_domain>` (usuário do Microsoft Active Directory) ou `administrator@vsphere.local` |
+  | FQDN do vCenter Server (com PSC integrado) | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. O comprimento máximo é 50 caracteres. |
   | Nome do site de Conexão única (SSO) | `<subdomain_label>` |
   | Nome do servidor ESXi totalmente qualificado | `<host_prefix><n>.<subdomain_label>.<root_domain>`, em que `<n>` é a sequência do servidor ESXi. O comprimento máximo é de 50 caracteres. |
 
@@ -135,18 +135,15 @@ Tabela 3. Opções para o Broadwell {{site.data.keyword.baremetal_short}}
 
 | Opções de modelo da CPU        | Opções de RAM       |
 |:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4/total de 16 núcleos, 2.1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2650 v4/total de 24 núcleos, 2.2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2690 v4/total de 28 núcleos, 2.6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Quad Intel Xeon E7-4820 v4/total de 40 núcleos, 2.0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4/total de 64 núcleos, 2.1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 ### Número de Bare Metal Servers
 {: #vc_orderinginstance-bare-metal-number}
 
-Para o cluster inicial na instância, é possível configurar o número de servidores ESXi no intervalo de 2 a 20. Todos os servidores ESXi compartilham a configuração configurada.
-
-Após a implementação inicial, é possível incluir mais quatro clusters. Se você tiver selecionado a configuração **Skylake** ou **Broadwell** para o VMware vSAN, 4 servidores ESXi serão necessários para os clusters iniciais e pós-implementação. Para obter mais informações sobre o mínimo de servidores ESXi, veja [É uma instância de dois nós do vCenter Server altamente disponível](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-).
+* Todos os servidores que você pede têm a mesma configuração.
+* Se você estiver planejando usar o armazenamento vSAN, será possível pedir entre 4 e 20 servidores.
+* Se você estiver planejando usar o armazenamento NFS, será possível pedir entre 2 e 20 servidores. No entanto, para cargas de trabalho de produção, um mínimo de 3 servidores é recomendado. Para obter mais informações, consulte [Uma instância do vCenter Server de dois nós é altamente disponível?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-).
 
 ## Configurações de armazenamento
 {: #vc_orderinginstance-storage-settings}
@@ -166,12 +163,12 @@ e reduzindo capacidade para instâncias do vCenter Server](/docs/services/vmware
 O vSAN está disponível somente para a configuração de Bare Metal **Skylake** e **Broadwell**. Especifique as seguintes opções vSAN:
 * **Tipo de disco e tamanho para discos de capacidade vSAN**: selecione uma opção para os discos de capacidade necessários.
 * **Número de discos de capacidade vSAN**: especifique o número de discos de capacidade que deseja incluir.
-* Se você desejar incluir discos de capacidade além do limite de oito, marque a caixa **Intel Optane de alto desempenho**. Essa opção fornece dois compartimentos de disco de capacidade extras para um total de 10 discos de capacidade e é útil para cargas de trabalho que requerem menos latência e maior rendimento de IOPS.
+* Se você desejar incluir capacidade acima do limite de 10 discos, selecione a caixa **Alto desempenho com Intel Optane**. Essa opção fornece dois compartimentos de disco de capacidade extra para um total de 12 discos de capacidade e é útil para cargas de trabalho que requerem menos latência e rendimento superior de IOPS.
 
-  A opção **Intel Optane de alto desempenho** está disponível apenas para os modelos de CPU Dual Intel Xeon Gold 5120 e Dual Intel Xeon Gold 6140 do Skylake.
+  A opção **Alto desempenho com Intel Optane** está disponível somente para os modelos de CPU Skylake.
   {:note}
 
-* Revise os valores **Tipo de disco para discos de cache vSAN** e **Número de discos de cache vSAN**. Esses valores dependem de a caixa **Intel Optane de alto desempenho** estar ou não marcada.
+* Revise os valores **Tipo de disco para discos de cache vSAN** e **Número de discos de cache vSAN**. Esses valores dependem de você ter marcado a caixa **Alto desempenho com Intel Optane** .
 * **Licença do vSAN**: use a licença do VMware fornecida pela IBM para o componente vSAN selecionando **Incluir com a compra** ou Bring Your Own License (BYOL) selecionando **Eu fornecerei** e inserindo sua própria chave de licença.
 
 ### Armazenamento NFS
@@ -243,12 +240,14 @@ O comprimento máximo do Nome Completo do Domínio (FQDN) para hosts e MVs é de
 ### Rede pública ou privada
 {: #vc_orderinginstance-public-private-network}
 
-As configurações de ativação da Placa da interface de rede (NIC) baseiam-se em sua seleção de **Rede pública e privada** ou **Somente rede privada**. Os serviços complementares a seguir requerem NICs públicas e não estarão disponíveis se você selecionar a opção privada:
+As configurações de ativação da Placa da interface de rede (NIC) baseiam-se em sua seleção de **Rede pública e privada** ou **Somente rede privada**.
 
-* F5 on {{site.data.keyword.cloud_notm}}
-* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
-* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
-* Zerto on {{site.data.keyword.cloud_notm}}
+Se você seleciona a opção **Somente rede privada**:
+* Os VMware NSX Edge Services Gateways (ESG) não são provisionados (nem o ESG de serviços de gerenciamento nem o ESG gerenciado pelo cliente).
+* Os serviços complementares a seguir, que requerem NICs públicos, não estão disponíveis:
+  * F5 on {{site.data.keyword.cloud_notm}}
+  * Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
+  * Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
 
 ### VLANs
 {: #vc_orderinginstance-vlans}
@@ -285,14 +284,14 @@ Selecione a configuração do Sistema de Nomes de Domínio (DNS) para sua instâ
 * **VSI pública única do Windows para o Active Directory/DNS**: uma VSI única do Microsoft Windows Server para o Microsoft Active Directory (AD), que funciona como o DNS para a instância na qual os hosts e as MVs são registrados, é implementada e pode ser consultada. Essa opção foi implementada por padrão para instâncias da V1.9 e mais recentes.
 * **Duas MVs do Windows Server dedicadas, altamente disponíveis no cluster de gerenciamento**: duas MVs do Microsoft Windows são implementadas, ajudando a aprimorar a segurança e a robustez.
 
-Deve-se fornecer duas licenças do Microsoft Windows Server 2012 R2 quando você configura sua instância para usar as duas MVs do Microsoft Windows. Use a licença de edição do Microsoft Windows Server 2012 R2 Standard ou a licença de edição do Microsoft Windows Server 2012 R2 Datacenter, ou ambas.
+Deve-se fornecer duas licenças do Microsoft Windows Server 2016 se sua instância é configurada para usar as duas VMs do Microsoft Windows. Use a licença do Microsoft Windows Server 2016 Standard Edition ou a licença do Microsoft Windows Server 2016 Datacenter Edition, ou ambas.
 {:important}
 
 Cada licença pode ser designada apenas a um único servidor físico e abrange até dois processadores físicos. Uma licença da edição Standard pode executar duas MVs virtualizadas do Microsoft Windows por servidor de 2 processadores. Portanto, duas licenças são necessárias, pois duas MVs do Microsoft Windows são implementadas em dois hosts diferentes.
 
 Você tem 30 dias para ativar as MVs.
 
-Para obter mais informações sobre licenciamento do Windows, veja [Documentação do Windows Server 2012 R2](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2).
+Para obter mais informações sobre o pedido de licenças do Windows Server 2016, consulte [Introdução ao Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:new_window}.
 
 ## Configurações de Serviços
 {: #vc_orderinginstance-addon-services}
@@ -326,14 +325,14 @@ Com base em sua configuração selecionada para os serviços de instância e com
     2. Selecione a configuração do Bare Metal Server.
        * Ao selecionar **Skylake** ou **Broadwell**, especifique o modelo de CPU e o tamanho da RAM.
        * Quando você selecionar **Certificado pelo SAP**, escolha uma das configurações pré-configuradas.
-    3. Especifique o número de {{site.data.keyword.baremetal_short}}. Se você está planejando usar vSAN como sua solução de armazenamento, no mínimo 4 {{site.data.keyword.baremetal_short}} serão necessários.  
+    3. Especifique o número de {{site.data.keyword.baremetal_short}}. Se você estiver planejando usar o armazenamento vSAN, um mínimo de quatro {{site.data.keyword.baremetal_short}} será necessário.  
 8. Conclua a configuração de armazenamento.
   * Se você selecionar **Armazenamento vSAN**, especifique os tipos de disco para os discos de capacidade e de cache, o número de discos e a edição de licença vSAN. Se desejar mais armazenamento, marque a caixa **Intel Optane de alto desempenho**.
   * Se você selecionar **Armazenamento NFS** e desejar incluir e configurar as mesmas definições para todos os compartilhamentos de arquivo, especifique o **Número de compartilhamentos**, o **Desempenho** e o **Tamanho (GB)**.
   * Se você selecionar **Armazenamento NFS** e quiser incluir e configurar compartilhamentos de arquivo individualmente, selecione **Configurar compartilhamentos individualmente**. Em seguida, clique no ícone **+** ao lado do rótulo **Incluir armazenamento compartilhado** e selecione o **Desempenho** e o **Tamanho (GB)** para cada compartilhamento de arquivo. Deve-se selecionar pelo menos um compartilhamento de arquivo.
   * Se você selecionar **Discos locais**, especifique a contagem de discos e o tipo de disco.
 9. Conclua as configurações da interface de rede.
-   1. Insira o prefixo de nome do host, o rótulo do subdomínio e o nome do domínio-raiz. Para uma instância secundária, o nome de domínio é preenchido automaticamente.
+   1. Insira o prefixo do nome do host para a instância que está sendo provisionada, o rótulo do subdomínio e o nome de domínio-raiz. Para uma instância secundária, o nome de domínio é preenchido automaticamente.
    2. Selecione a configuração de rede de **Rede pública e privada** ou **Somente rede privada**.
    3. Selecione as configurações de VLAN:
       * Se desejar pedir novas VLANs públicas e privadas, clique em **Pedir novas VLANs**.
@@ -372,11 +371,11 @@ Se você mudar esses componentes fora do console do {{site.data.keyword.vmwareso
 
 **CUIDADO:** Gerenciar quaisquer componentes do {{site.data.keyword.vmwaresolutions_short}} (que foram instalados em sua conta do {{site.data.keyword.cloud_notm}} quando você pediu a instância) de fora do console do {{site.data.keyword.vmwaresolutions_short}} pode desestabilizar seu ambiente. Estas atividades de gerenciamento incluem:
 *  Incluindo, modificando, retornando ou removendo componentes
-*  Expandindo ou contraindo a capacidade da instância por meio da inclusão ou remoção de servidores ESXi
+*  Expansão ou redução da capacidade da instância por meio da inclusão ou remoção de servidores ESXi
 *  Desativando componentes
 *  Reinício dos serviços
 
-   As exceções a essas atividades incluem o gerenciamento de compartilhamentos de arquivos de armazenamento compartilhado por meio do {{site.data.keyword.slportal}}. Essas atividades incluem: pedido, exclusão (que poderá afetar armazenamentos de dados, se montado), autorização e montagem de compartilhamentos de arquivos de armazenamento compartilhados.
+   As exceções a essas atividades incluem o gerenciamento de compartilhamentos de arquivos de armazenamento compartilhado por meio do {{site.data.keyword.slportal}}. Essas atividades incluem: pedido, exclusão (que poderá afetar armazenamentos de dados, se montado), autorização e montagem de compartilhamentos de arquivos de armazenamento compartilhado.
 
 ## Links relacionados
 {: #vc_orderinginstance-related}
@@ -384,7 +383,7 @@ Se você mudar esses componentes fora do console do {{site.data.keyword.vmwareso
 * [Inscrevendo-se em uma conta do {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)
 * [Visualizando instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
 * [Configuração de vários sites para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_multisite)
-* [Incluindo, visualizando e excluindo clusters para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [Incluindo, visualizando e excluindo clusters para instâncias do vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 * [Expandindo e contraindo a capacidade para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
 * [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
 * [Excluindo instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_deletinginstance)

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -27,7 +27,7 @@ subcollection: vmwaresolutions
 
 * **IBM ID 계정**. 이 계정은 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 액세스하는 데 필요합니다. 콘솔은 {{site.data.keyword.slportal}}에서 분리된 독립형 사용자 인터페이스입니다. 자세한 정보는 [시작하기](/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started)를 참조하십시오.
 * **{{site.data.keyword.cloud_notm}} 계정**. 이 계정은 프로비저닝에 필요합니다. 기존 **IBM ID**를 사용하거나 새 **IBM ID**를 작성하여 {{site.data.keyword.cloud_notm}} 계정을 등록할 수 있습니다.
-* **{{site.data.keyword.cloud_notm}} 인프라 계정**. 이전에는 **IBM SoftLayer** 계정이라고 부르던 이 계정은 인프라 제품 및 서비스를 관리하기 위한 일부 추가 기능을 제공하는 {{site.data.keyword.cloud_notm}} 인프라 고객 포털에 로그인하는 데 사용됩니다. **{{site.data.keyword.cloud_notm}} 계정**을 종량과금제 유형의 계정으로 업그레이드하거나 기존 {{site.data.keyword.cloud_notm}} 인프라(SoftLayer) 계정을 {{site.data.keyword.cloud_notm}} 계정과 링크하여 {{site.data.keyword.cloud_notm}} 인프라 계정을 가져올 수 있습니다. 사용 중인 {{site.data.keyword.cloud_notm}} 인프라 계정은 특정 요구사항을 충족해야 합니다. 자세한 정보는 [필수 계정 등록](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account) 및 [{{site.data.keyword.cloud_notm}} 인프라 계정 요구사항](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)을 참조하십시오.
+* **{{site.data.keyword.cloud_notm}} 인프라 계정**. 이 계정은 인프라 제품 및 서비스를 관리하기 위해 일부 추가 기능을 제공하는 {{site.data.keyword.cloud_notm}} 인프라 고객 포털에 로그인하는 데 사용됩니다. **{{site.data.keyword.cloud_notm}} 계정**을 종량과금제 유형의 계정으로 업그레이드하거나 기존 {{site.data.keyword.cloud_notm}} 인프라 계정을 {{site.data.keyword.cloud_notm}} 계정과 링크하여 {{site.data.keyword.cloud_notm}} 인프라 계정을 가져올 수 있습니다. 사용 중인 {{site.data.keyword.cloud_notm}} 인프라 계정은 특정 요구사항을 충족해야 합니다. 자세한 정보는 [필수 계정 등록](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account) 및 [{{site.data.keyword.cloud_notm}} 인프라 계정 요구사항](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)을 참조하십시오.
 
 ## 내 IBM Cloud 인프라 인증 정보를 IBM Cloud for VMware Solutions 콘솔과 연관시킬 수 있는 방법은 무엇입니까?
 {: #faq-associate-credentials}
@@ -85,10 +85,7 @@ subcollection: vmwaresolutions
 {: #faq-rename-cluster}
 {: faq}
 
-vCenter Server 인스턴스의 경우, 배치 중에 작성된 첫 번째 클러스터의 이름은 기본 이름인 **cluster1**입니다. VMware vSphere Client에서 기본 클러스터의 이름을 변경할 수 있습니다. 클러스터를 vCenter Server 인스턴스에 추가하는 경우 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 원하는 이름을 지정할 수 있습니다.
-
-Cloud Foundation 인스턴스의 경우, 기본 클러스터 이름을 변경할 수 없습니다.
-{:note}
+새 vCenter Server 인스턴스의 경우, 배치 중에 작성된 첫 번째 클러스터의 이름은 기본 이름인 **cluster1**입니다. VMware vSphere Client에서 기본 클러스터의 이름을 변경할 수 있습니다. 클러스터를 vCenter Server 인스턴스에 추가하는 경우 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 원하는 이름을 지정할 수 있습니다.
 
 ## 패치가 어떻게 관리되고 있습니까?
 {: #faq-patches}
@@ -96,17 +93,7 @@ Cloud Foundation 인스턴스의 경우, 기본 클러스터 이름을 변경할
 
 IBM은 요청 시 IBM CloudDriver VSI(Virtual Server Instance)를 배치하여 IBM 코드에 대한 지속적 업데이트를 제공합니다. IBM은 Zerto on {{site.data.keyword.cloud_notm}} 또는 Veeam on {{site.data.keyword.cloud_notm}}와 같은 추가 서비스에 대한 지속적인 업데이트를 제공하지 않습니다. 업데이트의 확보 및 설치는 사용자의 책임입니다.
 
-VMware 업데이트는 인스턴스의 유형에 따라 다른 방식으로 적용됩니다.
-
-### VMware Cloud Foundation 인스턴스
-{: #faq-patches-cf}
-
-vSphere ESXi, NSX, vCenter, Platform Services Controller 및 SDDC Manager 컴포넌트에 대한 업데이트가 {{site.data.keyword.vmwaresolutions_short}} 콘솔을 통해 제공됩니다.
-
-### VMware vCenter Server 인스턴스
-{: #faq-patches-vcs}
-
-V2.1 이상에 배치되거나 V2.1 이상으로 업그레이드된 인스턴스의 경우, 새로 배치된 ESXi 서버 및 클러스터가 VMware에서 최근(최신일 필요는 없음) ESXi 업데이트로 배치됩니다.
+V2.1 이상에 배치되거나 V2.1 이상으로 업그레이드된 VMware vCenter Server 인스턴스의 경우, 새로 배치된 ESXi 서버 및 클러스터가 VMware에서 최근(최신일 필요는 없음) ESXi 업데이트로 배치됩니다.
 
 사용자는 새로 배치된 ESXi 서버 및 클러스터에 필요한 모든 최신 업데이트가 있는지 확인하는 작업을 포함하여 VMware 컴포넌트에 대한 기타 모든 업데이트를 수행해야 합니다.
 {:important}
@@ -134,7 +121,7 @@ V2.0 이상에 배치된 인스턴스의 경우, VUM(VMware Update Manager)은 v
 
 고객 관리 NSX Edge가 공용 VLAN에 연결되지만 보안 위험이 발생하지 않도록 보안 조치가 제공됩니다. 다음 보안 조치가 준비되어 있습니다.
 *  IP 주소의 사설 서브넷 범위에서 지속적인 트래픽만 허용하도록 방화벽 규칙이 제공됩니다.
-*  SNAT(Source Network Address Translation) 규칙(기본적으로 사용 안함으로 설정됨)이 사설 서브넷에서 공인 서브넷의 단일 IP 주소로 모든 IP 주소를 변환하도록 제공됩니다.
+*  SNAT 규칙(기본적으로 사용 안함으로 설정됨)이 사설 서브넷에서 공인 서브넷의 단일 IP 주소로 모든 IP 주소를 변환하도록 제공됩니다.
 *  고객 관리 NSX Edge 어플라이언스에 대한 원격 액세스가 사용 안함으로 설정됩니다.
 *  사설 네트워크에서 고객 관리 NSX Edge에 액세스하기 위한 비밀번호는 무작위로 설정되고 암호화됩니다.
 
@@ -160,7 +147,7 @@ V2.0 이상에 배치된 인스턴스의 경우, VUM(VMware Update Manager)은 v
 {: #faq-vss-automation}
 {: faq}
 
-아니오. VMware vSphere on {{site.data.keyword.cloud_notm}}는 Cloud Foundation 및 vCenter Server 플랫폼에 있는 고급 자동화를 사용하지 않습니다. 사용자의 주문 항목에 따라 플랫폼은 선택적 VMware 라이센스, ESXi 서버를 제공하고, 선택적으로 FortiGate 실제 방화벽의 HA 이중화를 제공합니다. 새 클러스터가 작성되는 경우 세 개의 새 VLAN(하나의 공용 VLAN 및 두 개의 사설 VLAN)도 프로비저닝됩니다.
+아니오. VMware vSphere on {{site.data.keyword.cloud_notm}}는 vCenter Server 플랫폼의 고급 자동화를 사용하지 않습니다. 사용자의 주문 항목에 따라 플랫폼은 선택적 VMware 라이센스, ESXi 서버를 제공하고, 선택적으로 FortiGate 실제 방화벽의 HA 이중화를 제공합니다. 새 클러스터가 작성되는 경우 세 개의 새 VLAN(하나의 공용 VLAN 및 두 개의 사설 VLAN)도 프로비저닝됩니다.
 
 VMware ESXi는 각 베어메탈 서버에 자동으로 설치되지만 vCenter Server 또는 NSX와 같은 추가 VMware 컴포넌트를 설치해야 합니다. vSphere on {{site.data.keyword.cloud_notm}}는 VMware 호환 하드웨어가 선택된 VMware 컴포넌트에 따라 주문되는지 확인하지만, VMware 환경을 구성하고 가져오기 위해 제공된 자동화가 없습니다. 사용자는 IBM 호스팅 환경을 디자인하고 설계해야 합니다.
 

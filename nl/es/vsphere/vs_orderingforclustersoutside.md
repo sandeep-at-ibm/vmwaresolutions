@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -49,7 +49,7 @@ Asegúrese de haber realizado las tareas siguientes:
 
 El despliegue del clúster se inicia automáticamente y el usuario recibe una confirmación por correo electrónico de que el pedido se está procesando. Cuando el clúster esté listo para ser utilizado, se le notificará por correo electrónico.
 
-Los clústeres de vSphere no se muestran en la página **Recursos**, junto con las instancias de vCenter Server y de Cloud Foundation.
+Los clústeres de vSphere no se muestran en la página **Recursos**, junto con las instancias de vCenter Server.
 {:note}
 
 ## Enlaces relacionados

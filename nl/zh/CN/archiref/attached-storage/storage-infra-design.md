@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-04-03"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -43,7 +43,7 @@ subcollection: vmwaresolutions
 
 {{site.data.keyword.cloud_notm}} 的物理网络分为三种不同的网络：公用网络、专用网络和管理网络。有关公用网络、专用网络和管理网络的更多信息，请参阅[解决方案概述](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)。
 
-有关 {{site.data.keyword.cloud_notm}} 网络的更多信息，请参阅 [{{site.data.keyword.cloud_notm}} 网络](https://www.ibm.com/cloud-computing/bluemix/our-network){:new_window}。
+有关 {{site.data.keyword.cloud_notm}} 网络的更多信息，请参阅 [{{site.data.keyword.cloud_notm}} 全球数据中心](https://www.ibm.com/cloud/data-centers/){:new_window}。
 
 服务网络是专用网络的一部分。有关服务网络的描述，请查看以下信息。
 

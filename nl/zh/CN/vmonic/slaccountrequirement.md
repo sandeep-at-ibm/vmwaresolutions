@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,10 +18,7 @@ subcollection: vmwaresolutions
 # IBM Cloud 基础架构帐户需求
 {: #slaccountrequirement}
 
-要使用 {{site.data.keyword.vmwaresolutions_full}} 订购实例，您必须具有 {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户。在实例中订购的组件的成本将计入到该 {{site.data.keyword.cloud_notm}} 帐户。
-
-{{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) 帐户先前称为 IBM SoftLayer 帐户。
-{:note}
+要使用 {{site.data.keyword.vmwaresolutions_full}} 订购实例，您必须具有 {{site.data.keyword.cloud_notm}} 基础架构帐户。在实例中订购的组件的成本将计入到该 {{site.data.keyword.cloud_notm}} 帐户。
 
 ## IBM Cloud 基础架构帐户的许可权
 {: #slaccountrequirement-permissions}
@@ -46,6 +43,7 @@ subcollection: vmwaresolutions
 |编辑凭单|需要此许可权来编辑代表您创建的服务凭单。|
 |查看凭单|需要此许可权来监视与实例中的组件相关的服务凭单，以了解 {{site.data.keyword.cloud_notm}} 基础架构供应延迟和问题。|
 |查看硬件详细信息|需要此许可权来检索硬件详细信息，订单验证和自动化配置需要这些详细信息。|
+|重新引导/控制|删除实例时，需要此许可权才能在硬件取消过程中关闭硬件电源。 |
 |查看许可证|需要此许可权来检索和验证实例使用的许可证。|
 |查看密码|需要此许可权才能管理订购的 VSI。|
 |管理服务器监视|下订单时不需要此许可权，但需要此许可权来检索和验证实例中运行 VMware ESXi 服务器的 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} 的监视状态。|
@@ -57,7 +55,7 @@ subcollection: vmwaresolutions
 
 有关更多信息，请参阅：
 * [VRF on IBM Cloud 概述](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-* [支持帐户使用服务端点](/docs/services/service-endpoint?topic=services/service-endpoint-cs_cli_install_steps#cs_cli_install_steps)
+* [支持帐户使用服务端点](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
 
 ## VLAN 生成支持结束
 {: #slaccountrequirement-vlan-eos}

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -50,7 +50,7 @@ subcollection: vmwaresolutions
 
 如果已下订单，那么将自动开始部署集群。您将收到电子邮件确认，指示正在处理订单。集群准备就绪可供使用时，还将通过电子邮件通知您。
 
-与 vCenter Server 和 Cloud Foundation 实例不同，vSphere 集群不会显示在**资源**页面上。
+与 vCenter Server 实例不同，vSphere 集群不会显示在**资源**页面上。
 {:note}
 
 ## 相关链接

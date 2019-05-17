@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-08-30"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -63,7 +63,7 @@ subcollection: vmwaresolutions
 
 如需相關資訊，請參閱下列主題：
 * [邀請使用者存取服務及資源](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-iamuserinvite)
-* [利用 IAM 管理使用者存取](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-access-with-iam)
+* [利用 IAM 管理使用者存取](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-iam#iam)
 
 ## VMware vCenter Server 及 VMware Cloud Foundation 實例的使用者帳戶及群組變更
 {: #relnotes_v25-user-acct}

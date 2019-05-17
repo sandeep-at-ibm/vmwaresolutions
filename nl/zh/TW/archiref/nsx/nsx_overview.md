@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -14,9 +14,9 @@ subcollection: vmwaresolutions
 # 關於 NSX Edge Services Gateway
 {: #nsx_overview}
 
-VMware NSX Edge Services Gateway (ESG) 解決方案是 {{site.data.keyword.cloud_notm}} 上目前可用的 VMware Cloud Foundation on {{site.data.keyword.cloud}} 及 vCenter Server on {{site.data.keyword.cloud_notm}} 供應項目的延伸。Cloud Foundation 及 vCenter Server 的解決方案架構詳述解決方案的元件，以及本設計中每個元件的高階配置。
+VMware NSX Edge Services Gateway (ESG) 解決方案是 {{site.data.keyword.cloud_notm}} 上目前可用的 vCenter Server on {{site.data.keyword.cloud_notm}} 供應項目的延伸。vCenter Server 的解決方案架構詳述解決方案的元件，以及本設計中每個元件的高階配置。
 
-如需 Cloud Foundation 及 vCenter Server 設計的相關資訊，請參閱[解決方案概觀](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)。
+如需 vCenter Server 設計的相關資訊，請參閱[解決方案概觀](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)。
 
 ## NSX Edge Services Gateway 概觀
 {: #nsx_overview-nsx-esg}

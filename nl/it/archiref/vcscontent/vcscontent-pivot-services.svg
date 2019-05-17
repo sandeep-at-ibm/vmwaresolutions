@@ -1,669 +1,168 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="831px"
-   height="461px"
-   version="1.1"
-   id="svg248"
-   sodipodi:docname="vcscontent-pivot-services.svg"
-   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
-  <defs
-     id="defs252" />
-  <sodipodi:namedview
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1027"
-     id="namedview250"
-     showgrid="false"
-     inkscape:zoom="1.2355223"
-     inkscape:cx="507.96979"
-     inkscape:cy="263.53687"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="g246" />
-  <metadata
-     id="metadata2">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g
-     transform="translate(.5 .5)"
-     id="g246">
-    <rect
-       width="830"
-       height="460"
-       fill="#f5f5f5"
-       pointer-events="none"
-       stroke="#666"
-       id="rect4" />
-    <g
-       font-size="24px"
-       id="g8"
-       transform="translate(54)"
-       style="font-size:24px;font-family:Helvetica;text-anchor:middle">
-      <text
-         x="229.5"
-         y="44.5"
-         id="text6">Perché utilizzare i segreti - Servizio pivot utilizzato</text>
-    </g>
-    <rect
-       x="10"
-       y="75"
-       width="250"
-       height="245"
-       fill="#fff2cc"
-       pointer-events="none"
-       stroke="#d6b656"
-       id="rect10" />
-    <g
-       font-family="Helvetica"
-       font-size="16px"
-       text-anchor="middle"
-       id="g14">
-      <text
-         x="71.5"
-         y="96.5"
-         id="text12">Cloud privato 1</text>
-    </g>
-    <rect
-       x="20"
-       y="110"
-       width="228"
-       height="65"
-       fill="#9f9"
-       pointer-events="none"
-       stroke="#36393d"
-       id="rect16" />
-    <g
-       font-family="Helvetica"
-       font-size="12px"
-       text-anchor="middle"
-       id="g20">
-      <text
-         x="44.5"
-         y="130"
-         id="text18">DB2</text>
-    </g>
-    <rect
-       x="20"
-       y="225"
-       width="79"
-       height="30"
-       fill="#9f9"
-       pointer-events="none"
-       stroke="#36393d"
-       id="rect22" />
-    <g
-       font-family="Helvetica"
-       font-size="10px"
-       text-anchor="middle"
-       id="g26">
-      <text
-         x="59"
-         y="240.5"
-         id="text24">Microclimate</text>
-    </g>
-    <rect
-       x="169"
-       y="280"
-       width="79"
-       height="30"
-       fill="#9cf"
-       pointer-events="none"
-       stroke="#6c8ebf"
-       id="rect28" />
-    <g
-       font-family="Helvetica"
-       font-size="10px"
-       text-anchor="middle"
-       id="g32">
-      <text
-         x="208"
-         y="295.5"
-         id="text30">App 3</text>
-    </g>
-    <rect
-       x="169"
-       y="240"
-       width="79"
-       height="30"
-       fill="#9cf"
-       pointer-events="none"
-       stroke="#6c8ebf"
-       id="rect34" />
-    <g
-       font-family="Helvetica"
-       font-size="10px"
-       text-anchor="middle"
-       id="g38">
-      <text
-         x="208"
-         y="255.5"
-         id="text36">App 2</text>
-    </g>
-    <g
-       pointer-events="none"
-       id="g46">
-      <path
-         d="m209 200v-17.63"
-         fill="none"
-         stroke="#000"
-         stroke-miterlimit="10"
-         id="path40" />
-      <path
-         d="m209 177.12 3.5 7-3.5-1.75-3.5 1.75z"
-         stroke="#000"
-         stroke-miterlimit="10"
-         id="path42" />
-      <rect
-         x="169"
-         y="200"
-         width="79"
-         height="30"
-         fill="#9cf"
-         stroke="#6c8ebf"
-         id="rect44" />
-    </g>
-    <g
-       font-family="Helvetica"
-       font-size="10px"
-       text-anchor="middle"
-       id="g50">
-      <text
-         x="208"
-         y="215"
-         id="text48">App 1</text>
-    </g>
-    <g
-       font-family="Helvetica"
-       font-size="10px"
-       id="g56">
-      <text
-         x="32.5"
-         y="145.5"
-         id="text52">Endpoint: dev-instance-db2</text>
-      <text
-         x="32.5"
-         y="169.5"
-         id="text54">Porta: 50000</text>
-    </g>
-    <g
-       pointer-events="none"
-       id="g82">
-      <g
-         stroke="#000"
-         stroke-miterlimit="10"
-         id="g78">
-        <path
-           d="m100 241 34.78 7.63"
-           fill="none"
-           id="path58" />
-        <path
-           d="m139.91 249.76-7.59 1.92 2.46-3.05-0.96-3.79z"
-           id="path60" />
-        <path
-           d="m100 241 34.08 27.96"
-           fill="none"
-           id="path62" />
-        <path
-           d="m138.14 272.29-7.64-1.73 3.58-1.6 0.86-3.82z"
-           id="path64" />
-        <path
-           d="m100 241 36.21 48.88"
-           fill="none"
-           id="path66" />
-        <path
-           d="m139.33 294.1-6.97-3.54 3.85-0.68 1.77-3.49z"
-           id="path68" />
-        <path
-           d="m100 241 35.88-10.25"
-           fill="none"
-           id="path70" />
-        <path
-           d="m140.93 229.31-5.77 5.29 0.72-3.85-2.65-2.89z"
-           id="path72" />
-        <path
-           d="m100 241 34.84-25.26"
-           fill="none"
-           id="path74" />
-        <path
-           d="m139.09 212.66-3.61 6.94-0.64-3.86-3.47-1.81z"
-           id="path76" />
-      </g>
-      <rect
-         x="290"
-         y="77"
-         width="250"
-         height="245"
-         fill="#fff2cc"
-         stroke="#d6b656"
-         id="rect80" />
-    </g>
-    <g
-       font-family="Helvetica"
-       font-size="16px"
-       text-anchor="middle"
-       id="g86">
-      <text
-         x="351.5"
-         y="98.5"
-         id="text84">Cloud privato 2</text>
-    </g>
-    <rect
-       x="300"
-       y="112"
-       width="228"
-       height="65"
-       fill="#9f9"
-       pointer-events="none"
-       stroke="#36393d"
-       id="rect88" />
-    <g
-       font-family="Helvetica"
-       font-size="12px"
-       text-anchor="middle"
-       id="g92">
-      <text
-         x="324.5"
-         y="132"
-         id="text90">DB2</text>
-    </g>
-    <rect
-       x="300"
-       y="227"
-       width="79"
-       height="30"
-       fill="#9f9"
-       pointer-events="none"
-       stroke="#36393d"
-       id="rect94" />
-    <g
-       font-family="Helvetica"
-       font-size="10px"
-       text-anchor="middle"
-       id="g98">
-      <text
-         x="339"
-         y="242.5"
-         id="text96">Microclimate</text>
-    </g>
-    <rect
-       x="449"
-       y="282"
-       width="79"
-       height="30"
-       fill="#9cf"
-       pointer-events="none"
-       stroke="#6c8ebf"
-       id="rect100" />
-    <g
-       font-family="Helvetica"
-       font-size="10px"
-       text-anchor="middle"
-       id="g104">
-      <text
-         x="488"
-         y="297.5"
-         id="text102">App 3</text>
-    </g>
-    <rect
-       x="449"
-       y="242"
-       width="79"
-       height="30"
-       fill="#9cf"
-       pointer-events="none"
-       stroke="#6c8ebf"
-       id="rect106" />
-    <g
-       font-family="Helvetica"
-       font-size="10px"
-       text-anchor="middle"
-       id="g110">
-      <text
-         x="488"
-         y="257.5"
-         id="text108">App 2</text>
-    </g>
-    <g
-       pointer-events="none"
-       id="g118">
-      <path
-         d="m489 202v-17.63"
-         fill="none"
-         stroke="#000"
-         stroke-miterlimit="10"
-         id="path112" />
-      <path
-         d="m489 179.12 3.5 7-3.5-1.75-3.5 1.75z"
-         stroke="#000"
-         stroke-miterlimit="10"
-         id="path114" />
-      <rect
-         x="449"
-         y="202"
-         width="79"
-         height="30"
-         fill="#9cf"
-         stroke="#6c8ebf"
-         id="rect116" />
-    </g>
-    <g
-       font-family="Helvetica"
-       font-size="10px"
-       text-anchor="middle"
-       id="g122">
-      <text
-         x="488"
-         y="217"
-         id="text120">App 1</text>
-    </g>
-    <g
-       font-family="Helvetica"
-       font-size="10px"
-       id="g128">
-      <text
-         x="312.5"
-         y="147.5"
-         id="text124">Endpoint: test-instance-db2</text>
-      <text
-         x="312.5"
-         y="171.5"
-         id="text126">Porta: 50002</text>
-    </g>
-    <g
-       pointer-events="none"
-       id="g154">
-      <g
-         stroke="#000"
-         stroke-miterlimit="10"
-         id="g150">
-        <path
-           d="m380 243 34.78 7.63"
-           fill="none"
-           id="path130" />
-        <path
-           d="m419.91 251.76-7.59 1.92 2.46-3.05-0.96-3.79z"
-           id="path132" />
-        <path
-           d="m380 243 34.08 27.96"
-           fill="none"
-           id="path134" />
-        <path
-           d="m418.14 274.29-7.64-1.73 3.58-1.6 0.86-3.82z"
-           id="path136" />
-        <path
-           d="m380 243 36.21 48.88"
-           fill="none"
-           id="path138" />
-        <path
-           d="m419.33 296.1-6.97-3.54 3.85-0.68 1.77-3.49z"
-           id="path140" />
-        <path
-           d="m380 243 35.88-10.25"
-           fill="none"
-           id="path142" />
-        <path
-           d="m420.93 231.31-5.77 5.29 0.72-3.85-2.65-2.89z"
-           id="path144" />
-        <path
-           d="m380 243 34.84-25.26"
-           fill="none"
-           id="path146" />
-        <path
-           d="m419.09 214.66-3.61 6.94-0.64-3.86-3.47-1.81z"
-           id="path148" />
-      </g>
-      <rect
-         x="570"
-         y="75"
-         width="250"
-         height="245"
-         fill="#fff2cc"
-         stroke="#d6b656"
-         id="rect152" />
-    </g>
-    <g
-       font-family="Helvetica"
-       font-size="16px"
-       text-anchor="middle"
-       id="g158">
-      <text
-         x="631.5"
-         y="96.5"
-         id="text156">Cloud privato 3</text>
-    </g>
-    <rect
-       x="580"
-       y="110"
-       width="228"
-       height="65"
-       fill="#9f9"
-       pointer-events="none"
-       stroke="#36393d"
-       id="rect160" />
-    <g
-       font-family="Helvetica"
-       font-size="12px"
-       text-anchor="middle"
-       id="g164">
-      <text
-         x="604.5"
-         y="130"
-         id="text162">DB2</text>
-    </g>
-    <rect
-       x="580"
-       y="225"
-       width="79"
-       height="30"
-       fill="#9f9"
-       pointer-events="none"
-       stroke="#36393d"
-       id="rect166" />
-    <g
-       font-family="Helvetica"
-       font-size="10px"
-       text-anchor="middle"
-       id="g170">
-      <text
-         x="619"
-         y="240.5"
-         id="text168">Microclimate</text>
-    </g>
-    <rect
-       x="729"
-       y="280"
-       width="79"
-       height="30"
-       fill="#9cf"
-       pointer-events="none"
-       stroke="#6c8ebf"
-       id="rect172" />
-    <g
-       font-family="Helvetica"
-       font-size="10px"
-       text-anchor="middle"
-       id="g176">
-      <text
-         x="768"
-         y="295.5"
-         id="text174">App 3</text>
-    </g>
-    <rect
-       x="729"
-       y="240"
-       width="79"
-       height="30"
-       fill="#9cf"
-       pointer-events="none"
-       stroke="#6c8ebf"
-       id="rect178" />
-    <g
-       font-family="Helvetica"
-       font-size="10px"
-       text-anchor="middle"
-       id="g182">
-      <text
-         x="768"
-         y="255.5"
-         id="text180">App 2</text>
-    </g>
-    <g
-       pointer-events="none"
-       id="g190">
-      <path
-         d="m769 200v-17.63"
-         fill="none"
-         stroke="#000"
-         stroke-miterlimit="10"
-         id="path184" />
-      <path
-         d="m769 177.12 3.5 7-3.5-1.75-3.5 1.75z"
-         stroke="#000"
-         stroke-miterlimit="10"
-         id="path186" />
-      <rect
-         x="729"
-         y="200"
-         width="79"
-         height="30"
-         fill="#9cf"
-         stroke="#6c8ebf"
-         id="rect188" />
-    </g>
-    <g
-       font-family="Helvetica"
-       font-size="10px"
-       text-anchor="middle"
-       id="g194">
-      <text
-         x="768"
-         y="215"
-         id="text192">App 1</text>
-    </g>
-    <g
-       font-family="Helvetica"
-       font-size="10px"
-       id="g200">
-      <text
-         x="592.5"
-         y="145.5"
-         id="text196">Endpoint: prod-instance-db2</text>
-      <text
-         x="592.5"
-         y="169.5"
-         id="text198">Porta: 50003</text>
-    </g>
-    <g
-       pointer-events="none"
-       id="g226">
-      <g
-         stroke="#000"
-         stroke-miterlimit="10"
-         id="g222">
-        <path
-           d="m660 241 34.78 7.63"
-           fill="none"
-           id="path202" />
-        <path
-           d="m699.91 249.76-7.59 1.92 2.46-3.05-0.96-3.79z"
-           id="path204" />
-        <path
-           d="m660 241 34.08 27.96"
-           fill="none"
-           id="path206" />
-        <path
-           d="m698.14 272.29-7.64-1.73 3.58-1.6 0.86-3.82z"
-           id="path208" />
-        <path
-           d="m660 241 36.21 48.88"
-           fill="none"
-           id="path210" />
-        <path
-           d="m699.33 294.1-6.97-3.54 3.85-0.68 1.77-3.49z"
-           id="path212" />
-        <path
-           d="m660 241 35.88-10.25"
-           fill="none"
-           id="path214" />
-        <path
-           d="m700.93 229.31-5.77 5.29 0.72-3.85-2.65-2.89z"
-           id="path216" />
-        <path
-           d="m660 241 34.84-25.26"
-           fill="none"
-           id="path218" />
-        <path
-           d="m699.09 212.66-3.61 6.94-0.64-3.86-3.47-1.81z"
-           id="path220" />
-      </g>
-      <rect
-         x="296"
-         y="400"
-         width="228"
-         height="45"
-         fill="#dae8fc"
-         stroke="#6c8ebf"
-         id="rect224" />
-    </g>
-    <g
-       font-family="Helvetica"
-       font-size="12px"
-       text-anchor="middle"
-       id="g230">
-      <text
-         x="400.5"
-         y="425"
-         id="text228">GitHub</text>
-    </g>
-    <g
-       pointer-events="none"
-       stroke="#000"
-       stroke-miterlimit="10"
-       id="g244">
-      <path
-         d="m353 400-307.22-142.32"
-         fill="none"
-         id="path232" />
-      <path
-         d="m41.01 255.47 7.83-0.23-3.06 2.44 0.11 3.91z"
-         id="path234" />
-      <path
-         d="m467 400 167.13-140.9"
-         fill="none"
-         id="path236" />
-      <path
-         d="m638.15 255.72-3.1 7.19-0.92-3.81-3.59-1.54z"
-         id="path238" />
-      <path
-         d="m410 400-67.2-137.28"
-         fill="none"
-         id="path240" />
-      <path
-         d="m340.49 258 6.22 4.75-3.91-0.03-2.37 3.11z"
-         id="path242" />
-    </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="831px" height="461px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(.5 .5)">
+  <rect width="830" height="460" fill="#f5f5f5" pointer-events="none" stroke="#666"/>
+  <g font-family="Helvetica" font-size="24px" text-anchor="middle">
+   <text x="229.5" y="44.5">Perché utilizzare i segreti - Servizio pivot utilizzato</text>
   </g>
+  <rect x="10" y="75" width="250" height="245" fill="#fff2cc" pointer-events="none" stroke="#d6b656"/>
+  <g font-family="Helvetica" font-size="16px" text-anchor="middle">
+   <text x="71.5" y="96.5">Cloud privato 1</text>
+  </g>
+  <rect x="20" y="110" width="228" height="65" fill="#9f9" pointer-events="none" stroke="#36393d"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <text x="44.5" y="130">DB2</text>
+  </g>
+  <rect x="20" y="225" width="79" height="30" fill="#9f9" pointer-events="none" stroke="#36393d"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="59" y="240.5">Microclimate</text>
+  </g>
+  <rect x="169" y="280" width="79" height="30" fill="#9cf" pointer-events="none" stroke="#6c8ebf"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="208" y="295.5">App 3</text>
+  </g>
+  <rect x="169" y="240" width="79" height="30" fill="#9cf" pointer-events="none" stroke="#6c8ebf"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="208" y="255.5">App 2</text>
+  </g>
+  <g pointer-events="none">
+   <path d="m209 200v-17.63" fill="none" stroke="#000" stroke-miterlimit="10"/>
+   <path d="m209 177.12 3.5 7-3.5-1.75-3.5 1.75z" stroke="#000" stroke-miterlimit="10"/>
+   <rect x="169" y="200" width="79" height="30" fill="#9cf" stroke="#6c8ebf"/>
+  </g>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="208" y="215">App 1</text>
+  </g>
+  <g font-family="Helvetica" font-size="10px">
+   <text x="32.5" y="145.5">Endpoint: dev-instance-db2</text>
+   <text x="32.5" y="169.5">Porta: 50000</text>
+  </g>
+  <g pointer-events="none">
+   <g stroke="#000" stroke-miterlimit="10">
+    <path d="m100 241 34.78 7.63" fill="none"/>
+    <path d="m139.91 249.76-7.59 1.92 2.46-3.05-0.96-3.79z"/>
+    <path d="m100 241 34.08 27.96" fill="none"/>
+    <path d="m138.14 272.29-7.64-1.73 3.58-1.6 0.86-3.82z"/>
+    <path d="m100 241 36.21 48.88" fill="none"/>
+    <path d="m139.33 294.1-6.97-3.54 3.85-0.68 1.77-3.49z"/>
+    <path d="m100 241 35.88-10.25" fill="none"/>
+    <path d="m140.93 229.31-5.77 5.29 0.72-3.85-2.65-2.89z"/>
+    <path d="m100 241 34.84-25.26" fill="none"/>
+    <path d="m139.09 212.66-3.61 6.94-0.64-3.86-3.47-1.81z"/>
+   </g>
+   <rect x="290" y="77" width="250" height="245" fill="#fff2cc" stroke="#d6b656"/>
+  </g>
+  <g font-family="Helvetica" font-size="16px" text-anchor="middle">
+   <text x="351.5" y="98.5">Cloud privato 2</text>
+  </g>
+  <rect x="300" y="112" width="228" height="65" fill="#9f9" pointer-events="none" stroke="#36393d"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <text x="324.5" y="132">DB2</text>
+  </g>
+  <rect x="300" y="227" width="79" height="30" fill="#9f9" pointer-events="none" stroke="#36393d"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="339" y="242.5">Microclimate</text>
+  </g>
+  <rect x="449" y="282" width="79" height="30" fill="#9cf" pointer-events="none" stroke="#6c8ebf"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="488" y="297.5">App 3</text>
+  </g>
+  <rect x="449" y="242" width="79" height="30" fill="#9cf" pointer-events="none" stroke="#6c8ebf"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="488" y="257.5">App 2</text>
+  </g>
+  <g pointer-events="none">
+   <path d="m489 202v-17.63" fill="none" stroke="#000" stroke-miterlimit="10"/>
+   <path d="m489 179.12 3.5 7-3.5-1.75-3.5 1.75z" stroke="#000" stroke-miterlimit="10"/>
+   <rect x="449" y="202" width="79" height="30" fill="#9cf" stroke="#6c8ebf"/>
+  </g>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="488" y="217">App 1</text>
+  </g>
+  <g font-family="Helvetica" font-size="10px">
+   <text x="312.5" y="147.5">Endpoint: test-instance-db2</text>
+   <text x="312.5" y="171.5">Porta: 50002</text>
+  </g>
+  <g pointer-events="none">
+   <g stroke="#000" stroke-miterlimit="10">
+    <path d="m380 243 34.78 7.63" fill="none"/>
+    <path d="m419.91 251.76-7.59 1.92 2.46-3.05-0.96-3.79z"/>
+    <path d="m380 243 34.08 27.96" fill="none"/>
+    <path d="m418.14 274.29-7.64-1.73 3.58-1.6 0.86-3.82z"/>
+    <path d="m380 243 36.21 48.88" fill="none"/>
+    <path d="m419.33 296.1-6.97-3.54 3.85-0.68 1.77-3.49z"/>
+    <path d="m380 243 35.88-10.25" fill="none"/>
+    <path d="m420.93 231.31-5.77 5.29 0.72-3.85-2.65-2.89z"/>
+    <path d="m380 243 34.84-25.26" fill="none"/>
+    <path d="m419.09 214.66-3.61 6.94-0.64-3.86-3.47-1.81z"/>
+   </g>
+   <rect x="570" y="75" width="250" height="245" fill="#fff2cc" stroke="#d6b656"/>
+  </g>
+  <g font-family="Helvetica" font-size="16px" text-anchor="middle">
+   <text x="631.5" y="96.5">Cloud privato 3</text>
+  </g>
+  <rect x="580" y="110" width="228" height="65" fill="#9f9" pointer-events="none" stroke="#36393d"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <text x="604.5" y="130">DB2</text>
+  </g>
+  <rect x="580" y="225" width="79" height="30" fill="#9f9" pointer-events="none" stroke="#36393d"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="619" y="240.5">Microclimate</text>
+  </g>
+  <rect x="729" y="280" width="79" height="30" fill="#9cf" pointer-events="none" stroke="#6c8ebf"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="768" y="295.5">App 3</text>
+  </g>
+  <rect x="729" y="240" width="79" height="30" fill="#9cf" pointer-events="none" stroke="#6c8ebf"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="768" y="255.5">App 2</text>
+  </g>
+  <g pointer-events="none">
+   <path d="m769 200v-17.63" fill="none" stroke="#000" stroke-miterlimit="10"/>
+   <path d="m769 177.12 3.5 7-3.5-1.75-3.5 1.75z" stroke="#000" stroke-miterlimit="10"/>
+   <rect x="729" y="200" width="79" height="30" fill="#9cf" stroke="#6c8ebf"/>
+  </g>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="768" y="215">App 1</text>
+  </g>
+  <g font-family="Helvetica" font-size="10px">
+   <text x="592.5" y="145.5">Endpoint: prod-instance-db2</text>
+   <text x="592.5" y="169.5">Porta: 50003</text>
+  </g>
+  <g pointer-events="none">
+   <g stroke="#000" stroke-miterlimit="10">
+    <path d="m660 241 34.78 7.63" fill="none"/>
+    <path d="m699.91 249.76-7.59 1.92 2.46-3.05-0.96-3.79z"/>
+    <path d="m660 241 34.08 27.96" fill="none"/>
+    <path d="m698.14 272.29-7.64-1.73 3.58-1.6 0.86-3.82z"/>
+    <path d="m660 241 36.21 48.88" fill="none"/>
+    <path d="m699.33 294.1-6.97-3.54 3.85-0.68 1.77-3.49z"/>
+    <path d="m660 241 35.88-10.25" fill="none"/>
+    <path d="m700.93 229.31-5.77 5.29 0.72-3.85-2.65-2.89z"/>
+    <path d="m660 241 34.84-25.26" fill="none"/>
+    <path d="m699.09 212.66-3.61 6.94-0.64-3.86-3.47-1.81z"/>
+   </g>
+   <rect x="296" y="400" width="228" height="45" fill="#dae8fc" stroke="#6c8ebf"/>
+  </g>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <text x="400.5" y="425">GitHub</text>
+  </g>
+  <g pointer-events="none" stroke="#000" stroke-miterlimit="10">
+   <path d="m353 400-307.22-142.32" fill="none"/>
+   <path d="m41.01 255.47 7.83-0.23-3.06 2.44 0.11 3.91z"/>
+   <path d="m467 400 167.13-140.9" fill="none"/>
+   <path d="m638.15 255.72-3.1 7.19-0.92-3.81-3.59-1.54z"/>
+   <path d="m410 400-67.2-137.28" fill="none"/>
+   <path d="m340.49 258 6.22 4.75-3.91-0.03-2.37 3.11z"/>
+  </g>
+ </g>
 </svg>

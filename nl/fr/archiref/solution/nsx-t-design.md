@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-19"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -74,9 +74,9 @@ Avec NSX-T on vSphere, les adaptateurs physiques doivent être affectés au N-VD
 C'est pourquoi, lors de l'installation de NSX-T et de sa configuration, un port NIC physique sur un adaptateur doit rester affecté à un commutateur virtuel (vSwitch) vSphere local ou un commutateur distribué virtuel
 (vDS). Après le déploiement de NSX-T, tous les ports de noyau ESX doivent être migrés vers un commutateur N-VDS et supprimés de tout commutateur vSwitch local ou VDS. Une fois les ports de noyau supprimés, les ports NIC physiques restants peuvent être affectés en tant que liaison montante N-VDS assurant la redondance du commutateur N-VDS.
 
-Après le déploiement initial, l'automatisation d'{{site.data.keyword.cloud_notm}} déploie trois dispositifs virtuels NSX-T Manager/Controller dans le cluster initial. Les contrôleurs se voient affecter une adresse IP VLAN provenant du sous-réseau portable A destiné aux composants de gestion. De ^plus, les règles d'anti-affinité MV–MV sont créées de telle sorte que les contrôleurs soient répartis parmi les hôtes du cluster. 
+Après le déploiement initial, l'automatisation {{site.data.keyword.cloud_notm}} déploie trois dispositifs virtuels NSX-T Manager/Controller dans le cluster initial. Les contrôleurs se voient affecter une adresse IP VLAN provenant du sous-réseau portable A destiné aux composants de gestion. De ^plus, les règles d'anti-affinité MV–MV sont créées de telle sorte que les contrôleurs soient répartis parmi les hôtes du cluster.
 
-Vous devez déployer le cluster initial avec un minimum de trois noeuds afin de garantir la haute disponibilité des paires Manager/Controller. En plus des Manager/Controller, l'automatisation d'{{site.data.keyword.cloud_notm}} prépare les hôtes vSphere déployés en tant que noeuds de transport NSX-T. Les noeuds de transport ESXi se voient affecté une adresse IP VLAN provenant de la plage d'adresses IP du sous-réseau portable privé A spécifié par une plage de pool d'adresses IP NSX dérivée du récapitulatif VLAN et sous-réseau. Le trafic des noeuds de transport réside sur le réseau local virtuel non balisé et est affecté au commutateur distribué virtuel (N-VDS) NSX-T privé.
+Vous devez déployer le cluster initial avec un minimum de trois noeuds afin de garantir la haute disponibilité des paires Manager/Controller. En plus des Manager/Controller, l'automatisation {{site.data.keyword.cloud_notm}} prépare les hôtes vSphere déployés en tant que noeuds de transport NSX-T. Les noeuds de transport ESXi se voient affecté une adresse IP VLAN provenant de la plage d'adresses IP du sous-réseau portable privé A spécifié par une plage de pool d'adresses IP NSX dérivée du récapitulatif VLAN et sous-réseau. Le trafic des noeuds de transport réside sur le réseau local virtuel non balisé et est affecté au commutateur distribué virtuel (N-VDS) NSX-T privé.
 
 Selon la topologie NSX-T que le client a choisi de déployer, un cluster Edge NSX-T est déployé en tant que paire de machines virtuelles ou de logiciel déployé sur des noeuds de cluster bare metal. Que la paire de clusters soit virtuelle ou physique, des liaisons montantes sont configurées sur des commutateurs N-VDS pour les réseaux public et privé d'{{site.data.keyword.cloud_notm}}.
 
@@ -113,7 +113,7 @@ Les noeuds de transport définissent les objets serveur physique ou les machines
 
 Tableau 5. Noeuds de transport NSX-T
 
-Type de noeud de transport | N-VDS | Profil de liaison montante | Affectation d'IP | Cartes NIC physiques
+Type de noeud de transport | N-VDS | Profil de liaison montante | Affectation d'IP | Cartes d'interface réseau physiques
 --|:--------|:--------|:---
 **ESXi** | SDDC-Privé | SDDC-Privé-liaison montante | Pool d'IP | vmnic0, vmnic2
 **Cluster Edge** | SDDC-Dissocié | SDDC-Dissocié-liaison montante | Pool d'IP | Non applicable
@@ -129,7 +129,7 @@ Tableau 6. Profils de liaison montante NSX-T
 Nom du profil de liaison montante | VLAN | Groupages inclus | MTU
 --|:-----|:---|:---
 **SDDC-Private-Uplink** | Par défaut | Par défaut, gestion | 9000
-**SDDC-Public-Uplink** | Par défaut | Par défaut| 1500
+**SDDC-Public-Uplink** | Par défaut| Par défaut | 1500
 **SDDC-Storage-Uplink** | Réseau local virtuel de stockage | vSAN, iSCSI-A&B,NFS | 9000
 
 ## Groupage
@@ -141,12 +141,12 @@ Nom du groupage | Basculement ou équilibrage de charge | NIC actif | NIC en vei
 --|:----|:---|:---
 **Default** | Source d'équilibrage de charge | Liaison montante 1, 2 | Non applicable
 **Management** | Basculement| Liaison montante 1 | Liaison montante 2
-**TEP** | Basculement| Liaison montante 1 | Liaison montante 1 
-**vSAN** | Basculement| Liaison montante 2| Liaison montante 1 
+**TEP** | Basculement| Liaison montante 1 | Liaison montante 1
+**vSAN** | Basculement| Liaison montante 2 | Liaison montante 1
 **iSCSI-A** | Basculement| Liaison montante 1 | Non applicable
-**iSCSI-B** | Basculement| Liaison montante 2| Non applicable
-**NFS** | Source d'équilibrage de charge | Liaison montante 1, 2 | Liaison montante 1 
-**vMotion** | Basculement| Liaison montante 2| Liaison montante 1 
+**iSCSI-B** | Basculement| Liaison montante 2 | Non applicable
+**NFS** | Source d'équilibrage de charge | Liaison montante 1, 2 | Liaison montante 1
+**vMotion** | Basculement| Liaison montante 2 | Liaison montante 1
 
 ## Pools de VNI
 {: #nsx-t-design-vni-pools}
@@ -160,16 +160,16 @@ Un commutateur logique NSX-T reproduits des fonctionnalités de commutation, de 
 
 Tableau 8. Commutateurs logiques NSX-T
 
-Nom du commutateur logique| VLAN |Zone de transport | Règle de groupage de liaison montante
+Nom du commutateur logique | VLAN |Zone de transport | Règle de groupage de liaison montante
 --|:---|:----|:---
 **SDDC-LS-Mgmt** | Par défaut | Privé-VLAN | Gestion
 **SDDC-LS-NFS** | Par défaut | Privé-VLAN | NFS
 **SDDC-LS-vMotion** | Par défaut | Privé-VLAN | vMotion
 **SDDC-LS-VSAN** | Réseau local virtuel de stockage balisé | Privé-VLAN | vSAN
-**SDDC-LS-iSCSI-A** | Réseau local virtuel de stockage balisé | Privé-VLAN | iSCSI-A
-**SDDC-LS-iSCSi-B** | Réseau local virtuel de stockage balisé | Privé-VLAN | iSCSi-B
-**SDDC-LS-TEP** | Par défaut | Privé-VLAN |Liaison montante
-**SDDC-LS-External** | Par défaut| Public-VLAN | Par défaut
+**SDDC-LS-iSCSI-A** | Réseau local virtuel de stockage balisé | Privé-VLAN| iSCSI-A
+**SDDC-LS-iSCSi-B** | Réseau local virtuel de stockage balisé | Privé-VLAN| iSCSi-B
+**SDDC-LS-TEP** | Par défaut | Privé-VLAN| Liaison montante
+**SDDC-LS-External** | Par défaut | Public-VLAN | Par défaut
 
 ### Cluster Edge
 {: #nsx-t-design-edge-cluster}
@@ -180,7 +180,7 @@ Figure 2. Exemple de cluster Edge NSX-T avec extension T0 à T1
 ![Exemple de cluster Edge NSX-T avec extension T0 à T1](vcsv4radiagrams-ra-nsx-t-edge-cluster-t0-to-t1-scale.svg)
 
 Figure 3. Passerelle T0 de gestion</br>
-![Passerelle T0 de gestion](vcsv4radiagrams-topology-0.svg)
+![Passerelle TO de gestion](vcsv4radiagrams-topology-0.svg)
 
 #### Passerelle de routeur logique de niveau 0
 {: #nsx-t-design-tier-0}
@@ -225,7 +225,7 @@ Figure 6. Topologie NSX-T déployée avec intégration NSX-T ICP et passerelle E
 
 La topologie 3 déployée contient la topologie 1 à laquelle s'ajoute un déploiement ICP qui comprend l'intégration NSX-T à la place de Calico, qui est la pile réseau par défaut au sein d'un déploiement ICP. Le client peut mettre à disposition des espaces de nom de conteneur supplémentaires dans ICP, qui automatise la création de commutateurs logiques, d'adresse IP de sous-réseau et d'instances de passerelle T1 pour chaque espace de nom.
 
-Pour parfaitement comprendre comment fonctionne ICP sur vCenter Server, consultez la documentation relative à l'architecture ICP sur vCenter Server. Un espace d'adresses IP portables privées et publiques {{site.data.keyword.cloud_notm}} désigné par le client est affecté à T0 pour une utilisation par le client. 
+Pour parfaitement comprendre comment fonctionne ICP sur vCenter Server, consultez la documentation relative à l'architecture ICP sur vCenter Server. Un espace d'adresses IP portables privées et publiques {{site.data.keyword.cloud_notm}} désigné par le client est affecté à T0 pour une utilisation par le client.
 
 A partir de cette conception, vous avez la possibilité de ne pas supprimer ces plages d'adresses IP si l'instance vCenter Server est déclassée et supprimée.
 

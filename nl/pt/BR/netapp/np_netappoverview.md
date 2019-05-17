@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -98,7 +98,7 @@ As unidades SSD de 3,8 TB (Disco de estado sólido) são suportadas quando são 
 * Um controlador de disco RAID
 * VMware Server Virtualization 6.5
 
-### Redes
+### Rede
 {: #np_netappoverview-network}
 
 * Uplinks duais de rede pública e privada de 10 Gbps
@@ -127,8 +127,8 @@ Deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} 
 
 **CUIDADO:** Gerenciar quaisquer componentes do {{site.data.keyword.vmwaresolutions_short}} (que foram instalados em sua conta do {{site.data.keyword.cloud_notm}} quando você pediu a instância) de fora do console do {{site.data.keyword.vmwaresolutions_short}} pode desestabilizar seu ambiente. Estas atividades de gerenciamento incluem:
 *  Inclusão, modificação, retorno, remoção ou desligamento de componentes
-*  Expansão ou redução da capacidade da instância por meio da inclusão ou remoção de servidores ESXi
-*  Reinício dos serviços
+*  Expandindo ou contraindo a capacidade da instância por meio da inclusão ou remoção de servidores ESXi
+*  Reiniciando os serviços
 
    As exceções a essas atividades incluem o gerenciamento de compartilhamentos de arquivos de armazenamento compartilhado por meio do {{site.data.keyword.slportal}}. Essas atividades incluem: pedido, exclusão (que poderá afetar armazenamentos de dados, se montado), autorização e montagem de compartilhamentos de arquivos de armazenamento compartilhado.
 

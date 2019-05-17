@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -120,7 +120,7 @@ Para obter mais informações, consulte [Visão geral do HyTrust DataControl on 
 
 O serviço HyTrust KeyControl on {{site.data.keyword.cloud_notm}} simplifica o gerenciamento de cargas de trabalho criptografadas automatizando e simplificando o ciclo de vida de chaves de criptografia. O serviço pode gerenciar facilmente as chaves de criptografia em escala usando a criptografia compatível com FIPS 140-2. Ao usar esse serviço, é possível gerenciar as chaves de criptografia de todas as máquinas virtuais e armazenamentos de dados criptografados, além de escalá-lo para suportar milhares de cargas de trabalho criptografadas em grandes implementações.
 
-Para obter mais informações, consulte [Visão geral do HyTrust KeyControl on {{site.data.keyword.cloud_notm}} ](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htkc_considerations).
+Para obter mais informações, consulte [Visão geral do HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htkc_considerations).
 
 ### IBM Cloud Privado Hospedado
 {: #prod_overview-icp}
@@ -168,4 +168,4 @@ Para obter mais informações, consulte [Visão geral do Zerto on {{site.data.ke
 ## Links relacionados
 {: #prod_overview-related}
 
-* [Introdução](/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started)
+* [Iniciar](/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started)

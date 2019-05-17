@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -25,7 +25,7 @@ Encuentre las respuestas a las preguntas más frecuentes sobre licencias, inclui
 {: #faq_byol-def}
 {: faq}
 
-Traer su propia licencia (Bring Your Own License o BYOL) es una característica disponible para las instancias de VMware Cloud Foundation de la V1.8 y posteriores y para los clústeres de vCenter Server y VMware vSphere de la V2.0 y posteriores. Con BYOL, puede utilizar sus propias licencias de VMware para uno o varios de los siguientes componentes de software de VMware:
+Traer su propia licencia (Bring Your Own License o BYOL) es una característica disponible en VMware vCenter Server y los clústeres de VMware vSphere en V2.0 y posteriores. Con BYOL, puede utilizar sus propias licencias de VMware para uno o varios de los siguientes componentes de software de VMware:
 * VMware vCenter Server
 * VMware vSphere
 * VMware NSX
@@ -62,18 +62,6 @@ Tabla 1. Ediciones de licencias y requisitos mínimos de CPU para instancias de 
   | vSAN           | Advanced o Enterprise | 8 CPU |
   | NSX            | Standard, Advanced o Enterprise | 8 CPU |
 
-### Requisitos de BYOL para instancias de Cloud Foundation
-{: #faq_byol-cf-reqs}
-
-Tabla 2. Ediciones de licencias y requisitos mínimos de CPU para instancias de Cloud Foundation
-
-  | Componente VMware | Edición licencia necesaria | CPU mínima necesaria
-  |:-------------  |:-------------  |:-------|
-  | vCenter Server | Standard | N/D |
-  | vSphere        | Enterprise Plus | 8 CPU |
-  | vSAN           | Advanced o Enterprise | 8 CPU |
-  | NSX            | Enterprise | 8 CPU |
-
 ## ¿Qué sucede si la clave de licencia que proporciono no es correcta?
 {: #faq_byol-incorrect-license}
 {: faq}
@@ -84,13 +72,7 @@ Todas las claves de licencia que proporcione se validan para garantizar de que s
 {: #faq_byol-license-key}
 {: faq}
 
-Sí. Para cada componente de VMware se necesita una licencia por CPU. Actualmente, todos los servidores de vCenter Server y de Cloud Foundation tienen dos CPU. Por lo tanto, se necesitan dos licencias por cada servidor. Se recomienda proporcionar una clave de licencia que dé soporte a la instancia básica y a los nodos de expansión que desee añadir a la instancia en el futuro.
-
-## ¿Puedo proporcionar la licencia de SDDC Manager si utilizo la característica BYOL?
-{: #faq_byol-sddc}
-{: faq}
-
-No. Nuestro acuerdo con VMware implica que debemos aceptar la clave de licencia real de un cliente. Aunque el despliegue de Cloud Foundation incluye licencias de SDDC Manager, no podemos aceptar los archivos de claves de licencia de SDDC Manager ni validarlos para BYOL. Por lo tanto, IBM realiza un cargo de licencias de SDDC Manager para todas las instancias. Las licencias de SDDC Manager representan una pequeña parte de los cargos totales de licencias correspondientes a una instancia de Cloud Foundation.
+Sí. Para cada componente de VMware se necesita una licencia por CPU. Actualmente, todos los servidores vCenter Server tienen dos CPU. Por lo tanto, se necesitan dos licencias por cada servidor. Se recomienda proporcionar una clave de licencia que dé soporte a la instancia básica y a los nodos de expansión que desee añadir a la instancia en el futuro.
 
 ## ¿Puedo utilizar la característica BYOL para algunos componentes de VMware y adquirir licencias mensuales para otros?
 {: #faq_byol-mthly-license}

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-23"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -20,10 +20,10 @@ subcollection: vmwaresolutions
 
 El servicio HCX on {{site.data.keyword.cloud}} permite ampliar fácilmente las redes de centros de datos locales en {{site.data.keyword.cloud_notm}}, lo que permite migrar las máquinas virtuales (VM) de {{site.data.keyword.cloud_notm}} sin ninguna conversión ni cambio.
 
-Este servicio solo está disponible para instancias de VMware vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity) desplegadas en la V2.3 y posteriores.
+Este servicio solo está disponible para instancias de VMware vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity) desplegadas en la V2.3 y posteriores. La versión actual de HCX on {{site.data.keyword.cloud_notm}} que está instalada es la 3.5.1.
 {:note}
 
-Puede actualizar la instancia existente de vCenter Server a una instancia de vCenter Server con el paquete híbrido (Hybridity). Para obtener más información sobre la actualización de la instancia y el despliegue del servicio HCX on {{site.data.keyword.cloud_notm}}, consulte [Procedimiento para actualizar a la instancia de vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates#procedure-to-upgrade-to-the-vcenter-server-with-hybridity-bundle-instance).
+Puede actualizar la instancia existente de vCenter Server a una instancia de vCenter Server con el paquete híbrido (Hybridity). Para obtener más información sobre la actualización de la instancia y el despliegue del servicio HCX on {{site.data.keyword.cloud_notm}}, consulte [Procedimiento para actualizar al paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_upgrade-lic#vc_upgrade-lic-procedure-upgrade-to-hybridity).
 
 Una instancia de vCenter Server con HCX on {{site.data.keyword.cloud_notm}} está limitada a tres conexiones simultáneas de sitios locales.
 {:note}

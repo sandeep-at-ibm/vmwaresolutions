@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-18"
+lastupdated: "2019-04-18"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -28,12 +28,13 @@ La fonction de suppression de cluster est disponible uniquement pour les instanc
 ## Ajout de clusters à des instances vCenter Server
 {: #vc_addingviewingclusters-adding}
 
-Le nombre de clusters pouvant être ajoutés à une instance varie en fonction de la version de l'instance :
-* Pour les instances déployées dans (ou mises à niveau vers) la version 2.5 et des versions ultérieures, le nombre de clusters, d'hôtes et de machines virtuelles détermine la limite maximum relative au nombre de clusters que vous pouvez ajouter. Vous devez respecter les règles et limites de dimensionnement VMware pour votre déploiement.
-* Pour les instances déployées dans (ou mises à niveau vers) la version 2.0 et des versions ultérieures, vous pouvez ajouter jusqu'à 10 clusters.
-* Pour les instances déployées dans la version 2.1 ou dans des versions antérieures, vous pouvez ajouter jusqu'à cinq clusters.
+### Avant d'ajouter des clusters
+{: #vc_addingviewingclusters-before-add}
 
-Pour plus d'informations sur les limites maximum, voir [VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window}.
+* Dans la mesure du possible, vous devez ajouter les clusters à l'aide de la console {{site.data.keyword.vmwaresolutions_full}} car les modifications apportées au client VMware vSphere Web Client ne sont pas synchronisées avec la console {{site.data.keyword.vmwaresolutions_short}}. Par conséquent, ajoutez des clusters à vCenter Server uniquement pour les clusters sur site ou les clusters que vous ne pouvez ou ne voulez pas gérer dans la console {{site.data.keyword.vmwaresolutions_short}}.
+* Pour les instances déployées dans (ou mises à niveau vers) la version 2.5 et des versions ultérieures, le nombre de clusters, d'hôtes et de machines virtuelles détermine la limite maximum relative au nombre de clusters que vous pouvez ajouter. Vous devez respecter les règles et limites de dimensionnement VMware pour votre déploiement. Pour plus d'informations sur les limites maximum, voir [VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window}.
+* Pour les instances déployées dans (ou mises à niveau vers) la version 2.0, 2.3, ou 2.4, vous pouvez ajouter jusqu'à 10 clusters.
+* Pour les instances déployées dans la version 2.1 ou dans des versions antérieures, vous pouvez ajouter jusqu'à cinq clusters.
 
 ### Paramètres système
 {: #vc_addingviewingclusters-adding-sys-settings}
@@ -52,7 +53,7 @@ Le nom du cluster qui doit respecter les règles suivantes :
 #### Emplacement de centre de données
 {: #vc_addingviewingclusters-adding-dc-location}
 
-L'emplacement de l'{{site.data.keyword.CloudDataCent}} du cluster est, par défaut, l'{{site.data.keyword.CloudDataCent_notm}} de l'instance vCenter Server. Vous pouvez déployer le cluster dans un autre {{site.data.keyword.CloudDataCent_notm}} que celui de l'instance déployée, sous réserve que la latence du réseau entre les deux {{site.data.keyword.CloudDataCents_notm}} soit inférieure à 150 ms. Pour vérifier la latence du réseau, utilisez un outil tel que [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/).
+L'emplacement de l'{{site.data.keyword.CloudDataCent}} du cluster est, par défaut, l'{{site.data.keyword.CloudDataCent_notm}} de l'instance vCenter Server. Vous pouvez déployer le cluster dans un autre {{site.data.keyword.CloudDataCent_notm}} que celui de l'instance déployée, sous réserve que la latence du réseau entre les deux {{site.data.keyword.CloudDataCents_notm}} soit inférieure à 150 ms. Pour vérifier la latence du réseau, vous pouvez utiliser un outil tel que [Looking Glass](/docs/infrastructure/network-tools?topic=network-tools-about-looking-glass#about-looking-glass).
 
 Si vous déployez le cluster dans un autre {{site.data.keyword.CloudDataCent_notm}} ou pod d'infrastructure {{site.data.keyword.cloud_notm}}, trois VLAN supplémentaires sont commandés pour être utilisés avec les serveurs {{site.data.keyword.baremetal_short}} commandés.
 
@@ -97,22 +98,15 @@ Tableau 2. Options pour les serveurs Broadwell {{site.data.keyword.baremetal_sho
 
 | Options de modèle d'UC        | Options de RAM       |
 |:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4/16 coeurs au total, 2,1 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
-| Dual Intel Xeon E5-2650 v4/24 coeurs au total, 2,2 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
-| Dual Intel Xeon E5-2690 v4/28 coeurs au total, 2,6 GHz | 64 Go, 128 Go, 256 Go, 512 Go, 768 Go, 1,5 To |
 | Quad Intel Xeon E7-4820 v4/40 coeurs au total, 1,9 GHz | 128 Go, 256 Go, 512 Go, 1 To, 2 To, 3 To |
 | Quad Intel Xeon E7-4850 v4/64 coeurs au total, 2,2 GHz | 128 Go, 256 Go, 512 Go, 1 To, 2 To, 3 To |
 
 #### Nombre de serveurs bare metal
 {: #vc_addingviewingclusters-adding-bare-metal-number}
 
-Les clusters requièrent au moins deux serveurs {{site.data.keyword.baremetal_short}}.
-
-Pour les instances vCenter Server déployées dans la version 2.1 ou des versions antérieures, vous pouvez ajouter jusqu'à 59 serveurs {{site.data.keyword.baremetal_short}} pour un cluster. Vous pouvez ajouter de 1 à 59 serveurs ESXi à la fois.
-
-Pour les instances vCenter Server déployées dans la version 2.0 ou des versions antérieures, vous pouvez ajouter jusqu'à 32 serveurs {{site.data.keyword.baremetal_short}} pour un cluster. Vous pouvez ajouter 1 à 20 serveurs ESXi à la fois pour la configuration de serveur bare metal **Skylake**, **Certifiés SAP** ou **Broadwell**.
-
-Après le déploiement, vous pouvez créer jusqu'à quatre clusters supplémentaires. Si vous sélectionnez la configuration de serveur bare metal **Skylake** ou**Broadwell** avec un stockage VMware vSAN, quatre serveurs sont nécessaires pour le cluster initial et pour les clusters post-déploiement.
+* Tous les serveurs que vous commandez ont la même configuration.
+* Pour le stockage vSAN, vous pouvez commander entre 4 et 59 serveurs.
+* Pour le stockage NFS, vous pouvez commander entre 2 et 59 serveurs. Cependant, pour les charges de travail de production, un minimum de 3 serveurs est recommandé. Pour plus d'informations, voir [Une instance vCenter Server à deux noeuds est-elle à haute disponibilité ?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-).
 
 ### Paramètres de stockage
 {: #vc_addingviewingclusters-adding-storage-settings}
@@ -125,9 +119,9 @@ Les paramètres de stockage varient en fonction de la configuration de serveur b
 Spécifiez les options vSAN suivantes :
 * **Type et taille de disque pour disques de capacité vSAN** : sélectionnez une option correspond aux disques de capacité dont vous avez besoin.
 * **Nombre de disques de capacité vSAN** : indiquez le nombre de disques de capacité que vous souhaitez ajouter.
-* Pour ajouter des disques de capacité au-delà de la limite fixée à huit, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de dix disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée.
+* Si vous souhaitez augmenter la capacité au-delà de la limite de 10 disques, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de 12 disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée.
 
-  L'option **Hautes performances Intel Optane** est disponible uniquement pour les modèles d'UC Skylake Dual Intel Xeon Gold 5120 et Dual Intel Xeon Gold 6140.
+  L'option **Hautes performances avec Intel Optane** n'est disponible que pour les modèles d'unités centrales Skylake.
   {:note}
 
 * Passez en revue les valeurs de **type de disque pour les disques de cache vSAN** et de **nombre de disques de cache vSAN**. Ces valeurs dépendent de la sélection de la case **Hautes performances avec Intel Optane**.
@@ -175,12 +169,11 @@ Spécifiez l'option d'octroi de licence pour le composant VMware vSphere dans le
 ### Paramètres d'interface réseau
 {: #vc_addingviewingclusters-adding-network-interface-settings}
 
-Les paramètres d'activation de carte d'interface réseau varient selon que vous sélectionnez **Réseau public et réseau privé** ou **Réseau privé uniquement**. Les services complémentaires suivants requièrent des cartes d'interface réseau public et ne sont pas disponibles si vous sélectionnez l'option de réseau privé :
+Les paramètres d'activation de carte d'interface réseau varient selon que vous sélectionnez **Réseau public et réseau privé** ou **Réseau privé uniquement**. Les services complémentaires suivants nécessitent des cartes d'interface réseau publiques et ne sont pas disponibles si vous sélectionnez l'option privée :
 
 * F5 on {{site.data.keyword.cloud_notm}}
 * Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
 * Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
-* Zerto on {{site.data.keyword.cloud_notm}}
 
 ### Récapitulatif de la commande
 {: #vc_addingviewingclusters-adding-order-summary}
@@ -291,7 +284,7 @@ Tableau 7. Interface réseau - Détails de sous-réseau
 
 | Elément        | Description       |  
 |:------------- |:------------- |
-| Nom | Nom du sous-réseau. Cliquez sur le nom pour accéder aux détails du sous-réseau.|
+| Nom | Nom du sous-réseau. Cliquez sur le nom pour accéder aux détails du sous-réseau. |
 | Type | Type de sous-réseau : principal ou portable. |
 | Description | Description du sous-réseau. |
 
@@ -308,11 +301,12 @@ Tableau 8. Interface réseau - Détails d'adresse IP
 
 Vous souhaiterez peut-être supprimer un cluster d'une instance si vous n'en avez plus besoin.
 
-### Avant de supprimer
+### Avant de supprimer des clusters
 {: #vc_addingviewingclusters-deleting-prereq}
 
 * Utilisez cette procédure pour supprimer des clusters des instances qui sont déployées dans la version 2.3 ou dans des versions ultérieures.
 * Pour les clusters déployés dans des instances V2.2 ou antérieures, vous devez mettre à niveau l'instance vers la version 2.3 si vous souhaitez supprimer les clusters que vous lui avez ajoutés.
+* Dans la mesure du possible, vous devez supprimer les clusters à l'aide de la console {{site.data.keyword.vmwaresolutions_full}} car les modifications apportées au client VMware vSphere Web Client ne sont pas synchronisées avec la console {{site.data.keyword.vmwaresolutions_short}}. Par conséquent, supprimez des clusters de vCenter Server uniquement en cas de clusters sur site ou de clusters que vous ne pouvez ou ne voulez pas gérer dans la console {{site.data.keyword.vmwaresolutions_short}}.
 * Vous ne pouvez supprimer qu'un seul cluster à la fois. Pour supprimer plusieurs clusters, vous devez le faire de manière séquentielle. Attendez que le cluster précédent soit supprimé avant de supprimer le cluster suivant.
 * Assurez-vous que tous les noeuds présents dans un cluster sont sous tension et opérationnels avant de supprimer le cluster.
 * Lorsque vous supprimez un cluster, toutes les machines virtuelles présentes sur le cluster sont également supprimées et ne peuvent pas être récupérées. Si vous souhaitez conserver les machines virtuelles, faites-les migrer vers d'autres clusters.

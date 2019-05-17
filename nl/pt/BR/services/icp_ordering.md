@@ -4,14 +4,14 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-26"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
 
-# Pedindo o IBM Cloud Privado Hospedado
+# Pedindo o IBM Cloud Private Hosted
 {: #icp_ordering}
 
 É possível pedir o serviço {{site.data.keyword.cloud}} Private Hosted ao pedir uma nova instância com o serviço incluído ou incluindo o serviço em sua instância existente.
@@ -36,6 +36,8 @@ subcollection: vmwaresolutions
 Ao pedir o serviço, forneça as configurações a seguir:
 * Selecione **Pronto para produção** ou **Desenvolvimento/teste ** de acordo com suas necessidades.
 * Marque a caixa de seleção necessária para certificar que você já obteve a licença necessária para implementar o serviço {{site.data.keyword.cloud_notm}} Private Hosted.
+
+Se desejar implementar nós adicionais, use o modelo do {{site.data.keyword.cloud_notm}} Private Ubuntu (Ubuntu1604) que é implementado com sua instalação inicial do {{site.data.keyword.cloud_notm}} Private Hosted. Para localizar o modelo, no VMware vSphere Web Client, acesse a guia **VMs e modelos**, sob a pasta `cam`. A senha padrão para o modelo Ubuntu é `icponcloud` e é recomendável que você a mude antes de usar o modelo.
 
 ## Links relacionados
 {: #icp_ordering-related}

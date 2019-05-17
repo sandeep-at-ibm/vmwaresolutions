@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -62,7 +62,7 @@ Tableau 2. Propriétés d'instance NetApp ONTAP Select
 | Type de licence NetApp | Type de la licence NetApp ONTAP Select. |
 | Domaine racine DNS | Le nom du domaine racine est le nom de domaine du serveur de noms de domaine (DNS) et le nom de l'approbation de la racine Microsoft Active Directory (AD) pour l'instance. |
 | Domaine de connexion unique DNS | Il s'agit du domaine de connexion unique (Single Sign-On) vSphere. Le nom de domaine SSO est défini pour toutes les instances NetApp ONTAP Select déployées avec la valeur `vsphere.local`. |
-| Sous-domaine DNS | Le sous-domaine est le nom du sous-domaine DNS du nom de domaine racine où résident les noms d'hôte des instances NetApp ONTAP Select locales. Le nom de sous-domaine est au format `<subdomain_label>.<root_domain>`. |
+| Sous-domaine DNS | Le sous-domaine est le nom du sous-domaine DNS du nom de domaine racine où résident les noms d'hôte des instances NetApp ONTAP Select locales. Le nom du sous-domaine est au format `<subdomain_label>.<root_domain>`. |
 | Statut | Statut de l'instance. |
 
 ## Procédure d'affichage des informations d'accès aux instances NetApp ONTAP
@@ -162,7 +162,7 @@ Tableau 6. Détails des serveurs ESXi d'un cluster NetApp ONTAP Select
 
 | Elément        | Description       |  
 |:------------|:----------------- |
-| Nom | Nom du serveur ESXi au format `<host_prefix><n>.<subdomain_label>.<root_domain>`, où :<br><br>`host_prefix` est le préfixe de nom d'hôte, `n` est la séquence du serveur, `subdomain_label` est le libellé de sous-domaine et `root_domain` est le nom de domaine racine. |
+| Nom | Le nom du serveur ESXi est au format `<host_prefix><n>.<subdomain_label>.<root_domain>`, où :<br><br>`host_prefix` est le préfixe de nom d'hôte, `n` est la séquence du serveur, `subdomain_label` est le libellé de sous-domaine et `root_domain` est le nom de domaine racine. |
 | Version | Version du serveur ESXi. |
 | Données d'identification | Nom d'utilisateur et mot de passe d'accès au serveur ESXi. |
 | Adresse IP privée | Adresse IP privée du serveur ESXi. |

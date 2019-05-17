@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-19"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -136,8 +136,9 @@ API exposta tem as categorias gerais a seguir:
 
 O Watson Discovery deve ser treinado por meio de um modelo de aprendizado de máquina, que é criado de forma iterativa por um especialista no assunto, usando o Watson Knowledge Studio.
 
-Figura 3. Treinamento de serviço de descoberta</br>
-![Treinamento de serviço de descoberta](vcscar-training.svg)
+Figura 3. Treinamento do serviço de descoberta
+</br>
+![Treinamento do serviço de descoberta](vcscar-training.svg)
 
 Para o Skate Advisor, o modelo consiste no relacionamento entre os tipos de entidade com uma combinação de treinamento baseado em regra e treinamento baseado em dicionário para criar um modelo. Esse modelo permite que o Discovery Service reconheça e classifique as manobras que são alimentadas por meio de artigos e descrições de vídeo que são usados como o conjunto de treinamento.
 

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-10"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -54,7 +54,7 @@ VMware vSphere on {{site.data.keyword.cloud_notm}}의 컴포넌트를 검토하�
 다음 구성 중 하나로 두 개 이상의 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}를 주문할 수 있습니다.
 * **Skylake**: 선택한 CPU 모델 및 RAM 크기를 사용하는 두 개의 CPU Intel Skylake 세대 서버(Intel Xeon 4100/5100/6100 시리즈)
 * **SAP-certified**: 선택한 CPU 모델을 사용하는 Intel Skylake 또는 Intel Broadwell 세대 서버(Intel Xeon 6140/E5-2690/E7-8890 시리즈)
-* **Broadwell**: 선택한 CPU 모델 및 RAM 크기를 사용하는 두 개의 Intel Broadwell 세대 서버(IntelXeon E5-2600/E7-4800 시리즈)
+* **Broadwell**: 선택한 CPU 모델 및 RAM 크기를 사용하는 네 개의 Intel Broadwell 세대 서버(Intel Xeon E7-4800 시리즈)
 
 사용 가능한 옵션은 VMware vSAN 컴포넌트 선택 여부에 따라 달라집니다.
 

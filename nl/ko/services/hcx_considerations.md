@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-23"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -20,10 +20,10 @@ subcollection: vmwaresolutions
 
 HCX on {{site.data.keyword.cloud}} 서비스는 온프레미스 데이터 센터의 네트워크를 {{site.data.keyword.cloud_notm}}로 원활하게 확장하며, 이를 통해 변환이나 변경 없이 {{site.data.keyword.cloud_notm}} 간에 가상 머신(VM)을 마이그레이션할 수 있습니다.
 
-이 서비스는 V2.3 이상에 배치된 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 인스턴스에만 사용 가능합니다.
+이 서비스는 V2.3 이상에 배치된 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 인스턴스에만 사용 가능합니다. 설치된 현재 HCX on {{site.data.keyword.cloud_notm}} 버전은 3.5.1입니다.
 {:note}
 
-기존 vCenter Server 인스턴스를 vCenter Server with Hybridity Bundle 인스턴스로 업그레이드할 수 있습니다. 인스턴스 업그레이드 및 HCX on {{site.data.keyword.cloud_notm}} 서비스 배치에 대한 자세한 정보는 [vCenter Server with Hybridity Bundle 인스턴스로 업그레이드하는 프로시저](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates#procedure-to-upgrade-to-the-vcenter-server-with-hybridity-bundle-instance)를 참조하십시오.
+기존 vCenter Server 인스턴스를 vCenter Server with Hybridity Bundle 인스턴스로 업그레이드할 수 있습니다. 인스턴스 업그레이드 및 HCX on {{site.data.keyword.cloud_notm}} 서비스 배치에 대한 자세한 정보는 [Hybridity Bundle로 업그레이드하는 프로시저](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_upgrade-lic#vc_upgrade-lic-procedure-upgrade-to-hybridity)를 참조하십시오.
 
 HCX on {{site.data.keyword.cloud_notm}}의 vCenter Server 인스턴스는 온프레미스 사이트의 세 개의 동시 연결로 제한됩니다.
 {:note}

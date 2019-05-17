@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-06"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -72,7 +72,7 @@ Tabella 1. distribuzioni di CPU e RAM per diverse selezioni di larghezza di band
 ### Ulteriori considerazioni
 {: #f5_considerations-additional}
 
-* F5 BIG–IP limita la velocità effettiva dell'applicazione in base alla larghezza di banda massima scelta. Poiché le prestazioni della rete sono influenzate da molti fattori, non tutte le configurazioni e topologie possono essere in grado di raggiungere la larghezza di banda massima scelta.
+* F5 BIG–IP limita la velocità effettiva del dispositivo in base alla larghezza di banda massima scelta. Poiché le prestazioni della rete sono influenzate da molti fattori, non tutte le configurazioni e topologie possono essere in grado di raggiungere la larghezza di banda massima scelta.
 * La coppia HA (alta disponibilità) di VM BIG-IP VE verrà distribuita solo nel cluster predefinito.
 
   Inoltre, viene prenotato anche il 100% di CPU e RAM per le due VM BIG-IP VE perché queste VM si trovano nel piano dati delle comunicazioni di rete ed è fondamentale che per loro siano ancora disponibili risorse.

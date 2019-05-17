@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -50,7 +50,7 @@ subcollection: vmwaresolutions
 物理主机采用分配给 vSphere ESXi 系统管理程序的两个本地连接的磁盘。您可以使用 vSAN（如_物理存储器设计_部分中所述）或使用 NetApp ONTAP（如 [NetApp ONTAP Select 体系结构](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)中所述）来分配更多磁盘。每个物理主机都具有冗余的 10 Gbps 网络连接，支持公用和专用网络访问。
 
 裸机服务器具有以下规范：
-* CPU：双 Intel Xeon，不同核心和速度配置
+* CPU：双核或四核 Intel Xeon，不同核心和速度配置
 * 内存：不同配置，64 GB 或更大
 * 网络：4 个 10 Gbps
 * 驱动器数：2 个或更多
@@ -63,7 +63,7 @@ subcollection: vmwaresolutions
 ### IBM Cloud 网络概述
 {: #design_physicalinfrastructure-ibm-cloud-network}
 
-{{site.data.keyword.cloud_notm}} 的物理网络分为两种不同的网络：公用网络和专用网络。专用网络包含流至物理服务器的频带外管理智能平台管理接口 (IPMI) 流量。
+{{site.data.keyword.cloud_notm}} 的物理网络分为两种不同的网络：公用网络和专用网络。专用网络还包含流至物理服务器的管理智能平台管理接口 (IPMI) 流量。
 
 图 2. {{site.data.keyword.cloud_notm}} 高级别网络
 ![{{site.data.keyword.cloud_notm}} 高级别网络](vcsv4radiagrams-ra-ibmcloudnetwork.svg)
@@ -87,7 +87,7 @@ subcollection: vmwaresolutions
 #### 管理网络
 {: #design_physicalinfrastructure-mgmt-net}
 
-除了公用和专用网络之外，每个 {{site.data.keyword.cloud_notm}} 服务器还会连接到专用主网络子网以用于频带外管理。此连接允许智能平台管理接口 (IPMI) 对服务器（与其 CPU、固件和操作系统无关）进行访问，以进行维护和管理。
+除了公用和专用网络之外，每个 {{site.data.keyword.cloud_notm}} 服务器还会连接到专用主网络子网以用于管理。此连接允许智能平台管理接口 (IPMI) 对服务器（与其 CPU、固件和操作系统无关）进行访问，以进行维护和管理。
 
 #### 主 IP 块和可移植 IP 块
 {: #design_physicalinfrastructure-ip-blocks}
@@ -118,7 +118,7 @@ subcollection: vmwaresolutions
 #### VLAN 以及下层到覆盖的路由
 {: #design_physicalinfrastructure-vlans}
 
-{{site.data.keyword.vmwaresolutions_short}} 产品设计有 3 个 VLAN：一个公用 VLAN 和两个专用 VLAN；这些 VLAN 在部署时进行分配。如上图所示，公用 VLAN 分配给 eth1 和 eth3，专用 VLAN 分配给 eth0 和 eth2。
+{{site.data.keyword.vmwaresolutions_short}} 产品设计有 3 个 VLAN：一个公用 VLAN 和两个专用 VLAN；这些 VLAN 在部署时进行分配。如上图所示，公用 VLAN 分配给 `eth1` 和 `eth3`，专用 VLAN 分配给 `eth0` 和 `eth2`。
 
 缺省情况下，在 {{site.data.keyword.cloud_notm}} 中未标记此设计中创建和分配的公用 VLAN 和第一个专用 VLAN。然后，另一个专用 VLAN 在物理交换机端口上中继，并在使用这些子网的 VMware 端口组中进行标记。
 
@@ -134,7 +134,7 @@ subcollection: vmwaresolutions
    * 使用 NFS 连接的 NAS 时，子网将分配给专用于 NFS 流量的端口组。
    * 对于 iSCSI 连接，将创建两个端口组，以允许跨两个专用 NIC 端口进行多路径活动/活动配置，因为每个 VMware iSCSI 文档一次只能有一个 NIC 端口处于活动状态。
 
-在 vCenter Server 或 Cloud Foundation 自动部署过程中配置的所有子网都使用 {{site.data.keyword.cloud_notm}} 管理的范围。这是为了确保您现在或未来需要连接时，任何 IP 地址都可以路由到 {{site.data.keyword.cloud_notm}} 帐户中的任何数据中心。
+在 vCenter Server 自动部署过程中配置的所有子网都使用 {{site.data.keyword.cloud_notm}} 管理的范围。这是为了确保您现在或未来需要连接时，任何 IP 地址都可以路由到 {{site.data.keyword.cloud_notm}} 帐户中的任何数据中心。
 
 查看下表以了解摘要。
 
@@ -146,7 +146,7 @@ subcollection: vmwaresolutions
 |专用 A|主|分配给 {{site.data.keyword.cloud_notm}} 所分配物理主机的单个子网。通过管理接口用于 vSphere 管理流量。|
 |专用 A|可移植|分配给用作管理组件的虚拟机的单个子网|
 |专用 A|可移植|分配给 NSX-V 或 NSX-T VTEP 的单个子网|
-|专用 A|可移植|分配用于 vSAN（如果在使用）的单个子网|
+|专用 B|可移植|分配用于 vSAN（如果在使用）的单个子网|
 |专用 B|可移植|分配用于 NAS（如果在使用）的单个子网|
 |专用 B|可移植|分配用于 iSCSI NAS（如果在使用）的两个子网（每个物理 NIC 端口一个子网）|
 |专用 B|可移植|分配用于 vMotion 的单个子网|
@@ -160,7 +160,7 @@ subcollection: vmwaresolutions
 ## 物理存储器设计
 {: #design_physicalinfrastructure-storage-design}
 
-物理存储器设计由物理主机中安装的物理磁盘的配置以及共享文件级别存储器的配置组成。这包括操作系统 (vSphere ESXi) 以及用于存储虚拟机 (VM) 的磁盘。VM 的存储器可以由 VMware vSAN 虚拟化的本地磁盘、共享文件级别的存储器或共享块级别的存储器组成。
+物理存储器设计由物理主机中安装的物理磁盘的配置以及共享网络连接存储器的配置组成。这包括操作系统 (vSphere ESXi) 以及用于存储虚拟机 (VM) 的磁盘。VM 的存储器可以由 VMware vSAN 虚拟化的本地磁盘、共享文件级别的存储器或共享块级别的存储器组成。
 
 ### 操作系统磁盘
 {: #design_physicalinfrastructure-os-disks}
@@ -170,7 +170,7 @@ vSphere ESXi 系统管理程序安装在持久位置。因此，物理主机包�
 ### vSAN 磁盘
 {: #design_physicalinfrastructure-vsan-disks}
 
-此设计支持将 VMware vSAN 或共享文件级别的存储器用作虚拟机的主数据存储的选项。对于 VMware vSAN，这是使用全闪存配置进行配置的。此设计支持多个配置选项，包括 2U 和 4U 机箱、不同磁盘数以及各种磁盘大小。所有配置都使用两个 vSAN 磁盘组，其中一个固态磁盘 (SSD) 用于高速缓存，一个或多个 SSD 用于容量。分配供 vSAN 使用的所有驱动器均在单磁盘 RAID-0 中配置。
+此设计支持将 VMware vSAN 或共享网络连接存储器用作虚拟机的主数据存储的选项。对于 VMware vSAN，这是使用全闪存配置进行配置的。此设计支持多个配置选项，包括 2U 和 4U 机箱、不同磁盘数以及各种磁盘大小。所有配置都使用两个 vSAN 磁盘组，其中一个固态磁盘 (SSD) 用于高速缓存，一个或多个 SSD 用于容量。分配供 vSAN 使用的所有驱动器均在单磁盘 RAID-0 中配置。
 
 有关支持的配置的更多信息，请参阅 [vCenter Server 材料清单](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)。
 

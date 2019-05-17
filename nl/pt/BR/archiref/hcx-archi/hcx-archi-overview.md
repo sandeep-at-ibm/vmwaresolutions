@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -22,9 +22,9 @@ Essa oferta cria uma WAN otimizada, definida por software, para aumentar o desem
 ## Extensão de rede da camada 2
 {: #hcx-archi-overview-layer-2-net}
 
-O HCX permite que um estado existente do vSphere no local estenda com segurança uma rede de seu vCenter no local para um data center do IBM Cloud que executa o VMware Cloud Foundation ou o vCenter Server. Esse recurso é ativado pelos itens a seguir:
+O HCX permite que um estado do vSphere existente no local estenda com segurança uma rede de seu vCenter no local para um data center do IBM Cloud que executa o VMware vCenter Server. Esse recurso é ativado pelos itens a seguir:
 * O HCX fornece um dispositivo chamado Layer 2 Concentrator (L2C).
-* As redes estendidas são vinculadas aos dispositivos de borda do IBM Cloud NSX implementados no VMware Cloud Foundation ou no vCenter Server.
+* As redes estendidas são vinculadas aos dispositivos de borda IBM Cloud NSX implementados no VMware vCenter Server.
 * É possível implementar múltiplos Layer 2 Concentrators padrão para alcançar a escalabilidade e aumentar o rendimento do vCenter no local.
 * As máquinas virtuais migradas por meio do Cloud Gateway e pela Camada 2 estendida podem reter seus endereços IP e de Controle de Acesso à Mídia.
 
@@ -155,7 +155,7 @@ Antes que os componentes sejam descritos em mais detalhes, é imperativo entende
 * Se o cross-cloud vMotion for desejado, as mesmas restrições de afinidade se aplicarão às nuvens como fazem no local.
 * O ambiente de origem deve ter um método para se conectar a ambientes de nuvem. Isso inclui acesso à Internet pública ou conexões privadas usando o link do IBM Cloud Direct. As conexões, diferentes da Internet pública, para outros fornecedores de nuvem não serão discutidas.
 * As MVs e as redes do ambiente de origem a serem migradas ou estendidas devem estar em grupos de portas dentro de um Comutador Virtual Distribuído ou Comutador Distribuído Virtual Cisco Nexus 1000v.
-* O IBM Cloud deve conter pelo menos uma instância de uma implementação do VMware Cloud Foundation ou do vCenter Server.
+* O IBM Cloud deve conter pelo menos uma instância do VMware vCenter Server.
 * Recursos suficientes para os dispositivos virtuais.
 * As redes devem permitir que os dispositivos se comuniquem com os dispositivos virtuais locais e remotos e com outras máquinas virtuais.
 * Os Requisitos de acesso à porta (Apêndice A) listam as portas que devem ser abertas para que os dispositivos virtuais do Hybrid Cloud Services possam ser instalados com êxito.

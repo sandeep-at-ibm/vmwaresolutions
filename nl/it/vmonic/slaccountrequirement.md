@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,10 +18,7 @@ subcollection: vmwaresolutions
 # Requisiti per l'account dell'infrastruttura IBM Cloud
 {: #slaccountrequirement}
 
-Per utilizzare {{site.data.keyword.vmwaresolutions_full}} per effettuare l'ordine di istanze, devi disporre di un account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer). Il costo dei componenti ordinati nelle tue istanze viene addebitato su tale account {{site.data.keyword.cloud_notm}}.
-
-L'account dell'infrastruttura {{site.data.keyword.cloud_notm}} (SoftLayer) era precedentemente noto come account IBM SoftLayer.
-{:note}
+Per utilizzare {{site.data.keyword.vmwaresolutions_full}} per effettuare l'ordine di istanze, devi disporre di un account dell'infrastruttura {{site.data.keyword.cloud_notm}}. Il costo dei componenti ordinati nelle tue istanze viene addebitato su tale account {{site.data.keyword.cloud_notm}}.
 
 ## Autorizzazioni per l'account dell'infrastruttura IBM Cloud
 {: #slaccountrequirement-permissions}
@@ -46,6 +43,7 @@ Tabella 1. Autorizzazioni richieste per l'account dell'infrastruttura {{site.dat
 | Modifica ticket | Questa autorizzazione è necessaria per modificare i ticket di servizio creati per tuo conto. |
 | Visualizza ticket | Questa autorizzazione è necessaria per monitorare i ticket di servizio relativi ai componenti della tua istanza per ritardi e problemi di provisioning dell'infrastruttura {{site.data.keyword.cloud_notm}}. |
 | Visualizza dettagli hardware | Questa autorizzazione è necessaria per recuperare i dettagli hardware, che sono richiesti per la convalida degli ordini e la configurazione automatizzata. |
+| Riavvia/Controlla | Questa autorizzazione è necessaria per spegnere l'hardware durante il processo di annullamento dell'hardware quando elimini un'istanza. |
 | Visualizza licenze | Questa autorizzazione è necessaria per recuperare e convalidare le licenze utilizzate dalla tua istanza. |
 | Visualizza password | Questa autorizzazione è necessaria per poter amministrare le VSI ordinate. |
 | Gestisci monitoraggio server | Questa autorizzazione non è necessaria per effettuare un ordine ma è richiesta per recuperare e convalidare lo stato di monitoraggio dei {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} su cui sono in esecuzione i server VMware ESXi nella tua istanza. |
@@ -57,7 +55,7 @@ Il tuo account dell'infrastruttura {{site.data.keyword.cloud_notm}} deve essere 
 
 Per ulteriori informazioni, vedi:
 * [Panoramica di VRF on IBM Cloud](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-* [Abilita il tuo account per l'utilizzo degli endpoint del servizio](/docs/services/service-endpoint?topic=services/service-endpoint-cs_cli_install_steps#cs_cli_install_steps)
+* [Abilitazione del tuo account per l'utilizzo degli endpoint del servizio](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
 
 ## Fine del supporto dello spanning della VLAN
 {: #slaccountrequirement-vlan-eos}

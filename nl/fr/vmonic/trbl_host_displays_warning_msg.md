@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -28,4 +28,4 @@ Ce message s'affiche alors que deux liaisons montantes sont disponibles pour le 
 ## Résolution
 {: #trbl_host_displays_warning_msg-resolution}
 
-Il s'agit d'un problème VMware connu. Pour résoudre le problème, suivez les instructions fournies dans la rubrique [ESX/ESXi host displays warning message when test condition is false (2008602)](https://kb.vmware.com/selfservice/search.do?cmd=displayKC&docType=kc&docTypeID=DT_KB_1_1&externalId=2008602){:new_window}.
+Il s'agit d'un problème VMware connu. Pour résoudre le problème, suivez les instructions fournies dans la rubrique [ESX/ESXi host displays warning message when test condition is false (2008602)](https://kb.vmware.com/s/article/2008602){:new_window}.

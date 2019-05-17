@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -92,6 +92,6 @@ VMware NSX 是一个网络虚拟化平台，支持对隔离的网络进行虚拟
 ## 相关链接
 {: #vc_esg_config-related}
 
-* [故障诊断](/docs/services/vmwaresolutions/vcenter//vcenter_chg_impact.html)
+* [故障诊断](/docs/services/vmwaresolutions?topic=vmware-solutions-vcenter_chg_impact#vcenter_chg_impact)
 * [常见问题](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [NSX Edge 服务网关](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}

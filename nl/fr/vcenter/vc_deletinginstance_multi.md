@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -38,8 +38,8 @@ L'instance supprimée vous est facturée jusqu'à échéance du cycle de factura
 
 1. Supprimez tous les services de l'instance vCenter Server secondaire.
 2. Vérifiez qu'aucun objet NSX n'est développé dans l'instance secondaire que vous voulez supprimer.
-3. Supprimez le vCenter Server secondaire du domaine SSO (Single Sign-On) principal. Pour plus d'informations, voir [Désenregistrement du serveur vCenter Server de la connexion unique](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2106736){:new_window}.
-4. Démontez l'instance de service virtuel (VSI, Virtual Service Instance) du contrôleur de domaine local. Pour plus d'informations, voir [Démontage des contrôleurs de domaine et des domaines](https://technet.microsoft.com/en-us/windows-server-docs/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-){:new_window}.
+3. Supprimez le vCenter Server secondaire du domaine SSO (Single Sign-On) principal. Pour plus d'informations, voir [Désenregistrement du serveur vCenter Server de la connexion unique](https://kb.vmware.com/s/article/2106736){:new_window}.
+4. Démontez l'instance de service virtuel (VSI, Virtual Service Instance) du contrôleur de domaine local. Pour plus d'informations, voir [Démontage des contrôleurs de domaine et des domaines](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-){:new_window}.
 5. Supprimez l'instance vCenter Server secondaire depuis la console {{site.data.keyword.vmwaresolutions_short}}.
 6. Répétez les étapes 1 à 5 pour toutes les instances vCenter Server secondaires de votre configuration multisite.
 7. Une fois toutes les instances secondaires supprimées, vous pouvez également supprimer l'instance principale depuis la console {{site.data.keyword.vmwaresolutions_short}}.

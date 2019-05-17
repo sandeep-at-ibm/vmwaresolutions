@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -26,7 +26,7 @@ PSC/VCSA는 vSphere Web Client가 아닌 어플라이언스 관리 콘솔을 통
 업데이트하려면 우선 어플라이언스의 스냅샷 또는 PSC/VCSA의 백업을 시작해야 합니다. 모든 항목이 예상대로 작동하는지 확인한 후 성능 저하를 방지하기 위해 며칠 내에 스냅샷을 제거하십시오. 또한 업그레이드를 시도하기 전에 VMware 릴리스 정보를 검토하여 지정된 릴리스에 대한 특정 지시사항을 파악하십시오.
 
 PSC/VCSA를 업데이트하려면 다음 단계를 따르십시오.
-1. VMware 패치 [다운로드 센터](https://my.vmware.com/group/vmware/patch#search)로 이동하여 로그인한 후 **제품별 검색** 메뉴에서 VC를 선택하여 업데이트를 다운로드할 수 있습니다. 적절한 패치를 선택하고 **다운로드**를 클릭하십시오.
+1. [VMware 패치 다운로드 센터](https://www.vmware.com/patchmgr/findPatchByReleaseName.portal)로 이동하여 로그인한 후 **제품별 검색** 메뉴에서 VC를 선택하여 업데이트를 다운로드할 수 있습니다. 적절한 패치를 선택하고 **다운로드**를 클릭하십시오.
 2. vSphere Web Client를 사용하여 ISO 파일을 vCenter 데이터 저장소로 업로드하십시오.
 3. 업데이트 ISO 파일을 vCenter 서버에 마운트하십시오.
 4. vCenter 서버의 스냅샷을 작성하십시오.
@@ -34,7 +34,7 @@ PSC/VCSA를 업데이트하려면 다음 단계를 따르십시오.
 6. **업데이트** 섹션으로 이동하여 **업데이트 확인**을 선택한 후 **CDROM 확인**을 클릭하십시오. 업데이트가 나열됩니다.
 7. **업데이트 설치**를 선택하고 EULA에 **동의**하십시오. 업데이트가 설치됩니다.
 8. 업데이트가 완료된 후 어플라이언스 관리 콘솔로 되돌아가서 콘솔을 다시 시작하도록 선택해야 합니다.
-9. vSphere Web Client에 다시 로그인하여 오류가 있는지 확인하십시오. **홈** > **호스트 및 클러스터**를 선택한 후 데이터 센터 또는 클러스터를 선택하고 **Update Manager 탭**을 선택한 후 **업데이트 스캔**을 클릭하여 VUM의 수동 스캔을 완료하십시오. 매뉴얼 스캔으로 오류가 발생하는 경우 [Resetting VMware Update Manager database on a vCenter Server appliance 6.5 (2147284)](https://kb.vmware.com/s/article/2147284)를 참조하십시오.
+9. vSphere Web Client에 다시 로그인하여 오류가 있는지 확인하십시오. **홈** > **호스트 및 클러스터**를 선택한 후 데이터 센터 또는 클러스터를 선택하고 **Update Manager** 탭을 선택한 후 **업데이트 스캔**을 클릭하여 VUM의 수동 스캔을 완료하십시오. 매뉴얼 스캔으로 오류가 발생하는 경우 [Resetting VMware Update Manager database on a vCenter Server appliance 6.5 (2147284)](https://kb.vmware.com/s/article/2147284)를 참조하십시오.
 10. 테스트 후 취소해야 하는 경우 스냅샷으로 되돌리거나 이전 백업을 사용하여 vCenter를 복원하십시오.
 
 ## SSO 링크된 vCenter Server 인스턴스
@@ -48,4 +48,4 @@ PSC/VCSA를 업데이트하려면 다음 단계를 따르십시오.
 {: #vum-updating-vcsa-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 솔루션 아키텍처](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} 디지털 기술 업무](https://ibm-dte.mybluemix.net/ibm-vmware)(데모)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} 디지털 기술 업무](https://ibm-dte.mybluemix.net/vmware)(데모)

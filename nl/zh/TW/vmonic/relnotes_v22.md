@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-10-19"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -39,7 +39,7 @@ subcollection: vmwaresolutions
 * 如果您使用的備份解決方案參照 IBM CloudDriver 虛擬機器，則在升級至 2.2 版之後，請確定備份解決方案參照新的 IBM CloudDriver 虛擬機器。
 * 在升級至 2.2 版之前，請確定您已將 Legacy Veeam VSI 取代為 Veeam on {{site.data.keyword.cloud_notm}} 服務。在 2.2 版和未來的版本中不再支援 Legacy Veeam，因此，與 Legacy Veeam 相關聯的管理元件備份無法進行還原。
 
-如需使用 Veeam on {{site.data.keyword.cloud_notm}} 服務的相關資訊，請參閱下列主題：
+如需使用 Veeam on {{site.data.keyword.cloud_notm}} 服務的相關資訊，請參閱：
 * [Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations) 的元件及考量
 * [管理 Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
 
@@ -91,7 +91,7 @@ subcollection: vmwaresolutions
 ### 已增加每個實例的叢集數目
 {: #relnotes_v22-clusters-per-inst}
 
-您現在可以將最多 10 個叢集新增至已部署於或升級至 2.2 版以及更新版本的 VMware vCenter Server 實例。如需相關資訊，請參閱[新增及檢視 vCenter Server 實例的叢集](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+您現在可以將最多 10 個叢集新增至已部署於或升級至 2.2 版以及更新版本的 VMware vCenter Server 實例。如需相關資訊，請參閱[新增及檢視 vCenter Server 實例的叢集](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 
 ## VMware vSphere 叢集的更新
 {: #relnotes_v22-vss}
@@ -113,7 +113,7 @@ subcollection: vmwaresolutions
 
 現在 NetApp ONTAP Select 高容量 {{site.data.keyword.baremetal_short}} 有 34 個 SATA 磁碟機可供使用。如需相關資訊，請參閱 [NetApp ONTAP Select 實例的技術規格](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#specs)。
 
-## 附加服務的更新
+## 附加服務的更新項目
 {: #relnotes_v22-services}
 
 ### 已增加 F5 on IBM Cloud 的頻寬選項

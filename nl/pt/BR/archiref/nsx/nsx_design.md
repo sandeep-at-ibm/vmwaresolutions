@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -23,7 +23,7 @@ A solução NSX Edge Services Gateway on {{site.data.keyword.cloud}} fornece tec
 ## Design de arquitetura interna
 {: #nsx_design-internal-archi}
 
-A arquitetura interna especifica a implementação dos componentes necessários do NSX Edge em um conjunto de recursos em um cluster convergido do VMware Cloud Foundation ou em um cluster do VMware vCenter Server.
+A arquitetura interna especifica a implementação dos componentes necessários do NSX Edge em um conjunto de recursos em um cluster do VMware vCenter Server.
 
 O VMware vSAN é opcional na figura a seguir.
 {:note}
@@ -48,7 +48,7 @@ A arquitetura dedicada implementa os componentes necessários do NSX Edge em um 
 
 O intervalo de endereço IP privado do RFC1918 reserva especificamente o uso de intervalos de rede para uso interno da organização, nunca para a Internet. A infraestrutura de rede física do {{site.data.keyword.cloud_notm}} usa um espaço de endereço privado do RFC1918 específico, 10.x.x.x/8, em todos os locais do mundo inteiro. Esses intervalos de endereços IP não se sobrepõem às contas do cliente ou dentro de uma conta do cliente do {{site.data.keyword.cloud_notm}}. Dentro de uma conta do cliente, qualquer espaço de endereço IP privado alocado do {{site.data.keyword.cloud_notm}} pode, com o Virtual Routing and Forwarding (VRF) ativado, ser roteado para qualquer outro intervalo de endereço IP privado do {{site.data.keyword.cloud_notm}} em qualquer {{site.data.keyword.CloudDataCents_notm}}.
 
-Embora isso torne simples a configuração de uma infraestrutura conectada mundial dentro de sua conta, o espaço de endereço IP fixo pode ser problemático quando você deseja ampliar seu data center para o {{site.data.keyword.cloud_notm}} por meio do roteamento quando está usando o mesmo espaço de endereço privado que o {{site.data.keyword.cloud_notm}}. A solução é usar NSX para criar uma topologia de sobreposição na infraestrutura do Cloud Foundation ou do vCenter Server, isolando seu espaço de endereço Bring Your Own IP (BYOIP) de interagir com o espaço de endereço IP privado designado do {{site.data.keyword.cloud_notm}}. O NSX pode fornecer uma VPN L2 para abranger o espaço de endereço BYOIP interno dentro do túnel em espaços de endereço IP externos, possivelmente sobrepostos.
+Embora isso torne simples a configuração de uma infraestrutura conectada mundial dentro de sua conta, o espaço de endereço IP fixo pode ser problemático quando você deseja ampliar seu data center para o {{site.data.keyword.cloud_notm}} por meio do roteamento quando está usando o mesmo espaço de endereço privado que o {{site.data.keyword.cloud_notm}}. A solução é usar o NSX para criar uma topologia de sobreposição na infraestrutura do vCenter Server, isolando seu espaço de endereço Bring Your Own IP (BYOIP) de interagir com o espaço de endereço IP privado designado do {{site.data.keyword.cloud_notm}}. O NSX pode fornecer uma VPN L2 para abranger o espaço de endereço BYOIP interno dentro do túnel em espaços de endereço IP externos, possivelmente sobrepostos.
 
 ## Links relacionados
 {: #nsx_design-related}

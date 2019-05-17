@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -27,7 +27,7 @@ subcollection: vmwaresolutions
 
 * **IBM ID 帳戶**。需要此帳戶才能存取 {{site.data.keyword.vmwaresolutions_short}} 主控台。主控台是與 {{site.data.keyword.slportal}} 分開的獨立式使用者介面。如需相關資訊，請參閱[開始使用](/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started)。
 * **{{site.data.keyword.cloud_notm}} 帳戶**。需要此帳戶才能進行佈建。您可以使用現有 **IBM ID** 或建立新的 **IBM ID**，來註冊 {{site.data.keyword.cloud_notm}} 帳戶。
-* **{{site.data.keyword.cloud_notm}} 基礎架構帳戶**。此帳戶（先前稱為 **IBM SoftLayer** 帳戶）用來登入 {{site.data.keyword.cloud_notm}} 基礎架構客戶入口網站，以提供一些額外功能來管理基礎架構產品及服務。您可以取得 {{site.data.keyword.cloud_notm}} 基礎架構帳戶，方法是將 **{{site.data.keyword.cloud_notm}} 帳戶**升級至「隨收隨付制」類型的帳戶，或將現有 {{site.data.keyword.cloud_notm}} 基礎架構 (SoftLayer) 帳戶鏈結至 {{site.data.keyword.cloud_notm}} 帳戶。您使用的 {{site.data.keyword.cloud_notm}} 基礎架構帳戶必須符合特定需求。如需相關資訊，請參閱[註冊必要帳戶](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)及 [{{site.data.keyword.cloud_notm}} 基礎架構帳戶需求](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)。
+* **{{site.data.keyword.cloud_notm}} 基礎架構帳戶**。此帳戶用來登入 {{site.data.keyword.cloud_notm}} 基礎架構客戶入口網站，以提供一些額外功能來管理基礎架構產品及服務。您可以取得 {{site.data.keyword.cloud_notm}} 基礎架構帳戶，方法是將 **{{site.data.keyword.cloud_notm}} 帳戶**升級至「隨收隨付制」類型的帳戶，或將現有 {{site.data.keyword.cloud_notm}} 基礎架構帳戶鏈結至 {{site.data.keyword.cloud_notm}} 帳戶。您使用的 {{site.data.keyword.cloud_notm}} 基礎架構帳戶必須符合特定需求。如需相關資訊，請參閱[註冊必要帳戶](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)及 [{{site.data.keyword.cloud_notm}} 基礎架構帳戶需求](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)。
 
 ## 如何使 IBM Cloud 基礎架構認證與 IBM Cloud for VMware Solutions 主控台相關聯？
 {: #faq-associate-credentials}
@@ -85,10 +85,7 @@ subcollection: vmwaresolutions
 {: #faq-rename-cluster}
 {: faq}
 
-對於 vCenter Server 實例，在部署期間建立的第一個叢集，其預設名稱為 **cluster1**。您可以在 VMware vSphere Client 中將預設叢集重新命名。當您將叢集新增至 vCenter Server 實例時，可以在 {{site.data.keyword.vmwaresolutions_short}} 主控台上指定您想要的名稱。
-
-對於 Cloud Foundation 實例，無法變更預設叢集名稱。
-{:note}
+對於新的 vCenter Server 實例，在部署期間建立的第一個叢集，其預設名稱為 **cluster1**。您可以在 VMware vSphere Client 中將預設叢集重新命名。當您將叢集新增至 vCenter Server 實例時，可以在 {{site.data.keyword.vmwaresolutions_short}} 主控台上指定您想要的名稱。
 
 ## 如何管理修補程式？
 {: #faq-patches}
@@ -96,17 +93,7 @@ subcollection: vmwaresolutions
 
 IBM 提供 IBM 程式碼的持續更新，方法是隨需應變部署 IBM CloudDriver 虛擬伺服器實例 (VSI)。IBM 不對 Zerto on {{site.data.keyword.cloud_notm}} 或 Veeam on {{site.data.keyword.cloud_notm}} 等附加服務提供持續更新。您必須負責取得並安裝這些更新。
 
-根據實例類型，會以不同的方式套用 VMware 更新。
-
-### VMware Cloud Foundation 實例
-{: #faq-patches-cf}
-
-透過 {{site.data.keyword.vmwaresolutions_short}} 主控台提供 vSphere ESXi、NSX、vCenter、Platform Services Controller 及 SDDC Manager 元件的更新。
-
-### VMware vCenter Server 實例
-{: #faq-patches-vcs}
-
-對於已部署在或升級至 2.1 版或更新版本的實例，新部署的 ESXi 伺服器和叢集會以 VMware 最近但未必最新的 ESXi 更新進行修補。
+對於已部署在或升級至 2.1 版或更新版本的 VMware vCenter Server 實例，新部署的 ESXi 伺服器和叢集會以 VMware 最近但未必最新的 ESXi 更新進行修補。
 
 您必須負責處理 VMware 元件的所有其他更新，包括確保新部署的 ESXi 伺服器和叢集具有您需要的所有最近更新。
 {:important}
@@ -124,7 +111,7 @@ IBM 提供 IBM 程式碼的持續更新，方法是隨需應變部署 IBM CloudD
 
 雖然管理服務的 VMware NSX Edge 位於公用子網路上，但仍提供下列安全措施，以確保不會造成安全風險：
 *  已配置 NSX Edge 防火牆，只容許管理虛擬機器所起始的送出 HTTPS（TCP 埠 443）資料流量。
-*  使用 SNAT（來源網址轉換），使專用 IP 位址不顯示於專用網路以外。
+*  使用 SNAT（來源網址轉換），讓專用 IP 位址不顯示於專用網路以外。
 *  已停用對管理服務 NSX Edge 應用裝置的遠端存取。
 *  從專用網路存取管理服務 NSX Edge 的密碼已隨機化且已加密。
 
@@ -134,7 +121,7 @@ IBM 提供 IBM 程式碼的持續更新，方法是隨需應變部署 IBM CloudD
 
 雖然客戶管理的 NSX Edge 已連接至公用 VLAN，但仍提供安全措施，以確保不會造成安全風險。以下是可用的安全測量：
 *  已設置防火牆規則，只容許來自專用子網路 IP 位址範圍的送出資料流量。
-*  已設置 SNAT（來源網址轉換）規則（依預設會停用），將專用子網路中的所有 IP 位址轉換為公用子網路上的單一 IP 位址。
+*  已設置 SNAT 規則（依預設會停用），將專用子網路中的所有 IP 位址轉換為公用子網路上的單一 IP 位址。
 *  已停用對客戶管理的 NSX Edge 應用裝置的遠端存取。
 *  從專用網路存取客戶管理的 NSX Edge 的密碼已隨機化且已加密。
 
@@ -160,7 +147,7 @@ IBM 提供 IBM 程式碼的持續更新，方法是隨需應變部署 IBM CloudD
 {: #faq-vss-automation}
 {: faq}
 
-否。VMware vSphere on {{site.data.keyword.cloud_notm}} 並未使用在 Cloud Foundation 及 vCenter Server 平台上找到的進階自動化。根據您訂購的內容，平台會提供選用的 VMware 授權、ESXi 伺服器，以及選擇性地提供 FortiGate 實體防火牆的 HA 配對。如果建立新的叢集，則也會佈建三個新的 VLAN：一個公用 VLAN，兩個專用 VLAN。
+否。VMware vSphere on {{site.data.keyword.cloud_notm}} 並未使用來自 vCenter Server 平台的進階自動化。根據您訂購的內容，平台會提供選用的 VMware 授權、ESXi 伺服器，以及選擇性地提供 FortiGate 實體防火牆的 HA 配對。如果建立新的叢集，則也會佈建三個新的 VLAN：一個公用 VLAN，兩個專用 VLAN。
 
 VMware ESXi 會自動安裝在每一部 Bare Metal Server 上，但您必須負責安裝其他任何 VMware 元件，諸如 vCenter Server 或 NSX。雖然 vSphere on {{site.data.keyword.cloud_notm}} 可確保根據所選取的 VMware 元件來訂購 VMware 相容硬體，但沒有自動化可配置及啟動 VMware 環境。您必須負責設計及架構 IBM 管理的環境。
 

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-23"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -20,10 +20,10 @@ subcollection: vmwaresolutions
 
 O serviço HCX on {{site.data.keyword.cloud}} amplia perfeitamente as redes de data centers no local para o {{site.data.keyword.cloud_notm}}, o que permite que você migre máquinas virtuais (MVs) para e do {{site.data.keyword.cloud_notm}} sem nenhuma conversão ou mudança.
 
-Esse serviço está disponível somente para instâncias do VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle que são implementadas na V2.3 e mais recente.
+Esse serviço está disponível somente para instâncias do VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle que são implementadas na V2.3 e mais recente. A versão atual do HCX on {{site.data.keyword.cloud_notm}} que está instalada é 3.5.1.
 {:note}
 
-É possível fazer upgrade de sua instância do vCenter Server existente para uma instância do vCenter Server with Hybridity Bundle. Para obter mais informações sobre como fazer upgrade de sua instância e implementar o serviço HCX on {{site.data.keyword.cloud_notm}}, consulte [Procedimento para fazer upgrade para a instância do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates#procedure-to-upgrade-to-the-vcenter-server-with-hybridity-bundle-instance).
+É possível fazer upgrade de sua instância do vCenter Server existente para uma instância do vCenter Server with Hybridity Bundle. Para obter mais informações sobre como fazer upgrade de sua instância e implementar o serviço HCX on {{site.data.keyword.cloud_notm}}, consulte [Procedimento para fazer upgrade para o Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_upgrade-lic#vc_upgrade-lic-procedure-upgrade-to-hybridity).
 
 Uma instância do vCenter Server com HCX no {{site.data.keyword.cloud_notm}} é limitada a três conexões simultâneas por meio de sites no local.
 {:note}
@@ -43,7 +43,7 @@ As instâncias do HCX local incluem apenas licenciamento e ativação.
 * RAM: 8 GB
 * Disco: 3 GB VMDK
 
-### HCX Management Appliance-máquina virtual
+### Dispositivo de gerenciamento HCX - máquina virtual
 {: #hcx_considerations-vm}
 
 * CPU: 4 vCPU

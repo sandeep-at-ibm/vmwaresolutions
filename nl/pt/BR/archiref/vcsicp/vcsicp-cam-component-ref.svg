@@ -100,7 +100,7 @@
   </g>
   <g font-family="Helvetica" font-size="11px" text-anchor="middle">
    <rect x="4" y="120" width="25" height="14" fill="#fff" stroke-width="0"/>
-   <text x="15" y="128.5">User</text>
+   <text x="15" y="128.5">Usuário</text>
   </g>
   <path d="m499 369h86v73.53" fill="none" pointer-events="none" stroke="#c60" stroke-miterlimit="10" stroke-width="2"/>
   <path d="m581 436.76 4 8 4-8" fill="none" pointer-events="none" stroke="#c60" stroke-miterlimit="10" stroke-width="2"/>

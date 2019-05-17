@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-10-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -39,9 +39,9 @@ Pour plus d'informations, voir la rubrique de commande appropriée pour votre ty
 ## Activation d'un réseau public ou privé
 {: #relnotes_v26-pub-private-network}
 
-Vous pouvez désormais déployer des instances vCenter Server et vCenter Server with Hybridity Bundle, ainsi que des clusters VMware vSphere, avec des cartes d'interface réseau public et privé activées ou des cartes d'interface réseau privé uniquement activées. Cette option est également disponible lorsque vous ajoutez un nouveau cluster à vos instances vCenter Server et vCenter Server with Hybridity Bundle.
+Vous pouvez désormais déployer des instances vCenter Server et vCenter Server with Hybridity Bundle, ainsi que des clusters VMware vSphere, avec des cartes d'interface réseau publiques et privées activées ou uniquement des cartes d'interface réseau privées activées. Cette option est également disponible lorsque vous ajoutez un nouveau cluster à vos instances vCenter Server et vCenter Server with Hybridity Bundle.
 
-Certains services complémentaires requièrent des cartes d'interface réseau public et ne sont pas disponibles si vous sélectionnez l'option d'activation de réseau privé uniquement :
+Certains services complémentaires nécessitent des cartes d'interface réseau publiques et ne sont pas disponibles si vous sélectionnez l'option d'activation de réseau privé uniquement :
 
 Pour plus d'informations, voir la section _Paramètres d'interface réseau_ dans les rubriques suivantes :
 
@@ -135,7 +135,7 @@ Pour plus d'informations sur Veeam on {{site.data.keyword.cloud_notm}}, voir [Pr
 ### VMware HCX on IBM Cloud
 {: #relnotes_v26-hcx}
 
-L'édition en cours installe VMware HCX 3.5.1 sur toutes les instances nouvellement déployées. Pour plus d'informations sur les nouvelles fonctions de HCX 3.5.1, voir [VMware NSX Hybrid Connect Documentation](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/index.html).
+L'édition en cours installe VMware HCX 3.5.1 sur toutes les instances nouvellement déployées. Pour en savoir plus sur les nouvelles fonctions disponibles dans HCX 3.5.1, consultez la [documentation sur VMware HCX](https://docs.vmware.com/en/VMware-HCX/index.html).
 
 ### Prise en charge de Zerto on IBM Cloud pour vSphere ESXi V6.5 update 2c
 {: #relnotes_v26-zerto}

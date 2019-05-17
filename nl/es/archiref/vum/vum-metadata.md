@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -16,7 +16,7 @@ subcollection: vmwaresolutions
 
 VUM descarga metadatos sobre las actualizaciones, parches o extensiones mediante un proceso automático predefinido que puede modificar. A intervalos regulares configurables, VUM se pone en contacto con VMware o con orígenes de terceros, para recopilar los metadatos más recientes sobre actualizaciones, parches o extensiones disponibles. Sin embargo, los valores predeterminados de VMware son aceptables para su uso en la instancia de VMware vCenter Server en {{site.data.keyword.cloud}}. Puede cambiarlos según sea necesario para ajustarlos a los requisitos de la empresa.
 
-VUM muestra las líneas base gestionadas por el sistema que se generan mediante vSAN. Las líneas base gestionadas por el sistema actualizan su contenido periódicamente de forma automática, lo que requiere que VUM tenga acceso constante a internet. Las líneas base del sistema vSAN normalmente se renuevan cada 24 horas.
+VUM muestra las líneas base gestionadas por el sistema que se generan mediante vSAN. Las líneas base gestionadas por el sistema actualizan su contenido periódicamente de forma automática, lo que requiere que VUM tenga acceso constante a Internet. Las líneas base del sistema vSAN normalmente se renuevan cada 24 horas.
 
 Puede utilizar las líneas base gestionadas por el sistema para actualizar los clústeres vSAN a los parches críticos recomendados, los controladores, las actualizaciones o la última versión de host ESXi admitido para vSAN.
 
@@ -46,4 +46,4 @@ Para cambiar los valores de Host/Clúster, acceda al cliente web de vSphere, vay
 {: #vum-metadata-related}
 
 * [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demostraciones)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (demostraciones)

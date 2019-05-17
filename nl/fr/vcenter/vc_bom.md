@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-20"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -42,15 +42,15 @@ Tableau 2. Nomenclature des composants logiciels des instances vCenter Server
 
 | Fabricant  | Composant                      | Version    |
 |:------------- |:------------------------------ |:------------- |
-| VMware       | vSphere ESXi                    | 6.7 Update 1 (build 6.7.0-11675023) ou <br/>6.5 Update 2 (build 6.5.0-11925212) |
+| VMware       | vSphere ESXi                    | 6.7 mise à jour 1 (build 6.7.0-13004448) ou <br/>6.5 mie à jour 2 (build 6.5.0-13004031) |
 | VMware       | vSphere 6.7                     | Distributed vSwitch 6.6.0 |
 | VMware       | vSphere 6.5                     | Distributed vSwitch 6.5.0 |
-| VMware       | vCenter Server Appliance        | 6.7 Update 1 (build 6.7.0-10244745) ou <br/>6.5 Update 2d (build 6.5.0-10964411) |
-| VMware       | Contrôleur PSC (Platform Services Controller)    | 6.7 Update 1 (build 6.7.0-10244745) ou <br/>6.5 Update 2d (build 6.5.0-10964411) |
-| VMware       | vSAN                            | 6.7 Update 1 ou <br/>6.6.1       |
+| VMware       | vCenter Server Appliance        | 6.7 mise à jour 1b (build 6.7.0-11727113) ou <br/>6.5 mise à jour 2d (build 6.5.0-10964411) |
+| VMware       | Contrôleur PSC (Platform Services Controller)    | 6.7 mise à jour 1b (build 6.7.0-11727113) ou <br/>6.5 mise à jour 2d (build 6.5.0-10964411) |
+| VMware       | vSAN                            | 6.7 mise à jour 1 ou <br/>6.6.1       |
 | VMware       | NSX for vSphere                 | 6.4.4 (build 11197766)    |
 | VMware       | NSX-T for vSphere               | 2.4                       |
-| Microsoft    | Windows Server édition Standard | 2012R2       |
+| Microsoft    | Windows Server édition Standard | 2016       |
 
 VMware vSAN est un composant optionnel.
 {:note}
@@ -135,7 +135,7 @@ Afin de mettre à jour le paramètre de MTU pour le commutateur public, procéde
 2. Sur l'onglet **Propriétés**, sélectionnez l'option **Avancé**.
 3. Assurez-vous que la valeur maximale indiquée pour **MTU** est 1500.
 
-   Lorsque la taille de MTU dans un commutateur vDS est modifiée, les liaisons montantes connectées (NIC physiques) sont désactivées, puis réactivées. Il en résulte une brève indisponibilité pour les machines virtuelles qui utilisent la liaison montante. Par conséquent, il est recommandé de planifier la mise à jour du paramètre de MTU durant le temps d'indisponibilité planifié.
+   Lorsque la taille de MTU dans un commutateur vDS est modifiée, les liaisons montantes connectées (cartes d'interface réseau physiques) sont désactivées, puis réactivées. Il en résulte une brève indisponibilité pour les machines virtuelles qui utilisent la liaison montante. Par conséquent, il est recommandé de planifier la mise à jour du paramètre de MTU durant le temps d'indisponibilité planifié.
    {:note}
 
 ## Liens connexes

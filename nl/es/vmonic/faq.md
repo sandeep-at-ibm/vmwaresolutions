@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -28,7 +28,7 @@ Encuentre las respuestas a las preguntas más frecuentes sobre {{site.data.keywo
 * **Cuenta de IBMid**. Se necesita esta cuenta para acceder a la consola de {{site.data.keyword.vmwaresolutions_short}}. La consola es una interfaz de usuario autónoma, independiente del {{site.data.keyword.slportal}}. Para obtener más información, consulte
 [Iniciación](/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started).
 * **Cuenta de {{site.data.keyword.cloud_notm}}**. Se necesita esta cuenta para el suministro. Puede registrarse para una cuenta de {{site.data.keyword.cloud_notm}} utilizando un **IBMid** existente o creando un nuevo **IBMid**.
-* **Cuenta de infraestructura de {{site.data.keyword.cloud_notm}}**. Esta cuenta, conocida anteriormente como la cuenta de **IBM SoftLayer**, se utiliza para iniciar la sesión en el portal de clientes de infraestructura de {{site.data.keyword.cloud_notm}} que proporciona alguna función adicional para gestionar los productos y servicios de la infraestructura. Puede obtener una cuenta de infraestructura de {{site.data.keyword.cloud_notm}} actualizando su **cuenta de {{site.data.keyword.cloud_notm}}** a un tipo de cuenta de Pago según uso, o enlazando su cuenta de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer) existente con su cuenta de {{site.data.keyword.cloud_notm}}. La cuenta de infraestructura de {{site.data.keyword.cloud_notm}} que está utilizando debe cumplir determinados requisitos. Para obtener más información, consulte [Registro para las cuentas necesarias](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account) y [Requisitos de cuenta de infraestructura de {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).
+* **Cuenta de infraestructura de {{site.data.keyword.cloud_notm}}**. Esta cuenta se utiliza para iniciar la sesión en el portal de clientes de infraestructura de {{site.data.keyword.cloud_notm}} que proporciona alguna función adicional para gestionar los productos y servicios de la infraestructura. Puede obtener una cuenta de infraestructura de {{site.data.keyword.cloud_notm}} actualizando su **cuenta de {{site.data.keyword.cloud_notm}}** a un tipo de cuenta de Pago según uso, o enlazando su cuenta de infraestructura de {{site.data.keyword.cloud_notm}} existente con su cuenta de {{site.data.keyword.cloud_notm}}. La cuenta de infraestructura de {{site.data.keyword.cloud_notm}} que está utilizando debe cumplir determinados requisitos. Para obtener más información, consulte [Registro para las cuentas necesarias](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account) y [Requisitos de cuenta de infraestructura de {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).
 
 ## ¿Cómo puedo asociar mis credenciales de la infraestructura IBM Cloud a la consola de IBM Cloud for VMware Solutions?
 {: #faq-associate-credentials}
@@ -87,10 +87,7 @@ No, no se recomienda. Podrían producirse errores en las funciones de {{site.dat
 {: #faq-rename-cluster}
 {: faq}
 
-Para instancias de vCenter Server, el primer clúster que se crea durante el despliegue tiene el nombre predeterminado **cluster1**. Puede cambiar el nombre del clúster predeterminado en el cliente de VMware vSphere. Cuando añada un clúster a una instancia de vCenter Server, puede especificar el nombre que desee en la consola de {{site.data.keyword.vmwaresolutions_short}}.
-
-Para instancias de Cloud Foundation, el nombre de clúster predeterminado no se puede cambiar.
-{:note}
+Para una instancia nueva de vCenter Server, el primer clúster que se crea durante el despliegue tiene el nombre predeterminado **cluster1**. Puede cambiar el nombre del clúster predeterminado en el cliente de VMware vSphere. Cuando añada un clúster a una instancia de vCenter Server, puede especificar el nombre que desee en la consola de {{site.data.keyword.vmwaresolutions_short}}.
 
 ## ¿Cómo se gestionan los parches?
 {: #faq-patches}
@@ -98,17 +95,7 @@ Para instancias de Cloud Foundation, el nombre de clúster predeterminado no se 
 
 IBM proporciona actualizaciones continuas del código de IBM desplegando la instancia de servidor virtual (VSI) de IBM CloudDriver a petición. IBM no proporciona actualizaciones continuas de los servicios complementarios, como Zerto on {{site.data.keyword.cloud_notm}} o Veeam on {{site.data.keyword.cloud_notm}}. La obtención y la instalación de estas actualizaciones es responsabilidad del usuario.
 
-Las actualizaciones de VMware se aplican de distinta forma en función del tipo de instancia.
-
-### Instancias de VMware Cloud Foundation
-{: #faq-patches-cf}
-
-Las actualizaciones de los componentes vSphere ESXi, NSX, vCenter, Platform Services Controller y SDDC Manager se proporcionan a través de la consola de {{site.data.keyword.vmwaresolutions_short}}.
-
-### Instancias de VMware vCenter Server
-{: #faq-patches-vcs}
-
-Para instancias desplegadas al nivel de la versión V2.1 o posteriores o actualizadas a las mismas, se aplicarán parches a los clústeres y servidores ESXi con las actualizaciones más recientes, pero no necesariamente las últimas, de ESXi de VMware.
+Para instancias de VMware vCenter Server desplegadas al nivel de la versión V2.1 o posteriores o actualizadas a las mismas, se aplicarán parches a los clústeres y servidores ESXi con las actualizaciones más recientes, pero no necesariamente las últimas, de ESXi de VMware.
 
 El usuario es el responsable de todas las demás actualizaciones de los componentes de VMware, lo que incluye asegurarse de que los clústeres y servidores ESXi recién desplegados tienen las actualizaciones más recientes que necesita.
 {:important}
@@ -126,7 +113,7 @@ Para más información, consulte los siguientes recursos:
 
 Aunque VMware NSX Edge para servicios de gestión está en una subred pública, se siguen las siguientes medidas de seguridad para garantizar que no representa un riesgo para la seguridad:
 *  Se configura el cortafuegos de NSX Edge de modo que solo permita el tráfico HTTPS de salida (puerto TCP 443) iniciado por las máquinas virtuales de gestión.
-*  Se utiliza SNAT (conversión de direcciones de red) para que las direcciones IP privadas no resulten visibles fuera de la red privada.
+*  Se utiliza SNAT (conversión de direcciones de red de origen) para que las direcciones IP privadas no resulten visibles fuera de la red privada.
 *  Se inhabilita el acceso remoto para el dispositivo NSX Edge de servicios de gestión.
 *  Se utilizan contraseñas aleatorias y cifradas para acceder al NSX Edge de servicios de gestión desde la red privada.
 
@@ -136,7 +123,7 @@ Aunque VMware NSX Edge para servicios de gestión está en una subred pública, 
 
 Aunque el Edge NSX gestionado por cliente está conectado a la VLAN pública, se utilizan medidas de seguridad para garantizar que no representa un riesgo de seguridad. Se han adoptado las medidas de seguridad siguientes:
 *  Se coloca una regla de cortafuegos para permitir solo el tráfico saliente desde el rango de direcciones IP de la subred privada.
-*  Se coloca una regla SNAT (conversión de direcciones de red de origen) (inhabilitada de forma predeterminada) para convertir todas las direcciones IP de la subred privada en una dirección IP única en la subred pública.
+*  Se coloca una regla SNAT (inhabilitada de forma predeterminada) para convertir todas las direcciones IP de la subred privada en una dirección IP única en la subred pública.
 *  Se inhabilita el acceso remoto para el dispositivo NSX Edge gestionado por el cliente.
 *  Se utilizan contraseñas aleatorias y cifradas para acceder al NSX Edge gestionado por el cliente desde la red privada.
 
@@ -162,7 +149,7 @@ Puede comprobar el estado del despliegue de la instancia visualizando el histori
 {: #faq-vss-automation}
 {: faq}
 
-No. VMware vSphere on {{site.data.keyword.cloud_notm}} no utiliza la automatización avanzada que se encuentra en las plataformas Cloud Foundation ni vCenter Server. Según lo que solicite, la plataforma proporciona licencias opcionales de VMware, servidores ESXi y, si lo desea, un par de alta disponibilidad de cortafuegos físicos FortiGate. Si se crea un nuevo clúster, también se suministran tres nuevas VLAN: una VLAN pública y dos VLAN privadas.
+No. VMware vSphere on {{site.data.keyword.cloud_notm}} no utiliza la automatización avanzada de la plataforma vCenter Server. Según lo que solicite, la plataforma proporciona licencias opcionales de VMware, servidores ESXi y, si lo desea, un par de alta disponibilidad de cortafuegos físicos FortiGate. Si se crea un nuevo clúster, también se suministran tres nuevas VLAN: una VLAN pública y dos VLAN privadas.
 
 VMware ESXi se instala automáticamente en cada servidor nativo, pero el usuario es el responsable de instalar los componentes adicionales de VMware, como vCenter Server o NSX. Aunque vSphere on {{site.data.keyword.cloud_notm}} garantiza que el hardware compatible con VMware se solicita en función de los componentes de VMware seleccionado, no existe ninguna automatización para configurar ni activar el entorno de VMware. El usuario es el responsable de diseñar y planificar la arquitectura del entorno alojado por IBM.
 

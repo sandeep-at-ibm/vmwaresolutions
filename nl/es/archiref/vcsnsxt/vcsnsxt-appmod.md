@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -26,7 +26,7 @@ Esta arquitectura híbrida permite a Acme Skateboards:
 
 En lo que respecta a la arquitectura de red, la arquitectura de referencia comprende los siguientes componentes principales:
 - **Virtualización local**: un clúster VMware que actualmente aloja las VM de Acme Skateboards. Son estas máquinas virtuales las que actualmente alojan las aplicaciones que se modernizarán. Este clúster debe cumplir los requisitos previos, tal como está documentado en la
-[Arquitectura de la solución de VMware HCX on {{site.data.keyword.cloud_notm}}](https://test.cloud.ibm.com/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro) para permitir que los clientes puedan migrar máquinas virtuales a la instancia de VMware vCenter Server on {{site.data.keyword.cloud_notm}} que se ejecuta en {{site.data.keyword.cloud_notm}}, y en sentido inverso si fuera necesario.
+[Arquitectura de la solución de VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro) para permitir que los clientes puedan migrar máquinas virtuales a la instancia de VMware vCenter Server on {{site.data.keyword.cloud_notm}} que se ejecuta en {{site.data.keyword.cloud_notm}}, y en sentido inverso si fuera necesario.
 - **VMware vCenter Server on IBM Cloud**: vCenter Server proporciona los componentes fundamentales de VMware: vSphere, vCenter Server, NSX-V y opciones de almacenamiento que incluyen vSAN o almacenamiento {{site.data.keyword.cloud_notm}} Endurance, necesarios para desplegar automáticamente una solución VMware Software Defined Data Center (SDDC). Este clúster VMware es el destino de las máquinas virtuales migradas y de algunas de las aplicaciones modernizadas en los contenedores alojados en {{site.data.keyword.icpfull_notm}}.
 
 Los componentes clave de la arquitectura son:
@@ -54,4 +54,4 @@ Esta arquitectura de referencia muestra cómo VCS, {{site.data.keyword.icpfull_n
 ## Enlaces relacionados
 {: #vcsnsxt-appmod-related}
 
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vcs-hybridity-intro#vcs-hybridity-intro)

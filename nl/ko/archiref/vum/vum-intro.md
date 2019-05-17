@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -60,7 +60,7 @@ vSAN을 사용하여 vCenter Server를 배치한 경우 먼저 [vSAN 클러스�
 
 {{site.data.keyword.cloud_notm}} 인프라 관리 자동화를 업데이트하려면 {{site.data.keyword.vmwaresolutions_short}} 콘솔을 사용하십시오.
 
-[{{site.data.keyword.vmwaresolutions_short}} 콘솔](https://console.cloud.ibm.com/infrastructure/vmware-solutions/console)을 사용하여 다음 조치를 수행할 수 있습니다.
+[{{site.data.keyword.vmwaresolutions_short}} 콘솔](https://cloud.ibm.com/infrastructure/vmware-solutions/console)을 사용하여 다음 조치를 수행할 수 있습니다.
 *	라이센스 업그레이드(예: NSX Base를 다른 버전으로 업그레이드)
 *	vCenter Server 플랫폼에 대한 업데이트 시작(예: 버전 2.5로 이동)
 *	업데이트 상태 보기
@@ -72,4 +72,4 @@ vSAN을 사용하여 vCenter Server를 배치한 경우 먼저 [vSAN 클러스�
 {: #vum-intro-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 솔루션 아키텍처](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} 디지털 기술 업무](https://ibm-dte.mybluemix.net/ibm-vmware)(데모)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} 디지털 기술 업무](https://ibm-dte.mybluemix.net/vmware)(데모)

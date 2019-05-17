@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -73,7 +73,7 @@ NSX Edge 虚拟机配置为一对主动/被动超大型 NSX Edge 设备。这些
 |-----------|---------------|
 |规则标识|applicationRule-1|
 |名称|appRule1|
-|脚本|acl isHibridity url_beg /hibridity</br>    acl isWebSso url_beg /websso</br>    acl isVCenter url_beg /vsphere-client</br>    use_backend nspPool001 if isHybridity</br>    use_backend vcPool001 if isVCenter</br>    use_backend ssoPool001 if isWebSso|
+|脚本|acl isHibridity url_beg /hibridity</br>acl isWebSso url_beg /websso</br>acl isVCenter url_beg /vsphere-client</br>use_backend nspPool001 if isHybridity</br>use_backend vcPool001 if isVCenter</br>use_backend ssoPool001 if isWebSso|
 
 表 6. NSX Edge 的池配置 - 池摘要
 
@@ -134,7 +134,7 @@ NSX Edge 虚拟机配置为一对主动/被动超大型 NSX Edge 设备。这些
 
 部署的第二个组件是 WAN 优化设备。虽然 WAN 优化设备是可选的，但此设备可执行 WAN 调节，以减少等待时间所产生的影响。它还包含前向纠错功能，可解决丢包问题，并可执行冗余流量模式去重。
 
-总而言之，这些设备可减少带宽使用量，并确保最充分地利用可用网络容量来加速与 IBM Cloud 之间的数据传输。WAN Optimizer 是磁盘密集型设备，需要足够数量的 IOPS 才能正常运行。因此，WAN Optimizer 会位于 VCF 环境中的 vSAN 存储器上以及耐久性存储器上，在 vCenter Server 部署中支持大于 2,000 的 IOPS。WAN 优化设备的大小调整规范如下表所示。
+总而言之，这些设备可减少带宽使用量，并确保最充分地利用可用网络容量来加速与 IBM Cloud 之间的数据传输。WAN Optimizer 是磁盘密集型设备，需要足够数量的 IOPS 才能正常运行。因此，WAN Optimizer 会位于 vSAN 存储器（如果提供）上，或位于 IOPS 为 2,000 的耐久性存储器上。WAN 优化设备的大小调整规范如下表所示。
 
 表 9. WAN Optimizer 设备大小调整
 

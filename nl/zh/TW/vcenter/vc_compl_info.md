@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -82,7 +82,7 @@ subcollection: vmwaresolutions
 * 由於在團隊層次維護卓越技術專門知識需要有專業等級，因此在解決特定軟體問題時，有時需要涉及多個支援團隊。這很容易處理，因為我們的支援團隊都是透過網路連結，來共同解決發生的任何問題。
 * 為了調查問題，IBM 可能需要存取您系統上關於失敗的資訊，或需要重建失敗以取得其他資訊。
 * 客戶產生的支援問題單可作為確認通知：「IBM 支援中心」可以存取 VMware 管理層，以進行調查、除錯及分類。如果需要對環境進行中斷維護或變更，「IBM 支援中心」會在變更管理處理程序中，透過問題單要求客戶提供其他記載確認。
-* 如需支援問題單的相關資訊，請參閱[軟體支援手冊](https://www-304.ibm.com/support/customercare/sas/f/handbook/getsupport.html)及[與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)。
+* 如需支援問題單的相關資訊，請參閱 [IBM 支援中心手冊](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923)以及[與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)。
 
 ## 客戶責任
 {: #vc_compl_info-client-responsibilities}
@@ -93,7 +93,7 @@ subcollection: vmwaresolutions
 * 在起始部署時，供應項目的自動化及客戶的帳戶是分開的。我們容許並鼓勵客戶變更入口網站中 IBM 提供的所有密碼。
 * vCenter 存取和認證是在起始部署期間建立並提供給客戶。「IBM 支援中心」必須保留對管理層的完整存取權，以提供生命週期管理及支援我們的客戶，這是我們供應項目需求的一部分。
 * 如果任何時候變更了認證（例如密碼），「IBM 支援中心」可能無法再協助客戶回復遺失或忘記的認證，甚至是對客戶環境進行疑難排解。
-* 如需此問題及相關問題之重要性的相關資訊，請參閱[變更 NSX 元件密碼時的考量](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_networkingonvcenterserver#considerations-when-changing-passwords-for-nsx-components)及[有關變更 vCenter Server 構件的考量](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter_chg_impact)。
+* 如需此問題及相關問題之重要性的相關資訊，請參閱[變更 NSX 元件密碼時的考量](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_networkingonvcenterserver#vc_networkingonvcenterserver-change-nsx-component-password-considerations)及[有關變更 vCenter Server 構件的考量](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter_chg_impact)。
 
 ### 通訊與疑難排解
 {: #vc_compl_info-communication-troubleshooting}
@@ -121,7 +121,7 @@ subcollection: vmwaresolutions
 * 這些非 IBM 程式係由其提供者直接授權。客戶同意在提供者條款的約束下使用非 IBM 程式。這些在購買 IBM 產品與服務時所附的 IBM 授權合約中均有提供。
 * IBM 會進行測試，以確保協力廠商產品可與 IBM 程式搭配使用且適當地運作。
 * IBM 軟體支援中心透過瞭解 IBM 產品與服務如何與協力廠商軟體一起使用，來診斷相關的客戶問題。如果結論是 IBM 程式正確運作，但問題仍然存在，則 IBM 必須將客戶轉介到協力廠商供應商，以進一步診斷。
-* 如需關於協力廠商軟體或程式碼之客戶責任的進一步資訊，請參閱[軟體支援中心手冊](https://www-304.ibm.com/support/customercare/sas/f/handbook/policies.html)。
+* 如需關於協力廠商軟體或程式碼之客戶責任的進一步資訊，請參閱 [IBM 支援中心手冊](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923)。
 
 ## 同意存取客戶環境
 {: #vc_compl_info-consent-to-access-client-environment}

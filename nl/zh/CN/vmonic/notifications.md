@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -53,7 +53,7 @@ subcollection: vmwaresolutions
        </tr>
        <tr>
          <td>类型</td>
-         <td>报告的事件与之相关的组件类型：<ul><li>vCenter Server 实例</li><li>Cloud Foundation 实例</li><li>服务</li><li>系统</li></ul></td>
+         <td>报告的事件与之相关的组件类型：<ul><li>vCenter Server 实例</li><li>服务</li><li>系统</li></ul></td>
        </tr>
        <tr>
          <td>资源</td>

@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-12"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -62,7 +62,7 @@ subcollection: vmwaresolutions
 
 可以将新用户添加到 {{site.data.keyword.cloud_notm}} 帐户，以便这些用户可以共享为帐户供应的服务和资源。有关更多信息，请参阅[邀请用户访问服务和资源](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-iamuserinvite)。
 
-您还可以管理现有用户的访问权，包括修改现有访问权、分配新访问权以及复查分配的访问权。要管理用户的访问权，您必须是帐户所有者，或者必须具有**管理员**平台管理角色。有关更多信息，请参阅[管理资源访问权](/docs/iam?topic=iam-iammanidaccser)。
+您还可以管理现有用户的访问权，包括修改现有访问权、分配新访问权以及复查分配的访问权。要管理用户的访问权，您必须是帐户所有者，或者必须具有**管理员**平台管理角色。有关更多信息，请参阅[管理对资源的访问权](/docs/iam?topic=iam-iammanidaccser)。
 
 ## 将现有实例迁移到 IBM Cloud 帐户
 {: #iam-migrate}

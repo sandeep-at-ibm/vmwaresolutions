@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -39,7 +39,7 @@ Manager
 
 工作流程如下：
 1. 登录到跳板机，然后打开浏览器。
-2. 使用您的 _my.vmware.com_ 凭证，浏览至下载部分，然后搜索 _NSX for vSphere_。
+2. 使用您的 _my.vmware.com_ 凭证，导航至下载部分，然后搜索 _NSX for vSphere_。
 3. 选择所需的版本。
 4. 在下载页面上，选择**升级捆绑软件 - 立即下载**。
 5. 下载到合适的文件夹。
@@ -54,11 +54,11 @@ Manager
   - 上传完成后，会将您重定向到 NSX Manager 登录页面。请重新登录，并验证当前软件版本的显示是否正确。
 7. **升级 NSX Controller 集群**：
   - 打开 vSphere Web Client 并登录到 VCSA。
-  - 浏览至**主页** > **联网和安全性** > **安装**，选择**管理**选项卡，然后单击“控制器集群状态”列中的**升级可用**。
+  - 导航至**主页** > **联网和安全性** > **安装**，选择**管理**选项卡，然后单击“控制器集群状态”列中的**升级可用**。
   - 环境中的控制器会升级并重新引导（每次处理一个控制器）。启动升级后，系统会下载升级文件，升级每个控制器，重新启动每个控制器，然后更新每个控制器的升级状态。
 8. **升级 NSX 主机集群**：
   - 升级 NSX Manager 和 NSX Controller 后，主机集群将更新 vSphere ESXi 主机上的 NSX VIB。
-  - 在 vSphere Web Client 中，浏览至**主页** > **联网和安全性** > **安装**，然后选择**主机准备**选项卡。对于要升级的每个集群，单击**升级可用**。安装状态会显示为“正在安装”。
+  - 在 vSphere Web Client 中，导航至**主页** > **联网和安全性** > **安装**，然后选择**主机准备**选项卡。对于要升级的每个集群，单击**升级可用**。安装状态会显示为“正在安装”。
   - 集群安装状态会显示_未就绪_。单击**未就绪**以显示更多信息，然后单击**全部解决**以尝试完成 VIB 安装。主机会置于维护模式并根据需要重新引导以完成升级。“安装状态”列会显示“正在安装”。升级完成后，“安装状态”列会显示绿色复选标记和升级的 NSX 版本。
 9. **Edge 服务网关**：
   - 在升级过程中，将随现有 Edge 虚拟设备一起部署一个新的 Edge 虚拟设备。新 Edge 准备就绪时，旧 Edge 的 vNIC 会断开连接，并且新 Edge 的 vNIC 处于连接状态。然后，新 Edge 会发送免费 ARP (GARP) 包来更新已连接交换机的 ARP 高速缓存。部署 HA 后，将执行两次升级过程。此过程可能会暂时影响包转发。
@@ -69,4 +69,4 @@ Manager
 {: #vum-updating-nsx-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 解决方案体系结构](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} 数字技术互动](https://ibm-dte.mybluemix.net/ibm-vmware)（演示）
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} 数字技术互动](https://ibm-dte.mybluemix.net/vmware)（演示）

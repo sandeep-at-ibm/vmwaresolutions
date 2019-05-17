@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-29"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -59,9 +59,9 @@ Pour résoudre des hôtes et des clusters, procédez comme suit :
 6. Facultatif : sur la page **Advanced options**, sélectionnez l'option permettant de planifier la résolution pour une exécution ultérieure et indiquez un nom unique et une description facultative pour cette tâche. L'heure que vous définissez dans la tâche planifiée correspond à l'heure sur le dispositif VCSA. Facultatif : sélectionnez l'option permettant d'ignorer les avertissements sur les dispositifs non pris en charge sur l'hôte ou sur le magasin VMFS qui n'est plus pris en charge, pour poursuivre la résolution. Cliquez sur **Next**.
 7. Sur la page **Remediation Options**, dans le menu déroulant **VM Power state**, vous pouvez sélectionner la modification d'état d'alimentation des machines virtuelles et des dispositifs virtuels en cours d'éxécution sur les hôtes à résoudre. Un hôte ne peut pas passer en mode maintenance tant que les machines virtuelles sur l'hôte ne sont pas hors tension, suspendues ou migrées avec vMotion sur d'autres hôtes d'un cluster DRS. Certaines mises à jour nécessitent qu'un hôte soit en mode maintenance avant la résolution. Les machines virtuelles et les dispositifs virtuels ne peuvent pas s'exécuter lorsqu'un hôte est en mode maintenance. Pour réduire le temps d'immobilisation de la résolution aux dépens de la disponibilité des machines virtuelles, vous pouvez opter d'arrêter ou de suspendre des machines virtuelles et des dispositifs virtuels avant la résolution. Dans un cluster DRS, si vous ne mettez pas les machines virtuelles hors tension, la résolution peut prendre plus de temps mais les machines virtuelles sont disponibles tout au long du processus de résolution car elles sont migrées avec vMotion sur d'autres hôtes. Les sélections se présentent comme suit :
 
-- **Power Off virtual machines** - Met hors tension toutes les machines virtuelles et tous les dispositifs virtuels avant la résolution.
-- **Suspend virtual machines** - Suspend toutes les machines virtuelles et tous les dispositifs virtuels avant la résolution.
-- **Do Not Change VM Power State** - Laisse les machines virtuelles et les dispositifs virtuels dans leur état d'alimentation en cours.
+  * **Power Off virtual machines** - Met hors tension toutes les machines virtuelles et tous les dispositifs virtuels avant la résolution.
+  * **Suspend virtual machines** - Suspend toutes les machines virtuelles et tous les dispositifs virtuels avant la résolution.
+  * **Do Not Change VM Power State** - Laisse les machines virtuelles et les dispositifs virtuels dans leur état d'alimentation en cours.
 
 8. Facultatif : sélectionnez l'option **Disable any removable media devices connected to the virtual machine on the host**. VUM ne résout pas les hôtes sur lesquels les machines virtuelles disposent de CD, DVD ou unités de disquette connectés. Dans les environnements en cluster, les unités de stockage connectées peuvent empêcher vMotion de fonctionner si l'hôte de destination n'a pas d'unité identique ou d'image ISO montée, ce qui empêche à son tour l'hôte source de basculer en mode maintenance. Après la résolution, VUM reconnecte les unités de stockage amovibles si elles sont toujours disponibles.
 9. Facultatif : sélectionnez l'option **Retry entering maintenance mode in case of failure**, indiquez le nombre de nouvelles tentatives et spécifiez le délai d'attente entre les tentatives. VUM patiente pendant ce délai et effectue une nouvelle tentative pour placer l'hôte en mode maintenance autant de fois que vous indiquez dans la zone du nombre de nouvelles tentatives.
@@ -83,4 +83,4 @@ Il n'y a aucune condition requise dans une instance vCenter Server pour sélecti
 {: #vum-staging-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (démonstrations)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (démonstrations)

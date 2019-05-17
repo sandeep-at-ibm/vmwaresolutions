@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-10-19"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -39,7 +39,7 @@ Durante il processo di aggiornamento alla V2.2, la VM (Virtual Machine) IBM Clou
 * Se utilizzi una soluzione di backup che fa riferimento alla VM (Virtual Machine) IBM CloudDriver, dopo l'aggiornamento alla V2.2, assicurati che la soluzione di backup faccia riferimento alla nuova VM (Virtual Machine) IBM CloudDriver.
 * Prima di eseguire l'aggiornamento alla V2.2, assicurati di sostituire la VSI Veeam legacy con il servizio Veeam on {{site.data.keyword.cloud_notm}}. Veeam legacy non è più supportato nella V2.2 e release future, pertanto i backup dei componenti di gestione associati a Veeam legacy non sono disponibili per un ripristino.
 
-Per ulteriori informazioni sull'utilizzo del servizio Veeam on {{site.data.keyword.cloud_notm}}, vedi i seguenti argomenti:
+Per ulteriori informazioni sull'utilizzo del servizio Veeam on {{site.data.keyword.cloud_notm}}, vedi: 
 * [Componenti e considerazioni per Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)
 * [Gestione di Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
 
@@ -91,7 +91,7 @@ Per ulteriori informazioni, vedi la sezione *Impostazioni di sistema* in [Ordine
 ### Aumento del numero di cluster per istanza
 {: #relnotes_v22-clusters-per-inst}
 
-Puoi ora aggiungere fino a 10 cluster alle istanze VMware vCenter Server distribuite o aggiornate alle release della V2.2 e successive. Per ulteriori informazioni, vedi [Aggiunta e visualizzazione di cluster per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances).
+Puoi ora aggiungere fino a 10 cluster alle istanze VMware vCenter Server distribuite o di cui è stato eseguito l'upgrade alle release della V2.2 e successive. Per ulteriori informazioni, vedi [Aggiunta e visualizzazione di cluster per le istanze vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters).
 
 ## Aggiornamenti per i cluster VMware vSphere
 {: #relnotes_v22-vss}
@@ -131,7 +131,7 @@ Questo servizio fornisce un servizio altamente disponibile 24x7 per gestire le c
 ### IBM Spectrum Protect Plus on IBM Cloud
 {: #relnotes_v22-spp}
 
-Il servizio IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} è ora disponibile per le istanze che sono distribuite o aggiornate alle release della V2.2 o successive.
+Il servizio IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} è ora disponibile per le istanze che sono distribuite o di cui è stato eseguito l'upgrade alle release della V2.2 o successive.
 
 Questo servizio fornisce una soluzione efficiente e scalabile per la protezione dei dati, il riutilizzo dei dati e il recupero dei dati per gli ambienti virtuali. Puoi implementarlo come soluzione autonoma o integrarlo con il tuo ambiente IBM Spectrum Protect&trade; Plus per scaricare copie per la governance di dati e archiviazione a lungo termine.
 

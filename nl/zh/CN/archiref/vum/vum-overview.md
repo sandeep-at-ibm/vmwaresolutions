@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -51,7 +51,7 @@ VUM 客户机界面提供了两个主视图：
 ##	管理视图
 {: #vum-overview-admin-view}
 
-“管理”视图可通过浏览至**主页** > **Update Manager**，然后选择 Update Manager 实例的 IP 地址进行访问。在“管理”视图中，可以执行以下任务：
+“管理”视图可通过导航至**主页** > **Update Manager**，然后选择 Update Manager 实例的 IP 地址进行访问。在“管理”视图中，可以执行以下任务：
 *	配置 Update Manager 设置
 *	创建和管理基线与基线组
 *	查看 Update Manager 事件
@@ -62,7 +62,7 @@ VUM 客户机界面提供了两个主视图：
 ##	一致性视图
 {: #vum-overview-compliance-view}
 
-所选库存对象的“一致性”视图可通过浏览至**主机和集群**或 **VM 和模板**，然后单击 **Update Manager** 选项卡进行访问。在 Update Manager 的“一致性”视图中，可以执行以下任务：
+所选库存对象的“一致性”视图可通过导航至**主机和集群**或 **VM 和模板**，然后单击 **Update Manager** 选项卡进行访问。在 Update Manager 的“一致性”视图中，可以执行以下任务：
 *	查看每个所选库存对象的一致性和扫描结果
 *	将基线和基线组连接到所选库存对象，以及从所选库存对象拆离基线和基线组
 *	扫描所选库存对象
@@ -73,4 +73,4 @@ VUM 客户机界面提供了两个主视图：
 {: #vum-overview-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 解决方案体系结构](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} 数字技术互动](https://ibm-dte.mybluemix.net/ibm-vmware)（演示）
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} 数字技术互动](https://ibm-dte.mybluemix.net/vmware)（演示）

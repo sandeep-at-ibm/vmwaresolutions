@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-04-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -40,4 +40,4 @@ Vous pouvez ajouter le service FortiGate Security Appliance on {{site.data.keywo
 * [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [Foire aux questions](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [Site Web Fortinet](https://www.fortinet.com/){:new_window}
-* [Bibliothèque de documents Fortinet](http://docs.fortinet.com/fortigate/admin-guides){:new_window}
+* [Bibliothèque de documents Fortinet](https://docs.fortinet.com/product/fortigate/6.2){:new_window}

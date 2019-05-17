@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -25,7 +25,7 @@ O HCX permite a migração bidirecional: de no local para a nuvem ou da nuvem pa
 A migração de tempo de inatividade baixo usa a replicação baseada em host para mover uma máquina virtual em tempo real de um vCenter para um datacenter virtual ou para a direção oposta. Para reduzir o tempo de inatividade, a MV de origem permanece on-line durante a replicação e é autoinicializada no host ESX de destino após a conclusão da replicação.
 
 1. Uma solicitação de migração aciona as ações a seguir:
-  * A replicação inicia uma transferência de sincronização total para um datacenter virtual VCF/VCS HCX. O tempo que leva para replicar depende do tamanho da MV e da largura de banda disponível.
+  * A replicação inicia uma transferência de sincronização total para um datacenter virtual do VCS HCX. O tempo que leva para replicar depende do tamanho da MV e da largura de banda disponível.
   * O consumo de largura da banda de replicação varia, dependendo de como a carga de trabalho muda os blocos no disco.
 2. Quando a sincronização total é concluída, ocorre uma sincronização delta.
 3. Quando a sincronização delta é concluída, o HCX aciona uma comutação. A comutação pode ser iniciada imediatamente ou planejada até um horário específico.
@@ -37,7 +37,7 @@ A migração de tempo de inatividade baixo usa a replicação baseada em host pa
 ## Nenhum vMotion de tempo de inatividade
 {: #hcx-archi-migrate-vm-no-downtime-vm}
 
-O vMotion transfere uma máquina virtual em tempo real de um vSphere vCenter para uma Nuvem do VCF/VCS. Este vMotion requer uma rede esticada. A transferência do vMotion captura a memória ativa da máquina virtual, seu estado de execução, seu endereço IP e seu endereço MAC.
+O vMotion transfere uma máquina virtual em tempo real de um vSphere vCenter para uma nuvem do VCS. Este vMotion requer uma rede esticada. A transferência do vMotion captura a memória ativa da máquina virtual, seu estado de execução, seu endereço IP e seu endereço MAC.
 
 A versão de hardware da máquina virtual deve ser pelo menos a versão 9 ou o cross-cloud vMotion pode falhar.
 {:note}
@@ -53,8 +53,8 @@ A migração fria usa o mesmo plano de dados que o cross-cloud vMotion para tran
 Usando o vSphere Web Client, o assistente de migração bidirecional é acessível por meio da guia Introdução ao Hybrid Cloud Services. Esse assistente manipula todos os detalhes de migração, incluindo múltiplas máquinas virtuais.
 
 No vSphere Web Client, o assistente de migração bidirecional pode ser acessado por meio da guia Introdução do Hybrid Cloud Services. Esse assistente manipula todos os detalhes de migração, incluindo múltiplas máquinas virtuais.
-* Do vSphere para o VCF/VCS Hybrid Cloud Services
-* Do VCF/VCS HCX Cloud para vSphere
+* Do vSphere para o VCS Hybrid Cloud Services
+* Do VCS HCX Cloud para o vSphere
 
 ### Verificando as MVs antes da migração
 {: #hcx-archi-migrate-vm-check-vms}

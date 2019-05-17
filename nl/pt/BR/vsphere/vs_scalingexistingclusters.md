@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -48,7 +48,7 @@ O ajuste de escala do cluster é iniciado automaticamente. Você recebe uma conf
 
 Se o cluster que você está escalando não estiver pronto para uso, uma mensagem de erro poderá ser recebida.
 
-Os clusters do vSphere, ao contrário das instâncias do servidor vCenter e do Cloud Foundation, não são exibidos na página **Recursos**.
+Os clusters do vSphere, ao contrário das instâncias do vCenter Server, não são exibidos na página **Recursos**.
 {:note}
 
 ## Links relacionados

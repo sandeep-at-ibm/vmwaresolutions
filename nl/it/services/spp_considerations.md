@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -20,7 +20,7 @@ subcollection: vmwaresolutions
 
 Il servizio {{site.data.keyword.IBM}} Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} fornisce una soluzione efficiente e scalabile per la protezione, il riutilizzo e il recupero dei dati per gli ambienti virtuali. Puoi implementare il servizio come soluzione autonoma o integrarlo con il tuo ambiente IBM Spectrum Protect per scaricare copie per la governance di dati e archiviazione a lungo termine.
 
-Questo servizio è disponibile solo per le istanze che eseguono vSphere 6.5 e che sono distribuite o aggiornate alla V2.2 o successive. La versione {{site.data.keyword.IBM}} Spectrum Protect Plus corrente installata è la V10.1.2.
+Questo servizio è disponibile solo per le istanze che eseguono vSphere 6.5 e che sono state distribuite o di cui è stato eseguito l'upgrade alla V2.2 o successive. La versione {{site.data.keyword.IBM}} Spectrum Protect Plus corrente installata è la V10.1.3.
 {:note}
 
 ## Specifiche tecniche per IBM Spectrum Protect Plus on IBM Cloud
@@ -67,7 +67,7 @@ Due indirizzi IP privati portatili.
 * IBM Spectrum Protect Plus (da 10 fino ad un massimo di 1000 licenze VM in incrementi di 10)
 * Licenza IBM Spectrum Protect Plus offerta tramite la console {{site.data.keyword.vmwaresolutions_short}} (numero di VM in pacchetti di 10) o come BYOL
 
-## Considerazioni sull'istallazione di IBM Spectrum Protect Plus on IBM Cloud
+## Considerazioni sull'installazione di IBM Spectrum Protect Plus on IBM Cloud
 {: #spp_considerations-install}
 
 Esamina le seguenti considerazioni prima di installare il servizio IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}.

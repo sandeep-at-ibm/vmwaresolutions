@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -62,7 +62,7 @@ Tabla 2. Propiedades de la instancia de NetApp ONTAP Select
 | Tipo de licencia de NetApp | El tipo de licencia de NetApp ONTAP Select. |
 | DNS, Root Domain | El nombre del dominio raíz es el nombre del dominio DNS (Sistema de nombres de dominio) y el nombre raíz del grupo Microsoft Active Directory (AD) correspondiente a la instancia. |
 | DNS, SSO Domain | El dominio SSO es el dominio de inicio de sesión único (Single Sign-On) de vSphere. El nombre de dominio SSO se establece para todas las instancias de NetApp ONTAP Select desplegadas con el valor `vsphere.local`. |
-| DNS, Subdomain | El subdominio es el nombre del subdominio DNS del nombre del dominio raíz en el que residen los nombres de host de la instancia local de NetApp ONTAP Select. El nombre del subdominio está en el formato `<subdomain_label>.<root_domain>`. |
+| DNS, Subdomain | El subdominio es el nombre del subdominio DNS del nombre del dominio raíz en el que residen los nombres de host de la instancia local de NetApp ONTAP Select. El nombre de subdominio tiene el formato `<subdomain_label>.<root_domain>`. |
 | Estado | El estado de la instancia. |
 
 ## Procedimiento para visualizar información de acceso para instancias de NetApp ONTAP Select
@@ -162,7 +162,8 @@ Tabla 6. Detalles de servidor ESXi de un clúster de NetApp ONTAP Select
 
 | Elemento        | Descripción       |  
 |:------------|:----------------- |
-| Nombre | El nombre del servidor ESXi está en el formato `<host_prefix><n>.<subdomain_label>.<root_domain>`, donde:<br><br>`host_prefix` es el prefijo del nombre de host, `n` es la secuencia del servidor, `subdomain_label` es la etiqueta del subdominio y `root_domain` es el nombre del dominio raíz. |
+| Nombre | El nombre del servidor ESXi tiene el formato
+`<host_prefix><n>.<subdomain_label>.<root_domain>`, donde:<br><br>`host_prefix` es el prefijo del nombre de host, `n` es la secuencia del servidor, `subdomain_label` es la etiqueta del subdominio y `root_domain` es el nombre del dominio raíz. |
 | Versión | La versión del servidor ESXi. |
 | Credenciales | El nombre de usuario y la contraseña para acceder al servidor ESXi. |
 | IP privada | La dirección IP privada del servidor ESXi. |

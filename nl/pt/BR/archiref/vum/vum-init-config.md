@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-29"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -14,20 +14,31 @@ subcollection: vmwaresolutions
 # Configuração inicial
 {: #vum-init-config}
 
-A automação IC4VS configura o VCSA com um gateway padrão configurado para o {{site.data.keyword.cloud}} Backend Customer Router (BCR). No entanto, não há rota para a Internet por meio do BCR. A rota padrão para a Internet por meio da instância do VMware vCenter Server on {{site.data.keyword.cloud_notm}} é via ESG de Gerenciamento. Como não é aconselhável mudar a configuração do VCSA ou do ESG de Gerenciamento, uma implementação do servidor proxy na sub-rede do cliente é recomendada para ativar o VUM.
+A automação do {{site.data.keyword.vmwaresolutions_full}} configura o VCSA com um gateway padrão configurado para o {{site.data.keyword.cloud}} Backend Customer Router (BCR). No entanto, não há rota para a Internet por meio do BCR. A rota padrão para a Internet por meio da instância do VMware vCenter Server on {{site.data.keyword.cloud_notm}} é via ESG de Gerenciamento. Como não é aconselhável mudar a configuração do VCSA ou do ESG de Gerenciamento, uma implementação do servidor proxy na sub-rede do cliente é recomendada para ativar o VUM.
 
 Essa abordagem significa que você não precisa reconfigurar o VCSA ou o ESG de Gerenciamento, no entanto, uma pequena máquina virtual (MV) ou um dispositivo deve ser instalado. Um servidor proxy é um sistema que fica entre dois dispositivos de terminal e age como um dispositivo intermediário. Neste caso, ele fica entre o VUM e os servidores de atualização no VMware.
 
 Quando um VUM solicita um recurso do servidor de atualização no VMware, a solicitação é enviada para o servidor proxy primeiro e o servidor proxy, em seguida, envia a solicitação para o servidor de atualização. Depois que o recurso é obtido pelo servidor proxy, ele o envia para o VUM. Um servidor proxy pode ser usado para facilitar a segurança, os controles administrativos e os serviços de armazenamento em cache.
 
-Este documento descreve o uso de um servidor proxy com base no CentOS e no Squid. O Squid Proxy é um proxy de armazenamento em cache de software livre para a web e suporta muitos protocolos que incluem HTTP e HTTPS. Vários proxies baseados em MV e baseado em dispositivo estão disponíveis e deve-se selecionar o apropriado com base nos requisitos de sua empresa e instalar e configurar seguindo a orientação do fornecedor. Os clientes que optam por usar uma implementação do CentOS/Squid devem continuar com o processo a seguir.
+É possível usar um servidor proxy com base no CentOS e no Squid. O Squid Proxy é um proxy de armazenamento em cache de software livre para a web e suporta muitos protocolos que incluem HTTP e HTTPS. Vários proxies baseados em MV e baseado em dispositivo estão disponíveis e deve-se selecionar o apropriado com base nos requisitos de sua empresa e instalar e configurar seguindo a orientação do fornecedor. Os clientes que optam por usar uma implementação do CentOS/Squid devem continuar com o processo a seguir.
 
 * Fazer download do ISO do CentOS em um servidor de salto
 * Criar uma Biblioteca do vCenter
 * Fazer upload do ISO para a Biblioteca vCenter
 * Criar uma MV, instalar e configurar o CentOS e instalar o Squid
 
-Antes de poder iniciar essa tarefa, é necessário coletar informações para preencher a Tabela 1. Revise os valores sugeridos e assegure-se de que eles sejam apropriados para sua empresa. Essa configuração é baseada em um pequeno proxy apenas para o VUM que usa o CentOS-Minimal e o Squid.
+## Localizando as informações de sub-rede
+{: #vum-init-config-subnet}
+
+Antes de poder iniciar esta tarefa, colete as informações para preencher a tabela a seguir. Revise os valores sugeridos e assegure-se de que eles sejam apropriados para o seu ambiente. Essa configuração é baseada em um pequeno proxy apenas para o VUM que usa o CentOS-Minimal e o Squid.
+
+Para localizar a sub-rede móvel privada do cliente:
+
+1. Acesse a página **Recursos** no console do {{site.data.keyword.vmwaresolutions_short}}.
+2. Selecione a **Instância** necessária, selecione **Infraestrutura** e, em seguida, o **Cluster** necessário.
+3. Selecione **VLAN privada** e localize a sub-rede rotulada `Sub-rede privada para a borda de carga de trabalho do cliente`.
+4. Selecione a **sub-rede** e você será redirecionado para a página de detalhes de sub-rede que exibe os endereços IP e suas alocações.
+5. Usando as informações, selecione um endereço IP não alocado e atualize a **Nota** com os comentários apropriados. Use esse endereço IP para o parâmetro `proxy ip` na tabela a seguir.
 
 Tabela 1. Valores de implementação
 
@@ -61,13 +72,38 @@ Tabela 2. Regra de firewall
 | Parâmetro | Valores sugeridos |
 |:--------- |:-------------- |
 | Nome | Proxy01 de saída |
-| Tipo | User |
+| Tipo |Usuário|
 | Origem | IP do servidor proxy |
 | Destino | qualquer |
 | Serviço | Eco do HTTP/HTTPS/ICMP |
 | Ação | Aceitar |
 
 Após os parâmetros serem fornecidos, clique em **Publicar mudanças**.
+
+### NAT
+{: #vum-init-config-nat}
+
+1. Selecione **NAT**.
+2. Clique no símbolo **+** e inclua uma regra SNAT.
+3. Forneça os parâmetros necessários conforme observado na tabela a seguir e clique em **OK**. Em seguida, clique em **Publicar mudanças**.
+
+Tabela 3. Regra NAT
+
+| Parâmetro | Valores sugeridos |
+|:--------- |:-------------- |
+| Rule type | USUÁRIO |
+| Ação | SNAT |
+| Applied On | Uplink público |
+| Original Protocol | qualquer |
+| Original Source IP | IP do servidor proxy |
+| Original Source Ports | qualquer |
+| Original Destination IP | qualquer |
+| Original Destination Ports | qualquer |
+| Translated IP Address | NAT ip |
+| Translated Port Range | qualquer |
+| Barra de Status | Enable |
+| Logging | Enable |
+| Descrição | Proxy01 SNAT |
 
 ### Instalando e configurando um servidor proxy
 {: #vum-init-config-inst-cfg-proxy}
@@ -91,7 +127,7 @@ Crie uma biblioteca de conteúdo do vCenter local. A biblioteca é acessível so
 1. Por meio do vSphere Web Client, navegue para **Página inicial** > **Biblioteca de conteúdo** > **Objetos** > **Criar uma nova biblioteca de conteúdo** > **Criar biblioteca inscrita no vCenter**.
 2. Insira um nome para a biblioteca de conteúdo, por exemplo, ISO, e, na caixa de texto Notas, insira uma descrição para a biblioteca e clique em **Avançar**.
 3. Selecione **Biblioteca de conteúdo local** e clique em **Avançar**.
-4. Selecione um armazenamento de dados e, em seguida, clique em um armazenamento de dados adequado, por exemplo, vsanDatastore.
+4. Selecione um armazenamento de dados e, em seguida, clique em um armazenamento de dados adequado, por exemplo, `vsanDatastore`.
 5. Revise as informações na página **Pronto para concluir** e clique em **Concluir**.
 
 ### Configurando a MV do proxy, instalar o CentOS e o Squid
@@ -115,7 +151,7 @@ Esta tarefa cria uma nova MV pronta para uso como o servidor proxy. As configura
 5.	Selecione  ** cluster1 **  e, em seguida, clique em  ** Avançar **.
 6.	Selecione um armazenamento de dados apropriado, por exemplo, vsanDatastore, e clique em **Avançar** e em **Avançar** novamente.
 7.	Em **Família de S.O. guest**, selecione **Linux** e, em **Versão do S.O. guest**, selecione **CentOS 7 (64 bits)** e clique em **Avançar**.
-8.	Configure **CPU como 1**, **Memória como 2048 MB** e **Novo disco rígido como 25 GB**. Selecione **Arquivo ISO de Biblioteca de Conteúdo** e, em seguida, **CentOS-7-x86_64-Minimal**, clique em **OK** e marque a caixa **Conectado**.
+8.	Na guia **Hardware customizado** para Hardware virtual, configure **CPU para 1**, **Memória para 2048 MB** e **Novo disco rígido para 25 GB**. Em **Nova unidade de CD/DVD**, selecione **Arquivo ISO de biblioteca de conteúdo** e, em seguida, **CentOS-7-x86_64-Mínimo**, clique em **OK** e marque a caixa **Conectado**.
 9.	Na caixa Novo dispositivo, selecione **Rede** e, em seguida, clique em **Incluir**.
 10.	Selecione a rede **SDDC-DPortGroup-Mgmt** e assegure-se de que a caixa de seleção Conectar esteja marcada, clique em **Avançar**.
 11.	Revise e clique em **Concluir**.
@@ -125,7 +161,7 @@ Esta tarefa cria uma nova MV pronta para uso como o servidor proxy. As configura
 
 Esta tarefa instala e configura a MV recém-criada pronta para a instalação do Squid
 
-1.	Na área de janela do Navegador do vSphere Web Client, selecione a **VM** recém-criada, Proxy01, em seguida, selecione a **Guia Resumo**.
+1.	Na área de janela do Navegador do vSphere Web Client, selecione a **VM** recém-criada, Proxy01 e, em seguida, selecione a guia **Resumo**.
 2.	Clique em **"Reproduzir"** para ligar a MV.
 3.	A MV é ligada e inicializada por meio do ISO do CentOS 7. Inicie um **Console remoto ou console da web** para a MV. Deve-se instalar o Console Remoto e o sistema que está executando o navegador da web deve resolver os hosts vSphere ESXi por nome.
 4.	Na tela Bem-vindo ao CentOS 7, selecione seu idioma necessário e clique em **Continuar**.
@@ -163,20 +199,24 @@ O Squid não tem nenhum requisito mínimo de hardware, mas a quantia de RAM pode
 7. Execute o comando a seguir para iniciar automaticamente o Squid no tempo de inicialização: `systemctl enable squid`.
 8. Execute o comando a seguir para assegurar-se de que o Squid esteja em execução: `systemctl status squid`.
 9. O firewall CentOS precisa permitir acesso à porta do Squid, TCP 3128, usando o comando a seguir: `firewall-cmd –add-port=3128/tcp –permanent`.
-10.	Para salvar a regra e reiniciar o serviço, use o comando a seguir: `firewall-cmd –reload`.
+10. Para salvar a regra e reiniciar o serviço, use o comando a seguir: `firewall-cmd –reload`.
 
 ## A configuração inicial do VUM
 {: #vum-init-config-init-setup-vum}
 
 Configure o VUM para usar o servidor proxy para acessar os repositórios na Internet.
 1. Usando o vSphere Web Client, navegue para **Página inicial** > **Update Manager**. Clique em seu vCenter Server.
-2. Selecione a **guia Gerenciar** e clique no botão **Configurações**.
+2. Selecione a guia **Gerenciar** e clique em **Configurações**.
 3. Selecione **Configurações de download** e, em seguida, em _Configurações de proxy_, clique em **Editar**.
 4. Marque a caixa **Usar proxy** e insira o _Endereço IP do servidor proxy_ e a _porta 3128_, clique em **OK**. O Status de conectividade muda para _Validando_ e, em seguida, para _Conectado_.
 5. Clique em  ** Fazer Download Agora **. Na área de janela _Tarefas recentes_, você deverá ver essa atividade concluída.
+6. Se essa atividade falhar, reinicialize o vCenter Server Appliance (vCSA):
+  1. Efetue login na interface de gerenciamento do vCSA em `https://vcsaFQDN:5480` como **raiz**.
+  2. Clique em **Resumo** e clique em **Reinicializar**.
+  3. Na caixa de confirmação, clique em **Sim** para confirmar a operação.
 
 ## Links relacionados
 {: #vum-init-config-related}
 
-* [Arquitetura de solução do VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (demonstrações)
+* [Arquitetura da solução VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
+* [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (demonstrações)

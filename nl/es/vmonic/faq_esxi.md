@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -25,11 +25,7 @@ Encuentre las respuestas a preguntas frecuentes sobre los servidores ESXi que se
 {: #faq_esxi-instance}
 {: faq}
 
-* Para instancias de vCenter Server, puede expandir el clúster predeterminado para tener hasta 51 servidores ESXi. Cada uno de los clústeres no predeterminados se puede ampliar hasta tener un máximo de 59 servidores ESXi. Dado que puede añadir hasta 10 clústeres a una instancia, cada instancia desplegada puede tener un máximo de 51 + 9x59 = 582 servidores ESXi en todos los clústeres.
-* Para instancias de Cloud Foundation, la configuración estándar tiene cuatro servidores ESXi. Puede añadir un máximo de 28 servidores (hasta un total de 32 servidores). Para las instancias de Cloud Foundation de una configuración de varios sitios, puede tener un máximo de 128 servidores ESXi en todas las instancias.
-
-  Si la configuración de Cloud Foundation requiere un despliegue de varios sitios con más de 128 servidores ESXi, [póngase en contacto con el equipo de soporte de IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support) para obtener ayuda.
-  {:note}
+La instancia de vCenter Server le permite expandir el clúster predeterminado para tener hasta 51 servidores ESXi. Cada uno de los clústeres no predeterminados se puede ampliar hasta tener un máximo de 59 servidores ESXi. Dado que puede añadir hasta 10 clústeres a una instancia, cada instancia desplegada puede tener un máximo de 51 + 9x59 = 582 servidores ESXi en todos los clústeres.
 
 ## ¿Cuántos servidores ESXi puedo añadir a un clúster?
 {: #faq_esxi-cluster}
@@ -81,5 +77,5 @@ No se da soporte a la adición de rutas estáticas para vMotion. Los cambios en 
 {: #faq_esxi-related}
 
 * [Ampliación y reducción de la capacidad para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
-* [Adición, visualización y supresión de clústeres para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [Adición, visualización y supresión de clústeres para instancias de vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_hybrid_addingviewingclusters#vc_hybrid_addingviewingclusters)
 * [Cómo ponerse en contacto con el equipo de soporte de IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

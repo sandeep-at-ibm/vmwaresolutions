@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-04-03"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -43,7 +43,7 @@ subcollection: vmwaresolutions
 
 {{site.data.keyword.cloud_notm}}의 실제 네트워크는 3개의 개별 네트워크(공용, 사설 및 관리)로 분류됩니다. 공용, 사설 및 관리 네트워크에 대한 자세한 정보는 [솔루션 개요](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)를 참조하십시오.
 
-{{site.data.keyword.cloud_notm}} 네트워크에 대한 자세한 정보는 [{{site.data.keyword.cloud_notm}} 네트워크](https://www.ibm.com/cloud-computing/bluemix/our-network){:new_window}를 참조하십시오.
+{{site.data.keyword.cloud_notm}} 네트워크에 대한 자세한 정보는 [{{site.data.keyword.cloud_notm}} 글로벌 데이터 센터](https://www.ibm.com/cloud/data-centers/){:new_window}를 참조하십시오.
 
 사설 네트워크의 일부인 서비스 네트워크에 대한 설명을 보려면 다음 정보를 검토하십시오.
 
