@@ -99,7 +99,7 @@ Deployment of the vROps appliance requires six IPs from the Tooling private port
 ## Ports
 {: #opsmgmt-vrops-ports}
 
-Table 3. Operation Manager ports
+Table 4. Operation Manager ports
 
 | Component | Protocol | Port |
 |---|---|---|
