@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-19"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -16,7 +16,7 @@ subcollection: vmwaresolutions
 
 共通サービスは、クラウド管理プラットフォームの他のサービスによって使用されるサービスを提供します。 共通サービスには、ID およびアクセスのサービス、ドメイン・ネーム・サービス、NTP サービスなどがあります。
 
-図 1. {{site.data.keyword.icpfull_notm}} の共通サービス</br>
+図 1. {{site.data.keyword.icpfull_notm}} 共通サービス</br>
 ![{{site.data.keyword.icpfull_notm}} 共通サービス](vcscar-common-services.svg)
 
 ## ID およびアクセス・サービス

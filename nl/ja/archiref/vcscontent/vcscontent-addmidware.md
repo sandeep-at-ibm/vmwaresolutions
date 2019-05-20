@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -124,7 +124,7 @@ Cloud Private (ディスカバリー用の ILAN ライセンス交付済み、�
   -	Web Terminal (オープン・ソース)
   -	Skydive – ネットワーク・アナライザー (オープン・ソース)
 
-Stock Trader のために、Todd は Jane のソリューション・アーキテクチャーに基づいて、[Db2](https://console.cloud.ibm.com/catalog/services/db2-hosted)、[MQ](https://console.cloud.ibm.com/catalog/services/mq)、および [Redis](https://console.cloud.ibm.com/catalog/services/databases-for-redis) から取り掛かることにします。
+Stock Trader のために、Todd は Jane のソリューション・アーキテクチャーに基づいて、[Db2](https://cloud.ibm.com/catalog/services/db2-hosted)、[MQ](https://cloud.ibm.com/catalog/services/mq)、および [Redis](https://cloud.ibm.com/catalog/services/databases-for-redis) から取り掛かることにします。
 
 ## ミドルウェアの追加
 {: #vcscontent-addmidware-add-middleware}

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-25"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,7 +18,7 @@ subcollection: vmwaresolutions
 # デプロイメント後の VMware インスタンスの考慮事項
 {: #solution_considerations}
 
-{{site.data.keyword.vmwaresolutions_full}} オファリングはマネージド・サービスではありません。お客様は、すべてのソフトウェア・コンポーネントの構成、セキュリティー、管理、モニタリングについての責任があります。 ソリューションに対して完全な管理アクセス権限を持つことで、高い制御性と柔軟性を獲得できますが、各種ドメインにおける技術、管理、運用面での高度な専門知識が必要となります。 {{site.data.keyword.cloud_notm}} で VMware インスタンスを管理するには、オンプレミス・インスタンスの計画と同様の計画および専門知識が必要です。 ソフトウェアで定義されたテクノロジー (VMware NSX、VMware vSAN など) は、インスタンス管理におけるいくつかの側面を大幅に簡素化しますが、適切な管理と操作のためには、新しいスキルやツールが必要になる場合があります。 {{site.data.keyword.cloud_notm}} の自動化された VMware デプロイメントのパワー、スピード、信頼性を、適切な運用計画およびテストと組み合わせることで、ハイブリッド・クラウドへの迅速かつ効率的なナビゲーションが保証されます。
+{{site.data.keyword.vmwaresolutions_full}} オファリングはマネージド・サービスではありません。 お客様は、すべてのソフトウェア・コンポーネントの構成、セキュリティー、管理、モニタリングについての責任があります。 ソリューションに対して完全な管理アクセス権限を持つことで、高い制御性と柔軟性を獲得できますが、各種ドメインにおける技術、管理、運用面での高度な専門知識が必要となります。 {{site.data.keyword.cloud_notm}} で VMware インスタンスを管理するには、オンプレミス・インスタンスの計画と同様の計画および専門知識が必要です。 ソフトウェアで定義されたテクノロジー (VMware NSX、VMware vSAN など) は、インスタンス管理におけるいくつかの側面を大幅に簡素化しますが、適切な管理と操作のためには、新しいスキルやツールが必要になる場合があります。 {{site.data.keyword.cloud_notm}} の自動化された VMware デプロイメントのパワー、スピード、信頼性を、適切な運用計画およびテストと組み合わせることで、ハイブリッド・クラウドへの迅速かつ効率的なナビゲーションが保証されます。
 
 デプロイ前およびデプロイ後に、以下の考慮事項を検討して、インスタンスを管理および操作する自分の責任について理解してください。
 
@@ -46,7 +46,7 @@ subcollection: vmwaresolutions
 
 - [{{site.data.keyword.cloud_notm}} VPN](https://www.softlayer.com/vpn-access) または [{{site.data.keyword.cloud_notm}}Direct-Link 接続](https://www.ibm.com/cloud/direct-link)を使用してインスタンス管理エンドポイントにアクセスします。
 - インスタンス内からのパブリック・ネットワーク接続のための戦略を策定します。 選択肢として、サンプルのカスタマー向け VMware NSX Edge Services Gateway (ESG)、ゲートウェイ・アプライアンス (Vyatta、FortiGate など)、{{site.data.keyword.cloud_notm}} ネットワークまたは DirectLink を介してアクセスする独自のネットワークのいずれかにデプロイされたプロキシー・サーバーがあります。
-- [{{site.data.keyword.cloud_notm}} ポータブル IP アドレス](/docs/infrastructure/subnets?topic=subnets-getting-started-with-subnets-and-ips)を使用して {{site.data.keyword.cloud_notm}} VLAN にワークロードをデプロイするか、または[独自の IP アドレスを使用して NSX 論理スイッチ (VXLAN)](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_overview) にデプロイするのかを計画します。 NSX ソフトウェア定義ネットワーク (SDN) を使用すると、{{site.data.keyword.cloud_notm}} 内でワークロード・ネットワークを非常に柔軟に管理および保護することができます。
+- [{{site.data.keyword.cloud_notm}} ポータブル IP アドレス](/docs/infrastructure/subnets?topic=subnets-getting-started-subnets-ips#getting-started-subnets-ips)を使用して {{site.data.keyword.cloud_notm}} VLAN にワークロードをデプロイするか、または[独自の IP アドレスを使用して NSX 論理スイッチ (VXLAN)](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_overview) にデプロイするのかを計画します。 NSX ソフトウェア定義ネットワーク (SDN) を使用すると、{{site.data.keyword.cloud_notm}} 内でワークロード・ネットワークを非常に柔軟に管理および保護することができます。
 - NSX ESG、[IBM Cloud Vyatta](https://cloud.ibm.com/catalog/infrastructure/virtual-router-appliance)、および DirectLink ピアリングを使用して、ワークロードへの接続の計画 (ネットワーク・アドレス変換、仮想プライベート・ネットワーク、ルーティング) を立てます。
 - Cross-vCenter NSX を実装する場合は、ローカル・ワークロードをデプロイする前に、ローカル・セグメントの ID 範囲が重複していないことを確認してください。
 
@@ -107,7 +107,7 @@ subcollection: vmwaresolutions
 - アラート・インフラストラクチャー。SMTP サーバーの構成、および必要に応じてショート・メッセージ・サービス (SMS) ゲートウェイの構成を含みます。
 - ホスト、ドライブ、管理ソフトウェア、およびネットワークのプロアクティブなモニタリング。
 - vSAN のモニタリング (該当する場合)。
-- キャパシティーのモニタリングと計画。 {{site.data.keyword.vmwaresolutions_short}} コンソールから、[クラスターの追加および削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)、および[インスタンスにホストの追加または削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)を行えます。
+- キャパシティーのモニタリングと計画。 {{site.data.keyword.vmwaresolutions_short}} コンソールから、[クラスターの追加および削除](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)、および[インスタンスにホストの追加または削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)を行えます。
 - バックアップ・インフラストラクチャーとバックアップ・ジョブのモニタリング。
 
 ## ビジネスの継続性と可用性

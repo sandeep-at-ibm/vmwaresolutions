@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -22,7 +22,7 @@ subcollection: vmwaresolutions
 * Platform Services Controller (PSC) を組み込んだ vCenter Server は、vSphere 環境を管理するための中央プラットフォームで、このソリューションの基本的なコンポーネントの 1 つです。
 * このソリューションでは PSC を使用して、VMware vCenter のシングル・サインオン、ライセンス・サービス、ルックアップ・サービス、VMware 認証局など、一連のインフラストラクチャー・サービスを提供します。
 
-この設計では、vCenter Server インスタンスに統合した PSC 機能を使用します。PSC と vCenter Server は同じ仮想マシン (VM) に配置されます。
+この設計では、vCenter Server インスタンスに統合した PSC 機能を使用します。 PSC と vCenter Server は同じ仮想マシン (VM) に配置されます。
 
 図 1. インフラストラクチャー管理</br>
 ![インフラストラクチャー管理](vcsv4radiagrams-ra-inframgmt.svg)
@@ -32,7 +32,7 @@ subcollection: vmwaresolutions
 ## vCenter Server の設計
 {: #design_infrastructuremgmt-vcenter}
 
-PSC を組み込んだ vCenter Server は、管理 VM と関連付けられたプライベート VLAN のポータブル・サブネット上にインストールされます。そのデフォルト・ゲートウェイは、その特定のサブネットの BCR に割り当てられた IP アドレスに設定されます。 仮想アプライアンスは、次の表の仕様を使って構成されます。
+PSC を組み込んだ vCenter Server は、管理 VM と関連付けられたプライベート VLAN のポータブル・サブネット上にインストールされます。 そのデフォルト・ゲートウェイは、その特定のサブネットの BCR に割り当てられた IP アドレスに設定されます。 仮想アプライアンスは、次の表の仕様を使って構成されます。
 
 表 1. vCenter Server アプライアンスの仕様
 
@@ -82,11 +82,13 @@ CPU の機能が異なる可能性のあるクラスター・ノード間で vMo
 ### IBM CloudDriver
 {: #design_infrastructuremgmt-cloud-driver}
 
-こうしたソリューションの基礎になっているのが自動処理です。自動処理によってデプロイメントの複雑さが解消され、デプロイメント時間が大幅に短縮され、VMware インスタンスが一貫した方法でデプロイされるようになります。
+こうしたソリューションの基礎になっているのが自動処理です。 自動処理によってデプロイメントの複雑さが解消され、デプロイメント時間が大幅に短縮され、VMware インスタンスが一貫した方法でデプロイされるようになります。
 
-IBM CloudBuilder は、一時的な {{site.data.keyword.cloud_notm}} VM 仮想サーバー・インスタンス (VSI) です。新しい VMware インスタンスを起動して、ライフサイクル管理機能を実行する、という役割を果たします。それは、全体的な vCenter Server インスタンス管理が必要になるとデプロイされ、そのプロセスが完了すると破棄されます。
+IBM CloudBuilder は、一時的な {{site.data.keyword.cloud_notm}} VM 仮想サーバー・インスタンス (VSI) です。新しい VMware インスタンスを起動して、ライフサイクル管理機能を実行する、という役割を果たします。 それは、全体的な vCenter Server インスタンス管理が必要になるとデプロイされ、そのプロセスが完了すると破棄されます。
 
-{{site.data.keyword.cloud_notm}} オブジェクト・ストレージをメッセージ・キューとして使用し、パブリック・ネットワーク接続かオプションのプライベート・ネットワーク接続によって {{site.data.keyword.vmwaresolutions_short}} 管理インフラストラクチャーと通信できるように IBM CloudDriver を構成できます。IBM CloudDriver は IBM が開発したコンポーネントで、お客様がアクセスすることはできません。以下の属性や機能があります。
+IBM CloudDriver は、ホスト、クラスター、アドオン・サービスを VMware インスタンスに追加するなどの Day 2 Operations (運用開始後の操作) で必要になった場合にデプロイされる一時的な {{site.data.keyword.cloud_notm}} VM 仮想サーバー・インスタンス (VSI) です。
+
+CloudBuilder および CloudDriver は、プライベート・メッセージ・キューを経由して IBM 管理プレーンに接続しているプライベート・ネットワークにのみデプロイされます。これらは IBM が開発したコンポーネントであり、ユーザーは利用できません。以下の属性や機能があります。
 
 - ユーザー・アカウントに属する vCenter Server インスタンスのデプロイメントと構成。
 - vCenter Server クラスターでのホストの追加と削除。
@@ -112,9 +114,9 @@ IBM CloudBuilder は、一時的な {{site.data.keyword.cloud_notm}} VM 仮想�
 ## ID とパスワード
 {: #design_infrastructuremgmt-ids-pwd}
 
-vCenter Server に含まれているすべての ID とパスワードが {{site.data.keyword.cloud_notm}} 管理面で暗号化され、IC4V 管理インフラストラクチャーに保管されます。ユーザーがそのパスワードを変更すると、vCenter Server の自動処理機能が中断することがあります。
+vCenter Server に含まれているすべての ID とパスワードが {{site.data.keyword.cloud_notm}} 管理面で暗号化され、IC4V 管理インフラストラクチャーに保管されます。 ユーザーがそのパスワードを変更すると、vCenter Server の自動処理機能が中断することがあります。
 
-自動処理を中断なしで進めるために、変更したパスワードを IC4V ソリューション・ポータルで指定できます。そのソリューション・ポータルで、入力したパスワードの確認を行うこともできます。
+自動処理を中断なしで進めるために、変更したパスワードを IC4V ソリューション・ポータルで指定できます。 そのソリューション・ポータルで、入力したパスワードの確認を行うこともできます。
 
 ## 関連リンク
 {: #design_infrastructuremgmt-related}

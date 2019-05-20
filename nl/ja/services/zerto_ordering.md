@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-04-09"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -37,13 +37,18 @@ Zerto on {{site.data.keyword.cloud}} サービスを注文するには、その�
 保守モードの ESXi サーバーを持つ vCenter Server インスタンスに Zerto for {{site.data.keyword.cloud_notm}} を追加する場合は、Zerto Virtual Manager (ZVM) コンソールと事前定義済みの Zerto Virtual Replication Appliance (VRA) IP アドレスを使用して、VRA 仮想マシン (VM) を手動でデプロイする必要があります。
 {:note}
 
+## プライベート専用インスタンスでの Zerto on IBM Cloud の注文
+{: #zerto_ordering-private-only}
+
+Zerto on {{site.data.keyword.cloud_notm}} をプライベート専用インスタンスに追加する場合は、以下の要件を満たしてください。
+* インターネットに接続するにはお客様が独自のプロキシー・サーバーをセットアップする必要があります。詳しくは、[パブリック・ネットワーク接続](/docs/services/vmwaresolutions/services?topic=vmware-solutions-design_virtualinfrastructure#public-network-connectivity)を参照してください。
+* Zerto のコール・ホーム機能を構成する必要もあります。Zerto のコール・ホームについて詳しくは、[Zerto Reporting for Enterprise environments (Call Home)](https://www.zerto.com/myzerto/knowledge-base/zerto-reporting-for-enterprise-environments-call-home/){:new_window} を参照してください。
+
 ## 関連リンク
 {: #zerto_ordering-related}
 
 * [Zerto on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)
 * [Zerto on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingzertodr)
-* [vCenter Server インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
-* [vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
 * [Zerto on {{site.data.keyword.cloud_notm}} 用マネージド・サービスの要求](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
 * [zerto.com Web サイト](https://www.zerto.com){:new_window}
 * [Zerto 技術資料](https://www.zerto.com/myzerto/technical-documentation/){:new_window}

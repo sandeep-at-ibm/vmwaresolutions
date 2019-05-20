@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-12"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -19,7 +19,7 @@ subcollection: vmwaresolutions
 
 vSphere Web Client に接続しようとすると、次のタイムアウト・エラーが表示されることがあります。
 
-`The server at <IP_address> is taking too long to respond.`
+`<IP_address> のサーバーの応答に時間がかかりすぎています。(The server at <IP_address> is taking too long to respond.)`
 
 ## 解決方法
 {: #trbl_timeout_vc_console-resolution}

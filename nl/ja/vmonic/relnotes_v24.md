@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-06-22"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -55,7 +55,7 @@ V2.4 リリースから、VMware Cloud Foundation on {{site.data.keyword.cloud_n
 * Dual Intel Skylake Xeon Gold 5120 プロセッサー / 合計 28 コア、2.2 GHz
 * Dual Intel Skylake Xeon Gold 6140 プロセッサー / 合計 36 コア、2.3 GHz
 
-詳しくは、[新規 vSphere クラスターの注文](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances#bare-metal-server-settings)の『*ベアメタル・サーバーの設定*』セクションを参照してください。
+詳しくは、[ベア・メタル・サーバーの設定](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vs_orderinginstances#vs_orderinginstances-bare-metal-settings)を参照してください。
 
 ## VMware vCenter Server インスタンスの更新
 {: #relnotes_v24-vcs}
@@ -63,7 +63,7 @@ V2.4 リリースから、VMware Cloud Foundation on {{site.data.keyword.cloud_n
 ### ネットワーク・ファイル・システムのパフォーマンスの強化
 {: #relnotes_v24-nfs}
 
-ワークロードが非常に大きいタイプの処理に合わせて設計されている 10 IOPS/GB のパフォーマンス・レベルが、特定の {{site.data.keyword.CloudDataCent_notm}}に制限されずに、すべてのデータ・センターで利用できるようになりました。 詳しくは、[vCenter Server の概要](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#technical-specifications-for-vcenter-server-instances)の『*ストレージ*』セクションを参照してください。
+ワークロードが非常に大きいタイプの処理に合わせて設計されている 10 IOPS/GB のパフォーマンス・レベルが、特定の {{site.data.keyword.CloudDataCent_notm}}に制限されずに、すべてのデータ・センターで利用できるようになりました。 詳しくは、[ストレージ](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#vc_vcenterserveroverview-storage)を参照してください。
 
 ## アドオン・サービスの更新
 {: #relnotes_v24-services}

@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-08-30"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -63,7 +63,7 @@ V2.5 リリースから、{{site.data.keyword.vmwaresolutions_short}} は IBM Id
 
 詳しくは、以下のトピックを参照してください。
 * [サービスとリソースにアクセスするようにユーザーを招待する](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-iamuserinvite)
-* [IAM でのユーザー・アクセス権限の管理](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-access-with-iam)
+* [IAM でのユーザー・アクセス権限の管理](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-iam#iam)
 
 ## VMware vCenter Server および VMware Cloud Foundation インスタンスのためのユーザー・アカウントとグループへの変更
 {: #relnotes_v25-user-acct}

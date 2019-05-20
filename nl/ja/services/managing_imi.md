@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -16,9 +16,9 @@ subcollection: vmwaresolutions
 
 {{site.data.keyword.IBM}} Integrated Managed Infrastructure (IMI) は、モジュラー・サービスを使用して VMware 仮想インフラストラクチャーの管理を簡素化できます。 IMI は、高度な自動化と分析を使用して世界中の重要なインフラストラクチャー・コンポーネントを管理し、広範囲の従来型仮想インフラストラクチャーとクラウド仮想インフラストラクチャーに動的リモート管理サービスを提供します。
 
-IMI は、VMware Cloud Foundation 環境と VMware vCenter Server 環境を単一画面で扱えるマネージド・サービスを提供する、単一のトラステッド・プロバイダーとして機能して、仮想 IT インフラストラクチャーをモニターして管理するときの負担を軽減します。
+IMI は、VMware vCenter Server 環境を単一画面で扱えるマネージド・サービスを提供する、単一のトラステッド・プロバイダーとして機能して、仮想 IT インフラストラクチャーをモニターして管理するときの負担を軽減します。
 
-IMI は、Cloud Foundation インスタンスと vCenter Server インスタンス用のマネージド・サービスを提供します。 これらのマネージド・サービスには、高度な VMware vSphere 管理、可用性が高くセキュアな仮想ネットワーク・インフラストラクチャーを維持するための VMware NSX による包括的なサポート、データの可用性を確保するための VMware vSAN モニターが含まれます。
+IMI は、vCenter Server インスタンス用のマネージド・サービスを提供します。 これらのマネージド・サービスには、高度な VMware vSphere 管理、可用性が高くセキュアな仮想ネットワーク・インフラストラクチャーを維持するための VMware NSX による包括的なサポート、データの可用性を確保するための VMware vSAN モニターが含まれます。
 
 ## IMI の技術仕様
 {: #managing_imi-specs}

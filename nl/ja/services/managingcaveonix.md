@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-12"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -26,7 +26,7 @@ Caveonix RiskForesight on {{site.data.keyword.cloud}} サービスを管理す�
 1. IBM Cloud インフラストラクチャー VPN またはジャンプ・サーバーを使用して、Caveonix RiskForesight 仮想マシン (VM) の IP アドレスへのアクセスを許可します。 この IP アドレスは、{{site.data.keyword.vmwaresolutions_short}} コンソールの Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} のサービスの詳細ページで調べることができます。 具体的には、以下のようにします。
    1. {{site.data.keyword.cloud_notm}} インフラストラクチャー・カスタマー・ポータルから VPN パスワードを作成します。
    2. {{site.data.keyword.cloud_notm}} インフラストラクチャー VPN 資格情報を使用して、データ・センターの VPN ポータルにログインします。
-   3. ローカル・コンピューターから、IP アドレスとホスト名のマッピングを `hosts` ファイルに追加します。以下のフォーマットを使用します。
+   3. ローカル・コンピューターから、IP アドレスとホスト名のマッピングを `hosts` ファイルに追加します。 以下のフォーマットを使用します。
 
       ```javascript
       RiskForesight_VM_IP_Address      RiskForesight_FQDN

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-28"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -22,7 +22,7 @@ vCenter Server on {{site.data.keyword.cloud}} with NSX-T インスタンスの�
 {: #vc_nsx-t_networkingonvcenterserver-networking-components}
 {: faq}
 
-vCenter Server with NSX-T インスタンス内に組み込まれているネットワーキング・コンポーネントを確認するには、[vCenter Server with NSX-T インスタンスの技術仕様](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_overview-specs)を参照してください。
+vCenter Server with NSX-T インスタンス内に組み込まれているネットワーキング・コンポーネントを確認するには、[vCenter Server with NSX-T インスタンスの技術仕様](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_overview#vc_nsx-t_overview-specs)を参照してください。
 
 ## ファイアウォールに関する考慮事項
 {: #vc_nsx-t_networkingonvcenterserver-firewall-considerations}

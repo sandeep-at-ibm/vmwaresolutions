@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -20,7 +20,7 @@ subcollection: vmwaresolutions
 
 {{site.data.keyword.IBM}} Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} サービスは、仮想環境のデータ保護、データ再使用、データ・リカバリーのための効率的でスケーラブルなソリューションを提供します。 サービスをスタンドアロン・ソリューションとして実装することも、お客様の IBM Spectrum Protect 環境と統合して長期保管とデータ・ガバナンスのためにコピーをオフロードすることもできます。
 
-このサービスは、vSphere 6.5 を実行する、V2.2 以降でデプロイまたは V2.2 以降にアップグレードされたインスタンスでのみ利用できます。 現在インストールされている {{site.data.keyword.IBM}} Spectrum Protect Plus のバージョンは V10.1.2 です。
+このサービスは、vSphere 6.5 を実行する、V2.2 以降でデプロイまたは V2.2 以降にアップグレードされたインスタンスでのみ利用できます。 現在インストールされている {{site.data.keyword.IBM}} Spectrum Protect Plus のバージョンは V10.1.3 です。
 {:note}
 
 ## IBM Spectrum Protect Plus on IBM Cloud の技術仕様

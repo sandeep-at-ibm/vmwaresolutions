@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -38,8 +38,7 @@ IBM Multi-Cluster Manager は、複数のクラウドおよびクラスターに
 
 {{site.data.keyword.icpfull_notm}} は、NSX-V または NSX-T コンポーネントとともにデプロイできます。 NSX-V とともに {{site.data.keyword.icpfull_notm}} をデプロイすると、VXLAN ネットワーク上で {{site.data.keyword.icpfull_notm}} VM を実行して Kubernetes Calico 内部ネットワーキングを使用できるようになります。
 
-NSX-T とともに {{site.data.keyword.icpfull_notm}} をデプロイすると、ユーザーはネットワーキング、サブネット、ポリシーを中央 UI (NSX-T Manager) から制御および構成できるようになります。 NSX-V と NSX-T の違いについては、[{{site.data.keyword.cloud_notm}} VCS ネットワーキング・リファレンス・アーキテクチャー](/docs/services/vmwaresolutions/archiref/
-vcsnsxt/vcsnsxt-intro.html) を参照してください。
+NSX-T とともに {{site.data.keyword.icpfull_notm}} をデプロイすると、ユーザーはネットワーキング、サブネット、ポリシーを中央 UI (NSX-T Manager) から制御および構成できるようになります。 NSX-V と NSX-T の違いについて詳しくは、[{{site.data.keyword.cloud_notm}} VCS ネットワーキング・リファレンス・アーキテクチャー](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsnsxt-intro#vcsnsxt-intro)を参照してください。
 
 ## オンプレミスのクラウド管理プラットフォーム
 {: #vcsiks-arch-overview-on-premises}
@@ -56,4 +55,4 @@ vcsnsxt/vcsnsxt-intro.html) を参照してください。
 ## 関連リンク
 {: #vcsiks-arch-overview-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-hybridity-intro#vcs-hybridity-intro)

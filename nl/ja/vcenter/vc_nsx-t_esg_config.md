@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-21"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -41,7 +41,7 @@ vCenter Server with NSX-T インスタンスの注文プロセスの中で、以
 1. VM のネットワーク・アダプターにワークロード論理スイッチを設定します。
    1. **「新規仮想マシン」**ダイアログ・ボックスで、**「ハードウェアのカスタマイズ」**タブをクリックします。
    2. **「新規デバイス」**メニューで、**「ネットワーク」**を選択し、**「追加」**をクリックします。
-   3. 新しく追加されたネットワーク・アダプターで、メニューからワークロード・オーバーレイ論理スイッチを選択します。サンプルのスイッチの名前は **overlay-ls** です。
+   3. 新しく追加されたネットワーク・アダプターで、メニューからワークロード・オーバーレイ論理スイッチを選択します。 サンプルのスイッチの名前は **overlay-ls** です。
 
    **「ワークロード・トランジット」**スイッチを選択しないようにしてください。
    {:important}
@@ -58,19 +58,19 @@ vCenter Server with NSX-T インスタンスの注文プロセスの中で、以
 ## SNAT ルールの有効化
 {: #vc_nsx-t_esg_config-procedure-enable-snat-rule}
 
-NSX-T では、デフォルトで SNAT ルールが有効になります。既存のルールの変更については、[Configure Source and Destination NAT on a Tier-0 Logical Router](https://docs.vmware.com/en/VMware-NSX-T-Data-Center/2.4/administration/GUID-45949ACD-9029-4674-B29C-C2EABEB39E1D.html){:new_window} を参照してください。
+NSX-T では、デフォルトで SNAT ルールが有効になります。 既存のルールの変更については、[Configure Source and Destination NAT on a Tier-0 Logical Router](https://docs.vmware.com/en/VMware-NSX-T-Data-Center/2.4/administration/GUID-45949ACD-9029-4674-B29C-C2EABEB39E1D.html){:new_window} を参照してください。
 
 ## カスタマー・サブネットの詳細を指定する手順
 {: #vc_nsx-t_esg_config-procedure-identify-customer-subnets-details}
 
-論理ルーター **Customer-T1-LR** と **Customer-T0-LR** も、エッジ **cust-nsx-edge0** と **cust-nsx-edge1** もお客様用として用意されているので、お客様の側で変更して、インバウンド・トラフィックやアウトバウンド・トラフィックに関する NAT ルールをさらに定義できるようになっています。それらのルールでは、自動的に注文されたパブリックまたはプライベートのカスタマー・サブネットの IP アドレスだけを使用する必要があります。
+論理ルーター **Customer-T1-LR** と **Customer-T0-LR** も、エッジ **cust-nsx-edge0** と **cust-nsx-edge1** もお客様用として用意されているので、お客様の側で変更して、インバウンド・トラフィックやアウトバウンド・トラフィックに関する NAT ルールをさらに定義できるようになっています。 それらのルールでは、自動的に注文されたパブリックまたはプライベートのカスタマー・サブネットの IP アドレスだけを使用する必要があります。
 
 注文された IP アドレスを使用するためにカスタマー・サブネットの詳細を確認するには、NSX-T Web Client で以下の手順を実行します。
 
 1. **「拡張ネットワーキングとセキュリティー (Advanced Networking & Security)」**タブをクリックします。
 2. 左側のペインで**「ファブリック」**をクリックし、ドロップダウン・リストから**「ノード」**を選択します。
 3. そのタブで**「エッジ・トランスポート・ノード (Edge Transport Nodes)」**を選択します。
-4. いずれかのカスタマー・エッジをクリックします。例えば、**cust-nsx-edge0** です。パブリックとプライベートのカスタマー・サブネットが**「説明」**フィールドに表示されます。
+4. いずれかのカスタマー・エッジをクリックします。 例えば、**cust-nsx-edge0** です。 パブリックとプライベートのカスタマー・サブネットが**「説明」**フィールドに表示されます。
 
 また、{{site.data.keyword.slportal}}で以下の手順を実行して、カスタマー・サブネットについてのさらに詳しい情報を得ることができます。
 

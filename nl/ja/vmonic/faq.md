@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -27,7 +27,7 @@ subcollection: vmwaresolutions
 
 * **IBMid アカウント**。 {{site.data.keyword.vmwaresolutions_short}} コンソールにアクセスするためには、このアカウントが必要です。 このコンソールは、{{site.data.keyword.slportal}}とは別のスタンドアロンのユーザー・インターフェースです。 詳しくは、[概説](/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started)を参照してください。
 * **{{site.data.keyword.cloud_notm}} アカウント**。 プロビジョニングにはこのアカウントが必要です。 {{site.data.keyword.cloud_notm}} アカウントを登録するには、既存の **IBMid** を使用するか、新しい **IBMid** を作成します。
-* **{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウント**。 このアカウントは以前は **IBM SoftLayer** アカウントと呼ばれていたもので、インフラストラクチャー製品とサービスを管理するための複数の追加機能を提供する {{site.data.keyword.cloud_notm}} インフラストラクチャー・カスタマー・ポータルへのログインにはこのアカウントを使用します。 {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントは、**{{site.data.keyword.cloud_notm}} アカウント**を従量課金 (PAYG) タイプのアカウントにアップグレードすることにより、または既存の {{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントを {{site.data.keyword.cloud_notm}} アカウントにリンクすることにより取得できます。 使用する {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントは特定の要件を満たしている必要があります。 詳しくは、[必要なアカウントの登録](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)および [{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの要件](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)を参照してください。
+* **{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウント**。 このアカウントを使用して、インフラストラクチャー製品とサービスを管理するためのいくつかの追加の機能を提供する、{{site.data.keyword.cloud_notm}} インフラストラクチャー・カスタマー・ポータルにログインします。 {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントは、**{{site.data.keyword.cloud_notm}} アカウント**を従量課金 (PAYG) タイプのアカウントにアップグレードすることにより、または既存の {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントを {{site.data.keyword.cloud_notm}} アカウントにリンクすることにより取得できます。 使用する {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントは特定の要件を満たしている必要があります。 詳しくは、[必要なアカウントの登録](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)および [{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの要件](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)を参照してください。
 
 ## IBM Cloud インフラストラクチャーの資格情報を IBM Cloud for VMware Solutions コンソールに関連付けるにはどうすればよいですか?
 {: #faq-associate-credentials}
@@ -85,10 +85,7 @@ VMware vSphere DRS (Distributed Resource Scheduler) と VMware HA (High Availabi
 {: #faq-rename-cluster}
 {: faq}
 
-vCenter Server インスタンスの場合、デプロイ時に作成される最初のクラスターのデフォルト名は **cluster1** です。 VMware vSphere Client でデフォルト・クラスターの名前を変更できます。 vCenter Server インスタンスにクラスターを追加するときに、{{site.data.keyword.vmwaresolutions_short}} コンソールで任意の名前を指定できます。
-
-Cloud Foundation インスタンスの場合、デフォルトのクラスター名は変更できません。
-{:note}
+新規 vCenter Server インスタンスの場合、デプロイ時に作成される最初のクラスターのデフォルト名は **cluster1** です。VMware vSphere Client でデフォルト・クラスターの名前を変更できます。 vCenter Server インスタンスにクラスターを追加するときに、{{site.data.keyword.vmwaresolutions_short}} コンソールで任意の名前を指定できます。
 
 ## パッチはどのように管理されていますか?
 {: #faq-patches}
@@ -96,17 +93,7 @@ Cloud Foundation インスタンスの場合、デフォルトのクラスター
 
 IBM は、IBM CloudDriver 仮想サーバー・インスタンス (VSI) をオンデマンドでデプロイすることで、IBM コードの継続的な更新を提供しています。 Zerto on {{site.data.keyword.cloud_notm}} や Veeam on {{site.data.keyword.cloud_notm}} などのアドオン・サービスについては、継続的な更新を提供していません。 これらの更新は、お客様が入手してインストールしてください。
 
-VMware の更新は、インスタンスのタイプに応じて異なる方法で適用されます。
-
-### VMware Cloud Foundation インスタンス
-{: #faq-patches-cf}
-
-vSphere ESXi、NSX、vCenter、Platform Services Controller、および SDDC Manager コンポーネントの更新が、{{site.data.keyword.vmwaresolutions_short}} コンソールから提供されます。
-
-### VMware vCenter Server インスタンス
-{: #faq-patches-vcs}
-
-V2.1 以上でデプロイされたインスタンス、または V2.1 以上にアップグレードしたインスタンスの場合、新しくデプロイされる ESXi サーバーとクラスターには、VMware から提供される新しい (最新とは限りません) ESXi 更新が適用されます。
+V2.1 以上でデプロイされた VMware vCenter Server インスタンスまたは V2.1 以上にアップグレードされた VMware vCenter Server インスタンスの場合、新しくデプロイされる ESXi サーバーとクラスターには、VMware から提供される新しい (最新とは限りません) ESXi 更新が適用されます。
 
 新しくデプロイした ESXi サーバーとクラスターに、必要な最新の更新がすべて適用されていることを確認する作業を含め、VMware コンポーネントのその他のすべての更新はお客様が行ってください。
 {:important}
@@ -134,7 +121,7 @@ V2.0 以上でデプロイしたインスタンスの場合は、VMware Update M
 
 ユーザー管理の NSX Edge はパブリック VLAN に接続されますが、セキュリティーのリスクが生じないようにセキュリティー対策が適用されます。 以下のセキュリティー対策が適用されます。
 *  プライベート・サブネット範囲の IP アドレスからの発信トラフィックだけを許可するようにファイアウォール・ルールが適用されます。
-*  プライベート・サブネットのすべての IP アドレスをパブリック・サブネット上の単一の IP アドレスに変換するように SNAT (送信元ネットワーク・アドレス変換) ルール (デフォルトでは無効) が適用されます。
+*  プライベート・サブネットのすべての IP アドレスをパブリック・サブネット上の単一の IP アドレスに変換するように SNAT ルール (デフォルトでは無効) が適用されます。
 *  ユーザー管理の NSX Edge アプライアンスのリモート・アクセスは無効になっています。
 *  プライベート・ネットワークからユーザー管理の NSX Edge にアクセスするためのパスワードはランダム化され、暗号化されます。
 
@@ -160,7 +147,7 @@ V2.0 以上でデプロイしたインスタンスの場合は、VMware Update M
 {: #faq-vss-automation}
 {: faq}
 
-いいえ。VMware vSphere on {{site.data.keyword.cloud_notm}} では、Cloud Foundation および vCenter Server プラットフォームに含まれる高度な自動化機能は使用されません。 注文内容に基づいて、プラットフォームから、オプションの VMware ライセンス、ESXi サーバー、オプションで FortiGate 物理ファイアウォールの HA ペアが用意されます。 新規クラスターが作成されると、3 つの新規 VLAN (パブリック VLAN 1 つ、プライベート VLAN 2 つ) もプロビジョンされます。
+いいえ。VMware vSphere on {{site.data.keyword.cloud_notm}} では、vCenter Server プラットフォームの高度な自動化機能は使用されません。注文内容に基づいて、プラットフォームから、オプションの VMware ライセンス、ESXi サーバー、オプションで FortiGate 物理ファイアウォールの HA ペアが用意されます。 新規クラスターが作成されると、3 つの新規 VLAN (パブリック VLAN 1 つ、プライベート VLAN 2 つ) もプロビジョンされます。
 
 VMware ESXi は各ベア・メタル・サーバーに自動的にインストールされますが、vCenter Server や NSX などの追加の VMware コンポーネントのインストールはお客様が行ってください。 vSphere on {{site.data.keyword.cloud_notm}} は、選択された VMware コンポーネントに基づいて VMware 互換ハードウェアを注文することを保証しますが、VMware 環境の構成と機能を自動実行しません。 IBM でホストされる環境を設計して構築する作業は、お客様が行ってください。
 

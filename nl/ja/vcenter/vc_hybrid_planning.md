@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-20"
+lastupdated: "2019-04-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -93,7 +93,7 @@ vCenter Server with Hybridity Bundle インスタンスには VMware Hybrid Clou
   * **秘密鍵**: CA 証明書の秘密鍵を入力します。
   * (オプション) **パスワード**: 秘密鍵が暗号化されている場合は、秘密鍵のパスワードを入力します。
   * (オプション) **パスワードの再入力**: 秘密鍵のパスワードをもう一度入力します。
-  * (オプション) **ホスト名**: CA 証明書の共通名 (CN) にマップするホスト名を入力します。 HCX on {{site.data.keyword.cloud_notm}} には、NSX Edge で受け入れられる形式の CA 証明書を使用する必要があります。 NSX Edge の証明書の形式について詳しくは、[SSL 証明書のインポート](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html)を参照してください。
+  * (オプション) **ホスト名**: CA 証明書の共通名 (CN) にマップするホスト名を入力します。 HCX on {{site.data.keyword.cloud_notm}} には、NSX Edge で受け入れられる形式の CA 証明書を使用する必要があります。 NSX Edge の証明書の形式について詳しくは、[SSL 証明書のインポート](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html)を参照してください。
 
 それぞれのニーズに基づいて、インスタンスの他のアドオン・サービスを注文できます。例えば、災害復旧などがあります。 詳しくは、[vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)を参照してください。
 

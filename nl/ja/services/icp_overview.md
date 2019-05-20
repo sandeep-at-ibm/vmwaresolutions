@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-04-26"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,11 +18,13 @@ subcollection: vmwaresolutions
 # IBM Cloud Private Hosted の概要
 {: #icp_overview}
 
-{{site.data.keyword.cloud}} Private Hosted サービスは、自動的に {{site.data.keyword.cloud_notm}} Private Hosted を VMware vCenter Server インスタンスにデプロイします。 このサービスは、マイクロサービスとコンテナーの機能を {{site.data.keyword.cloud_notm}} 上の VMware 環境で利用できるようにします。 このサービスを利用することで、使い慣れたオンプレミスの VMware と {{site.data.keyword.cloud_notm}} Private の操作モデルとツールを、{{site.data.keyword.cloud_notm}} に拡張できます。
+{{site.data.keyword.cloud}} Private Hosted サービスは、自動的に {{site.data.keyword.cloud_notm}} Private Hosted および {{site.data.keyword.cloud_notm}} Automation Manager を VMware vCenter Server インスタンスにデプロイします。 このサービスは、マイクロサービスとコンテナーの機能を {{site.data.keyword.cloud_notm}} 上の VMware 環境で利用できるようにします。 このサービスを利用することで、使い慣れたオンプレミスの VMware と {{site.data.keyword.cloud_notm}} Private の操作モデルとツールを、{{site.data.keyword.cloud_notm}} に拡張できます。
 
 このサービスは次のインスタンスで使用できます。
-* V2.5 以降にデプロイ、または V2.5 以降にアップグレードされた vCenter Server インスタンス
-* V2.7 以降にデプロイ、または V2.7 以降にアップグレードされた vCenter Server with Hybridity Bundle インスタンス
+* V2.7 以降でデプロイ (または V2.7 以降にアップグレード) された vCenter Server with Hybridity Bundle インスタンス
+* V2.5 以降でデプロイ (または V2.5 以降にアップグレード) された vCenter Server インスタンス
+
+V3.0 以降でデプロイ (または V3.0 以降にアップグレード) されたインスタンスの場合、{{site.data.keyword.cloud_notm}} Automation Manager も {{site.data.keyword.cloud}} Private Hosted サービスの注文の一部としてデプロイされます。
 {:note}
 
 ## IBM Cloud Private Hosted の技術仕様
@@ -53,7 +55,6 @@ subcollection: vmwaresolutions
 | ワーカー     | 4 | 16 | 200 | 300 | 6 |
 | Vulnerability Advisor | 8 | 16 | 500 | 1 | 1 |
 | GlusterFS  | 8 | 16 | 150 | 50 | 3 |
-| ブートストラップ {{site.data.keyword.icpfull_notm}}/CAM | 24 | 44 | 250 | 1 | 1 |
 | NFS サーバー | 8 | 4  | 350 | 1 | 1 |
 | NSX Edge Services Gateway | 2 | 1 | 0.5 | 0.5 | 2 |
 | 文書化された制約 | 52 | 640 |  | 8,000 |   |
@@ -69,7 +70,6 @@ subcollection: vmwaresolutions
 | ワーカー     | 4 | 16 | 200 | 300 | 3 |
 | Vulnerability Advisor | 8 | 16 | 150 | 1 | 1 |
 | GlusterFS  | 8 | 16 | 150 | 50 | 3 |
-| ブートストラップ {{site.data.keyword.icpfull_notm}}/CAM | 24 | 44 | 250 | 1 | 1 |
 | NFS サーバー | 8 | 4  | 350 | 1 | 1 |
 | NSX Edge Services Gateway | 2 | 1 | 0.5 | 0.5 | 2 |
 | 文書化された制約 | 30 | 200 |  | 4,000 |  |
@@ -88,13 +88,13 @@ IBM Cloud Private および管理オーバーヘッドのスペース所要量�
 
 | 変数	| 説明 |	単位 |	vSAN の例 | NFS の例 |
 |:--------- |:----------- |:---- |:------------- |:----------- |
-| AvailableCores |	環境内のワークロードとサービスに使用可能な実際のコア数 |	コア |	38	| 43 |
-| HostCount	| デフォルト・クラスター内のホストの数	| ホスト | 4	| 4 |
-| HostCoreCount	| デフォルト・クラスター内の各ホストで使用可能なロー・コアの数 |	コア |	16 | 16 |
-| HostOverheadCores	| ESXi サーバーによってオーバーヘッドとして予約されているコアの数 (0.1 コア)	| コア	| 0.1 |	0.1 |
-| MgmtOverheadCores | vCenter Server 管理コンポーネント (vCenter Server、PSC、AD/DNS、Edge) によって予約されているコアの数 (5 コア)	| コア	| 5	| 5 |
-| vSphereHAHostTolerance |	vSphere HA 構成で許容されるホストの数 (1 ホスト) |	ホスト	 | 1 | 1 |
-| HostVsanOverheadCorePercentage | vSAN で使用するホストのコアの割合 (10%。ホストが vSAN でない場合は 0%) | % | 10% |	0% |
+| AvailableCores | 環境内のワークロードとサービスに使用可能な実際のコア数 | コア | 38 | 43 |
+| HostCount | デフォルト・クラスター内のホストの数 | ホスト | 4 | 4 |
+| HostCoreCount | デフォルト・クラスター内の各ホストで使用可能なロー・コアの数 | コア | 16 | 16 |
+| HostOverheadCores | ESXi サーバーによってオーバーヘッドとして予約されているコアの数 (0.1 コア) | コア | 0.1 | 0.1 |
+| MgmtOverheadCores | vCenter Server 管理コンポーネント (vCenter Server、PSC、AD/DNS、Edge) によって予約されているコアの数 (5 コア) | コア | 5 | 5 |
+| vSphereHAHostTolerance | vSphere HA 構成で許容されるホストの数 (1 ホスト) |	ホスト	 | 1 | 1 |
+| HostVsanOverheadCorePercentage | vSAN で使用するホストのコアの割合 (10%。ホストが vSAN でない場合は 0%) | % | 10% | 0% |
 
 #### 計算式 2
 {: #icp_overview-formulas-2}
@@ -118,19 +118,22 @@ IBM Cloud Private および管理オーバーヘッドのスペース所要量�
 ## IBM Cloud Private Hosted をインストールする際の考慮事項
 {: #icp_overview-install}
 
-* {{site.data.keyword.cloud_notm}} Private Hosted サービスをインストールする前に、必要なライセンスを収集してください。ライセンスでは、{{site.data.keyword.cloud_notm}} Private Hosted の初期デプロイメントだけではなく、インフラストラクチャー内の将来の {{site.data.keyword.cloud_notm}} Private Hosted のサイズ拡張もサポートできるようにすることをお勧めします。
-* 実動対応環境の {{site.data.keyword.cloud_notm}} Private Hosted デプロイメントの場合、ホスト 1 台に 64 GB RAM はサポートされません。 そのため、**RAM** に 64 GB より高いオプションを選択する必要があります。
+* {{site.data.keyword.cloud_notm}} Private Hosted サービスをインストールする前に、必要なライセンスを収集してください。 これには、{{site.data.keyword.cloud_notm}} Private および {{site.data.keyword.cloud_notm}} Automation Manager の両方のライセンスが含まれます。それらのライセンスが、サービスの初期デプロイメントだけでなく、将来のインフラストラクチャーのサイズの拡張もサポートしていることを確認してください。
+* 実動対応環境への {{site.data.keyword.cloud_notm}} Private Hosted デプロイメントの場合、ホスト 1 台に 64 GB の RAM はサポートされません。そのため、**RAM** に 64 GB より高いオプションを選択する必要があります。
 * {{site.data.keyword.cloud_notm}} Private Hosted サービスが環境にインストールされる前に、環境内のデフォルト・クラスターの空き容量が検査され、サービス・コンポーネントを収容できるか確認されます。 容量検査に失格した場合、サービスはインストールされず、コンソールのサービス状態が**「容量検査失格 (Capacity Validation Failed)」**に設定されます。 さらに、詳しい情報を示すコンソール・メッセージが表示され、E メールで通知されます。 サービスをインストールするためには、ホストを追加するか、RAM、 CPU、またはディスク・スペースを解放することで、デフォルト・クラスターの容量を増やしてから、もう一度コンソールでサービスを追加してください。 その後で、**「容量検査失格 (Capacity Validation Failed)」**状態の既存のサービスを、その横にある**「削除」**アイコンをクリックして削除できます。
+* 追加のノードをデプロイする場合は、初期の {{site.data.keyword.cloud_notm}} Private Hosted のインストールでデプロイした {{site.data.keyword.cloud_notm}} Private Ubuntu テンプレート (Ubuntu1604) を使用します。このテンプレートを見つけるには、VMware vSphere Web Client で、`cam` フォルダーの下の**「VMs and Templates」**タブに移動します。Ubuntu テンプレートのデフォルト・パスワードは `icponcloud` ですが、テンプレートを使用する前に変更することをお勧めします。
 
 ## IBM Cloud Private Hosted を削除する際の考慮事項
 {: #icp_overview-remove}
 
-* {{site.data.keyword.cloud_notm}} は、{{site.data.keyword.cloud_notm}} Private Hosted サービスの初期インストール時にデプロイされた仮想マシン (VM) のみを削除します。 インストール後にデプロイされたノードはクリーンアップされません。
-* {{site.data.keyword.cloud_notm}} は、{{site.data.keyword.cloud_notm}} Private Hosted サービスの初期デプロイメント時に作成された VXLAN、DLR、およびエッジ・ゲートウェイを削除します。 VXLAN にデプロイされた VM は、{{site.data.keyword.cloud_notm}} Private Hosted サービスの削除が開始すると、接続を失います。
+* {{site.data.keyword.cloud_notm}} Private Hosted サービスの初期インストール時にデプロイされた仮想マシン (VM) だけが削除されます。インストール後にデプロイされたノードはクリーンアップされません。
+* {{site.data.keyword.cloud_notm}} は、{{site.data.keyword.cloud_notm}} Private Hosted の初期デプロイメント時に作成された VXLAN、DLR、およびエッジ・ゲートウェイを削除します。VXLAN にデプロイされた VM は、{{site.data.keyword.cloud_notm}} Private Hosted サービスの削除が開始すると、接続を失います。
 
 ## 関連リンク
 {: #icp_overview-related}
 
-* [IBM Cloud Private Hosted の注文](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_ordering)
-* [vCenter Server および IBM Cloud Private ガイド](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [IBM Cloud Private のチケットをオープン](https://www.ibm.com/mysupport/s/?language=en_US)
+* [{{site.data.keyword.cloud_notm}} Private Hosted の注文](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_ordering)
+* [vCenter Server および {{site.data.keyword.cloud_notm}} Private ガイド](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
+* [{{site.data.keyword.cloud_notm}} Private のチケットをオープン](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
+* [{{site.data.keyword.cloud_notm}} Automation Manager のライセンス](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/licensing.html){:new_window}
+* [{{site.data.keyword.cloud_notm}} Automation Manager のコンポーネント](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/cam_managed_components.html){:new_window}

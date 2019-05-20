@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,10 +18,7 @@ subcollection: vmwaresolutions
 # IBM Cloud インフラストラクチャー・アカウントの要件
 {: #slaccountrequirement}
 
-{{site.data.keyword.vmwaresolutions_full}} を使用してインスタンスを注文するには、{{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントが必要です。 インスタンス内で注文したコンポーネントの費用は、その {{site.data.keyword.cloud_notm}} アカウントに請求されます。
-
-{{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントは、以前は IBM SoftLayer アカウントと呼ばれていました。
-{:note}
+{{site.data.keyword.vmwaresolutions_full}} を使用してインスタンスを注文するには、{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントが必要です。 インスタンス内で注文したコンポーネントの費用は、その {{site.data.keyword.cloud_notm}} アカウントに請求されます。
 
 ## IBM Cloud インフラストラクチャー・アカウントの権限
 {: #slaccountrequirement-permissions}
@@ -46,6 +43,7 @@ subcollection: vmwaresolutions
 | チケットの編集 | この権限は、作成されたサービス・チケットを自動的に編集するときに必要です。 |
 | チケットの表示 | この権限は、{{site.data.keyword.cloud_notm}} インフラストラクチャーのプロビジョニングの遅延や問題についての、インスタンス内のコンポーネントに関連するサービス・チケットをモニターするときに必要です。 |
 | ハードウェアの詳細の表示 | この権限は、注文の確認や自動化構成に必要なハードウェアの詳細を取得するときに必要です。 |
+| リブート/コントロール | この権限は、インスタンスを削除する際に、ハードウェアの取り消しプロセスでハードウェアの電源を切るときに必要です。|
 | ライセンスの表示 | この権限は、インスタンスで使用しているライセンスを取得して確認するときに必要です。 |
 | パスワードの表示 | この許可は注文した VSI を管理するために必要です。 |
 | サーバー・モニタリングの管理 | この権限は、注文を実行するときには不要ですが、インスタンス内で VMware ESXi サーバーを実行している {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}のモニタリング状況を取得して確認するときに必要です。 |
@@ -53,16 +51,16 @@ subcollection: vmwaresolutions
 ## サービス・エンドポイントを有効にした VRF
 {: #slaccountrequirement-vrf-se}
 
-{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントは、サービス・エンドポイントを有効にした Virtual Routing and Forwarding (VRF) アカウントでなければなりません。VRF 以外のアカウントは、VRF アカウントに変換する必要があります。さらに、VRF アカウントでサービス・エンドポイントを使用できるようにすることも必要です。
+{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントは、サービス・エンドポイントを有効にした Virtual Routing and Forwarding (VRF) アカウントでなければなりません。 VRF 以外のアカウントは、VRF アカウントに変換する必要があります。 さらに、VRF アカウントでサービス・エンドポイントを使用できるようにすることも必要です。
 
 詳しくは、以下を参照してください。
 * [IBM Cloud での VRF の概要](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-* [アカウントでサービス・エンドポイントを使用できるようにする方法](/docs/services/service-endpoint?topic=services/service-endpoint-cs_cli_install_steps#cs_cli_install_steps)
+* [アカウントでサービス・エンドポイントを使用できるようにする方法](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
 
 ## VLAN スパンニングのサポート終了
 {: #slaccountrequirement-vlan-eos}
 
-2019 年 8 月から、VLAN スパンニングはサポートされなくなります。2019 年 7 月末までに、{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントを VRF に変換してサービス・エンドポイントを有効にする必要があります。
+2019 年 8 月から、VLAN スパンニングはサポートされなくなります。 2019 年 7 月末までに、{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントを VRF に変換してサービス・エンドポイントを有効にする必要があります。
 {:important}
 
 ## 関連リンク

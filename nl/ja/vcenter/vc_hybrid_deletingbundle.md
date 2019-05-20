@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -110,7 +110,7 @@ Hybridity Bundle を削除する前に、以下の要件を確認してくださ
   * この手順でインストールした BYOL ライセンス・キーのリスト。 該当する場合は、インスタンス名およびクラスター名とともに、vSphere および vSAN クラスターのライセンス・キーを入力します。
   * この手順で削除したレンタル・ライセンス・キーのリスト。 該当する場合は、インスタンス名およびクラスター名とともに、vSphere および vSAN クラスターのライセンス・キーを入力します。
 
-  IBM サポートおよびオペレーション・チームが、{{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントの vCenter 管理レイヤーにアクセスし、レンタル・ライセンスが削除されたことを確認してから、Hybridity Bundle レンタル・ライセンス料金を取り消します。
+  IBM サポートおよびオペレーション・チームが、{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの vCenter 管理レイヤーにアクセスし、レンタル・ライセンスが削除されたことを確認してから、Hybridity Bundle レンタル・ライセンス料金を取り消します。
   {:note}
 
 ## 関連リンク

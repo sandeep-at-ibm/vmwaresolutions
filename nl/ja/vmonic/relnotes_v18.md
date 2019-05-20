@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2017-08-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -60,7 +60,7 @@ V1.8 リリース以降、Cloud Foundation インスタンスを注文する際�
 
 詳しくは、以下のトピックを参照してください。
 * [vCenter Server インスタンスの注文](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [vCenter Server インスタンスのクラスターの追加と表示](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [vCenter Server インスタンスのクラスターの追加、表示、削除](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 
 ### 7 つを超える NFS ファイル共有を追加するためのサポート
 {: #relnotes_v18-nfs}
@@ -69,7 +69,7 @@ V1.8 リリース以降、Cloud Foundation インスタンスを注文する際�
 
  詳しくは、以下のトピックを参照してください。
 * [vCenter Server インスタンスの注文](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [vCenter Server インスタンスのクラスターの追加と表示](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [vCenter Server インスタンスのクラスターの追加、表示、削除](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 
 ### データ・センターの更新
 {: #relnotes_v18-dc}

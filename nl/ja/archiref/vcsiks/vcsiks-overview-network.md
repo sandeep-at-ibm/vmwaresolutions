@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -56,7 +56,7 @@ subcollection: vmwaresolutions
 
 Kubernetes クラスターはそれぞれ、Calico と呼ばれるネットワーク・プラグインを使用してセットアップされます。
 
-{{site.data.keyword.containerlong_notm}} の各ワーカー・ノードのパブリック・ネットワーク・インターフェースを保護するために、デフォルトのネットワーク・ポリシーがセットアップされます。 固有のセキュリティー要件がある場合や、VLAN スパンニングまたは Virtual Routing and Forwarding (VRF) を有効にした複数ゾーン・クラスターがある場合は、Calico や Kubernetes を使用してクラスターのネットワーク・ポリシーを作成できます。Kubernetes ネットワーク・ポリシーを使用して、クラスター内のポッドとの間で許可またはブロックするネットワーク・トラフィックを指定できます。
+{{site.data.keyword.containerlong_notm}} の各ワーカー・ノードのパブリック・ネットワーク・インターフェースを保護するために、デフォルトのネットワーク・ポリシーがセットアップされます。 固有のセキュリティー要件がある場合や、VLAN スパンニングまたは Virtual Routing and Forwarding (VRF) を有効にした複数ゾーン・クラスターがある場合は、Calico や Kubernetes を使用してクラスターのネットワーク・ポリシーを作成できます。 Kubernetes ネットワーク・ポリシーを使用して、クラスター内のポッドとの間で許可またはブロックするネットワーク・トラフィックを指定できます。
 
 LoadBalancer サービスへのインバウンド (ingress) トラフィックのブロックなど、より高度なネットワーク・ポリシーを設定するには、Calico ネットワーク・ポリシーを使用します。
 

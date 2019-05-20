@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -23,7 +23,7 @@ NSX Edge Services Gateway on {{site.data.keyword.cloud}} ソリューション�
 ## 内部アーキテクチャー設計
 {: #nsx_design-internal-archi}
 
-内部アーキテクチャーは、必要な NSX Edge コンポーネントの、VMware Cloud Foundation コンバージド・クラスターまたは VMware vCenter Server クラスター内のリソース・プールへのデプロイメントを指定します。
+内部アーキテクチャーは、必要な NSX Edge コンポーネントの、VMware vCenter Server クラスター内のリソース・プールへのデプロイメントを指定します。
 
 VMware vSAN は、以下の図ではオプションです。
 {:note}
@@ -48,7 +48,7 @@ VMware vSAN は、以下の図ではオプションです。
 
 RFC1918 プライベート IP アドレス範囲は、組織内部で使用するためのネットワーク範囲の使用のために特に予約されており、インターネットには使用しません。 {{site.data.keyword.cloud_notm}} 物理ネットワーク・インフラストラクチャーは、世界中のすべての場所で、特定の RFC1918 プライベート・アドレス・スペース 10.x.x.x/8 を使用します。 これらの IP アドレス範囲は、お客様のアカウント全体または {{site.data.keyword.cloud_notm}} のお客様のアカウント内で重複しません。 お客様のアカウント内で、{{site.data.keyword.cloud_notm}} に割り振られたプライベート IP アドレス・スペースは、Virtual Routing and Forwarding (VRF) が有効になっていれば、任意の {{site.data.keyword.CloudDataCents_notm}} の他の任意の {{site.data.keyword.cloud_notm}} プライベート IP アドレス範囲にルーティングできます。
 
-これにより、ご使用のアカウント内に世界的に接続されたインフラストラクチャーを簡単にセットアップできますが、{{site.data.keyword.cloud_notm}} と同じプライベート・アドレス・スペースを使用する場合にルーティングを介してデータ・センターを {{site.data.keyword.cloud_notm}} に拡張すると、固定 IP アドレス・スペースによって問題が生じる可能性があります。 解決方法は、NSX を使用して Cloud Foundation または vCenter Server インフラストラクチャーでオーバーレイ・トポロジーを作成し、持ち込み IP (BYOIP) アドレス・スペースを {{site.data.keyword.cloud_notm}} が割り当てられたプライベート IP アドレス・スペースと対話しないようにすることです。 NSX は、外部 IP アドレス・スペース (重複する場合もあります) 間のトンネル内に、内部 BYOIP アドレス・スペースにまたがる L2 VPN を提供できます。
+これにより、ご使用のアカウント内に世界的に接続されたインフラストラクチャーを簡単にセットアップできますが、{{site.data.keyword.cloud_notm}} と同じプライベート・アドレス・スペースを使用する場合にルーティングを介してデータ・センターを {{site.data.keyword.cloud_notm}} に拡張すると、固定 IP アドレス・スペースによって問題が生じる可能性があります。 解決方法は、NSX を使用して vCenter Server インフラストラクチャーでオーバーレイ・トポロジーを作成し、持ち込み IP (BYOIP) アドレス・スペースを {{site.data.keyword.cloud_notm}} が割り当てられたプライベート IP アドレス・スペースと対話しないようにすることです。 NSX は、外部 IP アドレス・スペース (重複する場合もあります) 間のトンネル内に、内部 BYOIP アドレス・スペースにまたがる L2 VPN を提供できます。
 
 ## 関連リンク
 {: #nsx_design-related}

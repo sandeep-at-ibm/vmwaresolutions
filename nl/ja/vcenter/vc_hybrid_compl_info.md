@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -74,7 +74,7 @@ VMware vCenter Server の環境が、{{site.data.keyword.vmwaresolutions_short}}
 * チーム・レベルで高度な技術的専門知識を維持するためには、専門性のレベルにもよりますが、特定のソフトウェアの問題を解決するのに複数のサポート・チームの関与が必要になる場合があります。 IBM のサポート・チームの間には完全なネットワークが作られているのでこれは簡単です。どのような問題が発生しても 1 つのチームとして解決に取り組むことができます。
 * 問題を調査するために、IBM がお客様のシステム上にある障害関連の情報にアクセスしたり、詳しい情報を得るために障害を再現したりする必要がある場合があります。
 * お客様がサポート・チケットを作成すれば、調査、デバッグ、優先順位付けのために IBM サポートが VMware 管理層にアクセスすることをお客様が承認することになります。 保守のための停止や環境の変更が必要になった場合、IBM サポートは、変更管理プロセスの一環として、新たにチケットを介してお客様に書面による確認を要求します。
-* サポート・チケットについて詳しくは、[Software Support Handbook](https://www-304.ibm.com/support/customercare/sas/f/handbook/getsupport.html) と [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)を参照してください。
+* サポート・チケットについて詳しくは、[IBM Support Guide](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923) および [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)を参照してください。
 
 ## お客様の責任
 {: #vc_hybrid_compl_info-client-responsibilities}
@@ -85,7 +85,7 @@ VMware vCenter Server の環境が、{{site.data.keyword.vmwaresolutions_short}}
 * 最初のデプロイメントのときに、オファリングの自動化とお客様のアカウントは分離されます。 お客様は、ポータルで IBM から提供されたすべてのパスワードを変更できます。また、変更することをお勧めします。
 * vCenter のアクセス権と資格情報は、最初のデプロイメントのときに作成され、お客様に提供されます。 IBM サポートは、ライフサイクル管理やお客様へのサポートを提供するために、オファリングの要件の一部として、管理層へのフルアクセス権限を保持する必要があります。
 * いつでもパスワードなどの資格情報が変更された場合は、IBM サポートが、喪失した資格情報を復旧するためにお客様を支援することも、お客様の環境をトラブルシューティングすることもできなくなる可能性があります。
-* この問題の重要性や関連する懸案事項について詳しくは、[NSX コンポーネントのパスワードを変更する際の考慮事項](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_networkingonvcenterserver#considerations-when-changing-passwords-for-nsx-components)と [vCenter Server 成果物の変更に関する考慮事項](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter_chg_impact)を参照してください。
+* この問題の重要性や関連する懸案事項について詳しくは、[NSX コンポーネントのパスワードを変更する際の考慮事項](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_networkingonvcenterserver#vc_networkingonvcenterserver-change-nsx-component-password-considerations)と [vCenter Server 成果物の変更に関する考慮事項](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter_chg_impact)を参照してください。
 
 ### 通信とトラブルシューティング
 {: #vc_hybrid_compl_info-communication-troubleshooting}
@@ -113,7 +113,7 @@ VMware vCenter Server の環境が、{{site.data.keyword.vmwaresolutions_short}}
 * そのような IBM 以外のプログラムのライセンスは、それぞれのプロバイダーから直接交付されます。 お客様は、プロバイダーの契約条件に従って IBM 以外のプログラムの使用に同意します。 そのような条件は、購入時に IBM オファリングに付属する IBM の使用条件に含まれた形で提供されます。
 * IBM は、サード・パーティー製品が IBM プログラムと連携して適切に機能することを確認するためにテストを行います。
 * IBM ソフトウェア・サポートは、IBM オファリングがサード・パーティー・ソフトウェアと連携する方法に関する情報を活用して、お客様の問題に関する問題診断を行います。 IBM プログラムが正しく機能するという結論が出ているにもかかわらず、引き続き問題が存在している場合は、IBM はさらに診断するためにお客様をサード・パーティー・ベンダーに照会する必要があります。
-* サード・パーティーのソフトウェアやコードに関するお客様の責任について詳しくは、[Software Support Handbook](https://www-304.ibm.com/support/customercare/sas/f/handbook/policies.html) を参照してください。
+* サード・パーティーのソフトウェアやコードに関するお客様の責任について詳しくは、[IBM Support Guide](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923) を参照してください。
 
 ## お客様の環境へのアクセスの同意
 {: #vc_hybrid_compl_info-consent-to-access-client-environment}

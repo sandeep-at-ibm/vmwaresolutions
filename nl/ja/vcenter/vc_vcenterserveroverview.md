@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,11 +18,11 @@ subcollection: vmwaresolutions
 # vCenter Server の概要
 {: #vc_vcenterserveroverview}
 
-VMware vCenter Server on {{site.data.keyword.cloud}} は、VMware vSphere スタックをサービスとして提供するホステッド・プライベート・クラウドです。 VMware 環境は 2 つ以上 (推奨 3 つ) の {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}上に構築され、ネットワークに接続された共有ストレージと専用のソフトウェア定義ストレージのどちらかを選択して使用できます。また、VMware NSX で実装される、管理しやすい論理エッジ・ファイアウォールのデプロイメントと構成の自動化機能も含まれています。
+VMware vCenter Server on {{site.data.keyword.cloud}} は、VMware vSphere スタックをサービスとして提供するホステッド・プライベート・クラウドです。 VMware 環境は {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}上に構築され、ネットワーク接続型の共有ストレージと専用のソフトウェア定義ストレージのどちらかを選択して使用できます。また、VMware NSX で実装される、管理しやすい論理エッジ・ファイアウォールのデプロイメントと構成の自動化機能も含まれています。
 
 多くの場合、環境全体を 1 日以内でプロビジョンできます。また、このベア・メタル・インフラストラクチャーのコンピュート能力は、必要に応じて迅速かつ伸縮自在に拡張や縮小ができます。
 
-デプロイメント後に、{{site.data.keyword.slportal}}から NFS (ネットワーク・ファイル・システム) ファイル共有をさらに注文してからクラスター内のすべての ESXi サーバーにそれらを手動で接続することによって、共有ストレージを増やすことができます。 専用ストレージが必要な場合は、[NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview) を、高性能 (オール SSD) 構成と大容量 (オール SATA) 構成の両方で利用できます。
+デプロイメント後に、{{site.data.keyword.slportal}}から ネットワーク・ファイル・システム (NFS) ファイル共有をさらに注文してからクラスター内のすべての ESXi サーバーにそれらを手動で接続することによって、共有ストレージを増やすことができます。 専用ストレージが必要な場合は、[NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview) を、高性能 (オール SSD) 構成と大容量 (オール SATA) 構成の両方で利用できます。
 
 VMware vSAN は専用ストレージのオプションとしても利用できます。 vSAN クラスターの vSAN ベース・ストレージの容量を増やすには、デプロイメント後に ESXi サーバーをさらに追加します。
 
@@ -75,9 +75,9 @@ vCenter Server インスタンスには、以下のコンポーネントが含�
 以下のいずれかの構成で{{site.data.keyword.baremetal_short}}を 3 つ以上注文できます。
 * **Skylake**: 選択した CPU モデルおよび RAM サイズの 2 CPU Intel Skylake 世代サーバー (Intel Xeon 4100/5100/6100 シリーズ)。
 * **SAP 認定**: 選択した CPU モデルの Intel Skylake または Intel Broadwell 世代サーバー (Intel Xeon 6140/E5-2690/E7-8890 シリーズ)。
-* **Broadwell**: 選択した CPU モデルおよび RAM サイズの 2 CPU Intel Broadwell 世代サーバー (Intel Xeon E5-2600/E7-4800 シリーズ)。
+* **Broadwell**: 選択した CPU モデルおよび RAM サイズの 4 CPU Intel Broadwell 世代サーバー (Intel Xeon E7-4800 シリーズ)。
 
-vSAN ストレージを使用する計画がある場合は、構成に 4 つの{{site.data.keyword.baremetal_short}}が必要です。
+vSAN ストレージを使用する場合は、少なくとも 4 台の{{site.data.keyword.baremetal_short}}を使用する構成にする必要があります。
 {:note}
 
 ### ネットワーキング
@@ -92,7 +92,7 @@ vSAN ストレージを使用する計画がある場合は、構成に 4 つの
 
     この ESG は **mgmt-nsx-edge** という名前で、ユーザーはこの ESG にアクセスできず、使用できません。 これを変更すると、{{site.data.keyword.vmwaresolutions_short}} コンソールから vCenter Server インスタンスを管理できなくなる可能性があります。 また、ファイアウォールを使用したり、外部 IBM 管理コンポーネントへの ESG 通信を無効にしたりすると、{{site.data.keyword.vmwaresolutions_short}} が使用できなくなる可能性があります。
     {:important}
-  * アウトバウンドとインバウンドの HTTPS ワークロード・トラフィック用のユーザー管理のセキュアな VMware NSX Edge Services Gateway。 このゲートウェイは、VPN アクセスまたはパブリック・アクセスを提供するためにユーザーが変更可能なテンプレートとして IBM がデプロイします。 詳しくは、[ユーザー管理の NSX Edge にはセキュリティーのリスクがありますか?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-customer-managed-nsx-edge-pose-a-security-risk-) を参照してください。
+  * アウトバウンドとインバウンドの HTTPS ワークロード・トラフィック用のユーザー管理のセキュアな VMware NSX Edge Services Gateway。 このゲートウェイは、VPN アクセスまたはパブリック・アクセスを提供するためにユーザーが変更可能なテンプレートとして IBM がデプロイします。 詳しくは、[ユーザー管理の NSX Edge にはセキュリティーのリスクがありますか?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#faq-customer-nsx) を参照してください。
 
 ### 仮想サーバー・インスタンス
 {: #vc_vcenterserveroverview-vsi}
@@ -122,7 +122,7 @@ vSAN オプションでは、構成をカスタマイズできます。ディス
 
   3.8 TB SSD (ソリッド・ステート・ディスク) ドライブは、データ・センターで一般提供が開始されたらサポートされる予定です。
   {:note}
-* High-Performance Intel Optane オプション。合計 10 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されます。 このオプションは CPU モデルに応じて異なります。
+* High-Performance Intel Optane オプション。合計 12 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されます。 このオプションは CPU モデルに応じて異なります。
 
 #### NFS ストレージ
 {: #vc_vcenterserveroverview-nfs-storage}
@@ -159,7 +159,7 @@ vCenter Server 拡張ノードごとに、{{site.data.keyword.cloud_notm}} ア�
 ### 拡張ノード用のハードウェア
 {: #vc_vcenterserveroverview-expansion-node-hardware}
 
-[vCenter Server インスタンスの技術仕様](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs)に示されている構成になっている、1 台のベア・メタル・サーバー。
+[vCenter Server インスタンスの技術仕様](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#vc_vcenterserveroverview-specs)に示されている構成になっている、1 台のベア・メタル・サーバー。
 
 ### 拡張ノード用のライセンスと料金
 {: #vc_vcenterserveroverview-expansion-node-license-and-fee}
@@ -184,5 +184,5 @@ vCenter Server 拡張ノードごとに、{{site.data.keyword.cloud_notm}} ア�
 * [vCenter Server ソフトウェアの部品構成表](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
 * [vCenter Server インスタンスの計画](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [vCenter Server インスタンスの注文](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [{{site.data.keyword.cloud_notm}} のファイル・ストレージとブロック・ストレージ](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage){:new_window}
+* [vCenter Server の接続ストレージ](/docs/services/vmwaresolutions/services?topic=vmware-solutions-storage-benefits#storage-benefits)
 * [ファイル共有容量の拡張](/docs/infrastructure/FileStorage?topic=FileStorage-expandCapacity#expandCapacity)

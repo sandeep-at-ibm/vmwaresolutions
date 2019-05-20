@@ -4,11 +4,11 @@ copyright:
 
   years: 2016, 2019
 
-lastupdated: "2019-03-22"
+lastupdated: "2019-04-16"
 
-keywords: IBM Cloud for VMware Solutions, getting started, deployment offerings, add-on services, use case
+keywords: IBM Cloud for VMware Solutions, getting started, vmware solutions offerings, add-on services for vmwaresolutions, vmwaresolutions use cases
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -50,7 +50,7 @@ Microsoft Internet Explorer はサポートされていません。
 ### ユーザー・アカウント
 {: #getting-started-user-accts}
 
-{{site.data.keyword.cloud_notm}} アカウントおよび {{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントが必要です。 これらのアカウントは特定の要件を満たしている必要があります。
+{{site.data.keyword.cloud_notm}} アカウントおよび {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントが必要です。 これらのアカウントは特定の要件を満たしている必要があります。
 
    表 1. 必要なユーザー・アカウント
    <table>
@@ -67,8 +67,8 @@ Microsoft Internet Explorer はサポートされていません。
       <td>{{site.data.keyword.cloud_notm}} サービスを注文および使用するには、{{site.data.keyword.cloud_notm}} アカウントが必要です。 請求情報は {{site.data.keyword.cloud_notm}} アカウントに関連付けられています。 物理インフラストラクチャーと仮想インフラストラクチャーのコスト、最終的に使用されたライセンスは、{{site.data.keyword.cloud_notm}} アカウントに請求されます。</td>
    </tr>
    <tr>
-      <td>IBM Cloud インフラストラクチャー (SoftLayer) アカウント</td>
-      <td>{{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントは、以前は IBM SoftLayer アカウントと呼ばれていました。  アカウントが満たす必要のある要件について詳しくは、[{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの要件](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)を参照してください。<br><br>{{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントと {{site.data.keyword.cloud_notm}} アカウントをリンクして、Infrastructure as a Service (IaaS) リソースと Platform as a Service (PaaS) リソースを組み合わせて使用できます。 その後、単一のログインから IaaS リソースと PaaS リソースにアクセスできます。 さらに、アカウントをリンクする場合は、使用するすべての PaaS リソースおよび IaaS リソースに対して単一の請求書が提供されます。<ul><li>{{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントがない場合は、[IBM Cloud インフラストラクチャー (SoftLayer) アカウントの登録](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account#signing_softlayer_account-infra)の手順に従ってアカウントを要求し、[IBMid への切り替えとアカウントのリンク](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)の手順に従って {{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントとご使用の {{site.data.keyword.cloud_notm}} アカウントをリンクします。</li><li>{{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントを持っている場合は、それを [IBMid への切り替えとアカウントのリンク](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)の手順に従って {{site.data.keyword.cloud_notm}} アカウントにリンクします。</li></ul></td>
+      <td>IBM Cloud インフラストラクチャー・アカウント</td>
+      <td>{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの要件について詳しくは、[{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの要件](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)を参照してください。<br><br>{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントと {{site.data.keyword.cloud_notm}} アカウントをリンクして、Infrastructure as a Service (IaaS) リソースと Platform as a Service (PaaS) リソースを組み合わせて使用できます。 その後、単一のログインから IaaS リソースと PaaS リソースにアクセスできます。 さらに、アカウントをリンクする場合は、使用するすべての PaaS リソースおよび IaaS リソースに対して単一の請求書が提供されます。<ul><li>{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントがない場合は、[IBM Cloud インフラストラクチャー・アカウントの登録](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account#signing_softlayer_account-infra)の手順に従ってアカウントを要求し、[IBMid への切り替えとアカウントのリンク](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)の手順に従って {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントとご使用の {{site.data.keyword.cloud_notm}} アカウントをリンクします。</li><li>{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントを持っている場合は、それを [IBMid への切り替えとアカウントのリンク](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)の手順に従って {{site.data.keyword.cloud_notm}} アカウントにリンクします。</li></ul></td>
    </tr>
    </table>
 
@@ -168,13 +168,13 @@ Microsoft Internet Explorer はサポートされていません。
 {{site.data.keyword.vmwaresolutions_short}} コンソールは、デプロイメントの注文と管理を行うインターフェースです。 コンソールでは、各デプロイメントがインスタンスとして管理されます。 このコンソールは、{{site.data.keyword.cloud_notm}} インフラストラクチャー・カスタマー・ポータルとは別のスタンドアロンのユーザー・インターフェースです。
 
 {{site.data.keyword.vmwaresolutions_short}} コンソールにアクセスするには、以下のようにします。
-1. https://console.cloud.ibm.com/infrastructure/vmware-solutions/console にアクセスします。
+1. https://cloud.ibm.com/infrastructure/vmware-solutions/console にアクセスします。
 2. **IBMid** でコンソールにログインします。
 
 ## ステップ 2: ユーザー・アカウントと設定の構成
 {: #getting-started-step2}
 
-インスタンスを注文する前に、コンソールの**「設定」**ページで {{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントのユーザー名と API 鍵を入力する必要があります。
+インスタンスを注文する前に、コンソールの**「設定」**ページで {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントのユーザー名と API 鍵を入力する必要があります。
 
 ユーザーアカウントと設定を構成する方法については、「[ユーザー・アカウントと設定の管理](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)」を参照してください。
 

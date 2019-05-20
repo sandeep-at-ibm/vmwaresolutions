@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -45,7 +45,7 @@ Zerto on {{site.data.keyword.cloud_notm}} 用マネージド・サービスで�
 2. ページをスクロールダウンし、**「追加マネージド・サービスの注文」**で、**「Zerto on IBM Cloud のマネージド・サービス」**カードをクリックします。
 3. **「Zerto on IBM Cloud」**ページで、マネージド・サービスとしての Zerto on {{site.data.keyword.cloud_notm}} の説明と技術仕様を確認してから、**「作成」**をクリックします。
 4. 要件に応じて構成設定値を指定するか、またはデフォルト値を受け入れます。
-5. **「vCenter サーバー」**または**「Cloud Foundation」**をクリックして、このサービスをいずれかのインスタンスに追加します。
+5. **「vCenter サーバー」**をクリックして、このサービスをいずれかのインスタンスに追加します。
 6. このサービスを新規インスタンスの注文中に追加するには、**「新規インスタンスに追加」**をクリックしてから、新規 [vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance) インスタンスまたは [vCenter Server with Hybridity](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance) インスタンスの注文を続けます。
 7. このサービスを既存のインスタンスに追加するには、**「既存にインスタンスに追加 (Add to Existing Instance)」**をクリックし、リストから対象インスタンスを選択してから、**「プロビジョン」**をクリックして注文に進むことに同意します。
 

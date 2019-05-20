@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-23"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -88,7 +88,7 @@ Center](https://www.ibm.com/support/knowledgecenter/SSBS6K_3.1.0/manage_cluster/
 ## Transformation Advisor と Microclimate のデプロイ
 {: #vcscontent-stocktrmod-deploy-tam}
 
-{{site.data.keyword.icpfull_notm}} を稼働させたら、Todd は Transformation Advisor と Microclimate をインストールします。 [カタログ](https://www.ibm.com/cloud/private/developer)を開き、使用可能なすべてのコンテンツを確認します。
+{{site.data.keyword.icpfull_notm}} を稼働させたら、Todd は Transformation Advisor と Microclimate をインストールします。 [カタログ](https://www.ibm.com/cloud/private/architecture)を開き、使用可能なすべてのコンテンツを確認します。
 
 Transformation Advisor と Microclimate を探し、Helm チャートをクリックし、用意されている readme ファイルの説明に従ってそれらをインストールします。
 

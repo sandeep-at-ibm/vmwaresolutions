@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -39,7 +39,7 @@ HCX on {{site.data.keyword.cloud_notm}} サービスを組み込んだ形で Clo
 オンプレミスの HCX インスタンスを注文し、オンプレミス HCX インストールのライセンスを適用してアクティベーションすることもできます。
 
 詳しくは、以下のトピックを参照してください。
-* [HCX on {{site.data.keyword.cloud_notm}} に関する考慮事項](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview)
+* [HCX on {{site.data.keyword.cloud_notm}} に関する考慮事項](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations)
 * [HCX on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghcx)
 * [オンプレミス HCX インスタンスに関する考慮事項](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_considerations)
 * [オンプレミス HCX インスタンスの注文](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_orderingserviceinstances)
@@ -53,7 +53,7 @@ V2.1 以降の VMware Cloud Foundation インスタンスと VMware vCenter Serv
 
 詳しくは、以下のトピックを参照してください。
 
-* [vCenter Server インスタンスのクラスターの追加と表示](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [vCenter Server インスタンスのクラスターの追加、表示、削除](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 * [BYOL に関するよくある質問](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_byol)
 
 ## Zerto on IBM Cloud サービスのコンポーネントの更新
@@ -91,7 +91,7 @@ VMware NSX の Advanced または Enterprise エディションにアップグ�
 ### 1 クラスターあたりの最大サーバー数が 32 以上に
 {: #relnotes_v21-max-clusters}
 
-インスタンス内のデフォルト・クラスターについては、最大 51 サーバーまでデプロイまたは拡張できます。 インスタンス内の 2 つ目以降のすべてのクラスターについては、最大 59 サーバーまでデプロイまたは拡張できます。 詳しくは、[vCenter Server インスタンスのクラスターの追加と表示](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)を参照してください。
+インスタンス内のデフォルト・クラスターについては、最大 51 サーバーまでデプロイまたは拡張できます。 インスタンス内の 2 つ目以降のすべてのクラスターについては、最大 59 サーバーまでデプロイまたは拡張できます。 詳しくは、[vCenter Server インスタンスのクラスターの追加、表示、削除](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)を参照してください。
 
 この機能は、V2.1 以降でデプロイされたインスタンスでのみ利用可能です。 V2.1 より前のリリースから V2.1 にアップグレードされたインスタンスには、このオプションはありません。
 {:note}
@@ -113,7 +113,7 @@ NFS ファイル共有を個々に構成できるようになりました。 フ
 詳しくは、以下のトピックを参照してください。
 * [vCenter Server の概要](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
 * [vCenter Server インスタンスの注文](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [vCenter Server インスタンスのクラスターの追加と表示](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [vCenter Server インスタンスのクラスターの追加、表示、削除](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 
 ## ユーザー・インターフェースの更新と向上
 {: #relnotes_v21-ui}

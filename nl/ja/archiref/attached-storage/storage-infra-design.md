@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-04-03"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -43,7 +43,7 @@ subcollection: vmwaresolutions
 
 {{site.data.keyword.cloud_notm}} の物理ネットワークは、パブリック・ネットワーク、プライベート・ネットワーク、管理ネットワークという 3 つの異なるネットワークに分類されます。 パブリック・ネットワーク、プライベート・ネットワーク、管理ネットワークについて詳しくは、[ソリューションの概要](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)を参照してください。
 
-{{site.data.keyword.cloud_notm}} ネットワークについて詳しくは、『[{{site.data.keyword.cloud_notm}} ネットワーク](https://www.ibm.com/cloud-computing/bluemix/our-network){:new_window}』を参照してください。
+{{site.data.keyword.cloud_notm}} ネットワークについて詳しくは、[{{site.data.keyword.cloud_notm}} global data centers](https://www.ibm.com/cloud/data-centers/){:new_window} を参照してください。
 
 プライベート・ネットワークの一部であるサービス・ネットワークの説明については、次の情報を参照してください。
 

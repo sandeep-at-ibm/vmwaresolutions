@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-26"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -36,6 +36,8 @@ subcollection: vmwaresolutions
 このサービスを注文する際には、以下の設定を行います。
 * 必要に応じて、**「実動対応 (Production-Ready)」**または**「開発/テスト (Development/Test)」**を選択します。
 * {{site.data.keyword.cloud_notm}} Private Hosted サービスをデプロイするために必要なライセンスを既に取得していることを証明する、必要なチェック・ボックスを選択します。
+
+追加のノードをデプロイする場合は、初期の {{site.data.keyword.cloud_notm}} Private Hosted のインストールでデプロイした {{site.data.keyword.cloud_notm}} Private Ubuntu テンプレート (Ubuntu1604) を使用します。このテンプレートを見つけるには、VMware vSphere Web Client で、`cam` フォルダーの下の**「VMs and Templates」**タブに移動します。Ubuntu テンプレートのデフォルト・パスワードは `icponcloud` ですが、テンプレートを使用する前に変更することをお勧めします。
 
 ## 関連リンク
 {: #icp_ordering-related}

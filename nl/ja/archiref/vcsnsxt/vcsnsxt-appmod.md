@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -25,7 +25,7 @@ subcollection: vmwaresolutions
 -	Cloud Automation Manager (CAM) を使用して Infrastructure as Code (IaC) をスクリプト化し、VM とコンテナーの両方から作成された各種サービスを構成および調整して、DevOps ツールチェーンおよび ITSM ソリューションと統合する。
 
 ネットワーク・アーキテクチャーに注目すると、このリファレンス・アーキテクチャーには次の重要なコンポーネントがあります。
-- **オンプレミス仮想化** – Acme Skateboards 社の VM を現在ホストしている VMware クラスター。 モダナイズ対象となるアプリケーションを現在ホストしているのは、これらの VM です。 {{site.data.keyword.cloud_notm}} で実行する VMware vCenter Server on {{site.data.keyword.cloud_notm}} インスタンスに VM をマイグレーションしたり、必要に応じて元に戻したりするには、このクラスターが、[VMware HCX on {{site.data.keyword.cloud_notm}} ソリューション・アーキテクチャー](https://test.cloud.ibm.com/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)に記載されている前提条件を満たしている必要があります。
+- **オンプレミス仮想化** – Acme Skateboards 社の VM を現在ホストしている VMware クラスター。 モダナイズ対象となるアプリケーションを現在ホストしているのは、これらの VM です。 {{site.data.keyword.cloud_notm}} で実行する VMware vCenter Server on {{site.data.keyword.cloud_notm}} インスタンスに VM をマイグレーションしたり、必要に応じて元に戻したりするには、このクラスターが、[VMware HCX on {{site.data.keyword.cloud_notm}} ソリューション・アーキテクチャー](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)に記載されている前提条件を満たしている必要があります。
 - **VMware vCenter Server on IBM Cloud** – vCenter Server には、VMware Software Defined Data Center (SDDC) ソリューションを自動的にデプロイするために必要な基本的な VMware ビルディング・ブロック (vSphere、vCenter Server、NSX-V、および vSAN や {{site.data.keyword.cloud_notm}} エンデュランス・ストレージなどのストレージ・オプション) が用意されています。 この VMware クラスターが、VM のマイグレーション先であり、{{site.data.keyword.icpfull_notm}} でホストされるモダナイズ後のコンテナー化アプリケーションのいくつかのターゲットでもあります。
 
 このアーキテクチャーの重要なコンポーネントは以下のとおりです。
@@ -54,4 +54,4 @@ subcollection: vmwaresolutions
 ## 関連リンク
 {: #vcsnsxt-appmod-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vcs-hybridity-intro#vcs-hybridity-intro)

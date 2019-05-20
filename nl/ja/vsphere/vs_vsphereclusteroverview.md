@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-10"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -54,7 +54,7 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} では、オプションの V
 以下のいずれかの構成で{{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}を 1 つ以上注文できます。
 * **Skylake**: 選択した CPU モデルおよび RAM サイズの 2 CPU Intel Skylake 世代サーバー (Intel Xeon 4100/5100/6100 シリーズ)。
 * **SAP 認定**: 選択した CPU モデルの Intel Skylake または Intel Broadwell 世代サーバー (Intel Xeon 6140/E5-2690/E7-8890 シリーズ)。
-* **Broadwell**: 選択した CPU モデルおよび RAM サイズの 2 CPU Intel Broadwell 世代サーバー (Intel Xeon E5-2600/E7-4800 シリーズ)。
+* **Broadwell**: 選択した CPU モデルおよび RAM サイズの 4 CPU Intel Broadwell 世代サーバー (Intel Xeon E7-4800 シリーズ)。
 
 使用可能なオプションは、VMware vSAN コンポーネントを選択したかどうかによります。
 

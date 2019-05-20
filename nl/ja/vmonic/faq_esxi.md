@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -25,11 +25,7 @@ subcollection: vmwaresolutions
 {: #faq_esxi-instance}
 {: faq}
 
-* vCenter Server インスタンスの場合、デフォルトのクラスターを拡張して、最大 51 台の ESXi サーバーを含めることができます。 デフォルト以外の各クラスターは、最大 59 台の ESXi サーバーを含むように拡張できます。 1 インスタンスに最大 10 個のクラスターを追加できるので、デプロイされたインスタンスごとに、すべてのクラスターの ESXi サーバーの合計数は、最大で 51 + 9x59 = 582 になります。
-* Cloud Foundation インスタンスの場合、標準構成には 4 つの ESXi サーバーが含まれています。 最大 28 台のサーバーを追加できます (合計サーバー数は最大 32 台)。 マルチサイト構成の Cloud Foundation インスタンスの場合、すべてのインスタンスの ESXi サーバーの合計数は、最大で 128 になります。
-
-  128 台を超える ESXi サーバーのマルチサイト・デプロイメントが必要な Cloud Foundation 構成を使用する場合は、[IBM サポートにお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)ください。
-  {:note}
+vCenter Server インスタンスでは、デフォルトのクラスターを最大 51 台の ESXi サーバーを含むように拡張できます。デフォルト以外の各クラスターは、最大 59 台の ESXi サーバーを含むように拡張できます。 1 インスタンスに最大 10 個のクラスターを追加できるので、デプロイされたインスタンスごとに、すべてのクラスターの ESXi サーバーの合計数は、最大で 51 + 9x59 = 582 になります。
 
 ## クラスターには ESXi サーバーをいくつ追加できますか?
 {: #faq_esxi-cluster}
@@ -81,5 +77,5 @@ vMotion の静的ルートの追加はサポートされていません。 vMoti
 {: #faq_esxi-related}
 
 * [vCenter Server インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
-* [vCenter Server インスタンスのクラスターの追加、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [vCenter Server インスタンスのクラスターの追加、表示、削除](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_hybrid_addingviewingclusters#vc_hybrid_addingviewingclusters)
 * [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

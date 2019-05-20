@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-20"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -25,22 +25,22 @@ IBM Cloud Object Storage を注文するには、以下のタスクを指定の�
 ## Object Storage インスタンスの作成
 {: #icos_ordering-obj}
 
-Object Storage インスタンスを作成するには、[新しいサービス・インスタンスの作成](/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-order-storage#creating-a-new-service-instance)を参照してください。その手順を実行してから、このセクションに戻って以下の作業を続けます。
+Object Storage インスタンスを作成するには、[新しいサービス・インスタンスの作成](/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-order-storage#creating-a-new-service-instance)を参照してください。 その手順を実行してから、このセクションに戻って以下の作業を続けます。
 
 ## バケットの作成
 {: #icos_ordering-bucket}
 
-バケットを作成するには、[Step 1: Create some buckets to store your data](https://cloud.ibm.com/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-getting-started-console-#create-buckets) を参照してください。その手順を実行してから、このセクションに戻って以下の作業を続けます。
+バケットを作成するには、[Create some buckets to store your data](/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-getting-started-tutorial#gs-create-buckets) を参照してください。 その手順を実行してから、このセクションに戻って以下の作業を続けます。
 
 ## サービス資格情報の作成
 {: #icos_ordering-service-cred}
 
-サービス資格情報 (HMAC 資格情報など) を作成するには、[サービス資格情報](/docs/services/cloud-object-storage/hmac?topic=cloud-object-storage-service-credentials#using-hmac-credentials)を参照してください。その手順を実行してから、このセクションに戻って以下の作業を続けます。
+サービス資格情報 (HMAC 資格情報など) を作成するには、[サービス資格情報](/docs/services/cloud-object-storage/hmac?topic=cloud-object-storage-service-credentials#using-hmac-credentials)を参照してください。 その手順を実行してから、このセクションに戻って以下の作業を続けます。
 
 ## スケールアウト・リポジトリーの追加
 {: #icos_ordering-scale-repo}
 
-Veeam 内にスケールアウト・リポジトリーを追加するには、[Adding scale-Out repositories](https://helpcenter.veeam.com/docs/backup/vsphere/sobr_add.html?ver=95u4){:new_window} を参照してください。その手順を実行してから、このセクションに戻って以下の作業を続けます。
+Veeam 内にスケールアウト・リポジトリーを追加するには、[Adding scale-Out repositories](https://helpcenter.veeam.com/docs/backup/vsphere/sobr_add.html?ver=95u4){:new_window} を参照してください。 その手順を実行してから、このセクションに戻って以下の作業を続けます。
 
 ## クラウド層の保守と管理
 {: #icos_ordering-manage-cloud}

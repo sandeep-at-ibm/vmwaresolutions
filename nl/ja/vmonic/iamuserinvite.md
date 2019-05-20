@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -20,7 +20,7 @@ subcollection: vmwaresolutions
 {: #iamuserinvite-reqs}
 
 * アカウント所有者であるか、または **VMware Solutions** サービスに対して持っているプラットフォーム管理役割が**「管理者」**であることを確認します。
-* [Identity and Access Management でのユーザー・アクセス権限の管理](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-access-with-iam)で、ユーザー役割と許可を検討したことを確認します。
+* [Identity and Access Management でのユーザー・アクセス権限の管理](/docs/services/vmwaresolutions?topic=vmware-solutions-iam#iam)で、ユーザー役割と許可を検討したことを確認します。
 
 ## サービスとリソースにアクセスするようにユーザーを招待する手順
 {: #iamuserinvite-procedure}

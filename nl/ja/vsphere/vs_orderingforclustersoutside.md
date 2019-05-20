@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -49,7 +49,7 @@ subcollection: vmwaresolutions
 
 クラスターのデプロイメントが自動的に開始され、注文が処理中であることを示す E メール確認を受け取ります。 クラスターが使用可能になると、E メールで通知されます。
 
-vSphere クラスターは、vCenter Server インスタンスや Cloud Foundation インスタンスと一緒に**「リソース」**ページに表示されません。
+vSphere クラスターは、vCenter Server インスタンスと一緒に**「リソース」**ページに表示されません。
 {:note}
 
 ## 関連リンク

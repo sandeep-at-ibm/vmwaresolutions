@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-18"
+lastupdated: "2019-04-18"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -30,11 +30,12 @@ V2.9 リリース以降では、クラスターが保守モードの間に、新
 初期クラスターのストレージが vSAN なので、デプロイメント後に 1 つ以上の ESXi サーバーを追加して、クラスター・ストレージの容量を増やすことができます。
 
 ## vCenter Server with Hybridity Bundle インスタンスへの ESXi サーバーの追加
+{: #vc_hybrid_addingremovingservers-adding}
 
 ### ESXi サーバーを追加する前に
 {: #vc_hybrid_addingremovingservers-adding-prereq}
 
-* VMware vSphere Web クライアントから ESXi サーバーの追加を行わないでください。 vSphere Web Client で行った変更は、{{site.data.keyword.vmwaresolutions_short}} コンソールと同期されません。
+* VMware vSphere Web クライアントで加えた変更は {{site.data.keyword.vmwaresolutions_short}} コンソールと同期されないので、可能な限り、{{site.data.keyword.vmwaresolutions_full}} コンソールを使用して ESXi サーバーを追加してください。つまり、オンプレミスの ESXi サーバー、または {{site.data.keyword.vmwaresolutions_short}} コンソールで管理できない、あるいは管理しない ESXi サーバーの場合にのみ、ESXi サーバーを vCenter Server に追加してください。
 * vSAN ストレージには 4 つ以上の ESXi サーバーが必要です。
 
 ## ESXi サーバーを追加する手順
@@ -65,7 +66,7 @@ V2.9 リリース以降では、クラスターが保守モードの間に、新
 ### ESXi サーバーを削除する前に
 {: #vc_hybrid_addingremovingservers-removing-prereq}
 
-* VMware vSphere Web クライアントから ESXi サーバーの削除を行わないでください。 vSphere Web Client で行った変更は、{{site.data.keyword.vmwaresolutions_short}} コンソールと同期されません。
+* vSphere Web クライアントで加えた変更は {{site.data.keyword.vmwaresolutions_short}} コンソールと同期されないので、可能な限り、{{site.data.keyword.vmwaresolutions_full}} コンソールを使用して ESXi サーバーを削除してください。つまり、オンプレミスの ESXi サーバー、または {{site.data.keyword.vmwaresolutions_short}} コンソールで管理できない、あるいは管理しない ESXi サーバーの場合にのみ、ESXi サーバーを vCenter Server から削除してください。
 * vSAN ストレージには 4 つ以上の ESXi サーバーが必要です。
 * F5 on {{site.data.keyword.cloud_notm}} サービスまたは FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} サービスがインストールされている ESXi サーバーの場合は、そのサーバーを削除する前に、F5 BIG-IP と FortiGate の VM を、VM をホスティングしている ESXi サーバーとは別のサーバーにマイグレーションする必要があります。
 * IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} サービスがインストールされている ESXi サーバーを削除する前に、アクティブな (失敗したか、進行中の) バックアップ操作またはリストア操作がないことを確認してください。こうしたアクティブな操作があると、ESXi サーバーが削除されない可能性があるためです。
@@ -96,5 +97,5 @@ V2.9 リリース以降では、クラスターが保守モードの間に、新
 * [vCenter Server の部品構成表](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
 * [vCenter Server with Hybridity Bundle インスタンスの要件と計画](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)
 * [vCenter Server with Hybridity Bundle インスタンスのクラスターの追加、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingviewingclusters)
-* [ホストをメンテナンス モードに切り替える](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
-* [Enhanced vMotion Compatibility (EVC) processor support](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003212){:new_window}
+* [ホストをメンテナンス モードに切り替える](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.resmgmt.doc/GUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
+* [Enhanced vMotion Compatibility (EVC) processor support](https://kb.vmware.com/s/article/1003212){:new_window}

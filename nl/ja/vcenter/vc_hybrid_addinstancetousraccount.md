@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -21,7 +21,7 @@ V2.4 以前のリリースでデプロイされたインスタンスは、IAM �
 ## 始める前に
 {: #vc_hybrid_addinstancetousraccount-prereq}
 
-インスタンスのマイグレーション先となる {{site.data.keyword.cloud_notm}} アカウントが IaaS 専用アカウントでないことを確認します。 IaaS 専用アカウントは、{{site.data.keyword.cloud_notm}} アカウントにリンクされていない {{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントです。
+インスタンスのマイグレーション先となる {{site.data.keyword.cloud_notm}} アカウントが IaaS 専用アカウントでないことを確認します。 IaaS 専用アカウントは、{{site.data.keyword.cloud_notm}} アカウントにリンクされていない {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントです。
 
 IaaS 専用アカウントと PaaS アカウントをリンクする方法について詳しくは、[Follow these steps to link your IaaS and PaaS accounts](https://www.ibm.com/blogs/bluemix/2018/03/follow-steps-link-iaas-paas-accounts/) を参照してください。
 
@@ -43,6 +43,6 @@ IaaS 専用アカウントと PaaS アカウントをリンクする方法につ
 ## 関連リンク
 {: #vc_hybrid_addinstancetousraccount-related}
 
-* [IAM でのユーザー・アクセス権限の管理](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-access-with-iam)
+* [IAM でのユーザー・アクセス権限の管理](/docs/services/vmwaresolutions?topic=vmware-solutions-iam#iam)
 * [サービスとリソースにアクセスするようにユーザーを招待する](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-iamuserinvite)
 * [IBM Cloud IAM とは](/docs/iam?topic=iam-iamoverview)

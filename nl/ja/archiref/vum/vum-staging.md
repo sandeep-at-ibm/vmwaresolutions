@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-29"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -59,9 +59,9 @@ vSAN クラスターの一部であるホストについて、以下の動作に
 6. オプションで、**「Advanced options」**ページで後で実行するように修復をスケジュールするオプションを選択し、タスクに固有の名前とオプションの説明を指定します。 スケジュールされたタスクに設定する時刻は、VCSA 上での時刻になります。 オプションで、ホスト上のサポートされないデバイスまたはサポートされなくなった VMFS データ・ストアに関する警告を無視して修復を続行するオプションを選択します。 **「次へ」**をクリックします。
 7. ホストの **「Remediation Options」**ページの**「VM Power state」**ドロップダウン・メニューから、修復するホスト上で実行されている VM および仮想アプライアンスの電源状態の変更を選択できます。 ホスト上の VM が電源オフまたは中断の状態になるか、vMotion を使用して DRS クラスター内の他のホストにマイグレーションされるまで、ホストを保守モードにすることはできません。 一部の更新では、修復前にホストを保守モードにする必要があります。 ホストが保守モードのときに、VM およびアプライアンスを実行することはできません。 VM の可用性よりもホストの修復ダウン時間の短縮を優先する場合は、VM および仮想アプライアンスを修復前にシャットダウンまたは中断することを選択できます。 DRS クラスターでは、VM の電源をオフにしない場合、修復にかかる時間は長くなりますが、VM は vMotion を使用して他のホストにマイグレーションされるため、修復プロセス全体を通して使用可能です。 選択項目は以下のとおりです。
 
-- **Power Off virtual machines** - 修復前に、すべての VM および仮想アプライアンスの電源をオフにします。
-- **Suspend virtual machines** - 修復前に、実行中のすべての VM および仮想アプライアンスを中断します。
-- **Do Not Change VM Power State** - VM および仮想アプライアンスを現在の電源状態のままにします。
+  * **Power Off virtual machines** - 修復前に、すべての VM および仮想アプライアンスの電源をオフにします。
+  * **Suspend virtual machines** - 修復前に、実行中のすべての VM および仮想アプライアンスを中断します。
+  * **Do Not Change VM Power State** - VM および仮想アプライアンスを現在の電源状態のままにします。
 
 8. オプションで、**「Disable any removable media devices connected to the virtual machine on the host」**を選択します。 VUM では、CD ドライブ、DVD ドライブ、またはディスケット・ドライブが接続された VM が存在するホストは修復しません。 クラスター環境では、メディア・デバイスが接続されていると、宛先ホストに同一のデバイスまたはマウントされた ISO イメージが存在しない場合に vMotion が動作しなくなる可能性があり、これにより、ソース・ホストを保守モードにすることもできなくなります。 修復後、VUM は、取り外し可能メディア・デバイスがまだ使用可能であれば、それらのデバイスを再接続します。
 9. オプションで、**「Retry entering maintenance mode in caseof failure」**を選択し、再試行回数および再試行間の待機時間を指定します。 VUM では、再試行遅延期間を待機し、「Number of retries」フィールドに指定した回数だけホストを保守モードにすることを試行します。
@@ -83,4 +83,4 @@ vCenter Server インスタンスでは、「ESXi Patch Settings」の下のチ�
 {: #vum-staging-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} ソリューションのアーキテクチャー](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (デモンストレーション)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (デモンストレーション)

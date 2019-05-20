@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-04-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -86,4 +86,4 @@ F5 on {{site.data.keyword.cloud_notm}} サービスのライセンス・モデ�
 * [vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
 * [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [よくある質問](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [F5 Deployment Guides](https://f5.com/solutions/deployment-guides){:new_window}
+* [F5 Deployment Guides](https://www.f5.com/services/resources/deployment-guides){:new_window}

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -36,7 +36,7 @@ HCX on {{site.data.keyword.cloud_notm}} は、VMware Hybrid Cloud Extension テ�
 ## 関連リンク
 {: #managinghcx-related}
 
-* [HCX on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview)
+* [HCX on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations)
 * [HCX の用語集](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
 * [VMware Hybrid Cloud Extension の概要](https://cloud.vmware.com/vmware-hcx)
 * [VMware Hybrid Cloud Extension の資料](https://cloud.vmware.com/vmware-hcx/resources)

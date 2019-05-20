@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-12"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -64,7 +64,7 @@ subcollection: vmwaresolutions
 
 Caveonix RiskForesight ライセンスは、必要なくなったときに削除できます。
 
-Caveonix RiskForesight ライセンスを削除する前に、[Caveonix RiskForesight ライセンスを削除する際の考慮事項](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_license_considerations-remove)にある考慮事項を検討したことを確認してください。
+Caveonix RiskForesight ライセンスを削除する前に、[Caveonix RiskForesight ライセンスを削除する際の考慮事項](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_license_considerations#caveonix_license_considerations-remove)にある考慮事項を検討したことを確認してください。
 {:note}
 
 1. 左側のナビゲーション・ペインの**「リソース」**をクリックします。

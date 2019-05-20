@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-18"
+lastupdated: "2019-04-22"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -20,17 +20,12 @@ subcollection: vmwaresolutions
 
 VMware vCenter Server with NSX-T インスタンスの容量は、ESXi サーバーまたはネットワーク・ファイル・システム (NFS) ストレージを追加/削除することで、ビジネス・ニーズに応じて拡張/縮小できます。
 
-クラスターが保守モードの間に、新規 ESXi サーバーをクラスターに追加できます。 また、複数のクラスター間で同時に ESXi サーバーを追加または削除できます。 以下の同時操作が可能です。
+* V3.0 リリース以降では、複数のクラスター間で同時に NFS ストレージを追加または削除できます。
+* V2.9 リリース以降では、サーバーが保守モードの間に、新規 ESXi サーバーをクラスターに追加できます。 また、複数のクラスター間で同時に ESXi サーバーを追加または削除できます。
 
-* 1 つのクラスターへのホストの追加と、追加のクラスターへのホストの追加。
-* 1 つのクラスターからのホストの削除と、追加のクラスターからのホストの削除。
-* 1 つのクラスターへのホストの追加と、追加のクラスターからのホストの削除。
-* 1 つのクラスターからのホストの削除と、追加のクラスターへのホストの追加 (https://github.ibm.com/tornado/tracker/issues/14183)。
-
-既存の NFS または vSAN vCenter Server with NSX-T クラスターの NFS ストレージ共有を追加/削除することができます。
-{:note}
-
-初期クラスターのストレージが vSAN の場合、デプロイメント後に 1 つ以上の ESXi サーバーを追加すると、クラスター・ストレージの容量を増やすことができます。
+**注**:
+* 初期クラスターのストレージが vSAN の場合、デプロイメント後に 1 つ以上の ESXi サーバーを追加すると、クラスター・ストレージの容量を増やすことができます。
+* 既存の NFS または vSAN vCenter Server with NSX-T クラスターの NFS ストレージ共有を追加/削除することができます。
 
 ## vCenter Server with NSX-T インスタンスへの ESXi サーバーの追加
 {: #vc_nsx-t_addingremovingservers-adding}
@@ -38,7 +33,7 @@ VMware vCenter Server with NSX-T インスタンスの容量は、ESXi サーバ
 ### ESXi サーバーを追加する前に
 {: #vc_nsx-t_addingremovingservers-adding-prereq}
 
-* VMware vSphere Web クライアントから ESXi サーバーの追加を行わないでください。 vSphere Web Client で行った変更は、{{site.data.keyword.vmwaresolutions_full}} コンソールと同期されません。
+* VMware vSphere Web クライアントで加えた変更は {{site.data.keyword.vmwaresolutions_short}} コンソールと同期されないので、可能な限り、{{site.data.keyword.vmwaresolutions_full}} コンソールを使用して ESXi サーバーを追加してください。つまり、オンプレミスの ESXi サーバー、または {{site.data.keyword.vmwaresolutions_short}} コンソールで管理できない、あるいは管理しない ESXi サーバーの場合にのみ、ESXi サーバーを vCenter Server に追加してください。
 * NFS ストレージのある vCenter Server with NSX-T インスタンスには、少なくとも 3 つの ESXi サーバーが必要です。 デフォルトのクラスターを拡張して、最大 51 台の ESXi サーバーを含められます。 デフォルト以外の各クラスターは、最大 59 台の ESXi サーバーを含むように拡張できます。
 * vSAN ストレージのある vCenter Server with NSX-T インスタンスには、少なくとも 4 つの ESXi サーバーが必要です。
 
@@ -70,7 +65,7 @@ VMware vCenter Server with NSX-T インスタンスの容量は、ESXi サーバ
 ### ESXi サーバーを削除する前に
 {: #vc_nsx-t_addingremovingservers-removing-prereq}
 
-* VMware vSphere Web クライアントから ESXi サーバーの削除を行わないでください。 vSphere Web Client で行った変更は、{{site.data.keyword.vmwaresolutions_short}} コンソールと同期されません。
+* vSphere Web クライアントで加えた変更は {{site.data.keyword.vmwaresolutions_short}} コンソールと同期されないので、可能な限り、{{site.data.keyword.vmwaresolutions_full}} コンソールを使用して ESXi サーバーを削除してください。つまり、オンプレミスの ESXi サーバー、または {{site.data.keyword.vmwaresolutions_short}} コンソールで管理できない、あるいは管理しない ESXi サーバーの場合にのみ、ESXi サーバーを vCenter Server から削除してください。
 * NFS ストレージを使用する vCenter Server with NSX-T インスタンスには少なくとも 3 つの ESXi サーバーが必要であり、vSAN ストレージを使用する vCenter Server with NSX-T インスタンスには少なくとも 4 つの ESXi サーバーが必要です。
 * ESXi サーバーを削除する際には、そのサーバーは保守モードになります。その後、そこで実行されているすべての VM は、vCenter Server からそのサーバーが削除される前にマイグレーションされます。 VM の再配置を最大限に制御するために、VMware vSphere Web Client を使用して、手動により、削除する ESXi サーバーを保守モードにし、サーバーで実行されている VM を移行することをお勧めします。 その後、{{site.data.keyword.vmwaresolutions_short}} コンソールを使用して ESXi サーバーを削除します。
 
@@ -158,6 +153,6 @@ VMware vSphere Web クライアントから NFS ストレージの追加を行�
 * [vCenter Server の部品構成表](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
 * [vCenter Server インスタンスの要件と計画](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [vCenter Server with NSX-T インスタンスの注文](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_orderinginstance)
-* [vCenter Server with NSX-T インスタンスのクラスターの追加、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_deletinginstance)
-* [ホストをメンテナンス モードに切り替える](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
-* [Enhanced vMotion Compatibility (EVC) processor support](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003212){:new_window}
+* [vCenter Server with NSX-T インスタンスのクラスターの追加、表示、削除](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_nsx-t_addingviewingcluster#vc_nsx-t_addingviewingcluster)
+* [ホストをメンテナンス モードに切り替える](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.resmgmt.doc/GUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
+* [Enhanced vMotion Compatibility (EVC) processor support](https://kb.vmware.com/s/article/1003212){:new_window}

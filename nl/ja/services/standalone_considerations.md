@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-23"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -23,21 +23,21 @@ subcollection: vmwaresolutions
 vCenter Server with HCX on {{site.data.keyword.cloud_notm}} インスタンスでは、オンプレミス・サイトからの同時接続が 3 つまでに制限されています。
 {:note}
 
-## オンプレミス HCX on IBM Cloud インスタンスをインストールする際の考慮事項
+## オンプレミス HCX on IBM Cloud インスタンスをインストールする前の考慮事項
 {: #standalone_considerations-install}
 
-HCX on {{site.data.keyword.cloud_notm}} コンポーネントを {{site.data.keyword.cloud_notm}} とオンプレミス vSphere 環境の両方にインストールする必要があります。 HCX on {{site.data.keyword.cloud_notm}} サービスを {{site.data.keyword.cloud_notm}} 上の vCenter Server with Hybridity Bundle インスタンスにインストールしてから、オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスをインストールすることをお勧めします。 詳しくは、[HCX on {{site.data.keyword.cloud_notm}} に関する考慮事項](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview)を参照してください。
+HCX on {{site.data.keyword.cloud_notm}} コンポーネントを {{site.data.keyword.cloud_notm}} とオンプレミス vSphere 環境の両方にインストールする必要があります。 HCX on {{site.data.keyword.cloud_notm}} サービスを {{site.data.keyword.cloud_notm}} 上の vCenter Server with Hybridity Bundle インスタンスにインストールしてから、オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスをインストールすることをお勧めします。 詳しくは、[HCX on {{site.data.keyword.cloud_notm}} をインストールする際の考慮事項](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-hcx_considerations#hcx_considerations-install)を参照してください。
 
-### IP アドレスに関する要件
-{: #standalone_considerations-IP}
+### IP アドレス要件
+{: #standalone_considerations-ip}
 
-HCX の全機能を利用するには、少なくとも 5 つのプライベート IP アドレスが必要で、それらにインターネットへのアクセスを許可する必要があります。
+HCX の全機能を利用するには、インターネットにアクセス可能なプライベート IP アドレスが最低 5 つ必要です。
 
 ### オンプレミス HCX on IBM Cloud インスタンスのデプロイメント・プロセス
 {: #standalone_considerations-deploy}
 
 オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスを正常にインストールするには、以下のタスクを実行する必要があります。
-1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスを注文します。 詳しくは、 [オンプレミス VMware HCX on IBM Cloud インスタンスの注文](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_orderingserviceinstances)を参照してください。
+1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスを注文します。 詳しくは、[オンプレミス HCX インスタンスの注文](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_orderingserviceinstances)を参照してください。
 2. **「HCX クラウド・コンソール」**で、以下のステップを実行します。
     1. **「管理」**タブをクリックします。
     2. **「システム更新」**タブで、**「ダウンロード・リンクの要求」**をクリックします。
@@ -57,8 +57,8 @@ HCX の全機能を利用するには、少なくとも 5 つのプライベー�
 
 詳しくは、[VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx) を参照してください。
 
-## オンプレミス HCX on IBM Cloud インスタンスを削除する際の考慮事項
-{: #considerations-when-deleting-on-premises-hcx-instances}
+## オンプレミス HCX on IBM Cloud インスタンスを削除する前の考慮事項
+{: #standalone_considerations-delete}
 
 オンプレミスで使用するために注文した HCX on {{site.data.keyword.cloud_notm}} インスタンスを削除する前に、以下の考慮事項を検討してください。
 1. VMware vSphere Web Client で、HCX ユーザー・インターフェースに移動し、以下の項目を確認します。
@@ -66,7 +66,7 @@ HCX の全機能を利用するには、少なくとも 5 つのプライベー�
     2. すべての拡張ネットワークが削除されていることを確認します。
     3. ペアのクラウド・サイトとの相互接続コンポーネントがすべて削除されていることを確認します。
 
-   次のステップに進む前に、考慮事項をすべて完了している必要があります。 そうしないと、オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスのライセンスがキャンセルされ、マイグレーションを実行できなくなります。そして、エラーが HCX コンポーネントに発生する可能性があります。  
+   次のステップに進む前に、それ以前のステップをすべて完了している必要があります。そうしないと、オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスのライセンスがキャンセルされます。 ライセンスがキャンセルされた場合、マイグレーションを実行できないので、HCX コンポーネントでエラーが発生する可能性があります。  
    {:important}
 2. {{site.data.keyword.vmwaresolutions_short}} コンソールで、オンプレミス HCX Manager のアクティベーション・キーを入手するために注文した、オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスを削除します。 コンソールで、削除したインスタンスが使用不可になったことを確認してから、次のステップに進んでください。
 

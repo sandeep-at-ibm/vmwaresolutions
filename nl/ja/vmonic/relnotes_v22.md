@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-10-19"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -39,7 +39,7 @@ IBM CloudDriver 仮想マシンは、V2.2 へのアップグレード処理中�
 * IBM CloudDriver 仮想マシンを参照するバックアップ・ソリューションを使用している場合は、V2.2 にアップグレードした後、バックアップ・ソリューションが新しい IBM CloudDriver 仮想マシンを参照していることを確認してください。
 * V2.2 にアップグレードする前に、レガシー Veeam VSI を Veeam on {{site.data.keyword.cloud_notm}} サービスに置き換えてください。 レガシー Veeam は V2.2 以降のリリースではサポートされないため、レガシー Veeam に関連付けられた管理コンポーネントのバックアップからリストアすることはできません。
 
-Veeam on {{site.data.keyword.cloud_notm}} サービスを使用する方法について詳しくは、以下のトピックを参照してください。
+Veeam on {{site.data.keyword.cloud_notm}} サービスを使用する方法について詳しくは、以下を参照してください。
 * [Veeam on {{site.data.keyword.cloud_notm}} のコンポーネントと考慮事項](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)
 * [Veeam on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
 
@@ -91,7 +91,7 @@ Microsoft Active Directory (AD) 用に 1 つの Microsoft Windows Server 仮想�
 ### インスタンスあたりのクラスター数の増加
 {: #relnotes_v22-clusters-per-inst}
 
-V2.2 以降のリリースでデプロイまたは V2.2 以降のリリースにアップグレードされた VMware vCenter Server インスタンスには、最大 10 個のクラスターを追加できるようになりました。 詳しくは、[vCenter Server インスタンスのクラスターの追加と表示](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)を参照してください。
+V2.2 以降のリリースでデプロイまたは V2.2 以降のリリースにアップグレードされた VMware vCenter Server インスタンスには、最大 10 個のクラスターを追加できるようになりました。 詳しくは、[vCenter Server インスタンスのクラスターの追加と表示](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)を参照してください。
 
 ## VMware vSphere クラスターの更新
 {: #relnotes_v22-vss}

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-22"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -25,7 +25,7 @@ subcollection: vmwaresolutions
 - Cloud Automation Manager (CAM) を使用して Infrastructure as Code (IaC) をスクリプト化し、VM とコンテナーの両方から作成された各種サービスを構成および調整して、DevOps ツールチェーンおよび ITSM ソリューションと統合する。
 
 このリファレンス・アーキテクチャーには以下のキー・コンポーネントがあります。
-- **オンプレミス仮想化** – オンプレミス仮想化は、Acme Skateboards 社の VM を現在ホストしている VMware クラスターです。 これらの VM は、現在、モダナイズするアプリケーションをホストしています。 このクラスターは、HCX を実行できるように [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://test.cloud.ibm.com/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro) アーキテクチャーの前提条件を満たすために必要です。
+- **オンプレミス仮想化** – オンプレミス仮想化は、Acme Skateboards 社の VM を現在ホストしている VMware クラスターです。 これらの VM は、現在、モダナイズするアプリケーションをホストしています。 このクラスターは、HCX を実行できるように [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro) アーキテクチャーの前提条件を満たすために必要です。
 
 HCX はオンプレミス・ネットワークを {{site.data.keyword.cloud_notm}} に拡張します。これにより、お客様は VM を、{{site.data.keyword.cloud_notm}} 上で稼働する VMware vCenter Server on {{site.data.keyword.cloud_notm}} インスタンスにマイグレーションしたり、必要に応じて元に戻したりすることができます。
 - **{{site.data.keyword.cloud_notm}} for VMware Solutions** – vCenter Server インスタンスは、VMware Software Defined Data Center (SDDC) ソリューションを自動的にデプロイするために必要な、vSphere、vCenter Server、NSX-V、および vSAN や {{site.data.keyword.cloud_notm}} Endurance ストレージを始めとするストレージ・オプションなどの基本的な VMware ビルディング・ブロックを提供します。 VMware クラスターは、マイグレーションされる VM のターゲットです。さらに、{{site.data.keyword.icpfull_notm}} がホストするコンテナーの中で実行されるモダナイズ後の一部のアプリケーションのターゲットでもあります。 vCenter Server のキー・コンポーネントは以下のとおりです。

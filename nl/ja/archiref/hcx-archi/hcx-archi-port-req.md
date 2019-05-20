@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-02-15"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -40,8 +40,8 @@ HCX は、公衆インターネットと専用回線を経由して、ネット�
 | クラウド・ゲートウェイ | ESXi ホスト | 80、902  | TCP | 管理および OVF デプロイメント | 内部 |
 | ESXi ホスト | クラウド・ゲートウェイ | 31031、44046 | TCP | ホスト・ベースのレプリケーションの内部トラフィック | 内部 |
 | クラウド・ゲートウェイ | ESXi ホスト | 8000  | TCP | vMotion (ゼロ・ダウン時間マイグレーション) |  |
-| Cloud Gateway (ローカル) | クラウド・ゲートウェイ</br>(リモート) | 4500  | UDP | 双方向トンネルでワークロードをカプセル化するための Internet Key Exchange (IKEv2) | IPSEC |
-| Cloud Gateway (ローカル) | クラウド・ゲートウェイ</br>(リモート) | 500  | UDP | 双方向トンネルの Internet Key Exchange (ISAKMP) | IPSEC |
+| Cloud Gateway (ローカル) | Cloud Gateway</br>(リモート) | 4500  | UDP | 双方向トンネルでワークロードをカプセル化するための Internet Key Exchange (IKEv2) | IPSEC |
+| Cloud Gateway (ローカル) | Cloud Gateway</br>(リモート) | 500  | UDP | 双方向トンネルの Internet Key Exchange (ISAKMP) | IPSEC |
 
 ## 関連リンク
 {: #hcx-archi-port-req-related}

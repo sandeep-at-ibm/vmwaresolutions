@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-13"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -17,7 +17,7 @@ subcollection: vmwaresolutions
 ## VMware NSX エディションの比較
 {: #solution-appendix-nsx-editions}
 
-この設計では、ライセンスの必要なコンポーネントが複数あります。環境を適切に運用するのに必要な最小限のライセンスをここにまとめます。
+この設計では、ライセンスの必要なコンポーネントが複数あります。 環境を適切に運用するのに必要な最小限のライセンスをここにまとめます。
 
 表 1. ライセンス要件
 
@@ -28,7 +28,7 @@ subcollection: vmwaresolutions
 **NSX** | ネットワークの仮想化 | NSX Base for Service Providers 6.4
 **vSAN** | ストレージの仮想化 | vSAN 6.6 Advanced  
 
-NSX Base for Service Providers エディションを使用できるのは、VMware vCloud Air Network (vCAN) を使用するサービス・プロバイダーの場合に限られます。このエディションの機能を以下の表にまとめます。
+NSX Base for Service Providers エディションを使用できるのは、VMware vCloud Air Network (vCAN) を使用するサービス・プロバイダーの場合に限られます。 このエディションの機能を以下の表にまとめます。
 {:note}
 
 表 2. VMware NSX エディションの比較チャート

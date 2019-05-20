@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-04-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -20,8 +20,7 @@ subcollection: vmwaresolutions
 
 {{site.data.keyword.vmwaresolutions_full}} を使用すると、短時間でインスタンスをさまざまな場所にデプロイして稼働させることができます。
 
-vCenter Server インスタンスのマルチサイト構成は、V2.0 以降のインスタンスでのみサポートされます。 マルチサイト構成では、VMware Cloud Foundation インスタンスと VMware vCenter Server インスタンスをリンクすることはできません。
-{:note}
+vCenter Server インスタンスのマルチサイト構成は、V2.0 以降のインスタンスでのみサポートされます。{:note}
 
 ## マルチサイト・デプロイメントのコンポーネント
 {: #vc_multisite-deployment-components}
@@ -69,7 +68,7 @@ vCenter Server インスタンスのマルチサイト構成は、V2.0 以降の
 ## 関連リンク
 {: #vc_multisite-related}
 
-* [NSX Manager へのプライマリ ロールの割り当て](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-44E8AE16-BA3F-4DD9-B582-FC1E137E6CFC.html){:new_window}
+* [NSX Manager へのプライマリ ロールの割り当て](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/com.vmware.nsx-cross-vcenter-install.doc/GUID-44E8AE16-BA3F-4DD9-B582-FC1E137E6CFC.html){:new_window}
 * [セカンダリ NSX Manager の設定](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-9E48BC57-15E3-49C7-8BC5-F94ED8918BBE.html){:new_window}
-* [AD trusts supported with vCenter Single Sign-On](https://kb.vmware.com/kb/2064250){:new_window}
+* [Microsoft Active Directory Trusts supported with VMware vCenter Single Sign-On](https://kb.vmware.com/s/article/2064250){:new_window}
 * [Securely connect your private VMware workloads in the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}

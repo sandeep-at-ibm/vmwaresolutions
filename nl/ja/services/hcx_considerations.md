@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-23"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -20,10 +20,10 @@ subcollection: vmwaresolutions
 
 HCX on {{site.data.keyword.cloud}} サービスは、オンプレミス・データ・センターのネットワークを {{site.data.keyword.cloud_notm}} にシームレスに拡張できます。これにより、変換や変更を行わずに仮想マシン (VM) を {{site.data.keyword.cloud_notm}} との間で移行できるようになります。
 
-このサービスは、V2.3 以降でデプロイされた VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle インスタンスでのみ利用可能です。
+このサービスは、V2.3 以降でデプロイされた VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle インスタンスでのみ利用可能です。 現在インストールされている HCX on {{site.data.keyword.cloud_notm}} のバージョンは 3.5.1 です。
 {:note}
 
-既存の vCenter Server インスタンスを vCenter Server with Hybridity Bundle インスタンスにアップグレードできます。 インスタンスをアップグレードして HCX on {{site.data.keyword.cloud_notm}} サービスをデプロイする方法について詳しくは、[vCenter Server with Hybridity Bundle インスタンスへアップグレードする手順](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates#procedure-to-upgrade-to-the-vcenter-server-with-hybridity-bundle-instance)を参照してください。
+既存の vCenter Server インスタンスを vCenter Server with Hybridity Bundle インスタンスにアップグレードできます。 インスタンスをアップグレードして HCX on {{site.data.keyword.cloud_notm}} サービスをデプロイする方法について詳しくは、[Hybridity Bundle にアップグレードする手順](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_upgrade-lic#vc_upgrade-lic-procedure-upgrade-to-hybridity)を参照してください。
 
 vCenter Server with HCX on {{site.data.keyword.cloud_notm}} インスタンスでは、オンプレミス・サイトからの同時接続が 3 つまでに制限されています。
 {:note}

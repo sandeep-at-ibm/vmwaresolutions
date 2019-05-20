@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-20"
+lastupdated: "2019-04-26"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -34,9 +34,9 @@ subcollection: vmwaresolutions
   |:------------|:------------ |
   | ドメイン・ネーム | `<root_domain>` |  
   | vCenter Server ログイン・ユーザー名 | `<user_id>@<root_domain>` (Microsoft Active Directory ユーザー) または `administrator@vsphere.local` |
-  | vCenter Server (PSC が組み込まれたもの) の FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. 最大長は 50 文字です。 |
+  | vCenter Server (PSC が組み込まれたもの) の FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`。最大長は 50 文字です。 |
   | シングル・サインオン (SSO) サイト名 | `<subdomain_label>` |
-  | 完全修飾 ESXi サーバー名 | `<host_prefix><n>.<subdomain_label>.<root_domain>`。ここで `<n>` は ESXi サーバーのシーケンスです。 最大長は 50 文字です。 |
+  | 完全修飾 ESXi サーバー名 | `<host_prefix><n>.<subdomain_label>.<root_domain>`。`<n>` は ESXi サーバーの文字列です。最大長は 50 文字です。 |
 
 インスタンスの注文時およびデプロイ時に設定した値は変更しないでください。 変更すると、インスタンスを使用できなくなる可能性があります。 例えば、パブリック・ネットワークがシャットダウンしたり、プロビジョニング中にサーバーや仮想サーバー・インスタンス (VSI) が Vyatta の内側に移動したり、IBM CloudBuilder VSI が停止したり、削除されたりすることがあります。
 {:important}
@@ -124,9 +124,9 @@ vCenter Server インスタンスを注文する際には、以下のシステ�
 ### ベア・メタル・サーバーの数
 {: #vc_nsx-t_orderinginstance-bare-metal-number}
 
-インスタンス内の初期クラスターの場合、ESXi サーバーの数は 3 台から 20 台までの範囲で構成できます。 すべての ESXi サーバーが設定済み構成を共有します。
-
-初期デプロイメントの後に、さらに 4 つのクラスターを追加できます。 VMware vSAN に**「Skylake」**または**「Broadwell」**の構成を選択した場合は、初期クラスターとデプロイメント後のクラスターの両方に 4 つの ESXi サーバーが必要です。 ESXi サーバーの最小数について詳しくは、[2 ノードの vCenter Server インスタンスの可用性は高いですか?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-) を参照してください。
+* 注文したサーバーはすべて同じ構成になります。
+* vSAN ストレージを使用する場合は、4 台から 20 台までのサーバーを注文できます。
+* NFS ストレージを使用する場合は、2 台から 20 台までのサーバーを注文できます。ただし、実動ワークロードには、少なくとも 3 台のサーバーが推奨されています。詳しくは、[2 ノードの vCenter Server インスタンスの可用性は高いですか?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-) を参照してください。
 
 ## ストレージ設定
 {: #vc_nsx-t_orderinginstance-storage-settings}
@@ -142,9 +142,9 @@ vCenter Server インスタンスを注文する際には、以下のシステ�
 vSAN は、**「Skylake」**と**「Broadwell」**のベアメタル構成でのみ使用できます。 以下の vSAN オプションを指定します。
 * **vSAN 容量ディスクのディスク・タイプとサイズ**: 必要な容量ディスクのオプションを選択します。
 * **vSAN 容量ディスクの数**: 追加する容量ディスク数を指定します。
-* 容量ディスクを上限の 8 個を超えて追加する場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。 このオプションでは、合計 10 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されますので、より少ない待ち時間とより高い IOPS スループットが求められるワークロードを扱うときに役立ちます。
+* 容量ディスクを上限の 10 個を超えて追加する場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。 このオプションでは、合計 12 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されますので、より少ない待ち時間とより高い IOPS スループットが求められるワークロードを扱うときに役立ちます。
 
-  **High-Performance Intel Optane** オプションは、Skylake の CPU モデルの Dual Intel Xeon Gold 5120 および Dual Intel Xeon Gold 6140 でのみ使用できます。
+  **「High-Performance Intel Optane」**オプションは、Skylake の CPU モデルでのみ使用できます。
   {:note}
 
 * **「Disk Type for vSAN Cache Disks」**および**「Number of vSAN Cache Disks」**の値を確認します。 これらの値は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けたかどうかによって異なります。
@@ -248,14 +248,14 @@ vCenter Server インスタンスを注文する際には、以下のネット�
 * **Active Directory/DNS 用の単一のパブリック Windows VSI**: Microsoft Active Directory (AD) 用の単一の Microsoft Windows Server VSI。ホストと VM が登録されたインスタンスの DNS として機能します。これがデプロイされて参照可能になります。 このオプションは、V1.9 以降のインスタンスではデフォルトでデプロイされます。
 * **管理クラスター上の高可用性構成の 2 つの専用 Windows Server VM**: 2 つの Microsoft Windows VM がデプロイされるので、セキュリティーと堅牢性が向上します。
 
-2 つの Microsoft Windows VM を使用するようにインスタンスを構成する場合は、2 つの Microsoft Windows Server 2012 R2 ライセンスを提供する必要があります。 Microsoft Windows Server 2012 R2 Standard エディションのライセンスと Microsoft Windows Server 2012 R2 Datacenter エディションのライセンスのいずれかまたは両方を使用してください。
+2 つの Microsoft Windows VM を使用するようにインスタンスを構成する場合は、2 つの Microsoft Windows Server 2016 ライセンスを提供する必要があります。 Microsoft Windows Server 2016 Standard エディションのライセンスと Microsoft Windows Server 2016 Datacenter エディションのライセンスのいずれかまたは両方を使用してください。
 {:important}
 
 各ライセンスは単一の物理サーバーにのみ割り当てられ、最大 2 つの物理プロセッサーをカバーします。 1 つの Standard エディション・ライセンスでは、2 プロセッサーのサーバーで 2 台の仮想化 Microsoft Windows VM を実行できます。 したがって、ライセンスは 2 つ必要になります。2 つの異なるホストに 2 つの Microsoft Windows VM がデプロイされるからです。
 
 VM は 30 日以内に有効にしてください。
 
-Windows のライセンスについて詳しくは、[Windows Server 2012 R2 の資料](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2)を参照してください。
+Windows Server 2016 のライセンスの注文方法について詳しくは、[Get started with Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:new_window} を参照してください。
 
 ## 注文のサマリー
 {: #vc_nsx-t_orderinginstance-order-summary}
@@ -287,7 +287,7 @@ Windows のライセンスについて詳しくは、[Windows Server 2012 R2 の
   * **「NFS ストレージ」**を選択し、すべてのファイル共有に同じ設定を構成して追加する場合は、**「共有の数」**、**「パフォーマンス」**、**「サイズ (GB)」**を指定します。
   * **「NFS Storage」**を選択してファイル共有を個別に追加して構成する場合は、**「Configure shares individually」**を選択します。 その後、ファイル共有ごとに、**「共有ストレージの追加」**ラベルの横にある**「+」**アイコンをクリックして、**「パフォーマンス」**と**「サイズ (GB)」**を選択します。 少なくとも 1 つのファイル共有を選択する必要があります。
 9. ネットワーク・インターフェースの設定を行います。
-   1. ホスト名接頭部、サブドメイン・ラベル、ルート・ドメイン・ネームを入力します。 セカンダリー・インスタンスの場合、ドメイン・ネームは自動的に入力されます。
+   1. プロビジョンするインスタンスのホスト名接頭部、サブドメイン・ラベル、およびルート・ドメイン・ネームを入力します。セカンダリー・インスタンスの場合、ドメイン・ネームは自動的に入力されます。
    2. **「パブリック・ネットワークとプライベート・ネットワーク (Public and Private Network)」**と**「プライベート・ネットワークのみ」**のいずれかのネットワーク設定を選択します。
    3. VLAN 設定を選択します。
       * 新規のパブリック VLAN とプライベート VLAN を注文する場合は、**「新規 VLAN を注文」**をクリックします。
@@ -305,7 +305,7 @@ Windows のライセンスについて詳しくは、[Windows Server 2012 R2 の
 
 インスタンスのデプロイメントが自動的に開始されます。 注文が処理されていることを示す確認メッセージが表示されます。デプロイメントの状況を確認するには、インスタンスの詳細を表示します。
 
-インスタンスが正常にデプロイされると、[vCenter Server with NSX-T インスタンスの技術仕様](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_overview-specs)に記述されているコンポーネントが VMware 仮想プラットフォームにインストールされます。 注文した ESXi サーバーは、デフォルトでは **cluster1** としてグループ化されます。
+インスタンスが正常にデプロイされると、[vCenter Server with NSX-T インスタンスの技術仕様](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_overview#vc_nsx-t_overview-specs)に記述されているコンポーネントが VMware 仮想プラットフォームにインストールされます。 注文した ESXi サーバーは、デフォルトでは **cluster1** としてグループ化されます。
 
 インスタンスが使用可能になると、インスタンスの状況が**「使用可能」**に変わり、E メールで通知されます。
 
@@ -334,6 +334,6 @@ Windows のライセンスについて詳しくは、[Windows Server 2012 R2 の
 * [{{site.data.keyword.cloud_notm}} アカウントの登録](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)
 * [vCenter Server インスタンスの表示](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
 * [vCenter Server インスタンスのマルチサイト構成](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_multisite)
-* [vCenter Server with NSX-T インスタンスのクラスターの追加、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vc_nsx-t_deletinginstance)
+* [vCenter Server with NSX-T インスタンスのクラスターの追加、表示、削除](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_nsx-t_addingviewingcluster#vc_nsx-t_addingviewingcluster)
 * [vCenter Server with NSX-T インスタンスの容量の拡張と縮小](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_addingremovingservers)
 * [vCenter Server with NSX-T インスタンスの削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_deletinginstance)

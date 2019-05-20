@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2017-01-23"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -36,7 +36,7 @@ Zerto 災害復旧をインスタンスの一部として注文した場合で�
 セキュリティーを確保するため、管理仮想マシンから開始されたアウトバウンド HTTPS 通信のみを許可するようにファイアウォール・ルールが適用されます。 この ESG は「ラージ」構成でデプロイされ、IBM サポートのみが構成を変更できます。
 
 詳しくは、以下のトピックを参照してください。
-* [管理サービスの NSX Edge にはセキュリティーのリスクがありますか?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)
+* [管理サービスの NSX Edge にはセキュリティーのリスクがありますか?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#faq-mgmt-nsx)
 * [VMware NSX 資料](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:new_window}
 
 ## インスタンスの注文プロセス

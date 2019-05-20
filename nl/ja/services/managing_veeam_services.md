@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-04-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -29,7 +29,7 @@ Veeam on {{site.data.keyword.cloud_notm}} 用マネージド・サービスを�
 2. ページをスクロールダウンし、**「追加マネージド・サービスの注文 (Order additional managed services)」**で、**「Veeam on IBM Cloud のマネージド・サービス (Managed Services for Veeam on IBM Cloud)」**カードをクリックします。
 3. **「Veeam on IBM Cloud」**ページで、マネージド・サービスとしての Veeam on {{site.data.keyword.cloud_notm}} の説明と技術仕様を確認してから、**「作成」**をクリックします。
 4. 要件に応じて構成設定値を指定するか、またはデフォルト値を受け入れます。
-5. **「vCenter サーバー」**または**「Cloud Foundation」**をクリックして、このサービスをいずれかのインスタンスに追加します。
+5. **「vCenter サーバー」**をクリックして、このサービスをいずれかのインスタンスに追加します。
 6. このサービスを新規インスタンスの注文中に追加するには、**「新規インスタンスに追加」**をクリックしてから、新規 [vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance) インスタンスまたは [vCenter Server with Hybridity](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance) インスタンスの注文を続けます。
 7. このサービスを既存のインスタンスに追加するには、**「既存にインスタンスに追加 (Add to Existing Instance)」**をクリックし、リストから対象インスタンスを選択してから、**「プロビジョン」**をクリックして注文に進むことに同意します。
 
@@ -38,4 +38,4 @@ Veeam on {{site.data.keyword.cloud_notm}} 用マネージド・サービスを�
 
 * [vCenter Server インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
 * [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
-* [Data Backup and Protection Services](https://www-935.ibm.com/services/business-continuity/backup-and-data-protection-services/)
+* [Data Backup and Protection Services](https://www.ibm.com/services/business-continuity/backup-data-protection)

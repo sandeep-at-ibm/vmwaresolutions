@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-21"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -25,5 +25,5 @@ subcollection: vmwaresolutions
 vCenter コンソールから VRA を手動で削除します。
 
 1. vCenter コンソールにログインします。
-2. **「ホストとクラスター (Hosts and Clusters)」**をクリックして、**Z-VRA-** で始まる名前の仮想マシンを見つけます。例えば、**Z-VRA-host0-vcs40dal.vcs.icvs.org** です。
+2. **「ホストとクラスター (Hosts and Clusters)」**をクリックして、**Z-VRA-** で始まる名前の仮想マシンを見つけます。 例えば、**Z-VRA-host0-vcs40dal.vcs.icvs.org** です。
 3. **Z-VRA-** 仮想マシンを右クリックして、**「ディスクから削除 (Delete from Disk)」**をクリックします。

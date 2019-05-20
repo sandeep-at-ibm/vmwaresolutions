@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -25,7 +25,7 @@ subcollection: vmwaresolutions
 {: #faq_byol-def}
 {: faq}
 
-ライセンス持ち込み (BYOL) は、V1.8 以降の VMware Cloud Foundation インスタンスと、V2.0 以降の VMware vCenter Server および VMware vSphere クラスターで使用できる機能です。 BYOL を利用すると、所有している VMware ライセンスを、以下の 1 つ以上の VMware ソフトウェア・コンポーネントに使用できます。
+ライセンス持ち込み (BYOL) は、V2.0 以降の VMware vCenter Server クラスターと VMware vSphere クラスターで使用できる機能です。BYOL を利用すると、所有している VMware ライセンスを、以下の 1 つ以上の VMware ソフトウェア・コンポーネントに使用できます。
 * VMware vCenter Server
 * VMware vSphere
 * VMware NSX
@@ -62,18 +62,6 @@ BYOL のライセンス・エディションには、以下の要件が適用さ
   | vSAN           | Advanced または Enterprise | CPU 8 個 |
   | NSX            | Standard、Advanced、Enterprise | CPU 8 個 |
 
-### Cloud Foundation インスタンスの BYOL 要件
-{: #faq_byol-cf-reqs}
-
-表 2. Cloud Foundation インスタンスのライセンス・エディションと最少 CPU 数についての要件
-
-  | VMware コンポーネント | 必要なライセンス・エディション | 必要な最少 CPU 数
-  |:-------------  |:-------------  |:-------|
-  | vCenter Server | 標準 | N/A |
-  | vSphere        | Enterprise Plus | CPU 8 個 |
-  | vSAN           | Advanced または Enterprise | CPU 8 個 |
-  | NSX            | エンタープライズ | CPU 8 個 |
-
 ## 提供したライセンス・キーが正しくない場合はどうなりますか?
 {: #faq_byol-incorrect-license}
 {: faq}
@@ -84,13 +72,7 @@ BYOL のライセンス・エディションには、以下の要件が適用さ
 {: #faq_byol-license-key}
 {: faq}
 
-はい。 どの VMware コンポーネントも CPU ごとにライセンスが 1 つ必要です。 現在、すべての vCenter Server サーバーと Cloud Foundation サーバーは CPU を 2 つ使用します。 そのため、サーバーごとにライセンスが 2 つ必要です。 基本インスタンスと、将来的にインスタンスに追加する拡張ノードに対応できるライセンス・キーを提供することをお勧めします。
-
-## BYOL 機能を使用する場合に SDDC Manager ライセンスは自分で提供できますか?
-{: #faq_byol-sddc}
-{: faq}
-
-いいえ。VMware と IBM の契約により、IBM はクライアントの実際のライセンス・キーを許諾する必要があります。 Cloud Foundation のデプロイメントには SDDC Manager のライセンスが含まれていますが、SDDC Manager のライセンス・キー・ファイルを許諾してそれらを BYOL で使用できるか検証することはできません。 したがって、SDDC Manager ライセンス料の請求は、どのインスタンスについても IBM が行います。 SDDC Manager ライセンスは、Cloud Foundation インスタンスの全体のライセンス料金の一部です。
+はい。 どの VMware コンポーネントも CPU ごとにライセンスが 1 つ必要です。 現在、すべての vCenter Server サーバーは CPU を 2 つ使用します。 そのため、サーバーごとにライセンスが 2 つ必要です。 基本インスタンスと、将来的にインスタンスに追加する拡張ノードに対応できるライセンス・キーを提供することをお勧めします。
 
 ## 一部の VMware コンポーネントでは BYOL 機能を使用して、他の VMware コンポーネントでは月単位のライセンスを購入することはできますか?
 {: #faq_byol-mthly-license}

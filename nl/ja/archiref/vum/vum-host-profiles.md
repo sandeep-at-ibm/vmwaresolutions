@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -57,13 +57,13 @@ vCenter Server クラスターにさらにホストを追加するには、[vCen
 
 1.	以前に作成されたホスト・プロファイルにナビゲートします。
 2.	**「Check Host Profile Compliance」アイコン**をクリックします。
-3.	**「Objects」タブ**でコンプライアンス状況が_「Compliant」、「Unknown」、または_「Non-compliant_」に更新されます。 非準拠状況は、プロファイルと新規ホストの間に特定の不整合が検出されたことを示します。
+3.	**「Objects」**タブでコンプライアンス状況が_「Compliant」、「Unknown」、または_「Non-compliant_」に更新されます。 非準拠状況は、プロファイルと新規ホストの間に特定の不整合が検出されたことを示します。
 
 ##	コンプライアンスの失敗の確認と修復
 {: #vum-host-profiles-review-compliance}
 
 1. コンプライアンスの失敗の詳細を表示するには、準拠性検査で使用される**「Objects」**タブから**「Host Profile」**を選択します。
-2. コンプライアンスが失敗したホストとホスト・プロファイルで異なるパラメーターに関する特定の詳細を表示するには、**「Monitor」タブ**をクリックし、**コンプライアンス・ビュー**を選択します。
+2. コンプライアンスが失敗したホストとホスト・プロファイルで異なるパラメーターに関する特定の詳細を表示するには、**「Monitor」**タブをクリックし、**コンプライアンス**・ビューを選択します。
 3. オブジェクト階層を展開し、失敗したホストを選択します。
 4. さまざまなパラメーターが、階層の下のコンプライアンス・ウィンドウに表示されます。
 5. パラメーターを確認し、新規ホストが基準ホストと異なる理由を把握します。 コンプライアンスが許容されないパラメーターについては、新規ホストを保守モードから移行する前に修復します。 例えば、システム管理者の操作によって構成のドリフトが生じた箇所などです。
@@ -72,4 +72,4 @@ vCenter Server クラスターにさらにホストを追加するには、[vCen
 {: #vum-host-profiles-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} ソリューションのアーキテクチャー](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (デモンストレーション)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (デモンストレーション)

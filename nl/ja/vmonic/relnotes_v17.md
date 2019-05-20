@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2017-07-05"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -47,7 +47,7 @@ Cloud Foundation インスタンスのデプロイメントの複雑さと、マ
 ### クラスター・サポート
 {: #relnotes_v17-cluster}
 
-V1.7 リリース以降、vCenter Server インスタンスではクラスターを使用して ESXi サーバーを管理できるので、リソース管理と可用性が向上します。 インスタンスの注文時に構成した ESXi サーバーは、デフォルトでは **cluster1** としてグループ化されます。 インスタンスの詳細ページに新しく導入された**「インフラストラクチャー」**タブで、クラスターの詳細を表示したり、最大 5 つのクラスターをインスタンスに追加したりできます。 インスタンスの容量を拡張または縮小する場合は、ESXi サーバーを追加または削除するクラスターを選択できます。 詳しくは、[vCenter Server インスタンスのクラスターの追加と表示](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)を参照してください。
+V1.7 リリース以降、vCenter Server インスタンスではクラスターを使用して ESXi サーバーを管理できるので、リソース管理と可用性が向上します。 インスタンスの注文時に構成した ESXi サーバーは、デフォルトでは **cluster1** としてグループ化されます。 インスタンスの詳細ページに新しく導入された**「インフラストラクチャー」**タブで、クラスターの詳細を表示したり、最大 5 つのクラスターをインスタンスに追加したりできます。 インスタンスの容量を拡張または縮小する場合は、ESXi サーバーを追加または削除するクラスターを選択できます。 詳しくは、[vCenter Server インスタンスのクラスターの追加、表示、削除](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)を参照してください。
 
 ### Zerto 災害復旧のデプロイメントの機能拡張
 {: #relnotes_v17-zerto}

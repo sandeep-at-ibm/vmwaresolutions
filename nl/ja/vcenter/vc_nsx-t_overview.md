@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-21"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -22,7 +22,7 @@ VMware vCenter Server with NSX-T on {{site.data.keyword.cloud}} は、VMware vSp
 
 多くの場合、環境全体を 1 日以内でプロビジョンできます。また、このベア・メタル・インフラストラクチャーのコンピュート能力は、必要に応じて迅速かつ伸縮自在に拡張や縮小ができます。
 
-デプロイメント後に、{{site.data.keyword.slportal}}から NFS (ネットワーク・ファイル・システム) ファイル共有をさらに注文してからクラスター内のすべての ESXi サーバーにそれらを手動で接続することによって、共有ストレージを増やすことができます。
+デプロイメント後に、{{site.data.keyword.slportal}}から ネットワーク・ファイル・システム (NFS) ファイル共有をさらに注文してからクラスター内のすべての ESXi サーバーにそれらを手動で接続することによって、共有ストレージを増やすことができます。
 
 VMware vSAN は専用ストレージのオプションとしても利用できます。 vSAN クラスターの vSAN ベース・ストレージの容量を増やすには、デプロイメント後に ESXi サーバーをさらに追加します。
 
@@ -75,7 +75,7 @@ vCenter Server with NSX-T インスタンスには、以下のコンポーネン
 * **Skylake**: 選択した CPU モデルおよび RAM サイズの 2 CPU Intel Skylake 世代サーバー (Intel Xeon 4100/5100/6100 シリーズ)。  
 * **Broadwell**: 選択した CPU モデルおよび RAM サイズの 4 CPU Intel Broadwell 世代サーバー (Intel Xeon E7-4800 シリーズ)。
 
-vSAN ストレージを使用する計画がある場合は、構成に 4 つの{{site.data.keyword.baremetal_short}}が必要です。
+vSAN ストレージを使用する場合は、少なくとも 4 台の{{site.data.keyword.baremetal_short}}を使用する構成にする必要があります。
 {:note}
 
 ### ネットワーキング
@@ -86,10 +86,10 @@ vSAN ストレージを使用する計画がある場合は、構成に 4 つの
 *  VLAN (仮想 LAN) 3 つ: パブリック VLAN 1 つとプライベート VLAN 2 つ
 * T1 ルーターと T0 ルーターを備えたオーバーレイ・ネットワーク 1 つ (レイヤー 2 (L2) ネットワークに接続されたローカル・ワークロード間で実行される可能性のある東西通信用)。 これはサンプルのルーティング・トポロジーとしてデプロイされるので、変更したり、作成の基礎として使用したり、削除したりできます。
 *  以下の 3 つの VMware NSX-T Edge Services Gateway
-  * アウトバウンド HTTPS 管理トラフィック用のセキュアな管理サービス VMware NSX ESG 1 つ。これは、管理ネットワーキング類型の一部として IBM がデプロイします。この ESG は、IBM 管理 VM が、自動化に関連する特定の外部 IBM 管理コンポーネントと通信するために使用します。 詳しくは、[ユーザー管理の NSX ESG を VM で使用するためのネットワークの構成](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_esg_config)を参照してください。
-  * アウトバウンドとインバウンドの HTTPS ワークロード・トラフィック用のユーザー管理のセキュアな VMware NSX ESG 2 つ。 このゲートウェイは、VPN アクセスまたはパブリック・アクセスを提供するためにユーザーが変更可能なテンプレートとして IBM がデプロイします。 詳しくは、[ユーザー管理の NSX Edge にはセキュリティーのリスクがありますか?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq-customer-nsx) を参照してください。
+  * アウトバウンド HTTPS 管理トラフィック用のセキュアな管理サービス VMware NSX ESG 1 つ。これは、管理ネットワーキング類型の一部として IBM がデプロイします。 この ESG は、IBM 管理 VM が、自動化に関連する特定の外部 IBM 管理コンポーネントと通信するために使用します。 詳しくは、[ユーザー管理の NSX ESG を VM で使用するためのネットワークの構成](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_esg_config)を参照してください。
+  * アウトバウンドとインバウンドの HTTPS ワークロード・トラフィック用のユーザー管理のセキュアな VMware NSX ESG 2 つ。 このゲートウェイは、VPN アクセスまたはパブリック・アクセスを提供するためにユーザーが変更可能なテンプレートとして IBM がデプロイします。 詳しくは、[ユーザー管理の NSX Edge にはセキュリティーのリスクがありますか?](/docs/services/vmwaresolutions?topic=vmware-solutions-faq#faq-customer-nsx) を参照してください。
 
-  この ESG は **mgmt-nsx-edge0** という名前です。お客様がこの ESG にアクセスしたり使用したりすることはできません。これを変更すると、{{site.data.keyword.vmwaresolutions_short}} コンソールから vCenter Server インスタンスを管理できなくなる可能性があります。 また、ファイアウォールを使用したり、外部 IBM 管理コンポーネントへの ESG 通信を無効にしたりすると、{{site.data.keyword.vmwaresolutions_short}} が使用できなくなる可能性があります。
+  この ESG は **mgmt-nsx-edge0** という名前です。 お客様がこの ESG にアクセスしたり使用したりすることはできません。 これを変更すると、{{site.data.keyword.vmwaresolutions_short}} コンソールから vCenter Server インスタンスを管理できなくなる可能性があります。 また、ファイアウォールを使用したり、外部 IBM 管理コンポーネントへの ESG 通信を無効にしたりすると、{{site.data.keyword.vmwaresolutions_short}} が使用できなくなる可能性があります。
   {:important}
 
 ### 仮想サーバー・インスタンス
@@ -118,7 +118,7 @@ vSAN オプションでは、構成をカスタマイズできます。ディス
 
   3.8 TB SSD (ソリッド・ステート・ディスク) ドライブは、データ・センターで一般提供が開始されたらサポートされる予定です。
   {:note}
-* High-Performance Intel Optane オプション。合計 10 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されます。 このオプションは CPU モデルに応じて異なります。
+* High-Performance Intel Optane オプション。合計 12 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されます。 このオプションは CPU モデルに応じて異なります。
 
 #### NFS ストレージ
 {: #vc_nsx-t_overview-nfs-storage}
@@ -150,7 +150,7 @@ vCenter Server with NSX-T 拡張ノードごとに、{{site.data.keyword.cloud_n
 ### 拡張ノード用のハードウェア
 {: #vc_nsx-t_overview-expansion-node-hardware}
 
-[vCenter Server with NSX-T インスタンスの技術仕様](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_overview-specs)に示されている構成になっている、1 台のベアメタル・サーバー。
+[vCenter Server with NSX-T インスタンスの技術仕様](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_overview#vc_nsx-t_overview-specs)に示されている構成になっている、1 台のベアメタル・サーバー。
 
 ### 拡張ノード用のライセンスと料金
 {: #vc_nsx-t_overview-expansion-node-license-and-fee}
@@ -175,5 +175,5 @@ vCenter Server with NSX-T 拡張ノードごとに、{{site.data.keyword.cloud_n
 * [vCenter Server ソフトウェアの部品構成表](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
 * [vCenter Server インスタンスの計画](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [vCenter Server with NSX-T インスタンスの注文](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_orderinginstance)
-* [{{site.data.keyword.cloud_notm}} のファイル・ストレージとブロック・ストレージ](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage){:new_window}
+* [vCenter Server の接続ストレージ](/docs/services/vmwaresolutions/services?topic=vmware-solutions-storage-benefits#storage-benefits)
 * [ファイル共有容量の拡張](/docs/infrastructure/FileStorage?topic=FileStorage-expandCapacity#expandCapacity)

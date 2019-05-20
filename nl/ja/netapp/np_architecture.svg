@@ -1,8 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 725 315" style="enable-background:new 0 0 725 315;" xml:space="preserve">
-<style type="text/css">
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 725 315"
+   style="enable-background:new 0 0 725 315;"
+   xml:space="preserve"
+   sodipodi:docname="np_architecture.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"><metadata
+   id="metadata71"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs69">
+	
+	
+</defs><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1920"
+   inkscape:window-height="1017"
+   id="namedview67"
+   showgrid="false"
+   inkscape:zoom="1.5670352"
+   inkscape:cx="276.6225"
+   inkscape:cy="157.1"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" />
+<style
+   type="text/css"
+   id="style2">
 	.st0{fill:#4B84C4;}
 	.st1{fill:#959595;}
 	.st2{fill:#1AA78D;}
@@ -20,24 +64,168 @@
 	.st14{font-size:24px;}
 	.st15{font-size:19px;}
 </style>
-<rect x="198.5" y="0.8" class="st0" width="526.5" height="89.1"/>
-<rect x="-0.3" y="204.9" class="st1" width="725.3" height="110.1"/>
-<rect x="198.5" y="101.6" class="st2" width="170.7" height="89.9"/>
-<rect x="375.4" y="103.7" class="st2" width="169.8" height="87.7"/>
-<rect x="551.9" y="103.7" class="st2" width="173.1" height="87.7"/>
-<g id="Layer_2">
-	<rect x="0.3" y="0.9" class="st3" width="186.9" height="190.5"/>
+<rect
+   x="198.5"
+   y="0.8"
+   class="st0"
+   width="526.5"
+   height="89.1"
+   id="rect4" />
+<rect
+   x="-0.3"
+   y="204.9"
+   class="st1"
+   width="725.3"
+   height="110.1"
+   id="rect6" />
+<rect
+   x="198.5"
+   y="101.6"
+   class="st2"
+   width="170.7"
+   height="89.9"
+   id="rect8" />
+<rect
+   x="375.4"
+   y="103.7"
+   class="st2"
+   width="169.8"
+   height="87.7"
+   id="rect10" />
+<rect
+   x="551.9"
+   y="103.7"
+   class="st2"
+   width="173.1"
+   height="87.7"
+   id="rect12" />
+<g
+   id="Layer_2">
+	<rect
+   x="0.3"
+   y="0.9"
+   class="st3"
+   width="186.9"
+   height="190.5"
+   id="rect14" />
 </g>
-<g id="Layer_4">
-	<text transform="matrix(1 0 0 1 8.0529 35.8409)" class="st4 st5 st6">共通サービス</text>
-	<text transform="matrix(1 0 0 1 42.7579 75.3497)"><tspan x="0" y="0" class="st4 st5 st7">認証</tspan><tspan x="35.2" y="31.4" class="st4 st5 st7">DNS</tspan><tspan x="36.2" y="62.8" class="st4 st5 st7">NTP</tspan><tspan x="-17.1" y="94.3" class="st4 st5 st7">認証局</tspan></text>
-</g>
-<text transform="matrix(1 0 0 1 332.3229 38.8409)"><tspan x="0" y="0" class="st4 st5 st8">仮想化の管理</tspan><tspan x="39.7" y="29.8" class="st4 st5 st9">VMware vCenter Server</tspan></text>
-<text transform="matrix(1 0 0 1 205.0602 139.9747)"><tspan x="0" y="0" class="st4 st5 st10">コンピュートの仮想化</tspan><tspan x="27.9" y="20.9" class="st4 st5 st11">VMware vSphere</tspan></text>
-<text transform="matrix(1 0 0 1 561.7472 141.4337)" class="st4 st5 st10">NetApp  ONTAP  Select</text>
-<text transform="matrix(1 0 0 1 385.2491 140.9747)"><tspan x="0" y="0" class="st4 st5 st10">ネットワークの仮想化</tspan><tspan x="34.2" y="20.9" class="st4 st5 st11">VMware NSX</tspan><tspan x="108.9" y="18.3" class="st4 st5 st11">  </tspan></text>
-<text transform="matrix(1 0 0 1 187.5363 246.7403)"><tspan x="0" y="0" class="st4 st5 st12">IBM</tspan><tspan x="283.7" y="0" class="st4 st5 st13"> </tspan><tspan x="290.4" y="0" class="st4 st5 st14">Cloud 上の物理インフラストラクチャー</tspan></text>
-<text transform="matrix(1 0 0 1 200.6517 294.1616)" class="st4 st5 st15">コンピュート</text>
-<text transform="matrix(1 0 0 1 334.018 294.1616)" class="st4 st5 st15">ストレージ </text>
-<text transform="matrix(1 0 0 1 449.0178 293.2401)" class="st4 st5 st15">ネットワーク</text>
+<text
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.36800003px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff"
+   id="text17"
+   class="st4 st5 st6"
+   x="86.815857"
+   y="36.47905">共通サービス</text>
+
+<text
+   id="text27"
+   x="84.237503"
+   y="79.816734"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.36800003px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr;text-anchor:middle;fill:#ffffff;fill-opacity:1;"><tspan
+     sodipodi:role="line"
+     id="tspan884"
+     x="84.237503"
+     y="79.816734">認証</tspan><tspan
+     sodipodi:role="line"
+     id="tspan886"
+     x="84.237503"
+     y="101.4834">DNS</tspan><tspan
+     sodipodi:role="line"
+     id="tspan888"
+     x="84.237503"
+     y="123.15007">NTP</tspan><tspan
+     sodipodi:role="line"
+     id="tspan890"
+     x="84.237503"
+     y="146.06551">認証局</tspan></text>
+
+
+<text
+   id="text34"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.36800003px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr;text-anchor:middle;fill:#ffffff;fill-opacity:1;"
+   x="456.32291"
+   y="38.8409"><tspan
+     sodipodi:role="line"
+     id="tspan892"
+     x="456.32291"
+     y="38.8409">仮想化の管理</tspan><tspan
+     sodipodi:role="line"
+     id="tspan894"
+     x="456.32291"
+     y="62.174232">VMware vCenter Server</tspan></text>
+
+
+<text
+   id="text40"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.36800003px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr;text-anchor:middle;fill:#ffffff;fill-opacity:1;"
+   x="281.06018"
+   y="139.9747"><tspan
+     sodipodi:role="line"
+     id="tspan896"
+     x="281.06018"
+     y="139.9747">コンピュートの仮想化</tspan><tspan
+     sodipodi:role="line"
+     id="tspan898"
+     x="281.06018"
+     y="154.9747">VMware vSphere</tspan></text>
+
+
+<text
+   transform="scale(0.88440934,1.1306981)"
+   class="st4 st5 st10"
+   id="text42"
+   x="720.77527"
+   y="125.08528"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.77110481px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.88440931">NetApp  ONTAP  Select</text>
+
+
+<text
+   id="text50"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.36800003px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr;text-anchor:middle;fill:#ffffff;fill-opacity:1;"
+   x="461.24911"
+   y="140.9747"><tspan
+     sodipodi:role="line"
+     id="tspan900"
+     x="461.24911"
+     y="140.9747">ネットワークの仮想化</tspan><tspan
+     sodipodi:role="line"
+     id="tspan902"
+     x="463.35849"
+     y="155.9747">VMware NSX  </tspan></text>
+
+
+<text
+   id="text58"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.36800003px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1"
+   x="365.53632"
+   y="246.7403"><tspan
+     sodipodi:role="line"
+     id="tspan904"
+     x="365.53632"
+     y="246.7403">IBM Cloud 上の物理インフラストラクチャー</tspan></text>
+
+
+<text
+   class="st4 st5 st15"
+   id="text60"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.36800003px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff"
+   x="238.6517"
+   y="294.16159">コンピュート</text>
+
+
+<text
+   class="st4 st5 st15"
+   id="text62"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.36800003px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff"
+   x="372.01801"
+   y="294.16159">ストレージ </text>
+
+
+<text
+   class="st4 st5 st15"
+   id="text64"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.36800003px;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff"
+   x="487.01779"
+   y="293.24011">ネットワーク</text>
+
+
 </svg>

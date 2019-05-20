@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-04-09"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -35,7 +35,7 @@ vSphere ESXi 構成は、以下の側面から成ります。
 
 次の表は、各側面の仕様の概要を示しています。 ESXi の構成とインストール後、ホストが VMware vCenter Server に追加され、そこから管理されます。
 
-この設計では、Direct Console User Interface (DCUI)、ESXi Shell、Secure Shell (SSH) を介して仮想ホストにアクセスできます。
+この設計では、Direct Console User Interface (DCUI) および vSphere Web Client を使用して仮想ホストにアクセスできます。Secure Shell (SSH) および ESXi Shell は、ベスト・プラクティスとしてプロビジョニングの後に無効になります。
 
 デフォルトでは、直接ログインできるユーザーは、ホストの物理マシンの _root_ ユーザーおよび _ibmvmadmin_ ユーザーのみです。 管理者は、Microsoft Active Directory (MSAD) ドメインからユーザーを追加して、ホストへのユーザー・アクセスを可能にすることができます。 vCenter Server ソリューション設計に含まれるホストはすべて、中央 NTP サーバーと同期するように構成されます。
 
@@ -45,7 +45,7 @@ vSphere ESXi 構成は、以下の側面から成ります。
 |:---------------------- |:----------------------- |
 | ESXi ブート・ロケーション     | RAID-1 に構成されたローカル・ディスクを使用 |
 | 時刻同期   | {{site.data.keyword.cloud}} NTP サーバーを使用 |
-| ホスト・アクセス            | DCUI、ESXi シェル、SSH (有効な場合) をサポート |
+| ホスト・アクセス            | DCUI のサポート。SSH および ESXi Shell はサポートされますが、デフォルトでは有効ではありません |
 | ユーザー・アクセス            | ローカル認証と MSAD |
 | ドメイン・ネームの解決 | DNS を使用 ([共通サービス設計](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_commonservice)を参照) |
 | EVC モード | Skylake (新規の vSphere 6.7 デプロイメントの場合のみ) |
@@ -58,7 +58,7 @@ vSphere クラスターには、vCenter Server インスタンスとユーザー
 初期デプロイメント時または初期デプロイメント後に、最大 59 ESXi ホストまで拡大できます。
 
 より大きなユーザー・ワークロードをサポートするには、以下の方法で環境を拡大できます。  
-* 既存クラスターの追加のコンピュート・ホストをデプロイする
+* 既存クラスターに追加のコンピュート・ホストをデプロイする
 * 同じ vCenter Server Appliance によって管理される追加のクラスターをデプロイする
 * 新しい vCenter Server インスタンスをそれ専用の vCenter Server Appliance とともにデプロイする
 
@@ -69,7 +69,7 @@ vSphere クラスターには、vCenter Server インスタンスとユーザー
 
 この設計では、vSphere ホストの共有ストレージを提供するために、VMware vSAN ストレージが vCenter Server インスタンスで使用されます。
 
-次の図に示すように、vSAN は、vSphere クラスター内の複数の ESXi ホストそれぞれのローカル・ストレージを集約し、集約ストレージを単一の VM データ・ストアとして管理します。 この設計では、ESXi オペレーティング・システム (OS) と vSAN データ・ストアのためのローカル・ディスク・ドライブがコンピュート・ノードに含まれます。ノードがどのクラスターに属するかに関係なく、ESXi インストールを収容するために 2 つの OS ドライブが各ノードに組み込まれます。
+次の図に示すように、vSAN は、vSphere クラスター内の複数の ESXi ホストそれぞれのローカル・ストレージを集約し、集約ストレージを単一の VM データ・ストアとして管理します。 この設計では、ESXi オペレーティング・システム (OS) と vSAN データ・ストアのためのローカル・ディスク・ドライブがコンピュート・ノードに含まれます。 ノードがどのクラスターに属するかに関係なく、ESXi インストールを収容するために 2 つの OS ドライブが各ノードに組み込まれます。
 
 図 2. vSAN の概念
 
@@ -77,7 +77,7 @@ vSphere クラスターには、vCenter Server インスタンスとユーザー
 
 vSAN では、以下のコンポーネントが使用されます。
 * 2 ディスク・グループ vSAN 設計。各ディスク・グループは 2 つ以上のディスクで構成されます。 グループ内の最小サイズの SSD 1 つがキャッシュ層として使用され、残りの SSD または NVMe ドライブが容量層として使用されます。
-* 2 つの OS ドライブを除いて、ドライブごとにオンボード RAID コントローラーが RAID–0 アレイで構成されます。
+* 2 つの OS ドライブを除いて、ドライブごとにオンボード RAID コントローラーが RAID-0 アレイで構成されます。
 * すべてのストレージから単一の vSAN データ・ストアが作成されます。
 
 使用可能な vSAN の機能は、インスタンスの注文時に選択するライセンス・エディションによります。 詳しくは、[VMware vSAN エディションの比較](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution-appendix#vmware-vsan-edition-comparison)を参照してください。
@@ -98,7 +98,7 @@ vSAN が使用可能になって構成されると、VM ストレージ特性を
 
 この設計のデフォルトのストレージ・ポリシーは、単一障害を許容します。 デフォルト・ポリシーにはイレージャー・コーディングが構成され、**「障害許容方式 (Failure tolerance method)」**が**「RAID-5/6 (イレージャー・コーディング) - 容量 (RAID-5/6 (Erasure Coding) - Capacity)」**に設定され、**「障害のプライマリー・レベル (Primary level of failures)」**が 1 に設定されます。RAID 5 構成では最低 4 つのホストが必要です。
 
-あるいは RAID 6 構成を選択して、**「障害許容方式 (Failure tolerance method)」**を**「RAID-5/6 (イレージャー・コーディング) - 容量 (RAID-5/6 (Erasure Coding) - Capacity)」**に設定し、**「障害のプライマリー・レベル (Primary level of failures)」**を 2 に設定することもできます。RAID 6 構成では最低 6 つのホストが必要です。デフォルトのストレージ・ポリシーで**「複製 (Duplication)」**と**「圧縮 (compression)」**も有効になります。
+あるいは RAID 6 構成を選択して、**「障害許容方式 (Failure tolerance method)」**を**「RAID-5/6 (イレージャー・コーディング) - 容量 (RAID-5/6 (Erasure Coding) - Capacity)」**に設定し、**「障害のプライマリー・レベル (Primary level of failures)」**を 2 に設定することもできます。RAID 6 構成では最低 6 つのホストが必要です。 デフォルトのストレージ・ポリシーで**「複製 (Duplication)」**と**「圧縮 (compression)」**も有効になります。
 
 vSphere コンソールから特に指定されない限り、インスタンスはデフォルト・ポリシーを使用します。 カスタム・ポリシーが構成された場合、vSAN は可能であればそのカスタム・ポリシーを保証します。 しかし、ポリシーを保証できなければ、そのポリシーを使用する VM をプロビジョンすることはできません。ただし、VM が強制的にプロビジョンできるようになっている場合を除きます。
 
@@ -119,18 +119,18 @@ vSAN の設定は、{{site.data.keyword.cloud_notm}} 内に VMware ソリュー�
 ## iSCSI 接続ストレージ
 {: #design_virtualinfrastructure-iscsi-storage}
 
-NFS v3 接続ストレージの場合とは違い、iSCSI 接続ストレージでは、すべての構成済みの NIC カード・ポートとターゲット・ポートでアクティブ-アクティブのパスがサポートされます。その結果、スループットが高くなるので、NFS 接続ストレージの好ましい代替手段になります。ただし、環境が複雑になるというコストがかかります。
+NFS v3 接続ストレージの場合とは違い、iSCSI 接続ストレージでは、すべての構成済みの NIC カード・ポートとターゲット・ポートでアクティブ-アクティブのパスがサポートされます。 その結果、スループットが高くなるので、NFS 接続ストレージの好ましい代替手段になります。 ただし、環境が複雑になるというコストがかかります。
 
-{{site.data.keyword.cloud_notm}} エンデュランス・ブロック・ストレージでは、LUN ごとに最大 8 つのホストの接続しかサポートされていません。ただし、この資料に将来の機能変更についても記載しておきます。Q1 までに {{site.data.keyword.cloud_notm}} エンデュランス・ストレージの変更によって vCenter Server に機能が追加されると、各 ESXi ホストが最低 2 つのイニシエーターを持つことになり、最大 64 のホストまたは iSCSI イニシエーターの接続が可能になります。
+{{site.data.keyword.cloud_notm}} のエンデュランス・ブロック・ストレージは、VMware を使用する場合に LUN 1 つあたり最大 64 個の IP を接続できます。この設計により、ホストは最大 32 台になります。  
 
-管理コンポーネント用として 1 つの 2-TB iSCSI LUN が vCenter Server に接続され、お客様のワークロード用として最低 1 つの iSCSI LUN が構成されます。このストレージは、LUN ごとに VMFS 6.x ファイル・システムとしてフォーマットされます。
+管理コンポーネント用として 1 つの 2-TB iSCSI LUN が vSphere クラスターに接続され、お客様のワークロード用として最低 1 つの iSCSI LUN が構成されます。 このストレージは、LUN ごとに VMFS 6.x ファイル・システムとしてフォーマットされます。
 
 ### iSCSI 用仮想ネットワークのセットアップ
 {: #design_virtualinfrastructure-setup-iscsi}
 
-この設計では、iSCSI トラフィックによって、アクティブ-アクティブ構成で両方のプライベート接続 NIC カード・ポートを使用することが可能になります。vSphere では、vDS 内の 1 つのポート・グループで一度に 1 つの NIC カード・ポートしかアクティブになれないので、ストレージ VLAN 上で 2 つのポート・グループ (A と B) を作成する必要があります。
+この設計では、iSCSI トラフィックが、アクティブ-アクティブ構成で両方のプライベート接続 NIC カード・ポートを使用できます。 vSphere では、vDS 内の 1 つのポート・グループで一度に 1 つの NIC カード・ポートしかアクティブになれないので、ストレージ VLAN 上で 2 つのポート・グループ (A と B) を作成する必要があります。
 
-スケーラビリティーのために、個々のサブネットで固有の IP アドレスを持つ ESXi カーネル・ポートが作成されます。各カーネル・ポートはそれぞれの iSCSI ポート・グループに割り当てられます。どちらのカーネル・ポートも、ESXi 仮想 ISCSI ホスト・バス・アダプター (HBA) に割り当てられます。カーネル・ポートごとに、デフォルトの GW オーバーライド・スイッチによって、そのカーネル・ポートのローカル・サブネットのデフォルトのゲートウェイが使用されます。以下の表を参照してください。
+スケーラビリティーのために、個々のサブネットで固有の IP アドレスを持つ ESXi カーネル・ポートが作成されます。 各カーネル・ポートはそれぞれの iSCSI ポート・グループに割り当てられます。 どちらのカーネル・ポートも、ESXi 仮想 ISCSI ホスト・バス・アダプター (HBA) に割り当てられます。 カーネル・ポートごとに、そのカーネル・ポートのローカル・サブネットのデフォルトのゲートウェイを使用するために、デフォルトの GW オーバーライド・スイッチが利用されます。 以下の表を参照してください。
 
 表 2. iSCSi ポート・グループ
 
@@ -142,7 +142,7 @@ vDS ポート・グループ | カーネル・ポート・サブネット | VMHB
 #### ストレージ I/O 制御 - SIOC
 {: #design_virtualinfrastructure-sioc}
 
-iSCSI LUN がプロビジョンされ、LUN ごとに 1 ファイルの VMFS ファイル・システムにフォーマットされます。デフォルトの推奨 SIOC 設定は、ピーク・スループットの 90% です。
+iSCSI LUN がプロビジョンされ、LUN ごとに 1 ファイルの VMFS ファイル・システムにフォーマットされます。 デフォルトの推奨 SIOC 設定は、ピーク・スループットの 90% です。
 
 ## VMware NSX-V 設計
 {: #design_virtualinfrastructure-nsx-design}
@@ -159,11 +159,11 @@ iSCSI LUN がプロビジョンされ、LUN ごとに 1 ファイルの VMFS フ
 
 初期デプロイメント後、{{site.data.keyword.cloud_notm}} の自動化機能によって、初期クラスター内に 3 つの NSX コントローラーがデプロイされます。 コントローラーのそれぞれに、管理コンポーネント用に指定された**プライベート A** ポータブル・サブネットから VLAN-backed IP アドレスが割り当てられます。 さらに、この設計では、クラスター内のホストの中のコントローラーを分離するための VM-VM アンチアフィニティー・ルールが作成されます。 コントローラーの高可用性を確保するためには、初期クラスターに最低 3 つのノードが含まれなければなりません。
 
-コントローラーに加えて、VXLAN トンネル・エンドポイント (VTEP) を介して仮想化ネットワークを使用できるように、NSX VIBS を備えたデプロイ済み vSphere ホストが {{site.data.keyword.cloud_notm}} 自動化機能によって準備されます。 VTEP 用に指定された**プライベート A** ポータブル IP アドレス範囲 ([VLAN](/docs/services/vmwaresolutions/services?topic=vmware-solutions-design_physicalinfrastructure#design_physicalinfrastructure-vlans)にリストが記されている) から VLAN-backed IP アドレスが VTEP に割り当てられます。VXLAN トラフィックはタグの外された VLAN 上に存在し、プライベート vDS に割り当てられます。
+コントローラーに加えて、VXLAN トンネル・エンドポイント (VTEP) を介して仮想化ネットワークを使用できるように、NSX VIBS を備えたデプロイ済み vSphere ホストが {{site.data.keyword.cloud_notm}} 自動化機能によって準備されます。 VTEP 用に指定された**プライベート A** ポータブル IP アドレス範囲 ([VLAN](/docs/services/vmwaresolutions/services?topic=vmware-solutions-design_physicalinfrastructure#design_physicalinfrastructure-vlans)にリストが記されている) から VLAN-backed IP アドレスが VTEP に割り当てられます。 VXLAN トラフィックはタグの外された VLAN 上に存在し、プライベート vDS に割り当てられます。
 
-続いて、セグメント ID プールが割り当てられ、クラスター内のホストがトランスポート・ゾーンに追加されます。 {{site.data.keyword.cloud_notm}} 内で Internet Group Management Protocol (IGMP) スヌープが構成されないため、トランスポート・ゾーンで使用されるのはユニキャストのみです。 VMW のベスト・プラクティスに従えば、同じ VTEP 専用サブネットのホストごとに 2 つの vTEP カーネル・ポートを構成します。
+続いて、セグメント ID プールが割り当てられ、クラスター内のホストがトランスポート・ゾーンに追加されます。 {{site.data.keyword.cloud_notm}} 内で Internet Group Management Protocol (IGMP) スヌープが構成されないため、トランスポート・ゾーンで使用されるのはユニキャストのみです。 VMW のベスト・プラクティスに従えば、同じ VTEP 専用サブネットのホストごとに 2 つの VTEP カーネル・ポートを構成します。
 
-その後、NSX Edge Services Gateway ペアがデプロイされます。 すべての場合において、プライベート・ネットワークに常駐する自動化コンポーネントからのアウトバウンド・トラフィックにゲートウェイ・ペアが 1 つ使用されます。 2 つ目のゲートウェイ (カスタマー管理エッジと呼ばれる) がデプロイされ、パブリック・ネットワークへのアップリンクとプライベート・ネットワークに割り当てられるインターフェースが構成されます。 ソリューションの一部としてデプロイされる NSX Edge Services Gateway について詳しくは、[NSX Edge Services Gateway ソリューションのアーキテクチャー](/docs/services/vmwaresolutions/services?topic=vmware-solutions-nsx_overview#nsx_overview)を参照してください。
+その後、インスタンスにパブリック・ネットワーク・インターフェースがある場合、2 つの NSX Edge Services Gateway のペアがデプロイされます。プライベート・ネットワークに常駐する自動化コンポーネントからのアウトバウンド・トラフィックにゲートウェイ・ペアが 1 つ使用されます。 2 つ目のゲートウェイ (カスタマー管理エッジと呼ばれる) がデプロイされ、パブリック・ネットワークへのアップリンクとプライベート・ネットワークに割り当てられるインターフェースが構成されます。 ソリューションの一部としてデプロイされる NSX Edge Services Gateway について詳しくは、[NSX Edge Services Gateway ソリューションのアーキテクチャー](/docs/services/vmwaresolutions/services?topic=vmware-solutions-nsx_overview#nsx_overview)を参照してください。
 
 クラウド管理者は、分散論理ルーター (DLR)、論理スイッチ、ファイアウォールなどの必要な NSX コンポーネントを構成できます。 使用可能な NSX の機能は、インスタンスの注文時に選択する NSX ライセンス・エディションによります。 詳しくは、[VMware NSX エディションの比較](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution-appendix#vmware-nsx-edition-comparison)を参照してください。
 
@@ -248,7 +248,7 @@ SDDC-DPortGroup-iSCSI-B|起点仮想ポート|アクティブ: 0|VLAN 2
 管理|SDDC - 分散ポート・グループ - 管理|管理トラフィック|1500 (デフォルト)
 vMotion|SDDC - 分散ポート・グループ - vMotion|vMotion トラフィック|9000
 VTEP|NSX 生成|-|9000
-VSAN|SDDC - 分散ポート・グループ - VSAN|VSAN|9000
+vSAN|SDDC - 分散ポート・グループ - VSAN|vSAN|9000
 NAS|SDDC - 分散ポート・グループ - NFS|NAS|9000
 iSCSI|SDDC-DPortGroup-iSCSI-A|iSCSI|9000
 iSCSI|SDDC-DPortGroup-iSCSI-B|iSCSI|9000
@@ -273,6 +273,22 @@ iSCSI|SDDC-DPortGroup-iSCSI-B|iSCSI|9000
 
 図 5. カスタマー NSX トポロジーのデプロイ例
 ![カスタマー NSX トポロジーのデプロイ例](vcsv4radiagrams-ra-vcs-nsx-topology-customer-example.svg)
+
+## パブリック・ネットワーク接続
+
+さまざまな理由から、インスタンスにパブリック・ネットワーク接続が必要になることがあります。例えば、更新プログラムの公開サービスにアクセスしたり、ワークロードで他の公開サービス (地理位置情報データベースや天気データなど) にアクセスしたりする場合に必要になります。仮想化の管理サービスやアドオン・サービスにも、パブリック接続が必要なものや、パブリック接続があれば有用なものがあります。例えば、vCenter は、パブリック・ネットワークを介して HCL データベースを更新し、 [VMware Update Manager (VUM)](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-intro) 更新プログラムを取得することができます。Zerto、Veeam、VMware HCX、F5 BIG-IP、および FortiGate-VM はいずれも製品ライセンスの取得、製品のアクティベーション、使用状況レポートの生成の処理の中でパブリック・ネットワーク接続を使用します。さらに、オンプレミスのデータ・センターに接続して複製を行うために、パブリック・ネットワーク上でトンネルを使用することもできます。
+
+通常、このような通信は管理用またはお客様用のエッジ・サービス・ゲートウェイ (ESG) を介して選択的にパブリック・ネットワークに転送され、NAT 処理されます。しかし、追加のセキュリティー要件がある場合や、コミュニケーションのパスを簡単にするためにプロキシーを使用したい場合もあります。また、パブリック・インターフェースを無効にしてインスタンスをデプロイした場合も、ESG を使用してパブリック・ネットワークに転送することはできません。
+
+このアーキテクチャーでは、以下の方法で、トラフィックをパブリック・ネットワークに転送したりプロキシー処理したりできます。
+
+方法|説明|制限
+--|--|--
+仮想化ゲートウェイ|プライベート・ネットワークとパブリック・ネットワークを接続する仮想化ゲートウェイ (NSX ESG、F5 BIG-IP、FortiGate-VM、お客様が選択した仮想アプライアンスなど) をデプロイします。パブリック・ネットワークのトラフィックだけがゲートウェイに向かうように、ソース・システム (vCenter、Zerto、使用するワークロードなど) にルーティングを構成し、必要に応じてゲートウェイを構成します。|パブリック・インターフェースを有効にしたインスタンスにのみ適用されます。この構成では、アウトバウンドとインバウンドの両方のトラフィック・パターンが可能です。
+仮想化ゲートウェイとプロキシー|上記のように仮想化ゲートウェイをデプロイします。このゲートウェイの内側に、[プロキシー・サーバーをデプロイし、](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-init-config#vum-init-config)そのプロキシーを経由してパブリック・ネットワークに接続するようにサービスおよびアプリケーションを構成します。|パブリック・インターフェースを有効にしたインスタンスにのみ適用されます。アウトバウンド・トラフィック・パターンはプロキシーを使用できますが、インバウンド・トラフィック・パターンはゲートウェイで管理する必要があります。
+ハードウェア・ゲートウェイ|[ハードウェア・ゲートウェイ・アプライアンス](https://cloud.ibm.com/catalog/infrastructure/gateway-appliance)を管理用 VLAN にデプロイします。必要に応じて、パブリック・ネットワークへのアウトバウンド接続を NAT 処理するようにゲートウェイを構成します。|パブリック・インターフェースを有効にしたかどうかにかかわらず、すべてのインスタンスに適用可能です。この構成では、アウトバウンドとインバウンドの両方のトラフィック・パターンが可能です。
+ハードウェア・ゲートウェイとプロキシー|上記のようにゲートウェイ・アプライアンスをデプロイします。このゲートウェイの内側に、[プロキシー・サーバーをデプロイし、](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-init-config#vum-init-config)そのプロキシーを経由してパブリック・ネットワークに接続するようにサービスおよびアプリケーションを構成します。|パブリック・インターフェースを有効にしたかどうかにかかわらず、すべてのインスタンスに適用可能です。アウトバウンド・トラフィック・パターンはプロキシーを使用できますが、インバウンド・トラフィック・パターンはゲートウェイで管理する必要があります。
+ロード・バランサー|IBM Cloud には、アプリケーションへのインバウンド・ネットワーク・アクセスを提供するために使用できる、いくつかの[ロード・バランサー・サービス](https://cloud.ibm.com/catalog/infrastructure/load-balancer-group)が用意されています。|すべてのインスタンスに適用されますが、インバウンド・トラフィック・パターンに限られます。
 
 ## 関連リンク
 {: #design_virtualinfrastructure-related}

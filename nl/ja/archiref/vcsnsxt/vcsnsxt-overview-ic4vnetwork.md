@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-19"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -48,7 +48,7 @@ subcollection: vmwaresolutions
 ## Virtual Routing and Forwarding
 {: #vcsnsxt-overview-ic4vnetwork-vrf}
 
-{{site.data.keyword.cloud_notm}} アカウントは、Virtual Routing and Forwarding (VRF) アカウントとして構成することもできます。 VRF アカウントを使用すると、そのアカウントに属するサブネット IP ブロック間の自動グローバル・ルーティングが可能になります。Direct Link 接続を使用するアカウントはすべて、VRF アカウントに変換するか、VRF アカウントとして作成する必要があります。
+{{site.data.keyword.cloud_notm}} アカウントは、Virtual Routing and Forwarding (VRF) アカウントとして構成することもできます。 VRF アカウントを使用すると、そのアカウントに属するサブネット IP ブロック間の自動グローバル・ルーティングが可能になります。 Direct Link 接続を使用するアカウントはすべて、VRF アカウントに変換するか、VRF アカウントとして作成する必要があります。
 
 ## 物理ホスト接続
 {: #vcsnsxt-overview-ic4vnetwork-host-connect}

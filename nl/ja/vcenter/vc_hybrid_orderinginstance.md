@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -34,9 +34,9 @@ subcollection: vmwaresolutions
   |:------------- |:------------- |
   | ドメイン・ネーム | `<root_domain>` |  
   | vCenter Server ログイン・ユーザー名 | `<user_id>@<root_domain>` (Microsoft Active Directory ユーザー) または `administrator@vsphere.local` |
-  | vCenter Server (PSC が組み込まれたもの) の FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. 最大長は 50 文字です。 |
+  | vCenter Server (PSC が組み込まれたもの) の FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`。最大長は 50 文字です。 |
   | シングル・サインオン (SSO) サイト名 | `<subdomain_label>` |
-  | 完全修飾 ESXi サーバー名 | `<host_prefix><n>.<subdomain_label>.<root_domain>`。ここで `<n>` は ESXi サーバーのシーケンスです。 最大長は 50 文字です。 |
+  | 完全修飾 ESXi サーバー名 | `<host_prefix><n>.<subdomain_label>.<root_domain>`。`<n>` は ESXi サーバーの文字列です。最大長は 50 文字です。 |
 
 インスタンスの注文時およびデプロイ時に設定した値は変更しないでください。 変更すると、インスタンスを使用できなくなる可能性があります。 例えば、パブリック・ネットワークがシャットダウンしたり、プロビジョニング中にサーバーや仮想サーバー・インスタンス (VSI) が Vyatta の内側に移動したり、IBM CloudBuilder VSI が停止したり、削除されたりすることがあります。
 {:important}
@@ -118,16 +118,14 @@ vSAN 構成の場合、初期クラスターとデプロイメント後のクラ
 
 | CPU モデル・オプション        | RAM オプション       |
 |:------------- |:------------- |
-| デュアル Intel Xeon E5-2620 v4 / 合計 16 コア、2.1 GHz | 64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
-| デュアル Intel Xeon E5-2650 v4 / 合計 24 コア、2.2 GHz | 64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
-| デュアル Intel Xeon E5-2690 v4 / 合計 28 コア、2.6 GHz | 64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
 | クワッド Intel Xeon E7-4820 v4 / 合計 40 コア、2.0 GHz | 128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 | クワッド Intel Xeon E7-4850 v4 / 合計 64 コア、2.1 GHz | 128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 
 ### ベア・メタル・サーバーの数
 {: #vc_hybrid_orderinginstance-bare-metal-number}
 
-デフォルトで 4 つの ESXi サーバーが選択されます。変更はできません。
+* 注文したサーバーはすべて同じ構成になります。
+* 4 台から 20 台までのサーバーを注文できます。
 
 ## ストレージ設定
 {: #vc_hybrid_orderinginstance-storage-settings}
@@ -135,9 +133,9 @@ vSAN 構成の場合、初期クラスターとデプロイメント後のクラ
 vCenter Server with Hybridity Bundle インスタンスの注文には、VMware vSAN 6.6 が含められます。 以下の vSAN オプションを指定します。
 * **vSAN 容量ディスクのディスク・タイプとサイズ**: 必要な容量ディスクのオプションを選択します。
 * **vSAN 容量ディスクの数**: 追加する容量ディスク数を指定します。
-* 容量ディスクを上限の 8 個を超えて追加する場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。 このオプションでは、合計 10 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されますので、より少ない待ち時間とより高い IOPS スループットが求められるワークロードを扱うときに役立ちます。
+* 容量ディスクを上限の 10 個を超えて追加する場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。 このオプションでは、合計 12 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されますので、より少ない待ち時間とより高い IOPS スループットが求められるワークロードを扱うときに役立ちます。
 
-  **High-Performance Intel Optane** オプションは、Skylake の CPU モデルの Dual Intel Xeon Gold 5120 および Dual Intel Xeon Gold 6140 でのみ使用できます。
+  **「High-Performance Intel Optane」**オプションは、Skylake の CPU モデルでのみ使用できます。
   {:note}
 
 * **「Disk Type for vSAN Cache Disks」**および**「Number of vSAN Cache Disks」**の値を確認します。 これらの値は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けたかどうかによって異なります。
@@ -180,12 +178,14 @@ vCenter Server with Hybridity Bundle インスタンスを注文する際には�
 ### パブリックまたはプライベート・ネットワーク
 {: #vc_hybrid_orderinginstance-public-private-network}
 
-ネットワーク・インターフェース・カード (NIC) の有効化設定は、**「パブリック・ネットワークとプライベート・ネットワーク (Public and Private Network)」**と**「プライベート・ネットワークのみ」**のどちらを選択したかに基づきます。 以下のアドオン・サービスはパブリック NIC を必要とするため、プライベート・オプションを選択した場合は利用できません。
+ネットワーク・インターフェース・カード (NIC) の有効化設定は、**「パブリック・ネットワークとプライベート・ネットワーク (Public and Private Network)」**と**「プライベート・ネットワークのみ」**のどちらを選択したかに基づきます。
 
-* F5 on {{site.data.keyword.cloud_notm}}
-* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
-* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
-* Zerto on {{site.data.keyword.cloud_notm}}
+**「プライベート・ネットワークのみ」**オプションを選択した場合、以下のようになります。
+* VMware NSX Edge Services Gateways (ESG) は (管理サービス ESG とユーザー管理 ESG のどちらも) プロビジョンされません。
+* パブリック NIC を必要とする以下のアドオン・サービスは使用できません。
+  * F5 on {{site.data.keyword.cloud_notm}}
+  * Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
+  * Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
 
 ### 新規 VLAN を注文
 {: #vc_hybrid_orderinginstance-new-vlans}
@@ -215,14 +215,14 @@ vCenter Server with Hybridity Bundle インスタンスを注文する際には�
 * **Active Directory/DNS 用の単一のパブリック Windows VSI**: Microsoft Active Directory (AD) 用の単一の Microsoft Windows Server VSI。ホストと VM が登録されたインスタンスの DNS として機能します。これがデプロイされて参照可能になります。
 * **管理クラスター上の高可用性構成の 2 つの専用 Windows Server VM**: 2 つの Microsoft Windows VM がデプロイされるので、セキュリティーと堅牢性が向上します。
 
-2 つの Microsoft Windows VM を使用するようにインスタンスを構成する場合は、2 つの Microsoft Windows Server 2012 R2 ライセンスを提供する必要があります。 Microsoft Windows Server 2012 R2 Standard エディションのライセンスと Microsoft Windows Server 2012 R2 Datacenter エディションのライセンスのいずれかまたは両方を使用してください。
+2 つの Microsoft Windows VM を使用するようにインスタンスを構成する場合は、2 つの Microsoft Windows Server 2016 ライセンスを提供する必要があります。 Microsoft Windows Server 2016 Standard エディションのライセンスと Microsoft Windows Server 2016 Datacenter エディションのライセンスのいずれかまたは両方を使用してください。
 {:important}
 
 各ライセンスは単一の物理サーバーにのみ割り当てられ、最大 2 つの物理プロセッサーをカバーします。 1 つの Standard エディション・ライセンスでは、2 プロセッサーのサーバーで 2 つの Microsoft Windows VM を実行できます。 したがって、ライセンスは 2 つ必要になります。2 つの異なるホストに 2 つの Microsoft Windows VM がデプロイされるからです。
 
 VM は 30 日以内に有効にしてください。
 
-Windows ライセンスの注文方法について詳しくは、[Windows Server 2012 R2 の資料](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2)を参照してください。
+Windows Server 2016 のライセンスの注文方法について詳しくは、[Get started with Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:new_window} を参照してください。
 
 ## サービスの設定
 {: #vc_hybrid_orderinginstance-addon-services}
@@ -251,12 +251,9 @@ vCenter Server with Hybridity Bundle インスタンスを注文するときに�
 7. ベア・メタル・サーバーの設定を次の手順で実行します。
   1. インスタンスをホストする {{site.data.keyword.CloudDataCent_notm}}を選択します。
   2. **「Skylake」**または**「Broadwell」**の CPU モデルと **RAM** の容量を選択します。
-
-  **「ベア・メタル・サーバーの数」**はデフォルトで 4 に設定されます。変更はできません。
-  {:note}
 8. ストレージ構成を次の手順で実行します。 容量ディスクおよびキャッシュ・ディスクのディスク・タイプとディスク数を指定します。 さらにストレージが必要な場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。
 9. ネットワーク・インターフェース構成を行います。
-  1. ホスト名接頭部、サブドメイン・ラベル、ルート・ドメイン・ネームを入力します。
+  1. プロビジョンするインスタンスのホスト名接頭部、サブドメイン・ラベル、およびルート・ドメイン・ネームを入力します。
   2. **「パブリック・ネットワークとプライベート・ネットワーク (Public and Private Network)」**と**「プライベート・ネットワークのみ」**のいずれかのネットワーク設定を選択します。
   3. VLAN 構成を選択します。
      *  新規のパブリック VLAN とプライベート VLAN を注文する場合は、**「新規 VLAN を注文」**をクリックします。

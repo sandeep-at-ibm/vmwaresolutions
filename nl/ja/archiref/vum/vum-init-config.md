@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-29"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -14,20 +14,31 @@ subcollection: vmwaresolutions
 # 初期構成
 {: #vum-init-config}
 
-IC4VS 自動化により、{{site.data.keyword.cloud}} Backend Customer Router (BCR) に設定されたデフォルト・ゲートウェイを使用して VCSA が構成されます。 ただし、BCR を介したインターネットへの経路はありません。 VMware vCenter Server on {{site.data.keyword.cloud_notm}} インスタンスからインターネットへの標準経路では、管理 ESG を経由します。 VCSA または管理 ESG の構成を変更することはお勧めしません。VUM を有効にするには、カスタマー・サブネットのプロキシー・サーバー実装をお勧めします。
+{{site.data.keyword.vmwaresolutions_full}} 自動化により、{{site.data.keyword.cloud}} Backend Customer Router (BCR) に設定されたデフォルト・ゲートウェイを使用して VCSA が構成されます。 ただし、BCR を介したインターネットへの経路はありません。 VMware vCenter Server on {{site.data.keyword.cloud_notm}} インスタンスからインターネットへの標準経路では、管理 ESG を経由します。 VCSA または管理 ESG の構成を変更することはお勧めしません。VUM を有効にするには、カスタマー・サブネットのプロキシー・サーバー実装をお勧めします。
 
 この方法では、VCSA または管理 ESG を再構成する必要はありませんが、小さい仮想マシン (VM) またはアプライアンスをインストールする必要があります。 プロキシー・サーバーは、2 つのエンドポイント・デバイス間に存在し、中間デバイスとして機能するシステムです。 この場合、これは VUM と VMware の更新サーバーの間に存在します。
 
 VUM が VMware の更新サーバーからリソースを要求すると、まず要求がプロキシー・サーバーに送信され、プロキシー・サーバーからその要求が更新サーバーに送信されます。 プロキシー・サーバーによってリソースが取得されると、そのリソースは VUM に送信されます。 プロキシー・サーバーは、セキュリティー、管理制御、およびキャッシング・サービスを容易にするために使用できます。
 
-この資料では、CentOS および Squid に基づくプロキシー・サーバーの使用について説明します。 Squid プロキシーは、Web 用のオープン・ソース・キャッシング・プロキシーであり、HTTP や HTTPS などの多くのプロトコルをサポートします。 使用可能な VM およびアプライアンス・ベースのプロキシーは多数あり、企業の要件に基づいて適切なプロキシーを選択し、ベンダーのガイダンスに従ってインストールおよび構成する必要があります。 CentOS/Squid 実装を使用することを選択するクライアントでは、以下のプロセスに進む必要があります。
+CentOS ベースおよび Squid ベースのプロキシー・サーバーを使用できます。Squid プロキシーは、Web 用のオープン・ソース・キャッシング・プロキシーであり、HTTP や HTTPS などの多くのプロトコルをサポートします。 使用可能な VM およびアプライアンス・ベースのプロキシーは多数あり、企業の要件に基づいて適切なプロキシーを選択し、ベンダーのガイダンスに従ってインストールおよび構成する必要があります。 CentOS/Squid 実装を使用することを選択するクライアントでは、以下のプロセスに進む必要があります。
 
 * CentOS ISO のジャンプ・サーバーへのダウンロード
 * vCenter ライブラリーの作成
 * ISO の vCenter ライブラリーへのアップロード
 * VM の作成、CentOS のインストールと構成、および Squid のインストール
 
-このタスクを開始する前に、表 1 の情報を収集する必要があります。推奨値を確認し、それらが企業にとって適切な値になるようにします。 この構成は、CentOS-Minimal および Squid を使用する VUM 専用の小さいプロキシーに基づいています。
+## サブネット情報の取得
+{: #vum-init-config-subnet}
+
+この作業を開始する前に、以下の表の値を設定するために情報を集めてください。それらが環境にとって適切な値になるようにします。 この構成は、CentOS-Minimal および Squid を使用する VUM 専用の小さいプロキシーに基づいています。
+
+カスタマー・プライベート・ポータブル・サブネットを見つけるには、以下のようにします。
+
+1. {{site.data.keyword.vmwaresolutions_short}} コンソールの**「リソース」**ページに進みます。
+2. 必要な**「インスタンス」**を選択し、**「インフラストラクチャー」**を選択してから、必要な**「クラスター」**を選択します。
+3. **「プライベート VLAN」**を選択し、`「カスタマー・ワークロード・エッジのプライベート・サブネット (Private subnet for customer workload edge)」 ` というラベルのサブネットを見つけます。
+4. **「サブネット」**を選択します。IP アドレスとその割り当てを示すサブネットの詳細ページにリダイレクトされます。
+5. この情報を使用して、割り当てられていない IP アドレスを選択し、適切なコメントを入力して**「メモ (Note)」**を更新します。この IP アドレスを、以下の表の `proxy ip` パラメーターに使用します。
 
 表 1. デプロイメント値
 
@@ -69,6 +80,31 @@ VUM が VMware の更新サーバーからリソースを要求すると、ま�
 
 パラメーターを指定したら、**「Publish Changes」**をクリックします。
 
+### NAT
+{: #vum-init-config-nat}
+
+1. **「NAT」**を選択します。
+2. **「+」**記号をクリックして、SNAT ルールを追加します。
+3. 以下の表に記載している必須パラメーターを指定し、**「OK」**をクリックします。その後、**「変更のパブリッシュ (Publish Changes)」**をクリックします。
+
+表 3. NAT ルール
+
+| パラメーター | 推奨値 |
+|:--------- |:-------------- |
+| ルール・タイプ | USER |
+| アクション | SNAT |
+| 適用対象 | パブリック・アップリンク |
+| 元のプロトコル | 任意 |
+| 元のソース IP | proxy server ip |
+| 元のソース・ポート | 任意 |
+| 元の宛先 IP | 任意 |
+| 元の宛先ポート | 任意 |
+| 変換済み IP アドレス | NAT ip |
+| 変換後のポート範囲 | 任意 |
+| 状況 | 有効 |
+| ロギング | 有効 |
+| 説明 | Proxy01 SNAT |
+
 ### プロキシー・サーバーのインストールおよび構成
 {: #vum-init-config-inst-cfg-proxy}
 
@@ -91,7 +127,7 @@ VUM が VMware の更新サーバーからリソースを要求すると、ま�
 1. vSphere Web Client から、**「Home」**>**「Content library」**>**「Objects」**>**「Create a new content library」**>**「Create subscribed library on the vCenter」**にナビゲートします。
 2. コンテンツ・ライブラリーの名前 (例えば、ISO) を入力し、「Notes」テキスト・ボックスにライブラリーの説明を入力し、**「Next」**をクリックします。
 3. **「Local content library」**を選択して、**「Next」**をクリックします。
-4. データ・ストアを選択してから、適切なデータ・ストア (例えば、vsanDatastore) をクリックします。
+4. データ・ストアを選択してから、適切なデータ・ストア (例えば、`vsanDatastore`) をクリックします。
 5. **「Ready to Complete」**ページの情報を確認し、**「Finish」**をクリックします。
 
 ### プロキシー VM の構成および CentOS と Squid のインストール
@@ -115,7 +151,7 @@ VUM が VMware の更新サーバーからリソースを要求すると、ま�
 5.	**「cluster1」**を選択して、**「Next」**をクリックします。
 6.	該当するデータ・ストア (例えば、vsanDatastore) を選択し、**「Next」**をクリックして、再度**「Next」**をクリックします。
 7.	**「Guest OS Family」**で**「Linux」**を選択して、**「Guest OS version」**で**「CentOS 7 (64-bit)」**を選択し、**「Next」**をクリックします。
-8.	**「CPU」を 1**、**「Memory」を 2048 MB**、**「New Hard disk」を 25 GB** に設定します。 **「Content Library ISO File」**、**「CentOS-7-x86_64-Minimal」**と選択して**「OK」**をクリックし、**「Connected」**ボックスにチェック・マークを付けます。
+8.	仮想ハードウェアの**「カスタマイズされたハードウェア (Customized Hardware)」**タブの下で、**「CPU」を 1**、**「Memory」を 2048 MB**、**「New Hard disk」を 25 GB** に設定します。**「新規 CD/DVD ドライブ (New CD/DVD drive)」**の下で、**「Content Library ISO File」**、**「CentOS-7-x86_64-Minimal」**と選択して**「OK」**をクリックし、**「Connected」**ボックスにチェック・マークを付けます。
 9.	「New device」ボックスで、**「Network」**を選択して、**「Add」**をクリックします。
 10.	**「SDDC-DPortGroup-Mgmt」**ネットワークを選択して、「Connect」チェック・ボックスにチェック・マークが付いている状態にして、**「Next」**をクリックします。
 11.	確認して**「Finish」**をクリックします。
@@ -125,7 +161,7 @@ VUM が VMware の更新サーバーからリソースを要求すると、ま�
 
 このタスクでは、新規作成の VM をインストールして、Squid のインストールの準備ができた状態に構成します。
 
-1.	vSphere Web Client の「Navigator」ペインで、先ほど作成した **VM** の「Proxy01」を選択して、**「Summary」タブ**を選択します。
+1.	vSphere Web Client の「Navigator」ペインで、先ほど作成した **VM** の「Proxy01」を選択して、**「Summary」**タブを選択します。
 2.	**「Play」**をクリックして VM をパワーオンします。
 3.	VM がパワーオンし、CentOS 7 ISO からブートします。 VM に対して**リモート・コンソールまたは Web コンソール**を始動します。 リモート・コンソールをインストールし、Web ブラウザーを実行しているシステムで vSphere ESXi ホストを名前で解決する必要があります。
 4.	「Welcome to CentOS 7」画面で、必要な言語を選択し、**「Continue」**をクリックします。
@@ -163,20 +199,24 @@ Squid には最小ハードウェア要件はありませんが、RAM の量は�
 7. ブート時に Squid を自動的に始動するには、コマンド `systemctl enable squid` を実行します。
 8. コマンド `systemctl status squid` を実行して Squid が実行中であることを確認します。
 9. コマンド `firewall-cmd –add-port=3128/tcp –permanent` を使用して、CentOS ファイアウォールで Squid ポート TCP 3128 へのアクセスを許可する必要があります。
-10.	ルールを保存してサービスを再始動するには、コマンド `firewall-cmd –reload` を使用します。
+10. ルールを保存してサービスを再始動するには、コマンド `firewall-cmd –reload` を使用します。
 
 ## VUM の初期セットアップ
 {: #vum-init-config-init-setup-vum}
 
 プロキシー・サーバーを使用してインターネット上のリポジトリーにアクセスするように VUM を構成します。
 1. vSphere Web Client を使用して、**「Home」**>**「Update Manager」**にナビゲートします。 vCenter Server をクリックします。
-2. **「Manage」タブ**を選択して、**「Settings」**ボタンをクリックします。
+2. **「Manage」**タブを選択して、**「Settings」**をクリックします。
 3. **「Download Settings」**を選択して、_「Proxy settings」_ で**「Edit」**をクリックします。
 4. **「Use Proxy」**ボックスにチェック・マークを付けて、_プロキシー・サーバーの IP アドレス_ と_ポート 3128_ を入力して、**「OK」**をクリックします。 接続状況が_「Validating」_、_「Connected」_ と変わります。
 5. **「今すぐダウンロード」**をクリックします。 _「Recent Tasks」_ ペインでこのアクティビティーが完了したことを確認します。
+6. このアクティビティーが失敗した場合、vCenter Server Appliance (vCSA) をリブートします。
+  1. vCSA 管理インターフェース (`https://vcsaFQDN:5480`) に **root** でログインします。
+  2. **「サマリー」**をクリックし、**「リブート」**をクリックします。
+  3. 確認ボックスで、**「はい」**をクリックして操作を確認します。
 
 ## 関連リンク
 {: #vum-init-config-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} ソリューションのアーキテクチャー](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (デモンストレーション)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (デモンストレーション)

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-04-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -47,7 +47,7 @@ Veeam on {{site.data.keyword.cloud}} サービスを注文するには、その�
 ### ストレージ・サイズ
 {: #veeam_ordering-config-storage-size}
 
-ストレージのニーズを満たす容量。 ストレージ・サイズを見積もるための考慮事項については、[Estimating Repository Capacity](https://bp.veeam.expert/resource_planning/repository_planning_sizing.html) を参照してください。
+ストレージのニーズを満たす容量。 ストレージ・サイズを見積もるための考慮事項については、[Estimating Repository Capacity](https://bp.veeam.expert/repository_server/repository_planning/repository_planning_sizing) を参照してください。
 
 ### ストレージ・パフォーマンス
 {: #veeam_ordering-config-storage-performance}

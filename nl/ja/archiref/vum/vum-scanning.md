@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -54,7 +54,7 @@ vSphere インベントリー内の VM および仮想アプライアンスを�
 VM、仮想アプライアンス、および vSphere ESXi ホストを特定の時間または都合の良い間隔でスキャンするように vSphere Web Client を構成できます。
 
 1.	vSphere Web Client を使用して、インベントリーからオブジェクトを選択します。 選択したオブジェクトのすべての子オブジェクトもスキャンされます。
-2.	**「Monitor」タブ**を選択して、**「Task & Events」**をクリックします。
+2.	**「Monitor」**タブを選択して、**「Task & Events」**をクリックします。
 3.	**「Scheduled Tasks」**を選択して、**「Schedule a New Task」**をクリックします。
 4.	表示されるドロップダウン・リストから**「Scan for Updates」**を選択します。 「Scan for Updates」ウィザードが開きます。
 5.	「Edit Settings」ページで、インベントリー・オブジェクトをスキャンする更新のタイプを選択します。 少なくとも 1 つのスキャン・タイプを選択する必要があります。 「Scheduling options」ページで、スキャン・タスクを記述およびスケジュールします。
@@ -65,4 +65,4 @@ VM、仮想アプライアンス、および vSphere ESXi ホストを特定の�
 {: #vum-scanning-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} ソリューションのアーキテクチャー](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (デモンストレーション)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (デモンストレーション)

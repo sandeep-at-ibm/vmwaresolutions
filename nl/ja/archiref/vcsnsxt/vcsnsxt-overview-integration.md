@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-03"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -130,14 +130,14 @@ ESG と vRouter 内の経路テーブルにどのようにデータが取り込�
 ## 関連リンク
 {: #vcsnsxt-overview-integration-related}
 
-* [{{site.data.keyword.cloud_notm}} ネットワーク](https://www.ibm.com/cloud-computing/bluemix/our-network)
+* [{{site.data.keyword.cloud_notm}} global data centers](https://www.ibm.com/cloud/data-centers/)
 * [コンテナーのホワイト・ペーパー](https://communities.vmware.com/servlet/JiveServlet/download/2741654-198902/Containers%20and%20Container%20Networking%20for%20Network%20Engineers.pdf) (PDF ダウンロード)
 * [VMware HCX on {{site.data.keyword.cloud_notm}} ブログ](https://www.ibm.com/blogs/bluemix/2018/01/vmware-hcx-ibm-cloud-aka-really-cool-space-age-kind-now-available/)
 * [VMware HCX on {{site.data.keyword.cloud_notm}} データ・シート](https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=26012526USEN)
 * [VMware HCX on {{site.data.keyword.cloud_notm}} ソリューションのアーキテクチャー](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
 * [NSX for vSphere 6.4.3 構成の最大値](https://configmax.vmware.com/guest)
 * [{{site.data.keyword.cloud_notm}} プラットフォームの資料](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.0/kc_welcome_containers.html)
-* [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-container_index)
+* [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-getting-started#getting-started)
 * [Project Calico](https://www.projectcalico.org/)
 * [GitHub-Calico](https://github.com/projectcalico/calico)
 * [Kubernetes](https://kubernetes.io/)

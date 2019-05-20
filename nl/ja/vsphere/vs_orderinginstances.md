@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-26"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -104,8 +104,8 @@ vSphere Enterprise Plus と vCenter Server を除き、ライセンスを購入�
 
 **注:**
 * vSAN コンポーネントを選択した場合は、SSD の使用可否によってロケーション・リストがフィルタリングされます。
-* FRA05 データ・センターは、Broadwell ベアメタル・サーバーをサポートしていません。
-* LON05 データ・センターは、SAP 認証ベアメタル・サーバーも Broadwell ベアメタル・サーバーもサポートしていません。
+* Broadwell ベア・メタル・サーバーは、**FRA05 - フランクフルト**のデータ・センター・ロケーションでは使用できません。
+* SAP 認定ベア・メタル・サーバーと Broadwell ベア・メタル・サーバーは、**LON05 - ロンドン**のデータ・センター・ロケーションでは使用できません。
 
 ### Skylake
 {: #vs_orderinginstances-skylake}
@@ -143,9 +143,6 @@ VMware vSAN を以前に選択した場合、**「SAP 認定」**タブは使用
 
 | CPU モデル・オプション        | RAM オプション       |
 |:------------- |:------------- |
-| デュアル Intel Xeon E5-2620 v4 / 合計 16 コア、2.1 GHz | 64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
-| デュアル Intel Xeon E5-2650 v4 / 合計 24 コア、2.2 GHz | 64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
-| デュアル Intel Xeon E5-2690 v4 / 合計 28 コア、2.6 GHz | 64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
 | クワッド Intel Xeon E7-4820 v4 / 合計 40 コア、2.0 GHz | 128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 | クワッド Intel Xeon E7-4850 v4 / 合計 64 コア、2.1 GHz | 128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 
@@ -168,7 +165,7 @@ vSAN ありの注文の場合、ESXi サーバー用に 12 ディスクのシャ
 * **vSAN 容量ディスクの数**: 追加する容量ディスク数を指定します。
 * 容量ディスクを上限の 8 個を超えて追加する場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。 このオプションでは、合計 10 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されますので、より少ない待ち時間とより高い IOPS スループットが求められるワークロードを扱うときに役立ちます。
 
-  **High-Performance Intel Optane** オプションは、Skylake の CPU モデルの Dual Intel Xeon Gold 5120 および Dual Intel Xeon Gold 6140 でのみ使用できます。
+  **「High-Performance Intel Optane」**オプションは、Skylake の CPU モデルでのみ使用できます。
   {:note}
 
 * **「Disk Type for vSAN Cache Disks」**および**「Number of vSAN Cache Disks」**の値を確認します。 これらの値は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けたかどうかによって異なります。
@@ -211,12 +208,7 @@ vSAN ありの注文の場合、ESXi サーバー用に 12 ディスクのシャ
 ### パブリックまたはプライベート・ネットワーク
 {: #vs_orderinginstances-public-private-network}
 
-ネットワーク・インターフェース・カード (NIC) の有効化設定は、**「パブリック・ネットワークとプライベート・ネットワーク (Public and Private Network)」**と**「プライベート・ネットワークのみ」**のどちらを選択したかに基づきます。 以下のアドオン・サービスはパブリック NIC を必要とするため、プライベート・オプションを選択した場合は利用できません。
-
-* F5 on {{site.data.keyword.cloud_notm}}
-* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
-* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
-* Zerto on {{site.data.keyword.cloud_notm}}
+ネットワーク・インターフェース・カード (NIC) の有効化設定は、**「パブリック・ネットワークとプライベート・ネットワーク (Public and Private Network)」**と**「プライベート・ネットワークのみ」**のどちらを選択したかに基づきます。
 
 ### VLAN
 {: #vs_orderinginstances-vlans}
@@ -297,7 +289,7 @@ vSAN ありの注文の場合、ESXi サーバー用に 12 ディスクのシャ
 
 注文を実行した場合は、クラスターのデプロイメントが自動的に開始され、注文が処理中であることを示す E メール確認を受け取ります。 クラスターが使用可能になると、E メールで通知されます。
 
-vSphere クラスターは、vCenter Server インスタンスや Cloud Foundation インスタンスとは異なり、**「リソース」**ページに表示されません。
+vSphere クラスターは、vCenter Server インスタンスとは異なり、**「リソース」**ページに表示されません。
 {:note}
 
 ## 関連リンク

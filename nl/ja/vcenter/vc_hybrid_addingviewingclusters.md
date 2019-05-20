@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-18"
+lastupdated: "2019-04-18"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -25,11 +25,12 @@ VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle イ�
 ## vCenter Server with Hybridity Bundle インスタンスへのクラスターの追加
 {: #vc_hybrid_addingviewingclusters-adding}
 
-インスタンスに追加できるクラスターの数は、インスタンスのバージョンに応じて以下のように異なります。
-* V2.5 以降でデプロイ (または V2.5 以降にアップグレード) されたインスタンスの場合は、追加できるクラスター数の上限は、クラスター、ホスト、および VM の数によって決まります。 VMware のサイズ設定についてのガイドラインおよびデプロイに応じた上限を守る必要があります。
-* V2.3 以降でデプロイ (または V2.3 以降にアップグレード) されたインスタンスの場合は、最大 10 個のクラスターを追加できます。
+### クラスターを追加する前に
+{: #vc_hybrid_addingviewingclusters-before-add}
 
-上限について詳しくは、[VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window} を参照してください。
+* VMware vSphere Web クライアントで加えた変更は {{site.data.keyword.vmwaresolutions_short}} コンソールと同期されないので、可能な限り、{{site.data.keyword.vmwaresolutions_full}} コンソールを使用してクラスターを追加してください。つまり、オンプレミスのクラスター、または {{site.data.keyword.vmwaresolutions_short}} コンソールで管理できない、あるいは管理しないクラスターの場合にのみ、クラスターを vCenter Server に追加してください。
+* V2.5 以降でデプロイ (または V2.5 以降にアップグレード) されたインスタンスの場合は、追加できるクラスター数の上限は、クラスター、ホスト、および VM の数によって決まります。 VMware のサイズ設定についてのガイドラインおよびデプロイに応じた上限を守る必要があります。 上限について詳しくは、[VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window} を参照してください。
+* V2.3 および V2.4 でデプロイ (または V2.3 および V2.4 にアップグレード) されたインスタンスの場合は、最大 10 個のクラスターを追加できます。
 
 ### システム設定
 {: #vc_hybrid_addingviewingclusters-adding-sys-settings}
@@ -48,7 +49,7 @@ vCenter Server with Hybridity Bundle インスタンスにクラスターを追�
 #### データ・センターの場所
 {: #vc_hybrid_addingviewingclusters-adding-dc-location}
 
-クラスターの {{site.data.keyword.CloudDataCent_notm}}の場所はデフォルトで、vCenter Server インスタンスの {{site.data.keyword.CloudDataCent_notm}}に設定されます。 デプロイ済みのインスタンスとは異なる {{site.data.keyword.CloudDataCent_notm}}にクラスターをデプロイできますが、それら 2 カ所の {{site.data.keyword.CloudDataCents_notm}}間のネットワーク待ち時間が、150 ms 未満になるようにしてください。 ネットワーク待ち時間を確認するには、[SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window} などのツールを使用します。
+クラスターの {{site.data.keyword.CloudDataCent_notm}}の場所はデフォルトで、vCenter Server インスタンスの {{site.data.keyword.CloudDataCent_notm}}に設定されます。 デプロイ済みのインスタンスとは異なる {{site.data.keyword.CloudDataCent_notm}}にクラスターをデプロイできますが、それら 2 カ所の {{site.data.keyword.CloudDataCents_notm}}間のネットワーク待ち時間が、150 ms 未満になるようにしてください。 ネットワーク待ち時間を確認するには、[Looking Glass](/docs/infrastructure/network-tools?topic=network-tools-about-looking-glass#about-looking-glass) などのツールを使用します。
 
 別の {{site.data.keyword.CloudDataCent_notm}}または {{site.data.keyword.cloud_notm}} インフラストラクチャー・ポッドにクラスターをデプロイする場合は、注文した{{site.data.keyword.baremetal_short}}で使用するためにさらに 3 つの VLAN を注文します。
 
@@ -79,20 +80,14 @@ vCenter Server with Hybridity Bundle インスタンスにクラスターを追�
 
 | CPU モデル・オプション        | RAM オプション       |
 |:------------- |:------------- |
-| デュアル Intel Xeon E5-2620 v4 / 合計 16 コア、2.1 GHz | 64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
-| デュアル Intel Xeon E5-2650 v4 / 合計 24 コア、2.2 GHz | 64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
-| デュアル Intel Xeon E5-2690 v4 / 合計 28 コア、2.6 GHz | 64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
 | クワッド Intel Xeon E7-4820 v4 / 合計 40 コア、1.9 GHz | 128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 | クワッド Intel Xeon E7-4850 v4 / 合計 64 コア、2.2 GHz | 128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 
 #### ベア・メタル・サーバーの数
 {: #vc_hybrid_addingviewingclusters-adding-bare-metal-number}
 
-クラスター 1 つにつき、2 つ以上の{{site.data.keyword.baremetal_short}}が必要です。
-
-1 つのクラスターに最大 59 台の{{site.data.keyword.baremetal_short}}を追加できます。1 台から 59 台の ESXi サーバーを一度に追加できます。
-
-デプロイメント後に、最大 4 つのクラスターを追加で作成できます。 VMware vSAN ストレージの場合、初期クラスターとデプロイメント後のクラスターの両方に 4 つのサーバーが必要です。
+* 注文したサーバーはすべて同じ構成になります。
+* 4 台から 59 台までのサーバーを注文できます。
 
 ### vSAN ストレージ設定
 {: #vc_hybrid_addingviewingclusters-adding-vsan-storage-settings}
@@ -100,9 +95,9 @@ vCenter Server with Hybridity Bundle インスタンスにクラスターを追�
 vCenter Server with Hybridity Bundle インスタンスの注文には、VMware vSAN 6.6 が含められます。 以下の vSAN オプションを指定します。
 * **vSAN 容量ディスクのディスク・タイプとサイズ**: 必要な容量ディスクのオプションを選択します。
 * **vSAN 容量ディスクの数**: 追加する容量ディスク数を指定します。
-* 容量ディスクを上限の 8 個を超えて追加する場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。 このオプションでは、合計 10 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されますので、より少ない待ち時間とより高い IOPS スループットが求められるワークロードを扱うときに役立ちます。
+* 容量ディスクを上限の 10 個を超えて追加する場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。 このオプションでは、合計 12 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されますので、より少ない待ち時間とより高い IOPS スループットが求められるワークロードを扱うときに役立ちます。
 
-  **High-Performance Intel Optane** オプションは、Skylake の CPU モデルの Dual Intel Xeon Gold 5120 および Dual Intel Xeon Gold 6140 でのみ使用できます。
+  **「High-Performance Intel Optane」**オプションは、Skylake の CPU モデルでのみ使用できます。
   {:note}
 
 * **「Disk Type for vSAN Cache Disks」**および**「Number of vSAN Cache Disks」**の値を確認します。 これらの値は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けたかどうかによって異なります。
@@ -124,7 +119,6 @@ IBM では、以下の VMware コンポーネントのライセンスを提供�
 * F5 on {{site.data.keyword.cloud_notm}}
 * Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
 * Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
-* Zerto on {{site.data.keyword.cloud_notm}}
 
 ### 注文のサマリー
 {: #vc_hybrid_addingviewingclusters-adding-order-summary}
@@ -241,6 +235,7 @@ IBM では、以下の VMware コンポーネントのライセンスを提供�
 ### 削除する前に
 {: #vc_hybrid_addingviewingclusters-deleting-prereq}
 
+* VMware vSphere Web クライアントで加えた変更は {{site.data.keyword.vmwaresolutions_short}} コンソールと同期されないので、可能な限り、{{site.data.keyword.vmwaresolutions_full}} コンソールを使用してクラスターを削除してください。つまり、オンプレミスのクラスター、または {{site.data.keyword.vmwaresolutions_short}} コンソールで管理できない、あるいは管理しないクラスターの場合にのみ、クラスターを vCenter Server から削除してください。
 * クラスターは一度に 1 つしか削除できません。 複数のクラスターを削除する場合は、順番に削除する必要があります。つまり、前のクラスターが削除されるまで待ってから、次のクラスターを削除してください。
 * クラスターを削除する前に、クラスター内のすべてのノードが電源オンの状態で作動可能であることを確認します。
 * クラスターを削除すると、クラスターのすべての VM (仮想マシン) も削除され、復旧できなくなります。 VM を保持したい場合は、他のクラスターに移行してください。

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -62,7 +62,7 @@ HTTPS パラメーターが設定されていない場合は、次のコマン�
 ### プロキシーを使用するための vSAN の構成
 {: #vum-updating-vsan-config-vsan-proxy}
 
-1. **「Home」** > **「Hosts and Clusters」**にナビゲートし、ナビゲーション・ペインで**「vSAN cluster」**を選択してから、**「Configure」タブ**を選択して**「vSAN」**、**「General」**の順にナビゲートします。 **「Internet Connectivity」**セクションまでスクロールして、**「Edit」**をクリックします。
+1. **「Home」** > **「Hosts and Clusters」**にナビゲートし、ナビゲーション・ペインで**「vSAN cluster」**を選択してから、**「Configure」**タブを選択して**「vSAN」**、**「General」**の順にナビゲートします。 **「Internet Connectivity」**セクションまでスクロールして、**「Edit」**をクリックします。
 2. プロキシーの IP アドレスとポート番号を入力し、**「OK」**をクリックします。
 
 ### カスタマー・エクスペリエンス向上プログラム (CEIP) の有効化
@@ -73,13 +73,13 @@ HTTPS パラメーターが設定されていない場合は、次のコマン�
 ### テスト・アップロードを実行し、アップロードが成功したことを確認する
 {: #vum-updating-vsan-complete-upload}
 
-1. vSphere Web Client を使用して、**「Home」** > **「Hosts and Clusters」**にナビゲートします。 必要なクラスターを選択して、**「Monitor」タブ**および**「vSAN」**ページを選択してから、**「Health」**をクリックします。 **「Enable Online Health」**をクリックします。
+1. vSphere Web Client を使用して、**「Home」** > **「Hosts and Clusters」**にナビゲートします。 必要なクラスターを選択して、**「Monitor」**タブおよび**「vSAN」**ページを選択してから、**「Health」**をクリックします。 **「Enable Online Health」**をクリックします。
 2. **「Retest」**をクリックし、プロセスが完了するまで待機します。
 3. _「Online health connectivity」_という新しいチェックが「Health」に表示され、**「Enable Online Health」**が**「Retest with Online Health」**に変わります。
 4. **「Retest with Online Health」**をクリックして最初のアップロードを開始し、「Recent Tasks」ペインで状況を確認してプロセスが完了するまで待ちます。 「Test Name」が「Online health」に変わります (「Last check」は「just now」になります)。
 5. 完了したら、「Health」ウィンドウで、「vSAN Build Recommendation」までスクロールして展開し、**「vSAN Build Recommendation Engine Health」**をクリックします。
 6. **「Login to my.vmware.com」**をクリックして、資格情報を入力します。 プロセスが完了すると、**「Test Result」**が**「Passed」**状態に変わります。
-7. **「Update Manager」タブ**を押すと、vSAN クラスターがベースラインに追加されます。
+7. **「Update Manager」**タブをクリックすると、vSAN クラスターがベースラインに追加されます。
 
 ## 前提条件
 {: #vum-updating-vsan-prereq}
@@ -90,9 +90,9 @@ vSAN アップグレード・プロセスを開始する前に、以下の要件
   - VCSA は、vSphere ESXi ホストと同等以上のパッチ・レベルである必要があります。 必要に応じて、VCSA を更新します。
   - すべてのホストが同じビルドの ESXi を実行している必要があります。 vSphere ESXi ホストのバージョンが一致しない場合は、更新します。
 * **すべての vSAN ディスクは正常である必要があります**:
-  - 故障または欠落したディスクはありません。 これは、vSphere Web Client の**「vSAN Disk Management」**ビューを使用して判別できます。 **「Home」** > **「Hosts and Clusters」**を選択してから、**「vSAN Cluster」**を選択して、**「vSAN」タブ**、**「Physical Disks」**の順にクリックします。 すべてのディスクをスクロールして、vSAN のヘルス状況を確認します。
-  - アクセス不能な vSAN オブジェクトはありません。 これは、**「Home」** > **「Hosts and Clusters」**をクリックしてから**「vSAN Cluster」**を選択し、**「vSAN Health Service」**で確認できます。 **「Monitor」タブ**、**「vSAN」**をクリックしてから**「Health」**をクリックします。 テスト結果を確認します。
-  - アップグレード・プロセスの開始時、**「Home」** > **「Hosts and Clusters」**をクリックしてから、**「vSAN Cluster」**を選択して**「vSAN」タブ**、**「Resync Components」**の順にクリックしたときに、アクティブな再同期はありません。 _再同期コンポーネント数は 0 である必要があります_。 ホストの再始動後にデータを同期する必要があるため、アップグレード・プロセス中はいくつかの再同期アクティビティーがあることが予期されます。
+  - 故障または欠落したディスクはありません。 これは、vSphere Web Client の**「vSAN Disk Management」**ビューを使用して判別できます。 **「Home」** > **「Hosts and Clusters」**を選択してから、**「vSAN Cluster」**を選択して、**「vSAN」**タブ、**「Physical Disks」**の順にクリックします。 すべてのディスクをスクロールして、vSAN のヘルス状況を確認します。
+  - アクセス不能な vSAN オブジェクトはありません。 これは、**「Home」** > **「Hosts and Clusters」**をクリックしてから**「vSAN Cluster」**を選択し、**「vSAN Health Service」**で確認できます。 **「Monitor」**タブ、**「vSAN」**をクリックしてから**「Health」**をクリックします。 テスト結果を確認します。
+  - アップグレード・プロセスの開始時、**「Home」** > **「Hosts and Clusters」**をクリックしてから、**「vSAN Cluster」**を選択して**「vSAN」**タブ、**「Resync Components」**の順にクリックしたときに、アクティブな再同期はありません。 _再同期コンポーネント数は 0 である必要があります_。 ホストの再始動後にデータを同期する必要があるため、アップグレード・プロセス中はいくつかの再同期アクティビティーがあることが予期されます。
 * **vSphere ESXi ホストの準備** - vSAN クラスターでホストを保守モードに移行する場合、以下の 3 つのオプションがあります。
   - **No data migration** - このオプションを選択する場合、vSAN では、データをこのホストからは退避しません。 ホストの電源をオフにするか、クラスターからホストを削除すると、一部の仮想マシン (VM) がアクセス不能になる場合があります。
   - **Ensure availability** - このオプションを選択すると、vSAN では、全データ・マイグレーションよりも高速にホストを保守モードに移行でき、環境内の VM にアクセスできます。
@@ -153,4 +153,4 @@ vSphere Client でクリックするよりも、より効率的に多くの基�
 {: #vum-updating-vsan-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} ソリューションのアーキテクチャー](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (デモンストレーション)
+* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (デモンストレーション)

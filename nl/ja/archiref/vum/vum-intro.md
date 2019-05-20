@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -60,7 +60,7 @@ vSAN を使用して vCenter Server をデプロイした場合は、まず [vSA
 
 {{site.data.keyword.cloud_notm}} インフラストラクチャー管理の自動化を更新する場合は、{{site.data.keyword.vmwaresolutions_short}} コンソールを使用します。
 
-[{{site.data.keyword.vmwaresolutions_short}} コンソール](https://console.cloud.ibm.com/infrastructure/vmware-solutions/console)を使用すると、以下のアクションを実行できます。
+[{{site.data.keyword.vmwaresolutions_short}} コンソール](https://cloud.ibm.com/infrastructure/vmware-solutions/console)を使用すると、以下のアクションを実行できます。
 *	ライセンスのアップグレード (例えば、NSX Base の別のバージョンへのアップグレード)
 *	vCenter Server プラットフォームの更新の開始 (例えば、バージョン 2.5 への移行)
 *	更新の状況の表示
@@ -72,4 +72,4 @@ vSAN を使用して vCenter Server をデプロイした場合は、まず [vSA
 {: #vum-intro-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} ソリューションのアーキテクチャー](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (デモンストレーション)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (デモンストレーション)

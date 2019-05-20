@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-20"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -42,15 +42,15 @@ subcollection: vmwaresolutions
 
 | 製造元  | コンポーネント                      | バージョン    |
 |:------------- |:------------------------------ |:------------- |
-| VMware       | vSphere ESXi                    | 6.7 Update 1 (ビルド 6.7.0-11675023) または <br/>6.5 Update 2 (ビルド 6.5.0-11925212) |
+| VMware       | vSphere ESXi                    | 6.7 Update 1 (ビルド 6.7.0-13004448) または <br/>6.5 Update 2 (ビルド 6.5.0-13004031) |
 | VMware       | vSphere 6.7                     | Distributed vSwitch 6.6.0 |
 | VMware       | vSphere 6.5                     | Distributed vSwitch 6.5.0 |
-| VMware       | vCenter Server Appliance        | 6.7 Update 1 (ビルド 6.7.0-10244745) または <br/>6.5 Update 2d (ビルド 6.5.0-10964411) |
-| VMware       | Platform Services Controller    | 6.7 Update 1 (ビルド 6.7.0-10244745) または <br/>6.5 Update 2d (ビルド 6.5.0-10964411) |
+| VMware       | vCenter Server Appliance        | 6.7 Update 1b (ビルド 6.7.0-11727113) または <br/>6.5 Update 2d (ビルド 6.5.0-10964411) |
+| VMware       | Platform Services Controller    | 6.7 Update 1b (ビルド 6.7.0-11727113) または <br/>6.5 Update 2d (ビルド 6.5.0-10964411) |
 | VMware       | vSAN                            | 6.7 Update 1 または <br/>6.6.1       |
 | VMware       | NSX for vSphere                 | 6.4.4 (ビルド 11197766)    |
 | VMware       | NSX-T for vSphere               | 2.4                       |
-| Microsoft    | Windows Server Standard Edition | 2012R2       |
+| Microsoft    | Windows Server Standard Edition | 2016       |
 
 VMware vSAN はオプションのコンポーネントです。
 {:note}

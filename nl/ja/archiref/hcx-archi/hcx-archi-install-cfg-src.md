@@ -4,16 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
 # ソースでの HCX の構成およびインストール
 {: #hcx-archi-install-cfg-src}
 
-オンプレミスへのインストールでは、HCX 管理アプライアンスをデプロイし、それを vCenter と VCF/VCS HCX 対応クラウドの 1 つ以上のエンドポイントに登録する必要があります。
+オンプレミスへのインストールでは、HCX 管理アプライアンスをデプロイし、それを vCenter と VCS HCX 対応クラウドの 1 つ以上のエンドポイントに登録する必要があります。
 
 ## HCX Manager アプライアンスのインストール
 {: #hcx-archi-install-cfg-src-install-hma}

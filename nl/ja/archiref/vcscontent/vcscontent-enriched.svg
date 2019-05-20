@@ -15,60 +15,60 @@
    <rect x="130" y="69" width="600" height="394" fill="#dae8fc" stroke="#6c8ebf"/>
    <rect x="570" y="149" width="150" height="310" fill="#dae8fc" stroke="#6c8ebf"/>
   </g>
-  <g font-family="Helvetica" font-size="24px" text-anchor="middle">
+  <g font-family="MS UI Gothic" font-size="24px" text-anchor="middle">
    <text x="224.5" y="33.5">Stock Trader - エンリッチ (何度も何度も...)</text>
   </g>
   <rect x="160" y="149" width="400" height="310" fill="#fff2cc" pointer-events="none" stroke="#d6b656"/>
-  <g font-family="Helvetica" font-size="16px">
+  <g font-family="MS UI Gothic" font-size="16px">
    <text x="165.5" y="169.5">IBM Cloud Private Hosted</text>
   </g>
   <rect x="319" y="199" width="79" height="30" fill="#9f9" pointer-events="none" stroke="#36393d"/>
-  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <g font-family="MS UI Gothic" font-size="10px" text-anchor="middle">
    <text x="359.5" y="214.5">DB2</text>
   </g>
   <rect x="460" y="343" width="79" height="30" fill="#9f9" pointer-events="none" stroke="#36393d"/>
-  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <g font-family="MS UI Gothic" font-size="10px" text-anchor="middle">
    <text x="500" y="358.5">IBM ODM DC</text>
   </g>
   <rect x="460" y="169" width="79" height="30" fill="#9f9" pointer-events="none" stroke="#36393d"/>
-  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <g font-family="MS UI Gothic" font-size="10px" text-anchor="middle">
    <text x="499" y="184.5">Redis</text>
   </g>
   <rect x="175" y="373" width="79" height="30" fill="#66b2ff" pointer-events="none" stroke="#36393d"/>
-  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <g font-family="MS UI Gothic" font-size="10px" text-anchor="middle">
    <text x="214" y="388.5">Trader (ノード)</text>
   </g>
   <rect x="319" y="356.5" width="79" height="30" fill="#9f9" pointer-events="none" stroke="#36393d"/>
-  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <g font-family="MS UI Gothic" font-size="10px" text-anchor="middle">
    <text x="359.5" y="372">MQ</text>
   </g>
   <rect x="175" y="278" width="79" height="30" fill="#9cf" pointer-events="none" stroke="#6c8ebf"/>
-  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <g font-family="MS UI Gothic" font-size="10px" text-anchor="middle">
    <text x="214" y="293.5">Trader (Java)</text>
   </g>
   <rect x="319" y="278" width="79" height="30" fill="#9cf" pointer-events="none" stroke="#6c8ebf"/>
-  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <g font-family="MS UI Gothic" font-size="10px" text-anchor="middle">
    <text x="359.5" y="293.5">ポートフォリオ</text>
   </g>
   <rect x="319" y="413" width="79" height="30" fill="#9cf" pointer-events="none" stroke="#6c8ebf"/>
-  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <g font-family="MS UI Gothic" font-size="10px" text-anchor="middle">
    <text x="358" y="428.5">メッセージング</text>
   </g>
   <rect x="460" y="232" width="79" height="30" fill="#9cf" pointer-events="none" stroke="#6c8ebf"/>
-  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <g font-family="MS UI Gothic" font-size="10px" text-anchor="middle">
    <text x="499" y="247.5">株価</text>
   </g>
   <rect x="460" y="302" width="79" height="30" fill="#9cf" pointer-events="none" stroke="#6c8ebf"/>
-  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <g font-family="MS UI Gothic" font-size="10px" text-anchor="middle">
    <text x="500" y="317.5">ロイヤルティー・レベル</text>
   </g>
   <rect x="460" y="379.5" width="79" height="30" fill="#9cf" pointer-events="none" stroke="#6c8ebf"/>
-  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <g font-family="MS UI Gothic" font-size="10px" text-anchor="middle">
    <text x="499" y="395">通知</text>
    <text x="499" y="407">Slack</text>
   </g>
   <rect x="460" y="421" width="79" height="30" fill="#9cf" pointer-events="none" stroke="#6c8ebf"/>
-  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <g font-family="MS UI Gothic" font-size="10px" text-anchor="middle">
    <text x="499" y="436.5">通知</text>
    <text x="499" y="448.5">Twitter</text>
   </g>
@@ -90,7 +90,7 @@
    <path d="m398 428 55.68 7.19" fill="none"/>
    <path d="m458.89 435.86-7.39 2.57 2.18-3.24-1.28-3.7z"/>
   </g>
-  <g font-family="Helvetica" font-size="16px">
+  <g font-family="MS UI Gothic" font-size="16px">
    <text x="135.5" y="89">IBM Cloud</text>
   </g>
   <g pointer-events="none" stroke="#000" stroke-miterlimit="10">
@@ -107,41 +107,41 @@
    <path d="m675 395h64.63" fill="none"/>
    <path d="m744.88 395-7 3.5 1.75-3.5-1.75-3.5z"/>
   </g>
-  <g font-family="Helvetica" font-size="16px" text-anchor="middle">
+  <g font-family="MS UI Gothic" font-size="16px" text-anchor="middle">
    <text x="646.5" y="169.5">IBM Cloud サービス</text>
   </g>
   <rect x="595.5" y="272" width="79" height="30" fill="#f8cecc" pointer-events="none" stroke="#b85450"/>
-  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <g font-family="MS UI Gothic" font-size="10px" text-anchor="middle">
    <text x="634.5" y="287.5">Watson</text>
    <text x="634.5" y="299.5">Tone Analyzer</text>
   </g>
   <rect x="595.5" y="379.5" width="79" height="30" fill="#f8cecc" pointer-events="none" stroke="#b85450"/>
-  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <g font-family="MS UI Gothic" font-size="10px" text-anchor="middle">
    <text x="634.5" y="395">Functions</text>
    <text x="634.5" y="407">(OpenWhisk)</text>
   </g>
   <rect x="595.5" y="232" width="79" height="30" fill="#f8cecc" pointer-events="none" stroke="#b85450"/>
-  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <g font-family="MS UI Gothic" font-size="10px" text-anchor="middle">
    <text x="634.5" y="247.5">API Connect</text>
   </g>
   <rect x="745.5" y="421" width="79" height="30" fill="#ccc" pointer-events="none" stroke="#666"/>
-  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <g font-family="MS UI Gothic" font-size="10px" text-anchor="middle">
    <text x="784.5" y="436.5">Twitter</text>
   </g>
   <rect x="745.5" y="379.5" width="79" height="30" fill="#ccc" pointer-events="none" stroke="#666"/>
-  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <g font-family="MS UI Gothic" font-size="10px" text-anchor="middle">
    <text x="784.5" y="395">Slack</text>
   </g>
   <rect x="30" y="209" width="79" height="30" fill="#ccc" pointer-events="none" stroke="#666"/>
-  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <g font-family="MS UI Gothic" font-size="10px" text-anchor="middle">
    <text x="69" y="224.5">loopctl</text>
   </g>
   <rect x="30" y="332" width="79" height="30" fill="#ccc" pointer-events="none" stroke="#666"/>
-  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <g font-family="MS UI Gothic" font-size="10px" text-anchor="middle">
    <text x="69" y="347.5">ブラウザー</text>
   </g>
   <rect x="30" y="272" width="79" height="30" fill="#ccc" pointer-events="none" stroke="#666"/>
-  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <g font-family="MS UI Gothic" font-size="10px" text-anchor="middle">
    <text x="69" y="287.5">OIDC</text>
   </g>
   <g pointer-events="none">
@@ -164,11 +164,11 @@
    </g>
    <rect x="175" y="209" width="79" height="30" fill="#9cf" stroke="#6c8ebf"/>
   </g>
-  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <g font-family="MS UI Gothic" font-size="10px" text-anchor="middle">
    <text x="214" y="224.5">Looper</text>
   </g>
   <rect x="745.5" y="232" width="79" height="30" fill="#ccc" pointer-events="none" stroke="#666"/>
-  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+  <g font-family="MS UI Gothic" font-size="10px" text-anchor="middle">
    <text x="784.5" y="250">Stock Service #2</text>
   </g>
  </g>

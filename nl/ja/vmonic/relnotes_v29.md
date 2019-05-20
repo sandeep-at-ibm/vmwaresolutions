@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -69,7 +69,7 @@ vSphere Enterprise Plus 6.7u1 は Broadwell および Skylake の {{site.data.ke
 詳しくは、以下を参照してください。
 
 * [Virtual Routing and Forwarding (VRF) on IBM Cloud の概要](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-* [IBM Cloud CLI を使用してアカウントでサービス・エンドポイントを使用できるようにする](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
+* [アカウントでサービス・エンドポイントを使用できるようにする方法](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
 
 ## アプリケーション・プログラミング・インターフェースのサポート
 {: #relnotes_v29-api}
@@ -97,12 +97,12 @@ VMware コンポーネントの選択について詳しくは、[vCenter Server 
 ### データ・センターの更新
 {: #relnotes_v29-dc}
 
-新しいデータ・センター (**FRA-05 - フランクフルト**と **LON-05 - ロンドン**) でのデプロイメントが可能になりました。詳しくは、[vCenter Server インスタンスの要件と計画](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)を参照してください。
+新しいデータ・センター (**FRA-05 - フランクフルト**と **LON-05 - ロンドン**) でのデプロイメントが可能になりました。 詳しくは、[vCenter Server インスタンスの要件と計画](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)を参照してください。
 
 ### ESXi サーバーの機能拡張
 {: #relnotes_v29-vcs-esxi}
 
-* インスタンス配信前の ESXi サーバーでセキュア・シェル (SSH) プロトコルが使用不可になりました。
+* インスタンス配信前の ESXi サーバーでセキュア・シェル (SSH) プロトコルが使用不可になりました。 SSH を有効にするには、[Enable SSH from the vSphere Web Client](https://pubs.vmware.com/vsphere-6-5/index.jsp?topic=%2Fcom.vmware.vcli.getstart.doc%2FGUID-C3A44A30-EEA5-4359-A248-D13927A94CCE.html) を参照してください。
 * V2.9 リリース以降で、以下の ESXi サーバー操作が可能です。
 
    * サーバーが保守モードの間に、新規 ESXi サーバーを既存のクラスターに追加する。 仮想マシンは、保守モードを解除するまで新規サーバーにマイグレーションされません。
@@ -149,7 +149,9 @@ Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} サービスを組み
 ### KMIP for VMware on IBM Cloud
 {: #relnotes_v29-services-kmip}
 
-シドニーでは、KMIP for VMware on {{site.data.keyword.cloud_notm}} サービスの 2 つの新しいエンドポイントが使用可能になりました。 詳しくは、[KMIP for VMware on {{site.data.keyword.cloud_notm}} サービスの構成](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering-config)を参照してください。
+シドニーでは、KMIP for VMware on {{site.data.keyword.cloud_notm}} サービスの 2 つの新しいエンドポイントが使用可能になりました。 詳しくは、[KMIP for VMware on {{site.data.keyword.cloud_notm}} サービスの構成](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering#kmip_standalone_ordering-config)を参照してください。
+
+(2019 年 4 月 9 日に更新) これまでの KMIP for VMware on {{site.data.keyword.cloud_notm}} では、暗号鍵の作成、暗号化、復号化に IBM Key Protect for {{site.data.keyword.cloud_notm}} を使用していました。V2.9 リリース以降の KMIP for VMware on {{site.data.keyword.cloud_notm}} では、暗号化サービスと鍵管理サービスを一式備えた {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services を使用して、{{site.data.keyword.cloud_notm}} の VMware で使用する暗号鍵を管理することも可能です。詳しくは、[KMIP for VMware on IBM Cloud の概要](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations)および [{{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-get-started) を参照してください。
 
 ### IBM Cloud での Veeam
 {: #relnotes_v29-services-veeam}

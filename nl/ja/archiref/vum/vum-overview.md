@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -62,7 +62,7 @@ VUM クライアント・インターフェースには、以下の 2 つのメ�
 ##	コンプライアンス・ビュー
 {: #vum-overview-compliance-view}
 
-選択したインベントリー・オブジェクトのコンプライアンス・ビューにアクセスするには、**「Hosts and Clusters」**または**「VMs and Templates」**にナビゲートして、**「Update Manager」タブ**をクリックします。 Update Manager のコンプライアンス・ビューでは、以下のタスクを実行できます。
+選択したインベントリー・オブジェクトのコンプライアンス・ビューにアクセスするには、**「Hosts and Clusters」**または**「VMs and Templates」**にナビゲートして、**「Update Manager」**タブをクリックします。 Update Manager のコンプライアンス・ビューでは、以下のタスクを実行できます。
 *	選択した各インベントリー・オブジェクトのコンプライアンスおよびスキャン結果の表示
 *	選択したインベントリー・オブジェクトからのベースラインおよびベースライン・グループの添付および切り離し
 *	選択したインベントリー・オブジェクトのスキャン
@@ -73,4 +73,4 @@ VUM クライアント・インターフェースには、以下の 2 つのメ�
 {: #vum-overview-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} ソリューションのアーキテクチャー](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (デモンストレーション)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (デモンストレーション)

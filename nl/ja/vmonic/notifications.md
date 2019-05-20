@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -54,7 +54,7 @@ subcollection: vmwaresolutions
        </tr>
        <tr>
          <td>タイプ</td>
-         <td>イベントが報告されたコンポーネントのタイプ:<ul><li>vCenter Server インスタンス</li><li>Cloud Foundation インスタンス</li><li>サービス</li><li>システム</li></ul></td>
+         <td>イベントが報告されたコンポーネントのタイプ:<ul><li>vCenter Server インスタンス</li><li>サービス</li><li>システム</li></ul></td>
        </tr>
        <tr>
          <td>リソース</td>

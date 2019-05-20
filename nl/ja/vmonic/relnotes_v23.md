@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-05-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -47,7 +47,7 @@ vCenter Server with Hybridity Bundle について詳しくは、以下のトピ�
 
 インスタンス全体を削除しなくても、インスタンスからクラスターを削除できるようになりました。 V2.2 以前のインスタンスでデプロイしたクラスターの場合に、インスタンスに追加したクラスターを削除するには、インスタンスを V2.3 にアップグレードする必要があります。
 
-詳しくは、[vCenter Server インスタンスのクラスターの追加、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances#deleting-clusters-from-vcenter-server-instances)を参照してください。
+詳しくは、[vCenter Server インスタンスのクラスターの追加、表示、削除](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)を参照してください。
 
 ## VMware vCenter Server インスタンスの更新
 {: #relnotes_v23-vcs}
@@ -58,12 +58,12 @@ vCenter Server with Hybridity Bundle について詳しくは、以下のトピ�
 
 V2.3 リリース以降、**カスタマイズ型** のベア・メタル設定を選択した場合に、以下の新しい CPU モデルをデプロイメントできるようになりました。
 * Dual Intel Xeon Silver 4110 プロセッサー / 合計 16 コア、2.1 GHz
-*  Dual Intel Xeon Gold 5120 Processor / 合計 28 コア、2.2 GHz 
+* Dual Intel Xeon Gold 5120 Processor / 合計 28 コア、2.2 GHz
 
 詳しくは、以下のトピックを参照してください。
 
 * [vCenter Server インスタンスの注文](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [vCenter Server インスタンスのクラスターの追加、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [vCenter Server インスタンスのクラスターの追加、表示、削除](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 
 ## VMware Cloud Foundation インスタンスの更新
 {: #relnotes_v23-vcf}

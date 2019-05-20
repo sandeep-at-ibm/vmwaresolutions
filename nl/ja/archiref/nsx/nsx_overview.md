@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -14,9 +14,10 @@ subcollection: vmwaresolutions
 # NSX Edge Services Gateway について
 {: #nsx_overview}
 
-VMware NSX Edge Services Gateway (ESG) ソリューションは、{{site.data.keyword.cloud_notm}} で現在使用可能な VMware Cloud Foundation on {{site.data.keyword.cloud}} および vCenter Server on {{site.data.keyword.cloud_notm}} オファリングの拡張です。 Cloud Foundation および vCenter Server のソリューション・アーキテクチャーに、このソリューションの各コンポーネントと、設計での各コンポーネントの構成概要が詳しく示されます。
+VMware NSX Edge Services Gateway (ESG) ソリューションは、{{site.data.keyword.cloud_notm}} で現在使用可能な vCenter Server on {{site.data.keyword.cloud_notm}} オファリングの拡張機能です。
+vCenter Server のソリューション・アーキテクチャーに、このソリューションの各コンポーネントと、設計での各コンポーネントの構成概要が詳しく示されます。
 
-Cloud Foundation および vCenter Server の設計について詳しくは、[ソリューションの概要](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)を参照してください。
+vCenter Server の設計について詳しくは、[ソリューションの概要](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)を参照してください。
 
 ## NSX Edge Services Gateway の概要
 {: #nsx_overview-nsx-esg}

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-04-03"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -21,7 +21,7 @@ KMIP for VMware on {{site.data.keyword.cloud}} インスタンスは VMware イ�
 
 以下の作業を完了していることを確認してください。
 * **「設定」**ページで {{site.data.keyword.cloud_notm}} インフラストラクチャーの資格情報を構成する。 詳しくは、[ユーザー・アカウントと設定](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)を参照してください。
-* [KMIP for VMware on {{site.data.keyword.cloud_notm}} インスタンスをインストールする際の考慮事項](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations-install)に記載されている、すべての考慮事項を確認する。
+* [KMIP for VMware on {{site.data.keyword.cloud_notm}} インスタンスをインストールする際の考慮事項](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip_standalone_considerations#kmip_standalone_considerations-install)に記載されている、すべての考慮事項を確認する。
 
 ## KMIP for VMware on IBM Cloud インスタンスを注文する手順
 {: #kmip_standalone_ordering-procedure}
@@ -55,17 +55,19 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} インスタンスをホス�
 | ドイツ        |  <ul><li><code>kmip-1.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
 | シドニー        |  <ul><li><code>kmip-1.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
 | 東京          | <ul><li><code>kmip-1.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
-| 米国南部       |  <ul><li><code>kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+| 英国南部       | <ul><li><code>kmip-1.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+| 米国東部       | <ul><li><code>kmip-1.private.us-east.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-east.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+| 米国南部       | <ul><li><code>kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
 
 ### サービス ID の API キー
 {: #kmip_standalone_ordering-config-api-key}
 
-IBM Key Protect Service インスタンスへのアクセスに使用する {{site.data.keyword.cloud_notm}} サービス ID の API 鍵を入力します。
+Key Protect または Hyper Protect Crypto Services のサービス・インスタンスへのアクセスに使用する {{site.data.keyword.cloud_notm}} サービス ID の API 鍵を入力します。
 
-### Key Protect インスタンス
+### 鍵マネージャー・インスタンス
 {: #kmip_standalone_ordering-config-key-protect}
 
-**「Retrieve」**をクリックして、利用可能な IBM Key Protect Service インスタンスのリストを取得し、鍵管理に使用するインスタンスを選択します。
+**「Retrieve」**をクリックして、利用可能な鍵マネージャー・インスタンスのリストを取得し、鍵管理に使用するインスタンスを選択します。
 
 ### カスタマー・ルート・キー
 {: #kmip_standalone_ordering-config-root-key}

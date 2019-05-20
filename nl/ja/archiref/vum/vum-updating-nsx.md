@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -54,11 +54,11 @@ NSX Manager が正常にアップグレードされた後に NSX をダウング
   - アップロードが完了すると、NSX Manager ログイン・ページにリダイレクトされます。 再度ログインして、現在のソフトウェア・バージョンの表示が正しいことを確認します。
 7. **NSX Controller クラスターをアップグレードします。**:
   - vSphere Web Client を開き、VCSA にログインします。
-  - **「Home」** > **「Networking & Security」** > **「Installation」**にナビゲートし、**「Management」タブ**を選択して、「Controller Cluster Status」列で**「Upgrade Available」**を選択します。
+  - **「Home」** > **「Networking & Security」** > **「Installation」**にナビゲートし、**「Management」**タブを選択して、「Controller Cluster Status」列で**「Upgrade Available」**を選択します。
   - 環境内のコントローラーは、一度に 1 つずつアップグレードおよびリブートされます。 アップグレードを開始すると、システムではアップグレード・ファイルをダウンロードして各コントローラーをアップグレードし、各コントローラーを再始動して、各コントローラーのアップグレード状況を更新します。
 8. **NSX ホスト・クラスターをアップグレードします**。
   - NSX Manager と NSX Controller をアップグレードした後、ホスト・クラスターでは vSphere ESXi ホスト上の NSX VIB が更新されます。
-  - vSphere Web Client で、**「Home」** > **「Networking & Security」** > **「Installation」**にナビゲートし、**「Host Preparation」タブ**を選択します。 アップグレードするクラスターごとに、**「Upgrade available」**をクリックします。 「Installation Status」に「Installing」と表示されます。
+  - vSphere Web Client で、**「Home」** > **「Networking & Security」** > **「Installation」**にナビゲートし、**「Host Preparation」**タブを選択します。 アップグレードするクラスターごとに、**「Upgrade available」**をクリックします。 「Installation Status」に「Installing」と表示されます。
   - クラスターの「Installation Status」には、_「Not Ready」_と表示されます。 詳細を表示するには**「Not Ready」**をクリックし、VIB インストールの完了を試行するには**「Resolve all」**をクリックします。 アップグレードを完了するために、ホストは保守モードになり、必要に応じてリブートされます。 「Installation Status」列に「Installing」と表示されます。 アップグレードが完了すると、「Installation Status」列に緑色のチェック・マークとアップグレードされた NSX バージョンが表示されます。
 9. **Edge Services Gateway** では、次のようになります。
   - アップグレード・プロセス中に、新しい Edge 仮想アプライアンスが既存のものと一緒にデプロイされます。 新しい Edge の準備ができると、古い Edge の vNIC は切断され、新しい Edge の vNIC が接続されます。 次に、新しい Edge により無償の ARP (GARP) パケットが送信され、接続されたスイッチの ARP キャッシュが更新されます。 HA がデプロイされている場合、アップグレード・プロセスは 2 回実行されます。 このプロセスは、パケット転送に一時的に影響を与える可能性があります。
@@ -69,4 +69,4 @@ NSX Manager が正常にアップグレードされた後に NSX をダウング
 {: #vum-updating-nsx-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} ソリューションのアーキテクチャー](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (デモンストレーション)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (デモンストレーション)

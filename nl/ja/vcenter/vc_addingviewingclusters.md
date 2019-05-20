@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-18"
+lastupdated: "2019-04-18"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -28,12 +28,13 @@ VMware vCenter Server インスタンスに独自のクラスターを追加し�
 ## vCenter Server インスタンスへのクラスターの追加
 {: #vc_addingviewingclusters-adding}
 
-インスタンスに追加できるクラスターの数は、インスタンスのバージョンに応じて以下のように異なります。
-* V2.5 以降でデプロイ (または V2.5 以降にアップグレード) されたインスタンスの場合は、追加できるクラスター数の上限は、クラスター、ホスト、および VM の数によって決まります。 VMware のサイズ設定についてのガイドラインおよびデプロイに応じた上限を守る必要があります。
-* V2.2 以降でデプロイ (または V2.2 以降にアップグレード) されたインスタンスの場合、最大 10 個のクラスターを追加できます。
-* V2.1 以前でデプロイされたインスタンスの場合、最大 5 個のクラスターを追加できます。
+### クラスターを追加する前に
+{: #vc_addingviewingclusters-before-add}
 
-上限について詳しくは、[VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window} を参照してください。
+* VMware vSphere Web クライアントで加えた変更は {{site.data.keyword.vmwaresolutions_short}} コンソールと同期されないので、可能な限り、{{site.data.keyword.vmwaresolutions_full}} コンソールを使用してクラスターを追加してください。つまり、オンプレミスのクラスター、または {{site.data.keyword.vmwaresolutions_short}} コンソールで管理できない、あるいは管理しないクラスターの場合にのみ、クラスターを vCenter Server に追加してください。
+* V2.5 以降でデプロイ (または V2.5 以降にアップグレード) されたインスタンスの場合は、追加できるクラスター数の上限は、クラスター、ホスト、および VM の数によって決まります。 VMware のサイズ設定についてのガイドラインおよびデプロイに応じた上限を守る必要があります。 上限について詳しくは、[VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window} を参照してください。
+* V2.2、V2.3、または V2.4 でデプロイ (または V2.2、V2.3、または V2.4 にアップグレード) されたインスタンスの場合、最大 10 個のクラスターを追加できます。
+* V2.1 以前でデプロイされたインスタンスの場合、最大 5 個のクラスターを追加できます。
 
 ### システム設定
 {: #vc_addingviewingclusters-adding-sys-settings}
@@ -52,7 +53,7 @@ vCenter Server インスタンスにクラスターを追加するときには�
 #### データ・センターの場所
 {: #vc_addingviewingclusters-adding-dc-location}
 
-クラスターの {{site.data.keyword.CloudDataCent}}の場所はデフォルトで、vCenter Server インスタンスの {{site.data.keyword.CloudDataCent_notm}}に設定されます。 デプロイ済みのインスタンスとは異なる {{site.data.keyword.CloudDataCent_notm}}にクラスターをデプロイできますが、それら 2 カ所の {{site.data.keyword.CloudDataCents_notm}}間のネットワーク待ち時間が、150 ms 未満になるようにしてください。 ネットワーク待ち時間を確認するには、[SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/) などのツールを使用できます。
+クラスターの {{site.data.keyword.CloudDataCent}}の場所はデフォルトで、vCenter Server インスタンスの {{site.data.keyword.CloudDataCent_notm}}に設定されます。 デプロイ済みのインスタンスとは異なる {{site.data.keyword.CloudDataCent_notm}}にクラスターをデプロイできますが、それら 2 カ所の {{site.data.keyword.CloudDataCents_notm}}間のネットワーク待ち時間が、150 ms 未満になるようにしてください。 ネットワーク待ち時間を確認するには、[Looking Glass](/docs/infrastructure/network-tools?topic=network-tools-about-looking-glass#about-looking-glass) などのツールを使用できます。
 
 別の {{site.data.keyword.CloudDataCent_notm}}または {{site.data.keyword.cloud_notm}} インフラストラクチャー・ポッドにクラスターをデプロイする場合は、注文した{{site.data.keyword.baremetal_short}}で使用するために 3 つの追加の VLAN を注文します。
 
@@ -97,22 +98,15 @@ vCenter Server インスタンスにクラスターを追加するときには�
 
 | CPU モデル・オプション        | RAM オプション       |
 |:------------- |:------------- |
-| デュアル Intel Xeon E5-2620 v4 / 合計 16 コア、2.1 GHz | 64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
-| デュアル Intel Xeon E5-2650 v4 / 合計 24 コア、2.2 GHz | 64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
-| デュアル Intel Xeon E5-2690 v4 / 合計 28 コア、2.6 GHz | 64 GB、128 GB、256 GB、512 GB、768 GB、1.5 TB |
 | クワッド Intel Xeon E7-4820 v4 / 合計 40 コア、1.9 GHz | 128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 | クワッド Intel Xeon E7-4850 v4 / 合計 64 コア、2.2 GHz | 128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 
 #### ベア・メタル・サーバーの数
 {: #vc_addingviewingclusters-adding-bare-metal-number}
 
-クラスターには 2 台以上の{{site.data.keyword.baremetal_short}}が必要です。
-
-V2.1 以降にデプロイされた vCenter Server インスタンスの場合、1 つのクラスターに最大 59 台の{{site.data.keyword.baremetal_short}}を追加できます。 一度に 1 台から 59 台の ESXi サーバーを追加できます。
-
-V2.0 以前にデプロイされた vCenter Server インスタンスの場合、1 つのクラスターに最大 32 台の{{site.data.keyword.baremetal_short}}を追加できます。 **Skylake**、**SAP 認定**、および **Broadwell** のベア・メタル・サーバー構成に対して、一度に 1 台から 20 台の ESXi サーバーを追加できます。
-
-デプロイメント後に、最大 4 つのクラスターを追加で作成できます。 **「Skylake」**または**「Broadwell」**のベアメタル・サーバー構成と VMware vSAN ストレージを選択した場合は、初期クラスターとデプロイメント後のクラスターの両方に 4 つのサーバーが必要です。
+* 注文したサーバーはすべて同じ構成になります。
+* vSAN ストレージの場合、4 台から 59 台までのサーバーを注文できます。
+* NFS ストレージの場合、2 台から 59 台までのサーバーを注文できます。ただし、実動ワークロードには、少なくとも 3 台のサーバーが推奨されています。詳しくは、[2 ノードの vCenter Server インスタンスの可用性は高いですか?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-) を参照してください。
 
 ### ストレージ設定
 {: #vc_addingviewingclusters-adding-storage-settings}
@@ -125,9 +119,9 @@ V2.0 以前にデプロイされた vCenter Server インスタンスの場合�
 以下の vSAN オプションを指定します。
 * **vSAN 容量ディスクのディスク・タイプとサイズ**: 必要な容量ディスクのオプションを選択します。
 * **vSAN 容量ディスクの数**: 追加する容量ディスク数を指定します。
-* 容量ディスクを上限の 8 個を超えて追加する場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。 このオプションでは、合計 10 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されますので、より少ない待ち時間とより高い IOPS スループットが求められるワークロードを扱うときに役立ちます。
+* 容量ディスクを上限の 10 個を超えて追加する場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。 このオプションでは、合計 12 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されますので、より少ない待ち時間とより高い IOPS スループットが求められるワークロードを扱うときに役立ちます。
 
-  **High-Performance Intel Optane** オプションは、Skylake の CPU モデルの Dual Intel Xeon Gold 5120 および Dual Intel Xeon Gold 6140 でのみ使用できます。
+  **「High-Performance Intel Optane」**オプションは、Skylake の CPU モデルでのみ使用できます。
   {:note}
 
 * **「Disk Type for vSAN Cache Disks」**および**「Number of vSAN Cache Disks」**の値を確認します。 これらの値は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けたかどうかによって異なります。
@@ -180,7 +174,6 @@ V2.0 以前にデプロイされた vCenter Server インスタンスの場合�
 * F5 on {{site.data.keyword.cloud_notm}}
 * Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
 * Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
-* Zerto on {{site.data.keyword.cloud_notm}}
 
 ### 注文のサマリー
 {: #vc_addingviewingclusters-adding-order-summary}
@@ -308,11 +301,12 @@ VLAN の詳細にアクセスするには**「リソースの表示」**をク�
 
 不要になったクラスターをインスタンスから削除したい場合があります。
 
-### 削除する前に
+### クラスターを削除する前に
 {: #vc_addingviewingclusters-deleting-prereq}
 
 * この手順を使用して、V2.3 以降でデプロイされたインスタンスからクラスターを削除できます。
 * V2.2 以前のインスタンスでデプロイしたクラスターの場合、インスタンスに追加したクラスターを削除するには、インスタンスを V2.3 にアップグレードする必要があります。
+* VMware vSphere Web クライアントで加えた変更は {{site.data.keyword.vmwaresolutions_short}} コンソールと同期されないので、可能な限り、{{site.data.keyword.vmwaresolutions_full}} コンソールを使用してクラスターを削除してください。つまり、オンプレミスのクラスター、または {{site.data.keyword.vmwaresolutions_short}} コンソールで管理できない、あるいは管理しないクラスターの場合にのみ、クラスターを vCenter Server から削除してください。
 * クラスターは一度に 1 つしか削除できません。 複数のクラスターを削除する場合は、順番に行う必要があります。 前のクラスターが削除されるまで待ってから、次のクラスターを削除してください。
 * クラスターを削除する前に、クラスター内のすべてのノードが電源オンの状態で作動可能であることを確認します。
 * クラスターを削除すると、クラスターのすべての VM も削除され、復旧できなくなります。 VM を保持したい場合は、他のクラスターに移行してください。

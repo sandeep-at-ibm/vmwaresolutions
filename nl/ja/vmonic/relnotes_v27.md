@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-12-14"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -30,8 +30,8 @@ V2.7 リリース以降、VMware vCenter Server on {{site.data.keyword.cloud_not
 * Dual Intel Xeon Gold 6140 プロセッサー / 合計 36 コア、2.3 GHz / 768 GB RAM
 
 詳しくは、以下の資料にある『*{{site.data.keyword.baremetal_short_sing}}の設定*』セクションを参照してください。
-* [vCenter Server インスタンスの注文](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance#bare-metal-server-settings)
-* [新規 vSphere クラスターの注文](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances#bare-metal-server-settings)
+* [vCenter Server インスタンスの注文](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance#vc_orderinginstance-bare-metal-settings)
+* [新規 vSphere クラスターの注文](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances#vs_orderinginstances-bare-metal-settings)
 
 ## アドオン・サービスの更新
 {: #relnotes_v27-services}

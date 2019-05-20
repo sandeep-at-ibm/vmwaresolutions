@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -40,8 +40,8 @@ vSphere ESXI ホストが vSAN クラスターの一部である場合、修復�
 {: #vum-orchestr-updates-step1}
 
 1. vSphere Web Client を使用して VCSA にログインします。
-2. **「Home」**>**「Update Manager」**を選択して、**「Objects」タブ**から **Update Manager インスタンス**を選択します。
-3. **「Manage」タブ**、**「Host Baselines」タブ**をクリックして、**「New Baseline Group」**をクリックします。
+2. **「Home」**>**「Update Manager」**を選択して、**「Objects」**タブから **Update Manager インスタンス**を選択します。
+3. **「Manage」**タブ、**「Host Baselines」**タブをクリックして、**「New Baseline Group」**をクリックします。
 4. ベースライン・グループの固有の名前を入力し、**「Next」**をクリックします。
 5. ホスト・アップグレード・ベースラインを選択して、ベースライン・グループに含めます。
 6. オプションで、「Upgrades」ページの下部にある**「Create a new Host Upgrade Baseline」**をクリックして新しいホスト・アップグレード・ベースラインを作成し、「New Baseline」ウィザードを完了します。 **「次へ」**をクリックします。
@@ -68,4 +68,4 @@ vSphere ESXI ホストが vSAN クラスターの一部である場合、修復�
 {: #vum-orchestr-updates-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} ソリューションのアーキテクチャー](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (デモンストレーション)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (デモンストレーション)

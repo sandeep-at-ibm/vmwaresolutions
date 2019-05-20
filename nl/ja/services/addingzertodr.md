@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -58,7 +58,6 @@ Zerto Replication V6.5 更新 3 ライセンス
 ## 関連リンク
 {: #addingzertodr-related}
 
-* [{{site.data.keyword.vmwaresolutions_short}} について](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-prod_overview)
 * [Zerto on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services?topic=vmware-solutions-zerto_ordering)
 * [Zerto on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingzertodr)
 * [Zerto on {{site.data.keyword.cloud_notm}} 用マネージド・サービスの要求](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)

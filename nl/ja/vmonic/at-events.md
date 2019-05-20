@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-03-12"
+lastupdated: "2019-04-03"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -14,7 +14,7 @@ subcollection: vmwaresolutions
 
 {{site.data.keyword.cloudaccesstrailfull}} サービスを使用すると、ユーザーおよびアプリケーションが {{site.data.keyword.Bluemix_notm}} の {{site.data.keyword.vmwaresolutions_short}} とどのような対話を行っているかを追跡できます。
 
-{{site.data.keyword.cloudaccesstrailfull_notm}} サービスは、{{site.data.keyword.Bluemix_notm}} 内のサービスの状態を変更するユーザー開始アクティビティーを記録します。 詳細については、[{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started-with-cla#getting-started-with-cla) を参照してください。
+{{site.data.keyword.cloudaccesstrailfull_notm}} サービスは、{{site.data.keyword.Bluemix_notm}} 内のサービスの状態を変更するユーザー開始アクティビティーを記録します。 詳しくは、[{{site.data.keyword.cloudaccesstrailshort}} について](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov#activity_tracker_ov)を参照してください。
 
 ## Activity Tracker イベント・テーブル
 {: #at-events-table}
@@ -51,12 +51,6 @@ subcollection: vmwaresolutions
 | `vmware-solutions.notification.update` | <ul><li>通知の更新要求を受信しました。</li><li>通知の更新要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
 | `vmware-solutions.secure_data.wipe`       | <ul><li>セキュア・データのワイプ要求を受信しました。</li><li>セキュア・データのワイプ要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
 | `vmware-solutions.bss_account.migrate` | <ul><li>bss アカウントへのマイグレーション要求を受信しました。</li><li>bss アカウントへのマイグレーション要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
-| `vmware-solutions.vcf.delete`                | <ul><li>Cloud Foundation インスタンスの削除要求を受信しました。</li><li>Cloud Foundation インスタンスの削除要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
-| `vmware-solutions.vcf.add_hosts`             | <ul><li>Cloud Foundation インスタンスへの ESXi サーバーの追加要求を受信しました。</li><li>Cloud Foundation インスタンスへの ESXi サーバーの追加要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
-| `vmware-solutions.vcf.remove_hosts`          | <ul><li>Cloud Foundation インスタンスからの ESXi サーバーの削除要求を受信しました。</li><li>Cloud Foundation インスタンスからの ESXi サーバーの削除要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
-| `vmware-solutions.vcf.create_cluster`        | <ul><li>Cloud Foundation インスタンスのクラスターの作成要求を受信しました。</li> <li>Cloud Foundation インスタンスのクラスターの作成要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
-| `vmware-solutions.vcf.delete_cluster`        | <ul><li>Cloud Foundation インスタンスからのクラスターの削除要求を受信しました。</li><li>Cloud Foundation インスタンスからのクラスターの削除要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
-| `vmware-solutions.vcf.schedule_update`       | <ul><li>Cloud Foundation インスタンスの更新のスケジュール設定要求を受信しました。</li><li>Cloud Foundation インスタンスの更新のスケジュール設定要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
 | `vmware-solutions.vcs.order`                 | <ul><li>vCenter Server インスタンスの注文要求を受信しました。</li><li>vCenter Server インスタンスの注文要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
 | `vmware-solutions.vcs.delete`                | <ul><li>vCenter Server インスタンスの削除要求を受信しました。</li><li>vCenter Server インスタンスの削除要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
 | `vmware-solutions.vcs.add_host`              | <ul><li>vCenter Server インスタンスへの ESXi サーバーの追加要求を受信しました。</li><li>vCenter Server インスタンスへの ESXi サーバーの追加要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |

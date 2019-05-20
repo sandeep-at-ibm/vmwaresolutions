@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -20,7 +20,7 @@ subcollection: vmwaresolutions
 
 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle は、V2.3 以降のリリースで使用可能なインスタンスです。 V2.6 以降では、ビジネス・パートナーが vCenter Server with Hybridity Bundle インスタンスを使用できます。
 
-vCenter Server with Hybridity Bundle は、VMware vSphere スタックをサービスとして提供するホステッド・プライベート・クラウドです。 この VMware 環境は、4 台の {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}上に構築され、専用ストレージとして VMware vSAN を使用し、VMware NSX で実装された管理しやすい論理エッジ・ファイアウォールのデプロイメントと構成が自動で実行されます。また、VMware HCX on {{site.data.keyword.cloud_notm}} サービスが含まれています。
+vCenter Server with Hybridity Bundle は、VMware vSphere スタックをサービスとして提供するホステッド・プライベート・クラウドです。 この VMware 環境は、少なくとも 4 台の {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}上に構築され、専用ストレージとして VMware vSAN を使用し、VMware NSX で実装された管理しやすい論理エッジ・ファイアウォールのデプロイメントと構成が自動で実行されます。また、VMware HCX on {{site.data.keyword.cloud_notm}} サービスが含まれています。
 
 多くの場合、環境全体を 1 日以内でプロビジョンできます。また、このベア・メタル・インフラストラクチャーのコンピュート能力は、必要に応じて迅速かつ伸縮自在に拡張や縮小ができます。
 
@@ -61,7 +61,7 @@ VMware NSX Advanced エディションを Enterprise エディションにアッ
 
 合計で、基本オファリングには、仮想化管理層用に予約される 38 個の vCPU と 67 GB の vRAM が必要です。 VM 用の残りのホスト容量は、オーバーサブスクリプション率、VM サイジング、ワークロードのパフォーマンス要件などのいくつかの要因によって決まります。
 
-HCX on {{site.data.keyword.cloud_notm}} サービスのデプロイ時の追加の管理リソース要件については、[VMware HCX on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview)を参照してください。
+HCX on {{site.data.keyword.cloud_notm}} サービスのデプロイ時の追加の管理リソース要件については、[VMware HCX on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations)を参照してください。
 
 ### インフラストラクチャーのハイブリッド化
 {: #vc_hybrid_overview-infras-hybrid}
@@ -81,9 +81,9 @@ vCenter Server with Hybridity Bundle インスタンスには、以下のコン�
 ### ベア・メタル・サーバー
 {: #vc_hybrid_overview-bare-metal}
 
-vCenter Server with Hybridity Bundle インスタンスの注文には、4 つの {{site.data.keyword.baremetal_short}} が付属します。 以下の構成を使用できます。
+以下のいずれかの構成で{{site.data.keyword.baremetal_short}}を 4 つ以上注文できます。
   * **Skylake**: 選択した CPU モデルおよび RAM サイズの 2 CPU Intel Skylake 世代サーバー (Intel Xeon 4100/5100/6100 シリーズ)。
-  * **Broadwell**: 選択した CPU モデルおよび RAM サイズの 2 CPU Intel Broadwell 世代サーバー (Intel Xeon E5-2600/E7-4800 シリーズ)。
+  * **Broadwell**: 選択した CPU モデルおよび RAM サイズの 4 CPU Intel Broadwell 世代サーバー (Intel Xeon E7-4800 シリーズ)。
 
 ### ネットワーキング
 {: #vc_hybrid_overview-networking}
@@ -97,9 +97,9 @@ vCenter Server with Hybridity Bundle インスタンスの注文には、4 つ�
 
     ユーザーは、この ESG にアクセスすることはできず、使用できません。 これを変更すると、{{site.data.keyword.vmwaresolutions_short}} コンソールから vCenter Server with Hybridity Bundle インスタンスを管理できなくなる可能性があります。 また、ファイアウォールを使用したり、外部 IBM 管理コンポーネントへの ESG 通信を無効にしたりすると、{{site.data.keyword.vmwaresolutions_short}} が使用不可になります。
     {:important}
-  * アウトバウンドとインバウンドの HTTPS ワークロード・トラフィック用のユーザー管理のセキュアな VMware NSX Edge Services Gateway。これは、VPN アクセスまたはパブリック・アクセスを提供するためにユーザーが変更可能なテンプレートとして IBM がデプロイします。 詳しくは、[ユーザー管理の NSX Edge にはセキュリティーのリスクがありますか?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-customer-managed-nsx-edge-pose-a-security-risk-) を参照してください。
+  * アウトバウンドとインバウンドの HTTPS ワークロード・トラフィック用のユーザー管理のセキュアな VMware NSX Edge Services Gateway。これは、VPN アクセスまたはパブリック・アクセスを提供するためにユーザーが変更可能なテンプレートとして IBM がデプロイします。 詳しくは、[ユーザー管理の NSX Edge にはセキュリティーのリスクがありますか?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#faq-customer-nsx) を参照してください。
 
-HCX on {{site.data.keyword.cloud_notm}} サービスのデプロイ時に注文するネットワーキング・コンポーネントについて詳しくは、[HCX on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview)を参照してください。
+HCX on {{site.data.keyword.cloud_notm}} サービスのデプロイ時に注文するネットワーキング・コンポーネントについて詳しくは、[HCX on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations)を参照してください。
 
 ### 仮想サーバー・インスタンス
 {: #vc_hybrid_overview-vsi}
@@ -116,7 +116,7 @@ vSAN ストレージでは構成をカスタマイズできます。ディスク
 * ストレージ・ディスク: 960 GB SSD SED、1.9 TB SSD SED、3.8 TB SSD SED。
 
   さらに、ホストごとに 960 GB のキャッシュ・ディスクが 2 つ注文されます。
-* High-Performance Intel Optane オプション。合計 10 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されます。 このオプションは CPU モデルに応じて異なります。
+* High-Performance Intel Optane オプション。合計 12 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されます。 このオプションは CPU モデルに応じて異なります。
 
 ### IBM 提供のライセンスおよび料金
 {: #vc_hybrid_overview-license-and-fee}
@@ -138,7 +138,7 @@ vCenter Server with Hybridity Bundle 拡張ノードごとに、{{site.data.keyw
 ### 拡張ノード用のハードウェア
 {: #vc_hybrid_overview-expansion-node-hardware}
 
-[vCenter Server with Hybridity Bundle インスタンスの技術仕様](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances)に示されている構成になっている、1 台のベアメタル・サーバー。
+[vCenter Server with Hybridity Bundle インスタンスの技術仕様](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#vc_hybrid_overview-specs)に示されている構成になっている、1 台のベアメタル・サーバー。
 
 ### 拡張ノード用のライセンスと料金
 {: #vc_hybrid_overview-expansion-node-license-and-fee}
@@ -165,5 +165,5 @@ vCenter Server with Hybridity Bundle 拡張ノードごとに、{{site.data.keyw
 * [vCenter Server ソフトウェアの部品構成表](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
 * [vCenter Server with Hybridity Bundle インスタンスの要件と計画](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)
 * [vCenter Server with Hybridity Bundle インスタンスの注文](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
-* [HCX on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview)
+* [HCX on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations)
 * [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

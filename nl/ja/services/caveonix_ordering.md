@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-12"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---

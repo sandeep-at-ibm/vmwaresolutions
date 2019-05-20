@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2017-10-13"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -78,7 +78,7 @@ VMware Cloud Foundation インスタンスで IBM Integrated Managed Infrastruct
 
 ホストされる VMware 環境の拡張を強化するために、インスタンスで最初のクラスターをデプロイしたものとは別の {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) ポッドまたは {{site.data.keyword.CloudDataCent_notm}}に新規クラスターを作成できるようになりました。
 
-詳しくは、[vCenter Server インスタンスのクラスターの追加と表示](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)を参照してください。
+詳しくは、[vCenter Server インスタンスのクラスターの追加、表示、削除](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)を参照してください。
 
 ### コンポーネントの変更
 {: #relnotes_v19-change-comp}

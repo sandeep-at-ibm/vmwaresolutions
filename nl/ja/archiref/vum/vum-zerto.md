@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,11 +18,11 @@ subcollection: vmwaresolutions
 
 1. Zerto Web ユーザー・インターフェースにログインします。
 2. ドロップダウン・メニューから、**「Site Settings」**を選択します。
-3. **「policies」タブ**を選択して、**「Allow Zerto to always enter hosts to maintenance mode during remediation」**が選択されていることを確認します。
+3. **「Policies」**タブを選択して、**「Allow Zerto to always enter hosts to maintenance mode during remediation」**が選択されていることを確認します。
 4. Zerto からログアウトします。
 
 ## 関連リンク
 {: #vum-zerto-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} ソリューションのアーキテクチャー](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (デモンストレーション)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (デモンストレーション)

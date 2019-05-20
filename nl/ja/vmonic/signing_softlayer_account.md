@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -19,12 +19,12 @@ subcollection: vmwaresolutions
 
 {{site.data.keyword.cloud}} アカウントを登録するには、既存の **IBMid** を使用するか、新しい **IBMid** を作成します。 {{site.data.keyword.cloud_notm}} アカウントを登録する方法について詳しくは、[{{site.data.keyword.cloud_notm}} の登録](/docs/account?topic=account-signup)を参照してください。
 
-## IBM Cloud インフラストラクチャー (SoftLayer) アカウントの登録
+## IBM Cloud インフラストラクチャー・アカウントの登録
 {: #signing_softlayer_account-infra}
 
-{{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウント (以前は IBM SoftLayer アカウントと呼ばれていた) を使用して、インフラストラクチャー製品とサービスを管理するためのいくつかの追加の機能を提供する、{{site.data.keyword.cloud_notm}} インフラストラクチャー・カスタマー・ポータルにログインします。
+{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントを使用して、インフラストラクチャー製品とサービスを管理するためのいくつかの追加の機能を提供する、{{site.data.keyword.cloud_notm}} インフラストラクチャー・カスタマー・ポータルにログインします。
 
-{{site.data.keyword.cloud_notm}} インフラストラクチャー (SoftLayer) アカウントを登録するには、{{site.data.keyword.cloud_notm}} アカウントを従量課金タイプのアカウントにアップグレードします。 詳しくは、[アカウント・タイプをアップグレードまたは変更するには、どのようにすればよいですか?](/docs/account?topic=account-accountfaqs) を参照してください。
+{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントを登録するには、{{site.data.keyword.cloud_notm}} アカウントを従量課金タイプのアカウントにアップグレードします。 詳しくは、[アカウント・タイプをアップグレードまたは変更するには、どのようにすればよいですか?](/docs/account?topic=account-accountfaqs) を参照してください。
 
 ## 関連リンク
 {: #signing_softlayer_account-related}
