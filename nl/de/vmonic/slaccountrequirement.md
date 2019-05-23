@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-26"
+lastupdated: "2019-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,10 +18,7 @@ subcollection: vmwaresolutions
 # Anforderungen für das IBM Cloud-Infrastrukturkonto
 {: #slaccountrequirement}
 
-Um {{site.data.keyword.vmwaresolutions_full}} für die Bestellung von Instanzen verwenden zu können, müssen Sie ein Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) besitzen. Die Kosten der Komponenten, die in Ihren Instanzen bestellt werden, werden diesem {{site.data.keyword.cloud_notm}}-Konto in Rechnung gestellt.
-
-Das Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) wurde früher als IBM SoftLayer-Konto bezeichnet.
-{:note}
+Um {{site.data.keyword.vmwaresolutions_full}} für die Bestellung von Instanzen verwenden zu können, müssen Sie ein Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur besitzen. Die Kosten der Komponenten, die in Ihren Instanzen bestellt werden, werden diesem {{site.data.keyword.cloud_notm}}-Konto in Rechnung gestellt.
 
 ## Berechtigungen für das IBM Cloud-Infrastrukturkonto
 {: #slaccountrequirement-permissions}
@@ -46,6 +43,7 @@ Tabelle 1. Erforderliche Berechtigungen für das {{site.data.keyword.cloud_notm}
 | Tickets bearbeiten | Diese Berechtigung ist erforderlich, um die Service-Tickets zu bearbeiten, die in Ihrem Namen erstellt wurden. |
 | Tickets anzeigen | Diese Berechtigung ist erforderlich, um die Service-Tickets zu überwachen, die sich bei Verzögerungen und Problemen hinsichtlich der {{site.data.keyword.cloud_notm}}-Infrastrukturbereitstellung auf die Komponenten in Ihrer Instanz beziehen. |
 | Hardwaredetails anzeigen | Diese Berechtigung ist erforderlich, um die Hardwaredetails abzurufen, die für die Validierung der Bestellung und die automatisierte Konfiguration benötigt werden. |
+| Warmstart/Steuerung | Diese Berechtigung ist erforderlich, um die Hardware während des Löschvorgangs für die Hardware auszuschalten, wenn Sie eine Instanz löschen. |
 | Lizenzen anzeigen | Diese Berechtigung ist erforderlich, um die Lizenzen abzurufen und zu validieren, die von Ihrer Instanz verwendet werden. |
 | Kennwörter anzeigen | Diese Berechtigung ist erforderlich, um die bestellten VSIs zu verwalten. |
 | Serverüberwachung verwalten | Diese Berechtigung ist nicht erforderlich, um eine Bestellung aufzugeben, sie wird jedoch benötigt, um den Überwachungsstatus der {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}-Instanzen abzurufen und zu validieren, auf denen die VMware ESXi-Server in Ihrer Instanz ausgeführt werden. |
@@ -57,7 +55,7 @@ Ihr {{site.data.keyword.cloud_notm}}-Infrastrukturkonto muss ein VRF-Konto (Virt
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [Übersicht über VRF on IBM Cloud](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-* [Konto für die Verwendung von Serviceendpunkten aktivieren](/docs/services/service-endpoint?topic=services/service-endpoint-cs_cli_install_steps#cs_cli_install_steps)
+* [Konto für die Verwendung von Serviceendpunkten aktivieren](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
 
 ## Ende der Unterstützung für VLAN-Spanning
 {: #slaccountrequirement-vlan-eos}

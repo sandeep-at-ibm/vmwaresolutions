@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -54,7 +54,7 @@ Löschen Sie keinesfalls virtuelle Appliances aus dem vSphere-Bestand. Verwenden
 4. Klicken Sie unten rechts auf das Symbol "Löschen", um die Appliance zu entfernen.
 5. Wenn ein erweitertes Netz keine IP-Adresse mit dem Hybrid-Cloud-Gateway gemeinsam nutzt, müssen Sie es separat entfernen. Erweitern Sie die Details zu "Network Extensions Service" und klicken Sie auf das Symbol "Löschen", um den Layer-2-Konzentrator zu entfernen.
 
-Das Hybrid-Cloud-Gateway und alle virtuellen Hybrid-Services-Appliances, die das Hybrid-Cloud-Gateway nutzen, werden sowohl aus vCenter als auch aus der VCF/VCS-Cloud für Hybrid-Cloud-Services entfernt.
+Das Hybrid-Cloud-Gateway und alle virtuellen Hybrid-Services-Appliances, die das Hybrid-Cloud-Gateway nutzen, werden sowohl aus vCenter als auch aus der VCS-Cloud für Hybrid-Cloud-Services entfernt.
 
 ## HCX-Manager deinstallieren
 {: #hcx-archi-mod-uninstall-unist-hcxm}

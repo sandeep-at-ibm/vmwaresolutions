@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -110,7 +110,7 @@ Beim Entfernen des Hybridity Bundle aus einer Umgebung mit mehreren Standorten w
   * Eine Liste der BYOL-Lizenzschlüssel, die Sie in diesem Verfahren installiert haben. Geben Sie, soweit zutreffend, den Instanz- und Clusternamen mit den Lizenzschlüsseln für das vSphere-Cluster und die vSAN-Cluster an.
   * Eine Liste der Mietlizenzschlüssel, die Sie in diesem Verfahren entfernt haben. Geben Sie, soweit zutreffend, den Instanz- und Clusternamen mit den Lizenzschlüsseln für das vSphere-Cluster und die vSAN-Cluster an.
 
-  Die IBM Support- und Operationsteams greifen auf die vCenter-Managementschicht Ihres Kontos der {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) zu, um zu prüfen, dass die Mietlizenzen entfernt wurden, bevor die Gebühren für die Hybridity Bundle-Mietlizenz storniert werden.
+  Die IBM Support- und Operationsteams greifen auf die vCenter-Managementschicht Ihres Kontos der {{site.data.keyword.cloud_notm}}-Infrastruktur zu, um zu prüfen, dass die Mietlizenzen entfernt wurden, bevor die Gebühren für die Hybridity Bundle-Mietlizenz storniert werden.
   {:note}
 
 ## Zugehörige Links

@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -162,7 +162,7 @@ Tabelle 6. ESXi-Serverdetails eines NetApp ONTAP Select-Clusters
 
 | Element        | Beschreibung       |  
 |:------------|:----------------- |
-| Name | Der Name des ESXi-Servers im Format `<host_prefix><n>.<subdomain_label>.<root_domain>`, wobei Folgendes gilt:<br><br>`host_prefix` ist das Hostnamenspräfix, `n` ist die Folgenummer des Servers, `subdomain_label` ist die Unterdomänenbezeichnung und `root_domain` ist der Rootdomänenname. |
+| Name | Der Name des ESXi-Servers hat das Format `<host_prefix><n>.<subdomain_label>.<root_domain>`. Dabei gilt Folgendes:<br><br>`host_prefix` ist das Hostnamenspräfix, `n` ist die Folgenummer des Servers, `subdomain_label` ist die Unterdomänenbezeichnung und `root_domain` ist der Rootdomänenname. |
 | Version | Die Version des ESXi-Servers. |
 | Berechtigungsnachweise | Der Benutzername und das Kennwort für den Zugriff auf den ESXi-Server. |
 | Private IP | Die private IP-Adresse des ESXi-Servers. |

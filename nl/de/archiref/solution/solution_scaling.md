@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-13"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -36,7 +36,7 @@ In diesem Design besteht die Definition einer Bereitstellung mit mehreren Stando
    * DNS- und AD-Replikationskonfiguration zwischen den AD-VMs der sekundären Standorte und des primären Standorts
    * vCenter-Konfiguration mit erweitertem Verbindungsmodus zum vCenter des primären Standorts
 
-Darüber hinaus kann der NSX Manager an sekundären Standorten als sekundärer NSX Manager für den NSX Manager am primären Standort konfiguriert werden. Dies ist ein manueller Prozess, den Sie ausführen müssen. 
+Darüber hinaus kann der NSX Manager an sekundären Standorten als sekundärer NSX Manager für den NSX Manager am primären Standort konfiguriert werden. Dies ist ein manueller Prozess, den Sie ausführen müssen.
 
 ## Neue Cluster hinzufügen
 {: #solution_scaling-clusters}

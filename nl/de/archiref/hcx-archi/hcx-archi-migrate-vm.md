@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -25,7 +25,7 @@ HCX ermöglicht die bidirektionale Migration: vom lokalen Rechenzentrum in die C
 Für eine Migration mit geringer Ausfallzeit wird die hostbasierte Replikation verwendet, mit der eine virtuelle Live-Maschine von einer vCenter-Instanz in ein virtuelles Rechenzentrum oder in die entgegengesetzte Richtung verschoben wird. Zur Reduktion der Ausfallzeit bleibt die Quellen-VM während der Replikation online und wird nach Abschluss der Replikation auf dem Ziel ESX-Host gebootet.
 
 1. Eine Migrationsanforderung löst die folgenden Aktionen aus:
-  * Die Replikation beginnt mit einer vollständigen Synchronisierungsübertragung in ein virtuelles VCF/VCS HCX-Rechenzentrum. Die Zeit, die für die Replikation benötigt wird, ist abhängig von der Größe der VM und der verfügbaren Bandbreite.
+  * Die Replikation beginnt mit einer vollständigen Synchronisierungsübertragung in ein virtuelles VCS HCX-Rechenzentrum. Die Zeit, die für die Replikation benötigt wird, ist abhängig von der Größe der VM und der verfügbaren Bandbreite.
   * Der Bandbreitennutzung bei der Replikation ist davon abhängig, inwiefern die Workload Blöcke auf der Platte ändert.
 2. Wenn die vollständige Synchronisation abgeschlossen ist, findet eine Deltasynchronisation statt.
 3. Nachdem die Deltasynchronisation abgeschlossen ist, löst HCX eine Umschaltung aus. Die Umschaltung kann sofort gestartet oder auf einen bestimmten Zeitpunkt festgelegt werden.
@@ -37,7 +37,7 @@ Für eine Migration mit geringer Ausfallzeit wird die hostbasierte Replikation v
 ## vMotion ohne Ausfallzeit
 {: #hcx-archi-migrate-vm-no-downtime-vm}
 
-Mit vMotion wird eine virtuelle Live-Maschine von einer vSphere vCenter-Instanz in eine VCF/VCS-Cloud übertragen. Für diese vMotion ist ein erweitertes Netz erforderlich. Bei der vMotion-Übertragung werden der aktive Arbeitsspeicher, der Ausführungsstatus, die IP-Adresse und die MAC-Adresse der virtuellen Maschine erfasst.
+Mit vMotion wird eine virtuelle Live-Maschine von einer vSphere vCenter-Instanz in eine VCS-Cloud übertragen. Für diese vMotion ist ein erweitertes Netz erforderlich. Bei der vMotion-Übertragung werden der aktive Arbeitsspeicher, der Ausführungsstatus, die IP-Adresse und die MAC-Adresse der virtuellen Maschine erfasst.
 
 Die Hardwareversion der virtuellen Maschine muss mindestens Version 9 sein. Andernfalls kann die cloudumfassende vMotion fehlschlagen.
 {:note}
@@ -53,8 +53,8 @@ Cold Migration verwendet die gleiche Datenebene wie cloudumfassende vMotion, um 
 Bei Verwendung von vSphere Web Client kann der Assistent für bidirektionale Migration über die Registerkarte "Erste Schritte mit Hybrid-Cloud-Services" aufgerufen werden. In diesem Assistenten können sämtliche Migrationsdetails eingegeben werden, einschließlich der Angabe mehrerer virtueller Maschinen.
 
 In vSphere Web Client kann der Assistent für bidirektionale Migration über die Registerkarte "Erste Schritte mit Hybrid-Cloud-Services" aufgerufen werden. In diesem Assistenten können sämtliche Migrationsdetails eingegeben werden, einschließlich der Angabe mehrerer virtueller Maschinen.
-* Von vSphere auf VCF/VCS Hybrid-Cloud-Services
-* Von VCF/VCS HCX Cloud auf vSphere
+* Von vSphere auf VCS Hybrid-Cloud-Services
+* Von VCS HCX Cloud auf vSphere
 
 ### Überprüfung der VMs vor der Migration
 {: #hcx-archi-migrate-vm-check-vms}

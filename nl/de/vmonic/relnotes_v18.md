@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2017-08-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -60,7 +60,7 @@ Neben den vordefinierten und getesteten Optionen "S (Klein)", "M (Mittel)" und "
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [vCenter Server-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [Cluster für vCenter Server-Instanzen hinzufügen und anzeigen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [Cluster für vCenter Server-Instanzen hinzufügen, anzeigen und löschen](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 
 ### Unterstützung für das Hinzufügen von mehr als sieben gemeinsam genutzten NFS-Dateiressourcen
 {: #relnotes_v18-nfs}
@@ -69,7 +69,7 @@ Weitere Informationen finden Sie in den folgenden Abschnitten:
 
  Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [vCenter Server-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [Cluster für vCenter Server-Instanzen hinzufügen und anzeigen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [Cluster für vCenter Server-Instanzen hinzufügen, anzeigen und löschen](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 
 ### Updates für Rechenzentren
 {: #relnotes_v18-dc}

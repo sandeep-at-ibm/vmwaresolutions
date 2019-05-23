@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -20,7 +20,7 @@ subcollection: vmwaresolutions
 {: #iamuserinvite-reqs}
 
 * Stellen Sie sicher, dass Sie der Kontoeigner sind oder dass Sie die Plattformmanagementrolle **Administrator** für den Service **VMware Solutions** besitzen.
-* Stellen Sie sicher, dass Sie die Benutzerrollen und Berechtigungen geprüft haben, die unter [Benutzerzugriff mit Identity and Access Management verwalten](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-access-with-iam) aufgeführt sind.
+* Stellen Sie sicher, dass Sie die Benutzerrollen und Berechtigungen geprüft haben, die unter [Benutzerzugriff mit Identity and Access Management verwalten](/docs/services/vmwaresolutions?topic=vmware-solutions-iam#iam) aufgeführt sind.
 
 ## Vorgehensweise zum Einladen von Benutzern für den Zugriff auf Services und Ressourcen
 {: #iamuserinvite-procedure}

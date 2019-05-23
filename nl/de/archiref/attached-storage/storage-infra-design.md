@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-04-03"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -43,7 +43,7 @@ Der physische Netzbetrieb wird von {{site.data.keyword.cloud_notm}} gesteuert. I
 
 Das physische Netz von {{site.data.keyword.cloud_notm}} ist in drei verschiedene Netze unterteilt: öffentliches Netz, privates Netz und Managementnetz. Weitere Informationen über das öffentliche, das private und das Managementnetz finden Sie in der [Lösungsübersicht](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview).
 
-Weitere Informationen zum {{site.data.keyword.cloud_notm}}-Netz finden Sie im [{{site.data.keyword.cloud_notm}}-Netz](https://www.ibm.com/cloud-computing/bluemix/our-network){:new_window}.
+Weitere Informationen zum {{site.data.keyword.cloud_notm}}-Netz finden Sie im Abschnitt [Globale {{site.data.keyword.cloud_notm}}-Rechenzentren](https://www.ibm.com/cloud/data-centers/){:new_window}.
 
 Lesen Sie die folgenden Informationen, um eine Beschreibung des Servicenetzes zu erhalten, das Teil des privaten Netzes ist.
 

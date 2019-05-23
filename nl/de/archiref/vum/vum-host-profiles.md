@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -63,7 +63,7 @@ Zur Prüfung der Konformität sind die folgenden Schritte in der angegebenen Rei
 {: #vum-host-profiles-review-compliance}
 
 1. Wenn Sie weitere Details zu Konformitätsfehlern anzeigen möchten, wählen Sie das **Hostprofil** auf der Registerkarte **Objekte** aus, das in der Konformitätsprüfung verwendet wird.
-2. Klicken Sie auf die Registerkarte **Überwachen** und wählen Sie die **Konformitätsansicht** aus, um bestimmte Details dazu anzuzeigen, welche Parameter sich zwischen dem nicht konformen Host und dem Hostprofil unterscheiden.
+2. Klicken Sie auf die Registerkarte **Überwachen** und wählen Sie die Ansicht **Konformität** aus, um bestimmte Details dazu anzuzeigen, welche Parameter sich zwischen dem nicht konformen Host und dem Hostprofil unterscheiden.
 3. Erweitern Sie die Objekthierarchie und wählen Sie den fehlerhaften Host aus.
 4. Die sich unterscheidenden Parameter werden im Konformitätsfenster unterhalb der Hierarchie angezeigt.
 5. Überprüfen Sie die Parameter und finden Sie heraus, warum sich der neue Host vom Referenzhost unterscheidet. Für Parameter, bei denen die Übereinstimmung nicht akzeptabel ist, müssen Sie den Fehler korrigieren, bevor der neue Host aus dem Wartungsmodus versetzt wird. Beispiel: Wenn die Konfigurationsabweichung durch die Systemadministratoraktion verursacht wird.
@@ -72,4 +72,4 @@ Zur Prüfung der Konformität sind die folgenden Schritte in der angegebenen Rei
 {: #vum-host-profiles-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demonstrationen)
+* [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (Demonstrationen)

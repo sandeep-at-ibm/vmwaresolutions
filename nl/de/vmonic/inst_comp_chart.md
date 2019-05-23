@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-12"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -28,7 +28,7 @@ Tabelle 1. Unterstützte Funktionen für vCenter Server, vCenter Server with Hyb
 | ESXi-Server hinzufügen | Unterstützt | Unterstützt | Unterstützt; automatisierte Konfiguration nicht enthalten |
 | ESXi-Server entfernen | Unterstützt | Unterstützt | Unterstützt; automatisierte Konfiguration nicht enthalten |
 | Unterstützung mehrerer Cluster | Maximale Anzahl von Richtlinien zur VMware-Dimensionierung abhängig | Maximale Anzahl von Richtlinien zur VMware-Dimensionierung abhängig | Unterstützt; automatisierte Konfiguration nicht enthalten |
-| Vom Kunden verwaltete Updates und Patches für VMware-Stack | Vom Kunden verwaltete Aktualisierungen:<br/>Native VMware-Tools (VMware Update Manager) | Vom Kunden verwaltete Aktualisierungen:<br/>Native VMware-Tools (VMware Update Manager) | Vom Kunden verwaltete Aktualisierungen:<br/>Native VMware-Tools (VMware Update Manager) |
+| Vom Kunden verwaltete Updates und Patches für VMware-Stack | Vom Client verwaltete Aktualisierungen:<br/>Native VMware-Tools (VMware Update Manager) | Vom Client verwaltete Aktualisierungen:<br/>Native VMware-Tools (VMware Update Manager) | Vom Client verwaltete Aktualisierungen:<br/>Native VMware-Tools (VMware Update Manager) |
 | Sicherung und Wiederherstellung | Manuell mit IBM Spectrum Protect Plus oder Veeam | Manuell mit IBM Spectrum Protect Plus oder Veeam | Sicherungs- und Wiederherstellungslösung nicht enthalten |
 | Software-Defined Networking | NSX Base, Advanced oder Enterprise | NSX Advanced oder Enterprise | NSX Standard, Base oder Enterprise; automatisierte Konfiguration nicht enthalten |
 | BYOL für vSphere und vSAN | Vollständig unterstützt pro Cluster | Nicht unterstützt | Unterstützt |

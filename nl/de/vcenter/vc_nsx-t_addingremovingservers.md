@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-18"
+lastupdated: "2019-04-22"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -20,17 +20,12 @@ subcollection: vmwaresolutions
 
 Sie können die Kapazität Ihrer VMware vCenter Server with NSX-T-Instanz entsprechend Ihren Geschäftsanforderungen erweitern oder verringern, indem Sie ESXi-Server oder NFS-Speicher (Network File System) hinzufügen oder entfernen.
 
-Sie können einem Cluster neue ESXi-Server hinzufügen, während sich der Cluster im Wartungsmodus befindet. Darüber hinaus können Sie ESXi-Server über mehrere Cluster hinweg gleichzeitig hinzufügen oder entfernen. Die folgenden gleichzeitigen Operationen sind verfügbar:
+* Ab dem Release V3.0 können Sie gleichzeitig NFS-Speicher über mehrere Cluster hinweg hinzufügen oder entfernen.
+* Ab dem Release V2.9 können Sie einem Cluster neue ESXi-Server hinzufügen, während sich die Server im Wartungsmodus befinden. Darüber hinaus können Sie ESXi-Server über mehrere Cluster hinweg gleichzeitig hinzufügen oder entfernen.
 
-* Hosts zu einem Cluster hinzufügen und Hosts zu weiteren Clustern hinzufügen.
-* Hosts aus einem Cluster entfernen und Hosts aus weiteren Clustern entfernen.
-* Hosts zu einem Cluster hinzufügen und Hosts aus weiteren Clustern entfernen.
-* Hosts aus einem Cluster entfernen und Hosts zu weiteren Clustern hinzufügen. https://github.ibm.com/tornado/tracker/issues/14183
-
-Sie können NFS-Speicherfreigaben in einem vorhandenen NFS- oder vSAN-Cluster für vCenter Server with NSX-T hinzufügen oder entfernen.
-{:note}
-
-Wenn Ihr erster Cluster vSAN als Speicher verwendet, kann das Hinzufügen von einem oder mehreren ESXi-Servern nach der Bereitstellung die Speicherkapazität des Clusters erhöhen.
+**Hinweise**:
+* Wenn Ihr erster Cluster vSAN als Speicher verwendet, kann das Hinzufügen von einem oder mehreren ESXi-Servern nach der Bereitstellung die Speicherkapazität des Clusters erhöhen.
+* Sie können NFS-Speicherfreigaben in einem vorhandenen NFS- oder vSAN-Cluster für vCenter Server with NSX-T hinzufügen oder aus diesem entfernen.
 
 ## ESXi-Server zu vCenter Server with NSX-T-Instanzen hinzufügen
 {: #vc_nsx-t_addingremovingservers-adding}
@@ -38,7 +33,7 @@ Wenn Ihr erster Cluster vSAN als Speicher verwendet, kann das Hinzufügen von ei
 ### Vor dem Hinzufügen von ESXi-Servern
 {: #vc_nsx-t_addingremovingservers-adding-prereq}
 
-* Fügen Sie keine ESXi-Server über VMware vSphere Web Client hinzu. Die Änderungen, die Sie in vSphere Web Client vornehmen, werden nicht mit der {{site.data.keyword.vmwaresolutions_full}}-Konsole synchronisiert.
+* Fügen Sie ESXi-Server nach Möglichkeit über die {{site.data.keyword.vmwaresolutions_full}}-Konsole hinzu, da Änderungen, die Sie am VMware vSphere Web Client vornehmen, nicht mit der {{site.data.keyword.vmwaresolutions_short}}-Konsole synchronisiert werden. Fügen Sie daher ESXi-Server nur für On-Premise-ESXi-Server oder ESXi-Server hinzu, die Sie nicht in der {{site.data.keyword.vmwaresolutions_short}}-Konsole verwalten können/möchten.
 * Eine vCenter Server with NSX-T-Instanz mit NFS-Speicher benötigt mindestens 3 ESXi-Server. Sie können den Standardcluster auf bis zu 51 ESXi-Server erweitern. Jeder Cluster, bei dem es sich nicht um den Standardcluster handelt, kann auf bis zu 59 ESXi-Server erweitert werden.
 * Eine vCenter Server with NSX-T-Instanz mit vSAN-Speicher benötigt mindestens 4 ESXi-Server.
 
@@ -70,7 +65,7 @@ Wenn Sie ESXi-Server während des Wartungsmodus hinzufügen, werden virtuelle Ma
 ### Vor dem Entfernen von ESXi-Servern
 {: #vc_nsx-t_addingremovingservers-removing-prereq}
 
-* Entfernen Sie keine ESXi-Server über VMware vSphere Web Client. Die Änderungen, die Sie in vSphere Web Client vornehmen, werden nicht mit der {{site.data.keyword.vmwaresolutions_short}}-Konsole synchronisiert.
+* Entfernen Sie ESXi-Server nach Möglichkeit über die {{site.data.keyword.vmwaresolutions_full}}-Konsole, da die Änderungen, die Sie im vSphere Web Client vornehmen, nicht mit der {{site.data.keyword.vmwaresolutions_short}}-Konsole synchronisiert werden. Entfernen Sie daher ESXi-Server nur von On-Premise-ESXi-Servern oder ESXi-Servern, die Sie nicht in der {{site.data.keyword.vmwaresolutions_short}}-Konsole verwalten können/möchten.
 * Eine vCenter Server with NSX-T-Instanz mit NFS-Speicher benötigt mindestens 3 ESXi-Server und eine vCenter Server with NSX-T-Instanz mit vSAN-Speicher benötigt mindestens 4 ESXi-Server.
 * Wenn Sie ESXi-Server entfernen, werden die Server in den Wartungsmodus versetzt. Anschließend werden alle auf den Servern ausgeführten VMs migriert, bevor sie aus vCenter Server entfernt werden. Damit die Verlagerung von VMs maximal gesteuert werden kann, empfiehlt es sich, die zu entfernenden ESXi-Server in den Wartungsmodus zu versetzen und die auf ihnen ausgeführten VMs manuell mithilfe von VMware vSphere Web Client zu migrieren. Anschließend entfernen Sie die ESXi-Server mithilfe der {{site.data.keyword.vmwaresolutions_short}}-Konsole.
 
@@ -158,6 +153,6 @@ Fügen Sie NFS-Speicher nicht über VMware vSphere Web Client hinzu. Die Änderu
 * [vCenter Server-Teileliste](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
 * [Voraussetzungen und Planung für vCenter Server-Instanzen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [vCenter Server with NSX-T-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_orderinginstance)
-* [Cluster für vCenter Server with NSX-T-Instanzen hinzufügen, anzeigen und löschen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_deletinginstance)
-* [Versetzen eines Hosts in den Wartungsmodus](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
-* [Prozessorunterstützung für EVC (Enhanced vMotion Compatibility)](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003212){:new_window}
+* [Cluster für vCenter Server with NSX-T-Instanzen hinzufügen, anzeigen und löschen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_nsx-t_addingviewingcluster#vc_nsx-t_addingviewingcluster)
+* [Versetzen eines Hosts in den Wartungsmodus](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.resmgmt.doc/GUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
+* [Prozessorunterstützung für EVC (Enhanced vMotion Compatibility)](https://kb.vmware.com/s/article/1003212){:new_window}

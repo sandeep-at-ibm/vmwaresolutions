@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-05-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -47,7 +47,7 @@ Weitere Informationen zu vCenter Server with Hybridity Bundle finden Sie in den 
 
 Sie können Cluster nun aus einer Instanz löschen, ohne dass hierzu die gesamte Instanz gelöscht werden muss. Für Cluster, die in Instanzen mit V2.2 oder älteren Releases bereitgestellt wurden, müssen Sie ein Upgrade der Instanz auf V2.3 durchführen, um die Cluster löschen zu können, die Sie zu der Instanz hinzugefügt haben.
 
-Weitere Informationen finden Sie unter [Cluster für vCenter Server-Instanzen hinzufügen, anzeigen und löschen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances#deleting-clusters-from-vcenter-server-instances).
+Weitere Informationen finden Sie unter [Cluster für vCenter Server-Instanzen hinzufügen, anzeigen und löschen](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters).
 
 ## Updates für VMware vCenter Server-Instanzen
 {: #relnotes_v23-vcs}
@@ -63,7 +63,7 @@ Ab Release V2.3 stehen die folgenden neuen CPU-Modelle für die Bereitstellung z
 Weitere Informationen finden Sie in den folgenden Abschnitten:
 
 * [vCenter Server-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [Cluster für vCenter Server-Instanzen hinzufügen, anzeigen und löschen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [Cluster für vCenter Server-Instanzen hinzufügen, anzeigen und löschen](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 
 ## Updates für VMware Cloud Foundation-Instanzen
 {: #relnotes_v23-vcf}

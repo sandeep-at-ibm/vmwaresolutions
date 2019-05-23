@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -75,7 +75,7 @@ VMware vCenter Server-Umgebungen, die als {{site.data.keyword.vmwaresolutions_sh
 * Aufgrund des Grades an Spezialisierung, der erforderlich ist, um das technische Know-how auf Teamebene aufrecht zu erhalten, ist es in manchen Fällen nötig, dass mehr als ein Support-Team an der Lösung eines bestimmten Softwareproblems beteiligt ist. Dies ist ohne großen Aufwand durchsetzbar, da unsere Support-Teams gut miteinander vernetzt sind und Hand in Hand an aufgetretenen Probleme arbeiten.
 * Um das Problem zu untersuchen, muss IBM möglicherweise auf Informationen zu Ihrem System in Bezug auf den Fehler zugreifen oder den Fehler erneut generieren, um zusätzliche Informationen zu erhalten.
 * Ein vom Kunden geöffnetes Support-Ticket dient als Bestätigung seitens des Kunden, dass IBM Support für das Durchführen von Untersuchungen, Debugging und Triage auf die VMware-Managementschicht zugreifen kann. Wenn Wartungsunterbrechungen oder Änderungen an der Umgebung erforderlich sind, fordert IBM Support zusätzliche dokumentierte Bestätigungen vom Kunden über Tickets als Teil unseres Änderungsmanagementprozesses an.
-* Weitere Informationen zu Support-Tickets finden Sie im [Software Support Handbook](https://www-304.ibm.com/support/customercare/sas/f/handbook/getsupport.html) und unter [Kontaktaufnahmen mit IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
+* Weitere Informationen zu Support-Tickets finden Sie im [IBM Support Guide](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923) und unter [Kontaktaufnahmen mit IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
 
 ## Verantwortlichkeiten des Kunden
 {: #vc_hybrid_compl_info-client-responsibilities}
@@ -86,7 +86,7 @@ VMware vCenter Server-Umgebungen, die als {{site.data.keyword.vmwaresolutions_sh
 * Bei der ersten Bereitstellung laufen die Automatisierung des Angebots und das Konto des Kunden getrennt voneinander. Kunden sind berechtigt und werden dazu ermutigt, alle von IBM bereitgestellten Kennwörter im Portal zu ändern.
 * Der vCenter-Zugriff und die Berechtigungsnachweise werden während den ersten Implementierungen erstellt und dem Kunden bereitgestellt. Im Rahmen der Anforderung unseres Angebots muss IBM Support uneingeschränkten Zugriff auf die Managementschicht erhalten, um Lebenszyklusmanagement sowie Unterstützung für unsere Kunden bereitzustellen.
 * Wenn Berechtigungsnachweise, wie Kennwörter, zu einem beliebigen Zeitpunkt geändert werden, kann IBM Support möglicherweise Kunden nicht mehr bei der Wiederherstellung verloren gegangener oder vergessener Berechtigungsnachweise oder sogar bei der Fehlerbehebung von Kundenumgebungen helfen.
-* Weitere Informationen zur Bedeutung dieses Problems und zu den zugehörigen Bedenken finden Sie im Abschnitt [Hinweise zum Ändern von Kennwörtern für NSX-Komponenten](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_networkingonvcenterserver#considerations-when-changing-passwords-for-nsx-components) und [Hinweise zum Ändern der vCenter Server-Artefakte](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter_chg_impact).
+* Weitere Informationen zur Bedeutung dieses Problems und zu den zugehörigen Bedenken finden Sie im Abschnitt [Hinweise zum Ändern von Kennwörtern für NSX-Komponenten](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_networkingonvcenterserver#vc_networkingonvcenterserver-change-nsx-component-password-considerations) und [Hinweise zum Ändern der vCenter Server-Artefakte](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter_chg_impact).
 
 ### Kommunikation und Fehlerbehebung
 {: #vc_hybrid_compl_info-communication-troubleshooting}
@@ -114,7 +114,7 @@ VMware vCenter Server-Umgebungen, die als {{site.data.keyword.vmwaresolutions_sh
 * Diese Programme, die keine IBM Programme sind, werden direkt von den jeweiligen Anbietern lizenziert. Der Kunde verpflichtet sich, die Programme, die keine IBM Programme sind, gemäß den Bedingungen des Anbieters zu verwenden. Diese sind in der IBM Lizenzvereinbarung enthalten, die Bestandteil des IBM Angebots zum Zeitpunkt des Erwerbs ist.
 * IBM testet, ob die Produkte anderer Anbieter mit IBM Programmen verwendet werden können und ordnungsgemäß funktionieren.
 * IBM Software Support diagnostiziert Kundenprobleme anhand der Kenntnisse zur Funktionsweise Ihrer IBM Angebote mit Software anderer Anbieter. Sobald festgestellt wurde, dass das IBM Programm ordnungsgemäß funktioniert, das Problem jedoch weiterhin existiert, muss IBM den Kunden zur weiteren Diagnose an den Drittanbieter verweisen.
-* Weitere Informationen zur Verantwortlichkeiten des Kunden bezüglich der Software oder des Codes anderer Anbieter finden Sie im [Software Support Handbook](https://www-304.ibm.com/support/customercare/sas/f/handbook/policies.html).
+* Weitere Informationen zur Verantwortlichkeiten des Kunden bezüglich der Software oder des Codes anderer Anbieter finden Sie im [IBM Support Guide](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923).
 
 ## Zustimmung für den Zugriff auf Kundenumgebungen
 {: #vc_hybrid_compl_info-consent-to-access-client-environment}

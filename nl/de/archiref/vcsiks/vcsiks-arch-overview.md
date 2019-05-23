@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -32,12 +32,11 @@ Das folgende Diagramm zeigt {{site.data.keyword.icpfull_notm}} und CAM mit Berei
 Abbildung 1. Cloud-Management aus Sicht der Cloud
 ![Cloud-Management aus Cloud-Sicht](vcsiks-oncloud-cloudmgt.svg)
 
-Im Diagramm erstellt CAM logische Cloudverbindungen zu den vCenter-Instanzen, Cloud-Providern sowie den {{site.data.keyword.icpfull_notm}}- und {{site.data.keyword.containerlong_notm}}-Umgebungen. {{site.data.keyword.icpfull_notm}}-Cluster müssen in jedem Rechenzentrum oder jeder Cloudumgebung bereitgestellt werden. MCM stellt den Mechanismus zur Verfügung, mit dem die ICP-Cluster in einer Managementansicht verbunden werden können.
+Im Diagramm erstellt CAM logische Cloudverbindungen zu den vCenter-Instanzen, Cloud-Providern sowie den {{site.data.keyword.icpfull_notm}}- und {{site.data.keyword.containerlong_notm}}-Umgebungen. {{site.data.keyword.icpfull_notm}}-Cluster müssen in jedem Rechenzentrum oder jeder Cloudumgebung bereitgestellt werden. MCM stellt den Mechanismus zur Verfügung, mit dem die {{site.data.keyword.icpfull_notm}}-Cluster in einer Managementansicht verbunden werden können.
 
 {{site.data.keyword.icpfull_notm}} kann mit NSX-V- oder NSX-T-Komponenten bereitgestellt werden. Bei {{site.data.keyword.icpfull_notm}} mit NSX-V können die {{site.data.keyword.icpfull_notm}}-VMs im VXLAN-Netz ausgeführt werden und das interne Netz von Kubernetes Calico nutzen.
 
-Bei {{site.data.keyword.icpfull_notm}} mit NSX-T können die Benutzer den Netzbetrieb, Teilnetze und Richtlinien von der zentralen Benutzerschnittstelle (NSX-T Manager) steuern und konfigurieren. Informationen zu den Unterschieden zwischen NSX-V und NSX-T enthält der Abschnitt [Referenzarchitektur für den Netzbetrieb mit {{site.data.keyword.cloud_notm}} VCS](/docs/services/vmwaresolutions/archiref/
-vcsnsxt/vcsnsxt-intro.html).
+Bei {{site.data.keyword.icpfull_notm}} mit NSX-T können die Benutzer den Netzbetrieb, Teilnetze und Richtlinien von der zentralen Benutzerschnittstelle (NSX-T Manager) steuern und konfigurieren. Informationen zu den Unterschieden zwischen NSX-V und NSX-T finden Sie unter [Referenzarchitektur für den Netzbetrieb mit {{site.data.keyword.cloud_notm}} VCS](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsnsxt-intro#vcsnsxt-intro).
 
 ## Lokale Cloud-Management-Plattform
 {: #vcsiks-arch-overview-on-premises}
@@ -54,4 +53,4 @@ Im Diagramm erstellt CAM logische Cloudverbindungen zu den vCenter-Instanzen, Cl
 ## Zugehörige Links
 {: #vcsiks-arch-overview-related}
 
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-hybridity-intro#vcs-hybridity-intro)

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -70,7 +70,7 @@ Wenn der Veeam-Service auf einer Instanz mit nur privatem Netz installiert ist, 
 ## Virtuelle Serverinstanz für Veeam in Instanzen vor V1.8 durch Veeam on IBM Cloud ersetzen
 {: #managingveeam-replace-vsi}
 
-Der Service "Veeam on {{site.data.keyword.cloud_notm}}" der sowohl Managementkomponenten als auch Workloads sichern kann, ersetzt die vorherige virtuelle Serverinstanz für Veeam, die in früheren Releases als V1.8 von VMware Cloud Foundation und VMware vCenter Server zur reinen Sicherung von Managementkomponenten integriert war.
+Der Service "Veeam on {{site.data.keyword.cloud_notm}}", der sowohl Managementkomponenten als auch Workloads sichern kann, ersetzt die vorherige virtuelle Serverinstanz für Veeam, die in früheren Releases als V1.8 von VMware vCenter Server zur reinen Sicherung von Managementkomponenten integriert war.
 
 Aufgrund dieser Änderung wurde die vorherige Registerkarte **Sicherung und Wiederherstellung** auf der Seite mit den Instanzdetails entfernt und die Sicherungspunkte für die Instanzen sind in der {{site.data.keyword.vmwaresolutions_short}}-Konsole nicht mehr verfügbar, auch wenn die virtuelle Serverinstanz für Veeam in den Instanzen vor V1.8 funktioniert.
 

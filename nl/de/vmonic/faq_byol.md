@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -25,7 +25,7 @@ Hier finden Sie Antworten auf häufig gestellte Fragen zur Lizenzierung, einschl
 {: #faq_byol-def}
 {: faq}
 
-BYOL steht für "Bring Your Own License", also die mögliche Verwendung Ihrer eigenen Lizenzen, und ist als Funktion für Vmware Cloud Foundation-Instanzen in Version 1.8 und höheren Releases sowie VMware vCenter Server- und VMware vSphere-Cluster in Version 2.0 und höheren Releases verfügbar. Mit BYOL können Sie Ihre eigenen VMware-Lizenzen für folgende VMware-Softwarekomponenten verwenden:
+Bring Your Own License (BYOL) ist eine Funktion, die für VMware vCenter Server-Instanzen und VMware vSphere-Cluster in Version 2.0 und höher verfügbar ist. Mit BYOL können Sie Ihre eigenen VMware-Lizenzen für folgende VMware-Softwarekomponenten verwenden:
 * VMware vCenter Server
 * VMware vSphere
 * VMware NSX
@@ -62,18 +62,6 @@ Tabelle 1. Lizenzeditionen und CPU-Mindestvoraussetzungen für vCenter Server-In
   | vSAN           | Advanced oder Enterprise | 8 CPUs |
   | NSX            | Standard, Advanced oder Enterprise | 8 CPUs |
 
-### BYOL-Anforderungen für Cloud Foundation-Instanzen
-{: #faq_byol-cf-reqs}
-
-Tabelle 2. Lizenzeditionen und CPU-Mindestvoraussetzungen für Cloud Foundation-Instanzen
-
-  | VMware-Komponente | Erforderliche Lizenzedition | Erforderliches CPU-Minimum
-  |:-------------  |:-------------  |:-------|
-  | vCenter Server | Standard | Nicht zutreffend |
-  | vSphere        | Enterprise Plus | 8 CPUs |
-  | vSAN           | Advanced oder Enterprise | 8 CPUs |
-  | NSX            | Enterprise | 8 CPUs |
-
 ## Was passiert, wenn der von mir angegebene Lizenzschlüssel nicht korrekt ist?
 {: #faq_byol-incorrect-license}
 {: faq}
@@ -84,13 +72,7 @@ Alle von Ihnen angegebenen Lizenzschlüssel werden validiert. Hierdurch wird sic
 {: #faq_byol-license-key}
 {: faq}
 
-Ja. Für jede VMware-Komponente ist eine Lizenz pro CPU erforderlich. Gegenwärtig sind alle Server für vCenter Server- und Cloud Foundation mit zwei CPUs ausgestattet. Somit sind für jeden Server zwei Lizenzen erforderlich. Es wird empfohlen, einen Lizenzschlüssel bereitzustellen, der die Basisinstanz und alle Erweiterungsknoten unterstützt, die Sie der Instanz später hinzufügen wollen.
-
-## Kann ich bei Verwendung der BYOL-Funktion die Lizenz für SDDC Manager angeben?
-{: #faq_byol-sddc}
-{: faq}
-
-Nein. Unsere Vereinbarung mit VMware erfordert, dass wir den tatsächlichen Lizenzschlüssel eines Kunden akzeptieren müssen. Die Cloud Foundation-Bereitstellung beinhaltet zwar Lizenzen für SDDC Manager, es werden jedoch keine Lizenzschlüsseldateien für SDDC Manager akzeptiert und für BYOL validiert. Aus diesem Grund werden die Lizenzen für SDDC Manager von IBM für alle Instanzen in Rechnung gestellt. Lizenzen für SDDC Manager tragen einen geringen Anteil zu den Gesamtlizenzgebühren für eine Cloud Foundation-Instanz bei.
+Ja. Für jede VMware-Komponente ist eine Lizenz pro CPU erforderlich. Gegenwärtig sind alle Server für vCenter Server mit zwei CPUs ausgestattet. Somit sind für jeden Server zwei Lizenzen erforderlich. Es wird empfohlen, einen Lizenzschlüssel bereitzustellen, der die Basisinstanz und alle Erweiterungsknoten unterstützt, die Sie der Instanz später hinzufügen wollen.
 
 ## Kann ich die BYOL-Funktion für einige VMware-Komponenten verwenden und für andere Komponenten monatliche Lizenzen erwerben?
 {: #faq_byol-mthly-license}

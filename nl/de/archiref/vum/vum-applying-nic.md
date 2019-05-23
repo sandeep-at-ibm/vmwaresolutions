@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,7 +18,7 @@ ESXi 6.5 enthält viele neue native Treiber, die die älteren vmklinux-Treiber e
 
 "ixgben" ist ein nativer Treiber, der den Treiber "vmklinux net-ixgbe" ersetzt, aber keine Unterstützung für SR-IOV und SW FcOE bietet. Die ICVS-Automation aktiviert diesen Treiber nicht, wenn der vSphere ESXi-Host bereitgestellt wurde. Es wird empfohlen, diesen Treiber zu aktivieren, da er verbesserte Leistung ermöglicht. Die im Folgenden beschriebene Prozedur zeigt, wie Sie die nativen Treiber mithilfe der vSphere-Befehlszeile (vCLI) aktivieren und inaktivieren können.
 
-Bevor Sie diese Task starten, rufen Sie alle physischen IPMI-IP-Hostadressen, Anmelde-IDs und Kennwörter aus dem [{{site.data.keyword.cloud}}-Infrastrukturportal](https://control.softlayer.com/devices) ab. Dies ist bei einem Backout erforderlich oder zum Überprüfen des Fortschritts eines Upgrades, bei dem kein direkter Netzzugriff auf den Host möglich ist.
+Bevor Sie diese Task starten, rufen Sie alle physischen IPMI-IP-Adressen, Anmelde-IDs und Kennwörter aus dem [{{site.data.keyword.cloud}}-Infrastrukturkundenportal](https://control.softlayer.com/devices) ab. Dies ist bei einem Backout erforderlich oder zum Überprüfen des Fortschritts eines Upgrades, bei dem kein direkter Netzzugriff auf den Host möglich ist.
 
 Führen Sie die folgenden Schritte für jeden Host in der angegebenen Reihenfolge aus:
 1. Verwenden Sie den vSphere Web Client, um den vSphere ESXi-Host in den Wartungsmodus zu versetzen, indem Sie **Home** > **Hosts und Cluster** auswählen. Wählen Sie im Navigatorfenster den vSphere ESXi-Host aus, klicken Sie mit der rechten Maustaste auf den Host und wählen Sie **Wartungsmodus** > **In Wartungsmodus wechseln** aus. Da der Host Teil eines automatisierten DRS-Clusters ist, werden virtuelle Maschinen auf verschiedene Hosts migriert, wenn der Host in den Wartungsmodus wechselt.
@@ -38,7 +38,7 @@ Führen Sie die folgenden Schritte für jeden Host in der angegebenen Reihenfolg
 
 Wenn Sie den Vorgang rückgängig machen müssen und Sie nicht über SSH auf den vSphere ESXi-Host zugreifen können, müssen Sie sich bei der KVM-Konsole für den Host anmelden, der über das {{site.data.keyword.cloud_notm}}-Steuerfenster zurückgesetzt werden muss.
 
-Verwenden Sie die ID und das Kennwort, die im {{site.data.keyword.cloud_notm}}-Steuerfenster mit der IPMI-IP-Adresse aufgelistet sind, um sich an der IPMI-Webschnittstelle anzumelden. Sie müssen mit dem Rechenzentrum, in dem sich der Host befindet, über VPN verbunden sein. Weitere Informationen finden Sie unter [Einführung in die Arbeit mit VPN](/docs/infrastructure/iaas-vpn?topic=VPN-getting-started-with-virtual-private-networking-vpn-).
+Verwenden Sie die ID und das Kennwort, die im {{site.data.keyword.cloud_notm}}-Steuerfenster mit der IPMI-IP-Adresse aufgelistet sind, um sich an der IPMI-Webschnittstelle anzumelden. Sie müssen mit dem Rechenzentrum, in dem sich der Host befindet, über VPN verbunden sein. Weitere Informationen finden Sie unter [Einführung in die Arbeit mit VPN](/docs/infrastructure/iaas-vpn?topic=VPN-gettingstarted-with-virtual-private-networking#gettingstarted-with-virtual-private-networking).
 
 1. Wechseln Sie zur Seite "Gerätedetails, Fernverwaltung" für den vSphere ESXi-Host und wählen Sie **Aktionen** > **KVM-Konsole** aus. Ein anderes Fenster wird geöffnet, in dem Sie den IPMI-Benutzer und das zugehörige Kennwort eingeben können.
 2. Wählen Sie **Fernsteuerung** > **iKVM/HTML5** aus und klicken Sie auf **iKVM/HTML5**, um neu zu starten. Sie können nun auf die Konsole des vSphere ESXi-Hosts zugreifen.
@@ -53,4 +53,4 @@ Verwenden Sie die ID und das Kennwort, die im {{site.data.keyword.cloud_notm}}-S
 {: #vum-applying-nic-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demonstrationen)
+* [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (Demonstrationen)

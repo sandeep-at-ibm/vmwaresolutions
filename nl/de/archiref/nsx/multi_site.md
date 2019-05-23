@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -14,7 +14,7 @@ subcollection: vmwaresolutions
 # Architektur mit mehreren Standorten
 {: #nsx-multi_site}
 
-Ein wichtiges Differenzierungsmerkmal zwischen {{site.data.keyword.cloud}} und anderen Cloudangeboten ist die Fähigkeit, dedizierte Rechenleistung weltweit bereitzustellen und automatisch eine bedarfsgesteuerte Infrastruktur mit dem Netz in Ihrem privaten {{site.data.keyword.cloud_notm}}-Konto zu verbinden. Die softwaredefinierten Netzfunktionen von VMware vCenter Server und VMware Cloud Foundation zusammen mit {{site.data.keyword.cloud_notm}} stellen eine differenzierte globale Infrastruktur bereit, die innerhalb weniger Tage erstellt werden kann. In den folgenden Abschnitten wird ein Beispiel für eine Architektur mit mehreren Standorten beschrieben, das zeigt, was mit der Out-of-the-box-Funktionalität von vCenter Server oder Cloud Foundation erreicht werden kann.
+Ein wichtiges Differenzierungsmerkmal zwischen {{site.data.keyword.cloud}} und anderen Cloudangeboten ist die Fähigkeit, dedizierte Rechenleistung weltweit bereitzustellen und automatisch eine bedarfsgesteuerte Infrastruktur mit dem Netz in Ihrem privaten {{site.data.keyword.cloud_notm}}-Konto zu verbinden. Die softwaredefinierten Netzfunktionen von VMware vCenter Server zusammen mit {{site.data.keyword.cloud_notm}} stellen eine differenzierte globale Infrastruktur bereit, die innerhalb weniger Tage erstellt werden kann. In den folgenden Abschnitten wird ein Beispiel für eine Architektur mit mehreren Standorten beschrieben, das zeigt, was mit der Out-of-the-box-Funktionalität von vCenter Server erreicht werden kann.
 
 ## Cross-vCenter NSX-Umgebung
 {: #nsx-multi_site-cross-env}
@@ -22,7 +22,7 @@ Ein wichtiges Differenzierungsmerkmal zwischen {{site.data.keyword.cloud}} und a
 Die Cross-vCenter NSX-Funktionalität ermöglicht die Verknüpfung von bis zu neun NSX-Managern - in einer Beziehung von einem primären und acht sekundären NSX-Managern. vCenter Server in einer ELM-Beziehung (Enhanced Linked Mode) sind zwar nicht für den Betrieb von Cross-vCenter NSX erforderlich, sie bieten jedoch die folgenden Vorteile:
 
 * Vereinfachte Erstellung einer Primär/Sekundär-Beziehung mithilfe von SSO-Berechtigungsnachweisen (SSO = Single Sign-on)
-* Konfiguration der vCenter Server- und Cloud Foundation-Automation für die DNS-Namensauflösung für alle verbundenen Standorte
+* Konfiguration der vCenter Server-Automation für die DNS-Namensauflösung für alle verbundenen Standorte
 * Zentrales Management auf einen Blick über alle Standorte hinweg für NSX- und normale vCenter-Funktionen
 
 ## Beispiel für mehrere Standorte

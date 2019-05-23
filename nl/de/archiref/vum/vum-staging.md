@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-29"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -59,9 +59,9 @@ Führen Sie die folgenden Schritte aus, um Hosts und Cluster zu korrigieren:
 6. Optional können Sie auf der Seite **Erweiterte Optionen** angeben, dass die Korrektur zu einem späteren Zeitpunkt ausgeführt werden soll, und Sie können einen eindeutigen Namen und eine optionale Beschreibung für die Task angeben. Die Zeit, die Sie für die geplante Task festlegen, ist die Uhrzeit in der VCSA. Optional können Sie auswählen, dass Warnungen zu nicht unterstützten Geräten auf dem Host oder zu nicht mehr unterstütztem VMFS-Datenspeicher ignoriert werden sollen, damit die Korrektur fortgesetzt wird. Klicken Sie auf **Weiter**.
 7. Auf der Hostseite **Korrekturoptionen** können Sie im Dropdown-Menü **VM-Betriebszustand** die Änderung im Betriebszustand der virtuellen Maschinen (VMs) und virtuellen Appliances auswählen, die auf den zu korrigierenden Hosts ausgeführt werden. Ein Host kann erst dann in den Wartungsmodus wechseln, wenn VMs auf dem Host ausgeschaltet, ausgesetzt oder mit vMotion auf andere Hosts in einem DRS-Cluster migriert werden. Bei einigen Updates ist es erforderlich, dass ein Host vor der Korrektur in den Wartungsmodus wechselt. VMs und Appliances können nicht ausgeführt werden, wenn sich ein Host im Wartungsmodus befindet. Wenn Sie die Ausfallzeit für die Hostkorrektur auf Kosten der Verfügbarkeit virtueller Maschinen (VMs) reduzieren möchten, können Sie VMs und virtuelle Appliances vor der Korrektur herunterfahren oder aussetzen. Wenn Sie in einem DRS-Cluster die virtuellen Maschinen (VMs) nicht ausschalten, dauert die Korrektur länger, aber die virtuellen Maschinen bleiben während des gesamten Korrekturprozesses verfügbar, da sie mit vMotion auf andere Hosts migriert werden. Die Auswahlmöglichkeiten lauten wie folgt:
 
-- **Virtuelle Maschinen ausschalten** - Schalten Sie vor der Korrektur alle virtuellen Maschinen (VMs) und virtuellen Appliances aus.
-- **Virtuelle Maschinen aussetzen** - Setzen Sie alle aktiven virtuellen Maschinen (VMs) und virtuellen Appliances vor der Korrektur aus.
-- **VM-Betriebszustand nicht ändern** - Belassen Sie virtuelle Maschinen (VMs) und virtuelle Appliances in ihrem aktuellen Betriebszustand.
+  * **Virtuelle Maschinen ausschalten** - Schalten Sie vor der Korrektur alle virtuellen Maschinen (VMs) und virtuellen Appliances aus.
+  * **Virtuelle Maschinen aussetzen** - Setzen Sie alle aktiven virtuellen Maschinen (VMs) und virtuellen Appliances vor der Korrektur aus.
+  * **VM-Betriebszustand nicht ändern** - Belassen Sie virtuelle Maschinen (VMs) und virtuelle Appliances in ihrem aktuellen Betriebszustand.
 
 8. (Optional) Wählen Sie **Alle mit den virtuellen Maschinen auf dem Host verbundenen Wechselmedien trennen** aus. VUM korrigiert keine Hosts, auf denen sich virtuelle Maschinen (VMs) befinden, die mit CD-, DVD- oder Diskettenlaufwerken verbunden sind. In einer Clusterumgebung verhindern verbundene Geräte möglicherweise die Ausführung von vMotion, wenn der Zielhost nicht über ein identisches Gerät oder ein angehängtes ISO-Image verfügt, was wiederum den Quellhost daran hindert, in den Wartungsmodus zu wechseln. Nach der Korrektur verbindet VUM die Wechselmedien neu, sofern diese noch verfügbar sind.
 9. (Optional) Wählen Sie **Versuchen Sie im Falle eines Fehlschlags, erneut in den Wartungsmodus zu wechseln** aus, und geben Sie die Anzahl der Wiederholungen und die Wartezeit zwischen den Wiederholungen an. VUM wartet den Zeitraum der Verzögerung bis zur Wiederholung ab und versucht erneut, den Host in den Wartungsmodus zu versetzen. Dieser Vorgang wird so oft wiederholt, wie dies im Feld "Anzahl an Wiederholungen" angegeben ist.
@@ -83,4 +83,4 @@ In einer vCenter Server-Instanz ist es nicht erforderlich, das Kontrollkästchen
 {: #vum-staging-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demonstrationen)
+* [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (Demonstrationen)

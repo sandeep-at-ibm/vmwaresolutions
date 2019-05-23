@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -134,7 +134,7 @@ Abbildung 2. Cloud-Gateway-Bereitstellung
 
 Die zweite Komponente, die bereitgestellt wird, ist die Appliance des WAN-Optimierungsprogramms. Das WAN-Optimierungsprogramm ist zwar optional, aber es setzt WAN-Bedingungen, um die Auswirkungen der Latenzzeit zu reduzieren. Zudem enthält es eine vorwärtsgerichtete Fehlerkorrektur zur Behebung von Szenarios mit Paketverlusten und Deduplizierung von redundanten Datenverkehrsmustern.
 
-Diese reduzieren die Bandbreitennutzung und stellen die bestmögliche Nutzung der verfügbaren Netzkapazität zur Verfügung, um die Datenübertragung zu und von IBM Cloud zu beschleunigen. Das WAN-Optimierungsprogramm ist speicherintensiv und erfordert für eine ordnungsgemäße Funktion eine ausreichende Anzahl von E/A-Operationen pro Sekunde. Daher befindet sich das WAN-Optimierungsprogramm im vSAN-Speicher innerhalb der VCF-Umgebung und des Endurance-Speichers und unterstützt mehr als 2.000 IOPS innerhalb einer vCenter Server-Bereitstellung. Die Dimensionierungsspezifikationen für die Appliance des WAN-Optimierungsprogramms sind in der folgenden Tabelle enthalten.
+Diese reduzieren die Bandbreitennutzung und stellen die bestmögliche Nutzung der verfügbaren Netzkapazität zur Verfügung, um die Datenübertragung zu und von IBM Cloud zu beschleunigen. Das WAN-Optimierungsprogramm ist speicherintensiv und erfordert für eine ordnungsgemäße Funktion eine ausreichende Anzahl von E/A-Operationen pro Sekunde. Daher befindet sich das WAN-Optimierungsprogramm im vSAN-Speicher, falls vorhanden, oder im Endurance-Speicher mit 2.000 IOPS. Die Dimensionierungsspezifikationen für die Appliance des WAN-Optimierungsprogramms sind in der folgenden Tabelle enthalten.
 
 Tabelle 9. Dimensionierung der Appliance des WAN-Optimierungsprogramms
 

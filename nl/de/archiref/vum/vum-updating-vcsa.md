@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -26,7 +26,7 @@ Der PSC/die VCSA wird über die Appliance-Management-Konsole aktualisiert, nicht
 Initiieren Sie vor der Aktualisierung einen Snapshot der Appliance oder eine Sicherung des PSC bzw. der VCSA. Wenn Sie sichergestellt haben, dass das Update ordnungsgemäß angewendet wurde, entfernen Sie den Snapshot innerhalb weniger Tage, um Leistungseinbußen zu vermeiden. Lesen Sie darüber hinaus vor dem Durchführen eines Upgrades die VMware-Releaseinformationen, um sich mit spezifischen Anweisungen vertraut zu machen, die gegebenenfalls für das jeweilige Release gelten.
 
 Führen Sie die folgenden Schritte aus, um den PSC/die VCSA zu aktualisieren:
-1. Sie können Updates herunterladen, indem Sie zum VMware Patch [Download Center](https://my.vmware.com/group/vmware/patch#search) wechseln, sich anmelden und VC im Menü für die **Suche nach Produkt** auswählen. Wählen Sie das entsprechende Patch aus und klicken Sie auf **Herunterladen**.
+1. Sie können Updates herunterladen, indem Sie zum [VMware Patch Download Center](https://www.vmware.com/patchmgr/findPatchByReleaseName.portal) wechseln, sich anmelden und 'VC' im Menü für die **Suche nach Produkt** auswählen. Wählen Sie das entsprechende Patch aus und klicken Sie auf **Herunterladen**.
 2. Laden Sie die ISO-Datei mit dem vSphere Web Client in das vCenter-Datenspeicherrepository hoch.
 3. Hängen Sie die Update-ISO-Datei an den vCenter Server an.
 4. Erstellen Sie einen Snapshot Ihres vCenter Server.
@@ -48,4 +48,4 @@ Sie können eine VUM-Instanz angeben, indem Sie den Namen der VCSA auswählen, m
 {: #vum-updating-vcsa-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demonstrationen)
+* [VMware Solutions on	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (Demonstrationen)

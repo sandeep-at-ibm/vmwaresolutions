@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-04-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -47,7 +47,7 @@ Für die Lizenzverwaltung sind mindestens 10 VMs erforderlich.
 ### Speichergröße
 {: #veeam_ordering-config-storage-size}
 
-Die Kapazität, die Ihre Speicheranforderungen erfüllt. Hinweise zur Schätzung der Speichergröße finden Sie im Abschnitt zum [Schätzen der Repository-Kapazität](https://bp.veeam.expert/resource_planning/repository_planning_sizing.html).
+Die Kapazität, die Ihre Speicheranforderungen erfüllt. Hinweise zur Schätzung der Speichergröße finden Sie im Abschnitt zum [Schätzen der Repository-Kapazität](https://bp.veeam.expert/repository_server/repository_planning/repository_planning_sizing).
 
 ### Speicherleistung
 {: #veeam_ordering-config-storage-performance}

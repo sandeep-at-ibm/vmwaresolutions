@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-21"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -25,5 +25,5 @@ Zerto Virtual Replication Appliances (VRAs) werden nach der Verwendung von {{sit
 Entfernen Sie die VRAs manuell aus der vCenter-Konsole.
 
 1. Melden Sie sich an der vCenter-Konsole an.
-2. Klicken Sie auf **Hosts and Clusters** und suchen Sie die virtuellen Maschinen mit den Namen, die mit **Z-VRA** beginnen. Beispiel: **Z-VRA-host0-vcs40dal.vcs.icvs.org**. 
+2. Klicken Sie auf **Hosts and Clusters** und suchen Sie die virtuellen Maschinen mit den Namen, die mit **Z-VRA** beginnen. Beispiel: **Z-VRA-host0-vcs40dal.vcs.icvs.org**.
 3. Klicken Sie mit der rechten Maustaste auf die virtuelle Maschine **Z-VRA-** und klicken Sie auf **Aus Platte löschen**.

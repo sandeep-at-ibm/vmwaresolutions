@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -28,4 +28,4 @@ Die Nachricht wird angezeigt, obwohl es zwei verfügbare Uplinks für den privat
 ## Lösung
 {: #trbl_host_displays_warning_msg-resolution}
 
-Dies ist ein bekanntes VMware-Problem. Zur Lösung des Problems befolgen Sie die Anweisungen auf der Seite [ESX/ESXi host displays warning message when test condition is false (2008602)](https://kb.vmware.com/selfservice/search.do?cmd=displayKC&docType=kc&docTypeID=DT_KB_1_1&externalId=2008602){:new_window}.
+Dies ist ein bekanntes VMware-Problem. Zur Lösung des Problems befolgen Sie die Anweisungen auf der Seite [ESX/ESXi host displays warning message when test condition is false (2008602)](https://kb.vmware.com/s/article/2008602){:new_window}.

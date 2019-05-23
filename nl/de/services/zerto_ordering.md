@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-04-09"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -37,13 +37,18 @@ Sie können den Service "Zerto on {{site.data.keyword.cloud_notm}}" mit einer de
 Wenn Sie Zerto for {{site.data.keyword.cloud_notm}} zu einer vCenter Server-Instanz hinzufügen, die einen ESXi-Server im Wartungsmodus enthält, müssen Sie die Konsole von Zerto Virtual Manager (ZVM) und die bereits ausgefüllte IP-Adresse von Zerto Virtual Replication Appliance (VRA) verwenden, um die virtuelle VRA-Maschine (VM) manuell bereitzustellen.
 {:note}
 
+## Zerto on IBM Cloud nur für private Instanzen bestellen
+{: #zerto_ordering-private-only}
+
+Wenn Sie Zerto on {{site.data.keyword.cloud_notm}} nur einer rein privaten Instanz hinzufügen möchten, stellen Sie sicher, dass die folgenden Voraussetzungen erfüllt sind:
+* Sie sind dafür verantwortlich, Ihren eigenen Proxy-Server für die Verbindung zum Internet einzurichten. Weitere Informationen finden Sie in der Veröffentlichung zur [öffentlichen Netzkonnektivität](/docs/services/vmwaresolutions/services?topic=vmware-solutions-design_virtualinfrastructure#public-network-connectivity).
+* Sie müssen auch die Call-Home-Funktion für Zerto konfigurieren. Weitere Informationen finden Sie in der Veröffentlichung zur [Zerto-Berichtserstellung für Unternehmensumgebungen (Call-Home)](https://www.zerto.com/myzerto/knowledge-base/zerto-reporting-for-enterprise-environments-call-home/){:new_window}.
+
 ## Zugehörige Links
 {: #zerto_ordering-related}
 
 * [Zerto on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)
 * [Zerto on {{site.data.keyword.cloud_notm}} verwalten](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingzertodr)
-* [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
-* [Services für vCenter Server with Hybridity Bundle-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
 * [Verwaltete Services für Zerto on {{site.data.keyword.cloud_notm}} anfordern](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
 * [Website "zerto.com"](https://www.zerto.com){:new_window}
 * [Technische Dokumentation zu Zerto (englisch)](https://www.zerto.com/myzerto/technical-documentation/){:new_window}

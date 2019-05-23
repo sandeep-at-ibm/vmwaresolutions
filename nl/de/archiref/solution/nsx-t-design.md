@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-19"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -48,7 +48,7 @@ Es gilt:
 ## Ressourcenbedarf
 {: #nsx-t-design-resource-req}
 
-In diesem Design werden die NSX-T Manager-Controller-VMs im ursprünglichen Cluster bereitgestellt. Dem Controller-Manager wird eine VLAN-gestützte IP-Adresse aus dem privaten, portierbaren Adressblock zugeordnet, der für Managementkomponenten vorgesehen ist und der mit den DNS- und NTP-Servern (in Abschnitt 0 beschrieben) konfiguriert wird. Eine Zusammenfassung der NSX Manager-Installation wird in der folgenden Tabelle gezeigt. 
+In diesem Design werden die NSX-T Manager-Controller-VMs im ursprünglichen Cluster bereitgestellt. Dem Controller-Manager wird eine VLAN-gestützte IP-Adresse aus dem privaten, portierbaren Adressblock zugeordnet, der für Managementkomponenten vorgesehen ist und der mit den DNS- und NTP-Servern (in Abschnitt 0 beschrieben) konfiguriert wird. Eine Zusammenfassung der NSX Manager-Installation wird in der folgenden Tabelle gezeigt.
 
 Tabelle 2. NSX-T Manager - Controller-Spezifikationen
 
@@ -69,15 +69,15 @@ Abbildung 1. Netzübersicht für NSX-T Manager
 ## Bereitstellungsaspekte
 {: #nsx-t-design-deployment}
 
-Bei NSX-T on vSphere muss dem N-VDS die physischen Adapter innerhalb der Hosts zugeordnet werden. Da ein N-VDS nur in NSX-T Manager konfiguriert werden kann, bedeutet dies, dass keine physischen Adapter für die native lokale Switch- oder vDS-Zuordnung in einem Cluster verfügbar sind, in dem sowohl die NSX-T-Komponenten als auch die zugehörigen Overlay-Netzkomponenten enthalten sind, wenn Redundanz beibehalten werden soll. 
+Bei NSX-T on vSphere muss dem N-VDS die physischen Adapter innerhalb der Hosts zugeordnet werden. Da ein N-VDS nur in NSX-T Manager konfiguriert werden kann, bedeutet dies, dass keine physischen Adapter für die native lokale Switch- oder vDS-Zuordnung in einem Cluster verfügbar sind, in dem sowohl die NSX-T-Komponenten als auch die zugehörigen Overlay-Netzkomponenten enthalten sind, wenn Redundanz beibehalten werden soll.
 
 Aus diesem Grund muss während der Installation von NSX-T und seiner Konfiguration ein physischer NIC-Port an einem Adapter einem lokalen vSphere vSwitch oder einem virtuellen verteilten Switch (VDS) zugewiesen bleiben. Nach der NSX-T-Bereitstellung müssen alle ESX-Kernel-Ports auf einen N-VDS migriert und alle lokalen vSwitches oder VDS ausgelagert werden. Nachdem die Kernel-Ports entfernt wurden, können die verbleibenden physischen NIC-Ports als N-VDS-Uplink zugeordnet werden, wodurch Redundanz des N-VDS erreicht wird.
 
-Nach der Erstbereitstellung stellt die {{site.data.keyword.cloud_notm}}-Automatisierung drei virtuelle NSX-T Manager/Controller Appliances im ersten Cluster bereit. Jedem der Controller wird eine VLAN-gestützte IP-Adresse aus dem portierbaren Teilnetz "Privat A" zugeordnet, das für Managementkomponenten vorgesehen ist. Außerdem werden VM-VM-Anti-Affinitätsregeln erstellt, damit die Controller unter den Hosts im Cluster separiert werden. 
+Nach der Erstbereitstellung stellt die {{site.data.keyword.cloud_notm}}-Automatisierung drei virtuelle NSX-T Manager/Controller Appliances im ersten Cluster bereit. Jedem der Controller wird eine VLAN-gestützte IP-Adresse aus dem portierbaren Teilnetz "Privat A" zugeordnet, das für Managementkomponenten vorgesehen ist. Außerdem werden VM-VM-Anti-Affinitätsregeln erstellt, damit die Controller unter den Hosts im Cluster separiert werden.
 
-Sie müssen den ersten Cluster mit mindestens drei Knoten bereitstellen, um eine hohe Verfügbarkeit für die Manager/Controller zu gewährleisten. Zusätzlich zu den Managern/Controllern bereitet die {{site.data.keyword.cloud_notm}}-Automatisierung die bereitgestellten vSphere-Hosts als NSX-T-Transportknoten vor. Den ESXi-Transportknoten wird eine VLAN-gestützte IP-Adresse aus dem portierbaren Teilnetz "Privat A" zugeordnet, die von einem NSX-IP-Pool angegeben wird, der von der VLAN- und Teilnetzzusammenfassung abgeleitet wurde. Der Transportknoten-Datenverkehr befindet sich im nicht mit Tags versehenen VLAN und wird dem privaten virtuellen verteilten NSX-T-Switch (N-VDS) zugewiesen. 
+Sie müssen den ersten Cluster mit mindestens drei Knoten bereitstellen, um eine hohe Verfügbarkeit für die Manager/Controller zu gewährleisten. Zusätzlich zu den Managern/Controllern bereitet die {{site.data.keyword.cloud_notm}}-Automatisierung die bereitgestellten vSphere-Hosts als NSX-T-Transportknoten vor. Den ESXi-Transportknoten wird eine VLAN-gestützte IP-Adresse aus dem portierbaren Teilnetz "Privat A" zugeordnet, die von einem NSX-IP-Pool angegeben wird, der von der VLAN- und Teilnetzzusammenfassung abgeleitet wurde. Der Transportknoten-Datenverkehr befindet sich im nicht mit Tags versehenen VLAN und wird dem privaten virtuellen verteilten NSX-T-Switch (N-VDS) zugewiesen.
 
-Abhängig von dem Kunden, der die NSX-T-Topologie für die Bereitstellung ausgewählt hat, wird ein NSX-T-Edge-Cluster entweder als VM-Paar oder als Software auf Bare-Metal-Cluster-Knoten bereitgestellt. Unabhängig davon, ob es sich bei dem Cluster-Paar um virtuelle oder physische Cluster-Paare handelt, werden Uplinks sowohl für öffentliche als auch für private {{site.data.keyword.cloud_notm}}-Netze auf N-VDS-Switches konfiguriert. 
+Abhängig von dem Kunden, der die NSX-T-Topologie für die Bereitstellung ausgewählt hat, wird ein NSX-T-Edge-Cluster entweder als VM-Paar oder als Software auf Bare-Metal-Cluster-Knoten bereitgestellt. Unabhängig davon, ob es sich bei dem Cluster-Paar um virtuelle oder physische Cluster-Paare handelt, werden Uplinks sowohl für öffentliche als auch für private {{site.data.keyword.cloud_notm}}-Netze auf N-VDS-Switches konfiguriert.
 
 In der folgenden Tabelle sind die Anforderungen für eine Umgebung mit mittlerer Größe zusammengefasst.
 
@@ -108,7 +108,7 @@ Name der Transportzone | VLAN/VXLAN | N-VDS-Name | Uplink-Teaming-Richtlinie
 ## Transportknoten
 {: #nsx-t-design-transport-nodes}
 
-Transportknoten definieren die physischen Serverobjekte oder VMs, die an der virtuellen Netzstruktur beteiligt sind. Sehen Sie sich die folgende Tabelle an, um das Design zu verstehen. 
+Transportknoten definieren die physischen Serverobjekte oder VMs, die an der virtuellen Netzstruktur beteiligt sind. Sehen Sie sich die folgende Tabelle an, um das Design zu verstehen.
 
 Tabelle 5. NSX-T-Transportknoten
 
@@ -128,7 +128,7 @@ Tabelle 6. NSX-T-Uplink-Profile
 Uplink-Profilname | VLAN | Einbezogene Teamings | MTU
 --|:-----|:---|:---
 **SDDC-Private-Uplink** | Standard | Standard, Management | 9000
-**SDDC-Public-Uplink** | Standard | Standard | 1500
+**SDDC-Public-Uplink** | Standard| Standard | 1500
 **SDDC-Storage-Uplink** | Speicher-VLAN | vSAN, iSCSI-A&B, NFS | 9000
 
 ## Teaming
@@ -150,7 +150,7 @@ Teaming-Name | Failover oder Lastausgleich | Aktiver NIC | Standby-NIC
 ## VNI-Pools
 {: #nsx-t-design-vni-pools}
 
-Virtuelle Netz-IDs (VNIs) ähneln VLANs in einem physischen Netz. Sie werden automatisch erstellt, wenn ein logischer Switch aus einem Pool oder einem Bereich von IDs erstellt wird. In diesem Design wird der standardmäßige VNI-Pool verwendet, der mit NSX-T bereitgestellt wird. 
+Virtuelle Netz-IDs (VNIs) ähneln VLANs in einem physischen Netz. Sie werden automatisch erstellt, wenn ein logischer Switch aus einem Pool oder einem Bereich von IDs erstellt wird. In diesem Design wird der standardmäßige VNI-Pool verwendet, der mit NSX-T bereitgestellt wird.
 
 ## Logische Switches
 {: #nsx-t-design-logical-switches}
@@ -173,13 +173,13 @@ Name des logischen Switches | VLAN |Transportzone | Uplink-Teaming-Richtlinie
 ### Edge-Cluster
 {: #nsx-t-design-edge-cluster}
 
-Im Rahmen dieses Designs wird ein einzelner virtueller Edge-Cluster für die Verwendung durch Management- und Kundenworkloads bereitgestellt. Der virtuelle Edge-Cluster kann mehrere Instanzen von T0-Gateways aufnehmen. Wie zuvor beschrieben, können mehrere T0-Edge-Gateway-Instanzen in einem einzelnen Edge-Cluster mit jeweils eigenen Routing-Tabellen instanziiert werden. Sehen Sie sich die folgende Abbildung an, in der die funktionalen Komponenten eines NSX-T-Edge-Clusters beschrieben sind. 
+Im Rahmen dieses Designs wird ein einzelner virtueller Edge-Cluster für die Verwendung durch Management- und Kundenworkloads bereitgestellt. Der virtuelle Edge-Cluster kann mehrere Instanzen von T0-Gateways aufnehmen. Wie zuvor beschrieben, können mehrere T0-Edge-Gateway-Instanzen in einem einzelnen Edge-Cluster mit jeweils eigenen Routing-Tabellen instanziiert werden. Sehen Sie sich die folgende Abbildung an, in der die funktionalen Komponenten eines NSX-T-Edge-Clusters beschrieben sind.
 
 Abbildung 2. Beispiel eines NSX-T Edge-Clusters mit einer Skalierung von T0 zu T1
 ![Beispiel eines NSX-T Edge-Clusters mit einer Skalierung von T0 zu T1](vcsv4radiagrams-ra-nsx-t-edge-cluster-t0-to-t1-scale.svg)
 
-Abbildung 3. Management-T0-Gateway</br>
-![Management-T0-Gateway](vcsv4radiagrams-topology-0.svg)
+Abbildung 3. Management T0-Gateway</br>
+![Management T0-Gateway](vcsv4radiagrams-topology-0.svg)
 
 #### Logisches Tier-0-Gateway
 {: #nsx-t-design-tier-0}
@@ -204,29 +204,29 @@ Workload von T1- bis T0-Gateway - virtueller Edge-Cluster
 Abbildung 4. Von NSX-T bereitgestelltes virtuelles T0-Edge-Gateway für die Topologie
 ![Von NSX-T bereitgestelltes virtuelles T0-Edge-Gateway für die Topologie](vcsv4radiagrams-topology-1.svg)
 
-Die mit IC4V bereitgestellte Topologie 1 ist im Wesentlichen die gleiche Topologie, die mit den NSX-V-DLR- und Edge-Gateways bereitgestellt wird. Bei NSX-T ist keine dynamische Routing-Protokollkonfiguration zwischen T1 und T0 vorhanden. RFC-1891 Der IP-Adressraum wird für das Workload-Overlay-Netzwerk und das Transit-Overlay-Netzwerk verwendet. Dem Kunden wird ein privater und öffentlicher portabler IP-Bereich zugeordnet, der für den Kunden verwendet wird. Ein vom Kunden als bezeichneter privater und öffentlicher portierbarer {{site.data.keyword.cloud_notm}}-IP-Bereich wird dem T0 zur Verwendung durch den Kunden zugewiesen. 
+Die mit IC4V bereitgestellte Topologie 1 ist im Wesentlichen die gleiche Topologie, die mit den NSX-V-DLR- und Edge-Gateways bereitgestellt wird. Bei NSX-T ist keine dynamische Routing-Protokollkonfiguration zwischen T1 und T0 vorhanden. RFC-1891 Der IP-Adressraum wird für das Workload-Overlay-Netzwerk und das Transit-Overlay-Netzwerk verwendet. Dem Kunden wird ein privater und öffentlicher portabler IP-Bereich zugeordnet, der für den Kunden verwendet wird. Ein vom Kunden als bezeichneter privater und öffentlicher portierbarer {{site.data.keyword.cloud_notm}}-IP-Bereich wird dem T0 zur Verwendung durch den Kunden zugewiesen.
 
-Ab diesem Design haben Sie die Möglichkeit, diese IP-Bereiche nicht zu löschen, wenn die vCenter Serverinstanz stillgelegt und gelöscht wird. 
+Ab diesem Design haben Sie die Möglichkeit, diese IP-Bereiche nicht zu löschen, wenn die vCenter Server-Instanz stillgelegt und gelöscht wird.
 
 Workload von T1- bis T0-Gateway - physischer Edge-Cluster
 
 Abbildung 5. Von NSX-T bereitgestelltes physisches T0-Edge-Gateway für die Topologie
 ![Von NSX-T bereitgestelltes physisches T0-Edge-Gateway für die Topologie](vcsv4radiagrams-topology-2.svg)
 
-Die bereitgestellte Topologie 2 ähnelt der Ausnahme, die den VM-basierten Edge-Cluster durch ein Bare-Metal-Serverpaar ersetzt, auf denen Red Hat Server ausgeführt wird. Ein vom Kunden als bezeichneter privater und öffentlicher portierbarer {{site.data.keyword.cloud_notm}}-IP-Bereich wird dem T0 zur Verwendung durch den Kunden zugewiesen. Ab diesem Design haben Sie die Möglichkeit, diese IP-Bereiche nicht zu löschen, wenn die vCenter Serverinstanz stillgelegt und gelöscht wird. 
+Die bereitgestellte Topologie 2 ähnelt der Ausnahme, die den VM-basierten Edge-Cluster durch ein Bare-Metal-Serverpaar ersetzt, auf denen Red Hat Server ausgeführt wird. Ein vom Kunden als bezeichneter privater und öffentlicher portierbarer {{site.data.keyword.cloud_notm}}-IP-Bereich wird dem T0 zur Verwendung durch den Kunden zugewiesen. Ab diesem Design haben Sie die Möglichkeit, diese IP-Bereiche nicht zu löschen, wenn die vCenter Server-Instanz stillgelegt und gelöscht wird.
 
-In einem separaten Dokument oder Link finden Sie eine Stückliste zu den Hardware- und Betriebssystemspezifikationen. 
+In einem separaten Dokument oder Link finden Sie eine Stückliste zu den Hardware- und Betriebssystemspezifikationen.
 
 Workload von ICP- bis T0-Gateway - virtueller Edge-Cluster
 
 Abbildung 6. Von NSX-T bereitgestellte Topologie mit ICP-NSX-T-Integration und virtuellem T0-Edge-Gateway
 ![Von NSX-T bereitgestellte Topologie mit ICP-NSX-T-Integration und virtuellem T0-Edge-Gateway](vcsv4radiagrams-topology-3.svg)
 
-Die bereitgestellte Topologie 3 enthält die Topologie 1 mit der Zusatz einer ICP-Bereitstellung, die die NSX-T-Integration anstelle von Calico enthält, dem Standardnetzwerkstapel innerhalb einer ICP-Bereitstellung. Der Kunde kann zusätzliche Containernamensbereiche in ICP bereitstellen, wodurch die Erstellung von logischen Switches, IP-Teilnetzadressierung und T1-Gateway-Instanzen für jeden Namensbereich automatisiert wird. 
+Die bereitgestellte Topologie 3 enthält die Topologie 1 mit der Zusatz einer ICP-Bereitstellung, die die NSX-T-Integration anstelle von Calico enthält, dem Standardnetzwerkstapel innerhalb einer ICP-Bereitstellung. Der Kunde kann zusätzliche Containernamensbereiche in ICP bereitstellen, wodurch die Erstellung von logischen Switches, IP-Teilnetzadressierung und T1-Gateway-Instanzen für jeden Namensbereich automatisiert wird.
 
-Ein umfassendes Verständnis der Funktionsweise von ICP auf vCenter Server finden Sie in der Dokumentation zu ICP in der vCenter Server-Architektur. Ein vom Kunden als bezeichneter privater und öffentlicher portierbarer {{site.data.keyword.cloud_notm}}-IP-Bereich wird dem T0 zur Verwendung durch den Kunden zugewiesen. 
+Ein umfassendes Verständnis der Funktionsweise von ICP auf vCenter Server finden Sie in der Dokumentation zu ICP in der vCenter Server-Architektur. Ein vom Kunden als bezeichneter privater und öffentlicher portierbarer {{site.data.keyword.cloud_notm}}-IP-Bereich wird dem T0 zur Verwendung durch den Kunden zugewiesen.
 
-Ab diesem Design haben Sie die Möglichkeit, diese IP-Bereiche nicht zu löschen, wenn die vCenter Serverinstanz stillgelegt und gelöscht wird. 
+Ab diesem Design haben Sie die Möglichkeit, diese IP-Bereiche nicht zu löschen, wenn die vCenter Server-Instanz stillgelegt und gelöscht wird.
 
 ## Zugehörige Links
 {: #nsx-t-design-related}

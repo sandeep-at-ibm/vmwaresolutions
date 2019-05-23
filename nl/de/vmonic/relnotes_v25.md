@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-08-30"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -63,7 +63,7 @@ Ab dem Release von Version 2.5 ist {{site.data.keyword.vmwaresolutions_short}} i
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [Benutzer für den Zugriff auf Services und Ressourcen einladen](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-iamuserinvite)
-* [Benutzerzugriff mit IAM verwalten](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-access-with-iam)
+* [Benutzerzugriff mit IAM verwalten](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-iam#iam)
 
 ## Änderungen an Benutzerkonten und -gruppen für VMware vCenter Server- und VMware Cloud Foundation-Instanzen
 {: #relnotes_v25-user-acct}

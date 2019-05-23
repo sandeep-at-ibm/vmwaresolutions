@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-08"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -19,7 +19,7 @@ subcollection: vmwaresolutions
 
 Zum Verwalten des Service "F5 on {{site.data.keyword.cloud}}" melden Sie sich bei den primären oder sekundären Konsolen der BIG-IP-Webbenutzerschnittstelle mit den entsprechenden Berechtigungsnachweisen an, die Sie auf der Seite mit den Details des Service "F5 on {{site.data.keyword.cloud_notm}}" finden.
 
-Weitere Informationen zum Anzeigen der Servicedetails finden Sie unter [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices). 
+Weitere Informationen zum Anzeigen der Servicedetails finden Sie unter [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).
 
 ## Zugehörige Links
 {: #managing_f5-related}

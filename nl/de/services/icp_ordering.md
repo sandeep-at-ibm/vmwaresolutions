@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-26"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -36,6 +36,8 @@ Sie können den Service "{{site.data.keyword.cloud_notm}} Private Hosted" mit ei
 Geben Sie beim Bestellen des Service die folgenden Einstellungen an:
 * Wählen Sie **Produktion** oder **Entwicklung/Test** entsprechend Ihren Anforderungen aus.
 * Wählen Sie das erforderliche Kontrollkästchen aus, um zu bestätigen, dass Sie bereits über die Lizenz verfügen, die für die Bereitstellung des Service "{{site.data.keyword.cloud_notm}} Private Hosted" erforderlich ist.
+
+Wenn Sie zusätzliche Knoten bereitstellen möchten, verwenden Sie die Ubuntu-Vorlage für {{site.data.keyword.cloud_notm}} Private (Ubuntu1604), die mit der ursprünglichen {{site.data.keyword.cloud_notm}} Private Hosted-Installation bereitgestellt wird. Um die Vorlage zu finden, rufen Sie in VMware vSphere Web Client die Registerkarte **VMs und Vorlagen** unter dem Ordner `cam` auf. Das Standardkennwort für die Ubuntu-Vorlage ist `icponcloud`; es wird empfohlen, dieses vor Verwendung der Vorlage zu ändern.
 
 ## Zugehörige Links
 {: #icp_ordering-related}

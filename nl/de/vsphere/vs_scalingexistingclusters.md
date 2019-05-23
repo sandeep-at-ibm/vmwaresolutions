@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -48,7 +48,7 @@ Die Clusterskalierung wird automatisch gestartet. Sie erhalten eine E-Mail, in d
 
 Wenn der Cluster, den Sie skalieren möchten, nicht zur Verwendung bereit ist, erhalten Sie möglicherweise eine Fehlernachricht.
 
-Die vSphere-Cluster werden (im Gegensatz zu den vCenter Server- und Cloud Foundation-Instanzen) auf der Seite **Ressourcen** nicht angezeigt.
+Die vSphere-Cluster werden im Gegensatz zu den vCenter Server-Instanzen auf der Seite **Ressourcen** nicht angezeigt.
 {:note}
 
 ## Zugehörige Links

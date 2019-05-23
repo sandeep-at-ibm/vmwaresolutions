@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-25"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -46,7 +46,7 @@ Führen Sie folgende Schritte aus, um den Zugriff auf Ihr {{site.data.keyword.cl
 
 - Greifen Sie mithilfe des [{{site.data.keyword.cloud_notm}}-VPNs](https://www.softlayer.com/vpn-access) oder Ihrer [{{site.data.keyword.cloud_notm}} Direct Link-Verbindung](https://www.ibm.com/cloud/direct-link) auf die Endpunkte des Instanzmanagements zu.
 - Erarbeiten Sie eine Strategie für die Konnektivität zum öffentlichen Netz aus Ihrer Instanz heraus. Zu Ihren Optionen gehören Folgende: das VMware NSX Edge Services Beispiel-Gateway (ESG) für Kunden, Gateway-Appliances wie Vyatta und FortiGate sowie Proxy-Server, die über Direct Link im {{site.data.keyword.cloud_notm}}-Netz oder Ihrem eigenen Netz bereitgestellt werden.
-- Planen Sie, ob Ihre Workload in {{site.data.keyword.cloud_notm}}-VLANs mit [portierbaren {{site.data.keyword.cloud_notm}}-IP-Adressen](/docs/infrastructure/subnets?topic=subnets-getting-started-with-subnets-and-ips) oder [ unter Verwendung Ihrer eigenen IP-Adresse über logische NSX-Switches (VXLANs)](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_overview) bereitgestellt werden soll. Beachten Sie, dass die Verwendung von Software-Defined Networking (SDN) von NSX Ihnen größte Flexibilität bei der Verwaltung und Sicherung Ihres Workload-Netzes in {{site.data.keyword.cloud_notm}} bietet.
+- Planen Sie, ob Ihre Workload in {{site.data.keyword.cloud_notm}}-VLANs mit [portierbaren {{site.data.keyword.cloud_notm}}-IP-Adressen](/docs/infrastructure/subnets?topic=subnets-getting-started-subnets-ips#getting-started-subnets-ips) oder [ unter Verwendung Ihrer eigenen IP-Adresse über logische NSX-Switches (VXLANs)](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_overview) bereitgestellt werden soll. Beachten Sie, dass die Verwendung von Software-Defined Networking (SDN) von NSX Ihnen größte Flexibilität bei der Verwaltung und Sicherung Ihres Workload-Netzes in {{site.data.keyword.cloud_notm}} bietet.
 - Verwenden Sie NSX Edge Services Gateways (ESGs), [IBM Cloud Vyatta](https://cloud.ibm.com/catalog/infrastructure/virtual-router-appliance) und das Direct Link-Peering, um die Konnektivität zu Workloads (Netzadressumsetzung, Virtual Private Network, Routing) zu planen.
 - Wenn Sie Cross-vCenter NSX implementieren, müssen Sie vor der Bereitstellung lokaler Workloads sicherstellen, dass sich die Bereiche der IDs lokaler Segmente nicht überschneiden.
 
@@ -107,7 +107,7 @@ Stellen Sie sicher, dass die folgenden Lösungen zur Überwachung Ihrer Instanz-
 - Eine Alert-Infrastruktur, die nach Bedarf die Konfiguration des SMTP-Servers und des SMS-Gateways (SMS - Short Message Service) einschließt.
 - Proaktive Überwachung von Hosts, Laufwerken, Verwaltungssoftware und Netz.
 - vSAN-Überwachung, falls zutreffend.
-- Kapazitätsüberwachung und -planung. Sie können für Ihre Instanz über die {{site.data.keyword.vmwaresolutions_short}}-Konsole [Cluster hinzufügen und entfernen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances) und [Hosts hinzufügen und entfernen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers).
+- Kapazitätsüberwachung und -planung. Sie können für Ihre Instanz über die {{site.data.keyword.vmwaresolutions_short}}-Konsole [Cluster hinzufügen und entfernen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters) und [Hosts hinzufügen und entfernen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers).
 - Überwachung Ihrer Sicherungsinfrastruktur und Sicherungsjobs.
 
 ## Business-Continuity und Verfügbarkeit

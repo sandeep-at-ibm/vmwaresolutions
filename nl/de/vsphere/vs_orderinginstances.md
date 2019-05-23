@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-26"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -104,8 +104,8 @@ Wählen Sie das {{site.data.keyword.CloudDataCent_notm}} aus, das als Host für 
 
 **Hinweise:**
 * Falls Sie eine vSAN-Komponente auswählen, wird die Liste der Standorte nach SSD-Verfügbarkeit gefiltert.
-* Das Rechenzentrum FRA05 bietet keine Unterstützung für den Broadwell-Bare-Metal-Server.
-* Das Rechenzentrum FRA05 bietet keine Unterstützung für SAP-zertifizierte und Broadwell-Bare-Metal-Server.
+* Broadwell-Bare-Metal-Server sind für den Rechenzentrumstandort **FRA05-Frankfurt** nicht verfügbar.
+* SAP-zertifizierte und Broadwell-Bare-Metal-Server sind für den Rechenzentrumstandort **LON05 - London** nicht verfügbar.
 
 ### Skylake
 {: #vs_orderinginstances-skylake}
@@ -143,9 +143,6 @@ Tabelle 3. Optionen für Broadwell {{site.data.keyword.baremetal_short}}
 
 | CPU-Modelloptionen        | RAM-Optionen       |
 |:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4 / 16 Kerne insgesamt, 2,1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2650 v4 / 24 Kerne insgesamt, 2,2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2690 v4 / 28 Kerne insgesamt, 2,6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Quad Intel Xeon E7-4820 v4 / 40 Kerne insgesamt, 2,0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 Kerne insgesamt, 2,1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
@@ -168,7 +165,7 @@ Wenn Sie für den Cluster die Komponente "VMware vSAN" ausgewählt haben, müsse
 * **Anzahl der vSAN-Kapazitätsplatten**: Geben Sie die Anzahl der hinzuzufügenden Kapazitätsplatten an.
 * Wenn Sie über den Grenzwert von acht Stück hinaus Kapazitätsplatten hinzufügen möchten, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen. Diese Option stellt zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 10 Kapazitätsplatten bereit und ist für Workloads nützlich, die eine geringere Latenzzeit und einen höheren Durchsatz an E/A-Operationen pro Sekunde erfordern.
 
-  Die Option **High-Performance Intel Optane** ist nur für die Skylake-CPU-Modelle Dual Intel Xeon Gold 5120 und Dual Intel Xeon Gold 6140 verfügbar.
+  Die Option **Hohe Leistung mit Intel Optane** ist nur für die Skylake-CPU-Modelle verfügbar.
   {:note}
 
 * Überprüfen Sie die Werte für **Plattentyp für vSAN-Cacheplatten** und **Anzahl der vSAN-Cacheplatten**. Diese Werte hängen davon ab, ob Sie das Feld **Hohe Leistung mit Intel Optane** ausgewählt haben.
@@ -211,12 +208,7 @@ Der Domänenname wird für alle {{site.data.keyword.baremetal_short}}-Instanzen 
 ### Öffentliches oder privates Netz
 {: #vs_orderinginstances-public-private-network}
 
-Die Einstellungen für die Aktivierung der Netzschnittstellenkarte (NIC - Network Interface Card) basieren darauf, ob Sie **Öffentliches und privates Netz** oder **Nur privates Netz** auswählen. Die folgenden Add-on-Services benötigen öffentliche NICs und sind nicht verfügbar, wenn Sie die private Option auswählen:
-
-* F5 on {{site.data.keyword.cloud_notm}}
-* FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}
-* FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}
-* Zerto on {{site.data.keyword.cloud_notm}}
+Die Einstellungen für die Aktivierung der Netzschnittstellenkarte (NIC - Network Interface Card) basieren darauf, ob Sie **Öffentliches und privates Netz** oder **Nur privates Netz** auswählen.
 
 ### VLANs
 {: #vs_orderinginstances-vlans}
@@ -297,7 +289,7 @@ Wenn Sie die Clusterkonfiguration als Vorlage gespeichert haben, erhalten Sie in
 
 Falls Sie eine Bestellung aufgegeben haben, beginnt die Bereitstellung des Clusters automatisch und Sie empfangen eine E-Mail-Bestätigung, dass die Bestellung bearbeitet wird. Sobald der Cluster einsatzbereit ist, werden Sie per E-Mail benachrichtigt.
 
-Die vSphere-Cluster werden (im Gegensatz zu den vCenter Server- und Cloud Foundation-Instanzen) auf der Seite **Ressourcen** nicht angezeigt.
+Die vSphere-Cluster werden im Gegensatz zu den vCenter Server-Instanzen auf der Seite **Ressourcen** nicht angezeigt.
 {:note}
 
 ## Zugehörige Links

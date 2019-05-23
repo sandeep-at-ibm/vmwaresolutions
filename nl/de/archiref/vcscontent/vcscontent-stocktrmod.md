@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-23"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -86,7 +86,7 @@ Weitere Informationen finden Sie im [IBM Knowledge Center](https://www.ibm.com/s
 ## Transformation Advisor und Microclimate bereitstellen
 {: #vcscontent-stocktrmod-deploy-tam}
 
-Nachdem Todd {{site.data.keyword.icpfull_notm}} in Betrieb genommen hat, installiert er Transformation Advisor zusammen mit Microclimate. Todd öffnet den [Katalog](https://www.ibm.com/cloud/private/developer) und zeigt den gesamten verfügbaren Inhalt an.
+Nachdem Todd {{site.data.keyword.icpfull_notm}} in Betrieb genommen hat, installiert er Transformation Advisor zusammen mit Microclimate. Todd öffnet den [Katalog](https://www.ibm.com/cloud/private/architecture) und zeigt den gesamten verfügbaren Inhalt an.
 
 Todd sucht nach Transformation Advisor und Microclimate und installiert beides anhand der in der Readme-Datei bereitstehenden Anweisungen, wenn er auf das Helm-Diagramm klickt.
 

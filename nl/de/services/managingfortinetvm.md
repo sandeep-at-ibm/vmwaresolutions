@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-04-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -30,4 +30,4 @@ Weitere Informationen finden Sie unter [Services für vCenter Server-Instanzen b
 * [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [Häufig gestellte Fragen](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [Website "fortinet.com"](https://www.fortinet.com/)
-* [Technische Dokumentation zu Fortinet](http://docs.fortinet.com/fortigate/admin-guides)
+* [Dokumentbibliothek für Fortinet](https://docs.fortinet.com/product/fortigate/6.2)

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -82,11 +82,13 @@ Zur Vereinfachung der vMotion-Kompatibilität zwischen Clusterknoten mit potenzi
 ### IBM CloudDriver
 {: #design_infrastructuremgmt-cloud-driver}
 
-Die wichtige Voraussetzung für diese Lösungen ist die Automatisierung. Die Automatisierung reduziert die Komplexität der Bereitstellung, reduziert die Bereitstellungszeit deutlich und stellt sicher, dass die VMware-Instanz in konsistenter Weise bereitgestellt wird. 
+Die wichtige Voraussetzung für diese Lösungen ist die Automatisierung. Die Automatisierung reduziert die Komplexität der Bereitstellung, reduziert die Bereitstellungszeit deutlich und stellt sicher, dass die VMware-Instanz in konsistenter Weise bereitgestellt wird.
 
 IBM CloudBuilder ist eine kurzlebige virtuelle {{site.data.keyword.cloud_notm}}-Server-Instanz (VSI), die zum Erstellen einer neuen VMware-Instanz und zum Ausführen von Funktionen für das Lebenszyklusmanagement verwendet wird. Sie wird bereitgestellt, wenn eine allgemeine Verwaltung der vCenter Server-Instanz erforderlich ist, und wird wieder gelöscht, wenn dieser Prozess abgeschlossen ist.
 
-IBM CloudDriver kann so konfiguriert werden, dass die Kommunikation mit der {{site.data.keyword.vmwaresolutions_short}}-Managementinfrastruktur über die öffentliche oder optional über eine private Netzverbindung über den {{site.data.keyword.cloud_notm}}-Objektspeicher als Nachrichtenwarteschlange erfolgt. BM CloudDriver ist eine von IBM entwickelte Komponente, auf die kein Benutzer zugreifen kann, und verfügt über die folgenden Attribute und Funktionen:
+IBM CloudDriver ist eine kurzlebige virtuelle {{site.data.keyword.cloud_notm}}-Server-Instanz (VSI), die bei Bedarf für "Day 2"-Operationen, wie das Hinzufügen von Hosts, Clustern oder Add-on-Services zur VMware-Instanz, implementiert wird.
+
+CloudBuilder und CloudDriver werden nur in dem privaten Netz bereitgestellt, das über eine private Nachrichtenwarteschlange mit der IBM Managementebene verbunden ist. Es handelt sich um von IBM entwickelte Komponenten, die nicht durch Benutzer zugänglich sind und die folgenden Attribute und Funktion aufweisen:
 
 - Bereitstellung und Konfiguration der vCenter Server-Instanz im Benutzerkonto.
 - Hinzufügen von Hosts zu den vCenter Server-Clustern und entfernen von Host aus den vCenter Server-Clustern.
@@ -114,7 +116,7 @@ Im Folgenden wird die Reihenfolge der Ereignisse beschrieben, wenn Sie die {{sit
 
 Die IC4V-Managementinfrastruktur speichert alle in der {{site.data.keyword.cloud_notm}}-Managementebene enthaltenen IDs und verschlüsselten Kennwörter des vCenter Servers. Alle Änderungen an diesen Kennwörtern durch den Benutzer können die Automatisierungsfunktionen in vCenter Server unterbrechen.
 
-Sie können geänderte Kennwörter im IC4V-Lösungsportal bereitstellen, damit die Automatisierung die Funktionen ununterbrochen verarbeiten kann. Das Lösungsportal ermöglicht optional die Verifizierung der eingegebenen Passwörter. 
+Sie können geänderte Kennwörter im IC4V-Lösungsportal bereitstellen, damit die Automatisierung die Funktionen ununterbrochen verarbeiten kann. Das Lösungsportal ermöglicht optional die Verifizierung der eingegebenen Passwörter.
 
 ## Zugehörige Links
 {: #design_infrastructuremgmt-related}

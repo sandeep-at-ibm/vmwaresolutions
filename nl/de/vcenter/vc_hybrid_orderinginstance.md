@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -36,7 +36,7 @@ Tabelle 1. Wertformat für Instanz- und Domänennamen
   | Anmeldebenutzername für vCenter Server | `<user_id>@<root_domain>` (Microsoft Active Directory-Benutzer) oder `administrator@vsphere.local` |
   | vCenter Server (mit integriertem PSC) FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. Die maximale Länge beträgt 50 Zeichen. |
   | SSO-Standortname | `<subdomain_label>` |
-  | Vollständig qualifizierter Name des ESXi-Servers | `<host_prefix><n>.<subdomain_label>.<root_domain>`, hierbei steht `<n>` für die Folgenummer des ESXi-Servers. Die maximale Länge beträgt 50 Zeichen. |
+  | Vollständig qualifizierter Name des ESXi-Servers | `<host_prefix><n>.<subdomain_label>.<root_domain>`. Dabei ist `<n>` die Folgenummer des ESXi-Servers. Die maximale Länge beträgt 50 Zeichen. |
 
 Nehmen Sie keine Änderungen an Werten vor, die während der Bestellung oder Bereitstellung der Instanz festgelegt werden. Dies kann dazu führen, dass Ihre Instanz unbrauchbar wird. Beispielsweise, wenn der öffentliche Netzbetrieb beendet wird, Server sowie virtuelle Serverinstanzen (VSIs) mitten in einer Bereitstellung hinter eine Vyatta-Einheit versetzt werden oder wenn die Virtual Server-Instanz für IBM CloudBuilder gestoppt oder gelöscht wird.
 {:important}
@@ -118,16 +118,14 @@ Tabelle 3. Optionen für Broadwell {{site.data.keyword.baremetal_short}}
 
 | CPU-Modelloptionen        | RAM-Optionen       |
 |:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4 / 16 Kerne insgesamt, 2,1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2650 v4 / 24 Kerne insgesamt, 2,2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2690 v4 / 28 Kerne insgesamt, 2,6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Quad Intel Xeon E7-4820 v4 / 40 Kerne insgesamt, 2,0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 Kerne insgesamt, 2,1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 ### Bare Metal Server-Anzahl
 {: #vc_hybrid_orderinginstance-bare-metal-number}
 
-Standardmäßig werden vier ESXi-Server ausgewählt. Diese Einstellung kann nicht geändert werden.
+* Alle Server, die Sie bestellen, haben die gleiche Konfiguration.
+* Sie können zwischen 4 und 20 Server bestellen.
 
 ## Speichereinstellungen
 {: #vc_hybrid_orderinginstance-storage-settings}
@@ -135,9 +133,9 @@ Standardmäßig werden vier ESXi-Server ausgewählt. Diese Einstellung kann nich
 VMware vSAN 6.6 ist Bestandteil der Bestellung Ihrer vCenter Server with Hybridity Bundle-Instanz. Geben Sie die folgenden vSAN-Optionen an:
 * **Plattentyp und Größe für vSAN-Kapazitätsplatten**: Wählen Sie die für die Kapazitätsplatten benötigte Option aus.
 * **Anzahl der vSAN-Kapazitätsplatten**: Geben Sie die Anzahl der hinzuzufügenden Kapazitätsplatten an.
-* Wenn Sie über den Grenzwert von acht Stück hinaus Kapazitätsplatten hinzufügen möchten, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen. Diese Option stellt zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 10 Kapazitätsplatten bereit und ist für Workloads nützlich, die eine geringere Latenzzeit und einen höheren Durchsatz an E/A-Operationen pro Sekunde erfordern.
+* Wenn Sie über den Grenzwert von zehn Stück hinaus Kapazitätsplatten hinzufügen möchten, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen. Diese Option stellt zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 12 Kapazitätsplatten bereit und ist für Workloads nützlich, die eine geringere Latenzzeit und einen höheren Durchsatz an E/A-Operationen pro Sekunde erfordern.
 
-  Die Option **High-Performance Intel Optane** ist nur für die Skylake-CPU-Modelle Dual Intel Xeon Gold 5120 und Dual Intel Xeon Gold 6140 verfügbar.
+  Die Option **Hohe Leistung mit Intel Optane** ist nur für die Skylake-CPU-Modelle verfügbar.
   {:note}
 
 * Überprüfen Sie die Werte für **Plattentyp für vSAN-Cacheplatten** und **Anzahl der vSAN-Cacheplatten**. Diese Werte hängen davon ab, ob Sie das Feld **Hohe Leistung mit Intel Optane** ausgewählt haben.
@@ -180,12 +178,14 @@ Die maximale Länge des vollständig qualifizierten Domänennamens für Hosts un
 ### Öffentliches oder privates Netz
 {: #vc_hybrid_orderinginstance-public-private-network}
 
-Die Einstellungen für die Aktivierung der Netzschnittstellenkarte (NIC - Network Interface Card) basieren darauf, ob Sie **Öffentliches und privates Netz** oder **Nur privates Netz** auswählen. Die folgenden Add-on-Services benötigen öffentliche NICs und sind nicht verfügbar, wenn Sie die private Option auswählen:
+Die Einstellungen für die Aktivierung der Netzschnittstellenkarte (NIC - Network Interface Card) basieren darauf, ob Sie **Öffentliches und privates Netz** oder **Nur privates Netz** auswählen.
 
-* F5 on {{site.data.keyword.cloud_notm}}
-* FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}
-* FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}
-* Zerto on {{site.data.keyword.cloud_notm}}
+Wenn Sie die Option **Nur privates Netz** auswählen, gilt Folgendes:
+* VMware NSX Edge Services Gateways (ESG) werden nicht bereitgestellt (weder die ESG für Management-Services noch die vom Kunden verwaltete ESG).
+* Die folgenden Add-on-Services, für die öffentliche NICs erforderlich sind, sind nicht verfügbar:
+  * F5 on {{site.data.keyword.cloud_notm}}
+  * FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}
+  * FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}
 
 ### Neue VLANs bestellen
 {: #vc_hybrid_orderinginstance-new-vlans}
@@ -215,14 +215,14 @@ Wählen Sie die Konfiguration für DNS (Domain Name System) für Ihre Instanz au
 * **Einzelne öffentliche Windows-VSI für Active Directory/DNS**: Eine einzelne Serverinstanz (VSI) von Microsoft Windows Server für Microsoft Active Directory (AD), die als DNS für die Instanz dient, auf der die Hosts und VMs registriert sind, wird bereitgestellt und kann zur Suche verwendet werden.
 * **Zwei hoch verfügbare dedizierte Windows-Server-VMs auf dem Management-Cluster**: Es werden zwei Microsoft Windows-VMs bereitgestellt, die den Datenschutz und die Leistungsfähigkeit verbessern.
 
-Sie müssen zwei Lizenzen für Microsoft Windows Server 2012 R2 bereitstellen, wenn Sie Ihre Instanz für die Verwendung der beiden Microsoft Windows-VMs konfigurieren. Verwenden Sie die Lizenz für Microsoft Windows Server 2012 R2 Standard Edition und/oder die Lizenz für Microsoft Windows Server 2012 R2 Datacenter Edition.
+Sie müssen zwei Lizenzen für Microsoft Windows Server 2016 bereitstellen, wenn Sie Ihre Instanz für die Verwendung der beiden Microsoft Windows-VMs konfigurieren. Verwenden Sie die Lizenz für Microsoft Windows Server 2016 Standard Edition und/oder die Lizenz für Microsoft Windows Server 2016 Datacenter Edition.
 {:important}
 
 Jede Lizenz kann nur einem einzigen physischen Server zugeordnet werden und deckt bis zu zwei physische Prozessoren ab. Mit einer Standard Edition-Lizenz können zwei virtualisierte Microsoft Windows-VMs pro 2-Prozessor-Server ausgeführt werden. Daher sind zwei Lizenzen erforderlich, weil zwei Microsoft Windows-VMs in zwei unterschiedlichen Hosts bereitgestellt werden.
 
 Sie haben 30 Tage Zeit, um die VMs zu aktivieren.
 
-Weitere Informationen zum Bestellen der Windows-Lizenzierung finden Sie auf der Seite mit der [Dokumentation zu Windows Server 2012 R2](https://www.microsoft.com/en-us/licensing/product-licensing/windows-server-2012-r2.aspx#tab=2).
+Weitere Informationen zur Bestellung von Lizenzen für Windows Server 2016 finden Sie unter [Erste Schritte mit Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:new_window}.
 
 ## Serviceeinstellungen
 {: #vc_hybrid_orderinginstance-addon-services}
@@ -251,12 +251,9 @@ Auf Basis der für die Instanz und die Add-on-Services ausgewählten Konfigurati
 7. Geben Sie die Bare Metal Server-Einstellungen an.
   1. Wählen Sie das {{site.data.keyword.CloudDataCent_notm}} als Host für die Instanz aus.
   2. Wählen Sie das CPU-Modell **Skylake** oder **Broadwell** und die Menge des **RAM** aus.
-
-  Die **Anzahl der Bare Metal Server** ist standardmäßig auf vier gesetzt und kann nicht geändert werden.
-  {:note}
 8. Führen Sie die Speicherkonfiguration durch. Geben Sie die Plattentypen für die Kapazitäts- und Cacheplatten sowie die Anzahl der Platten an. Falls Sie mehr Speicher benötigen, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen.
 9. Führen Sie die Netzschnittstellenkonfiguration durch.
-  1. Geben Sie das Hostnamenspräfix, die Unterdomänenbezeichnung und den Rootdomänennamen ein.
+  1. Geben Sie das Hostnamenspräfix für die bereitgestellte Instanz, die Unterdomänenbezeichnung und den Rootdomänennamen ein.
   2. Wählen Sie die Netzeinstellung für entweder **Öffentliches und privates Netz** oder **Nur privates Netz** aus.
   3. Wählen Sie die VLAN-Konfiguration aus.
      *  Falls Sie neue öffentliche und private VLANs bestellen wollen, klicken Sie auf **Neue VLANs bestellen**.

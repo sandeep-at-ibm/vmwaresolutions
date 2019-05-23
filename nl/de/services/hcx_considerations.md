@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-23"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -20,10 +20,10 @@ subcollection: vmwaresolutions
 
 Der Service "HCX on {{site.data.keyword.cloud}}" kann die Netze von lokalen Rechenzentren nahtlos in die {{site.data.keyword.cloud_notm}} erweitern. Dies ermöglicht die Migration von virtuellen Maschinen in die und aus der {{site.data.keyword.cloud_notm}}, ohne dass hierzu eine Konvertierung oder Änderung erforderlich ist.
 
-Dieser Service ist nur für Instanzen von VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle verfügbar, die in V2.3 (und höher) bereitgestellt werden.
+Dieser Service ist nur für Instanzen von VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle verfügbar, die in V2.3 (und höher) bereitgestellt werden. Die aktuell installierte HCX on {{site.data.keyword.cloud_notm}}-Version ist 3.5.1.
 {:note}
 
-Sie können für Ihre vorhandene vCenter Server-Instanz ein Upgrade auf eine vCenter Server with Hybridity Bundle-Instanz durchführen. Weitere Informationen zum Durchführen eines Upgrades für Ihre Instanz und zum Bereitstellen des Service "HCX on {{site.data.keyword.cloud_notm}}" finden Sie unter [Vorgehensweise zum Durchführen eines Upgrades auf eine vCenter Server with Hybridity Bundle-Instanz](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates#procedure-to-upgrade-to-the-vcenter-server-with-hybridity-bundle-instance).
+Sie können für Ihre vorhandene vCenter Server-Instanz ein Upgrade auf eine vCenter Server with Hybridity Bundle-Instanz durchführen. Weitere Informationen zum Durchführen eines Upgrades für Ihre Instanz und zum Bereitstellen des Service "HCX on {{site.data.keyword.cloud_notm}}" finden Sie unter [Vorgehensweise zum Durchführen eines Upgrades auf Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_upgrade-lic#vc_upgrade-lic-procedure-upgrade-to-hybridity).
 
 Eine vCenter Server-Instanz mit HCX on {{site.data.keyword.cloud_notm}} ist auf drei simultane Verbindungen von lokalen Standorten begrenzt.
 {:note}

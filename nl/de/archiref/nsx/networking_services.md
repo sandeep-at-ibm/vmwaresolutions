@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -20,36 +20,36 @@ subcollection: vmwaresolutions
 
 Die Netzservices unter {{site.data.keyword.cloud}} bestehen aus zwei Paaren von VMware NSX Edge Services Gateways (ESGs) für die Kommunikation zwischen {{site.data.keyword.cloud_notm}} und entweder dem öffentlichen Internet oder einem Netz am Standort des Kunden durch ein Virtual Private Network (VPN). Diese ESGs werden getrennt, um die interne {{site.data.keyword.cloud_notm}}-Managementfunktion, Ausgangsdatenverkehr und den Eingang von kundenbezogenem Netzverkehrs zu unterstützen.
 
-Die folgende Grafik zeigt ein vereinfachtes Netzdiagramm, in dem das Paar von Management-ESGs und das Paar von Workload-ESGs dargestellt wird. Sie zeigt außerdem einen NSX-DLR (Distributed Logical Router) und das Workload-VXLAN. Diese Komponenten sind als Einstiegslösung für Kundenworkloads konzipiert und setzen noch kein spezielles Wissen zur Einrichtung in NSX voraus. Ein DLR wird in der Regel eingesetzt, um den Datenverkehr zwischen VMware Cloud Foundation oder VMware vCenter Server und Ost-West-Datenverkehr zwischen separaten Layer-2-Netzen in der Instanz weiterzuleiten. Dies steht im Gegensatz zum Verhalten eines ESG, das den Nord-Süd-Netzverkehr vereinfacht, der die Cloud Foundation- oder vCenter Server-Instanz traversiert.
+Die folgende Grafik zeigt ein vereinfachtes Netzdiagramm, in dem das Paar von Management-ESGs und das Paar von Workload-ESGs dargestellt wird. Sie zeigt außerdem einen NSX-DLR (Distributed Logical Router) und das Workload-VXLAN. Diese Komponenten sind als Einstiegslösung für Kundenworkloads konzipiert und setzen noch kein spezielles Wissen zur Einrichtung in NSX voraus. Ein DLR wird in der Regel eingesetzt, um den Datenverkehr zwischen VMware vCenter Server und Ost-West-Datenverkehr zwischen separaten Layer-2-Netzen in der Instanz weiterzuleiten. Dies steht im Gegensatz zum Verhalten eines ESG, das den Nord-Süd-Netzverkehr vereinfacht, der die vCenter Server-Instanz traversiert.
 
-Abbildung 1. Cloudnetzservices unter Cloud Foundation
+Abbildung 1. Cloudnetzservices bei vCenter Server
 
-![Cloudnetzservices unter Cloud Foundation](cloudnetworkingservicesdiagram.svg "Cloudnetzservices unter Cloud Foundation")
+![Cloudnetzservices bei vCenter Server](cloudnetworkingservicesdiagram.svg "Cloudnetzservices bei vCenter Server")
 
 Während ein einzelnes ESG möglicherweise für den Management- und Workloaddatenverkehr beim Kunden ausreicht, kann beim Design eine Trennung von Management und Kundendatenverkehr vorgenommen werden, um eine versehentliche Fehlkonfiguration des Management-ESGs zu verhindern.
 
-Bei einer fehlerhaften Konfiguration oder Inaktivierung des Management-ESGs ist die Cloud Foundation- oder vCenter Server-Instanz zwar funktionsfähig, aber es werden alle Portalmanagementfunktionen inaktiviert.
+Bei einer fehlerhaften Konfiguration oder Inaktivierung des Management-ESGs ist die vCenter Server-Instanz zwar funktionsfähig, aber es werden alle Portalmanagementfunktionen inaktiviert.
 {:note}
 
 ## IBM Management Services NSX Edge
 {: #nsx-networking_services-mgmt-serv-nsx-edge}
 
-Das IBM Management-ESG ist ein dedizierter NSX Edge-Cluster, der dem {{site.data.keyword.cloud_notm}}-Managementnetzverkehr vorbehalten ist. Es ist nicht für die Traversierung von Datenverkehr einer Komponente vorgesehen, die nicht von der Cloud Foundation- oder vCenter Server-Automation bereitgestellt und verwaltet wird.
+Das IBM Management-ESG ist ein dedizierter NSX Edge-Cluster, der dem {{site.data.keyword.cloud_notm}}-Managementnetzverkehr vorbehalten ist. Es ist nicht für die Traversierung von Datenverkehr einer Komponente vorgesehen, die nicht von der vCenter Server-Automation bereitgestellt und verwaltet wird.
 
-Das Management-ESG bietet einen Kommunikationspfad zwischen Add-on-Service-VMs, die in Cloud Foundation- oder vCenter Server-Instanzen enthalten sind, und der IBM Automation-Infrastruktur in {{site.data.keyword.cloud_notm}}, wie dies für Cloud Foundation aus folgender Grafik hervorgeht.
+Das Management-ESG bietet einen Kommunikationspfad zwischen Add-on-Service-VMs, die in vCenter Server-Instanzen enthalten sind, und der IBM Automation-Infrastruktur in {{site.data.keyword.cloud_notm}}, wie dies für Cloud Foundation aus folgender Grafik hervorgeht.
 
-Abbildung 2. Management-Edge-Kommunikation unter Cloud Foundation
+Abbildung 2. Management-Edge-Kommunikation bei vCenter Server
 
-![Management-Edge-Kommunikation unter Cloud Foundation](mgmtvmcommunication.svg "Management-Edge-Kommunikation unter Cloud Foundation")
+![Management-Edge-Kommunikation bei vCenter Server](mgmtvmcommunication.svg "Management-Edge-Kommunikation bei vCenter Server")
 
-Durch die einfache Kommunikation zwischen bestimmten Add-on-Service-VMs und ihren entsprechenden Lizenzierungs- und Messsystemen werden die NSX ESGs in einer umfangreichen Konfiguration in einem Aktiv/Passiv-HA-Paar (HA = High Availability) dimensioniert und im Managementressourcenpool des konvergierten Cloud Foundation-Clusters oder des vCenter Server-Clusters bereitgestellt. Die folgende Tabelle enthält eine Zusammenfassung der IBM Management NSX ESG-Bereitstellung.
+Durch die einfache Kommunikation zwischen bestimmten Add-on-Service-VMs und ihren entsprechenden Lizenzierungs- und Messsystemen werden die NSX ESGs in einer umfangreichen Konfiguration in einem Aktiv/Passiv-HA-Paar (HA = High Availability) dimensioniert und im Managementressourcenpool des des vCenter Server-Clusters bereitgestellt. Die folgende Tabelle enthält eine Zusammenfassung der IBM Management NSX ESG-Bereitstellung.
 
 Tabelle 1. Spezifikationen für IBM Management NSX ESG
 
 | IBM Management NSX Edge | vCPU | Speicher | Plattengröße | Speicherposition |
 |:----------------------- |:---- |:------ |:--------- |:---------------- |
-| IBM Management NSX ESG 1 | 2 | 1 GB | 1 GB | vSAN Data Store (Cloud Foundation); Shared Attached Storage for Management (vCenter Server) |
-| IBM Management NSX ESG 2 | 2 | 1 GB | 1 GB | vSAN Data Store (Cloud Foundation); Shared Attached Storage for Management (vCenter Server) |
+| IBM Management NSX ESG 1 | 2 | 1 GB | 1 GB | vSAN Data Store oder Shared Attached Storage for Management |
+| IBM Management NSX ESG 2 | 2 | 1 GB | 1 GB | vSAN Data Store oder Shared Attached Storage for Management |
 
 ### Management-Services
 {: #nsx-networking_services-mgmt-services}
@@ -64,7 +64,7 @@ Ein abgehender Zugriff ist für die folgenden Services erforderlich:
 ### Edge-Schnittstellen
 {: #nsx-networking_services-edge-interfaces}
 
-Die Konfiguration der ESG-Schnittstellen definiert, auf welche L2-Netze das ESG zugreifen kann. Für das Cloud Foundation- und vCenter Server-Lebenszyklusmanagement ist es erforderlich, dass bestimmten VMs, die sich im Management-VLAN befinden, die Traversierung zum öffentlichen VLAN ermöglicht wird. Die folgenden Schnittstellen werden bei der Bereitstellung definiert:
+Die Konfiguration der ESG-Schnittstellen definiert, auf welche L2-Netze das ESG zugreifen kann. Für das vCenter Server-Lebenszyklusmanagement ist es erforderlich, dass bestimmten VMs, die sich im Management-VLAN befinden, die Traversierung zum öffentlichen VLAN ermöglicht wird. Die folgenden Schnittstellen werden bei der Bereitstellung definiert:
 
 Tabelle 2. NSX ESG-Schnittstellenkonfiguration
 
@@ -90,7 +90,7 @@ Tabelle 3. NSX ESX-IP-Konfiguration
 ### NAT-Definitionen
 {: #nsx-networking_services-nat-definitions}
 
-Network Address Translation (NAT) wird im Management-ESG verwendet, um die Traversierung des Netzverkehrs zwischen zwei IP-Adressräumen zu ermöglichen. Dies geschieht normalerweise, um über das Internet weiterleitbare IP-Adressen beizubehalten oder interne IP-Adressen aus Sicherheitsgründen vor öffentlichen IP-Adressen zu verdecken. NAT wird auch für die TCP- und UDP-Portumleitung verwendet (TCP = Transmission Control Protocol, UDP = User Datagram Protocol). Der Managementdatenverkehr wird immer von innerhalb der Cloud Foundation- und vCenter Server-Instanz initiiert. Dies setzt voraus, dass nur eine Quellen-NAT (SNAT) für das Management-ESG definiert ist. Eine individuelle SNAT wird nicht für jede interne VM erstellt, die einen Service hostet, der von der Instanz ausgehen muss.
+Network Address Translation (NAT) wird im Management-ESG verwendet, um die Traversierung des Netzverkehrs zwischen zwei IP-Adressräumen zu ermöglichen. Dies geschieht normalerweise, um über das Internet weiterleitbare IP-Adressen beizubehalten oder interne IP-Adressen aus Sicherheitsgründen vor öffentlichen IP-Adressen zu verdecken. NAT wird auch für die TCP- und UDP-Portumleitung verwendet (TCP = Transmission Control Protocol, UDP = User Datagram Protocol). Der Managementdatenverkehr wird immer von innerhalb der vCenter Server-Instanz initiiert. Dies setzt voraus, dass nur eine Quellen-NAT (SNAT) für das Management-ESG definiert ist. Eine individuelle SNAT wird nicht für jede interne VM erstellt, die einen Service hostet, der von der Instanz ausgehen muss.
 
 Tabelle 4. NSX ESG-NAT-Konfiguration
 
@@ -105,7 +105,7 @@ Wenn Services in VMs, die durch das Management-ESG traversieren müssen, möglic
 
 Während es schwierig ist vorherzusagen, welcher Ziel-IP-Bereich als Ziel für Verbindungen im Internet benötigt wird, verweist jeder Service, der von {{site.data.keyword.cloud_notm}} bereitgestellt und verwaltet wird, auf das Management-ESG als Standardgateway. Eine statische Route ist erforderlich, um den Datenverkehr zwangsweise für die Services über den {{site.data.keyword.cloud_notm}} BCR zu leiten, für die externe Netzverbindungen notwendig sind.
 
-Die folgenden Konfigurationen werden für jeden Service empfohlen, der das Management-ESG für die Traversierung aus einer Cloud Foundation- oder vCenter Server-Instanz verwendet:
+Die folgenden Konfigurationen werden für jeden Service empfohlen, der das Management-ESG für die Traversierung aus einer vCenter Server-Instanz verwendet:
 * Das Standardgateway ist ein Management-ESG.
 * Eine statische Route ist für interne {{site.data.keyword.cloud_notm}}-Ziele erforderlich.
 
@@ -146,9 +146,9 @@ Tabelle 6. NSX ESG-Firewallkonfiguration
 ## IBM Workload NSX Edge
 {: #nsx-networking_services-wkld-nsx-edge}
 
-Das IBM Workload-ESG ist Teil einer einfachen Topologie, die für die Workload-Netzkommunikation konzipiert ist. Im folgenden Abschnitt wird beschrieben, wo Workloads designgemäß an ein Netz in einer Cloud Foundation- oder vCenter Server-Instanz angehängt werden können. Dies ist ein Ausgangspunkt für das Anhängen von lokalen Netzen und IP-Adressräumen an eine bestimmte Cloud Foundation- oder vCenter Center-Instanz und stellt die Basis für eine echte Hybrid-Cloud-Architektur dar.
+Das IBM Workload-ESG ist Teil einer einfachen Topologie, die für die Workload-Netzkommunikation konzipiert ist. Im folgenden Abschnitt wird beschrieben, wo Workloads designgemäß an ein Netz in einer vCenter Server-Instanz angehängt werden können. Dies ist ein Ausgangspunkt für das Anhängen von lokalen Netzen und IP-Adressräumen an eine bestimmte vCenter Center-Instanz und stellt die Basis für eine echte Hybrid-Cloud-Architektur dar.
 
-Ein Kundennetz, das mit den öffentlichen und privaten {{site.data.keyword.cloud_notm}}-Netzen verbunden ist, ermöglicht den eingehenden und abgehenden Workloadzugriff auf Internetdatenverkehr, aber auch die Einrichtung eines standortübergreifenden VPN auf der Basis von öffentlichen oder privaten {{site.data.keyword.cloud_notm}}-Netzen. Dies ermöglicht eine beschleunigte Wertschöpfungszeit hinsichtlich der Anbindung lokaler Netze, da es Monate dauern kann, bis ein dediziertes Wide Area Network (WAN) aufgrund hoher Kundensicherheitsanforderungen betriebsbereit ist. Nachdem jedoch ein dedizierter Link vorhanden ist, kann das VPN zur Traversierung des Links gedreht werden, ohne dass das Overlay-Netz innerhalb des VPN-Tunnels oder in der Cloud Foundation- oder vCenter-Serverinstanz beeinträchtigt wird. Danach kann die öffentliche Schnittstelle für das Workload-ESG bei Bedarf aus einer Sicherheitsperspektive entfernt werden.
+Ein Kundennetz, das mit den öffentlichen und privaten {{site.data.keyword.cloud_notm}}-Netzen verbunden ist, ermöglicht den eingehenden und abgehenden Workloadzugriff auf Internetdatenverkehr, aber auch die Einrichtung eines standortübergreifenden VPN auf der Basis von öffentlichen oder privaten {{site.data.keyword.cloud_notm}}-Netzen. Dies ermöglicht eine beschleunigte Wertschöpfungszeit hinsichtlich der Anbindung lokaler Netze, da es Monate dauern kann, bis ein dediziertes Wide Area Network (WAN) aufgrund hoher Kundensicherheitsanforderungen betriebsbereit ist. Nachdem jedoch ein dedizierter Link vorhanden ist, kann das VPN zur Traversierung des Links gedreht werden, ohne dass das Overlay-Netz innerhalb des VPN-Tunnels oder in der vCenter-Serverinstanz beeinträchtigt wird. Danach kann die öffentliche Schnittstelle für das Workload-ESG bei Bedarf aus einer Sicherheitsperspektive entfernt werden.
 
 Die Topologie in der folgenden Abbildung setzt sich aus den folgenden NSX-Komponenten zusammen:
 * NSX Edge-Appliance (ESG)
@@ -203,7 +203,7 @@ Tabelle 9. IP-Konfiguration für DLR und Workload-ESG
 
 NAT wird im Workload-ESG verwendet, um die Traversierung des Netzverkehrs zwischen zwei IP-Adressräumen zu ermöglichen. Für das ESG muss NAT die Kommunikation nicht nur zu Internetzielen ermöglichen, sondern zu allen IP-Bereichen, die auf {{site.data.keyword.cloud_notm}} zurückgehen. Bei diesem Design kann der Workloaddatenverkehr ins Internet gelangen, aber nicht zum Management- oder einem der {{site.data.keyword.cloud_notm}}-Netze. Daher muss im Workload-ESG nur ein SNAT definiert sein. Das gesamte Workload-portierbare Teilnetz wird für die Traversierung durch SNAT konfiguriert.
 
-Auch wenn es möglich ist, NAT zu verwenden, um die Workloadkommunikation über mehrere Instanzen von Cloud Foundation oder vCenter Server zu ermöglichen, ist dies nicht mehr praktikabel, wenn viele Workloads über Instanzen hinweg verbunden werden müssen. Beispiele für die Verwendung erweiterter NSX-Funktionen zum Erstellen eines L2-Overly-Transit-Netzes über Cloud Foundation- oder vCenter Server-Instanzen hinweg finden Sie unter [Architektur mit mehreren Standorten](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx-multi_site).
+Auch wenn es möglich ist, NAT zu verwenden, um die Workloadkommunikation über mehrere Instanzen von vCenter Server zu ermöglichen, ist dies nicht mehr praktikabel, wenn viele Workloads über Instanzen hinweg verbunden werden müssen. Beispiele für die Verwendung erweiterter NSX-Funktionen zum Erstellen eines L2-Overly-Transit-Netzes über vCenter Server-Instanzen hinweg finden Sie unter [Architektur mit mehreren Standorten](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx-multi_site).
 
 Tabelle 10. Workload-ESG-NAT-Regeln
 
@@ -247,7 +247,7 @@ Die ESG- und DLR-HA-Paare der Workloadtopologie erfordern L2-Segmente (VXLAN) f�
 
 Tabelle 13. Interne Schnittstellen für das Workload-ESG
 
-| VXLAN-Name | Cloud Foundation- oder vCenter Server-Transportzone | Typ |
+| VXLAN-Name | vCenter Server-Transportzone | Typ |
 |:---------- |:------------------------------------------------- |:---- |
 | Workload-HA | transit-1 | Global |
 | Workload-Transit | transit-1 | Global |

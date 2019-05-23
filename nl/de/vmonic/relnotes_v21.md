@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -39,7 +39,7 @@ Sie können Cloud Foundation- oder vCenter Server-Instanzen bestellen, die den S
 Sie können auch eine lokale HCX-Instanz für die Lizenzierung und Aktivierung Ihrer lokalen HCX-Installation bestellen.
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
-* [Hinweise zu HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview)
+* [Hinweise zu HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations)
 * [HCX on {{site.data.keyword.cloud_notm}} verwalten](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghcx)
 * [Hinweise zu lokalen HCX-Instanzen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_considerations)
 * [Lokale HCX-Instanzen bestellen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_orderingserviceinstances)
@@ -53,7 +53,7 @@ Wenn Sie Knoten zu einem Cluster hinzufügen, der mit Ihrem Schlüssel lizenzier
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
 
-* [Cluster für vCenter Server-Instanzen hinzufügen und anzeigen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [Cluster für vCenter Server-Instanzen hinzufügen, anzeigen und löschen](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 * [Häufig gestellte Fragen zu eigenen Lizenzen (BYOL)](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_byol)
 
 ## Updates für Servicekomponente "Zerto on IBM Cloud"
@@ -91,7 +91,7 @@ Weitere Informationen enthält der Abschnitt [Übersicht über vCenter Server](/
 ### Maximale Anzahl Server pro Cluster erhöht sich auf mehr als 32
 {: #relnotes_v21-max-clusters}
 
-Für den Standardcluster in einer Instanz können Sie bis zu 51 Server bereitstellen oder erweitern. Für alle nachfolgenden Cluster in einer Instanz können Sie bis zu 59 Server bereitstellen oder erweitern. Weitere Informationen finden Sie unter [Cluster für vCenter Server-Instanzen hinzufügen und anzeigen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances).
+Für den Standardcluster in einer Instanz können Sie bis zu 51 Server bereitstellen oder erweitern. Für alle nachfolgenden Cluster in einer Instanz können Sie bis zu 59 Server bereitstellen oder erweitern. Weitere Informationen finden Sie unter [Cluster für vCenter Server-Instanzen hinzufügen, anzeigen und löschen](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters).
 
 Diese Funktion ist nur für Instanzen verfügbar, die in V2.1 oder höher bereitgestellt werden. Instanzen, für ein Upgrade auf V2.1 ausgehend von älteren Releases durchgeführt wurde, besitzen diese Option nicht.
 {:note}
@@ -113,7 +113,7 @@ Sie können die gemeinsam genutzten NFS-Dateiressourcen jetzt einzeln konfigurie
 Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [Übersicht über vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
 * [vCenter Server-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [Cluster für vCenter Server-Instanzen hinzufügen und anzeigen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances)
+* [Cluster für vCenter Server-Instanzen hinzufügen, anzeigen und löschen](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 
 ## Updates und Erweiterungen der Benutzerschnittstelle
 {: #relnotes_v21-ui}

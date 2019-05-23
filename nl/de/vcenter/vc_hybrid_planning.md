@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-20"
+lastupdated: "2019-04-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -93,7 +93,7 @@ Geben Sie beim Bereitstellen dieses Service die folgenden Einstellungen an:
   * **Privater Schlüssel**: Geben Sie den privaten Schlüssel des CA-Zertifikats ein.
   * (Optional) **Kennwort**: Geben Sie das Kennwort für den privaten Schlüssel ein, wenn er verschlüsselt ist.
   * (Optional) **Kennwort erneut eingeben**: Geben Sie das Kennwort für den privaten Schlüssel erneut ein.
-  * (Optional) **Hostname**: Geben Sie den Hostnamen ein, der dem allgemeinen Namen (Common Name, CN) des CA-Zertifikats zugeordnet werden soll. HCX on {{site.data.keyword.cloud_notm}} setzt voraus, dass das CA-Zertifikat in einem Format vorliegt, das von NSX Edge akzeptiert wird. Weitere Informationen zu den Zertifikatsformaten von NSX Edge finden Sie unter [Importing SSL Certificates](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html).
+  * (Optional) **Hostname**: Geben Sie den Hostnamen ein, der dem allgemeinen Namen (Common Name, CN) des CA-Zertifikats zugeordnet werden soll. HCX on {{site.data.keyword.cloud_notm}} setzt voraus, dass das CA-Zertifikat in einem Format vorliegt, das von NSX Edge akzeptiert wird. Weitere Informationen zu den Zertifikatsformaten von NSX Edge finden Sie unter [Importing SSL Certificates](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html).
 
 Sie können für Ihre Instanz auf der Basis Ihrer Anforderungen weitere Add-on-Services bestellen, zum Beispiel für die Disaster-Recovery. Weitere Informationen finden Sie unter [Services für vCenter Server with Hybridity Bundle-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices).
 

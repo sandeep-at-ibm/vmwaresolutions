@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-10-19"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -91,7 +91,7 @@ Weitere Informationen finden Sie unter *Systemeinstellungen* im Abschnitt [vCent
 ### Größere Anzahl von Clustern pro Instanz
 {: #relnotes_v22-clusters-per-inst}
 
-Sie können jetzt bis zu 10 Cluster zu VMware vCenter Server-Instanzen hinzufügen, die in V2.2 oder höher bereitgestellt werden bzw. für die ein Upgrade auf eine entsprechende Version durchgeführt wurde. Weitere Informationen finden Sie unter [Cluster für vCenter Server-Instanzen hinzufügen und anzeigen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances).
+Sie können jetzt bis zu 10 Cluster zu VMware vCenter Server-Instanzen hinzufügen, die in V2.2 oder höher bereitgestellt werden bzw. für die ein Upgrade auf eine entsprechende Version durchgeführt wurde. Weitere Informationen finden Sie unter [Cluster für vCenter Server-Instanzen hinzufügen und anzeigen](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters).
 
 ## Updates für VMware vSphere-Cluster
 {: #relnotes_v22-vss}

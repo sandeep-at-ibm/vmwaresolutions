@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-02-08"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -21,7 +21,7 @@ Dieses Release stellt neue Funktionen, Komponentenaktualisierungen, Verbesserung
 
 Mit der Single-node Trial für Migration und Anwendungsmodernisierung können Sie {{site.data.keyword.cloud_notm}} sehr schnell dahingehend testen, ob VMware-Workloads in {{site.data.keyword.cloud_notm}} migriert werden, und anschließend Workloads mithilfe von Containern modernisieren. Diese Testversion ist eine Version von {{site.data.keyword.icpfull_notm}}, gehostet auf VMware vCenter Server on {{site.data.keyword.cloud_notm}} und mit der Kubernetes-Managementplattform, die mit den gleichen Tools wie in lokalen Umgebungen verwaltet werden kann.
 
-Weitere Informationen finden Sie unter [Single-node Trial für Migration und Anwendungsmodernisierung - Übersicht](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-single-node-trial-for-migration-and-app-modernization-overview).
+Weitere Informationen finden Sie unter [Single-node Trial für Migration und Anwendungsmodernisierung - Übersicht](/docs/services/vmwaresolutions?topic=vmware-solutions-cloud_modern_bundle_overview#cloud_modern_bundle_overview).
 
 ## Speicher für Network File System (NFS) hinzufügen und entfernen
 {: #relnotes_v28-nfs}

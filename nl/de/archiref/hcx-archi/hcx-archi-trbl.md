@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -17,7 +17,7 @@ subcollection: vmwaresolutions
 {: #hcx-archi-trbl-cloud-reg}
 
 * Hybrid-Cloud-Services wiederholt den Versuch nicht, wenn die Berechtigungsnachweise falsch sind. Die Berechtigungsnachweise müssen authentifiziert werden, bevor Hybrid-Cloud-Services versucht, sich anzumelden und die Cloud-Registrierung zu starten.
-* Die Cloud-Registrierung kann fehlschlagen, wenn die Berechtigungsnachweise falsch eingegeben wurden oder wenn die Berechtigungsnachweise für VCF/VCS Hybrid-Cloud-Services Cloud geändert werden, nachdem sich Hybrid-Cloud-Services bei VCF/VCS Hybrid-Cloud-Services Cloud registriert hat, und so eine fehlende Übereinstimmung entsteht.
+* Die Cloud-Registrierung kann fehlschlagen, wenn die Berechtigungsnachweise falsch eingegeben wurden oder wenn die Berechtigungsnachweise für VCS Hybrid-Cloud-Services Cloud geändert werden, nachdem sich Hybrid-Cloud-Services bei VCS Hybrid-Cloud-Services Cloud registriert hat, und so eine fehlende Übereinstimmung entsteht.
 * Um die Berechtigungsnachweise im Webclient zu aktualisieren, rufen Sie die Registerkarte "Erste Schritte mit Hybrid-Cloud-Services" auf und wählen Sie unter **Basistasks** die Option **Neue Cloud registrieren** aus.
 
 ## MAC-Adresse duplizieren

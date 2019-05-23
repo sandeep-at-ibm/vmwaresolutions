@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-04-09"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -35,7 +35,7 @@ Die vSphere ESXi-Konfiguration umfasst die folgenden Aspekte:
 
 In der folgenden Tabelle sind die Spezifikationen für die einzelnen Aspekte aufgeführt. Wenn ESXi konfiguriert und installiert wurde, wird der Host einem VMware vCenter Server hinzugefügt und von dort aus verwaltet.
 
-Mit diesem Design können Sie über Console User Interface (DCUI), ESXi Shell und Secure Shell (SSH) auf die virtuellen Hosts zugreifen.
+Mit diesem Design können Sie über Direct Console User Interface (DCUI) und vSphere Web Client auf die virtuellen Hosts zugreifen. Als bewährtes Verfahren werden Secure Shell (SSH) und ESXi Shell nach der Bereitstellung inaktiviert.
 
 Die einzigen Benutzer, die sich standardmäßig direkt anmelden können, sind die Benutzer _root_ und _ibmvmadmin_ für die physische Maschine des Hosts. Der Administrator kann Benutzer aus der Microsoft Active Directory-Domäne (MSAD) hinzufügen, um den Benutzerzugriff auf den Host zu ermöglichen. Alle Hosts im Design der vCenter Server-Lösung werden zur Synchronisation mit einem zentralen NTP-Server konfiguriert.
 
@@ -45,20 +45,20 @@ Tabelle 1. vSphere ESXi-Konfiguration
 |:---------------------- |:----------------------- |
 | ESXi-Bootposition     | Verwendet lokale Platten, die in RAID-1 konfiguriert sind. |
 | Zeitsynchronisation   | Verwendet {{site.data.keyword.cloud}}-NTP-Server. |
-| Hostzugriff            | Unterstützt DCUI, ESXi Shell oder SSH, falls aktiviert. |
+| Hostzugriff            | Unterstützt DCUI. SSH und ESXi Shell werden unterstützt, aber nicht standardmäßig aktiviert. |
 | Benutzerzugriff            | Lokale Authentifizierung und MSAD. |
 | Auflösung von Domänennamen | Verwendet DNS wie in [Design der allgemeinen Services](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_commonservice) beschrieben. |
 | EVC-Modus | Skylake (nur für "Greenfield" vSphere 6.7-Bereitstellungen) |
 
 Der vSphere-Cluster enthält die virtuellen Maschinen (VMs), die die vCenter Server-Instanz und die Rechenressourcen für Benutzerworkloads verwalten.
 
-* Wenn eine vCenter Server-Instanz nur vSAN verwendet, ist die Mindestanzahl von ESXi-Hosts bei der ersten Bereitstellung 4. 
+* Wenn eine vCenter Server-Instanz nur vSAN verwendet, ist die Mindestanzahl von ESXi-Hosts bei der ersten Bereitstellung 4.
 * Wenn eine vCenter Server-Instanz den gemeinsam genutzten Speicher auf Dateiebene oder Blockebene verwendet, beträgt die Mindestanzahl von ESXi-Hosts bei der ersten Bereitstellung 3.
 
 Sie können während oder nach der ersten Bereitstellung auf maximal 59 ESXi-Hosts skalieren.
 
 Zur Unterstützung weiterer Benutzerworkloads kann die Umgebung wie folgt skaliert werden:  
-* Bereitstellen weiterer Rechenhosts von vorhandenen Clustern
+* Bereitstellen weiterer Rechenhosts in vorhandenen Clustern
 * Bereitstellen weiterer Cluster, die von derselben vCenter Server Appliance verwaltet werden
 * Bereitstellen neuer vCenter Server-Instanzen mit eigener vCenter Server Appliance
 
@@ -76,8 +76,8 @@ Abbildung 2. vSAN-Konzept
 ![vSAN-Konzept](vcsv4radiagrams-ra-vsan.svg "vSAN fasst den lokalen Speicher über mehrere ESXi-Hosts in einem vSphere-Cluster zusammen und verwaltet den zusammengefassten Speicher als einzelnen VM-Datenspeicher")
 
 vSAN arbeitet mit den folgenden Komponenten:
-* vSAN-Design mit zwei Plattengruppen; jede Plattengruppe besteht aus zwei oder mehr Platten. Eine SSD (Solid State Disk) oder ein NVMe-Laufwerk der kleinsten Größe in der Gruppe dient als Cacheschicht, während die übrigen SSDs als Kapazitätsschicht verwendet werden. 
-* Der Onboard-RAID-Controller wird für jedes Laufwerk außer den beiden Betriebssystemlaufwerken (BS-Laufwerken) in einem RAID-0-Array pro Laufwerk konfiguriert.
+* vSAN-Design mit zwei Plattengruppen; jede Plattengruppe besteht aus zwei oder mehr Platten. Eine SSD (Solid State Disk) oder ein NVMe-Laufwerk der kleinsten Größe in der Gruppe dient als Cacheschicht, während die übrigen SSDs als Kapazitätsschicht verwendet werden.
+* Der Onboard-RAID-Controller wird für jedes Laufwerk außer den beiden Betriebssystemlaufwerken (BS-Laufwerken) in einem RAID-0-Array konfiguriert.
 * Aus allen Speicherressourcen wird ein einzelner vSAN-Datenspeicher erstellt.
 
 Die verfügbaren vSAN-Features hängen von der Lizenzedition ab, die Sie bei der Bestellung der Instanz auswählen. Weitere Informationen finden Sie unter [Vergleich der VMware vSAN-Editionen](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution-appendix#vmware-vsan-edition-comparison).
@@ -121,9 +121,9 @@ vSAN-Einstellungen werden nach bewährten Verfahren für die Bereitstellung von 
 
 Im Gegensatz zum angehängten NFS v3-Speicher unterstützt der angehängte iSCSI-Speicher aktiv-aktive Pfade über alle konfigurierten NIC-Karten-Ports und Zielports hinweg. Aus diesem Grund kann ein höherer Durchsatz erreicht werden und stellt somit eine wünschenswerte Alternative zum angehängten NFS-Speicher dar. Dies führt jedoch zu einer höheren Komplexität.
 
-Der {{site.data.keyword.cloud_notm}} Endurance-Blockspeicher unterstützt nur maximal acht Hostanschlüsse pro LUN. Hiermit wird die Funktionalität dokumentiert, die vCenter Server bei einer Änderung des {{site.data.keyword.cloud_notm}} Endurance-Speichers aufgrund von Q1 hinzugefügt wird, um das Anhängen von bis zu 64 Hosts oder iSCSI-Initiatoren zu ermöglichen, da jeder ESXi-Host über mindestens zwei Initiatoren verfügt. 
+{{site.data.keyword.cloud_notm}} Der Endurance-Blockspeicher unterstützt maximal 64 IPs, die bei der Verwendung von VMware pro LUN zugeordnet werden. Dadurch können bis zu 32 Hosts im Rahmen dieses Designs verwendet werden.
 
-Für die Verwendung der Managementkomponenten ist eine 2-TB-iSCSI-LUN an vCenter Server angehängt. Mindestens eine weitere iSCSI-LUN ist für die Verwendung durch den Kundenworkload konfiguriert. Dieser Speicher wird pro LUN als Dateisystem VMFS 6.x formatiert.
+Eine 2-TB-iSCSI-LUN ist für die Verwendung der Managementkomponenten an den vSphere-Cluster angeschlossen und mindestens eine iSCSI-LUN wird für die Verwendung durch die Kunden konfiguriert. Dieser Speicher wird pro LUN als Dateisystem VMFS 6.x formatiert.
 
 ### Einrichtung des virtuellen Netzes für iSCSI
 {: #design_virtualinfrastructure-setup-iscsi}
@@ -163,7 +163,7 @@ Neben den Controllern bereitet die {{site.data.keyword.cloud_notm}}-Automatisier
 
 Anschließend wird ein Segment-ID-Pool zugeordnet und die Hosts in dem Cluster werden der Transportzone hinzugefügt. In der Transportzone wird nur Unicast verwendet, da die IGMP-Netzüberwachung (IGMP - Internet Group Management Protocol) in der {{site.data.keyword.cloud_notm}} nicht konfiguriert ist. Pro Best Practice für VMW werden zwei VTEP-Kernel-Ports in demselben dedizierten VTEP-Subnetz konfiguriert. 
 
-Als Nächstes werden die NSX Edge Services Gateway-Paare bereitgestellt. In allen Fällen wird ein Gateway-Paar für den abgehenden Datenverkehr aus Automatisierungskomponenten verwendet, die sich im privaten Netz befinden. Es wird ein zweites Gateway, das als kundenverwaltetes Edge-Gateway bezeichnet wird, bereitgestellt und mit einem Uplink zum öffentlichen Netz sowie einer Schnittstelle, die dem privaten Netz zugeordnet ist, konfiguriert. Weitere Informationen zu NSX Edge Services Gateways, die als Teil der Lösung bereitgestellt werden, finden Sie im Dokument zur [NSX Edge Services Gateway-Lösungsarchitektur](/docs/services/vmwaresolutions/services?topic=vmware-solutions-nsx_overview#nsx_overview).
+Wenn die Instanz über öffentliche Netzschnittstellen verfügt, werden anschließend zwei NSX Edge Services Gateway-Paare bereitgestellt. Ein Gateway-Paar wird für abgehenden Datenverkehr von Automatisierungskomponenten verwendet, die sich im privaten Netz befinden. Es wird ein zweites Gateway, das als kundenverwaltetes Edge-Gateway bezeichnet wird, bereitgestellt und mit einem Uplink zum öffentlichen Netz sowie einer Schnittstelle, die dem privaten Netz zugeordnet ist, konfiguriert. Weitere Informationen zu NSX Edge Services Gateways, die als Teil der Lösung bereitgestellt werden, finden Sie im Dokument zur [NSX Edge Services Gateway-Lösungsarchitektur](/docs/services/vmwaresolutions/services?topic=vmware-solutions-nsx_overview#nsx_overview).
 
 Cloudadministratoren können alle erforderlichen NSX-Komponenten wie Distributed Logical Router (DLR), logische Switches und Firewalls konfigurieren. Die verfügbaren NSX-Features sind von der NSX-Lizenzedition abhängig, die Sie bei der Bestellung der Instanz auswählen. Weitere Informationen finden Sie unter [Vergleich der VMware NSX-Editionen](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution-appendix#vmware-nsx-edition-comparison).
 
@@ -189,7 +189,7 @@ Abbildung 4. Design verteilter Switches
 
 ![Design mit verteilten Switches](vcsv4radiagrams-distributed-switch-design.svg "vDS-Design")
 
-Wie in der vorherigen Abbildung gezeigt, wird der eine vDS für die öffentliche Netzkonnektivität (SDDC-Dswitch-Public) und der andere vDS für die private Netzkonnektivität (SDDC-Dswitch-Private) konfiguriert.Die Trennung verschiedener Typen von Datenverkehr ist erforderlich, um Konkurrenzsituationen und Latenzzeiten zu verringern und die Sicherheit zu erhöhen.
+Wie in der vorherigen Abbildung gezeigt, wird der eine vDS für die öffentliche Netzkonnektivität (SDDC-Dswitch-Public) und der andere vDS für die private Netzkonnektivität (SDDC-Dswitch-Private) konfiguriert. Die Trennung verschiedener Typen von Datenverkehr ist erforderlich, um Konkurrenzsituationen und Latenzzeiten zu verringern und die Sicherheit zu erhöhen.
 
 VLANs werden zur Segmentierung physischer Netzfunktionen verwendet. In diesem Design werden drei VLANs verwendet: zwei für privaten Netzverkehr und eines für öffentlichen Netzverkehr. In der folgenden Tabelle wird die Trennung des Datenverkehrs dargestellt.
 
@@ -225,7 +225,8 @@ Tabelle 6. Einstellungen für die Portgruppenkonfiguration für verteilte Switch
 | Failback           | Nein |
 | Failover-Reihenfolge     | Aktive Uplinks: uplink1, uplink2 \* |
 
-\* Die vSAN-Portgruppe verwendet explizites Failover mit Aktiv/Standby-Konfiguration, da sie keinen Lastausgleich für vSAN-Speicherdatenverkehr unterstützt. iSCSI-Portgruppen verfügen jeweils nur über eine aktive Uplink-Datei (iSCSI A - Uplink1, iSCSI B - Uplink 2).{:note}
+\* Die vSAN-Portgruppe verwendet explizites Failover mit Aktiv/Standby-Konfiguration, da sie keinen Lastausgleich für vSAN-Speicherdatenverkehr unterstützt. iSCSI-Portgruppen verfügen jeweils nur über eine aktive Uplink-Datei (iSCSI A - Uplink1, iSCSI B - Uplink 2).
+{:note}
 
 Tabelle 7. Portgruppen und VLANs für virtuelle Switches konvergierter Cluster, verteilter Switch **SDDC-Dswitch-Private**
 
@@ -247,7 +248,7 @@ Zweck|Gruppe verbundener Ports|Aktivierte Services|MTU
 Management|SDDC-DPortGroup-Mgmt|Managementdatenverkehr|1500 (Standardwert)
 vMotion|SDDC-DPortGroup-vMotion|vMotion-Datenverkehr|9000
 VTEP|NSX-generiert|-|9000
-VSAN|SDDC-DPortGroup-VSAN|VSAN|9000
+vSAN|SDDC-DPortGroup-VSAN|vSAN|9000
 NAS|SDDC-DPortGroup-NFS|NAS|9000
 iSCSI|SDDC-DPortGroup-iSCSI-A|iSCSI|9000
 iSCSI|SDDC-DPortGroup-iSCSI-B|iSCSI|9000
@@ -272,6 +273,22 @@ Die folgenden Aspekte werden nicht konfiguriert:
 
 Abbildung 5. Beispiel einer bereitgestellten Kunden-NSX-Topologie
 ![Beispiel einer bereitgestellten Kunden-NSX-Topologie](vcsv4radiagrams-ra-vcs-nsx-topology-customer-example.svg)
+
+## Öffentliche Netzkonnektivität
+
+Es gibt verschiedene Gründe dafür, warum Sie möglicherweise eine öffentliche Netzverbindung für Ihre Instanz benötigen. Dazu können der Zugriff auf öffentliche Aktualisierungsservices oder andere öffentliche Services für Ihre Workload, wie Geoortungsdatenbanken oder Wetterdaten, zählen. Außerdem kann es auch sein, dass Sie eine öffentliche Verbindung für Ihr Virtualisierungsmanagement und Ihre Add-on-Services benötigen. vCenter kann beispielsweise die zugehörige HCL-Datenbank aktualisieren und Updates für [VMware Update Manager (VUM)](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-intro) über das öffentliche Netz anfordern. Zerto, Veeam, VMware HCX, F5 BIG-IP und FortiGate-VM verwenden alle öffentlichen Netzverbindungen für bestimmte Bereiche der Produktlizenzierung und Lizenzaktivierung und für Nutzungsberichte. Darüber hinaus können Sie Tunnel über das öffentliche Netz verwenden, um die Verbindung zu Ihrem On-Premises-Rechenzentrum für Replikationszwecke zu nutzen.
+
+In der Regel werden diese Übertragungen selektiv über das Management-Edge-Gateway oder das Kunden-ESG (ESG, Edge Services Gateway) unter Verwendung von NAT an das öffentliche Netz geleitet. Möglicherweise verfügen Sie jedoch über zusätzliche Sicherheitsanforderungen oder möchten einen Proxy verwenden, um den Kommunikationspfad zu vereinfachen. Wenn Sie Ihre Instanz mit inaktivierten öffentlichen Schnittstellen bereitgestellt haben, können Sie zudem keine ESGs zum Weiterleiten an das öffentliche Netz verwenden.
+
+Diese Architektur ermöglicht die folgenden Optionen für die Weiterleitung (via Proxys) des Datenverkehrs an das öffentliche Netz:
+
+Methode|Beschreibung|Einschränkungen
+--|--|--
+Virtualisiertes Gateway|Implementieren Sie ein virtualisiertes Gateway (z. B. NSX ESG, F5 BIG-IP, FortiGate-VM oder eine virtuelle Appliance Ihrer Wahl) zum Traversieren des privaten und öffentlichen Netzes. Konfigurieren Sie das Routing auf dem Quellensystem (z. B. vCenter, Zerto, Ihre Workload), um nur den öffentlichen Netzdatenverkehr an das Gateway zu leiten, und konfigurieren Sie das Gateway entsprechend Ihren Anforderungen.|Anwendbar nur auf Instanzen mit aktivierter öffentlicher Schnittstelle. Diese Konfiguration ermöglicht sowohl ausgehende als auch eingehende Datenverkehrsmuster.
+Virtualisiertes Gateway mit Proxy|Implementieren Sie ein virtualisiertes Gateway wie oben beschrieben. Hinter diesem Gateway [implementieren Sie einen Proxy-Server](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-init-config#vum-init-config) und konfigurieren Ihre Services und Anwendungen so, dass sie über diesen Proxy mit dem öffentlichen Netz verbunden sind.|Anwendbar nur auf Instanzen mit aktivierter öffentlicher Schnittstelle. Abgehende Datenverkehrsmuster können den Proxy verwenden, aber eingehende Datenverkehrsmuster müssen am Gateway verwaltet werden.
+Hardware-Gateway|Implementieren Sie eine [Hardware-Gateway-Appliance](https://cloud.ibm.com/catalog/infrastructure/gateway-appliance) in Ihrem Management-VLAN. Konfigurieren Sie das Gateway für NAT bei ausgehendem Datenverkehr entsprechend Ihren Anforderungen an das öffentliche Netz.|Anwendbar auf alle Instanzen, mit oder ohne aktivierte öffentliche Schnittstellen. Diese Konfiguration ermöglicht sowohl ausgehende als auch eingehende Datenverkehrsmuster.
+Hardware-Gateway mit Proxy|Implementieren Sie eine Gateway-Appliance wie oben beschrieben. Hinter diesem Gateway [implementieren Sie einen Proxy-Server](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-init-config#vum-init-config) und konfigurieren Ihre Services und Anwendungen so, dass sie über diesen Proxy mit dem öffentlichen Netz verbunden sind.|Anwendbar auf alle Instanzen, mit oder ohne aktivierte öffentliche Schnittstellen. Abgehende Datenverkehrsmuster können den Proxy verwenden, aber eingehende Datenverkehrsmuster müssen vom Gateway verwaltet werden.
+Lastausgleichsfunktion|IBM Cloud bietet verschiedene [Lastausgleichsservices](https://cloud.ibm.com/catalog/infrastructure/load-balancer-group), mit denen Sie Zugriff auf eingehenden Netzverkehr für Ihre Anwendungen bereitstellen können.|Anwendbar auf alle Instanzen, aber beschränkt auf eingehende Datenverkehrsmuster.
 
 ## Zugehörige Links
 {: #design_virtualinfrastructure-related}

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-04-18"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -43,6 +43,6 @@ Weitere Informationen zum Verknüpfen Ihres Nur-IaaS-Kontos mit Ihrem PaaS-Konto
 ## Zugehörige Links
 {: #np_addinstancetousraccount-related}
 
-* [Benutzerzugriff mit IAM verwalten](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-access-with-iam)
+* [Benutzerzugriff mit IAM verwalten](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-iam#iam)
 * [Benutzer für den Zugriff auf Services und Ressourcen einladen](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-iamuserinvite)
 * [Was ist IBM Cloud IAM?](/docs/iam?topic=iam-iamoverview)

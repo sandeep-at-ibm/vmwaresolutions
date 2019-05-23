@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2017-10-13"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -78,7 +78,7 @@ Neben den vordefinierten und getesteten Optionen "S (Klein)" und "Standard" gibt
 
 Um die horizontale Skalierung Ihrer gehosteten VMware-Umgebung zu erhöhen, können Sie jetzt einen neuen Cluster in einem anderen Pod der {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) oder einem anderen {{site.data.keyword.CloudDataCent_notm}} (Rechenzentrum) als dem ersten in der Instanz bereitgestellten Cluster erstellen.
 
-Weitere Informationen finden Sie unter [Cluster für vCenter Server-Instanzen hinzufügen und anzeigen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-and-viewing-clusters-for-vcenter-server-instances).
+Weitere Informationen finden Sie unter [Cluster für vCenter Server-Instanzen hinzufügen, anzeigen und löschen](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters).
 
 ### Komponenten ändern
 {: #relnotes_v19-change-comp}

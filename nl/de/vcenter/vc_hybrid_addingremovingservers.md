@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-18"
+lastupdated: "2019-04-18"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -30,11 +30,12 @@ Ab dem Release V2.9 können Sie einem Cluster neue ESXi-Server hinzufügen, wäh
 Da Ihr erster Cluster vSAN als Speicher verwendet, kann das Hinzufügen einzelner oder mehrerer ESXi-Server nach der Bereitstellung die Speicherkapazität des Clusters erhöhen.
 
 ## ESXi-Server zu vCenter Server with Hybridity Bundle-Instanzen hinzufügen
+{: #vc_hybrid_addingremovingservers-adding}
 
 ### Vor dem Hinzufügen von ESXi-Servern
 {: #vc_hybrid_addingremovingservers-adding-prereq}
 
-* Fügen Sie keine ESXi-Server über VMware vSphere Web Client hinzu. Die Änderungen, die Sie in vSphere Web Client vornehmen, werden nicht mit der {{site.data.keyword.vmwaresolutions_short}}-Konsole synchronisiert.
+* Fügen Sie ESXi-Server nach Möglichkeit über die {{site.data.keyword.vmwaresolutions_full}}-Konsole hinzu, da Änderungen, die Sie am VMware vSphere Web Client vornehmen, nicht mit der {{site.data.keyword.vmwaresolutions_short}}-Konsole synchronisiert werden. Fügen Sie daher ESXi-Server nur für On-Premise-ESXi-Server oder ESXi-Server hinzu, die Sie nicht in der {{site.data.keyword.vmwaresolutions_short}}-Konsole verwalten können/möchten.
 * Für den vSAN-Speicher sind mindestens 4 ESXi-Server erforderlich.
 
 ## Vorgehensweise beim Hinzufügen von ESXi-Servern
@@ -65,7 +66,7 @@ Wenn Sie ESXi-Server während des Wartungsmodus hinzufügen, werden virtuelle Ma
 ### Vor dem Entfernen von ESXi-Servern
 {: #vc_hybrid_addingremovingservers-removing-prereq}
 
-* Entfernen Sie keine ESXi-Server über VMware vSphere Web Client. Die Änderungen, die Sie in vSphere Web Client vornehmen, werden nicht mit der {{site.data.keyword.vmwaresolutions_short}}-Konsole synchronisiert.
+* Entfernen Sie ESXi-Server nach Möglichkeit über die {{site.data.keyword.vmwaresolutions_full}}-Konsole, da die Änderungen, die Sie im vSphere Web Client vornehmen, nicht mit der {{site.data.keyword.vmwaresolutions_short}}-Konsole synchronisiert werden. Entfernen Sie daher ESXi-Server nur von On-Premise-ESXi-Servern oder ESXi-Servern, die Sie nicht in der {{site.data.keyword.vmwaresolutions_short}}-Konsole verwalten können/möchten.
 * Für den vSAN-Speicher sind mindestens 4 ESXi-Server erforderlich.
 * Bevor Sie ESXi-Server mit installiertem Service "F5 on {{site.data.keyword.cloud_notm}}" oder "FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}" entfernen, müssen Sie die VMs für F5 BIG-IP und FortiGate auf einen ESXi-Server verlagern, auf dem die VMs nicht gehostet werden.
 * Stellen Sie vor dem Entfernen von ESXi-Servern mit installiertem Service "IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}" sicher, dass keine (fehlgeschlagenen oder laufenden) Sicherungs- oder Wiederherstellungsoperationen aktiv sind, da diese aktiven Operationen das Entfernen der ESXi-Server verhindern könnten.
@@ -96,5 +97,5 @@ Wenn Sie ESXi-Server während des Wartungsmodus hinzufügen, werden virtuelle Ma
 * [vCenter Server-Teileliste](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
 * [Voraussetzungen und Planung für vCenter Server with Hybridity Bundle-Instanzen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)
 * [Cluster für vCenter Server with Hybridity Bundle-Instanzen hinzufügen, anzeigen und löschen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingviewingclusters)
-* [Versetzen eines Hosts in den Wartungsmodus](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
-* [Prozessorunterstützung für EVC (Enhanced vMotion Compatibility)](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003212){:new_window}
+* [Versetzen eines Hosts in den Wartungsmodus](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.resmgmt.doc/GUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
+* [Prozessorunterstützung für EVC (Enhanced vMotion Compatibility)](https://kb.vmware.com/s/article/1003212){:new_window}

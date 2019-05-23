@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-03-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -126,7 +126,7 @@ Netcool Insights-Produkt)
   -	Web Terminal (Open Source)
   -	Skydive - Netzanalyseprogramm (Open Source)
 
-Basierend auf der von Jane entwickelten Lösungsarchitektur verwendet Todd für Stock Trader anfänglich [Db2](https://console.cloud.ibm.com/catalog/services/db2-hosted), [MQ](https://console.cloud.ibm.com/catalog/services/mq) und [Redis](https://console.cloud.ibm.com/catalog/services/databases-for-redis).
+Basierend auf der von Jane entwickelten Lösungsarchitektur verwendet Todd für Stock Trader anfänglich [Db2](https://cloud.ibm.com/catalog/services/db2-hosted), [MQ](https://cloud.ibm.com/catalog/services/mq) und [Redis](https://cloud.ibm.com/catalog/services/databases-for-redis).
 
 ## Middleware hinzufügen
 {: #vcscontent-addmidware-add-middleware}

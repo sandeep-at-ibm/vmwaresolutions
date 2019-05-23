@@ -4,16 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
 # Installation und Konfiguration von HCX für die Quelle
 {: #hcx-archi-install-cfg-src}
 
-Die lokale Installation umfasst die Bereitstellung der HCX-Management-Appliance und ihre Registrierung bei vCenter und mindestens einem für VCF/VCS/HCX aktivierten Cloudendpunkt.
+Die lokale Installation umfasst die Bereitstellung der HCX-Management-Appliance und ihre Registrierung bei vCenter und mindestens einem für VCS HCX aktivierten Cloudendpunkt.
 
 ## HCX Manager-Appliance installieren
 {: #hcx-archi-install-cfg-src-install-hma}

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -22,9 +22,9 @@ Dieses Produktangebot erstellt ein optimiertes, softwaredefiniertes WAN, um die 
 ## Layer-2-Netz-Erweiterung
 {: #hcx-archi-overview-layer-2-net}
 
-HCX ermöglicht es einer vorhandenen lokalen vSphere-Bereitstellung, ein Netz sicher von der lokalen vCenter-Instanz in ein IBM Cloud-Rechenzentrum zu erweitern, in dem VMware Cloud Foundation oder vCenter Server ausgeführt wird. Diese Funktion wird durch die folgenden Elemente aktiviert:
+HCX ermöglicht es einer vorhandenen lokalen vSphere-Bereitstellung, ein Netz sicher von der lokalen vCenter-Instanz in ein IBM Cloud-Rechenzentrum zu erweitern, in dem VMware vCenter Server ausgeführt wird. Diese Funktion wird durch die folgenden Elemente aktiviert:
 * HCX stellt eine Appliance mit dem Namen "Layer 2 Concentrator" (Layer-2-Konzentrator, L2C) bereit.
-* Erweiterte Netze werden mit IBM Cloud-NSX-Edge-Appliances verbunden, die in VMware Cloud Foundation oder vCenter Server bereitgestellt sind.
+* Erweiterte Netze werden mit IBM Cloud-NSX-Edge-Appliances verbunden, die in VMware vCenter Server bereitgestellt sind.
 * Es können mehrere Standard-Layer-2-Konzentratoren bereitgestellt werden, um Skalierbarkeit zu erzielen und den Durchsatz von Seiten der lokalen vCenter-Instanz zu erhöhen.
 * Virtuelle Maschinen, die über das Cloud-Gateway und über ein erweitertes Layer-2-Netz migriert werden, können ihre IP- und MAC-Adressen beibehalten.
 
@@ -155,7 +155,7 @@ Bevor die Komponenten genauer beschrieben werden, muss die Basisimplementierung 
 * Wenn cloudumfassende vMotion vorgesehen ist, gelten für Clouds dieselben Affinitätsbeschränkungen, wie sie lokal gelten.
 * Die Quellenumgebung muss über eine Methode verfügen, um eine Verbindung zu Cloud-Umgebungen herzustellen. Dies schließt öffentlichen Internetzugang oder private Verbindungen über IBM Cloud Direct Link ein. Andere Verbindungen als das öffentliche Internet zu weiteren Cloud-Anbietern werden hier nicht beschrieben.
 * Die VMs der Quellenumgebung und die Netze, die migriert oder erweitert werden sollen, müssen sich in Portgruppen innerhalb eines virtuellen verteilten Switch oder eines virtuellen verteilten Switch von Cisco Nexus 1000v befinden.
-* Die IBM Cloud muss mindestens eine Instanz einer VMware Cloud Foundation- oder vCenter Server-Umgebung enthalten.
+* IBM Cloud muss mindestens eine Instanz von VMware vCenter Server enthalten.
 * Ausreichend Ressourcen für die virtuellen Appliances.
 * Die Netze müssen den Appliances die Kommunikation sowohl mit lokalen als auch mit fernen virtuellen Appliances und anderen virtuellen Maschinen ermöglichen.
 * In Anhang A zu den Portzugriffsvoraussetzungen sind die Ports aufgelistet, die geöffnet werden müssen, damit die virtuellen Hybrid-Cloud-Services-Appliances erfolgreich installiert werden können.

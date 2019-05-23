@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -54,7 +54,7 @@ Sie können Benachrichtigungen über den Status von System- oder Benutzeroperati
        </tr>
        <tr>
          <td>Typ</td>
-         <td>Der Typ der Komponente, auf die sich das gemeldete Ereignis bezieht:<ul><li>vCenter Server-Instanzen</li><li>Cloud Foundation-Instanzen</li><li>Services</li><li>System</li></ul></td>
+         <td>Der Typ der Komponente, auf die sich das gemeldete Ereignis bezieht:<ul><li>vCenter Server-Instanzen</li><li>Services</li><li>System</li></ul></td>
        </tr>
        <tr>
          <td>Ressource</td>

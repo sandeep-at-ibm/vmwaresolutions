@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -48,7 +48,7 @@ Der erste Schritt besteht darin, Ihre my.vmware.com-Berechtigungsnachweise zur v
 ### VCSA für die Verwendung des Proxys konfigurieren
 {: #vum-updating-vsan-config-vcsa-proxy}
 
-1.	Stellen Sie von Ihrem Jump-Server-Web-Browser eine Verbindung zur VCSA-Managementschnittstelle `https://<vCenter ip>:5480` her.
+1.	Stellen Sie über den Web-Browser Ihres Jump-Servers eine Verbindung zur VCSA-Managementschnittstelle her: `https://<vCenter ip>:5480`.
 2.	Melden Sie sich mit den Berechtigungsnachweisen von der IC4VS-Konsole bei der VCSA-Managementschnittstelle als Root an.
 3.	Klicken Sie in der vCenter Server Appliance-Managementschnittstelle auf **Vernetzung** und dann auf **Verwalten**.
 4.	Wenn Sie einen Proxy-Server konfigurieren möchten, klicken Sie im Teilfenster "Proxy-Einstellungen" auf **Bearbeiten**.
@@ -56,7 +56,7 @@ Der erste Schritt besteht darin, Ihre my.vmware.com-Berechtigungsnachweise zur v
 
 Es gibt Berichte, in denen angegeben wird, dass die Proxy-Informationen nur für HTTP und nicht für HTTPS definiert sind. Damit die Proxy-Informationen auch für den HTTPS-Datenverkehr konfiguriert werden können, muss zuerst eine entsprechende Aktivierung erfolgen. Nachdem Sie sich bei der VCSA über SSH angemeldet haben, verwenden Sie den Befehl proxy.get, um die Konfiguration anzuzeigen und sicherzustellen, dass die HTTPS-Parameter nicht definiert sind.
 
-Wenn die HTTPS-Parameter nicht definiert sind, verwenden Sie den folgenden Befehl:
+Wenn die HTTPS-Parameter nicht festgelegt sind, verwenden Sie den folgenden Befehl:
   `proxy.set --protocol https --server ``<proxy ip>`` --port 3128`
 
 ### vSAN für die Verwendung des Proxys konfigurieren
@@ -153,4 +153,4 @@ Viele grundlegende Verwaltungstasks können so wesentlich effizienter ausgeführ
 {: #vum-updating-vsan-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demonstrationen)
+* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (Demonstrationen)

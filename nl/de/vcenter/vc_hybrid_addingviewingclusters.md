@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-18"
+lastupdated: "2019-04-18"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -25,11 +25,12 @@ Sie können Cluster zu Ihrer VMware vCenter Server on {{site.data.keyword.cloud}
 ## Cluster zu vCenter Server with Hybridity Bundle-Instanzen hinzufügen
 {: #vc_hybrid_addingviewingclusters-adding}
 
-Die Anzahl der Cluster, die zu einer Instanz hinzugefügt werden können, hängt von der Instanzversion ab:
-* Für Instanzen, die in (oder einem Upgrade auf) V2.5 und höher implementiert wurden, legt die Anzahl der Cluster, Hosts und VMs die maximale Begrenzung für die Anzahl der Cluster fest, die Sie hinzufügen können. Sie müssen die Richtlinien und Grenzwerte für die VMware-Dimensionierung für Ihre Implementierung beibehalten.
-* Für Instanzen, die ab Version 2.3 bereitgestellt oder darauf aktualisiert wurden, können Sie bis zu 10 Cluster hinzufügen.
+### Vor dem Hinzufügen von Clustern
+{: #vc_hybrid_addingviewingclusters-before-add}
 
-Weitere Informationen zu maximalen Grenzwerten finden Sie in [VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window}.
+* Fügen Sie Cluster nach Möglichkeit über die {{site.data.keyword.vmwaresolutions_full}}-Konsole hinzu, da Änderungen, die Sie am VMware vSphere Web Client vornehmen, nicht mit der {{site.data.keyword.vmwaresolutions_short}}-Konsole synchronisiert werden. Fügen Sie daher Cluster nur für On-Premise-Cluster oder Cluster hinzu, die Sie nicht in der {{site.data.keyword.vmwaresolutions_short}}-Konsole verwalten können/möchten.
+* Für Instanzen, die in (oder einem Upgrade auf) V2.5 und höher implementiert wurden, legt die Anzahl der Cluster, Hosts und VMs die maximale Begrenzung für die Anzahl der Cluster fest, die Sie hinzufügen können. Sie müssen die Richtlinien und Grenzwerte für die VMware-Dimensionierung für Ihre Implementierung beibehalten. Weitere Informationen zu maximalen Grenzwerten finden Sie in [VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window}.
+* Für Instanzen, die in Version 2.3 und 2.4 bereitgestellt oder darauf aktualisiert wurden, können Sie bis zu 10 Cluster hinzufügen.
 
 ### Systemeinstellungen
 {: #vc_hybrid_addingviewingclusters-adding-sys-settings}
@@ -48,7 +49,7 @@ Der Clustername muss die folgenden Anforderungen erfüllen:
 #### Standort des Rechenzentrums
 {: #vc_hybrid_addingviewingclusters-adding-dc-location}
 
-Der Standort des {{site.data.keyword.CloudDataCent_notm}}s für den Cluster wird standardmäßig auf das {{site.data.keyword.CloudDataCent_notm}} der vCenter Server-Instanz gesetzt. Sie können den Cluster in einem anderen {{site.data.keyword.CloudDataCent_notm}} als die bereitgestellte Instanz bereitstellen, müssen aber sicherstellen, dass die Netzlatenz zwischen den beiden {{site.data.keyword.CloudDataCents_notm}} weniger als 150 Millisekunden beträgt. Verwenden Sie zum Überprüfen der Netzlatenz ein Tool wie [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}.
+Der Standort des {{site.data.keyword.CloudDataCent_notm}}s für den Cluster wird standardmäßig auf das {{site.data.keyword.CloudDataCent_notm}} der vCenter Server-Instanz gesetzt. Sie können den Cluster in einem anderen {{site.data.keyword.CloudDataCent_notm}} als die bereitgestellte Instanz bereitstellen, müssen aber sicherstellen, dass die Netzlatenz zwischen den beiden {{site.data.keyword.CloudDataCents_notm}} weniger als 150 Millisekunden beträgt. Verwenden Sie zum Überprüfen der Netzlatenz ein Tool wie [Looking Glass](/docs/infrastructure/network-tools?topic=network-tools-about-looking-glass#about-looking-glass).
 
 Wenn Sie den Cluster in einem anderen {{site.data.keyword.CloudDataCent_notm}}- oder {{site.data.keyword.cloud_notm}}-Infrastrukturpod bereitstellen, werden drei weitere VLANs zur Verwendung mit den bestellten {{site.data.keyword.baremetal_short}}-Instanzen bestellt.
 
@@ -79,20 +80,14 @@ Tabelle 2. Optionen für Broadwell Bare Metal Server-Instanzen
 
 | CPU-Modelloptionen        | RAM-Optionen       |
 |:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4 / 16 Kerne insgesamt, 2,1 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2650 v4 / 24 Kerne insgesamt, 2,2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
-| Dual Intel Xeon E5-2690 v4 / 28 Kerne insgesamt, 2,6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Quad Intel Xeon E7-4820 v4 / 40 Kerne insgesamt, 1,9 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 Kerne insgesamt, 2,2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 
 #### Bare Metal Server-Anzahl
 {: #vc_hybrid_addingviewingclusters-adding-bare-metal-number}
 
-Für einen Cluster werden mindestens zwei {{site.data.keyword.baremetal_short}}-Instanzen benötigt.
-
-Sie können bis zu 59 {{site.data.keyword.baremetal_short}}-Instanzen für einen Cluster und gleichzeitig 1 bis 59 ESXi-Server hinzufügen.
-
-Nach der Implementierung können Sie bis zu vier weitere Cluster erstellen. Für VMware vSAN-Speicher werden für den ersten Cluster und die Cluster nach der Bereitstellung vier Server benötigt.
+* Alle Server, die Sie bestellen, haben die gleiche Konfiguration.
+* Sie können zwischen 4 und 59 Server bestellen.
 
 ### vSAN-Speichereinstellungen
 {: #vc_hybrid_addingviewingclusters-adding-vsan-storage-settings}
@@ -100,9 +95,9 @@ Nach der Implementierung können Sie bis zu vier weitere Cluster erstellen. Für
 VMware vSAN 6.6 ist Bestandteil der Bestellung Ihrer vCenter Server with Hybridity Bundle-Instanz. Geben Sie die folgenden vSAN-Optionen an:
 * **Plattentyp und Größe für vSAN-Kapazitätsplatten**: Wählen Sie die für die Kapazitätsplatten benötigte Option aus.
 * **Anzahl der vSAN-Kapazitätsplatten**: Geben Sie die Anzahl der hinzuzufügenden Kapazitätsplatten an.
-* Wenn Sie über den Grenzwert von acht Stück hinaus Kapazitätsplatten hinzufügen möchten, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen. Diese Option stellt zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 10 Kapazitätsplatten bereit und ist für Workloads nützlich, die eine geringere Latenzzeit und einen höheren Durchsatz an E/A-Operationen pro Sekunde erfordern.
+* Wenn Sie über den Grenzwert von zehn Stück hinaus Kapazitätsplatten hinzufügen möchten, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen. Diese Option stellt zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 12 Kapazitätsplatten bereit und ist für Workloads nützlich, die eine geringere Latenzzeit und einen höheren Durchsatz an E/A-Operationen pro Sekunde erfordern.
 
-  Die Option **High-Performance Intel Optane** ist nur für die Skylake-CPU-Modelle Dual Intel Xeon Gold 5120 und Dual Intel Xeon Gold 6140 verfügbar.
+  Die Option **Hohe Leistung mit Intel Optane** ist nur für die Skylake-CPU-Modelle verfügbar.
   {:note}
 
 * Überprüfen Sie die Werte für **Plattentyp für vSAN-Cacheplatten** und **Anzahl der vSAN-Cacheplatten**. Diese Werte hängen davon ab, ob Sie das Feld **Hohe Leistung mit Intel Optane** ausgewählt haben.
@@ -124,7 +119,6 @@ Die Einstellungen für die Netzschnittstellenkarte (NIC - Network Interface Card
 * F5 on {{site.data.keyword.cloud_notm}}
 * FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}
 * FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}
-* Zerto on {{site.data.keyword.cloud_notm}}
 
 ### Bestellübersicht
 {: #vc_hybrid_addingviewingclusters-adding-order-summary}
@@ -188,10 +182,10 @@ Der Clustername kann nicht geändert werden. Wenn Sie den Clusternamen ändern, 
         <dt class="dt dlterm">Gelöscht</dt>
         <dd class="dd">Der Cluster wurde gelöscht.</dd>
     </dl>
-4. Klicken Sie auf einen Clusternamen, um die Details zu den ESXi-Servern, zum Speicher und zur Netzschnittstelle anzuzeigen: 
+4. Klicken Sie auf einen Clusternamen, um die Details zu den ESXi-Servern, zum Speicher und zur Netzschnittstelle anzuzeigen:
 
   * ESXi-Serverdetails:
-     * **Name**: Der Name des ESXi-Servers im Format `<host_prefix><n>.<subdomain_label>.<root_domain>`, wobei Folgendes gilt:
+     * **Name**: Der Name des ESXi-Servers hat das Format `<host_prefix><n>.<subdomain_label>.<root_domain>`. Dabei gilt Folgendes:
 
        `host_prefix` ist das Hostnamenspräfix,
 
@@ -222,7 +216,8 @@ Der Clustername kann nicht geändert werden. Wenn Sie den Clusternamen ändern, 
     * **VLAN-Nummer**: Die eindeutige VLAN-Nummer.
     * **Beschreibung**: Die Beschreibung des VLAN.
     * **Standort**: Der Standort des Rechenzentrums.
-    * **Primäre Route**: Die primäre Route des VLAN. Klicken Sie auf **Ressourcen anzeigen**, um auf die VLAN-Details zuzugreifen.
+    * **Primäre Route**: Die primäre Route des VLAN.
+    Klicken Sie auf **Ressourcen anzeigen**, um auf die VLAN-Details zuzugreifen.
   * Netzschnittstelle - Teilnetz-Details:
     * **Name**: Der Teilnetzname. Klicken Sie auf den Namen, um auf die Teilnetzdetails zuzugreifen.
     * **Typ**: Der Typ des Teilnetzes - primär oder portierbar.
@@ -240,6 +235,7 @@ Wird ein Cluster nicht mehr benötigt, kann er aus einer Instanz gelöscht werde
 ### Vorbereitende Schritte für die Löschung
 {: #vc_hybrid_addingviewingclusters-deleting-prereq}
 
+* Löschen Sie Cluster nach Möglichkeit über die {{site.data.keyword.vmwaresolutions_full}}-Konsole, da Änderungen, die Sie am VMware vSphere Web Client vornehmen, nicht mit der {{site.data.keyword.vmwaresolutions_short}}-Konsole synchronisiert werden. Löschen Sie daher Cluster nur für On-Premise-Cluster oder Cluster, die Sie nicht in der {{site.data.keyword.vmwaresolutions_short}}-Konsole verwalten können/möchten.
 * Es kann immer nur ein Cluster gleichzeitig gelöscht werden. Zum Löschen mehrerer Cluster müssen Sie die entsprechenden Cluster nacheinander löschen und dabei abwarten, bis der vorherige Cluster gelöscht wurde, bevor Sie den nächsten Cluster löschen.
 * Stellen Sie sicher, dass alle Knoten in einem Cluster eingeschaltet und betriebsbereit sind, bevor Sie den Cluster löschen.
 * Wenn Sie einen Cluster löschen, werden auch alle VMs (virtuellen Maschinen) des Clusters gelöscht und können nicht wiederhergestellt werden. Sollen die VMs beibehalten werden, dann müssen Sie sie auf andere Cluster migrieren.

@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-05"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -50,7 +50,7 @@ Da das WAN-Optimierungsprogramm den Datenverkehr über das WAN (typischerweise i
 
 - Cloudseitige Benutzerschnittstelle: Die cloudseitige HCX-Benutzerschnittstelle ist über die öffentliche Registrierungs-URL für die HCX-Clientregistrierung zugänglich. Standardmäßig verwendet sie die cloudseitige vSphere-SSO-Anmeldung (` administrator@vsphere.local`). In der Regel wird sie für das Upgrade der Installation und zum Ändern einiger Netzkonfigurationen verwendet. Außerdem werden mit ihr auch virtuelle Netze innerhalb von HCX erstellt.
 
-- Management-Benutzerschnittstelle für client-/cloudseitige HCX-Manager-Appliance: Der Zugriff auf die Appliance-Managementbenutzerschnittstelle für die Cloud- oder Clientseite erfolgt über die private IP-Adresse der VM, so wie sie in vCenter angezeigt wird `https://<hcxmanager_IP>:9443`. Die ID (meist "admin") und das Kennwort werden über das {{site.data.keyword.vmwaresolutions_short}}-Portal bereitgestellt. Die Managementbenutzerschnittstelle wird für Folgendes verwendet: Starten und Stoppen von HCX-Manager-Services; Konfigurieren der Protokollüberwachung; grundlegende Netzkonfiguration; manuelle Upgrades; Unterstützung der Protokollerfassung, wenn die Webbenutzerschnittstelle nicht funktioniert; Registrierung bei vSphere-Komponenten (vCenter, PSC, NSX-Manager); Zertifikatsmanagement.
+- Management-Benutzerschnittstelle für client-/cloudseitige HCX-Manager-Appliance: Der Zugriff auf die Appliance-Managementbenutzerschnittstelle für die Cloud- oder Clientseite erfolgt über die private IP-Adresse der VM, so wie sie in vCenter angezeigt wird (`https://<hcxmanager_IP>:9443`). Die ID (meist "admin") und das Kennwort werden über das {{site.data.keyword.vmwaresolutions_short}}-Portal bereitgestellt. Die Managementbenutzerschnittstelle wird für Folgendes verwendet: Starten und Stoppen von HCX-Manager-Services; Konfigurieren der Protokollüberwachung; grundlegende Netzkonfiguration; manuelle Upgrades; Unterstützung der Protokollerfassung, wenn die Webbenutzerschnittstelle nicht funktioniert; Registrierung bei vSphere-Komponenten (vCenter, PSC, NSX-Manager); Zertifikatsmanagement.
 
 ## Zugehörige Links
 {: #vcshcx-components-related}

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -23,7 +23,7 @@ In diesem Abschnitt wird die Architektur der einzelnen HCX-Komponenten beschrieb
 ## Einführung in HCX
 {: #hcx-archi-source-intro-hcx}
 
-Die HCX-Technologie integriert vSphere vCenter-Netze nahtlos in IBM Cloud VCF- oder VCS-Plattformen. Durch die hybride Vernetzung werden lokale vSphere vCenter-Netze hin zu IBM Cloud erweitert, wodurch die Mobilität der virtuellen Maschinen (VMs) unterstützt wird.
+Die HCX-Technologie integriert vSphere vCenter-Netze nahtlos in IBM Cloud VCS-Plattformen. Durch die hybride Vernetzung werden lokale vSphere vCenter-Netze hin zu IBM Cloud erweitert, wodurch die Mobilität der virtuellen Maschinen (VMs) unterstützt wird.
 
 In dieser Einführung werden die Tasks zusammengefasst, die ausgeführt werden können, sowie die Funktionen, die die Migration und Netzerweiterung unterstützen und verbessern.
 
@@ -216,7 +216,7 @@ Das Proximity Routing stellt sicher, dass die Weiterleitung zwischen virtuellen 
 
 Wenn Benutzer ihre Netze auf die Cloud erweitern, wird die Layer-2-Konnektivität auf IBM Cloud erweitert. Ohne Routenoptimierung jedoch müssen die Layer-3-Kommunikationsanforderungen zum lokalen weiterzuleitenden Ursprungsnetz zurückkehren. Diese Rückgabe wird als "Tromboning" oder "Hairpinning" bezeichnet.
 
-Das Tromboning ist ineffizient, da Pakete zwischen dem Ursprungsnetz und der Cloud hin- und hergesendet werden müssen, selbst wenn sich sowohl die Quellen- als auch die Ziel-VM in der Cloud befindet. Zur Ineffizienz kommt hinzu, dass die Kommunikation fehlschlagen kann, wenn der Weiterleitungspfad statusabhängige Firewalls oder andere Inline-Geräte beinhaltet, die auf beide Seiten der Verbindung zugreifen können müssen. Ein Fehlschlagen der VM-Kommunikation (ohne Routenoptimierung) tritt auf, wenn der Austrittspfad aus der Cloud entweder das erweiterte Layer-2-Netz oder das VCS/VCF NSX Edge-Gateway sein kann. Dem lokalen Netz ist der "Direktaufruf" des erweiterten Netzes nicht bekannt. Dieses Problem wird als asymmetrisches Routing bezeichnet. Die Lösung besteht darin, Proximity Routing zu aktivieren, sodass das lokale Netz die Routen von IBM Cloud lernen kann.
+Das Tromboning ist ineffizient, da Pakete zwischen dem Ursprungsnetz und der Cloud hin- und hergesendet werden müssen, selbst wenn sich sowohl die Quellen- als auch die Ziel-VM in der Cloud befindet. Zur Ineffizienz kommt hinzu, dass die Kommunikation fehlschlagen kann, wenn der Weiterleitungspfad statusabhängige Firewalls oder andere Inline-Geräte beinhaltet, die auf beide Seiten der Verbindung zugreifen können müssen. Ein Fehlschlagen der VM-Kommunikation (ohne Routenoptimierung) tritt auf, wenn der Austrittspfad aus der Cloud entweder das erweiterte Layer-2-Netz oder das VCS NSX Edge-Gateway sein kann. Dem lokalen Netz ist der "Direktaufruf" des erweiterten Netzes nicht bekannt. Dieses Problem wird als asymmetrisches Routing bezeichnet. Die Lösung besteht darin, Proximity Routing zu aktivieren, sodass das lokale Netz die Routen von IBM Cloud lernen kann.
 
 Um das Tromboning zu verhindern, verwendet HCX intelligentes Routenmanagement und wählt Routen aus, die für den Status der virtuellen Maschine geeignet sind. Das Cloud-Gateway verwaltet einen Bestand an virtuellen Maschinen in der Cloud. Es erkennt auch den Status der virtuellen Maschine. Folgende Status sind möglich:
 * Mit vMotion in die Cloud übertragen (Migration ohne Ausfallzeit).
@@ -228,7 +228,7 @@ Um das Tromboning zu verhindern, verwendet HCX intelligentes Routenmanagement un
 
 Im Diagramm befinden sich die `N*a`-Komponenten auf der linken Seite im lokalen Rechenzentrum, die `N*b`-Komponenten auf der rechten Seite hingegen in der Cloud.
 
-R1 ist das Standard-Gateway für N1-b. Deshalb muss N1-b zu R1 zurückkehren, damit der Datenverkehr durch R2 geleitet wird. Um ein asymmetrisches Routing zu verhindern, fügt HCX Hostrouten in das NSX-Overlay der IBM Cloud VCS/VCF-Bereitstellung ein. Wenn die virtuelle Maschine in der Cloud neu erstellt oder mit niedriger Ausfallzeit migriert wurde, wird die Hostroute sofort eingefügt.
+R1 ist das Standard-Gateway für N1-b. Deshalb muss N1-b zu R1 zurückkehren, damit der Datenverkehr durch R2 geleitet wird. Um ein asymmetrisches Routing zu verhindern, fügt HCX Hostrouten in das NSX-Overlay der IBM Cloud VCS-Bereitstellung ein. Wenn die virtuelle Maschine in der Cloud neu erstellt oder mit niedriger Ausfallzeit migriert wurde, wird die Hostroute sofort eingefügt.
 
 Wurde die virtuelle Maschine mit vMotion übertragen, wird die Route erst dann eingefügt, wenn die virtuelle Maschine neu gestartet wird. Indem Sie bis nach dem Warmstart warten, stellen Sie sicher, dass die lokalen statusabhängigen Einheiten die vorhandene Sitzung weiterhin bedienen, bis die virtuelle Maschine neu gestartet wurde. Nach dem Warmstart sind die Routing-Informationen lokal und in der Cloud konsistent.
 
@@ -251,7 +251,7 @@ Abbildung 5. Asymmetrisches Routing mit Proximity Routing-Lösung
 ### Migration von Sicherheitsrichtlinien
 {: #hcx-archi-source-sec-policy-mig}
 
-Mit der Funktion für Richtlinienmigration können verteilte NSX-Firewallregeln von einer lokalen vCenter-Instanz in eine für VCF/VCS HCX aktivierte Cloud verschoben werden. Eine Richtlinienmigration ist möglich, wenn eine virtuelle Maschine mittels Migration mit niedriger Ausfallzeit oder vMotion über ein Netz verschoben wird, das mit dem Layer-2-Konzentrator für hohen Durchsatz erweitert wurde.
+Mit der Funktion für Richtlinienmigration können verteilte NSX-Firewallregeln von einer lokalen vCenter-Instanz in eine für VCS HCX aktivierte Cloud verschoben werden. Eine Richtlinienmigration ist möglich, wenn eine virtuelle Maschine mittels Migration mit niedriger Ausfallzeit oder vMotion über ein Netz verschoben wird, das mit dem Layer-2-Konzentrator für hohen Durchsatz erweitert wurde.
 * Im lokalen Rechenzentrum muss NSX 6.2.2 oder höher aktiv sein.
 * In vSphere handelt es sich bei der Sicherheitsrichtlinie um einen einzelnen NSX-Abschnitt, der eine Vielzahl von Regeln enthalten kann. Pro virtuelles Rechenzentrum einer Organisation kann es nur einen Abschnitt (eine Richtlinie) geben.
 * Es kann eine Gruppe von IP- oder MAC-Adressen angegeben werden, die an der Richtlinie beteiligt sein sollen. Der Name der Gruppe von IP- bzw. MAC-Adressen darf 218 Zeichen nicht überschreiten.

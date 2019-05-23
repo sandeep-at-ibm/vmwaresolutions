@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -44,13 +44,13 @@ Die in der Lösung verfügbaren Serverkonfigurationen erfüllen oder überschrei
 Die {{site.data.keyword.baremetal_short}} befindet sich in der {{site.data.keyword.cloud_notm}}.
 {:note}
 
-Jede vCenter Server-Instanz beginnt mit einer Bereitstellung mit drei oder vier Hosts, abhängig von der Wahl der Speicherlösung. 
+Jede vCenter Server-Instanz beginnt mit einer Bereitstellung mit drei oder vier Hosts, abhängig von der Wahl der Speicherlösung.
 
 Der physische Host verwendet zwei lokal angeschlossene Platten, die dem vSphere ESXi-Hypervisor zugeordnet werden. Sie können weitere Platten unter Verwendung von vSAN, wie unter _Design des physischen Speichers_ beschrieben, oder unter Verwendung von NetApp ONTAP, wie im Dokument zur [NetApp ONTAP Select-Architektur](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf) beschrieben, zuordnen. Jeder
 physische Host verfügt über redundante Netzverbindungen mit 10 Gb/s für den öffentlichen und den privaten Netzzugriff.
 
 Der Bare-Metal-Server weist die folgenden Spezifikationen auf:
-* CPU: Dual Intel Xeon, variierende Kern- und Geschwindigkeitskonfiguration
+* CPU: Dual oder Quad Intel Xeon, variierende Kern- und Geschwindigkeitskonfiguration
 * Hauptspeicher: Variierende Konfiguration, 64 GB oder größer
 * Netz: 4 x 10 Gb/s
 * Anzahl Laufwerke: 2 oder mehr
@@ -63,7 +63,7 @@ Der physische Netzbetrieb wird von {{site.data.keyword.cloud_notm}} gesteuert. L
 ### Netzübersicht für IBM Cloud
 {: #design_physicalinfrastructure-ibm-cloud-network}
 
-Das physische Netz von {{site.data.keyword.cloud_notm}} ist in zwei unterschiedliche Netze unterteilt: öffentlich und privat. Das private Netz enthält den Out-of-band-Management-IPMI-Datenverkehr (IPMI = Intelligent Platform Management Interface) zu den physischen Servern.
+Das physische Netz von {{site.data.keyword.cloud_notm}} ist in zwei unterschiedliche Netze unterteilt: öffentlich und privat. Das private Netz enthält außerdem den Management-IPMI-Datenverkehr (IPMI - Intelligent Platform Management Interface) zu den physischen Servern.
 
 Abbildung 2. Allgemeine Netzübersicht für {{site.data.keyword.cloud_notm}}
 ![{{site.data.keyword.cloud_notm}} - Allgemeine Netzübersicht](vcsv4radiagrams-ra-ibmcloudnetwork.svg)
@@ -87,7 +87,7 @@ Alle {{site.data.keyword.CloudDataCents_notm}} und Bereitstellungspunkte (PoPs) 
 #### Managementnetz
 {: #design_physicalinfrastructure-mgmt-net}
 
-Zusätzlich zu den öffentlichen und privaten Netzen ist jeder {{site.data.keyword.cloud_notm}}-Server für Out-of-band-Management mit dem privaten primären Netz-Teilnetz verbunden. Diese Verbindung ermöglicht IPMI-Zugriff auf den Server unabhängig von seiner CPU-, Firmware- und Betriebssystem-Verwaltung zu Wartungs- und Verwaltungszwecken.
+Zusätzlich zu den öffentlichen und privaten Netzen ist jeder {{site.data.keyword.cloud_notm}}-Server für die Verwaltung mit dem privaten primären Netzteilnetz verbunden. Diese Verbindung ermöglicht IPMI-Zugriff auf den Server unabhängig von seiner CPU-, Firmware- und Betriebssystem-Verwaltung zu Wartungs- und Verwaltungszwecken.
 
 #### Primäre und portierbare IP-Blöcke
 {: #design_physicalinfrastructure-ip-blocks}
@@ -110,7 +110,7 @@ Da verschiedene Konnektivitätsoptionen zusammen mit den Netz-Routing-Optionen e
 
 Jeder physische Host in diesem Design verfügt über zwei redundante Paare von Ethernet-Verbindungen mit 10 Gb/s zu jedem (öffentlichen und privaten) {{site.data.keyword.cloud_notm}} Top of Rack-Switch (ToR-Switch). Die Adapter sind als einzelne Verbindungen (ohne Bonding) für Verbindungen mit insgesamt 4 x 10 Gb/s eingerichtet. Dies ermöglicht es NIC-Verbindungen (NIC - Networking Interface Card, Netzschnittstellenkarte), unabhängig voneinander zu arbeiten.
 
-Das Entfernen der physischen Netzkonnektivität zum öffentlichen oder privaten Netz für die Bare-Metal-Server, die innerhalb des vCenter Server-Angebots verwendet werden, ist nicht möglich. Physikalische Anschlüsse an der internen NIC des Bare-Metal können deaktiviert werden. Die Kabel können jedoch nicht entfernt werden. 
+Das Entfernen der physischen Netzkonnektivität zum öffentlichen oder privaten Netz für die Bare-Metal-Server, die innerhalb des vCenter Server-Angebots verwendet werden, ist nicht möglich. Physikalische Anschlüsse an der internen NIC des Bare-Metal können deaktiviert werden. Die Kabel können jedoch nicht entfernt werden.
 
 Abbildung 3. Physische Hostverbindungen</br>
 ![Physische Hostverbindungen](vcsv4radiagrams-ra-physical-host-connections.svg "Physische Hostverbindungen")
@@ -118,7 +118,7 @@ Abbildung 3. Physische Hostverbindungen</br>
 #### VLANs und Underlay-to-Overlay-Routing
 {: #design_physicalinfrastructure-vlans}
 
-Die Angebote von {{site.data.keyword.vmwaresolutions_short}} beinhalten 3 VLANs, d. h. ein öffentliches und zwei private, die bei der Bereitstellung zugewiesen werden. Wie in der vorherigen Abbildung zu sehen ist, werden das öffentliche VLAN den Verbindungen "eth1" und "eth3" und die privaten VLANs den Verbindungen "eth0" und "eth2" zugeordnet.
+Die Angebote von {{site.data.keyword.vmwaresolutions_short}} beinhalten 3 VLANs, d. h. ein öffentliches und zwei private, die bei der Bereitstellung zugewiesen werden. Wie in der vorherigen Abbildung zu sehen ist, werden das öffentliche VLAN den Verbindungen `eth1` und `eth3` und die privaten VLANs den Verbindungen `eth2` und `eth3` zugeordnet.
 
 Das öffentliche VLAN und das erste private VLAN, das in diesem Design erstellt und zugeordnet wird, sind in {{site.data.keyword.cloud_notm}} standardmäßig nicht mit Tags versehen. Dann wird das weitere private VLAN durch einen Trunk mit den physischen Switch-Ports verbunden und mit Tags in den VMware-Portgruppen versehen, die diese Teilnetze nutzen.
 
@@ -134,7 +134,7 @@ Neben dem VLAN "Privat A" ist ein zweites privates VLAN (hier als VLAN "Privat B
    * Bei Verwendung von NFS-angeschlossenen NAS wird ein Teilnetz einer Portgruppe zugeordnet, die für NFS-Datenverkehr dediziert ist.
    * Für den iSCSI-Anschluss werden zwei Portgruppen erstellt, um Multipathing-Aktiv-Aktiv für beide private NIC-Ports zu ermöglichen, da in der VMware-iSCSI-Dokumentation jeweils nur ein NIC-Port aktiv sein kann.
 
-Alle Teilnetze, die als Bestandteil einer automatisierten vCenter Server- oder Cloud Foundation-Bereitstellung konfiguriert werden, verwenden verwaltete {{site.data.keyword.cloud_notm}}-Bereiche. Dadurch wird sichergestellt, dass eine beliebige IP-Adresse an jedes Rechenzentrum innerhalb des {{site.data.keyword.cloud_notm}}-Kontos geleitet werden kann, wenn Sie die Verbindung jetzt oder in Zukunft benötigen.
+Alle Teilnetze, die als Bestandteil einer automatisierten vCenter Server-Bereitstellung konfiguriert werden, verwenden verwaltete {{site.data.keyword.cloud_notm}}-Bereiche. Dadurch wird sichergestellt, dass eine beliebige IP-Adresse an jedes Rechenzentrum innerhalb des {{site.data.keyword.cloud_notm}}-Kontos geleitet werden kann, wenn Sie die Verbindung jetzt oder in Zukunft benötigen.
 
 Die folgende Tabelle gibt Ihnen eine Zusammenfassung.
 
@@ -146,12 +146,12 @@ Tabelle 1. VLAN- und Teilnetzzusammenfassung
 | Privat A | Primär  | Einzelnes Teilnetz, das physischen Hosts zugeordnet ist, die von {{site.data.keyword.cloud_notm}} zugeordnet werden. Von der Managementschnittstelle für vSphere-Managementdatenverkehr verwendet. |
 | Privat A | Portierbar | Einzelnes Teilnetz, das virtuellen Maschinen zugeordnet ist, die als Managementkomponenten fungieren |
 | Privat A | Portierbar | Einzelnes Teilnetz, das NSX-V oder NSX-T VTEP zugeordnet ist |
-| Privat A | Portierbar | Einzelnes Teilnetz, das für vSAN (sofern verwendet) zugeordnet ist |
+| Privat B | Portierbar | Einzelnes Teilnetz, das für vSAN (sofern verwendet) zugeordnet ist |
 | Privat B | Portierbar | Einzelnes Teilnetz, das für NAS (sofern verwendet) zugeordnet ist |
 | Privat B | Portierbar | Zwei Teilnetze, die für iSCSI-NAS zugeordnet sind, sofern verwendet (1 pro physischem NIC-Port) |
 | Privat B | Portierbar | Einzelnes Teilnetz, das für vMotion zugeordnet ist |
 
-In diesem Design werden alle VLAN-gestützten Hosts und virtuellen Maschinen so konfiguriert, dass sie auf den {{site.data.keyword.cloud_notm}}-Back-End-Kundenrouter (BCR - Back-end Customer Router) des “privaten Netzes” als Standardroute verweisen. Obwohl die vCenter Server-Instanzen die Verwendung von Software-Defined Networking (SDN) ermöglichen, sind Netzoverlays, die in einer VMware-Instanz erstellt werden und das Routing an interne Teilnetze einschließen, den verwalteten {{site.data.keyword.cloud_notm}}-Routern nicht bekannt. 
+In diesem Design werden alle VLAN-gestützten Hosts und virtuellen Maschinen so konfiguriert, dass sie auf den {{site.data.keyword.cloud_notm}}-Back-End-Kundenrouter (BCR - Back-end Customer Router) des “privaten Netzes” als Standardroute verweisen. Obwohl die vCenter Server-Instanzen die Verwendung von Software-Defined Networking (SDN) ermöglichen, sind Netzoverlays, die in einer VMware-Instanz erstellt werden und das Routing an interne Teilnetze einschließen, den verwalteten {{site.data.keyword.cloud_notm}}-Routern nicht bekannt.
 
 Wenn Sie ein Routing zwischen Overlay und Underlay wünschen, müssen Sie eine IBM Firewall-Einheit für das entsprechende private Standard-VLAN bereitstellen, wenn die vCenter Server-Instanz bereitgestellt wird. Mit diesem Gerät können statische Routen und dynamisches Routingprotokoll-Peering mit den Overlay-Netzgeräten eingefügt werden, um das Routing zwischen der Underlay- und Overlay-Funktion zu ermöglichen.
 
@@ -160,7 +160,7 @@ Die privaten Netzverbindungen werden so konfiguriert, dass sie eine Jumbo-Frame-
 ## Design des physischen Speichers
 {: #design_physicalinfrastructure-storage-design}
 
-Das Design des physischen Speichers besteht aus der Konfiguration der physischen Platten, die in den physischen Hosts installiert sind, und der Konfiguration des gemeinsam genutzten Speichers auf Dateiebene. Dazu gehören das Betriebssystem (vSphere ESXi) und die Platten, die für die Speicherung der virtuellen Maschinen (VMs) verwendet werden. Speicher für virtuelle Platten kann aus lokalen Platten, die durch VMware vSAN virtualisiert werden, oder aus gemeinsam genutztem Speicher auf Dateiebene oder auf Blockebene bestehen.
+Das Design des physischen Speichers besteht aus der Konfiguration der physischen Platten, die in den physischen Hosts installiert sind, und der Konfiguration des gemeinsam genutzten Network-attached Storage (NAS). Dazu gehören das Betriebssystem (vSphere ESXi) und die Platten, die für die Speicherung der virtuellen Maschinen (VMs) verwendet werden. Speicher für virtuelle Platten kann aus lokalen Platten, die durch VMware vSAN virtualisiert werden, oder aus gemeinsam genutztem Speicher auf Dateiebene oder auf Blockebene bestehen.
 
 ### Betriebssystemplatten
 {: #design_physicalinfrastructure-os-disks}
@@ -170,7 +170,7 @@ Der vSphere ESXi-Hypervisor wird an einer persistenten Position installiert. Dah
 ### vSAN-Festplatten
 {: #design_physicalinfrastructure-vsan-disks}
 
-Dieses Design bietet die Option, entweder VMware vSAN-Speicher oder gemeinsam genutzten Speicher auf Dateiebene als primären Datenspeicher für virtuelle Maschinen zu verwenden. Für VMware vSAN wird die Konfiguration mit Hilfe einer Flash-Konfiguration durchgeführt. Dieses Design bietet mehrere Konfigurationsoptionen, einschließlich 2U- und 4U-Chassis, verschiedener Plattenanzahlen und verschiedener Plattengrößen. Alle Konfigurationen verwenden zwei vSAN-Plattengruppen, wobei eine SSD-Platte (Solid State Disk) für Cachefunktionen und eine oder mehrere SSDs für Kapazität verwendet werden. Alle für vSAN-Nutzung zugeordneten Laufwerke werden in einer RAID-0-Konfiguration mit einer einzelnen Platte konfiguriert.
+Dieses Design bietet die Option, entweder VMware vSAN-Speicher oder gemeinsam genutzten Network-attached Storage als primären Datenspeicher für virtuelle Maschinen zu verwenden. Für VMware vSAN wird die Konfiguration mit Hilfe einer Flash-Konfiguration durchgeführt. Dieses Design bietet mehrere Konfigurationsoptionen, einschließlich 2U- und 4U-Chassis, verschiedener Plattenanzahlen und verschiedener Plattengrößen. Alle Konfigurationen verwenden zwei vSAN-Plattengruppen, wobei eine SSD-Platte (Solid State Disk) für Cachefunktionen und eine oder mehrere SSDs für Kapazität verwendet werden. Alle für vSAN-Nutzung zugeordneten Laufwerke werden in einer RAID-0-Konfiguration mit einer einzelnen Platte konfiguriert.
 
 Weitere Informationen zu den unterstützten Konfigurationen finden Sie unter [vCenter Server-Teileliste](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
 
@@ -179,7 +179,7 @@ Weitere Informationen zu den unterstützten Konfigurationen finden Sie unter [vC
 
 Bei Verwendung von gemeinsam genutztem Speicher auf Dateiebene wird eine zwei Terabyte große, gemeinsam genutzte NFS-Ressource an die Hosts angehängt, die den ersten VMware-Cluster bilden. Diese gemeinsam genutzte Ressource, die als gemeinsam genutzte Managementressource bezeichnet wird, wird für das Management von Komponenten wie VMware vCenter Server, Platform Services Controller (PSC) und VMware NSX verwendet.
 
-Der Speicher wird mithilfe des Protokolls NFSv3 angehängt und unterstützt 2 IOPS pro GB von IBM Cloud. IBM normalisiert die IOP-Ebene, die mit einer 16-K-Blockgröße bereitgestellt wird, so dass größere Blockgrößen einen niedrigeren Grenzwert und kleinere Blockgrößen einen höheren Grenzwert erkennen. 
+Der Speicher wird mithilfe des Protokolls NFSv3 angehängt und unterstützt 2 IOPS pro GB von IBM Cloud. IBM normalisiert die IOP-Ebene, die mit einer 16-K-Blockgröße bereitgestellt wird, so dass größere Blockgrößen einen niedrigeren Grenzwert und kleinere Blockgrößen einen höheren Grenzwert erkennen.
 
 Abbildung 4. An die VMware-Bereitstellung angehängte, gemeinsam genutzte NFS-Ressourcen
 
@@ -192,9 +192,9 @@ Die Verfügbarkeit der 10 IOPS/GB hängt vom IBM Cloud Data Center ab. {{site.da
 ### Gemeinsam genutzter iSCSI-Speicher
 {: #design_physicalinfrastructure-shared-iscsi}
 
-Wie bei NFS wird bei der Verwendung von gemeinsam genutztem iSCSI-Speicher eine zwei Terabyte große iSCSI-Ressource an die Hosts angehängt, die den ersten VMware-Cluster bilden. Diese iSCSI-LUN wird für das Management von Komponenten wie VMware vCenter Server, Platform Services Controller (PSC) und VMware NSX verwendet. Der Speicher wird mithilfe des Protokolls iSCSI angehängt und unterstützt 2 IOPs pro GB von IBM Cloud. 
+Wie bei NFS wird bei der Verwendung von gemeinsam genutztem iSCSI-Speicher eine zwei Terabyte große iSCSI-Ressource an die Hosts angehängt, die den ersten VMware-Cluster bilden. Diese iSCSI-LUN wird für das Management von Komponenten wie VMware vCenter Server, Platform Services Controller (PSC) und VMware NSX verwendet. Der Speicher wird mithilfe des Protokolls iSCSI angehängt und unterstützt 2 IOPs pro GB von IBM Cloud.
 
-IBM normalisiert die IOP-Ebene, die mit einer 16-K-Blockgröße bereitgestellt wird, so dass größere Blockgrößen einen niedrigeren Grenzwert und kleinere Blockgrößen einen höheren Grenzwert erkennen. 
+IBM normalisiert die IOP-Ebene, die mit einer 16-K-Blockgröße bereitgestellt wird, so dass größere Blockgrößen einen niedrigeren Grenzwert und kleinere Blockgrößen einen höheren Grenzwert erkennen.
 
 Abbildung 5. An die VMware-Bereitstellung angehängte iSCSI-LUNs</br>
 ![An die VMware-Bereitstellung angehängte iSCSI-LUNs](vcsv4radiagrams-ra-iscsi-lun.svg "An die VMware-Bereitstellung angehängte iSCSI-LUNs")

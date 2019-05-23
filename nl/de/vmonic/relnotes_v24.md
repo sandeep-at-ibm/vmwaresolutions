@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-06-22"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -55,7 +55,7 @@ Ab dem Release von V2.4 sind die folgenden neuen Bare Metal Server-CPU-Modelle z
 * Dual Intel Skylake Xeon Gold 5120-Prozessor / 28 Cores insgesamt, 2,2 GHz
 * Dual Intel Skylake Xeon Gold 6140-Prozessor / 36 Cores insgesamt, 2,3 GHz
 
-Weitere Informationen finden Sie im Abschnitt zu *Einstellungen für Bare Metal Server* unter [Neue vSphere-Cluster bestellen](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances#bare-metal-server-settings).
+Weitere Informationen finden Sie im Abschnitt mit den [Einstellungen für Bare-Metal-Server](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vs_orderinginstances#vs_orderinginstances-bare-metal-settings).
 
 ## Updates für VMware vCenter Server-Instanzen
 {: #relnotes_v24-vcs}
@@ -63,7 +63,7 @@ Weitere Informationen finden Sie im Abschnitt zu *Einstellungen für Bare Metal 
 ### Leistungsverbesserung für Network File System
 {: #relnotes_v24-nfs}
 
-Die Leistungsstufe von 10 E/A-Operationen pro Sekunde und GB, die für die anspruchsvollsten Workloadtypen konzipiert ist, ist nicht mehr auf bestimmte {{site.data.keyword.CloudDataCent_notm}} begrenzt, sondern ist nun für alle Rechenzentren verfügbar. Weitere Informationen finden Sie im Abschnitt *Speicher* unter [Übersicht über vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#technical-specifications-for-vcenter-server-instances).
+Die Leistungsstufe von 10 E/A-Operationen pro Sekunde und GB, die für die anspruchsvollsten Workloadtypen konzipiert ist, ist nicht mehr auf bestimmte {{site.data.keyword.CloudDataCent_notm}} begrenzt, sondern ist nun für alle Rechenzentren verfügbar. Weitere Informationen finden Sie im Abschnitt [Speicher](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#vc_vcenterserveroverview-storage).
 
 ## Updates für Add-on-Services
 {: #relnotes_v24-services}

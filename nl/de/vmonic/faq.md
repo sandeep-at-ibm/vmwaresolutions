@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -27,7 +27,7 @@ Hier finden Sie Antworten auf häufig gestellte Fragen zu {{site.data.keyword.vm
 
 * **IBMid-Konto**. Dieses Konto ist für den Zugriff auf die {{site.data.keyword.vmwaresolutions_short}}-Konsole erforderlich. Die Konsole ist eine eigenständige und vom {{site.data.keyword.slportal}} getrennte Benutzerschnittstelle. Weitere Informationen finden Sie unter [Einführung](/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started).
 * **{{site.data.keyword.cloud_notm}}-Konto**. Dieses Konto ist für die Bereitstellung erforderlich. Sie können sich für ein {{site.data.keyword.cloud_notm}}-Konto registrieren, indem Sie eine vorhandene **IBMid** verwenden oder eine neue **IBMid** erstellen.
-* **{{site.data.keyword.cloud_notm}}-Infrastrukturkonto**. Dieses Konto, das früher als **IBM SoftLayer-Konto** bezeichnet wurde, wird zur Anmeldung am Kundenportal für die {{site.data.keyword.cloud_notm}}-Infrastruktur verwendet, das weitere Funktionen zur Verwaltung von Infrastrukturprodukten und -services zur Verfügung stellt. Sie erhalten ein {{site.data.keyword.cloud_notm}}-Infrastrukturkonto, indem Sie Ihr **{{site.data.keyword.cloud_notm}}-Konto** auf ein nutzungsabhängiges Konto aktualisieren oder indem Sie Ihr vorhandenes Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) mit Ihrem {{site.data.keyword.cloud_notm}}-Konto verknüpfen. Das {{site.data.keyword.cloud_notm}}-Infrastrukturkonto, das Sie verwenden, muss bestimmte Voraussetzungen erfüllen. Weitere Informationen finden Sie in [Für erforderliche Konten registrieren](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account) und in [Anforderungen für das {{site.data.keyword.cloud_notm}}-Infrastrukturkonto](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).
+* **{{site.data.keyword.cloud_notm}}-Infrastrukturkonto**. Dieses Konto wird zur Anmeldung am Kundenportal für die {{site.data.keyword.cloud_notm}}-Infrastruktur verwendet, das weitere Funktionen zur Verwaltung von Infrastrukturprodukten und -services zur Verfügung stellt. Sie erhalten ein {{site.data.keyword.cloud_notm}}-Infrastrukturkonto, indem Sie Ihr **{{site.data.keyword.cloud_notm}}-Konto** auf ein nutzungsabhängiges Konto aktualisieren oder indem Sie Ihr vorhandenes Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur mit Ihrem {{site.data.keyword.cloud_notm}}-Konto verknüpfen. Das {{site.data.keyword.cloud_notm}}-Infrastrukturkonto, das Sie verwenden, muss bestimmte Voraussetzungen erfüllen. Weitere Informationen finden Sie in [Für erforderliche Konten registrieren](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account) und in [Anforderungen für das {{site.data.keyword.cloud_notm}}-Infrastrukturkonto](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).
 
 ## Wie kann ich meine Berechtigungsnachweise für die IBM Cloud-Infrastruktur zur IBM Cloud for VMware Solutions-Konsole zuordnen?
 {: #faq-associate-credentials}
@@ -85,10 +85,7 @@ Nein, dies ist nicht zu empfehlen. Es könnte zu Störungen bei den {{site.data.
 {: #faq-rename-cluster}
 {: faq}
 
-Bei vCenter Server-Instanzen hat der erste Cluster, der während der Bereitstellung erstellt wird, den Standardnamen **cluster1**. Sie können den Standardcluster in VMware vSphere Client umbenennen. Wenn Sie einen Cluster zu einer vCenter Server-Instanz hinzufügen, können Sie den gewünschten Namen in der {{site.data.keyword.vmwaresolutions_short}}-Konsole angeben.
-
-Bei Cloud Foundation-Instanzen kann der Standardclustername nicht geändert werden.
-{:note}
+Bei einer neuen vCenter-Serverinstanz hat der erste Cluster, der während der Implementierung erstellt wird, den Standardnamen **cluster1**. Sie können den Standardcluster in VMware vSphere Client umbenennen. Wenn Sie einen Cluster zu einer vCenter Server-Instanz hinzufügen, können Sie den gewünschten Namen in der {{site.data.keyword.vmwaresolutions_short}}-Konsole angeben.
 
 ## Wie werden Patches verwaltet?
 {: #faq-patches}
@@ -96,17 +93,7 @@ Bei Cloud Foundation-Instanzen kann der Standardclustername nicht geändert werd
 
 IBM stellt fortlaufend Updates für den IBM Code bereit, indem die virtuellen Serverinstanzen (VSI) für IBM CloudDriver bedarfsgesteuert bereitgestellt werden. Für Add-on-Services wie Zerto on {{site.data.keyword.cloud_notm}} oder Veeam on {{site.data.keyword.cloud_notm}} werden von IBM keine kontinuierlichen Updates bereitgestellt. Für den Abruf und die Installation solcher Updates müssen Sie selbst sorgen.
 
-VMware-Aktualisierungen werden auf Grundlage des Instanztyps auf andere Weise angewendet.
-
-### Instanzen von VMware Cloud Foundation
-{: #faq-patches-cf}
-
-Die Aktualisierungen für die Komponenten vSphere ESXi, NSX, vCenter, Platform Services Controller und SDDC Manager werden über die {{site.data.keyword.vmwaresolutions_short}}-Konsole bereitgestellt.
-
-### Instanzen von VMware vCenter Server
-{: #faq-patches-vcs}
-
-Für in Version 2.1 bereitgestellte oder darauf aktualisierte Instanzen werden als Patches für neu bereitgestellte ESXi-Server und -Cluster aktuelle, jedoch nicht zwingend die neuesten ESXi-Updates von VMware vewendet.
+Für in Version 2.1 bereitgestellte oder darauf aktualisierte VMware vCenter Server-Instanzen werden als Patches für neu bereitgestellte ESXi-Server und -Cluster aktuelle, jedoch nicht zwingend die neuesten ESXi-Updates von VMware verwendet.
 
 Für alle anderen Updates von VMware-Komponenten sind Sie selbst verantwortlich; in diesem Zusammenhang müssen Sie auch sicherstellen, dass neu bereitgestellte ESXi-Server und Cluster über die notwendigen neuesten Updates verfügen.
 {:important}
@@ -160,7 +147,7 @@ Sie können den Status der Instanzbereitstellung überprüfen, indem Sie den Ber
 {: #faq-vss-automation}
 {: faq}
 
-Nein. VMware vSphere on {{site.data.keyword.cloud_notm}} nutzt nicht die bei Cloud Foundation- und vCenter Server-Plattformen verfügbare erweiterte Automatisierung. Basierend auf Ihrer Bestellung stellt die Plattform optionale VMware-Lizenzen, ESXi-Server und optional ein HA-Paar von physischen FortiGate-Firewalls bereit. Wenn ein neuer Cluster erstellt wird, werden auch drei neue VLANs bereitgestellt: ein öffentliches VLAN und zwei private VLANs.
+Nein. VMware vSphere on {{site.data.keyword.cloud_notm}} verwendet nicht die erweiterte Automatisierung der vCenter Server-Plattform. Basierend auf Ihrer Bestellung stellt die Plattform optionale VMware-Lizenzen, ESXi-Server und optional ein HA-Paar von physischen FortiGate-Firewalls bereit. Wenn ein neuer Cluster erstellt wird, werden auch drei neue VLANs bereitgestellt: ein öffentliches VLAN und zwei private VLANs.
 
 VMware ESXi wird automatisch auf jedem Bare Metal Server installiert. Für die Installation aller weiteren VMware-Komponenten wie vCenter Server oder NSX sind jedoch Sie selbst zuständig. vSphere on {{site.data.keyword.cloud_notm}} stellt zwar sicher, dass basierend auf den ausgewählten VMware-Komponenten auch VMware-kompatible Hardware bestellt wird, aber es gibt keine Automatisierung für die Konfiguration und Inbetriebnahme der VMware-Umgebung. Entwurf und Architekturgestaltung für die von IBM gehostete Umgebung liegen in Ihrer Zuständigkeit.
 

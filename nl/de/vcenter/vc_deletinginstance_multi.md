@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -38,8 +38,8 @@ Die gelöschten Instanzen werden Ihnen bis zum Ende des Abrechnungszyklus für d
 
 1. Entfernen Sie alle Services aus der sekundären vCenter Server-Instanz.
 2. Stellen Sie sicher, dass keine NSX-Objekte in die sekundäre Instanz erweitert werden, die Sie löschen möchten.
-3. Löschen Sie den sekundären vCenter-Server aus der primären SSO-Domäne (Single Sign-On). Weitere Informationen finden Sie unter [Unregister vCenter Server from Single Sign-On](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2106736){:new_window}.
-4. Stufen Sie die virtuelle Serviceinstanz (VSI) für den lokalen Domänencontroller herab. Weitere Informationen finden Sie unter [Demoting domain controllers and domains](https://technet.microsoft.com/en-us/windows-server-docs/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-){:new_window}.
+3. Löschen Sie den sekundären vCenter-Server aus der primären SSO-Domäne (Single Sign-On). Weitere Informationen finden Sie unter [Unregister vCenter Server from Single Sign-On](https://kb.vmware.com/s/article/2106736){:new_window}.
+4. Stufen Sie die virtuelle Serviceinstanz (VSI) für den lokalen Domänencontroller herab. Weitere Informationen finden Sie unter [Demoting domain controllers and domains](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-){:new_window}.
 5. Löschen Sie die sekundäre vCenter Server-Instanz in der {{site.data.keyword.vmwaresolutions_short}}-Konsole.
 6. Wiederholen Sie die Schritte 1-5 für alle sekundären vCenter Server-Instanzen in Ihrer Konfiguration mit mehreren Standorten.
 7. Nachdem Sie alle sekundären Instanzen gelöscht haben, können Sie auch die primäre Instanz in der {{site.data.keyword.vmwaresolutions_short}}-Konsole löschen.

@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-04"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -64,7 +64,7 @@ Tabelle 2. Für die Anwendungskonfiguration verwendete Standardinformationen
 |---|---|
 |Umgebung |Umgebungsname auf “Initial” gesetzt|
 |Umgebung | Score auf 5 gesetzt|
-|Asset-Repository |Es werden zwei Asset-Repositorys konfiguriert: vCenter und NSX-Manager. Die Host-URL wird festgelegt auf https://*vCenter fqdn* und https://*NSX Manager fqdn*|
+|Asset-Repository | Es werden zwei Asset-Repositorys konfiguriert: vCenter und NSX-Manager. Die Host-URL ist auf `https://vCenter_fqdn` und `https://*NSX Manager_fqdn` gesetzt |
 |Asset-Repository |Es werden zwei Asset-Repositorys konfiguriert: vCenter und NSX-Manager. Für beide wird derselbe Benutzername verwendet. Der Benutzername wird auf den Benutzernamen des vCenter-Administrators gesetzt|
 |Asset-Repository |Es werden zwei Asset-Repositorys konfiguriert: vCenter und NSX-Manager. Für beide wird dasselbe Kennwort verwendet. Das Kennwort wird auf das Kennwort des vCenter-Administrators gesetzt
 |Asset-Repository |Es werden zwei Asset-Repositorys konfiguriert: vCenter und NSX-Manager. Für beide wird dasselbe Kennwort verwendet. Der Typ wird für das eine Repository auf vCenter, für das andere auf NSX gesetzt

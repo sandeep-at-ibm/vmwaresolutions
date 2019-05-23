@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-11"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -20,7 +20,7 @@ subcollection: vmwaresolutions
 
 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle ist eine Instanz, die in V2.3 und höheren Releases verfügbar ist. Ab V2.6 ist die vCenter Server with Hybridity Bundle-Instanz für Business Partner verfügbar.
 
-vCenter Server with Hybridity Bundle ist eine gehostete private Cloud, die den VMware vSphere-Stack als Service bereitstellt. Die VMware-Umgebung basiert auf vier {{site.data.keyword.cloud_notm}}-{{site.data.keyword.baremetal_short}}-Instanzen, umfasst VMware vSAN als dedizierten Speicher, bietet die automatische Bereitstellung und Konfiguration einer (über VMware NSX betriebenen) verwaltungsfreundlichen logischen Edge-Firewall und enthält den Service "VMware HCX on {{site.data.keyword.cloud_notm}}".
+vCenter Server with Hybridity Bundle ist eine gehostete private Cloud, die den VMware vSphere-Stack als Service bereitstellt. Die VMware-Umgebung basiert auf mindestens vier {{site.data.keyword.cloud_notm}}-{{site.data.keyword.baremetal_short}}-Instanzen, umfasst VMware vSAN als dedizierten Speicher, bietet die automatische Bereitstellung und Konfiguration einer (über VMware NSX betriebenen) verwaltungsfreundlichen logischen Edge-Firewall und enthält den Service "VMware HCX on {{site.data.keyword.cloud_notm}}".
 
 In zahlreichen Fällen kann die gesamte Umgebung in weniger als einem Tag bereitgestellt werden und die Bare-Metal-Infrastruktur kann die Rechenkapazität nach Bedarf schnell und flexibel skalieren.
 
@@ -61,7 +61,7 @@ Das Basisangebot wird mit einer vCenter Server-Appliance bereitgestellt, deren G
 
 Insgesamt benötigt das Basisangebot 38 virtuelle CPUs und 67 GB virtuellen RAM, die für die Virtualisierungsmanagementschicht reserviert sind. Die verbleibende Hostkapazität für Ihre VMs hängt von mehreren Faktoren ab, beispielsweise der Übersubskriptionsrate, der VM-Dimensionierung und den Anforderungen an die Workloadleistung.
 
-Informationen zu zusätzlichem Ressourcenbedarf für das Management beim Bereitstellen des Service "HCX on {{site.data.keyword.cloud_notm}}" finden Sie in [VMware HCX on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview).
+Informationen zu zusätzlichem Ressourcenbedarf für das Management beim Bereitstellen des Service "HCX on {{site.data.keyword.cloud_notm}}" finden Sie in [VMware HCX on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations).
 
 ### Hybridinfrastruktur
 {: #vc_hybrid_overview-infras-hybrid}
@@ -81,9 +81,9 @@ Verfügbarkeit und Preisgestaltung standardisierter Hardwarekonfigurationen kön
 ### Bare Metal Server
 {: #vc_hybrid_overview-bare-metal}
 
-Vier {{site.data.keyword.baremetal_short}}-Instanzen erhalten Sie für Ihre Bestellung einer vCenter Server with Hybridity Bundle-Instanz. Die folgenden Konfigurationen sind verfügbar:
+Sie können vier oder mehr {{site.data.keyword.baremetal_short}}-Instanzen mit einer der folgenden Konfigurationen bestellen:
   * **Skylake**: 2-CPU Intel Skylake Generation-Server (Intel Xeon 4100/5100/6100 Series) mit dem ausgewählten CPU-Modell und der RAM-Größe.
-  * **Broadwell**: 2-CPU Intel Broadwell Generation-Server (Intel Xeon E5-2600/E7-4800 Series) mit dem ausgewählten CPU-Modell und der RAM-Größe.
+  * **Broadwell**: 4-CPU Intel Broadwell Generation-Server (Intel Xeon E7-4800 Series) mit dem ausgewählten CPU-Modell und der RAM-Größe.
 
 ### Vernetzung
 {: #vc_hybrid_overview-networking}
@@ -97,9 +97,9 @@ Die folgenden Netzkomponenten werden bestellt:
 
     Dieses ESG ist für Sie weder zugänglich, noch können Sie es verwenden. Wenn Sie es ändern, sind Sie möglicherweise nicht mehr in der Lage, die vCenter Server with Hybridity Bundle-Instanz über die {{site.data.keyword.vmwaresolutions_short}}-Konsole zu verwalten. Beachten Sie außerdem, dass die Verwendung einer Firewall oder die Inaktivierung der ESG-Kommunikation mit den externen IBM Managementkomponenten dazu führt, dass {{site.data.keyword.vmwaresolutions_short}} unbrauchbar wird.
     {:important}
-  * 1 sicheres vom Kunden verwaltetes VMware NSX Edge Services Gateway für eingehenden und abgehenden HTTPS-Workloaddatenverkehr, das von IBM als Vorlage bereitgestellt wird und von Ihnen geändert werden kann, um den VPN-Zugriff oder den öffentlichen Zugriff zu ermöglichen. Weitere Informationen finden Sie im Abschnitt [Stellt das vom Kunden verwaltete NSX Edge ein Sicherheitsrisiko dar?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-customer-managed-nsx-edge-pose-a-security-risk-)
+  * 1 sicheres vom Kunden verwaltetes VMware NSX Edge Services Gateway für eingehenden und abgehenden HTTPS-Workloaddatenverkehr, das von IBM als Vorlage bereitgestellt wird und von Ihnen geändert werden kann, um den VPN-Zugriff oder den öffentlichen Zugriff zu ermöglichen. Weitere Informationen finden Sie im Abschnitt [Stellt das vom Kunden verwaltete NSX Edge ein Sicherheitsrisiko dar?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#faq-customer-nsx)
 
-Weitere Informationen zu Netzkomponenten, die bei der Bereitstellung des Service "HCX on {{site.data.keyword.cloud_notm}}" finden Sie in [HCX on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview).
+Weitere Informationen zu Netzkomponenten, die bei der Bereitstellung des Service "HCX on {{site.data.keyword.cloud_notm}}" finden Sie in [HCX on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations).
 
 ### Virtual Server-Instanzen
 {: #vc_hybrid_overview-vsi}
@@ -116,7 +116,7 @@ Der vSAN-Speicher bietet angepasste Konfigurationen mit unterschiedlichen Option
 * Speicherplatte: 960 GB SSD SED, 1,9 TB SSD SED oder 3,8 TB SSD SED.
 
   Zusätzlich werden zwei Cacheplatten mit 960 GB pro Host bestellt.
-* Option für "Hohe Leistung mit Intel Optane", die zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 10 Kapazitätsplatten bereitstellt. Diese Option hängt vom CPU-Modell ab.
+* Option für "Hohe Leistung mit Intel Optane", die zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 12 Kapazitätsplatten bereitstellt. Diese Option hängt vom CPU-Modell ab.
 
 ### Von IBM bereitgestellte Lizenzen und Gebühren
 {: #vc_hybrid_overview-license-and-fee}
@@ -138,7 +138,7 @@ Jeder vCenter Server with Hybridity Bundle-Erweiterungsknoten stellt die folgend
 ### Hardware für Erweiterungsknoten
 {: #vc_hybrid_overview-expansion-node-hardware}
 
-1 Bare Metal Server mit der unter [Technische Spezifikationen für vCenter Server with Hybridity Bundle-Instanzen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances) aufgeführten Konfiguration.
+1 Bare Metal Server mit der unter [Technische Spezifikationen für vCenter Server with Hybridity Bundle-Instanzen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#vc_hybrid_overview-specs) aufgeführten Konfiguration.
 
 ### Lizenzen und Gebühren für Erweiterungsknoten
 {: #vc_hybrid_overview-expansion-node-license-and-fee}
@@ -165,5 +165,5 @@ Sie dürfen die {{site.data.keyword.vmwaresolutions_short}}-Komponenten, die in 
 * [vCenter Server-Softwareteileliste](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
 * [Voraussetzungen und Planung für vCenter Server with Hybridity Bundle-Instanzen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)
 * [vCenter Server with Hybridity Bundle-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
-* [HCX on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-overview)
+* [HCX on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations)
 * [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

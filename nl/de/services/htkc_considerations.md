@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-04-01"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -20,7 +20,7 @@ subcollection: vmwaresolutions
 
 Der Service "HyTrust KeyControl on {{site.data.keyword.cloud}}" vereinfacht das Management verschlüsselter Workloads. Dieser Service automatisiert und vereinfacht den Lebenszyklus von Verschlüsselungsschlüsseln, einschließlich Speicherung, Verteilung, Rotation und Widerruf von Schlüsseln. Mithilfe der FIPS 140-2-konformen Verschlüsselung kann der Service ohne großen Aufwand skalierbare Verschlüsselungsschlüssel verwalten.
 
-Dieser Service ist nur für Instanzen verfügbar, auf denen vSphere 6.5 ausgeführt wird und die in V2.5 (oder höher) bereitgestellt werden oder für die ein Upgrade auf diese Versionen durchgeführt wurde. Die aktuell installierte HyTrust KeyControl-Version ist 4.2.
+Dieser Service ist nur für Instanzen verfügbar, auf denen vSphere 6.5 ausgeführt wird und die in V2.5 (oder höher) bereitgestellt werden oder für die ein Upgrade auf diese Versionen durchgeführt wurde. Die aktuell installierte HyTrust KeyControl-Version ist 4.3.
 {:note}
 
 ## Technische Spezifikationen für HyTrust KeyControl on IBM Cloud

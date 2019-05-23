@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-21"
+lastupdated: "2019-04-25"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -75,7 +75,7 @@ Sie können drei oder mehr {{site.data.keyword.baremetal_short}}-Instanzen mit e
 * **Skylake**: 2-CPU Intel Skylake Generation-Server (Intel Xeon 4100/5100/6100 Series) mit dem ausgewählten CPU-Modell und der RAM-Größe.  
 * **Broadwell**: 4-CPU Intel Broadwell Generation-Server (Intel Xeon E7-4800 Series) mit dem ausgewählten CPU-Modell und der RAM-Größe.
 
-Wenn Sie vSAN-Speicher verwenden möchten, sind für die Konfiguration vier {{site.data.keyword.baremetal_short}}-Instanzen erforderlich.
+Wenn Sie vSAN-Speicher verwenden möchten, sind für die Konfiguration mindestens vier {{site.data.keyword.baremetal_short}}-Instanzen erforderlich.
 {:note}
 
 ### Vernetzung
@@ -85,9 +85,9 @@ Die folgenden Netzkomponenten werden bestellt:
 *  10-Gbps-Uplinks für öffentliche und private Netze
 *  3 VLANs (virtuelle LANs): 1 öffentliches VLAN und 2 private VLANs
 * 1 Overlay-Netz mit einem T1- und T0-Router für die potenzielle Ost-West-Kommunikation zwischen lokalen Workloads, die mit L2-Netzen (Layer 2) verbunden sind. Dieses Netz wird als Muster für die Routingtopologie bereitgestellt, das Sie ändern, als Ausgangspunkt für Erstellungen verwenden oder entfernen können.
-*  3 VMware NSX-T Edge Services Gateways: 
+*  3 VMware NSX-T Edge Services Gateways:
   * 1 sichere VMware NSX ESGs für Management-Services für abgehenden HTTPS-Managementdatenverkehr, die von IBM im Rahmen der Managementnetztypologie bereitgestellt werden. Dieses ESG wird von den IBM Management-VMs für die Kommunikation mit bestimmten externen IBM Managementkomponenten verwendet, die mit der Automatisierung zusammenhängen. Weitere Informationen finden Sie unter [Netz zur Verwendung des vom Kunden verwalteten NSX ESG mit eigenen virtuellen Maschinen konfigurieren](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_esg_config).
-  * 2 sichere vom Kunden verwaltete VMware NSX ESGs für eingehenden und abgehenden HTTPS-Workloaddatenverkehr. Dieses Gateway wird von IBM als Vorlage bereitgestellt, die von Ihnen geändert werden kann, um den VPN-Zugriff oder den öffentlichen Zugriff zu ermöglichen. Weitere Informationen finden Sie im Abschnitt [Stellt das vom Kunden verwaltete NSX Edge ein Sicherheitsrisiko dar?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq-customer-nsx)
+  * 2 sichere vom Kunden verwaltete VMware NSX ESGs für eingehenden und abgehenden HTTPS-Workloaddatenverkehr. Dieses Gateway wird von IBM als Vorlage bereitgestellt, die von Ihnen geändert werden kann, um den VPN-Zugriff oder den öffentlichen Zugriff zu ermöglichen. Weitere Informationen finden Sie im Abschnitt [Stellt das vom Kunden verwaltete NSX Edge ein Sicherheitsrisiko dar?](/docs/services/vmwaresolutions?topic=vmware-solutions-faq#faq-customer-nsx)
 
   Dieses ESG hat den Namen **mgmt-nsx-edge0**. Dieses ESG ist für Sie weder zugänglich, noch können Sie es verwenden. Falls Sie es ändern, sind Sie möglicherweise nicht in der Lage, die vCenter Server-Instanz über die {{site.data.keyword.vmwaresolutions_short}}-Konsole zu verwalten. Außerdem führt die Verwendung einer Firewall oder die Inaktivierung der ESG-Kommunikation mit den externen IBM Managementkomponenten dazu, dass {{site.data.keyword.vmwaresolutions_short}} möglicherweise unbrauchbar wird.
   {:important}
@@ -118,7 +118,7 @@ Die Option "vSAN" bietet angepasste Konfigurationen mit unterschiedlichen Option
 
   3,8-TB-Solid-State-Platten (SSD) werden unterstützt, wenn sie in einem Rechenzentrum allgemein verfügbar gemacht werden.
   {:note}
-* Option für "Hohe Leistung mit Intel Optane", die zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 10 Kapazitätsplatten bereitstellt. Diese Option hängt vom CPU-Modell ab.
+* Option für "Hohe Leistung mit Intel Optane", die zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 12 Kapazitätsplatten bereitstellt. Diese Option hängt vom CPU-Modell ab.
 
 #### NFS-Speicher
 {: #vc_nsx-t_overview-nfs-storage}
@@ -150,7 +150,7 @@ Jeder vCenter Server with NSX-T-Erweiterungsknoten stellt folgende Komponenten i
 ### Hardware für Erweiterungsknoten
 {: #vc_nsx-t_overview-expansion-node-hardware}
 
-1 Bare-Metal-Server mit der unter [Technische Spezifikationen für vCenter Server with NSX-T-Instanzen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_overview-specs) aufgeführten Konfiguration.
+1 Bare-Metal-Server mit der unter [Technische Spezifikationen für vCenter Server with NSX-T-Instanzen](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_overview#vc_nsx-t_overview-specs) aufgeführten Konfiguration.
 
 ### Lizenzen und Gebühren für Erweiterungsknoten
 {: #vc_nsx-t_overview-expansion-node-license-and-fee}
@@ -175,5 +175,5 @@ Ausgenommen von diesen Aktivitäten ist unter anderem das Management der gemeins
 * [vCenter Server-Softwareteileliste](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
 * [vCenter Server-Instanzen planen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [vCenter Server with NSX-T-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_orderinginstance)
-* [{{site.data.keyword.cloud_notm}} File Storage und Block Storage](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage){:new_window}
+* [Angehängter Speicher für vCenter Server](/docs/services/vmwaresolutions/services?topic=vmware-solutions-storage-benefits#storage-benefits)
 * [Kapazität von gemeinsam genutzten Dateiressourcen erweitern](/docs/infrastructure/FileStorage?topic=FileStorage-expandCapacity#expandCapacity)

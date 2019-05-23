@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -49,7 +49,7 @@ Stellen Sie sicher, dass Sie die folgenden Tasks ausgeführt haben:
 
 Die Bereitstellung des Clusters beginnt automatisch und Sie empfangen eine E-Mail-Bestätigung, dass die Bestellung bearbeitet wird. Sobald der Cluster einsatzbereit ist, werden Sie per E-Mail benachrichtigt.
 
-Die vSphere-Cluster werden auf der Seite **Ressourcen** nicht zusammen mit den vCenter Server- und Cloud Foundation-Instanzen angezeigt.
+Die vSphere-Cluster werden auf der Seite **Ressourcen** nicht zusammen mit den vCenter Server-Instanzen angezeigt.
 {:note}
 
 ## Zugehörige Links

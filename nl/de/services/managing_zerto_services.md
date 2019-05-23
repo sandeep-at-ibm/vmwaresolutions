@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -45,7 +45,7 @@ Weitere Informationen finden Sie unter [IBM Resiliency Disaster Recovery as a Se
 2. Blättern Sie auf der Seite abwärts und klicken Sie unter **Zusätzliche verwaltete Services bestellen** auf die Karte **Verwaltete Services für Zerto on IBM Cloud**.
 3. Prüfen Sie auf der Seite **Zerto on IBM Cloud** die Beschreibung und die technischen Spezifikationen für Zerto on {{site.data.keyword.cloud_notm}} als verwalteten Service und klicken Sie anschließend auf **Erstellen**.
 4. Geben Sie die Konfigurationseinstellungen entsprechend Ihren Anforderungen an oder übernehmen Sie die Standardwerte.
-5. Klicken Sie entweder auf **vCenter Server** oder **Cloud Foundation**, um den Service zu einer Ihrer Instanzen hinzuzufügen.
+5. Klicken Sie auf **vCenter Server**, um den Service zu einer Ihrer Instanzen hinzuzufügen.
 6. Um den Service während der Bestellung einer neuen Instanz hinzuzufügen, klicken Sie auf **Zu neuer Instanz hinzufügen**. Fahren Sie anschließend mit der Bestellung einer neuen [vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)- oder [vCenter Server with Hybridity](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)-Instanz fort.
 7. Um den Service zu einer bereits vorhandenen Instanz hinzuzufügen, müssen Sie auf **Zu bereitgestellter Instanz hinzufügen** klicken und dann die gewünschte Instanz in der Liste auswählen. Anschließend müssen Sie bestätigen, dass Sie mit der Bestellung fortfahren möchten, indem Sie auf **Bereitstellung** klicken.
 

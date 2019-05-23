@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-04-12"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -19,7 +19,7 @@ subcollection: vmwaresolutions
 
 Wenn Sie versuchen, eine Verbindung zu vSphere Web Client herzustellen, erhalten Sie möglicherweise die folgende Fehlernachricht aufgrund einer Zeitüberschreitung:
 
-`Der Server bei <IP_address> benötigt zu viel Zeit für die Antwort.`
+`Der Server unter <IP_address> benötigt zu viel Zeit für die Antwort.`
 
 ## Lösung
 {: #trbl_timeout_vc_console-resolution}

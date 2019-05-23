@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-03-12"
+lastupdated: "2019-04-03"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -14,7 +14,7 @@ subcollection: vmwaresolutions
 
 Verwenden Sie den {{site.data.keyword.cloudaccesstrailfull}}-Service, um zu verfolgen, wie Benutzer und Anwendungen mit {{site.data.keyword.vmwaresolutions_short}} in {{site.data.keyword.Bluemix_notm}} interagieren.
 
-Der {{site.data.keyword.cloudaccesstrailfull_notm}}-Service zeichnet benutzerinitiierte Aktivitäten auf, die den Status eines Service in {{site.data.keyword.Bluemix_notm}} ändern. Weitere Informationen finden Sie unter [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started-with-cla#getting-started-with-cla).
+Der {{site.data.keyword.cloudaccesstrailfull_notm}}-Service zeichnet benutzerinitiierte Aktivitäten auf, die den Status eines Service in {{site.data.keyword.Bluemix_notm}} ändern. Weitere Informationen finden Sie im Abschnitt [Informationen zu {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov#activity_tracker_ov).
 
 ## Activity Tracker-Ereignistabelle
 {: #at-events-table}
@@ -51,12 +51,6 @@ Tabelle 2. Beschreibung von Aktionen, die Managementereignisse generieren
 | `vmware-solutions.notification.update` | <ul><li>Die Anforderung zum Aktualisieren von Benachrichtigungen wird empfangen.</li><li>Die Anforderung zum Aktualisieren von Benachrichtigungen wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
 | `vmware-solutions.secure_data.wipe`       | <ul><li>Die Anforderung zum Bereinigen von gesicherten Daten wird empfangen.</li><li>Die Anforderung zum Bereinigen von gesicherten Daten wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
 | `vmware-solutions.bss_account.migrate` | <ul><li>Die Anforderung zum Migrieren auf ein bss-Konto wird empfangen.</li><li>Die Anforderung zum Migrieren auf ein bss-Konto wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
-| `vmware-solutions.vcf.delete`                | <ul><li>Die Anforderung zum Löschen einer Cloud Foundation-Instanz wird empfangen.</li><li>Die Anforderung zum Löschen einer Cloud Foundation-Instanz wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
-| `vmware-solutions.vcf.add_hosts`             | <ul><li>Die Anforderung zum Hinzufügen von ESXi-Servern zu einer Cloud Foundation-Instanz wird empfangen.</li><li>Die Anforderung zum Hinzufügen von ESXi-Servern zu einer Cloud Foundation-Instanz wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
-| `vmware-solutions.vcf.remove_hosts`          | <ul><li>Die Anforderung zum Löschen von ESXi-Servern aus einer Cloud Foundation-Instanz wird empfangen.</li><li>Die Anforderung zum Löschen von ESXi-Servern aus einer Cloud Foundation-Instanz wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
-| `vmware-solutions.vcf.create_cluster`        | <ul><li>Die Anforderung zum Erstellen eines Clusters für eine Cloud Foundation-Instanz wird empfangen.</li> <li>Die Anforderung zum Erstellen eines Clusters für eine Cloud Foundation-Instanz wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
-| `vmware-solutions.vcf.delete_cluster`        | <ul><li>Die Anforderung zum Löschen eines Clusters aus einer Cloud Foundation-Instanz wird empfangen.</li><li>Die Anforderung zum Löschen eines Clusters aus einer Cloud Foundation-Instanz wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
-| `vmware-solutions.vcf.schedule_update`       | <ul><li>Die Anforderung zum Planen einer Aktualisierung für eine Cloud Foundation-Instanz wird empfangen.</li><li>Die Anforderung zum Planen einer Aktualisierung für eine Cloud Foundation-Instanz wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
 | `vmware-solutions.vcs.order`                 | <ul><li>Die Anforderung zum Bestellen einer vCenter Server-Instanz wird empfangen.</li><li>Die Anforderung zum Bestellen einer vCenter Server-Instanz wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
 | `vmware-solutions.vcs.delete`                | <ul><li>Die Anforderung zum Löschen einer vCenter Server-Instanz wird empfangen.</li><li>Die Anforderung zum Löschen einer vCenter Server-Instanz wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
 | `vmware-solutions.vcs.add_host`              | <ul><li>Die Anforderung zum Hinzufügen von ESXi-Servern zu einer vCenter Server-Instanz wird empfangen.</li><li>Die Anforderung zum Hinzufügen von ESXi-Servern zu einer vCenter Server-Instanz wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |

@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-05"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -45,7 +45,7 @@ So konfigurieren Sie die Webbenutzerschnittstelle für die WAN-Optimierung:
 11.	Bearbeiten Sie die Einstellungen für die VM.
 12.	Klicken Sie auf das Kontrollkästchen, um Netzwerkadapter 1 anzuschließen.
 13.	Klicken Sie auf **OK**.
-14.	Rufen Sie folgende Adresse auf: `https://<configured_WAN_OPT_IP>`.
+14.	Rufen Sie `https://<configured_WAN_OPT_IP>` auf.
 15.	Melden Sie sich mit dem `admin`-Standardbenutzer und dem `admin`-Kennwort an.
 
 Sie können jetzt die Webbenutzerschnittstelle des WAN-Optimierungsprogramms verwenden, um Durchsatzraten und Komprimierungsverhältnisse zu überwachen sowie um Einschränkungen der Bandbreite festzulegen.
@@ -73,7 +73,7 @@ Zur Bandbreitenregulierung für erweitertes L2 kann QoS für UDP 500 und 4500 f�
 
 Sie können HCX-Komponenten wie HCX-Manager, Cloud-Gateway, WAN-Optimierung und die Layer-2-Konzentrator-Operationen auf folgende Arten überwachen:
 
-- Konfigurieren Sie den HCX-Manager für das Senden von Protokollen an einen Syslog-Server. Verwenden Sie das Verwaltungsdienstprogramm der HCX-Manager-Appliance, um `https://<hcxhostname or
+- Konfigurieren Sie den HCX-Manager für das Senden von Protokollen an einen Syslog-Server. Verwenden Sie das Verwaltungsdienstprogramm der HCX-Manager-Appliance, um den Befehl `https://<hcxhostname or
 IP>:9443` auszuführen.
 - Richten Sie ein Pingsignal an eine VM ein, die vor dem Netz-Swing für jedes erweiterte L2-Netz migriert wurde.
 - Überwachen Sie den Zustand der VM für die HCX-Komponente mit VMware vRealize Operations Manager oder anderen VMware VM-Überwachungstools.

@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-21"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -27,7 +27,7 @@ Im Rahmen des Bestellablaufs für Ihre vCenter Server with NSX-T-Instanz werden 
 * Ein öffentliches Kundenteilnetz wird für den Zugriff Ihrer VMs auf das Internet bestellt.
 * NSX-T wird in Ihrer vCenter Server with NSX-T-Instanz bereitgestellt und konfiguriert.
 * Ein Beispiel für einen logischen NSX-T-Switch wird zur Verwendung durch die VMs für die Kundenworkload bereitgestellt.
-* Ein Beispiel für einen NSX-T-Tier-1-Router wird für die potenzielle Ost-West-Kommunikation zwischen lokalen Workloads bereitgestellt, die mit Layer-2-Netzen (L2) verbunden sind. 
+* Ein Beispiel für einen NSX-T-Tier-1-Router wird für die potenzielle Ost-West-Kommunikation zwischen lokalen Workloads bereitgestellt, die mit Layer-2-Netzen (L2) verbunden sind.
 * Eine NSX-T Edge-Appliance wird zur Ausführung der Netzadressumsetzung (Network Address Translation, NAT) aus dem Bereich der IP-Adressen eines logischen Workload-Switch in eine öffentliche IP-Adresse nach den NAT-Regeln bereitgestellt und konfiguriert.
 
   NSX-T Edge wird für ausschließlich private Instanzen nicht bereitgestellt.
@@ -58,7 +58,7 @@ Um die Vorteile von NSX-T für Ihre Workload-VMs nutzen zu können, müssen Sie 
 ## SNAT-Regel aktivieren
 {: #vc_nsx-t_esg_config-procedure-enable-snat-rule}
 
-NSX-T aktiviert die SNAT-Regel standardmäßig. Informationen zum Ändern der vorhandenen Regeln finden Sie im Abschnitt [Quell- und Ziel-NAT auf einem logischen Tier-0-Router konfigurieren](https://docs.vmware.com/en/VMware-NSX-T-Data-Center/2.4/administration/GUID-45949ACD-9029-4674-B29C-C2EABEB39E1D.html){:new_window}. 
+NSX-T aktiviert die SNAT-Regel standardmäßig. Informationen zum Ändern der vorhandenen Regeln finden Sie im Abschnitt [Quell- und Ziel-NAT auf einem logischen Tier-0-Router konfigurieren](https://docs.vmware.com/en/VMware-NSX-T-Data-Center/2.4/administration/GUID-45949ACD-9029-4674-B29C-C2EABEB39E1D.html){:new_window}.
 
 ## Vorgehensweise zum Angeben von Details für Kundenteilnetze
 {: #vc_nsx-t_esg_config-procedure-identify-customer-subnets-details}

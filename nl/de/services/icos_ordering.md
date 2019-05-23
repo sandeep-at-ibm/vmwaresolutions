@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-20"
+lastupdated: "2019-03-28"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -30,7 +30,7 @@ Informationen zum Erstellen einer Object Storage-Instanz finden Sie unter [Neue 
 ## Einen Bucket erstellen
 {: #icos_ordering-bucket}
 
-Informationen zum Erstellen eines Buckets finden Sie in [Schritt 1: Einige Buckets zum Speichern Ihrer Daten erstellen](https://cloud.ibm.com/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-getting-started-console-#create-buckets). Führen Sie die Schritte aus und kehren Sie zu diesem Abschnitt zurück, um mit den folgenden Tasks fortzufahren.
+Informationen zum Erstellen eines Buckets finden Sie unter [Einige Buckets zum Speichern Ihrer Daten erstellen](/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-getting-started-tutorial#gs-create-buckets). Führen Sie die Schritte aus und kehren Sie zu diesem Abschnitt zurück, um mit den folgenden Tasks fortzufahren.
 
 ## Serviceberechtigungsnachweise erstellen
 {: #icos_ordering-service-cred}

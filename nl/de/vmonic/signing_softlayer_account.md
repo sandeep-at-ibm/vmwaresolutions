@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-04-16"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -19,12 +19,12 @@ subcollection: vmwaresolutions
 
 Sie können sich für ein {{site.data.keyword.cloud}}-Konto registrieren, indem Sie eine vorhandene **IBMid** verwenden oder eine neue **IBMid** erstellen. Weitere Informationen zur Registrierung für ein {{site.data.keyword.cloud_notm}}-Konto finden Sie in [Für ein {{site.data.keyword.cloud_notm}}-Konto registrieren](/docs/account?topic=account-signup).
 
-## Für ein IBM Cloud-Infrastrukturkonto (SoftLayer-Konto) registrieren
+## Für ein IBM Cloud-Infrastrukturkonto registrieren
 {: #signing_softlayer_account-infra}
 
-Das Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer), das früher als IBM SoftLayer-Konto bezeichnet wurde, wird zur Anmeldung am Kundenportal für die {{site.data.keyword.cloud_notm}}-Infrastruktur verwendet, das weitere Funktionen zur Verwaltung von Infrastrukturprodukten und -services zur Verfügung stellt.
+Das {{site.data.keyword.cloud_notm}}-Infrastrukturkonto wird zur Anmeldung am Kundenportal für die {{site.data.keyword.cloud_notm}}-Infrastruktur verwendet, das weitere Funktionen zur Verwaltung von Infrastrukturprodukten und -services zur Verfügung stellt.
 
-Sie können sich für ein Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur (SoftLayer) registrieren, indem Sie Ihr {{site.data.keyword.cloud_notm}}-Konto in ein nutzungsabhängiges Konto aktualisieren. Weitere Informationen finden Sie unter [Wie aktualisiere oder ändere ich meinen Kontotyp?](/docs/account?topic=account-accountfaqs)
+Sie können sich für ein Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur registrieren, indem Sie Ihr {{site.data.keyword.cloud_notm}}-Konto auf ein nutzungsabhängiges Konto aktualisieren. Weitere Informationen finden Sie unter [Wie aktualisiere oder ändere ich meinen Kontotyp?](/docs/account?topic=account-accountfaqs)
 
 ## Zugehörige Links
 {: #signing_softlayer_account-related}

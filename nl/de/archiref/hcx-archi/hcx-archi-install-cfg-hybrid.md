@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-04-02"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -18,7 +18,7 @@ Das Installationsprogramm stellt für jede virtuelle Service-Appliance eine virt
 ## Voraussetzungen
 {: #hcx-archi-install-cfg-hybrid-prereq}
 
-* Der HCX-Manager muss lokal installiert und bei einem für VCF/VCS HCX aktivierten Cloud-Endpunkt registriert werden.
+* Der HCX-Manager muss lokal installiert und bei einem für VCS HCX aktivierten Cloud-Endpunkt registriert werden.
 * Das virtuelle Zieldatenzentrum muss über genügend Ressourcen verfügen.
 
 ## Konfigurationsübersicht
@@ -34,7 +34,7 @@ Für den Konfigurationsvorgang wird davon ausgegangen, dass alle virtuellen Serv
 
 Die einfache Webschnittstelle wird zum Installieren der virtuellen Service-Appliance und zum Konfigurieren weiterer Layer-2-Konzentratoren verwendet.
 
-Der HCX-Manager muss installiert und bei dem für VCF/VCS HCX aktivierten Cloud-Endpunkt registriert sein.
+Der HCX-Manager muss installiert und bei dem für VCS HCX aktivierten Cloud-Endpunkt registriert sein.
 
 ### Vorgehensweise zur Installation und Konfiguration der virtuellen Hybrid-Services-Appliance
 {: #hcx-archi-install-cfg-hybrid-proc-install}
@@ -119,7 +119,7 @@ Zeigen Sie den Status des Cloud-Gateway-Tunnels an. Der Network Extension Servic
 
 ## Layer-2-Netz hin zu IBM Cloud erweitern
 
-Sie können ein Layer-2-Netz vom lokalen Rechenzentrum aus in eine VCF/VCS HCX-fähige Cloud hinein erweitern.
+Sie können ein Layer-2-Netz vom lokalen Rechenzentrum aus in eine VCS HCX-fähige Cloud hinein erweitern.
 {: #hcx-archi-install-cfg-hybrid-stretch-layer-2}
 
 ### Voraussetzungen für die Erweiterung eines Layer-2-Netzes hin zu IBM Cloud
@@ -136,9 +136,9 @@ Sie können ein Layer-2-Netz vom lokalen Rechenzentrum aus in eine VCF/VCS HCX-f
 3. Klicken Sie mit der rechten Maustaste auf die Portgruppe, wählen Sie aus dem Menü **Hybriditäts-Aktionen** und dann **Netz erweitern**.
 4. Bestätigen Sie auf der Seite **Quellenportgruppen auswählen** die Angaben zur Portgruppe und geben Sie die **IP-Adresse des Gateways** und das Präfix für das Netz ein. Klicken Sie auf **Weiter**.
 5. Führen Sie auf der Seite **Zielgateway auswählen** die folgenden Schritte durch:
-  1. Wählen Sie im Menü **Organisation** die Option "VCF/VCS Hybrid-Cloud-Services Cloud Organization".
-  2. Wählen Sie das virtuelle VCF/VCS Hybrid-Cloud-Services Cloud-Rechenzentrum aus dem Menü.
-  3. Belassen Sie **Proximity Routing** inaktiviert, um zu erzwingen, dass eine VM innerhalb einer für VCF/VCS Hybrid-Cloud-Services aktivierten Cloud für den Zugang zum Internet stets das lokale Gateway nutzt. Standardmäßig traversiert Datenverkehr, der von einer VM in einer für VCF/VCS Hybrid-Cloud-Services aktivierten Cloud stammt, durch den Layer-2-Datenpfad zurück in das lokale Rechenzentrum und in das Standardgateway. Wenn **Proximity Routing** aktiviert ist, kann eine VM innerhalb einer für Hybrid-Cloud-Services aktivierten VCF/VCS-Cloud ohne Traversieren des Layer-2-Datenpfads zu vSphere auf das Internet zugreifen.
+  1. Wählen Sie im Menü **Organisation** die Option "VCS Hybrid-Cloud-Services Cloud Organization".
+  2. Wählen Sie das virtuelle VCS Hybrid-Cloud-Services Cloud-Rechenzentrum aus dem Menü.
+  3. Belassen Sie **Proximity Routing** inaktiviert, um zu erzwingen, dass eine VM innerhalb einer für VCS Hybrid-Cloud-Services aktivierten Cloud für den Zugang zum Internet stets das lokale Gateway nutzt. Standardmäßig traversiert Datenverkehr, der von einer VM in einer für VCS Hybrid-Cloud-Services aktivierten Cloud stammt, durch den Layer-2-Datenpfad zurück in das lokale Rechenzentrum und in das Standardgateway. Wenn **Proximity Routing** aktiviert ist, kann eine VM innerhalb einer für Hybrid-Cloud-Services aktivierten VCS-Cloud ohne Traversieren des Layer-2-Datenpfads zu vSphere auf das Internet zugreifen.
   4. Wählen Sie das ferne Zielgateway aus der Liste der Gateways aus, indem Sie auf die entsprechende Zeile klicken. Klicken Sie auf **Weiter**.
 6. Überprüfen Sie auf der Seite **Bereit zum Abschließen** alle angegeben Werte. Klicken Sie auf **Fertigstellen**.
 7. Um den Fortschritt der Netzerweiterung zu verfolgen, gehen Sie zum Fenster **Letzte Tasks**, klicken auf die Registerkarte **Alle** und zeigen Sie die Ansicht **Tasks aller Benutzer** an.

@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-19"
 
-subcollection: vmwaresolutions
+subcollection: vmware-solutions
 
 
 ---
@@ -63,9 +63,9 @@ Die vCenter Server-Bereitstellung verwendet die bereitgestellten AD-VSIs als DNS
     - Wählen Sie einen zusätzlichen Namen als Subdomäne der vCenter Server-Instanz aus. Dieser Unterdomänenname muss unter allen verknüpften vCenter Serverinstanzen eindeutig sein.
 - Die DNS-Server für Active Directory werden so konfiguriert, dass sie für den DNS-Domänenbereich und den Unterdomänenbereich maßgeblich sind.
 - Die DNS-Server für Active Directory werden so konfiguriert, dass sie auf die {{site.data.keyword.cloud_notm}}-DNS-Server für alle anderen Zonen verweisen.
-- Alle sekundären Cloud-Regionen, die in die erste oder in die Ziel-Cloud-Region integriert sind, müssen dieselbe DNS-Namensstruktur über der Unterdomäne verwenden. 
+- Alle sekundären Cloud-Regionen, die in die erste oder in die Ziel-Cloud-Region integriert sind, müssen dieselbe DNS-Namensstruktur über der Unterdomäne verwenden.
 - Implementieren Sie optional redundante DNS-Server innerhalb des vCenter Server-Clusters. Zwei AD/DNS-Server sind nicht lizenziert konfiguriert. Es liegt in der Verantwortung des Benutzers, Lizenzen für die Windows-Betriebssysteme für diese Server bereitzustellen.
-- Wenn für einen einzelnen Standort nur ein AD/DNS-Server bereitgestellt wird, dürfen alle konfigurierten vCenter Server-Komponenten NUR diese einzelne IP-Adresse als DNS-Eintrag haben. 
+- Wenn für einen einzelnen Standort nur ein AD/DNS-Server bereitgestellt wird, dürfen alle konfigurierten vCenter Server-Komponenten NUR diese einzelne IP-Adresse als DNS-Eintrag haben.
 
 ### Sekundäre vCenter Server-Instanzen
 {: #design_commonservice-secondary-vcs}
