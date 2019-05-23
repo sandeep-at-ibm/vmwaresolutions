@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -26,11 +26,9 @@ VUM 會對 VMware vSphere 執行集中式的自動化修補程式及版本管理
 * NSX            
 * vSAN
 
-本文件說明如何使用基於 CentOS 及 Squid 的 Proxy 伺服器實作，以讓 VUM 存取 VMware 儲存庫。VUM 從 VMware 的更新伺服器要求資源時，會先將要求傳送至 Proxy 伺服器，而 Proxy 伺服器接著會透過 External Services Gateway (ESG) 將要求傳送至更新伺服器。在 Proxy 伺服器取得資源之後，會將資源傳送至 VUM。
+本文件說明如何使用以 CentOS 及 Squid 為基礎的 Proxy 伺服器實作，以讓 VUM 存取 VMware 儲存庫。VUM 從 VMware 的更新伺服器要求資源時，會先將要求傳送至 Proxy 伺服器，而 Proxy 伺服器接著會透過 External Services Gateway (ESG) 將要求傳送至更新伺服器。在 Proxy 伺服器取得資源之後，會將資源傳送至 VUM。
 
-圖 1. 總覽圖
-</br>
-![總覽圖](vum-vcsproxy.svg)
+![概觀圖](../../images/vum-vcsproxy.svg "概觀圖")
 
 vCenter Server 目前部署 vSphere 6.5，這表示 VUM 現在已整合在 vCenter Server Appliance (VCSA) 內，而且由於 VUM 用戶端元件是在 vSphere Web Client 上執行的外掛程式，所以它會在 VCSA 部署之後自動啟用。不過，VUM 無法存取網際網路來存取 VMware 儲存庫。
 

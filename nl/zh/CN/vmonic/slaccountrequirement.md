@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-16"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -51,17 +51,11 @@ subcollection: vmware-solutions
 ## 启用了服务端点的 VRF
 {: #slaccountrequirement-vrf-se}
 
-您的 {{site.data.keyword.cloud_notm}} 基础架构帐户必须是启用了服务端点的虚拟路由和转发 (VRF) 帐户。如果您的帐户是非 VRF 帐户，那么必须转换为 VRF 帐户。 此外，您必须支持 VRF 帐户使用服务端点。
+您的 {{site.data.keyword.cloud_notm}} 基础架构帐户必须是虚拟路由和转发 (VRF) 帐户。如果您的帐户是非 VRF 帐户，那么必须转换为 VRF 帐户。 另外建议您支持 VRF 帐户使用服务端点。
 
 有关更多信息，请参阅：
 * [VRF on IBM Cloud 概述](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
 * [支持帐户使用服务端点](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
-
-## VLAN 生成支持结束
-{: #slaccountrequirement-vlan-eos}
-
-从 2019 年 8 月起，不再支持 VLAN 生成。到 2019 年 7 月底，您必须将 {{site.data.keyword.cloud_notm}} 基础架构帐户转换为 VRF 并启用服务端点。
-{:important}
 
 ## 相关链接
 {: #slaccountrequirement-related}

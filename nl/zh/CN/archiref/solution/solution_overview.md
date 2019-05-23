@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-15"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -22,8 +22,7 @@ subcollection: vmware-solutions
 
 此设计充当基线体系结构，为针对特定用例添加其他内部组件或特定于供应商的组件提供了基础。
 
-图 1. VMware on {{site.data.keyword.cloud_notm}} 概述
-![VMware on {{site.data.keyword.cloud_notm}}](vcsv4radiagrams-ra-variationsonatheme.svg "该解决方案用于对可在其中运行应用程序的 VM 所使用的计算、网络和（可选）存储资源进行虚拟化。")
+![VMware on {{site.data.keyword.cloud_notm}} 概述](../../images/vcsv4radiagrams-ra-variationsonatheme.svg "该解决方案虚拟化计算、网络和可选的存储资源，以供可在其中运行应用程序的 VM 使用")
 
 ## IBM Cloud for VMware Solutions 的主要优点
 {: #solution_overview-benefits}

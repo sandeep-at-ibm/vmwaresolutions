@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -104,8 +104,7 @@ Inoltre, viene configurato per accedere al vCenter e a NSX con un utente specifi
 
 Dopo che il componente cloud HCX Manager è stato distribuito e configurato, i componenti di origine creano una connessione all'HCX Manager tramite gli indirizzi VIP configurati nell'ESG NSX. Una volta effettuata questa connessione, i dispositivi gateway cloud e WAN optimizer vengono distribuiti all'interno dell'IBM Cloud.
 
-Figura 1. Destinazione - Dispositivo Hybrid Cloud services
-![Destinazione - Dispositivo Hybrid Cloud services](target_hybrid_cloud_services_appliance.svg)
+![Destinazione - dispositivo Hybrid Cloud Services](../../images/target_hybrid_cloud_services_appliance.svg "Destinazione - dispositivo Hybrid Cloud Services")
 
 ## Gateway cloud
 {: #hcx-archi-target-cloud-gateway}
@@ -126,8 +125,7 @@ Questo switch logico è una rete privata e non instradabile utilizzata come un c
 
 La seguente figura illustra un diagramma del componente di alto livello del dispositivo gateway cloud e delle connessioni assegnate.
 
-Figura 2. Distribuzione gateway cloud
-![Distribuzione gateway cloud](cloud_gateway_deployment.svg)
+![Distribuzione gateway cloud](../../images/cloud_gateway_deployment.svg "Distribuzione gateway cloud")
 
 ## WAN Optimizer
 {: #hcx-archi-target-wan-opt}
@@ -146,8 +144,7 @@ Tabella 9. Ridimensionamento dispositivo WAN Optimizer
 
 A differenza del gateway cloud, il dispositivo WAN Optimization è collegato solo a uno switch logico per abilitare la comunicazione tra se stessa e il gateway cloud. Questo dispositivo è obbligatorio se WAN optimization viene utilizzato nell'ambiente di origine. Consulta la seguente figura per una vista del layout di rete.
 
-Figura 3. Distribuzione WAN Optimizer
-![Distribuzione WAN Optimizer](wan_optimizer_deployment.svg)
+![Distribuzione WAN Optimizer](../../images/wan_optimizer_deployment.svg "Distribuzione WAN Optimizer")
 
 ## Concentratore di livello 2
 {: #hcx-archi-target-layer-2-conc}
@@ -166,8 +163,8 @@ Tabella 10. Ridimensionamento dispositivo HT L2C
 
 Il dispositivo L2C viene distribuito sulla VLAN di gestione e sulla VLAN pubblica. L'interfaccia pubblica viene utilizzata per il traffico dell'applicazione associato all'origine della rete estesa. Vengono create e collegate delle ulteriori connessioni come le reti estese al dispositivo L2C, dopo che l'amministratore dell'origine avvia l'estensione della rete in IBM Cloud. Sono illustrati degli esempi di queste reti e connessioni nella seguente figura.
 
-Figure 4. Distribuzione concentratore L2
-![Distribuzione concentratore L2](l2_concentrator_deployment.svg)
+![Distribuzione concentratore L2](../../images/l2_concentrator_deployment.svg "Distribuzione concentratore L2")
+
 
 ## Link correlati
 {: #hcx-archi-target-related}

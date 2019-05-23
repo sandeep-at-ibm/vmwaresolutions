@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -55,9 +55,7 @@ Il seguente diagramma descrive l'implementazione di riferimento dell'applicazion
 Skate Advisor in un'implementazione dell'infrastruttura di modernizzazione
 dell'applicazione.
 
-Figura 1. Componenti fisici di Skate Advisor
-</br>
-![Componenti fisici di Skate Advisor](vcscar-physical.svg)
+![Componenti fisici di Skate Advisor](../../images/vcscar-physical.svg "Componenti fisici di Skate Advisor")
 
 L'applicazione Skate Advisor estende l'applicazione web Acme esistente
 con un componente basato sui microservizi che interagisce con Watson e con
@@ -97,9 +95,7 @@ database.
 * Modello VMWare - Il modello VMWare è un modello di Ubuntu con mysql
 e lo schema del database preinstallati.
 
-Figura 2. Orchestrazione CAM
-</br>
-![Orchestrazione CAM](vcscar-cam.svg)
+![Orchestrazione CAM](../../images/vcscar-cam.svg "Orchestrazione CAM")
 
 ### Bilanciamento del carico e proxy
 {: #vcscar-physical-load-balance-proxy}
@@ -153,9 +149,7 @@ dell'implementazione.
 Per raggiungere questo obiettivo, la piattaforma di modernizzazione dell'applicazione è
 progettata con i seguenti componenti.
 
-Figura 3. Accesso alla rete pubblica
-</br>
-![Accesso alla rete pubblica](vcscar-network.svg)
+![Accesso alla rete pubblica](../../images/vcscar-network.svg "Accesso alla rete pubblica")
 
 {{site.data.keyword.cloud_notm}} ha due reti. La rete pubblica consente ai server di essere
 raggiunti da Internet e la rete privata consente ai server di
@@ -180,9 +174,7 @@ viceversa.
 L'applicazione Skate Advisor utilizza i seguenti componenti
 software.
 
-Figura 4. Associazione software di Skate Advisor
-</br>
-![Associazione software di Skate Advisor](vcscar-sw-mapping.svg)
+![Associazione software di Skate Advisor](../../images/vcscar-sw-mapping.svg "Associazione software di Skate Advisor")
 
 Vengono utilizzati i seguenti componenti software:
 
@@ -205,8 +197,7 @@ Acme Skate Advisor risiede su {{site.data.keyword.cloud_notm}} e, per questo mot
 è un aspetto critico dell'architettura. {{site.data.keyword.cloud_notm}} ha la seguente
 architettura.
 
-Figura 5. Gestione cloud
-![Gestione su cloud](vcscar-cloud-management.svg)
+![Gestione sul cloud](../../images/vcscar-cloud-management.svg "Gestione sul cloud")
 
 Questo diagramma rappresenta {{site.data.keyword.icpfull_notm}} e CAM distribuiti su un'istanza vCenter
 Server, con connessioni al vCenter in loco e al servizio

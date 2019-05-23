@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -20,8 +20,7 @@ subcollection: vmware-solutions
 
 共通サービスは、クラウド管理プラットフォームの他のサービスによって使用されるサービスを提供します。 ソリューションの共通サービスには、ID およびアクセスのサービス、ドメイン・ネーム・サービス、NTP サービス、SMTP サービス、および認証局サービスが含まれます。
 
-図 1. 共通サービス</br>
-![共通サービス](vcsv4radiagrams-ra-commonservices.svg)
+![共通サービス](../../images/vcsv4radiagrams-ra-commonservices.svg "共通サービス")
 
 ## ID およびアクセス・サービス
 {: #design_commonservice-identity-access}
@@ -57,15 +56,15 @@ vSphere シングル・サインオン (SSO) ドメインは、単一インス�
 {: #design_commonservice-primary-vcs}
 
 vCenter Server デプロイメントでは、デプロイ済みの AD VSI がインスタンスの DNS サーバーとして使用されます。 デプロイ済みのコンポーネント (PSC を組み込んだ vCenter、NSX、ESXi のホスト) はすべて、AD をデフォルトの DNS としてポイントするように構成されます。 DNS ゾーン構成は、デプロイ済みのコンポーネントの構成と干渉しない限りカスタマイズが可能です。
-- この設計では、次の構成によって、AD VSI 上で DNS サービスが統合されます。
-- ドメイン構造は、ユーザーが指定します。 ドメイン名のレベル数は幾つでも構いませんが、すべての vCenter Server コンポーネントが処理できる最大数以下でなければなりません。最低レベルはインスタンスのサブドメインになります。
-    - 指定した DNS ドメイン名は、vCenter Server にデプロイした AD ルート・フォレストのドメイン名として使用されます。 例えば、DNS ドメイン名が cloud.ibm.com の場合、AD ドメインのフォレスト・ルートは cloud.ibm.com になります。 DNS ドメインと AD ドメインは、vCenter Server のどの統合インスタンスでも同一になります。
-    - vCenter Server インスタンス・サブドメインとしてもう 1 つの名前を選択します。 このサブドメイン名はリンクされているすべての vCenter Server インスタンスで一意である必要があります。
-- AD DNS サーバーは、DNS ドメインとサブドメイン領域の両方で権限を持つように構成されます。
-- AD DNS サーバーは、他のすべてのゾーンに対して {{site.data.keyword.cloud_notm}} DNS サーバーをポイントするように構成されます。
-- 第 1 の、またはターゲットのデプロイ済みクラウド地域に統合されたセカンダリー・クラウド地域では、サブドメインより上で同じ DNS 名構造を使用する必要があります。
-- vCenter Server クラスター内に冗長 DNS サーバーをデプロイすることもできます。 ライセンスのない状態で 2 つの AD/DNS サーバーが構成されます。 そうしたサーバーのために Windows オペレーティング・システムのライセンスを用意するのは、お客様の責任です。
-- 1 つの AD/DNS サーバーだけで 1 つのサイトがプロビジョンされている場合は、構成済みのすべての vCenter Server コンポーネントがその 1 つの IP だけを DNS エントリーとして持っていることが必要です。
+
+この設計では、次の構成によって、AD VSI 上で DNS サービスが統合されます。
+* ドメイン構造は、ユーザーが指定します。
+* ドメイン名のレベル数は幾つでも構いませんが、すべての vCenter Server コンポーネントが処理できる最大数以下でなければなりません。最低レベルはインスタンスのサブドメインになります。
+* AD/DNS サーバーは、DNS ドメインとサブドメイン領域の両方で権限を持つように構成されます。
+* AD/DNS サーバーは、他のすべてのゾーンに対して {{site.data.keyword.cloud_notm}} DNS サーバーをポイントするように構成されます。
+* 第 1 の、またはターゲットのデプロイ済みクラウド地域に統合されたセカンダリー・クラウド地域では、サブドメインより上で同じ DNS 名構造を使用する必要があります。
+* vCenter Server クラスター内に冗長 DNS サーバーをデプロイすることもできます。 ライセンスのない状態で 2 つの AD/DNS サーバーが構成されます。 そうしたサーバーのために Windows オペレーティング・システムのライセンスを用意するのは、お客様の責任です。
+* 1 つの AD/DNS サーバーだけで 1 つのサイトがプロビジョンされている場合は、構成済みのすべての vCenter Server コンポーネントがその 1 つの IP アドレスだけを DNS エントリーとして持っていることが必要です。
 
 ### セカンダリー vCenter Server インスタンス
 {: #design_commonservice-secondary-vcs}
@@ -77,8 +76,7 @@ vCenter Server デプロイメントでは、デプロイ済みの AD VSI がイ
 
 この設計では {{site.data.keyword.cloud_notm}} インフラストラクチャーの NTP サーバーが使用されます。 デプロイ済みのすべてのコンポーネントは、これらの NTP サーバーを使用するように構成されます。 設計内のすべてのコンポーネントが同じ NTP サーバーを使用するようにすることは、証明書と Active Directory 認証が正しく機能するために必要不可欠です。
 
-図 2. NTP サービスと DNS サービス</br>
-![NTP サービスと DNS サービス](vcsv4radiagrams-ra-servicesinterconnections.svg)
+![NTP サービスと DNS サービス](../../images/vcsv4radiagrams-ra-servicesinterconnections.svg "NTP サービスと DNS サービス")
 
 ## 認証局サービス
 {: #design_commonservice-cas}

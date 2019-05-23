@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -20,8 +20,7 @@ VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 
 
 vCenter Server with Hybridity Bundle 组件（在 {{site.data.keyword.cloud_notm}} VMware 目标站点中部署为虚拟机）支持建立与安装到对等内部部署源站点中的 HCX 组件的连接。
 
-图 1. vCenter Server with Hybridity Bundle
-![vCenter Server with Hybridity Bundle](vcscontent-hcx.svg)
+![vCenter Server with Hybridity Bundle](../../images/vcscontent-hcx.svg "vCenter Server with Hybridity Bundle")
 
 Hybridity 将在内部部署和 {{site.data.keyword.cloud_notm}} 之间创建松散耦合的互连，并支持以下功能：
 

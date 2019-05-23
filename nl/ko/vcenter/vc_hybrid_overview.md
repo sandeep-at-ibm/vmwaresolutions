@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-02"
 
 subcollection: vmware-solutions
 
@@ -35,9 +35,7 @@ vSAN 클러스터의 vSAN 기반 스토리지 용량을 늘리기 위해 배치 
 
 다음 그림은 3-노드 vCenter Server with Hybridity Bundle 배치의 상위 레벨 아키텍처 및 컴포넌트를 나타냅니다.
 
-그림 1. vCenter Server with Hybridity Bundle 상위 레벨 아키텍처
-
-![vCenter Server with Hybridity Bundle 아키텍처](hybrid_architecture.svg "vCenter Server with Hybridity Bundle 상위 레벨 아키텍처")
+![vCenter Server with Hybridity Bundle 아키텍처](../images/hybrid_architecture.svg "vCenter Server with Hybridity Bundle 아키텍처")
 
 ### 실제 인프라
 {: #vc_hybrid_overview-physical-infras}

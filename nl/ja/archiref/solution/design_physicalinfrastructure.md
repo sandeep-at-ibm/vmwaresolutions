@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -33,8 +33,7 @@ subcollection: vmware-solutions
 
 ストレージについて詳しくは、[共有ストレージのアーキテクチャー](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits)を参照してください。
 
-図 1. 物理インフラストラクチャー</br>
-![物理インフラストラクチャー](vcsv4radiagrams-ra-physinfra.svg)
+![物理インフラストラクチャー](../../images/vcsv4radiagrams-ra-physinfra.svg "物理インフラストラクチャー")
 
 ## 物理コンピュート設計
 {: #design_physicalinfrastructure-host-design}
@@ -49,7 +48,7 @@ subcollection: vmware-solutions
 物理ホストでは、vSphere ESXi ハイパーバイザーに割り振られる 2 つのローカル接続ディスクが使用されます。 さらにディスクを割り振るには、『_物理ストレージ設計_』セクションに記載されている vSAN を使用するか、[NetApp ONTAP Select のアーキテクチャー](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)に記載されている NetApp ONTAP を使用します。 各物理ホストは、パブリック・ネットワーク・アクセスとプライベート・ネットワーク・アクセスのために、冗長 10 Gbps ネットワーク接続を備えています。
 
 ベアメタル・サーバーには以下の仕様があります。
-* CPU: デュアルまたはクワッドの Intel Xeon (コアと速度は可変構成)
+* CPU: デュアルまたはクワッド Intel Xeon (コアと速度は可変構成)
 * メモリー: 可変構成 (64 GB 以上)
 * ネットワーク: 4 x 10 Gbps
 * ドライブ数: 2 以上
@@ -62,10 +61,9 @@ subcollection: vmware-solutions
 ### IBM Cloud ネットワークの概要
 {: #design_physicalinfrastructure-ibm-cloud-network}
 
-{{site.data.keyword.cloud_notm}} の物理ネットワークは、パブリック、プライベートという 2 種類のネットワークに分類されます。 プライベート・ネットワークには、物理サーバーへの管理 Intelligent Platform Management Interface (IPMI) トラフィックも含まれています。
+{{site.data.keyword.cloud_notm}} の物理ネットワークは、パブリック、プライベートという 2 種類のネットワークに分類されます。 またプライベート・ネットワークには、物理サーバーへの管理 Intelligent Platform Management Interface (IPMI) トラフィックが含まれています。
 
-図 2. {{site.data.keyword.cloud_notm}} のネットワークの概要
-![{{site.data.keyword.cloud_notm}} のネットワークの概要](vcsv4radiagrams-ra-ibmcloudnetwork.svg)
+![{{site.data.keyword.cloud_notm}} ハイレベル・ネットワーク](../../images/vcsv4radiagrams-ra-ibmcloudnetwork.svg "{{site.data.keyword.cloud_notm}} ハイレベル・ネットワーク")
 
 #### パブリック・ネットワーク
 {: #design_physicalinfrastructure-public-net}
@@ -111,10 +109,9 @@ subcollection: vmware-solutions
 
 vCenter Server オファリング内で使用するベアメタル・サーバー用のパブリック・ネットワークやプライベート・ネットワークへの物理ネットワーク接続を削除することはできません。 ベアメタルの内部 NIC にある物理ポートを無効にすることは可能ですが、ケーブルのプラグを抜くためのサポートはありません。
 
-図 3. 物理ホスト接続</br>
-![物理ホスト接続](vcsv4radiagrams-ra-physical-host-connections.svg "物理ホスト接続")
+![物理ホスト接続](../../images/vcsv4radiagrams-ra-physical-host-connections.svg "物理ホスト接続")
 
-#### VLAN およびアンダーレーからオーバーレイへのルーティング
+#### VLAN およびアンダーレーとオーバーレイ間のルーティング
 {: #design_physicalinfrastructure-vlans}
 
 {{site.data.keyword.vmwaresolutions_short}} オファリングは、デプロイメント時に 3 つの VLAN (パブリック が 1 つ、プライベートが 2 つ) が割り当てられるように設計されています。 前の図にあるとおり、パブリック VLAN は `eth1` と `eth3` に割り当てられ、プライベート VLAN は `eth0` と `eth2` に割り当てられます。
@@ -159,7 +156,7 @@ vCenter Server 自動デプロイメントの一部として構成されたす�
 ## 物理ストレージ設計
 {: #design_physicalinfrastructure-storage-design}
 
-物理ストレージ設計は、物理ホストに搭載される物理ディスクの構成と、ネットワークに接続された共有ストレージの構成から成ります。 これには、オペレーティング・システム (vSphere ESXi) と、仮想マシン (VM) のストレージに使用されるディスクが含まれます。 VM 用ストレージは、VMware vSAN によって仮想化されるローカル・ディスク、共有ファイル・レベル・ストレージ、または共有ブロック・レベル・ストレージで構成できます。
+物理ストレージ設計は、物理ホストに搭載される物理ディスクの構成と、共有ネットワーク接続ストレージの構成から成ります。 これには、オペレーティング・システム (vSphere ESXi) と、仮想マシン (VM) のストレージに使用されるディスクが含まれます。 VM 用ストレージは、VMware vSAN によって仮想化されるローカル・ディスク、共有ファイル・レベル・ストレージ、または共有ブロック・レベル・ストレージで構成できます。
 
 ### オペレーティング・システム・ディスク
 {: #design_physicalinfrastructure-os-disks}
@@ -169,7 +166,7 @@ vSphere ESXi ハイパーバイザーは、永続ロケーションにインス�
 ### vSAN ディスク
 {: #design_physicalinfrastructure-vsan-disks}
 
-この設計では、仮想マシンのプライマリー・データ・ストアとして VMware vSAN ストレージを使用するかネットワークに接続された共有ストレージを使用するかのオプションが用意されています。 VMware vSAN の場合は、オール・フラッシュ構成で設定します。 この設計では、2U および 4U シャーシ、さまざまなディスク数、さまざまなディスク・サイズなど、いくつかの構成オプションが用意されています。 すべての構成で 2 つの vSAN ディスク・グループ (キャッシュ用ソリッド・ステート・ディスク (SSD) が 1 つ、容量用 SSD が 1 つ以上) が使用されます。 vSAN 消費に割り振られるドライブはすべて、単一ディスク RAID-0 内に構成されます。
+この設計では、仮想マシンのプライマリー・データ・ストアとして VMware vSAN ストレージを使用するか共有ネットワーク接続ストレージを使用するかのオプションが用意されています。 VMware vSAN の場合は、オール・フラッシュ構成で設定します。 この設計では、2U および 4U シャーシ、さまざまなディスク数、さまざまなディスク・サイズなど、いくつかの構成オプションが用意されています。 すべての構成で 2 つの vSAN ディスク・グループ (キャッシュ用ソリッド・ステート・ディスク (SSD) が 1 つ、容量用 SSD が 1 つ以上) が使用されます。 vSAN 消費に割り振られるドライブはすべて、単一ディスク RAID-0 内に構成されます。
 
 サポートされている構成の詳細については、[vCenter Server の部品構成表](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)を参照してください。
 
@@ -180,9 +177,7 @@ vSphere ESXi ハイパーバイザーは、永続ロケーションにインス�
 
 このストレージは NFSv3 プロトコルで接続され、IBM Cloud からの GB レベルごとに 2 IOP になります。 IBM では、16 K ブロック・サイズでプロビジョンされる IOP レベルを正規化して、ブロック・サイズが大きくなれば制限値が低くなり、ブロック・サイズが小さくなれば制限値が高くなるようにしています。
 
-図 4. VMware デプロイメントに接続された NFS 共有
-
-![VMware デプロイメントに接続された NFS 共有](vcsv4radiagrams-ra-nfs-shares.svg "VMware デプロイメントに接続された NFS 共有: 管理共有とカスタマー指定共有")
+![VMware デプロイメントに接続されている NFS 共有 (管理共有とカスタマー指定の共有)](../../images/vcsv4radiagrams-ra-nfs-shares.svg "VMware デプロイメントに接続されている NFS 共有 (管理共有とカスタマー指定の共有)")
 
 購入時または購入後に、どのホストでもワークロードに応じてさらにファイル共有をコンソール内で割り振ってマウントできます。 対応する {{site.data.keyword.CloudDataCent_notm}}内の使用可能な {{site.data.keyword.cloud_notm}} エンデュランス・ファイル・ストレージ容量オプションとパフォーマンス・ティアの中から選択できます。 共有はすべて、NFSv3 プロトコルを使用して接続されます。 また、NetApp ONTAP Select オファリングを適用することによって NFSv3 ファイル共有を接続することができます。
 
@@ -195,8 +190,7 @@ NFS の場合と同じように共有 iSCSI ストレージでも、初期 VMwar
 
 IBM では、16 K ブロック・サイズでプロビジョンされる IOP レベルを正規化し、ブロック・サイズが大きくなれば制限値が低くなり、ブロック・サイズが小さくなれば制限値が高くなるようにしています。
 
-図 5. VMware デプロイメントに接続した iSCSI LUN</br>
-![VMware デプロイメントに接続した iSCSI LUN](vcsv4radiagrams-ra-iscsi-lun.svg "VMware デプロイメントに接続した iSCSI LUN")
+![VMware デプロイメントに接続されている iSCSI LUN](../../images/vcsv4radiagrams-ra-iscsi-lun.svg "VMware デプロイメントに接続されている iSCSI LUN")
 
 購入時または購入後に、どのホストでもワークロードに応じてさらに iSCSI LUN をコンソール内で割り振ってマウントできます。 対応する IBM Cloud データ・センターで、使用可能な IBM Cloud エンデュランス・ブロック・ストレージ容量オプションとパフォーマンス・ティアの中から選択してください。 LUN はすべて、iSCSI プロトコルを使用して接続されます。 また、NetApp ONTAP Select オファリングから iSCSI LUN を接続することも可能です。
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 VMware 混合雲端服務 (HCX) 可讓 vSphere 軟體定義的資料中心 (SDDC) 的不同實例在各種網路類型之間交互作業。這些包括 LAN 或 WAN（無論在公用網際網路上是否受到保護）。HCX 設計的宗旨是要解決安全、相容性、複雜性和效能問題，當您嘗試達到多重實例、多網站部署 vSphere，跨越內部部署和雲端提供者界限進行延伸時，會遇到這些問題。
 
-圖 1. VMware 混合雲端服務
-![VMware 混合雲端服務](vcshcx.svg)
+![VMware Hybrid Cloud Services](../../images/vcshcx.svg "VMware Hybrid Cloud Services")
 
 HCX 是一種較好的方法，可用來在 {{site.data.keyword.cloud}} 內完全自動化的 vSphere 供應項目和 vSphere 的任何其他已部署實例之間進行交互作業。HCX 現在是 {{site.data.keyword.vmwaresolutions_short}} 內一個完整整合的供應項目。
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 下圖顯示此參照架構的系統環境定義。系統環境定義圖是一個圖表，它定義系統的主要元素、系統界限、與它互動的實體以及互動。它是高階圖，提供讀者系統起始視圖。
 
-圖 1. 系統環境定義
-![系統環境定義](vcscar-system-context.svg)
+![系統環境定義](../../images/vcscar-system-context.svg "系統環境定義")
 
 下列是系統環境定義的核心元件：
 -	vCenter Server - VMware vCenter Server on {{site.data.keyword.cloud_notm}} 是 {{site.data.keyword.cloud_notm}} for VMware Services 實例，而此實例是從內部部署環境移轉虛擬機器 (VM) 的目標。它與內部部署「虛擬化」一起使用成為混合式環境，讓 VM 可以從某個環境移至另一個環境。

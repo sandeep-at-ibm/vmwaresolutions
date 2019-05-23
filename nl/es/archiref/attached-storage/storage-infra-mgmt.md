@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-13"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -48,9 +48,7 @@ Tabla 1. Resumen de grupos de puertos NFS
 
 Además de la creación del grupo de puertos vDS para el tráfico de almacenamiento NFS, se crea un puerto VMkernel en cada host ESXi de vSphere durante el despliegue y se asigna al grupo de puertos SDDC-DPG-NFS. Al puerto VMkernel también se le asigna una dirección IP de la subred portátil privada asociada a la VLAN de almacenamiento adjunto, es decir, VLAN B privada, y su MTU se establece en 9000 para dar soporte a las tramas jumbo.
 
-Figura 1. Grupos de puertos vDS privados y enlaces ascendentes
-
-![Grupos de puertos vDS privados y enlaces ascendentes](private_vds_portgroups_and_uplinks.svg "Grupos de puertos vDS privados y enlaces ascendentes")
+![Enlaces ascendentes y grupos de puertos vDS privados](../../images/private_vds_portgroups_and_uplinks.svg "Enlaces ascendentes y grupos de puertos vDS privados")
 
 ### Direccionamiento estático de host vSphere
 {: #storage-infra-mgmt-vsphere-routing}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -14,9 +14,7 @@ subcollection: vmware-solutions
 # 系统上下文
 {: #vcsiks-systemcontext}
 
-图 1. 系统上下文
-
-![系统上下文图](vcsiks-system-context.svg)
+![系统上下文图](../../images/vcsiks-system-context.svg "系统上下文图")
 
 核心组件如下：
 

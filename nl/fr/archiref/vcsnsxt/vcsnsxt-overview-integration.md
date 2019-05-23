@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-03"
+lastupdated: "2019-05-13"
 
 subcollection: vmware-solutions
 
@@ -130,16 +130,16 @@ La façon dont les tables de routage dans la passerelle et les routeurs vRouter 
 ## Liens connexes
 {: #vcsnsxt-overview-integration-related}
 
-* [Centres de données {{site.data.keyword.cloud_notm}} dans le monde](https://www.ibm.com/cloud/data-centers/)
-* [Container white paper](https://communities.vmware.com/servlet/JiveServlet/download/2741654-198902/Containers%20and%20Container%20Networking%20for%20Network%20Engineers.pdf) (téléchargement de fichier PDF)
-* [Blogue VMware HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/blogs/bluemix/2018/01/vmware-hcx-ibm-cloud-aka-really-cool-space-age-kind-now-available/)
-* [Feuille de données VMware HCX on {{site.data.keyword.cloud_notm}}](https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=26012526USEN)
+* [Centres de données {{site.data.keyword.cloud_notm}} dans le monde](https://www.ibm.com/cloud/data-centers/){:new_window}
+* [Container white paper](https://communities.vmware.com/servlet/JiveServlet/download/2741654-198902/Containers%20and%20Container%20Networking%20for%20Network%20Engineers.pdf){:new_window} (téléchargement de fichier PDF)
+* [Blogue VMware HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/blog/announcements/vmware-hcx-ibm-cloud-aka-really-cool-space-age-kind-now-available){:new_window}
+* [Feuille de données VMware HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/downloads/cas/MPVXKWNM){:new_window}
 * [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [NSX for vSphere 6.4.3 configuration maximums](https://configmax.vmware.com/guest)
-* [Documentation de la plateforme {{site.data.keyword.cloud_notm}}](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.0/kc_welcome_containers.html)
+* [NSX for vSphere 6.4.3 configuration maximums](https://configmax.vmware.com/guest){:new_window}
+* [Documentation de la plateforme {{site.data.keyword.cloud_notm}}](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.0/kc_welcome_containers.html){:new_window}
 * [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-getting-started#getting-started)
-* [Projet Calico](https://www.projectcalico.org/)
-* [GitHub-Calico](https://github.com/projectcalico/calico)
-* [Kubernetes](https://kubernetes.io/)
-* [GitHub-Flannel](https://github.com/coreos/flannel/)
-* [GitHub-Canal](https://github.com/projectcalico/canal)
+* [Projet Calico](https://www.projectcalico.org/){:new_window}
+* [GitHub-Calico](https://github.com/projectcalico/calico){:new_window}
+* [Kubernetes](https://kubernetes.io/){:new_window}
+* [GitHub-Flannel](https://github.com/coreos/flannel/){:new_window}
+* [GitHub-Canal](https://github.com/projectcalico/canal){:new_window}

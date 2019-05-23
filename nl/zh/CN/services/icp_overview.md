@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-26"
+lastupdated: "2019-05-01"
 
 subcollection: vmware-solutions
 
@@ -121,7 +121,7 @@ subcollection: vmware-solutions
 * 安装 {{site.data.keyword.cloud_notm}} Private Hosted 服务之前，请收集必需的许可证。这包括 {{site.data.keyword.cloud_notm}} Private 和 {{site.data.keyword.cloud_notm}} Automation Manager 许可证。确保许可证不仅支持初始服务部署，还支持未来在基础架构中扩展大小。
 * 对于生产就绪型环境中的 {{site.data.keyword.cloud_notm}} Private Hosted 部署，不支持每个主机 64 GB RAM。因此，必须为 **RAM** 选择高于 64 GB 的选项。
 * 在环境中安装 {{site.data.keyword.cloud_notm}} Private Hosted 服务之前，会针对环境中缺省集群的可用容量执行检查，以确保服务组件能够适合在此环境中运行。如果容量检查失败，那么不会安装该服务，并且会在控制台上将该服务的状态设置为**容量验证失败**。此外，还会显示一条包含更多详细信息的控制台消息，并且会通过电子邮件通知您。要安装该服务，必须通过添加更多主机或者释放 RAM、CPU 或磁盘空间来增加缺省集群中的容量，然后在控制台中再次添加该服务。添加后，可以通过单击处于**容量验证失败**状态的现有服务旁边的**删除**图标来除去该服务。
-* 如果要部署更多节点，请使用随初始 {{site.data.keyword.cloud_notm}} Private Hosted 安装一起部署的 {{site.data.keyword.cloud_notm}} Private Ubuntu 模板 (Ubuntu 1604)。要查找该模板，请在 VMware vSphere Web Client 中，转至 `cam` 文件夹下的 **VM 和模板**选项卡。Ubuntu 模板的缺省密码为 `icponcloud`，建议您在使用该模板之前更改该密码。
+* 如果要部署更多节点，请参阅[部署更多节点](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_ordering-deploy-nodes#icp_ordering-deploy-nodes)。
 
 ## 除去 IBM Cloud Private Hosted 时的注意事项
 {: #icp_overview-remove}

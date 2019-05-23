@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-13"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -48,9 +48,7 @@ subcollection: vmware-solutions
 
 NFS 스토리지 트래픽에 대한 vDS 포트 그룹 작성 외에 VMkernel 포트는 배치 중에 각 vSphere ESXi 호스트에 작성되고 SDDC-DPG-NFS 포트 그룹에 지정됩니다. 또한 VMkernel 포트에는 연결된 스토리지 VLAN, 즉 사설 VLAN B와 연관된 사설 포터블 서브넷의 IP 주소가 지정되며 해당 MTU는 점보 프레임 지원을 위해 9000으로 설정됩니다.
 
-그림 1. 사설 vDS 포트 그룹 및 업링크
-
-![사설 vDS 포트 그룹 및 업링크](private_vds_portgroups_and_uplinks.svg "사설 vDS 포트 그룹 및 업링크")
+![사설 vDS 포트 그룹 및 업링크](../../images/private_vds_portgroups_and_uplinks.svg "사설 vDS 포트 그룹 및 업링크")
 
 ### vSphere 호스트 정적 라우팅
 {: #storage-infra-mgmt-vsphere-routing}

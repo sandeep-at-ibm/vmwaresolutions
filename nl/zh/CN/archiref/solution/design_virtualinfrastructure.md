@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-09"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -20,8 +20,7 @@ subcollection: vmware-solutions
 
 虚拟基础架构层包含多个 VMware 软件组件，用于虚拟化物理基础架构层中提供的计算、存储和网络资源：VMware vSphere ESXi、VMware NSX-V 或 NSX-T 以及（可选）VMware vSAN。
 
-图 1. 虚拟基础架构</br>
-![虚拟基础架构](vcsv4radiagrams-ra-virtinfra.svg)
+![虚拟基础架构](../../images/vcsv4radiagrams-ra-virtinfra.svg "虚拟基础架构")
 
 ## VMware vSphere 设计
 {: #design_virtualinfrastructure-vsphere-design}
@@ -71,9 +70,7 @@ vSphere 集群包含用于管理 vCenter Server 实例的虚拟机 (VM) 以及�
 
 如下图中所示，vSAN 跨 vSphere 集群内的多个 ESXi 主机聚集本地存储器，并将聚集的存储器作为一个 VM 数据存储进行管理。在此设计中，计算节点包含用于 ESXi 操作系统 (OS) 和 vSAN 数据存储的本地磁盘驱动器。无论节点属于哪个集群，每个节点中都包含两个操作系统驱动器来容纳 ESXi 安装。
 
-图 2. vSAN 概念
-
-![vSAN 概念](vcsv4radiagrams-ra-vsan.svg "vSAN 跨 vSphere 集群内的多个 ESXi 主机聚集本地存储器，并将聚集的存储器作为一个 VM 数据存储进行管理")
+![vSAN 概念](../../images/vcsv4radiagrams-ra-vsan.svg "vSAN 在 vSphere 集群内的多个 ESXi 主机中聚集本地存储器，并将聚集存储器作为单个 VM 数据存储器进行管理")
 
 vSAN 采用以下组件：
 * 双磁盘组 vSAN 设计，每个磁盘组包含两个或更多磁盘。组中最小大小的一个 SSD 或 NVMe 驱动器充当高速缓存层，其余 SSD 充当容量层。
@@ -116,14 +113,27 @@ vSAN 设置是根据在 {{site.data.keyword.cloud_notm}} 中部署 VMware 解决
    * vSAN - 100 个共享
 * vSAN 内核端口：**显式故障转移**
 
+## NFS 连接的存储器
+{: #design_virtualinfrastructure-nfs-storage}
+
+使用 NFS 网络连接的存储器时，此体系结构规定使用 NFS V3 而不是 NFS V4.1，因为使用后者时 NFS 服务器 LIF 迁移可能会导致等待时间过长。每个 vSphere 主机使用其主机名连接到 NFS 存储器。
+
+一个 2 TB NFS 数据存储器连接到集群，以供管理组件将其与性能层 4 IOPS/GB 配合使用。可以将更多数据存储器连接到集群以供工作负载使用，实现多种大小和性能层。
+
+此外，此体系结构要求所有主机都为 NFS 存储器所在的子网创建了子网路由。此子网路由的目的是指示所有 NFS 流量使用此设计指定用于 NFS 流量的端口组、子网和 VLAN。如果连接了多个 NFS 数据存储器，可能需要配置多个路由，因为这些数据存储器可能位于不同的远程子网中。
+
+管理虚拟机可能位于 NFS 数据存储器上。这会产生引导问题，因为某些管理机器可能负责用于解析 NFS 主机名的 DNS 服务。因此，此体系结构指定管理数据存储器的至少一个 IP 地址在每个主机上的 `/etc/hosts` 中进行了硬编码。
+
 ## iSCSI 连接的存储器
 {: #design_virtualinfrastructure-iscsi-storage}
 
 与 NFS V3 连接的存储器不同，iSCSI 连接的存储器在所有配置的 NIC 卡端口和目标端口上支持活动/活动路径。因此，可以实现更高的吞吐量，也因而是 NFS 连接存储器的理想替代方法。但使用这种存储器的代价是复杂性更高。
 
-使用 VMware 时，{{site.data.keyword.cloud_notm}} 耐久性块存储器最多支持每个 LUN 64 个 IP，根据此设计，最多允许 32 个主机。
+使用 VMware 时，{{site.data.keyword.cloud_notm}} 耐久性块存储器最多支持每个 LUN 64 个 IP 地址，根据此设计，最多允许 32 个主机。
 
 一个 2 TB iSCSI LUN 连接到 vSphere 集群以用于管理组件，并且至少再配置一个 iSCSI LUN，以供客户工作负载使用。此存储器的格式设置为每个 LUN 的 VMFS 6.x 文件系统。
+
+此体系结构指定使用 iSCSI 端口绑定，多路径循环策略，最大队列深度为 64，循环 IOPS 限制为 1。
 
 ### iSCSI 的虚拟网络设置
 {: #design_virtualinfrastructure-setup-iscsi}
@@ -153,9 +163,7 @@ iSCSI LUN 已供应并且格式设置为每个 LUN 的单个文件 VMFS 文件�
 
 下图显示了 NSX Manager 相对于体系结构中其他组件的位置。
 
-图 3. NSX Manager 网络概述
-
-![NSX Manager 网络概述](vcsv4radiagrams-ra-vcs-nsx-overview.svg "相对于体系结构中其他组件的 NSX Manager")
+![NSX Manager 网络概述](../../images/vcsv4radiagrams-ra-vcs-nsx-overview.svg "与体系架构中的其他组件相关的 NSX Manager")
 
 初始部署后，{{site.data.keyword.cloud_notm}} 自动化会在初始集群中部署三个 NSX 控制器。 将从指定用于管理组件的**专用 A** 可移植子网中为每个控制器分配一个支持 VLAN 的 IP 地址。此外，此设计还会创建 VM 到 VM 反亲缘关系规则，以在集群中的各主机之间分隔控制器。初始集群必须至少包含 3 个节点，以确保控制器的高可用性。
 
@@ -186,9 +194,7 @@ Manager|虚拟设备|
 
 该设计使用最小数量的 vDS 交换机。集群中的主机会连接到公用和专用网络。这些主机均配置有两个分布式虚拟交换机。两个交换机的使用遵循的是用于将公用和专用网络分隔开的 {{site.data.keyword.cloud_notm}} 网络实践。下图显示了 vDS 设计。
 
-图 4. 分布式交换机设计
-
-![分布式交换机设计](vcsv4radiagrams-distributed-switch-design.svg "vDS 设计")
+![分布式交换机设计](../../images/vcsv4radiagrams-distributed-switch-design.svg "分布式交换机设计")
 
 如上图所示，一个 vDS 配置用于公用网络连接 (SDDC-Dswitch-Public)，另一个 vDS 配置用于专用网络连接 (SDDC-Dswitch-Private)。不同类型的流量需要进行分隔，以减少争用和等待时间并提高安全性。
 
@@ -198,9 +204,9 @@ VLAN 用于对物理网络功能进行分段。此设计使用三个 VLAN：两�
 
 |VLAN|名称| 流量类型 |
 |:----- |:----------- |:------------ |
-|VLAN1|公用|可用于因特网访问|
-|VLAN2|专用 A| ESXi 管理、管理、VXLAN (VTEP) |
-|VLAN3|专用 B|vSAN、NFS、vMotion、iSCSI|
+|VLAN 1|专用 A| ESXi 管理、管理、VXLAN (VTEP) |
+|VLAN 2|专用 B|vSAN、NFS、vMotion、iSCSI|
+|VLAN 3|公用|可用于因特网访问|
 
 来自工作负载的流量将在支持 VXLAN 的逻辑交换机上传输。
 
@@ -273,7 +279,7 @@ iSCSI|SDDC-DPortGroup-iSCSI-B|iSCSI|9000
 * 微分段
 * 将 NSX Management 链接到其他 VMware 实例
 
-图 5. 部署的示例客户 NSX 拓扑 ![部署的示例客户 NSX 拓扑](vcsv4radiagrams-ra-vcs-nsx-topology-customer-example.svg)
+![已部署示例客户 NSX 拓扑](../../images/vcsv4radiagrams-ra-vcs-nsx-topology-customer-example.svg "已部署示例客户 NSX 拓扑")
 
 ## 公用网络连接
 

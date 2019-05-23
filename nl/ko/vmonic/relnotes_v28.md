@@ -65,11 +65,11 @@ V2.8 릴리스부터 다음의 새 {{site.data.keyword.cloud_notm}} {{site.data.
 ## 임베드된 Platform Services Controller
 {: #relnotes_v28-psc}
 
-V2.8 릴리스부터 vCenter Server는 임베드된 PSC(Platform Services Controller)로 배치됩니다. 즉, vCenter Server, vCenter Server 컴포넌트 및 PSC는 단일 가상 머신에 배치됩니다. 이 변경사항은 모두 새로 배치된 vCenter Server, vCenter Server with Hybridity 및 NetApp 인스턴스에 적용됩니다.
+V2.8 릴리스부터 vCenter Server는 임베디드 PSC(Platform Services Controller)로 배치됩니다. 즉, vCenter Server, vCenter Server 컴포넌트 및 PSC는 단일 가상 머신에 배치됩니다. 이 변경사항은 모두 새로 배치된 vCenter Server, vCenter Server with Hybridity 및 NetApp 인스턴스에 적용됩니다.
 
-이전 릴리스에서 V2.8로 업그레이드되는 인스턴스의 경우 PSC는 vCenter Server에서 임베드되지 않습니다. 임베드된 PSC를 사용할 경우 외부에서 임베드된 PSC로 자체 변환해야 합니다.
+이전 릴리스에서 V2.8로 업그레이드되는 인스턴스의 경우 PSC는 vCenter Server에서 임베드되지 않습니다. 임베디드 PSC를 사용할 경우 외부에서 임베디드 PSC로 자체 변환해야 합니다.
 
-PSC를 외부에서 임베드된 PSC로 수동 변환하는 기본 인스턴스가 업그레이드된 인스턴스인 다중 사이트에서 새로 배치된 V2.8 보조 인스턴스에는 임베드된 PSC가 있습니다.
+PSC를 외부에서 임베디드 PSC로 수동 변환하는 기본 인스턴스가 업그레이드된 인스턴스인 다중 사이트에서 새로 배치된 V2.8 보조 인스턴스에는 임베디드 PSC가 있습니다.
 
 자세한 정보는 [vCenter Server 개요](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#vcenter-server-architecture)에서 *vCenter Server 아키텍처* 섹션을 참조하십시오.
 

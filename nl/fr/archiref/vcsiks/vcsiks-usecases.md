@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -23,8 +23,7 @@ Le service VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybrid
 
 L'offre vCenter Server with Hybridity Bundle d'{{site.data.keyword.cloud_notm}} permet d'établir des connexions sécurisées entre le site source local homologue et le site cible {{site.data.keyword.cloud_notm}}.
 
-Figure 1. Services VMware Hybridity
-![Services VMware Hybrid Cloud Extension](vcsiks-hcx.svg)
+![Services VMware Hybrid Cloud Extension](../../images/vcsiks-hcx.svg "Services VMware Hybrid Cloud Extension")
 
 Le service vCenter Server with Hybridity Bundle crée une interconnectivité à couplage lâche entre le site local et {{site.data.keyword.cloud_notm}} et active des fonctionnalités telles que :
 - **Interconnectivité simple** – Des connexions de réseau logique sont facilement établies sur n'importe quelle connexion physique, y compris l'internet public, le réseau privé virtuel ou {{site.data.keyword.cloud_notm}} Direct Link.
@@ -44,8 +43,7 @@ Grâce à cette solution, Acme Skateboards a pu faire migrer ses charges de trav
 
 L'entreprise Acme Skateboards souhaite déployer une architecture hybride sur {{site.data.keyword.cloud_notm}} composée de vCenter et d'{{site.data.keyword.icpfull_notm}}, pour son parcours vers la modernisation de ses applications. Ses exigences sont les suivantes : exécuter ses bases de données sur des machines virtuelles, les applications et les services Web dans des conteneurs, et utiliser un jeu commun d'outils pour la gestion du réseau et de la sécurité.
 
-Figure 2. Application hybride Acme Skateboards
-![Diagramme de l'application hybride Acme Skateboards](vcsiks-acme-app-arch.svg)
+![Diagramme de l'application hybride Acme Skateboards](../../images/vcsiks-acme-app-arch.svg "Diagramme de l'application hybride Acme Skateboards")
 
 {{site.data.keyword.vmwaresolutions_short}} fournit l'automatisation du déploiement des composants de technologie VMware dans les {{site.data.keyword.CloudDataCents_notm}} situés dans le monde entier. L'architecture est composée d'une région de cloud et a la capacité de s'étendre dans d'autres régions de cloud situées dans une autre zone géographique ou dans un autre pod {{site.data.keyword.cloud_notm}} au sein du même centre de données.
 

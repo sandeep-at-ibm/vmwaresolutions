@@ -22,7 +22,7 @@ L'installazione di VMware HCX on IBM Cloud ha i seguenti requisiti software:
 {: #hcx-archi-prep-install-config-net}
 
 HCX deve attraversare internet pubblico e le linee private e connettersi ai componenti del data center, come ad esempio le reti, gli switch e i gruppi di porte.
-* [Requisiti di accesso alla porta](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-port-req) elenca le porte che devono essere aperte in modo che i dispositivi virtuali HCX possano essere installati correttamente. 
+* [Requisiti di accesso alla porta](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-port-req) elenca le porte che devono essere aperte in modo che i dispositivi virtuali HCX possano essere installati correttamente.
 * Sia l'ambiente vSphere in loco che l'ambiente cloud VCS HCX devono consentire la sincronizzazione dell'orologio NTP (Network Time Protocol) con i dispositivi in loco vSphere e i dispositivi VCS HCX. La porta UDP 123 deve essere accessibile alle reti e ai dispositivi virtuali HCX.
 
 ## Ambiente in loco

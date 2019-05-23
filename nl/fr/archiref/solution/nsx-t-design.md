@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-13"
 
 subcollection: vmware-solutions
 
@@ -63,8 +63,7 @@ Attribut | Spécification
 
 La figure suivante illustre l'emplacement des contrôleurs NSX Manager par rapport aux autres composants de cette architecture.
 
-Figure 1. Présentation du réseau NSX-T Manager
-![Présentation du réseau NSX-T Manager](vcsv4radiagrams-ra-vcs-nsx-overview.svg)
+![Présentation du réseau NSX-T](../../images/vcsv4radiagrams-ra-vcs-nsx-overview.svg "Présentation du réseau NSX-T Manager")
 
 ## Remarques liées au déploiement
 {: #nsx-t-design-deployment}
@@ -176,11 +175,9 @@ Nom du commutateur logique | VLAN |Zone de transport | Règle de groupage de lia
 
 Dans cette conception, un unique cluster Edge virtuel est mis à disposition à l'usage des charges de travail client et de gestion. Le cluster Edge virtuel peut héberger plusieurs instances de passerelles T0. Comme indiqué précédemment, plusieurs instances de passerelles Edge T0 peuvent être instanciées sur un même cluster Edge, chacune disposant de ses propres tables de routage. Voir la figure suivante qui illustre les composants fonctionnels d'un cluster Edge NSX-T.
 
-Figure 2. Exemple de cluster Edge NSX-T avec extension T0 à T1
-![Exemple de cluster Edge NSX-T avec extension T0 à T1](vcsv4radiagrams-ra-nsx-t-edge-cluster-t0-to-t1-scale.svg)
+![Exemple de cluster Edge NSX-T T0 à T1](../../images/vcsv4radiagrams-ra-nsx-t-edge-cluster-t0-to-t1-scale.svg "Exemple de cluster Edge NSX-T T0 à T1")
 
-Figure 3. Passerelle T0 de gestion</br>
-![Passerelle TO de gestion](vcsv4radiagrams-topology-0.svg)
+![Passerelle T0 de gestion](../../images/vcsv4radiagrams-topology-0.svg "Passerelle T0 de gesiton")
 
 #### Passerelle de routeur logique de niveau 0
 {: #nsx-t-design-tier-0}
@@ -202,8 +199,7 @@ Afin de fournir une connectivité de couche 3 entre les machines virtuelles conn
 
 Charge de travail de T1 vers passerelle T0 – cluster Edge virtuel :
 
-Figure 4. Topologie NSX-T déployée de passerelle Edge virtuelle T0
-![Topologie NSX-T déployée de passerelle Edge virtuelle T0](vcsv4radiagrams-topology-1.svg)
+![Passerelle Edge T0 virtuelle de topologie NSX-T déployée](../../images/vcsv4radiagrams-topology-1.svg "Passerelle Edge T0 virtuelle de topologie NSX-T déployée")
 
 A la base, la topologie IC4V déployée 1 est la même que celle déployée avec des passerelles NSX-V DLR et Edge. Avec NSX-T, pas de configuration de protocole de routage dynamique entre T1 et T0. L'espace d'adresse IP RFC-1891 est utilisé pour le réseau dissocié de charge de travail et le réseau dissocié de transport. Un espace d'adresses IP portables privées et publiques client est affecté à l'usage des clients. Un espace d'adresses IP portables privées et publiques {{site.data.keyword.cloud_notm}} désigné par le client est affecté à T0 pour une utilisation par le client.
 
@@ -211,8 +207,7 @@ A partir de cette conception, vous avez la possibilité de ne pas supprimer ces 
 
 Charge de travail de T1 vers passerelle T0 – cluster Edge physique :
 
-Figure 5. Topologie NSX-T déployée de passerelle Edge physique T0
-![Topologie NSX-T déployée de passerelle Edge physique T0](vcsv4radiagrams-topology-2.svg)
+![Passerelle Edge T0 physique de topologie NSX-T déployée](../../images/vcsv4radiagrams-ra-vcs-nsx-overview.svg "[Passerelle Edge T0 physique de topologie NSX-T déployée")
 
 La topologie 2 déployée est similaire à l'exception qui remplace le cluster Edge basé sur machine virtuelle par une paire de serveurs bare metal qui exécutent Red Hat Server. Un espace d'adresses IP portables privées et publiques {{site.data.keyword.cloud_notm}} désigné par le client est affecté à T0 pour une utilisation par le client. A partir de cette conception, vous avez la possibilité de ne pas supprimer ces plages d'adresses IP si l'instance vCenter Server est déclassée et supprimée.
 
@@ -220,8 +215,7 @@ Consultez un autre document ou cliquez sur un lien pour une nomenclature incluan
 
 Charge de travail avec ICP vers passerelle T0 – cluster Edge virtuel :
 
-Figure 6. Topologie NSX-T déployée avec intégration NSX-T ICP et passerelle Edge T0 virtuelle
-![Topologie NSX-T déployée avec intégration NSX-T ICP et passerelle Edge T0 virtuelle](vcsv4radiagrams-topology-3.svg)
+![Topologie NSX-T déployée avec intégration ICP NSX-T et passerelle T0 Edge virtuelle](../../images/vcsv4radiagrams-topology-3.svg "[Topologie NSX-T déployée avec intégration ICP NSX-T et passerelle T0 Edge virtuelle")
 
 La topologie 3 déployée contient la topologie 1 à laquelle s'ajoute un déploiement ICP qui comprend l'intégration NSX-T à la place de Calico, qui est la pile réseau par défaut au sein d'un déploiement ICP. Le client peut mettre à disposition des espaces de nom de conteneur supplémentaires dans ICP, qui automatise la création de commutateurs logiques, d'adresse IP de sous-réseau et d'instances de passerelle T1 pour chaque espace de nom.
 

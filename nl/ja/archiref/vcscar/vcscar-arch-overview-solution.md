@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -17,8 +17,7 @@ subcollection: vmware-solutions
 ## VMware vCenter Server on IBM Cloud のコンポーネント
 {: #vcscar-arch-overview-solution-vcs-comp}
 
-図 1. vCenter Server 環境の図
-![vCenter Server 環境](vcscar-vcs.svg)
+![vCenter Server 環境](../../images/vcscar-vcs.svg "vCenter Server 環境")
 
 ### Platform Service Controller
 {: #vcscar-arch-overview-solution-psc}
@@ -72,7 +71,7 @@ Edge サイズ   「コンパクト」 | vCPU 数	1
 
 {{site.data.keyword.icpfull_notm}} は、オンプレミスのコンテナー化されたアプリケーションを開発および管理するためのアプリケーション・プラットフォームです。 {{site.data.keyword.icpfull_notm}} は、コンテナー・オーケストレーター Kubernetes、プライベート・イメージ・リポジトリー、管理コンソール、モニター・フレームワークを含む、コンテナーを管理するための統合環境です。
 
-図 2. vCenter Server による仮想 {{site.data.keyword.icpfull_notm}} のデプロイメント![vCenter Server による仮想 {{site.data.keyword.icpfull_notm}} のデプロイメント](vcscar-icp.svg)
+![vCenter Server を使用した仮想 {{site.data.keyword.icpfull_notm}} デプロイメント](../../images/vcscar-icp.svg "vCenter Server を使用した仮想 {{site.data.keyword.icpfull_notm}} デプロイメント")
 
 ### ブート・ノード
 {: #vcscar-arch-overview-solution-boot-node}
@@ -134,7 +133,7 @@ CAM が機能するためには、ワーカー・ノードの vCPU とメモリ�
 
 {{site.data.keyword.cloud_notm}} Automation Manager (CAM) は、開発者と管理者がビジネス要求を満たせるようにする、{{site.data.keyword.icpfull_notm}} 上で実行されるセルフサービスのマルチクラウド管理プラットフォームです。
 
-図 3. CAM コンポーネント・リファレンス![CAM コンポーネント・リファレンス](vcscar-cam-components.svg)
+![CAM コンポーネント・リファレンス](../../images/vcscar-cam-components.svg "CAM コンポーネント・リファレンス")
 
 ### CAM プロキシー
 {: #vcscar-arch-overview-solution-cam-proxy}

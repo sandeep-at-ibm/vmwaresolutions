@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -104,8 +104,7 @@ De plus, il est configuré pour un accès à vCenter et NSX avec un utilisateur 
 
 Une fois le composant de cloud HCX Manager déployé et configuré, les composants source créent une connexion à HCX Manager via les adresses IP virtuelles configurées dans NSX ESG. Une fois cette connexion effectuée, les dispositifs de passerelle cloud et d'optimiseur de réseau WAN sont déployés au sein d'IBM Cloud.
 
-Figure 1. Cible - Dispositif des Services cloud hybrides
-![Cible - Dispositif des Services cloud hybrides](target_hybrid_cloud_services_appliance.svg)
+![Cible - Dispositif des services cloud hybrides](../../images/target_hybrid_cloud_services_appliance.svg "Cible - Dispositif des services cloud hybrides")
 
 ## Passerelle cloud
 {: #hcx-archi-target-cloud-gateway}
@@ -126,8 +125,7 @@ Ce commutateur logique est un réseau privé, non routable, qui est utilisé en 
 
 La figure ci-après illustre un diagramme de composants de haut niveau du dispositif de passerelle cloud et les connexions affectées.
 
-Figure 2. Déploiement de passerelle cloud
-![Déploiement de passerelle cloud](cloud_gateway_deployment.svg)
+![Déploiement de passerelle cloud](../../images/cloud_gateway_deployment.svg "Déploiement de passerelle cloud")
 
 ## Optimiseur de réseau WAN
 {: #hcx-archi-target-wan-opt}
@@ -146,8 +144,7 @@ Table 9. Dimensionnement de dispositif de l'optimiseur de réseau WAN
 
 A la différence de la passerelle cloud, le dispositif d'optimisation de réseau WAN est uniquement relié à un commutateur logique pour permettre la communication entre lui-même et la passerelle cloud. Ce dispositif est obligatoire si l'optimisation de réseau WAN est utilisée au sein de l'environnement source. Consultez la figure ci-après pour une vue de la disposition réseau.
 
-Figure 3. Déploiement de l'optimiseur de réseau WAN
-![Déploiement de l'optimiseur de réseau WAN](wan_optimizer_deployment.svg)
+![Déploiement de l'optimiseur de réseau WAN](../../images/wan_optimizer_deployment.svg "Déploiement de l'optimiseur de réseau WAN")
 
 ## Concentrateur de couche 2
 {: #hcx-archi-target-layer-2-conc}
@@ -166,8 +163,8 @@ Tableau 10. Dimensionnement de dispositif HT L2C
 
 Le dispositif L2C est déployé sur le réseau VLAN de gestion ainsi que le réseau VLAN public. L'interface publique est utilisée pour le trafic de l'application qui a lié la source du réseau étendu. D'autres connexions, comme les réseaux étendus, sont créées et reliées au dispositif L2C après que l'administrateur source a démarré l'extension réseau dans IBM Cloud. Des exemples de ces réseaux et connexions sont illustrés dans la figure ci-après.
 
-Figure 4. Déploiement de concentrateur L2
-![Déploiement de concentrateur L2](l2_concentrator_deployment.svg)
+![Déploiement de concentrateur L2](../../images/l2_concentrator_deployment.svg "Déploiement de concentrateur L2")
+
 
 ## Liens connexes
 {: #hcx-archi-target-related}

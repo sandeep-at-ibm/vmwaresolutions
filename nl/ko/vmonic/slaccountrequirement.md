@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-16"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -51,17 +51,11 @@ subcollection: vmware-solutions
 ## 서비스 엔드포인트가 사용으로 설정된 VRF
 {: #slaccountrequirement-vrf-se}
 
-{{site.data.keyword.cloud_notm}} 인프라 계정은 서비스 엔드포인트가 사용으로 설정된 VRF(Virtual Routing and Forwarding) 계정이어야 합니다. 사용자 계정이 비 VRF인 경우, VRF 계정으로 변환해야 합니다. 또한 서비스 엔드포인트를 사용하여 VRF 계정을 사용으로 설정해야 합니다.
+{{site.data.keyword.cloud_notm}} 인프라 계정은 VRF(Virtual Routing and Forwarding) 계정이어야 합니다. 사용자 계정이 비 VRF인 경우, VRF 계정으로 변환해야 합니다. 또한 서비스 엔드포인트를 사용하기 위해 VRF 계정을 사용으로 설정하는 것이 좋습니다.
 
 자세한 정보는 다음을 참조하십시오.
 * [IBM Cloud의 VRF 개요](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
 * [서비스 엔드포인트 사용을 위해 계정 사용](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
-
-## VLAN Spanning 지원 종료
-{: #slaccountrequirement-vlan-eos}
-
-2019년 8월부터는 VLAN Spanning이 더 이상 지원되지 않습니다. 2019년 7월 말까지는 {{site.data.keyword.cloud_notm}} 인프라 계정을 VRF로 변환하고 서비스 엔드포인트를 사용으로 설정해야 합니다.
-{:important}
 
 ## 관련 링크
 {: #slaccountrequirement-related}

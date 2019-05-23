@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -28,9 +28,7 @@ NSX Edge Services Gateway on {{site.data.keyword.cloud}} 解決方案提供的 V
 在下圖中，VMware vSAN 是選用項目。
 {:note}
 
-圖 1. {{site.data.keyword.cloud_notm}} 上的雲端網路服務
-
-![「雲端網路服務」架構](architecture.svg "「雲端網路服務」架構")
+![雲端網路連線功能服務架構](../../images/architecture.svg "雲端網路連線功能服務架構")
 
 ## 專用架構設計
 {: #nsx_design-dedicated-archi}

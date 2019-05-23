@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -125,8 +125,7 @@ vCenter당 하나의 HCX 배치만 있을 수 있습니다. 이 제한사항은 
 최대 다섯 개의 등록된 vCenter를 지원합니다.
 {:note}
 
-그림 1. 소스 하이브리드 클라우드 서비스
-![소스 하이브리드 클라우드 서비스](source_hybrid_cloud_services.svg)
+![소스 하이브리드 클라우드 서비스 ](../../images/source_hybrid_cloud_services.svg "소스 하이브리드 클라우드 서비스")
 
 ### HCX 가상 애플리케이션
 {: #hcx-archi-source-hcxva}
@@ -156,8 +155,7 @@ HCX는 IBM Cloud에 대한 사이트 대 사이트 연결을 부트스트랩하�
 
 클라우드 게이트웨이는 양방향 마이그레이션을 수행하도록 vSphere 복제 기술을 통합합니다.
 
-그림 2. 소스 클라우드 게이트웨이
-![소스 클라우드 게이트웨이](source_cloud_gateway.svg)
+![소스 클라우드 게이트웨이](../../images/source_cloud_gateway.svg "소스 클라우드 게이트웨이")
 
 ### WAN 최적화 프로그램
 {: #hcx-archi-source-wan-opt}
@@ -166,8 +164,7 @@ HCX는 소프트웨어 정의 WAN 최적화도 제공합니다. WAN 최적화 �
 
 가상 머신 마이그레이션은 vSphere 온프레미스와 IBM Cloud 간의 뛰어난 이동성을 구현하도록 클라우드 게이트웨이 및 WAN 최적화 어플라이언스의 결합에 의존합니다.
 
-그림 3. 소스 WAN 최적화 프로그램
-![소스 WAN 최적화 프로그램](source_wan_optimizer.svg)
+![소스 WAN 최적화 프로그램](../../images/source_wan_optimizer.svg "소스 WAN 최적화 프로그램")
 
 ### Layer 2 Concentrator
 {: #hcx-archi-source-layer-2-conc}
@@ -178,8 +175,7 @@ Layer 2 Concentrator 어플라이언스에는 다음과 같은 두 가지 인터
 * 내부 트렁크 인터페이스: IBM Cloud에서 확장된 해당 네트워크에 맵핑하는 트랜잭션 브릿지를 사용하여 확장된 네트워크를 위한 가상 머신 트래픽 온프레미스를 처리합니다.
 * 업링크 인터페이스: HCX는 IBM Cloud로(에서) 캡슐화된 오버레이 트래픽을 전송하도록 이 인터페이스를 사용합니다. 애플리케이션 데이터는 이 인터페이스를 통해 이동됩니다.
 
-Figure 4. 소스 L2 Concentrator
-![소스 L2 Concentrator](source_l2_concentrator.svg)
+![소스 L2 Concentrator](../../images/source_l2_concentrator.svg "소스 L2 Concentrator")
 
 ### 마이그레이션에만 해당
 {: #hcx-archi-source-mig-only}
@@ -240,8 +236,7 @@ R1은 N1-b의 기본 게이트웨이이므로 N1-b는 R2를 통해 트래픽을 
 즉, R1은 로컬로 연결되어 있는 확장된 네트워크를 사용하지 않고 라우팅을 사용하여 R2를 통해 특정 가상 머신에 도달할 수 있습니다. R2는 근접 라우팅이 사용 가능한 상태에서 가상 머신에 도달하도록 다른 네트워크의 경로를
 완전히 소유하고 있습니다.
 
-그림 5. 근접 라우팅 솔루션을 사용한 비대칭 라우팅
-![근접 라우팅 솔루션을 사용한 비대칭 라우팅](asymmetric_routing_proximity_routing_solution.svg)
+![근접 라우팅 솔루션을 사용한 비대칭 라우팅](../../images/asymmetric_routing_proximity_routing_solution.svg "근접 라우팅 솔루션을 사용한 비대칭 라우팅")
 
 ### MAC 주소 보유
 {: #hcx-archi-source-mac-addr-ret}

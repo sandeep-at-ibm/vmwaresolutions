@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-03"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -41,23 +41,23 @@ subcollection: vmware-solutions
 
 指定 KMIP for VMware on {{site.data.keyword.cloud_notm}} 實例的名稱。
 
-### 服務地區
+### 服務位置
 {: #kmip_standalone_ordering-config-service-region}
 
-選取要在其中管理 KMIP for VMware on {{site.data.keyword.cloud_notm}} 實例的 {{site.data.keyword.cloud_notm}} 地區。
+選取要管理 KMIP for VMware on {{site.data.keyword.cloud_notm}} 實例的 {{site.data.keyword.cloud_notm}} 位置。
 
-{{site.data.keyword.cloud_notm}} 在每個可使用該服務的地區維護一個高度可用的 KMIP for VMware on {{site.data.keyword.cloud_notm}} 網路服務端點。
+{{site.data.keyword.cloud_notm}} 在每個可使用該服務的位置維護一個高度可用的 KMIP for VMware on {{site.data.keyword.cloud_notm}} 網路服務端點。
 
-表 1. KMIP for VMware on {{site.data.keyword.cloud_notm}} 網路服務端點地區
+表 1. KMIP for VMware on {{site.data.keyword.cloud_notm}} 網路服務端點位置
 
-|地區           |端點|
+|位置|端點|
 |:---------------|:-----------------------|
-|德國           |  <ul><li><code>kmip-1.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
-|雪梨           |  <ul><li><code>kmip-1.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+|達拉斯| <ul><li><code>kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+|法蘭克福|  <ul><li><code>kmip-1.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+|倫敦| <ul><li><code>kmip-1.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+|雪梨|  <ul><li><code>kmip-1.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
 |東京| <ul><li><code>kmip-1.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
-| 英國南部       | <ul><li><code>kmip-1.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
-| 美國東部       | <ul><li><code>kmip-1.private.us-east.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-east.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
-|美國南部       | <ul><li><code>kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+| 華盛頓特區    | <ul><li><code>kmip-1.private.us-east.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-east.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
 
 ### 服務 ID 的 API 金鑰
 {: #kmip_standalone_ordering-config-api-key}

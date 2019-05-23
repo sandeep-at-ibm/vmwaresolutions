@@ -117,5 +117,4 @@ Microsoft Active Directory (AD) / 網域名稱伺服器 (DNS) 自動設定為只
 ## 新文件與更新的文件
 {: #relnotes_v19-new-docs}
 
-* 瞭解如何保護專用多站台 Cloud Foundation 實例的安全，同時延伸 VMware 應用程式來使用公用 {{site.data.keyword.cloud_notm}} 服務。如需相關資訊，請參閱[在 {{site.data.keyword.cloud_notm}} 中安全地連接專用 VMware 工作負載](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}。
 * 提供其他文件來配置防火牆，以允許來自 IBM CloudDriver 和 SDDC Manager 虛擬機器的所有通訊協定通訊。如需相關資訊，請參閱 [Fortinet on {{site.data.keyword.cloud_notm}} 的元件及考量](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations)。

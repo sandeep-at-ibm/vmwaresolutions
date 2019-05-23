@@ -59,16 +59,6 @@ vSphere Enterprise Plus 6.7u1 仅可用于 Broadwell 和 Skylake {{site.data.key
 * [订购 vCenter Server with Hybridity Bundle 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
 * [订购新的 vSphere 集群](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
 
-## 结束对 VLAN 生成的支持
-{: #relnotes_v29-vlan}
-
-从 2019 年 8 月起，{{site.data.keyword.vmwaresolutions_short}} 不再支持 VLAN 生成。到 2019 年 7 月底，您必须将 {{site.data.keyword.cloud_notm}} 基础架构帐户转换为虚拟路由和转发 (VRF) 并为您的帐户启用服务端点。
-
-有关更多信息，请参阅：
-
-* [IBM Cloud 上的虚拟路由和转发 (VRF) 概述](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-* [支持帐户使用服务端点](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
-
 ## 支持应用程序编程接口
 {: #relnotes_v29-api}
 
@@ -137,7 +127,7 @@ Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} 服务现在可用于
 ### F5 on IBM Cloud
 {: #relnotes_v29-services-f5}
 
-在当前发行版中，F5-BigIP VE V14.1.0.2 安装在所有新部署的实例上。有关 F5-BigIP VE V14.1.0.2 中新功能的更多信息，请参阅 [Release Note: BIG-IP 14.1.0 New and Installation](https://support.f5.com/kb/en-us/products/big-ip_ltm/releasenotes/product/relnote-bigip-14-1-0.html){:new_window}。
+在当前发行版中，F5-BigIP VE V14.1.0.2 安装在所有新部署的实例上。有关 F5-BigIP VE V14.1.0.2 中新功能的更多信息，请参阅 [Release Note: BIG-IP 14.1.0 New and Installation](https://techdocs.f5.com/kb/en-us/products/big-ip_ltm/releasenotes/product/relnote-bigip-14-1-0.html){:new_window}。
 
 ### HyTrust CloudControl on IBM Cloud
 {: #relnotes_v29-services-htcc}

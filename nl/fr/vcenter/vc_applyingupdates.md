@@ -63,7 +63,7 @@ Tableau 1. Niveaux de mise à jour et impact
   </tr>
 </table>
 
-## Procédure de mise à jour des composants de gestion IBM (instances de la version 2.1 à la version 2.4) 
+## Procédure de mise à jour des composants de gestion IBM (instances de la version 2.1 à la version 2.4)
 {: #vc_applyingupdates-procedure}
 
 1. Dans la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Ressources** dans le panneau de navigation de gauche.

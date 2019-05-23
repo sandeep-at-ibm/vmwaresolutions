@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -19,8 +19,7 @@ Les informations suivantes décrivent en détail les éléments d'application qu
 ## Composants système
 {: #vcscar-logical-sys-comp}
 
-Figure 1. Composants Skate Advisor
-![Composants Skate Advisor](vcscar-components.svg)
+![Composants Skate Advisor](../../images/vcscar-components.svg "Composants Skate Advisor")
 
 Skate Advisor est principalement constitué d'un agent conversationnel capable d'accepter la reconnaissance de texte ou la reconnaissance vocale afin d'interagir avec le système de manière structurée.
 
@@ -77,9 +76,7 @@ L'agent conversationnel est un composant Web qui converse avec l'utilisateur. L'
 
 Les agents conversationnels interagissent avec le système de la façon suivante :
 
-Figure 2. Requête d'agent conversationnel typique
-</br>
-![Requête d'agent conversationnel typique](vcscar-query.svg)
+![Requête d'agent conversationnel typique](../../images/vcscar-query.svg "Requête d'agent conversationnel typique")
 
 Tableau 2. Interactions d'agent conversationnel
 
@@ -136,9 +133,7 @@ Skate Advisor est un composant d'application qui fournit un ensemble de services
 
 Watson Discovery doit être entraîné au moyen d'un modèle d'apprentissage automatique, qui est créé de manière itérative par un expert de domaine à l'aide de Watson Knowledge Studio.
 
-Figure 3. Entraînement du service de reconnaissance
-</br>
-![Entraînement du service de reconnaissance](vcscar-training.svg)
+![Entraînement du service de reconnaissance](../../images/vcscar-training.svg "Entraînement du service de reconnaissance")
 
 Pour Skate Advisor, le modèle se compose de la relation entre les types d'entité et une combinaison d'entraînement basé sur des règles et d'entraînement basé sur un dictionnaire pour créer un modèle. Ce modèle permet au service de reconnaissance de reconnaître et classifier les tricks qui sont ingérés à partir d'articles et de descriptions de vidéos qui sont utilisés comme ensemble d'entraînement.
 

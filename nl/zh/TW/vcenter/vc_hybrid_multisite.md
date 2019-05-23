@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-24"
+lastupdated: "2019-05-02"
 
 subcollection: vmware-solutions
 
@@ -47,9 +47,7 @@ subcollection: vmware-solutions
 
 下圖說明 vCenter Server with Hybridity Bundle 多站台部署的整體視圖。
 
-圖 1. vCenter Server with Hybridity Bundle 多站台部署
-
-![vCenter Server with Hybridity Bundle 多站台部署](../vcenter/multisite-hub-spoke.svg "vCenter Server with Hybridity Bundle 多站台部署")
+![vCenter Server with Hybridity Bundle 多站台部署](../images/multisite-hub-spoke.svg "vCenter Server with Hybridity Bundle 多站台部署")
 
 此模型包含下列各層：
 

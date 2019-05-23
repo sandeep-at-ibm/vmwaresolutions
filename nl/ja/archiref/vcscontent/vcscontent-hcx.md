@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -20,8 +20,7 @@ VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 
 
 {{site.data.keyword.cloud_notm}} VMware ターゲット・サイトに仮想マシンとしてデプロイされた vCenter Server with Hybridity Bundle コンポーネントにより、ピアのオンプレミスのソース・サイトにインストールされた HCX コンポーネントと接続を確立できます。
 
-図 1. vCenter Server with Hybridity Bundle
-![vCenter Server with Hybridity Bundle](vcscontent-hcx.svg)
+![vCenter Server with Hybridity Bundle](../../images/vcscontent-hcx.svg "vCenter Server with Hybridity Bundle")
 
 Hybridity によって、オンプレミスと {{site.data.keyword.cloud_notm}} の間に粗結合された相互接続が作成され、以下のような機能を使用できるようになります。
 

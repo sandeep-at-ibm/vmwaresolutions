@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-16"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -51,17 +51,11 @@ Tableau 1. Autorisations requises pour le compte d'infrastructure {{site.data.ke
 ## VRF avec noeuds finaux de service activés
 {: #slaccountrequirement-vrf-se}
 
-Votre compte d'infrastructure {{site.data.keyword.cloud_notm}} doit être un compte VRF (Virtual Routing and Forwarding) avec des noeuds finaux de service activés. Si votre compte n'est pas de type VRF, vous devez le convertir en un compte VRF. De plus, vous devez activer votre compte VRF pour l'utilisation de noeuds finaux de service.
+Votre compte d'infrastructure {{site.data.keyword.cloud_notm}} doit être un compte VRF (Virtual Routing and Forwarding). Si votre compte n'est pas de type VRF, vous devez le convertir en un compte VRF. Il est également recommandé d'activer votre compte VRF pour utiliser des noeuds finaux de service. 
 
 Pour plus d'informations, voir :
 * [Présentation de VRF on IBM Cloud](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
 * [Activation de votre compte pour l'utilisation des noeuds finaux de service](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
-
-## Fin du support du spanning VLAN
-{: #slaccountrequirement-vlan-eos}
-
-Le spanning VLAN cessera d'être pris en charge en août 2019. D'ici la fin juillet 2019, vous devez convertir votre compte d'infrastructure {{site.data.keyword.cloud_notm}} en un compte VRF et activer les points finaux de service.
-{:important}
 
 ## Liens connexes
 {: #slaccountrequirement-related}

@@ -15,7 +15,7 @@ subcollection: vmware-solutions
 {:note: .note}
 {:important: .important}
 
-# Application des mises à jour des composants de gestion IBM à des instances vCenter Server with Hybridity Bundle 
+# Application des mises à jour des composants de gestion IBM à des instances vCenter Server with Hybridity Bundle
 {: #vc_hybrid_applyingupdates}
 
 La procédure décrite dans cette section s'applique à la mise à jour des composants de gestion IBM pour les instances déployées dans la version 2.3 et la version 2.4.
@@ -50,7 +50,7 @@ Tableau 1. Niveaux de mise à jour et impact
 | Moyen | Cette mise à jour peut affecter certains systèmes. Il est recommandé de l'appliquer pendant un temps d'indisponibilité planifié. |  
 | Majeur  | Cette mise à jour affecte certains ou tous les systèmes. Vous devez l'appliquer pendant un temps d'indisponibilité planifié. |  
 
-## Procédure de mise à jour des composants de gestion IBM (instances V2.3 et V2.4) 
+## Procédure de mise à jour des composants de gestion IBM (instances V2.3 et V2.4)
 {: #vc_hybrid_applyingupdates-procedure}
 
 1. Dans la console {{site.data.keyword.vmwaresolutions_full}}, cliquez sur **Ressources** dans le panneau de navigation de gauche.

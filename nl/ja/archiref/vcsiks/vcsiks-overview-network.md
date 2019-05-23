@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -28,8 +28,7 @@ subcollection: vmware-solutions
 - ワーカー・ノードにプライベート・ネットワーク・インターフェースを付与する、各ワーカー・ノードのプライベート IP アドレス
 - すべてのワーカー・ノードとマスター・ノードの間の自動的で安全な OpenVPN 接続
 
-図 1. vCenter Server と {{site.data.keyword.containerlong_notm}} のネットワーク
-![vCenter Server と {{site.data.keyword.containerlong_notm}} のネットワーク図](vcsiks-networking.svg)
+![vCenter Server-{{site.data.keyword.containerlong_notm}} ネットワーキング図](../../images/vcsiks-networking.svg "vCenter Server-{{site.data.keyword.containerlong_notm}} ネットワーキング図")
 
 ### IBM Cloud Kubernetes Service と vCenter Server の統合
 {: #vcsiks-overview-network-iks-vcs-integration}

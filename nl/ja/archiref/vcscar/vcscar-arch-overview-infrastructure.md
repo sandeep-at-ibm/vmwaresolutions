@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-22"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -58,8 +58,7 @@ VMware vCenter Server on {{site.data.keyword.cloud_notm}} Hybridity Bundle サ�
 ## 仮想構造
 {: #vcscar-arch-overview-infrastructure-virt-structure}
 
-図 1. vCenter Server と {{site.data.keyword.icpfull_notm}} デプロイメントの構造
-![vCenter Server と {{site.data.keyword.icpfull_notm}} デプロイメントの構造](vcscar-icp.svg)
+![vCenter Server および {{site.data.keyword.icpfull_notm}} デプロイメントの構造](../../images/vcscar-icp.svg "vCenter Server および {{site.data.keyword.icpfull_notm}} デプロイメントの構造")
 
 vCenter Server インスタンス内で、{{site.data.keyword.icpfull_notm}} インスタンスは専用の NSX Edge Services Gateway (ESG) と Distributed Logical Router (DLR) とともにデプロイされます。
 {{site.data.keyword.icpfull_notm}} インストールは、前述のコンポーネントで定義された VXLAN サブネットにロードされます。

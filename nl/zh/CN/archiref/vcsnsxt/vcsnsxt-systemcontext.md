@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 系统上下文图定义了系统的关键元素、系统的边界、与系统交互的实体以及交互。这是一个高级别图，为读取者提供了系统的初始视图。
 
-图 1. 系统上下文
-![系统上下文图](vcsnsxt-networking.svg)
+![系统上下文图](../../images/vcsnsxt-networking.svg "系统上下文图")
 
 从网络角度来看，四个核心组件如下：
 - **内部部署虚拟化** - 在客户的内部部署或第三方托管的 VMware 环境，当前托管的是运行要现代化的应用程序的虚拟机 (VM)。这是 VM 迁移的源环境，通过 VMware HCX 松散耦合到 {{site.data.keyword.cloud}}。

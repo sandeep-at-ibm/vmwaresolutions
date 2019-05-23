@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -28,9 +28,7 @@ NSX Edge Services Gateway on {{site.data.keyword.cloud}} 솔루션은 전세계 
 다음 그림에서 VMware vSAN은 선택사항입니다.
 {:note}
 
-그림 1. {{site.data.keyword.cloud_notm}}의 클라우드 네트워킹 서비스
-
-![클라우드 네트워킹 서비스 아키텍처](architecture.svg "클라우드 네트워킹 서비스 아키텍처")
+![클라우드 네트워킹 서비스 아키텍처](../../images/architecture.svg "클라우드 네트워킹 서비스 아키텍처")
 
 ## 전용 아키텍처 디자인
 {: #nsx_design-dedicated-archi}

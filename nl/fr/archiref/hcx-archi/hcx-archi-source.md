@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -124,8 +124,7 @@ Le fichier OVA de HCX Management Enterprise est déployé dans l'environnement s
 Il peut y avoir un seul déploiement HCX par vCenter. Cette restriction s'applique au mode lié : le dispositif HCX Manager est uniquement installé dans le vCenter principal. HCX Manager prend en charge jusqu'à cinq vCenters en mode lié.
 {:note}
 
-Figure 1. Services de cloud hybride source
-![Services de cloud hybride source](source_hybrid_cloud_services.svg)
+![Services de cloud hybride source](../../images/source_hybrid_cloud_services.svg "Services de cloud hybride source")
 
 ### Dispositifs virtuels HCX
 {: #hcx-archi-source-hcxva}
@@ -155,8 +154,7 @@ HCX utilise un chiffrement renforcé pour amorcer une connexion entre sites à I
 
 La passerelle cloud incorpore également la technologie de réplication vSphere pour effectuer une migration bidirectionnelle.
 
-Figure 2. Passerelle cloud source
-![Passerelle cloud source](source_cloud_gateway.svg)
+![Passerelle cloud source](../../images/source_cloud_gateway.svg "Passerelle cloud source")
 
 ### Optimiseur de réseau WAN
 {: #hcx-archi-source-wan-opt}
@@ -165,8 +163,7 @@ HCX fournit également une optimisation de réseau WAN définie par les logiciel
 
 La migration de machine virtuelle repose sur la combinaison dd'une passerelle cloud et d'un dispositif d'optimisation du réseau WAN pour atteindre une mobilité sans égale entre vSphere en local et IBM Cloud.
 
-Figure 3. Optimiseur de réseau WAN source
-![Optimiseur de réseau WAN source](source_wan_optimizer.svg)
+![Optimiseur de réseau WAN source](../../images/source_wan_optimizer.svg "Optimiseur de réseau WAN source")
 
 ### Concentrateur de couche 2
 {: #hcx-archi-source-layer-2-conc}
@@ -177,8 +174,7 @@ Le appliance de concentrateur de couche 2 est doté de deux interfaces :
 * Interface de jonction interne : Gère le trafic de machine virtuelle en local pour les réseaux étendus à l'aide d'un mappage de pont de traduction vers un réseau étendu correspondant dans IBM Cloud.
 * Interface de liaison montante : HCX utilise cette interface pour envoyer le trafic de superposition encapsulé vers et depuis IBM Cloud. Les données d'application transitent via cette interface.
 
-Figure 4. Concentrateur L2 source
-![Concentrateur L2 source](source_l2_concentrator.svg)
+![Concentrateur L2 source](../../images/source_l2_concentrator.svg "Concentrateur L2 source")
 
 ### Migration uniquement
 {: #hcx-archi-source-mig-only}
@@ -235,8 +231,7 @@ Si la machine virtuelle a été transférée à l'aide de vMotion, la route n'es
 
 En d'autres termes, R1 peut utiliser le routage pour atteindre une machine virtuelle spécifique via R2, au lieu d'utiliser le réseau étendu connecté en local. R2 détient intégralement le chemin d'accès pour que les autres réseaux accèdent aux machines virtuelles avec le routage de proximité activé.
 
-Figure 5. Routage asymétrique avec solution de routage de proximité
-![Routage asymétrique avec solution de routage de proximité](asymmetric_routing_proximity_routing_solution.svg)
+![Routage asymétrique avec solution de routage de proximité](../../images/asymmetric_routing_proximity_routing_solution.svg "Routage asymétrique avec solution de routage de proximité")
 
 ### Conservation de l'adresse MAC
 {: #hcx-archi-source-mac-addr-ret}

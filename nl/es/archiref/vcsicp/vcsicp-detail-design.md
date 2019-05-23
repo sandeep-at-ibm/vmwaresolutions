@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-09"
 
 subcollection: vmware-solutions
 
@@ -19,9 +19,7 @@ subcollection: vmware-solutions
 
 Los servicios comunes proporcionan los servicios que utilizan otros servicios en la plataforma de gestión de nube. Los servicios comunes incluyen servicios de identidad y acceso, servicios de nombres de dominio, servicios NTP.
 
-Figura 1. Servicios comunes de {{site.data.keyword.icpfull_notm}}
-
-![Servicios comunes de {{site.data.keyword.icpfull_notm}}](vcsicp-icp-commonservices.svg)
+![Servicios comunes de {{site.data.keyword.icpfull_notm}}](../../images/vcsicp-icp-commonservices.svg "Servicios comunes de {{site.data.keyword.icpfull_notm}}")
 
 ### Servicios de identidad y acceso
 {: #vcsicp-detail-design-identity}
@@ -50,9 +48,7 @@ Mediante el sistema de red NSX-V que se incluye en el despliegue de VCS, podemos
 
 {{site.data.keyword.icpfull_notm}} se despliega con la pila de red Calico predeterminada para Kubernetes, que proporciona aislamiento de red dentro del clúster.
 
-Figura 2. {{site.data.keyword.icpfull_notm}} con red NSX-V
-
-![{{site.data.keyword.icpfull_notm}} con red NSX-V](vcsicp-nsxv-networking.svg)
+![{{site.data.keyword.icpfull_notm}} con redes NSX-V](../../images/vcsicp-nsxv-networking.svg "{{site.data.keyword.icpfull_notm}} con redes NSX-V")
 
 Para obtener más información, consulte [Guía de redes de vCenter Server](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro).
 
@@ -63,9 +59,7 @@ NSX-T se ha diseñado de modo que una sola plataforma de red se pueda conectar a
 
 {{site.data.keyword.icpfull_notm}} proporciona una opción para sustituir la red Calico por una instancia NSX-T, proporcionando una única ubicación para gestionar la red y la seguridad.
 
-Figura 3. {{site.data.keyword.icpfull_notm}} con red NSX-T
-
-![{{site.data.keyword.icpfull_notm}} con red NSX-T](vcsicp-icp-nsxt-networking.svg)
+![{{site.data.keyword.icpfull_notm}} con redes NSX-T](../../images/vcsicp-icp-nsxt-networking.svg "{{site.data.keyword.icpfull_notm}} con redes NSX-T")
 
 ## Enlaces relacionados
 {: #vcsicp-detail-design-related}

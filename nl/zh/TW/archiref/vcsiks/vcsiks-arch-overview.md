@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -29,8 +29,7 @@ IBM Multi-Cluster Manager 提供使用者可見性、以應用程式為中心的
 
 下圖顯示的 {{site.data.keyword.icpfull_notm}} 及 CAM 已部署 {{site.data.keyword.cloud_notm}} 基礎架構，並具有 {{site.data.keyword.cloud_notm}} 上所部署之內部部署 vCenter 及 {{site.data.keyword.containerlong_notm}} 服務的連線。使用者可以在內部部署虛擬機器 (VM)、將 VM 部署至 vCenter Server 實例，以及將容器部署至 {{site.data.keyword.icpfull_notm}} 及 {{site.data.keyword.containerlong_notm}} 叢集。
 
-圖 1. 從雲端進行雲端管理
-![在雲端上 - 雲端管理](vcsiks-oncloud-cloudmgt.svg)
+![在雲端上 - 雲端管理](../../images/vcsiks-oncloud-cloudmgt.svg "在雲端上 - 雲端管理")
 
 在圖表中，CAM 邏輯地建立與 vCenter、雲端提供者、{{site.data.keyword.icpfull_notm}} 及 {{site.data.keyword.containerlong_notm}} 環境的雲端連線。「{{site.data.keyword.icpfull_notm}} 叢集」必須部署至每個資料中心或雲端環境，並由 MCM 提供將 {{site.data.keyword.icpfull_notm}} 叢集連接至單一管理視圖的機制。
 
@@ -43,8 +42,7 @@ IBM Multi-Cluster Manager 提供使用者可見性、以應用程式為中心的
 
 下圖顯示內部部署基礎架構中所部署的 {{site.data.keyword.icpfull_notm}} 及 CAM，以及 {{site.data.keyword.cloud_notm}} 上所部署之 vCenter 及 {{site.data.keyword.containerlong_notm}} 的連線。使用者可以在內部部署 VM 和容器、將 VM 部署至 vCenter Server 實例，以及將容器部署至 {{site.data.keyword.containerlong_notm}} 叢集。
 
-圖 2. 從內部部署端進行雲端管理
-![內部部署 - 雲端管理](vcsiks-onprem-cloudmgt.svg)
+![內部部署 - 雲端管理](../../images/vcsiks-onprem-cloudmgt.svg "內部部署 - 雲端管理")
 
 strongSwan VPN 可用來建立與已部署 {{site.data.keyword.containerlong_notm}} 容器的連線。strongSwan 最後可能會取代為 Direct Link 連線。
 

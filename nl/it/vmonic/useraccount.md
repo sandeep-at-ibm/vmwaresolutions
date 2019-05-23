@@ -39,9 +39,9 @@ Puoi anche specificare se vuoi ricevere notifiche via e-mail o via console per i
    * Se vuoi ricevere una notifica via e-mail quando si verificano degli eventi, fai clic su **Abilita notifiche via e-mail**.
    * Se vuoi ricevere una notifica tramite la console quando si verificano degli eventi, fai clic su **Abilita notifiche via console**.
 3. Nell'area **Credenziali infrastruttura IBM Cloud**, immetti il nome utente e la chiave API del tuo account dell'infrastruttura {{site.data.keyword.cloud_notm}}:
-   * Se il tuo account dell'infrastruttura {{site.data.keyword.cloud_notm}} e il tuo account {{site.data.keyword.cloud_notm}} sono collegati, fai clic su **Recupera** per immettere automaticamente le credenziali. 
+   * Se il tuo account dell'infrastruttura {{site.data.keyword.cloud_notm}} e il tuo account {{site.data.keyword.cloud_notm}} sono collegati, fai clic su **Recupera** per immettere automaticamente le credenziali.
    * Se il tuo account dell'infrastruttura {{site.data.keyword.cloud_notm}} e il tuo account {{site.data.keyword.cloud_notm}} non sono collegati, devi collegarli. Accedi al [portale del cliente dell'infrastruttura {{site.data.keyword.cloud_notm}}](https://control.softlayer.com/) e segui le istruzioni sulla console per ottenere le credenziali, quindi immettile.
-   * Se non disponi di un account dell'infrastruttura {{site.data.keyword.cloud_notm}}, [registrane uno](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account) e segui le istruzioni sulla console per ottenere le credenziali, quindi immettile. 
+   * Se non disponi di un account dell'infrastruttura {{site.data.keyword.cloud_notm}}, [registrane uno](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account) e segui le istruzioni sulla console per ottenere le credenziali, quindi immettile.
 4. Fai clic su **Salva credenziali**.
 
 ## Risultati

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -130,13 +130,11 @@ Les dispositifs de concentrateurs de couche 2 (L2C) permettent l'extension d'un 
 
 Cette section décrit la disposition des composants HCX au sein d'IBM et avec le client local. Dans une telle conception, l'architecture indique un modèle "hub-and-spoke" qui existe entre l'environnement source et IBM Cloud. Par conséquent, le site source fait office de concentrateur avec des connexions vers différents environnements IBM Cloud, comme illustré dans la figure ci-après.
 
-Figure 1. HCX avec source unique
-![HCX avec source unique](hcx_single_source.svg)
+![HCX avec source unique](../../images/cloudfoundation_hybrid_cloud_services.svg "HCX avec source unique")
 
 La source peut être placée au sein de l'environnement IBM Cloud également ; les spokes sont toujours des déploiements en cloud au sein de cette concevoir, comme illustré dans la figure ci-après.
 
-Figure 2. HCX avec plusieurs sources
-![HCX avec plusieurs sources](hcx_multiple_sources.svg)
+![HCX avec plusieurs sources](../../images/hcx_multiple_sources.svg "HCX avec plusieurs sources")
 
 ### Présentation de l'utilisation
 {: #hcx-archi-overview-usage-ovw}

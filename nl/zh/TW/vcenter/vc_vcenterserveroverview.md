@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-02"
 
 subcollection: vmware-solutions
 
@@ -35,8 +35,7 @@ VMware vSAN 也以專用儲存空間選項提供。若要增加 vSAN 叢集的 v
 
 下圖說明三節點 vCenter Server 部署的高階架構及元件。
 
-圖 1. 三節點叢集的 vCenter Server 高階架構
-![vCenter Server 架構](vc_architecture.svg "三節點叢集的 vCenter Server 高階架構")
+![vCenter Server 架構](../images/vc_architecture.svg "vCenter Server 架構")
 
 ### 實體基礎架構
 {: #vc_vcenterserveroverview-physical-infras}

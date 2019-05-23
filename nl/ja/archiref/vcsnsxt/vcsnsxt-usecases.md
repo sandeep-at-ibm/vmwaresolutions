@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -23,8 +23,7 @@ VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 
 
 vCenter Server ターゲット・サイトに仮想マシン (VM) としてデプロイされた VMware HCX コンポーネントにより、ピアのオンプレミスのソース・サイトにインストールされた VMware HCX コンポーネントと接続を確立できます。
 
-図 1. VMware Hybrid Cloud Extension サービス
-![VMware Hybrid Cloud Extension サービス](vcsnsxt-hcx-1.svg)
+![VMware Hybrid Cloud Extension サービス](../../images/vcsnsxt-hcx-1.svg "VMware Hybrid Cloud Extension サービス")
 
 オンプレミスと {{site.data.keyword.cloud_notm}} の間の疎結合相互接続により、以下のような機能を使用できるようになります。
 - **単純な相互接続** – 論理ネットワーク接続が、公衆インターネット、プライベート VPN、Direct Link などの物理接続を介して簡単に確立されます。
@@ -52,8 +51,7 @@ Acme Skateboards 社は、アプリケーション・モダナイゼーション
 
 NSX-V について詳しくは、[NSX-V の概要](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv)を参照してください。 vCenter Server および {{site.data.keyword.icpfull_notm}} オファリングについて詳しくは、[vCenter Server および {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro) を参照してください。
 
-図 2. {{site.data.keyword.icpfull_notm}} を使用する vCenter Server</br>
-![{{site.data.keyword.icpfull_notm}} を使用する vCenter Server](vcsnsxt-nsxvhl.svg)
+![vCenter Server with {{site.data.keyword.icpfull_notm}}](../../images/vcsnsxt-nsxvhl.svg "vCenter Server with {{site.data.keyword.icpfull_notm}}")
 
 これにより、オンプレミスと {{site.data.keyword.cloud_notm}} 間の疎結合された相互接続が作成され、以下のような機能を使用できるようになります。
 -	**単純な相互接続** – 論理ネットワーク接続が、公衆インターネット、プライベート VPN、Direct Link などの物理接続を介して簡単に確立されます。

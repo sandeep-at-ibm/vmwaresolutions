@@ -66,7 +66,7 @@ Per ulteriori informazioni, vedi [Panoramica di VMware vSphere on {{site.data.ke
 ### NetApp ONTAP Select
 {: #prod_overview-netapp}
 
-L'offerta NetApp ONTAP Select ti consente di distribuire un cluster di archiviazione definita dal software che risponda alle tue esigenze di un dispositivo di archiviazione dedicato e altamente disponibile basato su NetApp ONTAP Select. 
+L'offerta NetApp ONTAP Select ti consente di distribuire un cluster di archiviazione definita dal software che risponda alle tue esigenze di un dispositivo di archiviazione dedicato e altamente disponibile basato su NetApp ONTAP Select.
 
 Per ulteriori informazioni, vedi [Panoramica di NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview).
 

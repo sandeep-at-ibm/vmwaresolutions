@@ -79,7 +79,7 @@ Questo passo è facoltativo. Utilizzando il client web vSphere, passa a **Home**
 4. Fai clic su **Retest with Online Health** per avviare il primo caricamento e attendi il completamento del processo, esaminando lo stato nel riquadro Recent Tasks. Il nome del test cambia in Online health (Last check: just now).
 5. Al termine, nella finestra Health, scorri ed espandi la sezione vSAN Build Recommendation e fai clic su **vSAN Build Recommendation Engine Health**.
 6. Fai clic su **Login to my.vmware.com** e immetti le tue credenziali. Al termine del processo, lo stato di **Test Result** diventa **Passed**.
-7. Fai clic sulla scheda **Update Manager** e il cluster vSAN viene aggiunto alle baseline. 
+7. Fai clic sulla scheda **Update Manager** e il cluster vSAN viene aggiunto alle baseline.
 
 ## Prerequisiti
 {: #vum-updating-vsan-prereq}

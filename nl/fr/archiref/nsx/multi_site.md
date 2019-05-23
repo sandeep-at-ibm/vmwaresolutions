@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -36,9 +36,7 @@ L'exemple suivant ajoute une zone de transport universelle NSX aux topologies de
 * Pour le trafic entrant, un équilibreur de charge global est requis. Voir les offres d'équilibrage de charge global d'{{site.data.keyword.cloud_notm}} pour répondre à cette exigence.
 * Cet exemple nécessite VMware NSX Enterprise Edition.
 
-Figure 1. Topologie multisite
-
-![Topologie multisite](multisite_topology.svg "Topologie multisite")
+![Topologie multisite](../../images/multisite_topology.svg "Topologie multisite")
 
 ## Liens connexes
 {: #nsx-multi_site-related}

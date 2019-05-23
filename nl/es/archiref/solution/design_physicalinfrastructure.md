@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -33,8 +33,7 @@ Para obtener más información sobre los componentes físicos, consulte [Lista d
 
 Para obtener más información sobre el almacenamiento, consulte [Arquitectura de almacenamiento compartido](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits).
 
-Figura 1. Infraestructura física</br>
-![Infraestructura física](vcsv4radiagrams-ra-physinfra.svg)
+![Infraestructura física](../../images/vcsv4radiagrams-ra-physinfra.svg "Infraestructura física")
 
 ## Diseño de cálculo físico
 {: #design_physicalinfrastructure-host-design}
@@ -65,8 +64,7 @@ La red física la gestiona {{site.data.keyword.cloud_notm}}. Revise las descripc
 
 La red física de {{site.data.keyword.cloud_notm}} está separada en dos redes distintas: pública y privada. La red privada también contiene el tráfico de gestión de Intelligent Platform Management Interface (IPMI) con los servidores físicos.
 
-Figura 2. Red de alto nivel de {{site.data.keyword.cloud_notm}}
-![Red de alto nivel de {{site.data.keyword.cloud_notm}}](vcsv4radiagrams-ra-ibmcloudnetwork.svg)
+![Red de alto nivel de {{site.data.keyword.cloud_notm}}](../../images/vcsv4radiagrams-ra-ibmcloudnetwork.svg "Red de alto nivel de {{site.data.keyword.cloud_notm}}")
 
 #### Red pública
 {: #design_physicalinfrastructure-public-net}
@@ -114,8 +112,7 @@ Cada host físico de este diseño tiene dos pares redundantes de conexiones Ethe
 
 No se admite la eliminación de la conectividad de red física con la red pública o privada para los servidores nativos que se utilizan dentro de la oferta de vCenter Server. Los puertos físicos de la NIC interna del servidor nativo se pueden inhabilitar, pero no hay soporte para desenchufar los cables.
 
-Figura 3. Conexiones de host físico</br>
-![Conexiones de host físico](vcsv4radiagrams-ra-physical-host-connections.svg "Conexiones de host físico")
+![Conexiones de host físico](../../images/vcsv4radiagrams-ra-physical-host-connections.svg "Conexiones de host físico")
 
 #### VLAN y direccionamiento entre red subyacente y de superposición
 {: #design_physicalinfrastructure-vlans}
@@ -186,9 +183,7 @@ Cuando se utiliza el almacenamiento a nivel de archivo compartido, se conecta un
 
 El almacenamiento se conecta mediante el protocolo NFSv3 a un nivel de 2 IOPS por GB desde IBM Cloud. IBM normaliza el nivel de IOP proporcionado a un tamaño de bloque de 16 K, de manera que los tamaños de bloque más grandes vean un límite inferior y los tamaños de bloque más pequeños vean un límite superior.
 
-Figura 4. Comparticiones NFS adjuntas al despliegue de VMware
-
-![Comparticiones NFS adjuntas al despliegue de VMware](vcsv4radiagrams-ra-nfs-shares.svg "Comparticiones NFS adjuntas al despliegue de VMware: compartición de gestión y compartición especificada por el cliente")
+![Comparticiones NFS conectadas al despliegue de VMware](../../images/vcsv4radiagrams-ra-nfs-shares.svg "Comparticiones NFS conectadas al despliegue de VMware: compartición de gestión y compartición especificada por el cliente")
 
 Puede asignar y montar más comparticiones de archivos en todos los hosts para las cargas de trabajo en el momento de la compra o más tarde dentro de la consola. Puede seleccionar entre las opciones de capacidad de almacenamiento de archivos de Endurance {{site.data.keyword.cloud_notm}} disponibles y niveles de rendimiento en el {{site.data.keyword.CloudDataCent_notm}} correspondiente. Todas las comparticiones se adjuntan utilizando el protocolo NFSv3. Además, es posible adjuntar comparticiones de archivos NFSv3 aplicando la oferta de NetApp ONTAP Select.
 
@@ -201,8 +196,7 @@ De forma similar a NFS, para el almacenamiento iSCSI compartido, se conecta un L
 
 IBM normaliza el nivel de IOP proporcionado a un tamaño de bloque de 16 K, de manera que los tamaños de bloque más grandes vean un límite inferior y los tamaños de bloque más pequeños vean un límite superior.
 
-Figura 5. LUN iSCSI conectados al despliegue de VMware</br>
-![LUN iSCSI conectados al despliegue de VMware](vcsv4radiagrams-ra-iscsi-lun.svg "LUN iSCSI conectados al despliegue de VMware")
+![LUN iSCSI conectados al despliegue de VMware](../../images/vcsv4radiagrams-ra-iscsi-lun.svg "LUN iSCSI conectados al despliegue de VMware")
 
 También se pueden asignar y montar LUN iSCSI adicionales para las cargas de trabajo en todos los hosts en el momento de la adquisición o más adelante dentro de la consola. Seleccione entre las opciones de capacidad de almacenamiento de bloque de IBM Cloud Endurance disponibles y los niveles de rendimiento en el centro de datos correspondiente de IBM Cloud. Todos los LUN se conectan mediante el protocolo iSCSI. Además, es posible conectar LUN iSCSI desde la oferta NetApp ONTAP Select.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -24,8 +24,7 @@ La gestión de infraestructura hace referencia a los componentes que están gest
 
 Este diseño utiliza una función PSC que se integra en una instancia de vCenter Server. El PSC y vCenter Server están alojados dentro de la misma máquina virtual (VM).
 
-Figura 1. Gestión de la infraestructura</br>
-![Gestión de la infraestructura](vcsv4radiagrams-ra-inframgmt.svg)
+![Gestión de la infraestructura](../../images/vcsv4radiagrams-ra-inframgmt.svg "Gestión de la infraestructura")
 
 El PSC ubicado en la instancia primaria tiene asignado el dominio de SSO predeterminado de `vsphere.local`.
 
@@ -74,13 +73,13 @@ Usted es responsable de ajustar la política de control de admisión cuando el c
 
 De forma predeterminada, la opción **Prioridad de reinicio de VM** se establece en medio y la opción **Respuesta de aislamiento de host** está inhabilitada. Además, la **supervisión de VM** está inhabilitada y la característica **Latido del almacén de datos** se configura para incluir cualquiera de los almacenes de datos del clúster. Este enfoque utiliza los almacenes de datos NAS si están presentes.
 
-## Compatibilidad de vMotion mejorada
+### Compatibilidad de vMotion mejorada
 {: #design_infrastructuremgmt-evc}
 
 Para simplificar la compatibilidad de vMotion en los nodos de clúster con prestaciones de CPU potencialmente distintas, se habilita la modalidad EVC (Enhanced vMotion Compatibility) a nivel de Skylake para garantizar la compatibilidad de vMotion en los nodos de clúster cuando lleguen procesadores más nuevos al inventario de
 {{site.data.keyword.cloud_notm}} y permitir la expansión del clúster en el futuro si los servidores de procesador Skylake no se encuentran en el inventario.
 
-### IBM CloudDriver
+## IBM CloudDriver
 {: #design_infrastructuremgmt-cloud-driver}
 
 La piedra angular de estas soluciones es la automatización. La automatización reduce la complejidad del despliegue, reduce drásticamente el tiempo de despliegue y garantiza que la instancia de VMware se despliegue de forma coherente.
@@ -89,12 +88,11 @@ IBM CloudBuilder es una instancia de servidor virtual (VSI) efímera de una máq
 
 IBM CloudDriver es una instancia de servidor virtual (VSI) de máquina virtual de {{site.data.keyword.cloud_notm}} efímera que se despliega según convenga para las operaciones de día 2 como la adición de hosts, clústeres o servicios de complemento a la instancia de VMware.
 
-CloudBuilder y CloudDriver se despliegan únicamente en la red privada que se conecta al plano de gestión de IBM a través de una cola de mensajes privada. Son componentes desarrollados por IBM, no son accesibles para el usuario y tienen los atributos y el funcionamiento siguientes:
-
-- Despliegue y configuración de la instancia de vCenter Server dentro de la cuenta de usuario.
-- Añadir y eliminar hosts de los clústeres de vCenter Server.
-- Añadir y eliminar clústeres de las instancias de vCenter Server.
-- Añadir y eliminar funciones o servicios de complemento en instancias de vCenter Server.
+CloudBuilder y CloudDriver se despliegan únicamente en la red privada que se conecta al plano de gestión de IBM a través de una cola de mensajes privada. Son componentes desarrollados por IBM, no son accesibles para el usuario y tienen los atributos y funciones siguientes:
+* Despliegue y configuración de la instancia de vCenter Server dentro de la cuenta de usuario.
+* Añadir y eliminar hosts de los clústeres de vCenter Server.
+* Añadir y eliminar clústeres de las instancias de vCenter Server.
+* Añadir y eliminar funciones o servicios de complemento en instancias de vCenter Server.
 
 ### Flujo de automatización
 {: #design_infrastructuremgmt-auto-flow}

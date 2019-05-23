@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -36,9 +36,7 @@ Il seguente esempio aggiunge una zona di trasporto universale NSX alle topologie
 * Per il traffico in entrata, è richiesto un sistema di bilanciamento del carico globale. Vedi le offerte di bilanciamento del carico globale {{site.data.keyword.cloud_notm}} per soddisfare questo requisito.
 * Questo esempio richiede VMware NSX Enterprise Edition.
 
-Figura 1. Topologia multisito
-
-![Topologia multisito](multisite_topology.svg "Topologia multisito")
+![Topologia multisito](../../images/multisite_topology.svg "Topologia multisito")
 
 ## Link correlati
 {: #nsx-multi_site-related}

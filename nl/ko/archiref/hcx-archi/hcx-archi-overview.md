@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -130,13 +130,11 @@ Layer 2 Concentrator(L2C) 어플라이언스는 온프레미스 vSphere 데이�
 
 이 절에서는 IBM Cloud 내에서 클라이언트 온프레미스를 통한 HCX 컴포넌트의 레이아웃에 대해 설명합니다. 이 디자인에서 아키텍처는 소스 환경과 IBM Cloud 간에 존재하는 허브 및 스포크 모델을 지정합니다. 그러므로 소스 자산은 다음 그림에서 설명된 대로 다른 IBM Cloud 환경에 연결하여 허브의 역할을 합니다.
 
-그림 1. 단일 소스가 포함된 HCX
-![단일 소스가 포함된 HCX](hcx_single_source.svg)
+![단일 소스가 포함된 HCX](../../images/cloudfoundation_hybrid_cloud_services.svg "단일 소스가 포함된 HCX")
 
 소스는 IBM Cloud 환경 내에도 배치될 수 있습니다. 스포크는 다음 그림에 표시된 대로 항상 이 디자인 내의 클라우드 배치입니다.
 
-그림 2. 다중 소스가 포함된 HCX
-![다중 소스가 포함된 HCX](hcx_multiple_sources.svg)
+![다중 소스가 포함된 HCX](../../images/hcx_multiple_sources.svg "다중 소스가 포함된 HCX")
 
 ### 사용법 개요
 {: #hcx-archi-overview-usage-ovw}

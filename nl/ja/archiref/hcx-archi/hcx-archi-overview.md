@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -130,13 +130,11 @@ WAN 最適化アプライアンスは、WAN の調整を行って遅延の影響
 
 このセクションでは、IBM Cloud およびクライアントのオンプレミスの HCX コンポーネントのレイアウトについて説明します。 この設計のアーキテクチャーでは、ソース環境と IBM Cloud の間にハブ・アンド・スポーク方式のモデルを規定しています。 つまり、次の図に示すように、ソース資産が、さまざまな IBM Cloud 環境への接続を持つハブとして機能します。
 
-図 1. ソースが 1 つの HCX
-![ソースが 1 つの HCX](hcx_single_source.svg)
+![単一ソースの HCX](../../images/cloudfoundation_hybrid_cloud_services.svg "単一ソースの HCX")
 
 ソースは IBM Cloud 環境に置くこともできます。次の図に示すように、この設計では、スポークは常にクラウドのデプロイメントです。
 
-図 2. ソースが複数の HCX
-![ソースが複数の HCX](hcx_multiple_sources.svg)
+![複数ソースの HCX](../../images/hcx_multiple_sources.svg "複数ソースの HCX")
 
 ### 使用法の概要
 {: #hcx-archi-overview-usage-ovw}

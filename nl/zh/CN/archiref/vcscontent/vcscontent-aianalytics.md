@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-25"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 扩充 Stock Trader 并不是一次性步骤。对于 Todd 和 Jane 来说，这是一个迭代式过程。在下图中，您将看到 Jane 使用 ODM 决策中心添加了 Watson Tone Analyzer 服务和忠诚度级别规则。以下各项着重说明了 Stock Trader 是如何扩充的。
 
-图 1. 进一步扩充 Stock Trader
-![Stock Trader 扩充迭代结果](vcscontent-enriched.svg)
+![Stock Trader 扩充迭代结果](../../images/vcscontent-enriched.svg "Stock Trader 扩充迭代结果")
 
 ## AI Watson Tone Analyzer
 {: #vcscontent-aianalytics-ai-watson}

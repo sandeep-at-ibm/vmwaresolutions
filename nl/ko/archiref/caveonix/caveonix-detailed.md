@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-05"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,8 @@ subcollection: vmware-solutions
 
 다음 다이어그램과 설명에서는 RiskForesight 애플리케이션 컴포넌트에 관한 정보를 제공합니다.
 
-그림 1. 애플리케이션 컴포넌트
-![애플리케이션 컴포넌트](caveonix-app-components.svg)
+![애플리케이션 컴포넌트](../../images/caveonix-app-components.svg "애플리케이션 컴포넌트")
+
 
 -	그래픽 사용자 인터페이스 - RiskForesight 애플리케이션에 액세스하는 데 사용할 수 있는 웹 인터페이스입니다.
 -	중앙 콜렉터 - 플러그인에서 가져오는 여러 다른 유형의 데이터 페이로드를 수집하고 메시징 저장소에서 사용 가능하게 합니다. RiskForesight에서는 다음 유형의 페이로드를 지원합니다.
@@ -61,8 +61,7 @@ subcollection: vmware-solutions
 
 다음 다이어그램에서는 사설 VLAN A와 연관된 Caveonix 휴대용 사설 서브넷과 네트워크 토폴로지를 보여줍니다. 병렬 분산 모델을 통해 필요한 대로 "일체형"에서 완전히 배포된 배치 모델로 수동으로 스케일을 확장할 수 있도록 이 서브넷의 IP 주소 공간을 관리할 책임이 있습니다.
 
-그림 2. 네트워크 다이어그램
-![네트워크 다이어그램](caveonix-network.svg)
+![네트워크 다이어그램](../../images/caveonix-network.svg "네트워크 다이어그램")
 
 IP 서브넷, VLAN 할당은 다음 표에 설명되어 있습니다.
 

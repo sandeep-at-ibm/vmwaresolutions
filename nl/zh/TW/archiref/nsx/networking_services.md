@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -22,9 +22,7 @@ subcollection: vmware-solutions
 
 下圖是簡化的網路圖，其說明管理配對及工作負載 ESG 配對。它也會顯示「NSX 分散式邏輯路由器 (DLR)」及工作負載 VXLAN。這些元件是要作為客戶工作負載的起始登入點，並不需要特定的知識，即可在 NSX 內設定它們。DLR 一般用來遞送 VMware vCenter Server 與「東西向」資料流量之間的資料流量，而「東西向」資料流量位於實例內的不同第 2 層網路之間。此行為與 ESG 相反，ESG 的運作有助於進出 vCenter Server 實例的「南北向」網路資料流量遍訪。
 
-圖 1. vCenter Server 上的雲端網路服務
-
-![vCenter Server 上的雲端網路服務](cloudnetworkingservicesdiagram.svg "vCenter Server 上的雲端網路服務")
+![vCenter Server 上的雲端網路連線功能服務](../../images/cloudnetworkingservicesdiagram.svg "vCenter Server 上的雲端網路連線功能服務")
 
 雖然單一 ESG 可能就足以應付管理及客戶工作負載資料流量，但是分隔管理及客戶資料流量是一種設計決策，以期防止意外地錯誤配置管理 ESG。
 
@@ -38,9 +36,7 @@ IBM 管理 ESG 是僅適用於 {{site.data.keyword.cloud_notm}} 管理網路資�
 
 管理 ESG 提供附加服務虛擬機器 (VM)（位於 vCenter Server 實例內）與「IBM 自動化」基礎架構（位於 {{site.data.keyword.cloud_notm}} 中）之間的通訊路徑，如下圖中的 vCenter Server 所示。
 
-圖 2. vCenter Server 上的管理邊緣通訊
-
-![vCenter Server 上的管理邊緣通訊](mgmtvmcommunication.svg "vCenter Server 上的管理邊緣通訊")
+![vCenter Server 上的管理邊緣通訊](../../images/mgmtvmcommunication.svg "vCenter Server 上的管理邊緣通訊")
 
 基於特定附加服務 VM 與其對應授權和計量系統之間的輕量通訊，會調整主動-被動高可用性 (HA) 配對之大型配置中的 NSX ESG 大小，並且將 NSX ESG 部署於 vCenter Server 叢集的管理資源儲存區上。下表提供 IBM 管理 NSX ESG 部署的摘要。
 
@@ -155,9 +151,7 @@ IBM 工作負載 ESG 是簡單拓蹼的一部分，主要用於工作負載網�
 * 分散式邏輯路由器 (DLR)
 * VXLAN（L3 上的 L2）
 
-圖 3. 網路流程圖範例
-
-![網路流程圖](customer_network_flow_diagram.svg "網路流程圖")
+![網路流程圖](../../images/customer_network_flow_diagram.svg "網路流程圖")
 
 ### IBM 工作負載 NSX Edge 的 Edge 介面
 {: #nsx-networking_services-edge-interfaces-workload}
@@ -203,7 +197,7 @@ IBM 工作負載 ESG 是簡單拓蹼的一部分，主要用於工作負載網�
 
 「工作負載 ESG」上採用 NAT，以容許網路資料流量在一個 IP 位址空間與另一個 IP 位址空間之間遍訪。對於工作負載 ESG，需要 NAT 的目的，不僅在於容許與網際網路目的地的通訊，也容許與任何源自 {{site.data.keyword.cloud_notm}} 的 IP 範圍通訊。在此設計中，容許工作負載資料流量送出到網際網路，但不容許送到管理或任何 {{site.data.keyword.cloud_notm}} 網路。因此，「工作負載 ESG」上只需要定義一個 SNAT。整個工作負載可攜式子網路配置為透過 SNAT 進行遍訪。
 
-雖然可以使用 NAT 來容許跨多個 vCenter Server 實例進行工作負載通訊，但當有許多工作負載需要跨實例連接時，這麼做會變得不切實際。如需使用進階 NSX 功能以建立跨 vCeter Server 實例之 L2 覆蓋傳輸網路的範例，請參閱[多站台架構](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx-multi_site)。
+雖然可以使用 NAT 來容許跨多個 vCenter Server 實例進行工作負載通訊，但當有許多工作負載需要跨實例連接時，這麼做會變得不切實際。如需使用進階 NSX 功能以建立跨 vCeter Server 實例之 L2 層疊傳輸網路的範例，請參閱[多站台架構](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx-multi_site)。
 
 表 10. 工作負載 ESG NAT 規則
 

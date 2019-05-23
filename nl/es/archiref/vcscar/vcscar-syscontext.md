@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 En el diagrama siguiente se muestra el contexto del sistema correspondiente a esta arquitectura de referencia. Un diagrama de contexto de sistema es un diagrama que define los elementos principales de un sistema, el límite del sistema, las entidades que interactúan con el mismo y la interacción. Se trata de un diagrama general que proporciona al lector una vista inicial del sistema.
 
-Figura 1. Contexto del sistema
-![Contexto del sistema](vcscar-system-context.svg)
+![Contexto del sistema](../../images/vcscar-system-context.svg "Contexto del sistema")
 
 Estos son componentes principales del contexto del sistema:
 -	vCenter Server: VMware vCenter Server on {{site.data.keyword.cloud_notm}} es una instancia de {{site.data.keyword.cloud_notm}} for VMware Services destinada a las máquinas virtuales (VM) migradas desde el entorno local. Junto con el entorno virtualizado local, forma un entorno híbrido que permite que las VM se muevan de un entorno a otro.

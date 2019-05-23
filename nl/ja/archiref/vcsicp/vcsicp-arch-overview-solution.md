@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-09"
 
 subcollection: vmware-solutions
 
@@ -17,8 +17,7 @@ subcollection: vmware-solutions
 ## VMware vCenter Server on IBM Cloud のコンポーネント
 {: #vcsicp-arch-overview-solution-vcs-comp}
 
-図 1. vCenter Server 環境図
-![VCS 環境](vcsicp-vcsenv.svg)
+![vCenter Server 環境](../../images/vcsicp-vcsenv.svg "vCenter Server および {{site.data.keyword.icpfull_notm}} デプロイメントの物理構造")
 
 ### Platform Service Controller
 {: #vcsicp-arch-overview-solution-psc}
@@ -49,27 +48,26 @@ NSX Edge Services Gateway (ESG) のペアがデプロイされます。 すべ�
 
 表 1. {{site.data.keyword.icpfull_notm}} ESG の仕様
 
-属性  |  仕様
---|--
-Edge Service Gateway  |  仮想アプライアンス
-Edge サイズ「大」 |   vCPU 数	2
-メモリー	| 1-GB ディスク	| ローカル・データストアに 1000 GB
+| 属性 | 仕様 |
+|:--------- |:------------- |
+| Edge Service Gateway | 仮想アプライアンス |
+| Edge サイズ「大」 | vCPU 数	2 |
+| メモリー | 1-GB ディスク	| ローカル・データ・ストアに 1000 GB |
 
 表 2. {{site.data.keyword.icpfull_notm}} DLR の仕様
 
-属性  |  仕様
---|--|
-分散論理ルーター | 	仮想アプライアンス
-Edge サイズ「コンパクト」 | vCPU 数	1
-メモリー	| 512-MB ディスク	| ローカル・データストアに 1000 GB
+| 属性 | 仕様 |
+|:--------- |:------------- |
+| 分散論理ルーター | 仮想アプライアンス |
+| Edge サイズ「コンパクト」 | vCPU 数	1 |
+| メモリー	| 512-MB ディスク	| ローカル・データ・ストアに 1000 GB |
 
 ## IBM Cloud Private コンポーネント
 {: #vcsicp-arch-overview-solution-icp-comp}
 
 {{site.data.keyword.icpfull_notm}} は、オンプレミスのコンテナー化されたアプリケーションを開発および管理するためのアプリケーション・プラットフォームです。 これは、コンテナー・オーケストレーター Kubernetes、プライベート・イメージ・リポジトリー、管理コンソール、モニター・フレームワークを含む、コンテナーを管理するための統合環境です。
 
-図 2. vCenter Server を含めた仮想 {{site.data.keyword.icpfull_notm}} のデプロイメント
-![VCS を含めた仮想 {{site.data.keyword.icpfull_notm}} のデプロイメント](vcsicp-virtual-icp-deployment-vcs.svg)
+![vCenter Server を使用した仮想 {{site.data.keyword.icpfull_notm}} デプロイメント](../../images/vcsicp-virtual-icp-deployment-vcs.svg "vCenter Server を使用した仮想 {{site.data.keyword.icpfull_notm}} デプロイメント")
 
 ###	ブート・ノード
 {: #vcsicp-arch-overview-solution-boot-node}
@@ -105,30 +103,29 @@ Edge サイズ「コンパクト」 | vCPU 数	1
 
 表 3. {{site.data.keyword.icpfull_notm}} 仮想マシンの仕様
 
-ノード | 	インスタンス	| IP	| CPU	| RAM (GB)	| ディスク (GB)
-:-----|------------:|:----|----:|----------:|----------:|
-マスター|	3	| IP (x3) VIP (x1)	| 4	| 64	| 200
-管理	|3	| IP (x3)	|8	|64	|500
-プロキシー	| 3	| IP (x3) VIP (x1)	|2	|4	|150
-脆弱性アドバイザー	|3	| IP (x3)	| 4	| 16	|500
-GlusterFS	| 3	| IP (x3)	|8	|16	|150
-ワーカー	| 3-6	| IP (x3)	|4-8	|4	|150
+| ノード | インスタンス | IP	| CPU	| RAM (GB)	| ディスク (GB) |
+|:---- |:--------- |:-- |:--- |:--------- |:--------- |
+| マスター | 3	| IP (x3) VIP (x1)	| 4	| 64	| 200 |
+| 管理	| 3	| IP (x3)	| 8	| 64	| 500 |
+| プロキシー	| 3	| IP (x3) VIP (x1)	| 2	| 4	| 150 |
+| 脆弱性アドバイザー	| 3	| IP (x3)	| 4	| 16	| 500 |
+| GlusterFS	| 3	| IP (x3)	| 8	| 16	| 150 |
+| ワーカー	| 3-6	| IP (x3)	| 4-8	| 4	| 150 |
 
 CAM が機能するためには、ワーカー・ノードの vCPU とメモリーの構成を大きくする必要があります。
 
 表 4. {{site.data.keyword.icpfull_notm}} 仮想マシンの仕様
 
-ノード | 	インスタンス	| IP	| CPU	| RAM (GB)	| ディスク (GB)
-:-----|------------:|:----|----:|----------:|----------:|
-ワーカー  |  3 | IP (x3)  |  4-8 |16-20   |  150
+| ノード | インスタンス	| IP | CPU	| RAM (GB)	| ディスク (GB) |
+|:---- |:---------- |:-- |:---- |:--------- |:--------- |
+| ワーカー | 3 | IP (x3) | 4-8 | 16-20 | 150 |
 
 ## CAM コンポーネント
 {: #vcsicp-arch-overview-solution-cam-comp}
 
 {{site.data.keyword.cloud_notm}} Automation Manager (CAM) は、{{site.data.keyword.icpfull_notm}} 上で実行されるマルチクラウド・セルフサービス管理プラットフォームであり、開発者と管理者がビジネス要求に対応できるようにします。
 
-図 3. CAM コンポーネント・リファレンス</br>
-![CAM コンポーネント・リファレンス](vcsicp-cam-component-ref.svg)
+![CAM コンポーネント・リファレンス](../../images/vcsicp-cam-component-ref.svg "CAM コンポーネント・リファレンス")
 
 ### CAM プロキシー
 {: #vcsicp-arch-overview-solution-cam-proxy}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 Caveonix RiskForesight 아키텍처는 다음 다이어그램에 표시되어 있습니다.
 
-그림 1. Caveonix RiskForesight의 아키텍처
-![아키텍처 다이어그램](caveonix-architecture.svg)
+![아키텍처 다이어그램](../../images/caveonix-architecture.svg "아키텍처 다이어그램")
 
 Caveonix RiskForesight 아키텍처에는 다음과 같은 네 개의 계층이 있습니다.
 -	발견 - 발견 모듈은 VMware 스택 및 여러 퍼블릭 클라우드에 완전히 통합됩니다. 플러그인을 사용하면 RiskForesight에서 vCenter와 NSX Manager를 자산 저장소로 사용하여 가상 머신(VM), 네트워크 및 네트워크 플로우에 관한 세부사항을 수집합니다. 원격 콜렉터에서는 규제 준수 및 취약성의 "전체 스택" 보기가 가능하도록 워크로드, 운영 체제 및 애플리케이션을 스캔합니다.
@@ -40,8 +39,7 @@ Caveonix RiskForesight 아키텍처에는 다음과 같은 네 개의 계층이 
 
 Caveonix RiskForesight에는 다음과 같은 구역의 개념이 있습니다.
 
-그림 2. Caveonix RiskForesight 구역
-![구역 다이어그램](caveonix-zones.svg)
+![구역 다이어그램](../../images/caveonix-zones.svg "구역 다이어그램")
 
 -	관리 또는 서비스 제공자 구역 - 관리 또는 서비스 제공자 구역에는 다음 컴포넌트가 포함되어 있습니다.
     - RiskForesight 애플리케이션 - 여기에는 다중 컴포넌트가 포함되며 애플리케이션 컴포넌트 섹션에서 자세히 설명합니다.

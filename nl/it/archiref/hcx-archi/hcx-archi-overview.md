@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -130,13 +130,11 @@ I dispositivi dei concentratori di livello 2 (L2C) permettono l'estensione di un
 
 Questa sezione descrive il layout dei componenti HCX all'interno di IBM Cloud e con il client in loco. In questa progettazione, l'architettura specifica un modello hub e spoke presente tra l'ambiente di origine e IBM Cloud. Quindi, la condizione di origine viene utilizzata come un hub con delle connessioni ad ambienti IBM Cloud diversi come mostrato nella seguente figura.
 
-Figura 1. HCX con una singola origine
-![HCX con una singola origine](hcx_single_source.svg)
+![HCX con una singola origine](../../images/cloudfoundation_hybrid_cloud_services.svg "HCX con una singola origine")
 
 L'origine può essere posizionata anche all'interno dell'ambiente IBM Cloud; gli spoke sono sempre le distribuzioni cloud all'interno di questa progettazione come mostrato nella seguente figura.
 
-Figura 2. HCX con più origini
-![HCX con più origini](hcx_multiple_sources.svg)
+![HCX con più origini](../../images/hcx_multiple_sources.svg "HCX con più origini")
 
 ### Panoramica sull'utilizzo
 {: #hcx-archi-overview-usage-ovw}

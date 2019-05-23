@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -18,9 +18,7 @@ subcollection: vmware-solutions
 
 随后，Todd 添加了 strongSwan VPN，用于连接每个集群的专用网络。
 
-图 1. Stock Trader - 真正的混合应用程序
-
-![Stock Trader - 真正的混合应用程序](vcscontent-truehybrid.svg)
+![作为真实混合应用程序的 Stock Trader](../../images/vcscontent-truehybrid.svg "作为真实混合应用程序的 Stock Trader")
 
 ## 相关链接
 {: #vcscontent-iks-related}

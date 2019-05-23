@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -22,9 +22,7 @@ Networking services on {{site.data.keyword.cloud}} est constitué de deux paires
 
 Le graphique suivant représente un diagramme réseau simplifié qui illustre la paire de passerelles ESG de gestion (Mgmt) et la paire de passerelles ESG de charge de travail (Workload). Il présente également un routeur logique distribué (DLR) NSX et un réseau VXLAN de charge de travail (Workload VXLAN). Ces composants sont conçus comme point d'arrivée des charges de travail du client sans nécessiter les connaissances spécifiques pour les configurer dans NSX. Un routeur DLR est généralement utilisé pour acheminer le trafic entre VMware vCenter Server et le trafic Est-Ouest, entre des réseaux de couche 2 séparés au sein de l'instance. Ce comportement est différent de celui d'une passerelle ESG qui fonctionne pour faciliter le trafic réseau nord-sud entrant et sortant de l'instance vCenter Server.
 
-Figure 1. Services de mise en réseau de cloud sur vCenter Server
-
-![Services de mise en réseau de cloud sur vCenter Server](cloudnetworkingservicesdiagram.svg "Services de mise en réseau de cloud sur vCenter Server")
+![Services de mise en réseau de cloud sur vCenter Server](../../images/cloudnetworkingservicesdiagram.svg "Services de mise en réseau de Cloud sur vCenter Server")
 
 Alors qu'une seule passerelle ESG peut suffire pour le trafic de gestion et de charge de travail du client, la séparation du trafic de gestion et du trafic du client est une décision en matière de conception prise pour empêcher une erreur de configuration accidentelle de la passerelle ESG de gestion.
 
@@ -38,9 +36,7 @@ La passerelle IBM Management ESG est un cluster NSX Edge dédié uniquement au t
 
 La passerelle ESG de gestion fournit un chemin de communication entre des machines virtuelles (VM) de services complémentaires résidant dans des instances vCenter Server et l'infrastructure IBM Automation dans {{site.data.keyword.cloud_notm}} comme illustré pour vCenter Server dans le graphique suivant.
 
-Figure 2. Communications du serveur de périphérie de gestion sur vCenter Server
-
-![Communications du serveur de périphérie de gestion sur vCenter Server](mgmtvmcommunication.svg "Communications du serveur de périphérie de gestion sur vCenter Server")
+![Communications Management Edge sur vCenter Server](../../images/mgmtvmcommunication.svg "Communications Management Edge sur vCenter Server")
 
 En raison de la faible communication entre certaines machines virtuelles de services complémentaires et leurs systèmes de décompte et de licence correspondants, les passerelles NSX ESG sont dimensionnées dans une configuration de grande taille au sein d'une paire à haute disponibilité (HA) active et passive et déployées sur le pool de ressources de gestion du cluster vCenter Server. Le tableau suivant présente un récapitulatif de déploiement des passerelles IBM Management NSX ESG.
 
@@ -155,9 +151,7 @@ La topologie présentée dans la figure suivante est constituée des composants 
 * Routeur logique distribué (DLR)
 * VXLAN (L2 sur L3)
 
-Figure 3. Diagramme d'un exemple de trafic réseau
-
-![Diagramme de trafic réseau](customer_network_flow_diagram.svg "Diagramme de trafic réseau")
+![Diagramme de trafic réseau](../../images/customer_network_flow_diagram.svg "Diagramme de trafic réseau")
 
 ### Interfaces Edge pour IBM Workload NSX Edge
 {: #nsx-networking_services-edge-interfaces-workload}

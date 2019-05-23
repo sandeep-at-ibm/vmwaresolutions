@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-26"
+lastupdated: "2019-05-01"
 
 subcollection: vmware-solutions
 
@@ -37,7 +37,14 @@ Lorsque vous commandez le service, indiquez les paramètres suivants :
 * Sélectionnez **Prêt pour la production** ou **Développement/Test** selon vos besoins.
 * Cochez la case requise pour certifier que vous possédez déjà la licence qui est obligatoire pour déployer le service {{site.data.keyword.cloud_notm}} Private Hosted.
 
-Si vous souhaitez déployer des noeuds supplémentaires, utilisez le modèle {{site.data.keyword.cloud_notm}} Private Ubuntu (Ubuntu1604) qui est déployé avec votre installation {{site.data.keyword.cloud_notm}} Private Hosted initiale. Pour trouver le modèle, dans le client Web VMware vSphere, accédez à l'onglet **VMs and Templates**, sous le dossier `cam`. Le mot de passe par défaut du modèle Ubuntu est `icponcloud` et il est recommandé de le changer avant d'utiliser le modèle.
+## Déploiement de noeuds supplémentaires
+{: #icp_ordering-deploy-nodes}
+
+Si vous souhaitez déployer des noeuds supplémentaires, passez en revue les informations suivantes : 
+* Utilisez le modèle {{site.data.keyword.cloud_notm}} Private Ubuntu (Ubuntu1604) qui est déployé avec votre installation {{site.data.keyword.cloud_notm}} Private Hosted initiale. 
+* Pour trouver le modèle Ubuntu, dans le client Web VMware vSphere, accédez à l'onglet **VMs and Templates**, sous le dossier `cam`. 
+* Le mot de passe par défaut du modèle Ubuntu est `icponcloud`. Il est recommandé de changer ce mot de passe avant d'utiliser le modèle. 
+* {{site.data.keyword.vmwaresolutions_short}} ne prend pas en charge l'application des mises à jour et correctifs pour les composants Ubuntu. Vous devez surveiller et appliquer ces mises à jour vous-même.
 
 ## Liens connexes
 {: #icp_ordering-related}

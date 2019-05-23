@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-15"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -22,8 +22,8 @@ Consultez ces informations pour la conception de l'offre {{site.data.keyword.vmw
 
 Cette conception sert d'architecture de référence pour les autres composants internes ou spécifiques des fournisseurs qui doivent être ajoutés pour des cas d'utilisation spécifiques.
 
-Figure 1. Présentation de VMware on {{site.data.keyword.cloud_notm}}
-![Présentation de VMware on {{site.data.keyword.cloud_notm}}](vcsv4radiagrams-ra-variationsonatheme.svg "La solution virtualise les ressources de calcul, de réseau et éventuellement de stockage qui seront consommées par les machines virtuelles sur lesquelles vous pouvez exécuter vos applications.")
+![Présentation de VMware on {{site.data.keyword.cloud_notm}}](../../images/vcsv4radiagrams-ra-variationsonatheme.svg "La solution virtualise les ressources de calcul, de réseau et éventuellement de stockage qui serontconsommées par les machines virtuelles sur lesquelles vous pouvez exécuter vos applications.")
+
 
 ## Principaux avantages d'IBM Cloud for VMware Solutions
 {: #solution_overview-benefits}

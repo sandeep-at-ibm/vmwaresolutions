@@ -46,7 +46,7 @@ subcollection: vmware-solutions
 NSX Controller 未安裝在 vCenter Server 實例上（像它安裝在 Cloud Foundation 實例上那樣）。如果您是針對 vCenter Server 實例使用 VXLAN 或分散式邏輯路由器，則必須自行安裝 NSX Controller。
 {:note}
 
-如需 VMware NSX for vSphere 6.2.4 所引進之加強功能、其需求和已知問題的相關資訊，請參閱 [NSX for vSphere 6.2.4 版本注意事項](http://pubs.vmware.com/Release_Notes/en/nsx/6.2.4/releasenotes_nsx_vsphere_624.html){:new_window}。
+如需 VMware NSX for vSphere 6.2.4 所引進之加強功能、其需求和已知問題的相關資訊，請參閱 [NSX for vSphere 6.2.4 版本注意事項](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/rn/releasenotes_nsx_vsphere_624.html){:new_window}。
 
 ### VMware NSX Edge
 {: #relnotes_v14-nsx-edge}

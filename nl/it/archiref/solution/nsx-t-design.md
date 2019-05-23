@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-13"
 
 subcollection: vmware-solutions
 
@@ -63,8 +63,7 @@ Attributo | Specifica
 
 La seguente figura mostra il posizionamento di NSX Manager-controller in relazione agli altri componenti in questa architettura.
 
-Figura 1. Panoramica della rete NSX-T Manager
-![Panoramica della rete NSX-T Manager](vcsv4radiagrams-ra-vcs-nsx-overview.svg)
+![Panoramica della rete NSX-T Manager](../../images/vcsv4radiagrams-ra-vcs-nsx-overview.svg "Panoramica della rete NSX-T Manager")
 
 ## Considerazioni sulla distribuzione
 {: #nsx-t-design-deployment}
@@ -175,11 +174,9 @@ Nome switch logico | VLAN |Zona di trasporto | Politica di teaming uplink
 
 All'interno di questa progettazione viene eseguito il provisioning di un solo cluster edge virtuale da utilizzare per la gestione e i carichi di lavoro del cliente. Il cluster edge virtuale può ospitare più istanze dei gateway T0. Come descritto precedentemente, più istanze gateway edge T0 possono essere istanziate su un singolo cluster edge, ognuna con le proprie tabelle di instradamento. Vedi la seguente figura con i diagrammi e i componenti funzionali di un cluster edge NSX-T.
 
-Figura 2. Esempio di cluster edge NSX-T di ridimensionamento da T0 a T1
-![Esempio di cluster edge NSX-T di ridimensionamento da T0 a T1](vcsv4radiagrams-ra-nsx-t-edge-cluster-t0-to-t1-scale.svg)
+![Esempio del cluster NSX-T Edge di scala da T0 a T1](../../images/vcsv4radiagrams-ra-nsx-t-edge-cluster-t0-to-t1-scale.svg "Esempio del cluster NSX-T Edge di scala da T0 a T1")
 
-Figura 3. Gestione del gateway T0</br>
-![Gestione del gateway T0](vcsv4radiagrams-topology-0.svg)
+![Gateway T0 di gestione](../../images/vcsv4radiagrams-topology-0.svg "Gateway T0 di gestione")
 
 #### Gateway logico Tier 0
 {: #nsx-t-design-tier-0}
@@ -201,8 +198,7 @@ Per fornire la connettività a tre livelli tra le VM connesse agli switch logici
 
 Carico di lavoro dal gateway T1 al T0 – Cluster edge virtuale
 
-Figura 4. Gateway edge T0 virtuale della topologia distribuita NSX-T
-![Gateway edge T0 virtuale della topologia distribuita NSX-T](vcsv4radiagrams-topology-1.svg)
+![Gateway Edge T0 virtuale di topologia distribuita NSX-T](../../images/vcsv4radiagrams-topology-1.svg "Gateway Edge T0 virtuale di topologia distribuita NSX-T")
 
 La topologia 1 distribuita da IC4V è essenzialmente la stessa topologia distribuita con i gateway Edge e DLR NSX-V. Con NSX-T, non è presente alcuna configurazione del protocollo di instradamento dinamico tra T1 e T0. Viene utilizzato lo spazio di indirizzi IP RFC-1891 per la rete di sovrapposizione del carico di lavoro e di transito. Viene assegnato uno spazio dell'IP portatile pubblico e privato per l'utilizzo da parte del cliente. Viene assegnato uno spazio dell'IP portatile pubblico e privato {{site.data.keyword.cloud_notm}} designato al T0 per l'utilizzo da parte del cliente.
 
@@ -210,8 +206,7 @@ A partire da questa progettazione, hai l'opzione di non eliminare questi interva
 
 Carico di lavoro dal gateway T1 al T0 – Cluster edge fisico:
 
-Figura 5. Gateway edge T0 fisico della topologia distribuita NSX-T
-![Gateway edge T0 fisico della topologia distribuita NSX-T](vcsv4radiagrams-topology-2.svg)
+![Gateway Edge T0 fisico di topologia distribuita NSX-T](../../images/vcsv4radiagrams-ra-vcs-nsx-overview.svg "Gateway Edge T0 fisico di topologia distribuita NSX-T")
 
 La topologia 2 distribuita è simile all'eccezione che sostituisce il cluster edge basato sulla VM con una coppia di server bare metal che eseguono il server Red Hat. Viene assegnato uno spazio dell'IP portatile pubblico e privato {{site.data.keyword.cloud_notm}} designato al T0 per l'utilizzo da parte del cliente. A partire da questa progettazione, hai l'opzione di non eliminare questi intervalli di IP se l'istanza vCenter Server viene disattivata ed eliminata.
 
@@ -219,8 +214,7 @@ Vedi il documento o il link separato per la distinta base delle specifiche hardw
 
 Carico di lavoro con ICP al gateway T0 – Cluster edge virtuale:
 
-Figura 6. Topologia distribuita NSX-T con integrazione ICP NSX-T e gateway edge T0 virtuale
-![Topologia distribuita NSX-T con integrazione ICP NSX-T e gateway edge T0 virtuale](vcsv4radiagrams-topology-3.svg)
+![Topologia distribuita NSX-T con gateway Edge T0 virtuale e di integrazione ICP NSX-T](../../images/vcsv4radiagrams-topology-3.svg "[Topologia distribuita NSX-T con gateway Edge T0 virtuale e di integrazione ICP NSX-T")
 
 La topologia 3 distribuita contiene la topologia 1 con l'aggiunta di una distribuzione ICP che include l'integrazione NSX-T al posto di Calico, che è uno stack di rete predefinito all'interno di una distribuzione ICP. Il cliente può eseguire il provisioning di ulteriori spazi di nomi del contenitore all'interno di ICP, che automatizza la creazione di switch logici, sottorete di IP e istanze gateway T1 per ogni spazio dei nomi.
 

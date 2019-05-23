@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 
 Il servizio KMIP for VMware on {{site.data.keyword.cloud}} fornisce un servizio altamente disponibile 24x7 per gestire le chiavi di crittografia utilizzate da VMware in {{site.data.keyword.cloud_notm}}. Questo servizio offre funzionalità di runtime per consentire ai clienti di creare, recuperare, attivare, revocare e distruggere le chiavi di crittografia. Fornisce inoltre funzionalità di gestione per mantenere le associazioni tra le credenziali del client e le chiavi di crittografia.
 
-Il servizio KMIP for VMware on {{site.data.keyword.cloud_notm}} è disponibile come servizio autonomo senza essere associato a un'istanza VMware. Ogni istanza del servizio può servire una o più istanze vCenter Server o uno o più cluster vSphere. 
+Il servizio KMIP for VMware on {{site.data.keyword.cloud_notm}} è disponibile come servizio autonomo senza essere associato a un'istanza VMware. Ogni istanza del servizio può servire una o più istanze vCenter Server o uno o più cluster vSphere.
 
 ## Specifiche tecniche per KMIP for VMware on IBM Cloud
 {:#technical-specifications-for-kmip-for-vmware-on-ibm-cloud}
@@ -41,7 +41,7 @@ Esamina le seguenti considerazioni prima di installare un'istanza KMIP for VMwar
    * Hai ordinato un'istanza del servizio Key Protect o HPCS utilizzabile nella regione {{site.data.keyword.cloud_notm}} in cui deve essere ospitata la tua istanza KMIP for VMware on {{site.data.keyword.cloud_notm}}:
       * Per ulteriori informazioni sulla creazione di un'istanza di Key Protect, vedi [Provisioning del servizio](/docs/services/key-protect?topic=key-protect-provision).
       * Per ulteriori informazioni sulla creazione di un'istanza di HPCS, vedi [Provisioning del servizio](/docs/services/hs-crypto?topic=hs-crypto-provision#provision). Oltre al provisioning del servizio HPCS, devi anche [inizializzare la tua istanza di crittografia](/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-hsm) in modo che HPCS possa fornire le funzioni correlate alla chiave.
-   * È stato creato un ID servizio {{site.data.keyword.cloud_notm}} seguendo la procedura in [Creazione di un ID servizio](/docs/iam?topic=iam-serviceids). Questo ID servizio viene utilizzato per accedere all'istanza del servizio Key Protect o HPCS che hai creato. 
+   * È stato creato un ID servizio {{site.data.keyword.cloud_notm}} seguendo la procedura in [Creazione di un ID servizio](/docs/iam?topic=iam-serviceids). Questo ID servizio viene utilizzato per accedere all'istanza del servizio Key Protect o HPCS che hai creato.
    * Hai concesso i seguenti livelli di accesso per l'ID servizio:
       * A livello di accesso alla piattaforma: autorizzazione di Visualizzatore nella tua istanza del servizio Key Protect o HPCS
       * A livello di accesso al servizio: autorizzazione di Gestore nella tua istanza del servizio Key Protect o HPCS

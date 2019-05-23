@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-09"
 
 subcollection: vmware-solutions
 
@@ -17,8 +17,8 @@ subcollection: vmware-solutions
 ## Componentes de VMware vCenter Server on IBM Cloud
 {: #vcsicp-arch-overview-solution-vcs-comp}
 
-Figura 1. Diagrama del entorno de vCenter Server
-![Entorno VCS](vcsicp-vcsenv.svg)
+![Entorno de vCenter Server](../../images/vcsicp-vcsenv.svg "Estructura física del despliegue de vCenter Server e{{site.data.keyword.icpfull_notm}}")
+
 
 ### Controlador de servicios de la plataforma
 {: #vcsicp-arch-overview-solution-psc}
@@ -49,19 +49,19 @@ En la tabla siguiente se resumen las especificaciones de {{site.data.keyword.icp
 
 Tabla 1. Especificaciones de {{site.data.keyword.icpfull_notm}} ESG
 
-Atributo  |  Especificación
---|--
-Edge Service Gateway  |  Dispositivo virtual
-Edge tamaño grande |   Número de vCPU	2
-Memoria	| Disco de 1 GB	| 1000 GB en almacén de datos local
+| Atributo | Especificación |
+|:--------- |:------------- |
+| Edge Service Gateway | Dispositivo virtual |
+| Edge tamaño grande | Número de vCPU	2 |
+| Memoria | Disco de 1 GB	| 1000 GB en almacén de datos local |
 
 Tabla 2. Especificaciones de DLR de {{site.data.keyword.icpfull_notm}}
 
-Atributo  |  Especificación
---|--|
-Direccionador lógico distribuido | 	Dispositivo virtual
-Edge tamaño Compacto | Número de vCPU	1
-Memoria	| Disco de 512 MB	| 1000 GB en almacén de datos local
+| Atributo | Especificación |
+|:--------- |:------------- |
+| Direccionador lógico distribuido | Dispositivo virtual |
+| Edge tamaño Compacto | Número de vCPU	1 |
+| Memoria	| Disco de 512 MB	| 1000 GB en almacén de datos local |
 
 ## Componentes de IBM Cloud Private
 {: #vcsicp-arch-overview-solution-icp-comp}
@@ -69,8 +69,7 @@ Memoria	| Disco de 512 MB	| 1000 GB en almacén de datos local
 {{site.data.keyword.icpfull_notm}} es una plataforma de aplicaciones para desarrollar y gestionar aplicaciones locales contenerizadas. Es un entorno integrado para gestionar contenedores que incluye el coordinador de contenedores Kubernetes,
 un repositorio de imágenes privadas, una consola de gestión e infraestructuras de supervisión.
 
-Figura 2. Despliegue de {{site.data.keyword.icpfull_notm}} virtual con vCenter Server
-![Despliegue de {{site.data.keyword.icpfull_notm}} virtual con VCS](vcsicp-virtual-icp-deployment-vcs.svg)
+![Despliegue de {{site.data.keyword.icpfull_notm}} virtual con vCenter Server](../../images/vcsicp-virtual-icp-deployment-vcs.svg "Despliegue de {{site.data.keyword.icpfull_notm}} virtual con vCenter Server")
 
 ###	Nodo de arranque
 {: #vcsicp-arch-overview-solution-boot-node}
@@ -106,30 +105,29 @@ Se necesitan las siguientes especificaciones de VM para una instancia de {{site.
 
 Tabla 3. Especificaciones de máquina virtual {{site.data.keyword.icpfull_notm}}
 
-Nodo | 	Instancias	| IP	| CPU	| RAM (GB)	| DISCO (GB)
-:-----|------------:|:----|----:|----------:|----------:|
-Maestro|	3	| IP (x3) VIP (x1)	| 4	| 64	| 200
-Gestión	|3	| IP (x3)	|8	|64	|500
-Proxy	| 3	| IP (x3)VIP (x1)	|2	|4	|150
-Vulnerability Advisor	|3	| IP (x3)	| 4	| 16	|500
-GlusterFS	| 3	| IP (x3)	|8	|16	|150
-Trabajador	| 3-6	| IP (x3)	|4-8	|4	|150
+| Nodo | Instancias | IP	| CPU	| RAM (GB)	| DISCO (GB) |
+|:---- |:--------- |:-- |:--- |:--------- |:--------- |
+| Maestro | 3	| IP (x3) VIP (x1)	| 4	| 64	| 200 |
+| Gestión	| 3	| IP (x3)	| 8	| 64	| 500 |
+| Proxy	| 3	| IP (x3)VIP (x1)	| 2	| 4	| 150 |
+| Vulnerability Advisor	| 3	| IP (x3)	| 4	| 16	| 500 |
+| GlusterFS	| 3	| IP (x3)	| 8	| 16	| 150 |
+| Trabajador	| 3-6	| IP (x3)	| 4-8	| 4	| 150 |
 
 CAM requiere que los nodos trabajadores tengan una configuración de vCPU y de memoria superior.
 
 Tabla 4. Especificaciones de máquina virtual {{site.data.keyword.icpfull_notm}}
 
-Nodo | 	Instancias	| IP	| CPU	| RAM (GB)	| DISCO (GB)
-:-----|------------:|:----|----:|----------:|----------:|
-trabajador  |  3 | IP (x3)  |  4-8 |16-20   |  150
+| Nodo | Instancias	| IP | CPU	| RAM (GB)	| DISCO (GB) |
+|:---- |:---------- |:-- |:---- |:--------- |:--------- |
+| trabajador | 3 | IP (x3) | 4-8 | 16-20 | 150 |
 
 ## Componentes de CAM
 {: #vcsicp-arch-overview-solution-cam-comp}
 
 {{site.data.keyword.cloud_notm}} Automation Manager (CAM) es una plataforma de gestión de autoservicio multinube de autoservicio que se ejecuta en {{site.data.keyword.icpfull_notm}} que permite a los desarrolladores y a los administradores satisfacer las necesidades de la empresa.
 
-Figura 3. Referencia de componentes de CAM</br>
-![Referencia de componentes de CAM](vcsicp-cam-component-ref.svg)
+![Referencia de componentes de CAM](../../images/vcsicp-cam-component-ref.svg "Referencia de componentes de CAM")
 
 ### Proxy de CAM
 {: #vcsicp-arch-overview-solution-cam-proxy}

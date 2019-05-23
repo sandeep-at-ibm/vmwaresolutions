@@ -117,5 +117,4 @@ Microsoft Active Directory (AD) / Domain Name Server (DNS) se configura automát
 ## Documentación nueva y actualizada
 {: #relnotes_v19-new-docs}
 
-* Obtenga información sobre cómo proteger sus instancias de Cloud Foundation privadas de varios sitios mientras amplía sus aplicaciones VMware para que utilicen servicios públicos de {{site.data.keyword.cloud_notm}}. Para obtener más información, consulte [Conexión segura de sus cargas de trabajo privadas de VMware en {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}.
 * Se proporciona más documentación para configurar cortafuegos que permitan toda la comunicación de protocolo entre las máquinas virtuales IBM CloudDriver y SDDC Manager. Para obtener más información, consulte [Componentes y consideraciones sobre Fortinet on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations).

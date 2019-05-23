@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-05-01"
 
 subcollection: vmware-solutions
 
@@ -27,9 +27,7 @@ NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 오퍼링은 스토리�
 
 다음 그림은 NetApp ONTAP Select on vCenter Server 배치의 전반적인 아키텍처를 보여줍니다.
 
-그림 1. NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}의 상위 레벨 아키텍처
-
-![NetApp ONTAP Select 아키텍처](np_architecture.svg "NetApp ONTAP Select on IBM Cloud의 상위 레벨 아키텍처")
+![NetApp ONTAP Select 아키텍처](../images/np_architecture.svg "NetApp ONTAP Select 아키텍처")
 
 ### 실제 인프라
 {: #np_netappoverview-physical-infras}
@@ -46,16 +44,14 @@ NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 오퍼링은 스토리�
 
 다음 그림은 NetApp ONTAP Select 배치의 컴포넌트를 보여줍니다.
 
-그림 2. NetApp ONTAP Select 컴포넌트
-
-![NetApp ONTAP Select 컴포넌트](np_netappcomponents.svg "NetApp ONTAP Select의 컴포넌트")
+![NetApp ONTAP Select 컴포넌트](../images/np_netappcomponents.svg "NetApp ONTAP Select의 컴포넌트")
 
 ### 가상화 관리
 {: #np_netappoverview-virtualization-mgmt}
 
 가상화 관리 계층은 다음 컴포넌트로 구성됩니다.
 
-* 임베드된 PSC(Platform Services Controller)가 포함된 vCenter Server Appliance(vCSA)
+* 임베디드 PSC(Platform Services Controller)가 포함된 vCenter Server Appliance(vCSA)
 * NSX Manager
 * 두 개의 NSX ESG(Edge Services Gateway)
 * 세 개의 NSX Controllers

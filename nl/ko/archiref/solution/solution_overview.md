@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-15"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -22,8 +22,7 @@ subcollection: vmware-solutions
 
 이 디자인은 특정 유스 케이스를 위해 추가될 기타 내부 또는 공급업체 특정 컴포넌트에 대한 기초를 제공하는 베이스 라인 아키텍처로서의 역할을 합니다.
 
-그림 1. {{site.data.keyword.cloud_notm}} 개요
-![VMware on {{site.data.keyword.cloud_notm}} 개요](vcsv4radiagrams-ra-variationsonatheme.svg "솔루션은 애플리케이션이 실행될 수 있는 VM에서 사용할 컴퓨팅, 네트워크 및 선택적으로 스토리지 리소스를 가상화합니다.")
+![VMware on {{site.data.keyword.cloud_notm}} 개요](../../images/vcsv4radiagrams-ra-variationsonatheme.svg "솔루션은 애플리케이션을 실행할 수 있는 VM에서 이용될 컴퓨팅, 네트워크 및 스토리지 리소스(선택사항)를 가상화합니다.")
 
 ## IBM Cloud for VMware Solutions의 주요 이점
 {: #solution_overview-benefits}

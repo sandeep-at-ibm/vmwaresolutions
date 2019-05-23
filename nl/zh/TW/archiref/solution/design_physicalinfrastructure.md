@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -33,8 +33,7 @@ subcollection: vmware-solutions
 
 如需儲存空間的相關資訊，請參閱[共用儲存空間架構](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits)。
 
-圖 1. 實體基礎架構</br>
-![實體基礎架構](vcsv4radiagrams-ra-physinfra.svg)
+![實體基礎架構](../../images/vcsv4radiagrams-ra-physinfra.svg "實體基礎架構")
 
 ## 實體運算設計
 {: #design_physicalinfrastructure-host-design}
@@ -64,8 +63,7 @@ Bare Metal Server 的規格如下：
 
 {{site.data.keyword.cloud_notm}} 的實體網路分成兩個不同的網路：公用和專用。專用網路也包含實體伺服器的管理「智慧型平台管理介面 (IPMI)」資料流量。
 
-圖 2. {{site.data.keyword.cloud_notm}} 高階網路
-![{{site.data.keyword.cloud_notm}} 高階網路](vcsv4radiagrams-ra-ibmcloudnetwork.svg)
+![{{site.data.keyword.cloud_notm}} 高階網路](../../images/vcsv4radiagrams-ra-ibmcloudnetwork.svg "{{site.data.keyword.cloud_notm}} 高階網路")
 
 #### 公用網路
 {: #design_physicalinfrastructure-public-net}
@@ -111,8 +109,7 @@ Bare Metal Server 的規格如下：
 
 無法針對 vCenter Server 供應項目內使用的裸機伺服器，移除公用或專用網路的實體網路連線功能。可以停用裸機內部 NIC 上的實體埠，但不支援拔除纜線。
 
-圖 3. 實體主機連線</br>
-![實體主機連線](vcsv4radiagrams-ra-physical-host-connections.svg "實體主機連線")
+![實體主機連線](../../images/vcsv4radiagrams-ra-physical-host-connections.svg "實體主機連線")
 
 #### VLAN 與基礎至層疊遞送
 {: #design_physicalinfrastructure-vlans}
@@ -180,9 +177,7 @@ vSphere ESXi Hypervisor 會安裝在持續性位置中。因此，實體主機�
 
 儲存空間是從 IBM Cloud 使用 NFS 第 3 版通訊協定所連接，每個 GB 層次有 2 IOPS。IBM 會將以 16 K 區塊大小佈建的 IOP 層次正規化，讓較大的區塊大小可以看到下限，而較小的區塊大小可以看到上限。
 
-圖 4. 連接至 VMware 部署的 NFS 共用
-
-![連接至 VMware 部署的 NFS 共用](vcsv4radiagrams-ra-nfs-shares.svg "連接至 VMware 部署的 NFS 共用：管理共用及客戶指定的共用")
+![連接到 VMware 部署的 NFS 共用](../../images/vcsv4radiagrams-ra-nfs-shares.svg "連接到 VMware 部署的 NFS 共用：管理共用和客戶指定的共用")
 
 您可以在購買時或之後在主控台內，針對工作負載在所有主機上配置及裝載更多檔案共用。您可以從對應 {{site.data.keyword.CloudDataCent_notm}} 的可用「{{site.data.keyword.cloud_notm}} 耐久性」檔案儲存空間容量選項及效能層級中進行選取。所有共用都是使用 NFS 第 3 版通訊協定進行連接。此外，套用 NetApp ONTAP Select 供應項目，即可連接 NFS 第 3 版檔案共用。
 
@@ -195,8 +190,7 @@ vSphere ESXi Hypervisor 會安裝在持續性位置中。因此，實體主機�
 
 IBM 會將以 16 K 區塊大小佈建的 IOP 層次正規化，讓較大的區塊大小可以看到下限，而較小的區塊大小可以看到上限。
 
-圖 5. 連接至 VMware 部署的 iSCSI LUN</br>
-![連接至 VMware 部署的 iSCSI LUN](vcsv4radiagrams-ra-iscsi-lun.svg "連接至 VMware 部署的 iSCSI LUN")
+![連接到 VMware 部署的 iSCSI LUN](../../images/vcsv4radiagrams-ra-iscsi-lun.svg "連接到 VMware 部署的 iSCSI LUN")
 
 也可以在購買時或之後在主控台內，針對工作負載在所有主機上配置及裝載額外的 iSCSI LUN。在對應的 IBM Cloud Data Center 中，從可用的「IBM Cloud 耐久性」區塊儲存空間容量選項及效能層級中進行選取。所有 LUN 都是使用 iSCSI 通訊協定進行連接。此外，可從 NetApp ONTAP Select 供應項目連接 iSCSI LUN。
 

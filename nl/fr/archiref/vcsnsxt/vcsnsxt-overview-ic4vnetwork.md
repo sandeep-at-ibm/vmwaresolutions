@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -18,8 +18,7 @@ subcollection: vmware-solutions
 
 Le réseau physique d'{{site.data.keyword.cloud_notm}} est divisé en trois réseaux distincts : public, privé et gestion.
 
-Figure 1. Vue de réseau de haut niveau pour {{site.data.keyword.cloud_notm}}
-![Vue de réseau de haut niveau pour {{site.data.keyword.cloud_notm}}](vcsnsxt-ic4vcloud.svg)
+![Vue de réseau de haut niveau pour {{site.data.keyword.cloud_notm}}](../../images/vcsnsxt-ic4vcloud.svg "Vue de réseau de haut niveau pour {{site.data.keyword.cloud_notm}}")
 
 ## Réseau public
 {: #vcsnsxt-overview-ic4vnetwork-public-net}
@@ -55,9 +54,7 @@ Les comptes {{site.data.keyword.cloud_notm}} peuvent également être configuré
 
 Chaque hôte physique de la conception possède deux paires redondantes de connexions Ethernet 10 Gbps dans chaque commutateur {{site.data.keyword.cloud_notm}} de niveau supérieur (ToR) (public et privé). Les adaptateurs sont configurés comme des connexions individuelles (non liées) pour un total de 4 connexions 10 Gbps. Cela permet à chacune des connexions NIC de mise en réseau de fonctionner indépendamment des autres.
 
-Figure 2. Connexions hôte physiques
-</br>
-![Connexions hôte physique](vcsnsxt-host-connections.svg)
+![Connexions d'hôte physique](../../images/vcsnsxt-host-connections.svg "Connexions d'hôte physique")
 
 ## Réseaux locaux virtuels
 {: #vcsnsxt-overview-ic4vnetwork-vlans}

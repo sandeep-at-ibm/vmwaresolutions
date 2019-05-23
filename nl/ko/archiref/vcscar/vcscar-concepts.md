@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -75,8 +75,7 @@ trick = 'combo \+ \[“to” + combo\] \+ \[“to” \+ landing_combo\]'
 
 다음 다이어그램은 규칙 엔진을 시각적으로 요약하여 설명합니다.
 
-그림 1. 스케이트 언어 개요
-![스케이트 언어 개요](vcscar-skate-language.svg)
+![스케이트 언어 개요](../../images/vcscar-skate-language.svg "스케이트 언어 개요")
 
 ## 샘플 트릭 언어
 {: #vcscar-concepts-sample-trick}

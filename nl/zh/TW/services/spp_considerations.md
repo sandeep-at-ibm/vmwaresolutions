@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -90,7 +90,7 @@ subcollection: vmware-solutions
 ## 相關鏈結
 {: #spp_considerations-related}
 
-* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 預防性服務規劃](http://www.ibm.com/support/docview.wss?uid=swg22012650)
+* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 預防性服務規劃](https://www-01.ibm.com/support/docview.wss?uid=swg22012650){:new_window}
 * [管理 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingspp)
 * [訂購 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-spp_ordering)
 * [IBM Spectrum Protect Plus 文件](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html)

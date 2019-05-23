@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -28,8 +28,7 @@ subcollection: vmware-solutions
 - 每個工作者節點的專用 IP 位址，其為工作者節點提供專用網路介面
 - 所有工作者節點與主節點之間的自動安全 OpenVPN 連線
 
-圖 1. vCenter Server 及 {{site.data.keyword.containerlong_notm}} 網路
-![vCenter Server-{{site.data.keyword.containerlong_notm}} 網路圖](vcsiks-networking.svg)
+![vCenter Server-{{site.data.keyword.containerlong_notm}} 網路連線功能圖](../../images/vcsiks-networking.svg "vCenter Server-{{site.data.keyword.containerlong_notm}} 網路連線功能圖")
 
 ### IBM Cloud Kubernetes Service 與 vCenter Server 整合
 {: #vcsiks-overview-network-iks-vcs-integration}

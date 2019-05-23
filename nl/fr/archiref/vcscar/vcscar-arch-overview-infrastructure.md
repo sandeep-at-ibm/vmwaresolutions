@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-22"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -58,8 +58,7 @@ En plus de la configuration matérielle {{site.data.keyword.cloud_notm}} requise
 ## Structure virtuelle
 {: #vcscar-arch-overview-infrastructure-virt-structure}
 
-Figure 1. Structure du déploiement vCenter Server et {{site.data.keyword.icpfull_notm}}
-![Structure du déploiement vCenter Server et {{site.data.keyword.icpfull_notm}}](vcscar-icp.svg)
+![Structure du déploiement vCenter Server et {{site.data.keyword.icpfull_notm}}](../../images/vcscar-icp.svg "Structure du déploiement vCenter Server et {{site.data.keyword.icpfull_notm}}")
 
 Dans l'instance vCenter Server, l'instance {{site.data.keyword.icpfull_notm}} est déployée avec une passerelle NSX Edge Services Gateway (ESG) dédiée et un routeur logique distribué (DLR).
 L'installation {{site.data.keyword.icpfull_notm}} est chargée dans le sous-réseau VXLAN qui est défini dans les composants ci-dessus.

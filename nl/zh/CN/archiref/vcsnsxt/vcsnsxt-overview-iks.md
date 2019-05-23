@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -56,8 +56,7 @@ Kubernetes 使用容器网络接口 (CNI) 作为其面向插件的联网解决�
 
 从网络流量角度来看，在 {{site.data.keyword.containerlong_notm}} 中，我们将网络流量分为四种类型，如下图所示。
 
-图 1. 容器网络流量类型
-![容器网络流量类型](vcsnsxt-traffictypes.svg)
+![容器网络流量类型](../../images/vcsnsxt-traffictypes.svg "容器网络流量类型")
 
 - **pod 内联网** - 也称为容器到容器通信。一个 pod 中的所有容器共享一个网络名称空间和同一 IP 地址，并可在本地主机上看到彼此。每个应用程序的流量使用不同的端口号加以区分。开发者必须确保 pod 内的容器使用的端口不会相互冲突。在 pod 中，存在一个所谓的基础架构容器。这是 kubelet 启动的第一个容器，用于获取 pod 的 IP 并设置网络名称空间。随后，pod 中的其他所有容器都会加入基础架构容器的网络和 IPC 名称空间。容器启用了网桥方式，并且 pod 中的其他所有容器均通过容器方式加入此名称空间。如果基础架构容器停止运行，那么 kubelet 会终止 pod 中的所有容器，然后重新供应，通常会使用新的 IP 地址进行供应。在本文档中，我们不会就此流量流提供任何更多详细信息。
 
@@ -108,8 +107,7 @@ Calico 提供 L3 光纤网解决方案；此外，Calico 不使用 vSwitch，而
 -	对于发送包的工作负载，Calico 会确保工作程序节点始终作为下一个中继段 MAC 地址返回，而与工作负载本身可能配置的任何路由无关。
 -	对于寻址到工作负载的包，最后一个 IP 中继段是从目标工作负载的工作程序节点到工作负载本身。
 
-图 2. Calico CNI
-![Calico CNI](vcsnsxt-calico-cni.svg)
+![Calico CNI](../../images/vcsnsxt-calico-cni.svg "Calico CNI")
 
 上图显示了以下 Calico 组件：
 -	**calicoctl** - 命令行界面。

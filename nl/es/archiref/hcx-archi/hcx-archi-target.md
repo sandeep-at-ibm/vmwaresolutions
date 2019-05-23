@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -104,8 +104,7 @@ Además, se configura para acceder a vCenter y NSX con un usuario específico. E
 
 Después de desplegar y configurar el componente de nube de HCX Manager, los componentes de origen crean una conexión con HCX Manager a través de las direcciones VIP configuradas en el ESG de NSX. Una vez que se ha realizado esta conexión, los dispositivos de pasarela de nube y de optimizador de WAN se despliegan en IBM Cloud.
 
-Figura 1. Destino - Dispositivo Hybrid Cloud Services
-![Destino - Dispositivo Hybrid Cloud Services](target_hybrid_cloud_services_appliance.svg)
+![Destino - Dispositivo Hybrid Cloud Services](../../images/target_hybrid_cloud_services_appliance.svg "Destino - Dispositivo Hybrid Cloud Services")
 
 ## Pasarela de nube
 {: #hcx-archi-target-cloud-gateway}
@@ -126,8 +125,7 @@ Este conmutador lógico es una red privada, no direccionable, que se utiliza com
 
 En la figura siguiente se muestra un diagrama general de componentes del dispositivo de pasarela de nube y las conexiones asignadas.
 
-Figura 2. Despliegue de la pasarela de nube
-![Despliegue de la pasarela de nube](cloud_gateway_deployment.svg)
+![Despliegue de Cloud Gateway](../../images/cloud_gateway_deployment.svg "Despliegue de Cloud Gateway")
 
 ## Optimizador de WAN
 {: #hcx-archi-target-wan-opt}
@@ -146,8 +144,7 @@ Tabla 9. tamaño del dispositivo optimizador de WAN
 
 A diferencia de la pasarela de nube, el dispositivo de optimización de WAN solo se conecta a un conmutador lógico para habilitar la comunicación entre sí mismo y la pasarela de nube. Este dispositivo es necesario si se utiliza la optimización de WAN en el entorno de origen. Consulte la figura siguiente para ver una vista del diseño de red.
 
-Figura 3. Despliegue del optimizador de WAN
-![Despliegue del optimizador de WAN](wan_optimizer_deployment.svg)
+![Despliegue del Optimizador de WAN](../../images/wan_optimizer_deployment.svg "Despliegue del Optimizador de WAN")
 
 ## Concentrador de capa 2
 {: #hcx-archi-target-layer-2-conc}
@@ -166,8 +163,8 @@ Tabla 10. Tamaño del dispositivo HT L2C
 
 El dispositivo L2C se despliega en la VLAN de gestión, así como en la VLAN pública. La interfaz pública se utiliza para el tráfico de aplicaciones que se enlazan para el origen de la red ampliada. Se crean más conexiones, como las redes ampliadas, y se conectan al dispositivo L2C después de que el administrador del origen inicie la extensión de red en IBM Cloud. En la figura siguiente se muestran ejemplos de estas redes y conexiones.
 
-Figura 4. Despliegue del concentrador L2
-![Despliegue del concentrador L2](l2_concentrator_deployment.svg)
+![Despliegue del Concentrador L2](../../images/l2_concentrator_deployment.svg "Despliegue del Concentrador L2")
+
 
 ## Enlaces relacionados
 {: #hcx-archi-target-related}

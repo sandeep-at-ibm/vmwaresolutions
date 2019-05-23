@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-13"
 
 subcollection: vmware-solutions
 
@@ -54,11 +54,6 @@ Revise la arquitectura de todas las [Extensiones de plataforma de virtualizació
 * [Recursos y vídeos](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/resources){:new_window}
 * [Compromiso técnico digital](https://ibm-dte.mybluemix.net/vmware){:new_window}
 * [Recursos destacados y estudios de casos](https://www.ibm.com/cloud/vmware/resources){:new_window}
-
-## Prueba de la unidad de IBM Cloud for VMware Solutions
-{: #additional_resources-test-drive}
-
-¿Quiere verlo por sí mismo? Realice una breve prueba del producto siguiendo la demostración guiada paso a paso de {{site.data.keyword.vmwaresolutions_short}} [Probar VMware vCenter Server](https://cloudcontent.mybluemix.net/cloud/garage/demo/try-vmware-solutions){:new_window}.
 
 ## Documentación de VMware
 {: #additional_resources-vmware-doc}

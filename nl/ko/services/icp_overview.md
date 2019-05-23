@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-26"
+lastupdated: "2019-05-01"
 
 subcollection: vmware-solutions
 
@@ -118,10 +118,10 @@ V3.0 이상에 배치되는(또는 업그레이드되는) 인스턴스의 경우
 ## IBM Cloud Private Hosted 설치 시 고려사항
 {: #icp_overview-install}
 
-* {{site.data.keyword.cloud_notm}} Private Hosted 서비스를 설치하기 전에 필수 라이센스를 수집하십시오. 여기에는 {{site.data.keyword.cloud_notm}} Private 및 {{site.data.keyword.cloud_notm}} Automation Manager 라이센스가 모두 포함됩니다. 라이센스가 초기 서비스 배치뿐만 아니라 인프라에서 향후에 크기를 늘리는 경우도 지원되는지 확인하십시오. 
+* {{site.data.keyword.cloud_notm}} Private Hosted 서비스를 설치하기 전에 필수 라이센스를 수집하십시오. 여기에는 {{site.data.keyword.cloud_notm}} Private 및 {{site.data.keyword.cloud_notm}} Automation Manager 라이센스가 모두 포함됩니다. 라이센스가 초기 서비스 배치뿐만 아니라 인프라에서 향후에 크기를 늘리는 경우도 지원되는지 확인하십시오.
 * 프로덕션에 사용 가능 환경의 {{site.data.keyword.cloud_notm}} Private Hosted 배치의 경우 호스트당 64GB RAM이 지원되지 않습니다. 따라서 **RAM**에 대해 64GB보다 높은 옵션을 선택해야 합니다.
 * {{site.data.keyword.cloud_notm}} Private Hosted 서비스가 환경에 설치되기 전에 환경에 있는 기본 클러스터의 사용 가능한 용량에 대한 검사가 수행되어 서비스 컴포넌트가 적합한지 확인합니다. 용량 검사에 실패하면 서비스가 설치되지 않고 콘솔에서 서비스 상태가 **용량 유효성 검증 실패**로 설정됩니다. 또한 세부사항이 포함된 콘솔 메시지가 표시되고 이메일로 알림을 받습니다. 서비스를 설치하려면 더 많은 호스트를 추가하거나 RAM, CPU 또는 디스크 공간을 해제한 후 콘솔에서 서비스를 다시 추가하여 기본 클러스터의 용량을 늘려야 합니다. 이후 옆에 있는 **삭제** 아이콘을 클릭하여 **용량 유효성 검증 실패** 상태의 기존 서비스를 제거할 수 있습니다.
-* 추가 노드를 설치할 경우 초기 {{site.data.keyword.cloud_notm}} Private Hosted 설치로 배치되는 {{site.data.keyword.cloud_notm}} Private Ubuntu 템플리트(Ubuntu1604)를 사용하십시오. 템플리트를 찾으려면 VMware vSphere Web Client의 `cam` 아래에 있는 **VM 및 템플리트** 탭으로 이동하십시오. Ubuntu 템플리트의 기본 비밀번호는 `icponcloud`이고 템플리트 사용 전에 변경하는 것이 좋습니다. 
+* 추가 노드를 배치하려면 [추가 노드 배치](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_ordering-deploy-nodes#icp_ordering-deploy-nodes)를 참조하십시오.
 
 ## IBM Cloud Private Hosted 제거 시 고려사항
 {: #icp_overview-remove}

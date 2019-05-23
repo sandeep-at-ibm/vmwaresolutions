@@ -18,7 +18,7 @@ Il programma di installazione esegue il provisioning e configura una VM (Virtual
 ## Prerequisiti
 {: #hcx-archi-install-cfg-hybrid-prereq}
 
-* L'HCX Manager deve essere installato in loco e registrato con un endpoint cloud abilitato VCS HCX. 
+* L'HCX Manager deve essere installato in loco e registrato con un endpoint cloud abilitato VCS HCX.
 * Il data center virtuale di destinazione deve disporre di sufficienti risorse.
 
 ## Panoramica sulla configurazione
@@ -34,7 +34,7 @@ La procedura di configurazione presuppone che saranno configurati tutti i dispos
 
 L'interfaccia web semplice viene utilizzata per installare i dispositivi virtuali del servizio e per configurare ulteriori concentratori di livello 2.
 
-L'HCX Manager deve essere installato e registrato con l'endpoint cloud abilitato VCS HCX. 
+L'HCX Manager deve essere installato e registrato con l'endpoint cloud abilitato VCS HCX.
 
 ### Procedura per installare e configurare il dispositivo virtuale del servizio ibrido
 {: #hcx-archi-install-cfg-hybrid-proc-install}
@@ -137,8 +137,8 @@ Estendi una rete di livello 2 dal data center in loco al cloud abilitato VCS HCX
 4. Sulla pagina **Select source port groups**, conferma le informazioni sul gruppo di porte e immetti l'indirizzo IP del gateway (**Gateway IP address**) e il prefisso per la rete. Fai clic su **Avanti**.
 5. Sulla pagina **Select destination gateway**, completa la seguente procedura:
   1. Seleziona l'organizzazione cloud VCS Hybrid Cloud Services dal menu **Organization**.
-  2. Seleziona il data center virtuale cloud VCS Hybrid Cloud Services dal menu. 
-  3. Lascia **Proximity Routing** disabilitato per forzare una VM all'interno del cloud abilitato VCS Hybrid Cloud Services a utilizzare sempre il gateway in loco per accedere a internet. Per impostazione predefinita, il traffico originato da una VM nel cloud abilitato VCS Hybrid Cloud Services attraversa il percorso di dati di livello 2, ritorna al data center in loco e arriva al gateway predefinito. Se **Proximity Routing** è selezionato, una VM all'interno del cloud abilitato VCS Hybrid Cloud Services può accedere a internet senza attraversare il percorso di dati di livello 2 di vSphere. 
+  2. Seleziona il data center virtuale cloud VCS Hybrid Cloud Services dal menu.
+  3. Lascia **Proximity Routing** disabilitato per forzare una VM all'interno del cloud abilitato VCS Hybrid Cloud Services a utilizzare sempre il gateway in loco per accedere a internet. Per impostazione predefinita, il traffico originato da una VM nel cloud abilitato VCS Hybrid Cloud Services attraversa il percorso di dati di livello 2, ritorna al data center in loco e arriva al gateway predefinito. Se **Proximity Routing** è selezionato, una VM all'interno del cloud abilitato VCS Hybrid Cloud Services può accedere a internet senza attraversare il percorso di dati di livello 2 di vSphere.
   4. Seleziona il gateway di destinazione remoto dall'elenco dei gateway facendo clic sulla relativa riga. Fai clic su **Avanti**.
 6. Sulla pagina **Ready to complete**, controlla tutti i valori forniti. Fai clic su **Finish**.
 7. Per tenere traccia dell'avanzamento dell'estensione di rete, vai alla finestra **Recent Tasks**, fai clic sulla scheda **All** e visualizza **All Users’ Tasks**.

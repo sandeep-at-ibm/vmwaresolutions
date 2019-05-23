@@ -24,9 +24,9 @@ subcollection: vmware-solutions
 Per abilitare la codifica vSphere o vSAN utilizzando KMIP for VMware on {{site.data.keyword.cloud_notm}}, devi completare le seguenti attività:
 
 1. [Abilitazione del tuo account per l'utilizzo degli endpoint del servizio utilizzando la CLI IBM Cloud](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps).
-2. Crea un'istanza del gestore chiavi, utilizzando [IBM Key Protect](/docs/services/key-protect?topic=key-protect-getting-started-tutorial) o [IBM Cloud Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-get-started#get-started). Se stai utilizzando Hyper Protect Crypto Services, assicurati di [inizializzare la tua istanza di crittografia](/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-hsm) in modo che Hyper Protect Crypto Services possa fornire le funzioni correlate alla chiave. 
-3. Crea una chiave root del cliente (CRK) all'interno della tua istanza del gestore chiavi. 
-4. Crea [un ID del servizio e una chiave API](/docs/iam?topic=iam-serviceidapikeys) Identity and Access Management (IAM) da utilizzare con KMIP for VMware. Concedi a questo ID del servizio l'accesso come visualizzatore alla piattaforma e come scrittore al servizio per la tua istanza del gestore chiavi. 
+2. Crea un'istanza del gestore chiavi, utilizzando [IBM Key Protect](/docs/services/key-protect?topic=key-protect-getting-started-tutorial) o [IBM Cloud Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-get-started#get-started). Se stai utilizzando Hyper Protect Crypto Services, assicurati di [inizializzare la tua istanza di crittografia](/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-hsm) in modo che Hyper Protect Crypto Services possa fornire le funzioni correlate alla chiave.
+3. Crea una chiave root del cliente (CRK) all'interno della tua istanza del gestore chiavi.
+4. Crea [un ID del servizio e una chiave API](/docs/iam?topic=iam-serviceidapikeys) Identity and Access Management (IAM) da utilizzare con KMIP for VMware. Concedi a questo ID del servizio l'accesso come visualizzatore alla piattaforma e come scrittore al servizio per la tua istanza del gestore chiavi.
 5. Crea un'istanza [KMIP for VMware](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering) dal catalogo {{site.data.keyword.cloud_notm}}.
 6. All'interno di VMware vCenter, crea un cluster del server di gestione delle chiavi (KMS) con due server, uno per ogni endpoint KMIP for VMware nella regione di tua scelta.
 7. Seleziona uno dei metodi VMware per generare o installare un certificato client KMS in vCenter.
@@ -54,7 +54,7 @@ Per la codifica VMware vSphere, ruota le tue KEK e DEK (facoltativamente) VMware
 ## Revoca delle chiavi
 {: #kmip-implementation-key-revocation}
 
-Puoi revocare tutte le chiavi utilizzate da KMIP for VMware eliminando la tua CRK scelta dal tuo gestore chiavi. 
+Puoi revocare tutte le chiavi utilizzate da KMIP for VMware eliminando la tua CRK scelta dal tuo gestore chiavi.
 
 Quando le chiavi vengono revocate, tutti i dati protetti da queste chiavi e dalla tua istanza KMIP for VMware vengono frammentati in modo crittografico da questo metodo. VMware conserva alcune chiavi quando un host ESXi è acceso, per cui devi riavviare il tuo cluster vSphere per assicurarti che tutti i dati codificati non vengano più utilizzati.
 {:important}

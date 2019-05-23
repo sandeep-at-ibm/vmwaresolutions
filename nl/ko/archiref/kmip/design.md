@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -18,7 +18,7 @@ subcollection: vmware-solutions
 # KMIP for VMware 디자인
 {: #kmip-design}
 
-KMIP for VMware on {{site.data.keyword.cloud}}는 루트 키 및 데이터 키 스토리지를 제공하기 위해 [IBM Key Protect](/docs/services/key-protect?topic=key-protect-getting-started-tutorial) 또는 [IBM Cloud Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-get-started#get-started)를 사용하여 VMware vSAN 암호화 및 VMware vSphere 암호화와 호환 가능한 키 관리 서비스를 제공합니다. Key Protect 및 Hyper Protect Crypto Services는 이 솔루션에서 키 관리 서비스로 작동합니다. 
+KMIP for VMware on {{site.data.keyword.cloud}}는 루트 키 및 데이터 키 스토리지를 제공하기 위해 [IBM Key Protect](/docs/services/key-protect?topic=key-protect-getting-started-tutorial) 또는 [IBM Cloud Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-get-started#get-started)를 사용하여 VMware vSAN 암호화 및 VMware vSphere 암호화와 호환 가능한 키 관리 서비스를 제공합니다. Key Protect 및 Hyper Protect Crypto Services는 이 솔루션에서 키 관리 서비스로 작동합니다.
 
 ## 스토리지 암호화 옵션
 {: #kmip-design-storage-options}
@@ -106,10 +106,9 @@ KMIP for VMware는 많은 {{site.data.keyword.cloud_notm}} 다중 영역 지역(
 
 KMIP for VMware는 사설 인터넷이 아닌 {{site.data.keyword.cloud_notm}} 사설 네트워크를 사용하여 {{site.data.keyword.cloud_notm}} Key Protect에도 연결합니다.
 
-그림 1. IBM Key Protect 사용 시 KMIP for VMware on {{site.data.keyword.cloud_notm}} 컴포넌트
-![KMIP for VMware on {{site.data.keyword.cloud_notm}} 컴포넌트](kmip-key-protect.svg "솔루션은 IBM Key Protect에 저장된 루트 키를 사용하여 VMware vSphere 암호화 및 vSAN 암호화를 사용으로 설정합니다.")
+![KMIP for VMware on {{site.data.keyword.cloud_notm}} 컴포넌트](../../images/kmip-key-protect.svg "솔루션은 IBM Key Protect에 저장된 루트 키를 사용하여 VMware vSphere 암호화 및 vSAN 암호화를 사용으로 설정합니다.")
 
-IBM Cloud Hyper Protect Crypto Services 사용 시 사용자 키는 CloudHSM 대신 IBM zSeries HSM에 저장됩니다. 또한 KMIP for VMware와 {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services 간의 연결은 공용 네트워크를 통해 플로우되지만 TLS 암호화 및 인증으로 보호됩니다. 
+IBM Cloud Hyper Protect Crypto Services 사용 시 사용자 키는 CloudHSM 대신 IBM zSeries HSM에 저장됩니다. 또한 KMIP for VMware와 {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services 간의 연결은 공용 네트워크를 통해 플로우되지만 TLS 암호화 및 인증으로 보호됩니다.
 
 ## 관련 링크
 {: #kmip-design-related}

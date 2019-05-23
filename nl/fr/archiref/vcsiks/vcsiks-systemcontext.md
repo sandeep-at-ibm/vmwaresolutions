@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -14,9 +14,7 @@ subcollection: vmware-solutions
 # Contexte système
 {: #vcsiks-systemcontext}
 
-Figure 1. Contexte système
-
-![Diagramme du contexte système](vcsiks-system-context.svg)
+![Diagramme de contexte système](../../images/vcsiks-system-context.svg "Diagramme de contexte système")
 
 Les composants de base sont les suivants :
 

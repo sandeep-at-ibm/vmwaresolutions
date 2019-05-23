@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-05-01"
 
 subcollection: vmware-solutions
 
@@ -27,9 +27,7 @@ NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 产品通过提供存储
 
 下图说明了 NetApp ONTAP Select on vCenter Server 部署的总体体系结构。
 
-图 1. NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 的高级别体系结构
-
-![NetApp ONTAP Select 体系结构](np_architecture.svg "NetApp ONTAP Select on IBM Cloud 的高级别体系结构")
+![NetApp ONTAP Select 体系结构](../images/np_architecture.svg "NetApp ONTAP Select 体系结构")
 
 ### 物理基础架构
 {: #np_netappoverview-physical-infras}
@@ -46,9 +44,7 @@ NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 产品通过提供存储
 
 下图说明了 NetApp ONTAP Select 部署中的组件。
 
-图 2. NetApp ONTAP Select 组件
-
-![NetApp ONTAP Select 组件](np_netappcomponents.svg "NetApp ONTAP Select 的组件")
+![NetApp ONTAP Select 组件](../images/np_netappcomponents.svg "NetApp ONTAP Select 的组件")
 
 ### 虚拟化管理
 {: #np_netappoverview-virtualization-mgmt}

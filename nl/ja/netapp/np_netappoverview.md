@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-05-01"
 
 subcollection: vmware-solutions
 
@@ -27,9 +27,7 @@ subcollection: vmware-solutions
 
 以下の図は、vCenter Server デプロイメントにおける NetApp ONTAP Select のアーキテクチャー全体を示しています。
 
-図 1. {{site.data.keyword.cloud_notm}} 上の NetApp ONTAP Select のアーキテクチャーの全体像
-
-![NetApp ONTAP Select のアーキテクチャー](np_architecture.svg "NetApp ONTAP Select on IBM Cloud のアーキテクチャーの全体像")
+![NetApp ONTAP Select のアーキテクチャー](../images/np_architecture.svg "NetApp ONTAP Select のアーキテクチャー")
 
 ### 物理インフラストラクチャー
 {: #np_netappoverview-physical-infras}
@@ -46,9 +44,7 @@ subcollection: vmware-solutions
 
 以下の図は、NetApp ONTAP Select デプロイメントのコンポーネントを示しています。
 
-図 2. NetApp ONTAP Select のコンポーネント
-
-![NetApp ONTAP Select のコンポーネント](np_netappcomponents.svg "NetApp ONTAP Select のコンポーネント")
+![NetApp ONTAP Select コンポーネント](../images/np_netappcomponents.svg "NetApp ONTAP Select のコンポーネント")
 
 ### 仮想化管理
 {: #np_netappoverview-virtualization-mgmt}

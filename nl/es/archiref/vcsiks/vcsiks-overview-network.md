@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -28,8 +28,7 @@ De forma predeterminada, {{site.data.keyword.containerlong_notm}} configura el c
 - Una dirección IP privada para cada nodo trabajador, que proporciona a los nodos trabajadores una interfaz de red privada
 - Una conexión OpenVPN automática y segura entre todos los nodos trabajadores y el nodo maestro
 
-Figura 1. Red de vCenter Server e {{site.data.keyword.containerlong_notm}}
-![Diagrama de red de vCenter Server-{{site.data.keyword.containerlong_notm}}](vcsiks-networking.svg)
+![Diagrama de red de vCenter Server-{{site.data.keyword.containerlong_notm}}](../../images/vcsiks-networking.svg "Diagrama de red de vCenter Server-{{site.data.keyword.containerlong_notm}}")
 
 ### Integración de IBM Cloud Kubernetes Service y vCenter Server
 {: #vcsiks-overview-network-iks-vcs-integration}

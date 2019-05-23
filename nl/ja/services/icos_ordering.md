@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-13"
 
 subcollection: vmware-solutions
 
@@ -25,12 +25,12 @@ IBM Cloud Object Storage を注文するには、以下のタスクを指定の�
 ## Object Storage インスタンスの作成
 {: #icos_ordering-obj}
 
-Object Storage インスタンスを作成するには、[新しいサービス・インスタンスの作成](/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-order-storage#creating-a-new-service-instance)を参照してください。 その手順を実行してから、このセクションに戻って以下の作業を続けます。
+Object Storage インスタンスを作成するには、[新しいサービス・インスタンスの作成](/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-provision#provision-instance)を参照してください。 その手順を実行してから、このセクションに戻って以下の作業を続けます。
 
 ## バケットの作成
 {: #icos_ordering-bucket}
 
-バケットを作成するには、[Create some buckets to store your data](/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-getting-started-tutorial#gs-create-buckets) を参照してください。 その手順を実行してから、このセクションに戻って以下の作業を続けます。
+バケットを作成するには、[データを保存するためのバケットをいくつか作成する](/docs/services/cloud-object-storage?topic=cloud-object-storage-getting-started#gs-create-buckets)を参照してください。 その手順を実行してから、このセクションに戻って以下の作業を続けます。
 
 ## サービス資格情報の作成
 {: #icos_ordering-service-cred}
@@ -46,3 +46,13 @@ Veeam 内にスケールアウト・リポジトリーを追加するには、[A
 {: #icos_ordering-manage-cloud}
 
 クラウド層の保守と管理については、[Managing capacity tier data](https://helpcenter.veeam.com/docs/backup/vsphere/capacity_tier_managing_data.html?ver=95u4){:new_window} を参照してください。
+
+## 関連リンク
+{: #icos_ordering-related}
+
+* [Veeam on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions?topic=vmware-solutions-veeam_considerations)
+* [Veeam on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_ordering)
+* [Veeam on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
+* [Veeam on {{site.data.keyword.cloud_notm}} 用マネージド・サービスの要求](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
+* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [よくある質問](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)

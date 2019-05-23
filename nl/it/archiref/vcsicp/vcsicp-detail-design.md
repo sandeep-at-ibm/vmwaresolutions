@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-09"
 
 subcollection: vmware-solutions
 
@@ -19,9 +19,7 @@ subcollection: vmware-solutions
 
 I servizi comuni forniscono i servizi che vengono utilizzati da altri servizi nella piattaforma di gestione cloud. I servizi comuni includono i servizi di identità e di accesso, i servizi di nome dominio e i servizi NTP.
 
-Figura 1. Servizi comuni {{site.data.keyword.icpfull_notm}}
-
-![{{site.data.keyword.icpfull_notm}} - Servizi comuni](vcsicp-icp-commonservices.svg)
+![{{site.data.keyword.icpfull_notm}} - servizi comuni](../../images/vcsicp-icp-commonservices.svg "{{site.data.keyword.icpfull_notm}} - servizi comuni")
 
 ### Servizi di identità e accesso
 {: #vcsicp-detail-design-identity}
@@ -50,9 +48,7 @@ Utilizzando la rete NSX-V inclusa nella distribuzione VCS, possiamo distribuire 
 
 {{site.data.keyword.icpfull_notm}} è distribuito con lo stack di rete Calico predefinito per Kubernetes, che fornisce l'isolamento di rete all'interno del tuo cluster.
 
-Figura 2. {{site.data.keyword.icpfull_notm}} con rete NSX-V
-
-![{{site.data.keyword.icpfull_notm}} con rete NSX-V](vcsicp-nsxv-networking.svg)
+![{{site.data.keyword.icpfull_notm}} con rete NSX-V](../../images/vcsicp-nsxv-networking.svg "{{site.data.keyword.icpfull_notm}} con rete NSX-V")
 
 Per ulteriori informazioni, vedi [Guida di rete di vCenter Server](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro).
 
@@ -63,12 +59,9 @@ NSX-T è progettata in modo che una singola piattaforma di rete possa connetters
 
 {{site.data.keyword.icpfull_notm}} fornisce un'opzione per sostituire la rete di Calico con un'istanza NSX-T, fornendo una singola ubicazione per la gestione della rete e della sicurezza.
 
-Figura 3. Rete {{site.data.keyword.icpfull_notm}} con NSX-T
-
-![{{site.data.keyword.icpfull_notm}} con NSX-T - Rete](vcsicp-icp-nsxt-networking.svg)
+![{{site.data.keyword.icpfull_notm}} con rete NSX-T](../../images/vcsicp-icp-nsxt-networking.svg "{{site.data.keyword.icpfull_notm}} con rete NSX-T")
 
 ## Link correlati
 {: #vcsicp-detail-design-related}
 
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

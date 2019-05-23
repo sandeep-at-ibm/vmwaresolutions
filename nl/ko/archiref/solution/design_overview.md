@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-15"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -19,8 +19,7 @@ subcollection: vmware-solutions
 
 이 아키텍처는 단일 클라우드 지역으로 구성되며 동일한 데이터 센터 내의 다른 지역 및 다른 {{site.data.keyword.cloud_notm}} 팟(Pod)에 위치한 여러 클라우드 지역으로 확장하는 기능을 지원합니다. 지역은 고유한 vCenter Server 인스턴스로서 정의됩니다. 이 디자인은 vCenter Server 인스턴스 내에서 가상 용량의 자동화된 확장과 축소도 허용합니다.
 
-그림 1. {{site.data.keyword.vmwaresolutions_short}}의 솔루션 컴포넌트
-![{{site.data.keyword.vmwaresolutions_short}}의 솔루션 컴포넌트](vcsv4radiagrams-ra-full.svg "이 솔루션은 실제 인프라, 가상 인프라, 인프라 관리 및 공통 서비스로 구성되어 있습니다.")
+![{{site.data.keyword.vmwaresolutions_short}}의 솔루션 컴포넌트](../../images/vcsv4radiagrams-ra-full.svg "이 솔루션은 실제 인프라, 가상 인프라, 인프라 관리 및 공통 서비스로 구성되어 있습니다.")
 
 ## 관련 링크
 {: #design_overview-related}

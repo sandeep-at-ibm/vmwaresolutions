@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-13"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -48,9 +48,7 @@ subcollection: vmware-solutions
 
 除了创建 vDS 端口组来运行 NFS 存储流量之外，还会在部署期间在每个 vSphere ESXi 主机上创建一个 VMkernel 端口，并将其分配给 SDDC-DPG-NFS 端口组。对于该 VMkernel 端口，还会为其分配一个与连接存储器 VLAN 相关联的专用可移植子网的 IP 地址，也就是，将专用 VLAN B 及其 MTU 设置为 9000 来支持巨型帧。
 
-图 1. 专用 vDS 端口组和上行链路
-
-![专用 vDS 端口组和上行链路](private_vds_portgroups_and_uplinks.svg "专用 vDS 端口组和上行链路")
+![专用 vDS 端口组和上行链路](../../images/private_vds_portgroups_and_uplinks.svg "专用 vDS 端口组和上行链路")
 
 ### vSphere 主机静态路由
 {: #storage-infra-mgmt-vsphere-routing}

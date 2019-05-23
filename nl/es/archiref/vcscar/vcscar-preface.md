@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -14,8 +14,7 @@ subcollection: vmware-solutions
 # Prólogo
 {: #vcscar-preface}
 
-Figura 1. El lenguaje que hemos concebido
-![El lenguaje que hemos concebido](vcscar-alood.svg)
+![El lenguaje que hemos concebido](../../images/vcscar-alood.svg "El lenguaje que hemos concebido")
 
 ## Introducción al lenguaje de skateboarding
 {: #vcscar-preface-intro}

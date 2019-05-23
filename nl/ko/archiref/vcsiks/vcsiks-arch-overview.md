@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -41,8 +41,7 @@ Cloud Private 카탈로그에서 하이브리드 클라우드 서비스를 노�
 서비스와의 연결을 통해 {{site.data.keyword.cloud_notm}} 인프라로 배치된 {{site.data.keyword.icpfull_notm}} 및 CAM을 표시합니다. 사용자는 가상 머신(VM)을 온프레미스에, VM을
 vCenter Server 인스턴스에, 컨테이너를 {{site.data.keyword.icpfull_notm}} 및 {{site.data.keyword.containerlong_notm}} 클러스터에 배치할 수 있습니다.
 
-그림 1. 클라우드 측에서 클라우드 관리
-![클라우드에서 - 클라우드 관리](vcsiks-oncloud-cloudmgt.svg)
+![클라우드에서 - 클라우드 관리](../../images/vcsiks-oncloud-cloudmgt.svg "클라우드에서 - 클라우드 관리")
 
 다이어그램에서 CAM은 vCenter, 클라우드 제공자, {{site.data.keyword.icpfull_notm}} 및
 {{site.data.keyword.containerlong_notm}} 환경에 클라우드 연결을 논리적으로 작성합니다. {{site.data.keyword.icpfull_notm}} 클러스터를
@@ -64,8 +63,7 @@ NSX-T를 사용하는 {{site.data.keyword.icpfull_notm}}의 경우 사용자가 
 VM을 vCenter Server 인스턴스에, 컨테이너를 {{site.data.keyword.containerlong_notm}} 클러스터에
 배치할 수 있습니다.
 
-그림 2. 온프레미스 측의 클라우드 관리
-![온프레미스 - 클라우드 관리](vcsiks-onprem-cloudmgt.svg)
+![온프레미스 - 클라우드 관리](../../images/vcsiks-onprem-cloudmgt.svg "온프레미스 - 클라우드 관리")
 
 strongSwan VPN은 배치된 {{site.data.keyword.containerlong_notm}} 컨테이너에
 대한 연결을 설정하는 데 사용됩니다. strongSwan은 나중에 Direct Link 연결로 대체될 수 있습니다.

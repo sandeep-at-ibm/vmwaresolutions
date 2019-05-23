@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-09"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -20,8 +20,7 @@ subcollection: vmware-solutions
 
 La capa de infraestructura virtual incluye los componentes de software de VMware que virtualizan los recursos de cálculo, almacenamiento y red proporcionados en la capa de infraestructura física: VMware vSphere ESXi, VMware NSX-V o NSX-T y, opcionalmente, VMware vSAN.
 
-Figura 1. Infraestructura virtual</br>
-![Infraestructura virtual](vcsv4radiagrams-ra-virtinfra.svg)
+![Infraestructura virtual](../../images/vcsv4radiagrams-ra-virtinfra.svg "Infraestructura virtual")
 
 ## Diseño de VMware vSphere
 {: #design_virtualinfrastructure-vsphere-design}
@@ -62,20 +61,16 @@ Para dar soporte a más cargas de trabajo de usuario, puede escalar el entorno m
 * Despliegue de más clústeres gestionados por el mismo vCenter Server Appliance
 * Despliegue de nuevas instancias de vCenter Server con su propio vCenter Server Appliance
 
-Para obtener más información sobre los clústeres, consulte
-[{{site.data.keyword.cloud_notm}} que ejecuta la arquitectura de solución de clústeres de VMware](https://www.ibm.com/cloud/garage/files/IBM-Cloud-for-VMware-Solutions-Multicluster-Architecture.pdf).
+Para obtener más información sobre los clústeres, consulte [{{site.data.keyword.cloud_notm}} que ejecuta la arquitectura de solución de clústeres de VMware](https://www.ibm.com/cloud/garage/files/IBM-Cloud-for-VMware-Solutions-Multicluster-Architecture.pdf).
 
 ## Diseño de VMware vSAN
 {: #design_virtualinfrastructure-vsan-design}
 
 En este diseño, el almacenamiento de VMware vSAN se emplea en instancias de vCenter Server para proporcionar almacenamiento compartido para los hosts de vSphere.
 
-Tal como se muestra en la figura siguiente, vSAN agrega el almacenamiento local entre varios hosts ESXi dentro de un clúster vSphere y gestiona el almacenamiento agregado como un almacén de datos de máquina virtual individual. Dentro de este diseño, los nodos de cálculo contienen unidades de disco locales para el sistema operativo (SO) ESXi y el almacén de datos de vSAN. Independientemente de a qué clúster pertenezca un nodo,
-se incluyen dos unidades de SO en cada nodo para alojar la instalación de ESXi.
+Tal como se muestra en la figura siguiente, vSAN agrega el almacenamiento local entre varios hosts ESXi dentro de un clúster vSphere y gestiona el almacenamiento agregado como un almacén de datos de máquina virtual individual. Dentro de este diseño, los nodos de cálculo contienen unidades de disco locales para el sistema operativo (SO) ESXi y el almacén de datos de vSAN. Independientemente de a qué clúster pertenezca un nodo, se incluyen dos unidades de SO en cada nodo para alojar la instalación de ESXi.
 
-Figura 2. Concepto de vSAN
-
-![Concepto de vSAN](vcsv4radiagrams-ra-vsan.svg "vSAN agrega el almacenamiento local en varios hosts ESXi dentro de un clúster vSphere y gestiona el almacenamiento agregado como un único almacén de datos de máquina virtual")
+![Concepto de vSAN](../../images/vcsv4radiagrams-ra-vsan.svg "vSAN agrega el almacenamiento local en varios hosts ESXi dentro de un clúster de vSphere y gestiona el almacenamiento agregado como un único almacén de datos de máquina virtual")
 
 vSAN utiliza los componentes siguientes:
 * Diseño de vSAN de grupo de dos discos; cada grupo de discos consta de dos o más discos. Un SSD o unidad NVMe del tamaño más pequeño del grupo sirve como nivel de memoria caché y los SSD restantes sirven como el nivel de capacidad.
@@ -91,8 +86,7 @@ Para este diseño, el tráfico de vSAN atraviesa los hosts ESXi en una VLAN priv
 
 vSAN no carga el tráfico de equilibrio entre los uplinks. Como resultado, un adaptador está activo, mientras que el otro está en espera para dar soporte a la alta disponibilidad (HA). La política de migración tras error de red para vSAN se configura como **Migración tras error explícita** entre los puertos de red físicos.
 
-Para obtener más información sobre las conexiones de NIC físicas, consulte
-[Conexiones de NIC de host físico](/docs/services/vmwaresolutions/services?topic=vmware-solutions-design_physicalinfrastructure#design_physicalinfrastructure-host-connect).
+Para obtener más información sobre las conexiones de NIC físicas, consulte [Conexiones de NIC de host físico](/docs/services/vmwaresolutions/services?topic=vmware-solutions-design_physicalinfrastructure#design_physicalinfrastructure-host-connect).
 
 ### Diseño de políticas de vSAN
 {: #design_virtualinfrastructure-storage-policy}
@@ -119,14 +113,27 @@ Los valores de vSAN se configuran en función de los métodos recomendados para 
    * vSAN - 100 comparticiones
 * Puertos de kernel vSAN: **Migración tras error explícita**
 
+## Almacenamiento conectado con NFS
+{: #design_virtualinfrastructure-nfs-storage}
+
+Al utilizar almacenamiento de red conectado con NFS, esta arquitectura prescribe el uso de NFS v3 en lugar de NFS v4.1, debido a que las migraciones LIF del servidor NFS pueden provocar una latencia excesiva al utilizar NFS v4.1. Cada host de vSphere se conecta al almacenamiento NFS utilizando su nombre de host.
+
+Se conecta un almacén de datos NFS de 2 TB a un clúster para su uso por parte de los componentes de gestión con un nivel de rendimiento de 4 IOPS/GB. Se pueden conectar almacenes de datos adicionales a un clúster para uso de la carga de trabajo, con diversos tamaños y niveles de rendimiento.
+
+Además, esta arquitectura requiere que todos los hosts tengan creada una ruta de subred donde reside el almacenamiento NFS. La finalidad de esta ruta de subred es direccionar todo el tráfico NFS para utilizar el grupo de puertos, subred y VLAN designados para el tráfico NFS en este diseño. Si se conectan varios almacenes de datos NFS, es posible que sea necesario configurar varias rutas, ya que estos almacenes de datos podrían estar ubicados en distintas subredes remotas.
+
+Es posible que las máquinas virtuales de gestión se encuentren en un almacén de datos NFS. Esto crea un problema de carga, ya que es posible que algunas de las máquinas de gestión sean responsables de los servicios DNS que se utilizan para resolver el nombre de host NFS. Por lo tanto, esta arquitectura especifica que al menos una de las direcciones IP para el almacén de datos de gestión debe estar grabada en código en `/etc/hosts` en cada uno de los hosts.
+
 ## Almacenamiento conectado con iSCSI
 {: #design_virtualinfrastructure-iscsi-storage}
 
 A diferencia del almacenamiento conectado con NFS v3, el almacenamiento conectado con iSCSI admite vías de acceso activa-activa en todos los puertos de tarjeta NIC configurados y puertos de destino. Debido a esto, se puede obtener un mayor rendimiento y, por lo tanto, es una alternativa deseable al almacenamiento de conexión NFS. Esto se obtiene a costa de una mayor complejidad.
 
-El almacenamiento de bloques de {{site.data.keyword.cloud_notm}} Endurance admite un máximo de 64 IP que se conectan por LUN cuando se utiliza VMware, lo que permite hasta 32 hosts según este diseño.
+El almacenamiento de bloques de {{site.data.keyword.cloud_notm}} Endurance admite un máximo de 64 direcciones IP que se conectan por LUN cuando se utiliza VMware, lo que permite hasta 32 hosts según este diseño.
 
 Un LUN iSCSI de 2 TB se conecta al clúster de vSphere para uso de los componentes de gestión, y se configura un mínimo de un LUN iSCSI más para uso de la carga de trabajo del cliente. Este almacenamiento se formatea como sistema de archivos VMFS 6.x por cada LUN.
+
+Esta arquitectura especifica el uso de enlaces de puerto iSCSI, una política en rueda para varias vías, una profundidad de cola máxima de 64 y un límite de IOPS en rueda de 1.
 
 ### Configuración de red virtual para iSCSI
 {: #design_virtualinfrastructure-setup-iscsi}
@@ -156,19 +163,15 @@ En este diseño, NSX Manager se despliega en el clúster inicial. Se asigna a NS
 
 En la figura siguiente se muestra la ubicación del NSX Manager en relación con otros componentes de la arquitectura.
 
-Figura 3. Visión general de la red de NSX Manager
-
-![Visión general de la red de NSX Manager](vcsv4radiagrams-ra-vcs-nsx-overview.svg "NSX Manager en relación con otros componentes de la arquitectura")
+![Visión general de red de NSX Manager](../../images/vcsv4radiagrams-ra-vcs-nsx-overview.svg "NSX Manager en relación con los demás componentes de la arquitectura")
 
 Después del despliegue inicial, la automatización de {{site.data.keyword.cloud_notm}} despliega tres controladores NSX dentro del clúster inicial. A cada uno de los controladores se le asigna una dirección IP respaldada por VLAN de la subred portátil **Privada A** que está destinada a los componentes de gestión. Además, el diseño crea reglas de antiafinidad VM-VM para separar los controladores entre los hosts del clúster. El clúster inicial debe contener un mínimo de tres nodos para asegurar la alta disponibilidad para los controladores.
 
-Además de los controladores, la automatización de {{site.data.keyword.cloud_notm}} prepara los hosts de vSphere desplegados con NSX VIBS para habilitar el uso de una red virtualizada a través de los VTEP (VXLAN Tunnel Endpoints). A los VTEP se les asigna una dirección IP respaldada por VLAN del rango de direcciones IP portátiles **Privado A** especificado para los VTEP tal como se indica en
-[VLAN](/docs/services/vmwaresolutions/services?topic=vmware-solutions-design_physicalinfrastructure#design_physicalinfrastructure-vlans). El tráfico de VXLAN reside en la VLAN no etiquetada y se asigna a los vDS privados.
+Además de los controladores, la automatización de {{site.data.keyword.cloud_notm}} prepara los hosts de vSphere desplegados con NSX VIBS para habilitar el uso de una red virtualizada a través de los VTEP (VXLAN Tunnel Endpoints). A los VTEP se les asigna una dirección IP respaldada por VLAN del rango de direcciones IP portátiles **Privado A** especificado para los VTEP tal como se indica en [VLAN](/docs/services/vmwaresolutions/services?topic=vmware-solutions-design_physicalinfrastructure#design_physicalinfrastructure-vlans). El tráfico de VXLAN reside en la VLAN no etiquetada y se asigna a los vDS privados.
 
 Posteriormente, se asigna una agrupación de ID de segmento y se añaden los hosts del clúster a la zona de transporte. Únicamente se utiliza unicast en la zona de transporte porque IGMP (Internet Group Management Protocol) snooping no está configurado en {{site.data.keyword.cloud_notm}}. Se configuran dos puertos de kernel de VTEP por cada host en la misma subred dedicada de VTEP por cada VMW como método recomendado.
 
-Tras esto, si la instancia tiene interfaces de red públicas, se despliegan dos pares de NSX Edge Services Gateway. Un par de pasarela se utiliza para el tráfico de salida de los componentes de automatización que residen en la red privada. Una segunda pasarela, conocida como el borde gestionado por el cliente, se despliega y se configura con un enlace ascendente a la red pública y una interfaz asignada a la red privada. Para obtener más información sobre las pasarelas NSX Edge Services Gateway que se despliegan como parte de la solución, consulte
-[Arquitectura de la solución de NSX Edge Services Gateway](/docs/services/vmwaresolutions/services?topic=vmware-solutions-nsx_overview#nsx_overview).
+Tras esto, si la instancia tiene interfaces de red públicas, se despliegan dos pares de NSX Edge Services Gateway. Un par de pasarela se utiliza para el tráfico de salida de los componentes de automatización que residen en la red privada. Una segunda pasarela, conocida como el borde gestionado por el cliente, se despliega y se configura con un enlace ascendente a la red pública y una interfaz asignada a la red privada. Para obtener más información sobre las pasarelas NSX Edge Services Gateway que se despliegan como parte de la solución, consulte [Arquitectura de la solución de NSX Edge Services Gateway](/docs/services/vmwaresolutions/services?topic=vmware-solutions-nsx_overview#nsx_overview).
 
 Los administradores de nube pueden configurar cualquier componente NSX necesario, como por ejemplo DLR (Distributed Logical Router), conmutadores lógicos y cortafuegos. Las características NSX disponibles dependen de la edición de la licencia de NSX que elija al solicitar la instancia. Para obtener más información, consulte [Comparación de la edición de VMware NSX](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution-appendix#vmware-nsx-edition-comparison).
 
@@ -190,9 +193,7 @@ Tabla 3. Requisitos de NSX Manager
 
 El diseño utiliza un número mínimo de conmutadores de vDS. Los hosts del clúster están conectados a las redes públicas y privadas. Los hosts se configuran con dos conmutadores virtuales distribuidos. El uso de dos conmutadores sigue la práctica de la red de {{site.data.keyword.cloud_notm}} que separa las redes públicas y privadas. El diagrama siguiente muestra el diseño de vDS.
 
-Figura 4. Diseño de conmutadores distribuidos
-
-![Diseño de conmutadores distribuidos](vcsv4radiagrams-distributed-switch-design.svg "Diseño de vDS")
+![Diseño de conmutador distribuido](../../images/vcsv4radiagrams-distributed-switch-design.svg "Diseño de conmutador distribuido")
 
 Tal como se muestra en la figura anterior, se configura un vDS para la conectividad de red pública (SDDC-Dswitch-Public) y el otro vDS está configurado para la conectividad de red privada (SDDC-Dswitch-Private). Es necesario separar los distintos tipos de tráfico para reducir la contención y la latencia e incrementar la seguridad.
 
@@ -202,9 +203,9 @@ Tabla 4. Correlación de VLAN con tipos de tráfico
 
 | VLAN  | Designación | Tipo de tráfico |
 |:----- |:----------- |:------------ |
-| VLAN1 | Pública      | Disponible para acceso a Internet |
-| VLAN2 | Privada A   | Gestión de ESXi, gestión, VXLAN (VTEP) |
-| VLAN3 | Privada B   | vSAN, NFS, vMotion, iSCSI |
+| VLAN 1 | Privada A   | Gestión de ESXi, gestión, VXLAN (VTEP) |
+| VLAN 2 | Privada B   | vSAN, NFS, vMotion, iSCSI |
+| VLAN 3 | Pública      | Disponible para acceso a Internet |
 
 El tráfico de las cargas de trabajo viajará en conmutadores lógicos respaldados por VXLAN.
 
@@ -233,8 +234,7 @@ Tabla 6. Valores de configuración de grupo de puertos de conmutador distribuido
 El grupo de puertos de vSAN utiliza la migración tras error explícita con activo o en espera, porque no da soporte al equilibrio de carga del tráfico de almacenamiento vSAN. Los grupos de puertos iSCSI solo tienen un enlace ascendente activo al mismo tiempo (iSCSI A - Uplink1, iSCSI B - Uplink 2).
 {:note}
 
-Tabla 7. Grupos de puertos de conmutador virtual y VLAN de clústeres convergentes, y conmutador distribuido
-**SDDC-Dswitch-Private**
+Tabla 7. Grupos de puertos de conmutador virtual y VLAN de clústeres convergentes, y conmutador distribuido **SDDC-Dswitch-Private**
 
 Grupo de puertos|Agrupación|Enlaces ascendentes|ID de VLAN
 ---|---|---|--
@@ -277,13 +277,11 @@ Los aspectos siguientes no están configurados:
 * Microsegmentación
 * Gestión de NSX enlazada a otras instancias de VMware
 
-Figura 5. Ejemplo de topología NSX de cliente desplegada
-![Ejemplo de topología NSX de cliente desplegada](vcsv4radiagrams-ra-vcs-nsx-topology-customer-example.svg)
+![Topología NSX de cliente de ejemplo desplegada](../../images/vcsv4radiagrams-ra-vcs-nsx-topology-customer-example.svg "Topología NSX de cliente de ejemplo desplegada")
 
 ## Conectividad de red pública
 
-Existen diversos motivos por los que puede necesitar conectividad de red pública para su instancia. Estos pueden incluir el acceso a servicios de actualización públicos u otros servicio públicos para la carga de trabajo, como las bases de datos de geolocalización o datos meteorológicos. Es posible que los servicios de complementos y gestión de la virtualización también requieran o se beneficien de la conectividad pública. Por ejemplo, vCenter puede actualizar su base de datos HCL y obtener actualizaciones de
-[VMware Update Manager (VUM)](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-intro) a través de la red pública. Zerto, Veeam, VMware HCX, F5 BIG-IP y FortiGate-VM utilizan todos la conectividad de red pública para una parte de la licencia de sus productos, la activación o los informes de uso. Además, es posible utilizar túneles a través de la red pública para la conectividad con el centro de datos local para fines de réplica.
+Existen diversos motivos por los que puede necesitar conectividad de red pública para su instancia. Estos pueden incluir el acceso a servicios de actualización públicos u otros servicio públicos para la carga de trabajo, como las bases de datos de geolocalización o datos meteorológicos. Es posible que los servicios de complementos y gestión de la virtualización también requieran o se beneficien de la conectividad pública. Por ejemplo, vCenter puede actualizar su base de datos HCL y obtener actualizaciones de [VMware Update Manager (VUM)](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-intro) a través de la red pública. Zerto, Veeam, VMware HCX, F5 BIG-IP y FortiGate-VM utilizan todos la conectividad de red pública para una parte de la licencia de sus productos, la activación o los informes de uso. Además, es posible utilizar túneles a través de la red pública para la conectividad con el centro de datos local para fines de réplica.
 
 Normalmente, estas comunicaciones se dirigen de forma selectiva y se convierten con NAT a la red pública a través de Edge Services Gateway (ESG) de gestión o de cliente. No obstante, es posible que tenga requisitos de seguridad adicionales, o que prefiera utilizar un proxy para simplificar la vía de acceso de comunicación. Además, si ha desplegado su instancia con las interfaces públicas inhabilitadas, no podrá utilizar ESG para direccionar a la red pública.
 
@@ -292,11 +290,9 @@ Esta arquitectura permite las opciones siguientes para el direccionamiento o el 
 Método|Descripción|Limitaciones
 --|--|--
 Pasarela virtualizada|Despliegue una pasarela virtualizada (por ejemplo, NSX ESG, F5 BIG-IP, FortiGate-VM o un dispositivo virtual de su elección) que cruce la red privada y la red pública. Configure el direccionamiento en el sistema de origen (por ejemplo, vCenter, Zerto, su carga de trabajo) para dirigir únicamente el tráfico de red pública a la pasarela, y configure la pasarela según sus necesidades.|Aplicable únicamente a instancias con interfaces públicas habilitadas. Esta configuración permite tanto patrones de tráfico de salida como de entrada.
-Pasarela virtualizada con proxy|Despliegue una pasarela virtualizada como la anterior. Detrás de esta pasarela,
-[despliegue un servidor proxy](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-init-config#vum-init-config) y configure los servicios y aplicaciones para que se conecten a la red pública a través de este proxy.|Aplicable únicamente a instancias con interfaces públicas habilitadas. Los patrones de tráfico de salida pueden utilizar el proxy, pero los patrones de tráfico de entrada se deben gestionar en la pasarela.
+Pasarela virtualizada con proxy|Despliegue una pasarela virtualizada como la anterior. Detrás de esta pasarela, [despliegue un servidor proxy](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-init-config#vum-init-config) y configure los servicios y aplicaciones para que se conecten a la red pública a través de este proxy.|Aplicable únicamente a instancias con interfaces públicas habilitadas. Los patrones de tráfico de salida pueden utilizar el proxy, pero los patrones de tráfico de entrada se deben gestionar en la pasarela.
 Pasarela de hardware|Despliegue un [dispositivo de pasarela de hardware](https://cloud.ibm.com/catalog/infrastructure/gateway-appliance) en la VLAN de gestión. Configure la pasarela para la salida con NAT en la red pública según sus necesidades.|Aplicable a todas las instancias, con o sin interfaces públicas habilitadas. Esta configuración permite tanto patrones de tráfico de salida como de entrada.
-Pasarela de hardware con proxy|Despliegue un dispositivo de pasarela como se ha indicado anteriormente. Detrás de esta pasarela,
-[despliegue un servidor proxy](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-init-config#vum-init-config) y configure los servicios y aplicaciones para que se conecten a la red pública a través de este proxy.|Aplicable a todas las instancias, con o sin interfaces públicas habilitadas. Los patrones de tráfico de salida pueden utilizar el proxy, pero los patrones de tráfico de entrada se deben gestionar mediante la pasarela.
+Pasarela de hardware con proxy|Despliegue un dispositivo de pasarela como se ha indicado anteriormente. Detrás de esta pasarela, [despliegue un servidor proxy](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-init-config#vum-init-config) y configure los servicios y aplicaciones para que se conecten a la red pública a través de este proxy.|Aplicable a todas las instancias, con o sin interfaces públicas habilitadas. Los patrones de tráfico de salida pueden utilizar el proxy, pero los patrones de tráfico de entrada se deben gestionar mediante la pasarela.
 Equilibrador de carga|IBM Cloud ofrece varios [servicios de equilibrador de carga](https://cloud.ibm.com/catalog/infrastructure/load-balancer-group) que puede utilizar para proporcionar acceso de red de entrada a sus aplicaciones.|Aplicable a todas las instancias, pero limitado a los patrones de tráfico de entrada.
 
 ## Enlaces relacionados

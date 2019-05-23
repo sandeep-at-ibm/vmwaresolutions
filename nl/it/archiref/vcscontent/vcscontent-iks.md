@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -24,12 +24,9 @@ distribuisce Stock Trader, senza modifiche al codice, al suo interno.
 Todd aggiunge quindi la VPN strongSwan per la connessione tra le reti
 private di ciascun cluster.
 
-Figura 1. Stock Trader come vera applicazione ibrida
-
-![Stock Trader come vera applicazione ibrida](vcscontent-truehybrid.svg)
+![Stock Trader come vera applicazione ibrida](../../images/vcscontent-truehybrid.svg "Stock Trader come vera applicazione ibrida")
 
 ## Link correlati
 {: #vcscontent-iks-related}
 
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

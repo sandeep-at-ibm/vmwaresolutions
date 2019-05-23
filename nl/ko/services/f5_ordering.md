@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-04"
+lastupdated: "2019-05-09"
 
 subcollection: vmware-solutions
 
@@ -33,6 +33,16 @@ subcollection: vmware-solutions
 다음 방법 중 하나를 사용하여 기존 인스턴스에 F5 on {{site.data.keyword.cloud_notm}} 서비스를 추가할 수 있습니다.
 * {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 해당 서비스를 추가할 인스턴스를 보고 왼쪽 탐색 분할창에서 **서비스**를 클릭한 후에 **추가**를 클릭하십시오.
 * {{site.data.keyword.cloud_notm}} 카탈로그에서 **F5 on IBM Cloud**를 선택하고 서비스 설정을 지정한 후에 **기존 인스턴스에 추가**를 선택하십시오.
+
+## 개인용 인스턴스에 대한 F5 on IBM Cloud 주문
+{: #f5_ordering-private}
+
+공용 인터페이스로 구성되지 않은 인스턴스에 대한 F5 on {{site.data.keyword.cloud_notm}}를 주문하는 경우 설치를 완료하려면 프록시 서버를 제공해야 합니다. F5 on {{site.data.keyword.cloud_notm}} 설치가 시작되기 전에 VRF(Virtual Routing and Forwarding)를 통해 HTTP 프록시 서버를 구성하고 사용할 수 있어야 합니다.
+
+BigIP VE(Virtual Edition) 엔드포인트가 작동 가능하게 되기 전에 해당 라이센스를 활성화할 수 있어야 합니다. BigIP VE 엔드포인트가 설치된 후에는 더 이상 프록시 서버를 사용할 필요가 없습니다.
+
+서비스 설치 시 작동 중인 프록시 서버 없이 F5 on {{site.data.keyword.cloud_notm}} 서비스를 추가할 수 없습니다.
+{:note}
 
 ## F5 on IBM Cloud 서비스 구성
 {: #f5_ordering-config}

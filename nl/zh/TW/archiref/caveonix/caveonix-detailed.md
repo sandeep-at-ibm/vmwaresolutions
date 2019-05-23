@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-05"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,8 @@ subcollection: vmware-solutions
 
 下圖和說明提供 RiskForesight 應用程式元件的相關資訊。
 
-圖 1. 應用程式元件
-![應用程式元件](caveonix-app-components.svg)
+![應用程式元件](../../images/caveonix-app-components.svg "應用程式元件")
+
 
 -	圖形使用者介面 - 可用來存取 RiskForesight 應用程式的 Web 介面。
 -	中央收集器 - 收集不同類型來自外掛程式的資料之有效負載，並使其可用於傳訊儲存庫。RiskForesight 支援下列類型的有效負載：
@@ -61,7 +61,7 @@ subcollection: vmware-solutions
 
 下圖顯示與「專用 VLAN A」相關聯的 Caveonix 可攜式專用子網路的網路拓蹼。您負責管理此子網路的 IP 位址空間，因此您可以根據需要，透過局部分散模型，將「全功能」模型手動橫向擴充至完全分散的部署模型。
 
-圖 2. 網路圖![網路圖](caveonix-network.svg)
+![網路圖](../../images/caveonix-network.svg "網路圖")
 
 下表說明 IP 子網路、VLAN 指派。
 

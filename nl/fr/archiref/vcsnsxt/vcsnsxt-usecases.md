@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -23,8 +23,7 @@ VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 
 
 Les composants VMware HCX, qui sont déployés en tant que machines virtuelles sur le site cible vCenter Server, permettent d'établir une connexion avec les composants VMware HCX installés sur le site source local homologue.
 
-Figure 1. Service VMware Hybrid Cloud Extension
-![Service VMware Hybrid Cloud Extension](vcsnsxt-hcx-1.svg)
+![Service VMware Hybrid Cloud Extension](../../images/vcsnsxt-hcx-1.svg "Service VMware Hybrid Cloud Extension")
 
 L'interconnectivité à couplage lâche entre le site local et {{site.data.keyword.cloud_notm}} active des fonctionnalités telles que :
 - **Interconnectivité simple** – Des connexions de réseau logique sont facilement établies sur n'importe quelle connexion physique, y compris l'Internet public, le réseau privé virtuel ou une liaison directe.
@@ -52,8 +51,7 @@ A l'aide de l'automatisation {{site.data.keyword.cloud_notm}}, l'entreprise Acme
 
 Pour plus d'informations sur NSX-V, voir [Présentation de NSX-V](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv). Pour plus d'informations sur l'offre vCenter Server et {{site.data.keyword.icpfull_notm}}, voir [vCenter Server et {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro).
 
-Figure 2. vCenter Server avec {{site.data.keyword.icpfull_notm}}</br>
-![vCenter Server avec {{site.data.keyword.icpfull_notm}}](vcsnsxt-nsxvhl.svg)
+![vCenter Server with {{site.data.keyword.icpfull_notm}}](../../images/vcsnsxt-nsxvhl.svg "vCenter Server with {{site.data.keyword.icpfull_notm}}")
 
 Cela crée une interconnectivité à couplage lâche entre le site local et {{site.data.keyword.cloud_notm}} et active des fonctionnalités telles que :
 -	**Interconnectivité simple** – Des connexions de réseau logique sont facilement établies sur n'importe quelle connexion physique, y compris l'Internet public, le réseau privé virtuel ou Direct Link.

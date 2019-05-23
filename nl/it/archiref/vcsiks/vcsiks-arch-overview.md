@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -49,8 +49,7 @@ Il seguente diagramma visualizza {{site.data.keyword.icpfull_notm}} e CAM distri
 con connessioni al vCenter in loco e al servizio {{site.data.keyword.containerlong_notm}} distribuiti su {{site.data.keyword.cloud_notm}}. Gli utenti possono distribuire VM (Virtual Machine) in loco, VM nelle istanze
 vCenter Server e contenitori al cluster {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}}.
 
-Figura 1. Gestione cloud dal lato cloud
-![Sul cloud - gestione cloud](vcsiks-oncloud-cloudmgt.svg)
+![Sul cloud - gestione cloud](../../images/vcsiks-oncloud-cloudmgt.svg "Sul cloud - gestione cloud")
 
 Nel diagramma, CAM crea in modo logico le connessioni cloud ai vCenter,
 ai provider cloud e agli ambienti {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}}. I cluster {{site.data.keyword.icpfull_notm}} devono essere
@@ -72,8 +71,7 @@ in loco, con connessioni a vCenter e {{site.data.keyword.containerlong_notm}} di
 in loco, VM nelle istanze vCenter Server e contenitori
 al cluster {{site.data.keyword.containerlong_notm}}.
 
-Figura 2. Gestione cloud dal lato locale
-![In loco - gestione cloud](vcsiks-onprem-cloudmgt.svg)
+![In loco - gestione cloud](../../images/vcsiks-onprem-cloudmgt.svg "In loco - gestione cloud")
 
 La VPN strongSwan viene utilizzata per stabilire la connettività con i contenitori
 {{site.data.keyword.containerlong_notm}} distribuiti. Con il tempo, strongSwan potrebbe essere sostituito con la connettività

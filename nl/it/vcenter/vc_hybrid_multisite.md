@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-24"
+lastupdated: "2019-05-02"
 
 subcollection: vmware-solutions
 
@@ -47,9 +47,7 @@ Se la tua configurazione richiede una distribuzione multisito con più di 128 se
 
 Il seguente grafico illustra la vista generale della distribuzione multisito di vCenter Server with Hybridity Bundle.
 
-Figura 1. Distribuzione multisito di vCenter Server with Hybridity Bundle
-
-![Distribuzione multisito di vCenter Server with Hybridity Bundle](../vcenter/multisite-hub-spoke.svg "Distribuzione multisito di vCenter Server with Hybridity Bundle")
+![Distribuzione multisito di vCenter Server with Hybridity Bundle](../images/multisite-hub-spoke.svg "Distribuzione multisito di vCenter Server with Hybridity Bundle")
 
 Il modello contiene i seguenti livelli:
 

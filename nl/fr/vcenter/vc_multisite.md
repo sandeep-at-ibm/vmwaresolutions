@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-04"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -20,7 +20,8 @@ subcollection: vmware-solutions
 
 {{site.data.keyword.vmwaresolutions_full}} permet de déployer des instances dans différents emplacements et de les rendre actives et opérationnelles très rapidement.
 
-La configuration multisite pour des instances vCenter Server est uniquement prise en charge dans les instances de la version 2.0 et des versions ultérieures. {:note}
+La configuration multisite pour des instances vCenter Server est uniquement prise en charge dans les instances de la version 2.0 et des versions ultérieures.
+{:note}
 
 ## Composants d'un déploiement multisite
 {: #vc_multisite-deployment-components}
@@ -47,11 +48,9 @@ Le modèle de configuration multisite utilise un concentrateur et une topologie 
 Si votre configuration nécessite un déploiement multisite de plus de 128 serveurs ESXi, contactez le support IBM pour obtenir de l'aide. Pour plus d'informations, voir [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
 {:note}
 
-Le graphique suivant décrit l'architecture globale d'un déploiement vCenter Server multisite.
+Le graphique suivant décrit l'architecture globale d'un déploiement multisite de vCenter Server. 
 
-Figure 1. Déploiement vCenter Server multisite
-
-![Déploiement multisite de vCenter Server](../vcenter/multisite-hub-spoke.svg "Déploiement multisite de vCenter Server")
+![Déploiement multisite de vCenter Server](../images/multisite-hub-spoke.svg "Déploiement multisite de vCenter Server")
 
 Le modèle contient les couches suivantes :
 
@@ -71,4 +70,3 @@ La suppression d'instances vCenter Server qui font partie d'une configuration mu
 * [Attribuer un rôle principal à NSX Manager](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/com.vmware.nsx-cross-vcenter-install.doc/GUID-44E8AE16-BA3F-4DD9-B582-FC1E137E6CFC.html){:new_window}
 * [Configurer les NSX Manager secondaires](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-9E48BC57-15E3-49C7-8BC5-F94ED8918BBE.html){:new_window}
 * [Approbations Microsoft Active Directory prises en charge avec VMware vCenter SSO](https://kb.vmware.com/s/article/2064250){:new_window}
-* [Securely connect your private VMware workloads in the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -18,8 +18,7 @@ subcollection: vmware-solutions
 
 {{site.data.keyword.cloud_notm}} の物理ネットワークは、パブリック、プライベート、管理の 3 つの異なるネットワークに分類されます。
 
-図 1. {{site.data.keyword.cloud_notm}} ネットワークの概略
-![{{site.data.keyword.cloud_notm}} ネットワークの概略](vcsnsxt-ic4vcloud.svg)
+![{{site.data.keyword.cloud_notm}} 大まかなネットワーク・ビュー](../../images/vcsnsxt-ic4vcloud.svg "{{site.data.keyword.cloud_notm}} 大まかなネットワーク・ビュー")
 
 ## パブリック・ネットワーク
 {: #vcsnsxt-overview-ic4vnetwork-public-net}
@@ -55,9 +54,7 @@ subcollection: vmware-solutions
 
 設計に含まれる各物理ホストは、各 {{site.data.keyword.cloud_notm}} 最上位ラック (ToR) スイッチ (パブリックとプライベート) への 10 Gbps イーサネット接続の冗長ペアを 2 つ備えています。 合計 4 つの 10 Gbps 接続のためのアダプターが個々の接続 (非結合) としてセットアップされます。 これにより、各ネットワーキング・インターフェース・カード (NIC) 接続が他の NIC から独立して機能できるようになります。
 
-図 2. 物理ホスト接続
-</br>
-![物理ホスト接続](vcsnsxt-host-connections.svg)
+![物理ホスト接続](../../images/vcsnsxt-host-connections.svg "物理ホスト接続")
 
 ## VLAN
 {: #vcsnsxt-overview-ic4vnetwork-vlans}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-26"
+lastupdated: "2019-05-01"
 
 subcollection: vmware-solutions
 
@@ -37,7 +37,14 @@ Quando ordini il servizio, fornisci le seguenti impostazioni:
 * Seleziona **Pronto per la produzione** o **Sviluppo/Test** in base alle tue esigenze.
 * Seleziona la casella di spunta richiesta per certificare che hai già ottenuto la licenza richiesta per distribuire il servizio {{site.data.keyword.cloud_notm}} Private Hosted.
 
-Se vuoi distribuire altri nodi, utilizza il modello {{site.data.keyword.cloud_notm}} Private Ubuntu (Ubuntu1604) distribuito con la tua installazione iniziale di {{site.data.keyword.cloud_notm}} Private Hosted. Per trovare il modello, nel client web VMware vSphere, vai alla scheda **VMs and Templates**, nella cartella `cam`. La password predefinita per il modello Ubuntu è `icponcloud` e ti consigliamo di modificarla prima di utilizzare il modello.
+## Distribuzione di nodi aggiuntivi
+{: #icp_ordering-deploy-nodes}
+
+Se vuoi distribuire dei nodi aggiuntivi, esamina le seguenti informazioni:
+* Utilizza il modello {{site.data.keyword.cloud_notm}} Private Ubuntu (Ubuntu1604) distribuito con la tua installazione iniziale di {{site.data.keyword.cloud_notm}} Private Hosted.
+* Per trovare il modello Ubuntu, nel client web VMware vSphere, vai alla scheda **VMs and Templates**, nella cartella `cam`. 
+* La password predefinita per il modello Ubuntu è `icponcloud`. Ti consigliamo di modificare questa password prima di utilizzare il modello.
+* {{site.data.keyword.vmwaresolutions_short}} non offre supporto per l'applicazione di aggiornamenti e patch per il modello Ubuntu. Devi monitorare e applicare autonomamente questi aggiornamenti.
 
 ## Link correlati
 {: #icp_ordering-related}

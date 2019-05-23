@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -75,8 +75,7 @@ trick = 'combo \+ \[“to” + combo\] \+ \[“to” \+ landing_combo\]'
 
 次の図は、ルール・エンジンを視覚的に要約した図です。
 
-図 1. スケート言語の概要
-![スケート言語の概要](vcscar-skate-language.svg)
+![スケート言語の概要](../../images/vcscar-skate-language.svg "スケート言語の概要")
 
 ## トリック言語のサンプル
 {: #vcscar-concepts-sample-trick}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-09"
 
 subcollection: vmware-solutions
 
@@ -38,8 +38,7 @@ vCPU の数	|4	|4	|4	|8
 
 \* **注**: 具体的な要件については、ハードウェア互換性リストを確認してください。
 
-図 1. NSX-V および T 管理コンポーネントのレイアウト
-![NSX-V および T 管理コンポーネントのレイアウト](vcsnsxt-combined-mgmt.svg)
+![NSX-V および T 管理コンポーネント・レイアウト](../../images/vcsnsxt-combined-mgmt.svg "NSX-V および T 管理コンポーネント・レイアウト")
 
 ### 初期構成
 {: #vcsnsxt-techpreview-init-config}
@@ -79,8 +78,7 @@ vMotion トラフィック	|無制限	|50	|0
 NFS トラフィック	|無制限	|100	|0
 vSAN トラフィック	|無制限	|100	|0
 
-図 2. vmkernel インターフェースへの論理 VLANスイッチ
-![vmkernel インターフェースへの論理 VLANスイッチ](vcsnsxt-tnkernel.svg)
+![vmkernel インターフェースへの論理 VLAN スイッチ](../../images/vcsnsxt-tnkernel.svg "vmkernel インターフェースへの論理 VLAN スイッチ")
 
 ## NSX-T
 {: #vcsnsxt-techpreview-nsx-t}
@@ -152,9 +150,7 @@ Calico は分散スケールアウト・アーキテクチャーを基にして�
 -	etcd。コンポーネント間の通信を提供し、一貫性のあるデータ・ストアに保管します。これにより、Calico は常に正確なネットワークを構築できます。
 -	BIRD。Felix もホストするすべてのノードで BGP クライアント機能を提供します。 Felix が Linux カーネルにルートを挿入すると、BGP クライアントがルートを取得してデプロイメント内の他のノードに配布します。 大規模環境では、BGP ルート・リフレクターもデプロイされ、BGP クライアントが接続するための中心点として機能します。 これにより、各クライアントが他のすべてのクライアントと対話してデプロイメント内の他のノードにルートを配布する必要がなくなります。
 
-図 3. Calico の概要
-</br>
-![Calico の概要](vcsnsxt-calico-cni.svg)
+![Calico の概要](../../images/vcsnsxt-calico-cni.svg "Calico の概要")
 
 ### NSX-T および Calico
 {: #vcsnsxt-techpreview-nsx-t-calico}
@@ -180,8 +176,7 @@ NSX-T は vCenter 環境と vSphere 環境用のスタンドアロン・ソリ�
 
 NSX-T では、わかりやすい Web インターフェースで VM およびコンテナーの環境のネットワークおよびセキュリティー・ポリシーを管理できます。
 
-図 4. NSX-T コンポーネントと Calico コンポーネントの大まかな比較
-![NSX-T および Kubernetes ネットワーキング](vcsnsxt-calico.svg)
+![NSX-T および Kubernetes ネットワーキング](../../images/vcsnsxt-calico.svg "NSX-T および Kubernetes ネットワーキング")
 
 ## NSX-T および Kubernetes
 {: #vcsnsxt-techpreview-nsx-t-kube}
@@ -190,9 +185,7 @@ Kubernetes と NSX Manager の統合を実現するコア・コンポーネン�
 
 以下の例では、Acme と Skateboards という 2 つの Kubernetes 名前空間が使用されています。それぞれの名前空間に、専用の論理スイッチおよび Tier-1 ルーターと、T0 論理ルーターに接続するための IP セグメントがあります。
 
-図 5. Kubernetes NCP
-</br>
-![Kubernetes NCP](vcsnsxt-ncpk8sapi.svg)
+![Kubernetes NCP](../../images/vcsnsxt-ncpk8sapi.svg "Kubernetes NCP")
 
 ### NSX Security Policy Manager
 {: #vcsnsxt-techpreview-nsx-sec-policy-manager}
@@ -211,9 +204,7 @@ Kubernetes と NSX Manager の統合を実現するコア・コンポーネン�
 -	SpoofGuard は、vNIC レベルでの IP スプーフィングをブロックします。
 -	スイッチ・セキュリティーは、無許可トラフィックに対するストーム制御およびセキュリティーを提供します。
 
-図 6. NSX-T マイクロ・セグメンテーション
-</br>
-![NSX-T マイクロ・セグメンテーションの例](vcsnsxt-tsecurity.svg)
+![NSX-T マイクロ・セグメンテーションの例](../../images/vcsnsxt-tsecurity.svg "NSX-T マイクロ・セグメンテーションの例")
 
 ### NSX-T と NSX-V の違い
 {: #vcsnsxt-techpreview-diff-nsx-t-nsx-v}
@@ -247,9 +238,7 @@ VMware vSphere 環境では、VMware NSX-T は NSX-V と同じ機能を提供し
 
 Kubernetes と NSX-V の統合では、{{site.data.keyword.cloud_notm}} 自動化機能により、vCenter Server インスタンス上に {{site.data.keyword.icpfull_notm}} がインストールされます。 専用のスイッチ/VXLAN、DLR、および ESG が Kubernetes ネットワークのためだけに作成されます。 Day 1 の {{site.data.keyword.icpfull_notm}} のオーバーレイ・ネットワークは、アンダーレイ・ネットワークにアクセスするために ESG を介してルーティングがセットアップされた 192.168.20.0/ 24 サブネットです。
 
-図 7. NSX-V および Kubernetes
-</br>
-![NSX-V および Kubernetes](vcsnsxt-transitnet.svg)
+![NSX-V および Kubernetes](../../images/vcsnsxt-transitnet.svg "NSX-V および Kubernetes")
 
 #### NSX-T との統合
 {: #vcsnsxt-techpreview-integration-nsx-t}
@@ -258,9 +247,7 @@ Kubernetes と NSX-T の統合は、NSX-T コンテナー・プラグイン (NCP
 
 NSX-T 分散ファイアウォールでは、Kubernetes クラスターのために実装されるネットワーク・ポリシーを作成できます。 入口および出口ポリシー、ラベル、および式マッチング・ポリシーをサポートし、ロード・バランサー機能を備えており、これらはすべて Kubernetes インフラストラクチャーに適用できます。
 
-図 8. NSX-T および Kubernetes
-</br>
-![NSX-T および Kubernetes](vcsnsxt-t1t0router.svg)
+![NSX-T および Kubernetes](../../images/vcsnsxt-t1t0router.svg "NSX-T および Kubernetes")
 
 ## 関連リンク
 {: #vcsnsxt-techpreview-related}

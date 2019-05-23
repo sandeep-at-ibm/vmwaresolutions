@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -19,8 +19,7 @@ subcollection: vmware-solutions
 ## 系統元件
 {: #vcscar-logical-sys-comp}
 
-圖 1. Skate Advisor 元件
-![Skate Advisor 元件](vcscar-components.svg)
+![Skate Advisor 元件](../../images/vcscar-components.svg "Skate Advisor 元件")
 
 Skate Advisor 主要包含可接受文字或語音辨識以透過結構化方式與系統互動的聊天機器人。
 
@@ -77,9 +76,7 @@ Skate Advisor 的核心資料元素就是技巧。此技巧語言可唯一定義
 
 聊天機器人以下列方式與系統互動：
 
-圖 2. 一般聊天機器人查詢
-</br>
-![一般聊天機器人查詢](vcscar-query.svg)
+![典型聊天機器人](../../images/vcscar-query.svg "典型聊天機器人")
 
 表 2. 聊天機器人互動
 
@@ -135,9 +132,7 @@ Skate Advisor Service 是一個應用程式元件，提供一組 API 服務來�
 
 Watson Discovery 必須透過機器學習模型來進行訓練，而此模型由主題專家使用 Watson Knowledge Studio 以反覆運算方式所建立。
 
-圖 3. Discovery Service 訓練
-</br>
-![Discovery Service 訓練](vcscar-training.svg)
+![Discovery 服務訓練](../../images/vcscar-training.svg "Discovery 服務訓練")
 
 對於 Skate Advisor，此模型包含實體類型與規則型訓練及字典型訓練組合之間的關係來建立模型。此模型可讓 Discovery Service 辨識及分類技巧，這些技巧是從用來作為訓練集的文章及視訊說明中所汲取。
 

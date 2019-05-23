@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -30,8 +30,7 @@ IBM Multi-Cluster Manager proporciona visibilidad de usuario, gestión centrada 
 
 El diagrama siguiente muestra {{site.data.keyword.icpfull_notm}} y CAM desplegados con la infraestructura de {{site.data.keyword.cloud_notm}}, con conexiones con el vCenter local y el servicio de {{site.data.keyword.containerlong_notm}} desplegado en {{site.data.keyword.cloud_notm}}. Los usuarios pueden desplegar máquinas virtuales (VM) locales y VM en instancias de vCenter Server y contenedores en el clúster {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}}.
 
-Figura 1. Gestión de la nube desde la nube
-![Gestión de la nube en la nube](vcsiks-oncloud-cloudmgt.svg)
+![En la nube - Gestión de la nube](../../images/vcsiks-oncloud-cloudmgt.svg "En la nube - Gestión de la nube")
 
 En el diagrama, CAM crea de forma lógica conexiones en la nube con los entornos de vCenters, proveedores de nube, {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}}. Los clústeres de {{site.data.keyword.icpfull_notm}} deben desplegarse en cada centro de datos o entorno de nube, y MCM proporciona el mecanismo para conectar los clústeres de {{site.data.keyword.icpfull_notm}} en una única vista de gestión.
 
@@ -45,8 +44,7 @@ En el diagrama, CAM crea de forma lógica conexiones en la nube con los entornos
 
 En el diagrama siguiente se muestra {{site.data.keyword.icpfull_notm}} y CAM desplegados en la infraestructura local, con conexiones con vCenter e {{site.data.keyword.containerlong_notm}} desplegado en {{site.data.keyword.cloud_notm}}. Los usuarios pueden desplegar las VM y los contenedores locales, las VM en las instancias de vCenter Server y los contenedores en el clúster {{site.data.keyword.containerlong_notm}}.
 
-Figura 2. Gestión de nube desde el entorno local
-![Gestión de nube desde el entorno local](vcsiks-onprem-cloudmgt.svg)
+![Local - Gestión de la nube](../../images/vcsiks-onprem-cloudmgt.svg "Local - Gestión de la nube")
 
 Se utiliza strongSwan VPN para establecer la conectividad con los contenedores {{site.data.keyword.containerlong_notm}} desplegados. strongSwan se podría sustituir por la conectividad Direct-link.
 

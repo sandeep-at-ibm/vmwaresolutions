@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -28,8 +28,7 @@ Ce document décrit également les processus permettant de gérer les composants
 
 Ce document présente l'utilisation de l'implémentation d'un serveur proxy, basé sur CentOS et Squid, pour permettre à VUM d'accéder aux référentiels de VMware. Lorsque VUM demande une ressource du serveur de mises à jour dans VMware, la demande est d'abord envoyée au serveur proxy qui l'envoie ensuite au serveur de mise à jour via la passerelle ESG (External Services Gateway). Une fois que le serveur proxy obtient la ressource, il l'envoie à VUM.
 
-Figure 1. Diagramme de présentation</br>
-![Diagramme de présentation](vum-vcsproxy.svg)
+![Diagramme de présentation](../../images/vum-vcsproxy.svg "Diagramme de présentation")
 
 vCenter Server déploie actuellement vSphere 6.5, ce qui signifie que VUM est désormais intégré dans le dispositif vCenter Server Appliance (VCSA), et comme le composant client de VUM est un plug-in qui s'exécute sur vSphere Web Client, il est automatiquement activé après le déploiement du dispositif VCSA. Cependant, VUM n'a aucun accès à Internet pour accéder aux référentiels de VMware.
 

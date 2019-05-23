@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -17,8 +17,7 @@ subcollection: vmware-solutions
 ## Composants VMware vCenter Server on IBM Cloud
 {: #vcscar-arch-overview-solution-vcs-comp}
 
-Figure 1. Diagramme de l'environnement vCenter Server
-![Environnement vCenter Server](vcscar-vcs.svg)
+![Environnement vCenter Server](../../images/vcscar-vcs.svg "Environnement vCenter Server")
 
 ### Contrôleur PSC (Platform Service Controller)
 {: #vcscar-arch-overview-solution-psc}
@@ -72,8 +71,7 @@ Disk    | 1000 Go sur magasin de données local
 
 {{site.data.keyword.icpfull_notm}} est une plateforme applicative pour le développement et la gestion sur site d'applications conteneurisées. {{site.data.keyword.icpfull_notm}} est un environnement intégré de gestion des conteneurs qui inclut l'orchestrateur de conteneurs Kubernetes, un référentiel d'images privé, une console de gestion et des infrastructures de surveillance.
 
-Figure 2. Déploiement {{site.data.keyword.icpfull_notm}} virtuel avec vCenter Server
-![Déploiement {{site.data.keyword.icpfull_notm}} virtuel avec vCenter Server](vcscar-icp.svg)
+![Déploiement {{site.data.keyword.icpfull_notm}} virtuel avec vCenter Server](../../images/vcscar-icp.svg "Déploiement {{site.data.keyword.icpfull_notm}} virtuel avec vCenter Server")
 
 ### Noeud d'amorçage
 {: #vcscar-arch-overview-solution-boot-node}
@@ -135,8 +133,7 @@ Worker  |  3 | IP (x3)  |  4-8 |16-20   |  150
 
 {{site.data.keyword.cloud_notm}} Automation Manager (CAM) est une plateforme de gestion libre-service multi-cloud qui s'exécute sur {{site.data.keyword.icpfull_notm}} et permet aux développeurs et aux administrateurs de répondre aux besoins de l'entreprise.
 
-Figure 3. Références des composants CAM
-![Référence des composants CAM](vcscar-cam-components.svg)
+![Référence des composants CAM](../../images/vcscar-cam-components.svg "Référence des composants CAM")
 
 ### Proxy CAM
 {: #vcscar-arch-overview-solution-cam-proxy}

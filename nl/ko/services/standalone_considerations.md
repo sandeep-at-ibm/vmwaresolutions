@@ -31,7 +31,7 @@ HCX on {{site.data.keyword.cloud_notm}} 컴포넌트는 {{site.data.keyword.clou
 ### IP 주소 요구사항
 {: #standalone_considerations-ip}
 
-전체 HCX 기능을 사용하려면 인터넷 액세스 권한이 있는 최소 다섯 개의 사설 IP 주소가 필요합니다. 
+전체 HCX 기능을 사용하려면 인터넷 액세스 권한이 있는 최소 다섯 개의 사설 IP 주소가 필요합니다.
 
 ### 온프레미스 HCX on IBM Cloud 인스턴스의 배치 프로세스
 {: #standalone_considerations-deploy}
@@ -66,7 +66,7 @@ HCX on {{site.data.keyword.cloud_notm}} 컴포넌트는 {{site.data.keyword.clou
     2. 모든 확장된 네트워크가 제거되었는지 확인하십시오.
     3. 클라이드 사이트가 페어링된 상태에서 모든 상호연결 컴포넌트가 제거되었는지 확인하십시오.
 
-   다음 단계로 진행하기 전에 모든 이전 단계를 완료해야 합니다. 그렇지 않은 경우에는 온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스에 대한 라이센스가 취소됩니다. 라이센스가 취소되면 마이그레이션을 수행할 수 없으며 HCX 컴포넌트에 대한 오류가 발생할 수 있습니다.   
+   다음 단계로 진행하기 전에 모든 이전 단계를 완료해야 합니다. 그렇지 않은 경우에는 온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스에 대한 라이센스가 취소됩니다. 라이센스가 취소되면 마이그레이션을 수행할 수 없으며 HCX 컴포넌트에 대한 오류가 발생할 수 있습니다.  
    {:important}
 2. {{site.data.keyword.vmwaresolutions_short}} 콘솔에서, 온프레미스 HCX Manager에 대한 정품 인증 키를 얻기 위해 주문한 온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스를 삭제하십시오. 다음 단계로 진행하기 전에 삭제된 인스턴스를 더 이상 콘솔에 사용할 수 없음을 확인하십시오.
 

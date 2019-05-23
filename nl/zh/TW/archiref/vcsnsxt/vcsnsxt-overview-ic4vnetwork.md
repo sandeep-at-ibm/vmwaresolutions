@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -18,8 +18,7 @@ subcollection: vmware-solutions
 
 {{site.data.keyword.cloud_notm}} 的實體網路分成三個不同的網路：公用、專用和管理。
 
-圖 1. {{site.data.keyword.cloud_notm}} 高階網路視圖
-![{{site.data.keyword.cloud_notm}} 高階網路視圖](vcsnsxt-ic4vcloud.svg)
+![{{site.data.keyword.cloud_notm}} 高階網路視圖](../../images/vcsnsxt-ic4vcloud.svg "{{site.data.keyword.cloud_notm}} 高階網路視圖")
 
 ## 公用網路
 {: #vcsnsxt-overview-ic4vnetwork-public-net}
@@ -55,9 +54,7 @@ subcollection: vmware-solutions
 
 此設計內的每部實體主機都會有兩對備用的 10 Gbps 乙太網路連線，以連接至每台 {{site.data.keyword.cloud_notm}} Top of Rack (ToR) 交換器（公用及專用）。配接卡會設定為總共 4 個 10 Gbps 連線的個別連線（未結合）。這樣可讓每個網路介面卡 (NIC) 連線彼此獨立地運作。
 
-圖 2. 實體主機連線
-</br>
-![實體主機連線](vcsnsxt-host-connections.svg)
+![實體主機連線](../../images/vcsnsxt-host-connections.svg "實體主機連線")
 
 ## VLAN
 {: #vcsnsxt-overview-ic4vnetwork-vlans}

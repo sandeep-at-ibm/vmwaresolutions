@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-05"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,8 @@ subcollection: vmware-solutions
 
 下图和描述提供了有关 RiskForesight 应用程序组件的信息。
 
-图 1. 应用程序组件
-![应用程序组件](caveonix-app-components.svg)
+![应用程序组件](../../images/caveonix-app-components.svg "应用程序组件")
+
 
 -	图形用户界面 - 可用于访问 RiskForesight 应用程序的 Web 界面。
 -	中央收集器 - 收集来自插件的不同类型的数据有效内容，并使其在消息传递存储中可用。RiskForesight 支持以下类型的有效内容：
@@ -61,8 +61,7 @@ subcollection: vmware-solutions
 
 下图显示了具有与专用 VLAN A 关联的 Caveonix 可移植专用子网的网络拓扑。您负责管理此子网的 IP 地址空间，以便可以根据需要手动横向扩展：从“一体化”到完全分布式部署模型，一直到部分分布式模型。
 
-图 2. 网络图
-![网络图](caveonix-network.svg)
+![网络图](../../images/caveonix-network.svg "网络图")
 
 下表中描述了 IP 子网和 VLAN 分配。
 

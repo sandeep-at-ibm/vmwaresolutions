@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-03"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -24,9 +24,7 @@ L'architecture qui est présentée ici complète la solution vCenter Server en a
 
 Le graphique suivant décrit l'architecture globale du stockage connecté sur un déploiement vCenter Server :
 
-Figure 1. Architecture de haut niveau de stockage connecté sur {{site.data.keyword.cloud_notm}}
-
-![Architecture de stockage connecté](../solution/vcsv4radiagrams-ra-nfs-shares.svg "Architecture de haut niveau de stockage connecté sur IBM Cloud")
+![Architecture de stockage connecté](../../images/vcsv4radiagrams-ra-nfs-shares.svg "Architecture de stockage connecté")
 
 ## Conception de l'infrastructure physique
 {: #storage-infra-design-phys-infra-design}

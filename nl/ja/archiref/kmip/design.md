@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -18,7 +18,7 @@ subcollection: vmware-solutions
 # KMIP for VMware の設計
 {: #kmip-design}
 
-KMIP for VMware on {{site.data.keyword.cloud}} は、[IBM Key Protect](/docs/services/key-protect?topic=key-protect-getting-started-tutorial) または [IBM Cloud Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-get-started#get-started) を使用してルート鍵とデータ鍵を保存できる、VMware vSAN 暗号化および VMware vSphere 暗号化に対応した鍵管理サービスです。 このソリューションでは、Key Protect および Hyper Protect Crypto Services が鍵管理サービスとして機能します。
+KMIP for VMware on {{site.data.keyword.cloud}} は、[IBM Key Protect](/docs/services/key-protect?topic=key-protect-getting-started-tutorial) または [IBM Cloud Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-get-started#get-started) を使用してルート鍵とデータ鍵を保存できる、VMware vSAN 暗号化および VMware vSphere 暗号化に対応した鍵管理サービスです。 Key Protect および Hyper Protect Crypto Services は、このソリューションの鍵管理サービスとして機能します。
 
 ## ストレージ暗号化オプション
 {: #kmip-design-storage-options}
@@ -57,7 +57,7 @@ vSphere クラスター内でどちらかのタイプの暗号化を有効にす
 vSAN 暗号化または vSphere 暗号化に KMIP for VMware を使用する場合は、複数の鍵保護層が存在します。
 
 鍵をローテーションする場合は、鍵をローテーションできるレベルに関する以下の情報を確認してください。
-* すべての VMware 鍵はカスタマー・ルート鍵 (CRK) によって保護されます。 鍵のローテーションは、KMIP for VMware インスタンスまたは Hyper Protect Crypto Services インスタンスに関連付けられている IBM Key Protect インスタンスで行えます。
+* すべての VMware 鍵はカスタマー・ルート鍵 (CRK) によって保護されます。 鍵のローテーションは、KMIP for VMware インスタンスに関連付けられている IBM Key Protect インスタンスまたは Hyper Protect Crypto Services インスタンスで行えます。
 * KMIP for VMware は、生成して VMware に配布した鍵を、CRK を使用して保護します。 VMware では、このような鍵は「鍵暗号化鍵」(KEK) と見なされます。
   * vSphere 暗号化を使用する場合は、PowerShell コマンド **Set-VMEncryptionKey** を使用して鍵をローテーションできます。
   * vSAN 暗号化を使用する場合は、vSAN ユーザー・インターフェースで鍵をローテーションできます。
@@ -75,13 +75,12 @@ VMware の vSAN 暗号化および vSphere 暗号化は、多数の鍵管理サ�
 
 鍵管理システムは、一般的に、*エンベロープ暗号化*として知られる手法を使用して、鍵を他の鍵でラップまたは保護します。 このような鍵のことを、*ルート鍵*または*鍵暗号化鍵* (KEK) と呼びます。 鍵を利用するときには、その鍵に対応するルート鍵を使用して、鍵を復号またはアンラップします。 ルート鍵を破棄すれば、そのルート鍵で保護されているすべての鍵を効率的に無効化できます。 それらの鍵をルート鍵の近くに保管しておく必要はありません。 ルート鍵へのアクセスの制御が重要になります。
 
-{{site.data.keyword.cloud_notm}} Key Protect および Hyper Protect Crypto Services は、*カスタマー・ルート鍵* (CRK) を使用して、このようなサービスを提供するものです。 Key Protect では、鍵の取り出しが不可能な {{site.data.keyword.cloud_notm}} CloudHSM ハードウェアの中に CRK を排他的に保管します。Hyper Protect Crypto Services では、IBM zSeries HSM の中に鍵を保管します。
-保管されたそれらの CRK が、KMIP for VMware で VMware インスタンス用に生成された暗号鍵などの他の暗号鍵をラップするために使用されます。
+{{site.data.keyword.cloud_notm}} Key Protect および Hyper Protect Crypto Services は、*カスタマー・ルート鍵* (CRK) を使用して、このようなサービスを提供するものです。 Key Protect では、鍵の取り出しが不可能な {{site.data.keyword.cloud_notm}} CloudHSM ハードウェアの中に CRK を排他的に保管します。Hyper Protect Crypto Services では IBM zSeries HSM に保管します。 保管されたそれらの CRK が、KMIP for VMware で VMware インスタンス用に生成された暗号鍵などの他の暗号鍵をラップするために使用されます。
 
 VMware の鍵にも、この同じ概念が実装されています。 KMIP for VMware が要求に応じて VMware に鍵を渡すと、VMware がその鍵を KEK として使用して、vSAN ディスク・ドライブまたは仮想マシン・ディスクの暗号化に最終的に使用される鍵をラップまたは暗号化します。 これらの最終的な鍵のことをデータ暗号化鍵 (DEK) と呼びます。
 
 つまり、次の暗号化チェーンになります。
-* IBM Key Protect または Hyper Protect Crypto Services 内に永久に保管されるカスタマー・ルート鍵 (CRK)。
+* IBM Key Protect 内または Hyper Protect Crypto Services 内に永久に保管されるカスタマー・ルート鍵 (CRK)。
 * お客様のインスタンスにおいて KMIP for VMware で生成され、vCenter Server および ESXi ホストに渡される鍵暗号化鍵 (KEK)。
 * VMware で生成され、vSAN ディスクまたは仮想マシン・ディスクと共に保管されるデータ暗号化鍵 (DEK)。
 
@@ -107,10 +106,9 @@ KMIP for VMware では、高可用性を実現するために、MZR ごとに 2 
 
 また、KMIP for VMware は、公衆インターネットではなく {{site.data.keyword.cloud_notm}} プライベート・ネットワークを使用して {{site.data.keyword.cloud_notm}} Key Protect に接続します。
 
-図 1. IBM Key Protect を使用する場合の KMIP for VMware on {{site.data.keyword.cloud_notm}} のコンポーネント
-![KMIP for VMware on {{site.data.keyword.cloud_notm}}](kmip-key-protect.svg "このソリューションは、IBM Key Protect 内に保管されたルート鍵を使用して、VMware の vSphere 暗号化と vSAN 暗号化を可能にします。")
+![KMIP for VMware on {{site.data.keyword.cloud_notm}} のコンポーネント](../../images/kmip-key-protect.svg "ソリューションにより IBM Key Protect に保管されたルート・キーを使用して VMware vSphere 暗号化および vSAN 暗号化を使用可能にする。")
 
-IBM Cloud Hyper Protect Crypto Services を使用する場合、鍵は CloudHSM ではなく IBM zSeries HSM の中に保管されます。さらに、KMIP for VMware と {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services の間の接続はパブリック・ネットワークを経由しますが、TLS 暗号化と認証によって保護されます。
+IBM Cloud Hyper Protect Crypto Services を使用すると、鍵は CloudHSM ではなく IBM zSeries HSM に保管されます。 また、KMIP for VMware と {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services の間の接続はパブリック・ネットワークを流れますが、TLS 暗号化と認証により保護されます。
 
 ## 関連リンク
 {: #kmip-design-related}

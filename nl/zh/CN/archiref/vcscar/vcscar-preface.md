@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -14,8 +14,7 @@ subcollection: vmware-solutions
 # 前言
 {: #vcscar-preface}
 
-图 1. 我们自己设计的语言
-![我们自己设计的语言](vcscar-alood.svg)
+![我们自己设计的语言](../../images/vcscar-alood.svg "我们自己设计的语言")
 
 ## 滑板语言简介
 {: #vcscar-preface-intro}

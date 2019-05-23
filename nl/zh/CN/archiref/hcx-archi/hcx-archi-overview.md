@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -131,13 +131,11 @@ WAN 优化设备是用于执行 WAN 调节以减少等待时间所产生影响�
 
 此部分描述 IBM Cloud 中 HCX 组件以及内部部署客户机的布局。在此设计中，体系结构指定了源环境和 IBM Cloud 之间存在的轴辐式模型。因此，源资产将充当轴心来连接到不同的 IBM Cloud 环境，如下图所示。
 
-图 1. 具有单个源的 HCX
-![具有单个源的 HCX](hcx_single_source.svg)
+![带单个源的 HCX](../../images/cloudfoundation_hybrid_cloud_services.svg "带单个源的 HCX")
 
 源也可以置于 IBM Cloud 环境中；在此设计中，辐条始终是云部署，如下图所示。
 
-图 2. 具有多个源的 HCX
-![具有多个源的 HCX](hcx_multiple_sources.svg)
+![带多个源的 HCX](../../images/hcx_multiple_sources.svg "带多个源的 HCX")
 
 ### 用法概述
 {: #hcx-archi-overview-usage-ovw}

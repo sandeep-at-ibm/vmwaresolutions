@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 下图显示了此参考体系结构的系统上下文。系统上下文图定义了系统的关键元素、系统的边界、与系统交互的实体以及交互。这是一个高级别图，为读取者提供了系统的初始视图。
 
-图 1. 系统上下文
-![系统上下文](vcscar-system-context.svg)
+![系统上下文](../../images/vcscar-system-context.svg "系统上下文")
 
 下面是系统上下文的核心组件：
 -	vCenter Server - VMware vCenter Server on {{site.data.keyword.cloud_notm}} 是一个 {{site.data.keyword.cloud_notm}} for VMware Services 实例，作为内部部署环境中已迁移虚拟机 (VM) 的目标。它与内部部署虚拟化一起构成混合环境，支持 VM 从一个环境移至另一个环境。

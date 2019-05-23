@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-15"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -22,8 +22,7 @@ Revise esta información para el diseño de {{site.data.keyword.vmwaresolutions_
 
 Este diseño sirve como una arquitectura de línea base que proporciona la base para que otros componentes internos o específicos del proveedor se añadan para casos de uso específicos.
 
-Figura 1. Visión general de VMware on {{site.data.keyword.cloud_notm}}
-![Visión general de VMware on {{site.data.keyword.cloud_notm}}](vcsv4radiagrams-ra-variationsonatheme.svg "La solución virtualiza los recursos de cálculo, red y, opcionalmente, el almacenamiento que deben consumir las máquinas virtuales donde puede ejecutar las aplicaciones.")
+![Visión general de VMware on {{site.data.keyword.cloud_notm}}](../../images/vcsv4radiagrams-ra-variationsonatheme.svg "La solución virtualiza los recursos de cálculo, red y, opcionalmente, almacenamiento para que los consuman las máquinas virtuales donde puede ejecutar las aplicaciones.")
 
 ## Principales ventajas de IBM Cloud for VMware Solutions
 {: #solution_overview-benefits}

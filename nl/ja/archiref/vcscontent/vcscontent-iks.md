@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -19,9 +19,7 @@ Service](https://www.ibm.com/cloud/container-service) インスタンスを立�
 
 その後、Todd が strongSwan VPN を追加して各クラスターのプライベート・ネットワークを接続します。
 
-図 1. 真のハイブリッド・アプリケーションとしての Stock Trader
-
-![真のハイブリッド・アプリケーションとしての Stock Trader](vcscontent-truehybrid.svg)
+![本当のハイブリッド・アプリケーションとしての Stock Trader](../../images/vcscontent-truehybrid.svg "本当のハイブリッド・アプリケーションとして Stock Trader")
 
 ## 関連リンク
 {: #vcscontent-iks-related}

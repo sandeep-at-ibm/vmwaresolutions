@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-15"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -22,8 +22,7 @@ subcollection: vmware-solutions
 
 この設計は、特定のユースケースのために追加されるその他の内部コンポーネントまたはベンダー固有コンポーネントの基盤を提供する基本的なアーキテクチャーとして機能します。
 
-図 1. VMware on {{site.data.keyword.cloud_notm}} の概要
-![VMware on {{site.data.keyword.cloud_notm}} の概要](vcsv4radiagrams-ra-variationsonatheme.svg "このソリューションは、アプリケーションを実行できる VM で消費されるコンピュート・リソース、ネットワーク・リソース、およびオプションのストレージ・リソースを仮想化します。")
+![{{site.data.keyword.cloud_notm}} における VMware の概要](../../images/vcsv4radiagrams-ra-variationsonatheme.svg "このソリューションは、ご使用のアプリケーションを実行できる VM がコンシュームするコンピュート、ネットワーク、ストレージ (オプション) のリソースを仮想化します。")
 
 ## IBM Cloud for VMware Solutions の主なメリット
 {: #solution_overview-benefits}

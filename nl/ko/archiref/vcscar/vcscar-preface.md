@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -14,8 +14,7 @@ subcollection: vmware-solutions
 # 머리말
 {: #vcscar-preface}
 
-그림 1. 자체적으로 고안한 언어
-![자체적으로 고안한 언어](vcscar-alood.svg)
+![자체적으로 고안한 언어](../../images/vcscar-alood.svg "자체적으로 고안한 언어")
 
 ## 스케이트보딩 언어 소개
 {: #vcscar-preface-intro}

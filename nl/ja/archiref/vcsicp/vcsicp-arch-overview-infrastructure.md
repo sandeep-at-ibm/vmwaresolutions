@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -57,8 +57,7 @@ CPU | 28 コア 2.2 GHz | 28 コア 2.2 GHz
 ## 仮想構造
 {: #vcsicp-arch-overview-infrastructure-virtual-struct}
 
-図 1. vCenter Server と {{site.data.keyword.icpfull_notm}} デプロイメントの物理的構造
-![VCS と {{site.data.keyword.icpfull_notm}} デプロイメントの物理的構造](vcsicp-phy-ics-icp-deployment.svg)
+![vCenter Server および {{site.data.keyword.icpfull_notm}} デプロイメントの物理構造](../../images/vcsicp-phy-ics-icp-deployment.svg "vCenter Server および {{site.data.keyword.icpfull_notm}} デプロイメントの物理構造")
 
 vCenter Server インスタンス内で、{{site.data.keyword.icpfull_notm}} インスタンスは専用の NSX Edge Services Gateway (ESG) と Distributed Logical Router (DLR) とともにデプロイされます。 {{site.data.keyword.icpfull_notm}} インストールは、前述のコンポーネントで定義された VXLAN サブネットにロードされます。
 

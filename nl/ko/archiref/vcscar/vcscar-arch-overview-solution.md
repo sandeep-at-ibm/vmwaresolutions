@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -17,8 +17,7 @@ subcollection: vmware-solutions
 ## VMware vCenter Server on IBM Cloud 컴포넌트
 {: #vcscar-arch-overview-solution-vcs-comp}
 
-그림 1. vCenter Server 환경 다이어그램
-![vCenter Server 환경](vcscar-vcs.svg)
+![vCenter Server 환경](../../images/vcscar-vcs.svg "vCenter Server 환경")
 
 ### Platform Service Controller
 {: #vcscar-arch-overview-solution-psc}
@@ -78,8 +77,7 @@ Edge 크기    콤팩트 | vCPU 수 1
 모니터링 프레임워크를 포함하는 컨테이너 관리를 위한 통합
 환경입니다.
 
-그림 2. vCenter Server를 사용하는 가상 {{site.data.keyword.icpfull_notm}} 배치
-![vCenter Server를 사용하는 가상 {{site.data.keyword.icpfull_notm}} 배치](vcscar-icp.svg)
+![vCenter Server를 사용하는 가상 {{site.data.keyword.icpfull_notm}} 배치](../../images/vcscar-icp.svg "vCenter Server를 사용하는 가상 {{site.data.keyword.icpfull_notm}} 배치")
 
 ### 부트 노드
 {: #vcscar-arch-overview-solution-boot-node}
@@ -144,8 +142,7 @@ CAM에서는 작업자 노드가 더 높은 vCPU 및 메모리 구성을 포함�
 비즈니스 요구를 충족시킬 수 있도록 도움을 주는 {{site.data.keyword.icpfull_notm}}에서
 실행되는 다중 클라우드의 셀프 서비스 관리 플랫폼입니다.
 
-그림 3. CAM 컴포넌트 참조
-![CAM 컴포넌트 참조](vcscar-cam-components.svg)
+![CAM 컴포넌트 참조](../../images/vcscar-cam-components.svg "CAM 컴포넌트 참조")
 
 ### CAM 프록시
 {: #vcscar-arch-overview-solution-cam-proxy}

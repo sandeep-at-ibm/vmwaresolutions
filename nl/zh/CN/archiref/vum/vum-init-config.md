@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-29"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -207,7 +207,7 @@ Squid 没有任何最低硬件需求，但根据通过代理访问因特网的�
 1. 使用 vSphere Web Client 导航至**主页** > **Update Manager**。单击 vCenter Server。
 2. 选择**管理**选项卡，然后单击**设置**。
 3. 选择**下载设置**，然后在_代理设置_下，单击**编辑**。
-4. 选中**使用代理**框，并输入_代理服务器 IP 地址_和_端口 3128_，然后单击**确定**。“连接状态”会更改为_正在验证_，然后更改为_已连接_。
+4. 选中**使用代理**框，并输入_代理服务器 IP 地址_和_端口 3128_，然后单击**确定**。“连接状态”会更改为_正在验证_，然后更改为_已连接_。**注**：如果在测试与代理服务器的连接时收到以下消息，无需担心：``Some URLs have been accessed successfully, but others are inaccessible``。
 5. 单击**立即下载**。在_最近任务_窗格中，您应该会看到此活动已完成。
 6. 如果此活动失败，请重新引导 vCenter Server Appliance (vCSA)：
   1. 以 **root** 用户身份登录到 vCSA 管理界面：`https://vcsaFQDN:5480`。

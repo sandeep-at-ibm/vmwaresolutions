@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-24"
+lastupdated: "2019-05-02"
 
 subcollection: vmware-solutions
 
@@ -47,9 +47,7 @@ subcollection: vmware-solutions
 
 次の図は、vCenter Server with Hybridity Bundle のマルチサイト・デプロイメントの全体像を示しています。
 
-図 1. vCenter Server with Hybridity Bundle のマルチサイト・デプロイメント
-
-![vCenter Server with Hybridity Bundle のマルチサイト・デプロイメント](../vcenter/multisite-hub-spoke.svg "vCenter Server with Hybridity Bundle のマルチサイト・デプロイメント")
+![vCenter Server with Hybridity Bundle のマルチサイト・デプロイメント](../images/multisite-hub-spoke.svg "vCenter Server with Hybridity Bundle のマルチサイト・デプロイメント")
 
 このモデルには以下の層が含まれています。
 

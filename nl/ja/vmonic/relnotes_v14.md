@@ -46,7 +46,7 @@ NSX インストールの一環として、デプロイしたすべての新し�
 NSX Controller は、vCenter Server インスタンスにはインストールされません (Cloud Foundation インスタンスにはインストールされます)。 vCenter Server インスタンスで VXLAN または分散論理ルーターを使用する場合は、NSX Controller をユーザーがインストールする必要があります。
 {:note}
 
-VMware NSX for vSphere 6.2.4 で導入された拡張機能、要件、および既知の問題について詳しくは、[NSX for vSphere 6.2.4 リリース・ノート](http://pubs.vmware.com/Release_Notes/en/nsx/6.2.4/releasenotes_nsx_vsphere_624.html){:new_window}を参照してください。
+VMware NSX for vSphere 6.2.4 で導入された拡張機能、要件、および既知の問題について詳しくは、[NSX for vSphere 6.2.4 リリース・ノート](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/rn/releasenotes_nsx_vsphere_624.html){:new_window}を参照してください。
 
 ### VMware NSX Edge
 {: #relnotes_v14-nsx-edge}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-22"
+lastupdated: "2019-05-03"
 
 subcollection: vmware-solutions
 
@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 
 您可以根據商業需要，透過新增或移除 ESXi 伺服器或網路檔案系統 (NFS) 儲存空間，來擴充或縮減 VMware vCenter Server with NSX-T 實例的容量。
 
-* 從 3.0 版開始，您可以跨越多個叢集同時新增或移除 NFS 儲存空間。
+* 從 3.0 版開始，您可以在叢集中同時新增或移除 NFS 儲存空間及**備妥使用**狀態的 ESXi 伺服器。例如，您可以在一個叢集裡新增或移除 ESXi 伺服器，然後在另一個叢集裡新增或移除 NFS 儲存空間。
 * 從 2.9 版開始，您可以在伺服器處於維護模式時將新的 ESXi 伺服器新增至叢集。此外，您還可以跨越多個叢集同時新增或移除 ESXi 伺服器。
 
 **附註**：

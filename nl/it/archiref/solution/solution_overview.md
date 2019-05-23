@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-15"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -22,8 +22,7 @@ Esamina queste informazioni per la progettazione di {{site.data.keyword.vmwareso
 
 Questa progettazione funge da architettura di base che fornisce le fondamenta per l'aggiunta di altri componenti interni o specifici del fornitore per casi di utilizzo particolari.
 
-Figura 1. Panoramica di VMware on {{site.data.keyword.cloud_notm}}
-![Panoramica di VMware on {{site.data.keyword.cloud_notm}}](vcsv4radiagrams-ra-variationsonatheme.svg "La soluzione virtualizza le risorse di calcolo, di rete e, facoltativamente, di archiviazione che devono essere utilizzate dalle VM in cui puoi eseguire le tue applicazioni.")
+![Panoramica di VMware on {{site.data.keyword.cloud_notm}}](../../images/vcsv4radiagrams-ra-variationsonatheme.svg "La soluzione virtualizza le risorse di calcolo, di rete e, facoltativamente, di archiviazione che devono essere utilizzate dalle VM in cui puoi eseguire le tue applicazioni.")
 
 ## Vantaggi principali di IBM Cloud for VMware Solutions
 {: #solution_overview-benefits}

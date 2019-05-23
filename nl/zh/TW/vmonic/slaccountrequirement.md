@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-16"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -51,17 +51,11 @@ subcollection: vmware-solutions
 ## 已啟用具有服務端點的 VRF
 {: #slaccountrequirement-vrf-se}
 
-您的 {{site.data.keyword.cloud_notm}} 基礎架構帳戶必須是已啟用「服務端點」的「虛擬遞送及轉遞 (VRF)」帳戶。如果您的帳戶為非 VRF，您必須轉換為 VRF 帳戶。此外，您必須啟用您的 VRF 帳戶，以使用「服務端點」。
+您的 {{site.data.keyword.cloud_notm}} 基礎架構帳戶必須是虛擬遞送及轉遞 (VRF) 帳戶。如果您的帳戶為非 VRF，您必須轉換為 VRF 帳戶。另外建議啟用 VRF 帳戶以便使用服務端點。
 
 如需相關資訊，請參閱：
 * [VRF on IBM Cloud 概觀](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
 * [啟用您的帳戶來使用服務端點](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
-
-## VLAN Spanning 終止支援
-{: #slaccountrequirement-vlan-eos}
-
-從 2019 年 8 月起，將不再支援 VLAN Spanning。在 2019 年 7 月底之前，您必須將您的 {{site.data.keyword.cloud_notm}} 基礎架構帳戶轉換至 VRF 並啟用「服務端點」。
-{:important}
 
 ## 相關鏈結
 {: #slaccountrequirement-related}

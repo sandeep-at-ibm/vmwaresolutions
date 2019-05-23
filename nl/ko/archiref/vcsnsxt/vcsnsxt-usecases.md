@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -25,8 +25,7 @@ vCenter Server 인스턴스와
 
 vCenter Server 대상 사이트의 가상 머신(VM)으로 배치되는 VMware HCX 컴포넌트는 피어 온프레미스 소스 사이트에 설치되는 VMware HCX 컴포넌트와 연결할 수 있도록 합니다.
 
-그림 1. VMware Hybrid Cloud Extension 서비스
-![VMware Hybrid Cloud Extension 서비스](vcsnsxt-hcx-1.svg)
+![VMware Hybrid Cloud Extension 서비스](../../images/vcsnsxt-hcx-1.svg "VMware Hybrid Cloud Extension 서비스")
 
 온프레미스와 {{site.data.keyword.cloud_notm}} 간에 느슨하게 결합된 상호 연결을 통해 다음 기능을 사용할 수 있습니다.
 - **간단한 상호 연결** – 공용 인터넷, 사설 VPN 또는 직접 링크를 포함하는 실제 연결에서 논리적 네트워크 연결을 쉽게 설정할 수 있습니다.
@@ -55,8 +54,7 @@ Acme Skateboards는 애플리케이션 현대화에 대한 과정을 위해 vCen
 
 NSX-V에 대한 자세한 정보는 [NSX-V 개요](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv)를 참조하십시오. vCenter Server 및 {{site.data.keyword.icpfull_notm}} 오퍼링에 대한 자세한 정보는 [vCenter Server 및 {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)을 참조하십시오.
 
-그림 2. vCenter Server with {{site.data.keyword.icpfull_notm}}</br>
-![vCenter Server with {{site.data.keyword.icpfull_notm}}](vcsnsxt-nsxvhl.svg)
+![vCenter Server with {{site.data.keyword.icpfull_notm}}](../../images/vcsnsxt-nsxvhl.svg "vCenter Server with {{site.data.keyword.icpfull_notm}}")
 
 온프레미스와 {{site.data.keyword.cloud_notm}} 간에 느슨하게 결합된 상호 연결을 작성하며 다음과 같은 기능을 사용할 수 있습니다.
 -	**간단한 상호 연결** – 공용 인터넷, 사설 VPN 또는 직접 링크를 포함하는 실제 연결에서 논리적 네트워크 연결을 쉽게 설정할 수 있습니다.

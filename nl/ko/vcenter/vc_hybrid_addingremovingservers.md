@@ -35,7 +35,7 @@ V2.9 릴리스부터는 클러스터가 유지보수 모드에 있는 동안 새
 ### ESXi 서버를 추가하기 전에
 {: #vc_hybrid_addingremovingservers-adding-prereq}
 
-* 가능하면 {{site.data.keyword.vmwaresolutions_full}} 콘솔을 사용하여 ESXi 서버를 추가하십시오. VMware vSphere Web Client에서 수행하는 변경사항은 {{site.data.keyword.vmwaresolutions_short}} 콘솔과 동기화되지 않습니다. 따라서 온프레미스 ESXi 서버 또는 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 관리할 수 없거나 관리하지 않을 ESXi 서버에 대해서만 ESXi 서버를 vCenter Server에 추가하십시오. 
+* 가능하면 {{site.data.keyword.vmwaresolutions_full}} 콘솔을 사용하여 ESXi 서버를 추가하십시오. VMware vSphere Web Client에서 수행하는 변경사항은 {{site.data.keyword.vmwaresolutions_short}} 콘솔과 동기화되지 않습니다. 따라서 온프레미스 ESXi 서버 또는 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 관리할 수 없거나 관리하지 않을 ESXi 서버에 대해서만 ESXi 서버를 vCenter Server에 추가하십시오.
 * vSAN 스토리지는 네 개 이상의 ESXi 서버를 필요로 합니다.
 
 ## ESXi 서버를 추가하는 프로시저
@@ -66,7 +66,7 @@ V2.9 릴리스부터는 클러스터가 유지보수 모드에 있는 동안 새
 ### ESXi 서버를 제거하기 전에
 {: #vc_hybrid_addingremovingservers-removing-prereq}
 
-* 가능하면 {{site.data.keyword.vmwaresolutions_full}} 콘솔을 사용하여 ESXi 서버를 제거하십시오. vSphere Web Client에서 수행하는 변경사항은 {{site.data.keyword.vmwaresolutions_short}} 콘솔과 동기화되지 않습니다. 따라서 온프레미스 ESXi 서버 또는 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 관리할 수 없거나 관리하지 않을 ESXi 서버에 대해서만 ESXi 서버를 vCenter Server에서 제거하십시오. 
+* 가능하면 {{site.data.keyword.vmwaresolutions_full}} 콘솔을 사용하여 ESXi 서버를 제거하십시오. vSphere Web Client에서 수행하는 변경사항은 {{site.data.keyword.vmwaresolutions_short}} 콘솔과 동기화되지 않습니다. 따라서 온프레미스 ESXi 서버 또는 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 관리할 수 없거나 관리하지 않을 ESXi 서버에 대해서만 ESXi 서버를 vCenter Server에서 제거하십시오.
 * vSAN 스토리지는 네 개 이상의 ESXi 서버를 필요로 합니다.
 * F5 on {{site.data.keyword.cloud_notm}} 또는 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스가 설치된 ESXi 서버를 제거하기 전에 VM을 호스팅하는 ESXi 서버와 다른 ESXi 서버로 F5 BIG-IP 및 FortiGate VM을 마이그레이션해야 합니다.
 * 활성 상태의 오퍼레이션으로 인해 ESXi 서버가 제거되지 않을 수 있으므로, IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 서비스가 설치된 상태에서 ESXi 서버를 제거하기 전에 활성 상태가 아닌(실패 또는 진행 중) 백업 또는 복원 오퍼레이션이 있는지 확인하십시오.

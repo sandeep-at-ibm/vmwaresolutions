@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-30"
+lastupdated: "2019-05-03"
 
 subcollection: vmware-solutions
 
@@ -40,7 +40,7 @@ Depuis la version V3.0, les serveurs Broadwell à 2 unités centrales ne peuvent
 ## Améliorations du fonctionnement du système de fichiers réseau
 {: #relnotes_v30-nfs}
 
-A partir de la version V3.0, vous pouvez ajouter ou supprimer du stockage NFS sur plusieurs clusters à la fois. Ceci s'applique à toutes les instances de vCenter Server et de vCenter Server with NSX-T.
+A compter de l'édition V3.0, vous pouvez ajouter ou retirer simultanément le stockage NFS et des serveurs ESXi sur des clusters qui sont à l'état **Prêt à l'emploi**. Par exemple, vous pouvez ajouter ou retirer un serveur ESXi dans un cluster et ajouter ou retirer le stockage NFS dans un autre cluster. Cela s'applique à toutes les instances de vCenter Server et de vCenter Server with NSX-T.
 
 ## Mises à jour des instances VMware vCenter Server
 {: #relnotes_v30-vcs}
@@ -59,7 +59,7 @@ Le logiciel Windows commandé pour les services Microsoft Active Directory (AD) 
 ### Amélioration du stockage vSAN
 {: #relnotes_v30-vcs-vsan}
 
-* Lorsque vous utilisez le stockage vSAN, le nombre de serveurs Bare Metal que vous pouvez commander peut désormais être supérieur à quatre. Ceci s'applique à toutes les instances vCenter Server, vCenter Server with Hybridity et vCenter Nerver with NSX-T.
+* Lorsque vous utilisez le stockage vSAN, le nombre de serveurs Bare Metal que vous pouvez commander peut désormais être supérieur à quatre. Cela s'applique à toutes les instances vCenter Server, vCenter Server with Hybridity et vCenter Nerver with NSX-T.
 * A partir de la version V3.0, une unité SSD M.2 est commandée avec votre instance de stockage vSAN. Vous pouvez commander jusqu'à 10 disques de capacité ou un total de 12 disques de capacité si vous sélectionnez l'option **Hautes performances avec Intel Optane**.
 
 Pour plus d'informations, voir la section *Paramètres de stockage* dans :
@@ -111,10 +111,10 @@ Vous pouvez désormais ajouter Zerto on {{site.data.keyword.cloud_notm}} sur des
 ## Documentation nouvelle et mise à jour
 
 * Une documentation est désormais disponible pour vous aider à mettre à niveau les composants {{site.data.keyword.vmwaresolutions_short}} vers VMware vSphere 6.7. Cette mise à niveau est nécessaire si vous voulez continuer de bénéficier de l'automatisation {{site.data.keyword.vmwaresolutions_short}}. Pour plus d'informations, voir [Mise à niveau du logiciel vCenter Server vSphere de VMware vSphere 6.5 à 6.7](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_vsphere_upgrade#vc_vsphere_upgrade).
-* Une documentation de référence est maintenant disponible pour vous fournir les identifiants utilisateur que {{site.data.keyword.vmwaresolutions_short}} maintient pour une utilisation par l'automatisation {{site.data.keyword.cloud_notm}}. Vous pouvez également consulter les éventuels messages qui s'affichent dans les journaux d'historique de votre instance. Pour plus d'informations, voir [ID utilisateur IBM et messages d'historique de déploiement pour les instances vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-ibm_use#ibm_use).
+* Une documentation de référence est maintenant disponible pour vous fournir les identifiants utilisateur que {{site.data.keyword.vmwaresolutions_short}} maintient pour une utilisation par l'automatisation {{site.data.keyword.cloud_notm}}. Vous pouvez également consulter les éventuels messages qui s'affichent dans les journaux d'historique de votre instance. Pour plus d'informations, voir [ID utilisateur IBM](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_user_ids) et  [Messages de l'historique d'instance](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_messages).
 * L'autorisation **Reboot/Control** a été ajoutée au tableau décrivant les autorisations requises pour le compte d'infrastructure IBM Cloud. Pour plus d'informations, voir [Autorisations pour le compte d'infrastructure {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-slaccountrequirement#slaccountrequirement-permissions).
 * Une nouvelle documentation de référence est disponible pour les API suivantes. Pour plus d'informations, voir [API reference](https://cloud.ibm.com/apidocs/vmware-solutions){:new_window}.
-  * Répertorier tous les messages d'historique pour une instance VMware vCenter Server spécifiée 
+  * Répertorier tous les messages d'historique pour une instance VMware vCenter Server spécifiée
   * Ajouter des stockages partagés à un cluster spécifié
   * Supprimer les stockages NFS d'un cluster spécifié
 

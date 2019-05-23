@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 Il diagramma del contesto di sistema definisce gli elementi chiave di un sistema, il limite del sistema e le entità che interagiscono con esso insieme alle interazioni. È un diagramma di alto livello che fornisce al lettore una vista iniziale del sistema.
 
-Figura 1. Contesto di sistema
-![Diagramma del contesto di sistema](vcsnsxt-networking.svg)
+![Diagramma del contesto di sistema](../../images/vcsnsxt-networking.svg "Diagramma del contesto di sistema")
 
 I quattro componenti principali, da una prospettiva di rete, sono i seguenti:
 - **Virtualizzazione in loco** - Un ambiente VMware ospitato presso il cliente o presso una terza parte e al momento ospita le VM che eseguono le applicazioni da modernizzare. È l'ambiente di origine per le migrazioni di VM ed è debolmente accoppiato a {{site.data.keyword.cloud}} mediante VMware HCX.

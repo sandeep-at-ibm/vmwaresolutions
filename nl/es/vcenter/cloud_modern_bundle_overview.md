@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-24"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -27,7 +27,7 @@ La prueba está diseñada para la migración de un máximo de 20 cargas de traba
 La prueba de un solo nodo para la migración y modernización de apps es solo para la prueba de concepto (POC). No ejecute cargas de trabajo de producción en este entorno. Las funciones de gestión, como la adición y eliminación de hosts y clústeres, la solicitud de servicios complementarios y la aplicación de actualizaciones, no reciben soporte.
 {:important}
 
-Para sacar el máximo provecho de la instancia de prueba de un solo nodo, puede utilizar [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf) de [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html), que le ayudarán con la migración de cargas de trabajo de VMware a {{site.data.keyword.cloud_notm}}. Además, [{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/) le puede ayudar a acelerar la modernización de aplicaciones con las prácticas nativas de la nube más avanzadas.
+Para sacar el máximo provecho de la instancia de prueba de un solo nodo, puede utilizar [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:new_window} de [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:new_window}, que le ayudarán con la migración de cargas de trabajo de VMware a {{site.data.keyword.cloud_notm}}. Además, [{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/){:new_window} le puede ayudar a acelerar la modernización de aplicaciones con las prácticas nativas de la nube más avanzadas.
 
 Esta versión de prueba está pensada para utilizarla durante un máximo de 90 días. Cuando finalice el periodo de prueba, puede suprimir este entorno y suministrar un nuevo entorno que se ajuste a sus necesidades de capacidad.
 {:note}
@@ -148,6 +148,6 @@ Private Hosted](/docs/services/vmwaresolutions/services?topic=vmware-solutions-i
 {: #cloud_modern_bundle_overview-related}
 
 * [Guía de vCenter Server e {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [Apertura de una incidencia para {{site.data.keyword.cloud_notm}} Private](https://www.ibm.com/mysupport/s/?language=en_US)
-* [Recursos de VMware HCX](https://hcx.vmware.com/#/docs)
-* [Obtención del OVA de VMware HCX](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html?hWord=N4IghgNiBcIPICMAuYCWA7DBzABEgFgKY4ASAwgBo5wBqAgiAL5A)
+* [Apertura de una incidencia para {{site.data.keyword.cloud_notm}} Private](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
+* [Recursos de VMware HCX](https://hcx.vmware.com/#/docs){:new_window}
+* [Guía de usuario de VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-26"
+lastupdated: "2019-05-01"
 
 subcollection: vmware-solutions
 
@@ -121,7 +121,7 @@ subcollection: vmware-solutions
 * 請先收集必要的授權，再安裝 {{site.data.keyword.cloud_notm}} Private Hosted 服務。這同時包括 {{site.data.keyword.cloud_notm}} Private 及 {{site.data.keyword.cloud_notm}} Automation Manager 授權。確定您的授權不僅支援起始服務部署，還支援基礎架構中的未來大小擴充。
 * 對於「正式作業就緒」環境中的 {{site.data.keyword.cloud_notm}} Private Hosted 部署，不支援每部主機 64 GB RAM。因此，您必須對 **RAM** 選取大於 64 GB 的選項。
 * 在您的環境中安裝 {{site.data.keyword.cloud_notm}} Private Hosted 服務之前，會針對環境中預設叢集的可用容量執行檢查，以確保服務元件適合。如果容量檢查未通過，則不會安裝該服務，且主控台上的服務狀態會設為**容量驗證失敗**。此外，還會顯示具有更多詳細資料的主控台訊息，並透過電子郵件通知您。若要安裝服務，您必須新增多部主機，或者透過釋放 RAM、CPU 或磁碟空間來增加預設叢集中的容量，然後在主控台中再次新增服務。之後，您可以按一下它旁邊的**刪除**圖示，來移除處於**容量驗證失敗**狀態中的現有服務。
-* 如果您想要部署其他節點，請使用 {{site.data.keyword.cloud_notm}} Private Ubuntu 範本，此範本是使用您的起始 {{site.data.keyword.cloud_notm}} Private Hosted 安裝所部署的。若要尋找範本，請在 VMware vSphere Web Client 中，移至 `cam` 資料夾下的 **VM 及範本**標籤。Ubuntu 範本的預設密碼是 `icponcloud`，建議您在使用範本之前先予以變更。
+* 如果要部署更多節點，請參閱[部署更多節點](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_ordering-deploy-nodes#icp_ordering-deploy-nodes)。
 
 ## 移除 IBM Cloud Private Hosted 時的考量
 {: #icp_overview-remove}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-04"
+lastupdated: "2019-05-09"
 
 subcollection: vmware-solutions
 
@@ -33,6 +33,16 @@ Puoi ordinare una nuova istanza con F5 on {{site.data.keyword.cloud_notm}} utili
 Puoi aggiungere il servizio F5 on {{site.data.keyword.cloud_notm}} in un'istanza esistente utilizzando uno dei seguenti metodi:
 * Dalla console {{site.data.keyword.vmwaresolutions_short}}, visualizza l'istanza per la quale vuoi aggiungere il servizio, fai clic su **Servizi** nel riquadro di navigazione a sinistra e quindi su **Aggiungi**.
 * Dal catalogo {{site.data.keyword.cloud_notm}}, seleziona **F5 on IBM Cloud**, specifica le impostazioni del servizio e seleziona **Aggiungi all'istanza esistente**.
+
+## Ordine di F5 on IBM Cloud per le istanze private
+{: #f5_ordering-private}
+
+Quando ordini F5 on {{site.data.keyword.cloud_notm}} per le istanze che non sono configurate con interfacce pubbliche, devi fornire un server proxy per completare l'installazione. Il server proxy HTTP deve essere configurato e disponibile mediante VRF (Virtual Routing and Forwarding) prima che possa iniziare l'installazione di F5 on {{site.data.keyword.cloud_notm}}.
+
+Gli endpoint BigIP VE (Virtual Edition) devono essere in grado di attivare la loro licenza prima di diventare operativi. Dopo essere stati installati, gli endpoint BigIP VE non richiedono più l'uso del server proxy.
+
+Il servizio F5 on {{site.data.keyword.cloud_notm}} non può essere aggiunto senza un server proxy funzionante al momento dell'installazione del servizio.
+{:note}
 
 ## Configurazione del servizio F5 on IBM Cloud
 {: #f5_ordering-config}

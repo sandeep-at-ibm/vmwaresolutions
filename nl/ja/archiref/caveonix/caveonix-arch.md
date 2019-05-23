@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 Caveonix RiskForesight アーキテクチャーを以下の図に示します。
 
-図 1. Caveonix RiskForesight のアーキテクチャー
-![アーキテクチャー図](caveonix-architecture.svg)
+![アーキテクチャー図](../../images/caveonix-architecture.svg "アーキテクチャー図")
 
 Caveonix RiskForesight アーキテクチャーには、以下の 4 つの層があります。
 -	Detect - Detect モジュールは、VMware スタックと多くパブリック・クラウドに完全に統合されています。 プラグインを使用することにより、RiskForesight は vCenter と NSX Manager を資産リポジトリーとして使用して、仮想マシン (VM)、ネットワーク、ネットワーク・フローに関する詳細を収集します。 Remote Collector は、ワークロード、オペレーティング・システム、アプリケーションをスキャンして、コンプライアンスと脆弱性を総合的に理解できるようにします。
@@ -40,8 +39,7 @@ Caveonix RiskForesight アーキテクチャーには、以下の 4 つの層が
 
 Caveonix RiskForesight には、ゾーンの概念があります。
 
-図 2. Caveonix RiskForesight のゾーン
-![ゾーンの図](caveonix-zones.svg)
+![ゾーン図](../../images/caveonix-zones.svg "ゾーン図")
 
 -	管理ゾーンまたはサービス・プロバイダー・ゾーン - 管理ゾーンまたはサービス・プロバイダー・ゾーンには、以下のコンポーネントが含まれます。
     - RiskForesight アプリケーション - これは複数のコンポーネントで構成されます。『アプリケーション・コンポーネント』セクションで詳しく説明します。

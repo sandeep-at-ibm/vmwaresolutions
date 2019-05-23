@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-26"
+lastupdated: "2019-05-01"
 
 subcollection: vmware-solutions
 
@@ -118,15 +118,15 @@ Tabella 5. Descrizione delle variabili nella formula 2
 ## Considerazioni quando installi IBM Cloud Private Hosted
 {: #icp_overview-install}
 
-* Ottieni le licenze richieste prima di installare il servizio {{site.data.keyword.cloud_notm}} Private Hosted. Ciò include sia la licenza di {{site.data.keyword.cloud_notm}} Private che quella di {{site.data.keyword.cloud_notm}} Automation Manager. Assicurati che le licenze supportino non solo la distribuzione iniziale del servizio, ma anche l'espansione futura della dimensione nella tua infrastruttura. 
+* Ottieni le licenze richieste prima di installare il servizio {{site.data.keyword.cloud_notm}} Private Hosted. Ciò include sia la licenza di {{site.data.keyword.cloud_notm}} Private che quella di {{site.data.keyword.cloud_notm}} Automation Manager. Assicurati che le licenze supportino non solo la distribuzione iniziale del servizio, ma anche l'espansione futura della dimensione nella tua infrastruttura.
 * Per le distribuzioni di {{site.data.keyword.cloud_notm}} Private Hosted negli ambienti pronti per la produzione, la dimensione di 64 GB di RAM per host non è supportata. Pertanto, devi selezionare un'opzione che sia superiore a 64 GB di **RAM**.
 * Prima che il servizio {{site.data.keyword.cloud_notm}} Private Hosted sia installato nel tuo ambiente, viene eseguito un controllo sulla capacità disponibile del cluster predefinito nell'ambiente per garantire che i componenti del servizio possano essere installati. Se il controllo della capacità ha esito negativo, il servizio non viene installato e il suo stato viene impostato su **Capacity Validation Failed** nella console. Inoltre, viene visualizzato un messaggio della console con maggiori dettagli e ti viene inviata una notifica per email. Per installare il servizio, devi aumentare la capacità nel tuo cluster predefinito aggiungendo più host o liberando RAM, CPU o spazio su disco e quindi aggiungere nuovamente il servizio nella console. Dopo di che, puoi rimuovere il servizio esistente nello stato **Capacity Validation Failed** facendo clic sull'icona **Delete** accanto a esso.
-* Se vuoi distribuire altri nodi, utilizza il modello {{site.data.keyword.cloud_notm}} Private Ubuntu (Ubuntu1604) distribuito con la tua installazione iniziale di {{site.data.keyword.cloud_notm}} Private Hosted. Per trovare il modello, nel client web VMware vSphere, vai alla scheda **VMs and Templates**, nella cartella `cam`. La password predefinita per il modello Ubuntu è `icponcloud` e ti consigliamo di modificarla prima di utilizzare il modello.
+* Se vuoi distribuire dei nodi aggiuntivi, vedi [Distribuzione di nodi aggiuntivi](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_ordering-deploy-nodes#icp_ordering-deploy-nodes).
 
 ## Considerazioni quando rimuovi IBM Cloud Private Hosted
 {: #icp_overview-remove}
 
-* Vengono eliminate solo le VM (virtual machine) distribuite durante l'installazione iniziale del servizio {{site.data.keyword.cloud_notm}} Private Hosted. Tutti i nodi distribuiti dopo l'installazione non verranno eliminati. 
+* Vengono eliminate solo le VM (virtual machine) distribuite durante l'installazione iniziale del servizio {{site.data.keyword.cloud_notm}} Private Hosted. Tutti i nodi distribuiti dopo l'installazione non verranno eliminati.
 * {{site.data.keyword.cloud_notm}} eliminerà la VXLAN, il DLR e il Gateway edge creati durante la distribuzione iniziale di {{site.data.keyword.cloud_notm}} Private Hosted. Le VM che hai distribuito su VXLAN perderanno la connettività una volta avviata la rimozione del servizio {{site.data.keyword.cloud_notm}} Private Hosted.
 
 ## Link correlati

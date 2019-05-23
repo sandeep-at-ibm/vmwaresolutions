@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-04"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -50,9 +50,7 @@ subcollection: vmware-solutions
 
 下图描绘了 vCenter Server 多站点部署的总体视图。
 
-图 1. vCenter Server 多站点部署
-
-![vCenter Server 多站点部署](../vcenter/multisite-hub-spoke.svg "vCenter Server 多站点部署")
+![vCenter Server 多站点部署](../images/multisite-hub-spoke.svg "vCenter Server 多站点部署")
 
 该模型包含以下层：
 
@@ -72,4 +70,3 @@ subcollection: vmware-solutions
 * [将主要角色分配给 NSX Manager](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/com.vmware.nsx-cross-vcenter-install.doc/GUID-44E8AE16-BA3F-4DD9-B582-FC1E137E6CFC.html){:new_window}
 * [配置辅助 NSX Manager](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-9E48BC57-15E3-49C7-8BC5-F94ED8918BBE.html){:new_window}
 * [Microsoft Active Directory Trusts supported with VMware vCenter Single Sign-On](https://kb.vmware.com/s/article/2064250){:new_window}
-* [在 {{site.data.keyword.cloud_notm}} 中安全连接专用 VMware 工作负载](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}

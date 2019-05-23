@@ -245,8 +245,12 @@ IBM Cloud for VMware Solutions
 
     {: .navgroup id="reference"}
     vmonic/at-events.md
-    vmonic/ibm_use.md
-    [API reference](https://cloud.ibm.com/apidocs/vmware-solutions)
+    [Référence d'API](https://cloud.ibm.com/apidocs/vmware-solutions)
+
+    {: .topicgroup}
+    Audit
+        vmonic/audit_user_ids.md
+        vmonic/audit_messages.md
 
     {: .topicgroup}
     Architecture IBM Cloud for VMware Solutions (avec NSX-V et NSX-T)

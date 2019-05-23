@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-04"
+lastupdated: "2019-05-09"
 
 subcollection: vmware-solutions
 
@@ -33,6 +33,13 @@ Vous pouvez commander une nouvelle instance avec FortiGate Virtual Appliance on 
 Vous pouvez ajouter le service FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} dans une instance existante en utilisant l'une des méthodes suivantes :
 * Depuis la console {{site.data.keyword.vmwaresolutions_short}}, affichez l'instance pour laquelle vous souhaitez ajouter le service, cliquez sur **Services** dans le panneau de navigation de gauche, puis cliquez sur **Ajouter**.
 * Depuis le catalogue {{site.data.keyword.cloud_notm}}, sélectionnez **FortiGate Virtual Appliance on IBM Cloud**, spécifiez les paramètres de service et sélectionnez **Ajouter à une instance existante**.
+
+## Commande de FortiGate Virtual Appliance on IBM Cloud pour des instances privées
+{: #fortinetvm_ordering-private}
+
+Lorsque vous commandez FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} pour des instances qui ne sont pas configurées avec des interfaces publiques, vous devez fournir un serveur proxy afin d'achever l'installation. Le serveur proxy HTTP doit être configuré et disponible via Virtual Routing and Forwarding (VRF) pour que l'installation de Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}} puisse démarrer. 
+
+Pour garantir une opération sans interruption, FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} doit avoir un accès permanent au serveur de licences Fortigate via Internet. 
 
 ## Configuration du service FortiGate Virtual Appliance on IBM Cloud
 {: #fortinetvm_ordering-config}

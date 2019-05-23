@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-09"
 
 subcollection: vmware-solutions
 
@@ -30,30 +30,31 @@ Utilizza Cloud Automation Manager Service Composer per visualizzare i servizi cl
 
 Il seguente diagramma è un esempio di una distribuzione {{site.data.keyword.icpfull_notm}} e CAM con l'infrastruttura {{site.data.keyword.cloud_notm}}, con connessioni al vCenter in loco e {{site.data.keyword.containerlong_notm}} distribuito su {{site.data.keyword.cloud_notm}}. Gli utenti possono distribuire VM (Virtual Machine) in locale e VM in un'istanza vCenter Server e contenitori al cluster {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}}.
 
-Figura 1. Gestione cloud dal lato cloud
+![Sul cloud - gestione cloud](../../images/vcsicp-oncloud-cloudmgt.svg "Sul cloud - gestione cloud")
 
-![Sul cloud - gestione cloud](vcsicp-oncloud-cloudmgt.svg)
+Nel diagramma, CAM crea in modo logico le connessioni cloud ai vCenter,
+ai provider cloud e agli ambienti {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}}. I cluster {{site.data.keyword.icpfull_notm}} devono essere distribuiti ad ogni ambiente cloud di data center, con MCM che fornisce il meccanismo per collegare i cluster {{site.data.keyword.icpfull_notm}} in una singola vista di gestione.
 
-Nel diagramma, CAM crea in modo logico connessioni cloud ai vCenter, ai provider cloud e agli ambienti {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}}. I cluster {{site.data.keyword.icpfull_notm}} devono essere distribuiti ad ogni ambiente cloud di data center, con MCM che fornisce il meccanismo per collegare i cluster {{site.data.keyword.icpfull_notm}} in una singola vista di gestione.
+Puoi distribuire {{site.data.keyword.icpfull_notm}} con componenti NSX-V o NSX-T. {{site.data.keyword.icpfull_notm}} con NSX-V
+consente alle VM {{site.data.keyword.icpfull_notm}} l'esecuzione sulla rete VXLAN e di utilizzare
+la rete interna Kubernetes Calico.
 
-Puoi distribuire {{site.data.keyword.icpfull_notm}} con componenti NSX-V o NSX-T. {{site.data.keyword.icpfull_notm}} con NSX-V, consente alle VM {{site.data.keyword.icpfull_notm}} l'esecuzione sulla rete VXLAN e di utilizzare la rete interna Kubernetes Calico.
-
-{{site.data.keyword.icpfull_notm}} con NSX-T, consente agli utenti di controllare e configurare la rete, la sottorete, le politiche dall'IU centrale (NSX-T Manager). Consulta la [Guida di rete di vCenter Server](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro) per le differenze tra NSX-V e NSX-T.
+{{site.data.keyword.icpfull_notm}} con NSX-T consente agli utenti di controllare e configurare la rete,
+la sottorete e le politiche dall'IU centrale (NSX-T Manager). Consulta la [Guida di rete di vCenter Server](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro) per le differenze tra NSX-V e NSX-T.
 
 ## Piattaforma di gestione cloud in loco
 {: #vcsicp-arch-overview-on-premises-platform}
 
 Il seguente diagramma è un esempio di una distribuzione {{site.data.keyword.icpfull_notm}} e CAM nell'infrastruttura in loco, con connessioni al vCenter e {{site.data.keyword.containerlong_notm}} distribuito su {{site.data.keyword.cloud_notm}}. Gli utenti possono distribuire VM e contenitori in loco, VM nelle istanze vCenter Server e contenitori al cluster {{site.data.keyword.containerlong_notm}}.
 
-Figura 2. Gestione cloud dal lato locale
-![Gestione cloud in loco](vcsicp-onprem-cloudmgt.svg)
+![Gestione cloud in loco](../../images/vcsicp-onprem-cloudmgt.svg "Gestione cloud in loco")
 
 La VPN strongSwan viene utilizzata per stabilire la connettività con i contenitori {{site.data.keyword.containerlong_notm}} distribuiti. La VPN strongSwan potrebbe essere sostituita con la connettività Direct Link.
 
-Nel diagramma, CAM crea in modo logico connessioni cloud ai vCenter, ai provider cloud e agli ambienti {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}}. I cluster {{site.data.keyword.icpfull_notm}} devono essere distribuiti ad ogni ambiente cloud di data center, con MCM che fornisce il meccanismo per collegare i cluster {{site.data.keyword.icpfull_notm}} in una singola vista di gestione.
+Nel diagramma, CAM crea in modo logico le connessioni cloud ai vCenter,
+ai provider cloud e agli ambienti {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}}. I cluster {{site.data.keyword.icpfull_notm}} devono essere distribuiti ad ogni ambiente cloud di data center, con MCM che fornisce il meccanismo per collegare i cluster {{site.data.keyword.icpfull_notm}} in una singola vista di gestione.
 
 ## Link correlati
 {: #vcsicp-arch-overview-related}
 
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

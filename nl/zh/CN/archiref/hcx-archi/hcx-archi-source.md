@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -123,8 +123,7 @@ HCX Management Enterprise OVA 部署在源环境中，并注册为管理源 vSph
 每个 vCenter 只能部署一个 HCX。此限制适用于链接方式：HCX Manager 设备仅安装在主 vCenter 中。HCX Manager 在链接方式下最多支持注册 5 个 vCenter。
 {:note}
 
-图 1. 源 Hybrid Cloud Services
-![源 Hybrid Cloud Services](source_hybrid_cloud_services.svg)
+![源 Hybrid Cloud Services](../../images/source_hybrid_cloud_services.svg "源 Hybrid Cloud Services")
 
 ### HCX 虚拟设备
 {: #hcx-archi-source-hcxva}
@@ -153,8 +152,7 @@ HCX 使用高强度加密来引导与 IBM Cloud 的站点到站点连接。通�
 
 云网关还采用了 vSphere 复制技术，用于执行双向迁移。
 
-图 2. 源云网关
-![源云网关](source_cloud_gateway.svg)
+![源 Cloud Gateway](../../images/source_cloud_gateway.svg "源 Cloud Gateway")
 
 ### WAN Optimizer
 {: #hcx-archi-source-wan-opt}
@@ -163,8 +161,7 @@ HCX 还提供了软件定义的 WAN 优化。WAN 优化设备是强烈建议使�
 
 虚拟机迁移依赖于云网关和 WAN 优化设备的组合，以实现 vSphere 内部部署和 IBM Cloud 之间无与伦比的移动性。
 
-图 3. 源 WAN Optimizer
-![源 WAN Optimizer](source_wan_optimizer.svg)
+![源 WAN Optimizer](../../images/source_wan_optimizer.svg "源 WAN Optimizer")
 
 ### 第 2 层集中器
 {: #hcx-archi-source-layer-2-conc}
@@ -175,8 +172,7 @@ Network Extension 服务由第 2 层集中器 (L2C) 提供。它将第 2 层网�
 * 内部中继接口：使用映射到 IBM Cloud 中对应延伸网络的转换网桥，处理扩展网络的内部部署虚拟机流量。
 * 上行链路接口：HCX 使用此接口发送封装的 IBM Cloud 进出覆盖流量。应用程序数据通过此接口进行传输。
 
-图 4. 源 L2 集中器
-![源 L2 集中器](source_l2_concentrator.svg)
+![源 L2 Concentrator](../../images/source_l2_concentrator.svg "源 L2 Concentrator")
 
 ### 仅迁移
 {: #hcx-archi-source-mig-only}
@@ -233,8 +229,7 @@ R1 是 N1-b 的缺省网关，因此，N1-b 必须返回到 R1，以通过 R2 �
 
 也就是说，R1 可以使用路由通过 R2 访问特定的虚拟机，而不使用本地连接的扩展网络。启用邻近路由后，R2 完全拥有用于访问虚拟机的其他网络的路径。
 
-图 5. 使用邻近路由的非对称路由解决方案
-![使用邻近路由的非对称路由解决方案](asymmetric_routing_proximity_routing_solution.svg)
+![使用邻近路由的非对称路由解决方案](../../images/asymmetric_routing_proximity_routing_solution.svg "使用邻近路由的非对称路由解决方案")
 
 ### MAC 地址保留
 {: #hcx-archi-source-mac-addr-ret}

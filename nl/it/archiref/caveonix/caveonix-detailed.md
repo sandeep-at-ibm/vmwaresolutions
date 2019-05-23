@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-05"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,8 @@ subcollection: vmware-solutions
 
 Il diagramma e le descrizioni di seguito riportati forniscono informazioni sui componenti dell'applicazione RiskForesight.
 
-Figura 1. Componenti dell'applicazione
-![Componenti dell'applicazione](caveonix-app-components.svg)
+![Componenti dell'applicazione](../../images/caveonix-app-components.svg "Componenti dell'applicazione")
+
 
 -	GUI (Graphical User Interface) - interfaccia web che puoi usare per accedere all'applicazione RiskForesight.
 -	Raccoglitore centrale - raccoglie diversi tipi di payload dei dati che provengono dai plugin e li rende disponibili nell'archivio di messaggistica. RiskForesight supporta i seguenti tipi di payload:
@@ -61,8 +61,7 @@ Tabella 1. Porte e protocolli
 
 Il seguente diagramma mostra la topologia di rete con la subnet privata portatile Caveonix che è associata alla VLAN Privata A. Sei responsabile della gestione dello spazio di indirizzo IP per questa subnet in modo da poter eseguire manualmente il ridimensionamento incrementale dal modello di distribuzione “tutto-in-uno” a quello completamente distribuito, passando per il modello parzialmente distribuito come necessario.
 
-Figura 2. Diagramma di rete
-![Diagramma di rete](caveonix-network.svg)
+![Diagramma di rete](../../images/caveonix-network.svg "Diagramma di rete")
 
 La subnet IP e le assegnazioni VLAN sono descritte nella seguente tabella.
 

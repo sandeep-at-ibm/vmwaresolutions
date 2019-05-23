@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -17,8 +17,7 @@ subcollection: vmware-solutions
 ## Componenti di VMware vCenter Server on IBM Cloud
 {: #vcscar-arch-overview-solution-vcs-comp}
 
-Figura 1. Diagramma dell'ambiente vCenter Server
-![Ambiente vCenter Server](vcscar-vcs.svg)
+![Ambiente vCenter Server](../../images/vcscar-vcs.svg "Ambiente vCenter Server")
 
 ### Controller servizio piattaforma
 {: #vcscar-arch-overview-solution-psc}
@@ -76,8 +75,7 @@ dei contenitori che include l'orchestrazione del contenitore Kubernetes, un
 repository di immagini privato, una console di gestione e i
 framework di monitoraggio.
 
-Figura 2. Distribuzione {{site.data.keyword.icpfull_notm}} virtuale con vCenter Server
-![Distribuzione {{site.data.keyword.icpfull_notm}} virtuale con VCS](vcscar-icp.svg)
+![Virtual {{site.data.keyword.icpfull_notm}} - distribuzione con vCenter Server](../../images/vcscar-icp.svg "Virtual {{site.data.keyword.icpfull_notm}} - distribuzione con vCenter Server")
 
 ### Nodo di avvio
 {: #vcscar-arch-overview-solution-boot-node}
@@ -142,8 +140,7 @@ CAM ({{site.data.keyword.cloud_notm}} Automation Manager) è una piattaforma di 
 che viene eseguita su {{site.data.keyword.icpfull_notm}} che aiuta gli sviluppatori
 e gli amministratori a soddisfare le richieste di business.
 
-Figura 3. Riferimento del componente CAM
-![Riferimento del componente CAM](vcscar-cam-components.svg)
+![Riferimento del componente CAM](../../images/vcscar-cam-components.svg "Riferimento del componente CAM")
 
 ### Proxy CAM
 {: #vcscar-arch-overview-solution-cam-proxy}

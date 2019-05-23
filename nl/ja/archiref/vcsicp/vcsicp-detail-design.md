@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-09"
 
 subcollection: vmware-solutions
 
@@ -19,9 +19,7 @@ subcollection: vmware-solutions
 
 共通サービスは、クラウド管理プラットフォームの他のサービスによって使用されるサービスを提供します。 共通サービスには、ID およびアクセスのサービス、ドメイン・ネーム・サービス、NTP サービスなどがあります。
 
-図 1. {{site.data.keyword.icpfull_notm}} の共通サービス
-
-![{{site.data.keyword.icpfull_notm}} 共通サービス](vcsicp-icp-commonservices.svg)
+![{{site.data.keyword.icpfull_notm}} 共通サービス](../../images/vcsicp-icp-commonservices.svg "{{site.data.keyword.icpfull_notm}} 共通サービス")
 
 ### ID およびアクセス・サービス
 {: #vcsicp-detail-design-identity}
@@ -50,9 +48,7 @@ VCS デプロイメントに含まれる NSX-V ネットワーキングを使用
 
 {{site.data.keyword.icpfull_notm}} は Kubernetes のデフォルトの Calico ネットワーキング・スタックと共にデプロイされ、このネットワーキング・スタックがクラスター内のネットワーク分離に使用されます。
 
-図 2. NSX-V を使用する場合の {{site.data.keyword.icpfull_notm}} のネットワーキング
-
-![NSX-V を使用する場合の {{site.data.keyword.icpfull_notm}} のネットワーキング](vcsicp-nsxv-networking.svg)
+![NSX-V を使用する場合の {{site.data.keyword.icpfull_notm}} のネットワーキング](../../images/vcsicp-nsxv-networking.svg "NSX-V を使用する場合の {{site.data.keyword.icpfull_notm}} のネットワーキング")
 
 詳しくは、[vCenter Server ネットワーキング・ガイド](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro)を参照してください。
 
@@ -63,9 +59,7 @@ NSX-T は、vSphere 環境の内部と外部のどちらで実行されていよ
 
 {{site.data.keyword.icpfull_notm}} には Calico ネットワーキングを NSX-T インスタンスに置き換えるオプションがあるので、{{site.data.keyword.icpfull_notm}} はネットワーキングとセキュリティーを管理するための単一のロケーションになります。
 
-図 3. NSX-T を使用する場合の {{site.data.keyword.icpfull_notm}} のネットワーキング
-
-![NSX-V を使用する場合の {{site.data.keyword.icpfull_notm}} のネットワーキング](vcsicp-icp-nsxt-networking.svg)
+![NSX-T を使用する場合の {{site.data.keyword.icpfull_notm}} のネットワーキング](../../images/vcsicp-icp-nsxt-networking.svg "NSX-T を使用する場合の {{site.data.keyword.icpfull_notm}} のネットワーキング")
 
 ## 関連リンク
 {: #vcsicp-detail-design-related}

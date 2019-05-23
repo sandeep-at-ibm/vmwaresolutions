@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-13"
 
 subcollection: vmware-solutions
 
@@ -63,8 +63,7 @@ NSX-T에 대한 이 디자인을 구현하기 위해 이해하고 있어야 할 
 
 다음 그림에서는 이 아키텍처의 기타 컴포넌트와 연관된 NSX Manager-제어기의 배치를 보여줍니다.
 
-그림 1. NSX-T Manager 네트워크 개요
-![NSX-T Manager 네트워크 개요](vcsv4radiagrams-ra-vcs-nsx-overview.svg)
+![NSX-T Manager 네트워크 개요](../../images/vcsv4radiagrams-ra-vcs-nsx-overview.svg "NSX-T Manager 네트워크 개요")
 
 ## 배치 고려사항
 {: #nsx-t-design-deployment}
@@ -175,11 +174,9 @@ NSX-T 논리 스위치는 기본 하드웨어에서 완전히 분리되는 가�
 
 이 디자인 내에서 단일 가상 에지 클러스터는 관리 및 고객 워크로드의 사용을 위해 프로비저닝됩니다. 가상 에지 클러스터는 T0 게이트웨이의 다중 인스턴스를 수용할 수 있습니다. 앞에서 설명한 대로, 다중 T0 에지 게이트웨이 인스턴스는 자체 라우팅 테이블을 포함하여 단일 에지 클러스터에서 인스턴스화될 수 있습니다. NSX-T Edge 클러스터의 기능 컴포넌트를 보여주는 다음 그림을 참조하십시오.
 
-그림 2. T0 대 T1 스케일의 NSX-T Edge 클러스터 예
-![T0 - T1 스케일의 NSX-T Edge 클러스터 예](vcsv4radiagrams-ra-nsx-t-edge-cluster-t0-to-t1-scale.svg)
+![T0 - T1 스케일의 NSX-T Edge 클러스터 예](../../images/vcsv4radiagrams-ra-nsx-t-edge-cluster-t0-to-t1-scale.svg "T0 - T1 스케일의 NSX-T Edge 클러스터 예")
 
-그림 3. 관리 T0 게이트웨이</br>
-![관리 T0 게이트웨이](vcsv4radiagrams-topology-0.svg)
+![관리 T0 게이트웨이](../../images/vcsv4radiagrams-topology-0.svg "관리 T0 게이트웨이")
 
 #### 티어 0 논리 게이트웨이
 {: #nsx-t-design-tier-0}
@@ -201,8 +198,7 @@ NSX-T 티어 1 논리 게이트웨이에는 NSX-T 데이터 센터 논리 스위
 
 T1 대 T0 게이트웨이 워크로드 - 가상 에지 클러스터
 
-그림 4. NSX-T 배치 토폴로지 가상 T0 에지 게이트웨이
-![NSX-T 배치 토폴로지 가상 T0 에지 게이트웨이](vcsv4radiagrams-topology-1.svg)
+![NSX-T 배치 토폴로지 가상 T0 에지 게이트웨이](../../images/vcsv4radiagrams-topology-1.svg "NSX-T 배치 토폴로지 가상 T0 에지 게이트웨이")
 
 IC4V 배치 토폴로지 1은 기본적으로 NSX-V DLR 및 에지 게이트웨이로 배치된 동일한 토폴로지입니다. NSX-T를 사용하면 T1과 T0 간의 동적 라우팅 프로토콜 구성이 없습니다. RFC-1891 IP 주소 공간은 워크로드 오버레이 네트워크와 전송 오버레이 네트워크에 사용됩니다. 고객 사설 및 공용 포터블 IP 공간은 고객 사용을 위해 지정됩니다. 고객이 지정한 {{site.data.keyword.cloud_notm}} 사설 및 공용 포터블 IP 공간은 고객 사용을 위해 T0에 지정됩니다.
 
@@ -210,8 +206,7 @@ IC4V 배치 토폴로지 1은 기본적으로 NSX-V DLR 및 에지 게이트웨�
 
 T1 대 T0 게이트웨이에 대한 워크로드 - 실제 에지 클러스터:
 
-그림 5. NSX-T 배치 토폴로지 실제 T0 에지 게이트웨이
-![NSX-T 배치 토폴로지 실제 T0 에지 게이트웨이](vcsv4radiagrams-topology-2.svg)
+![NSX-T 배치 토폴로지 실제 T0 에지 게이트웨이](../../images/vcsv4radiagrams-ra-vcs-nsx-overview.svg "NSX-T 배치 토폴로지 실제 T0 에지 게이트웨이")
 
 배치된 토폴로지 2는 VM 기반 에지 클러스터를 Red Hat Server가 실행되는 베어메탈 서버 쌍으로 대체하는 예외와 유사합니다. 고객이 지정한 {{site.data.keyword.cloud_notm}} 사설 및 공용 포터블 IP 공간은 고객 사용을 위해 T0에 지정됩니다. 이 디자인에는 vCenter Server 인스턴스가 사용 중지되고 삭제되는 경우 이 IP 범위를 삭제하지 않는 옵션이 있습니다.
 
@@ -219,8 +214,7 @@ T1 대 T0 게이트웨이에 대한 워크로드 - 실제 에지 클러스터:
 
 ICP 대 T0 게이트웨이가 있는 워크로드 - 실제 에지 클러스터:
 
-그림 6. ICP NSX-T 통합 및 가상 T0 에지 게이트웨이가 있는 NSX-T 배치 토폴로지
-![ICP NSX-T 통합 및 가상 TO 에지 게이트웨이가 있는 NSX-T 배치 토폴로지](vcsv4radiagrams-topology-3.svg)
+![ICP NSX-T 통합 및 가상 T0 에지 게이트웨이가 있는 NSX-T 배치 토폴로지](../../images/vcsv4radiagrams-topology-3.svg "ICP NSX-T 통합 및 가상 T0 에지 게이트웨이가 있는 NSX-T 배치 토폴로지")
 
 배치 토폴로지 3에는 ICP 배치 내의 기본 네트워킹 스택인 Calico 대신 NSX-T 통합을 특징으로 하는 ICP 배치가 추가된 토폴로지 1이 포함됩니다. 고객은 ICP 내의 추가 컨테이너 이름 공간을 프로비저닝할 수 있으며, 이를 통해 각 네임스페이스마다 논리 스위치, IP 서브넷 및 T1 게이트웨이 인스턴스의 작성이 자동화됩니다.
 

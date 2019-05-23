@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -14,8 +14,7 @@ subcollection: vmware-solutions
 # Préface
 {: #vcscar-preface}
 
-Figure 1. Un langage de notre propre invention
-![Un langage de notre propre invention](vcscar-alood.svg)
+![Un langage de notre propre invention](../../images/vcscar-alood.svg "Un langage de notre propre invention")
 
 ## Présentation du langage relatif au skateboard
 {: #vcscar-preface-intro}

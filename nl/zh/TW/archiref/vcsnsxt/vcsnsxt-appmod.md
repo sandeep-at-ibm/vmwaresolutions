@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 下圖顯示 Acme Skateboards 所部署的應用程式現代化參照架構，在此系列文件中會有深入說明。
 
-圖 1. 架構概觀
-![架構概觀圖](vcsnsxt-aod.svg)
+![架構概觀圖](../../images/vcsnsxt-aod.svg "架構概觀圖")
 
 此混合式架構可讓 Acme Skateboards 執行下列作業：
 - 以極少的關閉時間或不需要關閉時間，即可將 VMware 虛擬機器 (VM) 從內部部署移轉到 {{site.data.keyword.cloud}}，且不需要重新配置應用程式。

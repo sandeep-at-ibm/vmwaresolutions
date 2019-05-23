@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-25"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 Perfeccionar Stock Trader no es un proceso de un solo paso. Para Todd y Jane, se trata de un proceso iterativo. En la siguiente figura verá que Jane añade el servicio Watson Tone Analyzer y una regla de nivel de fidelidad utilizando el centro de decisiones de ODM. Los elementos siguientes destacan cómo se ha perfeccionado Stock Trader.
 
-Figura 1. Perfeccionamiento de Stock Trader
-![Resultados de la iteración de perfeccionamiento de Stock Trader](vcscontent-enriched.svg)
+![Resultados de la iteración de la mejora de Stock Trader](../../images/vcscontent-enriched.svg "Resultados de la iteración de la mejora de Stock Trader")
 
 ## AI Watson Tone Analyzer
 {: #vcscontent-aianalytics-ai-watson}

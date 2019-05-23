@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -14,8 +14,7 @@ subcollection: vmware-solutions
 # 前書き
 {: #vcscar-preface}
 
-図 1. 独自に考案した言語
-![独自に考案した言語](vcscar-alood.svg)
+![独自に考案した言語](../../images/vcscar-alood.svg "独自に考案した言語")
 
 ## スケートボード言語の概要
 {: #vcscar-preface-intro}

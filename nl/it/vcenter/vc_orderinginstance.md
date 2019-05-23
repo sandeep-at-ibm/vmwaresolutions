@@ -141,7 +141,7 @@ Tabella 3. Opzioni per Broadwell {{site.data.keyword.baremetal_short}}
 ### Numero di server Bare Metal
 {: #vc_orderinginstance-bare-metal-number}
 
-* Tutti i server che ordini hanno la stessa configurazione. 
+* Tutti i server che ordini hanno la stessa configurazione.
 * Se intendi utilizzare l'archiviazione vSAN, puoi ordinare da 4 a 20 server.
 * Se intendi utilizzare l'archiviazione NFS, puoi ordinare da 2 a 20 server. Tuttavia, per i carichi di lavoro di produzione, ti consigliamo un numero minimo di 3 server. Per ulteriori informazioni, vedi [Un'istanza vCenter Server a due nodi è altamente disponibile?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-).
 
@@ -159,7 +159,7 @@ Per le istanze V2.8 e successive, puoi aggiungere delle condivisioni di archivia
 vSAN è disponibile solo per la configurazione Bare Metal **Skylake** e **Broadwell**. Specifica le seguenti opzioni vSAN:
 * **Tipo e dimensioni del disco per i dischi vSAN**: seleziona un'opzione per i dischi di capacità di cui hai bisogno.
 * **Numero di dischi vSAN**: specifica il numero di dischi di capacità che vuoi aggiungere.
-* Se vuoi aggiungere capacità oltre il limite di 10 dischi, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 12 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS. 
+* Se vuoi aggiungere capacità oltre il limite di 10 dischi, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 12 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS.
 
   L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i modelli di CPU Skylake.
   {:note}
@@ -238,7 +238,7 @@ La lunghezza massima del nome di dominio completo (FQDN) per gli host e le VM (V
 Le impostazioni di abilitazione della scheda di interfaccia di rete (NIC) si basano sulla tua selezione di **Rete pubblica e privata** o **Solo rete privata**.
 
 Se selezioni l'opzione **Solo rete privata**:
-* Non viene eseguito il provisioning dei Gateway dei servizi edge (ESG) VMware NSX (né degli ESG del servizio di gestione né di quelli gestiti dal cliente). 
+* Non viene eseguito il provisioning dei Gateway dei servizi edge (ESG) VMware NSX (né degli ESG del servizio di gestione né di quelli gestiti dal cliente).
 * I seguenti servizi aggiuntivi, che richiedono NIC pubbliche, non sono disponibili:
   * F5 on {{site.data.keyword.cloud_notm}}
   * Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}

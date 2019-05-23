@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-25"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 Stock Trader 강화는 일회성 단계가 아닙니다. Todd와 Jane에게 이 작업은 반복 프로세스입니다. 다음 그림에서는 Jane이 ODM 의사결정 센터를 사용하여 Watson Tone Analyzer 서비스와 로열티 레벨 규칙을 추가했습니다. 다음 항목은 Stock Trader가 강화된 방법을 강조표시합니다.
 
-그림 1. Stock Trader 추가 강화
-![Stock Trader 강화 반복 결과](vcscontent-enriched.svg)
+![Stock Trader enrichment 강화 반복 결과](../../images/vcscontent-enriched.svg "Stock Trader 강화 반복 결과")
 
 ## AI Watson Tone Analyzer
 {: #vcscontent-aianalytics-ai-watson}

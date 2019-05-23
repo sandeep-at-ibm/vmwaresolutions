@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -24,8 +24,7 @@ vCenter Server 인스턴스와
 {{site.data.keyword.cloud_notm}} VMware 대상 사이트의 가상 머신으로
 배치되는 vCenter Server with Hybridity Bundle 컴포넌트를 사용하면 피어 온프레미스 소스 사이트에 설치되는 HCX 컴포넌트와 연결할 수 있습니다.
 
-그림 1. vCenter Server with Hybridity Bundle
-![vCenter Server with Hybridity Bundle](vcscontent-hcx.svg)
+![vCenter Server with Hybridity Bundle](../../images/vcscontent-hcx.svg "vCenter Server with Hybridity Bundle")
 
 Hybridity는 온프레미스와
 {{site.data.keyword.cloud_notm}} 사이에 느슨하게 결합된 상호 연결을 만들고 다음 기능을 사용할 수 있게 합니다.

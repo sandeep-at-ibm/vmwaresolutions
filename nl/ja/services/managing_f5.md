@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-05-01"
 
 subcollection: vmware-solutions
 
@@ -27,4 +27,4 @@ F5 on {{site.data.keyword.cloud}} サービスを管理するには、F5 on {{si
 * [F5 on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations)
 * [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [よくある質問](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [F5 Web サイト](https://f5.com/){:new_window}
+* [F5 Web サイト](https://www.f5.com/){:new_window}

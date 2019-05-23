@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -130,13 +130,11 @@ Los dispositivos concentradores de capa 2 (L2C) permiten la extensión de una re
 
 En esta sección se describe el diseño de los componentes de HCX en IBM Cloud y en el cliente local. En este diseño, la arquitectura especifica un modelo de estrella ("hub-and-spoke") entre el entorno de origen e IBM Cloud. Por lo tanto, la propiedad de origen sirve como concentrador con conexiones a distintos entornos de IBM Cloud, tal como se muestra en la figura siguiente.
 
-Figura 1. HCX con un solo origen
-![HCX con un solo origen](hcx_single_source.svg)
+![HCX con un único origen](../../images/cloudfoundation_hybrid_cloud_services.svg "HCX con un único origen")
 
 El origen se puede colocar también en el entorno de IBM Cloud; los radios siempre son despliegues de nube en este diseño, tal como se muestra en la figura siguiente.
 
-Figura 2. HCX con varios orígenes
-![HCX con varios orígenes](hcx_multiple_sources.svg)
+![HCX con varios orígenes](../../images/hcx_multiple_sources.svg "HCX con varios orígenes")
 
 ### Visión general del uso
 {: #hcx-archi-overview-usage-ovw}

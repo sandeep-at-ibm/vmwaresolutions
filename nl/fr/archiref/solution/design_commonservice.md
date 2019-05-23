@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -20,8 +20,7 @@ subcollection: vmware-solutions
 
 Les services communs fournissent les services qui sont utilisés par d'autres services de la plateforme de gestion du cloud. Les services communs de la solution comprennent des services d'identité et d'accès, des services de nom de domaine, des services NTP, des services SMTP et des services d'autorité de certification.
 
-Figure 1. Services communs</br>
-![Services communs](vcsv4radiagrams-ra-commonservices.svg)
+![Services communs](../../images/vcsv4radiagrams-ra-commonservices.svg "Services communs")
 
 ## Services d'identité et d'accès
 {: #design_commonservice-identity-access}
@@ -59,15 +58,15 @@ Dans cette conception, les services de noms de domaine (DNS) concernent uniqueme
 Le déploiement vCenter Server utilise les instances de serveur virtuel AD déployées comme serveurs DNS pour l'instance. Tous les composants
 déployés (vCenter avec contrôleur PSC intégré, NSX, hôtes ESXi) sont configurés pour pointer vers le serveur AD en tant que serveur DNS par défaut. Vous pouvez personnaliser la configuration
 de zone DNS si cela n'interfère pas avec la configuration des composants déployés.
-- Cette conception intègre les services DNS sur les instances de serveur virtuel AD dans la configuration suivante :
-- La structure de domaine est spécifiée par l'utilisateur. Le nom de domaine peut comporter un nombre quelconque de niveaux, jusqu'au nombre maximum pouvant être géré par les composants vCenter Server, en garantissant que le niveau le plus bas est le sous-domaine de l'instance.
-    - Le nom de domaine DNS que vous spécifiez est utilisé comme nom de domaine racine de forêt AD du vCenter Server déployé. Par exemple, si le nom de domaine DNS est cloud.ibm.com, la racine de forêt de domaine AD est cloud.ibm.com. Le domaine DNS et le domaine AD sont identiques dans toutes les instances fédérées de vCenter Server.
-    - Sélectionnez un nom supplémentaire comme sous-domaine d'instance vCenter Server. Ce nom de sous-domaine doit être unique dans toutes les instances vCenter Server liées.
-- Les serveurs DNS AD sont configurés comme faisant autorité pour le domaine et l'espace de sous-domaine DNS.
-- Les serveurs DNS AD sont configurés pour pointer vers les serveurs DNS {{site.data.keyword.cloud_notm}} pour toutes les autres zones.
-- Toutes les régions de cloud secondaires intégrées à la première région de cloud ou à la région de cloud cible déployée doivent utiliser la même structure de nom DNS au-dessus du sous-domaine.
-- Déployez éventuellement des serveurs DNS redondants dans le cluster vCenter Server. Deux serveurs AD/DNS sans licence sont configurés. C'est à l'utilisateur de fournir les licences des systèmes d'exploitation Windows pour ces serveurs.
-- Lorsqu'un seul site est mis à disposition avec un seul serveur AD/DNS, tous les composants vCenter Server configurés doivent avoir UNIQUEMENT cette seule adresse IP comme entrée DNS.
+
+Cette conception intègre les services DNS sur les instances de serveur virtuel AD dans la configuration suivante :
+* La structure de domaine est spécifiée par l'utilisateur.
+* Le nom de domaine peut comporter un nombre quelconque de niveaux, jusqu'au nombre maximum pouvant être géré par les composants vCenter Server, en garantissant que le niveau le plus bas est le sous-domaine de l'instance.
+* Les serveurs AD/DNS sont configurés comme faisant autorité pour le domaine et l'espace de sous-domaine DNS.
+* Les serveurs AD/DNS sont configurés pour pointer vers les serveurs DNS {{site.data.keyword.cloud_notm}} pour toutes les autres zones.
+* Toutes les régions de cloud secondaires intégrées à la première région de cloud ou à la région de cloud cible déployée doivent utiliser la même structure de nom DNS au-dessus du sous-domaine.
+* Vous pouvez éventuellement déployer des serveurs DNS redondants dans le cluster vCenter Server. Deux serveurs AD/DNS sans licence sont configurés. Il vous incombe de fournir les licences des systèmes d'exploitation Windows pour ces serveurs.
+* Lorsqu'un seul site est mis à disposition avec un seul serveur AD/DNS, tous les composants vCenter Server configurés doivent avoir uniquement cette seule adresse IP comme entrée DNS.
 
 ### Instances vCenter Server secondaires
 {: #design_commonservice-secondary-vcs}
@@ -79,13 +78,12 @@ Pour une redondance entre les instances ; lorsque la première instance vCenter 
 
 Cette conception utilise les serveurs NTP de l'infrastructure {{site.data.keyword.cloud_notm}}. Tous les composants déployés sont configurés pour utiliser ces serveurs NTP. Il est essentiel que tous les composants de la conception utilisent le même serveur NTP pour que les certificats et l'authentification Active Directory puissent fonctionner correctement.
 
-Figure 2. Services NTP et DNS</br>
-![Services NTP et DNS](vcsv4radiagrams-ra-servicesinterconnections.svg)
+![Services NTP et DN](../../images/vcsv4radiagrams-ra-servicesinterconnections.svg "Services NTP et DNS")
 
 ## Services d'autorité de certification
 {: #design_commonservice-cas}
 
-Par défaut, VMware vSphere utilise les certificats TLS qui sont signés par l'autorité de certification VMware (VMCA), qui se trouve sur le dispositif VMware Platform Services Controller. Ces certificats ne sont pas sécurisés par les terminaux ou les navigateurs de l'utilisateur final. La meilleure pratique en matière de sécurité consiste à remplacer les certificats d'utilisateur par des certificats qui sont signés par un tiers ou une autorité de certification d'entreprise. Les certificats pour la communication entre machines peuvent être conservés en tant que certificats signés par l'autorité de certification VMware (VMCA), toutefois, il est recommandé de suivre les meilleures pratiques pour votre organisation, ce qui implique généralement d'utiliser une autorité de certification d'entreprise identifiée.
+Par défaut, VMware vSphere utilise les certificats TLS qui sont signés par l'autorité de certification VMware (VMCA), qui se trouve sur le dispositif VMware Platform Services Controller.Ces certificats ne sont pas sécurisés par les terminaux ou les navigateurs de l'utilisateur final. La meilleure pratique en matière de sécurité consiste à remplacer les certificats d'utilisateur par des certificats qui sont signés par un tiers ou une autorité de certification d'entreprise. Les certificats pour la communication entre machines peuvent être conservés en tant que certificats signés par l'autorité de certification VMware (VMCA), toutefois, il est recommandé de suivre les meilleures pratiques pour votre organisation, ce qui implique généralement d'utiliser une autorité de certification d'entreprise identifiée.
 
 Vous pouvez utiliser les serveurs Windows AD dans cette conception pour créer des certificats qui sont signés par l'instance locale. Cependant, vous pouvez également choisir de configurer des services d'autorité de certification si nécessaire.
 

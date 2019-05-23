@@ -18,15 +18,15 @@ subcollection: vmware-solutions
 # Applicazione di aggiornamenti del componente di gestione IBM alle istanze vCenter Server
 {: #vc_applyingupdates}
 
-La procedura in questa sezione si applica ai componenti di gestione IBM in aggiornamento per le istanze che vengono distribuite nelle release dalla V2.1 alla V2.4. 
+La procedura in questa sezione si applica ai componenti di gestione IBM in aggiornamento per le istanze che vengono distribuite nelle release dalla V2.1 alla V2.4.
 
-Per le istanze distribuite o di cui è stato eseguito l'upgrade alla V2.5 o successive, gli aggiornamenti e le patch per i componenti di gestione IBM vengono applicati automaticamente, in base alle esigenze. 
+Per le istanze distribuite o di cui è stato eseguito l'upgrade alla V2.5 o successive, gli aggiornamenti e le patch per i componenti di gestione IBM vengono applicati automaticamente, in base alle esigenze.
 
-Per le istanze distribuite nella V2.0 e precedenti, devi applicare manualmente gli aggiornamenti. 
+Per le istanze distribuite nella V2.0 e precedenti, devi applicare manualmente gli aggiornamenti.
 
-Inoltre, nota il seguente comportamento quando completi determinate operazioni sulla tua istanza: 
-* Quando ordini nuovi servizi, l'istanza viene aggiornata alla versione più recente. 
-* Quando aggiungi nuovi cluster, ne viene eseguito il provisioning con i componenti VMware più recenti ma non viene eseguito per i cluster esistenti. 
+Inoltre, nota il seguente comportamento quando completi determinate operazioni sulla tua istanza:
+* Quando ordini nuovi servizi, l'istanza viene aggiornata alla versione più recente.
+* Quando aggiungi nuovi cluster, ne viene eseguito il provisioning con i componenti VMware più recenti ma non viene eseguito per i cluster esistenti.
 * Quando aggiungi nuovi server ESXi, ne viene eseguito il provisioning con i componenti VMware più recenti ma non viene eseguito per i server ESXi esistenti.
 
 {{site.data.keyword.vmwaresolutions_short}} non offre supporto per applicare gli aggiornamenti e le patch per i componenti VMware. Devi monitorare e applicare autonomamente questi aggiornamenti.
@@ -35,7 +35,7 @@ Inoltre, nota il seguente comportamento quando completi determinate operazioni s
 ## Prima di applicare gli aggiornamenti del componente di gestione IBM
 {: #vc_applyingupdates-prereq}
 
-Espandi la voce dell'aggiornamento facendo clic sulla freccia in giù e verifica le seguenti informazioni: 
+Espandi la voce dell'aggiornamento facendo clic sulla freccia in giù e verifica le seguenti informazioni:
 * La versione dell'aggiornamento. Devi applicare gli aggiornamenti in sequenza cronologica, dalla più antica alla più recente. Assicurati di aver applicato tutti gli aggiornamenti precedenti prima di applicare quello più recente. Ad esempio, devi applicare l'aggiornamento alla V2.3 prima di tentare di applicare l'aggiornamento alla V2.4.
 * Se è necessario un tempo di inattività.
 * Il tempo totale stimato per completare l'aggiornamento.
@@ -122,7 +122,7 @@ Tabella 1. Livelli di aggiornamento e impatto
       </tr>
     </table>
 
-3. Se il processo di aggiornamento non riesce in un passo specifico, [contatta il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support) per assistenza. Ti verrà comunicato come risolvere il problema e sarai guidato ad applicare gli aggiornamenti e le patch dal passo non riuscito. 
+3. Se il processo di aggiornamento non riesce in un passo specifico, [contatta il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support) per assistenza. Ti verrà comunicato come risolvere il problema e sarai guidato ad applicare gli aggiornamenti e le patch dal passo non riuscito.
 
 ## Link correlati
 {: #vc_applyingupdates-related}

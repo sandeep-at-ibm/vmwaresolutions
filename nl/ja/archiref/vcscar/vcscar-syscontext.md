@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 次の図は、このリファレンス・アーキテクチャーのシステム・コンテキストを示しています。 システム・コンテキスト図は、システムの主要な要素、システムの境界、システムと対話するエンティティー、およびその相互作用を定義する図です。 この図は、システムの初期ビューを読者に提供する概要図です。
 
-図 1. システム・コンテキスト
-![システム・コンテキスト](vcscar-system-context.svg)
+![システム・コンテキスト](../../images/vcscar-system-context.svg "システム・コンテキスト")
 
 以下は、システム・コンテキストの中核となるコンポーネントです。
 -	vCenter Server – VMware vCenter Server on {{site.data.keyword.cloud_notm}} は、オンプレミス環境からマイグレーションされる仮想マシン (VM) のターゲットとなる {{site.data.keyword.cloud_notm}} for VMware Services インスタンスです。 これは、オンプレミス仮想化とともに、VM をある環境から別の環境に移動できるようにするハイブリッド環境です。

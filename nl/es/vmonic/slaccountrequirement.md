@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-16"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -51,17 +51,11 @@ Tabla 1. Permisos necesarios para la cuenta de infraestructura de {{site.data.ke
 ## VRF con puntos finales de servicio habilitados
 {: #slaccountrequirement-vrf-se}
 
-Su cuenta de infraestructura de {{site.data.keyword.cloud_notm}} debe ser una cuenta de direccionamiento virtual y reenvío (VRF) con puntos finales de servicio habilitados. Si su cuenta no es VRF, debe convertirla en una cuenta VRF. Además, debe habilitar su cuenta VRF para el uso de puntos finales de servicio.
+La cuenta de infraestructura de {{site.data.keyword.cloud_notm}} debe ser una cuenta de Direccionamiento virtual y reenvío (VRF). Si su cuenta no es VRF, debe convertirla en una cuenta VRF. También se recomienda habilitar la cuenta VRF para el uso de puntos finales de servicio.
 
 Para obtener más información, consulte:
 * [Visión general de VRF on IBM Cloud](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
 * [Habilitación de la cuenta para el uso de puntos finales de servicio](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
-
-## Fin del soporte para la expansión de VLAN
-{: #slaccountrequirement-vlan-eos}
-
-A partir de agosto de 2019, ya no habrá soporte para la expansión de VLAN. Antes de finales de julio de 2019, debe convertir su cuenta de infraestructura de {{site.data.keyword.cloud_notm}} a VRF y habilitar los puntos finales de servicio.
-{:important}
 
 ## Enlaces relacionados
 {: #slaccountrequirement-related}

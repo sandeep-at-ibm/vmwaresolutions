@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -106,8 +106,7 @@ Pour permettre l'accès à KMIP for VMware sur le réseau privé, votre compte d
 
 KMIP for VMware se connecte également à {{site.data.keyword.cloud_notm}} Key Protect à l'aide du réseau privé {{site.data.keyword.cloud_notm}} au lieu de l'Internet public.
 
-Figure 1. Composants de KMIP for VMware on {{site.data.keyword.cloud_notm}} lors de l'utilisation d'IBM Key Protect
-![Composants de KMIP for VMware on {{site.data.keyword.cloud_notm}}](kmip-key-protect.svg "La solution active le chiffrement de VMware vSphere et le chiffrement vSAN en utilisant des clés racine stockées dans IBM Key Protect.")
+![Composants de KMIP for VMware on {{site.data.keyword.cloud_notm}}](../../images/kmip-key-protect.svg "La solution active le chiffrement VMware vSphere et le chiffrement vSAN en utilisant des clés racine qui sont stockées dans IBM Key Protect.")
 
 Lorsque vous utilisez le service IBM Cloud Hyper Protect Crypto Services, vos clés sont stockées dans un module HSM IBM zSeries et non dans CloudHSM. De plus, la connexion entre KMIP for VMware et {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services se fait sur le réseau public mais est protégée par le chiffrement et l'authentification TLS.
 

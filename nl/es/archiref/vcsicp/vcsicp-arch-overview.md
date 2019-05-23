@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-09"
 
 subcollection: vmware-solutions
 
@@ -31,9 +31,7 @@ Utilice Cloud Automation Manager Service Composer para visualizar los servicios 
 
 El diagrama siguiente es un ejemplo de un despliegue de {{site.data.keyword.icpfull_notm}} y CAM con la infraestructura de {{site.data.keyword.cloud_notm}}, con conexiones con el vCenter local e {{site.data.keyword.containerlong_notm}} desplegado en {{site.data.keyword.cloud_notm}}. Los usuarios pueden desplegar máquinas virtuales (VM) de forma local y VM en una instancia de vCenter Server, y contenedores en el clúster de {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}}.
 
-Figura 1. Gestión de la nube desde la nube
-
-![Gestión de la nube en la nube](vcsicp-oncloud-cloudmgt.svg)
+![En la nube - Gestión de la nube](../../images/vcsicp-oncloud-cloudmgt.svg "En la nube - Gestión de la nube")
 
 En el diagrama, CAM crea de forma lógica conexiones en la nube con los entornos de vCenters, proveedores de nube, {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}}. Los clústeres de {{site.data.keyword.icpfull_notm}} deben desplegarse en cada entorno de nube del centro de datos, y MCM proporciona el mecanismo para conectar los clústeres de {{site.data.keyword.icpfull_notm}} en una única vista de gestión.
 
@@ -46,8 +44,7 @@ Puede desplegar {{site.data.keyword.icpfull_notm}} con los componentes NSX-V o N
 
 En el diagrama siguiente se muestra un ejemplo de despliegue de {{site.data.keyword.icpfull_notm}} y CAM en la infraestructura local, con conexiones con el vCenter e {{site.data.keyword.containerlong_notm}} desplegado en {{site.data.keyword.cloud_notm}}. Los usuarios pueden desplegar las VM y los contenedores locales, las VM en las instancias de vCenter Server y los contenedores en el clúster {{site.data.keyword.containerlong_notm}}.
 
-Figura 2. Gestión de nube desde el entorno local
-![Gestión de nube desde el entorno local](vcsicp-onprem-cloudmgt.svg)
+![Gestión de la nube local](../../images/vcsicp-onprem-cloudmgt.svg "Gestión de la nube local")
 
 Se utiliza strongSwan VPN para establecer la conectividad con los contenedores {{site.data.keyword.containerlong_notm}} desplegados. strongSwan VPM se puede sustituir por una conectividad Direct Link.
 

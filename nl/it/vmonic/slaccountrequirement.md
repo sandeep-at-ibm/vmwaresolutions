@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-16"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -51,17 +51,11 @@ Tabella 1. Autorizzazioni richieste per l'account dell'infrastruttura {{site.dat
 ## VRF con endpoint del servizio abilitati
 {: #slaccountrequirement-vrf-se}
 
-Il tuo account dell'infrastruttura {{site.data.keyword.cloud_notm}} deve essere un account VRF (Virtual Routing and Forwarding) con gli endpoint del servizio abilitati. Se il tuo account è non VRF, devi eseguire la conversione a un account VRF. Devi inoltre abilitare il tuo account VRF per l'utilizzo degli endpoint del servizio.
+Il tuo account dell'infrastruttura {{site.data.keyword.cloud_notm}} deve essere un account VRF (Virtual Routing and Forwarding). Se il tuo account è non VRF, devi eseguire la conversione a un account VRF. Ti consigliamo inoltre di abilitare il tuo account VRF per l'utilizzo degli endpoint del servizio.
 
 Per ulteriori informazioni, vedi:
 * [Panoramica di VRF on IBM Cloud](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
 * [Abilitazione del tuo account per l'utilizzo degli endpoint del servizio](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
-
-## Fine del supporto dello spanning della VLAN
-{: #slaccountrequirement-vlan-eos}
-
-A partire da agosto 2019, lo spanning della VLAN non sarà più supportato. Entro la fine di luglio 2019, devi convertire il tuo account dell'infrastruttura {{site.data.keyword.cloud_notm}} in VRF e abilitare gli endpoint del servizio.
-{:important}
 
 ## Link correlati
 {: #slaccountrequirement-related}

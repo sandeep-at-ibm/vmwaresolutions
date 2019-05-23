@@ -22,7 +22,7 @@ Puoi registrarti per un account {{site.data.keyword.cloud}} utilizzando un **ID 
 ## Registrazione di un account dell'infrastruttura IBM Cloud
 {: #signing_softlayer_account-infra}
 
-L'account dell'infrastruttura {{site.data.keyword.cloud_notm}} viene utilizzato per accedere al portale del cliente dell'infrastruttura {{site.data.keyword.cloud_notm}} che fornisce alcune funzioni aggiuntive per la gestione di prodotti e servizi dell'infrastruttura. 
+L'account dell'infrastruttura {{site.data.keyword.cloud_notm}} viene utilizzato per accedere al portale del cliente dell'infrastruttura {{site.data.keyword.cloud_notm}} che fornisce alcune funzioni aggiuntive per la gestione di prodotti e servizi dell'infrastruttura.
 
 Per registrare un account dell'infrastruttura {{site.data.keyword.cloud_notm}}, esegui l'upgrade del tuo account {{site.data.keyword.cloud_notm}} a un tipo di account Pagamento a consumo. Per ulteriori informazioni, vedi [Come posso eseguire l'upgrade o modificare il mio tipo di account?](/docs/account?topic=account-accountfaqs)
 

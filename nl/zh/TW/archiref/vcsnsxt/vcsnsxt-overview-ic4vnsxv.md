@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-19"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -31,8 +31,7 @@ subcollection: vmware-solutions
 
 下列 NSX-V Manager 網路概觀顯示與此架構中其他元件相對的 NSX Manager 位置。
 
-圖 1. NSX-V Manager 網路概觀
-![NSX-V Manager 網路概觀](vcsnsxt-vmgmt.svg)
+![NSX-V Manager 網路概觀](../../images/vcsnsxt-vmgmt.svg "NSX-V Manager 網路概觀")
 
 在起始部署之後，{{site.data.keyword.cloud}} 自動化會在起始叢集內部署三個 NSX Controller。控制器會獲指派指定給管理元件之**專用 A** 可攜式子網路中的 IP 位址。會建立 VM-VM 反親緣性規則，以在叢集中的各主機間區隔控制器。起始叢集必須至少部署三個節點，以確保控制器具有高可用性。
 
@@ -78,8 +77,7 @@ vSphere Distributed Switch 名稱 |功能                          |網路 I/O �
 \* vSAN 埠群組會使用作用中或待命的明確失效接手，因為它不支援進行 vSAN 儲存空間資料流量的負載平衡。
 {:note}
 
-圖 2. 叢集 VM 核心介面埠群組對映
-![叢集 VM 核心介面埠群組對映](vcsnsxt-vds-kernel-Int.svg)
+![叢集 VMkernel 介面埠群組對映](../../images/vcsnsxt-vds-kernel-Int.svg "叢集 VMkernel 介面埠群組對映")
 
 表 5. 叢集虛擬交換器埠群組、VLAN 及小組原則
 
@@ -95,7 +93,7 @@ SDDC-Dswitch-Public	  |SDDC-DPortGroup-External	|來源虛擬埠| 作用中：0�
 ## NSX-V
 {: #vcsnsxt-overview-ic4vnsxv-nsx-v}
 
-此設計指定 NSX 元件的配置，但不會套用任何網路套版元件配置。客戶可根據需求自行決定設計網路套版。
+此設計指定 NSX 元件的配置，但不會套用任何網路層疊元件配置。客戶可根據需求自行決定設計網路層疊。
 
 已配置下列元件：
 -	管理伺服器及控制器已安裝並整合至 vCenter Web 使用者介面。
@@ -124,9 +122,7 @@ NSX for vSphere 可讓組織將資料中心劃分為不同的安全區段，並�
 
 下圖顯示如何建立安全群組來實作一些 NSX-V 微分段特性的高階圖。在此範例中，production 及 development 是安全群組，並根據這些群組來指派安全規則。
 
-圖 3. NSX-V 安全
-</br>
-![NSX-V 安全](vcsnsxt-vsecurity.svg)
+![NSX-V 安全](../../images/vcsnsxt-vsecurity.svg "NSX-V 安全")
 
 ## 相關鏈結
 {: #vcsnsxt-overview-ic4vnsxv-related}

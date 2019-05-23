@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-02"
 
 subcollection: vmware-solutions
 
@@ -36,8 +36,7 @@ Puede añadir servicios gestionados por IBM si desea descargar las operaciones c
 
 En el gráfico siguiente se muestra la arquitectura general y los componentes del despliegue de vCenter Server de tres nodos.
 
-Figura 1. Arquitectura general de vCenter Server para un clúster de tres nodos
-![Arquitectura de vCenter Server](vc_architecture.svg "Arquitectura general de vCenter Server para un clúster de tres nodos")
+![Arquitectura de vCenter Server](../images/vc_architecture.svg "Arquitectura de vCenter Server")
 
 ### Infraestructura física
 {: #vc_vcenterserveroverview-physical-infras}

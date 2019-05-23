@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-04"
+lastupdated: "2019-05-09"
 
 subcollection: vmware-solutions
 
@@ -33,6 +33,16 @@ Puede solicitar una nueva instancia con F5 on {{site.data.keyword.cloud_notm}} u
 Puede añadir el servicio de F5 on {{site.data.keyword.cloud_notm}} en una instancia existente utilizando uno de los métodos siguientes:
 * Desde la consola de {{site.data.keyword.vmwaresolutions_short}}, visualice la instancia para la que desea añadir el servicio, pulse **Servicios** en el panel de navegación izquierdo y pulse **Añadir**.
 * Desde el catálogo de {{site.data.keyword.cloud_notm}}, seleccione **F5 on IBM Cloud**, especifique los valores de servicio y seleccione **Añadir a instancia existente**.
+
+## Solicitud de F5 on IBM Cloud para instancias privadas
+{: #f5_ordering-private}
+
+Al solicitar F5 on {{site.data.keyword.cloud_notm}} para instancias que no estén configuradas con interfaces públicas, debe proporcionar un servidor proxy para completar la instalación. El servidor proxy HTTP debe configurarse y estar disponible a través de VRF (Direccionamiento virtual y reenvío) para que se pueda iniciar la instalación de F5 on {{site.data.keyword.cloud_notm}}.
+
+Los puntos finales de BigIP Virtual Edition (VE) deben poder activar su licencia antes de pasar a estar operativos. Una vez que se hayan instalado los puntos finales de BigIP VE, ya no requerirán el uso del servidor proxy.
+
+El servicio F5 on {{site.data.keyword.cloud_notm}} no se puede añadir sin un servidor proxy funcional en el momento de la instalación del servicio.
+{:note}
 
 ## Configuración del servicio de F5 on IBM Cloud
 {: #f5_ordering-config}

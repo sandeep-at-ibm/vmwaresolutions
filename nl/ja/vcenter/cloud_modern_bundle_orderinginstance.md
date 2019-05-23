@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-24"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -132,7 +132,7 @@ HCX on {{site.data.keyword.cloud_notm}} のデプロイメントは自動的に�
       1. **「管理」**タブをクリックします。
       2. **「システム更新」**タブで、**「ダウンロード・リンクの要求」**をクリックします。
       3. **「リンクのコピー」**をクリックし、このリンクを使用して、オンプレミス vSphere 環境へのアクセス権限によって HCX Enterprise Client をオンプレミス環境にダウンロードします。
-3. VMware vSphere Web Client で、HCX Enterprise Client を HCX Manager 仮想アプライアンス (HCX Manager) としてオンプレミス環境にデプロイします。 詳しくは、[Installing the VMware HCX Enterprise Manager OVA](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-C61E107C-1F5F-4615-9BA9-351900CDB69E.html) を参照してください。
+3. VMware vSphere Web Client で、HCX Enterprise Client を HCX Manager 仮想アプライアンス (HCX Manager) としてオンプレミス環境にデプロイします。 [VMware HCX ユーザー・ガイド](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}の指示に従います。
 
     オンプレミス HCX Manager をプライベート・ネットワークにデプロイし、パブリック・ネットワークへのアクセスを許可する必要があります。 NSX Edge、Vyatta、または類似のゲートウェイを使用して、オンプレミス HCX Manager へのインターネット・アクセスを許可することができます。 使用するゲートウェイがプライベート・ネットワーク・アクセスとパブリック・ネットワーク・アクセスとで異なる場合は、デフォルト・ゲートウェイを使用してパブリック・ネットワーク・アクセスを許可し、オンプレミスの**「HCX Manager 管理コンソール」**を使用して、プライベート・ネットワーク・アクセス用の静的ルートを作成することをお勧めします。  
     {:note}
@@ -140,16 +140,16 @@ HCX on {{site.data.keyword.cloud_notm}} のデプロイメントは自動的に�
   1. OVA のデプロイ時に指定した資格情報を使用して、オンプレミスの HCX Enterprise Manager VM にログインします。
   2. プロンプトが出されたら、アクティベーション・キーを入力します。
 
-  詳しくは、[VMware HCX Activation and Initial Configuration](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-6A4740C1-2225-444C-8ADC-CBE54F181536.html) を参照してください。
-  {:note}
+  [VMware HCX ユーザー・ガイド](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}の指示に従います。
+
 5. 自己署名 SSL 証明書が HCX on {{site.data.keyword.cloud_notm}} サービスによって生成されました。 以下のステップを実行して、その証明書をオンプレミス HCX Manager にインポートする必要があります。
     1. オンプレミスの**「HCX Manager 管理コンソール」**で、**「管理」**タブをクリックします。
     2. 左側のナビゲーション・ペインで、**「トラステッド CA 証明書」**をクリックし、右側の**「インポート」**をクリックします。
     3. **「URL」**をクリックしてから、適用する証明書の URL を入力します。 これが、{{site.data.keyword.vmwaresolutions_short}} コンソールの HCX on {{site.data.keyword.cloud_notm}} サービス詳細ページに表示される **HCX クラウド IP** (``https://<cloud-side public IP>``) になります。
     4. **「適用」**をクリックします。
-6. 初期構成を続行し、相互接続を作成します。 詳しくは、[Installing and Configuring VMware HCX Enterprise](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-A26BFB16-FA94-426F-8E18-15BAD4BF840E.html) を参照してください。
-7. VMware HCX のネットワークをオンプレミスから {{site.data.keyword.cloud_notm}} に拡張します。 詳しくは、[Extending Networks with VMware HCX](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-DD9C3316-D01C-4088-B3EA-84ADB9FED573.html) を参照してください。
-8. オンプレミスと {{site.data.keyword.cloud_notm}} の間で VM をマイグレーションします。 詳しくは、[Migrating Virtual Machines with VMware HCX](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-D0CD0CC6-3802-42C9-9718-6DA5FEC246C6.html) を参照してください。
+6. 初期構成を続行し、相互接続を作成します。 [VMware HCX ユーザー・ガイド](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}の指示に従います。
+7. VMware HCX のネットワークをオンプレミスから {{site.data.keyword.cloud_notm}} に拡張します。 [VMware HCX ユーザー・ガイド](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}の指示に従います。
+8. オンプレミスと {{site.data.keyword.cloud_notm}} の間で VM をマイグレーションします。 [VMware HCX ユーザー・ガイド](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}の指示に従います。
 
 {{site.data.keyword.cloud_notm}} アカウントで作成した {{site.data.keyword.vmwaresolutions_short}} インフラストラクチャー・コンポーネントは、{{site.data.keyword.vmwaresolutions_short}} コンソールから管理する必要があります。{{site.data.keyword.slportal}}やその他の手段でコンソール以外から管理することはできません。
 これらのコンポーネントを {{site.data.keyword.vmwaresolutions_short}} コンソール以外で変更した場合、変更がコンソールと同期されず、環境が不安定になります。
@@ -185,6 +185,6 @@ Single-node Trial for Migration and App Modernization インスタンスを削�
 {: #cloud_modern_bundle_orderinginstance-related}
 
 * [vCenter Server および IBM Cloud Private ガイド](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [IBM Cloud Private のチケットをオープン](https://www.ibm.com/mysupport/s/?language=en_US)
-* [VMware HCX 資料](https://hcx.vmware.com/#/docs)
-* [Obtaining the VMware HCX OVA](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html?hWord=N4IghgNiBcIPICMAuYCWA7DBzABEgFgKY4ASAwgBo5wBqAgiAL5A)
+* [IBM Cloud Private のチケットをオープン](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
+* [VMware HCX リソース](https://hcx.vmware.com/#/docs){:new_window}
+* [VMware HCX ユーザー・ガイド](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}

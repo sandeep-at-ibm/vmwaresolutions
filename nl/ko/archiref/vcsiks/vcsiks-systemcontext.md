@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -14,9 +14,7 @@ subcollection: vmware-solutions
 # 시스템 컨텍스트
 {: #vcsiks-systemcontext}
 
-그림 1. 시스템 컨텍스트
-
-![시스템 컨텍스트 다이어그램](vcsiks-system-context.svg)
+![시스템 컨텍스트 다이어그램](../../images/vcsiks-system-context.svg "시스템 컨텍스트 다이어그램")
 
 핵심 컴포넌트는 다음과 같습니다.
 

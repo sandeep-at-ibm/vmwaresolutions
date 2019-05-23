@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -56,8 +56,7 @@ Kubernetes 的 CNI 環境定義中有下列兩個核心定義：
 
 從網路資料流量的角度來看，我們會區分 {{site.data.keyword.containerlong_notm}} 中的四種類型，如下圖所示。
 
-圖 1. 容器網路資料流量類型
-![容器網路資料流量類型](vcsnsxt-traffictypes.svg)
+![容器網路資料流量類型](../../images/vcsnsxt-traffictypes.svg "容器網路資料流量類型")
 
 - **Pod 內網路** - 也稱為容器對容器通訊。Pod 內的所有容器都會共用網路名稱空間、相同的 IP 位址，並在本端主機上看到彼此。每個應用程式的資料流量都是使用不同的埠號來區分。「開發人員」必須確保 Pod 內的容器與所使用的埠彼此之間不會發生衝突。在 Pod 內，存在一個所謂的基礎架構容器。這是 kubelet 所啟動的第一個容器，並獲得 Pod 的 IP 以及設定網路名稱空間。然後，Pod 中的所有其他容器都結合基礎架構容器的網路及 IPC 名稱空間。容器具有已啟用的網路橋接器模式，而且 Pod 中的所有其他容器都透過容器模式結合此名稱空間。如果基礎架構容器當掉，則 kubelet 會結束 Pod 中的所有容器，然後通常會使用新的 IP 位址來重新佈建。在本文件中，我們不會提供此資料流量的任何其他詳細資料。
 
@@ -108,8 +107,7 @@ Calico 提供一種 L3 Fabric 網路架構解決方案，而非 vSwitch，而 Ca
 -	對於傳送封包的工作負載，Calico 確保工作者節點一律傳回為下一個躍點 MAC 位址，而不管工作負載本身可能配置的遞送為何。
 -	對於定址至工作負載的封包，最後一個 IP 躍點是從目的地工作負載的工作者節點到工作負載本身的 IP 躍點。
 
-圖 2. Calico CNI
-![Calico CNI](vcsnsxt-calico-cni.svg)
+![Calico CNI](../../images/vcsnsxt-calico-cni.svg "Calico CNI")
 
 上圖顯示下列 Calico 元件：
 -	**calicoctl** - 指令行介面。

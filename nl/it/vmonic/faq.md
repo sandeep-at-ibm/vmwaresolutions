@@ -93,7 +93,7 @@ Per una nuova istanza vCenter Server, il primo cluster creato durante la distrib
 
 IBM fornisce aggiornamenti continui al codice IBM distribuendo la VSI (Virtual Server Instance) IBM CloudDriver su richiesta. IBM non fornisce aggiornamenti continui ai servizi aggiuntivi come Zerto on {{site.data.keyword.cloud_notm}} o Veeam on {{site.data.keyword.cloud_notm}}. Ottenere e installare questi aggiornamenti è sotto la tua responsabilità.
 
-Per le istanze VMware vCenter Server distribuite o di cui è stato eseguito l'upgrade alla V2.1 o superiore, i server e i cluster ESXi appena distribuiti vengono corretti con i recenti aggiornamenti ESXi da parte di VMware, ma non necessariamente con gli aggiornamenti più recenti. 
+Per le istanze VMware vCenter Server distribuite o di cui è stato eseguito l'upgrade alla V2.1 o superiore, i server e i cluster ESXi appena distribuiti vengono corretti con i recenti aggiornamenti ESXi da parte di VMware, ma non necessariamente con gli aggiornamenti più recenti.
 
 Sei responsabile di tutti gli altri aggiornamenti ai componenti VMware, inclusa la garanzia che i cluster e i server ESXi appena distribuiti dispongano di tutti gli aggiornamenti più recenti necessari.
 {:important}
@@ -111,7 +111,7 @@ Per ulteriori informazioni, consulta le seguenti risorse:
 
 Sebbene l'edge VMware NSX per i servizi di gestione si trovi su una sottorete pubblica, vengono adottate le seguenti misure di sicurezza per garantire che non costituisca un rischio per la sicurezza:
 *  Il firewall edge NSX è configurato per consentire solo il traffico HTTPS in uscita (porta TCP 443) avviato dalle VM (Virtual Machine) di gestione.
-*  SNAT (Source Network Address Translation) viene utilizzato in modo che gli indirizzi IP privati non siano visibili all'esterno della rete privata. 
+*  SNAT (Source Network Address Translation) viene utilizzato in modo che gli indirizzi IP privati non siano visibili all'esterno della rete privata.
 *  L'accesso remoto per il dispositivo edge NSX dei servizi di gestione è disabilitato.
 *  Le password per accedere all'edge NSX dei servizi di gestione dalla rete privata sono casuali e crittografate.
 
@@ -121,7 +121,7 @@ Sebbene l'edge VMware NSX per i servizi di gestione si trovi su una sottorete pu
 
 Sebbene l'edge NSX gestito dal cliente sia connesso alla VLAN pubblica, sono state adottate misure di sicurezza per garantire che non costituisca un rischio per la sicurezza. Sono in vigore le seguenti misure di sicurezza:
 *  È presente una regola del firewall per consentire solo il traffico in uscita dall'intervallo di indirizzi IP della sottorete privata.
-*  È presente una regola SNAT (disabilitata per impostazione predefinita) per tradurre tutti gli indirizzi IP dalla sottorete privata in un singolo indirizzo IP sulla sottorete pubblica. 
+*  È presente una regola SNAT (disabilitata per impostazione predefinita) per tradurre tutti gli indirizzi IP dalla sottorete privata in un singolo indirizzo IP sulla sottorete pubblica.
 *  L'accesso remoto per il dispositivo edge NSX gestito dal cliente è disabilitato.
 *  Le password per accedere all'edge NSX gestito dal cliente dalla rete privata sono casuali e crittografate.
 

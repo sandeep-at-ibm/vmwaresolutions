@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -21,8 +21,8 @@ VMware HCX on IBM Cloud 服务使这一混合性更上一层楼，通过支持�
 
 VMware HCX on IBM Cloud 组件（在 IBM Cloud VMware 目标站点中部署为虚拟机）支持建立与安装在对等内部部署源站点中的 VMware HCX on IBM Cloud 组件的连接。
 
-图 1. VMware vCenter Server - Hybrid Cloud Services
-![VMware vCenter Server - Hybrid Cloud Services](cloudfoundation_hybrid_cloud_services.svg)
+![VMware vCenter Server – Hybrid Cloud Services](../../images/cloudfoundation_hybrid_cloud_services.svg "VMware vCenter Server – Hybrid Cloud Services")
+
 
 此连接将在内部部署和 IBM Cloud 之间创建松散耦合的互连，并支持以下功能：
 * 简单互连 - 通过任何物理连接（例如，公用因特网、专用 VPN 或直接链路）轻松建立逻辑网络连接。

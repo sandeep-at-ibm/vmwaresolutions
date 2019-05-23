@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-03"
+lastupdated: "2019-05-13"
 
 subcollection: vmware-solutions
 
@@ -130,16 +130,16 @@ El modo en que se llenan las tablas de rutas en el ESG y en los vRouters depende
 ## Enlaces relacionados
 {: #vcsnsxt-overview-integration-related}
 
-* [Centros de datos globales de {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/data-centers/)
-* [Documento sobre contenedores](https://communities.vmware.com/servlet/JiveServlet/download/2741654-198902/Containers%20and%20Container%20Networking%20for%20Network%20Engineers.pdf) (descarga de PDF)
-* [Blog de VMware HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/blogs/bluemix/2018/01/vmware-hcx-ibm-cloud-aka-really-cool-space-age-kind-now-available/)
-* [Hoja de datos de VMware HCX on {{site.data.keyword.cloud_notm}}](https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=26012526USEN)
+* [Centros de datos globales de {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/data-centers/){:new_window}
+* [Documento sobre contenedores](https://communities.vmware.com/servlet/JiveServlet/download/2741654-198902/Containers%20and%20Container%20Networking%20for%20Network%20Engineers.pdf){:new_window} (descarga de PDF)
+* [Blog de VMware HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/blog/announcements/vmware-hcx-ibm-cloud-aka-really-cool-space-age-kind-now-available){:new_window}
+* [Hoja de datos de VMware HCX on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/downloads/cas/MPVXKWNM){:new_window}
 * [Arquitectura de la solución VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [Máximos de la configuración de NSX for vSphere 6.4.3](https://configmax.vmware.com/guest)
-* [Documentación de la plataforma {{site.data.keyword.cloud_notm}}](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.0/kc_welcome_containers.html)
+* [Máximos de la configuración de NSX for vSphere 6.4.3](https://configmax.vmware.com/guest){:new_window}
+* [Documentación de la plataforma {{site.data.keyword.cloud_notm}}](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.0/kc_welcome_containers.html){:new_window}
 * [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-getting-started#getting-started)
-* [Proyecto Calico](https://www.projectcalico.org/)
-* [GitHub-Calico](https://github.com/projectcalico/calico)
-* [Kubernetes](https://kubernetes.io/)
-* [GitHub-Flannel](https://github.com/coreos/flannel/)
-* [GitHub-Canal](https://github.com/projectcalico/canal)
+* [Proyecto Calico](https://www.projectcalico.org/){:new_window}
+* [GitHub-Calico](https://github.com/projectcalico/calico){:new_window}
+* [Kubernetes](https://kubernetes.io/){:new_window}
+* [GitHub-Flannel](https://github.com/coreos/flannel/){:new_window}
+* [GitHub-Canal](https://github.com/projectcalico/canal){:new_window}

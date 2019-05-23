@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-02"
 
 subcollection: vmware-solutions
 
@@ -22,7 +22,7 @@ VMware vCenter Server with NSX-T on {{site.data.keyword.cloud}} は、VMware vSp
 
 多くの場合、環境全体を 1 日以内でプロビジョンできます。また、このベア・メタル・インフラストラクチャーのコンピュート能力は、必要に応じて迅速かつ伸縮自在に拡張や縮小ができます。
 
-デプロイメント後に、{{site.data.keyword.slportal}}から ネットワーク・ファイル・システム (NFS) ファイル共有をさらに注文してからクラスター内のすべての ESXi サーバーにそれらを手動で接続することによって、共有ストレージを増やすことができます。
+デプロイメント後に、{{site.data.keyword.slportal}}からネットワーク・ファイル・システム (NFS) ファイル共有をさらに注文してからクラスター内のすべての ESXi サーバーにそれらを手動で接続することによって、共有ストレージを増やすことができます。
 
 VMware vSAN は専用ストレージのオプションとしても利用できます。 vSAN クラスターの vSAN ベース・ストレージの容量を増やすには、デプロイメント後に ESXi サーバーをさらに追加します。
 
@@ -34,8 +34,7 @@ vCenter Server with NSX-T インスタンスは、PoC (概念検証) とサン�
 
 次の図は、3 ノードの vCenter Server with NSX-T デプロイメントのアーキテクチャーとコンポーネントの全体像を示しています。
 
-図 1. 3 ノードのクラスターの vCenter Server with NSX-T アーキテクチャーの全体像
-![vCenter Server with NSX-T アーキテクチャー](vc_nsx-t_architecture.svg "3 ノードのクラスターの vCenter Server アーキテクチャーの全体像")
+![vCenter Server with NSX-T のアーキテクチャー](../images/vc_nsx-t_architecture.svg "vCenter Server with NSX-T のアーキテクチャー")
 
 ### 物理インフラストラクチャー
 {: #vc_nsx-t_overview-physical-infras}
@@ -75,7 +74,7 @@ vCenter Server with NSX-T インスタンスには、以下のコンポーネン
 * **Skylake**: 選択した CPU モデルおよび RAM サイズの 2 CPU Intel Skylake 世代サーバー (Intel Xeon 4100/5100/6100 シリーズ)。  
 * **Broadwell**: 選択した CPU モデルおよび RAM サイズの 4 CPU Intel Broadwell 世代サーバー (Intel Xeon E7-4800 シリーズ)。
 
-vSAN ストレージを使用する場合は、少なくとも 4 台の{{site.data.keyword.baremetal_short}}を使用する構成にする必要があります。
+vSAN ストレージを使用する予定である場合は、構成に最低 4 つの{{site.data.keyword.baremetal_short}}が必要です。
 {:note}
 
 ### ネットワーキング

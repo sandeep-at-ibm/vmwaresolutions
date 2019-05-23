@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-01"
 
 subcollection: vmware-solutions
 
@@ -126,4 +126,4 @@ F5 on {{site.data.keyword.cloud_notm}} 服務隨附下列元件：
 * [管理 F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_f5)
 * [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [常見問題](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [F5 網站](https://f5.com/){:new_window}
+* [F5 網站](https://www.f5.com/){:new_window}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-13"
 
 subcollection: vmware-solutions
 
@@ -63,8 +63,7 @@ Atributo | Especificación
 
 En la figura siguiente se muestra la ubicación de los controladores de gestor NSX en relación con otros componentes de esta arquitectura.
 
-Figura 1. Visión general de la red del gestor NSX-T
-![Visión general de la red del gestor NSX-T](vcsv4radiagrams-ra-vcs-nsx-overview.svg)
+![Visión general de la red de NSX-T Manager](../../images/vcsv4radiagrams-ra-vcs-nsx-overview.svg "Visión general de la red de NSX-T Manager")
 
 ## Consideraciones sobre el despliegue
 {: #nsx-t-design-deployment}
@@ -177,11 +176,9 @@ Nombre de conmutador lógico | VLAN |Zona de transporte | Política de agrupaci�
 
 Dentro de este diseño, se suministra un único clúster de extremo virtual para su uso por parte de las cargas de trabajo de gestión y del cliente. El clúster de extremo virtual puede albergar varias instancias de pasarelas T0. Como se ha descrito anteriormente, se pueden crear varias instancias de pasarela T0 en un solo clúster de extremo, cada una con sus propias tablas de direccionamiento. Consulte la figura siguiente que esquematiza los componentes funcionales de un clúster de extremo NSX-T.
 
-Figura 2. Ejemplo de clúster de extremo NSX-T de escala de T0 a T1
-![Ejemplo de clúster de extremo NSX-T de escala de T0 a T1](vcsv4radiagrams-ra-nsx-t-edge-cluster-t0-to-t1-scale.svg)
+![Ejemplo de clúster NSX-T Edge de escala T0 a T1](../../images/vcsv4radiagrams-ra-nsx-t-edge-cluster-t0-to-t1-scale.svg "Ejemplo de clúster NSX-T Edge de escala T0 a T1")
 
-Figura 3. Pasarela T0 de gestión</br>
-![Pasarela T0 de gestión](vcsv4radiagrams-topology-0.svg)
+![Pasarela T0 de gestión](../../images/vcsv4radiagrams-topology-0.svg "Pasarela T0 de gestión")
 
 #### Pasarela lógica de nivel 0
 {: #nsx-t-design-tier-0}
@@ -203,8 +200,7 @@ Para proporcionar conectividad de capa tres entre las máquinas virtuales conect
 
 Carga de trabajo de la pasarela T1 a la pasarela T0 - clúster de extremo virtual
 
-Figura 4. Pasarela de extremo T0 virtual de topología desplegada de NSX-T
-![Pasarela de extremo T0 virtual de topología desplegada de NSX-T](vcsv4radiagrams-topology-1.svg)
+![Pasarela de extremo T0 virtual de topología desplegada de NSX-T](../../images/vcsv4radiagrams-topology-1.svg "Pasarela de extremo T0 virtual de topología desplegada de NSX-T")
 
 La topología 1 desplegada por IC4V es básicamente la misma topología que ha desplegado con las pasarelas de extremo y DLR de NSX-V. Con NSX-T, no hay ninguna configuración de protocolo de direccionamiento dinámico entre T1 y T0. El espacio de direcciones IP RFC-1891 se utiliza para la red de superposición de carga de trabajo y la red de superposición de tránsito. Se asigna un espacio de IP portátil público y privado de cliente para uso del cliente. Se asigna un espacio de IP portátil público y privado de {{site.data.keyword.cloud_notm}} designado por el cliente al nivel 0 para uso del cliente.
 
@@ -212,8 +208,7 @@ A partir de este diseño, tiene la opción de no suprimir estos rangos de IP si 
 
 Carga de trabajo de la pasarela T1 a la pasarela T0 - clúster de extremo físico:
 
-Figura 5. Pasarela de extremo T0 físico de topología desplegada de NSX-T
-![Pasarela de extremo T0 físico de topología desplegada de NSX-T](vcsv4radiagrams-topology-2.svg)
+![Pasarela de extremo T0 física de topología desplegada de NSX-T](../../images/vcsv4radiagrams-ra-vcs-nsx-overview.svg "Pasarela de extremo T0 física de topología desplegada de NSX-T")
 
 La topología 2 desplegada es similar, con la excepción de que se sustituye el clúster de extremo basado en máquina virtual por un par de servidores nativos que ejecutan Red Hat Server. Se asigna un espacio de IP portátil público y privado de {{site.data.keyword.cloud_notm}} designado por el cliente al nivel 0 para uso del cliente. A partir de este diseño, tiene la opción de no suprimir estos rangos de IP si la instancia de vCenter Server queda fuera de servicio y se suprime.
 
@@ -221,8 +216,7 @@ Consulte un documento o enlace independiente a la lista de materiales en las esp
 
 Carga de trabajo con ICP a la pasarela T0 - clúster de extremo virtual:
 
-Figura 6. Topología desplegada de NSX-T con integración NSX-T de ICP y pasarela de extremo T0 virtual
-![Topología desplegada de NSX-T con integración NSX-T de ICP y pasarela de extremo T0 virtual](vcsv4radiagrams-topology-3.svg)
+![Topología desplegada de NSX-T con integración de ICP NSX-T y pasarela de extremo T0 virtual](../../images/vcsv4radiagrams-topology-3.svg "Topología desplegada de NSX-T con integración de ICP NSX-T y pasarela de extremo T0 virtual")
 
 La topología 3 desplegada contiene la topología 1 con la adición de un despliegue ICP que ofrece la integración NSX-T en lugar de Calico, que es la pila de conexión de redes predeterminada dentro de un despliegue ICP. El cliente puede suministrar espacios de nombres de contenedor adicionales dentro de ICP, que automatiza la creación de conmutadores lógicos, subredes de IP e instancias de pasarela T1 para cada espacio de nombres.
 

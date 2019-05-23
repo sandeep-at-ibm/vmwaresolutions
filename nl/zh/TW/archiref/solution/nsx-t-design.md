@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-13"
 
 subcollection: vmware-solutions
 
@@ -63,8 +63,7 @@ NSX-V 或 vSphere 原生 |NSX-T
 
 下圖顯示 NSX Manager 控制器相對於此架構中其他元件的放置位置。
 
-圖 1. NSX-T Manager 網路概觀
-![NSX-T Manager 網路概觀](vcsv4radiagrams-ra-vcs-nsx-overview.svg)
+![NSX-T Manager 網路概觀](../../images/vcsv4radiagrams-ra-vcs-nsx-overview.svg "NSX-T Manager 網路概觀")
 
 ## 部署考量
 {: #nsx-t-design-deployment}
@@ -175,11 +174,9 @@ NSX-T 邏輯交換器會在與基礎硬體完全取消連結的虛擬環境中�
 
 在此設計內，會佈建單一虛擬邊緣叢集，以供管理及客戶工作負載使用。虛擬邊緣叢集可以存放多個「T0 閘道」實例。如先前所述，可以在單一邊緣叢集上實例化多個 T0 Edge 閘道實例，每個實例都有自己的遞送表。請參閱下圖，其圖示 NSX-T 邊緣叢集的功能元件。
 
-圖 2. T0 至 T1 範圍的 NSX-T 邊緣叢集範例
-![T0 至 T1 範圍的 NSX-T 邊緣叢集範例](vcsv4radiagrams-ra-nsx-t-edge-cluster-t0-to-t1-scale.svg)
+![T0 到 T1 規模的 NSX-T 邊緣叢集範例](../../images/vcsv4radiagrams-ra-nsx-t-edge-cluster-t0-to-t1-scale.svg "T0 到 T1 規模的 NSX-T 邊緣叢集範例")
 
-圖 3. 管理 T0 閘道</br>
-![管理 T0 閘道](vcsv4radiagrams-topology-0.svg)
+![管理 T0 閘道](../../images/vcsv4radiagrams-topology-0.svg "管理 T0 閘道")
 
 #### 層級 0 邏輯閘道
 {: #nsx-t-design-tier-0}
@@ -201,8 +198,7 @@ NSX-T 邏輯交換器會在與基礎硬體完全取消連結的虛擬環境中�
 
 T1 至 T0 閘道的工作負載 – 虛擬邊緣叢集
 
-圖 4. NSX-T 部署的拓蹼虛擬 T0 Edge 閘道
-![NSX-T 部署的拓蹼虛擬 T0 Edge 閘道](vcsv4radiagrams-topology-1.svg)
+![NSX-T 已部署拓蹼虛擬 T0 邊緣閘道](../../images/vcsv4radiagrams-topology-1.svg "NSX-T 已部署拓蹼虛擬 T0 邊緣閘道")
 
 IC4V 部署的「拓蹼 1」基本上是以 NSX-V DLR 和 Edge 閘道部署的相同拓蹼。使用 NSX-T 時，在 T1 與 T0 之間沒有任何動態遞送通訊協定配置。RFC-1891 IP 位址空間用於工作負載層疊網路和傳輸層疊網路。會指派客戶專用和公用可攜式 IP 空間，以供客戶使用。將客戶指定的 {{site.data.keyword.cloud_notm}} 專用和公用可攜式 IP 空間指派給 T0，以供客戶使用。
 
@@ -210,8 +206,7 @@ IC4V 部署的「拓蹼 1」基本上是以 NSX-V DLR 和 Edge 閘道部署的�
 
 T1 至 T0 閘道的工作負載 – 實體邊緣叢集：
 
-圖 5. NSX-T 部署的拓蹼實體 T0 Edge 閘道
-![NSX-T 部署的拓蹼實體 T0 Edge 閘道](vcsv4radiagrams-topology-2.svg)
+![NSX-T 已部署拓蹼實體 T0 邊緣閘道](../../images/vcsv4radiagrams-ra-vcs-nsx-overview.svg "[NSX-T 已部署拓蹼實體 T0 邊緣閘道")
 
 部署的「拓蹼 2」具有與上述類似的功能，但會將 VM 型邊緣叢集取代為一對執行 Red Hat Server 的裸機伺服器。將客戶指定的 {{site.data.keyword.cloud_notm}} 專用和公用可攜式 IP 空間指派給 T0，以供客戶使用。根據此設計，如果 vCenter Server 實例已解除任務並遭刪除，則您可以選擇不刪除這些 IP 範圍。
 
@@ -219,8 +214,7 @@ T1 至 T0 閘道的工作負載 – 實體邊緣叢集：
 
 ICP 至 T0 閘道的工作負載 – 虛擬邊緣叢集：
 
-圖 6. NSX-T 部署的拓蹼（含 ICP NSX-T 整合和虛擬 T0 Edge 閘道）
-![NSX-T 部署的拓蹼（含 ICP NSX-T 整合和虛擬 T0 Edge 閘道）](vcsv4radiagrams-topology-3.svg)
+![具有 ICP NSX-T 整合和虛擬 T0 邊緣閘道的 NSX-T 已部署拓蹼](../../images/vcsv4radiagrams-topology-3.svg "[具有 ICP NSX-T 整合和虛擬 T0 邊緣閘道的 NSX-T 已部署拓蹼")
 
 部署的「拓蹼 3」包含「拓蹼 1」的功能，並新增了 ICP 部署，特色為用來取代 Calico 的 NSX-T 整合，這是 ICP 部署內的預設網路堆疊。客戶可以佈建 ICP 內的其他容器名稱空間，這會根據每個名稱空間自動建立邏輯交換器、IP 子網路及「T1 閘道」實例。
 

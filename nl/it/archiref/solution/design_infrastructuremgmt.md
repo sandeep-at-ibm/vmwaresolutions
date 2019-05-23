@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -24,8 +24,7 @@ La gestione dell'infrastruttura si riferisce ai componenti che stanno gestendo l
 
 Questa progettazione utilizza una funzione PSC integrata in un'istanza di vCenter Server. Il PSC e vCenter Server sono ospitati all'interno della stessa macchina virtuale (VM).
 
-Figura 1. Gestione dell'infrastruttura</br>
-![Gestione dell'infrastruttura](vcsv4radiagrams-ra-inframgmt.svg)
+![Gestione dell'infrastruttura](../../images/vcsv4radiagrams-ra-inframgmt.svg "Gestione dell'infrastruttura")
 
 Al PSC che si trova nell'istanza primaria viene assegnato il dominio SSO predefinito `vsphere.local`.
 
@@ -74,12 +73,12 @@ Sei responsabile di regolare la politica di controllo di ammissione quando il cl
 
 Per impostazione predefinita, l'opzione **VM restart priority** è impostata su medio e l'opzione **Host isolation response** è disabilitata. Inoltre, **VM monitoring** è disabilitata e la funzione **Datastore Heartbeating** è configurata per includere uno qualsiasi degli archivi dati del cluster. Questo approccio utilizza, se presenti, gli archivi dati NAS.
 
-## EVC (Enhanced vMotion Compatibility)
+### EVC (Enhanced vMotion Compatibility)
 {: #design_infrastructuremgmt-evc}
 
 Per semplificare la compatibilità vMotion tra i nodi del cluster con funzionalità CPU potenzialmente differenti, la modalità EVC (Enhanced vMotion Compatibility) è abilitata al livello Skylake per garantire la compatibilità vMotion tra i nodi del cluster quando vengono inseriti dei processori più recenti nell'inventario {{site.data.keyword.cloud_notm}} e consente l'espansione del cluster futura se i server del processore Skylake non sono nell'inventario.
 
-### IBM CloudDriver
+## IBM CloudDriver
 {: #design_infrastructuremgmt-cloud-driver}
 
 Il punto cardine di queste soluzioni è l'automazione. L'automazione riduce la complessità della distribuzione, riduce drasticamente i tempi di distribuzione e garantisce che l'istanza VMware sia distribuita in modo coerente.
@@ -87,14 +86,13 @@ Il punto cardine di queste soluzioni è l'automazione. L'automazione riduce la c
 IBM CloudBuilder è una VSI (Virtual Server Instance) della VM {{site.data.keyword.cloud_notm}} effimera
 utilizzata per presentare una nuova istanza VMware ed eseguire le funzioni di gestione del ciclo di vita. Viene distribuito quando è richiesta la gestione dell'istanza vCenter Server generale ed eliminata in modo permanente quando viene completato il processo.
 
-IBM CloudDriver è una VSI (Virtual Server Instance) della VM {{site.data.keyword.cloud_notm}} effimera distribuita in base alle esigenze per le operazioni day-2 come l'aggiunta di host, cluster o servizi aggiuntivi alla tua istanza VMware. 
+IBM CloudDriver è una VSI (Virtual Server Instance) della VM {{site.data.keyword.cloud_notm}} effimera distribuita in base alle esigenze per le operazioni day-2 come l'aggiunta di host, cluster o servizi aggiuntivi alla tua istanza VMware.
 
-CloudBuilder e CloudDriver vengono distribuiti solo sulla rete privata che si collega al piano di gestione IBM tramite una coda messaggi privata. Sono componenti sviluppati da IBM, non sono accessibili dall'utente e hanno i seguenti attributi e funzioni: 
-
-- Distribuzione e configurazione dell'istanza vCenter Server all'interno dell'account utente.
-- Aggiungere e rimuovere gli host dai cluster vCenter Server.
-- Aggiungere e rimuovere i cluster dalle istanze vCenter Server.
-- Aggiungere e rimuovere i servizi o le funzioni aggiuntivi per le istanze
+CloudBuilder e CloudDriver vengono distribuiti solo sulla rete privata che si collega al piano di gestione IBM tramite una coda messaggi privata. Sono componenti sviluppati da IBM, non sono accessibili dall'utente e hanno i seguenti attributi e funzioni:
+* Distribuzione e configurazione dell'istanza vCenter Server all'interno dell'account utente.
+* Aggiungere e rimuovere gli host dai cluster vCenter Server.
+* Aggiungere e rimuovere i cluster dalle istanze vCenter Server.
+* Aggiungere e rimuovere i servizi o le funzioni aggiuntivi per le istanze
 vCenter Server.
 
 ### Flusso di automazione

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -25,8 +25,7 @@ data center virtualizzato VMware installato in loco.
 
 I componenti VMware HCX, che vengono distribuiti come VM (Virtual Machine) nel sito di destinazione vCenter Server, consentono di stabilire una connessione con i componenti VMware HCX installati nel sito di origine in loco del peer.
 
-Figura 1. Servizio VMware Hybrid Cloud Extension
-![Servizio VMware Hybrid Cloud Extension](vcsnsxt-hcx-1.svg)
+![Servizio VMware Hybrid Cloud Extension](../../images/vcsnsxt-hcx-1.svg "Servizio VMware Hybrid Cloud Extension")
 
 L'interconnettività debolmente accoppiata tra locale e {{site.data.keyword.cloud_notm}} abilita funzionalità quali:
 - **Interconnettività semplice** – le connessioni di rete logiche vengono stabilite facilmente su qualsiasi connessione fisica che include Internet pubblico, VPN privata o direct link.
@@ -54,8 +53,7 @@ Utilizzando l'automazione di {{site.data.keyword.cloud_notm}}, Acme Skateboards 
 
 Per ulteriori informazioni su NSX-V, vedi [Panoramica di NSX-V](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv). Per ulteriori informazioni sull'offerta vCenter Server e {{site.data.keyword.icpfull_notm}}, vedi [vCenter Server e {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro).
 
-Figura 2. vCenter Server con {{site.data.keyword.icpfull_notm}}</br>
-![vCenter Server con {{site.data.keyword.icpfull_notm}}](vcsnsxt-nsxvhl.svg)
+![vCenter Server con {{site.data.keyword.icpfull_notm}}](../../images/vcsnsxt-nsxvhl.svg "vCenter Server con {{site.data.keyword.icpfull_notm}}")
 
 Questo crea una interconnettività debolmente accoppiata tra il locale e {{site.data.keyword.cloud_notm}} e abilita funzionalità come:
 -	**Interconnettività semplice** – le connessioni di rete logiche vengono stabilite facilmente su qualsiasi connessione fisica, tra cui Internet pubblico, VPN privata o direct link.

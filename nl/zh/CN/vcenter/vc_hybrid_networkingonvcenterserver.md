@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -44,13 +44,13 @@ subcollection: vmware-solutions
 
 在更改 NSX Manager、NSX Controller 和 NSX Edge 的密码之前，请查看以下注意事项：
 * 不要更改 NSX Manager 的密码，此密码可以在 {{site.data.keyword.vmwaresolutions_short}} 控制台中实例的**摘要**页面上找到。
-* 可以更改 NSX Controller 的密码。有关如何更改 NSX Controller 密码的指示信息，请参阅[更改控制器密码](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.2/com.vmware.nsx.admin.doc/GUID-2667DD9E-E2F5-4403-BAC2-C7D1BBC23228.html)。
+* 可以更改 NSX Controller 的密码。有关如何更改 NSX Controller 密码的指示信息，请参阅[更改控制器密码](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/com.vmware.nsx.admin.doc/GUID-2667DD9E-E2F5-4403-BAC2-C7D1BBC23228.html)。
 * 可以更改客户管理的 VMware NSX Edge 服务网关 (ESG) 的密码和 SSH 设置。不要更改“管理 VMware NSX Edge 服务网关 (ESG)”及相关分布式逻辑路由器的密码。
 
 ## 相关链接
 {: #vc_hybrid_networkingonvcenterserver-related}
 
-* [NSX 概述](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.2/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}
+* [NSX 概述](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}
 * [NSX Edge 服务网关](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}
-* [管理 NAT 规则](https://docs.vmware.com/en/VMware-NSX-for-vSphere/6.2/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}
+* [管理 NAT 规则](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 概述](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-12"
+lastupdated: "2019-05-10"
 
 subcollection: vmware-solutions
 
@@ -18,12 +18,22 @@ subcollection: vmware-solutions
 # Caveonix RiskForesight 授權的考量
 {: #caveonix_license_considerations}
 
-請先檢閱下列考量，然後再刪除您針對單獨使用所訂購的 Caveonix RiskForesight 授權。
+請檢閱與您為獨立使用而訂購之 Caveonix RiskForesight 授權相關的下列考量和已知問題。
 
-## 刪除 Caveonix RiskForesight 授權時的考量
+## 有關授權日期顯示的已知問題
+{: #caveonix_license_considerations-date}
+
+如果您使用的是 Mozilla Firefox 瀏覽器，那麼可能會在 Caveonix RiskForesight 主控台上顯示沒有值的授權開始和結束日期。若要解決此問題，請在其他瀏覽器（例如，Google Chrome）中檢視授權資訊。
+
+如果您只能使用 Firefox 瀏覽器，請與 [Caveonix Support](https://www.caveonix.com/support/){:new_window} 聯絡以取得協助。
+{:note}
+
+## 刪除授權時的考量
 {: #caveonix_license_considerations-remove}
 
-移除 Caveonix RiskForesight 授權並不會移除安裝在 vCenter Server 實例上的 Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} 服務。您必須從 {{site.data.keyword.vmwaresolutions_short}} 主控台中的 vCenter Server 實例來訂購新的 Caveonix RiskForesight 授權或者移除 Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} 服務。如需相關資訊，請參閱[移除 PvCenter Server 實例服務的程序](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-removing-procedure)。
+移除 Caveonix RiskForesight 授權並不會移除安裝在 vCenter Server 實例上的 Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} 服務。
+
+您必須從 {{site.data.keyword.vmwaresolutions_short}} 主控台中的 vCenter Server 實例來訂購新的 Caveonix RiskForesight 授權或者移除 Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} 服務。如需相關資訊，請參閱[移除 PvCenter Server 實例服務的程序](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-removing-procedure)。
 
 ## 相關鏈結
 {: #caveonix_license_considerations-related}

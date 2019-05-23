@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -14,9 +14,7 @@ subcollection: vmware-solutions
 # システム・コンテキスト
 {: #vcsiks-systemcontext}
 
-図 1. システム・コンテキスト
-
-![システム・コンテキストの図](vcsiks-system-context.svg)
+![システム・コンテキスト図](../../images/vcsiks-system-context.svg "システム・コンテキスト図")
 
 コア・コンポーネントは次のとおりです。
 

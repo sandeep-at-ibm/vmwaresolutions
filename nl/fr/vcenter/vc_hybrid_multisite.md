@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-24"
+lastupdated: "2019-05-02"
 
 subcollection: vmware-solutions
 
@@ -47,9 +47,7 @@ Si votre configuration nécessite un déploiement multisite de plus de 128 serve
 
 Le graphique suivant décrit la vue globale du déploiement multisite vCenter Server with Hybridity Bundle.
 
-Figure 1. Déploiement multisite vCenter Server with Hybridity Bundle
-
-![Déploiement multisite vCenter Server with Hybridity Bundle](../vcenter/multisite-hub-spoke.svg "Déploiement multisite vCenter Server with Hybridity Bundle")
+![Déploiement multisite vCenter Server with Hybridity Bundle](../images/multisite-hub-spoke.svg "Déploiement multisite vCenter Server with Hybridity Bundle")
 
 Le modèle contient les couches suivantes :
 

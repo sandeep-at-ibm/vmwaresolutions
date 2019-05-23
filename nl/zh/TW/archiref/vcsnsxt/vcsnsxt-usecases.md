@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -23,8 +23,7 @@ VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 
 
 VMware HCX 元件部署為 vCenter Server 目標站台中的虛擬機器 (VM)，能夠建立與安裝在對等節點內部部署來源站台之 VMware HCX 元件的連線。
 
-圖 1. VMware Hybrid Cloud Extension 服務
-![VMware Hybrid Cloud Extension 服務](vcsnsxt-hcx-1.svg)
+![VMware Hybrid Cloud Extension 服務](../../images/vcsnsxt-hcx-1.svg "VMware Hybrid Cloud Extension 服務")
 
 內部部署與 {{site.data.keyword.cloud_notm}} 之間的鬆散耦合交互連線可啟用下列這類功能：
 - **簡單交互連線** - 可透過任何實體連線（包括公用網際網路、專用 VPN 或 Direct Link），輕鬆建立邏輯網路連線。
@@ -52,8 +51,7 @@ Acme Skateboards 想要在由 vCenter Server with Hybridity Bundle 與 {{site.da
 
 如需 NSX-V 的相關資訊，請參閱 [NSX-V 概觀](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv)。如需 vCenter Server 及 {{site.data.keyword.icpfull_notm}} 供應項目的相關資訊，請參閱 [vCenter Server 及 {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)。
 
-圖 2. 具有 {{site.data.keyword.icpfull_notm}} 的 vCenter Server</br>
-![具有 {{site.data.keyword.icpfull_notm}}](vcsnsxt-nsxvhl.svg)
+![vCenter Server with {{site.data.keyword.icpfull_notm}}](../../images/vcsnsxt-nsxvhl.svg "vCenter Server with {{site.data.keyword.icpfull_notm}}")
 
 這會在內部部署與 {{site.data.keyword.cloud_notm}} 之間建立鬆散耦合的交互連線，並且啟用下列這類功能：
 -	**簡單交互連線** - 可透過任何實體連線（包括公用網際網路、專用 VPN 或 Direct Link），輕鬆建立邏輯網路連線。

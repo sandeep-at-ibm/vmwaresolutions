@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-13"
 
 subcollection: vmware-solutions
 
@@ -25,12 +25,12 @@ Veeam Availability Suite 9.5 Update 4 发布后，现在 Veeam 与 IBM Cloud Obj
 ## 创建 Object Storage 实例
 {: #icos_ordering-obj}
 
-要创建 Object Storage 实例，请参阅[创建新服务实例](/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-order-storage#creating-a-new-service-instance)。执行其中的步骤，然后返回到此部分以继续执行以下任务。
+要创建 Object Storage 实例，请参阅[创建新服务实例](/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-provision#provision-instance)。执行其中的步骤，然后返回到此部分以继续执行以下任务。
 
 ## 创建存储区
 {: #icos_ordering-bucket}
 
-要创建存储区，请参阅[创建一些存储区来存储数据](/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-getting-started-tutorial#gs-create-buckets)。执行其中的步骤，然后返回到此部分以继续执行以下任务。
+要创建存储区，请参阅[创建一些存储区来存储数据](/docs/services/cloud-object-storage?topic=cloud-object-storage-getting-started#gs-create-buckets)。执行其中的步骤，然后返回到此部分以继续执行以下任务。
 
 ## 创建服务凭证
 {: #icos_ordering-service-cred}
@@ -46,3 +46,13 @@ Veeam Availability Suite 9.5 Update 4 发布后，现在 Veeam 与 IBM Cloud Obj
 {: #icos_ordering-manage-cloud}
 
 有关维护和管理云层的信息，请参阅[管理容量层数据](https://helpcenter.veeam.com/docs/backup/vsphere/capacity_tier_managing_data.html?ver=95u4){:new_window}。
+
+## 相关链接
+{: #icos_ordering-related}
+
+* [Veeam on {{site.data.keyword.cloud_notm}} 概述](/docs/services/vmwaresolutions?topic=vmware-solutions-veeam_considerations)
+* [订购 Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_ordering)
+* [管理 Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
+* [请求 Veeam on {{site.data.keyword.cloud_notm}} 的受管服务](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
+* [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [常见问题](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)

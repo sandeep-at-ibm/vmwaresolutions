@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-30"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -93,23 +93,28 @@ vCenter Server 的設計旨在容許「漸進式」升級。亦即，如果您�
 * 如需有關備份 vCenter Server 及 PSC 的其他考量及資訊，請參閱 [vCenter 檔案型備份](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_backingup#solution_backingup-vcenter)。
 *	如需備份 NSX 的相關資訊，請參閱[備份 NSX Manager 資料](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window}。
 
+建議使用以檔案為基礎的備份。VMware VSphere 6.7 不支援以映像檔為基礎的備份（使用 vSphere Data Protection)。
+{:note}
+
 ## 將 IBM vCenter Server vSphere 軟體從 6.5 升級至 6.7 的程序
 {: #vc_vsphere_upgrade-procedure}
 
 只要您在升級過程中的任何時候遇到問題，請使用您在過程開始時開立的 {{site.data.keyword.vmwaresolutions_short}} 升級問題單，與「IBM 支援中心」聯絡。「IBM 支援中心」會視需要開立具有 VMware 支援的問題單。
 
-您必須使用此路徑，以確保 {{site.data.keyword.vmwaresolutions_short}} 為 VMware 支援中心提供他們所需的所有 vCenter Server 設計、設定相關資訊，以及 {{site.data.keyword.cloud_notm}} 資訊。遵循此處理程序以確保與 VMware 支援共用正確資訊，從而縮短支援體驗。在「IBM 支援中心」提供必要資訊給 VMware 支援之後，您可以視需要直接與 VMware 支援互動。
-{:important}
+**重要事項**：
+
+* 您必須使用此路徑，以確保 {{site.data.keyword.vmwaresolutions_short}} 為 VMware 支援中心提供他們所需的所有 vCenter Server 設計、設定相關資訊，以及 {{site.data.keyword.cloud_notm}} 資訊。遵循此處理程序以確保與 VMware 支援共用正確資訊，從而縮短支援體驗。在「IBM 支援中心」提供必要資訊給 VMware 支援之後，您可以視需要直接與 VMware 支援互動。
+* 務必記錄此升級程序中建立的所有新密碼和認證。IBM 支援中心在升級程序結束時，需要這些認證以便更新其內部資料庫。
 
 ### 升級 VMware NSX
 {: #vc_vsphere_upgrade-procedure-nsx}
 
-升級 VMware NSX 可能需要一些時間，因為升級程序會更新 ESXi 主機上的「vSphere 安裝組合」，而且需要重新啟動每個主機。請相應地計劃您的維護時間。
+升級 VMware NSX 可能需要一些時間，因為升級程序會更新 ESXi 主機上的「vSphere 安裝組合」，而且需要重新啟動每部主機。請相應地計劃您的維護時間。
 
 #### 升級 VMware NSX 之前
 {: #vc_vsphere_upgrade-procedure-nsx-before}
 
-* 如果您的環境上已安裝 Zerto for {{site.data.keyword.cloud_notm}}，請使用 Zto 使用者介面來關閉每個主機上的 zVRA VM。在 Zerto 使用者介面的 Zerto 站台設定、原則區段中，選取**容許 Zerto 在補救期間一律讓主機進入維護模式**。否則，Zerto 會啟動 zVRA，並阻止升級繼續進行，因為不容許升級 ESXi 主機以進入維護模式。
+* 如果您的環境上已安裝 Zerto for {{site.data.keyword.cloud_notm}}，請使用 Zto 使用者介面來關閉每部主機上的 zVRA VM。在 Zerto 使用者介面的 Zerto 站台設定、原則區段中，選取**容許 Zerto 在補救期間一律讓主機進入維護模式**。否則，Zerto 會啟動 zVRA，並阻止升級繼續進行，因為不容許升級 ESXi 主機以進入維護模式。
 * 對於未安裝 VMware Tools 的 VM，請在 NSX ESXi 主機模組安裝之前手動關閉或強制關閉電源。這些 VM 會阻止目標 ESXi 主機進入維護模式。
 
 #### 升級 VMware NSX 的程序
@@ -168,31 +173,35 @@ vCenter Server 的設計旨在容許「漸進式」升級。亦即，如果您�
     2. 使用 Shell **passwd** 指令，為 PSC 及 vCenter 設定新的 root 密碼。
     3. 儲存顯示在 {{site.data.keyword.vmwaresolutions_short}} 主控台的密碼，或「IBM 支援中心」提供給您的密碼。稍後在您升級應用裝置時會重複使用這些密碼。
 2. 使用內建 Windows ISO 裝載功能，在 jumpbox 內裝載 vCenter 6.7u1b ISO。
-3. 遵循首先升級所有 PSC 的 VMware 指示。如需相關資訊，請參閱 [Upgrade a vCenter Server Appliance 6.0 or 6.5 with an External vCenter Single Sign-On or Platform Services Controller Instance by Using the GUI](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html)。
+3. 遵循 VMware 指示以升級 vCenter。如需相關資訊，請參閱 [Upgrade a vCenter Server Appliance 6.0 or 6.5 with an External vCenter Single Sign-On or Platform Services Controller Instance by Using the GUI](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html)。VMware 指示類似於 PSC 的升級程序。但是，對於升級程序，請指向 vCenter FQDN/IP，而不是指向 PSC。
 
-所述需求**您必須從與要升級的應用裝置位於同一網絡的 Windows、Linux 或 Mac 機器執行 GUI 升級**，適用於您帳戶中 {{site.data.keyword.cloud_notm}} 內的任何子網路。
-{:note}
+**附註**：
+* 所述需求**您必須從與要升級的應用裝置位於同一網絡的 Windows、Linux 或 Mac 機器執行 GUI 升級**，適用於您帳戶中 {{site.data.keyword.cloud_notm}} 內的任何子網路。
 
-建議您使用 vCenter 作為升級的來源和目標。
+* 建議您使用 vCenter 作為升級的來源和目標。
 
 #### 將 PSC 功能合併至 vCenter
 
 1. 在順利完成 PSC 及 vCenter 升級之後，請登入 vCenter FLEX 型使用者介面，檢查**系統配置**區段中與 vCenter 及 PSC 相關之所有服務的性能。  
-2. 備份您的 PSC。
+2. 備份您的 PSC。建議使用以檔案為基礎的備份。如需相關資訊，請參閱 [vSphere 6.7 中以檔案為基礎的備份](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.install.doc/GUID-8A16C037-F1E0-40C9-B106-05C30625B9CB.html){:new_window}。
 3. 導覽至 ``<VCSA 6.7 iso mount>:\vcsa-converge-cli\templates\converge`` 目錄。
 4. 將 ``converge.json`` 檔案複製到 jump VM 上的本端磁碟機。
-5. 導覽至 ``<VCSA 6.7 iso mount>:\vcsa-converge-cli\templates\decommission`` 目錄。
   * 如果這是您要合併的第一個 PSC，則必須從 ``json`` 檔案中移除 **replication** 區段。
   * 如果這是後續鏈結的 PSC，則必須填寫 ``json`` 檔案的 **replication** 區段中要求的屬性。
+5. 導覽至 ``<VCSA 6.7 iso mount>:\vcsa-converge-cli\templates\decommission`` 目錄。
 6. 將 ``decommission_psc.json`` 檔複製到 jump VM 上的本端磁碟機。
 7. 編輯 ``converge.json`` 及 ``decommission_psc.json`` 檔案。如何編輯欄位的指示在 ``json`` 檔案內。建議您在 **managing_esx_or_vc** 區段中使用包含 PSC 的 ESXi 主機，而不是 vCenter。
 8. 導覽至指令視窗中的 ``<VCSA 6.7 iso mount>:\vcsa-converge-cli\win32`` 目錄。
 9. 執行 ``vcsa-util.exe``，搭配 **converge** 參數，以及先前編輯之 ``converge.json`` 檔案的路徑。例如，``vcsa-util converge --no-ssl-certificate-verification c:\temp\converge.json -v``。
-  1. 鍵入 **Y**，確認已備份 PSC 以繼續。
-  2. 處理程序完成時，請鍵入 **Y** 來確認重新啟動 vCenter。
+   1. 鍵入 **Y**，確認已備份 PSC 以繼續。
+   2. 處理程序完成時，請鍵入 **Y** 來確認重新啟動 vCenter。
+
+   如果聚合程序失敗，且顯示 ``ERROR converge Failed to get vecs users and permissions`` 訊息，請參閱 [Converge to embedded failed!](https://virtualtassie.com/2018/vcenter-6-7-update-1-converge-to-embedded-failed/#comment-3713){:new_window}，以取得解決此錯誤的步驟。
+   {:note}
+
 10. 在重新啟動 vCenter 之後，請登入 vCenter 使用者介面來驗證作業正常。
 11. 導覽至指令視窗中的 ``<VCSA 6.7 iso mount>:\vcsa-converge-cli\win32`` 目錄。
-12. 執行 **vcsa-util.exe**，搭配 **decommission** 參數，以及先前編輯之 ``decommission_psc.json`` 檔案的路徑。例如，``vcsa-util decommission --no-ssl-certificate-verification c:\temp\decommission_psc.json -v``。
+12. 執行 ``vcsa-util.exe``，搭配 **decommission** 參數，以及先前編輯之 ``decommission_psc.json`` 檔案的路徑。例如，``vcsa-util decommission --no-ssl-certificate-verification c:\temp\decommission_psc.json -v``。
 13.	指令順利完成時，請登入 vCenter flex 型使用者介面，驗證 vCenter 應用裝置是非鏈結環境中列出的唯一應用裝置，且所有服務都健全。
 14. 刪除舊的 PSC、vCenter 及未用的合併 PSC VM。
 15. 將 vCenter 使用者介面內的 vCenter Server 重新命名為 **<instancename>_vc_separate**。例如，如果您的 vCenter Server 實例名稱是 **production**，則 vCenter 使用者介面名稱是 **production_vc_separate**。這是必要的，因此，自動化可能會回復它對此 vCenter Server 實例的功能。  
@@ -200,7 +209,7 @@ vCenter Server 的設計旨在容許「漸進式」升級。亦即，如果您�
 ### 升級 ESXi 主機
 {: #vc_vsphere_upgrade-procedure-esxi}
 
-vCenter 內的 VMware Update Manager 功能是用來升級及修補 ESXi 主機至 6.7u1 層次。與本文件的 NSX 升級一節類似，任何無法 vMotion 至另一個主機或是在沒有問題的情況下被關閉的 VM，可能會導致升級程序停滯。
+vCenter 內的 VMware Update Manager 功能是用來升級及修補 ESXi 主機至 6.7u1 層次。與本文件的 NSX 升級一節類似，任何無法 vMotion 至另一部主機的 VM，都必須在沒有問題的情況下關閉，否則可能會導致升級程序停滯。
 {:note}
 
 #### 將 ESXi ISO 上傳至 VUM
@@ -214,16 +223,17 @@ vCenter 內的 VMware Update Manager 功能是用來升級及修補 ESXi 主機�
 #### 升級 ESXi 主機的程序
 {: #vc_vsphere_upgrade-procedure-esxi-upgrade}
 
-1. 從 vCenter 使用者介面中，導覽至包含要升級之 ESXi 主機的叢集名稱。
-2. 按一下**重新修補**。
-3. 選取選項框左側的**升級基準線**，然後選取選項畫面右側的 **VMware ESXi 6.7.0 U1** 基準線。按**下一步**。附註：將 ISO 映像檔上傳至 VUM 儲存庫時，已建立 ESXi 6.7.0 U1 的 VUM 基準線。
-4. 選取您要升級的主機，然後按**下一步**。
-5. 選取接受 EULA 的選項，然後按**下一步**。
-6. 從「進階選項」畫面中，按**下一步**來接受預設值。
-7. 從「主機補救設定」畫面中，選擇性地選取以停用抽取式媒體，然後按**下一步**。
-8. 從「叢集補救選項」畫面中，按**下一步**來接受預設值。
-9. 從「準備完成」畫面中，按一下**事先檢查補救**。即會傳回有關 HA 許可控制的警告。  
-10. 按一下**完成**，以開始主機升級。
+1. 在 vCenter 使用者介面中，導覽至包含要升級之 ESXi 主機的叢集。
+2. 按一下導覽畫面中的**更新**標籤。移至主機更新並按一下**連接**。
+3. 選取已上傳到 VUM 的基準線（適用於 ESXi 升級的 ISO 映像檔）並按一下**重新修補**。
+4. 接受「一般使用者授權合約」並按一下**確定**。
+5. 檢閱要重新修補的主機並確認預先補救檢查結果。
+
+   您必須將連接到 VM 的任何 CD 或 DVD 分離，否則包含該 VM 的主機不容許進入維護模式。
+   {:note}
+
+6. 預先補救檢查成功後，按一下**重新修補**。使用重新修補實體作業監視升級程序。
+7. 升級完成後，檢閱主機的摘要區段以確認是否顯示了 ``VMware ESXi, 6.7.0``。
 
 如果升級程序立即失敗，並顯示**主機無法進入維護模式**錯誤訊息，請關閉 Zvand ZVA，然後再試一次。ZVRA VM 會在每部伺服器停止補救時自動啟動。如需在升級過程中繼續 Zins 抄寫的相關資訊，請參閱[如何讓具有關聯 VRA 的主機進入維護模式](https://www.zerto.com/myzerto/knowledge-base/place-host-into-maintenance-mode-with-vra/){:new_window}。
 {:note}
@@ -245,9 +255,12 @@ vCenter 內的 VMware Update Manager 功能是用來升級及修補 ESXi 主機�
 
 在升級後，建議您套用所有重要及非重要 ESXi 主機修補程式。
 
-1. 從 vCenter 使用者介面中，選取包含要修補之主機的叢集，然後選取 **Update Manager** 標籤。
-2. 選取**重新修補**，並選取**非重要主機修補程式**。
-3. 依先前的作法繼續進行 ESXi 升級。請注意，在此過程中，您可能需要再次關閉 Zerto ZVRA VM。
+1. 從 vCenter 使用者介面，選取包含要修補之主機的叢集。
+2. 按一下導覽畫面中的**更新**標籤，然後選取**主機更新**標籤。選取**重要主機修補程式（預先定義）**。重複升級 ESXi 主機的程序。
+3. 按一下導覽畫面中的**更新**標籤，然後選取**主機更新**標籤。選取**非重要主機修補程式（預先定義）**。重複升級 ESXi 主機的程序。
+
+在此過程中，您可能需要再次關閉 Zerto zVRA VM。
+{:note}
 
 ### 升級其他項目
 {: #vc_vsphere_upgrade-procedure-addtl}
@@ -286,6 +299,22 @@ vCenter 內的 VMware Update Manager 功能是用來升級及修補 ESXi 主機�
 
 與 VMware 來賓工具類似，vCenter Server 環境升級可能導致舊的 VM 處於其現行硬體層次不支援的狀態。請視需要使用 vCenter 使用者介面來尋找並更新這些 VM。  
 
+#### 將「增強 vMotion 相容性」模式設定為 Intel Skylake
+{: #vc_vsphere_upgrade-procedure-addtl-evc}
+
+您可以使用 Intel Skylake 世代設定主機，以便叢集在升級後進入 Skylake「增強 vMotion 相容性 (EVC)」模式。請使用下列步驟來更新 EVC 模式：
+
+1. 從包含主機的叢集，按一下**配置**。
+2. 從 **VMware EVC** 按一下**編輯**，並將 EVC 模式變更為 **Intel Skylake 世代**。
+
+如需相關資訊，請參閱 [Enhanced vMotion Compatibility (EVC) processor support (1003212)](https://kb.vmware.com/s/article/1003212){:new_window}。
+
+#### 重新配置 NSX Manager 和 HCX Manager 以指向 PSC
+
+1. 從 Web 瀏覽器，導覽至 NSX Manager 應用裝置使用者介面，網址為 ``https://<nsx-manager-ip>`` 或 ``https://<nsx-manager-hostname>``。使用認證登入。
+2. 從起始位置按一下**管理 vCenter 登錄**。
+3. 編輯**查閱服務 URL** 以指向 vCenter IP。使用內嵌式 **PSC doesn’t exist anymore** PSC 單機。
+
 ## 升級 vCenter Server vSphere 軟體之後的結果
 {: #vc_vsphere_upgrade-results}
 
@@ -296,9 +325,9 @@ vCenter 內的 VMware Update Manager 功能是用來升級及修補 ESXi 主機�
 3. 選取**性能**，並注意所有顯示的警告。
 4. 如果顯示**硬體相容性**警告，請展開警告，若處於警告狀態，則按一下**控制器韌體已獲 VMware 認證**訊息。
 5. 記下列出的主機及韌體更新建議。
-6. 向「IBM 支援中心」開立問題單，來排定讓每個主機停止服務的時間，以容許進行韌體更新。
+6. 向「IBM 支援中心」開立問題單，來排定讓每部主機停止服務的時間，以容許進行韌體更新。
 
-升級完成時，請向「IBM 支援中心」更新您的支援問題單。然後，「IBM 支援中心」會更新 {{site.data.keyword.vmwaresolutions_short}} 主控台，以回復 6.7 層次的 {{site.data.keyword.vmwaresolutions_short}} 自動化。這包括新增及移除服務、主機、叢集及次要 vCenter Server 實例。
+升級完成時，請向「IBM 支援中心」更新您的支援問題單。請提供在此升級程序中建立的新密碼。例如，在支援問題單中提供密碼以部署應用裝置管理服務 -PSC 和 vCenter。然後，IBM 支援中心會更新 {{site.data.keyword.vmwaresolutions_short}} 主控台和內部資料庫，以在 6.7 層次繼續 {{site.data.keyword.vmwaresolutions_short}} 自動化。這包括新增及移除服務、主機、叢集及次要 vCenter Server 實例。
 
 ## 相關鏈結
 {: #vc_vsphere_upgrade-related}

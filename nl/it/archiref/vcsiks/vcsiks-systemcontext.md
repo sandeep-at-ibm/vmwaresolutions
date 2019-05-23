@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -14,9 +14,7 @@ subcollection: vmware-solutions
 # Contesto di sistema
 {: #vcsiks-systemcontext}
 
-Figura 1. Contesto di sistema
-
-![Diagramma del contesto di sistema](vcsiks-system-context.svg)
+![Diagramma del contesto di sistema](../../images/vcsiks-system-context.svg "Diagramma del contesto di sistema")
 
 I componenti principali sono i seguenti:
 
@@ -65,5 +63,4 @@ La rete, la sicurezza e la migrazione dell'applicazione sono spesso gli aspetti 
 ## Link correlati
 {: #vcsiks-systemcontext-related}
 
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

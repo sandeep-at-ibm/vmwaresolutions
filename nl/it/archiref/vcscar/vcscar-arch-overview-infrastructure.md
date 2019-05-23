@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-22"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -58,8 +58,7 @@ Oltre ai requisiti hardware di {{site.data.keyword.cloud_notm}} Private, devi cr
 ## Struttura virtuale
 {: #vcscar-arch-overview-infrastructure-virt-structure}
 
-Figura 1. Struttura di vCenter Server e distribuzione {{site.data.keyword.icpfull_notm}}
-![Struttura di vCenter Server e distribuzione {{site.data.keyword.icpfull_notm}} ](vcscar-icp.svg)
+![Struttura di vCenter Server e {{site.data.keyword.icpfull_notm}} deployment](../../images/vcscar-icp.svg "Struttura di vCenter Server e {{site.data.keyword.icpfull_notm}} deployment")
 
 All'interno dell'istanza vCenter Server, l'istanza {{site.data.keyword.icpfull_notm}} viene distribuita con un DLR (Distributed Logical Router) e ESG (Edge Services Gateway) NSX dedicato.
 L'installazione {{site.data.keyword.icpfull_notm}} viene caricata nella sottorete VXLAN definita nei componenti precedenti.

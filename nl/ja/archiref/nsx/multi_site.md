@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -22,7 +22,7 @@ subcollection: vmware-solutions
 Cross-vCenter NSX 機能を使用すると、最大 9 つの NSX マネージャーをプライマリーとセカンダリーの関係でリンクできます (1 つのプライマリーと 8 つのセカンダリー)。 　Cross-vCenter NSX が機能するために vCenter サーバーが拡張リンク・モード (ELM) 関係にある必要はありませんが、この関係には以下の利点があります。
 
 * シングル・サインオン (SSO) 資格情報を使用して、プライマリーとセカンダリーの関係の作成が簡素化されます。
-* vCenter Server の自動化構成により、一緒にリンクされるすべてのサイトの DNS 名前解決が可能になります
+* vCenter Server の自動化構成により、一緒にリンクされるすべてのサイトの DNS 名前解決が可能になります。
 * NSX と通常の vCenter 機能の両方について、すべてのサイトにわたり単一画面で管理します。
 
 ## マルチサイトの例
@@ -36,9 +36,7 @@ Cross-vCenter NSX 機能を使用すると、最大 9 つの NSX マネージャ
 * インバウンド・トラフィックの場合は、グローバル・ロード・バランサーが必要です。 この要件を満たすには、{{site.data.keyword.cloud_notm}} グローバル・ロード・バランシング・オファリングを参照してください。
 * この例では、VMware NSX Enterprise エディションが必要です。
 
-図 1. マルチサイト・トポロジー
-
-![マルチサイト・トポロジー](multisite_topology.svg "マルチサイト・トポロジー")
+![マルチサイト・トポロジー](../../images/multisite_topology.svg "マルチサイト・トポロジー")
 
 ## 関連リンク
 {: #nsx-multi_site-related}

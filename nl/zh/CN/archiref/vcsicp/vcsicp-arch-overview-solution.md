@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-09"
 
 subcollection: vmware-solutions
 
@@ -17,8 +17,7 @@ subcollection: vmware-solutions
 ## VMware vCenter Server on IBM Cloud 组件
 {: #vcsicp-arch-overview-solution-vcs-comp}
 
-图 1. vCenter Server 环境图
-![VCS 环境](vcsicp-vcsenv.svg)
+![vCenter Server 环境](../../images/vcsicp-vcsenv.svg "vCenter Server 和 {{site.data.keyword.icpfull_notm}} 部署的物理结构")
 
 ### Platform Service Controller
 {: #vcsicp-arch-overview-solution-psc}
@@ -51,27 +50,26 @@ Controller
 
 表 1. {{site.data.keyword.icpfull_notm}} ESG 规范
 
-属性|规范
---|--
-Edge 服务网关|虚拟设备
-Edge 大小 - 大型|2 个 vCPU
-内存|1 GB 磁盘|本地数据存储上 1000 GB
+|属性|规范|
+|:--------- |:------------- |
+|Edge 服务网关|虚拟设备|
+|Edge 大小 - 大型|2 个 vCPU|
+|内存|1 GB 磁盘|本地数据存储上 1000 GB|
 
 表 2. {{site.data.keyword.icpfull_notm}} DLR 规范
 
-属性|规范
---|--|
-分布式逻辑路由器| 	虚拟设备
-Edge 大小 - 精简|1 个 vCPU
-内存|512 MB 磁盘|本地数据存储上 1000 GB
+|属性|规范|
+|:--------- |:------------- |
+|分布式逻辑路由器|虚拟设备|
+|Edge 大小 - 精简|1 个 vCPU|
+|内存|512 MB 磁盘|本地数据存储上 1000 GB|
 
 ## IBM Cloud Private 组件
 {: #vcsicp-arch-overview-solution-icp-comp}
 
 {{site.data.keyword.icpfull_notm}} 是一种用于开发和管理内部部署容器化应用程序的应用程序平台。这是用于管理容器的集成环境，包括容器编排器 Kubernetes、专用映像存储库、管理控制台和监视框架。
 
-图 2. 使用 vCenter Server 的虚拟 {{site.data.keyword.icpfull_notm}} 部署
-![使用 VCS 的虚拟 {{site.data.keyword.icpfull_notm}} 部署](vcsicp-virtual-icp-deployment-vcs.svg)
+![带 vCenter Server 的虚拟 {{site.data.keyword.icpfull_notm}} 部署](../../images/vcsicp-virtual-icp-deployment-vcs.svg "带 vCenter Server 的虚拟 {{site.data.keyword.icpfull_notm}} 部署")
 
 ###	引导节点
 {: #vcsicp-arch-overview-solution-boot-node}
@@ -107,30 +105,29 @@ Edge 大小 - 精简|1 个 vCPU
 
 表 3. {{site.data.keyword.icpfull_notm}} 虚拟机规范
 
-节点| 	实例数|IP 数|CPU 数|RAM (GB)|磁盘 (GB)
-:-----|------------:|:----|----:|----------:|----------:|
-主节点|	3|IP（3 个），VIP（1 个）|4|64|200
-管理|3|IP（3 个）|8|64|500
-代理|3|IP（3 个），VIP（1 个）|2|4|150
-漏洞顾问程序|3|IP（3 个）|4|16|500
-GlusterFS|3|IP（3 个）|8|16|150
-工作程序|3-6|IP（3 个）|4-8|4|150
+|节点|实例数|IP 数|CPU 数|RAM (GB)|磁盘 (GB)|
+|:---- |:--------- |:-- |:--- |:--------- |:--------- |
+|主节点|3|IP（3 个），VIP（1 个）|4|64|200|
+|管理|3|IP（3 个）|8|64|500|
+|代理|3|IP（3 个），VIP（1 个）|2|4|150|
+|漏洞顾问程序|3|IP（3 个）|4|16|500|
+|GlusterFS|3|IP（3 个）|8|16|150|
+|工作程序|3-6|IP（3 个）|4-8|4|150|
 
 CAM 需要工作程序节点具有更高的 vCPU 和内存配置。
 
 表 4. {{site.data.keyword.icpfull_notm}} 虚拟机规范
 
-节点| 	实例数|IP 数|CPU 数|RAM (GB)|磁盘 (GB)
-:-----|------------:|:----|----:|----------:|----------:|
-工作程序|3|IP（3 个）|4-8|16-20|150
+|节点|实例数|IP 数|CPU 数|RAM (GB)|磁盘 (GB)|
+|:---- |:---------- |:-- |:---- |:--------- |:--------- |
+|工作程序|3|IP（3 个）|4-8|16-20|150|
 
 ## CAM 组件
 {: #vcsicp-arch-overview-solution-cam-comp}
 
 {{site.data.keyword.cloud_notm}} Automation Manager (CAM) 是在 {{site.data.keyword.icpfull_notm}} 上运行的多云自助服务管理平台，支持开发者和管理者满足其业务需求。
 
-图 3. CAM 组件参考</br>
-![CAM 组件参考](vcsicp-cam-component-ref.svg)
+![CAM 组件参考](../../images/vcsicp-cam-component-ref.svg "CAM 组件参考")
 
 ### CAM 代理
 {: #vcsicp-arch-overview-solution-cam-proxy}

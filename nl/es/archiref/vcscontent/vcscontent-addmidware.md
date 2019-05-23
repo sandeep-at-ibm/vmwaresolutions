@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-25"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 Ahora que Stock Trader se ejecutan en un contenedor y que Jane está satisfecha con los microservicios actuales, ella y Todd trabajan en cómo mejorar la aplicación con prestaciones adicionales. Mediante la refactorización de los microservicios de Stock Trader para manejar la actividad y la escalabilidad en aumento, ambos ven la necesidad de añadir middleware a {{site.data.keyword.cloud}} Private. Parte del middleware ya existía en su centro de datos, por lo que se trata de un ejercicio de replanteamiento de la plataforma con la adición de cierto middleware.
 
-Figura 1. Refactorización de Stock Trader
-![Refactorización de Stock Trader](vcscontent-refactor.svg)
+![Refactorización de Stock Trader](../../images/vcscontent-refactor.svg "Refactorización de Stock Trader")
 
 Esta refactorización de la solución genera una plataforma común en la que ejecutar la aplicación y los servicios necesarios, combinados en un plano de gestión más sencillo.
 
@@ -244,17 +243,14 @@ Mediante secretos de Kubernetes, Jane configura un nombre de secreto y parámetr
 
 Jane desea una base de código unificada, aunque Stock Trader se puede ejecutar en más de una nube. El secreto de DB2 de la figura siguiente tiene distintos detalles de direccionamiento, pero en el mismo formato. Cuando se despliega el microservicio del portafolio de Jane, busca el parámetro de punto final de secreto de DB2 para conectarse a la instancia de Db2 adecuada. A la aplicación Stock Trader no debe preocuparse por si se ejecuta en una máquina virtual de VMware, en un servicio contenerizado o como un servicio gestionado por la nube.
 
-Figura 2. Stock Trader - servicios centrales
-![Servicios centrales de Stock Trader](vcscontent-pivot-services.svg)
+![Servicios centrales de Stock Trader](../../images/vcscontent-pivot-services.svg "Servicios centrales de Stock Trader")
 
 ## Resultado
 {: #vcscontent-addmidware-result}
 
 Puesto que Jane se ha comprometido en refactorizar la solución de Stock Trader y Todd ha instalado middleware en {{site.data.keyword.cloud_notm}} Private Hosted, toda la solución básica de Stock Trader se ejecuta en una nube privada. Jane añade más microservicios como un servicio de notificación de Twitter. Las reglas de direccionamiento de Istio permiten la mensajería de nivel de fidelidad dinámica a través de un canal de Slack interno o de un canal de Twitter público.
 
-Figura 3. Optimización de Stock Trader
-
-![Optimización de Stock Trader](vcscontent-enrich.svg)
+![Mejora de Stock Trader](../../images/vcscontent-enrich.svg "Mejora de Stock Trader")
 
 ## Enlaces relacionados
 {: #vcscontent-addmidware-related}

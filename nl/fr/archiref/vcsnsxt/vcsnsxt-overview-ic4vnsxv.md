@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-19"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -31,8 +31,7 @@ Réseau | Sous-réseau portable **Privé A** conçu pour les composants de gesti
 
 La vue d'ensemble de réseau NSX-V Manager présentée ci-dessous illustre l'emplacement de NSX Manager par rapport aux autres composants dans cette architecture.
 
-Figure 1. Vue d'ensemble de réseau NSX-V Manager
-![Vue d'ensemble de réseau NSX-V Manager](vcsnsxt-vmgmt.svg)
+![Vue d'ensemble de réseau NSX-V Manager](../../images/vcsnsxt-vmgmt.svg "Vue d'ensemble de réseau NSX-V")
 
 Après le déploiement initial, l'automatisation {{site.data.keyword.cloud}} déploie trois contrôleurs NSX dans le cluster initial. Les contrôleurs se voient affecter une adresse IP provenant du sous-réseau portable **privé A** destiné aux composants de gestion. Les règles d'anti-affinité MV–MV sont créées de telle sorte que les contrôleurs soient répartis parmi les hôtes du cluster. Le cluster initial doit être déployé avec un minimum de trois noeuds pour garantir la haute disponibilité des contrôleurs.
 
@@ -78,8 +77,7 @@ Commande de basculement | Liaisons montantes actives : Uplink1, Uplink2 \*
 \* Le groupe de ports vSAN utilise le basculement explicite actif ou en veille car il ne prend pas en charge l'équilibrage de charge du trafic de stockage vSAN.
 {:note}
 
-Figure 2. Mappage de groupe de ports d'interface de réseau de machine virtuelle de cluster
-![Mappage de groupe de ports d'interface de réseau de machine virtuelle de cluster](vcsnsxt-vds-kernel-Int.svg)
+![Mappage de groupe de ports d'interface de réseau de machine virtuelle de cluster](../../images/vcsnsxt-vds-kernel-Int.svg "Mappage de groupe de ports d'interface de réseau de machine virtuelle de cluster")
 
 Tableau 5. Groupes de ports de commutation virtuelle de cluster, VLAN et règle de groupage
 
@@ -124,9 +122,7 @@ Les principaux composants NSX sont les suivants :
 
 Le diagramme de haut niveau illustré ci-après montre comment implémenter certaines des fonctions de micro-segmentation de NSX-V en créant des groupes de sécurité. Dans cet exemple, production et développement sont les groupes de sécurité et des règles de sécurité sont affectées en fonction de ces groupes.
 
-Figure 3. Sécurité NSX-V
-</br>
-![Sécurité NSX-V](vcsnsxt-vsecurity.svg)
+![Sécurité NSX-V](../../images/vcsnsxt-vsecurity.svg "Sécurité NSX-V")
 
 ## Liens connexes
 {: #vcsnsxt-overview-ic4vnsxv-related}

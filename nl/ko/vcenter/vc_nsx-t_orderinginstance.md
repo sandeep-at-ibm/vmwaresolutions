@@ -34,7 +34,7 @@ subcollection: vmware-solutions
   |:------------|:------------ |
   |도메인 이름 | `<root_domain>` |  
   |vCenter Server 로그인 사용자 이름 | `<user_id>@<root_domain>`(Microsoft Active Directory 사용자) 또는 `administrator@vsphere.local` |
-  |vCenter Server(임베드된 PSC 포함) FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. 최대 길이는 50자입니다. |
+  |vCenter Server(임베디드 PSC 포함) FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. 최대 길이는 50자입니다. |
   |SSO(Single Sign-On) 사이트 이름 | `<subdomain_label>` |
   |완전한 ESXi 서버 이름 | `<host_prefix><n>.<subdomain_label>.<root_domain>`, 여기서 `<n>`은 ESXi 서버의 순서입니다. 최대 길이는 50자입니다. |
 
@@ -125,7 +125,7 @@ Bare Metal Server 설정은 데이터 센터 선택 및 Bare Metal Server 구성
 {: #vc_nsx-t_orderinginstance-bare-metal-number}
 
 * 주문하는 모든 서버는 동일한 구성을 갖습니다.
-* vSAN 스토리지를 사용할 경우 4 - 20개의 서버를 주문할 수 있습니다. 
+* vSAN 스토리지를 사용할 경우 4 - 20개의 서버를 주문할 수 있습니다.
 * NFS 스토리지를 사용할 경우 2 - 20개의 서버를 주문할 수 있습니다. 그러나 프로덕션 워크로드의 경우 최소 3개의 서버가 권장됩니다. 자세한 정보는 [두 개의 노드 vCenter Server 인스턴스는 고가용성입니까?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)를 참조하십시오.
 
 ## 스토리지 설정

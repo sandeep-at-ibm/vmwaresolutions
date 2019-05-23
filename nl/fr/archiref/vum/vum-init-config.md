@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-29"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -103,7 +103,7 @@ Tableau 3. Règle de conversion d'adresse réseau
 | Plage de ports convertie | N'importe laquelle |
 | Statut | Activation |
 | Journalisation | Activation |
-| Description | SNAT Proxy01  |
+| Description | SNAT Proxy01 |
 
 ### Installation et configuration d'un serveur proxy
 {: #vum-init-config-inst-cfg-proxy}
@@ -209,6 +209,7 @@ Configurez VUM pour utiliser le serveur proxy afin d'accéder aux référentiels
 2. Sélectionnez l'onglet **Manage** et cliquez sur **Settings**.
 3. Sélectionnez **Download Settings**, puis sous _Proxy settings_, cliquez sur **Edit**.
 4. Cochez la case **Use Proxy** et entrez l'_adresse IP du serveur proxy_ et le _port 3128_, puis cliquez sur **OK**. La zone Connectivity Status passe à _Validating_ puis à _Connected_.
+    **Remarque** : ne vous inquiétez pas si vous recevez le message ``Some URLs have been accessed successfully, but others are inaccessible`` pendant le test de la connexion au serveur proxy. 
 5. Cliquez sur **Download Now**. Dans le panneau _Recent Tasks_, vous devez voir que cette activité est terminée.
 6. Si cette activité échoue, redémarrez le dispositif vCSA (vCenter Server Appliance) :
   1. Connectez-vous à l'interface de gestion vCSA à l'adresse `https://vcsaFQDN:5480` en tant que **superutilisateur**.

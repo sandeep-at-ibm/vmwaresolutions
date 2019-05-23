@@ -38,15 +38,15 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} 서비스는 VMware 인스�
 KMIP for VMware on {{site.data.keyword.cloud_notm}} 인스턴스를 설치하기 전에 다음 고려사항을 검토하십시오.
 
 * KMIP for VMware on {{site.data.keyword.cloud_notm}}는 IBM Key Protect for {{site.data.keyword.cloud_notm}}(Key Protect) 서비스 또는 {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services(HPCS) 서비스를 사용하여 암호화 키를 작성하고, 암호화 및 복호화합니다. 따라서 KMIP for VMware on {{site.data.keyword.cloud_notm}}를 설치하기 전에 다음 항목을 확인하십시오.
-   * KMIP for VMware on {{site.data.keyword.cloud_notm}} 인스턴스를 호스팅할 {{site.data.keyword.cloud_notm}} 지역에서 사용 가능한 Key Protect 또는 HPCS 서비스 인스턴스를 주문했습니다. 
+   * KMIP for VMware on {{site.data.keyword.cloud_notm}} 인스턴스를 호스팅할 {{site.data.keyword.cloud_notm}} 지역에서 사용 가능한 Key Protect 또는 HPCS 서비스 인스턴스를 주문했습니다.
       * Key Protect 인스턴스 작성에 대한 자세한 정보는 [서비스 프로비저닝](/docs/services/key-protect?topic=key-protect-provision)을 참조하십시오.
-      * HPCS 인스턴스 작성에 대한 자세한 정보는 [서비스 프로비저닝](/docs/services/hs-crypto?topic=hs-crypto-provision#provision)을 참조하십시오. HPCS 서비스 프로비저닝 외에 HPCS가 키 관련 기능을 제공할 수 있도록 [암호화 인스턴스도 초기화](/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-hsm)해야 합니다. 
+      * HPCS 인스턴스 작성에 대한 자세한 정보는 [서비스 프로비저닝](/docs/services/hs-crypto?topic=hs-crypto-provision#provision)을 참조하십시오. HPCS 서비스 프로비저닝 외에 HPCS가 키 관련 기능을 제공할 수 있도록 [암호화 인스턴스도 초기화](/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-hsm)해야 합니다.
    * [서비스 ID 작성](/docs/iam?topic=iam-serviceids)의 단계에 따라 {{site.data.keyword.cloud_notm}} 서비스 ID를 작성했습니다. 이 서비스 ID는 작성한 Key Protect 또는 HPCS 서비스 인스턴스에 액세스하는 데 사용됩니다.
    * 서비스 ID에 다음 액세스 레벨을 부여했습니다.
       * 플랫폼 액세스 레벨: Key Protect 또는 HPCS 서비스 인스턴스에 대한 뷰어 권한
       * 서비스 액세스 레벨: Key Protect 또는 HPCS 서비스 인스턴스에 대한 관리자 권한
    * 작성된 서비스 ID에 대한 API 키가 있습니다. 이 키는 서비스를 주문할 때 필요합니다.
-   * Key Protect 또는 HPCS의 GUI 또는 API를 사용하여 하나 이상의 고객 루트 키(CRK)를 작성했습니다. 
+   * Key Protect 또는 HPCS의 GUI 또는 API를 사용하여 하나 이상의 고객 루트 키(CRK)를 작성했습니다.
       * Key Protect GUI 또는 API를 사용한 루트 키 작성에 대한 자세한 정보는 [루트 키 작성](/docs/services/key-protect?topic=key-protect-create-root-keys#create-root-keys) 또는 [IBM Key Protect API](https://cloud.ibm.com/apidocs/key-protect)를 참조하십시오.
       * HPCS GUI 또는 API를 사용한 루트 키 작성에 대한 자세한 정보는 [루트 키 작성](/docs/hs-crypto/get-started?topic=hs-crypto-create-root-keys) 또는 [IBM Cloud Hyper Protect Crypto Services API](https://cloud.ibm.com/apidocs/hp-crypto)를 참조하십시오.
 

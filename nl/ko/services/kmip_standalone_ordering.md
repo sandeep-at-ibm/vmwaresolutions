@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-03"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -41,23 +41,23 @@ subcollection: vmware-solutions
 
 KMIP for VMware on {{site.data.keyword.cloud_notm}} 인스턴스의 이름을 지정하십시오.
 
-### 서비스 지역
+### 서비스 위치
 {: #kmip_standalone_ordering-config-service-region}
 
-KMIP for VMware on {{site.data.keyword.cloud_notm}} 인스턴스를 호스팅할 {{site.data.keyword.cloud_notm}} 지역을 선택하십시오.
+KMIP for VMware on {{site.data.keyword.cloud_notm}} 인스턴스가 호스팅될 {{site.data.keyword.cloud_notm}} 위치를 선택하십시오.
 
-{{site.data.keyword.cloud_notm}}는 서비스가 사용 가능한 각 지역에서 고가용성 KMIP for VMware on {{site.data.keyword.cloud_notm}} 네트워크 서비스 엔드포인트를 유지보수합니다.
+{{site.data.keyword.cloud_notm}}는 서비스가 사용 가능한 각 위치에서 고가용성 KMIP for VMware on {{site.data.keyword.cloud_notm}} 네트워크 서비스 엔드포인트를 유지보수합니다.
 
-표 1. KMIP for VMware on {{site.data.keyword.cloud_notm}} 네트워크 서비스 엔드포인트 지역
+표 1. KMIP for VMware on {{site.data.keyword.cloud_notm}} 네트워크 서비스 엔드포인트 위치
 
-|지역         |엔드포인트               |
+| 위치         |엔드포인트               |
 |:---------------|:-----------------------|
-|독일        |  <ul><li><code>kmip-1.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
-|시드니        |  <ul><li><code>kmip-1.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
-|도쿄          | <ul><li><code>kmip-1.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
-|영국 남부       | <ul><li><code>kmip-1.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
-|미국 동부       | <ul><li><code>kmip-1.private.us-east.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-east.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
-|미국 남부       | <ul><li><code>kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+|댈러스 | <ul><li><code>kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+|프랑크푸르트 |  <ul><li><code>kmip-1.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+|런던 | <ul><li><code>kmip-1.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+|시드니 |  <ul><li><code>kmip-1.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+|도쿄 | <ul><li><code>kmip-1.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+|워싱턴 DC | <ul><li><code>kmip-1.private.us-east.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-east.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
 
 ### 서비스 ID의 API 키
 {: #kmip_standalone_ordering-config-api-key}

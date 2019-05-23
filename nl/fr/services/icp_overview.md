@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-26"
+lastupdated: "2019-05-01"
 
 subcollection: vmware-solutions
 
@@ -121,7 +121,7 @@ Tableau 5. Description des variables de la formule 2
 * Procurez-vous les licences requises avant d'installer le service {{site.data.keyword.cloud_notm}} Private Hosted. Ceci inclut à la fois la licence de {{site.data.keyword.cloud_notm}} Private et la licence de {{site.data.keyword.cloud_notm}} Automation Manager. Vérifiez que vos licences prennent non seulement en charge le déploiement de service initial, mais aussi les développements futurs de votre infrastructure en termes de taille.
 * Pour les déploiements {{site.data.keyword.cloud_notm}} Private Hosted dans les environnements prêts à la production, une capacité de 64 Go de RAM par hôte n'est pas prise en charge. Par conséquent, vous devez sélectionner une option de plus de 64 Go pour la mémoire **RAM**.
 * Avant l'installation du service {{site.data.keyword.cloud_notm}} Private Hosted dans votre environnement, la capacité disponible sur le cluster par défaut dans l'environnement est vérifiée afin de s'assurer qu'il y aura suffisamment de place pour les composants de service. Si la vérification de la capacité échoue, le service n'est pas installé et l'état **La validation de la capacité a échoué** apparaît sur la console pour le service. De plus, un message de console contenant davantage de détails apparaît et vous êtes averti par courrier électronique. Pour installer le service, vous devez augmenter la capacité dans votre cluster par défaut en ajoutant d'autres hôtes ou en libérant de la mémoire RAM, de l'UC ou de l'espace disque, puis vous devez rajouter le service dans la console. Après cela, vous pouvez retirer le service qui est à l'état **La validation de la capacité a échoué** en cliquant sur l'icône **Supprimer** figurant en regard de son nom.
-* Si vous souhaitez déployer des noeuds supplémentaires, utilisez le modèle {{site.data.keyword.cloud_notm}} Private Ubuntu (Ubuntu1604) qui est déployé avec votre installation {{site.data.keyword.cloud_notm}} Private Hosted initiale. Pour trouver le modèle, dans le client Web VMware vSphere, accédez à l'onglet **VMs and Templates**, sous le dossier `cam`. Le mot de passe par défaut du modèle Ubuntu est `icponcloud` et il est recommandé de le changer avant d'utiliser le modèle.
+* Si vous souhaitez déployer d'autres noeuds, voir [Déploiement de noeuds supplémentaires](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_ordering-deploy-nodes#icp_ordering-deploy-nodes).
 
 ## Remarques relatives au retrait d'IBM Cloud Private Hosted
 {: #icp_overview-remove}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-26"
+lastupdated: "2019-05-01"
 
 subcollection: vmware-solutions
 
@@ -122,10 +122,8 @@ Tabla 5. Descripción de las variables de la Fórmula 2
 * Obtenga las licencias necesarias antes de instalar el servicio {{site.data.keyword.cloud_notm}} Private Hosted. Esto incluye las licencias tanto de {{site.data.keyword.cloud_notm}} Private como de {{site.data.keyword.cloud_notm}} Automation Manager. Asegúrese de que las licencias admiten no solo el despliegue inicial del servicio, sino también una ampliación de tamaño futura de la infraestructura.
 * Para despliegues de {{site.data.keyword.cloud_notm}} Private Hosted en entornos preparados para producción, no se admite 64 GB de RAM por host. Por lo tanto, debe seleccionar una opción que sea superior a 64 GB para **RAM**.
 * Antes de instalar el servicio {{site.data.keyword.cloud_notm}} Private Hosted en el entorno, se realiza una comprobación de la capacidad disponible del clúster predeterminado en el entorno para garantizar que hay espacio suficiente para los componentes del servicio. Si la comprobación de capacidad falla, el servicio no se instala y el estado del servicio se establece en **Error de validación de capacidad** en la consola. Además, se muestra un mensaje en la consola con más detalles y se le notifica por correo electrónico. Para instalar el servicio, debe aumentar la capacidad en el clúster predeterminado añadiendo más hosts o liberando RAM, CPU o espacio de disco y, a continuación, debe añadir el servicio de nuevo en la consola. Después de esto, puede eliminar el servicio existente en el estado **Error de validación de capacidad** pulsando el icono **Suprimir** situado junto al mismo.
-* Si desea desplegar nodos adicionales, utilice la plantilla de Ubuntu de
-{{site.data.keyword.cloud_notm}} Private (Ubuntu1604) que se despliega con su instalación inicial de
-{{site.data.keyword.cloud_notm}} Private Hosted. Para encontrar la plantilla, en el cliente web de VMware vSphere, vaya al separador
-**Máquinas virtuales y plantillas**, en la carpeta `cam`. La contraseña predeterminada para la plantilla de Ubuntu es `icponcloud`, y se recomienda que la cambie antes de utilizar la plantilla.
+* Si desea desplegar nodos adicionales, consulte
+[Despliegue de nodos adicionales](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_ordering-deploy-nodes#icp_ordering-deploy-nodes).
 
 ## Consideraciones sobre la eliminación de IBM Cloud Private Hosted
 {: #icp_overview-remove}

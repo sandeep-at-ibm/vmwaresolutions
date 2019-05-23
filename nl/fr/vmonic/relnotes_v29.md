@@ -59,16 +59,6 @@ Pour plus d'informations, voir les sections _Paramètres de licence_ dans les ru
 * [Commande d'instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
 * [Commande de nouveaux clusters vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
 
-## Fin de la prise en charge du spanning VLAN
-{: #relnotes_v29-vlan}
-
-A compter d'août 2019, le spanning VLAN ne sera plus pris en charge par {{site.data.keyword.vmwaresolutions_short}}. D'ici la fin juillet 2019, vous devez convertir votre compte d'infrastructure {{site.data.keyword.cloud_notm}} en un compte VRF et activer les points finaux de service pour votre compte.
-
-Pour plus d'informations, voir :
-
-* [Aperçu du service Routage et transfert virtuel (VRF) on IBM Cloud](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-* [Activation de votre compte pour l'utilisation des noeuds finaux de service](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
-
 ## Prise en charge d'API
 {: #relnotes_v29-api}
 
@@ -137,7 +127,7 @@ Pour plus d'informations, voir :
 ### F5 on IBM Cloud
 {: #relnotes_v29-services-f5}
 
-Dans l'édition en cours, F5-BigIP VE V14.1.0.2 est installé sur toutes les instances nouvellement déployées. Pour plus d'informations sur les nouvelles fonctions de F5-BigIP VE V14.1.0.2, voir [Release Note: BIG-IP 14.1.0 New and Installation](https://support.f5.com/kb/en-us/products/big-ip_ltm/releasenotes/product/relnote-bigip-14-1-0.html){:new_window}.
+Dans l'édition en cours, F5-BigIP VE V14.1.0.2 est installé sur toutes les instances nouvellement déployées. Pour plus d'informations sur les nouvelles fonctions de F5-BigIP VE V14.1.0.2, voir [Release Note: BIG-IP 14.1.0 New and Installation](https://techdocs.f5.com/kb/en-us/products/big-ip_ltm/releasenotes/product/relnote-bigip-14-1-0.html){:new_window}.
 
 ### HyTrust CloudControl on IBM Cloud
 {: #relnotes_v29-services-htcc}

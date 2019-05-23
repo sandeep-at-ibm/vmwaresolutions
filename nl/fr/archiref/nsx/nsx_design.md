@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -28,9 +28,7 @@ L'architecture interne spécifie le déploiement des composants NSX Edge nécess
 VMware vSAN est facultatif dans la figure suivante.
 {:note}
 
-Figure 1. Services de mise en réseau de cloud sur {{site.data.keyword.cloud_notm}}
-
-![Architecture des services de mise en réseau de cloud](architecture.svg "Architecture de services de mise en réseau de cloud")
+![Architecture de services de mise en réseau de cloud](../../images/architecture.svg "Architecture de services de mise en réseau de cloud")
 
 ## Conception de l'architecture dédiée
 {: #nsx_design-dedicated-archi}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-02"
 
 subcollection: vmware-solutions
 
@@ -35,8 +35,7 @@ VMware vSAN 还可作为专用存储器选项提供。要增大 vSAN 集群的�
 
 下图描绘了三节点 vCenter Server 部署的高级别体系结构和组件。
 
-图 1. 三节点集群的 vCenter Server 高级别体系结构
-![vCenter Server 体系结构](vc_architecture.svg "三节点集群的 vCenter Server 高级别体系结构")
+![vCenter Server 体系结构](../images/vc_architecture.svg "vCenter Server 体系结构")
 
 ### 物理基础架构
 {: #vc_vcenterserveroverview-physical-infras}

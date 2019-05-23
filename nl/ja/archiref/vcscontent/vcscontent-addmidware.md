@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-25"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -16,7 +16,7 @@ subcollection: vmware-solutions
 
 Stock Trader をコンテナーで実行できるようになり、Jane も現在のマイクロサービスに問題がないことを確認したので、Jane と Todd は、機能を追加してアプリケーションを拡張する作業に取り掛かります。 アクティビティーの増加とスケーラビリティーの向上を実現するために Stock Trader マイクロサービスをリファクタリングすることで、2 人は、ミドルウェアを {{site.data.keyword.cloud}} Private に追加する必要性を認識しました。 そのミドルウェアの一部は自社データ・センターに存在するので、この作業は、新たにミドルウェアを追加してプラットフォームを再構築するという作業と言えます。
 
-図 1. Stock Trader のリファクタリング![Stock Trader のリファクタリング](vcscontent-refactor.svg)
+![Stock Trader リファクタリング](../../images/vcscontent-refactor.svg "Stock Trader リファクタリング")
 
 このようにソリューションをリファクタリングすることで、アプリケーションと必要なサービスを 1 つの共通プラットフォームで実行できるので、管理プレーンがシンプルになります。
 
@@ -232,17 +232,14 @@ Jane は、ポータブルなアプリケーションにするために、Kubern
 
 Stock Trader は複数のクラウドで実行する可能性がありますが、Jane はコード・ベースを統一したいと考えています。 以下の図の DB2 のシークレットは、ルーティングの詳細は異なりますが、形式は同じです。 Jane のポートフォリオのマイクロサービスは、デプロイされると、適切な Db2 インスタンスに接続するために DB2 シークレットのエンドポイント・パラメーターを探します。 Stock Trader アプリケーションは、VMware 仮想マシン、コンテナー化サービス、クラウド管理サービスのどれで実行されているのかを認識しません。
 
-図 2. Stock Trader - サービスのピボット
-![Stock Trader サービスのピボット](vcscontent-pivot-services.svg)
+![Stock Trader サービスの切り替え](../../images/vcscontent-pivot-services.svg "Stock Trader サービスの切り替え")
 
 ## 結果
 {: #vcscontent-addmidware-result}
 
 Jane が Stock Trader ソリューションのリファクタリングに、Todd が {{site.data.keyword.cloud_notm}} Private Hosted へのミドルウェアのインストールに献身的に取り組んだ結果、中核の Stock Trader ソリューションを構成するすべての要素がプライベート・クラウドで実行されるようになりました。 Jane はさらに Twitter 通知サービスなどのマイクロサービスを追加します。 Istio ルーティング・ルールにより、Slack の社内チャネルや Twitter の公開チャネルでロイヤルティー・レベルのメッセージングを動的に行えるようにします。
 
-図 3. Stock Trader のエンリッチ
-
-![Stock Trader のエンリッチ](vcscontent-enrich.svg)
+![Stock Trader エンリッチ](../../images/vcscontent-enrich.svg "Stock Trader エンリッチ")
 
 ## 関連リンク
 {: #vcscontent-addmidware-related}

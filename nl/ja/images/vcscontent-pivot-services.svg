@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="831px"
+   height="461px"
+   version="1.1"
+   id="svg248"
+   sodipodi:docname="vcscontent-pivot-services.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <defs
+     id="defs252" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview250"
+     showgrid="false"
+     inkscape:zoom="1.6423195"
+     inkscape:cx="293.3458"
+     inkscape:cy="230.5"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg248" />
+  <metadata
+     id="metadata2">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <rect
+     style="fill:#f5f5f5;stroke:#666666"
+     y="0.5"
+     x="0.5"
+     id="rect4"
+     pointer-events="none"
+     height="460"
+     width="830" />
+  <g
+     style="font-size:24px;font-family:'MS UI Gothic';text-anchor:middle"
+     id="g8"
+     font-size="24px"
+     transform="translate(56.5,0.5)">
+    <text
+       id="text6"
+       y="44.5"
+       x="229.5">シークレットを使用する理由 - 使用するサービスの切り替え</text>
+  </g>
+  <rect
+     style="fill:#fff2cc;stroke:#d6b656"
+     id="rect10"
+     pointer-events="none"
+     height="245"
+     width="250"
+     y="75.5"
+     x="10.5" />
+  <g
+     style="font-size:16px;font-family:'MS UI Gothic';text-anchor:middle"
+     id="g14"
+     font-size="16px"
+     transform="translate(16.5,0.5)">
+    <text
+       id="text12"
+       y="96.5"
+       x="71.5">プライベート・クラウド 1</text>
+  </g>
+  <rect
+     style="fill:#99ff99;stroke:#36393d"
+     id="rect16"
+     pointer-events="none"
+     height="65"
+     width="228"
+     y="110.5"
+     x="20.5" />
+  <g
+     style="font-size:12px;font-family:'MS UI Gothic';text-anchor:middle"
+     id="g20"
+     font-size="12px"
+     transform="translate(0.5,0.5)">
+    <text
+       id="text18"
+       y="130"
+       x="44.5">DB2</text>
+  </g>
+  <rect
+     style="fill:#99ff99;stroke:#36393d"
+     id="rect22"
+     pointer-events="none"
+     height="30"
+     width="79"
+     y="225.5"
+     x="20.5" />
+  <g
+     style="font-size:10px;font-family:'MS UI Gothic';text-anchor:middle"
+     id="g26"
+     font-size="10px"
+     transform="translate(0.5,0.5)">
+    <text
+       id="text24"
+       y="240.5"
+       x="59">Microclimate</text>
+  </g>
+  <rect
+     style="fill:#99ccff;stroke:#6c8ebf"
+     id="rect28"
+     pointer-events="none"
+     height="30"
+     width="79"
+     y="280.5"
+     x="169.5" />
+  <g
+     style="font-size:10px;font-family:'MS UI Gothic';text-anchor:middle"
+     id="g32"
+     font-size="10px"
+     transform="translate(0.5,0.5)">
+    <text
+       id="text30"
+       y="295.5"
+       x="208">アプリ 3</text>
+  </g>
+  <rect
+     style="fill:#99ccff;stroke:#6c8ebf"
+     id="rect34"
+     pointer-events="none"
+     height="30"
+     width="79"
+     y="240.5"
+     x="169.5" />
+  <g
+     style="font-size:10px;font-family:'MS UI Gothic';text-anchor:middle"
+     id="g38"
+     font-size="10px"
+     transform="translate(0.5,0.5)">
+    <text
+       id="text36"
+       y="255.5"
+       x="208">アプリ 2</text>
+  </g>
+  <g
+     id="g46"
+     pointer-events="none"
+     transform="translate(0.5,0.5)">
+    <path
+       style="fill:none;stroke:#000000;stroke-miterlimit:10"
+       inkscape:connector-curvature="0"
+       id="path40"
+       stroke-miterlimit="10"
+       d="M 209,200 V 182.37" />
+    <path
+       style="stroke:#000000;stroke-miterlimit:10"
+       inkscape:connector-curvature="0"
+       id="path42"
+       stroke-miterlimit="10"
+       d="m 209,177.12 3.5,7 -3.5,-1.75 -3.5,1.75 z" />
+    <rect
+       style="fill:#99ccff;stroke:#6c8ebf"
+       id="rect44"
+       height="30"
+       width="79"
+       y="200"
+       x="169" />
+  </g>
+  <g
+     style="font-size:10px;font-family:'MS UI Gothic';text-anchor:middle"
+     id="g50"
+     font-size="10px"
+     transform="translate(0.5,0.5)">
+    <text
+       id="text48"
+       y="215"
+       x="208">アプリ 1</text>
+  </g>
+  <g
+     style="font-size:10px;font-family:'MS UI Gothic'"
+     id="g56"
+     font-size="10px"
+     transform="translate(0.5,0.5)">
+    <text
+       id="text52"
+       y="145.5"
+       x="32.5">エンドポイント: dev-instance-db2</text>
+    <text
+       id="text54"
+       y="169.5"
+       x="32.5">ポート: 50000</text>
+  </g>
+  <g
+     id="g82"
+     pointer-events="none"
+     transform="translate(0.5,0.5)">
+    <g
+       style="stroke:#000000;stroke-miterlimit:10"
+       id="g78"
+       stroke-miterlimit="10">
+      <path
+         style="fill:none"
+         inkscape:connector-curvature="0"
+         id="path58"
+         d="m 100,241 34.78,7.63" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path60"
+         d="m 139.91,249.76 -7.59,1.92 2.46,-3.05 -0.96,-3.79 z" />
+      <path
+         style="fill:none"
+         inkscape:connector-curvature="0"
+         id="path62"
+         d="m 100,241 34.08,27.96" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path64"
+         d="m 138.14,272.29 -7.64,-1.73 3.58,-1.6 0.86,-3.82 z" />
+      <path
+         style="fill:none"
+         inkscape:connector-curvature="0"
+         id="path66"
+         d="m 100,241 36.21,48.88" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path68"
+         d="m 139.33,294.1 -6.97,-3.54 3.85,-0.68 1.77,-3.49 z" />
+      <path
+         style="fill:none"
+         inkscape:connector-curvature="0"
+         id="path70"
+         d="m 100,241 35.88,-10.25" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path72"
+         d="m 140.93,229.31 -5.77,5.29 0.72,-3.85 -2.65,-2.89 z" />
+      <path
+         style="fill:none"
+         inkscape:connector-curvature="0"
+         id="path74"
+         d="m 100,241 34.84,-25.26" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path76"
+         d="m 139.09,212.66 -3.61,6.94 -0.64,-3.86 -3.47,-1.81 z" />
+    </g>
+    <rect
+       style="fill:#fff2cc;stroke:#d6b656"
+       id="rect80"
+       height="245"
+       width="250"
+       y="77"
+       x="290" />
+  </g>
+  <g
+     style="font-size:16px;font-family:'MS UI Gothic';text-anchor:middle"
+     id="g86"
+     font-size="16px"
+     transform="translate(16.5,0.5)">
+    <text
+       id="text84"
+       y="98.5"
+       x="351.5">プライベート・クラウド 2</text>
+  </g>
+  <rect
+     style="fill:#99ff99;stroke:#36393d"
+     id="rect88"
+     pointer-events="none"
+     height="65"
+     width="228"
+     y="112.5"
+     x="300.5" />
+  <g
+     style="font-size:12px;font-family:'MS UI Gothic';text-anchor:middle"
+     id="g92"
+     font-size="12px"
+     transform="translate(0.5,0.5)">
+    <text
+       id="text90"
+       y="132"
+       x="324.5">DB2</text>
+  </g>
+  <rect
+     style="fill:#99ff99;stroke:#36393d"
+     id="rect94"
+     pointer-events="none"
+     height="30"
+     width="79"
+     y="227.5"
+     x="300.5" />
+  <g
+     style="font-size:10px;font-family:'MS UI Gothic';text-anchor:middle"
+     id="g98"
+     font-size="10px"
+     transform="translate(0.5,0.5)">
+    <text
+       id="text96"
+       y="242.5"
+       x="339">Microclimate</text>
+  </g>
+  <rect
+     style="fill:#99ccff;stroke:#6c8ebf"
+     id="rect100"
+     pointer-events="none"
+     height="30"
+     width="79"
+     y="282.5"
+     x="449.5" />
+  <g
+     style="font-size:10px;font-family:'MS UI Gothic';text-anchor:middle"
+     id="g104"
+     font-size="10px"
+     transform="translate(0.5,0.5)">
+    <text
+       id="text102"
+       y="297.5"
+       x="488">アプリ 3</text>
+  </g>
+  <rect
+     style="fill:#99ccff;stroke:#6c8ebf"
+     id="rect106"
+     pointer-events="none"
+     height="30"
+     width="79"
+     y="242.5"
+     x="449.5" />
+  <g
+     style="font-size:10px;font-family:'MS UI Gothic';text-anchor:middle"
+     id="g110"
+     font-size="10px"
+     transform="translate(0.5,0.5)">
+    <text
+       id="text108"
+       y="257.5"
+       x="488">アプリ 2</text>
+  </g>
+  <g
+     id="g118"
+     pointer-events="none"
+     transform="translate(0.5,0.5)">
+    <path
+       style="fill:none;stroke:#000000;stroke-miterlimit:10"
+       inkscape:connector-curvature="0"
+       id="path112"
+       stroke-miterlimit="10"
+       d="M 489,202 V 184.37" />
+    <path
+       style="stroke:#000000;stroke-miterlimit:10"
+       inkscape:connector-curvature="0"
+       id="path114"
+       stroke-miterlimit="10"
+       d="m 489,179.12 3.5,7 -3.5,-1.75 -3.5,1.75 z" />
+    <rect
+       style="fill:#99ccff;stroke:#6c8ebf"
+       id="rect116"
+       height="30"
+       width="79"
+       y="202"
+       x="449" />
+  </g>
+  <g
+     style="font-size:10px;font-family:'MS UI Gothic';text-anchor:middle"
+     id="g122"
+     font-size="10px"
+     transform="translate(0.5,0.5)">
+    <text
+       id="text120"
+       y="217"
+       x="488">アプリ 1</text>
+  </g>
+  <g
+     style="font-size:10px;font-family:'MS UI Gothic'"
+     id="g128"
+     font-size="10px"
+     transform="translate(0.5,0.5)">
+    <text
+       id="text124"
+       y="147.5"
+       x="312.5">エンドポイント: test-instance-db2</text>
+    <text
+       id="text126"
+       y="171.5"
+       x="312.5">ポート: 50002</text>
+  </g>
+  <g
+     id="g154"
+     pointer-events="none"
+     transform="translate(0.5,0.5)">
+    <g
+       style="stroke:#000000;stroke-miterlimit:10"
+       id="g150"
+       stroke-miterlimit="10">
+      <path
+         style="fill:none"
+         inkscape:connector-curvature="0"
+         id="path130"
+         d="m 380,243 34.78,7.63" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path132"
+         d="m 419.91,251.76 -7.59,1.92 2.46,-3.05 -0.96,-3.79 z" />
+      <path
+         style="fill:none"
+         inkscape:connector-curvature="0"
+         id="path134"
+         d="m 380,243 34.08,27.96" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path136"
+         d="m 418.14,274.29 -7.64,-1.73 3.58,-1.6 0.86,-3.82 z" />
+      <path
+         style="fill:none"
+         inkscape:connector-curvature="0"
+         id="path138"
+         d="m 380,243 36.21,48.88" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path140"
+         d="m 419.33,296.1 -6.97,-3.54 3.85,-0.68 1.77,-3.49 z" />
+      <path
+         style="fill:none"
+         inkscape:connector-curvature="0"
+         id="path142"
+         d="m 380,243 35.88,-10.25" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path144"
+         d="m 420.93,231.31 -5.77,5.29 0.72,-3.85 -2.65,-2.89 z" />
+      <path
+         style="fill:none"
+         inkscape:connector-curvature="0"
+         id="path146"
+         d="m 380,243 34.84,-25.26" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path148"
+         d="m 419.09,214.66 -3.61,6.94 -0.64,-3.86 -3.47,-1.81 z" />
+    </g>
+    <rect
+       style="fill:#fff2cc;stroke:#d6b656"
+       id="rect152"
+       height="245"
+       width="250"
+       y="75"
+       x="570" />
+  </g>
+  <g
+     style="font-size:16px;font-family:'MS UI Gothic';text-anchor:middle"
+     id="g158"
+     font-size="16px"
+     transform="translate(16.5,0.5)">
+    <text
+       id="text156"
+       y="96.5"
+       x="631.5">プライベート・クラウド 3</text>
+  </g>
+  <rect
+     style="fill:#99ff99;stroke:#36393d"
+     id="rect160"
+     pointer-events="none"
+     height="65"
+     width="228"
+     y="110.5"
+     x="580.5" />
+  <g
+     style="font-size:12px;font-family:'MS UI Gothic';text-anchor:middle"
+     id="g164"
+     font-size="12px"
+     transform="translate(0.5,0.5)">
+    <text
+       id="text162"
+       y="130"
+       x="604.5">DB2</text>
+  </g>
+  <rect
+     style="fill:#99ff99;stroke:#36393d"
+     id="rect166"
+     pointer-events="none"
+     height="30"
+     width="79"
+     y="225.5"
+     x="580.5" />
+  <g
+     style="font-size:10px;font-family:'MS UI Gothic';text-anchor:middle"
+     id="g170"
+     font-size="10px"
+     transform="translate(0.5,0.5)">
+    <text
+       id="text168"
+       y="240.5"
+       x="619">Microclimate</text>
+  </g>
+  <rect
+     style="fill:#99ccff;stroke:#6c8ebf"
+     id="rect172"
+     pointer-events="none"
+     height="30"
+     width="79"
+     y="280.5"
+     x="729.5" />
+  <g
+     style="font-size:10px;font-family:'MS UI Gothic';text-anchor:middle"
+     id="g176"
+     font-size="10px"
+     transform="translate(0.5,0.5)">
+    <text
+       id="text174"
+       y="295.5"
+       x="768">アプリ 3</text>
+  </g>
+  <rect
+     style="fill:#99ccff;stroke:#6c8ebf"
+     id="rect178"
+     pointer-events="none"
+     height="30"
+     width="79"
+     y="240.5"
+     x="729.5" />
+  <g
+     style="font-size:10px;font-family:'MS UI Gothic';text-anchor:middle"
+     id="g182"
+     font-size="10px"
+     transform="translate(0.5,0.5)">
+    <text
+       id="text180"
+       y="255.5"
+       x="768">アプリ 2</text>
+  </g>
+  <g
+     id="g190"
+     pointer-events="none"
+     transform="translate(0.5,0.5)">
+    <path
+       style="fill:none;stroke:#000000;stroke-miterlimit:10"
+       inkscape:connector-curvature="0"
+       id="path184"
+       stroke-miterlimit="10"
+       d="M 769,200 V 182.37" />
+    <path
+       style="stroke:#000000;stroke-miterlimit:10"
+       inkscape:connector-curvature="0"
+       id="path186"
+       stroke-miterlimit="10"
+       d="m 769,177.12 3.5,7 -3.5,-1.75 -3.5,1.75 z" />
+    <rect
+       style="fill:#99ccff;stroke:#6c8ebf"
+       id="rect188"
+       height="30"
+       width="79"
+       y="200"
+       x="729" />
+  </g>
+  <g
+     style="font-size:10px;font-family:'MS UI Gothic';text-anchor:middle"
+     id="g194"
+     font-size="10px"
+     transform="translate(0.5,0.5)">
+    <text
+       id="text192"
+       y="215"
+       x="768">アプリ 1</text>
+  </g>
+  <g
+     style="font-size:10px;font-family:'MS UI Gothic'"
+     id="g200"
+     font-size="10px"
+     transform="translate(0.5,0.5)">
+    <text
+       id="text196"
+       y="145.5"
+       x="592.5">エンドポイント: prod-instance-db2</text>
+    <text
+       id="text198"
+       y="169.5"
+       x="592.5">ポート: 50003</text>
+  </g>
+  <g
+     id="g226"
+     pointer-events="none"
+     transform="translate(0.5,0.5)">
+    <g
+       style="stroke:#000000;stroke-miterlimit:10"
+       id="g222"
+       stroke-miterlimit="10">
+      <path
+         style="fill:none"
+         inkscape:connector-curvature="0"
+         id="path202"
+         d="m 660,241 34.78,7.63" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path204"
+         d="m 699.91,249.76 -7.59,1.92 2.46,-3.05 -0.96,-3.79 z" />
+      <path
+         style="fill:none"
+         inkscape:connector-curvature="0"
+         id="path206"
+         d="m 660,241 34.08,27.96" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path208"
+         d="m 698.14,272.29 -7.64,-1.73 3.58,-1.6 0.86,-3.82 z" />
+      <path
+         style="fill:none"
+         inkscape:connector-curvature="0"
+         id="path210"
+         d="m 660,241 36.21,48.88" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path212"
+         d="m 699.33,294.1 -6.97,-3.54 3.85,-0.68 1.77,-3.49 z" />
+      <path
+         style="fill:none"
+         inkscape:connector-curvature="0"
+         id="path214"
+         d="m 660,241 35.88,-10.25" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path216"
+         d="m 700.93,229.31 -5.77,5.29 0.72,-3.85 -2.65,-2.89 z" />
+      <path
+         style="fill:none"
+         inkscape:connector-curvature="0"
+         id="path218"
+         d="m 660,241 34.84,-25.26" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path220"
+         d="m 699.09,212.66 -3.61,6.94 -0.64,-3.86 -3.47,-1.81 z" />
+    </g>
+    <rect
+       style="fill:#dae8fc;stroke:#6c8ebf"
+       id="rect224"
+       height="45"
+       width="228"
+       y="400"
+       x="296" />
+  </g>
+  <g
+     style="font-size:12px;font-family:'MS UI Gothic';text-anchor:middle"
+     id="g230"
+     font-size="12px"
+     transform="translate(0.5,0.5)">
+    <text
+       id="text228"
+       y="425"
+       x="400.5">GitHub</text>
+  </g>
+  <g
+     style="stroke:#000000;stroke-miterlimit:10"
+     id="g244"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     transform="translate(0.5,0.5)">
+    <path
+       style="fill:none"
+       inkscape:connector-curvature="0"
+       id="path232"
+       d="M 353,400 45.78,257.68" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path234"
+       d="m 41.01,255.47 7.83,-0.23 -3.06,2.44 0.11,3.91 z" />
+    <path
+       style="fill:none"
+       inkscape:connector-curvature="0"
+       id="path236"
+       d="M 467,400 634.13,259.1" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path238"
+       d="m 638.15,255.72 -3.1,7.19 -0.92,-3.81 -3.59,-1.54 z" />
+    <path
+       style="fill:none"
+       inkscape:connector-curvature="0"
+       id="path240"
+       d="M 410,400 342.8,262.72" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path242"
+       d="m 340.49,258 6.22,4.75 -3.91,-0.03 -2.37,3.11 z" />
+  </g>
+</svg>

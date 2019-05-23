@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -18,8 +18,7 @@ subcollection: vmware-solutions
 
 {{site.data.keyword.cloud_notm}}의 실제 네트워크는 3개의 개별 네트워크(공용, 사설 및 관리)로 분류됩니다.
 
-그림 1. {{site.data.keyword.cloud_notm}} 상위 레벨 네트워크 보기
-![{{site.data.keyword.cloud_notm}} 상위 레벨 네트워크 보기](vcsnsxt-ic4vcloud.svg)
+![{{site.data.keyword.cloud_notm}} 상위 레벨 네트워크 보기](../../images/vcsnsxt-ic4vcloud.svg "{{site.data.keyword.cloud_notm}} 상위 레벨 네트워크 보기")
 
 ## 공용 네트워크
 {: #vcsnsxt-overview-ic4vnetwork-public-net}
@@ -55,9 +54,7 @@ subcollection: vmware-solutions
 
 디자인에서 각각의 실제 호스트에는 각 {{site.data.keyword.cloud_notm}} ToR(Top of Rack) 스위치(공용 및 사설)로 유입되는 10Gbps 이더넷 연결의 2개 중복 쌍이 있습니다. 어댑터는 총 4 × 10Gbps 연결을 위해 개별 연결(비부착)로 설정됩니다. 이렇게 하면 네트워킹 인터페이스 카드(NIC) 연결이 서로 독립적으로 작동할 수 있습니다.
 
-그림 2. 실제 호스트 연결
-</br>
-![실제 호스트 연결](vcsnsxt-host-connections.svg)
+![실제 호스트 연결](../../images/vcsnsxt-host-connections.svg "실제 호스트 연결")
 
 ## VLAN
 {: #vcsnsxt-overview-ic4vnetwork-vlans}

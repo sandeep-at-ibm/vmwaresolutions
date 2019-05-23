@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-04"
+lastupdated: "2019-05-09"
 
 subcollection: vmware-solutions
 
@@ -33,6 +33,16 @@ F5 on {{site.data.keyword.cloud}} サービスを注文するには、そのサ�
 以下のいずれかの方法を使用して、既存のインスタンスに F5 on {{site.data.keyword.cloud_notm}} サービスを追加できます。
 * {{site.data.keyword.vmwaresolutions_short}} コンソールから、サービスを追加する対象のインスタンスを表示し、左側のナビゲーション・ペインにある**「サービス」**をクリックし、**「追加」**をクリックします。
 * {{site.data.keyword.cloud_notm}} カタログから**「F5 on IBM Cloud」**を選択し、サービス設定を指定し、**「既存のインスタンスに追加」**を選択します。
+
+## プライベート・インスタンスでの F5 on IBM Cloud の注文
+{: #f5_ordering-private}
+
+パブリック・インターフェースで設定されていないインスタンスに対して F5 on {{site.data.keyword.cloud_notm}} を注文する場合は、プロキシー・サーバーを指定してインストールを完了する必要があります。 F5 {{site.data.keyword.cloud_notm}} のインストールを開始する前に、HTTP プロキシー・サーバーを設定し、Virtual Routing and Forwarding (VRF) で使用可能にする必要があります。
+
+BigIP Virtual Edition (VE) エンドポイントは、作動可能になる前にライセンスをアクティブ化できる必要があります。 BigIP VE エンドポイントのインストール後は、プロキシー・サーバーを使用する必要はなくなります。
+
+F5 on {{site.data.keyword.cloud_notm}} サービスのインストール時には、プロキシー・サーバーが機能していないとサービスを追加できません。
+{:note}
 
 ## F5 on IBM Cloud サービスの構成
 {: #f5_ordering-config}

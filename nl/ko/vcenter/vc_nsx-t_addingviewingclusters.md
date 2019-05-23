@@ -28,7 +28,7 @@ subcollection: vmware-solutions
 ### 클러스터를 추가하기 전에
 {: #vc_nsx-t_addingviewingclusters-before-add}
 
-* 가능하면 {{site.data.keyword.vmwaresolutions_full}} 콘솔을 사용하여 클러스터를 추가하십시오. VMware vSphere Web Client에서 수행하는 변경사항은 {{site.data.keyword.vmwaresolutions_short}} 콘솔과 동기화되지 않기 때문입니다. 따라서 온프레미스 클러스터 서버 또는 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 관리할 수 없거나 관리하지 않을 클러스터에 대해서만 클러스터를 vCenter Server에 추가하십시오. 
+* 가능하면 {{site.data.keyword.vmwaresolutions_full}} 콘솔을 사용하여 클러스터를 추가하십시오. VMware vSphere Web Client에서 수행하는 변경사항은 {{site.data.keyword.vmwaresolutions_short}} 콘솔과 동기화되지 않기 때문입니다. 따라서 온프레미스 클러스터 서버 또는 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 관리할 수 없거나 관리하지 않을 클러스터에 대해서만 클러스터를 vCenter Server에 추가하십시오.
 * 클러스터, 호스트, 가상 머신(VM)의 수는 추가할 수 있는 클러스터의 수에 대한 최대 한계를 결정합니다. 배치를 위해 VMware 크기 조정 가이드라인 및 제한사항을 계속 준수해야 합니다. 최대 제한에 대한 자세한 정보는 [VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window}를 참조하십시오.
 
 ### 시스템 설정
@@ -86,7 +86,7 @@ vCenter Server with NSX-T 인스턴스에 클러스터를 추가할 때는 다�
 {: #vc_nsx-t_addingviewingclusters-adding-bare-metal-number}
 
 * 주문하는 모든 서버는 동일한 구성을 갖습니다.
-* vSAN 스토리지의 경우 4 - 59개의 서버를 주문할 수 있습니다. 
+* vSAN 스토리지의 경우 4 - 59개의 서버를 주문할 수 있습니다.
 * NFS 스토리지의 경우 2 - 59개의 서버를 주문할 수 있습니다. 그러나 프로덕션 워크로드의 경우 최소 3개의 서버가 권장됩니다. 자세한 정보는 [두 개의 노드 vCenter Server 인스턴스는 고가용성입니까?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)를 참조하십시오.
 
 ### 스토리지 설정
@@ -271,7 +271,7 @@ VLAN 세부사항에 액세스하려면 **리소스 보기**를 클릭하십시�
 ### 삭제하기 전에
 {: #vc_nsx-t_addingviewingclusters-deleting-prereq}
 
-* 가능하면 {{site.data.keyword.vmwaresolutions_full}} 콘솔을 사용하여 클러스터를 삭제하십시오. VMware vSphere Web Client에서 수행하는 변경사항은 {{site.data.keyword.vmwaresolutions_short}} 콘솔과 동기화되지 않습니다. 따라서 온프레미스 클러스터 서버 또는 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 관리할 수 없거나 관리하지 않을 클러스터에 대해서만 클러스터를 vCenter Server에서 제거하십시오. 
+* 가능하면 {{site.data.keyword.vmwaresolutions_full}} 콘솔을 사용하여 클러스터를 삭제하십시오. VMware vSphere Web Client에서 수행하는 변경사항은 {{site.data.keyword.vmwaresolutions_short}} 콘솔과 동기화되지 않습니다. 따라서 온프레미스 클러스터 서버 또는 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 관리할 수 없거나 관리하지 않을 클러스터에 대해서만 클러스터를 vCenter Server에서 제거하십시오.
 * 한 번에 하나의 클러스터를 삭제할 수 있습니다. 둘 이상의 클러스터를 삭제하려면 순서대로 수행해야 합니다. 다음 클러스터를 삭제하기 전에 이전 클러스터가 삭제될 때까지 대기하십시오.
 * 클러스터를 삭제하기 전에 클러스터의 모든 노드가 켜져 있으며 가동 상태인지 확인하십시오.
 * 클러스터를 삭제하면 클러스터의 모든 VM도 삭제되며 이는 복구할 수 없습니다. VM을 보존하려는 경우에는 이들을 다른 클러스터로 마이그레이션하십시오.

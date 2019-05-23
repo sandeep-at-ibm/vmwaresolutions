@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 Le diagramme suivant représente l'architecture de Caveonix RiskForesight.
 
-Figure 1. Architecture de Caveonix RiskForesight
-![Diagramme de l'architecture](caveonix-architecture.svg)
+![Diagramme d'architecture](../../images/caveonix-architecture.svg "Diagramme d'architecture")
 
 L'architecture de Caveonix RiskForesight comporte quatre couches :
 -	Detect - Le module Detect est entièrement intégré dans la pile VMware et dans de nombreux clouds publics. Grâce aux plug-in, RiskForesight utilise vCenter et NSX Manager comme référentiels d'actifs et recueille des détails sur les machines virtuelles, les réseaux et les flux réseau. Les collecteurs distants analysent les charges de travail, les systèmes d'exploitation et les applications pour permettre une vue globale de la conformité et des vulnérabilités.
@@ -40,8 +39,7 @@ L'architecture de Caveonix RiskForesight comporte quatre couches :
 
 Caveonix RiskForesight utilise un concept de zones :
 
-Figure 2. Zones de Caveonix RiskForesight
-![Diagramme des zones](caveonix-zones.svg)
+![Diagramme des zones](../../images/caveonix-zones.svg "Diagramme des zones")
 
 -	Zone Gestion ou fournisseur de service - La zone de gestion ou de fournisseur de service inclut les composants suivants :
     - Application RiskForesight - Cette application contient plusieurs composants et fait l'objet d'une description détaillée dans la section Composants de l'application.

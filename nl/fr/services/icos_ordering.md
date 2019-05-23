@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-13"
 
 subcollection: vmware-solutions
 
@@ -25,12 +25,12 @@ Pour commander IBM Cloud Object Storage, effectuez les opérations suivantes, da
 ## Création d'une instance Object Storage
 {: #icos_ordering-obj}
 
-Pour créer une instance Object Storage, voir [Création d'une instance de service](/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-order-storage#creating-a-new-service-instance). Suivez la procédure puis revenez à cette section pour passer aux autres tâches.
+Pour créer une instance Object Storage, voir [Création d'une instance de service](/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-provision#provision-instance). Suivez la procédure puis revenez à cette section pour passer aux autres tâches.
 
 ## Création d'un compartiment
 {: #icos_ordering-bucket}
 
-Pour créer un compartiment, voir [Création de compartiments pour stocker vos données](/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-getting-started-tutorial#gs-create-buckets). Suivez la procédure puis revenez à cette section pour passer aux autres tâches.
+Pour créer un compartiment, voir [Création de compartiments pour stocker vos données](/docs/services/cloud-object-storage?topic=cloud-object-storage-getting-started#gs-create-buckets). Suivez la procédure puis revenez à cette section pour passer aux autres tâches.
 
 ## Création de données d'identification de service
 {: #icos_ordering-service-cred}
@@ -46,3 +46,13 @@ Pour ajouter un référentiel d'extension dans Veeam, voir [Ajout de référenti
 {: #icos_ordering-manage-cloud}
 
 Pour plus d'informations sur la maintenance et la gestion de votre niveau de cloud, voir [Gestion des données de niveau de capacité](https://helpcenter.veeam.com/docs/backup/vsphere/capacity_tier_managing_data.html?ver=95u4){:new_window}.
+
+## Liens connexes
+{: #icos_ordering-related}
+
+* [Présentation de Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-veeam_considerations)
+* [Commande de Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_ordering)
+* [Gestion de Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
+* [Demande de services gérés pour Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
+* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [Foire aux questions](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)

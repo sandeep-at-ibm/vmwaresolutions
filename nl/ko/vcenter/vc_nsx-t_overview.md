@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-02"
 
 subcollection: vmware-solutions
 
@@ -34,8 +34,7 @@ vCenter Server with NSX-T 인스턴스는 개념 증명(POC) 또는 샌드박스
 
 다음 그림은 3-노드 vCenter Server with NSX-T 배치의 상위 레벨 아키텍처 및 컴포넌트를 나타냅니다.
 
-그림 1. 3 노드 클러스터에 대한 vCenter Server with NSX-T 상위 레벨 아키텍처
-![vCenter Server with NSX-T 아키텍처](vc_nsx-t_architecture.svg "3 노드 클러스터에 대한 vCenter Server 상위 레벨 아키텍처")
+![vCenter Server with NSX-T 아키텍처](../images/vc_nsx-t_architecture.svg "vCenter Server with NSX-T 아키텍처")
 
 ### 실제 인프라
 {: #vc_nsx-t_overview-physical-infras}

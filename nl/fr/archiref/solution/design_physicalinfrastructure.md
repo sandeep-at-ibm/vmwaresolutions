@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -33,8 +33,7 @@ Pour plus d'informations sur les composants physiques, voir la [Nomenclature de 
 
 Pour plus d'informations sur le stockage, voir la documentation sur l'[architecture de stockage partagé](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits).
 
-Figure 1. Infrastructure physique</br>
-![Infrastructure physique](vcsv4radiagrams-ra-physinfra.svg)
+![Infrastructure physique](../../images/vcsv4radiagrams-ra-physinfra.svg "Infrastructure physique")
 
 ## Conception du calcul physique
 {: #design_physicalinfrastructure-host-design}
@@ -49,7 +48,7 @@ Chaque instance vCenter Server commence avec un déploiement de 3 ou 4 hôtes, s
 L'hôte physique emploie deux disques connectés localement destinés à être alloués à l'hyperviseur vSphere ESXi. Vous pouvez allouer davantage de disques en utilisant vSAN comme indiqué dans la section _Conception du stockage physique_ ou en utilisant NetApp ONTAP comme indiqué dans la documentation sur l'[architecture NetApp ONTAP Select](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf). Chaque hôte physique comporte des connexions réseau 10 Gbps redondantes pour l'accès au réseau public et l'accès au réseau privé.
 
 Les spécifications du serveur bare metal sont les suivantes :
-* Unité centrale : Dual ou Quad Intel Xeon, configuration variable du coeur et de la vitesse 
+* Unité centrale : Dual ou Quad Intel Xeon, configuration variable du coeur et de la vitesse
 * Mémoire : Configuration variable, 64 Go ou plus
 * Réseau : 4 x 10 Gbps
 * Nombre d'unités : Au moins 2
@@ -64,8 +63,7 @@ La mise en réseau physique est gérée par {{site.data.keyword.cloud_notm}}. Re
 
 Le réseau physique d'{{site.data.keyword.cloud_notm}} est divisé en deux réseaux distincts : public et privé. Le réseau privé contient également le trafic de gestion de l'interface IPMI (Intelligent Platform Management Interface) vers les serveurs physiques.
 
-Figure 2. Réseau de haut niveau {{site.data.keyword.cloud_notm}}
-![{{site.data.keyword.cloud_notm}} Réseau de haut niveau](vcsv4radiagrams-ra-ibmcloudnetwork.svg)
+![Vue de réseau de haut niveau pour {{site.data.keyword.cloud_notm}}](../../images/vcsv4radiagrams-ra-ibmcloudnetwork.svg "Vue de réseau de haut niveau pour {{site.data.keyword.cloud_notm}}")
 
 #### Réseau public
 {: #design_physicalinfrastructure-public-net}
@@ -111,8 +109,7 @@ Chaque hôte physique de cette conception possède deux paires redondantes de co
 
 Il est impossible de retirer la connectivité de réseau physique au réseau public ou privé pour les serveurs bare metal utilisés dans l'offre vCenter Server. Les ports physiques de la carte NIC interne du serveur bare metal peut être désactivée, mais aucun support n'est fourni concernant le débranchement des câbles.
 
-Figure 3. Connexions hôtes physiques</br>
-![Connexions hôtes physiques](vcsv4radiagrams-ra-physical-host-connections.svg "Connexions hôtes physiques")
+![Connexions d'hôte physique](../../images/vcsv4radiagrams-ra-physical-host-connections.svg "Connexions d'hôte physique")
 
 #### Réseaux locaux virtuels (VLAN) et routage du réseau sous-jacent au réseau dissocié
 {: #design_physicalinfrastructure-vlans}
@@ -180,9 +177,7 @@ Lors de l'utilisation d'un stockage de niveau fichier partagé, un partage NFS d
 
 Le stockage est connecté à l'aide du protocole NFSv3 à un niveau de 2 IOPS par Go depuis IBM Cloud. IBM normalise le niveau IOP mis à disposition à une taille de bloc de 16 K de sorte que les tailles de bloc supérieures obtiennent une limite plus basse et les tailles de bloc inférieures une limite plus élevée.
 
-Figure 4. Partages NFS connectés à un déploiement VMware
-
-![Partages NFS associés au déploiement VMware](vcsv4radiagrams-ra-nfs-shares.svg "Partages NFS associés au déploiement VMware : partage de gestion et partage spécifié par le client")
+![Partages NFS associés au déploiement VMware : partage de gestion et partage spécifié par le client](../../images/vcsv4radiagrams-ra-nfs-shares.svg "Partages NFS associés au déploiement VMware : partage de gestion et partage spécifié par le client")
 
 Vous pouvez allouer et monter sur tous les hôtes des partages de fichiers supplémentaires pour vos charges de travail, au moment de l'achat ou ultérieurement dans la console. Vous pouvez effectuer une sélection parmi les niveaux de performance et les options de capacité de stockage de fichiers {{site.data.keyword.cloud_notm}} Endurance disponibles dans l'{{site.data.keyword.CloudDataCent_notm}} correspondant. Tous les partages sont associés à l'aide du protocole NFSv3. En outre, il est possible d'associer des partages de fichiers NFSv3 en appliquant l'offre NetApp ONTAP Select.
 
@@ -195,8 +190,7 @@ A l'instar de NFS, pour le stockage iSCSI partagé, un numéro d'unité logique 
 
 IBM normalise le niveau IOP mis à disposition à une taille de bloc de 16 K de sorte que les tailles de bloc supérieures obtiennent une limite plus basse et les tailles de bloc inférieures une limite plus élevée.
 
-Figure 5. Numéros d'unité logique iSCSI associés à un déploiement VMware</br>
-![Numéros d'unité logique iSCSI associés à un déploiement VMware](vcsv4radiagrams-ra-iscsi-lun.svg "Numéros d'unité logique iSCSI associés à un déploiement VMware")
+![LUN iSCSI associés au déploiement VMware ](../../images/vcsv4radiagrams-ra-iscsi-lun.svg "LUN iSCSI associés au déploiement VMware")
 
 Vous pouvez allouer et monter des numéros d'unité logique iSCSI supplémentaires pour les charges de travail sur tous les hôtes, au moment de l'achat ou ultérieurement dans la console. Effectuez une sélection parmi les niveaux de performance et les options de capacité de stockage par blocs IBM Cloud Endurance disponibles dans le centre de données IBM Cloud correspondant. Tous les numéros d'unité logique sont associés à l'aide du protocole iSCSI. En outre, il est possible d'associer des numéros d'unité logique iSCSI à partir de l'offre NetApp ONTAP Select.
 

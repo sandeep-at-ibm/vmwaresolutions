@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -67,9 +67,7 @@ Stockage | 100 Go |  SATA : 2 To / SSD : 960 Go
 ## Structure virtuelle
 {: #vcsiks-arch-overview-infrastructure-virtual-structure}
 
-Figure 1. Structure physique des déploiements {{site.data.keyword.containerlong_notm}} et {{site.data.keyword.icpfull_notm}}
-
-![Structure physique des déploiements {{site.data.keyword.containerlong_notm}} et {{site.data.keyword.icpfull_notm}}](vcsiks-phy-ics-iks-deployment.svg)
+![Structure plysique des déploiements {{site.data.keyword.containerlong_notm}} et {{site.data.keyword.icpfull_notm}}](../../images/vcsiks-phy-ics-iks-deployment.svg "Structure physique des déploiements {{site.data.keyword.containerlong_notm}} et {{site.data.keyword.icpfull_notm}}"){: caption="Figure 1. Structure physique des déploiements {{site.data.keyword.containerlong_notm}} et {{site.data.keyword.icpfull_notm}}" caption-side="bottom"}
 
 Dans l'instance vCenter Server, les machines virtuelles de client sont déployées sur des passerelles NSX Edge Services Gateway (ESG) et des routeurs logiques distribués (DLR) dédiés.
 
@@ -78,8 +76,7 @@ La passerelle ESG est configurée avec une règle SNAT pour autoriser le trafic 
 ## Composants vCenter Server
 {: #vcsiks-arch-overview-infrastructure-vcs-comp}
 
-Figure 2. Composants de la plateforme vCenter Server
-![Diagramme de l'environnement vCenter Server](vcsiks-vcs-env.svg)
+![Diagramme de l'environnement vCenter Server](../../images/vcsiks-vcs-env.svg "Diagramme de l'environnement vCenter Server")
 
 ### Contrôleur PSC (Platform Service Controller)
 {: #vcsiks-arch-overview-infrastructure-psc}
@@ -131,9 +128,7 @@ Disk	| 1000 Go sur magasin de données local
 ## Composants IBM Cloud Kubernetes Service
 {: #vcsiks-arch-overview-infrastructure-iks-comp}
 
-Figure 3. Composants {{site.data.keyword.containerlong_notm}} components
-</br>
-![{{site.data.keyword.containerlong_notm}} - Diagramme des composants](vcsiks-iks-components.svg)
+![{{site.data.keyword.containerlong_notm}} - Diagramme des composants](../../images/vcsiks-iks-components.svg "{{site.data.keyword.containerlong_notm}} - Diagramme des composants")
 
 ### Maître Kubernetes
 {: #vcsiks-arch-overview-infrastructure-kube-master}

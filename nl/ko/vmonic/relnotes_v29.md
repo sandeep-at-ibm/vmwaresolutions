@@ -59,16 +59,6 @@ vSphere Enterprise Plus 6.7u1은 Broadwell 및 Skylake {{site.data.keyword.cloud
 * [vCenter Server with Hybridity Bundle 인스턴스 주문](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
 * [새 vSphere 클러스터 주문](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
 
-## VLAN Spanning에 대한 지원 종료
-{: #relnotes_v29-vlan}
-
-2019년 8월부터는 {{site.data.keyword.vmwaresolutions_short}}에서 더 이상 VLAN Spanning을 지원하지 않습니다. 2019년 7월 말까지는 {{site.data.keyword.cloud_notm}} 인프라 계정을 VRF(Virtual Routing) 및 VRF(Forwarding)로 변환하고 사용자 계정에 대해 서비스 엔드포인트를 사용으로 설정해야 합니다.
-
-자세한 정보는 다음을 참조하십시오.
-
-* [IBM Cloud의 VRF(Virtual Routing and Forwarding) 개요](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-* [서비스 엔드포인트 사용을 위해 계정 사용](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
-
 ## API(Application Programming Interface)에 대한 지원
 {: #relnotes_v29-api}
 
@@ -137,7 +127,7 @@ vCenter Server 인스턴스 주문의 경우, 0.25, 2및 4 IOPS/GB의 성능 레
 ### F5 on IBM Cloud
 {: #relnotes_v29-services-f5}
 
-현재 릴리스에서는 새로 배치된 모든 인스턴스에 F5-BigIP VE V14.1.0.2가 설치되어 있습니다. F5-BigIP VE V14.1.0.2의 새로운 기능에 대한 자세한 정보는 [릴리스 노트: BIG-IP 14.1.0 새로운 기능 및 설치](https://support.f5.com/kb/en-us/products/big-ip_ltm/releasenotes/product/relnote-bigip-14-1-0.html){:new_window}를 참조하십시오.
+현재 릴리스에서는 새로 배치된 모든 인스턴스에 F5-BigIP VE V14.1.0.2가 설치되어 있습니다. F5-BigIP VE V14.1.0.2의 새로운 기능에 대한 자세한 정보는 [릴리스 노트: BIG-IP 14.1.0 새로운 기능 및 설치](https://techdocs.f5.com/kb/en-us/products/big-ip_ltm/releasenotes/product/relnote-bigip-14-1-0.html){:new_window}를 참조하십시오.
 
 ### HyTrust CloudControl on IBM Cloud
 {: #relnotes_v29-services-htcc}

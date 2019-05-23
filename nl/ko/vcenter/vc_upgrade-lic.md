@@ -18,7 +18,7 @@ subcollection: vmware-solutions
 # vCenter Server 인스턴스에 대한 라이센스 업그레이드
 {: #vc_upgrade-lic}
 
-인스턴스가 V2.3 이상에 배치된 경우에만 VMware vCenter Server 인스턴스를 vCenter Server with Hybridity Bundle로 업그레이드할 수 있습니다. 
+인스턴스가 V2.3 이상에 배치된 경우에만 VMware vCenter Server 인스턴스를 vCenter Server with Hybridity Bundle로 업그레이드할 수 있습니다.
 
 IBM Business Partner 사용자에게는 Hybridity Bundle로 업그레이드할 수 있는 옵션이 없습니다.
 {:note}
@@ -26,9 +26,9 @@ IBM Business Partner 사용자에게는 Hybridity Bundle로 업그레이드할 �
 ## 라이센스를 Hybridity Bundle로 업그레이드하기 전에
 {: #vc_upgrade-lic-upgrade-prereq}
 
-Hybridity Bundle로 업그레이드할 때 취하는 다음 조치를 검토하십시오. 
+Hybridity Bundle로 업그레이드할 때 취하는 다음 조치를 검토하십시오.
 
-* vCenter Server 인스턴스에 VMware NSX Base 에디션이 설치된 경우 NSX 라이센스는 NSX Advanced 에디션으로 자동 업그레이드됩니다. 
+* vCenter Server 인스턴스에 VMware NSX Base 에디션이 설치된 경우 NSX 라이센스는 NSX Advanced 에디션으로 자동 업그레이드됩니다.
 * vCenter Server 인스턴스에 NFS 스토리지가 있는 경우 VMware vSAN 스토리지에 대한 비용이 청구되지 않습니다. Hybridity Bundle에 포함된 vSAN 라이센스에 대한 비용은 청구됩니다.
 
 ## Hybridity Bundle로 업그레이드하는 프로시저(V2.3 이상 인스턴스)
@@ -53,7 +53,7 @@ Hybridity Bundle로 업그레이드할 때 취하는 다음 조치를 검토하�
 
 이 프로시저는 2.1 이상에 배치된 인스턴스에 적용됩니다. V2.0 이전에 배치된 인스턴스의 경우, NSX 라이센스를 수동으로 업그레이드해야 합니다.
 
-사용자 인스턴스에 맞게 NSX 라이센스를 최신 에디션으로 업그레이드할 수 있습니다. 라이센스 에디션 다운그레이드는 지원되지 않습니다. 
+사용자 인스턴스에 맞게 NSX 라이센스를 최신 에디션으로 업그레이드할 수 있습니다. 라이센스 에디션 다운그레이드는 지원되지 않습니다.
 
 1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **리소스**를 클릭하십시오.
 2. **vCenter Server 인스턴스** 테이블에서 NSX 라이센스를 업그레이드할 인스턴스를 클릭하십시오.

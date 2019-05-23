@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-29"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -209,6 +209,7 @@ Configure VUM para que utilice el servidor proxy para acceder a los repositorios
 2. Seleccione el separador **Gestionar** y pulse **Configuración**.
 3. Seleccione **Descargar valores** y, a continuación, en _Valores de proxy_ pulse **Editar**.
 4. Marque el recuadro **Utilizar proxy** y especifique la _dirección IP del servidor proxy_ y el _puerto 3128_, pulse **Aceptar**. El estado de conectividad cambia a _Validación_ y, a continuación, a _Conectado_.
+    **Nota**: no se preocupe si recibe el mensaje ``Se ha accedido correctamente a algunos URL, pero otros son inaccesibles`` al probar la conexión con el servidor proxy.
 5. Pulse **Descargar ahora**. En el panel _Tareas recientes_, debería ver esta actividad completada.
 6. Si esta actividad falla, rearranque vCenter Server Appliance (vCSA):
   1. Inicie sesión en la interfaz de gestión de vCSA en `https://vcsaFQDN:5480` como

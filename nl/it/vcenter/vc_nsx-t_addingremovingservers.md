@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-22"
+lastupdated: "2019-05-03"
 
 subcollection: vmware-solutions
 
@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 
 Puoi espandere o contrarre la capacità della tua istanza VMware vCenter Server with NSX-T in base alle tue esigenze aziendali, aggiungendo o rimuovendo server ESXi o archiviazione NFS (network file system).
 
-* A partire dalla release V3.0, puoi aggiungere o rimuovere simultaneamente l'archiviazione NFS in più cluster.
+* A partire dalla release V3.0, puoi aggiungere o rimuovere simultaneamente l'archiviazione NFS e i server ESXi sui cluster nello stato **Ready to Use** (Pronto per l'utilizzo). Ad esempio, puoi aggiungere o rimuovere un server ESXi in un cluster e aggiungere o rimuovere l'archiviazione NFS in un altro cluster.
 * A partire dalla release V2.9, puoi aggiungere dei nuovi server ESXi a un cluster mentre i server sono in modalità di manutenzione. Inoltre, puoi aggiungere o rimuovere simultaneamente i server ESXi in più cluster.
 
 **Note**:

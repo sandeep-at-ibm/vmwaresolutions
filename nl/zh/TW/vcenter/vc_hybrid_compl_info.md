@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-02"
 
 subcollection: vmware-solutions
 
@@ -21,7 +21,7 @@ subcollection: vmware-solutions
 
 下圖提供關於客戶（您）與 IBM 對於法規遵循活動之責任的詳細資料。
 
-圖 1. 客戶與 IBM 對於 vCenter Server on IBM Cloud with Hybridity Bundle 的責任矩陣 ![客戶與 IBM 的責任矩陣](customer_ibm_responsibility_matrix.svg "客戶與 IBM 的責任矩陣")
+![客戶與 IBM 職責矩陣](../images/customer_ibm_responsibility_matrix.svg "客戶與 IBM 職責矩陣")
 
 ## 健康資料限制
 {: #vc_hybrid_compl_info-health-data-restrictions}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-04"
+lastupdated: "2019-05-09"
 
 subcollection: vmware-solutions
 
@@ -33,6 +33,13 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud}} サービスを注文
 以下のいずれかの方法を使用して、既存のインスタンスに FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} サービスを追加できます。
 * {{site.data.keyword.vmwaresolutions_short}} コンソールから、サービスを追加する対象のインスタンスを表示し、左側のナビゲーション・ペインにある**「サービス」**をクリックし、**「追加」**をクリックします。
 * {{site.data.keyword.cloud_notm}} カタログから**「FortiGate Virtual Appliance on IBM Cloud」**を選択し、サービス設定を指定し、**「Add to Existing Instance」**を選択します。
+
+## プライベート・インスタンスでの FortiGate Virtual Appliance on IBM Cloud の注文
+{: #fortinetvm_ordering-private}
+
+パブリック・インターフェースで設定されていないインスタンスに対して FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} を注文する場合は、プロキシー・サーバーを指定してインストールを完了する必要があります。 Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}} のインストールを開始する前に、HTTP プロキシー・サーバーを設定し、Virtual Routing and Forwarding (VRF) で使用可能にする必要があります。
+
+継続的に運用するために、FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} は、インターネット経由で Fortigate ライセンス・サーバーに永続的にアクセスできる必要があります。
 
 ## FortiGate Virtual Appliance on IBM Cloud サービスの構成
 {: #fortinetvm_ordering-config}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-30"
+lastupdated: "2019-05-03"
 
 subcollection: vmware-solutions
 
@@ -24,23 +24,23 @@ subcollection: vmware-solutions
 ## VMware Cloud Foundation on IBM Cloud의 지원 종료
 {: #relnotes_v30-vcf-eos}
 
-보다 나은 고객 경험을 제공하도록 오퍼링을 통합하기 위해 {{site.data.keyword.vmwaresolutions_short}} 플랫폼에서는 2019년 5월 13일부터 더 이상 VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}를 제공하지 않습니다. 
+보다 나은 고객 경험을 제공하도록 오퍼링을 통합하기 위해 {{site.data.keyword.vmwaresolutions_short}} 플랫폼에서는 2019년 5월 13일부터 더 이상 VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}를 제공하지 않습니다.
 
-앞으로 모든 고객은 IBM에서 주력하는 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}의 VMware 소프트웨어 정의 데이터 센터 솔루션인 VMware vCenter Server on {{site.data.keyword.cloud_notm}}로 이동합니다. 
+앞으로 모든 고객은 IBM에서 주력하는 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}의 VMware 소프트웨어 정의 데이터 센터 솔루션인 VMware vCenter Server on {{site.data.keyword.cloud_notm}}로 이동합니다.
 
 VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}를 사용하는 기존 고객은 지원 종료 날짜인 2019년 5월 13일까지 VMware vCenter Server on {{site.data.keyword.cloud_notm}}로의 변환을 지원받게 됩니다.
 
-5월 13일 이후에는 VMware vCenter Server on {{site.data.keyword.cloud_notm}}로 변환될 때까지 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서의 VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}에 대한 관리 기능이 고정(freezing)됩니다. VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} 인스턴스가 VMware vCenter Server on {{site.data.keyword.cloud_notm}}로 마이그레이션되거나 변환되도록 선택하지 않은 고객은 {{site.data.keyword.cloud_notm}} 인프라 콘솔에서 인스턴스에 액세스할 수 있습니다. 
+5월 13일 이후에는 VMware vCenter Server on {{site.data.keyword.cloud_notm}}로 변환될 때까지 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서의 VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}에 대한 관리 기능이 고정(freezing)됩니다. VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} 인스턴스가 VMware vCenter Server on {{site.data.keyword.cloud_notm}}로 마이그레이션되거나 변환되도록 선택하지 않은 고객은 {{site.data.keyword.cloud_notm}} 인프라 콘솔에서 인스턴스에 액세스할 수 있습니다.
 
 ## Broadwell 2-CPU 서버에 대한 지원이 제거됨
 {: #relnotes_v30-broadwell}
 
-V3.0 릴리스부터 Broadwell 2-CPU 서버는 더 이상 vCenter Server, vCenter Server with Hybridity Bundle, vCenter Server 및 vSphere on {{site.data.keyword.cloud_notm}} 인스턴스 및 클러스터의 새 배치에 사용할 수 없습니다. 계속해서 서버를 기존 클러스터에 추가할 수 있습니다. 
+V3.0 릴리스부터 Broadwell 2-CPU 서버는 더 이상 vCenter Server, vCenter Server with Hybridity Bundle, vCenter Server 및 vSphere on {{site.data.keyword.cloud_notm}} 인스턴스 및 클러스터의 새 배치에 사용할 수 없습니다. 계속해서 서버를 기존 클러스터에 추가할 수 있습니다.
 
 ## 네트워크 파일 시스템 오퍼레이션 개선사항
 {: #relnotes_v30-nfs}
 
-V3.0 릴리스부터 여러 클러스터에서 네트워크 파일 시스템(NFS) 스토리지를 동시에 추가하거나 제거할 수 있습니다. 이는 모든 vCenter Server 및 vCenter Server with NSX-T에 적용됩니다. 
+V3.0 릴리스부터 NFS 스토리지 및 ESXi 서버를 **사용할 준비가 됨** 상태의 클러스터에 동시에 추가하거나 제거할 수 있습니다. 예를 들어, 한 클러스터에서 ESXi 서버를 추가하거나 제거하고 다른 클러스터에서 NFS 스토리지를 추가하거나 제거할 수 있습니다. 이는 모든 vCenter Server 및 vCenter Server with NSX-T에 적용됩니다.
 
 ## VMware vCenter Server 인스턴스에 대한 업데이트
 {: #relnotes_v30-vcs}
@@ -59,8 +59,8 @@ Microsoft Active Directory(AD) 및 DNS(Domain Name System) 서비스에 대해 �
 ### vSAN 스토리지 개선사항
 {: #relnotes_v30-vcs-vsan}
 
-* vSAN 스토리지를 사용할 때 주문할 수 있는 Bare Metal Server의 수는 5개 이상일 수 있습니다. 이는 모든 vCenter Server, vCenter Server with Hybridity 및 vCenter Server with NSX-T 인스턴스에 적용됩니다. 
-* V3.0 릴리스부터 M.2 SSD(Solid-State Drive)는 vSAN 스토리지 인스턴스와 함께 주문됩니다. **Intel Optaine을 사용한 고성능** 옵션을 선택하는 경우 최대 10개의 용량 디스크 또는 총 12개의 용량 디스크를 주문할 수 있습니다. 
+* vSAN 스토리지를 사용할 때 주문할 수 있는 Bare Metal Server의 수는 5개 이상일 수 있습니다. 이는 모든 vCenter Server, vCenter Server with Hybridity 및 vCenter Server with NSX-T 인스턴스에 적용됩니다.
+* V3.0 릴리스부터 M.2 SSD(Solid-State Drive)는 vSAN 스토리지 인스턴스와 함께 주문됩니다. **Intel Optaine을 사용한 고성능** 옵션을 선택하는 경우 최대 10개의 용량 디스크 또는 총 12개의 용량 디스크를 주문할 수 있습니다.
 
 자세한 정보는 다음의 *스토리지 설정* 섹션을 참조하십시오.
 * [vCenter Server 인스턴스 주문](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_orderinginstance#vc_orderinginstance-storage-settings)
@@ -88,7 +88,7 @@ Microsoft Active Directory(AD) 및 DNS(Domain Name System) 서비스에 대해 �
 ### IBM Cloud Private Hosted
 {: #relnotes_v30-services-icp}
 
-현재 릴리스는 새로 배치된 인스턴스에 {{site.data.keyword.cloud_notm}} Private Hosted 3.1.2와 {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2를 함께 설치합니다. 
+현재 릴리스는 새로 배치된 인스턴스에 {{site.data.keyword.cloud_notm}} Private Hosted 3.1.2와 {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2를 함께 설치합니다.
 
 {{site.data.keyword.cloud_notm}} Private v3.1.2의 새 기능에 대한 자세한 정보는 [{{site.data.keyword.cloud_notm}} Private v3.1.2의 새로운 기능](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.2/getting_started/whats_new.html){:new_window}을 참조하십시오.
 {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2의 새 기능에 대한 자세한 정보는 [{{site.data.keyword.cloud_notm}} Automation Manager 3.1.2의 새로운 기능](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/cam_whatisnew.html){:new_window}을 참조하십시오.
@@ -111,7 +111,7 @@ Microsoft Active Directory(AD) 및 DNS(Domain Name System) 서비스에 대해 �
 ## 새로 작성되고 업데이트된 문서
 
 * 이제 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 VMware vSphere 6.7로 업그레이드하는 데 도움이 되는 문서를 사용할 수 있습니다. 계속해서 {{site.data.keyword.vmwaresolutions_short}} 자동화 혜택을 받으려면 이 업그레이드는 필수입니다. 자세한 정보는 [vCenter Server vSphere 소프트웨어를 VMware vSphere 6.5에서 6.7로 업그레이드](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_vsphere_upgrade#vc_vsphere_upgrade)를 참조하십시오.
-* {{site.data.keyword.cloud_notm}} 자동화에 사용되도록 {{site.data.keyword.vmwaresolutions_short}}가 관리하는 사용자 ID를 사용자에게 제공하는 데 참조 문서를 사용할 수 있습니다. 인스턴스 히스토리 로그에 표시되는 메시지는 검토용으로도 사용할 수 있습니다. 자세한 정보는 [IBM 사용자 ID 및 vCenter Server 인스턴스의 배치 히스토리 메시지](/docs/services/vmwaresolutions?topic=vmware-solutions-ibm_use#ibm_use)를 참조하십시오.
+* {{site.data.keyword.cloud_notm}} 자동화에 사용되도록 {{site.data.keyword.vmwaresolutions_short}}가 관리하는 사용자 ID를 사용자에게 제공하는 데 참조 문서를 사용할 수 있습니다. 인스턴스 히스토리 로그에 표시되는 메시지는 검토용으로도 사용할 수 있습니다. 자세한 정보는 [IBM 사용자 ID](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_user_ids) 및 [인스턴스 히스토리 메시지](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_messages)를 참조하십시오.
 * **Reboot/Control** 권한이 IBM Cloud 인프라 계정에 필요한 권한을 설명하는 표에 추가되었습니다. 자세한 정보는 [{{site.data.keyword.cloud_notm}} 인프라 계정에 대한 권한](/docs/services/vmwaresolutions/services?topic=vmware-solutions-slaccountrequirement#slaccountrequirement-permissions)을 참조하십시오.
 * 다음 API에 대한 새 참조 문서를 사용할 수 있습니다. 자세한 정보는 [API 참조](https://cloud.ibm.com/apidocs/vmware-solutions){:new_window}를 참조하십시오.
   * 지정된 VMware vCenter Server 인스턴스에 대한 모든 히스토리 메시지 나열

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 Le diagramme de contexte système définit les principaux éléments d'un système, les limites du système et les entités qui interagissent avec lui parallèlement aux interactions. Il s'agit d'un diagramme de haut niveau qui fournit au lecteur une vue initiale du système.
 
-Figure 1. Contexte système
-![Diagramme de contexte système](vcsnsxt-networking.svg)
+![Diagramme de contexte système](../../images/vcsnsxt-networking.svg "Diagramme de contexte système")
 
 Les quatre principaux composants, d'un point de vue réseau, sont les suivants :
 - **Virtualisation sur site** - Environnement VMware hébergé dans les locaux du client ou dans un emplacement tiers et qui héberge actuellement les machines virtuelles qui exécutent les applications à moderniser. Environnement source pour les migrations de machine virtuelle, il est couplé de manière lâche à {{site.data.keyword.cloud}} via VMware HCX.

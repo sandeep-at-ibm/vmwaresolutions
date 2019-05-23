@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 En el diagrama siguiente se muestra la arquitectura de referencia de la modernización de aplicaciones que se desplegará en Acme Skateboards y que se describe en profundidad en esta serie de documentos.
 
-Figura 1. Visión general de la arquitectura
-![Diagrama de visión general de la arquitectura](vcsnsxt-aod.svg)
+![Diagrama de visión general de arquitectura](../../images/vcsnsxt-aod.svg "Diagrama de visión general de arquitectura")
 
 Esta arquitectura híbrida permite a Acme Skateboards:
 - Migrar máquinas virtuales (VM) VMware desde el entorno local a {{site.data.keyword.cloud}} con muy poco o ningún tiempo de inactividad y sin tener que reconfigurar las aplicaciones.

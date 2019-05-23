@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -124,8 +124,7 @@ HCX Management Enterprise OVA se despliega en el entorno de origen y se registra
 Solo puede haber un despliegue de HCX por vCenter. Esta restricción se aplica a la modalidad enlazada; el dispositivo HCX Manager solo se instala en el vCenter primario. HCX Manager da soporte a un máximo de cinco vCenters registrados en modalidad enlazada.
 {:note}
 
-Figura 1. Servicios de nube híbrida de origen
-![Servicios de nube híbrida de origen](source_hybrid_cloud_services.svg)
+![Hybrid Cloud Services de origen](../../images/source_hybrid_cloud_services.svg "Hybrid Cloud Services de origen")
 
 ### Dispositivos virtuales de HCX
 {: #hcx-archi-source-hcxva}
@@ -154,8 +153,7 @@ HCX utiliza cifrado potente para arrancar la conexión de sitio a sitio con IBM 
 
 La pasarela de nube también incorpora la tecnología de réplica de vSphere para realizar la migración bidireccional.
 
-Figura 2. Pasarela de nube de origen
-![Pasarela de nube de origen](source_cloud_gateway.svg)
+![Cloud Gateway de origen](../../images/source_cloud_gateway.svg "Cloud Gateway de origen")
 
 ### Optimizador de WAN
 {: #hcx-archi-source-wan-opt}
@@ -164,8 +162,7 @@ HCX también proporciona optimización de WAN definida por software. El disposit
 
 La migración de máquina virtual se basa en la combinación de pasarela de nube y del dispositivo de optimización de WAN para lograr una movilidad sin igual entre vSphere local e IBM Cloud.
 
-Figura 3. Optimizador de WAN de origen
-![Optimizador de WAN de origen](source_wan_optimizer.svg)
+![Optimizador de WAN de origen](../../images/source_wan_optimizer.svg "Optimizador de WAN de origen")
 
 ### Concentrador de capa 2
 {: #hcx-archi-source-layer-2-conc}
@@ -176,8 +173,7 @@ El dispositivo Concentrador de capa 2 tiene dos interfaces:
 * Interfaz troncal interna: maneja el tráfico de la máquina virtual local para las redes ampliadas utilizando una correlación de puente de traslado con una red extendida correspondiente en IBM Cloud.
 * Interfaz de enlace ascendente: HCX utiliza esta interfaz para enviar el tráfico de superposición encapsulado a y desde IBM Cloud. Los datos de la aplicación viajan a través de esta interfaz.
 
-Figura 4. Concentrador L2 de origen
-![Concentrador L2 de origen](source_l2_concentrator.svg)
+![Concentrador L2 de origen](../../images/source_l2_concentrator.svg "Concentrador L2 de origen")
 
 ### Solo migración
 {: #hcx-archi-source-mig-only}
@@ -234,8 +230,7 @@ Si la máquina virtual se ha transferido mediante vMotion, la ruta no se inyecta
 
 Es decir, R1 puede utilizar el direccionamiento para acceder a una determinada máquina virtual a través de R2, en lugar de utilizar la red extendida conectada localmente. R2 es el único propietario de la vía de acceso para que otras redes accedan a máquinas virtuales con direccionamiento de proximidad habilitado.
 
-Figura 5. Solución de direccionamiento asimétrico con direccionamiento de proximidad
-![Solución de direccionamiento asimétrico con direccionamiento de proximidad](asymmetric_routing_proximity_routing_solution.svg)
+![Solución de direccionamiento asimétrico con direccionamiento de proximidad](../../images/asymmetric_routing_proximity_routing_solution.svg "Solución de direccionamiento asimétrico con direccionamiento de proximidad")
 
 ### Conservación de direcciones MAC
 {: #hcx-archi-source-mac-addr-ret}

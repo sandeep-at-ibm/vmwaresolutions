@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-02"
 
 subcollection: vmware-solutions
 
@@ -35,9 +35,7 @@ vCenter Server with Hybridity Bundle 是一种托管的专用云，可将 VMware
 
 下图描绘了三节点 vCenter Server with Hybridity Bundle 部署的高级别体系结构和组件。
 
-图 1. vCenter Server with Hybridity Bundle 高级别体系结构
-
-![vCenter Server with Hybridity Bundle 高级别体系结构](hybrid_architecture.svg "vCenter Server with Hybridity Bundle 高级别体系结构")
+![vCenter Server with Hybridity Bundle 体系结构](../images/hybrid_architecture.svg "vCenter Server with Hybridity Bundle 体系结构")
 
 ### 物理基础架构
 {: #vc_hybrid_overview-physical-infras}

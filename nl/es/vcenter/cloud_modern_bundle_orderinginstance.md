@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-24"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -133,7 +133,8 @@ Instale HCX Enterprise Manager local y configure la conexión con el HCX en la i
       1. Pulse el separador **Administración**.
       2. En el separador **Actualizaciones del sistema**, pulse **SOLICITAR ENLACE DE DESCARGA**.
       3. Pulse **COPIAR ENLACE** y utilice este enlace para descargar el cliente de HCX Enterprise en un entorno local con acceso a su entorno local de vSphere.
-3. En el cliente web de VMware vSphere, despliegue el cliente de HCX Enterprise como dispositivo virtual de HCX Manager (HCX Manager) en el entorno local. Para obtener más información, consulte [Instalación del OVA de VMware HCX Enterprise Manager](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-C61E107C-1F5F-4615-9BA9-351900CDB69E.html).
+3. En el cliente web de VMware vSphere, despliegue el cliente de HCX Enterprise como dispositivo virtual de HCX Manager (HCX Manager) en el entorno local. Siga las instrucciones de la
+[Guía de usuario de VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}.
 
     Debe desplegar HCX Manager local en una red privada y debe otorgarle acceso a la red pública. Puede utilizar NSX Edge, Vyatta o pasarelas similares para permitir el acceso internet al HCX Manager local. Si las pasarelas utilizadas para el acceso a la red privada y a la red pública son distintas, se recomienda utilizar la pasarela predeterminada para permitir el acceso a la red pública y a la **consola de administración de HCX Manager** privada para crear una ruta estática para el acceso a la red privada.  
     {:note}
@@ -141,16 +142,20 @@ Instale HCX Enterprise Manager local y configure la conexión con el HCX en la i
   1. Inicie una sesión en la VM de HCX Enterprise Manager local utilizando las credenciales especificadas al desplegar OVA.
   2. Escriba la clave de activación cuando se le solicite.
 
-  Para obtener más información, consulte [Activación y configuración inicial de VMware HCX](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-6A4740C1-2225-444C-8ADC-CBE54F181536.html).
-  {:note}
+  Siga las instrucciones de la
+[Guía de usuario de VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}.
+
 5. El servicio HCX on {{site.data.keyword.cloud_notm}} ha generado un certificado SSL autofirmado. Debe importar el certificado en el HCX Manager local siguiendo los siguientes pasos:
     1. En la **consola de administración de HCX Manager** local, pulse el separador **Administración**.
     2. En el panel de navegación de la izquierda, pulse **Certificado de CA de confianza** y luego pulse **IMPORTAR** a la derecha.
     3. Pulse **URL** y escriba el URL del certificado que desea aplicar. Esta es la **IP de HCX Cloud** (``https://<cloud-side public IP>``) que puede encontrar en la página de detalles del servicio HCX on {{site.data.keyword.cloud_notm}} en la consola de {{site.data.keyword.vmwaresolutions_short}}.
     4. Pulse **APLICAR**.
-6. Continúe la configuración inicial y cree la interconexión. Para obtener más información, consulte [Instalación y configuración de VMware HCX Enterprise](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-A26BFB16-FA94-426F-8E18-15BAD4BF840E.html).
-7. Extienda las redes de VMware HCX del entorno local a {{site.data.keyword.cloud_notm}}. Para obtener más información, consulte [Extensión de redes con VMware HCX](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-DD9C3316-D01C-4088-B3EA-84ADB9FED573.html).
-8. Migre las VM del entorno local a {{site.data.keyword.cloud_notm}}. Para obtener más información, consulte [Migración de máquinas virtuales con VMware HCX](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-D0CD0CC6-3802-42C9-9718-6DA5FEC246C6.html).
+6. Continúe la configuración inicial y cree la interconexión. Siga las instrucciones de la
+[Guía de usuario de VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}.
+7. Extienda las redes de VMware HCX del entorno local a {{site.data.keyword.cloud_notm}}. Siga las instrucciones de la
+[Guía de usuario de VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}.
+8. Migre las VM del entorno local a {{site.data.keyword.cloud_notm}}. Siga las instrucciones de la
+[Guía de usuario de VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}.
 
 Solo debe gestionar los componentes de la infraestructura {{site.data.keyword.vmwaresolutions_short}} que se crean en la cuenta de {{site.data.keyword.cloud_notm}} desde la consola de {{site.data.keyword.vmwaresolutions_short}}, no a través del {{site.data.keyword.slportal}} ni por ningún otro medio fuera de la consola.
 Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}, los cambios no se sincronizan con la consola y pueden hacer que el entorno sea inestable.
@@ -186,6 +191,6 @@ Siga los pasos siguientes para suprimir una instancia de prueba de un solo nodo 
 {: #cloud_modern_bundle_orderinginstance-related}
 
 * [Guía de vCenter Server e IBM Cloud Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [Apertura de una incidencia para IBM Cloud privado](https://www.ibm.com/mysupport/s/?language=en_US)
-* [Recursos de VMware HCX](https://hcx.vmware.com/#/docs)
-* [Obtención del OVA de VMware HCX](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html?hWord=N4IghgNiBcIPICMAuYCWA7DBzABEgFgKY4ASAwgBo5wBqAgiAL5A)
+* [Apertura de una incidencia para IBM Cloud privado](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
+* [Recursos de VMware HCX](https://hcx.vmware.com/#/docs){:new_window}
+* [Guía de usuario de VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}

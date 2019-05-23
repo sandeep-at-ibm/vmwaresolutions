@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -56,8 +56,7 @@ Pour que l'interface CNI puisse ajouter un conteneur à un réseau, le contexte 
 
 Nous distinguons quatre types de trafic réseau dans {{site.data.keyword.containerlong_notm}}, comme illustré dans le diagramme ci-après.
 
-Figure 1. Types de trafic réseau de conteneur
-![Types de trafic réseau de conteneur](vcsnsxt-traffictypes.svg)
+![Types de trafic réseau de conteneur](../../images/vcsnsxt-traffictypes.svg "Types de trafic réseau de conteneur")
 
 - **Mise en réseau au sein d'un pod** – On parle également de communications de conteneur à conteneur. Tous les conteneurs contenus dans un pod partagent un espace de nom de réseau, la même adresse IP et peuvent se voir sur le système hôte local. Le trafic pour chaque application se distingue par un numéro de port spécifique. Le développeur doit s'assurer que les conteneurs au sein d'un pod ne sont pas en conflit par rapport aux ports utilisés. Au sein d'un pod, il existe un conteneur d'infrastructure. Premier conteneur lancé par kubelet, il acquiert l'adresse IP du pod et configure l'espace de nom de réseau. Ensuite, tous les autres conteneurs du pod rejoignent le réseau et l'espace de nom IPC du conteneur d'infrastructure. Le mode de pont de réseau est activé pour le conteneur et tous les autres conteneurs du pod rejoignent cet espace de nom via le mode de conteneur. Si le conteneur d'infrastructure s'arrête, kubelet arrête tous les autres conteneurs du pod, puis effectue une nouvelle mise à disposition, généralement avec une nouvelle adresse IP. Nous ne communiquerons pas d'autres détails sur ce flux de circulation dans ce document.
 
@@ -109,8 +108,7 @@ Dans Calico, les paquets IP transmis vers ou depuis un pod sont acheminés et pr
 -	Pour une charge de travail qui envoie des paquets, Calico s'assure que le noeud worker est toujours renvoyé comme saut d'adresse MAC suivant quel que soit le routage pouvant être configuré par la charge de travail proprement dite.
 -	Pour les paquets adressés à une charge de travail, le dernier saut d'adresse IP est celui entre le noeud worker de la charge de travail de destination et la charge de travail proprement dite.
 
-Figure 2. Interface CNI Calico
-![Interface CNI Calico](vcsnsxt-calico-cni.svg)
+![Interface CNI Calico](../../images/vcsnsxt-calico-cni.svg "Interface CNI Calico")
 
 Le diagramme ci-dessus illustre les composants Calico suivants :
 -	**calicoctl** - Interface de ligne de commande.

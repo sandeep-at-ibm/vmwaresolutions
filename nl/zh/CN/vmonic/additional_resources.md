@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-13"
 
 subcollection: vmware-solutions
 
@@ -53,11 +53,6 @@ subcollection: vmware-solutions
 * [资源和视频](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/resources){:new_window}
 * [数字技术互动](https://ibm-dte.mybluemix.net/vmware){:new_window}
 * [特色资源和案例研究](https://www.ibm.com/cloud/vmware/resources){:new_window}
-
-## 试用 IBM Cloud for VMware Solutions
-{: #additional_resources-test-drive}
-
-想亲眼看看吗？按照 {{site.data.keyword.vmwaresolutions_short}} 逐步指导演示“[试用 VMware vCenter Server](https://cloudcontent.mybluemix.net/cloud/garage/demo/try-vmware-solutions){:new_window}”，快速试用本产品。
 
 ## VMware 文档
 {: #additional_resources-vmware-doc}

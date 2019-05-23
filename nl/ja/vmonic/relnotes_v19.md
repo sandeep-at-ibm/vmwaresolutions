@@ -117,5 +117,4 @@ Microsoft Active Directory (AD) / ドメイン・ネーム・サーバー (DNS) 
 ## 新規資料および更新された資料
 {: #relnotes_v19-new-docs}
 
-* プライベートなマルチサイト Cloud Foundation インスタンスを保護し、パブリックな {{site.data.keyword.cloud_notm}} サービスを使用するように VMware アプリケーションを拡張する方法を説明します。 詳しくは、[Securely connect your private VMware workloads in the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window} を参照してください。
 * IBM CloudDriver 仮想マシンと SDDC Manager 仮想マシンからのすべてのプロトコル通信を許可するファイアウォールを構成できるように、さらに資料が提供されています。 詳しくは、[Fortinet on {{site.data.keyword.cloud_notm}} のコンポーネントと考慮事項](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations)を参照してください。

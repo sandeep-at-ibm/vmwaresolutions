@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-19"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -32,8 +32,7 @@ vCPU 数量|4
 
 以下 NSX-V Manager 网络概览图显示了 NSX Manager 相对于此体系结构中其他组件的位置。
 
-图 1. NSX-V Manager 网络概览图
-![NSX-V Manager 网络概览图](vcsnsxt-vmgmt.svg)
+![NSX-V Manager 网络概述](../../images/vcsnsxt-vmgmt.svg "NSX-V Manager 网络概述")
 
 初始部署后，{{site.data.keyword.cloud}} 自动化会在初始集群中部署三个 NSX Controller。将从指定用于管理组件的**专用 A** 可移植子网中为控制器分配 IP 地址。创建了 VM-VM 反亲缘关系规则，以便控制器在集群中的各个主机之间分隔开。初始集群至少部署有三个节点，以确保控制器的高可用性。
 
@@ -78,8 +77,7 @@ SDDC-Dswitch-Public|外部管理流量（南北）|已启用|基于发起虚拟�
 \* vSAN 端口组使用采用活动或备用方式的显式故障转移，因为它不支持对 vSAN 存储器流量进行负载均衡。
 {:note}
 
-图 2. 集群 VM 内核接口端口组映射
-![集群 VM 内核接口端口组映射](vcsnsxt-vds-kernel-Int.svg)
+![集群 VMkernel 接口端口组映射](../../images/vcsnsxt-vds-kernel-Int.svg "集群 VMkernel 接口端口组映射")
 
 表 5. 集群虚拟交换机端口组、VLAN 和组队策略
 
@@ -124,9 +122,7 @@ SDDC-Dswitch-Public|SDDC-DPortGroup-External|发起虚拟端口|活动：0、1|V
 
 下图显示了如何通过创建安全组来实现 NSX-V 的一些微分段功能的高级别图。在此示例中，“生产”和“开发”是安全组，并且基于这些组来分配安全规则。
 
-图 3. NSX-V 安全性
-</br>
-![NSX-V 安全性](vcsnsxt-vsecurity.svg)
+![NSX-V 安全性](../../images/vcsnsxt-vsecurity.svg "NSX-V 安全性")
 
 ## 相关链接
 {: #vcsnsxt-overview-ic4vnsxv-related}

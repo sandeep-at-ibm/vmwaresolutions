@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -57,8 +57,7 @@ En plus de la configuration matérielle {{site.data.keyword.icpfull_notm}} requi
 ## Structure virtuelle
 {: #vcsicp-arch-overview-infrastructure-virtual-struct}
 
-Figure 1. Structure physique du déploiement vCenter Server et {{site.data.keyword.icpfull_notm}}
-![Structure physique du déploiement VCS et {{site.data.keyword.icpfull_notm}}](vcsicp-phy-ics-icp-deployment.svg)
+![Structure physique du déploiement vCenter Server et {{site.data.keyword.icpfull_notm}} deployment](../../images/vcsicp-phy-ics-icp-deployment.svg "Structure physique du déploiement vCenter Server et {{site.data.keyword.icpfull_notm}}")
 
 Dans l'instance vCenter Server, l'instance {{site.data.keyword.icpfull_notm}} est déployée avec une passerelle NSX Edge Services Gateway (ESG) dédiée et un routeur logique distribué (DLR). L'installation {{site.data.keyword.icpfull_notm}} est chargée dans le sous-réseau VXLAN qui est défini dans les composants ci-dessus.
 

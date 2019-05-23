@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-04"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -50,9 +50,7 @@ vCenter Server 인스턴스에 대한 다중 사이트 구성은 V2.0 이상 인
 
 다음 그림은 vCenter Server 다중 사이트 배치의 전체 보기에 대해 설명합니다.
 
-그림 1. vCenter Server 다중 사이트 배치
-
-![vCenter Server 다중 사이트 배치](../vcenter/multisite-hub-spoke.svg "vCenter Server 다중 사이트 배치")
+![vCenter Server 다중 사이트 배치](../images/multisite-hub-spoke.svg "vCenter Server 다중 사이트 배치")
 
 모델에는 다음 계층이 포함됩니다.
 
@@ -72,4 +70,3 @@ vCenter Server 인스턴스에 대한 다중 사이트 구성은 V2.0 이상 인
 * [Assign Primary Role to NSX Manager](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/com.vmware.nsx-cross-vcenter-install.doc/GUID-44E8AE16-BA3F-4DD9-B582-FC1E137E6CFC.html){:new_window}
 * [Configuring Secondary NSX Managers](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-9E48BC57-15E3-49C7-8BC5-F94ED8918BBE.html){:new_window}
 * [Microsoft Active Directory Trusts supported with VMware vCenter Single Sign-On](https://kb.vmware.com/s/article/2064250){:new_window}
-* [Securely connect your private VMware workloads in the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}

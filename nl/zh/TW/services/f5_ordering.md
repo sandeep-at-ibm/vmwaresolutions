@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-04"
+lastupdated: "2019-05-09"
 
 subcollection: vmware-solutions
 
@@ -33,6 +33,16 @@ subcollection: vmware-solutions
 您可以使用下列其中一種方法，將 F5 on {{site.data.keyword.cloud_notm}} 服務新增至現有實例：
 * 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，檢視您要為其新增服務的實例，按一下左導覽窗格上的**服務**，然後按一下**新增**。
 * 從 {{site.data.keyword.cloud_notm}} 型錄中，選取 **F5 on IBM Cloud**，指定服務設定，然後選取**新增至現有實例**。
+
+## 為專用實例訂購 F5 on IBM Cloud
+{: #f5_ordering-private}
+
+為未使用公用介面配置的實例訂購 F5 on {{site.data.keyword.cloud_notm}} 時，必須提供 Proxy 伺服器以完成安裝。HTTP Proxy 伺服器必須已配置並透過虛擬遞送及轉遞 (VRF) 提供，才能開始安裝 F5 on {{site.data.keyword.cloud_notm}}。
+
+BigIP Virtual Edition (VE) 端點必須可以啟動其授權，才能正常運行。安裝 BigIP VE 端點後，不再需要使用 Proxy 伺服器。
+
+安裝服務時，如果沒有正常運行的 Proxy 伺服器，那麼無法新增 F5 on {{site.data.keyword.cloud_notm}} 服務。
+{:note}
 
 ## F5 on IBM Cloud 服務配置
 {: #f5_ordering-config}

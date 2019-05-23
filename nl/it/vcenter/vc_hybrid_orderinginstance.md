@@ -124,7 +124,7 @@ Tabella 3. Opzioni per Broadwell {{site.data.keyword.baremetal_short}}
 ### Numero di server Bare Metal
 {: #vc_hybrid_orderinginstance-bare-metal-number}
 
-* Tutti i server che ordini hanno la stessa configurazione. 
+* Tutti i server che ordini hanno la stessa configurazione.
 * Puoi ordinare da 4 a 20 server.
 
 ## Impostazioni di archiviazione
@@ -133,7 +133,7 @@ Tabella 3. Opzioni per Broadwell {{site.data.keyword.baremetal_short}}
 VMware vSAN 6.6 è incluso con il tuo ordine dell'istanza vCenter Server with Hybridity Bundle. Specifica le seguenti opzioni vSAN:
 * **Tipo e dimensioni del disco per i dischi vSAN**: seleziona un'opzione per i dischi di capacità di cui hai bisogno.
 * **Numero di dischi vSAN**: specifica il numero di dischi di capacità che vuoi aggiungere.
-* Se vuoi aggiungere dischi di capacità oltre il limite di 10, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 12 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS. 
+* Se vuoi aggiungere dischi di capacità oltre il limite di 10, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 12 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS.
 
   L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i modelli di CPU Skylake.
   {:note}
@@ -181,7 +181,7 @@ La lunghezza massima del nome di dominio completo (o FQDN, Fully Qualified Domai
 Le impostazioni di abilitazione della scheda di interfaccia di rete (NIC) si basano sulla tua selezione di **Rete pubblica e privata** o **Solo rete privata**.
 
 Se selezioni l'opzione **Solo rete privata**:
-* Non viene eseguito il provisioning dei Gateway dei servizi edge (ESG) VMware NSX (né degli ESG del servizio di gestione né di quelli gestiti dal cliente). 
+* Non viene eseguito il provisioning dei Gateway dei servizi edge (ESG) VMware NSX (né degli ESG del servizio di gestione né di quelli gestiti dal cliente).
 * I seguenti servizi aggiuntivi, che richiedono NIC pubbliche, non sono disponibili:
   * F5 on {{site.data.keyword.cloud_notm}}
   * Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
@@ -253,7 +253,7 @@ In base alla configurazione che hai selezionato per l'istanza e i servizi aggiun
   2. Seleziona il modello CPU **Skylake** o **Broadwell** e la quantità di **RAM**.
 8. Completa la configurazione di archiviazione. Specifica i tipi di disco per i dischi di capacità e cache e il numero di dischi. Se vuoi più spazio di archiviazione, seleziona la casella **Alte prestazioni con Intel Optane**.
 9. Completa la configurazione dell'interfaccia di rete.
-  1. Immetti il prefisso del nome host per l'istanza di cui viene eseguito il provisioning, l'etichetta del dominio secondario e il nome del dominio root. 
+  1. Immetti il prefisso del nome host per l'istanza di cui viene eseguito il provisioning, l'etichetta del dominio secondario e il nome del dominio root.
   2. Seleziona l'impostazione di rete **Rete pubblica e privata** o **Solo rete privata**.
   3. Seleziona la configurazione della VLAN.
      *  Se vuoi ordinare nuove VLAN pubbliche e private, fai clic su **Ordina nuove VLAN**.

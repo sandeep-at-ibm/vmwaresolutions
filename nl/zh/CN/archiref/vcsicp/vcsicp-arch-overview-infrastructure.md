@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -57,8 +57,7 @@ CPU|28 个核心，2.2 GHz| 28 个核心，2.2 GHz
 ## 虚拟结构
 {: #vcsicp-arch-overview-infrastructure-virtual-struct}
 
-图 1. vCenter Server 和 {{site.data.keyword.icpfull_notm}} 部署的物理结构
-![VCS 和 {{site.data.keyword.icpfull_notm}} 部署的物理结构](vcsicp-phy-ics-icp-deployment.svg)
+![vCenter Server 和 {{site.data.keyword.icpfull_notm}} 部署的物理结构](../../images/vcsicp-phy-ics-icp-deployment.svg "vCenter Server 和 {{site.data.keyword.icpfull_notm}} 部署的物理结构")
 
 在 vCenter Server 实例中，{{site.data.keyword.icpfull_notm}} 实例部署有专用 NSX Edge 服务网关 (ESG) 和分布式逻辑路由器 (DLR)。{{site.data.keyword.icpfull_notm}} 安装将装入到先前组件中定义的 VXLAN 子网中。
 

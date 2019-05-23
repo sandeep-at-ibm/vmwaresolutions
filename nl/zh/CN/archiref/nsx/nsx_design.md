@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -28,9 +28,7 @@ NSX Edge Services Gateway on {{site.data.keyword.cloud}} 解决方案提供了�
 在下图中 VMware vSAN 是可选的。
 {:note}
 
-图 1. {{site.data.keyword.cloud_notm}} 上的云联网服务
-
-![云联网服务体系结构](architecture.svg "云联网服务体系结构")
+![云联网服务体系结构](../../images/architecture.svg "云联网服务体系结构")
 
 ## 专用体系结构设计
 {: #nsx_design-dedicated-archi}

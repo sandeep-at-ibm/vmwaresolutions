@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -104,8 +104,7 @@ HCX Manager 元件是在目標上配置 NSX Edge 應用裝置之後所部署的�
 
 部署及配置 HCX Manager 雲端元件之後，來源元件會透過 NSX ESG 中所配置的 VIP 位址來建立與 HCX Manager 的連線。建立此連線之後，會在 IBM Cloud 內部署雲端閘道及 WAN 最佳化工具應用裝置。
 
-圖 1. 目標 - Hybrid Cloud Services 應用裝置
-![目標 - Hybrid Cloud Services 應用裝置](target_hybrid_cloud_services_appliance.svg)
+![目標 - Hybrid Cloud Services 應用裝置](../../images/target_hybrid_cloud_services_appliance.svg "目標 - Hybrid Cloud Services 應用裝置")
 
 ## 雲端閘道
 {: #hcx-archi-target-cloud-gateway}
@@ -126,8 +125,7 @@ HCX Manager 元件是在目標上配置 NSX Edge 應用裝置之後所部署的�
 
 下圖說明雲端閘道應用裝置及已指派連線的高階元件圖。
 
-圖 2. 雲端閘道部署
-![雲端閘道部署](cloud_gateway_deployment.svg)
+![Cloud Gateway 部署](../../images/cloud_gateway_deployment.svg "Cloud Gateway 部署")
 
 ## WAN 最佳化程式
 {: #hcx-archi-target-wan-opt}
@@ -146,8 +144,7 @@ HCX Manager 元件是在目標上配置 NSX Edge 應用裝置之後所部署的�
 
 與「雲端閘道」不同，「WAN 最佳化」應用裝置只會連接至邏輯交換器，以啟用它自己與「雲端閘道」之間的通訊。如果在來源環境內使用 WAN 最佳化，則需要此應用裝置。如需網路佈置的視圖，請參閱下圖。
 
-圖 3. WAN 最佳化工具部署
-![WAN 最佳化工具部署](wan_optimizer_deployment.svg)
+![WAN Optimizer 部署](../../images/wan_optimizer_deployment.svg "WAN Optimizer 部署")
 
 ## 第 2 層集中器
 {: #hcx-archi-target-layer-2-conc}
@@ -166,8 +163,8 @@ HCX Manager 元件是在目標上配置 NSX Edge 應用裝置之後所部署的�
 
 L2C 應用裝置部署於管理 VLAN 以及公用 VLAN 上。公用介面用於前往延伸網路來源的應用程式資料流量。在來源管理者將網路延伸起始至 IBM Cloud 之後，會建立延伸網路這類其他連線，並將其連接至 L2C 應用裝置。下圖說明這些網路及連線範例。
 
-圖 4. L2 集中器部署
-![L2 集中器部署](l2_concentrator_deployment.svg)
+![L2 Concentrator 部署](../../images/l2_concentrator_deployment.svg "L2 Concentrator 部署")
+
 
 ## 相關鏈結
 {: #hcx-archi-target-related}

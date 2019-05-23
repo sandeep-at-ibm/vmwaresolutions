@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -123,8 +123,7 @@ HCX Management Enterprise OVA 部署於來源環境，並登錄為管理來源 v
 一個 vCenter 只能有一個 HCX 部署。此限制適用於鏈結模式：HCX Manager 應用裝置僅安裝於主要 vCenter 中。HCX Manager 支援最多五個處於鏈結模式的已登錄 vCenter。
 {:note}
 
-圖 1. 來源 Hybrid Cloud Services
-![來源 Hybrid Cloud Services](source_hybrid_cloud_services.svg)
+![來源 Hybrid Cloud Services](../../images/source_hybrid_cloud_services.svg "來源 Hybrid Cloud Services")
 
 ### HCX 虛擬應用裝置
 {: #hcx-archi-source-hcxva}
@@ -153,8 +152,7 @@ HCX 使用高度加密來引導與 IBM Cloud 的站台對站台連線。vSphere 
 
 「雲端閘道」也會納入 vSphere 抄寫技術，以執行雙向移轉。
 
-圖 2. 來源雲端閘道
-![來源雲端閘道](source_cloud_gateway.svg)
+![來源 Cloud Gateway](../../images/source_cloud_gateway.svg "來源 Cloud Gateway")
 
 ### WAN 最佳化程式
 {: #hcx-archi-source-wan-opt}
@@ -163,8 +161,7 @@ HCX 也提供軟體定義「WAN 最佳化」。「WAN 最佳化」應用裝置�
 
 虛擬機器移轉根據「雲端閘道」與「WAN 最佳化」應用裝置的組合，以達到 vSphere 內部部署與 IBM Cloud 之間的不平行行動性。
 
-圖 3. 來源 WAN 最佳化工具
-![來源 WAN 最佳化工具](source_wan_optimizer.svg)
+![來源 WAN Optimizer](../../images/source_wan_optimizer.svg "來源 WAN Optimizer")
 
 ### 第 2 層集中器
 {: #hcx-archi-source-layer-2-conc}
@@ -173,10 +170,9 @@ HCX 也提供軟體定義「WAN 最佳化」。「WAN 最佳化」應用裝置�
 
 「第 2 層集中器」應用裝置有兩個介面：
 * 內部幹線介面：使用翻譯橋接器與 IBM Cloud 中對應延伸網路的對映，處理延伸網路的虛擬機器資料流量內部部署。
-* 上行鏈路介面：HCX 使用此介面來傳送與 IBM Cloud 之間的封裝套版資料流量。應用程式資料會流過此介面。
+* 上行鏈路介面：HCX 使用此介面來傳送與 IBM Cloud 之間的封裝層疊資料流量。應用程式資料會流過此介面。
 
-圖 4. 來源 L2 集中器
-![來源 L2 集中器](source_l2_concentrator.svg)
+![來源 L2 Concentrator](../../images/source_l2_concentrator.svg "來源 L2 Concentrator")
 
 ### 僅限移轉
 {: #hcx-archi-source-mig-only}
@@ -233,8 +229,7 @@ R1 是 N1-b 的預設閘道，因此，N1-b 必須回到 R1，才能透過 R2 �
 
 亦即，R1 可以使用遞送以透過 R2 聯繫特定虛擬機器，而非使用本端連接的延伸網路。R2 完整擁有其他網路的路徑，以在啟用「鄰近遞送」的情況下聯繫虛擬機器。
 
-圖 5. 使用鄰近遞送的非對稱遞送解決方案
-![使用鄰近遞送的非對稱遞送解決方案](asymmetric_routing_proximity_routing_solution.svg)
+![使用鄰近遞送的非對稱遞送解決方案](../../images/asymmetric_routing_proximity_routing_solution.svg "使用鄰近遞送的非對稱遞送解決方案")
 
 ### MAC 位址保留
 {: #hcx-archi-source-mac-addr-ret}

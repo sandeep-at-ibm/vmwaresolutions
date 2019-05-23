@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -125,8 +125,7 @@ Può esserci soltanto una distribuzione HCX per vCenter. Questa limitazione si a
 vCenter registrati nella modalità di collegamento.
 {:note}
 
-Figura 1. Hybrid Cloud services di origine
-![Hybrid Cloud services di origine](source_hybrid_cloud_services.svg)
+![Servizi cloud ibridi di origine](../../images/source_hybrid_cloud_services.svg "Servizi cloud ibridi di origine")
 
 ### Dispositivi virtuali HCX
 {: #hcx-archi-source-hcxva}
@@ -156,8 +155,7 @@ HCX utilizza una potente crittografia per eseguire il bootstrap di una connessio
 
 Il gateway cloud incorpora inoltre la tecnologia di replica vSphere per eseguire la migrazione bidirezionale.
 
-Figura 2. Gateway cloud di origine
-![Gateway cloud di origine](source_cloud_gateway.svg)
+![Gateway cloud di origine](../../images/source_cloud_gateway.svg "Gateway cloud di origine")
 
 ### WAN Optimizer
 {: #hcx-archi-source-wan-opt}
@@ -166,8 +164,7 @@ HCX fornisce inoltre la WAN Optimization definita dal software. Il dispositivo W
 
 La migrazione della VM (Virtual Machine) si basa sulla combinazione del dispositivo WAN Optimization e del gateway cloud per ottenere una mobilità ineguagliabile tra vSphere in loco e IBM Cloud.
 
-Figura 3. WAN Optimizer di origine
-![WAN Optimizer di origine](source_wan_optimizer.svg)
+![WAN Optimizer di origine](../../images/source_wan_optimizer.svg "WAN Optimizer di origine")
 
 ### Concentratore di livello 2
 {: #hcx-archi-source-layer-2-conc}
@@ -178,8 +175,7 @@ Il dispositivo del concentratore di livello 2 ha due interfacce:
 * Interfaccia trunk interna: Gestisce il traffico della VM (Virtual Machine) in loco per le reti estese utilizzando un'associazione bridge traslazionale a una rete estesa corrispondente in IBM Cloud.
 * Interfaccia uplink: HCX utilizza questa interfaccia per inviare il traffico di sovrapposizione incapsulato a/da IBM Cloud. I dati dell'applicazione passano attraverso questa interfaccia.
 
-Figura 4. Concentratore L2 di origine
-![Concentratore L2 di origine](source_l2_concentrator.svg)
+![Concentratore L2 di origine](../../images/source_l2_concentrator.svg "Concentratore L2 di origine")
 
 ### Solo migrazione
 {: #hcx-archi-source-mig-only}
@@ -233,15 +229,14 @@ Per evitare il tromboning, HCX utilizza la gestione dell'instradamento intellige
 Nel diagramma, i componenti `N*a` sulla sinistra risiedono nel data center in loco e il componente `N*b`
 sulla destra risiede nel cloud.
 
-R1 è il gateway predefinito per N1-b, pertanto, N1-b deve tornare a R1 per instradare il traffico tramite R2. Per evitare l'instradamento asimmetrico, HCX inserisce delle rotte host all'interno della sovrapposizione NSX della distribuzione VCS di IBM Cloud. Se la VM (Virtual Machine) è appena stata creata nel cloud oppure se è stata spostata con la migrazione con basso tempo di inattività, la rotta host viene inserita immediatamente. 
+R1 è il gateway predefinito per N1-b, pertanto, N1-b deve tornare a R1 per instradare il traffico tramite R2. Per evitare l'instradamento asimmetrico, HCX inserisce delle rotte host all'interno della sovrapposizione NSX della distribuzione VCS di IBM Cloud. Se la VM (Virtual Machine) è appena stata creata nel cloud oppure se è stata spostata con la migrazione con basso tempo di inattività, la rotta host viene inserita immediatamente.
 
 Se la VM (Virtual Machine) è stata trasferita utilizzando il vMotion, la rotta non viene inserita finché non viene riavviata la VM (Virtual Machine). Attendere fino a dopo il riavvio garantisce che i dispositivi con stato in loco continuino a utilizzare la sessione esistente finché non viene riavviata la VM (Virtual Machine). Dopo il riavvio, le informazioni di instradamento sono coerenti in loco e nel cloud.
 
 Per tale motivo, R1 può utilizzare l'instradamento per raggiungere una VM (Virtual Machine) specifica tramite R2, invece di utilizzare la rete estesa collegata localmente. R2 gestisce completamente il percorso delle altre reti per raggiungere le VM (Virtual Machine)
 con l'instradamento di prossimità abilitato.
 
-Figura 5. Istradamento asimmetrico con la soluzione dell'instradamento di prossimità
-![Istradamento asimmetrico con la soluzione dell'instradamento di prossimità](asymmetric_routing_proximity_routing_solution.svg)
+![Istradamento asimmetrico con la soluzione dell'instradamento di prossimità](../../images/asymmetric_routing_proximity_routing_solution.svg "Istradamento asimmetrico con la soluzione dell'instradamento di prossimità")
 
 ### Conservazione dell'indirizzo MAC
 {: #hcx-archi-source-mac-addr-ret}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-02"
 
 subcollection: vmware-solutions
 
@@ -22,7 +22,7 @@ VMware vCenter Server on {{site.data.keyword.cloud}} est un cloud privé héberg
 
 Dans de nombreux cas, l'ensemble de l'environnement peut être mis à disposition en moins d'une journée et l'infrastructure bare metal peut rapidement et de manière élastique augmenter ou diminuer en fonction des besoins de la capacité de calcul.
 
-Après le déploiement, vous pouvez augmenter le stockage partagé en commandant davantage de partages de fichiers NFS (Network File System) à partir du portail {{site.data.keyword.slportal}} et en les connectant manuellement à tous les serveurs ESXi d'un cluster.Si vous avez besoin d'un stockage dédié, [NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview) est offert en configuration hautes performances (entièrement SSD) et en configuration haute capacité (entièrement SATA).
+Après le déploiement, vous pouvez augmenter le stockage partagé en commandant davantage de partages de fichiers NFS (Network File System) à partir du portail {{site.data.keyword.slportal}} et en les connectant manuellement à tous les serveurs ESXi d'un cluster. Si vous avez besoin d'un stockage dédié, [NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview) est offert en configuration hautes performances (entièrement SSD) et en configuration haute capacité (entièrement SATA).
 
 VMware vSAN est également disponible en tant qu'option de stockage dédié. Pour augmenter la capacité d'un stockage basé sur vSAN d'un cluster vSAN, vous pouvez ajouter d'autres serveurs ESXi après le déploiement.
 
@@ -35,7 +35,7 @@ Vous pouvez ajouter des services gérés par IBM si vous voulez décharger les o
 
 Le graphique suivant décrit l'architecture de haut niveau et les composants d'un déploiement vCenter Server à trois noeuds.
 
-Figure 1. Architecture vCenter Server de haut niveau pour un cluster à trois noeuds ![Architecture vCenter Server](vc_architecture.svg "Architecture vCenter Server de haut niveau pour un cluster à trois noeuds")
+![Architecture vCenter Server](../images/vc_architecture.svg "Architecture vCenter Server")
 
 ### Infrastructure physique
 {: #vc_vcenterserveroverview-physical-infras}

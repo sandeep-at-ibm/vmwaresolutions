@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -36,9 +36,7 @@ subcollection: vmware-solutions
 * 인바운드 트래픽의 경우 글로벌 로드 밸런서가 필요합니다. 이 요구사항을 충족하려면 {{site.data.keyword.cloud_notm}} 글로벌 로드 밸런스 오퍼링을 참조하십시오.
 * 이 예에는 VMware NSX Enterprise 에디션이 필요합니다.
 
-그림 1. 다중 사이트 토폴로지
-
-![다중 사이트 토폴로지](multisite_topology.svg "다중 사이트 토폴로지")
+![다중 사이트 토폴로지](../../images/multisite_topology.svg "다중 사이트 토폴로지")
 
 ## 관련 링크
 {: #nsx-multi_site-related}

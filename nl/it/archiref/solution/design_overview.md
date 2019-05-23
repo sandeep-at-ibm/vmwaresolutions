@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-15"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -19,8 +19,7 @@ L'offerta in questo portfolio di soluzioni include i prodotti VMware vSphere all
 
 L'architettura è costituita da una singola regione cloud e supporta la capacità di estendersi in più regioni cloud che si trovano in un'altra area geografia e in un altro pod di {{site.data.keyword.cloud_notm}} all'interno dello stesso data center. Una regione viene definita come un'istanza vCenter Server univoca. Questa progettazione consente inoltre l'espansione e la contrazione automatizzata della capacità virtuale all'interno di un'istanza vCenter Server.
 
-Figura 1. Componenti della soluzione di {{site.data.keyword.vmwaresolutions_short}}
-![Componenti della soluzione di {{site.data.keyword.vmwaresolutions_short}}](vcsv4radiagrams-ra-full.svg "La soluzione comprende l'infrastruttura fisica, l'infrastruttura virtuale, la gestione dell'infrastruttura e i servizi comuni.")
+![Componenti della soluzione di {{site.data.keyword.vmwaresolutions_short}}](../../images/vcsv4radiagrams-ra-full.svg "La soluzione comprende l'infrastruttura fisica, l'infrastruttura virtuale, la gestione dell'infrastruttura e i servizi comuni")
 
 ## Link correlati
 {: #design_overview-related}

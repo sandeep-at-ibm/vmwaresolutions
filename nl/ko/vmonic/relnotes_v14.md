@@ -46,7 +46,7 @@ NSX 설치의 일부로 NSX Manager가 배치된 모든 새 인스턴스에 설�
 NSX Controller는 vCenter Server 인스턴스에 설치되어 있지 않습니다(Cloud Foundation 인스턴스에 설치된 방법으로). VXLAN 또는 vCenter Server 인스턴스에 대한 분배된 논리 라우터를 사용하는 경우 자체적으로 NSX Controller를 설치해야 합니다.
 {:note}
 
-VMware NSX for vSphere 6.2.4에 도입된 개선사항, 요구사항 및 알려진 문제에 대한 자세한 정보는 [NSX for vSphere 6.2.4 릴리스 정보](http://pubs.vmware.com/Release_Notes/en/nsx/6.2.4/releasenotes_nsx_vsphere_624.html){:new_window}를 참조하십시오.
+VMware NSX for vSphere 6.2.4에 도입된 개선사항, 요구사항 및 알려진 문제에 대한 자세한 정보는 [NSX for vSphere 6.2.4 릴리스 정보](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/rn/releasenotes_nsx_vsphere_624.html){:new_window}를 참조하십시오.
 
 ### VMware NSX Edge
 {: #relnotes_v14-nsx-edge}

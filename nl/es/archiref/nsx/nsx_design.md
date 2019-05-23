@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -28,9 +28,7 @@ La arquitectura interna especifica el despliegue de los componentes NSX Edge nec
 En la figura siguiente, VMware vSAN es opcional.
 {:note}
 
-Figura 1. Cloud Networking Services en {{site.data.keyword.cloud_notm}}
-
-![Arquitectura de Cloud Networking Services](architecture.svg "Arquitectura de Cloud Networking Services")
+![Arquitectura de los servicios de red en la nube](../../images/architecture.svg "Arquitectura de los servicios de red en la nube")
 
 ## Diseño de la arquitectura dedicada
 {: #nsx_design-dedicated-archi}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-24"
+lastupdated: "2019-05-02"
 
 subcollection: vmware-solutions
 
@@ -47,9 +47,7 @@ subcollection: vmware-solutions
 
 다음 그림은 vCenter Server with Hybridity Bundle 다중 사이트 배치의 전체 보기를 나타냅니다.
 
-그림 1. vCenter Server with Hybridity Bundle 다중 사이트 배치
-
-![vCenter Server with Hybridity Bundle 다중 사이트 배치](../vcenter/multisite-hub-spoke.svg "vCenter Server with Hybridity Bundle 다중 사이트 배치")
+![vCenter Server with Hybridity Bundle 다중 사이트 배치](../images/multisite-hub-spoke.svg "vCenter Server with Hybridity Bundle 다중 사이트 배치")
 
 모델에는 다음 계층이 포함됩니다.
 

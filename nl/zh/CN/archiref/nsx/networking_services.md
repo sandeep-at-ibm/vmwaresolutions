@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -22,9 +22,7 @@ subcollection: vmware-solutions
 
 下图是简化的网络图，描绘了管理对和工作负载 ESG 对。图中还显示了 NSX 分布式逻辑路由器 (DLR) 和工作负载 VXLAN。这些组件旨在作为客户工作负载的初始着陆点，而无需特定知识在 NSX 中设置这些组件。DLR 通常用于路由 VMware vCenter Server 之间的流量，以及路由实例内不同的第 2 层网络之间的东-西流量。此行为与 ESG 不同，ESG 用于支持遍历进出 vCenter Server 实例的南-北网络流量。
 
-图 1. vCenter Server 上的云联网服务
-
-![vCenter Server 上的云联网服务](cloudnetworkingservicesdiagram.svg "vCenter Server 上的云联网服务")
+![vCenter Server 上的云联网服务](../../images/cloudnetworkingservicesdiagram.svg "vCenter Server 上的云联网服务")
 
 虽然单个 ESG 可能足以应对管理和客户的工作负载流量，但隔离管理和客户流量是一项设计决策，可防止意外的管理 ESG 配置错误。
 
@@ -38,9 +36,7 @@ IBM 管理 ESG 是一种专用 NSX Edge 集群，仅用于 {{site.data.keyword.c
 
 管理 ESG 提供了位于 vCenter Server 实例中的附加组件服务虚拟机 (VM) 与 {{site.data.keyword.cloud_notm}} 中 IBM Automation 基础架构之间的通信路径，如下图中针对 vCenter Server 所示。
 
-图 2. vCenter Server 上的管理 Edge 通信
-
-![vCenter Server 上的管理 Edge 通信](mgmtvmcommunication.svg "vCenter Server 上的管理 Edge 通信")
+![vCenter Server 上的管理边缘通信](../../images/mgmtvmcommunication.svg "vCenter Server 上的管理边缘通信")
 
 由于某些附加组件服务 VM 与其相应的许可和计量系统之间的通信负载较轻，因此 NSX ESG 可在主动/被动高可用性 (HA) 对的大型配置中调整大小，并部署在 vCenter Server 集群的管理资源池中。下表提供了 IBM 管理 NSX ESG 部署的摘要。
 
@@ -155,9 +151,7 @@ IBM 工作负载 ESG 是用于工作负载网络通信的简单拓扑的一部�
 * 分布式逻辑路由器 (DLR)
 * VXLAN（叠加在 L3 上的 L2）
 
-图 3. 示例网络流程图
-
-![网络流程图](customer_network_flow_diagram.svg "网络流程图")
+![网络流图](../../images/customer_network_flow_diagram.svg "网络流图")
 
 ### IBM 工作负载 NSX Edge 的 Edge 接口
 {: #nsx-networking_services-edge-interfaces-workload}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-05-01"
 
 subcollection: vmware-solutions
 
@@ -27,9 +27,7 @@ NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 供應項目能提供儲
 
 下圖說明 NetApp ONTAP Select on vCenter Server 部署的整體架構。
 
-圖 1. NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 的高階架構
-
-![NetApp ONTAP Select 架構](np_architecture.svg "NetApp ONTAP Select on IBM Cloud 高階架構")
+![NetApp ONTAP Select 架構](../images/np_architecture.svg "NetApp ONTAP Select 架構")
 
 ### 實體基礎架構
 {: #np_netappoverview-physical-infras}
@@ -46,9 +44,7 @@ NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} 供應項目能提供儲
 
 下圖說明 NetApp ONTAP Select 部署的元件。
 
-圖 2. NetApp ONTAP Select 元件
-
-![NetApp ONTAP Select 元件](np_netappcomponents.svg "NetApp ONTAP Select 的元件")
+![NetApp ONTAP Select 元件](../images/np_netappcomponents.svg "NetApp ONTAP Select 的元件")
 
 ### 虛擬化管理
 {: #np_netappoverview-virtualization-mgmt}

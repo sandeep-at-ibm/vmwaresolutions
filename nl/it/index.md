@@ -97,7 +97,7 @@ Esamina e scegli la tua offerta di distribuzione.
     </tr>
     <tr>
        <td>[NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview)</td>
-       <td>L'offerta NetApp ONTAP Select ti consente di distribuire un cluster di archiviazione definita dal software che risponda alle tue esigenze di un dispositivo di archiviazione dedicato e altamente disponibile basato su NetApp ONTAP Select. </td>
+       <td>L'offerta NetApp ONTAP Select ti consente di distribuire un cluster di archiviazione definita dal software che risponda alle tue esigenze di un dispositivo di archiviazione dedicato e altamente disponibile basato su NetApp ONTAP Select.</td>
     </tr>
   </table>
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-04"
+lastupdated: "2019-05-09"
 
 subcollection: vmware-solutions
 
@@ -33,6 +33,13 @@ subcollection: vmware-solutions
 可以使用下列其中一种方法将 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服务添加到现有实例中：
 * 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，查看要为其添加服务的实例，单击左侧导航窗格上的**服务**，然后单击**添加**。
 * 在 {{site.data.keyword.cloud_notm}}“目录”中，选择 **FortiGate Virtual Appliance on IBM Cloud**，指定服务设置，然后选择**添加到现有实例**。
+
+## 为专用实例订购 FortiGate Virtual Appliance on IBM Cloud
+{: #fortinetvm_ordering-private}
+
+为未配置公共接口的实例订购 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 时，必须提供代理服务器以完成安装。HTTP 代理服务器必须已配置并通过虚拟路由和转发 (VRF) 可用，才能开始安装 Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}。
+
+要确保持续运行，FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 必须可通过因特网持久访问 Fortigate 许可证服务器。
 
 ## FortiGate Virtual Appliance on IBM Cloud 服务配置
 {: #fortinetvm_ordering-config}

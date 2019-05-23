@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -22,9 +22,7 @@ subcollection: vmware-solutions
 
 以下の図は、管理のペアとワークロード ESG のペアを表す単純化されたネットワーク図です。 また、NSX 分散論理ルーター (DLR) およびワークロード VXLAN も示しています。 これらのコンポーネントは、NSX 内でセットアップするための特定の知識を必要とせずに、お客様のワークロードの初期ランディング・ポイントとなります。 通常、DLR は、インスタンス内の個別のレイヤー 2 ネットワーク間で、VMware vCenter Server と東西トラフィックの間のトラフィックをルーティングするために使用されます。 この動作は、vCenter Server インスタンスの南北ネットワーク・トラフィックの通過を実現する ESG とは大きく異なります。
 
-図 1. vCenter Server のクラウド・ネットワーキング・サービス
-
-![vCenter Server のクラウド・ネットワーキング・サービス](cloudnetworkingservicesdiagram.svg "vCenter Server のクラウド・ネットワーキング・サービス")
+![vCenter Server におけるクラウド・ネットワーク・サービス](../../images/cloudnetworkingservicesdiagram.svg "vCenter Server におけるクラウド・ネットワーク・サービス")
 
 管理およびお客様のワークロードの両方のトラフィックで単一の ESG が十分である可能性がありますが、管理およびお客様のトラフィックの分離は、管理 ESG が誤って構成されないようにするための設計上の決定です。
 
@@ -38,9 +36,7 @@ IBM 管理 ESG は、{{site.data.keyword.cloud_notm}} 管理ネットワーク�
 
 管理 ESG は、vCenter Server インスタンス内にあるアドオン・サービス仮想マシン (VM) と、以下の図で vCenter Server 用に示されている {{site.data.keyword.cloud_notm}} 内の IBM 自動化インフラストラクチャーとの間の通信パスを提供します。
 
-図 2. vCenter Server での管理エッジ通信
-
-![vCenter Server での管理エッジ通信](mgmtvmcommunication.svg "vCenter Server での管理エッジ通信")
+![vCenter Server における管理エッジ通信](../../images/mgmtvmcommunication.svg "vCenter Server における管理エッジ通信")
 
 特定のアドオン・サービス VM と対応するライセンス交付システムおよび課金システムの間の光通信によって、NSX ESG はアクティブ - パッシブ高可用性 (HA) ペアの大規模な構成でサイズ変更され、vCenter Server クラスターの管理リソース・プールにデプロイされます。 以下の表に、IBM 管理 NSX ESG デプロイメントの要約を示します。
 
@@ -48,8 +44,8 @@ IBM 管理 ESG は、{{site.data.keyword.cloud_notm}} 管理ネットワーク�
 
 | IBM 管理 NSX Edge | vCPU | メモリー | ディスク・サイズ | ストレージの場所 |
 |:----------------------- |:---- |:------ |:--------- |:---------------- |
-| IBM 管理 NSX ESG 1 | 2 | 1 GB | 1 GB | vSAN データ・ストアまたは管理用の接続型の共有ストレージ |
-| IBM 管理 NSX ESG 2 | 2 | 1 GB | 1 GB | vSAN データ・ストアまたは管理用の接続型の共有ストレージ |
+| IBM 管理 NSX ESG 1 | 2 | 1 GB | 1 GB | vSAN データ・ストアまたは管理用に取り付けられた共有ストレージ |
+| IBM 管理 NSX ESG 2 | 2 | 1 GB | 1 GB | vSAN データ・ストアまたは管理用に取り付けられた共有ストレージ |
 
 ### 管理サービス
 {: #nsx-networking_services-mgmt-services}
@@ -155,9 +151,7 @@ IBM ワークロード ESG は、ワークロード・ネットワーク通信�
 * 分散論理ルーター (DLR)
 * VXLAN (L3 上の L2)
 
-図 3. ネットワーク・フロー図の例
-
-![ネットワーク・フロー図](customer_network_flow_diagram.svg "ネットワーク・フロー図")
+![ネットワーク・フロー図](../../images/customer_network_flow_diagram.svg "ネットワーク・フロー図")
 
 ### IBM ワークロード NSX Edge の Edge インターフェース
 {: #nsx-networking_services-edge-interfaces-workload}

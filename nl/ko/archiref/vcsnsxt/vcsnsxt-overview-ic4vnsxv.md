@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-19"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -31,8 +31,7 @@ subcollection: vmware-solutions
 
 네트워크 다음의 NSX-V Manager 네트워크 개요에서는 이 아키텍처의 기타 컴포넌트와 연관된 NSX Manager의 배치를 보여줍니다.
 
-그림 1. NSX-V Manager 네트워크 개요
-![NSX-V Manager 네트워크 개요](vcsnsxt-vmgmt.svg)
+![NSX-V Manager 네트워크 개요](../../images/vcsnsxt-vmgmt.svg "NSX-V Manager 네트워크 개요")
 
 초기 배치 이후 {{site.data.keyword.cloud}} 자동화는 초기 클러스터 내에 3개의 NSX Controller를 배치합니다. 제어기에는 관리 컴포넌트용으로 지정된 **사설 A** 포터블 서브넷의 IP 주소가 지정됩니다. VM–VM 반유사성(anti–affinity) 규칙은 제어기가 클러스터의 호스트 간에 분리되는 방식으로 작성됩니다. 초기 클러스터는 제어기에 대한 고가용성을 보장할 수 있도록 최소한 3개의 노드로 배치되어야 합니다.
 
@@ -78,8 +77,7 @@ vSphere 분배 스위치 이름 |기능 |네트워크 I/O 제어 |로드 밸런�
 \* vSAN 스토리지 트래픽의 로드 밸런싱을 지원하지 않으므로 vSAN 포트 그룹은 활성/대기의 명시적 장애 복구를 사용합니다.
 {:note}
 
-그림 2. 클러스터 VM 커널 인터페이스 포트 그룹 맵핑
-![클러스터 VM 커널 인터페이스 포트 그룹 맵핑](vcsnsxt-vds-kernel-Int.svg)
+![클러스터 VM 커널 인터페이스 포트 그룹 맵핑](../../images/vcsnsxt-vds-kernel-Int.svg "클러스터 VM 커널 인터페이스 포트 그룹 맵핑")
 
 표 5. 클러스터 가상 스위치 포트 그룹, VLAN 및 팀 구성 정책
 
@@ -124,9 +122,7 @@ NSX for vSphere를 사용하면 조직은 데이터 센터를 별개의 보안 �
 
 다음 다이어그램에서는 보안 그룹을 작성하여 NSX-V의 마이크로 세그먼트화 기능 중 일부를 구현할 수 있는 방법에 대한 상위 레벨 다이어그램을 보여줍니다. 이 예에서, 프로덕션 및 개발은 보안 그룹이며 이 그룹을 기반으로 보안 규칙이 지정됩니다.
 
-그림 3. NSX-V 보안
-</br>
-![NSX-V 보안](vcsnsxt-vsecurity.svg)
+![NSX-V 보안](../../images/vcsnsxt-vsecurity.svg "NSX-V 보안")
 
 ## 관련 링크
 {: #vcsnsxt-overview-ic4vnsxv-related}

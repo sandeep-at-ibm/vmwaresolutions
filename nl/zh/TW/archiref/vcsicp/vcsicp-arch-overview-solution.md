@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-09"
 
 subcollection: vmware-solutions
 
@@ -17,8 +17,7 @@ subcollection: vmware-solutions
 ## VMware vCenter Server on IBM Cloud 元件
 {: #vcsicp-arch-overview-solution-vcs-comp}
 
-圖 1. vCenter Server 環境圖
-![VCS 環境](vcsicp-vcsenv.svg)
+![vCenter Server 環境](../../images/vcsicp-vcsenv.svg "vCenter Server 和 {{site.data.keyword.icpfull_notm}} 部署的實體結構")
 
 ### 平台服務控制器
 {: #vcsicp-arch-overview-solution-psc}
@@ -49,27 +48,26 @@ NSX Manager 部署在起始叢集上。此外，NSX Manager 會獲指派專用�
 
 表 1. {{site.data.keyword.icpfull_notm}} ESG 規格
 
- 屬性            | 規格                           
---|--
-Edge Services Gateway  | 虛擬應用裝置 
-邊緣大小為「大型」 |   vCPU 數目為	2
-記憶體	| 1-GB 磁碟 | 本端資料儲存庫上有 1000 GB 
+| 屬性            | 規格                           |
+|:--------- |:------------- |
+|Edge Services Gateway  | 虛擬應用裝置 |
+|邊緣大小為「大型」 |   vCPU 數目為	2|
+|記憶體| 1-GB 磁碟 | 本端資料儲存庫上有 1000 GB |
 
 表 2. {{site.data.keyword.icpfull_notm}} DLR 規格
 
- 屬性            | 規格                           
---|--|
-分散式邏輯路由器 | 	 虛擬應用裝置 
-邊緣大小為「精簡」 | vCPU 數目為	1
-記憶體	|512 MB 的磁碟| 本端資料儲存庫上有 1000 GB 
+| 屬性            | 規格          |
+|:--------- |:------------- |
+|分散式邏輯路由器 | 虛擬應用裝置 |
+|邊緣大小為「精簡」 | vCPU 數目為	1|
+|記憶體	|512 MB 的磁碟| 本端資料儲存庫上有 1000 GB |
 
 ## IBM Cloud Private 元件
 {: #vcsicp-arch-overview-solution-icp-comp}
 
 {{site.data.keyword.icpfull_notm}} 是一個應用程式平台，用於開發及管理內部部署容器化應用程式。它是用來管理容器的整合環境，其中包括容器編排程式 Kubernetes、專用映像檔儲存庫、管理主控台和監視架構。
 
-圖 2. 使用 vCenter Server 的虛擬 {{site.data.keyword.icpfull_notm}} 部署
-![使用 VCS 的虛擬 {{site.data.keyword.icpfull_notm}} 部署](vcsicp-virtual-icp-deployment-vcs.svg)
+![帶 vCenter Server 的虛擬 {{site.data.keyword.icpfull_notm}} 部署](../../images/vcsicp-virtual-icp-deployment-vcs.svg "帶 vCenter Server 的虛擬 {{site.data.keyword.icpfull_notm}} 部署")
 
 ###	啟動節點
 {: #vcsicp-arch-overview-solution-boot-node}
@@ -105,30 +103,29 @@ Proxy 節點的功能是將外部要求傳輸至在叢集內建立的服務。�
 
 表 3. {{site.data.keyword.icpfull_notm}} 虛擬機器規格
 
-節點 | 	實例	| IP	| CPU	| RAM (GB)	| 磁碟 (GB)
-:-----|------------:|:----|----:|----------:|----------:|
-主節點|	3	| IP (x3) VIP (x1)	| 4	| 64	| 200
-管理	|3	| IP (x3)	|8	|64	|500
-Proxy	| 3	| IP (x3)VIP (x1)	|2	|4	|150
-漏洞警告器	|3	| IP (x3)	| 4	| 16	|500
-GlusterFS	| 3	| IP (x3)	|8	|16	|150
-工作者節點	| 3-6	| IP (x3)	|4-8	|4	|150
+|節點 |     實例    | IP	| CPU	| RAM (GB)	| 磁碟 (GB)|
+|:---- |:--------- |:-- |:--- |:--------- |:--------- |
+| 主節點     | 3	| IP (x3) VIP (x1)	| 4	| 64	| 200 |
+|管理	| 3	| IP (x3)	|8	| 64	| 500 |
+|Proxy	| 3	| IP (x3)VIP (x1)	|2	| 4	| 150 |
+|漏洞警告器	| 3	| IP (x3)	| 4	| 16	| 500 |
+|GlusterFS	| 3	| IP (x3)	|8	| 16	| 150 |
+|工作者節點	| 3-6	| IP (x3)	|4-8	| 4	| 150 |
 
 CAM 需要工作者節點具有較高的 vCPU 和記憶體配置。
 
 表 4. {{site.data.keyword.icpfull_notm}} 虛擬機器規格
 
-節點 | 	實例	| IP	| CPU	| RAM (GB)	| 磁碟 (GB)
-:-----|------------:|:----|----:|----------:|----------:|
-工作者節點  |  3 | IP (x3)  |  4-8 |16-20   |  150
+|節點 |實例	| IP    | CPU	| RAM (GB)	| 磁碟 (GB)|
+|:---- |:---------- |:-- |:---- |:--------- |:--------- |
+|工作者節點  | 3 | IP (x3)  |  4-8 |16-20   | 150 |
 
 ## CAM 元件
 {: #vcsicp-arch-overview-solution-cam-comp}
 
 {{site.data.keyword.cloud_notm}} Automation Manager (CAM) 是在 {{site.data.keyword.icpfull_notm}} 上執行的多重雲端自助式管理平台，讓開發人員與管理者能夠滿足商業需求。
 
-圖 3. CAM 元件參照</br>
-![CAM 元件參照](vcsicp-cam-component-ref.svg)
+![CAM 元件參考](../../images/vcsicp-cam-component-ref.svg "CAM 元件參考")
 
 ### CAM Proxy
 {: #vcsicp-arch-overview-solution-cam-proxy}

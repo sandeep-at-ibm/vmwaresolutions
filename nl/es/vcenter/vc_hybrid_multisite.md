@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-24"
+lastupdated: "2019-05-02"
 
 subcollection: vmware-solutions
 
@@ -47,9 +47,7 @@ Si la configuración requiere un despliegue de varios sitios con más de 128 ser
 
 En el siguiente gráfico se muestra una visión general del despliegue de varios sitios de vCenter Server con el paquete híbrido (Hybridity).
 
-Figura 1. Despliegue de varios sitios de vCenter Server con el paquete híbrido (Hybridity)
-
-![Despliegue de varios sitios de vCenter Server con el paquete híbrido (Hybridity)](../vcenter/multisite-hub-spoke.svg "Despliegue de varios sitios de vCenter Server con el paquete híbrido (Hybridity)")
+![Despliegue de varios sitios de vCenter Server con el paquete híbrido (Hybridity)](../images/multisite-hub-spoke.svg "Despliegue de varios sitios de vCenter Server con el paquete híbrido (Hybridity)")
 
 El modelo contiene las siguientes capas:
 

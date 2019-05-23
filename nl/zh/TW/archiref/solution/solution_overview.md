@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-15"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -22,8 +22,7 @@ subcollection: vmware-solutions
 
 此設計作為基準線架構，用於提供要針對特定使用案例新增之其他內部或供應商特定元件的基礎。
 
-圖 1. VMware on {{site.data.keyword.cloud_notm}} 概觀
-![VMware on {{site.data.keyword.cloud_notm}}](vcsv4radiagrams-ra-variationsonatheme.svg "此解決方案虛擬化可執行您應用程式之 VM 所耗用的運算、網路及選用儲存空間資源。")
+![VMware on {{site.data.keyword.cloud_notm}} 概觀](../../images/vcsv4radiagrams-ra-variationsonatheme.svg "該解決方案虛擬化運算、網路和選用的儲存空間資源，以供可在其中執行應用程式的 VM 使用")
 
 ## IBM Cloud for VMware Solutions 的重要好處
 {: #solution_overview-benefits}

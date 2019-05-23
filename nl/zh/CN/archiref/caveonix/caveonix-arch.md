@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 下图中显示了 Caveonix RiskForesight 体系结构。
 
-图 1. Caveonix RiskForesight 体系结构
-![体系结构图](caveonix-architecture.svg)
+![体系结构图](../../images/caveonix-architecture.svg "体系结构图")
 
 Caveonix RiskForesight 体系结构包含四层：
 -	检测 -“检测”模块完全集成到 VMware 堆栈和许多公共云中。通过插件，RiskForesight 将 vCenter 和 NSX Manager 用作资产存储库，以收集有关虚拟机 (VM)、网络和网络流的详细信息。远程收集器会扫描工作负载、操作系统和应用程序，以允许显示合规性和漏洞的“全堆栈”视图。
@@ -40,8 +39,7 @@ Caveonix RiskForesight 体系结构包含四层：
 
 Caveonix RiskForesight 具有区域的概念：
 
-图 2. Caveonix RiskForesight 区域
-![区域图](caveonix-zones.svg)
+![专区图](../../images/caveonix-zones.svg "专区图")
 
 -	管理或服务提供者区域 - 管理或服务提供者区域包含以下组件：
     - RiskForesight 应用程序 - 此应用程序包含多个组件，并在“应用程序组件”部分中进行了详细描述。

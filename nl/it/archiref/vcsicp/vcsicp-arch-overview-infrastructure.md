@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -57,8 +57,7 @@ Oltre ai requisiti hardware di {{site.data.keyword.icpfull_notm}}, devi creare v
 ## Struttura virtuale
 {: #vcsicp-arch-overview-infrastructure-virtual-struct}
 
-Figura 1. Struttura fisica della distribuzione vCenter Server e {{site.data.keyword.icpfull_notm}}
-![Struttura fisica della distribuzione VCS e {{site.data.keyword.icpfull_notm}} ](vcsicp-phy-ics-icp-deployment.svg)
+![Struttura fisica delle distribuzioni vCenter Server e {{site.data.keyword.icpfull_notm}}](../../images/vcsicp-phy-ics-icp-deployment.svg "Struttura fisica delle distribuzioni vCenter Server e {{site.data.keyword.icpfull_notm}}")
 
 All'interno dell'istanza vCenter Server, l'istanza {{site.data.keyword.icpfull_notm}} viene distribuita con un DLR (Distributed Logical Router) e ESG (Edge Services Gateway) NSX dedicato. L'installazione {{site.data.keyword.icpfull_notm}} viene caricata nella sottorete VXLAN definita nei componenti precedenti.
 

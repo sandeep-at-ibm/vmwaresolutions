@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-03"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -24,14 +24,12 @@ subcollection: vmware-solutions
 
 다음 그림은 vCenter Server 배치의 전체 아키텍처를 제공합니다.
 
-그림 1. {{site.data.keyword.cloud_notm}}의 연결된 스토리지에 대한 상위 레벨 아키텍처
-
-![연결된 스토리지 아키텍처](../solution/vcsv4radiagrams-ra-nfs-shares.svg "IBM Cloud의 연결된 스토리지에 대한 상위 레벨 아키텍처")
+![연결된 스토리지 아키텍처](../../images/vcsv4radiagrams-ra-nfs-shares.svg "연결된 스토리지 아키텍처")
 
 ## 실제 인프라 디자인
 {: #storage-infra-design-phys-infra-design}
 
-실제 인프라는 실제 컴퓨팅, 물리적 스토리지 및 실제 네트워크라는 세 가지 기본 컴포넌트로 구성됩니다. 실제 인프라는 인프라에서 사용되는 {{site.data.keyword.cloud_notm}} 서비스 네트워크와 실제 스토리지를 포함합니다.
+실제 인프라는 실제 컴퓨팅, 실제 스토리지 및 실제 네트워크라는 세 가지 기본 컴포넌트로 구성됩니다. 실제 인프라는 인프라에서 사용되는 {{site.data.keyword.cloud_notm}} 서비스 네트워크와 실제 스토리지를 포함합니다.
 
 ## 실제 네트워크 디자인
 {: #storage-infra-design-phys-net-design}

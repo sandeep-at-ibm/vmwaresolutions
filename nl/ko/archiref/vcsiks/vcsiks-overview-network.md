@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -29,8 +29,7 @@ subcollection: vmware-solutions
 - 각 작업자 노드의 사설 IP 주소. 이를 통해 작업자 노드에 사설 네트워크 인터페이스를 제공합니다.
 - 모든 작업자 노드와 마스터 노드 사이의 자동 보안 OpenVPN 연결.
 
-그림 1. vCenter Server 및 {{site.data.keyword.containerlong_notm}} 네트워크
-![vCenter Server-{{site.data.keyword.containerlong_notm}} 네트워킹 다이어그램](vcsiks-networking.svg)
+![vCenter Server-{{site.data.keyword.containerlong_notm}} 네트워킹 다이어그램](../../images/vcsiks-networking.svg "vCenter Server-{{site.data.keyword.containerlong_notm}} 네트워킹 다이어그램")
 
 ### IBM Cloud Kubernetes Service 및 vCenter Server 통합
 {: #vcsiks-overview-network-iks-vcs-integration}

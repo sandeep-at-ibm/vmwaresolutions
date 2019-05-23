@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -33,9 +33,7 @@ IBM Multi-Cluster Manager は、複数のクラウドおよびクラスターに
 
 以下の図は、アプリケーション・モダナイゼーション・インフラストラクチャーで Acme Skate Advisor アプリケーションを実装したリファレンス実装を示しています。
 
-図 1. Skate Advisor 物理コンポーネント
-</br>
-![Skate Advisor 物理コンポーネント](vcscar-physical.svg)
+![Skate Advisor 物理コンポーネント](../../images/vcscar-physical.svg "Skate Advisor 物理コンポーネント")
 
 Skate Advisor アプリケーションは、既存の Acme Web アプリケーションを、Watson と対話するマイクロサービス・ベースのコンポーネント、および Web およびマイクロサービス・コンテナーに要求を中継するための nginx コンテナーを使用して拡張したものです。
 
@@ -57,9 +55,7 @@ Skate Advisor アプリケーションは、必要なホスティング・イン
 * Terraform テンプレート - Terraform テンプレートは、デプロイされるクラウド・リソースを表すファイルです。 Skate Advisor については、mysql とデータベース・スキーマと一緒にプリインストールされる ubuntu テンプレートが記述されています。
 * VMWare テンプレート - VMWare テンプレートは、mysql とデータベース・スキーマがプリインストールされた Ubuntu テンプレートです。
 
-図 2. CAM オーケストレーション
-</br>
-![CAM オーケストレーション](vcscar-cam.svg)
+![CAM オーケストレーション](../../images/vcscar-cam.svg "CAM オーケストレーション")
 
 ### ロード・バランシングおよびプロキシー処理
 {: #vcscar-physical-load-balance-proxy}
@@ -103,9 +99,7 @@ Skate Advisor には、以下の通信が必要です。
 
 アプリケーション・モダナイゼーション・プラットフォームは、この目標を達成するために以下のコンポーネントを使用して設計されています。
 
-図 3. パブリック・ネットワーク・アクセス
-</br>
-![パブリック・ネットワーク・アクセス](vcscar-network.svg)
+![パブリック・ネットワーク・アクセス](../../images/vcscar-network.svg "パブリック・ネットワーク・アクセス")
 
 {{site.data.keyword.cloud_notm}} には 2 つのネットワークがあります。 パブリック・ネットワークによりインターネットからサーバーへのアクセスが可能になり、プライベート・ネットワークにより {{site.data.keyword.CloudDataCents_notm}}のすべての高速バックボーンを使用したサーバー間通信が可能になります。
 
@@ -119,9 +113,7 @@ NSX VXLAN を定義する場合は、VRA アプライアンスへの静的ルー
 
 Skate Advisor アプリケーションは、以下のソフトウェア・コンポーネントを使用します。
 
-図 4. Skate Advisor ソフトウェア・マッピング
-</br>
-![Skate Advisor ソフトウェア・マッピング](vcscar-sw-mapping.svg)
+![Skate Advisor ソフトウェア・マッピング](../../images/vcscar-sw-mapping.svg "Skate Advisor ソフトウェア・マッピング")
 
 以下のソフトウェア・コンポーネントが使用されます。
 
@@ -137,8 +129,7 @@ Skate Advisor アプリケーションは、以下のソフトウェア・コン
 
 Acme Skate Advisor は {{site.data.keyword.cloud_notm}} に存在します。これはこのアーキテクチャーの重要な側面です。 {{site.data.keyword.cloud_notm}} のアーキテクチャーは以下のとおりです。
 
-図 5. クラウド管理
-![オンクラウド管理](vcscar-cloud-management.svg)
+![クラウドにおける管理](../../images/vcscar-cloud-management.svg "クラウドにおける管理")
 
 この図は、vCenter Server インスタンスにデプロイされた {{site.data.keyword.icpfull_notm}} と CAM を表しています。これらは、オンプレミスの vCenter および {{site.data.keyword.containerlong_notm}} サービスに接続されています。 システム管理者および開発者は、CAM を使用して、仮想マシンをオンプレミスまたは vCenter Server インスタンスにデプロイし、コンテナーを {{site.data.keyword.icpfull_notm}} クラスターおよび {{site.data.keyword.containerlong_notm}} クラスターにデプロイできます。
 

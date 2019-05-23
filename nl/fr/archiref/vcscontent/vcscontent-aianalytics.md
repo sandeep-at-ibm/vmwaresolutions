@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-25"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 L'enrichissement de Stock Trader ne se fait pas en une seule étape. Pour Todd et Jane, il s'agit d'un processus itératif. Dans la figure illustrée ci-après, vous verrez que Jane a ajouté le service Watson Tone Analyzer et une règle de niveau de fidélité en utilisant un centre décisionnel ODM. Les éléments présentés ci-après illustrement la manière dont Stock Trader a été enrichi.
 
-Figure 1. Enrichissement supplémentaire de Stock Trader
-![Résultats de l'itération d'enrichissement de Stock Trader](vcscontent-enriched.svg)
+![Résultats de l'itération d'enrichissement de Stocker Trader](../../images/vcscontent-enriched.svg "Résultats de l'itération d'enrichissement de Stock Trader")
 
 ## AI Watson Tone Analyzer
 {: #vcscontent-aianalytics-ai-watson}

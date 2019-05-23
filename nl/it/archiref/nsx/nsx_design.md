@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -28,9 +28,7 @@ L'architettura interna specifica la distribuzione dei componenti Edge NSX necess
 VMware vSAN è facoltativo nella seguente figura.
 {:note}
 
-Figura 1. Servizi di rete cloud su {{site.data.keyword.cloud_notm}}
-
-![Architettura dei servizi di rete cloud](architecture.svg "Architettura dei servizi di rete cloud")
+![Architettura dei servizi di rete cloud](../../images/architecture.svg "Architettura dei servizi di rete cloud")
 
 ## Progettazione dell'architettura dedicata
 {: #nsx_design-dedicated-archi}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -23,8 +23,7 @@ VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 
 
 L'offerta vCenter Server with Hybridity Bundle da {{site.data.keyword.cloud_notm}} abilita connessioni sicure tra il sito di origine in loco peer e il sito di destinazione {{site.data.keyword.cloud_notm}}.
 
-Figura 1. Servizi VMware Hybridity
-![Servizi di VMware Hybrid Cloud Extension](vcsiks-hcx.svg)
+![Servizi di VMware Hybrid Cloud Extension](../../images/vcsiks-hcx.svg "Servizi di VMware Hybrid Cloud Extension")
 
 vCenter Server with Hybridity Bundle crea una connettività debolmente accoppiata tra locale e {{site.data.keyword.cloud_notm}} e abilita funzionalità quali:
 - **Interconnettività semplice** - le connessioni di rete logiche vengono stabilite facilmente su qualsiasi connessione fisica che include internet pubblico, VPN privata o {{site.data.keyword.cloud_notm}} Direct Link.
@@ -44,8 +43,7 @@ Utilizzando questa soluzione, Acme Skateboards ha migrato correttamente i propri
 
 Quelli della Acme Skateboards vogliono distribuire un'architettura ibrida su {{site.data.keyword.cloud_notm}} costituita da vCenter Server e {{site.data.keyword.icpfull_notm}}, per il proprio percorso di modernizzazione dell'applicazione. I loro requisiti sono quelli di eseguire i loro database su VM (Virtual Machine), le applicazioni e i servizi web nei contenitori e utilizzare una serie comune di strumenti per la gestione della rete e della sicurezza.
 
-Figura 2. Applicazione ibrida Acme Skateboards
-![Diagramma dell'applicazione ibrida Acme Skateboards](vcsiks-acme-app-arch.svg)
+![Diagramma dell'applicazione ibrida Acme Skateboards](../../images/vcsiks-acme-app-arch.svg "Diagramma dell'applicazione ibrida Acme Skateboards")
 
 {{site.data.keyword.vmwaresolutions_short}} fornisce l'automazione per distribuire i componenti con tecnologia VMware nei {{site.data.keyword.CloudDataCents_notm}} in tutto il mondo. L'architettura consiste in una singola regione cloud e supporta la capacità di estensione in più regioni cloud che si trovano in un'altra area geografica o in un altro pod di {{site.data.keyword.cloud_notm}} all'interno dello stesso data center.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -28,8 +28,7 @@ subcollection: vmware-solutions
 - 每个工作程序节点的专用 IP 地址，用于为工作程序节点提供专用网络接口。
 - 所有工作程序节点和主节点之间的自动、安全的 OpenVPN 连接。
 
-图 1. vCenter Server 和 {{site.data.keyword.containerlong_notm}} 网络
-![vCenter Server-{{site.data.keyword.containerlong_notm}} 联网图](vcsiks-networking.svg)
+![vCenter Server-{{site.data.keyword.containerlong_notm}} 联网图](../../images/vcsiks-networking.svg "vCenter Server-{{site.data.keyword.containerlong_notm}} 联网图")
 
 ### IBM Cloud Kubernetes Service 与 vCenter Server 集成
 {: #vcsiks-overview-network-iks-vcs-integration}

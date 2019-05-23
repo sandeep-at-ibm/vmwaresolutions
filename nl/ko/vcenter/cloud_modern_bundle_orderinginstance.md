@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-24"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -132,7 +132,7 @@ HCX on {{site.data.keyword.cloud_notm}}의 배치가 자동화됩니다. 다음 
       1. **관리** 탭을 클릭하십시오.
       2. **시스템 업데이트** 탭에서 **REQUEST DOWNLOAD LINK**를 클릭하십시오.
       3. **COPY LINK**를 클릭한 후 이 링크를 사용하여 온프레미스 vSphere 환경에 대한 액세스 권한으로 HCX Enterprise Client를 온프레미스 환경에 다운로드하십시오.
-3. VMware vSphere Web Client에서 HCX Manager 가상 어플라이언스(HCX Manager)로 HCX Enterprise Client를 온프레미스 환경에 배치하십시오. 자세한 정보는 [Installing the VMware HCX Enterprise Manager OVA](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-C61E107C-1F5F-4615-9BA9-351900CDB69E.html)를 참조하십시오.
+3. VMware vSphere Web Client에서 HCX Manager 가상 어플라이언스(HCX Manager)로 HCX Enterprise Client를 온프레미스 환경에 배치하십시오. [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}의 지시사항을 따르십시오.
 
 사설 네트워크의 온프레미스 HCX Manager를 배치하고 해당 HCX Manager가 공용 네트워크에 액세스할 수 있도록 해야 합니다. NSX Edge, Vyatta 또는 유사한 게이트웨이를 사용하여 온프레미스 HCX Manager에 대한 인터넷 액세스를 허용할 수 있습니다. 사설 네트워크 액세스와 공용 네트워크 액세스에 사용된 게이트웨이가 서로 다른 경우, 사설 네트워크 액세스에 대한 정적 라우트를 작성하도록 기본 게이트웨이를 사용하여 공용 네트워크 액세스 및 온프레미스 **HCX Manager 관리 콘솔**을 허용하는 것이 좋습니다.  
     {:note}
@@ -140,16 +140,16 @@ HCX on {{site.data.keyword.cloud_notm}}의 배치가 자동화됩니다. 다음 
   1. OVA 배치 시 지정된 인증 정보를 사용하여 온프레미스 HCX Enterprise Manager VM에 로그인하십시오.
   2. 프롬프트가 표시되면 정품 인증 키를 입력하십시오.
 
-  자세한 정보는 [VMware HCX Activation and Initial Configuration](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-6A4740C1-2225-444C-8ADC-CBE54F181536.html)을 참조하십시오.
-  {:note}
+  [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}의 지시사항을 따르십시오.
+
 5. 자체 서명된 SSL 인증서가 HCX on {{site.data.keyword.cloud_notm}} 서비스에서 생성되었습니다. 다음 단계를 완료하여 인증서를 온프레미스 HCX Manager로 가져와야 합니다.
     1. 온프레미스 **HCX Manager 관리 콘솔**에서 **관리** 탭을 클릭하십시오.
     2. 왼쪽 탐색 분할창에서 **신뢰할 수 있는 CA 인증서**를 클릭한 후 오른쪽의 **IMPORT**를 클릭하십시오.
     3. **URL**을 클릭한 후 적용할 인증서의 URL을 입력하십시오. 즉, {{site.data.keyword.vmwaresolutions_short}} 콘솔의 HCX on {{site.data.keyword.cloud_notm}} 서비스 세부사항 페이지에서 찾을 수 있는 **HCX Cloud IP**(``https://<cloud-side public IP>``)입니다.
     4. **APPLY**를 클릭하십시오.
-6. 초기 구성을 계속하고 상호연결을 빌드하십시오. 자세한 정보는 [Installing and Configuring VMware HCX Enterprise](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-A26BFB16-FA94-426F-8E18-15BAD4BF840E.html)를 참조하십시오.
-7. VMware HCX의 네트워크를 온프레미스에서 {{site.data.keyword.cloud_notm}}로 확장하십시오. 자세한 정보는 [Extending Networks with VMware HCX](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-DD9C3316-D01C-4088-B3EA-84ADB9FED573.html)를 참조하십시오.
-8. 온프레미스와 {{site.data.keyword.cloud_notm}} 간에 VM을 마이그레이션하십시오. 자세한 정보는 [Migrating Virtual Machines with VMware HCX](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-D0CD0CC6-3802-42C9-9718-6DA5FEC246C6.html)를 참조하십시오.
+6. 초기 구성을 계속하고 상호연결을 빌드하십시오. [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}의 지시사항을 따르십시오.
+7. VMware HCX의 네트워크를 온프레미스에서 {{site.data.keyword.cloud_notm}}로 확장하십시오. [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}의 지시사항을 따르십시오.
+8. 온프레미스와 {{site.data.keyword.cloud_notm}} 간에 VM을 마이그레이션하십시오. [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}의 지시사항을 따르십시오.
 
 {{site.data.keyword.slportal}} 또는 콘솔 이외의 다른 수단이 아닌 {{site.data.keyword.vmwaresolutions_short}} 콘솔의 {{site.data.keyword.cloud_notm}} 계정에만 작성되는 {{site.data.keyword.vmwaresolutions_short}} 인프라 컴포넌트 관리해야 합니다.
 {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 컴포넌트를 변경하는 경우 변경사항이 콘솔과 동기화되지 않으며 환경을 불안정하게 할 수 있습니다.
@@ -185,6 +185,6 @@ HCX on {{site.data.keyword.cloud_notm}}의 배치가 자동화됩니다. 다음 
 {: #cloud_modern_bundle_orderinginstance-related}
 
 * [vCenter Server 및 IBM Cloud Private 안내서](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [IBM Cloud Private의 티켓 열기](https://www.ibm.com/mysupport/s/?language=en_US)
-* [VMware HCX 리소스](https://hcx.vmware.com/#/docs)
-* [Obtaining the VMware HCX OVA](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html?hWord=N4IghgNiBcIPICMAuYCWA7DBzABEgFgKY4ASAwgBo5wBqAgiAL5A)
+* [IBM Cloud Private의 티켓 열기](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
+* [VMware HCX 리소스](https://hcx.vmware.com/#/docs){:new_window}
+* [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}

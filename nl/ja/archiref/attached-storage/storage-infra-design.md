@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-03"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -24,9 +24,7 @@ subcollection: vmware-solutions
 
 以下の図は、vCenter Server デプロイメントにおける接続ストレージの全体的なアーキテクチャーを示しています。
 
-図 1. {{site.data.keyword.cloud_notm}} 上の接続ストレージのアーキテクチャーの全体像
-
-![接続ストレージのアーキテクチャー](../solution/vcsv4radiagrams-ra-nfs-shares.svg "IBM Cloud 上の接続ストレージのアーキテクチャーの全体像")
+![接続ストレージ・アーキテクチャー](../../images/vcsv4radiagrams-ra-nfs-shares.svg "接続ストレージ・アーキテクチャー")
 
 ## 物理インフラストラクチャー設計
 {: #storage-infra-design-phys-infra-design}
@@ -43,7 +41,7 @@ subcollection: vmware-solutions
 
 {{site.data.keyword.cloud_notm}} の物理ネットワークは、パブリック・ネットワーク、プライベート・ネットワーク、管理ネットワークという 3 つの異なるネットワークに分類されます。 パブリック・ネットワーク、プライベート・ネットワーク、管理ネットワークについて詳しくは、[ソリューションの概要](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)を参照してください。
 
-{{site.data.keyword.cloud_notm}} ネットワークについて詳しくは、[{{site.data.keyword.cloud_notm}} global data centers](https://www.ibm.com/cloud/data-centers/){:new_window} を参照してください。
+{{site.data.keyword.cloud_notm}} ネットワークについて詳しくは、[{{site.data.keyword.cloud_notm}} グローバル・データ・センター](https://www.ibm.com/cloud/data-centers/){:new_window}を参照してください。
 
 プライベート・ネットワークの一部であるサービス・ネットワークの説明については、次の情報を参照してください。
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-13"
 
 subcollection: vmware-solutions
 
@@ -63,8 +63,7 @@ NSX-V または vSphere ネイティブ | NSX-T
 
 次の図は、NSX Manager Controller の配置をこのアーキテクチャーに含まれる他のコンポーネントとの関係で示しています。
 
-図 1. NSX-T Manager ネットワークの概要
-![NSX-T Manager ネットワークの概要](vcsv4radiagrams-ra-vcs-nsx-overview.svg)
+![NSX-T Manager ネットワーク概要](../../images/vcsv4radiagrams-ra-vcs-nsx-overview.svg "NSX-T Manager ネットワーク概要")
 
 ## デプロイメントに関する考慮事項
 {: #nsx-t-design-deployment}
@@ -175,11 +174,9 @@ NSX-T 論理スイッチは、基礎ハードウェアから完全に分離さ�
 
 この設計の範囲では、管理ワークロードとカスタマー・ワークロードで使用するための単一の仮想エッジ・クラスターがプロビジョンされます。 仮想エッジ・クラスターは、T0 ゲートウェイの複数インスタンスを収容できます。 前述のように、それぞれが独自のルーティング・テーブルを持つ複数の T0 Edge Gateway インスタンスを単一のエッジ・クラスター上でインスタンス化できます。 NSX-T エッジ・クラスターの機能コンポーネントを示した次の図を参照してください。
 
-図 2. NSX-T Edge クラスターの例 (T0 から T1 までのスケール)
-![NSX-T Edge クラスターの例 (T0 から T1 までのスケール)](vcsv4radiagrams-ra-nsx-t-edge-cluster-t0-to-t1-scale.svg)
+![T0 から T1 スケールの NSX-T エッジ・クラスター例](../../images/vcsv4radiagrams-ra-nsx-t-edge-cluster-t0-to-t1-scale.svg "T0 から T1 スケールの NSX-T エッジ・クラスター例")
 
-図 3. 管理 T0 ゲートウェイ</br>
-![図 3. 管理 T0 ゲートウェイ](vcsv4radiagrams-topology-0.svg)
+![管理 T0 ゲートウェイ](../../images/vcsv4radiagrams-topology-0.svg "管理 T0 ゲートウェイ")
 
 #### 層 0 論理ゲートウェイ
 {: #nsx-t-design-tier-0}
@@ -201,8 +198,7 @@ NSX-T 層 1 論理ゲートウェイには、NSX-T Data Center 論理スイッ�
 
 T1 - T0 間ゲートウェイへのワークロード: 仮想エッジ・クラスター
 
-図 4. NSX-T によってデプロイされるトポロジーの仮想 T0 Edge Gateway
-![NSX-T によってデプロイされるトポロジーの仮想 T0 Edge Gateway](vcsv4radiagrams-topology-1.svg)
+![NSX-T によってデプロイされるトポロジーの仮想 T0 エッジ・ゲートウェイ](../../images/vcsv4radiagrams-topology-1.svg "NSX-T によってデプロイされるトポロジーの仮想 T0 エッジ・ゲートウェイ")
 
 IC4V によってデプロイされるトポロジー 1 は基本的に、NSX-V DLR と Edge Gateway とともにデプロイされるのと同じトポロジーです。 NSX-T では、T1 と T0 の間に動的ルーティング・プロトコル構成はありません。 ワークロード・オーバーレイ・ネットワークとトランジット・オーバーレイ・ネットワークには RFC-1891 IP アドレス・スペースが使用されます。 お客様のプライベート・ポータブル IP スペースとパブリック・ポータブル IP スペースが、お客様用に割り当てられます。 お客様が指定した {{site.data.keyword.cloud_notm}} プライベート・ポータブル IP スペースおよびパブリック・ポータブル IP スペースが、お客様用に T0 に割り当てられます。
 
@@ -210,8 +206,7 @@ IC4V によってデプロイされるトポロジー 1 は基本的に、NSX-V 
 
 T1 - T0 間ゲートウェイへのワークロード: 物理エッジ・クラスター
 
-図 5. NSX-T によってデプロイされるトポロジーの物理 T0 Edge Gateway
-![NSX-T によってデプロイされるトポロジーの物理 T0 Edge Gateway](vcsv4radiagrams-topology-2.svg)
+![E=](../../images/vcsv4radiagrams-ra-vcs-nsx-overview.svg "[NSX-T によってデプロイされるトポロジーの物理 T0 エッジ・ゲートウェイ")
 
 デプロイされるトポロジー 2 は、VM ベースのエッジ・クラスターを、Red Hat Server を実行するベアメタル・サーバーのペアに置き換える例外と似ています。 お客様が指定した {{site.data.keyword.cloud_notm}} プライベート・ポータブル IP スペースおよびパブリック・ポータブル IP スペースが、お客様用に T0 に割り当てられます。 この設計の時点で、vCenter Server インスタンスが廃止および削除されても、これらの IP 範囲を削除しないという選択肢があります。
 
@@ -219,8 +214,7 @@ T1 - T0 間ゲートウェイへのワークロード: 物理エッジ・クラ�
 
 ICP - T0 間ゲートウェイのあるワークロード: 仮想エッジ・クラスター
 
-図 6. NSX-T によってデプロイされる、ICP NSX-T 統合と仮想 T0 Edge Gateway を含むトポロジー
-![NSX-T によってデプロイされる、ICP NSX-T 統合と仮想 T0 Edge Gateway を含むトポロジー](vcsv4radiagrams-topology-3.svg)
+![NSX-T によってデプロイされる、ICP NSX-T 統合と仮想 T0 エッジ・ゲートウェイを含むゲートウェイ](../../images/vcsv4radiagrams-topology-3.svg "[NSX-T によってデプロイされる、ICP NSX-T 統合と仮想 T0 エッジ・ゲートウェイを含むゲートウェイ")
 
 デプロイされるトポロジー 3 には、ICP デプロイメント内のデフォルトのネットワーキング・スタックである Calico の代わりに NSX-T 統合を特徴とする ICP デプロイメントが追加されたトポロジー 1 が含まれます。 お客様は、ICP 内に追加のコンテナー名前空間をプロビジョンすることで、名前空間ごとに論理スイッチ、IP サブネット、T1 ゲートウェイのインスタンスの作成を自動化できます。
 

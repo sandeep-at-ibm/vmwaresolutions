@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-03"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -41,23 +41,23 @@ Quando ordini questo servizio, fornisci le seguenti impostazioni:
 
 Specifica un nome per la tua istanza KMIP for VMware on {{site.data.keyword.cloud_notm}}.
 
-### Regione servizio
+### Ubicazione del servizio
 {: #kmip_standalone_ordering-config-service-region}
 
-Seleziona la regione {{site.data.keyword.cloud_notm}} in cui dovrà essere ospitata la tua istanza KMIP for VMware on {{site.data.keyword.cloud_notm}}.
+Seleziona l'ubicazione {{site.data.keyword.cloud_notm}} in cui dovrà essere ospitata la tua istanza KMIP for VMware on {{site.data.keyword.cloud_notm}}.
 
-{{site.data.keyword.cloud_notm}} mantiene un endpoint del servizio di rete KMIP for VMware on {{site.data.keyword.cloud_notm}} altamente disponibile in ciascuna regione in cui il servizio è disponibile.
+{{site.data.keyword.cloud_notm}} mantiene un endpoint del servizio di rete KMIP for VMware on {{site.data.keyword.cloud_notm}} altamente disponibile in ciascuna ubicazione in cui il servizio è disponibile.
 
-Tabella 1. Regioni degli endpoint del servizio di rete KMIP for VMware on {{site.data.keyword.cloud_notm}}
+Tabella 1. Ubicazioni degli endpoint del servizio di rete KMIP for VMware on {{site.data.keyword.cloud_notm}}
 
-| Regione         | Endpoint               |
+| Ubicazione         | Endpoint               |
 |:---------------|:-----------------------|
-| Germania        |  <ul><li><code>kmip-1.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
-| Sydney        |  <ul><li><code>kmip-1.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
-| Tokyo          | <ul><li><code>kmip-1.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
-| Regno Unito Sud| <ul><li><code>kmip-1.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
-| Stati Uniti Est| <ul><li><code>kmip-1.private.us-east.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-east.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
-| Stati Uniti Sud       | <ul><li><code>kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+| Dallas | <ul><li><code>kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+| Francoforte |  <ul><li><code>kmip-1.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+| Londra | <ul><li><code>kmip-1.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+| Sydney |  <ul><li><code>kmip-1.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+| Tokyo | <ul><li><code>kmip-1.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+| Washington DC | <ul><li><code>kmip-1.private.us-east.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-east.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
 
 ### Chiave API per ID servizio
 {: #kmip_standalone_ordering-config-api-key}
@@ -67,7 +67,7 @@ Immetti la chiave API per l'ID del servizio {{site.data.keyword.cloud_notm}} uti
 ### Istanza del gestore chiavi
 {: #kmip_standalone_ordering-config-key-protect}
 
-Fai clic su **Recupera** per ottenere l'elenco delle istanze del gestore chiavi disponibili e seleziona quella da utilizzare per la gestione delle chiavi. 
+Fai clic su **Recupera** per ottenere l'elenco delle istanze del gestore chiavi disponibili e seleziona quella da utilizzare per la gestione delle chiavi.
 
 ### Chiave root del cliente
 {: #kmip_standalone_ordering-config-root-key}

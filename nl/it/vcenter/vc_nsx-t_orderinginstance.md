@@ -124,7 +124,7 @@ Tabella 3. Opzioni per Broadwell {{site.data.keyword.baremetal_short}}
 ### Numero di server Bare Metal
 {: #vc_nsx-t_orderinginstance-bare-metal-number}
 
-* Tutti i server che ordini hanno la stessa configurazione. 
+* Tutti i server che ordini hanno la stessa configurazione.
 * Se intendi utilizzare l'archiviazione vSAN, puoi ordinare da 4 a 20 server.
 * Se intendi utilizzare l'archiviazione NFS, puoi ordinare da 2 a 20 server. Tuttavia, per i carichi di lavoro di produzione, ti consigliamo un numero minimo di 3 server. Per ulteriori informazioni, vedi [Un'istanza vCenter Server a due nodi è altamente disponibile?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-).
 
@@ -142,7 +142,7 @@ Per le istanze distribuite, puoi aggiungere delle condivisioni di archiviazione 
 vSAN è disponibile solo per le configurazioni Bare Metal **Skylake** e **Broadwell**. Specifica le seguenti opzioni vSAN:
 * **Tipo e dimensioni del disco per i dischi vSAN**: seleziona un'opzione per i dischi di capacità di cui hai bisogno.
 * **Numero di dischi vSAN**: specifica il numero di dischi di capacità che vuoi aggiungere.
-* Se vuoi aggiungere dischi di capacità oltre il limite di 10, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 12 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS. 
+* Se vuoi aggiungere dischi di capacità oltre il limite di 10, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 12 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS.
 
   L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i modelli di CPU Skylake.
   {:note}

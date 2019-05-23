@@ -50,7 +50,7 @@ Mission Critical VMware on {{site.data.keyword.cloud_notm}}는 다음 지역에�
 * 리소스 클러스터는 vSphere + vSAN 확장 클러스터임
 * 감시 사이트에 감시 ESXi 호스트 포함
 * 단일 vCenter 및 NSX Manager 아키텍처
-* L3 네트워크 아키텍처에서 vCenter High Availability(HA)를 사용하는 PSC(Platform Services Controller)가 임베드된 vCenter Server Appliance
+* L3 네트워크 아키텍처에서 vCenter High Availability(HA)를 사용하는 PSC(Platform Services Controller)가 임베디드 vCenter Server Appliance
 * NSX Manager 복구는 백업 파일을 동기화하는 Hot/Standby 방법 사용
 
 ### 도구 및 기술 아키텍처 스펙

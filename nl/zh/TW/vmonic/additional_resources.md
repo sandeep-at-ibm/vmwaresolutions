@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-13"
 
 subcollection: vmware-solutions
 
@@ -53,11 +53,6 @@ subcollection: vmware-solutions
 * [Resources and videos](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/resources){:new_window}
 * [Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware){:new_window}
 * [Featured resources and case studies](https://www.ibm.com/cloud/vmware/resources){:new_window}
-
-## 測試磁碟機 IBM Cloud for VMware Solutions
-{: #additional_resources-test-drive}
-
-要自行查看嗎？遵循逐步 {{site.data.keyword.vmwaresolutions_short}} 引導示範[嘗試 VMware vCenter Server](https://cloudcontent.mybluemix.net/cloud/garage/demo/try-vmware-solutions){:new_window}，以採用產品的簡短測試磁碟機。
 
 ## VMware 文件
 {: #additional_resources-vmware-doc}

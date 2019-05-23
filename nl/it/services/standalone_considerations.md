@@ -31,7 +31,7 @@ I componenti di HCX on {{site.data.keyword.cloud_notm}} devono essere installati
 ### Requisiti dell'indirizzo IP
 {: #standalone_considerations-ip}
 
-Per la piena funzionalità di HCX, hai bisogno di almeno cinque indirizzi IP privati che hanno accesso a internet. 
+Per la piena funzionalità di HCX, hai bisogno di almeno cinque indirizzi IP privati che hanno accesso a internet.
 
 ### Processo di distribuzione per le istanze HCX on IBM Cloud in loco
 {: #standalone_considerations-deploy}
@@ -61,12 +61,12 @@ Per ulteriori informazioni, vedi [VMware Hybrid Cloud Extension](https://cloud.v
 {: #standalone_considerations-delete}
 
 Esamina le seguenti considerazioni prima di eliminare un'istanza HCX on {{site.data.keyword.cloud_notm}} che è stata ordinata per l'utilizzo in loco:
-1. Nel client web VMware vSphere, vai all'interfaccia utente HCX e controlla i seguenti elementi: 
+1. Nel client web VMware vSphere, vai all'interfaccia utente HCX e controlla i seguenti elementi:
     1. Assicurati che non vi siano operazioni di migrazione o di ripristino di emergenza HCX in esecuzione.
     2. Assicurati che tutte le reti estese siano state rimosse.
     3. Assicurati che tutti i componenti di interconnessione con i siti cloud abbinati siano stati rimossi.
 
-   Devi completare tutti i passi precedenti prima di procedere con il passo successivo. In caso contrario, la licenza per l'istanza HCX on {{site.data.keyword.cloud_notm}} in loco viene annullata. Se la licenza viene annullata, le migrazioni non possono essere eseguite e potrebbero verificarsi degli errori per i componenti HCX.   
+   Devi completare tutti i passi precedenti prima di procedere con il passo successivo. In caso contrario, la licenza per l'istanza HCX on {{site.data.keyword.cloud_notm}} in loco viene annullata. Se la licenza viene annullata, le migrazioni non possono essere eseguite e potrebbero verificarsi degli errori per i componenti HCX.  
    {:important}
 2. Nella console {{site.data.keyword.vmwaresolutions_short}}, elimina l'istanza HCX on {{site.data.keyword.cloud_notm}} in loco che era stata ordinata per ottenere la chiave di attivazione per l'HCX Manager in loco. Assicurati che l'istanza eliminata non sia più disponibile nella console prima di procedere al passo successivo.
 

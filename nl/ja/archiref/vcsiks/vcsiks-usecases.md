@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -23,8 +23,7 @@ VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 
 
 {{site.data.keyword.cloud_notm}} の vCenter Server with Hybridity Bundle オファリングにより、ピアのオンプレミス・ソース・サイトと {{site.data.keyword.cloud_notm}} ターゲット・サイトの間のセキュア接続が可能になります。
 
-図 1. VMware Hybridity サービス
-![VMware Hybrid Cloud Extension サービス](vcsiks-hcx.svg)
+![VMware Hybrid Cloud Extension サービス](../../images/vcsiks-hcx.svg "VMware Hybrid Cloud Extension サービス")
 
 vCenter Server with Hybridity Bundle では、オンプレミスと {{site.data.keyword.cloud_notm}} 間の疎結合された相互接続が作成され、以下のような機能を使用できるようになります。
 - **単純な相互接続** - 論理ネットワーク接続が、公衆インターネット、プライベート VPN、{{site.data.keyword.cloud_notm}} Direct Link などの物理接続を介して簡単に確立されます。
@@ -44,8 +43,7 @@ Acme Skateboards 社はこのソリューションを使用して、オンプレ
 
 Acme Skateboards 社は、アプリケーション・モダナイゼーションに至る過程で、vCenter Server と {{site.data.keyword.icpfull_notm}} で構成されるハイブリッド・アーキテクチャーを {{site.data.keyword.cloud_notm}} にデプロイしたいと考えています。 この際の要件は、仮想マシン上でデータベースを実行し、コンテナー内でアプリケーションと Web サービスを実行するとともに、ネットワークとセキュリティーの管理に共通のツール・セットを使用することです。
 
-図 2. Acme Skateboards 社のハイブリッド・アプリケーション
-![Acme Skateboards 社のハイブリッド・アプリケーションの図](vcsiks-acme-app-arch.svg)
+![Acme Skateboards ハイブリッド・アプリケーション図](../../images/vcsiks-acme-app-arch.svg "Acme Skateboards ハイブリッド・アプリケーション図")
 
 {{site.data.keyword.vmwaresolutions_short}} は、世界中の {{site.data.keyword.CloudDataCents_notm}}に VMware テクノロジー・コンポーネントをデプロイするための自動化機能を提供します。 このアーキテクチャーは単一のクラウド領域で構成されます。また、別の地域にある追加のクラウド領域、または同じデータ・センター内の別の {{site.data.keyword.cloud_notm}} ポッドに拡張する機能をサポートします。
 

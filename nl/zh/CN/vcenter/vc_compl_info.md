@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-02"
 
 subcollection: vmware-solutions
 
@@ -28,8 +28,7 @@ HIPAA 客户不支持 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 
 
 下图提供了有关合规性活动的客户（您）责任和 IBM 责任的详细信息。
 
-图 1. vCenter Server on IBM Cloud 的客户责任和 IBM 责任矩阵
-![客户责任和 IBM 责任矩阵](customer_ibm_responsibility_matrix.svg "客户责任和 IBM 责任矩阵")
+![客户与 IBM 职责矩阵](../images/customer_ibm_responsibility_matrix.svg "客户与 IBM 职责矩阵")
 
 ## 健康数据限制
 {: #vc_compl_info-health-data-restrictions}

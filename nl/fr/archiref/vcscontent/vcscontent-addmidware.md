@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-25"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 A présent que Stock Trader s'exécute dans un conteneur et que Jane est satisfaite avec les micro-services en cours, elle et Todd cherchent un moyen d'améliorer l'application avec des fonctions supplémentaires. En restructurant les micro-services Stock Trader pour gérer une augmentation des activités et une évolutivité accrue, ils constatent tous les deux qu'il est nécessaire d'ajouter des logiciels intermédiaires dans {{site.data.keyword.cloud}} Private. Certains des logiciels intermédiaires existaient dans leur centre de données, par conséquent, il s'agit plutôt d'un changement de plateforme avec l'ajout de nouveaux logiciels intermédiaires.
 
-Figure 1. Restructuration de Stock Trader
-![Restructuration de Stock Trader](vcscontent-refactor.svg)
+![Restructuration de Stock Trader](../../images/vcscontent-refactor.svg "Restructuration de Stock Trader")
 
 Cette restructuration de la solution voit émerger une plateforme commune pour exécuter l'application et les services requis, dans un plan de gestion simplifié.
 
@@ -235,17 +234,14 @@ En utilisant des secrets Kubernetes, Jane configure un nom de secret et des para
 
 Jane souhaite avoir une base de code unifiée, même lorsque Stock Trader peut s'exécuter sur plusieurs clouds. Le secret DB2 illustré dans la figure suivante comporte des détails de routage différents mais il utilise le même format. Lorsque le micro-service du portefeuille de Jane se déploie, il recherche le paramètre de noeud final de secret DB2 pour se connecter à l'instance Db2 appropriée. Peu importe pour l'application Stock Trader que ce micro-service s'exécute dans une machine virtuelle VMware, un service conteneurisé ou en tant que service géré par un cloud.
 
-Figure 2. Stock Trader - Services pivot
-![Services pivot de Stock Trader](vcscontent-pivot-services.svg)
+![Services pivot de Stock Trader](../../images/vcscontent-pivot-services.svg "Services pivot de Stock Trader")
 
 ## Résultat
 {: #vcscontent-addmidware-result}
 
 Jane ayant restructuré sa solution Stock Trader et Todd ayant installé des logiciels intermédiaires dans {{site.data.keyword.cloud_notm}} Private Hosted, l'ensemble de la solution Stock Trader s'exécute dans un cloud privé. Jane ajoute à présent d'autres micro-services, tels qu'un service de notification Twitter. Les règles de routage Istio activent une messagerie de niveau de fidélité dynamique via un canal Slack interne ou un canal Twitter public.
 
-Figure 3. Enrichissement de Stock Trader
-
-![Enrichissement de Stock Trader](vcscontent-enrich.svg)
+![Enrichissement de Stock Trader](../../images/vcscontent-enrich.svg "Enrichissement de Stock Trader")
 
 ## Liens connexes
 {: #vcscontent-addmidware-related}

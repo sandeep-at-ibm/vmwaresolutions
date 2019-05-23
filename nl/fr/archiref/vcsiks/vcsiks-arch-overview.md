@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -29,8 +29,7 @@ IBM Multi-Cluster Manager fournit la visibilité utilisateur, la gestion orient�
 
 Le diagramme ci-dessous représente {{site.data.keyword.icpfull_notm}} et CAM déployés avec l'infrastructure {{site.data.keyword.cloud_notm}}, avec des connexions aux services vCenter et {{site.data.keyword.containerlong_notm}} locaux déployés sur {{site.data.keyword.cloud_notm}}. Les utilisateurs peuvent déployer des machines virtuelles sur site, des machines virtuelles dans des instances vCenter Server, ainsi que des conteneurs sur le cluster {{site.data.keyword.icpfull_notm}} et {{site.data.keyword.containerlong_notm}}.
 
-Figure 1. Gestion du cloud côté cloud
-![Gestion du cloud côté cloud](vcsiks-oncloud-cloudmgt.svg)
+![Gestion du cloud côté cloud](../../images/vcsiks-oncloud-cloudmgt.svg "Gestion du cloud côté cloud")
 
 Dans le diagramme, CAM crée des connexions de cloud aux services vCenter, aux fournisseurs de cloud et aux environnements {{site.data.keyword.icpfull_notm}} and {{site.data.keyword.containerlong_notm}} de façon logique. Des clusters {{site.data.keyword.icpfull_notm}} doivent être déployés dans chaque centre de données ou environnement de cloud, MCM fournissant le mécanisme de connexion aux clusters {{site.data.keyword.icpfull_notm}} dans une seule vue de gestion.
 
@@ -43,8 +42,7 @@ Dans le diagramme, CAM crée des connexions de cloud aux services vCenter, aux f
 
 Le diagramme ci-dessous représente {{site.data.keyword.icpfull_notm}} et CAM déployés dans l'infrastructure sur site, avec des connexions aux services vCenter et {{site.data.keyword.containerlong_notm}} déployés sur {{site.data.keyword.cloud_notm}}. Les utilisateurs peuvent déployer des machines virtuelles et des conteneurs sur site, des machines virtuelles dans des instances vCenter Server et des conteneurs sur le cluster {{site.data.keyword.containerlong_notm}}.
 
-Figure 2. Gestion du cloud sur site
-![Gestion du cloud sur site](vcsiks-onprem-cloudmgt.svg)
+![Gestion du cloud sur site](../../images/vcsiks-onprem-cloudmgt.svg "Gestion du cloud sur site")
 
 Le réseau privé virtuel strongSwan est utilisé pour établir une connectivité avec les conteneurs {{site.data.keyword.containerlong_notm}} déployés. strongSwan peut par la suite être remplacé par la connectivité Direct-link.
 

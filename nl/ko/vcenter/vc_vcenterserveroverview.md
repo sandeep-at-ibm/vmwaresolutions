@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-02"
 
 subcollection: vmware-solutions
 
@@ -22,7 +22,7 @@ VMware vCenter Server on {{site.data.keyword.cloud}}는 서비스로 VMware vSph
 
 대부분의 경우 전체 환경은 하루 내에 프로비저닝할 수 있으며, 베어메탈 인프라는 필요에 따라 신속하고 탄력적으로 컴퓨팅 용량을 늘리거나 줄이도록 스케일링할 수 있습니다.
 
-배치 후 {{site.data.keyword.slportal}}에서 추가 NFS(Network File System) 파일 공유를 주문하고 클러스터의 모든 ESXi 서버에 해당 파일 공유를 수동으로 연결하여 공유 스토리지를 늘릴 수 있습니다.전용 스토리지가 필요한 경우, [NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview)가 고성능(모두 SSD) 및 고용량(모두 SATA) 구성 모두에서 제공됩니다.
+배치 후 {{site.data.keyword.slportal}}에서 추가 NFS(Network File System) 파일 공유를 주문하고 클러스터의 모든 ESXi 서버에 해당 파일 공유를 수동으로 연결하여 공유 스토리지를 늘릴 수 있습니다. 전용 스토리지가 필요한 경우, [NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview)가 고성능(모두 SSD) 및 고용량(모두 SATA) 구성 모두에서 제공됩니다.
 
 또한 VMware vSAN은 전용 스토리지 옵션으로도 사용할 수 있습니다. vSAN 클러스터의 vSAN 기반 스토리지 용량을 늘리기 위해 배치 후 더 많은 ESXi 서버를 추가할 수 있습니다.
 
@@ -35,8 +35,7 @@ IBM 제공 VMware 라이센스를 구매한 경우, VMware NSX Base 에디션을
 
 다음 그림은 3 노드 vCenter 배치의 상위 레벨 아키텍처 및 컴포넌트에 대해 설명합니다.
 
-그림 1. 3 노드 클러스터에 대한 vCenter Server 상위 레벨 아키텍처
-![vCenter Server 아키텍처](vc_architecture.svg "3 노드 클러스터에 대한 vCenter Server 상위 레벨 아키텍처")
+![vCenter Server 아키텍처](../images/vc_architecture.svg "vCenter Server 아키텍처")
 
 ### 실제 인프라
 {: #vc_vcenterserveroverview-physical-infras}

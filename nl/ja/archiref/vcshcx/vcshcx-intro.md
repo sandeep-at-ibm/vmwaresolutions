@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 VMware Hybrid Cloud Services (HCX) は、各種ネットワーク・タイプで vSphere のソフトウェア定義データ・センター (SDDC) の別々のインスタンスを相互運用するためのサービスです。 対象のネットワークには、LAN や WAN が含まれます。公共のインターネットでセキュアになっている場合も、なっていない場合も対象になります。 オンプレミスとクラウド・プロバイダーの境界をまたぐマルチインスタンス/マルチサイトの vSphere をデプロイするときに、セキュリティー、互換性、パフォーマンスの問題にぶつかったり、構成が複雑になったりすることがよくあります。HCX は、そうした問題に対応できる設計になっています。
 
-図 1. VMware Hybrid Cloud Services
-![VMware Hybrid Cloud Services](vcshcx.svg)
+![VMware Hybrid Cloud サービス](../../images/vcshcx.svg "VMware Hybrid Cloud サービス")
 
 HCX は、{{site.data.keyword.cloud}} 内に存在する完全自動の vSphere オファリングとその他のデプロイ済みの vSphere インスタンスとの間の相互協調処理に適しています。 HCX オファリングは、{{site.data.keyword.vmwaresolutions_short}} に完全に統合されています。
 

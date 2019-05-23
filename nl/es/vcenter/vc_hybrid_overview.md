@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-02"
 
 subcollection: vmware-solutions
 
@@ -35,9 +35,7 @@ Puede añadir servicios gestionados por IBM si desea descargar las operaciones c
 
 En el gráfico siguiente se muestra la arquitectura general y los componentes del despliegue de tres nodos de vCenter Server con el paquete híbrido (Hybridity).
 
-Figura 1. Arquitectura general de vCenter Server con el paquete híbrido (Hybridity)
-
-![Arquitectura de vCenter Server con el paquete híbrido (Hybridity)](hybrid_architecture.svg "Arquitectura general de vCenter Server con el paquete híbrido (Hybridity)")
+![Arquitectura de vCenter Server con el paquete híbrido (Hybridity)](../images/hybrid_architecture.svg "Arquitectura de vCenter Server con el paquete híbrido (Hybridity)")
 
 ### Infraestructura física
 {: #vc_hybrid_overview-physical-infras}

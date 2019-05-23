@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -123,20 +123,18 @@ vSphere 與 IBM Cloud 之間的安全頻道防止網路「中程傳輸」安全�
 
 第 2 層集中器 (L2C) 應用裝置容許將第 2 層網路從內部部署 vSphere 資料中心擴充至 IBM Cloud。「第 2 層集中器」有兩個介面：
 * 內部幹線介面 - 使用翻譯橋接器與 IBM Cloud 中對應延伸網路的對映，處理延伸網路的虛擬機器資料流量內部部署。
-* 上行鏈路介面 - HCX 使用此介面來傳送與 IBM Cloud 之間的封裝套版資料流量。應用程式資料會流過此介面。
+* 上行鏈路介面 - HCX 使用此介面來傳送與 IBM Cloud 之間的封裝層疊資料流量。應用程式資料會流過此介面。
 
 ## 部署架構 - 使用公用網際網路連接至 IBM Cloud
 {: #hcx-archi-overview-connect-pub-internet}
 
 本節說明 IBM Cloud 及用戶端內部部署的 HCX 元件佈置。在此設計中，該架構指定來源環境與 IBM Cloud 之間的集中分支模型。因此，來源財產作為連接至不同 IBM Cloud 環境的中心，如下圖所示。
 
-圖 1. 具有單一來源的 HCX
-![具有單一來源的 HCX](hcx_single_source.svg)
+![具有單一來源的 HCX](../../images/cloudfoundation_hybrid_cloud_services.svg "具有單一來源的 HCX")
 
 來源也可以放在 IBM Cloud 環境；分支一律是此設計內的雲端部署，如下圖所示。
 
-圖 2. 具有多個來源 的 HCX
-![具有多個來源 的 HCX](hcx_multiple_sources.svg)
+![具有多個來源的 HCX](../../images/hcx_multiple_sources.svg "具有多個來源的 HCX")
 
 ### 用法概觀
 {: #hcx-archi-overview-usage-ovw}

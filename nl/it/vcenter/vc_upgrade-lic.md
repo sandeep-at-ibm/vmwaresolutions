@@ -18,7 +18,7 @@ subcollection: vmware-solutions
 # Upgrade delle licenze per le istanze vCenter Server
 {: #vc_upgrade-lic}
 
-Puoi eseguire l'upgrade delle tue istanze VMware vCenter Server in vCenter Server with Hybridity Bundle solo se la versione della tua istanza è V2.3 o successive. 
+Puoi eseguire l'upgrade delle tue istanze VMware vCenter Server in vCenter Server with Hybridity Bundle solo se la versione della tua istanza è V2.3 o successive.
 
 Gli utenti IBM Business Partner non hanno l'opzione per eseguire l'upgrade a Hybridity Bundle.
 {:note}
@@ -38,7 +38,7 @@ Esamina le seguenti azioni che vengono eseguite quando esegui l'upgrade a Hybrid
 2. Nella tabella **Istanze vCenter Server**, fai clic sull'istanza per eseguire l'upgrade a Hybridity Bundle.
 3. Nella pagina **Riepilogo**, verifica che tutti i dettagli dell'istanza siano visualizzati correttamente. Quindi, fai clic su **Infrastruttura** nel riquadro di navigazione a sinistra per verificare i dettagli nella pagina **Infrastruttura**.
 
-   Se i dettagli non vengono visualizzati, ciò potrebbe indicare un problema di connettività con la VSI IBM CloudDriver, a causa di una regola del firewall o di altri problemi di rete. Risolvi il problema prima di continuare con il passo successivo, altrimenti l'upgrade potrebbe non riuscire. 
+   Se i dettagli non vengono visualizzati, ciò potrebbe indicare un problema di connettività con la VSI IBM CloudDriver, a causa di una regola del firewall o di altri problemi di rete. Risolvi il problema prima di continuare con il passo successivo, altrimenti l'upgrade potrebbe non riuscire.
 
 4. Fai clic su **Aggiorna e applica patch** nel riquadro di navigazione a sinistra.
 5. Per applicare l'upgrade della licenza Hybridity Bundle, nella tabella **Aggiornamenti della licenza**, fai clic su **Esegui upgrade** nella colonna **Azioni**. Esamina il costo stimato e fai clic su **Esegui upgrade**.
@@ -53,13 +53,13 @@ Esamina le seguenti azioni che vengono eseguite quando esegui l'upgrade a Hybrid
 
 Questa procedura si applica alle istanze distribuite nella V2.1 o successive. Per le istanze distribuite nella V2.0 e precedenti, devi eseguire manualmente l'upgrade della licenza NSX.
 
-Puoi eseguire l'upgrade della licenza NSX per la tua istanza a un'edizione successiva. I downgrade dell'edizione della licenza non sono supportati. 
+Puoi eseguire l'upgrade della licenza NSX per la tua istanza a un'edizione successiva. I downgrade dell'edizione della licenza non sono supportati.
 
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Risorse** dal riquadro di navigazione a sinistra.
-2. Nella tabella **Istanze vCenter Server**, fai clic sull'istanza per la quale eseguire l'upgrade della licenza NSX. 
+2. Nella tabella **Istanze vCenter Server**, fai clic sull'istanza per la quale eseguire l'upgrade della licenza NSX.
 3. Nella pagina **Riepilogo**, verifica che tutti i dettagli dell'istanza siano visualizzati correttamente. Quindi, fai clic su **Infrastruttura** nel riquadro di navigazione a sinistra per verificare i dettagli nella pagina **Infrastruttura**.
 
-   Se i dettagli non vengono visualizzati, ciò potrebbe indicare un problema di connettività con la VSI (Virtual Server Instance) IBM CloudDriver, a causa di una regola del firewall o di un problema di rete. Risolvi il problema prima di continuare con il passo successivo, altrimenti l'upgrade potrebbe non riuscire. 
+   Se i dettagli non vengono visualizzati, ciò potrebbe indicare un problema di connettività con la VSI (Virtual Server Instance) IBM CloudDriver, a causa di una regola del firewall o di un problema di rete. Risolvi il problema prima di continuare con il passo successivo, altrimenti l'upgrade potrebbe non riuscire.
 
 4. Fai clic su **Aggiorna e applica patch** nel riquadro di navigazione a sinistra e quindi fai clic su **Esegui upgrade**. Nella finestra **Aggiorna edizione licenza NSX**, seleziona l'edizione a cui vuoi aggiornare e fai clic su **Aggiorna**.
 

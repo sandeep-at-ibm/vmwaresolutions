@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-04"
+lastupdated: "2019-05-09"
 
 subcollection: vmware-solutions
 
@@ -33,6 +33,13 @@ Puede solicitar una nueva instancia con FortiGate Virtual Appliance on {{site.da
 Puede añadir el servicio de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} a una instancia existente utilizando uno de los métodos siguientes:
 * Desde la consola de {{site.data.keyword.vmwaresolutions_short}}, visualice la instancia para la que desea añadir el servicio, pulse **Servicios** en el panel de navegación izquierdo y pulse **Añadir**.
 * Desde el catálogo de {{site.data.keyword.cloud_notm}}, seleccione **FortiGate Virtual Appliance on IBM Cloud**, especifique los valores de servicio y seleccione **Añadir a instancia existente**.
+
+## Solicitud de FortiGate Virtual Appliance on IBM Cloud para instancias privadas
+{: #fortinetvm_ordering-private}
+
+Al solicitar FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} para instancias que no estén configuradas con interfaces públicas, debe proporcionar un servidor proxy para completar la instalación. El servidor proxy HTTP debe configurarse y estar disponible a través de VRF (Direccionamiento virtual y reenvío) para que se pueda iniciar la instalación de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}.
+
+Para garantizar un funcionamiento continuado, FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} debe tener acceso persistente al servidor de licencias de Fortigate a través de Internet.
 
 ## Configuración del servicio de FortiGate Virtual Appliance on IBM Cloud
 {: #fortinetvm_ordering-config}

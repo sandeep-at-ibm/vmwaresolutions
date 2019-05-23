@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -33,8 +33,7 @@ subcollection: vmware-solutions
 
 有关存储器的更多信息，请参阅[共享存储器体系结构](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits)。
 
-图 1. 物理基础架构</br>
-![物理基础架构](vcsv4radiagrams-ra-physinfra.svg)
+![物理基础架构](../../images/vcsv4radiagrams-ra-physinfra.svg "物理基础架构")
 
 ## 物理计算设计
 {: #design_physicalinfrastructure-host-design}
@@ -65,8 +64,7 @@ subcollection: vmware-solutions
 
 {{site.data.keyword.cloud_notm}} 的物理网络分为两种不同的网络：公用网络和专用网络。专用网络还包含流至物理服务器的管理智能平台管理接口 (IPMI) 流量。
 
-图 2. {{site.data.keyword.cloud_notm}} 高级别网络
-![{{site.data.keyword.cloud_notm}} 高级别网络](vcsv4radiagrams-ra-ibmcloudnetwork.svg)
+![{{site.data.keyword.cloud_notm}} 高级网络](../../images/vcsv4radiagrams-ra-ibmcloudnetwork.svg "{{site.data.keyword.cloud_notm}} 高级网络")
 
 #### 公用网络
 {: #design_physicalinfrastructure-public-net}
@@ -112,8 +110,7 @@ subcollection: vmware-solutions
 
 无法除去与 vCenter Server 产品中使用的裸机服务器的公用或专用网络的物理网络连接。可以禁用裸机内部 NIC 上的物理端口，但不支持拔掉电缆插头。
 
-图 3. 物理主机连接</br>
-![物理主机连接](vcsv4radiagrams-ra-physical-host-connections.svg "物理主机连接")
+![物理主机连接](../../images/vcsv4radiagrams-ra-physical-host-connections.svg "物理主机连接")
 
 #### VLAN 以及下层到覆盖的路由
 {: #design_physicalinfrastructure-vlans}
@@ -181,9 +178,7 @@ vSphere ESXi 系统管理程序安装在持久位置。因此，物理主机包�
 
 存储器使用 NFSv3 协议以 2 IOPS/GB 级别从 IBM Cloud 进行连接。IBM 会对以 16 K 块大小供应的 IOP 级别进行规范化，以便更大的块大小的限制更低，更小的块大小的限制更高。
 
-图 4. 连接到 VMware 部署的 NFS 共享
-
-![连接到 VMware 部署的 NFS 共享](vcsv4radiagrams-ra-nfs-shares.svg "连接到 VMware 部署的 NFS 共享：管理共享和客户指定的共享")
+![连接到 VMware 部署的 NFS 共享](../../images/vcsv4radiagrams-ra-nfs-shares.svg "连接到 VMware 部署的 NFS 共享：管理共享和客户指定的共享")
 
 您可以在购买时或以后在控制台中，在所有主机上为工作负载分配和安装更多文件共享。可以从相应的 {{site.data.keyword.CloudDataCent_notm}} 中可用的 {{site.data.keyword.cloud_notm}} 耐久性文件存储器容量选项和性能层中进行选择。所有共享均使用 NFSv3 协议进行连接。此外，还可通过应用 NetApp ONTAP Select 产品来连接 NFSv3 文件共享。
 
@@ -196,8 +191,7 @@ vSphere ESXi 系统管理程序安装在持久位置。因此，物理主机包�
 
 IBM 会对以 16 K 块大小供应的 IOP 级别进行规范化，以便更大的块大小的限制更低，更小的块大小的限制更高。
 
-图 5. 连接到 VMware 部署的 iSCSI LUN</br>
-![连接到 VMware 部署的 iSCSI LUN](vcsv4radiagrams-ra-iscsi-lun.svg "连接到 VMware 部署的 iSCSI LUN")
+![连接到 VMware 部署的 iSCSI LUN](../../images/vcsv4radiagrams-ra-iscsi-lun.svg "连接到 VMware 部署的 iSCSI LUN")
 
 此外，还可在购买时或以后在控制台中，在所有主机上为工作负载分配和安装更多 iSCSI LUN。请从相应的 IBM Cloud Data Center 中可用的 IBM Cloud 耐久性块存储器容量选项和性能层中进行选择。所有 LUN 均使用 iSCSI 协议进行连接。此外，还可通过 NetApp ONTAP Select 产品来连接 iSCSI LUN。
 

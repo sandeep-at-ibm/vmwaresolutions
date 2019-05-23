@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -75,8 +75,7 @@ trick = 'combo \+ \[“to” + combo\] \+ \[“to” \+ landing_combo\]'
 
 Il seguente diagramma è un riepilogo visivo del motore di regole.
 
-Figura 1. Panoramica del linguaggio di skate
-![Panoramica del linguaggio di skate](vcscar-skate-language.svg)
+![Panoramica del linguaggio di skate](../../images/vcscar-skate-language.svg "Panoramica del linguaggio di skate")
 
 ## Linguaggio di trick di esempio
 {: #vcscar-concepts-sample-trick}

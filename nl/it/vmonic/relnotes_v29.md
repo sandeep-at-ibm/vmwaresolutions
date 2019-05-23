@@ -60,16 +60,6 @@ Per ulteriori informazioni, vedi le sezioni _Impostazioni di licenza_ in:
 * [Ordine di istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
 * [Ordine di nuovi cluster vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
 
-## Fine del supporto per lo spanning VLAN
-{: #relnotes_v29-vlan}
-
-A partire da agosto 2019, {{site.data.keyword.vmwaresolutions_short}} non supporterà più lo spanning VLAN. Entro la fine di luglio 2019, devi convertire il tuo account dell'infrastruttura {{site.data.keyword.cloud_notm}} in VRF (Virtual Routing and Forwarding) e abilitare gli endpoint del servizio per il tuo account.
-
-Per ulteriori informazioni, vedi:
-
-* [Panoramica di VRF (Virtual Routing and Forwarding) su IBM Cloud](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-* [Abilitazione del tuo account per l'utilizzo degli endpoint del servizio](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
-
 ## Supporto per le API (Application Programming Interface)
 {: #relnotes_v29-api}
 
@@ -138,7 +128,7 @@ Per ulteriori informazioni, vedi:
 ### F5 on IBM Cloud
 {: #relnotes_v29-services-f5}
 
-Nella release corrente, F5-BigIP VE V14.1.0.2 è installato su tutte le istanze di nuova distribuzione. Per ulteriori informazioni sulle nuove funzioni in F5-BigIP VE V14.1.0.2, vedi [Release Note: BIG-IP 14.1.0 New and Installation](https://support.f5.com/kb/en-us/products/big-ip_ltm/releasenotes/product/relnote-bigip-14-1-0.html){:new_window}.
+Nella release corrente, F5-BigIP VE V14.1.0.2 è installato su tutte le istanze di nuova distribuzione. Per ulteriori informazioni sulle nuove funzioni in F5-BigIP VE V14.1.0.2, vedi [Release Note: BIG-IP 14.1.0 New and Installation](https://techdocs.f5.com/kb/en-us/products/big-ip_ltm/releasenotes/product/relnote-bigip-14-1-0.html){:new_window}.
 
 ### HyTrust CloudControl on IBM Cloud
 {: #relnotes_v29-services-htcc}

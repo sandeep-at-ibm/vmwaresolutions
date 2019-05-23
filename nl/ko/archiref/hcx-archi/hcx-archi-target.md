@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -104,8 +104,7 @@ HCX Manager 컴포넌트는 NSX Edge 어플라이언스가 대상에 구성된 �
 
 HCX Manager 클라우드 컴포넌트가 배치되고 구성된 후 소스 컴포넌트는 NSX ESG에 구성된 VIP 주소를 통해 HCX Manager에 대한 연결을 작성합니다. 연결되면 클라우드 게이트웨이와 WAN 최적화 프로그램이 IBM Cloud 내에 배치됩니다.
 
-그림 1. 대상 - 하이브리드 클라우드 서비스 어플라이언스
-![대상 - 하이브리드 클라우드 서비스 어플라이언스](target_hybrid_cloud_services_appliance.svg)
+![대상 - 하이브리드 클라우드 서비스 어플라이언스](../../images/target_hybrid_cloud_services_appliance.svg "대상 - 하이브리드 클라우드 서비스 어플라이언스")
 
 ## 클라우드 게이트웨이
 {: #hcx-archi-target-cloud-gateway}
@@ -114,11 +113,11 @@ HCX Manager 클라우드 컴포넌트가 배치되고 구성된 후 소스 컴�
 
 표 8. 클라우드 게이트웨이 배치
 
-|컴포넌트 | 구성 |
+| 컴포넌트 | 구성 |
 |-----------|---------------|
-|CPU       |8개의 vCPU        |
+| CPU       | 8개의 vCPU        |
 | RAM       | 3GB          |
-| 디스크      | 공유 스토리지에 상주하는 2.0GB VMDK |
+| 디스크    | 공유 스토리지에 상주하는 2.0GB VMDK |
 
 이 클라우드 게이트웨이는 IBM Cloud for VMware Solutions 배치의 vMotion VLAN(사설 포터블 서브넷)을 비롯하여 관리 VLAN(사설 포터블 서브넷)에 상주하도록 구성되고 배치됩니다. 또한 다른 인터페이스가 공용 인터넷을 통해 작성되는 연결을 위해 공용 VLAN(공용 포터블)에 구성됩니다. 공용 액세스는 직접 연결(사설 연결 배치)이 있는 경우 필요하지 않습니다. 클라우드 게이트웨이와 연관된 마지막 연결은 사이트 쌍에 작성되고 구성되는 논리 스위치입니다.
 
@@ -126,8 +125,7 @@ HCX Manager 클라우드 컴포넌트가 배치되고 구성된 후 소스 컴�
 
 다음 그림은 클라우드 게이트웨이 어플라이언스와 지정된 연결의 상위 레벨 컴포넌트 다이어그램에 대해 설명합니다.
 
-그림 2. 클라우드 게이트웨이 배치
-![클라우드 게이트웨이 배치](cloud_gateway_deployment.svg)
+![클라우드 게이트웨이 배치](../../images/cloud_gateway_deployment.svg "클라우드 게이트웨이 배치")
 
 ## WAN 최적화 프로그램
 {: #hcx-archi-target-wan-opt}
@@ -138,16 +136,15 @@ HCX Manager 클라우드 컴포넌트가 배치되고 구성된 후 소스 컴�
 
 표 9. WAN 최적화 프로그램 어플라이언스 크기 지정
 
-|컴포넌트 | 구성 |
+| 컴포넌트 | 구성 |
 |-----------|---------------|
-|CPU       |8개의 vCPU        |
+| CPU       | 8개의 vCPU        |
 | RAM       | 14GB          |
-| 디스크      | 공유 스토리지에 상주하는 30GB VMDK + 70GB VMDK |
+| 디스크    | 공유 스토리지에 상주하는 30GB VMDK + 70GB VMDK |
 
 클라우드 게이트웨이와는 달리 WAN 최적화 어플라이언스는 WAN 최적화 어플라이언스와 클라우드 게이트웨 간의 통신을 사용으로 설정하도록 논리 스위치에만 연결됩니다. WAN 최적화가 소스 환경 내에서 사용 중인 경우 이 어플라이언스가 필요합니다. 네트워크 레이아웃을 보려면 다음 그림을 참조하십시오.
 
-그림 3. WAN 최적화 프로그램 배치
-![WAN 최적화 프로그램 배치](wan_optimizer_deployment.svg)
+![WAN 최적화 프로그램 배치](../../images/wan_optimizer_deployment.svg "WAN 최적화 프로그램 배치")
 
 ## Layer 2 Concentrator
 {: #hcx-archi-target-layer-2-conc}
@@ -158,16 +155,16 @@ HCX Manager 클라우드 컴포넌트가 배치되고 구성된 후 소스 컴�
 
 표 10. HT L2C 어플라이언스 크기 지정
 
-|컴포넌트 | 구성 |
+| 컴포넌트 | 구성 |
 |-----------|---------------|
-|CPU       |8개의 vCPU        |
+| CPU       | 8개의 vCPU        |
 | RAM       | 38GB          |
-| 디스크      |공유 스토리지의 2GB VMDK |
+| 디스크    | 공유 스토리지의 2GB VMDK |
 
 L2C 어플라이언스는 공용 VLAN을 비롯하여 관리 VLAN에 배치됩니다. 공용 인터페이스는 확장된 네트워크의 소스에 바인드된 애플리케이션 트래픽에 사용됩니다. 확장된 네트워크와 같은 추가 연결은 소스 관리자가 IBM Cloud에 대한 네트워크 확장을 시작한 후 작성되고 L2C 어플라이언스에 접속됩니다. 다음 그림에서는 이러한 네트워크 및 연결의 예제를 보여줍니다.
 
-그림 4. L2 Concentrator 배치
-![L2 Concentrator 배치](l2_concentrator_deployment.svg)
+![L2 Concentrator 배치](../../images/l2_concentrator_deployment.svg "L2 Concentrator 배치")
+
 
 ## 관련 링크
 {: #hcx-archi-target-related}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-29"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -32,13 +32,13 @@ Puoi utilizzare un server proxy basato su CentOS e Squid. Squid Proxy è un prox
 
 Prima di poter iniziare questa attività, raccogli le informazioni per popolare la seguente tabella. Esamina i valori suggeriti e assicurati che siano appropriati per la tua azienda. Questa configurazione è basata su un piccolo proxy per VUM che utilizza solo CentOS-Minimal e Squid.
 
-Per trovare la sottorete portatile privata del cliente: 
+Per trovare la sottorete portatile privata del cliente:
 
 1. Vai alla pagina **Resources** nella console {{site.data.keyword.vmwaresolutions_short}}.
 2. Seleziona l'istanza (**Instance**) necessaria, seleziona l'infrastruttura (**Infrastructure**) e il cluster (**Cluster**) necessario.
 3. Seleziona **Private VLAN** e individua la sottorete etichettata `Private subnet for customer workload edge`.
-4. Seleziona la **sottorete** e verrai reindirizzato alla pagina dei dettagli della sottorete che visualizza gli indirizzi IP e le relative assegnazioni. 
-5. Utilizzando le informazioni, seleziona un indirizzo IP non assegnato e aggiorna la nota (**Note**) con i commenti appropriati. Utilizza questo indirizzo IP per il parametro `proxy ip` nella seguente tabella. 
+4. Seleziona la **sottorete** e verrai reindirizzato alla pagina dei dettagli della sottorete che visualizza gli indirizzi IP e le relative assegnazioni.
+5. Utilizzando le informazioni, seleziona un indirizzo IP non assegnato e aggiorna la nota (**Note**) con i commenti appropriati. Utilizza questo indirizzo IP per il parametro `proxy ip` nella seguente tabella.
 
 Tabella 1. Valori di distribuzione
 
@@ -209,11 +209,12 @@ Configura VUM per utilizzare il server proxy per l'accesso ai repository su Inte
 2. Seleziona la scheda **Manage** e fai clic su **Settings**.
 3. Seleziona **Download Settings** e quindi, nelle _impostazioni proxy_, fai clic su **Edit**.
 4. Spunta la casella **Use Proxy** e immetti l'_indirizzo IP del server proxy_ e la _porta 3128_, quindi fai clic su **OK**. Lo stato di connettività diventa _Validating_ e poi _Connected_.
+    **Nota**: non preoccuparti se ricevi il messaggio ``Some URLs have been accessed successfully, but others are inaccessible`` mentre provi la connessione al server proxy.
 5. Fai clic su **Download Now**. Nel pannello _Recent Tasks_ dovresti visualizzare questa attività completa.
 6. Se questa attività non riesce, riavvia vCenter Server Appliance (vCSA):
   1. Accedi all'interfaccia di gestione vCSA all'indirizzo `https://vcsaFQDN:5480` come **root**.
   2. Fai clic su **Summary** e fai clic su **Reboot**.
-  3. Nella casella di conferma, fai clic su **Yes** per confermare l'operazione. 
+  3. Nella casella di conferma, fai clic su **Yes** per confermare l'operazione.
 
 ## Link correlati
 {: #vum-init-config-related}

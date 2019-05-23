@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-02"
 
 subcollection: vmware-solutions
 
@@ -21,8 +21,7 @@ VMware vCenter Server with Hybridity Bundle 인스턴스에 대한 규제 준수
 
 다음 다이어그램은 규제 준수 활동에 대한 고객(사용자) 및 IBM 책임의 세부사항을 제공합니다.
 
-그림 1. vCenter Server on IBM Cloud with Hybridity Bundle에 대한 고객 대 IBM 책임 매트릭스
-![고객 대 IBM 책임 매트릭스](customer_ibm_responsibility_matrix.svg "고객 대 IBM 책임 매트릭스")
+![고객 대 IBM 책임 매트릭스](../images/customer_ibm_responsibility_matrix.svg "고객 대 IBM 책임 매트릭스")
 
 ## 건강 데이터 제한사항
 {: #vc_hybrid_compl_info-health-data-restrictions}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -23,9 +23,7 @@ VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 
 
 {{site.data.keyword.cloud_notm}} 提供的 vCenter Server with Hybridity Bundle 产品支持对等内部部署源站点与 {{site.data.keyword.cloud_notm}} 目标站点之间建立安全连接。
 
-图 1. VMware Hybridity 服务
-
-![VMware Hybrid Cloud Extension 服务](vcsicp-hcx.svg)
+![VMware Hybrid Cloud Extension 服务](../../images/vcsicp-hcx.svg "VMware Hybrid Cloud Extension 服务")
 
 VMware Hybrid Cloud Extension 服务将在内部部署和 {{site.data.keyword.cloud_notm}} 之间创建松散耦合的互连，并支持以下功能：
 - **简单互连** - 通过任何物理连接（包括公用因特网、专用 VPN 或 {{site.data.keyword.cloud_notm}} Direct Link）轻松建立逻辑网络连接。
@@ -45,9 +43,7 @@ VMware Hybrid Cloud Extension 服务将在内部部署和 {{site.data.keyword.cl
 
 Acme Skateboards 希望在其应用程序现代化之旅中，在 {{site.data.keyword.cloud_notm}} 上部署由 vCenter Server 和 {{site.data.keyword.icpfull_notm}} 组成的混合体系结构。其需求是在虚拟机上运行其数据库，在容器中运行应用程序和 Web Service，并使用一组通用工具进行网络和安全管理。
 
-图 2. Acme Skateboards 混合应用程序
-
-![Acme Skateboards 混合应用程序](vcsicp-acme-skateboards-app.svg)
+![Acme Skateboards 混合应用程序](../../images/vcsicp-acme-skateboards-app.svg "Acme Skateboards 混合应用程序")
 
 {{site.data.keyword.vmwaresolutions_short}} 提供了自动化功能，可将 VMware 技术组件部署到全球范围的 {{site.data.keyword.CloudDataCents_notm}} 中。该体系结构包含一个云区域，并支持扩展到其他地理位置中的更多云区域或扩展到同一数据中心内的其他 {{site.data.keyword.cloud_notm}} pod 中。
 
@@ -57,9 +53,7 @@ Acme Skateboards 希望在其应用程序现代化之旅中，在 {{site.data.ke
 
 通过使用 {{site.data.keyword.cloud_notm}} 自动化，Acme Skateboards 可以供应混合解决方案，该解决方案包含 VMware on {{site.data.keyword.cloud_notm}}（用于运行其数据库 VM）和 {{site.data.keyword.icpfull_notm}} on VMware on {{site.data.keyword.cloud_notm}}（用于在容器中运行其应用程序和前端 Web Service）。NSX 为其提供了一组通用管理工具，用于管理网络和覆盖网络中的安全性。
 
-图 3. 使用 {{site.data.keyword.icpfull_notm}} 的 vCenter Server
-
-![使用 {{site.data.keyword.icpfull_notm}} 的 vCenter Server](vcsicp-virtual-icp-deployment-vcs.svg)
+![vCenter Server with {{site.data.keyword.icpfull_notm}}](../../images/vcsicp-virtual-icp-deployment-vcs.svg "vCenter Server with {{site.data.keyword.icpfull_notm}}")
 
 ## 相关链接
 {: #vcsicp-usecases-related}

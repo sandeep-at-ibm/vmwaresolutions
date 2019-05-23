@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-25"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -22,8 +22,7 @@ necessità di aggiungere il middleware in {{site.data.keyword.cloud}} Private. A
 middleware esistevano nel loro data center, quindi diventa più di un
 esercizio di trasformazione con qualche nuovo middleware aggiunto.
 
-Figura 1. Refactoring di Stock Trader
-![Refactoring di Stock Trader](vcscontent-refactor.svg)
+![Refactoring di Stock Trader](../../images/vcscontent-refactor.svg "Refactoring di Stock Trader")
 
 Questo refactoring della soluzione porta una piattaforma comune per eseguire l'applicazione
 e i servizi richiesti, introducendo un piano di gestione
@@ -292,8 +291,7 @@ dettagli di instradamento ma nello stesso formato. Quando il microservizio del p
 connettersi all'istanza Db2 appropriata. All'applicazione Stock Trader non importa se è in esecuzione in una VM (Virtual Machine) VMware, in un servizio inserito in un contenitore
 o come servizio gestito dal cloud.
 
-Figura 2. Stock Trader - servizi pivot
-![Servizi pivot Stock Trader](vcscontent-pivot-services.svg)
+![Stock Trader - servizi pivot](../../images/vcscontent-pivot-services.svg "Stock Trader - servizi pivot")
 
 ## Risultato
 {: #vcscontent-addmidware-result}
@@ -305,12 +303,9 @@ aggiunge altri microservizi come un servizio di notifica di Twitter. Le regole
 di instradamento di Istio consentono la messaggistica dinamica del livello di fedeltà tramite un
 canale Slack interno o un canale Twitter pubblico.
 
-Figura 3. Arricchimento di Stock Trader
-
-![Arricchimento di Stock Trader](vcscontent-enrich.svg)
+![Arricchimento di Stock Trader](../../images/vcscontent-enrich.svg "Arricchimento di Stock Trader")
 
 ## Link correlati
 {: #vcscontent-addmidware-related}
 
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -45,7 +45,7 @@ Zerto on {{site.data.keyword.cloud_notm}}에 대한 관리 서비스의 사용 �
 2. 페이지를 아래로 스크롤하여 **추가 관리 서비스 주문**에서 **Zerto on IBM Cloud에 대한 관리 서비스** 카드를 클릭하십시오.
 3. **Zerto on IBM Cloud** 페이지에서 관리 서비스로서 Zerto on {{site.data.keyword.cloud_notm}}에 대한 설명과 기술 스펙을 검토한 후에 **작성**을 클릭하십시오.
 4. 사용자의 요구사항에 따라 구성 설정을 지정하거나 기본값을 수락하십시오.
-5. **vCenter Server**를 클릭하여 서비스를 인스턴스 중 하나에 추가하십시오. 
+5. **vCenter Server**를 클릭하여 서비스를 인스턴스 중 하나에 추가하십시오.
 6. 새 인스턴스를 주문하면서 서비스를 추가하려면 **새 인스턴스에 추가**를 클릭한 후에 새 [vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance) 또는 [vCenter Server with Hybridity](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance) 인스턴스 주문을 계속 진행하십시오.
 7. 기존 인스턴스에 서비스를 추가하려면 **기존 인스턴스에 추가**를 클릭하고 목록에서 원하는 인스턴스를 선택한 후에 **프로비저닝**을 클릭하여 주문을 진행하고자 하는지 확인하십시오.
 

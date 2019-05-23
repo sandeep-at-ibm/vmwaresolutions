@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-30"
+lastupdated: "2019-05-03"
 
 subcollection: vmware-solutions
 
@@ -28,19 +28,19 @@ Nel tentativo di consolidare le nostre offerte per una migliore esperienza del c
 
 Nel corso del tempo, tutti i clienti verranno indirizzati a VMware vCenter Server on {{site.data.keyword.cloud_notm}}, la nostra soluzione di punta di data center definito dal software VMware su {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}.
 
-I clienti esistenti che utilizzano VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} saranno assistiti nella conversione a VMware vCenter Server on {{site.data.keyword.cloud_notm}} entro la data di fine supporto del 13 maggio 2019. 
+I clienti esistenti che utilizzano VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} saranno assistiti nella conversione a VMware vCenter Server on {{site.data.keyword.cloud_notm}} entro la data di fine supporto del 13 maggio 2019.
 
 Dopo il 13 maggio, le capacità di gestione per VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} verranno bloccate nella console {{site.data.keyword.vmwaresolutions_short}} fino a quando non verranno convertite a VMware vCenter Server on {{site.data.keyword.cloud_notm}}. I clienti che hanno scelto di non migrare o convertire la loro istanza VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} a VMware vCenter Server on {{site.data.keyword.cloud_notm}}, possono accedere alle loro istanze dalla console dell'infrastruttura {{site.data.keyword.cloud_notm}}.
 
 ## Rimosso il supporto per i server Broadwell 2-CPU
 {: #relnotes_v30-broadwell}
 
-A partire dalla release V3.0, i server Broadwell 2-CPU non sono più disponibili per la distribuzione per i nuovi cluster e le nuove istanze vCenter Server, vCenter Server with Hybridity Bundle, vCenter Server with NSX-T e vSphere on {{site.data.keyword.cloud_notm}}. Puoi ancora aggiungere server ai cluster esistenti. 
+A partire dalla release V3.0, i server Broadwell 2-CPU non sono più disponibili per la distribuzione per i nuovi cluster e le nuove istanze vCenter Server, vCenter Server with Hybridity Bundle, vCenter Server with NSX-T e vSphere on {{site.data.keyword.cloud_notm}}. Puoi ancora aggiungere server ai cluster esistenti.
 
 ## Miglioramenti alle operazioni di NFS (network file system)
 {: #relnotes_v30-nfs}
 
-A partire dalla release V3.0, puoi aggiungere o rimuovere simultaneamente l'archiviazione NFS (network file system) tra più cluster. Ciò si applica a tutte le istanze vCenter Server e vCenter Server with NSX-T.
+A partire dalla release V3.0, puoi aggiungere o rimuovere simultaneamente l'archiviazione NFS e i server ESXi sui cluster nello stato **Ready to Use** (Pronto per l'utilizzo). Ad esempio, puoi aggiungere o rimuovere un server ESXi in un cluster e aggiungere o rimuovere l'archiviazione NFS in un altro cluster. Ciò si applica a tutte le istanze vCenter Server e vCenter Server with NSX-T.
 
 ## Aggiornamenti per le istanze VMware vCenter Server
 {: #relnotes_v30-vcs}
@@ -88,7 +88,7 @@ La release corrente installa HyTrust KeyControl 4.3 su tutte le istanze di nuova
 ### IBM Cloud Private Hosted
 {: #relnotes_v30-services-icp}
 
-La release corrente installa {{site.data.keyword.cloud_notm}} Private Hosted 3.1.2, insieme a {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2, su tutte le istanze di nuova distribuzione. 
+La release corrente installa {{site.data.keyword.cloud_notm}} Private Hosted 3.1.2, insieme a {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2, su tutte le istanze di nuova distribuzione.
 
 Per ulteriori informazioni sulle nuove funzioni in {{site.data.keyword.cloud_notm}} Private v3.1.2, vedi [What's new in {{site.data.keyword.cloud_notm}} Private v3.1.2](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.2/getting_started/whats_new.html){:new_window}.
 Per ulteriori informazioni sulle nuove funzioni in {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2, vedi [What's new in {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/cam_whatisnew.html){:new_window}.
@@ -111,7 +111,7 @@ Ora puoi aggiungere Zerto on {{site.data.keyword.cloud_notm}} su tutte le istanz
 ## Documentazione nuova e aggiornata
 
 * Ora è disponibile la documentazione per assisterti nell'upgrade dei componenti {{site.data.keyword.vmwaresolutions_short}} a VMware vSphere 6.7. Questo upgrade è necessario se vuoi continuare a trarre vantaggio dall'automazione {{site.data.keyword.vmwaresolutions_short}}. Per ulteriori informazioni, vedi [Upgrade del software vCenter Server vSphere da VMware vSphere 6.5 a 6.7](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_vsphere_upgrade#vc_vsphere_upgrade).
-* Ora è disponibile la documentazione di riferimento per fornirti gli ID utente conservati da {{site.data.keyword.vmwaresolutions_short}} per essere utilizzati dall'automazione {{site.data.keyword.cloud_notm}}. Anche i possibili messaggi che vengono visualizzati nei log della cronologia della tua istanza sono disponibili per essere esaminati. Per ulteriori informazioni, vedi [ID utente IBM e messaggi della cronologia di distribuzione per le istanze vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-ibm_use#ibm_use).
+* Ora è disponibile la documentazione di riferimento per fornirti gli ID utente conservati da {{site.data.keyword.vmwaresolutions_short}} per essere utilizzati dall'automazione {{site.data.keyword.cloud_notm}}. Anche i possibili messaggi che vengono visualizzati nei log della cronologia della tua istanza sono disponibili per essere esaminati. Per ulteriori informazioni, vedi [ID utente IBM](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_user_ids) e [Messaggi della cronologia dell'istanza](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_messages).
 * L'autorizzazione **Riavvia/Controlla** è stata aggiunta alla tabella che descrive le autorizzazioni necessarie per l'account dell'infrastruttura IBM. Per ulteriori informazioni, vedi [Autorizzazioni per l'account dell'infrastruttura {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-slaccountrequirement#slaccountrequirement-permissions).
 * È disponibile una nuova documentazione di riferimento per le seguenti API. Per ulteriori informazioni, vedi [Riferimento API](https://cloud.ibm.com/apidocs/vmware-solutions){:new_window}.
   * Elenca tutti i messaggi della cronologia per un'istanza VMware vCenter Server specificata

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-13"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -48,9 +48,7 @@ subcollection: vmware-solutions
 
 NFS ストレージ・トラフィック用の vDS ポート・グループが作成されるほか、VMkernel ポートが、デプロイメント中に各 vSphere ESXi ホスト上に作成され、SDDC-DPG-NFS ポート・グループに割り当てられます。 VMkernel ポートには、接続ストレージの VLAN (プライベート VLAN B) に関連付けられたプライベート・ポータブル・サブネットの IP アドレスも割り当てられ、ポートの MTU は、ジャンボ・フレームをサポートするために 9000 に設定されます。
 
-図 1. プライベート vDS ポート・グループとアップリンク
-
-![プライベート vDS ポート・グループとアップリンク](private_vds_portgroups_and_uplinks.svg "プライベート vDS ポート・グループとアップリンク")
+![プライベート vDS ポート・グループおよびアップリンク](../../images/private_vds_portgroups_and_uplinks.svg "プライベート vDS ポート・グループおよびアップリンク")
 
 ### vSphere ホストの静的ルーティング
 {: #storage-infra-mgmt-vsphere-routing}

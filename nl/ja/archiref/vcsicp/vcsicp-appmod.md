@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-15"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 以下の図は、Acme Skateboards 社がデプロイするアプリケーション・モダナイゼーションのリファレンス・アーキテクチャーを示しています。 この一連のドキュメントでは、このアーキテクチャーについて詳しく説明します。
 
-図 1. アーキテクチャー概要図
-![アーキテクチャー概要図](vcsicp-arch-overview.svg)
+![アーキテクチャー概要図](../../images/vcsicp-arch-overview.svg "アーキテクチャー概要図")
 
 このハイブリッド・アーキテクチャーにより、Acme Skateboards 社は以下の目標を実現できます。
 - ダウン時間がほとんど、あるいはまったくなく、アプリケーションの再構成も必要とすることなく、VMware VM をオンプレミスから {{site.data.keyword.cloud}} にマイグレーションする。
@@ -28,13 +27,13 @@ subcollection: vmware-solutions
 - **オンプレミス仮想化** – Acme Skateboards 社の VM を現在ホストしている VMware クラスター。 これらの VM は現在、モダナイズするアプリケーションをホストしています。 このクラスターは、HCX を実行できるように [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro) アーキテクチャーの前提条件を満たすために必要です。 HCX はオンプレミス・ネットワークを {{site.data.keyword.cloud_notm}} に拡張します。これにより、お客様は VM を、{{site.data.keyword.cloud_notm}} 上で稼働する VMware vCenter Server on {{site.data.keyword.cloud_notm}} インスタンスにマイグレーションしたり、必要に応じて元に戻したりすることができます。
 
 - **{{site.data.keyword.vmwaresolutions_short}}** – vCenter Server インスタンスは、VMware Software Defined Data Center (SDDC) ソリューションを自動的にデプロイするために必要な、vSphere、vCenter Server、NSX-V、および vSAN や {{site.data.keyword.cloud_notm}} Endurance ストレージを始めとするストレージ・オプションなどの基本的な VMware ビルディング・ブロックを提供します。 VMware クラスターは、マイグレーションされる VM のターゲットです。さらに、{{site.data.keyword.icpfull_notm}} がホストするコンテナーの中で実行されるモダナイズ後の一部のアプリケーションのターゲットでもあります。 vCenter Server の主要コンポーネントは以下のとおりです。
-    - **NSX-V** - NSX-V は、Acme Skateboards 社の VM 用にネットワーク・オーバーレイを提供するネットワーク仮想化層を VCS に実装します。 NSX-V は BYOIP を使用可能にして、ワークロード・ネットワークを IBM Cloud ネットワークから分離します。 NSX-V は、Acme Skateboards 社がオンプレミスから拡張するネットワークを作成するために HCX によってプログラミングされます。
+    - **NSX-V** - NSX-V は、Acme Skateboards 社の VM 用にネットワーク・オーバーレイを提供するネットワーク仮想化層を vCenter Server 内に実装します。 NSX-V は BYOIP を使用可能にして、ワークロード・ネットワークを IBM Cloud ネットワークから分離します。 NSX-V は、Acme Skateboards 社がオンプレミスから拡張するネットワークを作成するために HCX によってプログラミングされます。
 
     - **NSX-T** - NSX-T は、コンテナーと VM の両方にわたるネットワーク管理とセキュリティー管理用の共通のツール・セットを提供します。 NSX-T は Kubernetes Container Networking Interface (CNI) と完全に互換性があり、CNI と統合してコンテナー・ネットワーキングを提供します。 NSX-T は、モダナイズされるアプリケーションが使用するオーバーレイ・ネットワークを提供し、{{site.data.keyword.icpfull_notm}} および {{site.data.keyword.containerlong_notm}} によってネイティブで使用される Calico を置き換えます。
 
 - **{{site.data.keyword.icpfull_notm}}** - {{site.data.keyword.icpfull_notm}} は、コンテナー化された
 アプリケーションを開発して管理するためのアプリケーション・プラットフォームです。 {{site.data.keyword.icpfull_notm}} は、コンテナー・オーケストレーター Kubernetes、プライベート・イメージ・リポジトリー、管理コンソール、モニター・フレームワーク、グラフィカル・ユーザー・インターフェースで構成される統合環境であり、Acme Skateboards 社がアプリケーションのデプロイ、管理、モニター、スケーリングを行うことができる一元的な場所を提供します。 vCenter Server インスタンスは {{site.data.keyword.icpfull_notm}} コンポーネント、マスター・ノード、ワーカー・ノードをホストし、それらを VM として実行します。 {{site.data.keyword.icpfull_notm}} は以下のものをホストします。
-    - **{{site.data.keyword.cloud_notm}} Automation Manager** – CAM は、エンタープライズ対応の Infrastructure as Code (IaC) プラットフォームであり、オンプレミスにも VCS にも、テンプレートを使用して単一画面で VM ワークロードをプロビジョンできます。また、{{site.data.keyword.icpfull_notm}} または {{site.data.keyword.containerlong_notm}} に Kubernetes ワークロードをプロビジョンすることもできます。 CAM は、{{site.data.keyword.icpfull_notm}} インストール環境で実行される Docker 対応アプリケーションであり、役割ベースのアクセス制御 (RBAC) や許可などの機能を実行するために緊密に統合されています。
+    - **{{site.data.keyword.cloud_notm}} Automation Manager** – CAM は、エンタープライズ対応の Infrastructure as Code (IaC) プラットフォームであり、オンプレミスにも vCenter Server にも、テンプレートを使用して単一画面で VM ワークロードをプロビジョンできます。また、 {{site.data.keyword.icpfull_notm}} または {{site.data.keyword.containerlong_notm}} に Kubernetes ワークロードをプロビジョンすることもできます。 CAM は、{{site.data.keyword.icpfull_notm}} インストール環境で実行される Docker 対応アプリケーションであり、役割ベースのアクセス制御 (RBAC) や許可などの機能を実行するために緊密に統合されています。
     - お客様がこの環境にデプロイする Acme Skateboards 社のコンテナー化アプリケーション。
 
 - **{{site.data.keyword.containerlong_notm}}** – {{site.data.keyword.containerlong_notm}} では、Acme Skateboards 社がモダナイズ対象アプリケーションを Docker コンテナー (Kubernetes クラスターで稼働) にデプロイできます。 マスター・モードは IBM が完全に管理しますが、ワーカー・プール内のワーカー・ノードは vCenter Server インスタンスと同じ {{site.data.keyword.cloud_notm}} アカウントにデプロイされます。 ワーカー・ノードは、ベアメタル・サーバー、パブリック・サーバー専用仮想サーバーのいずれかのインスタンスになります。 Calico は {{site.data.keyword.containerlong_notm}} に自動的にインストールされて構成されます。 Calico は、コンテナーにセキュアなネットワーク接続を提供します。また Calico は、サブネット間を流れるパケットには IP-in-IP カプセル化を使用し、コンテナーからの発信接続には NAT を使用するように {{site.data.keyword.containerlong_notm}} で構成されます。
@@ -58,7 +57,7 @@ vCenter Server には、お客様のワークロードに最も合う VMware Sof
 
 {{site.data.keyword.icpfull_notm}} や {{site.data.keyword.containerlong_notm}} などのクラウド・ネイティブ・アプリケーション・プラットフォームに移行するお客様は、速度とイノベーションに注意を向けているので、セキュリティーやネットワーキングがおろそかになる傾向があります。 ロード・バランサー、ファイアウォール、スイッチ、ルーターなどのサービスをネットワーキング・チームやセキュリティー・チームが注文するまで待たなければならないとしたら、アプリケーションの時間対価値は下がってしまいます。
 
-このリファレンス・アーキテクチャーでは、VCS、{{site.data.keyword.icpfull_notm}}、{{site.data.keyword.containerlong_notm}} を利用して Acme Skateboards 社のアプリケーション・モダナイゼーション・ジャーニーを安全に進めていく方法を示します。
+このリファレンス・アーキテクチャーでは、vCenter Server、{{site.data.keyword.icpfull_notm}}、{{site.data.keyword.containerlong_notm}} を利用して Acme Skateboards 社のアプリケーション・モダナイゼーション・ジャーニーを安全に進めていく方法を示します。
 
 ## 関連リンク
 {: #vcsicp-appmod-related}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -25,8 +25,7 @@ VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle�
 
 {{site.data.keyword.cloud_notm}}의 vCenter Server with Hybridity Bundle 오퍼링을 통해 피어 온프레미스 소스 사이트와 {{site.data.keyword.cloud_notm}} 대상 사이트 간의 연결을 안전하게 사용할 수 있습니다.
 
-그림 1. VMware Hybridity 서비스
-![VMware Hybrid Cloud Extension 서비스](vcsiks-hcx.svg)
+![VMware 하이브리드 클라우드 확장 서비스](../../images/vcsiks-hcx.svg "VMware 하이브리드 클라우드 확장 서비스")
 
 vCenter Server with Hybridity Bundle은 온프레미스와 {{site.data.keyword.cloud_notm}} 간에 느슨하게 결합된 상호 연결을 작성하며 다음과 같은 기능을 사용할 수 있습니다.
 - **간단한 상호 연결** – 공용 인터넷, 사설 VPN 또는 {{site.data.keyword.cloud_notm}} Direct Link를 포함하는 실제 연결에서 논리적 네트워크 연결을 쉽게 설정할 수 있습니다.
@@ -46,8 +45,7 @@ vCenter Server with Hybridity Bundle은 온프레미스와 {{site.data.keyword.c
 
 Acme Skateboards는 애플리케이션 현대화에 대한 과정을 위해 vCenter Server 및 {{site.data.keyword.icpfull_notm}}로 구성되는 {{site.data.keyword.cloud_notm}}에 하이브리드 아키텍처를 배치하려고 합니다. 요구사항은 가상 머신에서 데이터베이스를 실행하고, 컨테이너에 있는 애플리케이션 및 웹 서비스를 실행하고, 네트워크 및 보안 관리를 위해 공통 도구 세트를 사용하는 것입니다.
 
-그림 2. Acme Skateboards 하이브리드 애플리케이션
-![Acme Skateboards 하이브리드 애플리케이션 다이어그램](vcsiks-acme-app-arch.svg)
+![Acme Skateboards 하이브리드 애플리케이션 다이어그램](../../images/vcsiks-acme-app-arch.svg "Acme Skateboards 하이브리드 애플리케이션 다이어그램")
 
 {{site.data.keyword.vmwaresolutions_short}}은 VMware 기술 컴포넌트를 전세계에 있는
 {{site.data.keyword.CloudDataCents_notm}}에 배치하는 자동화 기능을 제공합니다. 이 아키텍처는 단일 클라우드 지역으로 구성되며 동일한 데이터 센터 내의 다른 지역 또는 다른 {{site.data.keyword.cloud_notm}} 팟(Pod)에 위치한 여러 클라우드 지역으로 확장하는 기능을 지원합니다.

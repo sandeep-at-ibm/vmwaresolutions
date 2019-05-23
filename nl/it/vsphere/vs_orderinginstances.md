@@ -104,7 +104,7 @@ Seleziona il {{site.data.keyword.CloudDataCent_notm}} in cui deve essere ospitat
 
 **Note:**
 * Se selezioni un componente vSAN, l'elenco di ubicazioni viene filtrato in base alla disponibilità SSD.
-* I server bare metal Broadwell non sono disponibili per l'ubicazione data center **FRA05 - Francoforte**. 
+* I server bare metal Broadwell non sono disponibili per l'ubicazione data center **FRA05 - Francoforte**.
 * I server bare metal Broadwell e quelli con certificato SAP non sono disponibili per l'ubicazione data center **LON05 - Londra**.
 
 ### Skylake

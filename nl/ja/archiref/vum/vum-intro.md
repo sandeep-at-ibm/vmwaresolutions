@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -28,9 +28,7 @@ VUM により、VMware vSphere の集中型の自動化されたパッチおよ�
 
 この資料では、VUM が VMware リポジトリーにアクセスできるようにするための、CentOS および Squid に基づくプロキシー・サーバー実装の使用について説明します。 VUM が VMware の更新サーバーからリソースを要求すると、まず要求がプロキシー・サーバーに送信され、プロキシー・サーバーからその要求が外部サービス・ゲートウェイ (ESG) を介して更新サーバーに送信されます。 プロキシー・サーバーによってリソースが取得されると、そのリソースは VUM に送信されます。
 
-図 1. 概要図
-</br>
-![概要図](vum-vcsproxy.svg)
+![概要図](../../images/vum-vcsproxy.svg "概要図")
 
 現在、vCenter Server は vSphere 6.5 をデプロイします。これは VUM が vCenter Server Appliance (VCSA) 内に統合されることを意味します。また、VUM クライアント・コンポーネントは vSphere Web Client で実行されるプラグインであるため、VCSA のデプロイメント後に自動的に有効になります。 ただし、VUM は、インターネットにアクセスして VMware リポジトリーにアクセスすることはできません。
 

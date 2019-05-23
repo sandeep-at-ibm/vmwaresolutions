@@ -34,7 +34,7 @@ subcollection: vmware-solutions
   |:------------|:------------ |
   |도메인 이름 | `<root_domain>` |  
   |vCenter Server 로그인 사용자 이름 | `<user_id>@<root_domain>`(Microsoft Active Directory 사용자) 또는 `administrator@vsphere.local` |
-  |vCenter Server(임베드된 PSC 포함) FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. 최대 길이는 50자입니다. |
+  |vCenter Server(임베디드 PSC 포함) FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. 최대 길이는 50자입니다. |
   |SSO(Single Sign-On) 사이트 이름 | `<subdomain_label>` |
   |완전한 ESXi 서버 이름 | `<host_prefix><n>.<subdomain_label>.<root_domain>`, 여기서 `<n>`은 ESXi 서버의 순서입니다. 최대 길이는 50자입니다. |
 
@@ -142,7 +142,7 @@ Bare Metal Server 설정은 데이터 센터 선택 및 Bare Metal Server 구성
 {: #vc_orderinginstance-bare-metal-number}
 
 * 주문하는 모든 서버는 동일한 구성을 갖습니다.
-* vSAN 스토리지를 사용할 경우 4 - 20개의 서버를 주문할 수 있습니다. 
+* vSAN 스토리지를 사용할 경우 4 - 20개의 서버를 주문할 수 있습니다.
 * NFS 스토리지를 사용할 경우 2 - 20개의 서버를 주문할 수 있습니다. 그러나 프로덕션 워크로드의 경우 최소 3개의 서버가 권장됩니다. 자세한 정보는 [두 개의 노드 vCenter Server 인스턴스는 고가용성입니까?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)를 참조하십시오.
 
 ## 스토리지 설정
@@ -320,7 +320,7 @@ vCenter Server 인스턴스를 주문하는 경우 추가 기능 서비스도 �
     2. Bare Metal Server 구성을 선택하십시오.
        * **Skylake** 또는 **Broadwell**을 선택하는 경우 CPU 모델 및 RAM 크기를 지정하십시오.
        * **SAP 인증**을 선택하는 경우, 사전 설정된 구성 중 하나를 선택하십시오.
-    3. {{site.data.keyword.baremetal_short}}의 수를 지정하십시오. vSAN 스토리지를 사용할 경우 최소 4개의 {{site.data.keyword.baremetal_short}}가 필요합니다.   
+    3. {{site.data.keyword.baremetal_short}}의 수를 지정하십시오. vSAN 스토리지를 사용할 경우 최소 4개의 {{site.data.keyword.baremetal_short}}가 필요합니다.  
 8. 스토리지 구성을 완료하십시오.
   * **vSAN 스토리지**를 선택하는 경우 용량 및 캐시 디스크의 디스크 유형과 디스크 수 및 vSAN License 에디션을 지정하십시오. 더 많은 스토리지를 원하는 경우 **고성능 Intel Optane** 상자를 선택하십시오.
   * **NFS 스토리지**를 선택하고 모든 파일 공유에 동일한 설정을 추가하여 구성하려는 경우에는 **공유 수**, **성능** 및 **크기(GB)**를 지정하십시오.

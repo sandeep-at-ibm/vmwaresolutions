@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-03"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -24,9 +24,7 @@ La arquitectura que se presenta aquí complementa la solución de vCenter Server
 
 En el siguiente gráfico se muestra la arquitectura general del almacenamiento adjunto en el despliegue de vCenter Server.
 
-Figura 1. Arquitectura de alto nivel del almacenamiento conectado en {{site.data.keyword.cloud_notm}}
-
-![Arquitectura de almacenamiento conectado](../solution/vcsv4radiagrams-ra-nfs-shares.svg "Arquitectura de alto nivel de almacenamiento conectado en IBM Cloud")
+![Arquitectura del almacenamiento adjunto](../../images/vcsv4radiagrams-ra-nfs-shares.svg "Arquitectura del almacenamiento adjunto")
 
 ## Diseño de infraestructura física
 {: #storage-infra-design-phys-infra-design}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -24,8 +24,7 @@ subcollection: vmware-solutions
 
 이 디자인은 vCenter Server의 인스턴스로 통합된 PSC 기능을 사용합니다. PSC 및 vCenter Server는 동일한 가상 머신(VM) 내에 수용됩니다.
 
-그림 1. 인프라 관리</br>
-![인프라 관리](vcsv4radiagrams-ra-inframgmt.svg)
+![인프라 관리](../../images/vcsv4radiagrams-ra-inframgmt.svg "인프라 관리")
 
 기본 인스턴스에 있는 PSC에는 `vsphere.local`의 기본 SSO 도메인이 지정됩니다.
 
@@ -74,12 +73,12 @@ vCenter Server 구성에서는 어플라이언스에 포함된 로컬, 임베디
 
 기본적으로, **VM 재시작 우선순위** 옵션은 "중간"으로 설정되어 있으며 **호스트 격리 응답** 옵션은 사용되지 않습니다. 또한 **VM 모니터링**은 사용되지 않으며 **데이터 저장소 하트비트** 기능은 클러스터 데이터 저장소를 포함하도록 구성되어 있습니다. 이 접근 방법에서는 NAS 데이터 저장소를 사용합니다(존재하는 경우).
 
-## Enhanced vMotion Compatibility
+### Enhanced vMotion Compatibility
 {: #design_infrastructuremgmt-evc}
 
 잠재적으로 다른 CPU 기능이 있는 클러스터 노드에서 vMotion 호환성을 단순화하기 위해 EVC(Enhanced vMotion Compatibility) 모드는 최신 프로세서가 {{site.data.keyword.cloud_notm}} 인벤토리 내에서 도달할 때 클러스터 노드에서 vMotion 호환성을 보장하도록 Skylake 레벨에서 사용으로 설정되고 Skylake 프로세서가 인벤토리에 없는 경우 향후 클러스터 확장을 허용합니다.
 
-### IBM CloudDriver
+## IBM CloudDriver
 {: #design_infrastructuremgmt-cloud-driver}
 
 이러한 솔루션의 초석은 자동화입니다. 자동화는 배치의 복잡도를 감소시키고, 배치 시간을 크게 줄이며, VMware 인스턴스가 일관된 방식으로 배치되도록 보장합니다.
@@ -87,14 +86,13 @@ vCenter Server 구성에서는 어플라이언스에 포함된 로컬, 임베디
 IBM CloudBuilder는 새 VMware 인스턴스를 가져오고 라이프사이클 관리 기능을 수행하는 일시적인
 {{site.data.keyword.cloud_notm}} VM 가상 서버 인스턴스(VSI)입니다. 전체 vCenter Server 인스턴스 관리가 필요할 때 배치되고, 프로세스가 완료될 때 영구 삭제됩니다.
 
-IBM CloudDriver는 2일차 오퍼레이션(예: 호스트 클러스터 또는 추가 서비스를 VMware 인스턴스에 추가)의 필요에 따라 배치되는 일시적인 {{site.data.keyword.cloud_notm}} VM 가상 서버 인스턴스(VSI)입니다. 
+IBM CloudDriver는 2일차 오퍼레이션(예: 호스트 클러스터 또는 추가 서비스를 VMware 인스턴스에 추가)의 필요에 따라 배치되는 일시적인 {{site.data.keyword.cloud_notm}} VM 가상 서버 인스턴스(VSI)입니다.
 
-CloudBuilder 및 CloudDriver는 사설 메시지 큐를 통해 IBM 관리 플레인에 연결하는 사설 네트워크에만 배치됩니다. 이는 IBM 개발 컴포넌트이며 사용자가 액세스할 수 없고 다음 속성 및 기능을 갖고 있습니다. 
-
-- 사용자 계정 내 vCenter Server 인스턴스의 배치 및 구성
-- vCenter Server 클러스터에서 호스트 추가 및 제거
-- vCenter Server 인스턴스에서 클러스터 추가 및 제거
-- vCenter Server 인스턴스에 대한 추가 서비스
+CloudBuilder 및 CloudDriver는 사설 메시지 큐를 통해 IBM 관리 플레인에 연결하는 사설 네트워크에만 배치됩니다. 이들은 IBM에서 개발한 컴포넌트이며 사용자가 액세스할 수 없고 다음과 같은 속성 및 기능을 가지고 있습니다. 
+* 사용자 계정 내 vCenter Server 인스턴스의 배치 및 구성
+* vCenter Server 클러스터에서 호스트 추가 및 제거
+* vCenter Server 인스턴스에서 클러스터 추가 및 제거
+* vCenter Server 인스턴스에 대한 추가 서비스
 또는 기능 제거
 
 ### 자동화 플로우

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -20,8 +20,7 @@ subcollection: vmware-solutions
 
 公共服务提供由云管理平台中其他服务使用的服务。解决方案的公共服务包括身份和访问权服务、域名服务、NTP 服务、SMTP 服务和认证中心服务。
 
-图 1. 公共服务</br>
-![公共服务](vcsv4radiagrams-ra-commonservices.svg)
+![公共服务](../../images/vcsv4radiagrams-ra-commonservices.svg "公共服务")
 
 ## 身份和访问权服务
 {: #design_commonservice-identity-access}
@@ -57,15 +56,15 @@ vSphere Single Sign On (SSO) 域用作单个实例或多个链接实例的初始
 {: #design_commonservice-primary-vcs}
 
 vCenter Server 部署使用已部署的 AD VSI 作为实例的 DNS 服务器。所有部署的组件（具有嵌入式 PSC 的 vCenter、NSX 和 ESXi 主机）都配置为指向作为其缺省 DNS 的 AD。如果 DNS 区域配置不影响已部署组件的配置，那么可以定制 DNS 区域配置。
-- 此设计通过以下配置在 AD VSI 上集成 DNS 服务：
-- 域结构由用户指定。域名可以有任意级别数（最多为所有 vCenter Server 组件可以处理的最大级别数），但应确保最低级别是实例的子域。
-    - 提供的 DNS 域名将用作 vCenter Server 部署的 AD 林根域名。例如，如果 DNS 域名为 cloud.ibm.com，那么 AD 域林根为 cloud.ibm.com。在 vCenter Server 的所有联合实例中，DNS 域和 AD 域相同。
-    - 选择一个额外的名称作为 vCenter Server 实例子域。此子域名在所有链接的 vCenter Server 实例中必须唯一。
-- AD DNS 服务器配置为对于 DNS 域和子域空间都具有权威性。
-- AD DNS 服务器配置为指向其他所有专区的 {{site.data.keyword.cloud_notm}} DNS 服务器。
-- 集成到第一个部署的云区域或目标部署的云区域的任何辅助云区域，在子域之上必须使用相同的 DNS 名称结构。
-- （可选）在 vCenter Server 集群中部署冗余 DNS 服务器。两个 AD/DNS 服务器均配置为未许可。用户负责为这些服务器提供 Windows 操作系统的许可证。
-- 如果一个站点仅供应有一个 AD/DNS 服务器，那么所有配置的 vCenter Server 组件都只能将该单个 IP 作为 DNS 条目。
+
+此设计通过以下配置在 AD VSI 上集成 DNS 服务：
+* 域结构由用户指定。
+* 域名可以有任意级别数（最多为所有 vCenter Server 组件可以处理的最大级别数），但应确保最低级别是实例的子域。
+* AD/DNS 服务器配置为对于 DNS 域和子域空间都具有权威性。
+* AD/DNS 服务器配置为指向其他所有专区的 {{site.data.keyword.cloud_notm}} DNS 服务器。
+* 集成到第一个部署的云区域或目标部署的云区域的任何辅助云区域，在子域之上必须使用相同的 DNS 名称结构。
+* （可选）您可以在 vCenter Server 集群中部署冗余 DNS 服务器。两个 AD/DNS 服务器均配置为未许可。您负责为这些服务器提供 Windows 操作系统的许可证。
+* 如果一个站点仅供应有一个 AD/DNS 服务器，那么所有配置的 vCenter Server 组件都只能将该单个 IP 地址作为 DNS 条目。
 
 ### 辅助 vCenter Server 实例
 {: #design_commonservice-secondary-vcs}
@@ -77,8 +76,7 @@ vCenter Server 部署使用已部署的 AD VSI 作为实例的 DNS 服务器。�
 
 此设计利用 {{site.data.keyword.cloud_notm}} 基础架构 NTP 服务器。所有部署的组件均配置为利用这些 NTP 服务器。使设计中的所有组件都使用相同的 NTP 服务器对于证书和 Active Directory 认证正确运行至关重要。
 
-图 2. NTP 和 DNS 服务</br>
-![NTP 和 DNS 服务](vcsv4radiagrams-ra-servicesinterconnections.svg)
+![NTP 和 DNS 服务](../../images/vcsv4radiagrams-ra-servicesinterconnections.svg "NTP 和 DNS 服务")
 
 ## 认证中心服务
 {: #design_commonservice-cas}

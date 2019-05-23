@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-05-01"
 
 subcollection: vmware-solutions
 
@@ -27,9 +27,7 @@ La oferta NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} complementa el
 
 El gráfico siguiente ilustra la arquitectura general del despliegue de NetApp ONTAP Select on vCenter Server.
 
-Figura 1. Arquitectura general de NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}
-
-![Arquitectura de NetApp ONTAP Select](np_architecture.svg "Arquitectura de alto nivel de NetApp ONTAP Select on IBM Cloud")
+![Arquitectura de NetApp ONTAP Select](../images/np_architecture.svg "Arquitectura de NetApp ONTAP Select")
 
 ### Infraestructura física
 {: #np_netappoverview-physical-infras}
@@ -46,9 +44,7 @@ Esta capa virtualiza la infraestructura física mediante los siguientes producto
 
 El gráfico siguiente ilustra los componentes del despliegue de NetApp ONTAP Select.
 
-Figura 2. Componentes de NetApp ONTAP Select
-
-![Componentes de NetApp ONTAP Select](np_netappcomponents.svg "Componentes de NetApp ONTAP Select")
+![Componentes de NetApp ONTAP Select](../images/np_netappcomponents.svg "Componentes de NetApp ONTAP Select")
 
 ### Gestión de la virtualización
 {: #np_netappoverview-virtualization-mgmt}

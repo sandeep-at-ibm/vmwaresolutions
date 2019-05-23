@@ -253,7 +253,7 @@ Selon la configuration que vous avez sélectionnée pour l'instance et les servi
   2. Sélectionnez le modèle d'UC **Skylake** ou **Broadwell** et la quantité de mémoire **RAM**.
 8. Procédez à la configuration du stockage. Spécifiez les types de disque pour les disques de cache et de capacité, ainsi que le nombre de disques. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**.
 9. Procédez à la configuration de l'interface réseau.
-  1. Entrez le préfixe du nom d'hôte de l'instance mise à disposition, le libellé de sous-domaine et le nom du domaine racine. 
+  1. Entrez le préfixe du nom d'hôte de l'instance mise à disposition, le libellé de sous-domaine et le nom du domaine racine.
   2. Sélectionnez le paramètre réseau **Réseau public et réseau privé** ou **réseau privé uniquement**.
   3. Sélectionnez la configuration VLAN.
      *  Si vous voulez commander de nouveaux VLAN publics et privés, cliquez sur **Commander de nouveaux VLAN**.

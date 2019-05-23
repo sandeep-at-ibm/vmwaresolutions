@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-30"
+lastupdated: "2019-05-03"
 
 subcollection: vmware-solutions
 
@@ -41,7 +41,8 @@ A partir del release V3.0, los servidores Broadwell de 2 CPU ya no estarán disp
 ## Mejoras en el funcionamiento de NFS (Network File System)
 {: #relnotes_v30-nfs}
 
-A partir del release V3.0, puede añadir o eliminar simultáneamente almacenamiento NFS (Network File System) en varios clústeres. Esto se aplica a todas las instancias de vCenter Server y vCenter Server con NSX-T.
+A partir del release V3.0, puede añadir o eliminar de forma simultánea almacenamiento NFS y servidores ESXi en los clústeres que tengan el estado
+**Listo para su uso**. Por ejemplo, puede añadir o eliminar un servidor ESXi en un clúster y añadir o eliminar almacenamiento NFS en otro clúster. Esto se aplica a todas las instancias de vCenter Server y vCenter Server con NSX-T.
 
 ## Actualizaciones de instancias de VMware vCenter Server
 {: #relnotes_v30-vcs}
@@ -120,7 +121,9 @@ Ahora puede añadir Zerto on {{site.data.keyword.cloud_notm}} en instancias que 
 {{site.data.keyword.vmwaresolutions_short}} a VMware vSphere 6.7. Esta actualización es necesaria si desea seguir beneficiándose de la automatización de
 {{site.data.keyword.vmwaresolutions_short}}. Para obtener más información, consulte
 [Actualización del software de vSphere de vCenter Server de VMware vSphere 6.5 a 6.7](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_vsphere_upgrade#vc_vsphere_upgrade).
-* Ahora hay documentación de referencia disponible para proporcionarle ID de usuario que {{site.data.keyword.vmwaresolutions_short}} mantiene para su uso en la automatización de {{site.data.keyword.cloud_notm}}. También tiene la posibilidad de revisar posibles mensajes que se muestran en los registros de historial de instancias. Para obtener más información, consulte [ID de usuario de IBM y mensajes de historial de despliegue para instancias de vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-ibm_use#ibm_use).
+* Ahora hay documentación de referencia disponible para proporcionarle ID de usuario que {{site.data.keyword.vmwaresolutions_short}} mantiene para su uso en la automatización de {{site.data.keyword.cloud_notm}}. También tiene la posibilidad de revisar posibles mensajes que se muestran en los registros de historial de instancias. Para obtener más información, consulte
+[ID de usuario de IBM](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_user_ids) y
+[Mensajes de historial de instancias](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_messages).
 * Se ha añadido el permiso **Rearrancar/Controlar** a la tabla que describe los permisos necesarios para la cuenta de infraestructura de IBM Cloud. Para obtener más información, consulte
 [Permisos para la cuenta de infraestructura de {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-slaccountrequirement#slaccountrequirement-permissions).
 * Hay nueva documentación de referencia disponible para las API siguientes. Para obtener más información, consulte [Referencia de API](https://cloud.ibm.com/apidocs/vmware-solutions){:new_window}.

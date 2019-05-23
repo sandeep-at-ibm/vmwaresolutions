@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-05"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,8 @@ subcollection: vmware-solutions
 
 以下の図と説明は、RiskForesight アプリケーション・コンポーネントに関する情報を提供します。
 
-図 1. アプリケーション・コンポーネント
-![アプリケーション・コンポーネント](caveonix-app-components.svg)
+![アプリケーション・コンポーネント](../../images/caveonix-app-components.svg "アプリケーション・コンポーネント")
+
 
 -	グラフィカル・ユーザー・インターフェース - RiskForesight アプリケーションにアクセスするために使用できる Web インターフェース。
 -	Central Collector - プラグインから送られてくるさまざまなタイプのデータ・ペイロードを収集して、メッセージング・ストアで使用できるようにします。 RiskForesight は、以下のタイプのペイロードをサポートします。
@@ -61,8 +61,7 @@ subcollection: vmware-solutions
 
 以下の図は、プライベート VLAN A に関連付けられた Caveonix ポータブル・プライベート・サブネットのネットワーク・トポロジーを示しています。この「オールインワン」型から発展させて、途中に必要であれば部分分散モデルを介して、最終的には完全分散デプロイメント・モデルに手動でスケールアウトできるように、お客様の責任でこのサブネットの IP アドレス・スペースを管理してください。
 
-図 2. ネットワーク図
-![ネットワーク図](caveonix-network.svg)
+![ネットワーク図](../../images/caveonix-network.svg "ネットワーク図")
 
 以下の表では、IP サブネット、VLAN の割り当てについて説明します。
 

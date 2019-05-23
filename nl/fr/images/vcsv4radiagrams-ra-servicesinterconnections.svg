@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="551px"
+   height="521px"
+   version="1.1"
+   viewBox="-.5 -.5 551 521"
+   id="svg68"
+   sodipodi:docname="vcsv4radiagrams-ra-servicesinterconnections.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <defs
+     id="defs72" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     id="namedview70"
+     showgrid="false"
+     inkscape:zoom="1.2812069"
+     inkscape:cx="190.19092"
+     inkscape:cy="288.66676"
+     inkscape:window-x="-9"
+     inkscape:window-y="51"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg68" />
+  <metadata
+     id="metadata2">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     pointer-events="none"
+     id="g14">
+    <rect
+       x="10"
+       width="530"
+       height="270"
+       rx="40.5"
+       ry="40.5"
+       fill="#a8a8a8"
+       stroke="#666"
+       id="rect4" />
+    <rect
+       y="370"
+       width="200"
+       height="150"
+       rx="22.5"
+       ry="22.5"
+       fill="#ffe6cc"
+       stroke="#d79b00"
+       id="rect6" />
+    <rect
+       x="40"
+       y="20"
+       width="470"
+       height="110"
+       rx="16.5"
+       ry="16.5"
+       fill="#dae8fc"
+       stroke="#6c8ebf"
+       id="rect8" />
+    <rect
+       x="40"
+       y="140"
+       width="470"
+       height="110"
+       rx="16.5"
+       ry="16.5"
+       fill="#d5e8d4"
+       stroke="#82b366"
+       id="rect10" />
+    <rect
+       x="350"
+       y="370"
+       width="200"
+       height="150"
+       rx="22.5"
+       ry="22.5"
+       fill="#fff2cc"
+       stroke="#d6b656"
+       id="rect12" />
+  </g>
+  <g
+     font-family="Helvetica"
+     text-anchor="middle"
+     id="g40">
+    <g
+       font-size="18px"
+       font-weight="bold"
+       id="g24">
+      <text
+         x="99.5"
+         y="401.5"
+         id="text16">Services communs</text>
+      <text
+         x="172"
+         y="51.5"
+         id="text18">Gestion d'infrastructure</text>
+      <text
+         x="147"
+         y="171.5"
+         id="text20">Infrastructure virtuelle</text>
+      <text
+         x="454.5"
+         y="401.5"
+         id="text22">Services IBM Cloud</text>
+    </g>
+    <g
+       font-size="16px"
+       id="g38">
+      <text
+         x="99.5"
+         y="440.5"
+         id="text26">Active Directory</text>
+      <text
+         x="99.5"
+         y="480.5"
+         id="text28">DNS</text>
+      <text
+         x="449.5"
+         y="490.5"
+         id="text30">NTP</text>
+      <text
+         x="274.5"
+         y="110.5"
+         id="text32">VMware vCenter Server</text>
+      <text
+         x="274.5"
+         y="230.5"
+         id="text34">VMware vSphere</text>
+      <text
+         x="449.5"
+         y="445.5"
+         id="text36">DNS</text>
+    </g>
+  </g>
+  <path
+     d="m219.5 450v10.5l-19-15.5 19-15.5v10.5h111v-10.5l19 15.5-19 15.5v-10.5z"
+     fill="#fff"
+     pointer-events="none"
+     stroke="#000"
+     stroke-linejoin="round"
+     stroke-miterlimit="10"
+     id="path42" />
+  <g
+     font-family="Helvetica"
+     font-size="16px"
+     text-anchor="middle"
+     id="g48">
+    <rect
+       x="258"
+       y="436"
+       width="36"
+       height="20"
+       fill="#fff"
+       stroke-width="0"
+       id="rect44" />
+    <text
+       x="274.5"
+       y="450.5"
+       id="text46">DNS</text>
+  </g>
+  <path
+     d="m447.06 350.09 9.68-4.07-6.93 23.52-21.65-11.52 9.68-4.06-26.9-64.05-9.68 4.07 6.93-23.52 21.65 11.52-9.68 4.06z"
+     fill="#fff"
+     pointer-events="none"
+     stroke="#000"
+     stroke-linejoin="round"
+     stroke-miterlimit="10"
+     id="path50" />
+  <g
+     font-size="16px"
+     id="g56"
+     transform="translate(-8)"
+     style="font-size:16px;font-family:Helvetica;text-anchor:middle">
+    <rect
+       x="321"
+       y="302"
+       width="218"
+       height="39"
+       id="rect52"
+       style="fill:#ffffff;stroke-width:0" />
+    <text
+       x="428.59"
+       y="335.20999"
+       id="text54">Synchronisation de l'horloge réseau</text>
+  </g>
+  <path
+     d="m112.3 354.06 9.64 4.15-21.74 11.33-6.74-23.58 9.65 4.15 27.59-64.17-9.64-4.15 21.74-11.33 6.74 23.58-9.65-4.15z"
+     fill="#fff"
+     pointer-events="none"
+     stroke="#000"
+     stroke-linejoin="round"
+     stroke-miterlimit="10"
+     id="path58" />
+  <g
+     font-family="Helvetica"
+     font-size="16px"
+     text-anchor="middle"
+     id="g66">
+    <rect
+       x="30"
+       y="292"
+       width="184"
+       height="58"
+       fill="#fff"
+       stroke-width="0"
+       id="rect60" />
+    <text
+       x="120.83"
+       y="316.39"
+       id="text62">Authentification</text>
+    <text
+       x="120.83"
+       y="335.39"
+       id="text64">Résolution de nom de domaine</text>
+  </g>
+</svg>

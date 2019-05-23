@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 系統環境定義圖會定義系統的主要元素、系統界限，以及與其互動的實體和互動。它是高階圖，提供讀者系統起始視圖。
 
-圖 1. 系統環境定義
-![系統環境定義圖](vcsnsxt-networking.svg)
+![系統環境定義圖](../../images/vcsnsxt-networking.svg "系統環境定義圖")
 
 網路視景中的四個核心元件如下：
 - **內部部署虛擬化** - 此 VMware 環境裝載於用戶端內部部署或協力廠商，並且目前管理正在執行要現代化之應用程式的虛擬機器 (VM)。它是 VM 移轉的來源環境，並且透過 VMware HCX 與 {{site.data.keyword.cloud}} 鬆散耦合。

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-02"
 
 subcollection: vmware-solutions
 
@@ -35,9 +35,7 @@ vCenter Server with Hybridity Bundle 是一個提供 VMware vSphere 堆疊作為
 
 下圖說明三節點 vCenter Server with Hybridity Bundle 部署的高階架構及元件。
 
-圖 1. vCenter Server with Hybridity Bundle 高階架構
-
-![vCenter Server with Hybridity Bundle 架構](hybrid_architecture.svg "vCenter Server with Hybridity Bundle 高階架構")
+![vCenter Server with Hybridity Bundle 架構](../images/hybrid_architecture.svg "vCenter Server with Hybridity Bundle 架構")
 
 ### 實體基礎架構
 {: #vc_hybrid_overview-physical-infras}
@@ -82,7 +80,7 @@ vCenter Server with Hybridity Bundle 是一個提供 VMware vSphere 堆疊作為
 {: #vc_hybrid_overview-bare-metal}
 
 您可以訂購含有下列其中一個配置的四個以上的 {{site.data.keyword.baremetal_short}}：
-  * **Skylake**：2-CPU Intel Skylake 產生伺服器（Intel Xeon 4100/5100/6100 系列），搭配您選取的 CPU 型號及 RAM 大小。
+  * **Skylake**：2-CPU Intel Skylake 世代伺服器（Intel Xeon 4100/5100/6100 系列），搭配您選取的 CPU 型號及 RAM 大小。
   * **Broadwell**：4-CPU Intel Broadwell 世代伺服器（Intel Xeon E7-4800 系列），搭配您選取的 CPU 型號及 RAM 大小。
 
 ### 網路

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-25"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 強化 Stock Trader 不是一次性步驟。對於 Todd 及 Jane，這是反覆運算處理程序。在下圖中，您會看到 Jane 已使用 ODM 決策中心來新增 Watson Tone Analyzer 服務及忠誠度層次規則。下列項目強調顯示如何強化 Stock Trader。
 
-圖 1. 進一步強化 Stock Trader
-![Stock Trader 強化反覆運算結果](vcscontent-enriched.svg)
+![Stock Trader 擴充反覆運算結果](../../images/vcscontent-enriched.svg "Stock Trader 擴充反覆運算結果")
 
 ## AI Watson Tone Analyzer
 {: #vcscontent-aianalytics-ai-watson}

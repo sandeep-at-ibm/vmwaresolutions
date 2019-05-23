@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-22"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -59,8 +59,7 @@ VMware vCenter Server on {{site.data.keyword.cloud_notm}} Hybridity Bundle 服�
 ## 虛擬結構
 {: #vcscar-arch-overview-infrastructure-virt-structure}
 
-圖 1. vCenter Server 及 {{site.data.keyword.icpfull_notm}} 部署的結構
-![vCenter Server 及 {{site.data.keyword.icpfull_notm}} 部署的結構](vcscar-icp.svg)
+![vCenter Server 和 {{site.data.keyword.icpfull_notm}} 部署的結構](../../images/vcscar-icp.svg "vCenter Server 和 {{site.data.keyword.icpfull_notm}} 部署的結構")
 
 在 vCenter Server 實例內，會使用專用 NSX Edge Services Gateway (ESG) 及「分散式邏輯路由器 (DLR)」來部署 {{site.data.keyword.icpfull_notm}} 實例。{{site.data.keyword.icpfull_notm}} 安裝會載入至先前元件中定義的 VXLAN 子網路。
 

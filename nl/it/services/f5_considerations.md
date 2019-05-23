@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-01"
 
 subcollection: vmware-solutions
 
@@ -126,4 +126,4 @@ Prima di rimuovere il servizio F5 on {{site.data.keyword.cloud_notm}}, assicurat
 * [Gestione di F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_f5)
 * [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [Domande frequenti](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Sito web F5](https://f5.com/){:new_window}
+* [Sito web F5](https://www.f5.com/){:new_window}

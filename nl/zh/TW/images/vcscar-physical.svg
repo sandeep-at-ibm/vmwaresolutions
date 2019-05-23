@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="611px" height="589px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(.5 .5)">
+  <rect x=".5" y="29" width="609" height="558" fill="#dae8fc" pointer-events="none" stroke="#6c8ebf" stroke-width="2"/>
+  <rect x="24" y="107" width="552" height="365" fill="#d5e8d4" pointer-events="none" stroke="#82b366"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="45" y="51">VCS 叢集</text>
+  </g>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="70" y="125.5">ICP 叢集</text>
+  </g>
+  <rect x="228" y="119.5" width="150" height="70" fill="#eee" pointer-events="none" stroke="#36393d"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="302.5" y="182">Proxy 節點</text>
+  </g>
+  <rect x="243" y="129.5" width="120" height="30" fill="#fff" pointer-events="none" stroke="#000"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="302.5" y="147">Ingress 控制器</text>
+  </g>
+  <rect x="243.5" y="43.5" width="120" height="30" fill="#fff" pointer-events="none" stroke="#000"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="303" y="61">10.x.x (natted)</text>
+  </g>
+  <g fill="none" pointer-events="none" stroke="#008a00" stroke-miterlimit="10" stroke-width="2">
+   <path d="m123.5 271 180-81"/>
+   <path d="m302.11 271 0.89-81.67"/>
+   <path d="m471.66 270.72-168.66-81.39"/>
+  </g>
+  <rect x="224.5" y="501.5" width="150" height="71" fill="#eee" pointer-events="none" stroke="#36393d" stroke-width="2"/>
+  <rect x="243.5" y="511.5" width="122" height="30" fill="#fff" pointer-events="none" stroke="#000"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="304" y="523">MySQL</text>
+  </g>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="304" y="565">虛擬機器</text>
+  </g>
+  <g fill="none" pointer-events="none" stroke-miterlimit="10" stroke-width="2">
+   <path d="m299.67 501.33 1.64-94.05" stroke="#fa6800"/>
+   <path d="m448.33 456.67-0.33 74.33-73 0.33" stroke="#fa6800"/>
+   <path d="m303.08 129.57 0.42-56.07" stroke="#008a00"/>
+   <path d="m302.08 43.5 0.42-43" stroke="#008a00"/>
+  </g>
+  <rect x="79" y="240.5" width="124" height="217" fill="#eee" pointer-events="none" stroke="#36393d" stroke-width="2"/>
+  <rect x="93.5" y="378.5" width="95" height="58" fill="#fff" pointer-events="none" stroke="#000"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="138" y="443">工作者節點</text>
+  </g>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <text x="145" y="430">Pod </text>
+  </g>
+  <rect x="101" y="387.5" width="79" height="30" fill="#cff" pointer-events="none" stroke="#36393d"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="140" y="404">Web 容器</text>
+  </g>
+  <rect x="93.5" y="313.5" width="95" height="58" fill="#fff" pointer-events="none" stroke="#000"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <text x="145" y="365">Pod </text>
+  </g>
+  <rect x="101" y="322.5" width="79" height="30" fill="#cff" pointer-events="none" stroke="#36393d"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="140" y="328">顧問</text>
+   <text x="140" y="340">容器</text>
+  </g>
+  <rect x="93.5" y="249.5" width="95" height="58" fill="#fff" pointer-events="none" stroke="#000"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <text x="145" y="301.5">Pod </text>
+  </g>
+  <rect x="101" y="258.5" width="79" height="30" fill="#cff" pointer-events="none" stroke="#36393d"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="140.5" y="270">nginx 容器</text>
+  </g>
+  <rect x="243.5" y="240.5" width="124" height="217" fill="#eee" pointer-events="none" stroke="#36393d" stroke-width="2"/>
+  <rect x="258" y="378.5" width="95" height="58" fill="#fff" pointer-events="none" stroke="#000"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="302.5" y="443">工作者節點</text>
+  </g>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <text x="309.5" y="430">Pod </text>
+  </g>
+  <rect x="265.5" y="387.5" width="79" height="30" fill="#cff" pointer-events="none" stroke="#36393d"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="304.5" y="404">Web 容器</text>
+  </g>
+  <rect x="258" y="313.5" width="95" height="58" fill="#fff" pointer-events="none" stroke="#000"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <text x="309.5" y="364.5">Pod </text>
+  </g>
+  <rect x="265.5" y="322.5" width="79" height="30" fill="#cff" pointer-events="none" stroke="#36393d"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="304.5" y="328">顧問</text>
+   <text x="304.5" y="340">容器</text>
+  </g>
+  <rect x="258" y="249.5" width="95" height="58" fill="#fff" pointer-events="none" stroke="#000"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="309" y="294">Pod </text>
+  </g>
+  <rect x="265.5" y="258.5" width="79" height="30" fill="#cff" pointer-events="none" stroke="#36393d"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="304.5" y="270">nginx 容器</text>
+  </g>
+  <rect x="388.5" y="240.5" width="124" height="217" fill="#eee" pointer-events="none" stroke="#36393d" stroke-width="2"/>
+  <rect x="403" y="378.5" width="95" height="58" fill="#fff" pointer-events="none" stroke="#000"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="447.5" y="443">工作者節點</text>
+  </g>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <text x="454.5" y="430">Pod </text>
+  </g>
+  <rect x="410.5" y="387.5" width="79" height="30" fill="#cff" pointer-events="none" stroke="#36393d"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="449.5" y="404">Web 容器</text>
+  </g>
+  <rect x="403" y="313.5" width="95" height="58" fill="#fff" pointer-events="none" stroke="#000"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <text x="454.5" y="365">Pod </text>
+  </g>
+  <rect x="410.5" y="322.5" width="79" height="30" fill="#cff" pointer-events="none" stroke="#36393d"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="449.5" y="328">顧問</text>
+   <text x="449.5" y="340">容器</text>
+  </g>
+  <rect x="403" y="249.5" width="95" height="58" fill="#fff" pointer-events="none" stroke="#000"/>
+  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
+   <text x="454.5" y="300">Pod </text>
+  </g>
+  <rect x="410.5" y="258.5" width="79" height="30" fill="#cff" pointer-events="none" stroke="#36393d"/>
+  <g font-family="Helvetica" font-size="10px" text-anchor="middle">
+   <text x="449.5" y="270">nginx 容器</text>
+  </g>
+  <path d="m224.33 537.33-85.33-0.33-0.67-80.33" fill="none" pointer-events="none" stroke="#fa6800" stroke-miterlimit="10" stroke-width="2"/>
+ </g>
+</svg>

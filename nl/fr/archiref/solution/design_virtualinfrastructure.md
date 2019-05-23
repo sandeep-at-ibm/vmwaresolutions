@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-09"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -20,8 +20,7 @@ subcollection: vmware-solutions
 
 La couche d'infrastructure virtuelle inclut les composants logiciels VMware qui virtualisent les ressources de calcul, de stockage et de réseau fournies dans la couche d'infrastructure physique : VMware vSphere ESXi, VMware NSX-V ou NSX-T et éventuellement VMware vSAN.
 
-Figure 1. Infrastructure virtuelle</br>
-![Infrastructure virtuelle](vcsv4radiagrams-ra-virtinfra.svg)
+![Infrastructure virtuelle](../../images/vcsv4radiagrams-ra-virtinfra.svg "Infrastructure virtuelle")
 
 ## Conception de VMware vSphere
 {: #design_virtualinfrastructure-vsphere-design}
@@ -58,7 +57,7 @@ Le cluster vSphere héberge les machines virtuelles qui gèrent l'instance vCent
 Vous pouvez effectuer une mise à l'échelle jusqu'à 59 hôtes ESXi au maximum durant ou après le déploiement initial.
 
 Pour prendre en charge davantage de charges de travail utilisateur, vous pouvez effectuer une mise à l'échelle de l'environnement en :  
-* Déployant plusieurs hôtes de calcul dans les clusters existants 
+* Déployant plusieurs hôtes de calcul dans les clusters existants
 * Déployant d'autres clusters gérés par le même dispositif vCenter Server Appliance
 * Déployant de nouvelles instances vCenter Server avec leur propre dispositif vCenter Server Appliance
 
@@ -71,9 +70,7 @@ Dans cette conception, le stockage VMware vSAN est employé dans des instances v
 
 Comme illustré dans la figure suivante, vSAN agrège le stockage local sur plusieurs hôtes ESXi dans un cluster vSphere et gère le stockage agrégé comme un seul magasin de données de machine virtuelle. Avec cette conception, les noeuds de traitement contiennent les unités de disque local pour le système d'exploitation ESXi et le magasin de données vSAN. Quel que soit le cluster auquel appartient un noeud, deux unités de système d'exploitation sont incluses dans chaque noeud pour héberger l'installation ESXi.
 
-Figure 2. Concept vSAN
-
-![Concept vSAN](vcsv4radiagrams-ra-vsan.svg "vSAN agrège le stockage local sur plusieurs hôtes ESXi dans un cluster vSphere et gère le stockage agrégé comme un seul magasin de données de machine virtuelle")
+![Concept vSAN](../../images/vcsv4radiagrams-ra-vsan.svg "vSAN agrège le stockage local sur plusieurs hôtes ESXi dans un cluster vSphere et gère le stockage agrégé comme un seul magasin de données de machine virtuelle")
 
 vSAN emploie les composants suivants :
 * Conception vSAN avec deux groupes de disques ; chaque groupe de disques est composé d'au moins deux disques. L'unité SSD ou NVMe la plus petite dans le groupe sert de niveau de cache et les autres unités SSD servent de niveau de capacité.
@@ -116,6 +113,17 @@ Les paramètres vSAN sont définis selon les meilleures pratiques relatives au d
    * vSAN - 100 partages
 * Ports de noyau vSAN : **Basculement explicite**
 
+## Stockage NFS connecté
+{: #design_virtualinfrastructure-nfs-storage}
+
+Lors de l'utilisation du stockage connecté au réseau NFS, cette architecture prescrit l'utilisation de NFS v3 au lieu de NFS v4.1, car les migrations LIF de serveur NFS peuvent provoquer un temps d'attente excessif lorsque NFS v4.1 est utilisé. Chaque hôte vSphere est connecté au stockage NFS à l'aide de son nom d'hôte. 
+
+Un magasin de données NFS 2 To est connecté à un cluster pour être utilisé par des composants de gestion avec un niveau de performance de IOPS/Go. D'autres magasins de données peuvent être connectés à un cluster pour l'utilisation de charge de travail, à différentes tailles et différents niveaux de performance. 
+
+De plus, cette architecture requiert que tous les hôtes disposent d'une route de sous-réseau créée pour le sous-réseau sur lequel réside le stockage NFS. Cette route de sous-réseau a pour objet de diriger tout le trafic NFS afin d'utiliser le groupe de ports, le sous-réseau et le VLAN conçus pour le trafic NFS. Si plusieurs magasins de données NFS sont connectés, il peut être nécessaire de configurer plusieurs routes car ces magasins de données peuvent se trouver dans différents sous-réseaux distants. 
+
+Les machines virtuelles de gestion peuvent se trouver sur un magasin de données NFS. Cela crée un problème d'amorçage car certaines des machines de gestion peuvent être responsables des services DNS qui sont utilisés pour résoudre le nom d'hôte NFS. Par conséquent, cette architecture spécifie qu'au moins l'une des adresses IP pour le magasin de données de gestion doit être codée en dur dans `/etc/hosts` sur chacun des hôtes.
+
 ## Stockage iSCSI connecté
 {: #design_virtualinfrastructure-iscsi-storage}
 
@@ -124,6 +132,8 @@ Contrairement à un stockage connecté NFS v3, un stockage connecté iSCSI prend
 Le stockage par blocs d'{{site.data.keyword.cloud_notm}} Endurance prend en charge un maximum de 64 adresses IP par numéro d'unité logique lors de l'utilisation de VMware, ce qui autorise jusqu'à 32 hôtes dans ce modèle.
 
 Un numéro d'unité logique iSCSI de 2 To est connecté au cluster vSphere pour l'utilisation des composants de gestion, et un minimum d'un numéro d'unité logique iSCSI supplémentaire est configuré pour l'utilisation des charges de travail du client. Ce stockage est formaté comme un système de fichiers VMFS 6.x pour chaque numéro d'unité logique.
+
+Cette architecture spécifie l'utilisation de la liaison de ports iSCSI, d'une politique circulaire pour le multi-accès, d'un nombre maximal de lignes de la file d'attente fixé à 64 et d'une limite IOPS circulaire égale à 1. 
 
 ### Configuration de réseau virtuel pour iSCSI
 {: #design_virtualinfrastructure-setup-iscsi}
@@ -153,9 +163,7 @@ Dans cette conception, NSX Manager est déployé dans le cluster initial. NSX Ma
 
 La figure suivante illustre l'emplacement de NSX Manager par rapport aux autres composants de l'architecture.
 
-Figure 3. Présentation du réseau NSX Manager
-
-![NSX Manager](vcsv4radiagrams-ra-vcs-nsx-overview.svg "Présentation de l'emplacement de NSX Manager par rapport aux autres composants de l'architecture réseau ")
+![Présentation de l'emplacement de NSX Manager par rapport aux autres composants de l'architecture réseau](../../images/vcsv4radiagrams-ra-vcs-nsx-overview.svg "Présentation de l'emplacement de NSX Manager par rapport aux autres composants de l'architecture réseau")
 
 Après le déploiement initial, l'automatisation {{site.data.keyword.cloud_notm}} déploie trois contrôleurs NSX dans le cluster initial. Chacun des contrôleurs se voit affecter une adresse IP VLAN provenant du sous-réseau portable **Privé A** destiné aux composants de gestion. En outre, la conception crée des règles anti-affinité MV-MV pour séparer les contrôleurs parmi les hôtes du cluster. Le cluster initial doit contenir un minimum de trois noeuds pour garantir la haute disponibilité des contrôleurs.
 
@@ -185,9 +193,7 @@ Table 3. Exigences pour NSX Manager
 
 La conception utilise un nombre minimal de commutateurs vDS. Les hôtes du cluster sont connectés aux réseaux public et privé. Les hôtes sont configurés avec deux commutateurs virtuels distribués. L'utilisation de deux commutateurs est conforme à la pratique du réseau {{site.data.keyword.cloud_notm}} qui sépare le réseau public et le réseau privé. Le diagramme suivant illustre la conception vDS.
 
-Figure 4. Conception de commutateur distribué
-
-![Conception de commutateur distribué](vcsv4radiagrams-distributed-switch-design.svg "Conception vDS")
+![Conception de commutateur distribué](../../images/vcsv4radiagrams-distributed-switch-design.svg "Conception de commutateur distribué")
 
 Comme illustré dans la figure précédente, un commutateur vDS est configuré pour la connectivité de réseau public (SDDC-Dswitch-Public) et l'autre commutateur vDS est configuré pour la connectivité de réseau privé (SDDC-Dswitch-Private). La séparation des différents types de trafic est nécessaire pour réduire les conflits et les temps d'attente et renforcer la sécurité.
 
@@ -197,9 +203,9 @@ Table 4. Mappage VLAN aux types de trafic
 
 | VLAN  | Désignation | Type de trafic |
 |:----- |:----------- |:------------ |
-| VLAN1 | Public      | Disponible pour l'accès Internet |
-| VLAN2 | Privé A   | Gestion ESXi, gestion, VXLAN (VTEP) |
-| VLAN3 | Privé B   | vSAN, NFS, vMotion, iSCSI |
+| Réseau local virtuel 1 | Privé A   | Gestion ESXi, gestion, VXLAN (VTEP) |
+| Réseau local virtuel 2 | Privé B   | vSAN, NFS, vMotion, iSCSI |
+| Réseau local virtuel 3 | Public      | Disponible pour l'accès Internet |
 
 Le trafic issu des charges de travail transite sur des commutateurs logiques VXLAN.
 
@@ -271,8 +277,7 @@ Les aspects suivants ne sont pas configurés :
 * Micro segmentation
 * Gestion NSX liée à d'autres instances VMware
 
-Figure 5. Exemple de topologie client NSX déployée
-![Exemple de topologie client NSX déployée](vcsv4radiagrams-ra-vcs-nsx-topology-customer-example.svg)
+![Exemple de topologie NSX client déployée](../../images/vcsv4radiagrams-ra-vcs-nsx-topology-customer-example.svg "Exemple de topologie NSX client déployée")
 
 ## Connectivité au réseau public
 
@@ -284,7 +289,7 @@ Cette architecture permet les options suivantes pour router ou mettre en proxy v
 
 Méthode|Description|Limitations
 --|--|--
-Passerelle virtualisée |Déployez une passerelle virtualisée (par exemple, NSX ESG, F5 BIG-IP, FortiGate-VM, ou un dispositif virtuel de votre choix) sur le réseau privé et public. Configurez le routage sur le système source (par exemple, vCenter, Zerto, votre charge de travail) pour diriger uniquement le trafic du réseau public vers la passerelle, et configurez la passerelle selon vos besoins.|Applicable uniquement aux instances dont les interfaces publiques sont activées. Cette configuration tient compte à la fois des modèles de trafic sortant et entrant.
+Passerelle virtualisée|Déployez une passerelle virtualisée (par exemple, NSX ESG, F5 BIG-IP, FortiGate-VM, ou un dispositif virtuel de votre choix) sur le réseau privé et public. Configurez le routage sur le système source (par exemple, vCenter, Zerto, votre charge de travail) pour diriger uniquement le trafic du réseau public vers la passerelle, et configurez la passerelle selon vos besoins.|Applicable uniquement aux instances dont les interfaces publiques sont activées. Cette configuration tient compte à la fois des modèles de trafic sortant et entrant.
 Passerelle virtualisée avec proxy|Déployez une passerelle virtualisée comme ci-dessus. Derrière cette passerelle, [déployez un serveur proxy](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-init-config#vum-init-config) et configurez vos services et applications pour les relier au réseau public par ce serveur.|Applicable uniquement aux instances dont les interfaces publiques sont activées. Les modèles de trafic sortant peuvent utiliser le proxy mais les modèles de trafic entrant doivent être gérés au niveau de la passerelle.
 Passerelle matérielle|Déployez un [dispositif de passerelle matérielle](https://cloud.ibm.com/catalog/infrastructure/gateway-appliance) sur votre réseau local virtuel de gestion. Configurez la passerelle pour transférer le trafic sortant vers le réseau public selon vos besoins.|Applicable à toutes les instances, avec ou sans interface publique activée. Cette configuration tient compte à la fois des modèles de trafic sortant et entrant.
 Passerelle matérielle avec proxy|Déployez un dispositif de passerelle comme ci-dessus. Derrière cette passerelle, [déployez un serveur proxy](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-init-config#vum-init-config) et configurez vos services et applications pour les relier au réseau public par ce serveur.|Applicable à toutes les instances, avec ou sans interface publique activée. Les modèles de trafic sortant peuvent utiliser le proxy mais les modèles de trafic entrant doivent être gérés par la passerelle.

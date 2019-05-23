@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -14,8 +14,7 @@ subcollection: vmware-solutions
 # Contesto di sistema
 {: #vcsicp-systemcontext}
 
-Figura 1. Diagramma del contesto di sistema
-![Diagramma del contesto di sistema - CAM {{site.data.keyword.icpfull_notm}} vCenter Server](vcsicp-syscontext-vcs-icp-cam.svg)
+![Diagramma del contesto di sistema - vCenter Server {{site.data.keyword.icpfull_notm}} CAM](../../images/vcsicp-syscontext-vcs-icp-cam.svg "Diagramma del contesto di sistema - vCenter Server {{site.data.keyword.icpfull_notm}} CAM")
 
 I seguenti sono i componenti principali:
 

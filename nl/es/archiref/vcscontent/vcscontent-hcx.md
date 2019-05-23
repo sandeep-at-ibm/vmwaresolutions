@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -23,8 +23,7 @@ de VMware.
 Los componentes de vCenter Server con el paquete híbrido (Hybridity), que se despliegan como máquinas virtuales en el sitio de destino de {{site.data.keyword.cloud_notm}} VMware, permiten establecer una conexión con los componentes de
 HCX instalados en el sitio local de origen homólogo.
 
-Figura 1. vCenter Server con paquete híbrido (Hybridity)
-![vCenter Server con paquete híbrido (Hybridity)](vcscontent-hcx.svg)
+![vCenter Server con el paquete híbrido (Hybridity)](../../images/vcscontent-hcx.svg "vCenter Server con el paquete híbrido (Hybridity)")
 
 La hibridación crea una interconexión ligeramente acoplada entre {{site.data.keyword.cloud_notm}} local y ofrece las siguientes funciones:
 

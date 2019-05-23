@@ -117,5 +117,4 @@ Microsoft Active Directory (AD)/Domain Name Server (DNS) est automatiquement con
 ## Documentation nouvelle et mise à jour
 {: #relnotes_v19-new-docs}
 
-* Apprenez à protéger des instances Cloud Foundation multisite privées tout en développant vos applications VMware de manière à utiliser des services {{site.data.keyword.cloud_notm}} publics. Pour plus d'informations, voir [Connexion sécurisée à vos charges de travail VMware privées dans {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}.
 * Une documentation supplémentaire est fournie pour configurer les pare-feu qui permettent toutes les communications de protocole depuis IBM CloudDriver et les machines virtuelles du gestionnaire SDDC. Pour plus d'informations, voir [Composants et remarques pour Fortinet on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations).

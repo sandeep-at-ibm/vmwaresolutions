@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-22"
+lastupdated: "2019-05-03"
 
 subcollection: vmware-solutions
 
@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 
 可以根据业务需求，通过添加或除去 ESXi 服务器或网络文件系统 (NFS) 存储器，扩展或收缩 VMware vCenter Server with NSX-T 实例的容量。
 
-* 从 V3.0 发行版开始，您可以在多个集群中同时添加或除去 NFS 存储器。
+* 从 V3.0 发行版开始，您可以在多个处于**可供使用**状态的集群中同时添加或除去 NFS 存储器和 ESXi 服务器。例如，可以在一个集群中添加或除去 ESXi 服务器，在另一个集群中添加或除去 NFS 存储器。
 * 从 V2.9 发行版开始，您可以在新的 ESXi 服务器处于维护模式时将这些服务器添加到集群。此外，您还可以跨多个集群同时添加或除去 ESXi 服务器。
 
 **注**：

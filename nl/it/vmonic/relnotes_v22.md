@@ -39,7 +39,7 @@ Durante il processo di aggiornamento alla V2.2, la VM (Virtual Machine) IBM Clou
 * Se utilizzi una soluzione di backup che fa riferimento alla VM (Virtual Machine) IBM CloudDriver, dopo l'aggiornamento alla V2.2, assicurati che la soluzione di backup faccia riferimento alla nuova VM (Virtual Machine) IBM CloudDriver.
 * Prima di eseguire l'aggiornamento alla V2.2, assicurati di sostituire la VSI Veeam legacy con il servizio Veeam on {{site.data.keyword.cloud_notm}}. Veeam legacy non è più supportato nella V2.2 e release future, pertanto i backup dei componenti di gestione associati a Veeam legacy non sono disponibili per un ripristino.
 
-Per ulteriori informazioni sull'utilizzo del servizio Veeam on {{site.data.keyword.cloud_notm}}, vedi: 
+Per ulteriori informazioni sull'utilizzo del servizio Veeam on {{site.data.keyword.cloud_notm}}, vedi:
 * [Componenti e considerazioni per Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)
 * [Gestione di Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
 

@@ -117,5 +117,4 @@ Microsoft Active Directory(AD)/DNS(Domain Name Server)는 업데이트만 다운
 ## 새로 작성되고 업데이트된 문서
 {: #relnotes_v19-new-docs}
 
-* 공용 {{site.data.keyword.cloud_notm}} 서비스를 사용하기 위해 VMware 애플리케이션을 확장하는 동안 사설 다중 사이트 Cloud Foundation 인스턴스를 보호하는 방법을 알아보십시오. 자세한 정보는 [{{site.data.keyword.cloud_notm}}에서 사설 VMware 워크로드의 보안 연결](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}을 참조하십시오.
 * IBM CloudDriver 및 SDDC Manager 가상 머신에서 모든 프로토콜 통신을 허용하는 방화벽을 구성하기 위해 추가 문서가 제공됩니다. 자세한 정보는 [Fortinet on {{site.data.keyword.cloud_notm}}에 대한 컴포넌트 및 고려사항](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations)을 참조하십시오.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-09"
 
 subcollection: vmware-solutions
 
@@ -19,9 +19,7 @@ subcollection: vmware-solutions
 
 공통 서비스는 클라우드 관리 플랫폼의 기타 서비스에서 사용하는 서비스를 제공합니다. 공통 서비스는 ID 및 액세스 서비스, Domain Name Service 및 NTP 서비스가 포함됩니다.
 
-그림 1. {{site.data.keyword.icpfull_notm}} 공통 서비스
-
-![{{site.data.keyword.icpfull_notm}} 공통 서비스](vcsicp-icp-commonservices.svg)
+![{{site.data.keyword.icpfull_notm}} 공통 서비스](../../images/vcsicp-icp-commonservices.svg "{{site.data.keyword.icpfull_notm}} 공통 서비스")
 
 ### ID 및 액세스 서비스
 {: #vcsicp-detail-design-identity}
@@ -50,9 +48,7 @@ VCS 배치에 포함된 NSX-V 네트워킹을 사용하여 {{site.data.keyword.i
 
 {{site.data.keyword.icpfull_notm}}는 Kubernetes에 대한 기본 Calico 네트워킹 스택을 사용하여 배치되며, 클러스터 내에서 네트워크 격리를 제공합니다.
 
-그림 2. NSX-V 네트워킹을 사용하는 {{site.data.keyword.icpfull_notm}}
-
-![NSX-V 네트워킹을 사용하는 {{site.data.keyword.icpfull_notm}}](vcsicp-nsxv-networking.svg)
+![NSX-V 네트워킹을 사용하는 {{site.data.keyword.icpfull_notm}}](../../images/vcsicp-nsxv-networking.svg "NSX-V 네트워킹을 사용하는 {{site.data.keyword.icpfull_notm}}")
 
 자세한 정보는 [vCenter Server 네트워킹 안내서](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro)를 참조하십시오.
 
@@ -63,9 +59,7 @@ NSX-T는 모든 유형의 애플리케이션에 연결할 수 있는 단일 네�
 
 {{site.data.keyword.icpfull_notm}}는 Calico 네트워킹을 NSX-T 인스턴스로 대체하기 위한 옵션을 제공하며 네트워킹 및 보안 관리를 위한 단일 위치를 제공합니다.
 
-그림 3. NSX-T 네트워킹을 사용하는 {{site.data.keyword.icpfull_notm}}
-
-![NSX-T 네트워킹을 사용하는 {{site.data.keyword.icpfull_notm}}](vcsicp-icp-nsxt-networking.svg)
+![NSX-T 네트워킹을 사용하는 {{site.data.keyword.icpfull_notm}}](../../images/vcsicp-icp-nsxt-networking.svg "NSX-T 네트워킹을 사용하는 {{site.data.keyword.icpfull_notm}}")
 
 ## 관련 링크
 {: #vcsicp-detail-design-related}

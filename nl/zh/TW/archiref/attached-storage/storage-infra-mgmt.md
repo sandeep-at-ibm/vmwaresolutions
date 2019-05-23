@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-13"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -48,9 +48,7 @@ subcollection: vmware-solutions
 
 除了為 NFS 儲存空間資料流量建立 vDS 埠群組之外，還會在部署期間於每部 vSphere ESXi 主機上建立 VMkernel 埠，並指派至 SDDC-DPG-NFS 埠群組。VMkernel 埠也獲指派一個來自專用可攜式子網路的 IP 位址，其與連接儲存空間 VLAN 相關聯，亦即，專用 VLAN B 及其 MTU 是設為 9000 以支援巨大訊框。
 
-圖 1. 專用 vDS 埠群組及上行鏈路
-
-![專用 vDS 埠群組及上行鏈路](private_vds_portgroups_and_uplinks.svg "專用 vDS 埠群組及上行鏈路")
+![專用 vDS 埠群組和上行鏈路](../../images/private_vds_portgroups_and_uplinks.svg "專用 vDS 埠群組和上行鏈路")
 
 ### vSphere 主機靜態遞送
 {: #storage-infra-mgmt-vsphere-routing}

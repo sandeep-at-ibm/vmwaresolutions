@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -66,10 +66,7 @@ CPU | 2 – 56개 코어 | 4 – 28개 코어
 ## 가상 구조
 {: #vcsiks-arch-overview-infrastructure-virtual-structure}
 
-그림 1. {{site.data.keyword.containerlong_notm}} 및 {{site.data.keyword.icpfull_notm}} 배치의 물리적 구조
-
-![{{site.data.keyword.containerlong_notm}} 및 {{site.data.keyword.icpfull_notm}} 배치의 물리적 구조
-다이어그램](vcsiks-phy-ics-iks-deployment.svg)
+![{{site.data.keyword.containerlong_notm}} 및 {{site.data.keyword.icpfull_notm}} 배치의 물리적 구조 다이어그램](../../images/vcsiks-phy-ics-iks-deployment.svg "{{site.data.keyword.containerlong_notm}} 및 {{site.data.keyword.icpfull_notm}} 배치의 물리적 구조 다이어그램"){: caption="그림 1. {{site.data.keyword.containerlong_notm}} 및 {{site.data.keyword.icpfull_notm}} 배치의 물리적 구조" caption-side="bottom"}
 
 vCenter Server 인스턴스 내에서, 고객 VMS는 전용 NSX ESG(Edge Services Gateway) 및 DLR(Distributed Logical Router)로 배치됩니다.
 
@@ -78,8 +75,7 @@ ESG는 아웃바운드 트래픽을 허용하도록 소스 NAT 규칙(SNAT)을 �
 ## vCenter Server 컴포넌트
 {: #vcsiks-arch-overview-infrastructure-vcs-comp}
 
-그림 2. vCenter Server 플랫폼 컴포넌트
-![vCenter Server 환경 다이어그램](vcsiks-vcs-env.svg)
+![vCenter Server 환경 다이어그램](../../images/vcsiks-vcs-env.svg "vCenter Server 환경 다이어그램")
 
 ### Platform Service Controller
 {: #vcsiks-arch-overview-infrastructure-psc}
@@ -136,9 +132,7 @@ Edge 크기 압축 | vCPU 수 1
 ## IBM Cloud Kubernetes Service 컴포넌트
 {: #vcsiks-arch-overview-infrastructure-iks-comp}
 
-그림 3. {{site.data.keyword.containerlong_notm}} 컴포넌트
-</br>
-![{{site.data.keyword.containerlong_notm}} 컴포넌트 다이어그램](vcsiks-iks-components.svg)
+![{{site.data.keyword.containerlong_notm}} 컴포넌트 다이어그램](../../images/vcsiks-iks-components.svg "{{site.data.keyword.containerlong_notm}} 컴포넌트 다이어그램")
 
 ### Kubernetes 마스터
 {: #vcsiks-arch-overview-infrastructure-kube-master}

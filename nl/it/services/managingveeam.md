@@ -70,7 +70,7 @@ Se il servizio Veeam è installato su un'istanza solo con la rete privata, devi 
 ## Sostituzione della VSI Veeam delle istanze precedenti alla V1.8 con Veeam on IBM Cloud
 {: #managingveeam-replace-vsi}
 
-Il servizio Veeam on {{site.data.keyword.cloud_notm}}, che può eseguire il backup sia dei componenti di gestione che dei carichi di lavoro, sostituisce la precedente VSI Veeam che era stata integrata in VMware vCenter Server nelle release precedenti alla V1.8 per il backup dei soli componenti di gestione. 
+Il servizio Veeam on {{site.data.keyword.cloud_notm}}, che può eseguire il backup sia dei componenti di gestione che dei carichi di lavoro, sostituisce la precedente VSI Veeam che era stata integrata in VMware vCenter Server nelle release precedenti alla V1.8 per il backup dei soli componenti di gestione.
 
 A causa di questa modifica, la precedente scheda **Backup e ripristino** nella pagina dei dettagli dell'istanza è stata rimossa e i punti di backup per le istanze non sono più disponibili nella console {{site.data.keyword.vmwaresolutions_short}}, sebbene la VSI Veeam nelle istanze precedenti alla V1.8 continui a funzionare.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -23,8 +23,7 @@ VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 
 
 {{site.data.keyword.cloud_notm}} 的 vCenter Server with Hybridity Bundle 供應項目能夠促成對等內部部署來源站台與 {{site.data.keyword.cloud_notm}} 目標站台之間的安全連線。
 
-圖 1. VMware Hybridity 服務
-![VMware Hybrid Cloud Extension Services](vcsiks-hcx.svg)
+![VMware Hybrid Cloud Extension 服務](../../images/vcsiks-hcx.svg "VMware Hybrid Cloud Extension 服務")
 
 vCenter Server with Hybridity Bundle 會在內部部署與 {{site.data.keyword.cloud_notm}} 之間建立鬆散耦合的交互連線，並且啟用下列這類功能：
 - **簡單交互連線** - 可透過任何實體連線（包括公用網際網路、專用 VPN 或 {{site.data.keyword.cloud_notm}} Direct Link），輕鬆建立邏輯網路連線。
@@ -44,8 +43,7 @@ vCenter Server with Hybridity Bundle 會在內部部署與 {{site.data.keyword.c
 
 Acme Skateboards 想要在由 vCenter Server 和 {{site.data.keyword.icpfull_notm}} 組成的 {{site.data.keyword.cloud_notm}} 上部署混合式架構，以進行應用程式現代化。他們的需求是在虛擬機器上執行其資料庫、在容器中執行應用程式和 Web 服務，並使用一組共用的工具來進行網路和安全管理。
 
-圖 2. Acme Skateboards 混合式應用程式
-![Acme Skateboards 混合式應用程式圖](vcsiks-acme-app-arch.svg)
+![Acme Skateboards 混合式應用程式圖](../../images/vcsiks-acme-app-arch.svg "Acme Skateboards 混合式應用程式圖")
 
 {{site.data.keyword.vmwaresolutions_short}} 提供自動化，以在全球的 {{site.data.keyword.CloudDataCents_notm}} 中部署 VMware 技術元件。架構由單一雲端地區組成，可支援延伸至位於另一個地理位置的其他雲端地區，或延伸至相同資料中心內的另一個 {{site.data.keyword.cloud_notm}} Pod。
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -66,9 +66,7 @@ CPU | 2 – 56 コア | 4 – 28 コア
 ## 仮想構造
 {: #vcsiks-arch-overview-infrastructure-virtual-structure}
 
-図 1. {{site.data.keyword.containerlong_notm}} と {{site.data.keyword.icpfull_notm}} デプロイメントの物理構造
-
-![{{site.data.keyword.containerlong_notm}} と {{site.data.keyword.icpfull_notm}} デプロイメントの物理構造](vcsiks-phy-ics-iks-deployment.svg)
+![{{site.data.keyword.containerlong_notm}} および {{site.data.keyword.icpfull_notm}} デプロイメントの物理構造図](../../images/vcsiks-phy-ics-iks-deployment.svg "{{site.data.keyword.containerlong_notm}} および {{site.data.keyword.icpfull_notm}} デプロイメントの物理構造図"){: caption="図 1. {{site.data.keyword.containerlong_notm}} と {{site.data.keyword.icpfull_notm}} デプロイメントの物理構造" caption-side="bottom"}
 
 vCenter Server インスタンス内で、お客様の VMS は専用の NSX
 Edge Services Gateway (ESG) と分散論理ルーター (DLR) にデプロイされます。
@@ -79,8 +77,7 @@ Edge Services Gateway (ESG) と分散論理ルーター (DLR) にデプロイさ
 ## vCenter Server コンポーネント
 {: #vcsiks-arch-overview-infrastructure-vcs-comp}
 
-図 2. vCenter Server プラットフォーム・コンポーネント
-![vCenter Server 環境の図](vcsiks-vcs-env.svg)
+![vCenter Server 環境図](../../images/vcsiks-vcs-env.svg "vCenter Server 環境図")
 
 ### Platform Service Controller
 {: #vcsiks-arch-overview-infrastructure-psc}
@@ -132,9 +129,7 @@ Edge サイズ「コンパクト」 | vCPU 数	1
 ## IBM Cloud Kubernetes Service コンポーネント
 {: #vcsiks-arch-overview-infrastructure-iks-comp}
 
-図 3. {{site.data.keyword.containerlong_notm}} コンポーネント
-</br>
-![{{site.data.keyword.containerlong_notm}} コンポーネントの図](vcsiks-iks-components.svg)
+![{{site.data.keyword.containerlong_notm}} コンポーネント図](../../images/vcsiks-iks-components.svg "{{site.data.keyword.containerlong_notm}} コンポーネント図")
 
 ### Kubernetes マスター
 {: #vcsiks-arch-overview-infrastructure-kube-master}

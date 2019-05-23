@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-03"
+lastupdated: "2019-05-13"
 
 subcollection: vmware-solutions
 
@@ -139,16 +139,16 @@ ESG는 아웃바운드 트래픽을 허용하도록 소스 NAT 규칙(SNAT)을 �
 ## 관련 링크
 {: #vcsnsxt-overview-integration-related}
 
-* [{{site.data.keyword.cloud_notm}} 글로벌 데이터 센터](https://www.ibm.com/cloud/data-centers/)
-* [컨테이너 백서](https://communities.vmware.com/servlet/JiveServlet/download/2741654-198902/Containers%20and%20Container%20Networking%20for%20Network%20Engineers.pdf)(PDF 다운로드)
-* [VMware HCX on {{site.data.keyword.cloud_notm}} 블로그](https://www.ibm.com/blogs/bluemix/2018/01/vmware-hcx-ibm-cloud-aka-really-cool-space-age-kind-now-available/)
-* [VMware HCX on {{site.data.keyword.cloud_notm}} 데이터 시트](https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=26012526USEN)
+* [{{site.data.keyword.cloud_notm}} 글로벌 데이터 센터](https://www.ibm.com/cloud/data-centers/){:new_window}
+* [컨테이너 백서](https://communities.vmware.com/servlet/JiveServlet/download/2741654-198902/Containers%20and%20Container%20Networking%20for%20Network%20Engineers.pdf){:new_window}(PDF 다운로드)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} 블로그](https://www.ibm.com/cloud/blog/announcements/vmware-hcx-ibm-cloud-aka-really-cool-space-age-kind-now-available){:new_window}
+* [VMware HCX on {{site.data.keyword.cloud_notm}} 데이터 시트](https://www.ibm.com/downloads/cas/MPVXKWNM){:new_window}
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 솔루션 아키텍처](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [NSX for vSphere 6.4.3 구성 최대](https://configmax.vmware.com/guest)
-* [{{site.data.keyword.cloud_notm}} 플랫폼 문서](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.0/kc_welcome_containers.html)
+* [NSX for vSphere 6.4.3 구성 최대](https://configmax.vmware.com/guest){:new_window}
+* [{{site.data.keyword.cloud_notm}} 플랫폼 문서](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.0/kc_welcome_containers.html){:new_window}
 * [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-getting-started#getting-started)
-* [Project Calico](https://www.projectcalico.org/)
-* [GitHub-Calico](https://github.com/projectcalico/calico)
-* [Kubernetes](https://kubernetes.io/)
-* [GitHub-Flannel](https://github.com/coreos/flannel/)
-* [GitHub-Canal](https://github.com/projectcalico/canal)
+* [Project Calico](https://www.projectcalico.org/){:new_window}
+* [GitHub-Calico](https://github.com/projectcalico/calico){:new_window}
+* [Kubernetes](https://kubernetes.io/){:new_window}
+* [GitHub-Flannel](https://github.com/coreos/flannel/){:new_window}
+* [GitHub-Canal](https://github.com/projectcalico/canal){:new_window}

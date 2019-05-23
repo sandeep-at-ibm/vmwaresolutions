@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-26"
+lastupdated: "2019-05-01"
 
 subcollection: vmware-solutions
 
@@ -37,10 +37,17 @@ Cuando solicite el servicio, especifique los valores siguientes:
 * Seleccione **Preparado para producción** o **Desarrollo/Prueba** según necesite.
 * Marque el recuadro de selección adecuado para certificar que ya ha obtenido la licencia necesaria para desplegar el servicio {{site.data.keyword.cloud_notm}} Private Hosted.
 
-Si desea desplegar nodos adicionales, utilice la plantilla de Ubuntu de
+## Despliegue de nodos adicionales
+{: #icp_ordering-deploy-nodes}
+
+Si desea desplegar nodos adicionales, revise la información siguiente:
+* Utilice la plantilla de Ubuntu de
 {{site.data.keyword.cloud_notm}} Private (Ubuntu1604) que se despliega con su instalación inicial de
-{{site.data.keyword.cloud_notm}} Private Hosted. Para encontrar la plantilla, en el cliente web de VMware vSphere, vaya al separador
-**Máquinas virtuales y plantillas**, en la carpeta `cam`. La contraseña predeterminada para la plantilla de Ubuntu es `icponcloud`, y se recomienda que la cambie antes de utilizar la plantilla.
+{{site.data.keyword.cloud_notm}} Private Hosted.
+* Para encontrar la plantilla de Ubuntu, en el cliente web de VMware vSphere, vaya al separador
+**Máquinas virtuales y plantillas**, en la carpeta `cam`.
+* La contraseña predeterminada para la plantilla de Ubuntu es `icponcloud`. Se recomienda que cambie esta contraseña antes de utilizar la plantilla.
+* {{site.data.keyword.vmwaresolutions_short}} no ofrece soporte para aplicar actualizaciones y parches para la plantilla de Ubuntu. Debe supervisar y aplicar estas actualizaciones usted mismo.
 
 ## Enlaces relacionados
 {: #icp_ordering-related}

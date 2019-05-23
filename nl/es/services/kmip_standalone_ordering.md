@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-03"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -41,23 +41,23 @@ Al solicitar este servicio, proporcione los valores siguientes:
 
 Especifique un nombre para la instancia de KMIP for VMware on {{site.data.keyword.cloud_notm}}.
 
-### Región de servicio
+### Ubicación del servicio
 {: #kmip_standalone_ordering-config-service-region}
 
-Seleccione la región de {{site.data.keyword.cloud_notm}} en la que se va a alojar su instancia de KMIP for VMware on {{site.data.keyword.cloud_notm}}.
+Seleccione la ubicación de {{site.data.keyword.cloud_notm}} en la que se va a alojar su instancia de KMIP for VMware on {{site.data.keyword.cloud_notm}}.
 
-{{site.data.keyword.cloud_notm}} mantiene un punto final altamente disponible del servicio de red KMIP for VMware on {{site.data.keyword.cloud_notm}} en cada región en la que está disponible el servicio.
+{{site.data.keyword.cloud_notm}} mantiene un punto final altamente disponible del servicio de red KMIP for VMware on {{site.data.keyword.cloud_notm}} en cada ubicación en la que está disponible el servicio.
 
-Tabla 1. Regiones de puntos finales del servicio de red KMIP for VMware on {{site.data.keyword.cloud_notm}}
+Tabla 1. Ubicaciones de puntos finales del servicio de red KMIP for VMware on {{site.data.keyword.cloud_notm}}
 
-| Región         | Puntos finales               |
+| Ubicación         | Puntos finales               |
 |:---------------|:-----------------------|
-| Alemania        |  <ul><li><code>kmip-1.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
-| Sídney        |  <ul><li><code>kmip-1.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
-| Tokio          | <ul><li><code>kmip-1.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
-| RU sur       | <ul><li><code>kmip-1.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
-| EE.UU. este       | <ul><li><code>kmip-1.private.us-east.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-east.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
-| EE.UU. sur       | <ul><li><code>kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+| Dallas | <ul><li><code>kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+| Frankfurt |  <ul><li><code>kmip-1.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+| Londres | <ul><li><code>kmip-1.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+| Sídney |  <ul><li><code>kmip-1.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+| Tokio | <ul><li><code>kmip-1.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+| Washington DC | <ul><li><code>kmip-1.private.us-east.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-east.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
 
 ### Clave de API para ID de servicio
 {: #kmip_standalone_ordering-config-api-key}

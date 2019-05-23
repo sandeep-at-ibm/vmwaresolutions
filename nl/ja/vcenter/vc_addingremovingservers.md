@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-18"
+lastupdated: "2019-05-03"
 
 subcollection: vmware-solutions
 
@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 
 VMware vCenter Server インスタンスの容量は、ESXi サーバーまたはネットワーク・ファイル・システム (NFS) ストレージを追加/削除することで、ビジネス・ニーズに応じて拡張/縮小できます。
 
-* V3.0 リリース以降では、複数のクラスター間で同時に NFS ストレージを追加または削除できます。
+* V3.0 リリース以降、**「使用可能」**状態にある複数のクラスターで、NFS ストレージと ESXi サーバーを同時に追加/削除できるようになりました。 例えば、あるクラスターで ESXi サーバーを追加または削除したり、別のクラスターで NFS ストレージを追加または削除したりできます。
 * V2.9 リリース以降では、サーバーが保守モードの間に、新規 ESXi サーバーをクラスターに追加できます。 また、複数のクラスター間で同時に ESXi サーバーを追加または削除できます。
 
 **注**:
@@ -33,7 +33,7 @@ VMware vCenter Server インスタンスの容量は、ESXi サーバーまた�
 ### ESXi サーバーを追加する前に
 {: #vc_addingremovingservers-adding-prereq}
 
-* VMware vSphere Web クライアントで加えた変更は {{site.data.keyword.vmwaresolutions_short}} コンソールと同期されないので、可能な限り、{{site.data.keyword.vmwaresolutions_full}} コンソールを使用して ESXi サーバーを追加してください。つまり、オンプレミスの ESXi サーバー、または {{site.data.keyword.vmwaresolutions_short}} コンソールで管理できない、あるいは管理しない ESXi サーバーの場合にのみ、ESXi サーバーを vCenter Server に追加してください。
+* 可能であれば、{{site.data.keyword.vmwaresolutions_full}} コンソールを使用して ESXi サーバーを追加してください。これは、VMware vSphere Web Client で行った変更は、{{site.data.keyword.vmwaresolutions_short}} コンソールと同期されないためです。 したがって、オンプレミスの ESXi サーバー、または {{site.data.keyword.vmwaresolutions_short}} コンソールで管理できない、または管理しない ESXi サーバーに対してのみ、ESXiサーバーを vCenter Server に追加します。
 * NFS ストレージのある vCenter Server インスタンスには、少なくとも 2 つの ESXi サーバーが必要です。 V2.1 以降にデプロイされたインスタンスの場合、デフォルト・クラスターについては、ESXi サーバーを最大 51 台まで配置して拡張できます。 デフォルト以外の各クラスターは、最大 59 台の ESXi サーバーを含むように拡張できます。
 * vSAN ストレージのある vCenter Server インスタンスには、少なくとも 4 つの ESXi サーバーが必要です。
 * V2.0 以前にデプロイされた vCenter Server インスタンスの場合、クラスターごとに、ESXi サーバーを最大 32 個まで配置して拡張できます。
@@ -70,7 +70,7 @@ VMware vCenter Server インスタンスの容量は、ESXi サーバーまた�
 ### ESXi サーバーを削除する前に
 {: #vc_addingremovingservers-removing-prereq}
 
-* vSphere Web クライアントで加えた変更は {{site.data.keyword.vmwaresolutions_short}} コンソールと同期されないので、可能な限り、{{site.data.keyword.vmwaresolutions_full}} コンソールを使用して ESXi サーバーを削除してください。つまり、オンプレミスの ESXi サーバー、または {{site.data.keyword.vmwaresolutions_short}} コンソールで管理できない、あるいは管理しない ESXi サーバーの場合にのみ、ESXi サーバーを vCenter Server から削除してください。
+* 可能であれば、{{site.data.keyword.vmwaresolutions_full}} コンソールを使用して ESXi サーバーを削除してください。これは、vSphere Web Client で行った変更は、{{site.data.keyword.vmwaresolutions_short}} コンソールと同期されないためです。 したがって、オンプレミスの ESXi サーバー、または {{site.data.keyword.vmwaresolutions_short}} コンソールで管理できない、または管理しない ESXi サーバーに対してのみ、ESXiサーバーを vCenter Server から削除します。
 * NFS ストレージを使用する vCenter Server インスタンスには、2 つ以上の ESXi サーバーが必要であり、vSAN ストレージを使用する vCenter Server インスタンスには、4 つ以上の ESXi サーバーが必要です。
 * F5 on {{site.data.keyword.cloud_notm}} サービスまたは FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} サービスがインストールされている ESXi サーバーの場合は、そのサーバーを削除する前に、F5 BIG-IP と FortiGate の VM を、VM をホスティングしている ESXi サーバーとは別のサーバーにマイグレーションする必要があります。
 * IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} サービスがインストールされている ESXi サーバーを削除する前に、アクティブな (失敗したか、進行中の) バックアップ操作またはリストア操作がないことを確認してください。こうしたアクティブな操作があると、ESXi サーバーが削除されない可能性があるためです。

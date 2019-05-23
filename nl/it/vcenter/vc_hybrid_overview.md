@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-02"
 
 subcollection: vmware-solutions
 
@@ -35,9 +35,7 @@ Puoi aggiungere i servizi gestiti IBM se vuoi scaricare le operazioni quotidiane
 
 Il seguente grafico illustra l'architettura di alto livello e i componenti di una distribuzione vCenter Server with Hybridity Bundle a tre nodi.
 
-Figura 1. Architettura di alto livello di vCenter Server with Hybridity Bundle
-
-![Architettura di vCenter Server with Hybridity Bundle](hybrid_architecture.svg "Architettura di alto livello di vCenter Server with Hybridity Bundle")
+![Architettura di vCenter Server with Hybridity Bundle](../images/hybrid_architecture.svg "Architettura di vCenter Server with Hybridity Bundle")
 
 ### Infrastruttura fisica
 {: #vc_hybrid_overview-physical-infras}
@@ -81,8 +79,8 @@ La disponibilità e il prezzo delle configurazioni hardware standardizzate posso
 ### Bare Metal Server
 {: #vc_hybrid_overview-bare-metal}
 
-Puoi ordinare quattro o più {{site.data.keyword.baremetal_short}} con una delle seguenti configurazioni: 
-  * **Skylake**: server di generazione 2-CPU Intel Skylake (Intel Xeon 4100/5100/6100 series) con i tuoi modello CPU e dimensione RAM selezionati.
+Puoi ordinare quattro o più {{site.data.keyword.baremetal_short}} con una delle seguenti configurazioni:
+  * **Skylake**: server di generazione 2-CPU Intel Skylake (Intel Xeon 4100/5100/6100 series) con il modello di CPU e la dimensione della RAM da te selezionati.
   * **Broadwell**: server di generazione 4-CPU Intel Broadwell (Intel Xeon E7-4800 series) con il modello di CPU e la dimensione della RAM da te selezionati.
 
 ### Rete

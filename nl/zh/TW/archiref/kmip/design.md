@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -106,8 +106,7 @@ KMIP for VMware 可用於許多個 {{site.data.keyword.cloud_notm}} 多區域地
 
 KMIP for VMware 還使用 {{site.data.keyword.cloud_notm}} 專用網路而非公用網際網路來連接至 {{site.data.keyword.cloud_notm}} Key Protect。
 
-圖 1. 使用 IBM Key Protect 時 KMIP for VMware on {{site.data.keyword.cloud_notm}} 的元件
-![KMIP for VMware on {{site.data.keyword.cloud_notm}}](kmip-key-protect.svg "此解決方案使用 IBM Key Protect 中儲存的根金鑰，來啟用 VMware vSphere 加密及 vSAN 加密。")
+![KMIP for VMware on {{site.data.keyword.cloud_notm}} 的元件](../../images/kmip-key-protect.svg "該解決方案藉由使用 IBM Key Protect 中儲存的根金鑰實現 VMware vSphere 加密和 vSAN 加密。")
 
 使用 IBM Cloud Hyper Protect Crypto Services 時，您的金鑰會儲存在 IBM zSeries HSM 而非 CloudHSM 中。此外，KMIP for VMware 與 {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services 之間的連線會透過公用網路進行傳送，但受到 TLS 加密及鑑別的保護。
 

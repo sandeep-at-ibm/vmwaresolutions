@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-22"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -58,8 +58,7 @@ VMware vCenter Server on {{site.data.keyword.cloud_notm}} Hybridity Bundle 서�
 ## 가상 구조
 {: #vcscar-arch-overview-infrastructure-virt-structure}
 
-그림 1. vCenter Server 및 {{site.data.keyword.icpfull_notm}} 배치의 구조
-![vCenter Server 및 {{site.data.keyword.icpfull_notm}} 배치의 구조](vcscar-icp.svg)
+![vCenter Server 및 {{site.data.keyword.icpfull_notm}} 배치의 구조](../../images/vcscar-icp.svg "vCenter Server 및 {{site.data.keyword.icpfull_notm}} 배치의 구조")
 
 vCenter Server 인스턴스 내에서, {{site.data.keyword.icpfull_notm}} 인스턴스는 전용 NSX ESG(Edge Services Gateway) 및 DLR(Distributed Logical Router)로 배치됩니다.
 {{site.data.keyword.icpfull_notm}} 설치는 이전 컴포넌트에 정의되어 있는 VXLAN 서브넷으로 로드됩니다.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-13"
 
 subcollection: vmware-solutions
 
@@ -53,11 +53,6 @@ subcollection: vmware-solutions
 * [リソースおよびビデオ](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/resources){:new_window}
 * [Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware){:new_window}
 * [主なリソースおよびケース・スタディー](https://www.ibm.com/cloud/vmware/resources){:new_window}
-
-## IBM Cloud for VMware Solutions のテスト・ドライブ
-{: #additional_resources-test-drive}
-
-実際にご覧になりますか? 段階的に説明した {{site.data.keyword.vmwaresolutions_short}} ガイド付きデモンストレーション [Try VMware vCenter Server](https://cloudcontent.mybluemix.net/cloud/garage/demo/try-vmware-solutions){:new_window} に従って、製品の簡単なテスト・ドライブを実行します。
 
 ## VMware の資料
 {: #additional_resources-vmware-doc}

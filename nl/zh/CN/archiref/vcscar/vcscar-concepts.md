@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -75,8 +75,7 @@ trick = 'combo \+ \[“to” + combo\] \+ \[“to” \+ landing_combo\]'
 
 下图是规则引擎的可视摘要。
 
-图 1. 滑板语言概览图
-![滑板语言概览图](vcscar-skate-language.svg)
+![Skate 语言概述](../../images/vcscar-skate-language.svg "Skate 语言概述")
 
 ## 样本技巧语言
 {: #vcscar-concepts-sample-trick}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 VMware HCX (Hybrid Cloud Services) consente a diverse istanze di vSphere SDDC (software defined data center) di interagire in diversi tipi di rete. Includono LAN o WAN, protette o meno sull'internet pubblico. HCX è progettato per occuparsi dei problemi di sicurezza, compatibilità, complessità e prestazioni che si potrebbero riscontrare quando si prova a ottenere una distribuzione a più istanze e a più siti di vSphere che si estende oltre i limiti dei provider in loco e nel cloud.
 
-Figura 1. Servizi cloud ibrido VMware
-![Servizi cloud ibrido VMware](vcshcx.svg)
+![VMware Hybrid Cloud Services](../../images/vcshcx.svg "VMware Hybrid Cloud Services")
 
 HCX è il metodo preferito per l'interazione tra le offerte vSphere completamente automatizzate all'interno di {{site.data.keyword.cloud}} e qualsiasi altra istanza distribuita di vSphere. HCX è ora un'offerta completamente integrata all'interno di {{site.data.keyword.vmwaresolutions_short}}.
 

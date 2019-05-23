@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-02"
 
 subcollection: vmware-solutions
 
@@ -35,9 +35,7 @@ Vous pouvez ajouter des services gérés par IBM si vous voulez décharger les o
 
 Le graphique suivant décrit l'architecture de haut niveau et les composants d'un déploiement vCenter Server with Hybridity Bundle à trois noeuds.
 
-Figure 1. Architecture vCenter Server with Hybridity Bundle de haut niveau
-
-![Architecture vCenter Server with Hybridity Bundle](hybrid_architecture.svg "Architecture vCenter Server with Hybridity Bundle de haut niveau")
+![Architecture vCenter Server with Hybridity Bundle](../images/hybrid_architecture.svg "Architecture vCenter Server with Hybridity Bundle")
 
 ### Infrastructure physique
 {: #vc_hybrid_overview-physical-infras}

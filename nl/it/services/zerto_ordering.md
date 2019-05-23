@@ -30,7 +30,7 @@ Puoi ordinare una nuova istanza con Zerto on {{site.data.keyword.cloud_notm}} ut
 ## Ordine di Zerto on IBM Cloud per un'istanza esistente
 {: #zerto_ordering-existing}
 
-Puoi aggiungere il servizio Zerto on {{site.data.keyword.cloud_notm}} a un'istanza esistente utilizzando uno dei seguenti metodi: 
+Puoi aggiungere il servizio Zerto on {{site.data.keyword.cloud_notm}} a un'istanza esistente utilizzando uno dei seguenti metodi:
 * Dalla console {{site.data.keyword.vmwaresolutions_short}}, visualizza l'istanza per la quale vuoi aggiungere il servizio, fai clic su **Servizi** nel riquadro di navigazione a sinistra e quindi su **Aggiungi**.
 * Dal catalogo {{site.data.keyword.cloud_notm}}, seleziona **Zerto on IBM Cloud**, specifica le impostazioni del servizio e seleziona **Aggiungi all'istanza esistente**.
 

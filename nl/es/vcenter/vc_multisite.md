@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-04"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -50,9 +50,7 @@ Si la configuración requiere un despliegue de varios sitios con más de 128 ser
 
 En el siguiente gráfico se muestra una visión general del despliegue de varios sitios de vCenter Server.
 
-Figura 1. Despliegue de varios sitios de vCenter Server
-
-![Despliegue de varios sitios de vCenter Server](../vcenter/multisite-hub-spoke.svg "Despliegue de varios sitios de vCenter Server")
+![Despliegue de varios sitios de vCenter Server](../images/multisite-hub-spoke.svg "Despliegue de varios sitios de vCenter Server")
 
 El modelo contiene las siguientes capas:
 
@@ -72,4 +70,3 @@ La supresión de instancias de vCenter Server que forman parte de una configurac
 * [Asignación del rol primario a NSX Manager](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/com.vmware.nsx-cross-vcenter-install.doc/GUID-44E8AE16-BA3F-4DD9-B582-FC1E137E6CFC.html){:new_window}
 * [Configuración de NSX Managers secundarios](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-9E48BC57-15E3-49C7-8BC5-F94ED8918BBE.html){:new_window}
 * [Microsoft Active Directory Trusts con soporte para SSO (inicio de sesión único) de VMware vCenter](https://kb.vmware.com/s/article/2064250){:new_window}
-* [Conexión segura de cargas de trabajo privadas de VMware en {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}

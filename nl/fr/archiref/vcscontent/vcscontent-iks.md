@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -18,9 +18,7 @@ Comme son équipe de test s'est agrandie, Jane a souhaité fournir un environnem
 
 Todd ajoute ensuite le VPN strongSwan pour établir une connexion entre les réseaux privés de chaque cluster.
 
-Figure 1. Stock Trader sous la forme d'une véritable application hybride
-
-![Stock Trader sous la forme d'une véritable application hybride](vcscontent-truehybrid.svg)
+![Stock Trader sous la forme d'une véritable application hybride](../../images/vcscontent-truehybrid.svg "Stock Trader sous la forme d'une véritable application hybride")
 
 ## Liens connexes
 {: #vcscontent-iks-related}

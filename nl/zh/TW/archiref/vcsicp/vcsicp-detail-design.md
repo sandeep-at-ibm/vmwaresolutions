@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-09"
 
 subcollection: vmware-solutions
 
@@ -19,9 +19,7 @@ subcollection: vmware-solutions
 
 共用服務提供雲端管理平台中其他服務所使用的服務。共用服務包括身分及存取服務、網域名稱服務及 NTP 服務。
 
-圖 1. {{site.data.keyword.icpfull_notm}} 共用服務
-
-![{{site.data.keyword.icpfull_notm}} 共用服務](vcsicp-icp-commonservices.svg)
+![{{site.data.keyword.icpfull_notm}} 共用服務](../../images/vcsicp-icp-commonservices.svg "{{site.data.keyword.icpfull_notm}} 共用服務")
 
 ### 身分及存取服務
 {: #vcsicp-detail-design-identity}
@@ -50,9 +48,7 @@ NSX-V 的設計讓單一 NSX-V Manager 平台與單一 vCenter Server 實例相�
 
 {{site.data.keyword.icpfull_notm}} 是使用 Kubernetes 的預設 Calico 網路堆疊進行部署，可在您的叢集內提供網路隔離。
 
-圖 2. 具有 NSX-V 網路的 {{site.data.keyword.icpfull_notm}}
-
-![具有 NSX-V 網路的 {{site.data.keyword.icpfull_notm}}](vcsicp-nsxv-networking.svg)
+![{{site.data.keyword.icpfull_notm}}（具有 NSX-V 網路連線功能）](../../images/vcsicp-nsxv-networking.svg "{{site.data.keyword.icpfull_notm}}（具有 NSX-V 網路連線功能）")
 
 如需相關資訊，請參閱 [vCenter Server 網路手冊](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro)。
 
@@ -63,9 +59,7 @@ NSX-T 的設計讓單一網路平台可以連接到任何類型的應用程式�
 
 {{site.data.keyword.icpfull_notm}} 提供將 Calico 網路取代為 NSX-T 實例的選項，並提供單一位置以便管理網路和安全。
 
-圖 3. 具有 NSX-T 網路的 {{site.data.keyword.icpfull_notm}}
-
-![具有 NSX-T 網路的 {{site.data.keyword.icpfull_notm}}](vcsicp-icp-nsxt-networking.svg)
+![{{site.data.keyword.icpfull_notm}}（具有 NSX-V 網路連線功能）](../../images/vcsicp-icp-nsxt-networking.svg "{{site.data.keyword.icpfull_notm}}（具有 NSX-V 網路連線功能）")
 
 ## 相關鏈結
 {: #vcsicp-detail-design-related}

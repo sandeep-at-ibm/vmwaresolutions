@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-09"
 
 subcollection: vmware-solutions
 
@@ -38,8 +38,7 @@ Red	|Privada A portátil diseñada para los componentes de gestión.	|Privada A 
 
 \* **Nota**: consulte la lista de compatibilidad de hardware para ver requisitos específicos.
 
-Figura 1. Diseño del componente de gestión NSX-V y T
-![Diseño del componente de gestión NSX-V y T](vcsnsxt-combined-mgmt.svg)
+![Diseño de componentes de gestión NSX-V y T](../../images/vcsnsxt-combined-mgmt.svg "Diseño de componentes de gestión NSX-V y T")
 
 ### Configuración inicial
 {: #vcsnsxt-techpreview-init-config}
@@ -79,8 +78,7 @@ Tráfico de vMotion	|Ilimitado	|50	|0
 Tráfico de NFS	|Ilimitado	|100	|0
 Tráfico de vSAN	|Ilimitado	|100	|0
 
-Figura 2. Conmutador VLAN lógico con la interfaz de vmkernel
-![Conmutador VLAN lógico con la interfaz de vmkernel](vcsnsxt-tnkernel.svg)
+![Conmutador VLAN lógico a la interfaz vmkernel](../../images/vcsnsxt-tnkernel.svg "Conmutador VLAN lógico a la interfaz vmkernel")
 
 ## NSX-T
 {: #vcsnsxt-techpreview-nsx-t}
@@ -152,9 +150,7 @@ Calico se basa en una arquitectura distribuida con capacidad de escalado que ofr
 -	etcd, proporciona la comunicación entre los componentes y se almacena en un almacén de datos coherente, lo que garantiza que Calico siempre puede crear una red precisa.
 -	BIRD, proporciona funciones de cliente BGP en cada nodo que también aloja Felix. Cuando Felix inserta una ruta en el kernel de Linux, el cliente BGP elige las rutas y las distribuye a otros nodos del despliegue. En el caso de entornos de gran tamaño, también se despliega un reflector de ruta BGP, que actúa como punto central para que se conecten los clientes BGP. Esto evita que cada cliente tenga que hablar con todos los demás clientes y distribuir las rutas a los otros nodos del despliegue.
 
-Figura 3. Visión general de Calico
-</br>
-![Visión general de Calico](vcsnsxt-calico-cni.svg)
+![Visión general de Calico](../../images/vcsnsxt-calico-cni.svg "Visión general de Calico")
 
 ### NSX-T y Calico
 {: #vcsnsxt-techpreview-nsx-t-calico}
@@ -180,8 +176,7 @@ NSX-T es una solución autónoma para entornos vCenter y vSphere, y también da 
 
 NSX-T permite la gestión de políticas de red y de seguridad a través de un entorno de VM y contenedor en una interfaz web fácil de entender.
 
-Figura 4. Comparación general entre los componentes de NSX-T y Calico
-![Red de NSX-T y Kubernetes](vcsnsxt-calico.svg)
+![Redes NSX-T y Kubernetes](../../images/vcsnsxt-calico.svg "Redes NSX-T y Kubernetes")
 
 ## NSX-T y Kubernetes
 {: #vcsnsxt-techpreview-nsx-t-kube}
@@ -190,9 +185,7 @@ El componente principal que proporciona la integración entre Kubernetes y el ge
 
 En el siguiente ejemplo se suministran dos espacios de nombres de Kubernetes, Acme y Skateboards; para cada espacio de nombres tenemos un conmutador lógico dedicado, un direccionador de capa 1 y un segmento IP que lo conecta a un direccionador lógico T0.
 
-Figura 5. NCP de Kubernetes
-</br>
-![NCP de Kubernetes](vcsnsxt-ncpk8sapi.svg)
+![Kubernetes NCP](../../images/vcsnsxt-ncpk8sapi.svg "Kubernetes NCP")
 
 ### Gestor de políticas de seguridad de NSX
 {: #vcsnsxt-techpreview-nsx-sec-policy-manager}
@@ -211,9 +204,7 @@ Entre los conceptos clave para el análisis se incluyen:
 -	SpoofGuard bloquea la suplantación de IP a nivel de vNIC.
 -	La seguridad del conmutador proporciona control de tormentas y protección frente al tráfico no autorizado.
 
-Figura 6. Microsegmentación de NSX-T
-</br>
-![Ejemplo de microsegmentación de NSX-T](vcsnsxt-tsecurity.svg)
+![Ejemplo de microsegmentación NSX-T](../../images/vcsnsxt-tsecurity.svg "Ejemplo de microsegmentación NSX-T")
 
 ### Diferencias entre NSX–T y NSX-V
 {: #vcsnsxt-techpreview-diff-nsx-t-nsx-v}
@@ -247,9 +238,7 @@ VMware NSX-T proporciona las mismas funciones que NSX-V en un entorno de VMware 
 
 Para la integración de NSX-V con Kubernetes, la automatización de {{site.data.keyword.cloud_notm}} instala {{site.data.keyword.icpfull_notm}} en una instancia de vCenter Server. Se crean un conmutador dedicado/VXLAN, DLR y ESG específicamente para la red de Kubernetes. La red de superposición del día 1 para {{site.data.keyword.icpfull_notm}} es una subred de 192.168.20.0/24 con direccionamiento configurado a través del ESG para acceder a la red subyacente.
 
-Figura 7. NSX-V y Kubernetes
-</br>
-![NSX-V y Kubernetes](vcsnsxt-transitnet.svg)
+![NSX-V y Kubernetes](../../images/vcsnsxt-transitnet.svg "NSX-V y Kubernetes")
 
 #### Integración con NSX-T
 {: #vcsnsxt-techpreview-integration-nsx-t}
@@ -258,9 +247,7 @@ La integración de NSX-T con Kubernetes se realiza mediante el plugin de contene
 
 El cortafuegos distribuido de NSX-T permite la creación de políticas de red, que se implementan para el clúster de Kubernetes. Da soporte a políticas de entrada y de salida, etiquetas y políticas de coincidencia de expresión y tiene prestaciones de equilibrador de carga, que se pueden aplicar a la infraestructura de Kubernetes.
 
-Figura 8. NSX-T y Kubernetes
-</br>
-![NSX-T y Kubernetes](vcsnsxt-t1t0router.svg)
+![NSX-T y Kubernetes](../../images/vcsnsxt-t1t0router.svg "NSX-T y Kubernetes")
 
 ## Enlaces relacionados
 {: #vcsnsxt-techpreview-related}

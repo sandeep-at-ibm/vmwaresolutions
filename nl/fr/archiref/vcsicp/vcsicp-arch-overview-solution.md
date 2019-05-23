@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-09"
 
 subcollection: vmware-solutions
 
@@ -17,7 +17,7 @@ subcollection: vmware-solutions
 ## Composants VMware vCenter Server on IBM Cloud
 {: #vcsicp-arch-overview-solution-vcs-comp}
 
-Figure 1. Diagramme de l'environnement vCenter Server![Environnement VCS](vcsicp-vcsenv.svg)
+![Environnement vCenter Server](../../images/vcsicp-vcsenv.svg "Structure physique du déploiement vCenter Server et {{site.data.keyword.icpfull_notm}}")
 
 ### Contrôleur PSC (Platform Service Controller)
 {: #vcsicp-arch-overview-solution-psc}
@@ -48,27 +48,26 @@ Le tableau ci-après répertorie les spécifications ESG / DLR pour {{site.data.
 
 Tableau 1. Spécifications ESG pour {{site.data.keyword.icpfull_notm}}
 
-Attribut  |  Spécification
---|--
-Edge Service Gateway  |  Dispositif virtuel
-Edge size	Large |   Nombre de vCPU	2
-Memory	| Disque 1 Go	| 1000 Go sur magasin de données local
+| Attribut | Spécification |
+|:--------- |:------------- |
+| Edge Service Gateway | Dispositif virtuel |
+| Edge size	Large | Nombre de vCPU	2 |
+| Mémoire | Disque 1 Go	| 1000 Go sur magasin de données local |
 
 Tableau 2. Spécifications DLR pour {{site.data.keyword.icpfull_notm}}
 
-Attribut  |  Spécification
---|--|
-Distributed Logical Router | 	Dispositif virtuel
-Edge size	Compact | Nombre de vCPU	1
-Memory	| Disque de 512 Mo	| 1000 Go sur magasin de données local
+| Attribut | Spécification |
+|:--------- |:------------- |
+| Distributed Logical Router | Dispositif virtuel |
+| Edge size	Compact | Nombre de vCPU	1 |
+| Memory	| Disque de 512 Mo	| 1000 Go sur magasin de données local |
 
 ## Composants IBM Cloud Private
 {: #vcsicp-arch-overview-solution-icp-comp}
 
 {{site.data.keyword.icpfull_notm}} est une plateforme applicative pour le développement et la gestion sur site d'applications conteneurisées. Il s'agit d'un environnement intégré pour la gestion de conteneurs qui inclut l'orchestrateur de conteneurs Kubernetes, un registre d'images privé, une console de gestion, ainsi que des infrastructures préfabriquées de surveillance.
 
-Figure 2. Déploiement {{site.data.keyword.icpfull_notm}} virtuel avec vCenter Server
-![Virtual {{site.data.keyword.icpfull_notm}} - Déploiement avec VCS](vcsicp-virtual-icp-deployment-vcs.svg)
+![Déploiement {{site.data.keyword.icpfull_notm}} virtuel avec vCenter Server](../../images/vcsicp-virtual-icp-deployment-vcs.svg "Déploiement {{site.data.keyword.icpfull_notm}} virtuel avec vCenter Server")
 
 ###	Noeud d'amorçage
 {: #vcsicp-arch-overview-solution-boot-node}
@@ -104,30 +103,29 @@ Spécifications de machine virtuelle requises pour une instance {{site.data.keyw
 
 Tableau 3. Spécifications de machine virtuelle {{site.data.keyword.icpfull_notm}}
 
-Noeud | 	Instances	| IP	| UC	| Mémoire RAM (Go)	| Disque (Go)
-:-----|------------:|:----|----:|----------:|----------:|
-Maître|	3	| IP (x3) VIP (x1)	| 4	| 64	| 200
-Gestion	|3	| IP (x3)	|8	|64	|500
-Proxy	| 3	| IP (x3)VIP (x1)	|2	|4	|150
-Vulnerability Advisor	|3	| IP (x3)	| 4	| 16	|500
-GlusterFS	| 3	| IP (x3)	|8	|16	|150
-Worker	| 3-6	| IP (x3)	|4-8	|4	|150
+| Noeud | Instances | IP	| UC	| Mémoire RAM (Go)	| Disque (Go) |
+|:---- |:--------- |:-- |:--- |:--------- |:--------- |
+| Maître | 3	| IP (x3) VIP (x1)	| 4	| 64	| 200 |
+| Gestion	| 3	| IP (x3)	| 8	| 64	| 500 |
+| Proxy	| 3	| IP (x3)VIP (x1)	| 2	| 4	| 150 |
+| Vulnerability Advisor	| 3	| IP (x3)	| 4	| 16	| 500 |
+| GlusterFS	| 3	| IP (x3)	| 8	| 16	| 150 |
+| Worker	| 3-6	| IP (x3)	| 4-8	| 4	| 150 |
 
 CAM requiert une configuration d'UC virtuelle et de mémoire plus élevée pour les noeuds worker.
 
 Tableau 4. Spécifications de machine virtuelle {{site.data.keyword.icpfull_notm}}
 
-Noeud | 	Instances	| IP	| UC	| Mémoire RAM (Go)	| Disque (Go)
-:-----|------------:|:----|----:|----------:|----------:|
-worker  |  3 | IP (x3)  |  4-8 |16-20   |  150
+| Noeud | Instances	| IP | UC	| Mémoire RAM (Go)	| Disque (Go) |
+|:---- |:---------- |:-- |:---- |:--------- |:--------- |
+| worker | 3 | IP (x3) | 4-8 | 16-20 | 150 |
 
 ## Composants CAM
 {: #vcsicp-arch-overview-solution-cam-comp}
 
 {{site.data.keyword.cloud_notm}} Automation Manager (CAM) est une plateforme de gestion libre-service multi-cloud qui s'exécute sur {{site.data.keyword.icpfull_notm}} et permet aux développeurs et aux administrateurs de répondre aux besoins de l'entreprise.
 
-Figure 3. Référence des composants CAM</br>
-![Référence des composants CAM](vcsicp-cam-component-ref.svg)
+![Référence des composants CAM](../../images/vcsicp-cam-component-ref.svg "Référence des composants CAM")
 
 ### Proxy CAM
 {: #vcsicp-arch-overview-solution-cam-proxy}

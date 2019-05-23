@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-25"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 既然 Stock Trader 已在一个容器中运行，并且 Jane 对目前的微服务感到满意，因此她和 Todd 继续研究如何利用额外的功能来提高应用程序的性能。通过重构 Stock Trader 微服务来处理增加的活动和可扩展性，他们两人都认为需要将中间件添加到 {{site.data.keyword.cloud}} Private 中。其中一些中间件存在于其数据中心内，因此这更像是在添加一些新中间件的情况下重新构建平台的做法。
 
-图 1. 重构 Stock Trader
-![Stock Trader 重构](vcscontent-refactor.svg)
+![Stock Trader 重构](../../images/vcscontent-refactor.svg "Stock Trader 重构")
 
 此解决方案重构将提供一个公共平台来运行应用程序和必需的服务，从而引入更简单的管理平面。
 
@@ -235,17 +234,14 @@ App password = LEAVE BLANK`
 
 Jane 需要一个统一的代码库，即使 Stock Trader 可能会在多个云上运行。下图中的私钥 Db2 具有不同的路由详细信息，但格式相同。在 Jane 的投资组合微服务部署时，该微服务会查找 Db2 私钥端点参数以连接到相应的 Db2 实例。Stock Trader 应用程序不关心自己是在 VMware 虚拟机中运行、容器化服务中运行，还是作为云管理的服务运行。
 
-图 2. Stock Trader - 数据透视服务
-![Stock Trader 数据透视服务](vcscontent-pivot-services.svg)
+![Stock Trader 枢轴服务](../../images/vcscontent-pivot-services.svg "Stock Trader 枢轴服务")
 
 ## 结果
 {: #vcscontent-addmidware-result}
 
 Jane 致力于重构了自己的 Stock Trader 解决方案，而 Todd 则致力于将中间件安装到 {{site.data.keyword.cloud_notm}} Private Hosted 中，因此整个核心 Stock Trader 解决方案都在私有云中运行。Jane 现在添加了更多微服务，例如推特通知服务。Istio 路由规则通过内部 Slack 通道或公共推特通道，支持动态忠诚度消息传递。
 
-图 3. 扩充 Stock Trader
-
-![Stock Trader 扩充](vcscontent-enrich.svg)
+![Stock Trader 扩充](../../images/vcscontent-enrich.svg "Stock Trader 扩充")
 
 ## 相关链接
 {: #vcscontent-addmidware-related}

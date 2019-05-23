@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -17,8 +17,7 @@ subcollection: vmware-solutions
 ## Componentes de VMware vCenter Server on IBM Cloud
 {: #vcscar-arch-overview-solution-vcs-comp}
 
-Figura 1. Diagrama del entorno de vCenter Server
-![Entorno vCenter Server](vcscar-vcs.svg)
+![Entorno de vCenter Server](../../images/vcscar-vcs.svg "Entorno de vCenter Server")
 
 ### Controlador de servicios de la plataforma
 {: #vcscar-arch-overview-solution-psc}
@@ -73,8 +72,7 @@ Disco    | 1000 GB en almacén de datos local
 {{site.data.keyword.icpfull_notm}} es una plataforma de aplicaciones para desarrollar y gestionar aplicaciones locales contenerizadas. {{site.data.keyword.icpfull_notm}} es un entorno integrado para gestionar contenedores que incluye el coordinador de contenedores Kubernetes,
 un repositorio de imágenes privadas, una consola de gestión e infraestructuras de supervisión.
 
-Figura 2. Despliegue de {{site.data.keyword.icpfull_notm}} virtual con vCenter Server
-![Desarrollo de {{site.data.keyword.icpfull_notm}} virtual con vCenter Server](vcscar-icp.svg)
+![Despliegue de {{site.data.keyword.icpfull_notm}} virtual con vCenter Server](../../images/vcscar-icp.svg "Despliegue de {{site.data.keyword.icpfull_notm}} virtual con vCenter Server")
 
 ### Nodo de arranque
 {: #vcscar-arch-overview-solution-boot-node}
@@ -136,8 +134,7 @@ Trabajador  |  3 | IP (x3)  |  4-8 |16-20   |  150
 
 {{site.data.keyword.cloud_notm}} Automation Manager (CAM) es una plataforma de gestión de autoservicio multinube de autoservicio que se ejecuta en {{site.data.keyword.icpfull_notm}} que ayuda a los desarrolladores y a los administradores a satisfacer las necesidades de la empresa.
 
-Figura 3. Referencia de componentes de CAM
-![Referencia de componentes de CAM](vcscar-cam-components.svg)
+![Referencia de componentes de CAM](../../images/vcscar-cam-components.svg "Referencia de componentes de CAM")
 
 ### Proxy de CAM
 {: #vcscar-arch-overview-solution-cam-proxy}

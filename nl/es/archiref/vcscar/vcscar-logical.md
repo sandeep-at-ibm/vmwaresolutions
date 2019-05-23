@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -19,8 +19,7 @@ En la información siguiente se detallan los elementos de la aplicación que for
 ## Componentes del sistema
 {: #vcscar-logical-sys-comp}
 
-Figura 1. Componentes de Skate Advisor
-![Componentes de Skate Advisor](vcscar-components.svg)
+![Componentes de Skate Advisor](../../images/vcscar-components.svg "Componentes de Skate Advisor")
 
 Skate Advisor consiste principalmente de un chatbot que acepta texto o reconocimiento de voz para interactuar con el sistema de forma estructurada.
 
@@ -77,9 +76,7 @@ El chatbot es un componente web que conversa con el usuario. El chatbot puede ac
 
 Los chatbots interactúan con el sistema de la forma siguiente:
 
-Figura 2. Típica consulta de chatbot
-</br>
-![Típica consulta de chatbot](vcscar-query.svg)
+![Consulta de chatbot típica](../../images/vcscar-query.svg "Consulta de chatbot típica")
 
 Tabla 2. Interacciones de chatbot
 
@@ -135,9 +132,7 @@ Skate Advisor Service es un componente de la aplicación que proporciona un conj
 
 Watson Discovery se debe entrenar con un modelo de machine learning, que crea de forma iterativa un experto en el tema utilizando Watson Knowledge Studio.
 
-Figura 3. Entrenamiento de Discovery Service
-</br>
-![Entrenamiento de Discovery Service](vcscar-training.svg)
+![Entrenamiento de Discovery Service](../../images/vcscar-training.svg "Entrenamiento de Discovery Service")
 
 Para Skate Advisor, el modelo consiste en la relación entre tipos de entidades con una combinación de entrenamiento basado en reglas y entrenamiento basado en diccionario para crear un modelo. Este modelo permite que Discovery Service reconozca y clasifique los trucos que se han ingerido de artículos y descripciones de vídeo que se utilizan como conjunto de entrenamiento.
 

@@ -34,7 +34,7 @@ subcollection: vmware-solutions
   |:------------- |:------------- |
   |도메인 이름 | `<root_domain>` |  
   |vCenter Server 로그인 사용자 이름 | `<user_id>@<root_domain>`(Microsoft Active Directory 사용자) 또는 `administrator@vsphere.local` |
-  |vCenter Server(임베드된 PSC 포함) FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. 최대 길이는 50자입니다. |
+  |vCenter Server(임베디드 PSC 포함) FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. 최대 길이는 50자입니다. |
   |SSO(Single Sign-On) 사이트 이름 | `<subdomain_label>` |
   |완전한 ESXi 서버 이름 | `<host_prefix><n>.<subdomain_label>.<root_domain>`, 여기서 `<n>`은 ESXi 서버의 순서입니다. 최대 길이는 50자입니다. |
 
@@ -125,7 +125,7 @@ vSAN 구성의 초기 및 사후 배치 클러스터 모두에 네 개의 ESXi �
 {: #vc_hybrid_orderinginstance-bare-metal-number}
 
 * 주문하는 모든 서버는 동일한 구성을 갖습니다.
-* 4 - 20개의 서버를 주문할 수 있습니다. 
+* 4 - 20개의 서버를 주문할 수 있습니다.
 
 ## 스토리지 설정
 {: #vc_hybrid_orderinginstance-storage-settings}
@@ -253,7 +253,7 @@ vCenter Server with Hybridity Bundle 인스턴스를 주문할 때 추가 서비
   2. **Skylake** 또는 **Broadwell** CPU 모델 및 **RAM** 크기를 선택하십시오.
 8. 스토리지 구성을 완료하십시오. 용량 및 캐시 디스크에 대한 디스크 유형과 디스크 수를 지정하십시오. 더 많은 스토리지를 원하는 경우 **고성능 Intel Optane** 상자를 선택하십시오.
 9. 네트워크 인터페이스 구성을 완료하십시오.
-  1. 호스트 이름 접두부(프로비저닝되는 인스턴스용), 하위 도메인 레이블 및 루트 도메인 이름을 입력하십시오. 
+  1. 호스트 이름 접두부(프로비저닝되는 인스턴스용), 하위 도메인 레이블 및 루트 도메인 이름을 입력하십시오.
   2. **공용 및 사설 네트워크** 또는 **사설 네트워크 전용** 중 네트워크 설정을 선택하십시오.
   3. VLAN 구성을 선택하십시오.
      *  새 공용 및 사설 VALN을 주문하려면 **새 VLAN 주문**을 클릭하십시오.

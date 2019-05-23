@@ -61,16 +61,6 @@ vSphere Enterprise Plus 6.7u1 は Broadwell および Skylake の {{site.data.ke
 * [vCenter Server with Hybridity Bundle インスタンスの注文](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
 * [新規 vSphere クラスターの注文](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
 
-## VLAN スパンニングのサポートの終了
-{: #relnotes_v29-vlan}
-
-2019 年 8 月より、{{site.data.keyword.vmwaresolutions_short}} では VLAN スパンニングがサポートされなくなります。 2019 年 7 月末までに、ご使用の {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントを Virtual Routing and Forwarding (VRF) に変換し、アカウントのサービス・エンドポイントを有効にする必要があります。
-
-詳しくは、以下を参照してください。
-
-* [Virtual Routing and Forwarding (VRF) on IBM Cloud の概要](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-* [アカウントでサービス・エンドポイントを使用できるようにする方法](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
-
 ## アプリケーション・プログラミング・インターフェースのサポート
 {: #relnotes_v29-api}
 
@@ -139,7 +129,7 @@ Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} サービスを組み
 ### F5 on IBM Cloud
 {: #relnotes_v29-services-f5}
 
-現行リリースでは、新しくデプロイされるすべてのインスタンスに F5-BigIP VE V14.1.0.2 がインストールされます。 F5-BigIP VE V14.1.0.2 の新機能について詳しくは、[Release Note: BIG-IP 14.1.0 New and Installation](https://support.f5.com/kb/en-us/products/big-ip_ltm/releasenotes/product/relnote-bigip-14-1-0.html){:new_window} を参照してください。
+現行リリースでは、新しくデプロイされるすべてのインスタンスに F5-BigIP VE V14.1.0.2 がインストールされます。 F5-BigIP VE V14.1.0.2 の新機能について詳しくは、[Release Note: BIG-IP 14.1.0 New and Installation](https://techdocs.f5.com/kb/en-us/products/big-ip_ltm/releasenotes/product/relnote-bigip-14-1-0.html){:new_window} を参照してください。
 
 ### HyTrust CloudControl on IBM Cloud
 {: #relnotes_v29-services-htcc}
@@ -151,7 +141,7 @@ Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} サービスを組み
 
 シドニーでは、KMIP for VMware on {{site.data.keyword.cloud_notm}} サービスの 2 つの新しいエンドポイントが使用可能になりました。 詳しくは、[KMIP for VMware on {{site.data.keyword.cloud_notm}} サービスの構成](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering#kmip_standalone_ordering-config)を参照してください。
 
-(2019 年 4 月 9 日に更新) これまでの KMIP for VMware on {{site.data.keyword.cloud_notm}} では、暗号鍵の作成、暗号化、復号化に IBM Key Protect for {{site.data.keyword.cloud_notm}} を使用していました。V2.9 リリース以降の KMIP for VMware on {{site.data.keyword.cloud_notm}} では、暗号化サービスと鍵管理サービスを一式備えた {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services を使用して、{{site.data.keyword.cloud_notm}} の VMware で使用する暗号鍵を管理することも可能です。詳しくは、[KMIP for VMware on IBM Cloud の概要](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations)および [{{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-get-started) を参照してください。
+(2019 年 4 月 9 日に更新) これまでの KMIP for VMware on {{site.data.keyword.cloud_notm}} では、暗号鍵の作成、暗号化、復号化に IBM Key Protect for {{site.data.keyword.cloud_notm}} を使用していました。 V2.9 リリース以降の KMIP for VMware on {{site.data.keyword.cloud_notm}} では、暗号化サービスと鍵管理サービスを一式備えた {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services を使用して、{{site.data.keyword.cloud_notm}} の VMware で使用する暗号鍵を管理することも可能です。 詳しくは、[KMIP for VMware on IBM Cloud の概要](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations)および [{{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-get-started) を参照してください。
 
 ### IBM Cloud での Veeam
 {: #relnotes_v29-services-veeam}

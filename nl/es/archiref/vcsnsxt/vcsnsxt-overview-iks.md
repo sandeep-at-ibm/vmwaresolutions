@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -56,7 +56,7 @@ Para que el CNI añada un contenedor a una red, el tiempo de ejecución del cont
 
 Desde la perspectiva del tráfico de red, diferenciamos entre cuatro tipos en {{site.data.keyword.containerlong_notm}}, tal como se muestra en el diagrama siguiente.
 
-Figura 1. Tipos de tráfico de red de contenedor ![Tipos de tráfico de red de contenedor](vcsnsxt-traffictypes.svg)
+![Tipos de tráfico de red del contenedor](../../images/vcsnsxt-traffictypes.svg "Tipos de tráfico de red del contenedor")
 
 - **Red intra-pod**: también conocida como comunicación de contenedor a contenedor. Todos los contenedores de un pod comparten un espacio de nombres de red, la misma dirección IP y se ven entre sí en localhost. El tráfico correspondiente a cada app se diferencia por un número de puerto diferente. El desarrollador debe asegurarse de que los contenedores de un pod no entren en conflicto entre sí con los puertos utilizados. Dentro de un pod, existe lo que se llama contenedor de infraestructura. Es el primer contenedor que inicia kubelet, y adquiere la IP del pod y configura el espacio de nombres de red. A continuación, todos los demás contenedores del pod se unen a la red del contenedor de infraestructura y al espacio de nombres de IPC. El contenedor tiene la modalidad de puente de red que está habilitada y todos los demás contenedores del pod se unen a este espacio de nombres a través de la modalidad de contenedor. Si cae el contenedor de infraestructura, kubelet desactiva todos los contenedores del pod y luego los vuelve a suministrar, normalmente con una nueva dirección IP. En este documento no proporcionaremos más detalles sobre este flujo de tráfico.
 
@@ -108,8 +108,7 @@ En Calico, los paquetes IP destinados o procedentes de un pod se direccionan y s
 -	Para una carga de trabajo que está enviando paquetes, Calico garantiza que el nodo trabajador siempre se devuelve como la dirección MAC de salto siguiente, independientemente del direccionamiento que pueda configurar la propia carga de trabajo.
 -	Para los paquetes destinados a una carga de trabajo, el último salto de IP es el del nodo trabajador de la carga de trabajo de destino en la propia carga de trabajo.
 
-Figura 2. CNI de Calico
-![CNI de Calico](vcsnsxt-calico-cni.svg)
+![Calico CNI](../../images/vcsnsxt-calico-cni.svg "Calico CNI")
 
 En el diagrama anterior se muestran los siguientes componentes de Calico:
 -	**calicoctl**: interfaz de línea de mandatos.

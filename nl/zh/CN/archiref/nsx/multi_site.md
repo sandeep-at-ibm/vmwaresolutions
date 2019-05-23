@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -36,9 +36,7 @@ subcollection: vmware-solutions
 * 对于入站流量，需要一个全局负载均衡器。请参阅 {{site.data.keyword.cloud_notm}} 全局负载均衡产品以满足此需求。
 * 此示例需要 VMware NSX Enterprise Edition。
 
-图 1. 多站点拓扑
-
-![多站点拓扑](multisite_topology.svg "多站点拓扑")
+![多站点拓扑](../../images/multisite_topology.svg "多站点拓扑")
 
 ## 相关链接
 {: #nsx-multi_site-related}

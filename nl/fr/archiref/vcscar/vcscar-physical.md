@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -33,9 +33,7 @@ IBM Multi-Cluster Manager fournit la visibilité utilisateur, la gestion orient�
 
 Le diagramme ci-après décrit l'implémentation de référence de l'application Acme Skate Advisor dans une implémentation d'infrastructure de modernisation des applications.
 
-Figure 1. Composants physiques de Skate Advisor
-</br>
-![Composants physiques de Skate Advisor](vcscar-physical.svg)
+![Composants physiques de Skate Advisor](../../images/vcscar-physical.svg "Composants physiques de Skate Advisor")
 
 L'application Skate Advisor étend l'application Web Acme existante avec un composant basé sur des micro-services qui interagit avec Watson et un conteneur nginx pour mettre en proxy des demandes vers le conteneur de micro-services et Web.
 
@@ -57,9 +55,7 @@ L'application est déployée sous la forme d'une orchestration CAM contenant les
 * Modèle Terraform - Un modèle Terraform est un fichier qui décrit les ressources de cloud à déployer. Pour Skate Advisor, la description porte sur un modèle ubuntu, qui est préinstallé avec mysql et le schéma de base de données.
 * Modèle VMWare - Le modèle VMWare est un modèle Ubuntu préinstallé avec mysql et le schéma de base de données.
 
-Figure 2. Orchestration CAM
-</br>
-![Orchestration CAM](vcscar-cam.svg)
+![Orchestration CAM](../../images/vcscar-cam.svg "Orchestration CAM")
 
 ### Equilibrage de charge et mise en proxy
 {: #vcscar-physical-load-balance-proxy}
@@ -104,9 +100,7 @@ Skate Advisor requiert les communications suivantes :
 
 La plateforme de modernisation des applications est conçue avec les composants énumérés ci-après pour atteindre cet objectif.
 
-Figure 3. Accès au réseau public
-</br>
-![Accès au réseau public](vcscar-network.svg)
+![Accès au réseau public](../../images/vcscar-network.svg "Accès au réseau public")
 
 {{site.data.keyword.cloud_notm}} comporte deux réseaux. Le réseau public permet d'atteindre les serveurs à partir d'Internet et le réseau privé permet aux serveurs de communiquer entre eux via un réseau principal haute vitesse dans tous les {{site.data.keyword.CloudDataCents_notm}}.
 
@@ -120,9 +114,7 @@ Une route statique est requise sur l'infrastructure {{site.data.keyword.containe
 
 L'application Skate Advisor utilise les composants logiciels énumérés ci-après.
 
-Figure 4. mappage de logiciel Skate Advisor
-</br>
-![Mappage de logiciel Skate Advisor](vcscar-sw-mapping.svg)
+![Mappage de logiciel Skate Advisor](../../images/vcscar-sw-mapping.svg "Mappage de logiciel Skate Advisor")
 
 Les composants logiciels suivants sont utilisés :
 
@@ -138,8 +130,7 @@ Les micro-services et les demandes d'application sont distribués aux noeuds fin
 
 L'application Acme Skate Advisor réside sur {{site.data.keyword.cloud_notm}} et de ce fait, elle est essentielle à l'architecture. {{site.data.keyword.cloud_notm}} comporte l'architecture décrite ci-après.
 
-Figure 5. Gestion de cloud
-![Gestion côté cloud](vcscar-cloud-management.svg)
+![Gestion côté cloud](../../images/vcscar-cloud-management.svg "Gestion côté cloud")
 
 Ce diagramme représente {{site.data.keyword.icpfull_notm}} et CAM déployés sur une instance vCenter Server, avec des connexions aux services vCenter et {{site.data.keyword.containerlong_notm}} sur site. A l'aide de CAM, les administrateurs système et les développeurs peuvent déployer des machines virtuelles présentes sur site ou dans l'instance et les conteneurs vCenter Server vers les clusters {{site.data.keyword.icpfull_notm}} et {{site.data.keyword.containerlong_notm}}.
 

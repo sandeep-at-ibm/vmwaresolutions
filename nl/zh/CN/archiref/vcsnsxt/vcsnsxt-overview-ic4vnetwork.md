@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -18,8 +18,7 @@ subcollection: vmware-solutions
 
 {{site.data.keyword.cloud_notm}} 的物理网络分为三种不同的网络：公用网络、专用网络和管理网络。
 
-图 1. {{site.data.keyword.cloud_notm}} 高级别网络视图
-![{{site.data.keyword.cloud_notm}} 高级别网络视图](vcsnsxt-ic4vcloud.svg)
+![{{site.data.keyword.cloud_notm}} 高级网络视图](../../images/vcsnsxt-ic4vcloud.svg "{{site.data.keyword.cloud_notm}} 高级网络视图")
 
 ## 公用网络
 {: #vcsnsxt-overview-ic4vnetwork-public-net}
@@ -55,9 +54,7 @@ subcollection: vmware-solutions
 
 此设计中的每个物理主机都有两对冗余的 10 Gbps 以太网连接，用于连接到每个 {{site.data.keyword.cloud_notm}} 机顶接入 (ToR) 交换机（公共和专用）。适配器设置为独立连接（未绑定），共有 4 个 10 Gbps 连接。这允许每个网络接口卡 (NIC) 连接彼此独立工作。
 
-图 2. 物理主机连接
-</br>
-![物理主机连接](vcsnsxt-host-connections.svg)
+![物理主机连接](../../images/vcsnsxt-host-connections.svg "物理主机连接")
 
 ## VLAN
 {: #vcsnsxt-overview-ic4vnetwork-vlans}

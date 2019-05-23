@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-06"
+lastupdated: "2019-05-01"
 
 subcollection: vmware-solutions
 
@@ -126,4 +126,4 @@ F5 on {{site.data.keyword.cloud_notm}} サービスを削除する前に、既�
 * [F5 on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_f5)
 * [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [よくある質問](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [F5 Web サイト](https://f5.com/){:new_window}
+* [F5 Web サイト](https://www.f5.com/){:new_window}

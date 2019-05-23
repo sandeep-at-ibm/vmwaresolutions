@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -28,8 +28,7 @@ Par défaut, {{site.data.keyword.containerlong_notm}} configure le cluster avec 
 - Une adresse IP privée pour chaque noeud worker, ce qui offre aux noeuds worker une interface réseau privée
 - Une connexion OpenVPN sécurisée automatique entre tous les noeuds worker et le noeud maître
 
-Figure 1. Mise en réseau de vCenter Server et d'{{site.data.keyword.containerlong_notm}}
-![vCenter Server-{{site.data.keyword.containerlong_notm}} - Diagramme de mise en réseau](vcsiks-networking.svg)
+![vCenter Server et {{site.data.keyword.containerlong_notm}} - Diagramme de mise en réseau](../../images/vcsiks-networking.svg "vCenter Server et {{site.data.keyword.containerlong_notm}} - Diagramme de mise en réseau")
 
 ### Intégration d'IBM Cloud Kubernetes Service et vCenter Server
 {: #vcsiks-overview-network-iks-vcs-integration}

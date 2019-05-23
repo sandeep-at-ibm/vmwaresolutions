@@ -1,0 +1,1293 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:xhtml="http://www.w3.org/1999/xhtml"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1009px"
+   height="729px"
+   version="1.1"
+   id="svg2"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="vcsnsxt-networking.svg">
+  <defs
+     id="defs368" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1015"
+     id="namedview366"
+     showgrid="false"
+     inkscape:zoom="1.1964519"
+     inkscape:cx="488.38083"
+     inkscape:cy="366.4324"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <metadata
+     id="metadata4">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(.5 .5)"
+     id="g6">
+    <ellipse
+       cx="165"
+       cy="137"
+       rx="165"
+       ry="65"
+       fill="#e1d5e7"
+       pointer-events="none"
+       stroke="#000"
+       id="ellipse8" />
+    <g
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g10">
+      <text
+         x="164.5"
+         y="90.5"
+         id="text12">
+        <tspan
+           style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+           id="tspan4496">온프레미스 가상화</tspan>
+      </text>
+    </g>
+    <rect
+       x="20"
+       y="122"
+       width="120"
+       height="40"
+       fill="#fff"
+       pointer-events="none"
+       stroke="#000"
+       id="rect14" />
+    <g
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g16">
+      <text
+         x="79.5"
+         y="145.5"
+         id="text18">vCenter</text>
+    </g>
+    <ellipse
+       cx="425"
+       cy="520"
+       rx="255"
+       ry="117.5"
+       fill="#dae8fc"
+       pointer-events="none"
+       stroke="#000"
+       id="ellipse20" />
+    <g
+       font-family="Helvetica"
+       font-size="14px"
+       font-weight="bold"
+       text-anchor="middle"
+       id="g22">
+      <text
+         x="424.5"
+         y="629.5"
+         id="text24">
+        <tspan
+           font-family="Helvetica"
+           font-weight="normal"
+           id="tspan26">vCenter Server</tspan>
+      </text>
+    </g>
+    <rect
+       x="220"
+       y="542"
+       width="120"
+       height="40"
+       fill="#fff"
+       pointer-events="none"
+       stroke="#000"
+       id="rect28" />
+    <g
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g30">
+      <text
+         x="279.5"
+         y="565.5"
+         id="text32">NSX-V</text>
+    </g>
+    <ellipse
+       cx="505"
+       cy="537"
+       rx="115"
+       ry="65"
+       fill="#d5e8d4"
+       pointer-events="none"
+       stroke="#000"
+       id="ellipse34" />
+    <g
+       font-family="Helvetica"
+       font-size="12px"
+       font-weight="bold"
+       text-anchor="middle"
+       id="g36">
+      <text
+         x="504.5"
+         y="490.5"
+         id="text38">ICP</text>
+    </g>
+    <ellipse
+       cx="560"
+       cy="237"
+       rx="100"
+       ry="47.5"
+       fill="#d5e8d4"
+       pointer-events="none"
+       stroke="#000"
+       id="ellipse40" />
+    <g
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g42">
+      <text
+         x="559.5"
+         y="277"
+         id="text44">IKS</text>
+    </g>
+    <rect
+       x="450"
+       y="497"
+       width="120"
+       height="35"
+       fill="#fff"
+       pointer-events="none"
+       stroke="#000"
+       id="rect46" />
+    <g
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g48">
+      <text
+         x="509.5"
+         y="518"
+         id="text50">CAM</text>
+    </g>
+    <g
+       pointer-events="none"
+       stroke="#000"
+       id="g52">
+      <path
+         d="m360 525.12v36.88h90"
+         fill="none"
+         stroke-miterlimit="10"
+         id="path54" />
+      <path
+         d="m360 518.12 3.5 7h-7z"
+         stroke-miterlimit="10"
+         id="path56" />
+      <rect
+         x="270"
+         y="477"
+         width="120"
+         height="40"
+         fill="#fff"
+         id="rect58" />
+    </g>
+    <g
+       transform="translate(290.5,490.5)"
+       id="g60">
+      <switch
+         id="switch62">
+        <foreignObject
+           width="78"
+           height="12"
+           overflow="visible"
+           pointer-events="all"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             color="rgb(0, 0, 0)"
+             display="inline-block"
+             font-family="Helvetica"
+             font-size="12px"
+             text-align="center"
+             style="line-height:1.2;vertical-align:top;white-space:nowrap;width:80px;word-wrap:normal">
+            <xhtml:div
+               display="inline-block"
+               text-align="inherit"
+               text-decoration="inherit">On Cloud VMs</xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="39"
+           y="12"
+           font-size="12px"
+           id="text64"
+           style="font-size:12px;font-family:Helvetica;text-anchor:middle;fill:#000000">On Cloud VM</text>
+      </switch>
+    </g>
+    <rect
+       x="505"
+       y="217"
+       width="120"
+       height="40"
+       fill="#fff"
+       pointer-events="none"
+       stroke="#000"
+       id="rect66" />
+    <g
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g68">
+      <text
+         x="564.5"
+         y="240.5"
+         id="text70">
+        <tspan
+           style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+           id="tspan4542">컨테이너화된 앱</tspan>
+      </text>
+    </g>
+    <rect
+       x="180"
+       y="122"
+       width="120"
+       height="40"
+       fill="#fff"
+       pointer-events="none"
+       stroke="#000"
+       id="rect72" />
+    <g
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g74">
+      <text
+         x="239.5"
+         y="145.5"
+         id="text76"><tspan
+   style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+   id="tspan4498">온프레미스</tspan>
+
+ VM</text>
+    </g>
+    <rect
+       x="450"
+       y="542"
+       width="120"
+       height="40"
+       fill="#fff"
+       pointer-events="none"
+       stroke="#000"
+       id="rect78" />
+    <g
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g80">
+      <text
+         x="509.5"
+         y="565.5"
+         id="text82">
+        <tspan
+           style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+           id="tspan4534">컨테이너화된 앱</tspan>
+      </text>
+    </g>
+    <ellipse
+       cx="693"
+       cy="340"
+       rx="7.5"
+       ry="7.5"
+       fill="#fff"
+       pointer-events="none"
+       stroke="#000"
+       id="ellipse84" />
+    <path
+       d="m693 347v25m0-20h-15m15 0h15m-15 20-15 20m15-20 15 20"
+       fill="none"
+       pointer-events="none"
+       stroke="#000"
+       stroke-miterlimit="10"
+       id="path86" />
+    <g
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g88">
+      <rect
+         x="665"
+         y="401"
+         width="57"
+         height="15"
+         fill="#fff"
+         stroke-width="0"
+         id="rect90" />
+      <text
+         x="692.5"
+         y="410.5"
+         id="text92">
+        <tspan
+           style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+           id="tspan4552">개발자</tspan>
+      </text>
+    </g>
+    <ellipse
+       cx="565"
+       cy="50"
+       rx="7.5"
+       ry="7.5"
+       fill="#fff"
+       pointer-events="none"
+       stroke="#000"
+       id="ellipse94" />
+    <path
+       d="m565 57v25m0-20h-15m15 0h15m-15 20-15 20m15-20 15 20"
+       fill="none"
+       pointer-events="none"
+       stroke="#000"
+       stroke-miterlimit="10"
+       id="path96" />
+    <g
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g98">
+      <rect
+         x="539"
+         y="111"
+         width="54"
+         height="15"
+         fill="#fff"
+         stroke-width="0"
+         id="rect100" />
+      <text
+         x="564.5"
+         y="120.5"
+         id="text102">
+        <tspan
+           style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+           id="tspan4510">고객</tspan>
+      </text>
+    </g>
+    <path
+       d="m80 607v-436.88"
+       fill="none"
+       pointer-events="none"
+       stroke="#000"
+       stroke-miterlimit="10"
+       id="path104" />
+    <path
+       d="m80 163.12 3.5 7h-7z"
+       pointer-events="none"
+       stroke="#000"
+       stroke-miterlimit="10"
+       id="path106" />
+    <g
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g108">
+      <rect
+         x="36"
+         y="563"
+         width="91"
+         height="29"
+         fill="#fff"
+         stroke-width="0"
+         id="rect110" />
+      <text
+         x="80"
+         y="573"
+         id="text112">
+        <tspan
+           style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+           id="tspan4516">가상 머신</tspan>
+      </text>
+      <text
+         x="80"
+         y="587"
+         id="text114">
+        <tspan
+           style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+           id="tspan4518">마이그레이션</tspan>
+      </text>
+    </g>
+    <path
+       d="m110 687h164q10 0 10-10v-49.88"
+       fill="none"
+       pointer-events="none"
+       stroke="#000"
+       stroke-miterlimit="10"
+       id="path116" />
+    <path
+       d="m284 620.12 3.5 7h-7z"
+       pointer-events="none"
+       stroke="#000"
+       stroke-miterlimit="10"
+       id="path118" />
+    <g
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g120">
+      <rect
+         x="156"
+         y="671"
+         width="91"
+         height="15"
+         fill="#fff"
+         stroke-width="0"
+         id="rect122" />
+      <text
+         x="200"
+         y="681"
+         id="text124">
+        <tspan
+           style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+           id="tspan4528">프로비저닝/스케일</tspan>
+      </text>
+    </g>
+    <path
+       d="m550 488.88v4.06q0 4.06 0-5.94v-30q0-10 10-10h40q10 0 10-10v-60q0-10 10-10h40"
+       fill="none"
+       pointer-events="none"
+       stroke="#000"
+       stroke-miterlimit="10"
+       id="path126" />
+    <path
+       d="m550 495.88-3.5-7h7z"
+       pointer-events="none"
+       stroke="#000"
+       stroke-miterlimit="10"
+       id="path128" />
+    <g
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g130">
+      <rect
+         x="580"
+         y="379"
+         width="63"
+         height="29"
+         fill="#fff"
+         stroke-width="0"
+         id="rect132" />
+      <text
+         x="610"
+         y="389"
+         id="text134">
+        <tspan
+           style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+           id="tspan4548">스케일 앱</tspan>
+      </text>
+      <text
+         x="610"
+         y="403"
+         id="text136">
+        <tspan
+           style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+           id="tspan4550">배치</tspan>
+      </text>
+    </g>
+    <path
+       d="m565 208.88v-81.88"
+       fill="none"
+       pointer-events="none"
+       stroke="#000"
+       stroke-miterlimit="10"
+       id="path138" />
+    <path
+       d="m565 215.88-3.5-7h7z"
+       pointer-events="none"
+       stroke="#000"
+       stroke-miterlimit="10"
+       id="path140" />
+    <g
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g142">
+      <rect
+         x="515"
+         y="154"
+         width="103"
+         height="15"
+         fill="#fff"
+         stroke-width="0"
+         id="rect144" />
+      <text
+         x="565"
+         y="164"
+         id="text146">
+        <tspan
+           style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+           id="tspan4540">서비스 이용</tspan>
+      </text>
+    </g>
+    <path
+       d="m860 418.12v123.88q0 10-10 10h-280"
+       fill="none"
+       pointer-events="none"
+       stroke="#000"
+       stroke-miterlimit="10"
+       id="path148" />
+    <path
+       d="m860 411.12 3.5 7h-7z"
+       pointer-events="none"
+       stroke="#000"
+       stroke-miterlimit="10"
+       id="path150" />
+    <g
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g152">
+      <rect
+         x="745"
+         y="536"
+         width="53"
+         height="29"
+         fill="#fff"
+         stroke-width="0"
+         id="rect154" />
+      <text
+         x="770"
+         y="546"
+         id="text156">
+        <tspan
+           style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+           id="tspan4562">서비스</tspan>
+      </text>
+      <text
+         x="770"
+         y="560"
+         id="text158">
+        <tspan
+           style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+           id="tspan4564">이용</tspan>
+      </text>
+    </g>
+    <path
+       d="m321.16 172.27 4.42 5.36q4.42 5.37 14.42 5.37h74q10 0 10 10v34q0 10 0 20v258q0 10 10 10h16"
+       fill="none"
+       pointer-events="none"
+       stroke="#000"
+       stroke-miterlimit="10"
+       id="path160" />
+    <path
+       d="m316.71 166.86 7.15 3.18-5.4 4.45z"
+       pointer-events="none"
+       stroke="#000"
+       stroke-miterlimit="10"
+       id="path162" />
+    <g
+       transform="translate(426.5,277.5)"
+       id="g164">
+      <switch
+         id="switch166">
+        <foreignObject
+           width="49"
+           height="12"
+           overflow="visible"
+           pointer-events="all"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             color="rgb(0, 0, 0)"
+             display="inline-block"
+             font-family="Helvetica"
+             font-size="12px"
+             text-align="center"
+             style="line-height:1.2;vertical-align:top;white-space:nowrap">
+            <xhtml:div
+               display="inline-block"
+               text-align="inherit"
+               text-decoration="inherit"
+               style="background-color:#ffffff">Provision</xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="29"
+           y="12"
+           font-size="12px"
+           id="text168"
+           style="font-size:12px;font-family:Helvetica;text-anchor:middle;fill:#000000">
+          <tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gulim;-inkscape-font-specification:Gulim"
+             id="tspan4536">프로비저닝</tspan>
+        </text>
+      </switch>
+    </g>
+    <path
+       d="m211.88 562h-91.88q-10 0-10-10v-390"
+       fill="none"
+       pointer-events="none"
+       stroke="#000"
+       stroke-miterlimit="10"
+       id="path170" />
+    <path
+       d="m218.88 562-7 3.5v-7z"
+       pointer-events="none"
+       stroke="#000"
+       stroke-miterlimit="10"
+       id="path172" />
+    <g
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g174">
+      <rect
+         x="88"
+         y="337"
+         width="52"
+         height="43"
+         fill="#fff"
+         stroke-width="0"
+         id="rect176" />
+      <text
+         x="113"
+         y="347"
+         id="text178">
+        <tspan
+           style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+           id="tspan4500">네트워크</tspan>
+      </text>
+      <text
+         x="113"
+         y="375"
+         id="text180">
+        <tspan
+           style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+           id="tspan4502">작성</tspan>
+      </text>
+    </g>
+    <ellipse
+       cx="785"
+       cy="136"
+       rx="7.5"
+       ry="7.5"
+       fill="#fff"
+       pointer-events="none"
+       stroke="#000"
+       id="ellipse182" />
+    <path
+       d="m785 143v25m0-20h-15m15 0h15m-15 20-15 20m15-20 15 20"
+       fill="none"
+       pointer-events="none"
+       stroke="#000"
+       stroke-miterlimit="10"
+       id="path184" />
+    <g
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g186">
+      <rect
+         x="763"
+         y="197"
+         width="46"
+         height="15"
+         fill="#fff"
+         stroke-width="0"
+         id="rect188" />
+      <text
+         x="784.5"
+         y="206.5"
+         id="text190">IBM IKS</text>
+    </g>
+    <path
+       d="m642 200.88v-33.88q0-10 10-10h108"
+       fill="none"
+       pointer-events="none"
+       stroke="#000"
+       stroke-miterlimit="10"
+       id="path192" />
+    <path
+       d="m642 207.88-3.5-7h7z"
+       pointer-events="none"
+       stroke="#000"
+       stroke-miterlimit="10"
+       id="path194" />
+    <g
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g196">
+      <rect
+         x="643"
+         y="141"
+         width="117"
+         height="15"
+         fill="#fff"
+         stroke-width="0"
+         id="rect198" />
+      <text
+         x="700"
+         y="151"
+         id="text200">
+        <tspan
+           style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+           id="tspan4544">마스터 노드 관리</tspan>
+      </text>
+    </g>
+    <ellipse
+       cx="860"
+       cy="362"
+       rx="100"
+       ry="47.5"
+       fill="#b266ff"
+       pointer-events="none"
+       stroke="#000"
+       id="ellipse202" />
+    <g
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g204">
+      <text
+         x="859.5"
+         y="333"
+         id="text206">IBM Cloud</text>
+      <text
+         x="859.5"
+         y="347"
+         id="text208">
+        <tspan
+           style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+           id="tspan4558">서비스</tspan>
+      </text>
+    </g>
+    <path
+       d="m625 237h225q10 0 10 10v59.88"
+       fill="none"
+       pointer-events="none"
+       stroke="#000"
+       stroke-miterlimit="10"
+       id="path210" />
+    <path
+       d="m860 313.88-3.5-7h7z"
+       pointer-events="none"
+       stroke="#000"
+       stroke-miterlimit="10"
+       id="path212" />
+    <g
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g214">
+      <rect
+         x="835"
+         y="259"
+         width="53"
+         height="29"
+         fill="#fff"
+         stroke-width="0"
+         id="rect216" />
+      <text
+         x="860"
+         y="269"
+         id="text218">
+        <tspan
+           style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+           id="tspan4554">서비스</tspan>
+      </text>
+      <text
+         x="860"
+         y="283"
+         id="text220">
+        <tspan
+           style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+           id="tspan4556">이용</tspan>
+      </text>
+    </g>
+    <rect
+       x="800"
+       y="362"
+       width="120"
+       height="30"
+       fill="#fff"
+       pointer-events="none"
+       stroke="#000"
+       id="rect222" />
+    <g
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g224">
+      <text
+         x="859.5"
+         y="380.5"
+         id="text226">Watson</text>
+    </g>
+    <path
+       d="m242.53 416.92 9.95-3.34-8.64 22.95-20.75-13.07 9.96-3.35-66.58-198.03-9.95 3.34 8.64-22.95 20.75 13.07-9.96 3.35z"
+       fill="#fff"
+       pointer-events="none"
+       stroke="#00f"
+       stroke-dasharray="3 3"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       id="path228" />
+    <g
+       transform="translate(-6.2385 -7)"
+       font-family="Helvetica"
+       font-size="24px"
+       text-anchor="middle"
+       id="g230">
+      <rect
+         x="156"
+         y="304"
+         width="95"
+         height="29"
+         fill="#fff"
+         stroke-width="0"
+         id="rect232" />
+      <text
+         x="202.58"
+         y="326.94"
+         id="text234">
+        <tspan
+           font-size="13.333px"
+           id="tspan236"
+           style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">하이브리디티</tspan>
+      </text>
+    </g>
+    <path
+       d="m550.43 399.29 10.42 1.33-17.79 16.88-12.96-20.81 10.41 1.33 12.06-94.31-10.42-1.33 17.79-16.88 12.96 20.81-10.41-1.33z"
+       fill="#fff"
+       pointer-events="none"
+       stroke="#00f"
+       stroke-dasharray="3 3"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       id="path238" />
+    <g
+       transform="translate(4.3536 -1.8609)"
+       font-family="Helvetica"
+       font-size="13px"
+       text-anchor="middle"
+       id="g240">
+      <rect
+         x="505"
+         y="335"
+         width="94"
+         height="31"
+         fill="#fff"
+         stroke-width="0"
+         id="rect242" />
+      <text
+         x="550.76001"
+         y="337.92999"
+         id="text244">IBM Cloud</text>
+      <text
+         x="550.76001"
+         y="353.92999"
+         id="text246">
+        <tspan
+           style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+           id="tspan4538">사설 네트워크</tspan>
+      </text>
+    </g>
+    <path
+       d="m774.27 315.28 5.02-9.22 9.27 22.7-24.1 4.52 5.02-9.22-99.75-54.34-5.02 9.22-9.27-22.7 24.1-4.52-5.02 9.22z"
+       fill="#fff"
+       pointer-events="none"
+       stroke="#00f"
+       stroke-dasharray="3 3"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       id="path248" />
+    <g
+       transform="translate(-1.4142 .70711)"
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g250">
+      <rect
+         x="687"
+         y="279"
+         width="82"
+         height="29"
+         fill="#fff"
+         stroke-width="0"
+         id="rect252" />
+      <text
+         x="727.03003"
+         y="282.06"
+         id="text254">IBM Cloud</text>
+      <text
+         x="727.03003"
+         y="296.06"
+         id="text256">
+        <tspan
+           style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+           id="tspan4546">공용 네트워크</tspan>
+      </text>
+    </g>
+    <path
+       d="m693.05 484.08 6.84 7.96-24.51 0.63 4.3-24.14 6.85 7.97 84.42-72.58-6.84-7.96 24.51-0.63-4.3 24.14-6.85-7.97z"
+       fill="#fff"
+       pointer-events="none"
+       stroke="#00f"
+       stroke-dasharray="3 3"
+       stroke-linejoin="round"
+       stroke-miterlimit="10"
+       id="path258" />
+    <g
+       transform="translate(-3.2836e-8 5.6569)"
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g260">
+      <rect
+         x="693"
+         y="429"
+         width="82"
+         height="29"
+         fill="#fff"
+         stroke-width="0"
+         id="rect262" />
+      <text
+         x="732.73999"
+         y="432.04999"
+         id="text264">IBM Cloud</text>
+      <text
+         x="732.73999"
+         y="446.04999"
+         id="text266">
+        <tspan
+           style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+           id="tspan4560">공용 네트워크</tspan>
+      </text>
+    </g>
+    <g
+       pointer-events="none"
+       stroke="#000"
+       stroke-miterlimit="10"
+       id="g268">
+      <path
+         d="m578.12 572h411.88q10 0 10-10v-545q0-10-10-10h-510"
+         fill="none"
+         id="path270" />
+      <path
+         d="m571.12 572 7-3.5v7z"
+         id="path272" />
+      <path
+         d="m398.12 487h25.88"
+         fill="none"
+         id="path274" />
+      <path
+         d="m391.12 487 7-3.5v7z"
+         id="path276" />
+      <path
+         d="m240 113.88v-96.88q0-10 10-10h305q10 0 10 10v20"
+         fill="none"
+         id="path278" />
+      <path
+         d="m240 120.88-3.5-7h7z"
+         id="path280" />
+    </g>
+    <g
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g282">
+      <rect
+         x="513"
+         y="1"
+         width="103"
+         height="15"
+         fill="#fff"
+         stroke-width="0"
+         id="rect284" />
+      <text
+         x="563"
+         y="11"
+         id="text286">
+        <tspan
+           style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+           id="tspan4508">서비스 이용</tspan>
+      </text>
+    </g>
+    <g
+       pointer-events="none"
+       stroke="#000"
+       id="g288">
+      <g
+         stroke-miterlimit="10"
+         id="g290">
+        <path
+           d="m360 468.88v-411.88q0-10 0-20v-30"
+           fill="none"
+           id="path292" />
+        <path
+           d="m360 475.88-3.5-7h7z"
+           id="path294" />
+        <path
+           d="m424 237h29.63"
+           fill="none"
+           id="path296" />
+        <path
+           d="m458.88 237-7 3.5 1.75-3.5-1.75-3.5z"
+           id="path298" />
+      </g>
+      <ellipse
+         cx="80"
+         cy="640"
+         rx="7.5"
+         ry="7.5"
+         fill="#fff"
+         id="ellipse300" />
+      <path
+         d="m80 647v25m0-20h-15m15 0h15m-15 20-15 20m15-20 15 20"
+         fill="none"
+         stroke-miterlimit="10"
+         id="path302" />
+    </g>
+    <g
+       transform="translate(0 -6.8648)"
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g304">
+      <rect
+         x="44"
+         y="701"
+         width="73"
+         height="29"
+         fill="#fff"
+         stroke-width="0"
+         id="rect306" />
+      <text
+         x="79.5"
+         y="710.5"
+         id="text308">
+        <tspan
+           style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+           id="tspan4520">시스템</tspan>
+      </text>
+      <text
+         x="79.5"
+         y="724.5"
+         id="text310">
+        <tspan
+           style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+           id="tspan4522"> 관리자</tspan>
+      </text>
+    </g>
+    <path
+       d="m622.11 517.69 8.95-0.35q8.94-0.34 8.94-10.34v-50q0-10 0-20v-10q0-10 5.55-18.32l14.45-21.68"
+       fill="none"
+       pointer-events="none"
+       stroke="#000"
+       stroke-miterlimit="10"
+       id="path312" />
+    <path
+       d="m615.12 517.96 6.86-3.77 0.27 7z"
+       pointer-events="none"
+       stroke="#000"
+       stroke-miterlimit="10"
+       id="path314" />
+    <g
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g316">
+      <rect
+         x="618"
+         y="474"
+         width="46"
+         height="29"
+         fill="#fff"
+         stroke-width="0"
+         id="rect318" />
+      <text
+         x="640"
+         y="484.02"
+         id="text320">개발</text>
+      <text
+         x="640"
+         y="498.02"
+         id="text322">컨텐츠</text>
+    </g>
+    <ellipse
+       cx="300"
+       cy="265"
+       rx="7.5"
+       ry="7.5"
+       fill="#fff"
+       pointer-events="none"
+       stroke="#000"
+       id="ellipse324" />
+    <path
+       d="m300 272v25m0-20h-15m15 0h15m-15 20-15 20m15-20 15 20"
+       fill="none"
+       pointer-events="none"
+       stroke="#000"
+       stroke-miterlimit="10"
+       id="path326" />
+    <g
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g328">
+      <rect
+         x="258"
+         y="326"
+         width="85"
+         height="15"
+         fill="#fff"
+         stroke-width="0"
+         id="rect330" />
+      <text
+         x="299.5"
+         y="335.5"
+         id="text332">
+        <tspan
+           style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+           id="tspan4512">엔터프라이즈 사용자 </tspan>
+      </text>
+    </g>
+    <path
+       d="m240 170.12v26.88q0 10 10 10h40q10 0 10 10v30"
+       fill="none"
+       pointer-events="none"
+       stroke="#000"
+       stroke-miterlimit="10"
+       id="path334" />
+    <path
+       d="m240 163.12 3.5 7h-7z"
+       pointer-events="none"
+       stroke="#000"
+       stroke-miterlimit="10"
+       id="path336" />
+    <g
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g338">
+      <rect
+         x="272"
+         y="214"
+         width="58"
+         height="29"
+         fill="#fff"
+         stroke-width="0"
+         id="rect340" />
+      <text
+         x="300"
+         y="224"
+         id="text342">
+        <tspan
+           style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+           id="tspan4504">비즈니스</tspan>
+      </text>
+      <text
+         x="300"
+         y="238"
+         id="text344">
+        <tspan
+           style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+           id="tspan4506">프로세스</tspan>
+      </text>
+    </g>
+    <path
+       d="m300 468.88v-101.88q0-10 0-15v-2.5q0-2.5 0 2.5v5"
+       fill="none"
+       pointer-events="none"
+       stroke="#000"
+       stroke-miterlimit="10"
+       id="path346" />
+    <path
+       d="m300 475.88-3.5-7h7z"
+       pointer-events="none"
+       stroke="#000"
+       stroke-miterlimit="10"
+       id="path348" />
+    <g
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g350">
+      <rect
+         x="272"
+         y="364"
+         width="58"
+         height="29"
+         fill="#fff"
+         stroke-width="0"
+         id="rect352" />
+      <text
+         x="300"
+         y="374"
+         id="text354">
+        <tspan
+           style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+           id="tspan4524">비즈니스</tspan>
+      </text>
+      <text
+         x="300"
+         y="388"
+         id="text356">
+        <tspan
+           style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+           id="tspan4526">프로세스</tspan>
+      </text>
+    </g>
+    <g
+       transform="translate(-272.68 54.652)"
+       font-family="Helvetica"
+       font-size="12px"
+       text-anchor="middle"
+       id="g358">
+      <rect
+         x="618"
+         y="474"
+         width="46"
+         height="29"
+         fill="#fff"
+         stroke-width="0"
+         id="rect360" />
+      <text
+         x="640"
+         y="484.01999"
+         id="text362">
+        <tspan
+           style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+           id="tspan4530">서비스</tspan>
+      </text>
+      <text
+         x="640"
+         y="498.01999"
+         id="text364">
+        <tspan
+           style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+           id="tspan4532">이용</tspan>
+      </text>
+    </g>
+  </g>
+</svg>

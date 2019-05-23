@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 以下の図は、Acme Skateboards 社がデプロイするアプリケーション・モダナイゼーションのリファレンス・アーキテクチャーを示しており、この文書シリーズで詳しく説明されています。
 
-図 1. アーキテクチャー概要図
-![アーキテクチャー概要図](vcsiks-aod.svg)
+![アーキテクチャー概要図](../../images/vcsiks-aod.svg "アーキテクチャー概要図")
 
 　このハイブリッド・アーキテクチャーにより、Acme Skateboards 社は以下のことが可能になります。
 - ダウン時間がほとんど、あるいはまったくなく、アプリケーションの再構成も必要とすることなく、VMware VM をオンプレミスから {{site.data.keyword.cloud}} にマイグレーションする。

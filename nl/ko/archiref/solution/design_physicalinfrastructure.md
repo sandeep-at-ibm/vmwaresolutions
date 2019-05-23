@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -33,8 +33,7 @@ subcollection: vmware-solutions
 
 스토리지에 대한 자세한 정보는 [공유 스토리지 아키텍처](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits)를 참조하십시오.
 
-그림 1. 실제 인프라</br>
-![실제 인프라](vcsv4radiagrams-ra-physinfra.svg)
+![실제 인프라](../../images/vcsv4radiagrams-ra-physinfra.svg "실제 인프라")
 
 ## 실제 컴퓨팅 디자인
 {: #design_physicalinfrastructure-host-design}
@@ -62,10 +61,9 @@ Bare Metal Server의 스펙은 다음과 같습니다.
 ### IBM Cloud 네트워크 개요
 {: #design_physicalinfrastructure-ibm-cloud-network}
 
-{{site.data.keyword.cloud_notm}}의 실제 네트워크는 2개의 개별 네트워크(공용 및 사설)로 분류됩니다. 사설 네트워크에는 실제 서버에 대한 관리 IPMI(Intelligent Platform Management Interface) 트래픽도 포함되어 있습니다. 
+{{site.data.keyword.cloud_notm}}의 실제 네트워크는 2개의 개별 네트워크(공용 및 사설)로 분류됩니다. 사설 네트워크에는 실제 서버에 대한 관리 IPMI(Intelligent Platform Management Interface) 트래픽도 포함되어 있습니다.
 
-그림 2. {{site.data.keyword.cloud_notm}} 상위 레벨 네트워크
-![{{site.data.keyword.cloud_notm}} 상위 레벨 네트워크](vcsv4radiagrams-ra-ibmcloudnetwork.svg)
+![{{site.data.keyword.cloud_notm}} 상위 레벨 네트워크](../../images/vcsv4radiagrams-ra-ibmcloudnetwork.svg "{{site.data.keyword.cloud_notm}} 상위 레벨 네트워크")
 
 #### 공용 네트워크
 {: #design_physicalinfrastructure-public-net}
@@ -111,8 +109,7 @@ Bare Metal Server의 스펙은 다음과 같습니다.
 
 vCenter Server 오퍼링 내에서 사용되는 베어메탈 서버의 경우 공용 또는 사설 네트워크에 대한 실제 네트워크 연결을 제거할 수 없습니다. 베어메탈의 내부 NIC에 있는 실제 포트는 사용 안함으로 설정될 수 있으나 케이블 분리는 지원되지 않습니다.
 
-그림 3. 실제 호스트 연결</br>
-![실제 호스트 연결](vcsv4radiagrams-ra-physical-host-connections.svg "실제 호스트 연결")
+![실제 호스트 연결](../../images/vcsv4radiagrams-ra-physical-host-connections.svg "실제 호스트 연결")
 
 #### VLAN과 언더레이 - 오버레이 라우팅
 {: #design_physicalinfrastructure-vlans}
@@ -180,9 +177,7 @@ vSphere ESXi 하이퍼바이저는 지속적 위치에 설치됩니다. 따라�
 
 스토리지는 IBM Cloud에서 GB 레벨당 2 IOPS로 NFSv3 프로토콜을 사용하여 연결됩니다. IBM은 더 큰 블록 크기에는 낮은 한계가 표시되고 더 작은 블록 크기에는 높은 한계가 표시되도록 16K 블록 크기로 프로비저닝되는 IOP 레벨을 정규화합니다.
 
-그림 4. VMware 배치에 연결되는 NFS 공유
-
-![VMware 배치에 연결되는 NFS 공유](vcsv4radiagrams-ra-nfs-shares.svg "VMware 배치에 연결되는 NFS 공유: 관리 공유 및 고객 지정 공유")
+![VMware 배치에 연결되는 NFS 공유](../../images/vcsv4radiagrams-ra-nfs-shares.svg "VMware 배치에 연결되는 NFS 공유: 관리 공유 및 고객 지정 공유")
 
 구매 시에 또는 나중에 콘솔 내에서 워크로드에 대한 모든 호스트 간의 추가 파일 공유를 할당하고 마운트할 수 있습니다. 대응되는 {{site.data.keyword.CloudDataCent_notm}}의 사용 가능한 {{site.data.keyword.cloud_notm}} Endurance 파일 스토리지 용량 옵션 및 성능 티어에서 선택할 수 있습니다. 모든 공유는 NFSv3 프로토콜을 사용하여 연결됩니다. 또한 NetApp ONTAP Select 오퍼링을 적용하여 NFSv3 파일 공유를 연결할 수 있습니다.
 
@@ -195,8 +190,7 @@ NFS와 유사하게 공유 iSCSI 스토리지의 경우 하나의 2TB iSCSI LUN�
 
 IBM은 더 큰 블록 크기에는 낮은 한계가 표시되고 더 작은 블록 크기에는 높은 한계가 표시되도록 16K 블록 크기로 프로비저닝되는 IOP 레벨을 정규화합니다.
 
-그림 5. VMware 배치에 연결되는 iSCSI LUN</br>
-![VMware 배치에 연결되는 iSCSI LUN](vcsv4radiagrams-ra-iscsi-lun.svg "VMware 배치에 연결되는 iSCSI LUN")
+![VMware 배치에 연결되는 iSCSI LUN](../../images/vcsv4radiagrams-ra-iscsi-lun.svg "VMware 배치에 연결되는 iSCSI LUN")
 
 구매 시에 또는 나중에 콘솔 내에서 워크로드에 대한 모든 호스트 간의 추가 iSCSI LUN도 할당하고 마운트할 수 있습니다. 대응되는 IBM Cloud Data Center의 사용 가능한 IBM Cloud Endurance 블록 스토리지 용량 옵션 및 성능 티어에서 선택할 수 있습니다. 모든 LUN은 iSCSI 프로토콜을 사용하여 연결됩니다. 또한 NetApp ONTAP Select 오퍼링에서 iSCSI LUN을 연결할 수 있습니다.
 

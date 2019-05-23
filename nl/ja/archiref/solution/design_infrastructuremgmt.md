@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -24,8 +24,7 @@ subcollection: vmware-solutions
 
 この設計では、vCenter Server インスタンスに統合した PSC 機能を使用します。 PSC と vCenter Server は同じ仮想マシン (VM) に配置されます。
 
-図 1. インフラストラクチャー管理</br>
-![インフラストラクチャー管理](vcsv4radiagrams-ra-inframgmt.svg)
+![インフラストラクチャー管理](../../images/vcsv4radiagrams-ra-inframgmt.svg "インフラストラクチャー管理")
 
 プライマリー・インスタンスにある PSC には、デフォルトの SSO ドメインである `vsphere.local` が割り当てられます。
 
@@ -74,26 +73,25 @@ vCenter Server の構成では、アプライアンスに含まれているロ�
 
 デフォルトで、「**VM 再起動優先順位 (VM restart priority)**」オプションは「中 (medium)」に、「**ホスト分離応答 (Host isolation response)**」オプションは無効に設定されています。 さらに、「**VM のモニタリング (VM monitoring)**」は無効に設定され、「**データストア・ハートビート (Datastore Heartbeating)**」フィーチャーはすべてのクラスター・データ・ストアを含めるように構成されます。 この方法では、NAS データ・ストアがあるときにはそれらを使用します。
 
-## Enhanced vMotion Compatibility
+### Enhanced vMotion Compatibility
 {: #design_infrastructuremgmt-evc}
 
 CPU の機能が異なる可能性のあるクラスター・ノード間で vMotion の互換性の処理を簡略化するために、Skylake レベルで Enhanced vMotion Compatibility (EVC) モードが有効になります。その結果、{{site.data.keyword.cloud_notm}} インベントリーに新しいプロセッサーが届いた時に、クラスター・ノード間で vMotion の互換性が確保され、Skylake プロセッサー・サーバーがインベントリーにない場合でも、将来のクラスター拡張が可能になります。
 
-### IBM CloudDriver
+## IBM CloudDriver
 {: #design_infrastructuremgmt-cloud-driver}
 
 こうしたソリューションの基礎になっているのが自動処理です。 自動処理によってデプロイメントの複雑さが解消され、デプロイメント時間が大幅に短縮され、VMware インスタンスが一貫した方法でデプロイされるようになります。
 
 IBM CloudBuilder は、一時的な {{site.data.keyword.cloud_notm}} VM 仮想サーバー・インスタンス (VSI) です。新しい VMware インスタンスを起動して、ライフサイクル管理機能を実行する、という役割を果たします。 それは、全体的な vCenter Server インスタンス管理が必要になるとデプロイされ、そのプロセスが完了すると破棄されます。
 
-IBM CloudDriver は、ホスト、クラスター、アドオン・サービスを VMware インスタンスに追加するなどの Day 2 Operations (運用開始後の操作) で必要になった場合にデプロイされる一時的な {{site.data.keyword.cloud_notm}} VM 仮想サーバー・インスタンス (VSI) です。
+IBM CloudDriver は、一時的な {{site.data.keyword.cloud_notm}} VM virtual サーバー・インスタンス (VSI) です。VMware インスタンスに対してホスト、クラスター、またはアドオン・サービスを追加するなどの Day 2 操作のために必要に応じてデプロイされます。
 
-CloudBuilder および CloudDriver は、プライベート・メッセージ・キューを経由して IBM 管理プレーンに接続しているプライベート・ネットワークにのみデプロイされます。これらは IBM が開発したコンポーネントであり、ユーザーは利用できません。以下の属性や機能があります。
-
-- ユーザー・アカウントに属する vCenter Server インスタンスのデプロイメントと構成。
-- vCenter Server クラスターでのホストの追加と削除。
-- vCenter Server インスタンスでのクラスターの追加と削除。
-- vCenter Server インスタンスでのアドオン・サービスや機能の追加と削除。
+CloudBuilder および CloudDriver は、プライベート・メッセージ・キューを介して IBM 管理プレーンに接続されたプライベート・ネットワークでのみデプロイされます。 これらは IBM 開発コンポーネントで、ユーザーがアクセスすることはできません。以下の属性と機能があります。
+* ユーザー・アカウントに属する vCenter Server インスタンスのデプロイメントと構成。
+* vCenter Server クラスターでのホストの追加と削除。
+* vCenter Server インスタンスでのクラスターの追加と削除。
+* vCenter Server インスタンスでのアドオン・サービスや機能の追加と削除。
 
 ### 自動化フロー
 {: #design_infrastructuremgmt-auto-flow}

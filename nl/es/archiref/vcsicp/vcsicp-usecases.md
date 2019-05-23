@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -23,9 +23,7 @@ VMware vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrid
 
 La oferta vCenter Server con el paquete híbrido (Hybridity) de {{site.data.keyword.cloud_notm}} permite establecer conexiones seguras entre el sitio de origen local y el sitio de destino de {{site.data.keyword.cloud_notm}}.
 
-Figura 1. Servicios de VMware Hybridity
-
-![Servicios de VMware Hybrid Cloud Extension](vcsicp-hcx.svg)
+![VMware Hybrid Cloud Extension Services](../../images/vcsicp-hcx.svg "VMware Hybrid Cloud Extension Services")
 
 VMware Hybrid Cloud Extension Services crea una interconectividad ligeramente acoplada entre un entorno local e {{site.data.keyword.cloud_notm}} y ofrece prestaciones como las siguientes:
 - **Interconectividad sencilla**: se establecen fácilmente conexiones lógicas de red sobre cualquier conexión física, como por ejemplo internet pública, VPN privada o {{site.data.keyword.cloud_notm}} Direct Link.
@@ -45,9 +43,7 @@ Con esta solución, Acme Skateboards ha migrado correctamente sus cargas de trab
 
 Acme Skateboards desea desplegar una arquitectura híbrida en {{site.data.keyword.cloud_notm}}, consistente en vCenter Server e {{site.data.keyword.icpfull_notm}}, para su proceso de modernización de aplicaciones. Los requisitos son ejecutar sus bases de datos en máquinas virtuales y las aplicaciones y los servicios web en contenedores y utilizar un conjunto común de herramientas para la gestión de red y de la seguridad.
 
-Figura 2. Aplicación híbrida de Acme Skateboards
-
-![Aplicación híbrida de Acme Skateboards](vcsicp-acme-skateboards-app.svg)
+![Aplicación híbrida Acme Skateboards](../../images/vcsicp-acme-skateboards-app.svg "Aplicación híbrida Acme Skateboards")
 
 {{site.data.keyword.vmwaresolutions_short}} proporciona la automatización para desplegar componentes de tecnología VMware en {{site.data.keyword.CloudDataCents_notm}} en todo el mundo. La arquitectura consta de una sola región de nube y permite la ampliación a más regiones de nube ubicadas en otra geografía o en otro pod de {{site.data.keyword.cloud_notm}} dentro del mismo centro de datos.
 
@@ -57,9 +53,7 @@ El diagrama siguiente representa {{site.data.keyword.icpfull_notm}} que se ejecu
 
 Mediante la automatización de {{site.data.keyword.cloud_notm}}, Acme Skateboards puede ofrecer una solución híbrida que incluye VMware on {{site.data.keyword.cloud_notm}} para ejecutar sus VM de base de datos e {{site.data.keyword.icpfull_notm}} on VMware en {{site.data.keyword.cloud_notm}} para ejecutar sus apps y servicios web de cara al cliente en contenedores. NSX les ofrece un conjunto común de herramientas de gestión para red y seguridad en la red subyacente.
 
-Figura 3. vCenter Server con {{site.data.keyword.icpfull_notm}}
-
-![vCenter Server con {{site.data.keyword.icpfull_notm}}](vcsicp-virtual-icp-deployment-vcs.svg)
+![vCenter Server con {{site.data.keyword.icpfull_notm}}](../../images/vcsicp-virtual-icp-deployment-vcs.svg "vCenter Server con {{site.data.keyword.icpfull_notm}}")
 
 ## Enlaces relacionados
 {: #vcsicp-usecases-related}

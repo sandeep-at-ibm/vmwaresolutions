@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -21,8 +21,8 @@ VMware HCX on IBM Cloud 서비스는 워크로드에 대한 원활한 네트워�
 
 IBM Cloud VMware 대상 사이트에서 가상 머신으로 배치된 VMware HCX on IBM Cloud 컴포넌트는 피어 온프레미스 소스 사이트에 설치된 VMware HCX on IBM Cloud 컴포넌트와 연결할 수 있도록 합니다.
 
-그림 1. VMware vCenter Server – 하이브리드 클라우드 서비스
-![VMware vCenter Server – 하이브리드 클라우드 서비스](cloudfoundation_hybrid_cloud_services.svg)
+![VMware vCenter Server – 하이브리드 클라우드 서비스](../../images/cloudfoundation_hybrid_cloud_services.svg "VMware vCenter Server – 하이브리드 클라우드 서비스")
+
 
 이 연결을 통해 온프레미스와 IBM Cloud 간에 느슨하게 결합된 상호 연결이 작성되며 다음과 같은 기능을 사용할 수 있습니다.
 * 간단한 상호 연결 – 실제 접속(예: 공용 인터넷, 사설 VPN 또는 직접 링크)에서 논리 네트워크 연결을 쉽게 설정할 수 있습니다.

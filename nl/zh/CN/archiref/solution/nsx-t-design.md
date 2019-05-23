@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-13"
 
 subcollection: vmware-solutions
 
@@ -63,8 +63,7 @@ NSX-V 或 vSphere 本机|NSX-T
 
 下图显示了 NSX Manager/Controller 相对于此体系结构中其他组件的位置。
 
-图 1. NSX-T Manager 网络概览图
-![NSX-T Manager 网络概览图](vcsv4radiagrams-ra-vcs-nsx-overview.svg)
+![NSX-T Manager 网络概述](../../images/vcsv4radiagrams-ra-vcs-nsx-overview.svg "NSX-T Manager 网络概述")
 
 ## 部署注意事项
 {: #nsx-t-design-deployment}
@@ -175,10 +174,9 @@ NSX-T 逻辑交换机在与底层硬件完全分离的虚拟环境中，重现�
 
 在此设计中，将供应单个虚拟边缘集群以供管理和客户工作负载使用。虚拟边缘集群可以容纳 T0 网关的多个实例。如前所述，可以在单个边缘集群上实例化多个 T0 边缘网关实例，每个实例都有自己的路由表。请参阅下图，以了解 NSX-T Edge 集群的功能组件。
 
-图 2. 从 T0 扩展到 T1 的 NSX-T Edge 集群示例 ![从 T0 扩展到 T1 的 NSX-T Edge 集群示例](vcsv4radiagrams-ra-nsx-t-edge-cluster-t0-to-t1-scale.svg)
+![T0 到 T1 规模的 NSX-T 边缘集群示例](../../images/vcsv4radiagrams-ra-nsx-t-edge-cluster-t0-to-t1-scale.svg "T0 到 T1 规模的 NSX-T 边缘集群示例")
 
-图 3. 管理 T0 网关</br>
-![管理 T0 网关](vcsv4radiagrams-topology-0.svg)
+![管理 T0 网关](../../images/vcsv4radiagrams-topology-0.svg "管理 T0 网关")
 
 #### 第 0 层逻辑网关
 {: #nsx-t-design-tier-0}
@@ -200,8 +198,7 @@ NSX-T 第 1 层逻辑网关具有下行端口（连接到 NSX-T Data Center 逻�
 
 工作负载到 T1 到 T0 网关 - 虚拟边缘集群
 
-图 4. 使用虚拟 T0 边缘网关的 NSX-T 部署拓扑
-![使用虚拟 T0 边缘网关的 NSX-T 部署拓扑](vcsv4radiagrams-topology-1.svg)
+![NSX-T 已部署拓扑虚拟 T0 边缘网关](../../images/vcsv4radiagrams-topology-1.svg "NSX-T 已部署拓扑虚拟 T0 边缘网关")
 
 IC4V 部署的拓扑 1 基本上与使用 NSX-V DLR 和边缘网关部署的拓扑相同。使用 NSX-T 时，T1 和 T0 之间没有动态路由协议配置。RFC-1891 IP 地址空间用于工作负载覆盖网络和传输覆盖网络。将分配客户专用和公共可移植 IP 空间，以供客户使用。客户指定的 {{site.data.keyword.cloud_notm}} 专用和公共可移植 IP 空间会分配给 T0，以供客户使用。 
 
@@ -209,8 +206,7 @@ IC4V 部署的拓扑 1 基本上与使用 NSX-V DLR 和边缘网关部署的拓�
 
 工作负载到 T1 到 T0 网关 - 物理边缘集群：
 
-图 5. 使用物理 T0 边缘网关的 NSX-T 部署拓扑
-![使用物理 T0 边缘网关的 NSX-T 部署拓扑](vcsv4radiagrams-topology-2.svg)
+![NSX-T 已部署拓扑物理 T0 边缘网关](../../images/vcsv4radiagrams-ra-vcs-nsx-overview.svg "[NSX-T 已部署拓扑物理 T0 边缘网关")
 
 部署的拓扑 2 类似，但不同之处在于将基于 VM 的边缘集群替换为运行 Red Hat 服务器的一对裸机服务器。客户指定的 {{site.data.keyword.cloud_notm}} 专用和公共可移植 IP 空间会分配给 T0，以供客户使用。 对于此设计，如果 vCenter Server 实例已停用并删除，那么可以选择不删除这些 IP 范围。
 
@@ -218,8 +214,7 @@ IC4V 部署的拓扑 1 基本上与使用 NSX-V DLR 和边缘网关部署的拓�
 
 使用 ICP 的工作负载到 T0 网关 - 物理边缘集群：
 
-图 6. 使用 ICP NSX-T 集成和虚拟 T0 边缘网关的 NSX-T 部署拓扑
-![使用 ICP NSX-T 集成和虚拟 T0 边缘网关的 NSX-T 部署拓扑](vcsv4radiagrams-topology-3.svg)
+![带 ICP NSX-T 集成和虚拟 T0 边缘网关的 NSX-T 已部署拓扑](../../images/vcsv4radiagrams-topology-3.svg "[带 ICP NSX-T 集成和虚拟 T0 边缘网关的 NSX-T 已部署拓扑")
 
 部署的拓扑 3 包含拓扑 1，并添加了一个 ICP 部署，其中采用 NSX-T 集成而不是 ICP 部署中的缺省联网堆栈 Calico。客户可以在 ICP 中供应其他容器名称空间，这将自动为每个名称空间创建逻辑交换机、IP 子网和 T1 网关实例。
 

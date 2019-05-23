@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -20,9 +20,7 @@ Stock Trader를 해당 인스턴스에 배치합니다.
 
 그런 다음 Todd는 각 클러스터의 사설 네트워크 간의 연결을 위해 strongSwan VPN을 추가합니다.
 
-그림 1. 진정한 하이브리드 애플리케이션으로서의 Stock Trader
-
-![진정한 하이브리드 애플리케이션으로서의 Stock Trader](vcscontent-truehybrid.svg)
+![진정한 하이브리드 애플리케이션으로서의 Stock Trader](../../images/vcscontent-truehybrid.svg "진정한 하이브리드 애플리케이션으로서의 Stock Trader")
 
 ## 관련 링크
 {: #vcscontent-iks-related}

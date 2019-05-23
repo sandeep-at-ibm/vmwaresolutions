@@ -17,7 +17,7 @@ subcollection: vmware-solutions
 {: #hcx-archi-trbl-cloud-reg}
 
 * Hybrid Cloud Services non esegue un altro tentativo se le credenziali non sono corrette. Le credenziali devono essere autenticate prima che Hybrid Cloud Services tenti di accedere e avviare la registrazione cloud.
-* La registrazione cloud può avere esito negativo se le credenziali non sono state digitate correttamente o se le credenziali cloud VCS Hybrid Cloud Services sono state modificate dopo che Hybrid Cloud Services ha eseguito la registrazione al cloud VCS Hybrid Cloud Services, creando una mancata corrispondenza. 
+* La registrazione cloud può avere esito negativo se le credenziali non sono state digitate correttamente o se le credenziali cloud VCS Hybrid Cloud Services sono state modificate dopo che Hybrid Cloud Services ha eseguito la registrazione al cloud VCS Hybrid Cloud Services, creando una mancata corrispondenza.
 * Per aggiornare le credenziali nel client web, vai alla scheda Hybrid Cloud Services Getting Started e in **Basic tasks** scegli **Register new Cloud**.
 
 ## Indirizzo MAC duplicato

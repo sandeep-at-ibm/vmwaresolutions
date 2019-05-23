@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-02"
 
 subcollection: vmware-solutions
 
@@ -35,8 +35,7 @@ Las instancias de vCenter Server con NSX-T son sólo para pruebas de concepto (P
 
 En el gráfico siguiente se muestra la arquitectura general y los componentes del despliegue de tres nodos de vCenter Server con NSX-T.
 
-Figura 1. Arquitectura general de vCenter Server con NSX-T para un clúster de tres nodos
-![Arquitectura de vCenter Server con NSX-T](vc_nsx-t_architecture.svg "Arquitectura general de vCenter Server para un clúster de tres nodos")
+![Arquitectura de vCenter Server con NSX-T](../images/vc_nsx-t_architecture.svg "Arquitectura de vCenter Server con NSX-T")
 
 ### Infraestructura física
 {: #vc_nsx-t_overview-physical-infras}

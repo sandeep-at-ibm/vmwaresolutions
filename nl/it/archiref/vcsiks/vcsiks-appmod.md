@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 Il seguente diagramma mostra l'architettura di riferimento di modernizzazione dell'applicazione che Acme Skateboards distribuisce ed è descritta approfonditamente in questa serie di documenti.
 
-Figura 1. Diagramma di panoramica dell'architettura
-![Diagramma di panoramica dell'architettura](vcsiks-aod.svg)
+![Diagramma di panoramica dell'architettura](../../images/vcsiks-aod.svg "Diagramma di panoramica dell'architettura")
 
 Questa architettura ibrida consente ad Acme Skateboards di:
 - Migrare le VM (Virtual Machine) VMware che sono in loco a {{site.data.keyword.cloud}} con poco o nessun tempo di inattività e nessuna riconfigurazione dell'applicazione.

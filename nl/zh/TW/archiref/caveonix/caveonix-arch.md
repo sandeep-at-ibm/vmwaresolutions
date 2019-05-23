@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 下圖顯示 Caveonix RiskForesight 架構。
 
-圖 1. Caveonix RiskForesight 的架構
-![架構圖](caveonix-architecture.svg)
+![架構圖](../../images/caveonix-architecture.svg "架構圖")
 
 Caveonix RiskForesight 架構有四層：
 -	偵測 -「偵測」模組已完全整合至 VMware 堆疊和許多公有雲中。利用外掛程式，RiskForesight 使用 vCenter 和 NSX Manager 作為「資產儲存庫」，收集虛擬機器 (VM)、網路及網路流量等詳細資料。遠端收集器會掃描工作量、作業系統及應用程式，以獲得對法規遵循及漏洞的「全面」檢視。
@@ -40,8 +39,7 @@ Caveonix RiskForesight 架構有四層：
 
 Caveonix RiskForesight 有區域的概念：
 
-圖 2. Caveonix RiskForesight 區域
-![區域圖](caveonix-zones.svg)
+![區域圖](../../images/caveonix-zones.svg "區域圖")
 
 -	管理或服務提供者區域 - 管理或服務提供者區域包括下列元件：
     - RiskForesight 應用程式 - 這包含多個元件，將在「應用程式元件」區段中詳細說明。

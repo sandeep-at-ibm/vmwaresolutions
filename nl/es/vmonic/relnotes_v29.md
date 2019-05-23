@@ -61,16 +61,6 @@ Para obtener más información, consulte las secciones _Valores de licencia_ en:
 * [Solicitud de instancias de vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
 * [Solicitud de clústeres nuevos de vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
 
-## Finalización del soporte para la expansión de VLAN
-{: #relnotes_v29-vlan}
-
-A partir de agosto de 2019, {{site.data.keyword.vmwaresolutions_short}} ya no soportará la expansión de VLAN. Antes de finales de julio de 2019, debe convertir la cuenta de infraestructura de {{site.data.keyword.cloud_notm}} a VRF (Virtual Routing and Forwarding) y habilitar los puntos finales de servicio para la cuenta.
-
-Para obtener más información, consulte:
-
-* [Visión general de Virtual Routing and Forwarding (VRF) en IBM Cloud](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-* [Habilitación de la cuenta para el uso de puntos finales de servicio](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
-
 ## Soporte para interfaces de programación de aplicaciones
 {: #relnotes_v29-api}
 
@@ -140,7 +130,7 @@ Para obtener más información, consulte:
 ### F5 on IBM Cloud
 {: #relnotes_v29-services-f5}
 
-En el release actual, se ha instalado F5-BigIP VE V14.1.0.2 en todas las instancias recién desplegadas. Para obtener más información sobre las nuevas características de F5-BigIP VE V14.1.0.2, consulte [Nota del release: Novedades e instalación de BIG-IP 14.1.0](https://support.f5.com/kb/en-us/products/big-ip_ltm/releasenotes/product/relnote-bigip-14-1-0.html){:new_window}.
+En el release actual, se ha instalado F5-BigIP VE V14.1.0.2 en todas las instancias recién desplegadas. Para obtener más información sobre las nuevas características de F5-BigIP VE V14.1.0.2, consulte [Nota del release: Novedades e instalación de BIG-IP 14.1.0](https://techdocs.f5.com/kb/en-us/products/big-ip_ltm/releasenotes/product/relnote-bigip-14-1-0.html){:new_window}.
 
 ### HyTrust CloudControl on IBM Cloud
 {: #relnotes_v29-services-htcc}

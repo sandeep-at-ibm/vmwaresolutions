@@ -116,5 +116,4 @@ Microsoft Active Directory (AD) / 域名服务器 (DNS) 自动设置为仅下载
 ## 新增和更新的文档
 {: #relnotes_v19-new-docs}
 
-* 了解如何保护专用多站点 Cloud Foundation 实例，同时将 VMware 应用程序扩展为使用公共 {{site.data.keyword.cloud_notm}} 服务。有关更多信息，请参阅[安全连接 {{site.data.keyword.cloud_notm}} 中的专用 VMware 工作负载](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}。
 * 提供了更多文档，描述如何配置防火墙以允许来自 IBM CloudDriver 和 SDDC Manager 虚拟机的所有协议通信。有关更多信息，请参阅 [Fortinet on {{site.data.keyword.cloud_notm}} 的组件和注意事项](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations)。

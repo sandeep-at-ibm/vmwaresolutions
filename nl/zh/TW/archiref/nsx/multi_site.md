@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -36,9 +36,7 @@ subcollection: vmware-solutions
 * 對於入埠資料流量，需要廣域負載平衡器。請參閱 {{site.data.keyword.cloud_notm}} 廣域負載平衡供應項目，以符合此需求。
 * 此範例需要 VMware NSX Enterprise 版本。
 
-圖 1. 多站台拓蹼
-
-![多站台拓蹼](multisite_topology.svg "多站台拓蹼")
+![多站台拓蹼](../../images/multisite_topology.svg "多站台拓蹼")
 
 ## 相關鏈結
 {: #nsx-multi_site-related}

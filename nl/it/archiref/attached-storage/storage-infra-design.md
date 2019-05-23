@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-03"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -24,9 +24,7 @@ L'architettura qui presentata integra la soluzione vCenter Server aggiungendo l'
 
 Il seguente grafico fornisce l'architettura generale dell'archiviazione collegata sulla distribuzione di vCenter Server.
 
-Figura 1. Architettura di alto livello dell'archiviazione collegata su {{site.data.keyword.cloud_notm}}
-
-![Architettura dell'archiviazione collegata](../solution/vcsv4radiagrams-ra-nfs-shares.svg "Architettura di alto livello dell'archiviazione collegata su IBM Cloud")
+![Architettura dell'archiviazione collegata](../../images/vcsv4radiagrams-ra-nfs-shares.svg "Architettura dell'archiviazione collegata")
 
 ## Progettazione dell'infrastruttura fisica
 {: #storage-infra-design-phys-infra-design}

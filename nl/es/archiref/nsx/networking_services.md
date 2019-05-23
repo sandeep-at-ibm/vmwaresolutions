@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -22,9 +22,7 @@ Los servicios de red en {{site.data.keyword.cloud}} constan de dos pares de pasa
 
 El gráfico siguiente es un diagrama de red simplificado, que representa el par de gestión y el par de ESG de carga de trabajo. También muestra un NSX Distributed Router (DLR) y una carga de trabajo VXLAN. Estos componentes están pensados para ser un punto de destino inicial para las cargas de trabajo de los clientes sin necesidad de tener el conocimiento específico para establecerlas dentro de NSX. Normalmente se utiliza un DLR para direccionar el tráfico entre VMware vCenter Server y el tráfico de este a oeste, entre redes de capa 2 separadas dentro de la instancia. Este comportamiento contrasta con un ESG, que funciona para facilitar el tráfico de red norte-sur que entra y sale de la instancia de vCenter Server.
 
-Figura 1. Servicios de red en la nube en vCenter Server
-
-![Servicios web en la nube en vCenter Server](cloudnetworkingservicesdiagram.svg "Servicios web en la nube en vCenter Server")
+![Servicios de red en la nube en vCenter Server](../../images/cloudnetworkingservicesdiagram.svg "Servicios de red en la nube en vCenter Server")
 
 Aunque un solo ESG puede ser suficiente para el tráfico de carga de trabajo de gestión y de cliente, la separación de gestión y tráfico de cliente es una decisión de diseño realizada para evitar una configuración incorrecta accidental del ESG de gestión.
 
@@ -38,9 +36,7 @@ El ESG de gestión de IBM es un clúster NSX Edge exclusivo solo para el tráfic
 
 El ESG de gestión proporciona una vía de acceso de comunicación entre las máquinas virtuales (VM) de servicios complementarios que residen en instancias de vCenter Server y la infraestructura de IBM Automation en el {{site.data.keyword.cloud_notm}} tal como se muestra para vCenter Server en el gráfico siguiente.
 
-Figura 2. Gestión de comunicaciones de extremo de gestión en vCenter Server
-
-![Gestión de comunicaciones de extremo de gestión en vCenter Server](mgmtvmcommunication.svg "Gestión de comunicaciones de extremo de gestión en vCenter Server")
+![Comunicaciones de extremo de gestión en vCenter Server](../../images/mgmtvmcommunication.svg "Comunicaciones de extremo de gestión en vCenter Server")
 
 Como resultado de la comunicación ligera entre determinadas VM de servicios complementarios y sus correspondientes sistemas de licencias y calibración, los ESG NSX se dimensionan en una configuración grande en un par de alta disponibilidad activo-pasivo (HA) y se despliegan en la agrupación de recursos de gestión del clúster de vCenter Server. En la tabla siguiente se proporciona un resumen del despliegue de NSX ESG de gestión de IBM.
 
@@ -155,9 +151,7 @@ La topología de la figura siguiente consta de los siguientes componentes de NSX
 * Direccionador lógico distribuido (DLR)
 * VXLAN (L2 por L3)
 
-Figura 3. Diagrama de flujo de red de ejemplo
-
-![Diagrama de flujo de red](customer_network_flow_diagram.svg "Diagrama de flujo de red")
+![Diagrama de flujo de red](../../images/customer_network_flow_diagram.svg "Diagrama de flujo de red")
 
 ### Interfaces de Edge para el NSX Edge de carga de trabajo de IBM
 {: #nsx-networking_services-edge-interfaces-workload}

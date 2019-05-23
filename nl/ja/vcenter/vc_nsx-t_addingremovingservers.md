@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-22"
+lastupdated: "2019-05-03"
 
 subcollection: vmware-solutions
 
@@ -20,12 +20,12 @@ subcollection: vmware-solutions
 
 VMware vCenter Server with NSX-T インスタンスの容量は、ESXi サーバーまたはネットワーク・ファイル・システム (NFS) ストレージを追加/削除することで、ビジネス・ニーズに応じて拡張/縮小できます。
 
-* V3.0 リリース以降では、複数のクラスター間で同時に NFS ストレージを追加または削除できます。
-* V2.9 リリース以降では、サーバーが保守モードの間に、新規 ESXi サーバーをクラスターに追加できます。 また、複数のクラスター間で同時に ESXi サーバーを追加または削除できます。
+* V3.0 リリース以降、**「使用可能」**状態にある複数のクラスターで、NFS ストレージと ESXi サーバーを同時に追加/削除できるようになりました。 例えば、あるクラスターで ESXi サーバーを追加または削除したり、別のクラスターで NFS ストレージを追加または削除したりできます。
+* V2.9 リリース以降では、サーバーが保守モードの間に、新規 ESXi サーバーをクラスターに追加できます。 また、複数のクラスター間で同時に ESXi サーバーを追加/削除できます。
 
 **注**:
 * 初期クラスターのストレージが vSAN の場合、デプロイメント後に 1 つ以上の ESXi サーバーを追加すると、クラスター・ストレージの容量を増やすことができます。
-* 既存の NFS または vSAN vCenter Server with NSX-T クラスターの NFS ストレージ共有を追加/削除することができます。
+* 既存の NFS クラスターまたは vSAN vCenter Server with NSX-T クラスターの NFS ストレージ共有を追加/削除することができます。
 
 ## vCenter Server with NSX-T インスタンスへの ESXi サーバーの追加
 {: #vc_nsx-t_addingremovingservers-adding}
@@ -33,7 +33,7 @@ VMware vCenter Server with NSX-T インスタンスの容量は、ESXi サーバ
 ### ESXi サーバーを追加する前に
 {: #vc_nsx-t_addingremovingservers-adding-prereq}
 
-* VMware vSphere Web クライアントで加えた変更は {{site.data.keyword.vmwaresolutions_short}} コンソールと同期されないので、可能な限り、{{site.data.keyword.vmwaresolutions_full}} コンソールを使用して ESXi サーバーを追加してください。つまり、オンプレミスの ESXi サーバー、または {{site.data.keyword.vmwaresolutions_short}} コンソールで管理できない、あるいは管理しない ESXi サーバーの場合にのみ、ESXi サーバーを vCenter Server に追加してください。
+* 可能な限り、{{site.data.keyword.vmwaresolutions_full}} コンソールを使用して ESXi サーバーを追加してください。VMware vSphere Web Client で行った変更は {{site.data.keyword.vmwaresolutions_short}} コンソールと同期しないためです。 したがって、オンプレミス ESXi サーバーの場合、または {{site.data.keyword.vmwaresolutions_short}} コンソールで管理できないまたは管理するつもりがない ESXi サーバーの場合のみ、vCenter Server に ESXi サーバーを追加してください。
 * NFS ストレージのある vCenter Server with NSX-T インスタンスには、少なくとも 3 つの ESXi サーバーが必要です。 デフォルトのクラスターを拡張して、最大 51 台の ESXi サーバーを含められます。 デフォルト以外の各クラスターは、最大 59 台の ESXi サーバーを含むように拡張できます。
 * vSAN ストレージのある vCenter Server with NSX-T インスタンスには、少なくとも 4 つの ESXi サーバーが必要です。
 
@@ -65,7 +65,7 @@ VMware vCenter Server with NSX-T インスタンスの容量は、ESXi サーバ
 ### ESXi サーバーを削除する前に
 {: #vc_nsx-t_addingremovingservers-removing-prereq}
 
-* vSphere Web クライアントで加えた変更は {{site.data.keyword.vmwaresolutions_short}} コンソールと同期されないので、可能な限り、{{site.data.keyword.vmwaresolutions_full}} コンソールを使用して ESXi サーバーを削除してください。つまり、オンプレミスの ESXi サーバー、または {{site.data.keyword.vmwaresolutions_short}} コンソールで管理できない、あるいは管理しない ESXi サーバーの場合にのみ、ESXi サーバーを vCenter Server から削除してください。
+* 可能な限り、{{site.data.keyword.vmwaresolutions_full}} コンソールを使用して ESXi サーバーを削除してください。vSphere Web Client で行った変更は {{site.data.keyword.vmwaresolutions_short}} コンソールと同期しないためです。 したがって、オンプレミス ESXi サーバーの場合、または {{site.data.keyword.vmwaresolutions_short}} コンソールで管理できないまたは管理するつもりがない ESXi サーバーの場合のみ、vCenter Server から ESXi サーバーを削除してください。
 * NFS ストレージを使用する vCenter Server with NSX-T インスタンスには少なくとも 3 つの ESXi サーバーが必要であり、vSAN ストレージを使用する vCenter Server with NSX-T インスタンスには少なくとも 4 つの ESXi サーバーが必要です。
 * ESXi サーバーを削除する際には、そのサーバーは保守モードになります。その後、そこで実行されているすべての VM は、vCenter Server からそのサーバーが削除される前にマイグレーションされます。 VM の再配置を最大限に制御するために、VMware vSphere Web Client を使用して、手動により、削除する ESXi サーバーを保守モードにし、サーバーで実行されている VM を移行することをお勧めします。 その後、{{site.data.keyword.vmwaresolutions_short}} コンソールを使用して ESXi サーバーを削除します。
 

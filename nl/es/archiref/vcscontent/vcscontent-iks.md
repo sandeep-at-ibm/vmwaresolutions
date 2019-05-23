@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -20,9 +20,7 @@ despliega Stock Trader, sin realizar en el mismo ningún cambio de código.
 
 A continuación, Todd añade la VPN strongSwan para establecer conexión entre las redes privadas de cada clúster.
 
-Figura 1. Stock Trader como aplicación híbrida real
-
-![Stock Trader como aplicación híbrida real](vcscontent-truehybrid.svg)
+![Stock Trader como una auténtica aplicación híbrida](../../images/vcscontent-truehybrid.svg "Stock Trader como una auténtica aplicación híbrida")
 
 ## Enlaces relacionados
 {: #vcscontent-iks-related}

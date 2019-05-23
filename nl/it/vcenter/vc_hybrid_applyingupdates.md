@@ -20,11 +20,11 @@ subcollection: vmware-solutions
 
 La procedura in questa sezione si applica ai componenti di gestione IBM in aggiornamento per le istanze che vengono distribuite nella V2.3 e nella V2.4.
 
-Per le istanze distribuite o di cui è stato eseguito l'upgrade alla V2.5 o successive, gli aggiornamenti e le patch per i componenti di gestione IBM vengono applicati automaticamente, in base alle esigenze. 
+Per le istanze distribuite o di cui è stato eseguito l'upgrade alla V2.5 o successive, gli aggiornamenti e le patch per i componenti di gestione IBM vengono applicati automaticamente, in base alle esigenze.
 
-Inoltre, nota il seguente comportamento quando completi determinate operazioni sulla tua istanza: 
-* Quando ordini nuovi servizi, l'istanza viene aggiornata alla versione più recente. 
-* Quando aggiungi nuovi cluster, ne viene eseguito il provisioning con i componenti VMware più recenti ma non viene eseguito per i cluster esistenti. 
+Inoltre, nota il seguente comportamento quando completi determinate operazioni sulla tua istanza:
+* Quando ordini nuovi servizi, l'istanza viene aggiornata alla versione più recente.
+* Quando aggiungi nuovi cluster, ne viene eseguito il provisioning con i componenti VMware più recenti ma non viene eseguito per i cluster esistenti.
 * Quando aggiungi nuovi server ESXi, ne viene eseguito il provisioning con i componenti VMware più recenti ma non viene eseguito per i server ESXi esistenti.
 
 {{site.data.keyword.vmwaresolutions_short}} non offre supporto per applicare gli aggiornamenti e le patch per i componenti VMware. Devi monitorare e applicare autonomamente questi aggiornamenti.
@@ -33,7 +33,7 @@ Inoltre, nota il seguente comportamento quando completi determinate operazioni s
 ## Prima di applicare gli aggiornamenti del componente di gestione IBM
 {: #vc_hybrid_applyingupdates-prereq}
 
-Espandi la voce dell'aggiornamento facendo clic sulla freccia in giù e verifica le seguenti informazioni: 
+Espandi la voce dell'aggiornamento facendo clic sulla freccia in giù e verifica le seguenti informazioni:
 * La versione dell'aggiornamento. Devi applicare gli aggiornamenti in sequenza cronologica, dalla più antica alla più recente. Assicurati di aver applicato tutti gli aggiornamenti precedenti prima di applicare quello più recente. Ad esempio, devi applicare l'aggiornamento alla V2.3 prima di tentare di applicare l'aggiornamento alla V2.4.
 * Se è necessario un tempo di inattività.
 * Il tempo totale stimato per completare l'aggiornamento.

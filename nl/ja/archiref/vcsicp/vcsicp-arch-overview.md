@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-09"
 
 subcollection: vmware-solutions
 
@@ -30,9 +30,7 @@ Cloud Automation Manager Service Composer を使用すると、{{site.data.keywo
 
 次の図は、{{site.data.keyword.cloud_notm}} インフラストラクチャーに {{site.data.keyword.icpfull_notm}} と CAM をデプロイした例です。これらはオンプレミス vCenter と {{site.data.keyword.cloud_notm}} にデプロイされた {{site.data.keyword.containerlong_notm}} に接続されています。 ユーザーは仮想マシン (VM) をオンプレミスにも vCenter Server インスタンスにもデプロイできます。また、コンテナーを {{site.data.keyword.icpfull_notm}} クラスターと {{site.data.keyword.containerlong_notm}} クラスターにデプロイできます。
 
-図 1. クラウド・サイドからのクラウド管理
-
-![クラウド上 - クラウド管理](vcsicp-oncloud-cloudmgt.svg)
+![クラウドにおけるクラウド管理](../../images/vcsicp-oncloud-cloudmgt.svg "クラウドにおけるクラウド管理")
 
 この図では、CAM は、vCenter、クラウド・プロバイダー、{{site.data.keyword.icpfull_notm}}、{{site.data.keyword.containerlong_notm}} 環境へのクラウド接続を論理的に作成します。 {{site.data.keyword.icpfull_notm}} クラスターは各データ・センターのクラウド環境にデプロイし、MCM が {{site.data.keyword.icpfull_notm}} クラスターを単一の管理ビューに接続するメカニズムを提供するようにする必要があります。
 
@@ -45,8 +43,7 @@ NSX-T とともに {{site.data.keyword.icpfull_notm}} をデプロイすると�
 
 以下の図は、オンプレミスのインフラストラクチャーに {{site.data.keyword.icpfull_notm}} および CAM をデプロイした例です。これらは {{site.data.keyword.cloud_notm}} にデプロイされた vCenter および {{site.data.keyword.containerlong_notm}} に接続されています。 ユーザーは VM とコンテナーをオンプレミスに、VM を vCenter Server インスタンスに、そしてコンテナーを {{site.data.keyword.containerlong_notm}} クラスターにデプロイできます。
 
-図 2. オンプレミス・サイドからのクラウド管理
-![オンプレミスのクラウド管理](vcsicp-onprem-cloudmgt.svg)
+![オンプレミスにおけるクラウド管理](../../images/vcsicp-onprem-cloudmgt.svg "オンプレミスにおけるクラウド管理")
 
 デプロイ済みの {{site.data.keyword.containerlong_notm}} コンテナーとの接続を確立するために strongSwan VPN が使用されています。 strongSwan VPM は Direct Link 接続に置き換えることができます。
 

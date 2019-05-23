@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-09"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -20,8 +20,7 @@ subcollection: vmware-solutions
 
 虛擬基礎架構層級包含 VMware 軟體元件，這些元件會將實體基礎架構層級中提供的運算、儲存空間及網路資源虛擬化：VMware vSphere ESXi、VMware NSX-V 或 NSX-T，以及選用的 VMware vSAN。
 
-圖 1. 虛擬基礎架構</br>
-![虛擬基礎架構](vcsv4radiagrams-ra-virtinfra.svg)
+![虛擬基礎架構](../../images/vcsv4radiagrams-ra-virtinfra.svg "虛擬基礎架構")
 
 ## VMware vSphere 設計
 {: #design_virtualinfrastructure-vsphere-design}
@@ -71,9 +70,7 @@ vSphere 叢集可存放虛擬機器 (VM)，它們會管理 vCenter Server 實例
 
 如下圖所示，vSAN 會將多部 ESXi 主機間的本端儲存空間聚集在 vSphere 叢集內，並將聚集的儲存空間當成單一 VM 資料儲存庫來管理。在此設計中，運算節點包含「ESXi 作業系統」的本端磁碟機，以及 vSAN 資料儲存庫。不論節點屬於哪一個叢集，每個節點都會包含兩個作業系統磁碟機，以存放 ESXi 安裝。
 
-圖 2. vSAN 概念
-
-![vSAN 概念](vcsv4radiagrams-ra-vsan.svg "vSAN 會將多部 ESXi 主機間的本端儲存空間聚集在 vSphere 叢集內，並將聚集的儲存空間當成單一 VM 資料儲存庫來管理")
+![vSAN 概念](../../images/vcsv4radiagrams-ra-vsan.svg "vSAN 在 vSphere 叢集內的多個 ESXi 主機中聚集本端儲存空間，並將聚集儲存空間作為單個 VM 資料儲存庫進行管理")
 
 vSAN 會採用下列元件：
 * 兩個磁碟群組的 vSAN 設計；每個磁碟群組各有兩個以上的磁碟。群組裡大小最小的一個 SSD 或 NVMe 會充當快取層級，而其餘的 SSD 則充當容量層級。
@@ -116,14 +113,27 @@ vSAN 設定是根據在 {{site.data.keyword.cloud_notm}} 內部署 VMware 解決
    * vSAN - 100 個共用
 * vSAN 核心埠：**明確失效接手**
 
+## NFS 連接儲存空間
+{: #design_virtualinfrastructure-nfs-storage}
+
+使用 NFS 網路連接儲存空間時，此架構規定使用 NFS V3 而不是 NFS V4.1，因為使用後者時 NFS 伺服器 LIF 移轉可能會導致等待時間過長。每部 vSphere 主機會使用其主機名稱連接至 NFS 儲存空間。
+
+一個 2 TB NFS 資料儲存庫連接到叢集，以供管理元件將其與效能層級 4 IOPS/GB 配合使用。可以將更多資料儲存庫連接到叢集以供工作負載使用，實現多種大小和效能層級。
+
+此外，此架構要求所有主機都為 NFS 儲存空間所在的子網路建立了子網路路徑。此子網路路徑的目的是指示所有 NFS 資料流量使用此設計指定用於 NFS 資料流量的埠群組、子網路和 VLAN。如果連接了多個 NFS 資料儲存庫，可能需要配置多個路徑，因為這些資料儲存庫可能位於不同的遠端子網路中。
+
+管理虛擬機器可能位於 NFS 資料儲存庫上。這會產生引導問題，因為某些管理機器可能負責用於解析 NFS 主機名稱的 DNS 服務。因此，此架構指定管理資料儲存庫的至少一個 IP 位址要寫在每部主機上的 `/etc/hosts` 中。
+
 ## iSCSI 連接儲存空間
 {: #design_virtualinfrastructure-iscsi-storage}
 
 與 NFS 第 3 版連接儲存空間不同，iSCSI 連接儲存空間支援所有已配置 NIC 卡埠與目標埠之間的主動-主動路徑。由於這個原因，可以達到更高的傳輸量，因此這是 NFS 連接儲存空間所需的替代方案。代價是更為複雜。
 
-在使用 VMware 時，「{{site.data.keyword.cloud_notm}} 耐久性」區塊儲存空間支援每個 LUN 最多連接 64 個 IP，而根據此設計最多支援 32 部主機。
+在使用 VMware 時，「{{site.data.keyword.cloud_notm}} 耐久性」區塊儲存空間支援每個 LUN 最多連接 64 個 IP 位址，而根據此設計最多支援 32 部主機。
 
 有一個 2-TB iSCSI LUN 會連接至 vSphere 叢集，以使用管理元件，而且至少會再配置一個 iSCSI LUN，以供客戶工作負載使用。此儲存空間會根據每個 LUN 格式化為 VMFS 6.x 檔案系統。
+
+此架構指定使用 iSCSI 埠連結、多路徑循環式原則、佇列深度上限 64，以及循環式 IOPS 限制 1。
 
 ### iSCSI 的虛擬網路設定
 {: #design_virtualinfrastructure-setup-iscsi}
@@ -153,9 +163,7 @@ iSCSI LUN 是根據 LUN 而佈建的，並格式化為單一檔案 VMFS 檔案�
 
 下圖顯示與架構中其他元件相對的 NSX Manager 放置。
 
-圖 3. NSX Manager 網路概觀
-
-![NSX Manager 網路概觀](vcsv4radiagrams-ra-vcs-nsx-overview.svg "與架構中其他元件相對的 NSX Manager 放置")
+![NSX Manager 網路概觀](../../images/vcsv4radiagrams-ra-vcs-nsx-overview.svg "NSX Manager 與架構中其他元件的關係")
 
 在起始部署之後，{{site.data.keyword.cloud_notm}} 自動化會在起始叢集內部署三個 NSX Controller。每個控制器都會獲指派**專用 A** 可攜式子網路中的 VLAN 支援 IP 位址（這個子網路是指定給管理元件）。此外，此設計還會建立 VM-VM 反親緣性規則，以在叢集的主機之間區隔控制器。起始叢集必須至少包含三個節點，以確保控制器具有高可用性。
 
@@ -185,9 +193,7 @@ NSX Manager 會使用下表所列的規格進行安裝。
 
 此設計使用最少數目的「vDS 交換器」。叢集裡的主機已連接至公用及專用網路。主機已配置兩台分散式虛擬交換器。兩台交換器的使用遵循區隔公用與專用網路的 {{site.data.keyword.cloud_notm}} 網路作法。下圖顯示 vDS 設計。
 
-圖 4. 分散式交換器設計
-
-![分散式交換器設計](vcsv4radiagrams-distributed-switch-design.svg "vDS 設計")
+![分散交換器設計](../../images/vcsv4radiagrams-distributed-switch-design.svg "分散交換器設計")
 
 如上圖所示，一個 vDS 已配置給公用網路連線功能 (SDDC-Dswitch-Public)，另一個 vDS 則配置給專用網路連線功能 (SDDC-Dswitch-Private)。需要區隔不同類型的資料流量，以降低競用及延遲並提高安全。
 
@@ -197,9 +203,9 @@ VLAN 用來區隔實體網路功能。此設計使用三個 VLAN：兩個用於�
 
 |VLAN      | 指定        | 資料流量類型 |
 |:----- |:----------- |:------------ |
-|VLAN1     | 公用        | 可用於網際網路存取 |
-|VLAN2     | 專用 A      | ESXi 管理、管理、VXLAN (VTEP) |
-|VLAN3     | 專用 B      | vSAN、NFS、vMotion、iSCSI |
+|VLAN 1| 專用 A      | ESXi 管理、管理、VXLAN (VTEP) |
+|VLAN 2| 專用 B      | vSAN、NFS、vMotion、iSCSI |
+|VLAN 3| 公用        | 可用於網際網路存取 |
 
 工作負載中的資料流量將會在 VXLAN 支援的邏輯交換器上流動。
 
@@ -272,8 +278,7 @@ iSCSI|SDDC-DPortGroup-iSCSI-B|iSCSI|9000
 * 微分段
 * 將「NSX 管理」鏈結至其他 VMware 實例
 
-圖 5. 已部署的範例客戶 NSX 拓蹼
-![已部署的範例客戶 NSX 拓蹼](vcsv4radiagrams-ra-vcs-nsx-topology-customer-example.svg)
+![已部署範例客戶 NSX 拓蹼](../../images/vcsv4radiagrams-ra-vcs-nsx-topology-customer-example.svg "已部署範例客戶 NSX 拓蹼")
 
 ## 公用網路連線功能
 

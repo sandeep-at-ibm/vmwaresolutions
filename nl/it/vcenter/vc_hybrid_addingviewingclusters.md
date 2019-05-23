@@ -86,7 +86,7 @@ Tabella 2. Opzioni per i server bare metal Broadwell
 #### Numero di server Bare Metal
 {: #vc_hybrid_addingviewingclusters-adding-bare-metal-number}
 
-* Tutti i server che ordini hanno la stessa configurazione. 
+* Tutti i server che ordini hanno la stessa configurazione.
 * Puoi ordinare da 4 a 59 server.
 
 ### Impostazioni di archiviazione vSAN
@@ -95,7 +95,7 @@ Tabella 2. Opzioni per i server bare metal Broadwell
 VMware vSAN 6.6 è incluso con il tuo ordine dell'istanza vCenter Server with Hybridity Bundle. Specifica le seguenti opzioni vSAN:
 * **Tipo e dimensioni del disco per i dischi vSAN**: seleziona un'opzione per i dischi di capacità di cui hai bisogno.
 * **Numero di dischi vSAN**: specifica il numero di dischi di capacità che vuoi aggiungere.
-* Se vuoi aggiungere dischi di capacità oltre il limite di 10, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 12 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS. 
+* Se vuoi aggiungere dischi di capacità oltre il limite di 10, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 12 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS.
 
   L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i modelli di CPU Skylake.
   {:note}

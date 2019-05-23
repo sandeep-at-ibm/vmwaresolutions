@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-22"
+lastupdated: "2019-05-03"
 
 subcollection: vmware-solutions
 
@@ -20,13 +20,12 @@ subcollection: vmware-solutions
 
 Vous pouvez accroître ou réduire la capacité de votre instance VMware vCenter Server with NSX-T en fonction de vos besoins métier en ajoutant ou en supprimant des serveurs ESXi ou du stockage NFS.
 
-* A compter de l'édition V3.0, vous pouvez ajouter ou retirer simultanément le stockage NFS sur plusieurs clusters.
+* A compter de l'édition V3.0, vous pouvez ajouter ou retirer simultanément le stockage NFS et des serveurs ESXi sur des clusters qui sont à l'état **Prêt à l'emploi**. Par exemple, vous pouvez ajouter ou retirer un serveur ESXi dans un cluster et ajouter ou retirer le stockage NFS dans un autre cluster. 
 * A compter de l'édition V2.9, vous pouvez ajouter de nouveaux serveurs ESXi à un cluster tandis que ces serveurs sont en mode maintenance. De plus, vous pouvez ajouter ou retirer simultanément des serveurs ESXi sur plusieurs clusters.
 
 **Remarques** :
 * Si votre cluster initial dispose d'un stockage vSAN, l'ajout d'un ou plusieurs serveurs ESXi après le déploiement permet d'accroître la capacité de stockage du cluster.
 * Vous pouvez ajouter ou retirer des partages de stockage NFS à/d'un cluster vCenter Server with NSX-T NFS ou vSAN existant.
-
 
 ## Ajout de serveurs ESXi à des instances vCenter Server with NSX-T
 {: #vc_nsx-t_addingremovingservers-adding}

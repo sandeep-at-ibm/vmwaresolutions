@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-02"
 
 subcollection: vmware-solutions
 
@@ -22,7 +22,7 @@ VMware vCenter Server on {{site.data.keyword.cloud}} with NSX-T è un cloud priv
 
 In molti casi, l'intero ambiente può essere fornito in meno di un giorno e l'infrastruttura bare metal può ridimensionare rapidamente ed elasticamente la capacità di calcolo a seconda delle necessità.
 
-Dopo la distribuzione, puoi aumentare l'archiviazione condivisa ordinando altre condivisioni file NFS (Network File System) dal {{site.data.keyword.slportal}} e collegandole manualmente a tutti i server ESXi in un cluster. 
+Dopo la distribuzione, puoi aumentare l'archiviazione condivisa ordinando altre condivisioni file NFS (Network File System) dal {{site.data.keyword.slportal}} e collegandole manualmente a tutti i server ESXi in un cluster.
 
 VMware vSAN è anche disponibile come opzione di archiviazione dedicata. Per aumentare la capacità di archiviazione basata su vSAN di un cluster vSAN, puoi aggiungere altri server ESXi dopo la distribuzione.
 
@@ -34,8 +34,7 @@ Le istanze vCenter Server with NSX-T sono solo per l'esecuzione di test sandbox 
 
 Il seguente grafico illustra l'architettura di alto livello e i componenti di una distribuzione vCenter Server with NSX-T a tre nodi.
 
-Figura 1. Architettura di alto livello di vCenter Server with NSX-T per un cluster a tre nodi
-![Architettura di vCenter Server with NSX-T](vc_nsx-t_architecture.svg "Architettura di alto livello di vCenter Server per un cluster a tre nodi")
+![Architettura di vCenter Server with NSX-T](../images/vc_nsx-t_architecture.svg "Architettura di vCenter Server with NSX-T")
 
 ### Infrastruttura fisica
 {: #vc_nsx-t_overview-physical-infras}

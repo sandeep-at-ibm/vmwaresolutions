@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-13"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -48,9 +48,7 @@ Tabella 1. Riepilogo del gruppo di porte NFS
 
 Oltre alla creazione del gruppo di porte vDS per il traffico di archiviazione NFS, viene creata una porta VMkernel su ogni host vSphere ESXi durante la distribuzione e viene assegnata al gruppo di porte SDDC-DPG-NFS. Alla porta VMkernel viene anche assegnato un indirizzo IP dalla sottorete portatile privata associata alla VLAN di archiviazione collegata, ossia la VLAN privata B, e la relativa MTU viene impostata su 9000 per supportare i frame Jumbo.
 
-Figura 1. Gruppi di porte vDS private e uplink
-
-![Gruppi di porte vDS private e uplink](private_vds_portgroups_and_uplinks.svg "Gruppi di porte vDS private e uplink")
+![Gruppi di porte vDS private e uplink](../../images/private_vds_portgroups_and_uplinks.svg "Gruppi di porte vDS private e uplink")
 
 ### Instradamento statico host vSphere
 {: #storage-infra-mgmt-vsphere-routing}

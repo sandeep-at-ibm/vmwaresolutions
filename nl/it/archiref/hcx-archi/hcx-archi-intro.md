@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -17,12 +17,12 @@ Il servizio VMware HCX on IBM Cloud abilita la creazione di una connessione tras
 
 IBM Cloud for VMware Solutions include distribuzioni rapide e completamente automatizzate di VCS (VMware vCenter Server) in IBM Cloud. Queste offerte integrano l'infrastruttura in loco e consentono ai carichi di lavoro esistenti e futuri di essere eseguiti in IBM Cloud senza dover essere convertiti tramite gli stessi strumenti, competenze e processi che utilizzano in loco. Per ulteriori informazioni, consulta [Virtualization for extending virtualized private cloud](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture).
 
-Il servizio VMware HCX on IBM Cloud porta questa ibridità alla fase successiva, combinando le istanze di VCS con i data center virtualizzati in loco esistenti abilitando la creazione di estensioni di rete trasparenti e la migrazione bidirezionale dei carichi di lavoro. 
+Il servizio VMware HCX on IBM Cloud porta questa ibridità alla fase successiva, combinando le istanze di VCS con i data center virtualizzati in loco esistenti abilitando la creazione di estensioni di rete trasparenti e la migrazione bidirezionale dei carichi di lavoro.
 
 I componenti di VMware HCX on IBM Cloud che vengono distribuiti come delle VM (Virtual Machine) nel sito di destinazione IBM Cloud VMware consentono di stabilire una connessione con i componenti VMware HCX on IBM Cloud installati nel sito di origine in loco peer.
 
-Figura 1. VMware vCenter Server – Hybrid Cloud Services
-![VMware vCenter Server – Hybrid Cloud Services](cloudfoundation_hybrid_cloud_services.svg)
+![VMware vCenter Server – Hybrid Cloud Services](../../images/cloudfoundation_hybrid_cloud_services.svg "VMware vCenter Server – Hybrid Cloud Services")
+
 
 Questa connessione crea una interconnettività accoppiata approssimativamente tra il locale e IBM Cloud e abilita funzionalità come:
 * Interconnettività semplice – le connessioni alla rete logica vengono stabilite facilmente tramite una qualsiasi connessione fisica come l'Internet pubblico, la VPN privata o direct link.

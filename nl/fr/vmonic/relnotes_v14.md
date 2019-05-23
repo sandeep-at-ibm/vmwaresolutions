@@ -46,7 +46,7 @@ Dans le cadre de l'installation de NSX, NSX Manager est installé et sous licenc
 Le contrôleur NSX n'est pas installé sur les instances vCenter Server (comme il l'est sur les instances Cloud Foundation). Si vous utilisez VXLAN ou des routeurs logiques distribués pour vos instances vCenter Server, alors vous devez installer vous-même le contrôleur NSX.
 {:note}
 
-Pour plus d'informations sur les améliorations apportées à VMware NSX for vSphere 6.2.4, ses exigences et ses problèmes connus, voir [Notes sur l'édition pour NSX for vSphere 6.2.4](http://pubs.vmware.com/Release_Notes/en/nsx/6.2.4/releasenotes_nsx_vsphere_624.html){:new_window}.
+Pour plus d'informations sur les améliorations apportées à VMware NSX for vSphere 6.2.4, ses exigences et ses problèmes connus, voir [Notes sur l'édition pour NSX for vSphere 6.2.4](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/rn/releasenotes_nsx_vsphere_624.html){:new_window}.
 
 ### VMware NSX Edge
 {: #relnotes_v14-nsx-edge}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -28,9 +28,7 @@ VUM 支持对 VMware vSphere 进行集中的自动补丁和版本管理，并允
 
 本文档描述使用基于 CentOS 和 Squid 的代理服务器实现，使 VUM 能够访问 VMware 存储库。VUM 向 VMware 的更新服务器请求资源时，会先将请求发送到代理服务器，然后代理服务器通过外部服务网关 (ESG) 将请求发送到更新服务器。代理服务器获得资源后，会将该资源发送给 VUM。
 
-图 1. 概览图
-</br>
-![概览图](vum-vcsproxy.svg)
+![概述图](../../images/vum-vcsproxy.svg "概述图")
 
 vCenter Server 当前部署的是 vSphere 6.5，这意味着现在 VUM 已集成在 vCenter Server Appliance (VCSA) 中，并且由于 VUM 客户机组件是在 vSphere Web Client 上运行的插件，在部署 VCSA 后会自动启用。但是，VUM 无权访问因特网来访问 VMware 存储库。
 

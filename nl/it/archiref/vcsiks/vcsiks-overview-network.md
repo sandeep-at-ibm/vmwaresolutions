@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -28,8 +28,7 @@ Per impostazione predefinita, {{site.data.keyword.containerlong_notm}} configura
 - Un indirizzo IP privato per ciascun nodo di lavoro, che fornisce ai nodi di lavoro un'interfaccia di rete privata
 - Una connessione OpenVPN automatica e sicura tra tutti i nodi di lavoro e il nodo master
 
-Figura 1. Rete di vCenter Server e {{site.data.keyword.containerlong_notm}}
-![Diagramma della rete di vCenter Server-{{site.data.keyword.containerlong_notm}}](vcsiks-networking.svg)
+![Diagramma di rete vCenter Server-{{site.data.keyword.containerlong_notm}}](../../images/vcsiks-networking.svg "Diagramma di rete vCenter Server-{{site.data.keyword.containerlong_notm}}")
 
 ### Integrazione di IBM Cloud Kubernetes Service e vCenter Server
 {: #vcsiks-overview-network-iks-vcs-integration}

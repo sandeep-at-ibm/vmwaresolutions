@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-24"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -18,7 +18,7 @@ subcollection: vmware-solutions
 # Single-node Trial for Migration and App Modernization の概要
 {: #cloud_modern_bundle_overview}
 
-Single-node Trial for Migration and App Modernization では、VMware ワークロードを {{site.data.keyword.cloud}} にマイグレーションしてから、コンテナーを使用して単純なワークロードをモダナイズする、という {{site.data.keyword.cloud_notm}} のテスト・ドライブを行うことができます。
+Single-node Trial for Migration and App Modernization では、VMware ワークロードを {{site.data.keyword.cloud_notm}} にマイグレーションしてから、コンテナーを使用して単純なワークロードをモダナイズする、という {{site.data.keyword.cloud_notm}} のテスト・ドライブを行うことができます。
 
 この Single-node Trial は、VMware vCenter Server on {{site.data.keyword.cloud_notm}} に置かれた {{site.data.keyword.cloud_notm}} Private Hosted のトライアル・バージョンです。オンプレミス環境と同じツールで管理できる Kubernetes コンテナー管理プラットフォームと単一テナント VMware プラットフォームが提供されます。 制御性および可視性はオンプレミスと同じレベルに保ったまま、クラウドの速度およびスケールというメリットを享受できます。
 
@@ -27,7 +27,7 @@ Single-node Trial for Migration and App Modernization では、VMware ワーク�
 Single-node Trial for Migration and App Modernization は PoC (概念検証) のみを目的としています。 この環境では実動ワークロードを実行しないでください。 ホストやクラスターの追加と削除、アドオン・サービスの注文、更新の適用などの管理機能はサポートされません。
 {:important}
 
-Single-node Trial インスタンスを最大限に利用するには、[IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html) の [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf) を使用してください。これは、{{site.data.keyword.cloud_notm}} への VMware ワークロードのマイグレーションを支援するものです。 さらに、[{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/) を使用すれば、クラウド・ネイティブの最新の手法でアプリケーションのモダナイゼーションを加速化できます。
+Single-node Trial インスタンスを最大限に利用するには、[IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:new_window} の [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:new_window} を使用してください。これは、{{site.data.keyword.cloud_notm}} への VMware ワークロードのマイグレーションを支援するものです。 さらに、[{{site.data.keyword.cloud_notm}}Garage Services](https://www.ibm.com/cloud/garage/){:new_window} を使用すれば、クラウド・ネイティブの最新の手法でアプリケーションのモダナイゼーションを加速化できます。
 
 このトライアル版は最大 90 日間使用できます。 トライアル期間が終了したら、この環境を削除し、キャパシティーのニーズを満たす新しい環境をプロビジョンできます。
 {:note}
@@ -134,17 +134,17 @@ Single-node Trial for Migration and App Modernization には、HCX on {{site.dat
 ## IBM Cloud Private Hosted の技術仕様
 {: #cloud_modern_bundle_overview-icp-tech-specs}
 
-すべての Single-node Trial for Migration and App Modernization インスタンスに、{{site.data.keyword.cloud_notm}} Private Hosted 3.1.2 が開発/テスト用のトポロジーでインストールされます。 {{site.data.keyword.cloud_notm}} Private Hosted について詳しくは、[{{site.data.keyword.cloud_notm}} Private Hosted の概要](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_overview)を参照してください。
+すべての Single-node Trial for Migration and App Modernization インスタンスに、{{site.data.keyword.cloud_notm}} Private Hosted V3.1.2 が開発/テスト用のトポロジーでインストールされます。 {{site.data.keyword.cloud_notm}} Private Hosted について詳しくは、[{{site.data.keyword.cloud_notm}}Private Hosted の概要](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_overview)を参照してください。
 
 ## IBM Cloud Automation Manager の技術仕様
 {: #cloud_modern_bundle_overview-cam-tech-specs}
 
-すべての Single-node Trial for Migration and App Modernization インスタンスに、{{site.data.keyword.cloud_notm}} Automation Manager 3.1.2 が開発/テスト用のトポロジーでインストールされます。 {{site.data.keyword.cloud_notm}} Automation Manager について詳しくは、[{{site.data.keyword.cloud_notm}} Automation Manager の資料](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: new_window}を参照してください。
+すべての Single-node Trial for Migration and App Modernization インスタンスに、{{site.data.keyword.cloud_notm}} Automation Manager V3.1.2 が開発/テスト用のトポロジーでインストールされます。 {{site.data.keyword.cloud_notm}} Automation Manager について詳しくは、[{{site.data.keyword.cloud_notm}} Automation Manager の資料](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: new_window}を参照してください。
 
 ## 関連リンク
 {: #cloud_modern_bundle_overview-related}
 
 * [vCenter Server および {{site.data.keyword.cloud_notm}} Private ガイド](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [{{site.data.keyword.cloud_notm}} Private のチケットをオープン](https://www.ibm.com/mysupport/s/?language=en_US)
-* [VMware HCX 資料](https://hcx.vmware.com/#/docs)
-* [Obtaining the VMware HCX OVA](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html?hWord=N4IghgNiBcIPICMAuYCWA7DBzABEgFgKY4ASAwgBo5wBqAgiAL5A)
+* [{{site.data.keyword.cloud_notm}} Private のチケットをオープン](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
+* [VMware HCX リソース](https://hcx.vmware.com/#/docs){:new_window}
+* [VMware HCX ユーザー・ガイド](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -65,9 +65,7 @@ CPU | 2 - 56 核心 | 4 - 28 核心
 ## 虛擬結構
 {: #vcsiks-arch-overview-infrastructure-virtual-structure}
 
-圖 1. {{site.data.keyword.containerlong_notm}} 和 {{site.data.keyword.icpfull_notm}} 部署的實體結構
-
-![{{site.data.keyword.containerlong_notm}} 和 {{site.data.keyword.icpfull_notm}} 部署的實體結構圖](vcsiks-phy-ics-iks-deployment.svg)
+![{{site.data.keyword.containerlong_notm}} 和 {{site.data.keyword.icpfull_notm}} 部署的實體結構圖](../../images/vcsiks-phy-ics-iks-deployment.svg "{{site.data.keyword.containerlong_notm}} 和 {{site.data.keyword.icpfull_notm}} 部署的實體結構圖){: caption="圖 1. {{site.data.keyword.containerlong_notm}} 和 {{site.data.keyword.icpfull_notm}} 部署的實體結構" caption-side="bottom"}
 
 在 vCenter Server 實例內，客戶 VMS 會部署至專用 NSX Edge Services Gateway (ESG) 及「分散式邏輯路由器 (DLR)」。
 
@@ -76,8 +74,7 @@ ESG 配置成具有來源 NAT 規則 (SNAT) 以容許出埠資料流量，這會
 ## vCenter Server 元件
 {: #vcsiks-arch-overview-infrastructure-vcs-comp}
 
-圖 2. vCenter Server 平台元件
-![vCenter Server 環境圖](vcsiks-vcs-env.svg)
+![vCenter Server 環境圖](../../images/vcsiks-vcs-env.svg "vCenter Server 環境圖")
 
 ### Platform Service Controller
 {: #vcsiks-arch-overview-infrastructure-psc}
@@ -127,9 +124,7 @@ Edge Services Gateway| 虛擬應用裝置
 ## IBM Cloud Kubernetes Service 元件
 {: #vcsiks-arch-overview-infrastructure-iks-comp}
 
-圖 3. {{site.data.keyword.containerlong_notm}} 元件
-</br>
-![{{site.data.keyword.containerlong_notm}} 元件圖](vcsiks-iks-components.svg)
+![{{site.data.keyword.containerlong_notm}} 元件圖](../../images/vcsiks-iks-components.svg "{{site.data.keyword.containerlong_notm}} 元件圖")
 
 ### Kubernetes 主節點
 {: #vcsiks-arch-overview-infrastructure-kube-master}

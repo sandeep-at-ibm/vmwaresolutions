@@ -245,8 +245,12 @@ IBM Cloud for VMware Solutions
 
     {: .navgroup id="reference"}
     vmonic/at-events.md
-    vmonic/ibm_use.md
     [API 參考資料](https://cloud.ibm.com/apidocs/vmware-solutions)
+
+    {: .topicgroup}
+    審核
+        vmonic/audit_user_ids.md
+        vmonic/audit_messages.md
 
     {: .topicgroup}
     IBM Cloud for VMware Solutions 架構（含 NSX-V 和 NSX-T）
@@ -269,7 +273,6 @@ IBM Cloud for VMware Solutions
         archiref/attached-storage/storage-infra-mgmt.md
         archiref/attached-storage/storage-settings.md
         archiref/attached-storage/cluster-settings.md
-    
 
     {: .topicgroup}
     Caveonix RiskForesight 參照架構

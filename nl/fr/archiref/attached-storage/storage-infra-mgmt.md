@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-13"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -48,9 +48,7 @@ Tableau 1. Récapitulatif du groupe de ports NFS
 
 Outre le groupe de ports vDS créé pour le trafic de stockage NFS, un port VMkernel est créé sur chaque hôte vSphere ESXi durant le déploiement et affecté au groupe de ports SDDC-DPG-NFS. Le port VMkernel se voit également affecter une adresse IP provenant du sous-réseau portable privé qui est associé au réseau local virtuel de stockage connecté, autrement dit, le réseau local virtuel privé B et la MTU 9000 pour la prise en charge des trames jumbo.
 
-Figure 1. Groupes de ports et liaisons montantes vDS privés
-
-![Groupes de ports et liaisons montantes vDS privés](private_vds_portgroups_and_uplinks.svg "Groupes de ports et liaisons montantes vDS privés")
+![Groupes de ports et liaisons montantes vDS privés](../../images/private_vds_portgroups_and_uplinks.svg "Groupes de ports et liaisons montantes vDS privés")
 
 ### Routage statique d'hôte vSphere
 {: #storage-infra-mgmt-vsphere-routing}

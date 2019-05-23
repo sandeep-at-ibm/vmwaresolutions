@@ -104,8 +104,8 @@ vSphere Enterprise Plus 및 vCenter Server를 제외한 라이센스를 구매�
 
 **참고:**
 * vSAN 컴포넌트를 선택하는 경우 SSD 가용성을 기준으로 위치 목록이 필터링됩니다.
-* Broadwell Bare Metal Server는 **FRA05 - 프랑크푸르트** 데이터 센터 위치에서 사용할 수 없습니다. 
-* SAP 인증 및 Broadwell Bare Metal Server는 **LON05 - 런던** 데이터 센터 위치에서 사용할 수 없습니다. 
+* Broadwell Bare Metal Server는 **FRA05 - 프랑크푸르트** 데이터 센터 위치에서 사용할 수 없습니다.
+* SAP 인증 및 Broadwell Bare Metal Server는 **LON05 - 런던** 데이터 센터 위치에서 사용할 수 없습니다.
 
 ### Skylake
 {: #vs_orderinginstances-skylake}

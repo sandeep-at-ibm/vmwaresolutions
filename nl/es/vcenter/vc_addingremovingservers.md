@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-18"
+lastupdated: "2019-05-03"
 
 subcollection: vmware-solutions
 
@@ -20,7 +20,8 @@ subcollection: vmware-solutions
 
 Puede ampliar o reducir la capacidad de la instancia de VMware vCenter Server según sus necesidades empresariales añadiendo o eliminando servidores ESXi o almacenamiento del sistema de archivos de red (NFS).
 
-* A partir del release V3.0, puede añadir o eliminar de forma simultánea almacenamiento NFS en varios clústeres.
+* A partir del release V3.0, puede añadir o eliminar de forma simultánea almacenamiento NFS y servidores ESXi en los clústeres que tengan el estado
+**Listo para su uso**. Por ejemplo, puede añadir o eliminar un servidor ESXi en un clúster y añadir o eliminar almacenamiento NFS en otro clúster.
 * A partir del release V2.9, puede añadir nuevos servidores ESXi a un clúster mientras los servidores estén en modalidad de mantenimiento. Además, puede añadir o eliminar simultáneamente servidores ESXi en varios clústeres.
 
 **Notas**:

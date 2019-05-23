@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -33,8 +33,7 @@ Per ulteriori informazioni sui componenti fisici, vedi [Distinta base di vCenter
 
 Per ulteriori informazioni sull'archiviazione, vedi [Architettura dell'archiviazione condivisa](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits).
 
-Figura 1. Infrastruttura fisica</br>
-![Infrastruttura fisica](vcsv4radiagrams-ra-physinfra.svg)
+![Infrastruttura fisica](../../images/vcsv4radiagrams-ra-physinfra.svg "Infrastruttura fisica")
 
 ## Progettazione del calcolo fisico
 {: #design_physicalinfrastructure-host-design}
@@ -63,10 +62,9 @@ La rete fisica è gestita da {{site.data.keyword.cloud_notm}}. Controlla le segu
 ### Panoramica della rete di IBM Cloud
 {: #design_physicalinfrastructure-ibm-cloud-network}
 
-La rete fisica di {{site.data.keyword.cloud_notm}} è suddivisa in due reti distinte: pubblica e privata. La rete privata contiene anche il traffico IPMI (Intelligent Platform Management Interface) di gestione ai server fisici. 
+La rete fisica di {{site.data.keyword.cloud_notm}} è suddivisa in due reti distinte: pubblica e privata. La rete privata contiene anche il traffico IPMI (Intelligent Platform Management Interface) di gestione ai server fisici.
 
-Figura 2. {{site.data.keyword.cloud_notm}} - Rete di alto livello
-![{{site.data.keyword.cloud_notm}} - Rete di alto livello](vcsv4radiagrams-ra-ibmcloudnetwork.svg)
+![{{site.data.keyword.cloud_notm}} - rete di livello superiore](../../images/vcsv4radiagrams-ra-ibmcloudnetwork.svg "{{site.data.keyword.cloud_notm}} - rete di livello superiore")
 
 #### Rete pubblica
 {: #design_physicalinfrastructure-public-net}
@@ -112,15 +110,14 @@ Ogni host fisico in questa progettazione ha due coppie ridondanti di connessioni
 
 La rimozione della connettività di rete fisica dalla rete privata o pubblica per i server bare metal utilizzati nell'offerta vCenter Server non è possibile. Le porte fisiche sul NIC interno del bare metal possono essere disabilitate, ma non esiste supporto per lo scollegamento dei cavi.
 
-Figura 3. Connessioni all'host fisico</br>
-![Connessioni all'host fisico](vcsv4radiagrams-ra-physical-host-connections.svg "Connessioni all'host fisico")
+![Connessioni all'host fisico](../../images/vcsv4radiagrams-ra-physical-host-connections.svg "Connessioni all'host fisico")
 
 #### VLAN e instradamento da quelle di underlay a quelle di overlay
 {: #design_physicalinfrastructure-vlans}
 
 Le offerte {{site.data.keyword.vmwaresolutions_short}} sono progettate con 3 VLAN, una pubblica e due private, assegnate al momento della distribuzione. Come mostrato nella figura precedente, la VLAN pubblica è assegnata a `eth1` e `eth3` e le VLAN private sono assegnate a `eth0` e `eth2`.
 
-La VLAN pubblica e la prima VLAN privata create e assegnate in questa progettazione sono prive di tag per impostazione predefinita all'interno di {{site.data.keyword.cloud_notm}}. Successivamente, la VLAN privata aggiuntiva viene collegata alle porte dello switch fisico e contrassegnata con tag all'interno dei gruppi di porte VMware che stanno utilizzando queste sottoreti. 
+La VLAN pubblica e la prima VLAN privata create e assegnate in questa progettazione sono prive di tag per impostazione predefinita all'interno di {{site.data.keyword.cloud_notm}}. Successivamente, la VLAN privata aggiuntiva viene collegata alle porte dello switch fisico e contrassegnata con tag all'interno dei gruppi di porte VMware che stanno utilizzando queste sottoreti.
 
 In questa progettazione, la rete privata è composta da due VLAN. Alla prima di queste VLAN (indicata qui come VLAN privata A) sono assegnate tre sottoreti:
 * La prima sottorete è un intervallo di sottoreti di IP privati primari che {{site.data.keyword.cloud_notm}} assegna agli host fisici.
@@ -181,9 +178,7 @@ Quando si utilizza l'archiviazione a livello di file condivisa, una condivisione
 
 L'archiviazione viene collegata utilizzando il protocollo NFSv3 con un livello di 2 IOPS per GB da IBM Cloud. IBM normalizza il livello IOP che viene fornito a una dimensione blocco di 16 K perché dimensioni blocco più grandi visualizzano un limite inferiore mentre dimensioni blocco più piccole un limite superiore.
 
-Figura 4. Condivisioni NFS collegate alla distribuzione VMware
-
-![Condivisioni NFS collegate alla distribuzione VMware](vcsv4radiagrams-ra-nfs-shares.svg "Condivisioni NFS collegate alla distribuzione VMware: condivisione di gestione e condivisione specificata dal cliente")
+![Condivisioni NFS collegate alla distribuzione VMware](../../images/vcsv4radiagrams-ra-nfs-shares.svg "Condivisioni NFS collegate alla distribuzione VMware: condivisione di gestione e condivisione specificata dal cliente")
 
 Puoi assegnare e montare più condivisioni di file tra tutti gli host per i tuoi carichi di lavoro al momento dell'acquisto o successivamente nella console. Puoi scegliere tra le opzioni di capacità di archiviazione file Endurance {{site.data.keyword.cloud_notm}} e i livelli di prestazioni disponibili nel {{site.data.keyword.CloudDataCent_notm}} corrispondente. Tutte le condivisioni vengono collegate utilizzando il protocollo NFSv3. Inoltre, è possibile collegare le condivisioni file NFSv3 applicando l'offerta NetApp ONTAP Select.
 
@@ -196,8 +191,7 @@ Simile a NFS, con l'archiviazione iSCSI condivisa, un LUN iSCSI da 2-TB è colle
 
 IBM normalizza il livello IOP fornito a una dimensione blocco di 16 K perché dimensioni blocco più grandi visualizzano un limite inferiore mentre dimensioni blocco più piccole un limite superiore.
 
-Figura 5. LUN iSCSI collegati alla distribuzione VMware</br>
-![LUN iSCSI collegati alla distribuzione VMware](vcsv4radiagrams-ra-iscsi-lun.svg "LUN iSCSI collegati alla distribuzione VMware")
+![LUN iSCSI collegate alla distribuzione VMware](../../images/vcsv4radiagrams-ra-iscsi-lun.svg "LUN iSCSI collegate alla distribuzione VMware")
 
 Ulteriori LUN iSCSI per i carichi di lavoro possono essere assegnati e montati tra tutti gli host al momento dell'acquisto o successivamente nella console. Scegli tra le opzioni disponibili di capacità di archiviazione blocchi IBM Cloud Endurance e i livelli di prestazioni disponibili nel data center IBM Cloud corrispondente. Tutte i LUN vengono collegati utilizzando il protocollo iSCSI. Inoltre, è possibile collegare i LUN iSCSI dall'offerta NetApp ONTAP Select.
 

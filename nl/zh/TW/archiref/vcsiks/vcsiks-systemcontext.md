@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -14,9 +14,7 @@ subcollection: vmware-solutions
 # 系統環境定義
 {: #vcsiks-systemcontext}
 
-圖 1. 系統環境定義
-
-![系統環境定義圖](vcsiks-system-context.svg)
+![系統環境定義圖](../../images/vcsiks-system-context.svg "系統環境定義圖")
 
 核心元件如下：
 

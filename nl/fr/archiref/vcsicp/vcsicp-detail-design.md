@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-09"
 
 subcollection: vmware-solutions
 
@@ -19,9 +19,7 @@ subcollection: vmware-solutions
 
 Les services communs fournissent les services qui sont utilisés par d'autres services de la plateforme de gestion du cloud. Il s'agit notamment des services d'identité et d'accès, des services de nom de domaine et des services NTP.
 
-Figure 1. Services communs {{site.data.keyword.icpfull_notm}}
-
-![{{site.data.keyword.icpfull_notm}} - Services communs](vcsicp-icp-commonservices.svg)
+![{{site.data.keyword.icpfull_notm}} - Services communs](../../images/vcsicp-icp-commonservices.svg "{{site.data.keyword.icpfull_notm}} - Services communs")
 
 ### Services d'identité et d'accès
 {: #vcsicp-detail-design-identity}
@@ -50,9 +48,7 @@ En utilisant la mise en réseau NSX-V incluse dans le déploiement VCS, nous pou
 
 {{site.data.keyword.icpfull_notm}} est déployé avec la pile de mise en réseau Calico par défaut pour Kubernetes, ce qui fournit l'isolement réseau dans votre cluster.
 
-Figure 2. {{site.data.keyword.icpfull_notm}} avec mise en réseau NSX-V
-
-![{{site.data.keyword.icpfull_notm}} avec mise en réseau NSX-V](vcsicp-nsxv-networking.svg)
+![{{site.data.keyword.icpfull_notm}} avec mise en réseau NSX-V](../../images/vcsicp-nsxv-networking.svg "{{site.data.keyword.icpfull_notm}} avec mise en réseau NSX-V")
 
 Pour plus d'informations, voir le [guide de mise en réseau de vCenter Server](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro).
 
@@ -63,9 +59,7 @@ L'architecture de NSX-T est telle qu'une plateforme de mise en réseau pouvant s
 
 {{site.data.keyword.icpfull_notm}} fournit une option permettant de remplacer la mise en réseau Calico par une instance NSX-T, fournissant ainsi un emplacement unique pour la gestion de la mise en réseau et de la sécurité.
 
-Figure 3. {{site.data.keyword.icpfull_notm}} avec mise en réseau NSX-T
-
-![{{site.data.keyword.icpfull_notm}} avec mise en réseau NSX-T](vcsicp-icp-nsxt-networking.svg)
+![{{site.data.keyword.icpfull_notm}} avec mise en réseau NSX-T](../../images/vcsicp-icp-nsxt-networking.svg "{{site.data.keyword.icpfull_notm}} avec mise en réseau NSX-T")
 
 ## Liens connexes
 {: #vcsicp-detail-design-related}

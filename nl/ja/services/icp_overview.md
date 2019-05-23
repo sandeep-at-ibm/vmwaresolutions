@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-26"
+lastupdated: "2019-05-01"
 
 subcollection: vmware-solutions
 
@@ -21,10 +21,10 @@ subcollection: vmware-solutions
 {{site.data.keyword.cloud}} Private Hosted サービスは、自動的に {{site.data.keyword.cloud_notm}} Private Hosted および {{site.data.keyword.cloud_notm}} Automation Manager を VMware vCenter Server インスタンスにデプロイします。 このサービスは、マイクロサービスとコンテナーの機能を {{site.data.keyword.cloud_notm}} 上の VMware 環境で利用できるようにします。 このサービスを利用することで、使い慣れたオンプレミスの VMware と {{site.data.keyword.cloud_notm}} Private の操作モデルとツールを、{{site.data.keyword.cloud_notm}} に拡張できます。
 
 このサービスは次のインスタンスで使用できます。
-* V2.7 以降でデプロイ (または V2.7 以降にアップグレード) された vCenter Server with Hybridity Bundle インスタンス
-* V2.5 以降でデプロイ (または V2.5 以降にアップグレード) された vCenter Server インスタンス
+* V2.7 以降にデプロイ (または V2.7 以降にアップグレード) された vCenter Server with Hybridity Bundle インスタンス
+* V2.5 以降にデプロイ (または V2.5 以降にアップグレード) された vCenter Server インスタンス
 
-V3.0 以降でデプロイ (または V3.0 以降にアップグレード) されたインスタンスの場合、{{site.data.keyword.cloud_notm}} Automation Manager も {{site.data.keyword.cloud}} Private Hosted サービスの注文の一部としてデプロイされます。
+V3.0 以降にデプロイ (またはアップグレード) されたインスタンスの場合、{{site.data.keyword.cloud_notm}} Automation Manager は、{{site.data.keyword.cloud}} Private Hosted サービス注文の一部としてもデプロイされます。
 {:note}
 
 ## IBM Cloud Private Hosted の技術仕様
@@ -118,16 +118,16 @@ IBM Cloud Private および管理オーバーヘッドのスペース所要量�
 ## IBM Cloud Private Hosted をインストールする際の考慮事項
 {: #icp_overview-install}
 
-* {{site.data.keyword.cloud_notm}} Private Hosted サービスをインストールする前に、必要なライセンスを収集してください。 これには、{{site.data.keyword.cloud_notm}} Private および {{site.data.keyword.cloud_notm}} Automation Manager の両方のライセンスが含まれます。それらのライセンスが、サービスの初期デプロイメントだけでなく、将来のインフラストラクチャーのサイズの拡張もサポートしていることを確認してください。
-* 実動対応環境への {{site.data.keyword.cloud_notm}} Private Hosted デプロイメントの場合、ホスト 1 台に 64 GB の RAM はサポートされません。そのため、**RAM** に 64 GB より高いオプションを選択する必要があります。
+* {{site.data.keyword.cloud_notm}} Private Hosted サービスをインストールする前に、必要なライセンスを収集してください。 これには、{{site.data.keyword.cloud_notm}} Private と {{site.data.keyword.cloud_notm}} Automation Manager ライセンスの両方が含まれます。 ライセンスでは、初期サービスのデプロイメントだけではなく、インフラストラクチャー内の将来のサイズ拡張もサポートできるようにしてください。
+* 実動対応環境の {{site.data.keyword.cloud_notm}} Private Hosted デプロイメントの場合、ホスト 1 台に 64 GB の RAM はサポートされません。 そのため、**RAM** に 64 GB より高いオプションを選択する必要があります。
 * {{site.data.keyword.cloud_notm}} Private Hosted サービスが環境にインストールされる前に、環境内のデフォルト・クラスターの空き容量が検査され、サービス・コンポーネントを収容できるか確認されます。 容量検査に失格した場合、サービスはインストールされず、コンソールのサービス状態が**「容量検査失格 (Capacity Validation Failed)」**に設定されます。 さらに、詳しい情報を示すコンソール・メッセージが表示され、E メールで通知されます。 サービスをインストールするためには、ホストを追加するか、RAM、 CPU、またはディスク・スペースを解放することで、デフォルト・クラスターの容量を増やしてから、もう一度コンソールでサービスを追加してください。 その後で、**「容量検査失格 (Capacity Validation Failed)」**状態の既存のサービスを、その横にある**「削除」**アイコンをクリックして削除できます。
-* 追加のノードをデプロイする場合は、初期の {{site.data.keyword.cloud_notm}} Private Hosted のインストールでデプロイした {{site.data.keyword.cloud_notm}} Private Ubuntu テンプレート (Ubuntu1604) を使用します。このテンプレートを見つけるには、VMware vSphere Web Client で、`cam` フォルダーの下の**「VMs and Templates」**タブに移動します。Ubuntu テンプレートのデフォルト・パスワードは `icponcloud` ですが、テンプレートを使用する前に変更することをお勧めします。
+* 追加ノードをデプロイする場合は、[追加ノードのデプロイ](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_ordering-deploy-nodes#icp_ordering-deploy-nodes)を参照してください。
 
 ## IBM Cloud Private Hosted を削除する際の考慮事項
 {: #icp_overview-remove}
 
-* {{site.data.keyword.cloud_notm}} Private Hosted サービスの初期インストール時にデプロイされた仮想マシン (VM) だけが削除されます。インストール後にデプロイされたノードはクリーンアップされません。
-* {{site.data.keyword.cloud_notm}} は、{{site.data.keyword.cloud_notm}} Private Hosted の初期デプロイメント時に作成された VXLAN、DLR、およびエッジ・ゲートウェイを削除します。VXLAN にデプロイされた VM は、{{site.data.keyword.cloud_notm}} Private Hosted サービスの削除が開始すると、接続を失います。
+* {{site.data.keyword.cloud_notm}} Private Hosted サービスの初期インストール時にデプロイされた仮想マシン (VM) のみが削除されます。 インストール後にデプロイされたノードはクリーンアップされません。
+* {{site.data.keyword.cloud_notm}} は、{{site.data.keyword.cloud_notm}} Private Hosted の初期デプロイメント時に作成された VXLAN、DLR、および Edge Gateway を削除します。 VXLAN にデプロイされた VM は、{{site.data.keyword.cloud_notm}} Private Hosted サービスの削除が開始すると、接続を失います。
 
 ## 関連リンク
 {: #icp_overview-related}
@@ -136,4 +136,4 @@ IBM Cloud Private および管理オーバーヘッドのスペース所要量�
 * [vCenter Server および {{site.data.keyword.cloud_notm}} Private ガイド](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
 * [{{site.data.keyword.cloud_notm}} Private のチケットをオープン](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
 * [{{site.data.keyword.cloud_notm}} Automation Manager のライセンス](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/licensing.html){:new_window}
-* [{{site.data.keyword.cloud_notm}} Automation Manager のコンポーネント](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/cam_managed_components.html){:new_window}
+* [{{site.data.keyword.cloud_notm}} Automation Manager コンポーネント](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/cam_managed_components.html){:new_window}

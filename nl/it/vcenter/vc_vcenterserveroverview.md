@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-02"
 
 subcollection: vmware-solutions
 
@@ -18,7 +18,7 @@ subcollection: vmware-solutions
 # Panoramica di vCenter Server
 {: #vc_vcenterserveroverview}
 
-VMware vCenter Server on {{site.data.keyword.cloud}} è un cloud privato ospitato che fornisce lo stack VMware vSphere come servizio. L'ambiente VMware è sviluppato su {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}, offre opzioni di archiviazione collegata alla rete condivisa e archiviazione definita dal software dedicata e include la distribuzione e configurazione automatizzata di un firewall edge logico di facile gestione con tecnologia VMware NSX. 
+VMware vCenter Server on {{site.data.keyword.cloud}} è un cloud privato ospitato che fornisce lo stack VMware vSphere come servizio. L'ambiente VMware è sviluppato su {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}, offre opzioni di archiviazione collegata alla rete condivisa e archiviazione definita dal software dedicata e include la distribuzione e configurazione automatizzata di un firewall edge logico di facile gestione con tecnologia VMware NSX.
 
 In molti casi, l'intero ambiente può essere fornito in meno di un giorno e l'infrastruttura bare metal può ridimensionare rapidamente ed elasticamente la capacità di calcolo a seconda delle necessità.
 
@@ -35,8 +35,7 @@ Puoi aggiungere i servizi gestiti IBM se vuoi scaricare le operazioni quotidiane
 
 Il seguente grafico illustra l'architettura di alto livello e i componenti di una distribuzione vCenter Server a tre nodi.
 
-Figura 1. Architettura di alto livello di vCenter Server per un cluster a tre nodi
-![Architettura di vCenter Server](vc_architecture.svg "Architettura di alto livello di vCenter Server per un cluster a tre nodi")
+![Architettura di vCenter Server](../images/vc_architecture.svg "Architettura di vCenter Server")
 
 ### Infrastruttura fisica
 {: #vc_vcenterserveroverview-physical-infras}

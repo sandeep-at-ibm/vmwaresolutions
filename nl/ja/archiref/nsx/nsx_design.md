@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -28,9 +28,7 @@ NSX Edge Services Gateway on {{site.data.keyword.cloud}} ソリューション�
 VMware vSAN は、以下の図ではオプションです。
 {:note}
 
-図 1. {{site.data.keyword.cloud_notm}} のクラウド・ネットワーキング・サービス
-
-![クラウド・ネットワーキング・サービスのアーキテクチャー](architecture.svg "クラウド・ネットワーキング・サービスのアーキテクチャー")
+![クラウド・ネットワーク・サービス・アーキテクチャー](../../images/architecture.svg "クラウド・ネットワーク・サービス・アーキテクチャー")
 
 ## 専用アーキテクチャー設計
 {: #nsx_design-dedicated-archi}

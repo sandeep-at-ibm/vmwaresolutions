@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-02"
 
 subcollection: vmware-solutions
 
@@ -28,8 +28,7 @@ La oferta VMware vCenter Server on {{site.data.keyword.cloud_notm}} con NSX-T no
 
 En el diagrama siguiente encontrará información sobre las responsabilidades del cliente (usted) y de IBM en relación a las actividades de conformidad.
 
-Figura 1. Matriz de responsabilidades del cliente y de IBM para vCenter Server on IBM Cloud
-![Matriz de responsabilidades del cliente y de IBM](customer_ibm_responsibility_matrix.svg "Matriz de responsabilidades del cliente y de IBM")
+![Matriz de responsabilidad del cliente frente a IBM](../images/customer_ibm_responsibility_matrix.svg "Matriz de responsabilidad del cliente frente a IBM")
 
 ## Restricciones en datos de estado
 {: #vc_compl_info-health-data-restrictions}

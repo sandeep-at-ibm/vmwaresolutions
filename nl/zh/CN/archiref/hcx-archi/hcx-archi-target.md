@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -104,8 +104,7 @@ NSX Edge 虚拟机配置为一对主动/被动超大型 NSX Edge 设备。这些
 
 在部署并配置了 HCX Manager 云组件后，源组件会通过 NSX ESG 中配置的 VIP 地址来创建与 HCX Manager 的连接。建立此连接后，即可在 IBM Cloud 中部署云网关和 WAN Optimizer 设备。
 
-图 1. 目标 - Hybrid Cloud Services 设备
-![目标 - Hybrid Cloud Services 设备](target_hybrid_cloud_services_appliance.svg)
+![目标 - Hybrid Cloud Services 设备](../../images/target_hybrid_cloud_services_appliance.svg "目标 - Hybrid Cloud Services 设备")
 
 ## 云网关
 {: #hcx-archi-target-cloud-gateway}
@@ -126,8 +125,7 @@ NSX Edge 虚拟机配置为一对主动/被动超大型 NSX Edge 设备。这些
 
 下图描绘了云网关设备和所分配连接的高级组件图。
 
-图 2. 云网关部署
-![云网关部署](cloud_gateway_deployment.svg)
+![Cloud Gateway 部署](../../images/cloud_gateway_deployment.svg "Cloud Gateway 部署")
 
 ## WAN Optimizer
 {: #hcx-archi-target-wan-opt}
@@ -146,8 +144,7 @@ NSX Edge 虚拟机配置为一对主动/被动超大型 NSX Edge 设备。这些
 
 与云网关不同的是，WAN 优化设备仅连接到逻辑交换机，以支持自身与云网关之间的通信。如果在源环境中正在使用 WAN 优化，那么此设备是必需的。有关网络布局的视图，请参阅下图。
 
-图 3. WAN Optimizer 部署
-![WAN Optimizer 部署](wan_optimizer_deployment.svg)
+![WAN Optimizer 部署](../../images/wan_optimizer_deployment.svg "WAN Optimizer 部署")
 
 ## 第 2 层集中器
 {: #hcx-archi-target-layer-2-conc}
@@ -166,8 +163,8 @@ NSX Edge 虚拟机配置为一对主动/被动超大型 NSX Edge 设备。这些
 
 L2C 设备部署在管理 VLAN 以及公用 VLAN 上。公共接口用于处理流向扩展网络的源的应用程序流量。在源管理员发起将网络扩展到 IBM Cloud 的操作之后，会创建更多连接（如扩展网络），并且这些连接会连接到 L2C 设备。这些网络和连接的示例如下图所示。
 
-图 4. L2 集中器部署
-![L2 集中器部署](l2_concentrator_deployment.svg)
+![L2 Concentrator 部署](../../images/l2_concentrator_deployment.svg "L2 Concentrator 部署")
+
 
 ## 相关链接
 {: #hcx-archi-target-related}

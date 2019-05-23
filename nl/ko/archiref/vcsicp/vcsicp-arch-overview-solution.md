@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-09"
 
 subcollection: vmware-solutions
 
@@ -17,8 +17,7 @@ subcollection: vmware-solutions
 ## VMware vCenter Server on IBM Cloud 컴포넌트
 {: #vcsicp-arch-overview-solution-vcs-comp}
 
-그림 1. vCenter Server 환경 다이어그램
-![VCS 환경](vcsicp-vcsenv.svg)
+![vCenter Server 환경](../../images/vcsicp-vcsenv.svg "vCenter Server 및 {{site.data.keyword.icpfull_notm}} 배치의 물리적 구조")
 
 ### Platform Service Controller
 {: #vcsicp-arch-overview-solution-psc}
@@ -50,19 +49,19 @@ NSX Edge Services Gateway(ESG) 쌍이 배치됩니다. 모든 경우에, 하나�
 
 표 1. {{site.data.keyword.icpfull_notm}} ESG 스펙
 
- 속성  | 스펙
---|--
-Edge Service Gateway  | 가상 어플라이언스
-Edge 크기 대형 | vCPU 수 2
-메모리	| 1GB 디스크	| 로컬 데이터 저장소의 1000GB
+| 속성 | 스펙 |
+|:--------- |:------------- |
+|Edge Service Gateway | 가상 어플라이언스 |
+|Edge 크기 대형 | vCPU 수 2 |
+| 메모리 | 1GB 디스크	| 로컬 데이터 저장소의 1000GB |
 
 표 2. {{site.data.keyword.icpfull_notm}} DLR 스펙
 
- 속성  | 스펙
---|--|
-Distributed Logical Router | 	 가상 어플라이언스
-Edge 크기 압축 | vCPU 수 1
-메모리	| 512MB 디스크	| 로컬 데이터 저장소의 1000GB
+| 속성 | 스펙 |
+|:--------- |:------------- |
+|Distributed Logical Router | 가상 어플라이언스 |
+|Edge 크기 압축 | vCPU 수 1 |
+|메모리	| 512MB 디스크	| 로컬 데이터 저장소의 1000GB |
 
 ## IBM Cloud Private 컴포넌트
 {: #vcsicp-arch-overview-solution-icp-comp}
@@ -70,8 +69,7 @@ Edge 크기 압축 | vCPU 수 1
 {{site.data.keyword.icpfull_notm}}는 컨테이너화된 온프레미스 애플리케이션의
 개발 및 관리를 위한 애프리케이션 플랫폼입니다. 컨테이너 오케스트레이터 Kubernetes, 개인용 이미지 저장소, 관리 콘솔 및 모니터링 프레임워크를 포함하는 컨테이너 관리를 위한 통합 환경입니다.
 
-그림 2. vCenter Server를 사용하는 가상 {{site.data.keyword.icpfull_notm}} 배치
-![Virtual {{site.data.keyword.icpfull_notm}} deployment with VCS](vcsicp-virtual-icp-deployment-vcs.svg)
+![vCenter Server를 사용하는 가상 {{site.data.keyword.icpfull_notm}} 배치](../../images/vcsicp-virtual-icp-deployment-vcs.svg "vCenter Server를 사용하는 가상 {{site.data.keyword.icpfull_notm}} 배치")
 
 ###	부트 노드
 {: #vcsicp-arch-overview-solution-boot-node}
@@ -107,30 +105,29 @@ VA(Vulnerability Advisor) 노드는 Vulnerability Advisor 서비스 실행에 �
 
 표 3. {{site.data.keyword.icpfull_notm}} 가상 머신 스펙
 
-노드 | 	인스턴스	| IP	| CPU	| RAM(GB)	| 디스크(GB)
-:-----|------------:|:----|----:|----------:|----------:|
-마스터|	3	| IP (x3) VIP (x1)	| 4	| 64	| 200
-관리	|3	| IP (x3)	|8	|64	|500
-프록시	| 3	| IP (x3)VIP (x1)	|2	|4	|150
-Vulnerability Advisor	|3	| IP (x3)	| 4	| 16	|500
-GlusterFS	| 3	| IP (x3)	|8	|16	|150
-작업자	| 3-6	| IP (x3)	|4-8	|4	|150
+|노드 |     인스턴스 | IP	| CPU	| RAM(GB)	| 디스크(GB) |
+|:---- |:--------- |:-- |:--- |:--------- |:--------- |
+| 마스터 | 3	| IP (x3) VIP (x1)	| 4	| 64	| 200 |
+|관리	| 3	| IP (x3)	|8	| 64	| 500 |
+|프록시	| 3	| IP (x3)VIP (x1)	|2	| 4	| 150 |
+|Vulnerability Advisor	| 3	| IP (x3)	| 4	| 16	| 500 |
+|GlusterFS	| 3	| IP (x3)	|8	| 16	| 150 |
+|작업자	| 3-6	| IP (x3)	|4-8	| 4	| 150 |
 
 CAM에서는 작업자 노드가 더 높은 vCPU 및 메모리 구성을 포함해야 합니다.
 
 표 4. {{site.data.keyword.icpfull_notm}} 가상 머신 스펙
 
-노드 | 	인스턴스	| IP	| CPU	| RAM(GB)	| 디스크(GB)
-:-----|------------:|:----|----:|----------:|----------:|
-작업자  |  3 | IP (x3)  |  4-8 |16-20   |  150
+|노드 |인스턴스	| IP | CPU	| RAM(GB)	| 디스크(GB) |
+|:---- |:---------- |:-- |:---- |:--------- |:--------- |
+|작업자 | 3 | IP (x3) |  4-8 |16-20 | 150 |
 
 ## CAM 컴포넌트
 {: #vcsicp-arch-overview-solution-cam-comp}
 
 {{site.data.keyword.cloud_notm}} Automation Manager(CAM)은 개발자와 관리자가 비즈니스 요구를 충족시킬 수 있도록 도움을 주는 {{site.data.keyword.icpfull_notm}}에서 실행되는 다중 클라우드의 셀프 서비스 관리 플랫폼입니다.
 
-그림 3. CAM 컴포넌트 참조</br>
-![CAM 컴포넌트 참조](vcsicp-cam-component-ref.svg)
+![CAM 컴포넌트 참조](../../images/vcsicp-cam-component-ref.svg "CAM 컴포넌트 참조")
 
 ### CAM 프록시
 {: #vcsicp-arch-overview-solution-cam-proxy}

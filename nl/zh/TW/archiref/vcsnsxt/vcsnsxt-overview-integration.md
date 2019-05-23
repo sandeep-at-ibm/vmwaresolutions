@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-03"
+lastupdated: "2019-05-13"
 
 subcollection: vmware-solutions
 
@@ -130,16 +130,16 @@ ESG 和 vRouter 中的路徑表格移入方式，取決於整合的方法。請�
 ## 相關鏈結
 {: #vcsnsxt-overview-integration-related}
 
-* [{{site.data.keyword.cloud_notm}} 全球資料中心](https://www.ibm.com/cloud/data-centers/)
-* [容器白皮書](https://communities.vmware.com/servlet/JiveServlet/download/2741654-198902/Containers%20and%20Container%20Networking%20for%20Network%20Engineers.pdf)（PDF 下載）
-* [VMware HCX on {{site.data.keyword.cloud_notm}} 部落格](https://www.ibm.com/blogs/bluemix/2018/01/vmware-hcx-ibm-cloud-aka-really-cool-space-age-kind-now-available/)
-* [VMware HCX on {{site.data.keyword.cloud_notm}} 資料工作表](https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=26012526USEN)
+* [{{site.data.keyword.cloud_notm}} 全球資料中心](https://www.ibm.com/cloud/data-centers/){:new_window}
+* [容器白皮書](https://communities.vmware.com/servlet/JiveServlet/download/2741654-198902/Containers%20and%20Container%20Networking%20for%20Network%20Engineers.pdf){:new_window}（PDF 下載）
+* [VMware HCX on {{site.data.keyword.cloud_notm}} 部落格](https://www.ibm.com/cloud/blog/announcements/vmware-hcx-ibm-cloud-aka-really-cool-space-age-kind-now-available){:new_window}
+* [VMware HCX on {{site.data.keyword.cloud_notm}} 資料工作表](https://www.ibm.com/downloads/cas/MPVXKWNM){:new_window}
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 解決方案架構](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [NSX for vSphere 6.4.3 配置上限](https://configmax.vmware.com/guest)
-* [{{site.data.keyword.cloud_notm}} 平台文件](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.0/kc_welcome_containers.html)
+* [NSX for vSphere 6.4.3 配置上限](https://configmax.vmware.com/guest){:new_window}
+* [{{site.data.keyword.cloud_notm}} 平台文件](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.0/kc_welcome_containers.html){:new_window}
 * [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-getting-started#getting-started)
-* [Project Calico](https://www.projectcalico.org/)
-* [GitHub-Calico](https://github.com/projectcalico/calico)
-* [Kubernetes](https://kubernetes.io/)
-* [GitHub-Flannel](https://github.com/coreos/flannel/)
-* [GitHub-Canal](https://github.com/projectcalico/canal)
+* [Project Calico](https://www.projectcalico.org/){:new_window}
+* [GitHub-Calico](https://github.com/projectcalico/calico){:new_window}
+* [Kubernetes](https://kubernetes.io/){:new_window}
+* [GitHub-Flannel](https://github.com/coreos/flannel/){:new_window}
+* [GitHub-Canal](https://github.com/projectcalico/canal){:new_window}

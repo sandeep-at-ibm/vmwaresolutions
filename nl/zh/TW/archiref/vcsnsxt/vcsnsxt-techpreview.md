@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-09"
 
 subcollection: vmware-solutions
 
@@ -38,8 +38,7 @@ NSX-T Manager 會獲指派專用可攜式位址區塊中的 IP 位址，而此�
 
 \* **附註**：檢查硬體相容性清單中的特定需求。
 
-圖 1. NSX-V 及 T 管理元件佈置
-![NSX-V 及 T 管理元件佈置](vcsnsxt-combined-mgmt.svg)
+![NSX-V 和 T 管理元件佈置](../../images/vcsnsxt-combined-mgmt.svg "NSX-V 和 T 管理元件佈置")
 
 ### 起始配置
 {: #vcsnsxt-techpreview-init-config}
@@ -79,13 +78,12 @@ iSCSI 資料流量 |無限制	|50	| 0
 NFS 資料流量 |無限制	|100	| 0 
 vSAN 資料流量 |無限制	|100	| 0 
 
-圖 2. 邏輯 VLAN 交換器到 vmkernel 介面
-![邏輯 VLAN 交換器到 vmkernel 介面](vcsnsxt-tnkernel.svg)
+![邏輯 VLAN 交換器到 vmkernel 介面](../../images/vcsnsxt-tnkernel.svg "邏輯 VLAN 交換器到 vmkernel 介面")
 
 ## NSX-T
 {: #vcsnsxt-techpreview-nsx-t}
 
-此設計指定 NSX-T 元件的配置、VLAN 及層疊傳輸區域，但不會套用任何層疊網路元件配置。您可以根據需求自行決定設計網路套版。
+此設計指定 NSX-T 元件的配置、VLAN 及層疊傳輸區域，但不會套用任何層疊網路元件配置。您可以根據需求自行決定設計網路層疊。
 
 已配置下列項目：
 -	已安裝管理伺服器及控制器。
@@ -152,9 +150,7 @@ Calico 的建置根據為分散式橫向擴充架構，可讓您順利從單一�
 -	etcd 提供元件之間的通訊，並儲存至一致的資料儲存庫，這確保 Calico 一律可以建置精確的網路。
 -	BIRD 在每個同時管理 Felix 的節點上提供 BGP 用戶端功能。Felix 將路徑插入至 Linux Kernel 時，BGP 用戶端會挑選路徑，並將它們分佈至部署中的其他節點。在大型環境中，也會部署 BGP 路徑反射程式，用來作為 BGP 用戶端連接的中心點。這可讓每個用戶端不需要與每個其他用戶端交談，並將路徑分佈至部署中的其他節點。
 
-圖 3. Calico 概觀
-</br>
-![Calico 概觀](vcsnsxt-calico-cni.svg)
+![Calico 概觀](../../images/vcsnsxt-calico-cni.svg "Calico 概觀")
 
 ### NSX-T 及 Calico
 {: #vcsnsxt-techpreview-nsx-t-calico}
@@ -180,8 +176,7 @@ NSX-T 是 vCenter 及 vSphere 環境的獨立式解決方案，同時支援 KVM�
 
 NSX-T 容許跨 VM 及容器環境在易於瞭解的 Web 介面中進行網路及安全原則管理。
 
-圖 4. NSX-T 與 Calico 元件之間的高階比較
-![NSX-T 及 Kubernetes 網路](vcsnsxt-calico.svg)
+![NSX-T 和 Kubernetes 網路連線功能](../../images/vcsnsxt-calico.svg "NSX-T 和 Kubernetes 網路連線功能")
 
 ## NSX-T 及 Kubernetes
 {: #vcsnsxt-techpreview-nsx-t-kube}
@@ -190,9 +185,7 @@ NSX-T 容許跨 VM 及容器環境在易於瞭解的 Web 介面中進行網路�
 
 在下列情況下，提供兩個 Kubernetes 名稱空間：Acme 及 Skateboards，而每個名稱空間都有一個專用邏輯交換器（「第 1 層路由器」），以及一個將它連接至 T0 邏輯路由器的 IP 區段。
 
-圖 5. Kubernetes NCP
-</br>
-![Kubernetes NCP](vcsnsxt-ncpk8sapi.svg)
+![Kubernetes NCP](../../images/vcsnsxt-ncpk8sapi.svg "Kubernetes NCP")
 
 ### NSX 安全原則管理程式
 {: #vcsnsxt-techpreview-nsx-sec-policy-manager}
@@ -211,9 +204,7 @@ NSX-T 容許跨 VM 及容器環境在易於瞭解的 Web 介面中進行網路�
 -	SpoofGuard 封鎖 vNIC 層次的 IP 盜用。
 -	交換器安全會對未獲授權的資料流量提供暴風控制及安全。
 
-圖 6. NSX-T 微分段
-</br>
-![範例 NSX-T 微分段](vcsnsxt-tsecurity.svg)
+![範例 NSX-T 微分段](../../images/vcsnsxt-tsecurity.svg "範例 NSX-T 微分段")
 
 ### NSX-T 與 NSX-V 之間的差異
 {: #vcsnsxt-techpreview-diff-nsx-t-nsx-v}
@@ -225,7 +216,7 @@ NSX Transformers (NSX-T) 是可支援多個 vCenter 及 vSphere 環境的獨立�
 #### NSX-V 的網路可調整性
 {: #vcsnsxt-techpreview-net-scalability-nsx-v}
 
-VMware NSX-V 設計成處理具有數千個端點及技術堆疊的應用程式架構，可讓它橫跨具有三個主機的單一 vSphere 叢集到超過數千個主機及數千個虛擬機器的跨 vCenter 部署。
+VMware NSX-V 設計成處理具有數千個端點及技術堆疊的應用程式架構，可讓它橫跨具有三部主機的單一 vSphere 叢集到超過數千部主機及數千部虛擬機器的跨 vCenter 部署。
 
 #### NSX-T 的網路可調整性
 {: #vcsnsxt-techpreview-net-scalability-nsx-t}
@@ -247,9 +238,7 @@ VMware NSX-T 在 VMware vSphere 環境中提供與 NSX-V 相同的功能。NSX-T
 
 對於與 Kubernetes {{site.data.keyword.cloud_notm}} 自動化的 NSX-V 整合，在 vCenter Server 實例上安裝 {{site.data.keyword.icpfull_notm}}。專用交換器/VXLAN、DLR 及 ESG 特別針對 Kubernetes 網路所建立。{{site.data.keyword.icpfull_notm}} 的 Day 1 層疊網路是 192.168.20.0/24 子網路，透過 ESG 進行遞送設定，以存取基礎網路。
 
-圖 7. NSX-V 及 Kubernetes
-</br>
-![NSX-V 及 Kubernetes](vcsnsxt-transitnet.svg)
+![NSX-V 和 Kubernetes](../../images/vcsnsxt-transitnet.svg "NSX-V 和 Kubernetes")
 
 #### 與 NSX-T 整合
 {: #vcsnsxt-techpreview-integration-nsx-t}
@@ -258,9 +247,7 @@ VMware NSX-T 在 VMware vSphere 環境中提供與 NSX-V 相同的功能。NSX-T
 
 NSX-T 分散式防火牆容許建立網路原則，而這些原則是針對 Kubernetes 叢集所實作。它支援 Ingress 和 Egress 原則、標籤及表示式比對原則，並且具有負載平衡器功能（可全部套用至 Kubernetes 基礎架構）。
 
-圖 8. NSX-T 及 Kubernetes
-</br>
-![NSX-T 及 Kubernetes](vcsnsxt-t1t0router.svg)
+![NSX-T 和 Kubernetes](../../images/vcsnsxt-t1t0router.svg "NSX-T 和 Kubernetes")
 
 ## 相關鏈結
 {: #vcsnsxt-techpreview-related}

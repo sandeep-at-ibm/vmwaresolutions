@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 시스템 컨텍스트 다이어그램은 시스템의 핵심 요소, 시스템의 경계, 상호작용과 함께 상호작용하는 엔티티를 정의합니다. 독자에게 시스템에 대한 초기 보기를 제공하는 상위 레벨 다이어그램입니다.
 
-그림 1. 시스템 컨텍스트
-![시스템 컨텍스트 다이어그램](vcsnsxt-networking.svg)
+![시스템 컨텍스트 다이어그램](../../images/vcsnsxt-networking.svg "시스템 컨텍스트 다이어그램")
 
 네트워크 관점에서 다음과 같은 네 가지 핵심 컴포넌트가 있습니다.
 - **온프레미스 가상화** - 클라이언트의 프레미스 또는 서드파티에서 호스팅되고, 현대화시킬 애플리케이션을 실행 중인 VM을 현재 호스팅하고 있는 VMware 환경입니다. 이는 VM 마이그레이션을 위한 소스 환경이며 VMware HCX를 통해 {{site.data.keyword.cloud}}에 느슨하게 결합되어 있습니다.

@@ -28,7 +28,7 @@ subcollection: vmware-solutions
 ### 클러스터를 추가하기 전에
 {: #vc_hybrid_addingviewingclusters-before-add}
 
-* 가능하면 {{site.data.keyword.vmwaresolutions_full}} 콘솔을 사용하여 클러스터를 추가하십시오. VMware vSphere Web Client에서 수행하는 변경사항은 {{site.data.keyword.vmwaresolutions_short}} 콘솔과 동기화되지 않기 때문입니다. 따라서 온프레미스 클러스터 서버 또는 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 관리할 수 없거나 관리하지 않을 클러스터에 대해서만 클러스터를 vCenter Server에 추가하십시오. 
+* 가능하면 {{site.data.keyword.vmwaresolutions_full}} 콘솔을 사용하여 클러스터를 추가하십시오. VMware vSphere Web Client에서 수행하는 변경사항은 {{site.data.keyword.vmwaresolutions_short}} 콘솔과 동기화되지 않기 때문입니다. 따라서 온프레미스 클러스터 서버 또는 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 관리할 수 없거나 관리하지 않을 클러스터에 대해서만 클러스터를 vCenter Server에 추가하십시오.
 * V2.5 이상에 배치된(또는 업그레이드된) 인스턴스의 경우에는 클러스터, 호스트 및 VM 수가 추가할 수 있는 클러스터 수의 최대 제한을 결정합니다. 배치를 위해 VMware 크기 조정 가이드라인 및 제한사항을 계속 준수해야 합니다. 최대 제한에 대한 자세한 정보는 [VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window}를 참조하십시오.
 * V2.3 및 V2.4에 배치된(또는 업그레이드된) 인스턴스의 경우에는 최대 10개의 클러스터를 추가할 수 있습니다.
 
@@ -49,7 +49,7 @@ vCenter Server with Hybridity Bundle 인스턴스에 클러스터를 추가할 �
 #### 데이터 센터 위치
 {: #vc_hybrid_addingviewingclusters-adding-dc-location}
 
-기본적으로 클러스터의 {{site.data.keyword.CloudDataCent_notm}} 위치는 vCenter Server 인스턴스의 {{site.data.keyword.CloudDataCent_notm}}로 설정됩니다. 배치된 인스턴스와 다른 {{site.data.keyword.CloudDataCent_notm}}에 클러스터를 배치할 수 있으나 두 {{site.data.keyword.CloudDataCents_notm}} 간의 네트워크 대기 시간이 150밀리초 미만인지 확인해야 합니다. 네트워크 대기 시간을 확인하기 위해 [Looking Glass](/docs/infrastructure/network-tools?topic=network-tools-about-looking-glass#about-looking-glass)와 같은 도구를 사용하십시오. 
+기본적으로 클러스터의 {{site.data.keyword.CloudDataCent_notm}} 위치는 vCenter Server 인스턴스의 {{site.data.keyword.CloudDataCent_notm}}로 설정됩니다. 배치된 인스턴스와 다른 {{site.data.keyword.CloudDataCent_notm}}에 클러스터를 배치할 수 있으나 두 {{site.data.keyword.CloudDataCents_notm}} 간의 네트워크 대기 시간이 150밀리초 미만인지 확인해야 합니다. 네트워크 대기 시간을 확인하기 위해 [Looking Glass](/docs/infrastructure/network-tools?topic=network-tools-about-looking-glass#about-looking-glass)와 같은 도구를 사용하십시오.
 
 클러스터를 다른 {{site.data.keyword.CloudDataCent_notm}} 또는 {{site.data.keyword.cloud_notm}} 인프라 팟(Pod)에 배치하는 경우에는 주문된 {{site.data.keyword.baremetal_short}}와 함께 사용할 세 개의 추가 VLAN이 주문됩니다.
 
@@ -87,7 +87,7 @@ vCenter Server with Hybridity Bundle 인스턴스에 클러스터를 추가할 �
 {: #vc_hybrid_addingviewingclusters-adding-bare-metal-number}
 
 * 주문하는 모든 서버는 동일한 구성을 갖습니다.
-* 4 - 59개의 서버를 주문할 수 있습니다. 
+* 4 - 59개의 서버를 주문할 수 있습니다.
 
 ### vSAN 스토리지 설정
 {: #vc_hybrid_addingviewingclusters-adding-vsan-storage-settings}
@@ -185,7 +185,7 @@ vCenter Server with Hybridity Bundle 인스턴스 주문에는 VMware vSAN 6.6�
 4. 클러스터 이름을 클릭하여 ESXi 서버, 스토리지 및 네트워크 인터페이스 세부사항을 보십시오.
 
   * ESXi 서버 세부사항:
-     * **이름**: ESXi 서버의 이름은 `<host_prefix><n>.<subdomain_label>.<root_domain>` 형식으로 되어 있습니다. 여기서, 
+     * **이름**: ESXi 서버의 이름은 `<host_prefix><n>.<subdomain_label>.<root_domain>` 형식으로 되어 있습니다. 여기서,
 
        `host_prefix`는 호스트 이름 접두부이고
 
@@ -235,7 +235,7 @@ vCenter Server with Hybridity Bundle 인스턴스 주문에는 VMware vSAN 6.6�
 ### 삭제하기 전에
 {: #vc_hybrid_addingviewingclusters-deleting-prereq}
 
-* 가능하면 {{site.data.keyword.vmwaresolutions_full}} 콘솔을 사용하여 클러스터를 삭제하십시오. VMware vSphere Web Client에서 수행하는 변경사항은 {{site.data.keyword.vmwaresolutions_short}} 콘솔과 동기화되지 않습니다. 따라서 온프레미스 클러스터 서버 또는 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 관리할 수 없거나 관리하지 않을 클러스터에 대해서만 클러스터를 vCenter Server에서 제거하십시오. 
+* 가능하면 {{site.data.keyword.vmwaresolutions_full}} 콘솔을 사용하여 클러스터를 삭제하십시오. VMware vSphere Web Client에서 수행하는 변경사항은 {{site.data.keyword.vmwaresolutions_short}} 콘솔과 동기화되지 않습니다. 따라서 온프레미스 클러스터 서버 또는 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 관리할 수 없거나 관리하지 않을 클러스터에 대해서만 클러스터를 vCenter Server에서 제거하십시오.
 * 한 번에 하나의 클러스터를 삭제할 수 있습니다. 여러 클러스터를 삭제하려면, 순서대로 수행해야 합니다(즉, 다음 클러스터를 삭제하려고 시도하기 전에 이전 클러스터가 삭제되기를 기다려야 함).
 * 클러스터를 삭제하기 전에 클러스터의 모든 노드가 켜져 있으며 가동 상태인지 확인하십시오.
 * 클러스터를 삭제하면 클러스터의 모든 가상 머신(VM)도 삭제되며 이는 복구할 수 없습니다. VM을 보존하려는 경우에는 이들을 다른 클러스터로 마이그레이션하십시오.

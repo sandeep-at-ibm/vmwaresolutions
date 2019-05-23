@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -23,7 +23,7 @@ subcollection: vmware-solutions
 ## HCX の概要
 {: #hcx-archi-source-intro-hcx}
 
-HCX テクノロジーは、vSphere vCenter ネットワークを IBM Cloud の VCS プラットフォームにシームレスに統合します。 ハイブリッド・ネットワーキングにより、オンプレミスの vSphere vCenter ネットワークを IBM Cloud に拡張し、双方向の仮想マシン (VM) モビリティーをサポートします。
+HCX テクノロジーは、vSphere vCenter ネットワークを IBM Cloud VCS プラットフォームにシームレスに統合します。 ハイブリッド・ネットワーキングにより、オンプレミスの vSphere vCenter ネットワークを IBM Cloud に拡張し、双方向の仮想マシン (VM) モビリティーをサポートします。
 
 この概要説明では、実行可能なタスクと、マイグレーションおよびネットワーク拡張をサポートおよび強化する機能についてまとめます。
 
@@ -124,8 +124,7 @@ HCX Management Enterprise の OVA は、ソース環境にデプロイされ、�
 HCX は、vCenter ごとに 1 つしかデプロイできません。 この制限はリンク・モードに適用され、HCX Manager アプライアンスはプライマリー vCenter にのみインストールされます。 HCX Manager は、リンク・モードの登録済み vCenter を最大 5 つまでサポートします。
 {:note}
 
-図 1. ソースのハイブリッド・クラウド・サービス
-![ソースのハイブリッド・クラウド・サービス](source_hybrid_cloud_services.svg)
+![ソースのハイブリッド・クラウド・サービス](../../images/source_hybrid_cloud_services.svg "ソースのハイブリッド・クラウド・サービス")
 
 ### HCX 仮想アプライアンス
 {: #hcx-archi-source-hcxva}
@@ -154,8 +153,7 @@ HCX は、IBM Cloud へのサイト間接続を開始する際に強い暗号化
 
 双方向マイグレーションを行うために、クラウド・ゲートウェイには vSphere Replication テクノロジーも組み込まれています。
 
-図 2. ソースのクラウド・ゲートウェイ
-![ソースのクラウド・ゲートウェイ](source_cloud_gateway.svg)
+![ソースのクラウド・ゲートウェイ](../../images/source_cloud_gateway.svg "ソースのクラウド・ゲートウェイ")
 
 ### WAN 最適化プログラム
 {: #hcx-archi-source-wan-opt}
@@ -164,8 +162,7 @@ HCX は、ソフトウェア定義 WAN の最適化機能も備えています�
 
 仮想マシンのマイグレーションでオンプレミス vSphere と IBM Cloud の間に類い希なるモビリティーを実現できるのは、クラウド・ゲートウェイと WAN 最適化アプライアンスの両方によるものです。
 
-図 3. ソースの WAN 最適化プログラム
-![ソースの WAN 最適化プログラム](source_wan_optimizer.svg)
+![ソースの WAN 最適化プログラム](../../images/source_wan_optimizer.svg "ソースの WAN 最適化プログラム")
 
 ### レイヤー 2 コンセントレーター
 {: #hcx-archi-source-layer-2-conc}
@@ -176,8 +173,7 @@ HCX は、ソフトウェア定義 WAN の最適化機能も備えています�
 * 内部トランク・インターフェース: IBM Cloud 側の拡張ネットワークとの対応付けを行う変換ブリッジ・マッピングを使用して、オンプレミスで拡張ネットワークの仮想マシン・トラフィックを処理します。
 * アップリンク・インターフェース: HCX はこのインターフェースを使用して、カプセル化したオーバーレイ・トラフィックを IBM Cloud との間で送信します。 アプリケーション・データは、このインターフェースを介して伝送されます。
 
-図 4. ソースの L2 コンセントレーター
-![ソースの L2 コンセントレーター](source_l2_concentrator.svg)
+![ソースの L2 コンセントレーター](../../images/source_l2_concentrator.svg "ソースの L2 コンセントレーター")
 
 ### マイグレーションのみ
 {: #hcx-archi-source-mig-only}
@@ -234,8 +230,7 @@ R1 が N1-b のデフォルト・ゲートウェイであるため、N1-b は、
 
 つまり、R1 は、ローカルに接続されている拡張ネットワークを使用せずに、R2 を経由して特定の仮想マシンに到達するルーティングを使用できます。 近接ルーティングを有効にすると、R2 は、仮想マシンに到達するための他のネットワークのパスを完全に取得します。
 
-図 5. 近接ルーティングを使用した非対称ルーティングの解決
-![近接ルーティングを使用した非対称ルーティングの解決](asymmetric_routing_proximity_routing_solution.svg)
+![近接ルーティングを使用した非対称ルーティングの解決](../../images/asymmetric_routing_proximity_routing_solution.svg "近接ルーティングを使用した非対称ルーティングの解決")
 
 ### MAC アドレスの保持
 {: #hcx-archi-source-mac-addr-ret}

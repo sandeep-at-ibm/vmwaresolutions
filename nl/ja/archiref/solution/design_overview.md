@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-15"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -19,8 +19,7 @@ subcollection: vmware-solutions
 
 このアーキテクチャーは単一のクラウド領域で構成されます。また、別の地域にある追加のクラウド領域、および同じデータ・センター内の別の {{site.data.keyword.cloud_notm}} ポッドに拡張する機能をサポートします。 領域は固有の vCenter Server インスタンスと定義されます。 この設計では、vCenter Server インスタンス内の仮想キャパシティーの自動拡張と自動縮小も可能です。
 
-図 1. {{site.data.keyword.vmwaresolutions_short}} のソリューション・コンポーネント
-![{{site.data.keyword.vmwaresolutions_short}} のソリューション・コンポーネント](vcsv4radiagrams-ra-full.svg "このソリューションは、物理インフラストラクチャー、仮想インフラストラクチャー、インフラストラクチャー管理、共通サービスで構成されています。")
+![{{site.data.keyword.vmwaresolutions_short}} のソリューション・コンポーネント](../../images/vcsv4radiagrams-ra-full.svg "このソリューションには、物理インフラストラクチャー、仮想インフラストラクチャー、インフラストラクチャー管理、共通サービスが含まれます。")
 
 ## 関連リンク
 {: #design_overview-related}

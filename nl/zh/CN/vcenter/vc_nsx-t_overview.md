@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-02"
 
 subcollection: vmware-solutions
 
@@ -34,8 +34,7 @@ vCenter Server with NSX-T 实例仅用于概念验证 (POC) 或沙箱测试。�
 
 下图描绘了三节点 vCenter Server with NSX-T 部署的高级别体系结构和组件。
 
-图 1. 三节点集群的 vCenter Server with NSX-T 高级别体系结构
-![vCenter Server with NSX-T 体系结构](vc_nsx-t_architecture.svg "三节点集群的 vCenter Server 高级别体系结构")
+![vCenter Server with NSX-T 体系结构](../images/vc_nsx-t_architecture.svg "vCenter Server with NSX-T 体系结构")
 
 ### 物理基础架构
 {: #vc_nsx-t_overview-physical-infras}

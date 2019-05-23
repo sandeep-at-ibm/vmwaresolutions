@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -22,9 +22,7 @@ subcollection: vmware-solutions
 
 다음 그래픽은 관리 쌍 및 워크로드 ESG 쌍을 나타내는 단순화된 네트워크 다이어그램입니다. 또한 NSX DLR(Distributed Logical Router) 및 워크로드 VXLAN을 보여줍니다. 이러한 컴포넌트는 NSX 내에서 설정하기 위한 특정 지식 없이도 고객 워크로드에 대한 초기 랜딩 지점으로 사용됩니다. 일반적으로 DLR은 VMware vCenter Server 간의 트래픽 및 인스턴스 내의 개별 계층 2 네트워크 간의 동쪽-서쪽 트래픽을 라우팅하는 데 사용됩니다. 이 동작은 vCenter Server 인스턴스 내부 및 외부에서 순회하는 북쪽-남쪽 네트워크 트래픽을 용이하게 하도록 작동하는 ESG와 대조됩니다.
 
-그림 1. vCenter Server의 클라우드 네트워킹 서비스
-
-![vCenter Server의 클라우드 네트워킹 서비스](cloudnetworkingservicesdiagram.svg "vCenter Server의 클라우드 네트워킹 서비스")
+![vCenter Server의 클라우드 네트워킹 서비스](../../images/cloudnetworkingservicesdiagram.svg "vCenter Server의 클라우드 네트워킹 서비스")
 
 단일 ESG가 관리 및 고객 워크로드 트래픽 모두에 충분할 수 있지만 관리 및 고객 트래픽을 분리하는 것은 실수로 관리 ESG를 잘못 구성하지 못하도록 하기 위한 디자인 의사결정입니다.
 
@@ -38,9 +36,7 @@ IBM 관리 ESG는 {{site.data.keyword.cloud_notm}} 관리 네트워크 트래픽
 
 다음 그래픽에서 vCenter Server에 대해 표시된 대로 관리 ESG는 vCenter Server 인스턴스 내에 있는 추가 기능 서비스 가상 머신(VM) 간의 통신 경로와 {{site.data.keyword.cloud_notm}}의 IBM 자동화 인프라를 제공합니다.
 
-그림 2. vCenter Server의 관리 에지 통신
-
-![vCenter Server의 관리 에지 통신](mgmtvmcommunication.svg "vCenter Server의 관리 에지 통신")
+![vCenter Server의 관리 에지 통신](../../images/mgmtvmcommunication.svg "vCenter Server의 관리 에지 통신")
 
 특정 추가 기능 서비스 VM과 해당 라이센싱 및 측정 시스템 간의 경량 통신의 결과로 NSX ESG는 활성-수동 고가용성(HA) 쌍의 대규모 구성에서 크기가 조정되고 vCenter Server 클러스터의 관리 리소스 풀에 배치됩니다. 다음 표는 IBM 관리 NSX ESG 배치의 요약을 제공합니다.
 
@@ -155,9 +151,7 @@ IBM 워크로드 ESG는 워크로드 네트워크 통신을 목적으로 하는 
 * DLR(Distributed Logical Router)
 * VXLAN(L2 over L3)
 
-그림 3. 예제 네트워크 플로우 다이어그램
-
-![네트워크 플로우 다이어그램](customer_network_flow_diagram.svg "네트워크 플로우 다이어그램")
+![네트워크 플로우 다이어그램](../../images/customer_network_flow_diagram.svg "네트워크 플로우 다이어그램")
 
 ### IBM 워크로드 NSX Edge에 대한 에지 인터페이스
 {: #nsx-networking_services-edge-interfaces-workload}

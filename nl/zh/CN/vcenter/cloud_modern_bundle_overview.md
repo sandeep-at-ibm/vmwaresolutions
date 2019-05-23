@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-24"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -27,7 +27,7 @@ subcollection: vmware-solutions
 Migration and App Modernization 单节点试用版仅适用于概念验证 (POC)。不要在此环境中运行生产工作负载。不支持添加和除去主机和集群、订购附加组件服务以及应用更新等管理功能。
 {:important}
 
-要最充分地利用单节点试用版实例，您可以使用 [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html)（可帮助您将 VMware 工作负载迁移到 {{site.data.keyword.cloud_notm}}）提供的 [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf)。此外，[{{site.data.keyword.cloud_notm}} Garage 服务](https://www.ibm.com/cloud/garage/)可以通过最新的云本机实践帮助您加速应用程序现代化。
+要最充分地利用单节点试用版实例，您可以使用 [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:new_window}（可帮助您将 VMware 工作负载迁移到 {{site.data.keyword.cloud_notm}}）提供的 [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:new_window}。此外，[{{site.data.keyword.cloud_notm}} Garage 服务](https://www.ibm.com/cloud/garage/){:new_window}可以通过最新的云本机实践帮助您加速应用程序现代化。
 
 此试用版最长可使用 90 天。试用版使用时间到期后，可以删除此环境，然后供应满足您的容量需求的新环境。
 {:note}
@@ -145,6 +145,6 @@ Migration and App Modernization 单节点试用版包含 HCX on {{site.data.keyw
 {: #cloud_modern_bundle_overview-related}
 
 * [vCenter Server 和 {{site.data.keyword.cloud_notm}} Private 指南](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [开具有关 {{site.data.keyword.cloud_notm}} Private 的凭单](https://www.ibm.com/mysupport/s/?language=en_US)
-* [VMware HCX 资源](https://hcx.vmware.com/#/docs)
-* [Obtaining the VMware HCX OVA](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html?hWord=N4IghgNiBcIPICMAuYCWA7DBzABEgFgKY4ASAwgBo5wBqAgiAL5A)
+* [开具有关 {{site.data.keyword.cloud_notm}} Private 的凭单](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
+* [VMware HCX 资源](https://hcx.vmware.com/#/docs){:new_window}
+* [VMware HCX 用户指南](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}

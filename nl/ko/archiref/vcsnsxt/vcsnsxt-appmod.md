@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 다음 다이어그램은 Acme Skateboards에서 배치할 애플리케이션 현대화 참조 아키텍처를 보여주며 이 일련의 문서에서 자세히 설명합니다.
 
-그림 1. 아키텍처 개요
-![아키텍처 개요 다이어그램](vcsnsxt-aod.svg)
+![아키텍처 개요 다이어그램](../../images/vcsnsxt-aod.svg "아키텍처 개요 다이어그램")
 
 이 하이브리드 아키텍처를 통해 Acme Skateboards에서는 다음을 수행할 수 있습니다.
 - 애플리케이션 재구성 없이 가동 중단 시간이 짧거나 중단 없이 온프레미스에서 {{site.data.keyword.cloud}}로 VMware 가상 머신(VM)을 마이그레이션할 수 있습니다.

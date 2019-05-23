@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-25"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 이제 Stock Trader가 컨테이너에서 실행되고 Jane이 현재 마이크로 서비스에 만족하며 Jane과 Todd는 추가 기능으로 애플리케이션을 향상시키는 데 대한 작업을 수행합니다. 증가된 활동과 확장성을 처리하기 위해 Stock Trader 마이크로 서비스를 리팩토링함으로써 둘 다 미들웨어를 {{site.data.keyword.cloud}} Private에 추가해야 함을 알게 됩니다. 일부 미들웨어가 해당 데이터 센터에 이미 있으므로 일부 새로운 미들웨어가 추가된 리플랫폼 연습이 됩니다.
 
-그림 1. Stock Trader 리팩토링
-![Stock Trader 리팩토링](vcscontent-refactor.svg)
+![Stock Trader 리팩토링](../../images/vcscontent-refactor.svg "Stock Trader 리팩토링")
 
 이 솔루션 리팩토링은 애플리케이션 및 필수 서비스를 실행하는 공통 플랫폼을 가져오므로 보다 단순한 관리 플레인을 가져옵니다.
 
@@ -244,8 +243,7 @@ Kubernetes 시크릿을 사용하여 Jane은 각 시크릿 내에 잘 정의된 
 Stock Trader가 둘 이상의 클라우드에서 실행되는 경우에도 Jane은 통합된 코드 베이스를 원합니다. 다음 그림에서 시크릿 DB2는 라우팅 세부사항이 다르지만 형식은 동일합니다. Jane의 포트폴리오 마이크로 서비스가 배치될 때 적절한 Db2 인스턴스에 연결할 DB2 시크릿 엔드포인트 매개변수를 찾습니다. Stock Trader 애플리케이션은 VMware 가상 머신에서 실행되는지, 컨테이너화된 서비스에서 실행되는지 또는
 클라우드 관리 서비스로서 실행되는지와 관계없습니다.
 
-그림 2. Stock Trader - 피벗 서비스
-![Stock Trader 피벗 서비스](vcscontent-pivot-services.svg)
+![Stock Trader 피벗 서비스](../../images/vcscontent-pivot-services.svg "Stock Trader 피벗 서비스")
 
 ## 결과
 {: #vcscontent-addmidware-result}
@@ -257,9 +255,7 @@ Twitter 알림 서비스와 같은 마이크로 서비스를 더 추가합니다
 라우팅 규칙을 사용하면 내부
 Slack 채널이나 공용 Twitter 채널을 통해 동적 로열티 레벨 메시징을 사용할 수 있습니다.
 
-그림 3. Stock Trader 인리치먼트
-
-![Stock Trader 인리치먼트](vcscontent-enrich.svg)
+![Stock Trader 인리치먼트](../../images/vcscontent-enrich.svg "Stock Trader 인리치먼트")
 
 ## 관련 링크
 {: #vcscontent-addmidware-related}

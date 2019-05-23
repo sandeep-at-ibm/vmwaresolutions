@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -17,8 +17,7 @@ subcollection: vmware-solutions
 ## VMware vCenter Server on IBM Cloud 元件
 {: #vcscar-arch-overview-solution-vcs-comp}
 
-圖 1. vCenter Server 環境圖
-![vCenter Server 環境](vcscar-vcs.svg)
+![vCenter Server 環境](../../images/vcscar-vcs.svg "vCenter Server 環境")
 
 ### 平台服務控制器
 {: #vcscar-arch-overview-solution-psc}
@@ -72,8 +71,7 @@ Edge Services Gateway| 虛擬應用裝置
 
 {{site.data.keyword.icpfull_notm}} 是一個應用程式平台，用於開發及管理內部部署容器化應用程式。{{site.data.keyword.icpfull_notm}} 是用來管理容器的整合環境，其中包括容器編排程式 Kubernetes、專用映像檔儲存庫、管理主控台和監視架構。
 
-圖 2. 使用 vCenter Server 的虛擬 {{site.data.keyword.icpfull_notm}} 部署
-![使用 vCenter Server 的虛擬 {{site.data.keyword.icpfull_notm}} 部署](vcscar-icp.svg)
+![具有 vCenter Server 的虛擬 {{site.data.keyword.icpfull_notm}} 部署](../../images/vcscar-icp.svg "具有 vCenter Server 的虛擬 {{site.data.keyword.icpfull_notm}} 部署")
 
 ### 啟動節點
 {: #vcscar-arch-overview-solution-boot-node}
@@ -135,8 +133,7 @@ CAM 需要工作者節點具有較高的 vCPU 和記憶體配置。
 
 {{site.data.keyword.cloud_notm}} Automation Manager (CAM) 是在 {{site.data.keyword.icpfull_notm}} 上執行的多重雲端自助式管理平台，協助開發人員與管理者能夠滿足商業需求。
 
-圖 3. CAM 元件參照
-![CAM 元件參照](vcscar-cam-components.svg)
+![CAM 元件參考](../../images/vcscar-cam-components.svg "CAM 元件參考")
 
 ### CAM Proxy
 {: #vcscar-arch-overview-solution-cam-proxy}

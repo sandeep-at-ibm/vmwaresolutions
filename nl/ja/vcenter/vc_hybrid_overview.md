@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-02"
 
 subcollection: vmware-solutions
 
@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 
 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle は、V2.3 以降のリリースで使用可能なインスタンスです。 V2.6 以降では、ビジネス・パートナーが vCenter Server with Hybridity Bundle インスタンスを使用できます。
 
-vCenter Server with Hybridity Bundle は、VMware vSphere スタックをサービスとして提供するホステッド・プライベート・クラウドです。 この VMware 環境は、少なくとも 4 台の {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}上に構築され、専用ストレージとして VMware vSAN を使用し、VMware NSX で実装された管理しやすい論理エッジ・ファイアウォールのデプロイメントと構成が自動で実行されます。また、VMware HCX on {{site.data.keyword.cloud_notm}} サービスが含まれています。
+vCenter Server with Hybridity Bundle は、VMware vSphere スタックをサービスとして提供するホステッド・プライベート・クラウドです。 この VMware 環境は、最少 4 台の {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}上に構築され、専用ストレージとして VMware vSAN を使用し、VMware NSX で実装された管理しやすい論理エッジ・ファイアウォールのデプロイメントと構成が自動で実行されます。また、VMware HCX on {{site.data.keyword.cloud_notm}} サービスが含まれています。
 
 多くの場合、環境全体を 1 日以内でプロビジョンできます。また、このベア・メタル・インフラストラクチャーのコンピュート能力は、必要に応じて迅速かつ伸縮自在に拡張や縮小ができます。
 
@@ -35,9 +35,7 @@ VMware NSX Advanced エディションを Enterprise エディションにアッ
 
 次の図は、3 ノードの vCenter Server with Hybridity Bundle デプロイメントのアーキテクチャーとコンポーネントの全体像を示しています。
 
-図 1. vCenter Server with Hybridity Bundle のアーキテクチャーの全体像
-
-![vCenter Server with Hybridity Bundle のアーキテクチャー](hybrid_architecture.svg "vCenter Server with Hybridity Bundle のアーキテクチャーの全体像")
+![vCenter Server with Hybridity Bundle のアーキテクチャー](../images/hybrid_architecture.svg "vCenter Server with Hybridity Bundle のアーキテクチャー")
 
 ### 物理インフラストラクチャー
 {: #vc_hybrid_overview-physical-infras}
