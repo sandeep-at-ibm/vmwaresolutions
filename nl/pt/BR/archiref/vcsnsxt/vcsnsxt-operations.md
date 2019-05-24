@@ -71,7 +71,7 @@ A ampliação do ambiente segue um destes caminhos:
 #### Implementações multissite
 {: #vcsnsxt-operations-multi-site}
 
-O VMware on {{site.data.keyword.cloud_notm}} pode usar a presença mundial de data center do {{site.data.keyword.cloud_notm}} e o backbone de rede integrada para permitir que vários casos de uso de geografia cruzada sejam implementados e estejam funcionando dentro de uma fração do tempo que levaria para construir tal infraestrutura do zero. Informações adicionais podem ser localizadas em [Configuração multissite para instâncias do vCenter Server on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_multisite).
+O VMware on {{site.data.keyword.cloud_notm}} pode usar a presença mundial de data center do {{site.data.keyword.cloud_notm}} e o backbone de rede integrada para permitir que vários casos de uso de geografia cruzada sejam implementados e estejam funcionando dentro de uma fração do tempo que levaria para construir tal infraestrutura do zero. Informações adicionais podem ser localizadas em [Configuração multisite para instâncias do vCenter Server on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_multisite).
 
 #### Ampliar com novo cluster
 {: #vcsnsxt-operations-scale-out-new-cluster}

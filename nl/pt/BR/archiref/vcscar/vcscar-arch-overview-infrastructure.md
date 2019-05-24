@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-22"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -58,8 +58,7 @@ Além dos requisitos de hardware do {{site.data.keyword.cloud_notm}} Private, de
 ## Estrutura virtual
 {: #vcscar-arch-overview-infrastructure-virt-structure}
 
-Figura 1. Estrutura da implementação do vCenter Server e do {{site.data.keyword.icpfull_notm}}
-![Estrutura da implementação do vCenter Server e do {{site.data.keyword.icpfull_notm}}](vcscar-icp.svg)
+![Estrutura do vCenter Server e implementação do {{site.data.keyword.icpfull_notm}}](../../images/vcscar-icp.svg "Estrutura do vCenter Server e implementação do {{site.data.keyword.icpfull_notm}}")
 
 Na instância do vCenter Server, a instância do {{site.data.keyword.icpfull_notm}} é implementada com um NSX Edge Services Gateway (ESG) dedicado e o Distributed Logical Router (DLR).
 A instalação do {{site.data.keyword.icpfull_notm}} é carregada na sub-rede VXLAN que está definida nos componentes anteriores.

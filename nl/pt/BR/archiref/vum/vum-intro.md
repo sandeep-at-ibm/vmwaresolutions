@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -28,8 +28,7 @@ Este documento também descreve os processos para manter os componentes a seguir
 
 Este documento descreve o uso de uma implementação do servidor proxy, com base no CentOS e Squid, para permitir que o VUM acesse os repositórios do VMware. Quando um VUM solicita um recurso do servidor de atualização no VMware, a solicitação é enviada para o servidor proxy primeiro e o servidor proxy, em seguida, envia a solicitação para o servidor de atualização por meio do External Services Gateway (ESG). Depois que o recurso é obtido pelo servidor proxy, ele o envia para o VUM.
 
-Figura 1. Diagrama de visão geral  </br>
-![Overview diagram](vum-vcsproxy.svg)
+![Diagrama de visão geral](../../images/vum-vcsproxy.svg "Diagrama de visão geral")
 
 O vCenter Server implementa atualmente o vSphere 6.5, que significa que o VUM agora está integrado ao vCenter Server Appliance (VCSA) e, como o componente do cliente VUM é um plug-in executado no vSphere Web Client, ele é ativado automaticamente após a implementação do VCSA. No entanto, o VUM não tem acesso à Internet para acessar os repositórios do VMware.
 
@@ -59,7 +58,7 @@ Se você implementou um vCenter Server usando vSAN, veja [Atualizando clusters d
 
 Se você desejar atualizar a automação de gerenciamento de infraestrutura do {{site.data.keyword.cloud_notm}}, use o console do {{site.data.keyword.vmwaresolutions_short}}.
 
-O [console do {{site.data.keyword.vmwaresolutions_short}}](https://cloud.ibm.com/infrastructure/vmware-solutions/console) permite realizar as ações a seguir:
+O [console do {{site.data.keyword.vmwaresolutions_short}}](https://cloud.ibm.com/infrastructure/vmware-solutions/console) permite executar as ações a seguir:
 *	Fazer upgrade de licenças, por exemplo, fazer upgrade do NSX Base para outra versão
 *	Iniciar atualizações para a plataforma do vCenter Server, por exemplo, mover para a versão 2.5
 *	Visualizar o status das atualizações

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-13"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -25,7 +25,7 @@ Para obter mais informações sobre os componentes, veja a Figura 2. Visão gera
 ## Design de rede virtual
 {: #storage-infra-mgmt-visual-net-design}
 
-A virtualização de rede que é usada nesse design usa o vSphere Distributed Switch (vDS) existente associado à rede privada e especificado na [arquitetura do {{site.data.keyword.vmwaresolutions_full}}](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview).
+A virtualização de rede usada nesse design usa o vSphere Distributed Switch (vDS) existente associado à rede privada e especificado na [Arquitetura do {{site.data.keyword.vmwaresolutions_full}}](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview).
 
 ## Comutador Distribuído do vSphere
 {: #storage-infra-mgmt-vsphere-ds}
@@ -48,9 +48,7 @@ Tabela 1. Resumo do grupo da porta NFS
 
 Além da criação do grupo de portas do vDS para tráfego de armazenamento NFS, uma porta VMkernel é criada em cada host ESXi vSphere durante a implementação e designada ao grupo de portas SDDC-DPG-NFS. Um endereço IP também é designado à porta VMkernel por meio da sub-rede móvel privada que está associada à VLAN do armazenamento conectado, ou seja, a VLAN B privada B e sua MTU é configurada como 9000 para suportar quadros gigantes.
 
-Figura 1. Grupos de portas e uplinks do vDS privado
-
-![Grupos de portas e uplinks do vDS privado](private_vds_portgroups_and_uplinks.svg "Grupos de portas e uplinks do vDS privado")
+![Grupos de portas e uplinks privados do vDS](../../images/private_vds_portgroups_and_uplinks.svg "Grupos de portas e uplinks privados do vDS")
 
 ### roteamento estático do host vSphere
 {: #storage-infra-mgmt-vsphere-routing}

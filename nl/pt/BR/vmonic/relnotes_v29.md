@@ -59,16 +59,6 @@ Para obter mais informações, consulte as seções _Configurações de licença
 * [Pedindo instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
 * [Pedindo novos clusters do vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
 
-## Término de suporte para a VLAN Spanning
-{: #relnotes_v29-vlan}
-
-A partir de agosto de 2019, o {{site.data.keyword.vmwaresolutions_short}} não suportará mais a ampliação de VLAN. Até o final de julho de 2019, deve-se converter a conta de infraestrutura do {{site.data.keyword.cloud_notm}} para Virtual Routing and Forwarding (VRF) e ativar os terminais em serviço para a conta.
-
-Para obter mais informações, veja:
-
-* [Visão geral do Virtual Routing and Forwarding (VRF) no IBM Cloud](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-* [Ativando sua conta para usar Terminais em serviço](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
-
 ## Suporte para Interfaces de Programação de Aplicativos
 {: #relnotes_v29-api}
 
@@ -137,7 +127,7 @@ Para obter mais informações, veja:
 ### F5 on IBM Cloud
 {: #relnotes_v29-services-f5}
 
-Na liberação atual, o F5-BigIP VE V14.1.0.2 é instalado em todas as instâncias recém-implementadas. Para obter mais informações sobre os novos recursos no F5-BigIP VE V14.1.0.2, consulte [Nota sobre a liberação: BIG-IP 14.1.0 Novo e instalação](https://support.f5.com/kb/en-us/products/big-ip_ltm/releasenotes/product/relnote-bigip-14-1-0.html){:new_window}.
+Na liberação atual, o F5-BigIP VE V14.1.0.2 é instalado em todas as instâncias recém-implementadas. Para obter mais informações sobre os novos recursos no F5-BigIP VE V14.1.0.2, consulte [Nota sobre a liberação: BIG-IP 14.1.0 Novo e instalação](https://techdocs.f5.com/kb/en-us/products/big-ip_ltm/releasenotes/product/relnote-bigip-14-1-0.html){:new_window}.
 
 ### HyTrust CloudControl on IBM Cloud
 {: #relnotes_v29-services-htcc}

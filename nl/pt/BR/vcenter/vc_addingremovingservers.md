@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-18"
+lastupdated: "2019-05-03"
 
 subcollection: vmware-solutions
 
@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 
 É possível expandir ou contrair a capacidade de sua instância do VMware vCenter Server de acordo com suas necessidades de negócios, incluindo ou removendo servidores ESXi ou armazenamento network file system (NFS).
 
-* Iniciando com a liberação da V3.0, é possível incluir ou remover simultaneamente o armazenamento NFS em múltiplos clusters.
+* Iniciando com a liberação V3.0, é possível incluir ou remover simultaneamente o armazenamento NFS e os servidores ESXi em clusters que estão no estado **Pronto para uso**. Por exemplo, é possível incluir ou remover um servidor ESXi em um cluster e incluir ou remover o armazenamento NFS em outro cluster.
 * Iniciando com a liberação V2.9, é possível incluir novos servidores ESXi em um cluster enquanto os servidores estão no modo de manutenção. Além disso, é possível incluir ou remover simultaneamente servidores do ESXi em múltiplos clusters.
 
 **Notas**:

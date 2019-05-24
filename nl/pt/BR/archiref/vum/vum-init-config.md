@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-29"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -72,7 +72,7 @@ Tabela 2. Regra de firewall
 | Parâmetro | Valores sugeridos |
 |:--------- |:-------------- |
 | Nome | Proxy01 de saída |
-| Tipo |Usuário|
+| Tipo | Usuário |
 | Origem | IP do servidor proxy |
 | Destino | qualquer |
 | Serviço | Eco do HTTP/HTTPS/ICMP |
@@ -209,6 +209,7 @@ Configure o VUM para usar o servidor proxy para acessar os repositórios na Inte
 2. Selecione a guia **Gerenciar** e clique em **Configurações**.
 3. Selecione **Configurações de download** e, em seguida, em _Configurações de proxy_, clique em **Editar**.
 4. Marque a caixa **Usar proxy** e insira o _Endereço IP do servidor proxy_ e a _porta 3128_, clique em **OK**. O Status de conectividade muda para _Validando_ e, em seguida, para _Conectado_.
+    **Nota**: não se preocupe se receber a mensagem ``Algumas URLs foram acessadas com sucesso, mas outras estão inacessíveis`` ao testar a conexão com o servidor proxy.
 5. Clique em  ** Fazer Download Agora **. Na área de janela _Tarefas recentes_, você deverá ver essa atividade concluída.
 6. Se essa atividade falhar, reinicialize o vCenter Server Appliance (vCSA):
   1. Efetue login na interface de gerenciamento do vCSA em `https://vcsaFQDN:5480` como **raiz**.

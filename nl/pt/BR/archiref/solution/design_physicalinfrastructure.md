@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -33,8 +33,7 @@ Para obter mais informações sobre os componentes físicos, consulte a [Lista d
 
 Para obter mais informações sobre armazenamento, veja [Arquitetura de armazenamento compartilhado](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits).
 
-Figura 1. Infraestrutura física</br>
-![Infraestrutura física](vcsv4radiagrams-ra-physinfra.svg)
+![Infraestrutura física](../../images/vcsv4radiagrams-ra-physinfra.svg "Infraestrutura física")
 
 ## Design de cálculo físico
 {: #design_physicalinfrastructure-host-design}
@@ -65,8 +64,7 @@ A rede física é manipulada pelo {{site.data.keyword.cloud_notm}}. Revise as de
 
 A rede física do {{site.data.keyword.cloud_notm}} é separada em duas redes distintas: pública e privada. A rede privada também contém o tráfego do Intelligent Platform Management Interface (IPMI) de gerenciamento para os servidores físicos.
 
-Figura 2. Rede de alto nível do {{site.data.keyword.cloud_notm}}
-![Rede de alto nível do {{site.data.keyword.cloud_notm}}](vcsv4radiagrams-ra-ibmcloudnetwork.svg)
+![Rede de alto nível do {{site.data.keyword.cloud_notm}}](../../images/vcsv4radiagrams-ra-ibmcloudnetwork.svg "Rede de alto nível do {{site.data.keyword.cloud_notm}}")
 
 #### Rede pública
 {: #design_physicalinfrastructure-public-net}
@@ -112,8 +110,7 @@ Cada host físico nesse design tem dois pares redundantes de conexões Ethernet 
 
 A remoção da conectividade de rede física para a rede pública ou privada para os servidores bare metal que são usados dentro da oferta do vCenter Server não é possível. As portas físicas no NIC interno do bare metal podem ser desativadas, mas não há suporte para desconectar os cabos.
 
-Figura 3. Conexões de host físico</br>
-![Conexões de host físico](vcsv4radiagrams-ra-physical-host-connections.svg "Conexões de host físico")
+![Conexões físicas do host](../../images/vcsv4radiagrams-ra-physical-host-connections.svg "Conexões físicas do host")
 
 #### VLANs e roteamento de base para sobreposição
 {: #design_physicalinfrastructure-vlans}
@@ -181,9 +178,7 @@ Ao usar o armazenamento de nível de arquivo compartilhado, um compartilhamento 
 
 O armazenamento é conectado usando o protocolo NFSv3 em um nível de 2 IOPS por GB por meio do IBM Cloud. A IBM normaliza o nível de IOP que é provisionado em um tamanho de bloco de 16 K, de modo que tamanhos de bloco maiores veem um limite inferior e tamanhos de bloco menores um limite mais alto.
 
-Figura 4. Compartilhamentos do NFS que estão conectados à implementação do VMware
-
-![Compartilhamentos do NFS que são conectados à implementação do VMware](vcsv4radiagrams-ra-nfs-shares.svg "Compartilhamentos do NFS que são conectados à implementação do VMware: compartilhamento de gerenciamento e compartilhamento especificado pelo cliente")
+![Compartilhamentos de NFS conectados à implementação do VMware](../../images/vcsv4radiagrams-ra-nfs-shares.svg "Compartilhamentos de NFS conectados à implementação do VMware: compartilhamento de gerenciamento e compartilhamento especificado pelo cliente")
 
 É possível alocar e montar mais compartilhamentos de arquivo em todos os hosts para as suas cargas de trabalho no momento da compra ou posterior dentro do console. É possível selecionar entre as opções de capacidade de armazenamento de arquivo do {{site.data.keyword.cloud_notm}} Endurance disponíveis e as camadas de desempenho no {{site.data.keyword.CloudDataCent_notm}} correspondente. Todos os compartilhamentos são conectados usando o protocolo NFSv3. Além disso, é possível anexar compartilhamentos de arquivo NFSv3 ao aplicar a oferta NetApp ONTAP Select.
 
@@ -196,8 +191,7 @@ Semelhante ao NFS, para armazenamento de iSCSI compartilhado, um LUN de iSCSI de
 
 A IBM normaliza o nível de IOP provisionado em um tamanho de bloco de 16 K, de modo que tamanhos de bloco maiores veem um limite inferior e tamanhos de bloco menores um limite mais alto.
 
-Figura 5. LUNs do iSCSI conectados à implementação do VMware</br>
-![LUNs do iSCSI conectados à implementação do VMware](vcsv4radiagrams-ra-iscsi-lun.svg "LUNs do iSCSI conectados à implementação do VMware")
+![LUNs de iSCSI conectados à implementação do VMware](../../images/vcsv4radiagrams-ra-iscsi-lun.svg "LUNs de iSCSI conectados à implementação do VMware")
 
 LUNs de iSCSI adicionais para cargas de trabalho também podem ser alocados e montados em todos os hosts no momento da compra ou posterior dentro do console. Selecione dentre as opções de capacidade de armazenamento de bloco do IBM Cloud Endurance disponíveis e as camadas de desempenho no IBM Cloud Data Center correspondente. Todos os LUNs são conectados usando o protocolo da iSCSI. Além disso, é possível anexar LUNs da iSCSI por meio da oferta do NetApp ONTAP Select.
 

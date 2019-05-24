@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-25"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -16,13 +16,12 @@ subcollection: vmware-solutions
 
 Enriquecer o Stock Trader não é uma etapa única. Para Todd e Jane, isso é um processo iterativo. Na figura a seguir, você vê que Jane incluiu o serviço Watson Tone Analyzer e uma regra de nível de fidelidade usando o centro de decisão do ODM. Os itens a seguir destacam como o Stock Trader foi enriquecido.
 
-Figura 1. Maior enriquecimento do Stock Trader
-![Resultados da iteração de enriquecimento do Stock Trader](vcscontent-enriched.svg)
+![Resultados da iteração de enriquecimento do Stock Trader](../../images/vcscontent-enriched.svg "Resultados da iteração de enriquecimento do Stock Trader")
 
 ## AI Watson Tone Analyzer
 {: #vcscontent-aianalytics-ai-watson}
 
-A amostra a seguir é uma maneira simples de enriquecer um aplicativo, mas é aparentemente poderosa. Jane navega no [catálogo do {{site.data.keyword.cloud}}](https://cloud.ibm.com/catalog/) para os serviços [AI](https://cloud.ibm.com/catalog/?category=ai) e [Analytics](https://cloud.ibm.com/catalog/?category=analytics) e localiza o catálogo rico em conteúdo.
+A amostra a seguir é uma maneira simples de enriquecer um aplicativo, mas é aparentemente poderosa. Jane procura no [catálogo do {{site.data.keyword.cloud}}](https://cloud.ibm.com/catalog/) os serviços de [IA](https://cloud.ibm.com/catalog/?category=ai) e de [Analítica](https://cloud.ibm.com/catalog/?category=analytics) e descobre que o catálogo tem muito conteúdo.
 
 Jane seleciona [Tone Analyzer](https://cloud.ibm.com/catalog/services/tone-analyzer), optando pelo plano Padrão e, em seguida, as credenciais para chamada são fornecidas.
 Jane refatorou o Stock Trader e apenas cria um segredo de Kubernetes para o Tone Analyzer. Dessa forma, mesmo que Jane mude os planos ou regiões, não é necessário reconstruir o código.

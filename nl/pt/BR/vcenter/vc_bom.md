@@ -146,6 +146,6 @@ recomendável planejar a atualização de configuração do MTU durante o tempo 
 * [Números de compilação e versões do VMware ESXi e do ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Números de compilação e versões do VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
 * [Ativando quadros gigantes em comutadores virtuais distribuídos](https://kb.vmware.com/s/article/1038827)
-* [Planilha de dados de proteção do {{site.data.keyword.vmwaresolutions_short}}](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:new_window}
+* [ Proteção de Dados de Proteção do {{site.data.keyword.vmwaresolutions_short}}  ](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:new_window}
 * [Visão geral do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
 * [Planejando instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -20,8 +20,7 @@ chave de um sistema, o limite do sistema, as entidades que
 interagem com ele juntamente com a interação. É um diagrama de alto nível
 que fornece ao leitor uma visualização inicial do sistema.
 
-Figura 1. Contexto de sistema
-![Contexto de sistema](vcscar-system-context.svg)
+![Contexto do sistema](../../images/vcscar-system-context.svg "Contexto do sistema")
 
 A seguir estão os componentes principais de contexto de sistema:
 -	vCenter Server -o VMware vCenter Server on {{site.data.keyword.cloud_notm}} é uma instância do {{site.data.keyword.cloud_notm}} for VMware

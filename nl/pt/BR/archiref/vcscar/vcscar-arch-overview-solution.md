@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -17,8 +17,7 @@ subcollection: vmware-solutions
 ## Componentes do VMware vCenter Server on IBM Cloud
 {: #vcscar-arch-overview-solution-vcs-comp}
 
-Figura 1. Diagrama do ambiente do vCenter Server
-![Ambiente do vCenter Server](vcscar-vcs.svg)
+![Ambiente do vCenter Server](../../images/vcscar-vcs.svg "Ambiente do vCenter Server")
 
 ### Platform Service Controller
 {: #vcscar-arch-overview-solution-psc}
@@ -35,7 +34,7 @@ Como o controlador de serviços de plataforma, o vCenter Server é implementado 
 
 O NSX Manager é implementado no cluster inicial. Além disso, o NSX Manager é designado a um endereço IP suportado pela VLAN por meio do bloco de endereço móvel privado que está designado a componentes de gerenciamento e configurado com os servidores DNS e NTP
 
-### NSX Controllers
+### Controladores NSX
 {: #vcscar-arch-overview-solution-nsx-controllers}
 
 A automação do {{site.data.keyword.cloud}} implementa três Controladores NSX dentro do cluster inicial. Os controladores são designados a um endereço IP suportado pela VLAN por meio da sub-rede móvel privada que é designada a componentes de gerenciamento.
@@ -72,8 +71,7 @@ Disco    | 1000 GB no armazenamento de dados local
 
 O {{site.data.keyword.icpfull_notm}} é uma plataforma de aplicativo para desenvolver e gerenciar aplicativos conteinerizados no local. O {{site.data.keyword.icpfull_notm}} é um ambiente integrado para gerenciar contêineres que inclui o orquestrador de contêineres Kubernetes, um repositório de imagem privada, um console de gerenciamento e estruturas de monitoramento.
 
-Figura 2. Implementação do {{site.data.keyword.icpfull_notm}} virtual com o vCenter Server
-![Implementação do {{site.data.keyword.icpfull_notm}} virtual com o vCenter Server](vcscar-icp.svg)
+![Implementação virtual do {{site.data.keyword.icpfull_notm}} com o vCenter Server](../../images/vcscar-icp.svg "Implementação virtual do {{site.data.keyword.icpfull_notm}} com o vCenter Server")
 
 ### Nó de inicialização
 {: #vcscar-arch-overview-solution-boot-node}
@@ -144,8 +142,7 @@ O {{site.data.keyword.cloud_notm}} Automation Manager (CAM) é uma plataforma de
 autoatendimento multinuvem, executada no {{site.data.keyword.icpfull_notm}}, que ajuda Desenvolvedores e
 administradores a atender às demandas de negócios.
 
-Figura 3. Referência de componente do CAM
-![Referência de componente do CAM](vcscar-cam-components.svg)
+![Referência de componente do CAM](../../images/vcscar-cam-components.svg "Referência de componente do CAM")
 
 ### Proxy CAM
 {: #vcscar-arch-overview-solution-cam-proxy}

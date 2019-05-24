@@ -35,7 +35,7 @@ O status da instância pode ter uma gama de opções.
 
 Tabela 2. Descrições de status de instâncias do HCX on {{site.data.keyword.cloud_notm}} no local
 
-| Barra de Status        | Descrição       |
+| Status        | Descrição       |
 |:------------- |:------------- |
 | Modificando | A instância está sendo criada. |
 | Instalado | A instância está pronta para uso. |

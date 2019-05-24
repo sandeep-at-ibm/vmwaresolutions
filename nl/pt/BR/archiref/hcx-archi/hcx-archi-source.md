@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -125,8 +125,7 @@ Pode haver apenas uma implementação do HCX por vCenter. Essa restrição se ap
 vCenters registrados no modo vinculado.
 {:note}
 
-Figura 1. Hybrid Cloud Services de origem
-![Hybrid Cloud Services de origem](source_hybrid_cloud_services.svg)
+![Hybrid Cloud Services de origem](../../images/source_hybrid_cloud_services.svg "Hybrid Cloud Services de origem")
 
 ### Dispositivos virtuais HCX
 {: #hcx-archi-source-hcxva}
@@ -156,8 +155,7 @@ O HCX usa criptografia avançada para autoinicialização de uma conexão de sit
 
 O Cloud Gateway também incorpora a tecnologia de replicação do vSphere para executar a migração bidirecional.
 
-Figura 2. Cloud Gateway de origem
-![Cloud Gateway de origem](source_cloud_gateway.svg)
+![Cloud Gateway de origem](../../images/source_cloud_gateway.svg "Cloud Gateway de origem")
 
 ### Otimizador WAN
 {: #hcx-archi-source-wan-opt}
@@ -166,8 +164,7 @@ O HCX também fornece Otimização WAN definida por software. O dispositivo WAN 
 
 A migração da máquina virtual depende da combinação dos dispositivos Cloud Gateway e WAN Optimization para atingir a mobilidade sem paralelo entre o vSphere no local e o IBM Cloud.
 
-Figura 3. WAN Optimizer de origem
-![WAN Optimizer de origem](source_wan_optimizer.svg)
+![WAN Optimizer de origem](../../images/source_wan_optimizer.svg "WAN Optimizer de origem")
 
 ### Concentrador de Camada 2
 {: #hcx-archi-source-layer-2-conc}
@@ -178,8 +175,7 @@ O dispositivo Layer 2 Concentrator tem duas interfaces:
 * Interface de tronco interno: manipula o tráfego de máquina virtual no local para as redes estendidas usando um mapeamento de ponte translacional para uma rede estendida correspondente no IBM Cloud.
 * Interface de uplink: o HCX usa essa interface para enviar o tráfego de sobreposição encapsulado para e do IBM Cloud. Os dados do aplicativo viajam por meio dessa interface.
 
-Figura 4. L2 Concentrator de origem
-![L2 Concentrator de origem](source_l2_concentrator.svg)
+![L2 Concentrator de origem](../../images/source_l2_concentrator.svg "L2 Concentrator de origem")
 
 ### Apenas migração
 {: #hcx-archi-source-mig-only}
@@ -239,8 +235,7 @@ Se a máquina virtual foi transferida usando o vMotion, a rota não será injeta
 Ou seja, R1 pode usar o roteamento para atingir uma máquina virtual específica por meio de R2, em vez de usar a Rede estendida conectada localmente. R2 possui totalmente o caminho para outras redes para atingir as máquinas virtuais
 com o Roteamento de proximidade ativado.
 
-Figura 5. Roteamento assimétrico com solução de Roteamento de proximidade
-![Roteamento assimétrico com solução de Roteamento de proximidade](asymmetric_routing_proximity_routing_solution.svg)
+![Roteamento assimétrico com solução de Roteamento de proximidade](../../images/asymmetric_routing_proximity_routing_solution.svg "Roteamento assimétrico com solução de Roteamento de proximidade")
 
 ### Retenção de endereço MAC
 {: #hcx-archi-source-mac-addr-ret}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-09"
 
 subcollection: vmware-solutions
 
@@ -19,9 +19,7 @@ subcollection: vmware-solutions
 
 Os serviços comuns fornecem os serviços que são usados por outros serviços na plataforma de gerenciamento de nuvem. Os serviços comuns incluem serviços de identidade e acesso, serviços de nome de domínio e serviços NTP.
 
-Figura 1. Serviços comuns do {{site.data.keyword.icpfull_notm}}
-
-![{} Common Services](vcsicp-icp-commonservices.svg)
+![Serviços comuns do {{site.data.keyword.icpfull_notm}}](../../images/vcsicp-icp-commonservices.svg "Serviços comuns do {{site.data.keyword.icpfull_notm}}")
 
 ### Serviços de identidade e de acesso
 {: #vcsicp-detail-design-identity}
@@ -50,9 +48,7 @@ Usando a rede NSX-V incluída na implementação do VCS, é possível implementa
 
 O {{site.data.keyword.icpfull_notm}} é implementado com a pilha de rede padrão do Calico para Kubernetes, que fornece isolamento de rede em seu cluster.
 
-Figura 2. {{site.data.keyword.icpfull_notm}}  com rede NSX-V
-
-![{} with NSX-V Networking](vcsicp-nsxv-networking.svg)
+![{{site.data.keyword.icpfull_notm}} com a rede NSX-V](../../images/vcsicp-nsxv-networking.svg "{{site.data.keyword.icpfull_notm}} com a rede NSX-V")
 
 Para obter mais informações, consulte o [Guia de rede do vCenter Server](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro).
 
@@ -63,9 +59,7 @@ O NSX-T foi projetado para que uma única plataforma de rede possa se conectar a
 
 O {{site.data.keyword.icpfull_notm}} fornece uma opção para substituir a rede Calico por uma instância do NSX-T, fornecendo um único local para gerenciar a rede e a segurança.
 
-Figura 3. {{site.data.keyword.icpfull_notm}}  com a rede NSX-T
-
-![{} with NSX-T Networking](vcsicp-icp-nsxt-networking.svg)
+![{{site.data.keyword.icpfull_notm}} com a rede NSX-T](../../images/vcsicp-icp-nsxt-networking.svg "{{site.data.keyword.icpfull_notm}} com a rede NSX-T")
 
 ## Links relacionados
 {: #vcsicp-detail-design-related}

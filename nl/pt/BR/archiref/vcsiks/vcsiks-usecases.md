@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -23,7 +23,7 @@ O VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundl
 
 A oferta vCenter Server with Hybridity Bundle do {{site.data.keyword.cloud_notm}} permite conexões seguras entre o site peer de origem no local e o site de destino do {{site.data.keyword.cloud_notm}}.
 
-Figura 1. Serviços VMware Hybridity ![Serviços do VMware Hybrid Cloud Extension](vcsiks-hcx.svg)
+![VMware Hybrid Cloud Extension Services](../../images/vcsiks-hcx.svg "VMware Hybrid Cloud Extension Services")
 
 O vCenter Server with Hybridity Bundle cria uma interconectividade fracamente acoplada entre o {{site.data.keyword.cloud_notm}} e no local e permite recursos como:
 - **Interconectividade simples** – as conexões de rede lógica são estabelecidas facilmente sobre qualquer conexão física, incluindo a Internet pública, a VPN privada ou o {{site.data.keyword.cloud_notm}} Direct Link.
@@ -43,8 +43,7 @@ Usando essa solução, a Acme Skateboards migrou com êxito suas cargas de traba
 
 O Acme Skateboards deseja implementar uma arquitetura híbrida no {{site.data.keyword.cloud_notm}} que consiste no vCenter Server e no {{site.data.keyword.icpfull_notm}}, para sua jornada para a modernização do aplicativo. Seus requisitos devem executar seus bancos de dados em máquinas virtuais, os aplicativos e os serviços da web em contêineres e usar um conjunto comum de ferramentas para gerenciamento de rede e segurança.
 
-Figura 2. Aplicativo híbrido Acme Skateboards
-![Diagrama do aplicativo híbrido Acme Skateboards](vcsiks-acme-app-arch.svg)
+![Diagrama do aplicativo híbrido Acme Skateboards](../../images/vcsiks-acme-app-arch.svg "Diagrama do aplicativo híbrido Acme Skateboards")
 
 O {{site.data.keyword.vmwaresolutions_short}} fornece automação para implementar componentes de tecnologia do VMware em {{site.data.keyword.CloudDataCents_notm}} em todo o mundo. A arquitetura consiste em uma única região de nuvem e suporta a capacidade de ampliação para mais regiões de nuvem localizadas em outra geografia ou em outro pod do {{site.data.keyword.cloud_notm}} dentro do mesmo data center.
 

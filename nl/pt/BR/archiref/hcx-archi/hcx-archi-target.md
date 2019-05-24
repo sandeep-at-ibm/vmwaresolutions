@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -104,8 +104,7 @@ Além disso, ele é configurado para acessar o vCenter e o NSX com um usuário e
 
 Depois que o componente de nuvem HCX Manager é implementado e configurado, os componentes de origem criam uma conexão com o HCX Manager por meio dos endereços VIP configurados no NSX ESG. Quando essa conexão é feita, os dispositivos Cloud Gateway e o WAN Optimizer são implementados dentro do IBM Cloud.
 
-Figura 1. Destino - Dispositivo do Hybrid Cloud Services
-![Destino - Dispositivo do Hybrid Cloud Services](target_hybrid_cloud_services_appliance.svg)
+![Destino - Dispositivo Hybrid Cloud Services](../../images/target_hybrid_cloud_services_appliance.svg "Destino - Dispositivo Hybrid Cloud Services")
 
 ## Gateway em nuvem
 {: #hcx-archi-target-cloud-gateway}
@@ -126,8 +125,7 @@ Esse comutador lógico é uma rede privada não roteável que é usada como um c
 
 A figura a seguir descreve um diagrama de componentes de alto nível do dispositivo Cloud Gateway e as conexões designadas.
 
-Figura 2. Implementação do Cloud Gateway
-![Implementação do Cloud Gateway](cloud_gateway_deployment.svg)
+![Implementação do Cloud Gateway](../../images/cloud_gateway_deployment.svg "Implementação do Cloud Gateway")
 
 ## Otimizador WAN
 {: #hcx-archi-target-wan-opt}
@@ -146,8 +144,7 @@ Tabela 9. Dimensionamento de dispositivo do WAN Optimizer
 
 Ao contrário do Cloud Gateway, o dispositivo WAN Optimization é conectado a um comutador lógico somente para ativar a comunicação entre si e o Cloud Gateway. Esse dispositivo será necessário se o WAN Optimization estiver em uso no ambiente de origem. Veja a figura a seguir para obter uma visualização do layout de rede.
 
-Figura 3. Implementação do WAN Optimizer
-![Implementação do WAN Optimizer](wan_optimizer_deployment.svg)
+![Implementação do WAN Optimizer](../../images/wan_optimizer_deployment.svg "Implementação do WAN Optimizer")
 
 ## Concentrador de Camada 2
 {: #hcx-archi-target-layer-2-conc}
@@ -166,8 +163,8 @@ Tabela 10. dimensionamento de dispositivo HT L2C
 
 O dispositivo L2C é implementado na VLAN de gerenciamento, bem como na VLAN pública. A interface pública é usada para o tráfego de aplicativo com destino à origem da rede estendida. Mais conexões, como as redes estendidas, são criadas e conectadas ao dispositivo L2C depois que o administrador de origem inicia a extensão de rede para o IBM Cloud. Exemplos dessas redes e conexões são mostrados na figura a seguir.
 
-Figura 4. Implementação do L2 Concentrator
-![Implementação do L2 Concentrator](l2_concentrator_deployment.svg)
+![Implementação do L2 Concentrator](../../images/l2_concentrator_deployment.svg "Implementação do L2 Concentrator")
+
 
 ## Links relacionados
 {: #hcx-archi-target-related}

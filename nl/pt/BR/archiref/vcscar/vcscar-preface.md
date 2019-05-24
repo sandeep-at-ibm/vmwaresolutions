@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -14,8 +14,7 @@ subcollection: vmware-solutions
 # Prefácio
 {: #vcscar-preface}
 
-Figura 1. Uma linguagem de nossa própria concepção
-![Uma linguagem de nossa própria concepção](vcscar-alood.svg)
+![Uma linguagem de nossa própria concepção](../../images/vcscar-alood.svg "Uma linguagem de nossa própria concepção")
 
 ## Introdução sobre a linguagem de skateboarding
 {: #vcscar-preface-intro}

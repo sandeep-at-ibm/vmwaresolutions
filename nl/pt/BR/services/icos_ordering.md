@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-13"
 
 subcollection: vmware-solutions
 
@@ -25,12 +25,12 @@ Para pedir o IBM Cloud Object Storage, conclua as tarefas a seguir no pedido esp
 ## Criando uma instância do Object Storage
 {: #icos_ordering-obj}
 
-Para criar uma instância do Object Storage, consulte [Criar uma nova instância de serviço](/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-order-storage#creating-a-new-service-instance). Siga as etapas e retorne para esta seção para continuar com as tarefas a seguir.
+Para criar uma instância do Object Storage, consulte [Criando uma nova instância de serviço](/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-provision#provision-instance). Siga as etapas e retorne para esta seção para continuar com as tarefas a seguir.
 
 ## Criando um depósito
 {: #icos_ordering-bucket}
 
-Para criar um bucket, consulte [Criar alguns buckets para armazenar seus dados](/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-getting-started-tutorial#gs-create-buckets). Siga as etapas e retorne para esta seção para continuar com as tarefas a seguir.
+Para criar um bucket, consulte [Criar alguns buckets para armazenar seus dados](/docs/services/cloud-object-storage?topic=cloud-object-storage-getting-started#gs-create-buckets). Siga as etapas e retorne para esta seção para continuar com as tarefas a seguir.
 
 ## Criando credenciais de serviço
 {: #icos_ordering-service-cred}
@@ -46,3 +46,13 @@ Para incluir um repositório de dimensionamento no Veeam, consulte [Incluindo re
 {: #icos_ordering-manage-cloud}
 
 Para obter informações sobre a manutenção e o gerenciamento de sua camada de nuvem, consulte [Gerenciando dados da camada de capacidade](https://helpcenter.veeam.com/docs/backup/vsphere/capacity_tier_managing_data.html?ver=95u4){:new_window}.
+
+## Links relacionados
+{: #icos_ordering-related}
+
+* [Veeam no {{site.data.keyword.cloud_notm}} visão geral](/docs/services/vmwaresolutions?topic=vmware-solutions-veeam_considerations)
+* [Pedindo o Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_ordering)
+* [Gerenciando o Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
+* [Solicitando serviços gerenciados para o Veeam no {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
+* [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [Perguntas mais frequentes](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-26"
+lastupdated: "2019-05-01"
 
 subcollection: vmware-solutions
 
@@ -37,7 +37,14 @@ Ao pedir o serviço, forneça as configurações a seguir:
 * Selecione **Pronto para produção** ou **Desenvolvimento/teste ** de acordo com suas necessidades.
 * Marque a caixa de seleção necessária para certificar que você já obteve a licença necessária para implementar o serviço {{site.data.keyword.cloud_notm}} Private Hosted.
 
-Se desejar implementar nós adicionais, use o modelo do {{site.data.keyword.cloud_notm}} Private Ubuntu (Ubuntu1604) que é implementado com sua instalação inicial do {{site.data.keyword.cloud_notm}} Private Hosted. Para localizar o modelo, no VMware vSphere Web Client, acesse a guia **VMs e modelos**, sob a pasta `cam`. A senha padrão para o modelo Ubuntu é `icponcloud` e é recomendável que você a mude antes de usar o modelo.
+## Implementando nós adicionais
+{: #icp_ordering-deploy-nodes}
+
+Se desejar implementar nós adicionais, revise as informações a seguir:
+* Use o modelo Ubuntu do {{site.data.keyword.cloud_notm}} Private (Ubuntu1604) implementado com a instalação inicial do {{site.data.keyword.cloud_notm}} Private Hosted.
+* Para localizar o modelo Ubuntu, no VMware vSphere Web Client, acesse a guia **VMs e modelos** na pasta `cam`.
+* A senha padrão para o modelo Ubuntu é `icponcloud`. Recomenda-se mudar essa senha antes de usar o modelo.
+* O {{site.data.keyword.vmwaresolutions_short}} não oferece suporte para aplicar atualizações e correções para o modelo Ubuntu. Deve-se monitorar e aplicar essas atualizações sozinho.
 
 ## Links relacionados
 {: #icp_ordering-related}

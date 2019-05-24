@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -38,8 +38,7 @@ O diagrama a seguir exibe o {{site.data.keyword.icpfull_notm}} e o CAM implement
 do {{site.data.keyword.cloud_notm}}, com conexões com o vCenter no local e o serviço {{site.data.keyword.containerlong_notm}} implementado no {{site.data.keyword.cloud_notm}}. Os usuários podem implementar máquinas virtuais (MVs) no local e MVs em instâncias e contêineres
 do vCenter Server para o cluster do {{site.data.keyword.icpfull_notm}} e do {{site.data.keyword.containerlong_notm}}.
 
-Figura 1. Gerenciamento de nuvem do lado da nuvem
-![Na nuvem - gerenciamento de nuvem](vcsiks-oncloud-cloudmgt.svg)
+![Na nuvem - gerenciamento de nuvem](../../images/vcsiks-oncloud-cloudmgt.svg "Na nuvem - gerenciamento de nuvem")
 
 No diagrama, o CAM cria conexões em nuvem logicamente para os vCenters, os provedores em nuvem, o {{site.data.keyword.icpfull_notm}} e os ambientes do {{site.data.keyword.containerlong_notm}}. Os clusters do {{site.data.keyword.icpfull_notm}} devem ser
 implementados em cada data center ou ambiente de nuvem, com o MCM fornecendo o
@@ -58,8 +57,7 @@ no local, com conexões com o vCenter e o {{site.data.keyword.containerlong_notm
 no local, MVs em instâncias e contêineres do vCenter Server
 para o cluster do {{site.data.keyword.containerlong_notm}}.
 
-Figura 2. Gerenciamento de nuvem do lado no local
-![No local - gerenciamento de nuvem](vcsiks-onprem-cloudmgt.svg)
+![No local - gerenciamento de nuvem](../../images/vcsiks-onprem-cloudmgt.svg "No local - gerenciamento de nuvem")
 
 A VPN do strongSwan é usada para estabelecer conectividade com os contêineres implementados do {{site.data.keyword.containerlong_notm}}. O strongSwan pode eventualmente ser substituído por conectividade
 de link direto.

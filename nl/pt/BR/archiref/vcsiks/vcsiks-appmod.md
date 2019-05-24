@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 O diagrama a seguir mostra a arquitetura de referência de modernização do aplicativo que a Acme Skateboards implementa e é descrita detalhadamente nesta série de documentos.
 
-Figura 1. Diagrama de visão geral da arquitetura
-![Diagrama de visão geral da arquitetura](vcsiks-aod.svg)
+![Diagrama de visão geral da arquitetura](../../images/vcsiks-aod.svg "Diagrama de visão geral da arquitetura")
 
 Essa arquitetura híbrida permite à Acme Skateboards:
 - Migrar máquinas virtuais VMware (MVs) no local para o {{site.data.keyword.cloud}} com pouco ou nenhum tempo de inatividade e nenhuma reconfiguração do aplicativo.
@@ -25,7 +24,7 @@ Essa arquitetura híbrida permite à Acme Skateboards:
 - Use o Cloud Automation Manager (CAM) para o infrastructure as code (IaC) de script para editar e orquestrar serviços que são feitos por meio de MVs e contêineres para integrar às suas cadeias de ferramentas do DevOps e à sua solução ITSM.
 
 A arquitetura de referência tem os componentes principais a seguir:
-- **Virtualização no local** - a virtualização no local é um cluster do VMware que hospeda atualmente as MVs do Acme Skateboards. Essas MVs estão hospedando atualmente os aplicativos a serem modernizados. Esse cluster é necessário para atender aos pré-requisitos da [arquitetura da solução VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro) para que ele possa executar o HCX.
+- **Virtualização no local** - a virtualização no local é um cluster do VMware que hospeda atualmente as MVs do Acme Skateboards. Essas MVs estão hospedando atualmente os aplicativos a serem modernizados. Esse cluster deve atender aos pré-requisitos da [Arquitetura da solução VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro) para que possa executar o HCX.
 
 O HCX amplia as redes no local para o {{site.data.keyword.cloud_notm}} permitindo que os clientes migrem MVs para a instância do VMware vCenter Server on {{site.data.keyword.cloud_notm}} que é executada no {{site.data.keyword.cloud_notm}} e de volta se necessário.
 - **{{site.data.keyword.cloud_notm}} for VMware Solutions** - a instância do vCenter Server fornece os blocos de construção fundamentais do VMware, como vSphere, vCenter Server, NSX-V e opções de armazenamento que incluem o armazenamento do vSAN ou do Endurance do {{site.data.keyword.cloud_notm}}, necessários para implementar automaticamente uma solução VMware Software Defined Data Center (SDDC). O cluster do VMware é o destino para as MVs migradas e alguns dos aplicativos modernizados em contêineres hospedados no {{site.data.keyword.icpfull_notm}}. Os componentes principais no vCenter Server são conforme a seguir:

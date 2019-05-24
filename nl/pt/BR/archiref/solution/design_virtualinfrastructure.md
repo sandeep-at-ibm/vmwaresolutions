@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-09"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -20,8 +20,7 @@ subcollection: vmware-solutions
 
 A camada de infraestrutura virtual inclui os componentes de software do VMware que virtualizam os recursos de cálculo, armazenamento e rede fornecidos na camada de infraestrutura física: VMware vSphere ESXi, VMware NSX-V ou NSX-T e, opcionalmente, VMware vSAN.
 
-Figura 1. Infraestrutura virtual</br>
-![Infraestrutura virtual](vcsv4radiagrams-ra-virtinfra.svg)
+![Infraestrutura virtual](../../images/vcsv4radiagrams-ra-virtinfra.svg "Infraestrutura virtual")
 
 ## Design do VMware vSphere
 {: #design_virtualinfrastructure-vsphere-design}
@@ -71,9 +70,7 @@ Nesse design, o armazenamento do VMware vSAN é empregado em instâncias do vCen
 
 Conforme mostrado na figura a seguir, a vSAN agrega o armazenamento local em múltiplos hosts do ESXi dentro de um cluster do vSphere e gerencia o armazenamento agregado como um único armazenamento de dados da VM. Dentro desse design, os nós de cálculo contêm unidades de disco locais para o Sistema operacional do ESXi (S.O.) e o armazenamento de dados da vSAN. Independentemente de a qual cluster um nó pertence, duas unidades do S.O. estão incluídas em cada nó para abrigar a instalação do ESXi.
 
-Figura 2. Conceito da vSAN
-
-![Conceito do vSAN](vcsv4radiagrams-ra-vsan.svg "O vSAN agrega o armazenamento local em múltiplos hosts ESXi dentro de um cluster do vSphere e gerencia o armazenamento agregado como um único armazenamento de dados da VM")
+![Conceito de vSAN](../../images/vcsv4radiagrams-ra-vsan.svg "O vSAN agrega o armazenamento local em vários hosts ESXi em um cluster do vSphere e gerencia o armazenamento agregado como um único armazenamento de dados da VM")
 
 O vSAN emprega os componentes a seguir:
 * O design do vSAN de grupo de dois discos; cada grupo de disco com dois ou mais discos. Uma unidade de SSD ou NVMe do menor tamanho no grupo serve como a camada de cache e os SSDs restantes servem como a camada de capacidade.
@@ -116,14 +113,27 @@ As configurações da vSAN são configuradas com base nas melhores práticas par
    * compartilhamentos do vSAN-100
 * Portas do kernel vSAN:  ** Failover Explícito **
 
+## Armazenamento conectado ao NFS
+{: #design_virtualinfrastructure-nfs-storage}
+
+Ao usar o armazenamento conectado à rede NFS, essa arquitetura prescreve o uso do NFS v3 em vez do NFS v4.1, pois as migrações LIF do servidor NFS podem causar latência excessiva ao usar o NFS v4.1. Cada host vSphere é conectado ao armazenamento NFS usando seu nome do host.
+
+Um armazenamento de dados NFS de 2 TB é conectado a um cluster para uso por componentes de gerenciamento com uma camada de desempenho de 4 IOPS/GB. Armazenamentos de dados adicionais podem ser conectados a um cluster para uso de carga de trabalho, em uma variedade de tamanhos e camadas de desempenho.
+
+Além disso, essa arquitetura requer que todos os hosts tenham uma rota de sub-rede criada para a sub-rede na qual o armazenamento NFS reside. O propósito dessa rota de sub-rede é direcionar todo o tráfego NFS para usar o grupo da porta, a sub-rede e a VLAN designada para o tráfego NFS por esse design. Se vários armazenamentos de dados NFS estiverem conectados, várias rotas poderão precisar ser configuradas, pois esses armazenamentos de dados talvez estejam localizados em diferentes sub-redes remotas.
+
+As máquinas virtuais de gerenciamento podem estar localizadas em um armazenamento de dados NFS. Isso cria um problema de autoinicialização, pois algumas das máquinas de gerenciamento podem ser responsáveis por serviços DNS usados para resolver o nome do host do NFS. Portanto, essa arquitetura especifica que pelo menos um dos endereços IP para o armazenamento de dados de gerenciamento seja codificado permanentemente em `/etc/hosts` em cada um dos hosts.
+
 ## Armazenamento conectado à iSCSI
 {: #design_virtualinfrastructure-iscsi-storage}
 
 Diferentemente do armazenamento conectado do NFS v3, o armazenamento conectado à iSCSI suporta caminhos ativos-ativos em todas as portas de placa do NIC configuradas e portas de destino. Devido a isso, um rendimento mais alto pode ser alcançado e, portanto, é uma alternativa desejável para o armazenamento de conexão do NFS. Isso vem a um custo de maior complexidade.
 
-O armazenamento de bloco do {{site.data.keyword.cloud_notm}} Endurance suporta um máximo de 64 IPs conectando por LUN ao usar o VMware, que permite até 32 hosts de acordo com esse design.
+O armazenamento de bloco do {{site.data.keyword.cloud_notm}} Endurance suporta a conexão de um máximo de 64 endereços IP por LUN ao usar o VMware, o que permite até 32 hosts de acordo com esse design.
 
 Um LUN iSCSI de 2 TB é conectado ao cluster do vSphere para o uso dos componentes de gerenciamento e um mínimo de mais LUNs iSCSI é configurado para o uso de carga de trabalho do cliente. Esse armazenamento é formatado como o sistema de arquivos do VMFS 6.x por cada LUN.
+
+Essa arquitetura especifica o uso da ligação de porta do iSCSI, uma política round-robin para caminhos múltiplos, uma profundidade máxima da fila de 64 e um limite de IOPS round-robin de 1.
 
 ### Configuração de rede virtual para iSCSI
 {: #design_virtualinfrastructure-setup-iscsi}
@@ -153,9 +163,7 @@ Nesse design, o NSX Manager é implementado no cluster inicial. O NSX Manager é
 
 A figura a seguir mostra o posicionamento do NSX Manager em relação a outros componentes na arquitetura.
 
-Figura 3. Visão geral da rede do NSX Manager
-
-![Visão geral da rede do NSX Manager](vcsv4radiagrams-ra-vcs-nsx-overview.svg "NSX Manager em relação aos outros componentes na arquitetura")
+![Visão geral da rede do NSX Manager](../../images/vcsv4radiagrams-ra-vcs-nsx-overview.svg "NSX Manager em relação a outros componentes na arquitetura")
 
 Após a implementação inicial, a automação do {{site.data.keyword.cloud_notm}} implementa três controladores NSX dentro do cluster inicial. Cada um dos controladores é designado a um endereço IP suportado pela VLAN por meio da sub-rede móvel **Privada A** que está designada aos componentes de gerenciamento. Além disso, o design cria regras de antiafinidade VM-VM para separar os controladores entre os hosts no cluster. O cluster inicial deve conter um mínimo de três nós para assegurar alta disponibilidade para os controladores.
 
@@ -185,9 +193,7 @@ Tabela 3. Requisitos do NSX Manager
 
 O design usa um número mínimo de Comutadores vDS. Os hosts no cluster são conectados às redes pública e privada. Os hosts são configurados com dois comutadores virtuais distribuídos. O uso de dois comutadores segue a prática de rede do {{site.data.keyword.cloud_notm}} que separa as redes pública e privada. O diagrama a seguir mostra o design do vDS.
 
-Figura 4. Design do comutador distribuído
-
-![Design do comutador distribuído](vcsv4radiagrams-distributed-switch-design.svg "Design do vDS")
+![Design de comutador distribuído](../../images/vcsv4radiagrams-distributed-switch-design.svg "Design de comutador distribuído")
 
 Conforme mostrado na figura anterior, um vDS é configurado para a conectividade de rede pública (SDDC-Dswitch-Public) e o outro vDS é configurado para conectividade de rede privada (SDDC-Dswitch-Private). A separação de diferentes tipos de tráfego é necessária para reduzir a contenção e a latência e aumentar a segurança.
 
@@ -197,9 +203,9 @@ Tabela 4. Mapeamento de VLAN para tipos de tráfego
 
 | VLAN  | Designação | Tipo de tráfego |
 |:----- |:----------- |:------------ |
-| VLAN1 | Pública      | Disponível para acesso à Internet |
-| VLAN2 | Privada A   | Gerenciamento de ESXi, gerenciamento, VXLAN (VTEP) |
-| VLAN3 | Privada B   | vSAN, NFS, vMotion, iSCSI |
+| VLAN 1 | Privada A   | Gerenciamento de ESXi, gerenciamento, VXLAN (VTEP) |
+| VLAN 2 | Privada B   | vSAN, NFS, vMotion, iSCSI |
+| VLAN 3 | Pública      | Disponível para acesso à Internet |
 
 O tráfego de cargas de trabalho circulará em comutadores lógicos suportados pelo VXLAN.
 
@@ -271,8 +277,7 @@ Os aspectos a seguir não estão configurados:
 * Micro segmentação
 * Gerenciamento do NSX vinculado para outras instâncias do VMware
 
-Figura 5. Topologia do NSX do cliente de exemplo implementada
-![Topologia do NSX do cliente de exemplo implementada](vcsv4radiagrams-ra-vcs-nsx-topology-customer-example.svg)
+![Exemplo de topologia NSX de cliente implementada](../../images/vcsv4radiagrams-ra-vcs-nsx-topology-customer-example.svg "Exemplo de topologia NSX de cliente implementada")
 
 ## Conectividade de rede pública
 

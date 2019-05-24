@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-02"
 
 subcollection: vmware-solutions
 
@@ -35,9 +35,7 @@ Será possível incluir o IBM Managed Services se você quiser transferir as ope
 
 O gráfico a seguir descreve a arquitetura de alto nível e os componentes de uma implementação do vCenter Server with Hybridity Bundle de três nós.
 
-Figura 1. Arquitetura de alto nível do vCenter Server with Hybridity Bundle
-
-![Arquitetura do vCenter Server with Hybridity Bundle](hybrid_architecture.svg "Arquitetura de alto nível do vCenter Server with Hybridity Bundle")
+![Arquitetura do vCenter Server with Hybridity Bundle](../images/hybrid_architecture.svg "Arquitetura do vCenter Server with Hybridity Bundle")
 
 ### Infraestrutura física
 {: #vc_hybrid_overview-physical-infras}

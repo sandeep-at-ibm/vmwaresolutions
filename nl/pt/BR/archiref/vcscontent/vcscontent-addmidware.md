@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-25"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -20,8 +20,7 @@ aplicativo com recursos extras. Ao refatorar os microsserviços do Stock Trader 
 middlewares existiam em seu data center, portanto, isso se torna mais que um
 exercício de nova plataforma com um novo middleware incluído.
 
-Figura 1. Refatoração do Stock Trader
-![Refatoração do Stock Trader](vcscontent-refactor.svg)
+![Refatoração do Stock Trader](../../images/vcscontent-refactor.svg "Refatoração do Stock Trader")
 
 Esta refatoração da solução traz uma plataforma comum para executar o aplicativo
 e os serviços necessários, trazendo um plano de gerenciamento
@@ -287,8 +286,7 @@ mais de uma nuvem. O DB2 secreto na figura a seguir tem detalhes
 de roteamento diferentes, mas no mesmo formato. Quando o microsserviço de portfólio de Jane é implementado, ele procura o parâmetro de terminal secreto do DB2 para se conectar
 à instância apropriada do DB2. O aplicativo Stock Trader não se importa se está sendo executado em uma máquina virtual do VMware, um serviço conteinerizado ou como um serviço gerenciado por nuvem.
 
-Figura 2. Stock Trader - serviços de tabela dinâmica
-![Serviços de tabela dinâmica do Stock Trader](vcscontent-pivot-services.svg)
+![Serviços centrais do Stock Trader](../../images/vcscontent-pivot-services.svg "Serviços centrais do Stock Trader")
 
 ## Resultado
 {: #vcscontent-addmidware-result}
@@ -300,9 +298,7 @@ inclui mais microsserviços, como um serviço de notificação do Twitter. As
 regras de roteamento do Istio ativam o sistema de mensagens de nível de fidelidade dinâmico por meio de um canal
 interno do Slack ou um canal público do Twitter.
 
-Figura 3. Enriquecimento do Stock Trader
-
-![Enriquecimento do Stock Trader](vcscontent-enrich.svg)
+![Enriquecimento do Stock Trader](../../images/vcscontent-enrich.svg "Enriquecimento do Stock Trader")
 
 ## Links relacionados
 {: #vcscontent-addmidware-related}

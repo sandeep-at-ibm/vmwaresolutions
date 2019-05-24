@@ -56,4 +56,4 @@ Depois que a instância do KMIP for VMware on {{site.data.keyword.cloud}} estive
 * [Visualizando instâncias do KMIP for VMware on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_viewing)
 * [Pedindo instâncias do KMIP for VMware on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)
 * [Excluindo instâncias do KMIP for VMware on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_deleting)
-* [Eventos do Activity Tracker](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-at-events)
+* [Eventos de rastreador de atividade](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-at-events)

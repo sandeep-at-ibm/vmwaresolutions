@@ -234,7 +234,7 @@ Dependendo do {{site.data.keyword.CloudDataCent_notm}} selecionado, VLANs públi
   * **Sub-rede primária** é designada a hosts físicos para o acesso à rede pública.
   * **Sub-rede privada primária** é designada a hosts físicos para o tráfego de gerenciamento.
 
-**Importante:**
+** Importante: **
 * Assegure-se de que a configuração de firewall nas VLANs selecionadas não bloqueie o tráfego de dados de gerenciamento.
 * Assegure-se de que todas as VLANs que você selecionar estejam no mesmo pod. Os servidores ESXi não podem ser provisionados em VLANs de pod misto.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-24"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -27,7 +27,7 @@ A avaliação é projetada para migração de até 20 cargas de trabalho de dese
 O Single-node Trial for Migration and App Modernization é somente para prova de conceito (POC). Não execute cargas de trabalho de trabalho de produção nesse ambiente. Funções de gerenciamento, como a inclusão e a remoção de hosts e clusters, o pedido de serviços complementares e a aplicação de atualizações, não são suportadas.
 {:important}
 
-Para obter o máximo da instância do Single-node Trial, é possível usar o [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf) por meio do [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html), que pode ajudar a migrar suas cargas de trabalho do VMware para o {{site.data.keyword.cloud_notm}}. Além disso, o [{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/) pode ajudar a acelerar a modernização do aplicativo por meio das práticas nativas de nuvem mais recentes.
+Para obter o máximo da instância do Single-node Trial, é possível usar o [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:new_window} por meio do [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:new_window}, que pode ajudar a migrar suas cargas de trabalho do VMware para o {{site.data.keyword.cloud_notm}}. Além disso, o [{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/){:new_window} pode ajudar a acelerar a modernização do aplicativo por meio das práticas nativas de nuvem mais recentes.
 
 Essa avaliação é destinada ao uso de até 90 dias. Quando você tiver concluído a avaliação, será possível excluir esse ambiente e provisionar um novo ambiente que atenda às suas necessidades de capacidade.
 {:note}
@@ -145,6 +145,6 @@ O {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2 é instalado usando 
 {: #cloud_modern_bundle_overview-related}
 
 * [Guia do vCenter Server e do {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [Abrir um chamado para o {{site.data.keyword.cloud_notm}} Private](https://www.ibm.com/mysupport/s/?language=en_US)
-* [Recursos do VMware HCX](https://hcx.vmware.com/#/docs)
-* [Obtendo o VMware HCX OVA](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html?hWord=N4IghgNiBcIPICMAuYCWA7DBzABEgFgKY4ASAwgBo5wBqAgiAL5A)
+* [Abrir um chamado para o {{site.data.keyword.cloud_notm}} Private](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
+* [Recursos do VMware HCX](https://hcx.vmware.com/#/docs){:new_window}
+* [Guia do Usuário do VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}

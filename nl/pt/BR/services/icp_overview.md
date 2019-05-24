@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-26"
+lastupdated: "2019-05-01"
 
 subcollection: vmware-solutions
 
@@ -121,7 +121,7 @@ Tabela 5. Descrição de variáveis na Fórmula 2
 * Reúna as licenças necessárias antes de instalar o serviço {{site.data.keyword.cloud_notm}} Private Hosted. Isso inclui as licenças do {{site.data.keyword.cloud_notm}} Private e do {{site.data.keyword.cloud_notm}} Automation Manager. Assegure-se de que suas licenças suportem não somente a implementação de serviço inicial, mas também a expansão de tamanho futuro em sua infraestrutura.
 * Para implementações do {{site.data.keyword.cloud_notm}} Private Hosted em ambientes Prontos para produção, 64 GB de RAM por host não é suportado. Portanto, deve-se selecionar uma opção que seja maior que 64 GB para **RAM**.
 * Antes que o serviço {{site.data.keyword.cloud_notm}} Private Hosted seja instalado em seu ambiente, é executada uma verificação com relação à capacidade disponível do cluster padrão no ambiente para assegurar que os componentes de serviço possam se ajustar. Se a verificação de capacidade falhar, o serviço não será instalado e o estado de serviço será configurado como **Falha na validação de capacidade** no console. Além disso, uma mensagem do console com mais detalhes será exibida e você será notificado por e-mail. Para instalar o serviço, deve-se aumentar a capacidade no cluster padrão, incluindo mais hosts ou liberando RAM, CPU ou espaço em disco e, em seguida, incluir o serviço novamente no console. Depois disso, é possível remover o serviço existente no estado **Falha na validação de capacidade** clicando no ícone **Excluir** próximo a ele.
-* Se desejar implementar nós adicionais, use o modelo do {{site.data.keyword.cloud_notm}} Private Ubuntu (Ubuntu1604) que é implementado com sua instalação inicial do {{site.data.keyword.cloud_notm}} Private Hosted. Para localizar o modelo, no VMware vSphere Web Client, acesse a guia **VMs e modelos**, sob a pasta `cam`. A senha padrão para o modelo Ubuntu é `icponcloud` e é recomendável que você a mude antes de usar o modelo.
+* Se desejar implementar nós adicionais, consulte [Implementando nós adicionais](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_ordering-deploy-nodes#icp_ordering-deploy-nodes).
 
 ## Considerações ao remover o IBM Cloud Private Hosted
 {: #icp_overview-remove}

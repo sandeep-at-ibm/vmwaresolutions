@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -57,8 +57,7 @@ Para que o CNI inclua um contêiner em uma rede, o tempo de execução do contê
 
 De uma perspectiva de tráfego de rede, diferenciamos entre quatro tipos no {{site.data.keyword.containerlong_notm}}, conforme mostrado no diagrama a seguir.
 
-Figura 1. Tipos de tráfego de rede do contêiner
-![Tipos de tráfego de rede do contêiner](vcsnsxt-traffictypes.svg)
+![Tipos de tráfego de rede do contêiner](../../images/vcsnsxt-traffictypes.svg "Tipos de tráfego de rede do contêiner")
 
 - **Rede de pod interno** - conhecido como comunicações de contêiner para contêiner. Todos os contêineres dentro de um pod compartilham um namespace de rede, o mesmo endereço IP e se veem no host local. O tráfego para cada app é diferenciado com um número de porta diferente. O Desenvolvedor deve certificar-se de que os contêineres dentro de um pod não entrem em conflito uns com os outros com as portas usadas. Dentro de uma pod, existe um contêiner de infraestrutura. Este é o primeiro contêiner que o kubelet ativa e ele adquire o IP do pod e configura o namespace de rede. Em seguida, todos os outros contêineres no pod se associam ao namespace de rede e de IPC do contêiner de infraestrutura. O contêiner tem o modo de ponte de rede que está ativado e todos os outros contêineres no pod se associem a esse namespace por meio do modo de contêiner. Se o contêiner de infraestrutura é desativado, o kubelet encerra todos os contêineres no pod e, em seguida, reprovisiona, geralmente com um novo endereço IP. Nós não forneceremos mais detalhes sobre esse fluxo de tráfego neste documento.
 
@@ -110,8 +109,7 @@ No Calico, os pacotes de IP para ou de um pod são roteados e protegidos por fir
 -	Para uma carga de trabalho que está enviando pacotes, o Calico assegura que o nó do trabalhador seja sempre retornado como o próximo endereço MAC de hop, independentemente de qualquer roteamento que a carga de trabalho em si possa configurar.
 -	Para pacotes endereçados a uma carga de trabalho, o último hop de IP é aquele do nó do trabalhador da carga de trabalho de destino para a carga de trabalho em si.
 
-Figura 2. CNI do Calico
-![CNI do Calico](vcsnsxt-calico-cni.svg)
+![CNI do Calico](../../images/vcsnsxt-calico-cni.svg "CNI do Calico")
 
 O diagrama anterior mostra os componentes do Calico a seguir:
 -	**calicoctl** - interface da linha de comandos.

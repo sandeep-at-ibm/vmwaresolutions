@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 A arquitetura do Caveonix RiskForesight é mostrada no diagrama a seguir.
 
-Figura 1. Arquitetura do Caveonix RiskForesight
-![Diagrama de arquitetura](caveonix-architecture.svg)
+![Diagrama de arquitetura](../../images/caveonix-architecture.svg "Diagrama de arquitetura")
 
 A Caveonix RiskForesight architecture tem quatro camadas:
 -	Detectar - O módulo Detectar é totalmente integrado à pilha do VMware e a muitas nuvens públicas. Usando plug-ins, o RiskForesight usa o vCenter e o NSX Manager como Repositórios de ativos, coletando detalhes em máquinas virtuais (MVs), redes e fluxos de rede. Os Remote Collectors varrem cargas de trabalho, sistemas operacionais e aplicativos para permitir uma visualização de "pilha completa" de conformidade e vulnerabilidades.
@@ -26,8 +25,7 @@ A Caveonix RiskForesight architecture tem quatro camadas:
     - RMCP - O Risk Management Control Plane (RMCP) fornece proteção contínua e proativa das cargas de trabalho, monitorando a pilha completa em data centers de nuvem privada, pública e gerenciada.
     - Gerente de política - Atualmente suporta três tipos de tarefas de aprendizado de máquina por organização: Logs do Caveo, Redes do Caveo, Varredura do Caveo. Com base nas anomalias localizadas nos dados, o usuário pode configurar as políticas para agir com base nas condições definidas pelo usuário, selecionar o tipo de tarefa, configurar condições booleanas para a pontuação de Anomalia e definir a ação quando a condição for verdadeira. Por exemplo:
         - Tarefa: a pontuação de Anomalia de "Logs de Caveo" é > 90, então marque o ativo para quarentena e envie uma notificação para o Canal slack.
-        - Tarefa: a pontuação de anomalia da "Caveo Network" é > 95, então coloque o ativo em quarentena e envie uma notificação
-por e-mail e uma notificação de IU.
+        - Tarefa: a pontuação de anomalia da "Caveo Network" é > 95, então coloque o ativo em quarentena e envie uma notificação por e-mail e uma notificação de IU.
 - Painéis - Os painéis, por meio de acesso baseado em função, fornecem a capacidade para um provedor de serviços, como um departamento de TI, alocar ativos de TI para locatários ou unidades de negócios. As unidades de negócios, então, designam esses ativos de TI aos aplicativos. Esses aplicativos correspondem aos serviços de negócios e de TI, estão sujeitos a uma Avaliação do impacto nos negócios e estão sujeitos a um regime de conformidade, como: NIST, NESA, PCI, ISO e HIPAA. Esses aplicativos ficam, então, sujeitos a uma série de varreduras, como vulnerabilidade, fluxos de NSX, software e dados de log para produzir visibilidade ao que está em execução e o risco cibernético e de conformidade associado ao aplicativo. Realizando drill down por meio desses painéis, os usuários de conformidade e de segurança podem ver uma lista priorizada de ações a serem minimizadas e ativar ações de cumprimento automatizáveis nos módulos Prever e Agir. O RiskForesight fornece um painel unificado para identificar ativos na nuvem híbrida e uma análise de heat map para riscos cibernéticos, riscos de configuração de conformidade, tendências importantes e métricas de operação de segurança. Ele permite que os usuários determinem rapidamente a natureza e a localização dos riscos e quais ações devem ser executadas, as quais usam uma ferramenta de visualização intuitiva e poderosa. Esses painéis fornecem:
   - Uma visualização priorizada do risco cibernético e dos riscos de conformidade na nuvem híbrida com as visualizações dos painéis Detectar, Prever e Agir.
   - A capacidade de um usuário interagir visualmente com os dados para identificar ativos em risco com rapidez, com base em prioridades de risco.
@@ -41,8 +39,7 @@ por e-mail e uma notificação de IU.
 
 O Caveonix RiskForesight tem o conceito de zonas:
 
-Figura 2. Zonas do Caveonix RiskForesight
-![Diagrama de zonas](caveonix-zones.svg)
+![Diagrama de zonas](../../images/caveonix-zones.svg "Diagrama de zonas")
 
 -	Zona de gerenciamento ou do provedor de serviços - A zona de gerenciamento ou do provedor de serviços inclui os componentes a seguir:
     - Aplicativo RiskForesight - Contém vários componentes e é descrito em detalhes na seção Componentes do aplicativo.

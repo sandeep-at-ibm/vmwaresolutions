@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-02"
 
 subcollection: vmware-solutions
 
@@ -34,8 +34,7 @@ As instâncias do vCenter Server com NSX-T são somente para teste de prova de c
 
 O gráfico a seguir descreve a arquitetura de alto nível e os componentes de uma implementação do vCenter Server com NSX-T de três nós.
 
-Figura 1. Arquitetura de alto nível do vCenter Server com NSX-T para um cluster de três nós
-![Arquitetura do vCenter Server com NSX-T](vc_nsx-t_architecture.svg "Arquitetura de alto nível do vCenter Server para um cluster de três nós")
+![Arquitetura do vCenter Server com NSX-T](../images/vc_nsx-t_architecture.svg "Arquitetura do vCenter Server com NSX-T")
 
 ### Infraestrutura física
 {: #vc_nsx-t_overview-physical-infras}

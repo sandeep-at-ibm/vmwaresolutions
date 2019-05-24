@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-24"
+lastupdated: "2019-05-02"
 
 subcollection: vmware-solutions
 
@@ -47,9 +47,7 @@ Se a sua configuração requerer uma implementação de vários sites com mais d
 
 O gráfico a seguir descreve a visão geral da implementação multissite do vCenter Server with Hybridity Bundle.
 
-Figura 1. Implementação multissite do vCenter Server with Hybridity Bundle
-
-![Implementação multissite do vCenter Server with Hybridity Bundle](../vcenter/multisite-hub-spoke.svg "Implementação multissite do vCenter Server with Hybridity Bundle")
+![Implementação multisite do vCenter Server with Hybridity Bundle](../images/multisite-hub-spoke.svg "Implementação multisite do vCenter Server with Hybridity Bundle")
 
 O modelo contém as camadas a seguir:
 

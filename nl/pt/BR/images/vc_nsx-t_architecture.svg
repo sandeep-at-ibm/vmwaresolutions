@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 600 302.3" style="enable-background:new 0 0 600 302.3;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#4C84C5;}
+	.st1{fill:#959595;}
+	.st2{fill:#1DA78D;}
+	.st3{fill:#FFFFFF;}
+	.st4{font-family:'Roboto-Light';}
+	.st5{font-size:24px;}
+	.st6{font-size:21px;}
+</style>
+<rect id="left_blue" class="st0" width="297.7" height="100"/>
+<rect id="right_blue" x="305.7" y="0.7" class="st0" width="295.3" height="100"/>
+<rect y="214.7" class="st1" width="600" height="87.3"/>
+<rect y="110" class="st2" width="297.5" height="95"/>
+<rect x="305.3" y="109.3" class="st2" width="294.7" height="95.7"/>
+<text transform="matrix(1 0 0 1 15.8257 42.7046)" class="st3 st4 st5">Gerenciamento de virtualização</text>
+<text transform="matrix(1 0 0 1 343.3569 42.7044)" class="st3 st4 st5">Gerenciamento de rede</text>
+<text transform="matrix(1 0 0 1 28.0393 153.6688)" class="st3 st4 st5">Virtualização de cálculo</text>
+<text transform="matrix(1 0 0 1 341.6111 153.6689)" class="st3 st4 st5">Virtualização de rede</text>
+<text transform="matrix(1 0 0 1 121.0566 250.5371)" class="st3 st4 st5">Infraestrutura física no IBM Cloud </text>
+<text transform="matrix(1 0 0 1 412.2971 283.8423)" class="st3 st4 st6">Rede</text>
+<text transform="matrix(1 0 0 1 273.906 283.8424)" class="st3 st4 st6">Armazenamento</text>
+<text transform="matrix(1 0 0 1 121.1154 283.8432)" class="st3 st4 st6">Cálculo</text>
+<text transform="matrix(1 0 0 1 67.954 186.3333)" class="st3 st4 st6">VMware vSphere</text>
+<text transform="matrix(1 0 0 1 395.3 186.333)" class="st3 st4 st6">VMware NSX</text>
+<text transform="matrix(1 0 0 1 47.5063 75.9495)" class="st3 st4 st6">VMware vCenter Server</text>
+<text transform="matrix(1 0 0 1 350.3597 76.6162)" class="st3 st4 st6">VMware NSX Manager</text>
+</svg>

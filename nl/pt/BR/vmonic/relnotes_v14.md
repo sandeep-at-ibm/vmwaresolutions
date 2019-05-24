@@ -46,7 +46,7 @@ Como parte da instalação do NSX, o NSX Manager é instalado e licenciado em to
 O NSX Controller não é instalado em instâncias do vCenter Server (a maneira como ele é instalado em instâncias do Cloud Foundation). Se você estiver usando a VXLAN ou roteadores lógicos distribuídos para suas instâncias do vCenter Server, você mesmo deverá instalar o NSX Controller.
 {:note}
 
-Para obter mais informações sobre os aprimoramentos que foram introduzidos no VMware NSX for vSphere 6.2.4, seus requisitos e problemas conhecidos, consulte [Notas sobre a liberação do NSX for vSphere 6.2.4](http://pubs.vmware.com/Release_Notes/en/nsx/6.2.4/releasenotes_nsx_vsphere_624.html){:new_window}.
+Para obter mais informações sobre os aprimoramentos que foram introduzidos no VMware NSX for vSphere 6.2.4, seus requisitos e problemas conhecidos, consulte [Notas sobre a liberação do NSX for vSphere 6.2.4](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/rn/releasenotes_nsx_vsphere_624.html){:new_window}.
 
 ### VMware NSX Edge
 {: #relnotes_v14-nsx-edge}
@@ -95,7 +95,7 @@ Por causa dessas mudanças, não é possível usar as instâncias pré-V1.4 exis
 ## Suporte de configuração de vários sites para instâncias do Cloud Foundation
 {: #relnotes_v14-vcf-multisite}
 
-Agora, é possível implementar uma única instância do Cloud Foundation, como em liberações anteriores ou, além disso, implementar instâncias secundárias que estão conectadas a uma instância primária. O modelo de configuração multisite usa uma topologia hub-and-spoke com um site primário e um máximo de sete sites secundários.
+Agora, é possível implementar uma única instância do Cloud Foundation, como em liberações anteriores ou, além disso, implementar instâncias secundárias que estão conectadas a uma instância primária. O modelo de configuração multissite usa uma topologia hub-and-spoke com um site primário e um máximo de sete sites secundários.
 
 ## Aprimoramentos para a implementação de recuperação de desastre do Zerto
 {: #relnotes_v14-zerto}

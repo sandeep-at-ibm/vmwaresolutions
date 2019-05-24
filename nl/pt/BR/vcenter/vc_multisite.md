@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-04"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -50,9 +50,7 @@ Se a sua configuração requerer uma implementação de vários sites com mais d
 
 O gráfico a seguir representa a visão geral da implementação de vários sites do vCenter Server.
 
-Figura 1. Implementação de vários sites do vCenter Server
-
-![Implementação multissite do vCenter Server](../vcenter/multisite-hub-spoke.svg "Implementação multissite do vCenter Server")
+![Implementação de vários sites do vCenter Server](../images/multisite-hub-spoke.svg "Implementação de vários sites do vCenter Server")
 
 O modelo contém as camadas a seguir:
 
@@ -72,4 +70,3 @@ A exclusão de instâncias do vCenter Server que fazem parte de uma configuraç�
 * [Designar função principal ao NSX Manager](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/com.vmware.nsx-cross-vcenter-install.doc/GUID-44E8AE16-BA3F-4DD9-B582-FC1E137E6CFC.html){:new_window}
 * [Configurando gerenciadores NSX secundários](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-9E48BC57-15E3-49C7-8BC5-F94ED8918BBE.html){:new_window}
 * [Microsoft Active Directory Trusts suportado com o VMware vCenter Single Sign-On](https://kb.vmware.com/s/article/2064250){:new_window}
-* [Conectar com segurança suas cargas de trabalho privadas do VMware no {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}

@@ -95,7 +95,7 @@ Os documentos técnicos a seguir estão agora disponíveis na seção *Referênc
 * [ Arquitetura da solução do NSX Edge Services Gateway ](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_overview)
 * [ Guia do VMware Update Manager ](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-intro)
 * [ Guia de rede do vCenter Server ](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro)
-* [Guia do vCenter Server e do {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
+* [ vCenter Server e  {{site.data.keyword.cloud_notm}}  Guia privado ](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
 * [Guia de serviço do vCenter Server e do IBM Kubernetes](/docs/services/vmwaresolutions/archiref/vcsiks?topic=vmware-solutions-vcsiks-intro)
 * [Guia do VMware e do Skate Advisor Concept Car](/docs/services/vmwaresolutions/archiref/vcscar?topic=vmware-solutions-vcscar-intro)
 * [VMware - A jornada de modernização do Stock Trader](/docs/services/vmwaresolutions/archiref/vcscontent?topic=vmware-solutions-vcscontent-modjourney)

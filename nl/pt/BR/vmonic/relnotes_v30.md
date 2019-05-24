@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-30"
+lastupdated: "2019-05-03"
 
 subcollection: vmware-solutions
 
@@ -40,7 +40,7 @@ Iniciando com a liberação da V3.0, os servidores Broadwell 2-CPU não estão m
 ## Aprimoramentos de operação do Network File System
 {: #relnotes_v30-nfs}
 
-Iniciando com a liberação da V3.0, é possível incluir ou remover simultaneamente o armazenamento do Network File System (NFS) em múltiplos clusters. Isso se aplica a todas as instâncias do vCenter Server e do vCenter Server with NSX-T.
+Iniciando com a liberação V3.0, é possível incluir ou remover simultaneamente o armazenamento NFS e os servidores ESXi em clusters que estão no estado **Pronto para uso**. Por exemplo, é possível incluir ou remover um servidor ESXi em um cluster e incluir ou remover o armazenamento NFS em outro cluster. Isso se aplica a todas as instâncias do vCenter Server e do vCenter Server with NSX-T.
 
 ## Atualizações para instâncias do VMware vCenter Server
 {: #relnotes_v30-vcs}
@@ -111,7 +111,7 @@ Agora você é capaz de incluir o Zerto on {{site.data.keyword.cloud_notm}} nas 
 ## Documentação nova e atualizada
 
 * A documentação está agora disponível para ajudar no upgrade de componentes do {{site.data.keyword.vmwaresolutions_short}} para o VMware vSphere 6.7. Esse upgrade será necessário se você desejar continuar se beneficiando da automação do {{site.data.keyword.vmwaresolutions_short}}. Para obter mais informações, consulte [Fazendo upgrade do software vCenter Server vSphere do VMware vSphere 6.5 para 6.7](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_vsphere_upgrade#vc_vsphere_upgrade).
-* A documentação de referência está agora disponível para fornecer os IDs de usuário que o {{site.data.keyword.vmwaresolutions_short}} mantém para uso pela automação do {{site.data.keyword.cloud_notm}}. As mensagens possíveis que são exibidas nos logs do histórico da instância também estão disponíveis para sua revisão. Para obter mais informações, consulte [IDs de usuário da IBM e mensagens do histórico de implementação para instâncias do vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-ibm_use#ibm_use).
+* A documentação de referência está agora disponível para fornecer os IDs de usuário que o {{site.data.keyword.vmwaresolutions_short}} mantém para uso pela automação do {{site.data.keyword.cloud_notm}}. As mensagens possíveis que são exibidas nos logs do histórico da instância também estão disponíveis para sua revisão. Para obter mais informações, consulte [IDs de usuário da IBM](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_user_ids) e [Mensagens do histórico da instância](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_messages).
 * A permissão **Reinicialização/Controle** foi incluída na tabela que descreve as permissões necessárias para a conta de infraestrutura do IBM Cloud. Para obter mais informações, consulte [Permissões para a conta de infraestrutura do {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-slaccountrequirement#slaccountrequirement-permissions).
 * A nova documentação de referência está disponível para as APIs a seguir. Para obter mais informações, consulte [Referência da API](https://cloud.ibm.com/apidocs/vmware-solutions){:new_window}.
   * Listar todas as mensagens de histórico para uma instância especificada do VMware vCenter Server

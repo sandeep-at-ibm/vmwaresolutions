@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -28,8 +28,7 @@ como máquinas virtuais no site de destino do {{site.data.keyword.cloud_notm}} V
 estabelecimento de uma conexão com os componentes do HCX que estão instalados
 no site de origem no local do peer.
 
-Figura 1. vCenter Server with Hybridity Bundle
-![vCenter Server with Hybridity Bundle](vcscontent-hcx.svg)
+![vCenter Server with Hybridity Bundle](../../images/vcscontent-hcx.svg "vCenter Server with Hybridity Bundle")
 
 O hibridismo cria uma interconexão fracamente acoplada entre no local
 e o {{site.data.keyword.cloud_notm}} e permite os recursos a seguir:

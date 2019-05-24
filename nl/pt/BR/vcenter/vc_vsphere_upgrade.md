@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-30"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -93,13 +93,18 @@ Antes de iniciar o upgrade, faça backup de cada componente.
 * Para obter considerações adicionais e informações sobre o backup do vCenter Server e dos PSCs, consulte [Backup baseado em arquivo do vCenter](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_backingup#solution_backingup-vcenter).
 *	Para obter informações sobre o backup do NSX, consulte [Fazendo backup de dados do NSX Manager](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window}.
 
+Recomenda-se usar o backup baseado em arquivo. O backup baseado em imagem (usando o vSphere Data Protection) não é suportado no VMware vSphere 6.7.
+{:note}
+
 ## Procedimento para fazer upgrade do software IBM vCenter Server vSphere de 6.5 para 6.7
 {: #vc_vsphere_upgrade-procedure}
 
 Se você encontrar um problema a qualquer momento durante o processo de upgrade, use o chamado de upgrade do {{site.data.keyword.vmwaresolutions_short}} que foi aberto no início do processo para entrar em contato com o Suporte IBM. O Suporte IBM abre chamados com o suporte do VMware conforme necessário.
 
-Deve-se usar esse caminho para assegurar que o {{site.data.keyword.vmwaresolutions_short}} forneça suporte do VMware com todas as informações necessárias sobre o design do vCenter Server, a configuração e as informações do {{site.data.keyword.cloud_notm}}. Seguir esse processo para assegurar que informações precisas sejam compartilhadas com o suporte do VMware reduz a experiência de suporte. Depois que o Suporte IBM fornece as informações necessárias para o suporte do VMware, é possível interagir diretamente com o suporte do VMware conforme necessário.
-{:important}
+**Importante**:
+
+* Deve-se usar esse caminho para assegurar que o {{site.data.keyword.vmwaresolutions_short}} forneça suporte do VMware com todas as informações necessárias sobre o design do vCenter Server, a configuração e as informações do {{site.data.keyword.cloud_notm}}. Seguir esse processo para assegurar que informações precisas sejam compartilhadas com o suporte do VMware reduz a experiência de suporte. Depois que o Suporte IBM fornece as informações necessárias para o suporte do VMware, é possível interagir diretamente com o suporte do VMware conforme necessário.
+* Assegure-se de manter registro de todas as novas senhas e credenciais criadas como uma parte desse processo de upgrade. O suporte IBM requer essas credenciais no término do processo de upgrade para atualizar seu banco de dados interno.
 
 ### Fazendo upgrade do VMware NSX
 {: #vc_vsphere_upgrade-procedure-nsx}
@@ -168,31 +173,35 @@ Para instâncias vinculadas do vCenter Server, embora seja recomendável fazer u
     2. Use o comando shell **passwd** para configurar uma nova senha raiz para o PSC e o vCenter.
     3. Salve as senhas que foram exibidas no console do {{site.data.keyword.vmwaresolutions_short}} ou fornecidas a você pelo Suporte IBM. Essas senhas são reutilizadas posteriormente ao fazer upgrade dos dispositivos.
 2. Use a função de montagem ISO do Windows integrada para montar o vCenter 6.7u1b ISO dentro de seu jumpbox.
-3. Siga as instruções do VMware para fazer upgrade de todos os PSCs primeiro. Para obter mais informações, consulte [Fazer upgrade de um vCenter Server Appliance 6.0 ou 6.5 com uma instância externa do vCenter Single Sign-On ou do Platform Services Controller usando a GUI](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html).
+3. Siga as instruções do VMware para fazer upgrade do vCenter. Para obter mais informações, consulte [Fazer upgrade de um vCenter Server Appliance 6.0 ou 6.5 com uma instância externa do vCenter Single Sign-On ou do Platform Services Controller usando a GUI](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html). As instruções do VMware são semelhantes ao processo de upgrade do PSC. No entanto, em vez de apontar
+para o PSC, aponte para o vCenter FQDN/IP para o processo de upgrade.
 
-O requisito declarado **Deve-se executar o upgrade da GUI em uma máquina Windows, Linux ou Mac que esteja na mesma rede que o dispositivo do qual você deseja fazer upgrade** se aplica a qualquer sub-rede dentro de seu {{site.data.keyword.cloud_notm}} em sua conta.
-{:note}
-
-É recomendável usar o vCenter como sua origem e destino para o upgrade.
+**Notas**:
+* O requisito declarado **Deve-se executar o upgrade da GUI em uma máquina Windows, Linux ou Mac que esteja na mesma rede que o dispositivo do qual você deseja fazer upgrade** se aplica a qualquer sub-rede dentro de seu {{site.data.keyword.cloud_notm}} em sua conta.
+* É recomendável usar o vCenter como sua origem e destino para o upgrade.
 
 #### Consolidando a função PSC no vCenter
 
 1. Depois de concluir com êxito o upgrade do PSC e do vCenter, efetue login na interface com o usuário baseada no vCenter FLEX e verifique o funcionamento de todos os serviços relacionados ao vCenter e ao PSC na seção **Configuração do sistema**.  
-2. Faça backup do seu PSC.
+2. Faça backup do seu PSC.  Recomenda-se usar o backup baseado em arquivo. Para obter mais informações, consulte [Backup baseado em arquivo no vSphere 6.7](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.install.doc/GUID-8A16C037-F1E0-40C9-B106-05C30625B9CB.html){:new_window}.
 3. Navegue para o diretório ``<VCSA 6.7 iso mount>:\vcsa-converge-cli\templates\converge``.
 4. Copie o arquivo ``converge.json`` para uma unidade local em sua VM de salto.
-5. Navegue para o diretório ``<VCSA 6.7 iso mount>:\vcsa-converge-cli\templates\decommission``.
   * Se este é o primeiro PSC que você está consolidando, deve-se remover a seção **replication** do arquivo ``json``.
   * Se este é um PSC vinculado subsequente, deve-se preencher os atributos solicitados na seção **replication** do arquivo ``json``.
+5. Navegue para o diretório ``<VCSA 6.7 iso mount>:\vcsa-converge-cli\templates\decommission``.
 6. Copie o arquivo ``decommission_psc.json`` para uma unidade local em sua VM de salto.
 7. Edite os arquivos ``converge.json`` e ``decommission_psc.json``. As instruções para os campos a serem editados estão nos arquivos ``json``. É recomendável que o host ESXi contendo o PSC seja usado em vez do vCenter na seção **managing_esxi_or_vc**.
 8. Navegue para o diretório ``<VCSA 6.7 iso mount>:\vcsa-converge-cli\win32`` em uma janela de comando.
 9. Execute o ``vcsa-util.exe`` com o comutador **converge** e o caminho para o arquivo ``converge.json`` editado anteriormente. Por exemplo, ``vcsa-util converge --no-ssl-certificate-verification c:\temp\converge.json -v``.
-  1. Digite **Y** para confirmar se o PSC foi submetido a backup para continuar.
-  2. Quando o processo for concluído, digite **Y** para confirmar a reinicialização do vCenter.
+   1. Digite **Y** para confirmar se o PSC foi submetido a backup para continuar.
+   2. Quando o processo for concluído, digite **Y** para confirmar a reinicialização do vCenter.
+
+   Se o processo converge falhar com a mensagem ``ERRO converge falhou ao obter usuários vecs e as permissões``, consulte [Falha de converge para integrado](https://virtualtassie.com/2018/vcenter-6-7-update-1-converge-to-embedded-failed/#comment-3713){:new_window} para obter as etapas de resolução do erro.
+   {:note}
+
 10. Após o vCenter ser reinicializado, verifique a operação normal efetuando login na interface com o usuário do vCenter.
 11. Navegue para o diretório ``<VCSA 6.7 iso mount>:\vcsa-converge-cli\win32`` em uma janela de comando.
-12. Execute o **vcsa-util.exe** com o comutador **decommission** e o caminho para o arquivo ``decommission_psc.json`` editado anteriormente. Por exemplo, ``vcsa-util decommission --no-ssl-certificate-verification c:\temp\decommission_psc.json -v``.
+12. Execute o ``vcsa-util.exe`` com o comutador **decommission** e o caminho para o arquivo ``decommission_psc.json`` editado anteriormente. Por exemplo, ``vcsa-util decommission --no-ssl-certificate-verification c:\temp\decommission_psc.json -v``.
 13.	Quando o comando for concluído com êxito, efetue login na interface com o usuário do vCenter Flex e verifique se o dispositivo do vCenter é o único listado em ambientes não vinculados e se todos os serviços estão funcionais.
 14. Exclua o PSC antigo, o vCenter e as VMs do PSC consolidadas não usadas.
 15. Renomeie o vCenter Server dentro da interface com o usuário do vCenter para **<instancename>_vc_separate**. Por exemplo, se o nome da instância do vCenter Server for **production**, o nome da interface com o usuário do vCenter será **production_vc_separate**. Isso é necessário para que a automação possa continuar sua função para essa instância do vCenter Server.  
@@ -200,7 +209,7 @@ O requisito declarado **Deve-se executar o upgrade da GUI em uma máquina Window
 ### Fazendo upgrade de hosts ESXi
 {: #vc_vsphere_upgrade-procedure-esxi}
 
-A função VMware Update Manager no vCenter é utilizada para fazer upgrade e corrigir os hosts ESXi para o nível 6.7u1. Semelhante à seção de upgrade do NSX deste documento, qualquer VM que não possa usar vMotion para outro host ou ser encerrada sem problemas pode fazer com que o processo de upgrade seja paralisado.
+A função VMware Update Manager no vCenter é utilizada para fazer upgrade e corrigir os hosts ESXi para o nível 6.7u1. Semelhante à seção de upgrade do NSX deste documento, qualquer VM que não possa usar vMotion para outro host deve ser encerrada sem problemas, caso contrário, isso poderá causar paralisação no processo de upgrade.
 {:note}
 
 #### Fazendo upload do ESXi ISO no VUM
@@ -214,16 +223,17 @@ A função VMware Update Manager no vCenter é utilizada para fazer upgrade e co
 #### Procedimento para fazer upgrade dos hosts ESXi
 {: #vc_vsphere_upgrade-procedure-esxi-upgrade}
 
-1. Na interface com o usuário do vCenter, navegue para o nome do cluster que contém os hosts ESXi para fazer upgrade.
-2. Clique em **corrigir**.
-3. Selecione **Linhas de base de upgrade** no lado esquerdo da caixa de seleção e, em seguida, selecione a linha de base **VMware ESXi 6.7.0 U1** no lado direito da tela de seleção. Clique em **avançar**. Nota: uma linha de base do VUM para ESXi 6.7.0 U1 foi criada quando a imagem ISO foi transferida por upload para o repositório do VUM.
-4. Selecione os hosts dos quais você deseja fazer upgrade e clique em **avançar**.
-5. Selecione a opção para aceitar o EULA e clique em **avançar**.
-6. Na tela Opções avançadas, clique em **avançar** para aceitar os padrões.
-7. Na tela Configurações de correção do host, opcionalmente, selecione para desativar a mídia removível e clique em **avançar**.
-8. Na tela Opções de correção de cluster, clique em **avançar** para aceitar os padrões.
-9. Na tela Pronto para concluir, clique em **Pré-verificar a correção**. Um aviso sobre o controle de admissão de HA é retornado.  
-10. Clique em **concluir** para iniciar os upgrades do host.
+1. Na interface com o usuário do vCenter, navegue para o cluster que contém os hosts ESXi para fazer upgrade.
+2. Clique na guia de **atualizações** no painel de navegação. Acesse as atualizações do host e clique em **Conectar**.
+3. Selecione a linha de base (imagem ISO para upgrade do ESXi) transferida por upload para o VUM e clique em **Corrigir**.
+4. Aceite o Contrato de Licença do Usuário Final e clique em **OK**.
+5. Revise os hosts a serem corrigidos e confirme os resultados da verificação de pré-correção.
+
+   Deve-se remover quaisquer CDs ou DVDs conectados às VMs ou o host que contém essa VM não terá permissão para entrar no modo de manutenção.
+   {:note}
+
+6. Depois que a verificação de pré-correção for bem-sucedida, clique em **Corrigir**. Monitore o processo de upgrade com a tarefa de entidade de correção.
+7. Após a conclusão do upgrade, revise a seção de resumo do host para confirmar que o ``VMware ESXi, 6.7.0`` está exibido.
 
 Se o processo de upgrade falhar imediatamente e exibir a mensagem de erro **o host não pode entrar no modo de manutenção**, encerre os Zerto ZVAs e tente novamente. As VMs do ZVRA iniciam automaticamente quando cada servidor sai da correção. Para obter informações sobre como continuar a replicação do Zerto durante o processo de upgrade, consulte [Como colocar um host com um VRA associado no modo de manutenção](https://www.zerto.com/myzerto/knowledge-base/place-host-into-maintenance-mode-with-vra/){:new_window}.
 {:note}
@@ -245,9 +255,12 @@ Localize a imagem no repositório de correção como uma Extensão de host **imp
 
 Após o upgrade, é recomendável aplicar todas as correções críticas e não críticas do host ESXi.
 
-1. Na interface com o usuário do vCenter, selecione o cluster que contém os hosts a serem corrigidos e selecione a guia **Update Manager**.
-2. Selecione **corrigir** e selecione **Correções não críticas do host**.
-3. Continue como foi feito anteriormente com o upgrade do ESXi. Observe que pode ser necessário encerrar as VMs do Zerto ZVRA novamente como parte desse processo
+1. Na interface com o usuário do vCenter, selecione o cluster que contém os hosts a serem corrigidos.
+2. Clique na guia de **atualizações** no painel de navegação e selecione a guia **Atualizações do host**. Selecione **Correções críticas do host (predefinidas)**. Repita o procedimento para fazer upgrade dos hosts ESXi.
+3. Clique na guia de **atualizações** no painel de navegação e selecione a guia **Atualizações do host**. Selecione **Correções não críticas do host (predefinidas)**. Repita o procedimento para fazer upgrade dos hosts ESXi.
+
+Talvez seja necessário encerrar as VMs Zerto zVRA novamente como parte deste processo.
+{:note}
 
 ### Fazendo upgrade de itens adicionais
 {: #vc_vsphere_upgrade-procedure-addtl}
@@ -286,6 +299,22 @@ Use a interface com o usuário do vCenter para executar upgrades de ferramentas 
 
 Semelhante a ferramentas guest do VMware, um upgrade de ambiente do vCenter Server pode fazer com que as VMs mais antigas fiquem em um estado não suportado em seu nível de hardware atual. Use a interface com o usuário do vCenter para localizar e atualizar essas VMs conforme necessário.  
 
+#### Configurando o modo Enhanced vMotion Compatibility para o Intel Skylake
+{: #vc_vsphere_upgrade-procedure-addtl-evc}
+
+É possível configurar hosts com a geração do Intel Skylake para um cluster no modo Skylake Enhanced vMotion Compatibility (EVC) após o upgrade. Use as etapas a seguir para atualizar o modo EVC:
+
+1. No cluster que contém os hosts, clique em **Configurar**.
+2. No **VMware EVC**, clique em **Editar** e mude o modo de EVC para **Geração Intel "Skylake"**.
+
+Para obter mais informações, consulte [Suporte ao processador Enhanced vMotion Compatibility (EVC) (1003212)](https://kb.vmware.com/s/article/1003212){:new_window}.
+
+#### Reconfigurando o gerenciador NSX e o gerenciador HCX para apontar para o PSC
+
+1. Em um navegador da web, navegue até a interface com o usuário do dispositivo NSX Manager em ``https://<nsx-manager-ip>`` ou ``https://<nsx-manager-hostname>``. Efetue login com as credenciais.
+2. Na página inicial, clique em **Gerenciar registro do vCenter**.
+3. Edite a **URL de serviço de consulta** para apontar para o IP do vCenter. Use o PSC independente integrado **O PSC não existe mais**.
+
 ## Resultados após o upgrade do software vCenter Server vSphere
 {: #vc_vsphere_upgrade-results}
 
@@ -298,7 +327,7 @@ A execução da verificação de funcionamento do vSAN após seu upgrade ser con
 5. Anote os hosts listados com recomendações de atualização de firmware.
 6. Abra um chamado com o Suporte IBM para planejar um horário para retirar cada host de serviço para permitir atualizações de firmware.
 
-Quando seu upgrade estiver concluído, atualize o chamado de suporte com o Suporte IBM. O Suporte IBM então atualiza o console do {{site.data.keyword.vmwaresolutions_short}} para continuar a automação do {{site.data.keyword.vmwaresolutions_short}} em um nível 6.7. Isso inclui incluir e remover serviços, hosts, cluster e instâncias secundárias do vCenter Server.
+Quando seu upgrade estiver concluído, atualize o chamado de suporte com o Suporte IBM. Forneça as novas senhas criadas como uma parte desse processo de upgrade. Por exemplo, forneça senhas para implementar os serviços de gerenciamento de dispositivo, PSC e vCenter, no chamado de suporte. O suporte IBM atualiza então o console do {{site.data.keyword.vmwaresolutions_short}} e o banco de dados interno para continuar a automação do {{site.data.keyword.vmwaresolutions_short}} em um nível 6.7. Isso inclui incluir e remover serviços, hosts, cluster e instâncias secundárias do vCenter Server.
 
 ## Links relacionados
 {: #vc_vsphere_upgrade-related}

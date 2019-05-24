@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -25,8 +25,7 @@ data center virtualizado do VMware no local.
 
 Os componentes do VMware HCX, que são implementados como máquinas virtuais (MVs) no site de destino do vCenter Server, permitem o estabelecimento de uma conexão com os componentes do VMware HCX que estão instalados no site de origem no local do peer.
 
-Figura 1. Serviço VMware Hybrid Cloud Extension
-![Serviço VMware Hybrid Cloud Extension](vcsnsxt-hcx-1.svg)
+![Serviço VMware Hybrid Cloud Extension](../../images/vcsnsxt-hcx-1.svg "Serviço VMware Hybrid Cloud Extension")
 
 A interconectividade fracamente acoplada entre no local e o {{site.data.keyword.cloud_notm}} permite recursos, tais como:
 - **Interconectividade simples** - as conexões de rede lógica são estabelecidas facilmente sobre qualquer conexão física que inclua a Internet pública, a VPN privada ou o link direto.
@@ -54,8 +53,7 @@ Usando a automação do {{site.data.keyword.cloud_notm}}, o Acme Skateboards pod
 
 Para obter mais informações sobre NSX-V, veja [Visão geral do NSX-V](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv). Para obter mais informações sobre o vCenter Server e a oferta {{site.data.keyword.icpfull_notm}}, veja [vCenter Server e {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro).
 
-Figura 2. vCenter Server com {{site.data.keyword.icpfull_notm}}</br>
-![vCenter Server com {{site.data.keyword.icpfull_notm}}](vcsnsxt-nsxvhl.svg)
+![vCenter Server com {{site.data.keyword.icpfull_notm}}](../../images/vcsnsxt-nsxvhl.svg "vCenter Server com {{site.data.keyword.icpfull_notm}}")
 
 Isso cria uma interconectividade fracamente acoplada entre o local e o {{site.data.keyword.cloud_notm}} e permite recursos como:
 -	**Interconectividade simples** - as conexões de rede lógica são estabelecidas facilmente sobre qualquer conexão física, incluindo a Internet pública, a VPN privada ou o link direto.
@@ -68,7 +66,7 @@ Isso cria uma interconectividade fracamente acoplada entre o local e o {{site.da
 -	**Migração planejada** – qualquer número de MVs pode ser replicado para o site de destino e, em seguida, ativado nesse site em um horário designado para substituir os sistemas em execução no site de origem.
 -	**Migração de políticas de segurança** – se o NSX for usado no local, quaisquer políticas de segurança, firewalls e assim por diante serão movidos juntamente com a carga de trabalho.
 
-Usando essa solução, o Acme Skateboards foi capaz de migrar suas cargas de trabalho do VMware no local com êxito para o {{site.data.keyword.cloud_notm}} atendendo a seus requisitos de pouco a nenhum tempo de inatividade e nenhuma reconfiguração do aplicativo. Para obter mais informações sobre o vCenter Server with Hybridity Bundle, consulte [Arquitetura de solução do VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro).
+Usando essa solução, o Acme Skateboards foi capaz de migrar suas cargas de trabalho do VMware no local com êxito para o {{site.data.keyword.cloud_notm}} atendendo a seus requisitos de pouco a nenhum tempo de inatividade e nenhuma reconfiguração do aplicativo. Para obter mais informações sobre o vCenter Server with Hybridity Bundle, consulte [Arquitetura da solução VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro).
 
 ## Links relacionados
 {: #vcsnsxt-usecases-related}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-15"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -19,8 +19,7 @@ As ofertas nesse portfólio de solução incluem os produtos do VMware vSphere d
 
 A arquitetura consiste em uma única região de nuvem e suporta a capacidade de se estender em mais regiões de nuvem que estão localizadas em outra geografia e em outro pod do {{site.data.keyword.cloud_notm}} dentro do mesmo data center. Uma região é definida como uma instância exclusiva do vCenter Server. Esse design também permite a expansão automatizada e a contração da capacidade virtual dentro de uma instância do vCenter Server.
 
-Figura 1. Os componentes da solução do {{site.data.keyword.vmwaresolutions_short}}
-![Os componentes da solução do {{site.data.keyword.vmwaresolutions_short}}](vcsv4radiagrams-ra-full.svg "A solução inclui infraestrutura física, infraestrutura virtual, gerenciamento de infraestrutura e serviços comuns.")
+![Componentes da solução do {{site.data.keyword.vmwaresolutions_short}}](../../images/vcsv4radiagrams-ra-full.svg "A solução inclui a infraestrutura física, a infraestrutura virtual, o gerenciamento de infraestrutura e os serviços comuns.")
 
 ## Links relacionados
 {: #design_overview-related}

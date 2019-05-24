@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -90,7 +90,7 @@ Revise as considerações a seguir antes de remover o serviço IBM Spectrum Prot
 ## Links relacionados
 {: #spp_considerations-related}
 
-* [Planejamento de serviço preventivo do IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](http://www.ibm.com/support/docview.wss?uid=swg22012650)
+* [IBM Spectrum Protect Plus no Planejamento de serviço preventivo do {{site.data.keyword.cloud_notm}}](https://www-01.ibm.com/support/docview.wss?uid=swg22012650){:new_window}
 * [Gerenciando o IBM Spectrum Protect Plus no {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingspp)
 * [Solicitando IBM Spectrum Protect Plus no {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-spp_ordering)
 * [Documentação do IBM Spectrum Protect Plus](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html)

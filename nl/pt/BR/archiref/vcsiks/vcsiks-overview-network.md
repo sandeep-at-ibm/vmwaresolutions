@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -28,8 +28,7 @@ Por padrão, o {{site.data.keyword.containerlong_notm}} configura o cluster com 
 - Um endereço IP privado para cada nó do trabalhador, que fornece aos nós do trabalhador uma interface de rede privada
 - Uma conexão OpenVPN automática e segura entre todos os nós do trabalhador e o nó principal
 
-Figura 1. Rede do vCenter Server e do {{site.data.keyword.containerlong_notm}}
-![Diagrama da rede do vCenter Server-{{site.data.keyword.containerlong_notm}}](vcsiks-networking.svg)
+![vCenter Server - Diagrama de rede do {{site.data.keyword.containerlong_notm}}](../../images/vcsiks-networking.svg "vCenter Server - Diagrama de rede do {{site.data.keyword.containerlong_notm}}")
 
 ### Integração do IBM Cloud Kubernetes Service e do vCenter Server
 {: #vcsiks-overview-network-iks-vcs-integration}

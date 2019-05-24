@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -130,13 +130,11 @@ Os dispositivos Layer 2 concentrators (L2C) permitem a extensão de uma rede da 
 
 Esta seção descreve o layout dos componentes do HCX dentro do IBM Cloud e com o cliente no local. Nesse design, a arquitetura especifica um modelo hub-and-spoke que existe entre o ambiente de origem e o IBM Cloud. Desse modo, o estado de origem serve como o hub com conexões para diferentes ambientes do IBM Cloud, conforme mostrado na figura a seguir.
 
-Figura 1. HCX com origem única
-![HCX com origem única](hcx_single_source.svg)
+![HCX com fonte isolada](../../images/cloudfoundation_hybrid_cloud_services.svg "HCX com fonte isolada")
 
 A origem também pode ser feita dentro do ambiente do IBM Cloud; os spokes são sempre implementações na nuvem dentro desse design, conforme mostrado na figura a seguir.
 
-Figura 2. HCX com múltiplas origens
-![HCX com múltiplas origens](hcx_multiple_sources.svg)
+![HCX com diversas fontes](../../images/hcx_multiple_sources.svg "HCX com diversas fontes")
 
 ### Visão Geral de Uso
 {: #hcx-archi-overview-usage-ovw}

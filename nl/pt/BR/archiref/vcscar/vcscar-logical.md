@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -19,8 +19,7 @@ As informações a seguir detalham os elementos de aplicativo que formam o desig
 ## Componentes do sistema
 {: #vcscar-logical-sys-comp}
 
-Figura 1. Componentes do Skate Advisor
-![Componentes do Skate Advisor](vcscar-components.svg)
+![Componentes do Skate Advisor](../../images/vcscar-components.svg "Componentes do Skate Advisor")
 
 O Skate Advisor consiste principalmente em um robô de bate-papo que pode aceitar o reconhecimento de texto ou fala para interagir com o sistema de uma maneira estruturada.
 
@@ -77,9 +76,7 @@ O robô de bate-papo é um componente da web que conversa com o usuário. O rob�
 
 Os robôs de bate-papo interagem com o sistema da maneira a seguir:
 
-Figura 2. Consulta típica do robô de bate-papo
-</br>
-![Consulta típica do robô de bate-papo](vcscar-query.svg)
+![Consultas típicas do robô de bate-papo](../../images/vcscar-query.svg "Consultas típicas do robô de bate-papo")
 
 Tabela 2. Interações do robô de bate-papo
 
@@ -136,9 +133,7 @@ API exposta tem as categorias gerais a seguir:
 
 O Watson Discovery deve ser treinado por meio de um modelo de aprendizado de máquina, que é criado de forma iterativa por um especialista no assunto, usando o Watson Knowledge Studio.
 
-Figura 3. Treinamento do serviço de descoberta
-</br>
-![Treinamento do serviço de descoberta](vcscar-training.svg)
+![Treinamento do Discovery Service](../../images/vcscar-training.svg "Treinamento do Discovery Service")
 
 Para o Skate Advisor, o modelo consiste no relacionamento entre os tipos de entidade com uma combinação de treinamento baseado em regra e treinamento baseado em dicionário para criar um modelo. Esse modelo permite que o Discovery Service reconheça e classifique as manobras que são alimentadas por meio de artigos e descrições de vídeo que são usados como o conjunto de treinamento.
 

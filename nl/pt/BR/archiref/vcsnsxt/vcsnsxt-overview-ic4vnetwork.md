@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -18,8 +18,7 @@ O {{site.data.keyword.cloud}} manipula a rede física. As informações a seguir
 
 A rede física do {{site.data.keyword.cloud_notm}} é separada em três redes distintas: pública, privada e de gerenciamento.
 
-Figura 1. Visualização de rede de alto nível do {{site.data.keyword.cloud_notm}}
-![Visualização de rede de alto nível do {{site.data.keyword.cloud_notm}}](vcsnsxt-ic4vcloud.svg)
+![Visualização de rede de alto nível do {{site.data.keyword.cloud_notm}}](../../images/vcsnsxt-ic4vcloud.svg "Visualização de rede de alto nível do {{site.data.keyword.cloud_notm}}")
 
 ## Rede pública
 {: #vcsnsxt-overview-ic4vnetwork-public-net}
@@ -55,9 +54,7 @@ As contas do {{site.data.keyword.cloud_notm}} também podem ser configuradas com
 
 Cada host físico dentro do design tem dois pares redundantes de conexões Ethernet de 10 Gbps em cada comutador Top of Rack (ToR) do {{site.data.keyword.cloud_notm}} (público e privado). Os adaptadores são configurados como conexões individuais (desvinculadas) para um total de 4 × conexões de 10 Gbps. Isso permite que cada conexão da placa de interface de rede (NIC) funcione independentemente das outras.
 
-Figura 2. Conexões de host físico
-</br>
-![Conexões de host físico](vcsnsxt-host-connections.svg)
+![Conexões de host físico](../../images/vcsnsxt-host-connections.svg "Conexões de host físico")
 
 ## VLANs
 {: #vcsnsxt-overview-ic4vnetwork-vlans}

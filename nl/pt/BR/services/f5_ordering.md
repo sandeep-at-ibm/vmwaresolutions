@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-04"
+lastupdated: "2019-05-09"
 
 subcollection: vmware-solutions
 
@@ -33,6 +33,16 @@ subcollection: vmware-solutions
 É possível incluir o serviço F5 on {{site.data.keyword.cloud_notm}} em uma instância existente usando um dos métodos a seguir:
 * No console do {{site.data.keyword.vmwaresolutions_short}}, visualize a instância para a qual você deseja incluir o serviço, clique em **Serviços** na área de janela de navegação esquerda e clique em **Incluir**.
 * No catálogo do {{site.data.keyword.cloud_notm}}, selecione **F5 on IBM Cloud**, especifique as configurações de serviço e selecione **Incluir em instância existente**.
+
+## Pedindo o F5 on IBM Cloud para instâncias privadas
+{: #f5_ordering-private}
+
+Ao pedir o F5 on {{site.data.keyword.cloud_notm}} para instâncias não configuradas com interfaces públicas, deve-se fornecer um servidor proxy para concluir a instalação. O servidor proxy HTTP deve ser configurado e disponibilizado por meio do Virtual Routing and Forwarding (VRF) antes que a instalação do F5 on {{site.data.keyword.cloud_notm}} possa ser iniciada.
+
+Os terminais do BigIP Virtual Edition (VE) devem ser capazes de ativar sua licença antes de se tornarem operacionais. Depois que os terminais do BigIP VE estiverem instalados, eles não precisarão mais usar o servidor proxy.
+
+O serviço F5 on {{site.data.keyword.cloud_notm}} não pode ser incluído sem um servidor proxy funcional no momento da instalação do serviço.
+{:note}
 
 ## F5 na configuração do serviço IBM Cloud
 {: #f5_ordering-config}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-09"
 
 subcollection: vmware-solutions
 
@@ -17,8 +17,7 @@ subcollection: vmware-solutions
 ## Componentes do VMware vCenter Server on IBM Cloud
 {: #vcsicp-arch-overview-solution-vcs-comp}
 
-Figura 1. Diagrama do ambiente do vCenter Server
-![Ambiente do VCS](vcsicp-vcsenv.svg)
+![Ambiente do vCenter Server](../../images/vcsicp-vcsenv.svg "Estrutura física do vCenter Server e implementação do {{site.data.keyword.icpfull_notm}}")
 
 ### Platform Service Controller
 {: #vcsicp-arch-overview-solution-psc}
@@ -35,7 +34,7 @@ Como o controlador de serviços de plataforma, o vCenter Server é implementado 
 
 O NSX Manager é implementado no cluster inicial. Além disso, o NSX Manager é designado a um endereço IP suportado pela VLAN por meio do bloco de endereço móvel privado que está designado a componentes de gerenciamento e configurado com os servidores DNS e NTP
 
-### NSX Controllers
+### Controladores NSX
 {: #vcsicp-arch-overview-solution-nsx-controllers}
 
 A automação do {{site.data.keyword.cloud}} implementa três Controladores NSX dentro do cluster inicial. Os controladores são designados a um endereço IP suportado pela VLAN por meio da sub-rede móvel privada que é designada a componentes de gerenciamento.
@@ -49,27 +48,26 @@ A tabela a seguir resume as especificações do {{site.data.keyword.icpfull_notm
 
 Tabela 1. Especificações do {{site.data.keyword.icpfull_notm}} ESG
 
-Atributo  |  Especificação
---|--
-Gateway de Serviço de Edge  |  Dispositivo Virtual
-Tamanho de borda Grande |   Número de vCPUs 2
-Memória	| Disco de 1 GB	| 1000 GB no armazenamento de dados local
+| Atributo | Especificação |
+|:--------- |:------------- |
+| Gateway de Serviço de Edge | Dispositivo Virtual |
+| Tamanho de borda Grande | Número de vCPUs 2 |
+| Memória | Disco de 1 GB	| 1000 GB no armazenamento de dados local |
 
 Tabela 2. Especificações do {{site.data.keyword.icpfull_notm}} DLR
 
-Atributo  |  Especificação
---|--|
-Roteador Lógico Distribuído | 	Dispositivo Virtual
-Tamanho de borda	Compacto | Número de vCPUs 1
-Memória	| Disco de 512 MB	| 1000 GB no armazenamento de dados local
+| Atributo | Especificação |
+|:--------- |:------------- |
+| Roteador Lógico Distribuído | Dispositivo Virtual |
+| Tamanho de borda	Compacto | Número de vCPUs 1 |
+| Memória	| Disco de 512 MB	| 1000 GB no armazenamento de dados local |
 
 ## Componentes do IBM Cloud Private
 {: #vcsicp-arch-overview-solution-icp-comp}
 
 O {{site.data.keyword.icpfull_notm}} é uma plataforma de aplicativo para desenvolver e gerenciar aplicativos conteinerizados no local. É um ambiente integrado para gerenciar contêineres, que inclui o orquestrador de contêiner Kubernetes, um repositório de imagem privada, um console de gerenciamento e estruturas de monitoramento.
 
-Figura 2. Implementação do {{site.data.keyword.icpfull_notm}} virtual com o vCenter Server
-![Implementação do {{site.data.keyword.icpfull_notm}} virtual com o VCS](vcsicp-virtual-icp-deployment-vcs.svg)
+![Implementação virtual do {{site.data.keyword.icpfull_notm}} com o vCenter Server](../../images/vcsicp-virtual-icp-deployment-vcs.svg "Implementação virtual do {{site.data.keyword.icpfull_notm}} com o vCenter Server")
 
 ###	Nó de Inicialização
 {: #vcsicp-arch-overview-solution-boot-node}
@@ -105,30 +103,29 @@ As especificações de MVs a seguir são necessárias para uma instância do {{s
 
 Tabela 3. {{site.data.keyword.icpfull_notm}}  especificações da máquina virtual
 
-Nó | 	Instâncias	| IP	| CPU	| RAM (GB)	| DISCO (GB)
-:-----|------------:|:----|----:|----------:|----------:|
-Mestrado|	3	| IP (x3) VIP (x1)	| 4	| 64	| 200
-Gerenciamento	|3	| IP (x3)	|8	|64	|500
-Proxy	| 3	| IP (x3) VIP (x1)	|2	|4	|150
-Vulnerability Advisor	|3	| IP (x3)	| 4	| 16	|500
-GlusterFS	| 3	| IP (x3)	|8	|16	|150
-Trabalhador	| 3-6	| IP (x3)	|4-8	|4	|150
+| Nó | Instâncias | IP	| CPU	| RAM (GB)	| DISCO (GB) |
+|:---- |:--------- |:-- |:--- |:--------- |:--------- |
+| Mestrado | 3	| IP (x3) VIP (x1)	| 4	| 64	| 200 |
+| Gerenciamento	| 3	| IP (x3)	| 8	| 64	| 500 |
+| Proxy	| 3	| IP (x3) VIP (x1)	| 2	| 4	| 150 |
+| Vulnerability Advisor	| 3	| IP (x3)	| 4	| 16	| 500 |
+| GlusterFS	| 3	| IP (x3)	| 8	| 16	| 150 |
+| Trabalhador	| 3-6	| IP (x3)	| 4-8	| 4	| 150 |
 
 O CAM requer que os nós do trabalhador tenham uma configuração de vCPU e de memória mais alta.
 
 Tabela 4. {{site.data.keyword.icpfull_notm}}  especificações da máquina virtual
 
-Nó | 	Instâncias	| IP	| CPU	| RAM (GB)	| DISCO (GB)
-:-----|------------:|:----|----:|----------:|----------:|
-trabalhador  |  3 | IP (x3)  |  4-8 |16-20   |  150
+| Nó | Instâncias	| IP | CPU	| RAM (GB)	| DISCO (GB) |
+|:---- |:---------- |:-- |:---- |:--------- |:--------- |
+| trabalhador | 3 | IP (x3) | 4-8 | 16-20 | 150 |
 
 ## Componentes do CAM
 {: #vcsicp-arch-overview-solution-cam-comp}
 
 O {{site.data.keyword.cloud_notm}} Automation Manager (CAM) é uma plataforma de gerenciamento de autoatendimento multinuvem, executada no {{site.data.keyword.icpfull_notm}}, que confere poderes aos Desenvolvedores e administradores para atender às demandas de negócios.
 
-Figura 3. Referência de componente do CAM</br>
-![Referência de componente do CAM](vcsicp-cam-component-ref.svg)
+![Referência de componente do CAM](../../images/vcsicp-cam-component-ref.svg "Referência de componente do CAM")
 
 ### Proxy CAM
 {: #vcsicp-arch-overview-solution-cam-proxy}

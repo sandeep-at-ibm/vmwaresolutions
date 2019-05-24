@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -47,9 +47,7 @@ O diagrama a seguir descreve a implementação de referência do aplicativo
 Acme Skate Advisor em uma implementação de infraestrutura de modernização de
 aplicativo.
 
-Figura 1. Componentes físicos do Skate Advisor
-</br>
-![Componentes físicos do Skate Advisor](vcscar-physical.svg)
+![Componentes físicos do Skate Advisor](../../images/vcscar-physical.svg "Componentes físicos do Skate Advisor")
 
 O aplicativo Skate Advisor amplia o aplicativo da web Acme existente
 com um componente baseado em microsserviços que interage com o Watson e um
@@ -87,9 +85,7 @@ descrito.
 * Modelo VMWare - o modelo VMWare é um modelo Ubuntu com o mysql
 e o esquema do banco de dados pré-instalados.
 
-Figura 2. Orquestração do CAM
-</br>
-![Orquestração do CAM](vcscar-cam.svg)
+![Orquestração do CAM](../../images/vcscar-cam.svg "Orquestração do CAM")
 
 ### Balanceamento de carga e proxy
 {: #vcscar-physical-load-balance-proxy}
@@ -143,9 +139,7 @@ implementação.
 A plataforma de modernização de aplicativo foi projetada com os
 componentes a seguir para atingir esse objetivo.
 
-Figura 3. Acesso à rede pública
-</br>
-![Acesso à rede pública](vcscar-network.svg)
+![Acesso à rede pública](../../images/vcscar-network.svg "Acesso à rede pública")
 
 O {{site.data.keyword.cloud_notm}} tem duas redes. A rede pública permite que os servidores sejam acessados da Internet e a rede privada permite que os servidores se comuniquem entre si por meio de um backbone de alta velocidade em todos os {{site.data.keyword.CloudDataCents_notm}}.
 
@@ -168,9 +162,7 @@ vice-versa.
 O aplicativo Skate Advisor usa os componentes de software
 a seguir.
 
-Figura 4. Mapeamento de software do Skate Advisor
-</br>
-![Mapeamento de software do Skate Advisor](vcscar-sw-mapping.svg)
+![Mapeamento de software do Skate Advisor](../../images/vcscar-sw-mapping.svg "Mapeamento de software do Skate Advisor")
 
 Os componentes de software a seguir são usados:
 
@@ -193,8 +185,7 @@ O Acme Skate Advisor reside no {{site.data.keyword.cloud_notm}} e, como tal, é 
 aspecto crítico da Arquitetura. O {{site.data.keyword.cloud_notm}} tem a arquitetura
 a seguir.
 
-Figura 5. Gerenciamento de nuvem
-![Gerenciamento na nuvem](vcscar-cloud-management.svg)
+![Gerenciamento na nuvem](../../images/vcscar-cloud-management.svg "Gerenciamento na nuvem")
 
 Esse diagrama representa o {{site.data.keyword.icpfull_notm}} e o CAM implementados em uma instância
 do vCenter Server, com conexões com o vCenter no local e o serviço

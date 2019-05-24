@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-13"
 
 subcollection: vmware-solutions
 
@@ -63,8 +63,7 @@ Atributo | Especificação
 
 A figura a seguir mostra o posicionamento dos controladores do NSX Manager em relação aos outros componentes nessa arquitetura.
 
-Figura 1. Visão geral da rede do NSX-T Manager
-![Visão geral da rede do NSX-T Manager](vcsv4radiagrams-ra-vcs-nsx-overview.svg)
+![Visão geral de rede do NSX-T Manager](../../images/vcsv4radiagrams-ra-vcs-nsx-overview.svg "Visão geral de rede do NSX-T Manager")
 
 ## Considerações de implementação
 {: #nsx-t-design-deployment}
@@ -175,11 +174,9 @@ Nome do comutador lógico | VLAN |Zona de transporte | Política de formação d
 
 Dentro desse design, um único cluster de borda virtual é provisionado para uso por gerenciamento e cargas de trabalho do cliente. O cluster de borda virtual pode abrigar múltiplas instâncias de Gateways T0. Conforme descrito anteriormente, múltiplas instâncias de gateway de borda do T0 podem ser instanciadas em um cluster de borda única, cada uma com as suas próprias tabelas de roteamento. Consulte a figura a seguir que diagrama os componentes funcionais de um cluster de borda do NSX-T.
 
-Figura 2. Exemplo de cluster de borda do NSX-T de escala de T0 a T1
-![Exemplo de cluster de borda do NSX-T de escala de T0 a T1](vcsv4radiagrams-ra-nsx-t-edge-cluster-t0-to-t1-scale.svg)
+![Exemplo de cluster de borda do NSX-T da escala T0 para T1](../../images/vcsv4radiagrams-ra-nsx-t-edge-cluster-t0-to-t1-scale.svg "Exemplo de cluster de borda do NSX-T da escala T0 para T1")
 
-Figura 3. Gateway de gerenciamento T0</br>
-![Gateway de gerenciamento T0](vcsv4radiagrams-topology-0.svg)
+![Gateway T0 de gerenciamento](../../images/vcsv4radiagrams-topology-0.svg "Gateway T0 de gerenciamento")
 
 #### Gateway lógico da Camada 0
 {: #nsx-t-design-tier-0}
@@ -201,8 +198,7 @@ Para fornecer a conectividade da Camada três entre VMs conectadas a comutadores
 
 Carga de trabalho para gateway T1 para T0 – cluster de borda virtual
 
-Figura 4. Gateway de borda T0 de topologia virtual implementada do NSX-T
-![Gateway de borda T0 de topologia virtual implementada do NSX-T](vcsv4radiagrams-topology-1.svg)
+![Gateway de borda T0 virtual de topologia implementada NSX-T](../../images/vcsv4radiagrams-topology-1.svg "Gateway de borda T0 virtual de topologia implementada NSX-T")
 
 A topologia 1 implementada pelo IC4V é basicamente a mesma topologia que é implementada com o NSX-V DLR e Gateways de borda. Com o NSX-T, nenhuma configuração de protocolo de roteamento dinâmico entre T1 e T0. O espaço de endereço IP do RFC-1891 é usado para a rede de sobreposição de carga de trabalho e a rede de sobreposição de trânsito. Um espaço de IP móvel privado e público do cliente é designado para o uso do cliente. Um espaço de IP móvel privado e público do {{site.data.keyword.cloud_notm}} designado pelo cliente é designado ao T0 para uso do cliente.
 
@@ -210,8 +206,7 @@ A partir desse design, você terá a opção de não excluir esses intervalos de
 
 Carga de trabalho para gateway T1 para T0 – cluster de borda virtual:
 
-Figura 5. Gateway de borda T0 de topologia física implementada do NSX-T
-![Gateway de borda T0 de topologia física implementada do NSX-T](vcsv4radiagrams-topology-2.svg)
+![Gateway de borda T0 físico de topologia implementada NSX-T](../../images/vcsv4radiagrams-ra-vcs-nsx-overview.svg "Gateway de borda T0 físico de topologia implementada NSX-T")
 
 A Topologia implementada 2 é semelhante à exceção que substitui o cluster de borda baseado em VM por um par de servidores bare metal que executam o Red Hat Server. Um espaço de IP móvel privado e público do {{site.data.keyword.cloud_notm}} designado pelo cliente é designado ao T0 para uso do cliente. A partir desse design, você terá a opção de não excluir esses intervalos de IP se a instância do vCenter Server for desatribuída e excluída.
 
@@ -219,8 +214,7 @@ Consulte um documento separado ou um link para obter a lista de materiais sobre 
 
 Carga de trabalho com gateway do ICP para T0 – cluster de borda virtual:
 
-Figura 6. Topologia implementada do NSX-T com a integração do ICP NSX-T e o gateway de borda virtual T0
-![Topologia implementada do NSX-T com a integração do ICP NSX-T e o gateway de borda virtual T0](vcsv4radiagrams-topology-3.svg)
+![Topologia implementada NSX-T com integração ICP NSX-T e Gateway de borda T0 virtual](../../images/vcsv4radiagrams-topology-3.svg "Topologia implementada NSX-T com integração ICP NSX-T e Gateway de borda T0 virtual")
 
 A Topologia 3 implementada contém a Topologia 1 com a inclusão de uma implementação do ICP que apresenta a integração do NSX-T no lugar do Calico, que é a pilha de rede padrão dentro de uma implementação do ICP. O cliente pode provisionar espaços de nomes de contêineres adicionais dentro do ICP, o que automatiza a criação de comutadores lógicos, de sub-rede de IP e de instâncias do Gateway T1 por cada namespace.
 

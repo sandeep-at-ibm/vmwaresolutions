@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -28,9 +28,7 @@ A arquitetura interna especifica a implementação dos componentes necessários 
 O VMware vSAN é opcional na figura a seguir.
 {:note}
 
-Figura 1. Serviços de rede de nuvem no {{site.data.keyword.cloud_notm}}
-
-![Arquitetura dos Serviços de rede de nuvem](architecture.svg "Arquitetura dos Serviços de rede de nuvem")
+![Arquitetura do Cloud Networking Services](../../images/architecture.svg "Arquitetura do Cloud Networking Services")
 
 ## Design de arquitetura dedicada
 {: #nsx_design-dedicated-archi}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-24"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -133,7 +133,7 @@ Instale o HCX Enterprise Manager local e configure a conexão com a instância d
       1. Clique na guia **Administração**.
       2. Na guia **Atualizações do Sistema**, clique em **SOLICITAR LINK DE DOWNLOAD**.
       3. Clique em **COPIAR LINK** e, em seguida, use esse link para fazer download do HCX Enterprise Client para um ambiente local com acesso ao ambiente do vSphere local.
-3. No VMware vSphere Web Client, implemente o HCX Enterprise Client como um dispositivo virtual do HCX Manager (HCX Manager) em seu ambiente local. Para obter mais informações, consulte [Instalando o VMware HCX Enterprise Manager OVA](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-C61E107C-1F5F-4615-9BA9-351900CDB69E.html).
+3. No VMware vSphere Web Client, implemente o HCX Enterprise Client como um dispositivo virtual do HCX Manager (HCX Manager) em seu ambiente local. Siga as instruções no [Guia do Usuário do VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}.
 
     Deve-se implementar o HCX Manager local em uma rede privada e permitir que ele acesse a rede pública. É possível usar um NSX Edge, Vyatta ou gateways semelhantes para permitir acesso à Internet para o HCX Manager no local. Se os gateways usados para acesso à rede privada e acesso à rede pública forem diferentes, recomenda-se que você use o gateway padrão para permitir o acesso à rede pública e permitir que o **Console do Administrador do HCX Manager** crie uma rota estática para o acesso à rede privada.  
     {:note}
@@ -141,16 +141,16 @@ Instale o HCX Enterprise Manager local e configure a conexão com a instância d
   1. Efetue login na sua MV do HCX Enterprise Manager no local usando as credenciais que são especificadas ao implementar o OVA.
   2. Insira a chave de ativação quando solicitada.
 
-  Para obter mais informações, consulte [Ativação e configuração inicial do VMware HCX](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-6A4740C1-2225-444C-8ADC-CBE54F181536.html).
-  {:note}
+  Siga as instruções no [Guia do Usuário do VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}.
+
 5. Um certificado SSL autoassinado foi gerado pelo serviço HCX on {{site.data.keyword.cloud_notm}}. Deve-se importar o certificado para o HCX Manager local concluindo as etapas a seguir:
     1. No **Console do Administrador do HCX Manager** local, clique na guia **Administração**.
     2. Na área de janela de navegação esquerda, clique em **Certificado CA confiável** e, em seguida, clique em **IMPORTAR** à direita.
     3. Clique em **URL** e, em seguida, insira a URL do certificado que você deseja aplicar. Esse é o **IP de nuvem do HCX** (``https://<cloud-side public IP>``) que é possível localizar na página de detalhes do serviço HCX on {{site.data.keyword.cloud_notm}} no console do {{site.data.keyword.vmwaresolutions_short}}.
     4. Clique em **APLICAR**.
-6. Continue a configuração inicial e construa a interconexão. Para obter mais informações, consulte [Instalando e configurando o VMware HCX Enterprise](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-A26BFB16-FA94-426F-8E18-15BAD4BF840E.html).
-7. Amplie as redes no VMware HCX do local para o {{site.data.keyword.cloud_notm}}. Para obter mais informações, consulte [Ampliando redes com o VMware HCX](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-DD9C3316-D01C-4088-B3EA-84ADB9FED573.html).
-8. Migre as MVs entre o local e o {{site.data.keyword.cloud_notm}}. Para obter mais informações, consulte [Migrando máquinas virtuais com o VMware HCX](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-D0CD0CC6-3802-42C9-9718-6DA5FEC246C6.html).
+6. Continue a configuração inicial e construa a interconexão. Siga as instruções no [Guia do Usuário do VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}.
+7. Amplie as redes no VMware HCX do local para o {{site.data.keyword.cloud_notm}}. Siga as instruções no [Guia do Usuário do VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}.
+8. Migre as MVs entre o local e o {{site.data.keyword.cloud_notm}}. Siga as instruções no [Guia do Usuário do VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}.
 
 Deve-se gerenciar os componentes de infraestrutura do {{site.data.keyword.vmwaresolutions_short}} que são criados em sua conta do {{site.data.keyword.cloud_notm}} somente por meio do console do {{site.data.keyword.vmwaresolutions_short}}, não do {{site.data.keyword.slportal}} ou de qualquer outro meio fora do console.
 Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console e poderão tornar seu ambiente instável.
@@ -186,6 +186,6 @@ Conclua as etapas a seguir para excluir uma instância do Single-node Trial for 
 {: #cloud_modern_bundle_orderinginstance-related}
 
 * [Guia do vCenter Server e do IBM Cloud Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [Abra um chamado para o IBM Cloud Private](https://www.ibm.com/mysupport/s/?language=en_US)
-* [ Recursos do VMware HCX ](https://hcx.vmware.com/#/docs)
-* [Obtendo o VMware HCX OVA](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html?hWord=N4IghgNiBcIPICMAuYCWA7DBzABEgFgKY4ASAwgBo5wBqAgiAL5A)
+* [Abra um chamado para o IBM Cloud Private](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
+* [Recursos do VMware HCX](https://hcx.vmware.com/#/docs){:new_window}
+* [Guia do Usuário do VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -20,8 +20,7 @@ subcollection: vmware-solutions
 
 Os serviços comuns fornecem os serviços que são usados por outros serviços na plataforma de gerenciamento de nuvem. Os serviços comuns da solução incluem serviços de identidade e acesso, serviços de nomes de domínio, serviços NTP, serviços SMTP e serviços de autoridade de certificação.
 
-Figura 1. Serviços comuns</br>
-![Serviços comuns](vcsv4radiagrams-ra-commonservices.svg)
+![Serviços comuns](../../images/vcsv4radiagrams-ra-commonservices.svg "Serviços comuns")
 
 ## Serviços de identidade e de acesso
 {: #design_commonservice-identity-access}
@@ -59,15 +58,15 @@ Os Domain name services (DNS) nesse design destinam-se somente aos componentes d
 A implementação do vCenter Server usa as VSIs do AD implementadas como servidores DNS para a instância. Todos os componentes
 implementados (vCenter com hosts do PSC, NSX, ESXi incorporados) são configurados para apontar para o AD como o seu DNS padrão. Será possível customizar a configuração da zona
 do DNS se ela não interferir na configuração dos componentes implementados.
-- Esse design integra serviços do DNS nas VSIs do AD na configuração a seguir:
-- A estrutura de domínio é especificada pelo usuário. O nome de domínio pode ser qualquer número de níveis até o máximo que todos os componentes do vCenter Server manipulam, assegurando que o nível mais baixo seja o subdomínio para a instância.
-    - O nome de domínio do DNS que você fornece é usado como o nome de domínio da floresta raiz do AD implementado do vCenter Server. Por exemplo, se o nome de domínio do DNS for cloud.ibm.com, a raiz de floresta do domínio do AD será cloud.ibm.com. O domínio do DNS e o domínio do AD são os mesmos em todas as instâncias federadas do vCenter Server.
-    - Selecione um nome extra como o subdomínio da instância do vCenter Server. Esse nome de subdomínio deve ser exclusivo em todas as instâncias vinculadas do vCenter Server.
-- Os servidores do DNS do AD são configurados para serem autoritativos para o domínio do DNS e o espaço de subdomínio.
-- Os servidores do DNS do AD são configurados para apontar para os servidores do DNS do {{site.data.keyword.cloud_notm}} para todas as outras zonas.
-- Quaisquer regiões de nuvem secundárias que são integradas à primeira região de nuvem implementada ou de destino devem usar a mesma estrutura de nome do DNS acima do subdomínio.
-- Opcionalmente, implemente servidores do DNS redundantes dentro do cluster do vCenter Server. Dois servidores do AD/DNS são configurados sem licença. É responsabilidade do usuário fornecer licenças para os sistemas operacionais Windows para esses servidores.
-- Se um único site for provisionado com apenas um servidor do AD/DNS, todos os componentes do vCenter Server configurados deverão ter APENAS esse IP único como uma entrada do DNS.
+
+Esse design integra serviços do DNS nas VSIs do AD na configuração a seguir:
+* A estrutura de domínio é especificada pelo usuário.
+* O nome de domínio pode ser qualquer número de níveis até o máximo que todos os componentes do vCenter Server manipulam, assegurando que o nível mais baixo seja o subdomínio para a instância.
+* Os servidores AD/DNS são configurados para ter autorização para o domínio DNS e o espaço de subdomínio.
+* Os servidores AD/DNS são configurados para apontar para os servidores DNS do {{site.data.keyword.cloud_notm}} para todas as outras zonas.
+* Quaisquer regiões de nuvem secundárias que são integradas à primeira região de nuvem implementada ou de destino devem usar a mesma estrutura de nome do DNS acima do subdomínio.
+* Opcionalmente, é possível implementar servidores DNS redundantes dentro do cluster do vCenter Server. Dois servidores do AD/DNS são configurados sem licença. É sua responsabilidade fornecer licenças para os sistemas operacionais Windows para esses servidores.
+* Se um único site for provisionado com apenas um servidor AD/DNS, todos os componentes configurados do vCenter Server deverão ter apenas esse único endereço IP como uma entrada DNS.
 
 ### Instâncias secundárias do vCenter Server
 {: #design_commonservice-secondary-vcs}
@@ -79,8 +78,7 @@ Para redundância de instância cruzada, quando a primeira instância secundári
 
 Esse design utiliza os servidores NTP de infraestrutura do {{site.data.keyword.cloud_notm}}. Todos os componentes implementados são configurados para utilizar esses servidores NTP. Ter todos os componentes dentro do design usando o mesmo servidor NTP é crítico para que os certificados e a autenticação do Active Directory funcionem corretamente.
 
-Figura 2. Serviços NTP e DNS</br>
-![Serviços NTP e DNS](vcsv4radiagrams-ra-servicesinterconnections.svg)
+![Serviços NTP e DNS](../../images/vcsv4radiagrams-ra-servicesinterconnections.svg "Serviços NTP e DNS")
 
 ## Serviços de autoridade de certificação
 {: #design_commonservice-cas}

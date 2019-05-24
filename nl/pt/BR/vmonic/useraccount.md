@@ -26,7 +26,7 @@ Também é possível especificar se você deseja receber notificações por e-ma
 {: #useraccount-reqs}
 
 * É possível vincular somente uma conta de infraestrutura do {{site.data.keyword.cloud_notm}} a uma conta do usuário do {{site.data.keyword.cloud_notm}}.
-* A conta de infraestrutura do {{site.data.keyword.cloud_notm}} que você está usando deve atender a determinados requisitos. Para obter mais informações, consulte [Requisitos de conta de infraestrutura do {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).
+* A conta de infraestrutura do {{site.data.keyword.cloud_notm}} que você está usando deve atender a determinados requisitos. Para obter mais informações, consulte [Requisitos da conta de infraestrutura do {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).
 * Se a chave API para sua conta de infraestrutura do {{site.data.keyword.cloud_notm}} muda, deve-se atualizar a chave na página **Configurações** no console do {{site.data.keyword.vmwaresolutions_short}}.
 
    **Importante:** é sua responsabilidade assegurar que a chave API salva na página **Configurações** esteja correta e atualizada. Caso contrário, as operações que requerem validação da chave API podem falhar.

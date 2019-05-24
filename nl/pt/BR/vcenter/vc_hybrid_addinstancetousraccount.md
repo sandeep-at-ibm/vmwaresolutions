@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-16"
+lastupdated: "2019-05-13"
 
 subcollection: vmware-solutions
 
@@ -23,7 +23,7 @@ Para obter instâncias que foram implementadas na V2.4 e em liberações anterio
 
 Assegure-se de que a conta do {{site.data.keyword.cloud_notm}} para a qual você deseja migrar a instância não seja uma conta somente IaaS. Uma conta somente IaaS é uma conta de infraestrutura do {{site.data.keyword.cloud_notm}} que não está vinculada a uma conta do {{site.data.keyword.cloud_notm}}.
 
-Para obter mais informações sobre como vincular sua conta somente IaaS à sua conta PaaS, consulte [Siga estas etapas para vincular suas contas IaaS e PaaS](https://www.ibm.com/blogs/bluemix/2018/03/follow-steps-link-iaas-paas-accounts/).
+Para obter mais informações sobre como vincular sua conta somente IaaS à sua conta PaaS, consulte [Siga estas etapas para vincular suas contas IaaS e PaaS](https://www.ibm.com/cloud/blog/follow-steps-link-iaas-paas-accounts){:new_window}.
 
 ## Procedimento para migrar instâncias
 {: #vc_hybrid_addinstancetousraccount-procedure}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-02"
 
 subcollection: vmware-solutions
 
@@ -21,8 +21,7 @@ Revise as informações a seguir para obter detalhes sobre a conformidade com as
 
 O diagrama a seguir fornece detalhes sobre as responsabilidades do cliente (você) e da IBM para atividades de conformidade.
 
-Figura 1. Matriz de responsabilidade do cliente versus IBM para o vCenter Server on IBM Cloud with Hybridity Bundle
-![Matriz de responsabilidade do cliente versus IBM](customer_ibm_responsibility_matrix.svg "Matriz de responsabilidade do cliente versus IBM")
+![Cliente versus matriz de responsabilidade da IBM](../images/customer_ibm_responsibility_matrix.svg "Cliente versus matriz de responsabilidade da IBM")
 
 ## Restrições de dados de funcionamento
 {: #vc_hybrid_compl_info-health-data-restrictions}
