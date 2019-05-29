@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-04"
+lastupdated: "2019-05-09"
 
 subcollection: vmware-solutions
 
@@ -33,6 +33,13 @@ Sie können mithilfe einer der folgenden Methoden eine neue Instanz mit FortiGat
 Sie können den Service "FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}" mit einer der folgenden Methoden zu einer vorhandenen Instanz hinzufügen:
 * Zeigen Sie über die {{site.data.keyword.vmwaresolutions_short}}-Konsole die Instanz an, für die der Service hinzugefügt werden soll, klicken Sie im linken Navigationsfenster auf **Services** und anschließend auf **Hinzufügen**.
 * Wählen Sie im {{site.data.keyword.cloud_notm}}-Katalog **FortiGate Virtual Appliance on IBM Cloud** aus, geben Sie die Serviceeinstellungen an und wählen Sie **Zu vorhandener Instanz hinzufügen** aus.
+
+## FortiGate Virtual Appliance on IBM Cloud für private Instanzen bestellen
+{: #fortinetvm_ordering-private}
+
+Wenn Sie FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} für Instanzen bestellen, die nicht mit allgemein zugänglichen Schnittstellen konfiguriert wurden, müssen Sie für die Durchführung der Installation einen Proxy-Server angeben. Der HTTP-Proxy-Server muss konfiguriert und über Virtual Routing and Forwarding (VRF) verfügbar sein, bevor die Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}-Installation gestartet werden kann.
+
+Zur Sicherstellung des fortlaufenden Betriebs muss FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} über das Internet über einen persistenten Zugriff auf den Fortigate-Lizenzserver verfügen.
 
 ## FortiGate Virtual Appliance on IBM Cloud - Servicekonfiguration
 {: #fortinetvm_ordering-config}

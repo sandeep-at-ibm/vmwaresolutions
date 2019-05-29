@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -33,9 +33,7 @@ IBM Multi-Cluster Manager (MCM) bietet Benutzertransparenz, anwendungsorientiert
 
 Das folgende Diagramm beschreibt die Referenzimplementierung der Anwendung "Acme Skate Advisor" in einer Implementierung der Anwendungsmodernisierungsinfrastruktur.
 
-Abbildung 1. Physische Komponenten von Skate Advisor
-</br>
-![Physische Komponenten von Skate Advisor](vcscar-physical.svg)
+![Physische Komponenten von Skate Advisor](../../images/vcscar-physical.svg "Physische Komponenten von Skate Advisor")
 
 Die Anwendung "Skate Advisor" erweitert die vorhandene Acme-Webanwendung durch eine auf Mikroservices basierende Komponente, die mit Watson und einem nginx-Container interagiert, um Anforderungen an den Web- und Mikroservices-Container weiterzuleiten.
 
@@ -57,9 +55,7 @@ Die Anwendung wird als CAM-Orchestrierung bereitgestellt, die die folgenden Elem
 * Terraform-Vorlage - Eine Terraform-Vorlage ist eine Datei, von der die Cloudressourcen beschrieben werden, die bereitgestellt werden sollen. Bei Skate Advisor handelt es sich hierbei um eine Ubuntu-Vorlage, die mit mysql vorinstalliert wird und das Datenbankschema beschreibt.
 * VMware-Vorlage - Die VMware-Vorlage ist eine Ubuntu-Vorlage mit vorinstalliertem mysql und Datenbankschema.
 
-Abbildung 2. CAM-Orchestrierung
-</br>
-![CAM-Orchestrierung](vcscar-cam.svg)
+![CAM-Orchestrierung](../../images/vcscar-cam.svg "CAM-Orchestrierung")
 
 ### Lastausgleich und Weiterleitung
 {: #vcscar-physical-load-balance-proxy}
@@ -103,9 +99,7 @@ Skate Advisor macht die folgende Kommunikation erforderlich:
 
 Zur Umsetzung dieses Ziels ist die Anwendungsmodernisierungsplattform mit den folgenden Komponenten ausgestattet.
 
-Abbildung 3. Zugriff auf öffentliches Netz
-</br>
-![Zugriff auf öffentliches Netz](vcscar-network.svg)
+![Zugriff auf öffentliches Netz](../../images/vcscar-network.svg "Zugriff auf öffentliches Netz")
 
 {{site.data.keyword.cloud_notm}} verfügt über zwei Netze. Über das öffentliche Netz können Server aus dem Internet erreicht werden. Das private Netz ermöglicht Servern über einen Hochgeschwindigkeitsbackbone in allen {{site.data.keyword.CloudDataCents_notm}} die Kommunikation miteinander.
 
@@ -119,9 +113,7 @@ Für alle definierten NSX-VXLANs ist in der {{site.data.keyword.containerlong_no
 
 Die Anwendung "Skate Advisor" verwendet die folgenden Softwarekomponenten.
 
-Abbildung 4. Softwarezuordnung bei Skate Advisor
-</br>
-![Softwarezuordnung bei Skate Advisor](vcscar-sw-mapping.svg)
+![Softwarezuordnung bei Skate Advisor](../../images/vcscar-sw-mapping.svg "Softwarezuordnung bei Skate Advisor")
 
 Die folgenden Softwarekomponenten werden verwendet:
 
@@ -137,8 +129,7 @@ Mikroservices und Anwendungsanforderungen werden an die richtigen Endpunkte vert
 
 Die Anwendung "Acme Skate Advisor" befindet sich in der {{site.data.keyword.cloud_notm}} und ist insofern ein kritischer Aspekt der Architektur. Die {{site.data.keyword.cloud_notm}} besitzt die folgende Architektur.
 
-Abbildung 5. Cloud-Management
-![Management in der Cloud](vcscar-cloud-management.svg)
+![Management in der Cloud](../../images/vcscar-cloud-management.svg "Management in der Cloud")
 
 Das obige Diagramm zeigt {{site.data.keyword.icpfull_notm}} und CAM in einer Bereitstellung auf einer vCenter Server-Instanz mit Verbindungen zum lokalen vCenter und dem {{site.data.keyword.containerlong_notm}}-Service. Mithilfe von CAM können Systemadministratoren und Anwendungsentwickler virtuelle Maschinen lokal oder in der vCenter Server-Instanz und in Containern für die {{site.data.keyword.icpfull_notm}}- und {{site.data.keyword.containerlong_notm}}-Cluster bereitstellen.
 

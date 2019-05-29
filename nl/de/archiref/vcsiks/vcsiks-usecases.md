@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-18"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -23,8 +23,7 @@ VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 
 
 Das vCenter Server with Hybridity Bundle-Angebot von {{site.data.keyword.cloud_notm}} ermöglicht sichere Verbindungen zwischen dem lokalen Peer-Quellenstandort und dem {{site.data.keyword.cloud_notm}}-Zielstandort.
 
-Abbildung 1. VMware Hybridity-Services
-![VMware-Erweiterungsservices für Hybrid-Cloud](vcsiks-hcx.svg)
+![VMware Hybrid Cloud Extension-Services](../../images/vcsiks-hcx.svg "VMware Hybrid Cloud Extension-Services")
 
 vCenter Server with Hybridity Bundle richtet eine flexible Verbindung zwischen Standorten und {{site.data.keyword.cloud_notm}} ein und stellt z. B. folgende Funktionalität zur Verfügung:
 - **Einfache Interkonnektivität** - Logische Netzverbindungen können ohne großen Aufwand über eine beliebige physische Verbindung hergestellt werden, z. B. über das öffentliche Internet, ein privates VPN oder über {{site.data.keyword.cloud_notm}} Direct Link.
@@ -44,8 +43,7 @@ Mithilfe dieser Lösung konnte Acme Skateboards die VMware-Workloads erfolgreich
 
 Acme Skateboards möchte für den Prozess (Journey) der Anwendungsmodernisierung eine Hybridarchitektur auf {{site.data.keyword.cloud_notm}} bereitstellen, die aus vCenter Server und {{site.data.keyword.icpfull_notm}} besteht. Dabei sollen die Datenbanken auf virtuellen Maschinen ausgeführt werden, die Anwendungen und Web-Services in Containern, und es soll eine gemeinsame Gruppe von Tools für das Netz- und Sicherheitsmanagement verwendet werden.
 
-Abbildung 2. Hybridanwendung von Acme Skateboards
-![Diagramm der Hybridanwendung von Acme Skateboards](vcsiks-acme-app-arch.svg)
+![Diagramm der Hybridanwendung von Acme Skateboards](../../images/vcsiks-acme-app-arch.svg "Diagramm der Hybridanwendung von Acme Skateboards")
 
 {{site.data.keyword.vmwaresolutions_short}} stellt eine Automatisierung zur weltweiten Bereitstellung von VMware-Technologiekomponenten in {{site.data.keyword.CloudDataCents_notm}} bereit. Die Architektur besteht aus einer einzelnen Cloudregion und unterstützt die Erweiterung in weitere Cloudregionen, die sich in einem anderen geografischen Gebiet oder in einem anderen {{site.data.keyword.cloud_notm}}-Pod innerhalb desselben Rechenzentrums befinden.
 

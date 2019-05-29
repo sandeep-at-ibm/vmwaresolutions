@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-02"
 
 subcollection: vmware-solutions
 
@@ -35,9 +35,7 @@ Sie können von IBM verwaltete Services hinzufügen, wenn Sie die Routineabläuf
 
 Die folgende Abbildung zeigt die allgemeine Architektur und die Komponenten einer vCenter Server with Hybridity Bundle-Bereitstellung mit drei Knoten.
 
-Abbildung 1. Allgemeine vCenter Server with Hybridity Bundle-Architektur
-
-![vCenter Server with Hybridity Bundle-Architektur](hybrid_architecture.svg "Allgemeine vCenter Server with Hybridity Bundle-Architektur")
+![vCenter Server with Hybridity Bundle-Architektur](../images/hybrid_architecture.svg "vCenter Server with Hybridity Bundle-Architektur")
 
 ### Physische Infrastruktur
 {: #vc_hybrid_overview-physical-infras}

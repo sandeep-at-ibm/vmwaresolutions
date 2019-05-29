@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-13"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -48,9 +48,7 @@ Tabelle 1. Zusammenfassung zur NFS-Portgruppe
 
 Zusätzlich zur Erstellung der vDS-Portgruppe für den NFS-Speicherdatenverkehr wird auf jedem vSphere ESXi-Host während der Bereitstellung ein VMkernel-Port erstellt und der Portgruppe SDDC-DPG-NFS zugewiesen. Darüber hinaus wird dem VMkernel-Port eine IP-Adresse aus dem privaten portierbaren Teilnetz zugewiesen, das dem VLAN für den angehängten Speicher zugeordnet ist. Dies bedeutet, dass das private VLAN B und die zugehörige MTU auf den Wert "9000" gesetzt wird, um Jumbo-Frames zu unterstützen.
 
-Abbildung 1. Private vDS-Portgruppen und Uplinks
-
-![Private vDS-Portgruppen und Uplinks](private_vds_portgroups_and_uplinks.svg "Private vDS-Portgruppen und Uplinks")
+![Private vDS-Portgruppen und Uplinks](../../images/private_vds_portgroups_and_uplinks.svg "Private vDS-Portgruppen und Uplinks")
 
 ### Statisches Routing für vSphere-Host
 {: #storage-infra-mgmt-vsphere-routing}

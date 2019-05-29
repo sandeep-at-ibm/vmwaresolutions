@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-15"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -22,8 +22,7 @@ Prüfen Sie diese Informationen zum Design von {{site.data.keyword.vmwaresolutio
 
 Dieses Design dient als Basisarchitektur, die die Grundlage für andere interne oder anbieterspezifische Komponenten bereitstellt, die für bestimmte Anwendungsfälle hinzugefügt werden sollen.
 
-Abbildung 1. Übersicht über VMware on {{site.data.keyword.cloud_notm}}
-![Übersicht über VMware on {{site.data.keyword.cloud_notm}}](vcsv4radiagrams-ra-variationsonatheme.svg "Die Lösung virtualisiert Rechen-, Netz- und optional Speicherressourcen, die von VMs genutzt werden, in denen Sie Ihre Anwendungen ausführen können.")
+![Übersicht über VMware on {{site.data.keyword.cloud_notm}}](../../images/vcsv4radiagrams-ra-variationsonatheme.svg "Die Lösung virtualisiert Rechen-, Netz- und optional Speicherressourcen, die von VMs genutzt werden, in denen Sie Ihre Anwendungen ausführen können.")
 
 ## Hauptvorteile von IBM Cloud for VMware Solutions
 {: #solution_overview-benefits}

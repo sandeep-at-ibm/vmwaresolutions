@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-19"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -31,8 +31,7 @@ Netz | **Privat A**, portierbar, für Managementkomponenten vorgesehen
 
 Die folgende Netzübersicht für NSX-V Manager zeigt die Anordnung des NSX-Managers in Relation zu anderen Komponenten in dieser Architektur.
 
-Abbildung 1. Netzübersicht für NSX-V Manager
-![Netzübersicht für NSX-V Manager](vcsnsxt-vmgmt.svg)
+![Netzübersicht für NSX-V Manager](../../images/vcsnsxt-vmgmt.svg "Netzübersicht für NSX-V Manager")
 
 Nach der Erstbereitstellung stellt die {{site.data.keyword.cloud}}-Automatisierung drei NSX-Controller im ersten Cluster bereit. Den Controllern wird eine IP-Adresse aus dem portierbaren Teilnetz **Privat A** zugeordnet, das für Managementkomponenten vorgesehen ist. VM-VM-Anti-Affinitätsregeln werden erstellt, damit die Controller unter den Hosts im Cluster separiert werden. Der erste Cluster muss mit mindestens drei Knoten implementiert werden, um eine hohe Verfügbarkeit für die Controller zu gewährleisten.
 
@@ -78,8 +77,7 @@ Failover-Reihenfolge | Aktive Uplinks: uplink1, uplink2 \*
 \* Die vSAN-Portgruppe verwendet explizites Failover mit Aktiv/Standby-Konfiguration, da sie keinen Lastausgleich für vSAN-Speicherdatenverkehr unterstützt.
 {:note}
 
-Abbildung 2. Portgruppenzuordnung der Cluster-VM-Kernelschnittstelle
-![Portgruppenzuordnung der Cluster-VM-Kernelschnittstelle](vcsnsxt-vds-kernel-Int.svg)
+![Portgruppenzuordnung der Cluster-VM-Kernelschnittstelle](../../images/vcsnsxt-vds-kernel-Int.svg "Portgruppenzuordnung der Cluster-VM-Kernelschnittstelle")
 
 Tabelle 5. Portgruppen, VLANs und Teambildungsrichtlinie für virtuellen Switch des Clusters
 
@@ -124,9 +122,7 @@ Die NSX-Schlüsselkomponenten sind unter anderem Folgende:
 
 Die folgende Abbildung zeigt in einem übergeordneten Diagramm, wie Sie einige der Mikrosegmentierungsfunktionen von NSX-V durch die Erstellung von Sicherheitsgruppen implementieren können. In diesem Beispiel heißen die Sicherheitsgruppen "Produktion" und "Entwicklung"; die Sicherheitsregeln werden basierend auf diesen Gruppen zugeordnet.
 
-Abbildung 3. Sicherheit von NSX-V
-</br>
-![Sicherheit von NSX-V](vcsnsxt-vsecurity.svg)
+![NSX-V-Sicherheit](../../images/vcsnsxt-vsecurity.svg "NSX-V-Sicherheit")
 
 ## Zugehörige Links
 {: #vcsnsxt-overview-ic4vnsxv-related}

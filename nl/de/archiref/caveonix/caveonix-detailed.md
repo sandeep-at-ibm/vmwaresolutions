@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-05"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,8 @@ subcollection: vmware-solutions
 
 Das folgende Diagramm und die Beschreibungen geben Informationen zu den Anwendungskomponenten von RiskForesight.
 
-Abbildung 1. Anwendungskomponenten
-![Anwendungskomponenten](caveonix-app-components.svg)
+![Anwendungskomponenten](../../images/caveonix-app-components.svg "Anwendungskomponenten")
+
 
 -	Grafische Benutzerschnittstelle: Webschnittstelle für den Zugriff auf die RiskForesight-Anwendung.
 -	Zentraler Kollektor: sammelt verschiedene Nutzdatentypen aus den Plug-ins und stellt sie im Messaging-Speicher zur Verfügung. RiskForesight unterstützt die folgenden Typen von Nutzdaten:
@@ -61,8 +61,7 @@ Tabelle 1. Ports und Protokolle
 
 Das folgende Diagramm zeigt die Netztopologie mit dem portierbaren privaten Caveonix-Teilnetz, das dem privaten VLAN A zugeordnet ist. Die Verwaltung des IP-Adressraums für dieses Teilnetz liegt bei Ihnen, sodass Sie nach Bedarf manuell vom umfassenden Modell auf das Modell mit vollständig verteilter Bereitstellung skalieren können, gegebenenfalls durch das teilweise verteilte Modell.
 
-Abbildung 2. Netzdiagramm
-![Netzdiagramm](caveonix-network.svg)
+![Netzdiagramm](../../images/caveonix-network.svg "Netzdiagramm")
 
 Das IP-Teilnetz und die VLAN-Zuordnungen sind in der folgenden Tabelle beschrieben.
 

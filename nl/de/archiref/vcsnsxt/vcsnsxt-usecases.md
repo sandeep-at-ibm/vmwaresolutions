@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -23,8 +23,7 @@ VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 
 
 Die VMware HCX-Komponenten, die als virtuelle Maschinen am vCenter Server-Zielstandort bereitgestellt werden, ermöglichen den Aufbau einer Verbindung mit den VMware HCX-Komponenten, die am lokalen Peerquellenstandort installiert sind.
 
-Abbildung 1. VMware-Erweiterungsservice für Hybrid-Cloud
-![VMware-Erweiterungsservice für Hybrid-Cloud](vcsnsxt-hcx-1.svg)
+![VMware Hybrid Cloud Extension-Service](../../images/vcsnsxt-hcx-1.svg "VMware Hybrid Cloud Extension-Service")
 
 Die flexible Interkonnektivität zwischen lokalen Standorten und {{site.data.keyword.cloud_notm}} ermöglicht z. B. folgende Funktionalitäten:
 - **Einfache Interkonnektivität** – Logische Netzverbindungen können ohne großen Aufwand über eine beliebige physische Verbindung hergestellt werden, z. B. über das öffentliche Internet, ein privates VPN oder eine Direktverbindung.
@@ -52,8 +51,7 @@ Mithilfe der {{site.data.keyword.cloud_notm}}-Automatisierung kann Acme Skateboa
 
 Weitere Informationen zu NSX-V enthält der Abschnitt [Übersicht über NSX-V](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv). Zusätzliche Angaben zu vCenter Server- und dem {{site.data.keyword.icpfull_notm}}-Angebot finden Sie unter [vCenter Server und {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro).
 
-Abbildung 2. vCenter Server mit {{site.data.keyword.icpfull_notm}}</br>
-![vCenter Server mit {{site.data.keyword.icpfull_notm}}](vcsnsxt-nsxvhl.svg)
+![vCenter Server mit {{site.data.keyword.icpfull_notm}}](../../images/vcsnsxt-nsxvhl.svg "vCenter Server mit {{site.data.keyword.icpfull_notm}}")
 
 Dadurch wird eine flexible Verbindung zwischen Standorten und {{site.data.keyword.cloud_notm}} eingerichtet und z. B. folgende Funktionalität zur Verfügung gestellt:
 -	**Einfache Interkonnektivität** - Logische Netzverbindungen können ohne großen Aufwand über eine beliebige physische Verbindung hergestellt werden, z. B. über das öffentliche Internet, ein privates VPN oder Direct Link.

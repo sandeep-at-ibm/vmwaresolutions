@@ -60,16 +60,6 @@ Weitere Informationen finden Sie in den Abschnitten zu den _Lizenzeinstellungen_
 * [vCenter Server with Hybridity Bundle-Instanzen bestellen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
 * [Neue vSphere-Cluster bestellen](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
 
-## Ende der Unterstützung für VLAN-Spanning
-{: #relnotes_v29-vlan}
-
-Ab August 2019 wird VLAN-Spanning nicht mehr von {{site.data.keyword.vmwaresolutions_short}} unterstützt. Bis Ende Juli 2019 müssen Sie Ihr {{site.data.keyword.cloud_notm}}-Infrastrukturkonto in ein VRF-Konto (Virtual Routing and Forwarding) konvertieren und Serviceendpunkte für Ihr Konto aktivieren.
-
-Weitere Informationen finden Sie in den folgenden Abschnitten:
-
-* [Virtual Routing and Forwarding (VRF) on IBM Cloud - Übersicht](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-* [Konto für die Verwendung von Serviceendpunkten aktivieren](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
-
 ## Unterstützung für Anwendungsprogrammierschnittstellen
 {: #relnotes_v29-api}
 
@@ -138,7 +128,7 @@ Weitere Informationen finden Sie in den folgenden Abschnitten:
 ### F5 on IBM Cloud
 {: #relnotes_v29-services-f5}
 
-Im aktuellen Release wird F5-BigIP VE V14.1.0.2 auf allen neu bereitgestellten Instanzen installiert. Weitere Informationen zu neuen Funktionen in F5-BigIP VE V14.1.0.2 finden Sie unter [Release Note: BIG-IP 14.1.0 New and Installation](https://support.f5.com/kb/en-us/products/big-ip_ltm/releasenotes/product/relnote-bigip-14-1-0.html){:new_window}.
+Im aktuellen Release wird F5-BigIP VE V14.1.0.2 auf allen neu bereitgestellten Instanzen installiert. Weitere Informationen zu neuen Funktionen in F5-BigIP VE V14.1.0.2 finden Sie unter [Release Note: BIG-IP 14.1.0 New and Installation](https://techdocs.f5.com/kb/en-us/products/big-ip_ltm/releasenotes/product/relnote-bigip-14-1-0.html){:new_window}.
 
 ### HyTrust CloudControl on IBM Cloud
 {: #relnotes_v29-services-htcc}

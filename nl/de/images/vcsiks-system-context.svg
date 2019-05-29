@@ -1,0 +1,848 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:xhtml="http://www.w3.org/1999/xhtml"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1073px"
+   height="966px"
+   version="1.1"
+   id="svg260"
+   sodipodi:docname="vcsiks-system-context.svg"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
+  <defs
+     id="defs264" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="3440"
+     inkscape:window-height="1377"
+     id="namedview262"
+     showgrid="false"
+     inkscape:zoom="0.97722567"
+     inkscape:cx="221.88226"
+     inkscape:cy="382.54916"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg260" />
+  <metadata
+     id="metadata2">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <ellipse
+     style="fill:#d5e8d4;stroke:#82b366"
+     id="ellipse4"
+     pointer-events="none"
+     ry="160"
+     rx="170"
+     cy="347.5"
+     cx="700.5" />
+  <g
+     style="font-size:12px;font-family:Helvetica;text-anchor:middle"
+     id="g8"
+     font-size="12px"
+     transform="translate(0.5,0.5)">
+    <text
+       id="text6"
+       y="205.5"
+       x="699.5">IKS</text>
+  </g>
+  <ellipse
+     style="fill:#60a917;stroke:#60a917"
+     id="ellipse10"
+     pointer-events="none"
+     ry="80"
+     rx="120"
+     cy="367.5"
+     cx="700.5" />
+  <g
+     style="font-weight:bold;font-size:12px;font-family:Helvetica;text-anchor:middle"
+     id="g14"
+     font-weight="bold"
+     font-size="12px"
+     transform="translate(0.5,0.5)">
+    <text
+       id="text12"
+       y="305.5"
+       x="699.5">Cluster</text>
+  </g>
+  <ellipse
+     style="fill:#1ba1e2;stroke:#1ba1e2"
+     id="ellipse16"
+     pointer-events="none"
+     ry="45"
+     rx="90"
+     cy="362.5"
+     cx="700.5" />
+  <g
+     style="font-weight:bold;font-size:12px;font-family:Helvetica;text-anchor:middle"
+     id="g20"
+     font-weight="bold"
+     font-size="12px"
+     transform="translate(0.5,0.5)">
+    <text
+       id="text18"
+       y="335.5"
+       x="699.5">Workerknoten</text>
+  </g>
+  <ellipse
+     style="fill:#ffffff;stroke:#000000"
+     id="ellipse22"
+     pointer-events="none"
+     ry="20"
+     rx="95"
+     cy="517.5"
+     cx="455.5" />
+  <g
+     style="font-size:12px;font-family:Helvetica;text-anchor:middle"
+     id="g26"
+     font-size="12px"
+     transform="translate(0.5,0.5)">
+    <text
+       id="text24"
+       y="520.5"
+       x="454.5">VRA</text>
+  </g>
+  <ellipse
+     style="fill:#dae8fc;stroke:#6c8ebf"
+     id="ellipse28"
+     pointer-events="none"
+     ry="125"
+     rx="270"
+     cy="802.5"
+     cx="290.5" />
+  <g
+     style="font-weight:bold;font-size:14px;font-family:Helvetica;text-anchor:middle"
+     id="g32"
+     font-weight="bold"
+     font-size="14px"
+     transform="translate(0.5,0.5)">
+    <text
+       id="text30"
+       y="697.5"
+       x="289.5">VCS</text>
+  </g>
+  <ellipse
+     style="fill:#f8cecc;stroke:#b85450"
+     id="ellipse34"
+     pointer-events="none"
+     ry="95"
+     rx="136"
+     cy="817.77271"
+     cx="352.28156"
+     transform="rotate(-1)" />
+  <g
+     style="font-weight:bold;font-size:14px;font-family:Helvetica;text-anchor:middle"
+     id="g38"
+     font-weight="bold"
+     font-size="14px"
+     transform="rotate(-1,393.37716,695.61284)">
+    <text
+       id="text36"
+       y="736.51001"
+       x="363.98001">ICP</text>
+  </g>
+  <ellipse
+     style="fill:#e1d5e7;stroke:#9673a6"
+     id="ellipse40"
+     pointer-events="none"
+     ry="70"
+     rx="115"
+     cy="147.5"
+     cx="115.5" />
+  <g
+     style="font-size:12px;font-family:Helvetica;text-anchor:middle"
+     id="g44"
+     font-size="12px"
+     transform="translate(0.5,0.5)">
+    <text
+       id="text42"
+       y="101.5"
+       x="114.5">Lokale Virtualisierung</text>
+  </g>
+  <ellipse
+     style="fill:#33ffff;stroke:#82b366"
+     id="ellipse46"
+     pointer-events="none"
+     ry="30"
+     rx="67.5"
+     cy="787.5"
+     cx="328.5" />
+  <g
+     style="font-size:12px;font-family:Helvetica;text-anchor:middle"
+     id="g50"
+     font-size="12px"
+     transform="translate(0.5,0.5)">
+    <text
+       id="text48"
+       y="790.5"
+       x="327">CAM</text>
+  </g>
+  <rect
+     style="fill:#ffffff;stroke:#000000"
+     id="rect52"
+     pointer-events="none"
+     height="40"
+     width="120"
+     y="347.5"
+     x="640.5" />
+  <g
+     style="font-size:12px;font-family:Helvetica;text-anchor:middle"
+     id="g56"
+     font-size="12px"
+     transform="translate(0.5,0.5)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:1.10000002;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+       x="699.97949"
+       y="363.58456"
+       id="text1216"><tspan
+         sodipodi:role="line"
+         id="tspan1214"
+         x="699.97949"
+         y="363.58456">Containerbasierte</tspan><tspan
+         sodipodi:role="line"
+         x="699.97949"
+         y="376.78458"
+         id="tspan1218">Apps</tspan></text>
+  </g>
+  <circle
+     style="fill:#ffffff;stroke:#000000"
+     r="7.5"
+     id="ellipse58"
+     pointer-events="none"
+     cy="15.5"
+     cx="925.5" />
+  <path
+     style="fill:none;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path60"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     d="m 925.5,22.5 v 25 m 0,-20 h -15 m 15,0 h 15 m -15,20 -15,20 m 15,-20 15,20" />
+  <g
+     style="font-size:12px;font-family:Helvetica;text-anchor:middle"
+     id="g66"
+     font-size="12px"
+     transform="translate(0.5,0.5)">
+    <rect
+       style="fill:#ffffff;stroke-width:0"
+       id="rect62"
+       height="15"
+       width="54"
+       y="76"
+       x="899" />
+    <text
+       id="text64"
+       y="85.5"
+       x="924.5">Kunde</text>
+  </g>
+  <ellipse
+     style="fill:#b266ff;stroke:#82b366"
+     id="ellipse68"
+     pointer-events="none"
+     ry="41"
+     rx="80"
+     cy="758.5"
+     cx="820.5" />
+  <g
+     style="font-size:12px;font-family:Helvetica;text-anchor:middle"
+     id="g74"
+     font-size="12px"
+     transform="translate(0.5,0.5)">
+    <text
+       id="text70"
+       y="754.5"
+       x="819.5">IBM Cloud-</text>
+    <text
+       id="text72"
+       y="768.5"
+       x="819.5">Services</text>
+  </g>
+  <path
+     style="fill:#ffffff;stroke:#0000ff;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:3, 3"
+     inkscape:connector-curvature="0"
+     id="path76"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     d="m 124.34,688.96 10.5,-0.09 -15.34,19.13 -15.66,-18.87 10.5,-0.09 -3.68,-452 -10.5,0.09 15.34,-19.13 15.66,18.87 -10.5,0.09 z" />
+  <rect
+     x="91.5"
+     y="420.7113"
+     width="49"
+     height="20.788689"
+     id="rect78"
+     style="font-size:medium;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke-width:0" />
+  <text
+     style="font-size:medium;font-family:Helvetica;text-anchor:middle"
+     x="114.95"
+     y="436.01999"
+     id="text80">Hybridität</text>
+  <path
+     style="fill:#ffffff;stroke:#0000ff;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:3, 3"
+     inkscape:connector-curvature="0"
+     id="path84"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     d="m 405.59,674.51 8.01,6.79 -24.11,4.46 0.46,-24.51 8.01,6.79 166.11,-195.9 -8,-6.79 24.11,-4.47 -0.47,24.52 -8.01,-6.79 z" />
+  <g
+     id="g90"
+     transform="translate(473,570)">
+    <switch
+       id="switch88">
+      <foreignObject
+         requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+         pointer-events="all"
+         overflow="visible"
+         height="5"
+         width="23">
+        <xhtml:div
+           style="line-height:1.2;vertical-align:top;white-space:nowrap"
+           text-align="center"
+           font-size="6px"
+           font-family="Helvetica"
+           display="inline-block"
+           color="rgb(0, 0, 0)">
+          <xhtml:div
+             style="background-color:#ffffff"
+             text-decoration="inherit"
+             text-align="inherit"
+             display="inline-block">Hybridity</xhtml:div>
+        </xhtml:div>
+      </foreignObject>
+      <text
+         style="font-size:6px;font-family:Helvetica;text-anchor:middle;fill:#000000"
+         id="text86"
+         font-size="6px"
+         y="6"
+         x="12">Hybridität</text>
+    </switch>
+  </g>
+  <rect
+     x="433.5"
+     y="557.47546"
+     width="87"
+     height="42.024548"
+     id="rect92"
+     style="font-size:medium;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke-width:0" />
+  <text
+     style="font-size:medium;font-family:Helvetica;text-anchor:middle"
+     x="475.70999"
+     y="573.07001"
+     id="text94">IBM Cloud</text>
+  <text
+     style="font-size:medium;font-family:Helvetica;text-anchor:middle"
+     x="475.70999"
+     y="587.07001"
+     id="text96">Private-Netz</text>
+  <path
+     style="fill:#ffffff;stroke:#0000ff;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:3, 3"
+     inkscape:connector-curvature="0"
+     id="path100"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     d="M 825.5,698 H 836 L 820.5,717 805,698 h 10.5 V 480 H 805 l 15.5,-19 15.5,19 h -10.5 z" />
+  <g
+     id="g106"
+     transform="translate(808,586)">
+    <switch
+       id="switch104">
+      <foreignObject
+         requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+         pointer-events="all"
+         overflow="visible"
+         height="5"
+         width="23">
+        <xhtml:div
+           style="line-height:1.2;vertical-align:top;white-space:nowrap"
+           text-align="center"
+           font-size="6px"
+           font-family="Helvetica"
+           display="inline-block"
+           color="rgb(0, 0, 0)">
+          <xhtml:div
+             style="background-color:#ffffff"
+             text-decoration="inherit"
+             text-align="inherit"
+             display="inline-block">Hybridity</xhtml:div>
+        </xhtml:div>
+      </foreignObject>
+      <text
+         style="font-size:6px;font-family:Helvetica;text-anchor:middle;fill:#000000"
+         id="text102"
+         font-size="6px"
+         y="6"
+         x="12">Hybridität</text>
+    </switch>
+  </g>
+  <rect
+     x="779.5"
+     y="568.5"
+     width="82"
+     height="29"
+     id="rect108"
+     style="font-size:medium;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke-width:0" />
+  <text
+     style="font-size:medium;font-family:Helvetica;text-anchor:middle"
+     x="819"
+     y="579"
+     id="text110">IBM Cloud</text>
+  <text
+     style="font-size:medium;font-family:Helvetica;text-anchor:middle"
+     x="819"
+     y="593"
+     id="text112">Public-Netz</text>
+  <path
+     style="fill:#ffffff;stroke:#0000ff;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:3, 3"
+     inkscape:connector-curvature="0"
+     id="path116"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     d="m 550.65,746.7 -0.65,10.48 -18,-16.65 19.93,-14.29 -0.66,10.48 170.66,10.63 0.66,-10.48 18,16.65 -19.93,14.29 0.65,-10.48 z" />
+  <g
+     style="font-size:12px;font-family:Helvetica;text-anchor:middle"
+     id="g124"
+     font-size="12px"
+     transform="translate(0.5,0.5)">
+    <rect
+       style="fill:#ffffff;stroke-width:0"
+       id="rect118"
+       height="29"
+       width="87"
+       y="736"
+       x="606" />
+    <text
+       id="text120"
+       y="738.71997"
+       x="648.84998">IBM Cloud</text>
+    <text
+       id="text122"
+       y="752.71997"
+       x="648.84998">Private-Netz</text>
+  </g>
+  <path
+     style="fill:none;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path126"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     d="m 400.5,17.5 h -255 q -10,0 -10,10 v 33.63" />
+  <path
+     style="stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path128"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     d="m 135.5,66.38 -3.5,-7 3.5,1.75 3.5,-1.75 z" />
+  <g
+     style="font-size:12px;font-family:Helvetica;text-anchor:middle"
+     id="g134"
+     font-size="12px"
+     transform="translate(0.5,0.5)">
+    <rect
+       style="fill:#ffffff;stroke-width:0"
+       id="rect130"
+       height="15"
+       width="123"
+       y="1"
+       x="230" />
+    <text
+       id="text132"
+       y="11"
+       x="290">Bereitstellung/Verwaltung von Anwendungen</text>
+  </g>
+  <path
+     style="fill:none;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path136"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     d="m 930.5,197.5 v 40 q 0,10 -10,10 H 768.62" />
+  <path
+     style="stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path138"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     d="m 761.62,247.5 7,-3.5 v 7 z" />
+  <rect
+     x="862.36981"
+     y="241.5"
+     width="63.089649"
+     height="15"
+     id="rect140"
+     style="font-size:medium;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke-width:0" />
+  <text
+     style="font-size:medium;font-family:Helvetica;text-anchor:middle"
+     x="893.5"
+     y="251.5"
+     id="text142">Verwaltung</text>
+  <path
+     style="fill:none;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path146"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     d="m 470.5,17.5 h 220 q 10,0 10,10 v 153.63" />
+  <path
+     style="stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path148"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     d="m 700.5,186.38 -3.5,-7 3.5,1.75 3.5,-1.75 z" />
+  <g
+     style="font-size:11px;font-family:Helvetica;text-anchor:middle"
+     id="g154"
+     font-size="11px"
+     transform="translate(18.5,0.5)">
+    <rect
+       style="fill:#ffffff;stroke-width:0"
+       id="rect150"
+       height="14"
+       width="116"
+       y="1"
+       x="510" />
+    <text
+       id="text152"
+       y="10"
+       x="566.5">Bereitstellung/Lebenszyklus von Anwendungen</text>
+  </g>
+  <path
+     style="fill:none;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path156"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     d="m 622.5,347.5 -1.9,-190 q -0.1,-10 -10.1,-10 H 181.87" />
+  <path
+     style="stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path158"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     d="m 176.62,147.5 7,-3.5 -1.75,3.5 1.75,3.5 z" />
+  <rect
+     x="370.92264"
+     y="136.5"
+     width="123.26041"
+     height="15"
+     id="rect160"
+     style="font-size:medium;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke-width:0" />
+  <text
+     style="font-size:medium;font-family:Helvetica;text-anchor:middle"
+     x="432.51001"
+     y="146.5"
+     id="text162">Nutzung von Services</text>
+  <rect
+     style="fill:#ffffff;stroke:#000000"
+     id="rect166"
+     pointer-events="none"
+     height="40"
+     width="120"
+     y="127.5"
+     x="55.5" />
+  <g
+     style="font-size:12px;font-family:Helvetica;text-anchor:middle"
+     id="g170"
+     font-size="12px"
+     transform="translate(0.5,0.5)">
+    <text
+       id="text168"
+       y="150.5"
+       x="114.5">Lokale VMs</text>
+  </g>
+  <ellipse
+     style="fill:#60a917;stroke:#60a917"
+     id="ellipse172"
+     pointer-events="none"
+     ry="20"
+     rx="60"
+     cy="247.5"
+     cx="700.5" />
+  <g
+     style="font-size:12px;font-family:Helvetica;text-anchor:middle"
+     id="g176"
+     font-size="12px"
+     transform="translate(0.5,0.5)">
+    <text
+       id="text174"
+       y="250.5"
+       x="699.5">Masterknoten</text>
+  </g>
+  <path
+     style="fill:#ffffff;stroke:#0000ff;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:3, 3"
+     inkscape:connector-curvature="0"
+     id="path178"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     d="m 306.01,664.67 8.49,6.18 -23.71,6.25 -1.36,-24.49 8.5,6.18 217.06,-298.46 -8.49,-6.18 23.71,-6.25 1.36,24.49 -8.5,-6.18 z" />
+  <g
+     style="font-size:12px;font-family:Helvetica;text-anchor:middle"
+     id="g186"
+     font-size="12px"
+     transform="translate(0.5,0.5)">
+    <rect
+       style="fill:#ffffff;stroke-width:0"
+       id="rect180"
+       height="29"
+       width="82"
+       y="424"
+       x="406" />
+    <text
+       id="text182"
+       y="427.07999"
+       x="446.20999">IBM Cloud</text>
+    <text
+       id="text184"
+       y="441.07999"
+       x="446.20999">Public-Netz</text>
+  </g>
+  <circle
+     style="fill:#ffffff;stroke:#000000"
+     r="7.5"
+     id="ellipse188"
+     pointer-events="none"
+     cy="15.5"
+     cx="445.5" />
+  <path
+     style="fill:none;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path190"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     d="m 445.5,22.5 v 25 m 0,-20 h -15 m 15,0 h 15 m -15,20 -15,20 m 15,-20 15,20" />
+  <g
+     style="font-size:12px;font-family:Helvetica;text-anchor:middle"
+     id="g196"
+     font-size="12px"
+     transform="translate(0.5,0.5)">
+    <rect
+       style="fill:#ffffff;stroke-width:0"
+       id="rect192"
+       height="15"
+       width="57"
+       y="76"
+       x="417" />
+    <text
+       id="text194"
+       y="85.5"
+       x="444.5">Entwickler</text>
+  </g>
+  <path
+     style="fill:#ffffff;stroke:#0000ff;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:3, 3"
+     inkscape:connector-curvature="0"
+     id="path198"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     d="m 382.4,484.32 8.9,-5.57 -3.07,24.33 -23.21,-7.89 8.9,-5.57 -171.32,-273.94 -8.9,5.57 3.07,-24.33 23.21,7.89 -8.9,5.57 z" />
+  <rect
+     x="46.310024"
+     y="431.48578"
+     width="68.870087"
+     height="17.710249"
+     id="rect200"
+     style="font-size:medium;font-family:Helvetica;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0"
+     transform="matrix(0.86101394,-0.50858136,0.49146745,0.87089595,0,0)" />
+  <text
+     style="font-size:medium;font-family:Helvetica;text-anchor:middle"
+     x="77.940247"
+     y="443.0575"
+     id="text202"
+     transform="rotate(-30)">Direct Link</text>
+  <path
+     style="fill:none;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path206"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     d="m 980.5,17.5 h 30 q 10,0 10,10 v 170 q 0,10 0,20 v 136 q 0,10 -10,9.96 l -211.88,-0.92" />
+  <path
+     style="stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path208"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     d="m 791.62,362.5 7.01,-3.46 -0.03,7 z" />
+  <g
+     style="font-size:12px;font-family:Helvetica;text-anchor:middle"
+     id="g214"
+     font-size="12px"
+     transform="translate(0.5,0.5)">
+    <rect
+       style="fill:#ffffff;stroke-width:0"
+       id="rect210"
+       height="15"
+       width="103"
+       y="215"
+       x="970" />
+    <text
+       id="text212"
+       y="225"
+       x="1020">Nutzung von Services</text>
+  </g>
+  <rect
+     style="fill:#ffffff;stroke:#000000"
+     id="rect216"
+     pointer-events="none"
+     height="41"
+     width="120"
+     y="767"
+     x="70.5" />
+  <g
+     style="font-size:12px;font-family:Helvetica;text-anchor:middle"
+     id="g220"
+     font-size="12px"
+     transform="translate(0.5,0.5)">
+    <text
+       id="text218"
+       y="790.5"
+       x="129.5">Cloud-VMs</text>
+  </g>
+  <circle
+     style="fill:#ffffff;stroke:#000000"
+     r="7.5"
+     id="ellipse222"
+     pointer-events="none"
+     cy="120.5"
+     cx="925.5" />
+  <path
+     style="fill:none;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path224"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     d="m 925.5,127.5 v 25 m 0,-20 h -15 m 15,0 h 15 m -15,20 -15,20 m 15,-20 15,20" />
+  <g
+     style="font-size:12px;font-family:Helvetica;text-anchor:middle"
+     id="g230"
+     font-size="12px"
+     transform="translate(0.5,0.5)">
+    <rect
+       style="fill:#ffffff;stroke-width:0"
+       id="rect226"
+       height="15"
+       width="46"
+       y="181"
+       x="903" />
+    <text
+       id="text228"
+       y="190.5"
+       x="924.5">IBM IKS</text>
+  </g>
+  <ellipse
+     style="fill:#fff2cc;stroke:#d6b656"
+     id="ellipse232"
+     pointer-events="none"
+     ry="30"
+     rx="60"
+     cy="847.5"
+     cx="420.5" />
+  <g
+     style="font-size:13px;font-family:Helvetica;text-anchor:middle"
+     id="g236"
+     font-size="13px"
+     transform="translate(0.5,0.5)">
+    <text
+       id="text234"
+       y="851"
+       x="419.5">MCM</text>
+  </g>
+  <path
+     style="fill:none;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path238"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     d="m 130.5,808.5 v 139 q 0,10 10,10 h 550 q 10,0 10,-10 V 413.87" />
+  <path
+     style="stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path240"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     d="m 700.5,408.62 3.5,7 -3.5,-1.75 -3.5,1.75 z" />
+  <g
+     id="g246"
+     transform="translate(645,914)">
+    <switch
+       id="switch244">
+      <foreignObject
+         requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+         pointer-events="all"
+         overflow="visible"
+         height="12"
+         width="101">
+        <xhtml:div
+           style="line-height:1.2;vertical-align:top;white-space:nowrap"
+           text-align="center"
+           font-size="12px"
+           font-family="Helvetica"
+           display="inline-block"
+           color="rgb(0, 0, 0)">
+          <xhtml:div
+             style="background-color:#ffffff"
+             text-decoration="inherit"
+             text-align="inherit"
+             display="inline-block">Consume Services</xhtml:div>
+        </xhtml:div>
+      </foreignObject>
+      <text
+         style="font-size:12px;font-family:Helvetica;text-anchor:middle;fill:#000000"
+         id="text242"
+         font-size="12px"
+         y="12"
+         x="51">Nutzung von Services</text>
+    </switch>
+  </g>
+  <path
+     style="fill:none;stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path248"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     d="m 395.5,787.5 h 215 q 10,0 10.08,-10 l 2.87,-337.63" />
+  <path
+     style="stroke:#000000;stroke-miterlimit:10"
+     inkscape:connector-curvature="0"
+     id="path250"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     d="m 623.49,434.62 3.44,7.03 -3.48,-1.78 -3.52,1.72 z" />
+  <g
+     style="font-size:12px;font-family:Helvetica;text-anchor:middle"
+     id="g256"
+     font-size="12px"
+     transform="translate(-5.5,0.5)">
+    <rect
+       style="fill:#ffffff;stroke-width:0"
+       id="rect252"
+       height="15"
+       width="101"
+       y="588"
+       x="575" />
+    <text
+       id="text254"
+       y="598.03003"
+       x="624.64001">Bereitstellung von Containern</text>
+  </g>
+</svg>

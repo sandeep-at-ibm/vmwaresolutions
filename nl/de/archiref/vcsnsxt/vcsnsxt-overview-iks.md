@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -56,8 +56,7 @@ Damit die CNI einen Container zu einem Netz hinzufügen kann, muss die Container
 
 Hinsichtlich des Datenaustausches im Netz wird in {{site.data.keyword.containerlong_notm}} zwischen vier Typen unterschieden, was im folgenden Diagramm dargestellt ist.
 
-Abbildung 1. Datenverkehrstypen im Containernetz
-![Datenverkehrstypen im Containernetz](vcsnsxt-traffictypes.svg)
+![Datenverkehrstypen im Containernetz](../../images/vcsnsxt-traffictypes.svg "Datenverkehrstypen im Containernetz")
 
 - **Podinterner Netzbetrieb** - Dies wird auch als Kommunikation zwischen Containern bezeichnet. Alle Container in einem Pod nutzen einen Netznamensbereich sowie dieselbe IP-Adresse gemeinsam und sind füreinander auf dem lokalen Host (localhost) sichtbar. Der Datenverkehr für die einzelnen Anwendungen wird anhand verschiedener Portnummern unterschieden. Der Entwickler muss sicherstellen, dass die Container in einem Pod hinsichtlich der verwendeten Ports nicht miteinander in Konflikt stehen. Innerhalb eines Pods gibt es einen sogenannten Infrastrukturcontainer. Dies ist der erste vom Kubelet gestartete Container. Er übernimmt die IP-Adresse des Pods und richtet den Netznamensbereich ein. Anschließend treten alle anderen Container im Pod dem Netz und IPC-Namensbereich des Infrastrukturcontainers bei. Für den Container ist der Netzbrückenmodus aktiviert; alle anderen Container im Pod treten durch den Containermodus diesem Namensbereich bei. Falls der Infrastrukturcontainer beendet wird, stoppt das Kubelet alle Container im Pod und stellt sie anschließend erneut bereit, in der Regel mit einer neuen IP-Adresse. Weitere Details über diesen Datenfluss werden im vorliegenden Dokument nicht behandelt.
 
@@ -109,8 +108,7 @@ In Calico werden IP-Pakete an einen oder von einem Pod durch die Linux-Infrastru
 -	Für eine Workload, die Pakete sendet, stellt Calico sicher, dass immer der Workerknoten als MAC-Adresse für den nächsten Hop zurückgegeben wird, und zwar unabhängig davon, welche Weiterleitung möglicherweise in der Workload selbst konfiguriert ist.
 -	Für Pakete, die an eine Workload gerichtet sind, findet der letzte IP-Hop  zwischen dem Workerknoten der Zielworkload und der Workload selbst statt.
 
-Abbildung 2. Calico-CNI
-![Calico-CNI](vcsnsxt-calico-cni.svg)
+![Calico-CNI](../../images/vcsnsxt-calico-cni.svg "Calico-CNI")
 
 Das vorangehende Diagramm zeigt die folgenden Calico-Komponenten:
 -	**calicoctl** - Befehlszeilenschnittstelle.

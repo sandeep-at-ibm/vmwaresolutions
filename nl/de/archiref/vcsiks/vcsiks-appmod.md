@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 Das folgende Diagramm zeigt die Referenzarchitektur der Anwendungsmodernisierung, die Acme Skateboards bereitstellt und die in dieser Reihe von Dokumenten eingehend beschrieben wird.
 
-Abbildung 1. Diagramm mit Architekturübersicht
-![Diagramm mit Architekturübersicht](vcsiks-aod.svg)
+![Architekturübersichtsdiagramm](../../images/vcsiks-aod.svg "Architekturübersichtsdiagramm")
 
 Durch diese Hybridarchitektur erhält Acme Skateboards folgende Möglichkeiten:
 - Migration von virtuellen VMware-Maschinen aus der lokalen Umgebung auf {{site.data.keyword.cloud}} mit geringer oder ganz ohne Ausfallzeit und ohne erneute Anwendungskonfiguration.

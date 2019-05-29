@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -36,9 +36,7 @@ Im folgenden Beispiel werden eine NSX Universal Transport Zone zu den Basismanag
 * Für den eingehenden Datenverkehr ist eine globale Lastausgleichsfunktion erforderlich. Informieren Sie sich über die {{site.data.keyword.cloud_notm}}-Angebote für einen globalen Lastausgleich, um diese Anforderung zu erfüllen.
 * Für dieses Beispiel ist VMware NSX Enterprise Edition erforderlich.
 
-Abbildung 1. Topologie mit mehreren Standorten
-
-![Topologie mit mehreren Standorten](multisite_topology.svg "Topologie mit mehreren Standorten")
+![Topologie mit mehreren Standorten](../../images/multisite_topology.svg "Topologie mit mehreren Standorten")
 
 ## Zugehörige Links
 {: #nsx-multi_site-related}

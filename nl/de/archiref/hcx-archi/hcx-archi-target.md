@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -104,8 +104,7 @@ Darüber hinaus wird sie für den Zugriff auf vCenter und NSX mit einem bestimmt
 
 Nach der Bereitstellung und Konfiguration der HCX-Manager-Cloudkomponente erstellen die Quellenkomponenten eine Verbindung zum HCX-Manager über die in NSX ESG konfigurierten VIP-Adressen. Sobald diese Verbindung hergestellt ist, werden das Cloud-Gateway und das WAN-Optimierungsprogramm als Appliances in IBM Cloud bereitgestellt.
 
-Abbildung 1. Ziel - Hybrid-Cloud-Services-Appliance
-![Ziel - Hybrid-Cloud-Services-Appliance](target_hybrid_cloud_services_appliance.svg)
+![Ziel - Hybrid-Cloud-Services-Appliance](../../images/target_hybrid_cloud_services_appliance.svg "Ziel - Hybrid-Cloud-Services-Appliance")
 
 ## Cloud-Gateway
 {: #hcx-archi-target-cloud-gateway}
@@ -126,8 +125,7 @@ Bei diesem logischen Switch handelt es sich um ein privates, nicht weiterleitbar
 
 Die folgende Abbildung zeigt ein allgemeines Komponentendiagramm der Cloud-Gateway-Appliance und der zugewiesenen Verbindungen.
 
-Abbildung 2. Cloud-Gateway-Bereitstellung
-![Cloud-Gateway-Bereitstellung](cloud_gateway_deployment.svg)
+![Cloud-Gateway-Bereitstellung](../../images/cloud_gateway_deployment.svg "Cloud-Gateway-Bereitstellung")
 
 ## WAN-Optimierungsprogramm
 {: #hcx-archi-target-wan-opt}
@@ -146,8 +144,7 @@ Tabelle 9. Dimensionierung der Appliance des WAN-Optimierungsprogramms
 
 Im Gegensatz zum Cloud-Gateway ist die Appliance des WAN-Optimierungsprogramms an nur einen logischen Switch angeschlossen, um die Kommunikation zwischen ihr selbst und dem Cloud-Gateway zu ermöglichen. Diese Appliance ist erforderlich, wenn das WAN-Optimierungsprogramm innerhalb der Quellenumgebung verwendet wird. In der folgenden Abbildung ist eine Ansicht des Netzlayouts zu sehen.
 
-Abbildung 3. Bereitstellung des WAN-Optimierungsprogramms
-![Bereitstellung des WAN-Optimierungsprogramms](wan_optimizer_deployment.svg)
+![Bereitstellung des WAN-Optimierungsprogramms](../../images/wan_optimizer_deployment.svg "Bereitstellung des WAN-Optimierungsprogramms")
 
 ## Layer-2-Konzentrator
 {: #hcx-archi-target-layer-2-conc}
@@ -166,8 +163,8 @@ Tabelle 10. Dimensionierung der L2C-Appliance für hohen Durchsatz
 
 Die L2C-Appliance wird sowohl im Management-VLAN als auch im öffentlichen VLAN bereitgestellt. Die öffentliche Schnittstelle ist für den Anwendungsdatenverkehr vorgesehen, der für die Quelle des erweiterten Netzes gebunden ist. Weitere Verbindungen wie z. B. die erweiterten Netze werden erstellt und an die L2C-Appliance angehängt, nachdem der Quellenadministrator die Netzerweiterung hin zu IBM Cloud initiiert hat. Beispiele für diese Netze und Verbindungen sind in der folgenden Abbildung dargestellt.
 
-Abbildung 4. Bereitstellung des L2-Konzentrators
-![Bereitstellung des L2-Konzentrators](l2_concentrator_deployment.svg)
+![Bereitstellung des L2-Konzentrators](../../images/l2_concentrator_deployment.svg "Bereitstellung des L2-Konzentrators")
+
 
 ## Zugehörige Links
 {: #hcx-archi-target-related}

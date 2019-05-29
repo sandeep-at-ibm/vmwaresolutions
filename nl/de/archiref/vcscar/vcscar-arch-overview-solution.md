@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -17,7 +17,7 @@ subcollection: vmware-solutions
 ## Komponenten von VMware vCenter Server on IBM Cloud
 {: #vcscar-arch-overview-solution-vcs-comp}
 
-Abbildung 1. Diagramm der vCenter Server-Umgebung ![vCenter Server-Umgebung](vcscar-vcs.svg)
+![vCenter Server-Umgebung](../../images/vcscar-vcs.svg "vCenter Server-Umgebung")
 
 ### Platform Service Controller
 {: #vcscar-arch-overview-solution-psc}
@@ -71,8 +71,7 @@ Plattenspeicher    | 1000 GB auf lokalem Datenspeicher
 
 {{site.data.keyword.icpfull_notm}} ist eine Anwendungsplattform für die Entwicklung und Verwaltung von lokalen, containerisierten Anwendungen. Bei {{site.data.keyword.icpfull_notm}} handelt es sich um eine integrierte Umgebung für die Verwaltung von Containern, die Kubernetes als Container-Orchestrator, ein privates Image-Repository, eine Managementkonsole und Überwachungsframeworks enthält.
 
-Abbildung 2. Virtuelle {{site.data.keyword.icpfull_notm}}-Bereitstellung mit vCenter Server
-![Virtuelle {{site.data.keyword.icpfull_notm}}-Bereitstellung mit vCenter Server](vcscar-icp.svg)
+![Virtuelle {{site.data.keyword.icpfull_notm}}-Bereitstellung mit vCenter Server](../../images/vcscar-icp.svg "Virtuelle {{site.data.keyword.icpfull_notm}}-Bereitstellung mit vCenter Server")
 
 ### Bootknoten
 {: #vcscar-arch-overview-solution-boot-node}
@@ -134,8 +133,7 @@ Worker  |  3 | IP (x3)  |  4-8 |16-20   |  150
 
 {{site.data.keyword.cloud_notm}} Automation Manager (CAM) ist eine Self-Service-Managementplattform für mehrere Clouds, die unter {{site.data.keyword.icpfull_notm}} ausgeführt wird und die Entwickler und Administratoren dabei unterstützt, die Anforderungen des Unternehmens zu erfüllen.
 
-Abbildung 3. CAM-Komponentenreferenz
-![CAM-Komponentenreferenz](vcscar-cam-components.svg)
+![CAM-Komponentenreferenz](../../images/vcscar-cam-components.svg "CAM-Komponentenreferenz")
 
 ### CAM-Proxy
 {: #vcscar-arch-overview-solution-cam-proxy}

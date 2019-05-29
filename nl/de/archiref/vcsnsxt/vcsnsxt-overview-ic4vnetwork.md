@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -18,8 +18,7 @@ subcollection: vmware-solutions
 
 Das physische Netz von {{site.data.keyword.cloud_notm}} ist in drei verschiedenartige Netze unterteilt: öffentliches Netz, privates Netz und Managementnetz.
 
-Abbildung 1. Allgemeine Netzübersicht für {{site.data.keyword.cloud_notm}}
-![{{site.data.keyword.cloud_notm}} - Allgemeine Netzübersicht](vcsnsxt-ic4vcloud.svg)
+![{{site.data.keyword.cloud_notm}} - Allgemeine Netzübersicht](../../images/vcsnsxt-ic4vcloud.svg "{{site.data.keyword.cloud_notm}} - Allgemeine Netzübersicht")
 
 ## Öffentliches Netz
 {: #vcsnsxt-overview-ic4vnetwork-public-net}
@@ -55,9 +54,7 @@ Primäre oder portierbare IP-Adressen können an ein beliebiges VLAN im Kundenko
 
 Jeder physische Host im Design verfügt über zwei redundante Paare von Ethernet-Verbindungen mit 10 Gb/s zu jedem (öffentlichen und privaten) {{site.data.keyword.cloud_notm}} Top of Rack-Switch (ToR-Switch). Die Adapter sind als einzelne Verbindungen (ohne Bonding) für Verbindungen mit insgesamt 4 × 10 Gb/s eingerichtet. Hierdurch kann jede NIC-Verbindung (NIC - Networking Interface Card, Netzschnittstellenkarte) unabhängig von den anderen Verbindungen arbeiten.
 
-Abbildung 2. Physische Hostverbindungen
-</br>
-![Physische Hostverbindungen](vcsnsxt-host-connections.svg)
+![Physische Hostverbindungen](../../images/vcsnsxt-host-connections.svg "Physische Hostverbindungen")
 
 ## VLANs
 {: #vcsnsxt-overview-ic4vnetwork-vlans}

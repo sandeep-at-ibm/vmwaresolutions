@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-29"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -209,6 +209,7 @@ Konfigurieren Sie VUM so, dass der Proxy-Server für den Zugriff auf die Reposit
 2. Wählen Sie die Registerkarte **Verwalten** aus und klicken Sie auf **Einstellungen**.
 3. Wählen Sie **Downloadeinstellungen** aus und klicken Sie dann unter _Proxy-Einstellungen_ auf **Bearbeiten**.
 4. Aktivieren Sie das Feld **Proxy verwenden** und geben Sie die _IP-Adresse des Proxy-Servers_ und den _Port 3128_ ein. Klicken Sie dann auf **OK**. Der Konnektivitätsstatus ändert sich in _Wird geprüft_ und dann in _Verbunden_.
+    **Hinweis**: Machen Sie sich keine Sorgen, wenn beim Testen der Verbindung zum Proxy-Server die Nachricht ``Some URLs have been accessed successfully, but others are inaccessible`` angezeigt wird.
 5. Klicken Sie auf **Jetzt herunterladen**. Im Teilfenster _Letzte Tasks_ sollte diese Aktivität dann als abgeschlossen angezeigt werden.
 6. Wenn diese Aktivität fehlschlägt, starten Sie die vCenter Server Appliance (vCSA) erneut:
   1. Melden Sie sich an der Managementschnittstelle für vCSA unter `https://vcsaFQDN:5480` als **root** an.

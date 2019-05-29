@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-26"
+lastupdated: "2019-05-01"
 
 subcollection: vmware-solutions
 
@@ -118,10 +118,10 @@ Tabelle 5. Beschreibung der Variablen in Formel 2
 ## Hinweise zur Installation von IBM Cloud Private Hosted
 {: #icp_overview-install}
 
-* Stellen Sie sicher, dass Sie über die erforderlichen Lizenzen verfügen, bevor Sie den {{site.data.keyword.cloud_notm}} Private Hosted-Service installieren. Dazu zählen sowohl die Lizenzen für {{site.data.keyword.cloud_notm}} Private als auch die Lizenzen für {{site.data.keyword.cloud_notm}} Automation Manager. Vergewissern Sie sich, dass Ihre Lizenz nicht nur die erste Servicebereitstellung unterstützt, sondern auch eine zukünftige Erweiterung Ihrer Infrastruktur berücksichtigt.
+* Stellen Sie sicher, dass Sie über die erforderlichen Lizenzen verfügen, bevor Sie den {{site.data.keyword.cloud_notm}} Private Hosted-Service installieren.  Dazu zählen sowohl die Lizenzen für {{site.data.keyword.cloud_notm}} Private als auch die Lizenzen für {{site.data.keyword.cloud_notm}} Automation Manager. Vergewissern Sie sich, dass Ihre Lizenz nicht nur die erste Servicebereitstellung unterstützt, sondern auch eine zukünftige Erweiterung Ihrer Infrastruktur berücksichtigt.
 * Für {{site.data.keyword.cloud_notm}} Private Hosted-Bereitstellungen in einsatzbereiten Umgebungen werden 64 GB RAM pro Host nicht unterstützt. Aus diesem Grund müssen Sie eine Option auswählen, die größer als 64 GB für **RAM** ist.
 * Bevor der Service "{{site.data.keyword.cloud_notm}} Private Hosted" in Ihrer Umgebung installiert wird, wird eine Prüfung für die verfügbare Kapazität des Standardclusters in der Umgebung ausgeführt, um sicherzustellen, dass die Servicekomponenten angepasst werden können. Wenn die Kapazitätsprüfung fehlschlägt, wird der Service nicht installiert und der Servicestatus wird in der Konsole auf **Kapazitätsprüfung fehlgeschlagen** festgelegt. Darüber hinaus wird eine Konsolennachricht mit weiteren Details angezeigt und Sie werden per E-Mail benachrichtigt. Um den Service zu installieren, müssen Sie die Kapazität in Ihrem Standardcluster erhöhen, indem Sie entweder mehr Hosts hinzufügen oder Arbeitsspeicher, CPU oder Plattenspeicherplatz freigeben und anschließend den Service in der Konsole erneut hinzufügen. Danach können Sie den vorhandenen Service mit dem Status **Kapazitätsüberprüfung fehlgeschlagen** entfernen, indem Sie auf das Symbol **Löschen** neben dem Service klicken.
-* Wenn Sie zusätzliche Knoten bereitstellen möchten, verwenden Sie die Ubuntu-Vorlage für {{site.data.keyword.cloud_notm}} Private (Ubuntu1604), die mit der ursprünglichen {{site.data.keyword.cloud_notm}} Private Hosted-Installation bereitgestellt wird. Um die Vorlage zu finden, rufen Sie in VMware vSphere Web Client die Registerkarte **VMs und Vorlagen** unter dem Ordner `cam` auf. Das Standardkennwort für die Ubuntu-Vorlage ist `icponcloud`; es wird empfohlen, dieses vor Verwendung der Vorlage zu ändern.
+* Wenn Sie weitere Knoten bereitstellen möchten, lesen Sie die Informationen im Abschnitt zur [Bereitstellung weiterer Knoten](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_ordering-deploy-nodes#icp_ordering-deploy-nodes).
 
 ## Hinweise zur Deinstallation von IBM Cloud Private Hosted
 {: #icp_overview-remove}

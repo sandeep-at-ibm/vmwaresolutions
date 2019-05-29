@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-22"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -58,8 +58,7 @@ Zusätzlich zu der Hardware, die für {{site.data.keyword.cloud_notm}} Private v
 ## Virtuelle Struktur
 {: #vcscar-arch-overview-infrastructure-virt-structure}
 
-Abbildung 1. Struktur der vCenter Server- und {{site.data.keyword.icpfull_notm}}-Bereitstellung
-![Struktur der vCenter Server- und {{site.data.keyword.icpfull_notm}}-Bereitstellung](vcscar-icp.svg)
+![Struktur der vCenter Server- und {{site.data.keyword.icpfull_notm}}-Bereitstellung](../../images/vcscar-icp.svg "Struktur der vCenter Server- und {{site.data.keyword.icpfull_notm}}-Bereitstellung")
 
 In der vCenter Server-Instanz wird die {{site.data.keyword.icpfull_notm}}-Instanz mit einem dedizierten NSX Edge Services Gateway (ESG) und dem Distributed Logical Router (DLR) bereitgestellt.
 Die {{site.data.keyword.icpfull_notm}}-Installation wird in das VXLAN-Teilnetz geladen, das in den vorgenannten Komponenten definiert ist.

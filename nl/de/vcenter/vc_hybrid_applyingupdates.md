@@ -27,7 +27,8 @@ Beachten Sie außerdem das folgende Verhalten, wenn Sie bestimmte Operationen f�
 * Wenn Sie neue Cluster hinzufügen, werden diese Cluster mit den neuesten VMware-Komponenten bereitgestellt; dies gilt jedoch nicht für vorhandene Cluster.
 * Wenn Sie neue ESXi-Server hinzufügen, werden diese ESXi-Server mit den neuesten VMware-Komponenten bereitgestellt; dies gilt jedoch nicht für vorhandene ESXi-Server.
 
-{{site.data.keyword.vmwaresolutions_short}} bietet keine Unterstützung für die Anwendung von Updates und Patches für VMware-Komponenten. Sie müssen diese Updates selbst überwachen und anwenden.{:important}
+{{site.data.keyword.vmwaresolutions_short}} bietet keine Unterstützung für die Anwendung von Updates und Patches für VMware-Komponenten. Sie müssen diese Updates selbst überwachen und anwenden.
+{:important}
 
 ## Bevor Sie Updates für IBM Managementkomponenten anwenden
 {: #vc_hybrid_applyingupdates-prereq}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -22,9 +22,7 @@ Die Netzservices unter {{site.data.keyword.cloud}} bestehen aus zwei Paaren von 
 
 Die folgende Grafik zeigt ein vereinfachtes Netzdiagramm, in dem das Paar von Management-ESGs und das Paar von Workload-ESGs dargestellt wird. Sie zeigt außerdem einen NSX-DLR (Distributed Logical Router) und das Workload-VXLAN. Diese Komponenten sind als Einstiegslösung für Kundenworkloads konzipiert und setzen noch kein spezielles Wissen zur Einrichtung in NSX voraus. Ein DLR wird in der Regel eingesetzt, um den Datenverkehr zwischen VMware vCenter Server und Ost-West-Datenverkehr zwischen separaten Layer-2-Netzen in der Instanz weiterzuleiten. Dies steht im Gegensatz zum Verhalten eines ESG, das den Nord-Süd-Netzverkehr vereinfacht, der die vCenter Server-Instanz traversiert.
 
-Abbildung 1. Cloudnetzservices bei vCenter Server
-
-![Cloudnetzservices bei vCenter Server](cloudnetworkingservicesdiagram.svg "Cloudnetzservices bei vCenter Server")
+![Cloud Networking Services on vCenter Server](../../images/cloudnetworkingservicesdiagram.svg "Cloud Networking Services on vCenter Server")
 
 Während ein einzelnes ESG möglicherweise für den Management- und Workloaddatenverkehr beim Kunden ausreicht, kann beim Design eine Trennung von Management und Kundendatenverkehr vorgenommen werden, um eine versehentliche Fehlkonfiguration des Management-ESGs zu verhindern.
 
@@ -38,9 +36,7 @@ Das IBM Management-ESG ist ein dedizierter NSX Edge-Cluster, der dem {{site.data
 
 Das Management-ESG bietet einen Kommunikationspfad zwischen Add-on-Service-VMs, die in vCenter Server-Instanzen enthalten sind, und der IBM Automation-Infrastruktur in {{site.data.keyword.cloud_notm}}, wie dies für Cloud Foundation aus folgender Grafik hervorgeht.
 
-Abbildung 2. Management-Edge-Kommunikation bei vCenter Server
-
-![Management-Edge-Kommunikation bei vCenter Server](mgmtvmcommunication.svg "Management-Edge-Kommunikation bei vCenter Server")
+![Management-Edge-Kommunikation bei vCenter Server](../../images/mgmtvmcommunication.svg "Management-Edge-Kommunikation bei vCenter Server")
 
 Durch die einfache Kommunikation zwischen bestimmten Add-on-Service-VMs und ihren entsprechenden Lizenzierungs- und Messsystemen werden die NSX ESGs in einer umfangreichen Konfiguration in einem Aktiv/Passiv-HA-Paar (HA = High Availability) dimensioniert und im Managementressourcenpool des des vCenter Server-Clusters bereitgestellt. Die folgende Tabelle enthält eine Zusammenfassung der IBM Management NSX ESG-Bereitstellung.
 
@@ -155,9 +151,7 @@ Die Topologie in der folgenden Abbildung setzt sich aus den folgenden NSX-Kompon
 * Distributed Logical Router (DLR)
 * VXLAN (L2 over L3)
 
-Abbildung 3. Beispiel für ein Netzflussdiagramm
-
-![Netzflussdiagramm](customer_network_flow_diagram.svg "Netzflussdiagramm")
+![Netzflussdiagramm](../../images/customer_network_flow_diagram.svg "Netzflussdiagramm")
 
 ### Edge-Schnittstellen für IBM Workload NSX Edge
 {: #nsx-networking_services-edge-interfaces-workload}

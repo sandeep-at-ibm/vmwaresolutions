@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-02"
 
 subcollection: vmware-solutions
 
@@ -28,8 +28,7 @@ Das VMware vCenter Server on {{site.data.keyword.cloud_notm}} with NSX-T-Angebot
 
 Das folgende Diagramm enthält Details zu den Verantwortlichkeiten des Kunden (Sie) und den Verantwortlichkeiten der IBM für Konformitätsaktivitäten.
 
-Abbildung 1. Verantwortlichkeitsmatrix für Kunden und IBM für vCenter Server on IBM Cloud im Vergleich
-![Verantwortlichkeitsmatrix für Kunden und IBM im Vergleich](customer_ibm_responsibility_matrix.svg "Customer versus IBM responsibility matrix")
+![Matrix zu Verantwortlichkeiten des Kunden und Verantwortlichkeiten der IBM](../images/customer_ibm_responsibility_matrix.svg "Matrix zu Verantwortlichkeiten des Kunden und Verantwortlichkeiten der IBM")
 
 ## Einschränkungen für Gesundheitsdaten
 {: #vc_compl_info-health-data-restrictions}

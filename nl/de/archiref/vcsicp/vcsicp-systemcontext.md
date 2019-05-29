@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -14,8 +14,7 @@ subcollection: vmware-solutions
 # Systemkontext
 {: #vcsicp-systemcontext}
 
-Abbildung 1. Systemkontextdiagramm
-![Systemkontextdiagramm - vCenter Server {{site.data.keyword.icpfull_notm}} CAM](vcsicp-syscontext-vcs-icp-cam.svg)
+![Systemkontextdiagramm - vCenter Server {{site.data.keyword.icpfull_notm}} CAM](../../images/vcsicp-syscontext-vcs-icp-cam.svg "Systemkontextdiagramm - vCenter Server {{site.data.keyword.icpfull_notm}} CAM")
 
 Folgende Komponenten sind Kernkomponenten:
 

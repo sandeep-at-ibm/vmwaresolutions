@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-13"
 
 subcollection: vmware-solutions
 
@@ -53,11 +53,6 @@ Informieren Sie sich über die Architektur der [Erweiterungen für die Virtualis
 * [Ressourcen und Videos](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/resources){:new_window}
 * [Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware){:new_window}
 * [Ausgewählte Ressourcen und Fallstudien](https://www.ibm.com/cloud/vmware/resources){:new_window}
-
-## IBM Cloud for VMware Solutions - Erkundungstour
-{: #additional_resources-test-drive}
-
-Möchten Sie sich einen eigenen Eindruck verschaffen? Die geführte Demonstration zu {{site.data.keyword.vmwaresolutions_short}} mit schrittweisen Anleitungen ermöglicht Ihnen eine kurze Erkundungstour, in der Sie [VMware vCenter Server ausprobieren](https://cloudcontent.mybluemix.net/cloud/garage/demo/try-vmware-solutions){:new_window} können.
 
 ## VMware-Dokumentation
 {: #additional_resources-vmware-doc}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-13"
 
 subcollection: vmware-solutions
 
@@ -63,8 +63,7 @@ Attribut | Spezifikation
 
 Die folgende Abbildung zeigt die Anordnung der NSX Manager-Controller in Relation zu anderen Komponenten in der Architektur.
 
-Abbildung 1. Netzübersicht für NSX-T Manager
-![Netzübersicht für NSX-T Manager](vcsv4radiagrams-ra-vcs-nsx-overview.svg)
+![Netzübersicht für NSX-T Manager](../../images/vcsv4radiagrams-ra-vcs-nsx-overview.svg "Netzübersicht für NSX-T Manager")
 
 ## Bereitstellungsaspekte
 {: #nsx-t-design-deployment}
@@ -175,11 +174,9 @@ Name des logischen Switches | VLAN |Transportzone | Uplink-Teaming-Richtlinie
 
 Im Rahmen dieses Designs wird ein einzelner virtueller Edge-Cluster für die Verwendung durch Management- und Kundenworkloads bereitgestellt. Der virtuelle Edge-Cluster kann mehrere Instanzen von T0-Gateways aufnehmen. Wie zuvor beschrieben, können mehrere T0-Edge-Gateway-Instanzen in einem einzelnen Edge-Cluster mit jeweils eigenen Routing-Tabellen instanziiert werden. Sehen Sie sich die folgende Abbildung an, in der die funktionalen Komponenten eines NSX-T-Edge-Clusters beschrieben sind.
 
-Abbildung 2. Beispiel eines NSX-T Edge-Clusters mit einer Skalierung von T0 zu T1
-![Beispiel eines NSX-T Edge-Clusters mit einer Skalierung von T0 zu T1](vcsv4radiagrams-ra-nsx-t-edge-cluster-t0-to-t1-scale.svg)
+![Beispiel eines NSX-T Edge-Clusters mit einer Skalierung von T0 zu T1](../../images/vcsv4radiagrams-ra-nsx-t-edge-cluster-t0-to-t1-scale.svg "Beispiel eines NSX-T Edge-Clusters mit einer Skalierung von T0 zu T1")
 
-Abbildung 3. Management T0-Gateway</br>
-![Management T0-Gateway](vcsv4radiagrams-topology-0.svg)
+![Management T0-Gateway](../../images/vcsv4radiagrams-topology-0.svg "Management T0-Gateway")
 
 #### Logisches Tier-0-Gateway
 {: #nsx-t-design-tier-0}
@@ -201,8 +198,7 @@ Um Layer-3-Konnektivität zwischen VMs bereitzustellen, die mit logischen Switch
 
 Workload von T1- bis T0-Gateway - virtueller Edge-Cluster
 
-Abbildung 4. Von NSX-T bereitgestelltes virtuelles T0-Edge-Gateway für die Topologie
-![Von NSX-T bereitgestelltes virtuelles T0-Edge-Gateway für die Topologie](vcsv4radiagrams-topology-1.svg)
+![Von NSX-T bereitgestelltes virtuelles T0-Edge-Gateway für die Topologie](../../images/vcsv4radiagrams-topology-1.svg "Von NSX-T bereitgestelltes virtuelles T0-Edge-Gateway für die Topologie")
 
 Die mit IC4V bereitgestellte Topologie 1 ist im Wesentlichen die gleiche Topologie, die mit den NSX-V-DLR- und Edge-Gateways bereitgestellt wird. Bei NSX-T ist keine dynamische Routing-Protokollkonfiguration zwischen T1 und T0 vorhanden. RFC-1891 Der IP-Adressraum wird für das Workload-Overlay-Netzwerk und das Transit-Overlay-Netzwerk verwendet. Dem Kunden wird ein privater und öffentlicher portabler IP-Bereich zugeordnet, der für den Kunden verwendet wird. Ein vom Kunden als bezeichneter privater und öffentlicher portierbarer {{site.data.keyword.cloud_notm}}-IP-Bereich wird dem T0 zur Verwendung durch den Kunden zugewiesen.
 
@@ -210,8 +206,7 @@ Ab diesem Design haben Sie die Möglichkeit, diese IP-Bereiche nicht zu löschen
 
 Workload von T1- bis T0-Gateway - physischer Edge-Cluster
 
-Abbildung 5. Von NSX-T bereitgestelltes physisches T0-Edge-Gateway für die Topologie
-![Von NSX-T bereitgestelltes physisches T0-Edge-Gateway für die Topologie](vcsv4radiagrams-topology-2.svg)
+![Von NSX-T bereitgestelltes physisches T0-Edge-Gateway für die Topologie](../../images/vcsv4radiagrams-ra-vcs-nsx-overview.svg "Von NSX-T bereitgestelltes physisches T0-Edge-Gateway für die Topologie")
 
 Die bereitgestellte Topologie 2 ähnelt der Ausnahme, die den VM-basierten Edge-Cluster durch ein Bare-Metal-Serverpaar ersetzt, auf denen Red Hat Server ausgeführt wird. Ein vom Kunden als bezeichneter privater und öffentlicher portierbarer {{site.data.keyword.cloud_notm}}-IP-Bereich wird dem T0 zur Verwendung durch den Kunden zugewiesen. Ab diesem Design haben Sie die Möglichkeit, diese IP-Bereiche nicht zu löschen, wenn die vCenter Server-Instanz stillgelegt und gelöscht wird.
 
@@ -219,8 +214,7 @@ In einem separaten Dokument oder Link finden Sie eine Stückliste zu den Hardwar
 
 Workload von ICP- bis T0-Gateway - virtueller Edge-Cluster
 
-Abbildung 6. Von NSX-T bereitgestellte Topologie mit ICP-NSX-T-Integration und virtuellem T0-Edge-Gateway
-![Von NSX-T bereitgestellte Topologie mit ICP-NSX-T-Integration und virtuellem T0-Edge-Gateway](vcsv4radiagrams-topology-3.svg)
+![Von NSX-T bereitgestellte Topologie mit ICP-NSX-T-Integration und virtuellem T0-Edge-Gateway](../../images/vcsv4radiagrams-topology-3.svg "Von NSX-T bereitgestellte Topologie mit ICP-NSX-T-Integration und virtuellem T0-Edge-Gateway")
 
 Die bereitgestellte Topologie 3 enthält die Topologie 1 mit der Zusatz einer ICP-Bereitstellung, die die NSX-T-Integration anstelle von Calico enthält, dem Standardnetzwerkstapel innerhalb einer ICP-Bereitstellung. Der Kunde kann zusätzliche Containernamensbereiche in ICP bereitstellen, wodurch die Erstellung von logischen Switches, IP-Teilnetzadressierung und T1-Gateway-Instanzen für jeden Namensbereich automatisiert wird.
 

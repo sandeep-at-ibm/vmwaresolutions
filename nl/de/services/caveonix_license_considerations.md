@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-12"
+lastupdated: "2019-05-10"
 
 subcollection: vmware-solutions
 
@@ -18,12 +18,22 @@ subcollection: vmware-solutions
 # Hinweise zu Caveonix RiskForesight-Lizenzen
 {: #caveonix_license_considerations}
 
-Lesen Sie die folgenden Hinweise, bevor Sie die Caveonix RiskForesight-Lizenzen löschen, die Sie für die eigenständige Verwendung bestellt haben.
+Lesen Sie die folgenden Hinweise und bekannten Probleme, die sich auf die Caveonix RiskForesight-Lizenzen beziehen, die Sie für die eigenständige Verwendung bestellt haben.
 
-## Hinweise zum Löschen von Caveonix RiskForesight-Lizenzen
+## Bekannte Probleme bei der Anzeige von Datumsangaben zu Lizenzen
+{: #caveonix_license_considerations-date}
+
+Wenn Sie Mozilla Firefox als Browser verwenden, werden die Datumsangaben zu Start und Ende der Lizenz möglicherweise ohne Werte in der Caveonix RiskForesight-Konsole angezeigt. Um das Problem zu beheben, sehen Sie sich die Lizenzinformationen in einem anderen Browser an, z. B. Google Chrome.
+
+Wenn Firefox der einzige Browser ist, den Sie verwenden können, wenden Sie sich zur Unterstützung an den [Caveonix-Support](https://www.caveonix.com/support/){:new_window}.
+{:note}
+
+## Hinweise zum Löschen von Lizenzen
 {: #caveonix_license_considerations-remove}
 
-Durch das Entfernen einer Caveonix RiskForesight-Lizenz wird nicht der Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}-Service gelöscht, der auf einer vCenter Server-Instanz installiert ist. Sie müssen eine neue Caveonix RiskForesight-Lizenz bestellen oder den Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}-Service über die {{site.data.keyword.vmwaresolutions_short}}-Konsole aus der vCenter Server-Instanz entfernen. Weitere Informationen finden Sie unter [Vorgehensweise zum Entfernen von Services für Center Server-Instanzen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-removing-procedure).
+Durch das Entfernen einer Caveonix RiskForesight-Lizenz wird nicht der Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}-Service gelöscht, der auf einer vCenter Server-Instanz installiert ist.
+
+Sie müssen eine neue Caveonix RiskForesight-Lizenz bestellen oder den Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}-Service über die {{site.data.keyword.vmwaresolutions_short}}-Konsole aus der vCenter Server-Instanz entfernen. Weitere Informationen finden Sie unter [Vorgehensweise zum Entfernen von Services für Center Server-Instanzen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-removing-procedure).
 
 ## Zugehörige Links
 {: #caveonix_license_considerations-related}

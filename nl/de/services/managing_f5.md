@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-08"
+lastupdated: "2019-05-01"
 
 subcollection: vmware-solutions
 
@@ -27,4 +27,4 @@ Weitere Informationen zum Anzeigen der Servicedetails finden Sie unter [Services
 * [F5 on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations)
 * [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [Häufig gestellte Fragen](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [F5-Website](https://f5.com/){:new_window}
+* [F5-Website](https://www.f5.com/){:new_window}

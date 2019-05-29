@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 Das Systemkontextdiagramm definiert die Schlüsselelemente eines Systems, die Grenzen des Systems sowie die Entitäten, die mit ihm interagieren, zusammen mit den Interaktionen. Dieses übergeordnete Diagramm vermittelt dem Leser eine erste Sicht auf ein System.
 
-Abbildung 1. Systemkontext
-![Diagramm des Systemkontextes](vcsnsxt-networking.svg)
+![Systemkontextdiagramm](../../images/vcsnsxt-networking.svg "Systemkontextdiagramm")
 
 Unter netzrelevanten Gesichtspunkten betrachtet, gibt es die folgenden vier Kernkomponenten:
 - **Lokale Virtualisierung** - Eine VMware-Umgebung, die am Standort des Kunden oder eines anderen Anbieters gehostet wird und die derzeit die VMs hostet, die die zu modernisierenden Anwendungen ausführen. Sie ist die Quellenumgebung für VM-Migrationen und über VMware HCX flexibel mit einer {{site.data.keyword.cloud}}-Instanz verbunden.

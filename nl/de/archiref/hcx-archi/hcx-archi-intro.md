@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -21,8 +21,8 @@ Der VMware HCX on IBM Cloud-Service baut diese Hybridität aus, indem er die Ers
 
 Die VMware HCX on IBM Cloud-Komponenten, die als virtuelle Maschinen am IBM Cloud VMware-Zielstandort bereitgestellt werden, ermöglichen den Aufbau einer Verbindung zu den VMware HCX on IBM Cloud-Komponenten, die am lokalen Peer-Quellenstandort installiert sind.
 
-Abbildung 1. VMware vCenter Server – Hybrid-Cloud-Services
-![VMware vCenter Server – Hybrid-Cloud-Services](cloudfoundation_hybrid_cloud_services.svg)
+![VMware vCenter Server – Hybrid-Cloud-Services](../../images/cloudfoundation_hybrid_cloud_services.svg "VMware vCenter Server – Hybrid-Cloud-Services")
+
 
 Durch diese Verbindung wird eine flexible Interkonnektivität zwischen lokalen Standorten und IBM Cloud hergestellt und u. a. folgende Funktionalitäten ermöglicht:
 * Einfache Interkonnektivität - Logische Netzverbindungen können ohne großen Aufwand über eine beliebige physische Verbindung hergestellt werden, z. B. über das öffentliche Internet, ein privates VPN oder über eine direkte Verbindung.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-02"
 
 subcollection: vmware-solutions
 
@@ -34,8 +34,7 @@ vCenter Server with NSX-T-Instanzen sind nur für den Konzeptnachweis oder Sandb
 
 Die folgende Abbildung zeigt die allgemeine Architektur und die Komponenten einer vCenter Server with NSX-T-Bereitstellung mit drei Knoten.
 
-Abbildung 1. Allgemeine Architektur von vCenter Server with NSX-T für einen Cluster mit drei Knoten
-![Architektur von vCenter Server with NSX-T](vc_nsx-t_architecture.svg "Allgemeine vCenter Server-Architektur für einen Cluster mit drei Knoten")
+![vCenter Server with NSX-T-Architektur](../images/vc_nsx-t_architecture.svg "vCenter Server with NSX-T-Architektur")
 
 ### Physische Infrastruktur
 {: #vc_nsx-t_overview-physical-infras}

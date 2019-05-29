@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -18,9 +18,7 @@ Aufgrund der ständigen Vergrößerung ihres Testteams möchte Jane eine Testumg
 
 Todd fügt dann das strongSwan-VPN hinzu, um die Verbindung zwischen den privaten Netzen der einzelnen Cluster herzustellen.
 
-Abbildung 1. Stock Trader als echte Hybridanwendung
-
-![Stock Trader als echte Hybridanwendung](vcscontent-truehybrid.svg)
+![Stock Trader als echte Hybridanwendung](../../images/vcscontent-truehybrid.svg "Stock Trader als echte Hybridanwendung")
 
 ## Zugehörige Links
 {: #vcscontent-iks-related}

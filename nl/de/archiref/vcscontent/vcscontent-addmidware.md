@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-25"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 Da Stock Trader in einem Container ausgeführt wird und Jane mit den aktuellen Mikroservices zufrieden ist, arbeitet sie mit Todd jetzt daran, wie die Anwendung durch zusätzliche Funktionalität erweitert werden kann. Beim Refactoring der Mikroservices für Stock Trader zur Abwicklung einer gestiegenen Aktivität und Skalierbarkeit stellen beide fest, dass Middleware in {{site.data.keyword.cloud}} Private hinzugefügt werden muss. Ein Teil der Middleware ist bereits im Rechenzentrum vorhanden, so dass es sich bei diesem Vorgang eher um eine Erneuerung der Plattform handelt, bei der einige Middleware hinzugefügt wird.
 
-Abbildung 1. Refactoring von Stock Trader
-![Refactoring von Stock Trader](vcscontent-refactor.svg)
+![Refactoring von Stock Trader](../../images/vcscontent-refactor.svg "Refactoring von Stock Trader")
 
 Dieses Refactoring der Lösung ergibt eine gemeinsame Plattform für die Ausführung der Anwendung und der erforderlichen Services und auf diese Weise eine einfachere Managementebene.
 
@@ -233,17 +232,14 @@ Mit geheimen Kubernetes-Schlüsseln konfiguriert Jane einen klar strukturierten 
 Obwohl Stock Trader möglicherweise in mehr als einer Cloud ausgeführt wird, strebt Jane eine vereinheitlichte Codebasis an. Der geheime Db2-Schlüssel in der folgenden Abbildung besitzt andere Routing-Details, jedoch in identischem Format. Nachdem der Portfolio-Mikroservice von Jane bereitgestellt wurde, sucht er nach dem Endpunktparameter des geheimen Db2-Schlüssels, um eine Verbindung zur entsprechenden Db2-Instanz herzustellen. Für die Anwendung "Stock Trader" ist es unerheblich, ob sie in einer virtuellen VMware-Maschine, einem containerisierten Service oder einem
 von der Cloud verwalteten Service ausgeführt wird.
 
-Abbildung 2. Stock Trader - Services umlagern
-![Stock Trader - Services umlagern](vcscontent-pivot-services.svg)
+![Stock Trader - Services umlagern](../../images/vcscontent-pivot-services.svg "Stock Trader - Services umlagern")
 
 ## Ergebnis
 {: #vcscontent-addmidware-result}
 
 Da Jane das Refactoring ihrer Lösung "Stock Trader" festgeschrieben hat und Todd Middleware in {{site.data.keyword.cloud_notm}} Private Hosted installiert hat, wird die Lösung "Stock Trader" vollständig in einer privaten Cloud ausgeführt. Jane fügt jetzt weitere Mikroservices wie beispielsweise einen Benachrichtigungsservice für Twitter hinzu. Istio-Routing-Regeln ermöglichen das dynamische Messaging nach Kundentreuestufen über einen internen Slack-Kanal oder einen öffentlichen Twitter-Kanal.
 
-Abbildung 3. Anreicherung von Stock Trader
-
-![Anreicherung von Stock Trader](vcscontent-enrich.svg)
+![Anreicherung von Stock Trader](../../images/vcscontent-enrich.svg "Anreicherung von Stock Trader")
 
 ## Zugehörige Links
 {: #vcscontent-addmidware-related}

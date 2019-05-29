@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-22"
+lastupdated: "2019-05-03"
 
 subcollection: vmware-solutions
 
@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 
 Sie können die Kapazität Ihrer VMware vCenter Server with NSX-T-Instanz entsprechend Ihren Geschäftsanforderungen erweitern oder verringern, indem Sie ESXi-Server oder NFS-Speicher (Network File System) hinzufügen oder entfernen.
 
-* Ab dem Release V3.0 können Sie gleichzeitig NFS-Speicher über mehrere Cluster hinweg hinzufügen oder entfernen.
+* Ab dem Release V3.0 können Sie gleichzeitig NFS-Speicher und ESXi-Server zu Clustern hinzufügen, die sich im Status **Bereit** befinden, bzw. daraus entfernen. Sie können z. B. einen ESXi-Server in einem Cluster hinzufügen oder entfernen und einen NFS-Speicher in einem weiteren Cluster hinzufügen oder entfernen.
 * Ab dem Release V2.9 können Sie einem Cluster neue ESXi-Server hinzufügen, während sich die Server im Wartungsmodus befinden. Darüber hinaus können Sie ESXi-Server über mehrere Cluster hinweg gleichzeitig hinzufügen oder entfernen.
 
 **Hinweise**:

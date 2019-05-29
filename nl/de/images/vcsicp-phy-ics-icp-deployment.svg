@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="462px" height="512px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(.5 .5)">
+  <path d="m0 510h230 230v-510h-230-230v510" fill="#fff" pointer-events="none" stroke="#4378bb" stroke-miterlimit="10"/>
+  <g font-family="Helvetica" font-size="12px">
+   <text x="2.5" y="15.27">IBM Cloud</text>
+  </g>
+  <g fill="none" pointer-events="none" stroke="#000" stroke-dasharray="3 3">
+   <rect x="87" y="300" width="333" height="190"/>
+   <rect x="270" y="132" width="150" height="85"/>
+   <rect x="89" y="35" width="331" height="85"/>
+   <rect x="89" y="225" width="331" height="70"/>
+  </g>
+  <g pointer-events="none">
+   <rect x="100" y="310" width="300" height="170" fill="#dae8fc" stroke="#6c8ebf"/>
+   <rect x="89" y="131" width="171" height="85" fill="none" stroke="#000" stroke-dasharray="3 3"/>
+   <rect x="205" y="270" width="110" height="20" fill="#dae8fc" stroke="#6c8ebf"/>
+  </g>
+  <g font-family="Helvetica" font-size="11px" font-weight="bold" text-anchor="middle">
+   <text x="259.5" y="283">vSphere vCenter</text>
+  </g>
+  <rect x="127" y="152.5" width="74" height="20" fill="#d5e8d4" pointer-events="none" stroke="#82b366"/>
+  <g font-family="Helvetica" font-size="11px" font-weight="bold" text-anchor="middle">
+   <text x="163.5" y="165.5">NSX-V</text>
+  </g>
+  <rect x="113" y="60" width="108" height="35" fill="#f5f5f5" pointer-events="none" stroke="#666"/>
+  <g font-family="Helvetica" font-size="11px" font-weight="bold" text-anchor="middle">
+   <text x="166.5" y="74">IBM Cloud Private</text>
+  </g>
+  <image x="214.5" y="409.5" width="50" height="50" pointer-events="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGXSURBVGhD7ZlBboMwEEVZwbZH6E1IMFK3vUVg1R6BHd01R+hNGolI3eYIPUJukHiGAQVjSjSIiQse6QnF/pbmKbaFRGBWeUwOH8fk4jLQI7U7XF5EEC9Ss92XP/EzZvQTfttz88MWKattQdOdgnEzKwFLpKySX5qyFszf5iXgiYwsMvMSrFsEF9IhN6s+9N2sBGwRzenzO36iCBb8hnEjJ8IUETz0eAVXalM/5Q95wyQRl/AirnGXCO5/HXQZ6JHaXUGFKjtEaX5xGeiR2h0uLyKIF2kWh0n+GqndBp6PFGaLhGn+RdOdgnEzKwFX5BzEb50Xxrb0OMwb+dlhiYwtsojPzrpFNMvYWrhwIYe9Xfzvr1/X8CKucZdIpLI9BF0GeqR2V1CL+UcwaNmXLgE9UrvD5UUEmSpyhr0ZqbzA5wPesRr4Iio/9V4c4YVRj/eyAvBFXnbWzwow3ssKwBIZW2QVn5mVi6TZnx9DYf42LwFLBBem2TtNdwrGzawEbBFEX7vtzVXfWIU1J8A0EYfwIq6xYJEguAJRDXZjkULwKAAAAABJRU5ErkJgggAACEADCCQAAAAYAAAAAhDA2wEAAAADAAAAAAAAAAAAAAAAAAAAG0ACQDQAAAAoAAAAAwAAAAIAAAAAAAC/AAAAvwAASEIAAEhCAwAAAAAAAAAyAAAAAAAyABUAAAAMAAAABAAAABUAAAAMAAAABAAAAEYAAAAUAAAACAAAAFROUFAGAQAAUQAAABACAAB9AAAAfQAAAGQBAABkAQAAfQAAAH0AAAAAAAAAAAAAADIAAAAyAAAAUAAAADAAAACAAAAAkAEAAAAAAACGAO4A6AAAAOgAAAAoAAAAMgAAADIAAAABAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wAH//////wAAA///////AAAB//////8AAAP//////wAAAfB/////AAAD4D////8AAAHAH////wAAA+A/////AAABwB////8AAAPgP////wAAAfB/////AAAD+v////8AAAH//////wAAA///////AAAB//////8AAAP//////gAAAAAAAAAAAAAD//////8AAAH//////wAAA///////AAAB//////8AAAP6/////wAAAfB/////AAAD4D////8AAAHAH////wAAA+A/////AAABwB////8AAAPgf////wAAAfF/////AAAD//////8AAAH//////wAAA///////AAAB//////8AAAAAAAAAAAAAAVVVVVVVAAAD//////8AAAH//////wAAA///////AAAB/f////8AAAPwf////wAAAeA/////AAAD4D////8AAAHAH////wAAA+A/////AAAB8H////8AAAP4/////wAAAf//////AAAD//////8AAAH//////wAAA///////AAAUQAAACgGAAB9AAAAfQAAAGQBAABkAQAAfQAAAH0AAAAAAAAAAAAAADIAAAAyAAAAUAAAAGAAAACwAAAAeAUAAAAAAADGAIgA6AAAAOgAAAAoAAAAMgAAADIAAAABAAQAAAAAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAP///wBCxIcAQsSIAEHEiABBw4cAQsOHAGlEBwBoQwYAaUIGAGlEBgBnQwcAaEMHAGlDBwARERd3d3d3d3d3d3d3d3d3d3d3d3d3eBERBwcHERGHd3d3d3d3d3d3d3d3d3d3d3d3d3gREQEBARERF3d3d3d3d3d3d3d3d3d3d3d3d3d4EREHBwcREYd3d3d3d3d3d3d3d3d3d3d3d3d3eBERBwcHEREXd3cRERd3d3d3d3d3d3d3d3d3d3gREQcHBxERh3dxERERd3d3d3d3d3d3d3d3d3d4EREHBwcRERd3ERERERd3d3d3d3d3d3d3d3d3eBERBwcHERGHd4ERERGHd3d3d3d3d3d3d3d3d3gREQEBBxERF3cRERERF3d3d3d3d3d3d3d3d3d4EREHBwcREYd3cREREXd3d3d3d3d3d3d3d3d3eBERBwcHEREXd30RER13d3d3d3d3d3d3d3d3d3gREQgBARERh3d3cdF3d3d3d3d3d3d3d3d3d3d4EREHBwcRERd3d3d3d3d3d3d3d3d3d3d3d3d3eBERAa6vERGHd3d3d3d3d3d3d3d3d3d3d3d3d3gREQcHBxERF3d3d3d3d3d3d3d3d3d3d3d3d3d4EREBAQEREciIiIiIiIiIiIiIiIiIiIiIiIiIgRERBwcHEREREREREREREREREREREREREREREREREQcHBxERyIiIiIiIiIiIiIiIiIiIiIiIiIiMEREHBwcRERd3d3d3d3d3d3d3d3d3d3d3d3d3eBERDQEBERGHd3d3d3d3d3d3d3d3d3d3d3d3d3gREQcHBxERF3d3d3d3d3d3d3d3d3d3d3d3d3d4EREBBwcREYd3d4Gxh3d3d3d3d3d3d3d3d3d3eBERBwcHEREXd3oRERp3d3d3d3d3d3d3d3d3d3gREQcHBxERh3dxERERd3d3d3d3d3d3d3d3d3d4EREIAQERERd3ERERERd3d3d3d3d3d3d3d3d3eBERBwcHERGHd4ERERGHd3d3d3d3d3d3d3d3d3gREQEAABERF3cRERERF3d3d3d3d3d3d3d3d3d4EREHBwcREYd3cRERGnd3d3d3d3d3d3d3d3d3eBERAQEBEREXd3cRGRd3d3d3d3d3d3d3d3d3d3gREQgICBERh3d3d3d3d3d3d3d3d3d3d3d3d3d4EREBAQERERd3d3d3d3d3d3d3d3d3d3d3d3d3eBERAQEBERGHd3d3d3d3d3d3d3d3d3d3d3d3d3gREQgICBERF3d3d3d3d3d3d3d3d3d3d3d3d3d4EREICAgRERERERERERERERERERERERERERERERERBwcHERESEhISEhISEhISEhISEhISEhISEhQREQcHBxERIzMzMzMzMzMzMzMzMzMzMzMzMzMyEREHBwcRERMzMzMzMzMzMzMzMzMzMzMzMzMzMhERCAEBEREjMzMzMzMzMzMzMzMzMzMzMzMzMzIREQcHBxEREzMzZBRjMzMzMzMzMzMzMzMzMzMyEREBPwQRESMzMxEREzMzMzMzMzMzMzMzMzMzMhERBwcHERETMzEREREzMzMzMzMzMzMzMzMzMzIREQEBARERIzMhERERIzMzMzMzMzMzMzMzMzMyEREHBwcRERMzERERERMzMzMzMzMzMzMzMzMzMhERBwcHEREjM2ERERFjMzMzMzMzMzMzMzMzMzIREQcHBxEREzM1EREVMzMzMzMzMzMzMzMzMzMyEREBAQERESMzM0ERQzMzMzMzMzMzMzMzMzMzMhERBwcHERETMzMzMzMzMzMzMzMzMzMzMzMzMzIREQEBARERIzMzMzMzMzMzMzMzMzMzMzMzMzMyEREHBwcRERMzMzMzMzMzMzMzMzMzMzMzMzMzMhERBwcHEREjMzMzMzMzMzMzMzMzMzMzMzMzMzIREQgBAUYAAAAUAAAACAAAAFROUFAHAQAARgAAAAwBAAAAAQAARU1GKypAAAAkAAAAGAAAALACLDoAAAAAAAAAALACLDoAAPpCAAD6QiRAAAAMAAAAAAAAACtAAAAMAAAAAAAAAB5ABgAMAAAAAAAAACFABQAMAAAAAAAAAAhABAQYAAAADAAAAAIQwNsAAAAAAwAAEDRABAAMAAAAAAAAAB5ACQAMAAAAAAAAACpAAAAkAAAAGAAAALACLDoAAAAAAAAAALACLDoAAPpCAAD6QiFABwAMAAAAAAAAACpAAAAkAAAAGAAAALACLDoAAAAAAAAAALACLDoAAPpCAAD6QipAAAAkAAAAGAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAEwAAABkAAAA0f///9H///8RAgAAEQIAANH////R////QQIAAEECAAApAKoAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiAAAADAAAAP////9GAAAAHAAAABAAAABFTUYrAkAAAAwAAAAAAAAADgAAABQAAAAAAAAAEAAAABQAAAA="/>
+  <rect x="303.5" y="151.5" width="81" height="20" fill="#d5e8d4" pointer-events="none" stroke="#82b366"/>
+  <g font-family="Helvetica" font-size="11px" font-weight="bold" text-anchor="middle">
+   <text x="343.5" y="164.5">NSX-T</text>
+  </g>
+  <rect x="261" y="60" width="148" height="35" fill="#f5f5f5" pointer-events="none" stroke="#666"/>
+  <g font-family="Helvetica" font-size="11px" font-weight="bold" text-anchor="middle">
+   <text x="334.5" y="74">Cloud Automation Manager</text>
+  </g>
+  <rect x="127" y="172.5" width="74" height="20" fill="#d5e8d4" pointer-events="none" stroke="#82b366"/>
+  <g font-family="Helvetica" font-size="11px" font-weight="bold" text-anchor="middle">
+   <text x="163.5" y="185.5">VDS</text>
+  </g>
+  <rect x="303.5" y="171.5" width="81" height="20" fill="#d5e8d4" pointer-events="none" stroke="#82b366"/>
+  <g font-family="Helvetica" font-size="11px" font-weight="bold" text-anchor="middle">
+   <text x="343.5" y="184.5">N-VDS</text>
+  </g>
+  <path d="m135 370v65h80" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
+  <rect x="105" y="330" width="60" height="40" rx="6" ry="6" fill="#33f" pointer-events="none" stroke="#000"/>
+  <g fill="#fff" font-family="Helvetica" font-size="11px" text-anchor="middle">
+   <text x="134.5" y="353">ESXi-01</text>
+  </g>
+  <path d="m210 370v20h18v20" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
+  <rect x="180" y="330" width="60" height="40" rx="6" ry="6" fill="#33f" pointer-events="none" stroke="#000"/>
+  <g fill="#fff" font-family="Helvetica" font-size="11px" text-anchor="middle">
+   <text x="209.5" y="353">ESXi-02</text>
+  </g>
+  <path d="m290 370v20h-37v20" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
+  <rect x="260" y="330" width="60" height="40" rx="6" ry="6" fill="#33f" pointer-events="none" stroke="#000"/>
+  <g fill="#fff" font-family="Helvetica" font-size="11px" text-anchor="middle">
+   <text x="289.5" y="353">ESXi-03</text>
+  </g>
+  <path d="m360 370v65h-95" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
+  <rect x="330" y="330" width="60" height="40" rx="6" ry="6" fill="#33f" pointer-events="none" stroke="#000"/>
+  <g fill="#fff" font-family="Helvetica" font-size="11px" text-anchor="middle">
+   <text x="359.5" y="353">ESXi-04</text>
+  </g>
+  <g font-family="Helvetica" font-size="11px" text-anchor="middle">
+   <g font-weight="bold">
+    <text x="334.5" y="463">VSAN</text>
+   </g>
+   <g transform="rotate(-90,67.5,395)">
+    <text x="67" y="398">vSphere Cluster</text>
+   </g>
+   <g transform="rotate(-90,70,260)">
+    <text x="69.5" y="256.5">vSphere</text>
+    <text x="69.5" y="269.5">Management</text>
+   </g>
+   <g transform="rotate(-90,70.5,173.5)">
+    <text x="70" y="170">vSphere</text>
+    <text x="70" y="183">Networking</text>
+   </g>
+   <g transform="rotate(-90,62.5,77.5)">
+    <text x="62" y="80.5">Cloud Management</text>
+   </g>
+  </g>
+  <rect x="109" y="240" width="110" height="20" fill="#dae8fc" pointer-events="none" stroke="#6c8ebf"/>
+  <g font-family="Helvetica" font-size="11px" font-weight="bold" text-anchor="middle">
+   <text x="163.5" y="253">NSX-V Manager</text>
+  </g>
+  <rect x="289" y="240" width="110" height="20" fill="#dae8fc" pointer-events="none" stroke="#6c8ebf"/>
+  <g font-family="Helvetica" font-size="11px" font-weight="bold" text-anchor="middle">
+   <text x="343.5" y="253">NSX-T Manager</text>
+  </g>
+ </g>
+</svg>

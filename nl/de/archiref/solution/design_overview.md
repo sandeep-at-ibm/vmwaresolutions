@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-15"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -19,8 +19,7 @@ Zu den Angeboten in diesem Lösungsportfolio gehören VMware vSphere-Produkte in
 
 Die Architektur besteht aus einer einzelnen Cloudregion und unterstützt die Erweiterung in weitere Cloudregionen, die sich in einem anderen geografischen Gebiet und in einem anderen {{site.data.keyword.cloud_notm}}-Pod innerhalb desselben Rechenzentrums befinden. Eine Region wird als eindeutige vCenter Serverinstanz definiert. Das Design ermöglicht außerdem eine automatisierte Erweiterung und Verkleinerung der virtuellen Kapazität in einer vCenter Server-Instanz.
 
-Abbildung 1. Lösungskomponenten von {{site.data.keyword.vmwaresolutions_short}}
-![Lösungskomponenten von {{site.data.keyword.vmwaresolutions_short}}](vcsv4radiagrams-ra-full.svg "Die Lösung umfasst die physische Infrastruktur, die virtuelle Infrastruktur, das Infrastrukturmanagement und allgemeine Services.")
+![Lösungskomponenten von {{site.data.keyword.vmwaresolutions_short}}](../../images/vcsv4radiagrams-ra-full.svg "Die Lösung umfasst die physische Infrastruktur, die virtuelle Infrastruktur, das Infrastrukturmanagement und allgemeine Services.")
 
 ## Zugehörige Links
 {: #design_overview-related}

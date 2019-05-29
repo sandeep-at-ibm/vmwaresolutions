@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-03"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -24,9 +24,7 @@ Die Architektur, die hier dargestellt wird, ergänzt die vCenter Server-Lösung 
 
 In der folgenden Abbildung ist die Gesamtarchitektur des angehängten Speichers für die vCenter Server-Bereitstellung dargestellt.
 
-Abbildung 1. Allgemeine Architektur des angehängten Speichers in {{site.data.keyword.cloud_notm}}
-
-![Angehängter Speicher - Architektur](../solution/vcsv4radiagrams-ra-nfs-shares.svg "Allgemeine Architektur des angehängten Speichers in IBM Cloud")
+![Angehängter Speicher - Architektur](../../images/vcsv4radiagrams-ra-nfs-shares.svg "Angehängter Speicher - Architektur")
 
 ## Design der physischen Infrastruktur
 {: #storage-infra-design-phys-infra-design}

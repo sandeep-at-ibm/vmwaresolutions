@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-09"
 
 subcollection: vmware-solutions
 
@@ -30,9 +30,7 @@ Mit dem Service Composer von Cloud Automation Manager können Sie Hybrid-Cloud-S
 
 Das folgende Diagramm ist ein Beispiel für eine {{site.data.keyword.icpfull_notm}}- und CAM-Bereitstellung mit der {{site.data.keyword.cloud_notm}}-Infrastruktur sowie Verbindungen zur lokalen vCenter- und {{site.data.keyword.containerlong_notm}}-Bereitstellung in {{site.data.keyword.cloud_notm}}. Benutzer können virtuelle Maschinen (VMs) lokal und in einer vCenter Server-Instanz sowie Container im {{site.data.keyword.icpfull_notm}}- und {{site.data.keyword.containerlong_notm}}-Cluster bereitstellen.
 
-Abbildung 1. Cloud-Management aus Sicht der Cloud
-
-![Cloud-Management aus Sicht der Cloud](vcsicp-oncloud-cloudmgt.svg)
+![Cloud-Management aus Sicht der Cloud](../../images/vcsicp-oncloud-cloudmgt.svg "Cloud-Management aus Sicht der Cloud")
 
 Im Diagramm erstellt CAM logische Cloudverbindungen zu den vCenter-Instanzen, Cloud-Providern sowie den {{site.data.keyword.icpfull_notm}}- und {{site.data.keyword.containerlong_notm}}-Umgebungen. {{site.data.keyword.icpfull_notm}}-Cluster müssen in jeder Cloudumgebung jedes Rechenzentrums bereitgestellt werden. MCM stellt den Mechanismus zur Verfügung, mit dem die ICP-Cluster in einer Managementansicht verbunden werden können.
 
@@ -45,8 +43,7 @@ Bei {{site.data.keyword.icpfull_notm}} mit NSX-T können die Benutzer den Netzbe
 
 Das folgende Diagramm ist ein Beispiel für eine {{site.data.keyword.icpfull_notm}}- und CAM-Bereitstellung in der lokalen Infrastruktur mit Verbindungen zur vCenter- und {{site.data.keyword.containerlong_notm}}-Bereitstellung in {{site.data.keyword.cloud_notm}}. Benutzer können VMs und Container lokal, VMs in vCenter Server-Instanzen sowie Container im IKS-Cluster bereitstellen.
 
-Abbildung 2. Lokales Cloud-Management
-![Lokales Cloud-Management](vcsicp-onprem-cloudmgt.svg)
+![Cloud-Management - lokaler Standort](../../images/vcsicp-onprem-cloudmgt.svg "Cloud-Management - lokaler Standort")
 
 Das strongSwan-VPN wird verwendet, um die Verbindung zu den bereitgestellten {{site.data.keyword.containerlong_notm}}-Containern einzurichten. Das strongSwan-VPM kann durch Direct Link-Konnektivität ersetzt werden.
 

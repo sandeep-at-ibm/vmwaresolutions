@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-18"
+lastupdated: "2019-05-13"
 
 subcollection: vmware-solutions
 
@@ -23,7 +23,7 @@ Bei Instanzen, die in Version 2.4 und älteren Releases bereitgestellt wurden, k
 
 Stellen Sie sicher, dass das {{site.data.keyword.cloud_notm}}-Konto, in das die Instanz migriert werden soll, nicht ein Nur-IaaS-Konto ist. Ein Nur-IaaS-Konto ist ein Konto der {{site.data.keyword.cloud_notm}}-Infrastruktur (IBM Cloud), das keine Verbindung zu einem {{site.data.keyword.cloud_notm}}-Konto hat.
 
-Weitere Informationen zum Verknüpfen Ihres Nur-IaaS-Kontos mit Ihrem PaaS-Konto finden Sie in [Folgen Sie diesen Schritten, um Ihr IaaS-Konto und Ihr PaaS-Konto zu verknüpfen](https://www.ibm.com/blogs/bluemix/2018/03/follow-steps-link-iaas-paas-accounts/).
+Weitere Informationen zum Verknüpfen Ihres Nur-IaaS-Kontos mit Ihrem PaaS-Konto finden Sie in [Folgen Sie diesen Schritten, um Ihr IaaS-Konto und Ihr PaaS-Konto zu verknüpfen](https://www.ibm.com/cloud/blog/follow-steps-link-iaas-paas-accounts){:new_window}.
 
 ## Vorgehensweise beim Migrieren von Instanzen
 {: #np_addinstancetousraccount-procedure}

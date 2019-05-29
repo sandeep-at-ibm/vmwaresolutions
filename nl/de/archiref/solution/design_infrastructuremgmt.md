@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -24,8 +24,7 @@ Das Infrastrukturmanagement bezieht sich auf die Komponenten, die die VMware-Inf
 
 Dieses Design verwendet eine PSC-Funktion, die in eine Instanz von vCenter Server integriert ist. Der PSC und der vCenter Server sind in derselben virtuellen Maschine (VM) enthalten.
 
-Abbildung 1. Infrastrukturmanagement</br>
-![Infrastrukturmanagement](vcsv4radiagrams-ra-inframgmt.svg)
+![Infrastrukturmanagement](../../images/vcsv4radiagrams-ra-inframgmt.svg "Infrastrukturmanagement")
 
 Dem PSC, der sich in der primären Instanz befindet, wird die SSO-Standarddomäne `vsphere.local` zugeordnet.
 
@@ -74,12 +73,12 @@ Sie sind dafür verantwortlich, die Zugangssteuerungsrichtlinie anzupassen, wenn
 
 Die Option der VM-Neustartpriorität (**VM restart priority**) wird standardmäßig auf Mittel ("medium") gesetzt und die Option der Antwort für Hostisolation (**Host isolation response**) wird inaktiviert. Darüber hinaus wird die VM-Überwachung (**VM monitoring**) inaktiviert und die Funktion zum Austausch von Datenspeicherüberwachungssignalen (**Datastore Heartbeating**) wird so konfiguriert, dass alle Clusterdatenspeicher einbezogen werden. Dieses Konzept verwendet die NAS-Datenspeicher, wenn sie vorhanden sind.
 
-## Enhanced vMotion Compatibility (EVC)
+### Enhanced vMotion Compatibility (EVC)
 {: #design_infrastructuremgmt-evc}
 
 Zur Vereinfachung der vMotion-Kompatibilität zwischen Clusterknoten mit potenziell unterschiedlichen CPU-Funktionen wird der erweiterte vMotion-Kompatibilitätsmodus (EVC) auf Skylake-Ebene aktiviert, um sicherzustellen, dass der vMotion-Kompatibilitätsmodus (EVC) auf Skylake-Ebene aktiviert ist, um die vMotion-Kompatibilität zwischen Clusterknoten zu gewährleisten, wenn neuere Prozessoren innerhalb des {{site.data.keyword.cloud_notm}}-Bestands verwendet werden und dazukommen und die spätere Clustererweiterung ermöglichen, wenn keine Skylake-Prozessorserver nicht im Bestand sind.
 
-### IBM CloudDriver
+## IBM CloudDriver
 {: #design_infrastructuremgmt-cloud-driver}
 
 Die wichtige Voraussetzung für diese Lösungen ist die Automatisierung. Die Automatisierung reduziert die Komplexität der Bereitstellung, reduziert die Bereitstellungszeit deutlich und stellt sicher, dass die VMware-Instanz in konsistenter Weise bereitgestellt wird.
@@ -88,12 +87,11 @@ IBM CloudBuilder ist eine kurzlebige virtuelle {{site.data.keyword.cloud_notm}}-
 
 IBM CloudDriver ist eine kurzlebige virtuelle {{site.data.keyword.cloud_notm}}-Server-Instanz (VSI), die bei Bedarf für "Day 2"-Operationen, wie das Hinzufügen von Hosts, Clustern oder Add-on-Services zur VMware-Instanz, implementiert wird.
 
-CloudBuilder und CloudDriver werden nur in dem privaten Netz bereitgestellt, das über eine private Nachrichtenwarteschlange mit der IBM Managementebene verbunden ist. Es handelt sich um von IBM entwickelte Komponenten, die nicht durch Benutzer zugänglich sind und die folgenden Attribute und Funktion aufweisen:
-
-- Bereitstellung und Konfiguration der vCenter Server-Instanz im Benutzerkonto.
-- Hinzufügen von Hosts zu den vCenter Server-Clustern und entfernen von Host aus den vCenter Server-Clustern.
-- Hinzufügen von Clustern zu den vCenter Server-Instanzen und entfernen von Clustern aus den vCenter Server-Instanzen.
-- Hinzufügen von Add-on-Services und Funktionen zu den vCenter Server-Instanzen oder entfernen von Add-on-Services und Funktionen aus den vCenter Server-Instanzen.
+CloudBuilder und CloudDriver werden nur in dem privaten Netz bereitgestellt, das über eine private Nachrichtenwarteschlange mit der IBM Managementebene verbunden ist. Es handelt sich um von IBM entwickelte Komponenten, die nicht durch Benutzer zugänglich sind und die folgenden Attribute und Funktionen aufweisen:
+* Bereitstellung und Konfiguration der vCenter Server-Instanz im Benutzerkonto.
+* Hinzufügen von Hosts zu den vCenter Server-Clustern und entfernen von Host aus den vCenter Server-Clustern.
+* Hinzufügen von Clustern zu den vCenter Server-Instanzen und entfernen von Clustern aus den vCenter Server-Instanzen.
+* Hinzufügen von Add-on-Services und Funktionen zu den vCenter Server-Instanzen oder entfernen von Add-on-Services und Funktionen aus den vCenter Server-Instanzen.
 
 ### Automatisierungsablauf
 {: #design_infrastructuremgmt-auto-flow}

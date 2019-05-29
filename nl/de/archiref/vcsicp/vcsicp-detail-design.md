@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-09"
 
 subcollection: vmware-solutions
 
@@ -19,9 +19,7 @@ subcollection: vmware-solutions
 
 Allgemeine Services stellen die Services bereit, die von anderen Services auf der Cloud-Management-Plattform verwendet werden. Zu den allgemeinen Services gehören Identitäts-und Zugriffsservices, Domänennamensservices und NTP-Services.
 
-Abbildung 1. Allgemeine {{site.data.keyword.icpfull_notm}}-Services
-
-![{{site.data.keyword.icpfull_notm}}-Services, allgemein](vcsicp-icp-commonservices.svg)
+![Allgemeine {{site.data.keyword.icpfull_notm}}-Services](../../images/vcsicp-icp-commonservices.svg "Allgemeine {{site.data.keyword.icpfull_notm}}-Services")
 
 ### Identitäts- und Zugriffsservices
 {: #vcsicp-detail-design-identity}
@@ -50,9 +48,7 @@ Wenn Sie den NSX-V-Netzbetrieb in der VCS-Bereitstellung verwenden, können Sie 
 
 {{site.data.keyword.icpfull_notm}} wird mit dem Calico-Standardnetzstack für Kubernetes bereitgestellt, der die Netzisolation in Ihrem Cluster ermöglicht.
 
-Abbildung 2. {{site.data.keyword.icpfull_notm}} mit NSX-V-Netzbetrieb
-
-![{{site.data.keyword.icpfull_notm}} mit NSX-V-Netzbetrieb](vcsicp-nsxv-networking.svg)
+![{{site.data.keyword.icpfull_notm}} mit NSX-V-Netzbetrieb](../../images/vcsicp-nsxv-networking.svg "{{site.data.keyword.icpfull_notm}} mit NSX-V-Netzbetrieb")
 
 Weitere Informationen finden Sie im [Leitfaden für den vCenter Server-Netzbetrieb](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro).
 
@@ -63,9 +59,7 @@ NSX-T ist so konzipiert, dass eine einzelne Netzplattform eine Verbindung zu ein
 
 {{site.data.keyword.icpfull_notm}} bietet eine Option zum Ersetzen des Calico-Netzbetriebs durch eine NSX-T-Instanz, sodass eine zentrale Stelle für die Verwaltung des Netzes und der Sicherheit zur Verfügung steht.
 
-Abbildung 3. {{site.data.keyword.icpfull_notm}} mit NSX-T-Netzbetrieb
-
-![{{site.data.keyword.icpfull_notm}} mit NSX-T-Netzbetrieb](vcsicp-icp-nsxt-networking.svg)
+![{{site.data.keyword.icpfull_notm}} mit NSX-T-Netzbetrieb](../../images/vcsicp-icp-nsxt-networking.svg "{{site.data.keyword.icpfull_notm}} mit NSX-T-Netzbetrieb")
 
 ## Zugehörige Links
 {: #vcsicp-detail-design-related}

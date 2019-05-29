@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -57,8 +57,7 @@ Zusätzlich zu der Hardware, die für {{site.data.keyword.icpfull_notm}} vorausg
 ## Virtuelle Struktur
 {: #vcsicp-arch-overview-infrastructure-virtual-struct}
 
-Abbildung 1. Physische Struktur der vCenter Server- und {{site.data.keyword.icpfull_notm}}-Bereitstellung
-![Physische Struktur der VCS- und {{site.data.keyword.icpfull_notm}}-Bereitstellung](vcsicp-phy-ics-icp-deployment.svg)
+![Physische Struktur der vCenter Server- und {{site.data.keyword.icpfull_notm}}-Bereitstellung](../../images/vcsicp-phy-ics-icp-deployment.svg "Physische Struktur der vCenter Server- und {{site.data.keyword.icpfull_notm}}-Bereitstellung")
 
 In der vCenter Server-Instanz wird die {{site.data.keyword.icpfull_notm}}-Instanz mit einem dedizierten NSX Edge Services Gateway (ESG) und dem Distributed Logical Router (DLR) bereitgestellt. Die {{site.data.keyword.icpfull_notm}}-Installation wird in das VXLAN-Teilnetz geladen, das in den vorgenannten Komponenten definiert ist.
 

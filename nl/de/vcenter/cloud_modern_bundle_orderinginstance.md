@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-24"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -132,7 +132,7 @@ Installieren Sie den lokalen HCX Enterprise Manager und konfigurieren Sie die Ve
       1. Klicken Sie auf die Registerkarte **Verwaltung**.
       2. Klicken Sie auf der Registerkarte **Systemupdates** auf **DOWNLOAD-LINK ANFORDERN**.
       3. Klicken Sie auf **LINK KOPIEREN** und verwenden Sie anschließend diesen Link, um HCX Enterprise Client in eine lokale Umgebung herunterzuladen, die Zugriff auf Ihre lokale vSphere-Umgebung besitzt.
-3. Stellen Sie HCX Enterprise Client in VMware vSphere Web Client als virtuelle Appliance für den HCX-Manager (kurz "HCX-Manager") in Ihrer lokalen Umgebung bereit. Weitere Informationen hierzu finden Sie im Abschnitt [VMware HCX Enterprise Manager OVA installieren](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-C61E107C-1F5F-4615-9BA9-351900CDB69E.html).
+3. Stellen Sie HCX Enterprise Client in VMware vSphere Web Client als virtuelle Appliance für den HCX-Manager (kurz "HCX-Manager") in Ihrer lokalen Umgebung bereit. Folgen Sie den Anweisungen im [Benutzerhandbuch von VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}.
 
     Sie müssen den lokalen HCX-Manager in einem privaten Netz bereitstellen und ihm den Zugriff auf das öffentliche Netz ermöglichen. Sie können NSX Edge, Vyatta oder ähnliche Gateways verwenden, um dem lokalen HCX-Manager den Internetzugriff zu ermöglichen. Falls für den Zugriff auf das private Netz und auf das öffentliche Netz verschiedene Gateways verwendet werden, empfiehlt es sich, das Standardgateway für den Zugriff auf das öffentliche Netz zu verwenden und mit der lokalen **Administratorkonsole für den HCX-Manager** eine statische Route für den Zugriff auf das private Netz zu erstellen.  
     {:note}
@@ -140,16 +140,16 @@ Installieren Sie den lokalen HCX Enterprise Manager und konfigurieren Sie die Ve
   1. Melden Sie sich bei der lokalen virtuellen HCX Enterprise Manager-Maschine mit den Berechtigungsnachweisen an, die bei der Bereitstellung von OVA angegeben wurden.
   2. Geben Sie den Aktivierungsschlüssel ein, wenn Sie dazu aufgefordert werden.
 
-  Weitere Informationen finden Sie in der Veröffentlichung zur [Aktivierung und Erstkonfiguration von VMware HCX](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-6A4740C1-2225-444C-8ADC-CBE54F181536.html).
-  {:note}
+  Folgen Sie den Anweisungen im [Benutzerhandbuch von VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}.
+
 5. Ein selbst signiertes SSL-Zertifikat wurde vom HCX on {{site.data.keyword.cloud_notm}}-Service generiert. Sie müssen das Zertifikat in den lokalen HCX-Manager importieren, indem Sie die folgenden Schritte ausführen:
     1. Klicken Sie in der lokalen **Administratorkonsole für den HCX-Manager** auf die Registerkarte **Verwaltung**.
     2. Klicken Sie im linken Navigationsfenster auf **Anerkanntes CA-Zertifikat** und dann rechts auf **IMPORTIEREN**.
     3. Klicken Sie auf **URL** und geben Sie dann die URL des Zertifikats ein, das Sie anwenden möchten. Dies ist die **HCX-Cloud-IP** (``https://<cloud-side public IP>``), die Sie auf der Seite mit den Details für den Service "HCX on {{site.data.keyword.cloud_notm}}" in der {{site.data.keyword.vmwaresolutions_short}}-Konsole finden.
     4. Klicken Sie auf **ANWENDEN**.
-6. Fahren Sie mit der Erstkonfiguration fort und erstellen Sie die Verbindung. Weitere Informationen hierzu finden Sie im Abschnitt zur [Installation und Konfiguration von VMware HCX Enterprise](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-A26BFB16-FA94-426F-8E18-15BAD4BF840E.html).
-7. Erweitern Sie Netze in VMware HCX von lokal auf {{site.data.keyword.cloud_notm}}. Weitere Informationen hierzu finden Sie im Abschnitt zum [Erweitern von Netzen mit VMware HCX](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-DD9C3316-D01C-4088-B3EA-84ADB9FED573.html).
-8. Migrieren Sie virtuelle Maschinen (VMs) zwischen lokalen Umgebungen und {{site.data.keyword.cloud_notm}}-Umgebungen. Weitere Informationen finden Sie im Abschnitt zur [Migration virtueller Maschinen mit VMware HCX](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-D0CD0CC6-3802-42C9-9718-6DA5FEC246C6.html).
+6. Fahren Sie mit der Erstkonfiguration fort und erstellen Sie die Verbindung. Folgen Sie den Anweisungen im [Benutzerhandbuch von VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}.
+7. Erweitern Sie Netze in VMware HCX von lokal auf {{site.data.keyword.cloud_notm}}. Folgen Sie den Anweisungen im [Benutzerhandbuch von VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}.
+8. Migrieren Sie virtuelle Maschinen (VMs) zwischen lokalen Umgebungen und {{site.data.keyword.cloud_notm}}-Umgebungen. Folgen Sie den Anweisungen im [Benutzerhandbuch von VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}.
 
 Sie dürfen die {{site.data.keyword.vmwaresolutions_short}}-Infrastrukturkomponenten, die in Ihrem {{site.data.keyword.cloud_notm}}-Konto erstellt werden, nur über die {{site.data.keyword.vmwaresolutions_short}}-Konsole und nicht im {{site.data.keyword.slportal}} oder über ein anderes Verfahren außerhalb der Konsole verwalten.
 Wenn Sie diese Komponenten außerhalb der {{site.data.keyword.vmwaresolutions_short}}-Konsole ändern, werden die Änderungen nicht mit der Konsole synchronisiert. Dies kann die Stabilität Ihrer Umgebung beeinträchtigen.
@@ -185,6 +185,6 @@ Führen Sie folgende Schritte aus, um eine Single-node Trial-Instanz für Migrat
 {: #cloud_modern_bundle_orderinginstance-related}
 
 * [vCenter Server und IBM Cloud Private - Leitfaden](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [Ticket für IBM Cloud Private öffnen](https://www.ibm.com/mysupport/s/?language=en_US)
-* [VMware HCX-Ressourcen](https://hcx.vmware.com/#/docs)
-* [VMware HCX OVA anfordern](https://docs.vmware.com/en/VMware-HCX/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html?hWord=N4IghgNiBcIPICMAuYCWA7DBzABEgFgKY4ASAwgBo5wBqAgiAL5A)
+* [Ticket für IBM Cloud Private öffnen](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
+* [VMware HCX-Ressourcen](https://hcx.vmware.com/#/docs){:new_window}
+* [Benutzerhandbuch zu VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}

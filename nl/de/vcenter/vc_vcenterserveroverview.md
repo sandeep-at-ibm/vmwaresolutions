@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-02"
 
 subcollection: vmware-solutions
 
@@ -22,7 +22,7 @@ VMware vCenter Server on {{site.data.keyword.cloud}} ist eine gehostete private 
 
 In zahlreichen Fällen kann die gesamte Umgebung in weniger als einem Tag bereitgestellt werden und die Bare-Metal-Infrastruktur kann die Rechenkapazität nach Bedarf schnell und flexibel skalieren.
 
-Nach der Bereitstellung können Sie den gemeinsam genutzten Speicher erweitern, indem Sie weitere gemeinsam genutzte NFS-Dateiressourcen (NFS - Network File System) im {{site.data.keyword.slportal}} bestellen und die gemeinsam genutzten Dateiressourcen manuell an alle ESXi-Server in einem Cluster anhängen.Wenn Sie dedizierten Speicher benötigen, können Sie [NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview) nutzen, das sowohl in Konfigurationen mit hoher Leistung (alle mit SSD) als auch mit hoher Speicherkapazität (alle mit SATA) angeboten wird.
+Nach der Bereitstellung können Sie den gemeinsam genutzten Speicher erweitern, indem Sie weitere gemeinsam genutzte NFS-Dateiressourcen (NFS - Network File System) im {{site.data.keyword.slportal}} bestellen und die gemeinsam genutzten Dateiressourcen manuell an alle ESXi-Server in einem Cluster anhängen. Wenn Sie dedizierten Speicher benötigen, können Sie [NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview) nutzen, das sowohl in Konfigurationen mit hoher Leistung (alle mit SSD) als auch mit hoher Speicherkapazität (alle mit SATA) angeboten wird.
 
 VMware vSAN steht ebenfalls als Option für dedizierten Speicher zur Verfügung. Wenn Sie die vSAN-basierte Speicherkapazität eines vSAN-Clusters erhöhen möchten, können Sie nach der Bereitstellung weitere ESXi-Server hinzufügen.
 
@@ -35,8 +35,7 @@ Sie können von IBM verwaltete Services hinzufügen, wenn Sie die Routineabläuf
 
 In der folgenden Abbildung sind die allgemeine Architektur und die Komponenten einer vCenter Server-Bereitstellung mit drei Knoten dargestellt.
 
-Abbildung 1. Allgemeine vCenter Server-Architektur für einen Cluster mit drei Knoten
-![vCenter Server-Architektur](vc_architecture.svg "Allgemeine vCenter Server-Architektur für einen Cluster mit drei Knoten")
+![vCenter Server-Architektur](../images/vc_architecture.svg "vCenter Server-Architektur")
 
 ### Physische Infrastruktur
 {: #vc_vcenterserveroverview-physical-infras}

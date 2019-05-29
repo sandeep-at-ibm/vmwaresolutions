@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -33,8 +33,7 @@ Weitere Informationen zu den physischen Komponenten finden Sie unter [vCenter Se
 
 Weitere Informationen zum Speicher finden Sie im Dokument zur [Architektur des gemeinsam genutzten Speichers](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits).
 
-Abbildung 1. Physische Infrastruktur</br>
-![Physische Infrastruktur](vcsv4radiagrams-ra-physinfra.svg)
+![Physische Infrastruktur](../../images/vcsv4radiagrams-ra-physinfra.svg "Physische Infrastruktur")
 
 ## Design der physischen Rechenressourcen
 {: #design_physicalinfrastructure-host-design}
@@ -65,8 +64,7 @@ Der physische Netzbetrieb wird von {{site.data.keyword.cloud_notm}} gesteuert. L
 
 Das physische Netz von {{site.data.keyword.cloud_notm}} ist in zwei unterschiedliche Netze unterteilt: öffentlich und privat. Das private Netz enthält außerdem den Management-IPMI-Datenverkehr (IPMI - Intelligent Platform Management Interface) zu den physischen Servern.
 
-Abbildung 2. Allgemeine Netzübersicht für {{site.data.keyword.cloud_notm}}
-![{{site.data.keyword.cloud_notm}} - Allgemeine Netzübersicht](vcsv4radiagrams-ra-ibmcloudnetwork.svg)
+![{{site.data.keyword.cloud_notm}} - Allgemeine Netzübersicht](../../images/vcsv4radiagrams-ra-ibmcloudnetwork.svg "{{site.data.keyword.cloud_notm}} - Allgemeine Netzübersicht")
 
 #### Öffentliches Netz
 {: #design_physicalinfrastructure-public-net}
@@ -112,8 +110,7 @@ Jeder physische Host in diesem Design verfügt über zwei redundante Paare von E
 
 Das Entfernen der physischen Netzkonnektivität zum öffentlichen oder privaten Netz für die Bare-Metal-Server, die innerhalb des vCenter Server-Angebots verwendet werden, ist nicht möglich. Physikalische Anschlüsse an der internen NIC des Bare-Metal können deaktiviert werden. Die Kabel können jedoch nicht entfernt werden.
 
-Abbildung 3. Physische Hostverbindungen</br>
-![Physische Hostverbindungen](vcsv4radiagrams-ra-physical-host-connections.svg "Physische Hostverbindungen")
+![Physische Hostverbindungen](../../images/vcsv4radiagrams-ra-physical-host-connections.svg "Physische Hostverbindungen")
 
 #### VLANs und Underlay-to-Overlay-Routing
 {: #design_physicalinfrastructure-vlans}
@@ -181,9 +178,7 @@ Bei Verwendung von gemeinsam genutztem Speicher auf Dateiebene wird eine zwei Te
 
 Der Speicher wird mithilfe des Protokolls NFSv3 angehängt und unterstützt 2 IOPS pro GB von IBM Cloud. IBM normalisiert die IOP-Ebene, die mit einer 16-K-Blockgröße bereitgestellt wird, so dass größere Blockgrößen einen niedrigeren Grenzwert und kleinere Blockgrößen einen höheren Grenzwert erkennen.
 
-Abbildung 4. An die VMware-Bereitstellung angehängte, gemeinsam genutzte NFS-Ressourcen
-
-![An die VMware-Bereitstellung angehängte, gemeinsam genutzte NFS-Ressourcen](vcsv4radiagrams-ra-nfs-shares.svg "An die VMware-Bereitstellung angehängte, gemeinsam genutzte NFS-Ressourcen: gemeinsam genutzte Managementressource und vom Kunden angegebene, gemeinsam genutzte Ressource")
+![An die VMware-Bereitstellung angehängte, gemeinsam genutzte NFS-Ressourcen](../../images/vcsv4radiagrams-ra-nfs-shares.svg "An die VMware-Bereitstellung angehängte, gemeinsam genutzte NFS-Ressourcen: gemeinsam genutzte Managementressource und vom Kunden angegebene, gemeinsam genutzte Ressource")
 
 Sie können beim Kauf oder später weitere gemeinsam genutzte Dateiressourcen für alle Hosts für Ihre Workloads in der Konsole zuordnen und anhängen. Sie können unter den verfügbaren Kapazitätsoptionen für {{site.data.keyword.cloud_notm}} Endurance-Dateispeicher und den Leistungsstufen in dem entsprechenden {{site.data.keyword.CloudDataCent_notm}} auswählen. Alle gemeinsam genutzten Ressourcen werden unter Verwendung des Protokolls NFSv3 angehängt. Darüber hinaus ist es möglich, gemeinsam genutzte NFSv3-Dateiressourcen durch Anwenden des NetApp ONTAP Select-Angebots anzuhängen.
 
@@ -196,8 +191,7 @@ Wie bei NFS wird bei der Verwendung von gemeinsam genutztem iSCSI-Speicher eine 
 
 IBM normalisiert die IOP-Ebene, die mit einer 16-K-Blockgröße bereitgestellt wird, so dass größere Blockgrößen einen niedrigeren Grenzwert und kleinere Blockgrößen einen höheren Grenzwert erkennen.
 
-Abbildung 5. An die VMware-Bereitstellung angehängte iSCSI-LUNs</br>
-![An die VMware-Bereitstellung angehängte iSCSI-LUNs](vcsv4radiagrams-ra-iscsi-lun.svg "An die VMware-Bereitstellung angehängte iSCSI-LUNs")
+![An die VMware-Bereitstellung angehängte iSCSI-LUNs](../../images/vcsv4radiagrams-ra-iscsi-lun.svg "An die VMware-Bereitstellung angehängte iSCSI-LUNs")
 
 Zusätzliche iSCSI-LUNs für Workloads können auch über alle Hosts zum Zeitpunkt des Erwerbs oder später in der Konsole verteilt und angehängt werden. Wählen Sie im entsprechenden IBM Cloud Data Center aus den verfügbaren Optionen die IBM Cloud Endurance-Speicherkapazität und -Leistungsstufen aus. Alle LUNs werden über das iSCSI-Protokoll angehängt. Darüber hinaus ist es möglich, iSCSI-LUNs durch Anwenden des NetApp ONTAP Select-Angebots anzuhängen.
 

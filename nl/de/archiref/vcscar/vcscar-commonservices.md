@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 Allgemeine Services stellen die Services bereit, die von anderen Services auf der Cloud-Management-Plattform verwendet werden. Zu den allgemeinen Services gehören Identitäts-und Zugriffsservices, Domänennamensservices und NTP-Services.
 
-Abbildung 1. Allgemeine Services in {{site.data.keyword.icpfull_notm}}</br>
-![{{site.data.keyword.icpfull_notm}} - Allgemeine Services](vcscar-common-services.svg)
+![Allgemeine {{site.data.keyword.icpfull_notm}}-Services](../../images/vcscar-common-services.svg "Allgemeine {{site.data.keyword.icpfull_notm}}-Services")
 
 ## Identitäts- und Zugriffsservices
 {: #vcscar-commonservices-identity}

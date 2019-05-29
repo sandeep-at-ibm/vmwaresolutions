@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-19"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -20,8 +20,7 @@ subcollection: vmware-solutions
 
 Allgemeine Services stellen die Services bereit, die von anderen Services auf der Cloud-Management-Plattform verwendet werden. Zu den allgemeinen Services der Lösung gehören Identitäts- und Zugriffsservices, Domänennamensservices, NTP-Services, SMTP-Services und Zertifizierungsstellenservices.
 
-Abbildung 1. Allgemeine Services</br>
-![Allgemeine Services](vcsv4radiagrams-ra-commonservices.svg)
+![Allgemeine Services](../../images/vcsv4radiagrams-ra-commonservices.svg "Allgemeine Services")
 
 ## Identitäts- und Zugriffsservices
 {: #design_commonservice-identity-access}
@@ -57,15 +56,15 @@ DNS (Domänennamensservices) in diesem Design wird nur für das Cloud-Management
 {: #design_commonservice-primary-vcs}
 
 Die vCenter Server-Bereitstellung verwendet die bereitgestellten AD-VSIs als DNS-Server für die Instanz. Alle bereitgestellten Komponenten (vCenter mit integriertem PSC, NSX und ESXi-Hosts) werden so konfiguriert, dass sie auf den Active Directory-Server als DNS-Standardserver verweisen. Sie können die Konfiguration der DNS-Zone anpassen, sofern Ihre Konfiguration die Konfiguration der bereitgestellten Komponenten nicht beeinträchtigt.
-- In diesem Design werden DNS-Services auf den AD-VSIs durch die folgende Konfiguration integriert:
-- Die Domänenstruktur wird vom Benutzer angegeben. Der Domänenname kann eine beliebige Anzahl von Ebenen umfassen, bis zu dem Maximum, das alle vCenter Server-Komponenten verarbeiten können. So wird sichergestellt, dass die unterste Ebene die Unterdomäne für die Instanz ist.
-    - Der von Ihnen angegebene DNS-Domänenname wird als Rootdomänenname der vCenter Server Active Directory-Gesamtstruktur verwendet. Wenn der DNS-Domänenname zum Beispiel "cloud.ibm.com" lautet, ist der Rootname der Active Directory-Gesamtstruktur "cloud.ibm.com". Die DNS-Domäne und die AD-Domäne sind für alle föderierten Instanzen von vCenter Server identisch.
-    - Wählen Sie einen zusätzlichen Namen als Subdomäne der vCenter Server-Instanz aus. Dieser Unterdomänenname muss unter allen verknüpften vCenter Serverinstanzen eindeutig sein.
-- Die DNS-Server für Active Directory werden so konfiguriert, dass sie für den DNS-Domänenbereich und den Unterdomänenbereich maßgeblich sind.
-- Die DNS-Server für Active Directory werden so konfiguriert, dass sie auf die {{site.data.keyword.cloud_notm}}-DNS-Server für alle anderen Zonen verweisen.
-- Alle sekundären Cloud-Regionen, die in die erste oder in die Ziel-Cloud-Region integriert sind, müssen dieselbe DNS-Namensstruktur über der Unterdomäne verwenden.
-- Implementieren Sie optional redundante DNS-Server innerhalb des vCenter Server-Clusters. Zwei AD/DNS-Server sind nicht lizenziert konfiguriert. Es liegt in der Verantwortung des Benutzers, Lizenzen für die Windows-Betriebssysteme für diese Server bereitzustellen.
-- Wenn für einen einzelnen Standort nur ein AD/DNS-Server bereitgestellt wird, dürfen alle konfigurierten vCenter Server-Komponenten NUR diese einzelne IP-Adresse als DNS-Eintrag haben.
+
+In diesem Design werden DNS-Services auf den AD-VSIs durch die folgende Konfiguration integriert:
+* Die Domänenstruktur wird vom Benutzer angegeben.
+* Der Domänenname kann eine beliebige Anzahl von Ebenen umfassen, bis zu dem Maximum, das alle vCenter Server-Komponenten verarbeiten können. So wird sichergestellt, dass die unterste Ebene die Unterdomäne für die Instanz ist.
+* Die DNS-Server für Active Directory werden so konfiguriert, dass sie für den DNS-Domänenbereich und den Unterdomänenbereich maßgeblich sind.
+* Die DNS-Server für Active Directory werden so konfiguriert, dass sie auf die {{site.data.keyword.cloud_notm}}-DNS-Server für alle anderen Zonen verweisen.
+* Alle sekundären Cloud-Regionen, die in die erste oder in die Ziel-Cloud-Region integriert sind, müssen dieselbe DNS-Namensstruktur über der Unterdomäne verwenden.
+* Sie können optional redundante DNS-Server innerhalb des vCenter Server-Clusters bereitstellen. Zwei AD/DNS-Server sind nicht lizenziert konfiguriert. Es liegt in Ihrer Verantwortung, Lizenzen für die Windows-Betriebssysteme für diese Server bereitzustellen.
+* Wenn für einen einzelnen Standort nur ein AD/DNS-Server bereitgestellt wird, dürfen alle konfigurierten vCenter Server-Komponenten NUR diese einzelne IP-Adresse als DNS-Eintrag haben.
 
 ### Sekundäre vCenter Server-Instanzen
 {: #design_commonservice-secondary-vcs}
@@ -77,8 +76,7 @@ Für die instanzenübergreifende Redundanz: Wenn die erste sekundäre vCenter Se
 
 In diesem Design werden die NTP-Server der {{site.data.keyword.cloud_notm}}-Infrastruktur verwendet. Alle bereitgestellten Komponenten werden so konfiguriert, dass sie diese NTP-Server verwenden. Die Tatsache, dass alle Komponenten im Design denselben NTP-Server verwenden, ist für die korrekte Funktion von Zertifikaten und der Active Directory-Authentifizierung von kritischer Bedeutung.
 
-Abbildung 2. NTP- und DNS-Services</br>
-![NTP- und DNS-Services](vcsv4radiagrams-ra-servicesinterconnections.svg)
+![NTP- und DNS-Services](../../images/vcsv4radiagrams-ra-servicesinterconnections.svg "NTP- und DNS-Services")
 
 ## Zertifizierungsstellenservices
 {: #design_commonservice-cas}

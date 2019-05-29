@@ -46,7 +46,7 @@ Im Rahmen der NSX-Installation wird der NSX-Manager installiert und für alle ne
 Der NSX-Controller wird (anders als bei Cloud Foundation-Instanzen) nicht für vCenter Server-Instanzen installiert. Falls Sie für Ihre vCenter Server-Instanzen VXLAN oder verteilte logische Router verwenden, müssen Sie den NSX-Controller selbst installieren.
 {:note}
 
-Weitere Informationen zu den in VMware NSX for vSphere 6.2.4 eingeführten Erweiterungen, den Voraussetzungen und den bekannten Problemen finden Sie auf der Seite [NSX for vSphere 6.2.4 release notes](http://pubs.vmware.com/Release_Notes/en/nsx/6.2.4/releasenotes_nsx_vsphere_624.html){:new_window}.
+Weitere Informationen zu den in VMware NSX for vSphere 6.2.4 eingeführten Erweiterungen, den Voraussetzungen und den bekannten Problemen finden Sie auf der Seite [NSX for vSphere 6.2.4 release notes](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/rn/releasenotes_nsx_vsphere_624.html){:new_window}.
 
 ### VMware NSX Edge
 {: #relnotes_v14-nsx-edge}

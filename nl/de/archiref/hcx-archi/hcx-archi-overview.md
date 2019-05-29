@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -130,13 +130,11 @@ Die Layer-2-Konzentrator-Appliances ermöglichen die Erweiterung eines Layer-2-N
 
 In diesem Abschnitt wird das Layout der HCX-Komponenten innerhalb von IBM Cloud und mit lokalen Clients beschrieben. In diesem Design gibt die Architektur ein Hub-und-Peripherie-Modell an, das zwischen der Quellenumgebung und IBM Cloud vorhanden ist. Auf diese Weise dient die Quellenumgebung als Hub mit Verbindungen zu verschiedenen IBM Cloud-Umgebungen, wie in der folgenden Darstellung gezeigt.
 
-Abbildung 1. HCX mit nur einer Quelle
-![HCX mit nur einer Quelle](hcx_single_source.svg)
+![HCX mit nur einer Quelle](../../images/cloudfoundation_hybrid_cloud_services.svg "HCX mit nur einer Quelle")
 
 Die Quelle kann auch in der IBM Cloud-Umgebung platziert werden. Peripherien sind immer Cloud-Bereitstellungen innerhalb dieses Designs, wie in der folgenden Abbildung dargestellt.
 
-Abbildung 2. HCX mit mehreren Quellen
-![HCX mit mehreren Quellen](hcx_multiple_sources.svg)
+![HCX mit mehreren Quellen](../../images/hcx_multiple_sources.svg "HCX mit mehreren Quellen")
 
 ### Übersicht über die Verwendung
 {: #hcx-archi-overview-usage-ovw}

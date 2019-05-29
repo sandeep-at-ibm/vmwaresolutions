@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-16"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -51,17 +51,11 @@ Tabelle 1. Erforderliche Berechtigungen für das {{site.data.keyword.cloud_notm}
 ## VRF mit aktivierten Serviceendpunkten
 {: #slaccountrequirement-vrf-se}
 
-Ihr {{site.data.keyword.cloud_notm}}-Infrastrukturkonto muss ein VRF-Konto (Virtual Routing and Forwarding) mit aktivierten Serviceendpunkten sein. Wenn Ihr Konto kein VRF-Konto ist, müssen Sie es in ein VRF-Konto konvertieren. Darüber hinaus müssen Sie Ihr VRF-Konto für die Verwendung von Serviceendpunkten aktivieren.
+Bei Ihrem {{site.data.keyword.cloud_notm}}-Infrastrukturkonto muss es sich um ein VRF-Konto (Virtual Routing and Forwarding) handeln. Wenn Ihr Konto kein VRF-Konto ist, müssen Sie es in ein VRF-Konto konvertieren. Darüber hinaus ist es empfehlenswert, Ihr VRF-Konto für die Verwendung von Serviceendpunkten zu aktivieren.
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [Übersicht über VRF on IBM Cloud](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
 * [Konto für die Verwendung von Serviceendpunkten aktivieren](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
-
-## Ende der Unterstützung für VLAN-Spanning
-{: #slaccountrequirement-vlan-eos}
-
-Ab August 2019 wird VLAN-Spanning nicht mehr unterstützt. Bis Ende Juli 2019 müssen Sie Ihr {{site.data.keyword.cloud_notm}}-Infrastrukturkonto in ein VRF-Konto konvertieren und Serviceendpunkte aktivieren.
-{:important}
 
 ## Zugehörige Links
 {: #slaccountrequirement-related}

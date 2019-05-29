@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-09"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -20,8 +20,7 @@ subcollection: vmware-solutions
 
 Die Schicht der virtuellen Infrastruktur umfasst die VMware-Softwarekomponenten, mit denen die Rechen-, Speicher- und Netzressourcen virtualisiert werden, die in der Schicht der physischen Infrastruktur bereitgestellt werden: VMware vSphere ESXi, VMware NSX-V oder NSX-T und optional VMware vSAN.
 
-Abbildung 1. Virtuelle Infrastruktur</br>
-![Virtuelle Infrastruktur](vcsv4radiagrams-ra-virtinfra.svg)
+![Virtuelle Infrastruktur](../../images/vcsv4radiagrams-ra-virtinfra.svg "Virtuelle Infrastruktur")
 
 ## VMware vSphere-Design
 {: #design_virtualinfrastructure-vsphere-design}
@@ -71,9 +70,7 @@ In diesem Design wird VMware vSAN-Speicher in vCenter Server-Instanzen verwendet
 
 Wie in der folgenden Abbildung zu sehen ist, fasst vSAN den lokalen Speicher über mehrere ESXi-Hosts in einem vSphere-Cluster hinweg zusammen und verwaltet den zusammengefassten Speicher wie einen einzelnen VM-Datenspeicher. In diesem Design enthalten die Rechenknoten lokale Plattenlaufwerke für das ESXi-Betriebssystem und den vSAN-Datenspeicher. Unabhängig davon, zu welchem Cluster ein Knoten gehört, werden in jeden Knoten zwei Betriebssystemlaufwerke eingeschlossen, um die ESXi-Installation aufzunehmen.
 
-Abbildung 2. vSAN-Konzept
-
-![vSAN-Konzept](vcsv4radiagrams-ra-vsan.svg "vSAN fasst den lokalen Speicher über mehrere ESXi-Hosts in einem vSphere-Cluster zusammen und verwaltet den zusammengefassten Speicher als einzelnen VM-Datenspeicher")
+![vSAN-Konzept](../../images/vcsv4radiagrams-ra-vsan.svg "vSAN fasst den lokalen Speicher über mehrere ESXi-Hosts in einem vSphere-Cluster zusammen und verwaltet den zusammengefassten Speicher als einzelnen VM-Datenspeicher")
 
 vSAN arbeitet mit den folgenden Komponenten:
 * vSAN-Design mit zwei Plattengruppen; jede Plattengruppe besteht aus zwei oder mehr Platten. Eine SSD (Solid State Disk) oder ein NVMe-Laufwerk der kleinsten Größe in der Gruppe dient als Cacheschicht, während die übrigen SSDs als Kapazitätsschicht verwendet werden.
@@ -116,14 +113,27 @@ vSAN-Einstellungen werden nach bewährten Verfahren für die Bereitstellung von 
    * vSAN - 100 gemeinsam genutzte Ressourcen
 * vSAN-Kernel-Ports: **Explicit Failover**
 
+## Über NFS angehängte Speichereinheit
+{: #design_virtualinfrastructure-nfs-storage}
+
+Bei der Verwendung von über NFS angehängtem Speicher schreibt diese Architektur die Verwendung von NFS v3 statt NFS v4.1 vor, da die NFS-Server-LIF-Migrationen bei Verwendung von NFS v4.1 zu einer exzessiven Latenzzeit führen können. Jeder vSphere-Host wird unter Verwendung seines Hostnamens mit dem NFS-Speicher verbunden.
+
+Ein 2-TB-NFS-Datenspeicher wird einem Cluster zugeordnet, der von Verwaltungskomponenten mit einem Leistungstier von 4 IOPS/GB verwendet werden kann. Zusätzliche Datenspeicher können einem Cluster für den Verarbeitungsprozess zugeordnet werden; dabei können verschiedene Größen und Leistungstiers verwendet werden.
+
+Darüber hinaus ist für diese Architektur erforderlich, dass alle Hosts über eine Teilnetzroute verfügen, die für das Teilnetz erstellt wird, in dem sich der NFS-Speicher befindet. Der Zweck dieser Teilnetzroute besteht darin, den gesamten NFS-Datenverkehr so weiterzuleiten, dass die Portgruppe, das Teilnetz und das VLAN verwendet werden, die durch dieses Design für den NFS-Datenverkehr bestimmt sind. Sind mehrere NFS-Datenspeicher angehängt, müssen möglicherweise mehrere Routen konfiguriert werden, da sich diese Datenspeicher in unterschiedlichen fernen Teilnetzen befinden können.
+
+Virtuelle Maschinen für das Management können sich in einem NFS-Datenspeicher befinden. Dies führt zu einem Bootstrapping-Problem, da einige der Managementmaschinen für DNS-Services, die zum Auflösen des NFS-Hostnamens verwendet werden, verantwortlich sein können. Daher gibt diese Architektur an, dass mindestens eine der IP-Adressen für den Managementdatenspeicher auf jedem der Hosts fest in `/etc/hosts` codiert ist.
+
 ## Angehängter iSCSI-Speicher
 {: #design_virtualinfrastructure-iscsi-storage}
 
 Im Gegensatz zum angehängten NFS v3-Speicher unterstützt der angehängte iSCSI-Speicher aktiv-aktive Pfade über alle konfigurierten NIC-Karten-Ports und Zielports hinweg. Aus diesem Grund kann ein höherer Durchsatz erreicht werden und stellt somit eine wünschenswerte Alternative zum angehängten NFS-Speicher dar. Dies führt jedoch zu einer höheren Komplexität.
 
-{{site.data.keyword.cloud_notm}} Der Endurance-Blockspeicher unterstützt maximal 64 IPs, die bei der Verwendung von VMware pro LUN zugeordnet werden. Dadurch können bis zu 32 Hosts im Rahmen dieses Designs verwendet werden.
+{{site.data.keyword.cloud_notm}} Der Endurance-Blockspeicher unterstützt maximal 64 IP-Adressen, die bei der Verwendung von VMware pro LUN zugeordnet werden. Dadurch können bis zu 32 Hosts im Rahmen dieses Designs verwendet werden.
 
 Eine 2-TB-iSCSI-LUN ist für die Verwendung der Managementkomponenten an den vSphere-Cluster angeschlossen und mindestens eine iSCSI-LUN wird für die Verwendung durch die Kunden konfiguriert. Dieser Speicher wird pro LUN als Dateisystem VMFS 6.x formatiert.
+
+Diese Architektur gibt die Verwendung der iSCSI-Portbindung, eine Umlaufrichtlinie für Multipath, eine maximale Warteschlangenlänge von 64 und ein Umlauf-IOPS-Limit von 1 an.
 
 ### Einrichtung des virtuellen Netzes für iSCSI
 {: #design_virtualinfrastructure-setup-iscsi}
@@ -153,15 +163,13 @@ In diesem Design wird der NSX Manager im ersten Cluster bereitgestellt. Dem NSX 
 
 Die folgende Abbildung zeigt die Anordnung des NSX Managers in Relation zu anderen Komponenten in der Architektur.
 
-Abbildung 3. Netzübersicht für NSX Manager
-
-![Netzübersicht für NSX Manager](vcsv4radiagrams-ra-vcs-nsx-overview.svg "NSX Manager in Relation zu den anderen Komponenten in der Architektur")
+![Netzübersicht für NSX Manager](../../images/vcsv4radiagrams-ra-vcs-nsx-overview.svg "NSX Manager in Relation zu den anderen Komponenten in der Architektur")
 
 Nach der Erstbereitstellung stellt die {{site.data.keyword.cloud_notm}}-Automatisierung drei NSX-Controller im ersten Cluster bereit. Jedem der Controller wird eine VLAN-gestützte IP-Adresse aus dem portierbaren Teilnetz **Privat A** zugeordnet, das für Managementkomponenten vorgesehen ist. Ferner werden in dem Design VM-VM-Anti-Affinitätsregeln erstellt, um die Controller unter den Hosts im Cluster zu separieren. Der erste Cluster muss mindestens drei Knoten enthalten, um hohe Verfügbarkeit für die Controller sicherzustellen.
 
 Neben den Controllern bereitet die {{site.data.keyword.cloud_notm}}-Automatisierung die bereitgestellten vSphere-Hosts mit NSX-VIBs vor, um die Verwendung eines virtualisierten Netzes durch VXLAN-Tunnelendpunkte (VTEPs) einzurichten. Den VTEPs wird eine VLAN-gestützte IP-Adresse aus dem portierbaren IP-Adressbereich von **Privat A** zugeordnet, der für VTEPs angegeben ist, wie in [VLANs](/docs/services/vmwaresolutions/services?topic=vmware-solutions-design_physicalinfrastructure#design_physicalinfrastructure-vlans) aufgeführt. Der VXLAN-Datenverkehr befindet sich im nicht mit Tags versehenen VLAN und wird dem privaten vDS zugewiesen.
 
-Anschließend wird ein Segment-ID-Pool zugeordnet und die Hosts in dem Cluster werden der Transportzone hinzugefügt. In der Transportzone wird nur Unicast verwendet, da die IGMP-Netzüberwachung (IGMP - Internet Group Management Protocol) in der {{site.data.keyword.cloud_notm}} nicht konfiguriert ist. Pro Best Practice für VMW werden zwei VTEP-Kernel-Ports in demselben dedizierten VTEP-Subnetz konfiguriert. 
+Anschließend wird ein Segment-ID-Pool zugeordnet und die Hosts in dem Cluster werden der Transportzone hinzugefügt. In der Transportzone wird nur Unicast verwendet, da die IGMP-Netzüberwachung (IGMP - Internet Group Management Protocol) in der {{site.data.keyword.cloud_notm}} nicht konfiguriert ist. Pro Best Practice für VMW werden zwei VTEP-Kernel-Ports in demselben dedizierten VTEP-Subnetz konfiguriert.
 
 Wenn die Instanz über öffentliche Netzschnittstellen verfügt, werden anschließend zwei NSX Edge Services Gateway-Paare bereitgestellt. Ein Gateway-Paar wird für abgehenden Datenverkehr von Automatisierungskomponenten verwendet, die sich im privaten Netz befinden. Es wird ein zweites Gateway, das als kundenverwaltetes Edge-Gateway bezeichnet wird, bereitgestellt und mit einem Uplink zum öffentlichen Netz sowie einer Schnittstelle, die dem privaten Netz zugeordnet ist, konfiguriert. Weitere Informationen zu NSX Edge Services Gateways, die als Teil der Lösung bereitgestellt werden, finden Sie im Dokument zur [NSX Edge Services Gateway-Lösungsarchitektur](/docs/services/vmwaresolutions/services?topic=vmware-solutions-nsx_overview#nsx_overview).
 
@@ -185,9 +193,7 @@ Tabelle 3. NSX Manager-Voraussetzungen
 
 In dem Design wird eine minimale Anzahl von vDS-Switches verwendet. Die Hosts im Cluster werden mit den öffentlichen und privaten Netzen verbunden. Die Hosts werden mit zwei verteilten virtuellen Switches konfiguriert. Die Verwendung von zwei Switches basiert auf der Praxis im {{site.data.keyword.cloud_notm}}-Netz, dass öffentliche und private Netze getrennt werden. Das folgende Diagramm zeigt das vDS-Design.
 
-Abbildung 4. Design verteilter Switches
-
-![Design mit verteilten Switches](vcsv4radiagrams-distributed-switch-design.svg "vDS-Design")
+![Design verteilter Switches](../../images/vcsv4radiagrams-distributed-switch-design.svg "Design verteilter Switches")
 
 Wie in der vorherigen Abbildung gezeigt, wird der eine vDS für die öffentliche Netzkonnektivität (SDDC-Dswitch-Public) und der andere vDS für die private Netzkonnektivität (SDDC-Dswitch-Private) konfiguriert. Die Trennung verschiedener Typen von Datenverkehr ist erforderlich, um Konkurrenzsituationen und Latenzzeiten zu verringern und die Sicherheit zu erhöhen.
 
@@ -197,9 +203,9 @@ Tabelle 4. VLAN-Zuordnung zu Datenverkehrstypen
 
 | VLAN  | Ziel | Datenverkehrstyp |
 |:----- |:----------- |:------------ |
-| VLAN1 | Öffentlich      | Für Internetzugriff verfügbar |
-| VLAN2 | Privat A   | ESXi-Management, Management, VXLAN (VTEP) |
-| VLAN3 | Privat B   | vSAN, NFS, vMotion, iSCSI |
+| VLAN 1 | Privat A   | ESXi-Management, Management, VXLAN (VTEP) |
+| VLAN 2 | Privat B   | vSAN, NFS, vMotion, iSCSI |
+| VLAN 3 | Öffentlich      | Für Internetzugriff verfügbar |
 
 Datenverkehr von Workloads fließt über VXLAN­gestützte logische Switches.
 
@@ -271,8 +277,7 @@ Die folgenden Aspekte werden nicht konfiguriert:
 * Mikrosegmentierung
 * Verknüpftes NSX-Management mit anderen VMware-Instanzen
 
-Abbildung 5. Beispiel einer bereitgestellten Kunden-NSX-Topologie
-![Beispiel einer bereitgestellten Kunden-NSX-Topologie](vcsv4radiagrams-ra-vcs-nsx-topology-customer-example.svg)
+![Beispiel einer bereitgestellten Kunden-NSX-Topologie](../../images/vcsv4radiagrams-ra-vcs-nsx-topology-customer-example.svg "Beispiel einer bereitgestellten Kunden-NSX-Topologie")
 
 ## Öffentliche Netzkonnektivität
 

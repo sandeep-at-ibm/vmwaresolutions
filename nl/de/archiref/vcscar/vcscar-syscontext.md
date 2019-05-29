@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 Das folgende Diagramm zeigt den Systemkontext für diese Referenzarchitektur. Ein Systemkontextdiagramm definiert die Schlüsselelemente eines Systems, die Grenzen des Systems sowie die Entitäten, die mit ihm interagieren, zusammen mit der Interaktion. Dieses übergeordnete Diagramm vermittelt dem Leser eine erste Sicht auf ein System.
 
-Abbildung 1. Systemkontext
-![Systemkontext](vcscar-system-context.svg)
+![Systemkontext](../../images/vcscar-system-context.svg "Systemkontext")
 
 Die Kernkomponenten des Systemkontextes sind Folgende:
 -	vCenter Server - VMware vCenter Server on {{site.data.keyword.cloud_notm}} ist eine {{site.data.keyword.cloud_notm}} for VMware Services-Instanz, die das Ziel für migrierte virtuelle Maschinen (VMs) aus der lokalen Umgebung darstellt. Zusammen mit der lokalen Virtualisierung bildet sie eine Hybridumgebung und ermöglicht virtuellen Maschinen den Wechsel aus einer Umgebung in die andere Umgebung.

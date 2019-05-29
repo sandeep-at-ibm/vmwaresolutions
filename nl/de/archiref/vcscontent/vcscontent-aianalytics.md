@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-25"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,7 @@ subcollection: vmware-solutions
 
 Die Anreicherung von Stock Trader ist kein einmaliger Schritt, sondern für Todd und Jane ein iterativer Prozess. Aus der folgenden Abbildung geht hervor, dass Jane den Watson Tone Analyzer-Service und mithilfe von ODM Decision Center eine Regel für Kundentreuestufen hinzugefügt hat. Die folgenden Angaben zeigen, wie Stock Trader angereichert wurde.
 
-Abbildung 1. Weitere Anreicherung von Stock Trader
-![Ergebnisse der Anreicherungsiteration bei Stock Trader](vcscontent-enriched.svg)
+![Ergebnisse der Anreicherungsiteration bei Stock Trader](../../images/vcscontent-enriched.svg "Ergebnisse der Anreicherungsiteration bei Stock Trader")
 
 ## AI - Watson Tone Analyzer
 {: #vcscontent-aianalytics-ai-watson}

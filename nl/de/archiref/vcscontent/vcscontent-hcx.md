@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -20,8 +20,7 @@ VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 
 
 Die Komponenten von vCenter Server with Hybridity Bundle, die als virtuelle Maschinen am {{site.data.keyword.cloud_notm}} VMware-Zielstandort bereitgestellt werden, ermöglichen den Aufbau einer Verbindung mit den HCX-Komponenten, die am lokalen Peerquellenstandort installiert sind.
 
-Abbildung 1. vCenter Server with Hybridity Bundle
-![vCenter Server with Hybridity Bundle](vcscontent-hcx.svg)
+![vCenter Server with Hybridity Bundle](../../images/vcscontent-hcx.svg "vCenter Server with Hybridity Bundle")
 
 Hybridity Bundle erstellt eine flexible gegenseitige Verbindung zwischen dem lokalen Standort und {{site.data.keyword.cloud_notm}} und aktiviert die folgende Funktionalität:
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -28,8 +28,7 @@ Lesen Sie die Informationen zu den Aspekten des Netzbetriebs, der Sicherung, der
 - Für jeden Workerknoten gibt es eine private IP-Adresse, wodurch Workerknoten eine Schnittstelle für das private Netz erhalten.
 - Zwischen allen Workerknoten und dem Masterknoten besteht automatisch eine sichere OpenVPN-Verbindung.
 
-Abbildung 1. Netz mit vCenter Server und {{site.data.keyword.containerlong_notm}}
-![Diagramm für vCenter Server-{{site.data.keyword.containerlong_notm}}-Netz](vcsiks-networking.svg)
+![Diagramm zum vCenter Server-{{site.data.keyword.containerlong_notm}}-Netz](../../images/vcsiks-networking.svg "Diagramm zum vCenter Server-{{site.data.keyword.containerlong_notm}}-Netz")
 
 ### Integration des IBM Cloud Kubernetes-Service und von vCenter Server
 {: #vcsiks-overview-network-iks-vcs-integration}

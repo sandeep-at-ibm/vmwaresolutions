@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-06"
 
 subcollection: vmware-solutions
 
@@ -124,8 +124,7 @@ Die HCX Management Enterprise-OVA wird in der Quellenumgebung bereitgestellt und
 Pro vCenter-Instanz kann es nur eine HCX-Bereitstellung geben. Diese Einschränkung gilt für den Verbindungsmodus; die HCX-Management-Appliance wird nur in der primären vCenter-Instanz installiert. Der HCX-Manager unterstützt bis zu fünf registrierte vCenter-Instanzen im Verbindungsmodus.
 {:note}
 
-Abbildung 1. Hybrid-Cloud-Services als Quelle
-![Hybrid-Cloud-Services als Quelle](source_hybrid_cloud_services.svg)
+![Hybrid-Cloud-Services als Quelle](../../images/source_hybrid_cloud_services.svg "Hybrid-Cloud-Services als Quelle")
 
 ### Virtuelle HCX-Appliances
 {: #hcx-archi-source-hcxva}
@@ -154,8 +153,7 @@ HCX verwendet eine starke Verschlüsselung, um eine Site-to-Site-Verbindung mit 
 
 Das Cloud-Gateway umfasst auch die vSphere-Replikationstechnologie, mit der bidirektionale Migrationen durchgeführt werden können.
 
-Abbildung 2. Cloud-Gateway als Quelle
-![Cloud-Gateway als Quelle](source_cloud_gateway.svg)
+![Cloud-Gateway als Quelle](../../images/source_cloud_gateway.svg "Cloud-Gateway als Quelle")
 
 ### WAN-Optimierungsprogramm
 {: #hcx-archi-source-wan-opt}
@@ -164,8 +162,7 @@ HCX stellt auch ein softwaredefiniertes WAN-Optimierungsprogramm zur Verfügung.
 
 Die Migration von virtuellen Maschinen beruht auf der Kombination aus Cloud-Gateway und WAN-Optimierungs­Appliance, mit der eine unerreichte Mobilität zwischen der lokalen vSphere-Instanz und IBM Cloud erreicht wird.
 
-Abbildung 3. WAN-Optimierungsprogramm als Quelle
-![WAN-Optimierungsprogramm als Quelle](source_wan_optimizer.svg)
+![WAN-Optimierungsprogramm als Quelle](../../images/source_wan_optimizer.svg "WAN-Optimierungsprogramm als Quelle")
 
 ### Layer-2-Konzentrator
 {: #hcx-archi-source-layer-2-conc}
@@ -176,8 +173,7 @@ Die Layer-2-Konzentrator-Appliance besitzt zwei Schnittstellen:
 * Interne Trunkschnittstelle: Bearbeitet den virtuellen Maschinen-Datenverkehr lokal für die erweiterten Netze mithilfe einer translationalen Brückenzuordnung zu einem entsprechenden hin zu IBM Cloud erweiterten Netz.
 * Uplink-Schnittstelle: HCX verwendet diese Schnittstelle, um eingekapselten Overlay-Datenverkehr an und von IBM Cloud zu senden. Über diese Schnittstelle werden Anwendungsdaten gesendet.
 
-Abbildung 4. L2-Konzentrator als Quelle
-![L2-Konzentrator als Quelle](source_l2_concentrator.svg)
+![L2-Konzentrator als Quelle](../../images/source_l2_concentrator.svg "L2-Konzentrator als Quelle")
 
 ### Nur Migration
 {: #hcx-archi-source-mig-only}
@@ -234,8 +230,7 @@ Wurde die virtuelle Maschine mit vMotion übertragen, wird die Route erst dann e
 
 Das heißt, R1 kann Routing verwenden, um eine bestimmte virtuelle Maschine über R2 zu erreichen, anstatt das lokal verbundene erweiterte Netz zu verwenden. R2 ist vollständiger Eigner des Pfades für andere Netze, die virtuelle Maschinen mit aktiviertem Proximity Routing erreichen sollen.
 
-Abbildung 5. Asymmetrisches Routing mit Proximity Routing-Lösung
-![Asymmetrisches Routing mit Proximity Routing-Lösung](asymmetric_routing_proximity_routing_solution.svg)
+![Asymmetrisches Routing mit der Proximity Routing - Lösung](../../images/asymmetric_routing_proximity_routing_solution.svg "Asymmetrisches Routing mit der Proximity Routing - Lösung")
 
 ### Beibehaltung von MAC-Adressen
 {: #hcx-archi-source-mac-addr-ret}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -14,8 +14,7 @@ subcollection: vmware-solutions
 # Vorwort
 {: #vcscar-preface}
 
-Abbildung 1. Von uns selbst konzipierte Sprache
-![Von uns selbst konzipierte Sprache](vcscar-alood.svg)
+![Von uns selbst konzipierte Sprache](../../images/vcscar-alood.svg "Von uns selbst konzipierte Sprache")
 
 ## Einführung in die Skater-Sprache
 {: #vcscar-preface-intro}

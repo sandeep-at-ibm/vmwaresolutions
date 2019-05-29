@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-05-08"
 
 subcollection: vmware-solutions
 
@@ -14,9 +14,7 @@ subcollection: vmware-solutions
 # Systemkontext
 {: #vcsiks-systemcontext}
 
-Abbildung 1. Systemkontext
-
-![Diagramm des Systemkontextes](vcsiks-system-context.svg)
+![Systemkontextdiagramm](../../images/vcsiks-system-context.svg "Systemkontextdiagramm")
 
 Die Kernkomponenten sind Folgende:
 

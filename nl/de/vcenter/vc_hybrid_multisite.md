@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-24"
+lastupdated: "2019-05-02"
 
 subcollection: vmware-solutions
 
@@ -47,9 +47,7 @@ Falls Ihre Konfiguration eine Bereitstellung mit mehreren Standorten mit mehr al
 
 Die folgende Abbildung zeigt eine Gesamtübersicht über die vCenter Server with Hybridity Bundle-Bereitstellung mit mehreren Standorten.
 
-Abbildung 1. vCenter Server with Hybridity Bundle-Bereitstellung mit mehreren Standorten
-
-![vCenter Server with Hybridity Bundle-Bereitstellung mit mehreren Standorten](../vcenter/multisite-hub-spoke.svg "vCenter Server with Hybridity Bundle-Bereitstellung mit mehreren Standorten")
+![vCenter Server with Hybridity Bundle-Bereitstellung mit mehreren Standorten](../images/multisite-hub-spoke.svg "vCenter Server with Hybridity Bundle-Bereitstellung mit mehreren Standorten")
 
 Das Modell enthält die folgenden Schichten:
 

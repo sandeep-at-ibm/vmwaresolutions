@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-05-07"
 
 subcollection: vmware-solutions
 
@@ -28,9 +28,7 @@ Die interne Architektur gibt die Bereitstellung der erforderlichen NSX Edge-Komp
 VMware vSAN ist in der folgenden Abbildung optional.
 {:note}
 
-Abbildung 1. Cloud Networking Services on {{site.data.keyword.cloud_notm}}
-
-![Cloud Networking Services-Architektur](architecture.svg "Cloud Networking Services-Architektur")
+![Cloud Networking Services-Architektur](../../images/architecture.svg "Cloud Networking Services-Architektur")
 
 ## Design einer dedizierten Architektur
 {: #nsx_design-dedicated-archi}
