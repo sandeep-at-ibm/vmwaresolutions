@@ -51,13 +51,11 @@ Tabella 1. Livelli di aggiornamento e impatto
   </tr>
   <tr>
     <td>Basso</td>
-    <td>Questo aggiornamento non influisce su alcun sistema. Non devi applicarlo durante i tempi di inattività
-    pianificati.</td>
+    <td>Questo aggiornamento non influisce su alcun sistema. Non devi applicarlo durante i tempi di inattività pianificati. </td>
   </tr>
   <tr>
     <td>Medio</td>
-  <td>Questo aggiornamento potrebbe influire su alcuni sistemi. Si consiglia di applicarlo durante i tempi di inattività
-    pianificati.</td>
+  <td>Questo aggiornamento potrebbe influire su alcuni sistemi. Si consiglia di applicarlo durante i tempi di inattività pianificati. </td>
   </tr>
     <tr>
     <td>Maggiore</td>

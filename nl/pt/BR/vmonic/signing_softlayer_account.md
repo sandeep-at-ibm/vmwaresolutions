@@ -30,7 +30,7 @@ Para inscrever-se para uma conta de infraestrutura do {{site.data.keyword.cloud_
 {: #signing_softlayer_account-related}
 
 * [Perguntas mais frequentes](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Requisitos para a conta de infraestrutura do {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)
+* [Requisitos para a conta da infraestrutura do {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)
 * [Vídeo - Como criar uma conta do {{site.data.keyword.cloud_notm}}](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
 * [Pedindo instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
 * [Alternando para o IBMid e vinculando contas](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)

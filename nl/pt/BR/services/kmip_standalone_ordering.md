@@ -21,7 +21,7 @@ subcollection: vmware-solutions
 
 Assegure-se de que tenha concluído as tarefas a seguir:
 * Você configurou as credenciais de infraestrutura do {{site.data.keyword.cloud_notm}} na página **Configurações**. Para obter mais informações, veja [Contas e configurações do usuário](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount).
-* Você revisou todas as considerações em [Considerações ao instalar as instâncias do KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip_standalone_considerations#kmip_standalone_considerations-install).
+* Você revisou todas as considerações em [Considerações ao instalar instâncias do KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip_standalone_considerations#kmip_standalone_considerations-install).
 
 ## Procedimento para pedir instâncias do KMIP for VMware on IBM Cloud
 {: #kmip_standalone_ordering-procedure}

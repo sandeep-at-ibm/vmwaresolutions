@@ -59,7 +59,7 @@ A oferta de base é implementada com um dispositivo vCenter Server que é dimens
 
 No total, a oferta de base requer 38 vCPU e 67 GB de vRAM que são reservados para a camada de gerenciamento de virtualização. A capacidade restante do host para suas MVs depende de vários fatores, como a taxa de alocação excessiva, o dimensionamento da MV e os requisitos de desempenho de carga de trabalho.
 
-Para obter os requisitos de recurso de gerenciamento adicionais ao implementar o serviço HCX on {{site.data.keyword.cloud_notm}}, consulte [Visão geral do VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations).
+Para obter os requisitos adicionais de recurso de gerenciamento ao implementar o HCX no serviço {{site.data.keyword.cloud_notm}}, consulte [Visão geral do VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations).
 
 ### Hibridismo de infraestrutura
 {: #vc_hybrid_overview-infras-hybrid}
@@ -97,7 +97,7 @@ Os componentes de rede a seguir são pedidos:
     {:important}
   * Um VMware NSX Edge Services Gateway seguro e gerenciado pelo cliente para tráfego de carga de trabalho de entrada e saída HTTPS, que é implementado pela IBM como um modelo que pode ser modificado por você para fornecer acesso VPN ou acesso público. Para obter mais informações, veja [O NSX Edge gerenciado pelo cliente representa um risco de segurança?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#faq-customer-nsx)
 
-Para obter mais informações sobre componentes de rede pedidos ao implementar o serviço HCX on {{site.data.keyword.cloud_notm}}, consulte [Visão geral do HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations).
+Para obter mais informações sobre os componentes de rede solicitados ao implementar o serviço HCX on {{site.data.keyword.cloud_notm}}, consulte [Visão geral do HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations).
 
 ### Virtual Server Instances
 {: #vc_hybrid_overview-vsi}
@@ -152,9 +152,9 @@ Deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} 
 
 **CUIDADO:** gerenciar quaisquer componentes do {{site.data.keyword.vmwaresolutions_short}}, que foram instalados em sua conta do {{site.data.keyword.cloud_notm}} quando você solicitou a instância, fora do console do {{site.data.keyword.vmwaresolutions_short}} pode tornar seu ambiente instável. Estas atividades de gerenciamento incluem:
 *  Incluindo, modificando, retornando ou removendo componentes
-*  Expansão ou redução da capacidade da instância por meio da inclusão ou remoção de servidores ESXi
+*  Expandindo ou contraindo a capacidade da instância por meio da inclusão ou remoção de servidores ESXi
 *  Desativando componentes
-*  Reinício dos serviços
+*  Reiniciando os serviços
 
    As exceções a essas atividades incluem o gerenciamento de compartilhamentos de arquivos de armazenamento compartilhado por meio do {{site.data.keyword.slportal}}. Essas atividades incluem: pedido, exclusão (que poderá afetar armazenamentos de dados, se montado), autorização e montagem de compartilhamentos de arquivos de armazenamento compartilhado.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-21"
 
 subcollection: vmware-solutions
 
@@ -28,7 +28,7 @@ La red física de {{site.data.keyword.cloud_notm}} está separada en tres redes 
 ## Red privada
 {: #vcsnsxt-overview-ic4vnetwork-private-net}
 
-Todos los {{site.data.keyword.CloudDataCents_notm}} y los PoP están conectados mediante la red troncal privada. Esta red privada está separada de la red pública, y permite la conectividad a servicios en {{site.data.keyword.CloudDataCents_notm}} alrededor del mundo. El traslado de datos entre los centros de datos se realiza mediante múltiples conexiones de 10 Gbps o 40 Gbps a la red privada. De forma similar a la red pública, la red privada tiene varios niveles en que los servidores y otros componentes de infraestructura se conectan a los conmutadores de cliente de fondo (BCS) agregados. Estos conmutadores agregados están conectados a un par de direccionadores separados (es decir, direccionadores de clientes de fondo, BCR) para redes L3. La red privada también da soporte a la capacidad de utilizar tramas Jumbo (MTU 9000) para las conexiones de host físicas.
+Todos los {{site.data.keyword.CloudDataCents_notm}} y los PoP están conectados mediante la red troncal privada. Esta red privada está separada de la red pública, y permite la conectividad a servicios en {{site.data.keyword.CloudDataCents_notm}} alrededor del mundo. El traslado de datos entre los centros de datos se realiza utilizando más de una conexión de 10 Gbps o 40 Gbps a la red privada. De forma similar a la red pública, la red privada tiene varios niveles en que los servidores y otros componentes de infraestructura se conectan a los conmutadores de cliente de fondo (BCS) agregados. Estos conmutadores agregados están conectados a un par de direccionadores separados (es decir, direccionadores de clientes de fondo, BCR) para redes L3. La red privada también da soporte a la capacidad de utilizar tramas Jumbo (MTU 9000) para las conexiones de host físicas.
 
 ## Red de gestión
 {: #vcsnsxt-overview-ic4vnetwork-mgmt-net}

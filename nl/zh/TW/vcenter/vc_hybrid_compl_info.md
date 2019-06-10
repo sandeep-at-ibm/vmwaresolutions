@@ -85,7 +85,7 @@ subcollection: vmware-solutions
 * 在起始部署時，供應項目的自動化及客戶的帳戶是分開的。我們容許並鼓勵客戶變更入口網站中 IBM 提供的所有密碼。
 * vCenter 存取和認證是在起始部署期間建立並提供給客戶。「IBM 支援中心」必須保留對管理層的完整存取權，以提供生命週期管理及支援我們的客戶，這是我們供應項目需求的一部分。
 * 如果任何時候變更了認證（例如密碼），「IBM 支援中心」可能無法再協助客戶回復遺失或忘記的認證，甚至是對客戶環境進行疑難排解。
-* 如需此問題及相關問題之重要性的相關資訊，請參閱[變更 NSX 元件密碼時的考量](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_networkingonvcenterserver#vc_networkingonvcenterserver-change-nsx-component-password-considerations)及[有關變更 vCenter Server 構件的考量](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter_chg_impact)。
+* 如需此問題及相關問題之重要性的相關資訊，請參閱[變更 NSX 元件密碼時的考量](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_networkingonvcenterserver#vc_networkingonvcenterserver-change-nsx-component-password-considerations)及[變更 vCenter Server 構件的考量](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter_chg_impact)。
 
 ### 通訊與疑難排解
 {: #vc_hybrid_compl_info-communication-troubleshooting}
@@ -104,7 +104,7 @@ subcollection: vmware-solutions
 * 服務完整性與可用性：IBM 會將針對本「雲端服務」所偵測到之所有網路侵入通知轉遞給客戶。由客戶負責確定所報告之各項通知的影響。如有硬體故障，將通知客戶。OS 或軟體故障之監視及回應由客戶負責，客戶得於必要時尋求 IBM 支援。
 * 活動記載：客戶需視需要負責「OS/系統」及「資料庫/應用程式」的活動記載。
 * 加密：客戶需視需要負責配置及管理所有加密（包括靜態資料及傳輸中資料）。
-* 企業永續性與災難回復：客戶需視需要負責配置及管理所有企業永續及災難回復程序。
+* 營運持續與災難回復：客戶需視需要負責配置及管理所有營運持續及災難回復程序。
 
 ### 協力廠商服務
 {: #vc_hybrid_compl_info-third-party-services}

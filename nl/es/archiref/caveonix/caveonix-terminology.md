@@ -58,7 +58,7 @@ Este glosario proporciona algunas descripciones para los términos que están as
   - **Tarea de AMQP:** esta tarea de AMQP se utiliza para recopilar sucesos en directo del VCD y habilitar la sincronización en tiempo real. RiskForesight consume sucesos de adición, supresión y actualización de activos y actúa sobre estos sucesos. Por ejemplo, si se añade un nuevo activo y RiskForesight ha recibido dicha notificación a través de AMQP, actualiza inmediatamente la base de datos e inicia la exploración de conformidad y ciberriesgo.
   - **Exploración de infraestructura de VMware:** esta exploración realiza una exploración de infraestructura de los activos de VMware.
   -	**Exploración de vulnerabilidades de VMware:** esta exploración realiza una exploración de vulnerabilidades de los activos de VMware.
--	**Régimen de conformidad:** disponible mediante licencia; NIST, NESA, PCI, ISO, HIPAA, GDPR, Custom, FFIEC, FedRAMP Low, FedRAMP Moderate, FedRAMP High
+-	**Régimen de conformidad:** disponible mediante licencia: NIST, NESA, PCI, ISO, HIPAA, GDPR, Custom, FFIEC, FedRAMP Low, FedRAMP Moderate, FedRAMP High
 -	**Gestor de políticas:** el gestor de políticas ofrece la función de creación de políticas para una organización basándose en los resultados de machine learning. Caveonix proporciona de forma predeterminada tres tipos de trabajos de machine learning por organización. Los trabajos no editables y adicionales no están soportados todavía. Los tipos de trabajos de machine learning soportados actualmente son:
   -	Caveo Logs
   -	Caveo Networks

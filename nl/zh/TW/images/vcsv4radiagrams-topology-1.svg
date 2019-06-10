@@ -17,13 +17,13 @@
  </defs>
  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
   <text x="121.5" y="312">邊緣叢集內</text>
-  <text x="121.5" y="326">     實例    </text>
+  <text x="121.5" y="326">的 T0 閘道</text>
   <text x="121.5" y="340">實例</text>
   <text x="343" y="100.5">Geneve</text>
   <text x="343" y="114.5">層疊網路</text>
   <text x="390" y="161.5">T1 閘道</text>
   <text x="390" y="175.5">路徑廣告</text>
-  <text x="390" y="189.5"> 啟用 </text>
+  <text x="390" y="189.5">已啟用 </text>
  </g>
  <rect x="213" y="254" width="259" height="200" fill="url(#mx-gradient-fff2cc-1-ffd966-1-s-0)" pointer-events="none" stroke="#d6b656" stroke-dasharray="3 3"/>
  <g fill="none" pointer-events="none" stroke-miterlimit="10">

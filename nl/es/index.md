@@ -118,11 +118,11 @@ Revise y elija los servicios de complemento para la oferta de despliegue.
     </tr>
     <tr>
        <td>[FortiGate Security Appliance on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations)</td>
-       <td>El servicio de FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} despliega un par de dispositivos de seguridad FortiGate (FSA) serie 300 en modalidad altamente disponible para ofrecer servicios de cortafuegos, direccionamiento, NAT y VPN para proteger todos los servidores y máquinas virtuales de la VLAN pública de sus instancias.</td>
+       <td>El servicio FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} despliega un par de dispositivos FortiGate Security Appliance (FSA) serie 300 en modalidad altamente disponible para ofrecer servicios de cortafuegos, direccionamiento, NAT y VPN para proteger todos los servidores y máquinas virtuales de la VLAN pública de sus instancias.</td>
     </tr>
     <tr>
        <td>[FortiGate Virtual Appliance on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations)</td>
-       <td>El servicio de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} despliega un par de FortiGate Virtual Appliances en el entorno, lo que puede ayudar a reducir el riesgo implementando los controles de seguridad importantes dentro de la infraestructura virtual.</td>
+       <td>El servicio FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} despliega un par de dispositivos FortiGate Virtual Appliance en el entorno, lo que puede ayudar a reducir el riesgo implementando controles de seguridad críticos dentro de su infraestructura virtual.</td>
     </tr>
     <tr>
        <td>[HyTrust CloudControl on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htcc_considerations)</td>

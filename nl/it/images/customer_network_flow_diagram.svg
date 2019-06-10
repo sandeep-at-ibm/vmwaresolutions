@@ -368,7 +368,7 @@
 							<polygon class="st21" points="618.1 185.7 609.6 182.4 615.3 177.1"/>
 								<rect class="st21" transform="matrix(.7268 -.6868 .6868 .7268 45.189 466.92)" x="607.8" y="172.3" width="3.6" height="8.6"/>
 	</g>
-	<text transform="translate(623.22 145.98)"><tspan class="st2 st5" x="0" y="0">ESG-Workload-NS</tspan><tspan class="st2 st5" x="0" y="14.4">        (X Large)</tspan></text>
+	<text transform="translate(623.22 145.98)"><tspan class="st2 st5" x="0" y="0">ESG-Workload-NS</tspan><tspan class="st2 st5" x="0" y="14.4">(X Large)</tspan></text>
 					<rect class="st19" x="13.5" y="136" width="39.4" height="39.4"/>
 					<linearGradient id="SVGID_11_" x1="39.719" x2="30.175" y1="149.93" y2="185.04" gradientUnits="userSpaceOnUse">
 						<stop stop-color="#CCE0F4" offset="0"/>
@@ -442,7 +442,7 @@
 		<text transform="translate(163.67 515)"><tspan class="st2 st56" x="0" y="0">VSI-MSAD/</tspan><tspan class="st2 st56" x="0" y="13.2">DNS/NTP</tspan></text>
 			<rect class="st32" x="63.5" y="534.5" width="28" height="28"/>
 			<text class="st33 st2 st34" transform="translate(68.399 553.4)">VM</text>
-		<text transform="translate(40.334 515)"><tspan class="st2 st56" x="0" y="0">    VSI-Backup</tspan><tspan class="st2 st56" x="0" y="13.2">Server (Veeam)</tspan></text>
+		<text transform="translate(40.334 515)"><tspan class="st2 st56" x="0" y="0">VSI-Backup</tspan><tspan class="st2 st56" x="0" y="13.2">Server (Veeam)</tspan></text>
 </g>
 		<rect class="st32" x="77.5" y="410.5" width="28" height="28"/>
 		<text class="st33 st2 st34" transform="translate(82.399 429.4)">VM</text>
@@ -457,7 +457,7 @@
 	<text transform="translate(70.334 388.67)"><tspan class="st2 st5" x="0" y="0">  SDDC</tspan><tspan class="st2 st5" x="0" y="14.4">Manager</tspan></text>
 	<text transform="translate(231.33 374.33)"><tspan class="st2 st5" x="0" y="0"> Dispositivo</tspan><tspan class="st2 st5" x="0" y="14.4">   vCenter</tspan><tspan class="st2 st5" x="0" y="28.8">Server</tspan></text>
 <text x="157.29842" y="389.90515"><tspan class="st2 st5" x="157.29842" y="389.90515" font-family="IBMPlexSans" font-size="12px">IBM</tspan></text>
-<text x="140.46999" y="403.13916"><tspan class="st2 st5" x="140.46999" y="403.13916" font-family="IBMPlexSans" font-size="12px"> CloudDriver                     </tspan></text>
+<text x="140.46999" y="403.13916"><tspan class="st2 st5" x="140.46999" y="403.13916" font-family="IBMPlexSans" font-size="12px"> CloudDriver</tspan></text>
 <g id="Softlayer_file_storage">
 					<linearGradient id="SVGID_13_" x1="806" x2="841.99" y1="499.7" y2="499.7" gradientTransform="matrix(.866 -.5 .5 .866 -198.9 56.26)" gradientUnits="userSpaceOnUse">
 					<stop stop-color="#fff" offset="0"/>

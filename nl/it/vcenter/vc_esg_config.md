@@ -91,7 +91,7 @@ Inoltre, puoi trovare ulteriori dettagli sulle sottoreti del cliente completando
 3. Riesamina le note che vengono visualizzate per gli indirizzi IP. Queste note identificano quali sottoreti e indirizzi IP vengono ordinati e utilizzati durante la configurazione iniziale.
 
    Non utilizzare gli indirizzi IP che vengono ordinati e utilizzati durante la configurazione iniziale. Puoi comunque utilizzare altri indirizzi IP
-   su queste sottoreti in base ai tuoi requisiti. Per configurare ulteriori regole NAT (network address translation), vedi [Managing NAT rules](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.
+su queste sottoreti in base ai tuoi requisiti. Per configurare ulteriori regole NAT (network address translation), vedi [Managing NAT rules](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.
    {:important}
 
 ## Link correlati

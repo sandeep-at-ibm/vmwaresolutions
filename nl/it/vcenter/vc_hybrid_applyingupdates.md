@@ -46,10 +46,8 @@ Tabella 1. Livelli di aggiornamento e impatto
 
 | Livello di aggiornamento  | Impatto        |  
 |:------------- |:------------- |
-| Basso    | Questo aggiornamento non influisce su alcun sistema. Non devi applicarlo durante i tempi di inattività
-    pianificati. |  
-| Medium | Questo aggiornamento potrebbe influire su alcuni sistemi. Si consiglia di applicarlo durante i tempi di inattività
-    pianificati. |  
+| Basso    | Questo aggiornamento non influisce su alcun sistema. Non devi applicarlo durante i tempi di inattività pianificati. |  
+| Medium | Questo aggiornamento potrebbe influire su alcuni sistemi. Si consiglia di applicarlo durante i tempi di inattività pianificati. |  
 | Maggiore  | Questo aggiornamento influisce su alcuni o tutti i sistemi. Devi applicarlo durante i tempi di inattività pianificati. |  
 
 ## Procedura per applicare gli aggiornamenti del componente di gestione IBM (istanze della V2.3 e V2.4)

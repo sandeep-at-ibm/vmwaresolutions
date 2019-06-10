@@ -66,9 +66,7 @@ Almacenamiento | 100 GB |  SATA: 2 TB / SSD: 960 GB
 ## Estructura virtual
 {: #vcsiks-arch-overview-infrastructure-virtual-structure}
 
-![Diagrama de la estructura física del despliegue de {{site.data.keyword.containerlong_notm}} y
-{{site.data.keyword.icpfull_notm}}](../../images/vcsiks-phy-ics-iks-deployment.svg "Diagrama de la estructura física del despliegue de
-{{site.data.keyword.containerlong_notm}} y {{site.data.keyword.icpfull_notm}}"){: caption="Figura 1. Estructura física de los despliegues {{site.data.keyword.containerlong_notm}} e {{site.data.keyword.icpfull_notm}}" caption-side="bottom"}
+![Diagrama de la estructura física del despliegue de {{site.data.keyword.containerlong_notm}} y {{site.data.keyword.icpfull_notm}}](../../images/vcsiks-phy-ics-iks-deployment.svg "Diagrama de la estructura física del despliegue de {{site.data.keyword.containerlong_notm}} y {{site.data.keyword.icpfull_notm}}"){: caption="Figura 1. Estructura física de los despliegues {{site.data.keyword.containerlong_notm}} e {{site.data.keyword.icpfull_notm}}" caption-side="bottom"}
 
 Dentro de la instancia de vCenter Server, las VMS del cliente se despliegan en NSX Edge Services Gateways (ESG) y Distributed Logical Routers (DLR) dedicados.
 

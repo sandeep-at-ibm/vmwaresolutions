@@ -292,9 +292,9 @@ Se você mudar esses componentes fora do console do {{site.data.keyword.vmwareso
 
 **CUIDADO:** Gerenciar quaisquer componentes do {{site.data.keyword.vmwaresolutions_short}} (que foram instalados em sua conta do {{site.data.keyword.cloud_notm}} quando você pediu a instância) de fora do console do {{site.data.keyword.vmwaresolutions_short}} pode desestabilizar seu ambiente. Estas atividades de gerenciamento incluem:
 *  Incluindo, modificando, retornando ou removendo componentes
-*  Expansão ou redução da capacidade da instância por meio da inclusão ou remoção de servidores ESXi
+*  Expandindo ou contraindo a capacidade da instância por meio da inclusão ou remoção de servidores ESXi
 *  Desativando componentes
-*  Reinício dos serviços
+*  Reiniciando os serviços
 
    As exceções a essas atividades incluem o gerenciamento de compartilhamentos de arquivos de armazenamento compartilhado por meio do {{site.data.keyword.slportal}}. Essas atividades incluem: pedido, exclusão (que poderá afetar armazenamentos de dados, se montado), autorização e montagem de compartilhamentos de arquivos de armazenamento compartilhado.
 

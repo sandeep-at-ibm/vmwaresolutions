@@ -94,7 +94,7 @@ NSX Manager 部署在起始 vCenter Server 叢集上。此外，NSX Manager 會�
 ### NSX Controller
 {: #vcsiks-arch-overview-infrastructure-nsx-controllers}
 
-{{site.data.keyword.cloud_notm}} 自動化會在起始叢集內部署三個 NSX 控制器。控制器會獲指派指定給管理元件之專用可攜式子網路中的 IP 位址。
+{{site.data.keyword.cloud_notm}} 自動化會在起始叢集內部署三個 NSX Controller。控制器會獲指派指定給管理元件之專用可攜式子網路中的 IP 位址。
 
 ### NSX ESG/DLR
 {: #vcsiks-arch-overview-infrastructure-nsx-esg}

@@ -52,5 +52,5 @@ Para resolver o problema, siga estas etapas:
 ## Links relacionados
 {: #hcx-archi-trbl-related}
 
-* [Registrando o HCX Manager com o vCenter](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-reg-vcenter)
+* [Registrando o HCX Manager no vCenter](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-reg-vcenter)
 * [Modificando ou desinstalando o HCX](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-mod-uninstall)

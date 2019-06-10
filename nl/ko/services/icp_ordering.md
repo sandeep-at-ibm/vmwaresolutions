@@ -41,8 +41,8 @@ subcollection: vmware-solutions
 {: #icp_ordering-deploy-nodes}
 
 추가 노드를 배치하려면 다음 정보를 검토하십시오.
-* 초기 {{site.data.keyword.cloud_notm}} Private Hosted 설치로 배치되는 {{site.data.keyword.cloud_notm}} Private Ubuntu 템플리트(Ubuntu1604)를 사용하십시오. 
-* Ubuntu 템플리트를 찾으려면 VMware vSphere Web Client에서 `cam` 폴더 아래에 있는 **VM 및 템플리트** 탭으로 이동하십시오. 
+* 초기 {{site.data.keyword.cloud_notm}} Private Hosted 설치로 배치되는 {{site.data.keyword.cloud_notm}} Private Ubuntu 템플리트(Ubuntu1604)를 사용하십시오.
+* Ubuntu 템플리트를 찾으려면 VMware vSphere Web Client에서 `cam` 폴더 아래에 있는 **VM 및 템플리트** 탭으로 이동하십시오.
 * Ubuntu 템플리트의 기본 비밀번호는 `icponcloud`입니다. 템플리트를 사용하기 전에 이 비밀번호를 변경하는 것이 좋습니다.
 * {{site.data.keyword.vmwaresolutions_short}}는 Ubuntu 템플리트의 업데이트 및 패치 적용에 대한 지원을 제공하지 않습니다. 이 업데이트를 자체적으로 모니터하고 적용해야 합니다.
 

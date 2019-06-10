@@ -34,7 +34,7 @@ Como o controlador de serviços de plataforma, o vCenter Server é implementado 
 
 O NSX Manager é implementado no cluster inicial. Além disso, o NSX Manager é designado a um endereço IP suportado pela VLAN por meio do bloco de endereço móvel privado que está designado a componentes de gerenciamento e configurado com os servidores DNS e NTP
 
-### Controladores NSX
+### NSX Controllers
 {: #vcscar-arch-overview-solution-nsx-controllers}
 
 A automação do {{site.data.keyword.cloud}} implementa três Controladores NSX dentro do cluster inicial. Os controladores são designados a um endereço IP suportado pela VLAN por meio da sub-rede móvel privada que é designada a componentes de gerenciamento.

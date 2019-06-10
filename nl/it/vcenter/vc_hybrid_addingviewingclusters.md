@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 
 I server ESXi che hai configurato quando hai ordinato un'istanza vengono raggruppati sotto forma di **cluster1** per impostazione predefinita.
 
-Puoi aggiungere cluster alla tua istanza VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle per espandere la capacità di calcolo e archiviazione. All'interno di un cluster, gestisci i server ESXi per una migliore allocazione delle risorse e alta disponibilità. Quando non sono più necessari, elimina i cluster aggiunti dalla tua istanza.
+Puoi aggiungere cluster alla tua istanza VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle per espandere la capacità di calcolo e archiviazione. All'interno di un cluster, gestisci i server ESXi per una migliore assegnazione delle risorse e alta disponibilità. Quando non sono più necessari, elimina i cluster aggiunti dalla tua istanza.
 
 ## Aggiunta di cluster alle istanze vCenter Server with Hybridity Bundle
 {: #vc_hybrid_addingviewingclusters-adding}

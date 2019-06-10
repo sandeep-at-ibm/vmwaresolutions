@@ -130,7 +130,7 @@ A partir da V2.6, novas instâncias e novos hosts foram provisionados usando o v
 
 Recomenda-se que as instâncias existentes do Cloud Foundation que têm o Veeam on {{site.data.keyword.cloud_notm}} instalado também sejam atualizadas para a V9.5u3a ou mais recente.
 
-Para obter mais informações sobre o Veeam on {{site.data.keyword.cloud_notm}}, consulte [Visão geral do Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations).
+Para obter mais informações sobre o Veeam on {{site.data.keyword.cloud_notm}}, consulte a [Visão geral do Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations).
 
 ### VMware HCX on IBM Cloud
 {: #relnotes_v26-hcx}

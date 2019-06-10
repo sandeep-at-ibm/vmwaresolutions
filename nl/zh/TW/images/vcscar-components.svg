@@ -103,7 +103,7 @@
    <text x="71" y="171.5">Watson Assistant</text>
   </g>
   <g fill="#00f" font-family="Helvetica" font-size="8px" text-anchor="middle">
-   <text x="69.5" y="81.5">探索服務</text>
+   <text x="69.5" y="81.5">Discovery Service</text>
   </g>
   <g pointer-events="none">
    <rect x="31" y="180" width="80" height="160" fill="none" stroke="#b3b3b3"/>

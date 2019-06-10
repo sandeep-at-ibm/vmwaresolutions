@@ -170,7 +170,7 @@
   <g transform="translate(4.3536 -1.8609)" font-family="Helvetica" font-size="13px" text-anchor="middle">
    <rect x="505" y="335" width="94" height="31" fill="#fff" stroke-width="0"/>
    <text x="550.76001" y="337.92999">IBM Cloud</text>
-   <text x="550.76001" y="353.92999">Private 網路</text>
+   <text x="550.76001" y="353.92999">專用網路</text>
   </g>
   <path d="m774.27 315.28 5.02-9.22 9.27 22.7-24.1 4.52 5.02-9.22-99.75-54.34-5.02 9.22-9.27-22.7 24.1-4.52-5.02 9.22z" fill="#fff" pointer-events="none" stroke="#00f" stroke-dasharray="3 3" stroke-linejoin="round" stroke-miterlimit="10"/>
   <g transform="translate(-1.4142 .70711)" font-family="Helvetica" font-size="12px" text-anchor="middle">

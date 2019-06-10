@@ -267,7 +267,7 @@
       <text
          x="243"
          y="630"
-         id="text77">Containers</text>
+         id="text77">Container</text>
     </g>
     <image
        x="199"
@@ -568,7 +568,7 @@
             <xhtml:div
                display="inline-block"
                text-align="inherit"
-               text-decoration="inherit">Worker Pool</xhtml:div>
+               text-decoration="inherit">작업자 풀</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text

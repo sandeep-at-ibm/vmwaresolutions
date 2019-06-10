@@ -22,4 +22,4 @@ Revise las siguientes consideraciones y limitaciones cuando trabaje con {{site.d
 {: #trbl_limitations-windows-update}
 {: faq}
 
-Microsoft Active Directory (AD) / Domain Name Server (DNS) se configura automáticamente de modo que solo descargue las actualizaciones. No instala estas actualizaciones ni se reinicia automáticamente. Debe instalar manualmente las actualizaciones y reiniciar en un momento planificado que evite cualquier interrupción de la configuración actual del servidor AD y de otros trabajos de copia de seguridad. Para aplicar las actualizaciones de Windows, instale las actualizaciones manualmente.
+Microsoft Active Directory (AD) / Domain Name Server (DNS) está configurado automáticamente para que sólo se descarguen las actualizaciones. No instala estas actualizaciones ni se reinicia automáticamente. Debe instalar manualmente las actualizaciones y reiniciar en un momento planificado que evite cualquier interrupción de la configuración actual del servidor AD y de otros trabajos de copia de seguridad. Para aplicar las actualizaciones de Windows, instale las actualizaciones manualmente.

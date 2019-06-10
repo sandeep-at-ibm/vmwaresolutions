@@ -177,7 +177,7 @@
 								<rect class="st13" transform="matrix(.7268 -.6868 .6868 .7268 49.767 456.26)" x="596.8" y="161.8" width="3.4" height="7.5"/>
 							<polygon class="st13" points="618.1 185.7 609.6 182.4 615.3 177.1"/>
 								<rect class="st13" transform="matrix(.7268 -.6868 .6868 .7268 45.189 466.92)" x="607.8" y="172.3" width="3.6" height="8.6"/>
-	<text transform="translate(623.22 146.98)"><tspan class="st2 st5" x="0" y="0">ESG-Workload-NS</tspan><tspan class="st2 st5" x="0" y="14.4">        (X Large)</tspan></text>
+	<text transform="translate(623.22 146.98)"><tspan class="st2 st5" x="0" y="0">ESG-Workload-NS</tspan><tspan class="st2 st5" x="0" y="14.4">(X Large)</tspan></text>
 				<rect class="st17" x="13.5" y="136" width="39.4" height="39.4"/>
 				<linearGradient id="SVGID_7_" x1="39.719" x2="30.175" y1="149.93" y2="185.04" gradientUnits="userSpaceOnUse">
 					<stop stop-color="#CCE0F4" offset="0"/>
@@ -224,7 +224,7 @@
 		<text transform="translate(163.67 515)"><tspan class="st2 st26" x="0" y="0">VSI-MSAD/</tspan><tspan class="st2 st26" x="0" y="13.2">DNS/NTP</tspan></text>
 			<rect class="st23" x="63.5" y="534.5" width="28" height="28"/>
 			<text class="st24 st2 st25" transform="translate(68.399 553.4)">VM</text>
-		<text transform="translate(40.334 515)"><tspan class="st2 st26" x="0" y="0">    VSI-Backup</tspan><tspan class="st2 st26" x="0" y="13.2">Server (Veeam)</tspan></text>
+		<text transform="translate(40.334 515)"><tspan class="st2 st26" x="0" y="0">VSI-Backup</tspan><tspan class="st2 st26" x="0" y="13.2">Server (Veeam)</tspan></text>
 </g>
 		<rect class="st23" x="91.5" y="410.5" width="28" height="28"/>
 		<text class="st24 st2 st25" transform="translate(96.399 429.4)">VM</text>

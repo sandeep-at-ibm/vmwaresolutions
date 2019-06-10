@@ -26,7 +26,7 @@
  <ellipse cx="719" cy="273" rx="104.5" ry="40" fill="url(#id1)" pointer-events="none" stroke="#9cf"/>
  <g fill="#00f" font-family="Helvetica" font-size="12px" text-anchor="middle">
   <text x="718" y="269.5">IBM Cloud</text>
-  <text x="718" y="283.5">Private 網路</text>
+  <text x="718" y="283.5">專用網路</text>
  </g>
  <g fill="none" pointer-events="none" stroke-miterlimit="10">
   <path d="m556 66.3 17-0.19q10-0.11 20-0.11h5q5 0 5 10v10q0 10 0 20v170" stroke="#cce5ff" stroke-width="2"/>

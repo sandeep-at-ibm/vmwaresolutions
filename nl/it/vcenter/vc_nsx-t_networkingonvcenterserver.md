@@ -30,7 +30,7 @@ Per esaminare i componenti di rete inclusi nella tua istanza vCenter Server with
 
 Se utilizzi i firewall, devi configurare le regole per tutte le comunicazioni dalla VSI (Virtual Server Instance) {{site.data.keyword.IBM}} CloudDriver e dalle VM (virtual machine) di SDDC Manager. Queste regole devono consentire a tutti i protocolli di comunicare sugli indirizzi IP `10.0.0.0/8` e `161.26.0.0/16`. Esempi di questi firewall sono i DFW (Distributed Firewall) NSX o i firewall Vyatta.
 
-## Utilizzo di NSX con le tue VM (Virtual Machine)
+## Utilizzo di NSX con le tue macchine virtuali
 {: #vc_nsx-t_networkingonvcenterserver-using-nsx-with-vm}
 {: faq}
 

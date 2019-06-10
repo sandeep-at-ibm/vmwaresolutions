@@ -18,7 +18,7 @@ subcollection: vmware-solutions
 # Visión general de FortiGate Security Appliance on IBM Cloud
 {: #fsa_considerations}
 
-El servicio de FortiGate Security Appliance on {{site.data.keyword.cloud}} despliega un par de dispositivos de seguridad FortiGate (FSA) serie 300 en modalidad altamente disponible para ofrecer servicios de cortafuegos, direccionamiento, NAT y VPN para proteger todos los servidores y máquinas virtuales de la VLAN pública de sus instancias.
+El servicio FortiGate Security Appliance on {{site.data.keyword.cloud}} despliega un par de dispositivos FortiGate Security Appliance (FSA) serie 300 en modalidad altamente disponible para ofrecer servicios de cortafuegos, direccionamiento, NAT y VPN para proteger todos los servidores y máquinas virtuales de la VLAN pública de sus instancias.
 
 Puede gestionar este servicio mediante el cliente web FortiOS o la interfaz de línea de mandatos a través de SSH.
 
@@ -56,7 +56,7 @@ Revise las siguientes consideraciones antes de instalar el servicio FortiGate Se
 * La instalación del servicio FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} añade una nueva VLAN pública.
 * Durante el despliegue del servicio, es posible que la instancia no pueda acceder a Internet temporalmente.
 * Después de que se instale correctamente el servicio FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}, podrá gestionar y configurar reglas de cortafuegos para FSA desde la consola de FortiGate. Debe asegurarse de que las reglas de cortafuegos de FSA estén definidas de modo que permitan comunicaciones HTTPS (TCP puerto 443) salientes que inician los componentes de gestión como el Zerto Virtual Manager para comunicarse con la base de datos de gestión externa en {{site.data.keyword.cloud_notm}} a través de Internet. Las comunicaciones HTTPS salientes (puerto TCP 443) se originan en la dirección IP pública de los servicios de gestión de VMware NSX Edge Services Gateway (ESG) de su instancia.
-* Debe gestionar la configuración del dispositivo de seguridad FortiGate cuidadosamente para que se permitan solo las comunicaciones necesarias y se denieguen todas las demás comunicaciones.
+* Debe gestionar la configuración del dispositivo FortiGate Security Appliance cuidadosamente para que se permitan solo las comunicaciones necesarias y se denieguen todas las demás comunicaciones.
 * Si solicita clústeres adicionales, las VLAN públicas para estos clústeres recién añadidos no tienen el par HA de dispositivos de seguridad.
 
 ## Consideraciones sobre la eliminación de FortiGate Security Appliance on IBM Cloud

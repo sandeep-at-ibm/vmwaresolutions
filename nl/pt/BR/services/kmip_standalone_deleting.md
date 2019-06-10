@@ -21,7 +21,7 @@ Use este procedimento para excluir as instâncias do KMIP for VMware on {{site.d
 ## Antes de iniciar
 {: #kmip_standalone_deleting-req}
 
-Assegure-se de ter revisado todas as considerações em [Considerações ao excluir instâncias do KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations).
+Certifique-se de ter revisado todas as considerações em [Considerações ao excluir instâncias do KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations).
 
 ## Procedimento para excluir instâncias do KMIP for VMware on IBM Cloud
 {: #kmip_standalone_deleting-procedure}
@@ -40,4 +40,4 @@ Assegure-se de ter revisado todas as considerações em [Considerações ao excl
 * [Incluindo, visualizando e excluindo certificados para instâncias do KMIP for VMware on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_addingdeletingcert)
 * [Visualizando instâncias do KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_viewing)
 * [Arquitetura da solução KMIP for VMware on IBM Cloud](/docs/services/vmwaresolutions/archiref/kmip?topic=vmware-solutions-kmip-overview)
-* [Eventos de rastreador de atividade](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-at-events)
+* [Eventos do Activity Tracker](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-at-events)

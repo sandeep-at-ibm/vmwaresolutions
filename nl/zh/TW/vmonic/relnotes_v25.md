@@ -76,7 +76,7 @@ subcollection: vmware-solutions
 
 針對 vCenter Server 實例，繼續使用 **root** 主機使用者 ID。已建立 **ic4vroot** 主機使用者 ID，僅供 IBM 使用。
 
-如需使用者帳戶的相關資訊，請參閱[有關變更 vCenter Server 構件的考量](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter_chg_impact)。
+如需使用者帳戶的相關資訊，請參閱[變更 vCenter Server 構件的考量](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter_chg_impact)。
 
 ## 附加服務的更新
 {: #relnotes_v25-services}

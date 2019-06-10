@@ -133,7 +133,7 @@ Tabela 5. Descrição de variáveis na Fórmula 2
 {: #icp_overview-related}
 
 * [ Ordenando  {{site.data.keyword.cloud_notm}}  Privado Hospedado ](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_ordering)
-* [Guia do vCenter Server e do {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
+* [ vCenter Server e  {{site.data.keyword.cloud_notm}}  Guia privado ](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
 * [Abrir um chamado para o {{site.data.keyword.cloud_notm}} Private](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
 * [Licenciamento do {{site.data.keyword.cloud_notm}} Automation Manager](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/licensing.html){:new_window}
 * [Componentes do {{site.data.keyword.cloud_notm}} Automation Manager](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/cam_managed_components.html){:new_window}

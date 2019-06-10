@@ -129,4 +129,4 @@ Sono stati apportati miglioramenti in tutta l'interfaccia utente:
 ## Documentazione nuova e aggiornata
 {: #relnotes_v21-new-docs}
 
-È disponibile una nuova indicazione di developerWorks con istruzioni dettagliate su come collegare l'archiviazione dedicata alle distribuzioni esistenti di {{site.data.keyword.vmwaresolutions_full}} che utilizzano NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}. Per ulteriori informazioni, vedi la [procedura per collegare l'archiviazione dedicata a VMware Solutions on IBM  Cloud](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/).
+È disponibile una nuova indicazione di developerWorks con istruzioni dettagliate su come collegare l'archiviazione dedicata alle distribuzioni esistenti di {{site.data.keyword.vmwaresolutions_full}} che utilizzano NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}. Per ulteriori informazioni, vedi la [procedura per collegare l'archiviazione dedicata a VMware Solutions on IBM Cloud](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/).

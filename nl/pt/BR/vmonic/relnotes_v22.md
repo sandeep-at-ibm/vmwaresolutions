@@ -34,7 +34,7 @@ O {{site.data.keyword.vmwaresolutions_short}} liberou correções do VMware em r
 
 Durante o processo de upgrade da V2.2, a máquina virtual do IBM CloudDriver é reimplementada com o CentOS Linux liberação 7.4.1708. Além disso, todas as novas instâncias fornecidas incluem o CentOS Linux liberação 7.4.1708 no IBM CloudDriver.
 
-**Importante:**
+** Importante: **
 
 * Se você estiver usando uma solução de backup que faça referência à máquina virtual do IBM CloudDriver, depois de fazer upgrade para a V2.2, assegure-se de que a solução de backup esteja fazendo referência à nova máquina virtual do IBM CloudDriver.
 * Antes de fazer upgrade para a V2.2, assegure-se de substituir o VSI do Legacy Veeam pelo serviço Veeam on {{site.data.keyword.cloud_notm}}. O Legacy Veeam não é mais suportado na V2.2 e liberações futuras, portanto, os backups de componente de gerenciamento associados ao Legacy Veeam não estão disponíveis para restauração.

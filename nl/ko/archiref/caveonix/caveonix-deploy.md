@@ -18,7 +18,7 @@ subcollection: vmware-solutions
 # Caveonix RiskForesight의 배치 모델
 {: #caveonix-deploy}
 
-이 섹션에서는 솔루션을 설치하는 설치 프로세스와 함께 Caveonix RiskForesight의 배치 모델을 설명합니다.
+이 절에서는 솔루션을 설치하는 설치 프로세스와 함께 Caveonix RiskForesight의 배치 모델을 설명합니다.
 
 {{site.data.keyword.vmwaresolutions_full}} RiskForesight 옵션을 선택하면 초기 단계는 자동으로 수행되므로 배치의 모든 단계를 따르지 않아도 됩니다. 그러나 전체 배치와 아키텍처를 이해하고 초기 배치 후에 솔루션의 스케일을 확장하려는 사용자의 경우 자세하게 이해해야 합니다.
 

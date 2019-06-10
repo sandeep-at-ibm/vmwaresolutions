@@ -18,7 +18,7 @@ subcollection: vmware-solutions
 # Visión general de FortiGate Virtual Appliance on IBM Cloud
 {: #fortinetvm_considerations}
 
-El servicio de FortiGate Virtual Appliance on {{site.data.keyword.cloud}} despliega un par de FortiGate Virtual Appliances en el entorno, lo que puede ayudar a reducir el riesgo implementando los controles de seguridad importantes dentro de la infraestructura virtual.
+El servicio FortiGate Virtual Appliance on {{site.data.keyword.cloud}} despliega un par de dispositivos FortiGate Virtual Appliance en el entorno, lo que puede ayudar a reducir el riesgo implementando controles de seguridad críticos dentro de su infraestructura virtual.
 
 Puede instalar varias instancias de este servicio si las necesita. Puede gestionar este servicio utilizando el cliente web de FortiOS o la interfaz de línea de mandatos a través de SSH.
 
@@ -66,7 +66,7 @@ Revise las siguientes consideraciones antes de instalar el servicio FortiGate Vi
   Para calcular la reserva de CPU y de RAM para una sola VM FortiGate, utilice la fórmula siguiente:
    * `Reserva de CPU = Velocidad de CPU del servidor ESXi * número de vCPU`
    * `Reserva de RAM = Tamaño de RAM`
-* Cuando despliegue un par de alta disponibilidad (HA) de dispositivos virtuales FortiGate en su instancia, se definirán reglas de SNAT y de cortafuegos en Management NSX Edge Services Gateway (ESG) junto con las rutas estáticas en los dispositivos virtuales FortiGate para permitir las comunicaciones HTTPS de salida desde su instancia hacia la red pública para la activación de licencias y para adquirir el contenido y las políticas de seguridad más recientes.
+* Cuando despliegue un par de alta disponibilidad (HA) de dispositivos FortiGate Virtual Appliance en su instancia, se definirán reglas de SNAT y de cortafuegos en Management NSX Edge Services Gateway (ESG) junto con las rutas estáticas en los dispositivos FortiGate Virtual Appliance para permitir las comunicaciones HTTPS de salida desde su instancia hacia la red pública para la activación de licencias y para adquirir el contenido y las políticas de seguridad más recientes.
 * No puede cambiar el nivel de licencia después de la instalación del servicio. Para cambiar el nivel de licencia, debe eliminar el servicio existente y luego reinstalar el servicio seleccionando otra opción de licencia.
 * Debe cumplir los requisitos siguientes para evitar anomalías con FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}:
    * Al menos dos servidores ESXi activos deben estar disponibles para que las dos VM FortiGate se desplieguen con la regla de antiafinidad de mantener las VM en distintos servidores.
@@ -101,7 +101,7 @@ Si se necesitan recursos adicionales para ejecutar el servicio FortiGate Virtual
 ## Consideraciones al eliminar FortiGate Virtual Appliance on IBM Cloud
 {: #fortinetvm_considerations-remove}
 
-Antes de eliminar el servicio FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, asegúrese de que la configuración de los dispositivos virtuales FortiGate existentes se elimine correctamente. Concretamente, el tráfico de red se debe direccionar alrededor de los dispositivos virtuales FortiGate en lugar de a través de los dispositivos virtuales FortiGate. De lo contrario, el tráfico de datos del entorno podría verse afectado.
+Antes de eliminar el servicio FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, asegúrese de que la configuración de los dispositivos virtuales FortiGate existentes se elimine correctamente. Concretamente, el tráfico de red se debe direccionar alrededor de los dispositivos FortiGate Virtual Appliance en lugar de a través de los dispositivos FortiGate Virtual Appliance. De lo contrario, el tráfico de datos del entorno podría verse afectado.
 
 ## Enlaces relacionados
 {: #fortinetvm_considerations-related}

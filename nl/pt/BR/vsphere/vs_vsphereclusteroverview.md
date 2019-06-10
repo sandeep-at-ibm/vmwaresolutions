@@ -89,12 +89,12 @@ Cada nó de expansão de cluster do vSphere é implementado e incorre em encargo
 ### Hardware para nós de expansão
 {: #vs_vsphereclusteroverview-expansion-node-specs-hardware}
 
-Um {{site.data.keyword.cloud_notm}} Bare Metal Server com a configuração de hardware apresentada em [Especificações técnicas para clusters do VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#specs).
+Um Servidor Bare Metal do {{site.data.keyword.cloud_notm}} com a configuração de hardware apresentada em [Especificações técnicas para clusters do VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#specs).
 
 ### Rede para nós de expansão
 {: #vs_vsphereclusteroverview-expansion-node-specs-network}
 
-Um {{site.data.keyword.cloud_notm}} Bare Metal Server com a configuração de rede apresentada em [Especificações técnicas para clusters do VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#specs).
+Um Servidor Bare Metal do {{site.data.keyword.cloud_notm}} com a configuração de rede apresentada em [Especificações técnicas para clusters do VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#specs).
 
 ### Componentes do VMware para nós de expansão
 {: #vs_vsphereclusteroverview-expansion-node-specs-vmware-components}

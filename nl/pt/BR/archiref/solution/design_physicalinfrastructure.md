@@ -144,9 +144,9 @@ Tabela 1. Resumo de VLAN e sub-rede
 | Privada A | Portable | Sub-rede única designada a máquinas virtuais que funcionam como componentes de gerenciamento |
 | Privada A | Portable | Sub-rede única que é designada ao NSX-V ou ao NSX-T VTEP |
 | Privado B | Portable | Sub-rede única que será designada para vSAN, se em uso |
-| Privado B | Portable | Sub-rede única designada para o NAS, se em uso |
-| Privado B | Portable | Duas sub-redes designadas para o iSCSI NAS, se em uso (uma por porta do NIC física) |
-| Privado B | Portable | Sub-rede única designada para vMotion |
+| Privada B | Portable | Sub-rede única designada para o NAS, se em uso |
+| Privada B | Portable | Duas sub-redes designadas para o iSCSI NAS, se em uso (uma por porta do NIC física) |
+| Privada B | Portable | Sub-rede única designada para vMotion |
 
 Nesse design, todos os hosts e máquinas virtuais auxiliados por VLAN são configurados para apontar para o roteador do cliente de "rede privada" de back-end (BCR) do {{site.data.keyword.cloud_notm}} como a rota padrão. Enquanto as instâncias do vCenter Server ativam o uso da rede definida por software (SDN), as sobreposições de rede criadas dentro de uma instância do VMware que incluem roteamento para sub-redes internas não são conhecidas pelos roteadores gerenciados do {{site.data.keyword.cloud_notm}}.
 

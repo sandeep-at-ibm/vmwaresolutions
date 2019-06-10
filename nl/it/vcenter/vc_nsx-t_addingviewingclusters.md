@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 
 I server ESXi che hai configurato quando hai ordinato un'istanza vengono raggruppati sotto forma di **cluster1** per impostazione predefinita.
 
-Puoi aggiungere i tuoi cluster alle istanze VMware vCenter Server with NSX-T per espandere la capacità di calcolo e archiviazione. All'interno di un cluster, puoi gestire i server ESXi per una migliore allocazione delle risorse e alta disponibilità. Quando non sono più necessari, elimina i cluster aggiunti dalle tue istanze.
+Puoi aggiungere i tuoi cluster alle istanze VMware vCenter Server with NSX-T per espandere la capacità di calcolo e archiviazione. All'interno di un cluster, puoi gestire i server ESXi per una migliore assegnazione delle risorse e alta disponibilità. Quando non sono più necessari, elimina i cluster aggiunti dalle tue istanze.
 
 ## Aggiunta di cluster alle istanze vCenter Server
 {: #vc_nsx-t_addingviewingclusters-adding}

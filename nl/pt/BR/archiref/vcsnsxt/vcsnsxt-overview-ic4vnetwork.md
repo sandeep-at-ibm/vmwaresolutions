@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-21"
 
 subcollection: vmware-solutions
 
@@ -28,7 +28,7 @@ Os pontos de presença (PoP) do {{site.data.keyword.CloudDataCents_notm}} e da r
 ## Rede Privada
 {: #vcsnsxt-overview-ic4vnetwork-private-net}
 
-Todos os {{site.data.keyword.CloudDataCents_notm}} e os PoPs são conectados pela backbone de rede privada. Essa rede privada é separada da rede pública e permite a conectividade com serviços em {{site.data.keyword.CloudDataCents_notm}} ao redor do mundo. A movimentação de dados entre os data centers é feita usando mais de uma conexão de 10 Gbps ou 40 Gbps com a rede privada. Semelhante à rede pública, a rede privada possui multicamada em que os servidores e outras infraestruturas estão conectados aos back-end customer switches (BCS) agregados. Esses comutadores agregados estão conectados a um par de roteadores separados (isto é, back-end customer routers, BCR) para rede L3. A rede privada também suporta a capacidade de usar quadros jumbo (MTU 9000) para conexões de host físico.
+Todos os {{site.data.keyword.CloudDataCents_notm}} e os PoPs são conectados pela backbone de rede privada. Essa rede privada é separada da rede pública e permite a conectividade com serviços em {{site.data.keyword.CloudDataCents_notm}} ao redor do mundo. Para mover dados entre data centers, use mais de uma conexão de 10 Gbps ou 40 Gbps com a rede privada. Semelhante à rede pública, a rede privada possui multicamada em que os servidores e outras infraestruturas estão conectados aos back-end customer switches (BCS) agregados. Esses comutadores agregados estão conectados a um par de roteadores separados (isto é, back-end customer routers, BCR) para rede L3. A rede privada também suporta a capacidade de usar quadros jumbo (MTU 9000) para conexões de host físico.
 
 ## Rede de gerenciamento
 {: #vcsnsxt-overview-ic4vnetwork-mgmt-net}

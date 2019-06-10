@@ -9,7 +9,7 @@ subcollection: vmware-solutions
 
 ---
 
-# Eventos de rastreador de atividade
+# Eventos do Activity Tracker
 {: #at-events}
 
 Use o serviço {{site.data.keyword.cloudaccesstrailfull}} para rastrear como os usuários e aplicativos interagem com o {{site.data.keyword.vmwaresolutions_short}} no {{site.data.keyword.Bluemix_notm}}.
@@ -102,5 +102,5 @@ Os eventos do {{site.data.keyword.cloudaccesstrailshort}} estão disponíveis no
 {: #at-events-related}
 
 * [ Rastreador de Atividades de Fornecimento ](/docs/services/cloud-activity-tracker/how-to?topic=cloud-activity-tracker-provision)
-* [Navegando para o painel do Activity Tracker no Console do {{site.data.keyword.cloud_notm}}](/docs/services/cloud-activity-tracker/how-to/manage-events-ui?topic=cloud-activity-tracker-launch_at_ui)
+* [Navegando até o painel do Activity Tracker no Console do {{site.data.keyword.cloud_notm}}](/docs/services/cloud-activity-tracker/how-to/manage-events-ui?topic=cloud-activity-tracker-launch_at_ui)
 * [ Visão geral do KMIP for VMware on  {{site.data.keyword.cloud_notm}}  overview ](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations)

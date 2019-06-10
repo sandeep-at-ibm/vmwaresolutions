@@ -34,7 +34,7 @@ L'architettura Mission Critical VMware on {{site.data.keyword.cloud_notm}} è un
 * Strumenti per il monitoraggio, la risoluzione dei problemi, le prestazioni e la gestione della capacità:
   * Modello di suite vRealize (Operations, Log Insight e Network Insight)
   * Modello Active Directory
-  * Integrazione con Netcool/Bluecare per la creazione di ticket automatica, l'avvivo e l'arricchimento di eventi
+  * Integrazione con Netcool/Bluecare per la creazione di ticket automatica, l'avviso e l'arricchimento di eventi
   * Modelli di resilienza (backup e ripristino)
 
 Mission Critical VMware on {{site.data.keyword.cloud_notm}} è disponibile nelle seguenti regioni:

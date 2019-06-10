@@ -72,9 +72,9 @@
     <text x="746.5" y="530.5">vCenter</text>
    </g>
    <text x="553" y="488.5">HCX Cloud WAN 最佳化</text>
-   <text x="556" y="529">HCX Manager / 用戶端</text>
+   <text x="556" y="529">HCX 管理程式 / 用戶端</text>
    <g text-anchor="middle">
-    <text x="528.5" y="457">金鑰</text>
+    <text x="528.5" y="457">圖例</text>
    </g>
   </g>
   <g pointer-events="none">
@@ -153,7 +153,7 @@
     </text>
    </g>
    <g font-size="12px">
-    <text x="365" y="484.5">HCX L2C / 網路延伸</text>
+    <text x="365" y="484.5">HCX L2C / 網路伸展</text>
    </g>
    <g font-size="12px">
     <text x="365" y="524.5">HCX 雲端閘道</text>

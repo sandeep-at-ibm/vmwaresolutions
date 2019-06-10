@@ -43,7 +43,7 @@ Para instancias desplegadas en V2.1 o anteriores, debe habilitar el soporte de v
 
 2. Reinicie cada servidor ESXi. Para obtener más información, consulte [Creación de un clúster vSAN 6.x con un máximo de 64 hosts](https://kb.vmware.com/s/article/2110081).
 3. Es posible que tenga que aumentar el tamaño de vCenter Server para dar cabida a las máquinas virtuales añadidas y servidores ESXi.
-4. Abra un tíquet de IBM Support para indicar que ha aplicado los cambios de vSAN manualmente completando los pasos 1 al 3. En el tíquet, solicite que la instancia actualizada esté habilitada para servidores ESXi más allá de 32.
+4. Abra una incidencia de soporte de IBM para indicar que ha aplicado los cambios de vSAN manualmente completando los pasos 1 al 3. En la incidencia, solicite que la instancia actualizada esté habilitada para servidores ESXi más allá de 32.
 
 ## ¿Puedo cambiar las direcciones IP y los nombres de los servidores ESXi?
 {: #faq_esxi-change-name-ip}

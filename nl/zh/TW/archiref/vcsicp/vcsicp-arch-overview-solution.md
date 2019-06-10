@@ -37,7 +37,7 @@ NSX Manager 部署在起始叢集上。此外，NSX Manager 會獲指派專用�
 ### NSX Controller
 {: #vcsicp-arch-overview-solution-nsx-controllers}
 
-{{site.data.keyword.cloud}} 自動化會在起始叢集內部署三個 NSX 控制器。控制器會獲指派專用可攜式子網路中的 VLAN 支援 IP 位址（這個子網路已指定給管理元件）。
+{{site.data.keyword.cloud}} 自動化會在起始叢集內部署三個 NSX Controller。控制器會獲指派專用可攜式子網路中的 VLAN 支援 IP 位址（這個子網路已指定給管理元件）。
 
 ### NSX Edge / DLR
 {: #vcsicp-arch-overview-solution-nsx-edge}

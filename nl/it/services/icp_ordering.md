@@ -42,7 +42,7 @@ Quando ordini il servizio, fornisci le seguenti impostazioni:
 
 Se vuoi distribuire dei nodi aggiuntivi, esamina le seguenti informazioni:
 * Utilizza il modello {{site.data.keyword.cloud_notm}} Private Ubuntu (Ubuntu1604) distribuito con la tua installazione iniziale di {{site.data.keyword.cloud_notm}} Private Hosted.
-* Per trovare il modello Ubuntu, nel client web VMware vSphere, vai alla scheda **VMs and Templates**, nella cartella `cam`. 
+* Per trovare il modello Ubuntu, nel client web VMware vSphere, vai alla scheda **VMs and Templates**, nella cartella `cam`.
 * La password predefinita per il modello Ubuntu è `icponcloud`. Ti consigliamo di modificare questa password prima di utilizzare il modello.
 * {{site.data.keyword.vmwaresolutions_short}} non offre supporto per l'applicazione di aggiornamenti e patch per il modello Ubuntu. Devi monitorare e applicare autonomamente questi aggiornamenti.
 

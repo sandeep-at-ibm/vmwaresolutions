@@ -136,7 +136,7 @@ Elementi di rilievo di NSX-T
 -	Supporto OpenSwitch (OvS).
 - Instradamento ottimizzato multilivello:
     - Annuncio di rotte al router di livello 1.
-    - Redistribuzione di rotte al router di livello 0.
+    - Ridistribuzione di rotte al router di livello 0.
 -	Utilizza il protocollo di incapsulamento Geneve.
 -	Le NIC fisiche appartengono al nodo di trasporto NSX-T e sono assegnate a N-VDS.
 -	La terminologia differenzia il router logico di livello 1 per il traffico est-ovest e il router logico di livello 0 per il traffico nord-sud.

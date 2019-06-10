@@ -36,4 +36,4 @@ O extenso portfólio de serviços e opções de integração de várias ofertas 
 ## Links relacionados
 {: #vcs-hybridity-intro-related}
 
-* [Arquitetura da solução VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
+* [Arquitetura de solução do VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)

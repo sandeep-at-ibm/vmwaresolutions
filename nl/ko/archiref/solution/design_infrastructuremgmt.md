@@ -88,7 +88,7 @@ IBM CloudBuilder는 새 VMware 인스턴스를 가져오고 라이프사이클 �
 
 IBM CloudDriver는 2일차 오퍼레이션(예: 호스트 클러스터 또는 추가 서비스를 VMware 인스턴스에 추가)의 필요에 따라 배치되는 일시적인 {{site.data.keyword.cloud_notm}} VM 가상 서버 인스턴스(VSI)입니다.
 
-CloudBuilder 및 CloudDriver는 사설 메시지 큐를 통해 IBM 관리 플레인에 연결하는 사설 네트워크에만 배치됩니다. 이들은 IBM에서 개발한 컴포넌트이며 사용자가 액세스할 수 없고 다음과 같은 속성 및 기능을 가지고 있습니다. 
+CloudBuilder 및 CloudDriver는 사설 메시지 큐를 통해 IBM 관리 플레인에 연결하는 사설 네트워크에만 배치됩니다. 이들은 IBM에서 개발한 컴포넌트이며 사용자가 액세스할 수 없고 다음과 같은 속성 및 기능을 가지고 있습니다.
 * 사용자 계정 내 vCenter Server 인스턴스의 배치 및 구성
 * vCenter Server 클러스터에서 호스트 추가 및 제거
 * vCenter Server 인스턴스에서 클러스터 추가 및 제거

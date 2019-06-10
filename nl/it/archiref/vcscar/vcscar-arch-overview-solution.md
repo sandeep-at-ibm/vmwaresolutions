@@ -85,7 +85,7 @@ Un nodo di avvio o bootstrap (facoltativo) viene utilizzato per l'esecuzione del
 ### Nodo master
 {: #vcscar-arch-overview-solution-master-node}
 
-Un nodo master fornisce servizi di gestione e controlla i nodi di lavoro in un cluster. I nodi master ospitano i processi che sono responsabili dell'allocazione delle risorse, della manutenzione dello stato, della pianificazione e del monitoraggio.
+Un nodo master fornisce servizi di gestione e controlla i nodi di lavoro in un cluster. I nodi master ospitano i processi che sono responsabili dell'assegnazione delle risorse, della manutenzione dello stato, della pianificazione e del monitoraggio.
 
 Poiché un ambiente ad elevata disponibilità (HA) presenta più di un singolo nodo master, se il nodo master principale ha un malfunzionamento, la logica di failover promuove automaticamente un nodo differente al ruolo master. Gli host che possono funzionare come master sono detti candidati master.
 

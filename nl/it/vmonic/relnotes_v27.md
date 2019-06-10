@@ -24,7 +24,7 @@ Questa release include nuove funzioni, aggiornamenti dei componenti, miglioramen
 ## Supporto server 6140 certificato SAP
 {: #relnotes_v27-sap}
 
-A partire dalla release V2.7, i seguenti nuovi modelli CPU {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short_sing}} sono disponibili per la distribuzione delle istanze e dei cluster di di VMware vCenter Server on {{site.data.keyword.cloud_notm}} e di VMware vSphere on {{site.data.keyword.cloud_notm}}:
+A partire dalla release V2.7, i seguenti nuovi modelli CPU {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short_sing}} sono disponibili per la distribuzione delle istanze e dei cluster di VMware vCenter Server on {{site.data.keyword.cloud_notm}} e di VMware vSphere on {{site.data.keyword.cloud_notm}}:
 * Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2.3 GHz / 192 GB RAM
 * Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2.2 GHz / 384 GB RAM
 * Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2.3 GHz / 768 GB RAM

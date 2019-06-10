@@ -106,7 +106,7 @@ Tabella 8. Ridimensionamento incrementale - nodi di dati
 
 |Parametro	|Valore |
 |---|---|
-|Tipo	|ridimensionamento incrementale |
+|Tipo	|Ridimensionamento incrementale |
 |Quantità VM	28 |
 |vCPU	|8 |
 |RAM	|16 GB |

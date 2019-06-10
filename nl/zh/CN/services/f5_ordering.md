@@ -39,7 +39,7 @@ subcollection: vmware-solutions
 
 为未使用公共接口配置的实例订购 F5 on {{site.data.keyword.cloud_notm}} 时，必须提供代理服务器以完成安装。HTTP 代理服务器必须已配置并通过虚拟路由和转发 (VRF) 可用，才能开始安装 F5 on {{site.data.keyword.cloud_notm}}。
 
-BigIP Virtual Edition (VE) 端口必须可以激活其许可证，才能正常运行。安装 BigIP VE 端点后，不再需要使用代理服务器。
+BigIP Virtual Edition (VE) 端点必须可以激活其许可证，才能正常运行。安装 BigIP VE 端点后，不再需要使用代理服务器。
 
 安装服务时，如果没有正常运行的代理服务器，那么无法添加 F5 on {{site.data.keyword.cloud_notm}} 服务。
 {:note}

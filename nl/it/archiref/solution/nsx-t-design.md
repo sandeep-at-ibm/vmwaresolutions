@@ -28,7 +28,7 @@ Tabella 1. Terminologia da NSX-V a NSX-T
 NSX-V o vSphere native | NSX-T
 --|:---|:--
 **Switch distribuito virtuale** | Switch distribuito virtuale di rete (N-VDS)
-**NSX Transport zone** | Zona di trasporto (overlay o backend della VLAN)
+**NSX Transport zone** | Zona di trasporto (sovrapposizione o supportata dalla VLAN)
 **Gruppo di porte (vDS)** | Switch logico
 **VXLAN (incapsulamento L2)** | GENEVE (incapsulamento L2)
 **Gateway edge** | Gateway T0 (modificato con v2.4)

@@ -31,7 +31,7 @@
 		<path d="m513 164.35-4-8-4 8" fill="none" stroke="#EDC102" stroke-width="3"/>
 	</g>
 	<g transform="translate(481.5,209.5)rotate(-90,37,6)">
-		<text transform="translate(.3115 12)" font-family="'Helvetica'" font-size="12">預設路由</text>
+		<text transform="translate(.3115 12)" font-family="'Helvetica'" font-size="12">預設路徑</text>
 	</g>
 	<path d="m280 301v-20 10-20" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
 	<path d="m154 301h251c2.485 0 4.5 2.015 4.5 4.5v21c0 2.485-2.015 4.5-4.5 4.5h-251c-2.485 0-4.5-2.015-4.5-4.5v-21c0-2.485 2.015-4.5 4.5-4.5z" fill="#fff" pointer-events="none" stroke="#000" stroke-dasharray="3,3"/>
@@ -80,7 +80,7 @@
 		<text transform="translate(.5547 8)" font-family="'Helvetica'" font-size="8">使用者</text>
 	</g>
 	<g transform="translate(137.5,438.5)">
-		<text transform="translate(-15.185 18)" font-family="'Helvetica'" font-size="11">Acme 容器</text>
+		<text transform="translate(0 18)" font-family="'Helvetica'" font-size="11">Acme 容器</text>
 	</g>
 	<g transform="translate(358.5,388.5)">
 		<text transform="translate(-14.881 18)" font-family="'Helvetica'" font-size="11">Acme 資料庫</text>

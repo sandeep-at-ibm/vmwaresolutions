@@ -112,7 +112,7 @@ subcollection: vmware-solutions
   -	Calico BGP-Peer（開放程式碼）
   -	strongSwan IPSec VPN（開放程式碼）
 
-* Storage
+* 儲存空間
   -	IBM PowerVC FlexVolume Driver（開放程式碼，並受 PowerVC 產品支援）
   - 含 Heketi 生命週期管理的 GlusterFS 儲存空間叢集（開放程式碼）
   -	容器儲存空間介面 (CSI) 範例 NFS

@@ -19,7 +19,7 @@ La finalidad de este documento es proporcionarle, como administrador del sistema
 VUM permite la gestión centralizada y automatizada de parches y versiones para VMware vSphere y le permite realizar las siguientes tareas en el entorno VMware vCenter Server on {{site.data.keyword.cloud_notm}}:
 * Actualizar y aplicar un parche a los hosts ESXi de vSphere.
 * Instalar y actualizar software de terceros en los hosts.
-* Actualizar el hardware de la máquina virtual, las herramientas de VMware y los dispositivos virtuales.
+* Actualizar el hardware de máquina virtual, las herramientas de VMware y los dispositivos virtuales.
 
 En este documento también se describen los procesos para mantener los siguientes componentes de la instancia de vCenter Server:
 * vCenter Server Appliance

@@ -64,11 +64,10 @@ Tabla 2. Información predeterminada utilizada en la configuración de la aplica
 |---|---|
 |Entorno |El nombre de entorno se establece en "Inicial"|
 |Entorno | La puntuación se establece en 5|
-|Repositorio de activos | Se configuran dos repositorios de activos; vCenter y NSX Manager. URL de host establecido en
-`https://vCenter_fqdn` y `https://*NSX Manager_fqdn` |
-|Repositorio de activos |Se configuran dos repositorios de activos; vCenter y NSX Manager, ambos utilizan el mismo nombre de usuario. El nombre de usuario se establece en el nombre de usuario administrador de vCenter|
-|Repositorio de activos |Se configuran dos Repositorios de activos; vCenter y NSX Manager, ambos utilizan la misma contraseña. La contraseña se establece en la contraseña del administrador de vCenter
-|Repositorio de activos |Se configuran dos Repositorios de activos; vCenter y NSX Manager, ambos utilizan la misma contraseña. El tipo se establece en vCenter para un repositorio y NSX para el otro
+|Repositorio de activos | Se configuran dos repositorios de activos: vCenter y NSX Manager. URL de host establecido en `https://vCenter_fqdn` y `https://*NSX Manager_fqdn` |
+|Repositorio de activos |Se configuran dos repositorios de activos: vCenter y NSX Manager, ambos utilizan el mismo nombre de usuario. El nombre de usuario se establece en el nombre de usuario administrador de vCenter|
+|Repositorio de activos |Se configuran dos Repositorios de activos: vCenter y NSX Manager, ambos utilizan la misma contraseña. La contraseña se establece en la contraseña del administrador de vCenter
+|Repositorio de activos |Se configuran dos Repositorios de activos: vCenter y NSX Manager, ambos utilizan la misma contraseña. El tipo se establece en vCenter para un repositorio y NSX para el otro
 |Tarea |Se configuran cuatro tareas: exploración de activos, flujos de NSX, exploración de infraestructura VMware y vulnerabilidad de VMware. ScanName se establece en DC1AssetScan, NSXFlows, VMWInfraScan, VMWVulnScan |
 |Tarea |Se configuran cuatro tareas: exploración de activos, flujos de NSX, exploración de infraestructura VMware y vulnerabilidad de VMware. El tipo se establece en vCenter, NSX, VMWareInfrastructureScan, VMWareVulnerabilityScan |
 |Tarea |La planificación se establece en Por hora para DC1AssetScan y Diaria para los otros |

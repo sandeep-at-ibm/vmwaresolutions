@@ -76,7 +76,7 @@
   <g font-family="Helvetica" font-size="12px" text-anchor="middle">
    <rect x="433" y="570" width="87" height="29" fill="#fff" stroke-width="0"/>
    <text x="475.21" y="572.57">IBM Cloud</text>
-   <text x="475.21" y="586.57">Private 網路</text>
+   <text x="475.21" y="586.57">專用網路</text>
   </g>
   <path d="m825 697.5h10.5l-15.5 19-15.5-19h10.5v-218h-10.5l15.5-19 15.5 19h-10.5z" fill="#fff" pointer-events="none" stroke="#00f" stroke-dasharray="3 3" stroke-linejoin="round" stroke-miterlimit="10"/>
   <g transform="translate(807.5,585.5)">

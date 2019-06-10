@@ -23,9 +23,9 @@ Este release incluye nuevas características, actualizaciones de componentes, me
 ## FortiGate Virtual Appliance on IBM Cloud
 {: #relnotes_v20-fva}
 
-El servicio FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} ya está disponible para la V2.0 y posteriores de instancias de VMware Cloud Foundation y para instancias de VMware vCenter Server. Este servicio despliega un par de alta disponibilidad (HA) de dispositivos virtuales FortiGate en el entorno, lo que le puede ayudar a reducir el riesgo mediante la implementación de controles de seguridad estrictos en la infraestructura virtual.
+El servicio FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} ya está disponible para la V2.0 y posteriores de instancias de VMware Cloud Foundation y para instancias de VMware vCenter Server. Este servicio despliega un par de alta disponibilidad (HA) de dispositivos FortiGate Virtual Appliance en el entorno, lo que le puede ayudar a reducir el riesgo mediante la implementación de controles de seguridad estrictos en la infraestructura virtual.
 
-Solicite instancias con el servicio FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} incluido al solicitar la instancia, o puede añadir este servicio a las instancias existentes más adelante desde el separador **Servicios** de la página de detalles de la instancia. Dependiendo de sus necesidades, seleccione uno de los tres tamaños de despliegue y opciones de licencia para este servicio. Después de que se instale correctamente el servicio, gestione y configure reglas de cortafuegos para los dispositivos virtuales FortiGate desde la consola de FortiGate.
+Solicite instancias con el servicio FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} incluido al solicitar la instancia, o puede añadir este servicio a las instancias existentes más adelante desde el separador **Servicios** de la página de detalles de la instancia. Dependiendo de sus necesidades, seleccione uno de los tres tamaños de despliegue y opciones de licencia para este servicio. Después de que se instale correctamente el servicio, gestione y configure reglas de cortafuegos para los dispositivos FortiGate Virtual Appliance desde la consola de FortiGate.
 
 Para obtener más información, consulte los temas siguientes:
 * [Componentes y consideraciones sobre FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations)
@@ -43,7 +43,7 @@ Para obtener más información, consulte [Solicitud, visualización y eliminaci�
 ## Actualizaciones para FortiGate Security Appliance on IBM Cloud
 {: #relnotes_v20-fsa}
 
-En este release, se ha cambiado el nombre del servicio Fortinet on {{site.data.keyword.cloud_notm}} por el de FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}. El par de dispositivos de seguridad FortiGate (FSA) del servicio se configura de modo que esté protegido de forma predeterminada cuando se despliega en la instancia.
+En este release, se ha cambiado el nombre del servicio Fortinet on {{site.data.keyword.cloud_notm}} por el de FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}. El par de dispositivos FortiGate Security Appliance (FSA) del servicio se configura de modo que esté protegido de forma predeterminada cuando se despliega en la instancia.
 * Si despliega un par de FSA como parte de una nueva instancia de Cloud Foundation en vCenter Server, los FSA se configuran de modo que solo permitan las comunicaciones de salida necesarias entre su instancia y la red pública y denieguen todas las demás comunicaciones.
 * Si despliega un par de FSA como parte de una instancia de Cloud Foundation o de una instancia de vCenter Server existente, los FSA se configuran con una regla explícita que permite todas las comunicaciones de gestión de salida entre la instancia y la red pública, y los FSA también se configuran con una regla que permite todas las demás comunicaciones para garantizar que no se interrumpe el tráfico de aplicaciones existente.
 

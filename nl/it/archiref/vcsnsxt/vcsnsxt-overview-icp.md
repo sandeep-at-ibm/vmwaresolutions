@@ -29,7 +29,7 @@ subcollection: vmware-solutions
 
 Un cluster {{site.data.keyword.cloud_notm}} Private ha quattro classi principali di nodi: di avvio, master, di lavoro e proxy. Puoi facoltativamente specificare i nodi di gestione, VA (Vulnerability Advisor) ed etcd nel tuo cluster.
 -	**Nodo di avvio** - Un nodo di avvio viene utilizzato per eseguire l'installazione, la configurazione, il ridimensionamento dei nodi e gli aggiornamenti del cluster.
--	**Nodo master** - Un nodo master fornisce servizi di gestione e controlla i nodi di lavoro in un cluster. I nodi master ospitano i processi che sono responsabili dell'allocazione delle risorse, della manutenzione dello stato, della pianificazione e del monitoraggio.
+-	**Nodo master** - Un nodo master fornisce servizi di gestione e controlla i nodi di lavoro in un cluster. I nodi master ospitano i processi che sono responsabili dell'assegnazione delle risorse, della manutenzione dello stato, della pianificazione e del monitoraggio.
 -	**Nodo di lavoro** - Un nodo di lavoro è un nodo che fornisce un ambiente contenitore per l'esecuzione delle attività. Man mano che la domanda aumenta, è possibile aggiungere più nodi di lavoro al cluster in modo da migliorare le prestazioni e l'efficienza.
 -	**Nodo proxy** - Un nodo proxy è un nodo che trasmette richieste esterne ai servizi creati all'interno del tuo cluster.
 -	**Nodo di gestione** - Un nodo di gestione è un nodo facoltativo che ospita solo i servizi di gestione come monitoraggio, misurazione e registrazione. Configurando i nodi di gestione dedicati, puoi evitare che il nodo master diventi sovraccaricato.

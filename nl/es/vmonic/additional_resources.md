@@ -45,7 +45,7 @@ Revise la arquitectura de todas las [Extensiones de plataforma de virtualizació
 * NSX Edge Services Gateway
 * Virtualización segura
 * Copia de seguridad y replicación de Veeam
-* Automatización de vRealize
+* vRealize Automation
 * Recuperación tras desastre de Zerto
 
 ## Vídeos y demostraciones

@@ -90,14 +90,14 @@ Para obtener más información, consulte [Visión general de F5 on {{site.data.k
 ### FortiGate Security Appliance on IBM Cloud
 {: #prod_overview-fortigate-security}
 
-El servicio de FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} despliega un par de dispositivos de seguridad FortiGate (FSA) serie 300 en modalidad altamente disponible para ofrecer servicios de cortafuegos, direccionamiento, NAT y VPN para proteger todos los servidores y máquinas virtuales de la VLAN pública de sus instancias.
+El servicio FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} despliega un par de dispositivos FortiGate Security Appliance (FSA) serie 300 en modalidad altamente disponible para ofrecer servicios de cortafuegos, direccionamiento, NAT y VPN para proteger todos los servidores y máquinas virtuales de la VLAN pública de sus instancias.
 
 Para obtener más información, consulte [Visión general de FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations).
 
 ### FortiGate Virtual Appliance on IBM Cloud
 {: #prod_overview-fortigate-va}
 
-El servicio de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} despliega un par de FortiGate Virtual Appliances en el entorno, lo que puede ayudar a reducir el riesgo implementando los controles de seguridad importantes dentro de la infraestructura virtual.
+El servicio FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} despliega un par de dispositivos FortiGate Virtual Appliance en el entorno, lo que puede ayudar a reducir el riesgo implementando controles de seguridad críticos dentro de su infraestructura virtual.
 
 Para obtener más información, consulte [Visión general de FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations).
 

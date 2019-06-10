@@ -241,7 +241,7 @@ Dependendo do {{site.data.keyword.CloudDataCent_notm}} selecionado, VLANs públi
 #### Par de HA do FortiGate Physical Appliance série 300
 {: #vs_orderinginstances-fortigate-physical-appliance}
 
-É possível também selecionar se deseja incluir o Par de HA do FortiGate Physical Appliance série 300 para assegurar seu ambiente de nuvem. Para obter mais informações, consulte [Visão geral do FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations).
+É possível também selecionar se deseja incluir o Par de HA do FortiGate Physical Appliance série 300 para assegurar seu ambiente de nuvem. Para obter mais informações, consulte [FortiGate Security Appliance na visão geral do {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations).
 
 ## Resumo do Pedido
 {: #vs_orderinginstances-order-summary}

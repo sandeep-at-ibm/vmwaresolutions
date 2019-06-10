@@ -72,7 +72,7 @@ La disponibilità e il prezzo delle configurazioni hardware standardizzate posso
 {: #vc_vcenterserveroverview-bare-metal}
 
 Puoi ordinare tre o più {{site.data.keyword.baremetal_short}} con una delle seguenti configurazioni:
-* **Skylake**: server di generazione 2-CPU Intel Skylake (Intel Xeon 4100/5100/6100 series) con i tuoi modello CPU e dimensione RAM selezionati.
+* **Skylake**: server di generazione 2-CPU Intel Skylake (Intel Xeon 4100/5100/6100 series) con il modello di CPU e la dimensione della RAM da te selezionati.
 * **Certificato**: server di generazione Intel Skylake o Intel Broadwell (Intel Xeon 6140/E5-2690/E7-8890 series) con il modello di CPU da te selezionato.
 * **Broadwell**: server di generazione 4-CPU Intel Broadwell (Intel Xeon E7-4800 series) con il modello di CPU e la dimensione della RAM da te selezionati.
 

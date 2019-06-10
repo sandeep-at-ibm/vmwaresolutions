@@ -57,9 +57,7 @@ Además de los requisitos de hardware de {{site.data.keyword.icpfull_notm}}, deb
 ## Estructura virtual
 {: #vcsicp-arch-overview-infrastructure-virtual-struct}
 
-![Estructura física del despliegue de vCenter Server e
-{{site.data.keyword.icpfull_notm}}](../../images/vcsicp-phy-ics-icp-deployment.svg "Estructura física del despliegue de vCenter Server e{{site.data.keyword.icpfull_notm}}")
-
+![Estructura física del despliegue de vCenter Server e {{site.data.keyword.icpfull_notm}}](../../images/vcsicp-phy-ics-icp-deployment.svg "Estructura física del despliegue de vCenter Server e {{site.data.keyword.icpfull_notm}}")
 
 Dentro de la instancia de vCenter Server, la instancia de {{site.data.keyword.icpfull_notm}} se despliega con NSX Edge Services Gateway (ESG) y Distributed Logical Router (DLR) dedicados. La instalación de {{site.data.keyword.icpfull_notm}} se carga en la subred VXLAN definida en los componentes anteriores.
 

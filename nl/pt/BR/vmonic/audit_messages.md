@@ -248,4 +248,4 @@ O {{site.data.keyword.vmwaresolutions_short}} emite as mensagens a seguir para a
 {: #audit_messages-related}
 
 * [Considerações sobre como alterar os artefatos do vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vcenter_chg_impact#vcenter_chg_impact-automation-id)
-* [Eventos de rastreador de atividade](/docs/services/vmwaresolutions?topic=vmware-solutions-at-events#at-events)
+* [Eventos do Activity Tracker](/docs/services/vmwaresolutions?topic=vmware-solutions-at-events#at-events)

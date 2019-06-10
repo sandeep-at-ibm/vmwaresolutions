@@ -78,8 +78,7 @@ Armazenamento | 100 GB |  SATA: 2 TB / SSD: 960 GB
 {: #vcsiks-arch-overview-infrastructure-virtual-structure}
 
 ![Estrutura física do {{site.data.keyword.containerlong_notm}} e Diagrama de implementação do {{site.data.keyword.icpfull_notm}}]
-(../../images/vcsiks-phy-ics-iks-deployment.svg "Estrutura física do {{site.data.keyword.containerlong_notm}} e Diagrama de implementação do {{site.data.keyword.icpfull_notm}}")
-{: caption="Figura 1. Estrutura física de implementações do {{site.data.keyword.containerlong_notm}} e do {{site.data.keyword.icpfull_notm}}" caption-side="bottom"}
+(../../images/vcsiks-phy-ics-iks-deployment.svg "Estrutura física do {{site.data.keyword.containerlong_notm}} e Diagrama de implementação do {{site.data.keyword.icpfull_notm}}"){: caption="Figura 1. Estrutura física de implementações do {{site.data.keyword.containerlong_notm}} e do {{site.data.keyword.icpfull_notm}}" caption-side="bottom"}
 
 Na instância do vCenter Server, os VMSs do cliente são implementados para os NSX
 Edge Services Gateways (ESG) e Distributed Logical Routers (DLR) dedicados.

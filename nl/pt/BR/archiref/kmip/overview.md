@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 
 Essa arquitetura de solução descreve a arquitetura do KMIP on VMware para proteger suas instâncias do VMware on {{site.data.keyword.cloud_notm}}. Muitas opções de criptografia de armazenamento estão disponíveis para proteger a carga de trabalho do VMware. O KMIP for VMware funciona junto com a criptografia vSphere nativa do VMware e a criptografia vSAN para fornecer gerenciamento de criptografia de armazenamento simplificado juntamente com a segurança e a flexibilidade de chaves gerenciadas pelo cliente do {{site.data.keyword.cloud_notm}} Key Protect ou {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services.
 
-Essa solução é considerada como um componente extra e a extensão da oferta do vCenter Server no {{site.data.keyword.cloud_notm}}. Como resultado, esse documento não abrange a configuração existente dessas soluções de base no {{site.data.keyword.cloud_notm}}. Para entender mais sobre a arquitetura da solução de base, consulte nossa [Arquitetura da solução VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview).
+Essa solução é considerada como um componente extra e a extensão da oferta do vCenter Server no {{site.data.keyword.cloud_notm}}. Como resultado, esse documento não abrange a configuração existente dessas soluções de base no {{site.data.keyword.cloud_notm}}. Para entender mais sobre a arquitetura de solução de base, consulte nossa [Arquitetura de solução do VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview).
 
 ## Principais benefícios
 {: #kmip-overview-benefits}

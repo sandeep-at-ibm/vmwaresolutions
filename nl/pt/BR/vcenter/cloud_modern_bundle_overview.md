@@ -144,7 +144,7 @@ O {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2 é instalado usando 
 ## Links relacionados
 {: #cloud_modern_bundle_overview-related}
 
-* [Guia do vCenter Server e do {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
+* [ vCenter Server e  {{site.data.keyword.cloud_notm}}  Guia privado ](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
 * [Abrir um chamado para o {{site.data.keyword.cloud_notm}} Private](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
 * [Recursos do VMware HCX](https://hcx.vmware.com/#/docs){:new_window}
 * [Guia do Usuário do VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}

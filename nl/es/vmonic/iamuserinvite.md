@@ -26,8 +26,8 @@ subcollection: vmware-solutions
 {: #iamuserinvite-procedure}
 
 1. En el lado izquierdo de la cabecera, pulse **Gestionar > Seguridad > Identidad y acceso**.
-2. En la página **Usuarios**, pulse **Invitar usuarios**.
-3. En la página **Invitar usuarios**, en la sección **Usuarios**, especifique las direcciones de correo electrónico de los usuarios que desea invitar en el campo **Dirección de correo electrónico**.
+2. En la página **Usuarios**, pulse **Invitar a usuarios**.
+3. En la página **Invitar a usuarios**, en la sección **Usuarios**, especifique las direcciones de correo electrónico de los usuarios que desea invitar en el campo **Dirección de correo electrónico**.
 4. En la sección **Acceso**, expanda **Servicios** y, a continuación, complete las tareas siguientes:
    1. Seleccione **Recurso** en la lista **Asignar acceso a**.
    2. Seleccione **VMware Solutions** en la lista **Servicios**.

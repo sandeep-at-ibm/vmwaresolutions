@@ -79,7 +79,7 @@ Si no es un Business Partner, puede seleccionar los siguientes componentes para 
 * VMware vRealize Operation Enterprise
 * VMware vRealize Log Insight
 
-El componente de VMware vSAN no está disponible cuando realiza el pedido de VMware vSphere Enterprise Plus 6.0. Si tiene previsto utilizar su propia licencia para VMware vSphere Enterprise Plus 6.0, se abrirá un tíquet de la infraestructura de {{site.data.keyword.cloud_notm}} en su nombre. El tíquet solicita que las licencias de vSphere de los {{site.data.keyword.baremetal_short}} solicitados se sustituyan por las licencias que se proporcionen.
+El componente de VMware vSAN no está disponible cuando realiza el pedido de VMware vSphere Enterprise Plus 6.0. Si tiene previsto utilizar su propia licencia para VMware vSphere Enterprise Plus 6.0, se abrirá una incidencia de la infraestructura de {{site.data.keyword.cloud_notm}} en su nombre. La incidencia solicita que las licencias de vSphere de los {{site.data.keyword.baremetal_short}} solicitados se sustituyan por las licencias que se proporcionen.
 {:note}
 
 ### Opciones de licencia
@@ -261,7 +261,7 @@ En función de sus configuraciones, el coste estimado se genera y se muestra al 
   * Si no es un Business Partner, seleccione el componente, la edición, si la hay, y especifique la opción de licencia.
   Cuando opta por traer su propia licencia (BYOL) para VMware vSphere Enterprise Plus, se abre automáticamente una incidencia de {{site.data.keyword.cloud_notm}} en su nombre para solicitar que las licencias predeterminadas de vSphere de los {{site.data.keyword.baremetal_short}} solicitados se sustituyan por las licencias que proporcione.   
 
-    **Importante:** El usuario es el responsable de realizar el seguimiento del tíquet para que se sustituya la licencia de vSphere de los servidores ESXi recién solicitados. De esta forma, la infraestructura de {{site.data.keyword.cloud_notm}} permite la cancelación del cargo inicialmente suministrado por la licencia de vSphere de la infraestructura de {{site.data.keyword.cloud_notm}}. Para sustituir la licencia de ESXi vSphere, consulte [Configuración de valores de licencia para un host ESXi](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}.
+    **Importante:** El usuario es el responsable de realizar el seguimiento de la incidencia para que se sustituya la licencia de vSphere de los servidores ESXi recién solicitados. De esta forma, la infraestructura de {{site.data.keyword.cloud_notm}} permite la cancelación del cargo inicialmente suministrado por la licencia de vSphere de la infraestructura de {{site.data.keyword.cloud_notm}}. Para sustituir la licencia de ESXi vSphere, consulte [Configuración de valores de licencia para un host ESXi](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}.
 5. Complete los valores del servidor nativo:
    1. Seleccione el {{site.data.keyword.CloudDataCent_notm}} en el que se va a alojar el clúster.
    2. Seleccione la configuración del servidor nativo.

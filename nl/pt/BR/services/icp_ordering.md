@@ -11,7 +11,7 @@ subcollection: vmware-solutions
 
 ---
 
-# Pedindo o IBM Cloud Private Hosted
+# Solicitando o IBM Cloud Private Hosted
 {: #icp_ordering}
 
 É possível pedir o serviço {{site.data.keyword.cloud}} Private Hosted ao pedir uma nova instância com o serviço incluído ou incluindo o serviço em sua instância existente.

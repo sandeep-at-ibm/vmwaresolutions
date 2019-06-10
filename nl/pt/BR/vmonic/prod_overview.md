@@ -92,7 +92,7 @@ Para obter mais informações, consulte [Visão geral do F5 on {{site.data.keywo
 
 O serviço FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} implementa um par de dispositivos FortiGate Security Appliance (FSA) série 300 em um modo altamente disponível para fornecer serviços de firewall, roteamento, NAT e VPN para proteger todos os servidores e máquinas virtuais na VLAN pública de suas instâncias.
 
-Para obter mais informações, consulte [Visão geral do FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations).
+Para obter mais informações, consulte [FortiGate Security Appliance na visão geral do {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations).
 
 ### FortiGate Virtual Appliance on IBM Cloud
 {: #prod_overview-fortigate-va}
@@ -142,7 +142,7 @@ Para obter mais informações, consulte [Visão geral do IBM Spectrum Protect Pl
 O serviço KMIP para VMware no {{site.data.keyword.cloud_notm}} fornece um serviço altamente disponível 24 horas por dia, 7 dias por semana para gerenciar chaves de criptografia que são usadas pelo VMware no {{site.data.keyword.cloud_notm}}. Esse serviço oferece a capacidade de tempo de execução para permitir que os clientes criem, recuperem, ativem, revoguem e destruam as chaves de criptografia. Ele também fornece a capacidade de gerenciamento para manter as
 associações entre as credenciais do cliente e as chaves de criptografia.
 
-Para obter mais informações, consulte [Visão geral do KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations).
+Para obter mais informações, consulte [KMIP for VMware na visão geral do {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations).
 
 ### Veeam on IBM Cloud
 {: #prod_overview-veeam}

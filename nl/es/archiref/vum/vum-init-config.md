@@ -50,7 +50,7 @@ Tabla 1. Valores de despliegue
 | RAM de proxy | 2 GB | Squid no tiene requisitos mínimos |
 | Disco de proxy | 25 | GB Squid no tiene requisitos mínimos |
 | Nombre de host | Proxy01 | |
-| Dirección | ip proxy | Se debe utilizar una dirección IP de repuesto de la subred portátil privada del cliente asignada durante el proceso de suministro. Solo se reservarían dos direcciones IP en esta subred; una para el BCR y otra para el cliente-esg
+| Dirección | ip proxy | Se debe utilizar una dirección IP de repuesto de la subred portátil privada del cliente asignada durante el proceso de suministro. Solo se reservarían dos direcciones IP en esta subred: una para el BCR y otra para el cliente-esg
 | Máscara de red | 255.255.255.192 | |
 | Pasarela| ip enlace ascendente privada customer-nsx-edge | Este es el valor de pasarela predeterminado para el servidor proxy, que es la dirección IP de enlace ascendente privada de customer-nsx-edge. Para encontrar la dirección IP, consulte el separador **Configuración** de **customer-nsx-edge**. |
 | Servidor DNS | ip de AD/DNS | Encontrará esta dirección IP en la página de la instancia de la consola de {{site.data.keyword.vmwaresolutions_short}}, en la página **Recursos**. |
@@ -148,7 +148,7 @@ Esta actividad tiene las tareas siguientes:
 Esta tarea crea una nueva máquina virtual lista para su uso como servidor proxy. Los valores de la tabla 1 Valores de despliegue debería utilizarse para rellenar la configuración.
 
 1.	Mediante el cliente web de vSphere, vaya a **Inicio** > **Máquinas y plantillas**.
-2.	En el panel Navegador, pulse **datacenter1** y, a continuación, pulse con el botón derecho del ratón y seleccione; **Nueva máquina virtual** > **Nueva máquina virtual**.
+2.	En el panel Navegador, pulse **datacenter1** y, a continuación, pulse con el botón derecho del ratón y seleccione **Nueva máquina virtual** > **Nueva máquina virtual**.
 3.	Seleccione **Crear una nueva máquina virtual** y, a continuación, pulse **Siguiente**.
 4.	Especifique un nombre para la máquina virtual, por ejemplo Proxy01, y seleccione **datacenter1** y, a continuación, pulse **Siguiente**.
 5.	Seleccione **cluster1** y, a continuación, pulse **Siguiente**.
@@ -175,7 +175,7 @@ Esta tarea instala y configura la máquina virtual recién creada lista para la 
 9.	Pulse **Configurar** y luego **Valores de IPv4**. En el recuadro **Método**, seleccione **Manual**.
 10.	Con el botón **Añadir**, inserte _Máscara de red de dirección_ y la _Pasarela_ de la _Tabla 1 -Valores de despliegue_.
 11.	Especifique la _dirección IP del servidor DNS_ de la Tabla 1 - Valores de despliegue.
-12.	Pulse el botón **Rutas** y añada las siguientes rutas estáticas; _10.0.0.0/8 y 161.26.0.0/16_ con una dirección IP de pasarela de la _Dirección IP de BCR_ de la Tabla 1 Valores de despliegue, como la pasarela. Esta ruta estática permite al servidor proxy llegar al servidor DNS.
+12.	Pulse el botón **Rutas** y añada las siguientes rutas estáticas: _10.0.0.0/8 y 161.26.0.0/16_ con una dirección IP de pasarela de la _Dirección IP de BCR_ de la Tabla 1 Valores de despliegue, como la pasarela. Esta ruta estática permite al servidor proxy llegar al servidor DNS.
 13.	Pulse **Guardar** y, a continuación, asegúrese de que la interfaz de Ethernet esté Activada y aparezca como conectada. Pulse **Terminado** e **Iniciar instalación**.
 14.	A medida que avance la instalación, defina una contraseña de root y configure un usuario.
 15.	Cuando finalice la instalación, inicie sesión como el usuario y, a continuación, escriba el mandato _ping vmware.com_. El nombre se resuelve en una dirección IP y el usuario recibe una respuesta. Si no obtiene respuestas, compruebe las direcciones IP, las reglas de cortafuegos y los valores de NAT.

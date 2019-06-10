@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="880px"
+   height="601px"
+   viewBox="-0.5 -0.5 880 601"
+   id="svg2"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="opsmgmt-mgmtflows.svg"
+   inkscape:export-filename="V:\PUB\ABD207\ART\WORK\ship9\opsmgmt-mgmtflows.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <metadata
+     id="metadata202">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1015"
+     id="namedview200"
+     showgrid="false"
+     inkscape:zoom="1.4469616"
+     inkscape:cx="661.31897"
+     inkscape:cy="138.23601"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <defs
+     id="defs4" />
+  <g
+     id="g6"
+     transform="translate(4,0)">
+    <rect
+       x="0"
+       y="80"
+       width="310"
+       height="260"
+       pointer-events="none"
+       id="rect8"
+       style="fill:#ffffff;stroke:#000000" />
+    <g
+       font-size="12px"
+       id="g10"
+       style="font-size:12px;font-family:Helvetica;text-anchor:middle;fill:#000000">
+      <text
+         x="154.5"
+         y="129.5"
+         id="text12">vCenter</text>
+      <text
+         x="154.5"
+         y="143.5"
+         id="text14">Platform Services Controller</text>
+      <text
+         x="154.5"
+         y="157.5"
+         id="text16">vSphere <tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gulim;-inkscape-font-specification:Gulim"
+   id="tspan4330">호스트</tspan>
+</text>
+      <text
+         x="154.5"
+         y="171.5"
+         id="text18">NSX Manager</text>
+      <text
+         x="154.5"
+         y="185.5"
+         id="text20">NSX Controller</text>
+      <text
+         x="154.5"
+         y="199.5"
+         id="text22">NSX Edge</text>
+      <text
+         x="154.5"
+         y="213.5"
+         id="text24">HCX</text>
+      <text
+         x="154.5"
+         y="227.5"
+         id="text26">F5</text>
+      <text
+         x="154.5"
+         y="241.5"
+         id="text28">NSX Distributed Logical Router</text>
+      <text
+         x="154.5"
+         y="255.5"
+         id="text30">NSX Universal Distributed Logical Router</text>
+      <text
+         x="154.5"
+         y="269.5"
+         id="text32">NSX Distributed Firewall ESXi <tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gulim;-inkscape-font-specification:Gulim"
+   id="tspan4332">커널 모듈</tspan>
+</text>
+      <text
+         x="154.5"
+         y="283.5"
+         id="text34">vRealize Operations Manager Analytics <tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gulim;-inkscape-font-specification:Gulim"
+   id="tspan4334">클러스터 노드</tspan>
+</text>
+      <text
+         x="154.5"
+         y="297.5"
+         id="text36">vRealize Operations Manager <tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gulim;-inkscape-font-specification:Gulim"
+   id="tspan4336">원격 콜렉터</tspan>
+</text>
+    </g>
+    <rect
+       x="0"
+       y="350"
+       width="310"
+       height="80"
+       pointer-events="none"
+       id="rect38"
+       style="fill:#ffffff;stroke:#000000" />
+    <g
+       font-size="12px"
+       id="g40"
+       style="font-size:12px;font-family:Helvetica;text-anchor:middle;fill:#000000">
+      <text
+         x="154.5"
+         y="393.5"
+         id="text42">VM</text>
+      <text
+         x="154.5"
+         y="407.5"
+         id="text44">vRealize Operations</text>
+      <text
+         x="154.5"
+         y="421.5"
+         id="text46">vRealize Business for Cloud</text>
+    </g>
+    <rect
+       x="500"
+       y="80"
+       width="120"
+       height="60"
+       pointer-events="none"
+       id="rect48"
+       style="fill:#dae8fc;stroke:#6c8ebf" />
+    <g
+       font-size="12px"
+       id="g50"
+       style="font-size:12px;font-family:Helvetica;text-anchor:middle;fill:#000000">
+      <text
+         x="559.5"
+         y="99.5"
+         id="text52">vRealize</text>
+      <text
+         x="559.5"
+         y="113.5"
+         id="text54">Operations</text>
+      <text
+         x="559.5"
+         y="127.5"
+         id="text56">Manager</text>
+    </g>
+    <rect
+       x="500"
+       y="180"
+       width="120"
+       height="60"
+       pointer-events="none"
+       id="rect58"
+       style="fill:#d5e8d4;stroke:#82b366" />
+    <g
+       font-size="12px"
+       id="g60"
+       style="font-size:12px;font-family:Helvetica;text-anchor:middle;fill:#000000">
+      <text
+         x="559.5"
+         y="206.5"
+         id="text62">vRealize</text>
+      <text
+         x="559.5"
+         y="220.5"
+         id="text64">Log Insight</text>
+    </g>
+    <rect
+       x="500"
+       y="280"
+       width="120"
+       height="60"
+       pointer-events="none"
+       id="rect66"
+       style="fill:#ffe6cc;stroke:#d79b00" />
+    <g
+       font-size="12px"
+       id="g68"
+       style="font-size:12px;font-family:Helvetica;text-anchor:middle;fill:#000000">
+      <text
+         x="559.5"
+         y="306.5"
+         id="text70">vRealize</text>
+      <text
+         x="559.5"
+         y="320.5"
+         id="text72">Network Insight</text>
+    </g>
+    <g
+       font-size="12px"
+       id="g74"
+       style="font-size:12px;font-family:Helvetica;text-anchor:middle;fill:#000000">
+      <text
+         x="788.5"
+         y="215"
+         id="text76"><tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gulim;-inkscape-font-specification:Gulim"
+   id="tspan4348">기타</tspan>
+ vRLI<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gulim;-inkscape-font-specification:Gulim"
+   id="tspan4350">에서의 이벤트 전달</tspan>
+</text>
+    </g>
+    <g
+       font-weight="bold"
+       font-size="12px"
+       id="g78"
+       style="font-weight:bold;font-size:12px;font-family:Helvetica;text-anchor:middle;fill:#000000">
+      <text
+         x="152.5"
+         y="96.5"
+         id="text80"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gulim;-inkscape-font-specification:Gulim;stroke-width:0.75;stroke-miterlimit:4;stroke-dasharray:none">
+        <tspan
+           style="stroke:#000000;stroke-width:0.75;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="tspan4352">로그 및 메트릭 소스</tspan>
+      </text>
+    </g>
+    <path
+       d="m 310,210 80,0 q 10,0 10,-10 l 0,-80 q 0,-10 10,-10 l 83.63,0"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path82"
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" />
+    <path
+       d="m 498.88,110 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path84"
+       inkscape:connector-curvature="0"
+       style="fill:#000000;stroke:#000000;stroke-miterlimit:10" />
+    <path
+       d="m 310,210 80,0 q 10,0 20,0 l 83.63,0"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path86"
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" />
+    <path
+       d="m 498.88,210 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path88"
+       inkscape:connector-curvature="0"
+       style="fill:#000000;stroke:#000000;stroke-miterlimit:10" />
+    <path
+       d="m 560,180 0,-5 q 0,-5 0,-15 l 0,-13.63"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path90"
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" />
+    <path
+       d="m 560,141.12 3.5,7 -3.5,-1.75 -3.5,1.75 z"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path92"
+       inkscape:connector-curvature="0"
+       style="fill:#000000;stroke:#000000;stroke-miterlimit:10" />
+    <path
+       d="m 560,280 0,-33.63"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path94"
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" />
+    <path
+       d="m 560,241.12 3.5,7 -3.5,-1.75 -3.5,1.75 z"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path96"
+       inkscape:connector-curvature="0"
+       style="fill:#000000;stroke:#000000;stroke-miterlimit:10" />
+    <path
+       d="m 310,210 80,0 q 10,0 10,10 l 0,80 q 0,10 10,10 l 83.63,0"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path98"
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" />
+    <path
+       d="m 498.88,310 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path100"
+       inkscape:connector-curvature="0"
+       style="fill:#000000;stroke:#000000;stroke-miterlimit:10" />
+    <path
+       d="m 590,26.37 0,47.26"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path102"
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" />
+    <path
+       d="m 590,21.12 3.5,7 -3.5,-1.75 -3.5,1.75 z"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path104"
+       inkscape:connector-curvature="0"
+       style="fill:#000000;stroke:#000000;stroke-miterlimit:10" />
+    <path
+       d="m 590,78.88 -3.5,-7 3.5,1.75 3.5,-1.75 z"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path106"
+       inkscape:connector-curvature="0"
+       style="fill:#000000;stroke:#000000;stroke-miterlimit:10" />
+    <g
+       font-size="12px"
+       id="g108"
+       style="font-size:12px;font-family:Helvetica;text-anchor:middle;fill:#000000">
+      <text
+         x="589.5"
+         y="13.5"
+         id="text110"><tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gulim;-inkscape-font-specification:Gulim"
+   id="tspan4342">기타</tspan>
+ vROps <tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gulim;-inkscape-font-specification:Gulim"
+   id="tspan4344">관리자에서의 연합</tspan>
+</text>
+    </g>
+    <path
+       d="m 690,210 -63.63,0"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path112"
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" />
+    <path
+       d="m 621.12,210 7,-3.5 -1.75,3.5 1.75,3.5 z"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path114"
+       inkscape:connector-curvature="0"
+       style="fill:#000000;stroke:#000000;stroke-miterlimit:10" />
+    <path
+       d="m 620,110 63.63,0"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path116"
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" />
+    <path
+       d="m 688.88,110 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path118"
+       inkscape:connector-curvature="0"
+       style="fill:#000000;stroke:#000000;stroke-miterlimit:10" />
+    <g
+       font-size="12px"
+       id="g120"
+       style="font-size:12px;font-family:Helvetica;text-anchor:middle;fill:#000000">
+      <text
+         x="759.5"
+         y="103.5"
+         id="text122"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gulim;-inkscape-font-specification:Gulim">엔터프라이즈</text>
+      <text
+         x="759.5"
+         y="117.5"
+         id="text124">ITSM <tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gulim;-inkscape-font-specification:Gulim"
+   id="tspan4346">도구로 전달</tspan>
+</text>
+    </g>
+    <g
+       font-weight="bold"
+       font-size="12px"
+       id="g126"
+       style="font-weight:bold;font-size:12px;font-family:Helvetica;text-anchor:middle;fill:#000000">
+      <text
+         x="152.5"
+         y="363.5"
+         id="text128"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gulim;-inkscape-font-specification:Gulim;stroke-width:0.75;stroke-miterlimit:4;stroke-dasharray:none">
+        <tspan
+           style="stroke:#000000;stroke-width:0.75;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="tspan4354">클라이언트에서 구성한</tspan>
+      </text>
+      <text
+         x="152.5"
+         y="377.5"
+         id="text130"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gulim;-inkscape-font-specification:Gulim;stroke-width:0.75;stroke-miterlimit:4;stroke-dasharray:none">
+        <tspan
+           style="stroke:#000000;stroke-width:0.75;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="tspan4356">로그 및 메트릭 소스</tspan>
+      </text>
+    </g>
+    <path
+       d="m 310,390 40,0 q 10,0 10,-10 l 0,-160 q 0,-10 10,-10 l 20,0 q 10,0 10,10 l 0,80 q 0,10 10,10 l 83.63,0"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path132"
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" />
+    <path
+       d="m 498.88,310 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path134"
+       inkscape:connector-curvature="0"
+       style="fill:#000000;stroke:#000000;stroke-miterlimit:10" />
+    <rect
+       x="500"
+       y="540"
+       width="120"
+       height="60"
+       pointer-events="none"
+       id="rect136"
+       style="fill:#e1d5e7;stroke:#9673a6" />
+    <g
+       font-size="12px"
+       id="g138"
+       style="font-size:12px;font-family:Helvetica;text-anchor:middle;fill:#000000">
+      <text
+         x="559.5"
+         y="573.5"
+         id="text140"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gulim;-inkscape-font-specification:Gulim">프록시</text>
+    </g>
+    <rect
+       x="500"
+       y="460"
+       width="120"
+       height="60"
+       pointer-events="none"
+       id="rect142"
+       style="fill:#f8cecc;stroke:#b85450" />
+    <g
+       font-size="12px"
+       id="g144"
+       style="font-size:12px;font-family:Helvetica;text-anchor:middle;fill:#000000">
+      <text
+         x="559.5"
+         y="486.5"
+         id="text146">VMware Update</text>
+      <text
+         x="559.5"
+         y="500.5"
+         id="text148">Manager</text>
+    </g>
+    <path
+       d="m 620,583 63.63,0"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path150"
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" />
+    <path
+       d="m 688.88,583 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path152"
+       inkscape:connector-curvature="0"
+       style="fill:#000000;stroke:#000000;stroke-miterlimit:10" />
+    <g
+       font-size="12px"
+       id="g154"
+       style="font-size:12px;font-family:Helvetica;text-anchor:middle;fill:#000000">
+      <text
+         x="759.5"
+         y="583.5"
+         id="text156"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gulim;-inkscape-font-specification:Gulim">인터넷 저장소</text>
+    </g>
+    <path
+       d="m 620,490 40,0 q 10,0 10,10 l 0,45 q 0,10 -10,10 l -33.63,0"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path158"
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" />
+    <path
+       d="m 621.12,555 7,-3.5 -1.75,3.5 1.75,3.5 z"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path160"
+       inkscape:connector-curvature="0"
+       style="fill:#000000;stroke:#000000;stroke-miterlimit:10" />
+    <rect
+       x="0"
+       y="441"
+       width="310"
+       height="99"
+       pointer-events="none"
+       id="rect162"
+       style="fill:#ffffff;stroke:#000000" />
+    <g
+       font-size="12px"
+       id="g164"
+       style="font-size:12px;font-family:Helvetica;text-anchor:middle;fill:#000000">
+      <text
+         x="154.5"
+         y="480"
+         id="text166">vSphere <tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gulim;-inkscape-font-specification:Gulim"
+   id="tspan4338">호스트</tspan>
+</text>
+      <text
+         x="154.5"
+         y="494"
+         id="text168">VM <tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gulim;-inkscape-font-specification:Gulim"
+   id="tspan4340">하드웨어</tspan>
+</text>
+      <text
+         x="154.5"
+         y="508"
+         id="text170">VM Tools</text>
+    </g>
+    <g
+       font-weight="bold"
+       font-size="12px"
+       id="g172"
+       style="font-weight:bold;font-size:12px;font-family:Helvetica;text-anchor:middle;fill:#000000">
+      <text
+         x="152.5"
+         y="461.5"
+         id="text174"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gulim;-inkscape-font-specification:Gulim;stroke-width:0.75;stroke-miterlimit:4;stroke-dasharray:none">
+        <tspan
+           style="stroke:#000000;stroke-width:0.75;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="tspan4358">컴포넌트</tspan>
+      </text>
+    </g>
+    <path
+       d="m 500,490 -183.63,0.97"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path176"
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" />
+    <path
+       d="m 311.12,490.99 6.98,-3.53 -1.73,3.51 1.77,3.49 z"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path178"
+       inkscape:connector-curvature="0"
+       style="fill:#000000;stroke:#000000;stroke-miterlimit:10" />
+    <path
+       d="m 155,540 0,0"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path180"
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#6666ff;stroke-miterlimit:10" />
+    <path
+       d="m 155,540 0,0 0,0 0,0 z"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path182"
+       inkscape:connector-curvature="0"
+       style="fill:#6666ff;stroke:#6666ff;stroke-miterlimit:10" />
+    <path
+       d="m 620,195 67.63,0"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path184"
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" />
+    <path
+       d="m 692.88,195 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path186"
+       inkscape:connector-curvature="0"
+       style="fill:#000000;stroke:#000000;stroke-miterlimit:10" />
+    <g
+       font-size="12px"
+       id="g188"
+       style="font-size:12px;font-family:Helvetica;text-anchor:middle;fill:#000000">
+      <text
+         x="778.5"
+         y="198.5"
+         id="text190"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gulim;-inkscape-font-specification:Gulim">엔터프라이즈 로그 관리로</text>
+    </g>
+    <path
+       d="m 530,80 0,-33.63"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path192"
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" />
+    <path
+       d="m 530,41.12 3.5,7 -3.5,-1.75 -3.5,1.75 z"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path194"
+       inkscape:connector-curvature="0"
+       style="fill:#000000;stroke:#000000;stroke-miterlimit:10" />
+    <g
+       font-size="12px"
+       id="g196"
+       style="font-size:12px;font-family:Helvetica;text-anchor:middle;fill:#000000">
+      <text
+         x="529"
+         y="33.5"
+         id="text198">Active Directory</text>
+    </g>
+  </g>
+</svg>

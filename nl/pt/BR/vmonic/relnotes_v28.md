@@ -106,7 +106,7 @@ Anteriormente, seria possível pedir uma instância do Cloud Foundation ou do vC
 
 A partir da liberação V2.8, o serviço está disponível como um serviço independente sem estar associado a uma instância do VMware. Cada instância do serviço pode atender a uma ou mais instâncias do Cloud Foundation, instâncias do vCenter Server ou clusters do vSphere.
 
-Para obter mais informações, consulte [Visão geral do KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations).
+Para obter mais informações, consulte [KMIP for VMware na visão geral do {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations).
 
 ## Arquitetura de Referência da documentação
 {: #relnotes_v28-ref}

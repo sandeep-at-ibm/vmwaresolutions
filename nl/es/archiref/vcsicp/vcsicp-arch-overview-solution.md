@@ -17,8 +17,7 @@ subcollection: vmware-solutions
 ## Componentes de VMware vCenter Server on IBM Cloud
 {: #vcsicp-arch-overview-solution-vcs-comp}
 
-![Entorno de vCenter Server](../../images/vcsicp-vcsenv.svg "Estructura física del despliegue de vCenter Server e{{site.data.keyword.icpfull_notm}}")
-
+![Entorno de vCenter Server](../../images/vcsicp-vcsenv.svg "Estructura física del despliegue de vCenter Server e {{site.data.keyword.icpfull_notm}}")
 
 ### Controlador de servicios de la plataforma
 {: #vcsicp-arch-overview-solution-psc}

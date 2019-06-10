@@ -18,9 +18,9 @@
  <g font-family="Helvetica" text-anchor="middle">
   <g font-size="18px" font-weight="bold">
    <text x="99.5" y="31.5">常見服務</text>
-   <text x="342" y="31.5">基礎架構管理</text>
-   <text x="317" y="151.5">虛擬基礎架構</text>
-   <text x="119.5" y="271.5">實體基礎架構</text>
+   <text x="300" y="31.5">基礎架構管理</text>
+   <text x="300" y="151.5">虛擬基礎架構</text>
+   <text x="84.5" y="271.5">實體基礎架構</text>
   </g>
   <g font-size="16px">
    <text x="99.5" y="70.5">鑑別</text>

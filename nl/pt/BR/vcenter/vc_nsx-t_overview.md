@@ -166,7 +166,7 @@ Deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} 
 {{site.data.keyword.vmwaresolutions_short}}, não do {{site.data.keyword.slportal}} ou de qualquer outro meio fora do console. Se você mudar esses componentes fora do console do {{site.data.keyword.vmwaresolutions_short}}, as mudanças não serão sincronizadas com o console.
 Gerenciar quaisquer componentes do {{site.data.keyword.vmwaresolutions_short}}, que foram instalados em sua conta do {{site.data.keyword.cloud_notm}} quando você pediu a instância, de fora do console do {{site.data.keyword.vmwaresolutions_short}} pode tornar o seu ambiente instável. Estas atividades de gerenciamento incluem:
 *  Incluindo, modificando, retornando ou removendo componentes
-*  Expansão ou redução da capacidade da instância por meio da inclusão ou remoção de servidores ESXi
+*  Expandindo ou contraindo a capacidade da instância por meio da inclusão ou remoção de servidores ESXi
 *  Desativando componentes
 *  Reiniciando serviços
       As exceções a essas atividades incluem gerenciar os compartilhamentos de arquivo de armazenamento compartilhado por meio do {{site.data.keyword.slportal}}. Essas atividades incluem: pedido, exclusão (que poderá afetar armazenamentos de dados, se montado), autorização e montagem de compartilhamentos de arquivos de armazenamento compartilhado.

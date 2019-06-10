@@ -66,7 +66,7 @@ Adicionalmente, las siguientes especificaciones de disco y de red:
 {: #vs_vsphereclusteroverview-specs-network}
 
 * Una VLAN (LAN virtual) pública y dos VLAN privadas
-* (Opcional) Un par de alta disponibilidad de dispositivos de seguridad FortiGate
+* (Opcional) Un par de alta disponibilidad de dispositivos FortiGate Security Appliance
 
 ### Almacenamiento
 {: #vs_vsphereclusteroverview-specs-storage}

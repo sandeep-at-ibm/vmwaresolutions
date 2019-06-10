@@ -25,7 +25,7 @@ L'aggiornamento dei cluster vSAN procede nella seguente sequenza di attività:
 * **Abilita il flusso di lavoro di vSAN Online Health** – Questo flusso di lavoro abilita le baseline vSAN in VUM in modo che gli aggiornamenti possano essere riesaminati e corretti. Deve essere eseguito inizialmente solo per abilitare vSAN con VUM
 * **Prerequisiti** – Comprendi i prerequisiti, il processo e le restrizioni
 * **Aggiorna vCenter Server Appliance**. Per ulteriori informazioni, vedi [Aggiornamento di VCSA e vCenter collegati a SSO](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vcsa).
-* **Aggiorna gli host vSphere ESXi** – Per ulteriori informazioni, vedi  [Creazione di baseline e collegamento a oggetti di inventario](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-baselines).
+* **Aggiorna gli host vSphere ESXi** – Per ulteriori informazioni, vedi [Creazione di baseline e collegamento a oggetti di inventario](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-baselines).
 * **Aggiorna il formato del disco vSAN** - Fai riferimento ad Aggiorna il formato del disco vSAN. L'aggiornamento del formato del disco è facoltativo, ma per ottenere risultati migliori, aggiorna gli oggetti per utilizzare la versione più recente. Il formato su disco espone il tuo ambiente alle funzioni complete di vSAN.
 
 ## Abilita il flusso di lavoro di vSAN Online Health

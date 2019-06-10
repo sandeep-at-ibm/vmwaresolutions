@@ -112,7 +112,7 @@ La rimozione della connettività di rete fisica dalla rete privata o pubblica pe
 
 ![Connessioni all'host fisico](../../images/vcsv4radiagrams-ra-physical-host-connections.svg "Connessioni all'host fisico")
 
-#### VLAN e instradamento da quelle di underlay a quelle di overlay
+#### VLAN e instradamento da quelle sottostanti a quelle di sovrapposizione
 {: #design_physicalinfrastructure-vlans}
 
 Le offerte {{site.data.keyword.vmwaresolutions_short}} sono progettate con 3 VLAN, una pubblica e due private, assegnate al momento della distribuzione. Come mostrato nella figura precedente, la VLAN pubblica è assegnata a `eth1` e `eth3` e le VLAN private sono assegnate a `eth0` e `eth2`.
@@ -150,7 +150,7 @@ Tabella 1. Riepilogo VLAN e sottorete
 
 In questa progettazione, tutti gli host e le VM (Virtual Machine) supportati dalla VLAN sono configurati in modo che puntino al router del cliente della “rete privata” di back-end (BCR) {{site.data.keyword.cloud_notm}} come rotta predefinita. Mentre le istanze vCenter Server consentono l'utilizzo di SDN (Software-Defined Networking), le sovrapposizioni di rete create all'interno di un'istanza VMware che includono l'instradamento alle sottoreti interne non sono note ai router gestiti da {{site.data.keyword.cloud_notm}}.
 
-Se vuoi eseguire l'instradamento tra la rete di overlay e di underlay, devi distribuire un dispositivo firewall IBM per una particolare VLAN privata predefinita quando viene distribuita l'istanza vCenter Server. Questo dispositivo consente l'inserimento di rotte statiche e il peering del protocollo di instradamento dinamico con i dispositivi della rete di sovrapposizione per consentire l'instradamento tra la rete di overlay e di underlay.
+Se vuoi eseguire l'instradamento tra la rete sottostante e di sovrapposizione, devi distribuire un dispositivo firewall IBM per una particolare VLAN privata predefinita quando viene distribuita l'istanza vCenter Server. Questo dispositivo consente l'inserimento di rotte statiche e il peering del protocollo di instradamento dinamico con i dispositivi della rete di sovrapposizione per consentire l'instradamento tra la rete sottostante e di sovrapposizione.
 
 Le connessioni alla rete privata sono configurate per utilizzare una dimensione MTU dei frame Jumbo pari a 9000 per migliorare le prestazioni per trasferimenti di dati di grandi dimensioni, come archiviazione e vMotion. Questa è la MTU massima consentita in VMware e da {{site.data.keyword.cloud_notm}}. Le connessioni alla rete pubblica utilizzano una MTU Ethernet standard di 1500. Questo valore deve essere mantenuto poiché qualsiasi modifica potrebbe causare la frammentazione dei pacchetti su Internet.
 

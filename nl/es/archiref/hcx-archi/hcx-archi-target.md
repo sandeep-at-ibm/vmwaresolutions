@@ -134,7 +134,7 @@ El segundo componente que se despliega es el dispositivo de optimización de WAN
 
 En conjunto, estos recursos reducen el uso de ancho de banda y garantizan un uso eficiente de la capacidad de red disponible para acelerar la transferencia de datos a y desde IBM Cloud. El optimizador de WAN utiliza mucho disco y necesita la cantidad suficiente de IOPS para funcionar correctamente. Como resultado, el optimizador de WAN reside en el almacenamiento vSAN si está presente, o en el almacenamiento resistente con 2000 IOPS. La especificación de tamaño del dispositivo de optimización de WAN se muestra en la tabla siguiente.
 
-Tabla 9. tamaño del dispositivo optimizador de WAN
+Tabla 9. Dimensionamiento del dispositivo optimizador de WAN
 
 | Componente | Configuración |
 |-----------|---------------|
@@ -153,7 +153,7 @@ El tercer componente se conoce como concentrador de capa 2 (L2C) y forma parte d
 
 Como parte de este diseño, el dispositivo L2C se despliega de modo que un cliente puede extender varias VLAN y VLXAN a IBM Cloud a través de internet público o a través de la red privada mediante Direct Link. La especificación del tamaño del dispositivo L2C en IBM Cloud se muestra en la tabla siguiente.
 
-Tabla 10. Tamaño del dispositivo HT L2C
+Tabla 10. Dimensionamiento del dispositivo HT L2C
 
 | Componente | Configuración |
 |-----------|---------------|
