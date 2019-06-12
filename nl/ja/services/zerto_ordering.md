@@ -40,9 +40,9 @@ Zerto on {{site.data.keyword.cloud}} サービスを注文するには、その�
 ## プライベート専用インスタンスでの Zerto on IBM Cloud の注文
 {: #zerto_ordering-private-only}
 
-Zerto on {{site.data.keyword.cloud_notm}} をプライベート専用インスタンスに追加する場合は、以下の要件を満たしてください。
-* インターネットに接続するにはお客様が独自のプロキシー・サーバーをセットアップする必要があります。詳しくは、[パブリック・ネットワーク接続](/docs/services/vmwaresolutions/services?topic=vmware-solutions-design_virtualinfrastructure#public-network-connectivity)を参照してください。
-* Zerto のコール・ホーム機能を構成する必要もあります。Zerto のコール・ホームについて詳しくは、[Zerto Reporting for Enterprise environments (Call Home)](https://www.zerto.com/myzerto/knowledge-base/zerto-reporting-for-enterprise-environments-call-home/){:new_window} を参照してください。
+Zerto on {{site.data.keyword.cloud_notm}} をプライベート専用インスタンスに追加する場合、以下の要件が満たされていることを確認してください。
+* インターネットに接続するために独自のプロキシー・サーバーをセットアップする作業は、お客様が行う必要があります。 詳しくは、[パブリック・ネットワーク接続](/docs/services/vmwaresolutions/services?topic=vmware-solutions-design_virtualinfrastructure#public-network-connectivity)を参照してください。
+* Zerto の Call Home 機能も設定する必要があります。 Zerto Call Home について詳しくは、[エンタープライズ環境向けの Zerto Reporting (Call Home)](https://www.zerto.com/myzerto/knowledge-base/zerto-reporting-for-enterprise-environments-call-home/){:new_window} を参照してください。
 
 ## 関連リンク
 {: #zerto_ordering-related}

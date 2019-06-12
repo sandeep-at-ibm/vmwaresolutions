@@ -40,7 +40,7 @@ V3.0 リリース以降、vCenter Server、vCenter Server with Hybridity Bundle�
 ## ネットワーク・ファイル・システム操作の機能拡張
 {: #relnotes_v30-nfs}
 
-V3.0 リリース以降、**「使用可能」**状態にある複数のクラスターで、NFS ストレージと ESXi サーバーを同時に追加/削除できるようになりました。例えば、あるクラスターで ESXi サーバーを追加または削除したり、別のクラスターで NFS ストレージを追加または削除したりできます。これは、すべての vCenter Server と vCenter Server with NSX-T のインスタンスに適用されます。
+V3.0 リリース以降、**「使用可能」**状態にある複数のクラスターで、NFS ストレージと ESXi サーバーを同時に追加/削除できるようになりました。 例えば、あるクラスターで ESXi サーバーを追加または削除したり、別のクラスターで NFS ストレージを追加または削除したりできます。 これは、すべての vCenter Server と vCenter Server with NSX-T のインスタンスに適用されます。
 
 ## VMware vCenter Server インスタンスの更新
 {: #relnotes_v30-vcs}

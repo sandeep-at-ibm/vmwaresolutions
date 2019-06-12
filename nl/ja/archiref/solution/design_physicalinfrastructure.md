@@ -63,7 +63,7 @@ subcollection: vmware-solutions
 
 {{site.data.keyword.cloud_notm}} の物理ネットワークは、パブリック、プライベートという 2 種類のネットワークに分類されます。 またプライベート・ネットワークには、物理サーバーへの管理 Intelligent Platform Management Interface (IPMI) トラフィックが含まれています。
 
-![{{site.data.keyword.cloud_notm}} ハイレベル・ネットワーク](../../images/vcsv4radiagrams-ra-ibmcloudnetwork.svg "{{site.data.keyword.cloud_notm}} ハイレベル・ネットワーク")
+![{{site.data.keyword.cloud_notm}} ネットワークの概要](../../images/vcsv4radiagrams-ra-ibmcloudnetwork.svg "{{site.data.keyword.cloud_notm}} ネットワークの概要")
 
 #### パブリック・ネットワーク
 {: #design_physicalinfrastructure-public-net}

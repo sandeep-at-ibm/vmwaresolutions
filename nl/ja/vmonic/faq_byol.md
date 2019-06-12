@@ -25,7 +25,7 @@ subcollection: vmware-solutions
 {: #faq_byol-def}
 {: faq}
 
-ライセンス持ち込み (BYOL) は、V2.0 以降の VMware vCenter Server クラスターと VMware vSphere クラスターで使用できる機能です。BYOL を利用すると、所有している VMware ライセンスを、以下の 1 つ以上の VMware ソフトウェア・コンポーネントに使用できます。
+ライセンス持ち込み (BYOL) は、V2.0 以降の VMware vCenter Server および VMware vSphere クラスターで使用できる機能です。 BYOL を利用すると、所有している VMware ライセンスを、以下の 1 つ以上の VMware ソフトウェア・コンポーネントに使用できます。
 * VMware vCenter Server
 * VMware vSphere
 * VMware NSX

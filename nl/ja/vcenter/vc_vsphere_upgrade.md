@@ -93,7 +93,7 @@ https://my.vmware.com/group/vmware/details?downloadGroup=DT-ESX67-INTEL-INTEL-NV
 * vCenter Server および PSC のバックアップに関するその他の考慮事項や情報については、[vCenter のファイル・ベースのバックアップ](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_backingup#solution_backingup-vcenter)を参照してください。
 *	NSX のバックアップについては、[Backing Up NSX Manager Data](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window} を参照してください。
 
-ファイル・ベースのバックアップを使用することをお勧めします。(vSphere Data Protection を使用した) イメージ・ベースのバックアップは VMware vSphere 6.7 ではサポートされていません。
+ファイル・ベースのバックアップを使用することをお勧めします。 (vSphere Data Protection を使用した) イメージ・ベースのバックアップは VMware vSphere 6.7 ではサポートされていません。
 {:note}
 
 ## IBM vCenter Server vSphere ソフトウェアの 6.5 から 6.7 へのアップグレード手順
@@ -104,7 +104,7 @@ https://my.vmware.com/group/vmware/details?downloadGroup=DT-ESX67-INTEL-INTEL-NV
 **重要**:
 
 * {{site.data.keyword.vmwaresolutions_short}} が VMware サポートに vCenter Server の設計、セットアップ、{{site.data.keyword.cloud_notm}} に関する必要な情報をすべて提供できるように、このパスを使用する必要があります。 このプロセスに従って VMware サポートと正確な情報を共有することで、サポートにかかる時間を短縮できます。 IBM サポートが必要な情報を VMware サポートに提供した後に、お客様は必要に応じて VMware サポートと直接やり取りすることができます。
-* このアップグレード・プロセスの一環として作成した新しいパスワードと資格情報すべてを記録します。IBM サポートでは、内部データベースを更新するために、アップグレード・プロセスの最後にこれらの資格情報が必要となります。
+* このアップグレード・プロセスの一環として作成した新しいパスワードと資格情報すべてを記録します。 IBM サポートでは、内部データベースを更新するために、アップグレード・プロセスの最後にこれらの資格情報が必要となります。
 
 ### VMware NSX のアップグレード
 {: #vc_vsphere_upgrade-procedure-nsx}
@@ -173,7 +173,7 @@ VMware NSX のアップグレード処理は、ESXi ホスト上の vSphere イ�
     2. シェル **passwd** コマンドを使用して、PSC と vCenter の両方に新しい root パスワードを設定します。
     3. {{site.data.keyword.vmwaresolutions_short}} コンソールに表示されたパスワード、または IBM サポートから提供されたパスワードを保存します。 後でアプライアンスをアップグレードするときに、これらのパスワードをもう一度使用します。
 2. 標準の Windows ISO マウント機能を使用して、vCenter 6.7u1b ISO をジャンプボックス内にマウントします。
-3. VMware の手順に従い、vCenter をアップグレードします。詳しくは、[Upgrade a vCenter Server Appliance 6.0 or 6.5 with an External vCenter Single Sign-On or Platform Services Controller Instance by Using the GUI](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html) を参照してください。VMware の手順は、PSC のアップグレード・プロセスに似ています。ただし、このアップグレード・プロセスでは PSC を指定するのではなく、
+3. VMware の手順に従い、vCenter をアップグレードします。 詳しくは、[Upgrade a vCenter Server Appliance 6.0 or 6.5 with an External vCenter Single Sign-On or Platform Services Controller Instance by Using the GUI](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html) を参照してください。 VMware の手順は、PSC のアップグレード・プロセスに似ています。 ただし、このアップグレード・プロセスでは PSC を指定するのではなく、
 vCenter FQDN/IP を指定します。
 
 **注**:
@@ -183,7 +183,7 @@ vCenter FQDN/IP を指定します。
 #### PSC 機能の vCenter への統合
 
 1. PSC と vCenter のアップグレードが正常に完了したら、vCenter FLEX ベースのユーザー・インターフェースにログインし、**「System Configuration」**セクションで vCenter と PSC に関連するすべてのサービスの正常性を確認します。  
-2. PSC をバックアップします。ファイル・ベースのバックアップを使用することをお勧めします。詳しくは、[File based backup in vSphere 6.7](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.install.doc/GUID-8A16C037-F1E0-40C9-B106-05C30625B9CB.html){:new_window} を参照してください。
+2. PSC をバックアップします。  ファイル・ベースのバックアップを使用することをお勧めします。 詳しくは、[File based backup in vSphere 6.7](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.install.doc/GUID-8A16C037-F1E0-40C9-B106-05C30625B9CB.html){:new_window} を参照してください。
 3. ``<VCSA 6.7 iso mount>:&#xa5;vcsa-converge-cli&#xa5;templates&#xa5;converge`` ディレクトリーに移動します。
 4. ``converge.json`` ファイルをジャンプ VM のローカル・ドライブにコピーします。
   * 最初の PSC を統合するときには、``json`` ファイルの**「replication」**セクションを削除します。
@@ -197,7 +197,7 @@ vCenter FQDN/IP を指定します。
    2. プロセスが完了したら、**Y** を入力して vCenter のリブートを確認します。
 
    コンバージ・プロセスが ``ERROR converge Failed to get vecs users and permissions`` というメッセージで失敗する場合、[Converge to embedded failed!](https://virtualtassie.com/2018/vcenter-6-7-update-1-converge-to-embedded-failed/#comment-3713){:new_window} でエラーを解決する手順を確認してください。
-{:note}
+   {:note}
 
 10. vCenter のリブートが完了したら、vCenter ユーザー・インターフェースにログインして正常に動作することを確認します。
 11. コマンド・ウィンドウで ``<VCSA 6.7 iso mount>:&#xa5;vcsa-converge-cli&#xa5;win32`` ディレクトリーにナビゲートします。
@@ -224,7 +224,7 @@ ESXi ホストを 6.7u1 レベルにアップグレードしてパッチを適�
 {: #vc_vsphere_upgrade-procedure-esxi-upgrade}
 
 1. vCenter ユーザー・インターフェースで、アップグレードする ESXi ホストが含まれているクラスターにナビゲートします。
-2. ナビゲーション・パネルで**「更新」**タブをクリックします。「ホスト更新 (host updates)」に移動し、**「アタッチ (Attach)」**をクリックします。
+2. ナビゲーション・パネルで**「更新」**タブをクリックします。 「ホスト更新 (host updates)」に移動し、**「アタッチ (Attach)」**をクリックします。
 3. VUM にアップロードしたベースライン (ESXi アップグレード用の ISO イメージ) を選択し、**「修正」**をクリックします。
 4. エンド・ユーザー使用許諾契約書に同意して、**「OK」**をクリックします。
 5. 修正するホストを確認し、事前修正検査の結果を確かめます。
@@ -232,7 +232,7 @@ ESXi ホストを 6.7u1 レベルにアップグレードしてパッチを適�
    VM に接続されている CD または DVD を切り離す必要があります。切り離さないと、その VM を含むホストを保守モードにできません。
    {:note}
 
-6. 事前修正検査が正常に実行されたら、**「修正」**をクリックします。修正エンティティー・タスクでアップグレード・プロセスをモニターします。
+6. 事前修正検査が正常に実行されたら、**「修正」**をクリックします。 修正エンティティー・タスクでアップグレード・プロセスをモニターします。
 7. アップグレードの完了後、ホストの要約セクションで、``VMware ESXi, 6.7.0`` と表示されることを確認します。
 
 アップグレード・プロセスがすぐに失敗し、**「host cannot enter maintenance mode」**エラー・メッセージが表示された場合、Zerto ZVA をシャットダウンしてから、もう一度試してください。 各サーバーの修正が完了すると、ZVRA VM が自動的に始動します。 アップグレード・プロセス中に Zerto レプリケーションを継続する方法については、[How to Place a Host with an Associated VRA into Maintenance Mode](https://www.zerto.com/myzerto/knowledge-base/place-host-into-maintenance-mode-with-vra/){:new_window}を参照してください。
@@ -256,8 +256,8 @@ ESXi ホストを 6.7u1 レベルにアップグレードしてパッチを適�
 アップグレード後に、重要な ESXi ホスト・パッチおよび重要でない ESXi ホスト・パッチをすべて適用することが推奨されています。
 
 1. vCenter ユーザー・インターフェースで、パッチを実行するホストが含まれているクラスターを選択します。
-2. ナビゲーション・パネルで**「更新」**タブをクリックし、**「ホスト更新 (Host Updates)」**タブを選択します。**「重要度の高いホスト・パッチ (事前定義済み)」**を選択します。ESXi ホストをアップグレードする手順を繰り返します。
-3. ナビゲーション・パネルで**「更新」**タブをクリックし、**「ホスト更新 (Host Updates)」**タブを選択します。**「重要度の低いホスト・パッチ (事前定義済み)」**を選択します。ESXi ホストをアップグレードする手順を繰り返します。
+2. ナビゲーション・パネルで**「更新」**タブをクリックし、**「ホスト更新 (Host Updates)」**タブを選択します。 **「重要度の高いホスト・パッチ (事前定義済み)」**を選択します。 ESXi ホストをアップグレードする手順を繰り返します。
+3. ナビゲーション・パネルで**「更新」**タブをクリックし、**「ホスト更新 (Host Updates)」**タブを選択します。 **「重要度の低いホスト・パッチ (事前定義済み)」**を選択します。 ESXi ホストをアップグレードする手順を繰り返します。
 
 このプロセスの一環として、Zerto zVRA VM をもう一度シャットダウンしなければならない場合があります。
 {:note}
@@ -302,7 +302,7 @@ VMware ゲスト・ツールと同様に、vCenter Server 環境のアップグ�
 #### Intel Skylake への Enhanced vMotion Compatibility モードの設定
 {: #vc_vsphere_upgrade-procedure-addtl-evc}
 
-アップグレード後に、クラスターの Intel Skylake 世代のホストを Skylake Enhanced vMotion Compatibility (EVC) モードに設定できます。以下の手順を実行して、EVC モードを更新します。
+アップグレード後に、クラスターの Intel Skylake 世代のホストを Skylake Enhanced vMotion Compatibility (EVC) モードに設定できます。 以下の手順を実行して、EVC モードを更新します。
 
 1. ホストが含まれるクラスターから、**「構成」**をクリックします。
 2. **「VMware EVC」**で**「編集」**をクリックし、EVC モードを**「Intel "Skylake" 世代」**に変更します。
@@ -311,9 +311,9 @@ VMware ゲスト・ツールと同様に、vCenter Server 環境のアップグ�
 
 #### PSC を指すための NSX Manager と HCX Manager の再構成
 
-1. Web ブラウザーから NSX Manager アプライアンス・ユーザー・インターフェース (``https://<nsx-manager-ip>`` または ``https://<nsx-manager-hostname>``) に移動します。資格情報を使用してログインします。
+1. Web ブラウザーから NSX Manager アプライアンス・ユーザー・インターフェース (``https://<nsx-manager-ip>`` または ``https://<nsx-manager-hostname>``) に移動します。 資格情報を使用してログインします。
 2. ホーム・ページから、**「vCenter 登録の管理 (Manage vCenter Registration)」**をクリックします。
-3. **「ルックアップ・サービス URL (Lookup Service URL)」**を編集して、vCenter IP を指します。PSC スタンドアロンに関して、組み込みの**「PSC は次の対象は存続しない (PSC doesn ’t exist anymore)」**を使用します。
+3. **「ルックアップ・サービス URL (Lookup Service URL)」**を編集して、vCenter IP を指します。 PSC スタンドアロンに関して、組み込みの**「PSC は次の対象は存続しない (PSC doesn ’t exist anymore)」**を使用します。
 
 ## vCenter Server vSphere ソフトウェアをアップグレードした結果
 {: #vc_vsphere_upgrade-results}
@@ -327,7 +327,7 @@ VMware ゲスト・ツールと同様に、vCenter Server 環境のアップグ�
 5. リストされているホストとファームウェア更新の推奨情報をメモします。
 6. IBM サポートのチケットを開き、ファームウェア更新を実行するために各ホストのサービス停止時間をスケジュールします。
 
-アップグレードが完了したら、IBM サポートのチケットを更新します。 このアップグレード・プロセスで作成した新しいパスワードを入力します。例えば、サポート・チケットでパスワードを提供し、アプライアンス管理サービス、PSC と vCenter をデプロイします。その後、IBM サポートが {{site.data.keyword.vmwaresolutions_short}} コンソールと内部データベースを更新し、{{site.data.keyword.vmwaresolutions_short}} 自動化機能を 6.7 レベルで再開します。その一環として、サービス、ホスト、クラスター、セカンダリー vCenter Server インスタンスの追加と削除が実行されます。
+アップグレードが完了したら、IBM サポートのチケットを更新します。 このアップグレード・プロセスで作成した新しいパスワードを入力します。 例えば、サポート・チケットでパスワードを提供し、アプライアンス管理サービス、PSC と vCenter をデプロイします。 その後、IBM サポートが {{site.data.keyword.vmwaresolutions_short}} コンソールと内部データベースを更新し、{{site.data.keyword.vmwaresolutions_short}} 自動化機能を 6.7 レベルで再開します。 その一環として、サービス、ホスト、クラスター、セカンダリー vCenter Server インスタンスの追加と削除が実行されます。
 
 ## 関連リンク
 {: #vc_vsphere_upgrade-related}

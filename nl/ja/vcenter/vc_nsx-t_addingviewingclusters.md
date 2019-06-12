@@ -28,7 +28,7 @@ VMware vCenter Server with NSX-T インスタンスに独自のクラスター�
 ### クラスターを追加する前に
 {: #vc_nsx-t_addingviewingclusters-before-add}
 
-* VMware vSphere Web クライアントで加えた変更は {{site.data.keyword.vmwaresolutions_short}} コンソールと同期されないので、可能な限り、{{site.data.keyword.vmwaresolutions_full}} コンソールを使用してクラスターを追加してください。つまり、オンプレミスのクラスター、または {{site.data.keyword.vmwaresolutions_short}} コンソールで管理できない、あるいは管理しないクラスターの場合にのみ、クラスターを vCenter Server に追加してください。
+* 可能な限り、{{site.data.keyword.vmwaresolutions_full}} コンソールを使用してクラスターを追加してください。VMware vSphere Web Client で行った変更は {{site.data.keyword.vmwaresolutions_short}} コンソールと同期しないためです。 したがって、オンプレミス・クラスターの場合、または {{site.data.keyword.vmwaresolutions_short}} コンソールで管理できないまたは管理するつもりがないクラスターの場合のみ、vCenter Server にクラスターを追加してください。
 * 追加できるクラスター数の上限は、クラスター、ホスト、および仮想マシン (VM) の数によって決まります。 VMware のサイズ設定についてのガイドラインおよびデプロイに応じた上限を守る必要があります。 上限について詳しくは、[VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window} を参照してください。
 
 ### システム設定
@@ -85,9 +85,9 @@ vCenter Server with NSX-T インスタンスにクラスターを追加すると
 #### ベア・メタル・サーバーの数
 {: #vc_nsx-t_addingviewingclusters-adding-bare-metal-number}
 
-* 注文したサーバーはすべて同じ構成になります。
-* vSAN ストレージの場合、4 台から 59 台までのサーバーを注文できます。
-* NFS ストレージの場合、2 台から 59 台までのサーバーを注文できます。ただし、実動ワークロードには、少なくとも 3 台のサーバーが推奨されています。詳しくは、[2 ノードの vCenter Server インスタンスの可用性は高いですか?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-) を参照してください。
+* 注文するすべてのサーバーが同じ構成になります。
+* vSAN ストレージを使用する場合は、4 サーバーから 59 サーバーまで注文できます。
+* NFS ストレージを使用する場合は、2 サーバーから 59 サーバーまで注文できます。 ただし、実動ワークロード上、最低 3 サーバーをお勧めします。 詳しくは、[2 ノードの vCenter Server インスタンスの可用性は高いですか?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-) を参照してください。
 
 ### ストレージ設定
 {: #vc_nsx-t_addingviewingclusters-adding-storage-settings}
@@ -100,9 +100,9 @@ vCenter Server with NSX-T インスタンスにクラスターを追加すると
 以下の vSAN オプションを指定します。
 * **vSAN 容量ディスクのディスク・タイプとサイズ**: 必要な容量ディスクのオプションを選択します。
 * **vSAN 容量ディスクの数**: 追加する容量ディスク数を指定します。
-* 容量ディスクを上限の 10 個を超えて追加する場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。 このオプションでは、合計 12 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されますので、より少ない待ち時間とより高い IOPS スループットが求められるワークロードを扱うときに役立ちます。
+* 容量ディスクを上限の 10 個を超えて追加する場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。 このオプションを指定すると、合計 12 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されます。したがって、このオプションは、より少ない待ち時間とより高い IOPS スループットが求められるワークロードに有用です。
 
-  **「High-Performance Intel Optane」**オプションは、Skylake の CPU モデルでのみ使用できます。
+  **「High-Performance Intel Optane」**オプションは、Skylake CPU モデルでのみ使用できます。
   {:note}
 
 * **「Disk Type for vSAN Cache Disks」**および**「Number of vSAN Cache Disks」**の値を確認します。 これらの値は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けたかどうかによって異なります。
@@ -271,7 +271,7 @@ VLAN の詳細にアクセスするには**「リソースの表示」**をク�
 ### 削除する前に
 {: #vc_nsx-t_addingviewingclusters-deleting-prereq}
 
-* VMware vSphere Web クライアントで加えた変更は {{site.data.keyword.vmwaresolutions_short}} コンソールと同期されないので、可能な限り、{{site.data.keyword.vmwaresolutions_full}} コンソールを使用してクラスターを削除してください。つまり、オンプレミスのクラスター、または {{site.data.keyword.vmwaresolutions_short}} コンソールで管理できない、あるいは管理しないクラスターの場合にのみ、クラスターを vCenter Server から削除してください。
+* 可能な限り、{{site.data.keyword.vmwaresolutions_full}} コンソールを使用してクラスターを削除してください。VMware vSphere Web Client で行った変更は {{site.data.keyword.vmwaresolutions_short}} コンソールと同期しないためです。 したがって、オンプレミス・クラスターの場合、または {{site.data.keyword.vmwaresolutions_short}} コンソールで管理できないまたは管理するつもりがないクラスターの場合のみ、vCenter Server からクラスターを削除してください。
 * クラスターは一度に 1 つしか削除できません。 複数のクラスターを削除する場合は、順番に行う必要があります。 前のクラスターが削除されるまで待ってから、次のクラスターを削除してください。
 * クラスターを削除する前に、クラスター内のすべてのノードが電源オンの状態で作動可能であることを確認します。
 * クラスターを削除すると、クラスターのすべての VM も削除され、復旧できなくなります。 VM を保持したい場合は、他のクラスターに移行してください。

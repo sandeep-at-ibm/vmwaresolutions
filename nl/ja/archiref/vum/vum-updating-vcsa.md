@@ -26,7 +26,7 @@ PSC/VCSA は、vSphere Web Client ではなく、アプライアンス管理コ�
 更新する前に、アプライアンスのスナップショットまたは PSC/VCSA のバックアップを開始する必要があります。 すべてが予想どおりに機能することを確認してから、数日以内にスナップショットを削除して、パフォーマンスが低下しないようにします。 さらに、指定されたリリースに対する特定の指示を把握するため、アップグレードを試みる前に VMware リリース・ノートを参照してください。
 
 PSC/VCSA を更新するには、以下の手順を実行します。
-1. 更新をダウンロードするには、[VMware パッチのダウンロード・センター](https://www.vmware.com/patchmgr/findPatchByReleaseName.portal)にアクセスし、ログインして**「Search by Product」**メニューから VC を選択します。適切なパッチを選択して、**「Download」**をクリックします。
+1. 更新をダウンロードするには、[VMware パッチのダウンロード・センター](https://www.vmware.com/patchmgr/findPatchByReleaseName.portal)にアクセスし、ログインして**「Search by Product」**メニューから VC を選択します。 適切なパッチを選択して、**「Download」**をクリックします。
 2. vSphere Web Client を使用して、ISO ファイルを vCenter データ・ストア・リポジトリーにアップロードします。
 3. 更新 ISO ファイルを vCenter サーバーにマウントします。
 4. vCenter サーバーのスナップショットを取得します。

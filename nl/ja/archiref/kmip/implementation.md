@@ -24,7 +24,7 @@ subcollection: vmware-solutions
 KMIP for VMware on {{site.data.keyword.cloud_notm}} を使用して vSphere 暗号化または vSAN 暗号化を有効にするには、以下の作業を実行する必要があります。
 
 1. [IBM Cloud CLI を使用してアカウントでサービス・エンドポイントを使用できるようにします](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)。
-2. [IBM Key Protect](/docs/services/key-protect?topic=key-protect-getting-started-tutorial) または [IBM Cloud Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-get-started#get-started) を使用して、鍵マネージャー・インスタンスを作成します。Hyper Protect Crypto Services を使用する場合は、[暗号インスタンスを初期化して](/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-hsm)、Hyper Protect Crypto Services の鍵関連の機能を利用できるようにしてください。
+2. [IBM Key Protect](/docs/services/key-protect?topic=key-protect-getting-started-tutorial) または [IBM Cloud Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-get-started#get-started) を使用して鍵マネージャー・インスタンスを作成します。 Hyper Protect Crypto Services を使用している場合は、Hyper Protect Crypto Services が鍵関連機能を提供できるようにするため、必ず[暗号インスタンスを初期化](/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-hsm)します。
 3. 鍵マネージャー・インスタンスの中にカスタマー・ルート鍵 (CRK) を作成します。
 4. KMIP for VMware に使用する Identity and Access Management (IAM) の[サービス ID と API キー](/docs/iam?topic=iam-serviceidapikeys)を作成します。 このサービス ID に、鍵マネージャー・インスタンスに対するプラットフォームのビューアー・アクセス権限とサービスの書き込みアクセス権限を付与します。
 5. {{site.data.keyword.cloud_notm}} カタログから [KMIP for VMware](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering) インスタンスを作成します。

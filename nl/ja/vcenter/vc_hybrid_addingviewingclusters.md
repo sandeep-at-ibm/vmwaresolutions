@@ -28,7 +28,7 @@ VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle イ�
 ### クラスターを追加する前に
 {: #vc_hybrid_addingviewingclusters-before-add}
 
-* VMware vSphere Web クライアントで加えた変更は {{site.data.keyword.vmwaresolutions_short}} コンソールと同期されないので、可能な限り、{{site.data.keyword.vmwaresolutions_full}} コンソールを使用してクラスターを追加してください。つまり、オンプレミスのクラスター、または {{site.data.keyword.vmwaresolutions_short}} コンソールで管理できない、あるいは管理しないクラスターの場合にのみ、クラスターを vCenter Server に追加してください。
+* 可能であれば、{{site.data.keyword.vmwaresolutions_full}} コンソールを使用してクラスターを追加してください。これは、VMware vSphere Web Client で行った変更は、{{site.data.keyword.vmwaresolutions_short}} コンソールと同期されないためです。 したがって、オンプレミスのクラスター、または {{site.data.keyword.vmwaresolutions_short}} コンソールで管理できない、または管理しないクラスターに対してのみ、クラスターを vCenter Server に追加します。
 * V2.5 以降でデプロイ (または V2.5 以降にアップグレード) されたインスタンスの場合は、追加できるクラスター数の上限は、クラスター、ホスト、および VM の数によって決まります。 VMware のサイズ設定についてのガイドラインおよびデプロイに応じた上限を守る必要があります。 上限について詳しくは、[VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window} を参照してください。
 * V2.3 および V2.4 でデプロイ (または V2.3 および V2.4 にアップグレード) されたインスタンスの場合は、最大 10 個のクラスターを追加できます。
 
@@ -86,8 +86,8 @@ vCenter Server with Hybridity Bundle インスタンスにクラスターを追�
 #### ベア・メタル・サーバーの数
 {: #vc_hybrid_addingviewingclusters-adding-bare-metal-number}
 
-* 注文したサーバーはすべて同じ構成になります。
-* 4 台から 59 台までのサーバーを注文できます。
+* 注文したすべてのサーバーが同じ構成です。
+* 4 から 59 までのサーバーを注文できます。
 
 ### vSAN ストレージ設定
 {: #vc_hybrid_addingviewingclusters-adding-vsan-storage-settings}
@@ -97,7 +97,7 @@ vCenter Server with Hybridity Bundle インスタンスの注文には、VMware 
 * **vSAN 容量ディスクの数**: 追加する容量ディスク数を指定します。
 * 容量ディスクを上限の 10 個を超えて追加する場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。 このオプションでは、合計 12 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されますので、より少ない待ち時間とより高い IOPS スループットが求められるワークロードを扱うときに役立ちます。
 
-  **「High-Performance Intel Optane」**オプションは、Skylake の CPU モデルでのみ使用できます。
+  **「High-Performance Intel Optane」**オプションは、Skylake CPU モデルでのみ使用できます。
   {:note}
 
 * **「Disk Type for vSAN Cache Disks」**および**「Number of vSAN Cache Disks」**の値を確認します。 これらの値は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けたかどうかによって異なります。
@@ -235,7 +235,7 @@ IBM では、以下の VMware コンポーネントのライセンスを提供�
 ### 削除する前に
 {: #vc_hybrid_addingviewingclusters-deleting-prereq}
 
-* VMware vSphere Web クライアントで加えた変更は {{site.data.keyword.vmwaresolutions_short}} コンソールと同期されないので、可能な限り、{{site.data.keyword.vmwaresolutions_full}} コンソールを使用してクラスターを削除してください。つまり、オンプレミスのクラスター、または {{site.data.keyword.vmwaresolutions_short}} コンソールで管理できない、あるいは管理しないクラスターの場合にのみ、クラスターを vCenter Server から削除してください。
+* 可能であれば、{{site.data.keyword.vmwaresolutions_full}} コンソールを使用してクラスターを削除してください。これは、VMware vSphere Web Client で行った変更は、{{site.data.keyword.vmwaresolutions_short}} コンソールと同期されないためです。 したがって、オンプレミスのクラスター、または {{site.data.keyword.vmwaresolutions_short}} コンソールで管理できない、または管理しないクラスターに対してのみ、クラスターを vCenter Server から削除します。
 * クラスターは一度に 1 つしか削除できません。 複数のクラスターを削除する場合は、順番に削除する必要があります。つまり、前のクラスターが削除されるまで待ってから、次のクラスターを削除してください。
 * クラスターを削除する前に、クラスター内のすべてのノードが電源オンの状態で作動可能であることを確認します。
 * クラスターを削除すると、クラスターのすべての VM (仮想マシン) も削除され、復旧できなくなります。 VM を保持したい場合は、他のクラスターに移行してください。

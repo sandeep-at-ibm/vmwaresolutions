@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 
 このソリューションのアーキテクチャーは、VMware on {{site.data.keyword.cloud_notm}} インスタンスを保護するための KMIP on VMware アーキテクチャーについてのものです。 VMware ワークロードを保護するためのストレージ暗号化オプションは多数存在します。 KMIP for VMware は、VMware のネイティブの vSphere 暗号化および vSAN 暗号化と連携してシンプルなストレージ暗号化管理を実現するうえに、{{site.data.keyword.cloud_notm}} Key Protect または {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services でユーザーが鍵を管理できるようにしてセキュリティーと柔軟性も提供します。
 
-このソリューションは、{{site.data.keyword.cloud_notm}} の vCenter Server の追加コンポーネントであり、拡張機能と見なされます。 そのため、この資料では {{site.data.keyword.cloud_notm}} のこれらの基盤ソリューションの既存構成については説明しません。 基盤ソリューションのアーキテクチャーの詳細については、[VMware on {{site.data.keyword.cloud_notm}} のソリューション・アーキテクチャー](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)を参照してください。
+このソリューションは、{{site.data.keyword.cloud_notm}} の vCenter Server オファリングに対する追加コンポーネントであり、拡張機能と見なされます。 そのため、この資料では {{site.data.keyword.cloud_notm}} のこれらの基盤ソリューションの既存構成については説明しません。 基盤ソリューションのアーキテクチャーの詳細については、[VMware on {{site.data.keyword.cloud_notm}} のソリューション・アーキテクチャー](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)を参照してください。
 
 ## 主な利点
 {: #kmip-overview-benefits}
@@ -29,7 +29,7 @@ VMware ワークロードのためのストレージ暗号化ソリューショ�
 
 * VMware の vSAN 暗号化および vSphere 暗号化と一体化する。どちらの暗号化もストレージ層や仮想マシン層ではなくハイパーバイザー層で実施されます。 この手法により、ストレージ・ソリューションやアプリケーションで意識することなく、簡単な管理が可能になります。
 * 多数の {{site.data.keyword.cloud_notm}} マルチゾーン領域 (MZR) で提供されているフルマネージドの鍵管理サーバー。
-* VMware クラスターが {{site.data.keyword.cloud_notm}} Key Protect または {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services と一体化するので、完全にユーザーが鍵を管理できる。ユーザーはいつでも鍵を無効化できます。
+* VMware クラスターが {{site.data.keyword.cloud_notm}} Key Protect または {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services と一体化するので、完全にユーザーが鍵を管理できます。ユーザーはいつでも鍵を無効化できます。
 
 ## 関連リンク
 {: #kmip-overview-related}

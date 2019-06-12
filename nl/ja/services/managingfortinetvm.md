@@ -30,4 +30,4 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud}} サービスを管理
 * [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [よくある質問](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [fortinet.com Web サイト](https://www.fortinet.com/)
-* [Fortinet document library](https://docs.fortinet.com/product/fortigate/6.2)
+* [Fortinet 文書ライブラリー](https://docs.fortinet.com/product/fortigate/6.2)

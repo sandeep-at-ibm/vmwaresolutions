@@ -36,7 +36,7 @@ subcollection: vmware-solutions
   | vCenter Server ログイン・ユーザー名 | `<user_id>@<root_domain>` (Microsoft Active Directory ユーザー) または `administrator@vsphere.local` |
   | vCenter Server (PSC が組み込まれたもの) の FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`。最大長は 50 文字です。 |
   | シングル・サインオン (SSO) サイト名 | `<subdomain_label>` |
-  | 完全修飾 ESXi サーバー名 | `<host_prefix><n>.<subdomain_label>.<root_domain>`。`<n>` は ESXi サーバーの文字列です。最大長は 50 文字です。 |
+  | 完全修飾 ESXi サーバー名 | `<host_prefix><n>.<subdomain_label>.<root_domain>`。`<n>` は ESXi サーバーのシーケンスです。 最大長は 50 文字です。 |
 
 インスタンスの注文時およびデプロイ時に設定した値は変更しないでください。 変更すると、インスタンスを使用できなくなる可能性があります。 例えば、パブリック・ネットワークがシャットダウンしたり、プロビジョニング中にサーバーや仮想サーバー・インスタンス (VSI) が Vyatta の内側に移動したり、IBM CloudBuilder VSI が停止したり、削除されたりすることがあります。
 {:important}
@@ -124,8 +124,8 @@ vSAN 構成の場合、初期クラスターとデプロイメント後のクラ
 ### ベア・メタル・サーバーの数
 {: #vc_hybrid_orderinginstance-bare-metal-number}
 
-* 注文したサーバーはすべて同じ構成になります。
-* 4 台から 20 台までのサーバーを注文できます。
+* 注文したすべてのサーバーが同じ構成です。
+* 4 から 20 までのサーバーを注文できます。
 
 ## ストレージ設定
 {: #vc_hybrid_orderinginstance-storage-settings}
@@ -135,7 +135,7 @@ vCenter Server with Hybridity Bundle インスタンスの注文には、VMware 
 * **vSAN 容量ディスクの数**: 追加する容量ディスク数を指定します。
 * 容量ディスクを上限の 10 個を超えて追加する場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。 このオプションでは、合計 12 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されますので、より少ない待ち時間とより高い IOPS スループットが求められるワークロードを扱うときに役立ちます。
 
-  **「High-Performance Intel Optane」**オプションは、Skylake の CPU モデルでのみ使用できます。
+  **「High-Performance Intel Optane」**オプションは、Skylake CPU モデルでのみ使用できます。
   {:note}
 
 * **「Disk Type for vSAN Cache Disks」**および**「Number of vSAN Cache Disks」**の値を確認します。 これらの値は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けたかどうかによって異なります。
@@ -180,9 +180,9 @@ vCenter Server with Hybridity Bundle インスタンスを注文する際には�
 
 ネットワーク・インターフェース・カード (NIC) の有効化設定は、**「パブリック・ネットワークとプライベート・ネットワーク (Public and Private Network)」**と**「プライベート・ネットワークのみ」**のどちらを選択したかに基づきます。
 
-**「プライベート・ネットワークのみ」**オプションを選択した場合、以下のようになります。
-* VMware NSX Edge Services Gateways (ESG) は (管理サービス ESG とユーザー管理 ESG のどちらも) プロビジョンされません。
-* パブリック NIC を必要とする以下のアドオン・サービスは使用できません。
+**「プライベート・ネットワークのみ」**オプションを選択した場合:
+* VMware NSX Edge Services Gateways (ESG) はプロビジョンされません (管理サービス ESG もユーザー管理の ESG もプロビジョンされません)。
+* パブリック NIC を必要とする次のアドオン・サービスは利用できません。
   * F5 on {{site.data.keyword.cloud_notm}}
   * Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
   * Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
@@ -222,7 +222,7 @@ vCenter Server with Hybridity Bundle インスタンスを注文する際には�
 
 VM は 30 日以内に有効にしてください。
 
-Windows Server 2016 のライセンスの注文方法について詳しくは、[Get started with Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:new_window} を参照してください。
+Windows Server 2016 ライセンスの注文について詳しくは、[Windows Server 2016 の使用を開始する](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:new_window}を参照してください。
 
 ## サービスの設定
 {: #vc_hybrid_orderinginstance-addon-services}
@@ -253,7 +253,7 @@ vCenter Server with Hybridity Bundle インスタンスを注文するときに�
   2. **「Skylake」**または**「Broadwell」**の CPU モデルと **RAM** の容量を選択します。
 8. ストレージ構成を次の手順で実行します。 容量ディスクおよびキャッシュ・ディスクのディスク・タイプとディスク数を指定します。 さらにストレージが必要な場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。
 9. ネットワーク・インターフェース構成を行います。
-  1. プロビジョンするインスタンスのホスト名接頭部、サブドメイン・ラベル、およびルート・ドメイン・ネームを入力します。
+  1. プロビジョンされているインスタンスのホスト名接頭部、サブドメイン・ラベル、ルート・ドメイン・ネームを入力します。
   2. **「パブリック・ネットワークとプライベート・ネットワーク (Public and Private Network)」**と**「プライベート・ネットワークのみ」**のいずれかのネットワーク設定を選択します。
   3. VLAN 構成を選択します。
      *  新規のパブリック VLAN とプライベート VLAN を注文する場合は、**「新規 VLAN を注文」**をクリックします。

@@ -55,7 +55,7 @@ V2.4 リリースから、VMware Cloud Foundation on {{site.data.keyword.cloud_n
 * Dual Intel Skylake Xeon Gold 5120 プロセッサー / 合計 28 コア、2.2 GHz
 * Dual Intel Skylake Xeon Gold 6140 プロセッサー / 合計 36 コア、2.3 GHz
 
-詳しくは、[ベア・メタル・サーバーの設定](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vs_orderinginstances#vs_orderinginstances-bare-metal-settings)を参照してください。
+詳しくは、[ベアメタル・サーバーの設定](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vs_orderinginstances#vs_orderinginstances-bare-metal-settings)を参照してください。
 
 ## VMware vCenter Server インスタンスの更新
 {: #relnotes_v24-vcs}

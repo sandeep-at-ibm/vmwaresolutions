@@ -75,7 +75,7 @@ VMware インスタンスに対して {{site.data.keyword.cloud_notm}} が実行
 * ``<cluster_name> クラスターを使用する準備ができました。(The <cluster_name> cluster is ready to use.)``
 * ``新規クラスターを vCenter に追加しています... (Adding the new cluster into vCenter...)``
 * ``新規クラスターが vCenter に追加されました。(The new cluster is added to vCenter.)``
-* ``<cluster_name> のクラスター削除を開始しています... (Starting the cluster configuration for <cluster_name>...)``
+* ``<cluster_name> のクラスター削除を開始しています... (Starting the cluster deletion for <cluster_name>...)``
 * ``<cluster_name> クラスターを vCenter から削除しています... (Deleting the <cluster_name> cluster from vCenter...)``
 * ``<cluster_name> クラスターが vCenter から削除されました。(The <cluster_name> cluster is deleted from vCenter.)``
 * ``<cluster_name> クラスターが削除されました。(The <cluster_name> cluster is deleted.)``
