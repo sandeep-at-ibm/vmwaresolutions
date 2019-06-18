@@ -37,9 +37,9 @@ Vous pouvez ajouter le service FortiGate Virtual Appliance on {{site.data.keywor
 ## Commande de FortiGate Virtual Appliance on IBM Cloud pour des instances privées
 {: #fortinetvm_ordering-private}
 
-Lorsque vous commandez FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} pour des instances qui ne sont pas configurées avec des interfaces publiques, vous devez fournir un serveur proxy afin d'achever l'installation. Le serveur proxy HTTP doit être configuré et disponible via Virtual Routing and Forwarding (VRF) pour que l'installation de Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}} puisse démarrer. 
+Lorsque vous commandez FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} pour des instances qui ne sont pas configurées avec des interfaces publiques, vous devez fournir un serveur proxy afin d'achever l'installation. Le serveur proxy HTTP doit être configuré et disponible via Virtual Routing and Forwarding (VRF) pour que l'installation de Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}} puisse démarrer.
 
-Pour garantir une opération sans interruption, FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} doit avoir un accès permanent au serveur de licences Fortigate via Internet. 
+Pour garantir une opération sans interruption, FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} doit avoir un accès permanent au serveur de licences Fortigate via Internet.
 
 ## Configuration du service FortiGate Virtual Appliance on IBM Cloud
 {: #fortinetvm_ordering-config}

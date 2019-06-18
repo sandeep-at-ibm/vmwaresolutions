@@ -40,10 +40,10 @@ Lorsque vous commandez le service, indiquez les paramètres suivants :
 ## Déploiement de noeuds supplémentaires
 {: #icp_ordering-deploy-nodes}
 
-Si vous souhaitez déployer des noeuds supplémentaires, passez en revue les informations suivantes : 
-* Utilisez le modèle {{site.data.keyword.cloud_notm}} Private Ubuntu (Ubuntu1604) qui est déployé avec votre installation {{site.data.keyword.cloud_notm}} Private Hosted initiale. 
-* Pour trouver le modèle Ubuntu, dans le client Web VMware vSphere, accédez à l'onglet **VMs and Templates**, sous le dossier `cam`. 
-* Le mot de passe par défaut du modèle Ubuntu est `icponcloud`. Il est recommandé de changer ce mot de passe avant d'utiliser le modèle. 
+Si vous souhaitez déployer des noeuds supplémentaires, passez en revue les informations suivantes :
+* Utilisez le modèle {{site.data.keyword.cloud_notm}} Private Ubuntu (Ubuntu1604) qui est déployé avec votre installation {{site.data.keyword.cloud_notm}} Private Hosted initiale.
+* Pour trouver le modèle Ubuntu, dans le client Web VMware vSphere, accédez à l'onglet **VMs and Templates**, sous le dossier `cam`.
+* Le mot de passe par défaut du modèle Ubuntu est `icponcloud`. Il est recommandé de changer ce mot de passe avant d'utiliser le modèle.
 * {{site.data.keyword.vmwaresolutions_short}} ne prend pas en charge l'application des mises à jour et correctifs pour les composants Ubuntu. Vous devez surveiller et appliquer ces mises à jour vous-même.
 
 ## Liens connexes

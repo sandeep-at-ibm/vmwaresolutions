@@ -93,7 +93,8 @@ Avant de commencer la mise à niveau, sauvegardez chaque composant.
 * Pour lire les remarques additionnelles sur la sauvegarde de vCenter Server et des PSC, voir [Sauvegarde de niveau fichier vCenter](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_backingup#solution_backingup-vcenter).
 *	Pour obtenir des informations sur la sauvegarde NSX, voir [Backing Up NSX Manager Data](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window}.
 
-Il est recommandé d'utiliser la sauvegarde de niveau fichier. La sauvegarde de niveau image (via vSphere Data Protection) n'est pas prise en charge dans VMware vSphere 6.7.{:note}
+Il est recommandé d'utiliser la sauvegarde de niveau fichier. La sauvegarde de niveau image (via vSphere Data Protection) n'est pas prise en charge dans VMware vSphere 6.7.
+{:note}
 
 ## Procédure de mise à niveau du logiciel IBM vCenter Server vSphere de 6.5 à 6.7
 {: #vc_vsphere_upgrade-procedure}
@@ -103,7 +104,7 @@ Si vous rencontrez un problème à n'importe quel moment du processus de mise à
 **Important** :
 
 * Vous devez utiliser ce chemin d'accès pour vous assurer que {{site.data.keyword.vmwaresolutions_short}} fournit au support VMware toutes les informations nécessaires sur la conception et la configuration de vCenter Server ainsi que sur {{site.data.keyword.cloud_notm}}. Si vous suivez ce processus pour vous assurer que des informations précises sont partagées avec le support VMware, la durée de l'assistance sera plus courte. Une fois que le support IBM fournit les informations nécessaires au support VMware, vous pouvez interagir directement avec le support VMware si nécessaire.
-* Prenez soin de conserver une trace de tous les nouveaux mots de passe et de toutes les nouvelles données d'identification que vous créez dans le cadre de ce processus de mise à niveau. Le support IBM a besoin de ces données d'identification à la fin du processus de mise à niveau pour mettre à jour sa base de données interne. 
+* Prenez soin de conserver une trace de tous les nouveaux mots de passe et de toutes les nouvelles données d'identification que vous créez dans le cadre de ce processus de mise à niveau. Le support IBM a besoin de ces données d'identification à la fin du processus de mise à niveau pour mettre à jour sa base de données interne.
 
 ### Mise à niveau de VMware NSX
 {: #vc_vsphere_upgrade-procedure-nsx}
@@ -172,7 +173,7 @@ Pour les instances liées à vCenter Server, bien qu'il soit recommandé de mett
     2. Utilisez la commande shell **passwd** pour définir un nouveau mot de passe root pour le PSC et vCenter.
     3. Sauvegardez les mots de passe qui ont été affichés sur la console {{site.data.keyword.vmwaresolutions_short}} ou qui vous ont été fournis par le support IBM. Ces mots de passe seront réutilisés ultérieurement lors de la mise à niveau des dispositifs.
 2. Utilisez la fonction de montage d'ISO intégrée de Windows pour monter l'ISO de vCenter 6.7u1b dans votre jumpbox.
-3. Suivez les instructions VMware pour mettre à niveau vCenter. Pour plus d'informations, voir la publication suivante : [Mettre à niveau une instance de vCenter Server Appliance 6.0 ou 6.5 avec vCenter Single Sign-On externe ou une instance de Platform Services Controller au moyen de l'interface utilisateur graphique](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html). Les instructions VMware ressemblent à celles relatives au processus de mise à niveau de PSC. Toutefois, au lieu de pointer vers le PSC, vous pointez vers le FQDN/l'adresse IP vCenter pour le processus de mise à niveau. 
+3. Suivez les instructions VMware pour mettre à niveau vCenter. Pour plus d'informations, voir la publication suivante : [Mettre à niveau une instance de vCenter Server Appliance 6.0 ou 6.5 avec vCenter Single Sign-On externe ou une instance de Platform Services Controller au moyen de l'interface utilisateur graphique](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html). Les instructions VMware ressemblent à celles relatives au processus de mise à niveau de PSC. Toutefois, au lieu de pointer vers le PSC, vous pointez vers le FQDN/l'adresse IP vCenter pour le processus de mise à niveau.
 
 **Remarques** :
 * Cette publication indique que **Vous devez exécuter la mise à niveau de l'interface utilisateur graphique depuis une machine Windows, Linux ou Mac située sur le même réseau que le dispositif à mettre à niveau**. Ces instructions s'appliquent à tous les sous-réseaux compris dans votre {{site.data.keyword.cloud_notm}} dans votre compte.
@@ -207,7 +208,8 @@ Pour les instances liées à vCenter Server, bien qu'il soit recommandé de mett
 ### Mise à niveau des hôtes ESXi
 {: #vc_vsphere_upgrade-procedure-esxi}
 
-La fonction VMware Update Manager de vCenter est utilisée pour mettre à niveau et corriger les hôtes ESXi au niveau 6.7u1. Comme dans la section de mise à niveau de NSX de ce document, toute machine virtuelle qui ne peut effectuer une vMotion vers un autre hôte doit être arrêtée sans problème, sinon, cela peut entraîner le blocage du processus de mise à niveau.{:note}
+La fonction VMware Update Manager de vCenter est utilisée pour mettre à niveau et corriger les hôtes ESXi au niveau 6.7u1. Comme dans la section de mise à niveau de NSX de ce document, toute machine virtuelle qui ne peut effectuer une vMotion vers un autre hôte doit être arrêtée sans problème, sinon, cela peut entraîner le blocage du processus de mise à niveau.
+{:note}
 
 #### Téléchargement de l'ISO ESXi dans VUM
 {: #vc_vsphere_upgrade-procedure-esxi-iso}
@@ -224,13 +226,13 @@ La fonction VMware Update Manager de vCenter est utilisée pour mettre à niveau
 2. Cliquez sur l'onglet **updates** dans le panneau de navigation. Accédez aux mises à jour d'hôte, puis cliquez sur **Attach**.
 3. Sélectionnez la base de référence (image ISO pour mise à niveau ESXi) que vous avez téléchargée dans VUM et cliquez sur **Remediate**.
 4. Acceptez le contrat de licence de l'utilisateur final et cliquez sur **OK**.
-5. Passez en revue les hôtes qui doivent être résolus et confirmez les résultats de la vérification avant résolution. 
+5. Passez en revue les hôtes qui doivent être résolus et confirmez les résultats de la vérification avant résolution.
 
    Vous devez déconnecter les CD ou les DVD connectés aux machines virtuelles sinon l'hôte qui contient cette machine virtuelle n'est pas autorisé à entrer en mode maintenance.
    {:note}
 
 6. Une fois que la vérification avant résolution a abouti, cliquez sur **Remediate**. Surveillez le processus de mise à niveau avec la tâche d'entité remediate.
-7. Une fois la mise à niveau terminée, examinez la section récapitulative de l'hôte pour vérifier que ``VMware ESXi, 6.7.0`` s'affiche bien. 
+7. Une fois la mise à niveau terminée, examinez la section récapitulative de l'hôte pour vérifier que ``VMware ESXi, 6.7.0`` s'affiche bien.
 
 Si le processus de mise à niveau échoue immédiatement et affiche le message d'erreur **host cannot enter maintenance mode** arrêtez les machines virtuelles ZVRA Zerto et réessayez. Les machines virtuelles ZVRA démarrent automatiquement lorsque chaque serveur sort de la résolution. Pour obtenir des informations sur la poursuite de la réplication Zerto pendant le processus de mise à niveau, voir [How to Place a Host with an Associated VRA into Maintenance Mode](https://www.zerto.com/myzerto/knowledge-base/place-host-into-maintenance-mode-with-vra/){:new_window}.
 {:note}
@@ -252,11 +254,12 @@ Localisez l'image dans le référentiel de correctifs en tant qu'une extension d
 
 Après la mise à niveau, il est recommandé d'appliquer tous les correctifs d'hôtes ESXi critiques et non critiques.
 
-1. Dans l'interface utilisateur de vCenter, sélectionnez le cluster contenant les hôtes auxquels un correctif doit être appliqué. 
-2. Cliquez sur l'onglet **updates** dans le panneau de navigation et sélectionnez l'onglet **Host Updates**. Sélectionnez **Critical Host Patches (Predefined)**. Répétez la procédure pour mettre à niveau les hôtes ESXi. 
-3. Cliquez sur l'onglet **updates** dans le panneau de navigation et sélectionnez l'onglet **Host Updates**. Sélectionnez **Non-Critical Host Patches (Predefined)**. Répétez la procédure pour mettre à niveau les hôtes ESXi. 
+1. Dans l'interface utilisateur de vCenter, sélectionnez le cluster contenant les hôtes auxquels un correctif doit être appliqué.
+2. Cliquez sur l'onglet **updates** dans le panneau de navigation et sélectionnez l'onglet **Host Updates**. Sélectionnez **Critical Host Patches (Predefined)**. Répétez la procédure pour mettre à niveau les hôtes ESXi.
+3. Cliquez sur l'onglet **updates** dans le panneau de navigation et sélectionnez l'onglet **Host Updates**. Sélectionnez **Non-Critical Host Patches (Predefined)**. Répétez la procédure pour mettre à niveau les hôtes ESXi.
 
-Vous devrez peut-être arrêter à nouveau les machines virtuelles zVRA Zerto dans le cadre de ce processus.{:note}
+Vous devrez peut-être arrêter à nouveau les machines virtuelles zVRA Zerto dans le cadre de ce processus.
+{:note}
 
 ### Mise à niveau des éléments additionnels
 {: #vc_vsphere_upgrade-procedure-addtl}
@@ -307,9 +310,9 @@ Pour plus d'informations, voir [Enhanced vMotion Compatibility (EVC) processor s
 
 #### Reconfiguration du gestionnaire NSX et du gestionnaire HCX pour qu'ils pointent vers le PSC
 
-1. A partir d'un navigateur Web, accédez à l'interface utilisateur du gestionnaire NSX (``https://<nsx-manager-ip>`` ou ``https://<nsx-manager-hostname>``). Connectez-vous à l'aide de vos données d'identification. 
+1. A partir d'un navigateur Web, accédez à l'interface utilisateur du gestionnaire NSX (``https://<nsx-manager-ip>`` ou ``https://<nsx-manager-hostname>``). Connectez-vous à l'aide de vos données d'identification.
 2. Sur la page d'accueil, cliquez sur **Manage vCenter Registration**.
-3. Editez la zone **Lookup Service URL** pour que son contenu pointe vers l'adresse IP vCenter. La version autonome intégrée de PSC **n'existe plus**. 
+3. Editez la zone **Lookup Service URL** pour que son contenu pointe vers l'adresse IP vCenter. La version autonome intégrée de PSC **n'existe plus**.
 
 ## Résultats de la mise à niveau du logiciel vCenter Server vSphere
 {: #vc_vsphere_upgrade-results}

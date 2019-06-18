@@ -31,7 +31,7 @@ L'architecture de Caveonix RiskForesight comporte quatre couches :
   - La possibilité pour un utilisateur d'interagir visuellement avec les données pour identifier rapidement les actifs à risque, en fonction des priorités de risque.
   - Des graphiques, des métriques et des filtres faciles à utiliser pour mieux comprendre les risques identifiés.
   - Une exploration interactive pour approfondir les informations sur les flux de données d'application, les vulnérabilités ou les problèmes de configuration entre les sites, les organisations, les applications et les actifs.
-  - La possibilité pour l'utilisateur de développer une connaissance complète de la pile opérationnelle qui comprend l'infrastructure, la plate-forme, l'application et les données.
+  - La possibilité pour l'utilisateur de développer une connaissance complète de la pile opérationnelle qui comprend l'infrastructure, la plateforme, l'application et les données.
   - La capacité de visualiser et d'appliquer des stratégies de segmentation des réseaux, des machines virtuelles ou des applications dans le cloud hybride.
 
 ## Zones

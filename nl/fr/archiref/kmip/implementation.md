@@ -37,7 +37,7 @@ Pour activer le chiffrement vSphere ou le chiffrement vSAN à l'aide de KMIP for
 
 Pour utiliser le chiffrement vSAN, éditez les paramètres généraux vSAN dans votre cluster vCenter et sélectionnez la case à cocher du chiffrement.
 
-Le diagnostic d'intégrité vSAN peut générer des avertissement périodiques indiquant l'impossibilité de se connecter au cluster KMS depuis un ou plusieurs de vos hôtes vSphere. Ces avertissements se produisent parce que le diagnostic d'intégrité vSAN dépasse le délai d'attente trop rapidement. Vous pouvez ignorer ces avertissements. Pour plus d'informations, voir [vSAN KMS Health Check intermittently fails with SSL Handshake Timeout error](https://kb.vmware.com/s/article/67115){:new_window}.
+Le bilan de santé vSAN peut générer des avertissements périodiques indiquant l'impossibilité de se connecter au cluster KMS depuis un ou plusieurs de vos hôtes vSphere. Ces avertissements se produisent parce que le bilan de santé vSAN dépasse le délai d'attente trop rapidement. Vous pouvez ignorer ces avertissements. Pour plus d'informations, voir [vSAN KMS Health Check intermittently fails with SSL Handshake Timeout error](https://kb.vmware.com/s/article/67115){:new_window}.
 {:note}
 
 Pour utiliser le chiffrement vSphere, éditez vos règles de stockage de machine virtuelle pour demander le chiffrement de disque.

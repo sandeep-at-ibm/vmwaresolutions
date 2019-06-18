@@ -46,7 +46,7 @@ Tableau 1. Valeurs de déploiement
 |:--------- |:-------------- |:------ |
 | UC du proxy | 1 vCPU | Squid n'a pas de configuration requise minimale |
 | Mémoire RAM du proxy | 2 Go | Squid n'a pas de configuration requise minimale |
-| Disque du proxy | 25 Go | Squid n'a pas de configuration requise minimale |
+| Disque du proxy | 25 | Squid n'a pas de configuration requise minimale |
 | Nom d'hôte | Proxy01 | |
 | Adresse | IP proxy | Une Adresse IP de secours doit être utilisée à partir du sous-réseau portable privé du client affectée lors du processus de mise à disposition. Seules deux adresses IP ont été réservées sur ce sous-réseau ; l'une pour le routeur BCR et l'autre pour le dispositif ESG du client (customer-esg)
 | Masque de réseau | 255.255.255.192 | |
@@ -209,7 +209,7 @@ Configurez VUM pour utiliser le serveur proxy afin d'accéder aux référentiels
 2. Sélectionnez l'onglet **Manage** et cliquez sur **Settings**.
 3. Sélectionnez **Download Settings**, puis sous _Proxy settings_, cliquez sur **Edit**.
 4. Cochez la case **Use Proxy** et entrez l'_adresse IP du serveur proxy_ et le _port 3128_, puis cliquez sur **OK**. La zone Connectivity Status passe à _Validating_ puis à _Connected_.
-    **Remarque** : ne vous inquiétez pas si vous recevez le message ``Some URLs have been accessed successfully, but others are inaccessible`` pendant le test de la connexion au serveur proxy. 
+    **Remarque** : ne vous inquiétez pas si vous recevez le message ``Some URLs have been accessed successfully, but others are inaccessible`` pendant le test de la connexion au serveur proxy.
 5. Cliquez sur **Download Now**. Dans le panneau _Recent Tasks_, vous devez voir que cette activité est terminée.
 6. Si cette activité échoue, redémarrez le dispositif vCSA (vCenter Server Appliance) :
   1. Connectez-vous à l'interface de gestion vCSA à l'adresse `https://vcsaFQDN:5480` en tant que **superutilisateur**.

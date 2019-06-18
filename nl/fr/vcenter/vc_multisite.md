@@ -48,7 +48,7 @@ Le modèle de configuration multisite utilise un concentrateur et une topologie 
 Si votre configuration nécessite un déploiement multisite de plus de 128 serveurs ESXi, contactez le support IBM pour obtenir de l'aide. Pour plus d'informations, voir [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
 {:note}
 
-Le graphique suivant décrit l'architecture globale d'un déploiement multisite de vCenter Server. 
+Le graphique suivant décrit l'architecture globale d'un déploiement multisite de vCenter Server.
 
 ![Déploiement multisite de vCenter Server](../images/multisite-hub-spoke.svg "Déploiement multisite de vCenter Server")
 

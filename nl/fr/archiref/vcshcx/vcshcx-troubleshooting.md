@@ -55,7 +55,7 @@ Si des correctifs et des mises à jour ont été appliqués aux gestionnaires HC
 7. Quittez l'interface `ccli` et connectez-vous via SSH à l'adresse IP du composant de flotte activé pour SSH.
 9. Poursuivez le traitement des incidents.
 10. Retournez à l'interface `ccli` et désactivez le service `ssh` pour le composant.
-11. Si nécessaire, utilisez la commande ccli `hc` pour exécuter un diagnostic d'intégrité sur les composants.
+11. Si nécessaire, utilisez la commande ccli `hc` pour exécuter un bilan de santé sur les composants.
 
 ## Problèmes de compatibilité du matériel de destination
 {: #vcshcx-troubleshooting-hw-compatibility}

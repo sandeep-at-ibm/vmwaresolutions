@@ -51,7 +51,7 @@ Tableau 1. Autorisations requises pour le compte d'infrastructure {{site.data.ke
 ## VRF avec noeuds finaux de service activés
 {: #slaccountrequirement-vrf-se}
 
-Votre compte d'infrastructure {{site.data.keyword.cloud_notm}} doit être un compte VRF (Virtual Routing and Forwarding). Si votre compte n'est pas de type VRF, vous devez le convertir en un compte VRF. Il est également recommandé d'activer votre compte VRF pour utiliser des noeuds finaux de service. 
+Votre compte d'infrastructure {{site.data.keyword.cloud_notm}} doit être un compte VRF (Virtual Routing and Forwarding). Si votre compte n'est pas de type VRF, vous devez le convertir en un compte VRF. Il est également recommandé d'activer votre compte VRF pour utiliser des noeuds finaux de service.
 
 Pour plus d'informations, voir :
 * [Présentation de VRF on IBM Cloud](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)

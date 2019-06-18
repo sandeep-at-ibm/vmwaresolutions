@@ -253,7 +253,7 @@ IBM Cloud for VMware Solutions
         vmonic/audit_messages.md
 
     {: .topicgroup}
-    Architecture IBM Cloud for VMware Solutions (avec NSX-V et NSX-T)
+    Architecture de solution (avec NSX-V et NSX-T)
         archiref/solution/solution_overview.md
         archiref/solution/design_overview.md
         archiref/solution/design_physicalinfrastructure.md
@@ -267,7 +267,26 @@ IBM Cloud for VMware Solutions
         archiref/solution/appendix.md
 
     {: .topicgroup}
-    Stockage connecté pour vCenter Server on IBM Cloud
+    Gestion des opérations
+        archiref/opsmgmt/opsmgmt-intro.md
+        archiref/opsmgmt/opsmgmt-arch.md
+        archiref/opsmgmt/opsmgmt-vrops.md
+        archiref/opsmgmt/opsmgmt-vrli.md
+        archiref/opsmgmt/opsmgmt-vrni.md
+        archiref/opsmgmt/opsmgmt-vum.md
+        archiref/opsmgmt/opsmgmt-integration.md
+
+    {: .topicgroup}
+    Procédures opérationnelles de jour 2
+        archiref/opsprocs/opsprocs-intro.md
+        archiref/opsprocs/opsprocs-configure.md
+        archiref/opsprocs/opsprocs-alarms.md
+        archiref/opsprocs/opsprocs-proactive.md
+        archiref/opsprocs/opsprocs-trouble.md
+        archiref/opsprocs/opsprocs-compliance.md
+
+    {: .topicgroup}
+    Stockage connecté pour vCenter Server on IBM Cloud architecture
         archiref/attached-storage/storage-benefits.md
         archiref/attached-storage/storage-infra-design.md
         archiref/attached-storage/storage-infra-mgmt.md

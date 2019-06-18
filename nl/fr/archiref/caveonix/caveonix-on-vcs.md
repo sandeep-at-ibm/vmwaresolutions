@@ -50,7 +50,7 @@ Les principaux avantages apportés par Caveonix RiskForesight on IC4VS sont les 
 -	Elaborer et appliquer des politiques de sécurité et de conformité basées sur un moteur d'analyse prédictive qui utilise les flux de trafic réseau dans toutes les applications.
 -	Identifier rapidement les actions nécessaires pour éliminer les risques liés aux cyber-menaces, aux vulnérabilités ou aux configurations non conformes.
 -	Gérer de manière proactive les risques globaux dans le cloud hybride avant qu'ils ne puissent être utilisés.
--	Maintenir une compréhension globale des vulnérabilités de la charge de travail et des problèmes de configuration au niveau de l'infrastructure, de la plate-forme et des applications dans le contexte des menaces et des exigences de conformité.
+-	Maintenir une compréhension globale des vulnérabilités de la charge de travail et des problèmes de configuration au niveau de l'infrastructure, de la plateforme et des applications dans le contexte des menaces et des exigences de conformité.
 -	Permettre à l'entreprise de mettre en œuvre le cadre proactif de gestion du risque du National Institute of Standards and Technology (NIST).
 
 ## Liens connexes

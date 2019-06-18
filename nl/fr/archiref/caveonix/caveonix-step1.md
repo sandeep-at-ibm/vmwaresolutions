@@ -42,7 +42,7 @@ Caveonix RiskForesight offre trois modèles de déploiement :
   -	Le magasin de données relationnel est déployé dans un modèle principal/secondaire.
   -	Le magasin de données de messagerie est déployé dans un cluster.
   -	Le magasin de données d'index est déployé avec des noeuds de données et des noeuds maître.
-  -	Le nombre de nœuds de données utilisés pour la mise à l'échelle augmente à mesure que le nombre d'actifs augmente.
+  -	Le nombre de noeuds de données utilisés pour la mise à l'échelle augmente à mesure que le nombre d'actifs augmente.
 
 Tous les composants doivent avoir un nom de domaine complet FQDN et un DNS enregistré avant tout déploiement de machine virtuelle. Cette étape est réalisée par l'automatisation IBM Cloud for VMware Solutions lors du déploiement "tout-en-un" initial, mais elle doit être exécutée par vous-même lors de la mise à l'échelle du déploiement.
 

@@ -116,11 +116,11 @@ Les paramètres vSAN sont définis selon les meilleures pratiques relatives au d
 ## Stockage NFS connecté
 {: #design_virtualinfrastructure-nfs-storage}
 
-Lors de l'utilisation du stockage connecté au réseau NFS, cette architecture prescrit l'utilisation de NFS v3 au lieu de NFS v4.1, car les migrations LIF de serveur NFS peuvent provoquer un temps d'attente excessif lorsque NFS v4.1 est utilisé. Chaque hôte vSphere est connecté au stockage NFS à l'aide de son nom d'hôte. 
+Lors de l'utilisation du stockage connecté au réseau NFS, cette architecture prescrit l'utilisation de NFS v3 au lieu de NFS v4.1, car les migrations LIF de serveur NFS peuvent provoquer un temps d'attente excessif lorsque NFS v4.1 est utilisé. Chaque hôte vSphere est connecté au stockage NFS à l'aide de son nom d'hôte.
 
-Un magasin de données NFS 2 To est connecté à un cluster pour être utilisé par des composants de gestion avec un niveau de performance de IOPS/Go. D'autres magasins de données peuvent être connectés à un cluster pour l'utilisation de charge de travail, à différentes tailles et différents niveaux de performance. 
+Un magasin de données NFS 2 To est connecté à un cluster pour être utilisé par des composants de gestion avec un niveau de performance de IOPS/Go. D'autres magasins de données peuvent être connectés à un cluster pour l'utilisation de charge de travail, à différentes tailles et différents niveaux de performance.
 
-De plus, cette architecture requiert que tous les hôtes disposent d'une route de sous-réseau créée pour le sous-réseau sur lequel réside le stockage NFS. Cette route de sous-réseau a pour objet de diriger tout le trafic NFS afin d'utiliser le groupe de ports, le sous-réseau et le VLAN conçus pour le trafic NFS. Si plusieurs magasins de données NFS sont connectés, il peut être nécessaire de configurer plusieurs routes car ces magasins de données peuvent se trouver dans différents sous-réseaux distants. 
+De plus, cette architecture requiert que tous les hôtes disposent d'une route de sous-réseau créée pour le sous-réseau sur lequel réside le stockage NFS. Cette route de sous-réseau a pour objet de diriger tout le trafic NFS afin d'utiliser le groupe de ports, le sous-réseau et le VLAN conçus pour le trafic NFS. Si plusieurs magasins de données NFS sont connectés, il peut être nécessaire de configurer plusieurs routes car ces magasins de données peuvent se trouver dans différents sous-réseaux distants.
 
 Les machines virtuelles de gestion peuvent se trouver sur un magasin de données NFS. Cela crée un problème d'amorçage car certaines des machines de gestion peuvent être responsables des services DNS qui sont utilisés pour résoudre le nom d'hôte NFS. Par conséquent, cette architecture spécifie qu'au moins l'une des adresses IP pour le magasin de données de gestion doit être codée en dur dans `/etc/hosts` sur chacun des hôtes.
 
@@ -133,7 +133,7 @@ Le stockage par blocs d'{{site.data.keyword.cloud_notm}} Endurance prend en char
 
 Un numéro d'unité logique iSCSI de 2 To est connecté au cluster vSphere pour l'utilisation des composants de gestion, et un minimum d'un numéro d'unité logique iSCSI supplémentaire est configuré pour l'utilisation des charges de travail du client. Ce stockage est formaté comme un système de fichiers VMFS 6.x pour chaque numéro d'unité logique.
 
-Cette architecture spécifie l'utilisation de la liaison de ports iSCSI, d'une politique circulaire pour le multi-accès, d'un nombre maximal de lignes de la file d'attente fixé à 64 et d'une limite IOPS circulaire égale à 1. 
+Cette architecture spécifie l'utilisation de la liaison de ports iSCSI, d'une politique circulaire pour le multi-accès, d'un nombre maximal de lignes de la file d'attente fixé à 64 et d'une limite IOPS circulaire égale à 1.
 
 ### Configuration de réseau virtuel pour iSCSI
 {: #design_virtualinfrastructure-setup-iscsi}

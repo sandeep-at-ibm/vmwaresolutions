@@ -39,7 +39,7 @@ Une clé d'enregistrement à usage unique est également fournie. Utilisez les �
 1. Téléchargez le fichier OVA du client HCX (entreprise) du lien fourni dans l'interface HCX du côté client.
     1. Connectez-vous à l'interface utilisateur du HCX côté cloud à l'aide de l'interface utilisateur d'enregistrement de HCX fournie par IBM.
     2. Utilisez l'ID et le mot de passe de cloud vCenter pour vous connecter à l'interface utilisateur.
-    3. Sur l'onglet **Administration**, sélectionnez **request download link** pour télécharger le fichier OVA côté client. Utilisez la "boîte de saut" qui est locale au vCenter source où l'OVA est déployé pour compléter cette étape.
+    3. Sur l'onglet **Administration**, sélectionnez **request download link** pour télécharger le fichier OVA côté client. Utilisez la jumpbox qui se trouve sur le vCenter source où l'OVA est déployé pour effectuer cette étape.
 2. Connectez-vous au client C++ vSphere (ou au client web avec le snap-in d'intégration client fonctionnel) et importez l'OVA qui utilise l'assistant d'importation de vCenter.
     1. Assurez-vous que le réseau sur lequel le gestionnaire HCX est configuré a accès à la fois au vCenter source et à Internet.  
     2. Entrez la clé d'enregistrement lorsque vous y êtes invité. (Utilisez le client Web si vous avez configuré le snap-in d'outils client.)  
