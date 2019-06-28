@@ -98,7 +98,7 @@ Tabelle 7. Poolkonfiguration für NSX Edge - Pooldetails
 ## HCX-Manager
 {: #hcx-archi-target-hcxm}
 
-Die HCX-Manager-Komponente ist die erste Appliance, die bereitgestellt wird, nachdem die NSX Edge-Appliances für das Ziel konfiguriert wurden. Diese Appliance wird als Hauptschnittstelle zur Cloud-Umgebung für die Quellenkomponenten verwendet und bildet eine abstrahierte Netzbenutzerschnittstelle, die zum Hinzufügen, Bearbeiten und Löschen von Netzen sowie zum Entwerfen und Konfigurieren von Routing ohne direkte Verwendung von NSX verwendet werden kann. Als Ergebnis der Integration von vCenter und NSX wird der HCX-Manager-Appliance eine private portierbare IP-Adresse im Management-VLAN zugeordnet.
+Die HCX-Manager-Komponente ist die erste Appliance, die bereitgestellt wird, nachdem die NSX Edge-Appliances für das Ziel konfiguriert wurden. Diese Appliance wird als Hauptschnittstelle zur Cloudumgebung für die Quellenkomponenten verwendet und bildet eine abstrahierte Netzbenutzerschnittstelle, die zum Hinzufügen, Bearbeiten und Löschen von Netzen sowie zum Entwerfen und Konfigurieren von Routing ohne direkte Verwendung von NSX verwendet werden kann. Als Ergebnis der Integration von vCenter und NSX wird der HCX-Manager-Appliance eine private portierbare IP-Adresse im Management-VLAN zugeordnet.
 
 Darüber hinaus wird sie für den Zugriff auf vCenter und NSX mit einem bestimmten Benutzer konfiguriert. Es ist unbedingt zu beachten, dass die IP-Adresse des HCS-Managers mit der IP-Adresse identisch ist, die in der NSX Edge-Instanz für den Lastausgleich verwendet wird.
 

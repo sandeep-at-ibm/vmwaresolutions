@@ -70,7 +70,7 @@ Weitere Informationen finden Sie in den folgenden Abschnitten:
 
 Die Benutzergruppe **ic4v-vCenter** wurde auf dem Microsoft Active Directory-Server erstellt und den globalen Berechtigungen auf vCenter Server und Benutzergruppen für den NSX-Manager hinzugefügt. Die Gruppe enthält das Benutzerkonto **automation** für vCenter Server-Instanzen sowie servicespezifische Benutzerkonten für vCenter Server- und Cloud Foundation-Instanzen.
 
-Bearbeiten Sie keine globalen Berechtigungen der Gruppe **ic4v-vCenter** auf der Seite **Benutzer und Gruppen** auf dem VMware vSphere-Web-Client. Dies könnte sich auf Managementoperationen auswirken.
+Bearbeiten Sie keine globalen Berechtigungen der Gruppe **ic4v-vCenter** auf der Seite **Benutzer und Gruppen** auf dem VMware vSphere Web Client. Dies könnte sich auf Managementoperationen auswirken.
 
 Verwenden Sie für Cloud Foundation-Instanzen die Hostbenutzer-ID **customerroot** anstelle der Hostbenutzer-ID **root**.
 

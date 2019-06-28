@@ -24,11 +24,11 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="3440"
-     inkscape:window-height="1377"
+     inkscape:window-height="1372"
      id="namedview193"
      showgrid="false"
      inkscape:zoom="2.0827108"
-     inkscape:cx="612.84692"
+     inkscape:cx="512.97708"
      inkscape:cy="234.93645"
      inkscape:window-x="-4"
      inkscape:window-y="-4"
@@ -303,7 +303,7 @@
      style="font-size:11px;font-family:Helvetica;text-anchor:middle"
      id="g89"
      font-size="11px"
-     transform="translate(0.5,0.5)">
+     transform="translate(0.5,-5.5)">
     <text
        id="text87"
        y="499"
@@ -327,7 +327,7 @@
      style="font-size:11px;font-family:Helvetica;text-anchor:middle"
      id="g97"
      font-size="11px"
-     transform="translate(0.5,0.5)">
+     transform="translate(0.5,-5.5)">
     <text
        id="text95"
        y="540"

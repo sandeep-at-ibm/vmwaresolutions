@@ -11,7 +11,7 @@
    height="464px"
    version="1.1"
    id="svg124"
-   sodipodi:docname="vcsicp-icp-commonservices.svg"
+   sodipodi:docname="vcscar-common-services.svg"
    inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
   <defs
      id="defs128" />
@@ -25,11 +25,11 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="3440"
-     inkscape:window-height="1377"
+     inkscape:window-height="1372"
      id="namedview126"
      showgrid="false"
      inkscape:zoom="2.0344828"
-     inkscape:cx="264.03501"
+     inkscape:cx="161.79772"
      inkscape:cy="179.75071"
      inkscape:window-x="-4"
      inkscape:window-y="-4"
@@ -316,7 +316,7 @@
   <text
      style="font-size:medium;font-family:Helvetica;text-anchor:middle"
      id="text88"
-     y="161"
+     y="163"
      x="337">Netzzeitsynchronisation</text>
   <g
      style="font-weight:bold;font-size:medium;font-family:Helvetica;text-anchor:middle"
@@ -352,7 +352,7 @@
      style="font-size:medium;font-family:Helvetica;text-decoration: underline;text-decoration-line: underline;text-anchor:middle"
      id="g104"
      text-decoration="underline"
-     transform="translate(0.5,0.5)">
+     transform="translate(5.7480469,0.5)">
     <text
        id="text102"
        y="92.5"
@@ -362,7 +362,7 @@
      style="font-size:medium;font-family:Helvetica;text-decoration: underline;text-decoration-line: underline;text-anchor:middle"
      id="g108"
      text-decoration="underline"
-     transform="translate(0.5,0.5)">
+     transform="translate(10.698242,0.5)">
     <text
        id="text106"
        y="115"

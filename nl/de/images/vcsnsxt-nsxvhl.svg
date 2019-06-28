@@ -27,12 +27,12 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="3440"
-     inkscape:window-height="1377"
+     inkscape:window-height="1372"
      id="namedview190"
      showgrid="false"
-     inkscape:zoom="1.2961336"
-     inkscape:cx="97.141821"
-     inkscape:cy="392.65251"
+     inkscape:zoom="2.5922672"
+     inkscape:cx="363.77367"
+     inkscape:cy="168.92671"
      inkscape:window-x="-4"
      inkscape:window-y="-4"
      inkscape:window-maximized="1"
@@ -99,7 +99,7 @@
     <text
        id="text18"
        y="400.5"
-       x="262" />
+       x="262">Legende</text>
   </g>
   <image
      id="image22"
@@ -228,11 +228,11 @@
      style="font-size:13px;font-family:Helvetica;text-anchor:middle"
      id="g62"
      font-size="13px"
-     transform="translate(0.5,-7.5)">
+     transform="translate(0.5,0.5)">
     <text
        id="text60"
        y="181.5"
-       x="140">Anwendung</text>
+       x="140">App</text>
   </g>
   <g
      id="g74"
@@ -369,11 +369,11 @@
      style="font-size:13px;font-family:Helvetica;text-anchor:middle"
      id="g102"
      font-size="13px"
-     transform="translate(0.5,6.5)">
+     transform="translate(0.5,0.5)">
     <text
        id="text100"
        y="181.5"
-       x="187.5">Anwendung</text>
+       x="187.5">App</text>
   </g>
   <image
      id="image104"
@@ -472,18 +472,21 @@
        stroke-miterlimit="10"
        d="M 44,236 H 213" />
   </g>
-  <rect
-     x="81.5"
-     y="229.5"
-     width="65"
-     height="15"
-     id="rect136"
-     style="font-size:medium;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke-width:0" />
-  <text
-     style="font-size:medium;font-family:Helvetica;text-anchor:middle"
-     x="113.31"
-     y="241.34"
-     id="text138">ICP-VXLAN</text>
+  <g
+     id="g1116">
+    <rect
+       style="font-size:medium;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke-width:0"
+       id="rect136"
+       height="15"
+       width="65"
+       y="231.5"
+       x="81.5" />
+    <text
+       id="text138"
+       y="240.80664"
+       x="113.31"
+       style="font-size:medium;font-family:Helvetica;text-anchor:middle">ICP-VXLAN</text>
+  </g>
   <path
      style="fill:none;stroke:#0070c0;stroke-width:2;stroke-miterlimit:10"
      inkscape:connector-curvature="0"
@@ -491,45 +494,21 @@
      stroke-miterlimit="10"
      pointer-events="none"
      d="m 326.5,236.5 h 169" />
-  <rect
-     x="364.11548"
-     y="228.54239"
-     width="65"
-     height="15"
-     id="rect136-3"
-     style="font-size:medium;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke-width:0" />
   <g
-     id="g148"
-     transform="translate(365,229)">
-    <switch
-       id="switch146">
-      <foreignObject
-         requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
-         pointer-events="all"
-         overflow="visible"
-         height="12"
-         width="61">
-        <xhtml:div
-           style="line-height:1.2;vertical-align:top;white-space:nowrap"
-           text-align="center"
-           font-size="12px"
-           font-family="Helvetica"
-           display="inline-block"
-           color="rgb(0, 0, 0)">
-          <xhtml:div
-             style="background-color:#ffffff"
-             text-decoration="inherit"
-             text-align="inherit"
-             display="inline-block">VM VXLAN</xhtml:div>
-        </xhtml:div>
-      </foreignObject>
-      <text
-         style="font-size:12px;font-family:Helvetica;text-anchor:middle;fill:#000000"
-         id="text144"
-         font-size="12px"
-         y="12"
-         x="31">VM-VXLAN</text>
-    </switch>
+     id="g1112">
+    <rect
+       style="font-size:medium;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke-width:0"
+       id="rect136-3"
+       height="15"
+       width="65"
+       y="228.73593"
+       x="364.22745" />
+    <text
+       x="396"
+       y="240.80664"
+       font-size="12px"
+       id="text144"
+       style="font-size:12px;font-family:Helvetica;text-anchor:middle;fill:#000000">VM-VXLAN</text>
   </g>
   <g
      id="g162"

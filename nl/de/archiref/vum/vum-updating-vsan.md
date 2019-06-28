@@ -68,7 +68,7 @@ Wenn die HTTPS-Parameter nicht festgelegt sind, verwenden Sie den folgenden Befe
 ### Customer Experience Improvement Program (CEIP) aktivieren
 {: #vum-updating-vsan-enable-ceip}
 
-Dieser Schritt ist optional. Navigieren Sie mit dem vSphere-Web-Client zu **Home** > **Administration** > **Customer Experience Improvement Program** und klicken Sie dann auf **Teilnehmen**.
+Dieser Schritt ist optional. Navigieren Sie mit dem vSphere Web Client zu **Home** > **Administration** > **Customer Experience Improvement Program** und klicken Sie dann auf **Teilnehmen**.
 
 ### Test-Upload ausführen und prüfen, ob er erfolgreich war
 {: #vum-updating-vsan-complete-upload}

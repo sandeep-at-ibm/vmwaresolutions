@@ -151,7 +151,7 @@ Bevor die Komponenten genauer beschrieben werden, muss die Basisimplementierung 
 * Die Quellenumgebung muss eine vSphere-Implementierung enthalten, die von vCenter Server verwaltet wird. Unterstützte Versionen von vCenter sind 5.5U3 oder vCenter 6.0U2 und höher, wobei ESXi 5.5 oder höher für Hybrid-Cloud-Services erforderlich ist.
 * Wird NSX verwendet, dann Version 6.2.2 oder höher. NSX ist für die Richtlinienmigration erforderlich.
 * Wenn cloudumfassende vMotion vorgesehen ist, gelten für Clouds dieselben Affinitätsbeschränkungen, wie sie lokal gelten.
-* Die Quellenumgebung muss über eine Methode verfügen, um eine Verbindung zu Cloud-Umgebungen herzustellen. Dies schließt öffentlichen Internetzugang oder private Verbindungen über IBM Cloud Direct Link ein. Andere Verbindungen als das öffentliche Internet zu weiteren Cloud-Anbietern werden hier nicht beschrieben.
+* Die Quellenumgebung muss über eine Methode verfügen, um eine Verbindung zu Cloudumgebungen herzustellen. Dies schließt öffentlichen Internetzugang oder private Verbindungen über IBM Cloud Direct Link ein. Andere Verbindungen als das öffentliche Internet zu weiteren Cloud-Anbietern werden hier nicht beschrieben.
 * Die VMs der Quellenumgebung und die Netze, die migriert oder erweitert werden sollen, müssen sich in Portgruppen innerhalb eines virtuellen verteilten Switch oder eines virtuellen verteilten Switch von Cisco Nexus 1000v befinden.
 * IBM Cloud muss mindestens eine Instanz von VMware vCenter Server enthalten.
 * Ausreichend Ressourcen für die virtuellen Appliances.

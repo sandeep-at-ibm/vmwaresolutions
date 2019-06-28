@@ -13,7 +13,7 @@
    style="background-color:rgb(255, 255, 255)"
    version="1.1"
    id="svg168"
-   sodipodi:docname="vcsicp-icp-nsxt-networking.svg"
+   sodipodi:docname="vcsnsxt-t1t0router.svg"
    inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
   <defs
      id="defs172" />
@@ -27,14 +27,12 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="3440"
-     inkscape:window-height="1377"
+     inkscape:window-height="1372"
      id="namedview170"
      showgrid="false"
-     showguides="true"
-     inkscape:guide-bbox="true"
-     inkscape:zoom="1.9109312"
-     inkscape:cx="91.019613"
-     inkscape:cy="291.94919"
+     inkscape:zoom="2.7024648"
+     inkscape:cx="353.403"
+     inkscape:cy="172.68707"
      inkscape:window-x="-4"
      inkscape:window-y="-4"
      inkscape:window-maximized="1"
@@ -110,26 +108,26 @@
          d="m 81,418.76 -3.5,-7 3.5,1.75 3.5,-1.75 z" />
     </g>
   </g>
+  <rect
+     x="60.5"
+     y="375.5"
+     width="42"
+     height="27"
+     id="rect26"
+     style="font-size:medium;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke-width:0" />
   <g
-     style="font-size:11px;font-family:Helvetica;text-anchor:middle"
-     id="g32"
-     font-size="11px"
-     transform="translate(0.5,3.0551758)">
-    <rect
-       style="fill:#ffffff;stroke-width:0"
-       id="rect26"
-       height="27"
-       width="42"
-       y="375"
-       x="60" />
+     id="g1065"
+     transform="translate(0,9.3388672)">
     <text
        id="text28"
-       y="377"
-       x="79.5">ICP-</text>
+       y="377.5"
+       x="80"
+       style="font-size:medium;font-family:Helvetica;text-anchor:middle">ICP-</text>
     <text
        id="text30"
-       y="390"
-       x="79.5">Netz</text>
+       y="390.5"
+       x="80"
+       style="font-size:medium;font-family:Helvetica;text-anchor:middle">Netz</text>
   </g>
   <image
      id="image34"
@@ -232,26 +230,26 @@
          d="m 146.89,434.77 -3.82,-6.83 3.58,1.58 3.41,-1.91 z" />
     </g>
   </g>
+  <rect
+     x="116.5"
+     y="382.5"
+     width="58"
+     height="27"
+     id="rect74"
+     style="font-size:medium;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke-width:0" />
   <g
-     style="font-size:11px;font-family:Helvetica;text-anchor:middle"
-     id="g80"
-     font-size="11px"
-     transform="translate(0.5,-4.527252)">
-    <rect
-       style="fill:#ffffff;stroke-width:0"
-       id="rect74"
-       height="27"
-       width="58"
-       y="382"
-       x="116" />
+     id="g1072"
+     transform="translate(0,8.2716675)">
     <text
        id="text76"
-       y="384.95001"
-       x="143.52">Kubernetes-</text>
+       y="385.45001"
+       x="144.10497"
+       style="font-size:medium;font-family:Helvetica;text-anchor:middle">Kubernetes-</text>
     <text
        id="text78"
-       y="397.95001"
-       x="143.52">Netz</text>
+       y="398.45001"
+       x="144.02"
+       style="font-size:medium;font-family:Helvetica;text-anchor:middle">Netz</text>
   </g>
   <g
      id="g94"
@@ -292,26 +290,26 @@
          d="m 215.98,421.76 -3.56,-6.97 3.52,1.72 3.48,-1.78 z" />
     </g>
   </g>
+  <rect
+     x="186.5"
+     y="372.5"
+     width="59"
+     height="27"
+     id="rect96"
+     style="font-size:medium;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke-width:0" />
   <g
-     style="font-size:11px;font-family:Helvetica;text-anchor:middle"
-     id="g102"
-     font-size="11px"
-     transform="translate(0.5,5.8051758)">
-    <rect
-       style="fill:#ffffff;stroke-width:0"
-       id="rect96"
-       height="27"
-       width="59"
-       y="372"
-       x="186" />
+     id="g1079"
+     transform="translate(0,8.8388672)">
     <text
        id="text98"
-       y="374.5"
-       x="214.17">VM-Overlay-</text>
+       y="375"
+       x="214.67"
+       style="font-size:medium;font-family:Helvetica;text-anchor:middle">VM-Overlay-</text>
     <text
        id="text100"
-       y="387.5"
-       x="214.17">Netz</text>
+       y="388"
+       x="214.67"
+       style="font-size:medium;font-family:Helvetica;text-anchor:middle">Netz</text>
   </g>
   <g
      style="font-size:11px;font-family:Helvetica;text-anchor:middle"
@@ -359,23 +357,18 @@
        stroke-miterlimit="10"
        d="M 176.5,424 H 263" />
   </g>
-  <g
-     style="font-size:12px;font-family:Helvetica;text-anchor:middle"
-     id="g124"
-     font-size="12px"
-     transform="translate(0.5,0.5)">
-    <rect
-       style="fill:#ffffff;stroke-width:0"
-       id="rect120"
-       height="15"
-       width="37"
-       y="417"
-       x="220" />
-    <text
-       id="text122"
-       y="427"
-       x="237.5">DB-LS</text>
-  </g>
+  <rect
+     x="220.5"
+     y="417.5"
+     width="38.480129"
+     height="12.409772"
+     id="rect120"
+     style="font-size:medium;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke-width:0" />
+  <text
+     style="font-size:medium;font-family:Helvetica;text-anchor:middle"
+     x="240"
+     y="427.5"
+     id="text122">DB-LS</text>
   <g
      id="g140"
      pointer-events="none"
@@ -430,21 +423,19 @@
        d="m 281,423.5 80,0.5" />
   </g>
   <g
-     style="font-size:12px;font-family:Helvetica;text-anchor:middle"
-     id="g146"
-     font-size="12px"
-     transform="translate(0.5,0.5)">
+     id="g1100">
     <rect
-       style="fill:#ffffff;stroke-width:0"
+       style="font-size:medium;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke-width:0"
        id="rect142"
        height="15"
-       width="42"
-       y="415"
-       x="298" />
+       width="43.295113"
+       y="415.5"
+       x="298.5" />
     <text
        id="text144"
-       y="424.73001"
-       x="318.01999">App-LS</text>
+       y="426.37793"
+       x="320.51999"
+       style="font-size:medium;font-family:Helvetica;text-anchor:middle">App-LS</text>
   </g>
   <g
      style="stroke:#0070c0;stroke-width:2;stroke-miterlimit:10"
@@ -469,25 +460,28 @@
        d="m 296,419.76 -4,-8 4,2 4,-2 z" />
   </g>
   <g
-     style="font-size:12px;font-family:Helvetica;text-anchor:middle"
-     id="g162"
-     font-size="12px"
-     transform="translate(0.5,10)">
+     id="g1092">
     <rect
-       style="fill:#ffffff;stroke-width:0"
+       style="font-size:medium;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke-width:0"
        id="rect156"
        height="29"
        width="65"
-       y="358"
-       x="270" />
-    <text
-       id="text158"
-       y="368"
-       x="301">VM-Overlay-</text>
-    <text
-       id="text160"
-       y="382"
-       x="301">Netz</text>
+       y="358.5"
+       x="270.5" />
+    <g
+       transform="translate(0,1.8388672)"
+       id="g1086">
+      <text
+         style="font-size:medium;font-family:Helvetica;text-anchor:middle"
+         x="301.5"
+         y="368.5"
+         id="text158">VM-Overlay-</text>
+      <text
+         style="font-size:medium;font-family:Helvetica;text-anchor:middle"
+         x="301.5"
+         y="382.5"
+         id="text160">Netz</text>
+    </g>
   </g>
   <image
      id="image164"

@@ -34,7 +34,7 @@ Die folgende Liste enthält eine Übersicht über die ersten Workflows:
 Typische Anwendungsfälle sind die folgenden:
 - Der Kunde möchte feststellen, ob seine Infrastruktur und Workloads den Konformitätsanforderungen entsprechen.
 -	Der Kunde möchte sein potenzielles Cyberrisiko und die Konformitätsauswirkungen auf seine Workloads und deren Minderung beurteilen können.
--	Der Kunde wünscht Transparenz und möchte ermitteln können, was sich in seiner Hybrid-Cloud-Umgebung geändert hat.
+-	Der Kunde wünscht Transparenz und möchte ermitteln können, was sich in seiner Hybrid-Cloudumgebung geändert hat.
 -	Der Kunde möchte das Gesamtrisiko in der Hybrid-Cloud proaktiv verwalten und entsprechende Verstöße vermeiden.
 -	Der Kunde möchte bestimmte Aktionen ermitteln, um Risiken aufgrund von Cyberbedrohungen, Sicherheitslücken oder nicht konformen Konfigurationen zu beseitigen.
 -	Der Kunde wünscht eine schnellere Erkennung durch maschinelles Lernen, indem Datenmengen analysiert werden, um gutes Verhalten zu erkennen und Anomalien zu identifizieren.

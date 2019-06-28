@@ -14,7 +14,7 @@ subcollection: vmware-solutions
 # Caveonix RiskForesight
 {: #caveonix-intro}
 
-Unternehmen, die eine digitale Transformation durchlaufen, nehmen eine hybride Cloud-Strategie an, die Workloads sowohl in der privaten Cloud als auch in mehreren externen Cloud-Umgebungen umfasst, nämlich die öffentliche Cloud oder eine Cloud, die von einem Service-Provider verwaltet wird. Die meisten Unternehmen stehen außerdem vor der Herausforderung, eine immer größer werdende Angriffsfläche zu schützen und gleichzeitig die Konformität mit Branchenanforderungen und gesetzlichen Bestimmungen zu gewährleisten.
+Unternehmen, die eine digitale Transformation durchlaufen, nehmen eine hybride Cloud-Strategie an, die Workloads sowohl in der privaten Cloud als auch in mehreren externen Cloudumgebungen umfasst, nämlich die öffentliche Cloud oder eine Cloud, die von einem Service-Provider verwaltet wird. Die meisten Unternehmen stehen außerdem vor der Herausforderung, eine immer größer werdende Angriffsfläche zu schützen und gleichzeitig die Konformität mit Branchenanforderungen und gesetzlichen Bestimmungen zu gewährleisten.
 
 Um diese wachsende Angriffsfläche zu schützen, benötigen Unternehmen vom Anfang bis zum Ende des Lebenszyklus kontinuierliche Einsicht in die Workloads. Zu diesem Zweck benötigen die Unternehmen vollständige Einsicht in Workload-Schwachstellen und Konfigurationsprobleme auf Ebene der Infrastruktur, Plattform und Anwendung vor dem Hintergrund von Sicherheits- und Konformitätsanforderungen. Unternehmen benötigen Vorhersageanalyse, um "die Punkte zu verbinden" und eine proaktive Ansicht ihrer Position hinsichtlich Cyberrisiko und Konformitätsrisiko in dieser unübersichtlichen neuen Hybrid-Welt zu liefern.
 
@@ -26,7 +26,7 @@ Caveonix RiskForesight ermöglicht es dem Unternehmen, Industriestandards und be
 
 Caveonix RiskForesight ist eine Multi-Tenant-Plattform für Cyberrisiko- und Konformitätsmanagement für die Hybrid-Cloud, die einem Unternehmen und seinen Geschäftsbereichen kontinuierliche Cybersicherheit und Einsicht in die Konformität in ihren Workloads ermöglicht. Die Module für Erkennung, Vorhersage und Aktionen ergänzen das NIST Management Framework (RMF; NIST = National Institute of Standards and Technology) durch kontinuierliche Überwachung, quantitative Risikoanalyse und Schutzaktionen in dem Risikomanagement-Kontinuum von Erkennung, Vorhersage und Aktionen.
 
-Mit maschinellem Lernen und der CaveoIQ Risk Analytics-Engine bietet die Lösung proaktiven Workload-Schutz vor Risiken aufgrund von Cyberbedrohungen. Sie bietet ein konsistentes Sicherheits- und Richtlinienframework in einer Hybrid-Cloud-Umgebung und ist voll in den Cloud-Technologie-Stack von VMware und öffentlichen Cloud-Providern wie AWS integriert.
+Mit maschinellem Lernen und der CaveoIQ Risk Analytics-Engine bietet die Lösung proaktiven Workload-Schutz vor Risiken aufgrund von Cyberbedrohungen. Sie bietet ein konsistentes Sicherheits- und Richtlinienframework in einer Hybrid-Cloudumgebung und ist voll in den Cloud-Technologie-Stack von VMware und öffentlichen Cloud-Providern wie AWS integriert.
 
 Die drei wichtigsten Services, die über die GUI von RiskForesight zur Verfügung stehen, sind Risikomanagement, Konformitätsrisiko und Forensik-Management:
 

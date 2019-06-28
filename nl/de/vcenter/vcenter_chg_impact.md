@@ -21,7 +21,7 @@ subcollection: vmware-solutions
 
 Das Ändern von Benutzern, Ressourcen oder Teilnetzen, die für {{site.data.keyword.vmwaresolutions_full}} reserviert sind, kann sich auf Managementoperationen auswirken.
 
-Bearbeiten Sie keine globalen Berechtigungen der Gruppe **ic4v-vCenter** auf der Seite **Benutzer und Gruppen** auf dem VMware vSphere-Web-Client. Zu solchen Änderungen gehören das Ändern des Benutzernamens, das Löschen des Benutzers oder das Ändern seines Kennworts.
+Bearbeiten Sie keine globalen Berechtigungen der Gruppe **ic4v-vCenter** auf der Seite **Benutzer und Gruppen** auf dem VMware vSphere Web Client. Zu solchen Änderungen gehören das Ändern des Benutzernamens, das Löschen des Benutzers oder das Ändern seines Kennworts.
 Verwenden Sie die Hostbenutzer-ID **root**. Die Hostbenutzer-ID **ic4vroot** wurde ausschließlich zur Verwendung durch IBM erstellt.
 {:important}
 

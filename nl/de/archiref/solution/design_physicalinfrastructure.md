@@ -108,7 +108,7 @@ Da verschiedene Konnektivitätsoptionen zusammen mit den Netz-Routing-Optionen e
 
 Jeder physische Host in diesem Design verfügt über zwei redundante Paare von Ethernet-Verbindungen mit 10 Gb/s zu jedem (öffentlichen und privaten) {{site.data.keyword.cloud_notm}} Top of Rack-Switch (ToR-Switch). Die Adapter sind als einzelne Verbindungen (ohne Bonding) für Verbindungen mit insgesamt 4 x 10 Gb/s eingerichtet. Dies ermöglicht es NIC-Verbindungen (NIC - Networking Interface Card, Netzschnittstellenkarte), unabhängig voneinander zu arbeiten.
 
-Das Entfernen der physischen Netzkonnektivität zum öffentlichen oder privaten Netz für die Bare-Metal-Server, die innerhalb des vCenter Server-Angebots verwendet werden, ist nicht möglich. Physikalische Anschlüsse an der internen NIC des Bare-Metal können deaktiviert werden. Die Kabel können jedoch nicht entfernt werden.
+Das Entfernen der physischen Netzkonnektivität zum öffentlichen oder privaten Netz für die Bare-Metal-Server, die innerhalb des vCenter Server-Angebots verwendet werden, ist nicht möglich. Physische Anschlüsse an der internen NIC des Bare-Metal können deaktiviert werden. Die Kabel können jedoch nicht entfernt werden.
 
 ![Physische Hostverbindungen](../../images/vcsv4radiagrams-ra-physical-host-connections.svg "Physische Hostverbindungen")
 

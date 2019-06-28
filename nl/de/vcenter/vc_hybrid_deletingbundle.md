@@ -49,7 +49,7 @@ Beim Entfernen des Hybridity Bundle aus einer Umgebung mit mehreren Standorten w
 ## Vorgehensweise zum Entfernen von Hybridity Bundle
 {: #vc_hybrid_deletingbundle-procedure}
 
-1. Melden Sie sich als **Administrator** bei dem VMware vSphere-Web-Client an, für den Sie das Hybridity Bundle entfernen möchten.
+1. Melden Sie sich als **Administrator** bei dem VMware vSphere Web Client an, für den Sie das Hybridity Bundle entfernen möchten.
 2. Klicken Sie auf die Optionen für **Home > Administration > Lizenzierung > Lizenzen**.
 3. Klicken Sie auf die Registerkarte für **Assets**.
 4. Führen Sie folgende Schritte aus, um für VMware NSX eine eigene Lizenz (BYOL) zu installieren:

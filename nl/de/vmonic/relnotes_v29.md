@@ -91,7 +91,7 @@ Die folgenden neuen Rechenzentren sind für die Bereitstellung verfügbar: **FRA
 ### Erweiterungen für ESXi-Server
 {: #relnotes_v29-vcs-esxi}
 
-* Das SSH-Protokoll (Secure Shell) wird jetzt vor der Instanzbereitstellung für ESXi-Server inaktiviert. Wenn Sie SSH aktivieren möchten, lesen Sie die Informationen im Abschnitt [SSH über den vSphere-Web-Client aktivieren](https://pubs.vmware.com/vsphere-6-5/index.jsp?topic=%2Fcom.vmware.vcli.getstart.doc%2FGUID-C3A44A30-EEA5-4359-A248-D13927A94CCE.html).
+* Das SSH-Protokoll (Secure Shell) wird jetzt vor der Instanzbereitstellung für ESXi-Server inaktiviert. Wenn Sie SSH aktivieren möchten, lesen Sie die Informationen im Abschnitt [SSH über den vSphere Web Client aktivieren](https://pubs.vmware.com/vsphere-6-5/index.jsp?topic=%2Fcom.vmware.vcli.getstart.doc%2FGUID-C3A44A30-EEA5-4359-A248-D13927A94CCE.html).
 * Ab Release V2.9 sind die folgenden ESXi-Serveroperationen verfügbar:
 
    * Einem vorhandenen Cluster neue ESXi-Server hinzufügen, während die Server sich im Wartungsmodus befinden. Virtuelle Maschinen werden erst dann auf die neuen Server migriert, wenn Sie den Wartungsmodus für die Server beenden.
