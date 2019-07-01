@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-01"
+lastupdated: "2019-06-20"
+
+keywords: IBM Cloud Private Hosted, ICP configuration, order Cloud Private
 
 subcollection: vmware-solutions
 
@@ -21,14 +23,14 @@ You can order the {{site.data.keyword.cloud}} Private Hosted service when you or
 
 You can order a new instance with the {{site.data.keyword.cloud_notm}} Private Hosted service included by using one of the following methods:
 * From the {{site.data.keyword.vmwaresolutions_short}} console, when you order a new instance, select **IBM Cloud Private Hosted** in the **Optional Services** section.
-* From the {{site.data.keyword.cloud_notm}} catalog, select **IBM Cloud Private Hosted**, specify the service settings, and then select **Add to New Instance**.
+* From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon on the left navigation pane, and then click the **IBM Cloud Private Hosted** card in the **VMware Services** section. Specify the service settings and select **Add to New Instance**.
 
 ## Ordering IBM Cloud Private Hosted for an existing instance
 {: #icp_ordering-existing}
 
 You can add the {{site.data.keyword.cloud_notm}} Private Hosted service into an existing instance by using one the following methods:
 * From the {{site.data.keyword.vmwaresolutions_short}} console, view the instance that you want to add the service for, click **Services** on the left navigation pane, and then click **Add**.
-* From the {{site.data.keyword.cloud_notm}} catalog, select **IBM Cloud Private Hosted**, specify the service settings, and then select **Add to Existing Instance**.
+* From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon on the left navigation pane, and then click the **IBM Cloud Private Hosted** card in the **VMware Services** section. Specify the service settings and select **Add to Existing Instance**.
 
 ## IBM Cloud Private Hosted service configuration
 {: #icp_ordering-config}

@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-17"
+lastupdated: "2019-06-03"
 
 ---
 
 # Operations management architecture overview
 {: #opsmgmt-arch}
-The architecture of the products in the operations management layer provides centralized monitoring with logging data from {{site.data.keyword.vmwaresolutions_full}}. The operations management layer monitors in real-time, the physical infrastructure, virtual infrastructure, and optionally the client’s compute workloads.
+The architecture of the products in the operations management layer provides centralized monitoring with logging data from {{site.data.keyword.vmwaresolutions_full}}. The operations management layer monitors in real time, the physical infrastructure, virtual infrastructure, and optionally the client’s compute workloads.
 
 At a high level, the following information is collected:
 * Topology data, such as physical and virtual compute, networking, and storage objects.
@@ -21,26 +21,26 @@ At a high level, the following information is collected:
 ## Operation management flows
 {: #opsmgmt-arch-flows}
 
-The following diagram shows the key interaction and integration of the operations management tooling.
+The following diagram shows the key interaction and integration of the operations management tools.
 
-![Management flows diagram](../../images/opsmgmt-mgmtflows.svg "Management flows diagram"){: caption="Figure 1. Operational tooling management flow" caption-side="bottom"}
+![Management flows diagram](../../images/opsmgmt-mgmtflows.svg "Management flows diagram"){: caption="Figure 1. Operational tools management flow" caption-side="bottom"}
 
 The {{site.data.keyword.vmwaresolutions_short}} operations management consists of the following steps:
 * Monitoring - vRealize Operations Manager (vROps) tracks and analyzes the operation of multiple objects in the {{site.data.keyword.vmwaresolutions_short}} architecture by using analytic algorithms. These algorithms help vROps learn and predict the behavior of these objects. System administrators access this information by using views, reports, and dashboards.
 
   When there is an issue in the environment vROps generates alerts of three impact types:
     * Health alerts - indicate issues that affect the health of the environment and require immediate attention.
-    * Risk alerts - indicate issues that are not immediate threats but should be addressed in the near future.
+    * Risk alerts - indicate issues that are not immediate threats but need to be addressed soon.
     * Efficiency alerts – information to improve performance or reclaim resources.
 
   vROps Alerts are events that occur on the monitored objects when data analysis indicates deviations from normal metric values, or when an issue occurs with one of the monitored components. vROps alerts are assigned one of these categories:
-    * Critical - should be acted upon immediately.
-    * Immediate - should be acted on as soon as possible.
-    * Warning - should be checked when time allows.
+    * Critical - must be acted upon immediately.
+    * Immediate - must be acted on as soon as possible.
+    * Warning - must be checked when time allows.
 
-* Logging - vRealize Log Insight (vRLI) provides real-time log management and log analysis with machine learning-based intelligent grouping, high-performance searching, and troubleshooting across the physical and virtual objects in the {{site.data.keyword.vmwaresolutions_short}} architecture. vRLI collects data from vSphere hosts using the syslog protocol and to other VMware products, like vCenter Server, to collect events, tasks, and alarm data. It integrates with vRops to send notification events and enable launch in context. Other objects in the {{site.data.keyword.vmwaresolutions_short}} architecture that is capable of sending syslog data is pointed to vRLI. Optionally the client can configure any system that is capable of sending syslog data to forward this date to vRLI.
+* Logging - vRealize Log Insight (vRLI) provides real-time log management and log analysis with machine learning-based intelligent grouping, high-performance searching, and troubleshooting across the physical and virtual objects in the {{site.data.keyword.vmwaresolutions_short}} architecture. vRLI collects data from vSphere hosts by using the `syslog` protocol. It also collects events, tasks, and alarm data for other VMware products, like vCenter Server. It integrates with vRops to send notification events and enable launch-in-context. Other objects in the {{site.data.keyword.vmwaresolutions_short}} architecture that can send `syslog` data are pointed to vRLI. Optionally, the client can configure any system that is capable of sending syslog data to forward this data to vRLI.
 
-* Network Health - vRealize Network Insight is an analytics tool focused on proactively enabling:
+* Network Health - vRealize Network Insight is an analytics tool that is focused on proactively enabling:
   * Network health and performance monitoring.
   * End-to-end troubleshooting.
   * 360° visibility and analytics.
@@ -51,17 +51,17 @@ The {{site.data.keyword.vmwaresolutions_short}} operations management consists o
 ## Operation management networking
 {: #opsmgmt-arch-network}
 
-The network overview diagram is shown below:
+The following diagram shows the network overview.
 
-![Network diagram](../../images/opsmgmt-network.svg "Network diagram"){: caption="Figure 2. Operational tooling networking" caption-side="bottom"}
+![Network diagram](../../images/opsmgmt-network.svg "Network diagram"){: caption="Figure 2. Operational tools networking" caption-side="bottom"}
 
-* A tooling private portable subnet is provisioned to provide {{site.data.keyword.cloud_notm}} IP address space that is used for the initial provisioning of the tooling VMs but then becomes the responsibility of the client to manage the IP address space for scale-out of the tooling. VMs on this subnet require access to the components hosted on the Management and Internal Management subnets.
+* A tooling private portable subnet is provisioned to provide {{site.data.keyword.cloud_notm}} IP address space that is used for the initial provisioning of the tooling VMs. After provisioning, it becomes the responsibility of the client to manage the IP address space for scale-out of the tooling. VMs on this subnet require access to the components hosted on the Management and Internal Management subnets.
 * Tooling VXLAN subnet is used to provide BYOIP IP address space that is used for the initial provisioning of the tooling VMs but then becomes the responsibility of the client to manage the IP address space for scale-out of the tooling. VMs on this subnet require access to the components hosted on the Overlay subnets. The ESG provides NAT between the {{site.data.keyword.cloud_notm}} and BYOIP address spaces.
 * The vROps Remote Collectors are deployed by the client if they would like to take advantage of the vROps to monitor their compute VMs.
 * The vRLI Forwarders relay log messages from overlay components to the vRLI cluster. The client can also configure their compute VMs to uses these forwarders, if required.
 * VMware Update Manager (VUM) provides updating of vSphere hosts and VM hardware and tools. VUM uses the Proxy to gain access to the internet repositories.
 
-vROps collects data from objects in the environment. Each piece of data collected is called a metric observation or value. vROps uses the vCenter adapter to collect raw metrics from vCenter. In addition to the metrics it collects, vROps calculates capacity metrics, badge metrics, and metrics to monitor the health of your system.  Alert definitions are a combination of symptoms and recommendations that identify problem areas and generate alerts on which you act for those areas.
+vROps collects data from objects in the environment. Each piece of data that is collected is called a metric observation or value. vROps uses the vCenter adapter to collect raw metrics from vCenter. In addition to the metrics it collects, vROps calculates capacity metrics, badge metrics, and metrics to monitor the health of your system. Alert definitions are a combination of symptoms and recommendations that identify problem areas and generate alerts on which you act for those areas.
 
 ## Monitored components
 {: #opsmgmt-arch-components}
@@ -81,9 +81,9 @@ Monitoring of the vSphere hosts is accomplished with vROps through vCenter and t
 ### Monitoring of vSAN
 {: #opsmgmt-arch-components-vsan}
 
-To monitor vSAN, vROps, and vRLI are used. In vCenter there is an additional set of vSAN Health Checks that can be used. Installation of the Management Pack for vSAN provides additional dashboards to aid with the monitoring of vSAN.
+To monitor vSAN, vROps, and vRLI are used. In vCenter, there is an extra set of vSAN Health Checks that can be used. Installation of the Management Pack for vSAN provides more dashboards to aid with the monitoring of vSAN.
 
-vROps generates an alert if a problem occurs in the SDDC product components in the storage area network that the VMware vSAN adapter is monitoring. An alert that is related to config compliance and health is passed through VMware SDDC Health Solution management pack from VMware vSAN Management Pack. vSAN is monitored with the vROps vSAN Management Pack through the vCentre appliance using a vSAN adaptor. The default collection interval is five minutes and the vSAN adapter also collects Health Check Service and Performance Service metrics from vSphere objects. The Health Check Service interval is configured in the vSphere interface and is 60 minutes by default.
+vROps generates an alert if a problem occurs in the SDDC product components in the storage area network that the VMware vSAN adapter is monitoring. An alert that is related to configuration compliance and health is passed through VMware SDDC Health Solution management pack from VMware vSAN Management Pack. vSAN is monitored with the vROps vSAN Management Pack through the vCentre appliance by using a vSAN adapter. The default collection interval is five minutes and the vSAN adapter also collects Health Check Service and Performance Service metrics from vSphere objects. The Health Check Service interval is configured in the vSphere interface and is 60 minutes by default.
 
 To ensure that the vSAN adapter can collect all performance data, the vSAN performance service must be enabled in vSphere.
 
@@ -95,9 +95,9 @@ To monitor NSX, the following tools are implemented:
 * vRealize Log Insight (vRLI)
 * vRealize Network Insight (vRNI)
 
-This enables system administrators to monitor, manage and troubleshoot VMware NSX. The vROps Management Pack for VMware NSX provides visibility into the network topology. NSX dashboards provide a quick overview of the NSX environment and the health of its components. Correlation between NSX objects and vSphere objects enables easy troubleshooting.
+This enables system administrators to monitor, manage, and troubleshoot VMware NSX. The vROps Management Pack for VMware NSX provides visibility into the network topology. NSX dashboards provide a quick overview of the NSX environment and the health of its components. Correlation between NSX objects and vSphere objects enables easy troubleshooting.
 
-vROps uses the management pack to poll VMware NSX for configuration, performance, and support data. On behalf of vROps, the Management Pack translates the polling requests into REST API calls to retrieve the required data from NSX Manager.
+vROps uses the management pack to poll VMware NSX for configuration, performance, and support data. On behalf of vROps, the Management Pack converts the polling requests into REST API calls to retrieve the required data from NSX Manager.
 
 The NSX components need to be configured to send syslog to vRLI.
 
@@ -116,7 +116,7 @@ To monitor NSX-T, the following tools are implemented:
 * vRealize Operations Manager (vROps)
 * vRealize Log Insight (vRLI)
 
-The VMware SDDC Health Management Pack monitors the following:
+The VMware SDDC Health Management Pack monitors the following components:
 * Logical Switches - Monitors admin state of the logical switches.
 * Controller Cluster - Monitors the deployed cluster node count for HA and maintains quorum.
 * Controller Nodes - Monitors node connectivity with controller cluster and manager node.

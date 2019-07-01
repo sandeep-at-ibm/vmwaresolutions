@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-22"
 
 subcollection: vmware-solutions
 
@@ -17,19 +17,14 @@ subcollection: vmware-solutions
 ## Virtual Routing and Forwarding
 {: #vcsiks-arch-overview-infrastructure-vrf}
 
-{{site.data.keyword.cloud}} accounts can be configured as a Virtual Routing and Forwarding (VRF) account. VRF accounts enable automatic global routing between subnet IP blocks. All accounts with Direct-Link connections must be converted to, or created as, a VRF account.
+{{site.data.keyword.cloud}} accounts can be configured as a Virtual Routing and Forwarding (VRF) account. VRF accounts enable automatic global routing between subnet IP blocks. All accounts with Direct Link connections must be converted to, or created as, a VRF account.
 
 ## Direct Link
 {: #vcsiks-arch-overview-infrastructure-direct-link}
 
-{{site.data.keyword.cloud_notm}} Direct Link Connect offers private access to your {{site.data.keyword.cloud_notm}}
-infrastructure and to any other clouds linked to your Network Service
-Provider, through your local {{site.data.keyword.CloudDataCent_notm}}. This option is
-perfect for creating multi-cloud connectivity in a single environment.
-We connect customers to the {{site.data.keyword.cloud_notm}} Private network, by using a shared
-bandwidth topology. As with all Direct-Link products, you can add global
-routing, which enables private network traffic to all {{site.data.keyword.cloud_notm}}
-locations.
+{{site.data.keyword.cloud_notm}} Direct Link Connect offers private access to your {{site.data.keyword.cloud_notm}} infrastructure and to any other clouds linked to your Network Service Provider, through your local {{site.data.keyword.CloudDataCent_notm}}. This option is perfect for creating multi-cloud connectivity in a single environment.
+
+We connect customers to the {{site.data.keyword.cloud_notm}} Private network, by using a shared bandwidth topology. As with all Direct Link products, you can add global routing, which enables private network traffic to all {{site.data.keyword.cloud_notm}} locations.
 
 ## Virtual private networks
 {: #vcsiks-arch-overview-infrastructure-virt-private-network}

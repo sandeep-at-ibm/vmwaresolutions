@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-22"
 
 subcollection: vmware-solutions
 
@@ -46,7 +46,7 @@ The following diagram displays {{site.data.keyword.icpfull_notm}} and CAM deploy
 
 ![On-premises - cloud management](../../images/vcsiks-onprem-cloudmgt.svg "On-premises - cloud management"){: caption="Figure 2. Cloud management from on-premises side" caption-side="bottom"}
 
-The strongSwan VPN is used to established connectivity with the deployed {{site.data.keyword.containerlong_notm}} containers. strongSwan eventually might be replaced with Direct-link connectivity.
+The strongSwan VPN is used to established connectivity with the deployed {{site.data.keyword.containerlong_notm}} containers. strongSwan eventually might be replaced with Direct Link connectivity.
 
 In the diagram, CAM logically creates cloud connections to the vCenters, cloud providers, {{site.data.keyword.icpfull_notm}}, and {{site.data.keyword.containerlong_notm}} environments. {{site.data.keyword.icpfull_notm}} clusters must be deployed to each data center or cloud environment, with MCM providing the mechanism to connect the {{site.data.keyword.icpfull_notm}} clusters into a single management view.
 

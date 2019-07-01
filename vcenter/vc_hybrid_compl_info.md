@@ -4,12 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-02"
+lastupdated: "2019-06-28"
+
+keywords: vCenter Server Hybridity compliance, compliance info Hybridity, vCenter Server Hybridity policy
 
 subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # Compliance information for vCenter Server with Hybridity Bundle instances
 {: #vc_hybrid_compl_info}
@@ -74,7 +78,7 @@ VMware vCenter Server environments, which are delivered as {{site.data.keyword.v
 * Due to the level of specialization that is required to maintain superior technical expertise at the team level, it is sometimes necessary to involve more than one support team in resolving a particular software problem. This is easily handled, as our support teams are all networked together and work as one to resolve whatever problems or issues arise.
 * In order to investigate the issue, IBM may need to access information on your system relative to the failure or may need to re-create the failure to get additional information.
 * A client–generated support ticket serves as acknowledgment that IBM Support may access the VMware management layer for investigation, debugging, and triage. If maintenance outage or changes to the environment are required, IBM Support will request additional documented confirmation from the client via tickets as part of our change management process.
-* For more information about support tickets, see [IBM Support Guide](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923) and [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
+* For more information about support tickets, see [IBM Support Guide](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923){:external} and [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
 
 ## Client responsibilities
 {: #vc_hybrid_compl_info-client-responsibilities}
@@ -113,7 +117,7 @@ VMware vCenter Server environments, which are delivered as {{site.data.keyword.v
 * These non–IBM programs are licensed directly by their providers. Client agrees to use the non–IBM programs under the provider’s terms and conditions. These are provided in the IBM licensing agreement that accompanies the IBM offering at time of purchase.
 * IBM does testing to ensure that the third-party products will work with IBM programs and function appropriately.
 * IBM Software support will diagnose problems concerning client problems utilizing the knowledge of how our IBM offerings work with the Third-Party software. Once it has been concluded that the IBM program is working correctly, but the issue still exists, IBM must refer the client to the Third-Party vendor for further diagnosis.
-* Further information on client responsibilities regarding Third-Party software or code may be found in the [IBM Support Guide](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923).
+* Further information on client responsibilities regarding Third-Party software or code may be found in the [IBM Support Guide](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923){:external}.
 
 ## Consent to accessing client environments
 {: #vc_hybrid_compl_info-consent-to-access-client-environment}

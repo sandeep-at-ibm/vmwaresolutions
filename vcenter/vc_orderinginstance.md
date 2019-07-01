@@ -4,13 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-28"
+
+keywords: vCenter Server order instance, order vCenter Server, order vCenter Server instance
 
 subcollection: vmware-solutions
 
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -28,15 +31,14 @@ Ensure that you completed the following tasks:
 * You reviewed the information in [Requirements and planning for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning).
 * You reviewed the instance and domain name format. The domain name and subdomain label are used to generate the user name and server names of the instance.
 
-Table 1. Value format for instance and domain names
-
 | Name        | Value Format      |
-  |:------------|:------------ |
-  | Domain name | `<root_domain>` |  
-  | vCenter Server login user name | `<user_id>@<root_domain>` (Microsoft Active Directory user) or `administrator@vsphere.local` |
-  | vCenter Server (with embedded PSC) FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. The maximum length is 50 characters. |
-  | Single Sign-On (SSO) site name | `<subdomain_label>` |
-  | Fully qualified ESXi server name | `<host_prefix><n>.<subdomain_label>.<root_domain>`, where `<n>` is the sequence of the ESXi server. The maximum length is 50 characters. |
+|:------------|:------------ |
+| Domain name | `<root_domain>` |  
+| vCenter Server login user name | `<user_id>@<root_domain>` (Microsoft Active Directory user) or `administrator@vsphere.local` |
+| vCenter Server (with embedded PSC) FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. The maximum length is 50 characters. |
+| Single Sign-On (SSO) site name | `<subdomain_label>` |
+| Fully qualified ESXi server name | `<host_prefix><n>.<subdomain_label>.<root_domain>`, where `<n>` is the sequence of the ESXi server. The maximum length is 50 characters. |
+{: caption="Table 1. Value format for instance and domain names" caption-side="top"}
 
 Don't modify any values that are set during instance order or deployment. Doing so can make your instance unusable. For example, if public networking shuts down, if servers and Virtual Server Instances (VSIs) move behind a Vyatta mid-provision, or if the IBM CloudBuilder VSI stops or is deleted.
 {:important}
@@ -78,7 +80,7 @@ Specify the licensing options for the following VMware components in the instanc
 
 For Business Partner users, the vCenter Server license (Standard edition), the vSphere license (Enterprise Plus edition), and the NSX license are included and purchased on your behalf. However, you must specify the edition for the NSX license.
 
-For non-Business Partner users, you can use the IBM-provided VMware licenses for these components by selecting **Include with purchase**, or you can Bring Your Own License (BYOL) by selecting **I will provide** and entering your own license keys.
+For users who are not Business Partners, you can use the IBM-provided VMware licenses for these components by selecting **Include with purchase**, or you can Bring Your Own License (BYOL) by selecting **I will provide** and entering your own license keys.
 
 ### Licensing notes
 {: #vc_orderinginstance-licensing-notes}
@@ -104,13 +106,12 @@ Select the {{site.data.keyword.CloudDataCent_notm}} where the instance is to be 
 
 When you select **Skylake**, you can choose the CPU and RAM combination for the Bare Metal Server according to your needs.
 
-Table 2. Options for Skylake {{site.data.keyword.baremetal_short}}
-
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
 | Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+{: caption="Table 2. Options for Skylake {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 ### SAP-certified
 {: #vc_orderinginstance-sap}
@@ -131,19 +132,18 @@ Based on your requirements, select a Bare Metal Server configuration:
 
 When you select **Broadwell**, you can choose the CPU and RAM combination for the Bare Metal Server according to your needs.
 
-Table 3. Options for Broadwell {{site.data.keyword.baremetal_short}}
-
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
 | Quad Intel Xeon E7-4820 v4 / 40 cores total, 2.0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 cores total, 2.1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+{: caption="Table 3. Options for Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 ### Number of Bare Metal Servers
 {: #vc_orderinginstance-bare-metal-number}
 
 * All servers that you order have the same configuration.
-* If you're planning to use vSAN storage, you can order between 4 and 20 servers.
-* If you're planning to use NFS storage, you can order between 2 and 20 servers. However, for production workloads, a minimum of 3 servers is recommended. For more information, see [Is a two-node vCenter Server instance highly available?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-).
+* If you're planning to use vSAN storage, you can order 4 - 20 servers.
+* If you're planning to use NFS storage, you can order 2 - 20 servers. However, for production workloads, a minimum of three servers is recommended. For more information, see [Is a two-node vCenter Server instance highly available?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ## Storage settings
 {: #vc_orderinginstance-storage-settings}
@@ -181,14 +181,15 @@ The number of file shares must be in the range of 1 to 32.
 * **Size (GB)**: Select the capacity that meets your shared storage needs.
 * **Add Shared Storage**: Select to add individual file shares that use different configuration settings.
 
-Table 4. NFS performance level options
+Choose performance level options according to your needs.
 
 | Option        | Details       |
-  |:------------- |:------------- |
-  | 0.25 IOPS/GB | This option is designed for workloads that are not used often. Example applications include: vaulted data, hosting large databases with legacy data, or virtual disk images of virtual memory system as backup. |
-  | 2 IOPS/GB | This option is designed for most general-purpose workloads. Example applications include: hosting small databases, backing up web applications, or virtual machine disk images for a hypervisor. |
-  | 4 IOPS/GB | This option is designed for higher-intensity workloads that have a high percentage of active data at a time. Example applications include: transactional databases. |
-  | 10 IOPS/GB | This option is designed for the most demanding workload types, such as analytics. Example applications include: high-transaction databases and other performance-sensitive databases. This performance level is limited to a maximum capacity of 4 TB per file share. |
+|:------------- |:------------- |
+| 0.25 IOPS/GB | This option is designed for workloads that are not used often. Example applications include: vaulted data, hosting large databases with legacy data, or virtual disk images of virtual memory system as backup. |
+| 2 IOPS/GB | This option is designed for most general-purpose workloads. Example applications include: hosting small databases, backing up web applications, or virtual machine disk images for a hypervisor. |
+| 4 IOPS/GB | This option is designed for higher-intensity workloads that have a high percentage of active data at a time. Example applications include: transactional databases. |
+| 10 IOPS/GB | This option is designed for the most demanding workload types, such as analytics. Example applications include: high-transaction databases and other performance-sensitive databases. This performance level is limited to a maximum capacity of 4 TB per file share. |
+{: caption="Table 4. NFS performance level options" caption-side="top"}
 
 ### Local Disks
 {: #vc_orderinginstance-local-disks}
@@ -217,7 +218,7 @@ The subdomain label must meet the following requirements:
 *  Only alphanumeric and dash (-) characters are allowed.
 *  The subdomain label must start with an alphabetic character and end with an alphanumeric character.
 *  The maximum length of the subdomain label is 10 characters.
-*  The subdomain label must be unique within your account.
+*  The subdomain label must be unique within all instances in your multi-site configuration.
 
 ### Domain name
 {: #vc_orderinginstance-domain-name}
@@ -268,7 +269,7 @@ When you select to reuse existing public and private VLANs, specify the VLANs an
 * **Primary Subnet** is assigned to physical hosts for public network access.
 * **Primary Private Subnet** is assigned to physical hosts for management traffic.
 
-Ensure that the firewall configuration on the selected VLANs does not block the management data traffic. Also ensure that all the VLANs that you select are in the same pod. ESXi servers cannot be provisioned on mixed-pod VLANs.
+Ensure that the firewall configuration on the selected VLANs does not block the management data traffic. Also, ensure that all the VLANs that you select are in the same pod. ESXi servers cannot be provisioned on mixed-pod VLANs.
 {:important}
 
 ### DNS configuration
@@ -279,14 +280,14 @@ Select the Domain Name System (DNS) configuration for your instance:
 * **Single Public Windows VSI for Active Directory/DNS**: A single Microsoft Windows Server VSI for Microsoft Active Directory (AD), which functions as the DNS for the instance where the hosts and VMs are registered, is deployed and can be looked up. This option has been deployed by default for V1.9 and later instances.
 * **Two highly available dedicated Windows Server VMs on the management cluster**: Two Microsoft Windows VMs are deployed, helping enhance security and robustness.
 
-You must provide two Microsoft Windows Server 2016 licenses if you configure your instance to use the two Microsoft Windows VMs. Use the Microsoft Windows Server 2016 Standard edition license, or the Microsoft Windows Server 2016 Datacenter edition license, or both.
+You must provide two Microsoft Windows Server 2016 Standard edition licenses if you configure your instance to use the two Microsoft Windows VMs.
 {:important}
 
 Each license can be assigned only to one single physical server and covers up to two physical processors. One Standard edition license can run two virtualized Microsoft Windows VMs per 2-processor server. Therefore, two licenses are required since two Microsoft Windows VMs are deployed in two different hosts.
 
 You have 30 days to activate the VMs.
 
-For more information on ordering Windows Server 2016 licenses, see [Get started with Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:new_window}.
+For more information on ordering Windows Server 2016 licenses, see [Get started with Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:external}.
 
 ## Services settings
 {: #vc_orderinginstance-addon-services}
@@ -296,12 +297,14 @@ When you order a vCenter Server instance, you can also order add-on services. Fo
 ## Order summary
 {: #vc_orderinginstance-order-summary}
 
-Based on your selected configuration for the instance and add-on services, the estimated cost is instantly generated and displayed in the **Order Summary** section on the right pane. Click **Pricing details** at the bottom of the right pane to generate a PDF document that provides the estimate details.
+Based on your selected configuration for the instance and add-on services, the estimated cost is instantly generated and displayed in the **Order Summary** right pane. Click **Pricing details** to generate a PDF document with the cost summary for the {{site.data.keyword.vmwaresolutions_short}} resources.
+
+You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. This is useful if you want to estimate the cost of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.
 
 ## Procedure to order vCenter Server instances
 {: #vc_orderinginstance-procedure}
 
-1. From the {{site.data.keyword.cloud_notm}} catalog, click **VMware** from the left navigation pane and then click **vCenter Server** in the **Virtual Data Centers** section.
+1. From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon from the left navigation pane and then click the **VMware vCenter Server on IBM Cloud** card in the **VMware Virtual Data Centers** section.
 2. On the **VMware vCenter Server on IBM Cloud** page, click the **vCenter Server** card and click **Create**.
 3. On the **vCenter Server** page, enter the instance name.
 5. Select the vSphere version.
@@ -309,7 +312,7 @@ Based on your selected configuration for the instance and add-on services, the e
    * Click **Primary Instance** to deploy a single instance in the environment or to deploy the first instance in a multi-site topology.
    * Click **Secondary Instance** to connect the instance with an existing (primary) instance in the environment for high availability and complete the following steps:
      1. Select the primary instance that you want the secondary instance to be connected with.
-     2. For primary instances V2.8 or later, enter the vCenter Server administrator password for the primary instance.
+     2. For primary instances V2.8 or later, enter the vCenter Server Administrator password for the primary instance.
      3. For primary instances V2.5, 2.6, or 2.7, enter the PSC administrator password for the primary instance.
      4. For primary instances V2.4 or earlier, verify that the prefilled value for the PSC administrator password for the primary instance is correct.
 6. Complete the license settings for the instance components.
@@ -346,13 +349,10 @@ For more information about how to provide settings for a service, see the corres
 ## Results after you order vCenter Server instances
 {: #vc_orderinginstance-results}
 
-The deployment of the instance starts automatically. You receive confirmation that the order is being processed and you can check the status of the deployment by viewing the instance details.
-
-When the instance is successfully deployed, the components that are described in [Technical specifications for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs) are installed on your VMware virtual platform. The ESXi servers that you ordered are grouped as **cluster1** by default. If you ordered add-on services, the deployment of the services starts after your order is completed.
-
-When the instance is ready to use, the status of the instance is changed to **Ready to Use** and you receive a notification by email.
-
-When you order a secondary instance, the VMware vSphere Web Client for the primary instance (linked to the secondary one) might be restarted after your secondary instance order is completed.
+* The deployment of the instance starts automatically and you receive confirmation that the order is being processed. You can check the deployment status, including any issues that might require your attention, by viewing the **Deployment History** section of the instance details.
+* When the instance is successfully deployed, the components that are described in [Technical specifications for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs) are installed on your VMware virtual platform. The ESXi servers that you ordered are grouped as **cluster1** by default. If you ordered add-on services, the deployment of the services starts after your order is completed.
+* When the instance is ready to use, the status of the instance is changed to **Ready to Use** and you receive a notification by email.
+* When you order a secondary instance, the VMware vSphere Web Client for the primary instance (linked to the secondary one) might be restarted after your secondary instance order is completed.
 
 ## What to do next
 {: #vc_orderinginstance-next}
@@ -374,7 +374,7 @@ If you change these components outside of the {{site.data.keyword.vmwaresolution
 ## Related links
 {: #vc_orderinginstance-related}
 
-* [Signing up for an {{site.data.keyword.cloud_notm}} account](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)
+* [Signing up for an {{site.data.keyword.cloud_notm}} account](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts)
 * [Viewing vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
 * [Multi-site configuration for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_multisite)
 * [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)

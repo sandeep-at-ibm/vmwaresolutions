@@ -4,13 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-10"
+lastupdated: "2019-06-26"
+
+keywords: vSphere, vSphere component, tech specs vSphere
 
 subcollection: vmware-solutions
 
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -20,7 +23,7 @@ subcollection: vmware-solutions
 
 VMware vSphere on {{site.data.keyword.cloud}} is a streamlined and optimized ordering platform for VMware. With this platform, you can build your own IBM-hosted VMware environment by customizing and ordering the VMware-compatible hardware based on your selected VMware components.
 
-The {{site.data.keyword.vmwaresolutions_short}} console filters the hardware automatically, based on the VMware components that you select. For example, when you create a new all-flash VMware vSAN cluster, only the hardware that is validated against the [VMware Compatibility Guide](https://www.vmware.com/resources/compatibility/search.php) is presented. Also, a minimum of four ESXi servers is required.
+The {{site.data.keyword.vmwaresolutions_short}} console filters the hardware automatically, based on the VMware components that you select. For example, when you create a new all-flash VMware vSAN cluster, only the hardware that is validated against the [VMware Compatibility Guide](https://www.vmware.com/resources/compatibility/search.php){:external} is presented. Also, a minimum of four ESXi servers is required.
 
 VMware vSphere on {{site.data.keyword.cloud_notm}} does not automate the installation, configuration, and bring-up of the optional VMware components. The platform allows maximum of flexibility to design and build your hosted VMware environment while incorporating VMware-compatible hardware.
 

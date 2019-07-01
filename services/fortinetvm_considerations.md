@@ -4,13 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-04"
+lastupdated: "2019-06-26"
+
+keywords: FortiGate VA, FortiGate Virtual Appliance, tech specs FortiGate VA
 
 subcollection: vmware-solutions
 
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -110,5 +113,5 @@ Before you remove the FortiGate Virtual Appliance on {{site.data.keyword.cloud_n
 * [Managing FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingfortinetvm)
 * [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Fortinet website](https://www.fortinet.com/){:new_window}
-* [Fortinet Document Library](https://docs.fortinet.com/product/fortigate/6.2){:new_window}
+* [Fortinet website](https://www.fortinet.com/){:external}
+* [Fortinet Document Library](https://docs.fortinet.com/product/fortigate/6.2){:external}

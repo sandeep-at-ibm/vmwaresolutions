@@ -4,13 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-06-26"
+
+keywords: NetApp order instance, order NetApp ONTAP, order NetApp
 
 subcollection: vmware-solutions
 
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -64,7 +67,6 @@ The subdomain label must meet the following requirements:
 *  Only alphanumeric and dash (-) characters are allowed.
 *  The subdomain label must start with an alphabetic character and end with an alphanumeric character.
 *  The maximum length of the subdomain label is 10 characters.
-*  The subdomain label must be unique within your account.
 
 ### Domain name
 {: #np_orderinginstances-domain-name}
@@ -108,10 +110,17 @@ Select a Bare Metal Server configuration based on your requirements:
 
 The number of ESXi servers of a NetApp ONTAP Select instance is 4 by default. You cannot change it. All the ESXi servers share configuration.
 
+## Order summary
+{: #np_orderinginstances-order-summary}
+
+Based on your selected configuration, the estimated cost is instantly generated and displayed in the **Order Summary** right pane.  Click **Pricing details** to generate a PDF document with the cost summary for the {{site.data.keyword.vmwaresolutions_short}} resources.
+
+You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. This is useful if you want to estimate the cost of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.
+
 ## Procedure to order NetApp ONTAP Select instances
 {: #ordering-netapp-ontap-select-instances}
 
-1. From the {{site.data.keyword.cloud_notm}} catalog, click **VMware** on the left navigation pane, and then click **NetApp ONTAP Select** in the **Virtual Data Centers** section.
+1. From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon on the left navigation pane, and then click the **NetApp ONTAP Select** card in the **VMware Virtual Data Centers** section.
 2. On the **NetApp ONTAP Select** page, click **Create**.
 3. On the **NetApp ONTAP** page, enter the instance name.
 4. Complete the network interface settings by entering the **Hostname Prefix**, **Subdomain Label**, and **Domain Name**.
@@ -126,14 +135,12 @@ The number of ESXi servers of a NetApp ONTAP Select instance is 4 by default. Yo
     4. Click the link or links of the terms that apply to your order. Ensure that you agree with these terms and then select the **I have read and agreed to the Third-Party Service Agreements listed below** check box.
     5. Click **Provision**.
 
-## Results
+## Results after you order NetApp ONTAP instances
 {: #np_orderinginstances-results}
 
-The deployment of the instance starts automatically. You receive confirmation that the order is being processed and you can check the status of the deployment by viewing the instance details.
-
-When the instance is successfully deployed, the components that are described in [Technical specifications for NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#specs) are installed on your VMware virtual platform.
-
-When the instance is ready to use, the status of the instance is changed to **Ready to Use** and you receive a notification by email.
+* The deployment of the instance starts automatically and you receive confirmation that the order is being processed. You can check the deployment status, including any issues that might require your attention, by viewing the **Deployment History** section of the instance details.
+* When the instance is successfully deployed, the components that are described in [Technical specifications for NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#specs) are installed on your VMware virtual platform.
+* When the instance is ready to use, the status of the instance is changed to **Ready to Use** and you receive a notification by email.
 
 ## What to do next
 {: #np_orderinginstances-next}
@@ -154,5 +161,5 @@ You must manage the {{site.data.keyword.vmwaresolutions_short}} components that 
 
 * [Viewing NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_viewinginstances)
 * [Deleting NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_deletinginstance)
-* [NetApp ONTAP Documentation Center](http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.exp-clus-peer%2Fhome.html)
-* [Attach dedicated storage to NetApp ONTAP Select deployments](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)
+* [NetApp ONTAP Documentation Center](http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.exp-clus-peer%2Fhome.html){: external}
+* [Attach dedicated storage to NetApp ONTAP Select deployments](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/){: external}

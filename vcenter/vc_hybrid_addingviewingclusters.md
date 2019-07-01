@@ -4,13 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-18"
+lastupdated: "2019-06-26"
+
+keywords: vCenter Server Hybridity add cluster, view cluster vCenter Server Hybridity, delete cluster vCenter Server Hybridity
 
 subcollection: vmware-solutions
 
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -29,7 +32,7 @@ You can add clusters to your VMware vCenter Server on {{site.data.keyword.cloud}
 {: #vc_hybrid_addingviewingclusters-before-add}
 
 * Whenever possible, add clusters by using the {{site.data.keyword.vmwaresolutions_full}} console, because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, add clusters to vCenter Server only for on-premises clusters or clusters that you can't or won't manage in the {{site.data.keyword.vmwaresolutions_short}} console.
-* For instances that were deployed in (or upgraded to) V2.5 and later, the number of clusters, hosts, and VMs determines the maximum limit for the number of clusters you can add. You must remain within the VMware sizing guidelines and limits for your deployment. For more information about maximum limits, see [VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window}.
+* For instances that were deployed in (or upgraded to) V2.5 and later, the number of clusters, hosts, and VMs determines the maximum limit for the number of clusters you can add. You must remain within the VMware sizing guidelines and limits for your deployment. For more information about maximum limits, see [VMware Configuration Maximums](https://configmax.vmware.com/home){:external}.
 * For instances that were deployed in (or upgraded to) V2.3 and V2.4, you can add up to 10 clusters.
 
 ### System settings
@@ -63,25 +66,23 @@ You can choose **Skylake** or **Broadwell**. Options might differ depending on t
 
 When you select **Skylake**, you can choose the CPU and RAM combination according to your needs.
 
-Table 1. Options for Skylake Bare Metal Servers
-
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
 | Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+{: caption="Table 1. Options for Skylake Bare Metal Servers" caption-side="top"}
 
 #### Broadwell
 {: #vc_hybrid_addingviewingclusters-adding-broadwell}
 
 When you select **Broadwell**, you can choose the CPU and RAM combination according to your needs.
 
-Table 2. Options for Broadwell Bare Metal Servers
-
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
 | Quad Intel Xeon E7-4820 v4 / 40 cores total, 1.9 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 cores total, 2.2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+{: caption="Table 2. Options for Broadwell Bare Metal Servers" caption-side="top"}
 
 #### Number of Bare Metal Servers
 {: #vc_hybrid_addingviewingclusters-adding-bare-metal-number}
@@ -123,7 +124,9 @@ Network interface card (NIC) settings are based on your selection of either **Pu
 ### Order summary
 {: #vc_hybrid_addingviewingclusters-adding-order-summary}
 
-Based on your selected configuration for the cluster, the estimated cost is instantly generated and displayed in the **Order Summary** right pane.
+Based on your selected configuration for the cluster, the estimated cost is instantly generated and displayed in the **Order Summary** right pane. Click **Pricing details** to generate a PDF document with the cost summary for the {{site.data.keyword.vmwaresolutions_short}} resources.
+
+You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. This is useful if you want to estimate the cost of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.
 
 ## Procedure to add clusters to vCenter Server with Hybridity Bundle instances
 {: #vc_hybrid_addingviewingclusters-adding-procedure}

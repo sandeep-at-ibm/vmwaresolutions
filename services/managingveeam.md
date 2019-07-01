@@ -4,19 +4,23 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-06-28"
+
+keywords: Veeam console, Veeam backup restore, update Veeam license
 
 subcollection: vmware-solutions
 
 
 ---
 
+{:external: target="_blank" .external}
+
 # Managing Veeam on IBM Cloud
 {: #managingveeam}
 
 After the service is deployed into your instance, you can access the Veeam console by using RDP to manage the backup and restore of all the virtual machines in your environment, including the backup and restore of the management components. You can also upgrade the service by downloading and installing the Veeam updates from the Veeam website.
 
-For instances that were deployed in releases earlier than V1.8, if you want to use the Veeam on {{site.data.keyword.cloud}} service, you must replace the existing Veeam VSI in the instances. For more information, see the _Replacing the Veeam VSI of pre-V1.8 instances with Veeam on IBM Cloud_ section.
+For instances that were deployed in releases earlier than V1.8, if you want to use the Veeam on {{site.data.keyword.cloud}} service, you must replace the existing Veeam VSI in the instances. For more information, see the [Replacing the Veeam VSI of pre-V1.8 instances with Veeam on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam#managingveeam-replace-vsi).
 
 ## Accessing the Veeam console by using RDP
 {: #managingveeam-accessing}
@@ -35,9 +39,9 @@ For more information, see [Ordering, viewing, and removing services for vCenter 
 
 The Veeam on {{site.data.keyword.cloud_notm}} service can be configured to back up the management components by using the Veeam console. For more information, see [Backing up components](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup).
 
-For instances deployed in (or upgraded to) V1.8 or later releases, the configuration changes to your environment are not automatically backed up. Therefore, before you change the configuration of your environment, it is recommended that you back up the management components manually by running the management backup job in the Veeam console. For more information about backing up manually, see the [Veeam technical instructions](https://helpcenter.veeam.com/backup/vsphere/scheduing_manual.html){:new_window}.
+For instances deployed in (or upgraded to) V1.8 or later releases, the configuration changes to your environment are not automatically backed up. Therefore, before you change the configuration of your environment, it is recommended that you back up the management components manually by running the management backup job in the Veeam console. For more information about backing up manually, see the [Veeam technical instructions](https://helpcenter.veeam.com/backup/vsphere/scheduing_manual.html){:external}.
 
-When failures occur on the management components, you can restore the management components to a previous backup by using the Veeam console. For more information about restoring manually, see the [Veeam technical instructions]( https://helpcenter.veeam.com/backup/vsphere/performing_full_recovery.html){:new_window}.
+When failures occur on the management components, you can restore the management components to a previous backup by using the Veeam console. For more information about restoring manually, see the [Veeam technical instructions]( https://helpcenter.veeam.com/backup/vsphere/performing_full_recovery.html){:external}.
 
 ## Applying updates to Veeam on IBM Cloud
 {: #managingveeam-updates}
@@ -60,7 +64,7 @@ If the Veeam service is installed on an instance with private network only, bec
 ### Updating Veeam licenses for instances deployed with public and private network
 {: #managingveeam-update-license-public-private}
 
-If the Veeam service is installed on an instance with public and private network, you can update your Veeam license either automatically or manually by following the Veeam instructions at [Updating license]( https://helpcenter.veeam.com/docs/backup/vsphere/license_update.html).
+If the Veeam service is installed on an instance with public and private network, you can update your Veeam license either automatically or manually by following the Veeam instructions at [Updating license]( https://helpcenter.veeam.com/docs/backup/vsphere/license_update.html){:external}.
 
 ### Updating Veeam licenses for instances deployed with private network only
 {: #managingveeam-update-license-private}
@@ -88,7 +92,8 @@ After the new Veeam on {{site.data.keyword.cloud_notm}} service is deployed and 
 {: #managingveeam-related}
 
 * [Veeam on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)
+* [Managed Services for Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
 * [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Veeam.com website](https://www.veeam.com/)
-* [Veeam technical documentation](https://www.veeam.com/documentation-guides-datasheets.html)
+* [Veeam.com website](https://www.veeam.com/){:external}
+* [Veeam technical documentation](https://www.veeam.com/documentation-guides-datasheets.html){:external}

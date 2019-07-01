@@ -4,13 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-06-26"
+
+keywords: HyTrust CloudControl, HTCC, tech specs HTCC
 
 subcollection: vmware-solutions
 
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -20,7 +23,7 @@ subcollection: vmware-solutions
 
 The HyTrust CloudControl on {{site.data.keyword.cloud}} service enforces and controls compliance against security standards that includes role-based access control (RBAC), approval, and auditing. When the service is combined with HyTrust DataControl, the service ensures that virtual machines and workload data don't leave a particular region, cluster, or ESXi server within the {{site.data.keyword.CloudDataCent_notm}}.
 
-This service is available only to instances that are running vSphere 6.5 and that are deployed in or upgraded to V2.3 or later. The current HyTrust CloudControl version that is installed is 5.5.
+This service is available only to instances that are running vSphere 6.5 and that are deployed in or upgraded to V2.3 or later. The current HyTrust CloudControl version that is installed is 5.5.1.
 {:note}
 
 ## Technical specifications for HyTrust CloudControl on IBM Cloud
@@ -58,4 +61,4 @@ Before you remove the HyTrust CloudControl on {{site.data.keyword.cloud_notm}} s
 * [Managing HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghtcc)
 * [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [HyTrust website](https://www.hytrust.com/)
+* [HyTrust website](https://www.hytrust.com/){:external}

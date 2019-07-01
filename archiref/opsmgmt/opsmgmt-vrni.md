@@ -4,25 +4,25 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-17"
+lastupdated: "2019-05-31"
 
 ---
 
 # vRealize Network Insight
 {: #opsmgmt-vrni}
 
-The vRealize Network Insight (vRNI) environment consists of two virtual machines (VMs), a Plaform (UI) and a Controller Node.
+The vRealize Network Insight (vRNI) environment consists of two virtual machines (VMs), a Platform (UI) and a Controller Node.
 
 ![Network Insights diagram](../../images/opsmgmt-vrninw.svg "Network Insights diagram"){: caption="Figure 1. Network Insights networking" caption-side="bottom"}
 
-The vRNI Platform appliance provides the analytics, user interface and data management and connects to the Controller Appliance which collects from the various data sources such as NSX Edges, vCenter, and so on. All vRNI components utilize {{site.data.keyword.cloud}} Private portable IP addresses. vRLI is configured as the syslog server for vRNI.
+The vRNI Platform appliance provides the analytics, user interface, and data management and connects to the Controller Appliance, which collects from the various data sources such as NSX Edges, vCenter. All vRNI components use {{site.data.keyword.cloud}} Private portable IP addresses. vRLI is configured as the syslog server for vRNI.
 
 ![Network Insights components](../../images/opsmgmt-vrnicomponents.svg "Network Insights components"){: caption="Figure 2. Network Insights components" caption-side="bottom"}
 
 ## System requirements
 {: #opsmgmt-vrni-requirements}
 
-This architecture supports 3000 VMs using a Medium brick size.
+This architecture supports 3000 VMs by using a Medium brick size.
 
 Table 1. Network Insight Platform system requirements
 
@@ -49,7 +49,7 @@ Deployment of the vRNI appliance requires two IP addresses from the Tooling priv
 * NSX-V/T Appliances
 * Tooling Expansion VXLAN
 * Customer Networks
-* NTP server (time.services.softlayer.com)
+* NTP server (`time.services.softlayer.com`)
 * {{site.data.keyword.vmwaresolutions_short}} Active Directory/DNS
 
 ## Ports

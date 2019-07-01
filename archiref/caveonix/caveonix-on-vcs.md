@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-28"
+lastupdated: "2019-05-15"
 
 subcollection: vmware-solutions
 
@@ -45,7 +45,7 @@ Typical use cases are as follows:
 ## Key benefits to customers
 {: #caveonix-on-vcs-benefits}
 
-The key benefits that are provided by Caveonix RiskForesight on IC4VS include:
+The key benefits that are provided by Caveonix RiskForesight on IBM Cloud include:
 -	Eliminating blind spots, by viewing multi-dimensional grouping of assets across each location, organization, and application group in hybrid cloud.
 -	Building and enforcing security and compliance policies based on predictive analytics engine that uses network traffic flows across all applications.
 -	Quickly identifying required actions to eliminate risks due to cyber threats, vulnerabilities, or non-compliant configurations.

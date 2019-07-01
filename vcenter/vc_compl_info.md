@@ -4,13 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-02"
+lastupdated: "2019-06-28"
+
+keywords: vCenter Server compliance, compliance info, vCenter Server policy
 
 subcollection: vmware-solutions
 
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -51,6 +54,22 @@ In the event of a system failure, a third-party service provider may request deb
 
 This Cloud Service is not designed to any specific security requirements for regulated content, such as personal information or sensitive personal information. Client is responsible to determine if this Cloud Service meets Clients needs regarding the type of content Client uses in connection with the Cloud Service.
 
+## Policy configurations
+{: #vc_compl_info-default-policy-config}
+
+The generated vCenter password for vCenter Server primary instances is now 15 characters in length. Previously, the generated password was the vCenter default of eight characters in length
+
+The following table details vCenter policy configurations for a new primary instance.
+
+| Policy | V3.1 or later | V3.0 or earlier |
+|:------------- |:------------------------------ |:------------- |
+| vCenter password policy | Minimum length of 15 characters | Minimum length of 8 characters (vCenter default) |
+| vCenter lockout policy | Maximum of three failed login attempts | Maximum of five failed login attempts (vCenter default) |
+| vCenter lockout policy | 900 seconds between login failures | 180 seconds between login failures (vCenter default) |
+{: caption="Table 1. vCenter policy configurations" caption-side="top"}
+
+The generated NSX Manager password for vCenter Server primary instances is now 15 characters in length. Previously, the generated password was eight characters in length.
+
 ## Policy for accessing clients instances
 {: #vc_compl_info-policy-for-access-client-inst}
 
@@ -81,7 +100,7 @@ VMware vCenter Server environments, which are delivered as {{site.data.keyword.v
 * Due to the level of specialization that is required to maintain superior technical expertise at the team level, it is sometimes necessary to involve more than one support team in resolving a particular software problem. This is easily handled, as our support teams are all networked together and work as one to resolve whatever problems or issues arise.
 * In order to investigate the issue, IBM may need to access information on your system relative to the failure or may need to re-create the failure to get additional information.
 * A client–generated support ticket serves as acknowledgment that IBM Support may access the VMware management layer for investigation, debugging, and triage. If maintenance outage or changes to the environment are required, IBM Support will request additional documented confirmation from the client via tickets as part of our change management process.
-* For more information about support tickets, see [IBM Support Guide](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923) and [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
+* For more information about support tickets, see [IBM Support Guide](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923){:external} and [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
 
 ## Client responsibilities
 {: #vc_compl_info-client-responsibilities}
@@ -120,7 +139,7 @@ VMware vCenter Server environments, which are delivered as {{site.data.keyword.v
 * These non–IBM programs are licensed directly by their providers. Client agrees to use the non–IBM programs under the provider’s terms and conditions. These are provided in the IBM licensing agreement that accompanies the IBM offering at time of purchase.
 * IBM does testing to ensure that the third-party products will work with IBM programs and function appropriately.
 * IBM Software support will diagnose problems concerning client problems utilizing the knowledge of how our IBM offerings work with the Third-Party software. Once it has been concluded that the IBM program is working correctly, but the issue still exists, IBM must refer the client to the Third-Party vendor for further diagnosis.
-* Further information on client responsibilities regarding Third-Party software or code may be found in the [IBM Support Guide](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923).
+* Further information on client responsibilities regarding Third-Party software or code may be found in the [IBM Support Guide](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923){:external}.
 
 ## Consent to accessing client environments
 {: #vc_compl_info-consent-to-access-client-environment}

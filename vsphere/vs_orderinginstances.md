@@ -4,13 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-26"
+lastupdated: "2019-06-28"
+
+keywords: vSphere order cluster, order vSphere, order vSphere cluster
 
 subcollection: vmware-solutions
 
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -49,14 +52,13 @@ Select the VMware components to be ordered with your cluster and specify the lic
 
 If you're an IBM Business Partner user, you can select a component license bundle when you order a new vSphere cluster. The following bundles are available:
 
-Table 1. IBM Business Partner component bundles for vSphere clusters
-
 | Bundle | Components                   |
 |:------------------------- |:----------------------- |
 | Standard with Management | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vRealize Operations Enterprise |
 | Advanced                 | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vCloud Director, NSX Base |
 | Advanced with Networking | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, NSX Advanced |
 | Advanced with Networking and Management | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vRealize Operations Enterprise, vCloud Director, NSX Enterprise |
+{: caption="Table 1. IBM Business Partner component bundles for vSphere clusters" caption-side="top"}
 
 You can also include the following VMware components in your order:
 * VMware vSAN
@@ -102,7 +104,9 @@ Using individual license keys together with the combined license keys does not m
 
 Select the {{site.data.keyword.CloudDataCent_notm}} where the cluster is to be hosted.
 
-**Notes:**
+#### Notes
+{: #vs_orderinginstances-notes}
+
 * If you select a vSAN component, the location list is filtered by SSD availability.
 * Broadwell Bare Metal Servers are not available for the **FRA05 - Frankfurt** Data Center location.
 * SAP-certified and Broadwell Bare Metal Servers are not available for the **LON05 - London** Data Center location.
@@ -112,13 +116,12 @@ Select the {{site.data.keyword.CloudDataCent_notm}} where the cluster is to be h
 
 When you select **Skylake**, you can choose the CPU and RAM combination for the Bare Metal Server according to your needs. Options available depend on whether you selected the VMware vSAN component.
 
-Table 2. Options for Skylake {{site.data.keyword.baremetal_short}}
-
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
 | Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+{: caption="Table 2. Options for Skylake {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 ### SAP-certified
 {: #vs_orderinginstances-sap}
@@ -139,12 +142,11 @@ Based on your requirements, select a Bare Metal Server configuration:
 
 When you select **Broadwell**, you can choose the CPU and RAM combination for the Bare Metal Server according to your needs. Options available depend on whether you selected the VMware vSAN component.
 
-Table 3. Options for Broadwell {{site.data.keyword.baremetal_short}}
-
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
 | Quad Intel Xeon E7-4820 v4 / 40 cores total, 2.0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 cores total, 2.1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+{: caption="Table 3. Options for Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 ### Number of Bare Metal Servers
 {: #vs_orderinginstances-bare-metal-number}
@@ -192,7 +194,6 @@ The subdomain label must meet the following requirements:
 *  Only alphanumeric and dash (-) characters are allowed.
 *  The subdomain label must start and end with an alphanumeric character.
 *  The maximum length of the subdomain label is 10 characters.
-*  The subdomain label must be unique within your account.
 
 ### Domain name
 {: #vs_orderinginstances-domain-name}
@@ -234,7 +235,9 @@ Depending on the {{site.data.keyword.CloudDataCent_notm}} that you selected, exi
   * **Primary Subnet** is assigned to physical hosts for public network access.
   * **Primary Private Subnet** is assigned to physical hosts for management traffic.
 
-**Important:**
+##### Important
+{: #vs_orderinginstances-important}
+
 * Ensure that the firewall configuration on the selected VLANs does not block the management data traffic.
 * Ensure that all VLANs that you select are in the same pod. ESXi servers cannot be provisioned on mixed-pod VLANs.
 
@@ -246,12 +249,14 @@ You can also select whether to include the FortiGate Physical Appliance 300 Seri
 ## Order summary
 {: #vs_orderinginstances-order-summary}
 
-Based on your configurations, the estimated cost is instantly generated and displayed in the **Order Summary** pane on the right. Click **Pricing details** to generate a PDF document that provides the estimate details.
+Based on your selected configuration, the estimated cost is instantly generated and displayed in the **Order Summary** right pane. Click **Pricing details** to generate a PDF document with the cost summary for the {{site.data.keyword.vmwaresolutions_short}} resources.
+
+You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. This is useful if you want to estimate the cost of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.
 
 ## Procedure to order vSphere clusters
 {: #vs_orderinginstances-procedure}
 
-1. From the {{site.data.keyword.cloud_notm}} catalog, click **VMware** on the left navigation pane, and then click **VMware vSphere** in the **Virtual Data Centers** section.
+1. From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon on the left navigation pane, and then click the **VMware vSphere on IBM Cloud** card in the **VMware Virtual Data Centers** section.
 2. On the **VMware vSphere on IBM Cloud** page, click **Create**.  
    Ensure that you are on the **Create New** tab and that **New cluster** is displayed in the **Cluster Configurations** list.
 3. Enter the cluster name.
@@ -260,7 +265,7 @@ Based on your configurations, the estimated cost is instantly generated and disp
   * If you are a non-Business Partner, select the component, edition if any, and specify the licensing option.
   When you choose to Bring Your Own License (BYOL) for VMware vSphere Enterprise Plus, an {{site.data.keyword.cloud_notm}} ticket is opened automatically on your behalf to request the default vSphere licenses on your ordered {{site.data.keyword.baremetal_short}} to be replaced with your provided licenses.   
 
-    **Important:** You are responsible to track the ticket so that you replace the vSphere license on the newly ordered ESXi servers. This way the {{site.data.keyword.cloud_notm}} infrastructure grants the cancellation of the initially provided {{site.data.keyword.cloud_notm}} infrastructure vSphere license charge. To replace your ESXi vSphere license, see [Configure License Settings for an ESXi Host](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}.
+    **Important:** You are responsible to track the ticket so that you replace the vSphere license on the newly ordered ESXi servers. This way the {{site.data.keyword.cloud_notm}} infrastructure grants the cancellation of the initially provided {{site.data.keyword.cloud_notm}} infrastructure vSphere license charge. To replace your ESXi vSphere license, see [Configure License Settings for an ESXi Host](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:external}.
 5. Complete the Bare Metal Server settings:
    1. Select the {{site.data.keyword.CloudDataCent_notm}} to host the cluster.
    2. Select the Bare Metal Server configuration.
@@ -282,7 +287,7 @@ Based on your configurations, the estimated cost is instantly generated and disp
    Only the {{site.data.keyword.baremetal_short}} are installed. You are responsible for installing and configuring various components after cluster deployment, such as VMware vCenter, VMware NSX, VMware vSAN.
    {:note}
 
-### Results
+### Results after you order vSphere clusters
 {: #vs_orderinginstances-results}
 
 If you saved the cluster configuration as a template, you get a console notification that the configuration is saved successfully, and then you can find the template in the **Cluster Configurations** list.

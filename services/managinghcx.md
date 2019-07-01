@@ -4,12 +4,17 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-06-26"
+
+keywords: HCX updates, HCX management console, login HCX console
 
 subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
+
 
 # Managing VMware HCX on IBM Cloud
 {: #managinghcx}
@@ -38,5 +43,5 @@ If you do not see a build update that you are expecting, if you have problems wi
 
 * [HCX on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations)
 * [Glossary of HCX terms](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
-* [VMware Hybrid Cloud Extension overview](https://cloud.vmware.com/vmware-hcx)
-* [VMware Hybrid Cloud Extension documentation](https://cloud.vmware.com/vmware-hcx/resources)
+* [VMware Hybrid Cloud Extension overview](https://cloud.vmware.com/vmware-hcx){:external}
+* [VMware Hybrid Cloud Extension documentation](https://cloud.vmware.com/vmware-hcx/resources){:external}

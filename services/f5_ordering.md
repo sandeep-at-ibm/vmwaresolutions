@@ -4,13 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-09"
+lastupdated: "2019-06-26"
+
+keywords: F5 license activation, F5 configuration, order F5
 
 subcollection: vmware-solutions
 
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -25,14 +28,14 @@ You can order the F5 on {{site.data.keyword.cloud}} service when you order a new
 
 You can order a new instance with F5 on {{site.data.keyword.cloud_notm}} by using one of the following methods:
 * From the {{site.data.keyword.vmwaresolutions_short}} console, when you order a new instance, select **F5 on IBM Cloud** in the **Services** section.
-* From the {{site.data.keyword.cloud_notm}} catalog, select **F5 on IBM Cloud**, specify the service settings, and select **Add to New Instance**.
+* From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon on the left navigation pane, and then click the **F5 on IBM Cloud** card in the **VMware Services** section. Specify the service settings and select **Add to New Instance**.
 
 ## Ordering F5 on IBM Cloud for an existing instance
 {: #f5_ordering-existing}
 
 You can add the F5 on {{site.data.keyword.cloud_notm}} service into an existing instance by using one the following methods:
 * From the {{site.data.keyword.vmwaresolutions_short}} console, view the instance that you want to add the service for, click **Services** on the left navigation pane, and click **Add**.
-* From the {{site.data.keyword.cloud_notm}} catalog, select **F5 on IBM Cloud**, specify the service settings, and select **Add to Existing Instance**.
+* From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon on the left navigation pane, and then click the **F5 on IBM Cloud** card in the **VMware Services** section. Specify the service settings and select **Add to Existing Instance**.
 
 ## Ordering F5 on IBM Cloud for private instances
 {: #f5_ordering-private}
@@ -96,4 +99,4 @@ You cannot change the license model after service installation. To change the li
 * [Ordering, viewing, and removing services for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
 * [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [F5 Deployment Guides](https://www.f5.com/services/resources/deployment-guides){:new_window}
+* [F5 Deployment Guides](https://www.f5.com/services/resources/deployment-guides){:external}

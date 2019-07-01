@@ -4,12 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-06-26"
+
+keywords: VMware HCX standalone, HCX on-premises, delete HCX
 
 subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # Deleting on-premises VMware HCX on IBM Cloud instances
 {: #standalone_deletingserviceinstances}
@@ -36,4 +40,4 @@ Ensure that you reviewed all the considerations in [Considerations when deleting
 * [Ordering on-premises HCX on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_orderingserviceinstances)
 * [Viewing on-premises HCX on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_viewingserviceinstances)
 * [Glossary of HCX terms](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
-* [VMware Hybrid Cloud Extension documentation](https://cloud.vmware.com/vmware-hcx/resources)
+* [VMware Hybrid Cloud Extension documentation](https://cloud.vmware.com/vmware-hcx/resources){:external}

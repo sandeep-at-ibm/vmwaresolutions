@@ -4,13 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-18"
+lastupdated: "2019-06-28"
+
+keywords: vCenter Server NSX-T add cluster, view cluster vCenter Server NSX-T, delete cluster vCenter Server NSX-T
 
 subcollection: vmware-solutions
 
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -29,7 +32,7 @@ You can add your own clusters to VMware vCenter Server with NSX-T instances to e
 {: #vc_nsx-t_addingviewingclusters-before-add}
 
 * Whenever possible, add clusters by using the {{site.data.keyword.vmwaresolutions_full}} console, because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, add clusters to vCenter Server only for on-premises clusters or clusters that you can't or won't manage in the {{site.data.keyword.vmwaresolutions_short}} console.
-* The number of clusters, hosts, and virtual machines (VMs) determines the maximum limit for the number of clusters you can add. You must remain within the VMware sizing guidelines and limits for your deployment. For more information about maximum limits, see [VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window}.
+* The number of clusters, hosts, and virtual machines (VMs) determines the maximum limit for the number of clusters you can add. You must remain within the VMware sizing guidelines and limits for your deployment. For more information about maximum limits, see [VMware Configuration Maximums](https://configmax.vmware.com/home){:external}.
 
 ### System settings
 {: #vc_nsx-t_addingviewingclusters-adding-sys-settings}
@@ -62,25 +65,23 @@ You can choose **Skylake** or **Broadwell**.
 
 For the **Skylake** setting, you have options for the **CPU Model** and **RAM**. Available options might differ depending on the version that your instance was initially deployed in.
 
-Table 1. Options for Skylake {{site.data.keyword.baremetal_short}}
-
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
 | Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+{: caption="Table 1. Options for Skylake {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 #### Broadwell
 {: #vc_nsx-t_addingviewingclusters-adding-broadwell}
 
 For the **Broadwell** setting, you have a number of options for the **CPU Model** and **RAM**. Available options might differ depending on the version that your instance was initially deployed in.
 
-Table 2. Options for Broadwell {{site.data.keyword.baremetal_short}}
-
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
 | Quad Intel Xeon E7-4820 v4 / 40 cores total, 1.9 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 cores total, 2.2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+{: caption="Table 2. Options for Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 #### Number of Bare Metal Servers
 {: #vc_nsx-t_addingviewingclusters-adding-bare-metal-number}
@@ -124,14 +125,15 @@ The number of file shares must be in the range of 1 to 32.
 * **Performance**: Select the IOPS (input/output operations per second) per GB based on your workload requirements.
 * **ADD NFS**: Select to add individual file shares with different configuration settings.
 
-Table 3. NFS performance level options
+Performance level details:
 
 | Option        | Details       |
-  |:------------- |:------------- |
-  | 0.25 IOPS/GB | This option is designed for workloads that are not used often. Example applications include: vaulted data, hosting large databases with legacy data, or virtual disk images of virtual memory system as backup. |
-  | 2 IOPS/GB | This option is designed for most general-purpose workloads. Example applications include: hosting small databases, backing up web applications, or virtual machine (VM) disk images for a hypervisor. |
-  | 4 IOPS/GB | This option is designed for higher-intensity workloads that have a high percentage of active data at a time. Example applications include: transactional databases. |
-  | 10 IOPS/GB | This option is designed for the most demanding workload types, such as analytics. Example applications include: high-transaction databases and other performance-sensitive databases. This performance level is limited to a maximum capacity of 4 TB per file share. |
+|:------------- |:------------- |
+| 0.25 IOPS/GB | This option is designed for workloads that are not used often. Example applications include: vaulted data, hosting large databases with legacy data, or virtual disk images of virtual memory system as backup. |
+| 2 IOPS/GB | This option is designed for most general-purpose workloads. Example applications include: hosting small databases, backing up web applications, or virtual machine (VM) disk images for a hypervisor. |
+| 4 IOPS/GB | This option is designed for higher-intensity workloads that have a high percentage of active data at a time. Example applications include: transactional databases. |
+| 10 IOPS/GB | This option is designed for the most demanding workload types, such as analytics. Example applications include: high-transaction databases and other performance-sensitive databases. This performance level is limited to a maximum capacity of 4 TB per file share. |
+{: caption="Table 3. NFS performance level options" caption-side="top"}
 
 ### Licensing settings
 {: #vc_nsx-t_addingviewingclusters-adding-licensing-settings}
@@ -148,7 +150,9 @@ Network interface card (NIC) enablement settings are based on your selection of 
 ### Order summary
 {: #vc_nsx-t_addingviewingclusters-adding-order-summary}
 
-Based on your selected configuration for the cluster, the estimated cost is instantly generated and displayed in the **Order Summary** right pane.
+Based on your selected configuration for the cluster, the estimated cost is instantly generated and displayed in the **Order Summary** right pane. Click **Pricing details** to generate a PDF document with the cost summary for the {{site.data.keyword.vmwaresolutions_short}} resources.
+
+You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. This is useful if you want to estimate the cost of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.
 
 ## Procedure to add clusters to vCenter Server with NSX-T instances
 {: #vc_nsx-t_addingviewingclusters-adding-procedure}
@@ -217,8 +221,6 @@ You can't change the cluster name. Changing the cluster name might cause the add
   * **Actions**: Click the **Delete** icon to delete the cluster.
 4. Click a cluster name to view the ESXi server, storage, and network interface details:
 
-Table 4. ESXi server details
-
 | Item        | Description       |  
 |:------------- |:------------- |
 | Name | The name of the ESXi server is in the following format:<br> `<host_prefix><n>.<subdomain_label>.<root_domain>` <br> where:<br> `host_prefix` is the host name prefix<br> `n` is the sequence of the server<br> `subdomain_label` is the subdomain label<br> `root_domain` is the root domain name |
@@ -226,8 +228,9 @@ Table 4. ESXi server details
 | Credentials | The user name and password to access the ESXi server. |
 | Private IP | The private IP address of the ESXi server. |
 | Status | The status of the ESXi server, which can be one of the following values:<br> **Added** The ESXi server is added and is ready for use.<br> **Adding** The ESXi server is being added.<br> **Deleting** The ESXi server is being deleted. |
+{: caption="Table 4. ESXi server details" caption-side="top"}
 
-Table 5. Storage details
+View storage details:
 
 | Item        | Description       |  
 |:------------- |:------------- |
@@ -235,8 +238,9 @@ Table 5. Storage details
 | Size | The capacity of the storage. |
 | IOPS/GB | The performance level of the storage. |
 | NFS Protocol | The NFS version of the storage. |
+{: caption="Table 5. Storage details" caption-side="top"}
 
-Table 6. Network Interface - VLAN details
+View network interface details:
 
 | Item        | Description       |  
 |:------------- |:------------- |
@@ -244,24 +248,27 @@ Table 6. Network Interface - VLAN details
 | Description | The description of the VLAN.  |
 | Location | The data center location. |
 | Primary Route | The primary route of the VLAN. |
+{: caption="Table 6. Network Interface - VLAN details" caption-side="top"}
 
 Click **View Resource** to access the VLAN details.
 
-Table 7. Network Interface - Subnet details
+View subnet details:
 
 | Item        | Description       |  
 |:------------- |:------------- |
 | Name | The subnet name. Click the name to access the subnet details. |
 | Type | The type of subnet: primary or portable. |
 | Description | The description of the subnet. |
+{: caption="Table 7. Network Interface - Subnet details" caption-side="top"}
 
-Table 8. Network Interface - IP details
+View IP details:
 
 | Item        | Description       |  
 |:------------- |:------------- |
 | IP | The IP address. |
 | Status | The status of the IP address. |
 | Description |The description of the IP address.  |
+{: caption="Table 8. Network Interface - IP details" caption-side="top"}
 
 ## Deleting clusters from vCenter Server with NSX-T instances
 {: #vc_nsx-t_addingviewingclusters-deleting}

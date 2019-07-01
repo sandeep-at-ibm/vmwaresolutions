@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-21"
 
 subcollection: vmware-solutions
 
@@ -116,43 +116,13 @@ vSAN settings are configured based on best practices for deploying VMware soluti
 ## NFS attached storage
 {: #design_virtualinfrastructure-nfs-storage}
 
-When using NFS network attached storage, this architecture prescribes the use of NFS v3 rather than NFS v4.1, because NFS server LIF migrations might cause excessive latency when using NFS v4.1. Each vSphere host is connected to the NFS storage using its host name.
+When using NFS network-attached storage, this architecture prescribes the use of NFS v3 rather than NFS v4.1, because NFS server LIF migrations might cause excessive latency when using NFS v4.1. Each vSphere host is connected to the NFS storage by using its host name.
 
-One 2-TB NFS data store is attached to a cluster for use by management components with a performance tier of 4 IOPS/GB. Additional data stores can be attached to a cluster for workload use, at a variety of sizes and performance tiers.
+One 2-TB NFS data store is attached to a cluster for use by management components with a performance tier of 4 IOPS/GB. More data stores can be attached to a cluster for workload use, at various sizes and performance tiers.
 
 Additionally, this architecture requires that all hosts have a subnet route created for the subnet where the NFS storage resides. The purpose of this subnet route is to direct all NFS traffic to use the port group, subnet, and VLAN designated for NFS traffic by this design. If multiple NFS data stores are attached, multiple routes might be required to be configured since those data stores might be located in different remote subnets.
 
-Management virtual machines may be located on an NFS data store. This creates a bootstrapping problem since some of the management machines may be responsible for DNS services which are used to resolve the NFS host name. Therefore, this architecture specifies that at least one of the IP addresses for the management data store be hard coded in `/etc/hosts` on each of the hosts.
-
-## iSCSI attached storage
-{: #design_virtualinfrastructure-iscsi-storage}
-
-Unlike NFS v3 attached storage, iSCSI attached storage supports active–active paths across all configured NIC card ports and target ports. Because of this, higher throughput can be achieved and is thus a desirable alternative to NFS attaching storage. This does come at the cost of greater complexity.
-
-{{site.data.keyword.cloud_notm}} Endurance block storage supports a maximum of 64 IP addresses attaching per LUN when using VMware, which allows up to 32 hosts according to this design.
-
-One 2-TB iSCSI LUN is attached to the vSphere cluster for the use of the management components, and a minimum of one more iSCSI LUNs is configured for customer workload use. This storage is formatted as VMFS 6.x file system per each LUN.
-
-This architecture specifies the use of iSCSI port binding, a round-robin policy for multipath, a maximum queue depth of 64, and a round-robin IOPS limit of 1.
-
-### Virtual network setup for iSCSI
-{: #design_virtualinfrastructure-setup-iscsi}
-
-For this design, iSCSI traffic is allowed to use both private attached NIC card ports in an active, active configuration. Because vSphere allows only one NIC card port to be active on a particular port group within a vDS at a time, two port groups must be created (A and B) on the storage VLAN.
-
-An ESXi kernel port is created with a unique IP address on individual subnets to allow for scalability. Each kernel port is assigned to its own iSCSI port group. Both kernel ports are assigned to an ESXi virtual ISCSI host bus adapter (HBA). For each kernel port, the default GW override switch is employed to use the default gateway for the local subnet for that kernel port. See the following table.
-
-Table 2. iSCSi port groups
-
-vDS Portgroup | Kernel port subnet | VMHBA
---|:---|:--
-**SDDC-Dprotgroup-iSCSI-A** |Subnet-A |  vmhba64
-**SDDC-Dprotgroup-iSCSI-B** | Subnet-B | vmhba64
-
-#### Storage I/O control - SIOC
-{: #design_virtualinfrastructure-sioc}
-
-iSCSI LUNS is provisioned and formatted to a single file VMFS file system per LUN. The default recommended SIOC setting is 90% of peak throughput.
+Management virtual machines can be located on an NFS data store. This creates a bootstrapping problem since some of the management machines might be responsible for DNS services, which are used to resolve the NFS host name. Therefore, this architecture specifies that at least one of the IP addresses for the management data store to be hardcoded in `/etc/hosts` on each of the hosts.
 
 ## VMware NSX-V design
 {: #design_virtualinfrastructure-nsx-design}
@@ -204,7 +174,7 @@ Table 4. VLAN mapping to traffic types
 | VLAN  | Designation | Traffic type |
 |:----- |:----------- |:------------ |
 | VLAN 1 | Private A   | ESXi management, management, VXLAN (VTEP) |
-| VLAN 2 | Private B   | vSAN, NFS, vMotion, iSCSI |
+| VLAN 2 | Private B   | vSAN, NFS, and vMotion|
 | VLAN 3 | Public      | Available for internet access |
 
 Traffic from workloads will travel on VXLAN­-backed logical switches.
@@ -231,7 +201,7 @@ Table 6. Converged cluster distributed switch port group configuration settings
 | Failback           | No |
 | Failover order     | Active uplinks: Uplink1, Uplink2 \* |
 
-\* The vSAN port group uses explicit failover with active or standby because it does not support load balancing of vSAN storage traffic. iSCSI port groups have only one active uplink at a time (iSCSI A - Uplink1, iSCSI B - Uplink 2).
+\* The vSAN port group uses explicit failover with active or standby because it does not support load balancing of vSAN storage traffic.
 {:note}
 
 Table 7. Converged cluster virtual switch port groups and VLANs, Distributed switch **SDDC-Dswitch-Private**
@@ -242,10 +212,8 @@ SDDC-DPortGroup-Mgmt|Originating virtual port|Active: 0, 1|VLAN 1
 SDDC-DPortGroup-vMotion|Originating virtual port|Active: 0, 1|VLAN 2
 SDDC-DPortGroup-VSAN|Explicit failover|Active: 0, Standby: 1|VLAN 2
 SDDC-DPortGroup-NFS|Originating virtual port|Active: 0, 1|VLAN 2
-NSX generated|Originating virtual port|Active: 0,1|VLAN 1
+NSX generated|Originating virtual port|Active: 0, 1|VLAN 1
 SDDC-DPortGroup-External|Originating virtual port|Active: 0, 1|VLAN 3
-SDDC-DPortGroup-iSCSI-A|Originating virtual port|Active: 0|VLAN 2
-SDDC-DPortGroup-iSCSI-B|Originating virtual port|Active: 0|VLAN 2
 
 Table 8. Converged cluster VMkernel adapters, Distributed switch **SDDC-Dswitch-Private**
 
@@ -256,8 +224,6 @@ vMotion|SDDC-DPortGroup-vMotion|vMotion Traffic|9000
 VTEP|NSX generated|-|9000
 vSAN|SDDC-DPortGroup-VSAN|vSAN|9000
 NAS|SDDC-DPortGroup-NFS|NAS|9000
-iSCSI|SDDC-DPortGroup-iSCSI-A|iSCSI|9000
-iSCSI|SDDC-DPortGroup-iSCSI-B|iSCSI|9000
 
 ### NSX configuration
 {: #design_virtualinfrastructure-nsx-config}
@@ -281,15 +247,15 @@ The following aspects are not configured:
 
 ## Public network connectivity
 
-There are various reasons you may need public network connectivity for your instance. This may include access to public update services or other public services for your workload such as geolocation databases or weather data. Your virtualization management and add-on services may also require or benefit from public connectivity. For example, vCenter can update its HCL database and obtain [VMware Update Manager (VUM)](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-intro) updates over the public network. Zerto, Veeam, VMware HCX, F5 BIG-IP, and FortiGate-VM all use public network connectivity for some part of their product licensing, activation, or usage reporting. On top of this, you might use tunnels over the public network for connectivity to your on-premises data center for replication purposes.
+There are various reasons that you may need public network connectivity for your instance. This can include access to public update services or other public services for your workload such as geolocation databases or weather data. Your virtualization management and add-on services might also require or benefit from public connectivity. For example, vCenter can update its HCL database and obtain [VMware Update Manager (VUM)](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-intro) updates over the public network. Zerto, Veeam, VMware HCX, F5 BIG-IP, and FortiGate-VM all use public network connectivity for some part of their product licensing, activation, or usage reporting. On top of this, you might use tunnels over the public network for connectivity to your on-premises data center for replication purposes.
 
-Typically these communications are selectively routed and NATed to the public network through the management or customer edge services gateway (ESG). However, you may have additional security requirements, or may prefer to use a proxy to simplify the path of communication. Additionally, if you have deployed your instance with public interfaces disabled, you will not be able to use ESGs to route to the public network.
+Typically these communications are selectively routed and NATed to the public network through the management or customer edge services gateway (ESG). However, you might have more security requirements, or might prefer to use a proxy to simplify the path of communication. Additionally, if you deployed your instance with public interfaces disabled, you will not be able to use ESGs to route to the public network.
 
 This architecture allows for the following options for routing or proxying your traffic to the public network:
 
 Method|Description|Limitations
 --|--|--
-Virtualized gateway|Deploy a virtualized gateway (e.g., NSX ESG, F5 BIG-IP, FortiGate-VM, or a virtual appliance of your choosing) crossing the private and public network. Configure routing on the source system (e.g., vCenter, Zerto, your workload) to direct only public network traffic to the gateway, and configure the gateway according to your needs.|Applicable only to instances with public interfaces enabled. This configuration allows for both outbound and inbound traffic patterns.
+Virtualized gateway|Deploy a virtualized gateway (for example, NSX ESG, F5 BIG-IP, FortiGate-VM, or a virtual appliance of your choosing) crossing the private and public network. Configure routing on the source system (for example, vCenter, Zerto, your workload) to direct only public network traffic to the gateway, and configure the gateway according to your needs.|Applicable only to instances with public interfaces enabled. This configuration allows for both outbound and inbound traffic patterns.
 Virtualized gateway with proxy|Deploy a virtualized gateway as above. Behind this gateway, [deploy a proxy server](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-init-config#vum-init-config), and configure your services and applications to connect to the public network through this proxy.|Applicable only to instances with public interfaces enabled. Outbound traffic patterns can use the proxy but inbound traffic patterns must be managed at the gateway.
 Hardware gateway|Deploy a [hardware gateway appliance](https://cloud.ibm.com/catalog/infrastructure/gateway-appliance) to your management VLAN. Configure the gateway to NAT outbound to the public network according to your needs.|Applicable to all instances, with or without public interfaces enabled. This configuration allows for both outbound and inbound traffic patterns.
 Hardware gateway with proxy|Deploy a gateway appliance as above. Behind this gateway, [deploy a proxy server](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-init-config#vum-init-config), and configure your services and applications to connect to the public network through this proxy.|Applicable to all instances, with or without public interfaces enabled. Outbound traffic patterns can use the proxy but inbound traffic patterns must be managed by the gateway.

@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-06-20"
+
+keywords: planning NetApp ONTAP, data center, NetApp data centers
 
 subcollection: vmware-solutions
 
@@ -19,14 +21,12 @@ Review the following requirements before you order your NetApp ONTAP Select inst
 ## IBM Cloud account requirements
 {: #np_planning-account-req}
 
-The {{site.data.keyword.cloud_notm}} account that you are using must meet certain requirements. For more information, see [Requirements for the {{site.data.keyword.cloud_notm}} account](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).
+The {{site.data.keyword.cloud_notm}} account that you are using must meet certain requirements. For more information, see [Requirements for the {{site.data.keyword.cloud_notm}} account](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req).
 
 ## IBM Cloud Data Center availability
 {: #np_planning-dc-availability}
 
 The NetApp ONTAP Select deployment has strict requirements on the physical infrastructure. Therefore, you can deploy instances only in {{site.data.keyword.CloudDataCents_notm}} that meet the requirements. The following {{site.data.keyword.CloudDataCents_notm}} are available for NetApp ONTAP Select deployment:
-
-Table 1. Available {{site.data.keyword.CloudDataCents_notm}} for NetApp ONTAP Select instances
 
 | {{site.data.keyword.CloudDataCent_notm}} | Location | Region | Server options |
 |:------|:----------------|:----------------|:---------------------------|
@@ -60,6 +60,7 @@ Table 1. Available {{site.data.keyword.CloudDataCents_notm}} for NetApp ONTAP Se
 | WDC04 | Washington, DC | NA East | High Performance (Medium), High Performance (Large), High Capacity
 | WDC06 | Washington, DC | NA East | High Performance (Medium), High Performance (Large), High Capacity
 | WDC07 | Washington, DC | NA East | High Performance (Medium), High Performance (Large), High Capacity
+{: caption="Table 1. Available {{site.data.keyword.CloudDataCents_notm}} for NetApp ONTAP Select instances" caption-side="top"}
 
 ## Related links
 {: #np_planning-related}

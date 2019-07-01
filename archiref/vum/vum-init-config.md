@@ -52,7 +52,8 @@ Table 1. Deployment values
 | Netmask | 255.255.255.192 | |
 | Gateway| customer-nsx-edge private uplink ip | This is the default gateway setting for the proxy server, which is the private uplink IP address of customer-nsx-edge. The IP address can be found by reviewing the **Settings** tab for **customer-nsx-edge**. |
 | DNS Server | AD/DNS ip | This IP address can be found on the instance page in the {{site.data.keyword.vmwaresolutions_short}} console, the **Resources** page. |
-| BCR IP | bcr ip | This is the IP address of the {{site.data.keyword.cloud_notm}} Backend Customer Router and is the gateway for 10.0.0.0/8 and 161.26.0.0/16. This address is used in a static route in the proxy server so that it can reach the VCSA and the AD/DNS server. |
+| BCR IP | bcr ip | On the same page where you selected the proxy IP above, note the address labeled Gateway. This address is the IP address of the {{site.data.keyword.cloud_notm}} Backend Customer Router and is the gateway for 10.0.0.0/8 and 161.26.0.0/16. You will use this address below in a static route in the proxy server so that it can reach the VCSA and the AD/DNS server. |
+| NAT IP | customer-nsx-edge public uplink ip | The public address of the customer NSX ESG will serve as the public NAT address for the proxy. This IP address can be found by reviewing the **Settings** tab for **customer-nsx-edge**. |
 
 ## Configuring NSX
 {: #vum-init-config-config-nsx}

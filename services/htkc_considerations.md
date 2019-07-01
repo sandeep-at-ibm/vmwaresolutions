@@ -4,13 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-06-26"
+
+keywords: HyTrust KeyControl, HTKC, tech specs HTKC
 
 subcollection: vmware-solutions
 
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -20,7 +23,7 @@ subcollection: vmware-solutions
 
 The HyTrust KeyControl on {{site.data.keyword.cloud}} service simplifies the management of encrypted workloads. This service automates and simplifies the lifecycle of encryption keys, includes key storage, key distribution, key rotation, and key revocation. Using FIPS 140-2 compliant encryption, enterprises can easily manage encryption keys at scale.
 
-This service is available only to instances that are running vSphere 6.5 and that are deployed in or upgraded to  V2.5 and later. The current HyTrust KeyControl version that is installed is 4.3.
+This service is available only to instances that are running vSphere 6.5 and that are deployed in or upgraded to  V2.5 and later. The current HyTrust KeyControl version that is installed is 4.3.2.
 {:note}
 
 ## Technical specifications for HyTrust KeyControl on IBM Cloud
@@ -60,4 +63,4 @@ Before you remove the HyTrust KeyControl on {{site.data.keyword.cloud_notm}} ser
 * [Managing HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghtkc)
 * [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [HyTrust website](https://www.hytrust.com/)
+* [HyTrust website](https://www.hytrust.com/){:external}

@@ -4,14 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-06-21"
+
+keywords: IBM Integrated Managed Infrastructure, request IBM IMI, tech specs IMI
 
 subcollection: vmware-solutions
 
 
 ---
 
-# Requesting managed services from IMI
+# Managed Services from IMI
 {: #managing_imi}
 
 {{site.data.keyword.IBM}} Integrated Managed Infrastructure (IMI) can simplify VMware virtual infrastructure management with modular services. IMI uses advanced automation and analytics to manage critical infrastructure components worldwide and to deliver dynamic remote management services for a broad range of traditional and cloud virtual infrastructures.
@@ -24,21 +26,20 @@ IMI provides managed services for your vCenter Server instances. These managed s
 {: #managing_imi-specs}
 
 The following specifications are included in the IMI managed service:
-
 * Coverage options: 8X5, 16X5, or 24X7
 * IT Service Management tools and management process with accountability for the overall delivery
 * Compliance Management
 * Daily and weekly service management and reporting
 * Services with added value without increase in costs for continual improvement
 
-## Procedure to request managed services from IMI
+## Procedure to request Managed Services from IMI
 {: #managing_imi-procedure}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Getting Started** from the left navigation pane.
-2. Scroll down the page and click the **Managed Services from IMI** card that is located under **Order additional managed services**.
+2. Scroll down the page and under **VMware Managed services**, click the **Managed Services from IMI** card.
 3. On the **Managed Services from IMI** page, in the **Engage IMI Pre-Sales** box, enter a description of your requirements for IMI services and click **Request a consultation**.
 
-An IMI Pre-Sales representative contacts you using your {{site.data.keyword.cloud_notm}} contact information to help you with the services that you need.
+  An {{site.data.keyword.vmwaresolutions_short}} representative will contact you by using your {{site.data.keyword.cloud_notm}} contact information to help you with the solution that you need.
 
 ## Related links
 {: #managing_imi-related}

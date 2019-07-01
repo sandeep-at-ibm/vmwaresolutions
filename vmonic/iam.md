@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-06-18"
+
+keywords: IAM user, user role, user permission
 
 subcollection: vmware-solutions
 
@@ -36,26 +38,24 @@ Platform management roles enable users to perform tasks on service resources at 
 
 The following table provides information about the actions that are mapped to platform management roles.
 
-Table 1. Platform management roles and allowed actions
-
 | Platform management role | Actions | Example actions |
 |:----------------- |:----------------- |:----------------- |
-| Viewer | Read-only actions | <ul><li>View the summary of instances</li><li>View the details of an instance</li></ul>|
-| Editor | Update a specific instance |<ul><li>Add or remove ESXi servers</li><li>Add or remove clusters</li><li>Add or remove services</li><li>Upgrade an instance to a higher version</li></ul> |
-| Operator | Read-only actions | <ul><li>List instances</li><li>View the details of an instance</li></ul> |
-| Administrator | Full management access |<ul><li>Create new instances</li><li>Delete instances</li><li>Grant platform access to other users</li></ul>|
+| Viewer | Read-only actions | View the summary of instances<br>View the details of an instance |
+| Editor | Update a specific instance | Add or remove ESXi servers<br>Add or remove clusters<br>Add or remove services<br>Upgrade an instance to a higher version |
+| Operator | Read-only actions | List instances<br>View the details of an instance |
+| Administrator | Full management access | Create new instances<br>Delete instances<br>Grant platform access to other users|
+{: caption="Table 1. Platform management roles and allowed actions" caption-side="top"}
 
 For {{site.data.keyword.vmwaresolutions_short}}, the following actions exist:
-
-Table 2. Action descriptions and required roles
 
 | Action | Operation on service | Role |
 |:------ |:-------------------- |:---- |
 | vmware-solutions.instances.create | Create new instances | Administrator |
 | vmware-solutions.instances.delete | Delete instances | Administrator |
-| vmware-solutions.instances.view | <ul><li>List instances</li><li>View the detail of an instance</li></ul> | Viewer, Operator, Editor, and Administrator |
-| vmware-solutions.instances.update | <ul><li>Add or remove ESXi servers</li><li>Add or remove clusters</li><li>Add or remove services</li><li>Upgrade an instance to a higher version</li></ul> | Editor and Administrator |
+| vmware-solutions.instances.view | List instances<br>View the detail of an instance | Viewer, Operator, Editor, and Administrator |
+| vmware-solutions.instances.update | Add or remove ESXi servers<br>Add or remove clusters<br>Add or remove services<br>Upgrade an instance to a higher version | Editor and Administrator |
 | vmware-solutions.account.update | Update account settings | Administrator |
+{: caption="Table 2. Action descriptions and required roles" caption-side="top"}
 
 ## Managing access for users
 {: #iam-users}

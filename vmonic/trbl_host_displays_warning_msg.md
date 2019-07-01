@@ -4,12 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-26"
+
+keywords: troubleshooting, configuration issue, ESXi server issue
 
 subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # ESXi server displays configuration issue
 {: #trbl_host_displays_warning_msg}
@@ -28,4 +32,4 @@ The message is displayed even though there are two available uplinks for the pri
 ## Resolution
 {: #trbl_host_displays_warning_msg-resolution}
 
-This is a VMware known issue. To resolve the problem, follow the instructions in [ESX/ESXi host displays warning message when test condition is false (2008602)](https://kb.vmware.com/s/article/2008602){:new_window}.
+This is a VMware known issue. To resolve the problem, follow the instructions in [ESX/ESXi host displays warning message when test condition is false (2008602)](https://kb.vmware.com/s/article/2008602).{:external}

@@ -4,13 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-13"
+lastupdated: "2019-06-28"
+
+keywords: IBM Cloud Object Storage, ICOS configuration, order Cloud Object Storage
 
 subcollection: vmware-solutions
 
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -18,7 +21,7 @@ subcollection: vmware-solutions
 # Ordering and configuring IBM Cloud Object Storage with Veeam
 {: #icos_ordering}
 
-With the release of Veeam Availability Suite 9.5 Update 4, Veeam is compatible with IBM Cloud Object Storage (ICOS). The ordering of IBM Cloud Object Storage is not automated when ordering Veeam on IBM Cloud, but it can be added after deployment.
+With the release of Veeam Availability Suite 9.5 Update 4, Veeam is compatible with IBM Cloud Object Storage (ICOS). The ordering of IBM Cloud Object Storage is not automated when you order Veeam on IBM Cloud, but it can be added after deployment.
 
 To order IBM Cloud Object Storage, complete the following tasks in the specified order.
 
@@ -40,12 +43,14 @@ To create service credentials, including HMAC credentials, see [Service credenti
 ## Adding a scale-out repository
 {: #icos_ordering-scale-repo}
 
-To add a scale-out repository within Veeam, see [Adding scale-Out repositories](https://helpcenter.veeam.com/docs/backup/vsphere/sobr_add.html?ver=95u4){:new_window}. Follow the steps and return to this section to continue with the following tasks.
+* As part of the Veeam service installation and configuration, a scale-out backup repository with the name `IC4V Scale-Out Repository` is created. `IC4V Default VM Backup Repository` is added to the scale-out repository as an extent.
+* When you create the backup job, you must select `IC4V Scale-Out Repository` as the backup repository, and not `IC4V Default Config Backup Repository`. The latter repository is intended for the Veeam configuration backups.
+* You can add more repositories to this default repository, such as a backup repository of type Object Storage. For more information, see [Adding scale-Out repositories](https://helpcenter.veeam.com/docs/backup/vsphere/sobr_add.html?ver=95u4){:external}. Follow the steps and return to this section to continue with the following tasks.
 
 ## Maintaining and managing your cloud tier
 {: #icos_ordering-manage-cloud}
 
-For information about maintaining and managing your cloud tier, see [Managing capacity tier data](https://helpcenter.veeam.com/docs/backup/vsphere/capacity_tier_managing_data.html?ver=95u4){:new_window}.
+For more information, see [Managing capacity tier data](https://helpcenter.veeam.com/docs/backup/vsphere/capacity_tier_managing_data.html?ver=95u4){:external}.
 
 ## Related links
 {: #icos_ordering-related}
@@ -53,6 +58,6 @@ For information about maintaining and managing your cloud tier, see [Managing ca
 * [Veeam on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions?topic=vmware-solutions-veeam_considerations)
 * [Ordering Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_ordering)
 * [Managing Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
-* [Requesting managed services for Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
+* [Managed Services for Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
 * [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)

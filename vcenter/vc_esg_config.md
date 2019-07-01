@@ -4,13 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-06-28"
+
+keywords: vCenter Server network config, network configuration, manage NSX ESG
 
 subcollection: vmware-solutions
 
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -21,7 +24,7 @@ subcollection: vmware-solutions
 Configure the network for your virtual machines so you can take advantage of the VMware NSX Edge Services Gateway (ESG) that is deployed in your VMware vCenter Server instances. For more information about the security measures that are in place to help minimize security risk, see [Does the management services NSX Edge pose a security risk?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
 VMware NSX is a network virtualization platform that allows the virtualization of isolated networks and provides several networking
-services such as switches, routing, and firewalls. For more information about NSX, see [Overview of NSX](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}.
+services such as switches, routing, and firewalls. For more information about NSX, see [Overview of NSX](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:external}.
 
 As part of the ordering process for your vCenter Server instance, the following actions are completed on your behalf:
 * A private customer subnet is ordered to be used by your VMs (virtual machines) to access the {{site.data.keyword.cloud}} infrastructure private network.
@@ -70,7 +73,7 @@ If you want your workload VMs to have outbound access to the internet, you must 
 3. Click **Management > NAT** to open the **NAT** tab.
 4. Select the default SNAT rule in the table and click the green check mark above the table to enable the rule.
 
-For more information about NSX Edge NAT rules, see [Managing NAT rules](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.
+For more information about NSX Edge NAT rules, see [Managing NAT rules](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:external}.
 
 ## Procedure to identify customer subnets details
 {: #vc_esg_config-procedure-identify-customer-subnets-details}
@@ -89,7 +92,7 @@ Additionally, you can find more details about the customer subnets by completing
 2. Click the filter menu and in the **Subnet** field enter the identifier as seen in the description of **customer-nsx-edge** in the VMware vSphere Web Client.
 3. Review the notes that are shown for the IP addresses. These notes identify which of the subnets and IP addresses are ordered and used during the initial setup.
 
-   Do not use the IP addresses that are ordered and used during the initial setup. However, you can use other IP addresses on these subnets according to your requirements. To set up additional network address translation rules, see [Managing NAT rules](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.
+   Do not use the IP addresses that are ordered and used during the initial setup. However, you can use other IP addresses on these subnets according to your requirements. To set up additional network address translation rules, see [Managing NAT rules](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:external}.
    {:important}
 
 ## Related links
@@ -97,4 +100,4 @@ Additionally, you can find more details about the customer subnets by completing
 
 * [Troubleshooting](/docs/services/vmwaresolutions?topic=vmware-solutions-vcenter_chg_impact#vcenter_chg_impact)
 * [FAQs](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}
+* [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:external}

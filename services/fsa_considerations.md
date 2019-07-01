@@ -4,13 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-04"
+lastupdated: "2019-06-26"
+
+keywords: FortiGate security, FortiGate Sirtual Appliance, tech specs FortiGate
 
 subcollection: vmware-solutions
 
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -74,5 +77,5 @@ Review the following considerations before you remove the FortiGate Security App
 * [Managing FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingfsa)
 * [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Fortinet website](https://www.fortinet.com/){:new_window}
-* [Fortinet Document Library](https://docs.fortinet.com/product/fortigate/6.2){:new_window}
+* [Fortinet website](https://www.fortinet.com/){:external}
+* [Fortinet Document Library](https://docs.fortinet.com/product/fortigate/6.2){:external}

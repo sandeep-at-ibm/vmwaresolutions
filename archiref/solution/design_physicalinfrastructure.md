@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-21"
 
 subcollection: vmware-solutions
 
@@ -24,7 +24,7 @@ The physical infrastructure consists of the following components:
   <dt class="dt dlterm">Physical compute</dt>
   <dd class="dd">The physical compute provides the physical processing and memory that is used by the virtualization infrastructure. For this design, the compute components are provided by {{site.data.keyword.baremetal_long}} and are listed in the [VMware Hardware Compatibility Guide (HCG)](https://www.vmware.com/resources/compatibility/search.php).</dd>
   <dt class="dt dlterm">Physical storage</dt>
-  <dd class="dd">The physical storage provides the raw storage capacity that is used by the virtualization infrastructure. Storage components are provided either by {{site.data.keyword.baremetal_short}} or by shared Network Attached Storage (NAS) array that uses NFSv3 or iSCSI.</dd>
+  <dd class="dd">The physical storage provides the raw storage capacity that is used by the virtualization infrastructure. Storage components are provided either by {{site.data.keyword.baremetal_short}} or by shared Network Attached Storage (NAS) array that uses NFS v3.</dd>
   <dt class="dt dlterm">Physical network</dt>
   <dd class="dd">The physical network provides the network connectivity into the environment that is then used by the network virtualization. The network is provided by the {{site.data.keyword.cloud_notm}} services network and it includes extra services such as DNS and NTP.</dd>
 </dl>
@@ -91,7 +91,7 @@ In addition to the public and private networks, each {{site.data.keyword.cloud_n
 
 {{site.data.keyword.cloud_notm}} allocates two types of IP addresses to be used within the {{site.data.keyword.cloud_notm}} infrastructure:
 * Primary IP addresses are assigned to devices, Bare Metal, and virtual servers that are provisioned by {{site.data.keyword.cloud_notm}}. Do not assign any IP addresses in these blocks.
-* Portable IP addresses are provided for you to assign and manage as needed. vCenter Server provisions several portable IP ranges for its use. Use only the portable ranges assigned to specific NSX-T or NSX-V components specified for customer use. For example, **Customer EDGE**.
+* Portable IP addresses are provided for you to assign and manage as needed. vCenter Server provisions several portable IP ranges for its use. Use only the portable ranges that are assigned to specific NSX-T or NSX-V components specified for customer use. For example, **Customer EDGE**.
 
 Primary or portable IP addresses can be made routable to any VLAN within your account when the account is configured as a **Virtual Routing and Forwarding (VRF)** account.
 
@@ -107,7 +107,7 @@ As various connectivity options along with network routing options require that 
 
 Each physical host in this design has two redundant pairs of 10 Gbps Ethernet connections into each {{site.data.keyword.cloud_notm}} Top of Rack (ToR) switch (public and private). The adapters are set up as individual connections (unbonded) for a total of 4 x 10 Gbps connections. This allows networking interface card (NIC) connections to work independently from each other.
 
-Removing physical network connectivity to the public or private network for the bare metal servers that are used within the vCenter Server offering is not possible. Physical ports on the internal NIC of the bare metal can be disabled, but there is no support for unplugging the cables.
+Removing physical network connectivity to the public or private network for the Bare Metal Servers that are used within the vCenter Server offering is not possible. Physical ports on the internal NIC of the bare metal can be disabled, but there is no support for unplugging the cables.
 
 ![Physical host connections](../../images/vcsv4radiagrams-ra-physical-host-connections.svg "Physical host connections"){: caption="Figure 3. Physical host connections" caption-side="bottom"}
 
@@ -123,12 +123,11 @@ The private network consists of two VLANs within this design. Three subnets are 
 * The second subnet is used for management virtual machines such as vCenter Server Appliance and Platform Services Controller
 * The third subnet is used for the encapsulated overlay network Tunnel Endpoints (VTEPs) assigned to each host through the NSX Manager.
 
-In addition to Private VLAN A, a second private VLAN (here designated Private VLAN B) exists to support VMware features such as vSAN, vMotion, NFS, and iSCSI. As such, the VLAN is divided into two, three, or four portable subnets:
+In addition to Private VLAN A, a second private VLAN (here designated Private VLAN B) exists to support VMware features such as vSAN, vMotion, and NFS<!--, and iSCSI-->. As such, the VLAN is divided into two, three, or four portable subnets:
 * The first subnet is assigned to a kernel port group for vMotion traffic.
 * The remaining subnet or subnets are used for storage traffic:
    * When using vSAN, a subnet is assigned to kernel port groups that are used for vSAN traffic.
    * When using NFS attached NAS, a subnet is assigned to a port group that is dedicated to NFS traffic.
-   * For iSCSI attachment, two port groups are created to allow multipathing active-active across both private NIC ports as only one NIC port can be active at a time per the VMware iSCSI documentation.
 
 All subnets that are configured as part of a vCenter Server automated deployment use {{site.data.keyword.cloud_notm}} managed ranges. This is to ensure that any IP address can be routed to any data center within the {{site.data.keyword.cloud_notm}} account when you need the connection now or in the future.
 
@@ -138,13 +137,12 @@ Table 1. VLAN and subnet summary
 
 | VLAN | Type | Description |
 |:---- |:---- |:----------- |
-| Public| Primary  | Assigned to physical hosts for public network access. Not used upon initial deployment. |
+| Public| Primary  | Assigned to physical hosts for public network access. The hosts are assigned a public IP address but this IP address is not configured on the hosts, so they are not directly accessible on the public network. Instead, the public VLAN is intended to provide public internet access for other components, such as NSX Edge Services Gateways (ESGs). |
 | Private A | Primary  | Single subnet assigned to physical hosts assigned by {{site.data.keyword.cloud_notm}}. Used by the management interface for vSphere management traffic. |
-| Private A | Portable | Single subnet assigned to virtual machines that function as management components |
+| Private A | Portable | Single subnet that is assigned to virtual machines that function as management components |
 | Private A | Portable | Single subnet that is assigned to NSX-V or NSX-T VTEP |
 | Private B | Portable | Single subnet that is assigned for vSAN, if in use |
 | Private B | Portable | Single subnet assigned for NAS, if in use |
-| Private B | Portable | Two subnets assigned for iSCSI NAS, if in use (one per physical NIC port) |
 | Private B | Portable | Single subnet assigned for vMotion |
 
 In this design, all VLAN-backed hosts and virtual machines are configured to point to the {{site.data.keyword.cloud_notm}} back-end “private network” customer router (BCR) as the default route. While the vCenter Server instances enable the use of Software-Defined Networking (SDN), network overlays created within a VMware instance that include routing to internal subnets are not known by the {{site.data.keyword.cloud_notm}} managed routers.
@@ -175,26 +173,13 @@ For more information about the supported configurations, see the [vCenter Server
 
 When using shared file-level storage, a 2-TB NFS share is attached to the hosts that comprise the initial VMware cluster. This share, which is known as the management share, is used for management components such as the VMware vCenter Server, Platform Services Controller, and VMware NSX.
 
-The storage is attached by using the NFSv3 protocol at a 2 IOPS per GB level from IBM Cloud. IBM normalizes the IOP level that is provisioned at a 16 K block size such that larger block sizes see a lower limit and smaller block sizes a higher limit.
+The storage is attached by using the NFS v3 protocol at a 2 IOPS/GB level from IBM Cloud.
 
 ![NFS shares that are attached to VMware deployment](../../images/vcsv4radiagrams-ra-nfs-shares.svg "NFS shares that are attached to VMware deployment: management share and customer specified share"){: caption="Figure 4. NFS shares that are attached to VMware deployment" caption-side="bottom"}
 
-You can allocate and mount more file shares across all hosts for your workloads at the time of purchase or later within the console. You can select from the available {{site.data.keyword.cloud_notm}} Endurance file storage capacity options and performance tiers in the corresponding {{site.data.keyword.CloudDataCent_notm}}. All shares are attached by using the NFSv3 protocol. Additionally, it is possible to attach NFSv3 file shares by applying the NetApp ONTAP Select offering.
+You can allocate and mount more file shares across all hosts for your workloads at the time of purchase or later within the console. You can select from the available {{site.data.keyword.cloud_notm}} Endurance file storage capacity options and performance tiers in the corresponding {{site.data.keyword.CloudDataCent_notm}}. All shares are attached by using the NFS v3 protocol. Additionally, it is possible to attach NFS v3 file shares by applying the NetApp ONTAP Select offering.
 
 The availability of the 10 IOPS/GB depends on the IBM Cloud Data Center. {{site.data.keyword.CloudDataCents_notm}} that offer the 10 IOPS/GB performance tier also include provider-managed encryption of data at rest (AES-256 encryption), and are backed up by all-flash storage. The 10 IOPS/GB performance tier is limited to a maximum capacity of 4 TB. For more information about the shared NAS used in this solution, see [Shared storage architecture](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits).
-
-### Shared iSCSI storage
-{: #design_physicalinfrastructure-shared-iscsi}
-
-Similar to NFS, for shared iSCSI storage, one 2-TB iSCSI LUN is attached to the hosts that comprise the initial VMware cluster. This iSCSI LUN is used for management components such as the VMware vCenter Server, Platform Services Controller, and VMware NSX. The storage is attached through the iSCSI protocol at a 2 IOPs per GB level from IBM Cloud.
-
-IBM normalizes the IOP level provisioned at a 16 K block size such that larger block sizes see a lower limit and smaller block sizes a higher limit.
-
-![iSCSI LUNs attached to VMware deployment](../../images/vcsv4radiagrams-ra-iscsi-lun.svg "iSCSI LUNs attached to VMware deployment"){: caption="Figure 5. iSCSI LUNs attached to VMware deployment" caption-side="bottom"}
-
-Additional iSCSI LUNs for workloads can also be allocated and mounted across all hosts at the time of purchase or later within the console. Select from the available IBM Cloud Endurance block storage capacity options and performance tiers in the corresponding IBM Cloud Data Center. All LUNs are attached by using the iSCSI protocol. Additionally, it is possible to attach iSCSI LUNs from the NetApp ONTAP Select offering.
-
-The availability of the 10 IOPS/GB depends on the IBM Cloud Data Center. Data centers that offer the 10 IOPS/GB performance tier also include provider–managed encryption of data at rest (AES–256 encryption), and are backed by all–flash storage. The 10 IOPS/GB performance tier is limited to a maximum capacity of 4 TB.
 
 For more information about the shared NAS used in this solution, see [Shared storage architecture](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits).
 

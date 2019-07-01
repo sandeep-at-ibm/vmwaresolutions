@@ -6,6 +6,8 @@ copyright:
 
 lastupdated: "2019-05-03"
 
+keywords: release notes, what's new, version 3.0
+
 subcollection: vmware-solutions
 
 
@@ -112,7 +114,7 @@ You are now able to add Zerto on {{site.data.keyword.cloud_notm}} on instances t
 
 * Documentation is now available to assist you in upgrading {{site.data.keyword.vmwaresolutions_short}} components to VMware vSphere 6.7. This upgrade is required if you want to continue to benefit from {{site.data.keyword.vmwaresolutions_short}} automation. For more information, see [Upgrading vCenter Server vSphere software from VMware vSphere 6.5 to 6.7](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_vsphere_upgrade#vc_vsphere_upgrade).
 * Reference documentation is now available to provide you with user IDs that {{site.data.keyword.vmwaresolutions_short}} maintains for use by {{site.data.keyword.cloud_notm}} automation. Possible messages that display in your instance history logs are also available for your review. For more information, see [IBM user IDs](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_user_ids) and [Instance history messages](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_messages).
-* The **Reboot/Control** permission has been added to the table describing required permissions for the IBM Cloud infrastructure account. For more information, see [Permissions for the {{site.data.keyword.cloud_notm}} infrastructure account](/docs/services/vmwaresolutions/services?topic=vmware-solutions-slaccountrequirement#slaccountrequirement-permissions).
+* The **Reboot/Control** permission has been added to the table describing required permissions for the IBM Cloud infrastructure account. For more information, see [Permissions for the {{site.data.keyword.cloud_notm}} infrastructure account](/docs/services/vmwaresolutions/services?topic=vmware-solutions-cloud-infra-acct-req#cloud-infra-acct-req-permissions).
 * New reference documentation is available for the following APIs. For more information, see [API reference](https://cloud.ibm.com/apidocs/vmware-solutions){:new_window}.
   * List all history messages for a specified VMware vCenter Server instance
   * Add shared storages to a specified cluster

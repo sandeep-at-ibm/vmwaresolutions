@@ -4,14 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-06-21"
+
+keywords: Mission Critical VMware, request Mission Critical, tech specs Mission Critical
 
 subcollection: vmware-solutions
 
 
 ---
 
-# Mission Critical VMware on IBM Cloud overview
+# Mission Critical VMware on IBM Cloud
 {: #mcv_overview}
 
 Mission Critical VMware on {{site.data.keyword.cloud}} delivers a multi-zone cloud architecture to help enterprises prevent downtime for cloud applications and to automate failovers within a cloud region.
@@ -82,7 +84,19 @@ The network architecture has the following specifications:
 * During a vMotion activity for VM-A, traffic will still ingress and egress via {{site.data.keyword.cloud_notm}} availability zone #1.
 * During a site or edge failure, traffic will route out of the remaining available site.
 
+## Procedure to request Mission Critical VMware on IBM Cloud
+{: #mcv_overview-proc}
+
+1. From the {{site.data.keyword.vmwaresolutions_full}} console, click **Getting Started** from the left navigation pane.
+2. Scroll down the page and under **VMware Managed Services**, click the **Mission Critical VMware on IBM Cloud** card.
+3. On the Mission Critical VMware on {{site.data.keyword.cloud_notm}} page, in the **Contact us for Mission Critical VMware** box, click **Request a consultation**.
+4. On the IBM Services Expert Hub page, click **Schedule a consultation** to book 30 minutes with a services expert.
+
+  An {{site.data.keyword.vmwaresolutions_short}} representative will contact you by using your {{site.data.keyword.cloud_notm}} contact information to help you with the solution that you need.
+
 ## Related links
 {: #mcv_overview-related}
 
-* [Requesting Mission Critical VMware on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_mcv)
+* [Managed services from IMI](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_imi)
+* [Managed services for Veeam on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
+* [Managed services for Zerto on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)

@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-06-20"
+
+keywords: planning vSphere, data center, vSphere data centers
 
 subcollection: vmware-solutions
 
@@ -26,7 +28,7 @@ You are responsible for setting up the environment, installing, and configuring 
 ## IBM Cloud account requirements
 {: #vs_planning-account-req}
 
-The {{site.data.keyword.cloud_notm}} account that you are using must meet certain requirements. For more information, see [Requirements for the {{site.data.keyword.cloud_notm}} account](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).
+The {{site.data.keyword.cloud_notm}} account that you are using must meet certain requirements. For more information, see [Requirements for the {{site.data.keyword.cloud_notm}} account](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req).
 
 ## IBM Cloud Data Center availability
 {: #vs_planning-dc-availability}
@@ -35,8 +37,6 @@ The vSphere deployment has strict requirements on the physical infrastructure. T
 
 If you select a vSAN component, the location list is filtered by SSD (Solid-State Disk) availability.
 {:note}
-
-Table 1. Available {{site.data.keyword.CloudDataCents_notm}} for vSphere clusters
 
 | {{site.data.keyword.CloudDataCent_notm}} | Location | Region |
 |:----------------------|:---------|:---------------|
@@ -73,6 +73,7 @@ Table 1. Available {{site.data.keyword.CloudDataCents_notm}} for vSphere cluster
 | WDC04 | Washington, DC | NA East |
 | WDC06 | Washington, DC | NA East |
 | WDC07 | Washington, DC | NA East |
+{: caption="Table 1. Available {{site.data.keyword.CloudDataCents_notm}} for vSphere clusters" caption-side="top"}
 
 ## Related links
 {: #vs_planning-related}

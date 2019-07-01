@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-17"
+lastupdated: "2019-03-06"
 
 ---
 
@@ -22,20 +22,21 @@ vRealize Log Insight (vRLI) enables real-time logging for components in the {{si
 
 ![Log Insights networking diagram](../../images/opsmgmt-vrlinw.svg "Log Insights networking diagram"){: caption="Figure 1. Log Insights networking" caption-side="bottom"}
 
-In this design each location has an independent vRLI cluster deployed on the Management Cluster. The vRLI cluster is deployed on the tooling subnet using {{site.data.keyword.cloud_notm}} Portable IP addresses. This facilitates communication to all components that are addressed out of the {{site.data.keyword.cloud_notm}} RFC1918 address space. The components include: vSphere hosts, vCenter, Platform Services Controller, NSX Manager, and NSX Controllers. A vRLI cluster contains a Master Node and at least two Worker Nodes with an Integrated Load Balancer.
+In this design, each location has an independent vRLI cluster that is deployed on the Management Cluster. The vRLI cluster is deployed on the tooling subnet by using {{site.data.keyword.cloud_notm}} Portable IP addresses. This facilitates communication to all components that are addressed out of the {{site.data.keyword.cloud_notm}} RFC1918 address space. The components include: vSphere hosts, vCenter, Platform Services Controller, NSX Manager, and NSX Controllers. A vRLI cluster contains a Master Node and at least two Worker Nodes with an Integrated Load Balancer.
 
-* Master Node - Required initial node in the Cluster. The Master Node is responsible for queries and log ingestion. The Master Node Web UI is the single pane of glass for that vRealize Log Insight Cluster. All queries against data are directed against the mater which in turn distributes the workload to the Workers.
-* Worker Node - three nodes minimum are required to form a Cluster with the ability to add more Workers for scale out. A Worker Node ingest logs and stores logs locally.
-* Integrated Load Balancer - This provides high availability using proprietary load balancing configuration (no external load balancer required).
-* Log Insight Forwarder – This is deployed to receive logs from the NSX overlay components. Additionally, it can be leveraged by a client if they want to send logs from compute VMs. The Log Insight Forwarder is a single vRealize Log Insight Master Node that is used as a remote syslog aggregator to forward alerts to the vRLI cluster. As the VXLAN backed are addressed out of BYOIP address space, NAT rules must be implemented on the NSX ESG. The following sizes are available and the appropriate one selected:
+* Master Node - Required initial node in the Cluster. The Master Node is responsible for queries and log ingestion. The Master Node web UI is the single pane of glass for that vRealize Log Insight Cluster. All queries against data are directed against the master, which in turn distributes the workload to the Workers.
+* Worker Node - three nodes minimum are required to form a cluster with the ability to add more Workers for scale-out. A Worker Node ingests logs and stores logs locally.
+* Integrated Load Balancer - This provides high availability by using proprietary load-balancing configuration (no external load balancer required).
+* Log Insight Forwarder – This is deployed to receive logs from the NSX overlay components. Additionally, it can be leveraged by a client if they want to send logs from compute VMs. The Log Insight Forwarder is a single vRealize Log Insight Master Node that is used as a remote syslog aggregator to forward alerts to the vRLI cluster. As the VXLAN-backed addresses are out of BYOIP address space, NAT rules must be implemented on the NSX ESG.
 
- * Small – 2000 Events per second
- * Medium – 5000 Events per second
- * Large – 15000 Events per second
+The following sizes are available and the appropriate one is selected:
+* Small – 2,000 events per second
+* Medium – 5,000 events per second
+* Large – 15,000 events per second
 
 ![Log Insights components diagram](../../images/opsmgmt-vrlicomponents.svg "Log Insights components diagram"){: caption="Figure 2. Log Insights components" caption-side="bottom"}
 
-vRLI collects logs as to provide monitoring information about the environment from a central location.
+vRLI collects logs to provide monitoring information about the environment from a central location.
 
 vRLI collects log events from the following virtual infrastructure and cloud management components (logging clients):
 * vCenter
@@ -87,9 +88,9 @@ Deployment of the vRLI appliance requires three IP addresses from the tooling pr
 * NSX-V/T Appliances
 * Tooling Expansion VXLAN
 * Customer Networks
-* NTP server (time.services.softlayer.com)
+* NTP server (`time.services.softlayer.com`)
 * {{site.data.keyword.vmwaresolutions_short}} Active Directory/DNS
-* The Remote Collectors require NAT rules on the NSX ESG to enable connectivity to the Master Node, Master Node Replica and Data Nodes
+* The Remote Collectors require NAT rules on the NSX ESG to enable connectivity to the Master Node, Master Node Replica, and Data Nodes
 
 ## Ports
 {: #opsmgmt-vrli-ports}
@@ -98,7 +99,7 @@ Table 2. Log Insight ports
 
 | Description                                                   | Port       | Protocol |
 | ------------------------------------------------------------- | ---------- | -------- |
-| Outbound syslog traffic configured as a Forwarder destination | 514        | TCP, UDP |
+| Outbound syslog traffic that is configured as a Forwarder destination | 514        | TCP, UDP |
 | Syslog data over SSL                                          | 1514, 6514 | TCP      |
 | Log Insight Ingestion API                                     | 9000       | TCP      |
 | Log Insight Ingestion API over SSL                            | 9543       | TCP      |
@@ -115,7 +116,7 @@ Table 2. Log Insight ports
 ## Authentication
 {: #opsmgmt-vrli-auth}
 
-User Management for vRLI requires VMware Identity Manager (vIDM), which integrates with Active Directory. Service accounts are used for application-to-application communication from vRealize Operations Manager to the following adaptors with the minimum set of permissions that are required for metric collection and topology mapping.
+User Management for vRLI requires VMware Identity Manager (vIDM), which integrates with Active Directory. Service accounts are used for application-to-application communication from vRealize Operations Manager to the following adapters with the minimum set of permissions that are required for metric collection and topology mapping.
 * NSX Manager
 * vCenter
 * vSAN
@@ -123,7 +124,7 @@ User Management for vRLI requires VMware Identity Manager (vIDM), which integrat
 ## Content packs in vRealize Log Insight
 {: #opsmgmt-vrli-content}
 
-Content packs provides additional granular monitoring on the virtual infrastructure and enable logs to be retrieved, extracted and parsed into a human-readable format. In this way, vRLI saves log queries and alerts, and you can use dashboards for efficient monitoring.
+Content packs provide more granular monitoring on the virtual infrastructure and enable logs to be retrieved, extracted, and parsed into a human-readable format. In this way, vRLI saves log queries and alerts, and you can use dashboards for efficient monitoring.
 
 The following are installed by default:
 * General

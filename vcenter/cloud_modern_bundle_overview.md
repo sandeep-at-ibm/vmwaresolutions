@@ -4,13 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-06"
+lastupdated: "2019-06-26"
+
+keywords: single-node trial, migration app modernization, tech specs migration app modernization
 
 subcollection: vmware-solutions
 
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -27,7 +30,7 @@ The trial is designed for migration of up to 20 simple development or test workl
 The Single-node Trial for Migration and App Modernization is for proof of concept (POC) only. Do not run production workloads on this environment. Management functions such as adding and removing hosts and clusters, ordering add-on services, and applying updates are not supported.
 {:important}
 
-To get the most out of the Single-node Trial instance, you can use [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:new_window} from [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:new_window}, who can help you migrate your VMware workloads to the {{site.data.keyword.cloud_notm}}. Additionally, [{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/){:new_window} can help you accelerate application modernization through the latest cloud native practices.
+To get the most out of the Single-node Trial instance, you can use [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:external} from [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:external}, who can help you migrate your VMware workloads to the {{site.data.keyword.cloud_notm}}. Additionally, [{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/){:external} can help you accelerate application modernization through the latest cloud native practices.
 
 This trial is intended for use up to 90 days. When you are finished with the trial, you can delete this environment and provision a new environment that meets your capacity needs.
 {:note}
@@ -139,12 +142,12 @@ Additional HCX appliances are deployed during configuration as necessary for L2 
 ## Technical specifications for IBM Cloud Automation Manager
 {: #cloud_modern_bundle_overview-cam-tech-specs}
 
-{{site.data.keyword.cloud_notm}} Automation Manager 3.1.2 is installed using the Development/Test topology on all Single-node Trial for Migration and App Modernization instances. For more information about {{site.data.keyword.cloud_notm}} Automation Manager, see [{{site.data.keyword.cloud_notm}} Automation Manager documentation](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: new_window}.
+{{site.data.keyword.cloud_notm}} Automation Manager 3.1.2 is installed using the Development/Test topology on all Single-node Trial for Migration and App Modernization instances. For more information about {{site.data.keyword.cloud_notm}} Automation Manager, see [{{site.data.keyword.cloud_notm}} Automation Manager documentation](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: external}.
 
 ## Related links
 {: #cloud_modern_bundle_overview-related}
 
 * [vCenter Server and {{site.data.keyword.cloud_notm}} Private guide](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [Open a Ticket for {{site.data.keyword.cloud_notm}} Private](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
-* [VMware HCX resources](https://hcx.vmware.com/#/docs){:new_window}
-* [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}
+* [Open a Ticket for {{site.data.keyword.cloud_notm}} Private](https://www.ibm.com/mysupport/s/?language=en_US){:external}
+* [VMware HCX resources](https://hcx.vmware.com/#/docs){:external}
+* [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}

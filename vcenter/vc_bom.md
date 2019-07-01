@@ -4,13 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-28"
+
+keywords: vCenter Server BOM, bill of materials vCenter Server, BOM
 
 subcollection: vmware-solutions
 
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -25,32 +28,30 @@ Review the Bill of Materials (BOM) information for VMware vCenter Server instanc
 
 The following table details the BOM information for the vCenter Server VLANs.
 
-Table 1. BOM for the VLANs in vCenter Server instances
-
 | VLAN       | Type       | Details       |
 |:---------- |:---------- |:------------- |
-| VLAN1     | Public, Primary | Assigned to physical ESXi servers for public network access. Not used after initial deployment. Available for internet access. |
+| VLAN1     | Public, Primary | Assigned to physical ESXi servers for public network access. The servers are assigned a public IP address but this IP address is not configured on the servers, so they are not directly accessible on the public network. Instead, the public VLAN is intended to provide public internet access for other components, such as NSX Edge Services Gateways (ESGs). |
 | VLAN2     | Private A, Primary | Assigned by {{site.data.keyword.cloud}} to physical ESXi servers. Used by the management interface for VMware vSphere management traffic.<br><br>Assigned to VMs (virtual machines) that function as management components.<br><br>Assigned to VMware NSX VTEP (VXLAN Tunnel Endpoint) |
 | VLAN3     | Private B, Portable | Assigned to VMware vSAN, if used.<br><br>Assigned to VMware NFS, if used.<br><br>Assigned to VMware vSphere vMotion.<br><br>For NSX-T, assigned to VMware NSX VTEP (VXLAN Tunnel Endpoint).|
+{: caption="Table 1. BOM for the VLANs in vCenter Server instances" caption-side="top"}
 
 ## Software BOM for vCenter Server instances
 {: #vc_bom-software}
 
 The following table details the BOM information for vCenter Server software components.
 
-Table 2. BOM for the software components in vCenter Server instances
-
 | Manufacturer  | Component                      | Version    |
 |:------------- |:------------------------------ |:------------- |
-| VMware       | vSphere ESXi                    | 6.7 Update 1 (build 6.7.0-13004448) or <br/>6.5 Update 2 (build 6.5.0-13004031) |
+| VMware       | vSphere ESXi                    | 6.7 Update 1 (build 6.7.0-13004448) or <br/>6.5 Update 2 (build 6.5.0-13635690) |
 | VMware       | vSphere 6.7                     | Distributed vSwitch 6.6.0 |
 | VMware       | vSphere 6.5                     | Distributed vSwitch 6.5.0 |
-| VMware       | vCenter Server Appliance        | 6.7 Update 1b (build 6.7.0-11727113) or <br/>6.5 Update 2d (build 6.5.0-10964411) |
+| VMware       | vCenter Server Appliance        | 6.7 Update 1b (build 6.7.0-11727113) or <br/>6.5 Update 2g (build 6.5.0-13638625) |
 | VMware       | Platform Services Controller    | 6.7 Update 1b (build 6.7.0-11727113) or <br/>6.5 Update 2d (build 6.5.0-10964411) |
 | VMware       | vSAN                            | 6.7 Update 1 or <br/>6.6.1       |
 | VMware       | NSX for vSphere                 | 6.4.4 (build 11197766)    |
 | VMware       | NSX-T for vSphere               | 2.4                       |
 | Microsoft    | Windows Server Standard edition | 2016       |
+{: caption="Table 2. BOM for the software components in vCenter Server instances" caption-side="top"}
 
 VMware vSAN is an optional component.
 {:note}
@@ -61,8 +62,6 @@ VMware vSAN is an optional component.
 Review the following table for an overview of the advanced configuration settings that are applied to ESXi servers. These settings depend on whether the vCenter Server instance is deployed in V2.2 or later, or upgraded to V2.2 or later from V2.1 or earlier.
 
 The settings apply to new instances and new clusters in new instances V2.2 or later. The settings don't apply to new clusters in existing instances from V2.1 or earlier or existing instances that are upgraded to V2.2 or later.
-
-Table 3. ESXi servers advanced configuration settings for vCenter Server instances and clusters
 
 | Configuration setting | If newly deployed in V2.2 or later  | If upgraded from V2.1 or earlier |
 |:------------- |:------------- |:------------- |
@@ -75,14 +74,17 @@ Table 3. ESXi servers advanced configuration settings for vCenter Server instanc
 | Queue Full Threshold | **QFullThreshold** = 8 | **/Disk/QFullThreshold** = 8 |
 | TCP/IP Heap Size | **TcpipHeapSize** = 32 | Not set |
 | TCP/IP Heap Maximum | **TcpipHeapMax** = 1536 | Not set |
+{: caption="Table 3. ESXi servers advanced configuration settings for vCenter Server instances and clusters" caption-side="top"}
 
-**Notes:**
+### Notes
+{: #vc_bom-notes}
+
 * The **MaxVolumes** setting is required for the IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} service because the service might use more than the default number of NFS mounts on the ESXi server.
 * A value of **Not set** for a configuration setting indicates that the new setting is not automatically applied because it requires rebooting the ESXi servers, which might be disruptive.
 
   It is recommended that you change the **Not set** configuration settings to the new values for consistency across all instances and to allow adequate support for storage expansion. IBM plans to test only with these new settings for all {{site.data.keyword.vmwaresolutions_short}} V2.2 and later releases.
 
-  For more information, see [Increasing the default value that defines the maximum number of NFS mounts on an ESXi host](https://kb.vmware.com/s/article/2239).
+  For more information, see [Increasing the default value that defines the maximum number of NFS mounts on an ESXi host](https://kb.vmware.com/s/article/2239){:external}.
 
 ## NSX and port group configuration settings
 {: #vc_bom-nsx-port-group-config}
@@ -90,8 +92,6 @@ Table 3. ESXi servers advanced configuration settings for vCenter Server instanc
 Review the following table for an overview of the VMware NSX and port group configuration settings for vCenter Server instances, and the differences between releases.
 
 The settings apply to new instances and new clusters in new instances V2.2 or later. The settings do not apply to new clusters in existing instances from V2.1 or earlier or existing instances that are upgraded to V2.2 or later.
-
-Table 4. NSX and port group configuration settings for vCenter Server instances
 
 | Configuration setting | V2.1 or earlier  | V2.2 or later |   
 |:------------- |:------------- |:------------- |
@@ -102,6 +102,7 @@ Table 4. NSX and port group configuration settings for vCenter Server instances
 | Port group SDDC-DPortGroup-VSAN (if applicable) | **Active uplinks** set to **uplink1** and **Standby uplinks** set to **uplink2** | **Active uplinks** set to **uplink2** and **Standby uplinks** set to **uplink1** |  
 | Port group SDDC-DPortGroup-Mgmt | **Port binding** set to **Ephemeral - no binding** and **Load balancing** set to **Route based on originating virtual port** | **Port binding** set to **Static binding** and **Load balancing** set to **Route based on physical NIC load** |  
 | Port group SDDC-DPortGroup-External | **Port binding** set to **Ephemeral - no binding** | **Port binding** set to **Static binding** |
+{: caption="Table 4. NSX and port group configuration settings for vCenter Server instances" caption-side="top"}
 
 ## Network MTU configuration settings
 {: #vc_bom-network-mtu-config}
@@ -114,12 +115,11 @@ In V2.1 or later, the public network connections use a standard Ethernet MTU of 
 
 Review the following table for an overview of the Network MTU configuration settings that are applied to the public and private Distributed Virtual Switch (DVS), depending on whether the vCenter Server instance is deployed in V2.1 or later.
 
-Table 5. MTU configuration settings for vCenter Server instances and clusters depending on the instance version
-
 | vDS | V2.1 or later  | V2.0 or earlier (or upgraded from V2.0 or earlier) |
 |:-------------- |:-------------- |:------------- |
 | Public Switch  | 1500 (default) | 9000 (Jumbo Frames) |
 | Private Switch | 9000 (Jumbo Frames) | 9000 (Jumbo Frames) |
+{: caption="Table 5. MTU configuration settings for vCenter Server instances and clusters depending on the instance version" caption-side="top"}
 
 The settings apply to new instances and new clusters from instances deployed in V2.1 or later. The settings also apply to new clusters in cross {{site.data.keyword.CloudDataCents_notm}} from instances that were upgraded to V2.1 or later.
 
@@ -141,9 +141,9 @@ To update the MTU setting for the Public Switch, complete the following steps in
 ## Related links
 {: #vc_bom-related}
 
-* [Build numbers and versions of VMware ESXi and ESX (2143832)](https://kb.vmware.com/s/article/2143832)
-* [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
-* [Enabling Jumbo Frames on virtual distributed switches](https://kb.vmware.com/s/article/1038827)
-* [{{site.data.keyword.vmwaresolutions_short}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:new_window}
+* [Build numbers and versions of VMware ESXi and ESX (2143832)](https://kb.vmware.com/s/article/2143832){:external}
+* [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838){:external}
+* [Enabling Jumbo Frames on virtual distributed switches](https://kb.vmware.com/s/article/1038827){:external}
+* [{{site.data.keyword.vmwaresolutions_short}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:external}
 * [vCenter Server overview](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
 * [Planning vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)

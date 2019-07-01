@@ -4,12 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-04"
+lastupdated: "2019-06-28"
+
+keywords: planning vCenter Server Hybridity, data center hybridity, vCenter Server Hybridity
 
 subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # Requirements and planning for vCenter Server with Hybridity Bundle instances
 {: #vc_hybrid_planning}
@@ -19,14 +23,12 @@ Review the following requirements before you order your VMware vCenter Server on
 ## IBM Cloud account requirements
 {: #vc_hybrid_planning-account-req}
 
-The {{site.data.keyword.cloud_notm}} account that you are using must meet certain requirements. For more information, see [Requirements for the {{site.data.keyword.cloud_notm}} account](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).
+The {{site.data.keyword.cloud_notm}} account that you are using must meet certain requirements. For more information, see [Requirements for the {{site.data.keyword.cloud_notm}} account](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req).
 
 ## IBM Cloud Data Center availability
 {: #vc_hybrid_planning-dc-availability}
 
 The vCenter Server with Hybridity Bundle deployment has strict requirements on the physical infrastructure. Therefore, you can deploy instances only in {{site.data.keyword.CloudDataCents_notm}} that meet the requirements. The following {{site.data.keyword.CloudDataCents_notm}} are available for vCenter Server with Hybridity Bundle deployment:
-
-Table 1. Available {{site.data.keyword.CloudDataCents_notm}} for vCenter Server with Hybridity Bundle instances
 
 | {{site.data.keyword.CloudDataCent_notm}} | Location | Region |
 |:----------------------|:---------|:---------------|
@@ -63,16 +65,16 @@ Table 1. Available {{site.data.keyword.CloudDataCents_notm}} for vCenter Server 
 | WDC04 | Washington, DC | NA East |
 | WDC06 | Washington, DC | NA East |
 | WDC07 | Washington, DC | NA East |
+{: caption="Table 1. Available {{site.data.keyword.CloudDataCents_notm}} for vCenter Server with Hybridity Bundle instances" caption-side="top"}
 
 Depending on availability and inventory supply, {{site.data.keyword.CloudDataCents_notm}} might display a status indicator in the {{site.data.keyword.vmwaresolutions_short}} console to help you plan your deployments.
-
-Table 2. Status indicators for {{site.data.keyword.CloudDataCents_notm}} when ordering vCenter Server with Hybridity Bundle instances
 
 | Status | Status Details |
 |:------------------------------|:--------------------------------------------------|
 | Coming Soon                   | The {{site.data.keyword.CloudDataCent_notm}} is not available currently. |
 | Temporarily Out of Inventory  | The {{site.data.keyword.CloudDataCent_notm}} has no availability currently. |
 | Limited Inventory             | The {{site.data.keyword.CloudDataCent_notm}} has limited availability and the order might not be completed. |
+{: caption="Table 2. Status indicators for {{site.data.keyword.CloudDataCents_notm}} when ordering vCenter Server with Hybridity Bundle instances" caption-side="top"}
 
 ## Backup of management components
 {: #vc_hybrid_planning-backup-mgmt-components}
@@ -93,7 +95,7 @@ When you deploy this service, complete the following settings:
   * **Private Key**: Enter the private key of the CA certificate.
   * (Optional) **Password**: Enter the password for the private key if it is encrypted.
   * (Optional) **Reenter Password**: Enter the password for the private key again.
-  * (Optional) **Hostname**: Enter the host name to be mapped to the common name (CN) of the CA certificate. HCX on {{site.data.keyword.cloud_notm}} requires the CA certificate to be in a format that is accepted by NSX Edge. For more information about NSX Edge certificate formats, see [Importing SSL Certificates](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html).
+  * (Optional) **Hostname**: Enter the host name to be mapped to the common name (CN) of the CA certificate. HCX on {{site.data.keyword.cloud_notm}} requires the CA certificate to be in a format that is accepted by NSX Edge. For more information about NSX Edge certificate formats, see [Importing SSL Certificates](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html){:external}.
 
 You can order other add-on services for your instance base on your needs, for example, disaster recovery. For more information, see [Ordering, viewing, and removing services for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices).
 

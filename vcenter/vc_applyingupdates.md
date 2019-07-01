@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-30"
+lastupdated: "2019-06-21"
+
+keywords: vCenter Server update, patch vCenter Server, IBM component update
 
 subcollection: vmware-solutions
 
@@ -42,26 +44,12 @@ Expand the update entry by clicking the down arrow and verify the following info
 * The impact of the update on the VMware virtual environment. Table 1 shows how different levels of updates impact the system.
 * The update details.
 
-Table 1. Update levels and impact
-
-<table>
-  <tr>
-    <th>Update level</th>
-    <th>Impact</th>
-  </tr>
-  <tr>
-    <td>Low</td>
-    <td>This update does not affect any system. You do not have to apply it during scheduled downtime.</td>
-  </tr>
-  <tr>
-    <td>Medium</td>
-  <td>This update might affect some systems. It is recommended that you apply it during scheduled downtime.</td>
-  </tr>
-    <tr>
-    <td>Major</td>
-  <td>This update affects some or all systems. You must apply it during scheduled downtime.</td>
-  </tr>
-</table>
+| Update level | Impact |
+|:------------ |:------ |
+| Low | This update does not affect any system. You do not have to apply it during scheduled downtime. |
+| Medium | This update might affect some systems. It is recommended that you apply it during scheduled downtime. |
+| Major | This update affects some or all systems. You must apply it during scheduled downtime. |
+{: caption="Table 1. Update levels and impact" caption-side="top"}
 
 ## Procedure to apply IBM management component updates (instances V2.1 to V2.4)
 {: #vc_applyingupdates-procedure}
@@ -87,38 +75,15 @@ Table 1. Update levels and impact
 
 2. For details about the update statuses, see the following table.
 
-   Table 2. Details of update statuses
-
-    <table>
-      <tr>
-        <th>Status</th>
-        <th>Details</th>
-      </tr>
-      <tr>
-        <td>Available</td>
-        <td>The update is available to be applied. You cannot select an available update until all its previous updates are applied.</td>
-      </tr>
-      <tr>
-        <td>In progress</td>
-      <td>The update job is initiated but not finished yet. You cannot apply any other updates until the current update job is completed. </td>
-      </tr>
-        <tr>
-        <td>Installed</td>
-      <td>The update job is completed. The corresponding component of the VMware platform is updated.</td>
-      </tr>
-        <tr>
-        <td>Failed</td>
-      <td>The update job fails. The console reports an error for the update failure. Review the error and fix the reported issue before you reapply the update.</td>
-      </tr>
-          <tr>
-        <td>Scheduled</td>
-      <td>The update job is scheduled for a later time. The update job starts automatically at the time that you scheduled.</td>
-      </tr>
-          <tr>
-        <td>Unknown</td>
-      <td>The status of the update job cannot be obtained. Contact IBM Support for assistance.</td>
-      </tr>
-    </table>
+| Status | Details |
+|:------ |:------- |
+| Available | The update is available to be applied. You cannot select an available update until all its previous updates are applied. |
+| In progress | The update job is initiated but not finished yet. You cannot apply any other updates until the current update job is completed. |
+| Installed | The update job is completed. The corresponding component of the VMware platform is updated. |
+| Failed | The update job fails. The console reports an error for the update failure. Review the error and fix the reported issue before you reapply the update. |
+| Scheduled | The update job is scheduled for a later time. The update job starts automatically at the time that you scheduled. |
+| Unknown | The status of the update job cannot be obtained. Contact IBM Support for assistance. |
+{: caption="Table 2. Details of update statuses" caption-side="top"}
 
 3. If the update process fails at a specific step, [contact IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support) for assistance. You will be advised how to resolve the problem and guided to apply the updates and patches from the step that failed.
 

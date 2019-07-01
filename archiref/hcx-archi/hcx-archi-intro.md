@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-06"
+lastupdated: "2019-06-17"
 
 subcollection: vmware-solutions
 
@@ -15,9 +15,9 @@ subcollection: vmware-solutions
 
 The VMware HCX on IBM Cloud service enables creating a seamless connection between IBM Cloud for VMware Solutions instances and an on-premises VMware virtualized datacenter.
 
-The IBM Cloud for VMware Solutions includes fully automated, rapid deployments of VMware vCenter Server (VCS) in the IBM Cloud. These offerings complement the on-premises infrastructure and allow existing and future workloads to run in the IBM Cloud without conversion by using the same tools, skills, and processes they use on-premises. For more information, see the [Virtualization for extending virtualized private cloud](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture).
+The IBM Cloud for VMware Solutions includes fully automated, rapid deployments of VMware vCenter Server in the IBM Cloud. These offerings complement the on-premises infrastructure and allow existing and future workloads to run in the IBM Cloud without conversion by using the same tools, skills, and processes they use on-premises. For more information, see the [Virtualization for extending virtualized private cloud](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture).
 
-The VMware HCX on IBM Cloud service takes this hybridity to the next step, blending instances of VCS with existing on-premises virtualized datacenters by enabling the creation of seamless network extensions and bidirectional migration of workloads.
+The VMware HCX on IBM Cloud service takes this hybridity to the next step, blending instances of vCenter Server with existing on-premises virtualized datacenters by enabling the creation of seamless network extensions and bidirectional migration of workloads.
 
 The VMware HCX on IBM Cloud components that are deployed as virtual machines in the IBM Cloud VMware target site enable the establishment of a connection with the VMware HCX on IBM Cloud components installed in the peer on-premises source site.
 

@@ -4,13 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-01"
+lastupdated: "2019-06-26"
+
+keywords: F5 BIG-IP, F5 install, tech specs F5
 
 subcollection: vmware-solutions
 
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -58,8 +61,6 @@ Before you install the F5 on {{site.data.keyword.cloud_notm}} service, review th
 
 Based on the license model and bandwidth that you select, two BIG-IP VE VMs (virtual machines) are deployed with the following configuration:
 
-Table 1. CPU and RAM deployments for different bandwidth and license model selections
-
 | Maximum Bandwidth | License Model: Good | License Model: Better | License Model: Best |
 |:------------------|:--------------------|:----------------------|:--------------------|
 | 25 Mbps           | 2 vCPU, 4 GB RAM    | 4 vCPU, 8 GB RAM      | 8 vCPU, 16 GB RAM   |
@@ -68,6 +69,7 @@ Table 1. CPU and RAM deployments for different bandwidth and license model selec
 | 3 Gbps            | 8 vCPU, 16 GB RAM   | 8 vCPU, 16 GB RAM     | 8 vCPU, 16 GB RAM   |
 | 5 Gbps            | 8 vCPU, 16 GB RAM   | 8 vCPU, 16 GB RAM     | 8 vCPU, 16 GB RAM   |
 | 10 Gbps           | 8 vCPU, 16 GB RAM   | 8 vCPU, 16 GB RAM     | 8 vCPU, 16 GB RAM   |
+{: caption="Table 1. CPU and RAM deployments for different bandwidth and license model selections" caption-side="top"}
 
 ### Additional considerations
 {: #f5_considerations-additional}
@@ -126,4 +128,4 @@ Before you remove the F5 on {{site.data.keyword.cloud_notm}} service, ensure tha
 * [Managing F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_f5)
 * [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [F5 website](https://www.f5.com/){:new_window}
+* [F5 website](https://www.f5.com/){:external}

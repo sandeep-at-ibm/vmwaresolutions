@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -28,7 +28,7 @@ The Skate Advisor consists primarily of a chatbot that can either accept text or
 
 The core data element of the Skate Advisor is the trick. The trick language uniquely defines a trick. This language can be used to accomplish the following tasks:
 - Converse with the chatbot about tricks.
-- Search for tricks via Watson Discovery.
+- Search for tricks by using Watson Discovery.
 - Identify and classify tricks when training Watson Discovery from source articles.
 - Identify a trick for location and media display purposes.
 
@@ -83,16 +83,16 @@ Table 2. Chatbot interactions
 Step | Description
 ---|---
 1 | Initiate a valid conversation, see the section on Conversation Streams.
-2 | Chatbot sends Speech to the Speech to Text service.
-3 | Speech to Text service sends Text to the Chatbot.
+2 | Chatbot sends Speech to the Speech to Text Service.
+3 | Speech to Text Service sends Text to the Chatbot.
 4 | Chatbot sends Text Query to the Skate Advisor.
 5 | The Skate Advisor evaluates the request and sends to Watson Assistant.
 6 | Watson Assistant classifies the request and replies to the Skate Advisor with the action to take.
 7 | Skate advisor requests a data set from the Discovery Service.
 8 | Discovery Service evaluates the query and sends the response.
 9 |Skate Advisor forms a response and sends to the Chatbot in text.
-10 | Chatbot sends the text reply to the Text To Speech service.
-11 | Result is sent to the user via the Chatbot.
+10 | Chatbot sends the text reply to the Text to Speech Service.
+11 | Result is sent to the user through the Chatbot.
 
 ### Video rendering
 {: #vcscar-logical-video-render}

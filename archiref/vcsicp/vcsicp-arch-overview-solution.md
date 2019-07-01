@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-09"
+lastupdated: "2019-06-12"
 
 subcollection: vmware-solutions
 
@@ -52,7 +52,7 @@ Table 1. {{site.data.keyword.icpfull_notm}} ESG specifications
 |:--------- |:------------- |
 | Edge Service Gateway | Virtual appliance |
 | Edge size	Large | Number of vCPUs	2 |
-| Memory | 1-GB Disk	| 1000 GB on local datastore |
+| Memory | 1-GB Disk<br>1000 GB on local datastore |
 
 Table 2. {{site.data.keyword.icpfull_notm}} DLR specifications
 
@@ -60,7 +60,7 @@ Table 2. {{site.data.keyword.icpfull_notm}} DLR specifications
 |:--------- |:------------- |
 | Distributed Logical Router | Virtual appliance |
 | Edge size	Compact | Number of vCPUs	1 |
-| Memory	| 512-MB Disk	| 1000 GB on local datastore |
+| Memory	| 512-MB Disk<br>1000 GB on local datastore |
 
 ## IBM Cloud Private components
 {: #vcsicp-arch-overview-solution-icp-comp}

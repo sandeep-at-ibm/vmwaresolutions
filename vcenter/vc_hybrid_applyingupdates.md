@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-30"
+lastupdated: "2019-06-30"
+
+keywords: vCenter Server Hybridity update, patch vCenter Server Hybridity, IBM component update
 
 subcollection: vmware-solutions
 
@@ -42,13 +44,12 @@ Expand the update entry by clicking the down arrow and verify the following info
 
 The following table shows how different levels of impact affect the system.
 
-Table 1. Update levels and impact
-
 | Update level  | Impact        |  
 |:------------- |:------------- |
 | Low    | This update does not affect any systems. You do not have to apply it during scheduled downtime. |  
 | Medium | This update might affect some systems. It is recommended that you apply it during scheduled downtime. |  
-| Major  | This update affects some or all systems. You must apply it during scheduled downtime. |  
+| Major  | This update affects some or all systems. You must apply it during scheduled downtime. |
+{: caption="Table 1. Update levels and impact" caption-side="top"}
 
 ## Procedure to apply IBM management component updates (instances V2.3 and V2.4)
 {: #vc_hybrid_applyingupdates-procedure}

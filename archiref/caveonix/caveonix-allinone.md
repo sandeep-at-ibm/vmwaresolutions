@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-06-28"
 
 subcollection: vmware-solutions
 
@@ -26,7 +26,7 @@ Table 1. All-in-one parameters
 |RAM	|32 GB|
 |Disk	|80 GB|
 |OS	|CentOS 7|
-|Installed Application Components|	UI, App, Plugins, Central Collector, Index Datastore, Messaging Datastore, Relational Datastore, Index Datastore, Remote Collector|
+|Installed Application Components|	UI, App, Plug-ins, Central Collector, Index Datastore, Messaging Datastore, Relational Datastore, Index Datastore, Remote Collector|
 
 The additional Remote Collector VM details are shown in the following table.
 

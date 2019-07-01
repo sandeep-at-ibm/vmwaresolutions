@@ -4,13 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-03"
+lastupdated: "2019-06-26"
+
+keywords: vCenter Server NSX-T add hosts, add servers to vCenter Server NSX-T, remove hosts from vCenter Server NSX-T
 
 subcollection: vmware-solutions
 
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -20,7 +23,8 @@ subcollection: vmware-solutions
 
 You can expand or contract the capacity of your VMware vCenter Server with NSX-T instance according to your business needs, by adding or removing ESXi servers or network file system (NFS) storage.
 
-* Starting with the V3.0 release you can simultaneously add or remove NFS storage and ESXi servers to clusters that are in the **Ready to Use** state. For example, you can add or remove an ESXi server in a cluster and add or remove NFS storage in another cluster.
+* Starting with the V3.1 release, you can add new ESXi servers to an existing cluster by either selecting an existing configuration or an alternative configuration than the existing hosts in the cluster. Existing configurations are available for instant selection when you order your new server. To avoid performance or stability issues, it is recommended that clusters use the same or similar configuration with regards to CPU, RAM, and storage. This functionality is useful for hardware updates within the same cluster. A cluster can have only one type of storage.
+* Starting with the V3.0 release, you can simultaneously add or remove NFS storage and ESXi servers to clusters that are in the **Ready to Use** state. For example, you can add or remove an ESXi server in a cluster and add or remove NFS storage in another cluster.
 * Starting with the V2.9 release, you can add new ESXi servers to a cluster while the servers are in maintenance mode. Additionally, you can simultaneously add or remove ESXi servers across multiple clusters.
 
 **Notes**:
@@ -46,8 +50,18 @@ You can expand or contract the capacity of your VMware vCenter Server with NSX-T
 4. In the **CLUSTERS** table, click the cluster to which you want to add ESXi servers.
 5. In the **ESXi Servers** section, click **Add**.
 6. In the **Add Server** window, enter the number of servers that you want to add.
-7. Optionally, select the checkbox to add servers during maintenance mode.
-8. Review the estimated cost and click **Add**.
+7. Optionally, select the checkbox to add servers during maintenance mode. The checkbox is selected by default.
+
+   When you provision the new ESXi server, virtual machines (VMs) are immediately migrated to the new servers if you do not select the **Maintenance Mode** checkbox. You do not receive a confirmation message before the migration begins.
+   {:important}
+
+8. Complete the Bare Metal configuration.
+   * Select a configuration from the existing hosts in the cluster.
+   * Select a new {{site.data.keyword.baremetal_short_sing}} configuration and specify the CPU model and the RAM size.
+9. Complete the storage configuration. Specify the disk types for the capacity and cache disks, the number of disks, and the vSAN License edition. If you want more storage, check the **High-Performance Intel Optane** box.
+10. Review the estimated cost and click **Add**.
+
+  You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. This is useful if you want to estimate the cost of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.
 
 ### Results after you add ESXi servers
 {: #vc_nsx-t_addingremovingservers-adding-results}
@@ -107,7 +121,9 @@ Do not add NFS storage from the VMware vSphere Web Client. The changes that you 
 6. In the **Storage** window, complete the storage configuration.
    * If you want to add and configure the same settings to all file shares, specify the **Number of Shares**, **Performance**, and **Size (GB)**.
    * If you want to add and configure file shares individually, select **Configure shares individually**, then click the **+** icon next to the **Add Shared Storage** label and select the **Performance** and **Size (GB)** for each individual file share. You must select at least one file share.
-7. Click **Add NFS Storage**.
+7. Review the estimated cost and click **Add NFS Storage**.
+
+  You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. This is useful if you want to estimate the cost of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.
 
 ### Results after you add NFS storage
 {: #vc_nsx-t_addingremovingservers-adding-nfs-storage-results}
@@ -154,5 +170,5 @@ Do not add NFS storage from the VMware vSphere Web Client. The changes that you 
 * [Requirements and planning for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [Ordering vCenter Server with NSX-T instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_orderinginstance)
 * [Adding, viewing, and deleting clusters for vCenter Server with NSX-T instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_nsx-t_addingviewingcluster#vc_nsx-t_addingviewingcluster)
-* [Place a host in maintenance mode](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.resmgmt.doc/GUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
-* [Enhanced vMotion Compatibility (EVC) processor support](https://kb.vmware.com/s/article/1003212){:new_window}
+* [Place a host in maintenance mode](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.resmgmt.doc/GUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:external}
+* [Enhanced vMotion Compatibility (EVC) processor support](https://kb.vmware.com/s/article/1003212){:external}

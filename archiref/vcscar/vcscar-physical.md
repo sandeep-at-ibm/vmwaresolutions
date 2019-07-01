@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -27,7 +27,7 @@ The {{site.data.keyword.icpfull_notm}} and Cloud Automation Manager (CAM) produc
 can be manually deployed into your on-premises virtualization platform,
 enabling cloud management from on-premises locations. Alternatively, {{site.data.keyword.icpfull_notm}}
 and CAM are offered as service extensions to an existing or new VMware
-vCenter Server on {{site.data.keyword.cloud_notm}} deployment, via automation, enabling
+vCenter Server on {{site.data.keyword.cloud_notm}} deployment, through automation, enabling
 cloud management from {{site.data.keyword.cloud_notm}}.
 
 {{site.data.keyword.icpfull_notm}} is an application platform for developing and managing on-premises,
@@ -56,8 +56,7 @@ The following diagram describes the reference implementation of the Acme Skate A
 ![Skate Advisor physical components](../../images/vcscar-physical.svg "Skate Advisor physical components"){: caption="Figure 1. Skate Advisor physical components" caption-side="bottom"}
 
 The Skate Advisor application extends the existing Acme web application
-with a micro-services based component that interacts with Watson and an
-nginx container to proxy requests to the web and micro-services
+with a micro-services based component that interacts with Watson and a nginx container to proxy requests to the web and micro-services
 container.
 
 The Skate Advisor application takes advantage of the application
@@ -67,7 +66,7 @@ infrastructure.
 ### Application packaging and deployment
 {: #vcscar-physical-app-pack-depl}
 
-The application is deployed as a CAM Orchestration which contains the following elements:
+The application is deployed as a CAM Orchestration, which contains the following elements:
 * Service Orchestration - A CAM service orchestration is a workflow resource that describes the Terraform templates and Helm charts to deploy as a facet of a service. A service can be published and is the controlling artifact from which the entire deployment is orchestrated.
 * Helm Chart - The Helm chart resides in the local {{site.data.keyword.icpfull_notm}} Repository and deploys containers and other resources to {{site.data.keyword.icpfull_notm}}. A Helm chart is a description of Kubernetes resources that include:
   - Container deployments
@@ -86,7 +85,7 @@ into running containers.
 ### Load balancing and proxying
 {: #vcscar-physical-load-balance-proxy}
 
-Load balancing and proxying are implemented via the {{site.data.keyword.icpfull_notm}} Ingress
+Load balancing and proxying are implemented through the {{site.data.keyword.icpfull_notm}} Ingress
 Controller component. This component handles the container scaling
 and failover in a seamless manner.
 
@@ -114,7 +113,7 @@ Framework. The application is deployed on a WebSphere Liberty container.
 ### Acme Skate Advisor application
 {: #vcscar-physical-acme-skate-advisor-app}
 
-The Acme Skate Advisor application is a micro-service based application that is deployed on a WebSphere Liberty container. An nginx web server provides
+The Acme Skate Advisor application is a micro-service based application that is deployed on a WebSphere Liberty container. A nginx web server provides
 a front end to the micro-services.
 
 ### Acme Skate database
@@ -192,7 +191,7 @@ and containers to the {{site.data.keyword.icpfull_notm}} and {{site.data.keyword
 
 In the diagram, CAM logically creates cloud connections to the vCenters,
 cloud providers, and {{site.data.keyword.icpfull_notm}} and {{site.data.keyword.containerlong_notm}} environments. {{site.data.keyword.icpfull_notm}} Clusters are
-deployed to each datacenter/cloud environment, with MCM providing the
+deployed to each datacenter or cloud environment, with MCM providing the
 mechanism to connect the {{site.data.keyword.icpfull_notm}} clusters into a single management view.
 
 ## Related links

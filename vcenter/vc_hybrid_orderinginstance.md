@@ -4,13 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-28"
+
+keywords: vCenter Server Hybridity order instance, order vCenter Server Hybridity, order Hybridity
 
 subcollection: vmware-solutions
 
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -28,15 +31,14 @@ Ensure that you completed the following tasks:
 *  You reviewed the information in [Requirements and planning for vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning).
 * You reviewed the instance and domain name format. The domain name and subdomain label are used to generate the user name and server names of the instance.
 
-Table 1. Value format for instance and domain names
-
 | Name        | Value Format      |
-  |:------------- |:------------- |
-  | Domain name | `<root_domain>` |  
-  | vCenter Server login user name | `<user_id>@<root_domain>` (Microsoft Active Directory user) or `administrator@vsphere.local` |
-  | vCenter Server (with embedded PSC) FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. The maximum length is 50 characters. |
-  | Single Sign-On (SSO) site name | `<subdomain_label>` |
-  | Fully qualified ESXi server name | `<host_prefix><n>.<subdomain_label>.<root_domain>`, where `<n>` is the sequence of the ESXi server. The maximum length is 50 characters. |
+|:------------- |:------------- |
+| Domain name | `<root_domain>` |  
+| vCenter Server login user name | `<user_id>@<root_domain>` (Microsoft Active Directory user) or `administrator@vsphere.local` |
+| vCenter Server (with embedded PSC) FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. The maximum length is 50 characters. |
+| Single Sign-On (SSO) site name | `<subdomain_label>` |
+| Fully qualified ESXi server name | `<host_prefix><n>.<subdomain_label>.<root_domain>`, where `<n>` is the sequence of the ESXi server. The maximum length is 50 characters. |
+{: caption="Table 1. Value format for instance and domain names" caption-side="top"}
 
 Don't modify any values that are set during instance order or deployment. Doing so can make your instance unusable. For example, if public networking shuts down, if servers and Virtual Server Instances (VSIs) move behind a Vyatta mid-provision, or if the IBM CloudBuilder VSI stops or is deleted.
 {:important}
@@ -101,25 +103,23 @@ Select the {{site.data.keyword.CloudDataCent_notm}} where the instance is to be 
 
 When you select **Skylake**, you can choose the CPU and RAM combination for the Bare Metal Server according to your needs.
 
-Table 2. Options for Skylake {{site.data.keyword.baremetal_short}}
-
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
 | Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+{: caption="Table 2. Options for Skylake {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 ### Broadwell
 {: #vc_hybrid_orderinginstance-broadwell}
 
 When you select **Broadwell**, you can choose the CPU and RAM combination for the Bare Metal Server according to your needs.
 
-Table 3. Options for Broadwell {{site.data.keyword.baremetal_short}}
-
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
 | Quad Intel Xeon E7-4820 v4 / 40 cores total, 2.0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 cores total, 2.1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+{: caption="Table 3. Options for Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 ### Number of Bare Metal Servers
 {: #vc_hybrid_orderinginstance-bare-metal-number}
@@ -157,10 +157,10 @@ You must specify the following network interface settings when ordering a vCente
 {: #vc_hybrid_orderinginstance-subdomain-label}
 
 The subdomain label must meet the following requirements:
-*  Only alphanumeric and dash (-) characters are allowed.
-*  The subdomain label must start with an alphabetic character and end with an alphanumeric character.
-*  The maximum length of the subdomain label is 10 characters.
-*  The subdomain label must be unique within your account.
+* Only alphanumeric and dash (-) characters are allowed.
+* The subdomain label must start with an alphabetic character and end with an alphanumeric character.
+* The maximum length of the subdomain label is 10 characters.
+* The subdomain label must be unique within all instances in your multi-site configuration.
 
 ### Domain name
 {: #vc_hybrid_orderinginstance-domain-name}
@@ -215,14 +215,14 @@ Select the Domain Name System (DNS) configuration for your instance:
 * **Single Public Windows VSI for Active Directory/DNS**: A single Microsoft Windows Server VSI for Microsoft Active Directory (AD), which functions as the DNS for the instance where the hosts and VMs are registered, is deployed and can be looked up.
 * **Two highly available dedicated Windows Server VMs on the management cluster**: Two Microsoft Windows VMs are deployed, helping enhance security and robustness.
 
-You must provide two Microsoft Windows Server 2016 licenses if you configure your instance to use the two Microsoft Windows VMs. Use the Microsoft Windows Server 2016 Standard edition license, or the Microsoft Windows Server 2016 Datacenter edition license, or both.
+You must provide two Microsoft Windows Server 2016 Standard edition licenses if you configure your instance to use the two Microsoft Windows VMs.
 {:important}
 
 Each license can be assigned only to one single physical server and covers up to two physical processors. One Standard edition license is capable of running two virtualized Microsoft Windows VMs per 2-processor server. Therefore, two licenses are required since two Microsoft Windows VMs are deployed in two different hosts.
 
 You have 30 days to activate the VMs.
 
-For more information on ordering Windows Server 2016 licenses, see [Get started with Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:new_window}.
+For more information on ordering Windows Server 2016 licenses, see [Get started with Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:external}.
 
 ## Services settings
 {: #vc_hybrid_orderinginstance-addon-services}
@@ -232,12 +232,14 @@ When you order a vCenter Server with Hybridity Bundle instance, you can also ord
 ## Order summary
 {: #vc_hybrid_orderinginstance-order-summary}
 
-Based on your selected configuration for the instance and add-on services, the estimated cost is instantly generated and displayed in the **Order Summary** section on the right pane. Click **Pricing details** at the bottom of the right pane to generate a PDF document that provides the estimate details.
+Based on your selected configuration for the instance and add-on services, the estimated cost is instantly generated and displayed in the **Order Summary** right pane. Click **Pricing details** to generate a PDF document with the cost summary for the {{site.data.keyword.vmwaresolutions_short}} resources.
+
+You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. This is useful if you want to estimate the cost of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.
 
 ## Procedure to order vCenter Server with Hybridity Bundle instances
 {: #vc_hybrid_orderinginstance-procedure}
 
-1. From the {{site.data.keyword.cloud_notm}} catalog, click **VMware** from the left navigation pane and then click **vCenter Server** in the **Virtual Data Centers** section.
+1. From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon from the left navigation pane and then click the **VMware vCenter Server on IBM Cloud** card in the **VMware Virtual Data Centers** section.
 2. On the **VMware vCenter Server on IBM Cloud** page, click the **vCenter Server with Hybridity Bundle** card and click **Create**.
 3. On the **vCenter Server** page, enter the instance name.
 5. Select the vSphere version.
@@ -269,16 +271,13 @@ For more information about how to provide settings for a service, see the corres
    3. Click the link or links of the terms that apply to your order, and confirm that you agree with these terms before you order the instance.
    4. Click **Provision**.
 
-## Results
+## Results after you order vCenter Server with Hybridity Bundle instances
 {: #vc_hybrid_orderinginstance-results}
 
-The deployment of the instance starts automatically. You receive confirmation that the order is being processed and you can check the status of the deployment by viewing the instance details.
-
-When the instance is successfully deployed, the components that are described in [Technical specifications for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#specs) are installed on your VMware virtual platform. The ESXi servers that you ordered are grouped as **cluster1** by default. If you ordered add-on services, the deployment of the services starts after your order is completed.
-
-When the instance is ready to use, the status of the instance is changed to **Ready to Use** and you receive a notification by email.
-
-When you order a secondary instance, the VMware vSphere Web Client for the primary instance (linked to the secondary one) might be restarted after your secondary instance order is completed.
+* The deployment of the instance starts automatically and you receive confirmation that the order is being processed. You can check the deployment status, including any issues that might require your attention, by viewing the **Deployment History** section of the instance details.
+* When the instance is successfully deployed, the components that are described in [Technical specifications for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#specs) are installed on your VMware virtual platform. The ESXi servers that you ordered are grouped as **cluster1** by default. If you ordered add-on services, the deployment of the services starts after your order is completed.
+* When the instance is ready to use, the status of the instance is changed to **Ready to Use** and you receive a notification by email.
+* When you order a secondary instance, the VMware vSphere Web Client for the primary instance (linked to the secondary one) might be restarted after your secondary instance order is completed.
 
 ## What to do next
 {: #vc_hybrid_orderinginstance-next}
@@ -300,7 +299,7 @@ If you change these components outside of the {{site.data.keyword.vmwaresolution
 ## Related links
 {: #vc_hybrid_orderinginstance-related}
 
-* [Signing up for an {{site.data.keyword.cloud_notm}} account](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)
+* [Signing up for an {{site.data.keyword.cloud_notm}} account](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts)
 * [Viewing vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
 * [Multi-site configuration for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_multisite)
 * [Adding and viewing clusters for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingviewingclusters)

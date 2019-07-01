@@ -4,13 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-06-26"
+
+keywords: FAQ, host, ESXi server
 
 subcollection: vmware-solutions
 
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -41,7 +44,7 @@ For instances deployed in V2.1 or earlier, you must enable the necessary vSAN su
 
    `esxcli system settings advanced set -o /Net/TcpipHeapMax -i 1576`
 
-2. Restart each ESXi server. For more information, see [Creating a vSAN 6.x cluster with up to 64 hosts](https://kb.vmware.com/s/article/2110081).
+2. Restart each ESXi server. For more information, see [Creating a vSAN 6.x cluster with up to 64 hosts](https://kb.vmware.com/s/article/2110081).{:external}
 3. You might need to increase the size of the vCenter Server to accommodate the added virtual machines and ESXi servers.
 4. Open an IBM Support ticket to indicate that you applied the vSAN changes manually by completing steps 1 - 3. In the ticket, request that your upgraded instance is enabled for ESXi servers beyond 32.
 

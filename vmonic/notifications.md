@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-06-28"
+
+keywords: notifications console, filter notifications, system notification
 
 subcollection: vmware-solutions
 
@@ -22,53 +24,14 @@ You can check notifications for the status of system or user operations. You can
 1. From the {{site.data.keyword.vmwaresolutions_full}} console, click **Notifications** from the left navigation pane.
 2. View the summary about all notifications.
 
-   Table 1. Notification history
-
-    <table>
-      <tr>
-        <th>Column</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Severity</td>
-        <td>The severity of the event that is reported by the notification.
-          <dl class="dl">
-          <dt class="dt dlterm">Critical</dt>
-          <dd class="dd">A critical event might impact the entire system or service.</dd>
-          <dt class="dt dlterm">Error</dt>
-          <dd class="dd">An error event occurs during an operation that might need intervention from the administrator or the user.</dd>
-          <dt class="dt dlterm">Warning</dt>
-          <dd class="dd">A component fails or is not working properly. However, the failure does not disrupt the ongoing process of the component.</dd>
-            <dt class="dt dlterm">Informational</dt>
-            <dd class="dd">A system or user operation is completed. Typically, the following events report informational notifications:
-              <ul class="ul">
-                <li class="li">A service is installed.</li>
-                <li class="li">A service is upgraded.</li>
-                <li class="li">A service is removed.</li>
-                <li class="li">All services are reconfigured for the added ESXi servers.</li>
-                <li class="li">All services are reconfigured for the removed ESXi servers.</li>
-              </ul>
-            </dd>
-          </dl>
-        </td>
-       </tr>
-       <tr>
-         <td>Type</td>
-         <td>The type of component that the reported event is related to:<ul><li>vCenter Server instances</li><li>Services</li><li>System</li></ul></td>
-       </tr>
-       <tr>
-         <td>Resource</td>
-         <td>The name of the instance or service that sends the notification.</td>
-       </tr>
-       <tr>
-         <td>Description</td>
-         <td>A short description of the notification.</td>
-       </tr>
-       <tr>
-         <td>Date</td>
-         <td>The date and time when the notification is sent.</td>
-       </tr>
-    </table>                                       
+| Column | Description |
+|:------ |:----------- |
+| Severity | The severity of the event that is reported by the notification.<br>**Critical**: A critical event might impact the entire system or service.<br>**Error**: An error event occurs during an operation that might need intervention from the administrator or the user.<br>**Warning**: A component fails or is not working properly. However, the failure does not disrupt the ongoing process of the component.<br>**Informational**: A system or user operation is completed. Typically, the following events report informational notifications:<br>A service is installed.<br>A service is upgraded.<br>A service is removed.<br>All services are reconfigured for the added ESXi servers.<br>All services are reconfigured for the removed ESXi servers. |
+| Type | The type of component that the reported event is related to: vCenter Server instances, Services, System |
+| Resource | The name of the instance or service that sends the notification. |
+| Description | A short description of the notification. |
+| Date | The date and time when the notification is sent. |
+{: caption="Table 1. Notification history" caption-side="top"}
 
 3. Click a notification row to view the details of the notification.
 

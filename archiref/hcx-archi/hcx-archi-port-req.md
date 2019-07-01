@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-06-17"
 
 subcollection: vmware-solutions
 
 
 ---
-# VMware HCX on IBM Cloud port access requirements
+# Port access requirements for VMware HCX on IBM Cloud
 {: #hcx-archi-port-req}
 
 HCX must traverse the public internet and private lines, and connect to data center components, such as networks, switches, and port groups.
@@ -40,8 +40,8 @@ Table 1. Port access requirements
 | Cloud Gateway | ESXi hosts | 80, 902  | TCP | Management and OVF deployment | Internal |
 | ESXi Hosts | Cloud Gateway | 31031, 44046 | TCP | Internal host-based replication traffic | Internal |
 | Cloud Gateway | ESXi hosts | 8000  | TCP | vMotion (zero downtime migration) |  |
-| Cloud Gateway (local) | Cloud Gateway</br>(remote) | 4500  | UDP | Internet key exchange (IKEv2) to encapsulate workloads for the bidirectional tunnel | IPSEC |
-| Cloud Gateway (local) | Cloud Gateway</br>(remote) | 500  | UDP | Internet key exchange (ISAKMP) for the bidirectional tunnel | IPSEC |
+| Cloud Gateway (local) | Cloud Gateway</br>(remote) | 4500  | UDP | Internet Key Exchange (IKEv2) to encapsulate workloads for the bidirectional tunnel | IPSEC |
+| Cloud Gateway (local) | Cloud Gateway</br>(remote) | 500  | UDP | Internet Key Exchange (ISAKMP) for the bidirectional tunnel | IPSEC |
 
 ## Related links
 {: #hcx-archi-port-req-related}

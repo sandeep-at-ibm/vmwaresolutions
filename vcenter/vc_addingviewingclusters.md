@@ -4,13 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-18"
+lastupdated: "2019-06-28"
+
+keywords: vCenter Server add cluster, view cluster vCenter Server, delete cluster vCenter Server
 
 subcollection: vmware-solutions
 
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -32,7 +35,7 @@ The delete cluster feature is available only to instances that are deployed in (
 {: #vc_addingviewingclusters-before-add}
 
 * Whenever possible, add clusters by using the {{site.data.keyword.vmwaresolutions_full}} console, because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, add clusters to vCenter Server only for on-premises clusters or clusters that you can't or won't manage in the {{site.data.keyword.vmwaresolutions_short}} console.
-* For instances that were deployed in (or upgraded to) V2.5 and later, the number of clusters, hosts, and VMs determines the maximum limit for the number of clusters you can add. You must remain within the VMware sizing guidelines and limits for your deployment. For more information about maximum limits, see [VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window}.
+* For instances that were deployed in (or upgraded to) V2.5 and later, the number of clusters, hosts, and VMs determines the maximum limit for the number of clusters you can add. You must remain within the VMware sizing guidelines and limits for your deployment. For more information about maximum limits, see [VMware Configuration Maximums](https://configmax.vmware.com/home){:external}.
 * For instances that were deployed in (or upgraded to) V2.2, 2.3, or 2.4, you can add up to 10 clusters.
 * For instances that were deployed in V2.1 or earlier, you can add up to five clusters.
 
@@ -67,13 +70,12 @@ You can choose **Skylake**, **SAP-certified**, or **Broadwell**. Options might d
 
 For the **Skylake** setting, you have options for the **CPU Model** and **RAM**. Available options might differ depending on the version that your instance was initially deployed in.
 
-Table 1. Options for Skylake {{site.data.keyword.baremetal_short}}
-
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
 | Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+{: caption="Table 1. Options for Skylake {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 #### SAP-certified
 {: #vc_addingviewingclusters-adding-sap}
@@ -94,12 +96,11 @@ Based on your requirements, select a Bare Metal Server configuration:
 
 For the **Broadwell** setting, you have a number of options for the **CPU Model** and **RAM**. Available options might differ depending on the version that your instance was initially deployed in.
 
-Table 2. Options for Broadwell {{site.data.keyword.baremetal_short}}
-
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
 | Quad Intel Xeon E7-4820 v4 / 40 cores total, 1.9 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 cores total, 2.2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+{: caption="Table 2. Options for Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 #### Number of Bare Metal Servers
 {: #vc_addingviewingclusters-adding-bare-metal-number}
@@ -143,14 +144,15 @@ The number of file shares must be in the range of 1 to 32.
 * **Performance**: Select the IOPS (input/output operations per second) per GB based on your workload requirements.
 * **ADD NFS**: Select to add individual file shares with different configuration settings.
 
-Table 3. NFS performance level options
+Performance level details:
 
 | Option        | Details       |
-  |:------------- |:------------- |
-  | 0.25 IOPS/GB | This option is designed for workloads that are not used often. Example applications include: vaulted data, hosting large databases with legacy data, or virtual disk images of virtual memory system as backup. |
-  | 2 IOPS/GB | This option is designed for most general-purpose workloads. Example applications include: hosting small databases, backing up web applications, or virtual machine (VM) disk images for a hypervisor. |
-  | 4 IOPS/GB | This option is designed for higher-intensity workloads that have a high percentage of active data at a time. Example applications include: transactional databases. |
-  | 10 IOPS/GB | This option is designed for the most demanding workload types, such as analytics. Example applications include: high-transaction databases and other performance-sensitive databases. This performance level is limited to a maximum capacity of 4 TB per file share. |
+|:------------- |:------------- |
+| 0.25 IOPS/GB | This option is designed for workloads that are not used often. Example applications include: vaulted data, hosting large databases with legacy data, or virtual disk images of virtual memory system as backup. |
+| 2 IOPS/GB | This option is designed for most general-purpose workloads. Example applications include: hosting small databases, backing up web applications, or virtual machine (VM) disk images for a hypervisor. |
+| 4 IOPS/GB | This option is designed for higher-intensity workloads that have a high percentage of active data at a time. Example applications include: transactional databases. |
+| 10 IOPS/GB | This option is designed for the most demanding workload types, such as analytics. Example applications include: high-transaction databases and other performance-sensitive databases. This performance level is limited to a maximum capacity of 4 TB per file share. |
+{: caption="Table 3. NFS performance level options" caption-side="top"}
 
 ### Local Disks
 {: #vc_addingviewingclusters-adding-local-disks}
@@ -178,7 +180,9 @@ Network interface card (NIC) enablement settings are based on your selection of 
 ### Order summary
 {: #vc_addingviewingclusters-adding-order-summary}
 
-Based on your selected configuration for the cluster, the estimated cost is instantly generated and displayed in the **Order Summary** right pane.
+Based on your selected configuration for the cluster, the estimated cost is instantly generated and displayed in the **Order Summary** right pane. Click **Pricing details** to generate a PDF document with the cost summary for the {{site.data.keyword.vmwaresolutions_short}} resources.
+
+You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. This is useful if you want to estimate the cost of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.
 
 ## Procedure to add clusters to vCenter Server instances
 {: #vc_addingviewingclusters-adding-procedure}
@@ -229,9 +233,7 @@ You can't change the cluster name. Changing the cluster name might cause the add
 3. Click **Infrastructure** on the left navigation pane. In the **CLUSTERS** table, view the summary about the clusters:
   * **Name**: The name of the cluster.
   * **ESXi Servers**: The number of ESXi servers in the cluster.
-  * **CPU**: The CPU specification of the ESXi servers in the cluster.
-  * **Customized vSAN Disks**: The number of vSAN disks in the cluster, including the disk type and capacity.
-  * **Memory**: The total memory size of the ESXi servers in the cluster.
+  * **Storage**: The type of storage that the cluster uses.
   * **Data Center Location**: The {{site.data.keyword.CloudDataCent_notm}} where the cluster is hosted.
   * **Pod**: The pod where the cluster is deployed.
   * **Status**: The status of the cluster. The status can have one of the following values:
@@ -248,9 +250,9 @@ You can't change the cluster name. Changing the cluster name might cause the add
         <dd class="dd">The cluster is deleted.</dd>
     </dl>
   * **Actions**: Click the **Delete** icon to delete the cluster.
-4. Click a cluster name to view the ESXi server, storage, and network interface details:
+4. Click a cluster name to view the ESXi server, storage, and network interface details.
 
-Table 4. ESXi server details
+View ESXi server details:
 
 | Item        | Description       |  
 |:------------- |:------------- |
@@ -259,8 +261,20 @@ Table 4. ESXi server details
 | Credentials | The user name and password to access the ESXi server. |
 | Private IP | The private IP address of the ESXi server. |
 | Status | The status of the ESXi server, which can be one of the following values:<br> **Added** The ESXi server is added and is ready for use.<br> **Adding** The ESXi server is being added.<br> **Deleting** The ESXi server is being deleted. |
+{: caption="Table 4. ESXi server details" caption-side="top"}
 
-Table 5. Storage details
+Expand the ESXi server for additional details:
+
+| Item        | Description       |  
+|:------------- |:------------- |
+| CPU | The CPU specification of the ESXi servers in the cluster. |
+| Memory | The total memory size of the ESXi servers in the cluster. |
+| Customized vSAN Disks | The number of vSAN disks in the cluster, including the disk type and capacity. |
+| vSAN Cache Disks | The type and number of vSAN cache disks. |
+| Networking |The network interface card (NIC) enablement settings of either Public and Private Network or Private Network Only. |
+{: caption="Table 5. Additional ESXi server details" caption-side="top"}
+
+View storage details:
 
 | Item        | Description       |  
 |:------------- |:------------- |
@@ -268,8 +282,9 @@ Table 5. Storage details
 | Size | The capacity of the storage. |
 | IOPS/GB | The performance level of the storage. |
 | NFS Protocol | The NFS version of the storage. |
+{: caption="Table 6. Storage details" caption-side="top"}
 
-Table 6. Network Interface - VLAN details
+View network interface details:
 
 | Item        | Description       |  
 |:------------- |:------------- |
@@ -277,24 +292,27 @@ Table 6. Network Interface - VLAN details
 | Description | The description of the VLAN.  |
 | Location | The data center location. |
 | Primary Route | The primary route of the VLAN. |
+{: caption="Table 7. Network Interface - VLAN details" caption-side="top"}
 
 Click **View Resource** to access the VLAN details.
 
-Table 7. Network Interface - Subnet details
+View subnet details:
 
 | Item        | Description       |  
 |:------------- |:------------- |
 | Name | The subnet name. Click the name to access the subnet details. |
 | Type | The type of subnet: primary or portable. |
 | Description | The description of the subnet. |
+{: caption="Table 8. Network Interface - Subnet details" caption-side="top"}
 
-Table 8. Network Interface - IP details
+View IP details:
 
 | Item        | Description       |  
 |:------------- |:------------- |
 | IP | The IP address. |
 | Status | The status of the IP address. |
 | Description |The description of the IP address.  |
+{: caption="Table 9. Network Interface - IP details" caption-side="top"}
 
 ## Deleting clusters from vCenter Server instances
 {: #vc_addingviewingclusters-deleting}

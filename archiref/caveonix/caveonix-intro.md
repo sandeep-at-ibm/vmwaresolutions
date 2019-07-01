@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-06-20"
 
 subcollection: vmware-solutions
 
@@ -28,35 +28,38 @@ Caveonix RiskForesight is a multi-tenant cyber risk and Compliance Management pl
 
 With machine learning and CaveoIQ Risk Analytics engine, the solution provides proactive workload protection from risks due to cyber threats. It provides a consistent security and policy framework across a hybrid cloud environment and is fully integrated into cloud technology stack from VMware and public cloud providers such as AWS.
 
-The three key services available through the RiskForesight GUI are; Risk Management, Compliance Risk, and Forensic Management:
+The three key services available through the RiskForesight GUI are: Risk Management, Compliance Risk, and Forensic Management.
 
-**Risk Management**
--	Continuous cyber-risk
+## Risk Management
+
+- Continuous cyber-risk
 - Cyber-risk scoring
--	Vulnerability scoring and prioritization
--	Supports industry-leading vulnerability and configuration scanning tools
--	Global benchmarking standards
--	Cyber-risk reporting
+- Vulnerability scoring and prioritization
+- Supports industry-leading vulnerability and configuration scanning tools
+- Global benchmarking standards
+- Cyber-risk reporting
 
-**Compliance Risk**
+## Compliance Risk
+
 - Automated compliance monitoring
--	Compliance risk scoring dashboard
--	Automated IA controls assessment
--	Supports: PCI, FISMA, FEDRAMP, HIPAA, GLBA, GDPR, NERC CIP Reports Against SCAP, OVAL, XCCDF, and other global configuration benchmarking standards
--	Continuously updated and mapped IA controls and standards libraries
+- Compliance risk scoring dashboard
+- Automated IA controls assessment
+- Supports: PCI, FISMA, FEDRAMP, HIPAA, GLBA, GDPR, NERC CIP Reports Against SCAP, OVAL, XCCDF, and other global configuration benchmarking standards
+- Continuously updated and mapped IA controls and standards libraries
 
-**Forensic Management**
--	Log management
--	Log collection from multiple sources
--	Event detection, analytics, and visualization
--	Graphical visualization of results
--	Data aggregation from multiple sources
--	Event-based analytics
--	Full drill-down capability for events and log-based analysis
--	Alerts and notifications
+## Forensic Management
+
+- Log management
+- Log collection from multiple sources
+- Event detection, analytics, and visualization
+- Graphical visualization of results
+- Data aggregation from multiple sources
+- Event-based analytics
+- Full drill-down capability for events and log-based analysis
+- Alerts and notifications
 
 ## Related links
 {: #caveonix-intro-related}
 
-*   [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
-*   [Caveonix website](https://www.caveonix.com/)
+* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+* [Caveonix website](https://www.caveonix.com/)

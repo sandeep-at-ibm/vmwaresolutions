@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -20,9 +20,9 @@ subcollection: vmware-solutions
 A key aspect of the Skate Advisor is the conversations possible with the Watson driven chatbot. The following section details the conversational rules that define a human interaction with the Skate Advisor Chatbot.
 
 The Skater Language is the core of the system and is used in the following manner:
-* Trick recognition: Used by Watson Discovery to ingest material from online sources in order to recognize existing tricks and map to source material.
+* Trick recognition: Used by Watson Discovery to ingest material from online sources so it can recognize existing tricks and map to source material.
 * Skate conversations: Used by the chatbot to have meaningful conversations with the system user.
-* Trick classification: Store and classify a trick based on the textual description of the trick. Tricks that are classified in this way can have metadata attached to them such as location and video references.
+* Trick classification: Store and classify a trick based on the textual description of the trick. Metadata, such as location and video references, can be attached to tricks that are classified.
 
 ## Language elements
 {: #vcscar-concepts-lang-elem}
@@ -39,7 +39,7 @@ Element Type | Language text
 Direction | fakie<br>nollie<br>switch
 Rotation | halfcab<br>cab<br>180<br>360<br>540
 Base | kickflip<br>heelflip<br>hardflip<br>bigspin<br>shuvit<br>impossible
-landing | manual (back 2 wheels)<br>nosemanual (Front 2 wheels)<br>5-0 (grind)<br>nosegrind<br>tailslide<br>noseslide<br>crooked grind<br>smithgrind<br>boardslide<br>lipslide<br>
+landing | manual (back two wheels)<br>nosemanual (front two wheels)<br>5-0 (grind)<br>nosegrind<br>tailslide<br>noseslide<br>crooked grind<br>smithgrind<br>boardslide<br>lipslide<br>
 
 ### Element modifiers
 {: #vcscar-concepts-elem-modifiers}

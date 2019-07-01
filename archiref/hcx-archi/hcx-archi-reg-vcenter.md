@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-06-27"
 
 subcollection: vmware-solutions
 
@@ -23,7 +23,7 @@ The Hybrid Cloud Services virtual appliance must be powered on before it can be 
 ## Procedure to register HCX Manager with vCenter
 {: #hcx-archi-reg-vcenter-proc-register}
 
-1. Log in to Hybrid Cloud Services service virtual appliance.
+1. Log in to the Hybrid Cloud Services service virtual appliance. For example, `https:My-HCX-Manager:9443/`.
 2. Click the **Manage Settings** tile.
   1. In the left pane, under **Configure Systems**, select vCenter.
   2. Click **Add vCenter** on the upper right.

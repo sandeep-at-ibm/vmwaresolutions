@@ -4,12 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-01"
+lastupdated: "2019-06-26"
+
+keywords: F5 console, BIG-IP Web UI, login F5 console
 
 subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # Managing F5 on IBM Cloud
 {: #managing_f5}
@@ -27,4 +31,4 @@ For more information about viewing the service details, see [Ordering, viewing, 
 * [F5 on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations)
 * [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [F5 website](https://www.f5.com/){:new_window}
+* [F5 website](https://www.f5.com/){:external}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-06-27"
 
 subcollection: vmware-solutions
 
@@ -61,14 +61,14 @@ This refactoring of the solution brings a common platform to run the application
 * Connectivity
   -	IBM Voice Gateway Developer Trial
 
-* Application Modernization Tooling
+* Application Modernization tools
   -	IBM Transformation Advisor
 
 * Messaging
   -	IBM MQ Advanced
   -	IBM MQ Advanced for Developers
   -	Rabbit MQ (open source)
-  -	IBM Event Streams Tech Preview (Based on Apache Kafka)
+  -	IBM Event Streams technology preview (Based on Apache Kafka)
 
 * Digital Business Automation
   -	IBM Operational Decision Manager
@@ -92,7 +92,7 @@ This refactoring of the solution brings a common platform to run the application
 * HPC / HPDA
   -	IBM Spectrum LSF Community Edition
   -	IBM Spectrum Symphony Community Edition
-  -	IBM Spectrum Conductor Technical Preview
+  -	IBM Spectrum Conductor technology preview
 
 * Multi-cloud Management
   -	{{site.data.keyword.cloud_notm}} Automation Manager
@@ -105,14 +105,9 @@ This refactoring of the solution brings a common platform to run the application
   -	IBM Netcool - integration (Probe for {{site.data.keyword.icpfull_notm}} Services – Logging events and
 Monitoring alerts)
   - {{site.data.keyword.cloud_notm}} App Management 2018.2.0
-  -	IBM Netcool - integration (Probe to manage {{site.data.keyword.icpfull_notm}} Events. Sold with IBM
-Netcool Insights product)
-  - {{site.data.keyword.cloud_notm}} Event Management for IBM
-Cloud Private (ILAN licensed for discovery and try from catalog)
-  - IBM Operations Analytics Predictive Insights Mediation Pack (Manage
-{{site.data.keyword.icpfull_notm}} monitoring metrics. ILAN Licensed for discovery and try from
-catalog)  -	IBM Operations Analytics Predictive Insights Mediation Pack
-(Sold with Predictive Insights product)
+  -	IBM Netcool - integration (Probe to manage {{site.data.keyword.icpfull_notm}} Events. Sold with IBM Netcool Insights product)
+  - {{site.data.keyword.cloud_notm}} Event Management for IBM Cloud Private (ILAN licensed for discovery and try from catalog)
+  - IBM Operations Analytics Predictive Insights Mediation Pack (Manage {{site.data.keyword.icpfull_notm}} monitoring metrics. ILAN Licensed for discovery and try from catalog)  -	IBM Operations Analytics Predictive Insights Mediation Pack (Sold with Predictive Insights product)
 
 * Networking
   -	F5 BIGIP Controller (open source)
@@ -120,12 +115,10 @@ catalog)  -	IBM Operations Analytics Predictive Insights Mediation Pack
   -	strongSwan IPSec VPN (open source)
 
 * Storage
-  -	IBM PowerVC FlexVolume Driver (open source and supported by
-PowerVC product)
-  - GlusterFS storage cluster with Heketi lifecycle management (open
-source)
+  -	IBM PowerVC FlexVolume Driver (open source and supported by PowerVC product)
+  - GlusterFS storage cluster with Heketi lifecycle management (open source)
   -	Container Storage Interface (CSI) sample NFS
-  -	driver (open source)
+  -	Driver (open source)
   -	Rook Ceph Cluster (open source)
 
 * Tools
@@ -144,8 +137,7 @@ For Stock Trader, Todd decided to add all of the middleware. The following infor
 ### Db2
 {: #vcscontent-addmidware-db2}
 
-Todd starts with Db2 because they're already using Db2 and can
-dedicate a container-based Db2 for each solution.
+Todd starts with Db2 because they're already using Db2 and can dedicate a container-based Db2 for each solution.
 
 Since Todd prepared {{site.data.keyword.icpfull_notm}}, he already has his pod security policy defined. Todd can focus on creating a docker image pull secret:
 
@@ -154,11 +146,9 @@ Since Todd prepared {{site.data.keyword.icpfull_notm}}, he already has his pod s
 --docker-password=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXX
 --docker-email=dockeruser@email.com --namespace=default`
 
-Finally, since Todd decided to use NFS, he created NFS volumes based on
-the readme file requirements:
+Finally, since Todd decided to use NFS, he created NFS volumes based on the readme file requirements:
 
-Go to {{site.data.keyword.icpfull_notm}} dashboard and create Persistent Volume. How large? Look in the
-readme file to find out:
+Go to {{site.data.keyword.icpfull_notm}} dashboard and create Persistent Volume. How large? Look in the readme file to find out:
 
 `capacity=20Gi
 RWO
@@ -166,12 +156,9 @@ type=NFS
 server = nfs.server.ip.address
 path = /shared/db2trader1`
 
-In the catalog user interface, search for “Db2” and click ibm-db2oldp-dev
-Review the readme file then click Configure.
+In the catalog user interface, search for “Db2” and click ibm-db2oldp-dev. Review the readme file then click Configure.
 
-In the Configure section, there's a Quick Start section and an All
-Parameters section. Open the All Parameters since Todd needs to enter
-more configuration:
+In the Configure section, there's a Quick Start section and an All Parameters section. Open the All Parameters since Todd needs to enter more configuration:
 
 *	Release name = db2trader1
 *	namespace = default
@@ -185,21 +172,15 @@ more configuration:
 *	pw for db2 instance name = xxxxxx
 *	Yes (check) Enable persistence for this deployment
 
-After Db2 is running, Todd or Jane needs to create the tables that the
-Stock Trader solution uses.
+After Db2 is running, Todd or Jane needs to create the tables that the Stock Trader solution uses.
 
 ### MQ
 {: #vcscontent-addmidware-mq}
 
-Todd and Jane need messaging software, and since they already use MQ,
-this is a great option. Also, it can run in a small footprint, and
-the dev version can be spun up for each Developer, saving precious
-Production traffic. Installing MQ is fairly simple. Todd creates the
-storage just like he did with Db2, and then installs the helm chart:
+Todd and Jane need messaging software, and since they already use MQ, this is a great option. Also, it can run in a small footprint, and
+the dev version can be spun up for each Developer, saving precious Production traffic. Installing MQ is fairly simple. Todd creates the storage just like he did with Db2, and then installs the helm chart:
 
-{{site.data.keyword.icpfull_notm}} Dashboard > Catalog > start to type in MQ > select
-ibm-mqadvanced-server-dev Review the readme file then click Configure
-Provide or verify the following input values:
+{{site.data.keyword.icpfull_notm}} Dashboard > Catalog > start to type in MQ > select ibm-mqadvanced-server-dev Review the readme file then click Configure Provide or verify the following input values:
 
 `release name = mqtrader1
 target namespace = stock-trader
@@ -211,42 +192,27 @@ Queue manager name = stocktrader
 Admin pw = mq1pw
 App password = LEAVE BLANK`
 
-Initially Todd selects NodePort to get at the
-middleware from the user interface. Eventually, Todd can use ClusterIP so only
-pods inside the cluster can get to the middleware.
+Initially Todd selects NodePort to get at the middleware from the user interface. Eventually, Todd can use ClusterIP so only pods inside the cluster can get to the middleware.
 
-To configure MQ to use Stock Trader, Todd opens the MQ Management
-user interface, which is the exact same as the VM version.
+To configure MQ to use Stock Trader, Todd opens the MQ Management user interface, which is the exact same as the VM version.
 
 ### Redis
 {: #vcscontent-addmidware-redis}
 
-Even though Stock Trader is running on {{site.data.keyword.cloud_notm}} Private Hosted, they
-are still worried about the stock quote service latency when all they
-really care about is the end of previous day stock for most of their
-work. To help improve performance, they add a Redis cache.
+Even though Stock Trader is running on {{site.data.keyword.cloud_notm}} Private Hosted, they are still worried about the stock quote service latency when all they really care about is the end of previous day stock for most of their work. To help improve performance, they add a Redis cache.
 
 This deployment uses the ibm-redis-ha-dev chart from ibm-charts.
 
-By default, this chart installs six pods: one master, two slaves, and three sentinels. This is a great example of resilience in Kubernetes where
-more than one pod works together across many worker nodes, even when the
-worker nodes are in more than one subnet.
+By default, this chart installs six pods: one master, two slaves, and three sentinels. This is a great example of resilience in Kubernetes where more than one pod works together across many worker nodes, even when the worker nodes are in more than one subnet.
 
-The configuration is simple, so Todd enters which namespace to
-install it into, and begins the installation.
+The configuration is simple, so Todd enters which namespace to install it into, and begins the installation.
 
 ## Refactor Stock Trader
 {: #vcscontent-addmidware-refactor-stock-trader}
 
-Refactoring Stock Trader is an important step for Jane. While Todd was busy adding the
-middleware into {{site.data.keyword.cloud_notm}} Private, Jane refactored her solution
-to optimized it for Kubernetes and cloud behaviors.
+Refactoring Stock Trader is an important step for Jane. While Todd was busy adding the middleware into {{site.data.keyword.cloud_notm}} Private, Jane refactored her solution to optimized it for Kubernetes and cloud behaviors.
 
-For example, when Jane transformed Stock Trader, she took the .war
-files and added each one into a Liberty container but used the WebSphere Application Server Network Deployment
-configuration to point to the data source. It was a
-good start and Jane's application gets value out of Kubernetes scheduling and
-orchestration immediately.
+For example, when Jane transformed Stock Trader, she took the .war files and added each one into a Liberty container but used the WebSphere Application Server Network Deployment configuration to point to the data source. It was a good start and Jane's application gets value out of Kubernetes scheduling and orchestration immediately.
 
 Many other benefits exist from optimizing Jane's micro-services (recode
 and build) for the Kubernetes world.
@@ -256,42 +222,23 @@ To optimize, Jane took the following steps:
 -	Added a pipeline (Jane used Jenkins)
 -	Built by using Maven
 
-The following is an example of Jane's [code
-repository](https://github.com/IBMStockTrader/), along with the
-Jenkins file, server.xml, and more. With this in place, Jane can freely code
-extra capabilities via secrets to access services like ODM and
-Watson, along with more micro-services as individual repositories
-in GitHub.
+The following example shows Jane's [code repository](https://github.com/IBMStockTrader/), along with the Jenkins file, server.xml, and more. With this in place, Jane can freely code extra capabilities via secrets to access services like ODM and Watson, along with more micro-services as individual repositories in GitHub.
 
 ### Adding secrets
 {: #vcscontent-addmidware-add-secrets}
 
-Now that Jane refactored the Stock Trader micro-services, she
-requires a way to abstract the service names, user IDs, and passwords, so that her application can pick up unique details about the service when deployed
-without hardcoding specific names and rebuilding the application.
+Now that Jane refactored the Stock Trader micro-services, she requires a way to abstract the service names, user IDs, and passwords, so that her application can pick up unique details about the service when deployed without hardcoding specific names and rebuilding the application.
 
-Using Kubernetes secrets, Jane configures a well-defined secret name
-and parameters within each secret to ensure that when the micro-service is
-deployed it picks up the unique host name, user ID, password, or
-any other sensitive credentials, making her application portable.
+Using Kubernetes secrets, Jane configures a well-defined secret name and parameters within each secret to ensure that when the micro-service is deployed it picks up the unique host name, user ID, password, or any other sensitive credentials, making her application portable.
 
-Jane wants a unified code base, even when Stock Trader might run on
-more than one cloud. The secret DB2 in the following figure has different
-routing details but in the same format. When Jane's portfolio micro-service deploys, it looks for the DB2 secret endpoint parameter to connect
-to the appropriate Db2 instance. The Stock Trader application doesn't care if it's running in a VMware virtual machine, a containerized service,
-or as a cloud-managed service.
+Jane wants a unified code base, even when Stock Trader might run on more than one cloud. The secret DB2 in the following figure has different routing details but in the same format. When Jane's portfolio micro-service deploys, it looks for the DB2 secret endpoint parameter to connect to the appropriate Db2 instance. The Stock Trader application doesn't care if it's running in a VMware virtual machine, a containerized service, or as a cloud-managed service.
 
 ![Stock Trader pivot services](../../images/vcscontent-pivot-services.svg "Stock Trader pivot services"){: caption="Figure 2. Stock Trader - pivot services" caption-side="bottom"}
 
 ## Result
 {: #vcscontent-addmidware-result}
 
-Because Jane committed to refactoring her Stock Trader solution,
-and Todd installing middleware into {{site.data.keyword.cloud_notm}} Private Hosted, all of the
-core Stock Trader solution is running in a private cloud. Jane now
-adds more micro-services such a Twitter notification service. Istio
-routing rules enable dynamic loyalty level messaging via an internal
-Slack channel or a public Twitter channel.
+Because Jane committed to refactoring her Stock Trader solution, and Todd installing middleware into {{site.data.keyword.cloud_notm}} Private Hosted, all of the core Stock Trader solution is running in a private cloud. Jane now adds more micro-services such a Twitter notification service. Istio routing rules enable dynamic loyalty level messaging via an internal Slack channel or a public Twitter channel.
 
 ![Stock Trader enrichment](../../images/vcscontent-enrich.svg "Stock Trader enrichment"){: caption="Figure 3. Enrichment of Stock Trader" caption-side="bottom"}
 

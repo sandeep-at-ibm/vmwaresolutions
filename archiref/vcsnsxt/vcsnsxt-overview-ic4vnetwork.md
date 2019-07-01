@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-21"
+lastupdated: "2019-05-22"
 
 subcollection: vmware-solutions
 
@@ -28,7 +28,7 @@ The physical network of {{site.data.keyword.cloud_notm}} is separated into three
 ## Private network
 {: #vcsnsxt-overview-ic4vnetwork-private-net}
 
-All {{site.data.keyword.CloudDataCents_notm}} and PoPs are connected by the private network backbone. This private network is separate from the public network, and it enables connectivity to services in {{site.data.keyword.CloudDataCents_notm}} around the world. Moving data between data centers is done by using more than one 10 Gbps or 40-Gbps connections to the private network. Similar to the public network, the private network is multi tiered in that servers and other infrastructure are connected to aggregated backend customer switches (BCS). These aggregated switches are attached to a pair of separate routers (that is, backend customer routers, BCR) for L3 networking. The private network also supports the ability to use jumbo frames (MTU 9000) for physical host connections.
+All {{site.data.keyword.CloudDataCents_notm}} and PoPs are connected by the private network backbone. This private network is separate from the public network, and it enables connectivity to services in {{site.data.keyword.CloudDataCents_notm}} around the world. Moving data between data centers is done by using more than one 10-Gbps or 40-Gbps connections to the private network. Similar to the public network, the private network is multi tiered in that servers and other infrastructure are connected to aggregated backend customer switches (BCS). These aggregated switches are attached to a pair of separate routers (that is, backend customer routers, BCR) for L3 networking. The private network also supports the ability to use jumbo frames (MTU 9000) for physical host connections.
 
 ## Management network
 {: #vcsnsxt-overview-ic4vnetwork-mgmt-net}
@@ -47,7 +47,7 @@ Primary or Portable IP addresses can be made routable to any VLAN within the cus
 ## Virtual Routing and Forwarding
 {: #vcsnsxt-overview-ic4vnetwork-vrf}
 
-{{site.data.keyword.cloud_notm}} accounts can also be configured as a Virtual Routing and Forwarding (VRF) account. A VRF account enables automatic global routing between subnet IP blocks within the account. All accounts with Direct-Link connections must be converted to, or created as, a VRF account.
+{{site.data.keyword.cloud_notm}} accounts can also be configured as a Virtual Routing and Forwarding (VRF) account. A VRF account enables automatic global routing between subnet IP blocks within the account. All accounts with Direct Link connections must be converted to, or created as, a VRF account.
 
 ## Physical host connections
 {: #vcsnsxt-overview-ic4vnetwork-host-connect}
@@ -84,7 +84,7 @@ Private B 	|Portable 	|Assigned for vSAN if in use.
 Private B 	|Portable 	|Assigned for NAS if in use.
 Private B 	|Portable 	|Assigned for vMotion.
 
-This design is implemented with physical hosts and virtual system instances (VSI) on VLANs and configured to point to the {{site.data.keyword.cloud_notm}} BCR (backend “private network” customer router) as the default route. While vCenter Server instances enable the use of software defined networking. Any network overlays created by NSX that include routing to VLAN subnets aren't known by the {{site.data.keyword.cloud_notm}}-managed routers and you might need to create static routes, firewall rules, and NAT rules to properly manage the network flows.
+This design is implemented with physical hosts and virtual system instances (VSI) on VLANs and configured to point to the {{site.data.keyword.cloud_notm}} BCR (backend “private network” customer router) as the default route. While vCenter Server instances enable the use of software-defined networking, any network overlays created by NSX that include routing to VLAN subnets aren't known by the {{site.data.keyword.cloud_notm}}-managed routers. You might need to create static routes, firewall rules, and NAT rules to properly manage the network flows.
 
 The private network connections are configured to use jumbo frames with MTU size of 9000, which improves performance for large data transfers such as storage and vMotion. This is the maximum MTU allowed within VMware and by {{site.data.keyword.cloud_notm}}. The public network connections use a standard Ethernet MTU of 1500. This must be maintained as any changes might cause packet fragmentation over the internet.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-06-21"
 
 subcollection: vmware-solutions
 
@@ -96,17 +96,17 @@ SDDC-Dswitch-Public	  |SDDC-DPortGroup-External	|Originating virtual port	|Activ
 This design specifies the configuration of NSX components but does'nt apply any network overlay component configuration. It's left up to the customer to design the network overlay based on their needs.
 
 The following components are configured:
--	Management servers and controllers are installed and integrated into the vCenter web user interface.
--	ESXi agents are installed and VTEP IP addresses are configured per ESXi host.
--	VTEP configuration, controller configuration, VXLAN configuration (transport zone).
--	NSX Edge Services Gateway (ESG) appliances for use by management components.
--	For vCenter Server only, NSX Edge Services Gateway (ESG) appliances for customer use.
+- Management servers and controllers are installed and integrated into the vCenter web user interface.
+- ESXi agents are installed and VTEP IP addresses are configured per ESXi host.
+- VTEP configuration, controller configuration, VXLAN configuration (transport zone).
+- NSX Edge Services Gateway (ESG) appliances for use by management components.
+- For vCenter Server only, NSX Edge Services Gateway (ESG) appliances for customer use.
 
-What is NOT configured:
--	Virtual distributed routers.
--	Micro segmentation.
--	VXLANs.
--	Linked NSX Management to other VMware instances.
+The following components are not configured:
+- Virtual distributed routers
+- Micro segmentation
+- VXLANs
+- Linked NSX Management to other VMware instances
 
 ### NSX-V security
 {: #vcsnsxt-overview-ic4vnsxv-nsx-v-security}
@@ -114,9 +114,9 @@ What is NOT configured:
 NSX for vSphere enables organizations to divide the data center into distinct security segments, down to the level of the individual workload independent of where the workload is running. IT teams can define policies for each workload based on application and user context, which ensures immediate responses to threats inside the data center and enforcement down to the application.
 
 The following are some key NSX components:
--	The NSX distributed stateful firewall is embedded in the hypervisor kernel for up to 20 Gbps of firewall capacity per hypervisor host. Provides north-south firewall capability via NSX Edge.
--	NSX enables the creation of dynamic security groups and associated policies to more than just IP address and MAC. These policies include vCenter objects and tags, operating system type, and Layer 7 application information to enable micro-segmentation based on the context of the application.
--	Identity-based policy that uses login information from VMs, Active Directory, and Mobile Device Management integration allows for security based on the user including session level security in remote and virtual desktop environments.
+- The NSX distributed stateful firewall is embedded in the hypervisor kernel for up to 20 Gbps of firewall capacity per hypervisor host. Provides north-south firewall capability via NSX Edge.
+- NSX enables the creation of dynamic security groups and associated policies to more than just IP address and MAC. These policies include vCenter objects and tags, operating system type, and Layer 7 application information to enable micro-segmentation based on the context of the application.
+- Identity-based policy that uses login information from VMs, Active Directory, and Mobile Device Management integration allows for security based on the user including session level security in remote and virtual desktop environments.
 - Application Rule Manager and Endpoint Monitoring enable end to end network traffic flow visualization up to Layer 7, allowing application teams to identify both intra- and inter-data center end points, and respond by creating the appropriate security rules.
 - Support for management, control plane, and data plane integration with third-party vendors such as next generation firewalls, IDS/IPS, agentless antivirus, switching, advanced security, and more.
 

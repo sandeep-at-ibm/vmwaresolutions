@@ -1,8 +1,12 @@
 ---
 
 copyright:
+
   years: 2016, 2019
-lastupdated: "2019-04-03"
+
+lastupdated: "2019-06-21"
+
+keywords: vmware solutions events, activity tracker, event details
 
 subcollection: vmware-solutions
 
@@ -12,16 +16,14 @@ subcollection: vmware-solutions
 # Activity Tracker events
 {: #at-events}
 
-Use the {{site.data.keyword.cloudaccesstrailfull}} service to track how users and applications interact with {{site.data.keyword.vmwaresolutions_short}} in {{site.data.keyword.Bluemix_notm}}.
+Use the {{site.data.keyword.cloudaccesstrailfull}} service to track how users and applications interact with {{site.data.keyword.vmwaresolutions_short}} in {{site.data.keyword.cloud_notm}}.
 
-The {{site.data.keyword.cloudaccesstrailfull_notm}} service records user-initiated activities that change the state of a service in {{site.data.keyword.Bluemix_notm}}. For more information, see the [About {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov#activity_tracker_ov).
+The {{site.data.keyword.cloudaccesstrailfull_notm}} service records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. For more information, see the [About {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov#activity_tracker_ov).
 
 ## Activity Tracker events table
 {: #at-events-table}
 
 Check the following table for the description of the columns in the Activity Tracker events table.
-
-Table 1. Description of the Activity Tracker events table
 
 | Column                | Value type | Description |
 |:----------------------|:-----------|:------------|
@@ -33,6 +35,7 @@ Table 1. Description of the Activity Tracker events table
 | outcome               | String     | The result of the action. The value is `success`, `failure`, or `pending`. |
 | reason_reasonCode     | Integer    | The reason code of the outcome. |
 | initiator_host_address| String     | The IP address where the request comes from. |
+{: caption="Table 1. Description of the Activity Tracker events table" caption-side="top"}
 
 For more information, see [Activity Tracker event fields](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-at_event).
 
@@ -43,34 +46,32 @@ When you manage user accounts, instances, clusters, and services in {{site.data.
 
 Check the following table for the actions that generate and send management events to Activity Tracker.
 
-Table 2. Description of actions that generate management events
-
 | Action                                   | Description | Outcome |
 |:-----------------------------------------|:------------|:-------|
-| `vmware-solutions.user_account.update`    | <ul><li>The request to update the user account is received.</li><li>The request to update the user account is responded.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
-| `vmware-solutions.notification.update` | <ul><li>The request to update notifications is received.</li><li>The request to update notifications is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
-| `vmware-solutions.secure_data.wipe`       | <ul><li>The request to wipe secure data is received.</li><li>The request to wipe secure data is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
-| `vmware-solutions.bss_account.migrate` | <ul><li>The request to migrate to bss account is received.</li><li>The request to migrate to bss account is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
-| `vmware-solutions.vcs.order`                 | <ul><li>The request to order a vCenter Server instance is received.</li><li>The request to order a vCenter Server instance is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
-| `vmware-solutions.vcs.delete`                | <ul><li>The request to delete a vCenter Server instance is received.</li><li>The request to delete a vCenter Server instance is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
-| `vmware-solutions.vcs.add_host`              | <ul><li>The request to add ESXi servers to a vCenter Server instance is received.</li><li>The request to add ESXi servers to a vCenter Server instance is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
-| `vmware-solutions.vcs.remove_hosts`          | <ul><li>The request to delete ESXi servers from a vCenter Server instance is received.</li><li>The request to delete ESXi servers from a vCenter Server instance is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
-| `vmware-solutions.vcs.schedule_update`       | <ul><li>The request to schedule an update for a vCenter Server instance is received.</li><li>The request to schedule an update for a vCenter Server instance is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
-| `vmware-solutions.vcs.create_cluster`        | <ul><li>The request to create a cluster for a vCenter Server instance is received.</li><li>The request to create a cluster for a vCenter Server instance is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
-| `vmware-solutions.vcs.delete_cluster`        | <ul><li>The request to delete cluster from a vCenter Server instance is received.</li> <li>The request to delete cluster from a vCenter Server instance is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
-| `vmware-solutions.vcs.update_nsx_license`        | <ul><li>The request to update the VMware NSX license is received.</li><li>The request to update the VMware NSX license is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
-| `vmware-solutions.vcs.upgrade_to_hybridity`   | <ul><li>The request to upgrade a vCenter Server instance to a vCenter Server with Hybridity Bundle instance is received.</li><li>The request to upgrade a vCenter Server instance to a vCenter Server with Hybridity Bundle instance is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
-| `vmware-solutions.vsphere.order`              | <ul><li>The request to order a vSphere cluster is received.</li><li>The request to order a vSphere cluster is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
-| `vmware-solutions.vsphere.update`             | <ul><li>The request to update a vSphere cluster is received.</li><li>The request to update a vSphere cluster is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
-| `vmware-solutions.vsphere.save_template`      | <ul><li>The request to save the configuration of a vSphere cluster is received.</li><li>The request to save the configuration of a vSphere cluster is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
-| `vmware-solutions.netapp.order`               | <ul><li>The request to order a NetApp ONTAP Select instance is received.</li><li>The request to order a NetApp ONTAP Select instance is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
-| `vmware-solutions.netapp.delete`              | <ul><li>The request to delete a NetApp ONTAP Select instance is received.</li><li>The request to delete a NetApp ONTAP Select instance is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
-| `vmware-solutions.service_variable.update`    | <ul><li>The request to update the configuration of a service is received.</li><li>The request to update the configuration of a service is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
-| `vmware-solutions.service.order`              | <ul><li>The request to order a service for an instance is received.</li><li>The request to order a service for an instance is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
-| `vmware-solutions.service.delete_by_id`       | <ul><li>The request to delete a service from an instance is received.</li><li>The request to delete a service from an instance is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
-| `vmware-solutions.service.upgrade_to_hybridity` | <ul><li>The request to upgrade an existing vCenter Server instance to a vCenter Server with Hybridity Bundle instance is received.</li><li>The request to upgrade an existing vCenter Server instance to a vCenter Server with Hybridity Bundle instance is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
-| `vmware-solutions.service.deploy` | The action to deploy a service on an instance is run. | `success` |
-| `vmware-solutions.service.undeploy` | The action to remove a service from an instance is run. | `success` |
+| `vmware-solutions.account-apikey.update` |	The infastructure API key for an account is updated. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.account-notification.update` | The notification setting for an account is updated. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.instance-secure-data.wipe` | The instance secure data is wiped. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.instance-bss-account.migrate` |	An instance is migrated to a BSS account. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs.create` |	A vCenter Server instance is created. |`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs.delete` |	A vCenter Server instance is deleted. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-host.add` |	A host is added to a vCenter Server instance. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-host.remove` |	A host is removed from a vCenter Server instance. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs.update`	| A vCenter Server instance is updated. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-cluster.create`	| A cluster is created for a vCenter Server instance. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-cluster.delete`	| A cluster is deleted for a vCenter Server instance. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-nsx-license.update`	| The NSX license is updated for a vCenter server instance. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-hybridity.add`	| The hybridity bundle is upgraded for a vCenter server instance. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-hybridity.remove`	| The hybridity bundle is removed from a vCenter server instance. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-nfs-storage.add`	| NFS storage is added to a vCenter Server instance. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-nfs-storage.remove`	| NFS storage is removed from a vCenter Server instance. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-plan.update`	| A vCenter Server instance's plan is updated. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vss.create`	| A vSphere instance is created. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vss.update`	| A vSphere instance is updated. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vss-template.remove` |	A vSphere template is removed. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.service.create`	| A service is created. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.service.delete`	| A service is deleted. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.service-hybridity.upgrade` | A hybridity bundle is upgraded to `version`. | `pending`<br>`success`<br>`failure` |
+{: caption="Table 2. Description of actions that generate management events" caption-side="top"}
 
 ## Tracking events for the KMIP for VMware on IBM Cloud service
 {: #at-events-kmip}
@@ -79,26 +80,26 @@ When you manage keys for the KMIP for VMware on {{site.data.keyword.cloud_notm}}
 
 Check the following table for the actions that generate and send events for the KMIP for VMware on {{site.data.keyword.cloud_notm}} service.
 
-Table 3. Description of actions that generate events for the KMIP for VMware on {{site.data.keyword.cloud_notm}} service
-
 | Action                                      | Description                               | Outcome |
 |:--------------------------------------------|:------------------------------------------|:-------|
-| `vmware-solutions.key.create`               | <ul><li>The request to create a key is received.</li><li>The request to create a key is answered.</li></ul> | <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
-| `vmware-solutions.key.get`                  | <ul><li>The request to get the content of a key is received.</li><li>The request to get the content of a key is answered.</li></ul> |  <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
-| `vmware-solutions.key.get_attributes`       | <ul><li>The request to get the attributes of a key is received.</li><li>The request to get the attributes of a key is answered.</li></ul> |  <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
-| `vmware-solutions.key.activate`             | <ul><li>The request to activate a key is received.</li><li>The request to activate a key is answered.</li></ul> |  <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
-| `vmware-solutions.key.revoke`               | <ul><li>The request to revoke a key is received.</li><li>The request to revoke a key is answered.</li></ul> |  <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
-| `vmware-solutions.key.destroy`              | <ul><li>The request to destroy a key is received.</li><li>The request to destroy a key is answered.</li></ul> |  <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
-| `vmware-solutions.key.discover_versions`    | <ul><li>The request to find the version of the KMIP for VMware on {{site.data.keyword.cloud_notm}} service is received.</li><li>The request to find the version of the KMIP for VMware on {{site.data.keyword.cloud_notm}} service is answered.</li></ul> |  <ul><li>`pending`</li><li>`success` or `failure`</li></ul> |
+| `vmware-solutions.kmip-key.create` |	A KMIP key is created. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.kmip-key.retrieve` |	A KMIP key is retrieved. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.kmip-key-attributes.retrieve` |	A KMIP key's attributes are retrieved. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.kmip-key.activate` |	A KMIP key is activated. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.kmip-key.revoke` |	A KMIP key is revoked. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.kmip-key.destroy` |	A KMIP key is destroyed. | `pending`<br>`success`<br>`failure` |
+{: caption="Table 3. Description of actions that generate events for the KMIP for VMware on {{site.data.keyword.cloud_notm}} service" caption-side="top"}
 
 ## Where to view the events
 {: #at-events-viewing}
 
-{{site.data.keyword.cloudaccesstrailshort}} events are available in the {{site.data.keyword.cloudaccesstrailshort}} **account domain** that is available in the {{site.data.keyword.Bluemix_notm}} region where the events are generated.
+{{site.data.keyword.cloudaccesstrailshort}} events are available in the {{site.data.keyword.cloudaccesstrailshort}} **account domain** that is available in the {{site.data.keyword.cloud_notm}} region where the events are generated.
+
+Use {{site.data.keyword.cloud_notm}} Activity Tracker with LogDNA to view the instance. For more information, see [Viewing events](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-view_events).
 
 ## Related links
 {: #at-events-related}
 
-* [Provisioning Activity Tracker](/docs/services/cloud-activity-tracker/how-to?topic=cloud-activity-tracker-provision)
-* [Navigating to the Activity Tracker dashboard in the {{site.data.keyword.cloud_notm}} Console](/docs/services/cloud-activity-tracker/how-to/manage-events-ui?topic=cloud-activity-tracker-launch_at_ui)
+* [Provisioning an instance](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-provision)
+* [Navigating to the web UI](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-launch)
 * [KMIP for VMware on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -14,7 +14,7 @@ subcollection: vmware-solutions
 # Common services components for VMware and Skate Advisor Concept Car
 {: #vcscar-commonservices}
 
-Common services provide the services that are used by other services in the cloud management platform. Common services include identity and access services, domain name services, and NTP services.
+Common services provide the services that are used by other services in the cloud management platform. Common services include identity and access services, domain name services, and NTP (Network Time Protocol) services.
 
 ![{{site.data.keyword.icpfull_notm}} common services](../../images/vcscar-common-services.svg "{{site.data.keyword.icpfull_notm}} common services"){: caption="Figure 1. {{site.data.keyword.icpfull_notm}} common services" caption-side="bottom"}
 

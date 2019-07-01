@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-21"
+lastupdated: "2019-05-28"
+
+keywords: troubleshooting, Zerto VRA, Zerto uninstall
 
 subcollection: vmware-solutions
 

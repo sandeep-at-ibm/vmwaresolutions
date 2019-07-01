@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-15"
 
 subcollection: vmware-solutions
 
@@ -49,7 +49,7 @@ The first step is to add your my.vmware.com credentials to the vSAN Build Recomm
 {: #vum-updating-vsan-config-vcsa-proxy}
 
 1.	From your jump server web browser, connect to the VCSA Management Interface `https://<vCenter ip>:5480`
-2.	Using the credentials from the IC4VS Console, log in to the VCSA Management Interface as root.
+2.	Using the credentials from the IBM Cloud for VMware Solutions console, log in to the VCSA Management Interface as root.
 3.	In the vCenter Server Appliance Management Interface, click **Networking** and click **Manage**.
 4.	To configure a proxy server, in the Proxy Settings pane, click **Edit**.
 5.	Select **Use a Proxy Server**, enter the proxy server settings, and click **OK**.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-06-21"
 
 subcollection: vmware-solutions
 
@@ -18,7 +18,7 @@ After the virtual machines (VMs) are deployed and the application components are
 
 The Service Provider is the top-level organization and there are one or more Tenant/Organization serviced by the Service Provider. The Service Provider assigns Assets that are collected from vCenter to the Tenant or Organizations, who then assign them to Applications or Sub-applications. These Applications are then subject to a compliance regime.
 
-This step is initially completed by the IC4VS automation that uses information that is supplied by the client during the ordering process and default information. The setup process can be started by the client, post deployment, to modify the Service Provider or Tenant Organization as required post installation.
+This step is initially completed by the IBM Cloud for VMware Solutions automation that uses information that is supplied by the client during the ordering process and default information. The setup process can be started by the client, post deployment, to modify the Service Provider or Tenant Organization as required post installation.
 
 The Service Provider setup has eight substeps:
 -	Step 1: Organization Detail - Add the details for the parent organization for your cloud service provider. This organization can have multiple physical locations and multiple data centers. Organizations for your tenants and sub-organizations for your service provider are added later.
@@ -32,14 +32,14 @@ The Service Provider setup has eight substeps:
 
 The Tenant or Organization Setup has seven substeps:
 
--	Step 1: Organization - Add details for your primary organization. You can also create sub-organizations. Use organizations to segment your users, or as one of the ways to group your assets. You can create more organizations with one of your existing organizations as parent. When you create a new organization, you can select the "Business Impact Value", which is used to generate cyber risk scores.
--	Step 2: Organization Assets - New assets / workloads are automatically grouped by location, cloud provider, and asset repository. Assets can be assigned to only one organization at a time. The Service Provider needs to assign assets to an organization.
--	Step 3: Associate Environment and Location – Optional. Environments are defined by the Service Provider.
--	Step 4 and 5: Create Sub-Applications or Applications – Used to group assets across locations and organizations and see their associated flows and policies. Create applications that match business and IT services. For example, Application=SAP, Sub-Applications=SAP Front End, SAP Middle Tier, and SAP Back End. Business impact value corresponds to an Application, compliance regimes apply to an application.
--	Step 6: Remote Access - Remote Access is required to run scans on assets, can be a default service account or an asset-specific account.
--	Step 7: Task Scheduler - Schedule scans to run on a periodic basis. The types of tasks include; SCAP Scan-Vulnerability, SCAP Scan-XCCDF, NSX Flow Scan, Software Scan, Log Extract Scan.
+- Step 1: Organization - Add details for your primary organization. You can also create sub-organizations. Use organizations to segment your users, or as one of the ways to group your assets. You can create more organizations with one of your existing organizations as parent. When you create a new organization, you can select the **Business Impact Value**, which is used to generate cyber risk scores.
+- Step 2: Organization Assets - New assets / workloads are automatically grouped by location, cloud provider, and asset repository. Assets can be assigned to only one organization at a time. The Service Provider needs to assign assets to an organization.
+- Step 3: Associate Environment and Location – Optional. Environments are defined by the Service Provider.
+- Step 4 and 5: Create Sub-Applications or Applications – Used to group assets across locations and organizations and see their associated flows and policies. Create applications that match business and IT services. For example, Application=SAP, Sub-Applications=SAP Front End, SAP Middle Tier, and SAP Back End. **Business Impact Value** corresponds to an Application, compliance regimes apply to an application.
+- Step 6: Remote Access - Remote Access is required to run scans on assets, can be a default service account or an asset-specific account.
+- Step 7: Task Scheduler - Schedule scans to run on a periodic basis. The types of tasks include; SCAP Scan-Vulnerability, SCAP Scan-XCCDF, NSX Flow Scan, Software Scan, Log Extract Scan.
 
-The following information is collected from the user at time of order and is used to in the application setup.
+The following information is collected from the user at time of order and is used in the application setup.
 
 Table 1. Information collected from the user
 
