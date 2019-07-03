@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-02"
 
 subcollection: vmware-solutions
 
@@ -29,7 +29,8 @@ This connection creates a loosely coupled interconnectivity between on-premises 
 * Layer 2 extension – on-premises networks are extended into the cloud. These networks include on-premises subnets and IP addressing.
 * Encryption – network traffic is securely encrypted between the two sides.
 * Optimized network – selects the best connection and efficiently floods the connection so that network traffic is moved as fast as possible.
-* Data deduplication – as much as 50% reduction in network traffic can be achieved Intelligent routing – when a workload is moved, proximity routing can change the network path (that is, gateway) so that network traffic uses the target site gateway and does not “hairpin” back to the originating site.
+* Data deduplication – as much as 50% reduction in network traffic can be achieved
+* Intelligent routing – when a workload is moved, proximity routing can change the network path (that is, gateway) so that network traffic uses the target site gateway and does not “hairpin” back to the originating site.
 * Zero downtime migration – a running system can be moved to and back from the cloud by using vMotion.
 * Scheduled migration – any number of virtual machines can be replicated to the destination site and then activated on that site at a designated time, which replaces the systems that are running on the originating site.
 * Migration of security policies – if NSX is used on-premises, any security policies or firewalls are

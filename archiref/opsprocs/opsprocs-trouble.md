@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-07"
+lastupdated: "2019-07-01"
 
 ---
 
@@ -129,7 +129,7 @@ Table 4. Typical network troubleshooting
 | Title | Description |
 |---|---|
 |  NSX Edge /var/log is getting full on active Edge | For information about a workaround if you are alerted that the Edge disk is filling up and discover that the /var/log partition is getting full, see [NSX Edge /var/log is getting full on active Edge (50108355)](https://kb.vmware.com/s/article/50108355){:new_window}.  |
-| Testing HCX bandwidth  | For information about using `perftest` to find the available bandwidth within the HCX tunnels if you believe that you have a network bandwidth issue with HCX, see [Steps to Run Perftest in HCX (56211)](https://kb.vmware.com/s/article/56211?lang=en_US){:new_window}. Bidirectional tests are carried out for each `perftest`. For the pair of gateways, one is inside the source data center, which we call OnPrem and the other one is in {{site.data.keyword.cloud_notm}}. The way `perftest` throughput works is to have the sender try to send as fast as the link can sustain. Therefore, for each test, you see higher "sender" rate than "receiver" rate. You can consider the "receiver" rate value as one-way throughput result. |
+| Testing HCX bandwidth  | For information about using `perftest` to find the available bandwidth within the HCX tunnels if you believe that you have a network bandwidth issue with HCX, see [Steps to Run Perftest in HCX (56211)](https://kb.vmware.com/s/article/56211?lang=en_US){:new_window}. Bidirectional tests are carried out for each `perftest`. For the pair of gateways, one is inside the source data center, which we call OnPrem and the other one is in {{site.data.keyword.cloud_notm}}. The way `perftest` throughput works is to have the sender try to send as fast as the link can sustain. Therefore, for each test, you see a higher "sender" rate than the "receiver" rate. You can consider the "receiver" rate value as a one-way throughput result. |
 | HCX troubleshooting | For more information, see [HCX troubleshooting](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-troubleshooting). |
 | HCX Syncing state with 0% progress and 0 bytes with status Error | For more information, see [HCX replication are in Syncing state with 0% progress and 0 bytes with status Error (56710)](https://kb.vmware.com/s/article/56710?lang=en_US#q=HCX){:new_window}. |
 | Poor VM network performance | Review the VM virtual NIC settings. VMware recommends VMXNET 3 virtual NICs for VMs as it is the latest generation of paravirtualized NICs designed for performance. Check for compatibility of VMXNET 3 using the VMware compatibility list, and if supported change the virtual NIC for additional network performance. For more information, see [Troubleshooting Networking](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.networking.doc/GUID-217384C2-B361-471D-90C8-BC2676A0ECA6.html){:new_window}. |

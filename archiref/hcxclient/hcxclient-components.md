@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-01"
 
 subcollection: vmware-solutions
 
@@ -38,7 +38,7 @@ HCX Service Mesh components are responsible for creating the data and control pl
 
 - Interconnect Appliance (HCX-IX) - The interconnect appliance creates encrypted tunnels that support vMotion and replication (bulk migration) traffic.
 - WAN Optimizer Appliance (HCX-WAN) - HCX includes an optionally deployed Silver Peak™ WAN optimization appliance. It is deployed as a VM appliance. When deployed, the CGW tunnel traffic is redirected to traverse the WAN Optimizer. Since the WAN optimizer significantly decreases traffic across the WAN (typically 3:1 to 6:1 observed) while increasing connection reliability, it is recommended to always deploy the WAN optimizer with the CGW. The added benefit of deploying the WAN optimizer is extended to limiting the WAN bandwidth consumed by VM migration traffic. The WAN optimizer management interface is not configured by default.
-- Network Extension (HCX-NE) - Provides the Layer 2 network extension capabilities, enabling migrations between the on-premises location and the vSphere environment with the need to re-IP the virtual machines.
+- Network Extension (HCX-NE) - Provides the Layer 2 network extension capabilities, enabling migrations between the on-premises location and the vSphere environment with the need to reassign IP addresses to the VMs.
 - Proxy ESXi host - Whenever the HCX-IX is configured to connect to the cloud side HCX site, a proxy ESXi host appears in the vCenter outside of any cluster. This ESXi host has the same management and vMotion IP address as the corresponding HCX-IX appliance. This allows for the vSphere environment at both the client and cloud side to function as if it is performing a local vMotion. Benefits to this method:
   - The management IP ranges on either side might be overlapping with no loss in functionality.
   - The cloud side has no vSphere visibility into the client side making it more secure.

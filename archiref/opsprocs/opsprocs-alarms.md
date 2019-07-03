@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-25"
+lastupdated: "2019-07-02"
 
 ---
 
@@ -205,7 +205,7 @@ Table 1. Preconfigured alarms
 | VMKernel NIC not configured correctly * | Configure to send email once when the following critical event occurs: Invalid `vmknic` specified in `/Migrate/VMknic`. | [Troubleshooting Networking](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.networking.doc/GUID-217384C2-B361-471D-90C8-BC2676A0ECA6.html){:new_window} |
 | Cannot connect to storage * | Configure to send email once when the following critical events occur: Lost Storage Connectivity, Lost Storage Path Redundancy, Degraded Storage Path Redundancy or Lost connection to NFS server.| [Identifying Fibre Channel, iSCSI, and NFS storage issues on ESX/ESXi hosts (1003659)g](https://kb.vmware.com/s/article/1003659){:new_window} |
 | Migration error * | Configure to send email once when the following critical events occur: Cannot migrate VM, Migration error, Migration host error, Cannot relocate VM or VM orphaned. | [vMotion or Storage vMotion of a VM fails with the error: The migration has exceeded the maximum switchover time of 100 seconds (2141355)](https://kb.vmware.com/s/article/2141355){:new_window} |
-| Exit standby error | Not configured in vCenter Server instances as the use of DPM is not recommended. | vSphere Distributed Power Management (DPM) provides power savings in on-premises deployments by dynamically consolidating workloads during periods of low resource utilization as VMs are migrated onto fewer hosts and the unneeded ESX hosts are powered off. No power consumption savings can be realized by powering of IBM Cloud Bare Metal Servers. |
+| Exit standby error | Not configured in vCenter Server instances as the use of DPM is not recommended. | vSphere Distributed Power Management (DPM) provides power savings in on-premises deployments by dynamically consolidating workloads during periods of low resource utilization as VMs are migrated onto fewer hosts and the needed ESX hosts that are not needed are powered off. No power consumption savings can be realized by powering off IBM Cloud Bare Metal Servers. |
 
 \* Denotes a stateless alarm. vCenter does not keep data on stateless alarms, does not compute, or display their status. Stateless alarms cannot be acknowledged or reset.
 {:note}

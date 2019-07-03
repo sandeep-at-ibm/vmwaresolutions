@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-30"
+lastupdated: "2019-07-01"
 
 ---
 
@@ -32,8 +32,9 @@ Most IT organizations have multiple runbooks that act as their reference manuals
 1. The first stage is to decide which procedures need to be documented, and when listed, document each one with sufficient detail.
 2. The second stage is ongoing and consists of maintaining, updating, and correcting these procedures, adding new procedures and retiring procedures that are no longer needed.
 
-{{site.data.keyword.vmwaresolutions_full}} enables you to use you team's existing skills, toolsets, and runbooks you have on-premises to manage your instances in {{site.data.keyword.cloud_notm}}. As a recommendation, the following general documentation captures common procedures, guides, and tasks:
+{{site.data.keyword.vmwaresolutions_full}} enables you to use you team's existing skills, toolsets, and runbooks you have on-premises to manage your instances in {{site.data.keyword.cloud_notm}}.
 
+The following list contains the most common procedures, guides, and tasks:
 * Configuration tasks - These tasks are common activities that systems administrators need to perform to tailor the environment to suit the enterprise's needs and respond to service requests such as: add new VMs and increase capacity. These tasks are grouped into the following structure:
  * Generic guidance
  * VM procedures

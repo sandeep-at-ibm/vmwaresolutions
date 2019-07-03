@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-21"
+lastupdated: "2019-07-02"
 
 subcollection: vmware-solutions
 
@@ -91,7 +91,7 @@ In addition to the public and private networks, each {{site.data.keyword.cloud_n
 
 {{site.data.keyword.cloud_notm}} allocates two types of IP addresses to be used within the {{site.data.keyword.cloud_notm}} infrastructure:
 * Primary IP addresses are assigned to devices, Bare Metal, and virtual servers that are provisioned by {{site.data.keyword.cloud_notm}}. Do not assign any IP addresses in these blocks.
-* Portable IP addresses are provided for you to assign and manage as needed. vCenter Server provisions several portable IP ranges for its use. Use only the portable ranges that are assigned to specific NSX-T or NSX-V components specified for customer use. For example, **Customer EDGE**.
+* Portable IP addresses are provided for you to assign and manage as needed. vCenter Server provisions several portable IP ranges for its use. Use only the portable IP address ranges that are assigned to specific NSX-T or NSX-V components and specified for customer use. For example, **Customer EDGE**.
 
 Primary or portable IP addresses can be made routable to any VLAN within your account when the account is configured as a **Virtual Routing and Forwarding (VRF)** account.
 

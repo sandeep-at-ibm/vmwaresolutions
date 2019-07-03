@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-21"
+lastupdated: "2019-07-01"
 
 keywords: IBM Cloud Expert Services, request IBM Cloud Expert, tech specs Cloud Expert
 
@@ -27,9 +27,9 @@ You can choose from a selection of offerings incorporating this methodology to d
 
 Predefined Expert Services include OnDemand Consulting, Jumpstart for {{site.data.keyword.cloud_notm}} vCenter Server, Jumpstart for VMware Hybridity Bundle, and an Architectural Consultancy workshop.
 
-Expert Services OnDemand Consulting (ODC) is for clients with technical staff who is interested in timely, flexible, private, technical assistance to their questions, and mentoring outside of an active engagement with IBM. ODC provides customers with leadership when they need it through a single point of contact, advising them on solutions and acting in the interest of essential business success.
+Expert Services OnDemand Consulting (ODC) is for customers with technical staff who is interested in timely, flexible, and private  technical assistance to their questions, and mentoring outside of an active engagement with IBM. ODC provides customers with leadership when they need it through a single point of contact, advising them on solutions and acting in the interest of essential business success.
 
-The Hybridity Bundle Jumpstart simplifies moving VMware workloads from on-premises or other cloud providers to the IBM Cloud. Expert Services leads you through an initial assessment, overview of the IBM Cloud for VMware Solutions with HCX, and design and planning. This engagement includes side-by-side guidance of the infrastructure ordering, configuration, and migration of your first 20 VMs.
+The Hybridity Bundle Jumpstart simplifies moving VMware workloads from on-premises or other cloud providers to the IBM Cloud. The Expert Services team leads you through an initial assessment, overview of the IBM Cloud for VMware Solutions with HCX, and design and planning. This engagement includes side-by-side guidance about ordering of the infrastructure, its configuration, and migration of your first 20 VMs.
 
 This offering speeds adoption of VMware on IBM Cloud by taking the client through an assessment of their virtualization needs, an overview of the IBM Cloud for VMware Solutions, followed by design and planning of their VMWare solution. IBM then provides side-by-side guidance of the infrastructure ordering and initial configuration. Optionally, it can be followed by OnDemand Consulting to provide on-going assistance to the client.
 

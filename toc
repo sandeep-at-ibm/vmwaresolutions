@@ -221,11 +221,11 @@ IBM Cloud for VMware Solutions
         services/managing_imi.md
         services/managing_veeam_services.md
         services/managing_zerto_services.md
-    {: .navgroup-end}
 
     {: .topicgroup}
     IBM Cloud Expert Services
         services/managing_ices.md
+    {: .navgroup-end}
 
     {: .navgroup id="help"}
     vmonic/trbl_support.md
@@ -436,5 +436,4 @@ IBM Cloud for VMware Solutions
         archiref/hcxclient/hcxclient-troubleshooting.md
         archiref/hcxclient/hcxclient-removal.md
         archiref/hcxclient/hcxclient-components.md
-
     {: .navgroup-end}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-01"
 
 keywords: single-node trial, data protection DR, tech specs data protection DR
 
@@ -33,7 +33,7 @@ The Single-node Trial for Data Protection and Disaster Recovery is for proof of 
 
 After your Single-node Trial instance is deployed, you can use [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:external} from [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:external} for assistance with your instance. Additionally, [{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/){:external} can help you accelerate application modernization through the latest cloud native practices.
 
-This trial is intended for use up to 90 days. Monthly recurring charges are billed based on your billing schedule, not when the instance is ordered. If the instance is not cancelled on or before the last day of your billing cycle, you are charged for the next month. Most likely a 90 day trial result in four months of charges, unless the cancellation is completed before the forth month begins.
+This trial is intended for use up to 90 days. Monthly recurring charges are billed based on your billing schedule, and not when the instance is ordered. If the instance is not cancelled on or before the last day of your billing cycle, you are charged for the next month. A 90-day trial might result in four months of charges, unless the cancellation is completed before the forth month begins.
 {:note}
 
 When you are finished with the trial, you can delete this environment and provision a new environment that meets your capacity needs.
@@ -142,7 +142,7 @@ Additional HCX appliances are deployed during configuration as necessary for L2 
 
 The Single-node Trial for Data Protection and  Disaster Recovery includes Veeam on {{site.data.keyword.cloud_notm}}. The following components are ordered and included in the Veeam on {{site.data.keyword.cloud_notm}} service.
 
-* 25 pack license of the Veeam Availability Suite
+* 25-package license of the Veeam Availability Suite
 * 4000 GB storage
 * 0.25 IOPS/GB storage performance
 * Windows Server 2016 Standard Edition (64-bit)

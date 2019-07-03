@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-06"
+lastupdated: "2019-07-01"
 
 ---
 
@@ -27,7 +27,7 @@ In this design, each location has an independent vRLI cluster that is deployed o
 * Master Node - Required initial node in the Cluster. The Master Node is responsible for queries and log ingestion. The Master Node web UI is the single pane of glass for that vRealize Log Insight Cluster. All queries against data are directed against the master, which in turn distributes the workload to the Workers.
 * Worker Node - three nodes minimum are required to form a cluster with the ability to add more Workers for scale-out. A Worker Node ingests logs and stores logs locally.
 * Integrated Load Balancer - This provides high availability by using proprietary load-balancing configuration (no external load balancer required).
-* Log Insight Forwarder – This is deployed to receive logs from the NSX overlay components. Additionally, it can be leveraged by a client if they want to send logs from compute VMs. The Log Insight Forwarder is a single vRealize Log Insight Master Node that is used as a remote syslog aggregator to forward alerts to the vRLI cluster. As the VXLAN-backed addresses are out of BYOIP address space, NAT rules must be implemented on the NSX ESG.
+* Log Insight Forwarder – This is deployed to receive logs from the NSX overlay components. Additionally, it can be leveraged by a client if they want to send logs from compute VMs. The Log Insight Forwarder is a single vRealize Log Insight Master Node that is used as a remote syslog aggregator to forward alerts to the vRLI cluster. As the VXLAN-backed addresses are outside of the BYOIP address space, NAT rules must be implemented on the NSX ESG.
 
 The following sizes are available and the appropriate one is selected:
 * Small – 2,000 events per second

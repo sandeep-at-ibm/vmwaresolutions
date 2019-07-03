@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-04"
+lastupdated: "2019-07-02"
 
 ---
 
@@ -67,7 +67,7 @@ Table 1. Proactive tasks
 | vSphere vSAN patching  | For information about checking for the availability of vSphere vSAN patches and the patch process, see [Updating vSAN clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-updating-vsan#vum-updating-vsan). |
 | vCenter patching | For more information about checking for the availability of VCSA patches and applying the update, see [VCSA update and SSO-linked vCenters](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-updating-vcsa#vum-updating-vcsa). |
 | Updating NSX | For more information about checking for the availability of NSX patches and applying the upgrades, see [NSX patching](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-updating-nsx#vum-updating-nsx). |
-| Check for VMs without VM Tools | It is good practice to install VM Tools as this allows greater interaction with the OS, that is, graceful power down of the VM. You can use vCenter to check which VMs do not have VM Tools installed by navigating to the cluster, selecting Related Objects, VMs, and then in the table enabling columns for VM Tools running and VM Tools version. Review the list and install VM Tools if needed. |
+| Check for VMs without VM Tools | It is good practice to install VM Tools as this allows greater interaction with the OS, that is, graceful power down of the VM. You can use vCenter to check which VMs do not have VM Tools installed. Go to the cluster, select **Related Objects**, **VMs**, and in the table enable the columns for **VM Tools running** and **VM Tools version**. Review the list and install VM Tools if needed. |
 | VMs with snapshots | For information about best practices when working with snapshots, see [Best practices for using snapshots in the vSphere environment (1025279)](https://kb.vmware.com/s/article/1025279){:new_window}. It is important to identify the existence of VMs with snapshots as using a single snapshot for more than 72 hours creates a snapshot file that continues to grow in size and can cause the snapshot storage location to run out of space and impact the system performance. To review VMs with snapshots, connect to vCenter by using the Web Client, select the vCenter Server and go to Related Objects tab. Right-click on the column titles and go to Show/Hide Columns list. From the list of columns chose Needs Consolidation option. This column shows a summary of all the VMs that are currently running. |
 | AD/DNS OS patching | The Microsoft Active Directory (AD) / Domain Name Server (DNS) is automatically set up to download the updates only. For more information, see [More limitations and considerations](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_limitations#trbl_limitations) for further updating advice. |
 | Check storage latency  |  Check storage latency to understand any changes for the vSphere ESXi hosts to access the datastores. Too high a latency causes applications that are hosted in the VMs to slow down. In vCenter, go to each of the datastores and, on the Performance tab, review the average write latency per VM. |
