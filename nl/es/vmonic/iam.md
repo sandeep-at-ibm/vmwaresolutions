@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-06-11"
+
+keywords: IAM user, user role, user permission
 
 subcollection: vmware-solutions
 
@@ -40,10 +42,10 @@ Tabla 1. Roles de gestión de plataforma y acciones permitidas
 
 | Rol de gestión de plataforma | Acciones | Accione de ejemplo |
 |:----------------- |:----------------- |:----------------- |
-| Visor | Acciones de solo lectura | <ul><li>Ver el resumen de instancias</li><li>Ver los detalles de una instancia</li></ul>|
-| Editor | Actualizar una instancia específica |<ul><li>Añadir o eliminar servidores ESXi</li><li>Añadir o eliminar clústeres</li><li>Añadir o eliminar servicios</li><li>Actualizar una instancia a una versión superior</li></ul> |
-| Operador | Acciones de solo lectura | <ul><li>Listar instancias</li><li>Ver los detalles de una instancia</li></ul> |
-| Administrador | Acceso de gestión completa |<ul><li>Crear nuevas instancias</li><li>Suprimir instancias</li><li>Otorgar acceso de plataforma a otros usuarios</li></ul>|
+| Visor | Acciones de solo lectura | Ver el resumen de instancias<br>Ver los detalles de una instancia |
+| Editor | Actualizar una instancia específica | Añadir o eliminar servidores ESXi<br>Añadir o eliminar clústeres<br>Añadir o eliminar servicios<br>Actualizar una instancia a una versión superior |
+| Operador | Acciones de solo lectura | Listar instancias<br>Ver los detalles de una instancia |
+| Administrador | Acceso de gestión completa | Crear nuevas instancias<br>Suprimir instancias<br>Otorgar acceso de plataforma a otros usuarios|
 
 Para {{site.data.keyword.vmwaresolutions_short}}, existen las acciones siguientes:
 
@@ -53,8 +55,8 @@ Tabla 2. Descripciones de acciones y roles necesarios
 |:------ |:-------------------- |:---- |
 | vmware-solutions.instances.create | Crear nuevas instancias | Administrador |
 | vmware-solutions.instances.delete | Suprimir instancias | Administrador |
-| vmware-solutions.instances.view | <ul><li>Listar instancias</li><li>Ver el detalle de una instancia</li></ul> | Visor, Operador, Editor y Administrador |
-| vmware-solutions.instances.update | <ul><li>Añadir o eliminar servidores ESXi</li><li>Añadir o eliminar clústeres</li><li>Añadir o eliminar servicios</li><li>Actualizar una instancia a una versión superior</li></ul> | Editor y Administrador |
+| vmware-solutions.instances.view | Listar instancias<br>Ver el detalle de una instancia | Visor, Operador, Editor y Administrador |
+| vmware-solutions.instances.update | Añadir o eliminar servidores ESXi<br>Añadir o eliminar clústeres<br>Añadir o eliminar servicios<br>Actualizar una instancia a una versión superior | Editor y Administrador |
 | vmware-solutions.account.update | Actualizar valores de cuenta | Administrador |
 
 ## Gestión del acceso para usuarios

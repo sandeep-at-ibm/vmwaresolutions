@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-17"
 
 subcollection: vmware-solutions
 
@@ -34,7 +34,7 @@ La configuration de vSphere ESXi comprend les aspects suivants :
 
 Le tableau suivant présente les spécifications de chaque aspect. Après la configuration et l'installation d'ESXi, l'hôte est ajouté à une instance VMware vCenter Server et est géré à partir de là.
 
-Cette conception vous permet d'accéder aux hôtes virtuels via l'interface DCUI (Direct Console User Interface) et vSphere Web Client. Après la mise à disposition, Secure Shell (SSH) et ESXi Shell sont désactivées conformément aux pratiques recommandées.
+Cette conception vous permet d'accéder aux hôtes virtuels via l'interface DCUI (Direct Console User Interface) et vSphere Web Client. Après la mise à disposition, Secure Shell (SSH) et ESXi Shell sont désactivés conformément aux pratiques recommandées.
 
 Par défaut, les seuls utilisateurs qui peuvent se connecter directement sont les utilisateurs _root_ et _ibmvmadmin_ pour la machine physique de l'hôte. L'administrateur peut ajouter des utilisateurs à partir du domaine MSAD (Microsoft Active Directory) pour activer l'accès utilisateur à l'hôte. Tous les hôtes de la conception de solution vCenter Server sont configurés pour être synchronisés avec un serveur NTP central.
 
@@ -124,36 +124,6 @@ De plus, cette architecture requiert que tous les hôtes disposent d'une route d
 
 Les machines virtuelles de gestion peuvent se trouver sur un magasin de données NFS. Cela crée un problème d'amorçage car certaines des machines de gestion peuvent être responsables des services DNS qui sont utilisés pour résoudre le nom d'hôte NFS. Par conséquent, cette architecture spécifie qu'au moins l'une des adresses IP pour le magasin de données de gestion doit être codée en dur dans `/etc/hosts` sur chacun des hôtes.
 
-## Stockage iSCSI connecté
-{: #design_virtualinfrastructure-iscsi-storage}
-
-Contrairement à un stockage connecté NFS v3, un stockage connecté iSCSI prend en charge les configurations d'accès active–active sur tous les ports de carte NIC et les ports cible configurés. De ce fait, il est possible d'obtenir un débit plus élevé, ce qui constitue une alternative souhaitable au stockage connecté NFS. Cela se fait au prix d'une plus grande complexité.
-
-Le stockage par blocs d'{{site.data.keyword.cloud_notm}} Endurance prend en charge un maximum de 64 adresses IP par numéro d'unité logique lors de l'utilisation de VMware, ce qui autorise jusqu'à 32 hôtes dans ce modèle.
-
-Un numéro d'unité logique iSCSI de 2 To est connecté au cluster vSphere pour l'utilisation des composants de gestion, et un minimum d'un numéro d'unité logique iSCSI supplémentaire est configuré pour l'utilisation des charges de travail du client. Ce stockage est formaté comme un système de fichiers VMFS 6.x pour chaque numéro d'unité logique.
-
-Cette architecture spécifie l'utilisation de la liaison de ports iSCSI, d'une politique circulaire pour le multi-accès, d'un nombre maximal de lignes de la file d'attente fixé à 64 et d'une limite IOPS circulaire égale à 1.
-
-### Configuration de réseau virtuel pour iSCSI
-{: #design_virtualinfrastructure-setup-iscsi}
-
-Pour cette conception, le trafic iSCSI peut utiliser les deux ports de carte NIC privés connectés dans une configuration active-active. Etant donné que vSphere n'autorise qu'un seul port de carte NIC actif à la fois sur un groupe de ports particulier dans vDS, vous devez créer deux groupes de ports (A et B) sur le réseau local virtuel de stockage.
-
-Un port de noyau ESXi est créé avec une unique adresse IP sur des sous-réseaux individuels afin d'autoriser l'évolutivité. Chaque port de noyau est affecté à son propre groupe de ports iSCSI. Les deux ports de noyau sont affectés à un adaptateur de bus hôte de bus hôte (HBA) ISCSI virtuel ESXi. Pour chaque port de noyau, le commutateur de substitution de la passerelle par défaut est employé de manière à utiliser la passerelle par défaut pour le sous-réseau local pour ce port de noyau. Voir le tableau suivant.
-
-Table 2. Groupes de ports iSCSi
-
-Groupes de ports vDS | Sous-réseau du port de noyau | VMHBA
---|:---|:--
-**SDDC-Dprotgroup-iSCSI-A** |Sous-réseau A |  vmhba64
-**SDDC-Dprotgroup-iSCSI-B** | Sous-réseau B | vmhba64
-
-#### Contrôle des E-S de stockage - SIOC
-{: #design_virtualinfrastructure-sioc}
-
-Des numéros d'unité logique iSCSI sont mis à disposition et formatés en un unique système de fichiers VMFS par numéro d'unité logique. Le paramètre par défaut recommandé de contrôle des E-S de stockage est de 90% du débit en période de pic.
-
 ## Conception de VMware NSX-V
 {: #design_virtualinfrastructure-nsx-design}
 
@@ -204,7 +174,7 @@ Table 4. Mappage VLAN aux types de trafic
 | VLAN  | Désignation | Type de trafic |
 |:----- |:----------- |:------------ |
 | Réseau local virtuel 1 | Privé A   | Gestion ESXi, gestion, VXLAN (VTEP) |
-| Réseau local virtuel 2 | Privé B   | vSAN, NFS, vMotion, iSCSI |
+| Réseau local virtuel 2 | Privé B   | vSAN, NFS et vMotion|
 | Réseau local virtuel 3 | Public      | Disponible pour l'accès Internet |
 
 Le trafic issu des charges de travail transite sur des commutateurs logiques VXLAN.
@@ -231,7 +201,7 @@ Table 6. Paramètres de configuration de groupe de ports de commutation distribu
 | Reprise par restauration           | Non |
 | Commande de basculement     | Liaisons montantes actives : Uplink1, Uplink2 \* |
 
-\* Le groupe de ports vSAN utilise le basculement explicite actif ou en veille car il ne prend pas en charge l'équilibrage de charge du trafic de stockage vSAN. Les groupes de ports iSCSI ne disposent que d'une seule liaison montante active à la fois (iSCSI A - Liaison montante 1, iSCSI B - Liaison montante 2).
+\* Le groupe de ports vSAN utilise le basculement explicite actif ou en veille car il ne prend pas en charge l'équilibrage de charge du trafic de stockage vSAN.
 {:note}
 
 Table 7. Groupes de ports de commutation virtuelle et réseaux locaux virtuels, commutateur distribué **SDDC-Dswitch-Private**
@@ -242,10 +212,8 @@ SDDC-DPortGroup-Mgmt|Port virtuel d'origine|Actives : 0, 1|Réseau local virtuel
 SDDC-DPortGroup-vMotion|Port virtuel d'origine|Actives : 0, 1|Réseau local virtuel 2
 SDDC-DPortGroup-VSAN|Basculement explicite|Active : 0, En veille : 1|Réseau local virtuel 2
 SDDC-DPortGroup-NFS|Port virtuel d'origine|Actives : 0, 1|Réseau local virtuel 2
-Généré par NSX|Port virtuel d'origine|Active : 0,1|Réseau local virtuel 1
+Généré par NSX|Port virtuel d'origine|Actives : 0, 1|Réseau local virtuel 1
 SDDC-DPortGroup-External|Port virtuel d'origine|Actives : 0, 1|Réseau local virtuel 3
-SDDC-DPortGroup-iSCSI-A|Port virtuel d'origine|Actives : 0|Réseau local virtuel 2
-SDDC-DPortGroup-iSCSI-B|Port virtuel d'origine|Actives : 0|Réseau local virtuel 2
 
 Table 8. Adaptateurs VMkernel de cluster convergé, commutateur distribué **SDDC-Dswitch-Private**
 
@@ -256,8 +224,6 @@ vMotion|SDDC-DPortGroup-vMotion|Trafic vMotion|9000
 VTEP|Généré par NSX|-|9000
 vSAN|SDDC-DPortGroup-VSAN|vSAN|9000
 NAS|SDDC-DPortGroup-NFS|NAS|9000
-iSCSI|SDDC-DPortGroup-iSCSI-A|iSCSI|9000
-iSCSI|SDDC-DPortGroup-iSCSI-B|iSCSI|9000
 
 ### Configuration de NSX
 {: #design_virtualinfrastructure-nsx-config}

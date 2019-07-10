@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-06-18"
+
+keywords: NetApp order instance, order NetApp ONTAP, order NetApp
 
 subcollection: vmware-solutions
 
@@ -64,7 +66,6 @@ Le libellé du sous-domaine qui doit respecter les règles suivantes :
 *  Seuls les caractères alphanumériques et le tiret (-) sont autorisés.
 *  Le libellé de sous-domaine doit commencer par un caractère alphabétique et se terminer par un caractère alphanumérique.
 *  Le libellé de sous-domaine ne doit pas dépasser 10 caractères.
-*  Le libellé de sous-domaine doit être unique au sein de votre compte.
 
 ### Nom de domaine
 {: #np_orderinginstances-domain-name}
@@ -108,6 +109,13 @@ Les unités SSD de 3,8 To sont prises en charge une fois qu'elles sont officiell
 
 Le nombre de serveurs ESXi d'une instance NetApp ONTAP Select est de 4 par défaut. Vous ne pouvez pas modifier cette valeur. Tous les serveurs ESXi partagent la même configuration.
 
+## Récapitulatif de la commande
+{: #np_orderinginstances-order-summary}
+
+Selon la configuration que vous avez sélectionnée, le coût estimé est généré et affiché instantanément dans la section **Récapitulatif de la commande** sur le panneau de droite. Cliquez sur **Détails concernant la tarification** pour générer un document PDF contenant le récapitulatif des coûts pour les ressources {{site.data.keyword.vmwaresolutions_short}}. 
+
+Vous pouvez également ajouter les ressources mises à disposition à l’outil d’estimation {{site.data.keyword.cloud_notm}} en cliquant sur **Ajouter à l'estimation**. Cela est utile si vous souhaitez estimer le coût des ressources {{site.data.keyword.vmwaresolutions_short}} sélectionnées avec d'autres ressources {{site.data.keyword.cloud_notm}} que vous pourriez envisager d'acheter.
+
 ## Procédure à utiliser pour commander des instances NetApp ONTAP Select
 {: #ordering-netapp-ontap-select-instances}
 
@@ -126,14 +134,12 @@ Le nombre de serveurs ESXi d'une instance NetApp ONTAP Select est de 4 par défa
     4. Cliquez sur le ou les liens des conditions applicables à votre commande. Prenez soin d'accepter ces conditions, puis cochez la case **J'ai lu et j'accepte les accords de services tiers ci-dessous**.
     5. Cliquez sur **Mettre à disposition**.
 
-## Résultats
+## Que se passe-t-il après la commande d'instances NetApp ONTAP ?
 {: #np_orderinginstances-results}
 
-Le déploiement de l'instance commence automatiquement. Vous recevez une confirmation que la commande est en cours de traitement et vous pouvez vérifier l'état du déploiement en affichant les détails de l'instance.
-
-Une fois l'instance correctement déployée, les composants décrits dans [Spécifications techniques relatives aux instances NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#specs) sont installés sur votre plateforme virtuelle VMware.
-
-Lorsque l'instance est prête pour utilisation, l'instance prend le statut **Prêt à l'emploi** et vous recevez une notification par courrier électronique.
+* Le déploiement de l'instance démarre automatiquement et vous recevez la confirmation que la commande est en cours de traitement. Vous pouvez vérifier l'état du déploiement, y compris tout problème pouvant nécessiter votre attention, en consultant la section **Historique de déploiement** des détails de l'instance. 
+* Une fois l'instance correctement déployée, les composants décrits dans [Spécifications techniques relatives aux instances NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#specs) sont installés sur votre plateforme virtuelle VMware.
+* Lorsque l'instance est prête pour utilisation, l'instance prend le statut **Prêt à l'emploi** et vous recevez une notification par courrier électronique.
 
 ## Etape suivante
 {: #np_orderinginstances-next}

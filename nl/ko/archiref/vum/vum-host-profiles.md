@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-15"
 
 subcollection: vmware-solutions
 
@@ -16,7 +16,7 @@ subcollection: vmware-solutions
 
 vCenter에는 호스트 프로파일이라는 기능이 있습니다. 이 기능은 사전 구성되고 유효성 검증된 참조 호스트 구성을 캡처하고 시스템 관리자가 클러스터의 호스트 구성을 관리하는 데 도움이 되는 프로파일을 작성합니다. 호스트 프로파일은 호스트 구성 및 구성 준수를 위해 자동화된 중앙 관리 메커니즘을 제공합니다. 호스트 프로파일을 사용하면 구성을 관리 오브젝트로 처리할 수 있습니다. 관리 오브젝트에는 네트워킹, 스토리지, 보안 및 기타 호스트 레벨 매개변수 등 구성할 매개변수의 카탈로그가 있습니다. 이러한 호스트 프로파일은 개별 호스트, 클러스터 또는 호스트 프로파일과 연관된 모든 호스트 및 클러스터에 적용될 수 있습니다.
 
-원래 클러스터를 배치한 IC4VS 자동화를 통해 더 많은 VMware vCenter Server on {{site.data.keyword.cloud}} vSphere ESXi 호스트가 배치되면 호스트를 추가하는 수동 방법을 사용하는 것보다 구성 변경이 덜 발생합니다. 그러나 자동화 이외의 시스템 관리자 조치로 인해 호스트 구성이 달라질 수 있습니다. 예를 들어, 더 많은 NFS 스토리지가 추가되거나 VLAN이 더 추가되었습니다. 기존 호스트에 대해 이 호스트의 준수를 확인하여 새 호스트 구성의 유효성을 검증하기 위해 호스트 프로파일을 사용하는 것은 {{site.data.keyword.cloud_notm}} 내에서 이 도구의 유효한 유스 케이스입니다.
+원래 클러스터를 배치한 IBM Cloud for VMware Solutions 자동화를 통해 더 많은 VMware vCenter Server on {{site.data.keyword.cloud}} vSphere ESXi 호스트가 배치되면 호스트를 추가하는 수동 방법을 사용하는 것보다 구성 변경이 덜 발생합니다. 그러나 자동화 이외의 시스템 관리자 조치로 인해 호스트 구성이 달라질 수 있습니다. 예를 들어, 더 많은 NFS 스토리지가 추가되거나 VLAN이 더 추가되었습니다. 기존 호스트에 대해 이 호스트의 준수를 확인하여 새 호스트 구성의 유효성을 검증하기 위해 호스트 프로파일을 사용하는 것은 {{site.data.keyword.cloud_notm}} 내에서 이 도구의 유효한 유스 케이스입니다.
 
 vCenter Server 클러스터에 호스트를 더 추가하려면 [vCenter Server 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)를 참조하십시오.
 

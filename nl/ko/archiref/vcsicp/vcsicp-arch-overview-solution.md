@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-09"
+lastupdated: "2019-06-12"
 
 subcollection: vmware-solutions
 
@@ -53,7 +53,7 @@ NSX Edge Services Gateway(ESG) 쌍이 배치됩니다. 모든 경우에, 하나�
 |:--------- |:------------- |
 |Edge Service Gateway | 가상 어플라이언스 |
 |Edge 크기 대형 | vCPU 수 2 |
-| 메모리 | 1GB 디스크	| 로컬 데이터 저장소의 1000GB |
+| 메모리 | 1GB 디스크<br> 로컬 데이터 저장소의 1000GB |
 
 표 2. {{site.data.keyword.icpfull_notm}} DLR 스펙
 
@@ -61,7 +61,7 @@ NSX Edge Services Gateway(ESG) 쌍이 배치됩니다. 모든 경우에, 하나�
 |:--------- |:------------- |
 |Distributed Logical Router | 가상 어플라이언스 |
 |Edge 크기 압축 | vCPU 수 1 |
-|메모리	| 512MB 디스크	| 로컬 데이터 저장소의 1000GB |
+|메모리	| 512MB 디스크<br> 로컬 데이터 저장소의 1000GB |
 
 ## IBM Cloud Private 컴포넌트
 {: #vcsicp-arch-overview-solution-icp-comp}
@@ -147,12 +147,12 @@ CAM API는 둘 이상의 컨테이너로 분할됩니다.
 ### Helm
 {: #vcsicp-arch-overview-solution-helm}
 
-Helm 차트를 Kubernetes 클러스터로 배치하기 위해 필수 2진이 포함된 컨테이너
+Helm 차트를 Kubernetes 클러스터로 배치하기 위해 필수 바이너리가 포함된 컨테이너
 
 ### Terraform
 {: #vcsicp-arch-overview-solution-terraform}
 
-둘 이상의 클라우드에서 Terraform 리소스를 배치하기 위해 필수 2진 파일이 포함된 컨테이너
+둘 이상의 클라우드에서 Terraform 리소스를 배치하기 위해 필수 바이너리 파일이 포함된 컨테이너
 
 ### 로그
 {: #vcsicp-arch-overview-solution-logs}

@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-05-31"
+
+keywords: planning vSphere, data center, vSphere data centers
 
 subcollection: vmware-solutions
 
@@ -26,7 +28,7 @@ El usuario es el responsable de configurar el entorno y de instalar y configurar
 ## Requisitos de la cuenta de IBM Cloud
 {: #vs_planning-account-req}
 
-La cuenta de {{site.data.keyword.cloud_notm}} que utilice debe cumplir ciertos requisitos. Para obtener más información, consulte [Requisitos para la cuenta de {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).
+La cuenta de {{site.data.keyword.cloud_notm}} que utilice debe cumplir ciertos requisitos. Para obtener más información, consulte [Requisitos para la cuenta de {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req). 
 
 ## Disponibilidad del centro de datos de IBM Cloud
 {: #vs_planning-dc-availability}

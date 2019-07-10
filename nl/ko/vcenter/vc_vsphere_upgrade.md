@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-05-27"
+
+keywords: vSphere upgrade, NSX upgrade, PSC upgrade
 
 subcollection: vmware-solutions
 
@@ -37,7 +39,7 @@ vCenter Server는 "롤링" 업그레이드를 허용하도록 설계되었습니
   * [VMware vCenter Server 6.7 Update 1b 릴리스 정보](https://docs.vmware.com/en/VMware-vSphere/6.7/rn/vsphere-vcenter-server-67u1b-release-notes.html){:new_window}
   * [VMware ESXi 업그레이드 정보](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.esxi.upgrade.doc/GUID-65B5B313-3DBB-4490-82D2-A225446F4C99.html){:new_window}
 * vCenter Server 인스턴스 내의 VUM(vSphere Update Manager)을 설정하여 VMware vSphere에서 최신 업데이트를 다운로드하십시오. 자세한 정보는 [VMware Update Manager 소개](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vum-intro#vum-intro)를 참조하십시오.
-*	업그레이드가 수행 중임을 알리려면 {{site.data.keyword.vmwaresolutions_short}} 팀을 통해 지원 티켓을 여십시오. 티켓은 인스턴스가 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 업그레이드된 레벨로 등록될 때까지 열려 있습니다.
+* 업그레이드가 수행 중임을 알리려면 {{site.data.keyword.vmwaresolutions_short}} 팀을 통해 지원 티켓을 여십시오. 티켓은 인스턴스가 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 업그레이드된 레벨로 등록될 때까지 열려 있습니다.
 * 업그레이드 중인 vCenter Server 인스턴스가 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 기본 또는 보조로서 다른 vCenter Server 인스턴스에 연결되는지 여부를 확인하십시오. 연결된 모든 인스턴스에서는 특정 사이트 업그레이드 일부로 먼저 PSC(Platform Services Controllers)를 업그레이드해야 합니다.
 * 다음 vSAN 기반 인스턴스를 확인하십시오.
   * vSAN 상태 도구가 사용 가능한지와 중요한 오류를 보고하지 않는지 확인하십시오. 중요한 오류가 발생한 경우 업그레이드 지원 티켓 ID를 사용하여 IBM 지원 센터에 문의하십시오.
@@ -72,14 +74,14 @@ VSI 점프 박스를 주문하려면 다음 단계를 완료하십시오.
 8. SSH 터미널 소프트웨어를 사용하여 포털 또는 지원 센터에서 제공하는 **root**의 비밀번호를 통해 PSC 및 vCenter에 액세스하십시오.
 9. 선택적으로 **root** 비밀번호를 확인하려면 SL 제어 패널에 표시된 **root** 사용자 ID 및 비밀번호를 사용하여 각 ESXi 호스트에 액세스하십시오.
 
-#### 바이너리 다운로드
+#### 바이너리 파일 다운로드
 {: #vc_vsphere_upgrade-prereq-jumpbox-binary}
 
-Windows VSI 점프 박스를 사용하고 https://my.vmware.com 계정에 로그인하여 다음 바이너리를 다운로드하십시오.
+Windows VSI 점프 박스를 사용하고 https://my.vmware.com 계정에 로그인하여 다음 바이너리 파일을 다운로드하십시오.
 
-*	VMware vSphere 6.7u1 Hypervisor(ESXi ISO) 이미지(VMware Tools 포함)
+* VMware vSphere 6.7u1 Hypervisor(ESXi ISO) 이미지(VMware Tools 포함)
 * vCenter 6.7u1b 어플라이언스 ISO. 업데이트 번들이 아닙니다.
-*	NSX for vSphere 6.4.4 업그레이드 번들
+* NSX for vSphere 6.4.4 업그레이드 번들
 
 Optane 드라이브의 경우 다음 파일을 다운로드하여 VMware Update Manager를 활용하는 사후 업그레이드 패치 프로세스의 일부로 사용하십시오.
 
@@ -91,7 +93,7 @@ https://my.vmware.com/group/vmware/details?downloadGroup=DT-ESX67-INTEL-INTEL-NV
 
 * vCenter Server 및 PSC 백업에 대한 정보는 [ vCenter Server 6.x(2149237)의 백업 및 복원 옵션 개요](https://kb.vmware.com/s/article/2149237?lang=en_US){:new_window}를 참조하십시오.
 * vCenter Server 및 PSC 백업에 대한 추가 고려사항 및 정보는 [vCenter 파일 기반 백업](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_backingup#solution_backingup-vcenter)을 참조하십시오.
-*	NSX 백업에 대한 정보는 [NSX Manager 데이터 백업](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window}을 참조하십시오.
+* NSX 백업에 대한 정보는 [NSX Manager 데이터 백업](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window}을 참조하십시오.
 
 파일 기반 백업을 사용하는 것이 좋습니다. VMware vSphere 6.7에서는 이미지 기반 백업(vSphere Data Protection 사용)이 지원되지 않습니다.
 {:note}
@@ -124,7 +126,7 @@ https://my.vmware.com/group/vmware/details?downloadGroup=DT-ESX67-INTEL-INTEL-NV
 
 1. 특정 환경 구성과의 호환성을 확인하려면 NSX 6.4.4에 대한 릴리스 정보를 읽으십시오. 자세한 정보는 [VMware NSX Data Center for vSphere 6.4.4 릴리스 정보](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/rn/releasenotes_nsx_vsphere_644.html){:new_window}를 참조하십시오.
 2. 먼저 NSX 관리자를 업그레이드하십시오. 교차 vCenter 연결 모드를 사용하는 다중 NSX 환경을 보유하고 있는 경우 NSX 사용자 인터페이스 **조정자 업그레이드**에서 컴포넌트를 업그레이드하기 전에 모든 NSX 관리자를 업그레이드하십시오.
-3.	NSX 컴포넌트를 업그레이드하려면 vCenter 사용자 인터페이스 내의 NSX 사용자 인터페이스에서 **조정자 업그레이드**를 사용하십시오.
+3. NSX 컴포넌트를 업그레이드하려면 vCenter 사용자 인터페이스 내의 NSX 사용자 인터페이스에서 **조정자 업그레이드**를 사용하십시오.
 4. 발생 가능한 문제가 해결되면 모든 컴포넌트가 업그레이드될 때까지 업그레이드가 진행되는지 확인하기 위해 vCenter 사용자 인터페이스 내의 NSX 업그레이드 사용자 인터페이스를 계속해서 검토하고 모니터하십시오.
 
 ### Platform Services Controller 업그레이드
@@ -136,13 +138,13 @@ vCenter Server가 인스턴스에 연결된 경우 vCenter Server 기본 및 보
 {: #vc_vsphere_upgrade-procedure-psc-before}
 
 * vCenter 및 PSC 루트 비밀번호를 다음 프로시저에서 사용하십시오. {{site.data.keyword.vmwaresolutions_short}} 콘솔을 사용하여 vCenter Server 인스턴스 버전이 V2.4 이전부터 V2.7 이후까지 업그레이드되는지 여부를 확인하십시오.
-* {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 PSC 및 vCenter의 루트 비밀번호로 하나의 비밀번호가 표시됩니다. 그러나 이 비밀번호는 vCenter 전용입니다. 루트 PSC 비밀번호는 지원 센터에 문의해야 합니다.
-* 충돌을 피하려면 vCenter 및 PSC가 현재 사용 중인 동일한 서브넷의 상단에 IP를 사용하십시오. 새 어플라이언스 배치를 위해 임시 IP를 사용해야 합니다.
+* {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 PSC 및 vCenter의 루트 비밀번호로 하나의 비밀번호가 표시됩니다. 그러나 이 비밀번호는 vCenter 전용입니다. 루트 PSC 비밀번호는 [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)해야 합니다.
+* 충돌을 피하려면 vCenter 및 PSC가 현재 사용 중인 동일한 서브넷의 상단에 IP 주소를 사용하십시오. 새 어플라이언스 배치를 위해 임시 IP 주소를 사용해야 합니다.
 
 #### Platform Services Controller를 업그레이드하는 프로시저
 {: #vc_vsphere_upgrade-procedure-psc-procedure}
 
-1. ``https://<psc-fqdn>:5480``에서 PSC 및 vCenter 어플라이언스 관리 사용자 인터페이스에 로그인하여 루트 비밀번호의 만료 여부를 확인하십시오. 비밀번호 만기 날짜의 연도가 **1970**인 경우 만료되었음에 따라 PSC 어플라이언스 관리 사용자 인터페이스에서 SSH 및 bash 쉘을 사용으로 설정해야 합니다.
+1. `https://<psc-fqdn>:5480`에서 PSC 및 vCenter 어플라이언스 관리 사용자 인터페이스에 로그인하여 루트 비밀번호의 만료 여부를 확인하십시오. 비밀번호 만기 날짜의 연도가 **1970**인 경우 만료되었음에 따라 PSC 어플라이언스 관리 사용자 인터페이스에서 SSH 및 bash 쉘을 사용으로 설정해야 합니다.
     1. 루트 ID 및 비밀번호를 사용하여 PSC에 SSH로 연결하십시오. 비밀번호가 만료된 경우에도 로그인할 수 있습니다.
     2. 쉘 **passwd** 명령을 사용하여 PSC 및 vCenter의 새 루트 비밀번호를 설정하십시오.
     3. {{site.data.keyword.vmwaresolutions_short}} 콘솔에 표시되거나 IBM 지원 센터에서 제공한 비밀번호를 저장하십시오. 어플라이언스를 업그레이드하면 나중에 이 비밀번호가 다시 사용됩니다.
@@ -163,7 +165,7 @@ vCenter Server가 인스턴스에 연결된 경우 vCenter Server 기본 보조 
 {: #vc_vsphere_upgrade-procedure-vcenter-before}
 
 * vCenter 및 PSC 루트 비밀번호를 다음 프로시저에서 사용하십시오. {{site.data.keyword.vmwaresolutions_short}} 콘솔을 사용하여 vCenter Server 인스턴스 버전이 V2.4 이전부터 V2.7 이후까지 업그레이드되는지 여부를 확인하십시오.
-* 충돌을 피하려면 vCenter 및 PSC가 현재 사용 중인 동일한 서브넷의 상단에 IP를 사용하십시오. 새 어플라이언스 배치를 위해 임시 IP를 사용해야 합니다.
+* 충돌을 피하려면 vCenter 및 PSC가 현재 사용 중인 동일한 서브넷의 상단에 IP 주소를 사용하십시오. 새 어플라이언스 배치를 위해 임시 IP 주소를 사용해야 합니다.
 
 #### vCenter를 업그레이드하는 프로시저
 {: #vc_vsphere_upgrade-procedure-vcenter-procedure}
@@ -247,7 +249,7 @@ vCenter 내의 VMware Update Manager 기능은 ESXi 호스트를 6.7u1 레벨로
 3. **VUM 관리자 보기**에서 **패치 저장소** 탭을 선택하고 **패치 가져오기**를 선택하십시오.
 4. ``VMW-ESX-6.7.0-intel-nvme-vmd-1.4.0.1016-8733247.zip`` 디렉토리의 추출된 컨텐츠를 찾아 ``VMW-ESX-6.7.0-intel-nvme-vmd-1.4.0.1016-offline_bundle-8733247.zip`` 파일을 선택하십시오. 파일을 VUM 저장소로 즉시 가져옵니다.
 
-패치 저장소에서**important** 호스트 확장으로  이미지를 찾으십시오.
+패치 저장소에서**important** 호스트 확장으로 이미지를 찾으십시오.
 
 #### ESXi 호스트 패치
 {: #vc_vsphere_upgrade-procedure-esxi-patch}

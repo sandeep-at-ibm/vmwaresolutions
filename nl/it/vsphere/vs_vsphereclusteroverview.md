@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-10"
+lastupdated: "2019-05-28"
+
+keywords: vSphere, vSphere component, tech specs vSphere
 
 subcollection: vmware-solutions
 

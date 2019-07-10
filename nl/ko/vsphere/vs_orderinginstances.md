@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-26"
+lastupdated: "2019-06-18"
+
+keywords: vSphere order cluster, order vSphere, order vSphere cluster
 
 subcollection: vmware-solutions
 
@@ -192,7 +194,6 @@ vSAN이 포함된 주문의 경우, 주문된 12개의 디스크 섀시와 4개�
 *  영숫자 문자 및 대시(-) 문자만 사용할 수 있습니다.
 *  하위 도메인 레이블은 영숫자 문자로 시작하고 끝나야 합니다.
 *  하위 도메인 레이블의 최대 길이는 10자입니다.
-*  하위 도메인 레이블은 계정 내에서 고유해야 합니다.
 
 ### 도메인 이름
 {: #vs_orderinginstances-domain-name}
@@ -246,7 +247,9 @@ vSAN이 포함된 주문의 경우, 주문된 12개의 디스크 섀시와 4개�
 ## 주문 요약
 {: #vs_orderinginstances-order-summary}
 
-구성에 따라 예상 비용이 즉시 생성되어 오른쪽에 있는 **주문 요약** 분할창에 표시됩니다. 예상 세부사항을 제공하는 PDF 문서를 생성하려면 **가격 세부사항**을 클릭하십시오.
+선택한 구성에 따라 예상 비용이 즉시 생성되어 **주문 요약** 오른쪽 분할창에 표시됩니다. **가격 세부사항**을 클릭하여 {{site.data.keyword.vmwaresolutions_short}} 리소스에 대한 비용 요약이 포함된 PDF 문서를 생성하십시오. 
+
+**예상 금액에 추가**를 클릭하여 {{site.data.keyword.cloud_notm}} 예상 도구에 프로비저닝된 리소스를 추가할 수도 있습니다. 구매를 고려할 수 있는 기타 {{site.data.keyword.cloud_notm}} 리소스와 함께 선택된 {{site.data.keyword.vmwaresolutions_short}} 리소스의 비용을 예상하려는 경우 유용합니다. 
 
 ## vSphere 클러스터를 주문하는 프로시저
 {: #vs_orderinginstances-procedure}
@@ -282,7 +285,7 @@ vSAN이 포함된 주문의 경우, 주문된 12개의 디스크 섀시와 4개�
    {{site.data.keyword.baremetal_short}}만 설치됩니다. 클러스터 배치 후 VMware vCenter, VMware NSX, VMware vSAN과 같이 다양한 컴포넌트를 설치하고 구성해야 합니다.
    {:note}
 
-### 결과
+### vSphere 클러스터를 주문한 후의 결과
 {: #vs_orderinginstances-results}
 
 클러스터 구성을 템플리트로 저장한 경우에는 구성이 저장되었다는 콘솔 알림을 받은 후 **클러스터 구성** 목록에서 해당 템플리트를 찾을 수 있습니다.

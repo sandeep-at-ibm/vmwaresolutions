@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-05-28"
+
+keywords: vCenter Server delete instance, delete vCenter Server, remove vCenter Server
 
 subcollection: vmware-solutions
 
@@ -62,4 +64,5 @@ Se le facturará por la instancia suprimida hasta el final del ciclo de facturac
 * [Pedido de instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
 * [Visualización de instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
 * [Ampliación y reducción de la capacidad para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
+* [Cancelación de servidores virtuales](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)
 * [Cómo ponerse en contacto con el equipo de soporte de IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

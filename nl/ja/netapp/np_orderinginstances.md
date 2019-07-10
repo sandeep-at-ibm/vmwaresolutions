@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-06-18"
+
+keywords: NetApp order instance, order NetApp ONTAP, order NetApp
 
 subcollection: vmware-solutions
 
@@ -64,7 +66,6 @@ NetApp ONTAP Select インスタンスを注文する際には、以下のネッ
 *  英数字とダッシュ (-) の文字だけを使用できます。
 *  サブドメイン・ラベルの先頭は英字、末尾は英数字でなければなりません。
 *  サブドメイン・ラベルの最大長は 10 文字です。
-*  サブドメイン・ラベルは、アカウント内で固有でなければなりません。
 
 ### Domain name
 {: #np_orderinginstances-domain-name}
@@ -108,6 +109,13 @@ NetApp ONTAP Select インスタンスを注文する際には、以下のネッ
 
 NetApp ONTAP Select インスタンスの ESXi サーバーの数は、デフォルトで 4 台です。 これは変更できません。 すべての ESXi サーバーが構成を共有します。
 
+## 注文のサマリー
+{: #np_orderinginstances-order-summary}
+
+選択した構成に基づいて、見積もりコストがすぐに生成され、右側のペインの**「注文の要約」**に表示されます。  **「料金詳細」**をクリックすると、{{site.data.keyword.vmwaresolutions_short}} リソースのコスト・サマリーが記載された PDF 文書を生成できます。
+
+また、**「見積もりに追加」**をクリックして、プロビジョン済みリソースを {{site.data.keyword.cloud_notm}} 見積もりツールに追加することもできます。この操作は、購入を検討している他の {{site.data.keyword.cloud_notm}} リソースと一緒に、選択した {{site.data.keyword.vmwaresolutions_short}}リソースのコストを見積もる場合に役立ちます。
+
 ## NetApp ONTAP Select インスタンスを注文する手順
 {: #ordering-netapp-ontap-select-instances}
 
@@ -126,14 +134,12 @@ NetApp ONTAP Select インスタンスの ESXi サーバーの数は、デフォ
     4. 注文に適用される使用条件のリンクをクリックします。 それらの使用条件に同意してから、**「以下に表示されるサード・パーティー・サービス契約を読み、同意します」**チェック・ボックスを選択します。
     5. **「プロビジョン」**をクリックします。
 
-## 結果
+## NetApp ONTAP インスタンスを注文した結果
 {: #np_orderinginstances-results}
 
-インスタンスのデプロイメントが自動的に開始されます。 注文が処理されていることを示す確認メッセージが表示されます。デプロイメントの状況を確認するには、インスタンスの詳細を表示します。
-
-インスタンスが正常にデプロイされると、[NetApp ONTAP Select インスタンスの技術仕様](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#specs)に記述されているコンポーネントが VMware 仮想プラットフォームにインストールされます。
-
-インスタンスが使用可能になると、インスタンスの状況が**「使用可能」**に変わり、E メールで通知されます。
+* インスタンスのデプロイメントが自動的に開始され、注文が処理中であることを示す確認を受け取ります。 「インスタンスの詳細」の**「デプロイメント履歴 (Deployment History)」**セクションを表示すると、注意すべき問題を含め、デプロイメント状況を確認できます。
+* インスタンスが正常にデプロイされると、[NetApp ONTAP Select インスタンスの技術仕様](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#specs)に記述されているコンポーネントが VMware 仮想プラットフォームにインストールされます。
+* インスタンスが使用可能になると、インスタンスの状況が**「使用可能」**に変わり、E メールで通知されます。
 
 ## 次に行うこと
 {: #np_orderinginstances-next}

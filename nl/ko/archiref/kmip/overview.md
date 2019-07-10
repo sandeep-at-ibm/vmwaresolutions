@@ -28,7 +28,7 @@ subcollection: vmware-solutions
 많은 스토리지 암호화 솔루션이 VMware 워크로드에서 사용 가능하며 KMIP for VMware는 다음 이점을 제공합니다.
 
 * VMware vSAN 암호화 및 vSphere 암호화와 통합되며, 이들은 모두 스토리지 또는 가상 머신 계층이 아닌 하이퍼바이저 계층에서 구현됩니다. 이 접근 방식을 통해 스토리지 솔루션 및 애플리케이션의 관리와 투명성이 용이해집니다.
-* 완전히 관리되는 키 관리 서버는 많은 {{site.data.keyword.cloud_notm}} 다중 영역 지역(MZR)에서 사용 가능합니다.
+* 완전히 관리되는 키 관리 서버는 많은 {{site.data.keyword.cloud_notm}} 다중 구역 지역(MZR)에서 사용 가능합니다.
 * VMware 클러스터가 {{site.data.keyword.cloud_notm}} Key Protect 또는 {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services와 통합하면 언제든지 취소할 수 있는 완전한 고객 관리 키가 제공됩니다.
 
 ## 관련 링크

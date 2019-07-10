@@ -6,6 +6,8 @@ copyright:
 
 lastupdated: "2019-05-03"
 
+keywords: release notes, what's new, version 3.0
+
 subcollection: vmware-solutions
 
 
@@ -19,7 +21,7 @@ subcollection: vmware-solutions
 # V3.0 릴리스 정보
 {: #relnotes_v30}
 
-이 릴리스에는 새 기능, 컴포넌트 업데이트, 사용성 개선사항 및 버그 수정이 포함됩니다. 다른 릴리스에서 수정된 문제, 제품에 대해 알려진 문제 및 {{site.data.keyword.vmwaresolutions_full}}에 사용할 팁의 목록은 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}를 참조하십시오.
+이 릴리스에는 새 기능, 컴포넌트 업데이트, 사용성 개선사항 및 버그 수정이 포함되어 있습니다. 다른 릴리스에서 수정된 문제, 제품에 대해 알려진 문제 및 {{site.data.keyword.vmwaresolutions_full}}에 사용할 팁의 목록은 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}를 참조하십시오.
 
 ## VMware Cloud Foundation on IBM Cloud의 지원 종료
 {: #relnotes_v30-vcf-eos}
@@ -112,7 +114,7 @@ Microsoft Active Directory(AD) 및 DNS(Domain Name System) 서비스에 대해 �
 
 * 이제 {{site.data.keyword.vmwaresolutions_short}} 컴포넌트를 VMware vSphere 6.7로 업그레이드하는 데 도움이 되는 문서를 사용할 수 있습니다. 계속해서 {{site.data.keyword.vmwaresolutions_short}} 자동화 혜택을 받으려면 이 업그레이드는 필수입니다. 자세한 정보는 [vCenter Server vSphere 소프트웨어를 VMware vSphere 6.5에서 6.7로 업그레이드](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_vsphere_upgrade#vc_vsphere_upgrade)를 참조하십시오.
 * {{site.data.keyword.cloud_notm}} 자동화에 사용되도록 {{site.data.keyword.vmwaresolutions_short}}가 관리하는 사용자 ID를 사용자에게 제공하는 데 참조 문서를 사용할 수 있습니다. 인스턴스 히스토리 로그에 표시되는 메시지는 검토용으로도 사용할 수 있습니다. 자세한 정보는 [IBM 사용자 ID](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_user_ids) 및 [인스턴스 히스토리 메시지](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_messages)를 참조하십시오.
-* **Reboot/Control** 권한이 IBM Cloud 인프라 계정에 필요한 권한을 설명하는 표에 추가되었습니다. 자세한 정보는 [{{site.data.keyword.cloud_notm}} 인프라 계정에 대한 권한](/docs/services/vmwaresolutions/services?topic=vmware-solutions-slaccountrequirement#slaccountrequirement-permissions)을 참조하십시오.
+* **Reboot/Control** 권한이 IBM Cloud 인프라 계정에 필요한 권한을 설명하는 표에 추가되었습니다. 자세한 정보는 [{{site.data.keyword.cloud_notm}} 인프라 계정에 대한 권한](/docs/services/vmwaresolutions/services?topic=vmware-solutions-cloud-infra-acct-req#cloud-infra-acct-req-permissions)을 참조하십시오.
 * 다음 API에 대한 새 참조 문서를 사용할 수 있습니다. 자세한 정보는 [API 참조](https://cloud.ibm.com/apidocs/vmware-solutions){:new_window}를 참조하십시오.
   * 지정된 VMware vCenter Server 인스턴스에 대한 모든 히스토리 메시지 나열
   * 공유 스토리지를 지정된 클러스터에 추가

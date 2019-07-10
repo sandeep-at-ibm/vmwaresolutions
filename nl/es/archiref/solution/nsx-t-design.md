@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-13"
+lastupdated: "2019-06-03"
 
 subcollection: vmware-solutions
 
@@ -28,7 +28,7 @@ Tabla 1. Terminología entre NSX-V y NSX-T
 NSX-V o vSphere nativo | NSX-T
 --|:---|:--
 **Conmutador distribuido virtual** | Conmutador distribuido virtual de red (N-VDS)
-**Zona de transporte NSX** | Zona de transporte (superposición o respaldada por VLAN)
+**Zona de transporte NSX** | Zona de transporte (superposición o soporte VLAN)
 **Grupo de puertos (vDS)** | Conmutador lógico
 **VXLAN (encapsulación L2)** | GENEVE (encapsulación L2)
 **Pasarela de extremo** | Pasarela T0 (se ha cambiado a partir de v2.4)

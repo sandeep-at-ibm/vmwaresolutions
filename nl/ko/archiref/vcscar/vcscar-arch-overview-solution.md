@@ -163,12 +163,12 @@ CAM API는 둘 이상의 컨테이너로 분할됩니다.
 ### Helm
 {: #vcscar-arch-overview-solution-helm}
 
-Helm 차트를 Kubernetes 클러스터로 배치하기 위해 필수 2진 파일이 포함된 컨테이너
+Helm 차트를 Kubernetes 클러스터로 배치하기 위해 필수 바이너리 파일이 포함된 컨테이너
 
 ### Terraform
 {: #vcscar-arch-overview-solution-terra}
 
-둘 이상의 클라우드에서 Terraform 리소스를 배치하기 위해 필수 2진 파일이 포함된 컨테이너
+둘 이상의 클라우드에서 Terraform 리소스를 배치하기 위해 필수 바이너리 파일이 포함된 컨테이너
 
 ### 로그
 {: #vcscar-arch-overview-solution-logs}

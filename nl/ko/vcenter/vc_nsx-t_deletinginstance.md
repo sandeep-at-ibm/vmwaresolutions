@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-05-28"
+
+keywords: vCenter Server NSX-T delete instance, delete vCenter Server NSX-T, remove vCenter Server NSX-T
 
 subcollection: vmware-solutions
 
@@ -61,4 +63,5 @@ vCenter Server with NSX-T 인스턴스를 삭제하면 다음 컴포넌트가 �
 * [VMware vCenter Server with NSX-T 주문](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_orderinginstance)
 * [vCenter Server 인스턴스 보기](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
 * [vCenter Server with NSX-T 인스턴스에 대한 용량 확장 및 축소](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_addingremovingservers)
+* [가상 서버 취소](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)
 * [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

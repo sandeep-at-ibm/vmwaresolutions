@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-18"
+lastupdated: "2019-06-13"
+
+keywords: vCenter Server NSX-T add cluster, view cluster vCenter Server NSX-T, delete cluster vCenter Server NSX-T
 
 subcollection: vmware-solutions
 
@@ -148,7 +150,9 @@ Le impostazioni di abilitazione della scheda di interfaccia di rete (NIC) si bas
 ### Riepilogo ordine
 {: #vc_nsx-t_addingviewingclusters-adding-order-summary}
 
-In base alla configurazione che hai selezionato per il cluster, il costo stimato viene generato e visualizzato immediatamente nel riquadro **Riepilogo ordine** sulla destra.
+In base alla configurazione che hai selezionato per il cluster, il costo stimato viene generato e visualizzato istantaneamente nel riquadro **Riepilogo ordine** sulla destra. Fai clic su **Dettagli sui prezzi** per generare un documento PDF con il riepilogo del costo per le risorse {{site.data.keyword.vmwaresolutions_short}}.
+
+Puoi anche aggiungere le risorse di cui è stato eseguito il provisioning allo strumento di stima {{site.data.keyword.cloud_notm}} facendo clic su **Aggiungi alla stima**. Ciò è utile se desideri stimare il costo delle risorse {{site.data.keyword.vmwaresolutions_short}} selezionate insieme ad altre risorse {{site.data.keyword.cloud_notm}} di cui potresti prendere in considerazione l'acquisto.
 
 ## Procedura per aggiungere i cluster alle istanze vCenter Server with NSX-T
 {: #vc_nsx-t_addingviewingclusters-adding-procedure}
@@ -161,7 +165,7 @@ In base alla configurazione che hai selezionato per il cluster, il costo stimato
 3. Fai clic su **Infrastruttura** nel riquadro di navigazione a sinistra e quindi su **Aggiungi** nell'angolo superiore destro della tabella **CLUSTER**.
 4. Nella pagina **Aggiungi cluster**, immetti il nome del cluster.
 5. Se vuoi ospitare il cluster in un {{site.data.keyword.CloudDataCent_notm}} diverso da quello in cui è ospitata l'istanza, in **Bare Metal Server**, seleziona la casella di spunta **Seleziona un'ubicazione differente** e scegli il {{site.data.keyword.CloudDataCent_notm}} per ospitare l'istanza.
-6. Completa la configurazione Bare Metal. Specifica il **CPU Model**, la quantità di **RAM** e il **Number of {{site.data.keyword.baremetal_short}}**.
+6. Completa la configurazione Bare Metal. Specifica il **Modello CPU**, la quantità di **RAM** e il **Numero di {{site.data.keyword.baremetal_short}}**.
 7. Completa la configurazione di archiviazione.
   * Se selezioni **Storage vSAN**, specifica i tipi di disco per i dischi di capacità e cache, il numero di dischi e l'edizione della licenza vSAN. Se vuoi più spazio di archiviazione, seleziona la casella **Alte prestazioni con Intel Optane**.
   * Se selezioni **Storage NFS** e vuoi aggiungere e configurare le stesse impostazioni in tutte le condivisioni file, specifica il **Numero di condivisioni**, le **Prestazioni** e la **Dimensione (GB)**.
@@ -184,7 +188,7 @@ del tuo ordine, fai clic sull'icona **Stampa** o **Download** nella parte superi
 {: #vc_nsx-t_addingviewingclusters-adding-results}
 
 1. La distribuzione del cluster viene avviata automaticamente e lo stato del cluster viene modificato in **Inizializzazione**. Puoi controllare lo stato della distribuzione visualizzando la cronologia di distribuzione dalla pagina **Riepilogo** dell'istanza.
-2. Quando il cluster è pronto per l'uso, il suo stato viene modificato in **Pronto per l'utilizzo**. Il cluster appena aggiunto viene abilitato con vSphere High Availability (HA) e vSphere Distributed Resource Scheduler (DRS).
+2. Quando il cluster è pronto per l'uso, il suo stato viene modificato in **Pronto per l'utilizzo**. Il cluster appena aggiunto viene abilitato con vSphere HA (High Availability) e vSphere DRS (Distributed Resource Scheduler).
 
 Non puoi modificare il nome del cluster. La modifica del nome del cluster potrebbe comportare errori nelle operazioni di aggiunta o rimozione dei server ESXi nel cluster.
 {:important}
@@ -248,7 +252,7 @@ Tabella 6. Interfaccia di rete - Dettagli VLAN
 
 Fai clic su **View Resource** per accedere ai dettagli della VLAN.
 
-Tabella 7. Interfaccia Rete - Dettagli della sottorete
+Tabella 7. Interfaccia di rete - Dettagli della sottorete
 
 | Elemento        | Descrizione       |  
 |:------------- |:------------- |

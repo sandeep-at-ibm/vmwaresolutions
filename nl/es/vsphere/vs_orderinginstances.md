@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-26"
+lastupdated: "2019-06-18"
+
+keywords: vSphere order cluster, order vSphere, order vSphere cluster
 
 subcollection: vmware-solutions
 
@@ -105,8 +107,7 @@ Seleccione el {{site.data.keyword.CloudDataCent_notm}} en el que se va a alojar 
 **Notas:**
 * Si selecciona un componente vSAN, la lista de ubicaciones se filtra por disponibilidad de SSD.
 * Los servidores nativos Broadwell no están disponibles para la ubicación del centro de datos **FRA05 - Frankfurt**.
-* Los servidores nativos Broadwell y certificados por SAP no están disponibles para la ubicación del centro de datos
-**LON05 - London**.
+* Los servidores nativos Broadwell y certificados por SAP no están disponibles para la ubicación del centro de datos **LON05 - London**.
 
 ### Skylake
 {: #vs_orderinginstances-skylake}
@@ -193,7 +194,6 @@ La etiqueta de subdominio debe cumplir los siguientes requisitos:
 *  Solo se permiten caracteres alfanuméricos y el guión (-).
 *  La etiqueta de subdominio debe empezar y terminar por un carácter alfanumérico.
 *  La longitud máxima de la etiqueta de subdominio es de 10 caracteres.
-*  La etiqueta de subdominio debe ser exclusiva dentro de su cuenta.
 
 ### Nombre de dominio
 {: #vs_orderinginstances-domain-name}
@@ -247,7 +247,9 @@ También puede seleccionar si desea incluir el par de alta disponibilidad de dis
 ## Resumen del pedido
 {: #vs_orderinginstances-order-summary}
 
-En función de sus configuraciones, el coste estimado se genera y se muestra al instante en el panel **Resumen de pedido** a la derecha. Pulse **Detalles sobre precios** para generar un documento PDF que proporcione los detalles de la estimación.
+En función de la configuración seleccionada, el coste estimado se genera y se muestra al instante en el panel derecho **Resumen de pedido**. Pulse **Detalle de precios** para generar un documento PDF con el resumen de coste de los recursos de {{site.data.keyword.vmwaresolutions_short}}. 
+
+También puede añadir los recursos suministrados a la herramienta de estimación {{site.data.keyword.cloud_notm}}, pulsando **Añadir a estimación**. Esto es útil si desea estimar el coste de los recursos estimare {{site.data.keyword.vmwaresolutions_short}} seleccionados junto con otros recursos de {{site.data.keyword.cloud_notm}} que le podría interesar adquirir. 
 
 ## Procedimiento para solicitar clústeres de vSphere
 {: #vs_orderinginstances-procedure}
@@ -283,7 +285,7 @@ En función de sus configuraciones, el coste estimado se genera y se muestra al 
    Solo se instalan los {{site.data.keyword.baremetal_short}}. El usuario es el responsable de instalar y configurar los distintos componentes después del despliegue del clúster, como por ejemplo VMware vCenter, VMware NSX, VMware vSAN.
    {:note}
 
-### Resultados
+### Resultados después de solicitar clústeres de vSphere
 {: #vs_orderinginstances-results}
 
 Si ha guardado la configuración del clúster como una plantilla, recibirá una notificación en la consola que indicará que la configuración se ha guardado correctamente; luego podrá encontrar la plantilla en la lista **Configuraciones de clúster**.

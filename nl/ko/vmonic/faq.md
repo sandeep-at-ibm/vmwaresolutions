@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-16"
+lastupdated: "2019-06-14"
+
+keywords: FAQ, user account, patch management
 
 subcollection: vmware-solutions
 
@@ -27,7 +29,7 @@ subcollection: vmware-solutions
 
 * **IBM ID 계정**. 이 계정은 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 액세스하는 데 필요합니다. 콘솔은 {{site.data.keyword.slportal}}에서 분리된 독립형 사용자 인터페이스입니다. 자세한 정보는 [시작하기](/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started)를 참조하십시오.
 * **{{site.data.keyword.cloud_notm}} 계정**. 이 계정은 프로비저닝에 필요합니다. 기존 **IBM ID**를 사용하거나 새 **IBM ID**를 작성하여 {{site.data.keyword.cloud_notm}} 계정을 등록할 수 있습니다.
-* **{{site.data.keyword.cloud_notm}} 인프라 계정**. 이 계정은 인프라 제품 및 서비스를 관리하기 위해 일부 추가 기능을 제공하는 {{site.data.keyword.cloud_notm}} 인프라 고객 포털에 로그인하는 데 사용됩니다. **{{site.data.keyword.cloud_notm}} 계정**을 종량과금제 유형의 계정으로 업그레이드하거나 기존 {{site.data.keyword.cloud_notm}} 인프라 계정을 {{site.data.keyword.cloud_notm}} 계정과 링크하여 {{site.data.keyword.cloud_notm}} 인프라 계정을 가져올 수 있습니다. 사용 중인 {{site.data.keyword.cloud_notm}} 인프라 계정은 특정 요구사항을 충족해야 합니다. 자세한 정보는 [필수 계정 등록](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account) 및 [{{site.data.keyword.cloud_notm}} 인프라 계정 요구사항](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)을 참조하십시오.
+* **{{site.data.keyword.cloud_notm}} 인프라 계정**. 이 계정은 인프라 제품 및 서비스를 관리하기 위해 일부 추가 기능을 제공하는 {{site.data.keyword.cloud_notm}} 인프라 고객 포털에 로그인하는 데 사용됩니다. **{{site.data.keyword.cloud_notm}} 계정**을 청구 가능 계정으로 업그레이드하거나 기존 {{site.data.keyword.cloud_notm}} 인프라 계정을 {{site.data.keyword.cloud_notm}} 계정과 링크하여 {{site.data.keyword.cloud_notm}} 인프라 계정을 가져올 수 있습니다. 사용 중인 {{site.data.keyword.cloud_notm}} 인프라 계정은 특정 요구사항을 충족해야 합니다. 자세한 정보는 [필수 계정 등록](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts) 및 [{{site.data.keyword.cloud_notm}} 인프라 계정 요구사항](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req)을 참조하십시오.
 
 ## 내 IBM Cloud 인프라 인증 정보를 IBM Cloud for VMware Solutions 콘솔과 연관시킬 수 있는 방법은 무엇입니까?
 {: #faq-associate-credentials}

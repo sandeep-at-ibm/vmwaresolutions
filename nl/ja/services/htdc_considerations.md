@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-06-13"
+
+keywords: HyTrust DataControl, HTDC, tech specs HTDC
 
 subcollection: vmware-solutions
 
@@ -20,7 +22,7 @@ subcollection: vmware-solutions
 
 HyTrust DataControl on {{site.data.keyword.cloud}} サービスでは、鍵管理機能が組み込まれた強い暗号を使用して、ワークロードをライフサイクルにわたって保護できます。 このサービスは、オペレーティング・システム・レベルとデータ・レベルの両方で暗号化を実行します。 これにより、ワークロード内で任意のディレクトリー、フォルダー、またはファイルを暗号化/復号できます。
 
-このサービスは、vSphere 6.5 を実行する、V2.3 以降でデプロイ、または V2.3 以降にアップグレードされたインスタンスでのみ利用できます。 現在インストールされている HyTrust DataControl のバージョンは 4.3 です。
+このサービスは、vSphere 6.5 を実行する、V2.3 以降でデプロイ、または V2.3 以降にアップグレードされたインスタンスでのみ利用できます。 現在インストールされている HyTrust DataControl のバージョンは 4.3.2 です。
 {:note}
 
 ## HyTrust DataControl on IBM Cloud の技術仕様

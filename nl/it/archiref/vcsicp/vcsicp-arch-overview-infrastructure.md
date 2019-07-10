@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-22"
 
 subcollection: vmware-solutions
 
@@ -18,7 +18,7 @@ subcollection: vmware-solutions
 ## VRF (Virtual Routing and Forwarding)
 {: #vcsicp-arch-overview-infrastructure-vrf}
 
-Puoi configurare gli account {{site.data.keyword.cloud}} come account VRF (Virtual Routing and Forwarding), abilitando così l'instradamento globale automatico tra i blocchi di IP della sottorete. Tutti gli account con connessioni Direct-Link devono essere convertiti o creati come account VRF.
+Puoi configurare gli account {{site.data.keyword.cloud}} come account VRF (Virtual Routing and Forwarding), abilitando così l'instradamento globale automatico tra i blocchi di IP della sottorete. Tutti gli account con connessioni Direct Link devono essere convertiti o creati come un account VRF.
 
 ## Direct Link
 {: #vcsicp-arch-overview-infrastructure-direct-link}

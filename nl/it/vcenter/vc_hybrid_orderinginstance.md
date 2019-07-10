@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-19"
+
+keywords: vCenter Server Hybridity order instance, order vCenter Server Hybridity, order Hybridity
 
 subcollection: vmware-solutions
 
@@ -157,10 +159,10 @@ Quando ordini un'istanza vCenter Server with Hybridity Bundle, devi specificare 
 {: #vc_hybrid_orderinginstance-subdomain-label}
 
 L'etichetta del dominio secondario deve rispettare i seguenti requisiti:
-*  Sono consentiti solo caratteri alfanumerici e trattini (-).
-*  L'etichetta del dominio secondario deve iniziare con un carattere alfabetico e terminare con un carattere alfanumerico.
-*  La lunghezza massima dell'etichetta del dominio secondario è di 10 caratteri.
-*  L'etichetta del dominio secondario deve essere univoca all'interno del tuo account.
+* Sono consentiti solo caratteri alfanumerici e trattini (-).
+* L'etichetta del dominio secondario deve iniziare con un carattere alfabetico e terminare con un carattere alfanumerico.
+* La lunghezza massima dell'etichetta del dominio secondario è di 10 caratteri.
+* L'etichetta del dominio secondario deve essere univoca all'interno di tutte le istanze nella tua configurazione multisito.
 
 ### Nome dominio
 {: #vc_hybrid_orderinginstance-domain-name}
@@ -215,7 +217,7 @@ Seleziona la configurazione DNS (Domain Name System) per la tua istanza:
 * **Singola VSI Windows pubblica per Active Directory/DNS**: viene distribuita una singola VSI di Microsoft Windows Server per Microsoft Active Directory (AD) consultabile, che funziona come DNS per l'istanza in cui sono registrati gli host e le VM.
 * **Due VM di Windows Server dedicate e altamente disponibili sul cluster di gestione**: vengono distribuite due VM di Microsoft Windows, che aiutano a migliorare la sicurezza e la solidità.
 
-Se configuri la tua istanza per utilizzare le due VM di Microsoft Windows, devi fornire due licenze Microsoft Windows Server 2016. Utilizza la licenza Microsoft Windows Server 2016 Standard Edition oppure la licenza Microsoft Windows Server 2016 Datacenter Edition o entrambe.
+Se configuri la tua istanza per utilizzare le due VM di Microsoft Windows, devi fornire due licenze Microsoft Windows Server 2016 Standard Edition.
 {:important}
 
 Ogni licenza può essere assegnata solo a un singolo server fisico e comprende fino a due processori fisici. Una licenza Standard Edition è in grado di eseguire due VM di Microsoft Windows virtualizzate per ogni server con 2 processori. Pertanto, sono necessarie due licenze poiché due VM di Microsoft Windows vengono distribuite in due host diversi.
@@ -232,7 +234,9 @@ Quando ordini un'istanza vCenter Server with Hybridity Bundle, puoi anche ordina
 ## Riepilogo ordine
 {: #vc_hybrid_orderinginstance-order-summary}
 
-In base alla configurazione che hai selezionato per l'istanza e i servizi aggiuntivi, il costo stimato viene generato e visualizzato immediatamente nella sezione **Riepilogo ordine** nel riquadro di destra. Fai clic su **Dettagli sui prezzi** nella parte inferiore del riquadro di destra per generare un documento PDF che fornisce i dettagli della stima.
+In base alla configurazione che hai selezionato per l'istanza e i servizi aggiuntivi, il costo stimato viene generato e visualizzato istantaneamente nel riquadro di destra **Riepilogo ordine**. Fai clic su **Dettagli sui prezzi** per generare un documento PDF con il riepilogo del costo per le risorse {{site.data.keyword.vmwaresolutions_short}}.
+
+Puoi anche aggiungere le risorse di cui è stato eseguito il provisioning allo strumento di stima {{site.data.keyword.cloud_notm}} facendo clic su **Aggiungi alla stima**. Ciò è utile se desideri stimare il costo delle risorse {{site.data.keyword.vmwaresolutions_short}} selezionate insieme ad altre risorse {{site.data.keyword.cloud_notm}} di cui potresti prendere in considerazione l'acquisto.
 
 ## Procedura per ordinare le istanze vCenter Server with Hybridity Bundle
 {: #vc_hybrid_orderinginstance-procedure}
@@ -269,16 +273,13 @@ Per ulteriori informazioni su come fornire le impostazioni per un servizio, vedi
    3. Fai clic sul link o sui link dei termini che si applicano al tuo ordine e conferma di accettare questi termini prima di ordinare l'istanza.
    4. Fai clic su **Fornitura**.
 
-## Risultati
+## Risultati dopo l'ordine di istanze vCenter Server with Hybridity Bundle
 {: #vc_hybrid_orderinginstance-results}
 
-La distribuzione dell'istanza inizia automaticamente. Riceverai la conferma che l'ordine è in fase di elaborazione e puoi controllare lo stato della distribuzione visualizzando i dettagli dell'istanza.
-
-Una volta che l'istanza è stata distribuita correttamente, i componenti descritti in [Specifiche tecniche per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#specs) vengono installati sulla tua piattaforma virtuale VMware. I server ESXi che hai ordinato vengono raggruppati come **cluster1** per impostazione predefinita. Se hai ordinato servizi aggiuntivi, la distribuzione dei servizi inizia dopo che il tuo ordine è stato completato.
-
-Quando l'istanza è pronta per l'uso, lo stato dell'istanza viene modificato in **Pronto per l'utilizzo** e riceverai una notifica via e-mail.
-
-Se ordini un'istanza secondaria, il client web VMware vSphere per l'istanza primaria (collegata a quella secondaria) potrebbe essere riavviato una volta completato l'ordine della tua istanza secondaria.
+* La distribuzione dell'istanza inizia automaticamente e ricevi una conferma che ti indica che l'ordine è in fase di elaborazione. Puoi verificare lo stato della distribuzione, inclusi gli eventuali problemi che potrebbero richiedere la tua attenzione, visualizzando la sezione **Cronologia distribuzione** dei dettagli dell'istanza.
+* Una volta che l'istanza è stata distribuita correttamente, i componenti descritti in [Specifiche tecniche per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#specs) vengono installati sulla tua piattaforma virtuale VMware. I server ESXi che hai ordinato vengono raggruppati come **cluster1** per impostazione predefinita. Se hai ordinato servizi aggiuntivi, la distribuzione dei servizi inizia dopo che il tuo ordine è stato completato.
+* Quando l'istanza è pronta per l'uso, lo stato dell'istanza viene modificato in **Pronto per l'utilizzo** e riceverai una notifica via e-mail.
+* Se ordini un'istanza secondaria, il client web VMware vSphere per l'istanza primaria (collegata a quella secondaria) potrebbe essere riavviato una volta completato l'ordine della tua istanza secondaria.
 
 ## Operazioni successive
 {: #vc_hybrid_orderinginstance-next}
@@ -300,7 +301,7 @@ Se modifichi questi componenti al di fuori della console {{site.data.keyword.vmw
 ## Link correlati
 {: #vc_hybrid_orderinginstance-related}
 
-* [Registrazione di un account {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)
+* [Registrazione per un account {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts)
 * [Visualizzazione delle istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
 * [Configurazione multisito per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_multisite)
 * [Aggiunta e visualizzazione di cluster per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingviewingclusters)

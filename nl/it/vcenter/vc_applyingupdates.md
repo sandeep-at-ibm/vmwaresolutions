@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-30"
+lastupdated: "2019-05-27"
+
+keywords: vCenter Server update, patch vCenter Server, IBM component update
 
 subcollection: vmware-solutions
 
@@ -51,11 +53,11 @@ Tabella 1. Livelli di aggiornamento e impatto
   </tr>
   <tr>
     <td>Basso</td>
-    <td>Questo aggiornamento non influisce su alcun sistema. Non devi applicarlo durante i tempi di inattività pianificati. </td>
+    <td>Questo aggiornamento non influisce su alcun sistema. Non devi applicarlo durante i tempi di inattività pianificati.</td>
   </tr>
   <tr>
     <td>Medio</td>
-  <td>Questo aggiornamento potrebbe influire su alcuni sistemi. Si consiglia di applicarlo durante i tempi di inattività pianificati. </td>
+  <td>Questo aggiornamento potrebbe influire su alcuni sistemi. Si consiglia di applicarlo durante i tempi di inattività pianificati.</td>
   </tr>
     <tr>
     <td>Maggiore</td>

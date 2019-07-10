@@ -1,8 +1,12 @@
 ---
 
 copyright:
+
   years: 2016, 2019
-lastupdated: "2019-04-03"
+
+lastupdated: "2019-06-17"
+
+keywords: vmware solutions events, activity tracker, event details
 
 subcollection: vmware-solutions
 
@@ -12,9 +16,9 @@ subcollection: vmware-solutions
 # Activity Tracker イベント
 {: #at-events}
 
-{{site.data.keyword.cloudaccesstrailfull}} サービスを使用すると、ユーザーおよびアプリケーションが {{site.data.keyword.Bluemix_notm}} の {{site.data.keyword.vmwaresolutions_short}} とどのような対話を行っているかを追跡できます。
+{{site.data.keyword.cloudaccesstrailfull}} サービスを使用すると、ユーザーおよびアプリケーションが {{site.data.keyword.cloud_notm}} の {{site.data.keyword.vmwaresolutions_short}} とどのような対話を行っているかを追跡できます。
 
-{{site.data.keyword.cloudaccesstrailfull_notm}} サービスは、{{site.data.keyword.Bluemix_notm}} 内のサービスの状態を変更するユーザー開始アクティビティーを記録します。 詳しくは、[{{site.data.keyword.cloudaccesstrailshort}} の紹介](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov#activity_tracker_ov)を参照してください。
+{{site.data.keyword.cloudaccesstrailfull_notm}} サービスは、{{site.data.keyword.cloud_notm}} 内のサービスの状態を変更するユーザー開始アクティビティーを記録します。 詳しくは、[{{site.data.keyword.cloudaccesstrailshort}} の紹介](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov#activity_tracker_ov)を参照してください。
 
 ## Activity Tracker イベント・テーブル
 {: #at-events-table}
@@ -47,30 +51,29 @@ subcollection: vmware-solutions
 
 | アクション                                   | 説明 | 結果 |
 |:-----------------------------------------|:------------|:-------|
-| `vmware-solutions.user_account.update`    | <ul><li>ユーザー・アカウントの更新要求を受信しました。</li><li>ユーザー・アカウントの更新要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
-| `vmware-solutions.notification.update` | <ul><li>通知の更新要求を受信しました。</li><li>通知の更新要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
-| `vmware-solutions.secure_data.wipe`       | <ul><li>セキュア・データのワイプ要求を受信しました。</li><li>セキュア・データのワイプ要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
-| `vmware-solutions.bss_account.migrate` | <ul><li>bss アカウントへのマイグレーション要求を受信しました。</li><li>bss アカウントへのマイグレーション要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
-| `vmware-solutions.vcs.order`                 | <ul><li>vCenter Server インスタンスの注文要求を受信しました。</li><li>vCenter Server インスタンスの注文要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
-| `vmware-solutions.vcs.delete`                | <ul><li>vCenter Server インスタンスの削除要求を受信しました。</li><li>vCenter Server インスタンスの削除要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
-| `vmware-solutions.vcs.add_host`              | <ul><li>vCenter Server インスタンスへの ESXi サーバーの追加要求を受信しました。</li><li>vCenter Server インスタンスへの ESXi サーバーの追加要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
-| `vmware-solutions.vcs.remove_hosts`          | <ul><li>vCenter Server インスタンスからの ESXi サーバーの削除要求を受信しました。</li><li>vCenter Server インスタンスからの ESXi サーバーの削除要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
-| `vmware-solutions.vcs.schedule_update`       | <ul><li>vCenter Server インスタンスの更新のスケジュール設定要求を受信しました。</li><li>vCenter Server インスタンスの更新のスケジュール設定要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
-| `vmware-solutions.vcs.create_cluster`        | <ul><li>vCenter Server インスタンスのクラスターの作成要求を受信しました。</li><li>vCenter Server インスタンスのクラスターの作成要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
-| `vmware-solutions.vcs.delete_cluster`        | <ul><li>vCenter Server インスタンスからのクラスターの削除要求を受信しました。</li> <li>vCenter Server インスタンスからのクラスターの削除要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
-| `vmware-solutions.vcs.update_nsx_license`        | <ul><li>VMware NSX ライセンスの更新要求を受信しました。</li><li>VMware NSX ライセンスの更新要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
-| `vmware-solutions.vcs.upgrade_to_hybridity`   | <ul><li>vCenter Server インスタンスから vCenter Server with Hybridity Bundle インスタンスへのアップグレード要求を受信しました。</li><li>vCenter Server インスタンスから vCenter Server with Hybridity Bundle インスタンスへのアップグレード要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
-| `vmware-solutions.vsphere.order`              | <ul><li>vSphere クラスターの注文要求を受信しました。</li><li>vSphere クラスターの注文要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
-| `vmware-solutions.vsphere.update`             | <ul><li>vSphere クラスターの更新要求を受信しました。</li><li>vSphere クラスターの更新要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
-| `vmware-solutions.vsphere.save_template`      | <ul><li>vSphere クラスターの構成の保存要求を受信しました。</li><li>vSphere クラスターの構成の保存要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
-| `vmware-solutions.netapp.order`               | <ul><li>NetApp ONTAP Select インスタンスの注文要求を受信しました。</li><li>NetApp ONTAP Select インスタンスの注文要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
-| `vmware-solutions.netapp.delete`              | <ul><li>NetApp ONTAP Select インスタンスの削除要求を受信しました。</li><li>NetApp ONTAP Select インスタンスの削除要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
-| `vmware-solutions.service_variable.update`    | <ul><li>サービスの構成の更新要求を受信しました。</li><li>サービスの構成の更新要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
-| `vmware-solutions.service.order`              | <ul><li>インスタンスのサービスの注文要求を受信しました。</li><li>インスタンスのサービスの注文要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
-| `vmware-solutions.service.delete_by_id`       | <ul><li>インスタンスのサービスの削除要求を受信しました。</li><li>インスタンスのサービスの削除要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
-| `vmware-solutions.service.upgrade_to_hybridity` | <ul><li>既存の vCenter Server インスタンスから vCenter Server with Hybridity Bundle インスタンスへのアップグレード要求を受信しました。</li><li>既存の vCenter Server インスタンスから vCenter Server with Hybridity Bundle インスタンスへのアップグレード要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
-| `vmware-solutions.service.deploy` | サービスをインスタンスにデプロイするアクションが実行されました。 | `success` |
-| `vmware-solutions.service.undeploy` | インスタンスからサービスを削除するアクションが実行されました。 | `success` |
+| `vmware-solutions.account-apikey.update` |	アカウントのインフラストラクチャー API キーが更新されます。 | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.account-notification.update` | アカウントの通知設定が更新されます。 | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.instance-secure-data.wipe` | インスタンス・セキュア・データがワイプされます。 | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.instance-bss-account.migrate` |	インスタンスが BSS アカウントにマイグレーションされます。 | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs.create` |	vCenter Server インスタンスが作成されます。 |`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs.delete` |	vCenter Server インスタンスが削除されます。 | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-host.add` |	ホストが vCenter Server インスタンスに追加されます。 | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-host.remove` |	ホストが vCenter Server インスタンスから削除されます。 | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs.update`	| vCenter Server インスタンスが更新されます。 | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-cluster.create`	| クラスターが vCenter Server インスタンス用に作成されます。 | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-cluster.delete`	| vCenter Server インスタンス用のクラスターが削除されます。 | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-nsx-license.update`	| vCenter Server インスタンス用の NSX ライセンスが更新されます。 | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-hybridity.add`	| vCenter Server インスタンス用の Hybridity Bundle がアップグレードされます。 | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-hybridity.remove`	| vCenter Server インスタンスから Hybridity Bundle が削除されます。 | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-nfs-storage.add`	| vCenter Server インスタンスに NFS ストレージが追加されます。 | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-nfs-storage.remove`	| vCenter Server インスタンスから NFS ストレージが削除されます。 | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-plan.update`	| vCenter Server インスタンスのプランが更新されます。 | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vss.create`	| vSphere インスタンスが作成されます。 | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vss.update`	| vSphere インスタンスが更新されます。 | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vss-template.remove` |	 vSphere テンプレートが削除されます。 | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.service.create`	| サービスが作成されます。 | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.service.delete`	| サービスが削除されます。 | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.service-hybridity.upgrade` | Hybridity Bundle が `version` にアップグレードされます。 | `pending`<br>`success`<br>`failure` |
 
 ## KMIP for VMware on IBM Cloud サービスのイベントの追跡
 {: #at-events-kmip}
@@ -83,18 +86,17 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} サービスで鍵の管理�
 
 | アクション                                      | 説明                               | 結果 |
 |:--------------------------------------------|:------------------------------------------|:-------|
-| `vmware-solutions.key.create`               | <ul><li>鍵の作成要求を受信しました。</li><li>鍵の作成要求に応答しました。</li></ul> | <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
-| `vmware-solutions.key.get`                  | <ul><li>鍵の内容の取得要求を受信しました。</li><li>鍵の内容の取得要求に応答しました。</li></ul> |  <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
-| `vmware-solutions.key.get_attributes`       | <ul><li>鍵の属性の取得要求を受信しました。</li><li>鍵の属性の取得要求に応答しました。</li></ul> |  <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
-| `vmware-solutions.key.activate`             | <ul><li>鍵の活動化要求を受信しました。</li><li>鍵の活動化要求に応答しました。</li></ul> |  <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
-| `vmware-solutions.key.revoke`               | <ul><li>鍵の無効化要求を受信しました。</li><li>鍵の無効化要求に応答しました。</li></ul> |  <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
-| `vmware-solutions.key.destroy`              | <ul><li>鍵の破棄要求を受信しました。</li><li>鍵の破棄要求に応答しました。</li></ul> |  <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
-| `vmware-solutions.key.discover_versions`    | <ul><li>KMIP for VMware on {{site.data.keyword.cloud_notm}} サービスのバージョンの検出要求を受信しました。</li><li>KMIP for VMware on {{site.data.keyword.cloud_notm}} サービスのバージョンの検出要求に応答しました。</li></ul> |  <ul><li>`pending`</li><li>`success` または `failure`</li></ul> |
+| `vmware-solutions.kmip-key.create` |	KMIP キーが作成されます。 | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.kmip-key.retrieve` |	KMIP キーが取得されます。 | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.kmip-key-attributes.retrieve` |	KMIP キーの属性が取得されます。 | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.kmip-key.activate` |	KMIP キーがアクティブ化されます。 | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.kmip-key.revoke` |	KMIP キーが取り消されます。 | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.kmip-key.destroy` |	KMIP キーが破棄されます。 | `pending`<br>`success`<br>`failure` |
 
 ## イベントの表示先
 {: #at-events-viewing}
 
-{{site.data.keyword.cloudaccesstrailshort}} イベントは、イベントが生成された {{site.data.keyword.Bluemix_notm}} 地域で使用可能な {{site.data.keyword.cloudaccesstrailshort}} **アカウント・ドメイン**で確認できます。
+{{site.data.keyword.cloudaccesstrailshort}} イベントは、イベントが生成された {{site.data.keyword.cloud_notm}} 地域で使用可能な {{site.data.keyword.cloudaccesstrailshort}} **アカウント・ドメイン**で確認できます。
 
 ## 関連リンク
 {: #at-events-related}

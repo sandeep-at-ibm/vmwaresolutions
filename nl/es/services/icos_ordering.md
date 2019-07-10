@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-13"
+lastupdated: "2019-06-18"
+
+keywords: IBM Cloud Object Storage, ICOS configuration, order Cloud Object Storage
 
 subcollection: vmware-solutions
 
@@ -18,7 +20,7 @@ subcollection: vmware-solutions
 # Solicitud y configuración de IBM Cloud Object Storage con Veeam
 {: #icos_ordering}
 
-Con el release de Veeam Availability Suite 9.5 Actualización 4, Veeam es compatible con IBM Cloud Object Storage (ICOS). La solicitud de IBM Cloud Object Storage no está automatizada al solicitar Veeam en IBM Cloud, pero se puede añadir tras el despliegue.
+Con el release de Veeam Availability Suite 9.5 Actualización 4, Veeam es compatible con IBM Cloud Object Storage (ICOS). La solicitud de IBM Cloud Object Storage no está automatizada al solicitar Veeam on IBM Cloud, pero se puede añadir tras el despliegue. 
 
 Para solicitar IBM Cloud Object Storage, realice las tareas siguientes en el orden especificado.
 
@@ -43,14 +45,16 @@ Para crear credenciales de servicio, incluyendo credenciales HMAC, consulte
 ## Adición de un repositorio de escalado
 {: #icos_ordering-scale-repo}
 
-Para añadir un repositorio de escalado dentro de Veeam, consulte
-[Adición de repositorios de escalado](https://helpcenter.veeam.com/docs/backup/vsphere/sobr_add.html?ver=95u4){:new_window}. Siga los pasos y vuelva a esta sección para continuar con las tareas siguientes.
+* Como parte de la instalación y configuración del servicio Veeam, se crea un repositorio de copia seguridad de
+escalado con el nombre `IC4V Scale-Out Repository`. `Repositorio de copia de seguridad de máquina virtual predeterminado de IC4V` se añade al repositorio de escalado como una extensión. 
+* Al crear el trabajo de copia de seguridad, debe seleccionar `IC4V Scale-Out Repository` como repositorio de copia de seguridad en lugar de `Repositorio de copia de seguridad de configuración predeterminado de IC4V`. El último repositorio está destinado a las copias de seguridad de configuración de Veeam. 
+* Puede añadir más repositorios a este repositorio predeterminado, como por ejemplo un repositorio de copia de seguridad de tipo Almacenamiento de objetos. Para obtener más información, consulte
+[Añadir repositorios de Escalado (Scale-out)](https://helpcenter.veeam.com/docs/backup/vsphere/sobr_add.html?ver=95u4){:new_window}. Siga los pasos y vuelva a esta sección para continuar con las tareas siguientes.
 
 ## Mantenimiento y gestión del nivel de nube
 {: #icos_ordering-manage-cloud}
 
-Para obtener información sobre cómo mantener y gestionar el nivel de nube, consulte
-[Gestión de datos de nivel de capacidad](https://helpcenter.veeam.com/docs/backup/vsphere/capacity_tier_managing_data.html?ver=95u4){:new_window}.
+Para obtener más información, consulte [Gestión de datos al nivel de capacidad](https://helpcenter.veeam.com/docs/backup/vsphere/capacity_tier_managing_data.html?ver=95u4){:new_window}. 
 
 ## Enlaces relacionados
 {: #icos_ordering-related}

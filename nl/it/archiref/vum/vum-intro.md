@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-21"
 
 subcollection: vmware-solutions
 
@@ -32,7 +32,7 @@ Questo documento descrive l'utilizzo di un'implementazione del server proxy, bas
 
 vCenter Server attualmente distribuisce vSphere 6.5, il che significa che VUM è ora integrato all'interno di vCenter Server Appliance (VCSA) e, poiché il componente client VUM è un plug-in che viene eseguito sul client web vSphere, viene automaticamente abilitato dopo la distribuzione di VCSA. Tuttavia, VUM non ha accesso a Internet per accedere ai repository VMware.
 
-Questa configurazione documentata utilizza il modello di distribuzione VUM connesso a Internet “all-in-one”, che utilizza la rete pubblica di {{site.data.keyword.cloud_notm}} per fornire l'accesso a Internet per scaricare aggiornamenti e patch.
+Questa configurazione documentata utilizza il modello di distribuzione VUM connesso a internet “all-in-one”, che utilizza la rete pubblica di {{site.data.keyword.cloud_notm}} per fornire l'accesso a Internet per scaricare upgrade e patch.
 
 I client che richiedono l'uso di connessioni Internet alternative devono esaminare VMware vSphere Update Manager Download Service (UMDS), che va oltre l'ambito di questa pubblicazione.
 

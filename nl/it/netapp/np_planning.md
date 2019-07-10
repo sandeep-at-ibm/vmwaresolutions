@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-06-13"
+
+keywords: planning NetApp ONTAP, data center, NetApp data centers
 
 subcollection: vmware-solutions
 
@@ -19,7 +21,7 @@ Esamina i seguenti requisiti prima di ordinare le tue istanze NetApp ONTAP Selec
 ## Requisiti dell'account IBM Cloud
 {: #np_planning-account-req}
 
-L'account {{site.data.keyword.cloud_notm}} che utilizzi deve soddisfare determinati requisiti. Per ulteriori informazioni, vedi [Requisiti per l'account {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).
+L'account {{site.data.keyword.cloud_notm}} che utilizzi deve soddisfare determinati requisiti. Per ulteriori informazioni, vedi [Requisiti per l'account {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req).
 
 ## Disponibilità dei data center IBM Cloud
 {: #np_planning-dc-availability}

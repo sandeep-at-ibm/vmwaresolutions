@@ -1,8 +1,12 @@
 ---
 
 copyright:
+
   years: 2016, 2019
-lastupdated: "2019-04-03"
+
+lastupdated: "2019-06-17"
+
+keywords: vmware solutions events, activity tracker, event details
 
 subcollection: vmware-solutions
 
@@ -12,9 +16,9 @@ subcollection: vmware-solutions
 # Evénements du service Activity Tracker
 {: #at-events}
 
-Le service {{site.data.keyword.cloudaccesstrailfull}} vous permet de suivre la manière dont les utilisateurs et les applications interagissent avec {{site.data.keyword.vmwaresolutions_short}} dans {{site.data.keyword.Bluemix_notm}}.
+Le service {{site.data.keyword.cloudaccesstrailfull}} vous permet de suivre la manière dont les utilisateurs et les applications interagissent avec {{site.data.keyword.vmwaresolutions_short}} dans {{site.data.keyword.cloud_notm}}.
 
-Le service {{site.data.keyword.cloudaccesstrailfull_notm}} enregistre les activités initiées par l'utilisateur qui changent l'état d'un service dans {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations, voir la section [A propos d'{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov#activity_tracker_ov).
+Le service {{site.data.keyword.cloudaccesstrailfull_notm}} enregistre les activités initiées par l'utilisateur qui changent l'état d'un service dans {{site.data.keyword.cloud_notm}}. Pour plus d'informations, voir la section [A propos d'{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov#activity_tracker_ov).
 
 ## Tableau Evénements du service Activity Tracker
 {: #at-events-table}
@@ -30,7 +34,7 @@ Table 1. Description du tableau Evénements du service Activity Tracker
 | target_name           | Chaîne     | Ressource sur laquelle l'action est exécutée. |
 | target.typeURI        | Chaîne     | UUID de la cible sur laquelle l'action est exécutée. |
 | action                | Chaîne     | Action qui déclenche l'événement. Les valeurs valides sont `create`, `update` et `delete`. |
-| outcome               | Chaîne     | Résultat de l'action. La valeur est `réussite`, `échec` ou `en attente`. |
+| outcome               | Chaîne     | Résultat de l'action. La valeur est `success`, `failure` ou `pending`. |
 | reason_reasonCode     | Entier    | Code raison du résultat. |
 | initiator_host_address| Chaîne     | Adresse IP d'où provient la demande. |
 
@@ -47,30 +51,29 @@ Table 2. Description des actions qui génèrent des événements de gestion
 
 | Action                                   | Description | Résultat |
 |:-----------------------------------------|:------------|:-------|
-| `vmware-solutions.user_account.update`    | <ul><li>La demande de mise à jour du compte utilisateur est reçue.</li><li>La demande de mise à jour du compte utilisateur reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
-| `vmware-solutions.notification.update` | <ul><li>La demande de mise à jour des notification est reçue.</li><li>La demande de mise à jour des notification reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
-| `vmware-solutions.secure_data.wipe`       | <ul><li>La demande de nettoyage des données sécurisées est reçue.</li><li>La demande de nettoyage des données sécurisées reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
-| `vmware-solutions.bss_account.migrate` | <ul><li>La demande de migration vers le compte bss compte est reçue.</li><li>La demande de migration vers le compte bss reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
-| `vmware-solutions.vcs.order`                 | <ul><li>La demande de commande d'une instance vCenter Server est reçue.</li><li>La demande de commande d'une instance vCenter Server reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
-| `vmware-solutions.vcs.delete`                | <ul><li>La demande de suppression d'une instance vCenter Server est reçue.</li><li>La demande de suppression d'une instance vCenter Server reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
-| `vmware-solutions.vcs.add_host`              | <ul><li>La demande d'ajout de serveurs ESXi à une instance vCenter Server est reçue.</li><li>La demande d'ajout de serveurs ESXi à une instance vCenter Server reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
-| `vmware-solutions.vcs.remove_hosts`          | <ul><li>La demande de suppression de serveurs ESXi d'une instance vCenter Server est reçue.</li><li>La demande de suppression de serveurs ESXi d'une instance vCenter Server reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
-| `vmware-solutions.vcs.schedule_update`       | <ul><li>La demande d'une planification de mise à jour pour une instance vCenter Server est reçue.</li><li>La demande d'une planification de mise à jour pour une instance vCenter Server reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
-| `vmware-solutions.vcs.create_cluster`        | <ul><li>La demande de création d'un cluster pour une instance vCenter Server est reçue.</li><li>La demande de création d'un cluster pour une instance vCenter Server reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
-| `vmware-solutions.vcs.delete_cluster`        | <ul><li>La demande de suppression d'un cluster d'une instance vCenter Server est reçue.</li> <li>La demande de suppression d'un cluster d'une instance vCenter Server reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
-| `vmware-solutions.vcs.update_nsx_license`        | <ul><li>La demande de mise à jour de la licence VMware NSX est reçue.</li><li>La demande de mise à jour de la licence VMware NSX reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
-| `vmware-solutions.vcs.upgrade_to_hybridity`   | <ul><li>La demande de mise à niveau d'une instance vCenter Server vers un vCenter Server avec une instance Hybridity Bundle est reçue.</li><li>La demande de mise à niveau d'une instance vCenter Server vers un vCenter Server avec une instance Hybridity Bundle reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
-| `vmware-solutions.vsphere.order`              | <ul><li>La demande de commande d'un cluster vSphere est reçue.</li><li>La demande de commande d'un cluster vSphere reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
-| `vmware-solutions.vsphere.update`             | <ul><li>La demande de mise à jour d'un cluster vSphere est reçue.</li><li>La demande de mise à jour d'un cluster vSphere reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
-| `vmware-solutions.vsphere.save_template`      | <ul><li>La demande de sauvegarde de la configuration d'un cluster vSphere est reçue.</li><li>La demande de sauvegarde de la configuration d'un cluster vSphere reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
-| `vmware-solutions.netapp.order`               | <ul><li>La demande de commande d'une instance NetApp ONTAP Select est reçue.</li><li>La demande de commande d'une instance NetApp ONTAP Select reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
-| `vmware-solutions.netapp.delete`              | <ul><li>La demande de suppression d'une instance NetApp ONTAP Select est reçue.</li><li>La demande de suppression d'une instance NetApp ONTAP Select reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
-| `vmware-solutions.service_variable.update`    | <ul><li>La demande de mise à jour de la configuration d'un service est reçue.</li><li>La demande de mise à jour de la configuration d'un service reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
-| `vmware-solutions.service.order`              | <ul><li>La demande de commande d'un service pour une instance est reçue.</li><li>La demande de commande d'un service pour une instance reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
-| `vmware-solutions.service.delete_by_id`       | <ul><li>La demande de commande d'un service pour une instance reçoit une réponse.</li><li>La demande de suppression d'un service d'une instance reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
-| `vmware-solutions.service.upgrade_to_hybridity` | <ul><li>La demande de mise à niveau d'une instance vCenter Server existante vers un vCenter Server avec une instance Hybridity Bundle est reçue.</li><li>La demande de mise à niveau d'une instance vCenter Server existante vers un vCenter Server avec une instance Hybridity Bundle reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
-| `vmware-solutions.service.deploy` | L'action de déploiement d'un service est exécutée. | `réussite` |
-| `vmware-solutions.service.undeploy` | L'action de retrait d'un service d'une instance est exécutée. | `réussite` |
+| `vmware-solutions.account-apikey.update` |	La clé API d'infrastructure d'un compte est mise à jour. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.account-notification.update` |Le paramètre de notification pour un compte est mis à jour. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.instance-secure-data.wipe` |Les données sécurisées de l'instance sont effacées. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.instance-bss-account.migrate` |	Une instance est migrée vers un compte BSS. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs.create` |	Une instance de vCenter Server est créée. |`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs.delete` |	Une instance de vCenter Server est supprimée. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-host.add` |	Un hôte est ajouté à une instance de vCenter Server. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-host.remove` |	Un hôte est supprimé d'une instance de vCenter Server. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs.update`	| Une instance de vCenter Server est mise à jour. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-cluster.create`	|Un cluster est créé pour une instance de vCenter Server. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-cluster.delete`	|Un cluster est supprimé pour une instance de vCenter Server. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-nsx-license.update`	|La licence NSX est mise à jour pour une instance de serveur vCenter. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-hybridity.add`	|Le bundle hybridity est mis à niveau pour une instance de vCenter Server. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-hybridity.remove`	|Le bundle hybridity est supprimé d'une instance de serveur vCenter. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-nfs-storage.add`	| Le stockage NFS est ajouté à une instance de vCenter Server. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-nfs-storage.remove`	| Le stockage NFS est retiré d'une instance de vCenter Server. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-plan.update`	| Un plan d'instance de vCenter Server est mise à jour. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vss.create`	| Une instance de vSphere est créée. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vss.update`	| Une instance de vSphere est mise à jour. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vss-template.remove` |	 Un modèle vSphere est supprimé. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.service.create`	| Un service est créé. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.service.delete`	| Un service est supprimé. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.service-hybridity.upgrade` | Un bundle hybridity est mis à niveau vers `version`. | `pending`<br>`success`<br>`failure` |
 
 ## Suivi des événements pour le service KMIP for VMware on IBM Cloud
 {: #at-events-kmip}
@@ -83,18 +86,17 @@ Table 3. Description des actions qui génèrent des événements pour le service
 
 | Action                                      | Description                               | Résultat |
 |:--------------------------------------------|:------------------------------------------|:-------|
-| `vmware-solutions.key.create`               | <ul><li>La demande de création d'une clé est reçue.</li><li>La demande de création d'une clé reçoit une réponse.</li></ul> | <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
-| `vmware-solutions.key.get`                  | <ul><li>La demande d'obtention du contenu d'une clé est reçue.</li><li>La demande d'obtention du contenu d'une clé reçoit une réponse.</li></ul> |  <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
-| `vmware-solutions.key.get_attributes`       | <ul><li>La demande d'obtention des attributs d'une clé est reçue.</li><li>La demande d'obtention des attributs d'une clé reçoit une réponse.</li></ul> |  <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
-| `vmware-solutions.key.activate`             | <ul><li>La demande d'activation d'une clé est reçue.</li><li>La demande d'activation d'une clé reçoit une réponse.</li></ul> |  <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
-| `vmware-solutions.key.revoke`               | <ul><li>La demande de révocation d'une clé est reçue.</li><li>La demande de révocation d'une clé reçoit une réponse.</li></ul> |  <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
-| `vmware-solutions.key.destroy`              | <ul><li>La demande de destruction d'une clé est reçue.</li><li>La demande de destruction d'une clé reçoit une réponse.</li></ul> |  <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
-| `vmware-solutions.key.discover_versions`    | <ul><li>La demande de recherche de la version du service KMIP for VMware on {{site.data.keyword.cloud_notm}} est reçue.</li><li>La demande de recherche de la version du service KMIP for VMware on {{site.data.keyword.cloud_notm}} reçoit une réponse.</li></ul> |  <ul><li>`en attente`</li><li>`réussite` ou `échec`</li></ul> |
+| `vmware-solutions.kmip-key.create` |	Une clé KMIP est créée. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.kmip-key.retrieve` |	Une clé KMIP est extraite. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.kmip-key-attributes.retrieve` |	Les attributs d'une clé KMIP sont extraits. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.kmip-key.activate` |	Une clé KMIP est activée. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.kmip-key.revoke` |	Une clé KMIP est révoquée. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.kmip-key.destroy` |	Une clé KMIP est détruite. | `pending`<br>`success`<br>`failure` |
 
 ## Où consulter les événements
 {: #at-events-viewing}
 
-Les événements {{site.data.keyword.cloudaccesstrailshort}} sont disponibles dans le **domaine de compte** {{site.data.keyword.cloudaccesstrailshort}} qui se trouve dans la région {{site.data.keyword.Bluemix_notm}} où les événements sont générés.
+Les événements {{site.data.keyword.cloudaccesstrailshort}} sont disponibles dans le **domaine de compte** {{site.data.keyword.cloudaccesstrailshort}} qui se trouve dans la région {{site.data.keyword.cloud_notm}} où les événements sont générés.
 
 ## Liens connexes
 {: #at-events-related}

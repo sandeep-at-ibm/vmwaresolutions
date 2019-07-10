@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-06"
+lastupdated: "2019-06-18"
+
+keywords: single-node trial, migration app modernization, order migration app modernization
 
 subcollection: vmware-solutions
 
@@ -67,10 +69,13 @@ Single-node Trial for Migration and App Modernization インスタンスを注�
    3. 注文に適用される使用条件のリンクをクリックして、インスタンスを注文する前にそれらの条件に同意することを確認する必要があります。
    4. **「プロビジョン」**をクリックします。
 
-### 結果
+### Single-node Trial for Migration and App Modernization インスタンスを注文した結果
 {: #cloud_modern_bundle_orderinginstance-results}
 
-インスタンスのデプロイメントが自動的に開始され、オンプレミスの HCX on {{site.data.keyword.cloud_notm}} サービス・アクティベーション・キーが注文されます。
+* インスタンスのデプロイメントが自動的に開始され、オンプレミスの HCX on {{site.data.keyword.cloud_notm}} サービス・アクティベーション・キーが注文されます。
+* 「インスタンスの詳細」の**「デプロイメント履歴 (Deployment History)」**セクションを表示すると、注意すべき問題を含め、デプロイメント状況を確認できます。
+* インスタンスが正常にデプロイされると、[Single-node Trial for Migration and App Modernization インスタンスの技術仕様](/docs/services/vmwaresolutions/services?topic=vmware-solutions-cloud_modern_bundle_overview#cloud_modern_bundle_overview-tech-specs)で説明されているコンポーネントがインストールされます。
+* インスタンスが使用可能になると、インスタンスの状況が**「使用可能」**に変わり、E メールで通知されます。
 
 #### HCX on IBM Cloud のデプロイメント・プロセス
 {: #cloud_modern_bundle_orderinginstance-hcx-deploy-process}
@@ -188,3 +193,4 @@ Single-node Trial for Migration and App Modernization インスタンスを削�
 * [IBM Cloud Private のチケットをオープン](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
 * [VMware HCX リソース](https://hcx.vmware.com/#/docs){:new_window}
 * [VMware HCX ユーザー・ガイド](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}
+* [仮想サーバーのキャンセル](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)

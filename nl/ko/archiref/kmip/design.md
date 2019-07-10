@@ -98,7 +98,7 @@ KMIP for VMware 인스턴스는 인스턴스에 대한 액세스 권한이 부�
 ### 토폴로지
 {: #kmip-design-topology}
 
-KMIP for VMware는 많은 {{site.data.keyword.cloud_notm}} 다중 영역 지역(MZR)에서 사용 가능합니다. 전체 목록은 [KMIP for VMware 주문](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)을 참조하십시오.
+KMIP for VMware는 많은 {{site.data.keyword.cloud_notm}} 다중 구역 지역(MZR)에서 사용 가능합니다. 전체 목록은 [KMIP for VMware 주문](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)을 참조하십시오.
 
 각 MZR 내에서 KMIP for VMware는 고가용성을 위해 {{site.data.keyword.cloud_notm}} 사설 네트워크에서 두 가지 네트워크 서비스 엔드포인트를 제공합니다. KMS 클러스터로 vCenter 키 관리 서버(KMS) 구성의 두 가지 엔드포인트를 구성하십시오. 각 MZR의 엔드포인트와 KMIP 서버 인증서 서명의 목록은 [KMIP for VMware 서비스 문서](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)를 참조하십시오.
 

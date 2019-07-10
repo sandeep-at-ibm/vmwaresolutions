@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-06"
+lastupdated: "2019-06-18"
+
+keywords: single-node trial, migration app modernization, order migration app modernization
 
 subcollection: vmware-solutions
 
@@ -67,10 +69,13 @@ Revise los requisitos del nombre de la instancia:
    3. Pulse el enlace o enlaces de los términos que se aplican a su pedido y confirme que acepta estos términos antes de solicitar la instancia.
    4. Pulse **Suministro**.
 
-### Resultados
+### Resultado tras solicitar instancias de prueba de un solo nodo para migración y modernización de apps
 {: #cloud_modern_bundle_orderinginstance-results}
 
-El despliegue de la instancia comienza automáticamente y solicita la clave de activación del servicio HCX on {{site.data.keyword.cloud_notm}} local.
+* El despliegue de la instancia comienza automáticamente y solicita la clave de activación del servicio HCX on {{site.data.keyword.cloud_notm}} local.
+* Puede comprobar el estado de despliegue, incluidos los problemas que puedan requerir su atención, mediante la visualización de la sección **Historial de despliegue** de los detalles de la instancia. 
+* Cuando la instancia se haya desplegado correctamente, se instalan los componentes que se describen en [Especificaciones técnicas para instancias de Single-node Trial for Migration y App Modernization](/docs/services/vmwaresolutions/services?topic=vmware-solutions-cloud_modern_bundle_overview#cloud_modern_bundle_overview-tech-specs). 
+* Cuando la instancia esté lista para ser utilizada, el estado de la instancia pasará a ser **Listo para su uso** y recibirá una notificación por correo electrónico.
 
 #### Proceso de despliegue de HCX on IBM Cloud
 {: #cloud_modern_bundle_orderinginstance-hcx-deploy-process}
@@ -80,7 +85,7 @@ El despliegue de HCX on {{site.data.keyword.cloud_notm}} es automático. El proc
    * Dos subredes portátiles privadas para la gestión de HCX.
    * Una subred portátil pública para la activación y mantenimiento con VMware. Esta subred también se utiliza para las interconexiones HCX.
 
-   Las direcciones IP de las subredes solicitadas para HCX están pensadas para que las gestione el proceso automático de VMware en {{site.data.keyword.cloud_notm}}. Estas direcciones IP no se pueden asignar a recursos de VMware, como VM y NSX Edges, creados por el cliente. Si necesita más direcciones IP para los artefactos de VMware, debe solicitar sus propias subredes de {{site.data.keyword.cloud_notm}}.
+   Las direcciones IP de las subredes solicitadas para HCX están pensadas para que las gestione la automatización de VMware on {{site.data.keyword.cloud_notm}}. Estas direcciones IP no se pueden asignar a recursos de VMware, como VM y NSX Edges, creados por el cliente. Si necesita más direcciones IP para los artefactos de VMware, debe solicitar sus propias subredes de {{site.data.keyword.cloud_notm}}.
    {:important}
 3. Se crean tres agrupaciones de recursos y carpetas de VM para HCX, que son necesarias para las interconexiones de HCX, los componentes locales de HCX y los componentes remotos de HCX.
 4. Se despliega y se configura un par de VMware NSX Edge Services Gateways (ESG) para el tráfico de gestión de HCX:
@@ -106,21 +111,21 @@ El despliegue de HCX on {{site.data.keyword.cloud_notm}} es automático. El proc
 Puede comprobar el estado del despliegue visualizando los detalles de la instancia. Pulse **Recursos** en el panel de navegación de la izquierda y localice la tabla **Instancias de vCenter Server** o **Instancias de HCX locales** para
 ver información sobre las instancias que ha solicitado.
 
-Cuando la instancia se ha desplegado correctamente, los componentes que se describen en las secciones *Especificaciones técnicas* de este tema se instalan en la plataforma virtual de VMware y la clave de activación del servicio HCX local en {{site.data.keyword.cloud_notm}} aparece listado en la tabla **Instancias de HCX locales**.
+Cuando la instancia se ha desplegado correctamente, los componentes que se describen en las secciones *Especificaciones técnicas* de este tema se instalan en la plataforma virtual de VMware y la clave de activación del servicio HCX on {{site.data.keyword.cloud_notm}} local aparece listado en la tabla **Instancias de HCX locales**.
 
 El estado de la instancia pasa a ser **Listo para su uso** y el usuario recibe una notificación por correo electrónico.
 
 ### Qué hacer a continuación
 {: #cloud_modern_bundle_orderinginstance-next}
 
-Instale HCX Enterprise Manager local y configure la conexión con el HCX en la instancia de {{site.data.keyword.cloud_notm}}.
+Instale HCX Enterprise Manager local y configure la conexión con la instancia de HCX on {{site.data.keyword.cloud_notm}}.
 
 1. Localice la clave de activación local en la página **Recursos**.
   1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Recursos** en el panel de navegación izquierdo.
   2. En la tabla **Instancias de vCenter Server**, revise la columna **Tipo** para localizar la instancia de la prueba de un solo nodo para migración y modernización de apps y anote el nombre de la instancia.
   3. Desplácese hasta la tabla **Instancias de HCX locales** y examine la columna **Nombre** para localizar la instancia que tiene el mismo nombre que la instancia de un solo nodo que ha solicitado con el prefijo *-OnPrem*.
   4. Anote la clave del campo **Clave de activación**.
-2. Obtenga el HCX Enterprise Manager Open Virtual Appliance (OVA) local desde HCX en la consola de {{site.data.keyword.cloud_notm}} HCX Manager.
+2. Obtenga el HCX Enterprise Manager Open Virtual Appliance (OVA) local desde la consola de HCX Manager de HCX on {{site.data.keyword.cloud_notm}}.
   1. Conéctese a la consola de HCX Cloud.
     1. En la tabla **Instancias de vCenter Server**, pulse la instancia de la prueba de un solo nodo para migración y modernización de apps para ver los detalles de la instancia.
     2. En **Información de acceso**, localice y anote las credenciales de vCenter.
@@ -194,3 +199,4 @@ Siga los pasos siguientes para suprimir una instancia de prueba de un solo nodo 
 * [Apertura de una incidencia para IBM Cloud privado](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
 * [Recursos de VMware HCX](https://hcx.vmware.com/#/docs){:new_window}
 * [Guía de usuario de VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}
+* [Cancelación de servidores virtuales](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)

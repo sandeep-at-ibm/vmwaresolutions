@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-19"
+
+keywords: vCenter Server order instance, order vCenter Server, order vCenter Server instance
 
 subcollection: vmware-solutions
 
@@ -78,7 +80,7 @@ Especifique las opciones de licencia para los siguientes componentes de VMware d
 
 Para los usuarios de Business Partners, se incluyen y se adquieren en su nombre la licencia de vCenter Server (edición Standard), la licencia de vSphere (edición Enterprise Plus) y la licencia de NSX. Sin embargo, debe especificar la edición para la licencia de NSX.
 
-Para usuarios que no son Business Partner, puede utilizar las licencias de VMware que proporciona IBM para estos componentes seleccionando **Incluir con la compra** o puede traer su propia licencia (BYOL) seleccionando **Proporcionaré** e indicando sus propias claves de licencia.
+Para los usuarios que no son Business Partners, puede utilizar las licencias de VMware proporcionadas por IBM para estos componentes seleccionando **Incluir con la compra**, o bien puede traer su propia licencia (BYOL) seleccionando **Yo la proporciono** y especificando sus propias claves de licencia. 
 
 ### Notas de licencia
 {: #vc_orderinginstance-licensing-notes}
@@ -142,8 +144,9 @@ Tabla 3. Opciones para {{site.data.keyword.baremetal_short}} Broadwell
 {: #vc_orderinginstance-bare-metal-number}
 
 * Todos los servidores que solicite tienen la misma configuración.
-* Si tiene pensado utilizar almacenamiento vSAN, puede solicitar entre 4 y 20 servidores.
-* Si tiene pensado utilizar almacenamiento NFS, puede solicitar entre 2 y 20 servidores. No obstante, para cargas de trabajo de producción, se recomienda un mínimo de 3 servidores. Para obtener más información, consulte [¿Está altamente disponible una instancia de vCenter Server de dos nodos?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-).
+* Si tiene pensado utilizar almacenamiento vSAN, puede solicitar entre 4 y 20 servidores. 
+* Si tiene pensado utilizar almacenamiento NFS, puede solicitar entre 2 y 20 servidores. No obstante, para cargas de trabajo de producción, se recomienda un mínimo de tres servidores. Para obtener más información, consulte
+[¿Hay una instancia de vCenter Server de dos nodos con alta disponibilidad?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ## Valores de almacenamiento
 {: #vc_orderinginstance-storage-settings}
@@ -217,7 +220,7 @@ La etiqueta de subdominio debe cumplir los siguientes requisitos:
 *  Solo se permiten caracteres alfanuméricos y el guión (-).
 *  La etiqueta de subdominio debe empezar por un carácter alfabético y terminar por un carácter alfanumérico.
 *  La longitud máxima de la etiqueta de subdominio es de 10 caracteres.
-*  La etiqueta de subdominio debe ser exclusiva dentro de su cuenta.
+*  La etiqueta de subdominio debe ser exclusiva dentro de todas las instancias de su configuración multisitio. 
 
 ### Nombre de dominio
 {: #vc_orderinginstance-domain-name}
@@ -279,8 +282,7 @@ Seleccione la configuración de DNS (sistema de nombres de dominio) para la inst
 * **Una sola VSI pública de Windows para Active Directory/DNS**: Se despliega y se puede consultar una sola VSI de Microsoft Windows Server para Microsoft Active Directory (AD), que funciona como DNS para la instancia en la que se han registrado los hosts y VM. Esta opción se despliega de forma predeterminada para V1.9 e instancias posteriores.
 * **Dos VM dedicadas y altamente disponibles de Windows Server en el clúster de gestión**: Se despliegan dos VM Microsoft Windows, que ayudan a mejorar la seguridad y la solidez.
 
-Debe proporcionar dos licencias de Microsoft Windows Server 2016 si configura la instancia de modo que utilice las dos máquinas virtuales Microsoft Windows. Utilice la licencia de Microsoft Windows Server 2016 Standard Edition, o la licencia de Microsoft Windows Server 2016 Datacenter Edition, o ambas.
-{:important}
+Debe proporcionar dos licencias de Microsoft Windows Server 2016 Standard Edition si configura la instancia de modo que utilice las dos máquinas virtuales Microsoft Windows. {:important}
 
 Cada licencia solo se puede asignar a un solo servidor físico y cubre un máximo de dos procesadores físicos. Una licencia de edición Standard puede ejecutar dos máquinas virtuales virtualizadas de Microsoft Windows por servidor de 2 procesadores. Por lo tanto, se necesitan dos licencias, ya que se despliegan dos VM Microsoft Windows en dos hosts distintos.
 
@@ -296,7 +298,9 @@ Cuando solicite una instancia de vCenter Server, también puede solicitar servic
 ## Resumen del pedido
 {: #vc_orderinginstance-order-summary}
 
-En función de la configuración seleccionada para la instancia y los servicios de complementos, el coste estimado se genera y se muestra al instante en la sección **Resumen de pedido** en el panel derecho. Pulse **Detalles sobre precios** en la parte inferior del panel derecho para generar un documento PDF que proporcione la información estimada.
+En función de la configuración seleccionada para la instancia y los servicios de complementos, el coste estimado se genera y se muestra al instante en el panel **Resumen de pedido** de la derecha. Pulse **Detalle de precios** para generar un documento PDF con el resumen de coste de los recursos de {{site.data.keyword.vmwaresolutions_short}}. 
+
+También puede añadir los recursos suministrados a la herramienta de estimación {{site.data.keyword.cloud_notm}}, pulsando **Añadir a estimación**. Esto es útil si desea estimar el coste de los recursos estimare {{site.data.keyword.vmwaresolutions_short}} seleccionados junto con otros recursos de {{site.data.keyword.cloud_notm}} que le podría interesar adquirir. 
 
 ## Procedimiento para solicitar instancias de vCenter Server
 {: #vc_orderinginstance-procedure}
@@ -309,7 +313,7 @@ En función de la configuración seleccionada para la instancia y los servicios 
    * Pulse **Instancia primaria** para desplegar una sola instancia en el entorno o para desplegar la primera instancia en una topología de varios sitios.
    * Pulse **Instancia secundaria** para conectar la instancia con una instancia existente (primaria) en el entorno para conseguir alta disponibilidad y siga estos pasos:
      1. Seleccione la instancia primaria a la que desea conectar la instancia secundaria.
-     2. Para las instancias primarias V2.8 o posteriores, especifique la contraseña del administrador de vCenter Server para la instancia primaria.
+     2. Para las instancias primarias V2.8 o posteriores, especifique la contraseña del administrador de vCenter Server para la instancia primaria. 
      3. Para las instancias primarias V2.5, 2.6 o 2.7, especifique la contraseña del administrador de PSC para la instancia primaria.
      4. Para las instancias primarias V2.4 o anteriores, verifique que el valor especificado correspondiente a la contraseña del administrador de PSC para la instancia primaria sea correcto.
 6. Complete los valores de licencia de los componentes de la instancia.
@@ -346,13 +350,10 @@ Para obtener más información sobre cómo proporcionar valores para un servicio
 ## Resultados después de solicitar instancias de vCenter Server
 {: #vc_orderinginstance-results}
 
-El despliegue de la instancia comienza automáticamente. Recibirá una confirmación de que el pedido se está procesando y puede comprobar el estado del despliegue consultando los detalles de la instancia.
-
-Cuando la instancia se haya desplegado correctamente, los componentes que se describen en [Especificaciones técnicas para las instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs) se instalan en la plataforma virtual de VMware. Los servidores ESXi que ha solicitado se agrupan de forma predeterminada como **cluster1**. Si ha solicitado servicios adicionales, el despliegue de los servicios se inicia después de que se haya completado el pedido.
-
-Cuando la instancia esté lista para ser utilizada, el estado de la instancia pasará a ser **Listo para su uso** y recibirá una notificación por correo electrónico.
-
-Cuando se solicita una instancia secundaria, es posible que el cliente web de VMware vSphere para la instancia primaria (enlazada a la secundaria) se rearranque cuando finalice el pedido de la instancia secundaria.
+* El despliegue de la instancia se inicia automáticamente y se recibe la confirmación de que el pedido se está procesando. Puede comprobar el estado de despliegue, incluidos los problemas que puedan requerir su atención, mediante la visualización de la sección **Historial de despliegue** de los detalles de la instancia. 
+* Cuando la instancia se haya desplegado correctamente, los componentes que se describen en [Especificaciones técnicas para las instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs) se instalan en la plataforma virtual de VMware. Los servidores ESXi que ha solicitado se agrupan de forma predeterminada como **cluster1**. Si ha solicitado servicios adicionales, el despliegue de los servicios se inicia después de que se haya completado el pedido.
+* Cuando la instancia esté lista para ser utilizada, el estado de la instancia pasará a ser **Listo para su uso** y recibirá una notificación por correo electrónico.
+* Cuando se solicita una instancia secundaria, es posible que el cliente web de VMware vSphere para la instancia primaria (enlazada a la secundaria) se rearranque cuando finalice el pedido de la instancia secundaria.
 
 ## Qué hacer a continuación
 {: #vc_orderinginstance-next}
@@ -374,7 +375,7 @@ Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresol
 ## Enlaces relacionados
 {: #vc_orderinginstance-related}
 
-* [Registro de una cuenta de {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)
+* [Registro de una cuenta de {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts)
 * [Visualización de instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
 * [Configuración de varios sitios de instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_multisite)
 * [Adición, visualización y supresión de clústeres para instancias de vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)

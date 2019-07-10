@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-06-18"
+
+keywords: HCX updates, HCX management console, login HCX console
 
 subcollection: vmware-solutions
 
@@ -24,7 +26,7 @@ Para gestionar el servicio HCX on {{site.data.keyword.cloud}}, debe acceder a la
 
 Para obtener más información, consulte [Solicitud, visualización y eliminación de servicios para instancias de vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices).
 
-## Aplicación de actualizaciones a HCX en IBM Cloud
+## Aplicación de actualizaciones a HCX on IBM Cloud
 {: #managinghcx-updates}
 
 HCX on {{site.data.keyword.cloud_notm}} se despliega con la última compilación probada de la tecnología de VMware Hybrid Cloud Extension. VMware envía actualizaciones a estas compilaciones regularmente, lo que incluye arreglos importantes y características nuevas. Estas compilaciones se envían a instalaciones de HCX on {{site.data.keyword.cloud}} automáticamente, incluidas instalaciones de HCX locales.

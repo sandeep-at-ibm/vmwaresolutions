@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-28"
+
+keywords: vCenter Server delete instance, delete vCenter Server, delete multi-site
 
 subcollection: vmware-solutions
 
@@ -49,3 +51,4 @@ vCenter Server 인스턴스를 삭제하는 경우 다음 컴포넌트가 순차
 
 * [vCenter Server 인스턴스 삭제](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_deletinginstance)
 * [vCenter Server 인스턴스에서 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
+* [가상 서버 취소](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)

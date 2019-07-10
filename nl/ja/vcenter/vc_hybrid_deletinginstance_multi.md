@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-28"
+
+keywords: vCenter Server Hybridity delete instance, delete vCenter Server Hybridity, delete multi-site
 
 subcollection: vmware-solutions
 
@@ -49,3 +51,4 @@ vCenter Server with Hybridity Bundle インスタンスを削除すると、以�
 
 * [vCenter Server with Hybridity Bundle インスタンスの削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_deletinginstance)
 * [vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
+* [仮想サーバーのキャンセル](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)

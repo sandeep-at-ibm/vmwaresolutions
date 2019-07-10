@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-06-17"
 
 subcollection: vmware-solutions
 
 
 ---
-# VMware HCX on IBM Cloud ポートのアクセス要件
+# VMware HCX on IBM Cloud のポート・アクセスの要件
 {: #hcx-archi-port-req}
 
 HCX は、公衆インターネットと専用回線を経由して、ネットワーク、スイッチ、ポート・グループなどのデータ・センターのコンポーネントに接続する必要があります。

@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-06"
+lastupdated: "2019-06-18"
+
+keywords: single-node trial, migration app modernization, order migration app modernization
 
 subcollection: vmware-solutions
 
@@ -67,10 +69,13 @@ subcollection: vmware-solutions
    3. 주문에 적용되는 이용 약관에 대한 링크를 클릭하고, 인스턴스를 주문하기 전에 이러한 이용 약관에 동의하는지 확인하십시오.
    4. **프로비저닝**을 클릭하십시오.
 
-### 결과
+### 마이그레이션 및 앱 현대화를 위한 단일 노드 평가판 인스턴스를 주문한 후의 결과
 {: #cloud_modern_bundle_orderinginstance-results}
 
-인스턴스의 배치가 자동으로 시작되고 온프레미스 HCX on {{site.data.keyword.cloud_notm}} 서비스 활성 키가 주문됩니다.
+* 인스턴스의 배치가 자동으로 시작되고 온프레미스 HCX on {{site.data.keyword.cloud_notm}} 서비스 활성 키가 주문됩니다.
+* 인스턴스 세부사항의 **배치 히스토리** 섹션을 보고 주의해야 하는 문제가 포함된 배치 상태를 확인할 수 있습니다. 
+* 인스턴스가 성공적으로 배치된 경우에는 [마이그레이션 및 앱 현대화를 위한 단일 노드 평가판 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/services?topic=vmware-solutions-cloud_modern_bundle_overview#cloud_modern_bundle_overview-tech-specs)에서 설명된 컴포넌트가 설치됩니다. 
+* 인스턴스를 사용할 준비가 되면 인스턴스의 상태가 **사용할 준비가 됨**으로 변경되고 이메일로 알림을 받습니다.
 
 #### HCX on IBM Cloud에 대한 배치 프로세스
 {: #cloud_modern_bundle_orderinginstance-hcx-deploy-process}
@@ -188,3 +193,4 @@ HCX on {{site.data.keyword.cloud_notm}}의 배치가 자동화됩니다. 다음 
 * [IBM Cloud Private의 티켓 열기](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
 * [VMware HCX 리소스](https://hcx.vmware.com/#/docs){:new_window}
 * [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}
+* [가상 서버 취소](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)

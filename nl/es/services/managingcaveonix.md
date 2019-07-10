@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-12"
+lastupdated: "2019-06-18"
+
+keywords: Caveonix console, Caveonix RiskForesight license, login Caveonix console
 
 subcollection: vmware-solutions
 

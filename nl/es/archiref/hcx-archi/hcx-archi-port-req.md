@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-06-17"
 
 subcollection: vmware-solutions
 
 
 ---
-# Requisitos de acceso a puertos de HCX on IBM Cloud
+# Requisitos de acceso a puertos para VMware HCX on IBM Cloud
 {: #hcx-archi-port-req}
 
 HCX debe cruzar internet público y líneas privadas, y conectar con los componentes del centro de datos, como redes, conmutadores y grupos de puertos.
@@ -40,8 +40,8 @@ Tabla 1. Requisitos de acceso a puertos
 | Pasarela de nube | Hosts ESXi | 80, 902  | TCP | Gestión y despliegue de OVF | Internos |
 | Hosts ESXi | Pasarela de nube | 31031, 44046 | TCP | Tráfico de réplica interno basado en host | Internos |
 | Pasarela de nube | Hosts ESXi | 8000  | TCP | vMotion (migración con tiempo de inactividad cero) |  |
-| Cloud Gateway (local) | Cloud Gateway</br>(remota) | 4500  | UDP | Intercambio de claves de (IKEv2) para encapsular cargas de trabajo para el túnel bidireccional | IPSEC |
-| Cloud Gateway (local) | Cloud Gateway</br>(remota) | 500  | UDP | Intercambio de claves de Internet (ISAKMP) para el túnel bidireccional | IPSEC |
+| Cloud Gateway (local) | Cloud Gateway</br>(remota) | 4500  | UDP | Internet Key Exchange (IKEv2) para encapsular cargas de trabajo para el túnel bidireccional | IPSEC |
+| Cloud Gateway (local) | Cloud Gateway</br>(remota) | 500  | UDP | Internet Key Exchange (ISAKMP) para el túnel bidireccional | IPSEC |
 
 ## Enlaces relacionados
 {: #hcx-archi-port-req-related}

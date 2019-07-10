@@ -52,7 +52,8 @@ Tableau 1. Valeurs de déploiement
 | Masque de réseau | 255.255.255.192 | |
 | Passerelle| Adresse IP de la liaison montante privée customer-nsx-edge | Il s'agit du paramètre de passerelle par défaut pour le serveur proxy, qui correspond à l'adresse IP de la liaison montante privée de customer-nsx-edge. L'adresse IP peut être obtenue en consultant l'onglet **Paramètres** pour **customer-nsx-edge**. |
 | Serveur DNS | Adresse IP AD/DNS | Cette adresse IP peut être obtenue sur la page **Ressources** dans la console {{site.data.keyword.vmwaresolutions_short}}. |
-| IP BCR | Adresse IP du routeur BCR | Il s'agit de l'adresse IP du routeur BCR (Backend Customer Router) d'{{site.data.keyword.cloud_notm}} qui est la passerelle pour 10.0.0.0/8 et 161.26.0.0/16. Cette adresse est utilisée dans une route statique du serveur proxy pour que le dispositif VCSA et le serveur AD/DNS puissent y accéder. |
+| IP BCR | Adresse IP du routeur BCR | Sur la même page où vous avez sélectionné l'adresse IP proxy ci-dessus, notez l'adresse intitulée Gateway.  Il s'agit de l'adresse IP du routeur BCR (Backend Customer Router) d'{{site.data.keyword.cloud_notm}} qui est la passerelle pour 10.0.0.0/8 et 161.26.0.0/16. Vous utiliserez cette adresse ci-dessous pour une route statique dans le serveur proxy afin qu'elle puisse atteindre le VCSA et le serveur AD/DNS. |
+| IP de conversion d'adresse réseau | customer-nsx-edge public uplink ip | L'adresse publique de la passerelle NSX ESG client sert d'adresse NAT publique pour le proxy. Cette adresse IP peut être obtenue en consultant l'onglet **Paramètres** pour **customer-nsx-edge**. |
 
 ## Configuration de NSX
 {: #vum-init-config-config-nsx}
@@ -74,7 +75,7 @@ Tableau 2. Règle de pare-feu
 | Nom | Proxy01 sortant |
 | Type | Utilisateur |
 | Source | IP du serveur proxy |
-| Destination | N'importe laquelle |
+| Destination | Toute valeur |
 | Service | HTTP/HTTPS/ICMP Echo |
 | Action | Accepter |
 
@@ -97,10 +98,10 @@ Tableau 3. Règle de conversion d'adresse réseau
 | Protocole d'origine | N'importe lequel |
 | Adresse IP source d'origine | IP du serveur proxy |
 | Ports source d'origine | N'importe lequel |
-| Adresse IP de destination d'origine | N'importe laquelle |
-| Ports de destination d'origine | N'importe lequel |
+| Adresse IP de destination d'origine | Toute valeur |
+| Ports de destination d'origine | N'importe laquelle |
 | Adresse IP convertie | IP de conversion d'adresse réseau |
-| Plage de ports convertie | N'importe laquelle |
+| Plage de ports convertie | Toute valeur |
 | Statut | Activation |
 | Journalisation | Activation |
 | Description | SNAT Proxy01 |

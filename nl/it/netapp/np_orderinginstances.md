@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-06-18"
+
+keywords: NetApp order instance, order NetApp ONTAP, order NetApp
 
 subcollection: vmware-solutions
 
@@ -64,7 +66,6 @@ L'etichetta del dominio secondario deve rispettare i seguenti requisiti:
 *  Sono consentiti solo caratteri alfanumerici e trattini (-).
 *  L'etichetta del dominio secondario deve iniziare con un carattere alfabetico e terminare con un carattere alfanumerico.
 *  La lunghezza massima dell'etichetta del dominio secondario è di 10 caratteri.
-*  L'etichetta del dominio secondario deve essere univoca all'interno del tuo account.
 
 ### Nome dominio
 {: #np_orderinginstances-domain-name}
@@ -108,6 +109,13 @@ Le unità SSD (Solid-State Disk) da 3,8 TB sono supportate quando vengono rese g
 
 Il numero di server ESXi di un'istanza NetApp ONTAP Select è 4 per impostazione predefinita. Non puoi modificare questo valore. Tutti i server ESXi condividono la configurazione.
 
+## Riepilogo ordine
+{: #np_orderinginstances-order-summary}
+
+In base alla configurazione che hai selezionato, il costo stimato viene generato e visualizzato istantaneamente nel riquadro **Riepilogo ordine** sulla destra. Fai clic su **Dettagli sui prezzi** per generare un documento PDF con il riepilogo del costo per le risorse {{site.data.keyword.vmwaresolutions_short}}.
+
+Puoi anche aggiungere le risorse di cui è stato eseguito il provisioning allo strumento di stima {{site.data.keyword.cloud_notm}} facendo clic su **Aggiungi alla stima**. Ciò è utile se desideri stimare il costo delle risorse {{site.data.keyword.vmwaresolutions_short}} selezionate insieme ad altre risorse {{site.data.keyword.cloud_notm}} di cui potresti prendere in considerazione l'acquisto.
+
 ## Procedura per ordinare le istanze NetApp ONTAP Select
 {: #ordering-netapp-ontap-select-instances}
 
@@ -126,14 +134,12 @@ Il numero di server ESXi di un'istanza NetApp ONTAP Select è 4 per impostazione
     4. Fai clic sul link o sui link dei termini che si applicano al tuo ordine. Assicurati di accettare questi termini e quindi seleziona la casella di spunta **Ho letto e accetto gli accordi di servizio di terze parti elencati di seguito**.
     5. Fai clic su **Fornitura**.
 
-## Risultati
+## Risultati dopo l'ordine di istanze NetApp ONTAP
 {: #np_orderinginstances-results}
 
-La distribuzione dell'istanza inizia automaticamente. Riceverai la conferma che l'ordine è in fase di elaborazione e puoi controllare lo stato della distribuzione visualizzando i dettagli dell'istanza.
-
-Una volta che l'istanza è stata distribuita correttamente, i componenti descritti in [Specifiche tecniche per le istanze NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#specs) vengono installati sulla tua piattaforma virtuale VMware.
-
-Quando l'istanza è pronta per l'uso, lo stato dell'istanza viene modificato in **Pronto per l'utilizzo** e riceverai una notifica via e-mail.
+* La distribuzione dell'istanza inizia automaticamente e ricevi una conferma che ti indica che l'ordine è in fase di elaborazione. Puoi verificare lo stato della distribuzione, inclusi gli eventuali problemi che potrebbero richiedere la tua attenzione, visualizzando la sezione **Cronologia distribuzione** dei dettagli dell'istanza.
+* Una volta che l'istanza è stata distribuita correttamente, i componenti descritti in [Specifiche tecniche per le istanze NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#specs) vengono installati sulla tua piattaforma virtuale VMware.
+* Quando l'istanza è pronta per l'uso, lo stato dell'istanza viene modificato in **Pronto per l'utilizzo** e riceverai una notifica via e-mail.
 
 ## Operazioni successive
 {: #np_orderinginstances-next}

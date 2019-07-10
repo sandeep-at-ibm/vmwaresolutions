@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-01"
+lastupdated: "2019-06-13"
+
+keywords: NetApp ONTAP, NetApp, tech specs NetApp ONTAP
 
 subcollection: vmware-solutions
 
@@ -18,7 +20,7 @@ subcollection: vmware-solutions
 # Visión general de NetApp ONTAP Select
 {: #np_netappoverview}
 
-Revise la arquitectura y los componentes de NetApp ONTAP Select en el despliegue de {{site.data.keyword.cloud}}.
+Revise la arquitectura y los componentes del despliegue de NetApp ONTAP Select on {{site.data.keyword.cloud}}.
 
 ## Arquitectura de NetApp ONTAP Select
 {: #np_netappoverview-archi}

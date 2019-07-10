@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-15"
 
 subcollection: vmware-solutions
 
@@ -44,7 +44,7 @@ Le workflow se présente comme suit :
 4. Sur la page de téléchargement, sélectionnez **Upgrade Bundle, Download Now**.
 5. Téléchargez un dossier approprié.
 6. **Mettez à niveau NSX Manager**:
-  - Connectez-vous à NSX Manager Virtual Appliance, en utilisant l'adresse IP et les données d'identification documentées dans la console IC4VS, et cliquez sur le bouton Upgrade sur la page d'accueil.
+  - Connectez-vous à NSX Manager Virtual Appliance, en utilisant l'adresse IP et les données d'identification documentées dans la console IBM Cloud for VMware Solutions, et cliquez sur le bouton Upgrade sur la page d'accueil.
   - Connectez-vous à NSX Manager.
   - Sous **Appliance Management**, cliquez sur **Backups & Restore**.
   - Cliquez sur Backup et entrez le nom de fichier approprié. Vmware recommande de réinstaller le dispositif NSX Manager avant de restaurer les données du ce dernier. Alors qu'une opération de restauration sur un dispositif NSX Manager existant peut fonctionner, elle n'est pas prise en charge officiellement. La meilleure pratique consiste à noter les paramètres d'adresse IP du dispositif NSX Manager afin de pouvoir les utiliser pour indiquer les informations d'adresse IP et d'emplacement de sauvegarde pour le dispositif NSX Manager qui vient d'être déployé.

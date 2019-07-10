@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-06-13"
+
+keywords: view NetApp, view instance, view instance details
 
 subcollection: vmware-solutions
 

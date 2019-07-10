@@ -50,7 +50,7 @@ I clienti possono visualizzare la loro istanza VMware Cloud Foundation on {{site
 
 Ora disponi dell'opzione di ordinare VMware vSphere versione 6.7 Aggiornamento 1 con le tue istanze VMware vCenter Server, VMware vCenter Server with Hybridity Bundle e VMware vSphere on {{site.data.keyword.cloud_notm}}.
 
-Inoltre, le istanze Single-node Trial for Migration e App Modernization sono ora ordinate con vSphere Enterprise Plus 6.7u1.
+Inoltre, le istanze Single-node Trial for Migration and App Modernization sono ora ordinate con vSphere Enterprise Plus 6.7u1.
 
 vSphere Enterprise Plus 6.7u1 è disponibile solo per {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} Broadwell e Skylake.
 

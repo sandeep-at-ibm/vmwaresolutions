@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-11"
+
+keywords: vCenter Server BOM, bill of materials vCenter Server, BOM
 
 subcollection: vmware-solutions
 
@@ -29,7 +31,7 @@ subcollection: vmware-solutions
 
 | VLAN       | タイプ       | 詳細       |
 |:---------- |:---------- |:------------- |
-| VLAN1     | パブリック、プライマリー | パブリック・ネットワーク・アクセス用に物理 ESXi サーバーに割り当てられます。 初期デプロイメントの後は使用されません。 インターネット・アクセスに使用できます。 |
+| VLAN1     | パブリック、プライマリー | パブリック・ネットワーク・アクセス用に物理 ESXi サーバーに割り当てられます。 サーバーにはパブリック IP アドレスが割り当てられますが、この IP アドレスはサーバー上で構成されていないため、このパブリック・ネットワーク上で直接アクセスすることができません。代わりに、パブリック VLAN は、NSX Edge Services Gateway (ESG) などの他のコンポーネントにパブリック・インターネット・アクセスを提供することを目的としています。 |
 | VLAN2     | プライベート A、プライマリー | {{site.data.keyword.cloud}} によって物理 ESXi サーバーに割り当てられます。 管理インターフェースで VMware vSphere 管理トラフィック用に使用されます。<br><br>管理コンポーネントとして機能する VM (仮想マシン) に割り当てられます。<br><br>VMware NSX VTEP (VXLAN トンネル・エンドポイント) に割り当てられます。 |
 | VLAN3     | プライベート B、ポータブル | 使用する場合は、VMware vSAN に割り当てられます。<br><br>使用する場合は、VMware NFS に割り当てられます。<br><br>VMware vSphere vMotion に割り当てられます。<br><br>NSX-T の場合は、VMware NSX VTEP (VXLAN トンネル・エンドポイント) に割り当てられます。|
 
@@ -42,10 +44,10 @@ subcollection: vmware-solutions
 
 | 製造元  | コンポーネント                      | バージョン    |
 |:------------- |:------------------------------ |:------------- |
-| VMware       | vSphere ESXi                    | 6.7 Update 1 (ビルド 6.7.0-13004448) または <br/>6.5 Update 2 (ビルド 6.5.0-13004031) |
+| VMware       | vSphere ESXi                    | 6.7 Update 1 (ビルド 6.7.0-13004448) または <br/>6.5 Update 2 (ビルド 6.5.0-13635690) |
 | VMware       | vSphere 6.7                     | Distributed vSwitch 6.6.0 |
 | VMware       | vSphere 6.5                     | Distributed vSwitch 6.5.0 |
-| VMware       | vCenter Server Appliance        | 6.7 Update 1b (ビルド 6.7.0-11727113) または <br/>6.5 Update 2d (ビルド 6.5.0-10964411) |
+| VMware       | vCenter Server Appliance        | 6.7 Update 1b (ビルド 6.7.0-11727113) または <br/>6.5 Update 2g (ビルド 6.5.0-13638625) |
 | VMware       | Platform Services Controller    | 6.7 Update 1b (ビルド 6.7.0-11727113) または <br/>6.5 Update 2d (ビルド 6.5.0-10964411) |
 | VMware       | vSAN                            | 6.7 Update 1 または <br/>6.6.1       |
 | VMware       | NSX for vSphere                 | 6.4.4 (ビルド 11197766)    |

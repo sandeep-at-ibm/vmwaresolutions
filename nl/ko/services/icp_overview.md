@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-01"
+lastupdated: "2019-06-13"
+
+keywords: IBM Cloud Private, ICP, tech specs ICP
 
 subcollection: vmware-solutions
 
@@ -79,14 +81,14 @@ V3.0 이상에 배치되는(또는 업그레이드되는) 인스턴스의 경우
 
 다음 공식이 IBM Cloud Private 및 관리 오버헤드의 공간 요구사항을 계산하는 데 사용됩니다.
 
-#### 공식 1
+#### 사용 가능한 코어 수를 계산하는 공식
 {: #icp_overview-formulas-1}
 
 `AvailableCores = [HostCoreCount - HostOverheadCores - (HostVSanOverheadCorePercentage * HostCoreCount)] * (HostCount - vSphereHAHostTolerance) - MgmtOverheadCores`
 
 표 4. 공식 1의 변수에 대한 설명
 
-| 변수	|설명 |	단위 |	vSAN 예제 | NFS 예제 |
+| 변수 |설명 |단위 |vSAN 예제 | NFS 예제 |
 |:--------- |:----------- |:---- |:------------- |:----------- |
 | AvailableCores |환경에서 워크로드 및 서비스에 사용 가능한 실제 코어의 수 | 코어 수 | 38 | 43 |
 | HostCount | 기본 클러스터에 있는 호스트 수 | 호스트 수 | 4 | 4 |
@@ -96,24 +98,24 @@ V3.0 이상에 배치되는(또는 업그레이드되는) 인스턴스의 경우
 | vSphereHAHostTolerance |vSphere HA 구성에서 허용하는 호스트 수(하나의 호스트와 동일함) |	 호스트 수	 |1 |1 |
 | HostVsanOverheadCorePercentage | vSAN에서 사용되는 호스트 코어의 백분율이며 10%이거나 호스트가 비vSAN인 경우 0% | % | 10% |0% |
 
-#### 공식 2
+#### 사용 가능한 메모리를 계산하는 공식
 {: #icp_overview-formulas-2}
 
 `AvailableMemory = [HostMemory - HostOverheadMemory - HostVsanOverheadMemory - (HostVsanOverheadMemoryDiskPercentage * HostVsanCapacityDiskSize)] * (HostCount - vSphereHAHostTolerance) - MgmtOverheadMemory`
 
 표 5. 공식 2의 변수에 대한 설명
 
-| 변수	|설명 |	단위 |	vSAN 예제 | NFS 예제 |
+| 변수 |설명 |단위 |vSAN 예제 | NFS 예제 |
 |:--------- |:----------- |:---- |:------------- |:----------- |
-| AvailableMemory	| 환경에서 워크로드 및 서비스에 사용 가능한 메모리 크기(GB) | GB | 	693	| 860 |
-| HostCount	| 기본 클러스터에 있는 호스트 수 | 호스트 수  | 6	| 6 |
-| HostMemory |	기본 클러스터의 각 호스트에서 사용 가능한 원시 메모리의 크기(GB) |	GB	| 192 |	192 |
-| HostVsanCapacityDiskSize | 이 호스트의 각 vSAN 용량 SSD 디스크의 용량 크기(GB)이며 960, 1,946 또는 3,891이거나 호스트가 비vSAN인 경우 0GB임 | GB |	960 | 0 |
-| HostOverheadMemory |	ESXi 서버에 의해 오버헤드로 예약되는 메모리의 크기(GB)이며 4.6GB와 같음 |	GB	| 4.6 |	4.6 |
-| MgmtOverheadMemory |	vCenter Server 관리 컴포넌트(vCenter Server, PSC, AD/DNS, Edges)에 의해 예약되는 메모리 크기(GB)이며 77GB임 | GB | 77 | 77 |
+| AvailableMemory | 환경에서 워크로드 및 서비스에 사용 가능한 메모리 크기(GB) | GB | 693 | 860 |
+| HostCount | 기본 클러스터에 있는 호스트 수 | 호스트 수  | 6 | 6 |
+| HostMemory |기본 클러스터의 각 호스트에서 사용 가능한 원시 메모리의 크기(GB) | GB | 192 | 192 |
+| HostVsanCapacityDiskSize | 이 호스트의 각 vSAN 용량 SSD 디스크의 용량 크기(GB)이며 960, 1,946 또는 3,891이거나 호스트가 비vSAN인 경우 0GB임 | GB |960 | 0 |
+| HostOverheadMemory |ESXi 서버에 의해 오버헤드로 예약되는 메모리의 크기(GB)이며 4.6GB와 같음 | GB | 4.6 | 4.6 |
+| MgmtOverheadMemory |vCenter Server 관리 컴포넌트(vCenter Server, PSC, AD/DNS, Edges)에 의해 예약되는 메모리 크기(GB)이며 77GB임 | GB | 77 | 77 |
 | vSphereHAHostTolerance |vSphere HA 구성에서 허용하는 호스트 수(하나의 호스트와 동일함) | 호스트 수	|1 |1 |
-| HostVsanOverheadMemoryDiskPercentage | vSAN 관리(용량 vSAN 디스크 중 하나의 백분율로 표시됨)에 의해 예약되는 메모리의 크기(GB)이며 2.75%와 같음 |	% | 2.75%	| 2.75% |
-| HostVsanOverheadMemory | 디스크 크기와 상관없이 vSAN 관리에 의해 예약되는 메모리의 크기(GB)이며 7GB이거나 호스트가 비vSAN인 경우 0GB임	| GB |  7	| 0 |
+| HostVsanOverheadMemoryDiskPercentage | vSAN 관리(용량 vSAN 디스크 중 하나의 백분율로 표시됨)에 의해 예약되는 메모리의 크기(GB)이며 2.75%와 같음 | % | 2.75% | 2.75% |
+| HostVsanOverheadMemory | 디스크 크기와 상관없이 vSAN 관리에 의해 예약되는 메모리의 크기(GB)이며 7GB이거나 호스트가 비vSAN인 경우 0GB임 | GB |7 | 0 |
 
 ## IBM Cloud Private Hosted 설치 시 고려사항
 {: #icp_overview-install}

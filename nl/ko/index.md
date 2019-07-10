@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2019
 
-lastupdated: "2019-04-16"
+lastupdated: "2019-05-31"
 
 keywords: IBM Cloud for VMware Solutions, getting started, vmware solutions offerings, add-on services for vmwaresolutions, vmwaresolutions use cases
 
@@ -68,7 +68,7 @@ Microsoft Internet Explorer가 지원되지 않습니다.
    </tr>
    <tr>
       <td>IBM Cloud 인프라 계정</td>
-      <td>{{site.data.keyword.cloud_notm}} 인프라 계정의 요구사항에 대한 자세한 정보는 [{{site.data.keyword.cloud_notm}} 인프라 계정에 대한 요구사항](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)을 참조하십시오.<br><br>{{site.data.keyword.cloud_notm}} 인프라 계정과 {{site.data.keyword.cloud_notm}} 계정을 링크하여 결합된 IaaS(Infrastructure as a Service) 및 PaaS(Platform as a Service) 리소스를 사용할 수 있습니다. 그리고 단일 로그인에서 IaaS 리소스와 PaaS 리소스에 액세스할 수 있습니다. 또한 계정을 연결하면 사용하는 모든 PaaS 및 IaaS 리소스에 대한 하나의 송장이 사용자에게 제공됩니다.<ul><li>{{site.data.keyword.cloud_notm}} 인프라 계정이 없는 경우에는 [IBM Cloud 인프라 계정 등록](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account#signing_softlayer_account-infra)의 프로시저에 따라 계정을 요청한 후에 [IBM ID로 전환 및 계정 연결](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)의 프로시저에 따라 {{site.data.keyword.cloud_notm}} 인프라 계정을 {{site.data.keyword.cloud_notm}} 계정과 링크하십시오.</li><li>{{site.data.keyword.cloud_notm}} 인프라 계정이 있는 경우에는 [IBM ID로 전환 및 계정 연결](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)의 프로시저에 따라 이를 {{site.data.keyword.cloud_notm}} 계정과 연결할 수 있습니다.</li></ul></td>
+      <td>{{site.data.keyword.cloud_notm}} 인프라 계정의 요구사항에 대한 자세한 정보는 [{{site.data.keyword.cloud_notm}} 인프라 계정에 대한 요구사항](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req)을 참조하십시오.<br><br>{{site.data.keyword.cloud_notm}} 인프라 계정과 {{site.data.keyword.cloud_notm}} 계정을 링크하여 결합된 IaaS(Infrastructure as a Service) 및 PaaS(Platform as a Service) 리소스를 사용할 수 있습니다. 그리고 단일 로그인에서 IaaS 리소스와 PaaS 리소스에 액세스할 수 있습니다. 또한 계정을 연결하면 사용하는 모든 PaaS 및 IaaS 리소스에 대한 하나의 송장이 사용자에게 제공됩니다.<ul><li>{{site.data.keyword.cloud_notm}} 인프라 계정이 없는 경우에는 [IBM Cloud 인프라 계정 등록](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts#signing_required_accounts-infra)의 프로시저에 따라 계정을 요청한 후에 [IBM ID로 전환 및 계정 연결](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)의 프로시저에 따라 {{site.data.keyword.cloud_notm}} 인프라 계정을 {{site.data.keyword.cloud_notm}} 계정과 링크하십시오.</li><li>{{site.data.keyword.cloud_notm}} 인프라 계정이 있는 경우에는 [IBM ID로 전환 및 계정 연결](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)의 프로시저에 따라 이를 {{site.data.keyword.cloud_notm}} 계정과 연결할 수 있습니다.</li></ul></td>
    </tr>
    </table>
 

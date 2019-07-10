@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-19"
+
+keywords: vCenter Server Hybridity order instance, order vCenter Server Hybridity, order Hybridity
 
 subcollection: vmware-solutions
 
@@ -157,10 +159,10 @@ Vous devez spécifier les paramètres d'interface réseau répertoriés ci-aprè
 {: #vc_hybrid_orderinginstance-subdomain-label}
 
 Le libellé du sous-domaine qui doit respecter les règles suivantes :
-*  Seuls les caractères alphanumériques et le tiret (-) sont autorisés.
-*  Le libellé de sous-domaine doit commencer par un caractère alphabétique et se terminer par un caractère alphanumérique.
-*  Le libellé de sous-domaine ne doit pas dépasser 10 caractères.
-*  Le libellé de sous-domaine doit être unique au sein de votre compte.
+* Seuls les caractères alphanumériques et le tiret (-) sont autorisés.
+* Le libellé de sous-domaine doit commencer par un caractère alphabétique et se terminer par un caractère alphanumérique.
+* Le libellé de sous-domaine ne doit pas dépasser 10 caractères.
+* Le libellé de sous-domaine doit être unique dans toutes les instances de votre configuration multisite.
 
 ### Nom de domaine
 {: #vc_hybrid_orderinginstance-domain-name}
@@ -215,7 +217,7 @@ Sélectionnez la configuration de système de noms de domaine (DNS, Domain Name 
 * **Une instance de serveur virtuel Windows publique pour Active Directory/DNS** : une unique instance de serveur virtuel Windows Microsoft pour Microsoft Active Directory (AD), qui fonctionne en tant que serveur de noms de domaine pour l'instance où sont enregistrés les hôtes et les machines virtuelles, est déployée et peut être interrogée.
 * **Deux machines virtuelles Windows Server dédiées à haute disponibilité sur le cluster de gestion** : deux machines virtuelles Microsoft Windows sont déployées, pour plus de sécurité et de robustesse.
 
-Vous devez fournir deux licences Microsoft Windows Server 2016 si vous configurez votre instance de manière à utiliser les deux machines virtuelles Microsoft Windows. Utilisez la licence d'édition Microsoft Windows Server 2016 Standard et/ou la licence d'édition Microsoft Windows Server 2016 Datacenter.
+Vous devez fournir deux licences Standard Edition de Microsoft Windows Server 2016 si vous configurez votre instance de manière à utiliser les deux machines virtuelles Microsoft Windows.
 {:important}
 
 Chaque licence ne peut être affectée qu'à un seul serveur physique et couvre jusqu'à deux processeurs physiques. Une licence d'édition Standard est à même d'exécuter deux machines virtuelles Microsoft Windows virtualisées par serveur à 2 processeurs. Par conséquent, deux licences sont nécessaires puisque deux machines virtuelles Microsoft Windows sont déployées sur deux hôtes différents.
@@ -232,7 +234,9 @@ Lorsque vous commandez une instance vCenter Server with Hybridity Bundle, vous p
 ## Récapitulatif de la commande
 {: #vc_hybrid_orderinginstance-order-summary}
 
-Selon la configuration que vous avez sélectionnée pour l'instance et les services complémentaires, le coût estimé est généré et affiché instantanément dans la section **Récapitulatif de la commande** sur le panneau de droite. Cliquez sur **Détails concernant la tarification** en bas à droite du panneau pour générer un document PDF contenant les détails relatifs à l'estimation.
+Selon la configuration que vous avez sélectionnée pour l'instance et les services complémentaires, le coût estimé est généré et affiché instantanément dans la section **Récapitulatif de la commande** sur le panneau de droite. Cliquez sur **Détails concernant la tarification** pour générer un document PDF contenant le récapitulatif des coûts pour les ressources {{site.data.keyword.vmwaresolutions_short}}. 
+
+Vous pouvez également ajouter les ressources mises à disposition à l’outil d’estimation {{site.data.keyword.cloud_notm}} en cliquant sur **Ajouter à l'estimation**. Cela est utile si vous souhaitez estimer le coût des ressources {{site.data.keyword.vmwaresolutions_short}} sélectionnées avec d'autres ressources {{site.data.keyword.cloud_notm}} que vous pourriez envisager d'acheter.
 
 ## Procédure de commande d'instances vCenter Server with Hybridity Bundle
 {: #vc_hybrid_orderinginstance-procedure}
@@ -269,16 +273,13 @@ Pour savoir comment indiquer les paramètres d'un service, voir la rubrique de c
    3. Cliquez sur le ou les liens des conditions applicables à votre commande et prenez soin d'accepter ces conditions avant de commander l'instance.
    4. Cliquez sur **Mettre à disposition**.
 
-## Résultats
+## Que se passe-t-il après la commande d'instances vCenter Server with Hybridity Bundle ?
 {: #vc_hybrid_orderinginstance-results}
 
-Le déploiement de l'instance commence automatiquement. Vous recevez une confirmation que la commande est en cours de traitement et vous pouvez vérifier l'état du déploiement en affichant les détails de l'instance.
-
-Une fois l'instance correctement déployée, les composants décrits dans [Spécifications techniques relatives aux instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#specs) sont installés sur votre plateforme virtuelle VMware. Les serveurs ESXi que vous avez commandés sont, par défaut, regroupés en **cluster1**. Si vous avez commandé des services complémentaires, le déploiement des services commence une fois votre commande honorée.
-
-Lorsque l'instance est prête pour utilisation, elle prend le statut **Prêt à l'emploi** et vous recevez une notification par courrier électronique.
-
-Lorsque vous commandez une instance secondaire, le client Web VMware vSphere de l'instance principale (liée à l'instance secondaire) devra peut-être être redémarré une fois la commande d'instance secondaire honorée.
+* Le déploiement de l'instance démarre automatiquement et vous recevez la confirmation que la commande est en cours de traitement. Vous pouvez vérifier l'état du déploiement, y compris tout problème pouvant nécessiter votre attention, en consultant la section **Historique de déploiement** des détails de l'instance. 
+* Une fois l'instance correctement déployée, les composants décrits dans [Spécifications techniques relatives aux instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#specs) sont installés sur votre plateforme virtuelle VMware. Les serveurs ESXi que vous avez commandés sont, par défaut, regroupés en **cluster1**. Si vous avez commandé des services complémentaires, le déploiement des services commence une fois votre commande honorée.
+* Lorsque l'instance est prête pour utilisation, elle prend le statut **Prêt à l'emploi** et vous recevez une notification par courrier électronique.
+* Lorsque vous commandez une instance secondaire, le client Web VMware vSphere de l'instance principale (liée à l'instance secondaire) devra peut-être être redémarré une fois la commande d'instance secondaire honorée.
 
 ## Etape suivante
 {: #vc_hybrid_orderinginstance-next}
@@ -300,7 +301,7 @@ Si vous modifiez ces composants en dehors de la console {{site.data.keyword.vmwa
 ## Liens connexes
 {: #vc_hybrid_orderinginstance-related}
 
-* [Inscription à un compte {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)
+* [Inscription à un compte {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts)
 * [Affichage des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
 * [Configuration multisite pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_multisite)
 * [Ajout et affichage de clusters pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingviewingclusters)

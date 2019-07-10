@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-13"
+lastupdated: "2019-06-18"
+
+keywords: IBM Cloud Object Storage, ICOS configuration, order Cloud Object Storage
 
 subcollection: vmware-solutions
 
@@ -40,12 +42,14 @@ Pour créer des données d'identification de service, y compris des données d'i
 ## Ajout d'un référentiel d'extension
 {: #icos_ordering-scale-repo}
 
-Pour ajouter un référentiel d'extension dans Veeam, voir [Ajout de référentiels d'extension](https://helpcenter.veeam.com/docs/backup/vsphere/sobr_add.html?ver=95u4){:new_window}. Suivez la procédure puis revenez à cette section pour passer aux autres tâches.
+* Dans le cadre de l’installation et de la configuration du service Veeam, un référentiel de sauvegarde évolutif portant le nom `IC4V Scale-Out Repository` est créé. `IC4V Default VM Backup Repository` est ajouté au référentiel d'extension en tant qu'extension. 
+* Lorsque vous créez le travail de sauvegarde, vous devez sélectionner `IC4V Scale-Out Repository` comme référentiel de sauvegarde, et non `IC4V Default Config Backup Repository`. Ce dernier référentiel est destiné aux sauvegardes de configuration Veeam. 
+* Vous pouvez ajouter plusieurs référentiels à ce référentiel par défaut, tels qu'un référentiel de sauvegarde de type Object Storage. Pour plus d'informations, voir [Adding scale-Out repositories](https://helpcenter.veeam.com/docs/backup/vsphere/sobr_add.html?ver=95u4){:new_window}. Suivez la procédure puis revenez à cette section pour passer aux autres tâches.
 
 ## Maintenance et gestion de votre niveau de cloud
 {: #icos_ordering-manage-cloud}
 
-Pour plus d'informations sur la maintenance et la gestion de votre niveau de cloud, voir [Gestion des données de niveau de capacité](https://helpcenter.veeam.com/docs/backup/vsphere/capacity_tier_managing_data.html?ver=95u4){:new_window}.
+Pour plus d'informations, voir [Managing capacity tier data](https://helpcenter.veeam.com/docs/backup/vsphere/capacity_tier_managing_data.html?ver=95u4){:new_window}.
 
 ## Liens connexes
 {: #icos_ordering-related}

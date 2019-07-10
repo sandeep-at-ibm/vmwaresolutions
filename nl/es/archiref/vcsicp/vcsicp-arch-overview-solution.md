@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-09"
+lastupdated: "2019-06-12"
 
 subcollection: vmware-solutions
 
@@ -52,7 +52,7 @@ Tabla 1. Especificaciones de {{site.data.keyword.icpfull_notm}} ESG
 |:--------- |:------------- |
 | Edge Service Gateway | Dispositivo virtual |
 | Edge tamaño grande | Número de vCPU	2 |
-| Memoria | Disco de 1 GB	| 1000 GB en almacén de datos local |
+| Memoria | Disco de 1 GB<br>1000 GB en almacén de datos local |
 
 Tabla 2. Especificaciones de DLR de {{site.data.keyword.icpfull_notm}}
 
@@ -60,7 +60,7 @@ Tabla 2. Especificaciones de DLR de {{site.data.keyword.icpfull_notm}}
 |:--------- |:------------- |
 | Direccionador lógico distribuido | Dispositivo virtual |
 | Edge tamaño Compacto | Número de vCPU	1 |
-| Memoria	| Disco de 512 MB	| 1000 GB en almacén de datos local |
+| Memoria	| Disco de 512 MB<br>1000 GB en almacén de datos local |
 
 ## Componentes de IBM Cloud Private
 {: #vcsicp-arch-overview-solution-icp-comp}

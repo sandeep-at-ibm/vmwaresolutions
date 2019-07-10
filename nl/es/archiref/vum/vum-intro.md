@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-21"
 
 subcollection: vmware-solutions
 
@@ -32,7 +32,7 @@ Este documento describe la implementación de un servidor proxy, basado en CentO
 
 Actualmente, vCenter Server despliega vSphere 6.5, lo que significa que VUM ahora está integrado en vCenter Server Appliance (VCSA), y como el componente de cliente VUM es un plug-in que se ejecuta en el cliente web de vSphere, se habilita automáticamente después del despliegue de VCSA. Sin embargo, VUM no tiene acceso a Internet para acceder a los repositorios de VMware.
 
-Esta configuración documentada utiliza el modelo de despliegue VUM "all-in-one" conectado a Internet que utiliza la red pública de {{site.data.keyword.cloud_notm}} para proporcionar acceso a Internet para descargar actualizaciones y parches.
+Esta configuración documentada utiliza el modelo de despliegue VUM "all-in-one" conectado a Internet que utiliza la red pública de {{site.data.keyword.cloud_notm}} para proporcionar acceso a Internet para descargar actualizaciones y parches. 
 
 Los clientes que requieren el uso de conexiones de internet alternativas deben investigar el servicio de descargas de VMware vSphere Update Manager (UMDS), que queda fuera del ámbito de esta publicación.
 

@@ -4,14 +4,14 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-16"
+lastupdated: "2019-05-29"
 
 ---
 
 # Intégration
 {: #opsmgmt-integration}
 
-Cette documentation se concentre sur la couche Gestion opérationnelle de la conception, cependant, certaines entreprises peuvent vouloir intégrer cette couche à leur couche Gestion des services. Cette section fournit des directives sur cette intégration. Dans cette conception, vROps est le point central où toutes les alertes sont affichées.
+Cette rubrique porte sur la couche de gestion opérationnelle de la conception. Toutefois, certaines entreprises peuvent souhaiter intégrer cette couche à leur couche de gestion de service. Cette section fournit des directives sur cette intégration. Dans cette conception, vROps est le point central où toutes les alertes sont affichées.
 
 Les catégories d'intégration suivantes sont possibles :
 * Vers les couches supérieures - Intégration depuis vROps à d'autres outils :
@@ -38,7 +38,7 @@ Les notifications sont des notifications d'alerte qui répondent aux critères d
 
 Cet exemple de cas d'utilisation est basé sur une couche de gestion des services existante utilisée par une entreprise. Le client a fourni une instance vCenter Server avec l'option de gestion des opérations et souhaite intégrer cette plateforme à sa plateforme de gestion des services. Il utilise un système d'agrégation d'événements pour intégrer les alertes générées par les outils de surveillance spécifiques au domaine :
 
-* Un outil pour surveiller le système d'exploitation, le logiciel intermédiaire et les applications sur leurs charges de travail Unix, Linux et Windows, mais cet outil ne surveille pas les composants d'infrastructure comme VMware, les périphériques réseau ou le stockage.
+* Un outil pour surveiller le système d'exploitation, le logiciel intermédiaire et les applications sur leurs charges de travail UNIX, Linux et Windows, mais cet outil ne surveille pas les composants d'infrastructure comme VMware, les périphériques réseau ou le stockage.
 * Un gestionnaire SNMP pour recevoir les alertes SNMP de leur infrastructure réseau. Cet outil collecte également les métriques SNMP pour permettre l'alerte de performance et de capacité.
 * Un outil de gestion des sauvegardes pour gérer les sauvegardes.
 * Des outils de gestion de stockage pour gérer les grappes de stockage.

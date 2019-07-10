@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-05-15"
 
 subcollection: vmware-solutions
 
@@ -18,7 +18,7 @@ Dopo che le VM (Virtual Machine) sono state distribuite e i componenti dell'appl
 
 Il provider di servizi è l'organizzazione di livello superiore e ci sono uno o più tenant/organizzazioni serviti dal provider di servizi. Il provider di servizi assegna gli asset raccolti dal vCenter ai tenant o alle organizzazioni, che quindi li assegnano alle applicazioni o alle applicazioni secondarie. Queste applicazioni sono quindi soggette a un regime di conformità.
 
-Questo passo viene inizialmente completato dall'automazione IC4VS che utilizza le informazioni fornite dal client durante il processo di ordinazione e le informazioni predefinite. Il processo di impostazione può essere avviato dal client, dopo la distribuzione, per modificare il provider di servizi o l'organizzazione tenant come richiesto, dopo l'installazione.
+Questo passo viene inizialmente completato dall'automazione IBM Cloud for VMware Solutions che utilizza le informazioni fornite dal cliente durante il processo di ordinazione e le informazioni predefinite. Il processo di impostazione può essere avviato dal client, dopo la distribuzione, per modificare il provider di servizi o l'organizzazione tenant come richiesto, dopo l'installazione.
 
 L'impostazione del provider di servizi si articola in otto passi secondari:
 -	Passo 1: Dettagli dell'organizzazione - aggiungi i dettagli per l'organizzazione principale per il tuo provider di servizi cloud. Questa organizzazione può avere più ubicazioni fisiche e più data center. Le organizzazioni per i tuoi tenant e le tue organizzazioni secondarie per il tuo provider di servizi vengono aggiunte in un secondo momento.

@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-06-13"
+
+keywords: NetApp delete instance, delete NetApp ONTAP, remove NetApp
 
 subcollection: vmware-solutions
 

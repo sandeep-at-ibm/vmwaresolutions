@@ -4,30 +4,30 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-17"
+lastupdated: "2019-06-03"
 
 ---
 
 # vRealize Operations Manager の設計
 {: #opsmgmt-vrops}
 
-vROps 分析クラスターには、モニター対象のコンポーネントからのデータを分析して保管するノードが含まれています。このデプロイメントでは、ノード 4 台と NSX ロード・バランサー 2 台がデプロイされます。このサイズの構成では、30,000 台までの VM をモニター可能で 9,000,000 個までのメトリックを収集可能です。
+vROps 分析クラスターには、モニター対象のコンポーネントからのデータを分析して保管するノードが含まれています。このデプロイメントでは、ノード 4 台と NSX ロード・バランサー 2 台がデプロイされます。 このサイズの構成では、30,000 台までの VM をモニター可能で 9,000,000 個までのメトリックを収集可能です。
 
-ノード 4 台の分析クラスターは、以下で構成されます。
-* マスター・ノード – マスター・ノードは、vROps クラスターの初期ノードです。大規模な環境では、このノードが他のすべてのノードを管理します。
+ノード 4 台の分析クラスターは、以下のコンポーネントで構成されます。
+* マスター・ノード – マスター・ノードは、vROps クラスターの初期ノードです。 大規模な環境では、このノードが他のすべてのノードを管理します。
 * マスター・ノード・レプリカ – このノードは、マスター・ノードの高可用性を実現します。
 * データ・ノード – このデータ・ノードによって、大規模な環境で vROps のスケールアウトが可能になります。この設計では 2 台デプロイされます。
 
-さらに、この設計ではリモート・コレクター・ノードを使用します。このノードは、データ収集のみを行い、収集したデータをマスター・ノード/データ・ノードに転送するプロキシー・サーバー/中継サーバーとして機能します。環境サイズに応じて、データ・ノードおよびリモート・コレクターを追加してスケールアップすることができます。以下の図に、VLAN/VXLAN への vROps コンポーネントの配置を示します。
+さらに、この設計ではリモート・コレクター・ノードを使用します。このノードは、データ収集のみを行い、収集したデータをマスター・ノード/データ・ノードに転送するプロキシー・サーバー/中継サーバーとして機能します。 環境サイズに応じて、データ・ノードおよびリモート・コレクターを追加してスケールアップすることができます。 以下の図に、VLAN/VXLAN への vROps コンポーネントの配置を示します。
 
 ![Operations Manager のネットワーク図](../../images/opsmgmt-vropsnw.svg "Operations Manager のネットワーク図")
 
-* マスター・ノード、マスター・ノード・レプリカ、およびデータ・ノードが {{site.data.keyword.cloud_notm}} のポータブル IP アドレスを使用してツールのサブネットにデプロイされるので、{{site.data.keyword.cloud_notm}} の RFC1918 アドレス・スペースの範囲外のアドレスを指定されたすべてのコンポーネント (vSphere ホスト、vCenter、Platform Services Controller、NSX Manager および NSX Controller) への通信が容易になります。NSX ロード・バランサーが VIP と共に使用され、HA が確保されます。
-* お客様のワークロードが BYOIP アドレス・スペースの IP アドレスを使用する場合、この設計では、VXLAN でホストされるリモート・コレクターを使用します。これらのリモート・コレクターは {{site.data.keyword.vmwaresolutions_full}} 自動化の一部として構成されないため、お客様が手動で実装する必要があります。
+* マスター・ノード、マスター・ノード・レプリカ、およびデータ・ノードが {{site.data.keyword.cloud_notm}} のポータブル IP アドレスを使用してツールのサブネットにデプロイされるので、{{site.data.keyword.cloud_notm}} の RFC1918 アドレス・スペースの範囲外のアドレスを指定されたすべてのコンポーネント (vSphere ホスト、vCenter、Platform Services Controller、NSX Manager、および NSX Controller) への通信が容易になります。 NSX ロード・バランサーが VIP と共に使用され、HA が確保されます。
+* お客様のワークロードが BYOIP アドレス・スペースの IP アドレスを使用する場合、この設計では、VXLAN でホストされるリモート・コレクターを使用します。 これらのリモート・コレクターは {{site.data.keyword.vmwaresolutions_full}} 自動化の一部として構成されないため、お客様が手動で実装する必要があります。
 
 ![Operations Manager のコンポーネント図](../../images/opsmgmt-vropscomponent.svg "Operations Manager のコンポーネント図")
 
-vROps 分析クラスターには、管理ユーザー・インターフェースまたは API を使用してアクセスします。また、クラスターは以下に統合されます。
+vROps 分析クラスターには、管理ユーザー・インターフェースまたは API を使用してアクセスします。また、そのクラスターは以下のコンポーネントと統合します。
 * vCenter
 * vRealize Log Insight
 
@@ -37,15 +37,15 @@ vROps 分析クラスターには、管理ユーザー・インターフェー�
 
 vROps は、以下からデータを収集します。
 * vSphere - vCenter、Platform Services Controller、vSphere ホスト
-* NSX - NSX Manager、NSX Controller および NSX Edge
+* NSX - NSX Manager、NSX Controller、および NSX Edge
 * vRLI
 
-お客様は、vRealize Automation および vRealize Business for Cloud からデータを手動で収集するように vROps を構成できます。
+お客様は、vRealize Automation および vRealize Business for Cloud からデータを収集するように vROps を手動で構成できます。
 
 ## システム要件
 {: #opsmgmt-vrops-requirements}
 
-分析クラスターは、スケールアウトと高可用性を実現するために、マスター・ノード 1 台、マスター・レプリカ・ノード 1 台、データ・ノード 2 台で構成されます。スケールアップするには、データ・ノードを追加します。最大でミディアム・サイズのノード 8 台構成の分析クラスターに拡大できます。
+分析クラスターは、スケールアウトと高可用性を実現するために、マスター・ノード 1 台、マスター・レプリカ・ノード 1 台、データ・ノード 2 台で構成されます。スケールアップするには、データ・ノードを追加します。 最大でミディアム・サイズのノード 8 台構成の分析クラスターに拡大できます。
 
 表 1. Operations Manager マスター/レプリカ・ノードのシステム設定
 
@@ -63,7 +63,7 @@ vROps は、以下からデータを収集します。
 | メモリー | 32 GB |
 | ディスク (シック・プロビジョン) | 254 GB |
 
-コンピュート VM のモニタリングが必要な場合は、お客様が 2 台のリモート・コレクター・ノードを VXLAN にインストールする必要があります。標準のリモート・コレクター仮想アプライアンスのサイズは、vCPU 2 つに RAM 4 GB であり、デフォルトのアプライアンス VMDK サイズで十分です。リモート・コレクターは分析操作の実行もデータの保管もしないため、リモート・コレクター・ノードは、シン・プロビジョニングのディスクを使用してデプロイします。
+コンピュート VM のモニタリングが必要な場合は、お客様が 2 台のリモート・コレクター・ノードを VXLAN にインストールする必要があります。 標準のリモート・コレクター仮想アプライアンスのサイズは、vCPU 2 つに RAM 4 GB であり、デフォルトのアプライアンス VMDK サイズで十分です。 リモート・コレクターは分析操作の実行もデータの保管もしないため、リモート・コレクター・ノードは、シン・プロビジョニングのディスクを使用してデプロイします。
 
 表 3. Operations Manager ロード・バランサーの設定
 
@@ -86,13 +86,13 @@ Load Balancing (PDF)](https://docs.vmware.com/en/vRealize-Automation/7.5/vrealiz
 ## ネットワーキング
 {: #opsmgmt-vrops-network}
 
-vROps アプライアンスのデプロイメントには、ツールのプライベート・ポータブル・サブネットの IP が 6 つ必要です。vROps には、以下にアクセスするためのネットワーク接続が必要です。
+vROps アプライアンスのデプロイメントには、ツールのプライベート・ポータブル・サブネットの IP アドレスが 6 つ必要です。 vROps には、以下にアクセスするためのネットワーク接続が必要です。
 * vCenter アプライアンス
 * vRealize Log Insight アプライアンス
 * NSX-V/T アプライアンス
 * ツール拡張 VXLAN
 * 顧客ネットワーク
-* NTP サーバー (time.services.softlayer.com)
+* NTP サーバー (`time.services.softlayer.com`)
 * {{site.data.keyword.vmwaresolutions_short}} Active Directory/DNS
 * リモート・コレクターを使用するには、マスター・ノード、マスター・ノード・レプリカ、およびデータ・ノードへの接続を可能にするために、NSX ESG に NAT ルールを設定する必要があります。
 
@@ -114,7 +114,7 @@ vROps アプライアンスのデプロイメントには、ツールのプラ�
 ### 認証
 {: #opsmgmt-vrops-auth}
 
-vROps のユーザー管理を行うには、Active Directory と統合する VMware Identity Manager (vIDM) が必要です。サービス・アカウントは、vRealize Operations Manager から以下のアダプターへのアプリケーション間通信に使用され、メトリック収集とトポロジー・マッピングに必要な最小限の許可セットが備わっています。
+vROps のユーザー管理を行うには、Active Directory と統合する VMware Identity Manager (vIDM) が必要です。 サービス・アカウントは、vRealize Operations Manager から以下のアダプターへのアプリケーション間通信に使用され、メトリック収集とトポロジー・マッピングに必要な最小限の許可セットが備わっています。
 
 * NSX Manager
 * vCenter
@@ -138,7 +138,7 @@ vROps の管理パックは、vROps プラットフォームの運用管理機�
 * vRealize Operations Federation Management Pack
 * Management Pack for Hybrid Cloud Extension (HCX)
 
-その他の管理パックは、お客様によってインストール可能です。詳しくは、[Management Packs at the VMware Exchange](https://marketplace.vmware.com/vsx/?contentType=1&listingStyle=table){:new_window} を参照してください。
+その他の管理パックは、お客様によってインストール可能です。 詳しくは、[Management Packs at the VMware Exchange](https://marketplace.vmware.com/vsx/?contentType=1&listingStyle=table){:new_window} を参照してください。
 
 ### Management Pack for VMware vCenter Server
 {: #opsmgmt-vrops-management-vCenter}
@@ -158,7 +158,7 @@ vRealize Operations Management Pack for vSAN は、vSAN 固有のダッシュボ
 ### VMware SDDC Health Management Pack
 {: #opsmgmt-vrops-management-sddc}
 
-VMware SDDC Health Management Pack for vROps は、SDDC 管理スタックをモニターし、SDDC 管理スタックに含まれているさまざまなコンポーネントの健全性と効率を表す色分けされたメトリックを利用できるようにします。VMware SDDC Health Management Pack のダッシュボードを使用して、vCenter Server インスタンスおよび管理ツールの以下のコンポーネントをモニターできます。
+VMware SDDC Health Management Pack for vROps は、SDDC 管理スタックをモニターし、SDDC 管理スタックに含まれているさまざまなコンポーネントの健全性と効率を表す色分けされたメトリックを利用できるようにします。 VMware SDDC Health Management Pack のダッシュボードを使用して、vCenter Server インスタンスおよび管理ツールの以下のコンポーネントをモニターできます。
 * vRealize Operations Manager
 * NSX for vSphere/VMware NSX-T
 * VMware vSAN
@@ -176,7 +176,7 @@ VMware SDDC Health Management Pack では、以下のダッシュボードが使
 * SDDC Health Historic Trend ダッシュボード - VMware SDDC Health Management Pack は、SDDC Health Historic Trend ダッシュボードで構成されています。このダッシュボードには、SDDC スタック内の各コンポーネントの健全性の傾向が表示されます。
 * SDDC vRealize Operations Manager Sizing ダッシュボード - SDDC vRealize Operations Manager Sizing ダッシュボードには、オブジェクトおよびメトリックを処理するための vRealize Operations Manager クラスター容量が表示されます。
 
-VMware SDDC Health Management Pack のプラグインは、プラグインに含まれているオブジェクト・タイプのメトリックを収集します。Management Pack は、以下の健全性メトリックを収集します。
+VMware SDDC Health Management Pack のプラグインは、プラグインに含まれているオブジェクト・タイプのメトリックを収集します。 Management Pack は、以下のコンポーネントの健全性メトリックを収集します。
 * vCenter Server
 * Management Pack for NSX for vSphere
 * vRealize Automation
@@ -193,7 +193,7 @@ VMware SDDC Health Management Pack のプラグインは、プラグインに含
 ### Management Pack for NSX-T
 {: #opsmgmt-vrops-management-nsxt}
 
-NSX-T Management Pack は、vROps のコア分析、相関、予測容量、および可視化機能の利用範囲を仮想ネットワークにまで拡張します。このパックには、以下が含まれています。
+NSX-T Management Pack は、vROps のコア分析、相関、予測容量、および可視化機能の利用範囲を仮想ネットワークにまで拡張します。 このパックには、以下が含まれています。
 * 構成保証
 * 健全性
 * パフォーマンス
@@ -203,19 +203,19 @@ NSX-T Management Pack は、vROps のコア分析、相関、予測容量、お�
 ### Management Pack for NSX for vSphere
 {: #opsmgmt-vrops-management-nsxv}
 
-NSX for vSphere Management Pack を導入すると、VMware の NSX 仮想ネットワーキング・テクノロジーのデプロイメントが運用管理の範囲に追加されます。この管理パックは、vROps のコア分析、相関、予測容量、および可視化機能の利用範囲を仮想ネットワークにまで拡張します。範囲には、NSX 論理スイッチ、論理ルーター、エッジ・サービス、分散ファイアウォール、およびロード・バランサーの構成保証、健全性、パフォーマンス、容量、およびトラブルシューティングが含まれます。
+NSX for vSphere Management Pack を導入すると、VMware の NSX 仮想ネットワーキング・テクノロジーのデプロイメントが運用管理の範囲に追加されます。 この管理パックは、vROps のコア分析、相関、予測容量、および可視化機能の利用範囲を仮想ネットワークにまで拡張します。 範囲には、NSX 論理スイッチ、論理ルーター、エッジ・サービス、分散ファイアウォール、およびロード・バランサーの構成保証、健全性、パフォーマンス、容量、およびトラブルシューティングが含まれます。
 
-NSX for vSphere Management Pack は vROps と緊密に統合されており、vSphere ホストのデータは、そのホスト上で実行されている NSX サービスと相関しています。vRLI を介したログ統合により、ログ・メッセージを介してエラー状態および停止状態がトリガーされると、管理パック・オブジェクトおよび問題ウィンドウ内にアラートが表示されます。
+NSX for vSphere Management Pack は vROps と緊密に統合されており、vSphere ホストのデータは、そのホスト上で実行されている NSX サービスと相関しています。 vRLI を介したログ統合により、ログ・メッセージを介してエラー状態および停止状態がトリガーされると、管理パック・オブジェクトおよび問題ウィンドウ内にアラートが表示されます。
 
 ### vRealize Operations Federation Management Pack
 {: #opsmgmt-vrops-management-federation}
 
-vRealize Operations Federation Management Pack では、マルチサイトの vROps デプロイメントを単一画面で確認できます。これにより、単一の vROps のデプロイメントで、指定したオブジェクトの重要なメトリックを複数の vROps デプロイメントから受信できます。
+vRealize Operations Federation Management Pack では、マルチサイトの vROps デプロイメントを単一画面で確認できます。 これにより、単一の vROps のデプロイメントで、指定したオブジェクトの重要なメトリックを複数の vROps デプロイメントから受信できます。
 
 ### Management Pack for Hybrid Cloud Extension (HCX)
 {: #opsmgmt-vrops-management-hcx}
 
-vRealize Operations Management Pack for HCX は、vROps の運用管理機能の利用範囲を、HCX の備えるハイブリッド機能にまで拡張します。この管理パックを導入すると、メトリック、変更イベント、およびリソース・トポロジー情報を HCX から収集できます。これにより、HCX の相互接続、移行、または保護ワークロードのパフォーマンス・ボトルネックのモニター、切り分け、および解決が可能になります。
+vRealize Operations Management Pack for HCX は、vROps の運用管理機能の利用範囲を、HCX の備えるハイブリッド機能にまで拡張します。 この管理パックを導入すると、メトリック、変更イベント、およびリソース・トポロジー情報を HCX から収集できます。 これにより、HCX の相互接続、移行、または保護ワークロードのパフォーマンス・ボトルネックのモニター、切り分け、および解決が可能になります。
 
 ## 関連リンク
 {: #opsmgmt-vrops-management-links}
@@ -224,7 +224,7 @@ vRealize Operations Management Pack for HCX は、vROps の運用管理機能の
 * [vRealize Operations Manager 7.0 Sizing Guidelines](https://kb.vmware.com/s/article/57903){:new_window}
 * [vRealize Operations Manager のドキュメント](https://docs.vmware.com/en/vRealize-Operations-Manager/index.html){:new_window}
 * [Management Pack for vSAN](https://marketplace.vmware.com/resources/vsx/product_files/31742/original/Management-Pack-for-vSAN-Guide6d2a8895b022a5f626a86e8e84b031b5.pdf){:new_window}
-* [vSAN クラスターの更新手順を確認する](https://cloud.ibm.com/docs/services/vmwaresolutions/archiref/vum/vum-updating-vsan.html#updating-vsan-clusters){:new_window}
+* [vSAN クラスターの更新手順を確認する](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vsan)
 * [Management-Pack-for-vSAN-Guide](https://marketplace.vmware.com/resources/vsx/product_files/31742/original/Management-Pack-for-vSAN-Guide6d2a8895b022a5f626a86e8e84b031b5.pdf){:new_window}
 * [vSAN Health Check Information](https://kb.vmware.com/s/article/2114803){:new_window}
 * [Operationalizing VMware NSX](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/products/nsx/vmware-operationalizing-nsx.pdf){:new_window}

@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-06"
+lastupdated: "2019-05-27"
+
+keywords: single-node trial, migration app modernization, tech specs migration app modernization
 
 subcollection: vmware-solutions
 
@@ -22,7 +24,7 @@ La version d'essai à noeud unique pour la migration et la modernisation des app
 
 La version à noeud unique est une version d'essai d'{{site.data.keyword.cloud_notm}} Private Hosted sur VMware vCenter Server on {{site.data.keyword.cloud_notm}} qui fournit la plateforme de gestion Kubernetes pour les conteneurs et la plateforme VMware à service exclusif qui peut être gérée à l'aide des mêmes outils que dans les environnements locaux. Vous pouvez ainsi bénéficier de la vitesse et de l'échelle du cloud tout en conservant le même niveau de contrôle et de visibilité que dans un environnement local.
 
-La version d'essai permet de migrer jusqu'à 20 charges de travail simples de développement ou de test à l'aide de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle et de conteneuriser ces charges de travail avec la plateforme de développement d'applications {{site.data.keyword.cloud_notm}} Private Hosted basée sur Kubernetes. L'automatisation installe et configure VMware HCX dans {{site.data.keyword.cloud_notm}}, fournit une clé d'activation HCX sur site, puis installe et configure une petite topologie de développement/test d'{{site.data.keyword.cloud_notm}} Private Hosted en quelques heures seulement.
+La version d'essai permet de migrer jusqu'à 20 charges de travail simples de développement ou de test à l'aide de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle et de conteneuriser ces charges de travail avec la plateforme de développement d'applications {{site.data.keyword.cloud_notm}} Private Hosted basée sur Kubernetes. L'automatisation installe et configure VMware HCX dans {{site.data.keyword.cloud_notm}}, fournit une clé d'activation HCX locale, puis installe et configure une petite topologie de développement/test d'{{site.data.keyword.cloud_notm}} Private Hosted en quelques heures seulement.
 
 La version d'essai à noeud unique pour la migration et la modernisation des applications est destinée à une démonstration de faisabilité uniquement. N'exécutez pas de charges de travail de production dans cet environnement. Les fonctions de gestion, telles que l'ajout et le retrait d'hôtes et de clusters, la commande de services complémentaires et l'application de mises à jour ne sont pas prises en charge.
 {:important}

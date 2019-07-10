@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-09"
+lastupdated: "2019-06-14"
+
+keywords: F5 license activation, F5 configuration, order F5
 
 subcollection: vmware-solutions
 

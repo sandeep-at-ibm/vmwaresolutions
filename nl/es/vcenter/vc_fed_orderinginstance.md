@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-01-04"
+lastupdated: "2019-01-25"
 
 ---
 
@@ -16,14 +16,14 @@ lastupdated: "2019-01-04"
 
 Para desplegar una plataforma virtualizada de VMware flexible y personalizable que se ajuste mejor a sus necesidades de carga de trabajo, solicite una instancia de VMware Federal. Las instancias de VMware Federal le ayudan a desconectar la conexión de gestión abierta y a proteger su instancia desplegada.
 
-En la actualidad, solo las instancias de vCenter Server dan soporte a VMware Federal en {{site.data.keyword.cloud}}.
+En la actualidad, solo las instancias de vCenter Server dan soporte a VMware Federal on {{site.data.keyword.cloud}}.
 {:note}
 
 ## Requisitos para solicitar instancias de VMware Federal
 
 Asegúrese de haber realizado las tareas siguientes:
-* Ha configurado las credenciales de la infraestructura de {{site.data.keyword.cloud_notm}} en la página **Configuración**. Para obtener más información, consulte [Gestión de cuentas y valores de usuario](../vmonic/useraccount.html).
-* Ha revisado la información de [Requisitos y planificación de instancias de VMware Federal](vc_fed_planning.html).
+* Ha configurado las credenciales de la infraestructura de {{site.data.keyword.cloud_notm}} en la página **Configuración**. Para obtener más información, consulte [Gestión de cuentas y valores de usuario](/docs/services/vmwaresolutions/vmonic/useraccount.html).
+* Ha revisado la información de [Requisitos y planificación de instancias de VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_planning.html).
 * Ha revisado el formato del nombre de dominio e instancia. El nombre de dominio y la etiqueta de subdominio se utilizan para generar el nombre de usuario y los nombres de servidor de la instancia.
 
 Tabla 1. Formato del valor de nombres de instancia y de dominio
@@ -48,7 +48,7 @@ Debe especificar los valores del sistema siguientes cuando solicite una instanci
 
 El nombre de instancia debe cumplir los siguientes requisitos:
 * Solo se permiten caracteres alfanuméricos y el guión (-).
-* El nombre de instancia debe empezar y terminar por un carácter alfanumérico.
+* El nombre de instancia debe empezar por un carácter alfabético y terminar por un carácter alfanumérico.
 * La longitud máxima del nombre de instancia es de 10 caracteres.
 * El nombre de instancia debe ser exclusivo dentro de su cuenta.
 
@@ -106,7 +106,7 @@ Tabla 3. Opciones para {{site.data.keyword.baremetal_short}} Broadwell
 
 Puede configurar un número de servidores ESXi comprendido entre 2 y 20.
 
-Todos los servidores ESXi comparten la misma configuración. Después del despliegue, puede añadir cuatro clústeres más. Para los valores de almacenamiento vSAN, se necesitan 4 servidores ESXi para el clúster inicial y para los posteriores al despliegue. Para obtener más información sobre el número mínimo de servidores ESXi, consulte [¿Está altamente disponible una instancia de vCenter Server de dos nodos?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
+Todos los servidores ESXi comparten la misma configuración. Después del despliegue, puede añadir cuatro clústeres más. Para los valores de almacenamiento vSAN, se necesitan 4 servidores ESXi para el clúster inicial y para los posteriores al despliegue. Para obtener más información sobre el número mínimo de servidores ESXi, consulte [¿Está altamente disponible una instancia de vCenter Server de dos nodos?](/docs/services/vmwaresolutions/vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ## Valores de almacenamiento
 
@@ -159,7 +159,7 @@ El prefijo del nombre de host debe cumplir los siguientes requisitos:
 
 La etiqueta de subdominio debe cumplir los siguientes requisitos:
 *  Solo se permiten caracteres alfanuméricos y el guión (-).
-*  La etiqueta de subdominio debe empezar y terminar por un carácter alfanumérico.
+*  La etiqueta de subdominio debe empezar por un carácter alfabético y terminar por un carácter alfanumérico.
 *  La longitud máxima de la etiqueta de subdominio es de 10 caracteres.
 *  La etiqueta de subdominio debe ser exclusiva dentro de su cuenta.
 
@@ -167,7 +167,7 @@ La etiqueta de subdominio debe cumplir los siguientes requisitos:
 
 El nombre del dominio raíz debe cumplir los siguientes requisitos:
 * El nombre de dominio debe constar de dos o más series de caracteres separadas por un punto (.)
-* La primera serie debe comenzar por un carácter alfabético y terminar por un carácter alfanumérico.
+* La primera serie debe empezar por un carácter alfabético y terminar por un carácter alfanumérico.
 * Todas las series, excepto la última, solo pueden contener caracteres alfanuméricos y caracteres de guión (-).
 * La última serie solo puede contener caracteres alfabéticos.
 * La longitud de la última serie debe estar comprendida entre 2 y 24 caracteres.
@@ -222,7 +222,7 @@ En función de la configuración seleccionada para la instancia, el coste estima
 
 El despliegue de la instancia comienza automáticamente. Recibirá una confirmación de que el pedido se está procesando y puede comprobar el estado del despliegue consultando los detalles de la instancia.
 
-Cuando la instancia se haya desplegado correctamente, los componentes que se describen en [Especificaciones técnicas para las instancias de VMware Federal en {{site.data.keyword.cloud_notm}}](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances) se instalan en la plataforma virtual de VMware. Los servidores ESXi que ha solicitado se agrupan de forma predeterminada como **cluster1**.
+Cuando la instancia se haya desplegado correctamente, los componentes que se describen en [Especificaciones técnicas para las instancias de VMware Federal on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances) se instalan en la plataforma virtual de VMware. Los servidores ESXi que ha solicitado se agrupan de forma predeterminada como **cluster1**.
 
 Cuando la instancia esté lista para ser utilizada, el estado de la instancia pasará a ser **Listo para su uso** y recibirá una notificación por correo electrónico.
 
@@ -243,10 +243,10 @@ Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresol
 
 ### Enlaces relacionados
 
-* [Registro de una cuenta de {{site.data.keyword.cloud_notm}}](../vmonic/signing_softlayer_account.html)
-* [Visualización de instancias de VMware Federal](vc_fed_viewinginstance.html)
-* [Ampliación y reducción de la capacidad para instancias de VMware Federal](vc_fed_addingremovingservers.html)
-* [Adición, visualización y supresión de clústeres para instancias de VMware Federal](fed_addviewdeleteclusters.html)
-* [Protección de instancias de VMware Federal](vc_fed_securinginstance.html)
-* [Supresión de instancias de VMware Federal](vc_fed_deletinginstance.html)
-* [Cómo ponerse en contacto con el equipo de soporte de IBM](../vmonic/trbl_support.html)
+* [Registro de una cuenta de {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
+* [Visualización de instancias de VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_viewinginstance.html)
+* [Ampliación y reducción de la capacidad para instancias de VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_addingremovingservers.html)
+* [Adición, visualización y supresión de clústeres para instancias de VMware Federal](/docs/services/vmwaresolutions/vcenter/fed_addviewdeleteclusters.html)
+* [Protección de instancias de VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_securinginstance.html)
+* [Supresión de instancias de VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_deletinginstance.html)
+* [Cómo ponerse en contacto con el equipo de soporte de IBM](/docs/services/vmwaresolutions/vmonic/trbl_support.html)

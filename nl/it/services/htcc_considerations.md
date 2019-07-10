@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-06-13"
+
+keywords: HyTrust CloudControl, HTCC, tech specs HTCC
 
 subcollection: vmware-solutions
 
@@ -20,7 +22,7 @@ subcollection: vmware-solutions
 
 Il servizio HyTrust CloudControl on {{site.data.keyword.cloud}} applica e controlla la conformità rispetto agli standard di sicurezza che includono il controllo degli accessi in base al ruolo (RBAC), l'approvazione e la verifica. Quando viene combinato con HyTrust DataControl, il servizio garantisce che le VM (Virtual Machine) e i dati del carico di lavoro non lascino una regione, un cluster o un server ESXi particolare all'interno del {{site.data.keyword.CloudDataCent_notm}}.
 
-Questo servizio è disponibile solo per le istanze che eseguono vSphere 6.5 e che sono distribuite o di cui è stato eseguito l'upgrade alla V2.3 o successive. La versione HyTrust CloudControl corrente installata è la 5.5.
+Questo servizio è disponibile solo per le istanze che eseguono vSphere 6.5 e che sono distribuite o di cui è stato eseguito l'upgrade alla V2.3 o successive. La versione HyTrust CloudControl corrente installata è la 5.5.1.
 {:note}
 
 ## Specifiche tecniche per HyTrust CloudControl on IBM Cloud

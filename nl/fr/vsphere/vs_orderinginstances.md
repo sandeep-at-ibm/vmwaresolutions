@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-26"
+lastupdated: "2019-06-18"
+
+keywords: vSphere order cluster, order vSphere, order vSphere cluster
 
 subcollection: vmware-solutions
 
@@ -192,7 +194,6 @@ Le libellé du sous-domaine qui doit respecter les règles suivantes :
 *  Seuls les caractères alphanumériques et le tiret (-) sont autorisés.
 *  Le libellé de sous-domaine doit commencer et se terminer par un caractère alphanumérique.
 *  Le libellé de sous-domaine ne doit pas dépasser 10 caractères.
-*  Le libellé de sous-domaine doit être unique au sein de votre compte.
 
 ### Nom de domaine
 {: #vs_orderinginstances-domain-name}
@@ -246,7 +247,9 @@ Vous pouvez également choisir d'inclure la paire à haute disponibilité de dis
 ## Récapitulatif de la commande
 {: #vs_orderinginstances-order-summary}
 
-Selon vos configurations, le coût estimé est généré et affiché instantanément dans le panneau **Récapitulatif de la commande** sur la droite. Cliquez sur **Détails concernant la tarification** pour générer un document PDF contenant les détails de l'estimation.
+Selon la configuration que vous avez sélectionnée, le coût estimé est généré et affiché instantanément dans la section **Récapitulatif de la commande** sur le panneau de droite. Cliquez sur **Détails concernant la tarification** pour générer un document PDF contenant le récapitulatif des coûts pour les ressources {{site.data.keyword.vmwaresolutions_short}}. 
+
+Vous pouvez également ajouter les ressources mises à disposition à l’outil d’estimation {{site.data.keyword.cloud_notm}} en cliquant sur **Ajouter à l'estimation**. Cela est utile si vous souhaitez estimer le coût des ressources {{site.data.keyword.vmwaresolutions_short}} sélectionnées avec d'autres ressources {{site.data.keyword.cloud_notm}} que vous pourriez envisager d'acheter.
 
 ## Procédure de commande de clusters vSphere
 {: #vs_orderinginstances-procedure}
@@ -282,7 +285,7 @@ Selon vos configurations, le coût estimé est généré et affiché instantané
    Seuls les serveurs {{site.data.keyword.baremetal_short}} sont installés. Vous êtes responsable de l'installation et de la configuration des divers composants après déploiement du cluster, tels que VMware vCenter, VMware NSX, VMware vSAN.
    {:note}
 
-### Résultats
+### Que se passe-t-il après la commande de clusters vSphere ?
 {: #vs_orderinginstances-results}
 
 Si vous avez sauvegardé la configuration en tant que modèle, vous obtenez une notification sur la console qui confirme la réussite de la sauvegarde de la configuration et le modèle figure dans la liste **Configurations de cluster**.

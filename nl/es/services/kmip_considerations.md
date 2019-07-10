@@ -34,7 +34,7 @@ Las siguientes especificaciones se incluyen con el servicio KMIP for VMware on {
 ## Consideraciones al instalar KMIP for VMware on IBM Cloud
 {: #kmip_considerations-install}
 
-KMIP for VMware on {{site.data.keyword.cloud_notm}} utiliza el servicio IBM Key Protect para {{site.data.keyword.cloud_notm}} para crear, cifrar y descifrar claves de cifrado. Por lo tanto, antes de instalar KMIP para VMware en {{site.data.keyword.cloud_notm}}, asegúrese de que:
+KMIP for VMware on {{site.data.keyword.cloud_notm}} utiliza el servicio IBM Key Protect para {{site.data.keyword.cloud_notm}} para crear, cifrar y descifrar claves de cifrado. Por lo tanto, antes de instalar KMIP for VMware on {{site.data.keyword.cloud_notm}}, asegúrese de que:
 * Ha solicitado un servicio utilizable de Key Protect.
 * Se ha creado un ID de servicio de {{site.data.keyword.cloud_notm}} siguiendo los pasos indicados en [Creación de un ID de servicio](../../../iam/serviceid.html). Este ID de servicio se utiliza para acceder a la instancia del servicio Key Protect que ha creado.
 * Ha otorgado los siguientes niveles de acceso al ID de servicio:
@@ -52,7 +52,7 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} utiliza el servicio IBM Key 
 * Para utilizar el servicio con el cifrado de VMware vSAN, asegúrese de que la conectividad de red entre los hosts del vSAN de destino y el punto final del servicio KMIP for VMware on {{site.data.keyword.cloud_notm}} resulte funcional.
 * Cuando utiliza KMIP for VMware con cifrado de vSAN, la comprobación de estado de vSAN puede emitir avisos periódicos que indican que no se puede conectar al clúster de KMS desde uno de los hosts de vSphere. Estos avisos se producen porque el tiempo de espera de conexión de la comprobación de estado de vSAN se excede demasiado rápido. Puede pasar por alto estos avisos.
 
-## Consideraciones sobre la eliminación de KMIP para VMware on IBM Cloud
+## Consideraciones sobre la eliminación de KMIP for VMware on IBM Cloud
 {: #kmip_considerations-remove}
 
 El certificado público de VMware que proporcione durante la solicitud o la utilización del servicio se utiliza como el certificado cliente para comunicarse con la instancia de servicio. Cuando se elimine el servicio, también se eliminan todas las claves de cifrado creadas por esta instancia de servicio para el certificado público de VMware asociado.

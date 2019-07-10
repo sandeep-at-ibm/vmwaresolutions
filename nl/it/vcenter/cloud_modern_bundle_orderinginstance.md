@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-06"
+lastupdated: "2019-06-18"
+
+keywords: single-node trial, migration app modernization, order migration app modernization
 
 subcollection: vmware-solutions
 
@@ -68,10 +70,13 @@ del tuo ordine, fai clic sull'icona **Stampa** o **Download** nella parte superi
    3. Fai clic sul link o sui link dei termini che si applicano al tuo ordine e conferma di accettare questi termini prima di ordinare l'istanza.
    4. Fai clic su **Fornitura**.
 
-### Risultati
+### Risultati dopo l'ordinazione delle istanze Single-node Trial for Migration and App Modernization
 {: #cloud_modern_bundle_orderinginstance-results}
 
-La distribuzione dell'istanza inizia automaticamente e viene ordinata la chiave di attivazione del servizio HCX on {{site.data.keyword.cloud_notm}}.
+* La distribuzione dell'istanza inizia automaticamente e viene ordinata la chiave di attivazione del servizio HCX on {{site.data.keyword.cloud_notm}}.
+* Puoi verificare lo stato della distribuzione, inclusi gli eventuali problemi che potrebbero richiedere la tua attenzione, visualizzando la sezione **Cronologia distribuzione** dei dettagli dell'istanza.
+* Quando l'istanza viene distribuita correttamente, vengono installati i componenti descritti in [Specifiche tecniche per le istanze Single-node Trial for Migration and App Modernization](/docs/services/vmwaresolutions/services?topic=vmware-solutions-cloud_modern_bundle_overview#cloud_modern_bundle_overview-tech-specs).
+* Quando l'istanza è pronta per l'uso, lo stato dell'istanza viene modificato in **Pronto per l'utilizzo** e riceverai una notifica via e-mail.
 
 #### Processo di distribuzione per HCX on IBM Cloud
 {: #cloud_modern_bundle_orderinginstance-hcx-deploy-process}
@@ -135,7 +140,7 @@ Installa HCX Enterprise Manager in loco e configura la connessione alla tua ista
       3. Fai clic su **COPIA LINK** e utilizza quindi questo link per scaricare HCX Enterprise Client in un ambiente in loco con accesso al tuo ambiente vSphere in loco.
 3. Nel client web VMware vSphere, distribuisci HCX Enterprise Client come dispositivo virtuale HCX Manager nel tuo ambiente in loco. Attieniti alle istruzioni contenute nel manuale [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}.
 
-    Devi distribuire l'HCX Manager in loco su una rete privata e consentirgli l'accesso alla rete pubblica. Puoi utilizzare un gateway Edge NSX, Vyatta o simile per consentire l'accesso internet all'HCX Manager in loco. Se i gateway utilizzati per l'accesso alla rete privata e l'accesso alla rete pubblica sono diversi, si consiglia di utilizzare il gateway predefinito per consentire l'accesso alla rete pubblica e la **Console di gestione HCX Manager** per creare una rotta statica per l'accesso alla rete privata.  
+    Devi distribuire l'HCX Manager in loco su una rete privata e consentirgli l'accesso alla rete pubblica. Puoi utilizzare un gateway Edge NSX, Vyatta o simile per consentire l'accesso a internet all'HCX Manager in loco. Se i gateway utilizzati per l'accesso alla rete privata e l'accesso alla rete pubblica sono diversi, si consiglia di utilizzare il gateway predefinito per consentire l'accesso alla rete pubblica e la **Console di gestione HCX Manager** per creare una rotta statica per l'accesso alla rete privata.  
     {:note}
 4. Utilizza la chiave di attivazione in loco annotata nel passo 1 per attivare la tua VM HCX Enterprise Manager.
   1. Accedi alla tua VM HCX Enterprise Manager in loco utilizzando le credenziali specificate durante la distribuzione di OVA.
@@ -189,3 +194,4 @@ Completa la seguente procedura per eliminare un'istanza Single-node Trial for Mi
 * [Apri un ticket per IBM Cloud privato](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
 * [Risorse VMware HCX](https://hcx.vmware.com/#/docs){:new_window}
 * [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}
+* [Annullamento dei server virtuali](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)

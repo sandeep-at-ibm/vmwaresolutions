@@ -1,8 +1,12 @@
 ---
 
 copyright:
+
   years: 2016, 2019
-lastupdated: "2019-05-13"
+
+lastupdated: "2019-05-31"
+
+keywords: user IDs vCenter, PSC user, user ID service
 
 subcollection: vmware-solutions
 
@@ -17,7 +21,7 @@ subcollection: vmware-solutions
 {: #audit_user_ids}
 
 {{site.data.keyword.vmwaresolutions_short}} mantiene un conjunto de usuarios en la cuenta que utiliza la automatización de
-{{site.data.keyword.cloud_notm}} cuando realiza operaciones como añadir hosts, clústeres o almacenamiento a la instancia de VMware. Revise las secciones siguientes para ver los ID de usuario de automatización de {{site.data.keyword.cloud_notm}}.
+{{site.data.keyword.cloud_notm}} cuando realiza operaciones como añadir hosts, clústeres o almacenamiento a la instancia de VMware. Los usuarios de su cuenta también se pueden utilizar para la instalación y configuración de servicios mediante la automatización de servicios de {{site.data.keyword.cloud_notm}}. Revise las secciones siguientes para ver los ID de usuario de automatización de {{site.data.keyword.cloud_notm}}.
 
 Las operaciones de la instancia de VMware fallarán si los ID de usuario de IBM se suprimen, se inhabilitan, o si se cambian sus contraseñas.
 {:important}
@@ -68,6 +72,29 @@ Tabla 4. ID de usuario de Active Directory
 |:---------|:------------- |:------------|
 | IBM      | automation    | Se utiliza para añadir un host, añadir una máquina virtual para el servicio y configurar entradas DNS y Active Directory. |
 | Cliente | Administrador | Creado solo para uso del cliente. |
+
+## Identificadores de usuarios de servicio
+{: #audit_user_ids-services}
+
+Tabla 5. Identificadores de usuarios de servicio
+
+| ID de usuario                                    | Descripción |
+|:-------------------------------------------|:----------- |
+| prod-BigIP-``ID_dinámico``-@``nombre del dominio`` | Se utiliza para la instalación y configuración del servicio F5 on {{site.data.keyword.cloud_notm}}. |
+| prod-Caveonix-``ID_dinámico``-@``nombre del dominio`` | Se utiliza para la instalación y configuración del servicio Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}. |
+| prod-Fortigate-``ID_dinámico``-@``nombre del dominio`` | Se utiliza para la instalación y configuración del servicio FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}. |
+| prod-FortigateVM-``ID_dinámico``-@``nombre del dominio`` | Se utiliza para la instalación y configuración del servicio FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}. |
+| prod-HyTrustCC-``ID_5_letras``-@``nombre del dominio`` | Se utiliza para la instalación y configuración del servicio HyTrust CloudControl on {{site.data.keyword.cloud_notm}}. |
+| prod-HyTrustDC-``ID_5_letras``-@``nombre del dominio`` | Se utiliza para la instalación y configuración del servicio HyTrust DataControl on {{site.data.keyword.cloud_notm}}. |
+| prod-HyTrustKC-``ID_5_letras``-@``nombre del dominio`` | Se utiliza para la instalación y configuración del servicio HyTrust KeyControl on {{site.data.keyword.cloud_notm}}. |
+| prod-KMIPAdapter-``ID_dinámico``-@``nombre del dominio`` | Se utiliza para la instalación y configuración del servicio KMIP for VMware on {{site.data.keyword.cloud_notm}}. |
+| prod-ICP-``ID_dinámico``-@``nombre del dominio`` | Se utiliza para la instalación y configuración del servicio {{site.data.keyword.cloud_notm}} Private Hosted. |
+| prod-SPPlus-``ID_dinámico``-@``nombre del dominio`` | Se utiliza para la instalación y configuración del servicio IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}. |
+| prod-Veeam-``ID_dinámico``-@``nombre del dominio`` | Se utiliza para la instalación y configuración del servicio Veeam on {{site.data.keyword.cloud_notm}}. |
+| prod-HCX-``ID_dinámico``-@``nombre del dominio`` | Se utiliza para la instalación y configuración del servicio VMware HCX on {{site.data.keyword.cloud_notm}}. |
+| prod-Zerto-``ID_dinámico``-@``nombre del dominio`` | Se utiliza para la instalación y configuración del servicio Zerto on {{site.data.keyword.cloud_notm}}. |
+
+Los ID dinámicos son de ocho a diez letras de longitud. {:note}
 
 ## Enlaces relacionados
 {: #audit_user_ids-related}

@@ -6,6 +6,8 @@ copyright:
 
 lastupdated: "2019-05-03"
 
+keywords: release notes, what's new, version 3.0
+
 subcollection: vmware-solutions
 
 
@@ -112,7 +114,7 @@ Zerto on {{site.data.keyword.cloud_notm}} をプライベート専用のイン�
 
 * {{site.data.keyword.vmwaresolutions_short}} コンポーネントを VMware vSphere 6.7 にアップグレードするために役立つ資料が追加されました。 {{site.data.keyword.vmwaresolutions_short}} の自動化機能を今後も利用するためには、このアップグレードが必要です。 詳しくは、[VMware vSphere 6.5 から 6.7 への vCenter Server vSphere ソフトウェアのアップグレード](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_vsphere_upgrade#vc_vsphere_upgrade)を参照してください。
 * {{site.data.keyword.cloud_notm}} の自動化機能で使用するために {{site.data.keyword.vmwaresolutions_short}} が維持するユーザー ID を記載した参照資料が追加されました。 インスタンスの履歴ログに表示される可能性があるメッセージも参照用に記載しています。 詳しくは、[IBM ユーザー ID](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_user_ids) および[インスタンスの履歴メッセージ](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_messages)を参照してください。
-* IBM Cloud インフラストラクチャー・アカウントに必要な権限を記載した表に、**リブート/コントロール**権限が追加されました。 詳しくは、[{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの権限](/docs/services/vmwaresolutions/services?topic=vmware-solutions-slaccountrequirement#slaccountrequirement-permissions)を参照してください。
+* IBM Cloud インフラストラクチャー・アカウントに必要な権限を記載した表に、**リブート/コントロール**権限が追加されました。 詳しくは、[{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの権限](/docs/services/vmwaresolutions/services?topic=vmware-solutions-cloud-infra-acct-req#cloud-infra-acct-req-permissions)を参照してください。
 * 以下の API に関する新しい参照資料が追加されました。 詳しくは、[API リファレンス](https://cloud.ibm.com/apidocs/vmware-solutions){:new_window}を参照してください。
   * 指定した VMware vCenter Server インスタンスのすべての履歴メッセージをリスト表示する
   * 指定したクラスターに共有ストレージを追加する

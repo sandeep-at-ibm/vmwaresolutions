@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-06-13"
+
+keywords: Mission Critical VMware, Mission Critical, tech specs Mission Critical
 
 subcollection: vmware-solutions
 
@@ -18,14 +20,14 @@ Mission Critical VMware on {{site.data.keyword.cloud}}는 다중 구역 클라�
 
 이 클라우드 아키텍처를 사용하면, 고객들은 대부분의 VMware 클라이언트가 온프레미스 환경 또는 경쟁 클라우드 플랫폼에서 달성할 수 있는 것보다 더 높은 가용성 및 장애 복구 성공률을 달성할 수 있습니다.
 
-이 아키텍처는 99.99%의 목표 집계 가용성으로 비클라우드 고유 애플리케이션을 포함한 기존의 미션 크리티컬, 레거시 워크로드를 지원합니다. IBM Cloud 다중 구역 지역은 사이트 가동 중단이 발생하는 경우에도 미션 크리티컬 워크로드를 온라인 상태로 유지하도록 설계되었습니다. 장애가 발생한 사이트의 워크로드는 거의 실시간으로 자동으로 다시 시작되며 인접 사이트의 워크로드는 사용 가능한 온라인 상태로 유지됩니다.
+이 아키텍처는 99.99%의 목표 집계 가용성으로 비클라우드 고유 애플리케이션을 포함한 기존의 미션 크리티컬, 레거시 워크로드를 지원합니다. IBM Cloud 다중 구역 지역(MZR)은 사이트 가동 중단이 발생하는 경우에도 미션 크리티컬 워크로드를 온라인 상태로 유지하도록 설계되었습니다. 장애가 발생한 사이트의 워크로드는 거의 실시간으로 자동으로 다시 시작되며 인접 사이트의 워크로드는 사용 가능한 온라인 상태로 유지됩니다.
 
 이 아키텍처에는 클라우드 기반 애플리케이션의 모니터링 및 문제점 해결을 위해 구축된 네트워크, 스토리지, 복원 및 기타 도구를 포함하여 다양한 엔터프라이즈 서비스가 포함됩니다. 또한 서비스를 폭넓게 사용할 수 있도록 {{site.data.keyword.cloud_notm}}에 구축된 IBM Services Platform with Watson과 이 아키텍처를 통합할 수 있습니다. 클라이언트는 플랫폼의 코그너티브 기능을 사용하여 지속적인 운영을 유지하는 데 도움이 되도록 새로운 비즈니스 인사이트를 위해 보다 효과적으로 데이터를 마이닝할 수 있습니다.
 
 ## Mission Critical VMware on IBM Cloud의 기술 스펙
 {: #mcv_overview-specs}
 
-Mission Critical VMware on {{site.data.keyword.cloud_notm}} 아키텍처는 고객 워크로드에 대한 자동화된 장애 복구 기능을 제공하는 엔드-투-엔드 참조 아키텍처입니다. 이 제품은 다음 컴포넌트를 포함하는 IBM 관리 서비스와 함께 {{site.data.keyword.cloud_notm}} 다중 구역 지역을 사용합니다.
+Mission Critical VMware on {{site.data.keyword.cloud_notm}} 아키텍처는 고객 워크로드에 대한 자동화된 장애 복구 기능을 제공하는 엔드-투-엔드 참조 아키텍처입니다. 이 제품은 다음 컴포넌트를 포함하는 IBM 관리 서비스와 함께 {{site.data.keyword.cloud_notm}} 다중 구역 지역(MZR)을 사용합니다.
 
 * 컴퓨팅 아키텍처(VMware vSphere)
 * 네트워크 아키텍처(현재는 NSX-V)

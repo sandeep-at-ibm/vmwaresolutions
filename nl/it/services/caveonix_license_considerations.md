@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-10"
+lastupdated: "2019-06-13"
+
+keywords: Caveonix license, Caveonix license issue, delete Caveonix license
 
 subcollection: vmware-solutions
 
@@ -25,7 +27,7 @@ Esamina le seguenti considerazioni e i seguenti problemi noti correlati alle lic
 
 Se stai utilizzando Mozilla Firefox come tuo browser, le date di inizio e fine della licenza potrebbero essere visualizzate senza alcun valore nella console di Caveonix RiskForesight. Per risolvere il problema, visualizza le informazioni sulla licenza in un altro browser, come ad esempio Google Chrome.
 
-Se il solo browser che puoi utilizzare è Firefox, contatta il [supporto di Caveonix](https://www.caveonix.com/support/){:new_window} per assistenza.
+Se stai riscontrando questo problema e il solo browser che puoi utilizzare è Firefox, contatta il [supporto di Caveonix](https://www.caveonix.com/support/){:new_window} per assistenza.
 {:note}
 
 ## Considerazioni quando elimini le licenze

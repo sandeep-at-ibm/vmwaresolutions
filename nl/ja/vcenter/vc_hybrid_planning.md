@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-04"
+lastupdated: "2019-05-31"
+
+keywords: planning vCenter Server Hybridity, data center hybridity, vCenter Server Hybridity
 
 subcollection: vmware-solutions
 
@@ -19,7 +21,7 @@ Hybridity Bundle インスタンスを使用して、VMware vCenter Server on {{
 ## IBM Cloud アカウントの要件
 {: #vc_hybrid_planning-account-req}
 
-使用する {{site.data.keyword.cloud_notm}} アカウントは、特定の要件を満たしている必要があります。 詳しくは、[{{site.data.keyword.cloud_notm}} アカウントの要件](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)を参照してください。
+使用する {{site.data.keyword.cloud_notm}} アカウントは、特定の要件を満たしている必要があります。 詳しくは、[{{site.data.keyword.cloud_notm}} アカウントの要件](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req)を参照してください。
 
 ## IBM Cloud データ・センターの使用可否
 {: #vc_hybrid_planning-dc-availability}

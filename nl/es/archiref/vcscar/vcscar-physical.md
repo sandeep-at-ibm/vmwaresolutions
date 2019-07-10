@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 2. Otro pod {{site.data.keyword.cloud_notm}} del mismo centro de datos.
 3. Otra geografía y otro pod {{site.data.keyword.cloud_notm}} del mismo centro de datos.
 
-Los productos {{site.data.keyword.icpfull_notm}} y Cloud Automation Manager (CAM) se pueden desplegar manualmente en la plataforma de virtualización local, lo que permite gestionar la nube desde ubicaciones locales. Como alternativa, {{site.data.keyword.icpfull_notm}} y CAM se ofrecen como extensiones de servicio de un despliegue de vCenter Server on {{site.data.keyword.cloud_notm}} nuevo o existente, mediante automatización, lo que permite gestionar la nube desde {{site.data.keyword.cloud_notm}}.
+Los productos {{site.data.keyword.icpfull_notm}} y Cloud Automation Manager (CAM) se pueden desplegar manualmente en la plataforma de virtualización local, lo que permite gestionar la nube desde ubicaciones locales. Como alternativa, {{site.data.keyword.icpfull_notm}} y CAM se ofrecen como extensiones de servicio de un despliegue de VMware vCenter Server on {{site.data.keyword.cloud_notm}} nuevo o existente, mediante automatización, lo que permite gestionar la nube desde {{site.data.keyword.cloud_notm}}.
 
 {{site.data.keyword.icpfull_notm}} es una plataforma de aplicaciones para desarrollar y gestionar aplicaciones locales contenerizadas. Es un entorno integrado para gestionar contenedores que incluye el coordinador de contenedores Kubernetes,
 un repositorio de imágenes privadas, una consola de gestión e infraestructuras de supervisión.

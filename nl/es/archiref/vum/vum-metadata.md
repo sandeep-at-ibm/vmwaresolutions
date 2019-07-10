@@ -14,7 +14,7 @@ subcollection: vmware-solutions
 #	Recopilación de los metadatos
 {: #vum-metadata}
 
-VUM descarga metadatos sobre las actualizaciones, parches o extensiones mediante un proceso automático predefinido que puede modificar. A intervalos regulares configurables, VUM se pone en contacto con VMware o con orígenes de terceros, para recopilar los metadatos más recientes sobre actualizaciones, parches o extensiones disponibles. Sin embargo, los valores predeterminados de VMware son aceptables para su uso en la instancia de VMware vCenter Server en {{site.data.keyword.cloud}}. Puede cambiarlos según sea necesario para ajustarlos a los requisitos de la empresa.
+VUM descarga metadatos sobre las actualizaciones, parches o extensiones mediante un proceso automático predefinido que puede modificar. A intervalos regulares configurables, VUM se pone en contacto con VMware o con orígenes de terceros, para recopilar los metadatos más recientes sobre actualizaciones, parches o extensiones disponibles. Sin embargo, los valores predeterminados de VMware son aceptables para su uso en la instancia de VMware vCenter Server on {{site.data.keyword.cloud}}. Puede cambiarlos según sea necesario para ajustarlos a los requisitos de la empresa.
 
 VUM muestra las líneas base gestionadas por el sistema que se generan mediante vSAN. Las líneas base gestionadas por el sistema actualizan su contenido periódicamente de forma automática, lo que requiere que VUM tenga acceso constante a Internet. Las líneas base del sistema vSAN normalmente se renuevan cada 24 horas.
 

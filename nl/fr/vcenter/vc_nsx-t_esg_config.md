@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-21"
+lastupdated: "2019-05-27"
+
+keywords: vCenter Server network config, network configuration NSX-T, manage NSX-T ESG
 
 subcollection: vmware-solutions
 

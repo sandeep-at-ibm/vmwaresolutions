@@ -18,7 +18,7 @@ Dopo il completamento della distribuzione automatizzata, puoi eseguire il ridime
 
 È previsto che questo modello di distribuzione serva fino a 500 asset con un massimo di 30 giorni di indicizzazione di dati.
 
-Seleziona i successivi indirizzi IP disponibili dalla subnet portatile privata {{site.data.keyword.cloud}}. Configura i nomi FQDN in ADDNS.
+Seleziona i successivi indirizzi IP disponibili dalla sottorete portatile privata {{site.data.keyword.cloud}}. Configura i nomi FQDN in ADDNS.
 
 Il dimensionamento delle VM è il seguente:
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2018-11-05"
+lastupdated: "2019-01-23"
 
 ---
 
@@ -16,12 +16,12 @@ lastupdated: "2018-11-05"
 
 Con VMware Federal on {{site.data.keyword.cloud}}, puede solicitar una instancia base de vCenter Server además de proporcionar a las agencias gubernamentales federales de EE.UU. la opción de proteger las instancias del vCenter Server desplegadas. Cuando protege una instancia desplegada, la información confidencial que se almacena sobre la instancia se elimina. Además, la conexión abierta para el acceso a instancias se elimina, lo que significa que las funciones de gestión, como añadir y eliminar hosts y clústeres, ya no están disponibles. Después de seleccionar la opción segura, la única función disponible es la supresión de la instancia.
 
-Para obtener más información sobre vCenter Server on {{site.data.keyword.cloud_notm}} y la arquitectura de vCenter Server, consulte [Visión general de vCenter Server](vc_vcenterserveroverview.html).
+Para obtener más información sobre vCenter Server on {{site.data.keyword.cloud_notm}} y la arquitectura de vCenter Server, consulte [Visión general de vCenter Server](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html).
 
 VMware Federal on {{site.data.keyword.cloud_notm}} solo ofrece un subconjunto de las ofertas de vCenter Server. No se da soporte a la configuración de varios sitios, a traer su propia licencia (BYOL) ni a la opción de solicitar servicios complementarios.
 {:note}
 
-## Especificaciones técnicas para las instancias de VMware Federal en IBM Cloud
+## Especificaciones técnicas para las instancias de VMware Federal on IBM Cloud
 
 Se incluyen los siguientes componentes:
 
@@ -43,13 +43,13 @@ Se solicitan los siguientes componentes del sistema de redes:
 *  Tres VLAN (LAN virtuales): una VLAN pública y dos VLAN privadas
 *  Se despliega una VXLAN (LAN extensible virtual) con DLR (direccionador lógico distribuido) para una potencial comunicación este-oeste entre cargas de trabajo locales conectadas a redes de la capa 2 (L2). La VXLAN se despliega como una topología de direccionamiento de ejemplo, que puede modificar o eliminar o a la que puede añadir componentes. También puede añadir zonas de seguridad adjuntando más VXLAN a las nuevas interfaces lógicas del DLR.
 *  Dos VMware NSX Edge Services Gateways:
-  * Una Edge Services Gateway (ESG) de NSX de VMware de servicios de gestión segura para el tráfico de gestión de HTTPS saliente, desplegado por IBM como parte de la topología del sistema de redes de gestión. Las máquinas virtuales de gestión de IBM utilizan esta ESG para comunicarse con componentes externos específicos de gestión de IBM que están relacionados con la automatización. Para obtener más información, consulte [Configuración de la red para que utilice la ESG gestionada por el cliente](../vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
+  * Una Edge Services Gateway (ESG) de NSX de VMware de servicios de gestión segura para el tráfico de gestión de HTTPS saliente, desplegado por IBM como parte de la topología del sistema de redes de gestión. Las máquinas virtuales de gestión de IBM utilizan esta ESG para comunicarse con componentes externos específicos de gestión de IBM que están relacionados con la automatización. Para obtener más información, consulte [Configuración de la red para que utilice la ESG gestionada por el cliente](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
     El usuario no puede acceder ni utilizar esta ESG. Si lo modifica, es posible que no pueda gestionar la instancia de vCenter Server desde la consola de {{site.data.keyword.vmwaresolutions_short}}. Además, el uso de un cortafuegos o la inhabilitación de las comunicaciones de ESG a los componentes de gestión externa de IBM hará que {{site.data.keyword.vmwaresolutions_short}} se convierta en inutilizable.
     {:important}
-  * Una Edge Services Gateway de NSX de VMware gestionada por el cliente para el tráfico de salida y de entrada de carga de trabajo HTTPS, que IBM despliega como plantilla que puede modificar para proporcionar acceso VPN o acceso público. Para obtener más información, consulte [¿Representa NSX Edge gestionado por el cliente un riesgo para la seguridad?](../vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)
+  * Una Edge Services Gateway de NSX de VMware gestionada por el cliente para el tráfico de salida y de entrada de carga de trabajo HTTPS, que IBM despliega como plantilla que puede modificar para proporcionar acceso VPN o acceso público. Para obtener más información, consulte [¿Representa NSX Edge gestionado por el cliente un riesgo para la seguridad?](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-)
 
-  VMware NSX Edge Services Gateway (ESG) para el tráfico de gestión HTTPS de salida se elimina como parte de la acción para proteger la instancia de VMware Federal desplegada. Para obtener más información, consulte [Protección de instancias de VMware Federal](vc_fed_securinginstance.html).
+  VMware NSX Edge Services Gateway (ESG) para el tráfico de gestión HTTPS de salida se elimina como parte de la acción para proteger la instancia de VMware Federal desplegada. Para obtener más información, consulte [Protección de instancias de VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_securinginstance.html).
   {:note}
 
 ### Instancias de servidor virtual
@@ -88,13 +88,13 @@ Si elige la opción NFS, se solicita una compartición de archivos de 2 TB, 4 IO
 * VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.4
 * (Para clústeres vSAN) VMware vSAN Advanced o Enterprise 6.6
 
-## Especificaciones técnicas para los nodos de expansión de VMware Federal en IBM Cloud
+## Especificaciones técnicas para los nodos de expansión de VMware Federal on IBM Cloud
 
 Cada nodo de expansión de vCenter Server desplegará e incurrirá en cargos por los siguientes componentes en su cuenta de {{site.data.keyword.cloud_notm}}.
 
 ### Hardware para nodos de expansión
 
-Un servidor nativo con la configuración presentada en [Especificaciones técnicas para instancias de VMware Federal on {{site.data.keyword.cloud_notm}}](vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances).
+Un servidor nativo con la configuración presentada en [Especificaciones técnicas para instancias de VMware Federal on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances).
 
 ### Licencias y tarifas correspondientes a nodos de expansión
 
@@ -114,9 +114,9 @@ Solo debe gestionar los componentes de {{site.data.keyword.vmwaresolutions_short
 
 ### Enlaces relacionados
 
-* [Requisitos y planificación de instancias de VMware Federal](vc_fed_planning.html)
-* [Solicitud de instancias de VMware Federal](vc_fed_orderinginstance.html)
-* [Adición, visualización y supresión de clústeres para instancias de VMware Federal](fed_addviewdeleteclusters.html)
-* [Ampliación y reducción de la capacidad para instancias de VMware Federal](vc_fed_addingremovingservers.html)
-* [Protección de instancias de VMware Federal](vc_fed_securinginstance.html)
+* [Requisitos y planificación de instancias de VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_planning.html)
+* [Solicitud de instancias de VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_orderinginstance.html)
+* [Adición, visualización y supresión de clústeres para instancias de VMware Federal](/docs/services/vmwaresolutions/vcenter/fed_addviewdeleteclusters.html)
+* [Ampliación y reducción de la capacidad para instancias de VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_addingremovingservers.html)
+* [Protección de instancias de VMware Federal](/docs/services/vmwaresolutions/vcenter/vc_fed_securinginstance.html)
 * [Almacenamiento en bloque y de archivos de {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage){:new_window}

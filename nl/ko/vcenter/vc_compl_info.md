@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-02"
+lastupdated: "2019-06-17"
+
+keywords: vCenter Server compliance, compliance info, vCenter Server policy
 
 subcollection: vmware-solutions
 
@@ -50,6 +52,21 @@ NSX-T 오퍼링을 사용하는 {{site.data.keyword.cloud_notm}}의 VMware vCent
 {: #vc_compl_info-personal-info-and-regulated-data}
 
 이 클라우드 서비스는 개인 정보 또는 민감한 개인 정보 등, 규제 대상인 컨텐츠에 대한 특정 보안 요구사항에 맞게 설계되지 않았습니다. 고객은 이 클라우드 서비스와 관련하여 고객이 사용하는 컨텐츠 유형에 있어서, 클라우드 서비스가 고객의 필요를 충족하는지 판단해야 합니다.
+
+## 정책 구성
+{: #vc_compl_info-default-policy-config}
+
+vCenter Server 기본 인스턴스에 대해 생성된 vCenter 비밀번호는 이제 15자입니다. 이전에는 생성된 비밀번호가 8자(vCenter 기본값)였습니다. 
+
+표 1. 새 기본 인스턴스에 대한 vCenter 정책 구성
+
+|정책 | V3.1 이상 | V3.0 이전  |
+|:------------- |:------------------------------ |:------------- |
+| vCenter 비밀번호 정책 | 최소 15자 | 최소 8자(vCenter 기본값) |
+| vCenter 잠금 정책 | 최대 3회의 로그인 시도 실패 | 최대 5회의 로그인 시도 실패(vCenter 기본값) |
+| vCenter 잠금 정책 | 900초의 로그인 실패 간격 | 180초의 로그인 실패 간격(vCenter 기본값) |
+
+NSX Server 기본 인스턴스에 대해 생성된 NSX Manager 비밀번호는 이제 15자입니다. 이전에는 생성된 비밀번호가 8자였습니다. 
 
 ## 고객 인스턴스 액세스에 대한 정책
 {: #vc_compl_info-policy-for-access-client-inst}

@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-01"
+lastupdated: "2019-06-13"
+
+keywords: IBM Cloud Private, ICP, tech specs ICP
 
 subcollection: vmware-solutions
 
@@ -79,14 +81,14 @@ Tabella 3. Requisiti della risorsa di {{site.data.keyword.cloud_notm}} Private H
 
 Le seguenti formule vengono utilizzate per calcolare i requisiti di spazio di IBM Cloud Private e le spese generali di gestione.
 
-#### Formula 1
+#### Formula per calcolare il numero di core disponibili
 {: #icp_overview-formulas-1}
 
 `AvailableCores = [HostCoreCount - HostOverheadCores - (HostVSanOverheadCorePercentage * HostCoreCount)] * (HostCount - vSphereHAHostTolerance) - MgmtOverheadCores`
 
 Tabella 4. Descrizione delle variabili nella formula 1
 
-| Variabili	| Descrizione |	Unità |	Esempio vSAN | Esempio NFS |
+| Variabili | Descrizione | Unità | Esempio vSAN | Esempio NFS |
 |:--------- |:----------- |:---- |:------------- |:----------- |
 | AvailableCores | Il numero di core effettivi disponibili per i carichi di lavoro e i servizi nell'ambiente | Core | 38 | 43 |
 | HostCount | Il numero di host nel cluster predefinito | Host | 4 | 4 |
@@ -96,24 +98,24 @@ Tabella 4. Descrizione delle variabili nella formula 1
 | vSphereHAHostTolerance | Il numero di host da tollerare nella configurazione vSphere HA, che equivale a un host |	Host	 | 1 | 1 |
 | HostVsanOverheadCorePercentage | La percentuale di core di un host utilizzata da vSAN, che è uguale al 10% o al 0% se l'host non è vsan | % | 10% | 0% |
 
-#### Formula 2
+#### Formula per calcolare la memoria disponibile
 {: #icp_overview-formulas-2}
 
 `AvailableMemory = [HostMemory - HostOverheadMemory - HostVsanOverheadMemory - (HostVsanOverheadMemoryDiskPercentage * HostVsanCapacityDiskSize)] * (HostCount - vSphereHAHostTolerance) - MgmtOverheadMemory`
 
 Tabella 5. Descrizione delle variabili nella formula 2
 
-| Variabili	| Descrizione |	Unità |	Esempio vSAN | Esempio NFS |
+| Variabili | Descrizione | Unità | Esempio vSAN | Esempio NFS |
 |:--------- |:----------- |:---- |:------------- |:----------- |
-| AvailableMemory	| Il numero di GB di memoria disponibili per i carichi di lavoro e i servizi nell'ambiente | GB | 	693	| 860 |
-| HostCount	| Il numero di host nel cluster predefinito | Host  | 6	| 6 |
-| HostMemory |	Il numero di GB non elaborati disponibili in ogni host nel cluster predefinito |	GB	| 192 |	192 |
-| HostVsanCapacityDiskSize | Il numero di GB di una capacità di ogni disco SSD di capacità vSAN su questo host, che è uguale a 960, 1.946 o 3.891, o uguale a 0 GB se non VSAN | GB |	960 | 0 |
-| HostOverheadMemory |	Il numero di GB di memoria riservati dal server ESXi come sovraccarico, che equivale a 4,6 GB |	GB	| 4.6 |	4.6 |
-| MgmtOverheadMemory |	Il numero di GB di memoria riservati dai componenti di gestione vCenter Server (vCenter Server, PSC, AD/DNS, Edge), che corrisponde a 77 GB | GB | 77 | 77 |
+| AvailableMemory | Il numero di GB di memoria disponibili per i carichi di lavoro e i servizi nell'ambiente | GB | 693 | 860 |
+| HostCount | Il numero di host nel cluster predefinito | Host  | 6 | 6 |
+| HostMemory | Il numero di GB non elaborati disponibili in ogni host nel cluster predefinito | GB | 192 | 192 |
+| HostVsanCapacityDiskSize | Il numero di GB di una capacità di ogni disco SSD di capacità vSAN su questo host, che è uguale a 960, 1.946 o 3.891, o uguale a 0 GB se non VSAN | GB | 960 | 0 |
+| HostOverheadMemory | Il numero di GB di memoria riservati dal server ESXi come sovraccarico, che equivale a 4,6 GB | GB | 4.6 | 4.6 |
+| MgmtOverheadMemory | Il numero di GB di memoria riservati dai componenti di gestione vCenter Server (vCenter Server, PSC, AD/DNS, Edge), che corrisponde a 77 GB | GB | 77 | 77 |
 | vSphereHAHostTolerance | Il numero di host da tollerare nella configurazione vSphere HA, che equivale a un host | Host	| 1 | 1 |
-| HostVsanOverheadMemoryDiskPercentage | Il numero di GB di memoria riservati dalla gestione vSAN (rappresentata come percentuale di uno dei dischi vSAN di capacità), che equivale al 2,75% |	% | 2.75%	| 2.75% |
-| HostVsanOverheadMemory | Il numero di GB di memoria riservati dalla gestione vSAN indipendentemente dallo spazio disco, che è equivalente a 7 GB o a 0 GB se non VSAN	| GB |  7	| 0 |
+| HostVsanOverheadMemoryDiskPercentage | Il numero di GB di memoria riservati dalla gestione vSAN (rappresentata come percentuale di uno dei dischi vSAN di capacità), che equivale al 2,75% | % | 2.75% | 2.75% |
+| HostVsanOverheadMemory | Il numero di GB di memoria riservati dalla gestione vSAN indipendentemente dallo spazio disco, che è equivalente a 7 GB o a 0 GB se non VSAN | GB |  7 | 0 |
 
 ## Considerazioni quando installi IBM Cloud Private Hosted
 {: #icp_overview-install}

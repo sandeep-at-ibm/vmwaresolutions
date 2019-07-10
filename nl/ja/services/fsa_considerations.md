@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-04"
+lastupdated: "2019-06-13"
+
+keywords: FortiGate security, FortiGate Sirtual Appliance, tech specs FortiGate
 
 subcollection: vmware-solutions
 

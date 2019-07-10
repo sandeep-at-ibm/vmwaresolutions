@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-05-22"
 
 subcollection: vmware-solutions
 
@@ -44,10 +44,10 @@ subcollection: vmware-solutions
 
 以下の手順を実行して、{{site.data.keyword.cloud_notm}} ネットワークおよび VMware 管理コンポーネントへのアクセスを管理し、{{site.data.keyword.cloud_notm}} ネットワーク・トポロジーを計画します。
 
-- [{{site.data.keyword.cloud_notm}} VPN](https://www.softlayer.com/vpn-access) または [{{site.data.keyword.cloud_notm}}Direct-Link 接続](https://www.ibm.com/cloud/direct-link)を使用してインスタンス管理エンドポイントにアクセスします。
-- インスタンス内からのパブリック・ネットワーク接続のための戦略を策定します。 選択肢として、サンプルのカスタマー向け VMware NSX Edge Services Gateway (ESG)、ゲートウェイ・アプライアンス (Vyatta、FortiGate など)、{{site.data.keyword.cloud_notm}} ネットワークまたは DirectLink を介してアクセスする独自のネットワークのいずれかにデプロイされたプロキシー・サーバーがあります。
-- [{{site.data.keyword.cloud_notm}} ポータブル IP アドレス](/docs/infrastructure/subnets?topic=subnets-getting-started-subnets-ips#getting-started-subnets-ips)を使用して {{site.data.keyword.cloud_notm}} VLAN にワークロードをデプロイするか、または[独自の IP アドレスを使用して NSX 論理スイッチ (VXLAN)](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_overview) にデプロイするのかを計画します。 NSX ソフトウェア定義ネットワーク (SDN) を使用すると、{{site.data.keyword.cloud_notm}} 内でワークロード・ネットワークを非常に柔軟に管理および保護することができます。
-- NSX ESG、[IBM Cloud Vyatta](https://cloud.ibm.com/catalog/infrastructure/virtual-router-appliance)、および DirectLink ピアリングを使用して、ワークロードへの接続の計画 (ネットワーク・アドレス変換、仮想プライベート・ネットワーク、ルーティング) を立てます。
+- [{{site.data.keyword.cloud_notm}} VPN](https://www.softlayer.com/vpn-access) または [{{site.data.keyword.cloud_notm}}Direct Link 接続](https://www.ibm.com/cloud/direct-link)を使用してインスタンス管理エンドポイントにアクセスします。
+- インスタンス内からのパブリック・ネットワーク接続のための戦略を策定します。 選択肢として、サンプルのカスタマー向け VMware NSX Edge Services Gateway (ESG)、ゲートウェイ・アプライアンス (Vyatta、FortiGate など)、{{site.data.keyword.cloud_notm}} ネットワークまたは Direct Link を介してアクセスする独自のネットワークのいずれかにデプロイされたプロキシー・サーバーがあります。
+- [{{site.data.keyword.cloud_notm}} ポータブル IP アドレス](/docs/infrastructure/subnets?topic=subnets-getting-started)を使用して {{site.data.keyword.cloud_notm}} VLAN にワークロードをデプロイするか、または[独自の IP アドレスを使用して NSX 論理スイッチ (VXLAN)](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_overview) にデプロイするのかを計画します。 NSX ソフトウェア定義ネットワーク (SDN) を使用すると、{{site.data.keyword.cloud_notm}} 内でワークロード・ネットワークを非常に柔軟に管理および保護することができます。
+- NSX ESG、[IBM Cloud Vyatta](https://cloud.ibm.com/catalog/infrastructure/virtual-router-appliance)、および Direct Link ピアリングを使用して、ワークロードへの接続の計画 (ネットワーク・アドレス変換、仮想プライベート・ネットワーク、ルーティング) を立てます。
 - Cross-vCenter NSX を実装する場合は、ローカル・ワークロードをデプロイする前に、ローカル・セグメントの ID 範囲が重複していないことを確認してください。
 
 ## セキュリティーの計画と強化

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-11"
 
 subcollection: vmware-solutions
 
@@ -24,7 +24,7 @@ L'infrastruttura fisica è formata dai seguenti componenti:
   <dt class="dt dlterm">Calcolo fisico</dt>
   <dd class="dd">Il calcolo fisico fornisce l'elaborazione fisica e la memoria che viene utilizzata dall'infrastruttura di virtualizzazione. Per questa progettazione, i componenti di calcolo sono forniti da {{site.data.keyword.baremetal_long}} e sono elencati nella [Guida alla compatibilità hardware per VMware](https://www.vmware.com/resources/compatibility/search.php).</dd>
   <dt class="dt dlterm">Archiviazione fisica</dt>
-  <dd class="dd">L'archiviazione fisica fornisce la capacità di archiviazione non elaborata utilizzata dall'infrastruttura di virtualizzazione. I componenti di archiviazione sono forniti da {{site.data.keyword.baremetal_short}} o tramite array NAS (Network Attached Storage) condiviso che utilizza NFSv3 o iSCSI.</dd>
+  <dd class="dd">L'archiviazione fisica fornisce la capacità di archiviazione non elaborata utilizzata dall'infrastruttura di virtualizzazione. I componenti di archiviazione sono forniti da {{site.data.keyword.baremetal_short}} o tramite array NAS (Network Attached Storage) condiviso che utilizza NFS v3<!-- or iSCSI -->.</dd>
   <dt class="dt dlterm">Rete fisica</dt>
   <dd class="dd">La rete fisica fornisce la connettività di rete nell'ambiente che viene quindi utilizzato dalla virtualizzazione di rete. La rete è fornita dalla rete dei servizi {{site.data.keyword.cloud_notm}} e include servizi supplementari come DNS e NTP.</dd>
 </dl>
@@ -108,7 +108,7 @@ Poiché molte opzioni di connettività insieme a delle opzioni di instradamento 
 
 Ogni host fisico in questa progettazione ha due coppie ridondanti di connessioni Ethernet da 10 Gbps in ogni switch (pubblico e privato) ToR (Top of Rack) di {{site.data.keyword.cloud_notm}}. Gli adattatori sono configurati come connessioni individuali (non collegate) per un totale di 4 connessioni da 10 Gbps. Ciò consente alle connessioni della scheda dell'interfaccia di rete (NIC) di funzionare indipendentemente l'una dall'altra.
 
-La rimozione della connettività di rete fisica dalla rete privata o pubblica per i server bare metal utilizzati nell'offerta vCenter Server non è possibile. Le porte fisiche sul NIC interno del bare metal possono essere disabilitate, ma non esiste supporto per lo scollegamento dei cavi.
+La rimozione della connettività di rete fisica dalla rete privata o pubblica per i server Bare Metal utilizzati nell'offerta vCenter Server non è possibile. Le porte fisiche sul NIC interno del bare metal possono essere disabilitate, ma non esiste supporto per lo scollegamento dei cavi.
 
 ![Connessioni all'host fisico](../../images/vcsv4radiagrams-ra-physical-host-connections.svg "Connessioni all'host fisico")
 
@@ -124,12 +124,12 @@ In questa progettazione, la rete privata è composta da due VLAN. Alla prima di 
 * La seconda sottorete è utilizzata per le VM (Virtual Machine) di gestione come vCenter Server Appliance e Platform Services Controller
 * La terza sottorete è utilizzata per i VTEP (VXLAN Tunnel Endpoint) della rete di sovrapposizione incapsulati assegnati a ciascun host tramite l'NSX Manager.
 
-Oltre alla VLAN privata A, esiste una seconda VLAN privata (qui indicata come VLAN privata B) per supportare le funzioni di VMware, come vSAN, vMotion, NFS e iSCSI. Pertanto, la VLAN è divisa in due, tre o quattro sottoreti portatili:
+Oltre alla VLAN privata A, esiste una seconda VLAN privata (qui indicata come VLAN privata B) per supportare le funzioni di VMware, come vSAN, vMotion e NFS<!--, and iSCSI-->. Pertanto, la VLAN è divisa in due, tre o quattro sottoreti portatili:
 * La prima sottorete viene assegnata a un gruppo di porte kernel per il traffico vMotion.
 * Le restanti sottoreti vengono utilizzate per il traffico di archiviazione:
    * Se si utilizza vSAN, una sottorete viene assegnata ai gruppi di porte kernel utilizzati per il traffico vSAN.
    * Se si utilizza NFS collegato a NAS, una sottorete viene assegnata a un gruppo di porte dedicato al traffico NFS.
-   * Per il collegamento iSCSI, vengono creati due gruppi di porte per consentire i percorsi multipli attivo-attivo tra le porte NIC private poiché solo una porta NIC può essere attivata alla volta per la documentazione VMware iSCSI.
+<!--* For iSCSI attachment, two port groups are created to allow multipathing active-active across both private NIC ports as only one NIC port can be active at a time per the VMware iSCSI documentation.-->
 
 Tutte le sottoreti configurate come parte di una distribuzione automatizzata di vCenter Server utilizzano intervalli gestiti da {{site.data.keyword.cloud_notm}}. Ciò serve a garantire che qualsiasi indirizzo IP possa essere indirizzato a qualsiasi data center all'interno dell'account {{site.data.keyword.cloud_notm}} ogni volta che hai bisogno della connessione.
 
@@ -139,14 +139,14 @@ Tabella 1. Riepilogo VLAN e sottorete
 
 | VLAN | Tipo | Descrizione |
 |:---- |:---- |:----------- |
-| Pubblica| Primaria  | Assegnata agli host fisici per l'accesso alla rete pubblica. Non utilizzata al momento della distribuzione iniziale. |
+| Pubblica| Primaria  | Assegnata agli host fisici per l'accesso alla rete pubblica. Agli host viene assegnato un indirizzo IP pubblico ma questo indirizzo IP non è configurato sugli host, quindi non sono direttamente accessibili sulla rete pubblica. È previsto invece che la VLAN pubblica fornisca l'accesso a internet pubblico per altri componenti, come ad esempio gli NSX ESG (Edge Services Gateway). |
 | Privata A | Primaria  | Sottorete singola assegnata agli host fisici assegnati da {{site.data.keyword.cloud_notm}}. Utilizzata dall'interfaccia di gestione per il traffico di gestione vSphere. |
 | Privata A | Portatile | Sottorete singola assegnata alle VM (Virtual Machine) che funzionano come componenti di gestione |
 | Privata A | Portatile | Sottorete singola assegnata al VTEP NSX-V o NSX-T |
 | Privata B | Portatile | Sottorete singola assegnata per vSAN, se in uso |
 | Privata B | Portatile | Sottorete singola assegnata per NAS, se in uso |
-| Privata B | Portatile | Due sottoreti assegnate per iSCSI NAS, se in uso (una per la porta NIC fisica) |
 | Privata B | Portatile | Sottorete singola assegnata per vMotion |
+<!--| Private B | Portable | Two subnets assigned for iSCSI NAS, if in use (one per physical NIC port) |-->
 
 In questa progettazione, tutti gli host e le VM (Virtual Machine) supportati dalla VLAN sono configurati in modo che puntino al router del cliente della “rete privata” di back-end (BCR) {{site.data.keyword.cloud_notm}} come rotta predefinita. Mentre le istanze vCenter Server consentono l'utilizzo di SDN (Software-Defined Networking), le sovrapposizioni di rete create all'interno di un'istanza VMware che includono l'instradamento alle sottoreti interne non sono note ai router gestiti da {{site.data.keyword.cloud_notm}}.
 
@@ -176,26 +176,29 @@ Per ulteriori informazioni sulle configurazioni supportate, vedi [Distinta base 
 
 Quando si utilizza l'archiviazione a livello di file condivisa, una condivisione NFS da 2-TB è collegata agli host che comprendono il cluster VMware iniziale. Questa condivisione, che è nota come condivisione di gestione, viene utilizzata per i componenti di gestione come VMware vCenter Server, PSC (Platform Services Controller) e VMware NSX.
 
-L'archiviazione viene collegata utilizzando il protocollo NFSv3 con un livello di 2 IOPS per GB da IBM Cloud. IBM normalizza il livello IOP che viene fornito a una dimensione blocco di 16 K perché dimensioni blocco più grandi visualizzano un limite inferiore mentre dimensioni blocco più piccole un limite superiore.
+L'archiviazione viene allegata utilizzando il protocollo NFS v3 ad un livello di 2 IOPS/GB da IBM Cloud.
 
 ![Condivisioni NFS collegate alla distribuzione VMware](../../images/vcsv4radiagrams-ra-nfs-shares.svg "Condivisioni NFS collegate alla distribuzione VMware: condivisione di gestione e condivisione specificata dal cliente")
 
-Puoi assegnare e montare più condivisioni di file tra tutti gli host per i tuoi carichi di lavoro al momento dell'acquisto o successivamente nella console. Puoi scegliere tra le opzioni di capacità di archiviazione file Endurance {{site.data.keyword.cloud_notm}} e i livelli di prestazioni disponibili nel {{site.data.keyword.CloudDataCent_notm}} corrispondente. Tutte le condivisioni vengono collegate utilizzando il protocollo NFSv3. Inoltre, è possibile collegare le condivisioni file NFSv3 applicando l'offerta NetApp ONTAP Select.
+Puoi assegnare e montare più condivisioni di file tra tutti gli host per i tuoi carichi di lavoro al momento dell'acquisto o successivamente nella console. Puoi scegliere tra le opzioni di capacità di archiviazione file Endurance {{site.data.keyword.cloud_notm}} e i livelli di prestazioni disponibili nel {{site.data.keyword.CloudDataCent_notm}} corrispondente. Tutte le condivisioni sono collegate utilizzando il protocollo NFS v3. Inoltre, è possibile collegare le condivisioni file NFS v3 applicando l'offerta NetApp ONTAP Select.
 
 La disponibilità di 10 IOPS/GB dipende dal data center IBM Cloud. I {{site.data.keyword.CloudDataCents_notm}} che offrono il livello di prestazioni di 10 IOPS/GB includono anche la crittografia dei dati inattivi gestita dal provider (crittografia AES-256) e sono supportati dall'archiviazione all-flash. Il livello di prestazioni di 10 IOPS/GB è limitato a una capacità massima di 4 TB. Per ulteriori informazioni sul NAS condiviso utilizzato in questa soluzione, vedi [Architettura dell'archiviazione condivisa](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits).
 
-### Archiviazione iSCSI condivisa
+<!--
+### Shared iSCSI storage
 {: #design_physicalinfrastructure-shared-iscsi}
 
-Simile a NFS, con l'archiviazione iSCSI condivisa, un LUN iSCSI da 2-TB è collegato agli host che comprendono il cluster VMware iniziale. Questo LUN iSCSI viene utilizzato per i componenti di gestione come VMware vCenter Server, PSC (Platform Services Controller) e VMware NSX. L'archiviazione viene collegata tramite il protocollo iSCSI con un livello di 2 IOPs per GB da IBM Cloud.
+This architecture allows you to use iSCSI storage, however iSCSI storage is not automatically provisioned by IBM Cloud for VMware Solutions. You can provision it manually.
 
-IBM normalizza il livello IOP fornito a una dimensione blocco di 16 K perché dimensioni blocco più grandi visualizzano un limite inferiore mentre dimensioni blocco più piccole un limite superiore.
+Similar to NFS, for shared iSCSI storage, one 2-TB iSCSI LUN will be attached to the hosts that comprise the initial VMware cluster. This iSCSI LUN is used for management components such as the VMware vCenter Server, Platform Services Controller, and VMware NSX. The storage is attached through the iSCSI protocol at a 2 IOPS/GB level from IBM Cloud.
 
-![LUN iSCSI collegate alla distribuzione VMware](../../images/vcsv4radiagrams-ra-iscsi-lun.svg "LUN iSCSI collegate alla distribuzione VMware")
+![iSCSI LUNs attached to VMware deployment](../../images/vcsv4radiagrams-ra-iscsi-lun.svg "iSCSI LUNs attached to VMware deployment"){: caption="Figure 5. iSCSI LUNs attached to VMware deployment" caption-side="bottom"}
 
-Ulteriori LUN iSCSI per i carichi di lavoro possono essere assegnati e montati tra tutti gli host al momento dell'acquisto o successivamente nella console. Scegli tra le opzioni disponibili di capacità di archiviazione blocchi IBM Cloud Endurance e i livelli di prestazioni disponibili nel data center IBM Cloud corrispondente. Tutte i LUN vengono collegati utilizzando il protocollo iSCSI. Inoltre, è possibile collegare i LUN iSCSI dall'offerta NetApp ONTAP Select.
+Additional iSCSI LUNs for workloads can also be allocated and mounted across all hosts. Select from the available IBM Cloud Endurance block storage capacity options and performance tiers in the corresponding IBM Cloud Data Center. All LUNs are attached by using the iSCSI protocol. Additionally, it is possible to attach iSCSI LUNs from the NetApp ONTAP Select offering.
 
-La disponibilità di 10 IOPS/GB dipende dal data center IBM Cloud. I data center che offrono il livello di prestazioni di 10 IOPS/GB includono anche la crittografia gestita dal provider dei dati inattivi (crittografia AES–256) e sono supportati dall'archiviazione all–flash. Il livello di prestazioni di 10 IOPS/GB è limitato a una capacità massima di 4 TB.
+The availability of the 10 IOPS/GB depends on the IBM Cloud Data Center. Data centers that offer the 10 IOPS/GB performance tier also include provider–managed encryption of data at rest (AES–256 encryption), and are backed by all–flash storage. The 10 IOPS/GB performance tier is limited to a maximum capacity of 4 TB.
+
+-->
 
 Per ulteriori informazioni sul NAS condiviso utilizzato in questa soluzione, vedi [Architettura dell'archiviazione condivisa](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits).
 

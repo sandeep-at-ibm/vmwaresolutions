@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-28"
+
+keywords: vCenter Server Hybridity delete instance, delete vCenter Server Hybridity, delete multi-site
 
 subcollection: vmware-solutions
 
@@ -49,3 +51,4 @@ Se le facturará por la instancia suprimida hasta el final del ciclo de facturac
 
 * [Supresión de instancias de vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_deletinginstance)
 * [Solicitud, visualización y eliminación de servicios desde instancias de vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
+* [Cancelación de servidores virtuales](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)

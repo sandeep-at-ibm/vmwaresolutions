@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-02"
+lastupdated: "2019-06-17"
+
+keywords: vCenter Server compliance, compliance info, vCenter Server policy
 
 subcollection: vmware-solutions
 
@@ -50,6 +52,21 @@ Nel caso di un errore di sistema, un provider di servizi di terze parti può ric
 {: #vc_compl_info-personal-info-and-regulated-data}
 
 Questo servizio cloud non è progettato per requisiti specifici di sicurezza per i contenuti regolamentati, come le informazioni personali o sensibili. Il cliente è responsabile di determinare se questo servizio cloud soddisfa i bisogni dei clienti per quanto riguarda il tipo di contenuti del cliente utilizzati in connessione al servizio cloud.
+
+## Configurazioni delle politiche
+{: #vc_compl_info-default-policy-config}
+
+La password vCenter generata per le istanze primarie vCenter Server ha ora una lunghezza di 15 caratteri. In precedenza, la password generata era il valore predefinito di vCenter di otto caratteri di lunghezza.
+
+Tabella 1. Configurazioni della politica vCenter per una nuova istanza primaria
+
+| Politica | V3.1 o versioni successive | V3.0 o versioni precedenti |
+|:------------- |:------------------------------ |:------------- |
+| Politica delle password vCenter | Lunghezza minima di 15 caratteri | Lunghezza minima di 8 caratteri (valore predefinito di vCenter) |
+| Politica di blocco vCenter | Massimo di tre tentativi di accesso non riusciti | Massimo di cinque tentativi di accesso non riusciti (valore predefinito di vCenter) |
+| Politica di blocco vCenter | 900 secondi tra i tentativi di accesso non riusciti | 180 secondi tra i tentativi di accesso non riusciti (valore predefinito di vCenter) |
+
+La password NSX Manager generata per le istanze primarie vCenter Server ha ora una lunghezza di 15 caratteri. In precedenza, la password generata aveva una lunghezza di otto caratteri.
 
 ## Politica per l'accesso alle istanze client
 {: #vc_compl_info-policy-for-access-client-inst}

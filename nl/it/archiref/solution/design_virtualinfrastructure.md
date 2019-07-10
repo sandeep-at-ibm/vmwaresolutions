@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-17"
 
 subcollection: vmware-solutions
 
@@ -122,37 +122,7 @@ Un archivio dati NFS di 2-TB è collegato ad un cluster per l'utilizzo da parte 
 
 Inoltre, questa architettura richiede che tutti gli host abbiano un instradamento di sottorete creato per la sottorete in cui si trova l'archiviazione NFS. Lo scopo di questo instradamento di sottorete è quello di indirizzare tutto il traffico NFS a utilizzare il gruppo di porte, la sottorete e la VLAN designati per il traffico NFS da questa progettazione. Se sono collegati più archivi dati NFS, potrebbe essere necessaria la configurazione di più instradamenti poiché questi archivi dati potrebbero trovarsi in sottoreti remote differenti.
 
-Le macchine virtuali di gestione possono essere ubicate su un archivio dati NFS. Questo crea un problema di bootstrap poiché alcune delle macchine di gestione possono essere responsabili dei servizi DNS che vengono utilizzati per risolvere il nome host NFS. Pertanto, questa architettura specifica che almeno uno degli indirizzi IP per l'archivio dati di gestione sia integrato a livello di codice in `/etc/hosts` su ciascuno degli host.
-
-## Archiviazione collegata a iSCSI
-{: #design_virtualinfrastructure-iscsi-storage}
-
-A differenza dell'archiviazione collegata a NFS v3, l'archiviazione collegata a iSCSI supporta i percorsi attivo-attivo tra tutte le porte di scheda NIC configurate e le porte di destinazione. Per tale motivo, può essere ottenuta una velocità effettiva superiore e questa è un'alternativa desiderabile all'archiviazione di collegamento NFS. Non comporta un costo superiore di complessità.
-
-L'archiviazione blocchi {{site.data.keyword.cloud_notm}} Endurance supporta un massimo di 64 indirizzi IP collegati per LUN quando utilizzi VMware, che consente fino a 32 host in base a questa progettazione.
-
-Un LUN iSCSI di 2-TB viene collegato al cluster vSphere per l'utilizzo dei componenti di gestione e almeno un altro LUN iSCSI viene configurato per l'utilizzo del carico di lavoro del cliente. Questa archiviazione è formattata come un file system VMFS 6.x per ogni LUN.
-
-Questa architettura specifica l'utilizzo del bind di porte iSCSI, una politica round-robin per i percorsi multipli, una profondità massima della coda di 64 e un limite IOPS di round-robin di 1.
-
-### Configurazione della rete virtuale per iSCSI
-{: #design_virtualinfrastructure-setup-iscsi}
-
-Per questa progettazione, il traffico iSCSI può utilizzare entrambe le porte di scheda NIC collegate private in una configurazione attiva-attiva. Poiché vSphere consente che solo una porta di scheda NIC sia attiva su un gruppo di porte particolare all'interno di un vDS alla volta, devono essere creati due gruppi di porte (A e B) sulla VLAN di archiviazione.
-
-Viene creata una porta kernel ESXi con un indirizzo IP univoco su sottoreti individuali per consentire la scalabilità. Ogni porta kernel viene assegnata al proprio gruppo di porte iSCSI. Entrambe le porte kernel vengono assegnate a un adattatore bus host (HBA) ISCSI virtuale ESXi. Per ogni porta kernel, viene utilizzato l'interruttore di emergenza GW predefinito per utilizzare il gateway predefinito per la sottorete locale relativa a tale porta kernel. Consulta la seguente tabella.
-
-Tabella 2. Gruppi di porte iSCSi
-
-Gruppo di porte vDS | Sottorete porta kernel | VMHBA
---|:---|:--
-**SDDC-Dprotgroup-iSCSI-A** |Subnet-A |  vmhba64
-**SDDC-Dprotgroup-iSCSI-B** | Subnet-B | vmhba64
-
-#### Storage I/O control - SIOC
-{: #design_virtualinfrastructure-sioc}
-
-Viene eseguito il provisioning dei LUN iSCSI e vengono formattati in un unico file system VMFS per LUN. L'impostazione SIOC consigliata predefinita è il 90% della velocità effettiva di picco.
+Le macchine virtuali di gestione possono essere ubicate su un archivio dati NFS. Questo crea un problema di bootstrap poiché alcune delle macchine di gestione potrebbero essere responsabili per i servizi DNS che vengono utilizzati per risolvere il nome host NFS. Pertanto, questa architettura specifica che almeno uno degli indirizzi IP per l'archivio dati di gestione sia integrato a livello di codice in `/etc/hosts` su ciascuno degli host.
 
 ## Progettazione di VMware NSX-V
 {: #design_virtualinfrastructure-nsx-design}
@@ -204,7 +174,7 @@ Tabella 4. Associazione della VLAN ai tipi di traffico
 | VLAN  | Designazione | Tipo di traffico |
 |:----- |:----------- |:------------ |
 | VLAN 1 | Privata A   | Gestione ESXi, gestione, VXLAN (VTEP) |
-| VLAN 2 | Privata B   | vSAN, NFS, vMotion, iSCSI |
+| VLAN 2 | Privata B   | vSAN, NFS e vMotion|
 | VLAN 3 | Pubblica      | Disponibile per l'accesso a Internet |
 
 Il traffico dai carichi di lavoro viaggerà su switch logici supportati dalla VXLAN.
@@ -213,7 +183,7 @@ Il cluster vSphere utilizza due VDS (vSphere Distributed Switch) configurati com
 
 Tabella 5. Switch distribuiti del cluster convergente
 
-| Nome VDS (vSphere Distributed<br> Switch) | Funzione | Rete<br>Controllo I/O | Bilanciamento del carico<br>Modalità | Porte NIC <br>fisiche | MTU |
+| Nome VDS (vSphere Distributed<br> Switch) | Funzione | Rete<br>Controllo I/O | Bilanciamento del carico<br>Modalità | NIC fisica<br>Porte | MTU |
 |:------------- |:------------- |:------------- |:------------- |:------------- |:------------- |
 | SDDC-Dswitch-Private | Gestione ESXi, vSAN, vSphere vMotion, VXLAN tunnel endpoint, NFS (VTEP) | Abilitato | Rotta basata sulla porta virtuale di origine con failover esplicito (vSAN, vMotion) (principale) | 2 | 9.000<br>(Frame Jumbo) |
 | SDDC-Dswitch-Public | Traffico di gestione esterno (nord-sud) | Abilitato | Rotta basata sulla porta virtuale di origine | 2 | 1.500<br>(predefinito) |
@@ -231,7 +201,7 @@ Tabella 6. Impostazioni di configurazione del gruppo di porte degli switch distr
 | Failback           | No |
 | Ordine di failover     | Uplink attivi: Uplink1, Uplink2 \* |
 
-\* Il gruppo di porte vSAN utilizza il failover esplicito con attivo o standby perché non supporta il bilanciamento del carico del traffico di archiviazione vSAN. I gruppi di porte iSCSI hanno solo un uplink attivo alla volta (iSCSI A - Uplink1, iSCSI B - Uplink 2).
+\* Il gruppo di porte vSAN utilizza il failover esplicito con attivo o standby perché non supporta il bilanciamento del carico del traffico di archiviazione vSAN.
 {:note}
 
 Tabella 7. Gruppi di porte e VLAN degli switch virtuali del cluster convergente, switch distribuito **SDDC-Dswitch-Private**
@@ -242,10 +212,8 @@ SDDC-DPortGroup-Mgmt|Porta virtuale di origine|Attivo: 0, 1|VLAN 1
 SDDC-DPortGroup-vMotion|Porta virtuale di origine|Attivo: 0, 1|VLAN 2
 SDDC-DPortGroup-VSAN|Failover esplicito|Attivo: 0, Standby: 1|VLAN 2
 SDDC-DPortGroup-NFS|Porta virtuale di origine|Attivo: 0, 1|VLAN 2
-NSX generato|Porta virtuale di origine|Attivo: 0,1|VLAN 1
+NSX generato|Porta virtuale di origine|Attivo: 0, 1|VLAN 1
 SDDC-DPortGroup-External|Porta virtuale di origine|Attivo: 0, 1|VLAN 3
-SDDC-DPortGroup-iSCSI-A|Porta virtuale di origine|Attivo: 0|VLAN 2
-SDDC-DPortGroup-iSCSI-B|Porta virtuale di origine|Attivo: 0|VLAN 2
 
 Tabella 8. Adattatori VMkernel del cluster convergente, switch distribuito **SDDC-Dswitch-Private**
 
@@ -256,8 +224,6 @@ vMotion|SDDC-DPortGroup-vMotion|Traffico vMotion|9000
 VTEP|NSX generato|-|9000
 vSAN|SDDC-DPortGroup-VSAN|vSAN|9000
 NAS|SDDC-DPortGroup-NFS|NAS|9000
-iSCSI|SDDC-DPortGroup-iSCSI-A|iSCSI|9000
-iSCSI|SDDC-DPortGroup-iSCSI-B|iSCSI|9000
 
 ### Configurazione di NSX
 {: #design_virtualinfrastructure-nsx-config}
@@ -283,7 +249,7 @@ I seguenti aspetti non sono configurati:
 
 Ci sono vari motivi per cui puoi aver bisogno della connettività di rete pubblica per la tua istanza. Ciò può includere l'accesso ai servizi di aggiornamento pubblici o ad altri servizi pubblici per il tuo carico di lavoro come ad esempio i database di geolocalizzazione o i dati meteo. Anche i tuoi servizi aggiuntivi e di gestione della virtualizzazione possono richiedere o beneficiare della connettività pubblica. Ad esempio, vCenter può aggiornare il suo database HCL e ottenere aggiornamenti [VMware Update Manager (VUM)](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-intro) sulla rete pubblica. Zerto, Veeam, VMware HCX, F5 BIG-IP e FortiGate-VM utilizzano tutti la connettività di rete pubblica per alcune parti della loro licenza del prodotto, attivazione o creazione di report sull'utilizzo. In aggiunta a ciò, potresti utilizzare i tunnel sulla rete pubblica per la connettività ai tuoi data center in loco a scopo di replica.
 
-Di norma, queste comunicazioni vengono instradate in modo selettivo e associate tramite NAT alla rete pubblica attraverso il Gateway dei servizi edge (ESG) di gestione o del cliente. Tuttavia, potresti avere requisiti di sicurezza aggiuntivi o preferire l'utilizzo di un proxy per semplificare il percorso della comunicazione. Inoltre, se hai distribuito la tua istanza con le interfacce pubbliche disabilitate, non sarai in grado di utilizzare gli ESG per l'instradamento alla rete pubblica.
+Di norma, queste comunicazioni vengono instradate in modo selettivo e associate tramite NAT alla rete pubblica attraverso il Gateway dei servizi edge (ESG) di gestione o del cliente. Tuttavia, potresti avere ulteriori requisiti di sicurezza o preferire l'utilizzo di un proxy per semplificare il percorso della comunicazione. Inoltre, se hai distribuito la tua istanza con le interfacce pubbliche disabilitate, non sarai in grado di utilizzare gli ESG per l'instradamento alla rete pubblica.
 
 Questa architettura consente le seguenti opzioni per instradare il tuo traffico alla rete pubblica o per utilizzare un proxy per eseguire tale operazione:
 

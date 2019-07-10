@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-17"
+lastupdated: "2019-06-03"
 
 ---
 
@@ -13,21 +13,21 @@ lastupdated: "2019-05-17"
 
 Il cluster di analitica vROps contiene i nodi che analizzano e archiviano i dati dei componenti monitorati e, in questa distribuzione, vengono distribuiti quattro nodi e due programmi di bilanciamento del carico NSX. Questa dimensione consente di monitorare fino a 30.000 VM e di raccogliere 9.000.000 di metriche.
 
-Il cluster di analitica a 4 nodi comprende:
+Il cluster di analitica a 4 nodi consiste nei seguenti componenti:
 * Nodo master – Il nodo master è il nodo iniziale in un cluster vROps. In un ambiente di grandi dimensioni, questo nodo gestisce tutti gli altri nodi.
 * Replica del nodo master – Questo nodo consente l'alta disponibilità del nodo master.
 * Nodi di dati – Il nodo di dati consente il ridimensionamento incrementale di vROps in ambienti più grandi; in questa progettazione ne vengono distribuiti due.
 
-Inoltre, la progettazione utilizza i nodi di raccoglitore remoto che fungono da server proxy/di inoltro per raccogliere solo i dati e inoltrare i dati raccolti ai nodi master/dati. I nodi di dati e i raccoglitori remoti possono essere aggiunti per l'ampliamento in base alla dimensione dell'ambiente. La collocazione dei componenti vROps sulle VLAN/VXLAN viene mostrata nel seguente diagramma.
+Inoltre, la progettazione utilizza i nodi di raccoglitore remoto, che fungono da server proxy/di inoltro per raccogliere solo i dati e inoltrare i dati raccolti ai nodi master/dati. I nodi di dati e i raccoglitori remoti possono essere aggiunti per l'ampliamento in base alla dimensione dell'ambiente. La collocazione dei componenti vROps sulle VLAN/VXLAN viene mostrata nel seguente diagramma.
 
 ![Diagramma di rete Operations Manager](../../images/opsmgmt-vropsnw.svg "Diagramma di rete Operations Manager")
 
 * Il nodo master, la replica del nodo master e i nodi di dati vengono distribuiti sulla sottorete degli strumenti utilizzando gli indirizzi IP portatili di {{site.data.keyword.cloud_notm}} per facilitare la comunicazione verso tutti i componenti che vengono indirizzati al di fuori dello spazio di indirizzi RFC1918 di {{site.data.keyword.cloud_notm}}, tra cui gli host vSphere, vCenter, PSC (Platform Services Controller), NSX Manager e controller NSX. Viene utilizzato un programma di bilanciamento del carico NSX insieme a un VIP per l'alta disponibilità.
-* Poiché i carichi di lavoro del cliente utilizzano l'indirizzamento IP dallo spazio di indirizzi BYOIP, questa progettazione utilizza i raccoglitori remoti ospitati in una VXLAN. Questi raccoglitori remoti non sono configurati come parte dell'automazione di {{site.data.keyword.vmwaresolutions_full}} e devono essere implementati manualmente dal cliente.
+* Poiché i carichi di lavoro del cliente utilizzano l'indirizzamento IP dallo spazio di indirizzi BYOIP, questa progettazione utilizza i raccoglitori remoti che sono ospitati in una VXLAN. Questi raccoglitori remoti non sono configurati come parte dell'automazione di {{site.data.keyword.vmwaresolutions_full}} e devono essere implementati manualmente dal cliente.
 
 ![Diagramma dei componenti di Operations Manager](../../images/opsmgmt-vropscomponent.svg "Diagramma dei componenti di Operations Manager")
 
-Il cluster di analitica vROps è accessibile utilizzando un'interfaccia utente di gestione o un'API e viene integrato nei seguenti componenti:
+Il cluster di analitica vROps è accessibile utilizzando un'interfaccia utente di gestione o un'API e si integra con i seguenti componenti:
 * vCenter
 * vRealize Log Insight
 
@@ -45,7 +45,7 @@ Il cliente può configurare manualmente vROps per raccogliere i dati da vRealize
 ## Requisiti di sistema
 {: #opsmgmt-vrops-requirements}
 
-Il cluster di analitica è costituito da un nodo master, un nodo replica del master e due nodi di dati per consentire il ridimensionamento incrementale e l'alta disponibilità. Ulteriori nodi di dati vengono aggiunti per l'ampliamento. Il cluster di analitica può ridimensionarsi fino a un massimo di 8 nodi di medie dimensioni.
+Il cluster di analitica è costituito da un nodo master, un nodo replica del master e due nodi di dati per abilitare il ridimensionamento incrementale e l'alta disponibilità. Ulteriori nodi di dati vengono aggiunti per l'ampliamento. Il cluster di analitica può ridimensionarsi fino a un massimo di otto nodi di medie dimensioni.
 
 Tabella 1. Impostazioni di sistema dei nodi master/replica di Operations Manager
 
@@ -78,7 +78,7 @@ Tabella 3. Impostazioni del programma di bilanciamento del carico di Operations 
 | URL | /suite-api/api/deployment/node/status | -- |
 | Ricezione | ONLINE | -- |
 | Algoritmo | ROUND-ROBIN | LEASTCONN |
-| Pool | 4 nodi di vROPs | 4 nodi di vROPs |
+| Pool | Quattro nodi di vROPs | Quattro nodi di vROPs |
 
 Per ulteriori informazioni, vedi [vRealize Automation
 Load Balancing (PDF)](https://docs.vmware.com/en/vRealize-Automation/7.5/vrealize-automation-load-balancing.pdf){:new_window}.
@@ -86,13 +86,13 @@ Load Balancing (PDF)](https://docs.vmware.com/en/vRealize-Automation/7.5/vrealiz
 ## Rete
 {: #opsmgmt-vrops-network}
 
-La distribuzione del dispositivo vROps richiede sei IP dalla sottorete portatile privata degli strumenti. La connettività di rete vROps richiede l'accesso a:
+La distribuzione del dispositivo vROps richiede sei indirizzi IP dalla sottorete portatile privata degli strumenti. La connettività di rete vROps richiede l'accesso a:
 * Dispositivo vCenter
 * Dispositivo vRealize Log Insight
 * Dispositivi NSX-V/T
 * XLAN di espansione degli strumenti
 * Reti del cliente
-* Server NTP (time.services.softlayer.com)
+* Server NTP (`time.services.softlayer.com`)
 * {{site.data.keyword.vmwaresolutions_short}} Active Directory/DNS
 * I raccoglitori remoti richiedono regole NAT sull'ESG NSX per abilitare la connettività al nodo master, alla replica del nodo master e ai nodi di dati
 
@@ -176,7 +176,7 @@ Il VMware SDDC Health Management Pack fornisce i seguenti dashboard:
 * Dashboard di tendenza cronologica dell'integrità SDDC - Il VMware SDDC Health Management Pack è costituito dal dashboard di tendenza cronologica dell'integrità SDDC, che visualizza la tendenza dell'integrità per ogni componente nello stack SDDC.
 * Dashboard di dimensionamento di vRealize Operations Manager SDDC - Il dashboard di dimensionamento di vRealize Operations Manager SDDC fornisce la capacità del cluster vRealize Operations Manager per elaborare oggetti e metriche.
 
-I plugin di VMware SDDC Health Management Pack raccolgono le metriche per i tipi di oggetto contenuti nei plugin. Il Management Pack raccoglie le metriche di integrità per:
+I plugin di VMware SDDC Health Management Pack raccolgono le metriche per i tipi di oggetto contenuti nei plugin. Il Management Pack raccoglie le metriche di integrità per i seguenti componenti:
 * vCenter Server
 * Management Pack per NSX for vSphere
 * vRealize Automation
@@ -224,7 +224,7 @@ vRealize Operations Management Pack per HCX estende le capacità di Operations M
 * [Linee guida sul dimensionamento di vRealize Operations Manager 7.0](https://kb.vmware.com/s/article/57903){:new_window}
 * [Documentazione di vRealize Operations Manager](https://docs.vmware.com/en/vRealize-Operations-Manager/index.html){:new_window}
 * [Management Pack per vSAN](https://marketplace.vmware.com/resources/vsx/product_files/31742/original/Management-Pack-for-vSAN-Guide6d2a8895b022a5f626a86e8e84b031b5.pdf){:new_window}
-* [Istruzioni sull'aggiornamento del cluster vSAN](https://cloud.ibm.com/docs/services/vmwaresolutions/archiref/vum/vum-updating-vsan.html#updating-vsan-clusters){:new_window}
+* [Istruzioni sull'aggiornamento del cluster vSAN](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vsan)
 * [Management-Pack-for-vSAN-Guide](https://marketplace.vmware.com/resources/vsx/product_files/31742/original/Management-Pack-for-vSAN-Guide6d2a8895b022a5f626a86e8e84b031b5.pdf){:new_window}
 * [Informazioni sul controllo dell'integrità vSAN](https://kb.vmware.com/s/article/2114803){:new_window}
 * [Operationalizing VMware NSX](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/products/nsx/vmware-operationalizing-nsx.pdf){:new_window}

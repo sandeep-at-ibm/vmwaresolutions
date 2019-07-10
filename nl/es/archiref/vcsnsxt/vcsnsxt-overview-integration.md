@@ -14,7 +14,7 @@ subcollection: vmware-solutions
 # Integración, direccionamiento de IP y flujos de red
 {: #vcsnsxt-overview-integration}
 
-## Integración de IBM Cloud Private y VMware vCenter Server en IBM Cloud
+## Integración de IBM Cloud Private y VMware vCenter Server on IBM Cloud
 {: #vcsnsxt-overview-integration-icp-vcs-integration}
 
 {{site.data.keyword.cloud}} Private se instala en varias máquinas virtuales (VM) de una instancia de vCenter Server. Dentro de la instancia de vCenter Server, la instancia de {{site.data.keyword.icpfull_notm}} se despliega con NSX Edge Services Gateway (ESG) y Distributed Logical Router (DLR) dedicados y utiliza una VXLAN.

@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-06-11"
+
+keywords: notifications console, filter notifications, system notification
 
 subcollection: vmware-solutions
 
@@ -40,21 +42,14 @@ subcollection: vmware-solutions
           <dt class="dt dlterm">警告</dt>
           <dd class="dd">コンポーネントに障害が発生したか、正常に機能しません。 しかし、この障害でコンポーネントの進行中の処理が中断されることはありません。</dd>
             <dt class="dt dlterm">情報</dt>
-            <dd class="dd">システムまたはユーザーによる操作が完了しました。 情報の通知を報告する代表的なイベントを次に示します。
-              <ul class="ul">
-                <li class="li">サービスがインストールされた。</li>
-                <li class="li">サービスがアップグレードされた。</li>
-                <li class="li">サービスが削除された。</li>
-                <li class="li">追加された ESXi サーバーのすべてのサービスが再構成された。</li>
-                <li class="li">削除された ESXi サーバーのすべてのサービスが再構成された。</li>
-              </ul>
+            <dd class="dd">システムまたはユーザーによる操作が完了しました。 情報の通知を報告する代表的なイベントを次に示します。<br>サービスがインストールされた。<br>サービスがアップグレードされた。<br>サービスが削除された。<br>追加された ESXi サーバーのすべてのサービスが再構成された。<br>削除された ESXi サーバーのすべてのサービスが再構成された。
             </dd>
           </dl>
         </td>
        </tr>
        <tr>
          <td>タイプ</td>
-         <td>イベントが報告されたコンポーネントのタイプ:<ul><li>vCenter Server インスタンス</li><li>サービス</li><li>システム</li></ul></td>
+         <td>イベントが報告されたコンポーネントのタイプ:<br>vCenter Server インスタンス<br>サービス<br>システム</td>
        </tr>
        <tr>
          <td>リソース</td>

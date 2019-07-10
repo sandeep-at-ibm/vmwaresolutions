@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-06-18"
+
+keywords: IBM Integrated Managed Infrastructure, request IBM IMI, tech specs IMI
 
 subcollection: vmware-solutions
 
@@ -24,7 +26,6 @@ IMI는 vCenter Server 인스턴스에 대한 관리 서비스를 제공합니다
 {: #managing_imi-specs}
 
 다음 스펙이 IMI 관리 서비스에 포함되어 있습니다.
-
 * 커버리지 옵션: 8X5, 16X5 또는 24X7
 * 전체 전달을 담당하는 IT 서비스 관리 도구 및 관리 프로세스
 * 준수 관리
@@ -38,7 +39,7 @@ IMI는 vCenter Server 인스턴스에 대한 관리 서비스를 제공합니다
 2. 페이지를 아래로 스크롤하여 **추가 관리 서비스 주문** 아래에 있는 **IMI의 관리 서비스** 카드를 클릭하십시오.
 3. **IMI의 관리 서비스** 페이지의 **IMI 사전 영업 참여** 상자에 IMI 서비스에 대한 요구사항을 입력하고 **컨설팅 요청**을 클릭하십시오.
 
-IMI 사전 영업 담당자가 {{site.data.keyword.cloud_notm}} 연락처 정보를 사용하여 연락을 드려서 필요한 서비스에 대한 지원을 제공합니다.
+  {{site.data.keyword.cloud_notm}} 담당자는 사용자가 필요한 솔루션에 대한 도움을 드리기 위해 사용자의 {{site.data.keyword.cloud_notm}} 연락처 정보를 사용하여 연락을 드립니다.
 
 ## 관련 링크
 {: #managing_imi-related}

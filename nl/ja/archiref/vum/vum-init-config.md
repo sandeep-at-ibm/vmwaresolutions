@@ -52,7 +52,8 @@ CentOS および Squid に基づくプロキシー・サーバーを使用でき
 | ネットマスク | 255.255.255.192 | |
 | ゲートウェイ| customer-nsx-edge プライベート・アップリンク IP | これは、customer-nsx-edge のプライベート・アップリンク IP アドレスであるプロキシー・サーバーのデフォルトのゲートウェイ設定です。 この IP アドレスは **customer-nsx-edge** の**「設定」**タブで確認できます。 |
 | DNS サーバー | AD/DNS ip | この IP アドレスは、{{site.data.keyword.vmwaresolutions_short}} コンソールのインスタンス・ページである**「リソース」**ページにあります。 |
-| BCR IP | bcr ip | これは、{{site.data.keyword.cloud_notm}} Backend Customer Router の IP アドレスであり、10.0.0.0/8 および 161.26.0.0/16 のゲートウェイです。 このアドレスは、VCSA および AD/DNS サーバーに到達できるように、プロキシー・サーバーの静的ルートで使用されます。 |
+| BCR IP | bcr ip | 上記のプロキシー IP を選択したものと同じページで、Gateway というラベルの付いたアドレスに注目してください。このアドレスは、{{site.data.keyword.cloud_notm}} Backend Customer Router の IP アドレスであり、10.0.0.0/8 および 161.26.0.0/16 のゲートウェイです。 以下でこのアドレスは、VCSA および AD/DNS サーバーに到達できるように、プロキシー・サーバーの静的ルートで使用します。|
+| NAT IP | customer-nsx-edge パブリック・アップリンク IP | カスタマー NSX ESG のパブリック・アドレスは、プロキシーのパブリック NAT アドレスとして機能します。この IP アドレスは **customer-nsx-edge** の**「設定」**タブで確認できます。 |
 
 ## NSX の構成
 {: #vum-init-config-config-nsx}

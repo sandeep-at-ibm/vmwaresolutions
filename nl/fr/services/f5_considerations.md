@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-01"
+lastupdated: "2019-06-13"
+
+keywords: F5 BIG-IP, F5 install, tech specs F5
 
 subcollection: vmware-solutions
 

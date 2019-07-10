@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-09"
+lastupdated: "2019-06-12"
 
 subcollection: vmware-solutions
 
@@ -52,7 +52,7 @@ Tabella 1. Specifiche ESG {{site.data.keyword.icpfull_notm}}
 |:--------- |:------------- |
 | Gateway servizio edge | Dispositivo virtuale |
 | Dimensione edge	Large | Numero di vCPUs	2 |
-| Memoria | Disco 1-GB	| 1000 GB sul datastore locale |
+| Memoria | Disco da 1 GB<br>1000 GB sul datastore locale |
 
 Tabella 2. Specifiche DLR {{site.data.keyword.icpfull_notm}}
 
@@ -60,7 +60,7 @@ Tabella 2. Specifiche DLR {{site.data.keyword.icpfull_notm}}
 |:--------- |:------------- |
 | Router logico distribuito | Dispositivo virtuale |
 | Dimensione edge	Compact | Numero di vCPUs	1 |
-| Memoria	| Disco 512-MB	| 1000 GB sul datastore locale |
+| Memoria	| Disco da 512 MB<br>1000 GB sul datastore locale |
 
 ## Componenti IBM Cloud Private
 {: #vcsicp-arch-overview-solution-icp-comp}
@@ -104,7 +104,7 @@ Le seguenti specifiche di VM sono richieste per un'istanza {{site.data.keyword.i
 
 Tabella 3. Specifiche VM (Virtual Machine) {{site.data.keyword.icpfull_notm}}
 
-| Nodo | Istanze | IP	| CPU	| RAM (GB)	| DISK (GB) |
+| Nodo | Istanze | IP	| CPU	| RAM (GB)	| DISCO (GB) |
 |:---- |:--------- |:-- |:--- |:--------- |:--------- |
 | Master | 3	| IP (x3) VIP (x1)	| 4	| 64	| 200 |
 | Gestione	| 3	| IP (x3)	| 8	| 64	| 500 |
@@ -117,7 +117,7 @@ CAM richiede che i nodi di lavoro abbiano una configurazione di vCPU e memoria s
 
 Tabella 4. Specifiche macchina virtuale {{site.data.keyword.icpfull_notm}}
 
-| Nodo | Istanze	| IP | CPU	| RAM (GB)	| DISK (GB) |
+| Nodo | Istanze	| IP | CPU	| RAM (GB)	| DISCO (GB) |
 |:---- |:---------- |:-- |:---- |:--------- |:--------- |
 | worker | 3 | IP (x3) | 4-8 | 16-20 | 150 |
 

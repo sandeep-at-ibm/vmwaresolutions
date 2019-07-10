@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-14"
+lastupdated: "2019-05-27"
+
+keywords: change vCenter Server artifacts, automation ID, VMware resource
 
 subcollection: vmware-solutions
 

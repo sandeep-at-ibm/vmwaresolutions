@@ -40,7 +40,7 @@ En el futuro, todos los clientes se dirigirán a VMware vCenter Server on {{site
  
 Los clientes existentes que utilizan VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} recibirán ayuda para migrar a VMware vCenter Server on {{site.data.keyword.cloud_notm}} antes de la fecha de fin de soporte, el 13 de mayo de 2019.
 
-A partir del 13 de mayo, las capacidades de gestión de VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} se eliminarán de la consola de {{site.data.keyword.vmwaresolutions_short}}. A través de la consola de infraestructura de IBM Cloud se podrá acceder a las instancias que no se hayan migrado a VMware vCenter Server en {{site.data.keyword.cloud_notm}}.
+A partir del 13 de mayo, las capacidades de gestión de VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} se eliminarán de la consola de {{site.data.keyword.vmwaresolutions_short}}. A través de la consola de infraestructura de IBM Cloud se podrá acceder a las instancias que no se hayan migrado a VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
 
 El soporte de {{site.data.keyword.cloud_notm}} se pondrá en contacto con los clientes antes del 25 de marzo de 2019 para empezar la migración de VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}. Para obtener más información sobre las opciones de migración para los clientes, consulte la [página de wiki de {{site.data.keyword.vmwaresolutions_short}}](https://w3-connections.ibm.com/wikis/home?lang=en-us#!/wiki/Wf58c4c538dbf_45b4_b7a7_5003d0ceb79b/page/IBM%20Cloud%20for%20VMware%20Solutions){:new_window}.
  
@@ -92,8 +92,7 @@ Los nuevos centros de datos siguientes están disponibles para el despliegue: **
 ### Mejoras en el servidor ESXi
 {: #relnotes_v29-vcs-esxi}
 
-* El protocolo SSH (Secure Shell) está ahora inhabilitado para los servidores ESXi antes de la entrega de la instancia. Si desea habilitar SSH, consulte
-[Habilitar SSH desde el cliente web de vSphere](https://pubs.vmware.com/vsphere-6-5/index.jsp?topic=%2Fcom.vmware.vcli.getstart.doc%2FGUID-C3A44A30-EEA5-4359-A248-D13927A94CCE.html).
+* El protocolo SSH (Secure Shell) está ahora inhabilitado para los servidores ESXi antes de la entrega de la instancia. Si desea habilitar SSH, consulte [Habilitar SSH desde el cliente web de vSphere](https://pubs.vmware.com/vsphere-6-5/index.jsp?topic=%2Fcom.vmware.vcli.getstart.doc%2FGUID-C3A44A30-EEA5-4359-A248-D13927A94CCE.html).
 * A partir del release V2.9, están disponibles las siguientes operaciones de servidor ESXi:
 
    * Añada nuevos servidores ESXi a un clúster existente mientras los servidores están en modalidad de mantenimiento. Las máquinas virtuales no se migran a los nuevos servidores hasta que se eliminan de la modalidad de mantenimiento.
@@ -142,9 +141,7 @@ En el release actual, se ha instalado HyTrust CloudControl 5.4.2 en todas las in
 
 Ahora hay disponibles dos nuevos puntos finales en Sídney para el servicio de KMIP for VMware on {{site.data.keyword.cloud_notm}}. Para obtener más información, consulte [Configuración de servicio de KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering#kmip_standalone_ordering-config).
 
-(Actualizado el 09 de abril de 2019) Anteriormente, KMIP for VMware on {{site.data.keyword.cloud_notm}} utilizaba IBM Key Protect for {{site.data.keyword.cloud_notm}} para crear, cifrar y descifrar claves de cifrado. A partir del release V2.9, KMIP for VMware on {{site.data.keyword.cloud_notm}} también puede utilizar {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services, un conjunto completo de servicios de gestión de claves y cifrado, para gestionar las claves de cifrado utilizadas por VMware en
-{{site.data.keyword.cloud_notm}}. Para obtener más información, consulte
-[Visión general de KMIP for VMware on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations) e [{{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-get-started).
+(Actualizado el 09 de abril de 2019) Anteriormente, KMIP for VMware on {{site.data.keyword.cloud_notm}} utilizaba IBM Key Protect for {{site.data.keyword.cloud_notm}} para crear, cifrar y descifrar claves de cifrado. A partir del release V2.9, KMIP for VMware on {{site.data.keyword.cloud_notm}} también puede utilizar {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services, un conjunto completo de servicios de gestión de claves y cifrado, para gestionar las claves de cifrado utilizadas por VMware on {{site.data.keyword.cloud_notm}}. Para obtener más información, consulte [Visión general de KMIP for VMware on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations) e [{{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-get-started).
 
 ### Veeam on IBM Cloud
 {: #relnotes_v29-services-veeam}

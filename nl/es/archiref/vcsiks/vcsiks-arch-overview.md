@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-22"
 
 subcollection: vmware-solutions
 
@@ -16,7 +16,7 @@ subcollection: vmware-solutions
 
 Las ofertas de {{site.data.keyword.vmwaresolutions_full}} proporcionan la automatización para desplegar componentes de tecnología VMware en {{site.data.keyword.CloudDataCents_notm}} en todo el mundo. La arquitectura consta de una sola región de nube y permite la ampliación a más regiones de nube ubicadas en otra geografía o en otro pod de {{site.data.keyword.cloud_notm}} dentro del mismo centro de datos.
 
-Puede desplegar manualmente los productos {{site.data.keyword.icpfull_notm}} y Cloud Automation Manager (CAM) en la plataforma de virtualización local, lo que permite gestionar la nube desde ubicaciones locales. Como alternativa, {{site.data.keyword.icpfull_notm}} y CAM se ofrecen como extensiones de servicio de un despliegue de vCenter Server on {{site.data.keyword.cloud_notm}} nuevo o existente, mediante automatización, lo que permite gestionar la nube desde {{site.data.keyword.cloud_notm}}.
+Puede desplegar manualmente los productos {{site.data.keyword.icpfull_notm}} y Cloud Automation Manager (CAM) en la plataforma de virtualización local, lo que permite gestionar la nube desde ubicaciones locales. Como alternativa, {{site.data.keyword.icpfull_notm}} y CAM se ofrecen como extensiones de servicio de un despliegue de VMware vCenter Server on {{site.data.keyword.cloud_notm}} nuevo o existente, mediante automatización, lo que permite gestionar la nube desde {{site.data.keyword.cloud_notm}}.
 
 {{site.data.keyword.icpfull_notm}} es una plataforma de aplicaciones para desarrollar y gestionar aplicaciones locales contenerizadas. {{site.data.keyword.icpfull_notm}} es un entorno integrado para gestionar contenedores que incluye el coordinador de contenedores Kubernetes,
 un repositorio de imágenes privadas, una consola de gestión e infraestructuras de supervisión.
@@ -46,7 +46,7 @@ En el diagrama siguiente se muestra {{site.data.keyword.icpfull_notm}} y CAM des
 
 ![Local - Gestión de la nube](../../images/vcsiks-onprem-cloudmgt.svg "Local - Gestión de la nube")
 
-Se utiliza strongSwan VPN para establecer la conectividad con los contenedores {{site.data.keyword.containerlong_notm}} desplegados. strongSwan se podría sustituir por la conectividad Direct-link.
+Se utiliza strongSwan VPN para establecer la conectividad con los contenedores {{site.data.keyword.containerlong_notm}} desplegados. strongSwan se podría sustituir por la conectividad Direct Link. 
 
 En el diagrama, CAM crea de forma lógica conexiones en la nube con los entornos de vCenters, proveedores de nube, {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}}. Los clústeres de {{site.data.keyword.icpfull_notm}} deben desplegarse en cada centro de datos o entorno de nube, y MCM proporciona el mecanismo para conectar los clústeres de {{site.data.keyword.icpfull_notm}} en una única vista de gestión.
 

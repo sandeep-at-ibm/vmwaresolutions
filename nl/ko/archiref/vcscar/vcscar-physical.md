@@ -125,10 +125,10 @@ Skate Advisor 애플리케이션은 다음 소프트웨어 컴포넌트를 사�
 * nginx - 역방향 프록시 서비스를 애플리케이션에 제공합니다.
 마이크로 서비스와 애플리케이션 요청은 정확한 컨테이너 엔드포인트로 분배됩니다.
 * WebSphere Liberty - Spring 기반
-Java 플랫폼, 엔터프라이즈 에디션 애플리케이션인 Acme 애플리케이션을 호스트합니다.
+Java 플랫폼, 엔터프라이즈 에디션 애플리케이션인 Acme 애플리케이션을 호스팅합니다.
 * Node.js - 마이크로 서비스 프레임워크를 챗봇에 제공합니다. 이 애플리케이션은 Watson의 서비스를 사용합니다.
 * mysql - 이 애플리케이션 데이터베이스는 Oracle Mysql에서 제공됩니다.
-* JavaScript - 챗봇은 클라이언트 브라우저에 호스트되는 JavaScript 기반 애플리케이션입니다. 챗봇은 Node.js 기반 마이크로 서비스를 통해 Watson과 통신합니다.
+* JavaScript - 챗봇은 클라이언트 브라우저에 호스팅되는 JavaScript 기반 애플리케이션입니다. 챗봇은 Node.js 기반 마이크로 서비스를 통해 Watson과 통신합니다.
 
 ## 관리 개요
 {: #vcscar-physical-mgmt-ovw}

@@ -1,8 +1,12 @@
 ---
 
 copyright:
+
   years: 2016, 2019
-lastupdated: "2019-05-13"
+
+lastupdated: "2019-05-31"
+
+keywords: user IDs vCenter, PSC user, user ID service
 
 subcollection: vmware-solutions
 
@@ -16,7 +20,7 @@ subcollection: vmware-solutions
 # IBM ユーザー ID
 {: #audit_user_ids}
 
-{{site.data.keyword.vmwaresolutions_short}} では、VMware インスタンスにホスト、クラスター、ストレージを追加するなどの操作をお客様が行った場合に {{site.data.keyword.cloud_notm}} の自動化機能で使用するために、お客様のアカウント内に一連のユーザーが維持されます。 以下のセクションで、{{site.data.keyword.cloud_notm}} の自動化機能のユーザー ID について説明します。
+{{site.data.keyword.vmwaresolutions_short}} では、VMware インスタンスにホスト、クラスター、ストレージを追加するなどの操作をお客様が行った場合に {{site.data.keyword.cloud_notm}} の自動化機能で使用するために、お客様のアカウント内に一連のユーザーが維持されます。 お客様のアカウント内のユーザーは、{{site.data.keyword.cloud_notm}} サービスの自動化機能によるサービスのインストールと構成にも使用できます。以下のセクションで、{{site.data.keyword.cloud_notm}} の自動化機能のユーザー ID について説明します。
 
 これらの IBM ユーザー ID が削除または無効化された場合、あるいはそのパスワードが変更された場合、VMware インスタンスの操作は失敗します。
 {:important}
@@ -67,6 +71,30 @@ HTTP は、vCenter のセットアップと構成のほかに、VMware の操作
 |:---------|:------------- |:------------|
 | IBM      | automation    | ホストの追加、サービスの仮想マシンの追加、および Active Directory と DNS エントリーのセットアップに使用されます。 |
 | お客様 | 管理者 | お客様専用に作成されます。 |
+
+## サービス・ユーザー ID
+{: #audit_user_ids-services}
+
+表 5. サービス・ユーザー ID
+
+| ユーザー ID                                    | 説明 |
+|:-------------------------------------------|:----------- |
+| prod-BigIP-``dynamic_ID``-@``domain name`` | F5 on {{site.data.keyword.cloud_notm}} サービスのインストールと構成に使用します。 |
+| prod-Caveonix-``dynamic_ID``-@``domain name`` | Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} サービスのインストールと構成に使用します。 |
+| prod-Fortigate-``dynamic_ID``-@``domain name`` | FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} サービスのインストールと構成に使用します。 |
+| prod-FortigateVM-``dynamic_ID``-@``domain name`` | FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} サービスのインストールと構成に使用します。 |
+| prod-HyTrustCC-``5_letter_ID``-@``domain name`` | HyTrust CloudControl on {{site.data.keyword.cloud_notm}} サービスのインストールと構成に使用します。 |
+| prod-HyTrustDC-``5_letter_ID``-@``domain name`` | HyTrust DataControl on {{site.data.keyword.cloud_notm}} サービスのインストールと構成に使用します。 |
+| prod-HyTrustKC-``5_letter_ID``-@``domain name`` | HyTrust KeyControl on {{site.data.keyword.cloud_notm}} サービスのインストールと構成に使用します。 |
+| prod-KMIPAdapter-``dynamic_ID``-@``domain name`` | KMIP for VMware on {{site.data.keyword.cloud_notm}} サービスのインストールと構成に使用します。 |
+| prod-ICP-``dynamic_ID``-@``domain name`` | {{site.data.keyword.cloud_notm}} Private Hosted サービスのインストールと構成に使用します。 |
+| prod-SPPlus-``dynamic_ID``-@``domain name`` | IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} サービスのインストールと構成に使用します。 |
+| prod-Veeam-``dynamic_ID``-@``domain name`` | Veeam on {{site.data.keyword.cloud_notm}} サービスのインストールと構成に使用します。 |
+| prod-HCX-``dynamic_ID``-@``domain name`` | VMware HCX on {{site.data.keyword.cloud_notm}} サービスのインストールと構成に使用します。 |
+| prod-Zerto-``dynamic_ID``-@``domain name`` | Zerto on {{site.data.keyword.cloud_notm}} サービスのインストールと構成に使用します。 |
+
+動的 ID の長さは 8 文字から 10 文字です。
+{:note}
 
 ## 関連リンク
 {: #audit_user_ids-related}

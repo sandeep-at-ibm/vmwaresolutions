@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-06-03"
 
 subcollection: vmware-solutions
 
@@ -19,7 +19,6 @@ evidenziare e mostrare le tecnologie che risolvono i problemi del mondo reale. L
 un servizio facilmente disponibile oggi.
 
 L'architettura di riferimento fornisce anche le seguenti informazioni:
-
 -   Fornisce un linguaggio comune per le varie parti interessate.
 -   Fornisce coerenza nell'implementazione della tecnologia per risolvere i problemi.
 -   Supporta la convalida delle soluzioni rispetto a un'architettura di riferimento
@@ -34,17 +33,16 @@ Volevamo dimostrare un'interazione tra il machine learning e l'intelligenza
 artificiale di Watson in modo reale e attraverso di essa esplorare
 più in profondità la cultura dello skateboarding. Mostriamo i servizi disponibili e l'infrastruttura cloud in
 modo univoco, dimostrando la capacità tecnica e i progressi in questa
-area. L'implementazione della “concept car” è un'estensione
+area.
+
+L'implementazione della “concept car” è un'estensione
 dell'applicazione dimostrativa Acme Skateboard chiamata Skate Advisor. Skate Advisor è uno strumento, che permette agli utenti di avere conversazioni di skateboarding con un motore controllato da Watson. Le seguenti citazioni sono una conversazione di esempio:
 
 -   “Watson, mostrami le combinazioni del trick Casper”
 -   “Watson, mostrami le posizioni comuni per eseguire un trick”
 -   “Watson, mostrami un video del trick Casper”
 
-Acme Skate Advisor si avvale del servizio Watson Discovery per
-acquisire articoli, video, blog e altri contenuti basati su Internet per
-creare un database aggiornato di trick, che può essere interrogato
-dall'applicazione.
+Acme Skate Advisor si avvale del servizio Watson Discovery per acquisire articoli, video, blog e altri contenuti basati su internet per creare un database aggiornato di trick, che può essere interrogato dall'applicazione.
 
 L'applicazione Skate Advisor viene implementata anche sulla piattaforma
 di modernizzazione dell'applicazione, che fornisce servizi basati su contenitore attraverso
@@ -100,8 +98,7 @@ Il seguente elenco descrive i vantaggi della modernizzazione dell'applicazione:
 - Riduce i costi per creare nuove funzioni
 - Espande la capacità fornita in un breve periodo
 
-IBM comprende che il 70 percento dell'adozione del cloud privato è guidato
-dalla necessità di modernizzare gli ambienti dell'applicazione. Tuttavia, la maggior
+IBM comprende che il 70% delle adozioni cloud private è da attribuire alla necessità di modernizzare gli ambienti dell'applicazione. Tuttavia, la maggior
 parte delle organizzazioni si sta avvicinando alla modernizzazione dell'applicazione
 con un approccio a più fasi, che richiede un panorama ibrido e multi-cloud, in cui:
 
@@ -116,15 +113,12 @@ Ad esempio, un modello comune è quello di avere applicazioni SOE di front-end d
 sulle VM su un cloud privato.
 
 Poiché le esigenze di infrastruttura IT e aziendali sono uniche, un approccio alla modernizzazione deve fornire le seguenti priorità:
-
 * Accelerare il valore aziendale
 * Ridurre il tempo di consegna
 * Ridurre i rischi
 * Preservare gli investimenti esistenti.
 
-IBM fornisce proprio un approccio di questo tipo alla modernizzazione
-dell'applicazione che può essere personalizzato per affrontare le tue esigenze
-uniche di tecnologia e di business.
+IBM fornisce proprio un approccio di questo tipo alla modernizzazione dell'applicazione che può essere personalizzato per affrontare le tue esigenze uniche di tecnologia e di business.
 
 I seguenti documenti forniscono diversi punti di vista sulle tecnologie utilizzate nel percorso di modernizzazione dell'applicazione in {{site.data.keyword.cloud_notm}}:
 
@@ -142,5 +136,4 @@ I seguenti documenti forniscono diversi punti di vista sulle tecnologie utilizza
 ## Link correlati
 {: #vcscar-intro-related}
 
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

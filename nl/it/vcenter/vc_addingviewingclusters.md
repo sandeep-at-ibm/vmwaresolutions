@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-18"
+lastupdated: "2019-06-17"
+
+keywords: vCenter Server add cluster, view cluster vCenter Server, delete cluster vCenter Server
 
 subcollection: vmware-solutions
 
@@ -178,7 +180,9 @@ Le impostazioni di abilitazione della scheda di interfaccia di rete (NIC) si bas
 ### Riepilogo ordine
 {: #vc_addingviewingclusters-adding-order-summary}
 
-In base alla configurazione che hai selezionato per il cluster, il costo stimato viene generato e visualizzato immediatamente nel riquadro **Riepilogo ordine** sulla destra.
+In base alla configurazione che hai selezionato per il cluster, il costo stimato viene generato e visualizzato istantaneamente nel riquadro **Riepilogo ordine** sulla destra. Fai clic su **Dettagli sui prezzi** per generare un documento PDF con il riepilogo del costo per le risorse {{site.data.keyword.vmwaresolutions_short}}.
+
+Puoi anche aggiungere le risorse di cui è stato eseguito il provisioning allo strumento di stima {{site.data.keyword.cloud_notm}} facendo clic su **Aggiungi alla stima**. Ciò è utile se desideri stimare il costo delle risorse {{site.data.keyword.vmwaresolutions_short}} selezionate insieme ad altre risorse {{site.data.keyword.cloud_notm}} di cui potresti prendere in considerazione l'acquisto.
 
 ## Procedura per aggiungere i cluster alle istanze vCenter Server
 {: #vc_addingviewingclusters-adding-procedure}
@@ -216,7 +220,7 @@ In base alla configurazione che hai selezionato per il cluster, il costo stimato
 {: #vc_addingviewingclusters-adding-results}
 
 1. La distribuzione del cluster viene avviata automaticamente e lo stato del cluster viene modificato in **Inizializzazione**. Puoi controllare lo stato della distribuzione visualizzando la cronologia di distribuzione dalla pagina **Riepilogo** dell'istanza.
-2. Quando il cluster è pronto per l'uso, il suo stato viene modificato in **Pronto per l'utilizzo**. Il cluster appena aggiunto viene abilitato con vSphere High Availability (HA) e vSphere Distributed Resource Scheduler (DRS).
+2. Quando il cluster è pronto per l'uso, il suo stato viene modificato in **Pronto per l'utilizzo**. Il cluster appena aggiunto viene abilitato con vSphere HA (High Availability) e vSphere DRS (Distributed Resource Scheduler).
 
 Non puoi modificare il nome del cluster. La modifica del nome del cluster potrebbe comportare errori nelle operazioni di aggiunta o rimozione dei server ESXi nel cluster.
 {:important}
@@ -229,9 +233,7 @@ Non puoi modificare il nome del cluster. La modifica del nome del cluster potreb
 3. Fai clic su **Infrastruttura** nel riquadro di navigazione a sinistra. Nella tabella **CLUSTER**, visualizza il riepilogo dei cluster:
   * **Nome**: il nome del cluster.
   * **Server ESXi**: il numero di server ESXi nel cluster.
-  * **CPU**: la specifica CPU dei server ESXi nel cluster.
-  * **Dischi vSAN personalizzati**: il numero di dischi vSAN nel cluster, incluso il tipo di disco e la capacità.
-  * **Memoria**: la dimensione totale della memoria dei server ESXi nel cluster.
+  * **Archiviazione**: il tipo di archiviazione utilizzato dal cluster.
   * **Ubicazione Data Center **: il {{site.data.keyword.CloudDataCent_notm}} in cui è ospitato il cluster.
   * **Pod**: il pod in cui è distribuito il cluster.
   * **Stato**: lo stato del cluster. Lo stato può assumere uno dei seguenti valori:
@@ -260,7 +262,19 @@ Tabella 4. Dettagli del server ESXi
 | IP privato | L'indirizzo IP privato del server ESXi. |
 | Stato | Lo stato del server ESXi, che può assumere uno dei seguenti valori:<br> **Aggiunto** Il server ESXi è stato aggiunto ed è pronto per l'uso.<br> **In fase di aggiunta** Il server ESXi è in fase di aggiunta.<br> **In fase di eliminazione** Il server ESXi è in fase di eliminazione. |
 
-Tabella 5. Dettagli dell'archiviazione
+Espandi il server ESXi per ulteriori dettagli.
+
+Tabella 5. Dettagli aggiuntivi del server ESXi
+
+| Elemento        | Descrizione       |  
+|:------------- |:------------- |
+| CPU | La specifica CPU dei server ESXi nel cluster. |
+| Memoria | La dimensione totale della memoria dei server ESXi nel cluster. |
+| Dischi vSAN personalizzati | Il numero di dischi vSAN nel cluster, incluso il tipo di disco e la capacità. |
+| Dischi cache vSAN | Il tipo e il numero di dischi cache vSAN. |
+| Rete |Le impostazioni di abilitazione della scheda di interfaccia di rete (NIC, network interface card) di Rete pubblica e privata o Solo rete privata. |
+
+Tabella 6. Dettagli dell'archiviazione
 
 | Elemento        | Descrizione       |  
 |:------------- |:------------- |
@@ -269,7 +283,7 @@ Tabella 5. Dettagli dell'archiviazione
 | IOPS/GB | Il livello di prestazioni dell'archiviazione. |
 | Protocollo NFS | La versione NFS dell'archiviazione. |
 
-Tabella 6. Interfaccia di rete - Dettagli VLAN
+Tabella 7. Interfaccia di rete - Dettagli della VLAN
 
 | Elemento        | Descrizione       |  
 |:------------- |:------------- |
@@ -280,7 +294,7 @@ Tabella 6. Interfaccia di rete - Dettagli VLAN
 
 Fai clic su **View Resource** per accedere ai dettagli della VLAN.
 
-Tabella 7. Interfaccia Rete - Dettagli della sottorete
+Tabella 8. Interfaccia di rete - Dettagli della sottorete
 
 | Elemento        | Descrizione       |  
 |:------------- |:------------- |
@@ -288,7 +302,7 @@ Tabella 7. Interfaccia Rete - Dettagli della sottorete
 | Tipo | Il tipo di sottorete: primaria o portatile. |
 | Descrizione | La descrizione della sottorete. |
 
-Tabella 8. Interfaccia di rete - Dettagli IP
+Tabella 9. Interfaccia di rete - Dettagli IP
 
 | Elemento        | Descrizione       |  
 |:------------- |:------------- |

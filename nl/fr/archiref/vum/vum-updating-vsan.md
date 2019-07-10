@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-15"
 
 subcollection: vmware-solutions
 
@@ -49,7 +49,7 @@ La première étape consiste à ajouter vos données d'identification my.vmware.
 {: #vum-updating-vsan-config-vcsa-proxy}
 
 1.	Dans le navigateur de votre serveur intermédiaire, connectez-vous à l'interface de gestion de VCSA `https://<vCenter ip>:5480`
-2.	En utilisant les données d'identification de la console IC4VS, connectez-vous à l'interface de gestion VCSA en tant qu'utilisateur racine (root).
+2.	En utilisant les données d'identification de la console BM Cloud for VMware Solutions, connectez-vous à l'interface de gestion VCSA en tant qu'utilisateur racine (root).
 3.	Dans l'interface de gestion de dispositif de vCenter Server, cliquez sur **Networking**, puis sur **Manage**.
 4.	Pour configurer un serveur proxy, dans le panneau Paramètres proxy, cliquez sur **Edit**.
 5.	Sélectionnez **Use a proxy server**, entrez les paramètres du serveur proxy et cliquez sur **OK**.

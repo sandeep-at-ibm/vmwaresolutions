@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-07"
+lastupdated: "2019-06-18"
+
+keywords: Veeam, Veeam install, tech specs Veeam
 
 subcollection: vmware-solutions
 
@@ -31,18 +33,23 @@ Veeam on {{site.data.keyword.cloud}} 서비스는 엔터프라이즈가 고가�
 ### VSI
 {: #veeam_considerations-specs-vsi}
 
-* Veeam Backup and Replication 9.5 OS 추가 기능이 포함된 단일 VSI
+* Veeam Backup and Replication 9.5 OS 추가 기능 및 Veeam Availability Suite 9.5가 포함된 단일 VSI
 * Windows Server 2016 Standard Edition(64비트)
 * 4 x 2.0GHz 코어
-* 8GB RAM
+* 8 vCPU, 32GB RAM
 * 1Gbps 사설 네트워크 업링크
 * 100GB 디스크(SAN)
 
 ### 백업용 스토리지
 {: #veeam_considerations-specs-storage}
 
-* Endurance iSCSI 스토리지(2000, 4000, 8000 또는 12000GB)
+* Endurance iSCSI 스토리지(2,000, 4,000, 8,000 또는 12,000GB)
 * 스토리지 성능(0.25, 2 또는 4IOPS/GB)
+
+Veeam 서비스 설치 및 구성의 일부로 다음 저장소가 작성됩니다.
+* Veeam 구성 백업 파일의 경우, 저장소 이름은 `IC4V Default Config Backup Repository`입니다. Veeam 백업이 저장되는 폴더의 경로는 <Drive>:\ConfigBackup\`입니다.
+* 스케일 확장의 경우, 저장소 이름은 `IC4V Scale-Out Repository`입니다. 자세한 정보는 [스케일 확장 저장소 추가](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icos_ordering#icos_ordering-scale-repo)를 참조하십시오.
+* 가상 머신(VM) 백업의 경우, 저장소 이름은 ``IC4V Default VM Backup Repository``입니다. VM 백업이 저장되는 폴더의 경로는 ``<Drive>:\VMBackup\`입니다. 이 저장소는 범위로 ``IC4V Scale-Out repository`에 추가됩니다.
 
 ### 네트워킹
 {: #veeam_considerations-specs-networking}
@@ -52,12 +59,7 @@ Veeam on {{site.data.keyword.cloud}} 서비스는 엔터프라이즈가 고가�
 ### 라이센스 및 요금
 {: #veeam_considerations-specs-licenses}
 
-Veeam Backup and Replication 9.5 Enterprise Plus(10, 25, 50, 100 또는 200VM 라이센스).
-
-### 관리
-{: #veeam_considerations-specs-mgmt}
-
-기본적으로 최대 5개의 VM 및 2000GB의 스토리지로 구성된 관리 백업.
+* Veeam Availability Suite 9.5(10, 25, 50, 100 또는 200 VM 라이센스)
 
 ## Veeam on IBM Cloud 설치 시 고려사항
 {: #veeam_considerations-install}

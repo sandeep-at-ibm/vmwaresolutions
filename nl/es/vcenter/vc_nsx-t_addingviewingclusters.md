@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-18"
+lastupdated: "2019-06-13"
+
+keywords: vCenter Server NSX-T add cluster, view cluster vCenter Server NSX-T, delete cluster vCenter Server NSX-T
 
 subcollection: vmware-solutions
 
@@ -150,7 +152,9 @@ Los valores de habilitación de la tarjeta de interfaz de red (NIC) se basan en 
 ### Resumen del pedido
 {: #vc_nsx-t_addingviewingclusters-adding-order-summary}
 
-En función de la configuración seleccionada para el clúster, el coste estimado se genera y se muestra al instante en el panel derecho **Resumen de pedido**.
+En función de la configuración seleccionada para el clúster, el coste estimado se genera y se muestra al instante en el panel derecho **Resumen de pedido**. Pulse **Detalle de precios** para generar un documento PDF con el resumen de coste de los recursos de {{site.data.keyword.vmwaresolutions_short}}. 
+
+También puede añadir los recursos suministrados a la herramienta de estimación {{site.data.keyword.cloud_notm}}, pulsando **Añadir a estimación**. Esto es útil si desea estimar el coste de los recursos estimare {{site.data.keyword.vmwaresolutions_short}} seleccionados junto con otros recursos de {{site.data.keyword.cloud_notm}} que le podría interesar adquirir. 
 
 ## Procedimiento para añadir clústeres a instancias de vCenter Server con NSX-T
 {: #vc_nsx-t_addingviewingclusters-adding-procedure}

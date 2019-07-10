@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-03"
+lastupdated: "2019-06-18"
+
+keywords: vCenter Server add host, add server vCenter Server, remove host vCenter Server
 
 subcollection: vmware-solutions
 
@@ -20,6 +22,7 @@ subcollection: vmware-solutions
 
 Vous pouvez accroître ou réduire la capacité de votre instance VMware vCenter Server en fonction de vos besoins métier en ajoutant ou en supprimant des serveurs ESXi ou du stockage NFS.
 
+* À partir de la version V3.1, vous pouvez ajouter de nouveaux serveurs ESXi à un cluster existant en sélectionnant une configuration existante ou une autre configuration que les hôtes existants du cluster. Les configurations existantes sont disponibles pour une sélection instantanée lorsque vous commandez votre nouveau serveur. Pour éviter les problèmes de performances ou de stabilité, il est recommandé que les clusters utilisent la même configuration ou une configuration similaire en ce qui concerne le processeur, la mémoire vive et le stockage. Cette fonctionnalité est utile pour les mises à jour matérielles au sein du même cluster.Un cluster ne peut posséder qu'un seul ype de stockage.
 * A compter de l'édition V3.0, vous pouvez ajouter ou retirer simultanément le stockage NFS et des serveurs ESXi sur des clusters qui sont à l'état **Prêt à l'emploi**. Par exemple, vous pouvez ajouter ou retirer un serveur ESXi dans un cluster et ajouter ou retirer le stockage NFS dans un autre cluster.
 * A compter de l'édition V2.9, vous pouvez ajouter de nouveaux serveurs ESXi à un cluster tandis que ces serveurs sont en mode maintenance. De plus, vous pouvez ajouter ou retirer simultanément des serveurs ESXi sur plusieurs clusters.
 
@@ -47,11 +50,23 @@ Vous pouvez accroître ou réduire la capacité de votre instance VMware vCenter
 3. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche.
 4. Dans le tableau **CLUSTERS**, cliquez sur le cluster auquel vous désirez ajouter des serveurs ESXi.
 5. Dans la section **Serveurs ESXi**, cliquez sur **Ajouter**.
-6. Dans la fenêtre **Ajouter un serveur**, entrez le nombre de serveurs que vous voulez ajouter.
-7. Le cas échéant, cochez la case permettant d'ajouter des serveurs alors que le mode maintenance est actif.
-8. Passez en revue le coût estimé et cliquez sur **Ajouter**.
+6. Dans la fenêtre **Ajouter un serveur**, sélectionnez le nombre de serveurs que vous voulez ajouter.
+7. Le cas échéant, cochez la case permettant d'ajouter des serveurs alors que le mode maintenance est actif. La case à cocher est sélectionnée par défaut. 
 
-### Résultats après l'ajout de serveurs ESXi
+   Lorsque vous mettez à disposition le nouveau serveur ESXi, les machines virtuelles (VM) sont immédiatement migrées vers les nouveaux serveurs si vous ne cochez pas la case **Mode maintenance**. Vous ne recevez pas de message de confirmation avant le début de la migration.
+{:important}
+
+8. Procédez à la configuration du serveur bare metal.
+   * Sélectionnez une configuration parmi les hôtes existants du cluster. 
+   * Sélectionnez une nouvelle configuration {{site.data.keyword.baremetal_short_sing}}.
+      * Pour **Skylake** ou **Broadwell**, renseignez les zones **Modèle d'UC**, **Mémoire RAM** et **Nombre de serveurs {{site.data.keyword.baremetal_short}}**.      
+      * Pour **Certifiés SAP**, renseignez les zones **Modèle UC et Mémoire RAM** et **Nombre de {{site.data.keyword.baremetal_short}}**.
+9. Procédez à la configuration du stockage. Spécifiez les types de disque pour les disques de cache et de capacité, le nombre de disques et l'édition de licence vSAN. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**.
+10. Passez en revue le coût estimé et cliquez sur **Ajouter**.
+
+  Vous pouvez également ajouter les ressources mises à disposition à l’outil d’estimation {{site.data.keyword.cloud_notm}} en cliquant sur **Ajouter à l'estimation**. Cela est utile si vous souhaitez estimer le coût des ressources {{site.data.keyword.vmwaresolutions_short}} sélectionnées avec d'autres ressources {{site.data.keyword.cloud_notm}} que vous pourriez envisager d'acheter.
+
+### Que se passe-t-il après l'ajout de serveurs ESXi ? 
 {: #vc_addingremovingservers-adding-results}
 
 1. Un bref délai peut être observé sur la console entre le passage du statut **Prêt à l'emploi** au statut **Modification en cours**. Laissez l'opération s'exécuter complètement avant d'apporter d'autres modifications à l'instance.
@@ -85,7 +100,7 @@ Si vous ajoutez des serveurs ESXi alors que le mode maintenance est actif, les m
 4. Dans le tableau **CLUSTERS**, cliquez sur le cluster sur lequel vous désirez retirer des serveurs ESXi.
 5. Dans la section **Serveurs ESXi**, sélectionnez les serveurs que vous désirez supprimer et cliquez sur **Retirer**.
 
-### Résultats après le retrait de serveurs ESXi
+### Que se passe-t-il après le retrait de serveurs ESXi ? 
 {: #vc_addingremovingservers-removing-results}
 
 1. Un bref délai peut être observé sur la console entre le passage du statut **Prêt à l'emploi** au statut **Modification en cours**. Laissez l'opération s'exécuter complètement avant d'apporter d'autres modifications à l'instance.
@@ -114,9 +129,11 @@ N'ajoutez pas de stockage NFS depuis le client Web VMware vSphere. Les modificat
 6. Dans la fenêtre **Stockage**, configurez le stockage.
    * Si vous souhaitez ajouter et configurer les mêmes paramètres pour tous les partages de fichiers, renseignez les zones **Nombre de partages**, **Performances** et **Taille (Go)**.
    * Si vous souhaitez ajouter et configurer des partages de fichiers individuellement, renseignez les zones **Configurer les partages individuellement**, puis cliquez sur l'icône **+** en regard de l'option d'**ajout de stockage partagé**. Renseignez ensuite les zones **Performances** et **Taille (Go)** pour chaque partage de fichiers individuel. Vous devez sélectionner au moins un partage de fichiers.
-7. Cliquez sur l'option d'**ajout de stockage NFS**.
+7. Passez en revue le coût estimé et cliquez sur l'option d'**ajout de stockage NFS**.
 
-### Résultats après l'ajout de stockage NFS
+  Vous pouvez également ajouter les ressources mises à disposition à l’outil d’estimation {{site.data.keyword.cloud_notm}} en cliquant sur **Ajouter à l'estimation**. Cela est utile si vous souhaitez estimer le coût des ressources {{site.data.keyword.vmwaresolutions_short}} sélectionnées avec d'autres ressources {{site.data.keyword.cloud_notm}} que vous pourriez envisager d'acheter.
+
+### Que se passe-t-il après l'ajout de stockage NFS ?  
 {: #vc_addingremovingservers-adding-nfs-storage-results}
 
 1. Un bref délai peut être observé sur la console entre le passage du statut **Prêt à l'emploi** au statut **Modification en cours**. Laissez l'opération s'exécuter complètement avant d'apporter d'autres modifications à l'instance.
@@ -144,7 +161,7 @@ N'ajoutez pas de stockage NFS depuis le client Web VMware vSphere. Les modificat
 5. Dans la section **Stockage**, sélectionnez le partage de stockage que vous voulez retirer et cliquez sur **Supprimer**.
 6. Cliquez sur **Retirer** dans la fenêtre **Retirer le stockage**.
 
-### Résultats après le retrait de stockage NFS
+### Que se passe-t-il après le retrait de stockage NFS ?  
 {: #vc_addingremovingservers-removing-nfs-storage-results}
 
 1. Un bref délai peut être observé sur la console entre le passage du statut **Prêt à l'emploi** au statut **Modification en cours**. Laissez l'opération s'exécuter complètement avant d'apporter d'autres modifications à l'instance.
@@ -161,5 +178,5 @@ N'ajoutez pas de stockage NFS depuis le client Web VMware vSphere. Les modificat
 * [Exigences et planification pour les instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [Commande d'instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
 * [Ajout, affichage et suppression de clusters pour des instances vCenter Server](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
-* [Place a host in maintenance mode](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.resmgmt.doc/GUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
+* [Activer le mode maintenance sur un hôte](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.resmgmt.doc/GUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
 * [Enhanced vMotion Compatibility (EVC) processor support](https://kb.vmware.com/s/article/1003212){:new_window}

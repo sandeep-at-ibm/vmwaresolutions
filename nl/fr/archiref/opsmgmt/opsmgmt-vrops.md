@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-17"
+lastupdated: "2019-06-03"
 
 ---
 
@@ -13,10 +13,10 @@ lastupdated: "2019-05-17"
 
 Le cluster d'analyse vROps contient les noeuds qui analysent et stockent les données des composants surveillés. Dans ce déploiement, quatre noeuds et deux équilibreurs de charge NSX sont déployés. Cette taille permet de surveiller jusqu'à 30.000 machines virtuelles et 9.000.000 de métriques à collecter.
 
-Le cluster d'analyse à 4 noeuds se compose des éléments suivants :
+Le cluster d'analyse à 4 noeuds se compose des composants suivants :
 * Le noeud maître : le noeud maître est le noeud initial dans un cluster vROps. Dans un environnement de grande dimension, ce noeud gère tous les autres noeuds.
 * La réplique de noeud maître : ce noeud active la haute disponibilité du noeud maître.
-* Les noeuds de données : ces noeud permettent la mise à l'échelle de vROps dans des environnements plus vastes. Deux noeuds de données sont déployés dans cette conception.
+* Les noeuds de données : ces noeuds permettent la mise à l'échelle de vROps dans des environnements plus vastes. Deux noeuds de données sont déployés dans cette conception.
 
 De plus, la conception utilise des noeuds collecteurs distants qui agissent en tant que serveur proxy ou de relais pour collecter les données uniquement et transmettre les données collectées aux noeuds maître/de données. Des noeuds de données et des collecteurs distants peuvent être ajoutés pour effectuer une mise à l'échelle en fonction de la taille de l'environnement. Le placement des composants vROps sur les réseaux VLAN/VXLAN est illustré dans le diagramme suivant.
 
@@ -27,7 +27,7 @@ De plus, la conception utilise des noeuds collecteurs distants qui agissent en t
 
 ![Diagramme des composants d'Operations Manager](../../images/opsmgmt-vropscomponent.svg "Diagramme des composants d'Operations Manager")
 
-Le cluster d'analyse vROps est accessible via une interface utilisateur de gestion ou à l'aide d'une API et s'intègre à :
+Le cluster d'analyse vROps est accessible via une interface utilisateur de gestion ou à l'aide d'une API et s'intègre aux composants suivants :
 * vCenter
 * vRealize Log Insight
 
@@ -45,7 +45,7 @@ Le client peut configurer vROps manuellement pour collecter les données de vRea
 ## Configuration requise
 {: #opsmgmt-vrops-requirements}
 
-Le cluster d'analyse est composé d'un noeud maître, d'une réplique de noeud maître et de deux noeuds de données qui permettent une mise à l'échelle et une haute disponibilité. Des noeuds de données additionnels peuvent être ajoutés si une mise à l'échelle est requise. Le cluster d'analyse peut être mis à l'échelle avec un maximum de 8 noeuds de taille moyenne.
+Le cluster d'analyse est composé d'un noeud maître, d'une réplique de noeud maître et de deux noeuds de données qui permettent une extension et une haute disponibilité. Des noeuds de données additionnels peuvent être ajoutés si une mise à l'échelle est requise. Le cluster d'analyse peut être étendu à un maximum de huit noeuds de taille moyenne.
 
 Tableau 1. Paramètres système du noeud de réplique/maître d'Operations Manager
 
@@ -78,7 +78,7 @@ Tableau 3. Paramètres des équilibreurs de charge d'Operations Manager
 | URL | /suite-api/api/deployment/node/status | -- |
 | Réception | ONLINE | -- |
 | Algorithme | ROUND-ROBIN | LEASTCONN |
-| Pool | 4 noeuds de vROPs | 4 noeuds de vROPs |
+| Pool | Quatre noeuds de vROPs | Quatre noeuds de vROPs |
 
 Pour plus d'informations, voir [vRealize Automation Load Balancing (PDF)](https://docs.vmware.com/en/vRealize-Automation/7.5/vrealize-automation-load-balancing.pdf){:new_window}.
 
@@ -88,10 +88,10 @@ Pour plus d'informations, voir [vRealize Automation Load Balancing (PDF)](https:
 Le déploiement du dispositif vROps nécessite six adresses IP du sous-réseau portable privé des outils. En terme de connectivité réseau, vROps nécessite un accès :
 * au dispositif vCenter
 * au dispositif vRealize Log Insight
-* aux dispositifs NSX-V/T 
+* aux dispositifs NSX-V/T
 * au réseau VXLAN de développement d'outils
 * aux réseaux clients
-* au serveur NTP (time.services.softlayer.com)
+* au serveur NTP (`time.services.softlayer.com`)
 * à {{site.data.keyword.vmwaresolutions_short}} Active Directory/DNS
 * Les collecteurs distants ont besoin des règles NAT sur la passerelle NSX ESG pour activer la connectivité au noeud maître, à la réplique de noeud maître et aux noeuds de données
 
@@ -113,7 +113,7 @@ Tableau 4. Ports d'Operation Manager
 ### Authentification
 {: #opsmgmt-vrops-auth}
 
-La gestion des utilisateurs de vROps nécessite VMware Identity Manager (vIDM), qui est intégré à Active Directory. Les comptes de service sont utilisés pour la communication d'application à application depuis vRealize Operations Manager vers les adaptateurs suivants avec les autorisations minimales requises pour la collecte de métriques et pour le mappage topologique : 
+La gestion des utilisateurs de vROps nécessite VMware Identity Manager (vIDM), qui est intégré à Active Directory. Les comptes de service sont utilisés pour la communication d'application à application depuis vRealize Operations Manager vers les adaptateurs suivants avec l'ensemble minimum de permissions nécessaires pour la collecte de métrique et pour le mappage topologique : 
 
 * NSX Manager
 * vCenter
@@ -175,7 +175,7 @@ Le pack VMware SDDC Health Management Pack fournit les tableaux de bord suivants
 * Tableau de bord des tendances de l'historique de santé de SDDC - Le pack VMware SDDC Health Management Pack comporte un tableau de bord des tendances de l'historique de santé de SDDC qui affiche la tendance de chaque composant dans la pile SDDC.
 * Tableau de bord du redimensionnement de vRealize Operations Manager de SDDC - Le tableau de bord de redimensionnement de vRealize Operations Manager de SDDC fournit au cluster vRealize Operations Manager la capacité de traiter les objets et les métriques.
 
-Les plug-in du pack VMware SDDC Health Management Pack recueillent les métriques des types d'objets contenus dans les plug-in. Le pack de gestion collecte les métriques de santé des produits suivants :
+Les plug-in du pack VMware SDDC Health Management Pack recueillent les métriques des types d'objets contenus dans les plug-in. Le pack de gestion collecte les métriques de santé des composants suivants :
 * vCenter Server
 * Pack de gestion de NSX for vSphere
 * vRealize Automation
@@ -223,7 +223,7 @@ Le pack de gestion de vRealize Operations pour HCX étend les fonctionnalités d
 * [vRealize Operations Manager 7.0 Sizing Guidelines](https://kb.vmware.com/s/article/57903){:new_window}
 * [Documentation de vRealize Operations Manager](https://docs.vmware.com/en/vRealize-Operations-Manager/index.html){:new_window}
 * [Management Pack for vSAN](https://marketplace.vmware.com/resources/vsx/product_files/31742/original/Management-Pack-for-vSAN-Guide6d2a8895b022a5f626a86e8e84b031b5.pdf){:new_window}
-* [Mise à jour des clusters vSAN](https://cloud.ibm.com/docs/services/vmwaresolutions/archiref/vum/vum-updating-vsan.html#updating-vsan-clusters){:new_window}
+* [Mise à jour des clusters vSAN](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vsan)
 * [Management-Pack-for-vSAN-Guide](https://marketplace.vmware.com/resources/vsx/product_files/31742/original/Management-Pack-for-vSAN-Guide6d2a8895b022a5f626a86e8e84b031b5.pdf){:new_window}
 * [vSAN Health Check Information](https://kb.vmware.com/s/article/2114803){:new_window}
 * [Operationalizing VMware NSX](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/products/nsx/vmware-operationalizing-nsx.pdf){:new_window}

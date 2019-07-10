@@ -59,15 +59,15 @@ Tabella 1. Porte e protocolli
 |Cluster archivio dati di messaggistica|9092|
 |Nodi master archivio dati indice|9200, 9300, 5601, 443|
 
-Il seguente diagramma mostra la topologia di rete con la subnet privata portatile Caveonix che è associata alla VLAN Privata A. Sei responsabile della gestione dello spazio di indirizzo IP per questa subnet in modo da poter eseguire manualmente il ridimensionamento incrementale dal modello di distribuzione “tutto-in-uno” a quello completamente distribuito, passando per il modello parzialmente distribuito come necessario.
+Il seguente diagramma mostra la topologia di rete con la sottorete privata portatile Caveonix che è associata alla VLAN Privata A. Sei responsabile della gestione dello spazio di indirizzi IP per questa sottorete in modo da poter eseguire manualmente il ridimensionamento incrementale dal modello di distribuzione “tutto-in-uno” a quello completamente distribuito, passando per il modello parzialmente distribuito come necessario.
 
 ![Diagramma di rete](../../images/caveonix-network.svg "Diagramma di rete")
 
 La subnet IP e le assegnazioni VLAN sono descritte nella seguente tabella.
 
-Tabella 2. VLAN e subnet
+Tabella 2. VLAN e sottoreti
 
-|VLAN 	|Tipo di subnet 	|Descrizione|
+|VLAN 	|Tipo di sottorete 	|Descrizione|
 |---|---|---|
 |Pubblica 	|Primaria 	|Assegnata agli host fisici per l'accesso alla rete pubblica. Non utilizzata al momento della distribuzione iniziale.|
 |Pubblica	|Portatile 	|Assegnata per l'utilizzo di uplink e NAT su customer-nsx-esg.|

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-06"
+lastupdated: "2019-06-12"
 
 subcollection: vmware-solutions
 
@@ -18,7 +18,7 @@ subcollection: vmware-solutions
 # Architecture côté source de VMware HCX on IBM Cloud
 {: #hcx-archi-source}
 
-Cette section décrit l'architecture de chaque composant HCX déployé dans l'environnement source.
+Passez en revue l'architecture de chaque composant HCX déployé dans l'environnement source.
 
 ## Présentation de HCX
 {: #hcx-archi-source-intro-hcx}
@@ -28,7 +28,7 @@ La technologie HCX s'intègre en toute transparence aux réseaux vSphere vCenter
 Cette introduction récapitule les tâches qui peuvent être accomplies et les fonctions qui prennent en charge et améliorent la migration et l'extension réseau.
 
 * HCX détient les processus de chiffrement et déchiffrement source et destination, en garantissant une sécurité cohérente et en permettant l'admission de flux de travaux hybrides comme la migration de machine virtuelle et l'extension de réseau.
-* HCX crée un réseau WAN optimisé, défini par les logiciels pour l'augmentation des performances de réseau étendu, avec des performances proches de celles de la vitesse d'un réseau local.
+* HCX crée un réseau WAN optimisé, défini par les logiciels pour l'augmentation des performances de réseau étendu, avec des performances proches de celles de la vitesse d'un réseau local. 
 * HCX permet également la migration de la charge de travail bidirectionnelle et de la politique de sécurité VMware NSX® vers les services IBM Cloud.
 * HCX s'intègre à vSphere vCenter et est géré depuis le client vSphere Web Client.
 
@@ -47,7 +47,7 @@ Cette introduction récapitule les tâches qui peuvent être accomplies et les f
 ### Migration avec peu d'interruption
 {: #hcx-archi-source-low-downtime-mig}
 
-La migration avec peu d'interruption repose sur la réplication vSphere, qui est une technologie distribuée mise en oeuvre dans l'hyperviseur VMware ESX/ESXi/ESXi. HCX crée une réplique d'une machine virtuelle réelle dans IBM Cloud, et effectue un basculement pour mettre hors tension la machine virtuelle source et mettre sous tension la machine virtuelle migrée.
+La migration avec peu d'interruption repose sur la réplication vSphere- qui est une technologie distribuée mise en oeuvre dans l'hyperviseur VMware ESX/ESXi/ESXi. HCX crée une réplique d'une machine virtuelle réelle dans IBM Cloud, et effectue un basculement pour mettre hors tension la machine virtuelle source et mettre sous tension la machine virtuelle migrée.
 * Le chemin de migration est toujours via la passerelle cloud. Le transport peut être Internet, un réseau étendu de couche 2, ou une ligne de connexion directe.
 * Une machine virtuelle peut être migrée plusieurs fois dans les deux sens.
 
@@ -81,7 +81,7 @@ Les fonctions de mise en réseau suivantes sont intégrées à la passerelle clo
 ## Présentation de HCX
 {: #hcx-archi-source-understand-hcx}
 
-HCX prend en charge une relation plusieurs-à-plusieurs entre sites vCenter locaux et IBM Cloud. vCenter Server en mode lié est pris en charge. Cette rubrique fournit une présentation générale de la façon dont l'installateur interagit avec le centre de données sur site et IBM Cloud.
+HCX prend en charge une relation plusieurs-à-plusieurs entre sites vCenter locaux et IBM Cloud. vCenter Server en mode lié est pris en charge.
 
 Durant l'installation, le dispositif virtuel HCX Manager est importé et configuré en tant que plug-in pour le site vCenter local. Ce plug-in est ensuite utilisé pour configurer le déploiement du service de réseau WAN défini par les logiciels. La configuration automatisée met à disposition chaque dispositif de service hybride en tant que machine virtuelle dans le vCenter local, puis déploie une machine virtuelle correspondante dans IBM Cloud.
 
@@ -94,7 +94,7 @@ Pour qu'un déploiement réussisse :
 
 La machine virtuelle HCX Manager est installée en premier, puis elle gère l'installation des autres dispositifs de machine virtuelle de service en local et dans le cloud.
 
-Voici un récapitulatif des tâches d'installation de base :
+Les étapes suivantes constituent des tâches d'installation de base : 
 1. Obtenir le fichier OVA du dispositif virtuel Hybrid Cloud Enterprise.
 2. Depuis le client vSphere Web Client, installer le dispositif virtuel de service HCX Manager sur le site vCenter local qui se connecte à IBM Cloud.
 3. Depuis le client vSphere Web Client, enregistrer un noeud final IBM Cloud avec le plug-in HCX. L'enregistrement établit la relation un-à-un entre l'instance HCX locale et l'instance HCX dans IBM Cloud.
@@ -105,8 +105,10 @@ Voici un récapitulatif des tâches d'installation de base :
 ### Remarques relatives aux performances des composants de déploiement
 {: #hcx-archi-source-perf-consid}
 
-La planification d'architecture inclut les machines virtuelles à migrer, les réseaux utilisés pour le trafic de machine virtuelle, ainsi que les réseaux à étendre. Cette rubrique récapitule certaines valeurs maximum et minimum pour les composants de déploiement.
-* vSphere vCenter. Le dispositif HCX Manager doit être installé sur le site vCenter qui nécessite des services hybrides. Il peut y avoir un seul déploiement HCX par vCenter. Cette restriction s'applique aux mode lié ; le dispositif de gestion HXC est uniquement installé dans le vCenter principal. HCX prend en charge jusqu'à cinq vCenters en mode lié.
+La planification d'architecture inclut les machines virtuelles à migrer, les réseaux utilisés pour le trafic de machine virtuelle, ainsi que les réseaux à étendre.  
+
+Les valeurs maximum et minimum pour les composants de déploiement sont les suivantes :
+* vSphere vCenter. Le dispositif HCX Manager doit être installé sur le site vCenter qui nécessite des services hybrides. Il peut y avoir un seul déploiement HCX par vCenter. Cette restriction s'applique au mode lié. Le dispositif de gestion HXC est uniquement installé dans le vCenter principal. HCX prend en charge jusqu'à cinq vCenters en mode lié.
 * Enregistrements de cloud. Le nombre maximal de noeuds finaux du cloud est de dix. Pour trouver le nombre de noeuds finaux, les Services cloud hybrides suivent les connexions vCenter au cloud.
 
 ### Nombre maximum de migrations et d'extensions réseau
@@ -170,8 +172,8 @@ La migration de machine virtuelle repose sur la combinaison dd'une passerelle cl
 
 Le service d'extension réseau est assuré par le concentrateur de couche 2 (L2C). Il étend un réseau de couche 2 depuis le centre de données vSphere local vers IBM Cloud et permet une migration transparente entre le centre de données et le cloud. Le concentrateur de couche 2 est obligatoire pour étendre le réseau local à IBM.
 
-Le appliance de concentrateur de couche 2 est doté de deux interfaces :
-* Interface de jonction interne : Gère le trafic de machine virtuelle en local pour les réseaux étendus à l'aide d'un mappage de pont de traduction vers un réseau étendu correspondant dans IBM Cloud.
+Le dispositif de concentrateur de couche 2 est doté de deux interfaces :
+* Interface de jonction interne : gère le trafic de machine virtuelle en local pour les réseaux étendus à l'aide d'un mappage de pont de traduction vers un réseau étendu correspondant dans IBM Cloud.
 * Interface de liaison montante : HCX utilise cette interface pour envoyer le trafic de superposition encapsulé vers et depuis IBM Cloud. Les données d'application transitent via cette interface.
 
 ![Concentrateur L2 source](../../images/source_l2_concentrator.svg "Concentrateur L2 source")
@@ -183,7 +185,7 @@ La configuration minimale pour effectuer une migration requiert seulement les di
 
 Pour étendre un réseau et gérer l'adresse IP d'origine, il est nécessaire de configurer un commutateur virtuel distribué réparti dans le vSphere vCenter local.
 
-L'optimisation de réseau WAN permet d'accroître la vitesse dans les situations décrites. La configuration de la passerelle cloud pour l'utilisation d'un ligne grande vitesse (une connexion directe, par exemple) permet d'accroître la vitesse en fournissant une bande passante supérieure pour le trafic optimisé du réseau WAN.
+Le composant WAN Optimization peut améliorer la vitesse dans les situations décrites. La configuration de la passerelle Cloud pour utiliser une ligne à haut débit (telle que Direct Connect) accroît la vitesse en fournissant un lien de bande passante supérieure pour un trafic optimisé via un réseau WAN.
 
 La migration des machines virtuelles sur des réseaux étendus dans IBM Cloud présente un avantage car elle réduit les temps d'indisponibilité et la configuration ne change pas sur la machine virtuelle. Cette dernière peut conserver les adresses IP, les adresses MAC, les noms d'ordinateur et les noms de machine virtuelle. La conservation de ces propriétés simplifie grandement la migration vers IBM Cloud et permet des retours faciles vers le centre de données local. La fonction d'extension réseau nécessite un commutateur distribué vSphere, lequel est fourni avec vSphere Enterprise Plus Edition.
 
@@ -201,15 +203,15 @@ Pour déployer HCX, le nombre correct d'adresses IP doit être disponible à la 
   * Une pour chaque concentrateur de couche 2 standard
 
 * IBM Cloud
-  * Deux adresses IP par dispositif HCX Manager connecté à IBM Cloud. Les adresses peuvent être utilisées pour la connexion à Internet ou à une ou plusieurs lignes de connexion directes.
+  * Deux adresses IP par dispositif HCX Manager connecté à IBM Cloud. Les adresses peuvent être utilisées pour la connexion à Internet ou à une ou plusieurs lignes Direct Connect.
   * Ajoutez-en une autre s'il y a un réseau vMotion distinct.
 
 ### Fonction de routage de proximité
 {: #hcx-archi-source-prox-routing-feat}
 
-Le routage de proximité est une fonction réseau qui peut être activée lorsque la passerelle cloud est configurée.
+Proximity Routing (routage de proximité) est une fonction réseau qui peut être activée lorsque la passerelle cloud est configurée.
 
-Le routage de proximité garantit que l'acheminement entre les machines virtuelles qui sont connectées aux réseaux étendus et routés, à la fois en local et dans le cloud, est symétrique. Cette fonction nécessite un routage dynamique.
+Proximity Routing garantit que l'acheminement entre les machines virtuelles qui sont connectées aux réseaux étendus et routés, à la fois en local et dans le cloud, est symétrique. Cette fonctionnalité nécessite la configuration du routage dynamique entre les locaux du client et le cloud. 
 
 Lorsque des utilisateurs étendent leurs réseaux au cloud, la connectivité de couche 2 est étendue sur IBM Cloud. Toutefois, sans optimisation de route, les demandes de communication de couche 3 doivent retourner vers l'origine du réseau local pour être routées. Ce trajet retour est appelé "tromboning" ou "hairpinning".
 
@@ -217,7 +219,7 @@ Le trajet de type Tromboning est inefficace car les paquets doivent transiter en
 
 Pour éviter le "tromboning", HCX utilise la gestion de route intelligente pour choisir les routes appropriées à l'état de la machine virtuelle. La passerelle cloud gère un inventaire des machines virtuelles dans le cloud. Elle comprend également l'état de la machine virtuelle, qui peut être l'un des suivants :
 * Machine virtuelle transférée vers le cloud avec vMotion (migration sans interruption).
-* Machine virtuelle migrée vers le cloud à l'aide de la réplication basée sur un hôte (migration avec peu d'interruption).
+* Machine virtuelle migrée vers le cloud à l'aide de la réplication basée sur un hôte (Migration avec peu d'interruption).
 * Machine virtuelle créée dans le cloud (sur un réseau étendu).
 
 ### Routage asymétrique avec solution de routage de proximité
@@ -225,9 +227,9 @@ Pour éviter le "tromboning", HCX utilise la gestion de route intelligente pour 
 
 Dans le diagramme, les composants `N*a` sur la gauche résident dans le centre de données local et le composant `N*b` sur la droite réside dans le cloud.
 
-R1 est la passerelle par défaut pour N1-b ; par conséquent, N1-b doit revenir à R1 pour router le trafic via R2. Pour éviter un routage asymétrique, HCX injecte des routes hôtes au sein de la surcouche NSX du déploiement d'IBM Cloud VCS. Si la machine virtuelle venait d'être créée dans le cloud, ou si elle a été déplacée dans le cadre d'une migration avec peu d'interruption, la route hôte est injectée immédiatement.
+R1 est la passerelle par défaut pour N1-b. Par conséquent, N1-b doit revenir à R1 pour router le trafic via R2. Pour éviter le routage asymétrique, HCX injecte des routes hôtes au sein de la surcouche NSX du déploiement d'IBM Cloud VCS. Si la machine virtuelle venait d'être créée dans le cloud, ou si elle a été déplacée dans le cadre d'une migration avec peu d'interruption, la route hôte est injectée immédiatement.
 
-Si la machine virtuelle a été transférée à l'aide de vMotion, la route n'est pas injectée jusqu'au redémarrage de la machine virtuelle. Cette attente jusqu'après le redémarrage garantit que les unités sans état locales continuent de servir la session existante jusqu'au redémarrage de la machine virtuelle. Après le redémarrage, les informations de routage sont cohérentes aussi bien en local que dans le cloud.
+Si la machine virtuelle a été transférée à l'aide de vMotion, la route n'est pas injectée jusqu'au redémarrage de la machine virtuelle. Cette attente jusqu'après le redémarrage garantit que les unités avec état locales continuent de servir la session existante jusqu'au redémarrage de la machine virtuelle. Après le redémarrage, les informations de routage sont cohérentes aussi bien en local que dans le cloud.
 
 En d'autres termes, R1 peut utiliser le routage pour atteindre une machine virtuelle spécifique via R2, au lieu d'utiliser le réseau étendu connecté en local. R2 détient intégralement le chemin d'accès pour que les autres réseaux accèdent aux machines virtuelles avec le routage de proximité activé.
 
@@ -239,10 +241,10 @@ En d'autres termes, R1 peut utiliser le routage pour atteindre une machine virtu
 * L'option de conservation de l'adresse MAC est une case à cocher dans l'assistant de migration. Elle est visible uniquement pour la migration basée sur la réplication.
 * Par défaut, l'option **Retain MAC** est activée si la machine virtuelle source est dans un réseau étendu, et désactivée si le réseau n'est pas étendu. Si l'adresse MAC n'est pas conservée, la machine virtuelle obtient une nouvelle adresse une fois la migration terminée. La décision de conserver une adresse MAC ou d'en acquérir une nouvelle peut avoir un impact sur le processus de migration et sur le flux du trafic réseau post-migration.
 * La conservation de l'adresse MAC est obligatoire pour les raisons suivantes :
-  * Licences basées sur l'adresse MAC : Certains logiciels associent la licence à l'adresse MAC de la machine virtuelle. Si l'adresse MAC d'une machine virtuelle est modifiée, la licence est invalidée.
-  * Ordre NIC Linux : Dans Linux, si l'adresse MAC est modifiée sur une machine virtuelle, le numéro d'unité Ethernet NIC peut changer après un redémarrage. Une modification de ce numéro d'unité peut altérer l'ordre de présentation NIC au sein du système d'exploitation, ce qui a pour conséquence d'interrompre les applications ou les scripts qui dépendent de l'ordre NIC.
+  * Licences basées sur l'adresse MAC : certains logiciels associent la licence à l'adresse MAC de la machine virtuelle. Si l'adresse MAC d'une machine virtuelle est modifiée, la licence est invalidée.
+  * Ordre de la carte réseau Linux : sous Linux, si l’adresse MAC est modifiée sur une machine virtuelle, le numéro d'unité Ethernet de la carte réseau peut changer après un redémarrage. Une modification de ce numéro d'unité peut altérer l'ordre de présentation NIC au sein du système d'exploitation, ce qui a pour conséquence d'interrompre les applications ou les scripts qui dépendent de l'ordre NIC.
   * Moins d'interruption si le réseau est étendu : Si la machine virtuelle est migrée sur un réseau étendu, l'activation de l'option **Retain MAC** permet de réduire les interruptions car le réseau n'a pas à apprendre une nouvelle adresse MAC.
-  * La case à cocher est activée sur la page de sélection du réseau de destination durant l'opération de migration.
+  * La case à cocher est activée sur la page de **sélection du réseau de destination** durant l'opération de migration.
 
 ### Migration de la politique de sécurité
 {: #hcx-archi-source-sec-policy-mig}

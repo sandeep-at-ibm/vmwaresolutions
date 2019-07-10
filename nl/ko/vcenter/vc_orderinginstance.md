@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-19"
+
+keywords: vCenter Server order instance, order vCenter Server, order vCenter Server instance
 
 subcollection: vmware-solutions
 
@@ -78,7 +80,7 @@ vSphere Enterprise Plus 6.7u1은 Broadwell 및 Skylake {{site.data.keyword.cloud
 
 비즈니스 파트너 사용자의 경우, vCenter Server 라이센스(Standard 에디션), vSphere 라이센스(Enterprise Plus 에디션) 및 NSX 라이센스가 사용자를 대신하여 포함 및 구매됩니다. 그러나 NSX 라이센스의 에디션은 지정해야 합니다.
 
-비즈니스 파트너가 아닌 사용자의 경우에는 **구매에 포함**을 선택하여 이 컴포넌트에 대해 IBM 제공 VMware 라이센스를 사용하거나, **라이센스를 제공함**을 선택하고 고유한 라이센스 키를 입력하여 고유한 라이센스를 가져올(BYOL) 수 있습니다.
+비즈니스 파트너가 아닌 사용자의 경우에는 **구매에 포함**을 선택하여 이 컴포넌트에 대해 IBM 제공 VMware 라이센스를 사용하거나, **라이센스를 제공함**을 선택하고 자신의 라이센스 키를 입력하여 BYOL(Bring Your Own License)을 사용할 수 있습니다.
 
 ### 라이센싱 참고
 {: #vc_orderinginstance-licensing-notes}
@@ -143,7 +145,7 @@ Bare Metal Server 설정은 데이터 센터 선택 및 Bare Metal Server 구성
 
 * 주문하는 모든 서버는 동일한 구성을 갖습니다.
 * vSAN 스토리지를 사용할 경우 4 - 20개의 서버를 주문할 수 있습니다.
-* NFS 스토리지를 사용할 경우 2 - 20개의 서버를 주문할 수 있습니다. 그러나 프로덕션 워크로드의 경우 최소 3개의 서버가 권장됩니다. 자세한 정보는 [두 개의 노드 vCenter Server 인스턴스는 고가용성입니까?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)를 참조하십시오.
+* NFS 스토리지를 사용할 경우 2 - 20개의 서버를 주문할 수 있습니다. 그러나 프로덕션 워크로드의 경우 최소 세 개의 서버가 권장됩니다. 자세한 정보는 [두 개의 노드 vCenter Server 인스턴스는 고가용성입니까?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)를 참조하십시오. 
 
 ## 스토리지 설정
 {: #vc_orderinginstance-storage-settings}
@@ -217,7 +219,7 @@ vCenter Server 인스턴스를 주문할 때는 다음 네트워크 인터페이
 *  영숫자 문자 및 대시(-) 문자만 사용할 수 있습니다.
 *  하위 도메인 레이블은 영문자로 시작하고 영숫자로 끝나야 합니다.
 *  하위 도메인 레이블의 최대 길이는 10자입니다.
-*  하위 도메인 레이블은 계정 내에서 고유해야 합니다.
+*  하위 도메인 레이블은 다중 사이트 구성의 모든 인스턴스 내에서 고유해야 합니다.
 
 ### 도메인 이름
 {: #vc_orderinginstance-domain-name}
@@ -279,7 +281,7 @@ vCenter Server 인스턴스를 주문할 때는 다음 네트워크 인터페이
 * **Active Directory/DNS용 단일 공용 Windows VSI**: 호스트 및 VM이 등록된 인스턴스를 위한 DNS로 작동하는 단일 Microsoft Active Directory(AD)용 Microsoft Windows Server VSI가 배치되고 검색될 수 있습니다. 기본적으로 이 옵션은 V1.9 이상 인스턴스를 위해 배치됩니다.
 * **관리 클러스터에 있는 두 개의 고가용성 전용 Windows Server VM**: 두 개의 Microsoft Windows VM이 배치되어 보안 및 강력한 추진력을 향상시킵니다.
 
-두 개의 Microsoft Windows VM을 사용하도록 인스턴스를 구성하는 경우 두 개의 Microsoft Windows Server 2016 라이센스를 제공해야 합니다. Microsoft Windows Server 2016 Standard 에디션 라이센스, Microsoft Windows Server 2016 Datacenter 에디션 라이센스 또는 둘 다 사용하십시오.
+두 개의 Microsoft Windows VM을 사용하도록 인스턴스를 구성하는 경우 두 개의 Microsoft Windows Server 2016 Standard 에디션 라이센스를 제공해야 합니다.
 {:important}
 
 각 라이센스는 하나의 실제 서버에만 지정될 수 있고 최대 두 개의 실제 프로세서에 적용됩니다. 하나의 Standard 에디션 라이센스는 2 프로세서 서버당 두 개의 가상화된 Microsoft Windows VM을 실행할 수 있습니다. 그러므로 두 개의 Microsoft Windows VM이 두 개의 서로 다른 호스트에 배치되기 때문에 두 개의 라이센스가 필요합니다.
@@ -296,7 +298,9 @@ vCenter Server 인스턴스를 주문하는 경우 추가 기능 서비스도 �
 ## 주문 요약
 {: #vc_orderinginstance-order-summary}
 
-인스턴스 및 추가 기능 서비스에 대해 선택한 구성에 따라 예상 비용이 즉시 생성되어 오른쪽 분할창에 있는 **주문 요약** 섹션에 표시됩니다. 예상 세부사항을 제공하는 PDF 문서를 생성하려면 오른쪽 분할창 하단에 있는 **가격 세부사항**을 클릭하십시오.
+인스턴스 및 추가 기능 서비스에 대해 선택한 구성에 따라 예상 비용이 즉시 생성되어 **주문 요약** 오른쪽 분할창에 표시됩니다. **가격 세부사항**을 클릭하여 {{site.data.keyword.vmwaresolutions_short}} 리소스에 대한 비용 요약이 포함된 PDF 문서를 생성하십시오. 
+
+**예상 금액에 추가**를 클릭하여 {{site.data.keyword.cloud_notm}} 예상 도구에 프로비저닝된 리소스를 추가할 수도 있습니다. 구매를 고려할 수 있는 기타 {{site.data.keyword.cloud_notm}} 리소스와 함께 선택된 {{site.data.keyword.vmwaresolutions_short}} 리소스의 비용을 예상하려는 경우 유용합니다. 
 
 ## vCenter Server 인스턴스를 주문하는 프로시저
 {: #vc_orderinginstance-procedure}
@@ -346,13 +350,10 @@ vCenter Server 인스턴스를 주문하는 경우 추가 기능 서비스도 �
 ## vCenter Server 인스턴스를 주문한 후의 결과
 {: #vc_orderinginstance-results}
 
-인스턴스의 배치가 자동으로 시작됩니다. 주문이 처리 중이라는 확인을 받은 후 인스턴스 세부사항을 보고 배치의 상태를 확인할 수 있습니다.
-
-인스턴스가 성공적으로 배치된 경우에는 [vCenter Server 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs)에서 설명된 컴포넌트가 VMware 가상 플랫폼에 설치됩니다. 기본적으로 주문한 ESXi 서버는 **cluster1**로 그룹화됩니다. 추가 기능 서비스를 주문한 경우 주문이 완료된 후 서비스의 배치가 시작됩니다.
-
-인스턴스를 사용할 준비가 되면 인스턴스의 상태가 **사용할 준비가 됨**으로 변경되고 이메일로 알림을 받습니다.
-
-보조 인스턴스를 주문하는 경우 보조 인스턴스 주문이 완료된 후 기본 인스턴스(보조 인스턴스로 링크됨)의 VMware vSphere Web Client가 다시 시작될 수 있습니다.
+* 인스턴스의 배치가 자동으로 시작되고 주문이 처리 중이라는 확인을 수신합니다. 인스턴스 세부사항의 **배치 히스토리** 섹션을 보고 주의해야 하는 문제가 포함된 배치 상태를 확인할 수 있습니다. 
+* 인스턴스가 성공적으로 배치된 경우에는 [vCenter Server 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs)에서 설명된 컴포넌트가 VMware 가상 플랫폼에 설치됩니다. 기본적으로 주문한 ESXi 서버는 **cluster1**로 그룹화됩니다. 추가 기능 서비스를 주문한 경우 주문이 완료된 후 서비스의 배치가 시작됩니다.
+* 인스턴스를 사용할 준비가 되면 인스턴스의 상태가 **사용할 준비가 됨**으로 변경되고 이메일로 알림을 받습니다.
+* 보조 인스턴스를 주문하는 경우 보조 인스턴스 주문이 완료된 후 기본 인스턴스(보조 인스턴스로 링크됨)의 VMware vSphere Web Client가 다시 시작될 수 있습니다.
 
 ## 수행할 작업
 {: #vc_orderinginstance-next}
@@ -374,7 +375,7 @@ vCenter Server 인스턴스를 주문하는 경우 추가 기능 서비스도 �
 ## 관련 링크
 {: #vc_orderinginstance-related}
 
-* [{{site.data.keyword.cloud_notm}} 계정 등록](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)
+* [{{site.data.keyword.cloud_notm}} 계정 등록](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts)
 * [vCenter Server 인스턴스 보기](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
 * [vCenter Server 인스턴스에 대한 다중 사이트 구성](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_multisite)
 * [vCenter Server 인스턴스의 클러스터 추가, 보기 및 삭제](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)

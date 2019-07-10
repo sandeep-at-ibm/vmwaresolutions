@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-28"
 
 subcollection: vmware-solutions
 
@@ -102,11 +102,11 @@ SDDC-Dswitch-Public	  |SDDC-DPortGroup-External	| 원래 가상 포트	| 활성:
 -	관리 컴포넌트에서 사용할 NSX ESG(Edge Services Gateway) 어플라이언스.
 -	(vCenter Server만 해당) 고객 사용을 위한 NSX ESG(Edge Services Gateway) 어플라이언스.
 
-다음은 구성되지 않습니다.
--	가상 분배 라우터.
--	마이크로 세그먼트화.
--	VXLAN.
--	다른 VMware 인스턴스에 링크된 NSX 관리.
+다음 컴포넌트가 구성됩니다.
+- 가상 분배 라우터
+- 마이크로 세그먼트화
+- VXLAN
+- 기타 VMware 인스턴스에 링크된 NSX Management
 
 ### NSX-V 보안
 {: #vcsnsxt-overview-ic4vnsxv-nsx-v-security}
@@ -114,9 +114,9 @@ SDDC-Dswitch-Public	  |SDDC-DPortGroup-External	| 원래 가상 포트	| 활성:
 NSX for vSphere를 사용하면 조직은 데이터 센터를 별개의 보안 세그먼트로 나눌 수 있습니다. 워크로드 실행 위치와 관계없이 개별 워크로드 레벨로 나눕니다. IT 팀은 애플리케이션과 사용자 컨텍스트를 기반으로 각 워크로드를 위한 정책을 정의할 수 있습니다. 이를 통해 데이터 센터 내부의 위협에 즉각적으로 반응하여 애플리케이션에 적용합니다.
 
 다음은 일부 주요한 NSX 컴포넌트입니다.
--	NSX 분배 상태 저장(stateful) 방화벽은 하이퍼바이저 커널에 임베드되어 하이퍼바이저 호스트당 최대 20Gbps의 방화벽 용량을 제공합니다. NSX Edge를 통해 north-south 방화벽 기능을 제공합니다.
--	NSX를 통해 단지 IP 주소와 MAC이 아닌 동적 보안 그룹 및 연관된 정책을 작성할 수 있습니다. 이러한 정책에는 vCenter 오브젝트와 태그, 운영 체제 유형 및 계층 7 애플리케이션 정보가 포함되어 애플리케이션 컨텍스트를 기반으로 마이크로 세그먼트화할 수 있습니다.
--	VM, Active Directory 및 Mobile Device Management 통합의 로그인 정보를 사용하는 ID 기반 정책은 원격 및 가상 데스크탑 환경의 세션 레벨 보안을 포함하여 사용자 기반 보안에 허용됩니다.
+- NSX 분배 상태 저장(stateful) 방화벽은 하이퍼바이저 커널에 임베드되어 하이퍼바이저 호스트당 최대 20Gbps의 방화벽 용량을 제공합니다. NSX Edge를 통해 north-south 방화벽 기능을 제공합니다.
+- NSX를 통해 단지 IP 주소와 MAC이 아닌 동적 보안 그룹 및 연관된 정책을 작성할 수 있습니다. 이러한 정책에는 vCenter 오브젝트와 태그, 운영 체제 유형 및 계층 7 애플리케이션 정보가 포함되어 애플리케이션 컨텍스트를 기반으로 마이크로 세그먼트화할 수 있습니다.
+- VM, Active Directory 및 Mobile Device Management 통합의 로그인 정보를 사용하는 ID 기반 정책은 원격 및 가상 데스크탑 환경의 세션 레벨 보안을 포함하여 사용자 기반 보안에 허용됩니다.
 - Application Rule Manager 및 Endpoint Monitoring을 사용하면 최대 계층 7까지 엔드 투 엔드 네트워크 트래픽 플로우 가상화를 수행할 수 있습니다. 이를 통해 애플리케이션 팀은 intra- 및 inter-데이터 센터 엔드포인트를 모두 식별할 수 있으며 적절한 보안 규칙을 작성하여 응답할 수 있습니다.
 - 차세대 방화벽, IDS/IPS, 에이전트가 없는 안티바이러스, 전환, 고급 보안 등과 같은 서드파티 공급업체와의 관리, 제어 플레인 및 데이터 플레인 통합을 지원합니다.
 

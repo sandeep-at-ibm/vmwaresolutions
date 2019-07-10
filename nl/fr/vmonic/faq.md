@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-16"
+lastupdated: "2019-06-14"
+
+keywords: FAQ, user account, patch management
 
 subcollection: vmware-solutions
 
@@ -27,7 +29,7 @@ Trouvez les réponses aux questions fréquemment posées concernant {{site.data.
 
 * **Compte IBMid**. Ce compte est nécessaire pour accéder à la console {{site.data.keyword.vmwaresolutions_short}}. La console est une interface utilisateur autonome distincte du portail {{site.data.keyword.slportal}}. Pour plus d'informations, voir [Initiation](/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started).
 * **Compte {{site.data.keyword.cloud_notm}}**. Ce compte est nécessaire pour la mise à disposition. Vous pouvez vous inscrire pour obtenir un compte {{site.data.keyword.cloud_notm}} en effectuant une utilisant un **IBMid** existant ou en créant un nouvel **IBMid**.
-* **Compte d'infrastructure {{site.data.keyword.cloud_notm}}**. Ce compte est utilisé pour se connecter à portail client d'infrastructure {{site.data.keyword.cloud_notm}} qui fournit des fonctions supplémentaires pour gérer des produits et des services d'infrastructure. Vous pouvez obtenir un compte d'infrastructure {{site.data.keyword.cloud_notm}} en effectuant une mise à niveau de votre **compte {{site.data.keyword.cloud_notm}}** vers un compte de paiement à la carte ou en établissant un lien entre votre compte d'infrastructure {{site.data.keyword.cloud_notm}} et votre compte {{site.data.keyword.cloud_notm}}. Le compte d'infrastructure {{site.data.keyword.cloud_notm}} que vous utilisez doit répondre à certaines exigences. Pour plus d'informations, voir [Inscription à des comptes requis](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account) et [Exigences concernant le compte d'infrastructure {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).
+* **Compte d'infrastructure {{site.data.keyword.cloud_notm}}**. Ce compte est utilisé pour se connecter à portail client d'infrastructure {{site.data.keyword.cloud_notm}} qui fournit des fonctions supplémentaires pour gérer des produits et des services d'infrastructure. Vous pouvez obtenir un compte d'infrastructure {{site.data.keyword.cloud_notm}} en effectuant une mise à niveau de votre **compte {{site.data.keyword.cloud_notm}}** vers un compte facturable ou en établissant un lien entre votre compte d'infrastructure {{site.data.keyword.cloud_notm}} et votre compte {{site.data.keyword.cloud_notm}}. Le compte d'infrastructure {{site.data.keyword.cloud_notm}} que vous utilisez doit répondre à certaines exigences. Pour plus d'informations, voir [Inscription à des comptes requis](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts) et [Exigences concernant le compte d'infrastructure {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req).
 
 ## Comment associer mes données d'identification d'infrastructure IBM Cloud à la console IBM Cloud for VMware Solutions ?
 {: #faq-associate-credentials}

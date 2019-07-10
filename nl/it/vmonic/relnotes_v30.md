@@ -6,6 +6,8 @@ copyright:
 
 lastupdated: "2019-05-03"
 
+keywords: release notes, what's new, version 3.0
+
 subcollection: vmware-solutions
 
 
@@ -112,7 +114,7 @@ Ora puoi aggiungere Zerto on {{site.data.keyword.cloud_notm}} su tutte le istanz
 
 * Ora è disponibile la documentazione per assisterti nell'upgrade dei componenti {{site.data.keyword.vmwaresolutions_short}} a VMware vSphere 6.7. Questo upgrade è necessario se vuoi continuare a trarre vantaggio dall'automazione {{site.data.keyword.vmwaresolutions_short}}. Per ulteriori informazioni, vedi [Upgrade del software vCenter Server vSphere da VMware vSphere 6.5 a 6.7](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_vsphere_upgrade#vc_vsphere_upgrade).
 * Ora è disponibile la documentazione di riferimento per fornirti gli ID utente conservati da {{site.data.keyword.vmwaresolutions_short}} per essere utilizzati dall'automazione {{site.data.keyword.cloud_notm}}. Anche i possibili messaggi che vengono visualizzati nei log della cronologia della tua istanza sono disponibili per essere esaminati. Per ulteriori informazioni, vedi [ID utente IBM](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_user_ids) e [Messaggi della cronologia dell'istanza](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_messages).
-* L'autorizzazione **Riavvia/Controlla** è stata aggiunta alla tabella che descrive le autorizzazioni necessarie per l'account dell'infrastruttura IBM. Per ulteriori informazioni, vedi [Autorizzazioni per l'account dell'infrastruttura {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-slaccountrequirement#slaccountrequirement-permissions).
+* L'autorizzazione **Riavvia/Controlla** è stata aggiunta alla tabella che descrive le autorizzazioni necessarie per l'account dell'infrastruttura IBM. Per ulteriori informazioni, vedi [Autorizzazioni per l'account dell'infrastruttura {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-cloud-infra-acct-req#cloud-infra-acct-req-permissions).
 * È disponibile una nuova documentazione di riferimento per le seguenti API. Per ulteriori informazioni, vedi [Riferimento API](https://cloud.ibm.com/apidocs/vmware-solutions){:new_window}.
   * Elenca tutti i messaggi della cronologia per un'istanza VMware vCenter Server specificata
   * Aggiunge le archiviazioni condivise a un cluster specificato

@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-12"
+lastupdated: "2019-06-14"
+
+keywords: VMware HCX, HCX site, HCX definition
 
 subcollection: vmware-solutions
 

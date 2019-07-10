@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-21"
+lastupdated: "2019-05-22"
 
 subcollection: vmware-solutions
 
@@ -84,7 +84,7 @@ Privé B 	|Portable 	|Affecté pour vSAN s'il est utilisé.
 Privé B 	|Portable 	|Affecté pour NAS s'il est utilisé.
 Privé B 	|Portable 	|Affecté pour vMotion.
 
-Cette conception est implémentée avec des hôtes physiques et des instances de serveur virtuel sur des VLAN et configurée pour pointer vers le routeur {{site.data.keyword.cloud_notm}} BCR (routeur client "réseau privé" de back end) comme route par défaut. Tandis que les instances vCenter Server permettent d'utiliser la mise en réseau définie par les logiciels. Les réseaux dissociés créés par NSX incluant le routage vers les sous-réseaux VLAN ne sont pas connus des routeurs gérés par {{site.data.keyword.cloud_notm}}, par conséquent, vous devrez peut-être créer des routes statiques, des règles de pare-feu et des règles NAT pour gérer correctement les flux réseau.
+Cette conception est implémentée avec des hôtes physiques et des instances de serveur virtuel sur des VLAN et configurée pour pointer vers le routeur {{site.data.keyword.cloud_notm}} BCR (routeur client "réseau privé" de back end) comme route par défaut. Bien que les instances de vCenter Server permettent l'utilisation d'un réseau défini par logiciel, les réseau dissociés créés par NSX et incluant le routage vers les sous-réseaux VLAN ne sont pas connus des routeurs gérés par {{site.data.keyword.cloud_notm}}. Vous devrez peut-être créer des routes statiques, des règles de pare-feu et des règles NAT pour gérer correctement les flux réseau. 
 
 Les connexions de réseau privé sont configurées pour utiliser 9000 comme taille MTU de trame jumbo afin d'améliorer les performances des transferts d'importantes quantités de données, comme le stockage et vMotion. Il s'agit de la taille MTU maximale autorisée au sein de VMware et par {{site.data.keyword.cloud_notm}}. Les connexions de réseau public utilisent 1500 comme taille MTU Ethernet standard. Cette valeur doit être conservée ; tout changement peut provoquer une fragmentation des paquets sur Internet.
 

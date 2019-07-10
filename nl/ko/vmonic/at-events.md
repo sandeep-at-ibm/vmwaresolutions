@@ -1,8 +1,12 @@
 ---
 
 copyright:
+
   years: 2016, 2019
-lastupdated: "2019-04-03"
+
+lastupdated: "2019-06-17"
+
+keywords: vmware solutions events, activity tracker, event details
 
 subcollection: vmware-solutions
 
@@ -12,9 +16,9 @@ subcollection: vmware-solutions
 # Activity Tracker 이벤트
 {: #at-events}
 
-{{site.data.keyword.cloudaccesstrailfull}} 서비스를 사용하여 사용자 및 애플리케이션이 {{site.data.keyword.Bluemix_notm}}에서 {{site.data.keyword.vmwaresolutions_short}}와 상호작용하는 방법을 추적하십시오.
+{{site.data.keyword.cloudaccesstrailfull}} 서비스를 사용하여 사용자 및 애플리케이션이 {{site.data.keyword.cloud_notm}}에서 {{site.data.keyword.vmwaresolutions_short}}와 상호작용하는 방법을 추적하십시오.
 
-{{site.data.keyword.cloudaccesstrailfull_notm}} 서비스는 {{site.data.keyword.Bluemix_notm}}에서 서비스 상태가 변경된 사용자 시작 활동을 기록합니다. 자세한 정보는 [{{site.data.keyword.cloudaccesstrailshort}} 정보](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov#activity_tracker_ov)를 참조하십시오.
+{{site.data.keyword.cloudaccesstrailfull_notm}} 서비스는 {{site.data.keyword.cloud_notm}}에서 서비스 상태가 변경된 사용자 시작 활동을 기록합니다. 자세한 정보는 [{{site.data.keyword.cloudaccesstrailshort}} 정보](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov#activity_tracker_ov)를 참조하십시오.
 
 ## Activity Tracker 이벤트 테이블
 {: #at-events-table}
@@ -47,30 +51,29 @@ subcollection: vmware-solutions
 
 | 조치                                   |설명 | 결과 |
 |:-----------------------------------------|:------------|:-------|
-| `vmware-solutions.user_account.update`    | <ul><li>사용자 계정 업데이트 요청을 수신합니다.</li><li>사용자 계정 업데이트 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
-| `vmware-solutions.notification.update` | <ul><li>알림 업데이트 요청을 수신합니다.</li><li>알림 업데이트 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
-| `vmware-solutions.secure_data.wipe`       | <ul><li>보안 데이터 삭제 요청을 수신합니다.</li><li>보안 데이터 삭제 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
-| `vmware-solutions.bss_account.migrate` | <ul><li>bss 계정 마이그레이션 요청을 수신합니다.</li><li>bss 계정 마이그레이션 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
-| `vmware-solutions.vcs.order`                 | <ul><li>vCenter Server 인스턴스 주문 요청을 수신합니다.</li><li>vCenter Server 인스턴스 주문 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
-| `vmware-solutions.vcs.delete`                | <ul><li>vCenter Server 인스턴스 삭제 요청을 수신합니다.</li><li>vCenter Server 인스턴스 삭제 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
-| `vmware-solutions.vcs.add_host`              | <ul><li>vCenter Server 인스턴스에 ESXi 서버 추가 요청을 수신합니다.</li><li>vCenter Server 인스턴스에 ESXi 서버 추가 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
-| `vmware-solutions.vcs.remove_hosts`          | <ul><li>vCenter Server 인스턴스에서 ESXi 서버 삭제 요청을 수신합니다.</li><li>vCenter Server 인스턴스에서 ESXi 서버 삭제 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
-| `vmware-solutions.vcs.schedule_update`       | <ul><li>vCenter Server 인스턴스에 대한 업데이트 스케줄 요청을 수신합니다.</li><li>vCenter Server 인스턴스에 대한 업데이트 스케줄 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
-| `vmware-solutions.vcs.create_cluster`        | <ul><li>vCenter Server 인스턴스에 대한 클러스터 작성 요청을 수신합니다.</li><li>vCenter Server 인스턴스에 대한 클러스터 작성 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
-| `vmware-solutions.vcs.delete_cluster`        | <ul><li>vCenter Server 인스턴스에서 클러스터 삭제 요청을 수신합니다.</li> <li>vCenter Server 인스턴스에서 클러스터 삭제 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
-| `vmware-solutions.vcs.update_nsx_license`        | <ul><li>VMware NSX 라이센스 업데이트 요청을 수신합니다.</li><li>VMware NSX 라이센스 업데이트 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
-| `vmware-solutions.vcs.upgrade_to_hybridity`   | <ul><li>vCenter Server 인스턴스를 vCenter Server with Hybridity Bundle 인스턴스로 업그레이드 요청을 수신합니다.</li><li>vCenter Server 인스턴스를 vCenter Server with Hybridity Bundle 인스턴스로 업그레이드 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
-| `vmware-solutions.vsphere.order`              | <ul><li>vSphere cluster 클러스터 주문 요청을 수신합니다.</li><li>vSphere cluster 클러스터 주문 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
-| `vmware-solutions.vsphere.update`             | <ul><li>vSphere cluster 클러스터 업데이트 요청을 수신합니다.</li><li>vSphere cluster 클러스터 업데이트 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
-| `vmware-solutions.vsphere.save_template`      | <ul><li>vSphere 클러스터의 구성 요청을 수신합니다.</li><li>vSphere 클러스터의 구성 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
-| `vmware-solutions.netapp.order`               | <ul><li>NetApp ONTAP Select 인스턴스 주문 요청을 수신합니다.</li><li>NetApp ONTAP Select 인스턴스 주문 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
-| `vmware-solutions.netapp.delete`              | <ul><li>NetApp ONTAP Select 인스턴스 삭제 요청을 수신합니다.</li><li>NetApp ONTAP Select 인스턴스 삭제 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
-| `vmware-solutions.service_variable.update`    | <ul><li>서비스의 구성 업데이트 요청을 수신합니다.</li><li>서비스의 구성 업데이트 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
-| `vmware-solutions.service.order`              | <ul><li>인스턴스의 서비스 주문 요청을 수신합니다.</li><li>인스턴스의 서비스 주문 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
-| `vmware-solutions.service.delete_by_id`       | <ul><li>인스턴스에서 서비스 삭제 요청을 수신합니다.</li><li>인스턴스에서 서비스 삭제 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
-| `vmware-solutions.service.upgrade_to_hybridity` | <ul><li>기존 vCenter Server 인스턴스를 vCenter Server with Hybridity Bundle 인스턴스로 업그레이드 요청을 수신합니다.</li><li>기존 vCenter Server 인스턴스를 vCenter Server with Hybridity Bundle 인스턴스로 업그레이드 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
-| `vmware-solutions.service.deploy` | 인스턴스에 서비스를 배치하는 조치가 실행됩니다. | `success` |
-| `vmware-solutions.service.undeploy` | 인스턴스에 서비스를 제거하는 조치가 실행됩니다. | `success` |
+| `vmware-solutions.account-apikey.update` |	계정의 인프라 API 키가 업데이트됩니다.|`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.account-notification.update` | 계정의 알림 설정이 업데이트됩니다. |`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.instance-secure-data.wipe` | 인스턴스 보안 데이터가 삭제됩니다. |`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.instance-bss-account.migrate` |	인스턴스가 BSS 계정으로 마이그레이션됩니다. |`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs.create` |	vCenter Server 인스턴스가 작성됩니다. |`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs.delete` |	vCenter Server 인스턴스가 삭제됩니다. |`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-host.add` |	호스트가 vCenter Server 인스턴스에 추가됩니다. |`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-host.remove` |	호스트가 vCenter Server 인스턴스에서 제거됩니다. |`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs.update`	|vCenter Server 인스턴스가 업데이트됩니다. |`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-cluster.create`	|클러스터가 vCenter Server 인스턴스에 대해 작성됩니다. |`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-cluster.delete`	|클러스터가 vCenter Server 인스턴스에 대해 삭제됩니다. |`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-nsx-license.update`	|NSX 라이센스가 vCenter 서버 인스턴스에 대해 업데이트됩니다. |`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-hybridity.add`	|하이브리디티 번들이 vCenter 서버 인스턴스에 대해 업그레이드됩니다. |`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-hybridity.remove`	|하이브리디티 번들이 vCenter 서버 인스턴스에서 제거됩니다. |`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-nfs-storage.add`	|NFS 스토리지가 vCenter Server 인스턴스에 추가됩니다. |`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-nfs-storage.remove`	|NFS 스토리지가 vCenter Server 인스턴스에서 제거됩니다. |`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-plan.update`	|vCenter Server 인스턴스의 플랜이 업데이트됩니다. |`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vss.create`	|vSphere 인스턴스가 작성됩니다. |`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vss.update`	|vSphere 인스턴스가 업데이트됩니다. |`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vss-template.remove` |	vSphere 템플리트가 제거됩니다. |`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.service.create`	|서비스가 작성됩니다. |`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.service.delete`	|서비스가 삭제됩니다. |`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.service-hybridity.upgrade` |하이브리디티 번들이 `version`으로 업그레이드됩니다. |`pending`<br>`success`<br>`failure` |
 
 ## KMIP for VMware on IBM Cloud 서비스에 대한 이벤트 추적
 {: #at-events-kmip}
@@ -83,18 +86,17 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} 서비스에 대한 이벤�
 
 | 조치                                      |설명                               | 결과 |
 |:--------------------------------------------|:------------------------------------------|:-------|
-| `vmware-solutions.key.create`               | <ul><li>키 작성 요청을 수신합니다.</li><li>키 작성 요청에 응답합니다.</li></ul> | <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
-| `vmware-solutions.key.get`                  | <ul><li>키의 컨텐츠 가져오기 요청을 수신합니다.</li><li>키의 컨텐츠 가져오기 요청에 응답합니다.</li></ul> |  <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
-| `vmware-solutions.key.get_attributes`       | <ul><li>키의 속성 가져오기 요청을 수신합니다.</li><li>키의 속성 가져오기 요청에 응답합니다.</li></ul> |  <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
-| `vmware-solutions.key.activate`             | <ul><li>키 활성화 요청을 수신합니다.</li><li>키 활성화 요청에 응답합니다.</li></ul> |  <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
-| `vmware-solutions.key.revoke`               | <ul><li>키 취소 요청을 수신합니다.</li><li>키 취소 요청에 응답합니다.</li></ul> |  <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
-| `vmware-solutions.key.destroy`              | <ul><li>키 영구 삭제 요청을 수신합니다.</li><li>키 영구 삭제 요청에 응답합니다.</li></ul> |  <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
-| `vmware-solutions.key.discover_versions`    | <ul><li>KMIP for VMware on {{site.data.keyword.cloud_notm}} 서비스의 버전 찾기 요청을 수신합니다.</li><li>KMIP for VMware on {{site.data.keyword.cloud_notm}} 서비스의 버전 찾기 요청에 응답합니다.</li></ul> |  <ul><li>`pending`</li><li>`success` 또는 `failure`</li></ul> |
+| `vmware-solutions.kmip-key.create` |	KMIP 키가 작성됩니다. |`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.kmip-key.retrieve` |	KMIP 키가 검색됩니다. |`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.kmip-key-attributes.retrieve` |	KMIP 키의 속성이 검색됩니다. |`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.kmip-key.activate` |	KMIP 키가 활성화됩니다. |`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.kmip-key.revoke` |	KMIP 키가 취소됩니다. |`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.kmip-key.destroy` |	KMIP 키가 영구 삭제됩니다. |`pending`<br>`success`<br>`failure` |
 
 ## 이벤트 표시 위치
 {: #at-events-viewing}
 
-{{site.data.keyword.cloudaccesstrailshort}} 이벤트는 **계정 도메인** 이벤트가 생성된 {{site.data.keyword.Bluemix_notm}} 지역에서 사용할 수 있는 {{site.data.keyword.cloudaccesstrailshort}}에서 사용 가능합니다.
+{{site.data.keyword.cloudaccesstrailshort}} 이벤트는 **계정 도메인** 이벤트가 생성된 {{site.data.keyword.cloud_notm}} 지역에서 사용할 수 있는 {{site.data.keyword.cloudaccesstrailshort}}에서 사용 가능합니다.
 
 ## 관련 링크
 {: #at-events-related}

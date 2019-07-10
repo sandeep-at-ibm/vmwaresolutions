@@ -18,7 +18,7 @@ subcollection: vmware-solutions
 
 배치 패턴은 데이터 보유 크기 및 가용성 요구사항을 모두 기반으로 합니다. RiskForesight 배치 노드는 다음과 같이 구분할 수 있습니다.
 
--	기본 VM – 기본 VM에서는 데이터 보유 때문에 확장되지 않는 애플리케이션 컴포넌트를 호스트합니다. 해당 컴포넌트는 RiskForesight UI, RiskForesight 앱, RiskForesight 플러그인, 중앙 콜렉터, 원격 콜렉터, 인덱스 데이터 저장소, 메시징 데이터 저장소 및 관계형 데이터 저장소입니다.
+-	기본 VM – 기본 VM에서는 데이터 보유 때문에 확장되지 않는 애플리케이션 컴포넌트를 호스팅합니다. 해당 컴포넌트는 RiskForesight UI, RiskForesight 앱, RiskForesight 플러그인, 중앙 콜렉터, 원격 콜렉터, 인덱스 데이터 저장소, 메시징 데이터 저장소 및 관계형 데이터 저장소입니다.
 -	스케일 확장 VM – 스케일 확장 VM, 데이터베이스 및 데이터 인덱스는 자산 수와 필수 데이터 보유에 따라 확장되므로, 추가 스케일 확장 하드 디스크 공간과 추가 스케일 확장 VM이 필요하게 됩니다.
 
 Caveonix RiskForesight 배치 모델은 다음과 같이 세 가지가 있습니다.

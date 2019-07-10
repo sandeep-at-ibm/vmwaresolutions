@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-06-03"
 
 subcollection: vmware-solutions
 
@@ -17,7 +17,6 @@ subcollection: vmware-solutions
 L'architecture de référence ci-après est un “concept car”, autrement dit, un mécanisme qui met en évidence et affiche les technologies permettant de résoudre les problèmes du monde réel. L'architecture “concept car” ne représente en aucun cas un service immédiatement disponible.
 
 L'architecture de référence fournit également les informations suivantes :
-
 -   Fournit une langue commune pour les différentes parties prenantes.
 -   Fournit une implémentation technologique cohérente pour résoudre les problèmes.
 -   Prend en charge la validation de solutions par rapport à une architecture de référence qui fait ses preuves.
@@ -26,7 +25,9 @@ L'architecture de référence fournit également les informations suivantes :
 ## A propos d'ACME Skate Advisor
 {: #vcscar-intro-about}
 
-Nous avons voulu démontrer qu'il existe véritablement une interaction entre l'intelligence artificielle de Watson et l'apprentissage automatique et à travers elle explorer de manière plus approfondie la culture du skateboard. Nous présentons de façon unique les services et l'infrastructure de cloud disponibles en démontrant les capacités et les évolutions techniques dans ce domaine. L'implémentation du “concept car” est une extension de l'application Acme Skateboard de démonstration nommée Skate Advisor. Skate Advisor est un outil qui permet aux utilisateurs d'avoir des conversations sur les astuces en matière de skateboard avec un moteur entraîné par Watson. Les citations suivantes représentent un exemple de conversation :
+Nous avons voulu démontrer qu'il existe véritablement une interaction entre l'intelligence artificielle de Watson et l'apprentissage automatique et à travers elle explorer de manière plus approfondie la culture du skateboard. Nous présentons de façon unique les services et l'infrastructure de cloud disponibles en démontrant les capacités et les évolutions techniques dans ce domaine.
+
+L'implémentation du “concept car” est une extension de l'application Acme Skateboard de démonstration nommée Skate Advisor. Skate Advisor est un outil qui permet aux utilisateurs d'avoir des conversations sur les astuces en matière de skateboard avec un moteur entraîné par Watson. Les citations suivantes représentent un exemple de conversation :
 
 -   "Watson, montre-moi les combinaisons du trick Casper"
 -   "Watson, montre-moi les sites communs pour effectuer un trick"
@@ -90,7 +91,6 @@ IBM comprend que dans 70 % des cas, l'adoption d'un cloud privé est motivée pa
 Par exemple, un modèle commun consiste à avoir des applications SoE frontales qui sont déployées en tant que conteneurs avec des bases de données et des logiciels intermédiaires existants déployés sur des machines virtuelles sur un cloud privé.
 
 Etant donné que les besoins métier et en infrastructure informatique sont uniques, une approche de modernisation doit fournir les priorités suivantes :
-
 * Accélérer l'apport de valeur métier
 * Réduire les délais de livraison
 * Réduire les risques

@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-18"
+lastupdated: "2019-06-17"
+
+keywords: vCenter Server add cluster, view cluster vCenter Server, delete cluster vCenter Server
 
 subcollection: vmware-solutions
 
@@ -178,7 +180,9 @@ Les paramètres d'activation de carte d'interface réseau varient selon que vous
 ### Récapitulatif de la commande
 {: #vc_addingviewingclusters-adding-order-summary}
 
-Selon la configuration que vous avez sélectionnée pour le cluster, le coût estimé est généré et affiché instantanément dans la section **Récapitulatif de la commande** sur le panneau de droite.
+Selon la configuration que vous avez sélectionnée pour le cluster, le coût estimé est généré et affiché instantanément dans la section **Récapitulatif de la commande** sur le panneau de droite. Cliquez sur **Détails concernant la tarification** pour générer un document PDF contenant le récapitulatif des coûts pour les ressources {{site.data.keyword.vmwaresolutions_short}}. 
+
+Vous pouvez également ajouter les ressources mises à disposition à l’outil d’estimation {{site.data.keyword.cloud_notm}} en cliquant sur **Ajouter à l'estimation**. Cela est utile si vous souhaitez estimer le coût des ressources {{site.data.keyword.vmwaresolutions_short}} sélectionnées avec d'autres ressources {{site.data.keyword.cloud_notm}} que vous pourriez envisager d'acheter.
 
 ## Procédure d'ajout de clusters à des instances vCenter Server
 {: #vc_addingviewingclusters-adding-procedure}
@@ -212,7 +216,7 @@ Selon la configuration que vous avez sélectionnée pour le cluster, le coût es
    3. Cliquez sur le ou les liens des conditions applicables à votre commande et prenez soin d'accepter ces conditions avant d'ajouter le cluster.
    4. Cliquez sur **Mettre à disposition**.
 
-### Résultats après l'ajout de clusters à des instances vCenter Server
+### Que se passe-t-il après l'ajout de clusters à des instances vCenter Server ? 
 {: #vc_addingviewingclusters-adding-results}
 
 1. Le déploiement du cluster démarre automatiquement et celui-ci prend le statut **Initialisation en cours**. Vous pouvez vérifier le statut du déploiement en affichant l'historique de déploiement sur la page **Récapitulatif** de l'instance.
@@ -229,9 +233,7 @@ Vous ne pouvez pas modifier le nom du cluster. La modification du nom du cluster
 3. Cliquez sur **Infrastructure** dans le panneau de navigation de gauche. Dans le tableau **CLUSTERS**, consultez le récapitulatif concernant les clusters :
   * **Nom** : nom du cluster.
   * **Serveurs ESXi** : nombre de serveurs ESXi dans le cluster.
-  * **UC** : spécification d'UC des serveurs ESXi du cluster.
-  * **Disques vSAN personnalisés** : nombre de disques vSAN dans le cluster, ainsi que le type et la capacité des disques.
-  * **Mémoire** : taille de mémoire totale des serveurs ESXi du cluster.
+  * **Stockage** : type de stockage utilisé par le cluster. 
   * **Emplacement de centre de données** : centre de données IBM Cloud où est hébergé le cluster.
   * **Pod** : pod où est déployé le cluster.
   * **Statut** : statut du cluster. Ce statut peut prendre l'une des valeurs suivantes :
@@ -260,7 +262,19 @@ Tableau 4. Informations relatives au serveur ESXi
 | Adresse IP privée | Adresse IP privée du serveur ESXi. |
 | Statut | Statut du serveur ESXi, qui peut avoir l'une des valeurs suivantes :<br> **Ajouté** : le serveur ESXi est ajouté et prêt à être utilisé.<br> **Ajout en cours** : le serveur ESXi est en cours d'ajout.<br> **Suppression en cours** : le serveur ESXi est en cours de suppression. |
 
-Tableau 5. Informations relatives au stockage
+Développez le serveur ESXi pour plus de détails. 
+
+Tableau 5. Informations supplémentaires relatives au serveur ESXi
+
+| Elément        | Description       |  
+|:------------- |:------------- |
+| UC | Spécification d'UC des serveurs ESXi du cluster. |
+| Mémoire | Taille de mémoire totale des serveurs ESXi du cluster. |
+| Disques vSAN personnalisés |Nombre de disques vSAN dans le cluster, ainsi que le type et la capacité des disques.|
+| Disques de cache vSAN | Type et nombre de disques de cache vSAN. |
+| Utilisation en réseau |Paramètres d'activation de la carte d'interface réseau (NIC) des Réseaux public et privé ou du Réseau privé uniquement.|
+
+Tableau 6. Informations relatives au stockage
 
 | Elément        | Description       |  
 |:------------- |:------------- |
@@ -269,7 +283,7 @@ Tableau 5. Informations relatives au stockage
 | IOPS/Go | Niveau de performance du stockage. |
 | Protocole NFS | Version NFS du stockage. |
 
-Tableau 6. Interface réseau - Détails VLAN
+Tableau 7. Interface réseau - Détails VLAN
 
 | Elément        | Description       |  
 |:------------- |:------------- |
@@ -280,7 +294,7 @@ Tableau 6. Interface réseau - Détails VLAN
 
 Cliquez sur **Afficher la ressource** pour accéder aux détails du réseau local virtuel.
 
-Tableau 7. Interface réseau - Détails de sous-réseau
+Tableau 8. Interface réseau - Détails de sous-réseau
 
 | Elément        | Description       |  
 |:------------- |:------------- |
@@ -288,7 +302,7 @@ Tableau 7. Interface réseau - Détails de sous-réseau
 | Type | Type de sous-réseau : principal ou portable. |
 | Description | Description du sous-réseau. |
 
-Tableau 8. Interface réseau - Détails d'adresse IP
+Tableau 9. Interface réseau - Détails d'adresse IP
 
 | Elément        | Description       |  
 |:------------- |:------------- |

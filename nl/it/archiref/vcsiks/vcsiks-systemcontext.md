@@ -35,7 +35,7 @@ Attore | Descrizione
 --|--
 Amministratore di sistema | La risorsa qualificata VMware vSphere che utilizza vCenter Server per gestire la virtualizzazione in loco e l'istanza vCenter Server.
 Sviluppatore | La risorsa qualificata del contenitore che utilizza la console {{site.data.keyword.containerlong_notm}} (CLI / Kubectl) per creare e gestire i contenitori. Creano i nuovi servizi come parte della modernizzazione dell'applicazione.
-Cliente | Attore esterno che consuma i servizi dall'azienda. Per Acme Skateboards, il cliente è uno skater che vuole acquistare i prodotti di skateboarding. Il cliente necessita di un accesso internet protetto al catalogo.
+Cliente | Attore esterno che consuma i servizi dall'azienda. Per Acme Skateboards, il cliente è uno skater che vuole acquistare i prodotti di skateboarding. Il cliente necessita di un accesso a internet protetto al catalogo.
 {{site.data.keyword.containerlong_notm}} | Risorsa IBM che gestisce il nodo master {{site.data.keyword.containerlong_notm}} per il servizio.
 
 ## Sistemi

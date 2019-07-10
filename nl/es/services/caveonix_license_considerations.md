@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-10"
+lastupdated: "2019-06-13"
+
+keywords: Caveonix license, Caveonix license issue, delete Caveonix license
 
 subcollection: vmware-solutions
 
@@ -18,14 +20,14 @@ subcollection: vmware-solutions
 # Consideraciones sobre licencias de Caveonix RiskForesight
 {: #caveonix_license_considerations}
 
-Revise las siguientes consideraciones y problemas conocidos relacionados con las licencias de Caveonix RiskForesight que ha solicitado para el uso autónomo.
+Revise las siguientes consideraciones y problemas conocidos relacionados con las licencias de Caveonix RiskForesight que ha solicitado para el uso autónomo. 
 
 ## Problemas conocidos acerca de la visualización de la fecha de la licencia
 {: #caveonix_license_considerations-date}
 
 Si utiliza Mozilla Firefox como navegador, es posible que las fechas de inicio y de finalización de la licencia no muestren ningún valor en la consola de Caveonix RiskForesight. Para resolver el problema, visualice la información de la licencia en otro navegador, como Google Chrome.
 
-Si el único navegador que puede utilizar es Firefox, póngase en contacto con el
+Si tiene este problema y el único navegador que puede utilizar es Firefox, póngase en contacto con el
 [Soporte de Caveonix](https://www.caveonix.com/support/){:new_window} para obtener ayuda.
 {:note}
 

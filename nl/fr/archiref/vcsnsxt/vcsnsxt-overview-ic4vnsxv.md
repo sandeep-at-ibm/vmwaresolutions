@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-28"
 
 subcollection: vmware-solutions
 
@@ -102,11 +102,11 @@ Les composants suivants sont configurés :
 -	Dispositifs NSX Edge Services Gateway (ESG) destinés à être utilisés par les composants de gestion.
 -	Pour vCenter Server uniquement, dispositifs ESG (NSX Edge Services Gateway) pour une utilisation par les clients.
 
-Qu'est-ce qui n'est PAS configuré :
--	Routeurs distribués virtuels
--	Micro-segmentation
--	VXLAN
--	Gestion NSX liée à d'autres instances VMware
+Les composants suivants ne sont pas configurés :
+- Routeurs distribués virtuels
+- Micro segmentation
+- Réseaux VXLAN
+- Gestion NSX liée à d'autres instances VMware
 
 ### Sécurité NSX-V
 {: #vcsnsxt-overview-ic4vnsxv-nsx-v-security}
@@ -114,9 +114,9 @@ Qu'est-ce qui n'est PAS configuré :
 NSX for vSphere permet aux organisations de diviser le centre de données en segments de sécurité distincts, jusqu'au niveau de la charge de travail individuelle, indépendamment de l'emplacement de l'exécution de celle-ci. Les équipes informatiques peuvent définir des règles pour chaque charge de travail en fonction du contexte d'utilisateur et du contexte d'application, pour une réponse immédiate aux menaces qui pèsent dans le centre de données et une mise en application au niveau des applications.
 
 Les principaux composants NSX sont les suivants :
--	Le pare-feu avec état distribué NSX est intégré dans le noyau de l'hyperviseur pour une capacité de pare-feu maximale de 20 Gbps par hôte hyperviseur. Fournit une capacité de pare-feu nord-sud via NSX Edge.
--	NSX permet la création de groupes de sécurité dynamiques et de règles associées pour plus d'une adresse IP et MAC. Ces règles incluent les objets et les balises vCenter, le type de système d'exploitation et les informations d'application de couche 7 afin d'activer la micro-segmentation en fonction du contexte de l'application.
--	La règle basée sur l'identité qui utilise les informations de connexion à partir des machines virtuelles, Active Directory et l'intégration Mobile Device Management permet de mettre en place une sécurité basée sur l'utilisateur, y compris une sécurité de niveau session dans les environnements de poste de travail virtuel et distants.
+- Le pare-feu avec état distribué NSX est intégré dans le noyau de l'hyperviseur pour une capacité de pare-feu maximale de 20 Gbps par hôte hyperviseur. Fournit une capacité de pare-feu nord-sud via NSX Edge.
+- NSX permet la création de groupes de sécurité dynamiques et de règles associées pour plus d'une adresse IP et MAC. Ces règles incluent les objets et les balises vCenter, le type de système d'exploitation et les informations d'application de couche 7 afin d'activer la micro-segmentation en fonction du contexte de l'application.
+- La règle basée sur l'identité qui utilise les informations de connexion à partir des machines virtuelles, Active Directory et l'intégration Mobile Device Management permet de mettre en place une sécurité basée sur l'utilisateur, y compris une sécurité de niveau session dans les environnements de poste de travail virtuel et distants.
 - Les fonctions Application Rule Manager et Endpoint Monitoring activent une visualisation du flux du trafic réseau de bout en bout jusqu'à la couche 7, permettant ainsi aux équipes d'application d'identifier les points finaux dans et entre les centres de données et d'apporter des réponses en créant les règles de sécurité appropriées.
 - Prise en charge de l'intégration de la gestion, du plan de contrôle et du plan de données à des fournisseurs tiers, par exemple, des pare-feux de la génération suivante, IDS/IPS, des anti-virus sans agent, la commutation, la sécurité avancée, etc.
 

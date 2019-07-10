@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-06-11"
+
+keywords: IAM user, user role, user permission
 
 subcollection: vmware-solutions
 
@@ -40,10 +42,10 @@ subcollection: vmware-solutions
 
 |플랫폼 관리 역할 |조치 | 예제 조치 |
 |:----------------- |:----------------- |:----------------- |
-| 뷰어 | 읽기 전용 조치 | <ul><li>인스턴스 요약 보기</li><li>인스턴스 세부사항 보기</li></ul>|
-| 편집자 | 특정 인스턴스 업데이트 |<ul><li>ESXi 서버 추가 또는 제거</li><li>클러스터 추가 또는 제거</li><li>서비스 추가 또는 제거</li><li>상위 버전으로 인스턴스 업그레이드</li></ul> |
-| 운영자 | 읽기 전용 조치 | <ul><li>인스턴스 나열</li><li>인스턴스 세부사항 보기</li></ul> |
-| 관리자 | 전체 관리 액세스 |<ul><li>새 인스턴스 작성</li><li>인스턴스 삭제</li><li>기타 사용자에 대한 플랫폼 액세스 권한 부여</li></ul>|
+| 뷰어 | 읽기 전용 조치 |인스턴스 요약 보기<br>인스턴스 세부사항 보기 |
+| 편집자 | 특정 인스턴스 업데이트 |ESXi 서버 추가 또는 제거<br>클러스터 추가 또는 제거<br>서비스 추가 또는 제거<br>상위 버전으로 인스턴스 업그레이드 |
+| 운영자 | 읽기 전용 조치 |인스턴스 나열<br>인스턴스 세부사항 보기 |
+| 관리자 | 전체 관리 액세스 |새 인스턴스 작성<br>인스턴스 삭제<br>기타 사용자에 대한 플랫폼 액세스 권한 부여|
 
 {{site.data.keyword.vmwaresolutions_short}}의 경우에는 다음 조치가 존재합니다.
 
@@ -53,8 +55,8 @@ subcollection: vmware-solutions
 |:------ |:-------------------- |:---- |
 | vmware-solutions.instances.create |새 인스턴스 작성 | 관리자 |
 | vmware-solutions.instances.delete |인스턴스 삭제 | 관리자 |
-| vmware-solutions.instances.view | <ul><li>인스턴스 나열</li><li>인스턴스 세부사항 보기</li></ul> |뷰어, 운영자, 편집자 및 관리자 |
-| vmware-solutions.instances.update | <ul><li>ESXi 서버 추가 또는 제거</li><li>클러스터 추가 또는 제거</li><li>서비스 추가 또는 제거</li><li>상위 버전으로 인스턴스 업그레이드</li></ul> |편집자 및 관리자 |
+| vmware-solutions.instances.view |인스턴스 나열<br>인스턴스 세부사항 보기 |뷰어, 운영자, 편집자 및 관리자 |
+| vmware-solutions.instances.update |ESXi 서버 추가 또는 제거<br>클러스터 추가 또는 제거<br>서비스 추가 또는 제거<br>상위 버전으로 인스턴스 업그레이드 |편집자 및 관리자 |
 | vmware-solutions.account.update |계정 설정 업데이트 | 관리자 |
 
 ## 사용자에 대한 액세스 관리

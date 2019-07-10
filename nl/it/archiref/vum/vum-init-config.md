@@ -52,7 +52,8 @@ Tabella 1. Valori di distribuzione
 | Maschera di rete | 255.255.255.192 | |
 | Gateway| ip uplink privato customer-nsx-edge | Questa è l'impostazione predefinita del gateway per il server proxy, che è l'indirizzo di uplink privato di customer-nsx-edge. L'indirizzo IP può essere trovato riesaminando la scheda **Settings** per **customer-nsx-edge**. |
 | Server DNS | ip AD/DNS | Questo indirizzo IP può essere trovato nella pagina dell'istanza nella console {{site.data.keyword.vmwaresolutions_short}} **Risorse**. |
-| IP BCR | ip bcr | Questo è l'indirizzo IP del BCR (Backend Customer Router) di {{site.data.keyword.cloud_notm}} ed è il gateway per 10.0.0.0/8 e 161.26.0.0/16. Questo indirizzo viene utilizzato in una rotta statica nel server proxy in modo che possa raggiungere il VCSA e il server AD/DNS. |
+| IP BCR | ip bcr | Sulla stessa pagina dove hai selezionato l'IP proxy in alto, nota l'indirizzo etichettato Gateway. Questo indirizzo è l'indirizzo IP del BCR (Backend Customer Router) di {{site.data.keyword.cloud_notm}} ed è il gateway per 10.0.0.0/8 e 161.26.0.0/16. Utilizzerai questo indirizzo in una rotta statica nel server proxy in modo che possa raggiungere il VCSA e il server AD/DNS. |
+| IP NAT | ip uplink pubblico customer-nsx-edge | L'indirizzo pubblico dell'ESG NSX del cliente fungerà da indirizzo NAT pubblico per il proxy. Questo indirizzo IP può essere trovato riesaminando la scheda **Settings** per **customer-nsx-edge**. |
 
 ## Configurazione di NSX
 {: #vum-init-config-config-nsx}

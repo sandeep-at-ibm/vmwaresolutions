@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-06-18"
+
+keywords: NetApp order instance, order NetApp ONTAP, order NetApp
 
 subcollection: vmware-solutions
 
@@ -64,7 +66,6 @@ NetApp ONTAP Select 인스턴스를 주문할 때는 다음 네트워크 인터�
 *  영숫자 문자 및 대시(-) 문자만 사용할 수 있습니다.
 *  하위 도메인 레이블은 영문자로 시작하고 영숫자로 끝나야 합니다.
 *  하위 도메인 레이블의 최대 길이는 10자입니다.
-*  하위 도메인 레이블은 계정 내에서 고유해야 합니다.
 
 ### 도메인 이름
 {: #np_orderinginstances-domain-name}
@@ -108,6 +109,13 @@ NetApp ONTAP Select 인스턴스를 주문할 때는 다음 네트워크 인터�
 
 기본적으로 NetApp ONTAP Select 인스턴스의 ESXi 서버 수는 4입니다. 이를 변경할 수 없습니다. 모든 ESXi 서버는 구성을 공유합니다.
 
+## 주문 요약
+{: #np_orderinginstances-order-summary}
+
+선택한 구성에 따라 예상 비용이 즉시 생성되어 **주문 요약** 오른쪽 분할창에 표시됩니다. **가격 세부사항**을 클릭하여 {{site.data.keyword.vmwaresolutions_short}} 리소스에 대한 비용 요약이 포함된 PDF 문서를 생성하십시오. 
+
+**예상 금액에 추가**를 클릭하여 {{site.data.keyword.cloud_notm}} 예상 도구에 프로비저닝된 리소스를 추가할 수도 있습니다. 구매를 고려할 수 있는 기타 {{site.data.keyword.cloud_notm}} 리소스와 함께 선택된 {{site.data.keyword.vmwaresolutions_short}} 리소스의 비용을 예상하려는 경우 유용합니다. 
+
 ## NetApp ONTAP Select 인스턴스를 주문하는 프로시저
 {: #ordering-netapp-ontap-select-instances}
 
@@ -126,14 +134,12 @@ NetApp ONTAP Select 인스턴스를 주문할 때는 다음 네트워크 인터�
     4. 주문에 적용되는 이용 약관에 대한 링크를 클릭하십시오. 이러한 이용 약관에 동의하는지 확인한 후 **아래 나열된 서드파티 서비스 계약을 읽었으며 이에 동의함** 선택란을 선택하십시오.
     5. **프로비저닝**을 클릭하십시오.
 
-## 결과
+## NetApp ONTAP 인스턴스를 주문한 후의 결과
 {: #np_orderinginstances-results}
 
-인스턴스의 배치가 자동으로 시작됩니다. 주문이 처리 중이라는 확인을 받은 후 인스턴스 세부사항을 보고 배치의 상태를 확인할 수 있습니다.
-
-인스턴스가 성공적으로 배치된 경우에는 [NetApp ONTAP Select 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#specs)에서 설명된 컴포넌트가 VMware 가상 플랫폼에 설치됩니다.
-
-인스턴스를 사용할 준비가 되면 인스턴스의 상태가 **사용할 준비가 됨**으로 변경되고 이메일로 알림을 받습니다.
+* 인스턴스의 배치가 자동으로 시작되고 주문이 처리 중이라는 확인을 수신합니다. 인스턴스 세부사항의 **배치 히스토리** 섹션을 보고 주의해야 하는 문제가 포함된 배치 상태를 확인할 수 있습니다. 
+* 인스턴스가 성공적으로 배치된 경우에는 [NetApp ONTAP Select 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#specs)에서 설명된 컴포넌트가 VMware 가상 플랫폼에 설치됩니다.
+* 인스턴스를 사용할 준비가 되면 인스턴스의 상태가 **사용할 준비가 됨**으로 변경되고 이메일로 알림을 받습니다.
 
 ## 수행할 작업
 {: #np_orderinginstances-next}

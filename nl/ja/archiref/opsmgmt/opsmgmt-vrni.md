@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-17"
+lastupdated: "2019-05-31"
 
 ---
 
@@ -15,7 +15,7 @@ vRealize Network Insight (vRNI) 環境は、仮想マシン (VM) 2 台、プラ�
 
 ![Network Insights の図](../../images/opsmgmt-vrninw.svg "Network Insights の図")
 
-vRNI プラットフォーム・アプライアンスは、分析機能、ユーザー・インターフェース、およびデータ管理機能を備えており、NSX Edge、vCenter などのさまざまなデータ・ソースからデータを収集するコントローラー・アプライアンスに接続できます。すべての vRNI コンポーネントは、{{site.data.keyword.cloud}} プライベート・ポータブル IP アドレスを使用します。vRLI は vRNI の syslog サーバーとして構成されています。
+vRNI プラットフォーム・アプライアンスは、分析機能、ユーザー・インターフェース、およびデータ管理機能を備えており、NSX Edge、vCenter などのさまざまなデータ・ソースからデータを収集するコントローラー・アプライアンスに接続できます。 すべての vRNI コンポーネントは、{{site.data.keyword.cloud}} プライベート・ポータブル IP アドレスを使用します。 vRLI は vRNI の syslog サーバーとして構成されています。
 
 ![Network Insights のコンポーネント](../../images/opsmgmt-vrnicomponents.svg "Network Insights のコンポーネント")
 
@@ -43,13 +43,13 @@ vRNI プラットフォーム・アプライアンスは、分析機能、ユー
 ## ネットワーキング
 {: #opsmgmt-vrni-network}
 
-vRNI アプライアンスのデプロイメントには、ツールのプライベート・ポータブル・サブネットの IP アドレスが 2 つ必要です。vRNI には、以下にアクセスするためのネットワーク接続が必要です。
+vRNI アプライアンスのデプロイメントには、ツールのプライベート・ポータブル・サブネットの IP アドレスが 2 つ必要です。 vRNI には、以下にアクセスするためのネットワーク接続が必要です。
 * vCenter アプライアンス
 * vRealize Log Insight アプライアンス
 * NSX-V/T アプライアンス
 * ツール拡張 VXLAN
 * 顧客ネットワーク
-* NTP サーバー (time.services.softlayer.com)
+* NTP サーバー (`time.services.softlayer.com`)
 * {{site.data.keyword.vmwaresolutions_short}} Active Directory/DNS
 
 ## ポート
@@ -57,7 +57,7 @@ vRNI アプライアンスのデプロイメントには、ツールのプライ
 
 表 3. Network Insight のポート
 
-| 説明 | ポート | プロトコル |
+| 説明 |ポート | プロトコル |
 |---|---|---|
 | vRealize Network Insight の VM 間の通信 | 443 | HTTPS |
 | インターネット・アクセスを必要とするサービス<br>svc.ni.vmware.com<br>support2.ni.vmware.com<br>reg.ni.vmware.com|443|HTTPS

@@ -53,8 +53,8 @@ Kubernetes, 개인용 이미지 저장소, 관리 콘솔, 모니터링 프레임
 * Discovery Service - 시스템에서 Watson Discovery Service를 사용하여 요청 매개변수와 일치하는 스케이트 레코드를 검색합니다. 
 "캐스퍼 트릭에 대한 모든 레코드 나열"을 예로 들 수 있습니다.\ Watson
 Assistant - 시스템에서 Watson Discovery Service를 사용하여 요청 매개변수와 일치하는 스케이트 관련 컨텐츠를 검색합니다. 예로 "캐스퍼 트릭에 대한 모든 레코드 나열"이 있습니다. Watson Discovery는 고급 기계 학습 기술을 사용하여 수집된 컨텐츠에서 가장 관련된 부분을 드러냅니다.  
-* 데이터베이스 - Acme Skate Advisor 데이터베이스는 vCenter Server에서 호스트하는 가상 머신에 호스팅됩니다.
-* 애플리케이션 컨테이너 - 애플리케이션 현대화 과정을 완료하고 이제 컨테이너로 실행 중인 애플리케이션입니다. 이 참조 아키텍처와 Acme Skateboards 예의 경우, 컨테이너화된 앱 중 하나가 웹 서버이며 이는 온라인 상태 워크로드의 일부입니다. ACME 컨테이너는 Acme 웹 애플리케이션과 Acme Skate Advisor 애플리케이션을 호스트합니다.
+* 데이터베이스 - Acme Skate Advisor 데이터베이스는 vCenter Server에서 호스팅하는 가상 머신에 호스팅됩니다.
+* 애플리케이션 컨테이너 - 애플리케이션 현대화 과정을 완료하고 이제 컨테이너로 실행 중인 애플리케이션입니다. 이 참조 아키텍처와 Acme Skateboards 예의 경우, 컨테이너화된 앱 중 하나가 웹 서버이며 이는 온라인 상태 워크로드의 일부입니다. ACME 컨테이너는 Acme 웹 애플리케이션과 Acme Skate Advisor 애플리케이션을 호스팅합니다.
 * NSX Edge - NSX Edge는 vCenter Server 인스턴스에서 들어가고 나가는 north-south 트랙픽을 관리하는 가상 어플라이언스입니다.
 
 ## 관련 링크

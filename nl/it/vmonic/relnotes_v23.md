@@ -114,6 +114,6 @@ La release corrente installa IBM Spectrum Protect&trade; Plus V10.1.1, come serv
 L'interfaccia utente è aggiornata e fornisce i seguenti miglioramenti:
 * **Coerenza**: l'interfaccia utente ora fornisce un aspetto coerente con gli altri servizi su {{site.data.keyword.cloud_notm}}.
 * **Facilità di accesso**: puoi ora accedere alle offerte VMware direttamente dal **Catalogo** di {{site.data.keyword.cloud_notm}}.
-* **Esperienza di ordinazione fluida e semplificata**: puoi ora completare l'ordine di un'istanza VMware e la distribuzione dei suoi servizi aggiuntivi in una singola interfaccia. Inoltre, il costo stimato viene calcolato e visualizzato immediatamente nella stessa interfaccia in modo da poter regolare la tua configurazione in base al tuo piano dei costi.
+* **Esperienza di ordinazione fluida e semplificata**: puoi ora completare l'ordine di un'istanza VMware e la distribuzione dei suoi servizi aggiuntivi in una singola interfaccia. Inoltre, il costo stimato viene calcolato e visualizzato istantaneamente nella stessa interfaccia in modo da poter regolare la tua configurazione in base al tuo piano dei costi.
 * L'opzione BYOL (Bring Your Own License) durante l'ordine di istanze o l'aggiunta di cluster non è disponibile per gli utenti Business Partner.
 * Sono disponibili vari messaggi di errore e miglioramenti delle descrizioni a comparsa per aiutarti a selezionare le impostazioni appropriate nell'interfaccia utente.

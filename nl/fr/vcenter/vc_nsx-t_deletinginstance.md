@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-05-28"
+
+keywords: vCenter Server NSX-T delete instance, delete vCenter Server NSX-T, remove vCenter Server NSX-T
 
 subcollection: vmware-solutions
 
@@ -61,4 +63,5 @@ L'instance supprimée vous est facturée jusqu'à échéance du cycle de factura
 * [Commande d'instances vCenter Server with NSX-T](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_orderinginstance)
 * [Affichage des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
 * [Extension et réduction de capacité pour des instances vCenter Server with NSX-T](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_addingremovingservers)
+* [Annulation de serveurs virtuels](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)
 * [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-06-13"
+
+keywords: HyTrust KeyControl, HTKC, tech specs HTKC
 
 subcollection: vmware-solutions
 
@@ -20,7 +22,7 @@ subcollection: vmware-solutions
 
 HyTrust KeyControl on {{site.data.keyword.cloud}} サービスは、暗号化ワークロードの管理を単純化します。 このサービスは、鍵の保管、鍵の配布、鍵のローテーション、鍵の失効など、暗号鍵のライフサイクルを自動化および単純化します。 FIPS 140-2 準拠の暗号化を使用すると、企業で簡単に暗号鍵を一括して管理できるようになります。
 
-このサービスは、vSphere 6.5 を実行する、V2.5 以降でデプロイまたは V2.5 以降にアップグレードされたインスタンスでのみ利用できます。 現在インストールされている HyTrust KeyControl のバージョンは 4.3 です。
+このサービスは、vSphere 6.5 を実行する、V2.5 以降でデプロイまたは V2.5 以降にアップグレードされたインスタンスでのみ利用できます。 現在インストールされている HyTrust KeyControl のバージョンは 4.3.2 です。
 {:note}
 
 ## HyTrust KeyControl on IBM Cloud の技術仕様

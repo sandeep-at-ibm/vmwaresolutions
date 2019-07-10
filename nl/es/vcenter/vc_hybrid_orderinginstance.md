@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-19"
+
+keywords: vCenter Server Hybridity order instance, order vCenter Server Hybridity, order Hybridity
 
 subcollection: vmware-solutions
 
@@ -157,10 +159,10 @@ Debe especificar los siguientes valores de interfaz de red cuando solicite una i
 {: #vc_hybrid_orderinginstance-subdomain-label}
 
 La etiqueta de subdominio debe cumplir los siguientes requisitos:
-*  Solo se permiten caracteres alfanuméricos y el guión (-).
-*  La etiqueta de subdominio debe empezar por un carácter alfabético y terminar por un carácter alfanumérico.
-*  La longitud máxima de la etiqueta de subdominio es de 10 caracteres.
-*  La etiqueta de subdominio debe ser exclusiva dentro de su cuenta.
+* Solo se permiten caracteres alfanuméricos y el guión (-).
+* La etiqueta de subdominio debe empezar por un carácter alfabético y terminar por un carácter alfanumérico.
+* La longitud máxima de la etiqueta de subdominio es de 10 caracteres.
+* La etiqueta de subdominio debe ser exclusiva dentro de todas las instancias de su configuración multisitio. 
 
 ### Nombre de dominio
 {: #vc_hybrid_orderinginstance-domain-name}
@@ -215,8 +217,7 @@ Seleccione la configuración de DNS (sistema de nombres de dominio) para la inst
 * **Una sola VSI pública de Windows para Active Directory/DNS**: Se despliega y se puede consultar una sola VSI de Microsoft Windows Server para Microsoft Active Directory (AD), que funciona como DNS para la instancia en la que se han registrado los hosts y VM.
 * **Dos VM dedicadas y altamente disponibles de Windows Server en el clúster de gestión**: Se despliegan dos VM Microsoft Windows, que ayudan a mejorar la seguridad y la solidez.
 
-Debe proporcionar dos licencias de Microsoft Windows Server 2016 si configura la instancia de modo que utilice las dos máquinas virtuales Microsoft Windows. Utilice la licencia de Microsoft Windows Server 2016 Standard Edition, o la licencia de Microsoft Windows Server 2016 Datacenter Edition, o ambas.
-{:important}
+Debe proporcionar dos licencias de Microsoft Windows Server 2016 Standard Edition si configura la instancia de modo que utilice las dos máquinas virtuales Microsoft Windows. {:important}
 
 Cada licencia solo se puede asignar a un solo servidor físico y cubre un máximo de dos procesadores físicos. Una licencia de Standard Edition puede ejecutar dos VM Microsoft Windows virtualizadas por servidor de 2 procesadores. Por lo tanto, se necesitan dos licencias, ya que se despliegan dos VM Microsoft Windows en dos hosts distintos.
 
@@ -232,7 +233,9 @@ Cuando solicite una instancia de vCenter Server con el paquete híbrido (Hybridi
 ## Resumen del pedido
 {: #vc_hybrid_orderinginstance-order-summary}
 
-En función de la configuración seleccionada para la instancia y los servicios de complementos, el coste estimado se genera y se muestra al instante en la sección **Resumen de pedido** en el panel derecho. Pulse **Detalles sobre precios** en la parte inferior del panel derecho para generar un documento PDF que proporcione la información estimada.
+En función de la configuración seleccionada para la instancia y los servicios de complementos, el coste estimado se genera y se muestra al instante en el panel **Resumen de pedido** de la derecha. Pulse **Detalle de precios** para generar un documento PDF con el resumen de coste de los recursos de {{site.data.keyword.vmwaresolutions_short}}. 
+
+También puede añadir los recursos suministrados a la herramienta de estimación {{site.data.keyword.cloud_notm}}, pulsando **Añadir a estimación**. Esto es útil si desea estimar el coste de los recursos estimare {{site.data.keyword.vmwaresolutions_short}} seleccionados junto con otros recursos de {{site.data.keyword.cloud_notm}} que le podría interesar adquirir. 
 
 ## Procedimiento para solicitar instancias de vCenter Server con el paquete híbrido (Hybridity)
 {: #vc_hybrid_orderinginstance-procedure}
@@ -269,16 +272,13 @@ Para obtener más información sobre cómo proporcionar valores para un servicio
    3. Pulse el enlace o enlaces de los términos que se aplican a su pedido y confirme que acepta estos términos antes de solicitar la instancia.
    4. Pulse **Suministro**.
 
-## Resultados
+## Resultados después de solicitar instancias de vCenter Server with Hybridity Bundle
 {: #vc_hybrid_orderinginstance-results}
 
-El despliegue de la instancia comienza automáticamente. Recibirá una confirmación de que el pedido se está procesando y puede comprobar el estado del despliegue consultando los detalles de la instancia.
-
-Cuando la instancia se haya desplegado correctamente, los componentes que se describen en [Especificaciones técnicas para las instancias de vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#specs) se instalan en la plataforma virtual de VMware. Los servidores ESXi que ha solicitado se agrupan de forma predeterminada como **cluster1**. Si ha solicitado servicios adicionales, el despliegue de los servicios se inicia después de que se haya completado el pedido.
-
-Cuando la instancia esté lista para ser utilizada, el estado de la instancia pasará a ser **Listo para su uso** y recibirá una notificación por correo electrónico.
-
-Cuando se solicita una instancia secundaria, es posible que el cliente web de VMware vSphere para la instancia primaria (enlazada a la secundaria) se rearranque cuando finalice el pedido de la instancia secundaria.
+* El despliegue de la instancia se inicia automáticamente y se recibe la confirmación de que el pedido se está procesando. Puede comprobar el estado de despliegue, incluidos los problemas que puedan requerir su atención, mediante la visualización de la sección **Historial de despliegue** de los detalles de la instancia. 
+* Cuando la instancia se haya desplegado correctamente, los componentes que se describen en [Especificaciones técnicas para las instancias de vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#specs) se instalan en la plataforma virtual de VMware. Los servidores ESXi que ha solicitado se agrupan de forma predeterminada como **cluster1**. Si ha solicitado servicios adicionales, el despliegue de los servicios se inicia después de que se haya completado el pedido.
+* Cuando la instancia esté lista para ser utilizada, el estado de la instancia pasará a ser **Listo para su uso** y recibirá una notificación por correo electrónico.
+* Cuando se solicita una instancia secundaria, es posible que el cliente web de VMware vSphere para la instancia primaria (enlazada a la secundaria) se rearranque cuando finalice el pedido de la instancia secundaria.
 
 ## Qué hacer a continuación
 {: #vc_hybrid_orderinginstance-next}
@@ -300,7 +300,7 @@ Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresol
 ## Enlaces relacionados
 {: #vc_hybrid_orderinginstance-related}
 
-* [Registro de una cuenta de {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)
+* [Registro de una cuenta de {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts)
 * [Visualización de instancias de vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
 * [Configuración de varios sitios para instancias de vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_multisite)
 * [Adición y visualización de clústeres correspondientes a instancias de vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingviewingclusters)

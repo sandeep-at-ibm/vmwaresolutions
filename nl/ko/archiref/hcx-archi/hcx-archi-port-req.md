@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-06-17"
 
 subcollection: vmware-solutions
 
 
 ---
-# VMware HCX on IBM Cloud 포트 액세스 요구사항
+# VMware HCX on IBM Cloud에 대한 포트 액세스 요구사항
 {: #hcx-archi-port-req}
 
 HCX는 공용 인터넷 및 사설 회선을 순회하고 네트워크, 스위치 및 포트 그룹과 같은 데이터 센터 컴포넌트에 연결해야 합니다.

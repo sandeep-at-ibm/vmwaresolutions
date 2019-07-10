@@ -24,7 +24,7 @@ Los servicios comunes proporcionan los servicios que utilizan otros servicios en
 ### Servicios de identidad y acceso
 {: #vcsicp-detail-design-identity}
 
-Como parte de VMware vCenter Server en la automatización de {{site.data.keyword.cloud}}, se utiliza un Microsoft Active Directory (AD) para la gestión de identidades. Se despliega una sola instancia de servidor virtual (VSI) AD. El vCenter se configura de modo que utilice la autenticación de AD y puede configurar {{site.data.keyword.icpfull_notm}} para la autenticación de LDAP.
+Como parte de la automatización de VMware vCenter Server on {{site.data.keyword.cloud}}, se utiliza un Microsoft Active Directory (AD) para la gestión de identidades. Se despliega una sola instancia de servidor virtual (VSI) AD. El vCenter se configura de modo que utilice la autenticación de AD y puede configurar {{site.data.keyword.icpfull_notm}} para la autenticación de LDAP.
 
 ###	Servicios de nombres de dominio
 {: #vcsicp-detail-design-dns}

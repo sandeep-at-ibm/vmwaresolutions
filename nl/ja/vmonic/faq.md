@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-16"
+lastupdated: "2019-06-14"
+
+keywords: FAQ, user account, patch management
 
 subcollection: vmware-solutions
 
@@ -27,7 +29,7 @@ subcollection: vmware-solutions
 
 * **IBMid アカウント**。 {{site.data.keyword.vmwaresolutions_short}} コンソールにアクセスするためには、このアカウントが必要です。 このコンソールは、{{site.data.keyword.slportal}}とは別のスタンドアロンのユーザー・インターフェースです。 詳しくは、[概説](/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started)を参照してください。
 * **{{site.data.keyword.cloud_notm}} アカウント**。 プロビジョニングにはこのアカウントが必要です。 {{site.data.keyword.cloud_notm}} アカウントを登録するには、既存の **IBMid** を使用するか、新しい **IBMid** を作成します。
-* **{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウント**。 このアカウントを使用して、インフラストラクチャー製品およびサービスを管理するためのいくつかの追加機能を提供する、{{site.data.keyword.cloud_notm}} インフラストラクチャー・カスタマー・ポータルにログインします。 {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントを取得するには、**{{site.data.keyword.cloud_notm}} アカウント**を従量課金 (PAYG) タイプのアカウントにアップグレードするか、または既存の {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントを {{site.data.keyword.cloud_notm}} アカウントにリンクします。 使用する {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントは特定の要件を満たしている必要があります。 詳しくは、[必要なアカウントの登録](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)および [{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの要件](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)を参照してください。
+* **{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウント**。 このアカウントを使用して、インフラストラクチャー製品およびサービスを管理するためのいくつかの追加機能を提供する、{{site.data.keyword.cloud_notm}} インフラストラクチャー・カスタマー・ポータルにログインします。 {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントは、**{{site.data.keyword.cloud_notm}} アカウント**を請求可能アカウントにアップグレードすることにより、または既存の {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントを {{site.data.keyword.cloud_notm}} アカウントにリンクすることにより取得できます。使用する {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントは特定の要件を満たしている必要があります。 詳しくは、[必要なアカウントの登録](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts)および [{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの要件](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req)を参照してください。
 
 ## IBM Cloud インフラストラクチャーの資格情報を IBM Cloud for VMware Solutions コンソールに関連付けるにはどうすればよいですか?
 {: #faq-associate-credentials}

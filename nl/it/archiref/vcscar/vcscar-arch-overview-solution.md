@@ -116,7 +116,7 @@ disponibilità
 
 Tabella 3. Specifiche VM {{site.data.keyword.icpfull_notm}}
 
-Nodo |     Istanze    | IP    | CPU    | RAM (GB)    | DISK (GB)
+Nodo |     Istanze    | IP    | CPU    | RAM (GB)    | DISCO (GB)
 :-----|------------:|:----|----:|----------:|----------:|
 Master|    3    | IP (x3) VIP (x1)    | 4    | 64    | 200
 Gestione    |3    | IP (x3)    |8    |64    |500
@@ -129,7 +129,7 @@ CAM richiede che i nodi di lavoro abbiano una configurazione di vCPU e memoria s
 
 Tabella 4. Specifiche VM {{site.data.keyword.icpfull_notm}}
 
-Nodo |     Istanze    | IP    | CPU    | RAM (GB)    | DISK (GB)
+Nodo |     Istanze    | IP    | CPU    | RAM (GB)    | DISCO (GB)
 :-----|------------:|:----|----:|----------:|----------:|
 Di lavoro  |  3 | IP (x3)  |  4-8 |16-20   |  150
 

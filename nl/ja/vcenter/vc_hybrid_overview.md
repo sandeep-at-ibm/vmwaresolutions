@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-02"
+lastupdated: "2019-05-27"
+
+keywords: vCenter Server Hybridity, hybridity, tech specs vCenter Server Hybridity
 
 subcollection: vmware-solutions
 

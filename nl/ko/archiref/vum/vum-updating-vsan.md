@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-15"
 
 subcollection: vmware-solutions
 
@@ -49,7 +49,7 @@ VUM에서 해당 vSAN 업데이트를 보기 위해 vSAN 온라인 상태 워크
 {: #vum-updating-vsan-config-vcsa-proxy}
 
 1.	점프 서버 웹 브라우저에서 VCSA 관리 인터페이스 `https://<vCenter ip>:5480`
-2.	IC4VS 콘솔의 인증 정보를 사용하여 VCSA 관리 인터페이스에 루트로 로그인하십시오.
+2.	IBM Cloud for VMware Solutions 콘솔의 인증 정보를 사용하여 VCSA 관리 인터페이스에 루트로 로그인하십시오.
 3.	vCenter Server Appliance 관리 인터페이스에서 **네트워킹**을 클릭하고 **관리**를 클릭하십시오.
 4.	프록시 서버를 구성하려면 프록시 설정 분할창에서 **편집**을 클릭하십시오.
 5.	**프록시 서버 사용**을 선택하고 프록시 서버 설정을 입력한 후 **확인**을 클릭하십시오.

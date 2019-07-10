@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-21"
+lastupdated: "2019-05-22"
 
 subcollection: vmware-solutions
 
@@ -47,7 +47,7 @@ subcollection: vmware-solutions
 ## VRF(Virtual Routing and Forwarding)
 {: #vcsnsxt-overview-ic4vnetwork-vrf}
 
-{{site.data.keyword.cloud_notm}} 계정을 VRF(Virtual Routing and Forwarding) 계정으로 구성할 수 있습니다. VRF 계정은 계정 내의 서브넷 IP 블록 사이의 자동 글로벌 라우팅을 사용합니다. Direct-Link 연결의 모든 계정은 VRF 계정으로 변환되거나 VRF 계정으로 작성되어야 합니다.
+{{site.data.keyword.cloud_notm}} 계정을 VRF(Virtual Routing and Forwarding) 계정으로 구성할 수 있습니다. VRF 계정은 계정 내의 서브넷 IP 블록 사이의 자동 글로벌 라우팅을 사용합니다. Direct Link 연결의 모든 계정은 VRF 계정으로 변환되거나 VRF 계정으로 작성되어야 합니다.
 
 ## 실제 호스트 연결
 {: #vcsnsxt-overview-ic4vnetwork-host-connect}
@@ -85,7 +85,7 @@ VLAN 	|서브넷 유형 	|설명
 사설 B 	|포터블 	|vMotion을 위해 지정됩니다.
 
 이 디자인은 VLAN에 있는 실제 호스트와 가상 시스템 인스턴스(VSI)로 구현되고 {{site.data.keyword.cloud_notm}}
-BCR(백엔드 "사설 네트워크" 고객 라우터)을 기본 라우트로 지정하도록 구성됩니다. 반면 vCenter Server 인스턴스는 소프트웨어 정의 네트워킹을 사용하도록 설정됩니다. VLAN 서브넷에 대한 라우팅을 포함하는 NSX에서 작성한 네트워크 오버레이는 {{site.data.keyword.cloud_notm}} 관리 라우터에서 알 수 없으며, 네트워크 플로우를 적절하게 관리하기 위해서는 정적 라우트, 방화벽 규칙 및 NAT 규칙을 만들어야 할 수 있습니다.
+BCR(백엔드 "사설 네트워크" 고객 라우터)을 기본 라우트로 지정하도록 구성됩니다. vCenter Server 인스턴스로 인해 소프트웨어 정의 네트워킹의 사용은 가능하지만, VLAN 서브넷으로의 라우팅을 포함한 NSX로 작성된 네트워크 오버레이를 {{site.data.keyword.cloud_notm}} 관리 라우터는 알지 못합니다. 네트워크 플로우를 적절하게 관리하기 위해서는 정적 라우트, 방화벽 규칙 및 NAT 규칙을 만들어야 할 수 있습니다.
 
 사설 네트워크 연결은 MTU 크기가 9000인 점보 프레임을 사용하도록 구성되어 있어 스토리지 및 vMotion 등의 대형 데이터 전송에 대한 성능이 향상됩니다. 이는 VMware 내에서 그리고 {{site.data.keyword.cloud_notm}}에 의해 허용되는 최대 MTU입니다. 공용 네트워크 연결은 1500의 표준 이더넷 MTU를 사용합니다. 이를 변경하면 인터넷 상에서 패킷 단편화가 발생할 수 있으므로 이를 그대로 유지해야 합니다.
 

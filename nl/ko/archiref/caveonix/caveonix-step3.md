@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-05-15"
 
 subcollection: vmware-solutions
 
@@ -14,7 +14,7 @@ subcollection: vmware-solutions
 # 3단계 - 애플리케이션 구성
 {: #caveonix-step3}
 
-이 단계에서는 Caveonix RiskForesight 구성 스크립트를 사용합니다. “일체형” 배치에서는 IC4VS 자동화를 통해 이 스크립트가 시작됩니다.
+이 단계에서는 Caveonix RiskForesight 구성 스크립트를 사용합니다. “일체형” 배치에서는 IBM Cloud for VMware Solutions 자동화를 통해 이 스크립트가 시작됩니다.
 
 스케일링의 경우 클라이언트에서 스크립트를 호출하여 부분 또는 전체 분산 토폴로지를 프로비저닝해야 합니다. 이 스크립트에서 RiskForesight 서비스를 구성합니다.
 - Caveonix 앱(API, 중앙 콜렉터)

@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-06-11"
+
+keywords: IAM user, user role, user permission
 
 subcollection: vmware-solutions
 
@@ -40,10 +42,10 @@ subcollection: vmware-solutions
 
 | プラットフォーム管理の役割 | アクション | 操作の例 |
 |:----------------- |:----------------- |:----------------- |
-| ビューアー | 読み取り専用の操作 | <ul><li>インスタンスのサマリーの表示</li><li>インスタンスの詳細を表示します</li></ul>|
-| エディター | 特定のインスタンスの更新 |<ul><li>ESXi サーバーの追加または削除</li><li>クラスターの追加または削除</li><li>サービスの追加または削除</li><li>インスタンスをより高いバージョンにアップグレードします</li></ul> |
-| オペレーター | 読み取り専用の操作 | <ul><li>インスタンスのリスト</li><li>インスタンスの詳細を表示します</li></ul> |
-| 管理者 | 完全管理アクセス |<ul><li>新しいインスタンスの作成</li><li>インスタンスの削除</li><li>他のユーザーにプラットフォームのアクセス権限を付与します</li></ul>|
+| ビューアー | 読み取り専用の操作 | インスタンスのサマリーの表示<br>インスタンスの詳細を表示します |
+| エディター | 特定のインスタンスの更新 | ESXi サーバーの追加または削除<br>クラスターの追加または削除<br>サービスの追加または削除<br>インスタンスをより高いバージョンにアップグレードします |
+| オペレーター | 読み取り専用の操作 | インスタンスのリスト<br>インスタンスの詳細を表示します |
+| 管理者 | 完全管理アクセス | 新しいインスタンスの作成<br>インスタンスの削除<br>他のユーザーにプラットフォームのアクセス権限を付与します|
 
 {{site.data.keyword.vmwaresolutions_short}} の場合、以下の操作が存在します。
 
@@ -53,8 +55,8 @@ subcollection: vmware-solutions
 |:------ |:-------------------- |:---- |
 | vmware-solutions.instances.create | 新しいインスタンスの作成 | 管理者 |
 | vmware-solutions.instances.delete | インスタンスの削除 | 管理者 |
-| vmware-solutions.instances.view | <ul><li>インスタンスのリスト</li><li>インスタンスの詳細を表示します</li></ul> | ビューアー、オペレーター、エディター、および管理者 |
-| vmware-solutions.instances.update | <ul><li>ESXi サーバーの追加または削除</li><li>クラスターの追加または削除</li><li>サービスの追加または削除</li><li>インスタンスをより高いバージョンにアップグレードします</li></ul> | エディターおよび管理者 |
+| vmware-solutions.instances.view | インスタンスのリスト<br>インスタンスの詳細を表示します | ビューアー、オペレーター、エディター、および管理者 |
+| vmware-solutions.instances.update | ESXi サーバーの追加または削除<br>クラスターの追加または削除<br>サービスの追加または削除<br>インスタンスをより高いバージョンにアップグレードします | エディターおよび管理者 |
 | vmware-solutions.account.update | アカウント設定の更新 | 管理者 |
 
 ## ユーザーのアクセス権限の管理

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-15"
 
 subcollection: vmware-solutions
 
@@ -16,7 +16,7 @@ subcollection: vmware-solutions
 
 vCenter tiene una característica denominada Perfiles de host. Esta característica crea un perfil que captura una configuración de host de referencia preconfigurada y validada y ayuda a un administrador del sistema a gestionar las configuraciones de host en un clúster. Los perfiles de host proporcionan un mecanismo automatizado y gestionado de forma centralizada para la configuración de host y la conformidad de configuración. Los perfiles de host permiten que la configuración se trate como un objeto gestionado, que contiene un catálogo de parámetros para configurar: la red, el almacenamiento, la seguridad y otros parámetros de nivel de host. Estos perfiles de host se pueden aplicar a hosts individuales, a un clúster o a todos los hosts y clústeres asociados a un perfil de host.
 
-A medida que se despliegan más hosts VMware vCenter Server on {{site.data.keyword.cloud}} vSphere ESXi mediante la automatización de IC4VS que ha desplegado el clúster original, hay menos derivación de configuración que con métodos manuales de adición de hosts. Sin embargo, las acciones de administrador del sistema, además de la automatización, pueden hacer que la configuración de hosts sea distinta. Por ejemplo, se ha añadido más almacenamiento NFS o VLAN adicionales. El uso de Perfiles de host para validar la configuración de un nuevo host mediante la comprobación de la conformidad de este host frente a un host existente es un caso de uso válido de esta herramienta dentro de {{site.data.keyword.cloud_notm}}.
+A medida que se despliegan más hosts VMware vCenter Server on {{site.data.keyword.cloud}} vSphere ESXi mediante la automatización de IBM Cloud for VMware Solutions que ha desplegado el clúster original, hay menos derivación de configuración que con métodos manuales de adición de hosts. Sin embargo, las acciones de administrador del sistema, además de la automatización, pueden hacer que la configuración de hosts sea distinta. Por ejemplo, se ha añadido más almacenamiento NFS o VLAN adicionales. El uso de Perfiles de host para validar la configuración de un nuevo host mediante la comprobación de la conformidad de este host frente a un host existente es un caso de uso válido de esta herramienta dentro de {{site.data.keyword.cloud_notm}}.
 
 Para añadir más hosts a su clúster de vCenter Server, consulte [Expandir y contratar capacidad para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers).
 

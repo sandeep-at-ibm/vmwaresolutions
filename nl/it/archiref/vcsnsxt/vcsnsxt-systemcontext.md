@@ -37,7 +37,7 @@ Attore  |  Descrizione
 Amministratore di sistema |Gli amministratori di sistema sono le risorse VMware aziendali che utilizzano vCenter e il plug-in HCX. Identificano i candidati per la migrazione, estendono le reti, migrano le VM e gestiscono NSX-V. Utilizzano la console {{site.data.keyword.cloud_notm}} per eseguire il provisioning delle istanze VMware vCenter Server on {{site.data.keyword.cloud_notm}} e per ridimensionare la capacità.
 Sviluppatore	| Gli sviluppatori sono le risorse del contenitore con competenze aziendali che utilizzano le console {{site.data.keyword.containerlong_notm}}, {{site.data.keyword.icpfull_notm}}e CAM e le API per creare e gestire contenitori. Creano i nuovi servizi come parte della modernizzazione dell'applicazione.
 Utente aziendale | Questa risorsa aziendale richiede l'accesso di rete alle applicazioni per completare processi aziendali quali l'aggiornamento di contenuti.
-Cliente | Il cliente è un attore esterno che vuole consumare servizi dall'azienda. Per Acme Skateboards, è uno skater che vuole acquistare prodotti di skating. Il cliente necessita di un accesso internet sicuro al catalogo.
+Cliente | Il cliente è un attore esterno che vuole consumare servizi dall'azienda. Per Acme Skateboards, è uno skater che vuole acquistare prodotti di skating. Il cliente necessita di un accesso a internet protetto al catalogo.
 {{site.data.keyword.containerlong_notm}} | Questa è una risorsa IBM che gestisce il nodo master {{site.data.keyword.containerlong_notm}} del servizio.
 
 ## Sistemi

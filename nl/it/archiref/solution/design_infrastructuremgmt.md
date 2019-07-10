@@ -53,7 +53,7 @@ La configurazione di vCenter Server utilizza un database PostgreSQL integrato e 
 ### Specifica del cluster vCenter Server
 {: #design_infrastructuremgmt-vcenter-cluster}
 
-Con questa progettazione, puoi raggruppare gli host vSphere ESXi forniti tramite la soluzione. Tuttavia, prima che i cluster possano essere creati viene creato un oggetto data center che indica l'ubicazione degli host vSphere ESXi nonché il pod all'interno del data center. Un cluster viene creato dopo la creazione dell'oggetto data center. Il cluster viene distribuito con VMware vSphere High Availability (HA) e VMware vSphere Distributed Resource Scheduler (DRS) abilitati.
+Con questa progettazione, puoi raggruppare gli host vSphere ESXi forniti tramite la soluzione. Tuttavia, prima che i cluster possano essere creati viene creato un oggetto data center che indica l'ubicazione degli host vSphere ESXi nonché il pod all'interno del data center. Un cluster viene creato dopo la creazione dell'oggetto data center. Il cluster viene distribuito con VMware vSphere HA (High Availability) e VMware vSphere DRS (Distributed Resource Scheduler) abilitati.
 
 ### vSphere Distributed Resource Scheduler
 {: #design_infrastructuremgmt-vsphere-drs}
@@ -66,7 +66,7 @@ In questa progettazione non viene utilizzato il risparmio energia tramite la fun
 ### vSphere High Availability
 {: #design_infrastructuremgmt-vsphere-ha}
 
-Questa progettazione utilizza vSphere High Availability (HA) nel cluster iniziale e nei cluster aggiuntivi per rilevare gli errori di calcolo e ripristinare le VM eseguite in un cluster. La funzione vSphere HA in questa progettazione è configurata con le opzioni **Host Monitoring** e **Admission Control** abilitate nel cluster. Inoltre, il cluster iniziale prenota le risorse di un nodo come capacità di riserva per la politica di controllo di ammissione.
+Questa progettazione utilizza vSphere HA (High Availability) nel cluster iniziale e nei cluster aggiuntivi per rilevare gli errori di calcolo e ripristinare le VM eseguite in un cluster. La funzione vSphere HA in questa progettazione è configurata con le opzioni **Host Monitoring** e **Admission Control** abilitate nel cluster. Inoltre, il cluster iniziale prenota le risorse di un nodo come capacità di riserva per la politica di controllo di ammissione.
 
 Sei responsabile di regolare la politica di controllo di ammissione quando il cluster viene successivamente espanso o contratto.
 {:note}

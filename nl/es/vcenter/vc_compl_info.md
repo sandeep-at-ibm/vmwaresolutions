@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-02"
+lastupdated: "2019-06-17"
+
+keywords: vCenter Server compliance, compliance info, vCenter Server policy
 
 subcollection: vmware-solutions
 
@@ -50,6 +52,21 @@ En el caso de que se produzca una anomalía del sistema, un proveedor de servici
 {: #vc_compl_info-personal-info-and-regulated-data}
 
 Este Servicio de nube no ha sido diseñado para cumplir ningún requisito de seguridad específico para el contenido regulado, como información personal o información personal confidencial. El cliente es el responsable de determinar si este Servicio de nube satisface las necesidades de los Clientes en relación con el tipo de contenido que utiliza el Cliente con el Servicio de nube.
+
+## Configuraciones de políticas
+{: #vc_compl_info-default-policy-config}
+
+La contraseña de vCenter generada para las instancias primarias de vCenter Server tiene ahora 15 caracteres de longitud. Anteriormente, la contraseña generada era el valor predeterminado de vCenter de ocho caracteres de longitud. 
+
+Tabla 1. Configuraciones de políticas de vCenter para una instancia primaria nueva 
+
+| Política | v3.1 o posterior | v3.0 o anterior |
+|:------------- |:------------------------------ |:------------- |
+| Política de contraseñas de vCenter | Longitud mínima de 15 caracteres | Longitud mínima de 8 caracteres (predeterminado de vCenter) |
+| Política de bloqueo de vCenter | Máximo de tres intentos de inicio de sesión fallidos | Máximo de cinco intentos de inicio de sesión fallidos (predeterminado de vCenter) |
+| Política de bloqueo de vCenter | 900 segundos entre errores de inicio de sesión | 180 segundos entre errores de inicio de sesión (predeterminado de vCenter)|
+
+La contraseña del gestor de NSX generada para las instancias primarias de vCenter Server tiene ahora 15 caracteres de longitud. Anteriormente, la contraseña generada tenía ocho caracteres de longitud. 
 
 ## Política para acceder a instancias de clientes
 {: #vc_compl_info-policy-for-access-client-inst}

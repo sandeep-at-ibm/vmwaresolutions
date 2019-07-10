@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-15"
 
 subcollection: vmware-solutions
 
@@ -44,7 +44,7 @@ NSX Manager를 업그레이드된 후 NSX를 다운그레이드할 수 없습니
 4. 다운로드 페이지에서 **업그레이드 번들, 지금 다운로드**를 선택하십시오.
 5. 적합한 폴더에 다운로드하십시오.
 6. **NSX Manager 업그레이드**:
-  - IC4VS 콘솔에 문서화된 IP 주소 및 인증 정보를 사용하여 NSX Manager 가상 어플라이언스에 로그인하고 홈 페이지에서 업그레이드 단추를 클릭하십시오.
+  - IBM Cloud for VMware Solutions 콘솔에 문서화된 IP 주소 및 인증 정보를 사용하여 NSX Manager 가상 어플라이언스에 로그인하고 홈 페이지에서 업그레이드 단추를 클릭하십시오.
   - NSX Manager에 로그인하십시오.
   - **어플라이언스 관리**에서 **백업 및 복원**을 클릭하십시오.
   - 백업을 클릭하고 적절한 파일 이름을 입력하십시오. VMware에서는 NSX Manager 데이터를 복원하기 전에 NSX Manager 어플라이언스를 다시 설치할 것을 권장합니다. 기존 NSX Manager 어플라이언스에 대한 복원 오퍼레이션이 작동할 수 있지만 공식적으로 지원되지는 않습니다. 새로 배치된 NSX Manager 어플라이언스에 대한 IP 정보 및 백업 위치 정보를 지정하는 데 사용될 수 있도록 NSX Manager 어플라이언스에 대한 IP 설정을 기록해 두는 것이 좋습니다.

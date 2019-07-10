@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-07"
+lastupdated: "2019-06-18"
+
+keywords: Veeam, Veeam install, tech specs Veeam
 
 subcollection: vmware-solutions
 
@@ -31,18 +33,23 @@ Nel servizio Veeam on {{site.data.keyword.cloud_notm}} vengono ordinati e inclus
 ### VSI
 {: #veeam_considerations-specs-vsi}
 
-* VSI singola con Veeam Backup and Replication 9.5 OS Add-on
+* VSI singola con Veeam Backup and Replication 9.5 OS Add-on e Veeam Availability Suite 9.5
 * Windows Server 2016 Standard Edition (64 bit)
 * Core 4 x 2,0 GHz
-* 8 GB di RAM
+* 8 vCPU, 32 GB di RAM
 * Uplink di rete privata da 1 Gbps
 * Disco da 100 GB (SAN)
 
 ### Archiviazione per i backup
 {: #veeam_considerations-specs-storage}
 
-* Archiviazione iSCSI endurance (2000, 4000, 8000 o 12000 GB)
+* Archiviazione iSCSI Endurance (2.000, 4.000, 8.000 o 12.000 GB)
 * Prestazioni di archiviazione (0,25, 2 p 4 IOPS/GB)
+
+Come parte dell'installazione e della configurazione del servizio Veeam, vengono creati i seguenti repository:
+* Per i file di backup della configurazione di Veeam: un repository denominato `IC4V Default Config Backup Repository`. Il percorso alla cartella dove sono archiviati i backup Veeam è `<Drive>:\ConfigBackup\`.
+* Per il ridimensionamento incrementale, un repository denominato `IC4V Scale-Out Repository`. Per ulteriori informazioni, vedi [Aggiunta di un repository di ridimensionamento incrementale](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icos_ordering#icos_ordering-scale-repo). 
+* Per i backup di VM (Virtual Machine), un repository denominato ``IC4V Default VM Backup Repository``. Il percorso alla cartella dove sono archiviati i backup di VM è ``<Drive>:\VMBackup\`. Questo repository viene aggiunto come estensione al repository ``IC4V Scale-Out'.
 
 ### Rete
 {: #veeam_considerations-specs-networking}
@@ -52,12 +59,7 @@ Un indirizzo IP primario privato.
 ### Licenze e tariffe
 {: #veeam_considerations-specs-licenses}
 
-Veeam Backup and Replication 9.5 Enterprise Plus (licenza da 10, 25, 50, 100 o 200 VM).
-
-### Gestione
-{: #veeam_considerations-specs-mgmt}
-
-Backup di gestione configurati per impostazione predefinita con un massimo di 5 VM e 2000 GB di archiviazione.
+* Veeam Availability Suite 9.5 (10, 25, 50, 100 o 200 licenze di VM)
 
 ## Considerazioni sull'installazione di Veeam on IBM Cloud
 {: #veeam_considerations-install}
@@ -67,7 +69,7 @@ Il repository di archiviazione e il server Veeam si trovano nel pod e nel data c
 ## Considerazioni sulla rimozione di Veeam on IBM Cloud
 {: #veeam_considerations-remove}
 
-La rimozione del servizio Veeam on {{site.data.keyword.cloud_notm}} arresta tutti i backup ed elimina tutti i backup precedenti. I backup delle VM di gestione vengono arrestati e l'eliminazione dei backup precedenti è irreversibile. Se le VM di gestione sono danneggiate, non possono essere ripristinate.
+La rimozione del servizio Veeam on {{site.data.keyword.cloud_notm}} arresta tutti i backup ed elimina tutti i backup precedenti. Il backup delle VM di gestione viene arrestato e l'eliminazione dei backup precedenti è irreversibile. Se le VM di gestione sono danneggiate, non possono essere ripristinate.
 
 ## Link correlati
 {: #veeam_considerations-related}

@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-18"
+lastupdated: "2019-06-18"
+
+keywords: vCenter Server Hybridity add host, add server vCenter Server Hybridity, remove host vCenter Server Hybridity
 
 subcollection: vmware-solutions
 
@@ -19,6 +21,8 @@ subcollection: vmware-solutions
 {: #vc_hybrid_addingremovingservers}
 
 비즈니스 요구사항에 따라 ESXi 서버를 추가하거나 제거하여 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 인스턴스의 용량을 확장하거나 축소할 수 있습니다.
+
+V3.1 릴리스부터는 클러스터에서 기존 호스트가 아닌 기존 구성 또는 대체 구성을 선택하여 새 ESXi 서버를 기존 클러스터에 추가할 수 있습니다. 새 서버 주문 시 인스턴스를 선택하는 데 기존 구성을 사용할 수 있습니다. 성능 또는 안전성 문제를 방지하기 위해 클러스터가 CPU, RAM 및 스토리지와 관련하여 동일하거나 유사한 구성을 사용하는 것이 좋습니다. 이 기능은 동일한 클러스터 내의 하드웨어 업데이트에 유용합니다. 클러스터에는 하나의 스토리지 유형만 허용됩니다. 
 
 V2.9 릴리스부터는 클러스터가 유지보수 모드에 있는 동안 새 ESXi 서버를 클러스터에 추가할 수 있습니다. 또한 여러 클러스터에서 ESXi 서버를 동시에 추가 또는 제거할 수 있습니다. 다음 동시 조작을 사용할 수 있습니다.
 
@@ -47,8 +51,18 @@ V2.9 릴리스부터는 클러스터가 유지보수 모드에 있는 동안 새
 4. **클러스터** 테이블에서 ESXi 서버를 추가할 클러스터를 클릭하십시오.
 5. **ESXi 서버** 테이블에서 **추가**를 클릭하십시오.
 6. **서버 추가** 창에서 추가할 서버의 수를 입력하십시오.
-7. 또는 유지보수 모드 동안 서버를 추가하려면 선택란을 선택하십시오.
-8. 예상 비용을 검토하고 **추가**를 클릭하십시오.
+7. 또는 유지보수 모드 동안 서버를 추가하려면 선택란을 선택하십시오. 기본적으로 선택란이 선택되어 있습니다. 
+
+   새 ESXi 서버를 프로비저닝하는 경우 **유지보수 모드** 선택란을 선택하지 않으면 가상 머신(VM)은 즉시 새 서버로 마이그레이션됩니다. 마이그레이션이 시작되기 전에는 확인 메시지가 수신되지 않습니다.
+{:important}
+
+8. 베어메탈 구성을 완료하십시오.
+   * 클러스터의 기존 호스트에서 구성을 선택하십시오. 
+   * 새 {{site.data.keyword.baremetal_short_sing}} 구성을 선택하고 CPU 모델 및 RAM 크기를 지정하십시오. 
+9. 스토리지 구성을 완료하십시오. 용량 및 캐시 디스크의 디스크 유형과 디스크 수 및 vSAN License 에디션을 지정하십시오. 더 많은 스토리지를 원하는 경우 **고성능 Intel Optane** 상자를 선택하십시오.
+10. 예상 비용을 검토하고 **추가**를 클릭하십시오.
+
+  **예상 금액에 추가**를 클릭하여 {{site.data.keyword.cloud_notm}} 예상 도구에 프로비저닝된 리소스를 추가할 수도 있습니다. 구매를 고려할 수 있는 기타 {{site.data.keyword.cloud_notm}} 리소스와 함께 선택된 {{site.data.keyword.vmwaresolutions_short}} 리소스의 비용을 예상하려는 경우 유용합니다. 
 
 ### ESXi 서버를 추가한 후의 결과
 {: #vc_hybrid_addingremovingservers-adding-results}

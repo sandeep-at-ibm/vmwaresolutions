@@ -6,6 +6,8 @@ copyright:
 
 lastupdated: "2019-03-04"
 
+keywords: VMware HCX standalone, HCX on-premises, order HCX
+
 subcollection: vmware-solutions
 
 

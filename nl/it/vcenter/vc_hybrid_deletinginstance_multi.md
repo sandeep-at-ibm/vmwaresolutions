@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-28"
+
+keywords: vCenter Server Hybridity delete instance, delete vCenter Server Hybridity, delete multi-site
 
 subcollection: vmware-solutions
 
@@ -49,3 +51,4 @@ Per l'istanza eliminata ti vengono addebitati costi fino alla fine del ciclo di 
 
 * [Eliminazione di istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_deletinginstance)
 * [Ordine, visualizzazione e rimozione dei servizi dalle istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
+* [Annullamento dei server virtuali](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)

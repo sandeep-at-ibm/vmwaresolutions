@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-05-15"
 
 subcollection: vmware-solutions
 
@@ -18,7 +18,7 @@ Una vez que se han desplegado las máquinas virtuales (VM) y se han instalado lo
 
 El proveedor de servicios es la organización de nivel superior y hay uno o más arrendatarios/organizaciones a los cuales presta servicio dicho proveedor. El Proveedor de servicios asigna activos que se recopilan desde vCenter al arrendatario u organizaciones, que a continuación los asigna a aplicaciones o subaplicaciones. Estas aplicaciones estarán sujetas a un régimen de conformidad.
 
-Este paso se completa inicialmente mediante la automatización de IC4VS, que utiliza la información que proporciona el cliente durante el proceso de pedido y la información predeterminada. El cliente, tras el despliegue, puede iniciar el proceso de configuración para modificar el proveedor de servicios o la organización de arrendatario en función de la instalación posterior necesaria.
+Este paso se completa inicialmente mediante la automatización de IBM Cloud for VMware Solutions, que utiliza la información que proporciona el cliente durante el proceso de pedido y la información predeterminada. El cliente, tras el despliegue, puede iniciar el proceso de configuración para modificar el proveedor de servicios o la organización de arrendatario en función de la instalación posterior necesaria.
 
 La configuración del proveedor de servicios tiene ocho subpasos:
 -	Paso 1: Detalle de organización - Añada los detalles de la organización padre para su proveedor de servicios de nube. Esta organización puede tener múltiples ubicaciones físicas y múltiples centros de datos. Las organizaciones para sus arrendatarios y las suborganizaciones para su proveedor de servicios se añaden más tarde.

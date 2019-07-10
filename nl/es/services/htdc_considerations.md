@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-06-13"
+
+keywords: HyTrust DataControl, HTDC, tech specs HTDC
 
 subcollection: vmware-solutions
 
@@ -20,8 +22,7 @@ subcollection: vmware-solutions
 
 El servicio HyTrust DataControl on {{site.data.keyword.cloud}} ofrece un cifrado de alta seguridad con claves de gestión integrada para proteger las cargas de trabajo en todo su ciclo de vida. El servicio proporciona cifrado tanto en el nivel de sistema operativo como en el nivel de datos. Esto permite que cualquier directorio, carpeta o archivo de una carga de trabajo esté cifrado y descifrado.
 
-Este servicio solo está disponible para las instancias que se ejecutan en vSphere 6.5 y que se han desplegado en, o que se han actualizado a, V2.3 o releases posteriores. La versión actual de HyTrust DataControl que está instalada es la 4.3.
-{:note}
+Este servicio solo está disponible para las instancias que se ejecutan en vSphere 6.5 y que se han desplegado en, o que se han actualizado a, V2.3 o releases posteriores. La versión actual de HyTrust DataControl que está instalada es la 4.3.2. {:note}
 
 ## Especificaciones técnicas para HyTrust DataControl on IBM Cloud
 {: #htdc_considerations-specs}
@@ -49,7 +50,7 @@ Licencia por host: se solicita una licencia de HyTrust DataControl por cada host
 ## Consideraciones al eliminar HyTrust DataControl on IBM Cloud
 {: #htdc_considerations-remove}
 
-Antes de eliminar el HyTrust DataControl en el servicio de {{site.data.keyword.cloud_notm}}, desacopla a todos los clientes de utilizar DataControl. Después de eliminar el servicio, es posible que se supriman las claves y que se le bloqueen de las máquinas virtuales.
+Antes de eliminar el servicio HyTrust DataControl on {{site.data.keyword.cloud_notm}}, desacople a todos los clientes de utilizar DataControl. Después de eliminar el servicio, es posible que se supriman las claves y que se le bloqueen de las máquinas virtuales.
 
 ## Enlaces relacionados
 {: #htdc_considerations-related}

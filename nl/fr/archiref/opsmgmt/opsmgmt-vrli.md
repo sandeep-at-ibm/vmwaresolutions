@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-17"
+lastupdated: "2019-03-06"
 
 ---
 
@@ -25,13 +25,14 @@ vRealize Log Insight (vRLI) permet la journalisation en temps réel des composan
 Dans cette conception, chaque emplacement dispose d'un cluster vRLI indépendant déployé sur le cluster de gestion. Le cluster vRLI est déployé sur le sous-réseau d'outils à l'aide d'adresse IP {{site.data.keyword.cloud_notm}} portables. Ceci facilite la communication avec tous les composants qui sont adressés depuis l'espace d'adressage {{site.data.keyword.cloud_notm}} RFC1918. Les composants comprennent : les hôtes vSphere, vCenter, Platform Services Controller, NSX Manager et NSX Controllers. Un cluster vRLI contient un noeud maître et au moins deux noeuds worker avec un répartiteur de charge intégré.
 
 * Noeud maître - noeud initial requis dans le cluster. Le noeud maître est responsable des requêtes et de l'ingestion des journaux. L'interface utilisateur Web du noeud maître est la seule interface de ce cluster vRealize Log Insight. Toutes les requêtes concernant les données sont dirigées vers le noeud maître qui, à son tour, répartit la charge de travail entre les noeuds worker.
-* Noeud worker - trois noeuds minimum sont requis pour former un cluster avec la possibilité d'ajouter plus des noeuds worker supplémentaires si une mise à l'échelle est nécessaire. Un noeud worker ingère et stocke les journaux localement.
+* Noeud worker - trois noeuds minimum sont requis pour former un cluster avec la possibilité d'ajouter plus des noeuds worker supplémentaires si une extension est nécessaire. Un noeud worker ingère et stocke les journaux localement.
 * Equilibreur de charge intégré - il offre une haute disponibilité grâce à une configuration d'équilibrage de charge propriétaire (aucun équilibreur de charge externe n'est requis).
-* Log Insight Forwarder – il est déployé pour recevoir les journaux des composants NSX superposés. De plus, il peut être exploité par un client s'il souhaite envoyer des journaux à partir de machines virtuelles de calcul. Log Insight Forwarder est un noeud maître unique de vRealize Log Insight qui est utilisé comme agrégateur syslog distant pour transmettre les alertes au cluster vRLI. Comme les VXLAN sauvegardés sont adressés à partir de l'espace d'adressage BYOIP, les règles NAT doivent être implémentées sur la passerelle NSX ESG. Les tailles suivantes sont disponibles et la taille appropriée est sélectionnée :
+* Log Insight Forwarder – il est déployé pour recevoir les journaux des composants NSX superposés. De plus, il peut être exploité par un client s'il souhaite envoyer des journaux à partir de machines virtuelles de calcul. Log Insight Forwarder est un noeud maître unique de vRealize Log Insight qui est utilisé comme agrégateur syslog distant pour transmettre les alertes au cluster vRLI. Les adresses basées sur VXLAN étant en dehors de l'espace d'adressage BYOIP, les règles NAT doivent être implémentées sur la passerelle NSX ESG. 
 
- * Petit – 2000 événements par seconde
- * Moyen – 5000 événements par seconde
- * Grand – 15000 événements par seconde
+Les tailles suivantes sont disponibles et la taille appropriée est sélectionnée :
+* Petit – 2 000 événements par seconde
+* Moyen – 5 000 événements par seconde
+* Grand – 15 000 événements par seconde
 
 ![Diagramme des composants Log Insights](../../images/opsmgmt-vrlicomponents.svg "Diagramme des composants Log Insights")
 
@@ -42,8 +43,8 @@ vRLI collecte les événements de journalisation à partir de l'infrastructure v
 * Hôtes ESXi
 * NSX Manager
 * Contrôleurs NSX
-* Passerelles NSX Edge Services Gateway 
-* Instances de routeurs logiques distribués NSX 
+* Passerelles NSX Edge Services Gateway
+* Instances de routeurs logiques distribués NSX
 * Routeurs logiques distribués universels NSX
 * Module de noyau ESXi de pare-feu distribué NSX
 * Noeuds cluster d'analyse vRealize Operations Manager et collecteurs distants
@@ -64,7 +65,7 @@ Les clients de journalisation suivants sont pris en charge mais ne sont pas int�
 
 Pour prendre en charge toutes les données de journaux provenant des sources de journaux dans l'environnement, les noeuds vRLI doivent avoir une taille correcte. Cette conception est basée sur des dispositifs de taille moyenne :
 
-Tableau 1. Paramètres système des noeuds maître et de réplique de Log Insight 
+Tableau 1. Paramètres système des noeuds maître et de réplique de Log Insight
 
 | Attribut                | Spécification                     |
 | ------------------------ | --------------------------------- |
@@ -84,10 +85,10 @@ Chaque dispositif virtuel vRLI a trois disques virtuels par défaut et peut util
 Le déploiement du dispositif vRLI nécessite trois adresses IP du sous-réseau portable privé des outils. vRLI nécessite un accès :
 * au dispositif vCenter
 * au dispositif vRealize Log Insight
-* aux dispositifs NSX-V/T 
+* aux dispositifs NSX-V/T
 * au réseau VXLAN de développement d'outils
 * aux réseaux clients
-* au serveur NTP (time.services.softlayer.com)
+* au serveur NTP (`time.services.softlayer.com`)
 * à {{site.data.keyword.vmwaresolutions_short}} Active Directory/DNS
 * Les collecteurs distants ont besoin des règles NAT sur la passerelle NSX ESG pour activer la connectivité au noeud maître, à la réplique de noeud maître et aux noeuds de données
 
@@ -99,18 +100,18 @@ Tableau 2. Port de Log Insight
 | Description                                                   | Port       | Protocole |
 | ------------------------------------------------------------- | ---------- | -------- |
 | Trafic syslog sortant configuré comme destination de réexpédition | 514        | TCP, UDP |
-| Données syslog sur SSL                                        | 1514, 6514 | TCP      |
-| API d'ingestion de Log Insight                                | 9000       | TCP      |
-| API d'ingestion de Log Insight sur SSL                        | 9543       | TCP      |
+| Données syslog sur SSL                                          | 1514, 6514 | TCP      |
+| API d'ingestion de Log Insight                                     | 9000       | TCP      |
+| API d'ingestion de Log Insight sur SSL                            | 9543       | TCP      |
 | Accès SSH au dispositif                                       | 22         | TCP      |
-| Interface utilisateur                                         | 80, 443    | TCP      |
+| Interface utilisateur                                                | 80, 443    | TCP      |
 | NTP                                                           | 123        | UDP      |
 | SMTP                                                          | 25         | TCP      |
 | DNS                                                           | 53         | UDP      |
 | LDAP/LDAPS                                                    | 389, 636   | TCP      |
 | LDAP GC                                                       | 3268/3269  | TCP      |
 | vCenter                                                       | 443        | TCP      |
-| Dispositif vRealize Operations Manager                        | 443        | TCP      |
+| Dispositif vRealize Operations Manager                         | 443        | TCP      |
 
 ## Authentification
 {: #opsmgmt-vrli-auth}

@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-06-18"
+
+keywords: NetApp order instance, order NetApp ONTAP, order NetApp
 
 subcollection: vmware-solutions
 
@@ -64,7 +66,6 @@ La etiqueta de subdominio debe cumplir los siguientes requisitos:
 *  Solo se permiten caracteres alfanuméricos y el guión (-).
 *  La etiqueta de subdominio debe empezar por un carácter alfabético y terminar por un carácter alfanumérico.
 *  La longitud máxima de la etiqueta de subdominio es de 10 caracteres.
-*  La etiqueta de subdominio debe ser exclusiva dentro de su cuenta.
 
 ### Nombre de dominio
 {: #np_orderinginstances-domain-name}
@@ -108,6 +109,13 @@ Las unidades SSD (disco de estado sólido, Solid-State Disk) de 3,8 TB reciben s
 
 El número de servidores ESXi de una instancia de NetApp ONTAP Select es 4 de forma predeterminada. No lo puede modificar. Todos los servidores ESXi comparten la configuración.
 
+## Resumen del pedido
+{: #np_orderinginstances-order-summary}
+
+En función de la configuración seleccionada, el coste estimado se genera y se muestra al instante en el panel derecho **Resumen de pedido**. Pulse **Detalle de precios** para generar un documento PDF con el resumen de coste de los recursos de {{site.data.keyword.vmwaresolutions_short}}. 
+
+También puede añadir los recursos suministrados a la herramienta de estimación {{site.data.keyword.cloud_notm}}, pulsando **Añadir a estimación**. Esto es útil si desea estimar el coste de los recursos estimare {{site.data.keyword.vmwaresolutions_short}} seleccionados junto con otros recursos de {{site.data.keyword.cloud_notm}} que le podría interesar adquirir. 
+
 ## Procedimiento para solicitar instancias de NetApp ONTAP Select
 {: #ordering-netapp-ontap-select-instances}
 
@@ -126,14 +134,12 @@ El número de servidores ESXi de una instancia de NetApp ONTAP Select es 4 de fo
     4. Pulse el enlace o enlaces de los términos que se aplican a su pedido. Asegúrese de que está de acuerdo con estos términos y marque el recuadro de selección **He leído y acepto los acuerdos de servicio de terceros enumerados a continuación**.
     5. Pulse **Suministro**.
 
-## Resultados
+## Resultados después de solicitar instancias de NetApp ONTAP
 {: #np_orderinginstances-results}
 
-El despliegue de la instancia comienza automáticamente. Recibirá una confirmación de que el pedido se está procesando y puede comprobar el estado del despliegue consultando los detalles de la instancia.
-
-Cuando la instancia se haya desplegado correctamente, los componentes que se describen en [Especificaciones técnicas para las instancias de NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#specs) se instalan en la plataforma virtual de VMware.
-
-Cuando la instancia esté lista para ser utilizada, el estado de la instancia pasará a ser **Listo para su uso** y recibirá una notificación por correo electrónico.
+* El despliegue de la instancia se inicia automáticamente y se recibe la confirmación de que el pedido se está procesando. Puede comprobar el estado de despliegue, incluidos los problemas que puedan requerir su atención, mediante la visualización de la sección **Historial de despliegue** de los detalles de la instancia. 
+* Cuando la instancia se haya desplegado correctamente, los componentes que se describen en [Especificaciones técnicas para las instancias de NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#specs) se instalan en la plataforma virtual de VMware.
+* Cuando la instancia esté lista para ser utilizada, el estado de la instancia pasará a ser **Listo para su uso** y recibirá una notificación por correo electrónico.
 
 ## Qué hacer a continuación
 {: #np_orderinginstances-next}

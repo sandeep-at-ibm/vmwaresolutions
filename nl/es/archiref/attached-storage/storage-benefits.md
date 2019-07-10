@@ -14,7 +14,7 @@ subcollection: vmware-solutions
 # Acerca del almacenamiento adjunto para vCenter Server
 {: #storage-benefits}
 
-El almacenamiento adjunto es una extensión de VMware vCenter Server en la oferta {{site.data.keyword.cloud}}. La arquitectura de soluciones de almacenamiento adjunto para VMware vCenter Server en {{site.data.keyword.cloud_notm}} detalla los componentes de la solución y la configuración de alto nivel de cada componente del diseño.
+El almacenamiento adjunto es una extensión de la oferta de VMware vCenter Server on {{site.data.keyword.cloud}}. La arquitectura de soluciones de almacenamiento adjunto para VMware vCenter Server on {{site.data.keyword.cloud_notm}} detalla los componentes de la solución y la configuración de alto nivel de cada componente del diseño.
 
 Para obtener más información sobre el diseño de vCenter Server, consulte [Visión general de la solución](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview).
 

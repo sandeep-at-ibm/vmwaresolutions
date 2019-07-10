@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-22"
+lastupdated: "2019-06-10"
+
+keywords: vCenter Server add service, view service vCenter Server, remove service vCenter Server
 
 subcollection: vmware-solutions
 
@@ -33,9 +35,9 @@ Tableau 1. Services disponibles pour les instances vCenter Server
 | [F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations) | BIG-IP VE v14.1.0.2 | A partir de V1.9 |
 | [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations) | Série 300 | A partir de V2.0 |
 | [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations) | 6.0.3 | A partir de V2.0 |
-| [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htcc_considerations) | 5.5 | A partir de V2.3 |
-| [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htdc_considerations)  | 4.3 | A partir de V2.3 |
-| [HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htkc_considerations) | 4.3 | A partir de V2.5 |
+| [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htcc_considerations) | 5.5.1 | A partir de V2.3 |
+| [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htdc_considerations)  | 4.3.2 | A partir de V2.3 |
+| [HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htkc_considerations) | 4.3.2 | A partir de V2.5 |
 | [{{site.data.keyword.cloud_notm}} Private Hosted](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_overview) | 3.1.2 | A partir de V2.5 |
 | [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-spp_considerations) | 10.1.3 | A partir de V2.2 |
 | [KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations) | 2.0  | Non applicable  |
@@ -47,7 +49,7 @@ Tableau 1. Services disponibles pour les instances vCenter Server
 
 Pour ajouter un service à votre instance vCenter Server, cliquez sur le lien de service approprié dans le tableau précédent pour passer en revue les remarques relatives au service et vérifiez les composants qui sont déployés. Suivez ensuite les instructions de la rubrique sur la commande de service afin d'ajouter le service à votre instance.
 
-### Résultats de l'installation d'un service
+### Que se passe-t-il après l'installation d'un service ?  
 {: #vc_addingremovingservices-adding-results}
 
 Lorsque l'installation du service est terminée, vous êtes prévenu par un courrier électronique, et le service s'affiche sur la page **Services** de l'instance avec le statut **Installé**.
@@ -70,7 +72,7 @@ Lorsque l'installation du service est terminée, vous êtes prévenu par un cour
 4. Sur la page **Services**, localisez l'instance de service que vous souhaitez retirer et cliquez sur l'icône **Supprimer**.
 5. Dans la fenêtre **Supprimer un service**, passez en revue, le cas échéant, les remarques ou avertissements. Sélectionnez **Je comprends** et cliquez sur **Supprimer**.
 
-### Résultats du retrait d'un service
+### Que se passe-t-il après le retrait d'un service ?
 {: #vc_addingremovingservices-removing-results}
 
 Une fois votre demande de retrait du service acceptée, le service prend le statut **Retrait en cours**.

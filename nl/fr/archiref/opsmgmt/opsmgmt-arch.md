@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-17"
+lastupdated: "2019-06-03"
 
 ---
 
@@ -16,7 +16,7 @@ Les principales informations recueillies sont les suivantes :
 * Données topologiques, telles que les objets de calcul, de mise en réseau et de stockage physiques et virtuels.
 * Données de surveillance, telles que :
   * Métriques - données structurées telles que la performance et la capacité
-  * Journaux - données non structurées telles que les événements système 
+  * Journaux - données non structurées telles que les événements système
 
 ## Flux de gestion des opérations
 {: #opsmgmt-arch-flows}
@@ -30,7 +30,7 @@ La gestion des opérations de {{site.data.keyword.vmwaresolutions_short}} se com
 
   Lorsqu'il y a un problème dans l'environnement, vROps génère des alertes. Il existe trois types d'alertes :
     * Les alertes de santé indiquent les problèmes qui affectent la santé de l'environnement et qui nécessitent une attention immédiate.
-    * Les alertes de risque indiquent les problèmes qui ne sont pas des menaces immédiates mais qui devraient être réglés dans un avenir proche.
+    * Les alertes de risque indiquent les problèmes qui ne sont pas des menaces immédiates mais qui doivent être réglés dans un avenir proche.
     * Les alertes d'efficacité offrent des informations qui permettent d'améliorer les performances ou de récupérer des ressources.
 
   Les alertes vROps sont des événements qui se produisent sur les objets surveillés lorsque l'analyse des données indique des écarts par rapport aux valeurs métriques normales, ou lorsqu'un problème survient avec l'un des composants surveillés. Les alertes vROps sont associées à l'une des catégories suivantes :
@@ -38,7 +38,7 @@ La gestion des opérations de {{site.data.keyword.vmwaresolutions_short}} se com
     * Immédiat - il faut agir dès que possible.
     * Avertissement - doit être vérifié à l'occasion.
 
-* Journalisation - vRealize Log Insight (vRLI) permet une gestion et une analyse des journaux en temps réel grâce à un regroupement intelligent basé sur l'apprentissage machine, une recherche haute performance et un dépannage des objets physiques et virtuels dans l'architecture {{site.data.keyword.vmwaresolutions_short}}. vRLI collecte les données des hôtes vSphere via le protocole syslog et dans les autres produits VMware, comme vCenter Server, pour recueillir les événements, tâches et données d'alarme. Il s'intègre à vRops pour envoyer des événements de notification et permettre le lancement en contexte. Les autres objets de l'architecture {{site.data.keyword.vmwaresolutions_short}} capables d'envoyer des données syslog sont dirigés vers vRLI. En option, le client peut configurer n'importe quel système capable d'envoyer des données syslog pour transmettre ces données à vRLI.
+* Journalisation - vRealize Log Insight (vRLI) permet une gestion et une analyse des journaux en temps réel grâce à un regroupement intelligent basé sur l'apprentissage machine, une recherche haute performance et un dépannage des objets physiques et virtuels dans l'architecture {{site.data.keyword.vmwaresolutions_short}}. vRLI collecte des données à partir d’hôtes vSphere à l’aide du protocole `syslog`. Il collecte également des événements, des tâches et des données d'alarme pour d'autres produits VMware, tels que vCenter Server. Il s'intègre à vRops pour envoyer des événements de notification et permettre le lancement en contexte. Les autres objets de l'architecture {{site.data.keyword.vmwaresolutions_short}} capables d'envoyer des données `syslog` sont dirigés vers vRLI. En option, le client peut configurer n'importe quel système capable d'envoyer des données syslog pour transmettre ces données à vRLI.
 
 * Santé du réseau - vRealize Network Insight est un outil d'analyse qui permet de réaliser des actions de manière proactive :
   * Surveillance de la santé du réseau et des performances.
@@ -51,11 +51,11 @@ La gestion des opérations de {{site.data.keyword.vmwaresolutions_short}} se com
 ## Mise en réseau de la gestion des opérations
 {: #opsmgmt-arch-network}
 
-Le diagramme de vue d'ensemble du réseau est illustré ci-dessous :
+Le diagramme suivant montre la vue d'ensemble du réseau. 
 
 ![Diagramme du réseau](../../images/opsmgmt-network.svg "Diagramme du réseau")
 
-* Un sous-réseau portable privé est fourni pour mettre à disposition un espace d'adresses IP {{site.data.keyword.cloud_notm}} qui est utilisé pour la mise à disposition initiale des machines virtuelles des outils mais il appartient ensuite au client de gérer l'espace d'adresses IP pour la mise à l'échelle des outils. Les machines virtuelles de ce sous-réseau doivent avoir accès aux composants hébergés dans les sous-réseaux Gestion et Gestion interne.
+* Un sous-réseau portable privé est fourni pour mettre à disposition un espace d'adresses IP {{site.data.keyword.cloud_notm}} qui est utilisé pour la mise à disposition initiale des machines virtuelles des outils. Après la mise à disposition, il appartient au client de gérer l'espace d'adresses IP pour l'extension des outils. Les machines virtuelles de ce sous-réseau doivent avoir accès aux composants hébergés dans les sous-réseaux Gestion et Gestion interne.
 * Le sous-réseau VXLAN d'outils est utilisé pour mettre à disposition l'espace d'adresses IP BYOIP qui est utilisé pour la mise à disposition initiale des machines virtuelles des outils mais il appartient ensuite au client de gérer l'espace d'adresses IP pour la mise à l'échelle des outils. Les machines virtuelles de ce sous-réseau doivent avoir accès aux composants hébergés dans les sous-réseaux de superposition. La passerelle ESG permet la conversion des adresses réseau entre {{site.data.keyword.cloud_notm}} et les espaces d'adresses BYOIP.
 * Les collecteurs distants de vROps sont déployés par le client s'il souhaite utiliser vROps pour surveiller ses machines virtuelles de calcul.
 * Les réexpéditeurs vRLI transmettent les messages de journal des composants superposés au cluster vRLI. Le client peut également configurer ses machines virtuelles de calcul pour utiliser ces réexpéditeurs, si nécessaire.
@@ -73,7 +73,7 @@ La surveillance de vCenter s'effectue avec vROps et le pack VMware SDDC Health M
 
 Le pack VMware SDDC Health Management Pack surveille la pile de gestion SDDC et fournit des badges de santé et des alertes suivant la configuration et la conformité des composants du produit SDDC, y compris vCenter.
 
-### Surveillance des hôtes vSphere 
+### Surveillance des hôtes vSphere
 {: #opsmgmt-arch-components-hosts}
 
 La surveillance des hôtes vSphere s'effectue avec vROps à travers vCenter et la collecte de journaux à travers vRLI.
@@ -97,7 +97,7 @@ Pour surveiller NSX, les outils suivants sont implémentés :
 
 Ces outils permettent aux administrateurs du système de surveiller, de gérer et de dépanner VMware NSX. Le pack vROps Management Pack for VMware NSX offre une visibilité sur la topologie du réseau. Les tableaux de bord NSX fournissent un aperçu rapide de l'environnement NSX et de la santé de ses composants. La corrélation entre les objets NSX et les objets vSphere permet un dépannage facile.
 
-vROps utilise le pack de gestion pour interroger VMware NSX sur la configuration, les performances et les données de support. Pour le compte de vROps, le pack de gestion traduit les demandes d'interrogation en appels API REST pour récupérer les données nécessaires de NSX Manager.
+vROps utilise le pack de gestion pour interroger VMware NSX sur la configuration, les performances et les données de support. Pour le compte de vROps, le pack de gestion convertit les demandes d'interrogation en appels API REST pour récupérer les données nécessaires de NSX Manager.
 
 Les composants NSX doivent être configurés pour envoyer les données syslog à vRLI.
 
@@ -116,7 +116,7 @@ Pour surveiller NSX-T, les outils suivants sont implémentés :
 * vRealize Operations Manager (vROps)
 * vRealize Log Insight (vRLI)
 
-Le pack VMware SDDC Health Management Pack surveille :
+VMware SDDC Health Management Pack surveille les composants suivants :
 * les commutateurs logiques. Il surveille l'état d'administration des commutateurs logiques.
 * le cluster de contrôleurs. Il surveille le nombre de noeuds de cluster déployés pour la haute disponibilité et maintient le quorum.
 * les noeuds de contrôleurs. Il surveille la connectivité des noeuds avec les noeuds du gestionnaire et du cluster de contrôleurs.
@@ -158,11 +158,11 @@ Tableau 1. Configuration système requise des outils d'exploitation
 ## Versions logicielles
 {: #opsmgmt-arch-versions}
 
-Tableau 2. Versions logicielles des outils d'exploitation 
+Tableau 2. Versions logicielles des outils d'exploitation
 
-|Nom du produit |Version|
+|Nom du produit|Version|
 |---|---|
-|VMware vRealize Operations Manager Advanced ou version supérieure |7.0|
+|VMware vRealize Operations Manager Advanced ou version supérieure|7.0|
 |vRealize Operations Management Pack for NSX for vSphere|3.5.2|
 |vRealize Operations Management Pack for Storage Devices|7.0.0|
 |vRealize Operations Management Pack for Site Recovery Manager|8.1.1|

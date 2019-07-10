@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-06"
+lastupdated: "2019-05-27"
+
+keywords: single-node trial, migration app modernization, tech specs migration app modernization
 
 subcollection: vmware-solutions
 
@@ -18,7 +20,7 @@ subcollection: vmware-solutions
 # Single-node Trial for Migration and App Modernization の概要
 {: #cloud_modern_bundle_overview}
 
-Single-node Trial for Migration and App Modernization では、VMware ワークロードを {{site.data.keyword.cloud_notm}} にマイグレーションしてから、コンテナーを使用して単純なワークロードをモダナイズする、という {{site.data.keyword.cloud_notm}} のテスト・ドライブを行うことができます。
+Single-node Trial for Migration and App Modernization では、VMware ワークロードを {{site.data.keyword.cloud}} にマイグレーションしてから、コンテナーを使用して単純なワークロードをモダナイズする、という {{site.data.keyword.cloud_notm}} のテスト・ドライブを行うことができます。
 
 この Single-node Trial は、VMware vCenter Server on {{site.data.keyword.cloud_notm}} に置かれた {{site.data.keyword.cloud_notm}} Private Hosted のトライアル・バージョンです。オンプレミス環境と同じツールで管理できる Kubernetes コンテナー管理プラットフォームと単一テナント VMware プラットフォームが提供されます。 制御性および可視性はオンプレミスと同じレベルに保ったまま、クラウドの速度およびスケールというメリットを享受できます。
 

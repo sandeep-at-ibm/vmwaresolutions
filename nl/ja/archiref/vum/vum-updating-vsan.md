@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-15"
 
 subcollection: vmware-solutions
 
@@ -49,7 +49,7 @@ VUM で vSAN が更新されたことを確認するには、vSAN オンライ�
 {: #vum-updating-vsan-config-vcsa-proxy}
 
 1.	ジャンプ・サーバーの Web ブラウザーから、VCSA 管理インターフェース (`https://<vCenter ip>:5480`) に接続します。
-2.	IC4VS コンソールから資格情報を使用して、VCSA 管理インターフェースに root としてログインします。
+2.	IBM Cloud for VMware Solutions コンソールから資格情報を使用して、VCSA 管理インターフェースに root としてログインします。
 3.	vCenter Server Appliance 管理インターフェースで、**「Networking」**をクリックして**「Manage」**をクリックします。
 4.	プロキシー・サーバーを構成するには、「Proxy Settings」ペインで**「Edit」**をクリックします。
 5.	**「Use a Proxy Server」**を選択してプロキシー・サーバー設定を入力し、**「OK」**をクリックします。

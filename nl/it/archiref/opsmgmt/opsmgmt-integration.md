@@ -4,14 +4,14 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-16"
+lastupdated: "2019-05-29"
 
 ---
 
 # Integrazione
 {: #opsmgmt-integration}
 
-Questa documentazione è focalizzata sul livello di gestione operativa della progettazione, tuttavia, alcune aziende potrebbero voler integrare questo livello con il proprio livello di gestione del servizio. Questa sezione fornisce indicazioni su tale integrazione. In questa progettazione, vROps è il punto centrale in cui vengono segnalati tutti gli avvisi.
+Questo argomento è dedicato in particolare al livello della gestione operativa della progettazione. Tuttavia, alcune aziende potrebbero voler integrare questo livello con il loro livello di gestione dei servizi. Questa sezione fornisce indicazioni su tale integrazione. In questa progettazione, vROps è il punto centrale in cui vengono segnalati tutti gli avvisi.
 
 Sono possibili le seguenti categorie di integrazione:
 * Direzione nord – Integrazione da vROps ad altri strumenti:
@@ -38,7 +38,7 @@ Le notifiche sono notifiche di avviso che soddisfano i criteri di filtro nelle r
 
 Questo caso di utilizzo di esempio si basa su un livello di gestione del servizio generico esistente utilizzato da un'azienda. Il cliente ha eseguito il provisioning di un'istanza vCenter Server con l'opzione Operations Management e desidera integrare questa piattaforma nella propria piattaforma di gestione del servizio. Utilizzano un sistema di aggregazione di eventi per integrare gli avvisi generati dagli strumenti di monitoraggio specifici per il dominio:
 
-* Una serie di strumenti per monitorare il sistema operativo, il middleware e le applicazioni nei propri carichi di lavoro Unix, Linux e Windows, ma questo strumento non monitora i componenti dell'infrastruttura come VMware, dispositivi di rete o archiviazione.
+* Una serie di strumenti per monitorare il sistema operativo, il middleware e le applicazioni nei propri carichi di lavoro UNIX, Linux e Windows, ma questo strumento non monitora i componenti dell'infrastruttura come VMware, dispositivi di rete o archiviazione.
 * Un gestore SNMP per ricevere trap SNMP dalla propria infrastruttura di rete. Questo strumento raccoglie anche le metriche SNMP per abilitare avvisi relativi a prestazioni e capacità.
 * Uno strumento di gestione dei backup per gestire i propri backup.
 * Strumenti di gestione dell'archiviazione per gestire i propri array di archiviazione.

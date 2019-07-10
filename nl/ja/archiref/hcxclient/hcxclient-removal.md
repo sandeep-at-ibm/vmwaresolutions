@@ -1,0 +1,92 @@
+---
+
+copyright:
+
+  years:  2016, 2019
+
+lastupdated: "2019-06-17"
+
+subcollection: vmware-solutions
+
+
+---
+
+# HCX の変更またはアンインストール
+{: #hcxclient-removal-uninstall}
+
+既存のインストール環境をアップグレードしたり、ハイブリッド・クラウド・サービスのデプロイメント環境の一部またはすべてを削除したりできます。
+
+##  レイヤー 2 ネットワーク拡張の解除
+{: #hcxclient-removal-uninstall-unstretch-layer2}
+
+レイヤー 2 コンセントレーター・サービス仮想アプライアンスを削除する前、またはハイブリッド・クラウド・サービスをアンインストールする前に、関連するレイヤー 2 ネットワーク拡張を解除しておく必要があります。
+
+1. 拡張ネットワークを確認します。
+2. ハイブリッド・クラウド・サービス・プラグインのページから、「ハイブリッド・サービス (Hybrid Services)」タブを表示し、「ネットワーク拡張サービス (Network Extension Service)」セクションを確認します。 アクティブなジョブまたはスケジュールされたジョブが進行中の場合は、それらが完了または停止するまで待ってから進めてください。
+3. ネットワークを削除するには、右側の「削除」(赤い X) アイコンをクリックします。
+4. **「OK」**をクリックして確認します。
+
+## HCX 仮想アプライアンスのアンインストール
+{: #hcxclient-removal-uninstall-uninst-hva}
+
+ハイブリッド・クラウド・サービスをアンインストールするための準備やインストール・アーキテクチャーの変更のために、サービス・アプライアンスをアンインストールすることがあります。 以下の手順の中で大まかに説明しているように、アプライアンスの管理にはハイブリッド・クラウド・サービスを使用してください。
+
+### HCX 仮想アプライアンスをアンインストールするための前提条件
+{: #hcxclient-removal-uninstall-prereq-uninst-hva}
+
+* アンインストールの作業中に行われる可能性があるマイグレーションがある場合は、キャンセルするか実行時刻をリセットします。
+* vSphere Web Client のタスク・コンソールで実行中のマイグレーションがないか確認し、あった場合はそれらが完了するまで待ちます。
+* タイプにかかわらず、アクティブなハイブリッド・クラウド・サービス・タスクがないことを確認します。
+
+絶対に vSphere インベントリーから仮想アプライアンスを削除しないでください。 サービス仮想アプライアンスを操作する場合は、必ず、管理ポータルを使用してくさい。
+{:note}
+
+### HCX 仮想アプライアンスをアンインストールする手順
+{: #hcxclient-removal-uninstall-proc-uninst-hva}
+
+1. vSphere Web Client インターフェースで、左側のペインからハイブリッド・クラウド・サービス・プラグインを選択します。
+2. 中央のペインで、**「ハイブリッド・サービス (Hybrid Services)」**タブをクリックします。
+3. ハイブリッド・クラウド・ゲートウェイ・アプライアンスを見つけ、項目をクリックして詳細を表示します。
+4. 右下の「削除」アイコンをクリックしてアプライアンスを削除します。
+5. 拡張ネットワークで IP アドレスをハイブリッド・クラウド・ゲートウェイと共有していない場合は、別々に削除する必要があります。 ネットワーク拡張サービスの詳細を展開し、「削除」アイコンをクリックしてレイヤー 2 コンセントレーターを削除します。
+
+ハイブリッド・クラウド・ゲートウェイと、ハイブリッド・クラウド・ゲートウェイを使用するすべてのハイブリッド・サービス仮想アプライアンスが、vCenter と VCS ハイブリッド・クラウド・サービスのクラウドから削除されます。
+
+## HCX Manager のアンインストール
+{: #hcxclient-removal-uninstall-unist-hcxm}
+
+オンプレミスのデータ・センターから HCX ソリューションを削除する前に、HCX Manager アプライアンスをアンインストールする必要があります。 以下の手順に従って、ハイブリッド・クラウド・サービス仮想マシンをアンインストールします。
+
+1. すべてのレイヤー 2 ネットワーク拡張を解除します。
+2. ハイブリッド・サービス仮想アプライアンスを削除します。
+3. オンプレミス vCenter で、ハイブリッド・クラウド・サービス仮想マシンを電源オフにします。
+4. ハイブリッド・クラウド・サービス仮想マシンを削除します。
+
+すべての仮想サービス・アプライアンスが削除されました。 残された要素は、以下のとおりです。
+* ログ
+* マイグレーション済み VM
+
+### 次に行うこと
+{: #hcxclient-removal-uninstall-what-next}
+
+マイグレーション済み VM とログは、手動でバックアップしたり、削除したりできます。
+
+## HCX 管理ポータルへのログイン
+{: #hcxclient-removal-uninstall-log-hcxmp}
+
+ハイブリッド・クラウド・サービス・デプロイメントは、ブラウザー・ベースのユーザー・インターフェースを使用して管理ポータルから管理できます。
+
+1. Web ブラウザーに、ハイブリッド・クラウド・サービスに割り当てられた IP アドレスを入力し、ポート番号 9443 を指定します。 例えば、`https://HCXip:9443` などです。
+2. SSL を使用すると、Web ブラウザー・ウィンドウにハイブリッド・クラウド・サービスのユーザー・インターフェースが開かれます。 必要に応じて、セキュリティー証明書を受け入れます。 VMware Hybridity and Networking のログイン画面が開きます。
+3. ユーザー名とパスワードを入力します。 デフォルトでは、ユーザー名は Admin です。 パスワードは、ハイブリッド・クラウド・サービス仮想アプライアンスのインストール時に指定した値です。
+
+## 関連リンク
+{: #hcxclient-removal-related}
+
+* [HCX のコンポーネントと用語集](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-components)
+* [インストール環境の準備](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-planning-prep-install)
+* [HCX クライアントのデプロイメント](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-vcs-client-deployment)
+* [HCX オンプレミスのサービス・メッシュ](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-vcs-mesh-deployment)
+* [VMware Hybrid Cloud のマイグレーション](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-migrations)
+* [パラメーターとコンポーネントのモニター](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-monitoring)
+* [HCX のトラブルシューティング](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-troubleshooting)

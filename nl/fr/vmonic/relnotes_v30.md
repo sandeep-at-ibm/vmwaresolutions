@@ -6,6 +6,8 @@ copyright:
 
 lastupdated: "2019-05-03"
 
+keywords: release notes, what's new, version 3.0
+
 subcollection: vmware-solutions
 
 
@@ -19,7 +21,7 @@ subcollection: vmware-solutions
 # Notes sur l'édition pour la version 3.0
 {: #relnotes_v30}
 
-Cette édition inclut de nouvelles fonctionnalités, des mises à jour de composants, des améliorations d'utilisation et des corrections d'erreur. Pour obtenir une liste des problèmes corrigés dans les différentes versions, des problèmes connus avec le produit ainsi que des conseils pour utiliser {{site.data.keyword.vmwaresolutions_full}}, voir [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Cette édition inclut de nouvelles fonctionnalités, des mises à jour de composant, des améliorations d'utilisation et des corrections d'erreur. Pour obtenir la liste des erreurs rectifiées dans les différentes éditions, des problèmes connus concernant le produit et des astuces relatives à l'utilisation d'{{site.data.keyword.vmwaresolutions_full}}, voir [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Fin de la prise en charge de VMware Cloud Foundation on IBM Cloud
 {: #relnotes_v30-vcf-eos}
@@ -112,7 +114,7 @@ Vous pouvez désormais ajouter Zerto on {{site.data.keyword.cloud_notm}} sur des
 
 * Une documentation est désormais disponible pour vous aider à mettre à niveau les composants {{site.data.keyword.vmwaresolutions_short}} vers VMware vSphere 6.7. Cette mise à niveau est nécessaire si vous voulez continuer de bénéficier de l'automatisation {{site.data.keyword.vmwaresolutions_short}}. Pour plus d'informations, voir [Mise à niveau du logiciel vCenter Server vSphere de VMware vSphere 6.5 à 6.7](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_vsphere_upgrade#vc_vsphere_upgrade).
 * Une documentation de référence est maintenant disponible pour vous fournir les identifiants utilisateur que {{site.data.keyword.vmwaresolutions_short}} maintient pour une utilisation par l'automatisation {{site.data.keyword.cloud_notm}}. Vous pouvez également consulter les éventuels messages qui s'affichent dans les journaux d'historique de votre instance. Pour plus d'informations, voir [ID utilisateur IBM](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_user_ids) et  [Messages de l'historique d'instance](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_messages).
-* L'autorisation **Reboot/Control** a été ajoutée au tableau décrivant les autorisations requises pour le compte d'infrastructure IBM Cloud. Pour plus d'informations, voir [Autorisations pour le compte d'infrastructure {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-slaccountrequirement#slaccountrequirement-permissions).
+* L'autorisation **Reboot/Control** a été ajoutée au tableau décrivant les autorisations requises pour le compte d'infrastructure IBM Cloud. Pour plus d'informations, voir [Autorisations pour le compte d'infrastructure {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-cloud-infra-acct-req#cloud-infra-acct-req-permissions).
 * Une nouvelle documentation de référence est disponible pour les API suivantes. Pour plus d'informations, voir [API reference](https://cloud.ibm.com/apidocs/vmware-solutions){:new_window}.
   * Répertorier tous les messages d'historique pour une instance VMware vCenter Server spécifiée
   * Ajouter des stockages partagés à un cluster spécifié

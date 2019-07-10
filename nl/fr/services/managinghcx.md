@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-06-18"
+
+keywords: HCX updates, HCX management console, login HCX console
 
 subcollection: vmware-solutions
 

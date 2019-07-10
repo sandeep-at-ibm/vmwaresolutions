@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-01"
+lastupdated: "2019-06-13"
+
+keywords: F5 BIG-IP, F5 install, tech specs F5
 
 subcollection: vmware-solutions
 
@@ -51,7 +53,7 @@ Las tarifas de licencia para cada máquina virtual se aplican a cada ciclo de fa
 No puede cambiar el nivel de licencia después de la instalación del servicio. Para cambiar el nivel de licencia, debe eliminar el servicio existente y reinstalarlo utilizando otra opción de licencia.
 {:important}
 
-## Consideraciones sobre la instalación para F5 en IBM Cloud
+## Consideraciones sobre la instalación de F5 on IBM Cloud
 {: #f5_considerations-install}
 
 Antes de instalar el servicio F5 on {{site.data.keyword.cloud_notm}}, revise las siguientes consideraciones.

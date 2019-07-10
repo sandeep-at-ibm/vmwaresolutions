@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-18"
+lastupdated: "2019-06-13"
+
+keywords: vCenter Server Hybridity add cluster, view cluster vCenter Server Hybridity, delete cluster vCenter Server Hybridity
 
 subcollection: vmware-solutions
 
@@ -124,7 +126,9 @@ Los valores de tarjeta de interfaz de red (NIC) se basan en la selección de **R
 ### Resumen del pedido
 {: #vc_hybrid_addingviewingclusters-adding-order-summary}
 
-En función de la configuración seleccionada para el clúster, el coste estimado se genera y se muestra al instante en el panel derecho **Resumen de pedido**.
+En función de la configuración seleccionada para el clúster, el coste estimado se genera y se muestra al instante en el panel derecho **Resumen de pedido**. Pulse **Detalle de precios** para generar un documento PDF con el resumen de coste de los recursos de {{site.data.keyword.vmwaresolutions_short}}. 
+
+También puede añadir los recursos suministrados a la herramienta de estimación {{site.data.keyword.cloud_notm}}, pulsando **Añadir a estimación**. Esto es útil si desea estimar el coste de los recursos estimare {{site.data.keyword.vmwaresolutions_short}} seleccionados junto con otros recursos de {{site.data.keyword.cloud_notm}} que le podría interesar adquirir. 
 
 ## Procedimiento para añadir clústeres a instancias de vCenter Server con el paquete híbrido (Hybridity)
 {: #vc_hybrid_addingviewingclusters-adding-procedure}

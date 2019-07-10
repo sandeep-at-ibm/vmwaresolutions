@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-09"
+lastupdated: "2019-06-18"
+
+keywords: Zerto, Zerto replication billing, order Zerto
 
 subcollection: vmware-solutions
 
@@ -20,6 +22,21 @@ subcollection: vmware-solutions
 
 Vous pouvez commander le service Zerto on {{site.data.keyword.cloud}} lors de la commande d'une nouvelle instance avec le service inclus ou en ajoutant le service à votre instance existante.
 
+## Facturation pour la réplication Zerto 
+{: #zerto_ordering-billing}
+
+Les machines virtuelles répliquées à l'aide de Zerto sont mesurées par Zerto et {{site.data.keyword.cloud_notm}}. Votre facture pour cette utilisation est facturée via un compte facturable {{site.data.keyword.cloud_notm}} au lieu d'un compte d'infrastructure {{site.data.keyword.cloud_notm}}. 
+
+Avant de commander Zerto sur {{site.data.keyword.cloud_notm}}, assurez-vous que votre compte {{site.data.keyword.cloud_notm}} est un compte facturable et qu'il est lié au même compte d'infrastructure {{site.data.keyword.cloud_notm}} sur lequel votre instance est déployée. 
+
+Si vous disposez d'une installation Zerto sur {{site.data.keyword.cloud_notm}} à partir de la version 3.0 ou antérieure, vos coûts de réplication de VM sont toujours facturés à l'aide de la facturation d'infrastructure {{site.data.keyword.cloud_notm}}. Si vos paramètres de compte et de facturation respectent les exigences répertoriées précédemment, vous pouvez convertir votre méthode de facturation Zerto en facturable. 
+
+Sur la console {{site.data.keyword.vmwaresolutions_short}}, vous êtes invité à convertir le plan d'infrastructure {{site.data.keyword.cloud_notm}} en plan facturable et à mettre à niveau votre compte {{site.data.keyword.cloud_notm}} en compte facturable, si nécessaire.
+
+* Pour plus d'informations sur les comptes gratuits et facturables, voir [Types de compte](/docs/account?topic=account-accounts).
+* Pour plus d'informations sur la mise à niveau vers un compte facturable, voir  [Mise à niveau de votre compte](/docs/account?topic=account-upgrading-account).
+* Pour plus d'informations sur la liaison de vos comptes d'infrastructure {{site.data.keyword.cloud_notm}} et {{site.data.keyword.cloud_notm}}, voir [Passage à l'IBMid et liaison des comptes](/docs/account?topic=account-unifyingaccounts).
+
 ## Commande de Zerto on IBM Cloud pour une nouvelle instance
 {: #zerto_ordering-new}
 
@@ -31,10 +48,10 @@ Vous pouvez commander une nouvelle instance avec Zerto on {{site.data.keyword.cl
 {: #zerto_ordering-existing}
 
 Vous pouvez ajouter le service Zerto on {{site.data.keyword.cloud_notm}} à une instance existante en utilisant l'une des méthodes suivantes :
-* Dans la console {{site.data.keyword.vmwaresolutions_short}}, affichez l'instance pour laquelle vous souhaitez ajouter le service, cliquez sur **Services** dans le panneau de navigation de gauche, puis cliquez sur **Ajouter**.
+* Depuis la console {{site.data.keyword.vmwaresolutions_short}}, affichez l'instance à laquelle vous souhaitez ajouter le service, cliquez sur **Services** dans le panneau de navigation de gauche, puis cliquez sur **Ajouter**. 
 * Dans le catalogue {{site.data.keyword.cloud_notm}}, sélectionnez **Zerto on IBM Cloud**, spécifiez les paramètres de service et sélectionnez **Ajouter à une instance existante**.
 
-Si vous ajoutez Zerto for {{site.data.keyword.cloud_notm}} à une instance vCenter Server doté d'un serveur ESXi qui est en mode maintenance, vous devez utiliser la console Zerto Virtual Manager (ZVM) et l'adresse IP préremplie de Zerto Virtual Replication Appliance (VRA) pour déployer manuellement la machine virtuelle VRA.
+Si vous ajoutez Zerto on {{site.data.keyword.cloud_notm}} à une instance vCenter Server doté d'un serveur ESXi qui est en mode maintenance, vous devez utiliser la console Zerto Virtual Manager (ZVM) et l'adresse IP préremplie de Zerto Virtual Replication Appliance (VRA) pour déployer manuellement la machine virtuelle VRA.
 {:note}
 
 ## Commande de Zerto on IBM Cloud pour des instances uniquement privées

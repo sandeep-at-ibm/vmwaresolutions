@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-06"
+lastupdated: "2019-06-17"
 
 subcollection: vmware-solutions
 
@@ -15,10 +15,10 @@ subcollection: vmware-solutions
 
 El servicio VMware HCX on IBM Cloud permite crear una conexión directa entre instancias de IBM Cloud for VMware Solutions y un centro de datos virtualizado local de VMware.
 
-IBM Cloud for VMware Solutions incluye despliegues rápidos y completamente automatizados de VMware vCenter Server (VCS) en IBM Cloud. Estas ofertas complementan la infraestructura local y permiten ejecutar cargas de trabajo existentes y futuras en IBM Cloud sin tener que realizar conversiones, utilizando las mismas herramientas, conocimientos y procesos que utilizan de forma local. Para obtener más información, consulte
+IBM Cloud for VMware Solutions incluye despliegues rápidos y completamente automatizados de VMware vCenter Server en IBM Cloud. Estas ofertas complementan la infraestructura local y permiten ejecutar cargas de trabajo existentes y futuras en IBM Cloud sin tener que realizar conversiones, utilizando las mismas herramientas, conocimientos y procesos que utilizan de forma local. Para obtener más información, consulte
 [Virtualización para ampliar la nube privada virtualizada](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture).
 
-El servicio VMware HCX on IBM Cloud adopta esta hibridación en el siguiente paso, combinando instancias de VCS con centros de datos virtualizados locales existentes, mediante la creación de extensiones de red y mediante la migración bidireccional de cargas de trabajo.
+El servicio VMware HCX on IBM Cloud adopta esta hibridación en el siguiente paso, combinando instancias de vCenter Server con centros de datos virtualizados locales existentes, mediante la creación de extensiones de red y mediante la migración bidireccional de cargas de trabajo.
 
 Los componentes de VMware HCX on IBM Cloud que se despliegan como máquinas virtuales en el sitio de destino de IBM Cloud VMware permiten establecer una conexión con los componentes de VMware HCX on IBM Cloud instalados en el sitio de origen local homólogo.
 

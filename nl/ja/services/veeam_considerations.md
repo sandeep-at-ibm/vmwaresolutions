@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-07"
+lastupdated: "2019-06-18"
+
+keywords: Veeam, Veeam install, tech specs Veeam
 
 subcollection: vmware-solutions
 
@@ -31,18 +33,23 @@ Veeam on {{site.data.keyword.cloud}} サービスは VMware ハイパーバイ�
 ### VSI
 {: #veeam_considerations-specs-vsi}
 
-* Veeam Backup and Replication 9.5 OS Add-on のある単一の VSI
+* Veeam Backup and Replication 9.5 OS Add-on と Veeam Availability Suite 9.5 のある単一の VSI
 * Windows Server 2016 Standard Edition (64 ビット)
 * 4 x 2.0 GHz コア
-* 8 GB RAM
+* 8 vCPU、32 GB RAM
 * 1 Gbps のプライベート・ネットワーク・アップリンク
 * 100 GB ディスク (SAN)
 
 ### バックアップ用ストレージ
 {: #veeam_considerations-specs-storage}
 
-* エンデュランス iSCSI ストレージ (2000、4000、8000、または 12000 GB)
+* エンデュランス iSCSI ストレージ (2,000、4,000、8,000、または 12,000 GB)
 * ストレージ・パフォーマンス (0.25、2、または 4 IOPS/GB)
+
+Veeam サービスのインストールおよび構成の一部として、以下のリポジトリーが作成されます。
+* Veeam 構成バックアップ・ファイルの場合: `IC4V Default Config Backup Repository` という名前のリポジトリー。Veeam バックアップが保管されているフォルダーのパスは、`<Drive>:\ConfigBackup\` です。
+* スケールアウトの場合: `IC4V Scale-Out Repository` という名前のリポジトリー。詳しくは、[スケールアウト・リポジトリーの追加](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icos_ordering#icos_ordering-scale-repo)を参照してください。
+* 仮想マシン (VM) バックアップの場合: ``IC4V Default VM Backup Repository`` という名前のリポジトリー。VM バックアップが保管されているフォルダーのパスは、``<Drive>:\VMBackup\` です。このリポジトリーは、エクステントとして IC4V Scale-Out Repository`` に追加されます。
 
 ### ネットワーキング
 {: #veeam_considerations-specs-networking}
@@ -52,12 +59,7 @@ Veeam on {{site.data.keyword.cloud}} サービスは VMware ハイパーバイ�
 ### ライセンスと料金
 {: #veeam_considerations-specs-licenses}
 
-Veeam Backup and Replication 9.5 Enterprise Plus (10、25、50、100、または 200 VM ライセンス)。
-
-### 管理
-{: #veeam_considerations-specs-mgmt}
-
-最大 5 個の VM と 2000 GB のストレージを使用してデフォルトで構成される管理バックアップ。
+* Veeam Availability Suite 9.5 (10、25、50、100、または 200 VM ライセンス)
 
 ## Veeam on IBM Cloud をインストールする際の考慮事項
 {: #veeam_considerations-install}

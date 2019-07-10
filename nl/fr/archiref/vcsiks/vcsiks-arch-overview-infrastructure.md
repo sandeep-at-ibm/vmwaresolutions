@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-22"
 
 subcollection: vmware-solutions
 
@@ -23,6 +23,7 @@ Les comptes {{site.data.keyword.cloud}} peuvent être configurés en tant que co
 {: #vcsiks-arch-overview-infrastructure-direct-link}
 
 {{site.data.keyword.cloud_notm}} Direct Link Connect offre un accès privé à votre infrastructure {{site.data.keyword.cloud_notm}}, ainsi qu'à d'autres clouds liés à votre fournisseur de services réseau, via votre centre de données {{site.data.keyword.CloudDataCent_notm}} local. Cette option est idéale pour la création d'une connectivité multi-cloud dans un environnement individuel.
+
 Nous connectons des clients au réseau privé {{site.data.keyword.cloud_notm}} Private grâce à une topologie de bande passante partagée. A l'instar de tous les produits Direct Link, vous pouvez ajouter le routage mondial, qui active le trafic de réseau privé vers tous les emplacements {{site.data.keyword.cloud_notm}}.
 
 ## Réseaux privés virtuels
@@ -67,7 +68,7 @@ Stockage | 100 Go |  SATA : 2 To / SSD : 960 Go
 ## Structure virtuelle
 {: #vcsiks-arch-overview-infrastructure-virtual-structure}
 
-![Structure plysique des déploiements {{site.data.keyword.containerlong_notm}} et {{site.data.keyword.icpfull_notm}}](../../images/vcsiks-phy-ics-iks-deployment.svg "Structure physique des déploiements {{site.data.keyword.containerlong_notm}} et {{site.data.keyword.icpfull_notm}}"){: caption="Figure 1. Structure physique des déploiements {{site.data.keyword.containerlong_notm}} et {{site.data.keyword.icpfull_notm}}" caption-side="bottom"}
+![Structure physique des déploiements {{site.data.keyword.containerlong_notm}} et {{site.data.keyword.icpfull_notm}}](../../images/vcsiks-phy-ics-iks-deployment.svg "Structure physique des déploiements {{site.data.keyword.containerlong_notm}} et {{site.data.keyword.icpfull_notm}}"){: caption="Figure 1. Structure physique des déploiements {{site.data.keyword.containerlong_notm}} et {{site.data.keyword.icpfull_notm}}" caption-side="bottom"}
 
 Dans l'instance vCenter Server, les machines virtuelles de client sont déployées sur des passerelles NSX Edge Services Gateway (ESG) et des routeurs logiques distribués (DLR) dédiés.
 

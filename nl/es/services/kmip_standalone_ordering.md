@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-06-14"
+
+keywords: KMIP for VMware, order KMIP stand-alone, KMIP for VMware configuration
 
 subcollection: vmware-solutions
 
@@ -52,12 +54,12 @@ Tabla 1. Ubicaciones de puntos finales del servicio de red KMIP for VMware on {{
 
 | Ubicación         | Puntos finales               |
 |:---------------|:-----------------------|
-| Dallas | <ul><li><code>kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
-| Frankfurt |  <ul><li><code>kmip-1.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
-| Londres | <ul><li><code>kmip-1.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
-| Sídney |  <ul><li><code>kmip-1.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
-| Tokio | <ul><li><code>kmip-1.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
-| Washington DC | <ul><li><code>kmip-1.private.us-east.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-east.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+| Dallas | <<code>kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696</code><br>y<br><code>kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696</code> |
+| Frankfurt | <code>kmip-1.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code><br>y<br><code>kmip-2.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code> |
+| Londres | <code>kmip-1.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code><br>y<br><code>kmip-2.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code> |
+| Sídney | <code>kmip-1.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code><br>y<br><code>kmip-2.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code> |
+| Tokio | <code>kmip-1.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code><br>y<br><code>kmip-2.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code> |
+| Washington DC | <code>kmip-1.private.us-east.vmware-solutions.cloud.ibm.com:5696</code><br>y<br><code>kmip-2.private.us-east.vmware-solutions.cloud.ibm.com:5696</code> |
 
 ### Clave de API para ID de servicio
 {: #kmip_standalone_ordering-config-api-key}

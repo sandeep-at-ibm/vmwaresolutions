@@ -18,7 +18,7 @@ subcollection: vmware-solutions
 
 이 배치 모델은 최대 30일 간의 데이터 인덱싱을 통해 최대 500개의 자산을 서비스할 수 있습니다.
 
-{{site.data.keyword.cloud}} 사설 휴대용 서브넷에서 다음으로 사용 가능한 IP 주소를 선택하십시오. ADDNS에서 FQDN 이름을 구성하십시오.
+{{site.data.keyword.cloud}} 사설 포터블 서브넷에서 다음으로 사용 가능한 IP 주소를 선택하십시오. ADDNS에서 FQDN 이름을 구성하십시오.
 
 VM의 규모는 다음과 같이 지정합니다.
 

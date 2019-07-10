@@ -4,16 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-17"
+lastupdated: "2019-06-03"
 
 ---
 
 # Diseño de vRealize Operations Manager
 {: #opsmgmt-vrops}
 
-El clúster de análisis de vROps contiene los nodos que analizan y almacenan los datos de los componentes supervisados y en este despliegue, se despliegan cuatro nodos y dos equilibradores de carga NSX. Este tamaño permite supervisar 30.000 máquinas virtuales y recopilar 9.000.000 de métricas.
+El clúster de análisis de vROps contiene los nodos que analizan y almacenan los datos de los componentes supervisados y en este despliegue, se despliegan cuatro nodos y dos equilibradores de carga NSX. Este tamaño permite supervisar 30 000 máquinas virtuales y recopilar 9 000 000 de métricas. 
 
-El clúster de análisis de 4 nodos consiste en lo siguiente:
+El clúster de análisis de 4 nodos consta de los componentes siguientes: 
 * Nodo maestro – El nodo maestro es el nodo inicial de un clúster de vROps. En un entorno grande, este nodo gestiona todos los demás nodos.
 * Réplica del nodo maestro – Este nodo habilita la alta disponibilidad del nodo maestro.
 * Nodos de datos – El nodo de datos permite escalar vROps en entornos más grandes, en este diseñar se han desplegado dos.
@@ -22,12 +22,12 @@ Además, el diseño utiliza Nodos recopiladores remotos, que funcionan como un s
 
 ![Diagrama de red de Operations Manager](../../images/opsmgmt-vropsnw.svg "Diagrama de red de Operations Manager")
 
-* El nodo maestro, la réplica del nodo maestro y los nodos de datos se despliegan en la subred de herramientas utilizando {{site.data.keyword.cloud_notm}} Direcciones IP portátiles para facilitar la comunicación con todos los componentes a los que se dirige fuera del espacio de direcciones {{site.data.keyword.cloud_notm}} RFC1918 incluyendo: hosts de vSphere, vCenter, Platform Services Controller, NSX Manager y Controladores NSX. Se utiliza un equilibrador de carga NSX junto con un VIP para HA.
+* El nodo maestro, la réplica del nodo maestro y los nodos de datos se despliegan en la subred de herramientas utilizando Direcciones IP portátiles de {{site.data.keyword.cloud_notm}} para facilitar la comunicación con todos los componentes a los que se dirige fuera del espacio de direcciones {{site.data.keyword.cloud_notm}} RFC1918 incluyendo: hosts de vSphere, vCenter, Platform Services Controller, NSX Manager y Controladores NSX. Se utiliza un equilibrador de carga NSX junto con un VIP para HA.
 * Así como las cargas de trabajo de cliente utilizan el direccionamiento IP desde el espacio de direcciones BYOIP, este diseño utiliza los recopiladores remotos alojados en una VXLAN. Estos recopiladores remotos no están configurados como parte de la automatización de {{site.data.keyword.vmwaresolutions_full}} y deben ser implementados manualmente por el cliente.
 
 ![Diagrama de componentes de Operations Manager](../../images/opsmgmt-vropscomponent.svg "Diagrama de componentes de Operations Manager")
 
-Se accede al clúster de análisis de vROps utilizando una interfaz de usuario de gestión o utilizando una API, y se integra en lo siguiente:
+Se accede al clúster de análisis de vROps utilizando una interfaz de usuario de gestión o utilizando una API, y se integra con los componentes siguientes: 
 * vCenter
 * vRealize Log Insight
 
@@ -40,12 +40,12 @@ vROps recopila datos de los siguientes sitios:
 * NSX: NSX Manager, Controladores NSX y NSX Edges
 * vRLI
 
-El cliente puede recopilar manualmente los vROps de configuración para recopilar datos de vRealize Automation y vRealize Business for Cloud.
+El cliente puede configurar los vROps manualmente para que recopilen datos de vRealize Automation y vRealize Business for Cloud. 
 
 ## Requisitos del sistema
 {: #opsmgmt-vrops-requirements}
 
-El clúster de análisis consta de un nodo maestro, un nodo de réplica maestro y dos nodos de datos para permitir el escalado y la alta disponibilidad. Se pueden añadir nodos de datos adicionales para escalar hacia arriba. El clúster de análisis puede escalarse hasta un máximo de 8 nodos de tamaño medio.
+El clúster de análisis consta de un nodo maestro, un nodo de réplica maestro y dos nodos de datos para permitir el escalado y la alta disponibilidad. Se pueden añadir nodos de datos adicionales para escalar hacia arriba. El clúster de análisis puede escalarse hasta un máximo de ocho nodos de tamaño medio. 
 
 Tabla 1. Valores del sistema del nodo maestro y de réplica de Operations Manager
 
@@ -78,7 +78,7 @@ Tabla 3. Valores de los equilibradores de carga de Operations Manager
 | URL | /suite-api/api/deployment/node/status | -- |
 | Recepción | EN LÍNEA | -- |
 | Algoritmo | ROUND-ROBIN | LEASTCONN |
-| Agrupación | 4 nodos de vROPs | 4 nodos de vROPs |
+| Agrupación | Cuatro nodos de vROPs | Cuatro nodos de vROPs |
 
 Para obtener más información, consulte [Equilibrio de carga en vRealize Automation (PDF)](https://docs.vmware.com/en/vRealize-Automation/7.5/vrealize-automation-load-balancing.pdf){:new_window}.
 
@@ -91,9 +91,9 @@ El despliegue del dispositivo vROps requiere seis direcciones IP de la subred de
 * Dispositivos NSX-V/T
 * Expansión de herramientas VXLAN
 * Redes de clientes
-* Servidor NTP (time.services.softlayer.com)
+* Servidor NTP (`time.services.softlayer.com`)
 * Active Directory/DNS de {{site.data.keyword.vmwaresolutions_short}}
-* Los recopiladores remotos requieren reglas NAT en NSX ESG para habilitar la conectividad con el nodo maestro, la réplica de nodo maestro y los nodos de datos
+* Los recopiladores remotos requieren reglas NAT en NSX ESG para habilitar la conectividad con el nodo maestro, la réplica de nodo maestro y los nodos de datos. 
 
 ## Puertos
 {: #opsmgmt-vrops-ports}
@@ -113,7 +113,7 @@ Tabla 4. Puertos de Operations Manager
 ### Autenticación
 {: #opsmgmt-vrops-auth}
 
-La gestión de usuarios de vROps requiere VMware Identity Manager (vIDM), que se integra con Active Directory. Las cuentas de servicio se utilizan para la comunicación de aplicación a aplicación desde vRealize Operations Manager a los siguientes adaptadores con el conjunto mínimo de permisos que se necesitan para la recopilación de métricas y la correlación de topologías:
+La gestión de usuarios de vROps requiere VMware Identity Manager (vIDM), que se integra con Active Directory. Las cuentas de servicio se utilizan para la comunicación de aplicación a aplicación desde vRealize Operations Manager a los siguientes adaptadores con el conjunto mínimo de permisos que se necesitan para la recopilación de métricas y la correlación de topologías: 
 
 * NSX Manager
 * vCenter
@@ -171,11 +171,11 @@ Además, se pueden supervisar los siguientes componentes si el cliente los ha in
 * VMware Site Recovery Manager
 
 El Paquete de gestión de estado de VMware SDDC proporciona los siguientes paneles de control:
-* Panel de control de Visión general de estado de gestión de SDDC: Puede utilizar lo para ver y analizar los problemas específicos de la aplicación en los componentes SDDC.
+* Panel de control de Visión general de estado de gestión de SDDC: Puede utilizar lo para ver y analizar los problemas específicos de la aplicación en los componentes SDDC. 
 * Panel de control de tendencia histórica de estado de SDDC: El Paquete de gestión de estado de VMware SDDC consiste en un panel de control de tendencia histórica de estado de SDDC, que muestra la tendencia de estado de cada componente de la pila de SDDC.
 * Panel de control de tamaño de vRealize Operations Manager de SDDC: proporciona capacidad de clúster de vRealize Operations Manager para procesar objetos y métricas.
 
-Los plug-ins del Paquete de gestión de estado de VMware SDDC recopilan métricas para los tipos de objeto que contienen los plug-ins. El paquete de gestión recopila métricas de estado de los siguientes componentes:
+Los plug-ins del Paquete de gestión de estado de VMware SDDC recopilan métricas para los tipos de objeto que contienen los plug-ins. El paquete de gestión recopila métricas de estado de los siguientes componentes: 
 * vCenter Server
 * Paquete de gestión para NSX for vSphere
 * vRealize Automation
@@ -214,7 +214,7 @@ El paquete de gestión de vRealize Operations Federation habilita un despliegue 
 ### Paquete de gestión para Hybrid Cloud Extension (HCX)
 {: #opsmgmt-vrops-management-hcx}
 
-El paquete de vRealize Operations Management para HCX amplía las capacidades de Operations Management de vROps a capacidades híbridas presentadas por HCX. Con el paquete de gestión, se pueden recopilar métricas, sucesos de cambio e información de topología de recursos de HCX. Permite la supervisión, el aislamiento y la resolución de los cuellos de botella de rendimiento en las cargas de trabajo de Interconexiones, de Migraciones o Protegidas de HCX.
+El paquete de vRealize Operations Management para HCX amplía las capacidades de Operations Management de vROps a capacidades híbridas presentadas por HCX. Con el paquete de gestión, se pueden recopilar métricas, sucesos de cambio e información de topología de recursos de HCX. Permite la supervisión, el aislamiento y la resolución de los cuellos de botella de rendimiento en las cargas de trabajo de Interconexiones, de Migraciones o Protegidas de HCX. 
 
 ## Enlaces relacionados
 {: #opsmgmt-vrops-management-links}
@@ -223,7 +223,7 @@ El paquete de vRealize Operations Management para HCX amplía las capacidades de
 * [Directrices de dimensionamiento de vRealize Operations Manager 7.0](https://kb.vmware.com/s/article/57903){:new_window}
 * [Documentación de vRealize Operations Manager](https://docs.vmware.com/en/vRealize-Operations-Manager/index.html){:new_window}
 * [Paquete de gestión para vSAN](https://marketplace.vmware.com/resources/vsx/product_files/31742/original/Management-Pack-for-vSAN-Guide6d2a8895b022a5f626a86e8e84b031b5.pdf){:new_window}
-* [Revise las Instrucciones para actualizar el clúster de vSAN en](https://cloud.ibm.com/docs/services/vmwaresolutions/archiref/vum/vum-updating-vsan.html#updating-vsan-clusters){:new_window}
+* [Revise las Instrucciones para actualizar el clúster de vSAN en](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vsan)
 * [Guía del paquete de gestión para vSAN](https://marketplace.vmware.com/resources/vsx/product_files/31742/original/Management-Pack-for-vSAN-Guide6d2a8895b022a5f626a86e8e84b031b5.pdf){:new_window}
 * [Información de comprobación de estado de vSAN](https://kb.vmware.com/s/article/2114803){:new_window}
 * [Operacionalización de VMware NSX](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/products/nsx/vmware-operationalizing-nsx.pdf){:new_window}

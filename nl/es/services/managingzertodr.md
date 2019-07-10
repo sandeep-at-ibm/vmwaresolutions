@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-06-18"
+
+keywords: Zerto certificate, Zerto config, update Zerto replication
 
 subcollection: vmware-solutions
 
@@ -23,7 +25,7 @@ Después de desplegar el servicio Zerto on {{site.data.keyword.cloud}} en la ins
 ## Utilización de su propio certificado para Zerto
 {: #managingzertodr-ssl-cert}
 
-Como práctica recomendada, utilice su propio certificado SSL para Zerto Virtual Manager (ZVM). Después de desplegar Zerto en {{site.data.keyword.cloud_notm}}, sustituya el certificado SSL para ZVM por su propio certificado. Para obtener más información, consulte [Cómo utilizar un certificado SSL CER para sustituir el certificado autofirmado para ZVM, ZSSP o ZCM](https://www.zerto.com/myzerto/knowledge-base/how-to-use-a-cer-ssl-certificate-to-replace-the-self-signed-certificate-for-the-zvm-zssp-or-zcm/){:new_window}.
+Como práctica recomendada, utilice su propio certificado SSL para Zerto Virtual Manager (ZVM). Después de desplegar Zerto on {{site.data.keyword.cloud_notm}}, sustituya el certificado SSL para ZVM por su propio certificado. Para obtener más información, consulte [Cómo utilizar un certificado SSL CER para sustituir el certificado autofirmado para ZVM, ZSSP o ZCM](https://www.zerto.com/myzerto/knowledge-base/how-to-use-a-cer-ssl-certificate-to-replace-the-self-signed-certificate-for-the-zvm-zssp-or-zcm/){:new_window}.
 
 ## Gestión de la configuración de réplicas Zerto
 {: #managingzertodr-manage}

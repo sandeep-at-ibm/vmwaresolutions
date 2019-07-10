@@ -36,7 +36,7 @@ Attore | Descrizione
 --|--
 Amministratore di sistema | La risorsa qualificata VMware vSphere che utilizza vCenter Server per gestire la virtualizzazione in loco e l'istanza vCenter Server.
 Sviluppatore | La risorsa qualificata del contenitore che utilizza la console CAM per creare e gestire i contenitori. Creano i nuovi servizi come parte della modernizzazione dell'applicazione. Utilizzando CAM, lo sviluppatore esegue il provisioning dei carichi di lavoro su vCenter Server, {{site.data.keyword.icpfull_notm}} o {{site.data.keyword.containerlong_notm}}, crea e orchestra i servizi realizzati con le VM e i contenitori e integra le toolchain DevOps e le soluzioni day-2 ITSM.
-Cliente | Attore esterno che consuma i servizi dall'azienda. Per Acme Skateboards, il cliente è uno skater che vuole acquistare i prodotti di skateboarding. Il cliente necessita di un accesso internet protetto al catalogo.
+Cliente | Attore esterno che consuma i servizi dall'azienda. Per Acme Skateboards, il cliente è uno skater che vuole acquistare i prodotti di skateboarding. Il cliente necessita di un accesso a internet protetto al catalogo.
 {{site.data.keyword.containerlong_notm}} | La risorsa IBM che gestisce il nodo master {{site.data.keyword.containerlong_notm}} per il servizio.
 
 ## Sistemi

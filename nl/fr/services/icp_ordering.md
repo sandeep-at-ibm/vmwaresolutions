@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-01"
+lastupdated: "2019-06-14"
+
+keywords: IBM Cloud Private Hosted, ICP configuration, order Cloud Private
 
 subcollection: vmware-solutions
 

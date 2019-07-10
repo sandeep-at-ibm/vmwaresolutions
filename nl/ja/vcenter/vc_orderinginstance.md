@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-19"
+
+keywords: vCenter Server order instance, order vCenter Server, order vCenter Server instance
 
 subcollection: vmware-solutions
 
@@ -78,7 +80,7 @@ vSphere Enterprise Plus 6.7u1 は Broadwell および Skylake の {{site.data.ke
 
 ビジネス・パートナーであるユーザーの場合、vCenter Server ライセンス (Standard エディション)、vSphere ライセンス (Enterprise Plus エディション)、NSX ライセンスが自動的に含められて購入されます。 しかし、NSX ライセンスのエディションは指定する必要があります。
 
-ビジネス・パートナーでないユーザーの場合、**「購入に含める」**を選択してこれらのコンポーネントに IBM 提供 VMware ライセンスを使用することも、**「自分で提供する」**を選択し、所有するライセンス・キーを入力してライセンス持ち込み (BYOL) を適用することもできます。
+ビジネス・パートナーでないユーザーの場合は、**「購入に含める (Include with purchase)」**を選択することにより、IBM 提供の VMware ライセンスをこれらのコンポーネントに対して使用するか、**「自分で提供する (I will provide)」**を選択して所有するライセンス・キーを入力することにより、ライセンス持ち込み (BYOL) を適用することができます。
 
 ### ライセンスに関する注意点
 {: #vc_orderinginstance-licensing-notes}
@@ -217,7 +219,7 @@ vCenter Server インスタンスを注文する際には、以下のネット�
 *  英数字とダッシュ (-) の文字だけを使用できます。
 *  サブドメイン・ラベルの先頭は英字、末尾は英数字でなければなりません。
 *  サブドメイン・ラベルの最大長は 10 文字です。
-*  サブドメイン・ラベルは、アカウント内で固有でなければなりません。
+*  サブドメイン・ラベルは、マルチサイト構成のすべてのインスタンス内で固有でなければなりません。
 
 ### ドメイン・ネーム
 {: #vc_orderinginstance-domain-name}
@@ -279,7 +281,7 @@ vCenter Server インスタンスを注文する際には、以下のネット�
 * **Active Directory/DNS 用の単一のパブリック Windows VSI**: Microsoft Active Directory (AD) 用の単一の Microsoft Windows Server VSI。ホストと VM が登録されたインスタンスの DNS として機能します。これがデプロイされて参照可能になります。 このオプションは、V1.9 以降のインスタンスではデフォルトでデプロイされます。
 * **管理クラスター上の高可用性構成の 2 つの専用 Windows Server VM**: 2 つの Microsoft Windows VM がデプロイされるので、セキュリティーと堅牢性が向上します。
 
-2 つの Microsoft Windows VM を使用するようにインスタンスを構成する場合は、2 つの Microsoft Windows Server 2016 ライセンスを用意する必要があります。 Microsoft Windows Server 2016 Standard エディションのライセンスまたは Microsoft Windows Server 2016 Datacenter エディションのライセンス、あるいはその両方を使用してください。
+2 つの Microsoft Windows VM を使用するようにインスタンスを構成する場合は、2 つの Microsoft Windows Server 2016 Standard Edition ライセンスを用意する必要があります。
 {:important}
 
 各ライセンスは単一の物理サーバーにのみ割り当てられ、最大 2 つの物理プロセッサーをカバーします。 1 つの Standard エディション・ライセンスでは、2 プロセッサーのサーバーで 2 台の仮想化 Microsoft Windows VM を実行できます。 したがって、ライセンスは 2 つ必要になります。2 つの異なるホストに 2 つの Microsoft Windows VM がデプロイされるからです。
@@ -296,7 +298,9 @@ vCenter Server インスタンスを注文するときには、アドオン・�
 ## 注文のサマリー
 {: #vc_orderinginstance-order-summary}
 
-選択したインスタンス構成とアドオン・サービス構成に基づいて、見積もりコストがすぐに生成され、右側のペインの**「注文の要約」**セクションに表示されます。 右側のペインの下部の**「料金詳細」**をクリックすると、見積もりの詳細を示す PDF 文書を生成できます。
+選択したインスタンス構成とアドオン・サービス構成に基づいて、見積もりコストがすぐに生成され、右側の**「発注要約」**ペインに表示されます。**「料金詳細」**をクリックすると、{{site.data.keyword.vmwaresolutions_short}} リソースのコスト・サマリーが記載された PDF 文書を生成できます。
+
+また、**「見積もりに追加」**をクリックして、プロビジョン済みリソースを {{site.data.keyword.cloud_notm}} 見積もりツールに追加することもできます。この操作は、購入を検討している他の {{site.data.keyword.cloud_notm}} リソースと一緒に、選択した {{site.data.keyword.vmwaresolutions_short}}リソースのコストを見積もる場合に役立ちます。
 
 ## vCenter Server インスタンスを注文する手順
 {: #vc_orderinginstance-procedure}
@@ -346,13 +350,10 @@ vCenter Server インスタンスを注文するときには、アドオン・�
 ## vCenter Server インスタンスを注文した結果
 {: #vc_orderinginstance-results}
 
-インスタンスのデプロイメントが自動的に開始されます。 注文が処理されていることを示す確認メッセージが表示されます。デプロイメントの状況を確認するには、インスタンスの詳細を表示します。
-
-インスタンスが正常にデプロイされると、[vCenter Server インスタンスの技術仕様](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs)に記述されているコンポーネントが VMware 仮想プラットフォームにインストールされます。 注文した ESXi サーバーは、デフォルトでは **cluster1** としてグループ化されます。 アドオン・サービスを注文した場合は、注文の完了後にサービスのデプロイメントが開始されます。
-
-インスタンスが使用可能になると、インスタンスの状況が**「使用可能」**に変わり、E メールで通知されます。
-
-セカンダリー・インスタンスを注文した場合は、セカンダリー・インスタンスの注文が完了した後に、(セカンダリー・インスタンスにリンクされた) プライマリー・インスタンスの VMware vSphere Web Client が再始動されることがあります。
+* インスタンスのデプロイメントが自動的に開始され、注文が処理中であることを示す確認を受け取ります。 「インスタンスの詳細」の**「デプロイメント履歴 (Deployment History)」**セクションを表示すると、注意すべき問題を含め、デプロイメント状況を確認できます。
+* インスタンスが正常にデプロイされると、[vCenter Server インスタンスの技術仕様](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs)に記述されているコンポーネントが VMware 仮想プラットフォームにインストールされます。 注文した ESXi サーバーは、デフォルトでは **cluster1** としてグループ化されます。 アドオン・サービスを注文した場合は、注文の完了後にサービスのデプロイメントが開始されます。
+* インスタンスが使用可能になると、インスタンスの状況が**「使用可能」**に変わり、E メールで通知されます。
+* セカンダリー・インスタンスを注文した場合は、セカンダリー・インスタンスの注文が完了した後に、(セカンダリー・インスタンスにリンクされた) プライマリー・インスタンスの VMware vSphere Web Client が再始動されることがあります。
 
 ## 次に行うこと
 {: #vc_orderinginstance-next}
@@ -374,7 +375,7 @@ vCenter Server インスタンスを注文するときには、アドオン・�
 ## 関連リンク
 {: #vc_orderinginstance-related}
 
-* [{{site.data.keyword.cloud_notm}} アカウントの登録](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)
+* [{{site.data.keyword.cloud_notm}} アカウントの登録](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts)
 * [vCenter Server インスタンスの表示](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
 * [vCenter Server インスタンスのマルチサイト構成](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_multisite)
 * [vCenter Server インスタンスのクラスターの追加、表示、削除](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)

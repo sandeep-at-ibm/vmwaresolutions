@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-06-18"
+
+keywords: IBM Integrated Managed Infrastructure, request IBM IMI, tech specs IMI
 
 subcollection: vmware-solutions
 
@@ -24,7 +26,6 @@ IMI は、vCenter Server インスタンス用のマネージド・サービス�
 {: #managing_imi-specs}
 
 IMI マネージド・サービスには以下の仕様が含まれています。
-
 * 適応範囲オプション: 8X5、16X5、または 24X7
 * 全体的な送達に対して責任を持つ IT サービス管理ツールと管理プロセス
 * コンプライアンス管理
@@ -38,7 +39,7 @@ IMI マネージド・サービスには以下の仕様が含まれています�
 2. ページをスクロールダウンし、**「追加マネージド・サービスの注文 (Order additional managed services)」**で、**「IMI からのマネージド・サービス (Managed Services from IMI)」**カードをクリックします。
 3. **「IMI のマネージド・サービス」**ページの**「IMI プリセールスを予約」**ボックスに、IMI サービスの要件に関する説明を入力し、**「コンサルテーションを要求」**をクリックします。
 
-IMI プリセールス担当員が、{{site.data.keyword.cloud_notm}} 連絡先情報を使用してお客様に連絡し、必要なサービスについてお手伝いします。
+  {{site.data.keyword.vmwaresolutions_short}} の担当者が、お客様の {{site.data.keyword.cloud_notm}} の連絡先情報を使用してお客様に連絡し、必要な解決方法が分かるようにお手伝いします。
 
 ## 関連リンク
 {: #managing_imi-related}

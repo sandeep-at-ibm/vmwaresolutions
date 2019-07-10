@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-18"
+lastupdated: "2019-06-13"
+
+keywords: vCenter Server NSX-T add cluster, view cluster vCenter Server NSX-T, delete cluster vCenter Server NSX-T
 
 subcollection: vmware-solutions
 
@@ -148,7 +150,9 @@ vCenter Server with NSX-T 인스턴스에 클러스터를 추가할 때는 다�
 ### 주문 요약
 {: #vc_nsx-t_addingviewingclusters-adding-order-summary}
 
-클러스터에 대해 선택한 구성에 따라 예상 비용이 즉시 생성되어 **주문 요약** 오른쪽 분할창에 표시됩니다.
+클러스터에 대해 선택한 구성에 따라 예상 비용이 즉시 생성되어 **주문 요약** 오른쪽 분할창에 표시됩니다. **가격 세부사항**을 클릭하여 {{site.data.keyword.vmwaresolutions_short}} 리소스에 대한 비용 요약이 포함된 PDF 문서를 생성하십시오. 
+
+**예상 금액에 추가**를 클릭하여 {{site.data.keyword.cloud_notm}} 예상 도구에 프로비저닝된 리소스를 추가할 수도 있습니다. 구매를 고려할 수 있는 기타 {{site.data.keyword.cloud_notm}} 리소스와 함께 선택된 {{site.data.keyword.vmwaresolutions_short}} 리소스의 비용을 예상하려는 경우 유용합니다. 
 
 ## vCenter Server with NSX-T 인스턴스에 클러스터를 추가하는 프로시저
 {: #vc_nsx-t_addingviewingclusters-adding-procedure}
@@ -241,7 +245,7 @@ vCenter Server with NSX-T 인스턴스에 클러스터를 추가할 때는 다�
 | 항목        | 설명       |  
 |:------------- |:------------- |
 | VLAN 번호 | 고유한 VLAN 번호입니다.  |
-| 설명 | VLAN의 설명입니다.  |
+|설명 | VLAN의 설명입니다.  |
 | 위치 | 데이터 센터 위치입니다. |
 | 기본 라우트 | VLAN의 기본 라우트입니다. |
 
@@ -253,7 +257,7 @@ VLAN 세부사항에 액세스하려면 **리소스 보기**를 클릭하십시�
 |:------------- |:------------- |
 |이름 | 서브넷 이름입니다. 서브넷 세부사항에 액세스하려면 이름을 클릭하십시오. |
 |유형 | 서브넷의 유형: 기본 또는 포터블. |
-| 설명 | 서브넷의 설명입니다. |
+|설명 | 서브넷의 설명입니다. |
 
 표 8. 네트워크 인터페이스 - IP 세부사항
 
@@ -261,7 +265,7 @@ VLAN 세부사항에 액세스하려면 **리소스 보기**를 클릭하십시�
 |:------------- |:------------- |
 | IP | IP 주소입니다. |
 |상태 | IP 주소의 상태입니다. |
-| 설명 | IP 주소의 설명입니다.  |
+|설명 | IP 주소의 설명입니다.  |
 
 ## vCenter Server with NSX-T 인스턴스에서 클러스터 삭제
 {: #vc_nsx-t_addingviewingclusters-deleting}

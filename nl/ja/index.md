@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2019
 
-lastupdated: "2019-04-16"
+lastupdated: "2019-05-31"
 
 keywords: IBM Cloud for VMware Solutions, getting started, vmware solutions offerings, add-on services for vmwaresolutions, vmwaresolutions use cases
 
@@ -68,7 +68,7 @@ Microsoft Internet Explorer はサポートされていません。
    </tr>
    <tr>
       <td>IBM Cloud インフラストラクチャー・アカウント</td>
-      <td>{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの要件について詳しくは、[{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの要件](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)を参照してください。<br><br>{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントと {{site.data.keyword.cloud_notm}} アカウントをリンクして、Infrastructure as a Service (IaaS) リソースと Platform as a Service (PaaS) リソースを組み合わせて使用できます。 その後、単一のログインから IaaS リソースと PaaS リソースにアクセスできます。 さらに、アカウントをリンクする場合は、使用するすべての PaaS リソースおよび IaaS リソースに対して単一の請求書が提供されます。<ul><li>{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントがない場合は、[IBM Cloud インフラストラクチャー・アカウントの登録](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account#signing_softlayer_account-infra)の手順に従ってアカウントを要求し、[IBMid への切り替えとアカウントのリンク](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)の手順に従って {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントとご使用の {{site.data.keyword.cloud_notm}} アカウントをリンクします。</li><li>{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントを持っている場合は、それを [IBMid への切り替えとアカウントのリンク](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)の手順に従って {{site.data.keyword.cloud_notm}} アカウントにリンクします。</li></ul></td>
+      <td>{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの要件について詳しくは、[{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの要件](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req)を参照してください。<br><br>{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントと {{site.data.keyword.cloud_notm}} アカウントをリンクして、Infrastructure as a Service (IaaS) リソースと Platform as a Service (PaaS) リソースを組み合わせて使用できます。 その後、単一のログインから IaaS リソースと PaaS リソースにアクセスできます。 さらに、アカウントをリンクする場合は、使用するすべての PaaS リソースおよび IaaS リソースに対して単一の請求書が提供されます。<ul><li>{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントがない場合は、[IBM Cloud インフラストラクチャー・アカウントの登録](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts#signing_required_accounts-infra)の手順に従ってアカウントを要求し、[IBMid への切り替えとアカウントのリンク](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)の手順に従って {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントとご使用の {{site.data.keyword.cloud_notm}} アカウントをリンクします。</li><li>{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントを持っている場合は、それを [IBMid への切り替えとアカウントのリンク](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)の手順に従って {{site.data.keyword.cloud_notm}} アカウントにリンクします。</li></ul></td>
    </tr>
    </table>
 

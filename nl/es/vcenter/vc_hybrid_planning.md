@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-04"
+lastupdated: "2019-05-31"
+
+keywords: planning vCenter Server Hybridity, data center hybridity, vCenter Server Hybridity
 
 subcollection: vmware-solutions
 
@@ -19,7 +21,7 @@ Revise los siguientes requisitos antes de solicitar su instancia de VMware vCent
 ## Requisitos de la cuenta de IBM Cloud
 {: #vc_hybrid_planning-account-req}
 
-La cuenta de {{site.data.keyword.cloud_notm}} que utilice debe cumplir ciertos requisitos. Para obtener más información, consulte [Requisitos para la cuenta de {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).
+La cuenta de {{site.data.keyword.cloud_notm}} que utilice debe cumplir ciertos requisitos. Para obtener más información, consulte [Requisitos para la cuenta de {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req). 
 
 ## Disponibilidad del centro de datos de IBM Cloud
 {: #vc_hybrid_planning-dc-availability}

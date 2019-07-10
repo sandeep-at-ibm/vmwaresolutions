@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-06-13"
+
+keywords: HyTrust KeyControl, HTKC, tech specs HTKC
 
 subcollection: vmware-solutions
 
@@ -20,7 +22,7 @@ subcollection: vmware-solutions
 
 Il servizio HyTrust KeyControl on {{site.data.keyword.cloud}} semplifica la gestione dei carichi di lavoro crittografati. Questo servizio automatizza e semplifica il ciclo di vita delle chiavi di crittografia, che include l'archiviazione, la distribuzione, la rotazione e la revoca delle chiavi. Utilizzando la crittografia conforme a FIPS 140-2, le aziende possono gestire facilmente le chiavi di crittografia in scala.
 
-Questo servizio è disponibile solo per le istanze che eseguono vSphere 6.5 e che sono distribuite o di cui è stato eseguito l'upgrade alla V2.5 o successive. La versione HyTrust KeyControl corrente installata è la 4.3.
+Questo servizio è disponibile solo per le istanze che eseguono vSphere 6.5 e che sono distribuite o di cui è stato eseguito l'upgrade alla V2.5 o successive. La versione HyTrust KeyControl corrente installata è la 4.3.2.
 {:note}
 
 ## Specifiche tecniche per HyTrust KeyControl on IBM Cloud

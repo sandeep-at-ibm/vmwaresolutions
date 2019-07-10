@@ -14,12 +14,12 @@ subcollection: vmware-solutions
 # V2.8 릴리스 정보
 {: #relnotes_v28}
 
-이 릴리스에는 새 기능, 컴포넌트 업데이트, 사용성 개선사항 및 버그 수정이 포함됩니다. 다른 릴리스에서 수정된 문제, 제품에 대해 알려진 문제 및 {{site.data.keyword.vmwaresolutions_full}}에 사용할 팁의 목록은 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}를 참조하십시오.
+이 릴리스에는 새 기능, 컴포넌트 업데이트, 사용성 개선사항 및 버그 수정이 포함되어 있습니다. 다른 릴리스에서 수정된 문제, 제품에 대해 알려진 문제 및 {{site.data.keyword.vmwaresolutions_full}}에 사용할 팁의 목록은 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}를 참조하십시오.
 
 ## 마이그레이션 및 앱 현대화를 위한 단일 노드 평가판 인스턴스
 {: #relnotes_v28-single-node-trial}
 
-마이그레이션 및 앱 현대화를 위한 단일 노드 평가판은 {{site.data.keyword.cloud_notm}}를 시범 작동하여 VMware 워크로드를 {{site.data.keyword.cloud_notm}}에 마이그레이션한 후 컨테이너를 사용하여 워크로드를 현대화할 수 있는 가장 빠른 방법입니다. 이 팽가판은 컨테이너를 위한 Kubernetes 관리 플랫폼 및 온프레미스 환경과 동일한 익숙한 도구를 사용하여 관리될 수 있는 싱글 테넌트 VMware 플랫폼을 제공하는 {{site.data.keyword.cloud_notm}}의 {{site.data.keyword.icpfull_notm}} Hosted on VMware vCenter Server 버전입니다.
+마이그레이션 및 앱 현대화를 위한 단일 노드 평가판은 {{site.data.keyword.cloud_notm}}를 시범 작동하여 VMware 워크로드를 {{site.data.keyword.cloud_notm}}에 마이그레이션한 후 컨테이너를 사용하여 워크로드를 현대화할 수 있는 가장 빠른 방법입니다. 이 평가판은 컨테이너를 위한 Kubernetes 관리 플랫폼 및 온프레미스 환경과 동일한 익숙한 도구를 사용하여 관리될 수 있는 싱글 테넌트 VMware 플랫폼을 제공하는 {{site.data.keyword.cloud_notm}}의 {{site.data.keyword.icpfull_notm}} Hosted on VMware vCenter Server 버전입니다.
 
 자세한 정보는 [마이그레이션 및 앱 현대화를 위한 단일 노드 평가판 개요](/docs/services/vmwaresolutions?topic=vmware-solutions-cloud_modern_bundle_overview#cloud_modern_bundle_overview)를 참조하십시오.
 
@@ -116,7 +116,7 @@ V2.8 릴리스부터 서비스는 VMware 인스턴스와 연관되지 않고 독
 * [{{site.data.keyword.vmwaresolutions_short}} 아키텍처(NSX-V 및 NSX-T 사용)
 ](/docs/services/vmwaresolutions/services?topic=vmware-solutions-solution_overview#solution_overview)
 * [Caveonix RiskForesight 참조 아키텍처](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-on-vcs)
-* [HCX on {{site.data.keyword.cloud_notm}} 배치 및 오퍼레이션 안내서](/docs/services/vmwaresolutions/archiref/vcshcx?topic=vmware-solutions-vcshcx-intro)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} for VMware Solutions](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-vcs-intro)
 
 ## 사용자 인터페이스 업데이트 및 개선사항
 {: #relnotes_v28-ui}

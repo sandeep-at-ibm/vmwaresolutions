@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-17"
 
 subcollection: vmware-solutions
 
@@ -118,41 +118,11 @@ vSAN 설정은 {{site.data.keyword.cloud_notm}} 내에서 VMware Solutions 배�
 
 NFS 네트워크 연결 스토리지를 사용 중인 경우 이 아키텍처는 NFS v4.1이 아니라 NFS v3을 사용하도록 규정합니다. NFS v4.1 사용 시 NFS 서버 LIF 마이그레이션으로 인해 과도한 대기 시간이 발생할 수 있기 때문입니다. 각 vSphere 호스트는 해당 호스트 이름을 사용하여 NFS 스토리지에 연결됩니다.
 
-성능 티어가 4IOPS/GB인 관리 컴포넌트에서 사용하도록 하나의 2TB NFS 데이터 저장소가 클러스터에 연결됩니다. 다양한 크기 및 성능 티어의 워크로드용으로 추가 데이터 저장소가 연결될 수 있습니다.
+성능 티어가 4IOPS/GB인 관리 컴포넌트에서 사용하도록 하나의 2TB NFS 데이터 저장소가 클러스터에 연결됩니다. 다양한 크기 및 성능 티어의 워크로드용으로 더 많은 데이터 저장소가 연결될 수 있습니다.
 
 또한 이 아키텍처에서는 모든 호스트에 NFS 스토리지가 상주하는 서브넷에 대한 서브넷 라우트가 작성되어 있어야 합니다. 이 서브넷 라우트의 목적은 모든 NFS 트래픽에 이 디자인에서 NFS 트래픽용으로 지정된 포트 그룹, 서브넷 및 VLAN을 사용하도록 지시하는 것입니다. 다중 NFS 데이터 저장소가 연결된 경우 해당 데이터 저장소가 여러 원격 서브넷에 있을 수 있으므로 다중 라우트를 구성해야 할 수 있습니다.
 
 관리 가상 머신이 NFS 데이터 저장소에 있을 수 있습니다. 일부 관리 시스템이 NFS 호스트 이름을 분석하는 데 사용되는 DNS 서비스를 담당할 수 있으므로 이로 인해 부트스트랩 문제점이 발생합니다. 따라서 이 아키텍처는 관리 데이터 저장소용 IP 주소 중 하나 이상이 각 호스트의 `/etc/hosts`에 하드 코딩되도록 지정합니다.
-
-## iSCSI 연결 스토리지
-{: #design_virtualinfrastructure-iscsi-storage}
-
-NFS v3 연결 스토리지와는 달리 iSCSI 연결 스토리지는 구성된 모든 NIC 카드 포트 및 대상 포트에서 활성-활성 경로를 지원합니다. 그러므로 더 높은 처리량을 달성할 수 있으며 NFS 연결 스토리지에 대한 적절한 대안이 됩니다. 복잡도 증가로 비용이 부과됩니다.
-
-{{site.data.keyword.cloud_notm}} Endurance 블록 스토리지는 VMware 사용 시 LUN당 최대 64개의 IP 주소 연결을 지원하며, 이 디자인에 따라 최대 32개의 호스트가 허용됩니다.
-
-관리 컴포넌트의 사용을 위해 하나의 2-TB iSCSI LUN이 vSphere 클러스터에 연결되고, 고객 워크로드 사용을 위해 최소 두 개 이상의 iSCSI LUN이 구성됩니다. 이 스토리지는 각 LUN당 VMFS 6.x 파일 시스템으로 형식화됩니다.
-
-이 아키텍처는 iSCSI 포트 바인딩, 다중 경로에 대한 라운드 로빈 정책, 최대 큐 길이 64 및 라운드 로빈 IOPS 한계 1을 사용하도록 지정합니다.
-
-### iSCSI의 가상 네트워크 설정
-{: #design_virtualinfrastructure-setup-iscsi}
-
-이 디자인의 경우 iSCSI 트래픽은 활성, 활성 구성에서 2개의 사설 연결 NIC 카드 포트를 사용하도록 허용됩니다. vSphere는 vDS 내 특정 포트 그룹에서 한 번에 하나의 NIC 카드 포트만 활성 상태가 되도록 허용하므로 2개의 포트 그룹이 스토리지 VLAN에서 작성되어야 합니다(A 및 B).
-
-ESXi 커널 포트는 확장성을 허용하도록 개별 서브넷의 고유 IP 주소로 작성됩니다. 각 커널 포트는 자체 iSCSI 포트 그룹에 지정됩니다. 두 커널 포트는 ESXi 가상 ISCSI 호스트 버스 어댑터(HBA)에 지정됩니다. 각 커널 포트의 경우 기본 GW 대체 스위치는 해당 커널 포트에 대해 로컬 서브넷의 기본 게이트웨이를 사용합니다. 다음 표를 참조하십시오.
-
-표 2. iSCSi 포트 그룹
-
-vDS Portgroup | 커널 포트 서브넷 | VMHBA
---|:---|:--
-**SDDC-Dprotgroup-iSCSI-A** |Subnet-A |  vmhba64
-**SDDC-Dprotgroup-iSCSI-B** | Subnet-B | vmhba64
-
-#### 스토리지 I/O 제어 - SIOC
-{: #design_virtualinfrastructure-sioc}
-
-iSCSI LUNS는 LUN당 하나의 파일 VMFS 파일 시스템으로 프로비저닝되고 형식화됩니다. 권장되는 기본 SIOC 설정은 최대 처리량의 90%입니다.
 
 ## VMware NSX-V 디자인
 {: #design_virtualinfrastructure-nsx-design}
@@ -204,7 +174,7 @@ VLAN은 실제 네트워크 기능을 세그먼트화하는 데 사용됩니다.
 |VLAN  | 대상 | 트래픽 유형 |
 |:----- |:----------- |:------------ |
 |VLAN 1 | 사설 A   | ESXi 관리, 관리, VXLAN(VTEP) |
-|VLAN 2 | 사설 B   | vSAN, NFS, vMotion, iSCSI |
+|VLAN 2 | 사설 B   | vSAN, NFS 및 vMotion|
 |VLAN 3 | 공용      |인터넷 액세스를 위해 사용 가능 |
 
 워크로드의 트래픽이 VXLAN-지원 논리 스위치에서 이동합니다.
@@ -231,7 +201,7 @@ vSphere 클러스터는 다음 표에서 처럼 구성된 2개의 vSphere 분배
 | 장애 조치           |아니오 |
 |장애 복구 순서     |활성 업링크: Uplink1, Uplink2 \* |
 
-\* vSAN 스토리지 트래픽의 로드 밸런싱을 지원하지 않으므로 vSAN 포트 그룹은 활성/대기의 명시적 장애 복구를 사용합니다. iSCSI 포트 그룹은 한 번에 하나의 활성 업링크만 갖게 됩니다(iSCSI A - Uplink1, iSCSI B - Uplink2).
+\* vSAN 스토리지 트래픽의 로드 밸런싱을 지원하지 않으므로 vSAN 포트 그룹은 활성/대기의 명시적 장애 복구를 사용합니다.
 {:note}
 
 표 7. 통합 클러스터 가상 스위치 포트 그룹 및 VLAN, 분배 스위치 **SDDC-Dswitch-Private**
@@ -242,10 +212,8 @@ vSphere 클러스터는 다음 표에서 처럼 구성된 2개의 vSphere 분배
  SDDC-DPortGroup-vMotion| 원래 가상 포트| 활성: 0, 1|VLAN 2
  SDDC-DPortGroup-VSAN| 명시적 장애 복구|활성: 0, 대기: 1|VLAN 2
  SDDC-DPortGroup-NFS| 원래 가상 포트| 활성: 0, 1|VLAN 2
-NSX 생성| 원래 가상 포트|활성: 0, 1|VLAN 1
+NSX 생성| 원래 가상 포트| 활성: 0, 1|VLAN 1
  SDDC-DPortGroup-External| 원래 가상 포트| 활성: 0, 1|VLAN 3
-SDDC-DPortGroup-iSCSI-A| 원래 가상 포트| 활성: 0|VLAN 2
-SDDC-DPortGroup-iSCSI-B| 원래 가상 포트| 활성: 0|VLAN 2
 
 표 8. 통합 클러스터 VMkernel 어댑터, 분배 스위치 **SDDC-Dswitch-Private**
 
@@ -256,8 +224,6 @@ SDDC-DPortGroup-iSCSI-B| 원래 가상 포트| 활성: 0|VLAN 2
  VTEP|NSX 생성|-|9000
 vSAN| SDDC-DPortGroup-VSAN|vSAN|9000
 NAS| SDDC-DPortGroup-NFS|NAS|9000
-iSCSI|SDDC-DPortGroup-iSCSI-A|iSCSI|9000
-iSCSI|SDDC-DPortGroup-iSCSI-B|iSCSI|9000
 
 ### NSX 구성
 {: #design_virtualinfrastructure-nsx-config}
@@ -283,7 +249,7 @@ iSCSI|SDDC-DPortGroup-iSCSI-B|iSCSI|9000
 
 인스턴스에 공용 네트워크 연결이 필요한 데에는 여러 가지 이유가 있습니다. 이때 사용자 워크로드에 적합한 공용 업데이트 서비스 또는 기타 공용 서비스(예: 지리 위치 데이터베이스 또는 날씨 데이터)에 대한 액세스 권한이 필요할 수 있습니다. 가상화 관리 및 추가 서비스도 공용 연결이 필요하거나 공용 연결의 이점을 얻을 수 있습니다. 예를 들어, vCenter는 HCL 데이터베이스를 업데이트하고 공용 네트워크를 통해 [VUM(VMware Update Manager)](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-intro) 업데이트를 다운로드할 수 있습니다. Zerto, Veeam, VMware HCX, F5 BIG-IP 및 FortiGate-VM은 제품 라이센스 부여, 활성화 또는 사용량 보고의 일부분에 대해 모두 공용 네트워크 연결을 사용합니다. 또한 복제를 목적으로 온프레미스 데이터 센터에 연결하기 위해 공용 네트워크를 통해 터널을 사용할 수 있습니다.
 
-보통 이 통신은 관리 또는 고객 에지 서비스 게이트웨이(ESG)를 통해 공용 네트워크에 선택적으로 라우트되고 NAT를 수행합니다. 그러나 추가 보안 요구사항이 있거나 통신 경로를 단순화하는 데 프록시 사용을 선호할 수 있습니다. 또한 공용 인터페이스가 사용 불가능한 상태에서 인스턴스를 배치한 경우 공용 네트워크에 라우트하는 데 ESG를 사용할 수 없습니다.
+보통 이 통신은 관리 또는 고객 에지 서비스 게이트웨이(ESG)를 통해 공용 네트워크에 선택적으로 라우트되고 NAT를 수행합니다. 그러나 더 많은 보안 요구사항이 있거나 통신 경로를 단순화하는 데 프록시 사용을 선호할 수 있습니다. 또한 공용 인터페이스가 사용 불가능한 상태에서 인스턴스를 배치한 경우 공용 네트워크에 라우트하는 데 ESG를 사용할 수 없습니다.
 
 이 아키텍처에서는 공용 네트워크에 대한 트래픽을 라우트하고 프록시할 수 있도록 다음 옵션을 사용할 수 있습니다.
 

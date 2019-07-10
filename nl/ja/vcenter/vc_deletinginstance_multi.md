@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-28"
+
+keywords: vCenter Server delete instance, delete vCenter Server, delete multi-site
 
 subcollection: vmware-solutions
 
@@ -49,3 +51,4 @@ vCenter Server インスタンスを削除すると、以下のコンポーネ�
 
 * [vCenter Server インスタンスの削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_deletinginstance)
 * [vCenter Server インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
+* [仮想サーバーのキャンセル](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)

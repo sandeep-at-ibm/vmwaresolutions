@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-06-11"
+
+keywords: IAM user, user role, user permission
 
 subcollection: vmware-solutions
 
@@ -40,10 +42,10 @@ Tabella 1. Ruoli di gestione della piattaforma e azioni consentite
 
 | Ruolo di gestione della piattaforma | Azioni | Azioni di esempio |
 |:----------------- |:----------------- |:----------------- |
-| Visualizzatore | Azioni di sola lettura | <ul><li>Visualizzare il riepilogo delle istanze</li><li>Visualizzare i dettagli di un'istanza</li></ul>|
-| Editor | Aggiornare un'istanza specifica |<ul><li>Aggiungere o rimuovere i server ESXi</li><li>Aggiungere o rimuovere i cluster</li><li>Aggiungere o rimuovere i servizi</li><li>Aggiornare un'istanza a una versione superiore</li></ul> |
-| Operatore | Azioni di sola lettura | <ul><li>Elencare le istanze</li><li>Visualizzare i dettagli di un'istanza</li></ul> |
-| Amministratore | Accesso alla gestione completa |<ul><li>Creare nuove istanze</li><li>Eliminare istanze</li><li>Concedere l'accesso alla piattaforma ad altri utenti</li></ul>|
+| Visualizzatore | Azioni di sola lettura | Visualizzare il riepilogo delle istanze<br>Visualizzare i dettagli di un'istanza |
+| Editor | Aggiornare un'istanza specifica | Aggiungere o rimuovere i server ESXi<br>Aggiungere o rimuovere i cluster<br>Aggiungere o rimuovere i servizi<br>Aggiornare un'istanza a una versione superiore |
+| Operatore | Azioni di sola lettura | Elencare le istanze<br>Visualizzare i dettagli di un'istanza |
+| Amministratore | Accesso alla gestione completa | Creare nuove istanze<br>Eliminare istanze<br>Concedere l'accesso alla piattaforma ad altri utenti|
 
 Per {{site.data.keyword.vmwaresolutions_short}}, esistono le seguenti azioni:
 
@@ -53,8 +55,8 @@ Tabella 2. Descrizione delle azioni e ruoli richiesti
 |:------ |:-------------------- |:---- |
 | vmware-solutions.instances.create | Creare nuove istanze | Amministratore |
 | vmware-solutions.instances.delete | Eliminare istanze | Amministratore |
-| vmware-solutions.instances.view | <ul><li>Elencare le istanze</li><li>Visualizzare i dettagli di un'istanza</li></ul> | Visualizzatore, operatore, editor e amministratore |
-| vmware-solutions.instances.update | <ul><li>Aggiungere o rimuovere i server ESXi</li><li>Aggiungere o rimuovere i cluster</li><li>Aggiungere o rimuovere i servizi</li><li>Aggiornare un'istanza a una versione superiore</li></ul> | Editor e amministratore |
+| vmware-solutions.instances.view | Elencare le istanze<br>Visualizzare i dettagli di un'istanza | Visualizzatore, operatore, editor e amministratore |
+| vmware-solutions.instances.update | Aggiungere o rimuovere i server ESXi<br>Aggiungere o rimuovere i cluster<br>Aggiungere o rimuovere i servizi<br>Aggiornare un'istanza a una versione superiore | Editor e amministratore |
 | vmware-solutions.account.update | Aggiornare le impostazioni account | Amministratore |
 
 ## Gestione dell'accesso per gli utenti

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-06"
+lastupdated: "2019-06-17"
 
 subcollection: vmware-solutions
 
@@ -15,9 +15,9 @@ subcollection: vmware-solutions
 
 Le service VMware HCX on IBM Cloud permet de créer une connexion ininterrompue entre des instances IBM Cloud for VMware Solutions et un centre de données virtuel VMware local.
 
-IBM Cloud for VMware Solutions inclut des déploiements rapides et entièrement automatisés de VMware vCenter Server on IBM Cloud (VCS) dans IBM Cloud. Ces offres complètent l'infrastructure sur site et permettent aux charges de travail existantes et futures de s'exécuter dans IBM Cloud sans conversion et à l'aide des mêmes outils, compétences, et processus que ceux utilisés sur site. Pour plus d'informations, voir [Virtualization for extending virtualized private cloud](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture).
+IBM Cloud for VMware Solutions inclut des déploiements rapides et entièrement automatisés de VMware vCenter Server dans IBM Cloud. Ces offres complètent l'infrastructure sur site et permettent aux charges de travail existantes et futures de s'exécuter dans IBM Cloud sans conversion et à l'aide des mêmes outils, compétences, et processus que ceux utilisés sur site. Pour plus d'informations, voir [Virtualization for extending virtualized private cloud](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture).
 
-Le service VMware HCX on IBM Cloud permet d'exploiter cette hybridité, en mélangeant les instances de VCS avec des centres de données virtuels locaux existants, et en permettant la création d'extensions réseau ininterrompues et la migration bidirectionnelle de charges de travail.
+Le service VMware HCX on IBM Cloud permet d'exploiter cette hybridité, en mélangeant les instances de vCenter Server avec des centres de données virtuels locaux existants, et en permettant la création d'extensions réseau ininterrompues et la migration bidirectionnelle de charges de travail.
 
 Les composants VMware HCX on IBM Cloud qui sont déployés en tant que machines virtuelles sur le site cible IBM Cloud VMware permettent l'établissement d'une connexion avec des composants VMware HCX on IBM Cloud installés sur le site source local homologue.
 

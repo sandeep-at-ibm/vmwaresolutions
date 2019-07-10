@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-26"
+lastupdated: "2019-06-18"
+
+keywords: vCenter Server NSX-T order instance, order vCenter Server NSX-T, order NSX-T
 
 subcollection: vmware-solutions
 
@@ -20,7 +22,7 @@ subcollection: vmware-solutions
 
 Para desplegar una plataforma virtualizada VMware flexible y personalizable que se adapte perfectamente a sus necesidades de carga de trabajo, solicite una instancia de VMware vCenter con NSX-T.
 
-## Requisitos
+## Requisitos para vCenter Server con NSX-T
 {: #vc_nsx-t_orderinginstance-req}
 
 Asegúrese de haber realizado las tareas siguientes:
@@ -193,7 +195,6 @@ La etiqueta de subdominio debe cumplir los siguientes requisitos:
 *  Solo se permiten caracteres alfanuméricos y el guión (-).
 *  La etiqueta de subdominio debe empezar por un carácter alfabético y terminar por un carácter alfanumérico.
 *  La longitud máxima de la etiqueta de subdominio es de 10 caracteres.
-*  La etiqueta de subdominio debe ser exclusiva dentro de su cuenta.
 
 ### Nombre de dominio
 {: #vc_nsx-t_orderinginstance-domain-name}
@@ -248,8 +249,7 @@ Seleccione la configuración de DNS (sistema de nombres de dominio) para la inst
 * **Una sola VSI pública de Windows para Active Directory/DNS**: Se despliega y se puede consultar una sola VSI de Microsoft Windows Server para Microsoft Active Directory (AD), que funciona como DNS para la instancia en la que se han registrado los hosts y VM. Esta opción se despliega de forma predeterminada para V1.9 e instancias posteriores.
 * **Dos VM dedicadas y altamente disponibles de Windows Server en el clúster de gestión**: Se despliegan dos VM Microsoft Windows, que ayudan a mejorar la seguridad y la solidez.
 
-Debe proporcionar dos licencias de Microsoft Windows Server 2016 si configura la instancia de modo que utilice las dos máquinas virtuales Microsoft Windows. Utilice la licencia de Microsoft Windows Server 2016 Standard Edition, o la licencia de Microsoft Windows Server 2016 Datacenter Edition, o ambas.
-{:important}
+Debe proporcionar dos licencias de Microsoft Windows Server 2016 Standard Edition si configura la instancia de modo que utilice las dos máquinas virtuales Microsoft Windows. {:important}
 
 Cada licencia solo se puede asignar a un solo servidor físico y cubre un máximo de dos procesadores físicos. Una licencia de edición Standard puede ejecutar dos máquinas virtuales virtualizadas de Microsoft Windows por servidor de 2 procesadores. Por lo tanto, se necesitan dos licencias, ya que se despliegan dos VM Microsoft Windows en dos hosts distintos.
 
@@ -260,9 +260,11 @@ Para obtener más información sobre cómo solicitar licencias de Windows Server
 ## Resumen del pedido
 {: #vc_nsx-t_orderinginstance-order-summary}
 
-En función de la configuración seleccionada para la instancia, el coste estimado se genera y se muestra al instante en la sección **Resumen de pedido** en el panel derecho. Pulse **Detalles sobre precios** en la parte inferior del panel derecho para generar un documento PDF que proporcione la información estimada.
+En función de la configuración seleccionada, el coste estimado se genera y se muestra al instante en el panel derecho **Resumen de pedido**. Pulse **Detalle de precios** para generar un documento PDF con el resumen de coste de los recursos de {{site.data.keyword.vmwaresolutions_short}}. 
 
-## Procedimiento para solicitar instancias de vCenter Server
+También puede añadir los recursos suministrados a la herramienta de estimación {{site.data.keyword.cloud_notm}}, pulsando **Añadir a estimación**. Esto es útil si desea estimar el coste de los recursos estimare {{site.data.keyword.vmwaresolutions_short}} seleccionados junto con otros recursos de {{site.data.keyword.cloud_notm}} que le podría interesar adquirir. 
+
+## Procedimiento para solicitar instancias de vCenter Server con NSX-T
 {: #vc_nsx-t_orderinginstance-procedure}
 
 1. Desde el catálogo de {{site.data.keyword.cloud_notm}}, pulse **VMware** desde el panel de navegación de la izquierda y, a continuación, pulse **vCenter Server** en la sección **Centros de datos virtuales**.
@@ -303,13 +305,10 @@ En función de la configuración seleccionada para la instancia, el coste estima
 ## Resultados después de solicitar instancias de vCenter Server con NSX-T
 {: #vc_nsx-t_orderinginstance-results}
 
-El despliegue de la instancia comienza automáticamente. Recibirá una confirmación de que el pedido se está procesando y puede comprobar el estado del despliegue consultando los detalles de la instancia.
-
-Cuando la instancia se haya desplegado correctamente, los componentes que se describen en [Especificaciones técnicas para las instancias de vCenter Server con NSX-T](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_overview#vc_nsx-t_overview-specs) se instalan en la plataforma virtual de VMware. Los servidores ESXi que ha solicitado se agrupan de forma predeterminada como **cluster1**.
-
-Cuando la instancia esté lista para ser utilizada, el estado de la instancia pasará a ser **Listo para su uso** y recibirá una notificación por correo electrónico.
-
-Cuando se solicita una instancia secundaria, es posible que el cliente web de VMware vSphere para la instancia primaria (enlazada a la secundaria) se rearranque cuando finalice el pedido de la instancia secundaria.
+* El despliegue de la instancia se inicia automáticamente y se recibe la confirmación de que el pedido se está procesando. Puede comprobar el estado de despliegue, incluidos los problemas que puedan requerir su atención, mediante la visualización de la sección **Historial de despliegue** de los detalles de la instancia. 
+* Cuando la instancia se haya desplegado correctamente, los componentes que se describen en [Especificaciones técnicas para las instancias de vCenter Server con NSX-T](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_overview#vc_nsx-t_overview-specs) se instalan en la plataforma virtual de VMware. Los servidores ESXi que ha solicitado se agrupan de forma predeterminada como **cluster1**.
+* Cuando la instancia esté lista para ser utilizada, el estado de la instancia pasará a ser **Listo para su uso** y recibirá una notificación por correo electrónico.
+* Cuando se solicita una instancia secundaria, es posible que el cliente web de VMware vSphere para la instancia primaria (enlazada a la secundaria) se rearranque cuando finalice el pedido de la instancia secundaria.
 
 ## Qué hacer a continuación
 {: #vc_nsx-t_orderinginstance-next}
@@ -331,7 +330,7 @@ Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresol
 ## Enlaces relacionados
 {: #vc_nsx-t_orderinginstance-related}
 
-* [Registro de una cuenta de {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)
+* [Registro de una cuenta de {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts)
 * [Visualización de instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
 * [Configuración de varios sitios de instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_multisite)
 * [Adición, visualización y supresión de clústeres para instancias de vCenter Server con NSX-T](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_nsx-t_addingviewingcluster#vc_nsx-t_addingviewingcluster)

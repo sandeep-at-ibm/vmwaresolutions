@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-06-18"
+
+keywords: IBM Integrated Managed Infrastructure, request IBM IMI, tech specs IMI
 
 subcollection: vmware-solutions
 
@@ -24,7 +26,6 @@ IMI fornisce servizi gestiti per le tue istanze vCenter Server. Questi servizi g
 {: #managing_imi-specs}
 
 Nel servizio gestito IMI sono incluse le seguenti specifiche:
-
 * Opzioni di copertura: 8X5, 16X5 o 24X7
 * Strumenti di gestione e processo di gestione dei servizi IT con responsabilità per la distribuzione generale
 * Gestione della conformità
@@ -38,7 +39,7 @@ Nel servizio gestito IMI sono incluse le seguenti specifiche:
 2. Scorri la pagina e fai clic sulla scheda **Servizi gestiti da IMI** che si trova in **Ordina servizi gestiti aggiuntivi**.
 3. Nella pagina **Servizi gestiti da IMI**, nella casella **Attività pre-vendita di IMI**, immetti una descrizione dei tuoi requisiti per i servizi IMI e fai clic su **Richiesta di una consultazione**.
 
-Un rappresentante di prevendita IMI ti contatterà utilizzando le tue informazioni di contatto {{site.data.keyword.cloud_notm}} per aiutarti con i servizi di cui hai bisogno.
+  Un rappresentante di {{site.data.keyword.vmwaresolutions_short}} ti contatterà utilizzando le tue informazioni di contatto {{site.data.keyword.cloud_notm}} per aiutarti con la soluzione di cui hai bisogno.
 
 ## Link correlati
 {: #managing_imi-related}

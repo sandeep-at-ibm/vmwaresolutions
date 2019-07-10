@@ -20,7 +20,7 @@ HCX consta de un lado de nube (destino) y uno o más clientes (origen). Se debe 
 {: #vcshcx-components-cloud-client-side}
 
 HCX tiene el concepto de lado de la nube (destino) y lado del cliente (origen).
-- Lado de la nube - vCenter Server on 	{{site.data.keyword.cloud}} con el paquete híbrido. El lado de la nube de HCX es la instancia de esclavo de una relación de cliente HCX con la nube. Se controla del lado del cliente.
+- Lado de la nube - vCenter Server on 	{{site.data.keyword.cloud}} con el paquete híbrido. El lado de la nube de HCX es la instancia de esclavo de una relación de cliente de HCX con la nube. Se controla del lado del cliente.
 - Lado del cliente - Cualquier instancia de vSphere que cumpla los requisitos previos para la instalación y la operación. El lado del cliente de HCX es el maestro que controla la instancia de esclavo del lado de la nube a través de su complemento de interfaz de usuario de cliente web de vCenter.
 
 ## HCX Manager

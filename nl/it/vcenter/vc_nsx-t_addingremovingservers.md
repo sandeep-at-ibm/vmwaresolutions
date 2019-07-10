@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-03"
+lastupdated: "2019-06-18"
+
+keywords: vCenter Server NSX-T add hosts, add servers to vCenter Server NSX-T, remove hosts from vCenter Server NSX-T
 
 subcollection: vmware-solutions
 
@@ -20,6 +22,7 @@ subcollection: vmware-solutions
 
 Puoi espandere o contrarre la capacità della tua istanza VMware vCenter Server with NSX-T in base alle tue esigenze aziendali, aggiungendo o rimuovendo server ESXi o archiviazione NFS (network file system).
 
+* A partire dalla release V3.1, puoi aggiungere dei nuovi server ESXi a un cluster esistente selezionando una configurazione esistente oppure una configurazione alternativa rispetto agli host esistenti nel cluster. Le configurazioni esistenti sono disponibili per la selezione istantanea quando ordini il tuo nuovo server. Per evitare problemi di prestazioni o di stabilità, ti consigliamo di fare in modo che i cluster utilizzino la stessa configurazione, oppure una simile, per quanto riguarda la CPU, la RAM e l'archiviazione. Questa funzionalità è utile per gli aggiornamenti hardware all'interno dello stesso cluster. Un cluster può avere solo un singolo tipo di archiviazione.
 * A partire dalla release V3.0, puoi aggiungere o rimuovere simultaneamente l'archiviazione NFS e i server ESXi sui cluster nello stato **Ready to Use** (Pronto per l'utilizzo). Ad esempio, puoi aggiungere o rimuovere un server ESXi in un cluster e aggiungere o rimuovere l'archiviazione NFS in un altro cluster.
 * A partire dalla release V2.9, puoi aggiungere dei nuovi server ESXi a un cluster mentre i server sono in modalità di manutenzione. Inoltre, puoi aggiungere o rimuovere simultaneamente i server ESXi in più cluster.
 
@@ -46,8 +49,18 @@ Puoi espandere o contrarre la capacità della tua istanza VMware vCenter Server 
 4. Nella tabella **CLUSTER**, fai clic sul cluster a cui vuoi aggiungere i server ESXi.
 5. Nella sezione **Server ESXi**, fai clic su **Aggiungi**.
 6. Nella finestra **Aggiungi server**, immetti il numero di server che desideri aggiungere.
-7. Facoltativamente, seleziona la casella di spunta per aggiungere i server durante la modalità di manutenzione.
-8. Esamina il costo stimato e fai clic su **Aggiungi**.
+7. Facoltativamente, seleziona la casella di spunta per aggiungere i server durante la modalità di manutenzione. La casella di spunta è selezionata per impostazione predefinita.
+
+   Quando esegui il provisioning del nuovo server, le VM (Virtual Machine) vengono immediatamente migrate ai nuovi server se non selezioni la casella di spunta **Modalità di manutenzione**. Non ricevi un messaggio di conferma prima che la migrazione inizi.
+   {:important}
+
+8. Completa la configurazione Bare Metal.
+   * Seleziona una configurazione dagli host esistenti nel cluster.
+   * Seleziona una nuova configurazione {{site.data.keyword.baremetal_short_sing}} e specifica il modello di CPU e la dimensione della RAM.
+9. Completa la configurazione di archiviazione. Specifica i tipi di disco per i dischi di capacità e cache, il numero di dischi e l'edizione della licenza vSAN. Se vuoi più spazio di archiviazione, seleziona la casella **Alte prestazioni con Intel Optane**.
+10. Esamina il costo stimato e fai clic su **Aggiungi**.
+
+  Puoi anche aggiungere le risorse di cui è stato eseguito il provisioning allo strumento di stima {{site.data.keyword.cloud_notm}} facendo clic su **Aggiungi alla stima**. Ciò è utile se desideri stimare il costo delle risorse {{site.data.keyword.vmwaresolutions_short}} selezionate insieme ad altre risorse {{site.data.keyword.cloud_notm}} di cui potresti prendere in considerazione l'acquisto.
 
 ### Risultati dopo l'aggiunta dei server ESXi
 {: #vc_nsx-t_addingremovingservers-adding-results}
@@ -107,7 +120,9 @@ Non aggiungere l'archiviazione NFS dal client web VMware vSphere. Le modifiche c
 6. Nella finestra **Storage**, completa la configurazione di archiviazione.
    * Se vuoi aggiungere e configurare le stesse impostazioni in tutte le condivisioni file, specifica il **Numero di condivisioni**, le **Prestazioni** e la **Dimensione (GB)**.
    * Se vuoi aggiungere e configurare singolarmente le condivisioni file, seleziona **Configura condivisioni singolarmente**, quindi fai clic sull'icona **+** accanto all'etichetta **Aggiungi storage condiviso** e seleziona le **Prestazioni** e la **Dimensione (GB)** per ogni singola condivisione file. Devi selezionare almeno una condivisione file.
-7. Fai clic su **Aggiungi storage NFS**.
+7. Esamina il costo stimato e fai clic su **Aggiungi archiviazione NFS**.
+
+  Puoi anche aggiungere le risorse di cui è stato eseguito il provisioning allo strumento di stima {{site.data.keyword.cloud_notm}} facendo clic su **Aggiungi alla stima**. Ciò è utile se desideri stimare il costo delle risorse {{site.data.keyword.vmwaresolutions_short}} selezionate insieme ad altre risorse {{site.data.keyword.cloud_notm}} di cui potresti prendere in considerazione l'acquisto.
 
 ### Risultati dopo l'aggiunta dell'archiviazione NFS
 {: #vc_nsx-t_addingremovingservers-adding-nfs-storage-results}

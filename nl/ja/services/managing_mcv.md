@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-06-18"
+
+keywords: Mission Critical VMware, request Mission Critical, IBM consultation
 
 subcollection: vmware-solutions
 
@@ -19,7 +21,7 @@ subcollection: vmware-solutions
 3. 「Mission Critical VMware on {{site.data.keyword.cloud_notm}} (Mission Critical VMware on {{site.data.keyword.cloud_notm}})」ページの**「Mission Critical VMware のお問い合わせ先 (Contact us for Mission Critical VMware)」**ボックスで、**「コンサルテーションの要求」**をクリックします。
 4. 「IBM Services Expert Hub」ページで**「Schedule a consultation」**をクリックしてサービス・エキスパートに 30 分の予約を入れます。
 
-Mission Critical VMware on {{site.data.keyword.cloud_notm}} の担当者が、お客様の連絡先情報を使用してお客様に連絡し、必要な解決方法が分かるようにお手伝いします。
+  {{site.data.keyword.vmwaresolutions_short}} の担当者が、お客様の {{site.data.keyword.cloud_notm}} の連絡先情報を使用してお客様に連絡し、必要な解決方法が分かるようにお手伝いします。
 
 ## 関連リンク
 {: #managing_mcv-related}

@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-26"
+lastupdated: "2019-06-18"
+
+keywords: vSphere order cluster, order vSphere, order vSphere cluster
 
 subcollection: vmware-solutions
 
@@ -192,7 +194,6 @@ L'etichetta del dominio secondario deve rispettare i seguenti requisiti:
 *  Sono consentiti solo caratteri alfanumerici e trattini (-).
 *  L'etichetta del dominio secondario deve iniziare e terminare con un carattere alfanumerico.
 *  La lunghezza massima dell'etichetta del dominio secondario è di 10 caratteri.
-*  L'etichetta del dominio secondario deve essere univoca all'interno del tuo account.
 
 ### Nome dominio
 {: #vs_orderinginstances-domain-name}
@@ -246,7 +247,9 @@ Puoi anche scegliere se includere la coppia FortiGate Physical Appliance 300 Ser
 ## Riepilogo ordine
 {: #vs_orderinginstances-order-summary}
 
-In base alle tue configurazioni, il costo stimato viene generato e visualizzato immediatamente nel riquadro **Riepilogo ordine** sulla destra. Fai clic su **Dettagli sui prezzi** per generare un documento PDF che fornisce i dettagli della stima.
+In base alla configurazione che hai selezionato, il costo stimato viene generato e visualizzato istantaneamente nel riquadro **Riepilogo ordine** sulla destra. Fai clic su **Dettagli sui prezzi** per generare un documento PDF con il riepilogo del costo per le risorse {{site.data.keyword.vmwaresolutions_short}}.
+
+Puoi anche aggiungere le risorse di cui è stato eseguito il provisioning allo strumento di stima {{site.data.keyword.cloud_notm}} facendo clic su **Aggiungi alla stima**. Ciò è utile se desideri stimare il costo delle risorse {{site.data.keyword.vmwaresolutions_short}} selezionate insieme ad altre risorse {{site.data.keyword.cloud_notm}} di cui potresti prendere in considerazione l'acquisto.
 
 ## Procedura per ordinare i cluster vSphere
 {: #vs_orderinginstances-procedure}
@@ -282,7 +285,7 @@ In base alle tue configurazioni, il costo stimato viene generato e visualizzato 
    Vengono installati solo i {{site.data.keyword.baremetal_short}}. Sei responsabile dell'installazione e della configurazione dei vari componenti dopo la distribuzione del cluster, come VMware vCenter, VMware NSX, VMware vSAN.
    {:note}
 
-### Risultati
+### Risultati dopo l'ordine dei cluster vSphere
 {: #vs_orderinginstances-results}
 
 Se hai salvato la configurazione del cluster come template, ricevi una notifica dalla console che indica che la configurazione è stata salvata correttamente e puoi quindi trovare il template nell'elenco **Configurazioni cluster**.

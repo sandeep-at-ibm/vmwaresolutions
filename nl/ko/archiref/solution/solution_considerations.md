@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-05-22"
 
 subcollection: vmware-solutions
 
@@ -44,10 +44,10 @@ subcollection: vmware-solutions
 
 다음 단계를 완료하여 {{site.data.keyword.cloud_notm}} 네트워크 및 VMware 관리 컴포넌트에 대한 액세스를 관리하고 {{site.data.keyword.cloud_notm}} 네트워크 토폴로지를 계획하십시오.
 
-- [{{site.data.keyword.cloud_notm}} VPN](https://www.softlayer.com/vpn-access) 또는 [{{site.data.keyword.cloud_notm}} Direct-Link 연결](https://www.ibm.com/cloud/direct-link)을 사용하여 인스턴스 관리 엔드포인트에 액세스하십시오.
-- 인스턴스 내에서 공용 네트워크 연결에 대한 전략을 설계하십시오. 옵션에는 샘플 고객 VMware NSX Edge Services Gateway(ESG), 게이트웨이 어플라이언스(예: Vyatta 및 FortiGate) 및 {{site.data.keyword.cloud_notm}} 네트워크 또는 DirectLink를 통해 액세스한 자체 네트워크에 배치된 프록시 서버가 포함됩니다.
-- [{{site.data.keyword.cloud_notm}} 휴대용 IP 주소](/docs/infrastructure/subnets?topic=subnets-getting-started-subnets-ips#getting-started-subnets-ips)를 사용하여 {{site.data.keyword.cloud_notm}} VLAN에 또는 [고유 IP 주소를 사용하여 NSX 논리 스위치(VXLANs)](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_overview)에 워크로드를 배치할지 계획하십시오. NSX SDN(Software-Defined Networking)을 사용하면 강력한 유연성을 제공하여 {{site.data.keyword.cloud_notm}}에서 워크로드 네트워크를 관리하고 보안을 설정할 수 있습니다.
-- NSX ESG, [IBM Cloud Vyatta](https://cloud.ibm.com/catalog/infrastructure/virtual-router-appliance) 및 DirectLink 피어링을 사용하여 워크로드(네트워크 주소 변환, 가상 사설망(VPN), 라우팅)에 대한 연결을 계획하십시오.
+- [{{site.data.keyword.cloud_notm}} VPN](https://www.softlayer.com/vpn-access) 또는 [{{site.data.keyword.cloud_notm}} Direct Link 연결](https://www.ibm.com/cloud/direct-link)을 사용하여 인스턴스 관리 엔드포인트에 액세스하십시오.
+- 인스턴스 내에서 공용 네트워크 연결에 대한 전략을 설계하십시오. 옵션에는 샘플 고객 VMware NSX Edge Services Gateway(ESG), 게이트웨이 어플라이언스(예: Vyatta 및 FortiGate) 및 {{site.data.keyword.cloud_notm}} 네트워크 또는 Direct Link를 통해 액세스한 자체 네트워크에 배치된 프록시 서버가 포함됩니다.
+- [{{site.data.keyword.cloud_notm}} 포터블 IP 주소](/docs/infrastructure/subnets?topic=subnets-getting-started)를 사용하여 {{site.data.keyword.cloud_notm}} VLAN에 또는 [고유 IP 주소를 사용하여 NSX 논리 스위치(VXLANs)](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_overview)에 워크로드를 배치할지 계획하십시오. NSX SDN(Software-Defined Networking)을 사용하면 강력한 유연성을 제공하여 {{site.data.keyword.cloud_notm}}에서 워크로드 네트워크를 관리하고 보안을 설정할 수 있습니다.
+- NSX ESG, [IBM Cloud Vyatta](https://cloud.ibm.com/catalog/infrastructure/virtual-router-appliance) 및 Direct Link 피어링을 사용하여 워크로드(네트워크 주소 변환, 가상 사설망(VPN), 라우팅)에 대한 연결을 계획하십시오.
 - 교차 vCenter NSX를 구현하는 경우 로컬 워크로드를 배치하기 전에 로컬 세그먼트 ID 범위가 겹치지 않는지 확인하십시오.
 
 ## 보안 계획 및 기록

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-21"
+lastupdated: "2019-05-22"
 
 subcollection: vmware-solutions
 
@@ -47,7 +47,7 @@ Las direcciones IP primarias o portátiles se pueden convertir en direccionables
 ## Direccionamiento virtual y reenvío
 {: #vcsnsxt-overview-ic4vnetwork-vrf}
 
-Las cuentas de {{site.data.keyword.cloud_notm}} también se pueden configurar como cuentas de direccionamiento virtual y reenvío (VRF). Una cuenta VRF habilita el direccionamiento global automático entre bloques de IP de subred dentro de la cuenta. Todas las cuentas con las conexiones de Direct-Link deben convertirse a, o crearse como, una cuenta de VRF.
+Las cuentas de {{site.data.keyword.cloud_notm}} también se pueden configurar como cuentas de direccionamiento virtual y reenvío (VRF). Una cuenta VRF habilita el direccionamiento global automático entre bloques de IP de subred dentro de la cuenta. Todas las cuentas con las conexiones de Direct Link deben convertirse a, o crearse como, una cuenta de VRF. 
 
 ## Conexiones de host físico
 {: #vcsnsxt-overview-ic4vnetwork-host-connect}
@@ -84,7 +84,9 @@ Privada B 	|Portátil 	|Asignada para vSAN si se utiliza.
 Privada B 	|Portátil 	|Asignada para NAS si se utiliza.
 Privada B 	|Portátil 	|Asignada para vMotion.
 
-Este diseño se implementa con hosts físicos e instancias de sistema virtual (VSI) en las VLAN y se configura para que apunte al direccionador de cliente de "red privada" de fondo (BCR) de {{site.data.keyword.cloud_notm}} como ruta predeterminada. Las instancias de vCenter Server permiten el uso de redes definidas por software. Las superposiciones de red creadas por NSX que incluyen direccionamiento a subredes VLAN no son conocidas para los direccionadores gestionados por {{site.data.keyword.cloud_notm}} y es posible que tenga que crear rutas estáticas, reglas de cortafuegos y reglas NAT para gestionar correctamente los flujos de red.
+Este diseño se implementa con hosts físicos e instancias de sistema virtual (VSI) en las VLAN y se configura para que apunte al direccionador de cliente de "red privada" de fondo (BCR) de {{site.data.keyword.cloud_notm}} como ruta predeterminada. Aunque las instancias de vCenter Server permiten el uso de redes definidas por software, las superposiciones de red creadas
+por NSX que incluyan direccionamiento a subredes VLAN no son conocidas por los direccionadores gestionados por
+{{site.data.keyword.cloud_notm}}. Es posible que tenga que crear rutas estáticas, reglas de cortafuegos y reglas NAT para gestionar adecuadamente los flujos de red. 
 
 Las conexiones de red privada están configuradas para utilizar tramas jumbo con un tamaño de MTU de 9000, lo que mejora el rendimiento de las grandes transferencias de datos, como el almacenamiento y vMotion. Este es el MTU máximo permitido dentro de VMware y por {{site.data.keyword.cloud_notm}}. Las conexiones de red pública utilizan una MTU Ethernet estándar de 1500. Eso se debe mantener, ya que cualquier cambio puede provocar la fragmentación de paquetes a través de Internet.
 

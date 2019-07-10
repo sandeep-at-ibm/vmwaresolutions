@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-05-28"
+
+keywords: FAQ, host, ESXi server
 
 subcollection: vmware-solutions
 

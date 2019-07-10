@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-14"
+
+keywords: KMIP for VMware, KMIP stand-alone, tech specs KMIP
 
 subcollection: vmware-solutions
 
@@ -48,7 +50,7 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} インスタンスをイン�
    * 作成されたサービス ID の API 鍵を所持していること。 その鍵は、サービスを注文する際に必要になります。
    * Key Protect または HPCS の GUI または API を使用して、少なくとも 1 つのカスタマー・ルート鍵 (CRK) を作成したこと。
       * Key Protect GUI または API を使用してルート鍵を作成する方法について詳しくは、[ルート鍵の作成](/docs/services/key-protect?topic=key-protect-create-root-keys#create-root-keys)または [IBM Key Protect API](https://cloud.ibm.com/apidocs/key-protect)を参照してください。
-      * HPCS GUI または API を使用してルート鍵を作成する方法について詳しくは、[ルート鍵の作成](/docs/hs-crypto/get-started?topic=hs-crypto-create-root-keys)または [IBM Cloud Hyper Protect Crypto Services API](https://cloud.ibm.com/apidocs/hp-crypto) を参照してください。
+      * HPCS GUI または API を使用してルート鍵を作成する方法について詳しくは、[ルート鍵の作成](/docs/hs-crypto/get-started?topic=hs-crypto-create-root-keys)または [IBM Cloud Hyper Protect Crypto Services API](https://cloud.ibm.com/apidocs/hs-crypto) を参照してください。
 
      **重要:** CRK がなければサービスを注文することはできません。 既存の鍵素材を使用して CRK を作成するという方法を使用すると共に、作成している鍵素材のバックアップを取ることを強くお勧めします。 これにより、CRK の保管のために Key Protect または HPCS を適用しているデータ・センターの機能が障害によって失われた場合に、鍵をリカバリーできるようになります。
 * {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの Virtual Routing and Forwarding (VRF) およびサービス・エンドポイントへの接続を有効にしたことを確認してください。 詳しくは、以下を参照してください。

@@ -116,7 +116,7 @@ V2.8 リリース以降、このサービスは、VMware インスタンスと�
 * [{{site.data.keyword.vmwaresolutions_short}} アーキテクチャー (NSX-V、NSX-T)
 ](/docs/services/vmwaresolutions/services?topic=vmware-solutions-solution_overview#solution_overview)
 * [Caveonix RiskForesight リファレンス・アーキテクチャー](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-on-vcs)
-* [HCX on {{site.data.keyword.cloud_notm}} のデプロイメントと操作のガイド](/docs/services/vmwaresolutions/archiref/vcshcx?topic=vmware-solutions-vcshcx-intro)
+* [ VMware ソリューション向け VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-vcs-intro)
 
 ## ユーザー・インターフェースの更新と向上
 {: #relnotes_v28-ui}

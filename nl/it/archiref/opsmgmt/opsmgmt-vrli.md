@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-17"
+lastupdated: "2019-03-06"
 
 ---
 
@@ -27,15 +27,16 @@ In questa progettazione, ogni ubicazione ha un cluster vRLI indipendente distrib
 * Nodo master - Nodo iniziale richiesto nel cluster. Il nodo master è responsabile delle query e dell'inserimento dei log. L'IU web del nodo master è l'unico pannello di controllo per tale cluster di vRealize Log Insight. Tutte le query eseguite sui dati vengono indirizzate al master che, a sua volta, distribuisce il carico di lavoro ai nodi di lavoro.
 * Nodo di lavoro - Sono necessari almeno tre nodi per formare un cluster con la possibilità di aggiungere più nodi di lavoro per il ridimensionamento incrementale. Un nodo di lavoro acquisisce i log e li archivia localmente.
 * Programma di bilanciamento del carico integrato - Fornisce l'alta disponibilità utilizzando la configurazione di bilanciamento del carico proprietaria (non è richiesto alcun programma di bilanciamento del carico esterno).
-* Forwarder Log Insight – Viene distribuito per ricevere i log dai componenti di sovrapposizione NSX. Inoltre, può essere utilizzato da un cliente se desidera inviare i log dalle VM di calcolo. Il Forwarder Log Insight è un singolo nodo master di vRealize Log Insight che viene utilizzato come aggregatore di syslog remoto per inoltrare gli avvisi al cluster vRLI. Poiché le reti supportate da VXLAN vengono indirizzate al di fuori dello spazio di indirizzi BYOIP, è necessario implementare delle regole NAT sull'ESG NSX. Sono disponibili le seguenti dimensioni e viene selezionata quella appropriata:
+* Forwarder Log Insight – Viene distribuito per ricevere i log dai componenti di sovrapposizione NSX. Inoltre, può essere utilizzato da un cliente se desidera inviare i log dalle VM di calcolo. Il Forwarder Log Insight è un singolo nodo master di vRealize Log Insight che viene utilizzato come aggregatore di syslog remoto per inoltrare gli avvisi al cluster vRLI. Poiché gli indirizzi supportati da VXLA sono fuori dallo spazio di indirizzi BYOIP, è necessario implementare delle regole NAT sull'ESG NSX. 
 
- * Small – 2000 eventi al secondo
- * Medium – 5000 eventi al secondo
- * Large – 15000 eventi al secondo
+Sono disponibili le seguenti dimensioni e viene selezionata quella appropriata:
+* Small – 2.000 eventi al secondo
+* Medium - 5.000 eventi al secondo
+* Large - 15.000 eventi al secondo
 
 ![Diagramma dei componenti Log Insights](../../images/opsmgmt-vrlicomponents.svg "Diagramma dei componenti Log Insights")
 
-vRLI raccoglie i log in modo da fornire informazioni di monitoraggio sull'ambiente da un'ubicazione centrale.
+vRLI raccoglie i log per fornire informazioni di monitoraggio sull'ambiente da un'ubicazione centrale.
 
 vRLI raccoglie gli eventi di log dai seguenti componenti di infrastruttura virtuale e di gestione cloud (client di registrazione):
 * vCenter
@@ -87,7 +88,7 @@ La distribuzione del dispositivo vRLI richiede tre indirizzi IP dalla sottorete 
 * Dispositivi NSX-V/T
 * XLAN di espansione degli strumenti
 * Reti del cliente
-* Server NTP (time.services.softlayer.com)
+* Server NTP (`time.services.softlayer.com`)
 * {{site.data.keyword.vmwaresolutions_short}} Active Directory/DNS
 * I raccoglitori remoti richiedono regole NAT sull'ESG NSX per abilitare la connettività al nodo master, alla replica del nodo master e ai nodi di dati
 
@@ -99,18 +100,18 @@ Tabella 2. Porte di Log Insight
 | Descrizione                                                   | Porta       | Protocollo |
 | ------------------------------------------------------------- | ---------- | -------- |
 | Traffico syslog in uscita configurato come destinazione forwarder | 514        | TCP, UDP |
-| Dati syslog su SSL                                            | 1514, 6514 | TCP      |
-| API di inserimento Log Insight                                | 9000       | TCP      |
-| API di inserimento Log Insight su SSL                         | 9543       | TCP      |
-| Accesso SSH al dispositivo                                    | 22         | TCP      |
-|Interfaccia utente                                             | 80, 443    | TCP      |
+| Dati syslog su SSL                                          | 1514, 6514 | TCP      |
+| API di inserimento Log Insight                                     | 9000       | TCP      |
+| API di inserimento Log Insight su SSL                            | 9543       | TCP      |
+| Accesso SSH al dispositivo                                       | 22         | TCP      |
+| Interfaccia utente                                                | 80, 443    | TCP      |
 | NTP                                                           | 123        | UDP      |
 | SMTP                                                          | 25         | TCP      |
 | DNS                                                           | 53         | UDP      |
 | LDAP/LDAPS                                                    | 389, 636   | TCP      |
 | LDAP GC                                                       | 3268/3269  | TCP      |
 | vCenter                                                       | 443        | TCP      |
-| Dispositivo vRealize Operations Manager                       | 443        | TCP      |
+| Dispositivo vRealize Operations Manager                         | 443        | TCP      |
 
 ## Autenticazione
 {: #opsmgmt-vrli-auth}
@@ -123,7 +124,7 @@ La gestione utenti per vRLI richiede vIDM (VMware Identity Manager), che si inte
 ## Pacchetti di contenuti in vRealize Log Insight
 {: #opsmgmt-vrli-content}
 
-I pacchetti di contenuti forniscono un monitoraggio granulare aggiuntivo sull'infrastruttura virtuale e consentono di richiamare, estrarre e analizzare i log in un formato leggibile. In questo modo, vRLI salva query di log e avvisi e puoi utilizzare i dashboard per un monitoraggio efficiente.
+I pacchetti di contenuti forniscono un monitoraggio più granulare sull'infrastruttura virtuale e consentono di richiamare, estrarre e analizzare i log in un formato leggibile. In questo modo, vRLI salva query di log e avvisi e puoi utilizzare i dashboard per un monitoraggio efficiente.
 
 I seguenti componenti sono installati per impostazione predefinita:
 * Generale

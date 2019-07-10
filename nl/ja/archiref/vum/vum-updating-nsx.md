@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-15"
 
 subcollection: vmware-solutions
 
@@ -44,7 +44,7 @@ NSX Manager が正常にアップグレードされた後に NSX をダウング
 4. ダウンロード・ページで、**「Upgrade Bundle, Download Now」**を選択します。
 5. 適切なフォルダーにダウンロードします。
 6. **NSX Manager をアップグレードします**。
-  - IC4VS コンソールに記載されている IP アドレスと資格情報を使用して NSX Manager 仮想アプライアンスにログインし、ホーム・ページの「Upgrade」ボタンをクリックします。
+  - IBM Cloud for VMware Solutions コンソールに記載されている IP アドレスと資格情報を使用して NSX Manager 仮想アプライアンスにログインし、ホーム・ページの「Upgrade」ボタンをクリックします。
   - NSX Manager にログインします。
   - **「Appliance Management」**で、**「Backups & Restore」**をクリックします。
   - 「Backup」をクリックして、適切なファイル名を入力します。 VMware は、NSX Manager データを復元する前に NSX Manager 装置を再インストールすることを推奨しています。 既存の NSX Manager アプライアンスでのリストア操作は機能しますが、正式にはサポートされていません。 ベスト・プラクティスは、新しくデプロイされた NSX Manager アプライアンスの IP 情報とバックアップ・ロケーション情報を指定する際に使用できるように、NSX Manager アプライアンスの IP 設定をメモしておくことです。

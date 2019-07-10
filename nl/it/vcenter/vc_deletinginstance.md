@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-05-28"
+
+keywords: vCenter Server delete instance, delete vCenter Server, remove vCenter Server
 
 subcollection: vmware-solutions
 
@@ -62,4 +64,5 @@ Per l'istanza eliminata ti vengono addebitati costi fino alla fine del ciclo di 
 * [Ordine di istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
 * [Visualizzazione delle istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
 * [Espansione e contrazione della capacità per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
+* [Annullamento dei server virtuali](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)
 * [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

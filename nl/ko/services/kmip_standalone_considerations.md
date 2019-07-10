@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-14"
+
+keywords: KMIP for VMware, KMIP stand-alone, tech specs KMIP
 
 subcollection: vmware-solutions
 
@@ -48,7 +50,7 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} 인스턴스를 설치하기
    * 작성된 서비스 ID에 대한 API 키가 있습니다. 이 키는 서비스를 주문할 때 필요합니다.
    * Key Protect 또는 HPCS의 GUI 또는 API를 사용하여 하나 이상의 고객 루트 키(CRK)를 작성했습니다.
       * Key Protect GUI 또는 API를 사용한 루트 키 작성에 대한 자세한 정보는 [루트 키 작성](/docs/services/key-protect?topic=key-protect-create-root-keys#create-root-keys) 또는 [IBM Key Protect API](https://cloud.ibm.com/apidocs/key-protect)를 참조하십시오.
-      * HPCS GUI 또는 API를 사용한 루트 키 작성에 대한 자세한 정보는 [루트 키 작성](/docs/hs-crypto/get-started?topic=hs-crypto-create-root-keys) 또는 [IBM Cloud Hyper Protect Crypto Services API](https://cloud.ibm.com/apidocs/hp-crypto)를 참조하십시오.
+      * HPCS GUI 또는 API를 사용한 루트 키 작성에 대한 자세한 정보는 [루트 키 작성](/docs/hs-crypto/get-started?topic=hs-crypto-create-root-keys) 또는 [IBM Cloud Hyper Protect Crypto Services API](https://cloud.ibm.com/apidocs/hs-crypto)를 참조하십시오.
 
      **중요:** CRK 없이는 서비스를 주문할 수 없습니다. 기존 키 자료를 사용하여 CRK를 작성하는 방법을 사용하고 작성하는 키 자료를 백업하는 것이 좋습니다. 이렇게 하면 CRK를 저장하기 위해 Key Protect 또는 HPCS가 적용된 데이터 센터에 장애가 발생하는 경우 키를 복구할 수 있습니다.
 * {{site.data.keyword.cloud_notm}} 인프라 계정이 VRF(Virtual Routing and Forwarding) 및 서비스 엔드포인트에 대한 연결에 사용 가능한지 확인하십시오. 자세한 정보는 다음을 참조하십시오.

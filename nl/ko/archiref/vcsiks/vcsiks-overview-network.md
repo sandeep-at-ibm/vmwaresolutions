@@ -80,7 +80,7 @@ Calico는 Kubernetes 작업자 노드에 Linux iptables 규칙을 설정하여, 
 
 1. 외부 사용자는 URL을 사용하여 웹 티어에 요청을 작성합니다.
 2. DNS는 IP 주소를 판별하는 데 사용됩니다. 이 IP 주소는 ALB 또는 Ingress Service에 지정되는 포터블 서브넷의 {{site.data.keyword.cloud_notm}} 공용 주소입니다.
-3. 공용 네트워크는 ALB 또는 Ingres Service를 호스트하는 작업자 노드에 자동으로 요청을 전달합니다.
+3. 공용 네트워크는 ALB 또는 Ingres Service를 호스팅하는 작업자 노드에 자동으로 요청을 전달합니다.
 4. 작업자 노드는 ALB 또는 Ingress 서비스의 내부 클러스터 IP 주소 및 포트 번호로 요청을 전달합니다. 이 내부 클러스터 IP 주소는 클러스터 안에서만 액세스할 수 있습니다.
 5. 작업자 노드 내에서, kube-proxy는 요청을 ALB 또는 Ingress 서비스로 라우팅합니다.
 6. 애플리케이션이 동일한 작업자 노드에 있는 경우에는 iptables를 사용하여 요청을 전달하는 데 어떤 내부 인터페이스가 사용되는지 판별합니다. 앱이 서로 다른 작업자 노드에 있으면, 작업자 노드가 다른 서브넷에 있는 경우에만 IP-in-IP 캡슐화를 사용하여 Calico vRouter가 해당 작업자 노드로 라우트됩니다.

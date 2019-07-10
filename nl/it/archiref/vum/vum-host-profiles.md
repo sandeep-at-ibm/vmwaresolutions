@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-15"
 
 subcollection: vmware-solutions
 
@@ -16,7 +16,7 @@ subcollection: vmware-solutions
 
 vCenter ha una funzione denominata Profili host. Questa funzione crea un profilo che cattura una configurazione dell'host di riferimento preconfigurata e convalidata e aiuta un amministratore di sistema a gestire le configurazioni host in un cluster. I profili host forniscono un meccanismo automatizzato e gestito centralmente per la configurazione dell'host e la conformità della configurazione. I profili host consentono di considerare la configurazione come un oggetto gestito, che dispone di un catalogo di parametri da configurare, come rete, archiviazione, sicurezza e altri parametri a livello di host. Questi profili host possono essere applicati a singoli host, a un cluster o a tutti gli host e i cluster associati a un profilo host.
 
-Poiché più host vSphere ESXi di VMware vCenter Server on {{site.data.keyword.cloud}} vengono distribuiti dall'automazione IC4VS che ha distribuito il cluster iniziale, ci sono meno scostamenti della configurazione rispetto ai metodi manuali di aggiunta degli host. Tuttavia, le azioni dell'amministratore di sistema, oltre all'automazione, possono rendere diversa la configurazione degli host. Ad esempio, viene aggiunto più spazio di archiviazione NFS o vengono aggiunte altre VLAN. L'utilizzo dei profili host per convalidare la configurazione di un nuovo host controllando la conformità di questo host con un host esistente, è un caso di utilizzo valido di questo strumento all'interno di {{site.data.keyword.cloud_notm}}.
+Poiché più host vSphere ESXi di VMware vCenter Server on {{site.data.keyword.cloud}} vengono distribuiti dall'automazione IBM Cloud for VMware Solutions che ha distribuito il cluster iniziale, ci sono meno scostamenti della configurazione rispetto ai metodi manuali di aggiunta degli host. Tuttavia, le azioni dell'amministratore di sistema, oltre all'automazione, possono rendere diversa la configurazione degli host. Ad esempio, viene aggiunto più spazio di archiviazione NFS o vengono aggiunte altre VLAN. L'utilizzo dei profili host per convalidare la configurazione di un nuovo host controllando la conformità di questo host con un host esistente, è un caso di utilizzo valido di questo strumento all'interno di {{site.data.keyword.cloud_notm}}.
 
 Per aggiungere altri host al tuo cluster vCenter Server, vedi [Espansione e contrazione della capacità per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers).
 

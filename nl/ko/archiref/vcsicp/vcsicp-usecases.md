@@ -27,8 +27,8 @@ VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle�
 
 ![VMware 하이브리드 클라우드 확장 서비스](../../images/vcsicp-hcx.svg "VMware 하이브리드 클라우드 확장 서비스")
 
-VMware 하이브리드 클라우드 확장 서비스는 온프레미스와 {{site.data.keyword.cloud_notm}} 간에 느슨하게 결합된 상호 연결을 작성하며 다음과 같은 기능을 사용할 수 있습니다.
-- **간단한 상호 연결** – 공용 인터넷, 사설 VPN 또는 {{site.data.keyword.cloud_notm}} Direct Link를 포함하는 실제 연결에서 논리적 네트워크 연결을 쉽게 설정할 수 있습니다.
+VMware 하이브리드 클라우드 확장 서비스는 온프레미스와 {{site.data.keyword.cloud_notm}} 간에 느슨하게 결합된 상호연결을 작성하며 다음과 같은 기능을 사용할 수 있습니다.
+- **간단한 상호연결** – 공용 인터넷, 사설 VPN 또는 {{site.data.keyword.cloud_notm}} Direct Link를 포함하는 실제 연결에서 논리적 네트워크 연결을 쉽게 설정할 수 있습니다.
 - **계층 2 확장** – 온프레미스 서브넷 및 IP 주소 지정을 포함하는 클라우드로 온프레미스 네트워크가 확장됩니다.
 - **암호화** – 네트워크 트래픽이 피어 사이트 간에 안전하게 암호화됩니다.
 - **네트워크 최적화** – 네트워크 트래픽이 가능한 빠르게 이동할 수 있도록 최상의 연결을 선택하여 효율적으로 연결이 흐르게 합니다.

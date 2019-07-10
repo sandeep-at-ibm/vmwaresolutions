@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-06"
+lastupdated: "2019-05-27"
+
+keywords: vCenter Server multi-site, multi-site configuration, multi-site deployment vCenter Server
 
 subcollection: vmware-solutions
 
@@ -43,7 +45,7 @@ vCenter Server インスタンスのマルチサイト構成は、V2.0 以降の
 ## vCenter Server のマルチサイト・デプロイメント
 {: #vc_multisite-deployment}
 
-マルチサイト構成機能では、1 つのプライマリー・サイトと最大 7 つのセカンダリー・サイトで構成されるハブ・アンド・スポークのトポロジーを使用します。サポートされるのは単一層のサイトであるため、他のセカンダリー・サイトにリンクされた後続のサイトは構成できません。 マルチサイト構成では、すべてのインスタンスにわたって、ESXi サーバーを合計 128 台使用できます。
+マルチサイト構成機能では、1 つのプライマリー・サイトと最大 7 つのセカンダリー・サイトで構成されるハブ・アンド・スポークのトポロジーを使用します。 サポートされるのは単一層のサイトであるため、他のセカンダリー・サイトにリンクされた後続のサイトは構成できません。 マルチサイト構成では、すべてのインスタンスにわたって、ESXi サーバーを合計 128 台使用できます。
 
 128 台を超える ESXi サーバーのマルチサイト・デプロイメントが必要な構成を使用する場合は、IBM サポートにお問い合わせください。 詳しくは、[IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)を参照してください。
 {:note}

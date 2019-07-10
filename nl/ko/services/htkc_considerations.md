@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-06-13"
+
+keywords: HyTrust KeyControl, HTKC, tech specs HTKC
 
 subcollection: vmware-solutions
 
@@ -20,7 +22,7 @@ subcollection: vmware-solutions
 
 HyTrust KeyControl on {{site.data.keyword.cloud}} 서비스는 암호화된 워크로드의 관리를 간소화합니다. 이 서비스는 키 스토리지, 키 분배, 키 순환 및 키 취소를 포함하는 암호화 키의 라이프사이클을 자동화하고 간소화합니다. 엔터프라이즈는 FIPS 140-2 준수 암호화를 사용하여 암호화 키를 규모에 맞게 쉽게 관리할 수 있습니다.
 
-이 서비스는 vSphere 6.5를 실행 중이며 V2.5 이상에 배치된(또는 업그레이드된) 인스턴스에 대해서만 사용할 수 있습니다. 설치된 현재 HyTrust KeyControl 버전은 4.3입니다.
+이 서비스는 vSphere 6.5를 실행 중이며 V2.5 이상에 배치된(또는 업그레이드된) 인스턴스에 대해서만 사용할 수 있습니다. 설치된 현재 HyTrust KeyControl 버전은 4.3.2입니다.
 {:note}
 
 ## HyTrust KeyControl on IBM Cloud의 기술 스펙

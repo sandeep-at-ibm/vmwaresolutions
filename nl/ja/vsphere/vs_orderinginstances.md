@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-26"
+lastupdated: "2019-06-18"
+
+keywords: vSphere order cluster, order vSphere, order vSphere cluster
 
 subcollection: vmware-solutions
 
@@ -192,7 +194,6 @@ vSAN ありの注文の場合、ESXi サーバー用に 12 ディスクのシャ
 *  英数字とダッシュ (-) の文字だけを使用できます。
 *  サブドメイン・ラベルの先頭と末尾は英数字である必要があります。
 *  サブドメイン・ラベルの最大長は 10 文字です。
-*  サブドメイン・ラベルは、アカウント内で固有でなければなりません。
 
 ### ドメイン・ネーム
 {: #vs_orderinginstances-domain-name}
@@ -246,7 +247,9 @@ vSAN ありの注文の場合、ESXi サーバー用に 12 ディスクのシャ
 ## 注文のサマリー
 {: #vs_orderinginstances-order-summary}
 
-構成に基づいて、見積もりコストがすぐに生成され、右側の**「注文の要約」**ペインに表示されます。 **「料金詳細」**をクリックすると、見積もりの詳細を示す PDF 文書を生成できます。
+選択した構成に基づいて、見積もりコストがすぐに生成され、右側のペインの**「注文の要約」**に表示されます。 **「料金詳細」**をクリックすると、{{site.data.keyword.vmwaresolutions_short}} リソースのコスト・サマリーが記載された PDF 文書を生成できます。
+
+また、**「見積もりに追加」**をクリックして、プロビジョン済みリソースを {{site.data.keyword.cloud_notm}} 見積もりツールに追加することもできます。この操作は、購入を検討している他の {{site.data.keyword.cloud_notm}} リソースと一緒に、選択した {{site.data.keyword.vmwaresolutions_short}}リソースのコストを見積もる場合に役立ちます。
 
 ## vSphere クラスターを注文する手順
 {: #vs_orderinginstances-procedure}
@@ -282,7 +285,7 @@ vSAN ありの注文の場合、ESXi サーバー用に 12 ディスクのシャ
    {{site.data.keyword.baremetal_short}}だけがインストールされます。 クラスターのデプロイメントの後に、VMware vCenter、VMware NSX、VMware vSAN などの各種コンポーネントをインストールして構成する作業は、お客様が行う必要があります。
    {:note}
 
-### 結果
+### vSphere クラスターを注文した結果
 {: #vs_orderinginstances-results}
 
 クラスター構成をテンプレートとして保存した場合は、その構成が正常に保存されたことを示すコンソール通知を受け取ります。そして、**「クラスター構成」**リストにそのテンプレートが表示されます。

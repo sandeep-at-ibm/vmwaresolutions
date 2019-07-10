@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-06"
+lastupdated: "2019-06-12"
 
 subcollection: vmware-solutions
 
@@ -18,7 +18,7 @@ subcollection: vmware-solutions
 # Architettura lato di origine di VMware HCX on IBM Cloud
 {: #hcx-archi-source}
 
-Questa sezione descrive l'architettura di ogni componente HCX distribuito nell'ambiente di origine.
+Esamina l'architettura di ogni componente HCX distribuito nell'ambiente di origine.
 
 ## Introduzione a HCX
 {: #hcx-archi-source-intro-hcx}
@@ -48,7 +48,7 @@ Questa introduzione riepiloga le attività che possono essere eseguite e le funz
 {: #hcx-archi-source-low-downtime-mig}
 
 La migrazione con basso tempo di inattività si basa su vSphere Replication, che è una tecnologia distribuita implementata nell'hypervisor VMware ESX/ESXi/ESXi. HCX crea una replica di una VM (Virtual Machine) live, la sposta in IBM Cloud ed esegue un cambio per spegnere la VM (Virtual Machine) di origine ed accendere la VM (Virtual Machine) migrata.
-* Il percorso di migrazione è sempre tramite il gateway cloud. Il trasporto può essere internet, una rete estesa di livello 2 o una riga Direct Connect.
+* Il percorso di migrazione è sempre tramite il gateway cloud. Il trasporto può essere internet, una rete estesa di livello 2 o una linea Direct Connect.
 * Una VM (Virtual Machine) può essere migrata più volte in entrambe le direzioni.
 
 ### Migrazione vMotion
@@ -81,7 +81,7 @@ Le seguenti funzioni di rete sono integrate nel gateway cloud e nei concentrator
 ## Descrizione dell'HCX
 {: #hcx-archi-source-understand-hcx}
 
-HCX supporta una relazione many-to-many tra i vCenter in loco e IBM Cloud. vCenter Server nella modalità di collegamento è supportato. Questo argomento fornisce una panoramica di alto livello su come il programma di installazione interagisce con il data center in loco e IBM Cloud.
+HCX supporta una relazione many-to-many tra i vCenter in loco e IBM Cloud. vCenter Server nella modalità di collegamento è supportato.
 
 Durante l'installazione, il dispositivo virtuale HCX Manager viene importato e configurato come un plugin per il vCenter in loco. Questo plugin viene poi utilizzato per configurare la distribuzione del servizio WAN definito dal software. La configurazione automatizzata esegue il provisioning di ogni dispositivo del servizio ibrido come una VM (Virtual Machine) nel vCenter in loco e distribuisce una VM (Virtual Machine) corrispondente in IBM Cloud.
 
@@ -94,7 +94,7 @@ Una distribuzione corretta richiede:
 
 La VM (Virtual Machine) HCX Manager viene installata per prima e gestisce l'installazione di tutti gli altri dispositivi di VM (Virtual Machine) in loco e nel cloud.
 
-Il seguente è un riepilogo delle attività di installazione di base:
+Le seguenti operazioni sono attività di installazione di base:
 1. Ottieni il file OVA del dispositivo virtuale Hybrid Cloud Enterprise.
 2. Dal client web vSphere, installa il dispositivo virtuale del servizio HCX Manager nel vCenter in loco connesso a IBM Cloud.
 3. Dal client web vSphere, registra un endpoint IBM Cloud con il plugin HCX. La registrazione stabilisce la relazione one-to-one tra l'HCX in loco e l'istanza HCX su IBM Cloud.
@@ -105,8 +105,10 @@ Il seguente è un riepilogo delle attività di installazione di base:
 ### Considerazioni sulle prestazioni del componente della distribuzione
 {: #hcx-archi-source-perf-consid}
 
-La pianificazione dell'architettura include le VM che devono essere migrate, le reti utilizzate per il traffico della VM (Virtual Machine) e le reti che devono essere estese. Questo argomento riepiloga alcuni valori massimi e minimi per i componenti della distribuzione.
-* vSphere vCenter. Il dispositivo HCX Manager deve essere installato sul vCenter che necessita dei servizi ibridi. Può esserci soltanto una distribuzione HCX per vCenter. Questa limitazione si applica alla modalità di collegamento, il dispositivo di gestione HCX è installato solo sul vCenter primario. HCX supporta fino a cinque vCenter registrati nella modalità di collegamento.
+La pianificazione dell'architettura include le VM che devono essere migrate, le reti utilizzate per il traffico della VM (Virtual Machine) e le reti che devono essere estese.  
+
+I valori massimo e minimo per i componenti di distribuzione sono:
+* vSphere vCenter. Il dispositivo HCX Manager deve essere installato sul vCenter che necessita dei servizi ibridi. Può esserci soltanto una distribuzione HCX per vCenter. Questa limitazione si applica alla modalità collegata. Il dispositivo di gestione HCX è installato solo nel vCenter primario. HCX supporta fino a cinque vCenter registrati nella modalità di collegamento.
 * Registrazioni cloud. Il numero massimo di endpoint cloud è dieci. Per trovare il numero di endpoint, Hybrid Cloud Services traccia le connessioni vCenter al cloud.
 
 ### Numero massimo di migrazioni ed estensioni di rete
@@ -172,7 +174,7 @@ La migrazione della VM (Virtual Machine) si basa sulla combinazione del disposit
 Il Network Extension Service viene fornito dal concentratore di livello 2 (L2C). Estende una rete di livello 2 dal data center vSphere in loco a IBM Cloud e abilita la migrazione rapida tra il data center e il cloud. Il concentratore di livello 2 è obbligatorio per estendere la rete in loco a IBM.
 
 Il dispositivo del concentratore di livello 2 ha due interfacce:
-* Interfaccia trunk interna: Gestisce il traffico della VM (Virtual Machine) in loco per le reti estese utilizzando un'associazione bridge traslazionale a una rete estesa corrispondente in IBM Cloud.
+* Interfaccia trunk interna: gestisce il traffico della VM (Virtual Machine) in loco per le reti estese utilizzando un'associazione bridge traslazionale a una rete estesa corrispondente in IBM Cloud.
 * Interfaccia uplink: HCX utilizza questa interfaccia per inviare il traffico di sovrapposizione incapsulato a/da IBM Cloud. I dati dell'applicazione passano attraverso questa interfaccia.
 
 ![Concentratore L2 di origine](../../images/source_l2_concentrator.svg "Concentratore L2 di origine")
@@ -184,7 +186,7 @@ La configurazione minima per eseguire soltanto la migrazione richiede i disposit
 
 Per estendere una rete e conservare l'indirizzo IP originale, deve essere configurato uno switch virtuale distribuito nel vSphere vCenter in loco.
 
-WAN Optimization può migliorare la velocità nelle situazioni descritte; configurando il gateway cloud in modo che utilizzi una linea ad elevata velocità (come ad esempio un Direct Connect) che migliora la velocità fornendo un link di larghezza di banda maggiore per il traffico ottimizzato WAN.
+WAN Optimization può migliorare la velocità nelle situazioni descritte. La configurazione del gateway cloud per utilizzare una linea ad elevata velocità (come ad esempio un Direct Connect) migliora la velocità fornendo un link di larghezza di banda maggiore per il traffico ottimizzato WAN.
 
 La migrazione delle VM (Virtual Machine) sulle reti estese in IBM Cloud è conveniente perché riduce il tempo di inattività e la configurazione non viene modificata sulla VM (Virtual Machine). La VM (Virtual Machine) può conservare gli indirizzi IP, gli indirizzi MAC, i nomi di computer e di VM (Virtual Machine). Conservando queste proprietà si semplifica enormemente la migrazione a IBM Cloud e si stabiliscono dei facili percorsi di ritorno al data center in loco. La funzione Network Extension richiede un vDS (vSphere Distributed Switch), disponibile con vSphere Enterprise Plus Edition.
 
@@ -203,7 +205,7 @@ e nell'IBM Cloud di destinazione.
   * Uno per ogni concentratore di livello 2 standard
 
 * IBM Cloud
-  * Due indirizzi IP per il dispositivo HCX Manager connesso a IBM Cloud. Gli indirizzi possono venire utilizzati per il collegamento a internet o a una o più righe Direct Connect.
+  * Due indirizzi IP per il dispositivo HCX Manager connesso a IBM Cloud. Gli indirizzi possono venire utilizzati per il collegamento a internet o a una o più linee Direct Connect.
   * Aggiungine un altro se è presente una rete vMotion separata.
 
 ### Funzione Proximity Routing (Instradamento di prossimità)
@@ -211,8 +213,7 @@ e nell'IBM Cloud di destinazione.
 
 L'instradamento di prossimità è una funzione di rete che può essere abilitata quando viene configurato il gateway cloud.
 
-L'instradamento di prossimità garantisce che l'inoltro tra le VM (Virtual Machine) connesse alle reti estese ed instradate, sia in loco che nel cloud, sia simmetrico. Questa funzione richiede che sia configurato l'instradamento dinamico
-tra il cloud e la locale del cliente.
+L'instradamento di prossimità garantisce che l'inoltro tra le VM (Virtual Machine) connesse alle reti estese ed instradate, sia in loco che nel cloud, sia simmetrico. Questa funzione richiede che sia configurato l'instradamento dinamico tra il cloud e la sede del cliente.
 
 Quando gli utenti estendono le loro reti al cloud, la connettività di livello 2 viene estesa in IBM Cloud. Tuttavia, senza l'ottimizzazione dell'instradamento, le richieste di comunicazione di livello 3 devono ritornare all'origine della rete in loco per essere instradate. Questo percorso di ritorno viene denominato "tromboning" o "hairpinning".
 
@@ -229,9 +230,9 @@ Per evitare il tromboning, HCX utilizza la gestione dell'instradamento intellige
 Nel diagramma, i componenti `N*a` sulla sinistra risiedono nel data center in loco e il componente `N*b`
 sulla destra risiede nel cloud.
 
-R1 è il gateway predefinito per N1-b, pertanto, N1-b deve tornare a R1 per instradare il traffico tramite R2. Per evitare l'instradamento asimmetrico, HCX inserisce delle rotte host all'interno della sovrapposizione NSX della distribuzione VCS di IBM Cloud. Se la VM (Virtual Machine) è appena stata creata nel cloud oppure se è stata spostata con la migrazione con basso tempo di inattività, la rotta host viene inserita immediatamente.
+R1 è il gateway predefinito per N1-b. Pertanto, N1-b deve tornare a R1 per instradare il traffico tramite R2. Per evitare l'instradamento asimmetrico, HCX inserisce delle rotte host all'interno della sovrapposizione NSX della distribuzione VCS di IBM Cloud. Se la VM (Virtual Machine) è appena stata creata nel cloud oppure se è stata spostata con la migrazione con basso tempo di inattività, la rotta host viene inserita immediatamente.
 
-Se la VM (Virtual Machine) è stata trasferita utilizzando il vMotion, la rotta non viene inserita finché non viene riavviata la VM (Virtual Machine). Attendere fino a dopo il riavvio garantisce che i dispositivi con stato in loco continuino a utilizzare la sessione esistente finché non viene riavviata la VM (Virtual Machine). Dopo il riavvio, le informazioni di instradamento sono coerenti in loco e nel cloud.
+Se la VM (Virtual Machine) è stata trasferita utilizzando il vMotion, la rotta non viene inserita finché non viene riavviata la VM (Virtual Machine). Attendere fino a dopo il riavvio garantisce che i dispositivi con stato in loco continuino a servire la sessione esistente finché non viene riavviata la VM (Virtual Machine). Dopo il riavvio, le informazioni di instradamento sono coerenti sia in loco che nel cloud.
 
 Per tale motivo, R1 può utilizzare l'instradamento per raggiungere una VM (Virtual Machine) specifica tramite R2, invece di utilizzare la rete estesa collegata localmente. R2 gestisce completamente il percorso delle altre reti per raggiungere le VM (Virtual Machine)
 con l'instradamento di prossimità abilitato.
@@ -245,9 +246,9 @@ con l'instradamento di prossimità abilitato.
 * Per impostazione predefinita, **Retain MAC** è abilitato se la VM (Virtual Machine) di origine è in una rete estesa e disabilitato quando la rete non è estesa. Se l'indirizzo MAC non viene conservato, la VM (Virtual Machine) ottiene un nuovo indirizzo al termine della migrazione. La decisione di conservare un indirizzo MAC o di acquisirne uno nuovo può influenzare il processo di migrazione e il flusso del traffico di rete successivo alla migrazione.
 * La conservazione dell'indirizzo MAC è necessaria per i seguenti motivi:
   * Licenze basate sull'indirizzo MAC: alcuni software accoppiano la licenza all'indirizzo MAC della VM. Modificando l'indirizzo MAC di una VM (Virtual Machine) si annulla la validità della licenza.
-  * Ordine NIC Linux: in Linux, se viene modificato l'indirizzo MAC su una VM (Virtual Machine), il numero del dispositivo NIC Ethernet potrebbe venire modificato dopo un riavvio. Una modifica al numero del dispositivo può modificare l'ordine di presentazione NIC all'interno del sistema operativo, interrompendo le applicazioni o gli script che dipendono dall'ordine NIC.
+  * Ordine NIC Linux: su Linux, se viene modificato l'indirizzo MAC su una VM (Virtual Machine), il numero del dispositivo NIC Ethernet potrebbe venire modificato dopo un riavvio. Una modifica al numero del dispositivo può modificare l'ordine di presentazione NIC all'interno del sistema operativo, interrompendo le applicazioni o gli script che dipendono dall'ordine NIC.
   * Tempo di inattività inferiore se la rete è estesa: se la VM (Virtual Machine) viene migrata su una rete estesa, abilitando **Retain MAC** si riduce il tempo di inattività perché la rete non deve cercare le informazioni sul nuovo indirizzo MAC.
-  * La casella di spunta si trova nella pagina Select destination network durante l'operazione di migrazione.
+  * La casella di spunta si trova nella pagina **Select destination network** durante l'operazione di migrazione.
 
 ### Migrazione della politica di sicurezza
 {: #hcx-archi-source-sec-policy-mig}

@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-05-31"
+
+keywords: planning vSphere, data center, vSphere data centers
 
 subcollection: vmware-solutions
 
@@ -26,7 +28,7 @@ VMware vSphere on {{site.data.keyword.cloud}}를 주문하기 전에 다음 요�
 ## IBM Cloud 계정 요구사항
 {: #vs_planning-account-req}
 
-사용 중인 {{site.data.keyword.cloud_notm}} 계정은 특정 요구사항을 충족해야 합니다. 자세한 정보는 [{{site.data.keyword.cloud_notm}} 계정에 대한 요구사항](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)을 참조하십시오.
+사용 중인 {{site.data.keyword.cloud_notm}} 계정은 특정 요구사항을 충족해야 합니다. 자세한 정보는 [{{site.data.keyword.cloud_notm}} 계정에 대한 요구사항](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req)을 참조하십시오.
 
 ## IBM Cloud Data Center 가용성
 {: #vs_planning-dc-availability}

@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-06-11"
+
+keywords: notifications console, filter notifications, system notification
 
 subcollection: vmware-solutions
 
@@ -40,21 +42,14 @@ Les notifications vous permettent de vérifier le statut des opérations systèm
           <dt class="dt dlterm">Avertissement</dt>
           <dd class="dd">Echec ou fonctionnement inadéquat d'un composant. L'erreur n'interrompt toutefois pas le processus en cours du composant.</dd>
             <dt class="dt dlterm">Information</dt>
-            <dd class="dd">Achèvement d'une opération utilisateur ou système. En général, les événements suivants génèrent des notifications d'information :
-              <ul class="ul">
-                <li class="li">Installation d'un service.</li>
-                <li class="li">Mise à niveau d'un service.</li>
-                <li class="li">Suppression d'un service.</li>
-                <li class="li">Reconfiguration de tous les services pour les serveurs ESXi ajoutés.</li>
-                <li class="li">Reconfiguration de tous les services pour les serveurs ESXi supprimés.</li>
-              </ul>
+            <dd class="dd">Achèvement d'une opération utilisateur ou système. En général, les événements suivants génèrent des notifications d'information :<br>Installation d'un service.<br>Mise à niveau d'un service.<br>Suppression d'un service.<br>Reconfiguration de tous les services pour les serveurs ESXi ajoutés.<br>Reconfiguration de tous les services pour les serveurs ESXi supprimés.
             </dd>
           </dl>
         </td>
        </tr>
        <tr>
          <td>Type</td>
-         <td>Type du composant concerné par l'événement signalé :<ul><li>Instances vCenter Server</li><li>Services</li><li>Système</li></ul></td>
+         <td>Type du composant concerné par l'événement signalé :<br>Instances vCenter Server<br>Services<br>Système</td>
        </tr>
        <tr>
          <td>Ressource</td>

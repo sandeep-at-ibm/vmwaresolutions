@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-05-22"
 
 subcollection: vmware-solutions
 
@@ -17,7 +17,7 @@ subcollection: vmware-solutions
 ## VRF(Virtual Routing and Forwarding)
 {: #vcscar-arch-overview-infrastructure-vrf}
 
-{{site.data.keyword.cloud}} 계정을 VRF(Virtual Routing and Forwarding) 계정으로 구성할 수 있습니다. VRF 계정은 서브넷 IP 블록 사이의 자동 글로벌 라우팅을 사용합니다. Direct-Link 연결의 모든 계정은 VRF 계정으로 변환되거나 VRF 계정으로 작성되어야 합니다.
+{{site.data.keyword.cloud}} 계정을 VRF(Virtual Routing and Forwarding) 계정으로 구성할 수 있습니다. VRF 계정은 서브넷 IP 블록 사이의 자동 글로벌 라우팅을 사용합니다. Direct Link 연결의 모든 계정은 VRF 계정으로 변환되거나 VRF 계정으로 작성되어야 합니다.
 
 ## Direct Link
 {: #vcscar-arch-overview-infrastructure-direct-link}

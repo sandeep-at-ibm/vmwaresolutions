@@ -18,7 +18,7 @@ subcollection: vmware-solutions
 # Diseño de NSX Edge Services Gateway
 {: #nsx_design}
 
-La solución NSX Edge Services Gateway en {{site.data.keyword.cloud}} proporciona la tecnología VMware que se despliega en {{site.data.keyword.CloudDataCents_notm}} en todo el mundo. {{site.data.keyword.vmwaresolutions_short}} proporciona dos arquitecturas de soluciones relacionadas con NSX Edge Services Gateway.
+La solución NSX Edge Services Gateway on {{site.data.keyword.cloud}} proporciona la tecnología VMware que se despliega en {{site.data.keyword.CloudDataCents_notm}} en todo el mundo. {{site.data.keyword.vmwaresolutions_short}} proporciona dos arquitecturas de soluciones relacionadas con NSX Edge Services Gateway.
 
 ## Diseño de la arquitectura interna
 {: #nsx_design-internal-archi}

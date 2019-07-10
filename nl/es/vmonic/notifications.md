@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-06-11"
+
+keywords: notifications console, filter notifications, system notification
 
 subcollection: vmware-solutions
 
@@ -40,21 +42,14 @@ Puede comprobar las notificaciones sobre el estado del sistema o sobre las opera
           <dt class="dt dlterm">Aviso</dt>
           <dd class="dd">Un componente falla o no funciona correctamente. Sin embargo, la anomalía no interrumpe el proceso en curso del componente.</dd>
             <dt class="dt dlterm">Informativo</dt>
-            <dd class="dd">Se ha completado una operación del sistema o de un usuario. Generalmente los siguientes sucesos generan notificaciones informativas:
-              <ul class="ul">
-                <li class="li">Se ha instalado un servicio.</li>
-                <li class="li">Se ha actualizado un servicio.</li>
-                <li class="li">Se ha eliminado un servicio.</li>
-                <li class="li">Se han vuelto a configurar todos los servicios para los servidores ESXi añadidos.</li>
-                <li class="li">Se han vuelto a configurar todos los servicios para los servidores ESXi eliminados.</li>
-              </ul>
+            <dd class="dd">Se ha completado una operación del sistema o de un usuario. Generalmente los siguientes sucesos generan notificaciones informativas:<br>Se ha instalado un servicio.<br>Se ha actualizado un servicio.<br>Se ha eliminado un servicio.<br>Se han vuelto a configurar todos los servicios para los servidores ESXi añadidos.<br>Se han vuelto a configurar todos los servicios para los servidores ESXi eliminados.
             </dd>
           </dl>
         </td>
        </tr>
        <tr>
          <td>Tipo</td>
-         <td>El tipo de componente con el que está relacionado el suceso notificado:<ul><li>Instancias de vCenter Server</li><li>Servicios</li><li>Sistema</li></ul></td>
+         <td>El tipo de componente con el que está relacionado el suceso notificado:<br>Instancias de vCenter Server<br>Servicios<br>Sistema</td>
        </tr>
        <tr>
          <td>Recurso</td>

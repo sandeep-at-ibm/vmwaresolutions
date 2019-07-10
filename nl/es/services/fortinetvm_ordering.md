@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-09"
+lastupdated: "2019-06-14"
+
+keywords: FortiGate VA, FortiGate configuration, order FortiGate
 
 subcollection: vmware-solutions
 
@@ -18,7 +20,7 @@ subcollection: vmware-solutions
 # Solicitud de FortiGate Virtual Appliance on IBM Cloud
 {: #fortinetvm_ordering}
 
-Puede solicitar FortiGate Virtual Appliance en el servicio de {{site.data.keyword.cloud}} cuando solicite una nueva instancia con el servicio incluido o añadiendo el servicio a la instancia existente.
+Puede solicitar el servicio FortiGate Virtual Appliance on {{site.data.keyword.cloud}} cuando solicite una nueva instancia con el servicio incluido o añadiendo el servicio a la instancia existente.
 
 ## Solicitud de FortiGate Virtual Appliance on IBM Cloud para una nueva instancia
 {: #fortinetvm_ordering-new}

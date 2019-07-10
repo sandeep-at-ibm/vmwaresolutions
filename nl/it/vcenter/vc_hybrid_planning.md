@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-04"
+lastupdated: "2019-05-31"
+
+keywords: planning vCenter Server Hybridity, data center hybridity, vCenter Server Hybridity
 
 subcollection: vmware-solutions
 
@@ -19,7 +21,7 @@ Esamina i seguenti requisiti prima di ordinare la tua istanza VMware vCenter Ser
 ## Requisiti dell'account IBM Cloud
 {: #vc_hybrid_planning-account-req}
 
-L'account {{site.data.keyword.cloud_notm}} che utilizzi deve soddisfare determinati requisiti. Per ulteriori informazioni, vedi [Requisiti per l'account {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).
+L'account {{site.data.keyword.cloud_notm}} che utilizzi deve soddisfare determinati requisiti. Per ulteriori informazioni, vedi [Requisiti per l'account {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req).
 
 ## Disponibilità dei data center IBM Cloud
 {: #vc_hybrid_planning-dc-availability}

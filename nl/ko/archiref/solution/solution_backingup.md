@@ -31,7 +31,7 @@ subcollection: vmware-solutions
 
 1. {{site.data.keyword.cloud_notm}} 인프라에서 사설 포터블 서브넷을 주문하고 시스템 컴포넌트와 동일한 VLAN에서 이를 찾으십시오. 이는 호스트에 대한 관리 IP 주소가 상주하는 사설 VLAN입니다.
 2. {{site.data.keyword.cloud_notm}} 사설 미러에서 Ubuntu Server 18.04 LTS와 같은 VMware 관리 데이터 저장소로 운영 체제 이미지를 업로드하십시오.
-3. 이전에 주문한 개인 휴대용 IP 주소를 사용하여 관리 포트 그룹의 클러스터에 이 가상 머신(VM)을 배치하십시오. VM이 AD/DNS 서버를 지시하도록 구성되어 있는지 확인하고, 선택적으로 VM을 하위 도메인의 DNS에 추가하십시오.
+3. 이전에 주문한 개인 포터블 IP 주소를 사용하여 관리 포트 그룹의 클러스터에 이 가상 머신(VM)을 배치하십시오. VM이 AD/DNS 서버를 지시하도록 구성되어 있는지 확인하고, 선택적으로 VM을 하위 도메인의 DNS에 추가하십시오.
 4. 이 서버에서 루트가 아닌 백업 사용자 ID를 작성하고, 모든 필수 서비스가 파일 전송에 대해 구성되고 시작되었는지 확인하십시오. 예: FTP 또는 SSH.
 5. 이 VM이 Veeam 또는 IBM Spectrum Protect Plus 관리 백업 작업에 포함되어 있는지 확인하십시오.
 

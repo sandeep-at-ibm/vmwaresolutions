@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-09"
+lastupdated: "2019-06-18"
+
+keywords: Zerto, Zerto replication billing, order Zerto
 
 subcollection: vmware-solutions
 
@@ -20,6 +22,21 @@ subcollection: vmware-solutions
 
 Zerto on {{site.data.keyword.cloud}} サービスを注文するには、そのサービスを組み込む形で新しいインスタンスを注文するか、そのサービスを既存のインスタンスに追加します。
 
+## Zerto レプリケーションの請求
+{: #zerto_ordering-billing}
+
+Zerto を使用して複製される VM は、Zerto および {{site.data.keyword.cloud_notm}} によって計測されます。この使用量に対する請求は、{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントではなく {{site.data.keyword.cloud_notm}} 有料アカウントを通じて課金されます。
+
+Zerto on {{site.data.keyword.cloud_notm}} を注文する前に、{{site.data.keyword.cloud_notm}} アカウントが有料アカウントであり、インスタンスのデプロイ先と同じ {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントにリンクされていることを確認してください。
+
+V3.0 以前の Zerto on {{site.data.keyword.cloud_notm}} インストール済み環境がある場合、VM レプリケーション費用はまだ {{site.data.keyword.cloud_notm}} インフラストラクチャーの請求を使用して請求されています。アカウントと請求設定が前述の要件を満たしている場合は、Zerto 請求方法を請求可能に変換できます。
+
+{{site.data.keyword.vmwaresolutions_short}} コンソールで、{{site.data.keyword.cloud_notm}} インフラストラクチャー・プランから有料プランへ変換し、必要に応じて {{site.data.keyword.cloud_notm}} アカウントから有料アカウントへアップグレードするよう求めるプロンプトが出されます。
+
+* 無料アカウントおよび有料アカウントについては、[アカウント・タイプ](/docs/account?topic=account-accounts)を参照してください。
+* 有料アカウントへのアップグレードについては、[アカウントのアップグレード](/docs/account?topic=account-upgrading-account)を参照してください。
+* {{site.data.keyword.cloud_notm}} と {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントのリンクについては、[IBMid への切り替えとアカウントのリンク](/docs/account?topic=account-unifyingaccounts)を参照してください。
+
 ## 新しいインスタンスでの Zerto on IBM Cloud の注文
 {: #zerto_ordering-new}
 
@@ -34,7 +51,7 @@ Zerto on {{site.data.keyword.cloud}} サービスを注文するには、その�
 * {{site.data.keyword.vmwaresolutions_short}} コンソールから、サービスを追加する対象のインスタンスを表示し、左側のナビゲーション・ペインにある**「サービス」**をクリックし、**「追加」**をクリックします。
 * {{site.data.keyword.cloud_notm}} カタログから**「Zerto on IBM Cloud」**を選択し、サービス設定を指定し、**「Add to Existing Instance」**を選択します。
 
-保守モードの ESXi サーバーを持つ vCenter Server インスタンスに Zerto for {{site.data.keyword.cloud_notm}} を追加する場合は、Zerto Virtual Manager (ZVM) コンソールと事前定義済みの Zerto Virtual Replication Appliance (VRA) IP アドレスを使用して、VRA 仮想マシン (VM) を手動でデプロイする必要があります。
+保守モードの ESXi サーバーを持つ vCenter Server インスタンスに Zerto on {{site.data.keyword.cloud_notm}} を追加する場合は、Zerto Virtual Manager (ZVM) コンソールと事前定義済みの Zerto Virtual Replication Appliance (VRA) IP アドレスを使用して、VRA 仮想マシン (VM) を手動でデプロイする必要があります。
 {:note}
 
 ## プライベート専用インスタンスでの Zerto on IBM Cloud の注文

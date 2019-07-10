@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-11"
+
+keywords: vCenter Server BOM, bill of materials vCenter Server, BOM
 
 subcollection: vmware-solutions
 
@@ -29,7 +31,7 @@ VMware vCenter Server 인스턴스에 대한 BOM(Bill of Materials) 정보를 �
 
 |VLAN       |유형       |세부사항       |
 |:---------- |:---------- |:------------- |
-|VLAN1     |공인, 기본 |공용 네트워크 액세스를 위한 실제 ESXi 서버에 지정됩니다. 초기 배치 후에 사용되지 않습니다. 인터넷 액세스에 사용 가능합니다. |
+|VLAN1     |공인, 기본 |공용 네트워크 액세스를 위한 실제 ESXi 서버에 지정됩니다. 서버에 공인 IP 주소가 지정되지만 이 IP 주소는 서버에서 구성되지 않습니다. 그러므로 공용 네트워크에서 직접 액세스할 수 없습니다. 대신, 공용 VLAN에서는 NSX ESG(Edge Services Gateway)와 같은 기타 컴포넌트에 대한 공용 인터넷 액세스를 제공합니다. |
 |VLAN2     |사설 A, 기본 |{{site.data.keyword.cloud}}에 의해 실제 ESXi 서버에 지정됩니다. VMware vSphere 관리 트래픽에 대한 관리 인터페이스에서 사용됩니다.<br><br>관리 컴포넌트로 작동하는 가상 머신(VM)에 지정됩니다.<br><br>VMware NSX VTEP(VXLAN Tunnel Endpoint)에 지정됩니다. |
 |VLAN3     |사설 B, 포터블 |VMware vSAN에 지정됩니다(사용된 경우).<br><br>VMware NFS에 지정됩니다(사용된 경우).<br><br>VMware vSphere vMotion에 지정됩니다.<br><br>NSX-T의 경우 VMware NSX VTEP(VXLAN Tunnel Endpoint)에 지정됩니다.|
 
@@ -42,10 +44,10 @@ VMware vCenter Server 인스턴스에 대한 BOM(Bill of Materials) 정보를 �
 
 |제조업체  |컴포넌트                      |버전    |
 |:------------- |:------------------------------ |:------------- |
-|VMware       |vSphere ESXi                    | 6.7 Update 1(빌드 6.7.0-13004448) 또는 <br/>6.5 Update 2(빌드 6.5.0-13004031) |
+|VMware       |vSphere ESXi                    | 6.7 Update 1(빌드 6.7.0-13004448) 또는 <br/>6.5 Update 2(빌드 6.5.0-13635690) |
 |VMware       | vSphere 6.7                     | Distributed vSwitch 6.6.0 |
 |VMware       | vSphere 6.5                     | Distributed vSwitch 6.5.0 |
-|VMware       |vCenter Server Appliance        | 6.7 Update 1b(빌드 6.7.0-11727113) 또는 <br/>6.5 Update 2d(빌드 6.5.0-10964411) |
+|VMware       |vCenter Server Appliance        | 6.7 Update 1b(빌드 6.7.0-11727113) 또는 <br/>6.5 Update 2g(빌드 6.5.0-13638625) |
 |VMware       |Platform Services Controller    | 6.7 Update 1b(빌드 6.7.0-11727113) 또는 <br/>6.5 Update 2d(빌드 6.5.0-10964411) |
 |VMware       |vSAN                            | 6.7 Update 1 또는 <br/>6.6.1       |
 |VMware       |NSX for vSphere                 | 6.4.4(빌드 11197766)    |

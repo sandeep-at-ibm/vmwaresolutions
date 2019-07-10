@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-07"
+lastupdated: "2019-06-18"
+
+keywords: Veeam, Veeam install, tech specs Veeam
 
 subcollection: vmware-solutions
 
@@ -31,18 +33,23 @@ Los siguientes componentes se solicitan y se incluyen en el servicio Veeam on {{
 ### VSI
 {: #veeam_considerations-specs-vsi}
 
-* VSI único con el complemento de sistema operativo Veeam Backup and Replication 9.5
+* VSI único con el complemento de sistema operativo Veeam Backup and Replication 9.5 y Veeam Availability Suite 9.5
 * Windows Server 2016 Standard Edition (64 bits)
 * 4 núcleos x 2,0 GHz
-* 8 GB RAM
+* 8 vCPU, 32 GB de RAM
 * Enlace ascendente de red privada de 1 Gbps
 * Disco de 100 GB (SAN)
 
 ### Almacenamiento para copias de seguridad
 {: #veeam_considerations-specs-storage}
 
-* Almacenamiento iSCSI de resistencia (2000, 4000, 8000 o 12000 GB)
+* Almacenamiento iSCSI de Endurance (2000, 4000, 8000 o 12 000 GB)
 * Rendimiento del almacenamiento (0,25, 2 o 4 IOPS/GB)
+
+Como parte de la instalación y configuración del servicio Veeam, se crean los repositorios siguientes:
+* Para los archivos de copia de seguridad de configuración de Veeam: un repositorio denominado `Repositorio de copia de seguridad de configuración predeterminado de IC4V`. La vía de acceso a la carpeta en la que se almacenan las copias de seguridad de Veeam es ` <Unidad>: \ConfigBackup\`. 
+* Para el escalado, un repositorio denominado `IC4V Scale-Out Repository`. Para obtener más información, consulte [Añadir un repositorio de escalado](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icos_ordering#icos_ordering-scale-repo). 
+* Para las copias de seguridad de máquina virtual (MV): un repositorio denominado ``Repositorio de copias seguridad de MV predeterminado de IC4V``. La vía de acceso a la carpeta donde se almacenan las copias de seguridad de la máquina virtual es ``<Unidad>:\VMBackup\`. Este repositorio se añade como extensión al ``Repositorio de escalado de IC4V `. 
 
 ### Redes
 {: #veeam_considerations-specs-networking}
@@ -52,12 +59,7 @@ Una dirección IP privada primaria.
 ### Licencias y tarifas
 {: #veeam_considerations-specs-licenses}
 
-Veeam Backup and Replication 9.5 Enterprise Plus (licencia de 10, 25, 50, 100 o 200 máquinas virtuales).
-
-### Gestión
-{: #veeam_considerations-specs-mgmt}
-
-Copias de seguridad de gestión configuradas de forma predeterminada con hasta 5 máquinas virtuales y 2000 GB de almacenamiento.
+* Veeam Availability Suite 9.5 (licencia de 10, 25, 50, 100 o 200 MV)
 
 ## Consideraciones al instalar Veeam on IBM Cloud
 {: #veeam_considerations-install}
@@ -67,7 +69,7 @@ El repositorio del almacenamiento y del servidor Veeam están en el pod y en el 
 ## Consideraciones al eliminar Veeam on IBM Cloud
 {: #veeam_considerations-remove}
 
-La eliminación del Veeam en el servicio {{site.data.keyword.cloud_notm}} detiene todas las copias de seguridad y elimina todas las anteriores. Las copias de seguridad de las VM de gestión se detienen y la supresión de copias de seguridad anteriores son irreversibles. Si las VM de gestión resultan dañadas, no se podrán restaurar.
+La eliminación del servicio Veeam on {{site.data.keyword.cloud_notm}} detiene todas las copias de seguridad y elimina todas las anteriores. La copia de seguridad de la VM de gestión se detiene y la supresión de copias de seguridad anteriores son irreversibles. Si las VM de gestión resultan dañadas, no se podrán restaurar.
 
 ## Enlaces relacionados
 {: #veeam_considerations-related}

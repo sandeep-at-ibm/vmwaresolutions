@@ -119,7 +119,7 @@ Ahora dispone de treinta y cuatro unidades SATA para {{site.data.keyword.baremet
 ### Aumento de la opción de ancho de banda para F5 on IBM Cloud
 {: #relnotes_v22-bandwidth}
 
-Ahora puede seleccionar un ancho de banda máximo de 10 Gbps al instalar el F5 en el servicio {{site.data.keyword.cloud_notm}} para las instancias de Cloud Foundation y vCenter Server. Para obtener más información, consulte [Consideraciones sobre F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations).
+Ahora puede seleccionar un ancho de banda máximo de 10 Gbps al instalar el servicio F5 on {{site.data.keyword.cloud_notm}} para las instancias de Cloud Foundation y vCenter Server. Para obtener más información, consulte [Consideraciones sobre F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations).
 
 ### KMIP for VMware on IBM Cloud
 {: #relnotes_v22-kmip}

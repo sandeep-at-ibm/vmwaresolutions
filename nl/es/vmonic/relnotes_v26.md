@@ -140,8 +140,7 @@ El release actual instala VMware HCX 3.5.1 en todas las instancias desplegadas r
 ### Soporte de Zerto on IBM Cloud para vSphere ESXi V6.5 actualización 2c
 {: #relnotes_v26-zerto}
 
-Si actualiza hosts existentes a vSphere ESXi V6.5 update 2, y ya ha instalado Zerto en {{site.data.keyword.cloud_notm}}, la consola de Zerto Virtual
-Replication puede mostrar el mensaje de aviso `Versión de ESX no soportado` bajo el estado Zerto Virtual Replication Appliances (VRA).
+Si actualiza hosts existentes a vSphere ESXi V6.5 update 2, y ya ha instalado Zerto on {{site.data.keyword.cloud_notm}}, la consola de Zerto Virtual Replication puede mostrar el mensaje de aviso `Versión de ESX no soportado` bajo el estado Zerto Virtual Replication Appliances (VRA).
 
 Para obtener más información sobre cómo resolver este mensaje de aviso, consulte:
 

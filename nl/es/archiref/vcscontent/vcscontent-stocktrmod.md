@@ -25,7 +25,7 @@ Para continuar, Todd y Jane ejecutan Transformation Advisor para analizar la car
 ## Preparar IBM Cloud Private
 {: #vcscontent-stocktrmod-prep-icp}
 
-En primer lugar Todd tiene que instalar {{site.data.keyword.icpfull_notm}}. Puesto que Todd tiene su VMware en el entorno {{site.data.keyword.cloud_notm}}, decide utilizar la oferta {{site.data.keyword.cloud_notm}} Private Hosted, que le proporciona una instancia de {{site.data.keyword.icpfull_notm}} completa que se ejecuta en las máquinas virtuales VMware en {{site.data.keyword.cloud_notm}}.
+En primer lugar Todd tiene que instalar {{site.data.keyword.icpfull_notm}}. Puesto que Todd tiene su entorno de VMware on {{site.data.keyword.cloud_notm}}, decide utilizar la oferta {{site.data.keyword.cloud_notm}} Private Hosted, que le proporciona una instancia de {{site.data.keyword.icpfull_notm}} completa que se ejecuta en las máquinas virtuales VMware en {{site.data.keyword.cloud_notm}}.
 
 El panel de control predeterminado proporciona una interfaz de usuario completa para gestionar el clúster de Kubernetes, la seguridad, el almacenamiento y el despliegue desde el catálogo.
 

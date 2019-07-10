@@ -54,7 +54,9 @@ Tabla 1. Valores de despliegue
 | Máscara de red | 255.255.255.192 | |
 | Pasarela| ip enlace ascendente privada customer-nsx-edge | Este es el valor de pasarela predeterminado para el servidor proxy, que es la dirección IP de enlace ascendente privada de customer-nsx-edge. Para encontrar la dirección IP, consulte el separador **Configuración** de **customer-nsx-edge**. |
 | Servidor DNS | ip de AD/DNS | Encontrará esta dirección IP en la página de la instancia de la consola de {{site.data.keyword.vmwaresolutions_short}}, en la página **Recursos**. |
-| IP de BCR | ip de bcr | Es la dirección IP del direccionador de cliente de {{site.data.keyword.cloud_notm}} Backend y es la pasarela para 10.0.0.0/8 y 161.26.0.0/16. Esta dirección se utiliza en una ruta estática en el servidor proxy para que pueda llegar a la VCSA y al servidor de AD/DNS. |
+| IP de BCR | ip de bcr | En la misma página en la que ha seleccionado la IP de proxy anterior, fíjese en la dirección con la etiqueta Gateway. Es la dirección IP del direccionador de cliente de {{site.data.keyword.cloud_notm}} Backend y es la pasarela para 10.0.0.0/8 y 161.26.0.0/16. Esta dirección se utiliza más abajo, en una ruta estática en el servidor proxy para que pueda llegar a la VCSA y al servidor de AD/DNS. |
+| IP de NAT | ip enlace ascendente pública customer-nsx-edge | La dirección pública de ESG de NSX del cliente
+servirá como dirección NAT pública para el proxy. Para encontrar esta dirección IP, consulte el separador **Configuración** de **customer-nsx-edge**. |
 
 ## Configuración de NSX
 {: #vum-init-config-config-nsx}

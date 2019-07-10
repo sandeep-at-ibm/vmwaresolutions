@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-06-13"
+
+keywords: planning NetApp ONTAP, data center, NetApp data centers
 
 subcollection: vmware-solutions
 
@@ -19,7 +21,7 @@ NetApp ONTAP Select インスタンスを注文する前に、以下の要件を
 ## IBM Cloud アカウントの要件
 {: #np_planning-account-req}
 
-使用する {{site.data.keyword.cloud_notm}} アカウントは、特定の要件を満たしている必要があります。 詳しくは、[{{site.data.keyword.cloud_notm}} アカウントの要件](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)を参照してください。
+使用する {{site.data.keyword.cloud_notm}} アカウントは、特定の要件を満たしている必要があります。 詳しくは、[{{site.data.keyword.cloud_notm}} アカウントの要件](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req)を参照してください。
 
 ## IBM Cloud データ・センターの使用可否
 {: #np_planning-dc-availability}

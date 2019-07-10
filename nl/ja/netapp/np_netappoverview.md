@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-01"
+lastupdated: "2019-06-13"
+
+keywords: NetApp ONTAP, NetApp, tech specs NetApp ONTAP
 
 subcollection: vmware-solutions
 

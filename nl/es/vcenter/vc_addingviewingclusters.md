@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-18"
+lastupdated: "2019-06-17"
+
+keywords: vCenter Server add cluster, view cluster vCenter Server, delete cluster vCenter Server
 
 subcollection: vmware-solutions
 
@@ -180,7 +182,9 @@ Los valores de habilitación de la tarjeta de interfaz de red (NIC) se basan en 
 ### Resumen del pedido
 {: #vc_addingviewingclusters-adding-order-summary}
 
-En función de la configuración seleccionada para el clúster, el coste estimado se genera y se muestra al instante en el panel derecho **Resumen de pedido**.
+En función de la configuración seleccionada para el clúster, el coste estimado se genera y se muestra al instante en el panel derecho **Resumen de pedido**. Pulse **Detalle de precios** para generar un documento PDF con el resumen de coste de los recursos de {{site.data.keyword.vmwaresolutions_short}}. 
+
+También puede añadir los recursos suministrados a la herramienta de estimación {{site.data.keyword.cloud_notm}}, pulsando **Añadir a estimación**. Esto es útil si desea estimar el coste de los recursos estimare {{site.data.keyword.vmwaresolutions_short}} seleccionados junto con otros recursos de {{site.data.keyword.cloud_notm}} que le podría interesar adquirir. 
 
 ## Procedimiento para añadir clústeres a instancias de vCenter Server
 {: #vc_addingviewingclusters-adding-procedure}
@@ -231,9 +235,7 @@ No puede cambiar el nombre de clúster. Si se cambia el nombre del clúster, es 
 3. Pulse **Infraestructura** en el panel de navegación izquierdo. En la tabla **CLÚSTERES**, vea el resumen sobre los clústeres:
   * **Nombre**: el nombre del clúster.
   * **Servidores ESXi**: el número de servidores ESXi del clúster.
-  * **CPU**: la especificación de CPU de los servidores ESXi del clúster.
-  * **Discos vSAN personalizados**: el número de discos vSAN del clúster, incluido el tipo y la capacidad del disco.
-  * **Memoria**: el tamaño total de la memoria de los servidores ESXi del clúster.
+  * **Almacenamiento**: el tipo de almacenamiento que utiliza el clúster.
   * **Ubicación del centro de datos**: el {{site.data.keyword.CloudDataCent_notm}} en el que está alojado el clúster.
   * **Pod**: el pod en el que se ha desplegado el clúster.
   * **Estado**: el estado del clúster. El estado puede tener uno de los valores siguientes:
@@ -262,7 +264,19 @@ Tabla 4. Detalles del servidor ESXi
 | IP privada | La dirección IP privada del servidor ESXi. |
 | Estado | El estado del servidor ESXi, que puede tener uno de estos valores:<br> **Añadido** El servidor ESXi se ha añadido y está listo para ser utilizado.<br> **Añadiendo** El servidor ESXi se está añadiendo.<br> **Suprimiendo** El servidor ESXi se está suprimiendo. |
 
-Tabla 5. Detalles de almacenamiento
+Expanda el servidor de ESXi para ver más detalles.
+
+Tabla 5. Detalles adicionales del servidor ESXi
+
+| Elemento        | Descripción       |  
+|:------------- |:------------- |
+| CPU | La especificación de CPU de los servidores ESXi del clúster. |
+| Memoria | El tamaño total de la memoria de los servidores ESXi del clúster. |
+| Discos vSAN personalizados | El número de discos vSAN del clúster, incluido el tipo de disco y su capacidad. |
+|Discos de caché vSAN| Tipo y número de discos de caché vSAN. |
+| Redes      |Valores de habilitación de la tarjeta de interfaz de red (NIC) de Red pública y privada o de Red solo privada. |
+
+Tabla 6. Detalles de almacenamiento
 
 | Elemento        | Descripción       |  
 |:------------- |:------------- |
@@ -271,7 +285,7 @@ Tabla 5. Detalles de almacenamiento
 | IOPS/GB | El nivel de rendimiento del almacenamiento. |
 | Protocolo NFS | La versión NFS del almacenamiento. |
 
-Tabla 6. Interfaz de red - Detalles de VLAN
+Tabla 7. Interfaz de red - Detalles de VLAN
 
 | Elemento        | Descripción       |  
 |:------------- |:------------- |
@@ -282,7 +296,7 @@ Tabla 6. Interfaz de red - Detalles de VLAN
 
 Pulse **Ver recurso** para acceder a los detalles de la VLAN.
 
-Tabla 7. Interfaz de red - Detalles de subred
+Tabla 8. Interfaz de red - Detalles de subred
 
 | Elemento        | Descripción       |  
 |:------------- |:------------- |
@@ -290,7 +304,7 @@ Tabla 7. Interfaz de red - Detalles de subred
 | Tipo | El tipo de subred: primario o portátil. |
 | Descripción | La descripción de la subred. |
 
-Tabla 8. Interfaz de red - Detalles de IP
+Tabla 9. Interfaz de red - Detalles de IP
 
 | Elemento        | Descripción       |  
 |:------------- |:------------- |

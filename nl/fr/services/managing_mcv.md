@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-06-18"
+
+keywords: Mission Critical VMware, request Mission Critical, IBM consultation
 
 subcollection: vmware-solutions
 
@@ -19,7 +21,7 @@ subcollection: vmware-solutions
 3. Sur la page Mission Critical VMware on {{site.data.keyword.cloud_notm}}, dans la zone **Contactez-nous pour Mission Critical VMware**, cliquez sur **Demander un rendez-vous**.
 4. Sur la page IBM Services Expert Hub, cliquez sur **Schedule a consultation** afin de réserver un rendez-vous de 30 minutes avec un spécialiste des services.
 
-Vous serez contacté par un représentant de Mission Critical VMware on {{site.data.keyword.cloud_notm}} à l'aide de vos informations de contact pour vous aider à choisir les solution qu'il vous faut.
+  Vous serez contacté par un représentant {{site.data.keyword.vmwaresolutions_short}} à l'aide de vos informations de contact {{site.data.keyword.cloud_notm}} pour vous aider à choisir les solution qu'il vous faut.
 
 ## Liens connexes
 {: #managing_mcv-related}

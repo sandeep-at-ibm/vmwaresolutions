@@ -31,7 +31,7 @@ Composant | Objectif | Licence
 L'édition NSX Base for Service Providers est disponible uniquement pour les fournisseurs de services via VMware vCloud Air Network (vCAN). Les fonctionnalités de cette édition sont récapitulées dans le tableau suivant.
 {:note}
 
-Tableau 2. Graphique de comparaison des éditions dVMware NSX
+Tableau 2. Graphique de comparaison des éditions de VMware NSX
 
 | Fonction NSX                                   | Base | Advanced | Enterprise |
 |-----------------------------------------------|------|----------|------------|

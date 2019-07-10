@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-17"
+lastupdated: "2019-05-29"
 
 ---
 
@@ -19,7 +19,7 @@ Inoltre:
 * Supporta la convalida delle soluzioni rispetto all'architettura di riferimento comprovata.
 * Incoraggia l'aderenza a standard, specifiche e modelli comuni.
 
-L'obiettivo principale di questa architettura di riferimento è documentare la capacità di Operations Management per fornire monitoraggio e avvisi dell'ambiente {{site.data.keyword.vmwaresolutions_short}} distribuito per il cliente. Gli strumenti sono stati configurati con i parametri e le soglie di procedure consigliate per l'utilizzo da parte del team delle operazioni del cliente.
+ L'obiettivo principale di questa architettura di riferimento è documentare la capacità di Operations Management per fornire monitoraggio e avvisi dell'ambiente {{site.data.keyword.vmwaresolutions_short}} che viene distribuito per il cliente. Gli strumenti sono stati configurati con i parametri e le soglie di procedure consigliate per l'utilizzo da parte del team delle operazioni del cliente.
 
 La progettazione consente al cliente di completare le seguenti attività:
 * Eseguire un ridimensionamento incrementale o decrementale secondo necessità.
@@ -33,20 +33,20 @@ La progettazione consente al cliente di completare le seguenti attività:
 
 ![Diagramma dell'architettura](../../images/opsmgmt-architecture.svg "Diagramma dell'architettura")
 
-* Livello fisico - Il livello più basso dell'architettura è il livello fisico costituito dai componenti di calcolo, rete e archiviazione utilizzati da {{site.data.keyword.cloud_notm}}:
+* Livello fisico - Il livello più basso dell'architettura è il livello fisico, costituito dai componenti di calcolo, rete e archiviazione utilizzati da {{site.data.keyword.cloud_notm}}:
   * {{site.data.keyword.baremetal_short}} che eseguono i carichi di lavoro di gestione, edge e calcolo.
   * Rete {{site.data.keyword.cloud_notm}} costituita da VLAN, sottoreti e FCR/BCR (Frontend e Backend Customer Router).
-  * Archiviazione vSAN che è un archivio dati consolidato dai SSD nei {{site.data.keyword.baremetal_short}} o nell'archiviazione Endurance.
+  * Archiviazione vSAN, che è un archivio dati consolidato dagli SSD nei {{site.data.keyword.baremetal_short}} o nell'archiviazione Endurance.
 
 * Livello dell'infrastruttura virtuale - Il livello dell'infrastruttura virtuale viene eseguito sui componenti del livello fisico. Il livello dell'infrastruttura virtuale controlla l'accesso all'infrastruttura fisica sottostante e controlla e assegna le risorse ai carichi di lavoro di gestione e di calcolo. I carichi di lavoro di gestione sono costituiti dagli elementi presenti nel livello stesso dell'infrastruttura virtuale, insieme agli elementi nei livelli di gestione cloud, gestione del servizio, continuità delle operazioni di business e sicurezza.
 
-* Livello di continuità delle operazioni di business – Questo livello contiene elementi per supportare la continuità delle operazioni di business fornendo backup dei dati, ripristino e ripristino di emergenza. Per ulteriori informazioni, vedi l'architettura di backup e ripristino {{site.data.keyword.vmwaresolutions_short}} e le architetture di riferimento Veeam, Spectrum Protect Plus e ripristino di emergenza Zerto.
+* Livello di continuità delle operazioni di business – Questo livello contiene elementi per supportare la continuità delle operazioni di business fornendo backup dei dati, ripristino e ripristino di emergenza. Per ulteriori informazioni, vedi l'architettura di backup e ripristino {{site.data.keyword.vmwaresolutions_short}} e le architetture di riferimento Veeam, IBM Spectrum Protect Plus e ripristino di emergenza Zerto.
 
 * Livello di sicurezza – Questo livello contiene gli elementi per ridurre il rischio e aumentare la conformità. Per ulteriori informazioni, vedi le architetture di riferimento Fortinet, F5, NSX, HyTrust e Caveonix.
 
 Questo documento aggiunge il seguente livello all'architettura di {{site.data.keyword.vmwaresolutions_short}}:
 
-* Livello di gestione delle operazioni - L'architettura del livello di gestione delle operazioni include componenti di gestione che forniscono supporto per i livelli fisici e virtuali e, facoltativamente, i carichi di lavoro di calcolo in tempo reale. Il livello di gestione delle operazioni comprende la topologia di {{site.data.keyword.vmwaresolutions_short}}: risorse fisiche, virtuali, di calcolo, di rete e di archiviazione. Il livello di gestione delle operazioni è costituito principalmente da funzionalità di monitoraggio e registrazione.
+* Livello di gestione delle operazioni - L'architettura del livello di gestione delle operazioni include componenti di gestione che forniscono supporto per i livelli fisici e virtuali e, facoltativamente, i carichi di lavoro di calcolo in tempo reale. Il livello di gestione delle operazioni comprende la topologia di {{site.data.keyword.vmwaresolutions_short}}: risorse fisiche, virtuali, di calcolo, di rete e di archiviazione. Il livello di gestione delle operazioni è costituito principalmente da funzioni di monitoraggio e registrazione.
 
   Le informazioni sono raccolte nelle seguenti forme:
     * Metriche - dati strutturati, come prestazioni e capacità

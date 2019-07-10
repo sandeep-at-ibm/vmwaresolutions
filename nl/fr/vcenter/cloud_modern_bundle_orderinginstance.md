@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-06"
+lastupdated: "2019-06-18"
+
+keywords: single-node trial, migration app modernization, order migration app modernization
 
 subcollection: vmware-solutions
 
@@ -25,7 +27,7 @@ Passez en revue les exigences de planification avant de commander une instance d
 
 Assurez-vous que les conditions requises suivantes sont réunies et exécutez les tâches suivantes.
 
-### Conditions requises pour les instances HCX sur site
+### Conditions requises pour les instances HCX locales
 {: #cloud_modern_bundle_orderinginstance-hcx-req}
 
 * VMware vSphere et vCenter 5.5 ou de niveau ultérieur sont requis.
@@ -67,10 +69,13 @@ Passez en revue les exigences relatives au nom d'instance :
    3. Cliquez sur le ou les liens des conditions applicables à votre commande et prenez soin d'accepter ces conditions avant de commander l'instance.
    4. Cliquez sur **Mettre à disposition**.
 
-### Résultats
+### Que se passe-t-il après votre commande d'instances Single-node Trial for Migration and App Modernization ? 
 {: #cloud_modern_bundle_orderinginstance-results}
 
-Le déploiement de l'instance commence automatiquement et la clé d'activation du service HCX on {{site.data.keyword.cloud_notm}} sur site est commandée.
+* Le déploiement de l'instance commence automatiquement et la clé d'activation locale du service HCX on {{site.data.keyword.cloud_notm}} est commandée.
+* Vous pouvez vérifier l'état du déploiement, y compris tout problème pouvant nécessiter votre attention, en consultant la section **Historique de déploiement** des détails de l'instance. 
+* Une fois l'instance correctement déployée, les composants décrits dans [Spécifications techniques relatives aux instances Single-node Trial for Migration and App Modernization](/docs/services/vmwaresolutions/services?topic=vmware-solutions-cloud_modern_bundle_overview#cloud_modern_bundle_overview-tech-specs) sont installés. 
+* Lorsque l'instance est prête pour utilisation, elle prend le statut **Prêt à l'emploi** et vous recevez une notification par courrier électronique.
 
 #### Processus de déploiement du service HCX on IBM Cloud
 {: #cloud_modern_bundle_orderinginstance-hcx-deploy-process}
@@ -90,7 +95,7 @@ Le déploiement du service HCX on {{site.data.keyword.cloud_notm}} est automatis
    * Les règles et les pools de ressources d'équilibrage de charge sont configurés. Ces règles sont des pools de ressources utilisés pour réacheminer le trafic entrant lié à HCX vers les dispositifs virtuels appropriés de HCX Manager, vCenter Server et Platform Services Controller (PSC).
    * Un certificat SSL permettant de chiffrer le trafic HTTPS entrant associé à HCX en provenance des passerelles ESG est appliqué.
 
-   Le serveur de périphérie de gestion HCX est dédié au trafic de gestion HCX entre les composants HCX sur site et les composants HCX côté cloud. Ne modifiez pas le serveur de périphérie de gestion HCX et ne l'utilisez pas pour des extensions de réseau HCX. Créez plutôt des serveurs de périphérie distincts pour les extensions de réseau. Par ailleurs, l'utilisation d'un pare-feu ou la désactivation des communications de serveur de périphérie de gestion HCX sur les composants de gestion IBM privés ou l'Internet public peut avoir une incidence défavorable sur la fonctionnalité HCX.
+   Le serveur de périphérie de gestion HCX est dédié au trafic de gestion HCX entre les composants HCX locaux et les composants HCX côté cloud. Ne modifiez pas le serveur de périphérie de gestion HCX et ne l'utilisez pas pour des extensions de réseau HCX. Créez plutôt des serveurs de périphérie distincts pour les extensions de réseau. Par ailleurs, l'utilisation d'un pare-feu ou la désactivation des communications de serveur de périphérie de gestion HCX sur les composants de gestion IBM privés ou l'Internet public peut avoir une incidence défavorable sur la fonctionnalité HCX.
    {:important}
 
 5. HCX Manager on {{site.data.keyword.cloud_notm}} est déployé, activé et configuré :
@@ -105,16 +110,16 @@ Le déploiement du service HCX on {{site.data.keyword.cloud_notm}} est automatis
 
 Vous pouvez vérifier le statut du déploiement en affichant les détails de l'instance. Cliquez sur **Ressources** dans le panneau de navigation de gauche, puis recherchez le tableau **Instances vCenter Server** ou **Instances HCX locales** pour afficher des informations relatives aux instances que vous avez commandées.
 
-Une fois l'instance correctement déployée, les composants décrits dans les sections *Spécifications techniques* de cette rubrique sont installés sur votre plateforme virtuelle VMware et la clé d'activation du service HCX on {{site.data.keyword.cloud_notm}} sur site est indiquée dans le tableau **Instances HCX locales**.
+Une fois l'instance correctement déployée, les composants décrits dans les sections *Spécifications techniques* de cette rubrique sont installés sur votre plateforme virtuelle VMware et la clé d'activation locale du service HCX on {{site.data.keyword.cloud_notm}}est indiquée dans le tableau **Instances HCX locales**.
 
 L'instance prend le statut **Prêt à l'emploi** et vous recevez une notification par courrier électronique.
 
 ### Etape suivante
 {: #cloud_modern_bundle_orderinginstance-next}
 
-Installez HCX Enterprise Manager sur site et configurez la connexion à votre instance HCX on {{site.data.keyword.cloud_notm}}.
+Installez HCX Enterprise Manager local et configurez la connexion à votre instance HCX on {{site.data.keyword.cloud_notm}}.
 
-1. Localisez la clé d'activation sur site sur la page **Ressources**.
+1. Localisez la clé d'activation locale sur la page **Ressources**.
   1. Dans la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Ressources** dans le panneau de navigation de gauche.
   2. Dans le tableau **Instances vCenter Server**, examinez la colonne **Type** pour localiser la version d'essai à noeud unique pour la migration et la modernisation des applications et notez le nom de cette instance.
   3. Faites défiler l'écran vers le tableau **Instances HCX locales**, examinez la colonne **Nom** pour localiser l'instance portant le même nom que l'instance de version d'essai à noeud unique que vous avez commandée avec le suffixe *-OnPrem*.
@@ -136,13 +141,13 @@ Installez HCX Enterprise Manager sur site et configurez la connexion à votre in
 
     Vous devez déployer le gestionnaire HCX Manager local dans un réseau privé et l'autoriser à accéder au réseau public. Vous pouvez utiliser une passerelle NSX Edge, Vyatta ou autre pour accorder l'accès Internet au gestionnaire HCX Manager local. Si les passerelles utilisées pour l'accès au réseau privé et l'accès au réseau public sont différentes, il est recommandé d'utiliser la passerelle par défaut pour autoriser l'accès au réseau public et permettre, depuis la **console d'administration de HCX Manager**, de créer une route statique pour l'accès au réseau privé.  
     {:note}
-4. Utilisez la clé d'activation sur site notée à l'étape 1 pour activer votre machine virtuelle HCX Enterprise Manager sur site.
-  1. Connectez-vous à votre machine virtuelle HCX Enterprise Manager sur site à l'aide des données d'identification spécifiées lors du déploiement de l'OVA.
+4. Utilisez la clé d'activation locale notée à l'étape 1 pour activer votre machine virtuelle HCX Enterprise Manager locale.
+  1. Connectez-vous à votre machine virtuelle HCX Enterprise Manager locale à l'aide des données d'identification spécifiées lors du déploiement de l'OVA.
   2. Entrez la clé d'activation lorsque vous y êtes invité.
 
   Suivez les instructions décrites dans le document [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}.
 
-5. Un certificat SSL autosigné a été généré par le service HCX on {{site.data.keyword.cloud_notm}}. Vous devez importer le certificat dans le gestionnaire HCX Manager sur site en procédant comme suit :
+5. Un certificat SSL autosigné a été généré par le service HCX on {{site.data.keyword.cloud_notm}}. Vous devez importer le certificat dans le gestionnaire HCX Manager local en procédant comme suit :
     1. Sur la **console d'administration de HCX Manager**, cliquez sur l'onglet **Administration**.
     2. Dans le panneau de navigation de gauche, cliquez sur **Certificat d'autorité de certification digne de confiance**, puis sur **Importer** sur la droite.
     3. Cliquez sur **URL** et entrez l'adresse URL du certificat à appliquer, c'est-à-dire l'**adresse IP HCX Cloud** (``https://<cloud-side public IP>``) que vous trouverez sur la page des détails du service HCX on {{site.data.keyword.cloud_notm}} dans la console {{site.data.keyword.vmwaresolutions_short}}.
@@ -188,3 +193,4 @@ Procédez comme suit pour supprimer une instance Version d'essai à noeud unique
 * [Ouvrir un ticket au sujet d'IBM Cloud Private](https://www.ibm.com/mysupport/s/?language=fr_FR){:new_window}
 * [Ressources VMware HCX](https://hcx.vmware.com/#/docs){:new_window}
 * [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}
+* [Annulation de serveurs virtuels](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)

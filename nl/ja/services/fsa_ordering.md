@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-04"
+lastupdated: "2019-06-14"
+
+keywords: FortiGate security, FortiGate configuration, order FortiGate
 
 subcollection: vmware-solutions
 

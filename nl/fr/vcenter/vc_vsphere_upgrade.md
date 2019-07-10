@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-05-27"
+
+keywords: vSphere upgrade, NSX upgrade, PSC upgrade
 
 subcollection: vmware-solutions
 
@@ -37,7 +39,7 @@ Effectuez les étapes suivantes avant de commencer la mise à niveau :
   * [Notes sur l'édition de la version VMware vCenter Server 6.7, mise à jour 1b](https://docs.vmware.com/en/VMware-vSphere/6.7/rn/vsphere-vcenter-server-67u1b-release-notes.html){:new_window}
   * [A propos de la mise à niveau de VMware ESXi](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.esxi.upgrade.doc/GUID-65B5B313-3DBB-4490-82D2-A225446F4C99.html){:new_window}
 * Configurez vSphere Update Manager (VUM) dans votre instance vCenter Server pour télécharger les dernières mises à jour de VMware vSphere. Pour plus d'informations, voir [Introduction à VMware Update Manager](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vum-intro#vum-intro).
-*	Ouvrez un ticket d'assistance avec l'équipe {{site.data.keyword.vmwaresolutions_short}} pour les informer qu'une mise à niveau est en cours. Le ticket reste ouvert jusqu'à ce que l'instance soit enregistrée au niveau supérieur dans la console {{site.data.keyword.vmwaresolutions_short}}.
+* Ouvrez un ticket d'assistance avec l'équipe {{site.data.keyword.vmwaresolutions_short}} pour les informer qu'une mise à niveau est en cours. Le ticket reste ouvert jusqu'à ce que l'instance soit enregistrée au niveau supérieur dans la console {{site.data.keyword.vmwaresolutions_short}}.
 * Confirmez si l'instance vCenter Server que vous mettez à niveau est liée ou non à une autre instance vCenter Server comme instance principale ou secondaire dans la console {{site.data.keyword.vmwaresolutions_short}}. Toutes les instances liées doivent avoir leurs contrôleurs de services de plateforme (PSC) mis à niveau en premier dans le cadre d'une mise à niveau de site particulière.
 * Confirmez ce qui suit pour les instances basées sur vSAN :
   * Assurez-vous que l'outil vSAN Health est activé et ne signale aucune erreur critique. Si des erreurs critiques sont présentes, contactez l'équipe de support IBM en indiquant l'ID du ticket de support de mise à niveau.
@@ -72,14 +74,14 @@ Sautez la première étape si vous avez déjà une jumpbox VSI dans votre enviro
 8. Utilisez votre logiciel de terminal SSH pour accéder au PSC et au vCenter avec le portail ou les mots de passe fournis par le support pour **root**.
 9. Si vous le souhaitez, utilisez l'ID utilisateur et le mot de passe **root** notés dans le panneau de contrôle SL pour accéder à chaque hôte ESXi afin de vérifier le mot de passe **root**.
 
-#### Téléchargement des fichiers binaires
+#### Téléchargement de fichiers binaires 
 {: #vc_vsphere_upgrade-prereq-jumpbox-binary}
 
-Utilisez votre jumpbox VSI Windows et connectez-vous à votre compte https://my.vmware.com pour télécharger les binaires suivants :
+Utilisez votre jumpbox VSI Windows et connectez-vous à votre compte https://my.vmware.com pour télécharger les fichiers binaires suivants :
 
-*	Image VMware vSphere 6.7u1 Hypervisor (ESXi ISO) - Inclut les outils VMware
+* Image VMware vSphere 6.7u1 Hypervisor (ESXi ISO) - Inclut les outils VMware
 * ISO du dispositif vCenter 6.7u1b. Pas le bundle de mise à jour.
-*	Bundle de mise à niveau de NSX pour vSphere 6.4.4
+* Bundle de mise à niveau de NSX pour vSphere 6.4.4
 
 Pour les unités Intel Optane, téléchargez le fichier suivant pour l'utiliser dans le cadre du processus de correction après mise à niveau utilisé par VMware Update Manager.
 
@@ -91,7 +93,7 @@ Avant de commencer la mise à niveau, sauvegardez chaque composant.
 
 * Pour plus d'informations sur la sauvegarde de vCenter Server et des PSC, voir [Overview of Backup and Restore options in vCenter Server 6.x (2149237)](https://kb.vmware.com/s/article/2149237?lang=en_US){:new_window}.
 * Pour lire les remarques additionnelles sur la sauvegarde de vCenter Server et des PSC, voir [Sauvegarde de niveau fichier vCenter](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_backingup#solution_backingup-vcenter).
-*	Pour obtenir des informations sur la sauvegarde NSX, voir [Backing Up NSX Manager Data](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window}.
+* Pour obtenir des informations sur la sauvegarde NSX, voir [Backing Up NSX Manager Data](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window}.
 
 Il est recommandé d'utiliser la sauvegarde de niveau fichier. La sauvegarde de niveau image (via vSphere Data Protection) n'est pas prise en charge dans VMware vSphere 6.7.
 {:note}
@@ -124,7 +126,7 @@ Pour obtenir plus de détails sur la procédure décrite ci-dessous, veuillez vo
 
 1. Lisez les notes sur l'édition de NSX 6.4.4.4 pour vous assurer de la compatibilité avec votre configuration d'environnement spécifique. Pour plus d'informations, voir [Notes sur l'édition de VMware NSX Data Center for vSphere 6.4.4](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/rn/releasenotes_nsx_vsphere_644.html){:new_window}.
 2. Mettez d'abord à niveau le gestionnaire NSX. Si vous avez plusieurs environnements NSX qui utilisent le mode "cross vCenter linked", mettez à niveau tous les gestionnaires NSX avant de mettre à niveau les composants dans le **coordinateur de mise à niveau** de l'interface utilisateur NSX.
-3.	Utilisez le **Coordinateur de mise à jour** dans l'interface utilisateur de NSX au sein de l'interface utilisateur de vCenter pour mettre à jour les composants NSX.
+3. Utilisez le **Coordinateur de mise à jour** dans l'interface utilisateur de NSX au sein de l'interface utilisateur de vCenter pour mettre à jour les composants NSX.
 4. Continuez à examiner et à surveiller l'interface utilisateur de la mise à niveau NSX dans l'interface utilisateur vCenter à mesure que les problèmes éventuels sont résolus pour vous assurer que la mise à niveau se poursuit jusqu'à ce que tous les composants soient mis à niveau.
 
 ### Mise à niveau du contrôleur de services de plateforme (PSC)
@@ -136,13 +138,13 @@ Si vous avez des instances liées à vCenter Server, vous devez mettre à niveau
 {: #vc_vsphere_upgrade-procedure-psc-before}
 
 * Préparez vos mots de passe root vCenter et PSC pour la procédure suivante. Utilisez la console {{site.data.keyword.vmwaresolutions_short}} pour noter si la version de votre instance de vCenter Server a été ou non mise à niveau de la version 2.4 ou d'une version antérieure à la version 2.7 ou à une version ultérieure.
-* Sur la console {{site.data.keyword.vmwaresolutions_short}}, un seul mot de passe s'affiche pour root pour le PSC et vCenter. Cependant, il ne s'agit que du mot de passe vCenter. Vous devez contacter le support pour obtenir le mot de passe root de PSC.
+* Sur la console {{site.data.keyword.vmwaresolutions_short}}, un seul mot de passe s'affiche pour root pour le PSC et vCenter. Cependant, il ne s'agit que du mot de passe vCenter. Vous devez [contacter le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support) pour obtenir le mot de passe root de PSC.
 * Pour éviter les conflits, utilisez l'adresse IP qui figure dans la partie supérieure du sous-réseau utilisé actuellement par vCenter et le PSC. Vous devez utiliser une adresse IP temporaire pour le déploiement du nouveau dispositif.
 
 #### Procédure de mise à niveau du contrôleur de services de plateforme
 {: #vc_vsphere_upgrade-procedure-psc-procedure}
 
-1. Connectez-vous à la fois à l'interface utilisateur PSC, ``https://<psc-fqdn>:5480``, et à l'interface de gestion des dispositifs vCenter pour confirmer si le mot de passe root a expiré ou pas. Si la date d'expiration du mot de passe est **1970** alors il a expiré et vous devez activer SSH et l'interpréteur de commandes bash dans l'interface utilisateur de gestion des dispositifs PSC.
+1. Connectez-vous à la fois à l'interface utilisateur PSC, `https://<psc-fqdn>:5480`, et à l'interface de gestion des dispositifs vCenter pour confirmer si le mot de passe root a expiré ou pas. Si la date d'expiration du mot de passe est **1970** alors il a expiré et vous devez activer SSH et l'interpréteur de commandes bash dans l'interface utilisateur de gestion des dispositifs PSC.
     1. Effectuez une connexion SSH dans PSC avec l'ID et le mot de passe root. Même si le mot de passe est expiré, il vous permet de vous connecter.
     2. Utilisez la commande shell **passwd** pour définir un nouveau mot de passe root pour le PSC et vCenter.
     3. Sauvegardez les mots de passe qui ont été affichés sur la console {{site.data.keyword.vmwaresolutions_short}} ou qui vous ont été fournis par le support IBM. Ces mots de passe seront réutilisés ultérieurement lors de la mise à niveau des dispositifs.
@@ -314,7 +316,7 @@ Pour plus d'informations, voir [Enhanced vMotion Compatibility (EVC) processor s
 2. Sur la page d'accueil, cliquez sur **Manage vCenter Registration**.
 3. Editez la zone **Lookup Service URL** pour que son contenu pointe vers l'adresse IP vCenter. La version autonome intégrée de PSC **n'existe plus**.
 
-## Résultats de la mise à niveau du logiciel vCenter Server vSphere
+## Que se passe-t-il après la mise à niveau du logiciel vCenter Server vSphere ?   
 {: #vc_vsphere_upgrade-results}
 
 Une fois votre mise à niveau terminée, l'exécution du bilan de santé du vSAN peut faire apparaître des avertissements concernant les mises à jour du firmware pour les contrôleurs RAID et réseau fournis par IBM Cloud. Une fois que vous avez déterminé les hôtes qui ont besoin de mises à jour du firmware, ouvrez un ticket auprès du support IBM pour que le firmware soit mis à jour vers les versions recommandées.

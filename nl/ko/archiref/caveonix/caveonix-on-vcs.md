@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-28"
+lastupdated: "2019-05-15"
 
 subcollection: vmware-solutions
 
@@ -45,7 +45,7 @@ subcollection: vmware-solutions
 ## 고객에게 제공되는 주요 이점
 {: #caveonix-on-vcs-benefits}
 
-IC4VS의 Caveonix RiskForesight에서 제공하는 주요 이점에는 다음이 있습니다.
+IBM Cloud의 Caveonix RiskForesight에서 제공하는 주요 이점은 다음과 같습니다. 
 -	하이브리드 클라우드에서 각 위치, 조직 및 애플리케이션 그룹 전체에 있는 다차원 자산 그룹을 확인하여 취약 지점을 제거합니다.
 -	모든 애플리케이션에서 네트워크 트래픽 플로우를 사용하는 예측 분석 엔진을 기반으로 보안 및 규제 준수 정책을 구축하고 적용합니다.
 -	사이버 위협, 취약성 또는 비준수 구성 때문에 발생하는 위험을 없애기 위한 필수 조치를 신속하게 식별합니다.

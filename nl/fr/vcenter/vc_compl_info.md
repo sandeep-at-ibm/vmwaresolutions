@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-02"
+lastupdated: "2019-06-17"
+
+keywords: vCenter Server compliance, compliance info, vCenter Server policy
 
 subcollection: vmware-solutions
 
@@ -50,6 +52,21 @@ En cas d'incident système, un fournisseur de service tiers peuvent demander le 
 {: #vc_compl_info-personal-info-and-regulated-data}
 
 Ce service cloud n'est pas destiné à des exigences de sécurité spécifiques pour un contenu réglementé, par exemple, des informations personnelles ou des informations personnelles sensibles. Il appartient au client de déterminer si ce service cloud répond à ses besoins par rapport au type de contenu qu'il utilise dans le cadre du service cloud.
+
+## Configurations de règles
+{: #vc_compl_info-default-policy-config}
+
+Le mot de passe vCenter généré pour les instances principales de vCenter Server est maintenant composé de 15 caractères. Auparavant, le mot de passe généré était la valeur par défaut vCenter de huit caractères. 
+
+Tableau 1. Configurations de règles vCenter pour une nouvelle instance principale 
+
+| Règle | Version 3.1 ou ultérieure | Version 3.0 ou antérieure  |
+|:------------- |:------------------------------ |:------------- |
+| Règle de mot de passe vCenter | Longueur minimale de 15 caractères | Longueur minimale de 8 caractères (valeur par défaut vCenter) |
+| Règle de verrouillage vCenter | Maximum de trois tentatives de connexion infructueuses | Maximum de cinq tentatives de connexion infructueuses (valeur par défaut vCenter)  |
+| Règle de verrouillage vCenter | 900 secondes entre les échecs de connexion | 180 secondes entre les échecs de connexion (valeur par défaut vCenter) |
+
+Le mot de passe NSX Manager généré pour les instances principales de vCenter Server est maintenant composé de 15 caractères. Auparavant, le mot de passe généré comportait huit caractères. 
 
 ## Politique d'accès aux instances des clients
 {: #vc_compl_info-policy-for-access-client-inst}

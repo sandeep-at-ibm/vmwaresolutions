@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-06-11"
+
+keywords: notifications console, filter notifications, system notification
 
 subcollection: vmware-solutions
 
@@ -40,21 +42,14 @@ subcollection: vmware-solutions
           <dt class="dt dlterm">경고</dt>
           <dd class="dd">컴포넌트가 실패했거나 올바르게 작동하지 않습니다. 그러나 실패로 인해 컴포넌트의 지속적인 프로세스가 중단되지 않습니다.</dd>
             <dt class="dt dlterm">정보용</dt>
-            <dd class="dd">시스템 또는 사용자 오퍼레이션이 완료되었습니다. 일반적으로 다음 이벤트가 정보용 알림을 보고합니다.
-              <ul class="ul">
-                <li class="li">서비스가 설치됩니다.</li>
-                <li class="li">서비스가 업그레이드됩니다.</li>
-                <li class="li">서비스가 제거됩니다.</li>
-                <li class="li">모든 서비스가 추가된 ESXi 서버에 대해 다시 구성됩니다.</li>
-                <li class="li">모든 서비스가 제거된 ESXi 서버에 대해 다시 구성됩니다.</li>
-              </ul>
+            <dd class="dd">시스템 또는 사용자 오퍼레이션이 완료되었습니다. 일반적으로 다음 이벤트가 정보용 알림을 보고합니다.<br>서비스가 설치됩니다.<br>서비스가 업그레이드됩니다.<br>서비스가 제거됩니다.<br>모든 서비스가 추가된 ESXi 서버에 대해 다시 구성됩니다.<br>모든 서비스가 제거된 ESXi 서버에 대해 다시 구성됩니다.
             </dd>
           </dl>
         </td>
        </tr>
        <tr>
          <td>유형</td>
-         <td>보고된 이벤트가 관련된 컴포넌트의 유형입니다.<ul><li>vCenter Server 인스턴스</li><li>서비스</li><li>시스템</li></ul></td>
+         <td>보고된 이벤트가 관련된 컴포넌트의 유형입니다.<br>vCenter Server 인스턴스<br>서비스<br>시스템</td>
        </tr>
        <tr>
          <td>리소스</td>

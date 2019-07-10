@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-28"
+lastupdated: "2019-05-15"
 
 subcollection: vmware-solutions
 
@@ -45,7 +45,7 @@ Caveonix RiskForesight on {{site.data.keyword.vmwaresolutions_full}} は、「�
 ## お客様にとっての主な利点
 {: #caveonix-on-vcs-benefits}
 
-Caveonix RiskForesight on IC4VS がもたらす主なメリットは以下のとおりです。
+Caveonix RiskForesight on IBM Cloud がもたらす主なメリットは以下のとおりです。
 -	ハイブリッド・クラウド内のそれぞれの場所、組織、およびアプリケーション・グループにまたがる資産を多次元でグループ化して表示することによって、盲点をなくすことができる。
 -	すべてのアプリケーション間のネットワーク・トラフィック・フローを利用した予測分析エンジンに基づいてセキュリティー・ポリシーとコンプライアンス・ポリシーを作成して施行することができる。
 -	サイバー脅威、脆弱性、または非準拠構成によるリスクを除去するための必要なアクションを迅速に見極めることができる。

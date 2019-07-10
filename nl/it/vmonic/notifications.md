@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-06-11"
+
+keywords: notifications console, filter notifications, system notification
 
 subcollection: vmware-solutions
 
@@ -40,21 +42,14 @@ Puoi controllare le notifiche per verificare lo stato delle operazioni di sistem
           <dt class="dt dlterm">Avvertenza</dt>
           <dd class="dd">Un componente produce errori o non funziona correttamente. Tuttavia, l'errore non interrompere il processo in corso del componente.</dd>
             <dt class="dt dlterm">Informativo</dt>
-            <dd class="dd">È stata completata un'operazione di sistema o utente. In genere, i seguenti eventi segnalano notifiche informative:
-              <ul class="ul">
-                <li class="li">Un servizio è stato installato.</li>
-                <li class="li">Un servizio è stato aggiornato.</li>
-                <li class="li">Un servizio è stato rimosso.</li>
-                <li class="li">Tutti i servizi sono stati riconfigurati per i server ESXi aggiunti.</li>
-                <li class="li">Tutti i servizi sono stati riconfigurati per i server ESXi rimossi.</li>
-              </ul>
+            <dd class="dd">È stata completata un'operazione di sistema o utente. In genere, i seguenti eventi segnalano notifiche informative:<br>Un servizio è stato installato.<br>Un servizio è stato aggiornato.<br>Un servizio è stato rimosso.<br>Tutti i servizi sono stati riconfigurati per i server ESXi aggiunti.<br>Tutti i servizi sono stati riconfigurati per i server ESXi rimossi.
             </dd>
           </dl>
         </td>
        </tr>
        <tr>
          <td>Tipo</td>
-         <td>Il tipo di componente a cui è correlato l'evento segnalato:<ul><li>Istanze vCenter Server</li><li>Servizi</li><li>Sistema</li></ul></td>
+         <td>Il tipo di componente a cui è correlato l'evento segnalato:<br>Istanze vCenter Server<br>Servizi<br>Sistema</td>
        </tr>
        <tr>
          <td>Risorsa</td>

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-16"
+lastupdated: "2019-05-31"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-05-16"
 
 La conformità è una serie di requisiti necessari per soddisfare i controlli minimi stabiliti da un'agenzia di regolamentazione o dalle procedure ottimali del settore. I framework di conformità della regolarità sono solitamente framework generali che forniscono indicazioni su un'ampia gamma di tecnologie, mentre le procedure ottimali del settore da parte dei fornitori sono spesso specifiche per la tecnologia per affrontare i rischi tecnologici.
 
-Per la tua istanza vCenter Server, ti consigliamo che la sicurezza sia gestita mediante un team dedicato alla post distribuzione. Questa separazione delle mansioni dovrebbe aumentare e monitorare il livello di sicurezza della tua istanza. HyTrust CloudControl può aiutare i tuoi team con la separazione basata sui ruoli.
+Per la tua istanza vCenter Server, è consigliato che la sicurezza sia gestita mediante un team dedicato alla post distribuzione. Questa separazione delle mansioni dovrebbe aumentare e monitorare il livello di sicurezza della tua istanza. HyTrust CloudControl può aiutare i tuoi team con la separazione basata sui ruoli.
 
 HyTrust DataControl e KeyControl possono aiutarti a fornire protezione per i carichi di lavoro, ad esempio tramite la crittografia dei dati inattivi e la recinzione virtuale (geofencing). Potresti essere interessato alla distribuzione del servizio Caveonix RiskForesight per aiutarti non solo in merito ai tuoi requisiti di conformità ma anche nella gestione dei rischi informatici e dell'analisi.
 
@@ -29,11 +29,11 @@ vRealize Operations Manager ti consente di monitorare gli oggetti VMware per det
 
 * [Guida di protezione avanzata di VMware](https://www.vmware.com/uk/security/hardening-guides.html){:new_window}
 * [Guida alla sicurezza di vSphere](https://docs.vmware.com/en/VMware-vSphere/6.7/vsphere-esxi-vcenter-server-67-security-guide.pdf){:new_window}
-* [Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-fsa_considerations#fsa_considerations)
-* [Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-fortinetvm_considerations#fortinetvm_considerations)
-* [F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-f5_considerations#f5_considerations)
-* [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htcc_considerations.html#hytrust-cloudcontrol-on-ibm-cloud-overview)
-* [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htdc_considerations.html#hytrust-datacontrol-on-ibm-cloud-overview)
-* [HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htkc_considerations.html#hytrust-keycontrol-on-ibm-cloud-overview)
-* [Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-intro.html#caveonix-riskforesight)
+* [Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations)
+* [Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations)
+* [F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations)
+* [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htcc_considerations)
+* [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htdc_considerations)
+* [HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htkc_considerations)
+* [Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_considerations)
 * [Operations Management on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-opsmgmt-intro)

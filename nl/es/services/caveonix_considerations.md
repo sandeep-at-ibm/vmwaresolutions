@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-12"
+lastupdated: "2019-06-17"
+
+keywords: Caveonix, Caveonix RiskForesight, tech specs Caveonix
 
 subcollection: vmware-solutions
 
@@ -20,7 +22,7 @@ subcollection: vmware-solutions
 
 El servicio Caveonix RiskForesight on {{site.data.keyword.cloud}} permite gestionar el riesgo cibernético y de conformidad con supervisión proactiva y controles de defensa automatizados para protegerse frente a amenazas y para cumplir las normativas gubernamentales y del sector.
 
-Este servicio solo está disponible para instancias de VMware vCenter Server on {{site.data.keyword.cloud_notm}} desplegadas en la versión V2.9 y posteriores.
+Este servicio solo está disponible para instancias de VMware vCenter Server on {{site.data.keyword.cloud_notm}} desplegadas en la versión V2.9 y posteriores. La versión de Caveonix RiskForesight actualmente instalada es 2.2.1.
 {:note}
 
 ## Especificaciones técnicas para Caveonix RiskForesight on IBM Cloud

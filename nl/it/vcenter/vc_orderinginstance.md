@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-19"
+
+keywords: vCenter Server order instance, order vCenter Server, order vCenter Server instance
 
 subcollection: vmware-solutions
 
@@ -78,7 +80,7 @@ Specifica le opzioni di licenza per i seguenti componenti VMware nell'istanza:
 
 Per gli utenti Business Partner, la licenza vCenter Server (Standard edition), la licenza vSphere (Enterprise Plus edition) e la licenza NSX sono incluse e acquistate per tuo conto. Tuttavia, devi specificare l'edizione per la licenza NSX.
 
-Per gli utenti non Business Partner, puoi utilizzare le licenze VMware fornite da IBM per questi componenti selezionando **Includi con l'acquisto** o puoi utilizzare l'opzione Bring Your Own License (BYOL) selezionando **Fornita dall'utente** e immettendo le tue chiavi di licenza.
+Per gli utenti che non sono Business Partner, puoi utilizzare le licenze VMware fornite da IBM per questi componenti selezionando **Includi con l'acquisto** o puoi utilizzare l'opzione BYOL (Bring Your Own License) selezionando **Fornita dall'utente** e immettendo le tue chiavi di licenza.
 
 ### Note di licenza
 {: #vc_orderinginstance-licensing-notes}
@@ -143,7 +145,7 @@ Tabella 3. Opzioni per Broadwell {{site.data.keyword.baremetal_short}}
 
 * Tutti i server che ordini hanno la stessa configurazione.
 * Se intendi utilizzare l'archiviazione vSAN, puoi ordinare da 4 a 20 server.
-* Se intendi utilizzare l'archiviazione NFS, puoi ordinare da 2 a 20 server. Tuttavia, per i carichi di lavoro di produzione, ti consigliamo un numero minimo di 3 server. Per ulteriori informazioni, vedi [Un'istanza vCenter Server a due nodi è altamente disponibile?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-).
+* Se intendi utilizzare l'archiviazione NFS, puoi ordinare da 2 a 20 server.Tuttavia, per i carichi di lavoro di produzione, ti consigliamo un numero minimo di tre server. Per ulteriori informazioni, vedi [Un'istanza vCenter Server a due nodi è altamente disponibile?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ## Impostazioni di archiviazione
 {: #vc_orderinginstance-storage-settings}
@@ -217,7 +219,7 @@ L'etichetta del dominio secondario deve rispettare i seguenti requisiti:
 *  Sono consentiti solo caratteri alfanumerici e trattini (-).
 *  L'etichetta del dominio secondario deve iniziare con un carattere alfabetico e terminare con un carattere alfanumerico.
 *  La lunghezza massima dell'etichetta del dominio secondario è di 10 caratteri.
-*  L'etichetta del dominio secondario deve essere univoca all'interno del tuo account.
+*  L'etichetta del dominio secondario deve essere univoca all'interno di tutte le istanze nella tua configurazione multisito.
 
 ### Nome dominio
 {: #vc_orderinginstance-domain-name}
@@ -279,7 +281,7 @@ Seleziona la configurazione DNS (Domain Name System) per la tua istanza:
 * **Singola VSI Windows pubblica per Active Directory/DNS**: viene distribuita una singola VSI di Microsoft Windows Server per Microsoft Active Directory (AD) consultabile, che funziona come DNS per l'istanza in cui sono registrati gli host e le VM. Questa opzione è stata distribuita per impostazione predefinita per le istanze della V1.9 e successive.
 * **Due VM di Windows Server dedicate e altamente disponibili sul cluster di gestione**: vengono distribuite due VM di Microsoft Windows, che aiutano a migliorare la sicurezza e la solidità.
 
-Se configuri la tua istanza per utilizzare le due VM di Microsoft Windows, devi fornire due licenze Microsoft Windows Server 2016. Utilizza la licenza Microsoft Windows Server 2016 Standard Edition oppure la licenza Microsoft Windows Server 2016 Datacenter Edition o entrambe.
+Se configuri la tua istanza per utilizzare le due VM di Microsoft Windows, devi fornire due licenze Microsoft Windows Server 2016 Standard Edition.
 {:important}
 
 Ogni licenza può essere assegnata solo a un singolo server fisico e comprende fino a due processori fisici. Una licenza Standard Edition può eseguire due VM di Microsoft Windows virtualizzate per ogni server con 2 processori. Pertanto, sono necessarie due licenze poiché due VM di Microsoft Windows vengono distribuite in due host diversi.
@@ -296,7 +298,9 @@ Quando ordini un'istanza vCenter Server, puoi anche ordinare servizi aggiuntivi.
 ## Riepilogo ordine
 {: #vc_orderinginstance-order-summary}
 
-In base alla configurazione che hai selezionato per l'istanza e i servizi aggiuntivi, il costo stimato viene generato e visualizzato immediatamente nella sezione **Riepilogo ordine** nel riquadro di destra. Fai clic su **Dettagli sui prezzi** nella parte inferiore del riquadro di destra per generare un documento PDF che fornisce i dettagli della stima.
+In base alla configurazione che hai selezionato per l'istanza e i servizi aggiuntivi, il costo stimato viene generato e visualizzato istantaneamente nel riquadro di destra **Riepilogo ordine**. Fai clic su **Dettagli sui prezzi** per generare un documento PDF con il riepilogo del costo per le risorse {{site.data.keyword.vmwaresolutions_short}}.
+
+Puoi anche aggiungere le risorse di cui è stato eseguito il provisioning allo strumento di stima {{site.data.keyword.cloud_notm}} facendo clic su **Aggiungi alla stima**. Ciò è utile se desideri stimare il costo delle risorse {{site.data.keyword.vmwaresolutions_short}} selezionate insieme ad altre risorse {{site.data.keyword.cloud_notm}} di cui potresti prendere in considerazione l'acquisto.
 
 ## Procedura per ordinare le istanze vCenter Server
 {: #vc_orderinginstance-procedure}
@@ -346,13 +350,10 @@ Per ulteriori informazioni su come fornire le impostazioni per un servizio, vedi
 ## Risultati dopo l'ordine di istanze vCenter Server
 {: #vc_orderinginstance-results}
 
-La distribuzione dell'istanza inizia automaticamente. Riceverai la conferma che l'ordine è in fase di elaborazione e puoi controllare lo stato della distribuzione visualizzando i dettagli dell'istanza.
-
-Una volta che l'istanza è stata distribuita correttamente, i componenti descritti in [Specifiche tecniche per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs) vengono installati sulla tua piattaforma virtuale VMware. I server ESXi che hai ordinato vengono raggruppati come **cluster1** per impostazione predefinita. Se hai ordinato servizi aggiuntivi, la distribuzione dei servizi inizia dopo che il tuo ordine è stato completato.
-
-Quando l'istanza è pronta per l'uso, lo stato dell'istanza viene modificato in **Pronto per l'utilizzo** e riceverai una notifica via e-mail.
-
-Se ordini un'istanza secondaria, il client web VMware vSphere per l'istanza primaria (collegata a quella secondaria) potrebbe essere riavviato una volta completato l'ordine della tua istanza secondaria.
+* La distribuzione dell'istanza inizia automaticamente e ricevi una conferma che ti indica che l'ordine è in fase di elaborazione. Puoi verificare lo stato della distribuzione, inclusi gli eventuali problemi che potrebbero richiedere la tua attenzione, visualizzando la sezione **Cronologia distribuzione** dei dettagli dell'istanza.
+* Una volta che l'istanza è stata distribuita correttamente, i componenti descritti in [Specifiche tecniche per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs) vengono installati sulla tua piattaforma virtuale VMware. I server ESXi che hai ordinato vengono raggruppati come **cluster1** per impostazione predefinita. Se hai ordinato servizi aggiuntivi, la distribuzione dei servizi inizia dopo che il tuo ordine è stato completato.
+* Quando l'istanza è pronta per l'uso, lo stato dell'istanza viene modificato in **Pronto per l'utilizzo** e riceverai una notifica via e-mail.
+* Se ordini un'istanza secondaria, il client web VMware vSphere per l'istanza primaria (collegata a quella secondaria) potrebbe essere riavviato una volta completato l'ordine della tua istanza secondaria.
 
 ## Operazioni successive
 {: #vc_orderinginstance-next}
@@ -374,7 +375,7 @@ Se modifichi questi componenti al di fuori della console {{site.data.keyword.vmw
 ## Link correlati
 {: #vc_orderinginstance-related}
 
-* [Registrazione di un account {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)
+* [Registrazione per un account {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts)
 * [Visualizzazione delle istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
 * [Configurazione multisito per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_multisite)
 * [Aggiunta, visualizzazione ed eliminazione di cluster per le istanze vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)

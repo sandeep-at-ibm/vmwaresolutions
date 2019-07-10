@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-18"
+lastupdated: "2019-06-13"
+
+keywords: vCenter Server Hybridity add cluster, view cluster vCenter Server Hybridity, delete cluster vCenter Server Hybridity
 
 subcollection: vmware-solutions
 
@@ -123,7 +125,9 @@ Les paramètres de carte d'interface réseau varient selon que vous sélectionne
 ### Récapitulatif de la commande
 {: #vc_hybrid_addingviewingclusters-adding-order-summary}
 
-Selon la configuration que vous avez sélectionnée pour le cluster, le coût estimé est généré et affiché instantanément dans la section **Récapitulatif de la commande** sur le panneau de droite.
+Selon la configuration que vous avez sélectionnée pour le cluster, le coût estimé est généré et affiché instantanément dans la section **Récapitulatif de la commande** sur le panneau de droite. Cliquez sur **Détails concernant la tarification** pour générer un document PDF contenant le récapitulatif des coûts pour les ressources {{site.data.keyword.vmwaresolutions_short}}. 
+
+Vous pouvez également ajouter les ressources mises à disposition à l’outil d’estimation {{site.data.keyword.cloud_notm}} en cliquant sur **Ajouter à l'estimation**. Cela est utile si vous souhaitez estimer le coût des ressources {{site.data.keyword.vmwaresolutions_short}} sélectionnées avec d'autres ressources {{site.data.keyword.cloud_notm}} que vous pourriez envisager d'acheter.
 
 ## Procédure d'ajout de clusters à des instances vCenter Server with Hybridity Bundle
 {: #vc_hybrid_addingviewingclusters-adding-procedure}
@@ -147,7 +151,7 @@ Selon la configuration que vous avez sélectionnée pour le cluster, le coût es
    3. Cliquez sur le ou les liens des conditions applicables à votre commande et prenez soin d'accepter ces conditions avant d'ajouter le cluster.
    4. Cliquez sur **Mettre à disposition**.
 
-### Résultats après l'ajout de clusters à des instances vCenter Server with Hybridity Bundle
+### Que se passe-t-il après l'ajout de clusters à des instances vCenter Server with Hybridity Bundle ?  
 {: #vc_hybrid_addingviewingclusters-adding-results}
 
 1. Le déploiement du cluster démarre automatiquement et celui-ci prend le statut **Initialisation en cours**. Vous pouvez vérifier le statut du déploiement en affichant l'historique de déploiement sur la page **Récapitulatif** de l'instance.

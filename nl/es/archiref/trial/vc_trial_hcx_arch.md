@@ -27,7 +27,7 @@ Figura 1. Arquitectura de HCX
 
 En la siguiente información se muestra el diseño de la implementación del servicio HCX on {{site.data.keyword.cloud_notm}}. Incluye tanto los componentes de la instancia de {{site.data.keyword.vmwaresolutions_short}} del lado del destino como los componentes que se despliegan en el entorno de origen local.
 
-## Visión general de HCX on IBM
+## Visión general de HCX on IBM Cloud
 {: #vc_trial_hcx_arch-ovw}
 
 {{site.data.keyword.cloud_notm}} integra de forma transparente las redes de vSphere vCenter locales en despliegues de {{site.data.keyword.vmwaresolutions_short}}. La red híbrida amplía las redes de vSphere locales a {{site.data.keyword.cloud_notm}}, lo que da soporte a la movilidad bidireccional de VM.

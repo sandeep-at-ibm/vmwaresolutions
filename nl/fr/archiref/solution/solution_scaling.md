@@ -36,7 +36,7 @@ Dans cette conception, la définition d'un déploiement multisite comprend les �
    * Configuration de la réplication DNS et AD entre les machines virtuelles AD du site principal et du site secondaire
    * Configuration vCenter en mode lien étendu (Enhanced Linked) sur le serveur vCenter du site principal
 
-De plus, le gestionnaire NSX sur les sites secondaires peut être configuré en tant que gestionnaire NSX secondaire pour le gestionnaire NSX sur le site principal. Il s'agit d'un processus manuel que vous devez efectuer.
+De plus, le gestionnaire NSX sur les sites secondaires peut être configuré en tant que gestionnaire NSX secondaire pour le gestionnaire NSX sur le site principal. Il s'agit d'un processus manuel que vous devez effectuer.
 
 ## Ajout de nouveaux clusters
 {: #solution_scaling-clusters}

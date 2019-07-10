@@ -50,9 +50,10 @@ CentOS와 Squid에 기반한 프록시 서버를 사용할 수 있습니다. 스
 |호스트 이름 |Proxy01 | |
 |주소 |프록시 IP |예비 IP 주소는 프로비저닝 프로세스 중에 지정된 고객의 사설 포터블 서브넷에서 사용되어야 합니다. 이 서브넷에는 두 개의 IP 주소만 예약되어 있을 수 있습니다(하나는 BCR용, 다른 하나는 customer-esg용).
 |넷마스크 |255.255.255.192 | |
-|게이트웨이| customer-nsx-edge private uplink ip | customer-nsx-edge의 사설 업링크 주소인 프록시 서버에 대한 기본 게이트웨이 설정입니다. IP 주소는 **customer-nsx-edge**에 대한 **설정** 탭을 검토하여 찾을 수 있습니다. |
+|게이트웨이| customer-nsx-edge private uplink ip | customer-nsx-edge의 사설 업링크 IP 주소인 프록시 서버에 대한 기본 게이트웨이 설정입니다. IP 주소는 **customer-nsx-edge**에 대한 **설정** 탭을 검토하여 찾을 수 있습니다. |
 |DNS 서버 |AD/DNS ip |이 IP 주소는 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 있는 인스턴스 페이지 **리소스** 페이지에서 찾을 수 있습니다. |
-|BCR IP |bcr ip |{{site.data.keyword.cloud_notm}} Backend Customer Router의 IP 주소이며 10.0.0.0/8 및 161.26.0.0/16의 게이트웨이입니다. 이 주소는 VCSA 및 AD/DNS 서버에 연결할 수 있도록 프록시 서버의 정적 라우트에 사용됩니다. |
+|BCR IP |bcr ip |위의 프록시를 선택한 동일한 페이지에서 게이트웨이로 레이블된 주소를 적어 두십시오. 이 주소는 {{site.data.keyword.cloud_notm}} Backend Customer Router의 IP 주소이며 10.0.0.0/8 및 161.26.0.0/16의 게이트웨이입니다. 이 주소가 VCSA 및 AD/DNS 서버에 연결될 수 있도록 프록시 서버의 정적 라우트 아래에 이 주소를 사용합니다. |
+| NAT IP | customer-nsx-edge public uplink ip | 고객 NSX ESG의 공용 주소가 프록시의 공용 NAT 주소로 사용됩니다. 이 IP 주소는 **customer-nsx-edge**에 대한 **설정** 탭을 검토하여 찾을 수 있습니다. |
 
 ## NSX 구성
 {: #vum-init-config-config-nsx}
@@ -73,7 +74,7 @@ CentOS와 Squid에 기반한 프록시 서버를 사용할 수 있습니다. 스
 |:--------- |:-------------- |
 | 이름 | 아웃바운드 Proxy01 |
 | 유형 | User |
-| 소스 | 프록시 서버 IP |
+| 소스 |프록시 서버 IP |
 | 대상 | any |
 | 서비스 | HTTP/HTTPS/ICMP Echo |
 | 조치 | Accept |
@@ -89,7 +90,7 @@ CentOS와 Squid에 기반한 프록시 서버를 사용할 수 있습니다. 스
 
 표 3. NAT 규칙
 
-|매개변수 |제안 값 |
+| 매개변수 | 제안 값 |
 |:--------- |:-------------- |
 | 규칙 유형 | USER |
 | 조치 | SNAT |

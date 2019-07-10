@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-02"
+lastupdated: "2019-06-17"
+
+keywords: vCenter Server compliance, compliance info, vCenter Server policy
 
 subcollection: vmware-solutions
 
@@ -50,6 +52,21 @@ HIPAA のお客様には、VMware vCenter Server on {{site.data.keyword.cloud_no
 {: #vc_compl_info-personal-info-and-regulated-data}
 
 このクラウド・サービスは、個人情報や個人の機密情報などの規制対象コンテンツのための特定のセキュリティー要件に即して設計されているものではありません。 お客様は、お客様がクラウド・サービスに関連して使用するコンテンツのタイプについて、本クラウド・サービスがお客様のニーズを満たすものかどうか判断する責任を負います。
+
+## ポリシー構成
+{: #vc_compl_info-default-policy-config}
+
+vCenter Server プライマリー・インスタンス用に生成される vCenter パスワードの長さが 15 文字になりました。以前は、生成されるパスワードの長さは、vCenter のデフォルトである 8 文字でした。
+
+表 1. 新しいプライマリー・インスタンスの vCenter ポリシー構成
+
+| ポリシー | V3.1 以降 | V3.0 以前 |
+|:------------- |:------------------------------ |:------------- |
+| vCenter パスワード・ポリシー | 最小長 15 文字 | 最小長 8 文字 (vCenter デフォルト) |
+| vCenter ロックアウト・ポリシー | 失敗ログイン最大試行回数 3 回 | 失敗ログイン最大試行回数 5 回 (vCenter デフォルト) |
+| vCenter ロックアウト・ポリシー | ログイン失敗間 900 秒 | ログイン失敗間 180 秒 (vCenter デフォルト) |
+
+vCenter Server プライマリー・インスタンス用に生成される NSX Manager パスワードの長さが 15 文字になりました。以前は、生成されるパスワードの長さは 8 文字でした。
 
 ## お客様のインスタンスへのアクセスに関するポリシー
 {: #vc_compl_info-policy-for-access-client-inst}

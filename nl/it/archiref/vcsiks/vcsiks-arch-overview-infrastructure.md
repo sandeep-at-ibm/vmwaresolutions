@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-22"
 
 subcollection: vmware-solutions
 
@@ -17,12 +17,13 @@ subcollection: vmware-solutions
 ## VRF (Virtual Routing and Forwarding)
 {: #vcsiks-arch-overview-infrastructure-vrf}
 
-Gli account {{site.data.keyword.cloud}} possono essere configurati come account VRF (Virtual Routing and Forwarding). Gli account VRF abilitano l'instradamento globale automatico tra i blocchi IP della sottorete. Tutti gli account con connessioni Direct-Link devono essere convertiti o creati come account VRF.
+Gli account {{site.data.keyword.cloud}} possono essere configurati come account VRF (Virtual Routing and Forwarding). Gli account VRF abilitano l'instradamento globale automatico tra i blocchi IP della sottorete. Tutti gli account con connessioni Direct Link devono essere convertiti o creati come un account VRF.
 
 ## Direct Link
 {: #vcsiks-arch-overview-infrastructure-direct-link}
 
 {{site.data.keyword.cloud_notm}} Direct Link Connect offre l'accesso privato alla tua infrastruttura {{site.data.keyword.cloud_notm}} e a qualsiasi altro cloud collegato al Network Service Provider tramite il tuo {{site.data.keyword.CloudDataCent_notm}} locale. Questa opzione è perfetta per la creazione della connettività multicloud in un unico ambiente.
+
 Connettiamo i clienti alla rete {{site.data.keyword.cloud_notm}} Private utilizzando una topologia di larghezza di banda condivisa. Come con tutti i prodotti Direct Link, puoi aggiungere l'instradamento globale, che abilita il traffico di rete privato a tutte le ubicazioni di {{site.data.keyword.cloud_notm}}.
 
 ## VPN (Virtual Private Network)

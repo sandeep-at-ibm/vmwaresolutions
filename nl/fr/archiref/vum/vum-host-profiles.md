@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-15"
 
 subcollection: vmware-solutions
 
@@ -16,7 +16,7 @@ subcollection: vmware-solutions
 
 vCenter a une fonction appelée Profils d'hôte (Host Profiles). Cette fonction permet de créer un profil qui capture une configuration d'hôte de référence validée et préconfigurée. Elle aide un administrateur système à gérer les configurations d'hôte dans un cluster. Les profils d'hôte offrent un mécanisme automatisé géré de manière centralisée pour la configuration des hôtes et la conformité à cette configuration. Les profils d'hôte permettent de traiter la configuration comme un objet géré, qui contient un catalogue de paramètres à configurer, notamment les paramètres de mise en réseau, de stockage, de sécurité, ainsi que d'autres paramètres au niveau de l'hôte. Ces profils d'hôte peuvent être appliqués à des hôtes individuels, à un cluster ou à tous les hôtes et clusters associés à un profil d'hôte.
 
-Comme il y a davantage d'hôtes vSphere ESXi VMware vCenter Server on {{site.data.keyword.cloud}} déployés par l'automatisation IC4VS qui a déployé le cluster d'origine, il y a moins de modification de configuration qu'avec des méthodes manuelles d'ajout d'hôtes. Cependant, les actions de l'administrateur système, en plus de l'automatisation peuvent aboutir à une configuration différente des hôtes, par exemple, en cas d'ajout de stockage NFS ou de réseaux locaux virtuels (VLAN) supplémentaires. L'utilisation de profils d'hôte pour valider la configuration d'un nouvel hôte en vérifiant la conformité de l'hôte par rapport à un hôte existant constitue un cas d'utilisation valide de cet outil dans {{site.data.keyword.cloud_notm}}.
+Comme il y a davantage d'hôtes vSphere ESXi VMware vCenter Server on {{site.data.keyword.cloud}} déployés par l'automatisation IBM Cloud for VMware Solutions qui a déployé le cluster d'origine, il y a moins de modification de configuration qu'avec des méthodes manuelles d'ajout d'hôtes. Cependant, les actions de l'administrateur système, en plus de l'automatisation peuvent aboutir à une configuration différente des hôtes, par exemple, en cas d'ajout de stockage NFS ou de réseaux locaux virtuels (VLAN) supplémentaires. L'utilisation de profils d'hôte pour valider la configuration d'un nouvel hôte en vérifiant la conformité de l'hôte par rapport à un hôte existant constitue un cas d'utilisation valide de cet outil dans {{site.data.keyword.cloud_notm}}.
 
 Pour ajouter des hôtes à votre cluster vCenter Server, voir [Extension et réduction de capacité pour des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers).
 

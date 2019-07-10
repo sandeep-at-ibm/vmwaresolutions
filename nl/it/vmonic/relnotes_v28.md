@@ -116,7 +116,7 @@ Per ulteriori informazioni, vedi [Panoramica di KMIP for VMware on {{site.data.k
 * [Architettura {{site.data.keyword.vmwaresolutions_short}} (con NSX-V e NSX-T)
 ](/docs/services/vmwaresolutions/services?topic=vmware-solutions-solution_overview#solution_overview)
 * [Architettura di riferimento Caveonix RiskForesight](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-on-vcs)
-* [Guida operativa e per la distribuzione di HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/archiref/vcshcx?topic=vmware-solutions-vcshcx-intro)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} for VMware Solutions](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-vcs-intro)
 
 ## Aggiornamenti e miglioramenti dell'interfaccia utente
 {: #relnotes_v28-ui}

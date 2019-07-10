@@ -150,7 +150,7 @@ El despliegue de HCX on {{site.data.keyword.cloud_notm}} es automático. El proc
    * Dos subredes portátiles privadas para la gestión de HCX.
    * Una subred portátil pública para la activación y mantenimiento con VMware. Esta subred también se utiliza para las interconexiones HCX.
 
-   Las direcciones IP de las subredes solicitadas para HCX están pensadas para que las gestione el proceso automático de VMware en {{site.data.keyword.cloud_notm}}. Estas direcciones IP no se pueden asignar a recursos de VMware, como VM y NSX Edges, creados por el cliente. Si necesita direcciones IP adicionales para los artefactos de VMware, debe solicitar sus propias subredes de {{site.data.keyword.cloud_notm}}.
+   Las direcciones IP de las subredes solicitadas para HCX están pensadas para que las gestione la automatización de VMware on {{site.data.keyword.cloud_notm}}. Estas direcciones IP no se pueden asignar a recursos de VMware, como VM y NSX Edges, creados por el cliente. Si necesita direcciones IP adicionales para los artefactos de VMware, debe solicitar sus propias subredes de {{site.data.keyword.cloud_notm}}.
    {:important}
 3. Se crean tres agrupaciones de recursos y carpetas de VM para HCX, que son necesarias para las interconexiones de HCX, los componentes locales de HCX y los componentes remotos de HCX.
 4. Se despliega y se configura un par de VMware NSX Edge Services Gateways (ESG) para el tráfico de gestión de HCX:
@@ -176,21 +176,21 @@ El despliegue de HCX on {{site.data.keyword.cloud_notm}} es automático. El proc
 Puede comprobar el estado del despliegue visualizando los detalles de la instancia. Pulse **Recursos** en el panel de navegación de la izquierda y localice la tabla **Instancias de vCenter Server** o **Instancias de HCX locales** para
 ver información sobre las instancias que ha solicitado.
 
-Cuando la instancia se ha desplegado correctamente, los componentes que se describen en las secciones *Especificaciones técnicas* de este tema se instalan en la plataforma virtual de VMware y la clave de activación del servicio HCX local en {{site.data.keyword.cloud_notm}} aparece listado en la tabla **Instancias de HCX locales**.
+Cuando la instancia se ha desplegado correctamente, los componentes que se describen en las secciones *Especificaciones técnicas* de este tema se instalan en la plataforma virtual de VMware y la clave de activación del servicio HCX on {{site.data.keyword.cloud_notm}} local aparece listado en la tabla **Instancias de HCX locales**.
 
 El estado de la instancia pasa a ser **Listo para su uso** y el usuario recibe una notificación por correo electrónico.
 
 ### Qué hacer a continuación
 {: #vc_trial_hybrid_orderinginstance-next}
 
-Instale HCX Enterprise Manager local y configure la conexión con el HCX en la instancia de {{site.data.keyword.cloud_notm}}.
+Instale HCX Enterprise Manager local y configure la conexión con la instancia de HCX on {{site.data.keyword.cloud_notm}}.
 
 1. Localice la clave de activación local en la página **Recursos**.
   1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Recursos** en el panel de navegación izquierdo.
   2. En la tabla **Instancias de vCenter Server**, revise la columna **Tipo** para localizar la instancia de prueba de un solo nodo y anote el nombre de la instancia.
   3. Desplácese hasta la tabla **Instancias de HCX locales** y examine la columna **Nombre** para localizar la instancia que tiene el mismo nombre que la instancia de un solo nodo que ha solicitado con el prefijo *-OnPrem*.
   4. Anote la clave del campo **Clave de activación**.
-2. Obtenga el HCX Enterprise Manager Open Virtual Appliance (OVA) local desde HCX en la consola de {{site.data.keyword.cloud_notm}} HCX Manager.
+2. Obtenga el HCX Enterprise Manager Open Virtual Appliance (OVA) local desde la consola de HCX Manager de HCX on {{site.data.keyword.cloud_notm}}.
   1. Conéctese a la consola de HCX Cloud.
     1. En la tabla **Instancias de vCenter Server**, pulse la instancia de la prueba de un solo nodo para ver los detalles de la instancia.
     2. En **Información de acceso**, localice y anote las credenciales de vCenter.

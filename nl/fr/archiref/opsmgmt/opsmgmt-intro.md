@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-17"
+lastupdated: "2019-05-29"
 
 ---
 
@@ -40,7 +40,7 @@ La conception permet au client de réaliser les tâches suivantes :
 
 * Couche d'infrastructure virtuelle - La couche d'infrastructure virtuelle s'exécute sur les composants de la couche physique. La couche d'infrastructure virtuelle contrôle l'accès à l'infrastructure physique sous-jacente et contrôle et alloue les ressources à la charge de travail de gestion et de calcul. Les charges de travail de gestion se composent d'éléments de la couche d'infrastructure virtuelle elle-même, ainsi que d'éléments des couches de gestion du cloud, de gestion des services, de continuité des activités et de sécurité.
 
-* Couche de continuité d'activité - Cette couche contient des éléments qui permettent d'assurer la continuité des activités en assurant la sauvegarde, la restauration et la reprise après incident des données. Pour plus d'informations, voir l'architecture de sauvegarde et de restauration de {{site.data.keyword.vmwaresolutions_short}}, ainsi que les architectures de référence de reprise après incident Zerto, Veeam et Spectrum Protect Plus.
+* Couche de continuité d'activité - Cette couche contient des éléments qui permettent d'assurer la continuité des activités en assurant la sauvegarde, la restauration et la reprise après incident des données. Pour plus d'informations, voir l'architecture de sauvegarde et de restauration de {{site.data.keyword.vmwaresolutions_short}}, ainsi que les architectures de référence de reprise après incident Veeam et IBM Spectrum Protect Plus et Zerto.
 
 * Couche de sécurité - Cette couche contient les éléments permettant de réduire les risques et d'accroître la conformité. Pour plus d'informations, voir les architectures de référence Fortinet, F5, NSX, HyTrust et Caveonix.
 
@@ -50,14 +50,14 @@ Ce document ajoute la couche suivante à l'architecture {{site.data.keyword.vmwa
 
   L'information est recueillie sous les formes suivantes :
     * Métriques - données structurées telles que la performance et la capacité
-    * Journaux - données non structurées telles que les événements système 
+    * Journaux - données non structurées telles que les événements système
 
 La couche de gestion des opérations comprend les outils suivants :
 
 * vRealize Operations Manager (vROps) - vROps utilise les données collectées des ressources système (objets) pour identifier les problèmes dans les composants système surveillés et, dans de nombreux cas, il suggère des actions correctives à prendre pour résoudre le problème. Pour les problèmes plus complexes, vROps offre des outils analytiques riches pour révéler les problèmes cachés, enquêter sur des problèmes techniques complexes, identifier les tendances ou effectuer une analyse plus approfondie pour évaluer la santé d'un objet spécifique.
 * vRealize Log Insight (vRLI) - vRLI permet une gestion intelligente des journaux pour l'infrastructure et les applications dans tout environnement. Cette solution de gestion des journaux hautement évolutive fournit des tableaux de bord intuitifs et exploitables, des analyses sophistiquées et une extensibilité étendue à des environnements physiques, virtuels et de cloud.
 * vRealize Network Insight (vRNI) - vRNI fournit des opérations intelligentes pour la sécurité et les réseaux définis par logiciel. Il offre une visibilité sur les réseaux virtuels et physiques, fournit des vues opérationnelles pour gérer et faire évoluer les déploiements NSX, et accélère la planification et le déploiement de la micro-segmentation.
-* VMware Update Manager (VUM) - VUM permet une gestion centralisée et automatisée des correctifs et des versions pour VMware vSphere et les offres ; la mise à niveau et la correction des hôtes vSphere, l'installation et la mise à niveau des logiciels tiers sur les hôtes, et la mise à niveau du matériel de machines virtuelles, des outils VMware, et des dispositifs virtuels. 
+* VMware Update Manager (VUM) - VUM permet une gestion centralisée et automatisée des correctifs et des versions pour VMware vSphere et les offres ; la mise à niveau et la correction des hôtes vSphere, l'installation et la mise à niveau des logiciels tiers sur les hôtes, et la mise à niveau du matériel de machines virtuelles, des outils VMware, et des dispositifs virtuels.
 
 Pour une architecture d'entreprise complète, les couches suivantes peuvent être requises mais ne font pas partie de l'architecture {{site.data.keyword.vmwaresolutions_short}} :
 

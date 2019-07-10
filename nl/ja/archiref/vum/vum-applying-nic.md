@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-07"
 
 subcollection: vmware-solutions
 
@@ -22,7 +22,7 @@ ixgben は、vmklinux net-ixgbe ドライバーを置き換えるネイティブ
 
 ホストごとに、連続して以下の手順を実行します。
 1. vSphere Web Client を使用して、**「Home」** > **「Hosts and Clusters」**を選択し、vSphere ESXi ホストを保守モードにします。 「Navigator」ペインで vSphere ESXi ホストを選択して右クリックし、**「Maintenance Mode」** > **「Enter Maintenance Mode」**を選択します。 ホストが自動化 DRS クラスターの一部であるため、ホストが保守モードになると、仮想マシンは異なるホストにマイグレーションされます。
-2. IC4VS コンソールからの詳細を使用して、vSphere ESXi ホストに SSH でログインします。
+2. IBM Cloud for VMware Solutions コンソールからの詳細を使用して、vSphere ESXi ホストに SSH でログインします。
 3. 次の vCLI コマンドを実行して、ixgben ネイティブ・ドライバーを有効にします。
 `esxcli system module set --enabled=true --module=ixgben`
 4. 次の vCLI コマンドを実行して、vSphere ESXi ホストを再始動します。
@@ -39,7 +39,7 @@ ixgben ドライバーが「loaded」(最初の列) および「enabled」(2 番
 
 戻す必要があり、vSphere ESXi ホストに SSH で接続できない場合は、{{site.data.keyword.cloud_notm}} コントロール・ウィンドウを使用して、戻す必要があるホストの KVM コンソールにログインする必要があります。
 
-{{site.data.keyword.cloud_notm}} コントロール・ウィンドウにリストされている ID とパスワードを IPMI IP アドレスと共に使用して、IPMI Web インターフェースにログインします。 VPN を介してホストが配置されているデータ・センターに接続する必要があります。 詳しくは、[VPN の概要](/docs/infrastructure/iaas-vpn?topic=VPN-gettingstarted-with-virtual-private-networking#gettingstarted-with-virtual-private-networking)を参照してください。
+{{site.data.keyword.cloud_notm}} コントロール・ウィンドウにリストされている ID とパスワードを IPMI IP アドレスと共に使用して、IPMI Web インターフェースにログインします。 VPN を介してホストが配置されているデータ・センターに接続する必要があります。 詳しくは、[VPN の概要](/docs/infrastructure/iaas-vpn?topic=VPN-getting-started)を参照してください。
 
 1. vSphere ESXi ホストの「デバイスの詳細、リモート管理 (Device Details, Remote Mgmt)」ページに移動し、**「Actions」**>**「KVM Console」**を選択します。 IPMI ユーザーとパスワードを入力するための別のウィンドウが開きます。
 2. **「Remote Control」** > **「iKVM/HTML5」**を選択し、**「iKVM/HTML5」**をクリックして再起動します。 これで、vSphere ESXi ホストのコンソールにアクセスできるようになります。

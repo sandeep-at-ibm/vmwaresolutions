@@ -18,7 +18,7 @@ subcollection: vmware-solutions
 # Diseño de la infraestructura de almacenamiento adjunto
 {: #storage-infra-design}
 
-{{site.data.keyword.vmwaresolutions_full}} proporciona tecnología de VMware que se despliega de forma automatizada en los {{site.data.keyword.CloudDataCents_notm}} de todo el mundo. En el conjunto de soluciones {{site.data.keyword.cloud_notm}}, el VMware vCenter Server base de la oferta {{site.data.keyword.cloud_notm}} consta de hasta 10 clústeres que contiene cada uno hasta 59 hosts vSphere, un solo controlador de servicios de la plataforma (PSC) y un dispositivo vCenter Server capaz de gestionar hasta 400 hosts y 4.000 máquinas virtuales.
+{{site.data.keyword.vmwaresolutions_full}} proporciona tecnología de VMware que se despliega de forma automatizada en los {{site.data.keyword.CloudDataCents_notm}} de todo el mundo. En el conjunto de soluciones {{site.data.keyword.cloud_notm}}, la oferta básica de VMware vCenter Server on {{site.data.keyword.cloud_notm}} consta de hasta 10 clústeres que contiene cada uno hasta 59 hosts vSphere, un solo controlador de servicios de la plataforma (PSC) y un dispositivo vCenter Server capaz de gestionar hasta 400 hosts y 4.000 máquinas virtuales.
 
 La arquitectura que se presenta aquí complementa la solución de vCenter Server añadiendo almacenamiento adjunto como un dispositivo de almacenamiento compartido para el entorno. El dispositivo de almacenamiento adjunto se encuentra en el mismo {{site.data.keyword.CloudDataCent_notm}} que el despliegue de vCenter Server y consiste en un solo recurso de sistema de archivos de red (NFS) compartido o de varias exportaciones de NFS de {{site.data.keyword.cloud_notm}}.
 

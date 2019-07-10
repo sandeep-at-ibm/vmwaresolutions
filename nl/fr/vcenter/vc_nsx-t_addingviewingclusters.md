@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-18"
+lastupdated: "2019-06-13"
+
+keywords: vCenter Server NSX-T add cluster, view cluster vCenter Server NSX-T, delete cluster vCenter Server NSX-T
 
 subcollection: vmware-solutions
 
@@ -66,9 +68,9 @@ Tableau 1. Options pour les serveurs Skylake {{site.data.keyword.baremetal_short
 
 | Options de modèle d'UC        | Options de RAM       |
 |:------------- |:------------- |
-| Processeur Dual Intel Xeon Silver 4110/16 coeurs au total, 2,1 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 To |
-| Processeur Dual Intel Xeon Gold 5120/28 coeurs au total, 2,2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 To |
-| Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 To |
+| Processeur Dual Intel Xeon Silver 4110/16 coeurs au total, 2,1 GHz | 128 Go, 192 Go, 384 Go, 768 Go, 1.5 To |
+| Processeur Dual Intel Xeon Gold 5120/28 coeurs au total, 2,2 GHz | 128 Go, 192 Go, 384 Go, 768 Go, 1.5 To |
+| Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz | 128 Go, 192 Go, 384 Go, 768 Go, 1.5 To |
 
 #### Broadwell
 {: #vc_nsx-t_addingviewingclusters-adding-broadwell}
@@ -148,7 +150,9 @@ Les paramètres d'activation de carte d'interface réseau varient selon que vous
 ### Récapitulatif de la commande
 {: #vc_nsx-t_addingviewingclusters-adding-order-summary}
 
-Selon la configuration que vous avez sélectionnée pour le cluster, le coût estimé est généré et affiché instantanément dans la section **Récapitulatif de la commande** sur le panneau de droite.
+Selon la configuration que vous avez sélectionnée pour le cluster, le coût estimé est généré et affiché instantanément dans la section **Récapitulatif de la commande** sur le panneau de droite. Cliquez sur **Détails concernant la tarification** pour générer un document PDF contenant le récapitulatif des coûts pour les ressources {{site.data.keyword.vmwaresolutions_short}}. 
+
+Vous pouvez également ajouter les ressources mises à disposition à l’outil d’estimation {{site.data.keyword.cloud_notm}} en cliquant sur **Ajouter à l'estimation**. Cela est utile si vous souhaitez estimer le coût des ressources {{site.data.keyword.vmwaresolutions_short}} sélectionnées avec d'autres ressources {{site.data.keyword.cloud_notm}} que vous pourriez envisager d'acheter.
 
 ## Procédure d'ajout de clusters à des instances vCenter Server with NSX-T
 {: #vc_nsx-t_addingviewingclusters-adding-procedure}

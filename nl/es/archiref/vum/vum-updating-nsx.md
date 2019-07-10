@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-15"
 
 subcollection: vmware-solutions
 
@@ -44,7 +44,7 @@ El flujo de trabajo es el siguiente:
 4. En la página de descargas, seleccione **Actualizar paquete compuesto, Descargar ahora**.
 5. Descargar a una carpeta adecuada.
 6. **Actualizar NSX Manager**:
-  - Inicie la sesión en el dispositivo virtual de NSX Manager mediante la dirección IP y las credenciales que están documentadas en la consola IC4VS y pulse el botón Actualizar en la página de inicio.
+  - Inicie la sesión en el dispositivo virtual de NSX Manager mediante la dirección IP y las credenciales que están documentadas en la consola de IBM Cloud for VMware Solutions y pulse el botón Actualizar en la página de inicio. 
   - Inicie la sesión en NSX Manager.
   - En **Gestión de dispositivos**, pulse **Copias de seguridad y restaurar**.
   - Pulse Copia de seguridad y especifique un nombre de archivo adecuado. VMware recomienda que vuelva a instalar el dispositivo NSX Manager antes de restaurar los datos de NSX Manager. Aunque es posible que una operación de restauración en un dispositivo NSX Manager existente funcione, oficialmente no se admite. La práctica recomendada es tomar nota de los valores de IP para el dispositivo NSX Manager para que se puedan utilizar para especificar información de IP y la información de ubicación de copia de seguridad para el dispositivo NSX Manager recién desplegado.

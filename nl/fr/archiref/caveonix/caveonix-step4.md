@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-05-15"
 
 subcollection: vmware-solutions
 
@@ -18,7 +18,7 @@ Une fois que les machines virtuelles sont déployées et que les composants de l
 
 Le fournisseur de service est l'organisation de premier niveau et un ou plusieurs locataires ou organisations sont desservis par le fournisseur de service. Le fournisseur de service affecte les actifs qui sont collectés du vCenter au locataire ou aux organisations qui les affectent ensuite aux applications ou sous-applications. Ces applications sont ensuite soumises à un régime de conformité.
 
-Cette étape est initialement exécutée par l'automatisation IC4VS qui utilise les informations fournies par le client lors du processus de commande et des informations par défaut. Le processus de configuration peut être démarré par le client lors d'un déploiement postérieur pour modifier le fournisseur de service ou l'organisation locataire selon les besoins après l'installation.
+Cette étape est initialement exécutée par l'automatisation IBM Cloud for VMware Solutions qui utilise les informations fournies par le client lors du processus de commande et des informations par défaut. Le processus de configuration peut être démarré par le client lors d'un déploiement postérieur pour modifier le fournisseur de service ou l'organisation locataire selon les besoins après l'installation.
 
 La configuration du fournisseur de service comporte huit sous-étapes :
 -	Etape 1 : Détails de l'organisation - Ajoutez les détails de l'organisation parent de votre fournisseur de service de cloud. Cette organisation peut avoir plusieurs emplacements physiques et plusieurs centres de données. Les organisations de vos locataires et les sous-organisations de votre fournisseur de service sont ajoutées ultérieurement.

@@ -97,7 +97,7 @@ Todd는 Transformation Advisor와 Microclimate를 찾고, helm 설치 차트를 
 Transformation Advisor를 실행하기 위해 WebSphere에서 Stock Trader를 실행하는 VM에 데이터 콜렉터를 추가한 Jane이 [Transformation
 Advisor](https://developer.ibm.com/recipes/tutorials/using-the-transformation-advisor-on-ibm-cloud-private/) 사용자 인터페이스를 열어 결과를 확인합니다.
 
-Jane이 Stock Trader를 추가했고 Liberty에서 각 war 파일을 실행하기 위한 권장 사항을 확인하며 대부분의 마이그레이션은 하나의 적당한 마이그레이션으로 간단하게 수행될 것입니다. Jane은 Migration Details를 클릭하고 마이그레이션을 완료하는 데 사용할 수 있는 배치 파일을 Transformation Advisor에서 제공하는지 확인합니다. Jane이 Transformation Advisor에 2진 파일을 업로드하면 Microclimate에서 제공한 API를 사용하여 Liberty 컨테이너를 배치합니다.
+Jane이 Stock Trader를 추가했고 Liberty에서 각 war 파일을 실행하기 위한 권장 사항을 확인하며 대부분의 마이그레이션은 하나의 적당한 마이그레이션으로 간단하게 수행될 것입니다. Jane은 Migration Details를 클릭하고 마이그레이션을 완료하는 데 사용할 수 있는 배치 파일을 Transformation Advisor에서 제공하는지 확인합니다. Jane이 Transformation Advisor에 바이너리 파일을 업로드하면 Microclimate에서 제공한 API를 사용하여 Liberty 컨테이너를 배치합니다.
 
 결과적으로 Stock Trader 레이아웃 옵션은 다음과 같습니다.
 * 단일 Liberty 컨테이너 - Jane이 Liberty 런타임을 배치하고 Stock Trader 앱을 해당 단일 컨테이너에 추가했습니다.

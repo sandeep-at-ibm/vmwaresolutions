@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-05-27"
+
+keywords: vSphere upgrade, NSX upgrade, PSC upgrade
 
 subcollection: vmware-solutions
 
@@ -37,7 +39,7 @@ Completa i seguenti requisiti prima di iniziare l'upgrade:
   * [VMware vCenter Server 6.7 Update 1b Release Notes](https://docs.vmware.com/en/VMware-vSphere/6.7/rn/vsphere-vcenter-server-67u1b-release-notes.html){:new_window}
   * [About VMware ESXi Upgrade](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.esxi.upgrade.doc/GUID-65B5B313-3DBB-4490-82D2-A225446F4C99.html){:new_window}
 * Configura vSphere Update Manager (VUM) all'interno della tua istanza vCenter Server per scaricare gli aggiornamenti più recenti da VMware vSphere. Per ulteriori informazioni, vedi [Introduzione a VMware Update Manager](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vum-intro#vum-intro).
-*	Apri un ticket di supporto con il team {{site.data.keyword.vmwaresolutions_short}} per notificare loro che stai per eseguire un upgrade. Il ticket rimane aperto fino a quando l'istanza non viene registrata al livello di upgrade eseguito nella console {{site.data.keyword.vmwaresolutions_short}}.
+* Apri un ticket di supporto con il team {{site.data.keyword.vmwaresolutions_short}} per notificare loro che stai per eseguire un upgrade. Il ticket rimane aperto fino a quando l'istanza non viene registrata al livello di upgrade eseguito nella console {{site.data.keyword.vmwaresolutions_short}}.
 * Conferma se l'istanza vCenter Server di cui stai eseguendo l'upgrade è collegata o meno a un'altra istanza vCenter Server come primaria o secondaria nella console {{site.data.keyword.vmwaresolutions_short}}. È necessario che i PCS (Platform Services Controllers) di tutte le istanze collegate siano stati sottoposti ad upgrade come parte di una particolare upgrade del sito.
 * Conferma quanto segue per le istanze basate su vSAN:
   * Assicurati che lo strumento di integrità di vSAN sia abilitato e non riporti errori critici. Se sono presenti errori critici, contatta il team di supporto IBM con l'ID ticket di supporto dell'upgrade.
@@ -77,9 +79,9 @@ Ignora il primo passo se hai già un jumpbox VSI nel tuo ambiente.
 
 Utilizza il tuo jumpbox VSI di Windows e accedi al tuo account https://my.vmware.com per scaricare i seguenti file binari:
 
-*	Immagine VMware vSphere 6.7u1 Hypervisor (ESXi ISO) (Include gli strumenti VMware)
+* Immagine VMware vSphere 6.7u1 Hypervisor (ESXi ISO) (Include gli strumenti VMware)
 * ISO del dispositivo vCenter 6.7u1b. Non il bundle di aggiornamento.
-*	NSX for vSphere 6.4.4 Upgrade Bundle
+* NSX for vSphere 6.4.4 Upgrade Bundle
 
 Per le unità Intel Optane, scarica il seguente file per utilizzarlo come parte del processo di applicazione della patch post-upgrade che utilizza VMware Update Manager.
 
@@ -91,7 +93,7 @@ Prima di iniziare l'upgrade, esegui il backup di ciascun componente.
 
 * Per informazioni sul backup di vCenter Server e PSC, vedi [Overview of Backup and Restore options in vCenter Server 6.x (2149237)](https://kb.vmware.com/s/article/2149237?lang=en_US){:new_window}.
 * Per ulteriori considerazioni e informazioni sul backup di vCenter Server e PSC, vedi [Backup basato su file di vCenter](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_backingup#solution_backingup-vcenter).
-*	Per informazioni sul backup di NSX, vedi [Backing Up NSX Manager Data](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window}.
+* Per informazioni sul backup di NSX, vedi [Backing Up NSX Manager Data](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window}.
 
 Ti consigliamo di utilizzare il backup basato su file. Il backup basato sulle immagini (utilizzando vSphere Data Protection) non è supportato in VMware vSphere 6.7.
 {:note}
@@ -124,7 +126,7 @@ Fai riferimento a [NSX Upgrade Guide](https://docs.vmware.com/en/VMware-NSX-Data
 
 1. Leggi le note sulla release per NSX 6.4.4 per assicurarti della compatibilità con la tua configurazione dell'ambiente specifica. Per ulteriori informazioni, vedi [VMware NSX Data Center for vSphere 6.4.4 Release Notes](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/rn/releasenotes_nsx_vsphere_644.html){:new_window}.
 2. Esegui innanzitutto l'upgrade del gestore NSX. Se hai più ambienti NSX che utilizzano la modalità collegata tra vCenter, esegui l'upgrade di tutti i gestori NSX prima di eseguire l'upgrade dei componenti nell'interfaccia utente NSX **Upgrade Coordinator**.
-3.	Utilizza **Upgrade Coordinator** nell'interfaccia utente NSX all'interno dell'interfaccia utente vCenter per eseguire l'upgrade dei componenti NSX.
+3. Utilizza **Upgrade Coordinator** nell'interfaccia utente NSX all'interno dell'interfaccia utente vCenter per eseguire l'upgrade dei componenti NSX.
 4. Continua a esaminare e monitorare l'interfaccia utente di upgrade NSX all'interno dell'interfaccia utente vCenter man mano che vengono risolti possibili problemi per assicurarti che l'upgrade stia procedendo fino a quando tale processo non viene eseguito per tutti i componenti.
 
 ### Upgrade di PSC (Platform Services Controller)
@@ -136,13 +138,13 @@ Se hai istanze collegate vCenter Server, devi eseguire l'upgrade di tutte le ist
 {: #vc_vsphere_upgrade-procedure-psc-before}
 
 * Per la seguente procedura, devi avere disponibili le tue password root vCenter e PSC. Utilizza la console {{site.data.keyword.vmwaresolutions_short}} per notare se è stato eseguito o meno l'upgrade della tua versione dell'istanza vCenter Server dalla V2.4 o precedenti alla V2.7 o successive.
-* Nella console {{site.data.keyword.vmwaresolutions_short}}, viene visualizzata una singola password per root sia per PSC che per vCenter. Tuttavia, si tratta unicamente della password di vCenter. Devi contattare il supporto per la password root di PSC.
-* Per evitare conflitti, utilizza l'IP nella parte superiore della stessa sottorete che viene al momento utilizzata da vCenter e PSC. Devi utilizzare un IP temporaneo per la distribuzione del nuovo dispositivo.
+* Nella console {{site.data.keyword.vmwaresolutions_short}}, viene visualizzata una singola password per root sia per PSC che per vCenter. Tuttavia, si tratta unicamente della password di vCenter. Devi [contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support) per la password root di PSC.
+* Per evitare conflitti, utilizza l'indirizzo IP nella parte superiore della stessa sottorete attualmente utilizzata da vCenter e PSC. Devi utilizzare un indirizzo IP temporaneo per la distribuzione del nuovo dispositivo.
 
 #### Procedura per eseguire l'upgrade di PSC (Platform Services Controller)
 {: #vc_vsphere_upgrade-procedure-psc-procedure}
 
-1. Accedi alle interfacce utente di gestione del dispositivo di PSC, ``https://<psc-fqdn>:5480`` e di vCenter per confermare se la password root è scaduta o meno. Se la data di scadenza della password è **1970**, è scaduta e devi abilitare SSH e la shell bash nell'interfaccia utente di gestione del dispositivo PSC.
+1. Accedi alle interfacce utente di gestione del dispositivo di PSC, `https://<psc-fqdn>:5480` e di vCenter per confermare se la password root è scaduta o meno. Se la data di scadenza della password è **1970**, è scaduta e devi abilitare SSH e la shell bash nell'interfaccia utente di gestione del dispositivo PSC.
     1. Esegui SSH in PSC con l'ID e la password root. Anche se la password è scaduta, ti consente di eseguire l'accesso.
     2. Utilizza il comando shell **passwd** per impostare una nuova password root sia per PSC che per vCenter.
     3. Salva le password visualizzate nella console {{site.data.keyword.vmwaresolutions_short}} o che ti sono state fornite dal supporto IBM. Queste password vengono riutilizzate in un secondo momento quando esegui l'upgrade dei dispositivi.
@@ -163,7 +165,7 @@ Per le istanze collegate vCenter Server, sebbene ti consigliamo di eseguire l'up
 {: #vc_vsphere_upgrade-procedure-vcenter-before}
 
 * Per la seguente procedura, devi avere disponibili le tue password root vCenter e PSC. Utilizza la console {{site.data.keyword.vmwaresolutions_short}} per notare se è stato eseguito o meno l'upgrade della tua versione dell'istanza vCenter Server dalla V2.4 o precedenti alla V2.7 o successive.
-* Per evitare conflitti, utilizza l'IP nella parte superiore della stessa sottorete che viene al momento utilizzata da vCenter e PSC. Devi utilizzare un IP temporaneo per la distribuzione del nuovo dispositivo.
+* Per evitare conflitti, utilizza l'indirizzo IP nella parte superiore della stessa sottorete attualmente utilizzata da vCenter e PSC. Devi utilizzare un indirizzo IP temporaneo per la distribuzione del nuovo dispositivo.
 
 #### Procedura per eseguire l'upgrade di vCenter
 {: #vc_vsphere_upgrade-procedure-vcenter-procedure}

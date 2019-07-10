@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-06-14"
+
+keywords: Zerto, Zerto components, tech specs Zerto
 
 subcollection: vmware-solutions
 
@@ -20,8 +22,13 @@ subcollection: vmware-solutions
 
 El servicio Zerto on {{site.data.keyword.cloud}} integra las funciones de réplica y de recuperación en caso de desastre en las ofertas de despliegue para proteger y recuperar datos en el entorno virtual de VMware en {{site.data.keyword.cloud_notm}}.
 
-Este servicio sólo está disponible para las instancias desplegadas en la versión V1.2 o posterior. La versión actual de Zerto que se instala es la versión 6.5 actualización 3.
-{:note}
+## Antes de empezar
+{: #addingzertodr-req}
+
+* Asegúrese de que su cuenta de {{site.data.keyword.cloud_notm}} es facturable, y que esté enlazada a la
+cuenta de infraestructura de {{site.data.keyword.cloud_notm}} en la que se ha desplegado la instancia. Para obtener más información,
+consulte [Facturación para replicación Zerto](/docs/services/vmwaresolutions/services?topic=vmware-solutions-zerto_ordering#zerto_ordering-billing).
+* Este servicio sólo está disponible para las instancias desplegadas en la versión V1.2 o posterior. La versión actual de Zerto que se instala es la versión 6.5 actualización 3.
 
 ## Especificaciones técnicas para Zerto on IBM Cloud
 {: #addingzertodr-specs}
@@ -31,7 +38,7 @@ Los siguientes componentes se solicitan y se incluyen en el servicio Zerto on {{
 Los componentes de Zerto Virtual Replication Appliance (VRA) se despliegan solo en el clúster predeterminado.
 {:note}
 
-### VSI
+### Instancias de servicio virtual
 {: #addingzertodr-specs-vsi}
 
 * Una VSI (instancia de servicio virtual) - Zerto Virtual Manager
@@ -47,8 +54,11 @@ Disco de 100 GB (SAN)
 ### Redes
 {: #addingzertodr-specs-network}
 
-* Una dirección IP privada primaria
-* Enlace ascendente de red privada de 1 Gbps
+* VSI
+  * Una dirección IP privada primaria
+  * Enlace ascendente de red privada de 1 Gbps
+* Dispositivos de replicación virtual (VRA)
+  * Una subred portátil privada para el despliegue de VRA
 
 ### Licencias y tarifas
 {: #addingzertodr-specs-licenses}

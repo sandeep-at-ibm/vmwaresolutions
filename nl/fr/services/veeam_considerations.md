@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-07"
+lastupdated: "2019-06-18"
+
+keywords: Veeam, Veeam install, tech specs Veeam
 
 subcollection: vmware-solutions
 
@@ -31,18 +33,23 @@ Les composants suivants sont commandés et inclus dans le service Veeam on {{sit
 ### Instances de serveur virtuel
 {: #veeam_considerations-specs-vsi}
 
-* Une instance de serveur virtuel avec service complémentaire Veeam Backup and Replication 9.5
+* Une instance de serveur virtuel unique avec Veeam Backup and Replication 9.5 OS Add-on et Veeam Availability Suite 9.5.
 * Windows Server 2016 Standard Edition (64 bits)
 * 4 coeurs de 2 GHz
-* 8 Go de mémoire RAM
+* 8 UC virtuelles, 32 Go de RAM   
 * Liaison montante de réseau privé 1 Gbps
 * Disque 100 Go (SAN)
 
 ### Stockage pour les sauvegardes
 {: #veeam_considerations-specs-storage}
 
-* Stockage Endurance iSCSI (2000, 4000, 8000 ou 12000 Go)
+* Stockage iSCSI Endurance (2 000, 4 000, 8 000 ou 12 000 Go) 
 * Performances de stockage (0,25, 2 ou 4 IOPS/Go)
+
+Dans le cadre de l’installation et de la configuration du service Veeam, les référentiels suivants sont créés : 
+* Pour les fichiers de sauvegarde de la configuration Veeam : un référentiel nommé `IC4V Default Config Backup Repository`. Le chemin du dossier où sont stockées les sauvegardes Veeam est `<Drive>:\ConfigBackup\`.
+* Pour l’extension, un référentiel nommé `IC4V Scale-Out Repository`. Pour plus d'informations, voir [Ajout d'un référentiel d'extension](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icos_ordering#icos_ordering-scale-repo).
+* Pour les sauvegardes de machine virtuelle (VM) : un référentiel nommé ``IC4V Default VM Backup Repository``. Le chemin du dossier où sont stockées les sauvegardes de VM est ``<Drive>:\VMBackup\`. Ce référentiel est ajouté en tant qu'extension à ``IC4V Scale-Out repository`.
 
 ### Utilisation en réseau
 {: #veeam_considerations-specs-networking}
@@ -52,12 +59,7 @@ Une adresse IP privée principale
 ### Licences et frais
 {: #veeam_considerations-specs-licenses}
 
-Veeam Backup and Replication 9.5 Enterprise Plus (licence pour 10, 25, 50, 100 ou 200 machines virtuelles)
-
-### Gestion
-{: #veeam_considerations-specs-mgmt}
-
-Des sauvegardes de gestion sont configurées par défaut avec un maximum de cinq machines virtuelles et 2000 Go de stockage
+* Veeam Availability Suite 9.5 (licence pour 10, 25, 50, 100, ou 200 VM)
 
 ## Remarques relatives à l'installation de Veeam on IBM Cloud
 {: #veeam_considerations-install}

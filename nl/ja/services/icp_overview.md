@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-01"
+lastupdated: "2019-06-13"
+
+keywords: IBM Cloud Private, ICP, tech specs ICP
 
 subcollection: vmware-solutions
 
@@ -79,14 +81,14 @@ V3.0 以降にデプロイ (またはアップグレード) されたインス�
 
 IBM Cloud Private および管理オーバーヘッドのスペース所要量を計算するには、以下の計算式を使用します。
 
-#### 計算式 1
+#### 使用可能なコア数の計算式
 {: #icp_overview-formulas-1}
 
 `AvailableCores = [HostCoreCount - HostOverheadCores - (HostVSanOverheadCorePercentage * HostCoreCount)] * (HostCount - vSphereHAHostTolerance) - MgmtOverheadCores`
 
 表 4. 計算式 1 の変数の説明
 
-| 変数	| 説明 |	単位 |	vSAN の例 | NFS の例 |
+| 変数 | 説明 | 単位 | vSAN の例 | NFS の例 |
 |:--------- |:----------- |:---- |:------------- |:----------- |
 | AvailableCores | 環境内のワークロードとサービスに使用可能な実際のコア数 | コア | 38 | 43 |
 | HostCount | デフォルト・クラスター内のホストの数 | ホスト | 4 | 4 |
@@ -96,24 +98,24 @@ IBM Cloud Private および管理オーバーヘッドのスペース所要量�
 | vSphereHAHostTolerance | vSphere HA 構成で許容されるホストの数 (1 ホスト) |	ホスト	 | 1 | 1 |
 | HostVsanOverheadCorePercentage | vSAN で使用するホストのコアの割合 (10%。ホストが vSAN でない場合は 0%) | % | 10% | 0% |
 
-#### 計算式 2
+#### 使用可能メモリーの計算式
 {: #icp_overview-formulas-2}
 
 `AvailableMemory = [HostMemory - HostOverheadMemory - HostVsanOverheadMemory - (HostVsanOverheadMemoryDiskPercentage * HostVsanCapacityDiskSize)] * (HostCount - vSphereHAHostTolerance) - MgmtOverheadMemory`
 
 表 5. 計算式 2 の変数の説明
 
-| 変数	| 説明 |	単位 |	vSAN の例 | NFS の例 |
+| 変数 | 説明 | 単位 | vSAN の例 | NFS の例 |
 |:--------- |:----------- |:---- |:------------- |:----------- |
-| AvailableMemory	| 環境内のワークロードとサービスに使用可能なメモリーの GB 数 | GB | 	693	| 860 |
-| HostCount	| デフォルト・クラスター内のホストの数 | ホスト  | 6	| 6 |
-| HostMemory |	デフォルト・クラスター内の各ホストで使用可能なメモリーの未加工容量 (GB 単位) |	GB	| 192 |	192 |
-| HostVsanCapacityDiskSize | このホストの各 vSAN 容量 SSD ディスクの容量の GB 数 (960、1,946、または 3,891 GB。vSAN 以外の場合は 0 GB) | GB |	960 | 0 |
-| HostOverheadMemory |	ESXi サーバーによってオーバーヘッドとして予約されているメモリーの GB 単位での容量 (4.6 GB) |	GB	| 4.6 |	4.6 |
-| MgmtOverheadMemory |	vCenter Server 管理コンポーネント (vCenter Server、PSC、AD/DNS、Edge) によって予約されているメモリーの GB 単位の容量 (77 GB) | GB | 77 | 77 |
+| 使用可能メモリー | 環境内のワークロードとサービスに使用可能なメモリーの GB 数 | GB | 693 | 860 |
+| HostCount | デフォルト・クラスター内のホストの数 | ホスト  | 6 | 6 |
+| HostMemory | デフォルト・クラスター内の各ホストで使用可能なメモリーの未加工容量 (GB 単位) | GB | 192 | 192 |
+| HostVsanCapacityDiskSize | このホストの各 vSAN 容量 SSD ディスクの容量の GB 数 (960、1,946、または 3,891 GB。vSAN 以外の場合は 0 GB) | GB | 960 | 0 |
+| HostOverheadMemory | ESXi サーバーによってオーバーヘッドとして予約されているメモリーの GB 単位での容量 (4.6 GB) | GB | 4.6 | 4.6 |
+| MgmtOverheadMemory | vCenter Server 管理コンポーネント (vCenter Server、PSC、AD/DNS、Edge) によって予約されているメモリーの GB 単位の容量 (77 GB) | GB | 77 | 77 |
 | vSphereHAHostTolerance | vSphere HA 構成で許容されるホストの数 (1 ホスト) | ホスト	| 1 | 1 |
-| HostVsanOverheadMemoryDiskPercentage | vSAN 管理に予約するメモリーの GB 数 (容量 vSAN ディスク 1 台に対するパーセンテージで表される) (2.75%) |	% | 2.75%	| 2.75% |
-| HostVsanOverheadMemory | ディスク・サイズに関係なく vSAN 管理に予約するメモリーの GB 数 (7 GB。ホストが VSAN でない場合は 0 GB)	| GB |  7	| 0 |
+| HostVsanOverheadMemoryDiskPercentage | vSAN 管理に予約するメモリーの GB 数 (容量 vSAN ディスク 1 台に対するパーセンテージで表される) (2.75%) | % | 2.75% | 2.75% |
+| HostVsanOverheadMemory | ディスク・サイズに関係なく vSAN 管理に予約するメモリーの GB 数 (7 GB。ホストが VSAN でない場合は 0 GB) | GB |  7 | 0 |
 
 ## IBM Cloud Private Hosted をインストールする際の考慮事項
 {: #icp_overview-install}

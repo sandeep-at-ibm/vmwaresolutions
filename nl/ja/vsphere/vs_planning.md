@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-01"
+lastupdated: "2019-05-31"
+
+keywords: planning vSphere, data center, vSphere data centers
 
 subcollection: vmware-solutions
 
@@ -26,7 +28,7 @@ ESXi サーバーがデプロイされた後は、お客様が、環境をセッ
 ## IBM Cloud アカウントの要件
 {: #vs_planning-account-req}
 
-使用する {{site.data.keyword.cloud_notm}} アカウントは、特定の要件を満たしている必要があります。 詳しくは、[{{site.data.keyword.cloud_notm}} アカウントの要件](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)を参照してください。
+使用する {{site.data.keyword.cloud_notm}} アカウントは、特定の要件を満たしている必要があります。 詳しくは、[{{site.data.keyword.cloud_notm}} アカウントの要件](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req)を参照してください。
 
 ## IBM Cloud データ・センターの使用可否
 {: #vs_planning-dc-availability}

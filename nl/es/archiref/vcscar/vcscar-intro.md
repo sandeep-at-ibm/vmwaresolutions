@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-06-03"
 
 subcollection: vmware-solutions
 
@@ -17,7 +17,6 @@ subcollection: vmware-solutions
 La siguiente arquitectura de referencia es un “concept car”, es decir, un mecanismo para destacar y mostrar tecnologías que solucionan problemas del mundo real. El “concept car” no representa de ningún modo un servicio disponible actualmente.
 
 La arquitectura de referencia también proporciona la información siguiente:
-
 -   Proporciona lenguaje común para los distintos depositarios.
 -   Proporciona coherencia en la implementación de la tecnología para resolver problemas.
 -   Da soporte a la validación de soluciones en una arquitectura de referencia probada.
@@ -26,14 +25,16 @@ La arquitectura de referencia también proporciona la información siguiente:
 ## Acerca de ACME Skate Advisor
 {: #vcscar-intro-about}
 
-El objetivo era demostrar una interacción entre la inteligencia artificial de Watson y machine learning con un ejemplo real y a partir de aquí explorar en profundidad la cultura del skateboarding. Mostramos los servicios disponibles y la infraestructura de nube a través de su capacidad técnica y los avances en esta área. La implementación del “concept car” constituye una extensión de la aplicación de Acme Skateboard de demostración llamada Skate Advisor. Skate Advisor es una herramienta que permite a los usuarios tener conversaciones sobre skateboarding con un motor controlado por Watson. Estos son algunos ejemplos de conversaciones:
+El objetivo era demostrar una interacción entre la inteligencia artificial de Watson y machine learning con un ejemplo real y a partir de aquí explorar en profundidad la cultura del skateboarding. Mostramos los servicios disponibles y la infraestructura de nube a través de su capacidad técnica y los avances en esta área.
+
+La implementación del “concept car” constituye una extensión de la aplicación de Acme Skateboard de demostración llamada Skate Advisor. Skate Advisor es una herramienta que permite a los usuarios tener conversaciones sobre skateboarding con un motor controlado por Watson. Estos son algunos ejemplos de conversaciones:
 
 -   “Watson, muéstrame combinaciones del truco Casper”
 -   “Watson, muéstrame ubicaciones comunes donde realizar un truco”
 -   “Watson, muéstrame un vídeo del truco Casper”
 
 Acme Skate Advisor aprovecha Watson Discovery Service para ingerir artículos, vídeos,
-blogs y otro contenido de Internet con el fin de crear una base de datos de trucos, que la aplicación puede consultar.
+blogs y otro contenido de Internet con el fin de crear una base de datos de trucos, que la aplicación puede consultar. 
 
 La aplicación Skate Advisor también se implementa en la plataforma de modernización de aplicaciones, que proporciona servicios basados en contenedor mediante {{site.data.keyword.icpfull_notm}} alojado en la plataforma {{site.data.keyword.cloud_notm}} for VMware Services.
 
@@ -81,7 +82,7 @@ En esta lista se describen las ventajas de la modernización de aplicaciones:
 - Reduce el coste de crear nuevas características
 - Amplía la capacidad que se ofrece en un breve periodo de tiempo
 
-IBM comprende que el 70 por ciento de la adopción de la nube privada está impulsada por la necesidad de modernizar los entornos de aplicaciones. Sin embargo, la mayoría de las organizaciones están abordando la modernización de las aplicaciones con un enfoque por etapas, que requiere un entorno híbrido y multinube, en el que:
+IBM comprende que el 70% de la adopción de la nube privada está impulsada por la necesidad de modernizar los entornos de aplicaciones. Sin embargo, la mayoría de las organizaciones están abordando la modernización de las aplicaciones con un enfoque por etapas, que requiere un entorno híbrido y multinube, en el que:
 
 - Las aplicaciones antiguas complejas y monolíticas que se suelen ejecutar en sistemas principales o sistemas UNIX permanecen como aplicaciones locales.
 - Los entornos x86 utilizados para sistemas de registro (SoR), o las aplicaciones sensibles a la seguridad o las cargas de trabajo reguladas, se colocan en una infraestructura virtualizada o en una nube privada.
@@ -92,7 +93,6 @@ IBM comprende que el 70 por ciento de la adopción de la nube privada está impu
 Por ejemplo, un patrón común consiste en desplegar las aplicaciones SoE frontales como contenedores con bases de datos y middleware antiguo que se despliegan en máquinas virtuales en una nube privada.
 
 Puesto que la infraestructura de TI y las necesidades empresariales son exclusivas, un enfoque de modernización debe proporcionar las siguientes prioridades:
-
 * Acelerar el valor empresarial
 * Minimizar el tiempo de entrega
 * Reducir los riesgos

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-28"
 
 subcollection: vmware-solutions
 
@@ -102,11 +102,11 @@ Sono configurati i seguenti componenti:
 -	Dispositivi Gateway dei servizi edge (ESG) NSX che possono essere utilizzati dai componenti di gestione.
 -	Solo per vCenter Server, dispositivi Gateway dei servizi edge (ESG) NSX per l'utilizzo da parte dei clienti.
 
-Cosa NON è configurato:
--	Router distribuiti virtuali.
--	Micro-segmentazione.
--	VXLAN.
--	Gestione NSX collegata ad altre istanze VMware.
+I seguenti componenti non sono configurati:
+- Router distribuiti virtuali
+- Micro segmentazione
+- VXLAN
+- Gestione NSX collegata ad altre istanze VMware
 
 ### Sicurezza NSX-V
 {: #vcsnsxt-overview-ic4vnsxv-nsx-v-security}
@@ -114,9 +114,9 @@ Cosa NON è configurato:
 NSX for vSphere abilita le organizzazioni a dividere il data center in segmenti di sicurezza distinti, fino al livello del singolo carico di lavoro indipendentemente da dove quest'ultimo è in esecuzione. I team IT possono definire le politiche per ciascun carico di lavoro in base al contesto di applicazione e utente, il che garantisce risposte immediate alle minacce internamente al data center e un'implementazione fino al livello dell'applicazione.
 
 I seguenti sono alcuni dei componenti NSX chiave:
--	Il firewall con stato distribuito NSX è integrato nel kernel hypervisor per un massimo di 20 Gbps di capacità del firewall per ogni host hypervisor. Fornisce la funzionalità firewall nord-sud mediante Edge NSX.
--	NSX abilita la creazione di gruppi di sicurezza dinamici e di politiche associate a più del semplice indirizzo IP e MAC. Queste politiche includono gli oggetti vCenter e le tag, il tipo di sistema operativo e le informazioni sulle applicazioni di livello 7 per abilitare la micro-segmentazione in base al contesto dell'applicazione.
--	La politica basata sull'identità, che utilizza le informazioni di accesso dall'integrazione di VM, Active Directory e Mobile Device Management, consente una sicurezza basata sull'utente che include la sicurezza al livello di sessione in ambienti desktop remoti e virtuali.
+- Il firewall con stato distribuito NSX è integrato nel kernel hypervisor per un massimo di 20 Gbps di capacità del firewall per ogni host hypervisor. Fornisce la funzionalità firewall nord-sud mediante Edge NSX.
+- NSX abilita la creazione di gruppi di sicurezza dinamici e di politiche associate a più del semplice indirizzo IP e MAC. Queste politiche includono gli oggetti vCenter e le tag, il tipo di sistema operativo e le informazioni sulle applicazioni di livello 7 per abilitare la micro-segmentazione in base al contesto dell'applicazione.
+- La politica basata sull'identità, che utilizza le informazioni di accesso dall'integrazione di VM, Active Directory e Mobile Device Management, consente una sicurezza basata sull'utente che include la sicurezza al livello di sessione in ambienti desktop remoti e virtuali.
 - Application Rule Manager ed Endpoint Monitoring abilitano la visualizzazione del flusso del traffico di rete end-to-end fino al livello 7, consentendo ai team dell'applicazione di identificare sia gli endpoint interni ai data center che quelli tra di loro e rispondono creando le regole di sicurezza appropriate.
 - Supporto per l'integrazione di gestione, piano di controllo e piano dati con fornitori di terze parti quali i firewall di prossima generazione, IDS/IPS, antivirus senza agent, commutazione, sicurezza avanzata e altro.
 

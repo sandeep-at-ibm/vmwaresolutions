@@ -129,7 +129,7 @@ NSX-T est une solution autonome pour les environnements vCenter et vSphere, mais
 
 Points forts de NSX-T
 -	Produit autonome. vCenter n'est pas requis.
--	Soutien mutihyperviseur
+-	Soutien multihyperviseur
     - Les contrôleurs peuvent être déployés sur KVM ou ESXi.
     - Les serveurs de périphérie peuvent être déployés en tant que serveurs virtuels ou bare metal.
 -	Intégration de conteneur (plug-in CNI NSX-T)

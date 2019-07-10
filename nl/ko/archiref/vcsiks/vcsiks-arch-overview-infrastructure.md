@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-22"
 
 subcollection: vmware-solutions
 
@@ -17,13 +17,14 @@ subcollection: vmware-solutions
 ## VRF(Virtual Routing and Forwarding)
 {: #vcsiks-arch-overview-infrastructure-vrf}
 
-{{site.data.keyword.cloud}} 계정을 VRF(Virtual Routing and Forwarding) 계정으로 구성할 수 있습니다. VRF 계정은 서브넷 IP 블록 사이의 자동 글로벌 라우팅을 사용합니다. Direct-Link 연결의 모든 계정은 VRF 계정으로 변환되거나 VRF 계정으로 작성되어야 합니다.
+{{site.data.keyword.cloud}} 계정을 VRF(Virtual Routing and Forwarding) 계정으로 구성할 수 있습니다. VRF 계정은 서브넷 IP 블록 사이의 자동 글로벌 라우팅을 사용합니다. Direct Link 연결의 모든 계정은 VRF 계정으로 변환되거나 VRF 계정으로 작성되어야 합니다.
 
 ## Direct Link
 {: #vcsiks-arch-overview-infrastructure-direct-link}
 
 {{site.data.keyword.cloud_notm}} Direct Link Connect는 로컬 {{site.data.keyword.CloudDataCent_notm}}를 통해 {{site.data.keyword.cloud_notm}} 인프라 및 네트워크 서비스 제공자에 연결된 다른 클라우드에 대한 개인용 액세스를 제공합니다. 이 옵션은 단일 환경에서 다중 클라우드 연결을 작성하는 데 적합합니다.
-IBM은 공유 대역폭 토폴로지를 사용하여 고객을 {{site.data.keyword.cloud_notm}} Private 네트워크에 연결합니다. 모든 Direct-Link 제품과 마찬가지로, 글로벌 라우팅을 추가하여 모든 {{site.data.keyword.cloud_notm}} 위치에 사설 네트워크 트래픽을 사용할 수 있습니다.
+
+IBM은 공유 대역폭 토폴로지를 사용하여 고객을 {{site.data.keyword.cloud_notm}} Private 네트워크에 연결합니다. 모든 Direct Link 제품과 마찬가지로, 글로벌 라우팅을 추가하여 모든 {{site.data.keyword.cloud_notm}} 위치에 사설 네트워크 트래픽을 사용할 수 있습니다.
 
 ## 가상 사설망(VPN)
 {: #vcsiks-arch-overview-infrastructure-virt-private-network}
@@ -142,7 +143,7 @@ Kubernetes 마스터는 클러스터에서 모든 컴퓨팅, 네트워크 및 �
 ###	작업자 노드
 {: #vcsiks-arch-overview-infrastructure-worker-node}
 
-각 작업자 노드는 클라우드 환경의 실제 하드웨어에서 실행되는 실제 시스템(베어메탈) 또는 VM입니다. 작업자 노드를 프로비저닝할 때 해당 작업자 노드에 호스트되는 컨테이너에 사용 가능한 리소스를 판별합니다. 작업자 노드는 기본적으로 IBM 관리 Docker Engine, 별도의 컴퓨팅 리소스, 네트워킹 및 볼륨 서비스로 설정됩니다. 내장 보안 기능은 격리, 리소스 관리 기능 및 작업자 노드 보안 준수를 제공합니다.
+각 작업자 노드는 클라우드 환경의 실제 하드웨어에서 실행되는 실제 시스템(베어메탈) 또는 VM입니다. 작업자 노드를 프로비저닝할 때 해당 작업자 노드에 호스팅되는 컨테이너에 사용 가능한 리소스를 판별합니다. 작업자 노드는 기본적으로 IBM 관리 Docker Engine, 별도의 컴퓨팅 리소스, 네트워킹 및 볼륨 서비스로 설정됩니다. 내장 보안 기능은 격리, 리소스 관리 기능 및 작업자 노드 보안 준수를 제공합니다.
 
 ## 관련 링크
 {: #vcsiks-arch-overview-infrastructure-related}

@@ -27,9 +27,9 @@ vCenter Server 인스턴스와
 ![vCenter Server with Hybridity Bundle](../../images/vcscontent-hcx.svg "vCenter Server with Hybridity Bundle")
 
 Hybridity는 온프레미스와
-{{site.data.keyword.cloud_notm}} 사이에 느슨하게 결합된 상호 연결을 만들고 다음 기능을 사용할 수 있게 합니다.
+{{site.data.keyword.cloud_notm}} 사이에 느슨하게 결합된 상호연결을 만들고 다음 기능을 사용할 수 있게 합니다.
 
-* 간단한 상호 연결 – 공용 인터넷, 사설 VPN 또는 직접 링크를 포함하는 실제 접속에서 논리 네트워크 연결을 쉽게 설정할 수 있습니다.
+* 간단한 상호연결 – 공용 인터넷, 사설 VPN 또는 직접 링크를 포함하는 실제 접속에서 논리 네트워크 연결을 쉽게 설정할 수 있습니다.
 * 계층 2 확장 – 온프레미스 네트워크가 클라우드로 확장되고 온프레미스 서브넷 및 IP 주소 지정을 포함합니다.
 * 암호화 – 네트워크 트래픽이 두 사이트 간에 안전하게 암호화됩니다.
 * 최적화된 네트워크 – 네트워크 트래픽이 가능한 빠르게 이동할 수 있도록 최상의 연결을 선택하여 효율적으로 연결이 흐르게 합니다.

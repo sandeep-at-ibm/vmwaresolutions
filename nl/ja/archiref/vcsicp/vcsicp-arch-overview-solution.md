@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-09"
+lastupdated: "2019-06-12"
 
 subcollection: vmware-solutions
 
@@ -52,7 +52,7 @@ NSX Edge Services Gateway (ESG) のペアがデプロイされます。 すべ�
 |:--------- |:------------- |
 | Edge Service Gateway | 仮想アプライアンス |
 | Edge サイズ「大」 | vCPU 数	2 |
-| メモリー | 1-GB ディスク	| ローカル・データ・ストアに 1000 GB |
+| メモリー | 1 GB のディスク <br>ローカル・データ・ストアに 1000 GB |
 
 表 2. {{site.data.keyword.icpfull_notm}} DLR の仕様
 
@@ -60,7 +60,7 @@ NSX Edge Services Gateway (ESG) のペアがデプロイされます。 すべ�
 |:--------- |:------------- |
 | 分散論理ルーター | 仮想アプライアンス |
 | Edge サイズ「コンパクト」 | vCPU 数	1 |
-| メモリー	| 512-MB ディスク	| ローカル・データ・ストアに 1000 GB |
+| メモリー	| 512 MB のディスク<br>ローカル・データ・ストアに 1000 GB |
 
 ## IBM Cloud Private コンポーネント
 {: #vcsicp-arch-overview-solution-icp-comp}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-17"
+lastupdated: "2019-06-03"
 
 ---
 
@@ -30,7 +30,7 @@ La gestione delle operazioni di {{site.data.keyword.vmwaresolutions_short}} comp
 
   Quando si verifica un problema nell'ambiente, vROps genera avvisi di tre tipi di impatto:
     * Avvisi di integrità - indicano problemi che influiscono sull'integrità dell'ambiente e richiedono attenzione immediata.
-    * Avvisi di rischio - indicano problemi che non rappresentano minacce immediate ma che dovrebbero essere risolti nel prossimo futuro.
+    * Avvisi di rischio - indicano problemi che non rappresentano minacce immediate ma che devono essere risolti presto.
     * Avvisi di efficienza - informazioni per migliorare le prestazioni o recuperare le risorse.
 
   Gli avvisi vROps sono eventi che si verificano sugli oggetti monitorati quando l'analisi dei dati indica deviazioni dai normali valori di metrica o quando si verifica un problema con uno dei componenti monitorati. Gli avvisi vROps vengono assegnati a una di queste categorie:
@@ -38,7 +38,7 @@ La gestione delle operazioni di {{site.data.keyword.vmwaresolutions_short}} comp
     * Immediato - è necessario intervenire il più presto possibile.
     * Avvertenza - è necessario controllare quando il tempo lo consente.
 
-* Registrazione - vRLI (vRealize Log Insight) fornisce la gestione e l'analisi dei log in tempo reale con il raggruppamento intelligente basato sul machine learning, la ricerca ad alte prestazioni e la risoluzione dei problemi tra gli oggetti fisici e virtuali nell'architettura {{site.data.keyword.vmwaresolutions_short}}. vRLI raccoglie i dati dagli host vSphere utilizzando il protocollo syslog e da altri prodotti VMware, come vCenter Server, per raccogliere eventi, attività e dati di allarme. Si integra con vRops per inviare eventi di notifica e abilitare l'avvio nel contesto. Altri oggetti nell'architettura di {{site.data.keyword.vmwaresolutions_short}} in grado di inviare dati syslog vengono puntati a vRLI. Facoltativamente il cliente può configurare qualsiasi sistema in grado di inviare dati syslog per inoltrare questi dati a vRLI.
+* Registrazione - vRLI (vRealize Log Insight) fornisce la gestione e l'analisi dei log in tempo reale con il raggruppamento intelligente basato sul machine learning, la ricerca ad alte prestazioni e la risoluzione dei problemi tra gli oggetti fisici e virtuali nell'architettura {{site.data.keyword.vmwaresolutions_short}}. vRLI raccoglie i dati dagli host vSphere utilizzando il protocollo `syslog` .Raccoglie anche eventi, attività e dati di allarme per altri prodotti VMware, come il vCenter Server. Si integra con vRops per inviare eventi di notifica e abilitare l'avvio nel contesto. Altri oggetti nell'architettura di {{site.data.keyword.vmwaresolutions_short}} che possono inviare dati `syslog` vengono puntati a vRLI. Facoltativamente, il cliente può configurare qualsiasi sistema in grado di inviare dati syslog per inoltrare questi dati a vRLI.
 
 * Integrità di rete - vRealize Network Insight è uno strumento di analisi focalizzato sull'abilitazione proattiva delle seguenti capacità:
   * Monitoraggio dell'integrità e delle prestazioni della rete.
@@ -51,17 +51,17 @@ La gestione delle operazioni di {{site.data.keyword.vmwaresolutions_short}} comp
 ## Rete di gestione delle operazioni
 {: #opsmgmt-arch-network}
 
-Di seguito viene mostrato il diagramma di panoramica della rete:
+Il seguente diagramma mostra la panoramica della rete.
 
 ![Diagramma di rete](../../images/opsmgmt-network.svg "Diagramma di rete")
 
-* Viene eseguito il provisioning di una sottorete privata portatile di strumenti per fornire lo spazio di indirizzi IP di {{site.data.keyword.cloud_notm}} utilizzato per il provisioning iniziale delle VM di strumenti, ma poi diventa responsabilità del cliente gestire lo spazio di indirizzi IP per il ridimensionamento degli strumenti. Le VM su questa sottorete richiedono l'accesso ai componenti ospitati nelle sottoreti di gestione e gestione interna.
+* Viene eseguito il provisioning di una sottorete privata portatile di strumenti per fornire lo spazio di indirizzi IP di {{site.data.keyword.cloud_notm}} utilizzato per il provisioning iniziale delle VM di strumenti. Dopo il provisioning, diventa responsabilità del cliente gestire lo spazio di indirizzi IP per il ridimensionamento incrementale degli strumenti. Le VM su questa sottorete richiedono l'accesso ai componenti ospitati nelle sottoreti di gestione e gestione interna.
 * La sottorete VXLAN di strumenti viene utilizzata per fornire lo spazio di indirizzi IP BYOIP utilizzato per il provisioning iniziale delle VM di strumenti, ma poi diventa responsabilità del cliente gestire lo spazio di indirizzi IP per il ridimensionamento degli strumenti. Le VM su questa sottorete richiedono l'accesso ai componenti ospitati nelle sottoreti di sovrapposizione. L'ESG fornisce la NAT tra gli spazi di indirizzi di {{site.data.keyword.cloud_notm}} e BYOIP.
 * I raccoglitori remoti vROps vengono distribuiti dal cliente se desidera sfruttare vROps per monitorare le proprie VM di calcolo.
 * I forwarder vRLI ritrasmettono i messaggi di log dai componenti di sovrapposizione al cluster vRLI. Se necessario, il cliente può anche configurare le proprie VM di calcolo per utilizzare questi forwarder.
 * VUM (VMware Update Manager) fornisce l'aggiornamento degli host vSphere e dell'hardware e degli strumenti VM. VUM utilizza il proxy per ottenere l'accesso ai repository Internet.
 
-vROps raccoglie i dati dagli oggetti presenti nell'ambiente. Ogni parte dei dati raccolti è chiamata osservazione o valore di metrica. vROps utilizza l'adattatore vCenter per raccogliere le metriche non elaborate da vCenter. Oltre alle metriche che raccoglie, vROps calcola le metriche di capacità, le metriche dei badge e le metriche per monitorare l'integrità del tuo sistema.  Le definizioni di avviso sono una combinazione di sintomi e suggerimenti che identificano le aree problematiche e generano avvisi sui quali intervieni per quelle aree.
+vROps raccoglie i dati dagli oggetti presenti nell'ambiente. Ogni parte dei dati raccolti è chiamata osservazione o valore di metrica. vROps utilizza l'adattatore vCenter per raccogliere le metriche non elaborate da vCenter. Oltre alle metriche che raccoglie, vROps calcola le metriche di capacità, le metriche dei badge e le metriche per monitorare l'integrità del tuo sistema. Le definizioni di avviso sono una combinazione di sintomi e suggerimenti che identificano le aree problematiche e generano avvisi sui quali intervieni per quelle aree.
 
 ## Componenti monitorati
 {: #opsmgmt-arch-components}
@@ -81,9 +81,9 @@ Il monitoraggio degli host vSphere viene eseguito con vROps tramite vCenter e la
 ### Monitoraggio di vSAN
 {: #opsmgmt-arch-components-vsan}
 
-Per monitorare vSAN, vengono utilizzati vROps e vRLI. In vCenter è disponibile una serie aggiuntiva di controlli dell'integrità vSAN che è possibile utilizzare. L'installazione del Management Pack per vSAN fornisce dashboard aggiuntivi per facilitare il monitoraggio di vSAN.
+Per monitorare vSAN, vengono utilizzati vROps e vRLI. In vCenter, è disponibile una serie supplementare di controlli dell'integrità vSAN che è possibile utilizzare. L'installazione del Management Pack per vSAN fornisce ulteriori dashboard per facilitare il monitoraggio di vSAN.
 
-vROps genera un avviso se si verifica un problema nei componenti del prodotto SDDC nella SAN (Storage Area Network) monitorata dall'adattatore VMware vSAN. Un avviso relativo alla conformità della configurazione e all'integrità viene passato tramite il management pack di VMware SDDC Health Solution da VMware vSAN Management Pack. vSAN viene monitorato con vROps vSAN Management Pack tramite il dispositivo vCentre utilizzando un adattatore vSAN. L'intervallo di raccolta predefinito è di cinque minuti e l'adattatore vSAN raccoglie anche le metriche del servizio di controllo dell'integrità e del servizio delle prestazioni dagli oggetti vSphere. L'intervallo del servizio di controllo dell'integrità è configurato nell'interfaccia vSphere ed è di 60 minuti per impostazione predefinita.
+vROps genera un avviso se si verifica un problema nei componenti del prodotto SDDC nella SAN (Storage Area Network) monitorata dall'adattatore VMware vSAN. Un avviso relativo alla conformità della configurazione e all'integrità viene passato tramite il VMware SDDC Health Solution Management Pack da VMware vSAN Management Pack. vSAN viene monitorato con vROps vSAN Management Pack tramite il dispositivo vCentre utilizzando un adattatore vSAN. L'intervallo di raccolta predefinito è di cinque minuti e l'adattatore vSAN raccoglie anche le metriche del servizio di controllo dell'integrità e del servizio delle prestazioni dagli oggetti vSphere. L'intervallo del servizio di controllo dell'integrità è configurato nell'interfaccia vSphere ed è di 60 minuti per impostazione predefinita.
 
 Per garantire che l'adattatore vSAN possa raccogliere tutti i dati sulle prestazioni, è necessario abilitare il servizio delle prestazioni vSAN in vSphere.
 
@@ -116,7 +116,7 @@ Per monitorare NSX-T, vengono implementati i seguenti strumenti:
 * vRealize Operations Manager (vROps)
 * vRealize Log Insight (vRLI)
 
-VMware SDDC Health Management Pack monitora quanto segue:
+VMware SDDC Health Management Pack monitora i seguenti componenti:
 * Switch logici - Monitora lo stato di amministrazione degli switch logici.
 * Cluster controller - Monitora il conteggio dei nodi cluster distribuiti per HA e mantiene il quorum.
 * Nodi controller - Monitora la connettività del nodo con il cluster di controller e il nodo del gestore.

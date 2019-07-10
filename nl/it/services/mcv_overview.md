@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-06-13"
+
+keywords: Mission Critical VMware, Mission Critical, tech specs Mission Critical
 
 subcollection: vmware-solutions
 
@@ -50,7 +52,7 @@ L'infrastruttura di base ha le seguenti specifiche:
 * Il cluster della risorsa è un cluster esteso vSphere + vSAN
 * Il sito di controllo contiene un host ESXi di controllo
 * Architettura singolo vCenter e NSX Manager
-* vCenter Server Appliance con Platform Services Controller (PSC) integrato che utilizza vCenter High Availability (HA) su un'architettura di rete L3
+* vCenter Server Appliance con Platform Services Controller (PSC) integrato che utilizza vCenter HA (High Availability) su un'architettura di rete L3
 * Il ripristino NSX Manager sta utilizzando una metodologia Hot/Standby che sincronizza i file di backup
 
 ### Specifiche dell'architettura dell'infrastruttura dello strumento e della tecnologia

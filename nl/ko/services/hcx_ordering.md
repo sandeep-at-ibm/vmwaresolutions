@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-04"
+lastupdated: "2019-06-14"
+
+keywords: VMware HCX deployment, HCX configuration, order HCX
 
 subcollection: vmware-solutions
 
@@ -37,7 +39,7 @@ subcollection: vmware-solutions
 HCX on {{site.data.keyword.cloud_notm}}를 설치하려면 다음 설정을 완료하십시오.
 1. 다음 옵션 중 하나를 선택하여 **HCX 상호연결 유형**을 지정하십시오.
   * **공용 네트워크:** HCX는 공용 네트워크를 통해 사이트 간에 암호화된 연결을 작성합니다. 라이센스 등록 및 측정이 공용 네트워크에서 수행됩니다.
-  * **사설 상호 연결:** HCX는 사설 네트워크를 통해 사이트 간에 암호화된 연결을 작성합니다. 라이센스 등록 및 측정이 공용 네트워크에서 수행됩니다.
+  * **사설 상호연결:** HCX는 사설 네트워크를 통해 사이트 간에 암호화된 연결을 작성합니다. 라이센스 등록 및 측정이 공용 네트워크에서 수행됩니다.
   * **사설 네트워크:** HCX는 사설 네트워크를 통해 사이트 간에 암호화된 연결을 작성합니다. 라이센스 등록 및 측정이 HTTP 프록시를 통해 사설 네트워크에서 수행됩니다.
 3. **사설 네트워크**를 선택하는 경우 다음 필드를 완료하십시오.
   * **프록시 주소:** 프록시 서버의 IPv4 주소입니다.

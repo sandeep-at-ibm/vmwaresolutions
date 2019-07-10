@@ -38,7 +38,7 @@ HCX fornisce tre metodi di spostamento delle VM (Virtual Machine): migrazione co
 
 La migrazione con basso tempo di inattività si basa su vSphere Replication, che è una tecnologia distribuita implementata nell'hypervisor VMware ESX®/ESXi®. La distribuzione HCX in loco crea una replica di una VM (Virtual Machine) live in IBM Cloud ed esegue un cambio per spegnere la VM (Virtual Machine) di origine ed accendere la VM (Virtual Machine) migrata.
 
-Il percorso di migrazione è sempre tramite il gateway cloud. Il trasporto può essere internet, una rete estesa di livello 2 o una riga Direct Connect.
+Il percorso di migrazione è sempre tramite il gateway cloud. Il trasporto può essere internet, una rete estesa di livello 2 o una linea Direct Connect.
 
 Una VM (Virtual Machine) può essere migrata più volte in entrambe le direzioni.
 
@@ -151,7 +151,7 @@ Prima che i componenti vengano descritti più dettagliatamente, è imperativo co
 * L'ambiente di origine deve contenere un'implementazione vSphere gestita da un vCenter Server. Sono necessari i vCenter supportati 5.5U3 o 6.0U2 e superiori, con ESXi 5.5 o superiore per Hybrid Cloud Services.
 * Se viene utilizzato NSX, la versione 6.2.2 o superiore. NSX è obbligatorio per la migrazione della politica.
 * Se è previsto il vMotion tra cloud, si applicano le stesse limitazioni dell'affinità tra i cloud come se fossero in loco.
-* L'ambiente di origine deve avere un metodo di connessione agli ambienti cloud. Sono inclusi l'accesso internet pubblico o le connessioni private utilizzando IBM Cloud Direct Link. Le connessioni, diverse da internet pubblico, ad altri fornitori cloud non saranno discusse.
+* L'ambiente di origine deve avere un metodo di connessione agli ambienti cloud. Sono inclusi l'accesso a internet pubblico o le connessioni private utilizzando IBM Cloud Direct Link. Le connessioni, diverse da internet pubblico, ad altri fornitori cloud non saranno discusse.
 * Le reti e le VM dell'ambiente di origine da migrare o estendere devono essere su gruppi di porte all'interno di uno switch distribuito virtuale o di uno switch distribuito virtuale Cisco Nexus 1000v.
 * IBM Cloud deve contenere almeno un'istanza di VMware vCenter Server.
 * Risorse sufficienti per i dispositivi virtuali.

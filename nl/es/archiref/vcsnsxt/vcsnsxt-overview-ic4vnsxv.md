@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-28"
 
 subcollection: vmware-solutions
 
@@ -102,11 +102,11 @@ Se configuran los siguientes componentes:
 -	Dispositivos de NSX Edge Services Gateway (ESG) para que los utilicen los componentes de gestión.
 -	Solo para vCenter Server, dispositivos NSX Edge Services Gateway (ESG) para uso del cliente.
 
-Lo que NO se configura:
--	Direccionadores distribuidos virtuales.
--	Microsegmentación.
--	Las VXLAN.
--	Gestión de NSX enlazada con otras estancias de VMware.
+Los componentes siguientes no están configurados: 
+- Direccionadores distribuidos virtuales
+- Microsegmentación
+- Las VXLAN
+- Gestión de NSX enlazada a otras instancias de VMware
 
 ### Seguridad de NSX-V
 {: #vcsnsxt-overview-ic4vnsxv-nsx-v-security}
@@ -114,9 +114,9 @@ Lo que NO se configura:
 NSX for vSphere permite a las organizaciones dividir el centro de datos en distintos segmentos de seguridad, hasta el nivel de carga de trabajo individual independiente del lugar en el que se ejecuta la carga de trabajo. Los equipos de TI pueden definir políticas para cada carga de trabajo en función de la aplicación y del contexto de usuario, lo que garantiza respuestas inmediatas frente a las amenazas dentro del centro de datos y aplicación de políticas a nivel de aplicación.
 
 Estos son algunos de los principales componentes de NSX:
--	El cortafuegos con estado distribuido de NSX está incluido en el kernel del hipervisor y ofrece hasta 20 Gbps de capacidad de cortafuegos por host de hipervisor. Ofrece capacidad de cortafuegos norte a sur mediante NSX Edge.
--	NSX permite la creación de grupos de seguridad dinámicos y políticas asociadas en más que simplemente dirección IP y MAC. Estas políticas incluyen objetos y etiquetas de vCenter, tipo de sistema operativo e información de aplicación de capa 7 para habilitar la microsegmentación basada en el contexto de la aplicación.
--	La política basada en identidad que utiliza información de inicio a partir de la integración de sesión de VM, Active Directory y Mobile Device Management permite una seguridad basada en el usuario, que incluye seguridad a nivel de sesión en entornos de escritorio remotos y virtuales.
+- El cortafuegos con estado distribuido de NSX está incluido en el kernel del hipervisor y ofrece hasta 20 Gbps de capacidad de cortafuegos por host de hipervisor. Ofrece capacidad de cortafuegos norte a sur mediante NSX Edge.
+- NSX permite la creación de grupos de seguridad dinámicos y políticas asociadas en más que simplemente dirección IP y MAC. Estas políticas incluyen objetos y etiquetas de vCenter, tipo de sistema operativo e información de aplicación de capa 7 para habilitar la microsegmentación basada en el contexto de la aplicación.
+- La política basada en identidad que utiliza información de inicio a partir de la integración de sesión de VM, Active Directory y Mobile Device Management permite una seguridad basada en el usuario, que incluye seguridad a nivel de sesión en entornos de escritorio remotos y virtuales.
 - El gestor de reglas de aplicación y la supervisión de puntos finales permiten la visualización del flujo de tráfico de red de extremo a extremo hasta la capa 7, lo que permite a los equipos de la aplicación identificar puntos finales dentro del centro de datos y entre centros de datos y responder mediante la creación de reglas de seguridad adecuadas.
 - Soporte para la integración de gestión, plano de control y plano de datos con proveedores de terceros, como cortafuegos de próxima generación, IDS/IPS, antivirus sin agente, conmutación, seguridad avanzada y más.
 

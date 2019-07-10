@@ -6,6 +6,8 @@ copyright:
 
 lastupdated: "2019-05-03"
 
+keywords: release notes, what's new, version 3.0
+
 subcollection: vmware-solutions
 
 
@@ -124,8 +126,7 @@ Ahora puede añadir Zerto on {{site.data.keyword.cloud_notm}} en instancias que 
 * Ahora hay documentación de referencia disponible para proporcionarle ID de usuario que {{site.data.keyword.vmwaresolutions_short}} mantiene para su uso en la automatización de {{site.data.keyword.cloud_notm}}. También tiene la posibilidad de revisar posibles mensajes que se muestran en los registros de historial de instancias. Para obtener más información, consulte
 [ID de usuario de IBM](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_user_ids) y
 [Mensajes de historial de instancias](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_messages).
-* Se ha añadido el permiso **Rearrancar/Controlar** a la tabla que describe los permisos necesarios para la cuenta de infraestructura de IBM Cloud. Para obtener más información, consulte
-[Permisos para la cuenta de infraestructura de {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-slaccountrequirement#slaccountrequirement-permissions).
+* Se ha añadido el permiso **Rearrancar/Controlar** a la tabla que describe los permisos necesarios para la cuenta de infraestructura de IBM Cloud. Para obtener más información, consulte [Permisos para la cuenta de infraestructura de {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-cloud-infra-acct-req#cloud-infra-acct-req-permissions). 
 * Hay nueva documentación de referencia disponible para las API siguientes. Para obtener más información, consulte [Referencia de API](https://cloud.ibm.com/apidocs/vmware-solutions){:new_window}.
   * Mostrar una lista de todos los mensajes de historial para una instancia de VMware vCenter Server especificada
   * Añadir almacenamientos compartidos a un clúster especificado

@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-06-14"
+
+keywords: Zerto, Zerto components, tech specs Zerto
 
 subcollection: vmware-solutions
 
@@ -20,8 +22,11 @@ subcollection: vmware-solutions
 
 Zerto on {{site.data.keyword.cloud}} サービスは、レプリケーション機能と災害復旧機能をデプロイメント・オファリングに統合して、{{site.data.keyword.cloud_notm}} 上の VMware 仮想環境内のデータを保護および復旧します。
 
-このサービスは、V1.2 以降でデプロイされたインスタンスでのみ利用可能です。 現在インストールされている Zerto バージョンは 6.5 更新 3 です。
-{:note}
+## 始める前に
+{: #addingzertodr-req}
+
+* {{site.data.keyword.cloud_notm}} アカウントが有料アカウントであり、インスタンスがデプロイされている {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントにリンクされていることを確認します。詳しくは、[Zerto レプリケーションの請求](/docs/services/vmwaresolutions/services?topic=vmware-solutions-zerto_ordering#zerto_ordering-billing)を参照してください。
+* このサービスは、V1.2 以降でデプロイされたインスタンスでのみ利用可能です。 現在インストールされている Zerto バージョンは 6.5 更新 3 です。
 
 ## Zerto on IBM Cloud の技術仕様
 {: #addingzertodr-specs}
@@ -31,7 +36,7 @@ Zerto on {{site.data.keyword.cloud}} サービスは、レプリケーション�
 Zerto Virtual Replication Appliance (VRA) のコンポーネントは、デフォルト・クラスターにのみデプロイされます。
 {:note}
 
-### VSI
+### 仮想サービス・インスタンス
 {: #addingzertodr-specs-vsi}
 
 * 1 つの仮想サービス・インスタンス (VSI) - Zerto Virtual Manager
@@ -47,8 +52,11 @@ Zerto Virtual Replication Appliance (VRA) のコンポーネントは、デフ�
 ### ネットワーキング
 {: #addingzertodr-specs-network}
 
-* 1 つのプライマリー・プライベート IP アドレス
-* 1 Gbps のプライベート・ネットワーク・アップリンク
+* VSI
+  * 1 つのプライマリー・プライベート IP アドレス
+  * 1 Gbps のプライベート・ネットワーク・アップリンク
+* Virtual Replication Appliance (VRA)
+  * VRA デプロイメント用のプライベート・ポータブル・サブネットを 1 つ。
 
 ### ライセンスと料金
 {: #addingzertodr-specs-licenses}

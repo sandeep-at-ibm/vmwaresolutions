@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-25"
+lastupdated: "2019-05-28"
+
+keywords: vmware solutions console, vmware portal, vmware solutions catalog
 
 subcollection: vmware-solutions
 

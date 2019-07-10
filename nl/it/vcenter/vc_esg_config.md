@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-05-27"
+
+keywords: vCenter Server network config, network configuration, manage NSX ESG
 
 subcollection: vmware-solutions
 
@@ -64,7 +66,7 @@ Per usufruire di NSX per le tue VM del carico di lavoro, devi configurare una se
 ## Procedura per abilitare la regola SNAT
 {: #vc_esg_config-procedure-enable-snat-rule}
 
-Se vuoi che le tue VM del carico di lavoro abbiano accesso in uscita a Internet, devi abilitare la regola SNAT (Source Network Address Translation) associata. L'abilitazione della regola SNAT consente di convertire l'accesso Internet dalle tue VM in un unico indirizzo IP pubblico. Completa la seguente procedura nel client web VMware vSphere:
+Se vuoi che le tue VM del carico di lavoro abbiano accesso in uscita a Internet, devi abilitare la regola SNAT (Source Network Address Translation) associata. L'abilitazione della regola SNAT consente di convertire l'accesso a internet dalle tue VM in un unico indirizzo IP pubblico. Completa la seguente procedura nel client web VMware vSphere:
 
 1. Fai clic su **Home > Rete & Sicurezza**.
 2. Nel riquadro di navigazione, fai clic su **Edge NSX** e doppio clic sull'edge denominato **customer-nsx-edge**.
