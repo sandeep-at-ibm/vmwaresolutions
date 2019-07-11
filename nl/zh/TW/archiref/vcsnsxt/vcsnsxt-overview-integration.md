@@ -40,7 +40,7 @@ ESG 配置成具有來源 NAT 規則 (SNAT) 以容許出埠資料流量，這會
 
 從管理角度來看，本參照架構具有下列概念性網路範圍：
 -	**{{site.data.keyword.containerlong_notm}} Pod 網路** - 所有部署至工作者節點的 Pod 都會獲指派 172.30.0.0/16 範圍中的專用 IP 位址，並只在工作者節點之間遞送。為了避免衝突，請勿在與工作者節點進行通訊的任何節點上使用此 IP 範圍。使用專用 IP 位址，工作者節點及 Pod 可以在專用網路上安全地進行通訊。不過，Pod 損毀或需要重建工作者節點時，會指派新的專用 IP 位址。
--	**{{site.data.keyword.containerlong_notm}} 服務網路** - {{site.data.keyword.containerlong_notm}} 在叢集內使用 172.21.0.0/16 作為服務位址。下列是兩個其他 IP 位址範圍：
+-	**{{site.data.keyword.containerlong_notm}} 服務網路** - {{site.data.keyword.containerlong_notm}} 在叢集內使用 172.21.0.0/16 作為服務位址。以下是兩個其他 IP 位址範圍：
     - 公用 - 具有 {{site.data.keyword.cloud_notm}} 所提供 IP 位址範圍的公用可攜式子網路。此 IP 位址範圍用來透過 ALB 或 Ingress 服務向網際網路公開應用程式。
     - 專用 - 具有 {{site.data.keyword.cloud_notm}} 所提供 IP 位址範圍的專用可攜式子網路。此 IP 位址範圍用來透過 ALB 或 Ingress 服務向專用網路公開應用程式。
 - **{{site.data.keyword.containerlong_notm}} 工作者節點網路** - 有兩個工作者節點網路 IP 位址範圍：

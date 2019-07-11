@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-06-18"
+
+keywords: NetApp order instance, order NetApp ONTAP, order NetApp
 
 subcollection: vmware-solutions
 
@@ -64,7 +66,6 @@ O rótulo do subdomínio deve atender aos requisitos a seguir:
 *  Apenas caracteres alfanuméricos e o traço (-) são permitidos.
 *  O rótulo do subdomínio deve iniciar com um caractere alfabético e terminar com um caractere alfanumérico.
 *  O comprimento máximo do rótulo do subdomínio é de 10 caracteres.
-*  O rótulo do subdomínio deve ser exclusivo em sua conta.
 
 ### Nome de domínio
 {: #np_orderinginstances-domain-name}
@@ -108,6 +109,13 @@ As unidades SSD de 3,8 TB (Disco de estado sólido) são suportadas quando são 
 
 O número de servidores ESXi de uma instância do NetApp ONTAP Select é 4 por padrão. Isso não pode ser mudado. Todos os servidores ESXi compartilham a configuração.
 
+## Resumo do Pedido
+{: #np_orderinginstances-order-summary}
+
+Com base em sua configuração selecionada, o custo estimado é gerado instantaneamente e exibido na área de janela direita **Resumo do pedido**.  Clique em **Detalhes da precificação** para gerar um documento PDF com o resumo de custo dos recursos do {{site.data.keyword.vmwaresolutions_short}}.
+
+Também é possível incluir os recursos provisionados na ferramenta de estimativa do {{site.data.keyword.cloud_notm}}, clicando em **Incluir na estimativa**. Isso é útil se você desejar estimar o custo dos recursos do {{site.data.keyword.vmwaresolutions_short}} selecionados com outros recursos do {{site.data.keyword.cloud_notm}} que você talvez considere comprar.
+
 ## Procedimento para pedir instâncias do NetApp ONTAP Select
 {: #ordering-netapp-ontap-select-instances}
 
@@ -126,14 +134,12 @@ O número de servidores ESXi de uma instância do NetApp ONTAP Select é 4 por p
     4. Clique no link ou nos links dos termos que se aplicam ao seu pedido. Assegure-se de que concorda com esses termos e, em seguida, marque a caixa de seleção **Li e concordei com os Contratos de Prestação de Serviços de Terceiros listados abaixo**.
     5. Clique em **Provisão**.
 
-## Resultados
+## Resultados depois de pedir instâncias do NetApp ONTAP
 {: #np_orderinginstances-results}
 
-A implementação da instância é iniciada automaticamente. Você recebe confirmação de que o pedido está sendo processado e pode verificar o status da implementação visualizando os detalhes da instância.
-
-Quando a instância for implementada com êxito, os componentes que estão descritos em [Especificações técnicas para instâncias do NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#specs) serão instalados em sua plataforma virtual do VMware.
-
-Quando a instância estiver pronta para usar, seu status mudará para **Pronta para usar** e você receberá uma notificação por e-mail.
+* A implementação da instância é iniciada automaticamente e você recebe a confirmação de que o pedido está sendo processado. É possível verificar o status de implementação, incluindo quaisquer problemas que possam precisar de sua atenção, visualizando a seção **Histórico de implementação** dos detalhes da instância.
+* Quando a instância for implementada com êxito, os componentes que estão descritos em [Especificações técnicas para instâncias do NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#specs) serão instalados em sua plataforma virtual do VMware.
+* Quando a instância estiver pronta para usar, seu status mudará para **Pronta para usar** e você receberá uma notificação por e-mail.
 
 ## O que fazer a seguir
 {: #np_orderinginstances-next}

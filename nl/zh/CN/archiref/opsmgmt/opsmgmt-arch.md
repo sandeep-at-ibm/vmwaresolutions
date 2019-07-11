@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-17"
+lastupdated: "2019-06-03"
 
 ---
 
@@ -30,15 +30,15 @@ lastupdated: "2019-05-17"
 
   环境中存在问题时，vROps 会生成三种影响类型的警报：
     * 运行状况警报 - 指示影响环境运行状况，并需要立即关注的问题。
-    * 风险警报 - 指示不会立即带来威胁，但应在不久的将来予以解决的问题。
+    * 风险警报 - 指示不会立即带来威胁，但需要在不久的将来予以解决的问题。
     * 效率警报 - 用于提高性能或回收资源的信息。
 
   vROps 警报是数据分析指示与标准度量值偏离，或者在某个受监视组件发生问题时，在受监视对象上发生的事件。vROps 警报会分配有以下其中一种类别：
-    * 严重 - 应立即采取行动。
-    * 立即 - 应尽快采取行动。
-    * 警告 - 应在时间允许时进行检查。
+    * 严重 - 必须立即采取行动。
+    * 立即 - 必须尽快采取行动。
+    * 警告 - 必须在时间允许时进行检查。
 
-* 日志记录 - vRealize Log Insight (vRLI) 通过基于机器学习的智能分组、高性能搜索以及对 {{site.data.keyword.vmwaresolutions_short}} 体系结构中的物理和虚拟对象进行故障诊断，提供实时日志管理和日志分析。vRLI 使用 syslog 协议从 vSphere 主机中收集数据，对于其他 VMware 产品（如 vCenter Server），可收集事件、任务和警报数据。它与 vROps 集成，以发送通知事件并支持在上下文中启动。{{site.data.keyword.vmwaresolutions_short}} 体系结构中能够发送 syslog 数据的其他对象会指向 vRLI。（可选）客户机可以配置能够发送 syslog 数据的任何系统，以将这些数据转发到 vRLI。
+* 日志记录 - vRealize Log Insight (vRLI) 通过基于机器学习的智能分组、高性能搜索以及对 {{site.data.keyword.vmwaresolutions_short}} 体系结构中的物理和虚拟对象进行故障诊断，提供实时日志管理和日志分析。vRLI 通过使用 `syslog` 协议从 vSphere 主机收集数据。它还会收集其他 VMware 产品（如 vCenter Server）的事件、任务和警报数据。它与 vROps 集成，以发送通知事件并支持在上下文中启动。{{site.data.keyword.vmwaresolutions_short}} 体系结构中能够发送 `syslog` 数据的其他对象会指向 vRLI。（可选）客户机可以配置能够发送 syslog 数据的任何系统，以将这些数据转发到 vRLI。
 
 * 网络运行状况 - vRealize Network Insight 是一个分析工具，专注于主动启用：
   * 网络运行状况和性能监视。
@@ -51,11 +51,11 @@ lastupdated: "2019-05-17"
 ## 操作管理联网
 {: #opsmgmt-arch-network}
 
-网络概览图如下所示：
+下图显示了网络概述。
 
 ![网络图](../../images/opsmgmt-network.svg "网络图")
 
-* 供应的工具专用可移植子网提供的 {{site.data.keyword.cloud_notm}} IP 地址空间用于初始供应工具 VM，但在此之后，由客户负责管理用于横向扩展工具的 IP 地址空间。此子网上的 VM 需要对在管理子网和内部管理子网上托管的组件的访问权。
+* 供应了工具专用可移植子网，以提供用于初始供应工具 VM 的 {{site.data.keyword.cloud_notm}} IP 地址空间。供应之后，由客户负责管理用于横向扩展工具的 IP 地址空间。此子网上的 VM 需要对在管理子网和内部管理子网上托管的组件的访问权。
 * 工具 VXLAN 子网用于提供用于初始供应工具 VM 的 BYOIP IP 地址空间，但在此之后，由客户负责管理用于横向扩展工具的 IP 地址空间。此子网上的 VM 需要对在覆盖子网上托管的组件的访问权。ESG 提供 {{site.data.keyword.cloud_notm}} 和 BYOIP 地址空间之间的 NAT。
 * 如果客户要利用 vROps 来监视其计算 VM，那么由客户来部署 vROps 远程收集器。
 * vRLI 转发器将日志消息从覆盖组件中继到 vRLI 集群。客户还可以将其计算 VM 配置为使用这些转发器（如果需要）。
@@ -81,9 +81,9 @@ VMware SDDC Health Management Pack 监视 SDDC 管理堆栈，并为与 SDDC 产
 ### 监视 vSAN
 {: #opsmgmt-arch-components-vsan}
 
-要监视 vSAN，将使用 vROps 和 vRLI。在 vCenter 中，可以使用一组额外的 vSAN 运行状况检查。安装 Management Pack for vSAN 可提供其他仪表板来帮助监视 vSAN。
+要监视 vSAN，将使用 vROps 和 vRLI。在 vCenter 中，可以使用一组额外的 vSAN 运行状况检查。安装 Management Pack for vSAN 可提供更多仪表板来帮助监视 vSAN。
 
-如果 VMware vSAN 适配器监视的存储区域网络中的 SDDC 产品组件发生问题，那么 vROps 会生成警报。与配置合规性和运行状况相关的警报会通过 VMware vSAN Management Pack 中的 VMware SDDC Health Solution Management Pack 传递。vSAN 使用 vSAN 适配器通过 vCentre 设备和 vROps vSAN Management Pack 进行监视。缺省收集时间间隔为 5 分钟，并且 vSAN 适配器还会从 vSphere 对象中收集运行状况检查服务和性能服务度量值。运行状况检查服务时间间隔在 vSphere 界面中进行配置，缺省情况下为 60 分钟。
+如果 VMware vSAN 适配器监视的存储区域网络中的 SDDC 产品组件发生问题，那么 vROps 会生成警报。与配置合规性和运行状况相关的警报会通过 VMware vSAN Management Pack 中的 VMware SDDC Health Solution Management Pack 传递。vSAN 使用 vSAN 适配器通过 vCentre 设备与 vROps vSAN Management Pack 一起进行监视。缺省收集时间间隔为 5 分钟，并且 vSAN 适配器还会从 vSphere 对象中收集运行状况检查服务和性能服务度量值。运行状况检查服务时间间隔在 vSphere 界面中进行配置，缺省情况下为 60 分钟。
 
 要确保 vSAN 适配器可以收集所有性能数据，必须在 vSphere 中启用 vSAN 性能服务。
 
@@ -116,7 +116,7 @@ NSX 流监视可以在 NSX Manager 中使用，以确定哪些流已核准，哪
 * vRealize Operations Manager (vROps)
 * vRealize Log Insight (vRLI)
 
-VMware SDDC Health Management Pack 监视以下内容：
+VMware SDDC Health Management Pack 监视以下组件：
 * 逻辑交换机 - 监视逻辑交换机的管理状态。
 * 控制器集群 - 监视已部署的 HA 集群节点计数，并维护定额。
 * 控制器节点 - 监视与控制器集群和管理器节点的节点连接。

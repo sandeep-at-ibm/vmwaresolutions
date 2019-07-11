@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-16"
+lastupdated: "2019-05-31"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2019-05-16"
 
 合规性是一组必需的需求，目的是满足监管机构或行业最佳实践制定的最低控制措施。监管合规性框架通常是宽泛的框架，提供有关范围广泛的一系列技术的指南，而来自供应商的行业最佳实践通常是特定于技术的，旨在应对技术风险。
 
-对于 vCenter Server 实例，建议在部署后采用专用团队来管理安全性。这种职责分离应该能扩充和监视实例的安全态势。HyTrust CloudControl 可帮助团队实现这种基于角色的分离。
+对于 vCenter Server 实例，建议在部署后采用专用团队来管理安全性。这种职责分离应该能扩充和监视实例的安全态势。HyTrust CloudControl 可帮助团队实现基于角色的分离。
 
 HyTrust DataControl 和 KeyControl 可帮助您提供工作负载保护，例如静态加密和地理围栏。您可能有兴趣部署 Caveonix RiskForesight 服务，此服务不仅可帮助您满足合规性需求，还可帮助您进行网络风险和取证管理。
 
@@ -29,11 +29,11 @@ vRealize Operations Manager 允许您根据《vSphere 安全配置指南》中�
 
 * [VMware 安全强化指南](https://www.vmware.com/uk/security/hardening-guides.html){:new_window}
 * [vSphere 安全指南](https://docs.vmware.com/en/VMware-vSphere/6.7/vsphere-esxi-vcenter-server-67-security-guide.pdf){:new_window}
-* [Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-fsa_considerations#fsa_considerations)
-* [Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-fortinetvm_considerations#fortinetvm_considerations)
-* [F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-f5_considerations#f5_considerations)
-* [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htcc_considerations.html#hytrust-cloudcontrol-on-ibm-cloud-overview)
-* [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htdc_considerations.html#hytrust-datacontrol-on-ibm-cloud-overview)
-* [HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htkc_considerations.html#hytrust-keycontrol-on-ibm-cloud-overview)
-* [Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-intro.html#caveonix-riskforesight)
+* [Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations)
+* [Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations)
+* [F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations)
+* [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htcc_considerations)
+* [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htdc_considerations)
+* [HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htkc_considerations)
+* [Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_considerations)
 * [Operations Management on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-opsmgmt-intro)

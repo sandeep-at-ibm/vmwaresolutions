@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-21"
 
 subcollection: vmware-solutions
 
@@ -50,7 +50,7 @@ vCenter Server 目前部署 vSphere 6.5，這表示 VUM 現在已整合在 vCent
   - [收集 meta 資料](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-metadata) - VUM 會透過您可以修改的預先定義自動處理程序，下載有關升級、修補程式或延伸規格的 meta 資料。VUM 會依一般可配置的間隔聯絡 VMware 或協力廠商來源，以收集有關可用升級、修補程式或延伸規格的最新 meta 資料。
   - [建立基準線](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-baselines) - 使用預先定義的基準線及基準線群組，或建立自訂基準線及基準線群組。然後，將基準線和基準線群組連接至庫存物件。
   - [掃描並檢閱](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-scanning) - 掃描庫存物件，並檢閱結果來判斷它們符合基準線及基準線群組的程度。可以依文字搜尋、群組選項、基準線選項及法規遵循狀態選項來過濾掃描結果。
-  - [編譯打包及補救](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-staging) - 在補救之前可以選擇編譯打包修補程式及延伸規格，以確保將它們下載至主機。在補救期間，VUM 會將修補程式、延伸規格及升級套用至庫存物件。
+  - [暫置及補救](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-staging) - 在補救之前可以選擇暫置修補程式及延伸規格，以確保將它們下載至主機。在補救期間，VUM 會將修補程式、延伸規格及升級套用至庫存物件。
 
 本文件假設您已部署一個「主要 vCenter Server」實例，或若干個別的「主要 vCenter Server」實例。如果您的「主要 vCenter Server」實例及「次要 vCenter Server」實例已部署並使用 Single Sign On (SSO)，則請參閱 [SSO 鏈結的 vCenter](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vcsa)。
 

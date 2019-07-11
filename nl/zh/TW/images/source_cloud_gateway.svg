@@ -132,7 +132,7 @@
 				</g>
 			</g>
 		</g>
-		<text transform="matrix(1 0 0 1 474.667 425.333)" class="st10 st11">雲端閘道</text>
+		<text transform="matrix(1 0 0 1 474.667 425.333)" class="st10 st11"> 雲端閘道</text>
 	</g>
 </g>
 <g id="hybrid_cloud_services">
@@ -152,7 +152,7 @@
 			C529.7,266.5,535,256.2,535,243.5z"/>
 		<ellipse class="st15" cx="522" cy="244" rx="8.5" ry="19.5"/>
 	</g>
-	<text transform="matrix(1 0 0 1 250 251)" class="st10 st16">管理網路</text>
+	<text transform="matrix(1 0 0 1 202 251)" class="st10 st16">管理網路</text>
 </g>
 <g id="vmotion_network">
 	<g>

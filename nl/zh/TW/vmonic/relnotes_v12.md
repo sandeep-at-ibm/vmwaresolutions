@@ -51,7 +51,7 @@ VMware ESXi 的新版本是 vSphere 6.0 u2 p03，這是從舊版的 ESXi 6.0 u2 
 {: #relnotes_v12-inst-order}
 
 透過下列加強功能，可大幅改善實例訂購處理程序：
-* 對於 Cloud Foundation 實例及 vCenter Server 實例，已設置新的驗證檢查，以確保您使用的 SoftLayer® 使用者帳戶具有必要的使用者許可權、已啟用 VLAN Spanning，而且已提供正確的 API 金鑰。如果有任何需求不符合，使用者介面上會立即出現指示來解決問題。
+* 對於 Cloud Foundation 實例及 vCenter Server 實例，已設定新的驗證檢查，以確保您使用的 SoftLayer® 使用者帳戶具有必要的使用者許可權、已啟用 VLAN Spanning，而且已提供正確的 API 金鑰。如果有任何需求不符合，使用者介面上會立即出現指示來解決問題。
 *  對於 vCenter Server 實例，您選取實例元件的順序已最佳化，因此只會顯示具有您需要的硬體及 ESXi 伺服器的資料中心。這項變更可使後來發生錯誤的可能性降至最低。
 
 如需相關資訊，請參閱[訂購 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)。

@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-06-11"
+
+keywords: IAM user, user role, user permission
 
 subcollection: vmware-solutions
 
@@ -40,10 +42,10 @@ Tabela 1. Funções de gerenciamento de plataforma e ações permitidas
 
 | Função de gerenciamento de plataforma | Ações | Exemplo de ações |
 |:----------------- |:----------------- |:----------------- |
-| Visualizador | Ações somente leitura | <ul><li>Visualizar o resumo de instâncias</li><li>Visualizar os detalhes de uma instância</li></ul>|
-| Editor | Atualizar uma instância específica |<ul><li>Incluir ou remover servidores ESXi</li><li>Incluir ou remover clusters</li><li>Incluir ou remover serviços</li><li>Fazer upgrade de uma instância para uma versão superior</li></ul> |
-| Operador | Ações somente leitura | <ul><li>Listar instâncias</li><li>Visualizar os detalhes de uma instância</li></ul> |
-| Administrador | Acesso total ao gerenciamento |<ul><li>Criar novas instâncias</li><li>Excluir instâncias</li><li>Conceda acesso à plataforma a outros usuários</li></ul>|
+| Visualizador | Ações somente leitura | Visualizar o resumo de instâncias<br>Visualizar os detalhes de uma instância |
+| Editor | Atualizar uma instância específica | Incluir ou remover servidores ESXi<br>Incluir ou remover clusters<br>Incluir ou remover serviços<br>Fazer upgrade de uma instância para uma versão superior |
+| Operador | Ações somente leitura | Listar instâncias<br>Visualizar os detalhes de uma instância |
+| Administrador | Acesso total ao gerenciamento | Criar novas instâncias<br>Excluir instâncias<br>Conceda acesso à plataforma a outros usuários|
 
 Para  {{site.data.keyword.vmwaresolutions_short}}, existem as seguintes ações:
 
@@ -53,8 +55,8 @@ Tabela 2. Descrições de ação e funções necessárias
 |:------ |:-------------------- |:---- |
 | vmware-solutions.instances.create | Criar novas instâncias | Administrador |
 | vmware-solutions.instances.delete | Excluir instâncias | Administrador |
-| vmware-solutions.instances.view | <ul><li>Listar instâncias</li><li>Visualizar os detalhes de uma instância</li></ul> | Visualizador, Operador, Editor e Administrador |
-| vmware-solutions.instances.update | <ul><li>Incluir ou remover servidores ESXi</li><li>Incluir ou remover clusters</li><li>Incluir ou remover serviços</li><li>Fazer upgrade de uma instância para uma versão superior</li></ul> | Editor e Administrador |
+| vmware-solutions.instances.view | Listar instâncias<br>Visualizar os detalhes de uma instância | Visualizador, Operador, Editor e Administrador |
+| vmware-solutions.instances.update | Incluir ou remover servidores ESXi<br>Incluir ou remover clusters<br>Incluir ou remover serviços<br>Fazer upgrade de uma instância para uma versão superior | Editor e Administrador |
 | vmware-solutions.account.update | Atualizar configurações da conta | Administrador |
 
 ## Gerenciando o acesso para usuários

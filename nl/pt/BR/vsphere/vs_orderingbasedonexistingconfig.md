@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-28"
+
+keywords: vSphere order cluster, vSphere configuration, order vSphere cluster
 
 subcollection: vmware-solutions
 
@@ -15,7 +17,7 @@ subcollection: vmware-solutions
 {:note: .note}
 {:important: .important}
 
-# Solicitando clusters vSphere com base nas configurações existentes
+# Pedindo clusters do vSphere com base nas configurações existentes
 {: #vs_orderingbasedonexistingconfig}
 
 É possível pedir um cluster do VMware vSphere com base em um modelo de configuração que você salvou. Use este procedimento para definir uma nova configuração de cluster com base em uma configuração de cluster existente.

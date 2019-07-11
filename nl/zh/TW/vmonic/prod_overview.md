@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-25"
+lastupdated: "2019-05-28"
+
+keywords: about vmware solutions, product overview, benefits
 
 subcollection: vmware-solutions
 
@@ -24,7 +26,7 @@ subcollection: vmware-solutions
 {{site.data.keyword.vmwaresolutions_short}} 提供下列主要優點。
 <dl>
   <dt>全球範圍</dt>
-  <dd>擴大混合式雲端覆蓋範圍至全球多達 30 個企業級 {{site.data.keyword.CloudDataCents_notm}}。</dd>
+  <dd>將混合式雲端覆蓋範圍擴大至全球多達 30 個企業級 {{site.data.keyword.CloudDataCents_notm}}。</dd>
   <dt>無縫整合</dt>
   <dd>在混合式雲端上使用 {{site.data.keyword.cloud_notm}} 基礎架構來進行無縫整合。</dd>
   <dt>快速佈建</dt>

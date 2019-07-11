@@ -127,7 +127,7 @@ A figura a seguir descreve um diagrama de componentes de alto nível do disposit
 
 ![Implementação do Cloud Gateway](../../images/cloud_gateway_deployment.svg "Implementação do Cloud Gateway")
 
-## Otimizador WAN
+## WAN Optimizer
 {: #hcx-archi-target-wan-opt}
 
 O segundo componente implementado é o dispositivo WAN Optimization. Embora o dispositivo WAN Optimization seja opcional, ele executa o condicionamento de WAN para reduzir os efeitos de latência. Ele também incorpora a Correção de erro de encaminhamento para negar cenários de perda de pacote e deduplicação de padrões de tráfego redundantes.

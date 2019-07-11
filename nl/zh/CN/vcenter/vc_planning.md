@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-20"
+lastupdated: "2019-05-31"
+
+keywords: planning vCenter Server, data center, vCenter Server data centers
 
 subcollection: vmware-solutions
 
@@ -19,7 +21,7 @@ subcollection: vmware-solutions
 ## IBM Cloud 帐户需求
 {: #vc_planning-account-req}
 
-要使用的 {{site.data.keyword.cloud_notm}} 帐户必须满足特定需求。有关更多信息，请参阅 [{{site.data.keyword.cloud_notm}} 帐户需求](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)。
+要使用的 {{site.data.keyword.cloud_notm}} 帐户必须满足特定需求。有关更多信息，请参阅 [{{site.data.keyword.cloud_notm}} 帐户需求](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req)。
 
 ## IBM Cloud Data Center 可用性
 {: #vc_planning-dc-availability}

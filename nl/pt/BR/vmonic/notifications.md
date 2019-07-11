@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-06-11"
+
+keywords: notifications console, filter notifications, system notification
 
 subcollection: vmware-solutions
 
@@ -41,21 +43,14 @@ subcollection: vmware-solutions
           <dd class="dd">Um componente falha ou não está funcionando corretamente. No entanto, a falha não interrompe o processo contínuo do
        componente.</dd>
             <dt class="dt dlterm">Informativo</dt>
-            <dd class="dd">Uma operação do sistema ou usuário está concluída. Geralmente, os eventos a seguir relatam notificações informativas:
-              <ul class="ul">
-                <li class="li">Um serviço é instalado.</li>
-                <li class="li">Um serviço tem upgrade feito.</li>
-                <li class="li">Um serviço é removido.</li>
-                <li class="li">Todos os serviços são reconfigurados para os servidores ESXi incluídos.</li>
-                <li class="li">Todos os serviços são reconfigurados para os servidores ESXi removidos.</li>
-              </ul>
+            <dd class="dd">Uma operação do sistema ou usuário está concluída. Geralmente, os eventos a seguir relatam notificações informativas:<br>Um serviço é instalado.<br>Um serviço tem upgrade feito.<br>Um serviço é removido.<br>Todos os serviços são reconfigurados para os servidores ESXi incluídos.<br>Todos os serviços são reconfigurados para os servidores ESXi removidos.
             </dd>
           </dl>
         </td>
        </tr>
        <tr>
          <td>Tipo</td>
-         <td>O tipo de componente ao qual o evento relatado está relacionado:<ul><li>Instâncias do vCenter Server</li><li>Serviços</li><li>Sistema</li></ul></td>
+         <td>O tipo de componente ao qual o evento relatado está relacionado:<br>Instâncias do vCenter Server<br>Serviços<br>Sistema</td>
        </tr>
        <tr>
          <td>Recursos</td>

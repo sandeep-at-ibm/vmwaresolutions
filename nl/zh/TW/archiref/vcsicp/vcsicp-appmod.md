@@ -26,7 +26,7 @@ subcollection: vmware-solutions
 參照架構具有下列主要元件：
 - **內部部署虛擬化** - 目前管理 Acme Skateboards VM 的 VMware 叢集。這些 VM 目前管理要現代化的應用程式。此叢集必須符合 [VMware HCX on {{site.data.keyword.cloud_notm}} 解決方案架構](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)的必要條件，才能執行 HCX。HCX 會將內部部署網路延伸至 {{site.data.keyword.cloud_notm}}，讓客戶可以將 VM 移轉至正在 {{site.data.keyword.cloud_notm}} 上執行的 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 實例，並視需要移轉回來。
 
-- **{{site.data.keyword.vmwaresolutions_short}}** - vCenter Server 實例提供必要的基礎 VMware 構成要素，例如 vSphere、vCenter Server、NSX-V 及儲存空間選項（包括 vSAN 或「{{site.data.keyword.cloud_notm}} 耐久性」儲存空間），以自動部署「VMware 軟體定義資料中心 (SDDC)」解決方案。VMware 叢集是移轉 VM 的目標，也是 {{site.data.keyword.icpfull_notm}} 所管理容器中部分現代化應用程式的目標。下列是 vCenter Server 中的主要元件：
+- **{{site.data.keyword.vmwaresolutions_short}}** - vCenter Server 實例提供必要的基礎 VMware 構成要素，例如 vSphere、vCenter Server、NSX-V 及儲存空間選項（包括 vSAN 或「{{site.data.keyword.cloud_notm}} 耐久性」儲存空間），以自動部署「VMware 軟體定義資料中心 (SDDC)」解決方案。VMware 叢集是移轉 VM 的目標，也是 {{site.data.keyword.icpfull_notm}} 所管理容器中部分現代化應用程式的目標。以下是 vCenter Server 中的主要元件：
     - **NSX-V** - NSX-V 提供 vCenter Server 中的網路虛擬化層級，可為 Acme Skateboards VM 提供網路層疊。NSX-V 會啟用 BYOIP，並將工作負載網路與 IBM Cloud 網路隔離開來。NSX-V 是由 HCX 進行程式設計，以建立 Acme Skateboards 要從內部部署延伸的網路。
 
     - **NSX-T** - NSX-T 提供一組通用的工具，可為容器和 VM 進行網路和安全管理。NSX-T 與 Kubernetes Container Networking Interface (CNI) 完全相容，並與 CNI 整合以提供容器網路。NSX-T 提供讓現代化應用程式使用的層疊網路，並取代 {{site.data.keyword.icpfull_notm}} 及 {{site.data.keyword.containerlong_notm}} 原本使用的 Calico。

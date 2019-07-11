@@ -10,7 +10,7 @@ subcollection: vmware-solutions
 
 
 ---
-# Registrando o HCX Manager no vCenter
+# Registrando o HCX Manager com o vCenter
 {: #hcx-archi-reg-vcenter}
 
 Registre o plug-in do Hybrid Cloud Services no VMware vSphere Web Client e inicie o serviço de gerenciamento do Hybrid Cloud Services.

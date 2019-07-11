@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-17"
+lastupdated: "2019-03-06"
 
 ---
 
@@ -24,14 +24,15 @@ vRealize Log Insights (vRLI) 支持对 {{site.data.keyword.vmwaresolutions_full}
 
 在此设计中，每个位置都有一个独立的 vRLI 集群，部署在管理集群上。vRLI 集群使用 {{site.data.keyword.cloud_notm}} 可移植 IP 地址部署在工具子网上。这有利于与其地址属于 {{site.data.keyword.cloud_notm}} RFC1918 地址空间的所有组件进行通信。这些组件包括：vSphere 主机、vCenter、Platform Services Controller、NSX Manager 和 NSX Controller。vRLI 集群包含一个主节点、至少两个工作程序节点以及一个集成负载均衡器。
 
-* 主节点 - 集群中必需的初始节点。主节点负责查询和日志摄入。主节点 Web UI 是该 vRealize Log Insights 集群的单一虚拟管理平台。针对数据的所有查询都会定向到主节点，然后由主节点将工作负载分发给工作程序。
+* 主节点 - 集群中必需的初始节点。主节点负责查询和日志摄入。主节点 web UI 是该 vRealize Log Insights 集群的单一虚拟管理平台。针对数据的所有查询都会定向到主节点，然后由主节点将工作负载分发给工作程序。
 * 工作程序节点 - 构成一个集群至少需要三个节点，并且集群有能力添加更多工作程序以进行横向扩展。工作程序节点用于摄入日志并本地存储这些日志。
 * 集成负载均衡器 - 此组件使用专有负载均衡配置来提供高可用性（无需外部负载均衡器）。
-* Log Insight 转发器 - 此组件部署用于从 NSX 覆盖组件接收日志。此外，如果客户机要从计算 VM 发送日志，也可以利用此组件。Log Insight 转发器是单个 vRealize Log Insights 主节点，用作远程 syslog 聚集器，以将警报转发到 vRLI 集群。由于支持的 VXLAN 的地址属于 BYOIP 地址空间，因此必须在 NSX ESG 上实现 NAT 规则。有以下大小可用，并选择了相应的大小：
+* Log Insight 转发器 - 此组件部署用于从 NSX 覆盖组件接收日志。此外，如果客户机要从计算 VM 发送日志，也可以利用此组件。Log Insight 转发器是单个 vRealize Log Insights 主节点，用作远程 syslog 聚集器，以将警报转发到 vRLI 集群。由于 VXLAN 支持的地址属于 BYOIP 地址空间，因此必须在 NSX ESG 上实现 NAT 规则。
 
- * 小型 - 2000 个事件/秒
- * 中等 - 5000 个事件/秒
- * 大型 - 15000 个事件/秒
+有以下大小可用，并选择了相应的大小：
+* 小型 - 2,000 个事件/秒
+* 中型 - 5,000 个事件/秒
+* 大型 - 15,000 个事件/秒
 
 ![Log Insights 组件图](../../images/opsmgmt-vrlicomponents.svg "Log Insights 组件图")
 
@@ -89,7 +90,7 @@ Controller
 * NSX-V/T 设备
 * 工具扩展 VXLAN
 * 客户网络
-* NTP 服务器 (time.services.softlayer.com)
+* NTP 服务器 (`time.services.softlayer.com`)
 * {{site.data.keyword.vmwaresolutions_short}} Active Directory/DNS
 * 远程收集器，这些收集器需要在 NSX ESG 上实现 NAT 规则，以支持与主节点、主节点副本和数据节点的连接
 
@@ -118,14 +119,15 @@ Controller
 {: #opsmgmt-vrli-auth}
 
 vRLI 的用户管理需要 VMware Identity Manager (vIDM)，此组件与 Active Directory 集成。具有收集度量值和映射拓扑所需的最低许可权集的服务帐户用于从 vRealize Operations Manager 到以下适配器的应用程序到应用程序通信。
-* NSX Manager
+* NSX
+Manager
 * vCenter
 * vSAN
 
 ## vRealize Log Insights 中的内容包
 {: #opsmgmt-vrli-content}
 
-内容包在虚拟基础架构上提供额外的详细监视功能，支持检索和抽取日志，并将其解析为人类可读格式。通过这种方式，vRLI 可保存日志查询和警报，并且您可以使用仪表板来进行高效监视。
+内容包在虚拟基础架构上提供更详细的监视功能，支持检索和抽取日志，并将其解析为人类可读格式。通过这种方式，vRLI 可保存日志查询和警报，并且您可以使用仪表板来进行高效监视。
 
 缺省情况下，会安装以下内容：
 * 常规组件

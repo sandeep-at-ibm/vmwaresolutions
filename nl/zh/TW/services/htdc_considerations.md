@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-06-13"
+
+keywords: HyTrust DataControl, HTDC, tech specs HTDC
 
 subcollection: vmware-solutions
 
@@ -20,7 +22,7 @@ subcollection: vmware-solutions
 
 HyTrust DataControl on {{site.data.keyword.cloud}} 服務提供具有整合式金鑰管理的高度加密，在工作負載的整個生命週期內保護其安全。此服務提供作業系統層次及資料層次的加密。這可以加密及解密工作負載內的任何目錄、資料夾或檔案。
 
-只有執行 vSphere 6.5 以及部署在（或升級至）2.3 版或更新版本的實例，才能使用此服務。目前安裝的 HyTrust DataControl 版本是 4.3。
+只有執行 vSphere 6.5 以及部署在（或升級至）2.3 版或更新版本的實例，才能使用此服務。現行安裝的 HyTrust DataControl 版本為 4.3.2。
 {:note}
 
 ## HyTrust DataControl on IBM Cloud 的技術規格

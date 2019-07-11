@@ -29,8 +29,8 @@
 			<rect x="417.5" y="207.5" class="st1" width="74" height="42"/>
 			<path d="M491,208v41h-73v-41H491 M492,207h-75v43h75V207L492,207z"/>
 		</g>
-		<text transform="matrix(1 0 0 1 440 240)" class="st2 st3">完成</text>
-		<text transform="matrix(1 0 0 1 440 225)" class="st2 st3">技巧</text>
+		<text transform="matrix(1 0 0 1 423.5 240)" class="st2 st3">完成</text>
+		<text transform="matrix(1 0 0 1 436 225)" class="st2 st3">技巧</text>
 	</g>
 </g>
 <g id="left_black_dot">
@@ -138,7 +138,7 @@
 			<rect x="22.5" y="4.5" class="st1" width="74" height="41"/>
 			<path d="M96,5v40H23V5H96 M97,4H22v42h75V4L97,4z"/>
 		</g>
-		<text transform="matrix(1 0 0 1 43 21.6665)"><tspan x="0" y="0" class="st2 st3">技巧</tspan><tspan x="0" y="14.4" class="st2 st3">開始</tspan></text>
+		<text transform="matrix(1 0 0 1 41.6665 21.6665)"><tspan x="0" y="0" class="st2 st3">技巧</tspan><tspan x="0" y="14.4" class="st2 st3">開始</tspan></text>
 	</g>
 </g>
 <g id="Layer_3">

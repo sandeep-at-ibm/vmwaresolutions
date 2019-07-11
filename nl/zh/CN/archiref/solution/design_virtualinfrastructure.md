@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-17"
 
 subcollection: vmware-solutions
 
@@ -116,43 +116,13 @@ vSAN 设置是根据在 {{site.data.keyword.cloud_notm}} 中部署 VMware 解决
 ## NFS 连接的存储器
 {: #design_virtualinfrastructure-nfs-storage}
 
-使用 NFS 网络连接的存储器时，此体系结构规定使用 NFS V3 而不是 NFS V4.1，因为使用后者时 NFS 服务器 LIF 迁移可能会导致等待时间过长。每个 vSphere 主机使用其主机名连接到 NFS 存储器。
+使用 NFS 网络连接的存储器时，此体系结构规定使用 NFS v3 而不是 NFS v4.1，因为使用后者时 NFS 服务器 LIF 迁移可能会导致等待时间过长。每个 vSphere 主机使用其主机名连接到 NFS 存储器。
 
-一个 2 TB NFS 数据存储器连接到集群，以供管理组件将其与性能层 4 IOPS/GB 配合使用。可以将更多数据存储器连接到集群以供工作负载使用，实现多种大小和性能层。
+一个 2 TB NFS 数据存储器连接到集群，以供管理组件将其与性能层 4 IOPS/GB 配合使用。可以将更多数据存储器连接到集群以供工作负载使用，实现各种大小和性能层。
 
 此外，此体系结构要求所有主机都为 NFS 存储器所在的子网创建了子网路由。此子网路由的目的是指示所有 NFS 流量使用此设计指定用于 NFS 流量的端口组、子网和 VLAN。如果连接了多个 NFS 数据存储器，可能需要配置多个路由，因为这些数据存储器可能位于不同的远程子网中。
 
-管理虚拟机可能位于 NFS 数据存储器上。这会产生引导问题，因为某些管理机器可能负责用于解析 NFS 主机名的 DNS 服务。因此，此体系结构指定管理数据存储器的至少一个 IP 地址在每个主机上的 `/etc/hosts` 中进行了硬编码。
-
-## iSCSI 连接的存储器
-{: #design_virtualinfrastructure-iscsi-storage}
-
-与 NFS V3 连接的存储器不同，iSCSI 连接的存储器在所有配置的 NIC 卡端口和目标端口上支持活动/活动路径。因此，可以实现更高的吞吐量，也因而是 NFS 连接存储器的理想替代方法。但使用这种存储器的代价是复杂性更高。
-
-使用 VMware 时，{{site.data.keyword.cloud_notm}} 耐久性块存储器最多支持每个 LUN 64 个 IP 地址，根据此设计，最多允许 32 个主机。
-
-一个 2 TB iSCSI LUN 连接到 vSphere 集群以用于管理组件，并且至少再配置一个 iSCSI LUN，以供客户工作负载使用。此存储器的格式设置为每个 LUN 的 VMFS 6.x 文件系统。
-
-此体系结构指定使用 iSCSI 端口绑定，多路径循环策略，最大队列深度为 64，循环 IOPS 限制为 1。
-
-### iSCSI 的虚拟网络设置
-{: #design_virtualinfrastructure-setup-iscsi}
-
-对于此设计，允许 iSCSI 流量在活动/活动配置中使用两个专用连接的 NIC 卡端口。由于 vSphere 仅允许同一时间在 VDS 中的特定端口组上有一个 NIC 卡端口处于活动状态，因此必须在存储器 VLAN 上创建两个端口组（A 和 B）。
-
-在不同子网上创建使用唯一 IP 地址的 ESXi 内核端口，以支持可伸缩性。每个内核端口都分配到其自己的 iSCSI 端口组。这两个内核端口都会分配给 ESXi 虚拟 iSCSI 主机总线适配器 (HBA)。对于每个内核端口，会使用缺省 GW 覆盖交换机以将缺省网关用于该内核端口的本地子网。请参阅下表。
-
-表 2. iSCSi 端口组
-
-vDS 端口组|内核端口子网|VMHBA
---|:---|:--
-**SDDC-Dprotgroup-iSCSI-A**|子网 A|vmhba64
-**SDDC-Dprotgroup-iSCSI-B**|子网 B|vmhba64
-
-#### Storage I/O Control (SIOC)
-{: #design_virtualinfrastructure-sioc}
-
-iSCSI LUN 已供应并且格式设置为每个 LUN 的单个文件 VMFS 文件系统。缺省建议的 SIOC 设置为峰值吞吐量的 90%。
+管理虚拟机可能位于 NFS 数据存储器上。这会产生引导问题，因为某些管理机器可能负责用于解析 NFS 主机名的 DNS 服务。因此，此体系结构指定管理数据存储器的至少一个 IP 地址在每个主机上的 `/etc/hosts` 中进行硬编码。
 
 ## VMware NSX-V 设计
 {: #design_virtualinfrastructure-nsx-design}
@@ -205,7 +175,7 @@ VLAN 用于对物理网络功能进行分段。此设计使用三个 VLAN：两�
 |VLAN|名称| 流量类型 |
 |:----- |:----------- |:------------ |
 |VLAN 1|专用 A| ESXi 管理、管理、VXLAN (VTEP) |
-|VLAN 2|专用 B|vSAN、NFS、vMotion、iSCSI|
+|VLAN 2|专用 B|vSAN、NFS 和 vMotion|
 |VLAN 3|公用|可用于因特网访问|
 
 来自工作负载的流量将在支持 VXLAN 的逻辑交换机上传输。
@@ -233,7 +203,6 @@ vSphere 集群使用两个 vSphere 分布式交换机，配置如以下各表中
 |故障转移顺序|活动上行链路：Uplink1 或 Uplink2 \* |
 
 \* vSAN 端口组使用采用活动或备用方式的显式故障转移，因为它不支持对 vSAN 存储器流量进行负载均衡。
-iSCSI 端口组同一时间只能有一个活动上行链路（iSCSI A - 上行链路 1，iSCSI B - 上行链路 2）。
 {:note}
 
 表 7. 融合集群虚拟交换机端口组和 VLAN，分布式交换机 **SDDC-Dswitch-Private**
@@ -246,8 +215,6 @@ SDDC-DPortGroup-VSAN|显式故障转移|活动：0，备用：1|VLAN 2
 SDDC-DPortGroup-NFS|发起虚拟端口|活动：0、1|VLAN 2
 NSX 生成|发起虚拟端口|活动：0、1|VLAN 1
 SDDC-DPortGroup-External|发起虚拟端口|活动：0、1|VLAN 3
-SDDC-DPortGroup-iSCSI-A|发起虚拟端口|活动：0|VLAN 2
-SDDC-DPortGroup-iSCSI-B|发起虚拟端口|活动：0|VLAN 2
 
 表 8. 融合集群 VMkernel 适配器，分布式交换机 **SDDC-Dswitch-Private**
 
@@ -258,8 +225,6 @@ vMotion|SDDC-DPortGroup-vMotion|vMotion 流量|9000
 VTEP|NSX 生成|-|9000
 vSAN|SDDC-DPortGroup-VSAN|vSAN|9000
 NAS|SDDC-DPortGroup-NFS|NAS|9000
-iSCSI|SDDC-DPortGroup-iSCSI-A|iSCSI|9000
-iSCSI|SDDC-DPortGroup-iSCSI-B|iSCSI|9000
 
 ### NSX 配置
 {: #design_virtualinfrastructure-nsx-config}
@@ -285,7 +250,7 @@ iSCSI|SDDC-DPortGroup-iSCSI-B|iSCSI|9000
 
 有多种原因可能需要将公用网络连接用于实例。这可能包括访问公共更新服务或其他公共服务以处理工作负载，例如地理位置数据库或天气数据。此外，虚拟化管理和附加组件服务也可能需要或受益于公共连接。例如，vCenter 可以通过公用网络更新其 HCL 数据库并获取 [VMware Update Manager (VUM)](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-intro) 更新。Zerto、Veeam、VMware HCX、F5 BIG-IP 和 FortiGate-VM 在其产品许可、激活或使用情况报告的某些部分，都会使用公用网络连接。在此基础上，您还可以通过公用网络使用隧道来连接到内部部署数据中心以进行复制。
 
-通常，这些通信通过管理或客户 Edge 服务网关 (ESG) 来选择性路由并通过 NAT 传输到公用网络。但是，您可能具有其他安全需求，或者可能更愿意使用代理来简化通信路径。此外，如果您在禁用公共接口的情况下部署了实例，那么无法使用 ESG 来路由到公用网络。
+通常，这些通信通过管理或客户 Edge 服务网关 (ESG) 来选择性路由并通过 NAT 传输到公用网络。但是，您可能有更多安全需求，或者可能更愿意使用代理来简化通信路径。此外，如果您在禁用公共接口的情况下部署了实例，那么无法使用 ESG 来路由到公用网络。
 
 此体系结构支持用于将流量路由到或通过代理连接到公用网络的以下选项：
 

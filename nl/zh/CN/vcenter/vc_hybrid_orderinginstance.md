@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-19"
+
+keywords: vCenter Server Hybridity order instance, order vCenter Server Hybridity, order Hybridity
 
 subcollection: vmware-solutions
 
@@ -157,10 +159,10 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
 {: #vc_hybrid_orderinginstance-subdomain-label}
 
 子域标签必须满足以下需求：
-*  只允许使用字母数字字符和短划线 (-) 字符。
-*  子域标签必须以字母字符开头并以字母数字字符结尾。
-*  子域标签的最大长度为 10 个字符。
-*  子域标签在您的帐户中必须唯一。
+* 只允许使用字母数字字符和短划线 (-) 字符。
+* 子域标签必须以字母字符开头并以字母数字字符结尾。
+* 子域标签的最大长度为 10 个字符。
+* 子域标签在多站点配置中的所有实例中必须唯一。
 
 ### 域名
 {: #vc_hybrid_orderinginstance-domain-name}
@@ -215,7 +217,7 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
 * **一个用于 Active Directory/DNS 的公共 Windows VSI**：一个用于 Microsoft Active Directory (AD) 的 Microsoft Windows Server VSI，充当在其中注册主机和 VM 的实例的 DNS，已部署并且可进行查找。
 * **管理集群上两个高可用性专用 Windows Server VM**：部署了两个 Microsoft Windows 虚拟机，以帮助增强安全性和稳健性。
 
-如果将实例配置为使用两个 Microsoft Windows VM，那么必须提供两个 Microsoft Windows Server 2016 许可证。使用 Microsoft Windows Server 2016 Standard Edition 许可证和/或 Microsoft Windows Server 2016 Datacenter Edition 许可证。
+如果将实例配置为使用两个 Microsoft Windows VM，那么必须提供两个 Microsoft Windows Server 2016 标准版本许可证。
 {:important}
 
 每个许可证只能分配给一个物理服务器，并且最多包含两个物理处理器。一个 Standard Edition 许可证支持每个双处理器服务器运行两个虚拟化的 Microsoft Windows VM。因此，需要两个许可证，因为两个 Microsoft Windows VM 会部署在两个不同的主机中。
@@ -232,7 +234,9 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
 ## 订单摘要
 {: #vc_hybrid_orderinginstance-order-summary}
 
-根据为实例和附加组件服务选择的配置，估算成本会立即生成并显示在右侧窗格的**订单摘要**部分中。单击右侧窗格底部的**定价详细信息**可生成提供估算详细信息的 PDF 文档。
+根据为实例和附加组件服务选择的配置，估算成本会立即生成并显示在**订单摘要**右侧窗格中。单击**定价详细信息**以生成 {{site.data.keyword.vmwaresolutions_short}} 资源成本汇总的 PDF 文档。
+
+您还可以通过单击**添加到估算**来将供应的资源添加到 {{site.data.keyword.cloud_notm}} 估算工具**。如果要与您可能考虑购买的其他 {{site.data.keyword.cloud_notm}} 资源一起估算所选 {{site.data.keyword.vmwaresolutions_short}} 资源的成本，那么这非常有用。
 
 ## 订购 vCenter Server with Hybridity Bundle 实例的过程
 {: #vc_hybrid_orderinginstance-procedure}
@@ -269,16 +273,13 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
    3. 单击订单适用条款的链接，并在订购实例之前确认您同意这些条款。
    4. 单击**供应**。
 
-## 结果
+## 订购 vCenter Server with Hybridity Bundle 实例后的结果
 {: #vc_hybrid_orderinginstance-results}
 
-实例部署会自动启动。您将收到说明订单正在处理的确认，并且您可以通过查看实例详细信息来检查部署的状态。
-
-成功部署实例后，[vCenter Server with Hybridity Bundle 实例的技术规范](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#specs)中描述的组件已安装在 VMware 虚拟平台上。缺省情况下，订购的 ESXi 服务器将分组为 **cluster1**。如果订购了附加组件服务，那么这些服务的部署将在订单完成后启动。
-
-实例准备就绪可供使用后，该实例的状态会更改为**可供使用**，并且您将收到通过电子邮件发送的通知。
-
-订购辅助实例时，在完成辅助实例订单后，可能会重新启动主实例（链接到辅助实例）的 VMware vSphere Web Client。
+* 实例部署会自动启动，并且您将收到确认，指示正在处理订单。通过查看实例详细信息的**部署历史记录**部分，可以检查部署状态，包括可能需要注意的任何问题。
+* 成功部署实例后，[vCenter Server with Hybridity Bundle 实例的技术规范](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#specs)中描述的组件已安装在 VMware 虚拟平台上。缺省情况下，订购的 ESXi 服务器将分组为 **cluster1**。如果订购了附加组件服务，那么这些服务的部署将在订单完成后启动。
+* 实例准备就绪可供使用后，该实例的状态会更改为**可供使用**，并且您将收到通过电子邮件发送的通知。
+* 订购辅助实例时，在完成辅助实例订单后，可能会重新启动主实例（链接到辅助实例）的 VMware vSphere Web Client。
 
 ## 后续步骤
 {: #vc_hybrid_orderinginstance-next}
@@ -299,7 +300,7 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
 ## 相关链接
 {: #vc_hybrid_orderinginstance-related}
 
-* [注册 {{site.data.keyword.cloud_notm}} 帐户](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)
+* [注册 {{site.data.keyword.cloud_notm}} 帐户](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts)
 * [查看 vCenter Server with Hybridity Bundle 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
 * [vCenter Server with Hybridity Bundle 实例的多站点配置](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_multisite)
 * [添加和查看 vCenter Server with Hybridity Bundle 实例的集群](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingviewingclusters)

@@ -34,34 +34,34 @@
 	<text class="st4 st5" transform="translate(626.5 93.957)">客戶</text>
 	<text class="st4 st5" transform="translate(343 93.957)">客戶</text>
 <g id="Bare_Metal">
-	<text class="st6 st4 st5" transform="translate(75 330.29)">裸機</text>
+	<text class="st6 st4 st5" transform="translate(52.834 330.29)">裸機</text>
 </g>
 <g id="Storage">
 	<text class="st6 st4 st5" transform="translate(61.834 307.96)">儲存空間</text>
 </g>
 <g id="Network">
-	<text class="st6 st4 st5" transform="translate(75 285.62)">網路</text>
+	<text class="st6 st4 st5" transform="translate(60.166 285.62)">網路</text>
 </g>
 <g id="data_center">
-	<text class="st6 st4 st5" transform="translate(61.834 263.96)">資料中心</text>
+	<text class="st6 st4 st5" transform="translate(51.5 263.96)">資料中心</text>
 </g>
 <g id="PSC">
 	<text class="st6 st4 st5" transform="translate(73.5 221.96)">PSC</text>
 </g>
 <g id="NSX">
-	<text class="st6 st4 st5" transform="translate(73.5 196.29)">NSX</text>
+	<text class="st6 st4 st5" transform="translate(73.5 196.29)">NSX            </text>
 </g>
 <g id="vCenter">
 	<text class="st6 st4 st5" transform="translate(64.834 169.62)">vCenter</text>
 </g>
 <g id="Guest_OS">
-	<text class="st6 st4 st5" transform="translate(45 124.58)">來賓作業系統</text>
+	<text class="st6 st4 st5" transform="translate(62.101 124.58)">來賓作業系統</text>
 </g>
 <g id="IBM_middleware">
-	<text class="st6 st4 st5" transform="translate(45 99.212)">IBM 中介軟體</text>
+	<text class="st6 st4 st5" transform="translate(42.219 99.212)">IBM 中介軟體</text>
 </g>
 <g id="Application_software">
-	<text class="st6 st4 st5" transform="translate(60 70.951)">應用軟體</text>
+	<text class="st6 st4 st5" transform="translate(28.722 70.951)">應用軟體</text>
 </g>
 	<text class="st4 st7" transform="matrix(-.00344 -1 1 -.00344 15.294 334.12)">IBM Cloud IaaS</text>
 <g id="vmware_vcs">

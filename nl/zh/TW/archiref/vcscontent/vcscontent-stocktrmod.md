@@ -99,7 +99,7 @@ Jane 已按一下 Stock Trader，並看到建議以在 Liberty 中執行每個 w
 
 結束時，產生的 Stock Trader 佈置選項如下：
 * 單一 Liberty 容器 - 如果 Jane 部署 Liberty 運行環境，並已將其 Stock Trader 應用程式新增至該單一容器。
-* 多個 Liberty 容器 - 每個 .war 檔都有一個容器，基於 Transformation Advisor 針對 Stock Trader 的建議。
+* 多個 Liberty 容器 - 每個 .war 檔都有一個容器，如 Transformation Advisor 針對 Stock Trader 的建議。
 
 Todd 在轉變步驟期間未變更資料來源。Transformation Advisor 採用 WebSphere Application Server Network Deployment 資料來源配置，並將它新增至 Liberty 容器的 server.xml。
 {:important}

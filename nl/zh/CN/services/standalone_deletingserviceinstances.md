@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-06-18"
+
+keywords: VMware HCX standalone, HCX on-premises, delete HCX
 
 subcollection: vmware-solutions
 

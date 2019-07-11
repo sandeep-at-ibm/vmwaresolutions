@@ -1,8 +1,12 @@
 ---
 
 copyright:
+
   years: 2016, 2019
-lastupdated: "2019-05-13"
+
+lastupdated: "2019-05-31"
+
+keywords: user IDs vCenter, PSC user, user ID service
 
 subcollection: vmware-solutions
 
@@ -16,7 +20,7 @@ subcollection: vmware-solutions
 # IBM 用户标识
 {: #audit_user_ids}
 
-{{site.data.keyword.vmwaresolutions_short}} 在您的帐户中维护有一组用户，在您执行操作（例如，向 VMware 实例添加主机、集群或存储器）时，{{site.data.keyword.cloud_notm}} 自动化会使用这些用户。请查看有关 {{site.data.keyword.cloud_notm}} 自动化用户标识的以下各部分。
+{{site.data.keyword.vmwaresolutions_short}} 在您的帐户中维护有一组用户，在您执行操作（例如，向 VMware 实例添加主机、集群或存储器）时，{{site.data.keyword.cloud_notm}} 自动化会使用这些用户。您帐户中的用户还可以用于通过 {{site.data.keyword.cloud_notm}} 服务自动化来安装和配置服务。请查看有关 {{site.data.keyword.cloud_notm}} 自动化用户标识的以下各部分。
 
 如果删除或禁用了 IBM 用户标识，或者更改了其密码，那么 VMware 实例操作会失败。
 {:important}
@@ -67,6 +71,30 @@ HTTP 用于 vCenter 设置和配置以及 VMware 操作（例如，添加主机�
 |:---------|:------------- |:------------|
 |IBM|automation|用于添加主机，为服务添加虚拟机以及设置 Active Directory 和 DNS 条目。|
 |客户|管理员|创建仅供客户使用。|
+
+## 服务用户标识
+{: #audit_user_ids-services}
+
+表 5. 服务用户标识
+
+|用户标识|描述|
+|:-------------------------------------------|:----------- |
+| prod-BigIP-``dynamic_ID``-@``domain name`` | 用于安装和配置 F5 on {{site.data.keyword.cloud_notm}} 服务。|
+| prod-Caveonix-``dynamic_ID``-@``domain name`` | 用于安装和配置 Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} 服务。|
+| prod-Fortigate-``dynamic_ID``-@``domain name`` | 用于安装和配置 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 服务。|
+| prod-FortigateVM-``dynamic_ID``-@``domain name`` | 用于安装和配置 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服务。|
+| prod-HyTrustCC-``5_letter_ID``-@``domain name`` | 用于安装和配置 HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 服务。|
+| prod-HyTrustDC-``5_letter_ID``-@``domain name`` | 用于安装和配置 HyTrust DataControl on {{site.data.keyword.cloud_notm}} 服务。|
+| prod-HyTrustKC-``5_letter_ID``-@``domain name`` | 用于安装和配置 HyTrust KeyControl on {{site.data.keyword.cloud_notm}} 服务。|
+| prod-KMIPAdapter-``dynamic_ID``-@``domain name`` | 用于安装和配置 KMIP for VMware on {{site.data.keyword.cloud_notm}} 服务。|
+| prod-ICP-``dynamic_ID``-@``domain name`` | 用于安装和配置 {{site.data.keyword.cloud_notm}} Private Hosted 服务。|
+| prod-SPPlus-``dynamic_ID``-@``domain name`` | 用于安装和配置 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服务。|
+| prod-Veeam-``dynamic_ID``-@``domain name`` | 用于安装和配置 Veeam on {{site.data.keyword.cloud_notm}} 服务。|
+| prod-HCX-``dynamic_ID``-@``domain name`` | 用于安装和配置 VMware HCX on {{site.data.keyword.cloud_notm}} 服务。|
+| prod-Zerto-``dynamic_ID``-@``domain name`` | 用于安装和配置 Zerto on {{site.data.keyword.cloud_notm}} 服务。|
+
+动态标识的长度为 8 到 10 个字母。
+{:note}
 
 ## 相关链接
 {: #audit_user_ids-related}

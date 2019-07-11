@@ -6,6 +6,8 @@ copyright:
 
 lastupdated: "2019-05-03"
 
+keywords: release notes, what's new, version 3.0
+
 subcollection: vmware-solutions
 
 
@@ -112,7 +114,7 @@ subcollection: vmware-solutions
 
 * 现在，有文档可用于帮助您将 {{site.data.keyword.vmwaresolutions_short}} 组件升级到 VMware vSphere 6.7。如果要继续受益于 {{site.data.keyword.vmwaresolutions_short}} 自动化，此升级是必需的。有关更多信息，请参阅[将 vCenter Server vSphere 软件从 VMware vSphere 6.5 升级到 6.7](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_vsphere_upgrade#vc_vsphere_upgrade)。
 * 现在，有参考文档可用于为您提供 {{site.data.keyword.vmwaresolutions_short}} 维护供 {{site.data.keyword.cloud_notm}} 自动化使用的用户标识。此外，在实例历史记录日志中显示的可能消息也可供您查看。有关更多信息，请参阅 [IBM 用户标识](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_user_ids)和[实例历史记录消息](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_messages)。
-* **重新引导/控制**许可权已添加到描述 IBM Cloud 基础架构帐户所需许可权的表中。有关更多信息，请参阅 [{{site.data.keyword.cloud_notm}} 基础架构帐户许可权](/docs/services/vmwaresolutions/services?topic=vmware-solutions-slaccountrequirement#slaccountrequirement-permissions)。
+* **重新引导/控制**许可权已添加到描述 IBM Cloud 基础架构帐户所需许可权的表中。有关更多信息，请参阅 [{{site.data.keyword.cloud_notm}} 基础架构帐户许可权](/docs/services/vmwaresolutions/services?topic=vmware-solutions-cloud-infra-acct-req#cloud-infra-acct-req-permissions)。
 * 新的参考文档可用于以下 API。有关更多信息，请参阅 [API 参考](https://cloud.ibm.com/apidocs/vmware-solutions){:new_window}。
   * 列出指定 VMware vCenter Server 实例的所有历史记录消息
   * 向指定集群添加共享存储器

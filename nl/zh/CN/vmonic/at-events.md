@@ -1,8 +1,12 @@
 ---
 
 copyright:
+
   years: 2016, 2019
-lastupdated: "2019-04-03"
+
+lastupdated: "2019-06-17"
+
+keywords: vmware solutions events, activity tracker, event details
 
 subcollection: vmware-solutions
 
@@ -12,9 +16,9 @@ subcollection: vmware-solutions
 # Activity Tracker 事件
 {: #at-events}
 
-使用 {{site.data.keyword.cloudaccesstrailfull}} 服务可跟踪用户和应用程序如何与 {{site.data.keyword.Bluemix_notm}} 中的 {{site.data.keyword.vmwaresolutions_short}} 进行交互。
+使用 {{site.data.keyword.cloudaccesstrailfull}} 服务可跟踪用户和应用程序如何与 {{site.data.keyword.cloud_notm}} 中的 {{site.data.keyword.vmwaresolutions_short}} 进行交互。
 
-{{site.data.keyword.cloudaccesstrailfull_notm}} 服务将记录用户启动的会更改 {{site.data.keyword.Bluemix_notm}} 中服务状态的活动。有关更多信息，请参阅[关于 {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov#activity_tracker_ov)。
+{{site.data.keyword.cloudaccesstrailfull_notm}} 服务将记录用户启动的会更改 {{site.data.keyword.cloud_notm}} 中服务状态的活动。有关更多信息，请参阅[关于 {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov#activity_tracker_ov)。
 
 ## Activity Tracker 事件表
 {: #at-events-table}
@@ -47,30 +51,29 @@ subcollection: vmware-solutions
 
 |操作|描述|结果|
 |:-----------------------------------------|:------------|:-------|
-|`vmware-solutions.user_account.update`| <ul><li>收到更新用户帐户的请求。</li><li>响应了更新用户帐户的请求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-|`vmware-solutions.notification.update`| <ul><li>收到更新通知的请求。</li><li>应答了更新通知的请求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-|`vmware-solutions.secure_data.wipe`| <ul><li>收到擦除安全数据的请求。</li><li>应答了擦除安全数据的请求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-|`vmware-solutions.bss_account.migrate`| <ul><li>收到迁移到 BSS 帐户的请求。</li><li>应答了迁移到 BSS 帐户的请求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-|`vmware-solutions.vcs.order`| <ul><li>收到订购 vCenter Server 实例的请求。</li><li>应答了订购 vCenter Server 实例的请求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-|`vmware-solutions.vcs.delete`| <ul><li>收到删除 vCenter Server 实例的请求。</li><li>应答了删除 vCenter Server 实例的请求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-|`vmware-solutions.vcs.add_host`| <ul><li>收到将 ESXi 服务器添加到 vCenter Server 实例的请求。</li><li>应答了将 ESXi 服务器添加到 vCenter Server 实例的请求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-|`vmware-solutions.vcs.remove_hosts`| <ul><li>收到从 vCenter Server 实例中删除 ESXi 服务器的请求。</li><li>应答了从 vCenter Server 实例中删除 ESXi 服务器的请求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-|`vmware-solutions.vcs.schedule_update`| <ul><li>收到安排 vCenter Server 实例更新的请求。</li><li>应答了安排 vCenter Server 实例更新的请求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-|`vmware-solutions.vcs.create_cluster`| <ul><li>收到为 vCenter Server 实例创建集群的请求。</li><li>应答了为 vCenter Server 实例创建集群的请求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-|`vmware-solutions.vcs.delete_cluster`| <ul><li>收到从 vCenter Server 实例中删除集群的请求。</li> <li>应答了从 vCenter Server 实例中删除集群的请求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-|`vmware-solutions.vcs.update_nsx_license`| <ul><li>收到更新 VMware NSX 许可证的请求。</li><li>应答了更新 VMware NSX 许可证的请求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-|`vmware-solutions.vcs.upgrade_to_hybridity`| <ul><li>收到将 vCenter Server 实例升级到 vCenter Server with Hybridity Bundle 实例的请求。</li><li>应答了将 vCenter Server 实例升级到 vCenter Server with Hybridity Bundle 实例的请求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-|`vmware-solutions.vsphere.order`| <ul><li>收到订购 vSphere 集群的请求。</li><li>应答了订购 vSphere 集群的请求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-|`vmware-solutions.vsphere.update`| <ul><li>收到更新 vSphere 集群的请求。</li><li>应答了更新 vSphere 集群的请求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-|`vmware-solutions.vsphere.save_template`| <ul><li>收到保存 vSphere 集群配置的请求。</li><li>应答了保存 vSphere 集群配置的请求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-|`vmware-solutions.netapp.order`| <ul><li>收到订购 NetApp ONTAP Select 实例的请求。</li><li>应答了订购 NetApp ONTAP Select 实例的请求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-|`vmware-solutions.netapp.delete`| <ul><li>收到删除 NetApp ONTAP Select 实例的请求。</li><li>应答了删除 NetApp ONTAP Select 实例的请求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-|`vmware-solutions.service_variable.update`| <ul><li>收到更新服务配置的请求。</li><li>应答了更新服务配置的请求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-|`vmware-solutions.service.order`| <ul><li>收到为实例订购服务的请求。</li><li>应答了为实例订购服务的请求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-|`vmware-solutions.service.delete_by_id`| <ul><li>收到从实例中删除服务的请求。</li><li>应答了从实例中删除服务的请求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-|`vmware-solutions.service.upgrade_to_hybridity`| <ul><li>收到将现有 vCenter Server 实例升级到 vCenter Server with Hybridity Bundle 实例的请求。</li><li>应答了将现有 vCenter Server 实例升级到 vCenter Server with Hybridity Bundle 实例的请求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-|`vmware-solutions.service.deploy`|运行了在实例上部署服务的操作。|`success`|
-|`vmware-solutions.service.undeploy`|运行了从实例中除去服务的操作。|`success`|
+| `vmware-solutions.account-apikey.update` |	将更新帐户的基础架构 API 密钥。|`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.account-notification.update` | 将更新帐户的通知设置。|`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.instance-secure-data.wipe` | 将擦除实例安全数据。|`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.instance-bss-account.migrate` |	实例会迁移到 BSS 帐户。|`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs.create` |	将创建 vCenter Server 实例。|`pending`<br>`success`<br>`failure` |
+|`vmware-solutions.vcs.delete`|	将删除 vCenter Server 实例。|`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-host.add` |	主机将添加到 vCenter Server 实例。|`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-host.remove` |	主机将从 vCenter Server 实例中除去。|`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs.update`	| 将更新 vCenter Server 实例。|`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-cluster.create`	| 将为 vCenter Server 实例创建集群。|`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-cluster.delete`	| 将为 vCenter Server 实例删除集群。|`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-nsx-license.update`	| 将为 vCenter Server 实例更新 NSX 许可证。|`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-hybridity.add`	| 将为 vCenter Server 实例更新 Hybridity Bundle。|`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-hybridity.remove`	| 将为 vCenter Server 实例除去 Hybridity Bundle。|`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-nfs-storage.add`	| NFS 存储器将添加到 vCenter Server 实例。|`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-nfs-storage.remove`	| NFS 存储器将从 vCenter Server 实例中除去。|`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-plan.update`	| 将更新 vCenter Server 实例的套餐。|`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vss.create`	|将创建 vSphere 实例。|`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vss.update`	| 将更新 vSphere 实例。|`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vss-template.remove` |	将除去 vSphere 模板。|`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.service.create`	|将创建服务。|`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.service.delete`	|将删除服务。|`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.service-hybridity.upgrade` |Hybridity Bundle 将升级到 `version`。|`pending`<br>`success`<br>`failure` |
 
 ## 跟踪 KMIP for VMware on IBM Cloud 服务的事件
 {: #at-events-kmip}
@@ -83,18 +86,17 @@ subcollection: vmware-solutions
 
 |操作|描述|结果|
 |:--------------------------------------------|:------------------------------------------|:-------|
-|`vmware-solutions.key.create`| <ul><li>收到创建密钥的请求。</li><li>应答了创建密钥的请求。</li></ul> | <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-|`vmware-solutions.key.get`| <ul><li>收到获取密钥内容的请求。</li><li>应答了获取密钥内容的请求。</li></ul> |  <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-|`vmware-solutions.key.get_attributes`| <ul><li>收到获取密钥属性的请求。</li><li>应答了获取密钥属性的请求。</li></ul> |  <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-|`vmware-solutions.key.activate`| <ul><li>收到激活密钥的请求。</li><li>应答了激活密钥的请求。</li></ul> |  <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-|`vmware-solutions.key.revoke`| <ul><li>收到撤销密钥的请求。</li><li>应答了撤销密钥的请求。</li></ul> |  <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-|`vmware-solutions.key.destroy`| <ul><li>收到销毁密钥的请求。</li><li>应答了销毁密钥的请求。</li></ul> |  <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
-|`vmware-solutions.key.discover_versions`| <ul><li>收到查找 KMIP for VMware on {{site.data.keyword.cloud_notm}} 服务版本的请求。</li><li>应答了查找 KMIP for VMware on {{site.data.keyword.cloud_notm}} 服务版本的请求。</li></ul> |  <ul><li>`pending`</li><li>`success` 或 `failure`</li></ul> |
+| `vmware-solutions.kmip-key.create` |	将创建 KMIP 密钥。|`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.kmip-key.retrieve` |	将检索 KMIP 密钥。|`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.kmip-key-attributes.retrieve` |	将检索 KMIP 密钥的属性。|`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.kmip-key.activate` |	将激活 KMIP 密钥。|`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.kmip-key.revoke` |	将撤销 KMIP 密钥。|`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.kmip-key.destroy` |	将销毁 KMIP 密钥。|`pending`<br>`success`<br>`failure` |
 
 ## 在何处查看事件
 {: #at-events-viewing}
 
-{{site.data.keyword.cloudaccesstrailshort}} 事件在生成事件的 {{site.data.keyword.Bluemix_notm}} 区域中可用的 {{site.data.keyword.cloudaccesstrailshort}} **帐户域**中提供。
+{{site.data.keyword.cloudaccesstrailshort}} 事件在生成这些事件的 {{site.data.keyword.cloud_notm}} 区域中可用的 {{site.data.keyword.cloudaccesstrailshort}} **帐户域**中提供。
 
 ## 相关链接
 {: #at-events-related}

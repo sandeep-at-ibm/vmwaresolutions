@@ -25,7 +25,7 @@ Para obter mais informações sobre os componentes, veja a Figura 2. Visão gera
 ## Design de rede virtual
 {: #storage-infra-mgmt-visual-net-design}
 
-A virtualização de rede usada nesse design utiliza o vSphere Distributed Switch (vDS) existente associado à rede privada e especificado na [arquitetura do {{site.data.keyword.vmwaresolutions_full}}](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview).
+A virtualização de rede usada nesse design usa o vSphere Distributed Switch (vDS) existente associado à rede privada e especificado na [Arquitetura do {{site.data.keyword.vmwaresolutions_full}}](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview).
 
 ## Comutador Distribuído do vSphere
 {: #storage-infra-mgmt-vsphere-ds}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-22"
 
 subcollection: vmware-solutions
 
@@ -17,12 +17,14 @@ subcollection: vmware-solutions
 ## 虛擬遞送及轉遞
 {: #vcsiks-arch-overview-infrastructure-vrf}
 
-{{site.data.keyword.cloud}} 帳戶可以配置為「虛擬遞送及轉遞 (VRF)」帳戶。VRF 帳戶可啟用子網路 IP 區塊之間的自動廣域遞送。所有具有 Direct Link 連線的帳戶都必須轉換或建立為 VRF 帳戶。
+{{site.data.keyword.cloud}} 帳戶可以配置為「虛擬遞送及轉遞 (VRF)」帳戶。VRF 帳戶可啟用子網路 IP 區塊之間的自動廣域遞送。所有具有「直接鏈結」連線的帳戶都必須轉換或建立為 VRF 帳戶。
 
 ## Direct Link
 {: #vcsiks-arch-overview-infrastructure-direct-link}
 
-{{site.data.keyword.cloud_notm}} Direct Link Connect 提供專用存取權，可讓您透過本端 {{site.data.keyword.CloudDataCent_notm}} 來存取 {{site.data.keyword.cloud_notm}} 基礎架構，以及鏈結至「網路服務提供者」的任何其他雲端。此選項最適合在單一環境中建立多雲端連線功能。我們使用共用頻寬拓蹼將客戶連接至 {{site.data.keyword.cloud_notm}} Private 網路。如同所有 Direct Link 產品一樣，您可以新增廣域遞送，讓專用網路的資料流量能夠傳輸至所有 {{site.data.keyword.cloud_notm}} 位置。
+{{site.data.keyword.cloud_notm}} Direct Link Connect 提供專用存取權，可讓您透過本端 {{site.data.keyword.CloudDataCent_notm}} 來存取 {{site.data.keyword.cloud_notm}} 基礎架構，以及鏈結至「網路服務提供者」的任何其他雲端。此選項最適合在單一環境中建立多雲端連線功能。
+
+我們使用共用頻寬拓蹼將客戶連接至 {{site.data.keyword.cloud_notm}} Private 網路。與所有 Direct Link 產品一樣，您也可以新增廣域遞送，這將使專用網路資料流量能夠流至所有 {{site.data.keyword.cloud_notm}} 位置。
 
 ## 虛擬專用網路
 {: #vcsiks-arch-overview-infrastructure-virt-private-network}
@@ -81,7 +83,7 @@ ESG 配置成具有來源 NAT 規則 (SNAT) 以容許出埠資料流量，這會
 
 在與管理 VM 相關聯的專用 VLAN 中，vCenter Server 部署使用安裝在可攜式子網路上的單一外部平台服務控制器 (PSC)。其預設閘道設為後端客戶路由器 (BCR)。
 
-### vCenter Server 
+### vCenter Server
 {: #vcsiks-arch-overview-infrastructure-vcs}
 
 與 PSC 一樣，vCenter Server 部署為應用裝置。此外，vCenter 會安裝在與管理 VM 相關聯之專用 VLAN 的可攜式子網路上。其預設閘道設為 BCR。
@@ -91,7 +93,9 @@ ESG 配置成具有來源 NAT 規則 (SNAT) 以容許出埠資料流量，這會
 
 NSX Manager 部署在起始 vCenter Server 叢集上。此外，NSX Manager 會獲指派指定給管理元件之專用可攜式位址區塊中的 IP 位址。
 
-### NSX Controller
+### 
+NSX Controller
+
 {: #vcsiks-arch-overview-infrastructure-nsx-controllers}
 
 {{site.data.keyword.cloud_notm}} 自動化會在起始叢集內部署三個 NSX Controller。控制器會獲指派指定給管理元件之專用可攜式子網路中的 IP 位址。

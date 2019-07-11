@@ -30,7 +30,7 @@ Skate Advisor 的主要層面是與 Watson 驅動之聊天機器人間的可能�
 ### 核心元素
 {: #vcscar-concepts-core-elem}
 
-下列是建構「技巧」的核心語言元素。
+以下是建構「技巧」的核心語言元素。
 
 表 1. 核心語言元素
 

@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-16"
+lastupdated: "2019-06-14"
+
+keywords: FAQ, user account, patch management
 
 subcollection: vmware-solutions
 
@@ -27,7 +29,7 @@ subcollection: vmware-solutions
 
 * **IBM 标识帐户**。需要此帐户才能访问 {{site.data.keyword.vmwaresolutions_short}} 控制台。控制台是与 {{site.data.keyword.slportal}} 分开的独立用户界面。有关更多信息，请参阅[入门](/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started)。
 * **{{site.data.keyword.cloud_notm}} 帐户**。需要此帐户才能进行供应。您可以使用现有 **IBM 标识**或创建新的 **IBM 标识**来注册 {{site.data.keyword.cloud_notm}} 帐户。
-* **{{site.data.keyword.cloud_notm}} 基础架构帐户**。此帐户用于登录到 {{site.data.keyword.cloud_notm}} 基础架构客户门户网站，该门户网站提供了某种额外的功能来管理基础架构产品和服务。您可以通过将 **{{site.data.keyword.cloud_notm}} 帐户**升级到现收现付类型的帐户，或通过将现有 {{site.data.keyword.cloud_notm}} 基础架构帐户与 {{site.data.keyword.cloud_notm}} 帐户链接，获取 {{site.data.keyword.cloud_notm}} 基础架构帐户。要使用的 {{site.data.keyword.cloud_notm}} 基础架构帐户必须满足特定需求。有关更多信息，请参阅[注册必需的帐户](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)和 [{{site.data.keyword.cloud_notm}} 基础架构帐户需求](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)。
+* **{{site.data.keyword.cloud_notm}} 基础架构帐户**。此帐户用于登录到 {{site.data.keyword.cloud_notm}} 基础架构客户门户网站，该门户网站提供了某种额外的功能来管理基础架构产品和服务。您可以通过将 **{{site.data.keyword.cloud_notm}} 帐户**升级到计费帐户，或通过将现有 {{site.data.keyword.cloud_notm}} 基础架构帐户与 {{site.data.keyword.cloud_notm}} 帐户链接，获取 {{site.data.keyword.cloud_notm}} 基础架构帐户。要使用的 {{site.data.keyword.cloud_notm}} 基础架构帐户必须满足特定需求。有关更多信息，请参阅[注册必需的帐户](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts)和 [{{site.data.keyword.cloud_notm}} 基础架构帐户需求](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req)。
 
 ## 如何将我的 IBM Cloud Infrastructure 凭证与 IBM Cloud for VMware Solutions 控制台相关联？
 {: #faq-associate-credentials}

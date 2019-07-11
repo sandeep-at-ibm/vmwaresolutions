@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-05-28"
+
+keywords: vSphere scale cluster, scale vSphere, scale vSphere cluster
 
 subcollection: vmware-solutions
 
@@ -36,7 +38,7 @@ subcollection: vmware-solutions
 3. 按一下**擴充現有項目**標籤，並從**叢集配置**清單中選取您要擴充的叢集。
 4. 檢閱自動完成的叢集設定。
 5. 在 **{{site.data.keyword.baremetal_short}}** 區段中，指定您要新增至叢集的 {{site.data.keyword.baremetal_short}} 數目。
-6. 如果該叢集在其公用 VLAN 上不包括「FortiGate 300 系列 Security Appliance HA 配對」，則您可以訂購應用裝置。若要這樣做，請選取 **FortiGate Physical Appliance 300 系列 HA 對組**下的**購買隨附**勾選框。
+6. 如果該叢集在其公用 VLAN 上不包括「FortiGate 300 系列 Security Appliance HA 配對」，則您可以訂購應用裝置。若要這樣做，請選取 **FortiGate Physical Appliance 300 系列 HA 配對**下的**購買隨附**勾選框。
 7. 在**訂單摘要**窗格中，驗證實例配置及預估成本。
    * 若要將配置儲存為範本而不下訂單，請按一下**儲存配置**。
    * 若要下訂單，請確定要收費的帳戶正確，請檢閱並接受條款，然後按一下**佈建**。

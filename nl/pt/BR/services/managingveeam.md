@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-06-18"
+
+keywords: Veeam console, Veeam backup restore, update Veeam license
 
 subcollection: vmware-solutions
 
@@ -16,7 +18,7 @@ subcollection: vmware-solutions
 
 Depois que o serviço for implementado em sua instância, será possível acessar o console do Veeam usando RDP para gerenciar o backup e a restauração de todas as máquinas virtuais em seu ambiente, incluindo o backup e a restauração dos componentes de gerenciamento. É possível também fazer upgrade do serviço fazendo download e instalando as atualizações do Veeam do website do Veeam.
 
-Para instâncias que foram implementadas em liberações anteriores à V1.8, se você quiser usar o serviço Veeam no {{site.data.keyword.cloud}}, deve-se substituir a VSI do Veeam existente nas instâncias. Para obter mais informações, veja a seção _Substituindo a VSI do Veeam de instâncias pré-V1.8 pelo Veeam on IBM Cloud_.
+Para instâncias que foram implementadas em liberações anteriores à V1.8, se você quiser usar o serviço Veeam no {{site.data.keyword.cloud}}, deve-se substituir a VSI do Veeam existente nas instâncias. Para obter mais informações, consulte [Substituindo o Veeam VSI de instâncias anteriores à V1.8 pelo Veeam on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam#managingveeam-replace-vsi).
 
 ## Acessando o console do Veeam usando RDP
 {: #managingveeam-accessing}

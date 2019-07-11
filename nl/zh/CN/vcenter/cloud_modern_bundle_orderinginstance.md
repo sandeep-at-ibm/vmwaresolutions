@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-06"
+lastupdated: "2019-06-18"
+
+keywords: single-node trial, migration app modernization, order migration app modernization
 
 subcollection: vmware-solutions
 
@@ -67,10 +69,13 @@ subcollection: vmware-solutions
    3. 单击订单适用条款的链接，并在订购实例之前确认您同意这些条款。
    4. 单击**供应**。
 
-### 结果
+### 订购 Migration and App Modernization 单节点试用版实例之后的结果
 {: #cloud_modern_bundle_orderinginstance-results}
 
-实例的部署会自动启动，并会订购内部部署 HCX on {{site.data.keyword.cloud_notm}} 服务激活密钥。
+* 实例的部署会自动启动，并会订购内部部署 HCX on {{site.data.keyword.cloud_notm}} 服务激活密钥。
+* 通过查看实例详细信息的**部署历史记录**部分，可以检查部署状态，包括可能需要注意的任何问题。
+* 成功部署实例后，[Migration and App Modernization 单节点试用版实例的技术规范](/docs/services/vmwaresolutions/services?topic=vmware-solutions-cloud_modern_bundle_overview#cloud_modern_bundle_overview-tech-specs)中描述的组件已安装。
+* 实例准备就绪可供使用后，该实例的状态会更改为**可供使用**，并且您将收到通过电子邮件发送的通知。
 
 #### HCX on IBM Cloud 的部署过程
 {: #cloud_modern_bundle_orderinginstance-hcx-deploy-process}
@@ -187,3 +192,4 @@ subcollection: vmware-solutions
 * [开具有关 IBM Cloud Private 的凭单](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
 * [VMware HCX 资源](https://hcx.vmware.com/#/docs){:new_window}
 * [VMware HCX 用户指南](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}
+* [取消虚拟服务器](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)

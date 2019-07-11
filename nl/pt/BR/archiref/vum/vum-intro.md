@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-21"
 
 subcollection: vmware-solutions
 
@@ -32,7 +32,7 @@ Este documento descreve o uso de uma implementação do servidor proxy, com base
 
 O vCenter Server implementa atualmente o vSphere 6.5, que significa que o VUM agora está integrado ao vCenter Server Appliance (VCSA) e, como o componente do cliente VUM é um plug-in executado no vSphere Web Client, ele é ativado automaticamente após a implementação do VCSA. No entanto, o VUM não tem acesso à Internet para acessar os repositórios do VMware.
 
-Esta configuração documentada usa o modelo de implementação do VUM “tudo-em-um”, conectado à Internet, que usa a rede pública do {{site.data.keyword.cloud_notm}} para fornecer acesso à Internet para fazer download de upgrades e correções.
+Essa configuração documentada usa o modelo de implementação conectado à Internet "tudo-em-um" do VUM, que usa a rede pública do {{site.data.keyword.cloud_notm}} para fornecer acesso à Internet para fazer download de upgrades e correções.
 
 Os clientes que requerem o uso de conexões de Internet alternativas devem investigar o VMware vSphere Update Manager Download Service (UMDS), que está além do escopo desta publicação.
 
@@ -58,7 +58,7 @@ Se você implementou um vCenter Server usando vSAN, veja [Atualizando clusters d
 
 Se você desejar atualizar a automação de gerenciamento de infraestrutura do {{site.data.keyword.cloud_notm}}, use o console do {{site.data.keyword.vmwaresolutions_short}}.
 
-O [console do {{site.data.keyword.vmwaresolutions_short}}](https://cloud.ibm.com/infrastructure/vmware-solutions/console) permite a execução das ações a seguir:
+O [console do {{site.data.keyword.vmwaresolutions_short}}](https://cloud.ibm.com/infrastructure/vmware-solutions/console) permite executar as ações a seguir:
 *	Fazer upgrade de licenças, por exemplo, fazer upgrade do NSX Base para outra versão
 *	Iniciar atualizações para a plataforma do vCenter Server, por exemplo, mover para a versão 2.5
 *	Visualizar o status das atualizações

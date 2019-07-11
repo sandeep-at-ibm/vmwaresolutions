@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-06-18"
+
+keywords: NetApp order instance, order NetApp ONTAP, order NetApp
 
 subcollection: vmware-solutions
 
@@ -64,7 +66,6 @@ subcollection: vmware-solutions
 *  只允许使用字母数字字符和短划线 (-) 字符。
 *  子域标签必须以字母字符开头并以字母数字字符结尾。
 *  子域标签的最大长度为 10 个字符。
-*  子域标签在您的帐户中必须唯一。
 
 ### 域名
 {: #np_orderinginstances-domain-name}
@@ -108,6 +109,13 @@ subcollection: vmware-solutions
 
 缺省情况下，NetApp ONTAP Select 实例的 ESXi 服务器数为 4 个。您不能对其进行更改。所有 ESXi 服务器都共享配置。
 
+## 订单摘要
+{: #np_orderinginstances-order-summary}
+
+根据选择的配置，估算成本会立即生成并显示在**订单摘要**右侧窗格中。单击**定价详细信息**以生成 {{site.data.keyword.vmwaresolutions_short}} 资源成本汇总的 PDF 文档。
+
+您还可以通过单击**添加到估算**来将供应的资源添加到 {{site.data.keyword.cloud_notm}} 估算工具**。如果要与您可能考虑购买的其他 {{site.data.keyword.cloud_notm}} 资源一起估算所选 {{site.data.keyword.vmwaresolutions_short}} 资源的成本，那么这非常有用。
+
 ## 订购 NetApp ONTAP Select 实例的过程
 {: #ordering-netapp-ontap-select-instances}
 
@@ -126,14 +134,12 @@ subcollection: vmware-solutions
     4. 单击订单适用条款的链接。确保您同意这些条款，然后选中**我已阅读并同意下面列出的第三方服务协议**复选框。
     5. 单击**供应**。
 
-## 结果
+## 订购 NetApp ONTAP 实例后的结果
 {: #np_orderinginstances-results}
 
-实例部署会自动启动。您将收到说明订单正在处理的确认，并且您可以通过查看实例详细信息来检查部署的状态。
-
-成功部署实例后，[NetApp ONTAP Select 实例的技术规范](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#specs)中描述的组件已安装在 VMware 虚拟平台上。
-
-实例准备就绪可供使用后，该实例的状态会更改为**可供使用**，并且您将收到通过电子邮件发送的通知。
+* 实例部署会自动启动，并且您将收到确认，指示正在处理订单。通过查看实例详细信息的**部署历史记录**部分，可以检查部署状态，包括可能需要注意的任何问题。
+* 成功部署实例后，[NetApp ONTAP Select 实例的技术规范](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#specs)中描述的组件已安装在 VMware 虚拟平台上。
+* 实例准备就绪可供使用后，该实例的状态会更改为**可供使用**，并且您将收到通过电子邮件发送的通知。
 
 ## 后续步骤
 {: #np_orderinginstances-next}

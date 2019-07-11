@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-09"
+lastupdated: "2019-06-14"
+
+keywords: F5 license activation, F5 configuration, order F5
 
 subcollection: vmware-solutions
 
@@ -39,9 +41,9 @@ subcollection: vmware-solutions
 
 為未使用公用介面配置的實例訂購 F5 on {{site.data.keyword.cloud_notm}} 時，必須提供 Proxy 伺服器以完成安裝。HTTP Proxy 伺服器必須已配置並透過虛擬遞送及轉遞 (VRF) 提供，才能開始安裝 F5 on {{site.data.keyword.cloud_notm}}。
 
-BigIP Virtual Edition (VE) 端點必須可以啟動其授權，才能正常運行。安裝 BigIP VE 端點後，不再需要使用 Proxy 伺服器。
+BigIP Virtual Edition (VE) 端點必須可以啟動其授權，才能正常運作。安裝 BigIP VE 端點後，不再需要使用 Proxy 伺服器。
 
-安裝服務時，如果沒有正常運行的 Proxy 伺服器，那麼無法新增 F5 on {{site.data.keyword.cloud_notm}} 服務。
+安裝服務時，如果沒有正常運作的 Proxy 伺服器，則無法新增 F5 on {{site.data.keyword.cloud_notm}} 服務。
 {:note}
 
 ## F5 on IBM Cloud 服務配置

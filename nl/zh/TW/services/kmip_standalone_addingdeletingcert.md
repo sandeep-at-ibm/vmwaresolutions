@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-06-14"
+
+keywords: KMIP certificate, add certificate KMIP, delete certificate KMIP
 
 subcollection: vmware-solutions
 
@@ -47,7 +49,7 @@ subcollection: vmware-solutions
 2. 向下捲動至 **KMIP for VMware on IBM Cloud 實例**表格，按一下您要從中刪除憑證的實例。
 3. 在**用戶端 SSL 憑證**表格中，找出您要刪除的憑證，然後按一下**刪除**圖示。
 
-   基於加密及解密資料或備份資料，用戶端會立即遺失所有金鑰的存取權。若要讓用戶端重新取得存取權，您必須再次新增用戶端 SSL 憑證。
+   用戶端會立即失去用來加密及解密資料或備份資料之所有金鑰的存取權。若要讓用戶端重新取得存取權，您必須再次新增用戶端 SSL 憑證。
    {:note}
 
 ## 相關鏈結

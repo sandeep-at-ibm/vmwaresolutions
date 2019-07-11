@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-06-14"
+
+keywords: KMIP for VMware, remove KMIP stand-alone, delete KMIP for VMware
 
 subcollection: vmware-solutions
 

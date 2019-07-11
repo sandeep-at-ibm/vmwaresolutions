@@ -11,7 +11,7 @@ subcollection: vmware-solutions
 
 ---
 
-# Arquitetura multissite
+# Arquitetura multisite
 {: #nsx-multi_site}
 
 Um diferenciador principal entre o {{site.data.keyword.cloud}} e outras ofertas de nuvem é a capacidade de provisionar o recurso de computação dedicada em todo o mundo e conectar automaticamente a infraestrutura sob demanda com a rede dentro de sua conta privada do {{site.data.keyword.cloud_notm}}. Os recursos de rede definidos pelo software do VMware vCenter Server juntos com o {{site.data.keyword.cloud_notm}} fornecem uma infraestrutura global granular que pode ser construída em dias. As seções a seguir descrevem um exemplo de arquitetura multissite do que pode ser obtido com o recurso pronto para utilização do vCenter Server.

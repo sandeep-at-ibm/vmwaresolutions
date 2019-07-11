@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-06-13"
+
+keywords: Mission Critical VMware, Mission Critical, tech specs Mission Critical
 
 subcollection: vmware-solutions
 
@@ -18,7 +20,7 @@ Mission Critical VMware on {{site.data.keyword.cloud}} 提供多區域雲端架�
 
 與使用內部部署環境或競爭雲端平台的大部分 VMWare 用戶端相較，此雲端架構可讓客戶達到更高的可用性和失效接手成功率。
 
-此架構支援現有的關鍵任務舊式工作負載，包括非雲端原生應用程式，目標聚集可用性為 99.99%。IBM Cloud 多區域地區的設計目的，是要在發生站台運行中斷時，讓關鍵任務工作負載保持在線上。故障站台中的工作負載會在近乎即時的情況下自動重新啟動，而鄰接站台中的工作負載則保持在線上且可供使用。
+此架構支援現有的關鍵任務舊式工作負載，包括非雲端原生應用程式，目標聚集可用性為 99.99%。IBM Cloud 多區域地區的設計目的，是要在發生站台運作中斷時，讓關鍵任務工作負載保持在線上。故障站台中的工作負載會在近乎即時的情況下自動重新啟動，而鄰接站台中的工作負載則保持在線上且可供使用。
 
 此架構涵蓋各種企業服務，包括網路、儲存空間、備援，以及為了監視和疑難排解雲端型應用程式而建置的其他工具。此外，此架構可以與 IBM Services Platform with Watson（以 {{site.data.keyword.cloud_notm}} 為建置基礎）整合，以容許更廣泛地使用服務。藉由使用平台的認知功能，用戶端可以對新的商業洞察進行更有效的資料採礦，以協助維護持續運作。
 

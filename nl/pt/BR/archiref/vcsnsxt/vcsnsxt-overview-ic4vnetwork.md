@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-21"
+lastupdated: "2019-05-22"
 
 subcollection: vmware-solutions
 
@@ -28,7 +28,7 @@ Os pontos de presença (PoP) do {{site.data.keyword.CloudDataCents_notm}} e da r
 ## Rede Privada
 {: #vcsnsxt-overview-ic4vnetwork-private-net}
 
-Todos os {{site.data.keyword.CloudDataCents_notm}} e os PoPs são conectados pela backbone de rede privada. Essa rede privada é separada da rede pública e permite a conectividade com serviços em {{site.data.keyword.CloudDataCents_notm}} ao redor do mundo. Para mover dados entre data centers, use mais de uma conexão de 10 Gbps ou 40 Gbps com a rede privada. Semelhante à rede pública, a rede privada possui multicamada em que os servidores e outras infraestruturas estão conectados aos back-end customer switches (BCS) agregados. Esses comutadores agregados estão conectados a um par de roteadores separados (isto é, back-end customer routers, BCR) para rede L3. A rede privada também suporta a capacidade de usar quadros jumbo (MTU 9000) para conexões de host físico.
+Todos os {{site.data.keyword.CloudDataCents_notm}} e os PoPs são conectados pela backbone de rede privada. Essa rede privada é separada da rede pública e permite a conectividade com serviços em {{site.data.keyword.CloudDataCents_notm}} ao redor do mundo. A movimentação de dados entre os data centers é feita usando mais de uma conexão de 10 Gbps ou 40 Gbps para a rede privada. Semelhante à rede pública, a rede privada possui multicamada em que os servidores e outras infraestruturas estão conectados aos back-end customer switches (BCS) agregados. Esses comutadores agregados estão conectados a um par de roteadores separados (isto é, back-end customer routers, BCR) para rede L3. A rede privada também suporta a capacidade de usar quadros jumbo (MTU 9000) para conexões de host físico.
 
 ## Rede de gerenciamento
 {: #vcsnsxt-overview-ic4vnetwork-mgmt-net}
@@ -47,7 +47,7 @@ Os endereços IP primários ou móveis poderão ser tornados roteáveis para qua
 ## Virtual Routing and Forwarding
 {: #vcsnsxt-overview-ic4vnetwork-vrf}
 
-As contas do {{site.data.keyword.cloud_notm}} também podem ser configuradas como uma conta Virtual Routing and Forwarding (VRF). Uma conta de VRF ativa o roteamento global automático entre blocos de IP de sub-rede dentro da conta. Todas as contas com conexões de Link direto devem ser convertidas ou criadas como uma conta do VRF.
+As contas do {{site.data.keyword.cloud_notm}} também podem ser configuradas como uma conta Virtual Routing and Forwarding (VRF). Uma conta de VRF ativa o roteamento global automático entre blocos de IP de sub-rede dentro da conta. Todas as contas com conexões do Direct Link devem ser convertidas para uma conta do VRF ou criadas como tal.
 
 ## Conexões físicas do host
 {: #vcsnsxt-overview-ic4vnetwork-host-connect}
@@ -84,7 +84,7 @@ Privada B 	|Móvel 	|Designada ao vSAN se em uso.
 Privada B 	|Móvel 	|Designada ao NAS se em uso.
 Privada B 	|Móvel 	|Designada ao vMotion.
 
-Esse design é implementado com hosts físicos e instâncias de sistema virtual (VSI) em VLANs e configurado para apontar para o {{site.data.keyword.cloud_notm}} BCR (back-end customer router de “rede privada”) como a rota padrão. Ao passo que as instâncias do vCenter Server permitem o uso de rede definida pelo software. Quaisquer sobreposições de rede criadas pelo NSX que incluem roteamento para sub-redes VLAN não são conhecidas pelos roteadores gerenciados pelo {{site.data.keyword.cloud_notm}} e você pode precisar criar rotas estáticas, regras de firewall e regras NAT para gerenciar adequadamente os fluxos de rede.
+Esse design é implementado com hosts físicos e instâncias de sistema virtual (VSI) em VLANs e configurado para apontar para o {{site.data.keyword.cloud_notm}} BCR (back-end customer router de “rede privada”) como a rota padrão. Embora as instâncias do vCenter Server permitam o uso de rede definida por software, quaisquer sobreposições de rede criadas pelo NSX, que incluem roteamento para sub-redes de VLAN, não são conhecidas dos roteadores gerenciados pelo {{site.data.keyword.cloud_notm}}. Talvez seja necessário criar rotas estáticas, regras de firewall e regras NAT para gerenciar adequadamente os fluxos de rede.
 
 As conexões de rede privada são configuradas para usar quadros gigantes com o tamanho de MTU de 9000, o que melhora o desempenho para transferências de dados grandes, como armazenamento e vMotion. Esta é a MTU máxima permitida dentro do VMware e por {{site.data.keyword.cloud_notm}}. As conexões de rede pública usam uma MTU Ethernet padrão de 1500. Isso deve ser mantido, pois quaisquer mudanças podem causar fragmentação de pacotes na internet.
 

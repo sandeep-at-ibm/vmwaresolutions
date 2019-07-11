@@ -4,25 +4,25 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-17"
+lastupdated: "2019-05-31"
 
 ---
 
 # vRealize Network Insight
 {: #opsmgmt-vrni}
 
-O ambiente do vRealize Network Insight (vRNI) consiste em duas máquinas virtuais (VMs), uma Plataforma (IU) e um Nó do Controlador.
+O ambiente vRealize Network Insight (vRNI) consiste em duas máquinas virtuais (VMs), uma Plataforma (IU) e um Nó do controlador.
 
 ![Diagrama do Network Insights](../../images/opsmgmt-vrninw.svg "Diagrama do Network Insights")
 
-O dispositivo vRNI Platform fornece análise, interface com o usuário e gerenciamento de dados e conecta-se ao Dispositivo do Controlador que realiza a coleta de diversas origens de dados, como o NSX Edges, o vCenter e assim por diante. Todos os componentes do vRNI utilizam endereços IP móveis do {{site.data.keyword.cloud}} Private. O vRLI é configurado como o servidor syslog para o vRNI.
+O dispositivo vRNI Platform fornece a analítica, a interface com o usuário e o gerenciamento de dados e se conecta ao Dispositivo do controlador, que coleta de várias origens de dados, como NSX Edges e vCenter. Todos os componentes do vRNI usam endereços IP móveis do {{site.data.keyword.cloud}} Private. O vRLI é configurado como o servidor syslog para o vRNI.
 
 ![Componentes do Network Insights](../../images/opsmgmt-vrnicomponents.svg "Componentes do Network Insights")
 
 ## Requisitos do sistema
 {: #opsmgmt-vrni-requirements}
 
-Essa arquitetura suporta 3.000 VMs com o uso de um tamanho de tijolo Médio.
+Essa arquitetura suporta 3000 VMs usando um tamanho de tijolo Médio.
 
 Tabela 1. Requisitos do sistema para o Network Insight Platform
 
@@ -49,7 +49,7 @@ A implementação do dispositivo vRNI requer dois endereços IP da sub-rede móv
 * Dispositivos NSX-V/T
 * VXLAN de expansão de conjunto de ferramentas
 * Redes do cliente
-* Servidor NTP (time.services.softlayer.com)
+* Servidor NTP (`time.services.softlayer.com`)
 * Active Directory/DNS do {{site.data.keyword.vmwaresolutions_short}}
 
 ## Portas

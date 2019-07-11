@@ -52,7 +52,7 @@
    <path d="m237.41 266.2-4.29-7.85-3.7 8.14" fill="none" stroke="#edc102" stroke-miterlimit="10" stroke-width="3"/>
   </g>
   <g transform="rotate(-90,245,290)" font-family="Helvetica" font-size="12px" text-anchor="middle">
-   <text x="244.5" y="293.5">預設路由</text>
+   <text x="244.5" y="293.5">預設路徑</text>
   </g>
   <path d="m200 430v-60" fill="none" pointer-events="none" stroke="#06c" stroke-miterlimit="10" stroke-width="2"/>
   <rect x="70" y="430" width="260" height="36" rx="5.4" ry="5.4" fill="none" pointer-events="none" stroke="#06c" stroke-dasharray="3 3"/>
@@ -115,9 +115,9 @@
    </g>
    <g font-size="12px" text-anchor="middle">
     <g transform="rotate(-90,804,255)">
-     <text x="803.5" y="258.5">預設路由</text>
+     <text x="803.5" y="258.5">預設路徑</text>
     </g>
-    <text x="783.5" y="378.5">透過 VRA 往 VXLAN 的靜態路由</text>
+    <text x="783.5" y="378.5">透過 VRA 往 VXLAN 的靜態路徑</text>
     <text x="629.5" y="398.5">IBM Cloud Private 網路</text>
     <text x="639.5" y="253.5">IBM Cloud Public 網路</text>
    </g>

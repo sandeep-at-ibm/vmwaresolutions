@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-07"
 
 subcollection: vmware-solutions
 
@@ -22,7 +22,7 @@ Antes de iniciar esta tarefa, recupere todos os endereços IP do IPMI de hosts f
 
 Para cada host, sucessivamente:
 1. Use o vSphere Web Client para colocar o host vSphere ESXi no modo de manutenção, selecionando **Página inicial** > **Hosts e clusters**. Na área de janela do Navegador, selecione o host vSphere ESXi e clique com o botão direito no host e selecione **Modo de manutenção** > **Entrar no modo de manutenção**. Como o host faz parte de um cluster DRS automatizado, as máquinas virtuais são migradas para hosts diferentes quando o host entra no modo de manutenção.
-2. Use SSH para o host vSphere ESXi, usando os detalhes do Console do IC4VS.
+2. Use SSH no host do vSphere ESXi, usando os detalhes do console do IBM Cloud for VMware Solutions.
 3. Execute o comando vCLI a seguir para ativar os drivers nativos ixgben:
    `esxcli system module set --enabled=true --module=ixgben`
 4. Execute o comando vCLI a seguir para reiniciar o host vSphere ESXi:
@@ -38,7 +38,7 @@ Para cada host, sucessivamente:
 
 Se for necessário reverter e não for possível usar SSH para o host vSphere ESXi, será necessário efetuar login no console do KVM para o host que precisa da reversão por meio da janela de controle do {{site.data.keyword.cloud_notm}}.
 
-Use o ID e a senha listados na janela de controle do {{site.data.keyword.cloud_notm}} com o endereço IP IPMI para efetuar login na interface da web do IPMI. É necessário estar conectado ao data center no qual o host está localizado por meio da VPN. Para obter mais informações, veja [Introdução à VPN](/docs/infrastructure/iaas-vpn?topic=VPN-gettingstarted-with-virtual-private-networking#gettingstarted-with-virtual-private-networking).
+Use o ID e a senha listados na janela de controle do {{site.data.keyword.cloud_notm}} com o endereço IP IPMI para efetuar login na interface da web do IPMI. É necessário estar conectado ao data center no qual o host está localizado por meio da VPN. Para obter mais informações, veja [Introdução à VPN](/docs/infrastructure/iaas-vpn?topic=VPN-getting-started).
 
 1. Acesse a página Detalhes do dispositivo, gerenciamento remoto para o host vSphere ESXi e selecione **Ações** > **Console do KVM**. Outra janela é aberta para você inserir o Usuário e a Senha do IPMI.
 2. Selecione **Controle remoto** > **iKVM/HTML5** e clique em **iKVM/HTML5** para ativar novamente. Agora é possível você acessar o console do host vSphere ESXi.

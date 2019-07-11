@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-22"
 
 subcollection: vmware-solutions
 
@@ -18,7 +18,7 @@ subcollection: vmware-solutions
 ## Virtual Routing and Forwarding
 {: #vcsicp-arch-overview-infrastructure-vrf}
 
-É possível configurar as contas do {{site.data.keyword.cloud}} como uma conta de Virtual Routing and Forwarding (VRF), que permite o roteamento global automático entre blocos de IP de sub-rede. Todas as contas com conexões de Link direto devem ser convertidas ou criadas como uma conta do VRF.
+É possível configurar as contas do {{site.data.keyword.cloud}} como uma conta de Virtual Routing and Forwarding (VRF), que permite o roteamento global automático entre blocos de IP de sub-rede. Todas as contas com conexões do Direct Link devem ser convertidas para uma conta do VRF ou criadas como tal.
 
 ## Link Direto
 {: #vcsicp-arch-overview-infrastructure-direct-link}

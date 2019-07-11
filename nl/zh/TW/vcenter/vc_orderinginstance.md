@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-19"
+
+keywords: vCenter Server order instance, order vCenter Server, order vCenter Server instance
 
 subcollection: vmware-solutions
 
@@ -78,7 +80,7 @@ vSphere Enterprise Plus 6.7u1 僅適用於 Broadwell 及 Skylake {{site.data.key
 
 對於「事業夥伴」使用者，包括 vCenter Server 授權（Standard 版本）、vSphere 授權（Enterprise Plus 版本）及 NSX 授權，並可代表您購買。不過，您必須指定 NSX 授權的版本。
 
-對於非「事業夥伴」使用者，您可以選取**購買隨附**以將 IBM 提供的 VMware 授權用於這些元件，也可以選取**我將提供**並輸入自己的授權碼以「自帶授權 (BYOL)」。
+對於不是「IBM 事業夥伴」的使用者，您可以選取**購買隨附**以將 IBM 提供的 VMware 授權用於這些元件，也可以選取**我將提供**並輸入自己的授權碼以「自帶授權 (BYOL)」。
 
 ### 授權注意事項
 {: #vc_orderinginstance-licensing-notes}
@@ -92,7 +94,7 @@ vSphere Enterprise Plus 6.7u1 僅適用於 Broadwell 及 Skylake {{site.data.key
 ## Bare Metal Server 設定
 {: #vc_orderinginstance-bare-metal-settings}
 
-Bare Metal 設定是根據您選取的資料中心，以及 Bare Metal Server 配置。
+「裸機」設定是根據您選取的資料中心，以及「裸機伺服器」配置。
 
 ### 資料中心位置
 {: #vc_orderinginstance-dc-location}
@@ -142,8 +144,8 @@ Bare Metal 設定是根據您選取的資料中心，以及 Bare Metal Server �
 {: #vc_orderinginstance-bare-metal-number}
 
 * 您訂購的所有伺服器都有相同的配置。
-* 如果規劃使用 vSAN 儲存空間，您可以訂購 4 到 20 部伺服器。
-* 如果規劃使用 NFS 儲存空間，您可以訂購 2 到 20 部伺服器。不過，對於正式作業工作負載，建議至少 3 部伺服器。如需相關資訊，請參閱[雙節點 vCenter Server 實例是否為高可用性？](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)。
+* 如果計劃使用 vSAN 儲存空間，則可以訂購 4 到 20 個伺服器。
+* 如果計劃使用 NFS 儲存空間，則可以訂購 2 到 20 個伺服器。但是，對於正式作業工作負載，建議至少使用三個伺服器。如需相關資訊，請參閱[雙節點 vCenter Server 實例是否為高可用性？](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ## 儲存空間設定
 {: #vc_orderinginstance-storage-settings}
@@ -186,7 +188,7 @@ vSAN 僅適用於 **Skylake** 或 **Broadwell** Bare Metal 配置。請指定下
 |選項          |詳細資料      |
   |:------------- |:------------- |
   |0.25 IOPS/GB |這個選項是為未經常使用的工作負載而設計。應用的範例包括：加密配置檔資料、管理具有舊版資料的大型資料庫，或是作為備份之虛擬記憶體系統的虛擬磁碟映像檔。|
-  |2 IOPS/GB |這個選項是為大部分通用工作負載而設計。應用的範例包括：管理小型資料庫、備份 Web 應用程式，或是 Hypervisor 用的虛擬機器磁碟映像檔。|
+  |2 IOPS/GB |這個選項是為大部分一般工作負載而設計。應用的範例包括：管理小型資料庫、備份 Web 應用程式，或是 Hypervisor 用的虛擬機器磁碟映像檔。|
   |4 IOPS/GB |這個選項是為一次擁有高百分比作用中資料的高密度工作負載而設計。應用的範例包括：交易式資料庫。|
   |10 IOPS/GB |這個選項是為要求最嚴苛的工作負載類型而設計，例如分析。應用的範例包括：高交易量資料庫，以及其他對效能敏感的資料庫。此效能層次限制為每個檔案共用的容量上限為 4 TB。|
 
@@ -217,7 +219,7 @@ vSAN 僅適用於 **Skylake** 或 **Broadwell** Bare Metal 配置。請指定下
 *  只容許英數及橫線 (-) 字元。
 *  子網域標籤的開頭必須是英文字母，而且結尾必須是英數字元。
 *  子網域標籤的長度上限為 10 個字元。
-*  子網域標籤在您的帳戶內必須是唯一的。
+*  子網域標籤在您多站台配置的所有實例內必須是唯一的。
 
 ### 網域名稱
 {: #vc_orderinginstance-domain-name}
@@ -279,7 +281,7 @@ vSAN 僅適用於 **Skylake** 或 **Broadwell** Bare Metal 配置。請指定下
 * **適用於 Active Directory/DNS 的單一公用 Windows VSI**：適用於 Microsoft Active Directory (AD) 的單一 Microsoft Windows Server VSI 充當登錄主機及 VM 之實例的 DNS，已部署並可查閱。依預設，已對 1.9 版以及更新版本的實例部署這個選項。
 * **管理叢集上有兩部高可用性的專用 Windows Server VM**：部署兩部 Microsoft Windows VM，協助加強安全及穩健性。
 
-如果您將實例配置為使用兩部 Microsoft Windows VM，則必須提供兩份 Microsoft Windows Server 2016 授權。請使用 Microsoft Windows Server 2016 Standard 版本授權及（或）Microsoft Windows Server 2016 Datacenter 版本授權。
+如果您將實例配置為使用兩部 Microsoft Windows VM，則必須提供兩份 Microsoft Windows Server 2016 標準版授權。
 {:important}
 
 每一份授權都只能指派給一部單一實體伺服器，且最多涵蓋兩個實體處理器。以一份 Standard 版本授權而言，每部雙處理器伺服器都可以執行兩部虛擬化 Microsoft Windows VM。因此，必須有兩份授權，因為兩部 Microsoft Windows VM 部署在兩部不同的主機中。
@@ -296,7 +298,9 @@ vSAN 僅適用於 **Skylake** 或 **Broadwell** Bare Metal 配置。請指定下
 ## 訂單摘要
 {: #vc_orderinginstance-order-summary}
 
-根據您選取的實例及附加程式服務配置，預估成本會立即產生並顯示在右窗格的**訂單摘要**區段中。按一下右窗格底端的**定價詳細資料**，以產生提供預估詳細資料的 PDF 文件。
+根據您選取的實例及附加程式服務配置，預估成本會立即產生並顯示在**訂單摘要**右窗格中。按一下**定價詳細資料**，以產生具有 {{site.data.keyword.vmwaresolutions_short}} 資源文件摘要的 PDF 文件。
+
+您也可以按一下**新增至預估**，將佈建的資源新增至 {{site.data.keyword.cloud_notm}} 預估工具。這適用於您想要預估所選取 {{site.data.keyword.vmwaresolutions_short}} 資源與可能考慮購買之其他 {{site.data.keyword.cloud_notm}} 資源的成本時。
 
 ## 訂購 vCenter Server 實例的程序
 {: #vc_orderinginstance-procedure}
@@ -309,7 +313,7 @@ vSAN 僅適用於 **Skylake** 或 **Broadwell** Bare Metal 配置。請指定下
    * 按一下**主要實例**，以在環境中部署單一實例，或是部署多站台拓蹼中的第一個實例。
    * 按一下**次要實例**，以連接該實例與環境中的現有（主要）實例以獲得高可用性，然後完成下列步驟：
      1. 選取您要與次要實例連接的主要實例。
-     2. 對於主要實例 2.8 版或更新版本，輸入主要實例的 vCenter Server 管理者密碼。
+     2. 對於主要實例 2.8 版或更高版本，請輸入主要實例的 vCenter Server 管理者密碼。
      3. 對於主要實例 2.5、2.6 或 2.7 版，輸入主要實例的 PSC 管理者密碼。
      4. 對於主要實例 2.4 版或更早版本，驗證主要實例 PSC 管理者密碼的預先填入值正確無誤。
 6. 完成實例元件的授權設定。
@@ -345,13 +349,10 @@ vSAN 僅適用於 **Skylake** 或 **Broadwell** Bare Metal 配置。請指定下
 ## 訂購 vCenter Server 實例之後的結果
 {: #vc_orderinginstance-results}
 
-實例的部署會自動啟動。您會收到正在處理訂單的確認，並且可以檢視實例詳細資料來檢查部署的狀態。
-
-順利部署實例之後，會在 VMware 虛擬平台上安裝 [vCenter Server 實例的技術規格](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs)中所說明的元件。依預設，您所訂購的 ESXi 伺服器會分組為 **cluster1**。如果您已訂購附加程式服務，則會在完成訂單之後開始部署服務。
-
-實例已備妥可供使用時，實例的狀態會變更為**備妥使用**，而且您會透過電子郵件收到通知。
-
-當您訂購次要實例時，可能會在您完成次要實例訂單之後重新啟動主要實例（鏈結至次要實例）的 VMware vSphere Web Client。
+* 實例的部署會自動啟動，且您會收到確認，指出正在處理該訂單。您可以檢查部署狀態，包括可能需要注意的任何問題，方法是檢視實例詳細資料的**部署歷程**區段。
+* 順利部署實例之後，會在 VMware 虛擬平台上安裝 [vCenter Server 實例的技術規格](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs)中所說明的元件。依預設，您所訂購的 ESXi 伺服器會分組為 **cluster1**。如果您已訂購附加程式服務，則會在完成訂單之後開始部署服務。
+* 實例已備妥可供使用時，實例的狀態會變更為**備妥使用**，而且您會透過電子郵件收到通知。
+* 當您訂購次要實例時，可能會在您完成次要實例訂單之後重新啟動主要實例（鏈結至次要實例）的 VMware vSphere Web Client。
 
 ## 下一步
 {: #vc_orderinginstance-next}
@@ -372,7 +373,7 @@ vSAN 僅適用於 **Skylake** 或 **Broadwell** Bare Metal 配置。請指定下
 ## 相關鏈結
 {: #vc_orderinginstance-related}
 
-* [註冊 {{site.data.keyword.cloud_notm}} 帳戶](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)
+* [註冊 {{site.data.keyword.cloud_notm}} 帳戶](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts)
 * [檢視 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
 * [vCenter Server 實例的多站台配置](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_multisite)
 * [新增、檢視及刪除 vCenter Server 實例的叢集](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)

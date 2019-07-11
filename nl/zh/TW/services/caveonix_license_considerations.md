@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-10"
+lastupdated: "2019-06-13"
+
+keywords: Caveonix license, Caveonix license issue, delete Caveonix license
 
 subcollection: vmware-solutions
 
@@ -23,9 +25,9 @@ subcollection: vmware-solutions
 ## 有關授權日期顯示的已知問題
 {: #caveonix_license_considerations-date}
 
-如果您使用的是 Mozilla Firefox 瀏覽器，那麼可能會在 Caveonix RiskForesight 主控台上顯示沒有值的授權開始和結束日期。若要解決此問題，請在其他瀏覽器（例如，Google Chrome）中檢視授權資訊。
+如果您使用的是 Mozilla Firefox 瀏覽器，可能會在 Caveonix RiskForesight 主控台上顯示沒有值的授權開始和結束日期。若要解決此問題，請在其他瀏覽器（例如，Google Chrome）中檢視授權資訊。
 
-如果您只能使用 Firefox 瀏覽器，請與 [Caveonix Support](https://www.caveonix.com/support/){:new_window} 聯絡以取得協助。
+如果您遇到此問題，而您只能使用 Firefox 瀏覽器，請與 [Caveonix Support](https://www.caveonix.com/support/){:new_window} 聯絡以取得協助。
 {:note}
 
 ## 刪除授權時的考量

@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="vmware-solutions" audience="infrastructure" arm="3662801" href="/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started" path="services/vmwaresolutions"}
+{: .toc subcollection="vmware-solutions" category="compute" audience="infrastructure" arm="3662801" href="/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started" path="services/vmwaresolutions"}
 IBM Cloud for VMware Solutions
 
     {: .navgroup id="learn"}
@@ -11,6 +11,7 @@ IBM Cloud for VMware Solutions
 
     {: .topicgroup}
     版本注意事項
+        vmonic/relnotes_v31.md
         vmonic/relnotes_v30.md
         vmonic/relnotes_v29.md
         vmonic/relnotes_v28.md
@@ -37,9 +38,9 @@ IBM Cloud for VMware Solutions
 
     {: .navgroup id="howto"}
     {: .topicgroup}
-    首要步驟
-        vmonic/slaccountrequirement.md
-        vmonic/signing_softlayer_account.md
+    初始步驟
+        vmonic/cloud-infra-acct-req.md
+        vmonic/signing_required_accounts.md
         vmonic/loginmethod.md
         vmonic/useraccount.md
         vmonic/iam.md
@@ -100,6 +101,11 @@ IBM Cloud for VMware Solutions
     單一節點試用版移轉及應用程式現代化
         vcenter/cloud_modern_bundle_overview.md
         vcenter/cloud_modern_bundle_orderinginstance.md
+
+    {: .topicgroup}
+    Data Protection and Disaster Recovery 單一節點試用版
+        vcenter/dr_backup_bundle_overview.md
+        vcenter/dr_backup_bundle_orderinginstance.md
 
     {: .topicgroup}
     VMware vSphere on IBM Cloud
@@ -183,6 +189,10 @@ IBM Cloud for VMware Solutions
         services/kmip_standalone_viewing.md
         services/kmip_standalone_addingdeletingcert.md
         services/kmip_standalone_deleting.md
+
+    {: .topicgroup}
+    IBM Cloud Expert Services
+        services/managing_ices.md
 
     {: .topicgroup}
     Mission Critical VMware on IBM Cloud
@@ -418,16 +428,16 @@ IBM Cloud for VMware Solutions
         archiref/hcx-archi/hcx-archi-trbl.md
 
     {: .topicgroup}
-    HCX on IBM Cloud 部署與作業手冊
-        archiref/vcshcx/vcshcx-intro.md
-        archiref/vcshcx/vcshcx-planning.md
-        archiref/vcshcx/vcshcx-licensing.md
-        archiref/vcshcx/vcshcx-deployment.md
-        archiref/vcshcx/vcshcx-stretching.md
-        archiref/vcshcx/vcshcx-monitoring.md
-        archiref/vcshcx/vcshcx-upgrade.md
-        archiref/vcshcx/vcshcx-troubleshooting.md
-        archiref/vcshcx/vcshcx-removal.md
-        archiref/vcshcx/vcshcx-components.md
+    VMware HCX on IBM Cloud for VMware Solutions
+        archiref/hcxclient/hcxclient-vcs-intro.md
+        archiref/hcxclient/hcxclient-planning.md
+        archiref/hcxclient/hcxclient-vcs-client-deployment.md
+        archiref/hcxclient/hcxclient-vcs-mesh-deployment.md
+        archiref/hcxclient/hcxclient-migrations.md
+        archiref/hcxclient/hcxclient-monitoring.md
+        archiref/hcxclient/hcxclient-vcs-upgrade.md
+        archiref/hcxclient/hcxclient-troubleshooting.md
+        archiref/hcxclient/hcxclient-removal.md
+        archiref/hcxclient/hcxclient-components.md
 
     {: .navgroup-end}

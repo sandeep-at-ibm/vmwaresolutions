@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-17"
+lastupdated: "2019-06-03"
 
 ---
 
@@ -21,7 +21,7 @@ Em um alto nível, as informações a seguir são coletadas:
 ## Fluxos de gerenciamento de operação
 {: #opsmgmt-arch-flows}
 
-O diagrama a seguir mostra a interação de chave e a integração do conjunto de ferramentas de gerenciamento de operações.
+O diagrama a seguir mostra a interação de chave e a integração das ferramentas de gerenciamento de operações.
 
 ![Fluxograma de gerenciamento](../../images/opsmgmt-mgmtflows.svg "Fluxograma de gerenciamento")
 
@@ -30,17 +30,17 @@ O gerenciamento de operações do {{site.data.keyword.vmwaresolutions_short}} co
 
   Quando há um problema no ambiente, o vROps gera alertas de três tipos de impacto:
     * Alertas de funcionamento - indicam problemas que afetam o funcionamento do ambiente e requerem atenção imediata.
-    * Alertas de risco - indicam problemas que não são ameaças imediatas, mas que devem ser tratados no futuro próximo.
+    * Alertas de risco - indicam problemas que não são ameaças imediatas, mas que precisam ser tratados logo.
     * Alertas de eficiência - informações para melhorar o desempenho ou recuperar recursos.
 
   Os Alertas do vROps são eventos que ocorrem nos objetos monitorados quando a análise de dados indica desvios de valores de métrica normais ou quando um problema ocorre com um dos componentes monitorados. Os alertas do vROps têm a designação de uma dessas categorias:
-    * Crítico - uma ação deve ocorrer imediatamente.
-    * Imediato - uma ação deve ocorrer o mais breve possível.
-    * Aviso - deve ser verificado quando houver tempo.
+    * Crítico - deve ser acionado imediatamente.
+    * Imediato - deve ser acionado o mais rápido possível.
+    * Aviso - deve ser verificado quando o tempo permitir.
 
-* Criação de log - O vRealize Log Insight (vRLI) fornece gerenciamento de log em tempo real e análise de log com agrupamento inteligente e baseado em machine learning, procura de alto desempenho e resolução de problemas entre os objetos físicos e virtuais na arquitetura do {{site.data.keyword.vmwaresolutions_short}}. O vRLI coleta dados de hosts do vSphere usando o protocolo syslog e, para outros produtos do VMware, como o vCenter Server, coleta eventos, tarefas e dados de alarme. Ele se integra ao vRops para enviar eventos de notificação e permitir a ativação no contexto. Outros objetos na arquitetura do {{site.data.keyword.vmwaresolutions_short}} capazes de enviar dados do syslog são apontados para o vRLI. Opcionalmente, o cliente pode configurar qualquer sistema que seja capaz de enviar dados do syslog para encaminhar essa data para o vRLI.
+* Criação de log - O vRealize Log Insight (vRLI) fornece gerenciamento de log em tempo real e análise de log com agrupamento inteligente e baseado em machine learning, procura de alto desempenho e resolução de problemas entre os objetos físicos e virtuais na arquitetura do {{site.data.keyword.vmwaresolutions_short}}. O vRLI coleta dados de hosts do vSphere usando o protocolo `syslog`. Ele também coleta dados de eventos, de tarefas e de alarme para outros produtos VMware, como o vCenter Server. Ele integra-se ao vRops para enviar eventos de notificação e permitir a ativação no contexto. Outros objetos na arquitetura do {{site.data.keyword.vmwaresolutions_short}} que podem enviar dados do `syslog` são apontados para o vRLI. Opcionalmente, o cliente pode configurar qualquer sistema que seja capaz de enviar dados de syslog para encaminhar esses dados para o vRLI.
 
-* Funcionamento de rede - O vRealize Network Insight é uma ferramenta de análise focada em permitir proativamente:
+* Funcionamento de rede - O vRealize Network Insight é uma ferramenta de análise focada em ativar proativamente:
   * O monitoramento do desempenho e do funcionamento da rede.
   * Uma resolução de problemas de ponta a ponta.
   * 360° de visibilidade e análise.
@@ -51,17 +51,17 @@ O gerenciamento de operações do {{site.data.keyword.vmwaresolutions_short}} co
 ## Rede de gerenciamento de operações
 {: #opsmgmt-arch-network}
 
-O diagrama de visão geral de rede é mostrado a seguir:
+O diagrama a seguir mostra a visão geral da rede.
 
 ![Diagrama de rede](../../images/opsmgmt-network.svg "Diagrama de rede")
 
-* Uma sub-rede móvel privada de conjunto de ferramentas é provisionada para fornecer o espaço de endereço IP do {{site.data.keyword.cloud_notm}} usado para o provisionamento inicial das VMs do conjunto de ferramentas, no entanto, torna-se responsabilidade do cliente gerenciar posteriormente o espaço de endereço IP para a ampliação do conjunto de ferramentas. As VMs nessa sub-rede requerem acesso aos componentes hospedados nas sub-redes de Gerenciamento e de Gerenciamento Interno.
+* Uma sub-rede móvel privada de conjunto de ferramentas é provisionada para fornecer o espaço de endereço IP do {{site.data.keyword.cloud_notm}} usado para o fornecimento inicial das VMs de conjunto de ferramentas. Após o fornecimento, torna-se responsabilidade do cliente gerenciar o espaço de endereço IP para ampliação do conjunto de ferramentas. As VMs nessa sub-rede requerem acesso aos componentes hospedados nas sub-redes de Gerenciamento e de Gerenciamento Interno.
 * A sub-rede VXLAN do conjunto de ferramentas é usada para fornecer o espaço de endereço IP do BYOIP usado para o provisionamento inicial das VMs do conjunto de ferramentas, no entanto, torna-se responsabilidade do cliente gerenciar posteriormente o espaço de endereço IP para a ampliação do conjunto de ferramentas. As VMs nessa sub-rede requerem acesso aos componentes hospedados nas sub-redes de Sobreposição. O ESG fornece NAT entre os espaços de endereço do {{site.data.keyword.cloud_notm}} e do BYOIP.
 * Os Coletores Remotos do vROps podem ser implementados pelo cliente caso ele queira utilizar o vROps para monitorar suas VMs de cálculo.
 * Os Encaminhadores do vRLI retransmitem mensagens de log dos componentes de sobreposição para o cluster vRLI. O cliente também pode configurar suas VMs de cálculo para usar esses encaminhadores, se necessário.
 * O VMware Update Manager (VUM) fornece a atualização de hosts do vSphere e de hardware e ferramentas da VM. O VUM usa o Proxy para obter acesso aos repositórios da Internet.
 
-O vROps coleta dados de objetos no ambiente. Cada parte dos dados coletados é chamada de valor ou observação de métrica. O vROps usa o adaptador do vCenter para coletar métricas brutas do vCenter. Além das métricas coletadas, o vROps calcula métricas, métricas de capacidade e métricas de badge para monitorar o funcionamento de seu sistema.  As definições de alerta são uma combinação de sintomas e recomendações que identificam áreas de problemas e geram alertas com base nos quais você atua para essas áreas.
+O vROps coleta dados de objetos no ambiente. Cada parte de dados coletada é chamada de observação ou valor de métrica. O vROps usa o adaptador do vCenter para coletar métricas brutas do vCenter. Além das métricas coletadas, o vROps calcula métricas, métricas de capacidade e métricas de badge para monitorar o funcionamento de seu sistema. As definições de alerta são uma combinação de sintomas e recomendações que identificam áreas de problemas e geram alertas com base nos quais você atua para essas áreas.
 
 ## Componentes monitorados
 {: #opsmgmt-arch-components}
@@ -81,9 +81,9 @@ O monitoramento dos hosts do vSphere é realizado com o vROps, por meio do vCent
 ### Monitoramento do vSAN
 {: #opsmgmt-arch-components-vsan}
 
-Para monitorar o vSAN, vROps e vRLI são usados. No vCenter, há um conjunto adicional de Verificações de Funcionamento do vSAN que podem ser usadas. A instalação do Management Pack for vSAN fornece painéis adicionais para auxiliar no monitoramento do vSAN.
+Para monitorar o vSAN, vROps e vRLI são usados. No vCenter, há um conjunto extra de Verificações de funcionamento do vSAN que podem ser usadas. A instalação do Management Pack for vSAN fornece mais painéis para auxiliar com o monitoramento do vSAN.
 
-O vROps gera um alerta caso um problema ocorra nos componentes do produto SDDC, na rede da área de armazenamento que o adaptador do VMware vSAN está monitorando. Um alerta relacionado à conformidade de configuração e ao funcionamento é transmitido por meio do pacote de gerenciamento do VMware SDDC Health Solution, do VMware vSAN Management Pack. O vSAN é monitorado com o vROps vSAN Management Pack, por meio do dispositivo do vCentre que usa um adaptador do vSAN. O intervalo de coleta padrão é de cinco minutos e o adaptador do vSAN também coleta as métricas do Health Check Service e do Performance Service por meio de objetos do vSphere. O intervalo do Health Check Service é configurado na interface do vSphere e é de 60 minutos por padrão.
+O vROps gera um alerta caso um problema ocorra nos componentes do produto SDDC, na rede da área de armazenamento que o adaptador do VMware vSAN está monitorando. Um alerta relacionado à conformidade e funcionamento da configuração é passado por meio do pacote de gerenciamento do VMware SDDC Health Solution do VMware vSAN Management Pack. O vSAN é monitorado com o vROps vSAN Management Pack por meio do dispositivo vCenter usando um adaptador vSAN. O intervalo de coleta padrão é de cinco minutos e o adaptador do vSAN também coleta as métricas do Health Check Service e do Performance Service por meio de objetos do vSphere. O intervalo do Health Check Service é configurado na interface do vSphere e é de 60 minutos por padrão.
 
 Para certificar-se de que o adaptador do vSAN possa coletar todos os dados de desempenho, o serviço de desempenho do vSAN deverá ser ativado no vSphere.
 
@@ -95,9 +95,9 @@ Para monitorar o NSX, as ferramentas a seguir são implementadas:
 * vRealize Log Insight (vRLI)
 * vRealize Network Insight (vRNI)
 
-Isso permite que os administradores do sistema monitorem, gerenciem e solucionem problemas do VMware NSX. O vROps Management Pack for VMware NSX fornece visibilidade sobre a topologia de rede. Os painéis do NSX fornecem uma visão geral rápida do ambiente do NSX e do funcionamento de seus componentes. A correlação entre objetos do NSX e do vSphere permite uma resolução fácil de problemas.
+Isso permite que os administradores de sistema monitorem, gerenciem e solucionem problemas do VMware NSX. O vROps Management Pack for VMware NSX fornece visibilidade sobre a topologia de rede. Os painéis do NSX fornecem uma visão geral rápida do ambiente do NSX e do funcionamento de seus componentes. A correlação entre objetos do NSX e do vSphere permite uma resolução fácil de problemas.
 
-O vROps usa o pacote de gerenciamento para pesquisar no VMware NSX os dados de configuração, desempenho e suporte. Em nome do vROps, o Pacote de Gerenciamento converte as solicitações de pesquisa em chamadas de API de REST para recuperar os dados necessários do Gerenciador do NSX.
+O vROps usa o pacote de gerenciamento para pesquisar no VMware NSX os dados de configuração, desempenho e suporte. Em nome do vROps, o Management Pack converte as solicitações de pesquisa em chamadas da API de REST para recuperar os dados necessários do NSX Manager.
 
 Os componentes do NSX precisam ser configurados para enviar syslog para o vRLI.
 
@@ -116,7 +116,7 @@ Para monitorar o NSX-T, as ferramentas a seguir são implementadas:
 * vRealize Operations Manager (vROps)
 * vRealize Log Insight (vRLI)
 
-O VMware SDDC Health Management Pack monitora os seguintes:
+O VMware SDDC Health Management Pack monitora os componentes a seguir:
 * Comutadores lógicos - Monitora o estado administrativo dos comutadores lógicos.
 * Cluster do controlador - Monitora a contagem de nós do cluster implementado para a alta disponibilidade e mantém o quorum.
 * Nós do controlador - Monitora a conectividade do nó com o cluster do controlador e o nó do gerenciador.

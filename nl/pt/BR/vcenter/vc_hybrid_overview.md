@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-02"
+lastupdated: "2019-05-27"
+
+keywords: vCenter Server Hybridity, hybridity, tech specs vCenter Server Hybridity
 
 subcollection: vmware-solutions
 
@@ -59,7 +61,7 @@ A oferta de base é implementada com um dispositivo vCenter Server que é dimens
 
 No total, a oferta de base requer 38 vCPU e 67 GB de vRAM que são reservados para a camada de gerenciamento de virtualização. A capacidade restante do host para suas MVs depende de vários fatores, como a taxa de alocação excessiva, o dimensionamento da MV e os requisitos de desempenho de carga de trabalho.
 
-Para obter os requisitos adicionais de recurso de gerenciamento ao implementar o HCX no serviço {{site.data.keyword.cloud_notm}}, consulte [Visão geral do VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations).
+Para obter requisitos de recurso de gerenciamento adicionais ao implementar o serviço HCX on {{site.data.keyword.cloud_notm}}, consulte [Visão geral do VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations).
 
 ### Hibridismo de infraestrutura
 {: #vc_hybrid_overview-infras-hybrid}
@@ -97,7 +99,7 @@ Os componentes de rede a seguir são pedidos:
     {:important}
   * Um VMware NSX Edge Services Gateway seguro e gerenciado pelo cliente para tráfego de carga de trabalho de entrada e saída HTTPS, que é implementado pela IBM como um modelo que pode ser modificado por você para fornecer acesso VPN ou acesso público. Para obter mais informações, veja [O NSX Edge gerenciado pelo cliente representa um risco de segurança?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#faq-customer-nsx)
 
-Para obter mais informações sobre os componentes de rede solicitados ao implementar o serviço HCX on {{site.data.keyword.cloud_notm}}, consulte [Visão geral do HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations).
+Para obter mais informações sobre componentes de rede pedidos ao implementar o serviço HCX on {{site.data.keyword.cloud_notm}}, consulte [Visão geral do HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations).
 
 ### Virtual Server Instances
 {: #vc_hybrid_overview-vsi}

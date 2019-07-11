@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-06-11"
+
+keywords: IAM user, user role, user permission
 
 subcollection: vmware-solutions
 
@@ -40,10 +42,10 @@ subcollection: vmware-solutions
 
 | 平台管理角色 |動作| 範例動作 |
 |:----------------- |:----------------- |:----------------- |
-| 檢視者 | 唯讀動作 | <ul><li>檢視實例的摘要</li><li>檢視實例的詳細資料</li></ul>|
-| 編輯者 | 更新特定實例 |<ul><li>新增或移除 ESXi 伺服器</li><li>新增或移除叢集</li><li>新增或移除服務</li><li>將實例升級至更高版本</li></ul> |
-| 操作員 | 唯讀動作 | <ul><li>列出實例</li><li>檢視實例的詳細資料</li></ul> |
-| 管理者 | 完整管理存取權 |<ul><li>建立新實例</li><li>刪除實例</li><li>將平台存取權授與其他使用者</li></ul>|
+| 檢視者 | 唯讀動作 |檢視實例的摘要<br>檢視實例的詳細資料|
+| 編輯者 | 更新特定實例 |新增或移除 ESXi 伺服器<br>新增或移除叢集<br>新增或移除服務<br>將實例升級至更高版本|
+| 操作員 | 唯讀動作 |列出實例<br>檢視實例的詳細資料|
+| 管理者 | 完整管理存取權 |建立新實例<br>刪除實例<br>將平台存取權授與其他使用者|
 
 對於 {{site.data.keyword.vmwaresolutions_short}}，存在下列動作：
 
@@ -53,8 +55,8 @@ subcollection: vmware-solutions
 |:------ |:-------------------- |:---- |
 | vmware-solutions.instances.create | 建立新實例 | 管理者 |
 | vmware-solutions.instances.delete | 刪除實例 | 管理者 |
-| vmware-solutions.instances.view | <ul><li>列出實例</li><li>檢視實例的詳細資料</li></ul> | 檢視者、操作員、編輯者及管理者 |
-| vmware-solutions.instances.update | <ul><li>新增或移除 ESXi 伺服器</li><li>新增或移除叢集</li><li>新增或移除服務</li><li>將實例升級至更高版本</li></ul> | 編輯者及管理者 |
+| vmware-solutions.instances.view |列出實例<br>檢視實例的詳細資料| 檢視者、操作員、編輯者及管理者 |
+| vmware-solutions.instances.update |新增或移除 ESXi 伺服器<br>新增或移除叢集<br>新增或移除服務<br>將實例升級至更高版本| 編輯者及管理者 |
 | vmware-solutions.account.update | 更新帳戶設定 | 管理者 |
 
 ## 管理使用者的存取權

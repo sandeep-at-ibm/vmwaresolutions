@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-05-27"
+
+keywords: vSphere upgrade, NSX upgrade, PSC upgrade
 
 subcollection: vmware-solutions
 
@@ -37,7 +39,7 @@ vCenter Server 设计为支持“滚动”升级。即，如果完成以下过�
   * [VMware vCenter Server 6.7 Update 1b Release Notes](https://docs.vmware.com/en/VMware-vSphere/6.7/rn/vsphere-vcenter-server-67u1b-release-notes.html){:new_window}
   * [About VMware ESXi Upgrade](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.esxi.upgrade.doc/GUID-65B5B313-3DBB-4490-82D2-A225446F4C99.html){:new_window}
 * 在 vCenter Server 实例中设置 vSphere Update Manager (VUM)，以从 VMware vSphere 下载最新更新。有关更多信息，请参阅 [VMware Update Manager 简介](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vum-intro#vum-intro)。
-*	向 {{site.data.keyword.vmwaresolutions_short}} 团队开具支持凭单，以通知他们将执行升级。该凭单会保持待处理状态，直到实例在 {{site.data.keyword.vmwaresolutions_short}} 控制台中以升级后的级别注册。
+* 向 {{site.data.keyword.vmwaresolutions_short}} 团队开具支持凭单，以通知他们将执行升级。该凭单会保持待处理状态，直到实例在 {{site.data.keyword.vmwaresolutions_short}} 控制台中以升级后的级别注册。
 * 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，确认要升级的 vCenter Server 实例是作为主实例还是辅助实例链接到其他 vCenter Server 实例。在特定站点升级过程中，所有链接的实例都必须首先升级其 Platform Services Controller (PSC)。
 * 对于基于 vSAN 的实例，确认以下内容：
   * 确保 vSAN 运行状况工具已启用，并且未报告任何严重错误。如果存在严重错误，请联系 IBM 支持团队并提供升级支持凭单标识。
@@ -77,9 +79,9 @@ vCenter Server 设计为支持“滚动”升级。即，如果完成以下过�
 
 使用 Windows VSI 跳板机并登录到您的 https://my.vmware.com 帐户，以下载下列二进制文件：
 
-*	VMware vSphere 6.7u1 系统管理程序 (ESXi ISO) 映像（包括 VMware Tools）
+* VMware vSphere 6.7u1 系统管理程序 (ESXi ISO) 映像（包括 VMware Tools）
 * vCenter 6.7u1b 设备 ISO。不是更新捆绑软件。
-*	NSX for vSphere 6.4.4 升级捆绑软件
+* NSX for vSphere 6.4.4 升级捆绑软件
 
 对于 Intel Optane 驱动器，下载以下文件以在利用 VMware Update Manager 的升级后修补过程中使用。
 
@@ -91,9 +93,9 @@ vCenter Server 设计为支持“滚动”升级。即，如果完成以下过�
 
 * 有关备份 vCenter Server 和 PSC 的信息，请参阅 [vCenter Server 6.x 中备份和复原选项概述 (2149237)](https://kb.vmware.com/s/article/2149237?lang=en_US){:new_window}。
 * 有关备份 vCenter Server 和 PSC 的其他注意事项和信息，请参阅 [vCenter 基于文件的备份](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_backingup#solution_backingup-vcenter)。
-*	有关备份 NSX 的信息，请参阅 [Backing Up NSX Manager Data](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window}。
+* 有关备份 NSX 的信息，请参阅 [Backing Up NSX Manager Data](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window}。
 
-建议使用基于文件的备份。VMware VSphere 6.7 不支持基于映像的备份（使用 vSphere Data Protection)。
+建议使用基于文件的备份。VMware VSphere 6.7 中不支持基于映像的备份（使用 vSphere Data Protection）。
 {:note}
 
 ## 将 IBM vCenter Server vSphere 软件从 6.5 升级到 6.7 的过程
@@ -125,7 +127,7 @@ vCenter Server 设计为支持“滚动”升级。即，如果完成以下过�
 
 1. 请阅读 NSX 6.4.4 的发行说明，以确保与特定环境配置的兼容性。有关更多信息，请参阅 [VMware NSX Data Center for vSphere 6.4.4 Release Notes](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/rn/releasenotes_nsx_vsphere_644.html){:new_window}。
 2. 首先升级 NSX Manager。如果有多个 NSX 环境使用交叉 vCenter 链接方式，请在 NSX 用户界面的**升级协调程序**中升级组件之前，先升级所有 NSX Manager。
-3.	使用 vCenter 用户界面的 NSX 用户界面中的**升级协调程序**来升级 NSX 组件。
+3. 使用 vCenter 用户界面的 NSX 用户界面中的**升级协调程序**来升级 NSX 组件。
 4. 在解决了可能的问题之后，继续在 vCenter 用户界面中复查并监视 NSX 升级用户界面，以确保升级继续执行，直到所有组件均已升级为止。
 
 ### 升级 Platform Services Controller
@@ -137,13 +139,13 @@ vCenter Server 设计为支持“滚动”升级。即，如果完成以下过�
 {: #vc_vsphere_upgrade-procedure-psc-before}
 
 * 使 vCenter 和 PSC root 用户密码可用于以下过程。使用 {{site.data.keyword.vmwaresolutions_short}} 控制台来确定 vCenter Server 实例版本是否已从 V2.4 或更低版本升级到 V2.7 或更高版本。
-* 在 {{site.data.keyword.vmwaresolutions_short}} 控制台上，将针对 PSC 和 vCenter 显示同一个 root 用户密码。但是，这只是 vCenter 密码。您必须联系支持人员来获取 PSC 的 root 用户密码。
-* 为了避免冲突，请使用 vCenter 和 PSC 当前正在使用的同一子网高段中的 IP。对于新的设备部署，必须使用临时 IP。
+* 在 {{site.data.keyword.vmwaresolutions_short}} 控制台上，将针对 PSC 和 vCenter 显示同一个 root 用户密码。但是，这只是 vCenter 密码。您必须[联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)以获取 root 用户的 PSC 密码。
+* 为了避免冲突，请使用 vCenter 和 PSC 当前正在使用的同一子网高段中的 IP 地址。对于新的设备部署，必须使用临时 IP 地址。
 
 #### 升级 Platform Services Controller 的过程
 {: #vc_vsphere_upgrade-procedure-psc-procedure}
 
-1. 登录到 PSC ``https://<psc-fqdn>:5480`` 和 vCenter 设备管理用户界面，以确认 root 用户密码是否已到期。如果密码到期日期为 **1970**，说明密码已到期，因此您必须在 PSC 设备管理用户界面中启用 SSH 和 bash shell。
+1. 登录到 PSC `https://<psc-fqdn>:5480` 和 vCenter 设备管理用户界面，以确认 root 用户密码是否已到期。如果密码到期日期为 **1970**，说明密码已到期，因此您必须在 PSC 设备管理用户界面中启用 SSH 和 bash shell。
     1. 使用 root 用户标识和密码通过 SSH 登录到 PSC。尽管密码已到期，也仍然允许您登录。
     2. 使用 shell **passwd** 命令为 PSC 和 vCenter 设置新的 root 用户密码。
     3. 保存 {{site.data.keyword.vmwaresolutions_short}} 控制台上显示的密码或由 IBM 支持人员提供给您的密码。稍后升级设备时，将复用这些密码。
@@ -164,7 +166,7 @@ vCenter Server 设计为支持“滚动”升级。即，如果完成以下过�
 {: #vc_vsphere_upgrade-procedure-vcenter-before}
 
 * 使 vCenter 和 PSC root 用户密码可用于以下过程。使用 {{site.data.keyword.vmwaresolutions_short}} 控制台来确定 vCenter Server 实例版本是否已从 V2.4 或更低版本升级到 V2.7 或更高版本。
-* 为了避免冲突，请使用 vCenter 和 PSC 当前正在使用的同一子网高段中的 IP。对于新的设备部署，必须使用临时 IP。
+* 为了避免冲突，请使用 vCenter 和 PSC 当前正在使用的同一子网高段中的 IP 地址。对于新的设备部署，必须使用临时 IP 地址。
 
 #### 升级 vCenter 的过程
 {: #vc_vsphere_upgrade-procedure-vcenter-procedure}

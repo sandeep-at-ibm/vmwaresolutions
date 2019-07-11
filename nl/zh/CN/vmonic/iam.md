@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-06-11"
+
+keywords: IAM user, user role, user permission
 
 subcollection: vmware-solutions
 
@@ -40,10 +42,10 @@ subcollection: vmware-solutions
 
 |平台管理角色|操作|示例操作|
 |:----------------- |:----------------- |:----------------- |
-|查看者|只读操作| <ul><li>查看实例摘要</li><li>查看实例的详细信息</li></ul>|
-|编辑者|更新特定实例|<ul><li>添加或除去 ESXi 服务器</li><li>添加或除去集群</li><li>添加或除去服务</li><li>将实例升级到更高版本</li></ul> |
-|操作员|只读操作| <ul><li>列出实例</li><li>查看实例的详细信息</li></ul> |
-|管理员|完全管理访问权|<ul><li>创建新实例</li><li>删除实例</li><li>向其他用户授予平台访问权</li></ul>|
+|查看者|只读操作|查看实例摘要<br>查看实例的详细信息|
+|编辑者|更新特定实例|添加或除去 ESXi 服务器<br>添加或除去集群<br>添加或除去服务<br>将实例升级到更高版本|
+|操作员|只读操作|列出实例<br>查看实例的详细信息|
+|管理员|完全管理访问权|创建新实例<br>删除实例<br>向其他用户授予平台访问权|
 
 对于 {{site.data.keyword.vmwaresolutions_short}}，存在以下操作：
 
@@ -53,8 +55,8 @@ subcollection: vmware-solutions
 |:------ |:-------------------- |:---- |
 |vmware-solutions.instances.create|创建新实例|管理员|
 |vmware-solutions.instances.delete|删除实例|管理员|
-|vmware-solutions.instances.view| <ul><li>列出实例</li><li>查看实例的详细信息</li></ul> |查看者、操作员、编辑者和管理员|
-|vmware-solutions.instances.update| <ul><li>添加或除去 ESXi 服务器</li><li>添加或除去集群</li><li>添加或除去服务</li><li>将实例升级到更高版本</li></ul> |编辑者和管理员|
+|vmware-solutions.instances.view|列出实例<br>查看实例的详细信息|查看者、操作员、编辑者和管理员|
+|vmware-solutions.instances.update|添加或除去 ESXi 服务器<br>添加或除去集群<br>添加或除去服务<br>将实例升级到更高版本|编辑者和管理员|
 |vmware-solutions.account.update|更新帐户设置|管理员|
 
 ## 管理用户的访问权

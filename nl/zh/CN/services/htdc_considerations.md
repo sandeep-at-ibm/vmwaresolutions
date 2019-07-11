@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-06-13"
+
+keywords: HyTrust DataControl, HTDC, tech specs HTDC
 
 subcollection: vmware-solutions
 
@@ -20,7 +22,7 @@ subcollection: vmware-solutions
 
 HyTrust DataControl on {{site.data.keyword.cloud}} 服务通过集成密钥管理提供高强度加密功能，以确保工作负载在整个生命周期中的安全。此服务可以提供操作系统级别和数据级别的加密。这意味着可以对工作负载中的任何目录、文件夹或文件进行加密和解密。
 
-此服务仅可用于运行 vSphere 6.5 以及部署在或已升级到 V2.3 或更高版本的实例。当前安装的 HyTrust DataControl 版本为 4.3。
+此服务仅可用于运行 vSphere 6.5 以及部署在或已升级到 V2.3 或更高版本的实例。当前安装的 HyTrust DataControl 版本为 4.3.2。
 {:note}
 
 ## HyTrust DataControl on IBM Cloud 的技术规范

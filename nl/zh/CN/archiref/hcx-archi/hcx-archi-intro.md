@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-06"
+lastupdated: "2019-06-17"
 
 subcollection: vmware-solutions
 
@@ -15,9 +15,9 @@ subcollection: vmware-solutions
 
 通过 VMware HCX on IBM Cloud 服务，可以在 IBM Cloud for VMware Solutions 实例与内部部署 VMware 虚拟化数据中心之间创建无缝连接。
 
-IBM Cloud for VMware Solutions 包括在 IBM Cloud 中以完全自动的方式快速部署 VMware vCenter Server (VCS)。这些产品是对内部部署基础架构的补充，允许现有和未来的工作负载在 IBM Cloud 中运行，而无需进行转换，使用的工具、技能和流程与内部部署使用的相同。有关更多信息，请参阅 [Virtualization for extending virtualized private cloud](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture)。
+IBM Cloud for VMware Solutions 包括在 IBM Cloud 中以完全自动化的方式快速部署 VMware vCenter Server。这些产品是对内部部署基础架构的补充，允许现有和未来的工作负载在 IBM Cloud 中运行，而无需进行转换，使用的工具、技能和流程与内部部署使用的相同。有关更多信息，请参阅 [Virtualization for extending virtualized private cloud](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture)。
 
-VMware HCX on IBM Cloud 服务使这一混合性更上一层楼，通过支持创建无缝网络扩展和双向迁移工作负载，将 VCS 实例与现有的内部部署虚拟化数据中心混合在一起。
+VMware HCX on IBM Cloud 服务使这一混合性更上一层楼，通过支持创建无缝网络扩展和双向迁移工作负载，将 vCenter Server 实例与现有的内部部署虚拟化数据中心混合在一起。
 
 VMware HCX on IBM Cloud 组件（在 IBM Cloud VMware 目标站点中部署为虚拟机）支持建立与安装在对等内部部署源站点中的 VMware HCX on IBM Cloud 组件的连接。
 

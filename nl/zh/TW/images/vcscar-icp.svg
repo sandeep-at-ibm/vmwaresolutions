@@ -131,7 +131,7 @@
   <path d="m207 629.76 4 8 4-8" fill="none" pointer-events="none" stroke="#f33" stroke-miterlimit="10" stroke-width="2"/>
   <g font-family="Helvetica" font-size="11px" text-anchor="middle">
    <rect x="174" y="594" width="75" height="14" fill="#fff" stroke-width="0"/>
-   <text x="210.5" y="603">公用網路</text>
+   <text x="210.5" y="603">Public 網路</text>
   </g>
  </g>
 </svg>

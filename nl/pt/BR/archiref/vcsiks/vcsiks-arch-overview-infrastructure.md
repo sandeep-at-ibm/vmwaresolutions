@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-22"
 
 subcollection: vmware-solutions
 
@@ -17,18 +17,16 @@ subcollection: vmware-solutions
 ## Virtual Routing and Forwarding
 {: #vcsiks-arch-overview-infrastructure-vrf}
 
-As contas do {{site.data.keyword.cloud}} podem ser configuradas como uma conta de Virtual Routing and Forwarding (VRF). As contas de VRF ativam o roteamento global automático entre blocos de IP de sub-rede. Todas as contas com conexões de Link direto devem ser convertidas ou criadas como uma conta do VRF.
+As contas do {{site.data.keyword.cloud}} podem ser configuradas como uma conta de Virtual Routing and Forwarding (VRF). As contas de VRF ativam o roteamento global automático entre blocos de IP de sub-rede. Todas as contas com conexões do Direct Link devem ser convertidas para uma conta do VRF ou criadas como tal.
 
 ## Link Direto
 {: #vcsiks-arch-overview-infrastructure-direct-link}
 
 O {{site.data.keyword.cloud_notm}} Direct Link Connect oferece acesso privado à infraestrutura do {{site.data.keyword.cloud_notm}}
 e a quaisquer outras nuvens vinculadas ao seu Provedor de serviços
-de rede por meio do {{site.data.keyword.CloudDataCent_notm}} local. Essa opção é perfeita
-para criar conectividade com múltiplas nuvens em um único ambiente.
-Nós conectamos os clientes à rede do {{site.data.keyword.cloud_notm}} Private usando
-uma topologia de largura de banda compartilhada. Como ocorre com todos os produtos Direct Link, é
-possível incluir roteamento global, que permite tráfego de rede privada para todos os locais do {{site.data.keyword.cloud_notm}}.
+de rede por meio do {{site.data.keyword.CloudDataCent_notm}} local. Essa opção é perfeita para criar conectividade com múltiplas nuvens em um único ambiente.
+
+Nós conectamos os clientes à rede do {{site.data.keyword.cloud_notm}} Private usando uma topologia de largura de banda compartilhada. Como com todos os produtos do Direct Link, é possível incluir roteamento global, que permite o tráfego de rede privada para todos os locais do {{site.data.keyword.cloud_notm}}.
 
 ## Redes privadas virtuais
 {: #vcsiks-arch-overview-infrastructure-virt-private-network}

@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-13"
+lastupdated: "2019-06-18"
+
+keywords: IBM Cloud Object Storage, ICOS configuration, order Cloud Object Storage
 
 subcollection: vmware-solutions
 
@@ -40,12 +42,14 @@ Veeam Availability Suite 9.5 Update 4 发布后，现在 Veeam 与 IBM Cloud Obj
 ## 添加横向扩展存储库
 {: #icos_ordering-scale-repo}
 
-要在 Veeam 中添加横向扩展存储库，请参阅[添加横向扩展存储库](https://helpcenter.veeam.com/docs/backup/vsphere/sobr_add.html?ver=95u4){:new_window}。执行其中的步骤，然后返回到此部分以继续执行以下任务。
+* 作为 Veeam 服务安装和配置的一部分，将创建一个名为 `IC4V 横向扩展存储库`的横向扩展备份存储库。`IC4V 缺省 VM 备份存储库`将作为扩展数据块添加到横向扩展存储库。
+* 创建备份作业时，必须选择 `IC4V 横向扩展存储库`作为备份存储库，而不是选择 `IC4V 缺省配置备份存储库`。后一个存储库用于 Veeam 配置备份。
+* 您可以将更多存储库添加到此缺省存储库，例如，类型为 Object Storage 的备份存储库。有关更多信息，请参阅 [Adding Scale-Out Repositories](https://helpcenter.veeam.com/docs/backup/vsphere/sobr_add.html?ver=95u4){:new_window}。执行其中的步骤，然后返回到此部分以继续执行以下任务。
 
 ## 维护和管理云层
 {: #icos_ordering-manage-cloud}
 
-有关维护和管理云层的信息，请参阅[管理容量层数据](https://helpcenter.veeam.com/docs/backup/vsphere/capacity_tier_managing_data.html?ver=95u4){:new_window}。
+有关更多信息，请参阅 [Managing Capacity Tier Data](https://helpcenter.veeam.com/docs/backup/vsphere/capacity_tier_managing_data.html?ver=95u4){:new_window}。
 
 ## 相关链接
 {: #icos_ordering-related}

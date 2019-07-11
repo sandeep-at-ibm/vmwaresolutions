@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-06-14"
+
+keywords: Zerto, Zerto components, tech specs Zerto
 
 subcollection: vmware-solutions
 
@@ -20,8 +22,12 @@ subcollection: vmware-solutions
 
 Zerto on {{site.data.keyword.cloud}} 服務可將抄寫及災難回復功能整合到部署供應項目，以保護及回復 {{site.data.keyword.cloud_notm}} 上位於您 VMware 虛擬環境中的資料。
 
-只有在 1.2 版或更新版本中部署的實例，才能使用此服務。現行安裝的 Zis 版本為 6.5 Update 3。
-{:note}
+## 開始之前
+{: #addingzertodr-req}
+
+* 確保您的 {{site.data.keyword.cloud_notm}} 帳戶是計費帳戶，並且該帳戶已鏈結到部署實例的 {{site.data.keyword.cloud_notm}} 基礎架構帳戶。 如需相關資訊，請參閱 [Zerto 抄寫計費](/docs/services/vmwaresolutions/services?topic=vmware-solutions-zerto_ordering#zerto_ordering-billing)。
+* 只有在 1.2 版或更新版本中部署的實例，才能使用此服務。現行安裝的 Zis 版本為 6.5 Update 3。
+
 
 ## Zerto on IBM Cloud 的技術規格
 {: #addingzertodr-specs}
@@ -31,7 +37,7 @@ Zerto on {{site.data.keyword.cloud}} 服務可將抄寫及災難回復功能整�
 Zerto Virtual Replication Appliance (VRA) 元件只會部署至預設叢集。
 {:note}
 
-### VSI
+### 虛擬服務實例
 {: #addingzertodr-specs-vsi}
 
 * 一個虛擬服務實例 (VSI) - Zerto Virtual Manager
@@ -47,8 +53,11 @@ Zerto Virtual Replication Appliance (VRA) 元件只會部署至預設叢集。
 ### 網路
 {: #addingzertodr-specs-network}
 
-* 一個主要專用 IP 位址
-* 1 Gbps 專用網路上行鏈路
+* VSI
+  * 一個主要專用 IP 位址
+  * 1 Gbps 專用網路上行鏈路
+* 虛擬抄寫應用裝置 (VRA)
+  * 用於 VRA 部署的一個專用可攜式子網路
 
 ### 授權及費用
 {: #addingzertodr-specs-licenses}

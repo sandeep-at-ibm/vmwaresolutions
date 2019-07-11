@@ -81,7 +81,7 @@ vSphere Enterprise Plus 6.7u1 僅適用於 Broadwell 及 Skylake {{site.data.key
 ### 資料中心的更新
 {: #relnotes_v29-dc}
 
-下列是可用於部署的新資料中心：**FRA-05 - 法蘭克福**和 **LON-05 - 倫敦**。如需相關資訊，請參閱 [vCenter Server 實例的需求及規劃](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)。
+以下是可用於部署的新資料中心：**FRA-05 - 法蘭克福**和 **LON-05 - 倫敦**。如需相關資訊，請參閱 [vCenter Server 實例的需求及規劃](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)。
 
 ### ESXi 伺服器加強功能
 {: #relnotes_v29-vcs-esxi}
@@ -97,7 +97,7 @@ vSphere Enterprise Plus 6.7u1 僅適用於 Broadwell 及 Skylake {{site.data.key
 ### 網路檔案系統儲存空間大小
 {: #relnotes_v29-vcs-nfs}
 
-對於 vCenter Server 實例訂單，您現在可以為效能層次 0.25、2 和 4 IOPS/GB 最多新增 24 TB 的「網路檔案系統 (NFS)」共用儲存體。
+對於 vCenter Server 實例訂單，您現在可以為效能層次 0.25、2 和 4 IOPS/GB 最多新增 24 TB 的「網路檔案系統 (NFS)」共用儲存空間。
 
 10 IOPS/GB 效能層次仍然限制為每個檔案共用的容量上限為 4 TB。
 {:note}

@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-07"
+lastupdated: "2019-06-18"
+
+keywords: Veeam, Veeam install, tech specs Veeam
 
 subcollection: vmware-solutions
 
@@ -31,18 +33,23 @@ Veeam on {{site.data.keyword.cloud_notm}} 服务中订购并包含了以下组�
 ### VSI
 {: #veeam_considerations-specs-vsi}
 
-* 一个 VSI，带 Veeam Backup and Replication 9.5 操作系统附加组件
+* 一个 VSI，带 Veeam Backup and Replication 9.5 操作系统附加组件和 Veeam Availability Suite 9.5
 * Windows Server 2016 Standard Edition（64 位）
 * 4 个 2.0 GHz 核心
-* 8 GB RAM
+* 8 个 vCPU，32 GB RAM
 * 1 Gbps 专用网络上行链路
 * 100 GB 磁盘 (SAN)
 
 ### 用于备份的存储器
 {: #veeam_considerations-specs-storage}
 
-* 耐久性 iSCSI 存储器（2000、4000、8000 或 12000 GB）
+* 耐久性 iSCSI 存储器（2,000、4,000、8,000 或 12,000 GB）
 * 存储器性能（0.25、2 或 4 IOPS/GB）
+
+作为 Veeam 服务安装和配置的一部分，将创建以下存储库：
+* 对于 Veeam 配置备份文件：名为 `IC4V 缺省配置备份存储库`的存储库。存储 Veeam 备份的文件夹的路径为 `<Drive>:\ConfigBackup\`。
+* 对于横向扩展：名为 `IC4V 横向扩展存储库`的存储库。有关更多信息，请参阅[添加横向扩展存储库](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icos_ordering#icos_ordering-scale-repo)。
+* 对于虚拟机 (VM) 备份：名为 ``IC4V 缺省 VM 备份存储库``的存储库。存储 VM 备份的文件夹的路径为 ``<Drive>:\VMBackup\`。此存储库作为扩展数据块添加到 ``IC4V 横向扩展存储库`。
 
 ### 联网
 {: #veeam_considerations-specs-networking}
@@ -52,12 +59,7 @@ Veeam on {{site.data.keyword.cloud_notm}} 服务中订购并包含了以下组�
 ### 许可证和费用
 {: #veeam_considerations-specs-licenses}
 
-Veeam Backup and Replication 9.5 Enterprise Plus（10、25、50、100 或 200 个 VM 许可证）。
-
-### 管理
-{: #veeam_considerations-specs-mgmt}
-
-缺省情况下，配置的管理备份为最多 5 个 VM 和 2000 GB 存储器。
+* Veeam Availability Suite 9.5（10、25、50、100 或 200 VM 许可证）
 
 ## 安装 Veeam on IBM Cloud 时的注意事项
 {: #veeam_considerations-install}

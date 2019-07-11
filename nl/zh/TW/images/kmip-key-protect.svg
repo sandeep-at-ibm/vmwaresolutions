@@ -140,7 +140,7 @@
 	<text transform="matrix(1 0 0 1 13.3335 38.3335)" class="st1 st2">客戶基礎架構帳戶</text>
 	<text transform="matrix(1 0 0 1 561 17.6665)" class="st1 st2">公用網路</text>
 	<text transform="matrix(1 0 0 1 493 228)" class="st1 st2">客戶專用網路</text>
-	<text transform="matrix(1 0 0 1 475 249.333)" class="st1 st2">IBM Cloud 管理網路</text>
+	<text transform="matrix(1 0 0 1 449.333 249.333)" class="st1 st2">IBM Cloud 管理網路</text>
 	<g id="top_dash_line">
 		<g>
 			<line class="st6" x1="10" y1="24" x2="12.5" y2="24"/>

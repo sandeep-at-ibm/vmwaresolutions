@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-28"
+
+keywords: vCenter Server delete instance, delete vCenter Server, delete multi-site
 
 subcollection: vmware-solutions
 
@@ -49,3 +51,4 @@ subcollection: vmware-solutions
 
 * [刪除 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_deletinginstance)
 * [訂購、檢視及移除 vCenter Server 實例的服務](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
+* [取消虛擬伺服器](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)

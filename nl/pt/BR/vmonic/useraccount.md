@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-16"
+lastupdated: "2019-06-14"
+
+keywords: set credentials, user credentials, set notifications
 
 subcollection: vmware-solutions
 
@@ -26,23 +28,29 @@ Também é possível especificar se você deseja receber notificações por e-ma
 {: #useraccount-reqs}
 
 * É possível vincular somente uma conta de infraestrutura do {{site.data.keyword.cloud_notm}} a uma conta do usuário do {{site.data.keyword.cloud_notm}}.
-* A conta de infraestrutura do {{site.data.keyword.cloud_notm}} que você está usando deve atender a determinados requisitos. Para obter mais informações, consulte [Requisitos de conta da infraestrutura do {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).
+* A conta de infraestrutura do {{site.data.keyword.cloud_notm}} que você está usando deve atender a determinados requisitos. Para obter mais informações, consulte [Requisitos da conta de infraestrutura do {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req).
 * Se a chave API para sua conta de infraestrutura do {{site.data.keyword.cloud_notm}} muda, deve-se atualizar a chave na página **Configurações** no console do {{site.data.keyword.vmwaresolutions_short}}.
 
-   **Importante:** é sua responsabilidade assegurar que a chave API salva na página **Configurações** esteja correta e atualizada. Caso contrário, as operações que requerem validação da chave API podem falhar.
+   É sua responsabilidade assegurar que a chave de API salva na página **Configurações** esteja correta e atualizada. Caso contrário, as operações que requerem validação da chave API podem falhar.
+   {:important}
 
-## Procedimento para gerenciar contas do usuário e configurações
-{: #useraccount-procedure}
+## Procedimento para configurar notificações
+{: #useraccount-set-notif}
 
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Configurações** na área de janela de navegação esquerda.
-2. Na área **Notificações**, especifique suas configurações de notificação.
-   * Se você desejar ser notificado por e-mail quando eventos ocorrerem, clique em **Ativar notificações por e-mail**.
-   * Se você desejar ser notificado no console quando eventos ocorrerem, clique em **Ativar notificações do console**.
-3. Na área **Credenciais de infraestrutura do IBM Cloud**, insira o nome do usuário e a chave de API de sua conta de infraestrutura do {{site.data.keyword.cloud_notm}}:
-   * Se a sua conta de infraestrutura do {{site.data.keyword.cloud_notm}} e sua conta do {{site.data.keyword.cloud_notm}} estão vinculadas, clique em **Recuperar** para inserir as credenciais automaticamente.
-   * Se a sua conta de infraestrutura do {{site.data.keyword.cloud_notm}} e sua conta do {{site.data.keyword.cloud_notm}} não estão vinculadas, deve-se vinculá-las. Efetue login no [Portal do cliente de infraestrutura do{{site.data.keyword.cloud_notm}}](https://control.softlayer.com/) e siga as instruções no console para obter as credenciais e, em seguida, insira-as.
-   * Se você não tem uma conta de infraestrutura do {{site.data.keyword.cloud_notm}}, [inscreva-se para uma](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account) e siga as instruções no console para obter as credenciais e, em seguida, insira-as.
-4. Clique em **Salvar Credenciais**.
+2. Se você desejar ser notificado por e-mail quando eventos ocorrerem, clique em **Ativar notificações por e-mail**.
+3. Se você desejar ser notificado no console quando eventos ocorrerem, clique em **Ativar notificações do console**.
+
+## Procedimento para configurar as credenciais de conta do usuário
+{: #useraccount-set-cred}
+
+1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Configurações** na área de janela de navegação esquerda.
+2. Na área **Credenciais de infraestrutura do IBM Cloud**, revise as informações para as etapas que precisam ser executadas.
+3. Se você tiver uma conta de infraestrutura do {{site.data.keyword.cloud_notm}} e uma conta do {{site.data.keyword.cloud_notm}} vinculadas, clique em **Recuperar** para concluir as credenciais automaticamente.
+4. Caso você tenha uma conta de infraestrutura do {{site.data.keyword.cloud_notm}} e uma conta do {{site.data.keyword.cloud_notm}} não vinculadas, deve-se vinculá-las. Siga as instruções em [Vinculando contas do IBMid](/docs/account?topic=account-unifyingaccounts#link_accounts) e, em seguida, clique em **Recuperar** para concluir as credenciais automaticamente.
+5. Se você não tiver uma conta de infraestrutura do {{site.data.keyword.cloud_notm}} e não tiver uma conta faturável do {{site.data.keyword.cloud_notm}}, primeiro [faça upgrade de sua conta](/docs/account?topic=account-upgrading-account) e, em seguida, [crie uma chave de API de infraestrutura clássica](/docs/iam?topic=iam-classic_keys).
+6. Caso você não tenha uma conta de infraestrutura do {{site.data.keyword.cloud_notm}} e tenha uma conta faturável do {{site.data.keyword.cloud_notm}}, deve-se [criar uma chave de API de infraestrutura clássica](/docs/iam?topic=iam-classic_keys).
+7. Clique em **Salvar Credenciais**.
 
 ## Resultados
 {: #useraccount-results}

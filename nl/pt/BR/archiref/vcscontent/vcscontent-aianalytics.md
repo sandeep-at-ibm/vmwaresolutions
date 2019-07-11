@@ -21,7 +21,7 @@ Enriquecer o Stock Trader não é uma etapa única. Para Todd e Jane, isso é um
 ## AI Watson Tone Analyzer
 {: #vcscontent-aianalytics-ai-watson}
 
-A amostra a seguir é uma maneira simples de enriquecer um aplicativo, mas é aparentemente poderosa. A Jane procura o catálogo do [{{site.data.keyword.cloud}}](https://cloud.ibm.com/catalog/) para serviços de [IA](https://cloud.ibm.com/catalog/?category=ai) e [Análise](https://cloud.ibm.com/catalog/?category=analytics) e o encontra repleto de conteúdo.
+A amostra a seguir é uma maneira simples de enriquecer um aplicativo, mas é aparentemente poderosa. Jane procura no [catálogo do {{site.data.keyword.cloud}}](https://cloud.ibm.com/catalog/) serviços de [IA](https://cloud.ibm.com/catalog/?category=ai) e de [Analítica](https://cloud.ibm.com/catalog/?category=analytics) e localiza o catálogo rico em conteúdo.
 
 Jane seleciona [Tone Analyzer](https://cloud.ibm.com/catalog/services/tone-analyzer), optando pelo plano Padrão e, em seguida, as credenciais para chamada são fornecidas.
 Jane refatorou o Stock Trader e apenas cria um segredo de Kubernetes para o Tone Analyzer. Dessa forma, mesmo que Jane mude os planos ou regiões, não é necessário reconstruir o código.

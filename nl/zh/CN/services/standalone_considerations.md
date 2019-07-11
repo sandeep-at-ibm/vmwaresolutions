@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-23"
+lastupdated: "2019-06-13"
+
+keywords: VMware HCX standalone, HCX on-premises, tech specs HCX
 
 subcollection: vmware-solutions
 

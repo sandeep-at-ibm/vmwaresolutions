@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-17"
+lastupdated: "2019-06-03"
 
 ---
 
@@ -13,12 +13,12 @@ lastupdated: "2019-05-17"
 
 vROps 分析集群包含用于分析和存储受监视组件中数据的节点，在此部署中，部署了四个节点和两个 NSX 负载均衡器。此大小允许监视多达 30,000 个 VM，收集 9,000,000 个度量值。
 
-4 节点分析集群包含以下各项：
+4 节点分析集群包含以下组件：
 * 主节点 - 主节点是 vROps 集群中的初始节点。在大型环境中，此节点用于管理所有其他节点。
 * 主节点副本 - 此节点支持主节点的高可用性。
 * 数据节点 - 数据节点支持在较大的环境中横向扩展 vROps，在此设计中部署了两个数据节点。
 
-此外，此设计使用远程收集器节点充当代理/中继服务器，用于仅收集数据并将收集的数据转发到主节点/数据节点。可以添加数据节点和远程收集器，以根据环境大小进行纵向扩展。下图中显示了各 vROps 组件在 VLAN/VXLAN 上的位置。
+此外，此设计使用远程收集器节点，这些节点充当代理/中继服务器，用于仅收集数据并将收集的数据转发到主节点/数据节点。可以添加数据节点和远程收集器，以根据环境大小进行纵向扩展。下图中显示了各 vROps 组件在 VLAN/VXLAN 上的位置。
 
 ![Operations Manager 网络图](../../images/opsmgmt-vropsnw.svg "Operations Manager 网络图")
 
@@ -27,7 +27,7 @@ vROps 分析集群包含用于分析和存储受监视组件中数据的节点�
 
 ![Operations Manager 组件图](../../images/opsmgmt-vropscomponent.svg "Operations Manager 组件图")
 
-vROps 分析集群可使用管理用户界面或使用 API 进行访问，并可集成到以下产品中：
+vROps 分析集群可使用管理用户界面或使用 API 进行访问，并与以下组件相集成：
 * vCenter
 * vRealize Log Insight
 
@@ -40,12 +40,12 @@ vROps 从以下各项中收集数据：
 * NSX - NSX Manager、NSX Controller 和 NSX Edge
 * vRLI
 
-客户机可以手动收集数据，并将 vROps 配置为从 vRealize Automation 和 vRealize Business for Cloud 收集数据。
+客户机可以手动将 vROps 配置为从 vRealize Automation 和 vRealize Business for Cloud 收集数据。
 
 ## 系统需求
 {: #opsmgmt-vrops-requirements}
 
-分析集群由一个主节点、一个主节点副本节点和两个数据节点组成，支持横向扩展和高可用性。可添加更多数据节点以进行纵向扩展。分析集群最多可扩展为具有 8 个中等大小的节点。
+分析集群由一个主节点、一个主节点副本节点和两个数据节点组成，支持横向扩展和高可用性。可添加更多数据节点以进行纵向扩展。分析集群最多可扩展为具有八个中等大小的节点。
 
 表 1. Operations Manager 主节点/副本节点系统设置
 
@@ -78,7 +78,7 @@ vROps 从以下各项中收集数据：
 |URL|/suite-api/api/deployment/node/status| -- |
 |接收|ONLINE| -- |
 |算法|循环法|LEASTCONN|
-|池|4 节点 vROps|4 节点 vROps|
+|池| 四个 vROPs 节点 | 四个 vROPs 节点 |
 
 有关更多信息，请参阅 [vRealize Automation Load Balancing (PDF)](https://docs.vmware.com/en/vRealize-Automation/7.5/vrealize-automation-load-balancing.pdf)
 {:new_window}.
@@ -86,13 +86,13 @@ vROps 从以下各项中收集数据：
 ## 联网
 {: #opsmgmt-vrops-network}
 
-部署 vROps 设备需要工具专用可移植子网中的六个 IP。vROps 的网络连接需要有权访问：
+部署 vROps 设备需要工具专用可移植子网中的六个 IP 地址。vROps 的网络连接需要有权访问：
 * vCenter 设备
 * vRealize Log Insight 设备
 * NSX-V/T 设备
 * 工具扩展 VXLAN
 * 客户网络
-* NTP 服务器 (time.services.softlayer.com)
+* NTP 服务器 (`time.services.softlayer.com`)
 * {{site.data.keyword.vmwaresolutions_short}} Active Directory/DNS
 * 远程收集器，这些收集器需要在 NSX ESG 上实现 NAT 规则，以支持与主节点、主节点副本和数据节点的连接
 
@@ -114,7 +114,7 @@ vROps 从以下各项中收集数据：
 ### 认证
 {: #opsmgmt-vrops-auth}
 
-vROps 的用户管理需要 VMware Identity Manager (vIDM)，此组件与 Active Directory 集成。具有收集度量值和映射拓扑所需的最低许可权集的服务帐户用于从 vRealize Operations Manager 到以下适配器之间的应用程序到应用程序通信：
+vROps 的用户管理需要 VMware Identity Manager (vIDM)，此组件与 Active Directory 集成。具有收集度量值和映射拓扑所需的最低许可权集的服务帐户用于从 vRealize Operations Manager 到以下适配器的应用程序到应用程序通信：
 
 * NSX
 Manager
@@ -177,7 +177,7 @@ VMware SDDC Health Management Pack 提供了以下仪表板：
 * SDDC 运行状况历史趋势仪表板 - VMware SDDC Health Management Pack 包含 SDDC 运行状况历史趋势仪表板，可显示 SDDC 堆栈中每个组件的运行状况趋势。
 * SDDC vRealize Operations Manager 大小调整仪表板 - SDDC vRealize Operations Manager 大小调整仪表板提供 vRealize Operations Manager 集群用于处理对象和度量值的容量。
 
-VMware SDDC Health Management Pack 中的插件可收集这些插件中包含的对象类型的度量值。Management Pack 可收集以下各项的运行状况度量值：
+VMware SDDC Health Management Pack 中的插件可收集这些插件中包含的对象类型的度量值。Management Pack 可收集以下组件的运行状况度量值：
 * vCenter Server
 * Management Pack for NSX for vSphere
 * vRealize Automation
@@ -225,7 +225,7 @@ vRealize Operations Management Pack for HCX 用于将 vROps 的 Operations Manag
 * [vRealize Operations Manager 7.0 Sizing Guidelines](https://kb.vmware.com/s/article/57903){:new_window}
 * [vRealize Operations Manager 文档](https://docs.vmware.com/en/vRealize-Operations-Manager/index.html){:new_window}
 * [Management Pack for vSAN](https://marketplace.vmware.com/resources/vsx/product_files/31742/original/Management-Pack-for-vSAN-Guide6d2a8895b022a5f626a86e8e84b031b5.pdf){:new_window}
-* [查看“更新 vSAN 集群”指示信息](https://cloud.ibm.com/docs/services/vmwaresolutions/archiref/vum/vum-updating-vsan.html#updating-vsan-clusters){:new_window}
+* [查看“更新 vSAN 集群”指示信息](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vsan)
 * [Management-Pack-for-vSAN-Guide](https://marketplace.vmware.com/resources/vsx/product_files/31742/original/Management-Pack-for-vSAN-Guide6d2a8895b022a5f626a86e8e84b031b5.pdf){:new_window}
 * [vSAN Health Check Information](https://kb.vmware.com/s/article/2114803){:new_window}
 * [Operationalizing VMware NSX](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/products/nsx/vmware-operationalizing-nsx.pdf){:new_window}

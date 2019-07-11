@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-01"
+lastupdated: "2019-06-13"
+
+keywords: IBM Cloud Private, ICP, tech specs ICP
 
 subcollection: vmware-solutions
 
@@ -79,14 +81,14 @@ subcollection: vmware-solutions
 
 以下公式用于计算 IBM Cloud Private 的空间需求和管理开销。
 
-#### 公式 1
+#### 计算可用核心数的公式
 {: #icp_overview-formulas-1}
 
 `AvailableCores = [HostCoreCount - HostOverheadCores - (HostVSanOverheadCorePercentage * HostCoreCount)] * (HostCount - vSphereHAHostTolerance) - MgmtOverheadCores`
 
 表 4. 公式 1 中变量的描述
 
-|变量|描述|	单位|	vSAN 示例|NFS 示例|
+|变量|描述|单位|vSAN 示例|NFS 示例|
 |:--------- |:----------- |:---- |:------------- |:----------- |
 |AvailableCores|可用于环境中的工作负载和服务的实际核心数|核心数|38|43|
 |HostCount|缺省集群中的主机数|主机数|4|4|
@@ -96,23 +98,23 @@ subcollection: vmware-solutions
 |vSphereHAHostTolerance|vSphere HA 配置中容许的主机数，值为 1 个主机|	主机数|1|1|
 |HostVsanOverheadCorePercentage|vSAN 使用的主机核心的百分比，值为 10%，如果是非 vSAN 主机，值为 0%| % |10%|0%|
 
-#### 公式 2
+#### 计算可用内存的公式
 {: #icp_overview-formulas-2}
 
 `AvailableMemory = [HostMemory - HostOverheadMemory - HostVsanOverheadMemory - (HostVsanOverheadMemoryDiskPercentage * HostVsanCapacityDiskSize)] * (HostCount - vSphereHAHostTolerance) - MgmtOverheadMemory`
 
 表 5. 公式 2 中变量的描述
 
-|变量|描述|	单位|	vSAN 示例|NFS 示例|
+|变量|描述|单位|vSAN 示例|NFS 示例|
 |:--------- |:----------- |:---- |:------------- |:----------- |
-|AvailableMemory|可用于环境中的工作负载和服务的内存 GB 数|GB| 	693|860|
+| AvailableMemory |可用于环境中的工作负载和服务的内存 GB 数|GB| 693 |860|
 |HostCount|缺省集群中的主机数|主机数|6|6|
-|HostMemory|	缺省集群内每个主机中的可用内存原始 GB 数|	GB|192|	192|
-|HostVsanCapacityDiskSize|此主机上每个 vSAN 容量 SSD 磁盘容量的 GB 数，值为 960、1,946 或 3,891；如果是非 vSAN 主机，值为 0 GB|GB|	960|0|
-|HostOverheadMemory|	ESXi 服务器保留为开销的内存 GB 数，值为 4.6 GB|	GB|4.6|	4.6|
-|MgmtOverheadMemory|	vCenter Server 管理组件（vCenter Server、PSC、AD/DNS 和 Edge）保留的内存 GB 数，值为 77 GB|GB|77|77|
+|HostMemory|缺省集群内每个主机中的可用内存原始 GB 数|GB|192|192|
+|HostVsanCapacityDiskSize|此主机上每个 vSAN 容量 SSD 磁盘容量的 GB 数，值为 960、1,946 或 3,891；如果是非 vSAN 主机，值为 0 GB|GB|960|0|
+|HostOverheadMemory|ESXi 服务器保留为开销的内存 GB 数，值为 4.6 GB|GB|4.6|4.6|
+|MgmtOverheadMemory|vCenter Server 管理组件（vCenter Server、PSC、AD/DNS 和 Edge）保留的内存 GB 数，值为 77 GB|GB|77|77|
 |vSphereHAHostTolerance|vSphere HA 配置中容许的主机数，值为 1 个主机|主机数|1|1|
-|HostVsanOverheadMemoryDiskPercentage|vSAN 管理保留的内存 GB 数（以其中一个容量 vSAN 磁盘的百分比表示）, 值为 2.75%|	% |2.75%|2.75%|
+|HostVsanOverheadMemoryDiskPercentage|vSAN 管理保留的内存 GB 数（以其中一个容量 vSAN 磁盘的百分比表示）, 值为 2.75%| % |2.75%|2.75%|
 |HostVsanOverheadMemory|vSAN 管理保留的内存 GB 数（不考虑磁盘大小），值为 7 GB，如果是非 vSAN 主机，值为 0 GB|GB|7|0|
 
 ## 安装 IBM Cloud Private Hosted 时的注意事项

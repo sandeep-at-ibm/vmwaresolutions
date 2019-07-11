@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-05-15"
 
 subcollection: vmware-solutions
 
@@ -14,7 +14,7 @@ subcollection: vmware-solutions
 # 步驟 3 - 應用程式配置
 {: #caveonix-step3}
 
-此步驟使用 Caveonix RiskForesight 配置 Script。以「全功能」部署而言，這個 Script 是透過 IC4VS 自動化來啟動。
+此步驟使用 Caveonix RiskForesight 配置 Script。以「全功能」部署而言，這個 Script 是透過 IBM Cloud for VMware Solutions 自動化來啟動。
 
 如果要進行擴充，用戶端需要呼叫 Script 來佈建局部或完全分散的拓蹼。這個 Script 會配置 RiskForesight 服務：
 - Caveonix 應用程式（API、中央收集器）

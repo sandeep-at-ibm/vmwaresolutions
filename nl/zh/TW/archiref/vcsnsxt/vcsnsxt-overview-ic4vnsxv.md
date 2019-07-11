@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-28"
 
 subcollection: vmware-solutions
 
@@ -44,8 +44,7 @@ subcollection: vmware-solutions
 
 此設計使用最少數目的虛擬分散式交換器 (vDS)。叢集中的主機已連接至公用及專用網路。它們已配置兩個虛擬分散式交換器。兩台交換器的使用遵循 {{site.data.keyword.cloud_notm}} 內所實作公用及專用網路的實體網路區隔。
 
-共配置兩個分散式交換器。第一個適用於公用網路連線功能 (SDDC-Dswitch-Public)，而第二個適用於專用網路連線功能 (SDDC-Dswitch-Private)。
-需要區隔不同類型的資料流量，以降低競用及延遲。基於存取安全，也需要區隔網路。VLAN 用來區隔實體網路功能。此設計使用三個 VLAN。兩個用於專用網路資料流量，一個用於公用網路資料流量。
+共配置兩個分散式交換器。第一個適用於公用網路連線功能 (SDDC-Dswitch-Public)，而第二個適用於專用網路連線功能 (SDDC-Dswitch-Private)。需要區隔不同類型的資料流量，以降低競用及延遲。為了存取安全，也需要區隔網路。VLAN 用來區隔實體網路功能。此設計使用三個 VLAN。兩個用於專用網路資料流量，一個用於公用網路資料流量。
 
 表 2. VLAN 資料流量對映
 
@@ -102,21 +101,21 @@ SDDC-Dswitch-Public	  |SDDC-DPortGroup-External	|來源虛擬埠| 作用中：0�
 -	供管理元件使用的 NSX Edge Services Gateway (ESG) 應用裝置。
 -	僅針對 vCenter Server，NSX Edge Services Gateway (ESG) 應用裝置供客戶使用。
 
-「未」配置的項目：
--	虛擬分散式路由器。
--	微分段。
--	VXLAN。
--	將「NSX 管理」鏈結至其他 VMware 實例。
+未配置下列元件：
+- 虛擬分散式路由器
+- 微分段
+- VXLAN
+- 將「NSX 管理」鏈結至其他 VMware 實例
 
 ### NSX-V 安全
 {: #vcsnsxt-overview-ic4vnsxv-nsx-v-security}
 
 NSX for vSphere 可讓組織將資料中心劃分為不同的安全區段，並往下探查至個別工作負載的層次，但與工作負載執行所在無關。IT 團隊可以根據應用程式及使用者環境定義來定義每個工作負載的原則，這確保立即回應資料中心內的威脅，並向下強制執行到應用程式。
 
-下列是一些主要 NSX 元件：
--	NSX 分散式有狀態防火牆內嵌在每部 Hypervisor 主機最多有 20 Gbps 防火牆容量的 Hypervisor 核心內。透過 NSX Edge 提供縱向防火牆功能。
--	NSX 會將動態安全群組及相關聯原則建立到不只是 IP 位址及 MAC。這些原則包括 vCenter 物件和標籤、作業系統類型以及「第 7 層」應用程式資訊，以根據應用程式的環境定義來啟用微分段。
--	使用來自 VM、Active Directory 及 Mobile Device Management 整合之登入資訊的身分型原則，可根據使用者來容許安全（包括遠端及虛擬桌面環境中的階段作業層次安全）。
+以下是一些主要 NSX 元件：
+- NSX 分散式有狀態防火牆內嵌在每部 Hypervisor 主機最多有 20 Gbps 防火牆容量的 Hypervisor 核心內。透過 NSX Edge 提供縱向防火牆功能。
+- NSX 會將動態安全群組及相關聯原則建立到不只是 IP 位址及 MAC。這些原則包括 vCenter 物件和標籤、作業系統類型以及「第 7 層」應用程式資訊，以根據應用程式的環境定義來啟用微分段。
+- 使用來自 VM、Active Directory 及 Mobile Device Management 整合之登入資訊的身分型原則，可根據使用者來容許安全（包括遠端及虛擬桌面環境中的階段作業層次安全）。
 - Application Rule Manager 及 Endpoint Monitoring 可啟用最多「第 7 層」的端對端網路資料流量視覺化，並容許應用程式團隊識別資料中心內及資料中心間端點，以及建立適當的安全規則予以回應。
 - 支援與協力廠商供應商的管理、控制平面及資料平面整合（例如下一代防火牆、IDS/IPS、無代理程式防毒、切換、進階安全等等）。
 

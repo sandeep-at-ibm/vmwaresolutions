@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-18"
+lastupdated: "2019-06-18"
+
+keywords: vCenter Server Hybridity add host, add server vCenter Server Hybridity, remove host vCenter Server Hybridity
 
 subcollection: vmware-solutions
 
@@ -19,6 +21,8 @@ subcollection: vmware-solutions
 {: #vc_hybrid_addingremovingservers}
 
 您可以根據商業需要，透過新增或移除 ESXi 伺服器來擴充或縮減 VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 實例的容量。
+
+從 3.1 版開始，您可以藉由選取現有的配置，或叢集裡現有主機以外的替代配置，來新增 ESXi 伺服器至現有的叢集。當您訂購新的伺服器時，現有配置可用於即時選取。為了避免效能或穩定性問題，建議叢集在 CPU、RAM 及儲存空間等方面使用相同或類似的配置。這個功能適用於相同叢集內的硬體更新。叢集只能有一種類型的儲存空間。
 
 從 2.9 版開始，您可以在叢集處於維護模式時，將新的 ESXi 伺服器新增至叢集。此外，您還可以跨越多個叢集同時新增或移除 ESXi 伺服器。以下是可同時進行的作業：
 
@@ -47,8 +51,18 @@ subcollection: vmware-solutions
 4. 在**叢集**表格中，按一下您要在其中新增 ESXi 伺服器的叢集。
 5. 在 **ESXi 伺服器**表格中，按一下**新增**。
 6. 在**新增伺服器**視窗中，輸入您要新增的伺服器數目。
-7. 選擇性地選取勾選框，以便在維護模式期間新增伺服器。
-8. 檢閱預估成本，然後按一下**新增**。
+7. 選擇性地選取勾選框，以便在維護模式期間新增伺服器。依預設會選取勾選框。
+
+   佈建新的 ESXi 伺服器時，如果您未選取**維護模式**勾選框，虛擬機器 (VM) 會立即移轉到新伺服器。移轉開始之前，您不會收到確認訊息。
+   {:important}
+
+8. 完成 Bare Metal Server 配置。
+   * 從叢集裡的現有主機選取配置。
+   * 選取新的 {{site.data.keyword.baremetal_short_sing}} 配置，然後指定 CPU 型號及 RAM 大小。
+9. 完成儲存空間配置。請指定容量及快取磁碟的磁碟類型、磁碟數目以及「vSAN 授權」版本。如果您要更多儲存空間，請勾選**高效能 Intel Optane** 方框。
+10. 檢閱預估成本，然後按一下**新增**。
+
+  您也可以按一下**新增至預估**，將佈建的資源新增至 {{site.data.keyword.cloud_notm}} 預估工具。這適用於您想要預估所選取 {{site.data.keyword.vmwaresolutions_short}} 資源與可能考慮購買之其他 {{site.data.keyword.cloud_notm}} 資源的成本時。
 
 ### 新增 ESXi 伺服器之後的結果
 {: #vc_hybrid_addingremovingservers-adding-results}

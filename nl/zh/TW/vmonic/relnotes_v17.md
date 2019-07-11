@@ -29,7 +29,7 @@ subcollection: vmware-solutions
 * VMware vCenter Server 6.0u3b
 * VMware Security Patch 6.0 EP7c
 * IBM CloudDriver 元件的穩定性改善
-* 在升級時位於 V3 伺服器的預先存在的 VMware 部署上，已啟用 EVC 模式（基於 Intel "Haswell" 2690-V3 處理器）。
+* 在升級時位於 V3 伺服器的預先存在的 VMware 部署上，已啟用 EVC 模式（根據 Intel "Haswell" 2690-V3 處理器）。
 
   V4 伺服器上的任何現有部署或新部署，都未啟用 EVC 模式。
   {:note}

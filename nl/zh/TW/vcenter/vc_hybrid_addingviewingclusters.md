@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-18"
+lastupdated: "2019-06-13"
+
+keywords: vCenter Server Hybridity add cluster, view cluster vCenter Server Hybridity, delete cluster vCenter Server Hybridity
 
 subcollection: vmware-solutions
 
@@ -123,7 +125,9 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。請指
 ### 訂單摘要
 {: #vc_hybrid_addingviewingclusters-adding-order-summary}
 
-根據您選取的叢集配置，預估成本會立即產生並顯示在**訂單摘要**右窗格中。
+根據您選取的叢集配置，預估成本會立即產生並顯示在**訂單摘要**右窗格中。按一下**定價詳細資料**，以產生具有 {{site.data.keyword.vmwaresolutions_short}} 資源文件摘要的 PDF 文件。
+
+您也可以按一下**新增至預估**，將佈建的資源新增至 {{site.data.keyword.cloud_notm}} 預估工具。這適用於您想要預估所選取 {{site.data.keyword.vmwaresolutions_short}} 資源與可能考慮購買之其他 {{site.data.keyword.cloud_notm}} 資源的成本時。
 
 ## 將叢集新增至 vCenter Server with Hybridity Bundle 實例的程序
 {: #vc_hybrid_addingviewingclusters-adding-procedure}

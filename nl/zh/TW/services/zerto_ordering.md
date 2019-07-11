@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-09"
+lastupdated: "2019-06-18"
+
+keywords: Zerto, Zerto replication billing, order Zerto
 
 subcollection: vmware-solutions
 
@@ -20,6 +22,21 @@ subcollection: vmware-solutions
 
 您可以在訂購包含服務的新實例時，同時訂購 Zerto on {{site.data.keyword.cloud}} 服務，或將服務新增至現有實例。
 
+## 針對 Zerto 抄寫的計費
+{: #zerto_ordering-billing}
+
+使用 Zerto 抄寫的 VM 會由 Zerto 和 {{site.data.keyword.cloud_notm}} 計量。此用量的帳單將透過 {{site.data.keyword.cloud_notm}} 計費帳戶（而不是 {{site.data.keyword.cloud_notm}} 基礎架構帳戶）收費。
+
+在訂購 Zerto on {{site.data.keyword.cloud_notm}} 之前，請確保您的 {{site.data.keyword.cloud_notm}} 帳戶是計費帳戶，並且該帳戶已鏈結到部署實例的 {{site.data.keyword.cloud_notm}} 基礎架構帳戶。 
+
+如果您有來自 3.0 版或更低版本的 Zerto on {{site.data.keyword.cloud_notm}} 安裝，則您的 VM 抄寫成本仍將使用 {{site.data.keyword.cloud_notm}} 基礎架構計費來進行計算。如果您的帳戶和計費設定符合先前列出的需求，則可以將 Zerto 計費方法轉換為可計費。
+
+在 {{site.data.keyword.vmwaresolutions_short}} 主控台上，系統會提示您將 {{site.data.keyword.cloud_notm}} 基礎架構方案轉換為計費方案，並根據需要將 {{site.data.keyword.cloud_notm}} 帳戶升級到計費帳戶。
+
+* 如需免費和計費帳戶的資訊，請參閱[帳戶類型](/docs/account?topic=account-accounts)。
+* 如需升級到計費帳戶的資訊，請參閱[升級帳戶](/docs/account?topic=account-upgrading-account)。
+* 如需鏈結 {{site.data.keyword.cloud_notm}} 和 {{site.data.keyword.cloud_notm}} 基礎架構帳戶的資訊，請參閱[切換至 IBM ID 並鏈結帳戶](/docs/account?topic=account-unifyingaccounts)。
+
 ## 為新實例訂購 Zerto on IBM Cloud
 {: #zerto_ordering-new}
 
@@ -31,10 +48,10 @@ subcollection: vmware-solutions
 {: #zerto_ordering-existing}
 
 您可以使用下列其中一種方法，將 Zerto on {{site.data.keyword.cloud_notm}} 服務新增至現有實例：
-* 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，檢視您要為其新增服務的實例，按一下左導覽窗格上的**服務**，然後按一下**新增**。
+* 在 {{site.data.keyword.vmwaresolutions_short}} 主控台中，檢視要為其新增服務的實例，按一下左側導覽窗格上的**服務**，然後按一下**新增**。
 * 從 {{site.data.keyword.cloud_notm}} 型錄中，選取 **Zerto on IBM Cloud**，指定服務設定，然後選取**新增至現有實例**。
 
-如果您將 Zerto for {{site.data.keyword.cloud_notm}} 新增至具有處於維護模式的 ESXi 伺服器的 vCenter Server 實例，您必須使用 Zerto Virtual Manager (ZVM) 主控台及預先移入的 Zerto Virtual Replication Appliance (VRA) IP 位址來手動部署 VRA 虛擬機器 (VM)。
+如果將 Zerto on {{site.data.keyword.cloud_notm}} 新增到具有處於維護模式的 ESXi 伺服器的 vCenter Server 實例中，則您必須使用 Zerto Virtual Manager (ZVM) 主控台和預先移入的 Zerto Virtual Replication Appliance (VRA) IP 位址來手動部署 VRA 虛擬機器 (VM)。
 {:note}
 
 ## 為僅限專用實例訂購 Zerto on IBM Cloud

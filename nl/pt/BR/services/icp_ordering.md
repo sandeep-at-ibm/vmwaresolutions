@@ -4,14 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-01"
+lastupdated: "2019-06-14"
+
+keywords: IBM Cloud Private Hosted, ICP configuration, order Cloud Private
 
 subcollection: vmware-solutions
 
 
 ---
 
-# Solicitando o IBM Cloud Private Hosted
+# Pedindo o IBM Cloud Private Hosted
 {: #icp_ordering}
 
 É possível pedir o serviço {{site.data.keyword.cloud}} Private Hosted ao pedir uma nova instância com o serviço incluído ou incluindo o serviço em sua instância existente.

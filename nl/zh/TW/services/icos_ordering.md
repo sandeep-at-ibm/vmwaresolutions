@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-13"
+lastupdated: "2019-06-18"
+
+keywords: IBM Cloud Object Storage, ICOS configuration, order Cloud Object Storage
 
 subcollection: vmware-solutions
 
@@ -18,7 +20,7 @@ subcollection: vmware-solutions
 # 訂購及配置 IBM Cloud Object Storage 與 Veeam
 {: #icos_ordering}
 
-推出 Veeam Availability Suite 9.5 Update 4 後，Veeam 即可與 IBM Cloud Object Storage (ICOS) 相容。在 IBM Cloud 上訂購 Veeam 時，並不會自動訂購 IBM Cloud Object Storage，但在部署之後可以新增它。
+推出 Veeam Availability Suite 9.5 Update 4 後，Veeam 即可與 IBM Cloud Object Storage (ICOS) 相容。訂購 Veeam on IBM Cloud 時，不會自動訂購 IBM Cloud Object Storage，但可以在部署後新增 IBM Cloud Object Storage。
 
 若要訂購 IBM Cloud Object Storage，請依指定的順序完成下列作業。
 
@@ -40,12 +42,14 @@ subcollection: vmware-solutions
 ## 新增橫向擴充儲存庫
 {: #icos_ordering-scale-repo}
 
-若要在 Veeam 內新增橫向擴充儲存庫，請參閱[新增橫向擴充儲存庫](https://helpcenter.veeam.com/docs/backup/vsphere/sobr_add.html?ver=95u4){:new_window}。請遵循這些步驟並回到本節，以繼續執行下列作業。
+* 作為 Veeam 服務安裝和配置的一部分，將建立一個名為 `IC4V 橫向擴充儲存庫`的橫向擴充備份儲存庫。`IC4V 預設 VM 備份儲存庫`將作為範圍新增到橫向擴充儲存庫。
+* 建立備份工作時，必須選取 `IC4V 橫向擴充儲存庫`作為備份儲存庫，而不是選取 `IC4V 預設配置備份儲存庫`。IC4V 預設配置備份儲存庫是用於 Veeam 配置備份。
+* 您可以將更多儲存庫新增到此預設儲存庫，例如，類型為 Object Storage 的備份儲存庫。如需相關資訊，請參閱 [Adding Scale-Out Repositories](https://helpcenter.veeam.com/docs/backup/vsphere/sobr_add.html?ver=95u4){:new_window}。請遵循這些步驟並回到本節，以繼續執行下列作業。
 
 ## 維護及管理雲端層級
 {: #icos_ordering-manage-cloud}
 
-如需維護及管理雲端層級的相關資訊，請參閱[管理容量層級資料](https://helpcenter.veeam.com/docs/backup/vsphere/capacity_tier_managing_data.html?ver=95u4){:new_window}。
+如需相關資訊，請參閱 [Managing Capacity Tier Data](https://helpcenter.veeam.com/docs/backup/vsphere/capacity_tier_managing_data.html?ver=95u4){:new_window}。
 
 ## 相關鏈結
 {: #icos_ordering-related}

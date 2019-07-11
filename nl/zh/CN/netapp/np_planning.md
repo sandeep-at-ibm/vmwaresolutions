@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-06-13"
+
+keywords: planning NetApp ONTAP, data center, NetApp data centers
 
 subcollection: vmware-solutions
 
@@ -19,7 +21,7 @@ subcollection: vmware-solutions
 ## IBM Cloud 帐户需求
 {: #np_planning-account-req}
 
-要使用的 {{site.data.keyword.cloud_notm}} 帐户必须满足特定需求。有关更多信息，请参阅 [{{site.data.keyword.cloud_notm}} 帐户需求](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)。
+要使用的 {{site.data.keyword.cloud_notm}} 帐户必须满足特定需求。有关更多信息，请参阅 [{{site.data.keyword.cloud_notm}} 帐户需求](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req)。
 
 ## IBM Cloud Data Center 可用性
 {: #np_planning-dc-availability}

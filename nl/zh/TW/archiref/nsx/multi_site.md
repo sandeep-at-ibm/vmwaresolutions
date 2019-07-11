@@ -14,7 +14,7 @@ subcollection: vmware-solutions
 # 多站台架構
 {: #nsx-multi_site}
 
-{{site.data.keyword.cloud}} 與其他雲端供應項目之間的一個關鍵差異因子，在於全球佈建專用運算功能並自動將隨需應變基礎架構連接至專用 {{site.data.keyword.cloud_notm}} 帳戶內之網路的能力。VMware vCenter Server 的軟體定義網路功能與 {{site.data.keyword.cloud_notm}} 一起，提供了可在數天內建置的精細廣域基礎架構。下列各節說明一個多站台架構的範例，它說明使用 vCenter Server 的現成功能可以實現的目標。
+{{site.data.keyword.cloud}} 與其他雲端供應項目之間的一個關鍵差異因子，在於全球佈建專用運算功能並自動將隨需應變基礎架構連接至專用 {{site.data.keyword.cloud_notm}} 帳戶內之網路的能力。VMware vCenter Server 的軟體定義網路功能，結合 {{site.data.keyword.cloud_notm}}，提供了可在數天內建置的精細廣域基礎架構。下列各節說明一個多站台架構的範例，它說明使用 vCenter Server 的現成功能可以實現的目標。
 
 ## 跨 vCenter NSX 環境
 {: #nsx-multi_site-cross-env}

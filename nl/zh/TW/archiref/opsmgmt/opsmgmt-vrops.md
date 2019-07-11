@@ -4,30 +4,30 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-17"
+lastupdated: "2019-06-03"
 
 ---
 
 # vRealize Operations Manager 設計
 {: #opsmgmt-vrops}
 
-vROps 分析叢集包含的節點，會分析及儲存來自受監視元件的資料，且在此部署中，會部署四個節點和兩個 NSX 負載平衡器。此大小容許監視最多 30,000 台 VM，以及收集最多 9,000,000 個度量值。
+vROps 分析叢集包含的節點，會分析及儲存來自受監視元件的資料，且在此部署中，會部署四個節點和兩個 NSX 負載平衡器。此大小容許監視多達 30,000 個 VM，收集 9,000,000 個度量。
 
-4 個節點的分析叢集由下列各項組成：
+4 節點分析叢集包含下列元件：
 * 主節點 - 主節點是 vROps 叢集裡的起始節點。在大型環境中，此節點會管理所有其他節點。
 * 主節點抄本 - 此節點會啟用主節點的高可用性。
 * 資料節點 - 資料節點在較大環境中能啟用 vROps 的橫向擴充，在此設計中會部署兩個資料節點。
 
-此外，設計還使用充當 Proxy/中繼伺服器的「遠端收集器節點」，以便只收集資料，並將收集的資料轉遞至主節點/資料節點。可以新增資料節點和遠端收集器，以根據環境大小進行擴增。vROps 元件放置在 VLAN/VXLAN 上的位置如下圖所示。
+此外，此設計使用遠端收集器節點，這些節點充當代理/中繼伺服器，用於僅收集資料並將收集的資料轉遞到主節點/資料節點。可以新增資料節點和遠端收集器，以根據環境大小進行擴增。vROps 元件放置在 VLAN/VXLAN 上的位置如下圖所示。
 
 ![Operations Manager 網路圖](../../images/opsmgmt-vropsnw.svg "Operations Manager 網路圖"){: caption="圖 1. Operations Manager 網路" caption-side="bottom"}
 
-* 主節點、主節點抄本及資料節點是使用 {{site.data.keyword.cloud_notm}} 可攜式 IP 位址部署在工具子網路上，以方便和定址在 {{site.data.keyword.cloud_notm}} RFC1918 位址空間之外的所有元件進行通訊，包括 vSphere 主機、vCenter、Platform Services Controller、NSX Manager 及 NSX Controller。NSX Load Balancer 與 VIP 搭配使用以獲得 HA。
+* 主節點、主節點抄本和資料節點使用 {{site.data.keyword.cloud_notm}} 可攜式 IP 位址部署在工具子網路上，以有利於與其位址屬於 {{site.data.keyword.cloud_notm}} RFC1918 位址空間的所有元件進行通訊，這些元件包括 vSphere 主機、vCenter、平台 Services Controller、NSX Manager 和 NSX Controller。NSX Load Balancer 與 VIP 搭配使用以獲得 HA。
 * 當客戶工作負載使用來自 BYOIP 位址空間的 IP 定址時，這個設計會使用 VXLAN 中管理的「遠端收集器」。這些遠端收集器並未在 {{site.data.keyword.vmwaresolutions_full}} 自動化過程中配置，而且必須由客戶手動實作。
 
 ![Operations Manager 元件圖](../../images/opsmgmt-vropscomponent.svg "Operations Manager 元件圖"){: caption="圖 2. Operations Manager 元件" caption-side="bottom"}
 
-vROps 分析叢集的存取方式是利用管理使用者介面或使用 API，並且它已整合至下列各項：
+vROps 分析叢集可使用管理使用者介面或使用 API 進行存取，並與下列元件相整合：
 * vCenter
 * vRealize Log Insight
 
@@ -37,15 +37,15 @@ vROps 分析叢集的存取方式是利用管理使用者介面或使用 API，�
 
 vROps 會從下列項目收集資料：
 * vSphere - vCenter、Platform Services Controller、vSphere 主機
-* NSX - NSX Manager、NSX Controller 及 NSX Edge
+* NSX - NSX Manager、NSX Controller 和 NSX Edge
 * vRLI
 
-客戶可以手動配置 vROps 以收集來自 vRealize Automation 及 vRealize Business for Cloud 的資料。
+用戶端可以手動將 vROps 配置為從 vRealize Automation 和 vRealize Business for Cloud 收集資料。
 
 ## 系統需求
 {: #opsmgmt-vrops-requirements}
 
-分析叢集包含一個主節點、一個主節點抄本節點，以及兩個資料節點，以便啟用橫向擴充和高可用性。額外的資料節點會新增以進行擴增。分析叢集可以擴充至最多 8 個中型大小的節點。
+分析叢集由一個主節點、一個主節點抄本節點和兩個資料節點組成，支持橫向擴充和高可用性。額外的資料節點會新增以進行擴增。分析叢集最多可擴充為具有八個中等大小的節點。
 
 表 1. Operations Manager 主節點/抄本節點系統設定
 
@@ -78,20 +78,21 @@ vROps 會從下列項目收集資料：
 | URL | /suite-api/api/deployment/node/status | -- |
 |接收| ONLINE | -- |
 | 演算法   | ROUND-ROBIN | LEASTCONN |
-|儲存區| 4 個 vROps 節點| 4 個 vROps 節點|
+|儲存區|四個 vROps 節點|四個 vROps 節點|
 
-如需相關資訊，請參閱 [vRealize Automation Load Balancing (PDF)](https://docs.vmware.com/en/vRealize-Automation/7.5/vrealize-automation-load-balancing.pdf){:new_window}。
+如需相關資訊，請參閱 [vRealize Automation Load Balancing (PDF)](https://docs.vmware.com/en/vRealize-Automation/7.5/vrealize-automation-load-balancing.pdf)
+{:new_window}.
 
 ## 網路
 {: #opsmgmt-vrops-network}
 
-部署 vROps 應用裝置需要來自工具專用可攜式子網路的六個 IP 位址。網路連線功能 vROps 需要存取：
+部署 vROps 應用裝置需要工具專用可攜式子網路中的六個 IP 位址。網路連線功能 vROps 需要存取：
 * vCenter 應用裝置
 * vRealize Log Insight 應用裝置
 * NSX-V/T 應用裝置
 * 工具擴充 VXLAN
 * 客戶網路
-* NTP 伺服器 (time.services.softlayer.com)
+* NTP 伺服器 (`time.services.softlayer.com`)
 * {{site.data.keyword.vmwaresolutions_short}} Active Directory/DNS
 * 「遠端收集器」需要 NSX ESG 上的 NAT 規則啟用與「主節點」、「主節點抄本」及「資料節點」的連線
 
@@ -175,7 +176,7 @@ VMware SDDC Health Management Pack 提供下列儀表板：
 * SDDC Health Historic Trend 儀表板 - VMware SDDC Health Management Pack 包含 SDDC Health Historic Trend 儀表板，它會顯示 SDDC 堆疊中每個元件的性能趨勢。
 * SDDC vRealize Operations Manager Sizing 儀表板 - SDDC vRealize Operations Manager Sizing 儀表板提供 vRealize Operations Manager 叢集容量，以便處理物件和度量值。
 
-VMware SDDC Health Management Pack 中的外掛程式會收集外掛程式所包含之物件類型的度量值。此管理套件會收集下列各項的性能度量值：
+VMware SDDC Health Management Pack 中的外掛程式可收集這些外掛程式中包含的物件類型的度量。Management Pack 可收集下列元件的性能度量：
 * vCenter Server
 * Management Pack for NSX for vSphere
 * vRealize Automation
@@ -223,7 +224,7 @@ vRealize Operations Management Pack for HCX 會將 vROps 的作業管理功能�
 * [vRealize Operations Manager 7.0 Sizing Guidelines](https://kb.vmware.com/s/article/57903){:new_window}
 * [vRealize Operations Manager 說明文件](https://docs.vmware.com/en/vRealize-Operations-Manager/index.html){:new_window}
 * [Management Pack for vSAN](https://marketplace.vmware.com/resources/vsx/product_files/31742/original/Management-Pack-for-vSAN-Guide6d2a8895b022a5f626a86e8e84b031b5.pdf){:new_window}
-* [檢閱更新 vSAN 叢集指示](https://cloud.ibm.com/docs/services/vmwaresolutions/archiref/vum/vum-updating-vsan.html#updating-vsan-clusters){:new_window}
+* [檢閱更新 vSAN 叢集指示](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vsan)
 * [Management-Pack-for-vSAN-Guide](https://marketplace.vmware.com/resources/vsx/product_files/31742/original/Management-Pack-for-vSAN-Guide6d2a8895b022a5f626a86e8e84b031b5.pdf){:new_window}
 * [vSAN Health Check Information](https://kb.vmware.com/s/article/2114803){:new_window}
 * [Operationalizing VMware NSX](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/products/nsx/vmware-operationalizing-nsx.pdf){:new_window}

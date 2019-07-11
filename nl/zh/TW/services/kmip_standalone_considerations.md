@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-14"
+
+keywords: KMIP for VMware, KMIP stand-alone, tech specs KMIP
 
 subcollection: vmware-solutions
 
@@ -48,7 +50,7 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} 服務隨附下列規格：
    * 您具有適用於所建立服務 ID 的 API 金鑰。當您訂購服務時，需要此金鑰。
    * 您已使用 Key Protect 或 HPCS 的 GUI 或 API 建立至少一個客戶根金鑰 (CRK)：
       * 如需使用 Key Protect GUI 或 API 建立根金鑰的相關資訊，請參閱[建立根金鑰](/docs/services/key-protect?topic=key-protect-create-root-keys#create-root-keys)或 [IBM Key Protect API](https://cloud.ibm.com/apidocs/key-protect)。
-      * 如需使用 HPCS GUI 或 API 建立根金鑰的相關資訊，請參閱[建立根金鑰](/docs/hs-crypto/get-started?topic=hs-crypto-create-root-keys)或 [IBM Cloud Hyper Protect Crypto Services API](https://cloud.ibm.com/apidocs/hp-crypto)。
+      * 如需使用 HPCS GUI 或 API 建立根金鑰的相關資訊，請參閱[建立根金鑰](/docs/hs-crypto/get-started?topic=hs-crypto-create-root-keys)或 [IBM Cloud Hyper Protect Crypto Services API](https://cloud.ibm.com/apidocs/hs-crypto)。
 
      **重要事項：**沒有 CRK 就無法訂購服務。強烈建議您使用下列方法：使用現有金鑰資料建立 CRK，並備份您要建立的金鑰資料。這樣做，即可確保您可在套用 Key Protect 或 HPCS 以儲存您 CRK 的資料中心故障時回復金鑰。
 * 請確定啟用 {{site.data.keyword.cloud_notm}} 基礎架構帳戶來進行「虛擬遞送及轉遞 (VRF)」以及連接至「服務端點」。如需相關資訊，請參閱：

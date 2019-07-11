@@ -33,7 +33,7 @@ subcollection: vmware-solutions
 
 在實例部署期間，由 IBM 部署 Management NSX Edge Services Gateway (ESG)。IBM 管理虛擬機器會利用此 ESG，來和與自動化相關的特定外部 IBM 管理元件進行通訊。所部署的這個 ESG 包括兩個介面：一個介面連接至 {{site.data.keyword.cloud_notm}} 專用 VLAN，另一個介面連接至 {{site.data.keyword.cloud_notm}} 公用 VLAN。
 
-為了確保安全，已設置防火牆規則，僅容許管理虛擬機器所起始的出埠 HTTPS 通訊。這個 ESG 部署在「大型」配置中，只有「IBM 支援中心」才能修改此配置。
+為了確保安全，已設定防火牆規則，僅容許管理虛擬機器所起始的出埠 HTTPS 通訊。這個 ESG 部署在「大型」配置中，只有「IBM 支援中心」才能修改此配置。
 
 如需相關資訊，請參閱下列主題：
 * [管理服務 NSX Edge 是否造成安全風險？](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#faq-mgmt-nsx)

@@ -19,25 +19,19 @@ vSphere
 度量值
 </text></g><g fill="#000000" font-family="Helvetica" text-anchor="middle" font-size="12px"><text x="147" y="136">
 連接
-</text></g><rect x="462" y="120" width="60" height="44" fill="#dae8fc" stroke="#6c8ebf" pointer-events="none"/><g fill="#000000" font-family="Helvetica" text-anchor="middle" font-size="12px">
-<text x="492" y="145.5">
+</text></g><rect x="462" y="120" width="60" height="44" fill="#dae8fc" stroke="#6c8ebf" pointer-events="none"/><g fill="#000000" font-family="Helvetica" text-anchor="middle" font-size="12px"><text x="491.5" y="145.5">
 工作者節點
-</text></g><rect x="392" y="66.5" width="60" height="44" fill="#dae8fc" stroke="#6c8ebf" pointer-events="none"/><g fill="#000000" font-family="Helvetica" text-anchor="middle" font-size="12px">
-<text x="421.5" y="92">主節點
-</text></g><rect x="217.5" y="190" width="415" height="40" fill="#e1d5e7" stroke="#9673a6" pointer-events="none"/><g fill="#000000" font-family="Helvetica" text-anchor="middle" font-size="12px">
-<text x="424.5" y="213.5">內容套件
+</text></g><rect x="392" y="66.5" width="60" height="44" fill="#dae8fc" stroke="#6c8ebf" pointer-events="none"/><g fill="#000000" font-family="Helvetica" text-anchor="middle" font-size="12px"><text x="421.5" y="92">主節點
+</text></g><rect x="217.5" y="190" width="415" height="40" fill="#e1d5e7" stroke="#9673a6" pointer-events="none"/><g fill="#000000" font-family="Helvetica" text-anchor="middle" font-size="12px"><text x="424.5" y="213.5">內容套件
 </text></g><rect x="735" y="150" width="175" height="40" fill="#dae8fc" stroke="#6c8ebf" pointer-events="none"/><g fill="#000000" font-family="Helvetica" text-anchor="middle" font-size="12px"><text x="822" y="173.5">
 vRealize Operations Manager
 </text></g><rect x="735" y="200" width="175" height="40" fill="#dae8fc" stroke="#6c8ebf" pointer-events="none"/><g fill="#000000" font-family="Helvetica" text-anchor="middle" font-size="12px"><text x="822" y="223.5">
 vRealize Network Insights
 </text></g><rect x="735" y="250" width="175" height="40" fill="#dae8fc" stroke="#6c8ebf" pointer-events="none"/><g fill="#000000" font-family="Helvetica" text-anchor="middle" font-size="12px"><text x="822" y="273.5">
 ESXi
-</text></g><rect x="462" y="66.5" width="60" height="44" fill="#dae8fc" stroke="#6c8ebf" pointer-events="none"/><g fill="#000000" font-family="Helvetica" text-anchor="middle" font-size="12px">
-<text x="492" y="92">工作者節點
-</text></g><rect x="392" y="120" width="60" height="44" fill="#dae8fc" stroke="#6c8ebf" pointer-events="none"/><g fill="#000000" font-family="Helvetica" text-anchor="middle" font-size="12px">
-<text x="422" y="145.5">工作者節點
-</text></g><rect x="313" y="90" width="100" height="55" fill="#d5e8d4" stroke="none" transform="rotate(-90,363,117.5)" pointer-events="none"/><g fill="#000000" font-family="Helvetica" text-anchor="middle" font-size="12px" transform="rotate(-90,363,117.5)">
-<text x="362.5" y="107">整合式
+</text></g><rect x="462" y="66.5" width="60" height="44" fill="#dae8fc" stroke="#6c8ebf" pointer-events="none"/><g fill="#000000" font-family="Helvetica" text-anchor="middle" font-size="12px"><text x="491.5" y="92">工作者節點
+</text></g><rect x="392" y="120" width="60" height="44" fill="#dae8fc" stroke="#6c8ebf" pointer-events="none"/><g fill="#000000" font-family="Helvetica" text-anchor="middle" font-size="12px"><text x="421.5" y="145.5">工作者節點
+</text></g><rect x="313" y="90" width="100" height="55" fill="#d5e8d4" stroke="none" transform="rotate(-90,363,117.5)" pointer-events="none"/><g fill="#000000" font-family="Helvetica" text-anchor="middle" font-size="12px" transform="rotate(-90,363,117.5)"><text x="362.5" y="107">整合式
 </text><text x="362.5" y="121">負載
 </text><text x="362.5" y="135">平衡器
 </text></g></g></svg>

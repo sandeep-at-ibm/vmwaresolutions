@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-05-28"
+
+keywords: troubleshooting, Zerto Virtual Replication, Zerto ESXi server
 
 subcollection: vmware-solutions
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-11"
 
 subcollection: vmware-solutions
 
@@ -24,7 +24,7 @@ subcollection: vmware-solutions
   <dt class="dt dlterm">實體運算</dt>
   <dd class="dd">實體運算提供虛擬化基礎架構所使用的實體處理及記憶體。在此設計中，運算元件由 {{site.data.keyword.baremetal_long}} 提供，並列在 [VMware Hardware Compatibility Guide (HCG)](https://www.vmware.com/resources/compatibility/search.php) 中。</dd>
   <dt class="dt dlterm">實體儲存空間</dt>
-  <dd class="dd">實體儲存空間提供虛擬化基礎架構所使用的原始儲存空間容量。儲存空間元件是由 {{site.data.keyword.baremetal_short}} 提供，或是由使用 NFS 第 3 版或 iSCSI 的共用「網路連接儲存空間 (NAS)」陣列所提供。</dd>
+  <dd class="dd">實體儲存空間提供虛擬化基礎架構所使用的原始儲存空間容量。儲存空間元件由 {{site.data.keyword.baremetal_short}} 或者由使用 NFS 第 3 版 <!-- or iSCSI -->的共用「網路連接的儲存空間」(NAS) 陣列提供。</dd>
   <dt class="dt dlterm">實體網路</dt>
   <dd class="dd">實體網路會提供與環境的網路連線功能，而之後網路虛擬化會使用該環境。網路由 {{site.data.keyword.cloud_notm}} 服務網路提供，並包含額外服務（例如 DNS 及 NTP）。</dd>
 </dl>
@@ -91,7 +91,7 @@ Bare Metal Server 的規格如下：
 
 {{site.data.keyword.cloud_notm}} 配置兩種類型的 IP 位址，以在 {{site.data.keyword.cloud_notm}} 基礎架構內使用：
 * 主要 IP 位址會被指派給 {{site.data.keyword.cloud_notm}} 所佈建的裝置、Bare Metal Server 及虛擬伺服器。不要指派這些區塊中的任何 IP 位址。
-* 我們提供了可攜式 IP 位址，供您視需要指派及管理。vCenter Server 會佈建數個可攜式 IP 範圍，以供其使用。僅使用指派給特定 NSX-T 或 NSX-V 元件的可攜式範圍，而這些元件是為了供客戶使用所指定的。例如，**客戶 EDGE**。
+* 我們提供了可攜式 IP 位址，供您視需要指派及管理。vCenter Server 會佈建數個可攜式 IP 範圍，以供其使用。對於指定供客戶使用的特定 NSX-T 或 NSX-V 元件，請僅使用指派給這些元件的可攜式範圍。例如，**客戶 EDGE**。
 
 當帳戶配置為**虛擬遞送及轉遞 (VRF)** 帳戶時，可以將主要或可攜式 IP 位址變成可遞送給您帳戶內的任何 VLAN。
 
@@ -107,7 +107,7 @@ Bare Metal Server 的規格如下：
 
 此設計中的每部實體主機都會有兩對備用的 10 Gbps 乙太網路連線，以連接至每台 {{site.data.keyword.cloud_notm}} Top of Rack (ToR) 交換器（公用和專用）。配接卡會設定為總共 4 個 10 Gbps 連線的個別連線（未結合）。這樣可讓網路介面卡 (NIC) 連線彼此獨立地運作。
 
-無法針對 vCenter Server 供應項目內使用的裸機伺服器，移除公用或專用網路的實體網路連線功能。可以停用裸機內部 NIC 上的實體埠，但不支援拔除纜線。
+無法移除與 vCenter Server 供應項目中使用的 Bare Metal Server 伺服器的公用或專用網路的實體網路連線功能。可以停用裸機內部 NIC 上的實體埠，但不支援拔除纜線。
 
 ![實體主機連線](../../images/vcsv4radiagrams-ra-physical-host-connections.svg "實體主機連線")
 
@@ -123,12 +123,12 @@ Bare Metal Server 的規格如下：
 * 第二個子網路用於管理虛擬機器（例如 vCenter Server Appliance 及 Platform Services Controller）。
 * 第三個子網路用於透過 NSX Manager 指派給每部主機的封裝層疊網路「通道端點 (VTEP)」。
 
-除了「專用 VLAN A」之外，還有第二個專用 VLAN（這裡指定為「專用 VLAN B」）存在，可以支援 VMware 特性（例如 vSAN、vMotion、NFS 及 iSCSI）。因此，VLAN 分為兩個、三個或四個可攜式子網路：
+除了「專用 VLAN A」外，還有另一個專用 VLAN（這裡指定為「專用 VLAN B」）存在，可以支援 vSAN、vMotion、NFS<!--, and iSCSI--> 等 VMware 特性。因此，VLAN 分為兩個、三個或四個可攜式子網路：
 * 第一個子網路會指派給 vMotion 資料流量用的核心埠群組。
 * 剩餘的子網路用於儲存空間資料流量：
    * 使用 vSAN 時，會將子網路指派給用於 vSAN 資料流量的核心埠群組。
    * 使用 NAS 連接的 NAS 時，會將子網路指派給 NFS 資料流量專用的埠群組。
-   * 對於 iSCSI 連接，會建立兩個埠群組，以容許在兩個專用 NIC 埠之間有多個主動-主動路徑，因為根據 VMware iSCSI 文件，一次只能有一個 NIC 埠作用中。
+<!--* For iSCSI attachment, two port groups are created to allow multipathing active-active across both private NIC ports as only one NIC port can be active at a time per the VMware iSCSI documentation.-->
 
 在 vCenter Server 自動化部署過程中配置的所有子網路，都會使用 {{site.data.keyword.cloud_notm}} 管理的範圍。這是要確保，在您現在或未來需要連線時，任何 IP 位址都可以遞送給 {{site.data.keyword.cloud_notm}} 帳戶內的任何資料中心。
 
@@ -138,14 +138,14 @@ Bare Metal Server 的規格如下：
 
 |VLAN      |類型      |說明              |
 |:---- |:---- |:----------- |
-| 公用 | 主要     | 指派給實體主機，以進行公用網路存取。在起始部署時不會使用。|
+| 公用 | 主要     | 指派給實體主機，以進行公用網路存取。會指派公用 IP 位址給主機，但這個 IP 位址不會在主機上配置，因此無法直接在公用網路上存取它們。相反地，公用 VLAN 是要為其他元件（例如 NSX Edge Services Gateway，ESG）提供公用網際網路存取。|
 | 專用 A    | 主要     | 指派給 {{site.data.keyword.cloud_notm}} 所指派之實體主機的單一子網路。由管理介面用於 vSphere 管理資料流量。|
-| 專用 A    | 可攜式   | 指派給充當管理元件之虛擬機器的單一子網路 |
+| 專用 A    | 可攜式   |指派給用作管理元件的虛擬機器的單一子網路|
 | 專用 A    | 可攜式   | 指派給 NSX-V 或 NSX-T VTEP 的單一子網路 |
 | 專用 B    | 可攜式   | 為 vSAN 指派的單一子網路（如果使用的話）|
 | 專用 B    | 可攜式   | 為 NAS 指派的單一子網路（如果使用的話）|
-| 專用 B    | 可攜式   | 為 iSCSI NAS 指派的兩個子網路（如果使用的話，每個實體 NIC 埠各一個）|
 | 專用 B    | 可攜式   | 為 vMotion 指派的單一子網路 |
+<!--| Private B | Portable | Two subnets assigned for iSCSI NAS, if in use (one per physical NIC port) |-->
 
 在此設計中，所有 VLAN 支援的主機及虛擬機器都會配置成指向 {{site.data.keyword.cloud_notm}} 後端「專用網路」客戶路由器 (BCR)，以作為預設路徑。雖然 vCenter Server 實例允許使用「軟體定義網路 (SDN)」，但是 {{site.data.keyword.cloud_notm}} 管理的路由器並無法辨識在 VMware 實例內所建立並且包含對內部子網路之遞送的網路層疊。
 
@@ -175,26 +175,29 @@ vSphere ESXi Hypervisor 會安裝在持續性位置中。因此，實體主機�
 
 使用共用檔案層次儲存空間時，會將一個 2 TB 的 NFS 共用連接至構成起始 VMware 叢集的主機。這個共用（稱為管理共用）會用於管理元件（例如 VMware vCenter Server、Platform Services Controller 及 VMware NSX）。
 
-儲存空間是從 IBM Cloud 使用 NFS 第 3 版通訊協定所連接，每個 GB 層次有 2 IOPS。IBM 會將以 16 K 區塊大小佈建的 IOP 層次正規化，讓較大的區塊大小可以看到下限，而較小的區塊大小可以看到上限。
+儲存空間使用 NFS v3 通訊協定以 2 IOPS/GB 層次從 IBM Cloud 進行連接。
 
 ![連接到 VMware 部署的 NFS 共用](../../images/vcsv4radiagrams-ra-nfs-shares.svg "連接到 VMware 部署的 NFS 共用：管理共用和客戶指定的共用")
 
-您可以在購買時或之後在主控台內，針對工作負載在所有主機上配置及裝載更多檔案共用。您可以從對應 {{site.data.keyword.CloudDataCent_notm}} 的可用「{{site.data.keyword.cloud_notm}} 耐久性」檔案儲存空間容量選項及效能層級中進行選取。所有共用都是使用 NFS 第 3 版通訊協定進行連接。此外，套用 NetApp ONTAP Select 供應項目，即可連接 NFS 第 3 版檔案共用。
+您可以在購買時或之後在主控台內，針對工作負載在所有主機上配置及裝載更多檔案共用。您可以從對應 {{site.data.keyword.CloudDataCent_notm}} 的可用「{{site.data.keyword.cloud_notm}} 耐久性」檔案儲存空間容量選項及效能層級中進行選取。所有共用均使用 NFS v3 通訊協定進行連接。此外，套用 NetApp ONTAP Select 供應項目，即可連接 NFS 第 3 版檔案共用。
 
 10 IOPS/GB 的可用性視 IBM Cloud Data Center 而定。提供 10 IOPS/GB 效能層級的 {{site.data.keyword.CloudDataCents_notm}} 也包含由提供者管理的靜態資料加密（AES-256 加密），並且由全快閃記憶體儲存空間加以備份。10 IOPS/GB 效能層級的容量上限為 4 TB。如需此解決方案中使用之共用 NAS 的相關資訊，請參閱[共用儲存空間架構](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits)。
 
-### 共用 iSCSI 儲存空間
+<!--
+### Shared iSCSI storage
 {: #design_physicalinfrastructure-shared-iscsi}
 
-類似於 NFS，如需共用 iSCSI 儲存空間，會將一個 2 TB iSCSI LUN 連接至構成起始 VMware 叢集的主機。這個 iSCSI LUN 用於管理元件（例如 VMware vCenter Server、Platform Services Controller 及 VMware NSX）。儲存空間是從 IBM Cloud 透過 iSCSI 通訊協定所連接，每個 GB 層次有 2 IOPs。
+This architecture allows you to use iSCSI storage, however iSCSI storage is not automatically provisioned by IBM Cloud for VMware Solutions. You can provision it manually.
 
-IBM 會將以 16 K 區塊大小佈建的 IOP 層次正規化，讓較大的區塊大小可以看到下限，而較小的區塊大小可以看到上限。
+Similar to NFS, for shared iSCSI storage, one 2-TB iSCSI LUN will be attached to the hosts that comprise the initial VMware cluster. This iSCSI LUN is used for management components such as the VMware vCenter Server, Platform Services Controller, and VMware NSX. The storage is attached through the iSCSI protocol at a 2 IOPS/GB level from IBM Cloud.
 
-![連接到 VMware 部署的 iSCSI LUN](../../images/vcsv4radiagrams-ra-iscsi-lun.svg "連接到 VMware 部署的 iSCSI LUN")
+![iSCSI LUNs attached to VMware deployment](../../images/vcsv4radiagrams-ra-iscsi-lun.svg "iSCSI LUNs attached to VMware deployment"){: caption="Figure 5. iSCSI LUNs attached to VMware deployment" caption-side="bottom"}
 
-也可以在購買時或之後在主控台內，針對工作負載在所有主機上配置及裝載額外的 iSCSI LUN。在對應的 IBM Cloud Data Center 中，從可用的「IBM Cloud 耐久性」區塊儲存空間容量選項及效能層級中進行選取。所有 LUN 都是使用 iSCSI 通訊協定進行連接。此外，可從 NetApp ONTAP Select 供應項目連接 iSCSI LUN。
+Additional iSCSI LUNs for workloads can also be allocated and mounted across all hosts. Select from the available IBM Cloud Endurance block storage capacity options and performance tiers in the corresponding IBM Cloud Data Center. All LUNs are attached by using the iSCSI protocol. Additionally, it is possible to attach iSCSI LUNs from the NetApp ONTAP Select offering.
 
-10 IOPS/GB 的可用性視 IBM Cloud Data Center 而定。提供 10 IOPS/GB 效能層級的資料中心也包括提供者管理的靜態資料加密（AES–256 加密），並由全快閃記憶體儲存空間支援。10 IOPS/GB 效能層級的容量上限為 4 TB。
+The availability of the 10 IOPS/GB depends on the IBM Cloud Data Center. Data centers that offer the 10 IOPS/GB performance tier also include provider–managed encryption of data at rest (AES–256 encryption), and are backed by all–flash storage. The 10 IOPS/GB performance tier is limited to a maximum capacity of 4 TB.
+
+-->
 
 如需此解決方案中使用之共用 NAS 的相關資訊，請參閱[共用儲存空間架構](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits)。
 

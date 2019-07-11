@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-02"
+lastupdated: "2019-05-27"
+
+keywords: vCenter Server Hybridity multi-site, multi-site configuration Hybridity, multi-site deployment vCenter Server Hybridity
 
 subcollection: vmware-solutions
 
@@ -15,7 +17,7 @@ subcollection: vmware-solutions
 {:note: .note}
 {:important: .important}
 
-# Configuração multissite para instâncias do vCenter Server with Hybridity Bundle
+# Configuração multisite para instâncias do vCenter Server with Hybridity Bundle
 {: #vc_hybrid_multisite}
 
 O {{site.data.keyword.vmwaresolutions_full}} permite que as instâncias sejam implementadas em locais diferentes e fiquem funcionais em pouco tempo.

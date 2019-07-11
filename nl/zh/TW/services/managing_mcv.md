@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-06-18"
+
+keywords: Mission Critical VMware, request Mission Critical, IBM consultation
 
 subcollection: vmware-solutions
 
@@ -19,7 +21,7 @@ subcollection: vmware-solutions
 3. 在 Mission Critical VMware on {{site.data.keyword.cloud_notm}} 頁面上的**洽詢 Mission Critical VMware 相關事項**方框中，按一下**要求商議**。
 4. 在「IBM 服務專家中心」頁面上按一下**排定商議時間**，向服務專家預約 30 分鐘的諮詢時間。
 
-Mission Critical VMware on {{site.data.keyword.cloud_notm}} 業務代表將會使用您的聯絡資訊來與您聯絡，以協助提供您所需的解決方案。
+  {{site.data.keyword.vmwaresolutions_short}} 業務代表將會使用您的 {{site.data.keyword.cloud_notm}} 聯絡資訊來與您聯絡，以協助提供您所需的解決方案。
 
 ## 相關鏈結
 {: #managing_mcv-related}

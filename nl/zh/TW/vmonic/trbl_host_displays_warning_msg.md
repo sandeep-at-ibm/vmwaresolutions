@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-28"
+
+keywords: troubleshooting, configuration issue, ESXi server issue
 
 subcollection: vmware-solutions
 
@@ -28,4 +30,4 @@ subcollection: vmware-solutions
 ## 解決方法
 {: #trbl_host_displays_warning_msg-resolution}
 
-這是 VMware 已知問題。如果要解決這個問題，請遵循 [ESX/ESXi host displays warning message when test condition is false (2008602)](https://kb.vmware.com/s/article/2008602){:new_window} 中的指示。
+這是 VMware 已知問題。若要解決這個問題，請遵循 [ESX/ESXi host displays warning message when test condition is false (2008602)](https://kb.vmware.com/s/article/2008602){:new_window} 中的指示。

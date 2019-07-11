@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-17"
 
 subcollection: vmware-solutions
 
@@ -116,43 +116,13 @@ As configurações da vSAN são configuradas com base nas melhores práticas par
 ## Armazenamento conectado ao NFS
 {: #design_virtualinfrastructure-nfs-storage}
 
-Ao usar o armazenamento conectado à rede NFS, essa arquitetura prescreve o uso do NFS v3 em vez do NFS v4.1, pois as migrações LIF do servidor NFS podem causar latência excessiva ao usar o NFS v4.1. Cada host vSphere é conectado ao armazenamento NFS usando seu nome do host.
+Ao usar o armazenamento conectado à rede NFS, essa arquitetura prescreve o uso do NFS v3 em vez do NFS v4.1, porque as migrações LIF do servidor NFS podem causar latência excessiva ao usar o NFS v4.1. Cada host do vSphere é conectado ao armazenamento NFS usando seu nome de host.
 
-Um armazenamento de dados NFS de 2 TB é conectado a um cluster para uso por componentes de gerenciamento com uma camada de desempenho de 4 IOPS/GB. Armazenamentos de dados adicionais podem ser conectados a um cluster para uso de carga de trabalho, em uma variedade de tamanhos e camadas de desempenho.
+Um armazenamento de dados NFS de 2 TB é conectado a um cluster para uso por componentes de gerenciamento com uma camada de desempenho de 4 IOPS/GB. Mais armazenamentos de dados podem ser conectados a um cluster para uso de carga de trabalho, em vários tamanhos e camadas de desempenho.
 
 Além disso, essa arquitetura requer que todos os hosts tenham uma rota de sub-rede criada para a sub-rede na qual o armazenamento NFS reside. O propósito dessa rota de sub-rede é direcionar todo o tráfego NFS para usar o grupo da porta, a sub-rede e a VLAN designada para o tráfego NFS por esse design. Se vários armazenamentos de dados NFS estiverem conectados, várias rotas poderão precisar ser configuradas, pois esses armazenamentos de dados talvez estejam localizados em diferentes sub-redes remotas.
 
-As máquinas virtuais de gerenciamento podem estar localizadas em um armazenamento de dados NFS. Isso cria um problema de autoinicialização, pois algumas das máquinas de gerenciamento podem ser responsáveis por serviços DNS usados para resolver o nome do host do NFS. Portanto, essa arquitetura especifica que pelo menos um dos endereços IP para o armazenamento de dados de gerenciamento seja codificado permanentemente em `/etc/hosts` em cada um dos hosts.
-
-## Armazenamento conectado à iSCSI
-{: #design_virtualinfrastructure-iscsi-storage}
-
-Diferentemente do armazenamento conectado do NFS v3, o armazenamento conectado à iSCSI suporta caminhos ativos-ativos em todas as portas de placa do NIC configuradas e portas de destino. Devido a isso, um rendimento mais alto pode ser alcançado e, portanto, é uma alternativa desejável para o armazenamento de conexão do NFS. Isso vem a um custo de maior complexidade.
-
-O armazenamento de bloco do {{site.data.keyword.cloud_notm}} Endurance suporta a conexão de um máximo de 64 endereços IP por LUN ao usar o VMware, o que permite até 32 hosts de acordo com esse design.
-
-Um LUN iSCSI de 2 TB é conectado ao cluster do vSphere para o uso dos componentes de gerenciamento e um mínimo de mais LUNs iSCSI é configurado para o uso de carga de trabalho do cliente. Esse armazenamento é formatado como o sistema de arquivos do VMFS 6.x por cada LUN.
-
-Essa arquitetura especifica o uso da ligação de porta do iSCSI, uma política round-robin para caminhos múltiplos, uma profundidade máxima da fila de 64 e um limite de IOPS round-robin de 1.
-
-### Configuração de rede virtual para iSCSI
-{: #design_virtualinfrastructure-setup-iscsi}
-
-Para esse design, o tráfego de iSCSI tem permissão para usar ambas as portas de placa do NIC conectadas privadas em uma configuração ativa, ativa. Como o vSphere permite que apenas uma porta de placa do NIC esteja ativa em um grupo da porta específico dentro de um vDS por vez, dois grupos de portas devem ser criados (A e B) na VLAN de armazenamento.
-
-Uma porta do kernel do ESXi é criada com um endereço IP exclusivo em sub-redes individuais para permitir a escalabilidade. Cada porta do kernel é designada ao seu próprio grupo da porta da iSCSI. Ambas as portas do kernel são designadas a um adaptador de barramento de host (HBA) de ISCSI virtual do ESXi. Para cada porta do kernel, o comutador de substituição do GW padrão é empregado para usar o gateway padrão para a sub-rede local para essa porta do kernel. Consulte a tabela a seguir.
-
-Tabela 2. Grupos de portas de iSCSi
-
-vDS Portgroup | Sub-rede da porta do kernel | VMHBA
---|:---|:--
-**SDDC-Dprotgroup-iSCSI-A** |Sub-rede A |  vmhba64
-**SDDC-Dprotgroup-iSCSI-B** | Sub-rede B | vmhba64
-
-#### Controle de E/S de armazenamento - SIOC
-{: #design_virtualinfrastructure-sioc}
-
-O iSCSI LUNS é provisionado e formatado para um único sistema de arquivos do VMFS de arquivo por LUN. A configuração do SIOC recomendada padrão é 90% do rendimento de pico.
+As máquinas virtuais de gerenciamento podem ser localizadas em um armazenamento de dados NFS. Isso cria um problema de autoinicialização, pois algumas das máquinas de gerenciamento podem ser responsáveis pelos serviços de DNS, usados para resolver o nome do host do NFS. Portanto, essa arquitetura especifica que pelo menos um dos endereços IP do armazenamento de dados de gerenciamento seja codificado permanentemente em `/etc/hosts` em cada um dos hosts.
 
 ## Design do VMware NSX-V
 {: #design_virtualinfrastructure-nsx-design}
@@ -204,7 +174,7 @@ Tabela 4. Mapeamento de VLAN para tipos de tráfego
 | VLAN  | Designação | Tipo de tráfego |
 |:----- |:----------- |:------------ |
 | VLAN 1 | Privada A   | Gerenciamento de ESXi, gerenciamento, VXLAN (VTEP) |
-| VLAN 2 | Privada B   | vSAN, NFS, vMotion, iSCSI |
+| VLAN 2 | Privada B   | vSAN, NFS e vMotion|
 | VLAN 3 | Pública      | Disponível para acesso à Internet |
 
 O tráfego de cargas de trabalho circulará em comutadores lógicos suportados pelo VXLAN.
@@ -231,7 +201,7 @@ Tabela 6. Definições de configuração de grupo da porta do comutador distribu
 | Failback           | Não |
 | Ordem de Failover     | Uplinks ativos: Uplink1, Uplink2 \* |
 
-\ * O grupo de portas do vSAN usa failover explícito com ativo ou espera porque ele não suporta o balanceamento de carga do tráfego de armazenamento vSAN. Os grupos de portas da iSCSI têm apenas um uplink ativo por vez (iSCSI A - Uplink1, iSCSI B - Uplink 2).
+\ * O grupo de portas do vSAN usa failover explícito com ativo ou espera porque ele não suporta o balanceamento de carga do tráfego de armazenamento vSAN.
 {:note}
 
 Tabela 7. Grupos de portas do comutador virtual de cluster convergido e VLANs, Comutador distribuído **SDDC-Dswitch-Private**
@@ -242,10 +212,8 @@ SDDC-DPortGroup-Mgmt|Porta virtual de origem|Ativo: 0, 1|VLAN 1
 SDDC-DPortGroup-vMotion|Porta virtual de origem|Ativo: 0, 1|VLAN 2
 SDDC-DPortGroup-VSAN|Failover explícito|Ativo: 0, Standby: 1|VLAN 2
 SDDC-DPortGroup-NFS|Porta virtual de origem|Ativo: 0, 1|VLAN 2
-Gerado por NSX|Porta virtual de origem|Ativo: 0,1|VLAN 1
+Gerado por NSX|Porta virtual de origem|Ativo: 0, 1|VLAN 1
 SDDC-DPortGroup-External|Porta virtual de origem|Ativo: 0, 1|VLAN 3
-SDDC-DPortGroup-iSCSI-A|Porta virtual de origem|Ativo: 0|VLAN 2
-SDDC-DPortGroup-iSCSI-B|Porta virtual de origem|Ativo: 0|VLAN 2
 
 Tabela 8. Adaptadores do VMkernel do cluster convergido, Comutador distribuído **SDDC-Dswitch-Private**
 
@@ -256,8 +224,6 @@ vMotion|SDDC-DPortGroup-vMotion|Tráfego de vMotion|9000
 VTEP|Gerado por NSX|-|9000
 vSAN|SDDC-DPortGroup-VSAN|vSAN|9000
 NAS|SDDC-DPortGroup-NFS|NAS|9000
-iSCSI|SDDC-DPortGroup-iSCSI-A|iSCSI|9000
-iSCSI|SDDC-DPortGroup-iSCSI-B|iSCSI|9000
 
 ### Configuração do NSX
 {: #design_virtualinfrastructure-nsx-config}
@@ -281,15 +247,15 @@ Os aspectos a seguir não estão configurados:
 
 ## Conectividade de rede pública
 
-Há vários motivos pelos quais você pode precisar de conectividade de rede pública para sua instância. Isso pode incluir o acesso a serviços de atualização pública ou outros serviços públicos para sua carga de trabalho, como bancos de dados de localização geográfica ou dados meteorológicos. Seu gerenciamento de virtualização e serviços complementares também podem requerer ou se beneficiar da conectividade pública. Por exemplo, o vCenter pode atualizar seu banco de dados HCL e obter atualizações do [VMware Update Manager (VUM)](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-intro) por meio da rede pública. O Zerto, o Veeam, o VMware HCX, o F5 BIG-IP e o FortiGate-VM usam, todos, a conectividade de rede pública para alguma parte de seu licenciamento de produto, ativação ou relatório de uso. Além disso, você pode usar túneis por meio da rede pública para conectividade com o seu data center no local para propósitos de replicação.
+Há vários motivos pelos quais você pode precisar de conectividade de rede pública para sua instância. Isso pode incluir acesso aos serviços de atualização pública ou a outros serviços públicos para sua carga de trabalho, como bancos de dados de localização geográfica ou dados de clima. Seus serviços de gerenciamento de virtualização e complementares também podem requerer ou se beneficiar da conectividade pública. Por exemplo, o vCenter pode atualizar seu banco de dados HCL e obter atualizações do [VMware Update Manager (VUM)](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-intro) por meio da rede pública. O Zerto, o Veeam, o VMware HCX, o F5 BIG-IP e o FortiGate-VM usam, todos, a conectividade de rede pública para alguma parte de seu licenciamento de produto, ativação ou relatório de uso. Além disso, você pode usar túneis por meio da rede pública para conectividade com o seu data center no local para propósitos de replicação.
 
-Geralmente, essas comunicações são roteadas seletivamente e em NAT para a rede pública por meio do edge services gateway (ESG) de gerenciamento ou do cliente. No entanto, você pode ter requisitos de segurança adicionais ou pode preferir usar um proxy para simplificar o caminho da comunicação. Além disso, se você tiver implementado sua instância com interfaces públicas desativadas, não será possível usar ESGs para rotear para a rede pública.
+Geralmente, essas comunicações são roteadas seletivamente e em NAT para a rede pública por meio do edge services gateway (ESG) de gerenciamento ou do cliente. No entanto, você pode ter mais requisitos de segurança ou pode preferir usar um proxy para simplificar o caminho da comunicação. Além disso, se você implementou sua instância com interfaces públicas desativadas, não será possível usar ESGs para rotear para a rede pública.
 
 Essa arquitetura permite as opções a seguir para roteamento ou proxying de seu tráfego para a rede pública:
 
 Método|Descrição|Limitações
 --|--|--
-Gateway virtualizado|Implemente um gateway virtualizado (por exemplo, NSX ESG, F5 BIG-IP, FortiGate-VM ou um dispositivo virtual de sua escolha) cruzando a rede privada e pública. Configure o roteamento no sistema de origem (por exemplo, vCenter, Zerto, sua carga de trabalho) para direcionar somente o tráfego de rede pública para o gateway e configurar o gateway de acordo com suas necessidades.|Aplicável somente a instâncias com interfaces públicas ativadas. Essa configuração permite os padrões de tráfego de saída e de entrada.
+Gateway virtualizado|Implemente um gateway virtualizado (por exemplo, NSX ESG, F5 BIG-IP, FortiGate-VM ou um dispositivo virtual de sua escolha) cruzando as redes privada e pública. Configure o roteamento no sistema de origem (por exemplo, vCenter, Zerto, sua carga de trabalho) para direcionar somente o tráfego de rede pública para o gateway e configure o gateway de acordo com suas necessidades.|Aplicável somente a instâncias com interfaces públicas ativadas. Essa configuração permite os padrões de tráfego de saída e de entrada.
 Gateway virtualizado com proxy|Implemente um gateway virtualizado como acima. Atrás desse gateway, [implemente um servidor proxy](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-init-config#vum-init-config) e configure seus serviços e aplicativos para se conectar à rede pública por meio desse proxy.|Aplicável somente a instâncias com interfaces públicas ativadas. Os padrões de tráfego de saída podem usar o proxy, mas os padrões de tráfego de entrada devem ser gerenciados no gateway.
 Gateway de hardware|Implemente um [dispositivo de gateway de hardware](https://cloud.ibm.com/catalog/infrastructure/gateway-appliance) em sua VLAN de gerenciamento. Configure o gateway para a saída NAT para a rede pública de acordo com suas necessidades.|Aplicável a todas as instâncias, com ou sem interfaces públicas ativadas. Essa configuração permite os padrões de tráfego de saída e de entrada.
 Gateway de hardware com proxy|Implemente um dispositivo de gateway como acima. Atrás desse gateway, [implemente um servidor proxy](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-init-config#vum-init-config) e configure seus serviços e aplicativos para se conectar à rede pública por meio desse proxy.|Aplicável a todas as instâncias, com ou sem interfaces públicas ativadas. Os padrões de tráfego de saída podem usar o proxy, mas os padrões de tráfego de entrada devem ser gerenciados pelo gateway.

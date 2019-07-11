@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2019
 
-lastupdated: "2019-04-16"
+lastupdated: "2019-05-31"
 
 keywords: IBM Cloud for VMware Solutions, getting started, vmware solutions offerings, add-on services for vmwaresolutions, vmwaresolutions use cases
 
@@ -68,8 +68,8 @@ Você precisa de uma conta do {{site.data.keyword.cloud_notm}} e de uma conta de
    </tr>
    <tr>
       <td>Conta de infraestrutura do IBM Cloud</td>
-      <td>Para obter informações sobre os requisitos para uma conta de infraestrutura do {{site.data.keyword.cloud_notm}}, consulte [Requisitos para a conta de infraestrutura do {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).<br><br>É possível vincular contas de infraestrutura do {{site.data.keyword.cloud_notm}} com contas do {{site.data.keyword.cloud_notm}} para usar os recursos combinados infraestrutura como serviço (IaaS) e plataforma como serviço (PaaS). Em seguida, é possível acessar recursos de IaaS e
-de PaaS por meio de um login único. A vinculação de suas contas também fornece uma única fatura para todos os recursos PaaS e IaaS que você usa.<ul><li>Se você não tiver uma conta de infraestrutura do {{site.data.keyword.cloud_notm}}, solicite uma seguindo o procedimento em [Inscrevendo-se para uma conta de infraestrutura do IBM Cloud](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account#signing_softlayer_account-infra) e, em seguida, vincule sua conta de infraestrutura do {{site.data.keyword.cloud_notm}} à sua conta do {{site.data.keyword.cloud_notm}} seguindo o procedimento em [Alternando para o IBMid e vinculando contas](/docs/account?topic=account-unifyingaccounts#unifyingaccounts).</li><li>Se você tiver uma conta de infraestrutura do {{site.data.keyword.cloud_notm}}, será possível vinculá-la à sua conta do {{site.data.keyword.cloud_notm}} seguindo o procedimento em [Alternando para o IBMid e vinculando contas](/docs/account?topic=account-unifyingaccounts#unifyingaccounts).</li></ul></td>
+      <td>Para obter informações sobre os requisitos para uma conta de infraestrutura do {{site.data.keyword.cloud_notm}}, consulte [Requisitos para a conta de infraestrutura do {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req).<br><br>É possível vincular contas de infraestrutura do {{site.data.keyword.cloud_notm}} com contas do {{site.data.keyword.cloud_notm}} para usar os recursos combinados infraestrutura como serviço (IaaS) e plataforma como serviço (PaaS). Em seguida, é possível acessar recursos de IaaS e
+de PaaS por meio de um login único. A vinculação de suas contas também fornece uma única fatura para todos os recursos PaaS e IaaS que você usa.<ul><li>Se você não tiver uma conta de infraestrutura do {{site.data.keyword.cloud_notm}}, solicite uma seguindo o procedimento em [Inscrevendo-se para uma conta de infraestrutura do IBM Cloud](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts#signing_required_accounts-infra) e, em seguida, vincule sua conta de infraestrutura do {{site.data.keyword.cloud_notm}} à sua conta do {{site.data.keyword.cloud_notm}} seguindo o procedimento em [Alternando para o IBMid e vinculando contas](/docs/account?topic=account-unifyingaccounts#unifyingaccounts).</li><li>Se você tiver uma conta de infraestrutura do {{site.data.keyword.cloud_notm}}, será possível vinculá-la à sua conta do {{site.data.keyword.cloud_notm}} seguindo o procedimento em [Alternando para o IBMid e vinculando contas](/docs/account?topic=account-unifyingaccounts#unifyingaccounts).</li></ul></td>
    </tr>
    </table>
 

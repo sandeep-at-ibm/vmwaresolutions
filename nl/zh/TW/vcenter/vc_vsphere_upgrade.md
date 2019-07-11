@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-05-27"
+
+keywords: vSphere upgrade, NSX upgrade, PSC upgrade
 
 subcollection: vmware-solutions
 
@@ -37,7 +39,7 @@ vCenter Server 的設計旨在容許「漸進式」升級。亦即，如果您�
   * [VMware vCenter Server 6.7 Update 1b 版本注意事項](https://docs.vmware.com/en/VMware-vSphere/6.7/rn/vsphere-vcenter-server-67u1b-release-notes.html){:new_window}
   * [關於 VMware ESXi 升級](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.esxi.upgrade.doc/GUID-65B5B313-3DBB-4490-82D2-A225446F4C99.html){:new_window}
 * 在 vCenter Server 實例內設定 vSphere Update Manager (VUM)，從 VMware vSphere 下載最新的更新。如需相關資訊，請參閱 [VMware Update Manager 簡介](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vum-intro#vum-intro)。
-*	向 {{site.data.keyword.vmwaresolutions_short}} 團隊開立支援問題單，以通知他們正在執行升級。在於 {{site.data.keyword.vmwaresolutions_short}} 主控台的已升級層次中登錄實例之前，問題單會保持開立狀態。
+* 向 {{site.data.keyword.vmwaresolutions_short}} 團隊開立支援問題單，以通知他們正在執行升級。在於 {{site.data.keyword.vmwaresolutions_short}} 主控台的已升級層次中登錄實例之前，問題單會保持開立狀態。
 * 確認您所升級的 vCenter Server 實例是否鏈結至另一個 vCenter Server 實例，作為 {{site.data.keyword.vmwaresolutions_short}} 主控台中的主要或次要實例。在升級特定站台時，所有鏈結的實例首先必須升級其「平台服務控制器 (PSU)」。
 * 對於 vSAN 型實例確認下列情況：
   * 確定「vSAN 性能」工具已啟用，且未報告任何嚴重錯誤。如果出現嚴重錯誤，請聯絡「IBM 支援中心」團隊，並附上升級支援問題單 ID。
@@ -75,11 +77,11 @@ vCenter Server 的設計旨在容許「漸進式」升級。亦即，如果您�
 #### 下載二進位檔
 {: #vc_vsphere_upgrade-prereq-jumpbox-binary}
 
-使用 Windows VSI jumpbox，並登入 https://my.vmware.com 帳戶，以下載下列二進位檔：
+使用 Windows VSI 跳板，並登入到您的 https://my.vmware.com 帳戶，以下載下列二進位檔：
 
-*	VMware vSphere 6.7u1 Hypervisor (ESXi ISO) 映像檔（包括 VMware Tools）
+* VMware vSphere 6.7u1 Hypervisor (ESXi ISO) 映像檔（包括 VMware Tools）
 * vCenter 6.7u1b 應用裝置 ISO。不是更新組合。
-*	NSX for vSphere 6.4.4 升級組合
+* NSX for vSphere 6.4.4 升級組合
 
 若為 Intel Optane 磁碟機，請下載下列檔案，以作為利用 VMware Update Manager 之後置升級修補程序的一部分。
 
@@ -87,11 +89,11 @@ vCenter Server 的設計旨在容許「漸進式」升級。亦即，如果您�
 
 #### 備份元件
 
-開始升級之前，請先備份每一個元件。
+開始升級之前，請備份每個元件。
 
 * 如需備份 vCenter Server 及 PDS 的相關資訊，請參閱 [vCenter Server 6.x 中備份及還原選項的概觀 (2149237)](https://kb.vmware.com/s/article/2149237?lang=en_US){:new_window}。
 * 如需有關備份 vCenter Server 及 PSC 的其他考量及資訊，請參閱 [vCenter 檔案型備份](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_backingup#solution_backingup-vcenter)。
-*	如需備份 NSX 的相關資訊，請參閱[備份 NSX Manager 資料](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window}。
+* 如需備份 NSX 的相關資訊，請參閱[備份 NSX Manager 資料](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window}。
 
 建議使用以檔案為基礎的備份。VMware VSphere 6.7 不支援以映像檔為基礎的備份（使用 vSphere Data Protection)。
 {:note}
@@ -103,7 +105,7 @@ vCenter Server 的設計旨在容許「漸進式」升級。亦即，如果您�
 
 **重要事項**：
 
-* 您必須使用此路徑，以確保 {{site.data.keyword.vmwaresolutions_short}} 為 VMware 支援中心提供他們所需的所有 vCenter Server 設計、設定相關資訊，以及 {{site.data.keyword.cloud_notm}} 資訊。遵循此處理程序以確保與 VMware 支援共用正確資訊，從而縮短支援體驗。在「IBM 支援中心」提供必要資訊給 VMware 支援之後，您可以視需要直接與 VMware 支援互動。
+* 您必須使用此路徑，以確保 {{site.data.keyword.vmwaresolutions_short}} 為 VMware 支援中心提供他們所需的所有 vCenter Server 設計、設定相關資訊，以及 {{site.data.keyword.cloud_notm}} 資訊。遵循此處理程序以確保與 VMware 支援中心分享正確的資訊，縮短支援體驗。在「IBM 支援中心」提供必要資訊給 VMware 支援中心之後，您可以視需要直接與 VMware 支援中心互動。
 * 務必記錄此升級程序中建立的所有新密碼和認證。IBM 支援中心在升級程序結束時，需要這些認證以便更新其內部資料庫。
 
 ### 升級 VMware NSX
@@ -124,7 +126,7 @@ vCenter Server 的設計旨在容許「漸進式」升級。亦即，如果您�
 
 1. 閱讀 NSX 6.4.4 的版本注意事項，以確保與您的特定環境配置相容。如需相關資訊，請參閱 [VMware NSX Data Center for vSphere 6.4.4 版本注意事項](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/rn/releasenotes_nsx_vsphere_644.html){:new_window}。
 2. 首先升級 NSX Manager。如果您有多個使用交叉 vCenter 鏈結模式的 NSX 環境，請升級所有 NSX Manager，再升級 NSX 使用者介面**升級協調程式**中的元件。
-3.	在 vCenter 使用者介面內的 NSX 使用者介面中，使用**升級協調程式**來升級 NSX 元件。
+3. 在 vCenter 使用者介面內的 NSX 使用者介面中，使用**升級協調程式**來升級 NSX 元件。
 4. 繼續檢閱並監視 vCenter 使用者介面內的 NSX 升級使用者介面，因為可能問題會獲得解決，以確保升級繼續進行，直到所有元件都已升級。
 
 ### 升級 Platform Services Controller
@@ -136,20 +138,20 @@ vCenter Server 的設計旨在容許「漸進式」升級。亦即，如果您�
 {: #vc_vsphere_upgrade-procedure-psc-before}
 
 * 具備可供下列程序使用的 vCenter 及 PSC root 密碼。請使用 {{site.data.keyword.vmwaresolutions_short}} 主控台，以注意您的 vCenter Server 實例版本是否已從 2.4 版或更早版本升級至 2.7 版或更新版本。
-* 在 {{site.data.keyword.vmwaresolutions_short}} 主控台上，顯示 PSC 和 vCenter 兩者的單一 root 密碼。不過，這只是 vCenter 密碼。您必須與支援中心聯絡，以取得 root PSC 密碼。
-* 若要避免衝突，請使用 vCenter 及 PSC 目前正在使用的同一個子網路上部的 IP。您必須使用暫時 IP 進行新的應用裝置部署。
+* 在 {{site.data.keyword.vmwaresolutions_short}} 主控台上，顯示 PSC 和 vCenter 兩者的單一 root 密碼。不過，這只是 vCenter 密碼。您必須[與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)，以取得 root PSC 密碼。
+* 為了避免衝突，請使用 vCenter 及 PSC 目前正在使用之相同子網路上半部的 IP 位址。您必須使用暫時 IP 位址來進行新的應用裝置部署。
 
 #### 升級 Platform Services Controller 的程序
 {: #vc_vsphere_upgrade-procedure-psc-procedure}
 
-1. 同時登入 PSC (``https://<psc-fqdn>:5480``) 及 vCenter 應用裝置管理使用者介面，以確認 root 密碼是否過期。如果密碼到期日是 **1970**，則它已過期，且您必須在 PSC 應用裝置管理使用者介面中啟用 SSH 和 Bash Shell。
+1. 同時登入 PSC (`https://<psc-fqdn>:5480`) 及 vCenter 應用裝置管理使用者介面，以確認 root 密碼是否過期。如果密碼到期日是 **1970**，則它已過期，且您必須在 PSC 應用裝置管理使用者介面中啟用 SSH 和 Bash Shell。
     1. 使用 root ID 及密碼 SSH 至 PSC。即使密碼過期，它仍可讓您登入。
     2. 使用 Shell **passwd** 指令，為 PSC 及 vCenter 設定新的 root 密碼。
     3. 儲存顯示在 {{site.data.keyword.vmwaresolutions_short}} 主控台的密碼，或「IBM 支援中心」提供給您的密碼。稍後在您升級應用裝置時會重複使用這些密碼。
 2. 使用內建 Windows ISO 裝載功能，在 jumpbox 內裝載 vCenter 6.7u1b ISO。
 3. 遵循首先升級所有 PSC 的 VMware 指示。如需相關資訊，請參閱 [Upgrade a vCenter Server Appliance 6.0 or 6.5 with an External vCenter Single Sign-On or Platform Services Controller Instance by Using the GUI](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html)。
 
-**您必須從與要升級的應用裝置位於同一網絡的 Windows、Linux 或 Mac 機器執行 GUI 升級**，此所述需求適用於您帳戶中 {{site.data.keyword.cloud_notm}} 內的任何子網路。
+**您必須從與要升級之應用裝置位於相同網路的 Windows、Linux 或 Mac 機器執行 GUI 升級**，此陳述需求適用於您帳戶中 {{site.data.keyword.cloud_notm}} 內的任何子網路。
 {:note}
 
 建議您使用 vCenter 作為升級的來源和目標。
@@ -163,7 +165,7 @@ vCenter Server 的設計旨在容許「漸進式」升級。亦即，如果您�
 {: #vc_vsphere_upgrade-procedure-vcenter-before}
 
 * 具備可供下列程序使用的 vCenter 及 PSC root 密碼。請使用 {{site.data.keyword.vmwaresolutions_short}} 主控台，以注意您的 vCenter Server 實例版本是否已從 2.4 版或更早版本升級至 2.7 版或更新版本。
-* 若要避免衝突，請使用 vCenter 及 PSC 目前正在使用的同一個子網路上部的 IP。您必須使用暫時 IP 進行新的應用裝置部署。
+* 為了避免衝突，請使用 vCenter 及 PSC 目前正在使用之相同子網路上半部的 IP 位址。您必須使用暫時 IP 位址來進行新的應用裝置部署。
 
 #### 升級 vCenter 的程序
 {: #vc_vsphere_upgrade-procedure-vcenter-procedure}
@@ -176,7 +178,7 @@ vCenter Server 的設計旨在容許「漸進式」升級。亦即，如果您�
 3. 遵循 VMware 指示以升級 vCenter。如需相關資訊，請參閱 [Upgrade a vCenter Server Appliance 6.0 or 6.5 with an External vCenter Single Sign-On or Platform Services Controller Instance by Using the GUI](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html)。VMware 指示類似於 PSC 的升級程序。但是，對於升級程序，請指向 vCenter FQDN/IP，而不是指向 PSC。
 
 **附註**：
-* 所述需求**您必須從與要升級的應用裝置位於同一網絡的 Windows、Linux 或 Mac 機器執行 GUI 升級**，適用於您帳戶中 {{site.data.keyword.cloud_notm}} 內的任何子網路。
+* **您必須從與要升級之應用裝置位於相同網路的 Windows、Linux 或 Mac 機器執行 GUI 升級**，此陳述需求適用於您帳戶中 {{site.data.keyword.cloud_notm}} 內的任何子網路。
 
 * 建議您使用 vCenter 作為升級的來源和目標。
 
@@ -235,7 +237,7 @@ vCenter 內的 VMware Update Manager 功能是用來升級及修補 ESXi 主機�
 6. 預先補救檢查成功後，按一下**重新修補**。使用重新修補實體作業監視升級程序。
 7. 升級完成後，檢閱主機的摘要區段以確認是否顯示了 ``VMware ESXi, 6.7.0``。
 
-如果升級程序立即失敗，並顯示**主機無法進入維護模式**錯誤訊息，請關閉 Zvand ZVA，然後再試一次。ZVRA VM 會在每部伺服器停止補救時自動啟動。如需在升級過程中繼續 Zins 抄寫的相關資訊，請參閱[如何讓具有關聯 VRA 的主機進入維護模式](https://www.zerto.com/myzerto/knowledge-base/place-host-into-maintenance-mode-with-vra/){:new_window}。
+如果升級程序立即失敗，並顯示**主機無法進入維護模式**錯誤訊息，請關閉 Zvand ZVA，然後再試一次。ZVRA VM 會在每部伺服器停止補救時自動啟動。如需在升級過程中繼續 Zins 抄寫的相關資訊，請參閱 [How to Place a Host with an Associated VRA into Maintenance Mode](https://www.zerto.com/myzerto/knowledge-base/place-host-into-maintenance-mode-with-vra/){:new_window}。
 {:note}
 
 #### 將 Intel NVME 驅動程式修補程式新增至 VUM 儲存庫

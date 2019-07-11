@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-06-11"
+
+keywords: notifications console, filter notifications, system notification
 
 subcollection: vmware-solutions
 
@@ -40,20 +42,13 @@ subcollection: vmware-solutions
           <dd class="dd">组件发生故障或未正常工作。但是，故障并未中断组件的持续处理。</dd>
             <dt class="dt dlterm">参考</dt>
             <dd class="dd">系统或用户操作已完成。通常，以下事件会报告参考通知：
-       <ul class="ul">
-                <li class="li">服务已安装。</li>
-                <li class="li">服务已升级。</li>
-                <li class="li">服务已除去。</li>
-                <li class="li">已针对添加的 ESXi 服务器重新配置所有服务。</li>
-                <li class="li">已针对除去的 ESXi 服务器重新配置所有服务。</li>
-              </ul>
-            </dd>
+       <br>服务已安装。<br>服务已升级。<br>服务已除去。<br>已针对添加的 ESXi 服务器重新配置所有服务。<br>已针对除去的 ESXi 服务器重新配置所有服务。</dd>
           </dl>
         </td>
        </tr>
        <tr>
          <td>类型</td>
-         <td>报告的事件与之相关的组件类型：<ul><li>vCenter Server 实例</li><li>服务</li><li>系统</li></ul></td>
+         <td>报告的事件与之相关的组件类型：<br>vCenter Server 实例<br>服务<br>系统</td>
        </tr>
        <tr>
          <td>资源</td>

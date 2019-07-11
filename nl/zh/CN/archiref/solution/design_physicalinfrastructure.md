@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-11"
 
 subcollection: vmware-solutions
 
@@ -24,7 +24,7 @@ subcollection: vmware-solutions
   <dt class="dt dlterm">物理计算</dt>
   <dd class="dd">物理计算提供虚拟化基础架构使用的物理处理和内存。对于此设计，计算组件由 {{site.data.keyword.baremetal_long}} 提供，并在 [VMware 硬件兼容性指南 (HCG)](https://www.vmware.com/resources/compatibility/search.php) 中列出。</dd>
   <dt class="dt dlterm">物理存储</dt>
-  <dd class="dd">物理存储器提供虚拟化基础架构使用的原始存储容量。存储组件由 {{site.data.keyword.baremetal_short}} 或者由使用 NFS V3 或 iSCSI 的共享网络连接的存储器 (NAS) 阵列提供。</dd>
+  <dd class="dd">物理存储器提供虚拟化基础架构使用的原始存储容量。存储组件由 {{site.data.keyword.baremetal_short}} 或者由使用 NFS V3 <!-- or iSCSI -->的共享“网络连接的存储器”(NAS) 阵列提供。</dd>
   <dt class="dt dlterm">物理网络</dt>
   <dd class="dd">物理网络提供环境的网络连接，该连接接着由网络虚拟化使用。网络由 {{site.data.keyword.cloud_notm}} 服务网络提供，并且包含 DNS 和 NTP 等额外服务。</dd>
 </dl>
@@ -99,7 +99,7 @@ subcollection: vmware-solutions
 #### 虚拟路由和转发
 {: #design_physicalinfrastructure-vrf}
 
-必须将 {{site.data.keyword.slportal}} 帐户配置为虚拟路由和转发 (VRF) 帐户，以使得子网 IP 块之间能够自动进行全局路由。具有“直接链路”连接的所有帐户都必须转换为或创建为 VRF 帐户。
+必须将 {{site.data.keyword.slportal}} 帐户配置为虚拟路由和转发 (VRF) 帐户，以使得子网 IP 块之间能够自动进行全局路由。具有 Direct Link 连接的所有帐户都必须转换为或创建为 VRF 帐户。
 
 由于各种连接选项以及网络路由选项都需要 {{site.data.keyword.cloud_notm}} 帐户处于 VRF 方式，因此建议在供应 vCenter Server 之前，该帐户就处于 VRF 方式。
 
@@ -124,12 +124,12 @@ subcollection: vmware-solutions
 * 第二个子网用于管理虚拟机，例如 vCenter Server Appliance 和 Platform Services Controller
 * 第三个子网用于通过 NSX Manager 分配给每个主机的封装覆盖网络隧道端点 (VTEP)。
 
-除了“专用 VLAN A”外，还存在另一个专用 VLAN（在此指定为“专用 VLAN B”），用于支持 vSAN、vMotion、NFS 和 iSCSI 等 VMware 功能。因此，该 VLAN 可分成两个、三个或四个可移植子网：
+除了“专用 VLAN A”外，还存在另一个专用 VLAN（在此指定为“专用 VLAN B”），用于支持 vSAN、vMotion、NFS<!--, and iSCSI--> 等 VMware 功能。因此，该 VLAN 可分成两个、三个或四个可移植子网：
 * 第一个子网分配给用于 vMotion 流量的内核端口组。
 * 其余子网用于存储流量：
    * 使用 vSAN 时，子网将分配给用于 vSAN 流量的内核端口组。
    * 使用 NFS 连接的 NAS 时，子网将分配给专用于 NFS 流量的端口组。
-   * 对于 iSCSI 连接，将创建两个端口组，以允许跨两个专用 NIC 端口进行多路径活动/活动配置，因为每个 VMware iSCSI 文档一次只能有一个 NIC 端口处于活动状态。
+<!--* For iSCSI attachment, two port groups are created to allow multipathing active-active across both private NIC ports as only one NIC port can be active at a time per the VMware iSCSI documentation.-->
 
 在 vCenter Server 自动部署过程中配置的所有子网都使用 {{site.data.keyword.cloud_notm}} 管理的范围。这是为了确保您现在或未来需要连接时，任何 IP 地址都可以路由到 {{site.data.keyword.cloud_notm}} 帐户中的任何数据中心。
 
@@ -139,14 +139,14 @@ subcollection: vmware-solutions
 
 |VLAN|类型|描述|
 |:---- |:---- |:----------- |
-|公用|主|分配给物理主机以用于公用网络访问。在初始部署时未使用。|
+|公用|主|分配给物理主机以用于公用网络访问。这些主机分配有公共 IP 地址，但在这些主机上未配置此 IP 地址，因此无法在公用网络上直接访问这些主机。相反，公用 VLAN 旨在为其他组件（例如，NSX Edge 服务网关 (ESG)）提供公用因特网访问。|
 |专用 A|主|分配给 {{site.data.keyword.cloud_notm}} 所分配物理主机的单个子网。通过管理接口用于 vSphere 管理流量。|
 |专用 A|可移植|分配给用作管理组件的虚拟机的单个子网|
 |专用 A|可移植|分配给 NSX-V 或 NSX-T VTEP 的单个子网|
 |专用 B|可移植|分配用于 vSAN（如果在使用）的单个子网|
 |专用 B|可移植|分配用于 NAS（如果在使用）的单个子网|
-|专用 B|可移植|分配用于 iSCSI NAS（如果在使用）的两个子网（每个物理 NIC 端口一个子网）|
 |专用 B|可移植|分配用于 vMotion 的单个子网|
+<!--| Private B | Portable | Two subnets assigned for iSCSI NAS, if in use (one per physical NIC port) |-->
 
 在此设计中，所有支持 VLAN 的主机和虚拟机都配置为指向作为缺省路径的 {{site.data.keyword.cloud_notm}} 后端“专用网络”客户路由器 (BCR)。虽然 vCenter Server 实例支持使用软件定义的联网 (SDN)，但在 VMware 实例中创建的包含到内部子网的路由的网络覆盖并不为 {{site.data.keyword.cloud_notm}} 管理的路由器所知。
 
@@ -176,26 +176,29 @@ vSphere ESXi 系统管理程序安装在持久位置。因此，物理主机包�
 
 使用共享文件级别的存储器时，2-TB TB NFS 共享会连接到组成初始 VMware 集群的主机。此共享（称为管理共享）用于管理组件，例如 VMware vCenter Server、Platform Services Controller 和 VMware NSX。
 
-存储器使用 NFSv3 协议以 2 IOPS/GB 级别从 IBM Cloud 进行连接。IBM 会对以 16 K 块大小供应的 IOP 级别进行规范化，以便更大的块大小的限制更低，更小的块大小的限制更高。
+存储器使用 NFS v3 协议以 2 IOPS/GB 级别从 IBM Cloud 进行连接。
 
 ![连接到 VMware 部署的 NFS 共享](../../images/vcsv4radiagrams-ra-nfs-shares.svg "连接到 VMware 部署的 NFS 共享：管理共享和客户指定的共享")
 
-您可以在购买时或以后在控制台中，在所有主机上为工作负载分配和安装更多文件共享。可以从相应的 {{site.data.keyword.CloudDataCent_notm}} 中可用的 {{site.data.keyword.cloud_notm}} 耐久性文件存储器容量选项和性能层中进行选择。所有共享均使用 NFSv3 协议进行连接。此外，还可通过应用 NetApp ONTAP Select 产品来连接 NFSv3 文件共享。
+您可以在购买时或以后在控制台中，在所有主机上为工作负载分配和安装更多文件共享。可以从相应的 {{site.data.keyword.CloudDataCent_notm}} 中可用的 {{site.data.keyword.cloud_notm}} 耐久性文件存储器容量选项和性能层中进行选择。所有共享均使用 NFS v3 协议进行连接。此外，还可通过应用 NetApp ONTAP Select 产品来连接 NFS v3 文件共享。
 
 10 IOPS/GB 的可用性取决于 IBM Cloud Data Center。提供 10 IOPS/ GB 性能层的 {{site.data.keyword.CloudDataCents_notm}} 还包含提供者管理的静态数据加密（AES-256 加密），并且这些数据中心通过全闪存存储器支持。10 IOPS/GB 性能层限制为最大容量 4 TB。有关此解决方案中使用的共享 NAS 的更多信息，请参阅[共享存储器体系结构](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits)。
 
-### 共享 iSCSI 存储器
+<!--
+### Shared iSCSI storage
 {: #design_physicalinfrastructure-shared-iscsi}
 
-与 NFS 类似，对于共享 iSCSI 存储器，一个 2 TB iSCSI LUN 会连接到组成初始 VMware 集群的主机。此 iSCSI LUN 用于管理组件，例如 VMware vCenter Server、Platform Services Controller 和 VMware NSX。此存储器通过 iSCSI 协议以 2 IOPS/GB 级别从 IBM Cloud 进行连接。
+This architecture allows you to use iSCSI storage, however iSCSI storage is not automatically provisioned by IBM Cloud for VMware Solutions. You can provision it manually.
 
-IBM 会对以 16 K 块大小供应的 IOP 级别进行规范化，以便更大的块大小的限制更低，更小的块大小的限制更高。
+Similar to NFS, for shared iSCSI storage, one 2-TB iSCSI LUN will be attached to the hosts that comprise the initial VMware cluster. This iSCSI LUN is used for management components such as the VMware vCenter Server, Platform Services Controller, and VMware NSX. The storage is attached through the iSCSI protocol at a 2 IOPS/GB level from IBM Cloud.
 
-![连接到 VMware 部署的 iSCSI LUN](../../images/vcsv4radiagrams-ra-iscsi-lun.svg "连接到 VMware 部署的 iSCSI LUN")
+![iSCSI LUNs attached to VMware deployment](../../images/vcsv4radiagrams-ra-iscsi-lun.svg "iSCSI LUNs attached to VMware deployment"){: caption="Figure 5. iSCSI LUNs attached to VMware deployment" caption-side="bottom"}
 
-此外，还可在购买时或以后在控制台中，在所有主机上为工作负载分配和安装更多 iSCSI LUN。请从相应的 IBM Cloud Data Center 中可用的 IBM Cloud 耐久性块存储器容量选项和性能层中进行选择。所有 LUN 均使用 iSCSI 协议进行连接。此外，还可通过 NetApp ONTAP Select 产品来连接 iSCSI LUN。
+Additional iSCSI LUNs for workloads can also be allocated and mounted across all hosts. Select from the available IBM Cloud Endurance block storage capacity options and performance tiers in the corresponding IBM Cloud Data Center. All LUNs are attached by using the iSCSI protocol. Additionally, it is possible to attach iSCSI LUNs from the NetApp ONTAP Select offering.
 
-10 IOPS/GB 的可用性取决于 IBM Cloud Data Center。提供 10 IOPS/ GB 性能层的数据中心还包含提供者管理的静态数据加密（AES-256 加密），并受全闪存存储器支持。10 IOPS/GB 性能层限制为最大容量 4 TB。
+The availability of the 10 IOPS/GB depends on the IBM Cloud Data Center. Data centers that offer the 10 IOPS/GB performance tier also include provider–managed encryption of data at rest (AES–256 encryption), and are backed by all–flash storage. The 10 IOPS/GB performance tier is limited to a maximum capacity of 4 TB.
+
+-->
 
 有关此解决方案中使用的共享 NAS 的更多信息，请参阅[共享存储器体系结构](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits)。
 

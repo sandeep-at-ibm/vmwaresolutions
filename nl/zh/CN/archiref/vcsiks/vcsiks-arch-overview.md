@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-22"
 
 subcollection: vmware-solutions
 
@@ -44,7 +44,7 @@ IBM Multi-Cluster Manager 在各种云和集群中提供用户可视性、以应
 
 ![本地 - 云管理](../../images/vcsiks-onprem-cloudmgt.svg "本地 - 云管理")
 
-strongSwan VPN 用于与部署的 {{site.data.keyword.containerlong_notm}} 容器建立连接。strongSwan 最终可能会被替换为直接链路连接。
+strongSwan VPN 用于与部署的 {{site.data.keyword.containerlong_notm}} 容器建立连接。strongSwan 最终可能会被替换为 Direct Link 连接。
 
 在该图中，CAM 在逻辑上创建与 vCenter、云提供者、{{site.data.keyword.icpfull_notm}} 和 {{site.data.keyword.containerlong_notm}} 环境的云连接。{{site.data.keyword.icpfull_notm}} 集群必须部署到每个数据中心或云环境，其中 MCM 提供将 {{site.data.keyword.icpfull_notm}} 集群连接到单个管理视图的机制。
 

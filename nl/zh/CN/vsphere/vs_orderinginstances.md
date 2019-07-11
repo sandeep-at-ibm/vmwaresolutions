@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-26"
+lastupdated: "2019-06-18"
+
+keywords: vSphere order cluster, order vSphere, order vSphere cluster
 
 subcollection: vmware-solutions
 
@@ -193,7 +195,6 @@ subcollection: vmware-solutions
 *  只允许使用字母数字字符和短划线 (-) 字符。
 *  子域标签必须以字母数字字符开头和结尾。
 *  子域标签的最大长度为 10 个字符。
-*  子域标签在您的帐户中必须唯一。
 
 ### 域名
 {: #vs_orderinginstances-domain-name}
@@ -247,7 +248,9 @@ subcollection: vmware-solutions
 ## 订单摘要
 {: #vs_orderinginstances-order-summary}
 
-根据配置，估算成本会立即生成并显示在右侧的**订单摘要**窗格中。单击**定价详细信息**以生成提供估算详细信息的 PDF 文档。
+根据选择的配置，估算成本会立即生成并显示在**订单摘要**右侧窗格中。单击**定价详细信息**以生成 {{site.data.keyword.vmwaresolutions_short}} 资源成本汇总的 PDF 文档。
+
+您还可以通过单击**添加到估算**来将供应的资源添加到 {{site.data.keyword.cloud_notm}} 估算工具**。如果要与您可能考虑购买的其他 {{site.data.keyword.cloud_notm}} 资源一起估算所选 {{site.data.keyword.vmwaresolutions_short}} 资源的成本，那么这非常有用。
 
 ## 订购 vSphere 集群的过程
 {: #vs_orderinginstances-procedure}
@@ -282,7 +285,7 @@ subcollection: vmware-solutions
    这将仅安装 {{site.data.keyword.baremetal_short}}。您负责在集群部署后安装和配置各种组件（例如，VMware vCenter、VMware NSX 和 VMware vSAN）。
    {:note}
 
-### 结果
+### 订购 vSphere 集群后的结果
 {: #vs_orderinginstances-results}
 
 如果已将集群配置另存为模板，那么会收到控制台通知，指示配置已成功保存，然后您可以在**集群配置**列表中找到该模板。

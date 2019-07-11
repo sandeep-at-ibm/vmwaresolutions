@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-22"
 
 subcollection: vmware-solutions
 
@@ -44,7 +44,7 @@ IBM Multi-Cluster Manager 提供使用者可見性、以應用程式為中心的
 
 ![內部部署 - 雲端管理](../../images/vcsiks-onprem-cloudmgt.svg "內部部署 - 雲端管理")
 
-strongSwan VPN 可用來建立與已部署 {{site.data.keyword.containerlong_notm}} 容器的連線。strongSwan 最後可能會取代為 Direct Link 連線。
+strongSwan VPN 可用來建立與已部署 {{site.data.keyword.containerlong_notm}} 容器的連線。strongSwan 最終可能會被取代為 Direct Link 連線功能。
 
 在圖表中，CAM 邏輯地建立與 vCenter、雲端提供者、{{site.data.keyword.icpfull_notm}} 及 {{site.data.keyword.containerlong_notm}} 環境的雲端連線。{{site.data.keyword.icpfull_notm}} 叢集必須部署至每個資料中心或雲端環境，並由 MCM 提供將 {{site.data.keyword.icpfull_notm}} 叢集連接至單一管理視圖的機制。
 

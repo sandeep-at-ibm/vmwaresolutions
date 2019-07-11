@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-06-11"
+
+keywords: notifications console, filter notifications, system notification
 
 subcollection: vmware-solutions
 
@@ -39,20 +41,13 @@ subcollection: vmware-solutions
           <dt class="dt dlterm">警告</dt>
           <dd class="dd">元件失敗或未正常運作。不過，失敗不會干擾元件的進行中程序。</dd>
             <dt class="dt dlterm">參考資訊</dt>
-            <dd class="dd">已完成系統作業或使用者作業。通常，下列事件會報告參考資訊通知：<ul class="ul">
-                <li class="li">已安裝服務。</li>
-                <li class="li">已升級服務。</li>
-                <li class="li">已移除服務。</li>
-                <li class="li">會針對已新增的 ESXi 伺服器重新配置所有服務。</li>
-                <li class="li">會針對已移除的 ESXi 伺服器重新配置所有服務。</li>
-              </ul>
-            </dd>
+            <dd class="dd">已完成系統作業或使用者作業。通常，下列事件會報告參考資訊通知：<br>已安裝服務。<br>已升級服務。<br>已移除服務。<br>會針對已新增的 ESXi 伺服器重新配置所有服務。<br>會針對已移除的 ESXi 伺服器重新配置所有服務。</dd>
           </dl>
         </td>
        </tr>
        <tr>
          <td>類型      </td>
-         <td>所報告事件相關的元件類型：<ul><li>vCenter Server 實例</li><li>服務</li><li>系統</li></ul></td>
+         <td>所報告事件相關的元件類型：<br>vCenter Server 實例<br>服務<br>系統</td>
        </tr>
        <tr>
          <td>資源</td>

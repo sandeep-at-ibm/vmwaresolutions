@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-18"
+lastupdated: "2019-06-13"
+
+keywords: vCenter Server NSX-T add cluster, view cluster vCenter Server NSX-T, delete cluster vCenter Server NSX-T
 
 subcollection: vmware-solutions
 
@@ -148,7 +150,9 @@ subcollection: vmware-solutions
 ### 訂單摘要
 {: #vc_nsx-t_addingviewingclusters-adding-order-summary}
 
-根據您選取的叢集配置，預估成本會立即產生並顯示在**訂單摘要**右窗格中。
+根據您選取的叢集配置，預估成本會立即產生並顯示在**訂單摘要**右窗格中。按一下**定價詳細資料**，以產生具有 {{site.data.keyword.vmwaresolutions_short}} 資源文件摘要的 PDF 文件。
+
+您也可以按一下**新增至預估**，將佈建的資源新增至 {{site.data.keyword.cloud_notm}} 預估工具。這適用於您想要預估所選取 {{site.data.keyword.vmwaresolutions_short}} 資源與可能考慮購買之其他 {{site.data.keyword.cloud_notm}} 資源的成本時。
 
 ## 將叢集新增至 vCenter Server with NSX-T 實例的程序
 {: #vc_nsx-t_addingviewingclusters-adding-procedure}
@@ -238,10 +242,10 @@ subcollection: vmware-solutions
 
 表 6. 網路介面 - VLAN 詳細資料
 
-|項目        |說明       |  
+|項目        |說明              |  
 |:------------- |:------------- |
 | VLAN 號碼 | 唯一的 VLAN 號碼。 |
-|說明              | VLAN 的說明。|
+|說明       | VLAN 的說明。|
 |位置| 資料中心位置。 |
 | 主要路徑 | VLAN 的主要路徑。 |
 
@@ -253,7 +257,7 @@ subcollection: vmware-solutions
 |:------------- |:------------- |
 |名稱 | 子網路名稱。按一下名稱來存取子網路詳細資料。|
 |類型      | 子網路的類型：主要或可攜式。 |
-|說明              | 子網路的說明。|
+|說明       | 子網路的說明。|
 
 表 8. 網路介面 - IP 詳細資料
 
@@ -261,7 +265,7 @@ subcollection: vmware-solutions
 |:------------- |:------------- |
 | IP    | IP 位址。 |
 |狀態| IP 位址的狀態。 |
-|說明              |IP 位址的說明。|
+|說明       |IP 位址的說明。|
 
 ## 從 vCenter Server with NSX-T 實例刪除叢集
 {: #vc_nsx-t_addingviewingclusters-deleting}

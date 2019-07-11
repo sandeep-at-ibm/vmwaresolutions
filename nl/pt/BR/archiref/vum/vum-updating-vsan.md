@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-15"
 
 subcollection: vmware-solutions
 
@@ -49,7 +49,7 @@ A primeira etapa é incluir suas credenciais do my.vmware.com no vSAN Build Reco
 {: #vum-updating-vsan-config-vcsa-proxy}
 
 1.	Em seu navegador da web do servidor de salto, conecte-se ao VCSA Management Interface `https://<vCenter ip>:5480`
-2.	Usando as credenciais do Console do IC4VS, efetue login no VCSA Management Interface como raiz.
+2.	Usando as credenciais do console do IBM Cloud for VMware Solutions, efetue login no VCSA Management Interface como raiz.
 3.	No vCenter Server Appliance Management Interface, clique em **Rede** e clique em **Gerenciar**.
 4.	Para configurar um servidor proxy, na área de janela Configurações de proxy, clique em **Editar**.
 5.	Selecione **Usar um servidor proxy**, insira as configurações do servidor proxy e clique em **OK**.

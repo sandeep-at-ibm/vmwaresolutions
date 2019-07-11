@@ -109,7 +109,7 @@
  </g>
  <rect x="653" y="170.5" width="80" height="40" fill="#007fff" pointer-events="none"/>
  <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
-  <text x="692.5" y="187">公有雲</text>
+  <text x="692.5" y="187">公用雲端</text>
   <text x="692.5" y="199">整合</text>
  </g>
  <ellipse cx="26" cy="191" rx="25" ry="25" fill="#fff" pointer-events="none" stroke="#007fff"/>

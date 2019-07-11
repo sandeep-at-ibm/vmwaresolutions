@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-09"
+lastupdated: "2019-06-12"
 
 subcollection: vmware-solutions
 
@@ -52,7 +52,7 @@ NSX Manager 部署在起始叢集上。此外，NSX Manager 會獲指派專用�
 |:--------- |:------------- |
 |Edge Services Gateway  | 虛擬應用裝置 |
 |邊緣大小為「大型」 |   vCPU 數目為	2|
-|記憶體| 1-GB 磁碟 | 本端資料儲存庫上有 1000 GB |
+|記憶體| 1 GB 磁碟<br> 本端資料儲存庫上有 1000 GB |
 
 表 2. {{site.data.keyword.icpfull_notm}} DLR 規格
 
@@ -60,14 +60,14 @@ NSX Manager 部署在起始叢集上。此外，NSX Manager 會獲指派專用�
 |:--------- |:------------- |
 |分散式邏輯路由器 | 虛擬應用裝置 |
 |邊緣大小為「精簡」 | vCPU 數目為	1|
-|記憶體	|512 MB 的磁碟| 本端資料儲存庫上有 1000 GB |
+|記憶體	| 512 MB 磁碟<br> 本端資料儲存庫上有 1000 GB |
 
 ## IBM Cloud Private 元件
 {: #vcsicp-arch-overview-solution-icp-comp}
 
 {{site.data.keyword.icpfull_notm}} 是一個應用程式平台，用於開發及管理內部部署容器化應用程式。它是用來管理容器的整合環境，其中包括容器編排程式 Kubernetes、專用映像檔儲存庫、管理主控台和監視架構。
 
-![帶 vCenter Server 的虛擬 {{site.data.keyword.icpfull_notm}} 部署](../../images/vcsicp-virtual-icp-deployment-vcs.svg "帶 vCenter Server 的虛擬 {{site.data.keyword.icpfull_notm}} 部署")
+![具有 vCenter Server 的虛擬 {{site.data.keyword.icpfull_notm}} 部署](../../images/vcsicp-virtual-icp-deployment-vcs.svg "具有 vCenter Server 的虛擬 {{site.data.keyword.icpfull_notm}} 部署")
 
 ###	啟動節點
 {: #vcsicp-arch-overview-solution-boot-node}
@@ -99,7 +99,7 @@ Proxy 節點的功能是將外部要求傳輸至在叢集內建立的服務。�
 
 「漏洞警告器」節點是選用性節點，可用來執行「漏洞警告器」服務。「漏洞警告器」服務需要大量資源。如果您使用「漏洞警告器」服務，請指定專用的 VA 節點。
 
-下列是高可用性 {{site.data.keyword.icpfull_notm}} 實例所需的 VM 規格。
+以下是高可用性 {{site.data.keyword.icpfull_notm}} 實例所需的 VM 規格。
 
 表 3. {{site.data.keyword.icpfull_notm}} 虛擬機器規格
 

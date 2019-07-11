@@ -106,7 +106,7 @@ Anteriormente, seria possível pedir uma instância do Cloud Foundation ou do vC
 
 A partir da liberação V2.8, o serviço está disponível como um serviço independente sem estar associado a uma instância do VMware. Cada instância do serviço pode atender a uma ou mais instâncias do Cloud Foundation, instâncias do vCenter Server ou clusters do vSphere.
 
-Para obter mais informações, consulte [KMIP for VMware na visão geral do {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations).
+Para obter mais informações, consulte [Visão geral do KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations).
 
 ## Arquitetura de Referência da documentação
 {: #relnotes_v28-ref}
@@ -116,7 +116,7 @@ Para obter mais informações, consulte [KMIP for VMware na visão geral do {{si
 * [A arquitetura do {{site.data.keyword.vmwaresolutions_short}} (com NSX-V e NSX-T)
 ](/docs/services/vmwaresolutions/services?topic=vmware-solutions-solution_overview#solution_overview)
 * [Arquitetura de referência do Caveonix RiskForesight](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-on-vcs)
-* [Guia de implementação e operações do HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/archiref/vcshcx?topic=vmware-solutions-vcshcx-intro)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} for VMware Solutions](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-vcs-intro)
 
 ## Atualizações e aprimoramentos da interface com o usuário
 {: #relnotes_v28-ui}

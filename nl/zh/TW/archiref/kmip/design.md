@@ -18,7 +18,7 @@ subcollection: vmware-solutions
 # KMIP for VMware 設計
 {: #kmip-design}
 
-KMIP for VMware on {{site.data.keyword.cloud}} 提供與 VMware vSAN 加密及 VMware vSphere 加密相容的金鑰管理服務，方法是使用 [IBM Key Protect](/docs/services/key-protect?topic=key-protect-getting-started-tutorial) 或 [IBM Cloud Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-get-started#get-started) 提供根金鑰及資料金鑰儲存空間。Key Protect 及 Hyper Protect Crypto Services 作用為此解決方案中的金鑰管理服務。
+KMIP for VMware on {{site.data.keyword.cloud}} 提供與 VMware vSAN 加密及 VMware vSphere 加密相容的金鑰管理服務，方法是使用 [IBM Key Protect](/docs/services/key-protect?topic=key-protect-getting-started-tutorial) 或 [IBM Cloud Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-get-started#get-started) 提供根金鑰及資料金鑰儲存空間。Key Protect 及 Hyper Protect Crypto Services 會充當此解決方案中的金鑰管理服務。
 
 ## 儲存空間加密選項
 {: #kmip-design-storage-options}

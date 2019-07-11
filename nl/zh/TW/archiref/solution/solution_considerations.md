@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-05-22"
 
 subcollection: vmware-solutions
 
@@ -44,10 +44,10 @@ subcollection: vmware-solutions
 
 完成下列步驟，以管理對您 {{site.data.keyword.cloud_notm}} 網路及 VMware 管理元件的存取權，並規劃 {{site.data.keyword.cloud_notm}} 網路拓蹼。
 
-- 使用 [{{site.data.keyword.cloud_notm}} VPN](https://www.softlayer.com/vpn-access) 或 [{{site.data.keyword.cloud_notm}} DirectLink 連線](https://www.ibm.com/cloud/direct-link)來存取實例管理端點。
-- 設計您實例內的公用網路連線功能策略。您的選項包括：範例客戶 VMware NSX Edge Services Gateway (ESG)、閘道應用裝置（例如 Vyatta 和 FortiGate），以及在 {{site.data.keyword.cloud_notm}} 網路中或透過 DirectLink 存取的專屬網路上所部署的 Proxy 伺服器。
-- 規劃要在具有 [{{site.data.keyword.cloud_notm}} 可攜式 IP 位址](/docs/infrastructure/subnets?topic=subnets-getting-started-subnets-ips#getting-started-subnets-ips)的 {{site.data.keyword.cloud_notm}} VLAN 上部署工作負載，還是[在 NSX 邏輯交換器 (VXLAN) 上使用您自己的 IP 位址](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_overview)來部署工作負載。請注意，使用 NSX 軟體定義網路 (SDN) 可讓您具有在 {{site.data.keyword.cloud_notm}} 中管理及保護工作負載網路的最大彈性。
-- 使用 NSX ESG、[IBM Cloud Vyatta](https://cloud.ibm.com/catalog/infrastructure/virtual-router-appliance) 及 DirectLink 對等作業，來規劃與工作負載的連線功能（網址轉換、虛擬專用網路、遞送）。
+- 使用 [{{site.data.keyword.cloud_notm}} VPN](https://www.softlayer.com/vpn-access) 或 [{{site.data.keyword.cloud_notm}} Direct Link 連線](https://www.ibm.com/cloud/direct-link)來存取實例管理端點。
+- 設計您實例內的公用網路連線功能策略。您的選項包括：範例客戶 VMware NSX Edge Services Gateway (ESG)、閘道應用裝置（例如 Vyatta 和 FortiGate），以及在 {{site.data.keyword.cloud_notm}} 網路中或透過 Direct Link 存取的專屬網路上所部署的 Proxy 伺服器。
+- 規劃要在具有 [{{site.data.keyword.cloud_notm}} 可攜式 IP 位址](/docs/infrastructure/subnets?topic=subnets-getting-started)的 {{site.data.keyword.cloud_notm}} VLAN 上部署工作負載，還是[在 NSX 邏輯交換器 (VXLAN) 上使用您自己的 IP 位址](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_overview)來部署工作負載。請注意，使用 NSX 軟體定義網路 (SDN) 可讓您具有在 {{site.data.keyword.cloud_notm}} 中管理及保護工作負載網路的最大彈性。
+- 使用 NSX ESG、[IBM Cloud Vyatta](https://cloud.ibm.com/catalog/infrastructure/virtual-router-appliance) 和 Direct Link 對等作業，來規劃工作負載（網址轉換、虛擬專用網路、遞送）的連線功能。
 - 如果實作「跨 vCenter NSX」，請先確定本端區段 ID 範圍未重疊，再部署任何本端工作負載。
 
 ## 安全規劃及強化

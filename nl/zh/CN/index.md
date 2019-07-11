@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2019
 
-lastupdated: "2019-04-16"
+lastupdated: "2019-05-31"
 
 keywords: IBM Cloud for VMware Solutions, getting started, vmware solutions offerings, add-on services for vmwaresolutions, vmwaresolutions use cases
 
@@ -68,7 +68,7 @@ subcollection: vmware-solutions
    </tr>
    <tr>
       <td>IBM Cloud 基础架构帐户</td>
-      <td>有关 {{site.data.keyword.cloud_notm}} 基础架构帐户的需求的信息，请参阅 [{{site.data.keyword.cloud_notm}} 基础架构帐户需求](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)。<br><br>您可以将 {{site.data.keyword.cloud_notm}} 基础架构帐户与 {{site.data.keyword.cloud_notm}} 帐户相链接，以组合使用基础架构即服务 (IaaS) 和平台即服务 (PaaS) 资源。然后，您可以通过单点登录来访问 IaaS 资源和 PaaS 资源。链接帐户以后，还会将您使用的所有 PaaS 和 IaaS 资源的费用都开具在一张发票中。<ul><li>如果您没有 {{site.data.keyword.cloud_notm}} 基础架构帐户，请遵循[注册 IBM Cloud 基础架构帐户](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account#signing_softlayer_account-infra)中的过程请求基础架构帐户，然后遵循[切换到 IBM 标识和链接帐户](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)中的过程将 {{site.data.keyword.cloud_notm}} 基础架构帐户与 {{site.data.keyword.cloud_notm}} 帐户相链接。</li><li>如果您已有 {{site.data.keyword.cloud_notm}} 基础架构帐户，那么可以通过遵循[切换到 IBM 标识和链接帐户](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)中的过程将其与 {{site.data.keyword.cloud_notm}} 帐户相链接。</li></ul></td>
+      <td>有关 {{site.data.keyword.cloud_notm}} 基础架构帐户的需求的信息，请参阅 [{{site.data.keyword.cloud_notm}} 基础架构帐户需求](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req)。<br><br>您可以将 {{site.data.keyword.cloud_notm}} 基础架构帐户与 {{site.data.keyword.cloud_notm}} 帐户相链接，以组合使用基础架构即服务 (IaaS) 和平台即服务 (PaaS) 资源。然后，您可以通过单点登录来访问 IaaS 资源和 PaaS 资源。链接帐户以后，还会将您使用的所有 PaaS 和 IaaS 资源的费用都开具在一张发票中。<ul><li>如果您没有 {{site.data.keyword.cloud_notm}} 基础架构帐户，请遵循[注册 IBM Cloud 基础架构帐户](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts#signing_required_accounts-infra)中的过程请求基础架构帐户，然后遵循[切换到 IBM 标识和链接帐户](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)中的过程将 {{site.data.keyword.cloud_notm}} 基础架构帐户与 {{site.data.keyword.cloud_notm}} 帐户相链接。</li><li>如果您已有 {{site.data.keyword.cloud_notm}} 基础架构帐户，那么可以通过遵循[切换到 IBM 标识和链接帐户](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)中的过程将其与 {{site.data.keyword.cloud_notm}} 帐户相链接。</li></ul></td>
    </tr>
    </table>
 

@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-06-17"
 
 subcollection: vmware-solutions
 
 
 ---
-# Requisitos de acesso à porta do VMware HCX on IBM Cloud
+# Requisitos de acesso à porta para o VMware HCX on IBM Cloud
 {: #hcx-archi-port-req}
 
 O HCX deve atravessar a Internet pública e as linhas privadas e conectar-se a componentes do data center, como redes, comutadores e grupos de portas.

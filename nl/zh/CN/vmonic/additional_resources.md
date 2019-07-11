@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-13"
+lastupdated: "2019-05-28"
+
+keywords: vmware solutions data sheet, vmware solutions developerWorks, vmware solutions video
 
 subcollection: vmware-solutions
 

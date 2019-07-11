@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-17"
 
 subcollection: vmware-solutions
 
@@ -70,7 +70,7 @@ vSphere 叢集可存放虛擬機器 (VM)，它們會管理 vCenter Server 實例
 
 如下圖所示，vSAN 會將多部 ESXi 主機間的本端儲存空間聚集在 vSphere 叢集內，並將聚集的儲存空間當成單一 VM 資料儲存庫來管理。在此設計中，運算節點包含「ESXi 作業系統」的本端磁碟機，以及 vSAN 資料儲存庫。不論節點屬於哪一個叢集，每個節點都會包含兩個作業系統磁碟機，以存放 ESXi 安裝。
 
-![vSAN 概念](../../images/vcsv4radiagrams-ra-vsan.svg "vSAN 在 vSphere 叢集內的多個 ESXi 主機中聚集本端儲存空間，並將聚集儲存空間作為單個 VM 資料儲存庫進行管理")
+![vSAN 概念](../../images/vcsv4radiagrams-ra-vsan.svg "vSAN 在 vSphere 叢集內的多個 ESXi 主機中聚集本端儲存空間，並將聚集儲存空間作為單一 VM 資料儲存庫進行管理")
 
 vSAN 會採用下列元件：
 * 兩個磁碟群組的 vSAN 設計；每個磁碟群組各有兩個以上的磁碟。群組裡大小最小的一個 SSD 或 NVMe 會充當快取層級，而其餘的 SSD 則充當容量層級。
@@ -116,43 +116,13 @@ vSAN 設定是根據在 {{site.data.keyword.cloud_notm}} 內部署 VMware 解決
 ## NFS 連接儲存空間
 {: #design_virtualinfrastructure-nfs-storage}
 
-使用 NFS 網路連接儲存空間時，此架構規定使用 NFS V3 而不是 NFS V4.1，因為使用後者時 NFS 伺服器 LIF 移轉可能會導致等待時間過長。每部 vSphere 主機會使用其主機名稱連接至 NFS 儲存空間。
+使用 NFS 網路連接儲存空間時，此架構規定使用 NFS 第 3 版而不是 NFS 4.1 版，因為使用後者時 NFS 伺服器 LIF 移轉可能會導致延遲過長。每個 vSphere 主機使用其主機名稱連接至 NFS 儲存空間。
 
-一個 2 TB NFS 資料儲存庫連接到叢集，以供管理元件將其與效能層級 4 IOPS/GB 配合使用。可以將更多資料儲存庫連接到叢集以供工作負載使用，實現多種大小和效能層級。
+一個 2 TB NFS 資料儲存庫連接到叢集，以供管理元件將其與效能層級 4 IOPS/GB 配合使用。可以將更多資料儲存庫連接到叢集以供工作負載使用，實現各種大小和效能層級。
 
 此外，此架構要求所有主機都為 NFS 儲存空間所在的子網路建立了子網路路徑。此子網路路徑的目的是指示所有 NFS 資料流量使用此設計指定用於 NFS 資料流量的埠群組、子網路和 VLAN。如果連接了多個 NFS 資料儲存庫，可能需要配置多個路徑，因為這些資料儲存庫可能位於不同的遠端子網路中。
 
-管理虛擬機器可能位於 NFS 資料儲存庫上。這會產生引導問題，因為某些管理機器可能負責用於解析 NFS 主機名稱的 DNS 服務。因此，此架構指定管理資料儲存庫的至少一個 IP 位址要寫在每部主機上的 `/etc/hosts` 中。
-
-## iSCSI 連接儲存空間
-{: #design_virtualinfrastructure-iscsi-storage}
-
-與 NFS 第 3 版連接儲存空間不同，iSCSI 連接儲存空間支援所有已配置 NIC 卡埠與目標埠之間的主動-主動路徑。由於這個原因，可以達到更高的傳輸量，因此這是 NFS 連接儲存空間所需的替代方案。代價是更為複雜。
-
-在使用 VMware 時，「{{site.data.keyword.cloud_notm}} 耐久性」區塊儲存空間支援每個 LUN 最多連接 64 個 IP 位址，而根據此設計最多支援 32 部主機。
-
-有一個 2-TB iSCSI LUN 會連接至 vSphere 叢集，以使用管理元件，而且至少會再配置一個 iSCSI LUN，以供客戶工作負載使用。此儲存空間會根據每個 LUN 格式化為 VMFS 6.x 檔案系統。
-
-此架構指定使用 iSCSI 埠連結、多路徑循環式原則、佇列深度上限 64，以及循環式 IOPS 限制 1。
-
-### iSCSI 的虛擬網路設定
-{: #design_virtualinfrastructure-setup-iscsi}
-
-對於此設計，容許 iSCSI 資料流量在主動-主動配置中使用兩個專用連接的 NIC 卡埠。因為 vSphere 一次只容許一個 NIC 卡埠在 vDS 內的特定埠群組上作用中，所以必須在儲存空間 VLAN 上建立兩個埠群組（A 和 B）。
-
-在個別子網路上使用唯一的 IP 位址來建立 ESXi 核心埠，以容許可調整性。每個核心埠都會指派給它自己的 iSCSI 埠群組。兩個核心埠都會指派給 ESXi 虛擬 ISCSI 主機匯流排配接卡 (HBA)。對於每個核心埠，會採用預設 GW 置換交換器，將預設閘道用於該核心埠的本端子網路。請參閱下表。
-
-表 2. iSCSi 埠群組
-
-vDS 埠群組 | 核心埠子網路 | VMHBA
---|:---|:--
-**SDDC-Dprotgroup-iSCSI-A** | Subnet-A | vmhba64
-**SDDC-Dprotgroup-iSCSI-B** | Subnet-B | vmhba64
-
-#### 儲存空間 I/O 控制 - SIOC
-{: #design_virtualinfrastructure-sioc}
-
-iSCSI LUN 是根據 LUN 而佈建的，並格式化為單一檔案 VMFS 檔案系統。預設建議的 SIOC 設定為尖峰傳輸量的 90%。
+管理虛擬機器可能位於 NFS 資料儲存庫上。這會產生引導問題，因為某些管理機器可能負責用於解析 NFS 主機名稱的 DNS 服務。因此，此架構指定管理資料儲存庫的至少一個 IP 位址要寫在每部主機上的 `/etc/hosts`。
 
 ## VMware NSX-V 設計
 {: #design_virtualinfrastructure-nsx-design}
@@ -204,7 +174,7 @@ VLAN 用來區隔實體網路功能。此設計使用三個 VLAN：兩個用於�
 |VLAN      | 指定        | 資料流量類型 |
 |:----- |:----------- |:------------ |
 |VLAN 1| 專用 A      | ESXi 管理、管理、VXLAN (VTEP) |
-|VLAN 2| 專用 B      | vSAN、NFS、vMotion、iSCSI |
+|VLAN 2| 專用 B      |vSAN、NFS 和 vMotion|
 |VLAN 3| 公用        | 可用於網際網路存取 |
 
 工作負載中的資料流量將會在 VXLAN 支援的邏輯交換器上流動。
@@ -232,7 +202,6 @@ vSphere 叢集使用兩台如下列各表所配置的 vSphere Distributed Switch
 | 失效接手順序       | 作用中的上行鏈路：Uplink1、Uplink2 \* |
 
 \* vSAN 埠群組會使用作用中或待命的明確失效接手，因為它不支援進行 vSAN 儲存空間資料流量的負載平衡。
-iSCSI 埠群組一次只有一個作用中的上行鏈路（iSCSI A - 上行鏈路 1、iSCSI B - 上行鏈路 2）。
 {:note}
 
 表 7. 聚合的叢集虛擬交換器埠群組及 VLAN、分散式交換器 **SDDC-Dswitch-Private**
@@ -243,10 +212,8 @@ iSCSI 埠群組一次只有一個作用中的上行鏈路（iSCSI A - 上行鏈�
  SDDC-DPortGroup-vMotion |來源虛擬埠| 作用中：0、1 |VLAN 2
  SDDC-DPortGroup-VSAN | 明確失效接手 |作用中：0、待命：1|VLAN 2
  SDDC-DPortGroup-NFS |來源虛擬埠| 作用中：0、1 |VLAN 2
-NSX 產生的|來源虛擬埠|作用中：0、1|VLAN 1
+NSX 產生的|來源虛擬埠| 作用中：0、1 |VLAN 1
  SDDC-DPortGroup-External |來源虛擬埠| 作用中：0、1 |VLAN 3
-SDDC-DPortGroup-iSCSI-A|來源虛擬埠| 作用中：0|VLAN 2
-SDDC-DPortGroup-iSCSI-B|來源虛擬埠| 作用中：0|VLAN 2
 
 表 8. 聚合的叢集 VMkernel 配接卡、分散式交換器 **SDDC-Dswitch-Private**
 
@@ -257,8 +224,6 @@ SDDC-DPortGroup-iSCSI-B|來源虛擬埠| 作用中：0|VLAN 2
  VTEP |NSX 產生的|-|9000
 vSAN| SDDC-DPortGroup-VSAN |vSAN|9000
  NAS | SDDC-DPortGroup-NFS | NAS |9000
-iSCSI|SDDC-DPortGroup-iSCSI-A|iSCSI|9000
-iSCSI|SDDC-DPortGroup-iSCSI-B|iSCSI|9000
 
 ### NSX 配置
 {: #design_virtualinfrastructure-nsx-config}
@@ -282,15 +247,15 @@ iSCSI|SDDC-DPortGroup-iSCSI-B|iSCSI|9000
 
 ## 公用網路連線功能
 
-有各種原因，您可能需要實例的公用網路連線功能。這可能包括針對您的工作負載存取公用更新服務或其他公用服務（例如地理定位資料庫或氣象資料）。您的虛擬化管理及附加程式服務也可能需要或受益於公用連線功能。例如，vCenter 可以更新其 HCL 資料庫，並透過公用網路取得 [VMware Update Manager (VUM)](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-intro) 更新項目。Zerto、Veeam、VMware HCX、F5 BIG-IP 及 FortiGate-VM 全都將公用網路連線功能用於其產品授權、啟動或用量報告的某一部分。除此之外，您可能基於抄寫目的使用公用網路上的通道，連線至內部部署資料中心。
+有多種原因可能需要將公用網路連線功能用於實例。這可能包括存取公用更新服務或其他公用服務以處理工作負載，例如地理位置資料庫或天氣資料。此外，虛擬化管理和附加程式服務也可能需要或受益於公用連線功能。例如，vCenter 可以更新其 HCL 資料庫，並透過公用網路取得 [VMware Update Manager (VUM)](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-intro) 更新項目。Zerto、Veeam、VMware HCX、F5 BIG-IP 及 FortiGate-VM 全都將公用網路連線功能用於其產品授權、啟動或用量報告的某一部分。除此之外，您可能基於抄寫目的使用公用網路上的通道，連線至內部部署資料中心。
 
-通常，透過管理或客戶 Edge Services Gateway (ESG)，選擇性地將這些通訊遞送及 NAT 至公用網路。不過，您可能有額外的安全需求，或偏好使用 Proxy 來簡化通訊的路徑。此外，如果您已在公用介面停用的情況下部署實例，則將無法使用 ESG 來遞送至公用網路。
+通常，透過管理或客戶 Edge Services Gateway (ESG)，選擇性地將這些通訊遞送及 NAT 至公用網路。但是，您可能有更多安全需求，或者可能更願意使用 Proxy 來簡化通訊路徑。此外，如果您已在公用介面停用的情況下部署實例，則將無法使用 ESG 來遞送至公用網路。
 
 此架構容許使用下列選項將資料流量遞送或 Proxy 至公用網路：
 
 方法|說明       |限制
 --|--|--
-虛擬化閘道|跨專用及公用網路部署虛擬化閘道（例如，NSX ESG、F5 BIG-IP、FortiGate-VM，或您選擇的虛擬應用裝置）。在來源系統上配置遞送（例如，vCenter、Zerto、您的工作量），僅將公用網路資料流量導向至閘道，並根據您的需求配置閘道。|僅適用於已啟用公用介面的實例。此配置同時容許出埠及入埠資料流量型樣。
+虛擬化閘道|跨專用和公用網路部署虛擬化閘道（例如，NSX ESG、F5 BIG-IP、FortiGate-VM 或您選擇的虛擬應用裝置）。在來源系統上配置遞送（例如，vCenter、Zerto、您的工作負載），僅將公用網路資料流量導向至閘道，並根據您的需求配置閘道。|僅適用於已啟用公用介面的實例。此配置同時容許出埠及入埠資料流量型樣。
 搭配 Proxy 的虛擬化閘道|如上所述部署虛擬化閘道。在此閘道後面，[部署 Proxy 伺服器](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-init-config#vum-init-config)，並配置您的服務及應用程式，以透過此 Proxy 連接至公用網路。|僅適用於已啟用公用介面的實例。出埠資料流量型樣可以使用 Proxy，但必須在閘道上管理入埠資料流量型樣。
 硬體閘道|將[硬體閘道應用裝置](https://cloud.ibm.com/catalog/infrastructure/gateway-appliance)部署至您的管理 VLAN。根據您的需求，將閘道配置為以 NAT 出埠連接至公用網路。|適用於所有已啟用或未啟用公用介面的實例。此配置同時容許出埠及入埠資料流量型樣。
 搭配 Proxy 的硬體閘道|如上所述部署閘道應用裝置。在此閘道後面，[部署 Proxy 伺服器](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-init-config#vum-init-config)，並配置您的服務及應用程式，以透過此 Proxy 連接至公用網路。|適用於所有已啟用或未啟用公用介面的實例。出埠資料流量型樣可以使用 Proxy，但入埠資料流量型樣必須由閘道管理。

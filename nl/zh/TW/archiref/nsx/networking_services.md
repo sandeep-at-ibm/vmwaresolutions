@@ -38,7 +38,7 @@ IBM 管理 ESG 是僅適用於 {{site.data.keyword.cloud_notm}} 管理網路資�
 
 ![vCenter Server 上的管理邊緣通訊](../../images/mgmtvmcommunication.svg "vCenter Server 上的管理邊緣通訊")
 
-基於特定附加服務 VM 與其對應授權和計量系統之間的輕量通訊，會調整主動-被動高可用性 (HA) 配對之大型配置中的 NSX ESG 大小，並且將 NSX ESG 部署於 vCenter Server 叢集的管理資源儲存區上。下表提供 IBM 管理 NSX ESG 部署的摘要。
+由於特定附加服務 VM 與其對應授權和計量系統之間的輕量通訊，會調整主動-被動高可用性 (HA) 配對之大型配置中的 NSX ESG 大小，並且將 NSX ESG 部署於 vCenter Server 叢集的管理資源儲存區上。下表提供 IBM 管理 NSX ESG 部署的摘要。
 
 表 1. IBM 管理 NSX ESG 規格
 
@@ -144,7 +144,7 @@ ESG 介面的配置定義了 ESG 有權存取的 L2 網路。對於 vCenter Serv
 
 IBM 工作負載 ESG 是簡單拓蹼的一部分，主要用於工作負載網路通訊。下節說明將工作負載連接至 vCenter Server 實例內網路的設計目的。這是將內部部署網路及 IP 空間連接至特定 vCenter Center 實例的起點，也是真正「混合式雲端」架構的基礎。
 
-連接至公用及專用 {{site.data.keyword.cloud_notm}} 網路的客戶網路，能容許進出面向網際網路之資料流量的工作負載存取，但也容許從公用或專用 {{site.data.keyword.cloud_notm}} 網路建立站台對站台 VPN。這可讓您大幅減少關於連接至內部部署網路的價值實現時間，因為基於客戶安全需求，建立專用廣域網路 (WAN) 可能需要數個月的時間。不過，專用鏈結備妥之後，即可翻轉 VPN 以遍訪該鏈結，而不會影響 VPN 通道內或是 vCenter Server 實例內的層疊網路。完成此作業之後，如果從安全的角度來看需要的話，即可移除工作負載 ESG 的公用介面。
+連接至公用及專用 {{site.data.keyword.cloud_notm}} 網路的客戶網路，能容許進出面向網際網路之資料流量的工作負載存取，但也容許從公用或專用 {{site.data.keyword.cloud_notm}} 網路建立站台對站台 VPN。這可讓您大幅減少關於連接至內部部署網路的價值實現時間，因為客戶安全需求，建立專用廣域網路 (WAN) 可能需要數個月的時間。不過，專用鏈結就緒之後，即可翻轉 VPN 以遍訪該鏈結，而不會影響 VPN 通道內或是 vCenter Server 實例內的層疊網路。完成此作業之後，如果從安全的角度來看需要的話，即可移除工作負載 ESG 的公用介面。
 
 下圖中的拓蹼包含下列 NSX 元件：
 * NSX Edge 應用裝置 (ESG)

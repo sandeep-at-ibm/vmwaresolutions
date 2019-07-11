@@ -171,7 +171,7 @@
 			</g>
 		</g>
 	</g>
-	<text transform="matrix(1 0 0 1 340 780)" class="st7 st15">雲端閘道</text>
+	<text transform="matrix(1 0 0 1 317 780)" class="st7 st15"> 雲端閘道</text>
 </g>
 <g id="gear_bottom">
 	<g>
@@ -202,7 +202,7 @@
 				<rect x="509.9" y="744.8" transform="matrix(0.7071 0.7071 -0.7071 0.7071 678.7737 -143.5796)" class="st0" width="5.5" height="5.5"/>
 		</g>
 	</g>
-	<text transform="matrix(1 0 0 1 450 780)" class="st7 st15">WAN 最佳化程式</text>
+	<text transform="matrix(1 0 0 1 466 780)" class="st7 st15">WAN 最佳化程式</text>
 </g>
 <g id="gear_icon">
 	<g>
@@ -276,7 +276,7 @@
 					S692.3,568.6,685.4,568.6L685.4,568.6z"/>
 			</g>
 		</g>
-		<text transform="matrix(1 0 0 1 250 596)" class="st7 st8">vSAN 與 vMotion -- 專用 VLAN B</text>
+		<text transform="matrix(1 0 0 1 262 596)" class="st7 st8">vSAN 與 vMotion -- 專用 VLAN B</text>
 	</g>
 </g>
 <g id="Logical_swiitch">
@@ -299,7 +299,7 @@
 				</g>
 			</g>
 		</g>
-		<text transform="matrix(1 0 0 1 365 467)" class="st7 st8">邏輯交換式網路 (VXLAN)</text>
+		<text transform="matrix(1 0 0 1 359 467)" class="st7 st8">邏輯交換式網路 (VXLAN)</text>
 	</g>
 	<g id="Layer_9">
 	</g>
@@ -311,7 +311,7 @@
 				C699.5,376.8,691.9,368.5,682.5,368.5z"/>
 			<ellipse class="st18" cx="681.9" cy="387" rx="11.4" ry="15.5"/>
 		</g>
-		<text transform="matrix(1 0 0 1 550 393)" class="st7 st15">延伸網路</text>
+		<text transform="matrix(1 0 0 1 524.5 393)" class="st7 st15">延伸網路</text>
 	</g>
 </g>
 <g id="management_vxlan">
@@ -470,7 +470,7 @@
 			<rect x="688.9" y="722.9" class="st0" width="4.4" height="8.2"/>
 		</g>
 	</g>
-	<text transform="matrix(1 0 0 1 650 780)" class="st7 st15">L2 集中器</text>
+	<text transform="matrix(1 0 0 1 624 780)" class="st7 st15">L2 集中器</text>
 </g>
 <g id="Layer_16">
 	<g>

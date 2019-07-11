@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-13"
+lastupdated: "2019-05-27"
+
+keywords: vCenter Server migrate instance, add account vCenter Server, migrate cloud account
 
 subcollection: vmware-solutions
 

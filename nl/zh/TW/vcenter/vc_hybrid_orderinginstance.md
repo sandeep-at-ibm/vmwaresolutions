@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-19"
+
+keywords: vCenter Server Hybridity order instance, order vCenter Server Hybridity, order Hybridity
 
 subcollection: vmware-solutions
 
@@ -157,10 +159,10 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。請指
 {: #vc_hybrid_orderinginstance-subdomain-label}
 
 子網域標籤必須滿足下列需求：
-*  只容許英數及橫線 (-) 字元。
-*  子網域標籤的開頭必須是英文字母，而且結尾必須是英數字元。
-*  子網域標籤的長度上限為 10 個字元。
-*  子網域標籤在您的帳戶內必須是唯一的。
+* 只容許英數及橫線 (-) 字元。
+* 子網域標籤的開頭必須是英文字母，而且結尾必須是英數字元。
+* 子網域標籤的長度上限為 10 個字元。
+* 子網域標籤在您多站台配置的所有實例內必須是唯一的。
 
 ### 網域名稱
 {: #vc_hybrid_orderinginstance-domain-name}
@@ -215,7 +217,7 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。請指
 * **適用於 Active Directory/DNS 的單一公用 Windows VSI**：適用於 Microsoft Active Directory (AD) 的單一 Microsoft Windows Server VSI 充當登錄主機及 VM 之實例的 DNS，已部署並可查閱。
 * **管理叢集上有兩部高可用性的專用 Windows Server VM**：部署兩部 Microsoft Windows VM，協助加強安全及穩健性。
 
-如果您將實例配置為使用兩部 Microsoft Windows VM，則必須提供兩份 Microsoft Windows Server 2016 授權。請使用 Microsoft Windows Server 2016 Standard 版本授權及（或）Microsoft Windows Server 2016 Datacenter 版本授權。
+如果您將實例配置為使用兩部 Microsoft Windows VM，則必須提供兩份 Microsoft Windows Server 2016 標準版授權。
 {:important}
 
 每一份授權都只能指派給一部單一實體伺服器，且最多涵蓋兩個實體處理器。以一份 Standard 版本授權而言，每一部雙處理器伺服器都可以執行兩部虛擬化 Microsoft Windows VM。因此，必須有兩份授權，因為兩部 Microsoft Windows VM 部署在兩部不同的主機中。
@@ -232,7 +234,9 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。請指
 ## 訂單摘要
 {: #vc_hybrid_orderinginstance-order-summary}
 
-根據您選取的實例及附加程式服務配置，預估成本會立即產生並顯示在右窗格的**訂單摘要**區段中。按一下右窗格底端的**定價詳細資料**，以產生提供預估詳細資料的 PDF 文件。
+根據您選取的實例及附加程式服務配置，預估成本會立即產生並顯示在**訂單摘要**右窗格中。按一下**定價詳細資料**，以產生具有 {{site.data.keyword.vmwaresolutions_short}} 資源文件摘要的 PDF 文件。
+
+您也可以按一下**新增至預估**，將佈建的資源新增至 {{site.data.keyword.cloud_notm}} 預估工具。這適用於您想要預估所選取 {{site.data.keyword.vmwaresolutions_short}} 資源與可能考慮購買之其他 {{site.data.keyword.cloud_notm}} 資源的成本時。
 
 ## 訂購 vCenter Server with Hybridity Bundle 實例的程序
 {: #vc_hybrid_orderinginstance-procedure}
@@ -269,16 +273,13 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。請指
    3. 按一下適用於您的訂單的條款鏈結，並先確認您同意這些條款，再訂購實例。
    4. 按一下**佈建**。
 
-## 結果
+## 訂購 vCenter Server with Hybridity Bundle 實例之後的結果
 {: #vc_hybrid_orderinginstance-results}
 
-實例的部署會自動啟動。您會收到正在處理訂單的確認，並且可以檢視實例詳細資料來檢查部署的狀態。
-
-順利部署實例之後，會在 VMware 虛擬平台上安裝 [vCenter Server with Hybridity Bundle 實例的技術規格](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#specs)中所說明的元件。依預設，您所訂購的 ESXi 伺服器會分組為 **cluster1**。如果您已訂購附加程式服務，則會在完成訂單之後開始部署服務。
-
-實例已備妥可供使用時，實例的狀態會變更為**備妥使用**，而且您會透過電子郵件收到通知。
-
-當您訂購次要實例時，可能會在您完成次要實例訂單之後重新啟動主要實例（鏈結至次要實例）的 VMware vSphere Web Client。
+* 實例的部署會自動啟動，且您會收到確認，指出正在處理該訂單。您可以檢查部署狀態，包括可能需要注意的任何問題，方法是檢視實例詳細資料的**部署歷程**區段。
+* 順利部署實例之後，會在 VMware 虛擬平台上安裝 [vCenter Server with Hybridity Bundle 實例的技術規格](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#specs)中所說明的元件。依預設，您所訂購的 ESXi 伺服器會分組為 **cluster1**。如果您已訂購附加程式服務，則會在完成訂單之後開始部署服務。
+* 實例已備妥可供使用時，實例的狀態會變更為**備妥使用**，而且您會透過電子郵件收到通知。
+* 當您訂購次要實例時，可能會在您完成次要實例訂單之後重新啟動主要實例（鏈結至次要實例）的 VMware vSphere Web Client。
 
 ## 下一步
 {: #vc_hybrid_orderinginstance-next}
@@ -299,7 +300,7 @@ vCenter Server with Hybridity Bundle 實例訂單隨附 VMware vSAN 6.6。請指
 ## 相關鏈結
 {: #vc_hybrid_orderinginstance-related}
 
-* [註冊 {{site.data.keyword.cloud_notm}} 帳戶](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)
+* [註冊 {{site.data.keyword.cloud_notm}} 帳戶](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts)
 * [檢視 vCenter Server with Hybridity Bundle 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
 * [vCenter Server with Hybridity Bundle 實例的多站台配置](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_multisite)
 * [新增及檢視 vCenter Server with Hybridity Bundle 實例的叢集](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingviewingclusters)

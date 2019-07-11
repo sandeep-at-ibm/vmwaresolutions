@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-15"
 
 subcollection: vmware-solutions
 
@@ -49,7 +49,7 @@ vSAN 集群升级将按以下顺序执行任务：
 {: #vum-updating-vsan-config-vcsa-proxy}
 
 1.	通过跳板机 Web 浏览器连接到 VCSA 管理界面 `https://<vCenter ip>:5480`
-2.	通过使用 IC4VS 控制台中的凭证，以 root 用户身份登录到 VCSA 管理界面。
+2.	通过使用 IBM Cloud for VMware Solutions 控制台中的凭证，以 root 用户身份登录到 VCSA 管理界面。
 3.	在 vCenter Server Appliance 管理界面中，单击**联网**，然后单击**管理**。
 4.	要配置代理服务器，请在“代理设置”窗格中，单击**编辑**。
 5.	选择**使用代理服务器**，输入代理服务器设置，然后单击**确定**。

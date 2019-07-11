@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-16"
+lastupdated: "2019-06-14"
+
+keywords: set credentials, user credentials, set notifications
 
 subcollection: vmware-solutions
 
@@ -26,23 +28,29 @@ subcollection: vmware-solutions
 {: #useraccount-reqs}
 
 * 只能将一个 {{site.data.keyword.cloud_notm}} 基础架构帐户链接到一个 {{site.data.keyword.cloud_notm}} 用户帐户。
-* 要使用的 {{site.data.keyword.cloud_notm}} 基础架构帐户必须满足特定需求。有关更多信息，请参阅 [{{site.data.keyword.cloud_notm}} 基础架构帐户需求](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)。
+* 要使用的 {{site.data.keyword.cloud_notm}} 基础架构帐户必须满足特定需求。有关更多信息，请参阅 [{{site.data.keyword.cloud_notm}} 基础架构帐户需求](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req)。
 * 如果 {{site.data.keyword.cloud_notm}} 基础架构帐户的 API 密钥发生更改，那么必须在 {{site.data.keyword.vmwaresolutions_short}} 控制台的**设置**页面上更新密钥。
 
-   **重要信息**：您负责确保**设置**页面上保存的 API 密钥正确且最新。否则，需要 API 密钥验证的操作可能会失败。
+   您负责确保**设置**页面上保存的 API 密钥正确且最新。否则，需要 API 密钥验证的操作可能会失败。
+   {:important}
 
-## 管理用户帐户和设置的过程
-{: #useraccount-procedure}
+## 设置通知的过程
+{: #useraccount-set-notif}
 
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**设置**。
-2. 在**通知**区域中，指定通知设置。
-   * 如果希望发生事件时获得电子邮件通知，请单击**启用电子邮件通知**。
-   * 如果希望发生事件时在控制台中获得通知，请单击**启用控制台通知**。
-3. 在 **IBM Cloud 基础架构凭证**区域中，输入 {{site.data.keyword.cloud_notm}} 基础架构凭证帐户的用户名和 API 密钥：
-   * 如果 {{site.data.keyword.cloud_notm}} 基础架构帐户和 {{site.data.keyword.cloud_notm}} 帐户已链接，请单击**检索**以自动输入凭证。
-   * 如果 {{site.data.keyword.cloud_notm}} 基础架构帐户和 {{site.data.keyword.cloud_notm}} 帐户未链接，那么必须进行链接。登录 [{{site.data.keyword.cloud_notm}} 基础架构客户门户网站](https://control.softlayer.com/)，按控制台上的指示信息操作以获取并输入凭证。
-   * 如果您没有 {{site.data.keyword.cloud_notm}} 基础架构帐户，请[注册帐户](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)，并遵循控制台上的指示信息来获取凭证，然后输入凭证。
-4. 单击**保存凭证**。
+2. 如果希望发生事件时获得电子邮件通知，请单击**启用电子邮件通知**。
+3. 如果希望发生事件时在控制台中获得通知，请单击**启用控制台通知**。
+
+## 设置用户帐户凭证的过程
+{: #useraccount-set-cred}
+
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**设置**。
+2. 在 **IBM Cloud 基础架构凭证**区域中，查看您需要执行的步骤的信息。
+3. 如果您同时有链接在一起的 {{site.data.keyword.cloud_notm}} 基础架构帐户和 {{site.data.keyword.cloud_notm}} 帐户，请单击**检索**以自动填写凭证。
+4. 如果您同时有未链接在一起的 {{site.data.keyword.cloud_notm}} 基础架构帐户和 {{site.data.keyword.cloud_notm}} 帐户，那么必须进行链接。按照[链接 IBM 标识帐户](/docs/account?topic=account-unifyingaccounts#link_accounts)中的指示信息进行操作，然后单击**检索**以自动填写凭证。
+5. 如果您没有 {{site.data.keyword.cloud_notm}} 基础架构帐户，并且您没有计费 {{site.data.keyword.cloud_notm}} 帐户，请首先[升级帐户](/docs/account?topic=account-upgrading-account)，然后[创建经典基础架构 API 密钥](/docs/iam?topic=iam-classic_keys)。
+6. 如果您没有 {{site.data.keyword.cloud_notm}} 基础架构帐户，并且您有计费 {{site.data.keyword.cloud_notm}} 帐户，那么必须[创建经典基础架构 API 密钥](/docs/iam?topic=iam-classic_keys)。
+7. 单击**保存凭证**。
 
 ## 结果
 {: #useraccount-results}

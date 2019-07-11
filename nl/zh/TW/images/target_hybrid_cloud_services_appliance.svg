@@ -138,7 +138,7 @@
 					L587.5,466.6z"/>
 			</g>
 		</g>
-		<text transform="matrix(1 0 0 1 190 494)" class="st7 st8">vSAN 與 vMotion -- 專用 VLAN B</text>
+		<text transform="matrix(1 0 0 1 201 494)" class="st7 st8">vSAN 與 vMotion -- 專用 VLAN B</text>
 	</g>
 </g>
 <g id="Logical_swiitch">
@@ -163,7 +163,7 @@
 				C598,418.1,593.3,409.7,587.5,409.7L587.5,409.7z"/>
 		</g>
 	</g>
-	<text transform="matrix(1 0 0 1 150 436)" class="st7 st8">管理與 VXLAN -- 專用 VLAN A（原生）</text>
+	<text transform="matrix(1 0 0 1 115 436)" class="st7 st8">管理與 VXLAN -- 專用 VLAN A（原生）</text>
 </g>
 <g id="P_x2F_V">
 	<g>

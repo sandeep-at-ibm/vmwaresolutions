@@ -19,7 +19,7 @@ subcollection: vmware-solutions
 ## VLAN Spanning 需求
 {: #relnotes_v11-vlan-spanning}
 
-如果您使用典型（非 VRF）SoftLayer® 帳戶，則必須啟用 VLAN Spanning。如果未對典型帳戶啟用 VLAN Spanning，則 VMware 虛擬化環境的各種元件可能無法彼此通訊。如果要在 SoftLayer 帳戶中啟用 VLAN Spanning，請參閱[啟用或停用 VLAN Spanning ](/docs/infrastructure/vlans?topic=vlans-vlan-spanning){:new_window}。
+如果您使用典型（非 VRF）SoftLayer® 帳戶，則必須啟用 VLAN Spanning。如果未對典型帳戶啟用 VLAN Spanning，則 VMware 虛擬化環境的各種元件可能無法彼此通訊。若要在 SoftLayer 帳戶中啟用 VLAN Spanning，請參閱[啟用或停用 VLAN Spanning ](/docs/infrastructure/vlans?topic=vlans-vlan-spanning){:new_window}。
 
 ## 電子郵件設定和通知
 {: #relnotes_v11-email}

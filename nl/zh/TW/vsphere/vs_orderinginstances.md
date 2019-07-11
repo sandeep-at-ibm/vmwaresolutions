@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-26"
+lastupdated: "2019-06-18"
+
+keywords: vSphere order cluster, order vSphere, order vSphere cluster
 
 subcollection: vmware-solutions
 
@@ -20,7 +22,7 @@ subcollection: vmware-solutions
 
 若要部署可高度自訂的 VMware 虛擬化平台，請訂購 {{site.data.keyword.cloud}} 上的 VMware vSphere 叢集。使用此程序來定義新的 vSphere 叢集。
 
-此程序引導您完成選取 VMware 元件、{{site.data.keyword.cloud_notm}} Bare Metal Server 設定、儲存空間設定及網路選項，以建立新叢集。在下單之後，會擷取叢集配置，以便您可以返回並視需要繼續擴充叢集。完成訂單之後，您可以根據需求，手動配置 VMware 叢集。
+此程序引導您完成選取 VMware 元件、{{site.data.keyword.cloud_notm}} Bare Metal Server 設定、儲存空間設定及網路選項，以建立新叢集。在下訂單之後，會擷取叢集配置，以便您可以回來視需要繼續橫向擴充叢集。完成訂單之後，您可以根據需求，手動配置 VMware 叢集。
 
 ## 需求
 {: #vs_orderinginstances-req}
@@ -178,7 +180,7 @@ subcollection: vmware-solutions
 ### 主機名稱字首
 {: #vs_orderinginstances-host-name-prefix}
 
-主機名稱使用於所有 Bare Metal Server 訂單。建議您對所有管理虛擬機器使用主機名稱（例如 vCenter Server 及 NSX）。
+主機名稱使用於所有裸機伺服器訂單。建議您對所有管理虛擬機器使用主機名稱（例如 vCenter Server 及 NSX）。
 
 主機名稱字首必須滿足下列需求：
 * 名稱的開頭及結尾必須是英數字元。
@@ -192,7 +194,6 @@ subcollection: vmware-solutions
 *  只容許英數及橫線 (-) 字元。
 *  子網域標籤的開頭及結尾必須是英數字元。
 *  子網域標籤的長度上限為 10 個字元。
-*  子網域標籤在您的帳戶內必須是唯一的。
 
 ### 網域名稱
 {: #vs_orderinginstances-domain-name}
@@ -246,7 +247,9 @@ subcollection: vmware-solutions
 ## 訂單摘要
 {: #vs_orderinginstances-order-summary}
 
-根據您的配置，預估成本會立即產生並顯示在右側的**訂單摘要**窗格中。按一下**定價詳細資料**，以產生提供預估詳細資料的 PDF 文件。
+根據您選取的配置，預估成本會立即產生並顯示在**訂單摘要**右窗格中。按一下**定價詳細資料**，以產生具有 {{site.data.keyword.vmwaresolutions_short}} 資源文件摘要的 PDF 文件。
+
+您也可以按一下**新增至預估**，將佈建的資源新增至 {{site.data.keyword.cloud_notm}} 預估工具。這適用於您想要預估所選取 {{site.data.keyword.vmwaresolutions_short}} 資源與可能考慮購買之其他 {{site.data.keyword.cloud_notm}} 資源的成本時。
 
 ## 訂購 vSphere 叢集的程序
 {: #vs_orderinginstances-procedure}
@@ -259,7 +262,7 @@ subcollection: vmware-solutions
   * 如果您是「IBM 事業夥伴」，則請選取一個授權組合及任何其他可用的 VMware 元件。
   * 如果您是非「事業夥伴」，則請選取元件（如果有的話，則請選取版本），並指定授權選項。當您選擇針對 VMware vSphere Enterprise Plus「自帶授權 (BYOL)」時，會代表您自動開立 {{site.data.keyword.cloud_notm}} 問題單，要求將您訂購的 {{site.data.keyword.baremetal_short}} 上的預設 vSphere 授權取代為您提供的授權。   
 
-    **重要事項：**您負責追蹤問題單，以在新訂購的 ESXi 伺服器上取代 vSphere 授權。因此 {{site.data.keyword.cloud_notm}} 基礎架構授權取消初始提供的 {{site.data.keyword.cloud_notm}} 基礎架構 vSphere 授權費。如果要取代您的 ESXi vSphere 授權，請參閱[配置 ESXi 主機的授權設定](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}。
+    **重要事項：**您負責追蹤問題單，以在新訂購的 ESXi 伺服器上取代 vSphere 授權。因此 {{site.data.keyword.cloud_notm}} 基礎架構授權取消初始提供的 {{site.data.keyword.cloud_notm}} 基礎架構 vSphere 授權費。若要取代您的 ESXi vSphere 授權，請參閱[配置 ESXi 主機的授權設定](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}。
 5. 完成 Bare Metal Server 設定：
    1. 選取 {{site.data.keyword.CloudDataCent_notm}} 來管理叢集。
    2. 選取 Bare Metal Server 配置。
@@ -281,7 +284,7 @@ subcollection: vmware-solutions
    僅安裝 {{site.data.keyword.baremetal_short}}。您負責在叢集部署之後安裝及配置各種元件，例如 VMware vCenter、VMware NSX、VMware vSAN。
    {:note}
 
-### 結果
+### 訂購 vSphere 叢集後的結果
 {: #vs_orderinginstances-results}
 
 如果您將叢集配置儲存為範本，則會收到主控台通知，指出已順利儲存配置，然後您可以在**叢集配置**清單中找到該範本。

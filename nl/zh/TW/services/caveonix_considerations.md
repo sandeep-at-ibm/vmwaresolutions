@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-12"
+lastupdated: "2019-06-17"
+
+keywords: Caveonix, Caveonix RiskForesight, tech specs Caveonix
 
 subcollection: vmware-solutions
 
@@ -21,6 +23,7 @@ subcollection: vmware-solutions
 Caveonix RiskForesight on {{site.data.keyword.cloud}} 服務可以透過主動監視和自動化防禦控制來防範威脅及因應業界或政府規章，以協助管理網路和法規遵循風險。
 
 只有部署在 2.9 版及更新版本中的 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 實例，才能使用此服務。
+現行安裝的 Caveonix RiskForesight 版本為 2.2.1。
 {:note}
 
 ## Caveonix RiskForesight on IBM Cloud 的技術規格

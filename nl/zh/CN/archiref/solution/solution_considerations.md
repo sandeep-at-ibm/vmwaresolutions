@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-05-22"
 
 subcollection: vmware-solutions
 
@@ -44,10 +44,10 @@ subcollection: vmware-solutions
 
 完成以下步骤以管理对 {{site.data.keyword.cloud_notm}} 网络和 VMware 管理组件的访问权，并规划 {{site.data.keyword.cloud_notm}} 网络拓扑。
 
-- 使用 [{{site.data.keyword.cloud_notm}} VPN](https://www.softlayer.com/vpn-access) 或 [{{site.data.keyword.cloud_notm}}“直接链路”连接](https://www.ibm.com/cloud/direct-link)来访问实例管理端点。
-- 设计从实例内部建立公用网络连接的策略。您的选项包括：样本客户 VMware NSX Edge 服务网关 (ESG)、网关设备（例如，Vyatta 和 FortiGate）以及在 {{site.data.keyword.cloud_notm}} 网络或在通过 DirectLink 访问的您自己的网络上部署的代理服务器。
-- 规划是在具有 [{{site.data.keyword.cloud_notm}} 可移植 IP 地址](/docs/infrastructure/subnets?topic=subnets-getting-started-subnets-ips#getting-started-subnets-ips)的 {{site.data.keyword.cloud_notm}} VLAN 上部署工作负载，还是[使用您自己的 IP 地址在 NSX 逻辑交换机 (VXLAN) 上](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_overview)部署工作负载。请注意，使用 NSX 软件定义的联网 (SDN) 可为您在 {{site.data.keyword.cloud_notm}} 中管理并确保工作负载网络安全提供最大的灵活性。
-- 使用 NSX ESG、[IBM Cloud Vyatta](https://cloud.ibm.com/catalog/infrastructure/virtual-router-appliance) 和 DirectLink 对等连接来规划与工作负载的连接（网络地址转换、虚拟专用网和路由）。
+- 使用 [{{site.data.keyword.cloud_notm}} VPN](https://www.softlayer.com/vpn-access) 或 [{{site.data.keyword.cloud_notm}} Direct Link 连接](https://www.ibm.com/cloud/direct-link)来访问实例管理端点。
+- 设计从实例内部建立公用网络连接的策略。您的选项包括：样本客户 VMware NSX Edge 服务网关 (ESG)、网关设备（例如，Vyatta 和 FortiGate）以及在 {{site.data.keyword.cloud_notm}} 网络中或在通过 Direct Link 访问的您自己的网络上部署的代理服务器。
+- 规划是在具有 [{{site.data.keyword.cloud_notm}} 可移植 IP 地址](/docs/infrastructure/subnets?topic=subnets-getting-started)的 {{site.data.keyword.cloud_notm}} VLAN 上部署工作负载，还是[使用您自己的 IP 地址在 NSX 逻辑交换机 (VXLAN) 上](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_overview)部署工作负载。请注意，使用 NSX 软件定义的联网 (SDN) 可为您在 {{site.data.keyword.cloud_notm}} 中管理并确保工作负载网络安全提供最大的灵活性。
+- 使用 NSX ESG、[IBM Cloud Vyatta](https://cloud.ibm.com/catalog/infrastructure/virtual-router-appliance) 和 Direct Link 对等连接来规划与工作负载的连接（网络地址转换、虚拟专用网和路由）。
 - 如果要实现跨 vCenter NSX，请确保在部署任何本地工作负载之前，本地分段标识范围不重叠。
 
 ## 安全性规划和强化

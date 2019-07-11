@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-06-18"
+
+keywords: IBM Integrated Managed Infrastructure, request IBM IMI, tech specs IMI
 
 subcollection: vmware-solutions
 
@@ -24,7 +26,6 @@ IMI 提供 vCenter Server 實例的受管理服務。這些受管理服務包括
 {: #managing_imi-specs}
 
 IMI 管理服務隨附下列規格：
-
 * 涵蓋面選項：8X5、16X5 或 24X7
 * 負責整體交付的「IT 服務管理」工具及管理處理程序
 * 法規遵循管理
@@ -38,7 +39,7 @@ IMI 管理服務隨附下列規格：
 2. 向下捲動頁面，然後按一下位在**訂購其他受管理服務**下的 **IMI 的受管理服務**卡片。
 3. 在 **IMI 的受管理服務**頁面的**參與 IMI 售前**方框中，輸入您 IMI 服務需求的說明，然後按一下**要求商議**。
 
-「IMI 售前業務代表」會使用 {{site.data.keyword.cloud_notm}} 聯絡資訊聯絡您，以協助提供您所需的服務。
+  {{site.data.keyword.vmwaresolutions_short}} 業務代表將會使用您的 {{site.data.keyword.cloud_notm}} 聯絡資訊來與您聯絡，以協助提供您所需的解決方案。
 
 ## 相關鏈結
 {: #managing_imi-related}

@@ -6,6 +6,8 @@ copyright:
 
 lastupdated: "2019-05-03"
 
+keywords: release notes, what's new, version 3.0
+
 subcollection: vmware-solutions
 
 
@@ -112,7 +114,7 @@ subcollection: vmware-solutions
 
 * 現在有可用的文件，協助您將 {{site.data.keyword.vmwaresolutions_short}} 元件升級至 VMware vSphere 6.7。如果您想要繼續從 {{site.data.keyword.vmwaresolutions_short}} 自動化獲益，則需要此升級。如需相關資訊，請參閱[將 vCenter Server vSphere 軟體從 VMware vSphere 6.5 升級至 6.7](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_vsphere_upgrade#vc_vsphere_upgrade)。
 * 現在有可用的參考文件，提供您 {{site.data.keyword.vmwaresolutions_short}} 維護的使用者 ID，以供 {{site.data.keyword.cloud_notm}} 自動化使用。顯示在實例歷程日誌中的可能訊息也可供您檢閱。如需相關資訊，請參閱 [IBM 使用者 ID](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_user_ids) 和[實例歷程訊息](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_messages)。
-* **重新開機/控制**許可權已新增至表格，說明 IBM Cloud 基礎架構帳戶的必要許可權。如需相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} 基礎架構帳戶的許可權](/docs/services/vmwaresolutions/services?topic=vmware-solutions-slaccountrequirement#slaccountrequirement-permissions)。
+* **重新開機/控制**許可權已新增至表格，說明 IBM Cloud 基礎架構帳戶的必要許可權。如需相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} 基礎架構帳戶的許可權](/docs/services/vmwaresolutions/services?topic=vmware-solutions-cloud-infra-acct-req#cloud-infra-acct-req-permissions)。
 * 下列 API 提供了新的參考文件。如需相關資訊，請參閱 [API 參考資料](https://cloud.ibm.com/apidocs/vmware-solutions){:new_window}。
   * 列出所指定 VMware vCenter Server 實例的所有歷程訊息
   * 將共用儲存空間新增至指定的叢集

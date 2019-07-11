@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-02"
+lastupdated: "2019-06-17"
+
+keywords: vCenter Server compliance, compliance info, vCenter Server policy
 
 subcollection: vmware-solutions
 
@@ -50,6 +52,21 @@ HIPAA 客户不支持 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 
 {: #vc_compl_info-personal-info-and-regulated-data}
 
 此 Cloud Service 并非旨在满足任何受管控内容（例如，个人信息或敏感的个人信息）的特定安全要求。客户负责确定在自己使用的与 Cloud Service 有关的内容类型方面，此 Cloud Service 是否符合其需求。
+
+## 策略配置
+{: #vc_compl_info-default-policy-config}
+
+为 vCenter Server 主实例生成的 vCenter 密码现在长度是 15 个字符。先前，生成的密码长度为 vCenter 缺省值 8 个字符。
+
+表 1. 新主实例的 vCenter 策略配置
+
+|策略|V3.1 或更高版本|V3.0 或更低版本|
+|:------------- |:------------------------------ |:------------- |
+| vCenter 密码策略| 最小长度为 15 个字符 | 最小长度为 8 个字符（vCenter 缺省值）|
+| vCenter 锁定策略| 最多三次失败的登录尝试 | 最多五次失败的登录尝试（vCenter 缺省值） |
+| vCenter 锁定策略| 相邻登录失败之间 900 秒 | 相邻登录失败之间 180 秒（vCenter 缺省值）|
+
+为 vCenter Server 主实例生成的 NSX Manager 密码现在长度是 15 个字符。先前，生成的密码长度为 8 个字符。
 
 ## 用于访问客户实例的策略
 {: #vc_compl_info-policy-for-access-client-inst}

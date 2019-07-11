@@ -29,7 +29,7 @@
 	<rect x="0.3" y="0.9" class="st3" width="186.9" height="190.5"/>
 </g>
 <g id="Layer_4">
-	<text transform="matrix(1 0 0 1 45 35.8409)" class="st4 st5 st6">常見服務</text>
+	<text transform="matrix(1 0 0 1 8.0529 35.8409)" class="st4 st5 st6">常見服務</text>
 	<text transform="matrix(1 0 0 1 42.7579 75.3497)"><tspan x="35" y="0" class="st4 st5 st7">鑑別</tspan><tspan x="35" y="31.4" class="st4 st5 st7">DNS</tspan><tspan x="35" y="62.8" class="st4 st5 st7">NTP</tspan><tspan x="0" y="94.3" class="st4 st5 st7">憑證管理中心</tspan></text>
 </g>
 <text transform="matrix(1 0 0 1 332.3229 38.8409)"><tspan x="60" y="0" class="st4 st5 st8">虛擬化管理</tspan><tspan x="39.7" y="29.8" class="st4 st5 st9">VMware vCenter Server</tspan></text>
@@ -37,7 +37,7 @@
 <text transform="matrix(1 0 0 1 561.7472 141.4337)" class="st4 st5 st10">NetApp  ONTAP  Select</text>
 <text transform="matrix(1 0 0 1 385.2491 140.9747)"><tspan x="35" y="0" class="st4 st5 st10">網路虛擬化</tspan><tspan x="34.2" y="20.9" class="st4 st5 st11">VMware NSX </tspan><tspan x="108.9" y="18.3" class="st4 st5 st11">  </tspan></text>
 <text transform="matrix(1 0 0 1 187.5363 246.7403)"><tspan x="20" y="0" class="st4 st5 st12">IBM Cloud 上的實體基礎架構</tspan><tspan x="283.7" y="0" class="st4 st5 st13"> </tspan><tspan x="290.4" y="0" class="st4 st5 st14"></tspan></text>
-<text transform="matrix(1 0 0 1 195 294.1616)" class="st4 st5 st15">運算</text>
-<text transform="matrix(1 0 0 1 330 294.1616)" class="st4 st5 st15">儲存空間</text>
-<text transform="matrix(1 0 0 1 465 293.2401)" class="st4 st5 st15">網路</text>
+<text transform="matrix(1 0 0 1 200.6517 294.1616)" class="st4 st5 st15">運算</text>
+<text transform="matrix(1 0 0 1 334.018 294.1616)" class="st4 st5 st15">儲存空間</text>
+<text transform="matrix(1 0 0 1 449.0178 293.2401)" class="st4 st5 st15">網路</text>
 </svg>

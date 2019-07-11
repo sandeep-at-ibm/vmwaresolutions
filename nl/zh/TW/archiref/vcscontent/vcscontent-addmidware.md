@@ -176,7 +176,7 @@ path = /shared/db2trader1`
 ### MQ
 {: #vcscontent-addmidware-mq}
 
-Todd 及 Jane 需要傳訊軟體，而且，因為他們已使用 MQ，所以這是一個絕佳選項。此外，它還可以在小覆蓋區中執行，並可針對每個「開發人員」啟動開發版本，以節省寶貴的「正式作業」資料流量。安裝 MQ 相當簡單。Todd 建立儲存空間的方式就像使用 Db2 時一樣，然後安裝 Helm 圖表：
+Todd 及 Jane 需要傳訊軟體，而且，因為他們已使用 MQ，所以這是一個絕佳選項。此外，它也可以在小覆蓋區中執行，並可針對每個「開發人員」啟動開發版本，以節省寶貴的「正式作業」資料流量。安裝 MQ 相當簡單。Todd 建立儲存空間的方式就像使用 Db2 時一樣，然後安裝 Helm 圖表：
 
 {{site.data.keyword.icpfull_notm}} 儀表板 > 型錄 > 開始在 MQ 中鍵入 > 選取 ibm-mqadvanced-server-dev 請檢閱 Readme 檔，然後按一下「配置」
 提供或驗證下列輸入值：
@@ -220,7 +220,7 @@ Todd 一開始會從使用者介面中選取要在中介軟體取得的 NodePort
 -	已新增管線（Jane 已使用 Jenkins）
 -	使用 Maven 所建置
 
-下列是 Jane 的[程式碼儲存庫](https://github.com/IBMStockTrader/) 範例，以及 Jenkins 檔案、server.xml 及其他檔案。備妥之後，Jane 可以透過密碼自由地編碼額外功能，以存取 ODM 及 Watson 這類服務以及作為 GitHub 中個別儲存庫的其他微服務。
+以下是 Jane 的[程式碼儲存庫](https://github.com/IBMStockTrader/) 範例，以及 Jenkins 檔案、server.xml 及其他檔案。備妥之後，Jane 可以透過密碼自由地編碼額外功能，以存取 ODM 及 Watson 這類服務以及作為 GitHub 中個別儲存庫的其他微服務。
 
 ### 新增密碼
 {: #vcscontent-addmidware-add-secrets}

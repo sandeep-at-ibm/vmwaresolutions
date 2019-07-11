@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-16"
+lastupdated: "2019-06-14"
+
+keywords: set credentials, user credentials, set notifications
 
 subcollection: vmware-solutions
 
@@ -26,23 +28,29 @@ subcollection: vmware-solutions
 {: #useraccount-reqs}
 
 * 您只能將一個 {{site.data.keyword.cloud_notm}} 基礎架構帳戶鏈結至一個 {{site.data.keyword.cloud_notm}} 使用者帳戶。
-* 您使用的 {{site.data.keyword.cloud_notm}} 基礎架構帳戶必須符合特定需求。如需相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} 基礎架構帳戶需求](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)。
+* 您使用的 {{site.data.keyword.cloud_notm}} 基礎架構帳戶必須符合特定需求。如需相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} 基礎架構帳戶需求](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req)。
 * 如果 {{site.data.keyword.cloud_notm}} 基礎架構帳戶的 API 金鑰變更，則您必須在 {{site.data.keyword.vmwaresolutions_short}} 主控台的**設定**頁面上更新金鑰。
 
-   **重要事項：**您有責任確保儲存在**設定**頁面上的 API 金鑰正確無誤且保持最新。否則，需要 API 金鑰驗證的作業可能會失敗。
+   您負責確保**設定**頁面上儲存的 API 金鑰正確且最新。否則，需要 API 金鑰驗證的作業可能會失敗。
+   {:important}
 
-## 管理使用者帳戶及設定的程序
-{: #useraccount-procedure}
+## 設定通知的程序
+{: #useraccount-set-notif}
 
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**設定**。
-2. 在**通知**區域中，指定您的通知設定。
-   * 如果您要在事件發生時透過電子郵件通知您，請按一下**啟用電子郵件通知**。
-   * 如果您要在事件發生時透過主控台通知您，請按一下**啟用主控台通知**。
-3. 在 **IBM Cloud 基礎架構認證**區域中，輸入您 {{site.data.keyword.cloud_notm}} 基礎架構帳戶的使用者名稱及 API 金鑰：
-   * 如果已鏈結 {{site.data.keyword.cloud_notm}} 基礎架構帳戶與您的 {{site.data.keyword.cloud_notm}} 帳戶，請按一下**擷取**以自動輸入認證。
-   * 如果未鏈結 {{site.data.keyword.cloud_notm}} 基礎架構帳戶與您的 {{site.data.keyword.cloud_notm}} 帳戶，則必須鏈結它們。登入 [{{site.data.keyword.cloud_notm}} 基礎架構客戶入口網站](https://control.softlayer.com/)，然後遵循主控台上的指示以取得並輸入認證。
-   * 如果您沒有 {{site.data.keyword.cloud_notm}} 基礎架構帳戶，請[註冊帳戶](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)，然後遵循主控台上的指示以取得並輸入認證。
-4. 按一下**儲存認證**。
+2. 如果您要在事件發生時透過電子郵件通知您，請按一下**啟用電子郵件通知**。
+3. 如果您要在事件發生時透過主控台通知您，請按一下**啟用主控台通知**。
+
+## 設定使用者帳戶認證的程序
+{: #useraccount-set-cred}
+
+1. 在 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**設定**。
+2. 在 **IBM Cloud 基礎架構認證**區域中，檢閱您需要執行之步驟的資訊。
+3. 如果您同時有鏈結在一起的 {{site.data.keyword.cloud_notm}} 基礎架構帳戶和 {{site.data.keyword.cloud_notm}} 帳戶，請按一下**擷取**以自動填寫認證。
+4. 如果您同時有未鏈結在一起的 {{site.data.keyword.cloud_notm}} 基礎架構帳戶和 {{site.data.keyword.cloud_notm}} 帳戶，則必須進行鏈結。按照[鏈結 IBM ID 帳戶](/docs/account?topic=account-unifyingaccounts#link_accounts)中的指示進行操作，然後按一下**擷取**以自動填寫認證。
+5. 如果您沒有 {{site.data.keyword.cloud_notm}} 基礎架構帳戶，且您沒有計費 {{site.data.keyword.cloud_notm}} 帳戶，請先[升級帳戶](/docs/account?topic=account-upgrading-account)，然後[建立標準基礎架構 API 金鑰](/docs/iam?topic=iam-classic_keys)。
+6. 如果您沒有 {{site.data.keyword.cloud_notm}} 基礎架構帳戶，且您有計費 {{site.data.keyword.cloud_notm}} 帳戶，則必須[建立標準基礎架構 API 金鑰](/docs/iam?topic=iam-classic_keys)。
+7. 按一下**儲存認證**。
 
 ## 結果
 {: #useraccount-results}

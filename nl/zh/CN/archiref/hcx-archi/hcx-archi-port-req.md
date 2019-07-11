@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-06-17"
 
 subcollection: vmware-solutions
 
 
 ---
-# VMware HCX on IBM Cloud 端口访问需求
+# VMware HCX on IBM Cloud 的端口访问需求
 {: #hcx-archi-port-req}
 
 HCX 必须遍历公用因特网和专用线路，并连接到数据中心组件，例如网络、交换机和端口组。

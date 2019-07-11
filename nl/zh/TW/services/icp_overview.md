@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-01"
+lastupdated: "2019-06-13"
+
+keywords: IBM Cloud Private, ICP, tech specs ICP
 
 subcollection: vmware-solutions
 
@@ -79,14 +81,14 @@ subcollection: vmware-solutions
 
 下列公式用來計算 IBM Cloud Private 的空間需求及管理上的額外需要。
 
-#### 公式 1
+#### 計算可用核心數的公式
 {: #icp_overview-formulas-1}
 
 `AvailableCores = [HostCoreCount - HostOverheadCores - (HostVSanOverheadCorePercentage * HostCoreCount)] * (HostCount - vSphereHAHostTolerance) - MgmtOverheadCores`
 
 表 4. 公式 1 中的變數說明
 
-| 變數	|說明              |	單位 |	vSAN 範例 | NFS 範例 |
+|變數|說明              |單位 |vSAN 範例 | NFS 範例 |
 |:--------- |:----------- |:---- |:------------- |:----------- |
 | AvailableCores |可供環境中工作負載和服務使用的實際核心數 | 核心 | 38 | 43 |
 | HostCount | 預設叢集中的主機數目	| 主機 |4 |4 |
@@ -96,24 +98,24 @@ subcollection: vmware-solutions
 | vSphereHAHostTolerance |vSphere HA 配置中容忍的主機數（等於一部主機）|	主機	 |1 |1 |
 | HostVsanOverheadCorePercentage | vSAN 所使用的主機核心百分比，其等於 10%，如果主機非 vSAN，則等於 0%| % | 10% |0% |
 
-#### 公式 2
+#### 計算可用記憶體的公式
 {: #icp_overview-formulas-2}
 
 `AvailableMemory = [HostMemory - HostOverheadMemory - HostVsanOverheadMemory - (HostVsanOverheadMemoryDiskPercentage * HostVsanCapacityDiskSize)] * (HostCount - vSphereHAHostTolerance) - MgmtOverheadMemory`
 
 表 5. 公式 2 中的變數說明
 
-| 變數	|說明              |	單位 |	vSAN 範例 | NFS 範例 |
+|變數|說明              |單位 |vSAN 範例 | NFS 範例 |
 |:--------- |:----------- |:---- |:------------- |:----------- |
-| AvailableMemory	| 可供環境中工作負載和服務使用的記憶體 GB 數 | GB | 	693	| 860 |
-| HostCount	| 預設叢集中的主機數目	| 主機  | 6	| 6 |
-| HostMemory |	 預設叢集中每一部主機可用的原始 GB 數 |	GB	| 192 |	192 |
-| HostVsanCapacityDiskSize | 在此主機上每一個 vSAN 容量 SSD 磁碟容量的 GB 數（等於 960、1,946 或 3,891），如果主機非 vSAN，則等於 0 GB| GB |	960 | 0 |
-| HostOverheadMemory |	ESXi 伺服器保留給額外需要的記憶體 GB 數（等於 4.6 GB）|	GB	| 4.6 |	4.6 |
-| MgmtOverheadMemory |	vCenter Server 管理元件（vCenter Server、PSC、AD/DNS、Edges）保留的記憶體 GB 數（等於 77 GB）| GB | 77 | 77 |
+| AvailableMemory | 可供環境中工作負載和服務使用的記憶體 GB 數 | GB | 693 | 860 |
+| HostCount | 預設叢集中的主機數目	| 主機  | 6 | 6 |
+| HostMemory | 預設叢集中每一部主機可用的原始 GB 數 | GB | 192 | 192 |
+| HostVsanCapacityDiskSize | 在此主機上每一個 vSAN 容量 SSD 磁碟容量的 GB 數（等於 960、1,946 或 3,891），如果主機非 vSAN，則等於 0 GB| GB |960 | 0 |
+| HostOverheadMemory |ESXi 伺服器保留給額外需要的記憶體 GB 數（等於 4.6 GB）| GB | 4.6 | 4.6 |
+| MgmtOverheadMemory |vCenter Server 管理元件（vCenter Server、PSC、AD/DNS、Edges）保留的記憶體 GB 數（等於 77 GB）| GB | 77 | 77 |
 | vSphereHAHostTolerance |vSphere HA 配置中容忍的主機數（等於一部主機）| 主機	|1 |1 |
-| HostVsanOverheadMemoryDiskPercentage | vSAN 管理所保留的記憶體 GB 數（以其中一個容量 vSAN 磁碟的百分比表示），其等於 2.75%|	% | 2.75% | 2.75% |
-| HostVsanOverheadMemory | vSAN 管理所保留的記憶體 GB 數（不論磁碟大小為何）（等於 7 GB），如果主機非 vSAN，則等於 0 GB| GB |  7	| 0 |
+| HostVsanOverheadMemoryDiskPercentage | vSAN 管理所保留的記憶體 GB 數（以其中一個容量 vSAN 磁碟的百分比表示），其等於 2.75%| % | 2.75% | 2.75% |
+| HostVsanOverheadMemory | vSAN 管理所保留的記憶體 GB 數（不論磁碟大小為何）（等於 7 GB），如果主機非 vSAN，則等於 0 GB| GB |7 | 0 |
 
 ## 安裝 IBM Cloud Private Hosted 時的考量
 {: #icp_overview-install}

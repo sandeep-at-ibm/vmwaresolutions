@@ -36,7 +36,8 @@ No diagrama, o CAM cria conexões em nuvem logicamente para os vCenters, os prov
 
 É possível implementar o {{site.data.keyword.icpfull_notm}} com os componentes NSX-V ou NSX-T. O {{site.data.keyword.icpfull_notm}} com NSX-V permite que as MVs do {{site.data.keyword.icpfull_notm}} sejam executadas na rede VXLAN e usem a rede interna Calico do Kubernetes.
 
-O {{site.data.keyword.icpfull_notm}} com NSX-T, que permite que os usuários controlem e configurem a rede, a sub-rede, as políticas da IU central (Gerenciador NSX-T). Consulte o [Guia de rede do vCenter Server](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro) para ver as diferenças entre NSX-V e NSX-T.
+O {{site.data.keyword.icpfull_notm}} com NSX-T, que permite que os usuários controlem e configurem a rede,
+a sub-rede, as políticas da IU central (Gerenciador NSX-T). Consulte o [Guia de rede do vCenter Server](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro) para ver as diferenças entre NSX-V e NSX-T.
 
 ## Plataforma de gerenciamento de nuvem no local
 {: #vcsicp-arch-overview-on-premises-platform}

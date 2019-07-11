@@ -168,7 +168,7 @@
 			</g>
 		</g>
 	</g>
-	<text transform="matrix(1 0 0 1 400 780)" class="st7 st15">雲端閘道</text>
+	<text transform="matrix(1 0 0 1 370 780)" class="st7 st15"> 雲端閘道</text>
 </g>
 <g id="gear_bottom">
 	<g>
@@ -199,7 +199,7 @@
 				<rect x="562.9" y="744.8" transform="matrix(0.7071 0.7071 -0.7071 0.7071 694.2971 -181.0563)" class="st0" width="5.5" height="5.5"/>
 		</g>
 	</g>
-	<text transform="matrix(1 0 0 1 515 780)" class="st7 st15">WAN 最佳化程式</text>
+	<text transform="matrix(1 0 0 1 519 780)" class="st7 st15">WAN 最佳化程式</text>
 </g>
 <g id="gear_icon">
 	<g>
@@ -250,7 +250,7 @@
 					 M587.5,568.6c-5.8,0-10.5,8.3-10.5,18.4s4.7,18.4,10.5,18.4s10.5-8.3,10.5-18.4S593.3,568.6,587.5,568.6L587.5,568.6z"/>
 			</g>
 		</g>
-		<text transform="matrix(1 0 0 1 195 596)" class="st7 st8">vSAN 與 vMotion -- 專用 VLAN B</text>
+		<text transform="matrix(1 0 0 1 201 596)" class="st7 st8">vSAN 與 vMotion -- 專用 VLAN B</text>
 	</g>
 </g>
 <g id="Logical_swiitch">
@@ -273,7 +273,7 @@
 				</g>
 			</g>
 		</g>
-		<text transform="matrix(1 0 0 1 280 466)" class="st7 st8">邏輯交換式網路 (VXLAN)</text>
+		<text transform="matrix(1 0 0 1 276 466)" class="st7 st8">邏輯交換式網路 (VXLAN)</text>
 	</g>
 	<g id="Layer_9">
 	</g>
@@ -297,7 +297,7 @@
 				C598,515.1,593.3,506.7,587.5,506.7L587.5,506.7z"/>
 		</g>
 	</g>
-	<text transform="matrix(1 0 0 1 150 533)" class="st7 st8">管理與 VXLAN -- 專用 VLAN A（原生）</text>
+	<text transform="matrix(1 0 0 1 121 533)" class="st7 st8">管理與 VXLAN -- 專用 VLAN A（原生）</text>
 </g>
 <g id="P_x2F_V">
 	<g>

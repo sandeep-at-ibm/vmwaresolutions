@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-07"
+lastupdated: "2019-06-18"
+
+keywords: Veeam, Veeam install, tech specs Veeam
 
 subcollection: vmware-solutions
 
@@ -31,18 +33,23 @@ Veeam on {{site.data.keyword.cloud}} 服務與 VMware Hypervisor 無縫整合，
 ### VSI
 {: #veeam_considerations-specs-vsi}
 
-* 具有 Veeam Backup and Replication 9.5 OS 附加程式的單一 VSI
+* 具有 Veeam Backup and Replication 9.5 附加程式和 Veeam Availability Suite 9.5 的單一 VSI
 * Windows Server 2016 Standard Edition（64 位元）
 * 4 x 2.0 GHz 核心
-* 8 GB RAM
+* 8 個 vCPU，32 GB RAM
 * 1 Gbps 專用網路上行鏈路
 * 100 GB 磁碟 (SAN)
 
 ### 用於備份的儲存空間
 {: #veeam_considerations-specs-storage}
 
-* 耐久性 iSCSI 儲存空間（2000、4000、8000 或 12000 GB）
+* 耐久性 iSCSI 儲存空間（2,000、4,000、8,000 或 12,000 GB）
 * 儲存空間效能（0.25、2 或 4 IOPS/GB）
+
+作為 Veeam 服務安裝和配置的一部分，將建立下列儲存庫：
+* 對於 Veeam 配置備份檔：名為 `IC4V 預設配置備份儲存庫`的儲存庫。儲存 Veeam 備份的資料夾的路徑為 `<Drive>:\ConfigBackup\`。
+* 對於橫向擴充：名為 `IC4V 橫向擴充儲存庫`的儲存庫。如需相關資訊，請參閱[新增橫向擴充儲存庫](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icos_ordering#icos_ordering-scale-repo)。
+* 對於虛擬機器 (VM) 備份：名為 ``IC4V 預設 VM 備份儲存庫``的儲存庫。儲存 VM 備份的資料夾的路徑為 ``<Drive>:\VMBackup\`。此儲存庫作為範圍新增到 ``IC4V 橫向擴充儲存庫`。
 
 ### 網路
 {: #veeam_considerations-specs-networking}
@@ -52,12 +59,7 @@ Veeam on {{site.data.keyword.cloud}} 服務與 VMware Hypervisor 無縫整合，
 ### 授權及費用
 {: #veeam_considerations-specs-licenses}
 
-Veeam Backup and Replication 9.5 Enterprise Plus（10、25、50、100 或 200 份 VM 授權）。
-
-### 管理
-{: #veeam_considerations-specs-mgmt}
-
-依預設，最多配置 5 部 VM 及 2000 GB 儲存空間的管理備份。
+* Veeam Availability Suite 9.5（10、25、50、100 或 200 VM 授權）
 
 ## 安裝 Veeam on IBM Cloud 時的考量
 {: #veeam_considerations-install}
@@ -67,7 +69,7 @@ Veeam Backup and Replication 9.5 Enterprise Plus（10、25、50、100 或 200 �
 ## 移除 Veeam on IBM Cloud 時的考量
 {: #veeam_considerations-remove}
 
-移除 Veeam on {{site.data.keyword.cloud_notm}} 服務會停止所有備份並刪除所有先前的備份。管理 VM 的備份會停止，而且刪除先前的備份是無法逆轉的。如果管理 VM 毀損，則無法予以還原。
+移除 Veeam on {{site.data.keyword.cloud_notm}} 服務會停止所有備份並刪除所有先前的備份。管理 VM 的備份將停止，而且刪除先前的備份是無法逆轉的。如果管理 VM 毀損，則無法予以還原。
 
 ## 相關鏈結
 {: #veeam_considerations-related}

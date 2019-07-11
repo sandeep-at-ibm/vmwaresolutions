@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-15"
 
 subcollection: vmware-solutions
 
@@ -49,7 +49,7 @@ vSAN 叢集升級會依下列作業序列執行：
 {: #vum-updating-vsan-config-vcsa-proxy}
 
 1.	從跳躍伺服器 Web 瀏覽器中，連接至「VCSA 管理介面」`https://<vCenter ip>:5480`
-2.	使用「IC4VS 主控台」中的認證，以 root 身分登入「VCSA 管理介面」。
+2.	使用 IBM Cloud for VMware Solutions 主控台中的認證，以 root 使用者身分登入 VCSA 管理介面。
 3.	在「vCenter Server Appliance 管理介面」中，按一下**網路**，然後按一下**管理**。
 4.	若要配置 Proxy 伺服器，請在「Proxy 設定」窗格中按一下**編輯**。
 5.	選取**使用 Proxy 伺服器**，輸入 Proxy 伺服器設定，然後按一下**確定**。

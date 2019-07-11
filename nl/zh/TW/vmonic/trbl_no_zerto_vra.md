@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-05-28"
+
+keywords: troubleshooting, Zerto Virtual Replication, Zerto ESXi server
 
 subcollection: vmware-solutions
 
@@ -28,6 +30,6 @@ subcollection: vmware-solutions
 
 開立 {{site.data.keyword.cloud}} 支援問題單，並與「IBM 支援中心」合作，以取得可用的 IP 位址，讓您從 Zerto 主控台而非 {{site.data.keyword.vmwaresolutions_short}} 主控台安裝 VRA。
 
-如果要存取 Zerto 主控台，請從該實例的**服務**標籤按一下 Zerto 服務卡，然後按一下**檢視詳細資料**，再按一下**檢視 Zerto 主控台**。
+若要存取 Zerto 主控台，請從該實例的**服務**標籤按一下 Zerto 服務卡，然後按一下**檢視詳細資料**，再按一下**檢視 Zerto 主控台**。
 
 如需與「IBM 支援中心」聯絡的相關資訊，請參閱[與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-trbl_support#trbl_support)。

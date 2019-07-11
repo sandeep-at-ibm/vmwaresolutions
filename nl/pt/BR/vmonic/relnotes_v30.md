@@ -6,6 +6,8 @@ copyright:
 
 lastupdated: "2019-05-03"
 
+keywords: release notes, what's new, version 3.0
+
 subcollection: vmware-solutions
 
 
@@ -112,7 +114,7 @@ Agora você é capaz de incluir o Zerto on {{site.data.keyword.cloud_notm}} nas 
 
 * A documentação está agora disponível para ajudar no upgrade de componentes do {{site.data.keyword.vmwaresolutions_short}} para o VMware vSphere 6.7. Esse upgrade será necessário se você desejar continuar se beneficiando da automação do {{site.data.keyword.vmwaresolutions_short}}. Para obter mais informações, consulte [Fazendo upgrade do software vCenter Server vSphere do VMware vSphere 6.5 para 6.7](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_vsphere_upgrade#vc_vsphere_upgrade).
 * A documentação de referência está agora disponível para fornecer os IDs de usuário que o {{site.data.keyword.vmwaresolutions_short}} mantém para uso pela automação do {{site.data.keyword.cloud_notm}}. As mensagens possíveis que são exibidas nos logs do histórico da instância também estão disponíveis para sua revisão. Para obter mais informações, consulte [IDs de usuário da IBM](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_user_ids) e [Mensagens do histórico da instância](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_messages).
-* A permissão **Reinicialização/Controle** foi incluída na tabela que descreve as permissões necessárias para a conta de infraestrutura do IBM Cloud. Para obter mais informações, consulte [Permissões para a conta de infraestrutura do {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-slaccountrequirement#slaccountrequirement-permissions).
+* A permissão **Reinicialização/Controle** foi incluída na tabela que descreve as permissões necessárias para a conta de infraestrutura do IBM Cloud. Para obter mais informações, consulte [Permissões para a conta de infraestrutura do {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-cloud-infra-acct-req#cloud-infra-acct-req-permissions).
 * A nova documentação de referência está disponível para as APIs a seguir. Para obter mais informações, consulte [Referência da API](https://cloud.ibm.com/apidocs/vmware-solutions){:new_window}.
   * Listar todas as mensagens de histórico para uma instância especificada do VMware vCenter Server
   * Incluir armazenamentos compartilhados em um cluster especificado

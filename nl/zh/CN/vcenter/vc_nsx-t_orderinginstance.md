@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-26"
+lastupdated: "2019-06-18"
+
+keywords: vCenter Server NSX-T order instance, order vCenter Server NSX-T, order NSX-T
 
 subcollection: vmware-solutions
 
@@ -20,7 +22,7 @@ subcollection: vmware-solutions
 
 要部署灵活且可定制的 VMware 虚拟化平台，以最适合您的工作负载需求，请订购 VMware vCenter Server with NSX-T 实例。
 
-## 需求
+## vCenter Server with NSX-T 的需求
 {: #vc_nsx-t_orderinginstance-req}
 
 确保已完成以下任务：
@@ -194,7 +196,6 @@ vSAN 仅可用于 **Skylake** 和 **Broadwell** 裸机配置。请指定以下 v
 *  只允许使用字母数字字符和短划线 (-) 字符。
 *  子域标签必须以字母字符开头并以字母数字字符结尾。
 *  子域标签的最大长度为 10 个字符。
-*  子域标签在您的帐户中必须唯一。
 
 ### 域名
 {: #vc_nsx-t_orderinginstance-domain-name}
@@ -249,7 +250,7 @@ vSAN 仅可用于 **Skylake** 和 **Broadwell** 裸机配置。请指定以下 v
 * **一个用于 Active Directory/DNS 的公共 Windows VSI**：一个用于 Microsoft Active Directory (AD) 的 Microsoft Windows Server VSI，充当在其中注册主机和 VM 的实例的 DNS，已部署并且可进行查找。对于 V1.9 和更高版本的实例，缺省情况下已部署此选项。
 * **管理集群上两个高可用性专用 Windows Server VM**：部署了两个 Microsoft Windows 虚拟机，以帮助增强安全性和稳健性。
 
-如果将实例配置为使用两个 Microsoft Windows VM，那么必须提供两个 Microsoft Windows Server 2016 许可证。使用 Microsoft Windows Server 2016 Standard Edition 许可证和/或 Microsoft Windows Server 2016 Datacenter Edition 许可证。
+如果将实例配置为使用两个 Microsoft Windows VM，那么必须提供两个 Microsoft Windows Server 2016 标准版本许可证。
 {:important}
 
 每个许可证只能分配给一个物理服务器，并且最多包含两个物理处理器。一个 Standard Edition 许可证支持每个双处理器服务器运行两个虚拟化的 Microsoft Windows VM。因此，需要两个许可证，因为两个 Microsoft Windows VM 会部署在两个不同的主机中。
@@ -261,9 +262,11 @@ vSAN 仅可用于 **Skylake** 和 **Broadwell** 裸机配置。请指定以下 v
 ## 订单摘要
 {: #vc_nsx-t_orderinginstance-order-summary}
 
-根据为实例选择的配置，估算成本会立即生成并显示在右侧窗格的**订单摘要**部分中。单击右侧窗格底部的**定价详细信息**可生成提供估算详细信息的 PDF 文档。
+根据选择的配置，估算成本会立即生成并显示在**订单摘要**右侧窗格中。单击**定价详细信息**以生成 {{site.data.keyword.vmwaresolutions_short}} 资源成本汇总的 PDF 文档。
 
-## 订购 vCenter Server 实例的过程
+您还可以通过单击**添加到估算**来将供应的资源添加到 {{site.data.keyword.cloud_notm}} 估算工具**。如果要与您可能考虑购买的其他 {{site.data.keyword.cloud_notm}} 资源一起估算所选 {{site.data.keyword.vmwaresolutions_short}} 资源的成本，那么这非常有用。
+
+## 订购 vCenter Server with NSX-T 实例的过程
 {: #vc_nsx-t_orderinginstance-procedure}
 
 1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格中的 **VMware**，然后单击**虚拟数据中心**部分中的 **vCenter Server**。
@@ -304,13 +307,10 @@ vSAN 仅可用于 **Skylake** 和 **Broadwell** 裸机配置。请指定以下 v
 ## 订购 vCenter Server with NSX-T 实例后的结果
 {: #vc_nsx-t_orderinginstance-results}
 
-实例部署会自动启动。您将收到说明订单正在处理的确认，并且您可以通过查看实例详细信息来检查部署的状态。
-
-成功部署实例后，[vCenter Server with NSX-T 实例的技术规范](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_overview#vc_nsx-t_overview-specs)中描述的组件已安装在 VMware 虚拟平台上。缺省情况下，订购的 ESXi 服务器将分组为 **cluster1**。
-
-实例准备就绪可供使用后，该实例的状态会更改为**可供使用**，并且您将收到通过电子邮件发送的通知。
-
-订购辅助实例时，在完成辅助实例订单后，可能会重新启动主实例（链接到辅助实例）的 VMware vSphere Web Client。
+* 实例部署会自动启动，并且您将收到确认，指示正在处理订单。通过查看实例详细信息的**部署历史记录**部分，可以检查部署状态，包括可能需要注意的任何问题。
+* 成功部署实例后，[vCenter Server with NSX-T 实例的技术规范](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_overview#vc_nsx-t_overview-specs)中描述的组件已安装在 VMware 虚拟平台上。缺省情况下，订购的 ESXi 服务器将分组为 **cluster1**。
+* 实例准备就绪可供使用后，该实例的状态会更改为**可供使用**，并且您将收到通过电子邮件发送的通知。
+* 订购辅助实例时，在完成辅助实例订单后，可能会重新启动主实例（链接到辅助实例）的 VMware vSphere Web Client。
 
 ## 后续步骤
 {: #vc_nsx-t_orderinginstance-next}
@@ -331,7 +331,7 @@ vSAN 仅可用于 **Skylake** 和 **Broadwell** 裸机配置。请指定以下 v
 ## 相关链接
 {: #vc_nsx-t_orderinginstance-related}
 
-* [注册 {{site.data.keyword.cloud_notm}} 帐户](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)
+* [注册 {{site.data.keyword.cloud_notm}} 帐户](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts)
 * [查看 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
 * [vCenter Server 实例的多站点配置](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_multisite)
 * [添加、查看和删除 vCenter Server with NSX-T 实例的集群](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_nsx-t_addingviewingcluster#vc_nsx-t_addingviewingcluster)

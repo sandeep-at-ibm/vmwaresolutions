@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-02"
+lastupdated: "2019-06-17"
+
+keywords: vCenter Server compliance, compliance info, vCenter Server policy
 
 subcollection: vmware-solutions
 
@@ -50,6 +52,21 @@ subcollection: vmware-solutions
 {: #vc_compl_info-personal-info-and-regulated-data}
 
 本「雲端服務」並非專為受管理內容之特定安全需求而設計，例如：個人資料或機密個人資料。本「雲端服務」是否符合「客戶」與本「雲端服務」連線時所使用之內容類型的「客戶」需求，需由「客戶」決定。
+
+## 原則配置
+{: #vc_compl_info-default-policy-config}
+
+為 vCenter Server 主要實例產生的 vCenter 密碼現在長度是 15 個字元。先前，產生的密碼長度為 8 個字元（vCenter 預設）。
+
+表 1. 新主要實例的 vCenter 原則配置
+
+|原則| 3.1 版或更高版本| 3.0 版或更低版本|
+|:------------- |:------------------------------ |:------------- |
+| vCenter 密碼原則| 最小長度為 15 個字元 | 最小長度為 8 個字元（vCenter 預設）|
+| vCenter 鎖定原則| 最多三次失敗的登入嘗試 | 最多五次失敗的登入嘗試（vCenter 預設） |
+| vCenter 鎖定原則| 相鄰登入失敗之間 900 秒 | 相鄰登入失敗之間 180 秒（vCenter 預設）|
+
+針對 vCenter Server 主要實例產生的 NSX Manager 密碼現在長度為 15 個字元。先前，所產生的密碼長度為 8 個字元。
 
 ## 存取客戶實例的原則
 {: #vc_compl_info-policy-for-access-client-inst}

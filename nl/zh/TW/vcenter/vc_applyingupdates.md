@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-30"
+lastupdated: "2019-05-27"
+
+keywords: vCenter Server update, patch vCenter Server, IBM component update
 
 subcollection: vmware-solutions
 

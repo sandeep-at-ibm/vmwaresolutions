@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-19"
+
+keywords: vCenter Server Hybridity order instance, order vCenter Server Hybridity, order Hybridity
 
 subcollection: vmware-solutions
 
@@ -157,10 +159,10 @@ Deve-se especificar as configurações da interface de rede a seguir ao pedir um
 {: #vc_hybrid_orderinginstance-subdomain-label}
 
 O rótulo do subdomínio deve atender aos requisitos a seguir:
-*  Apenas caracteres alfanuméricos e o traço (-) são permitidos.
-*  O rótulo do subdomínio deve iniciar com um caractere alfabético e terminar com um caractere alfanumérico.
-*  O comprimento máximo do rótulo do subdomínio é de 10 caracteres.
-*  O rótulo do subdomínio deve ser exclusivo em sua conta.
+* Apenas caracteres alfanuméricos e o traço (-) são permitidos.
+* O rótulo do subdomínio deve iniciar com um caractere alfabético e terminar com um caractere alfanumérico.
+* O comprimento máximo do rótulo do subdomínio é de 10 caracteres.
+* O rótulo do subdomínio deve ser exclusivo em todas as instâncias em sua configuração de vários sites.
 
 ### Nome de domínio
 {: #vc_hybrid_orderinginstance-domain-name}
@@ -215,7 +217,7 @@ Selecione a configuração do Sistema de Nomes de Domínio (DNS) para sua instâ
 * **VSI pública única do Windows para o Active Directory/DNS**: uma VSI única do Microsoft Windows Server para o Microsoft Active Directory (AD), que funciona como o DNS para a instância na qual os hosts e as MVs são registrados, é implementada e pode ser consultada.
 * **Duas MVs do Windows Server dedicadas, altamente disponíveis no cluster de gerenciamento**: duas MVs do Microsoft Windows são implementadas, ajudando a aprimorar a segurança e a robustez.
 
-Deve-se fornecer duas licenças do Microsoft Windows Server 2016 se sua instância é configurada para usar as duas VMs do Microsoft Windows. Use a licença do Microsoft Windows Server 2016 Standard Edition ou a licença do Microsoft Windows Server 2016 Datacenter Edition, ou ambas.
+Deve-se fornecer duas licenças da edição Microsoft Windows Server 2016 Standard se você configurar sua instância para usar as duas VMs do Microsoft Windows.
 {:important}
 
 Cada licença pode ser designada apenas a um único servidor físico e abrange até dois processadores físicos. Uma licença de edição Standard é capaz de executar duas MVs virtualizadas do Microsoft Windows por servidor de dois processadores. Portanto, duas licenças são necessárias, pois duas MVs do Microsoft Windows são implementadas em dois hosts diferentes.
@@ -232,7 +234,9 @@ Ao pedir uma instância do vCenter Server with Hybridity Bundle, é possível ta
 ## Resumo do Pedido
 {: #vc_hybrid_orderinginstance-order-summary}
 
-Com base em sua configuração selecionada para os serviços de instância e complemento, o custo estimado é gerado instantaneamente e exibido na seção **Resumo do pedido** na área de janela direita. Clique em **Detalhes da precificação** na parte inferior da área de janela direita para gerar um documento PDF que forneça os detalhes da estimativa.
+Com base em sua configuração selecionada para os serviços de instância e de complemento, o custo estimado é gerado instantaneamente e exibido na área de janela direita **Resumo do pedido**. Clique em **Detalhes da precificação** para gerar um documento PDF com o resumo de custo dos recursos do {{site.data.keyword.vmwaresolutions_short}}.
+
+Também é possível incluir os recursos provisionados na ferramenta de estimativa do {{site.data.keyword.cloud_notm}}, clicando em **Incluir na estimativa**. Isso é útil se você desejar estimar o custo dos recursos do {{site.data.keyword.vmwaresolutions_short}} selecionados com outros recursos do {{site.data.keyword.cloud_notm}} que você talvez considere comprar.
 
 ## Procedimento para pedir instâncias do vCenter Server with Hybridity Bundle
 {: #vc_hybrid_orderinginstance-procedure}
@@ -269,16 +273,13 @@ Para obter mais informações sobre como fornecer configurações para um servi�
    3. Clique no link ou nos links dos termos que se aplicam ao seu pedido e confirme que concorda com esses termos antes de pedir a instância.
    4. Clique em **Provisão**.
 
-## Resultados
+## Resultados depois de pedir instâncias do vCenter Server with Hybridity Bundle
 {: #vc_hybrid_orderinginstance-results}
 
-A implementação da instância é iniciada automaticamente. Você recebe confirmação de que o pedido está sendo processado e pode verificar o status da implementação visualizando os detalhes da instância.
-
-Quando a instância for implementada com êxito, os componentes que estão descritos em [Especificações técnicas para instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#specs) serão instalados em sua plataforma virtual VMware. Os servidores ESXi pedidos são agrupados como **cluster1** por padrão. Se você pediu serviços complementares, a implementação dos serviços será iniciada após a conclusão de seu pedido.
-
-Quando a instância estiver pronta para usar, seu status mudará para **Pronta para usar** e você receberá uma notificação por e-mail.
-
-Quando você pedir uma instância secundária, o VMware vSphere Web Client da instância primária (vinculado à secundária) poderá ser reiniciado depois que o pedido da instância secundária estiver concluído.
+* A implementação da instância é iniciada automaticamente e você recebe a confirmação de que o pedido está sendo processado. É possível verificar o status de implementação, incluindo quaisquer problemas que possam precisar de sua atenção, visualizando a seção **Histórico de implementação** dos detalhes da instância.
+* Quando a instância for implementada com êxito, os componentes que estão descritos em [Especificações técnicas para instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#specs) serão instalados em sua plataforma virtual VMware. Os servidores ESXi pedidos são agrupados como **cluster1** por padrão. Se você pediu serviços complementares, a implementação dos serviços será iniciada após a conclusão de seu pedido.
+* Quando a instância estiver pronta para usar, seu status mudará para **Pronta para usar** e você receberá uma notificação por e-mail.
+* Quando você pedir uma instância secundária, o VMware vSphere Web Client da instância primária (vinculado à secundária) poderá ser reiniciado depois que o pedido da instância secundária estiver concluído.
 
 ## O que fazer a seguir
 {: #vc_hybrid_orderinginstance-next}
@@ -301,7 +302,7 @@ Se você mudar esses componentes fora do console do {{site.data.keyword.vmwareso
 ## Links relacionados
 {: #vc_hybrid_orderinginstance-related}
 
-* [Inscrevendo-se em uma conta do {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)
+* [Assinando uma conta do {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts)
 * [Visualizando instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
 * [Configuração multissite para instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_multisite)
 * [Incluindo e visualizando clusters para instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingviewingclusters)

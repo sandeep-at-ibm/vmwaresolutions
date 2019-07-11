@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-21"
+lastupdated: "2019-05-22"
 
 subcollection: vmware-solutions
 
@@ -47,7 +47,7 @@ subcollection: vmware-solutions
 ## 虚拟路由和转发
 {: #vcsnsxt-overview-ic4vnetwork-vrf}
 
-{{site.data.keyword.cloud_notm}} 帐户还可以配置为虚拟路由和转发 (VRF) 帐户。VRF 帐户支持帐户内子网 IP 块之间的自动全局路由。具有“直接链路”连接的所有帐户都必须转换为或创建为 VRF 帐户。
+{{site.data.keyword.cloud_notm}} 帐户还可以配置为虚拟路由和转发 (VRF) 帐户。VRF 帐户支持帐户内子网 IP 块之间的自动全局路由。具有 Direct Link 连接的所有帐户都必须转换为或创建为 VRF 帐户。
 
 ## 物理主机连接
 {: #vcsnsxt-overview-ic4vnetwork-host-connect}
@@ -84,7 +84,7 @@ VLAN|子网类型|描述
 专用 B|可移植|分配用于 NAS（如果在使用 NAS）。
 专用 B|可移植|分配用于 vMotion。
 
-在实现此设计时，VLAN 上的物理主机和虚拟系统实例 (VSI) 都配置为指向作为缺省路径的 {{site.data.keyword.cloud_notm}} BCR（后端“专用网络”客户路由器）。但 vCenter Server 实例支持使用软件定义的联网。由 NSX 创建的任何网络覆盖（包括到 VLAN 子网的路由）对于 {{site.data.keyword.cloud_notm}} 管理的路由器来说都是未知的，因此您可能需要创建静态路由、防火墙规则和 NAT 规则来正确管理网络流。
+在实现此设计时，VLAN 上的物理主机和虚拟系统实例 (VSI) 都配置为指向作为缺省路径的 {{site.data.keyword.cloud_notm}} BCR（后端“专用网络”客户路由器）。虽然 vCenter Server 实例支持使用软件定义的联网，但 NSX 创建的包含到 VLAN 子网的路由的任何网络覆盖并不为 {{site.data.keyword.cloud_notm}} 管理的路由器所知。您可能需要创建静态路由、防火墙规则和 NAT 规则，才能正确管理网络流。
 
 专用网络连接配置为使用 MTU 大小为 9000 的巨型帧，这将提高存储和 vMotion 等大型数据传输的性能。这是 VMware 和 {{site.data.keyword.cloud_notm}} 中允许的最大 MTU。公用网络连接使用标准以太网 MTU，即 1500。必须保留此设置不变，因为对此设置的任何更改都可能导致因特网上发生包分段。
 

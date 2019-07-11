@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-26"
+lastupdated: "2019-06-18"
+
+keywords: vSphere order cluster, order vSphere, order vSphere cluster
 
 subcollection: vmware-solutions
 
@@ -192,7 +194,6 @@ O rótulo do subdomínio deve atender aos requisitos a seguir:
 *  Apenas caracteres alfanuméricos e o traço (-) são permitidos.
 *  O rótulo do subdomínio deve iniciar e terminar com um caractere alfanumérico.
 *  O comprimento máximo do rótulo do subdomínio é de 10 caracteres.
-*  O rótulo do subdomínio deve ser exclusivo em sua conta.
 
 ### Nome de domínio
 {: #vs_orderinginstances-domain-name}
@@ -241,12 +242,14 @@ Dependendo do {{site.data.keyword.CloudDataCent_notm}} selecionado, VLANs públi
 #### Par de HA do FortiGate Physical Appliance série 300
 {: #vs_orderinginstances-fortigate-physical-appliance}
 
-É possível também selecionar se deseja incluir o Par de HA do FortiGate Physical Appliance série 300 para assegurar seu ambiente de nuvem. Para obter mais informações, consulte [FortiGate Security Appliance na visão geral do {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations).
+É possível também selecionar se deseja incluir o Par de HA do FortiGate Physical Appliance série 300 para assegurar seu ambiente de nuvem. Para obter mais informações, consulte [Visão geral do FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations).
 
 ## Resumo do Pedido
 {: #vs_orderinginstances-order-summary}
 
-Com base em suas configurações, o custo estimado é gerado instantaneamente e exibido na área de janela **Resumo da ordem** à direita. Clique em **Detalhes da precificação** para gerar um documento PDF que fornece os detalhes da estimativa.
+Com base em sua configuração selecionada, o custo estimado é gerado instantaneamente e exibido na área de janela direita **Resumo do pedido**. Clique em **Detalhes da precificação** para gerar um documento PDF com o resumo de custo dos recursos do {{site.data.keyword.vmwaresolutions_short}}.
+
+Também é possível incluir os recursos provisionados na ferramenta de estimativa do {{site.data.keyword.cloud_notm}}, clicando em **Incluir na estimativa**. Isso é útil se você desejar estimar o custo dos recursos do {{site.data.keyword.vmwaresolutions_short}} selecionados com outros recursos do {{site.data.keyword.cloud_notm}} que você talvez considere comprar.
 
 ## Procedimento para pedir clusters do vSphere
 {: #vs_orderinginstances-procedure}
@@ -282,7 +285,7 @@ Com base em suas configurações, o custo estimado é gerado instantaneamente e 
    Somente os {{site.data.keyword.baremetal_short}} estão instalados. Você é responsável por instalar e configurar vários componentes após a implementação do cluster, como VMware vCenter, VMware NSX, VMware vSAN.
    {:note}
 
-### Resultados
+### Resultados depois de pedir clusters do vSphere
 {: #vs_orderinginstances-results}
 
 Se você salvou a configuração de cluster como um modelo, obterá uma notificação do console de que a configuração foi salva com êxito e então será possível localizar o modelo na lista **Configurações de cluster**.

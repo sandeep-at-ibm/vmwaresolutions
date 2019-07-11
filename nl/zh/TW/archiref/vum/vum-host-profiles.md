@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-15"
 
 subcollection: vmware-solutions
 
@@ -16,7 +16,7 @@ subcollection: vmware-solutions
 
 vCenter 具有稱為「主機設定檔」的特性。此特性會建立設定檔來擷取預先配置及已驗證的參照主機配置，並協助系統管理者管理叢集裡的主機配置。「主機設定檔」提供自動化且集中管理的機制，用於主機配置及配置法規遵循。「主機設定檔」可將配置視為受管理物件，其中具有要配置的參數型錄：網路、儲存空間、安全及其他主機層次參數。這些「主機設定檔」可以套用至個別主機、叢集，或與主機設定檔關聯的所有主機及叢集。
 
-由於部署原始叢集的 IC4VS 自動化已部署其他 VMware vCenter Server on {{site.data.keyword.cloud}} vSphere ESXi 主機，因此配置偏移會少於手動新增主機的方法。不過，自動化以外的系統管理者動作會讓主機配置不同。例如，新增了更多 NFS 儲存空間，或新增額外的 VLAN。使用「主機設定檔」根據現有主機來檢查此主機的法規遵循以驗證新主機的配置，是 {{site.data.keyword.cloud_notm}} 內此工具的有效使用案例。
+由於部署原始叢集的 IBM Cloud for VMware Solutions 自動化已部署其他 VMware vCenter Server on {{site.data.keyword.cloud}} vSphere ESXi 主機越來越多，因此配置偏移會少於手動新增主機的方法。不過，自動化以外的系統管理者動作會讓主機配置不同。例如，新增了更多 NFS 儲存空間，或新增額外的 VLAN。使用「主機設定檔」根據現有主機來檢查此主機的法規遵循以驗證新主機的配置，是 {{site.data.keyword.cloud_notm}} 內此工具的有效使用案例。
 
 若要將更多主機新增至 vCenter Server 叢集，請參閱[擴充及縮減 vCenter Server 實例的容量](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)。
 

@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-21"
+lastupdated: "2019-05-27"
+
+keywords: vCenter Server network config, network configuration NSX-T, manage NSX-T ESG
 
 subcollection: vmware-solutions
 
@@ -20,7 +22,7 @@ subcollection: vmware-solutions
 
 配置虛擬機器的網路，以便利用 VMware vCenter Server 實例中所部署的 VMware NSX-T Edge Services Gateway (ESG)。如需為協助降低安全風險而設的安全措施相關資訊，請參閱[管理服務 NSX Edge 是否造成安全風險？](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
-VMware NSX-T 是一種網路虛擬化平台，可將隔離的網路虛擬化，並提供數個網路服務，例如交換器、路由及防火牆。如需 NSX 的相關資訊，請參閱 [Overview of NSX](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}。
+VMware NSX-T 是一種網路虛擬化平台，可將隔離的網路虛擬化，並提供數個網路服務，例如交換器、遞送及防火牆。如需 NSX 的相關資訊，請參閱 [Overview of NSX](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}。
 
 在訂購 vCenter Server with NSX-T 實例程序的過程中，將代表您完成下列動作：
 * 訂購專用客戶子網路，供您的 VM（虛擬機器）用來存取 {{site.data.keyword.cloud}} 基礎架構專用網路。

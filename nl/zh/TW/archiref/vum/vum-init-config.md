@@ -52,7 +52,8 @@ VUM 從 VMware 的更新伺服器要求資源時，會先將要求傳送至 Prox
 | 網路遮罩 |255.255.255.192 | |
 | 閘道 |customer-nsx-edge 專用上行鏈路 IP | 這是 Proxy 伺服器的預設閘道設定，即 customer-nsx-edge 的專用上行鏈路 IP 位址。檢閱 **customer-nsx-edge** 的**設定**標籤，即可找到此 IP 位址。|
 | DNS 伺服器 |AD/DNS IP | 您可以在**資源**頁面中，在 {{site.data.keyword.vmwaresolutions_short}} 主控台的實例頁面上找到此 IP 位址。|
-| BCR IP |bcr ip | 這是「{{site.data.keyword.cloud_notm}} 後端客戶路由器」的 IP 位址，並且是 10.0.0.0/8 和 161.26.0.0/16 的閘道。此位址用於 Proxy 伺服器的靜態路徑中，讓它能夠連接 VCSA 及 AD/DNS 伺服器。 |
+| BCR IP |bcr ip | 在您選取上述 Proxy IP 的同一頁面上，記下標註為「閘道」的位址。此位址是 {{site.data.keyword.cloud_notm}} 後端客戶路由器的 IP 位址，並且是 10.0.0.0/8 和 161.26.0.0/16 的閘道。您將在下面的 Proxy 伺服器的靜態路徑中使用此位址，讓它能夠連接 VCSA 及 AD/DNS 伺服器。|
+| NAT IP | customer-nsx-edge public uplink ip |客戶 NSX ESG 的公用位址將作為 Proxy 的公用 NAT 位址。檢閱 **customer-nsx-edge** 的**設定**標籤，即可找到此 IP 位址。|
 
 ## 配置 NSX
 {: #vum-init-config-config-nsx}

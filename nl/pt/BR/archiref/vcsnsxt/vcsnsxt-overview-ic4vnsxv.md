@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-28"
 
 subcollection: vmware-solutions
 
@@ -102,11 +102,11 @@ Os componentes a seguir são configurados:
 -	Dispositivos NSX Edge Services Gateway (ESG) para uso pelos componentes de gerenciamento.
 -	Somente para vCenter Server, dispositivos NSX Edge Services Gateway (ESG) para uso do cliente.
 
-O que NÃO é configurado:
--	Roteadores distribuídos virtuais.
--	Microssegmentação.
--	VXLANs.
--	Gerenciamento do NSX vinculado a outras instâncias do VMware.
+Os componentes a seguir não estão configurados:
+- Roteadores distribuídos virtuais
+- Micro segmentação
+- VXLANs
+- Gerenciamento do NSX vinculado para outras instâncias do VMware
 
 ### Segurança do NSX-V
 {: #vcsnsxt-overview-ic4vnsxv-nsx-v-security}
@@ -114,9 +114,9 @@ O que NÃO é configurado:
 O NSX for vSphere permite que as organizações dividam o data center em segmentos de segurança distintos, abaixo do nível da carga de trabalho individual independente de onde a carga de trabalho está em execução. As equipes de TI podem definir políticas para cada carga de trabalho com base no aplicativo e no contexto do usuário, o que assegura respostas imediatas a ameaças dentro do data center e o cumprimento para o aplicativo.
 
 A seguir estão alguns componentes chave do NSX:
--	O firewall stateful distribuído do NSX é integrado ao kernel do hypervisor para até 20 Gbps de capacidade de firewall por host do hypervisor. Fornece a capacidade de firewall norte-sul via NSX Edge.
--	O NSX permite a criação de grupos de segurança dinâmicos e políticas associadas para mais do que apenas o endereço IP e o MAC. Essas políticas incluem objetos e tags do vCenter, tipo de sistema operacional e informações do aplicativo da Camada 7 para ativar a microssegmentação com base no contexto do aplicativo.
--	A política baseada em identidade que usa as informações de login da integração de MVs, Active Directory e Mobile Device Management permite segurança com base no usuário, incluindo a segurança no nível de sessão nos ambientes de área de trabalho remota e virtual.
+- O firewall stateful distribuído do NSX é integrado ao kernel do hypervisor para até 20 Gbps de capacidade de firewall por host do hypervisor. Fornece a capacidade de firewall norte-sul via NSX Edge.
+- O NSX permite a criação de grupos de segurança dinâmicos e políticas associadas para mais do que apenas o endereço IP e o MAC. Essas políticas incluem objetos e tags do vCenter, tipo de sistema operacional e informações do aplicativo da Camada 7 para ativar a microssegmentação com base no contexto do aplicativo.
+- A política baseada em identidade que usa as informações de login da integração de MVs, Active Directory e Mobile Device Management permite segurança com base no usuário, incluindo a segurança no nível de sessão nos ambientes de área de trabalho remota e virtual.
 - O Application Rule Manager e o Endpoint Monitoring permitem a visualização do fluxo de tráfego de rede de ponta a ponta até a Camada 7, permitindo que as equipes de aplicativos identifiquem os terminais dentro e entre os data centers e respondam criando as regras de segurança apropriadas.
 - Suporte para gerenciamento, plano de controle e integração de plano de dados com fornecedores de terceiros, como firewalls de próxima geração, IDS/IPS, antivírus sem agente, comutador, segurança avançada e muito mais.
 

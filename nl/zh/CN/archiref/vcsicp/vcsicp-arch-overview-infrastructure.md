@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-22"
 
 subcollection: vmware-solutions
 
@@ -18,12 +18,12 @@ subcollection: vmware-solutions
 ## 虚拟路由和转发
 {: #vcsicp-arch-overview-infrastructure-vrf}
 
-您可以将 {{site.data.keyword.cloud}} 帐户配置为虚拟路由和转发 (VRF) 帐户，以使得子网 IP 块之间能够自动进行全局路由。具有“直接链路”连接的所有帐户都必须转换为或创建为 VRF 帐户。
+您可以将 {{site.data.keyword.cloud}} 帐户配置为虚拟路由和转发 (VRF) 帐户，以使得子网 IP 块之间能够自动进行全局路由。具有 Direct Link 连接的所有帐户都必须转换为或创建为 VRF 帐户。
 
 ## 直接链路
 {: #vcsicp-arch-overview-infrastructure-direct-link}
 
-{{site.data.keyword.cloud_notm}} Direct Link Connect 通过本地 IBM Cloud Data Center，提供对 {{site.data.keyword.cloud_notm}} 基础架构以及其他任何与网络服务供应商相链接的云的专用访问。此选项最适合于在单个环境中创建多云连接。共享带宽拓扑用于将客户连接到 {{site.data.keyword.icpfull_notm}} 网络。与所有直接链路产品一样，您也可以添加全局路由，这将使专用网络流量能够流至所有 {{site.data.keyword.cloud_notm}} 位置。
+{{site.data.keyword.cloud_notm}} Direct Link Connect 通过本地 IBM Cloud Data Center，提供对 {{site.data.keyword.cloud_notm}} 基础架构以及其他任何与网络服务供应商相链接的云的专用访问。此选项最适合于在单个环境中创建多云连接。共享带宽拓扑用于将客户连接到 {{site.data.keyword.icpfull_notm}} 网络。与所有 Direct Link 产品一样，您也可以添加全局路由，这将使专用网络流量能够流至所有 {{site.data.keyword.cloud_notm}} 位置。
 
 ## 虚拟专用网
 {: #vcsicp-arch-overview-infrastructure-vp-networks}

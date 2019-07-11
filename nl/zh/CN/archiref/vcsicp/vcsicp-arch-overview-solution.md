@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-09"
+lastupdated: "2019-06-12"
 
 subcollection: vmware-solutions
 
@@ -54,7 +54,7 @@ Controller
 |:--------- |:------------- |
 |Edge 服务网关|虚拟设备|
 |Edge 大小 - 大型|2 个 vCPU|
-|内存|1 GB 磁盘|本地数据存储上 1000 GB|
+|内存| 1 GB 磁盘<br>本地数据存储上 1000 GB|
 
 表 2. {{site.data.keyword.icpfull_notm}} DLR 规范
 
@@ -62,7 +62,7 @@ Controller
 |:--------- |:------------- |
 |分布式逻辑路由器|虚拟设备|
 |Edge 大小 - 精简|1 个 vCPU|
-|内存|512 MB 磁盘|本地数据存储上 1000 GB|
+|内存| 512 MB 磁盘<br>本地数据存储上 1000 GB|
 
 ## IBM Cloud Private 组件
 {: #vcsicp-arch-overview-solution-icp-comp}

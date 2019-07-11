@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-11"
+
+keywords: vCenter Server BOM, bill of materials vCenter Server, BOM
 
 subcollection: vmware-solutions
 
@@ -29,7 +31,7 @@ subcollection: vmware-solutions
 
 |VLAN      |類型      |詳細資料     |
 |:---------- |:---------- |:------------- |
-|VLAN1     |公用、主要|指派給實體 ESXi 伺服器，以進行公用網路存取。在起始部署之後不會使用。可用於網際網路存取。|
+|VLAN1     |公用、主要|指派給實體 ESXi 伺服器，以進行公用網路存取。會指派公用 IP 位址給伺服器，但這個 IP 位址不會在伺服器上配置，因此無法直接在公用網路上存取它們。相反地，公用 VLAN 是要為其他元件（例如 NSX Edge Services Gateway，ESG）提供公用網際網路存取。|
 |VLAN2     |專用 A、主要|由 {{site.data.keyword.cloud}} 指派給實體 ESXi 伺服器。由管理介面用於 VMware vSphere 管理資料流量。<br><br>指派給充當管理元件的 VM（虛擬機器）。<br><br>指派給 VMware NSX VTEP（VXLAN 通道端點）。|
 |VLAN3     |專用 B、可攜式|指派給 VMware vSAN（如果使用的話）。<br><br>指派給 VMware NFS（如果使用的話）。<br><br>指派給 VMware vSphere vMotion。<br><br>若為 NSX-T，指派給 VMware NSX VTEP（VXLAN 通道端點）。|
 
@@ -42,10 +44,10 @@ subcollection: vmware-solutions
 
 |製造商       |元件                            |版本|
 |:------------- |:------------------------------ |:------------- |
-|VMware       |vSphere ESXi                    | 6.7 Update 1（建置 6.7.0-13004448）或 <br/>6.5 Update 2（建置 6.5.0-13004031）|
+|VMware       |vSphere ESXi                    | 6.7 Update 1（建置 6.7.0-13004448）或 <br/>6.5 Update 2（建置 6.5.0-13635690）|
 |VMware       | vSphere 6.7                     | Distributed vSwitch 6.6.0 |
 |VMware       | vSphere 6.5                     | Distributed vSwitch 6.5.0 |
-|VMware       |vCenter Server Appliance        | 6.7 Update 1b（建置 6.7.0-11727113）或 <br/>6.5 Update 2d（建置 6.5.0-10964411）|
+|VMware       |vCenter Server Appliance        | 6.7 Update 1b（建置 6.7.0-11727113）或 <br/>6.5 Update 2g（建置 6.5.0-13638625）|
 |VMware       |Platform Services Controller    | 6.7 Update 1b（建置 6.7.0-11727113）或 <br/>6.5 Update 2d（建置 6.5.0-10964411）|
 |VMware       |vSAN                            | 6.7 Update 1 或 <br/>6.6.1        |
 |VMware       |NSX for vSphere                 | 6.4.4（建置 11197766）   |

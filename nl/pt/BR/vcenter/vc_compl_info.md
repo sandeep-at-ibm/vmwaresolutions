@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-02"
+lastupdated: "2019-06-17"
+
+keywords: vCenter Server compliance, compliance info, vCenter Server policy
 
 subcollection: vmware-solutions
 
@@ -50,6 +52,21 @@ No caso de uma falha do sistema, um provedor de serviços de terceiros pode soli
 {: #vc_compl_info-personal-info-and-regulated-data}
 
 Este Serviço de nuvem não foi projetado para nenhum requisito de segurança específico para conteúdo regulamentado, como informações pessoais ou informações pessoais sigilosas. O cliente é responsável por determinar se este Serviço de nuvem atende às necessidades do Cliente em relação ao tipo de conteúdo usado por ele em conexão com o Serviço de nuvem.
+
+## Configurações de política
+{: #vc_compl_info-default-policy-config}
+
+A senha gerada do vCenter para as instâncias primárias do vCenter Server tem agora 15 caracteres de comprimento. Anteriormente, a senha gerada era o padrão de oito caracteres de comprimento do vCenter.
+
+Tabela 1. Configurações de política do vCenter para uma nova instância primária
+
+| Política | V3.1 ou mais recente | V3.0 ou anterior |
+|:------------- |:------------------------------ |:------------- |
+| Política de senha do vCenter | Comprimento mínimo de 15 caracteres | Comprimento mínimo de 8 caracteres (padrão do vCenter) |
+| Política de bloqueio de acesso do vCenter | Máximo de três tentativas falhas de login | Máximo de cinco tentativas falhas de login (padrão do vCenter) |
+| Política de bloqueio de acesso do vCenter | 900 segundos entre falhas de login | 180 segundos entre falhas de login (padrão do vCenter) |
+
+A senha do NSX Manager gerada para as instâncias primárias do vCenter Server tem agora 15 caracteres de comprimento. Anteriormente, a senha gerada tinha oito caracteres de comprimento.
 
 ## Política para acessar instâncias do cliente
 {: #vc_compl_info-policy-for-access-client-inst}

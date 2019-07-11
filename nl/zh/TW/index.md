@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2019
 
-lastupdated: "2019-04-16"
+lastupdated: "2019-05-31"
 
 keywords: IBM Cloud for VMware Solutions, getting started, vmware solutions offerings, add-on services for vmwaresolutions, vmwaresolutions use cases
 
@@ -68,7 +68,7 @@ subcollection: vmware-solutions
    </tr>
    <tr>
       <td>IBM Cloud 基礎架構帳戶</td>
-      <td>如需 {{site.data.keyword.cloud_notm}} 基礎架構帳戶之需求的相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} 基礎架構帳戶的需求](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement)。<br><br>您可以鏈結 {{site.data.keyword.cloud_notm}} 基礎架構帳戶與 {{site.data.keyword.cloud_notm}} 帳戶，以使用結合的基礎架構即服務 (IaaS) 及平台即服務 (PaaS) 資源。然後，您就可以從單一登入存取 IaaS 資源及 PaaS 資源。鏈結您的帳戶也會提供您使用之所有 PaaS 及 IaaS 資源的單一發票。<ul><li>如果您沒有 {{site.data.keyword.cloud_notm}} 基礎架構帳戶，請遵循[註冊 IBM Cloud 基礎架構帳戶](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account#signing_softlayer_account-infra)中的程序來要求帳戶，然後遵循[切換至 IBMid 和鏈結帳戶](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)中的程序，將 {{site.data.keyword.cloud_notm}} 基礎架構帳戶鏈結至 {{site.data.keyword.cloud_notm}} 帳戶。</li><li>如果您有 {{site.data.keyword.cloud_notm}} 基礎架構帳戶，則可以遵循[切換至 IBM ID 並鏈結帳戶](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)中的程序，將它鏈結至 {{site.data.keyword.cloud_notm}} 帳戶。</li></ul></td>
+      <td>如需 {{site.data.keyword.cloud_notm}} 基礎架構帳戶之需求的相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} 基礎架構帳戶的需求](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req)。<br><br>您可以鏈結 {{site.data.keyword.cloud_notm}} 基礎架構帳戶與 {{site.data.keyword.cloud_notm}} 帳戶，以使用結合的基礎架構即服務 (IaaS) 及平台即服務 (PaaS) 資源。然後，您就可以從單一登入存取 IaaS 資源及 PaaS 資源。鏈結您的帳戶也會提供您使用之所有 PaaS 及 IaaS 資源的單一發票。<ul><li>如果您沒有 {{site.data.keyword.cloud_notm}} 基礎架構帳戶，請遵循[註冊 IBM Cloud 基礎架構帳戶](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts#signing_required_accounts-infra)中的程序來要求帳戶，然後遵循[切換至 IBM ID 並鏈結帳戶](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)中的程序，將 {{site.data.keyword.cloud_notm}} 基礎架構帳戶鏈結至 {{site.data.keyword.cloud_notm}} 帳戶。</li><li>如果您有 {{site.data.keyword.cloud_notm}} 基礎架構帳戶，則可以遵循[切換至 IBM ID 並鏈結帳戶](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)中的程序，將它鏈結至 {{site.data.keyword.cloud_notm}} 帳戶。</li></ul></td>
    </tr>
    </table>
 

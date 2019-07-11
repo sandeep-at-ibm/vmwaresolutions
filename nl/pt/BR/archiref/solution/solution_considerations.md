@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-05-22"
 
 subcollection: vmware-solutions
 
@@ -44,10 +44,10 @@ Familiarize-se com as seguintes limitações de sua instância:
 
 Conclua as etapas a seguir para gerenciar o acesso à rede do {{site.data.keyword.cloud_notm}} e aos componentes de gerenciamento do VMware e para planejar sua topologia de rede do {{site.data.keyword.cloud_notm}}.
 
-- Acesse os terminais de gerenciamento de instância usando a [VPN do {{site.data.keyword.cloud_notm}}](https://www.softlayer.com/vpn-access) ou a sua [Conexão do {{site.data.keyword.cloud_notm}} Direct-Link](https://www.ibm.com/cloud/direct-link).
-- Conceba uma estratégia para conectividade de rede pública de dentro de sua instância. Suas opções incluem: a amostra do VMware NSX Edge Services Gateway (ESG) do cliente, dispositivos de gateway, como o Vyatta e o FortiGate, além de servidores proxy implementados na rede do {{site.data.keyword.cloud_notm}} ou em sua própria rede acessada por meio do DirectLink.
-- Planeje-se para implementar ou não sua carga de trabalho em VLANs do {{site.data.keyword.cloud_notm}} com [endereços IP móveis do {{site.data.keyword.cloud_notm}}](/docs/infrastructure/subnets?topic=subnets-getting-started-subnets-ips#getting-started-subnets-ips) ou [em comutadores lógicos NSX (VXLANs) por meio de seus próprios endereços IP](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_overview). Observe que o uso da rede definida por software (SDN) do NSX oferece a maior flexibilidade para gerenciar e proteger sua rede de carga de trabalho no {{site.data.keyword.cloud_notm}}.
-- Use ESGs do NSX, o [IBM Cloud Vyatta](https://cloud.ibm.com/catalog/infrastructure/virtual-router-appliance) e o peer DirectLink para planejar a conectividade para cargas de trabalho (Conversão de endereço de rede, Rede privada virtual, roteamento).
+- Acesse os terminais de gerenciamento da instância usando a [VPN do {{site.data.keyword.cloud_notm}}](https://www.softlayer.com/vpn-access) ou sua [conexão do {{site.data.keyword.cloud_notm}} Direct Link](https://www.ibm.com/cloud/direct-link).
+- Conceba uma estratégia para conectividade de rede pública de dentro de sua instância. Suas opções incluem: o cliente de amostra VMware NSX Edge Services Gateway (ESG), dispositivos de gateway, como Vyatta e FortiGate, além dos servidores proxy implementados na rede do {{site.data.keyword.cloud_notm}} ou em sua própria rede acessada por meio do Direct Link.
+- Planeje se deseja implementar sua carga de trabalho em VLANs do {{site.data.keyword.cloud_notm}} com [endereços IP móveis do {{site.data.keyword.cloud_notm}}](/docs/infrastructure/subnets?topic=subnets-getting-started) ou [em comutadores lógicos NSX (VXLANs) usando seus próprios endereços IP](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_overview). Observe que o uso da rede definida por software (SDN) do NSX oferece a maior flexibilidade para gerenciar e proteger sua rede de carga de trabalho no {{site.data.keyword.cloud_notm}}.
+- Use o peer dos NSX ESGs, do [IBM Cloud Vyatta](https://cloud.ibm.com/catalog/infrastructure/virtual-router-appliance) e do Direct Link para planejar a conectividade com cargas de trabalho (Conversão de endereço de rede, Rede privada virtual, roteamento).
 - Se estiver implementando o Cross-vCenter NSX, assegure-se de que os intervalos de ID do segmento local não estejam sendo sobrepostos antes da implementação de cargas de trabalho locais.
 
 ## Planejamento e reforço da segurança

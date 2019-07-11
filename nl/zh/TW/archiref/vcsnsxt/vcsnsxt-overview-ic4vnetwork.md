@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-21"
+lastupdated: "2019-05-22"
 
 subcollection: vmware-solutions
 
@@ -28,7 +28,7 @@ subcollection: vmware-solutions
 ## 專用網路
 {: #vcsnsxt-overview-ic4vnetwork-private-net}
 
-所有 {{site.data.keyword.CloudDataCents_notm}} 及 PoP 都是藉由專用網路骨幹進行連接。此專用網路與公用網路分開，而且可以啟用全球各地之 {{site.data.keyword.CloudDataCents_notm}} 中服務的連線功能。使用多個 10 Gbps 或 40 Gbps 專用網路連線，可以在資料中心之間移動資料。與公用網路類似，專用網路在該伺服器中為多層式，而其他基礎架構則連接至聚集的後端客戶交換器 (BCS)。這些聚集交換器連接到一對個別路由器（亦即，後端客戶路由器 (BCR)），以執行 L3 網路功能。專用網路也支援使用巨大訊框 (MTU 9000) 來進行實體主機連線的功能。
+所有 {{site.data.keyword.CloudDataCents_notm}} 及 PoP 都是藉由專用網路骨幹進行連接。此專用網路與公用網路分開，而且可以啟用全球各地之 {{site.data.keyword.CloudDataCents_notm}} 中服務的連線功能。在資料中心之間移動資料是使用與專用網路的多個 10 Gbps 或 40 Gbps 連線完成的。與公用網路類似，專用網路在該伺服器中為多層式，而其他基礎架構則連接至聚集的後端客戶交換器 (BCS)。這些聚集交換器連接到一對個別路由器（亦即，後端客戶路由器 (BCR)），以執行 L3 網路功能。專用網路也支援使用巨大訊框 (MTU 9000) 來進行實體主機連線的功能。
 
 ## 管理網路
 {: #vcsnsxt-overview-ic4vnetwork-mgmt-net}
@@ -47,7 +47,7 @@ subcollection: vmware-solutions
 ## 虛擬遞送及轉遞
 {: #vcsnsxt-overview-ic4vnetwork-vrf}
 
-{{site.data.keyword.cloud_notm}} 帳戶也可以配置為「虛擬遞送及轉遞 (VRF)」帳戶。VRF 帳戶可啟用帳戶內子網路 IP 區塊之間的自動廣域遞送。所有具有 Direct Link 連線的帳戶都必須轉換或建立為 VRF 帳戶。
+{{site.data.keyword.cloud_notm}} 帳戶也可以配置為「虛擬遞送及轉遞 (VRF)」帳戶。VRF 帳戶可啟用帳戶內子網路 IP 區塊之間的自動廣域遞送。所有具有「直接鏈結」連線的帳戶都必須轉換或建立為 VRF 帳戶。
 
 ## 實體主機連線
 {: #vcsnsxt-overview-ic4vnetwork-host-connect}
@@ -84,7 +84,7 @@ VLAN 	|子網路類型 	|說明
 專用 B 	|可攜式  |指派給 NAS（若使用中）。
 專用 B 	|可攜式  |指派給 vMotion。
 
-此設計是使用 VLAN 上的實體主機及虛擬系統實例 (VSI) 所實作，並配置成指向 {{site.data.keyword.cloud_notm}} BCR（後端「專用網路」客戶路由器）以作為預設路徑。vCenter Server 實例啟用軟體定義網路的使用。{{site.data.keyword.cloud_notm}} 管理路由器無法辨識由 NSX 所建立並包括遞送至 VLAN 子網路的任何網路層疊，而且您可能需要建立靜態路徑、防火牆規則及 NAT 規則，才能適當地管理網路流程。
+此設計是使用 VLAN 上的實體主機及虛擬系統實例 (VSI) 所實作，並配置成指向 {{site.data.keyword.cloud_notm}} BCR（後端「專用網路」客戶路由器）以作為預設路徑。雖然 vCenter Server 實例允許使用軟體定義的網路連線功能，但 {{site.data.keyword.cloud_notm}} 管理的路由器並無法得知 NSX 所建立且包含對 VLAN 子網路之遞送的任何網路層疊。您可能需要建立靜態路徑、防火牆規則和 NAT 規則，才能正確管理網路流程。
 
 專用網路連線配置成使用 MTU 大小為 9000 的巨大訊框，以改善大型資料傳送（例如儲存空間及 vMotion）的效能。這是 VMware 內及 {{site.data.keyword.cloud_notm}} 容許的最大 MTU。公用網路連線使用標準乙太網路 MTU 1500。必須維護此值，因為任何變更都可能導致透過網際網路傳送時發生封包片段化。
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-15"
 
 subcollection: vmware-solutions
 
@@ -16,7 +16,7 @@ subcollection: vmware-solutions
 
 O vCenter tem um recurso chamado Perfis do host. Esse recurso cria um perfil que captura uma configuração de host de referência pré-configurada e validada e ajuda um administrador do sistema a gerenciar as configurações do host em um cluster. Os Perfis do host fornecem um mecanismo automatizado e gerenciado centralmente para a configuração de host e a conformidade de host. Os Perfis do host permitem que a configuração seja tratada como um objeto gerenciado, que tem um catálogo de parâmetros a serem configurados, rede, armazenamento, segurança e outros parâmetros de nível do host. Esses Perfis do host podem ser aplicados a hosts individuais, a um cluster ou a todos os hosts e clusters associados a um perfil do host.
 
-À medida que mais hosts do VMware vCenter Server on {{site.data.keyword.cloud}} vSphere ESXi são implementados pela automação do IC4VS que implementou o cluster original, há menos desvio de configuração do que com métodos manuais de inclusão de hosts. No entanto, as ações do administrador do sistema, além da automação, podem tornar as configurações de hosts diferentes. Por exemplo, mais armazenamento NFS é incluído ou VLANs extras são incluídas. O uso de Perfis do host para validar a configuração de um novo host verificando a conformidade desse host com relação a um host existente é um caso de uso válido dessa ferramenta no {{site.data.keyword.cloud_notm}}.
+Conforme mais hosts do VMware vCenter Server on {{site.data.keyword.cloud}} vSphere ESXi são implementados pela automação do IBM Cloud for VMware Solutions que implementou o cluster original, há menos desvio de configuração do que com métodos manuais de inclusão de hosts. No entanto, as ações do administrador do sistema, além da automação, podem tornar as configurações de hosts diferentes. Por exemplo, mais armazenamento NFS é incluído ou VLANs extras são incluídas. O uso de Perfis do host para validar a configuração de um novo host verificando a conformidade desse host com relação a um host existente é um caso de uso válido dessa ferramenta no {{site.data.keyword.cloud_notm}}.
 
 Para incluir mais hosts em seu cluster do vCenter Server, veja [ Expandindo e contraindo a capacidade para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers).
 

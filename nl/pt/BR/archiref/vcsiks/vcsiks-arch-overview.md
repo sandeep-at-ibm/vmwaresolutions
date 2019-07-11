@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-22"
 
 subcollection: vmware-solutions
 
@@ -59,8 +59,7 @@ para o cluster do {{site.data.keyword.containerlong_notm}}.
 
 ![No local - gerenciamento de nuvem](../../images/vcsiks-onprem-cloudmgt.svg "No local - gerenciamento de nuvem")
 
-A VPN do strongSwan é usada para estabelecer conectividade com os contêineres implementados do {{site.data.keyword.containerlong_notm}}. O strongSwan pode eventualmente ser substituído por conectividade
-de link direto.
+A VPN do strongSwan é usada para estabelecer conectividade com os contêineres implementados do {{site.data.keyword.containerlong_notm}}. O strongSwan, portanto, pode ser substituído pela conectividade do Direct Link.
 
 No diagrama, o CAM cria conexões em nuvem logicamente para os vCenters, os provedores em nuvem, o {{site.data.keyword.icpfull_notm}} e os ambientes do {{site.data.keyword.containerlong_notm}}. Os clusters do {{site.data.keyword.icpfull_notm}} devem ser
 implementados em cada data center ou ambiente de nuvem, com o MCM fornecendo o

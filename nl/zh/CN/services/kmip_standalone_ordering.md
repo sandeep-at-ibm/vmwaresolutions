@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-06-14"
+
+keywords: KMIP for VMware, order KMIP stand-alone, KMIP for VMware configuration
 
 subcollection: vmware-solutions
 
@@ -52,12 +54,12 @@ subcollection: vmware-solutions
 
 |位置|端点|
 |:---------------|:-----------------------|
-|达拉斯| <ul><li><code>kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
-|法兰克福|  <ul><li><code>kmip-1.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
-|伦敦| <ul><li><code>kmip-1.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
-|悉尼|  <ul><li><code>kmip-1.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
-|东京| <ul><li><code>kmip-1.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
-| 华盛顿| <ul><li><code>kmip-1.private.us-east.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-east.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+|达拉斯| <<code>kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696</code><br>和<br><code>kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696</code> |
+|法兰克福|<code>kmip-1.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code><br>和<br><code>kmip-2.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code> |
+|伦敦|<code>kmip-1.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code><br>和<br><code>kmip-2.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code> |
+|悉尼|<code>kmip-1.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code><br>和<br><code>kmip-2.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code> |
+|东京|<code>kmip-1.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code><br>和<br><code>kmip-2.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code> |
+| 华盛顿|<code>kmip-1.private.us-east.vmware-solutions.cloud.ibm.com:5696</code><br>和<br><code>kmip-2.private.us-east.vmware-solutions.cloud.ibm.com:5696</code> |
 
 ### 服务标识的 API 密钥
 {: #kmip_standalone_ordering-config-api-key}

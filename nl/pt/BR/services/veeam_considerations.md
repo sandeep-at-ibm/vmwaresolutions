@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-07"
+lastupdated: "2019-06-18"
+
+keywords: Veeam, Veeam install, tech specs Veeam
 
 subcollection: vmware-solutions
 
@@ -31,18 +33,23 @@ Os componentes a seguir são pedidos e incluídos no serviço Veeam no {{site.da
 ### VSIs
 {: #veeam_considerations-specs-vsi}
 
-* Única VSI com o complemento de S.O. do Veeam Backup and Replication 9.5
+* Single VSI with Veeam Backup and Replication 9.5 OS Add-on e Veeam Availability Suite 9.5
 * Windows Server 2016 Standard Edition (64 bits)
 * Cores de 4 x 2,0 GHz
-* 8 GB de RAM
+* 8 vCPU, 32 GB de RAM
 * Uplink de rede privada de 1 Gbps
 * Disco de 100 GB (SAN)
 
 ### Armazenamento para backups
 {: #veeam_considerations-specs-storage}
 
-* Armazenamento de iSCSI do Endurance (2000, 4000, 8000 ou 12000 GB)
+* Armazenamento iSCSI do Endurance (2.000, 4.000, 8.000 ou 12.000 GB)
 * Desempenho do armazenamento (0,25; 2 ou 4 IOPS/GB)
+
+Como parte da instalação e configuração do serviço Veeam, os repositórios a seguir foram criados:
+* Para arquivos de backup de configuração do Veeam: um repositório denominado `IC4V Default Config Backup Repository`. O caminho para a pasta na qual os backups do Veeam são armazenados é `<Drive>:\ConfigBackup\`.
+* Para ampliação, um repositório denominado `IC4V Scale-Out Repository`. Para obter mais informações, consulte [Incluindo um repositório de ampliação](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icos_ordering#icos_ordering-scale-repo).
+* Para backups da Máquina virtual (VM): um repositório denominado ``IC4V Default VM Backup Repository``. O caminho para a pasta na qual os backups da VM são armazenados é ``<Drive>:\VMBackup\`. Esse repositório é incluído como uma extensão em ``IC4V Scale-Out repository`.
 
 ### Rede
 {: #veeam_considerations-specs-networking}
@@ -52,12 +59,7 @@ Um endereço IP privado primário.
 ### Licenças e taxas
 {: #veeam_considerations-specs-licenses}
 
-Veeam Backup and Replication 9.5 Enterprise Plus (10, 25, 50, 100 ou 200 licenças de MV).
-
-### Gerenciamento
-{: #veeam_considerations-specs-mgmt}
-
-Backups de gerenciamento que são configurados por padrão com até 5 MVs e 2000 GB de armazenamento.
+* Veeam Availability Suite 9.5 (10, 25, 50, 100 ou 200 licenças da VM)
 
 ## Considerações ao instalar o Veeam on IBM Cloud
 {: #veeam_considerations-install}
@@ -67,7 +69,7 @@ O repositório de armazenamento e o servidor Veeam estão no pod original e no d
 ## Considerações ao remover o Veeam on IBM Cloud
 {: #veeam_considerations-remove}
 
-A remoção do serviço Veeam on {{site.data.keyword.cloud_notm}} para todos os backups e exclui todos os backups anteriores. Os backups das MVs de gerenciamento param e a exclusão de backups anteriores é irreversível. Se as MVs de gerenciamento estiverem corrompidas, elas não poderão ser restauradas.
+A remoção do serviço Veeam on {{site.data.keyword.cloud_notm}} para todos os backups e exclui todos os backups anteriores. O backup das VMs de gerenciamento para e a exclusão de backups anteriores é irreversível. Se as MVs de gerenciamento estiverem corrompidas, elas não poderão ser restauradas.
 
 ## Links relacionados
 {: #veeam_considerations-related}

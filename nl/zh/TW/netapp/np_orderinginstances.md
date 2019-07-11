@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-06-18"
+
+keywords: NetApp order instance, order NetApp ONTAP, order NetApp
 
 subcollection: vmware-solutions
 
@@ -64,7 +66,6 @@ subcollection: vmware-solutions
 *  只容許英數及橫線 (-) 字元。
 *  子網域標籤的開頭必須是英文字母，而且結尾必須是英數字元。
 *  子網域標籤的長度上限為 10 個字元。
-*  子網域標籤在您的帳戶內必須是唯一的。
 
 ### 網域名稱
 {: #np_orderinginstances-domain-name}
@@ -108,6 +109,13 @@ subcollection: vmware-solutions
 
 依預設，NetApp ONTAP Select 實例的 ESXi 伺服器數目為 4。您無法變更它。所有 ESXi 伺服器都會共用配置。
 
+## 訂單摘要
+{: #np_orderinginstances-order-summary}
+
+根據您選取的配置，預估成本會立即產生並顯示在**訂單摘要**右窗格中。按一下**定價詳細資料**，以產生具有 {{site.data.keyword.vmwaresolutions_short}} 資源文件摘要的 PDF 文件。
+
+您也可以按一下**新增至預估**，將佈建的資源新增至 {{site.data.keyword.cloud_notm}} 預估工具。這適用於您想要預估所選取 {{site.data.keyword.vmwaresolutions_short}} 資源與可能考慮購買之其他 {{site.data.keyword.cloud_notm}} 資源的成本時。
+
 ## 訂購 NetApp ONTAP Select 實例的程序
 {: #ordering-netapp-ontap-select-instances}
 
@@ -126,14 +134,12 @@ subcollection: vmware-solutions
     4. 按一下適用於您訂單的條款鏈結。確定您同意這些條款，然後選取**我已閱讀並同意下面列出的協力廠商服務合約**勾選框。
     5. 按一下**佈建**。
 
-## 結果
+## 訂購 NetApp ONTAP 實例後的結果
 {: #np_orderinginstances-results}
 
-實例的部署會自動啟動。您會收到正在處理訂單的確認，並且可以檢視實例詳細資料來檢查部署的狀態。
-
-順利部署實例之後，會在 VMware 虛擬平台上安裝 [NetApp ONTAP Select 實例的技術規格](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#specs)中所說明的元件。
-
-實例已備妥可供使用時，實例的狀態會變更為**備妥使用**，而且您會透過電子郵件收到通知。
+* 實例的部署會自動啟動，且您會收到確認，指出正在處理該訂單。您可以檢查部署狀態，包括可能需要注意的任何問題，方法是檢視實例詳細資料的**部署歷程**區段。
+* 順利部署實例之後，會在 VMware 虛擬平台上安裝 [NetApp ONTAP Select 實例的技術規格](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#specs)中所說明的元件。
+* 實例已備妥可供使用時，實例的狀態會變更為**備妥使用**，而且您會透過電子郵件收到通知。
 
 ## 下一步
 {: #np_orderinginstances-next}

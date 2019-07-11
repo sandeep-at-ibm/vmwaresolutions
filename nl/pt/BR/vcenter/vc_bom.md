@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-11"
+
+keywords: vCenter Server BOM, bill of materials vCenter Server, BOM
 
 subcollection: vmware-solutions
 
@@ -29,7 +31,7 @@ Tabela 1. BOM para as VLANs em instâncias do vCenter Server
 
 | VLAN       | Tipo       | Detalhes       |
 |:---------- |:---------- |:------------- |
-| VLAN1     | Público, primário | Designado aos servidores ESXi físicos para acesso à rede pública. Não usado após a implementação inicial. Disponível para acesso à Internet. |
+| VLAN1     | Público, primário | Designado aos servidores ESXi físicos para acesso à rede pública. Um endereço IP público é designado aos servidores, mas esse endereço IP não está configurado nos servidores, portanto, eles não estão diretamente acessíveis na rede pública. Em vez disso, a VLAN pública é destinada a fornecer acesso à Internet pública para outros componentes, como NSX Edge Services Gateways (ESGs). |
 | VLAN2     | A privado, primário | Designado pelos servidores  {{site.data.keyword.cloud}}  aos servidores ESXi físicos. Usado pela interface de gerenciamento para o tráfego de gerenciamento do VMware vSphere.<br><br>Designado às MVs (máquinas virtuais) que funcionam como componentes de gerenciamento.<br><br>Designado ao VMware NSX VTEP (VXLAN Tunnel Endpoint) |
 | VLAN3     | B privado, móvel | Designado ao VMware vSAN, se usado.<br><br>Designado ao VMware NFS, se usado.<br><br>Designado ao VMware vSphere vMotion.<br><br>Para o NSX-T, designado para o VMware NSX VTEP (VXLAN Tunnel Endpoint).|
 
@@ -42,10 +44,10 @@ Tabela 2. BOM para os componentes de software em instâncias do vCenter Server
 
 | Fabricante  | Componente                      | Versão    |
 |:------------- |:------------------------------ |:------------- |
-| VMware       | vSphere ESXi                    | 6.7 Atualização 1 (construção 6.7.0-13004448) ou <br/>6.5 Atualização 2 (construção 6.5.0-13004031) |
+| VMware       | vSphere ESXi                    | 6.7 Atualização 1 (construção 6.7.0-13004448) ou <br/>6.5 Atualização 2 (construção 6.5.0-13635690) |
 | VMware       | vSphere 6.7                     | Distributed vSwitch 6.6.0 |
 | VMware       | vSphere 6.5                     | Distributed vSwitch 6.5.0 |
-| VMware       | vCenter Server Appliance        | 6.7 Atualização 1b (construção 6.7.0-11727113) ou <br/>6.5 Atualização 2d (construção 6.5.0-10964411) |
+| VMware       | vCenter Server Appliance        | 6.7 Atualização 1b (construção 6.7.0-11727113) ou <br/>6.5 Atualização 2g (construção 6.5.0-13638625) |
 | VMware       | Platform Services Controller    | 6.7 Atualização 1b (construção 6.7.0-11727113) ou <br/>6.5 Atualização 2d (construção 6.5.0-10964411) |
 | VMware       | vSAN                            | 6.7 Atualização 1 ou <br/>6.6.1       |
 | VMware       | NSX for vSphere                 | 6.4.4 (construção 11197766)    |

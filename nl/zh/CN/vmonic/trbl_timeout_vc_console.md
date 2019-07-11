@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-12"
+lastupdated: "2019-06-07"
+
+keywords: troubleshooting, vSphere timeout, timeout console
 
 subcollection: vmware-solutions
 
@@ -29,7 +31,7 @@ subcollection: vmware-solutions
 1. 确保已完成将鼠标悬停在 **vCenter 控制台**按钮上时显示的工具提示中的步骤。为了方便起见，下面也列出了这些步骤：   
    1. 为浏览器安装 Adobe Flash Player 插件。   
    2. 在 {{site.data.keyword.slportal_full}} 中创建 VPN 密码。    
-   3. 使用 {{site.data.keyword.cloud_notm}} 基础架构 VPN 凭证[登录到数据中心 VPN](/docs/infrastructure/iaas-vpn?topic=VPN-gettingstarted-with-virtual-private-networking#login-to-the-vpn)。    
+   3. 使用 {{site.data.keyword.cloud_notm}} 基础架构 VPN 凭证[登录到数据中心 VPN](/docs/infrastructure/iaas-vpn?topic=VPN-getting-started#login-to-the-vpn)。    
    4. 将 PSC (Platform Services Controller) 的 IP 地址和主机名映射添加到本地计算机的 `hosts` 文件中。使用以下格式：
 
       ```javascript

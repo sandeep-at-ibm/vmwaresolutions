@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-09"
+lastupdated: "2019-06-14"
+
+keywords: FortiGate VA, FortiGate configuration, order FortiGate
 
 subcollection: vmware-solutions
 
@@ -39,7 +41,7 @@ subcollection: vmware-solutions
 
 為未配置公用介面的實例訂購 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 時，必須提供 Proxy 伺服器以完成安裝。HTTP Proxy 伺服器必須已配置並透過虛擬遞送及轉遞 (VRF) 提供，才能開始安裝 Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}。
 
-為了確保持續運行，FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 必須可透過網際網路持續存取 Fortigate 授權伺服器。
+為了確保持續運作，FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 必須可透過網際網路持續存取 Fortigate 授權伺服器。
 
 ## FortiGate Virtual Appliance on IBM Cloud 服務配置
 {: #fortinetvm_ordering-config}

@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-18"
+lastupdated: "2019-06-17"
+
+keywords: vCenter Server add cluster, view cluster vCenter Server, delete cluster vCenter Server
 
 subcollection: vmware-solutions
 
@@ -179,7 +181,9 @@ As configurações de ativação da Placa da interface de rede (NIC) baseiam-se 
 ### Resumo do Pedido
 {: #vc_addingviewingclusters-adding-order-summary}
 
-Com base em sua configuração selecionada para o cluster, o custo estimado é gerado instantaneamente e exibido na área de janela direita **Resumo do pedido**.
+Com base em sua configuração selecionada para o cluster, o custo estimado é gerado instantaneamente e exibido na área de janela direita **Resumo do pedido**. Clique em **Detalhes da precificação** para gerar um documento PDF com o resumo de custo dos recursos do {{site.data.keyword.vmwaresolutions_short}}.
+
+Também é possível incluir os recursos provisionados na ferramenta de estimativa do {{site.data.keyword.cloud_notm}}, clicando em **Incluir na estimativa**. Isso é útil se você desejar estimar o custo dos recursos do {{site.data.keyword.vmwaresolutions_short}} selecionados com outros recursos do {{site.data.keyword.cloud_notm}} que você talvez considere comprar.
 
 ## Procedimento para incluir clusters em instâncias do vCenter Server
 {: #vc_addingviewingclusters-adding-procedure}
@@ -230,9 +234,7 @@ Não é possível mudar o nome do cluster. Mudar o nome do cluster pode causar f
 3. Clique em **Infraestrutura** na área de janela de navegação esquerda. Na tabela **CLUSTERS**, visualize o resumo sobre os clusters:
   * **Nome**: o nome do cluster.
   * **Servidores ESXi**: o número de servidores ESXi no cluster.
-  * **CPU**: a especificação de CPU dos servidores ESXi no cluster.
-  * **Discos vSAN customizados**: o número de discos vSAN no cluster, incluindo o tipo de disco e a capacidade.
-  * **Memória**: o tamanho total da memória dos servidores ESXi no cluster.
+  * **Armazenamento**: o tipo de armazenamento usado pelo cluster.
   * **Local do data center**: o {{site.data.keyword.CloudDataCent_notm}} em que o cluster está hospedado.
   * **Pod**: o pod no qual o cluster é implementado.
   * **Status**: o status do cluster. O status pode ter um dos valores a seguir:
@@ -261,7 +263,19 @@ Tabela 4. Detalhes do servidor ESXi
 | IP privado | O endereço IP privado do servidor ESXi. |
 | Barra de Status | O status do servidor ESXi, que pode ser um dos valores a seguir:<br> **Incluído** o servidor do ESXi foi incluído e está pronto para uso.<br> **Incluindo** o servidor do ESXi está sendo incluído.<br> **Excluindo** o servidor do ESXi está sendo excluído. |
 
-Tabela 5. Detalhes do armazenamento
+Expanda o servidor ESXi para obter detalhes adicionais.
+
+Tabela 5. Detalhes adicionais do servidor ESXi
+
+| Item        | Descrição       |  
+|:------------- |:------------- |
+| CPU | A especificação de CPU dos servidores ESXi no cluster. |
+| Memória | O tamanho da memória total dos servidores ESXi no cluster. |
+| Discos vSAN customizados | O número de discos vSAN no cluster, incluindo o tipo e a capacidade dos discos. |
+| Discos de cache vSAN | O tipo e o número de discos de cache vSAN. |
+| Rede |As configurações de ativação da placa da interface de rede (NIC) de Rede Pública e Privada ou Somente Rede Privada. |
+
+Tabela 6. Detalhes de armazenamento
 
 | Item        | Descrição       |  
 |:------------- |:------------- |
@@ -270,7 +284,7 @@ Tabela 5. Detalhes do armazenamento
 | IOPS/GB | O nível de desempenho do armazenamento. |
 | Protocolo do NFS | A versão NFS do armazenamento. |
 
-Tabela 6. Interface de rede - detalhes da VLAN
+Tabela 7. Interface de rede - Detalhes da VLAN
 
 | Item        | Descrição       |  
 |:------------- |:------------- |
@@ -281,7 +295,7 @@ Tabela 6. Interface de rede - detalhes da VLAN
 
 Clique em **Visualizar recurso** para acessar os detalhes da VLAN.
 
-Tabela 7. Interface de rede - detalhes de sub-rede
+Tabela 8. Interface de rede - Detalhes da sub-rede
 
 | Item        | Descrição       |  
 |:------------- |:------------- |
@@ -289,7 +303,7 @@ Tabela 7. Interface de rede - detalhes de sub-rede
 | Tipo | O tipo de sub-rede: primária ou móvel. |
 | Descrição | A descrição da sub-rede. |
 
-Tabela 8. Interface de rede - detalhes do IP
+Tabela 9. Interface de rede - Detalhes do IP
 
 | Item        | Descrição       |  
 |:------------- |:------------- |

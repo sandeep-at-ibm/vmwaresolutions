@@ -115,7 +115,7 @@ subcollection: vmware-solutions
 
 * [{{site.data.keyword.vmwaresolutions_short}} 架構（含 NSX-V 和 NSX-T）](/docs/services/vmwaresolutions/services?topic=vmware-solutions-solution_overview#solution_overview)
 * [Caveonix RiskForesight 參照架構](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-on-vcs)
-* [HCX on {{site.data.keyword.cloud_notm}} 部署及作業手冊](/docs/services/vmwaresolutions/archiref/vcshcx?topic=vmware-solutions-vcshcx-intro)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} for VMware Solutions](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-vcs-intro)
 
 ## 使用者介面更新和加強功能
 {: #relnotes_v28-ui}

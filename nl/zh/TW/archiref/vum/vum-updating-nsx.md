@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-15"
 
 subcollection: vmware-solutions
 
@@ -44,7 +44,7 @@ subcollection: vmware-solutions
 4. 在下載頁面上，選取**升級組合、立即下載**。
 5. 下載至適當的資料夾。
 6. **升級 NSX Manager**：
-  - 使用「IC4VS 主控台」中所記載的 IP 位址及認證登入「NSX Manager 虛擬應用裝置」，然後按一下首頁上的「升級」按鈕。
+  - 使用 IBM Cloud for VMware Solutions 主控台所記載的 IP 位址及認證登入「NSX Manager 虛擬應用裝置」，然後按一下首頁上的「升級」按鈕。
   - 登入 NSX Manager。
   - 在**應用裝置管理**下，按一下**備份及還原**。
   - 按一下「備份」，然後輸入適當的檔名。VMware 建議您先重新安裝 NSX Manager 應用裝置，再還原 NSX Manager 資料。雖然現有 NSX Manager 應用裝置上的還原作業可能有作用，但未正式予以支援。最佳作法是記下 NSX Manager 應用裝置的 IP 設定，因此可以使用它們來指定新部署 NSX Manager 應用裝置的 IP 資訊及備份位置資訊。

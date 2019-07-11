@@ -19,8 +19,8 @@
  <g font-family="Helvetica" text-anchor="middle">
   <g font-size="18px" font-weight="bold">
    <text x="99.5" y="401.5">常見服務</text>
-   <text x="130" y="51.5">基礎架構管理</text>
-   <text x="130" y="171.5">虛擬基礎架構</text>
+   <text x="172" y="51.5">基礎架構管理</text>
+   <text x="147" y="171.5">虛擬基礎架構</text>
    <text x="454.5" y="401.5">IBM Cloud 服務</text>
   </g>
   <g font-size="16px">
@@ -40,7 +40,7 @@
  <path d="m447.06 350.09 9.68-4.07-6.93 23.52-21.65-11.52 9.68-4.06-26.9-64.05-9.68 4.07 6.93-23.52 21.65 11.52-9.68 4.06z" fill="#fff" pointer-events="none" stroke="#000" stroke-linejoin="round" stroke-miterlimit="10"/>
  <g font-family="Helvetica" font-size="16px" text-anchor="middle">
   <rect x="321" y="302" width="218" height="39" fill="#fff" stroke-width="0"/>
-  <text x="428.59" y="326.39">網路時間同步化</text>
+  <text x="428.59" y="335.21">網路時間同步化</text>
  </g>
  <path d="m112.3 354.06 9.64 4.15-21.74 11.33-6.74-23.58 9.65 4.15 27.59-64.17-9.64-4.15 21.74-11.33 6.74 23.58-9.65-4.15z" fill="#fff" pointer-events="none" stroke="#000" stroke-linejoin="round" stroke-miterlimit="10"/>
  <g font-family="Helvetica" font-size="16px" text-anchor="middle">

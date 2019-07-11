@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-06-03"
 
 subcollection: vmware-solutions
 
@@ -17,7 +17,6 @@ subcollection: vmware-solutions
 以下参考体系结构是一种“概念车”，即用于重点说明并显示解决实际问题的技术的机制。“概念车”绝不代表如今现成可用的服务。
 
 该参考体系结构还提供了以下信息：
-
 -   为各个项目干系人提供通用语言。
 -   提供技术实施的一致性以解决问题。
 -   支持根据成熟的参考体系结构来验证解决方案。
@@ -26,7 +25,9 @@ subcollection: vmware-solutions
 ## 关于 ACME Skate Advisor
 {: #vcscar-intro-about}
 
-我们希望以实际方式演示 Watson 人工智能与机器学习之间的互动，并借此更深入地探索滑板文化。我们将以独特的方式说明可用的服务和云基础架构，以展示该领域的技术能力和进步成果。“概念车”的实现是对名为 Skate Advisor 的演示性 Acme Skateboards 应用程序的扩展。Skate Advisor 是一种工具，支持用户与 Watson 驱动的引擎进行滑板技巧对话。下面引用的内容是一个样本对话：
+我们希望以实际方式演示 Watson 人工智能与机器学习之间的互动，并借此更深入地探索滑板文化。我们将以独特的方式说明可用的服务和云基础架构，以展示该领域的技术能力和进步成果。
+
+“概念车”的实现是对名为 Skate Advisor 的演示性 Acme Skateboards 应用程序的扩展。Skate Advisor 是一种工具，支持用户与 Watson 驱动的引擎进行滑板技巧对话。下面引用的内容是一个样本对话：
 
 -   “Watson，显示‘卡斯坡’技巧组合”
 -   “Watson，显示练习技巧的常见地点”
@@ -90,7 +91,6 @@ Acme Skate Advisor 使用 Watson Discovery服务跟踪应用了分类语言的�
 例如，通用模式是将前端 SoE 应用程序部署为容器，并将数据库和遗留中间件部署在私有云的 VM 上。
 
 由于 IT 基础架构和业务需求是独一无二的，因此现代化的方法必须提供以下优先级：
-
 * 加速实现业务价值
 * 尽可能缩短交付时间
 * 降低风险

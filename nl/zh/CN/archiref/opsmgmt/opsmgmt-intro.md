@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-17"
+lastupdated: "2019-05-29"
 
 ---
 
@@ -40,7 +40,7 @@ lastupdated: "2019-05-17"
 
 * 虚拟基础架构层 - 虚拟基础架构层基于物理层组件运行。虚拟基础架构层控制对底层物理基础架构的访问，同时控制资源以及将资源分配给管理和计算工作负载。管理工作负载除了包含虚拟基础架构层本身中的元素外，还包含云管理、服务管理、业务连续性和安全层中的元素。
 
-* 业务连续性层 - 此层包含通过提供数据备份、复原和灾难恢复来支持业务连续性的元素。有关更多信息，请参阅 {{site.data.keyword.vmwaresolutions_short}} 备份和复原体系结构以及 Veeam、Spectrum Protect Plus 和 Zerto 灾难恢复参考体系结构。
+* 业务连续性层 - 此层包含通过提供数据备份、复原和灾难恢复来支持业务连续性的元素。有关更多信息，请参阅 {{site.data.keyword.vmwaresolutions_short}} 备份和复原体系结构以及 Veeam、IBM Spectrum Protect Plus 和 Zerto 灾难恢复参考体系结构。
 
 * 安全层 - 此层包含用于降低风险和提高合规性的元素。有关更多信息，请参阅 Fortinet、F5、NSX、HyTrust 和 Caveonix 参考体系结构。
 

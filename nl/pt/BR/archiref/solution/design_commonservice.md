@@ -90,6 +90,6 @@ Por padrão, o VMware vSphere usa certificados TLS que são assinados pela VMwar
 ## Links relacionados
 {: #design_commonservice-related}
 
-* [ Design da infraestrutura física ](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_physicalinfrastructure)
+* [Design da infraestrutura física](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_physicalinfrastructure)
 * [Design de infraestrutura virtual](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_virtualinfrastructure)
 * [Design de gerenciamento de infraestrutura](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_infrastructuremgmt)

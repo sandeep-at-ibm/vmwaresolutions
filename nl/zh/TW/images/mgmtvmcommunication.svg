@@ -27,7 +27,7 @@
 	<path id="vSAN_rectangle" class="st1" d="m409.5 262h-371c-5.2 0-9.5-4.3-9.5-9.5s4.3-9.5 9.5-9.5h371c5.2 0 9.5 4.3 9.5 9.5s-4.3 9.5-9.5 9.5z"/>
 	<text class="st2 st3" transform="translate(206 258)">vSAN</text>
 	<path id="vSphere_rectangle" class="st4" d="m409.5 288h-371c-5.2 0-9.5-4.3-9.5-9.5s4.3-9.5 9.5-9.5h371c5.2 0 9.5 4.3 9.5 9.5s-4.3 9.5-9.5 9.5z"/>
-	<text class="st2 st3" transform="translate(189.5 282)">vSphere ESXi                    </text>
+	<text class="st2 st3" transform="translate(189.5 282)">vSphere ESXi</text>
 	<text transform="translate(125.5 198)"><tspan class="st5 st2 st6" x="11" y="0">虛擬</tspan><tspan class="st5 st2 st6" x="0" y="10.8">應用裝置</tspan></text>
 	<text class="st5 st2 st6" transform="translate(46.5 223)">   VM</text>
 	<text transform="translate(192.5 199)"><tspan class="st5 st2 st6" x="11" y="0">虛擬</tspan><tspan class="st5 st2 st6" x="0" y="10.8">應用裝置</tspan></text>
@@ -101,7 +101,7 @@
 				<ellipse class="st16" cx="154.4" cy="26.8" rx="5.4" ry="3"/>
 			</g>
 		</g>
-		<text class="st2 st17" transform="translate(170 48.437)">自動化</text>
+		<text class="st2 st17" transform="translate(159.91 48.437)">自動化</text>
 		<text class="st2 st3" transform="translate(179.5 37)">IBM</text>
 	<text class="st2 st8" transform="translate(130 333)">VMware Cloud Foundation on IBM Cloud</text>
 			<line class="st0" x1="191.5" x2="191.5" y1="61.8" y2="77.5"/>

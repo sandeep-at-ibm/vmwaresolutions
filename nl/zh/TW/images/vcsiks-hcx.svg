@@ -70,9 +70,9 @@
     <text x="746.5" y="530.5">vCenter</text>
    </g>
    <text x="553" y="488.5">HCX Cloud WAN 最佳化</text>
-   <text x="556" y="529">HCX 管理程式 / 用戶端</text>
+   <text x="556" y="529">HCX Manager / 用戶端</text>
    <g text-anchor="middle">
-    <text x="528.5" y="457">圖例</text>
+    <text x="528.5" y="457">金鑰</text>
    </g>
   </g>
   <g pointer-events="none">
@@ -120,7 +120,7 @@
   <path d="m108 292q-18-60 101-55t344 10 257.43-58.99" fill="none" pointer-events="none" stroke="#0f0" stroke-dasharray="9 9" stroke-miterlimit="10" stroke-width="3"/>
   <path d="m813.48 181.99-0.05 10.06-3-4.04-5.03-0.03z" fill="#0f0" pointer-events="none" stroke="#0f0" stroke-miterlimit="10" stroke-width="3"/>
   <g font-family="Helvetica" font-size="12px" font-weight="bold" text-anchor="middle">
-   <text x="537.5" y="213">網路伸展</text>
+   <text x="537.5" y="213">網路延伸</text>
   </g>
   <path d="m641.5 152 160.5-1" fill="none" pointer-events="none" stroke="#7f00ff" stroke-miterlimit="10" stroke-width="2"/>
   <g transform="translate(704.5,142.5)">
@@ -147,7 +147,7 @@
     <text x="728.5" y="95">IBM Cloud for VMware Solutions</text>
    </g>
    <g font-size="12px">
-    <text x="365" y="484.5">HCX L2C / 網路伸展</text>
+    <text x="365" y="484.5">HCX L2C / 網路延伸</text>
    </g>
    <g font-size="12px">
     <text x="365" y="524.5">HCX 雲端閘道</text>

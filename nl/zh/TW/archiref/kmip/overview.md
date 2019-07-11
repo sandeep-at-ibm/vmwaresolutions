@@ -29,7 +29,7 @@ subcollection: vmware-solutions
 
 * 與 VMware vSAN 加密及 vSphere 加密整合，兩者都是在 Hypervisor 層實作，而非儲存空間或虛擬機器層。此方式容許輕鬆管理及瞭解儲存空間解決方案及應用程式。
 * 在許多 {{site.data.keyword.cloud_notm}} 多區域地區 (MZR) 中提供完全受管理金鑰管理伺服器。
-* 整合 VMWare 叢集和 {{site.data.keyword.cloud_notm}} Key Protect 或 {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services 可提供您可以隨時撤銷的完全由客戶管理的金鑰。
+* 整合 VMWare 叢集和 {{site.data.keyword.cloud_notm}} Key Protect 或 {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services 可提供您可以隨時撤銷且完全由客戶管理的金鑰。
 
 ## 相關鏈結
 {: #kmip-overview-related}

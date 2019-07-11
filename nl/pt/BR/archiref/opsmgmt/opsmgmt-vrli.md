@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-17"
+lastupdated: "2019-03-06"
 
 ---
 
@@ -22,20 +22,21 @@ O vRealize Log Insight (vRLI) permite a criação de log em tempo real para comp
 
 ![Diagrama de rede do Log Insights](../../images/opsmgmt-vrlinw.svg "Diagrama de rede do Log Insights")
 
-Nesse design, cada local tem um cluster independente do vRLI implementado no Cluster de Gerenciamento. O cluster do vRLI é implementado na sub-rede do conjunto de ferramentas por meio de endereços IP Móveis do {{site.data.keyword.cloud_notm}}. Isso facilita a comunicação com todos os componentes transmitidos do espaço de endereço RFC1918 do {{site.data.keyword.cloud_notm}}. Eles incluem: hosts do vSphere, o vCenter, o Platform Services Controller, o Gerenciador NSX e os Controladores NSX. Um cluster do vRLI contém um Nó Principal e pelo menos dois Nós do Trabalhador com um Balanceador de Carga Integrado.
+Nesse design, cada local tem um cluster vRLI independente que é implementado no Cluster de gerenciamento. O cluster vRLI é implementado na sub-rede do conjunto de ferramentas usando endereços IP móveis do {{site.data.keyword.cloud_notm}}. Isso facilita a comunicação com todos os componentes transmitidos do espaço de endereço RFC1918 do {{site.data.keyword.cloud_notm}}. Eles incluem: hosts do vSphere, o vCenter, o Platform Services Controller, o Gerenciador NSX e os Controladores NSX. Um cluster do vRLI contém um Nó Principal e pelo menos dois Nós do Trabalhador com um Balanceador de Carga Integrado.
 
-* Nó Principal - Nó inicial necessário no Cluster. O Nó Principal é responsável pela ingestão de consultas e logs. A IU da web do Nó Principal é a única área de janela de vidro para esse Cluster do vRealize Log Insight. Todas as consultas com relação a dados são direcionadas para o principal que, por sua vez, distribui a carga de trabalho para os Trabalhadores.
-* Nó do trabalhador - são necessários no mínimo três nós para formar um Cluster, com a capacidade de incluir mais Trabalhadores para o dimensionamento. Um Nó do Trabalhador obtém e armazena logs localmente.
-* Balanceador de carga integrado - Fornece alta disponibilidade por meio da configuração do balanceamento de carga proprietário (nenhum balanceador de carga externo é necessário).
-* Encaminhador do Log Insight – É implementado para receber logs dos componentes de sobreposição do NSX. Além disso, pode ser utilizado por um cliente que deseje enviar logs de VMs de cálculo. O Encaminhador do Log Insight é um Nó Principal único do vRealize Log Insight usado como um agregador de syslog remoto para encaminhar alertas para o cluster do vRLI. Como os itens suportados por VXLAN são transmitidos do espaço de endereço BYOIP, as regras NAT devem ser implementadas no NSX ESG. Os tamanhos a seguir estão disponíveis e o apropriado está selecionado:
+* Nó Principal - Nó inicial necessário no Cluster. O Nó Principal é responsável pela ingestão de consultas e logs. A IU da web do Nó principal é o único painel de controle para esse vRealize Log Insight Cluster. Todas as consultas com relação a dados são direcionadas ao principal, que, por sua vez, distribui a carga de trabalho para os Trabalhadores.
+* Nó do trabalhador - são necessários três nós mínimos para formar um cluster com a capacidade de incluir mais Trabalhadores para ampliação. Um Nó do trabalhador alimenta logs e armazena-os localmente.
+* Balanceador de carga integrado - Isso fornece alta disponibilidade usando a configuração de balanceamento de carga proprietária (não é necessário nenhum balanceador de carga externo).
+* Encaminhador do Log Insight – É implementado para receber logs dos componentes de sobreposição do NSX. Além disso, pode ser utilizado por um cliente que deseje enviar logs de VMs de cálculo. O Encaminhador do Log Insight é um Nó Principal único do vRealize Log Insight usado como um agregador de syslog remoto para encaminhar alertas para o cluster do vRLI. Como os endereços suportados por VXLAN estão fora do espaço de endereço de BYOIP, as regras NAT devem ser implementadas no NSX ESG.
 
- * Pequeno – 2000 Eventos por segundo
- * Médio – 5000 Eventos por segundo
- * Grande – 15.000 Eventos por segundo
+Os tamanhos a seguir estão disponíveis e o apropriado é selecionado:
+* Pequeno - 2.000 eventos por segundo
+* Médio - 5.000 eventos por segundo
+* Grande - 15.000 eventos por segundo
 
 ![Diagrama de componentes do Log Insights](../../images/opsmgmt-vrlicomponents.svg "Diagrama de componentes do Log Insights")
 
-O vRLI coleta logs para fornecer informações de monitoramento sobre o ambiente por meio de um local central.
+O vRLI coleta logs para fornecer informações de monitoramento sobre o ambiente de um local central.
 
 O vRLI coleta eventos de log da infraestrutura virtual e dos componentes de gerenciamento de nuvem a seguir (clientes de criação de log):
 * vCenter
@@ -87,9 +88,9 @@ A implementação do dispositivo do vRLI requer três endereços IP da sub-rede 
 * Dispositivos NSX-V/T
 * VXLAN de expansão de conjunto de ferramentas
 * Redes do cliente
-* Servidor NTP (time.services.softlayer.com)
+* Servidor NTP (`time.services.softlayer.com`)
 * Active Directory/DNS do {{site.data.keyword.vmwaresolutions_short}}
-* Os Coletores remotos requerem regras do NAT no NSX ESG para ativar a conectividade com o Nó principal, a Réplica do nó principal e Nós de dados
+* Os Coletores remotos requerem regras NAT no NSX ESG para ativar a conectividade com o Nó principal, a Réplica do nó principal e os Nós de dados
 
 ## Portas
 {: #opsmgmt-vrli-ports}
@@ -98,7 +99,7 @@ Tabela 2. Portas do Log Insight
 
 | Descrição                                                   | Port       | Protocolo |
 | ------------------------------------------------------------- | ---------- | -------- |
-| Tráfego do syslog de saída configurado como um destino do Encaminhador | 514        | TCP, UDP |
+| Tráfego de syslog de saída configurado como um destino do Encaminhador | 514        | TCP, UDP |
 | Dados do syslog sobre SSL                                          | 1514, 6514 | TCP      |
 | API de ingestão de insight de log                                     | 9000       | TCP      |
 | API de ingestão de insight de log sobre SSL                            | 9543       | TCP      |
@@ -115,7 +116,7 @@ Tabela 2. Portas do Log Insight
 ## Autenticação
 {: #opsmgmt-vrli-auth}
 
-O Gerenciamento de Usuário para o vRLI requer o VMware Identity Manager (vIDM), que se integra ao Active Directory. Contas de serviço são usadas para a comunicação de aplicativo a aplicativo do vRealize Operations Manager com os seguintes adaptadores a seguir, com o conjunto mínimo de permissões necessárias para a coleção de métricas e o mapeamento de topologia.
+O Gerenciamento de Usuário para o vRLI requer o VMware Identity Manager (vIDM), que se integra ao Active Directory. As contas de serviço são usadas para comunicação de aplicativo a aplicativo do vRealize Operations Manager para os adaptadores a seguir com o conjunto mínimo de permissões necessárias para coleta de métrica e mapeamento de topologia.
 * Gerenciador NSX
 * vCenter
 * vSAN
@@ -123,7 +124,7 @@ O Gerenciamento de Usuário para o vRLI requer o VMware Identity Manager (vIDM),
 ## Pacotes de conteúdo no vRealize Log Insight
 {: #opsmgmt-vrli-content}
 
-Os pacotes de conteúdo fornecem o monitoramento granular adicional na infraestrutura virtual e permitem que os logs sejam recuperados, extraídos e analisados em um formato humanamente legível. Dessa forma, o vRLI salva consultas e alertas de log e painéis podem ser usados para um monitoramento eficiente.
+Os pacotes de conteúdo fornecem monitoramento mais granular na infraestrutura virtual e permitem que os logs sejam recuperados, extraídos e analisados em um formato legível. Dessa forma, o vRLI salva consultas e alertas de log e painéis podem ser usados para um monitoramento eficiente.
 
 Os seguintes são instalados por padrão:
 * Geral

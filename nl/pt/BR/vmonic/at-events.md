@@ -1,20 +1,24 @@
 ---
 
 copyright:
+
   years: 2016, 2019
-lastupdated: "2019-04-03"
+
+lastupdated: "2019-06-17"
+
+keywords: vmware solutions events, activity tracker, event details
 
 subcollection: vmware-solutions
 
 
 ---
 
-# Eventos do Activity Tracker
+# Eventos de rastreador de atividade
 {: #at-events}
 
-Use o serviço {{site.data.keyword.cloudaccesstrailfull}} para rastrear como os usuários e aplicativos interagem com o {{site.data.keyword.vmwaresolutions_short}} no {{site.data.keyword.Bluemix_notm}}.
+Use o serviço {{site.data.keyword.cloudaccesstrailfull}} para rastrear como os usuários e aplicativos interagem com o {{site.data.keyword.vmwaresolutions_short}} no {{site.data.keyword.cloud_notm}}.
 
-O serviço {{site.data.keyword.cloudaccesstrailfull_notm}} registra atividades iniciadas pelo usuário que mudam o estado de um serviço no {{site.data.keyword.Bluemix_notm}}. Para obter mais informações, consulte o [Sobre o {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov#activity_tracker_ov).
+O serviço {{site.data.keyword.cloudaccesstrailfull_notm}} registra atividades iniciadas pelo usuário que mudam o estado de um serviço no {{site.data.keyword.cloud_notm}}. Para obter mais informações, consulte o [Sobre o {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov#activity_tracker_ov).
 
 ## Tabela de eventos do Activity Tracker
 {: #at-events-table}
@@ -47,30 +51,29 @@ Tabela 2. Descrição de ações que geram eventos de gerenciamento
 
 | Ação                                   | Descrição | Resultado |
 |:-----------------------------------------|:------------|:-------|
-| `vmware-solutions.user_account.update`    | <ul><li>A solicitação para atualizar a conta do usuário é recebida.</li><li>A solicitação para atualizar a conta do usuário é respondida.</li></ul> | <ul><li>` pendente `</li><li>` success `  ou  ` failure `</li></ul> |
-| `vmware-solutions.notification.update` | <ul><li>A solicitação para atualizar notificações é recebida.</li><li>A solicitação para atualizar notificações é respondida.</li></ul> | <ul><li>` pendente `</li><li>` success `  ou  ` failure `</li></ul> |
-| `vmware-solutions.secure_data.wipe`       | <ul><li>A solicitação para apagar os dados seguros é recebida.</li><li>A solicitação para apagar os dados seguros é respondida.</li></ul> | <ul><li>` pendente `</li><li>` success `  ou  ` failure `</li></ul> |
-| `vmware-solutions.bss_account.migrate` | <ul><li>A solicitação para migrar para a conta bss é recebida.</li><li>A solicitação para migrar para a conta bss é respondida.</li></ul> | <ul><li>` pendente `</li><li>` success `  ou  ` failure `</li></ul> |
-| `vmware-solutions.vcs.order`                 | <ul><li>A solicitação para pedir uma instância do vCenter Server é recebida.</li><li>A solicitação para pedir uma instância do vCenter Server é respondida.</li></ul> | <ul><li>` pendente `</li><li>` success `  ou  ` failure `</li></ul> |
-| `vmware-solutions.vcs.delete`                | <ul><li>A solicitação para excluir uma instância do vCenter Server é recebida.</li><li>A solicitação para excluir uma instância do vCenter Server é respondida.</li></ul> | <ul><li>` pendente `</li><li>` success `  ou  ` failure `</li></ul> |
-| `vmware-solutions.vcs.add_host`              | <ul><li>A solicitação para incluir servidores ESXi em uma instância do vCenter Server é recebida.</li><li>A solicitação para incluir servidores ESXi em uma instância do vCenter Server é respondida.</li></ul> | <ul><li>` pendente `</li><li>` success `  ou  ` failure `</li></ul> |
-| `vmware-solutions.vcs.remove_hosts`          | <ul><li>A solicitação para excluir servidores ESXi de uma instância do vCenter Server é recebida.</li><li>A solicitação para excluir servidores ESXi de uma instância do vCenter Server é respondida.</li></ul> | <ul><li>` pendente `</li><li>` success `  ou  ` failure `</li></ul> |
-| `vmware-solutions.vcs.schedule_update`       | <ul><li>A solicitação para planejar uma atualização para uma instância do vCenter Server é recebida.</li><li>A solicitação para planejar uma atualização para uma instância do vCenter Server é respondida.</li></ul> | <ul><li>` pendente `</li><li>` success `  ou  ` failure `</li></ul> |
-| `vmware-solutions.vcs.create_cluster`        | <ul><li>A solicitação para criar um cluster para uma instância do vCenter Server é recebida.</li><li>A solicitação para criar um cluster para uma instância do vCenter Server é respondida.</li></ul> | <ul><li>` pendente `</li><li>` success `  ou  ` failure `</li></ul> |
-| `vmware-solutions.vcs.delete_cluster`        | <ul><li>A solicitação para excluir o cluster de uma instância do vCenter Server é recebida.</li> <li>A solicitação para excluir o cluster de uma instância do vCenter Server é respondida.</li></ul> | <ul><li>` pendente `</li><li>` success `  ou  ` failure `</li></ul> |
-| `vmware-solutions.vcs.update_nsx_license`        | <ul><li>A solicitação para atualizar a licença do VMware NSX é recebida.</li><li>A solicitação para atualizar a licença do VMware NSX é respondida.</li></ul> | <ul><li>` pendente `</li><li>` success `  ou  ` failure `</li></ul> |
-| `vmware-solutions.vcs.upgrade_to_hybridity`   | <ul><li>A solicitação para fazer upgrade de uma instância do vCenter Server para uma instância do vCenter Server with Hybridity Bundle é recebida.</li><li>A solicitação para fazer upgrade de uma instância do vCenter Server para uma instância do vCenter Server with Hybridity Bundle é respondida.</li></ul> | <ul><li>` pendente `</li><li>` success `  ou  ` failure `</li></ul> |
-| `vmware-solutions.vsphere.order`              | <ul><li>A solicitação para pedir um cluster do vSphere é recebida.</li><li>A solicitação para pedir um cluster do vSphere é respondida.</li></ul> | <ul><li>` pendente `</li><li>` success `  ou  ` failure `</li></ul> |
-| `vmware-solutions.vsphere.update`             | <ul><li>A solicitação para atualizar um cluster do vSphere é recebida.</li><li>A solicitação para atualizar um cluster do vSphere é respondida.</li></ul> | <ul><li>` pendente `</li><li>` success `  ou  ` failure `</li></ul> |
-| `vmware-solutions.vsphere.save_template`      | <ul><li>A solicitação para salvar a configuração de um cluster do vSphere é recebida.</li><li>A solicitação para salvar a configuração de um cluster do vSphere é respondida.</li></ul> | <ul><li>` pendente `</li><li>` success `  ou  ` failure `</li></ul> |
-| `vmware-solutions.netapp.order`               | <ul><li>A solicitação para pedir uma instância do NetApp ONTAP Select é recebida.</li><li>A solicitação para pedir uma instância do NetApp ONTAP Select é respondida.</li></ul> | <ul><li>` pendente `</li><li>` success `  ou  ` failure `</li></ul> |
-| `vmware-solutions.netapp.delete`              | <ul><li>A solicitação para excluir uma instância do NetApp ONTAP Select é recebida.</li><li>A solicitação para excluir uma instância do NetApp ONTAP Select é respondida.</li></ul> | <ul><li>` pendente `</li><li>` success `  ou  ` failure `</li></ul> |
-| `vmware-solutions.service_variable.update`    | <ul><li>A solicitação para atualizar a configuração de um serviço é recebida.</li><li>A solicitação para atualizar a configuração de um serviço é respondida.</li></ul> | <ul><li>` pendente `</li><li>` success `  ou  ` failure `</li></ul> |
-| `vmware-solutions.service.order`              | <ul><li>A solicitação para pedir um serviço para uma instância é recebida.</li><li>A solicitação para pedir um serviço para uma instância é respondida.</li></ul> | <ul><li>` pendente `</li><li>` success `  ou  ` failure `</li></ul> |
-| `vmware-solutions.service.delete_by_id`       | <ul><li>A solicitação para excluir um serviço de uma instância é recebida.</li><li>A solicitação para excluir um serviço de uma instância é respondida.</li></ul> | <ul><li>` pendente `</li><li>` success `  ou  ` failure `</li></ul> |
-| `vmware-solutions.service.upgrade_to_hybridity` | <ul><li>A solicitação para fazer upgrade de uma instância existente do vCenter Server para uma instância do vCenter Server with Hybridity Bundle é recebida.</li><li>A solicitação para fazer upgrade de uma instância existente do vCenter Server para uma instância do vCenter Server with Hybridity Bundle é respondida.</li></ul> | <ul><li>` pendente `</li><li>` success `  ou  ` failure `</li></ul> |
-| `vmware-solutions.service.deploy` | A ação para implementar um serviço em uma instância é executada. | `success` |
-| `vmware-solutions.service.undeploy` | A ação para remover um serviço de uma instância é executada. | `success` |
+| `vmware-solutions.account-apikey.update` |	A chave de API da infraestrutura de uma conta é atualizada. | ` pendente `<br>`sucesso`<br>`failure` |
+| `vmware-solutions.account-notification.update` | A configuração de notificação de uma conta é atualizada. | ` pendente `<br>`sucesso`<br>`failure` |
+| `vmware-solutions.instance-secure-data.wipe` | Os dados protegidos da instância são limpos. | ` pendente `<br>`sucesso`<br>`failure` |
+| `vmware-solutions.instance-bss-account.migrate` |	Uma instância é migrada para uma conta BSS. | ` pendente `<br>`sucesso`<br>`failure` |
+| `vmware-solutions.vcs.create` |	Uma instância do vCenter Server é criada. |` pendente `<br>`sucesso`<br>`failure` |
+| `vmware-solutions.vcs.delete` |	Uma instância do vCenter Server é excluída. | ` pendente `<br>`sucesso`<br>`failure` |
+| `vmware-solutions.vcs-host.add` |	Um host é incluído em uma instância do vCenter Server. | ` pendente `<br>`sucesso`<br>`failure` |
+| `vmware-solutions.vcs-host.remove` |	Um host é removido de uma instância do vCenter Server. | ` pendente `<br>`sucesso`<br>`failure` |
+| `vmware-solutions.vcs.update`	| Uma instância do vCenter Server é atualizada. | ` pendente `<br>`sucesso`<br>`failure` |
+| `vmware-solutions.vcs-cluster.create`	| Um cluster é criado para uma instância do vCenter Server. | ` pendente `<br>`sucesso`<br>`failure` |
+| `vmware-solutions.vcs-cluster.delete`	| Um cluster é excluído de uma instância do vCenter Server. | ` pendente `<br>`sucesso`<br>`failure` |
+| `vmware-solutions.vcs-nsx-license.update`	| A licença do NSX é atualizada para uma instância do servidor vCenter. | ` pendente `<br>`sucesso`<br>`failure` |
+| `vmware-solutions.vcs-hybridity.add`	| O Hybridity Bundle é submetido a upgrade para uma instância do vCenter Server. | ` pendente `<br>`sucesso`<br>`failure` |
+| `vmware-solutions.vcs-hybridity.remove`	| O Hybridity Bundle é removido de uma instância do vCenter Server. | ` pendente `<br>`sucesso`<br>`failure` |
+| `vmware-solutions.vcs-nfs-storage.add`	| O armazenamento NFS é incluído em uma instância do vCenter Server. | ` pendente `<br>`sucesso`<br>`failure` |
+| `vmware-solutions.vcs-nfs-storage.remove`	| O armazenamento NFS é removido de uma instância do vCenter Server. | ` pendente `<br>`sucesso`<br>`failure` |
+| `vmware-solutions.vcs-plan.update`	| O plano de uma instância do vCenter Server é atualizado. | ` pendente `<br>`sucesso`<br>`failure` |
+| `vmware-solutions.vss.create`	| Uma instância do vSphere é criada. | ` pendente `<br>`sucesso`<br>`failure` |
+| `vmware-solutions.vss.update`	| Uma instância do vSphere é atualizada. | ` pendente `<br>`sucesso`<br>`failure` |
+| `vmware-solutions.vss-template.remove` |	Um modelo do vSphere é removido. | ` pendente `<br>`sucesso`<br>`failure` |
+| `vmware-solutions.service.create`	| Um serviço é criado. | ` pendente `<br>`sucesso`<br>`failure` |
+| `vmware-solutions.service.delete`	| Um serviço é excluído. | ` pendente `<br>`sucesso`<br>`failure` |
+| `vmware-solutions.service-hybridity.upgrade` | Um Hybridity Bundle é submetido a upgrade para `version`. | ` pendente `<br>`sucesso`<br>`failure` |
 
 ## Rastreando eventos para o serviço KMIP for VMware on IBM Cloud
 {: #at-events-kmip}
@@ -83,24 +86,23 @@ Tabela 3. Descrição de ações que geram eventos para o serviço KMIP for VMwa
 
 | Ação                                      | Descrição                               | Resultado |
 |:--------------------------------------------|:------------------------------------------|:-------|
-| `vmware-solutions.key.create`               | <ul><li>A solicitação para criar uma chave é recebida.</li><li>A solicitação para criar uma chave é respondida.</li></ul> | <ul><li>` pendente `</li><li>` success `  ou  ` failure `</li></ul> |
-| `vmware-solutions.key.get`                  | <ul><li>A solicitação para obter o conteúdo de uma chave é recebida.</li><li>A solicitação para obter o conteúdo de uma chave é respondida.</li></ul> |  <ul><li>` pendente `</li><li>` success `  ou  ` failure `</li></ul> |
-| `vmware-solutions.key.get_attributes`       | <ul><li>A solicitação para obter os atributos de uma chave é recebida.</li><li>A solicitação para obter os atributos de uma chave é respondida.</li></ul> |  <ul><li>` pendente `</li><li>` success `  ou  ` failure `</li></ul> |
-| `vmware-solutions.key.activate`             | <ul><li>A solicitação para ativar uma chave é recebida.</li><li>A solicitação para ativar uma chave é respondida.</li></ul> |  <ul><li>` pendente `</li><li>` success `  ou  ` failure `</li></ul> |
-| `vmware-solutions.key.revoke`               | <ul><li>A solicitação para revogar uma chave é recebida.</li><li>A solicitação para revogar uma chave é respondida.</li></ul> |  <ul><li>` pendente `</li><li>` success `  ou  ` failure `</li></ul> |
-| `vmware-solutions.key.destroy`              | <ul><li>A solicitação para destruir uma chave é recebida.</li><li>A solicitação para destruir uma chave é respondida.</li></ul> |  <ul><li>` pendente `</li><li>` success `  ou  ` failure `</li></ul> |
-| `vmware-solutions.key.discover_versions`    | <ul><li>A solicitação para localizar a versão do serviço KMIP for VMware on {{site.data.keyword.cloud_notm}} é recebida.</li><li>A solicitação para localizar a versão do serviço KMIP for VMware on {{site.data.keyword.cloud_notm}} é respondida.</li></ul> |  <ul><li>` pendente `</li><li>` success `  ou  ` failure `</li></ul> |
+| `vmware-solutions.kmip-key.create` |	Uma chave KMIP é criada. | ` pendente `<br>`sucesso`<br>`failure` |
+| `vmware-solutions.kmip-key.retrieve` |	Uma chave KMIP é recuperada. | ` pendente `<br>`sucesso`<br>`failure` |
+| `vmware-solutions.kmip-key-attributes.retrieve` |	Os atributos de uma chave KMIP são recuperados. | ` pendente `<br>`sucesso`<br>`failure` |
+| `vmware-solutions.kmip-key.activate` |	Uma chave KMIP é ativada. | ` pendente `<br>`sucesso`<br>`failure` |
+| `vmware-solutions.kmip-key.revoke` |	Uma chave KMIP é revogada. | ` pendente `<br>`sucesso`<br>`failure` |
+| `vmware-solutions.kmip-key.destroy` |	Uma chave KMIP é destruída. | ` pendente `<br>`sucesso`<br>`failure` |
 
 ## Onde visualizar os eventos
 {: #at-events-viewing}
 
 Os eventos do {{site.data.keyword.cloudaccesstrailshort}} estão disponíveis no
 {{site.data.keyword.cloudaccesstrailshort}} **domínio de contas** disponível na região do
-{{site.data.keyword.Bluemix_notm}} na qual eles são gerados.
+{{site.data.keyword.cloud_notm}} na qual eles são gerados.
 
 ## Links relacionados
 {: #at-events-related}
 
 * [ Rastreador de Atividades de Fornecimento ](/docs/services/cloud-activity-tracker/how-to?topic=cloud-activity-tracker-provision)
-* [Navegando até o painel do Activity Tracker no Console do {{site.data.keyword.cloud_notm}}](/docs/services/cloud-activity-tracker/how-to/manage-events-ui?topic=cloud-activity-tracker-launch_at_ui)
+* [Navegando para o painel do Activity Tracker no Console do {{site.data.keyword.cloud_notm}}](/docs/services/cloud-activity-tracker/how-to/manage-events-ui?topic=cloud-activity-tracker-launch_at_ui)
 * [ Visão geral do KMIP for VMware on  {{site.data.keyword.cloud_notm}}  overview ](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations)

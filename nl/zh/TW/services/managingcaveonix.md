@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-12"
+lastupdated: "2019-06-18"
+
+keywords: Caveonix console, Caveonix RiskForesight license, login Caveonix console
 
 subcollection: vmware-solutions
 
@@ -31,7 +33,7 @@ subcollection: vmware-solutions
       ```javascript
       RiskForesight_VM_IP_Address      RiskForesight_FQDN
       ```
-2. 若要存取 Caveonix RiskForesight 主控台，請按一下 Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} 服務詳細資料頁面上的**檢視 RiskForesight 主控台**，然後使用同一服務詳細資料頁面上列出的認證進行登入。
+2. 若要存取 Caveonix RiskForesight 主控台，請按一下 Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} 服務詳細資料頁面上的**檢視 RiskForesight 主控台**，然後使用相同服務詳細資料頁面上列出的認證進行登入。
 
 ## 將更新套用至 Caveonix RiskForesight on IBM Cloud
 {: #managingcaveonix-update}

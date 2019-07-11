@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-23"
+lastupdated: "2019-06-13"
+
+keywords: VMware HCX standalone, HCX on-premises, tech specs HCX
 
 subcollection: vmware-solutions
 
@@ -44,7 +46,7 @@ Deve-se concluir as tarefas a seguir para uma instalação bem-sucedida da inst�
     3. Clique em **COPIAR LINK** e, em seguida, use esse link para fazer download do HCX Enterprise Client para um ambiente local com acesso ao ambiente do vSphere local.
 3. No VMware vSphere Web Client, implemente o HCX Enterprise Client como um dispositivo virtual do HCX Manager (HCX Manager) em seu ambiente local.
 
-   Deve-se implementar o HCX Manager local em uma rede privada e permitir que ele acesse a rede pública. É possível usar um NSX Edge, Vyatta ou gateways semelhantes para permitir acesso à Internet ao HCX Manager local. Se os gateways usados para acesso à rede privada e acesso à rede pública forem diferentes, recomenda-se que você use o gateway padrão para permitir o acesso à rede pública e permitir que o **Console do Administrador do HCX Manager** crie uma rota estática para o acesso à rede privada.
+   Deve-se implementar o HCX Manager local em uma rede privada e permitir que ele acesse a rede pública. É possível usar um NSX Edge, Vyatta ou gateways semelhantes para permitir acesso à Internet para o HCX Manager no local. Se os gateways usados para acesso à rede privada e acesso à rede pública forem diferentes, recomenda-se que você use o gateway padrão para permitir o acesso à rede pública e permitir que o **Console do Administrador do HCX Manager** crie uma rota estática para o acesso à rede privada.
    {:note}
 4. Após a conclusão da implementação do HCX Manager, use o **Console do Administrador do HCX Manager** para ativar o HCX Manager local. Para obter uma chave de ativação para o HCX Manager no local, peça uma instância do HCX on {{site.data.keyword.cloud_notm}} no local no console do {{site.data.keyword.vmwaresolutions_short}}. Para obter mais informações, veja [Pedindo instâncias do HCX locais](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_orderingserviceinstances).
 5. Se você usou um certificado SSL autoassinado ao pedir o HCX no serviço {{site.data.keyword.cloud_notm}}, deverá importar o certificado para o HCX Manager local concluindo as etapas a seguir:

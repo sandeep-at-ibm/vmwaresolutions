@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-06-13"
+
+keywords: HyTrust CloudControl, HTCC, tech specs HTCC
 
 subcollection: vmware-solutions
 
@@ -20,7 +22,7 @@ subcollection: vmware-solutions
 
 HyTrust CloudControl on {{site.data.keyword.cloud}} 服务根据安全标准强制实施和控制合规性，包括基于角色的访问控制 (RBAC)、核准和审计。与 HyTrust DataControl 组合使用时，该服务可确保虚拟机和工作负载数据不会离开 {{site.data.keyword.CloudDataCent_notm}} 内的特定区域、集群或 ESXi 服务器。
 
-此服务仅可用于运行 vSphere 6.5 以及部署在或已升级到 V2.3 或更高版本的实例。当前安装的 HyTrust CloudControl 版本为 5.5。
+此服务仅可用于运行 vSphere 6.5 以及部署在或已升级到 V2.3 或更高版本的实例。当前安装的 HyTrust CloudControl 版本为 5.5.1。
 {:note}
 
 ## HyTrust CloudControl on IBM Cloud 的技术规范

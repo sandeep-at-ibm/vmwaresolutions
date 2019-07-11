@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-06-18"
+
+keywords: IBM Integrated Managed Infrastructure, request IBM IMI, tech specs IMI
 
 subcollection: vmware-solutions
 
@@ -24,7 +26,6 @@ IMI 为 vCenter Server 实例提供受管服务。这些受管服务包括高级
 {: #managing_imi-specs}
 
 IMI 受管服务中包含以下规范：
-
 * 覆盖范围选项：8X5、16X5 或 24X7
 * IT 服务管理工具和管理流程，负责总体交付
 * 合规性管理
@@ -38,7 +39,7 @@ IMI 受管服务中包含以下规范：
 2. 向下滚动该页面，在**订购更多受管服务**下，单击 **IMI 的受管服务**卡。
 3. 在 **IMI 中的受管服务**页面上的**参与 IMI 售前服务**框中，输入您对 IMI 服务需求的描述，然后单击**请求咨询**。
 
-IMI 售前代表将通过您的 {{site.data.keyword.cloud_notm}} 联系信息与您联系，以帮助您了解需要的服务。
+  {{site.data.keyword.vmwaresolutions_short}} 代表将通过您的 {{site.data.keyword.cloud_notm}} 联系人信息与您联系，以帮助您获取需要的解决方案。
 
 ## 相关链接
 {: #managing_imi-related}

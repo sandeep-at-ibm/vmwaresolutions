@@ -1,8 +1,12 @@
 ---
 
 copyright:
+
   years: 2016, 2019
-lastupdated: "2019-05-13"
+
+lastupdated: "2019-05-31"
+
+keywords: user IDs vCenter, PSC user, user ID service
 
 subcollection: vmware-solutions
 
@@ -16,7 +20,7 @@ subcollection: vmware-solutions
 # IBM 使用者 ID
 {: #audit_user_ids}
 
-{{site.data.keyword.vmwaresolutions_short}} 會在您的帳戶中維護一組使用者，以在您執行將主機、叢集或儲存空間新增至 VMware 實例這類作業時，供 {{site.data.keyword.cloud_notm}} 自動化使用。請檢閱下列小節，以取得 {{site.data.keyword.cloud_notm}} 自動化使用者 ID。
+{{site.data.keyword.vmwaresolutions_short}} 會在您的帳戶中維護一組使用者，以在您執行將主機、叢集或儲存空間新增至 VMware 實例這類作業時，供 {{site.data.keyword.cloud_notm}} 自動化使用。您帳戶中的使用者也可以用於藉由 {{site.data.keyword.cloud_notm}} 服務自動化來安裝和配置服務。請檢閱下列小節，以取得 {{site.data.keyword.cloud_notm}} 自動化使用者 ID。
 
 如果 IBM 使用者 ID 已刪除、停用或變更其密碼，則 VMware 實例作業會失敗。
 {:important}
@@ -67,6 +71,30 @@ HTTP 用於 vCenter 設定及配置，以及 VMware 作業（例如，新增主�
 |:---------|:------------- |:------------|
 |IBM          | automation    | 用來新增主機、新增服務的虛擬機器，以及設定 Active Directory 和 DNS 項目。|
 |客戶 | 管理者 | 僅供客戶使用而建立。|
+
+## 服務使用者 ID
+{: #audit_user_ids-services}
+
+表 5. 服務使用者 ID
+
+| 使用者 ID      |說明       |
+|:-------------------------------------------|:----------- |
+| prod-BigIP-``dynamic_ID``-@``domain name`` | 用於安裝和配置 F5 on {{site.data.keyword.cloud_notm}} 服務。|
+| prod-Caveonix-``dynamic_ID``-@``domain name`` | 用於安裝和配置 Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} 服務。|
+| prod-Fortigate-``dynamic_ID``-@``domain name`` | 用於安裝和配置 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 服務。|
+| prod-FortigateVM-``dynamic_ID``-@``domain name`` | 用於安裝和配置 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服務。|
+| prod-HyTrustCC-``5_letter_ID``-@``domain name`` | 用於安裝和配置 HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 服務。|
+| prod-HyTrustDC-``5_letter_ID``-@``domain name`` | 用於安裝和配置 HyTrust DataControl on {{site.data.keyword.cloud_notm}} 服務。|
+| prod-HyTrustKC-``5_letter_ID``-@``domain name`` | 用於安裝和配置 HyTrust KeyControl on {{site.data.keyword.cloud_notm}} 服務。|
+| prod-KMIPAdapter-``dynamic_ID``-@``domain name`` | 用於安裝和配置 KMIP for VMware on {{site.data.keyword.cloud_notm}} 服務。|
+| prod-ICP-``dynamic_ID``-@``domain name`` | 用於安裝和配置 {{site.data.keyword.cloud_notm}} Private Hosted 服務。|
+| prod-SPPlus-``dynamic_ID``-@``domain name`` | 用於安裝和配置 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服務。|
+| prod-Veeam-``dynamic_ID``-@``domain name`` | 用於安裝和配置 Veeam on {{site.data.keyword.cloud_notm}} 服務。|
+| prod-HCX-``dynamic_ID``-@``domain name`` | 用於安裝和配置 VMware HCX on {{site.data.keyword.cloud_notm}} 服務。|
+| prod-Zerto-``dynamic_ID``-@``domain name`` | 用於安裝和配置 Zerto on {{site.data.keyword.cloud_notm}} 服務。|
+
+動態 ID 的長度為 8 到 10 個字母。
+{:note}
 
 ## 相關鏈結
 {: #audit_user_ids-related}

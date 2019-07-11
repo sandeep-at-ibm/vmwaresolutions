@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-13"
+lastupdated: "2019-06-18"
+
+keywords: IBM Cloud Object Storage, ICOS configuration, order Cloud Object Storage
 
 subcollection: vmware-solutions
 
@@ -18,7 +20,7 @@ subcollection: vmware-solutions
 # Pedindo e configurando o IBM Cloud Object Storage com o Veeam
 {: #icos_ordering}
 
-Com a liberação do Veeam Availability Suite 9.5 Atualização 4, o Veeam é compatível com o IBM Cloud Object Storage (ICOS). O pedido do IBM Cloud Object Storage não é automatizado ao pedir o Veeam on IBM Cloud, mas pode ser incluído após a implementação.
+Com a liberação do Veeam Availability Suite 9.5 Atualização 4, o Veeam é compatível com o IBM Cloud Object Storage (ICOS). O pedido do IBM Cloud Object Storage não é automatizado quando você pede o Veeam on IBM Cloud, mas pode ser incluído após a implementação.
 
 Para pedir o IBM Cloud Object Storage, conclua as tarefas a seguir no pedido especificado.
 
@@ -40,12 +42,14 @@ Para criar credenciais de serviço, incluindo credenciais do HMAC, consulte [Cre
 ## Incluindo um repositório de dimensionamento
 {: #icos_ordering-scale-repo}
 
-Para incluir um repositório de dimensionamento no Veeam, consulte [Incluindo repositórios de dimensionamento](https://helpcenter.veeam.com/docs/backup/vsphere/sobr_add.html?ver=95u4){:new_window}. Siga as etapas e retorne para esta seção para continuar com as tarefas a seguir.
+* Como parte da instalação e configuração do serviço Veeam, um repositório de backup de ampliação com o nome `IC4V Scale-Out Repository` é criado. O `IC4V Default VM Backup Repository` é incluído no repositório de ampliação como uma extensão.
+* Ao criar a tarefa de backup, deve-se selecionar `IC4V Scale-Out Repository` como o repositório de backup e não `IC4V Default Config Backup Repository`. O último repositório deve ser usado para os backups de configuração do Veeam.
+* É possível incluir mais repositórios nesse repositório padrão, como um repositório de backup do tipo Object Storage. Para obter mais informações, consulte [Incluindo repositórios de ampliação](https://helpcenter.veeam.com/docs/backup/vsphere/sobr_add.html?ver=95u4){:new_window}. Siga as etapas e retorne para esta seção para continuar com as tarefas a seguir.
 
 ## Mantendo e gerenciando a sua camada de nuvem
 {: #icos_ordering-manage-cloud}
 
-Para obter informações sobre a manutenção e o gerenciamento de sua camada de nuvem, consulte [Gerenciando dados da camada de capacidade](https://helpcenter.veeam.com/docs/backup/vsphere/capacity_tier_managing_data.html?ver=95u4){:new_window}.
+Para obter mais informações, consulte [Gerenciando dados da camada de capacidade](https://helpcenter.veeam.com/docs/backup/vsphere/capacity_tier_managing_data.html?ver=95u4){:new_window}.
 
 ## Links relacionados
 {: #icos_ordering-related}

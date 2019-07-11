@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-06-03"
 
 subcollection: vmware-solutions
 
@@ -19,7 +19,6 @@ destacar e mostrar tecnologias que resolvem problemas do mundo real. O “protó
 serviço prontamente disponível hoje.
 
 A arquitetura de referência também fornece as informações a seguir:
-
 -   Fornece linguagem comum para as várias partes interessadas.
 -   Fornece consistência de implementação de tecnologia para resolver problemas.
 -   Suporta a validação de soluções com relação a uma arquitetura de referência
@@ -32,17 +31,17 @@ especificações e padrões comuns.
 
 Desejávamos demonstrar uma interação entre a inteligência artificial
 do Watson e o aprendizado de máquina de uma maneira real e por meio disso explorar
-mais profundamente a cultura do skateboarding. Demonstramos os serviços disponíveis e a infraestrutura em nuvem de uma forma exclusiva, demonstrando a capacidade técnica e os avanços nesta área. A implementação do "protótipo" é uma extensão do
+mais profundamente a cultura do skateboarding. Demonstramos os serviços disponíveis e a infraestrutura em nuvem de uma forma exclusiva, demonstrando a capacidade técnica e os avanços nesta área.
+
+A implementação do "protótipo" é uma extensão do
 aplicativo Acme Skateboard demonstrativo, chamado Skate Advisor. O Skate Advisor é uma ferramenta, que permite que os usuários tenham conversas sobre truques de skate com um mecanismo acionado pelo Watson. As citações a seguir são uma conversa de amostra:
 
 -   “Watson, mostre-me as combinações da manobra Casper”
 -   “Watson, mostre-me locais comuns para executar uma manobra”
 -   “Watson, mostre-me um vídeo da manobra Casper”
 
-O Acme Skate Advisor aproveita o Watson Discovery Service para
-alimentar artigos, vídeos, blogs e outros conteúdos baseados na Internet para
-criar um banco de dados de manobras aprendidas, que pode ser consultado pelo
-aplicativo.
+O Acme Skate Advisor aproveita o Watson Discovery Service para alimentar artigos, vídeos, blogs e outros conteúdos baseados na Internet para
+criar um banco de dados de manobras aprendidas, que pode ser consultado pelo aplicativo.
 
 O aplicativo Skate Advisor também é implementado na plataforma de modernização
 de aplicativo, que fornece serviços baseados em contêiner por meio do
@@ -98,8 +97,7 @@ A lista a seguir descreve os benefícios da modernização de aplicativo:
 - Reduz o custo para construir novos recursos
 - Expande a capacidade entregue em um curto período de tempo
 
-A IBM entende que 70 por cento da adoção de nuvem privada é impulsionada pela
-necessidade de modernizar os ambientes de aplicativos. No entanto, a maioria
+A IBM entende que 70% da adoção de nuvem privada é impulsionada pela necessidade de modernizar os ambientes de aplicativos. No entanto, a maioria
 das organizações está se aproximando da modernização de aplicativo em uma abordagem
 montada, que requer uma paisagem híbrida e multinuvem, em que:
 
@@ -114,7 +112,6 @@ Por exemplo, um padrão comum é ter aplicativos SoE de front-end implementados 
 MVs em uma nuvem privada.
 
 Como a infraestrutura de TI e as necessidades de negócios são exclusivas, uma abordagem à modernização deve fornecer as prioridades a seguir:
-
 * Acelerar valor de negócios
 * Minimizar o tempo de entrega
 * Reduzir riscos
@@ -128,7 +125,7 @@ Os documentos a seguir fornecem diferentes visualizações sobre as tecnologias 
    - **VMware vCenter Server on IBM Cloud** – o vCenter Server é uma oferta do {{site.data.keyword.vmwaresolutions_short}} que é uma plataforma baseada em VMware provisionada automaticamente no {{site.data.keyword.cloud_notm}}.
    - **{{site.data.keyword.icpfull_notm}}** - O {{site.data.keyword.icpfull_notm}} é uma plataforma de aplicativo para desenvolver e gerenciar aplicativos conteinerizados. O {{site.data.keyword.icpfull_notm}} é um ambiente integrado que inclui o orquestrador de contêineres Kubernetes, um repositório de imagem privada, um console de gerenciamento, estruturas de monitoramento e uma interface gráfica com o usuário. A interface com o usuário fornece um local centralizado por meio do qual é possível implementar, gerenciar, monitorar e escalar seus aplicativos.
    - **IBM Cloud Automation Manager** - o CAM é uma plataforma infrastructure as code pronta para empresa que fornece uma única área de janela de vidro para provisionar cargas de trabalho baseadas em MV ao lado de cargas de trabalho baseadas em Kubernetes usando modelos que são armazenados e com versão em um repositório.
-* [vCenter Server e serviço {{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsiks?topic=vmware-solutions-vcsiks-intro) - Uma arquitetura de referência para implementar as plataformas a seguir.
+* [vCenter Server e o serviço {{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsiks?topic=vmware-solutions-vcsiks-intro) - Uma arquitetura de referência para implementar as plataformas a seguir.
    - **VMware vCenter Server on IBM Cloud** – o vCenter Server é uma oferta do {{site.data.keyword.vmwaresolutions_short}} que é uma plataforma baseada em VMware provisionada automaticamente no {{site.data.keyword.cloud_notm}}.
    - **{{site.data.keyword.containerlong_notm}}** - o {{site.data.keyword.containerlong_notm}} é um serviço gerenciado no {{site.data.keyword.cloud_notm}} que usa o Kubernetes como o mecanismo de orquestração para automatizar a implementação, o ajuste de escala e as operações de contêineres de aplicativos em um cluster de único locatário.
 * [Rede do vCenter Server](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro) - concentra-se nas tecnologias de rede usadas para integração entre o vCenter Server, o {{site.data.keyword.icpfull_notm}} e o {{site.data.keyword.containerlong_notm}}, como NSX-V e Calico, com uma visualização de tecnologia do NSX-T.

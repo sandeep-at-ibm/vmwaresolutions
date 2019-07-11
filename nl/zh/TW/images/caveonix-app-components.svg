@@ -31,7 +31,7 @@
  <rect x="410" y="203" width="120" height="60" fill="#fff" pointer-events="none" stroke="#000"/>
  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
   <text x="469.5" y="229.5">管理層</text>
-  <text x="469.5" y="243.5">使用者介面</text>
+  <text x="469.5" y="243.5">UI</text>
  </g>
  <rect x="220" y="402" width="120" height="60" fill="#fff" pointer-events="none" stroke="#000"/>
  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
@@ -64,7 +64,7 @@
  </g>
  <rect y="356.5" width="120" height="60" fill="#fff" pointer-events="none" stroke="#000"/>
  <g font-family="Helvetica" font-size="12px" text-anchor="middle">
-  <text x="59.5" y="390">NSX</text>
+  <text x="59.5" y="390">NSX            </text>
  </g>
  <g pointer-events="none" stroke="#000">
   <g stroke-miterlimit="10">

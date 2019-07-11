@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-06"
+lastupdated: "2019-05-27"
+
+keywords: vCenter Server NSX-T networking, networking components, networking NSX-T
 
 subcollection: vmware-solutions
 

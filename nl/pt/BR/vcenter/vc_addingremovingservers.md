@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-03"
+lastupdated: "2019-06-18"
+
+keywords: vCenter Server add host, add server vCenter Server, remove host vCenter Server
 
 subcollection: vmware-solutions
 
@@ -20,6 +22,7 @@ subcollection: vmware-solutions
 
 É possível expandir ou contrair a capacidade de sua instância do VMware vCenter Server de acordo com suas necessidades de negócios, incluindo ou removendo servidores ESXi ou armazenamento network file system (NFS).
 
+* A partir da liberação V3.1, é possível incluir novos servidores ESXi em um cluster existente, selecionando uma configuração existente ou uma configuração alternativa do que os hosts existentes no cluster. As configurações existentes estão disponíveis para seleção instantânea quando você pede seu novo servidor. Para evitar problemas de desempenho ou estabilidade, é recomendável que os clusters usem a mesma configuração ou uma semelhante em relação a CPU, RAM e armazenamento. Essa funcionalidade é útil para atualizações de hardware dentro do mesmo cluster. Um cluster pode ter apenas um tipo de armazenamento.
 * Iniciando com a liberação V3.0, é possível incluir ou remover simultaneamente o armazenamento NFS e os servidores ESXi em clusters que estão no estado **Pronto para uso**. Por exemplo, é possível incluir ou remover um servidor ESXi em um cluster e incluir ou remover o armazenamento NFS em outro cluster.
 * Iniciando com a liberação V2.9, é possível incluir novos servidores ESXi em um cluster enquanto os servidores estão no modo de manutenção. Além disso, é possível incluir ou remover simultaneamente servidores do ESXi em múltiplos clusters.
 
@@ -47,9 +50,21 @@ subcollection: vmware-solutions
 3. Clique em **Infraestrutura** na área de janela de navegação esquerda.
 4. Na tabela **CLUSTERS**, clique no cluster no qual você deseja incluir servidores ESXi.
 5. Na seção **Servidores ESXi**, clique em **Incluir**.
-6. Na janela **Incluir servidor**, insira o número de servidores que você deseja incluir.
-7. Opcionalmente, marque a caixa de seleção para incluir servidores durante o modo de manutenção.
-8. Revise o custo estimado e clique em **Incluir**.
+6. Na janela **Incluir servidor**, selecione o número de servidores que deseja incluir.
+7. Opcionalmente, marque a caixa de seleção para incluir servidores durante o modo de manutenção. A caixa de seleção é marcada por padrão.
+
+   Quando você provisionar o novo servidor ESXi, as máquinas virtuais (VMs) serão migradas imediatamente para os novos servidores se você não marcar a caixa de seleção **Modo de manutenção**. Você não recebe uma mensagem de confirmação antes do início da migração.
+   {:important}
+
+8. Conclua a configuração do Bare Metal.
+   * Selecione uma configuração dentre os hosts existentes no cluster.
+   * Selecione uma nova configuração do {{site.data.keyword.baremetal_short_sing}}.
+      * Para **Skylake** ou **Broadwell**, especifique o **Modelo de CPU**, a quantia de **RAM** e o **Número de {{site.data.keyword.baremetal_short}}**.     
+      * Para **Certificado pelo SAP**, especifique o **Modelo de CPU e a RAM** e o **Número de {{site.data.keyword.baremetal_short}}**.
+9. Conclua a configuração de armazenamento. Especifique os tipos de disco para os discos de capacidade e de cache, o número de discos e a edição da Licença da vSAN. Se desejar mais armazenamento, marque a caixa **Intel Optane de alto desempenho**.
+10. Revise o custo estimado e clique em **Incluir**.
+
+  Também é possível incluir os recursos provisionados na ferramenta de estimativa do {{site.data.keyword.cloud_notm}}, clicando em **Incluir na estimativa**. Isso é útil se você desejar estimar o custo dos recursos do {{site.data.keyword.vmwaresolutions_short}} selecionados com outros recursos do {{site.data.keyword.cloud_notm}} que você talvez considere comprar.
 
 ### Resultados após a inclusão de servidores ESXi
 {: #vc_addingremovingservers-adding-results}
@@ -57,11 +72,11 @@ subcollection: vmware-solutions
 1. Você pode ter um pequeno atraso no console enquanto o status da instância é mudado de **Pronto para o uso** para **Modificando**. Permita que a operação seja totalmente concluída antes de fazer mais mudanças na instância.
 2. Você é notificado por e-mail de que sua solicitação para incluir servidores ESXi está sendo processada. No console, o status do cluster que está associado a servidores ESXi foi mudado para **Modificando**.
 3. Se não vir os novos servidores ESXi incluídos na lista no cluster, verifique as notificações por e-mail ou do console para localizar mais detalhes sobre a falha.
-4. Deve-se usar o console do Zerto Virtual Manager (ZVM) e o endereço IP do Zerto Virtual Replication Appliance (VRA) pré-preenchido para implementar manualmente a máquina virtual (VM) do VRA nas circunstâncias a seguir:
+4. Deve-se usar o console do Zerto Virtual Manager (ZVM) e o endereço IP do Zerto Virtual Replication Appliance (VRA) previamente preenchidos para implementar manualmente a máquina virtual do VRA nas circunstâncias a seguir:
    * Se você incluir servidores ESXi em um cluster padrão enquanto os servidores estiverem no modo de manutenção e o Zerto for {{site.data.keyword.cloud_notm}} estiver instalado.
    * Se você incluir o Zerto for {{site.data.keyword.cloud_notm}} em uma instância do vCenter Server que tenha um servidor ESXi no modo de manutenção.
 
-Se você estiver incluindo servidores ESXi durante o modo de manutenção, as máquinas virtuais não serão migradas para os novos servidores até que você remova o modo de manutenção.   
+Se você estiver incluindo servidores ESXi durante o modo de manutenção, as VMs não serão migradas para os novos servidores até que você remova o modo de manutenção.   
 {:important}
 
 ## Removendo servidores ESXi de instâncias do vCenter Server
@@ -75,7 +90,7 @@ Se você estiver incluindo servidores ESXi durante o modo de manutenção, as m�
 deve ter pelo menos 4 servidores ESXi.
 * Antes de remover os servidores ESXi com os serviços F5 on {{site.data.keyword.cloud_notm}} ou FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} instalados, deve-se migrar as MVs F5 BIG-IP e FortiGate para um servidor ESXi diferente daquele que está hospedando as MVs.
 * Antes de remover servidores ESXi com o serviço IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} instalado, assegure-se de que não haja nenhuma operação ativa (com falha ou em andamento) de backup ou restauração, porque essas operações ativas podem impedir que os servidores ESXi sejam removidos.
-* Quando você remover servidores ESXi, os servidores serão colocados no modo de manutenção e depois disso, todas as máquinas virtuais (MVs) em execução nos servidores serão migradas antes de serem removidas do vCenter Server. Para obter o máximo de controle sobre a realocação de MVs, é recomendável colocar os servidores ESXi a serem removidos no modo de manutenção e migrar as MVs em execução neles manualmente usando o VMware vSphere Web Client. Depois disso, remova os servidores ESXi usando o console do {{site.data.keyword.vmwaresolutions_short}}.
+* Ao remover os servidores ESXi, eles são colocados no modo de manutenção e, depois disso, todas as VMs em execução nos servidores são migradas antes de serem removidas do vCenter Server. Para obter o máximo de controle sobre a realocação de MVs, é recomendável colocar os servidores ESXi a serem removidos no modo de manutenção e migrar as MVs em execução neles manualmente usando o VMware vSphere Web Client. Depois disso, remova os servidores ESXi usando o console do {{site.data.keyword.vmwaresolutions_short}}.
 
 ### Procedimento para remover servidores ESXi
 {: #vc_addingremovingservers-removing-procedure}
@@ -115,7 +130,9 @@ Não inclua armazenamento NFS por meio do VMware vSphere Web Client. As mudança
 6. Na janela **Armazenamento**, conclua a configuração de armazenamento.
    * Se você desejar incluir e configurar as mesmas configurações em todos os compartilhamentos de arquivo, especifique o **Número de compartilhamentos**, **Desempenho** e **Tamanho (GB)**.
    * Se você desejar incluir e configurar compartilhamentos de arquivo individualmente, selecione **Configurar compartilhamentos individualmente** e, em seguida, clique no ícone **+** ao lado do rótulo **Incluir armazenamento compartilhado** e selecione o **Desempenho** e o **Tamanho (GB)** para cada compartilhamento de arquivo individual. Deve-se selecionar pelo menos um compartilhamento de arquivo.
-7. Clique em  ** Incluir armazenamento NFS **.
+7. Revise o custo estimado e clique em **Incluir armazenamento NFS**.
+
+  Também é possível incluir os recursos provisionados na ferramenta de estimativa do {{site.data.keyword.cloud_notm}}, clicando em **Incluir na estimativa**. Isso é útil se você desejar estimar o custo dos recursos do {{site.data.keyword.vmwaresolutions_short}} selecionados com outros recursos do {{site.data.keyword.cloud_notm}} que você talvez considere comprar.
 
 ### Resultados depois de incluir o armazenamento NFS
 {: #vc_addingremovingservers-adding-nfs-storage-results}

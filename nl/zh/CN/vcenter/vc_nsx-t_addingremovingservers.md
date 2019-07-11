@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-03"
+lastupdated: "2019-06-18"
+
+keywords: vCenter Server NSX-T add hosts, add servers to vCenter Server NSX-T, remove hosts from vCenter Server NSX-T
 
 subcollection: vmware-solutions
 
@@ -20,6 +22,7 @@ subcollection: vmware-solutions
 
 可以根据业务需求，通过添加或除去 ESXi 服务器或网络文件系统 (NFS) 存储器，扩展或收缩 VMware vCenter Server with NSX-T 实例的容量。
 
+* 从 V3.1 发行版开始，您可以通过选择现有配置或不同于集群中现有主机的替代配置，将新的 ESXi 服务器添加到现有集群。现有配置可用于在订购新服务器时进行即时选择。为了避免性能或稳定性问题，建议集群使用相同或类似的 CPU、RAM 和存储器配置。此功能对于同一集群中的硬件更新非常有用。一个集群只能有一种类型的存储器。
 * 从 V3.0 发行版开始，您可以在多个处于**可供使用**状态的集群中同时添加或除去 NFS 存储器和 ESXi 服务器。例如，可以在一个集群中添加或除去 ESXi 服务器，在另一个集群中添加或除去 NFS 存储器。
 * 从 V2.9 发行版开始，您可以在新的 ESXi 服务器处于维护模式时将这些服务器添加到集群。此外，您还可以跨多个集群同时添加或除去 ESXi 服务器。
 
@@ -47,8 +50,18 @@ subcollection: vmware-solutions
 4. 在**集群**表中，单击要在其中添加 ESXi 服务器的集群。
 5. 在 **ESXi 服务器**部分中，单击**添加**。
 6. 在**添加服务器**窗口中，输入要添加的服务器数。
-7. (可选）选中此复选框以在维护模式下添加服务器。
-8. 查看估算成本并单击**添加**。
+7. (可选）选中此复选框以在维护模式下添加服务器。缺省情况下，选中了此复选框。
+
+   当您供应新的 ESXi 服务器时，如果未选中**维护方式**复选框，那么虚拟机 (VM) 会立即迁移到新服务器。在迁移开始之前，您不会收到确认消息。
+{:important}
+
+8. 填写裸机配置。
+   * 从集群中的现有主机选择配置。
+   * 选择新的 {{site.data.keyword.baremetal_short_sing}} 配置并指定 CPU 型号和 RAM 大小。
+9. 填写存储配置。指定容量和高速缓存磁盘的磁盘类型、磁盘数和 vSAN 许可证版本。如果需要更多存储器，请选中**高性能 Intel Optane** 框。
+10. 查看估算成本并单击**添加**。
+
+  您还可以通过单击**添加到估算**来将供应的资源添加到 {{site.data.keyword.cloud_notm}} 估算工具**。如果要与您可能考虑购买的其他 {{site.data.keyword.cloud_notm}} 资源一起估算所选 {{site.data.keyword.vmwaresolutions_short}} 资源的成本，那么这非常有用。
 
 ### 添加 ESXi 服务器后的结果
 {: #vc_nsx-t_addingremovingservers-adding-results}
@@ -108,7 +121,9 @@ subcollection: vmware-solutions
 6. 在**存储**窗口中，填写存储配置。
    * 如果要向所有文件共享添加和配置相同设置，请指定**共享数**、**性能**和**大小 (GB)**。
    * 如果要单独添加和配置文件共享，请选择**单独配置共享**，单击**添加共享存储器**标签旁边的 **+** 图标，然后为每个单独的文件共享选择**性能**和**大小 (GB)**。必须至少选择一个文件共享。
-7. 单击**添加 NFS 存储器**。
+7. 查看估算成本并单击**添加 NFS 存储器**。
+
+  您还可以通过单击**添加到估算**来将供应的资源添加到 {{site.data.keyword.cloud_notm}} 估算工具**。如果要与您可能考虑购买的其他 {{site.data.keyword.cloud_notm}} 资源一起估算所选 {{site.data.keyword.vmwaresolutions_short}} 资源的成本，那么这非常有用。
 
 ### 添加 NFS 存储器后的结果
 {: #vc_nsx-t_addingremovingservers-adding-nfs-storage-results}

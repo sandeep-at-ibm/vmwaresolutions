@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-06-14"
+
+keywords: Zerto, Zerto components, tech specs Zerto
 
 subcollection: vmware-solutions
 
@@ -20,8 +22,11 @@ subcollection: vmware-solutions
 
 O serviço Zerto on {{site.data.keyword.cloud}} integra os recursos de replicação e de recuperação de desastre às ofertas de implementação para proteger e recuperar dados no ambiente virtual do VMware no {{site.data.keyword.cloud_notm}}.
 
-Esse serviço está disponível somente para instâncias que são implementadas na V1.2 ou mais recente. A versão atual do Zerto que está instalada é 6.5 atualização 3.
-{:note}
+## Antes de iniciar
+{: #addingzertodr-req}
+
+* Assegure-se de que sua conta do {{site.data.keyword.cloud_notm}} seja uma conta faturável e que esteja vinculada à conta de infraestrutura do {{site.data.keyword.cloud_notm}} em que sua instância está implementada. Para obter mais informações, consulte [Faturamento para replicação do Zerto](/docs/services/vmwaresolutions/services?topic=vmware-solutions-zerto_ordering#zerto_ordering-billing).
+* Esse serviço está disponível somente para instâncias que são implementadas na V1.2 ou mais recente. A versão atual do Zerto que está instalada é 6.5 atualização 3.
 
 ## Especificações técnicas para Zerto on IBM Cloud
 {: #addingzertodr-specs}
@@ -31,7 +36,7 @@ Os componentes a seguir são pedidos e incluídos no serviço Zerto on {{site.da
 Os componentes do Zerto Virtual Replication Appliance (VRA) são implementados apenas no cluster padrão.
 {:note}
 
-### VSIs
+### Virtual Service Instances
 {: #addingzertodr-specs-vsi}
 
 * Uma Virtual Service Instance (VSI) - Zerto Virtual Manager
@@ -47,8 +52,11 @@ Os componentes do Zerto Virtual Replication Appliance (VRA) são implementados a
 ### Rede
 {: #addingzertodr-specs-network}
 
-* Um endereço IP privado primário
-* Uplink de rede privada de 1 Gbps
+* VSI
+  * Um endereço IP privado primário
+  * Uplink de rede privada de 1 Gbps
+* Dispositivos de replicação virtual (VRAs)
+  * Uma sub-rede móvel privada para implementação do VRA
 
 ### Licenças e taxas
 {: #addingzertodr-specs-licenses}

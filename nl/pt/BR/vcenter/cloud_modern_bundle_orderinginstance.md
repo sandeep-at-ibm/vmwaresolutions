@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-06"
+lastupdated: "2019-06-18"
+
+keywords: single-node trial, migration app modernization, order migration app modernization
 
 subcollection: vmware-solutions
 
@@ -67,10 +69,13 @@ Revise os requisitos de nome da instância:
    3. Clique no link ou nos links dos termos que se aplicam ao seu pedido e confirme que concorda com esses termos antes de pedir a instância.
    4. Clique em **Provisão**.
 
-### Resultados
+### Resultados depois de pedir instâncias do Single-node Trial for Migration and App Modernization
 {: #cloud_modern_bundle_orderinginstance-results}
 
-A implementação da instância é iniciada automaticamente e o HCX no local na chave de ativação de serviço do {{site.data.keyword.cloud_notm}} é pedido.
+* A implementação da instância é iniciada automaticamente e o HCX no local na chave de ativação de serviço do {{site.data.keyword.cloud_notm}} é pedido.
+* É possível verificar o status de implementação, incluindo quaisquer problemas que possam precisar de sua atenção, visualizando a seção **Histórico de implementação** dos detalhes da instância.
+* Quando a instância for implementada com êxito, os componentes descritos em [Especificações técnicas para instâncias do Single-node Trial for Migration and App Modernization](/docs/services/vmwaresolutions/services?topic=vmware-solutions-cloud_modern_bundle_overview#cloud_modern_bundle_overview-tech-specs) serão instalados.
+* Quando a instância estiver pronta para usar, seu status mudará para **Pronta para usar** e você receberá uma notificação por e-mail.
 
 #### Processo de implementação para HCX no IBM Cloud
 {: #cloud_modern_bundle_orderinginstance-hcx-deploy-process}
@@ -189,3 +194,4 @@ Conclua as etapas a seguir para excluir uma instância do Single-node Trial for 
 * [Abra um chamado para o IBM Cloud Private](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
 * [Recursos do VMware HCX](https://hcx.vmware.com/#/docs){:new_window}
 * [Guia do Usuário do VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}
+* [Cancelando servidores virtuais](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)

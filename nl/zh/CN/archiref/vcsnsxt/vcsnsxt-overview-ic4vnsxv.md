@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-28"
 
 subcollection: vmware-solutions
 
@@ -102,11 +102,11 @@ SDDC-Dswitch-Public|SDDC-DPortGroup-External|发起虚拟端口|活动：0、1|V
 -	NSX Edge 服务网关 (ESG) 设备，供管理组件使用。
 -	（仅限 vCenter Server）NSX Edge 服务网关 (ESG) 设备，供客户使用。
 
-未配置的内容：
--	虚拟分布式路由器。
--	微分段。
--	VXLAN。
--	将 NSX Management 链接到其他 VMware 实例。
+未配置以下组件：
+- 虚拟分布式路由器
+- 微分段
+- VXLAN
+- 将 NSX Management 链接到其他 VMware 实例
 
 ### NSX-V 安全性
 {: #vcsnsxt-overview-ic4vnsxv-nsx-v-security}
@@ -114,9 +114,9 @@ SDDC-Dswitch-Public|SDDC-DPortGroup-External|发起虚拟端口|活动：0、1|V
 通过 NSX for vSphere，组织能够将数据中心划分为不同的安全分段，可一直向下划分到单个工作负载的级别，而与运行工作负载的位置无关。IT 团队可以根据应用程序和用户上下文为每个工作负载定义策略，这将确保即时响应数据中心内部的威胁并强制向下实施到应用程序。
 
 下面是一些关键 NSX 组件：
--	NSX 分布式有状态防火墙嵌入在系统管理程序内核中，每个系统管理程序主机最多 20 Gbps 的防火墙容量。通过 NSX Edge 提供南北防火墙能力。
--	NSX 支持创建动态安全组和关联的策略（不仅仅针对 IP 地址和 MAC）。这些策略包括 vCenter 对象和标记、操作系统类型和第 7 层应用程序信息，以根据应用程序的上下文来启用微分段。
--	基于身份的策略使用来自 VM、Active Directory 和 Mobile Device Management 集成的登录信息，支持基于用户的安全性，包括远程和虚拟桌面环境中的会话级别安全性。
+- NSX 分布式有状态防火墙嵌入在系统管理程序内核中，每个系统管理程序主机最多 20 Gbps 的防火墙容量。通过 NSX Edge 提供南北防火墙能力。
+- NSX 支持创建动态安全组和关联的策略（不仅仅针对 IP 地址和 MAC）。这些策略包括 vCenter 对象和标记、操作系统类型和第 7 层应用程序信息，以根据应用程序的上下文来启用微分段。
+- 基于身份的策略使用来自 VM、Active Directory 和 Mobile Device Management 集成的登录信息，支持基于用户的安全性，包括远程和虚拟桌面环境中的会话级别安全性。
 - 应用程序规则管理器和端点监视支持一直到第 7 层的端到端网络流量流可视化，允许应用程序团队识别数据中心内和数据中心间的端点，并通过创建相应的安全规则进行响应。
 - 支持与第三方供应商集成管理、控制平面和数据平面，例如，下一代防火墙、IDS/IPS、无代理程序的防病毒软件、交换、高级安全性等。
 

@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-26"
+lastupdated: "2019-06-18"
+
+keywords: vCenter Server NSX-T order instance, order vCenter Server NSX-T, order NSX-T
 
 subcollection: vmware-solutions
 
@@ -20,7 +22,7 @@ subcollection: vmware-solutions
 
 Para implementar uma plataforma virtualizada VMware flexível e customizável que melhor se ajuste às suas necessidades de carga de trabalho, peça uma instância do VMware vCenter Server com NSX-T.
 
-## Requisitos
+## Requisitos para o vCenter Server com NSX-T
 {: #vc_nsx-t_orderinginstance-req}
 
 Assegure-se de que tenha concluído as tarefas a seguir:
@@ -197,7 +199,6 @@ O rótulo do subdomínio deve atender aos requisitos a seguir:
 *  Apenas caracteres alfanuméricos e o traço (-) são permitidos.
 *  O rótulo do subdomínio deve iniciar com um caractere alfabético e terminar com um caractere alfanumérico.
 *  O comprimento máximo do rótulo do subdomínio é de 10 caracteres.
-*  O rótulo do subdomínio deve ser exclusivo em sua conta.
 
 ### Nome de domínio
 {: #vc_nsx-t_orderinginstance-domain-name}
@@ -252,7 +253,7 @@ Selecione a configuração do Sistema de Nomes de Domínio (DNS) para sua instâ
 * **VSI pública única do Windows para o Active Directory/DNS**: uma VSI única do Microsoft Windows Server para o Microsoft Active Directory (AD), que funciona como o DNS para a instância na qual os hosts e as MVs são registrados, é implementada e pode ser consultada. Essa opção foi implementada por padrão para instâncias da V1.9 e mais recentes.
 * **Duas MVs do Windows Server dedicadas, altamente disponíveis no cluster de gerenciamento**: duas MVs do Microsoft Windows são implementadas, ajudando a aprimorar a segurança e a robustez.
 
-Deve-se fornecer duas licenças do Microsoft Windows Server 2016 se sua instância é configurada para usar as duas VMs do Microsoft Windows. Use a licença do Microsoft Windows Server 2016 Standard Edition ou a licença do Microsoft Windows Server 2016 Datacenter Edition, ou ambas.
+Deve-se fornecer duas licenças da edição Microsoft Windows Server 2016 Standard se você configurar sua instância para usar as duas VMs do Microsoft Windows.
 {:important}
 
 Cada licença pode ser designada apenas a um único servidor físico e abrange até dois processadores físicos. Uma licença da edição Standard pode executar duas MVs virtualizadas do Microsoft Windows por servidor de 2 processadores. Portanto, duas licenças são necessárias, pois duas MVs do Microsoft Windows são implementadas em dois hosts diferentes.
@@ -264,9 +265,11 @@ Para obter mais informações sobre o pedido de licenças do Windows Server 2016
 ## Resumo do Pedido
 {: #vc_nsx-t_orderinginstance-order-summary}
 
-Com base em sua configuração selecionada para a instância, o custo estimado é gerado instantaneamente e exibido na seção **Resumo do pedido** na área de janela direita. Clique em **Detalhes da precificação** na parte inferior da área de janela direita para gerar um documento PDF que forneça os detalhes da estimativa.
+Com base em sua configuração selecionada, o custo estimado é gerado instantaneamente e exibido na área de janela direita **Resumo do pedido**. Clique em **Detalhes da precificação** para gerar um documento PDF com o resumo de custo dos recursos do {{site.data.keyword.vmwaresolutions_short}}.
 
-## Procedimento para pedir instâncias do vCenter Server
+Também é possível incluir os recursos provisionados na ferramenta de estimativa do {{site.data.keyword.cloud_notm}}, clicando em **Incluir na estimativa**. Isso é útil se você desejar estimar o custo dos recursos do {{site.data.keyword.vmwaresolutions_short}} selecionados com outros recursos do {{site.data.keyword.cloud_notm}} que você talvez considere comprar.
+
+## Procedimento para pedir instâncias do vCenter Server com NSX-T
 {: #vc_nsx-t_orderinginstance-procedure}
 
 1. No catálogo do {{site.data.keyword.cloud_notm}}, clique em **VMware** na área de janela de navegação esquerda e, em seguida, clique em **vCenter Server** na seção **Data centers virtuais**.
@@ -307,13 +310,10 @@ Com base em sua configuração selecionada para a instância, o custo estimado �
 ## Resultados após o pedido das instâncias do vCenter Server com NSX-T
 {: #vc_nsx-t_orderinginstance-results}
 
-A implementação da instância é iniciada automaticamente. Você recebe confirmação de que o pedido está sendo processado e pode verificar o status da implementação visualizando os detalhes da instância.
-
-Quando a instância for implementada com êxito, os componentes que estão descritos em [Especificações técnicas para instâncias do vCenter Server com NSX-T](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_overview#vc_nsx-t_overview-specs) serão instalados em sua plataforma virtual VMware. Os servidores ESXi pedidos são agrupados como **cluster1** por padrão.
-
-Quando a instância estiver pronta para usar, seu status mudará para **Pronta para usar** e você receberá uma notificação por e-mail.
-
-Quando você pedir uma instância secundária, o VMware vSphere Web Client da instância primária (vinculado à secundária) poderá ser reiniciado depois que o pedido da instância secundária estiver concluído.
+* A implementação da instância é iniciada automaticamente e você recebe a confirmação de que o pedido está sendo processado. É possível verificar o status de implementação, incluindo quaisquer problemas que possam precisar de sua atenção, visualizando a seção **Histórico de implementação** dos detalhes da instância.
+* Quando a instância for implementada com êxito, os componentes que estão descritos em [Especificações técnicas para instâncias do vCenter Server com NSX-T](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_overview#vc_nsx-t_overview-specs) serão instalados em sua plataforma virtual VMware. Os servidores ESXi pedidos são agrupados como **cluster1** por padrão.
+* Quando a instância estiver pronta para usar, seu status mudará para **Pronta para usar** e você receberá uma notificação por e-mail.
+* Quando você pedir uma instância secundária, o VMware vSphere Web Client da instância primária (vinculado à secundária) poderá ser reiniciado depois que o pedido da instância secundária estiver concluído.
 
 ## O que fazer a seguir
 {: #vc_nsx-t_orderinginstance-next}
@@ -336,7 +336,7 @@ Se você mudar esses componentes fora do console do {{site.data.keyword.vmwareso
 ## Links relacionados
 {: #vc_nsx-t_orderinginstance-related}
 
-* [Inscrevendo-se em uma conta do {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)
+* [Assinando uma conta do {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts)
 * [Visualizando instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
 * [Configuração de vários sites para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_multisite)
 * [Incluindo, visualizando e excluindo clusters para instâncias do vCenter Server com NSX-T](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_nsx-t_addingviewingcluster#vc_nsx-t_addingviewingcluster)

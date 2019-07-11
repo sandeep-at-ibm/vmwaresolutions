@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-18"
+lastupdated: "2019-06-17"
+
+keywords: vCenter Server add cluster, view cluster vCenter Server, delete cluster vCenter Server
 
 subcollection: vmware-solutions
 
@@ -148,7 +150,7 @@ subcollection: vmware-solutions
 |選項          |詳細資料      |
   |:------------- |:------------- |
   |0.25 IOPS/GB |這個選項是為未經常使用的工作負載而設計。應用的範例包括：加密配置檔資料、管理具有舊版資料的大型資料庫，或是作為備份之虛擬記憶體系統的虛擬磁碟映像檔。|
-  |2 IOPS/GB |這個選項是為大部分通用工作負載而設計。應用的範例包括：管理小型資料庫、備份 Web 應用程式，或是 Hypervisor 用的虛擬機器 (VM) 磁碟映像檔。|
+  |2 IOPS/GB |這個選項是為大部分一般工作負載而設計。應用的範例包括：管理小型資料庫、備份 Web 應用程式，或是 Hypervisor 用的虛擬機器 (VM) 磁碟映像檔。|
   |4 IOPS/GB |這個選項是為一次擁有高百分比作用中資料的高密度工作負載而設計。應用的範例包括：交易式資料庫。|
   |10 IOPS/GB |這個選項是為要求最嚴苛的工作負載類型而設計，例如分析。應用的範例包括：高交易量資料庫，以及其他對效能敏感的資料庫。此效能層次限制為每個檔案共用的容量上限為 4 TB。|
 
@@ -178,7 +180,9 @@ subcollection: vmware-solutions
 ### 訂單摘要
 {: #vc_addingviewingclusters-adding-order-summary}
 
-根據您選取的叢集配置，預估成本會立即產生並顯示在**訂單摘要**右窗格中。
+根據您選取的叢集配置，預估成本會立即產生並顯示在**訂單摘要**右窗格中。按一下**定價詳細資料**，以產生具有 {{site.data.keyword.vmwaresolutions_short}} 資源文件摘要的 PDF 文件。
+
+您也可以按一下**新增至預估**，將佈建的資源新增至 {{site.data.keyword.cloud_notm}} 預估工具。這適用於您想要預估所選取 {{site.data.keyword.vmwaresolutions_short}} 資源與可能考慮購買之其他 {{site.data.keyword.cloud_notm}} 資源的成本時。
 
 ## 將叢集新增至 vCenter Server 實例的程序
 {: #vc_addingviewingclusters-adding-procedure}
@@ -229,9 +233,7 @@ subcollection: vmware-solutions
 3. 在左導覽窗格上，按一下**基礎架構**。在**叢集**表格中，檢視叢集的摘要：
   * **名稱**：叢集的名稱。
   * **ESXi 伺服器**：叢集裡的 ESXi 伺服器數目。
-  * **CPU**：叢集裡 ESXi 伺服器的 CPU 規格。
-  * **自訂 vSAN 磁碟**：叢集裡的 vSAN 磁碟數目（包括磁碟類型及容量）。
-  * **記憶體**：叢集裡 ESXi 伺服器的記憶體大小總計。
+  * **儲存空間**：叢集使用的儲存空間的類型。
   * **資料中心位置**：管理叢集所在的 {{site.data.keyword.CloudDataCent_notm}}。
   * **Pod**：部署叢集的 Pod。
   * **狀態**：叢集的狀態。狀態可以具有下列其中一個值：
@@ -260,7 +262,19 @@ subcollection: vmware-solutions
 |專用 IP |ESXi 伺服器的專用 IP 位址。|
 |狀態|ESXi 伺服器的狀態，可以是下列其中一個值：<br> **已新增** ESXi 伺服器已完成新增並已備妥可供使用。<br> **正在新增** 正在新增 ESXi 伺服器。<br> **正在刪除** 正在刪除 ESXi 伺服器。|
 
-表 5. 儲存空間詳細資料
+展開 ESXi 伺服器以獲取其他詳細資料。
+
+表 5. 其他 ESXi 伺服器詳細資料
+
+|項目        |說明       |  
+|:------------- |:------------- |
+|CPU |叢集裡的 ESXi 伺服器的 CPU 規格。|
+|記憶體|叢集裡的 ESXi 伺服器的記憶體大小總計。|
+|自訂 vSAN 磁碟數|叢集中的 vSAN 磁碟數目，包括磁碟類型和容量。|
+|vSAN 快取磁碟|vSAN 快取磁碟的類型和數目。|
+|網路|公用和專用網路或僅限專用網路的網路介面卡 (NIC) 啟用設定。|
+
+表 6. 儲存空間詳細資料
 
 |項目        |說明       |  
 |:------------- |:------------- |
@@ -269,18 +283,18 @@ subcollection: vmware-solutions
 | IOPS/GB |儲存空間的效能層次。|
 | NFS 通訊協定| 儲存空間的 NFS 版本。|
 
-表 6. 網路介面 - VLAN 詳細資料
+表 7. 網路介面 - VLAN 詳細資料
 
 |項目        |說明       |  
 |:------------- |:------------- |
 | VLAN 號碼 | 唯一的 VLAN 號碼。 |
-|說明              | VLAN 的說明。|
+|說明       | VLAN 的說明。|
 |位置| 資料中心位置。 |
 | 主要路徑 | VLAN 的主要路徑。 |
 
 按一下**檢視資源**來存取 VLAN 詳細資料。
 
-表 7. 網路介面 - 子網路詳細資料
+表 8. 網路介面 - 子網路詳細資料
 
 |項目        |說明       |  
 |:------------- |:------------- |
@@ -288,7 +302,7 @@ subcollection: vmware-solutions
 |類型      | 子網路的類型：主要或可攜式。 |
 |說明       | 子網路的說明。|
 
-表 8. 網路介面 - IP 詳細資料
+表 9. 網路介面 - IP 詳細資料
 
 |項目        |說明       |  
 |:------------- |:------------- |

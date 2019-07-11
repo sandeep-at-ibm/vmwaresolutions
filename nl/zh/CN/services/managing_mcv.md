@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-06-18"
+
+keywords: Mission Critical VMware, request Mission Critical, IBM consultation
 
 subcollection: vmware-solutions
 
@@ -19,7 +21,7 @@ subcollection: vmware-solutions
 3. 在 Mission Critical VMware on {{site.data.keyword.cloud_notm}} 页面的**联系我们以了解 Mission Critical VMware** 框中，单击**请求咨询**。
 4. 在 IBM Services Expert Hub 页面上，单击**安排咨询**以预订与服务专家的 30 分钟咨询。
 
-Mission Critical VMware on {{site.data.keyword.cloud_notm}} 代表将通过您的联系信息与您联系，以帮助您获取需要的解决方案。
+  {{site.data.keyword.vmwaresolutions_short}} 代表将通过您的 {{site.data.keyword.cloud_notm}} 联系人信息与您联系，以帮助您获取需要的解决方案。
 
 ## 相关链接
 {: #managing_mcv-related}

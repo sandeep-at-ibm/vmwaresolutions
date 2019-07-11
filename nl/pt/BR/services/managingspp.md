@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-06-18"
+
+keywords: SPP management console, apply SPP updates, login SPP console
 
 subcollection: vmware-solutions
 
@@ -43,6 +45,6 @@ detalhes de serviço para o IBM Spectrum Protect Plus on {{site.data.keyword.clo
 {: #managingspp-related}
 
 * [IBM Spectrum Protect Plus no {{site.data.keyword.cloud_notm}} visão geral](/docs/services/vmwaresolutions/services?topic=vmware-solutions-spp_considerations){:new_window}
-* [Como aumentar o armazenamento vsnap para a pós-implementação do IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/){:new_window}
+* [Como aumentar o armazenamento vsnap para pós-implementação do IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/){:new_window}
 * [Como configurar o IBM Spectrum Protect Plus para transferir para o IBM Cloud Object Storage](https://developer.ibm.com/recipes/tutorials/how-to-configure-ibm-spectrum-protect-plus-to-offload-to-ibm-cloud-object-storage/){:new_window}
 * [Documentação do IBM Spectrum Protect Plus](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html){:new_window}

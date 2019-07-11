@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-19"
+
+keywords: vCenter Server order instance, order vCenter Server, order vCenter Server instance
 
 subcollection: vmware-solutions
 
@@ -78,7 +80,7 @@ Especifique as opções de licenciamento para os seguintes componentes do VMware
 
 Para usuários do Parceiro de Negócios, a licença do vCenter Server (Standard Edition), a licença do vSphere (Enterprise Plus Edition) e a licença do NSX são incluídas e compradas em seu nome. No entanto, deve-se especificar a edição para a licença do NSX.
 
-Para usuários que não são do Parceiros de negócios, é possível usar as licenças do VMware fornecidas pela IBM para esses componentes selecionando **Incluir com a compra** ou é possível usar Bring Your Own License (BYOL) selecionando **Eu fornecerei** e inserindo as suas próprias chaves de licença.
+Para usuários que não são Parceiros de Negócios, é possível usar licenças do VMware fornecidas pela IBM para esses componentes selecionando **Incluir com a compra** ou é possível usar Bring Your Own License (BYOL) selecionando **Eu fornecerei** e inserindo suas próprias chaves de licença.
 
 ### Notas sobre o licenciamento
 {: #vc_orderinginstance-licensing-notes}
@@ -142,8 +144,8 @@ Tabela 3. Opções para o Broadwell {{site.data.keyword.baremetal_short}}
 {: #vc_orderinginstance-bare-metal-number}
 
 * Todos os servidores que você pede têm a mesma configuração.
-* Se você estiver planejando usar o armazenamento vSAN, será possível pedir entre 4 e 20 servidores.
-* Se você estiver planejando usar o armazenamento NFS, será possível pedir entre 2 e 20 servidores. No entanto, para cargas de trabalho de produção, um mínimo de 3 servidores é recomendado. Para obter mais informações, consulte [Uma instância do vCenter Server de dois nós é altamente disponível?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-).
+* Se estiver planejando usar o armazenamento vSAN, será possível pedir de 4 a 20 servidores.
+* Se estiver planejando usar o armazenamento NFS, será possível pedir de 2 a 20 servidores. No entanto, para cargas de trabalho de produção, recomenda-se no mínimo três servidores. Para obter mais informações, consulte [É uma instância de dois nós do vCenter Server altamente disponível?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ## Configurações de armazenamento
 {: #vc_orderinginstance-storage-settings}
@@ -222,7 +224,7 @@ O rótulo do subdomínio deve atender aos requisitos a seguir:
 *  Apenas caracteres alfanuméricos e o traço (-) são permitidos.
 *  O rótulo do subdomínio deve iniciar com um caractere alfabético e terminar com um caractere alfanumérico.
 *  O comprimento máximo do rótulo do subdomínio é de 10 caracteres.
-*  O rótulo do subdomínio deve ser exclusivo em sua conta.
+*  O rótulo do subdomínio deve ser exclusivo em todas as instâncias em sua configuração de vários sites.
 
 ### Nome de domínio
 {: #vc_orderinginstance-domain-name}
@@ -273,7 +275,7 @@ Ao selecionar para reutilizar VLANs públicas e privadas existentes, especifique
 * **Sub-rede primária** é designada a hosts físicos para o acesso à rede pública.
 * **Sub-rede privada primária** é designada a hosts físicos para o tráfego de gerenciamento.
 
-Assegure-se de que a configuração de firewall nas VLANs selecionadas não bloqueie o tráfego de dados de gerenciamento. Além disso, assegure-se de que todas as VLANs que você selecionar estejam no mesmo pod. Os servidores ESXi não podem ser provisionados em VLANs de pod misto.
+Assegure-se de que a configuração de firewall nas VLANs selecionadas não bloqueie o tráfego de dados de gerenciamento. Além disso, assegure-se de que todas as VLANs selecionadas estejam no mesmo pod. Os servidores ESXi não podem ser provisionados em VLANs de pod misto.
 {:important}
 
 ### Configuração de DNS
@@ -284,7 +286,7 @@ Selecione a configuração do Sistema de Nomes de Domínio (DNS) para sua instâ
 * **VSI pública única do Windows para o Active Directory/DNS**: uma VSI única do Microsoft Windows Server para o Microsoft Active Directory (AD), que funciona como o DNS para a instância na qual os hosts e as MVs são registrados, é implementada e pode ser consultada. Essa opção foi implementada por padrão para instâncias da V1.9 e mais recentes.
 * **Duas MVs do Windows Server dedicadas, altamente disponíveis no cluster de gerenciamento**: duas MVs do Microsoft Windows são implementadas, ajudando a aprimorar a segurança e a robustez.
 
-Deve-se fornecer duas licenças do Microsoft Windows Server 2016 se sua instância é configurada para usar as duas VMs do Microsoft Windows. Use a licença do Microsoft Windows Server 2016 Standard Edition ou a licença do Microsoft Windows Server 2016 Datacenter Edition, ou ambas.
+Deve-se fornecer duas licenças da edição Microsoft Windows Server 2016 Standard se você configurar sua instância para usar as duas VMs do Microsoft Windows.
 {:important}
 
 Cada licença pode ser designada apenas a um único servidor físico e abrange até dois processadores físicos. Uma licença da edição Standard pode executar duas MVs virtualizadas do Microsoft Windows por servidor de 2 processadores. Portanto, duas licenças são necessárias, pois duas MVs do Microsoft Windows são implementadas em dois hosts diferentes.
@@ -301,7 +303,9 @@ Ao pedir uma instância do vCenter Server, também é possível pedir serviços 
 ## Resumo do Pedido
 {: #vc_orderinginstance-order-summary}
 
-Com base em sua configuração selecionada para os serviços de instância e complemento, o custo estimado é gerado instantaneamente e exibido na seção **Resumo do pedido** na área de janela direita. Clique em **Detalhes da precificação** na parte inferior da área de janela direita para gerar um documento PDF que forneça os detalhes da estimativa.
+Com base em sua configuração selecionada para os serviços de instância e de complemento, o custo estimado é gerado instantaneamente e exibido na área de janela direita **Resumo do pedido**. Clique em **Detalhes da precificação** para gerar um documento PDF com o resumo de custo dos recursos do {{site.data.keyword.vmwaresolutions_short}}.
+
+Também é possível incluir os recursos provisionados na ferramenta de estimativa do {{site.data.keyword.cloud_notm}}, clicando em **Incluir na estimativa**. Isso é útil se você desejar estimar o custo dos recursos do {{site.data.keyword.vmwaresolutions_short}} selecionados com outros recursos do {{site.data.keyword.cloud_notm}} que você talvez considere comprar.
 
 ## Procedimento para pedir instâncias do vCenter Server
 {: #vc_orderinginstance-procedure}
@@ -314,7 +318,7 @@ Com base em sua configuração selecionada para os serviços de instância e com
    * Clique em **Instância primária** para implementar uma única instância no ambiente ou para implementar a primeira instância em uma topologia multissite.
    * Clique em **Instância secundária** para conectar a instância a uma instância existente (primária) no ambiente para alta disponibilidade e conclua as etapas a seguir:
      1. Selecione a instância primária à qual deseja que a instância secundária seja conectada.
-     2. Para instâncias primárias V2.8 ou mais recente, insira a senha do administrador do vCenter Server para a instância primária.
+     2. Para as instâncias primárias V2.8 ou mais recente, insira a senha do Administrador do vCenter Server para a instância primária.
      3. Para as instâncias primárias V2.5, 2.6 ou 2.7, insira a senha do administrador do PSC para a instância primária.
      4. Para as instâncias primárias V2.4 ou anterior, verifique se o valor pré-preenchido para a senha do administrador do PSC para a instância primária está correto.
 6. Conclua as configurações de licença para os componentes da instância.
@@ -351,13 +355,10 @@ Para obter mais informações sobre como fornecer configurações para um servi�
 ## Resultados após o pedido de instâncias do vCenter Server
 {: #vc_orderinginstance-results}
 
-A implementação da instância é iniciada automaticamente. Você recebe confirmação de que o pedido está sendo processado e pode verificar o status da implementação visualizando os detalhes da instância.
-
-Quando a instância for implementada com êxito, os componentes que estão descritos em [Especificações técnicas para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs) serão instalados em sua plataforma virtual VMware. Os servidores ESXi pedidos são agrupados como **cluster1** por padrão. Se você pediu serviços complementares, a implementação dos serviços será iniciada após a conclusão de seu pedido.
-
-Quando a instância estiver pronta para usar, seu status mudará para **Pronta para usar** e você receberá uma notificação por e-mail.
-
-Quando você pedir uma instância secundária, o VMware vSphere Web Client da instância primária (vinculado à secundária) poderá ser reiniciado depois que o pedido da instância secundária estiver concluído.
+* A implementação da instância é iniciada automaticamente e você recebe a confirmação de que o pedido está sendo processado. É possível verificar o status de implementação, incluindo quaisquer problemas que possam precisar de sua atenção, visualizando a seção **Histórico de implementação** dos detalhes da instância.
+* Quando a instância for implementada com êxito, os componentes que estão descritos em [Especificações técnicas para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs) serão instalados em sua plataforma virtual VMware. Os servidores ESXi pedidos são agrupados como **cluster1** por padrão. Se você pediu serviços complementares, a implementação dos serviços será iniciada após a conclusão de seu pedido.
+* Quando a instância estiver pronta para usar, seu status mudará para **Pronta para usar** e você receberá uma notificação por e-mail.
+* Quando você pedir uma instância secundária, o VMware vSphere Web Client da instância primária (vinculado à secundária) poderá ser reiniciado depois que o pedido da instância secundária estiver concluído.
 
 ## O que fazer a seguir
 {: #vc_orderinginstance-next}
@@ -380,7 +381,7 @@ Se você mudar esses componentes fora do console do {{site.data.keyword.vmwareso
 ## Links relacionados
 {: #vc_orderinginstance-related}
 
-* [Inscrevendo-se em uma conta do {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account)
+* [Assinando uma conta do {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts)
 * [Visualizando instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
 * [Configuração de vários sites para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_multisite)
 * [Incluindo, visualizando e excluindo clusters para instâncias do vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)

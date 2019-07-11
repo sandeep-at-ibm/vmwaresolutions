@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-22"
 
 subcollection: vmware-solutions
 
@@ -18,7 +18,7 @@ subcollection: vmware-solutions
 ## 虛擬遞送及轉遞
 {: #vcsicp-arch-overview-infrastructure-vrf}
 
-您可以將 {{site.data.keyword.cloud}} 帳戶配置為「虛擬遞送及轉遞 (VRF)」帳戶，以啟用子網路 IP 區塊之間的自動廣域遞送。所有具有 Direct Link 連線的帳戶都必須轉換或建立為 VRF 帳戶。
+您可以將 {{site.data.keyword.cloud}} 帳戶配置為「虛擬遞送及轉遞 (VRF)」帳戶，以啟用子網路 IP 區塊之間的自動廣域遞送。所有具有「直接鏈結」連線的帳戶都必須轉換或建立為 VRF 帳戶。
 
 ## Direct Link
 {: #vcsicp-arch-overview-infrastructure-direct-link}

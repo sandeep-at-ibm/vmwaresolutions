@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-06-14"
+
+keywords: KMIP for VMware, order KMIP stand-alone, KMIP for VMware configuration
 
 subcollection: vmware-solutions
 
@@ -52,12 +54,12 @@ Tabela 1. Locais do terminal em serviço de rede do KMIP for VMware on {{site.da
 
 | Localização         | Terminais               |
 |:---------------|:-----------------------|
-| Dallas | <ul><li><code> kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696 </code></li><li><code> kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696 </code></li></ul> |
-| Frankfurt |  <ul><li><code> kmip-1.private.eu-central.vmware-solutions.cloud.ibm.com:5696 </code></li><li><code> kmip-2.private.eu-central.vmware-solutions.cloud.ibm.com:5696 </code></li></ul> |
-| Londres | <ul><li><code>kmip-1.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
-| Sydney |  <ul><li><code> kmip-1.private.ap-south.vmware-solutions.cloud.ibm.com:5696 </code></li><li><code> kmip-2.private.ap-south.vmware-solutions.cloud.ibm.com:5696 </code></li></ul> |
-| Tóquio | <ul><li><code> kmip-1.private.ap-north.vmware-solutions.cloud.ibm.com:5696 </code></li><li><code> kmip-2.private.ap-north.vmware-solutions.cloud.ibm.com:5696 </code></li></ul> |
-| Washington DC | <ul><li><code>kmip-1.private.us-east.vmware-solutions.cloud.ibm.com:5696</code></li><li><code>kmip-2.private.us-east.vmware-solutions.cloud.ibm.com:5696</code></li></ul> |
+| Dallas | <<code>kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696</code><br>e<br><code>kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696</code> |
+| Frankfurt | <code> kmip-1.private.eu-central.vmware-solutions.cloud.ibm.com:5696 </code><br>e<br><code>kmip-2.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code> |
+| Londres | <code>kmip-1.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code><br>e<br><code>kmip-2.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code> |
+| Sydney | <code> kmip-1.private.ap-south.vmware-solutions.cloud.ibm.com:5696 </code><br>e<br><code>kmip-2.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code> |
+| Tóquio | <code> kmip-1.private.ap-north.vmware-solutions.cloud.ibm.com:5696 </code><br>e<br><code>kmip-2.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code> |
+| Washington DC | <code>kmip-1.private.us-east.vmware-solutions.cloud.ibm.com:5696</code><br>e<br><code>kmip-2.private.us-east.vmware-solutions.cloud.ibm.com:5696</code> |
 
 ### Chave API para o ID do serviço
 {: #kmip_standalone_ordering-config-api-key}
@@ -91,4 +93,4 @@ Inclua certificados de cliente para a instância do KMIP for VMware on {{site.da
 
 * [Visualizando instâncias do KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_viewing)
 * [Excluindo o KMIP for VMware em {{site.data.keyword.cloud_notm}} instâncias](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_deleting)
-* [Eventos do Activity Tracker](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-at-events)
+* [Eventos de rastreador de atividade](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-at-events)

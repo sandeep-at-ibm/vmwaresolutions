@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-05-15"
 
 subcollection: vmware-solutions
 
@@ -18,7 +18,7 @@ Depois que as máquinas virtuais (MVs) são implementadas e os componentes do ap
 
 O Provedor de serviços é a organização de nível superior e há um ou mais Locatários/Organização atendidos por ele. O Provedor de serviços designa Ativos que são coletados do vCenter para o Locatário ou para as Organizações, que então os designam a Aplicativos ou Subaplicativos. Esses Aplicativos estão, então, sujeitos a um regime de conformidade.
 
-Essa etapa é inicialmente concluída pela automação do IC4VS que usa informações fornecidas pelo cliente durante o processo de pedido e as informações padrão. O processo de configuração pode ser iniciado pelo cliente, após a implementação, para modificar o Provedor de serviços ou a Organização do locatário como uma pós-instalação necessária.
+Esta etapa é concluída inicialmente pela automação do IBM Cloud for VMware Solutions que usa informações fornecidas pelo cliente durante o processo de pedido e informações padrão. O processo de configuração pode ser iniciado pelo cliente, após a implementação, para modificar o Provedor de serviços ou a Organização do locatário como uma pós-instalação necessária.
 
 A configuração do Provedor de serviços tem oito subetapas:
 -	Etapa 1: Detalhe da organização - Inclua os detalhes da organização pai para o seu provedor de serviço de nuvem. Essa organização pode ter múltiplos locais físicos e múltiplos data centers. As organizações para seus locatários e suborganizações de seu provedor de serviços são incluídas posteriormente.

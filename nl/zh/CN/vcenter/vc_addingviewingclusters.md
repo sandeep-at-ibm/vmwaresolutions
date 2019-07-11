@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-18"
+lastupdated: "2019-06-17"
+
+keywords: vCenter Server add cluster, view cluster vCenter Server, delete cluster vCenter Server
 
 subcollection: vmware-solutions
 
@@ -179,7 +181,9 @@ subcollection: vmware-solutions
 ### 订单摘要
 {: #vc_addingviewingclusters-adding-order-summary}
 
-根据为集群选择的配置，估算成本会立即生成并显示在**订单摘要**右侧窗格中。
+根据为集群选择的配置，估算成本会立即生成并显示在**订单摘要**右侧窗格中。单击**定价详细信息**以生成 {{site.data.keyword.vmwaresolutions_short}} 资源成本汇总的 PDF 文档。
+
+您还可以通过单击**添加到估算**来将供应的资源添加到 {{site.data.keyword.cloud_notm}} 估算工具**。如果要与您可能考虑购买的其他 {{site.data.keyword.cloud_notm}} 资源一起估算所选 {{site.data.keyword.vmwaresolutions_short}} 资源的成本，那么这非常有用。
 
 ## 向 vCenter Server 实例添加集群的过程
 {: #vc_addingviewingclusters-adding-procedure}
@@ -230,9 +234,7 @@ subcollection: vmware-solutions
 3. 在左侧导航窗格上，单击**基础架构**。在**集群**表中，查看有关集群的摘要：
   * **名称**：集群的名称。
   * **ESXi 服务器数**：集群中的 ESXi 服务器数。
-  * **CPU**：集群中 ESXi 服务器的 CPU 规范。
-  * **定制 vSAN 磁盘数**：集群中的 vSAN 磁盘数，包括磁盘类型和容量。
-  * **内存**：集群中 ESXi 服务器的内存总大小。
+  * **存储器**：集群使用的存储器的类型。
   * **数据中心位置**：托管集群的 {{site.data.keyword.CloudDataCent_notm}}。
   * **pod**：在其中部署集群的 pod。
   * **状态**：集群的状态。状态可以是下列其中一个值：
@@ -261,7 +263,19 @@ subcollection: vmware-solutions
 |专用 IP|ESXi 服务器的专用 IP 地址。|
 |状态|ESXi 服务器的状态，可以是下列某个值：<br> **已添加** ESXi 服务器已添加并随时可供使用。<br> **正在添加** 正在添加 ESXi 服务器。<br> **正在删除** 正在删除 ESXi 服务器。|
 
-表 5. 存储详细信息
+展开 ESXi 服务器以获取其他详细信息。
+
+表 5. 其他 ESXi 服务器详细信息
+
+|项|描述|  
+|:------------- |:------------- |
+|CPU|集群中 ESXi 服务器的 CPU 规范。|
+|内存|集群中 ESXi 服务器的内存总大小。|
+|定制 vSAN 磁盘数|集群中的 vSAN 磁盘数，包括磁盘类型和容量。|
+|vSAN 高速缓存磁盘|vSAN 高速缓存磁盘的类型和数量。|
+|联网|公用和专用网络或仅专用网络的网络接口卡 (NIC) 启用设置。|
+
+表 6. 存储器详细信息
 
 |项|描述|  
 |:------------- |:------------- |
@@ -270,7 +284,7 @@ subcollection: vmware-solutions
 |IOPS/GB|存储的性能级别。|
 |NFS 协议|存储的 NFS 版本。|
 
-表 6. 网络接口 - VLAN 详细信息
+表 7. 网络接口 - VLAN 详细信息
 
 |项|描述|  
 |:------------- |:------------- |
@@ -281,7 +295,7 @@ subcollection: vmware-solutions
 
 单击**查看资源**以访问 VLAN 详细信息。
 
-表 7. 网络接口 - 子网详细信息
+表 8. 网络接口 - 子网详细信息
 
 |项|描述|  
 |:------------- |:------------- |
@@ -289,7 +303,7 @@ subcollection: vmware-solutions
 |类型| 子网的类型：主子网或可移植子网。|
 |描述|子网的描述。|
 
-表 8. 网络接口 - IP 详细信息
+表 9. 网络接口 - IP 详细信息
 
 |项|描述|  
 |:------------- |:------------- |

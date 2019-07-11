@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-07"
 
 subcollection: vmware-solutions
 
@@ -22,7 +22,7 @@ ixgben 是一種原生驅動程式，可取代 vmklinux net-ixgbe 驅動程式�
 
 對於每部主機，依序：
 1. 使用 vSphere Web Client 讓 vSphere ESXi 主機進入維護模式，方法是選取**首頁** > **主機及叢集**。在「導覽器」窗格中，選取 vSphere ESXi 主機，在主機上按一下滑鼠右鍵，然後選取**維護模式** > **進入維護模式**。因為主機是自動化 DRS 叢集的一部分，所以會在主機進入維護模式時將虛擬機器移轉至不同的主機。
-2. 使用「IC4VS 主控台」中的詳細資料，以 SSH 到 vSphere ESXi 主機。
+2. 使用 IBM Cloud for VMware Solutions 主控台中的詳細資料，以 SSH 到 vSphere ESXi 主機。
 3. 執行下列 vCLI 指令，以啟用 ixgben 原生驅動程式：
   `esxcli system module set --enabled=true --module=ixgben`
 4. 執行下列 vCLI 指令，以重新啟動 vSphere ESXi 主機：
@@ -38,7 +38,7 @@ ixgben 是一種原生驅動程式，可取代 vmklinux net-ixgbe 驅動程式�
 
 如果您需要回復，而且無法 SSH 至 vSphere ESXi 主機，則需要透過 {{site.data.keyword.cloud_notm}} 主控台視窗登入需要回復之主機的 KVM 主控台。
 
-使用 {{site.data.keyword.cloud_notm}} 控制視窗中列出的 ID 及密碼與 IPMI IP 位址，以登入 IPMI Web 介面。您需要透過 VPN 連接至主機所在的資料中心。如需相關資訊，請參閱[開始使用 VPN](/docs/infrastructure/iaas-vpn?topic=VPN-gettingstarted-with-virtual-private-networking#gettingstarted-with-virtual-private-networking)。
+使用 {{site.data.keyword.cloud_notm}} 控制視窗中列出的 ID 及密碼與 IPMI IP 位址，以登入 IPMI Web 介面。您需要透過 VPN 連接至主機所在的資料中心。如需相關資訊，請參閱[開始使用 VPN](/docs/infrastructure/iaas-vpn?topic=VPN-getting-started)。
 
 1. 移至 vSphere ESXi 主機的「裝置詳細資料」、「遠端管理」頁面，然後選取**動作** > **KVM 主控台**。會開啟另一個視窗，供您輸入「IPMI 使用者」及「密碼」。
 2. 選取**遠端控制** > **iKVM/HTML5**，然後按一下 **iKVM/HTML5** 以重新啟動。您現在可以存取 vSphere ESXi 主機的主控台。

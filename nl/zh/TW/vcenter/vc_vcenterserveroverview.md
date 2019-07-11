@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-02"
+lastupdated: "2019-05-27"
+
+keywords: vCenter Server, vCenter Server architecture, tech specs vCenter Server
 
 subcollection: vmware-solutions
 
@@ -18,7 +20,7 @@ subcollection: vmware-solutions
 # vCenter Server 概觀
 {: #vc_vcenterserveroverview}
 
-VMware vCenter Server on {{site.data.keyword.cloud}} 是一個提供 VMware vSphere 堆疊作為服務的受管理專用雲。VMWare 環境建置在 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} 上，可提供共用網路連接儲存空間以及專用軟體定義儲存空間選項，而且包含自動部署及配置採用 VMware NSX 技術的容易管理的邏輯 Edge 防火牆。
+VMware vCenter Server on {{site.data.keyword.cloud}} 是一個提供 VMware vSphere 堆疊作為服務的受管理專用雲端。VMWare 環境建置在 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} 上，可提供共用網路連接儲存空間以及專用軟體定義儲存空間選項，而且包含自動部署及配置採用 VMware NSX 技術的容易管理的邏輯 Edge 防火牆。
 
 在許多情況下，整個環境可以在一天內佈建完成，且裸機基礎架構可以快速而彈性地擴充運算容量，並依需要擴增及縮減。
 
