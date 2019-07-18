@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-26"
 
 keywords: HyTrust CloudControl, HTCC, tech specs HTCC
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -60,4 +61,4 @@ HyTrust CloudControl on {{site.data.keyword.cloud}} 服務會施行並控制是�
 * [管理 HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghtcc)
 * [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [常見問題](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [HyTrust 網站](https://www.hytrust.com/)
+* [HyTrust 網站](https://www.hytrust.com/){:external}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-21"
 
 subcollection: vmware-solutions
 
@@ -58,7 +58,7 @@ Si se utiliza KMIP for VMware con el cifrado de vSAN o el cifrado de vSphere, ex
 
 Si tiene intención de rotar las claves, examine la siguiente información sobre los niveles en los que se pueden rotar las claves:
 * La clave raíz del cliente (CRK) protege todas las claves de VMware. Las claves se pueden rotar en la instancia de IBM Key Protect o Hyper Protect Crypto Services asociada a la instancia de KMIP for VMware.
-* KMIP for VMware utiliza su CRK para proteger las claves que genera y distribuye a VMware. VMware considera que estas son "claves de cifrado clave" (KEK).
+* KMIP for VMware utiliza su CRK para proteger las claves que genera y distribuye a VMware. VMware considera que estas son _claves de cifrado de claves (KEK)_.
   * Si utiliza cifrado de vSphere, puede rotar las claves con el mandato de PowerShell **Set-VMEncryptionKey**.
   * Si utiliza cifrado de vSAN, puede rotar las claves en la interfaz de usuario de vSAN.
 * VMware utiliza estas KEK para proteger las claves reales que utiliza para cifrar las unidades de disco y los discos de VM. Puede rotar estas claves utilizando lo que VMware llama una reclave "profunda". Esta operación vuelve a cifrar todos los datos cifrados, por lo que es posible que lleve mucho tiempo.
@@ -73,7 +73,7 @@ El cifrado de VMware vSAN y el cifrado de vSphere son compatibles con muchos ser
 ### Claves dentro de claves
 {: #kmip-design-keys}
 
-Los sistemas de gestión de claves suelen utilizar una técnica conocida como *cifrado de sobre* para envolver o proteger las claves con otras claves. Estas claves se denominan *claves raíz* o *claves de cifrado de claves* (KEK). Para acceder a una clave, es necesario descifrar o desenvolver la clave utilizando su clave raíz correspondiente. Destruir la clave raíz es una forma eficaz de invalidar todas las claves que protege. Estas claves no se deben almacenar cerca de la clave raíz. Es importante controlar el acceso a la clave raíz.
+Los sistemas de gestión de claves suelen utilizar una técnica conocida como *cifrado de sobre* para envolver o proteger las claves con otras claves. Estas claves se denominan _claves raíz_ o _claves de cifrado de claves (KEK)_. Para acceder a una clave, es necesario descifrar o desenvolver la clave utilizando su clave raíz correspondiente. Destruir la clave raíz es una forma eficaz de invalidar todas las claves que protege. Estas claves no se deben almacenar cerca de la clave raíz. Es importante controlar el acceso a la clave raíz.
 
 {{site.data.keyword.cloud_notm}} Key Protect e Hyper Protect Crypto Services proporcionan este servicio utilizando una *clave raíz de cliente* (CRK). Key Protect almacena las CRK exclusivamente en el hardware de {{site.data.keyword.cloud_notm}} CloudHSM, desde donde no se pueden extraer; Hyper Protect Crypto Services almacena claves en HSM de IBM zSeries. Estas CRK se utilizan para envolver más claves de cifrado, como las que genera KMIP for VMware para la instancia de VMware.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-26"
 
 keywords: VMware HCX, HCX site, HCX definition
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # Glossário de termos do HCX
 {: #hcx_glossary}
@@ -29,4 +31,4 @@ Este glossário fornece definições para os termos que estão associados ao ser
 ## Links relacionados
 {: #hcx_glossary-related}
 
-* [Documentação do VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)
+* [Documentação do VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources){:external}

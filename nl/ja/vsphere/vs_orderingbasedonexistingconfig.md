@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-20"
 
 keywords: vSphere order cluster, vSphere configuration, order vSphere cluster
 
@@ -33,7 +33,7 @@ subcollection: vmware-solutions
 ## 既存の構成を基にした vSphere クラスターを注文する手順
 {: #vs_orderingbasedonexistingconfig-procedure}
 
-1. {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**をクリックしてから、**「仮想データ・センター」**セクションの**「VMware vSphere」**をクリックします。
+1. {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**アイコンをクリックしてから、**「VMware 仮想データ・センター」**セクションの**「VMware vSphere on IBM Cloud」**カードをクリックします。
 2. **「VMware vSphere on IBM Cloud」**ページで、**「作成」**をクリックします。  
 3. **「新規作成」**タブをクリックして、**「クラスター構成」**リストから構成テンプレートを選択します。
 4. 新規クラスター名を入力します。

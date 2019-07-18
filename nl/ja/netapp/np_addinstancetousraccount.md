@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-28"
 
 keywords: NetApp migrate instance, add account NetApp ONTAP, migrate cloud account
 
@@ -12,6 +12,12 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+
 
 # V2.5 以前の NetApp ONTAP Select インスタンスの IBM Cloud アカウントへのマイグレーション
 {: #np_addinstancetousraccount}
@@ -25,7 +31,7 @@ V2.4 以前のリリースでデプロイされたインスタンスは、IAM �
 
 インスタンスのマイグレーション先となる {{site.data.keyword.cloud_notm}} アカウントが IaaS 専用アカウントでないことを確認します。 IaaS 専用アカウントは、{{site.data.keyword.cloud_notm}} アカウントにリンクされていない {{site.data.keyword.cloud_notm}} インフラストラクチャー (IBM Cloud) アカウントです。
 
-IaaS 専用アカウントと PaaS アカウントをリンクする方法について詳しくは、[Follow these steps to link your IaaS and PaaS accounts](https://www.ibm.com/cloud/blog/follow-steps-link-iaas-paas-accounts){:new_window} を参照してください。
+IaaS 専用アカウントと PaaS アカウントをリンクする方法について詳しくは、[Follow these steps to link your IaaS and PaaS accounts](https://www.ibm.com/cloud/blog/follow-steps-link-iaas-paas-accounts){: external} を参照してください。
 
 ## インスタンスをマイグレーションする手順
 {: #np_addinstancetousraccount-procedure}

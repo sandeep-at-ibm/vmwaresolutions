@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-26"
 
 keywords: VMware HCX, HCX, tech specs HCX
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -97,5 +98,5 @@ Revise las siguientes consideraciones antes de eliminar el servicio HCX on {{sit
 * [Gestión de HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghcx)
 * [Glosario de términos de HCX](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
 * [Cómo ponerse en contacto con el equipo de soporte de IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
-* [Visión general de VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx)
-* [Documentación de VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)
+* [Visión general de VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx){:external}
+* [Documentación de VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources){:external}

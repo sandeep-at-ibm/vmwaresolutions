@@ -4,16 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-21"
 
-keywords: Mission Critical VMware, Mission Critical, tech specs Mission Critical
+keywords: Mission Critical VMware, request Mission Critical, tech specs Mission Critical
 
 subcollection: vmware-solutions
 
 
 ---
 
-# Mission Critical VMware on IBM Cloud 概觀
+# Mission Critical VMware on IBM Cloud
 {: #mcv_overview}
 
 Mission Critical VMware on {{site.data.keyword.cloud}} 提供多區域雲端架構，可協助企業避免雲端應用程式的關閉，以及在雲端地區內自動失效接手。
@@ -84,7 +84,19 @@ vSphere + vSAN 延伸叢集架構具有下列規格：
 * 在 VM-A 的 vMotion 活動期間，資料傳輸仍會透過 {{site.data.keyword.cloud_notm}} 可用性區域 #1 進出。
 * 在站台或邊緣故障期間，資料流量會遞送至剩下可用的站台之外。
 
+## 要求 Mission Critical VMware on IBM Cloud 的程序
+{: #mcv_overview-proc}
+
+1. 從 {{site.data.keyword.vmwaresolutions_full}} 主控台，按一下左導覽窗格中的**開始使用**。
+2. 向下捲動頁面，然後按一下 **VMware 受管理服務**下的 **Mission Critical VMware on IBM Cloud** 卡。
+3. 在 Mission Critical VMware on {{site.data.keyword.cloud_notm}} 頁面上的**洽詢 Mission Critical VMware 相關事項**方框中，按一下**要求商議**。
+4. 在「IBM 服務專家中心」頁面上按一下**排定商議時間**，向服務專家預約 30 分鐘的諮詢時間。
+
+  {{site.data.keyword.vmwaresolutions_short}} 業務代表將會使用您的 {{site.data.keyword.cloud_notm}} 聯絡資訊來與您聯絡，以協助提供您所需的解決方案。
+
 ## 相關鏈結
 {: #mcv_overview-related}
 
-* [要求 Mission Critical VMware on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_mcv)
+* [IMI 的受管理服務](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_imi)
+* [Managed Services for Veeam on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
+* [Managed Services for Zerto on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)

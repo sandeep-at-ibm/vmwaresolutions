@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-26"
 
 keywords: vSphere, vSphere component, tech specs vSphere
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -22,7 +23,7 @@ subcollection: vmware-solutions
 
 VMware vSphere on {{site.data.keyword.cloud}} es una plataforma de solicitud racional y optimizada para VMware. Con esta plataforma, puede crear su propio entorno de VMware alojado por IBM personalizando y solicitando el hardware compatible con VMware en función de los componentes de VMware seleccionados.
 
-La consola de {{site.data.keyword.vmwaresolutions_short}} filtra el hardware automáticamente, en función de los componentes de VMware ha seleccionado. Por ejemplo, cuando se crea un nuevo clúster all-flash VMware vSAN, solo se presenta el hardware validado según la [Guía de compatibilidad de VMware](https://www.vmware.com/resources/compatibility/search.php). Además, se necesita un mínimo de cuatro servidores ESXi.
+La consola de {{site.data.keyword.vmwaresolutions_short}} filtra el hardware automáticamente, en función de los componentes de VMware ha seleccionado. Por ejemplo, cuando se crea un nuevo clúster all-flash VMware vSAN, solo se presenta el hardware validado según la [Guía de compatibilidad de VMware](https://www.vmware.com/resources/compatibility/search.php){:external}. Además, se necesita un mínimo de cuatro servidores ESXi.
 
 VMware vSphere on {{site.data.keyword.cloud_notm}} no automatiza la instalación, la configuración ni la activación de los componentes opcionales de VMware. La plataforma permite el máximo de flexibilidad para diseñar y crear su entorno VMware alojado mientras incorpora hardware compatible con VMware.
 

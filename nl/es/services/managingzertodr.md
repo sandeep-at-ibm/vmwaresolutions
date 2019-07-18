@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: Zerto certificate, Zerto config, update Zerto replication
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -25,7 +26,7 @@ Después de desplegar el servicio Zerto on {{site.data.keyword.cloud}} en la ins
 ## Utilización de su propio certificado para Zerto
 {: #managingzertodr-ssl-cert}
 
-Como práctica recomendada, utilice su propio certificado SSL para Zerto Virtual Manager (ZVM). Después de desplegar Zerto on {{site.data.keyword.cloud_notm}}, sustituya el certificado SSL para ZVM por su propio certificado. Para obtener más información, consulte [Cómo utilizar un certificado SSL CER para sustituir el certificado autofirmado para ZVM, ZSSP o ZCM](https://www.zerto.com/myzerto/knowledge-base/how-to-use-a-cer-ssl-certificate-to-replace-the-self-signed-certificate-for-the-zvm-zssp-or-zcm/){:new_window}.
+Como práctica recomendada, utilice su propio certificado SSL para Zerto Virtual Manager (ZVM). Después de desplegar Zerto on {{site.data.keyword.cloud_notm}}, sustituya el certificado SSL para ZVM por su propio certificado. Para obtener más información, consulte [Cómo utilizar un certificado SSL CER para sustituir el certificado autofirmado para ZVM, ZSSP o ZCM](https://www.zerto.com/myzerto/knowledge-base/how-to-use-a-cer-ssl-certificate-to-replace-the-self-signed-certificate-for-the-zvm-zssp-or-zcm/){:external}
 
 ## Gestión de la configuración de réplicas Zerto
 {: #managingzertodr-manage}
@@ -53,8 +54,8 @@ Cuando añade o elimina servidores ESXi para el clúster primario de la instanci
 {: #managingzertodr-related}
 
 * [Visión general de Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)
-* [Solicitud de servicios gestionados para Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
-* [Sitio web zerto.com](https://www.zerto.com){:new_window}
-* [Documentación técnica de Zerto](https://www.zerto.com/myzerto/technical-documentation/){:new_window}
-* [Recuperación tras desastre de Zerto](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/zerto){:new_window}
-* [Explicación de las alertas del servicio de réplica virtual de Zerto](https://www.zerto.com/myzerto/knowledge-base/explanation-of-zvr-alerts/)
+* [Servicios gestionados para Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
+* [Sitio web zerto.com](https://www.zerto.com){:external}
+* [Documentación técnica de Zerto](https://www.zerto.com/myzerto/technical-documentation/){:external}
+* [Recuperación tras desastre de Zerto](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/zerto){:external}
+* [Explicación de las alertas del servicio de réplica virtual de Zerto](https://www.zerto.com/myzerto/knowledge-base/explanation-of-zvr-alerts/){:external}

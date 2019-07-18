@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-28"
 
 keywords: KMIP for VMware, KMIP stand-alone, tech specs KMIP
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -30,7 +31,7 @@ Il servizio KMIP for VMware on {{site.data.keyword.cloud_notm}} è disponibile c
 Con il servizio KMIP for VMware on {{site.data.keyword.cloud_notm}} sono incluse le seguenti specifiche:
 
 * Un KMIP (Key Management Interoperability Protocol) compatibile con VMware
-* Due servizi gestiti: [IBM Key Protect for {{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/catalog/services/key-protect) e [{{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services)
+* Due servizi gestiti: [IBM Key Protect for {{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/catalog/services/key-protect){:external} e [{{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services){:external}
 * Disponibile in più regioni geografiche in tutto il mondo
 * Due endpoint del servizio di rete KMIP forniti in ciascuna regione per l'alta disponibilità
 
@@ -49,8 +50,8 @@ Esamina le seguenti considerazioni prima di installare un'istanza KMIP for VMwar
       * A livello di accesso al servizio: autorizzazione di Gestore nella tua istanza del servizio Key Protect o HPCS
    * Hai una chiave API per l'ID servizio creato. La chiave viene richiesta quando ordini il servizio.
    * Hai creato almeno una chiave root del cliente (CRK) utilizzando la GUI o l'API di Key Protect o HPCS:
-      * Per ulteriori informazioni sulla creazione delle chiavi root con la GUI o l'API di Key Protect, vedi [Creazione delle chiavi root](/docs/services/key-protect?topic=key-protect-create-root-keys#create-root-keys) o [IBM Key Protect API](https://cloud.ibm.com/apidocs/key-protect).
-      * Per ulteriori informazioni sulla creazione di chiavi root con la GUI o l'API di HPCS, vedi [Creazione delle chiavi root](/docs/hs-crypto/get-started?topic=hs-crypto-create-root-keys) o [IBM Cloud Hyper Protect Crypto Services API](https://cloud.ibm.com/apidocs/hs-crypto).
+      * Per ulteriori informazioni sulla creazione delle chiavi root con la GUI o l'API di Key Protect, vedi [Creazione delle chiavi root](/docs/services/key-protect?topic=key-protect-create-root-keys#create-root-keys) o [IBM Key Protect API](https://cloud.ibm.com/apidocs/key-protect){:external}.
+      * Per ulteriori informazioni sulla creazione di chiavi root con la GUI o l'API di HPCS, vedi [Creazione delle chiavi root](/docs/hs-crypto/get-started?topic=hs-crypto-create-root-keys) o [IBM Cloud Hyper Protect Crypto Services API](https://cloud.ibm.com/apidocs/hs-crypto){:external}.
 
      **Importante:** non puoi ordinare il servizio senza le CRK. Si consiglia vivamente di utilizzare il metodo per creare una CRK utilizzando materiale della chiave esistente ed eseguire il backup del materiale della chiave che stai creando. In questo modo, ti assicuri di poter recuperare le tue chiavi in caso di malfunzionamento del data center in cui viene applicato Key Protect o HPCS per memorizzare le tue CRK.
 * Assicurati che il tuo account dell'infrastruttura {{site.data.keyword.cloud_notm}} sia abilitato per VRF (Virtual Routing and Forwarding) e per la connettività agli endpoint del servizio. Per ulteriori informazioni, vedi:

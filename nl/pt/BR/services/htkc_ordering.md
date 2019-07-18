@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-26"
 
 keywords: Hytrust KeyControl, Hytrust configuration, order Hytrust
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # Pedindo o HyTrust KeyControl on IBM Cloud
 {: #htkc_ordering}
@@ -23,14 +25,14 @@ subcollection: vmware-solutions
 
 É possível pedir uma nova instância com o HyTrust KeyControl on {{site.data.keyword.cloud_notm}} usando um dos seguintes métodos:
 * No console do {{site.data.keyword.vmwaresolutions_short}}, ao pedir uma nova instância, selecione **HyTrust KeyControl on IBM Cloud** na seção **Serviços**.
-* No catálogo do {{site.data.keyword.cloud_notm}}, selecione **HyTrust KeyControl on IBM Cloud**, especifique as configurações de serviço e selecione **Incluir na nova instância**.
+* No catálogo do {{site.data.keyword.cloud_notm}}, clique no ícone **VMware** da área de janela de navegação esquerda e, em seguida, clique no cartão **HyTrust KeyControl on IBM Cloud** da seção **Serviços do VMware**. Especifique as configurações do serviço e selecione **Incluir na nova instância**.
 
 ## Pedindo o HyTrust KeyControl on IBM Cloud para uma instância existente
 {: #htkc_ordering-existing}
 
 É possível incluir o serviço HyTrust KeyControl on {{site.data.keyword.cloud_notm}} em uma instância existente usando um dos seguintes métodos:
 * No console do {{site.data.keyword.vmwaresolutions_short}}, visualize a instância para a qual você deseja incluir o serviço, clique em **Serviços** na área de janela de navegação esquerda e clique em **Incluir**.
-* No catálogo do {{site.data.keyword.cloud_notm}}, selecione **HyTrust KeyControl on IBM Cloud**, especifique as configurações de serviço e selecione **Incluir na instância existente**.
+* No catálogo do {{site.data.keyword.cloud_notm}}, clique no ícone **VMware** da área de janela de navegação esquerda e, em seguida, clique no cartão **HyTrust KeyControl on IBM Cloud** da seção **Serviços do VMware**. Especifique as configurações do serviço e selecione **Incluir na instância existente**.
 
 ## Configuração do serviço HyTrust KeyControl on IBM Cloud
 {: #htkc_ordering-config}
@@ -50,4 +52,4 @@ Especifique se você deseja criar um cluster do KeyControl Altamente Disponível
 * [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
 * [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [Perguntas mais frequentes](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [HyTrust Website](https://www.hytrust.com/)
+* [HyTrust Website](https://www.hytrust.com/){:external}

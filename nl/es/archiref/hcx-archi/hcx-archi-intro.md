@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-02"
 
 subcollection: vmware-solutions
 
@@ -30,8 +30,8 @@ Esta conexión crea una interconectividad ligeramente acoplada entre el entorno 
 * Extensión de capa 2: las redes locales se amplían a la nube. Estas redes incluyen subredes locales y direccionamiento de IP.
 * Cifrado: el tráfico de red se cifra de forma segura entre los dos lados.
 * Red optimizada: selecciona la mejor conexión y gestiona la conexión de forma eficiente de modo que el tráfico se transmite de la forma más rápida posible.
-* Desduplicación de datos: se puede conseguir una reducción del tráfico de red de hasta un 50 % 
-Direccionamiento inteligente: cuando se mueve una carga de trabajo, el direccionamiento de proximidad puede cambiar la vía de acceso de red (es decir, la pasarela) para que el tráfico de la red utilice la pasarela del sitio de destino y no lo "devuelva" (hairpin) al sitio de origen.
+* Deduplicación de datos: se puede conseguir una reducción del 50% en el tráfico de red
+* Direccionamiento inteligente: cuando se mueve una carga de trabajo, el direccionamiento de proximidad puede cambiar la vía de acceso de red (es decir, la pasarela) para que el tráfico de la red utilice la pasarela del sitio de destino y no lo "devuelva" (hairpin) al sitio de origen.
 * Migración con tiempo de inactividad cero: un sistema en ejecución se puede mover a la nube o recuperar de la misma mediante vMotion.
 * Migración planificada: se puede replicar el número deseado de máquinas virtuales en el sitio de destino y luego se pueden activar en dicho sitio en el momento planificado, lo que sustituye los sistemas que se ejecutan en el sitio de origen.
 * Migración de políticas de seguridad: si NSX se utiliza en local, las políticas de seguridad o los cortafuegos se trasladan junto con la carga de trabajo.

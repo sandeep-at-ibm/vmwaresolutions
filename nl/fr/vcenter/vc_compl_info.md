@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server compliance, compliance info, vCenter Server policy
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -58,15 +59,16 @@ Ce service cloud n'est pas destiné à des exigences de sécurité spécifiques 
 
 Le mot de passe vCenter généré pour les instances principales de vCenter Server est maintenant composé de 15 caractères. Auparavant, le mot de passe généré était la valeur par défaut vCenter de huit caractères. 
 
-Tableau 1. Configurations de règles vCenter pour une nouvelle instance principale 
+Le tableau suivant décrit en détail les configurations de règles vCenter pour une nouvelle instance principale :
 
-| Règle | Version 3.1 ou ultérieure | Version 3.0 ou antérieure  |
+| Règle | Version 3.1 ou ultérieure | Version 3.0 ou antérieure |
 |:------------- |:------------------------------ |:------------- |
 | Règle de mot de passe vCenter | Longueur minimale de 15 caractères | Longueur minimale de 8 caractères (valeur par défaut vCenter) |
-| Règle de verrouillage vCenter | Maximum de trois tentatives de connexion infructueuses | Maximum de cinq tentatives de connexion infructueuses (valeur par défaut vCenter)  |
+| Règle de verrouillage vCenter | Maximum de trois tentatives de connexion infructueuses | Maximum de cinq tentatives de connexion infructueuses (valeur par défaut vCenter) |
 | Règle de verrouillage vCenter | 900 secondes entre les échecs de connexion | 180 secondes entre les échecs de connexion (valeur par défaut vCenter) |
+{: caption="Tableau 1. Configurations de règle vCenter" caption-side="top"}
 
-Le mot de passe NSX Manager généré pour les instances principales de vCenter Server est maintenant composé de 15 caractères. Auparavant, le mot de passe généré comportait huit caractères. 
+Le mot de passe NSX Manager généré pour les instances principales de vCenter Server est maintenant composé de 15 caractères. Auparavant, le mot de passe généré comportait huit caractères.
 
 ## Politique d'accès aux instances des clients
 {: #vc_compl_info-policy-for-access-client-inst}
@@ -98,7 +100,7 @@ Les environnements VMware vCenter Server, distribués en tant que solutions {{si
 * En raison du niveau de spécialisation requis pour maintenir une expertise technique optimale au niveau de l'équipe, il peut s'avérer nécessaire de faire appel à plus d'une équipe de support pour résoudre un problème logiciel spécifique. Cette situation est facilement gérée, car nos équipes de support sont toutes regroupées en réseau et fonctionnement comme une seule et même équipe pour résoudre tous les problèmes.
 * Pour déterminer la cause du problème, IBM peut avoir besoin d'accéder aux informations liées à la panne qui sont contenues sur votre système ou de recréer l'incident pour obtenir des informations supplémentaires.
 * Un ticket de demande de service créé par le client sert de confirmation attestant que le support IBM peut accéder à la couche de gestion VMware à des fins d'investigation, de débogage et d'analyse des besoins. En cas d'indisponibilité liée à des opérations de maintenance ou si des modifications doivent être apportées à l'environnement, le support IBM demande au client une confirmation écrite supplémentaire via des tickets dans le cadre du processus de gestion des modifications.
-* Pour plus d'informations sur les tickets de demande de service, voir [Guide du support IBM](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923) et [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
+* Pour plus d'informations sur les tickets de demande de service, voir [Guide du support IBM](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923){:external} et [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
 
 ## Responsabilités du client
 {: #vc_compl_info-client-responsibilities}
@@ -137,7 +139,7 @@ Les environnements VMware vCenter Server, distribués en tant que solutions {{si
 * Ces Logiciels non IBM sont directement proposés sous licence par leurs fournisseurs. Le client accepte d'utiliser les Logiciels non IBM conformément aux dispositions du fournisseur. Ils sont fournis dans le cadre du contrat de licence IBM qui accompagne l'offre IBM au moment de l'achat.
 * IBM effectue des tests visant à garantir la compatibilité des produits tiers avec les Logiciels IBM et leur bon fonctionnement.
 * Le support des Logiciels IBM effectuera un diagnostic des problèmes du client en utilisant sa connaissance du fonctionnement de nos offres IBM avec les Logiciels tiers. Une fois qu'il est établi que le Logiciel IBM fonctionne correctement, si le problème persiste, IBM doit diriger le client vers le fournisseur tiers pour obtenir un diagnostic plus approfondi.
-* Pour plus d'informations sur les responsabilités du client concernant les logiciels ou le code tiers, voir [Guide du support IBM](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923).
+* Pour plus d'informations sur les responsabilités du client concernant les logiciels ou le code tiers, voir [Guide du support IBM](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923){:external}.
 
 ## Consentement pour l'accès aux environnements du client
 {: #vc_compl_info-consent-to-access-client-environment}

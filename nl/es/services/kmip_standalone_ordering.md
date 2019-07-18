@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-21"
 
 keywords: KMIP for VMware, order KMIP stand-alone, KMIP for VMware configuration
 
@@ -29,7 +29,7 @@ Asegúrese de haber realizado las tareas siguientes:
 {: #kmip_standalone_ordering-procedure}
 
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Iniciación** en el panel de navegación de la izquierda.
-2. En el área **Solicitar servicios adicionales**, pulse **KMIP for VMware on IBM Cloud**.
+2. En la sección **Servicios de VMware**, pulse la tarjeta **KMIP for VMware on IBM Cloud**.
 3. En la página **KMIP for VMware on IBM Cloud**, configure los valores necesarios del servicio.
 4. Pulse **Suministro**.
 
@@ -50,8 +50,6 @@ Seleccione la ubicación de {{site.data.keyword.cloud_notm}} en la que se va a a
 
 {{site.data.keyword.cloud_notm}} mantiene un punto final altamente disponible del servicio de red KMIP for VMware on {{site.data.keyword.cloud_notm}} en cada ubicación en la que está disponible el servicio.
 
-Tabla 1. Ubicaciones de puntos finales del servicio de red KMIP for VMware on {{site.data.keyword.cloud_notm}}
-
 | Ubicación         | Puntos finales               |
 |:---------------|:-----------------------|
 | Dallas | <<code>kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696</code><br>y<br><code>kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696</code> |
@@ -60,6 +58,7 @@ Tabla 1. Ubicaciones de puntos finales del servicio de red KMIP for VMware on {{
 | Sídney | <code>kmip-1.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code><br>y<br><code>kmip-2.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code> |
 | Tokio | <code>kmip-1.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code><br>y<br><code>kmip-2.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code> |
 | Washington DC | <code>kmip-1.private.us-east.vmware-solutions.cloud.ibm.com:5696</code><br>y<br><code>kmip-2.private.us-east.vmware-solutions.cloud.ibm.com:5696</code> |
+{: caption="Tabla 1. Ubicaciones de puntos finales del servicio de red KMIP for VMware on {{site.data.keyword.cloud_notm}}" caption-side="top"}
 
 ### Clave de API para ID de servicio
 {: #kmip_standalone_ordering-config-api-key}

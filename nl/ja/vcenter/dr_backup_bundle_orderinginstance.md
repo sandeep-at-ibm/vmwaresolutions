@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-28"
 
 keywords: single-node trial, data protection DR, order data protection DR
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -22,7 +23,7 @@ subcollection: vmware-solutions
 
 Single-node Trial for Data Protection and Disaster Recovery インスタンスを注文する前に、計画要件を確認します。
 
-このトライアルは、90 日後に自動的に削除されます。「インスタンスの詳細」ページに、Single-node Trial for Data Protection and Disaster Recovery インスタンスの有効期限のカウントダウンが表示されます。
+このトライアルは、90 日後に自動的に削除されます。 「インスタンスの詳細」ページに、Single-node Trial for Data Protection and Disaster Recovery インスタンスの有効期限のカウントダウンが表示されます。
 {:important}
 
 ## Single-node Trial for Data Protection and Disaster Recovery インスタンスの注文の要件と計画
@@ -55,7 +56,7 @@ Single-node Trial for Data Protection and Disaster Recovery インスタンス�
 ## Single-node Trial for Data Protection and Disaster Recovery インスタンスを注文する手順
 {: #dr_backup_bundle_orderinginstance-procedure}
 
-1. {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**をクリックしてから、**「仮想データ・センター」**セクションの**「Single-node Trial for Data Protection and Disaster Recovery」**をクリックします。
+1. {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**アイコンをクリックしてから、**「VMware 仮想データ・センター」**セクションの**「Single-node Trial for Data Protection and Disaster Recovery」**カードをクリックします。
 2. **「Single-node Trial for Data Protection and Disaster Recovery」**ページで、**「続行」**をクリックします。
 3. {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントを要求するステップを実行するか、既存の**「ユーザー名」**と**「API キー」**を指定して**「取得」**をクリックします。
 
@@ -77,7 +78,7 @@ Single-node Trial for Data Protection and Disaster Recovery インスタンス�
 
 * インスタンスのデプロイメントが自動的に開始され、オンプレミスの HCX on {{site.data.keyword.cloud_notm}} サービス・アクティベーション・キーが注文されます。
 * 「インスタンスの詳細」の**「デプロイメント履歴 (Deployment History)」**セクションを表示すると、注意すべき問題を含め、デプロイメント状況を確認できます。
-* インスタンスが正常にデプロイされると、[Single-node Trial for Data Protection and Disaster Recovery インスタンスの技術仕様](https://test.cloud.ibm.com/docs/services/vmwaresolutions/services?topic=vmware-solutions-dr_backup_bundle_overview#dr_backup_bundle_overview-tech-specs)で説明されているコンポーネントがインストールされます。
+* インスタンスが正常にデプロイされると、[Single-node Trial for Data Protection and Disaster Recovery インスタンスの技術仕様](/docs/services/vmwaresolutions/services?topic=vmware-solutions-dr_backup_bundle_overview#dr_backup_bundle_overview-tech-specs)で説明されているコンポーネントがインストールされます。
 * インスタンスが使用可能になると、インスタンスの状況が**「使用可能」**に変わり、E メールで通知されます。
 
 #### HCX on IBM Cloud のデプロイメント・プロセス
@@ -140,7 +141,7 @@ HCX on {{site.data.keyword.cloud_notm}} のデプロイメントは自動的に�
       1. **「管理」**タブをクリックします。
       2. **「システム更新」**タブで、**「ダウンロード・リンクの要求」**をクリックします。
       3. **「リンクのコピー」**をクリックし、このリンクを使用して、オンプレミス vSphere 環境へのアクセス権限によって HCX Enterprise Client をオンプレミス環境にダウンロードします。
-3. VMware vSphere Web Client で、HCX Enterprise Client を HCX Manager 仮想アプライアンス (HCX Manager) としてオンプレミス環境にデプロイします。 [VMware HCX ユーザー・ガイド](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}の指示に従います。
+3. VMware vSphere Web Client で、HCX Enterprise Client を HCX Manager 仮想アプライアンス (HCX Manager) としてオンプレミス環境にデプロイします。 [VMware HCX ユーザー・ガイド](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}の指示に従います。
 
     オンプレミス HCX Manager をプライベート・ネットワークにデプロイし、パブリック・ネットワークへのアクセスを許可する必要があります。 NSX Edge、Vyatta、または類似のゲートウェイを使用して、オンプレミス HCX Manager へのインターネット・アクセスを許可することができます。 使用するゲートウェイがプライベート・ネットワーク・アクセスとパブリック・ネットワーク・アクセスとで異なる場合は、デフォルト・ゲートウェイを使用してパブリック・ネットワーク・アクセスを許可し、オンプレミスの**「HCX Manager 管理コンソール」**を使用して、プライベート・ネットワーク・アクセス用の静的ルートを作成することをお勧めします。  
     {:note}
@@ -148,16 +149,16 @@ HCX on {{site.data.keyword.cloud_notm}} のデプロイメントは自動的に�
   1. OVA のデプロイ時に指定した資格情報を使用して、オンプレミスの HCX Enterprise Manager VM にログインします。
   2. プロンプトが出されたら、アクティベーション・キーを入力します。
 
-  [VMware HCX ユーザー・ガイド](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}の指示に従います。
+  [VMware HCX ユーザー・ガイド](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}の指示に従います。
 
 5. 自己署名 SSL 証明書が HCX on {{site.data.keyword.cloud_notm}} サービスによって生成されました。 以下のステップを実行して、その証明書をオンプレミス HCX Manager にインポートする必要があります。
     1. オンプレミスの**「HCX Manager 管理コンソール」**で、**「管理」**タブをクリックします。
     2. 左側のナビゲーション・ペインで、**「トラステッド CA 証明書」**をクリックし、右側の**「インポート」**をクリックします。
     3. **「URL」**をクリックしてから、適用する証明書の URL を入力します。 これが、{{site.data.keyword.vmwaresolutions_short}} コンソールの HCX on {{site.data.keyword.cloud_notm}} サービス詳細ページに表示される **HCX クラウド IP** (``https://<cloud-side public IP>``) になります。
     4. **「適用」**をクリックします。
-6. 初期構成を続行し、相互接続を作成します。 [VMware HCX ユーザー・ガイド](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}の指示に従います。
-7. VMware HCX のネットワークをオンプレミスから {{site.data.keyword.cloud_notm}} に拡張します。 [VMware HCX ユーザー・ガイド](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}の指示に従います。
-8. オンプレミスと {{site.data.keyword.cloud_notm}} の間で VM をマイグレーションします。 [VMware HCX ユーザー・ガイド](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}の指示に従います。
+6. 初期構成を続行し、相互接続を作成します。 [VMware HCX ユーザー・ガイド](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}の指示に従います。
+7. VMware HCX のネットワークをオンプレミスから {{site.data.keyword.cloud_notm}} に拡張します。 [VMware HCX ユーザー・ガイド](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}の指示に従います。
+8. オンプレミスと {{site.data.keyword.cloud_notm}} の間で VM をマイグレーションします。 [VMware HCX ユーザー・ガイド](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}の指示に従います。
 
 {{site.data.keyword.cloud_notm}} アカウントで作成した {{site.data.keyword.vmwaresolutions_short}} インフラストラクチャー・コンポーネントは、{{site.data.keyword.vmwaresolutions_short}} コンソールから管理する必要があります。{{site.data.keyword.slportal}}やその他の手段でコンソール以外から管理することはできません。
 これらのコンポーネントを {{site.data.keyword.vmwaresolutions_short}} コンソール以外で変更した場合、変更がコンソールと同期されず、環境が不安定になります。
@@ -193,9 +194,9 @@ Single-node Trial for Data Protection and Disaster Recovery インスタンス�
 {: #dr_backup_bundle_orderinginstance-related}
 
 * [vCenter Server および IBM Cloud Private ガイド](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [IBM Cloud Private のチケットをオープン](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
-* [VMware HCX リソース](https://hcx.vmware.com/#/docs){:new_window}
-* [VMware HCX ユーザー・ガイド](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}
+* [IBM Cloud Private のチケットをオープン](https://www.ibm.com/mysupport/s/?language=en_US){:external}
+* [VMware HCX リソース](https://hcx.vmware.com/#/docs){:external}
+* [VMware HCX ユーザー・ガイド](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}
 * [仮想サーバーのキャンセル](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)
 * [Veeam on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions?topic=vmware-solutions-managingveeam)
 * [Zerto on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions?topic=vmware-solutions-managingzertodr)

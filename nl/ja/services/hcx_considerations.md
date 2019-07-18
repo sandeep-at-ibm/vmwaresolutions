@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-26"
 
 keywords: VMware HCX, HCX, tech specs HCX
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -97,5 +98,5 @@ HCX on {{site.data.keyword.cloud_notm}} サービスを削除する前に、以�
 * [HCX on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghcx)
 * [HCX の用語集](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
 * [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
-* [VMware Hybrid Cloud Extension の概要](https://cloud.vmware.com/vmware-hcx)
-* [VMware Hybrid Cloud Extension の資料](https://cloud.vmware.com/vmware-hcx/resources)
+* [VMware Hybrid Cloud Extension の概要](https://cloud.vmware.com/vmware-hcx){:external}
+* [VMware Hybrid Cloud Extension の資料](https://cloud.vmware.com/vmware-hcx/resources){:external}

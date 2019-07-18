@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-01"
 
 subcollection: vmware-solutions
 
@@ -37,7 +37,7 @@ HCX 具有雲端（目標/VCD 環境）和用戶端（來源）的概念。
 
 - 交互連接應用裝置 (HCX-IX) - 交互連接應用裝置建立支援 vMotion 和抄寫（大量移轉）資料流量的加密通道。
 - WAN Optimizer 應用裝置 (HCX-WAN) - HCX 包含選用擇部署的 Silver Peak™ WAN 最佳化應用裝置。它部署為 VM 應用裝置。部署後，CGW 通道資料流量會被重新導向，以遍訪「WAN 最佳化程式」。由於 WAN 最佳化工具會大幅降低 WAN（通常看到是 3:1 到 6:1）的資料流量，同時增加連線可靠性，因此建議一律使用 CGW 來部署 WAN 最佳化工具。部署 WAN 最佳化工具的另一個好處延伸為限制 VM 移轉資料流量耗用的 WAN 頻寬。依預設，不會配置 WAN 最佳化工具管理介面。
-- 網路延伸 (HX-NE) - 提供第 2 層網路延伸功能，啟用內部部署位置和 vSphere 環境之間的移轉（需要重新設定虛擬機器的 IP）。
+- 網路延伸 (HX-NE) - 提供第 2 層網路延伸功能，啟用內部部署位置和 vSphere 環境之間的移轉（需要將 IP 位址重新指派給 VM）。
 - Proxy ESXi 主機 - 每當 HCX-IX 配置為連接至雲端 HCX 網站時，Proxy ESXi 主機會出現在 vCenter 的任何叢集之外。此 ESXi 主機的管理和 vMotion IP 位址與對應的 HCX-IX 應用裝置相同。這可讓用戶端及雲端的 vSphere 環境運作，就像執行本端 vMotion 一樣。此方法的好處：
   - 任一端的管理 IP 範圍可能重疊，但功能不受損。
   - 雲端對用戶端沒有任何 vSphere 可見性，因此更加安全。

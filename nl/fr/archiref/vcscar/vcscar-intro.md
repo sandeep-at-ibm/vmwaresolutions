@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-03"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -29,9 +29,9 @@ Nous avons voulu démontrer qu'il existe véritablement une interaction entre l'
 
 L'implémentation du “concept car” est une extension de l'application Acme Skateboard de démonstration nommée Skate Advisor. Skate Advisor est un outil qui permet aux utilisateurs d'avoir des conversations sur les astuces en matière de skateboard avec un moteur entraîné par Watson. Les citations suivantes représentent un exemple de conversation :
 
--   "Watson, montre-moi les combinaisons du trick Casper"
--   "Watson, montre-moi les sites communs pour effectuer un trick"
--   "Watson, montre-moi une vidéo du trick Casper"
+-`Watson, montre-moi les combinaisons du trick Casper`
+- `Watson, montre-moi les sites communs pour effectuer un trick`
+- `Watson, montre-moi une vidéo du trick Casper`
 
 Acme Skate Advisor exploite Watson Discovery Service pour ingérer des articles, des vidéos, des blogues et d'autres contenus Internet afin de créer une base de données d'enseignements tirés sur les tricks, qui peut être interrogée par l'application.
 
@@ -50,12 +50,12 @@ Faites la démonstration d'une application qui a été déployée sur la platefo
 ### Reconnaissance vocale Watson avec Watson Assistant
 {: #vcscar-intro-speech}
 
-L'application Acme Skate Advisor communique avec les utilisateurs via un service speech-to-text et text-to-speech qui est fourni avec la plateforme Watson.
+L'application Acme Skate Advisor communique avec les utilisateurs via un service Speech to Text et Text to Speech qui est fourni avec la plateforme Watson.
 
 ### Watson Discovery Service - Utilisation et entraînement
 {: #vcscar-intro-watson-disc}
 
-L'application Acme Skate Advisor utilise Watson Discovery Service pour garder une trace d'une base de données de tricks pour laquelle une langue de classification est appliquée et les tricks sont reconnus à partir de services en ligne.
+L'application Acme Skate Advisor utilise Watson Discovery Service pour surveiller une base de données de tricks pour laquelle une langue de classification est appliquée et les tricks sont reconnus à partir de services en ligne.
 
 ### Utilisation des services Watson
 {: #vcscar-intro-watson-services}

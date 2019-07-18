@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -28,7 +28,7 @@ Skate Advisor est principalement constitué d'un agent conversationnel capable d
 
 Le principal élément de données de Skate Advisor est le trick. Le langage de trick permet de définir un trick de manière unique. Ce langage peut être utilisé pour accomplir les tâches suivantes :
 - Converser avec l'agent conversationnel à propos de tricks.
-- Rechercher des tricks via Watson Discovery.
+- Rechercher des tricks à l'aide de Watson Discovery.
 - Identifier et classifier des tricks lors de l'entraînement de Watson Discovery à partir d'articles source.
 - Identifier un trick en matière de lieu et d'affichage multimédia.
 
@@ -90,8 +90,8 @@ Etape | Description
 6 | Watson Assistant classifie la demande et répond à Skate Advisor avec l'action à effectuer.
 7 | Skate advisor demande un jeu de données provenant de Discovery Service.
 8 | Discovery Service évalue la requête et envoie la réponse.
-9 |Skate Advisor forme une réponse et l'envoie à l'agent conversationnel sous forme de texte.
-10 | L'agent conversationnel envoie le texte de réponse au service Text To Speech.
+9 | Skate Advisor forme une réponse et l'envoie à l'agent conversationnel sous forme de texte.
+10 | L'agent conversationnel envoie le texte de réponse au service Text to Speech.
 11 | Le résultat est envoyé à l'utilisateur via l'agent conversationnel.
 
 ### Rendu vidéo

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: F5 console, BIG-IP Web UI, login F5 console
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # F5 on IBM Cloud の管理
 {: #managing_f5}
@@ -29,4 +31,4 @@ F5 on {{site.data.keyword.cloud}} サービスを管理するには、F5 on {{si
 * [F5 on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations)
 * [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [よくある質問](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [F5 Web サイト](https://www.f5.com/){:new_window}
+* [F5 Web サイト](https://www.f5.com/){:external}

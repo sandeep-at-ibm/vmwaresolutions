@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-01"
 
 keywords: single-node trial, data protection DR, tech specs data protection DR
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -29,9 +30,9 @@ La version d'essai permet de migrer jusqu'à 20 charges de travail simples de d�
 Single-node Trial for Data Protection and Disaster Recovery est destiné à une démonstration de faisabilité uniquement. N'exécutez pas de charges de travail de production dans cet environnement. Les fonctions de gestions, telles que l'ajout et le retrait d'hôtes et de clusters, la commande de services complémentaires supplémentaires et l'application de mises à jour ne sont pas prises en charge.
 {:important}
 
-Une fois que votre instance Single-node Trial est déployée, vous pouvez utiliser [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:new_window} à partir d'[IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:new_window} pour obtenir de l'assistance sur votre instance. En outre, [{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/){:new_window} peut vous aider à accélérer la modernisation des applications grâce aux dernières recommandations pour le cloud natif.
+Une fois que votre instance Single-node Trial est déployée, vous pouvez utiliser [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:external} à partir d'[IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:external} pour obtenir de l'assistance sur votre instance. En outre, [{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/){:external} peut vous aider à accélérer la modernisation des applications grâce aux dernières recommandations pour le cloud natif.
 
-Cette version d'essai peut être utilisée pendant un maximum de 90 jours. Les frais récurrents mensuels sont facturés en fonction de votre calendrier de facturation, et non du moment où l'instance est commandée. Si l'instance n'est pas annulée le dernier jour de votre cycle de facturation ou avant, vous êtes facturé pour le mois suivant. Il est fort probable qu'un essai de 90 jours entraîne quatre mois de frais, à moins que l'annulation ne soit effectuée avant le quatrième mois.
+Cette version d'essai peut être utilisée pendant un maximum de 90 jours. Les frais récurrents mensuels sont facturés en fonction de votre calendrier de facturation, et non du moment où l'instance est commandée. Si l'instance n'est pas annulée le dernier jour de votre cycle de facturation ou avant, vous êtes facturé pour le mois suivant. Un essai de 90 jours peut générer quatre mois de frais, à moins que l'annulation ne soit effectuée avant le quatrième mois.
 {:note}
 
 Une fois qu'elle a expiré, vous pouvez supprimer cet environnement, puis mettre à disposition un nouvel environnement répondant à vos besoins en matière de capacité.
@@ -47,7 +48,7 @@ La disponibilité et la tarification des configurations matérielles normalisée
 ### Serveur bare metal
 {: #dr_backup_bundle_overview-bare-metal}
 
-Processeur Skylake Dual Intel Xeon Gold 5120 / 28 coeurs au total, 2,2 GHz avec 384 Go de RAM pour environ 20 VM 
+Processeur Skylake Dual Intel Xeon Gold 5120 / 28 coeurs au total, 2,2 GHz avec 384 Go de RAM pour environ 20 VM
 
 #### Surallocations d'UC
 {: #dr_backup_bundle_overview-cpu}
@@ -140,9 +141,9 @@ Des dispositifs HCX supplémentaires sont déployés durant la configuration s'i
 
 Single-node Trial for Data Protection and Disaster Recovery inclut Veeam on {{site.data.keyword.cloud_notm}}. Les composants suivants sont commandés et inclus dans le service Veeam on {{site.data.keyword.cloud_notm}}.
 
-* Licence de 25 packs de Veeam Availability Suite 
-* 4000 Go de stockage 
-* 0,25 IOPS/Go de performances de stockage 
+* Licence de 25 packages de Veeam Availability Suite 
+* 4000 Go de stockage
+* 0,25 IOPS/Go de performances de stockage
 * Windows Server 2016 Standard Edition (64 bits)
 * 4 coeurs de 2 GHz
 * 8 Go de mémoire RAM
@@ -154,7 +155,7 @@ Single-node Trial for Data Protection and Disaster Recovery inclut Veeam on {{si
 
 Single-node Trial for Data Protection and Disaster Recovery inclut Zerto on {{site.data.keyword.cloud_notm}}. Les composants suivants sont commandés et inclus dans le service Zerto on {{site.data.keyword.cloud_notm}} :
 
-* Licence Zerto Virtual Replication V6.5u3 
+* Licence Zerto Virtual Replication V6.5u3
 * Une instance de serveur virtuel - Zerto Virtual Manager
 * 2 coeurs de 2 GHz
 * 4 Go de mémoire RAM
@@ -164,12 +165,12 @@ Single-node Trial for Data Protection and Disaster Recovery inclut Zerto on {{si
 ## Spécifications techniques pour IBM Cloud Automation Manager
 {: #dr_backup_bundle_overview-cam-tech-specs}
 
-{{site.data.keyword.cloud_notm}} Automation Manager 3.1.2 est installé à l'aide de la topologie Développement/Test sur toutes les instances Single-node Trial for Data Protection and Disaster Recovery. Pour plus d'informations sur {{site.data.keyword.cloud_notm}} Automation Manager, voir [Documentation d'{{site.data.keyword.cloud_notm}} Automation Manager](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: new_window}.
+{{site.data.keyword.cloud_notm}} Automation Manager 3.1.2 est installé à l'aide de la topologie Développement/Test sur toutes les instances Single-node Trial for Data Protection and Disaster Recovery. Pour plus d'informations sur {{site.data.keyword.cloud_notm}} Automation Manager, voir la [documentation {{site.data.keyword.cloud_notm}} Automation Manager](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: external}.
 
 ## Liens connexes
 {: #dr_backup_bundle_overview-related}
 
-* [Ressources VMware HCX](https://hcx.vmware.com/#/docs){:new_window}
-* [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}
+* [Ressources VMware HCX](https://hcx.vmware.com/#/docs){:external}
+* [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}
 * [Gestion de Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-managingveeam)
 * [Gestion de Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-managingzertodr)

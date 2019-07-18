@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -25,10 +25,7 @@ in più regioni cloud che si trovano in una delle seguenti opzioni:
 
 I prodotti {{site.data.keyword.icpfull_notm}} e CAM (Cloud Automation Manager)
 possono essere distribuiti manualmente nella tua piattaforma di virtualizzazione in loco,
-abilitando la gestione cloud dalle ubicazioni in loco. In alternativa, {{site.data.keyword.icpfull_notm}}
-e CAM vengono offerti come estensioni di servizio a una distribuzione VMware
-vCenter Server on {{site.data.keyword.cloud_notm}} nuova o esistente, tramite l'automazione, abilitando
-la gestione cloud da {{site.data.keyword.cloud_notm}}.
+abilitando la gestione cloud dalle ubicazioni in loco. In alternativa, {{site.data.keyword.icpfull_notm}} e CAM vengono offerti come estensioni di servizio a una distribuzione VMware vCenter Server on {{site.data.keyword.cloud_notm}} nuova o esistente, tramite l'automazione, abilitando la gestione cloud da {{site.data.keyword.cloud_notm}}.
 
 {{site.data.keyword.icpfull_notm}} è una piattaforma dell'applicazione per lo sviluppo e la gestione di applicazioni
 inserite nei contenitori in loco. È un ambiente integrato per la gestione
@@ -58,9 +55,8 @@ dell'applicazione.
 ![Componenti fisici di Skate Advisor](../../images/vcscar-physical.svg "Componenti fisici di Skate Advisor")
 
 L'applicazione Skate Advisor estende l'applicazione web Acme esistente
-con un componente basato sui microservizi che interagisce con Watson e con
-un contenitore nginx per inoltrare tramite proxy le richieste al contenitore web e dei
-microservizi.
+con un componente basato sui microservizi che interagisce con Watson e con un contenitore nginx per inoltrare tramite proxy le richieste al contenitore web
+dei microservizi.
 
 L'applicazione Skate Advisor sfrutta la piattaforma di modernizzazione
 dell'applicazione che fornisce l'infrastruttura di hosting
@@ -69,8 +65,7 @@ necessaria.
 ### Assemblaggio e distribuzione dell'applicazione
 {: #vcscar-physical-app-pack-depl}
 
-L'applicazione viene distribuita come orchestrazione CAM che contiene
-i seguenti elementi:
+L'applicazione viene distribuita come orchestrazione CAM che contiene i seguenti elementi:
 * Orchestrazione del servizio - Un'orchestrazione del servizio CAM è una risorsa
 del flusso di lavoro che descrive i modelli Terraform e i grafici Helm da distribuire
 come facet di un servizio. Un servizio può essere pubblicato ed è
@@ -100,8 +95,8 @@ e lo schema del database preinstallati.
 ### Bilanciamento del carico e proxy
 {: #vcscar-physical-load-balance-proxy}
 
-Il bilanciamento del carico e il proxy vengono implementati attraverso il componente
-del controller Ingress {{site.data.keyword.icpfull_notm}}. Questo componente gestisce il ridimensionamento e il failover
+Il bilanciamento del carico e il proxy vengono implementati tramite il componente del controller Ingress
+{{site.data.keyword.icpfull_notm}}. Questo componente gestisce il ridimensionamento e il failover
 del contenitore in modo continuo.
 
 Il proxy dell'applicazione è fornito dal contenitore nginx che bilancia
@@ -207,8 +202,8 @@ e contenitori nei cluster {{site.data.keyword.icpfull_notm}} e {{site.data.keywo
 
 Nel diagramma, CAM crea in modo logico connessioni cloud ai vCenter,
 ai provider cloud e agli ambienti {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}}. I cluster {{site.data.keyword.icpfull_notm}} vengono
-distribuiti in ciascun data center/ambiente cloud, con MCM che fornisce il
-meccanismo per connettere i cluster {{site.data.keyword.icpfull_notm}} in un'unica vista di gestione.
+distribuiti in ciascun data center o ambiente cloud, con MCM che fornisce il
+meccanismo per connettere i cluster {{site.data.keyword.icpfull_notm}} in una singola vista di gestione.
 
 ## Link correlati
 {: #vcscar-physical-related}

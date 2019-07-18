@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-18"
 
 keywords: IAM user, user role, user permission
 
@@ -38,18 +38,15 @@ subcollection: vmware-solutions
 
 다음 표에서는 플랫폼 관리 역할에 맵핑된 조치에 대한 정보를 제공합니다.
 
-표 1. 플랫폼 관리 역할 및 허용된 조치
-
 |플랫폼 관리 역할 |조치 | 예제 조치 |
 |:----------------- |:----------------- |:----------------- |
 | 뷰어 | 읽기 전용 조치 |인스턴스 요약 보기<br>인스턴스 세부사항 보기 |
 | 편집자 | 특정 인스턴스 업데이트 |ESXi 서버 추가 또는 제거<br>클러스터 추가 또는 제거<br>서비스 추가 또는 제거<br>상위 버전으로 인스턴스 업그레이드 |
 | 운영자 | 읽기 전용 조치 |인스턴스 나열<br>인스턴스 세부사항 보기 |
 | 관리자 | 전체 관리 액세스 |새 인스턴스 작성<br>인스턴스 삭제<br>기타 사용자에 대한 플랫폼 액세스 권한 부여|
+{: caption="표 1. 플랫폼 관리 역할 및 허용된 조치" caption-side="top"}
 
 {{site.data.keyword.vmwaresolutions_short}}의 경우에는 다음 조치가 존재합니다.
-
-표 2. 조치 설명 및 필수 역할
 
 | 조치 |서비스에 대한 오퍼레이션 |역할 |
 |:------ |:-------------------- |:---- |
@@ -58,6 +55,7 @@ subcollection: vmware-solutions
 | vmware-solutions.instances.view |인스턴스 나열<br>인스턴스 세부사항 보기 |뷰어, 운영자, 편집자 및 관리자 |
 | vmware-solutions.instances.update |ESXi 서버 추가 또는 제거<br>클러스터 추가 또는 제거<br>서비스 추가 또는 제거<br>상위 버전으로 인스턴스 업그레이드 |편집자 및 관리자 |
 | vmware-solutions.account.update |계정 설정 업데이트 | 관리자 |
+{: caption="표 2. 조치 설명 및 필수 역할" caption-side="top"}
 
 ## 사용자에 대한 액세스 관리
 {: #iam-users}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-06-27"
 
 subcollection: vmware-solutions
 
@@ -67,7 +67,7 @@ subcollection: vmware-solutions
   -	IBM MQ Advanced
   -	IBM MQ Advanced for Developers
   -	Rabbit MQ（開放程式碼）
-  -	IBM Event Streams Tech Preview（根據 Apache Kafka）
+  -	IBM Event Streams 技術預覽（根據 Apache Kafka）
 
 * 數位商業自動化
   -	IBM Operational Decision Manager
@@ -91,7 +91,7 @@ subcollection: vmware-solutions
 * HPC/HPDA
   -	IBM Spectrum LSF Community Edition
   -	IBM Spectrum Symphony Community Edition
-  -	IBM Spectrum Conductor Technical Preview
+  -	IBM Spectrum Conductor 技術預覽
 
 * 多雲端管理
   -	{{site.data.keyword.cloud_notm}} Automation Manager
@@ -154,8 +154,7 @@ type=NFS
 server = nfs.server.ip.address
 path = /shared/db2trader1`
 
-在型錄使用者介面中，搜尋 "Db2"，然後按一下 ibm-db2oldp-dev
-請檢閱 Readme 檔，然後按一下「配置」。
+在型錄使用者介面中，搜尋 "Db2"，然後按一下 ibm-db2oldp-dev。請檢閱 Readme 檔，然後按一下「配置」。
 
 在「配置」區段中，有一個「快速入門」區段及「所有參數」區段。開啟「所有參數」，因為 Todd 需要輸入其他配置：
 
@@ -220,7 +219,7 @@ Todd 一開始會從使用者介面中選取要在中介軟體取得的 NodePort
 -	已新增管線（Jane 已使用 Jenkins）
 -	使用 Maven 所建置
 
-以下是 Jane 的[程式碼儲存庫](https://github.com/IBMStockTrader/) 範例，以及 Jenkins 檔案、server.xml 及其他檔案。備妥之後，Jane 可以透過密碼自由地編碼額外功能，以存取 ODM 及 Watson 這類服務以及作為 GitHub 中個別儲存庫的其他微服務。
+下列範例顯示 Jane 的[程式碼儲存庫](https://github.com/IBMStockTrader/)，以及 Jenkins 檔案、server.xml 和其他檔案。備妥之後，Jane 可以透過密碼自由地編碼額外功能，以存取 ODM 及 Watson 這類服務以及作為 GitHub 中個別儲存庫的其他微服務。
 
 ### 新增密碼
 {: #vcscontent-addmidware-add-secrets}

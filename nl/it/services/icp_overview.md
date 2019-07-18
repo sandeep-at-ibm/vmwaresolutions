@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-26"
 
 keywords: IBM Cloud Private, ICP, tech specs ICP
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -26,27 +27,25 @@ Questo servizio è disponibile per le seguenti istanze:
 * Istanze vCenter Server with Hybridity Bundle distribuite o di cui è stato eseguito l'upgrade alla V2.7 e successive
 * Istanze vCenter Server distribuite o di cui è stato eseguito l'upgrade alla V2.5 e successive
 
-Per le istanze che vengono distribuite o di cui è stato eseguito l'upgrade alla V3.0 o successive, {{site.data.keyword.cloud_notm}} Automation Manager viene distribuito anche come parte dell'ordine del servizio {{site.data.keyword.cloud}} Private Hosted.
+L'attuale versione di IBM Cloud Private installata è la 3.1.2. {{site.data.keyword.cloud_notm}} Automation Manager viene distribuito anche come parte dell'ordine del servizio {{site.data.keyword.cloud}} Private Hosted.
 {:note}
+
 
 ## Specifiche tecniche per IBM Cloud Private Hosted
 {: #icp_overview-specs}
 
 La seguente tabella elenca i requisiti minimi per ordinare il servizio IBM Cloud Private Hosted per l'ambiente **Pronto per la produzione** e **Sviluppo/Test**.
 
-Tabella 1. Requisiti minimi per gli ambienti Pronto per la produzione e Sviluppo/Test
-
 |Ambiente | Core | Memoria (GB) | Host | Memoria (GB) |
 |:---------- |:---- |:------ |:---- |:------- |
 | Pronto per la produzione | 52 | 640 | 3 | 8.000 |
 | Sviluppo/Test | 30 | 200 | 3 | 4.000 |
+{: caption="Tabella 1. Requisiti minimi per gli ambienti Pronto per la produzione e Sviluppo/Test" caption-side="top"}
 
 ### Requisiti della risorsa di IBM Cloud Private Hosted
 {: #icp_overview-resource-req}
 
-Le seguenti tabelle elencano i requisiti della risorsa del servizio {{site.data.keyword.cloud_notm}} Private Hosted negli ambienti Pronto per la produzione e Sviluppo/Test.
-
-Tabella 2. Requisiti della risorsa di {{site.data.keyword.cloud_notm}} Private Hosted nell'ambiente Pronto per la produzione
+La seguente tabella elenca i requisiti di risorse del servizio {{site.data.keyword.cloud_notm}} Private Hosted nell'ambiente pronto per la produzione.
 
 | Tipo di nodo  | Core CPU   |  Memoria (GB) | Disco 1 (GB) | Disco 2 (GB) | Numero di VM |
 |:---------- |:----------- |:------------ |:----------- |:----------- |:------------- |
@@ -60,8 +59,9 @@ Tabella 2. Requisiti della risorsa di {{site.data.keyword.cloud_notm}} Private H
 | Server NFS | 8 | 4  | 350 | 1 | 1 |
 | Gateway dei servizi edge NSX | 2 | 1 | 0.5 | 0.5 | 2 |
 | Vincoli documentati | 52 | 640 |  | 8.000 |   |
+{: caption="Tabella 2. Ambiente pronto per la produzione" caption-side="top"}
 
-Tabella 3. Requisiti della risorsa di {{site.data.keyword.cloud_notm}} Private Hosted nell'ambiente Sviluppo/Test
+La seguente tabella elenca i requisiti di risorse del servizio {{site.data.keyword.cloud_notm}} Private Hosted negli ambienti di sviluppo e test.
 
 | Tipo di nodo  | Core CPU   |  Memoria (GB) | Disco 1 (GB) | Disco 2 (GB) | Numero di VM |
 |:---------- |:----------- |:------------ |:----------- |:----------- |:------------- |
@@ -75,6 +75,7 @@ Tabella 3. Requisiti della risorsa di {{site.data.keyword.cloud_notm}} Private H
 | Server NFS | 8 | 4  | 350 | 1 | 1 |
 | Gateway dei servizi edge NSX | 2 | 1 | 0.5 | 0.5 | 2 |
 | Vincoli documentati | 30 | 200 |  | 4.000 |  |
+{: caption="Tabella 3. Ambienti di sviluppo e test {{site.data.keyword.cloud_notm}}" caption-side="top"}
 
 ### Formule per il calcolo dei requisiti di spazio di IBM Cloud Private Hosted
 {: #icp_overview-formulas}
@@ -84,9 +85,9 @@ Le seguenti formule vengono utilizzate per calcolare i requisiti di spazio di IB
 #### Formula per calcolare il numero di core disponibili
 {: #icp_overview-formulas-1}
 
-`AvailableCores = [HostCoreCount - HostOverheadCores - (HostVSanOverheadCorePercentage * HostCoreCount)] * (HostCount - vSphereHAHostTolerance) - MgmtOverheadCores`
+La seguente tabella elenca le variabili nella formula 1:
 
-Tabella 4. Descrizione delle variabili nella formula 1
+`AvailableCores = [HostCoreCount - HostOverheadCores - (HostVSanOverheadCorePercentage * HostCoreCount)] * (HostCount - vSphereHAHostTolerance) - MgmtOverheadCores`
 
 | Variabili | Descrizione | Unità | Esempio vSAN | Esempio NFS |
 |:--------- |:----------- |:---- |:------------- |:----------- |
@@ -97,13 +98,14 @@ Tabella 4. Descrizione delle variabili nella formula 1
 | MgmtOverheadCores | Il numero di core riservati dai componenti di gestione vCenter Server (vCenter Server, PSC, AD/DNS, Edge), che corrisponde a cinque core | Core | 5 | 5 |
 | vSphereHAHostTolerance | Il numero di host da tollerare nella configurazione vSphere HA, che equivale a un host |	Host	 | 1 | 1 |
 | HostVsanOverheadCorePercentage | La percentuale di core di un host utilizzata da vSAN, che è uguale al 10% o al 0% se l'host non è vsan | % | 10% | 0% |
+{: caption="Tabella 4. Descrizione delle variabili nella formula 1" caption-side="top"}
 
 #### Formula per calcolare la memoria disponibile
 {: #icp_overview-formulas-2}
 
-`AvailableMemory = [HostMemory - HostOverheadMemory - HostVsanOverheadMemory - (HostVsanOverheadMemoryDiskPercentage * HostVsanCapacityDiskSize)] * (HostCount - vSphereHAHostTolerance) - MgmtOverheadMemory`
+La seguente tabella elenca le variabili nella formula 2:
 
-Tabella 5. Descrizione delle variabili nella formula 2
+`AvailableMemory = [HostMemory - HostOverheadMemory - HostVsanOverheadMemory - (HostVsanOverheadMemoryDiskPercentage * HostVsanCapacityDiskSize)] * (HostCount - vSphereHAHostTolerance) - MgmtOverheadMemory`
 
 | Variabili | Descrizione | Unità | Esempio vSAN | Esempio NFS |
 |:--------- |:----------- |:---- |:------------- |:----------- |
@@ -116,6 +118,7 @@ Tabella 5. Descrizione delle variabili nella formula 2
 | vSphereHAHostTolerance | Il numero di host da tollerare nella configurazione vSphere HA, che equivale a un host | Host	| 1 | 1 |
 | HostVsanOverheadMemoryDiskPercentage | Il numero di GB di memoria riservati dalla gestione vSAN (rappresentata come percentuale di uno dei dischi vSAN di capacità), che equivale al 2,75% | % | 2.75% | 2.75% |
 | HostVsanOverheadMemory | Il numero di GB di memoria riservati dalla gestione vSAN indipendentemente dallo spazio disco, che è equivalente a 7 GB o a 0 GB se non VSAN | GB |  7 | 0 |
+{: caption="Tabella 5. Descrizione delle variabili nella formula 2" caption-side="top"}
 
 ## Considerazioni quando installi IBM Cloud Private Hosted
 {: #icp_overview-install}
@@ -136,6 +139,6 @@ Tabella 5. Descrizione delle variabili nella formula 2
 
 * [Ordine di {{site.data.keyword.cloud_notm}} Private Hosted](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_ordering)
 * [Guida di vCenter Server e {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [Apri un ticket per {{site.data.keyword.cloud_notm}} privato](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
-* [{{site.data.keyword.cloud_notm}} Automation Manager licensing](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/licensing.html){:new_window}
-* [{{site.data.keyword.cloud_notm}} Automation Manager components](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/cam_managed_components.html){:new_window}
+* [Apri un ticket per {{site.data.keyword.cloud_notm}} privato](https://www.ibm.com/mysupport/s/?language=en_US){:external}
+* [{{site.data.keyword.cloud_notm}} Automation Manager licensing](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/licensing.html){:external}
+* [{{site.data.keyword.cloud_notm}} Automation Manager components](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/cam_managed_components.html){:external}

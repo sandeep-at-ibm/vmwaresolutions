@@ -14,7 +14,7 @@ subcollection: vmware-solutions
 # Resolución de problemas de HCX
 {: #hcxclient-troubleshooting}
 
-Revise la siguiente información sobre los problemas y arreglos de HCX más frecuentes. 
+Revise la siguiente información sobre los problemas y arreglos de HCX más frecuentes.
 
 ## Problemas de la interfaz de usuario del cliente de HCX
 {: #hcxclient-troubleshooting-hcx-client-issues}
@@ -37,21 +37,21 @@ Los problemas de migración en las versiones actuales de HCX suelen estar en tre
 ### Licencias
 {: #hcxclient-troubleshooting-licensing}
 
-Si una migración falla debido a un problema de licencias, las versiones actuales de HCX muestran claramente este problema en el mensaje de error con la interfaz de usuario web del cliente dentro de la interfaz de usuario de vCenter. 
+Si una migración falla debido a un problema de licencias, las versiones actuales de HCX muestran claramente este problema en el mensaje de error con la interfaz de usuario web del cliente dentro de la interfaz de usuario de vCenter.
 
 ### Conectividad de red (WAN)
 {: #hcxclient-troubleshooting-wan-connect}
 
 Si hay un problema con la conectividad de WAN, compruebe siempre la pantalla **Interconexión -> Componentes de HCX** dentro de la interfaz de usuario de HCX para el estado del túnel. Normalmente, no es necesario restablecer ni rearrancar los componentes de flota. Si se restaura la conectividad de WAN, se reconectan automáticamente.
 
-Si hay arreglos y actualizaciones que se han aplicado a los gestores de HCX (cliente y nube) y estas actualizaciones también corrigen problemas con los componentes de flota, deberá volver a desplegar Cloud Gateway y cualquier L2C desplegada. Es posible realizar una depuración adicional del estado del túnel, conectándose a HCX Manager a través de un cliente SSH como ccli   
+Si hay arreglos y actualizaciones que se han aplicado a los gestores de HCX (cliente y nube) y estas actualizaciones también corrigen problemas con los componentes de flota, deberá volver a desplegar Cloud Gateway y cualquier L2C desplegada. Es posible realizar una depuración adicional del estado del túnel, conectándose a HCX Manager a través de un cliente SSH como ccli  
 
-1. Ejecute SSH en HCX Manager utilizando la cuenta de administrador y la contraseña proporcionada. 
+1. Ejecute SSH en HCX Manager utilizando la cuenta de administrador y la contraseña proporcionada.
 2. Ejecute el mandato `su –` y especifique la contraseña del usuario `root` (la misma que la contraseña de admin) para cambiar a root.
 3. Cambie el directorio a `/opt/vmware/bin` y ejecute el mandato `./ccli`. Si este intento no funciona porque el entorno no está configurado para root, ejecute el mandato `./ccliSetup.pl`.
 4. Ejecute el mandato `list` dentro del shell de `ccli` para mostrar una lista de los componentes de flota registrados con HCX Manager.
 5. Especifique el ID de flota para la `ccli` escribiendo el ID listado para el componente de flota. Por ejemplo, `go 8`.
-6. Ejecute el mandato `debug remoteaccess enable` para establecer la conexión mediante SSH con el componente de flota que quiera. 
+6. Ejecute el mandato `debug remoteaccess enable` para establecer la conexión mediante SSH con el componente de flota que quiera.
 7. Salga de la `ccli` y establezca la conexión mediante SSH con la dirección IP del componente de flota habilitado para SSH.
 9. Continúe para resolver el problema.
 10. Vuelva a la `ccli` e inhabilite el servicio `ssh` para el componente.
@@ -60,7 +60,7 @@ Si hay arreglos y actualizaciones que se han aplicado a los gestores de HCX (cli
 ## Problemas de compatibilidad del hardware de destino
 {: #hcxclient-troubleshooting-hw-compatibility}
 
-La migración de vMotion puede ser un problema cuando el lado de origen del cliente es de una versión de hardware y un release de vSphere más recientes que la nube. Como la migración basada en réplica copia datos a una máquina virtual creada recientemente en el lado de destino, cambiar el tipo de migración a "Migración masiva" debería facilitar el éxito de la migración en la mayoría de los casos. 
+La migración de vMotion puede ser un problema cuando el lado de origen del cliente es de una versión de hardware y un release de vSphere más recientes que la nube. Como la migración basada en réplica copia datos a una máquina virtual creada recientemente en el lado de destino, cambiar el tipo de migración a "Migración masiva" debería facilitar el éxito de la migración en la mayoría de los casos.
 
 ## Problemas del concentrador L2 extendido
 {: #hcxclient-troubleshooting-stretched-l2}

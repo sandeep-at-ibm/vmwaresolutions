@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-20"
 
 keywords: planning NetApp ONTAP, data center, NetApp data centers
 
@@ -27,8 +27,6 @@ A conta do {{site.data.keyword.cloud_notm}} que você está usando deve atender 
 {: #np_planning-dc-availability}
 
 A implementação do NetApp ONTAP Select possui requisitos rigorosos na infraestrutura física. Portanto, é possível implementar instâncias apenas em {{site.data.keyword.CloudDataCents_notm}} que atendam aos requisitos. Os {{site.data.keyword.CloudDataCents_notm}} a seguir estão disponíveis para implementação do NetApp ONTAP Select:
-
-Tabela 1. {{site.data.keyword.CloudDataCents_notm}} disponíveis para instâncias do NetApp ONTAP Select
 
 | {{site.data.keyword.CloudDataCent_notm}} | Localização | Região | Opções do servidor |
 |:------|:----------------|:----------------|:---------------------------|
@@ -62,6 +60,7 @@ Tabela 1. {{site.data.keyword.CloudDataCents_notm}} disponíveis para instância
 | WDC04 | Washington, DC | NA Leste | Alto desempenho (Médio), alto desempenho (Grande), alta capacidade
 | WDC06 | Washington, DC | NA Leste | Alto desempenho (Médio), alto desempenho (Grande), alta capacidade
 | WDC07 | Washington, DC | NA Leste | Alto desempenho (Médio), alto desempenho (Grande), alta capacidade
+{: caption="Tabela 1. {{site.data.keyword.CloudDataCents_notm}} disponíveis para instâncias do NetApp ONTAP Select" caption-side="top"}
 
 ## Links relacionados
 {: #np_planning-related}

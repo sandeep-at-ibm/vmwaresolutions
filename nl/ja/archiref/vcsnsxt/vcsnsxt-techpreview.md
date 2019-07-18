@@ -245,7 +245,7 @@ Kubernetes と NSX-V の統合では、{{site.data.keyword.cloud_notm}} 自動�
 
 Kubernetes と NSX-T の統合は、NSX-T コンテナー・プラグイン (NCP) を介して行われます。 NCP が各 Kubernetes ノードで実行され、NSX マネージャーおよび Kubernetes コントロール・プレーンと通信します。 NSX-T プラグインは、Kubernetes クラスターの論理トポロジーを自動的に作成し、名前空間ごとに別個の論理ネットワークを作成し、Kubernetes ポッドを論理ネットワークに接続し、IP アドレスと MAC アドレスを割り振ります。
 
-NSX-T 分散ファイアウォールでは、Kubernetes クラスターのために実装されるネットワーク・ポリシーを作成できます。 入口および出口ポリシー、ラベル、および式マッチング・ポリシーをサポートし、ロード・バランサー機能を備えており、これらはすべて Kubernetes インフラストラクチャーに適用できます。
+NSX-T 分散ファイアウォールでは、Kubernetes クラスターのために実装されるネットワーク・ポリシーを作成できます。 Ingress および Egress ポリシー、ラベル、および式マッチング・ポリシーをサポートし、ロード・バランサー機能を備えており、これらはすべて Kubernetes インフラストラクチャーに適用できます。
 
 ![NSX-T および Kubernetes](../../images/vcsnsxt-t1t0router.svg "NSX-T および Kubernetes")
 

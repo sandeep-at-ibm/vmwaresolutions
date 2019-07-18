@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-28"
 
 keywords: single-node trial, data protection DR, order data protection DR
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -55,7 +56,7 @@ subcollection: vmware-solutions
 ## 订购 Data Protection and Disaster Recovery 单节点试用版实例的过程
 {: #dr_backup_bundle_orderinginstance-procedure}
 
-1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格中的 **VMware**，然后单击**虚拟数据中心**部分中的 **Data Protection and Disaster Recovery 单节点试用版**。
+1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格中的 **VMware** 图标，然后单击 **VMware 虚拟数据中心**部分中的 **Data Protection and Disaster Recovery 单节点试用版**卡。
 2. 在 **Data Protection and Disaster Recovery 单节点试用版**页面上，单击**继续**。
 3. 完成请求 {{site.data.keyword.cloud_notm}} 基础架构帐户的步骤，或提供现有**用户名**和 **API 密钥**，然后单击**检索**。
 
@@ -77,7 +78,7 @@ subcollection: vmware-solutions
 
 * 实例的部署会自动启动，并会订购内部部署 HCX on {{site.data.keyword.cloud_notm}} 服务激活密钥。
 * 通过查看实例详细信息的**部署历史记录**部分，可以检查部署状态，包括可能需要注意的任何问题。
-* 成功部署实例后，[Data Protection and Disaster Recovery 单节点试用版实例的技术规范](https://test.cloud.ibm.com/docs/services/vmwaresolutions/services?topic=vmware-solutions-dr_backup_bundle_overview#dr_backup_bundle_overview-tech-specs)中描述的组件已安装。
+* 成功部署实例后，[Data Protection and Disaster Recovery 单节点试用版实例的技术规范](/docs/services/vmwaresolutions/services?topic=vmware-solutions-dr_backup_bundle_overview#dr_backup_bundle_overview-tech-specs)中描述的组件已安装。
 * 实例准备就绪可供使用后，该实例的状态会更改为**可供使用**，并且您将收到通过电子邮件发送的通知。
 
 #### HCX on IBM Cloud 的部署过程
@@ -140,7 +141,7 @@ subcollection: vmware-solutions
       1. 单击**管理**选项卡。
       2. 在**系统更新**选项卡上，单击**请求下载链接**。
       3. 单击**复制链接**，然后使用此链接将 HCX Enterprise Client 下载到有权访问内部部署 vSphere 环境的内部部署环境中。
-3. 在 VMware vSphere Web Client 中，将 HCX Enterprise Client 作为 HCX Manager 虚拟设备 (HCX Manager) 部署到内部部署环境中。执行 [VMware HCX 用户指南](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}中的指示信息。
+3. 在 VMware vSphere Web Client 中，将 HCX Enterprise Client 作为 HCX Manager 虚拟设备 (HCX Manager) 部署到内部部署环境中。执行 [VMware HCX 用户指南](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}中的指示信息。
 
     必须在专用网络上部署此内部部署 HCX Manager，并允许它访问公用网络。可以使用 NSX Edge、Vyatta 或类似网关，以允许通过因特网访问内部部署 HCX Manager。如果用于专用网络访问和公用网络访问的网关不同，那么建议您使用缺省网关来允许公用网络访问，并通过内部部署的 **HCX Manager 管理控制台**创建静态路由以用于专用网络访问。  
     {:note}
@@ -148,16 +149,16 @@ subcollection: vmware-solutions
   1. 使用部署 OVA 时指定的凭证登录到内部部署 HCX Enterprise Manager VM。
   2. 在提示时输入激活密钥。
 
-  执行 [VMware HCX 用户指南](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}中的指示信息。
+  执行 [VMware HCX 用户指南](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}中的指示信息。
 
 5. 自签名 SSL 证书已在 HCX on {{site.data.keyword.cloud_notm}} 服务上生成。您必须通过完成以下步骤将该证书导入到内部部署 HCX Manager：
     1. 在内部部署 **HCX Manager 管理控制台**中，单击**管理**选项卡。
     2. 在左侧导航窗格中，单击**可信 CA 证书**，然后单击右侧的**导入**。
     3. 单击 **URL**，然后输入要应用的证书的 URL。这是 **HCX 云 IP** (``https://<cloud-side public IP>``)，可以在 {{site.data.keyword.vmwaresolutions_short}} 控制台的 HCX on {{site.data.keyword.cloud_notm}} 服务详细信息页面上找到该 IP。
     4. 单击**应用**。
-6. 继续执行初始配置并构建互连。执行 [VMware HCX 用户指南](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}中的指示信息。
-7. 将 VMware HCX 中的网络从内部部署扩展到 {{site.data.keyword.cloud_notm}}。执行 [VMware HCX 用户指南](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}中的指示信息。
-8. 在内部部署和 {{site.data.keyword.cloud_notm}} 之间迁移 VM。执行 [VMware HCX 用户指南](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}中的指示信息。
+6. 继续执行初始配置并构建互连。执行 [VMware HCX 用户指南](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}中的指示信息。
+7. 将 VMware HCX 中的网络从内部部署扩展到 {{site.data.keyword.cloud_notm}}。执行 [VMware HCX 用户指南](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}中的指示信息。
+8. 在内部部署和 {{site.data.keyword.cloud_notm}} 之间迁移 VM。执行 [VMware HCX 用户指南](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}中的指示信息。
 
 您只能在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理在 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 基础架构组件，而不能在 {{site.data.keyword.slportal}} 中或在该控制台外部通过其他任何方法对这些组件进行管理。如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步，并且会使环境变得不稳定。
 {:important}
@@ -192,9 +193,9 @@ subcollection: vmware-solutions
 {: #dr_backup_bundle_orderinginstance-related}
 
 * [vCenter Server 和 IBM Cloud Private 指南](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [开具有关 IBM Cloud Private 的凭单](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
-* [VMware HCX 资源](https://hcx.vmware.com/#/docs){:new_window}
-* [VMware HCX 用户指南](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}
+* [开具有关 IBM Cloud Private 的凭单](https://www.ibm.com/mysupport/s/?language=en_US){:external}
+* [VMware HCX 资源](https://hcx.vmware.com/#/docs){:external}
+* [VMware HCX 用户指南](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}
 * [取消虚拟服务器](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)
 * [管理 Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-managingveeam)
 * [管理 Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-managingzertodr)

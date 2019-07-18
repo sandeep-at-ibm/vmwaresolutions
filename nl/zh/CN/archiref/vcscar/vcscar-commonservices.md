@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -14,7 +14,7 @@ subcollection: vmware-solutions
 # VMware 和 Skate Advisor 概念车的公共服务组件
 {: #vcscar-commonservices}
 
-公共服务提供由云管理平台中其他服务使用的服务。公共服务包括身份和访问权服务、域名服务和 NTP 服务。
+公共服务提供由云管理平台中其他服务使用的服务。公共服务包括身份和访问权服务、域名服务和 NTP（网络时间协议）服务。
 
 ![{{site.data.keyword.icpfull_notm}} 公共服务](../../images/vcscar-common-services.svg "{{site.data.keyword.icpfull_notm}} 公共服务")
 

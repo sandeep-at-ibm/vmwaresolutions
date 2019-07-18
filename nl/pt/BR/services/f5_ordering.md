@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-26"
 
 keywords: F5 license activation, F5 configuration, order F5
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -27,14 +28,14 @@ subcollection: vmware-solutions
 
 É possível pedir uma nova instância com o F5 on {{site.data.keyword.cloud_notm}} usando um dos métodos a seguir:
 * No console do {{site.data.keyword.vmwaresolutions_short}}, quando você pedir uma nova instância, selecione **F5 on IBM Cloud** na seção **Serviços**.
-* No catálogo do {{site.data.keyword.cloud_notm}}, selecione **F5 on IBM Cloud**, especifique as configurações de serviço e selecione **Incluir em nova instância**.
+* No catálogo do {{site.data.keyword.cloud_notm}}, clique no ícone **VMware** da área de janela de navegação esquerda e, em seguida, clique no cartão **F5 on IBM Cloud** da seção **Serviços do VMware**. Especifique as configurações do serviço e selecione **Incluir na nova instância**.
 
 ## Pedindo o F5 on IBM Cloud para uma instância existente
 {: #f5_ordering-existing}
 
 É possível incluir o serviço F5 on {{site.data.keyword.cloud_notm}} em uma instância existente usando um dos métodos a seguir:
 * No console do {{site.data.keyword.vmwaresolutions_short}}, visualize a instância para a qual você deseja incluir o serviço, clique em **Serviços** na área de janela de navegação esquerda e clique em **Incluir**.
-* No catálogo do {{site.data.keyword.cloud_notm}}, selecione **F5 on IBM Cloud**, especifique as configurações de serviço e selecione **Incluir em instância existente**.
+* No catálogo do {{site.data.keyword.cloud_notm}}, clique no ícone **VMware** da área de janela de navegação esquerda e, em seguida, clique no cartão **F5 on IBM Cloud** da seção **Serviços do VMware**. Especifique as configurações do serviço e selecione **Incluir na instância existente**.
 
 ## Pedindo o F5 on IBM Cloud para instâncias privadas
 {: #f5_ordering-private}
@@ -98,4 +99,4 @@ Não é possível mudar o modelo de licença após a instalação do serviço. P
 * [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
 * [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [Perguntas mais frequentes](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Guias de Implementação do F5](https://www.f5.com/services/resources/deployment-guides){:new_window}
+* [Guias de Implementação do F5](https://www.f5.com/services/resources/deployment-guides){:external}

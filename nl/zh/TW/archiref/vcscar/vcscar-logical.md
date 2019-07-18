@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -28,7 +28,7 @@ Skate Advisor 主要包含可接受文字或語音辨識以透過結構化方式
 
 Skate Advisor 的核心資料元素就是技巧。此技巧語言可唯一定義技巧。此語言可以用來完成下列作業：
 - 與聊天機器人進行有關技巧的交談。
-- 透過 Watson Discovery 搜尋技巧。
+- 使用 Watson Discovery 搜尋技巧。
 - 從來源文章訓練 Watson Discovery 時，識別及分類技巧。
 - 基於位置及媒體顯示目的，識別技巧。
 
@@ -91,7 +91,7 @@ Skate Advisor 的核心資料元素就是技巧。此技巧語言可唯一定義
 7 | Skate Advisor 會從 Discovery Service 要求資料集。
 8 | Discovery Service 會評估查詢，並傳送回應。
 9 | Skate Advisor 會形成回應，並以文字形式傳送至聊天機器人。
-10 | 聊天機器人會將文字回覆傳送至 Text To Speech 服務。
+10 | 聊天機器人會將文字回覆傳送至 Text to Speech 服務。
 11 | 結果會透過聊天機器人傳送給使用者。
 
 ### 視訊呈現

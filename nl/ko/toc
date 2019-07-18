@@ -7,6 +7,7 @@ IBM Cloud for VMware Solutions
     {: .navgroup id="learn"}
     index.md
     vmonic/prod_overview.md
+    vmonic/under_the_hood.md
     vmonic/inst_comp_chart.md
 
     {: .topicgroup}
@@ -98,16 +99,6 @@ IBM Cloud for VMware Solutions
         vcenter/vc_nsx-t_deletinginstance.md
 
     {: .topicgroup}
-    마이그레이션 및 앱 현대화를 위한 단일 노드 평가판
-        vcenter/cloud_modern_bundle_overview.md
-        vcenter/cloud_modern_bundle_orderinginstance.md
-
-    {: .topicgroup}
-    데이터 보호 및 재해 복구를 위한 단일 노드 평가판
-        vcenter/dr_backup_bundle_overview.md
-        vcenter/dr_backup_bundle_orderinginstance.md
-
-    {: .topicgroup}
     VMware vSphere on IBM Cloud
         vsphere/vs_vsphereclusteroverview.md
         vsphere/vs_bom.md
@@ -125,6 +116,16 @@ IBM Cloud for VMware Solutions
         netapp/np_viewinginstances.md
         netapp/np_addinstancetousraccount.md
         netapp/np_deletinginstance.md
+
+    {: .topicgroup}
+    마이그레이션 및 앱 현대화를 위한 단일 노드 평가판
+        vcenter/cloud_modern_bundle_overview.md
+        vcenter/cloud_modern_bundle_orderinginstance.md
+
+    {: .topicgroup}
+    데이터 보호 및 재해 복구를 위한 단일 노드 평가판
+        vcenter/dr_backup_bundle_overview.md
+        vcenter/dr_backup_bundle_orderinginstance.md
 
     {: .topicgroup}
     Caveonix RiskForesight on IBM Cloud
@@ -191,21 +192,11 @@ IBM Cloud for VMware Solutions
         services/kmip_standalone_deleting.md
 
     {: .topicgroup}
-    IBM Cloud Expert Services
-        services/managing_ices.md
-
-    {: .topicgroup}
-    Mission Critical VMware on IBM Cloud
-        services/mcv_overview.md
-        services/managing_mcv.md
-
-    {: .topicgroup}
     Veeam on IBM Cloud
         services/veeam_considerations.md
         services/veeam_ordering.md
         services/icos_ordering.md
         services/managingveeam.md
-        services/managing_veeam_services.md
 
     {: .topicgroup}
     VMware HCX on IBM Cloud
@@ -223,11 +214,17 @@ IBM Cloud for VMware Solutions
         services/addingzertodr.md
         services/zerto_ordering.md
         services/managingzertodr.md
-        services/managing_zerto_services.md
 
     {: .topicgroup}
     관리 서비스
+        services/mcv_overview.md
         services/managing_imi.md
+        services/managing_veeam_services.md
+        services/managing_zerto_services.md
+
+    {: .topicgroup}
+    IBM Cloud Expert Services
+        services/managing_ices.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
@@ -439,5 +436,4 @@ IBM Cloud for VMware Solutions
         archiref/hcxclient/hcxclient-troubleshooting.md
         archiref/hcxclient/hcxclient-removal.md
         archiref/hcxclient/hcxclient-components.md
-
     {: .navgroup-end}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-21"
 
 keywords: Zerto, Zerto components, tech specs Zerto
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -70,6 +71,6 @@ Licencia de Zerto Replication V6.5 actualización 3
 
 * [Solicitud de Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-zerto_ordering)
 * [Gestión de Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingzertodr)
-* [Solicitud de servicios gestionados para Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
-* [Sitio web zerto.com](https://www.zerto.com){:new_window}
-* [Documentación técnica de Zerto](https://www.zerto.com/myzerto/technical-documentation/){:new_window}
+* [Servicios gestionados para Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
+* [Sitio web zerto.com](https://www.zerto.com){: external}
+* [Documentación técnica de Zerto](https://www.zerto.com/myzerto/technical-documentation/){: external}

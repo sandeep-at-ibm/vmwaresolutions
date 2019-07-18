@@ -4,16 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-21"
 
-keywords: Mission Critical VMware, Mission Critical, tech specs Mission Critical
+keywords: Mission Critical VMware, request Mission Critical, tech specs Mission Critical
 
 subcollection: vmware-solutions
 
 
 ---
 
-# Mission Critical VMware on IBM Cloud 概述
+# Mission Critical VMware on IBM Cloud
 {: #mcv_overview}
 
 Mission Critical VMware on {{site.data.keyword.cloud}} 交付多专区云体系结构，可帮助企业防止云应用程序发生停机时间，并可自动在云区域内执行故障转移。
@@ -84,7 +84,19 @@ vSphere + vSAN 延伸集群体系结构具有以下规范：
 * 在 VM-A 的 vMotion 活动期间，流量仍会通过 {{site.data.keyword.cloud_notm}} 可用性专区 #1 流入流出。
 * 在站点或 Edge 故障期间，流量将从剩余的可用站点流出。
 
+## 请求 Mission Critical VMware on IBM Cloud 的过程
+{: #mcv_overview-proc}
+
+1. 在 {{site.data.keyword.vmwaresolutions_full}} 控制台中，单击左侧导航窗格中的**开始**。
+2. 向下滚动该页面，在 **VMware 受管服务**下，单击 **Mission Critical VMware on IBM Cloud** 卡。
+3. 在 Mission Critical VMware on {{site.data.keyword.cloud_notm}} 页面的**联系我们以了解 Mission Critical VMware** 框中，单击**请求咨询**。
+4. 在 IBM Services Expert Hub 页面上，单击**安排咨询**以预订与服务专家的 30 分钟咨询。
+
+  {{site.data.keyword.vmwaresolutions_short}} 代表将通过您的 {{site.data.keyword.cloud_notm}} 联系人信息与您联系，以帮助您获取需要的解决方案。
+
 ## 相关链接
 {: #mcv_overview-related}
 
-* [请求 Mission Critical VMware on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_mcv)
+* [IMI 中的受管服务](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_imi)
+* [Veeam on IBM Cloud 的受管服务](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
+* [Zerto on IBM Cloud 的受管服务](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)

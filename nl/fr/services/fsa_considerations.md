@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-26"
 
 keywords: FortiGate security, FortiGate Sirtual Appliance, tech specs FortiGate
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -20,7 +21,7 @@ subcollection: vmware-solutions
 # Présentation de FortiGate Security Appliance on IBM Cloud
 {: #fsa_considerations}
 
-Le service FortiGate Security Appliance on {{site.data.keyword.cloud}} déploie une paire de dispositifs FortiGate Security Appliance (FSA) série 300 en mode haute disponibilité, qui fournissent des services de pare-feu, de routage, de conversion d'adresses réseau (NAT) et de réseau privé virtuel (VPN) afin de protéger tous les serveurs et machines virtuelles sur le réseau local virtuel (VLAN) de vos instances.
+Le service FortiGate Security Appliance on {{site.data.keyword.cloud}} déploie une paire de dispositifs FortiGate Security Appliance (FSA) série 300 en mode haute disponibilité, qui fournissent des services de pare-feu, de routage, de conversion d'adresses réseau (NAT) et de réseau privé virtuel (VPN) afin de protéger tous les serveurs et machines virtuelles sur le VLAN public de vos instances.
 
 Vous pouvez gérer ce service à l'aide du client Web FortiOS ou de l'interface de ligne de commande via SSH.
 
@@ -76,5 +77,5 @@ Passez en revue les remarques suivantes avant de supprimer le service FortiGate 
 * [Gestion de FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingfsa)
 * [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [Foire aux questions](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Site Web Fortinet](https://www.fortinet.com/){:new_window}
-* [Bibliothèque de documents Fortinet](https://docs.fortinet.com/product/fortigate/6.2){:new_window}
+* [Site Web Fortinet](https://www.fortinet.com/){:external}
+* [Bibliothèque de documents Fortinet](https://docs.fortinet.com/product/fortigate/6.2){:external}

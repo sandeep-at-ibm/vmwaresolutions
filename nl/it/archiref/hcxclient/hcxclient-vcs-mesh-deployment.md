@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-06-28"
 
 subcollection: vmware-solutions
 
@@ -14,25 +14,20 @@ subcollection: vmware-solutions
 # Rete di servizi in loco HCX
 {: #hcxclient-vcs-mesh-deployment}
 
-La seguente sezione descrive in dettaglio la procedura per configurare l'istanza client HCX.
-  1. Accoppiamento di siti per l'ambiente IBM Cloud for VMware Solutions
-  2. Crea profili di rete in loco HCX
-  3. Crea profili di calcolo in loco HCX
-  4. Crea una rete di servizi HCX
-  5. Estendi le reti
+Esamina la seguente procedura per configurare l'istanza del client HCX.
 
 ## Accoppiamento di siti per l'ambiente IBM Cloud for VMware Solutions
 {: #hcxclient-vcs-mesh-deployment-sitepair}
 
-1. Accedi al client web vSphere
+1. Accedi al client web VMware vSphere.
 2. Dal menu **Home**, seleziona l'opzione **HCX**.
-3. In **Infrastructure** -> **InterConnect**, fai clic su **Add Site Pairing**
-   1. URL del sito: URL di HCX Cloud Manager
-     * ad esempio, `https://x.x.x.x.x`
-   2. Nome utente e password: dettagli dell'amministratore di HCX Manager
-     * admin / password
-   3. I dettagli precedenti possono essere ottenuti dal portale di IBM Cloud, in **Services**, HCX on IBM Cloud** per l'istanza della soluzione IBM Cloud for VMware.
-4. Fai clic su **Connect**
+3. Sotto **Infrastructure**, **InterConnect**, fai clic su **Add Site Pairing**.
+  1. Imposta l'URL del sito sull'URL di HCX Cloud Manager, ad esempio `https://x.x.x.x.x`.
+  2. Imposta il nome utente e la password sui dettagli dell'amministratore di HCX Manager: admin / password.
+
+    I dettagli precedenti possono essere ottenuti dalla console IBM Cloud from VMware Solutions, sotto **Services**, **HCX on IBM Cloud** per l'istanza vCenter Server.
+    
+4. Fai clic su **Connect**.
 
 ### Risultati
 {: #hcxclient-vcs-mesh-deployment-sitepair-results}
@@ -45,18 +40,15 @@ L'accoppiamento di siti è stato registrato correttamente e visualizzato nell'IU
 ## Profili di rete delle reti di servizi in loco
 {: #hcxclient-vcs-mesh-deployment-profiles-network}
 
-1. Accedi al client web vSphere
+1. Accedi al client web vSphere.
 2. Dal menu **Home**, seleziona l'opzione **HCX**.
-3. In **Infrastructure** -> **InterConnect**
-4. In Multi-Site Service Mesh, fai clic su **Network Profiles**
-5. Da: **Create Network Profile**
-   1. Seleziona Distributed Port Group: ad esempio, External
-   2. Fornisci l'intervallo di indirizzo IP degli IP esterni
-   3. Fornisci la lunghezza del prefisso della sottorete esterna
-   4. Fornisci il gateway esterno
-   5. Fornisci i dettagli DNS
-   6. Imposta MTU su 1500.
-   7. Fai clic su Create.
+3. In **Infrastructure**, fai clic su **InterConnect**.
+4. In **Multi-Site Service Mesh**, fai clic su **Network Profiles**.
+5. Da **Create Network Profile**:
+   1. Seleziona il gruppo di porte distribuito, ad esempio quello esterno.
+   2. Fornisci un intervallo di indirizzi IP per IP esterni (External IPs), lunghezza prefisso sottorete esterno (External Subnet Prefix Length), gateway esterno (External Gateway) e dettagli DNS (DNS Details).
+   3. Imposta MTU su 1500.
+   4. Fai clic su **Create**.
 6. Ripeti la procedura sopra indicata per le reti di gestione e vMotion.
    Nota: la MTU deve essere impostata su 9000.
 
@@ -72,21 +64,20 @@ L'accoppiamento di siti è stato registrato correttamente e visualizzato nell'IU
 ## Profili di calcolo della rete di servizi in loco
 {: #hcxclient-vcs-mesh-deployment-profiles-compute}
 
-1. Accedi al client web vSphere
+1. Accedi al client web vSphere.
 2. Dal menu **Home**, seleziona l'opzione **HCX**.
-3. In **Infrastructure** -> **InterConnect**
-4. In Multi-Site Service Mesh, fai clic su **Compute Profiles**
-5. Da: **Create Compute Profile**
-   1. Fornisci il nome del profilo di calcolo
-   2. Seleziona tutti i servizi da abilitare e fai clic su **continue**
-   3. Seleziona il cluster e fai clic su **continue**
-   4. Seleziona l'archivio dati e fai clic su **continue**
-   5. Seleziona il profilo di rete per la gestione e fai clic su **continue**
-   6. Seleziona il profilo di rete per esterno/uplink e fai clic su **continue**
-   7. Seleziona il profilo di rete per vMotion e fai clic su **continue**
-   8. Seleziona il profilo di rete per la replica vSphere (gestione) e fai clic su **continue**
-   9. Seleziona la distribuzione dello switch per l'estensione, ad esempio Private-Switch
-   10. Fai clic su Finish.
+3. In **Infrastructure**, fai clic su **InterConnect**.
+4. In **Multi-Site Service Mesh**, fai clic su **Compute Profiles**.
+5. Da **Create Compute Profile**:
+   1. Fornisci il nome del profilo di calcolo.
+   2. Seleziona tutti i servizi da abilitare e fai clic su **Continue**.
+   3. Seleziona il cluster e fai clic su **Continue**.
+   4. Seleziona l'archivio dati e fai clic su **Continue**.
+   5. Seleziona il profilo di rete per la gestione e fai clic su **Continue**.
+   6. Seleziona il profilo di rete per il traffico esterno/uplink e fai clic su **Continue**.
+   7. Seleziona il profilo di rete per vMotion e fai clic su **Continue**.
+   8. Seleziona il profilo di rete per la replica vSphere (gestione) e fai clic su **Continue**.
+   9. Seleziona lo switch distribuito per l'estensione, ad esempio Private-Switch e fai clic su **Finish**.
 
 ## Risultati
 {: #hcxclient-vcs-mesh-deployment-profiles-compute-results}
@@ -99,25 +90,25 @@ L'accoppiamento di siti è stato registrato correttamente e visualizzato nell'IU
 ## Creazione della rete di servizi in loco
 {: #hcxclient-vcs-mesh-deployment-servicemesh-creation}
 
-1. Accedi al client web vSphere
+1. Accedi al client web vSphere.
 2. Dal menu **Home**, seleziona l'opzione **HCX**.
-3. In **Infrastructure** -> **InterConnect**
-4. In Multi-Site Service Mesh, fai clic su **Service Mesh**
-5. Da: **Create Service Mesh**
-   1. Seleziona i siti, in loco e organizzazione vCloud, e fai clic su continue
-   2. Seleziona il profilo di calcolo di origine
+3. In **Infrastructure**, fai clic su **InterConnect**.
+4. In **Multi-Site Service Mesh**, fai clic su **Service Mesh**.
+5. Da **Create Service Mesh**:
+   1. Seleziona i siti: in loco e organizzazione vCloud e fai clic su **Continue**.
+   2. Seleziona il profilo di calcolo di origine.
    3. Seleziona il profilo di calcolo remoto. Ad esempio, CloudCompute.
-   4. Seleziona tutti i servizi e fai clic su continue
-   5. Fai clic su continue; nella pagina di configurazione avanzata, scegli la sovrascrittura dei profili di rete di uplink (facoltativo).
-   6. Fai clic su continue
-   7. Fai clic su continue, lascia il valore predefinito nella pagina di configurazione avanzata per l'opzione di configurazione del limite di larghezza di banda del servizio WAN Optimization
-   8. Fornisci il nome del servizio e fai clic su **Finish**
+   4. Seleziona tutti i servizi e fai clic su **Continue**.
+   5. Fai clic su **Continue**, nella pagina Advanced Configuration - Override Uplink Network profiles (Optional)
+   6. Fai clic su **Continue**.
+   7. Fai clic su **Continue**, lascia i valori predefiniti nella pagina Advanced Configuration - Configure WAN Optimization Service Bandwidth Limit.
+   8. Fornisci il nome servizio e fai clic su **Finish**.
 6. Consulta l'elenco delle attività per la creazione della rete di servizi; in fondo ci dovrebbero essere tre dispositivi HCX nell'ubicazione in loco e tre nell'ubicazione cloud.
 
 ## Risultati
 {: #hcxclient-vcs-mesh-deployment-servicemesh-results}
 
-Una rete di servizi HCX è la configurazione dei servizi HCX effettiva per un sito di origine e uno di destinazione. Una rete di servizi può essere aggiunta a una coppia di siti connessa che ha un profilo di calcolo valido creato su entrambi i siti. 
+Una rete di servizi HCX è la configurazione dei servizi HCX effettiva per un sito di origine e uno di destinazione. Una rete di servizi può essere aggiunta a una coppia di siti connessa che ha un profilo di calcolo valido creato su entrambi i siti.
 
 L'aggiunta di una rete di servizi avvia la distribuzione dei dispositivi virtuali di interconnessione HCX su entrambi i siti. Una rete di servizi di interconnessione viene sempre creata nel sito di origine.
 
@@ -129,11 +120,11 @@ L'aggiunta di una rete di servizi avvia la distribuzione dei dispositivi virtual
 
 Per estendere una rete (VLAN o VXLAN) con HCX, completa la seguente procedura dall'IU web vCenter lato client.
 
-1. Accedi al client web vSphere
+1. Accedi al client web vSphere.
 2. Dal menu **Home**, seleziona l'opzione **HCX**.
-3. Nel menu di sinistra, sotto **Services** -> **Network Extension**
-4. Fai clic su **Extend Network**
-   1. Seleziona la rete da estendere
+3. Nel menu di sinistra, sotto **Services**, fai clic su **Network Extension**.
+4. Fai clic su **Extend Network**:
+   1. Seleziona la rete da estendere.
    2. Immetti il gateway predefinito e la maschera di sottorete correnti in formato CIDR.
    3. Fai clic su **Stretch** nella parte inferiore dello schermo per avviare il flusso di lavoro di estensione della rete.
 
@@ -142,7 +133,7 @@ Lo stato di avanzamento della rete viene monitorato nel riquadro delle attività
 ## Concetti e prassi ottimali per l'estensione di rete
 {: #hcxclient-vcs-mesh-deployment-stretching-best-practices-network}
 
-La rete lato client è collegata alla VXLAN lato cloud da una sofisticata VPN multitunnel che consiste in tecnologia HCX proprietaria. Non è basata su NSX ma funziona con NSX e ne estende la capacità. Questo processo è controllato dall'IU (interfaccia utente) web vCenter lato client e automatizza la distribuzione e l'attivazione di entrambi gli endpoint sul lato client e su quello cloud. La selezione della rete da estendere viene eseguito singolarmente o in batch.
+La rete lato client è collegata alla VXLAN lato cloud da una sofisticata VPN multitunnel che consiste in tecnologia HCX proprietaria. Non è basata su NSX ma funziona con NSX e ne estende la capacità. Questo processo è controllato dall'interfaccia utente web vCenter lato client e automatizza la distribuzione e l'avvio di entrambi gli endpoint sul lato client e cloud. La selezione della rete da estendere viene eseguito singolarmente o in batch.
 
 Inoltre, come parte del flusso di lavoro di estensione di rete, NSX sul lato cloud è autorizzato a creare una VXLAN che viene quindi connessa a un'interfaccia creata sul dispositivo L3 lato cloud specificato (DLR o ESG lasciato in uno stato di non connesso) e il dispositivo di estensione di rete (Network Extension) lato cloud.
 
@@ -150,7 +141,7 @@ Di norma, quando migri una specifica applicazione, tutte le reti utilizzate dall
 
 Perché di norma e non sempre? Può essere vantaggioso disconnettere del traffico specifico dal lato client dopo la migrazione della VM. Un esempio sono i client di backup guest VM, che possono causare un elevato utilizzo della larghezza di banda quando sono spostati al cloud. Il client di backup in-guest non è necessario quando la VM viene migrata e viene selezionato automaticamente da un backup a livello di blocco più moderno sul lato cloud.
 
-Non si accede all'adattatore di rete di backup del client poiché questo significherebbe accedere a ogni VM per disattivare la pianificazione di backup del client in-guest. Pertanto, se viene utilizzata una rete di backup, il backup potrebbe avere esito negativo. Questa è una situazione temporanea finché non sarà possibile raggiungere tutte le VM post-migrazione per disabilitare il client di backup in-guest.
+Non è possibile accedere all'adattatore di rete di backup del client poiché questo significherebbe accedere a ogni VM per disattivare la pianificazione di backup del client in-guest. Pertanto, se viene utilizzata una rete di backup, il backup potrebbe avere esito negativo. Questa è una situazione temporanea finché non sarà possibile raggiungere tutte le VM post-migrazione per disabilitare il client di backup in-guest.
 
 La larghezza di banda di una singola estensione di rete è teoricamente di 4 Gbps, tuttavia, questo può essere il limite per tutte le reti estese in una singola coppia di estensione di rete e non può essere raggiunto da una singola rete estesa. Una singola rete estesa può raggiungere ~1 Gbps, a condizione che la larghezza di banda sottostante assegnata sia sufficiente e che la latenza sia bassa (<~10 ms).
 
@@ -163,7 +154,7 @@ Senza alcun tipo di ottimizzazione dell'instradamento, le reti estese eseguono l
 {: #hcxclient-vcs-mesh-deployment-deployment-related}
 
 * [Glossario di componenti e termini HCX](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-components)
-* [Preparazione dell'ambiente di installazione](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-planning-prep-install)
+* [Preparazione dell'ambiente di installazione ](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-planning-prep-install)
 * [Distribuzione client HCX](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-vcs-client-deployment)
 * [Migrazioni VMware Hybrid Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-migrations)
 * [Monitoraggio di parametri e componenti](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-monitoring)

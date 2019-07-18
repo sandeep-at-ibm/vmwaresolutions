@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-21"
 
 keywords: Caveonix view license, Caveonix manage license, delete Caveonix license
 
@@ -29,26 +29,12 @@ Puoi visualizzare il riepilogo e i dettagli delle licenze Caveonix RiskForesight
 
 1. Fai clic su **Risorse** dal riquadro di navigazione a sinistra e scorri in basso alla tabella **Licenze Caveonix RiskForesight** per visualizzare il riepilogo delle licenze Caveonix RiskForesight che hai ordinato.
 
-   Tabella 1. Descrizione degli elementi di licenza Caveonix RiskForesight
-
-    <table>
-      <tr>
-        <th>Elemento</th>
-        <th>Descrizione</th>
-      </tr>
-      <tr>
-        <td>Nome</td>
-        <td>Il nome della licenza.</td>
-       </tr>
-       <tr>
-         <td>Data/ora di creazione</td>
-         <td>La data e l'ora in cui è stata creata la licenza.</td>
-       </tr>
-       <tr>
-         <td>Stato</td>
-         <td>Lo stato della licenza: <ul><li>In fase di modifica: la licenza è in fase di modifica.</li><li>Installata: la licenza è pronta per l'utilizzo.</li><li>In fase di rimozione: la licenza è in fase di eliminazione.</li></ul></td>
-       </tr>
-    </table>   
+| Elemento | Descrizione |
+|:-----|:------------|
+| Nome | Il nome della licenza. |
+| Data/ora di creazione | La data e l'ora in cui è stata creata la licenza. |
+| Stato | Lo stato della licenza: <br>In fase di modifica: la licenza è in fase di modifica.<br>Installata: la licenza è pronta per l'utilizzo.<br>In fase di rimozione: la licenza è in fase di eliminazione. |
+{: caption="Tabella 1. Descrizione degli elementi di licenza Caveonix RiskForesight" caption-side="top"}
 
 2. Per visualizzare i dettagli di una specifica licenza, fai clic sulla licenza.
 

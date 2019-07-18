@@ -124,7 +124,7 @@ O serviço HyTrust KeyControl on {{site.data.keyword.cloud_notm}} simplifica o g
 
 Para obter mais informações, consulte [Visão geral do HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htkc_considerations).
 
-### IBM Cloud Privado Hospedado
+### IBM Cloud Private Hosted
 {: #prod_overview-icp}
 
 O serviço {{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} traz o poder de microsserviços e contêineres para o ambiente VMware no {{site.data.keyword.cloud_notm}}. Com esse serviço, é possível ampliar o mesmo VMware familiar, o modelo operacional e as ferramentas do {{site.data.keyword.cloud_notm}} Private, do local para o {{site.data.keyword.cloud_notm}}.

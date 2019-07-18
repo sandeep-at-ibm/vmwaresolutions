@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-26"
 
 keywords: user account, ibm cloud account, ibm cloud infrastructure
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -37,6 +38,6 @@ Para se inscrever para uma conta de infraestrutura do {{site.data.keyword.cloud_
 
 * [Perguntas mais frequentes](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [Requisitos para a conta de infraestrutura do {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req)
-* [Vídeo - Como criar uma conta do {{site.data.keyword.cloud_notm}}](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
+* [Vídeo - Como criar uma conta do {{site.data.keyword.cloud_notm}}](https://www.youtube.com/watch?v=HBkY-Fs1d6E){:external}
 * [Pedindo instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
 * [Alternando para o IBMid e vinculando contas](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)

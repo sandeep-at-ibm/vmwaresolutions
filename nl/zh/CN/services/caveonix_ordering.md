@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-20"
 
 keywords: Caveonix RiskForesight, Caveonix configuration, order Caveonix
 
@@ -25,12 +25,17 @@ subcollection: vmware-solutions
 ## 为新实例订购 Caveonix RiskForesight on IBM Cloud
 {: #caveonix_ordering-new}
 
-要订购包含 Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} 的新 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 实例，请在从 {{site.data.keyword.vmwaresolutions_short}} 控制台订购实例时，在**服务**部分中选择 **Caveonix RiskForesight on IBM Cloud**。
+可以使用下列其中一种方法订购包含 Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} 的新实例：
+* 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，订购新实例时，请在**服务**部分中选择 **Caveonix RiskForesight on IBM Cloud**。
+* 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格上的 **VMware** 图标，然后单击 **VMware 服务**部分中的 **Caveonix RiskForesight on IBM Cloud** 卡。指定服务设置，然后选择**添加到新实例**。
+
 
 ## 为现有实例订购 Caveonix RiskForesight on IBM Cloud
 {: #caveonix_ordering-existing}
 
-要将 Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} 服务添加到现有 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 实例，请查看要为其添加服务的实例，单击左侧导航窗格上的**服务**，然后单击**添加**。
+可以使用下列其中一种方法将 Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} 服务添加到现有实例中：
+* 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，查看要为其添加服务的实例，单击左侧导航窗格上的**服务**，然后单击**添加**。
+* 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格上的 **VMware** 图标，然后单击 **VMware 服务**部分中的 **Caveonix RiskForesight on IBM Cloud** 卡。指定服务设置，然后选择**添加到现有实例**。
 
 ## Caveonix RiskForesight on IBM Cloud 配置
 {: #caveonix_ordering-config}

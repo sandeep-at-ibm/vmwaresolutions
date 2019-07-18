@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-28"
 
 keywords: Veeam console, Veeam backup restore, update Veeam license
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # Gestion de Veeam on IBM Cloud
 {: #managingveeam}
@@ -37,9 +39,9 @@ Pour plus d'informations, voir[Commande, affichage et retrait de services pour d
 
 Le service Veeam on {{site.data.keyword.cloud_notm}} peut être configuré pour sauvegarder les composants de gestion à l'aide de la console Veeam. Pour plus d'informations, voir [Sauvegarde des composants](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup).
 
-Pour les instances déployées dans (ou mises à niveau vers) la version 1.8 ou des éditions ultérieures, les modifications de configuration que vous apportez à votre environnement ne sont pas sauvegardées automatiquement. Par conséquent, avant de modifier la configuration de votre environnement, nous vous recommandons d'effectuer une sauvegarde manuelle des composants de gestion en exécutant la tâche de sauvegarde de gestion dans la console Veeam. Pour plus d'informations sur l'exécution d'une tâche de sauvegarde manuelle, voir les [instructions techniques Veeam](https://helpcenter.veeam.com/backup/vsphere/scheduing_manual.html){:new_window}.
+Pour les instances déployées dans (ou mises à niveau vers) la version 1.8 ou des éditions ultérieures, les modifications de configuration que vous apportez à votre environnement ne sont pas sauvegardées automatiquement. Par conséquent, avant de modifier la configuration de votre environnement, nous vous recommandons d'effectuer une sauvegarde manuelle des composants de gestion en exécutant la tâche de sauvegarde de gestion dans la console Veeam. Pour plus d'informations sur l'exécution d'une tâche de sauvegarde manuelle, voir les [instructions techniques Veeam](https://helpcenter.veeam.com/backup/vsphere/scheduing_manual.html){:external}.
 
-En cas d'incidents sur les composants de gestion, vous pouvez les restaurer à partir d'une sauvegarde antérieure depuis la console Veeam. Pour plus d'informations sur l'exécution d'une tâche de restauration manuelle, voir les [instructions techniques Veeam]( https://helpcenter.veeam.com/backup/vsphere/performing_full_recovery.html){:new_window}.
+En cas d'incidents sur les composants de gestion, vous pouvez les restaurer à partir d'une sauvegarde antérieure depuis la console Veeam. Pour plus d'informations sur l'exécution d'une tâche de restauration manuelle, voir les [instructions techniques Veeam]( https://helpcenter.veeam.com/backup/vsphere/performing_full_recovery.html){:external}.
 
 ## Application de mises à jour à Veeam on IBM Cloud
 {: #managingveeam-updates}
@@ -62,7 +64,7 @@ Si le service Veeam est installé sur une instance avec un réseau privé unique
 ### Mise à jour des licences Veeam pour les instances déployées avec un réseau public ou privé
 {: #managingveeam-update-license-public-private}
 
-Si le service Veeam est installé sur une instance avec un réseau public et un réseau privé, vous pouvez mettre à jour votre licence Veeam automatiquement ou manuellement en suivant les instructions Veeam décrites dans [Updating license]( https://helpcenter.veeam.com/docs/backup/vsphere/license_update.html).
+Si le service Veeam est installé sur une instance avec un réseau public et un réseau privé, vous pouvez mettre à jour votre licence Veeam automatiquement ou manuellement en suivant les instructions Veeam décrites dans [Updating license]( https://helpcenter.veeam.com/docs/backup/vsphere/license_update.html){:external}.
 
 ### Mise à jour des licences Veeam pour les instances déployées avec un réseau privé uniquement
 {: #managingveeam-update-license-private}
@@ -90,7 +92,8 @@ Une fois le nouveau service Veeam on {{site.data.keyword.cloud_notm}} déployé 
 {: #managingveeam-related}
 
 * [Présentation de Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)
+* [Services gérés pour Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
 * [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [Foire aux questions](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Site Web Veeam.com](https://www.veeam.com/)
-* [Documentation technique Veeam](https://www.veeam.com/documentation-guides-datasheets.html)
+* [Site Web Veeam.com](https://www.veeam.com/){:external}
+* [Documentation technique Veeam](https://www.veeam.com/documentation-guides-datasheets.html){:external}

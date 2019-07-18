@@ -46,7 +46,7 @@ En el diagrama siguiente se muestra {{site.data.keyword.icpfull_notm}} y CAM des
 
 ![Local - Gestión de la nube](../../images/vcsiks-onprem-cloudmgt.svg "Local - Gestión de la nube")
 
-Se utiliza strongSwan VPN para establecer la conectividad con los contenedores {{site.data.keyword.containerlong_notm}} desplegados. strongSwan se podría sustituir por la conectividad Direct Link. 
+Se utiliza strongSwan VPN para establecer la conectividad con los contenedores {{site.data.keyword.containerlong_notm}} desplegados. strongSwan se podría sustituir por la conectividad Direct Link.
 
 En el diagrama, CAM crea de forma lógica conexiones en la nube con los entornos de vCenters, proveedores de nube, {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}}. Los clústeres de {{site.data.keyword.icpfull_notm}} deben desplegarse en cada centro de datos o entorno de nube, y MCM proporciona el mecanismo para conectar los clústeres de {{site.data.keyword.icpfull_notm}} en una única vista de gestión.
 

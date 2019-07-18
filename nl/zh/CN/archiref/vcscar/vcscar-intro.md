@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-03"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -29,9 +29,9 @@ subcollection: vmware-solutions
 
 “概念车”的实现是对名为 Skate Advisor 的演示性 Acme Skateboards 应用程序的扩展。Skate Advisor 是一种工具，支持用户与 Watson 驱动的引擎进行滑板技巧对话。下面引用的内容是一个样本对话：
 
--   “Watson，显示‘卡斯坡’技巧组合”
--   “Watson，显示练习技巧的常见地点”
--   “Watson，显示‘卡斯坡’技巧的视频”
+-`Watson，显示卡斯坡技巧组合`
+- `Watson，显示练习技巧的常见地点`
+- `Watson，显示卡斯坡技巧的视频`
 
 Acme Skate Advisor 利用 Watson Discovery 服务来摄入文章、视频、博客和其他基于因特网的内容，从而创建一个广博的技巧数据库，供该应用程序查询。
 
@@ -50,12 +50,12 @@ Acme Skate Advisor 应用程序同时利用 Watson 平台和应用程序现代�
 ### 使用 Watson Assistant 实现 Watson 语音识别
 {: #vcscar-intro-speech}
 
-Acme Skate Advisor 通过 Watson 平台随附的语音转文字和文字的语音合成服务与用户通信。
+Acme Skate Advisor 通过 Watson 平台随附的 Speech to Text 和 Text to Speech 服务与用户通信。
 
 ### Watson Discovery 服务的使用和训练
 {: #vcscar-intro-watson-disc}
 
-Acme Skate Advisor 使用 Watson Discovery服务跟踪应用了分类语言的技巧数据库以及通过联机服务发现的技巧。
+Acme Skate Advisor 使用 Watson Discovery 服务监视应用了分类语言的技巧数据库以及通过联机服务发现的技巧。
 
 ### Watson 服务的使用
 {: #vcscar-intro-watson-services}
@@ -88,7 +88,7 @@ Acme Skate Advisor 使用 Watson Discovery服务跟踪应用了分类语言的�
 - 可移至公共云的安全敏感的工作负载和一些受监管的工作负载将移至专用环境。
 - Web、移动、IoT、AI 或视频等全接触系统 (SoE) 将移至公共云。
 
-例如，通用模式是将前端 SoE 应用程序部署为容器，并将数据库和遗留中间件部署在私有云的 VM 上。
+例如，通用模式是将前端 SoE 应用程序部署为容器，其中包含部署在私有云的 VM 上的数据库和遗留中间件。
 
 由于 IT 基础架构和业务需求是独一无二的，因此现代化的方法必须提供以下优先级：
 * 加速实现业务价值

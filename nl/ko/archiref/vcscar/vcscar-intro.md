@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-03"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -14,7 +14,7 @@ subcollection: vmware-solutions
 # VMware 및 Skate Advisor Concept Car 소개
 {: #vcscar-intro}
 
-다음 참조 아키텍처는 "컨셉트 카"입니다. 이는 실제 문제점을 해결하는 기술을 강조표시하고 보여주는 메커니즘입니다. "컨셉트 카"는 오늘날 손쉽게 이용할 수 있는 서비스를 의미하지 않습니다.
+다음 참조 아키텍처는 “컨셉트 카”입니다. 이는 실제 문제점을 해결하는 기술을 강조표시하고 보여주는 메커니즘입니다. "컨셉트 카"는 오늘날 손쉽게 이용할 수 있는 서비스를 의미하지 않습니다.
 
 또한 참조 아키텍처에서는 다음을 제공합니다.
 -   여러 이해 당사자를 위한 공통 언어를 제공합니다.
@@ -29,9 +29,9 @@ subcollection: vmware-solutions
 
 "컨셉트 카"의 구현은 Skate Advisor라는 시범 Acme Skateboard 애플리케이션에 대한 확장입니다. Skate Advisor는 사용자가 Watson 구동 엔진과 스케이트보드 트릭 대화를 할 수 있도록 하는 도구입니다. 다음 인용은 샘플 대화입니다.
 
--   “Watson, 트릭 캐스퍼의 조합을 보여주세요”
--   “Watson, 트릭을 수행할 일반적인 위치를 보여주세요”
--   “Watson, 트릭 캐스퍼의 동영상을 보여주세요”
+-`Watson, 트릭 캐스퍼의 조합을 보여주세요.`
+- `Watson, 트릭을 수행할 일반적인 위치를 보여주세요.`
+- `Watson, 트릭 캐스퍼의 동영상을 보여주세요.`
 
 Acme Skate Advisor는 Watson Discovery Service를 활용하여 기사, 동영상, 블로그 및 기타 인터넷 기반 컨텐츠를 수집하여 학습된 트릭 데이터베이스를
 작성하며, 애플리케이션에서 이를 조회할 수 있습니다.
@@ -60,7 +60,7 @@ Acme Skate Advisor는 Watson 플랫폼에서 제공되는 음성-문자 변환 �
 ### Watson Discovery Service 사용법 및 훈련
 {: #vcscar-intro-watson-disc}
 
-Acme Skate Advisor는 Watson Discovery Services를 사용하여 분류 언어를 적용하기 위한 트릭 데이터베이스와 온라인 서비스에서 검색된 트릭을 계속해서 추적합니다.
+Acme Skate Advisor는 Watson Discovery Services를 사용하여 분류 언어를 적용하기 위한 트릭 데이터베이스와 온라인 서비스에서 검색된 트릭을 모니터합니다.
 
 ### Watson 서비스 사용법
 {: #vcscar-intro-watson-services}
@@ -114,7 +114,7 @@ IBM은 고유한 비즈니스 및 기술 요구사항을 해결하기 위해 사
    - **VMware vCenter Server on IBM Cloud** - vCenter Server는 {{site.data.keyword.vmwaresolutions_short}}의 오퍼링이며 {{site.data.keyword.cloud_notm}}에서 자동으로 프로비저닝되는 VMware 기반 플랫폼입니다.
    - **{{site.data.keyword.containerlong_notm}}** - {{site.data.keyword.containerlong_notm}}는 싱글 테넌트 클러스터에서 애플리케이션 컨테이너의 운영, 확장 및 배치 자동화를 위한 오케스트레이션 엔진으로 Kubernetes를 활용하는 {{site.data.keyword.cloud_notm}}의 관리 서비스입니다.
 * [vCenter Server 네트워킹](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro) - NSX-T의 기술 미리보기와 함께 NSX-V 및 Calico 등 vCenter Server, {{site.data.keyword.icpfull_notm}} 및 {{site.data.keyword.containerlong_notm}} 간의 통합에 사용되는 네트워크 기술을 설명합니다.
-* _VMware 및 Skate Advisor Concept Car 안내서_ - "컨셉트 카"의 참조 아키텍처입니다. 즉, 실제 문제점을 해결하는 기술을 강조표시하고 보여주기 위한 메커니즘입니다. 실질적인 방식으로 Watson AI와 기계 학습 간의 상호작용을 시연하려고 했습니다. 스케이트보드 문화를 통해 고유 방식으로 클라우드 서비스를 시연합니다. "컨셉트 카" 구현은 Skate Advisor라는 Acme Skateboard 애플리케이션에 대한 확장입니다. Skate Advisor는 사용자가 Watson 구동 엔진과 스케이트보드 트릭 대화를 할 수 있도록 하는 도구입니다.
+* _VMware 및 Skate Advisor Concept Car 안내서_ - “컨셉트 카”의 참조 아키텍처입니다. 즉, 실제 문제점을 해결하는 기술을 강조표시하고 보여주기 위한 메커니즘입니다. 실질적인 방식으로 Watson AI와 기계 학습 간의 상호작용을 시연하려고 했습니다. 스케이트보드 문화를 통해 고유 방식으로 클라우드 서비스를 시연합니다. "컨셉트 카" 구현은 Skate Advisor라는 Acme Skateboard 애플리케이션에 대한 확장입니다. Skate Advisor는 사용자가 Watson 구동 엔진과 스케이트보드 트릭 대화를 할 수 있도록 하는 도구입니다.
 * [VMware: Stock Trader의 현대화 과정](/docs/services/vmwaresolutions/archiref/vcscontent?topic=vmware-solutions-vcscontent-modjourney) - {{site.data.keyword.cloud_notm}} Private, IBM Middleware 컨텐츠, {{site.data.keyword.containerlong_notm}} 및 vCenter Server on {{site.data.keyword.cloud_notm}}를 사용하여 현대화되는 일반 WebSphere Application Server 애플리케이션에 대해 설명하는 참조 유스 케이스입니다. 모두가 클라우드 과정 중에 있으며 이 과정의 서로 다른 지점에 있습니다. 애플리케이션 설계자 Jane과 클라우드 인프라 설계자 Todd에 의한 점진적 단계를 통해 Stock Trader라는 기존 애플리케이션을 현대화합니다. 각 단계의 규모에 관계없이 과정의 각 단계를 수행하는 데 도움을 주는 예제와 비즈니스에 실현되는 가치를 검토하십시오. 애플리케이션, DevOps, 통합 및 관리 등 4개의 테마에 초점을 맞춥니다. 모든 테마는 함께 작동하여 목표를 달성할 수 있도록 지원합니다. 하나의 테마(나머지 테마 없이)를 현대화하면 문제가 발생할 수 있습니다.
 
 ## 관련 링크

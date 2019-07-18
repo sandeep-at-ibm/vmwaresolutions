@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-31"
+lastupdated: "2019-06-18"
 
 keywords: user account, user permissions, VRF account
 
@@ -29,8 +29,6 @@ L'account dell'infrastruttura {{site.data.keyword.cloud_notm}} che utilizzi deve
 
 Gli utenti autorizzati possono verificare e aggiornare le autorizzazioni per un account dell'infrastruttura {{site.data.keyword.cloud_notm}} nel {{site.data.keyword.slportal}}. Per ulteriori informazioni, consulta [Modifica delle autorizzazioni del portale clienti di un utente](/docs/customer-portal?topic=customer-portal-customerportal_accuserprof#cp_editusercpperm){:new_window}.
 
-Tabella 1. Autorizzazioni richieste per l'account dell'infrastruttura {{site.data.keyword.cloud_notm}}
-
 | Autorizzazione         | Dettagli                                 |
 |:------------------ |:--------------------------------------- |
 | Aggiungi server | Questa autorizzazione è necessaria per le seguenti operazioni: per ordinare {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} su cui viene eseguito VMware ESXi e per il provisioning di server virtuali orari che vengono utilizzati per operazioni di configurazione, manutenzione e supporto delle istanze. |
@@ -49,6 +47,7 @@ Tabella 1. Autorizzazioni richieste per l'account dell'infrastruttura {{site.dat
 | Visualizza licenze | Questa autorizzazione è necessaria per recuperare e convalidare le licenze utilizzate dalla tua istanza. |
 | Visualizza password | Questa autorizzazione è necessaria per poter amministrare le VSI ordinate. |
 | Gestisci monitoraggio server | Questa autorizzazione non è necessaria per effettuare un ordine ma è richiesta per recuperare e convalidare lo stato di monitoraggio dei {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} su cui sono in esecuzione i server VMware ESXi nella tua istanza. |
+{: caption="Tabella 1. Autorizzazioni richieste per l'account dell'infrastruttura {{site.data.keyword.cloud_notm}}" caption-side="top"}
 
 ## VRF con endpoint del servizio abilitati
 {: #cloud-infra-acct-req-vrf-se}

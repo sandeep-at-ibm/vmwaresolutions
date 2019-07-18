@@ -19,7 +19,7 @@
   </g>
   <rect x="10" y="154" width="400" height="309" fill="#fff2cc" pointer-events="none" stroke="#d6b656"/>
   <g font-family="Helvetica" font-size="16px" text-anchor="middle">
-   <text x="111.5" y="175.5">IBM Cloud Privado Hospedado</text>
+   <text x="111.5" y="175.5">IBM Cloud Private Hosted</text>
   </g>
   <rect x="169" y="224" width="79" height="30" fill="#9f9" pointer-events="none" stroke="#36393d"/>
   <g font-family="Helvetica" font-size="10px" text-anchor="middle">

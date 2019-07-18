@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-28"
 
 keywords: single-node trial, data protection DR, order data protection DR
 
@@ -13,19 +13,21 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
 
-# Solicitud, visualización y supresión de instancias de prueba de un solo nodo para Protección de datos y Recuperación tras desastre. 
+# Solicitud, visualización y supresión de instancias de prueba de un solo nodo para Protección de datos y Recuperación tras desastre.
 {: #dr_backup_bundle_orderinginstance}
 
 Revise los requisitos de planificación antes de solicitar una instancia de prueba de un solo nodo para
-Protección de datos y Recuperación tras desastre. 
+Protección de datos y Recuperación tras desastre.
 
-Esta versión de prueba se suprime automáticamente después de 90 días. En la página de detalles de la instancia se muestra una cuenta atrás de caducidad para la instancia de prueba de nodo único para la protección de datos y la recuperación tras desastre. {:important}
+Esta versión de prueba se suprime automáticamente después de 90 días. En la página de detalles de la instancia se muestra una cuenta atrás de caducidad para la instancia de prueba de nodo único para la protección de datos y la recuperación tras desastre.
+{:important}
 
-## Requisitos y planificación para solicitar instancias de prueba de un solo nodo para Protección de datos y Recuperación tras desastre. 
+## Requisitos y planificación para solicitar instancias de prueba de un solo nodo para Protección de datos y Recuperación tras desastre.
 {: #dr_backup_bundle_orderinginstance-req}
 
 Asegúrese de cumplir con los siguientes requisitos y de haber completado las tareas siguientes.
@@ -52,10 +54,10 @@ Revise los requisitos del nombre de la instancia:
 * La longitud máxima del nombre de instancia es de 10 caracteres.
 * El nombre de instancia debe ser exclusivo dentro de su cuenta.
 
-## Procedimiento para solicitar instancias de prueba de un solo nodo para instancias de Protección de datos y Recuperación tras desastre. 
+## Procedimiento para solicitar instancias de prueba de un solo nodo para instancias de Protección de datos y Recuperación tras desastre.
 {: #dr_backup_bundle_orderinginstance-procedure}
 
-1. En el catálogo de {{site.data.keyword.cloud_notm}}, pulse **VMware** en el panel de navegación de la izquierda y, a continuación, pulse **Prueba de un solo nodo para Protección de datos y Recuperación tras desastre** en la sección **Centros de datos virtuales**. 
+1. En el catálogo de {{site.data.keyword.cloud_notm}}, pulse el icono **VMware** en el panel de navegación de la izquierda y, a continuación, pulse la tarjeta **Prueba de un solo nodo de Protección de datos y Recuperación tras desastre** en la sección **Centros de datos virtuales de VMware**.
 2. En la página **Prueba de un solo nodo para Protección de datos y Recuperación tras desastre**, pulse **Continuar**.
 3. Siga los pasos para solicitar una cuenta de la infraestructura {{site.data.keyword.cloud_notm}} o especifique su **Nombre de usuario** y **Clave de API** existentes y pulse **Recuperar**.
 
@@ -72,12 +74,12 @@ Revise los requisitos del nombre de la instancia:
    3. Pulse el enlace o enlaces de los términos que se aplican a su pedido y confirme que acepta estos términos antes de solicitar la instancia.
    4. Pulse **Suministro**.
 
-### Resultado tras solicitar instancias de prueba de un solo nodo para las instancias Protección de datos y Recuperación tras desastre 
+### Resultado tras solicitar instancias de prueba de un solo nodo para las instancias Protección de datos y Recuperación tras desastre
 {: #dr_backup_bundle_orderinginstance-results}
 
 * El despliegue de la instancia comienza automáticamente y solicita la clave de activación del servicio HCX on {{site.data.keyword.cloud_notm}} local.
-* Puede comprobar el estado de despliegue, incluidos los problemas que puedan requerir su atención, mediante la visualización de la sección **Historial de despliegue** de los detalles de la instancia. 
-* Cuando la instancia se haya desplegado correctamente, se instalan los componentes que se describen en [Especificaciones técnicas para pruebas de un solo nodo para las instancias Protección de datos y Recuperación tras desastre](https://test.cloud.ibm.com/docs/services/vmwaresolutions/services?topic=vmware-solutions-dr_backup_bundle_overview#dr_backup_bundle_overview-tech-specs). 
+* Puede comprobar el estado de despliegue, incluidos los problemas que puedan requerir su atención, mediante la visualización de la sección **Historial de despliegue** de los detalles de la instancia.
+* Cuando la instancia se haya desplegado correctamente, se instalan los componentes que se describen en [Especificaciones técnicas para pruebas de un solo nodo para las instancias Protección de datos y Recuperación tras desastre](/docs/services/vmwaresolutions/services?topic=vmware-solutions-dr_backup_bundle_overview#dr_backup_bundle_overview-tech-specs).
 * Cuando la instancia esté lista para ser utilizada, el estado de la instancia pasará a ser **Listo para su uso** y recibirá una notificación por correo electrónico.
 
 #### Proceso de despliegue de HCX on IBM Cloud
@@ -142,7 +144,7 @@ Instale HCX Enterprise Manager local y configure la conexión con la instancia d
       2. En el separador **Actualizaciones del sistema**, pulse **SOLICITAR ENLACE DE DESCARGA**.
       3. Pulse **COPIAR ENLACE** y utilice este enlace para descargar el cliente de HCX Enterprise en un entorno local con acceso a su entorno local de vSphere.
 3. En el cliente web de VMware vSphere, despliegue el cliente de HCX Enterprise como dispositivo virtual de HCX Manager (HCX Manager) en el entorno local. Siga las instrucciones de la
-[Guía de usuario de VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}.
+[Guía de usuario de VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}.
 
     Debe desplegar HCX Manager local en una red privada y debe otorgarle acceso a la red pública. Puede utilizar NSX Edge, Vyatta o pasarelas similares para permitir el acceso internet al HCX Manager local. Si las pasarelas utilizadas para el acceso a la red privada y a la red pública son distintas, se recomienda utilizar la pasarela predeterminada para permitir el acceso a la red pública y a la **consola de administración de HCX Manager** privada para crear una ruta estática para el acceso a la red privada.  
     {:note}
@@ -151,7 +153,7 @@ Instale HCX Enterprise Manager local y configure la conexión con la instancia d
   2. Escriba la clave de activación cuando se le solicite.
 
   Siga las instrucciones de la
-[Guía de usuario de VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}.
+[Guía de usuario de VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}.
 
 5. El servicio HCX on {{site.data.keyword.cloud_notm}} ha generado un certificado SSL autofirmado. Debe importar el certificado en el HCX Manager local siguiendo los siguientes pasos:
     1. En la **consola de administración de HCX Manager** local, pulse el separador **Administración**.
@@ -159,20 +161,20 @@ Instale HCX Enterprise Manager local y configure la conexión con la instancia d
     3. Pulse **URL** y escriba el URL del certificado que desea aplicar. Esta es la **IP de HCX Cloud** (``https://<cloud-side public IP>``) que puede encontrar en la página de detalles del servicio HCX on {{site.data.keyword.cloud_notm}} en la consola de {{site.data.keyword.vmwaresolutions_short}}.
     4. Pulse **APLICAR**.
 6. Continúe la configuración inicial y cree la interconexión. Siga las instrucciones de la
-[Guía de usuario de VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}.
+[Guía de usuario de VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}.
 7. Extienda las redes de VMware HCX del entorno local a {{site.data.keyword.cloud_notm}}. Siga las instrucciones de la
-[Guía de usuario de VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}.
+[Guía de usuario de VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}.
 8. Migre las VM del entorno local a {{site.data.keyword.cloud_notm}}. Siga las instrucciones de la
-[Guía de usuario de VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}.
+[Guía de usuario de VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}.
 
 Solo debe gestionar los componentes de la infraestructura {{site.data.keyword.vmwaresolutions_short}} que se crean en la cuenta de {{site.data.keyword.cloud_notm}} desde la consola de {{site.data.keyword.vmwaresolutions_short}}, no a través del {{site.data.keyword.slportal}} ni por ningún otro medio fuera de la consola.
 Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}, los cambios no se sincronizan con la consola y pueden hacer que el entorno sea inestable.
 {:important}
 
-## Procedimiento para suprimir instancias de prueba de un solo nodo de Protección de datos y Recuperación tras desastre. 
+## Procedimiento para suprimir instancias de prueba de un solo nodo de Protección de datos y Recuperación tras desastre.
 {: #dr_backup_bundle_orderinginstance-deleting-procedure}
 
-Cuando suprima una instancia de prueba de un solo nodo de Recuperación tras desastre, los siguientes componentes se liberarán en esta secuencia: 
+Cuando suprima una instancia de prueba de un solo nodo de Recuperación tras desastre, los siguientes componentes se liberarán en esta secuencia:
 
 1. Todos los servicios desplegados
 3. Licencias del producto VMware
@@ -185,7 +187,7 @@ Debido a las dependencias entre recursos, los componentes de la instancia no se 
 Se le facturará por la instancia suprimida hasta el final del ciclo de facturación de la infraestructura {{site.data.keyword.cloud_notm}}.
 {:note}
 
-Siga los pasos siguientes para suprimir una instancia de prueba de un solo nodo para Protección de datos y Recuperación tras desastre: 
+Siga los pasos siguientes para suprimir una instancia de prueba de un solo nodo para Protección de datos y Recuperación tras desastre:
 
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Recursos** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de vCenter Server**, busque la instancia que desea suprimir.
@@ -199,9 +201,9 @@ Siga los pasos siguientes para suprimir una instancia de prueba de un solo nodo 
 {: #dr_backup_bundle_orderinginstance-related}
 
 * [Guía de vCenter Server e IBM Cloud Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [Apertura de una incidencia para IBM Cloud privado](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
-* [Recursos de VMware HCX](https://hcx.vmware.com/#/docs){:new_window}
-* [Guía de usuario de VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}
+* [Apertura de una incidencia para IBM Cloud privado](https://www.ibm.com/mysupport/s/?language=en_US){:external}
+* [Recursos de VMware HCX](https://hcx.vmware.com/#/docs){:external}
+* [Guía de usuario de VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}
 * [Cancelación de servidores virtuales](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)
 * [Gestión de Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-managingveeam)
 * [Gestión de Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-managingzertodr)

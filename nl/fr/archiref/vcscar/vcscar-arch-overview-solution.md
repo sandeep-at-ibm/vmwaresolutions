@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -138,7 +138,7 @@ Worker  |  3 | IP (x3)  |  4-8 |16-20   |  150
 ### Proxy CAM
 {: #vcscar-arch-overview-solution-cam-proxy}
 
-Fournit un accès proxy nginx dans CAM.
+Fournit un accès proxy `nginx` dans CAM.
 
 ### Interface utilisateur CAM
 {: #vcscar-arch-overview-solution-cam-ui}

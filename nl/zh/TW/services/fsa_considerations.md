@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-26"
 
 keywords: FortiGate security, FortiGate Sirtual Appliance, tech specs FortiGate
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -76,5 +77,5 @@ FortiGate Security Appliance 300 系列。
 * [管理 FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingfsa)
 * [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [常見問題](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Fortinet 網站](https://www.fortinet.com/){:new_window}
-* [Fortinet 文件庫](https://docs.fortinet.com/product/fortigate/6.2){:new_window}
+* [Fortinet 網站](https://www.fortinet.com/){:external}
+* [Fortinet 文件庫](https://docs.fortinet.com/product/fortigate/6.2){:external}

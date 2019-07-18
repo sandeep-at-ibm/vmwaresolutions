@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-20"
 
 keywords: vSphere order cluster, vSphere configuration, order vSphere cluster
 
@@ -33,7 +33,7 @@ subcollection: vmware-solutions
 ## 根據現有配置來訂購 vSphere 叢集的程序
 {: #vs_orderingbasedonexistingconfig-procedure}
 
-1. 從 {{site.data.keyword.cloud_notm}} 型錄中，按一下左導覽窗格上的 **VMware**，然後按一下**虛擬資料中心**區段中的 **VMware vSphere**。
+1. 從 {{site.data.keyword.cloud_notm}} 型錄中，按一下左導覽窗格上的 **VMware** 圖示，然後按一下 **VMware Services** 區段中的 **VMware vSphere on IBM Cloud** 卡。
 2. 在 **VMware vSphere on IBM Cloud** 頁面上，按一下**建立**。  
 3. 按一下**建立新的項目**標籤，然後從**叢集配置**清單中選取配置範本。
 4. 輸入新的叢集名稱。

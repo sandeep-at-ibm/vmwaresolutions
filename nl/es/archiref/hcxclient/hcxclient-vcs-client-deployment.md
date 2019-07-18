@@ -40,7 +40,7 @@ HCX es un servicio. HCX se ofrece con licencia por sitio y por máquina virtual 
 
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Recursos** en el panel de navegación izquierdo.
 2. Desplácese a la tabla **Licencias locales de HCX** y pulse **Suministrar nuevo**.
-3. Especifique el nombre de licencia. 
+3. Especifique el nombre de licencia.
 4. Pulse el enlace o enlaces de los términos que se aplican a su pedido y asegúrese de que acepta estos términos antes de solicitar la licencia.
 5. Pulse **Suministro**.
 
@@ -54,11 +54,11 @@ Para desplegar HCX, se debe disponer del número adecuado de direcciones IP tant
 
 * Local
   * Una dirección IP para el dispositivo HCX Manager.
-  * Una para cada InterConnect Appliance, más una si hay una red de vMotion separada. 
+  * Una para cada InterConnect Appliance, más una si hay una red de vMotion separada.
   * Uno para cada extensión de red estándar
 
 * IBM Cloud
-  * Dos direcciones IP por dispositivo de HCX Manager conectadas a IBM Cloud. Las direcciones se pueden utilizar para conectarse a Internet o a una o más líneas de Direct Connect. 
+  * Dos direcciones IP por dispositivo de HCX Manager conectadas a IBM Cloud. Las direcciones se pueden utilizar para conectarse a Internet o a una o más líneas de Direct Connect.
   * Una más una si hay una conexión de red de vMotion separada.
 
 ## Descarga OVA del lado del cliente
@@ -76,7 +76,7 @@ También se proporciona una clave de registro de un solo uso. Utilice los pasos 
 ## Instalación y configuración de HCX en el origen
 {: #hcxclient-vcs-client-deployment-install-cfg-src}
 
-La instalación local implica desplegar el dispositivo de gestión de HCX y registrarlo con el entorno de vCenter. 
+La instalación local implica desplegar el dispositivo de gestión de HCX y registrarlo con el entorno de vCenter.
 
 ### Instalación del dispositivo HCX Manager
 {: #hcxclient-vcs-client-deployment-install-cfg-src-install-hma}
@@ -119,7 +119,7 @@ continuar.
   * Revise los valores de Hybrid Cloud Services y pulse **Finalizar**. El dispositivo Hybrid Cloud Services puede tardar varios minutos en encenderse.
   * Para comprobar el estado, vaya a la página de inicio de vSphere Web Client y, en el separador **Inicio**, vaya a **Inventarios** y pulse **Hosts y clústeres**. Amplíe la jerarquía del centro de datos y pulse la máquina virtual de servicio de Hybrid Cloud Services para visualizar un resumen en el panel central.
   * Examine el separador **Resumen**; la consola muestra **Encendido** y el botón **Reproducir** está verde.
-10. HCX Manager está encendido y listo para que se registre con vCenter en instalación local. 
+10. HCX Manager está encendido y listo para que se registre con vCenter en instalación local.
 
 ## Configuración inicial del dispositivo HCX Manager
 {: #hcxclient-vcs-client-deployment-inital-config}
@@ -136,9 +136,9 @@ continuar.
 {: #hcxclient-vcs-client-deployment-import-cert}
 
 1. Inicie la sesión en la interfaz de administración de HCX Manager `https://<IP>:9443`
-2. Seleccione el separador **Administración**, bajo **Certificado** ->**Certificado CA de confianza**
+2. Seleccione el separador **Administración**, bajo **Certificado** -> **Certificado CA de confianza**
 3. Importar sitio web del servidor de vSphere
-   1. Seleccione la importación de certificados desde URL y clave en el URL de registro del lado de la nube HCX. 
+   1. Seleccione la importación de certificados desde URL y clave en el URL de registro del lado de la nube HCX.
      * Sao Paulo: `https://ssao01dirhcx01.vmware-solutions.cloud.ibm.com`
 
 ## Procedimiento para registrar HCX Manager con vCenter/SSO/NSX
@@ -152,16 +152,16 @@ continuar.
     * Por ejemplo, `https://My-vCenter` o `https://10.108.26.211`.
   4. Escriba el nombre de usuario y la contraseña de vCenter Server. La cuenta que se utilice debe tener el rol de administrador de vCenter.
   5. Pulse **Aceptar**. No se reinicie cuando aparezca el mensaje _Se tiene que reiniciar la app_.
-3. Configure el servicio de SSO/búsqueda. 
+3. Configure el servicio de SSO/búsqueda.
   6. Pulse el separador **Gestionar**.
   7. Pulse **Editar** junto al cuadro de texto **URL del servicio de
-búsqueda**. 
+búsqueda**.
   8. Especifique el punto final de servicio de red de búsqueda en el formato siguiente:
     * Para vCenter Server 6.5 `https://psc/`
-  9.  Proporcione los detalles de NSX si es necesario. 
+  9.  Proporcione los detalles de NSX si es necesario.
   10. Pulse **Aceptar**. No reinicie cuando aparezca un mensaje para reiniciar el motor web.
 4. Pulse el separador **Resumen** y busque la sección **Componentes de gestión de Hybridity**. Detenga e inicie tanto el motor de aplicaciones y el motor web.
-5. Para finalizar el registro, finalice la sesión en el cliente web de vSphere. Vuelva a iniciar la sesión en el cliente web de vSphere para verificar que el separador HCX esté presente. 
+5. Para finalizar el registro, finalice la sesión en el cliente web de vSphere. Vuelva a iniciar la sesión en el cliente web de vSphere para verificar que el separador HCX esté presente.
 
 ## Resultados
 {: #hcxclient-vcs-client-deployment-reg-vcenter-results}

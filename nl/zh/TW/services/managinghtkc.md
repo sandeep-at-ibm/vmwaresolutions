@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: HTKC WebGUI, HTKC console, enable internet HTKC
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -67,7 +68,7 @@ subcollection: vmware-solutions
 6. 若要設定 VM 的靜態路徑，請按一下**管理網路設定 > 管理靜態路徑 > 新增靜態路徑**。將**網址**設定為 `10.0.0.0/8`，將**閘道**設定為前一步驟中記下的 IP 位址。
 7. 若要設定 VM 的預設閘道 IP，請按一下**管理網路設定 > 顯示現行網路配置**。如果得到警告訊息，請按一下**確定**，然後按一下**自訂配置**。將**閘道**欄位設定為步驟 2 中記下的專用上行鏈路 IP 位址，然後按一下**確定**。等待直到新的網路配置已安裝且網路服務已重新啟動。
 8. 如果您看到訊息，要求 HyTrust SecureOS 重新鑑別，請按一下**確定**，並輸入此安裝之另一台 HyTrust VM 的 IP 位址。如果系統要求您輸入 16 個字元的通行詞組，請按 Enter 鍵回到主功能表。驗證現行網路配置，以確保您的變更已套用。
-9. 若要確認 VM 能存取網際網路，請對公用 IP 位址或網站執行連線測試 (ping)。按一下**管理網路設定 > 網路診斷工具 > Ping 另一台伺服器**。鍵入公用網站位址，例如 `www.ibm.com`，按一下**確定**，然後等待顯示訊息，例如 `www.ibm.com responds to ping`。
+9. 若要確認 VM 能存取網際網路，請對公用 IP 位址或網站執行連線測試 (ping)。按一下**管理網路設定 > 網路診斷工具 > 測試另一台伺服器的入埠連接埠**。鍵入公用網站位址（例如 `www.ibm.com`）、按一下**確定**、鍵入 `80 443` 作為埠（或您要測試的任何其他埠），然後您應該會取得立即回應，其中顯示訊息類似 `80 (OK) 443 (OK)` 的入埠連接埠。
 10. 針對另一台 HyTrust VM 重複步驟 3 - 9。
 
 ## 相關鏈結
@@ -76,4 +77,4 @@ subcollection: vmware-solutions
 * [HyTrust KeyControl on {{site.data.keyword.cloud_notm}} 概觀](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htkc_considerations)
 * [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [常見問題](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [HyTrust 網站](https://www.hytrust.com/)
+* [HyTrust 網站](https://www.hytrust.com/){:external}

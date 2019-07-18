@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-20"
 
 keywords: vSphere scale cluster, scale vSphere, external vSphere cluster
 
@@ -26,14 +26,14 @@ subcollection: vmware-solutions
 {: #vs_orderingforclustersoutside-req}
 
 Assegure-se de que tenha concluído as tarefas a seguir:
-*  Você configurou as credenciais de infraestrutura do {{site.data.keyword.cloud_notm}} na página **Configurações**. Para obter mais informações, veja [Gerenciando contas de usuários e configurações](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount).
-*  Você revisou os requisitos e as considerações em [Requisitos e planejamento para o VMware vSphere
+* Você configurou as credenciais de infraestrutura do {{site.data.keyword.cloud_notm}} na página **Configurações**. Para obter mais informações, veja [Gerenciando contas de usuários e configurações](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount).
+* Você revisou os requisitos e as considerações em [Requisitos e planejamento para o VMware vSphere
 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning).
 
 ## Procedimento para escalar clusters criados fora do console
 {: #vs_orderingforclustersoutside-procedure}
 
-1. No catálogo do {{site.data.keyword.cloud_notm}}, clique em **VMware** na área de janela de navegação à esquerda e, em seguida, clique em **VMware vSphere** na seção **Datacenters virtuais**.
+1. No catálogo do {{site.data.keyword.cloud_notm}}, clique no ícone **VMware** da área de janela de navegação esquerda e, em seguida, clique no cartão **VMware vSphere on IBM Cloud** da seção **Data centers virtuais do VMware**.
 2. Na página **VMware vSphere on IBM Cloud**, clique em **Criar**.  
    Assegure-se de que está na guia **Criar novo** e que **Novo cluster** está exibido na lista **Configurações de cluster**.
 3. Crie um cluster com as mesmas configurações que o cluster existente que foi criado fora do console do {{site.data.keyword.vmwaresolutions_short}}. Para obter mais informações, veja [Pedindo novos clusters vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances).  

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-06-26"
 
 keywords: VMware HCX standalone, HCX on-premises, order HCX
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # Ordine di istanze VMware HCX on IBM Cloud in loco
 {: #standalone_orderingserviceinstances}
@@ -52,4 +54,4 @@ Visualizza e gestisci l'istanza HCX on {{site.data.keyword.cloud_notm}} in loco 
 * [Visualizzazione delle istanze HCX on {{site.data.keyword.cloud_notm}} in loco](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_viewingserviceinstances)
 * [Eliminazione di istanze HCX on {{site.data.keyword.cloud_notm}} in loco](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_deletingserviceinstances)
 * [Glossario dei termini HCX](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
-* [Documentazione di VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)
+* [Documentazione di VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources){:external}

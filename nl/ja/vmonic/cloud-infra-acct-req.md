@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-31"
+lastupdated: "2019-06-18"
 
 keywords: user account, user permissions, VRF account
 
@@ -29,8 +29,6 @@ subcollection: vmware-solutions
 
 許可ユーザーは、{{site.data.keyword.slportal}}で {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの権限を確認したり更新したりできます。 詳しくは、『[ユーザーのカスタマー・ポータル許可の編集](/docs/customer-portal?topic=customer-portal-customerportal_accuserprof#cp_editusercpperm){:new_window}』を参照してください。
 
-表 1. {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントに必要な権限
-
 | 権限         | 詳細                                 |
 |:------------------ |:--------------------------------------- |
 | サーバーの追加 | この権限は、VMware ESXi を実行する {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}を注文するときと、インスタンスの構成、保守、サポートの操作に使用する仮想サーバーを時間単位でプロビジョンするときに必要です。 |
@@ -49,6 +47,7 @@ subcollection: vmware-solutions
 | ライセンスの表示 | この権限は、インスタンスで使用しているライセンスを取得して確認するときに必要です。 |
 | パスワードの表示 | この許可は注文した VSI を管理するために必要です。 |
 | サーバー・モニタリングの管理 | この権限は、注文を実行するときには不要ですが、インスタンス内で VMware ESXi サーバーを実行している {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}のモニタリング状況を取得して確認するときに必要です。 |
+{: caption="表 1. {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントに必要な権限" caption-side="top"}
 
 ## サービス・エンドポイントを有効にした VRF
 {: #cloud-infra-acct-req-vrf-se}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-06-21"
 
 keywords: vCenter Server update, patch vCenter Server, IBM component update
 
@@ -44,26 +44,12 @@ Développez l'entrée de mise à jour en cliquant sur la flèche vers le bas et 
 * L'impact de la mise à jour sur l'environnement virtuel VMware. Le tableau 1 indique comment les différents niveaux des mises à jour affectent le système.
 * Les détails de la mise à jour.
 
-Tableau 1. Niveaux de mise à jour et impact
-
-<table>
-  <tr>
-    <th>Niveau de mise à jour</th>
-    <th>Impact</th>
-  </tr>
-  <tr>
-    <td>Faible</td>
-    <td>Cette mise à jour n'affecte aucun système. Vous n'avez pas à l'appliquer pendant un temps d'indisponibilité planifié.</td>
-  </tr>
-  <tr>
-    <td>Moyen</td>
-  <td>Cette mise à jour peut affecter certains systèmes. Il est recommandé de l'appliquer pendant un temps d'indisponibilité planifié.</td>
-  </tr>
-    <tr>
-    <td>Majeur</td>
-  <td>Cette mise à jour affecte certains ou tous les systèmes. Vous devez l'appliquer pendant un temps d'indisponibilité planifié.</td>
-  </tr>
-</table>
+| Niveau de mise à jour | Impact |
+|:------------ |:------ |
+| Faible | Cette mise à jour n'affecte aucun système. Vous n'avez pas à l'appliquer pendant un temps d'indisponibilité planifié. |
+| Moyen |  Cette mise à jour peut affecter certains systèmes. Il est recommandé de l'appliquer pendant un temps d'indisponibilité planifié. |
+| Majeur | Cette mise à jour affecte certains ou tous les systèmes. Vous devez l'appliquer pendant un temps d'indisponibilité planifié. |
+{: caption="Tableau 1. Niveaux de mise à jour et impact" caption-side="top"}
 
 ## Procédure de mise à jour des composants de gestion IBM (instances de la version 2.1 à la version 2.4)
 {: #vc_applyingupdates-procedure}
@@ -89,38 +75,15 @@ Tableau 1. Niveaux de mise à jour et impact
 
 2. Pour plus d'informations sur les statuts de mise à jour, voir le tableau suivant.
 
-   Tableau 2. Détails relatifs aux statuts de mise à jour
-
-    <table>
-      <tr>
-        <th>Statut</th>
-        <th>Détails</th>
-      </tr>
-      <tr>
-        <td>Disponible</td>
-        <td>La mise à jour est disponible pour application. Vous ne pouvez pas sélectionner une mise à jour disponible tant que toutes ses mises à jour précédentes n'ont pas été appliquées.</td>
-      </tr>
-      <tr>
-        <td>En cours</td>
-      <td>L'opération de mise à jour a été lancée mais n'est pas encore terminée. Vous ne pouvez appliquer aucune autre mise à jour tant que l'opération de mise à jour en cours n'est pas terminée. </td>
-      </tr>
-        <tr>
-        <td>Installé</td>
-      <td>Le travail de mise à jour est terminé. Le composant correspondant de la plateforme VMware est mis à jour.</td>
-      </tr>
-        <tr>
-        <td>Echec</td>
-      <td>Le travail de mise à jour a échoué. La console signale l'échec de la mise à jour. Consultez l'erreur signalée et corrigez le problème avant d'appliquer de nouveau la mise à jour.</td>
-      </tr>
-          <tr>
-        <td>Planifié</td>
-      <td>Le travail de mise à jour est planifié pour une date ultérieure. Il commence automatiquement au moment planifié.</td>
-      </tr>
-          <tr>
-        <td>Inconnu</td>
-      <td>Le statut du travail de mise à jour est inconnu. Contactez le support IBM pour obtenir de l'aide.</td>
-      </tr>
-    </table>
+| Statut | Détails |
+|:------ |:------- |
+| Disponible | La mise à jour est disponible pour application. Vous ne pouvez pas sélectionner une mise à jour disponible tant que toutes ses mises à jour précédentes n'ont pas été appliquées. |
+| En cours | L'opération de mise à jour a été lancée mais n'est pas encore terminée. Vous ne pouvez appliquer aucune autre mise à jour tant que l'opération de mise à jour en cours n'est pas terminée. |
+| Installé | Le travail de mise à jour est terminé. Le composant correspondant de la plateforme VMware est mis à jour. |
+| Echec | Le travail de mise à jour a échoué. La console signale l'échec de la mise à jour. Consultez l'erreur signalée et corrigez le problème avant d'appliquer de nouveau la mise à jour. |
+| Planifié | Le travail de mise à jour est planifié pour une date ultérieure. Il commence automatiquement au moment planifié. |
+| Inconnu | Le statut du travail de mise à jour est inconnu. Contactez le support IBM pour obtenir de l'aide. |
+{: caption="Tableau 2. Détails relatifs aux statuts de mise à jour" caption-side="top"}
 
 3. Si le processus de mise à jour échoue à une étape spécifique, [contactez le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support) pour obtenir de l'aide. Il vous expliquera comment résoudre le problème et vous aidera à appliquer les mises à jour et les correctifs à partir de l'étape où elle a échoué.
 

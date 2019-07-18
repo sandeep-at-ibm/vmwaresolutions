@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-06-28"
 
 keywords: view vCenter Server, view instance, view instance details
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -31,8 +32,6 @@ Para ver un resumen de todas las instancias de vCenter Server que se han suminis
 2. En el banner de la consola, pulse el icono de la cuenta de usuario y, a continuación, pulse el campo **Cuenta** para seleccionar la cuenta de usuario para la que desea comprobar las instancias.  
 3. En la tabla **Instancias de vCenter Server**, visualice la lista de instancias que se han suministrado en la cuenta de usuario seleccionada.
 
-Tabla 1. Elementos de la instancia de vCenter Server
-
 | Elemento        | Descripción       |  
 |:------------- |:------------- |
 | Nombre | El nombre de la instancia |
@@ -41,10 +40,9 @@ Tabla 1. Elementos de la instancia de vCenter Server
 | Ubicación | El {{site.data.keyword.CloudDataCent_notm}} en el que se aloja la instancia |  
 | Hora de creación | La fecha y hora en que se ha creado la instancia |
 | Estado | El estado de la instancia |   
+{: caption="Tabla 1. Elementos de la instancia de vCenter Server" caption-side="top"}
 
 La instancia puede tener una serie de estados.
-
-Tabla 2. Descripciones de los estados de las instancias de vCenter Server
 
 | Estado        | Descripción       |
 |:------------- |:------------- |
@@ -56,6 +54,7 @@ Tabla 2. Descripciones de los estados de las instancias de vCenter Server
 | Suprimiendo | La instancia se está suprimiendo. |
 | Error de supresión | Se ha producido un error cuando se estaba suprimiendo la instancia. |
 | Suprimido | La instancia se ha suprimido. |
+{: caption="Tabla 2. Descripciones de los estados de las instancias de vCenter Server" caption-side="top"}
 
 ## Procedimiento para visualizar los detalles de propiedad de la instancia de vCenter Server
 {: #vc_viewinginstances-procedure-view-inst-property}
@@ -64,8 +63,6 @@ Para ver los detalles de las propiedades de una instancia:
 
 1. En la tabla **Instancias de vCenter Server**, pulse un nombre de instancia.
 2. En **Propiedades**, consulte los detalles de la instancia.
-
-Tabla 3. Propiedades de la instancia de vCenter Server
 
 | Propiedad        | Descripción       |
 |:------------- |:------------- |
@@ -82,13 +79,12 @@ Tabla 3. Propiedades de la instancia de vCenter Server
 | DNS, Subdomain | El subdominio es el nombre del subdominio DNS del nombre del dominio raíz en el que residen los nombres de host de la instancia local de vCenter Server. El nombre del subdominio está en el formato <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp>. |
 | Hybridity Bundle | Indica si está instalado vCenter Server con el paquete híbrido (Hybridity). |
 | Estado  | El estado de la instancia.<br><br>La información que se muestra proporciona una actualización sobre el progreso del despliegue o de la acción que se realiza sobre la instancia. Si hay algún problema, se muestra un mensaje para ayudarle a investigar y a resolver el problema. |
+{: caption="Tabla 3. Propiedades de la instancia de vCenter Server" caption-side="top"}
 
 ## Procedimiento para visualizar la información de acceso para las instancias de vCenter Server
 {: #vc_viewinginstances-procedure-view-access-info}
 
 En **Información de acceso**, consulte la información de acceso para los componentes relacionados con la instancia. Las contraseñas que se muestran son contraseñas iniciales que genera el sistema. Si las cambia fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}, no se actualizarán en la página de resumen de la instancia.
-
-Tabla 4. Información de acceso de vCenter Server correspondiente a los componentes relacionados con la instancia
 
 | Componente        | Descripción       |
 |:------------- |:------------- |
@@ -102,18 +98,18 @@ Tabla 4. Información de acceso de vCenter Server correspondiente a los componen
 | vCenter FQDN  | El nombre de dominio completo de vCenter Server (FQDN).  |
 | vCenter ADMIN  | El nombre de usuario y la contraseña de inicio de sesión único de VMware vCenter que puede utilizar para iniciar una sesión en vCenter Server mediante el cliente web de vSphere.  |
 | vCenter SSH  | El nombre de usuario y la contraseña que puede utilizar para acceder a vCenter Server VM mediante una conexión SSH.  |
+{: caption="Tabla 4. Información de acceso de vCenter Server correspondiente a los componentes relacionados con la instancia" caption-side="top"}
 
 ## Procedimiento para visualizar el historial de despliegues de las instancias de vCenter Server
 {: #vc_viewinginstances-procedure-view-deploy-history}
 
 Pulse **Historial de despliegue** en el panel de navegación izquierdo para ver el historial de despliegue de la instancia.
 
-Tabla 5. Historial de despliegues de la instancia de vCenter Server
-
 | Elemento        | Descripción       |  
 |:------------- |:------------- |
 | Fecha | La fecha y hora en que se ha modificado el estado de la instancia |
 | Resumen | Los detalles del cambio |
+{: caption="Tabla 5. Historial de despliegues de la instancia de vCenter Server" caption-side="top"}
 
 ## Qué hacer si se producen errores
 {: #vc_viewinginstances-if-errors-occur}
@@ -130,7 +126,7 @@ Antes de pulsar la **Consola de vCenter** en la página de resumen de la instanc
 
 Revise los temas siguientes para obtener información que le ayudará a seguir las instrucciones de inicio de sesión:
 *  Para ver los requisitos y pasos necesarios antes de acceder al cliente web de vSphere, consulte [Se ha alcanzado el tiempo de espera al conectar con el cliente web de vSphere](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_timeout_vc_console).
-*  Para ver una lista de puntos de acceso para iniciar una sesión en la red privada de la infraestructura de {{site.data.keyword.cloud_notm}} utilizando VPN, consulte [Acceso VPN](http://www.softlayer.com/vpn-access){:new_window}.
+*  Para ver una lista de puntos de acceso para iniciar una sesión en la red privada de la infraestructura de {{site.data.keyword.cloud_notm}} utilizando VPN, consulte [Acceso VPN](http://www.softlayer.com/vpn-access){:external}.
 *  Si tiene problemas al desplegar un archivo OVF (Open Virtualization Format) mediante el cliente web de vSphere, consulte [Despliegue de un archivo OVF mediante el cliente web de vSphere](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_deploy_ovf).
 
 ## Enlaces relacionados

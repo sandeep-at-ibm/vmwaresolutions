@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-18"
 
 keywords: IAM user, user role, user permission
 
@@ -38,18 +38,15 @@ I ruoli di gestione della piattaforma consentono agli utenti di eseguire attivit
 
 La seguente tabella fornisce informazioni sulle azioni associate ai ruoli di gestione della piattaforma.
 
-Tabella 1. Ruoli di gestione della piattaforma e azioni consentite
-
 | Ruolo di gestione della piattaforma | Azioni | Azioni di esempio |
 |:----------------- |:----------------- |:----------------- |
 | Visualizzatore | Azioni di sola lettura | Visualizzare il riepilogo delle istanze<br>Visualizzare i dettagli di un'istanza |
 | Editor | Aggiornare un'istanza specifica | Aggiungere o rimuovere i server ESXi<br>Aggiungere o rimuovere i cluster<br>Aggiungere o rimuovere i servizi<br>Aggiornare un'istanza a una versione superiore |
 | Operatore | Azioni di sola lettura | Elencare le istanze<br>Visualizzare i dettagli di un'istanza |
 | Amministratore | Accesso alla gestione completa | Creare nuove istanze<br>Eliminare istanze<br>Concedere l'accesso alla piattaforma ad altri utenti|
+{: caption="Tabella 1. Ruoli di gestione della piattaforma e azioni consentite" caption-side="top"}
 
 Per {{site.data.keyword.vmwaresolutions_short}}, esistono le seguenti azioni:
-
-Tabella 2. Descrizione delle azioni e ruoli richiesti
 
 | Azione | Operazione sul servizio | Ruolo |
 |:------ |:-------------------- |:---- |
@@ -58,6 +55,7 @@ Tabella 2. Descrizione delle azioni e ruoli richiesti
 | vmware-solutions.instances.view | Elencare le istanze<br>Visualizzare i dettagli di un'istanza | Visualizzatore, operatore, editor e amministratore |
 | vmware-solutions.instances.update | Aggiungere o rimuovere i server ESXi<br>Aggiungere o rimuovere i cluster<br>Aggiungere o rimuovere i servizi<br>Aggiornare un'istanza a una versione superiore | Editor e amministratore |
 | vmware-solutions.account.update | Aggiornare le impostazioni account | Amministratore |
+{: caption="Tabella 2. Descrizione delle azioni e ruoli richiesti" caption-side="top"}
 
 ## Gestione dell'accesso per gli utenti
 {: #iam-users}

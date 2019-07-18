@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-11"
+lastupdated: "2019-07-02"
 
 subcollection: vmware-solutions
 
@@ -24,7 +24,7 @@ subcollection: vmware-solutions
   <dt class="dt dlterm">실제 컴퓨팅</dt>
   <dd class="dd">실제 컴퓨팅은 가상화 인프라에서 사용하는 실제 처리와 메모리를 제공합니다. 이 디자인의 경우, 컴퓨팅 컴포넌트는 {{site.data.keyword.baremetal_long}}에 의해 제공되며 [VMware HCG(Hardware Compatibility Guide)](https://www.vmware.com/resources/compatibility/search.php)에 나열되어 있습니다.</dd>
   <dt class="dt dlterm">실제 스토리지</dt>
-  <dd class="dd">실제 스토리지는 가상화 인프라에서 사용하는 원시 스토리지 용량을 제공합니다. 스토리지 컴포넌트는 NFS v3<!-- or iSCSI -->를 사용하는 공유 NAS(Network Attached Storage) 어레이 또는 {{site.data.keyword.baremetal_short}}에 의해 제공됩니다.</dd>
+  <dd class="dd">실제 스토리지는 가상화 인프라에서 사용하는 원시 스토리지 용량을 제공합니다. 스토리지 컴포넌트는 NFS v3를 사용하는 공유 NAS(Network Attached Storage) 어레이 또는 {{site.data.keyword.baremetal_short}}에 의해 제공됩니다.</dd>
   <dt class="dt dlterm">실제 네트워크</dt>
   <dd class="dd">실제 네트워크는 해당 환경으로의 네트워크 연결을 제공하며, 이는 다시 네트워크 가상화에 의해 사용됩니다. 네트워크는 {{site.data.keyword.cloud_notm}} 서비스 네트워크에서 제공하며 여기에는 DNS 및 NTP 등의 추가 서비스가 포함되어 있습니다.</dd>
 </dl>
@@ -91,7 +91,7 @@ Bare Metal Server의 스펙은 다음과 같습니다.
 
 {{site.data.keyword.cloud_notm}}는 {{site.data.keyword.cloud_notm}} 인프라 내에서 사용되는 두 가지 유형의 IP 주소를 할당합니다.
 * 기본 IP 주소는 디바이스, 베어메탈 및 {{site.data.keyword.cloud_notm}}에서 프로비저닝하는 가상 서버에 지정됩니다. 이러한 블록에 IP 주소를 지정하지 마십시오.
-* 포터블 IP 주소는 사용자가 필요에 따라 지정 및 관리할 수 있도록 제공됩니다. vCenter Server는 용도에 맞게 여러 포터블 IP 범위를 사용합니다. 고객 사용을 위해 지정된 특정 NSX-T 또는 NSX-V 컴포넌트에 지정된 포터블 범위만 사용하십시오.  예를 들면, **Customer EDGE**입니다.
+* 포터블 IP 주소는 사용자가 필요에 따라 지정 및 관리할 수 있도록 제공됩니다. vCenter Server는 용도에 맞게 여러 포터블 IP 범위를 사용합니다. 고객 사용을 위해 지정되고 특정 NSX-T 또는 NSX-V 컴포넌트에 지정된 포터블 IP 주소 범위만 사용하십시오. 예를 들면, **Customer EDGE**입니다.
 
 기본 및 포터블 IP 주소는 계정이 **VRF(virtual Virtual and Forwarding)** 계정으로 구성된 경우에 사용자 계정 내에서 임의의 VLAN으로 라우팅 가능합니다.
 
@@ -128,7 +128,6 @@ vCenter Server 오퍼링 내에서 사용되는 베어메탈 서버의 경우 �
 * 나머지 서브넷은 스토리지 트래픽에 사용됩니다.
    * vSAN을 사용할 때 서브넷은 vSAN 트래픽에 사용되는 커널 포트 그룹에 지정됩니다.
    * NFS 연결 NAS를 사용할 때 서브넷은 NFS 트래픽 전용인 포트 그룹에 지정됩니다.
-<!--* For iSCSI attachment, two port groups are created to allow multipathing active-active across both private NIC ports as only one NIC port can be active at a time per the VMware iSCSI documentation.-->
 
 vCenter Server 자동화된 배치의 일부로 구성된 모든 서브넷은 {{site.data.keyword.cloud_notm}} 관리 범위를 사용합니다. 이는 지금 또는 향후에 연결이 필요할 때 {{site.data.keyword.cloud_notm}} 계정 내의 임의의 데이터 센터로 IP 주소가 라우팅될 수 있도록 보장합니다.
 
@@ -145,7 +144,6 @@ vCenter Server 자동화된 배치의 일부로 구성된 모든 서브넷은 {{
 | 사설 B |포터블 | vSAN용으로 지정된 단일 서브넷(사용 중인 경우) |
 | 사설 B |포터블 | NAS용으로 지정된 단일 서브넷(사용 중인 경우) |
 | 사설 B |포터블 | vMotion용으로 지정된 단일 서브넷 |
-<!--| Private B | Portable | Two subnets assigned for iSCSI NAS, if in use (one per physical NIC port) |-->
 
 이 디자인에서 모든 VLAN 지원 호스트 및 가상 머신은 기본 라우트로서 {{site.data.keyword.cloud_notm}} 백엔드 “사설 네트워크” 고객 라우터(BCR)를 지시하도록 구성됩니다. vCenter Server 인스턴스로 인해 SDN(Software-Defined Networking)의 사용은 가능하지만, 내부 서브넷으로의 라우팅이 포함된 VMware 인스턴스 내에서 작성된 네트워크 오버레이를 {{site.data.keyword.cloud_notm}} 관리 라우터는 알지 못합니다.
 
@@ -175,29 +173,13 @@ vSphere ESXi 하이퍼바이저는 지속적 위치에 설치됩니다. 따라�
 
 공유 파일 스토리지를 사용하는 경우에는 2TB NFS 공유가 초기 VMware 클러스터를 구성하는 호스트에 연결됩니다. 관리 공유라고 하는 이 공유는 VMware vCenter Server, Platform Services Controller 및 VMware NSX 등의 관리 컴포넌트에 사용됩니다.
 
-스토리지는 IBM Cloud에서 2 IOPS/GB 레벨에서 NFSv3 프로토콜을 사용하여 연결됩니다. 
+스토리지는 IBM Cloud에서 2 IOPS/GB 레벨에서 NFSv3 프로토콜을 사용하여 연결됩니다.
 
 ![VMware 배치에 연결되는 NFS 공유](../../images/vcsv4radiagrams-ra-nfs-shares.svg "VMware 배치에 연결되는 NFS 공유: 관리 공유 및 고객 지정 공유")
 
 구매 시에 또는 나중에 콘솔 내에서 워크로드에 대한 모든 호스트 간의 추가 파일 공유를 할당하고 마운트할 수 있습니다. 대응되는 {{site.data.keyword.CloudDataCent_notm}}의 사용 가능한 {{site.data.keyword.cloud_notm}} Endurance 파일 스토리지 용량 옵션 및 성능 티어에서 선택할 수 있습니다. 모든 공유는 NFS v3 프로토콜을 사용하여 연결됩니다. 또한 NetApp ONTAP Select 오퍼링을 적용하여 NFS v3 파일 공유를 연결할 수 있습니다.
 
 10 IOPS/GB의 가용성은 IBM Cloud Data Center에 따라 달라집니다. 10 IOPS/GB 성능 티어를 제공하는 {{site.data.keyword.CloudDataCents_notm}}에는 저장 데이터의 제공자 관리 암호화(AES-256 암호화)도 포함되어 있으며, 올플래시(all-flash) 스토리지에 의해 백업됩니다. 10 IOPS/GB 성능 티어는 4TB의 최대 용량으로 제한됩니다. 이 스토리지에서 사용된 공유 NAS에 대한 자세한 정보는 [공유 스토리지 아키텍처](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits)를 참조하십시오.
-
-<!--
-### Shared iSCSI storage
-{: #design_physicalinfrastructure-shared-iscsi}
-
-This architecture allows you to use iSCSI storage, however iSCSI storage is not automatically provisioned by IBM Cloud for VMware Solutions. You can provision it manually.
-
-Similar to NFS, for shared iSCSI storage, one 2-TB iSCSI LUN will be attached to the hosts that comprise the initial VMware cluster. This iSCSI LUN is used for management components such as the VMware vCenter Server, Platform Services Controller, and VMware NSX. The storage is attached through the iSCSI protocol at a 2 IOPS/GB level from IBM Cloud.
-
-![iSCSI LUNs attached to VMware deployment](../../images/vcsv4radiagrams-ra-iscsi-lun.svg "iSCSI LUNs attached to VMware deployment"){: caption="Figure 5. iSCSI LUNs attached to VMware deployment" caption-side="bottom"}
-
-Additional iSCSI LUNs for workloads can also be allocated and mounted across all hosts. Select from the available IBM Cloud Endurance block storage capacity options and performance tiers in the corresponding IBM Cloud Data Center. All LUNs are attached by using the iSCSI protocol. Additionally, it is possible to attach iSCSI LUNs from the NetApp ONTAP Select offering.
-
-The availability of the 10 IOPS/GB depends on the IBM Cloud Data Center. Data centers that offer the 10 IOPS/GB performance tier also include provider–managed encryption of data at rest (AES–256 encryption), and are backed by all–flash storage. The 10 IOPS/GB performance tier is limited to a maximum capacity of 4 TB.
-
--->
 
 이 스토리지에서 사용된 공유 NAS에 대한 자세한 정보는 [공유 스토리지 아키텍처](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits)를 참조하십시오.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-01"
 
 subcollection: vmware-solutions
 
@@ -37,7 +37,7 @@ HCX 服务网组件负责在客户机和云端之间创建数据和控制平面�
 
 - 互联设备 (HCX-IX) - 互联设备创建支持 vMotion 和复制（批量迁移）流量的加密隧道。
 - WAN Optimizer 设备 (HCX-WAN) - HCX 包含可选择部署的 Silver Peak™ WAN 优化设备。它会部署为 VM 设备。部署后，CGW 隧道流量会重定向，以遍历 WAN Optimizer。由于 WAN Optimizer 可显著降低 WAN 上的流量（据观察，通常比率为 3:1 到 6:1），同时提高了连接可靠性，因此建议始终对 CGW 部署 WAN Optimizer。部署 WAN Optimizer 的额外好处是，可限制 VM 迁移流量使用的 WAN 带宽。缺省情况下，未配置 WAN Optimizer 管理界面。
-- 网络扩展 (HX-NE) - 提供第 2 层网络扩展功能，支持在内部部署位置和 vSphere 环境之间迁移，需要重新设定虚拟机的 IP。
+- 网络扩展 (HX-NE) - 提供第 2 层网络扩展功能，支持在内部部署位置和 vSphere 环境之间迁移，需要为 VM 重新分配 IP 地址。
 - 代理 ESXi 主机 - 每当将 HCX-IX 配置为连接到云端 HCX 站点时，都会在任何集群外部的 vCenter 中显示代理 ESXi 主机。此 ESXi 主机的管理和 vMotion IP 地址与对应的 HCX-IX 设备相同。这支持客户机和云端的 vSphere 环境像执行本地 vMotion 一样正常运行。此方法的优点如下：
   - 任一端的管理 IP 范围可能重叠，但功能不会丢失。
   - 云端无法查看客户机端的 vSphere，因此安全性更高。

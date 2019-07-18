@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-06-26"
 
 keywords: single-node trial, migration app modernization, tech specs migration app modernization
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -29,7 +30,7 @@ La versione di prova è progettata per la migrazione di massimo 20 semplici cari
 Single-node Trial for Migration and App Modernization è solo per una prova di utilizzo. Non eseguire i carichi di lavoro di produzione su questo ambiente. Le funzioni di gestione come l'aggiunta e la rimozione di host e cluster, l'ordinazione di servizi aggiuntivi e l'applicazione di aggiornamenti non sono supportate.
 {:important}
 
-Per ottenere il massimo dall'istanza Single-node Trial, puoi utilizzare [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:new_window} da [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:new_window}, che può aiutarti a migrare i tuoi carichi di lavoro VMware in {{site.data.keyword.cloud_notm}}. Inoltre, [{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/){:new_window} può aiutarti ad accelerare la modernizzazione dell'applicazione attraverso le più recenti pratiche native cloud.
+Per ottenere il massimo dall'istanza Single-node Trial, puoi utilizzare [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:external} da [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:external}, che può aiutarti a migrare i tuoi carichi di lavoro VMware in {{site.data.keyword.cloud_notm}}. Inoltre, [{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/){:external} può aiutarti ad accelerare la modernizzazione dell'applicazione attraverso le più recenti pratiche native cloud.
 
 Questa versione di prova è destinata ad essere utilizzata per un massimo di 90 giorni. Al termine della versione di prova, puoi eliminare questo ambiente ed eseguire il provisioning di un nuovo ambiente che soddisfi le tue esigenze di capacità.
 {:note}
@@ -141,12 +142,12 @@ Ulteriori dispositivi HCX vengono distribuiti durante la configurazione in base 
 ## Specifiche tecniche per IBM Cloud Automation Manager
 {: #cloud_modern_bundle_overview-cam-tech-specs}
 
-{{site.data.keyword.cloud_notm}} Automation Manager 3.1.2 viene installato utilizzando la topologia di sviluppo/test su tutte le istanze Single-node Trial for Migration and App Modernization. Per ulteriori informazioni su {{site.data.keyword.cloud_notm}} Automation Manager, vedi [{{site.data.keyword.cloud_notm}} Automation Manager documentation](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: new_window}.
+{{site.data.keyword.cloud_notm}} Automation Manager 3.1.2 viene installato utilizzando la topologia di sviluppo/test su tutte le istanze Single-node Trial for Migration and App Modernization. Per ulteriori informazioni su {{site.data.keyword.cloud_notm}} Automation Manager, vedi [{{site.data.keyword.cloud_notm}} Automation Manager documentation](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: external}.
 
 ## Link correlati
 {: #cloud_modern_bundle_overview-related}
 
 * [Guida di vCenter Server e {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [Apri un ticket per {{site.data.keyword.cloud_notm}} privato](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
-* [Risorse VMware HCX](https://hcx.vmware.com/#/docs){:new_window}
-* [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}
+* [Apri un ticket per {{site.data.keyword.cloud_notm}} privato](https://www.ibm.com/mysupport/s/?language=en_US){:external}
+* [Risorse VMware HCX](https://hcx.vmware.com/#/docs){:external}
+* [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-26"
 
 keywords: FAQ, host, ESXi server
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -43,7 +44,7 @@ Para instâncias implementadas na V2.1 ou anterior, deve-se ativar o suporte vSA
 
    `esxcli system settings advanced set -o /Net/TcpipHeapMax -i 1576`
 
-2. Reinicie cada servidor ESXi. Para obter mais informações, veja [Criando um cluster vSAN 6.x com até 64 hosts](https://kb.vmware.com/s/article/2110081).
+2. Reinicie cada servidor ESXi. Para obter mais informações, veja [Criando um cluster vSAN 6.x com até 64 hosts](https://kb.vmware.com/s/article/2110081).{:external}
 3. Talvez seja necessário aumentar o tamanho do vCenter Server para acomodar as máquinas virtuais incluídas e os servidores ESXi.
 4. Abra um chamado de suporte IBM para indicar que você aplicou as mudanças no vSAN manualmente, concluindo as etapas de 1 a 3. No chamado, solicite que sua instância atualizada esteja ativada para servidores ESXi além de 32.
 

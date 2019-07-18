@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-28"
 
 keywords: vSphere order cluster, order vSphere, order vSphere cluster
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -51,14 +52,13 @@ Sélectionnez les composants VMware à commander avec votre cluster et spécifie
 
 Si vous êtes un partenaire commercial IBM, vous pouvez sélectionner une offre groupée de licences de composant lorsque vous commandez un nouveau cluster vSphere. Les offres groupées suivantes sont disponibles :
 
-Tableau 1. Offres groupées de composants pour les clusters vSphere réservées aux partenaires commerciaux IBM
-
 | Offre groupée | Composants                   |
 |:------------------------- |:----------------------- |
 | Standard with Management | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vRealize Operations Enterprise |
 | Advanced                 | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vCloud Director, NSX Base |
 | Advanced with Networking | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, NSX Advanced |
 | Advanced with Networking and Management | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vRealize Operations Enterprise, vCloud Director, NSX Enterprise |
+{: caption="Tableau 1. Offres groupées de composants pour les clusters vSphere réservées aux partenaires commerciaux IBM" caption-side="top"}
 
 Vous pouvez également inclure dans votre commande les composants VMware suivants :
 * VMware vSAN
@@ -104,7 +104,9 @@ L'utilisation de clés de licence individuelles avec les clés de licence combin
 
 Sélectionnez l'{{site.data.keyword.CloudDataCent_notm}} dans lequel le cluster doit être hébergé.
 
-**Remarques :**
+#### Remarques
+{: #vs_orderinginstances-notes}
+
 * Si vous sélectionnez un composant vSAN, la liste des emplacements est filtrée par disponibilité SSD.
 * Les serveurs bare metal Broadwell ne sont pas disponible dans le centre de données **FRA05 de Francfort**.
 * Les serveurs bare metal Broadwell certifiés SAP ne sont pas disponible dans le centre de données **LON05 de Londres**.
@@ -114,13 +116,12 @@ Sélectionnez l'{{site.data.keyword.CloudDataCent_notm}} dans lequel le cluster 
 
 Lorsque vous sélectionnez **Skylake**, vous pouvez choisir la combinaison de modèle d'UC et de mémoire RAM de serveur bare metal adaptée à vos besoins. Les options disponibles varient selon que vous avez ou non sélectionné le composant VMware vSAN.
 
-Tableau 2. Options pour les serveurs Skylake {{site.data.keyword.baremetal_short}}
-
 | Options de modèle d'UC        | Options de RAM       |
 |:------------- |:------------- |
 | Processeur Dual Intel Xeon Silver 4110/16 coeurs au total, 2,1 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
 | Processeur Dual Intel Xeon Gold 5120/28 coeurs au total, 2,2 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
 | Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
+{: caption="Tableau 2. Options pour les serveurs Skylake {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 ### Certifiés SAP
 {: #vs_orderinginstances-sap}
@@ -141,12 +142,11 @@ En fonction de vos besoins, sélectionnez une configuration de serveur bare meta
 
 Lorsque vous sélectionnez **Broadwell**, vous pouvez choisir la combinaison de modèle d'UC et de mémoire RAM de serveur bare metal adaptée à vos besoins. Les options disponibles varient selon que vous avez ou non sélectionné le composant VMware vSAN.
 
-Tableau 3. Options pour les serveurs Broadwell {{site.data.keyword.baremetal_short}}
-
 | Options de modèle d'UC        | Options de RAM       |
 |:------------- |:------------- |
 | Quad Intel Xeon E7-4820 v4/40 coeurs au total, 2,0 GHz | 128 Go, 256 Go, 512 Go, 1 To, 2 To, 3 To |
 | Quad Intel Xeon E7-4850 v4/64 coeurs au total, 2,1 GHz | 128 Go, 256 Go, 512 Go, 1 To, 2 To, 3 To |
+{: caption="Tableau 3. Options pour les serveurs Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 ### Nombre de serveurs bare metal
 {: #vs_orderinginstances-bare-metal-number}
@@ -235,7 +235,9 @@ En fonction de l'{{site.data.keyword.CloudDataCent_notm}} que vous avez sélecti
   * **Sous-réseau principal**, affecté aux hôtes physiques pour l'accès au réseau public.
   * **Sous-réseau privé principal**, affecté aux hôtes physiques pour le trafic de gestion.
 
-**Important :**
+##### Important
+{: #vs_orderinginstances-important}
+
 * Vérifiez que la configuration de pare-feu sur les VLAN sélectionnés ne bloque pas le trafic des données de gestion.
 * Vérifiez que tous les VLAN sélectionnés se trouvent dans le même pod. Les serveurs ESXi ne peuvent pas être mis à disposition sur des VLAN multi-pods.
 
@@ -247,14 +249,14 @@ Vous pouvez également choisir d'inclure la paire à haute disponibilité de dis
 ## Récapitulatif de la commande
 {: #vs_orderinginstances-order-summary}
 
-Selon la configuration que vous avez sélectionnée, le coût estimé est généré et affiché instantanément dans la section **Récapitulatif de la commande** sur le panneau de droite. Cliquez sur **Détails concernant la tarification** pour générer un document PDF contenant le récapitulatif des coûts pour les ressources {{site.data.keyword.vmwaresolutions_short}}. 
+Selon la configuration que vous avez sélectionnée, le coût estimé est généré et affiché instantanément dans la section **Récapitulatif de la commande** sur le panneau de droite. Cliquez sur **Détails concernant la tarification** pour générer un document PDF contenant le récapitulatif des coûts pour les ressources {{site.data.keyword.vmwaresolutions_short}}.
 
 Vous pouvez également ajouter les ressources mises à disposition à l’outil d’estimation {{site.data.keyword.cloud_notm}} en cliquant sur **Ajouter à l'estimation**. Cela est utile si vous souhaitez estimer le coût des ressources {{site.data.keyword.vmwaresolutions_short}} sélectionnées avec d'autres ressources {{site.data.keyword.cloud_notm}} que vous pourriez envisager d'acheter.
 
 ## Procédure de commande de clusters vSphere
 {: #vs_orderinginstances-procedure}
 
-1. Dans le catalogue {{site.data.keyword.cloud_notm}}, cliquez sur **VMware** dans le panneau de navigation de gauche, puis cliquez sur **VMware vSphere** dans la section **Centres de données virtuels**.
+1. Dans le catalogue {{site.data.keyword.cloud_notm}}, cliquez sur l'icône **VMware** dans le panneau de navigation de gauche, puis cliquez sur **VMware vSphere on IBM Cloud** dans la section **Centres de données virtuels VMware**.
 2. Sur la page **VMware vSphere on IBM Cloud**, cliquez sur **Créer**.  
    Vérifiez que vous vous trouvez sur l'onglet **Créer** et que **Nouveau cluster** est affiché dans la liste **Configurations de cluster**.
 3. Entrez le nom du cluster.
@@ -263,7 +265,7 @@ Vous pouvez également ajouter les ressources mises à disposition à l’outil 
   * Si vous n'êtes pas un partenaire commercial, sélectionnez le composant, l'édition, le cas échéant, et spécifiez l'option de licence.
   Lorsque vous choisissez de fournir votre propre licence (mode BYOL) pour VMware vSphere Enterprise Plus, un ticket {{site.data.keyword.cloud_notm}} est ouvert automatiquement en votre nom pour demander que les licences vSphere par défaut sur vos serveurs {{site.data.keyword.baremetal_short}} commandés soient remplacées par vos propres licences.   
 
-    **Important :** vous êtes responsable du suivi du ticket afin de remplacer la licence vSphere sur les nouveaux serveurs ESXi commandés. De la sorte, {{site.data.keyword.cloud_notm}} accorde l'annulation des frais de licence vSphere de l'infrastructure {{site.data.keyword.cloud_notm}} initialement fournie. Pour remplacer votre licence ESXi vSphere, voir [Configuration des paramètres de licence pour un hôte ESXi](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}.
+    **Important :** vous êtes responsable du suivi du ticket afin de remplacer la licence vSphere sur les nouveaux serveurs ESXi commandés. De la sorte, {{site.data.keyword.cloud_notm}} accorde l'annulation des frais de licence vSphere de l'infrastructure {{site.data.keyword.cloud_notm}} initialement fournie. Pour remplacer votre licence ESXi vSphere, voir [Configuration des paramètres de licence pour un hôte ESXi](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:external}.
 5. Spécifiez les paramètres de serveur bare metal :
    1. Sélectionnez l'{{site.data.keyword.CloudDataCent_notm}} qui doit héberger le cluster.
    2. Sélectionnez la configuration de serveur bare metal.

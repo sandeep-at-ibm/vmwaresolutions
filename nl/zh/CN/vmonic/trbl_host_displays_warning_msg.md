@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-26"
 
 keywords: troubleshooting, configuration issue, ESXi server issue
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # ESXi 服务器显示配置问题
 {: #trbl_host_displays_warning_msg}
@@ -30,4 +32,4 @@ ESXi 服务器的**问题**选项卡中显示了以下消息：
 ## 解决方法
 {: #trbl_host_displays_warning_msg-resolution}
 
-这是 VMware 的已知问题。要解决此问题，请遵循[当测试状况为 false 时，ESX/ESXi 主机显示警告消息 (2101965)](https://kb.vmware.com/s/article/2008602){:new_window} 中的指示信息。
+这是 VMware 的已知问题。要解决此问题，请遵循[当测试状况为 false 时，ESX/ESXi 主机显示警告消息 (2101965)](https://kb.vmware.com/s/article/2008602) 中的指示信息。{:external}

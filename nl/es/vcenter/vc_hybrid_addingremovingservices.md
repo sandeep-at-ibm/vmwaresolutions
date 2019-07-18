@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-10"
+lastupdated: "2019-06-27"
 
 keywords: vCenter Server Hybridity add service, view service vCenter Server Hybridity, remove service vCenter Server Hybridity
 
@@ -27,11 +27,9 @@ Puede solicitar servicios para instancias de VMware vCenter Server on {{site.dat
 
 Los siguientes servicios están disponibles para las instancias de vCenter Server con el paquete híbrido (Hybridity), junto con las versiones de servicio instaladas.
 
-Tabla 1. Servicios disponibles para instancias de vCenter Server con el paquete híbrido (Hybridity)
-
 | Nombre de servicio | Versión de servicio actual | Versión de instancia |
 |----------------------------------------------------------------------------------------|------------------|
-| [Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_considerations) | 2.2 | V2.9 y posterior |
+| [Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_considerations) | 2.2.1 | V2.9 y posterior |
 | [F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations) | BIG-IP VE v14.1.0.2 | V1.9 y posterior |
 | [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations)       | serie 300 | V1.8 y posterior |
 | [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations) | 6.0.3 | V2.0 y posterior |
@@ -44,6 +42,7 @@ Tabla 1. Servicios disponibles para instancias de vCenter Server con el paquete 
 | [Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations) | 9.5u4 | V1.8 y posterior |
 | [VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_considerations#hcx_considerations) | 3.5.1 | V2.3 y posterior |
 | [Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr) | 6.5 actualización 3 | V1.2 y posterior |
+{: caption="Tabla 1. Servicios disponibles para instancias de vCenter Server con el paquete híbrido (Hybridity)" caption-side="top"}
 
 ## Procedimiento para añadir servicios a instancias de vCenter Server con el paquete híbrido (Hybridity)
 {: #vc_hybrid_addingremovingservices-adding-procedure}

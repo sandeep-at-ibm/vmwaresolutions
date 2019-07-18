@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server add cluster, view cluster vCenter Server, delete cluster vCenter Server
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -34,7 +35,7 @@ La funzione di eliminazione cluster è disponibile solo per le istanze che sono 
 {: #vc_addingviewingclusters-before-add}
 
 * Quando possibile, aggiungi i cluster utilizzando la console {{site.data.keyword.vmwaresolutions_full}}, poiché le modifiche che apporti al client web VMware vSphere non sono sincronizzate con la console {{site.data.keyword.vmwaresolutions_short}}. Pertanto, aggiungi i cluster a vCenter Server solo per i cluster in loco o per i cluster che non puoi gestire o che non gestirai nella console {{site.data.keyword.vmwaresolutions_short}}.
-* Per le istanze che sono state distribuite o di cui è stato eseguito l'upgrade alla V2.5 e versioni successive, il numero di cluster, host e VM determina il limite massimo per il numero di cluster che puoi aggiungere. Devi rispettare le direttive e i limiti di dimensionamento VMware per la tua distribuzione. Per ulteriori informazioni sui limiti massimi, vedi [Valori massimi di configurazione di VMware](https://configmax.vmware.com/home){:new_window}.
+* Per le istanze che sono state distribuite o di cui è stato eseguito l'upgrade alla V2.5 e versioni successive, il numero di cluster, host e VM determina il limite massimo per il numero di cluster che puoi aggiungere. Devi rispettare le direttive e i limiti di dimensionamento VMware per la tua distribuzione. Per ulteriori informazioni sui limiti massimi, vedi [Valori massimi di configurazione di VMware](https://configmax.vmware.com/home){:external}.
 * Per le istanze che sono state distribuite o di cui è stato eseguito l'upgrade alla V2.2, 2.3 o 2.4, puoi aggiungere fino a 10 cluster.
 * Per le istanze che sono state distribuite nella V2.1 o versioni precedenti, puoi aggiungere fino a cinque cluster.
 
@@ -69,13 +70,12 @@ Puoi scegliere **Skylake**, **Certificato SAP** o **Broadwell**. Le opzioni poss
 
 Per l'impostazione **Skylake**, hai opzioni per il **Modello CPU** e la **RAM**. Le opzioni disponibili potrebbero variare in base alla versione in cui è stata inizialmente distribuita la tua istanza.
 
-Tabella 1. Opzioni per Skylake {{site.data.keyword.baremetal_short}}
-
 | Opzioni del modello CPU        | Opzioni RAM       |
 |:------------- |:------------- |
 | Processore Dual Intel Xeon Silver 4110 / 16 core totali, 2,1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Processore Dual Intel Xeon Gold 5120 / 28 core totali, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+{: caption="Tabella 1. Opzioni per Skylake {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 #### Certificato SAP
 {: #vc_addingviewingclusters-adding-sap}
@@ -96,12 +96,11 @@ In base ai tuoi requisiti, seleziona una configurazione di Bare Metal Server:
 
 Per l'impostazione **Broadwell**, hai una serie di opzioni per il **Modello CPU** e la **RAM**. Le opzioni disponibili potrebbero variare in base alla versione in cui è stata inizialmente distribuita la tua istanza.
 
-Tabella 2. Opzioni per Broadwell {{site.data.keyword.baremetal_short}}
-
 | Opzioni del modello CPU        | Opzioni RAM       |
 |:------------- |:------------- |
 | Quad Intel Xeon E7-4820 v4 / 40 core totali, 1,9 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 core totali, 2,2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+{: caption="Tabella 2. Opzioni per Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 #### Numero di server Bare Metal
 {: #vc_addingviewingclusters-adding-bare-metal-number}
@@ -145,14 +144,15 @@ Il numero di condivisioni file deve essere compreso tra 1 e 32.
 * **Prestazioni**: seleziona l'IOPS (input/output operations per second) per GB in base ai tuoi requisiti del carico di lavoro.
 * **AGGIUNGI NFS**: seleziona questa opzione per aggiungere singole condivisioni file con diverse impostazioni di configurazione.
 
-Tabella 3. Opzioni del livello di prestazioni NFS
+Dettagli del livello di prestazioni:
 
 | Opzione        | Dettagli       |
-  |:------------- |:------------- |
-  | 0,25 IOPS/GB | Questa opzione è progettata per i carichi di lavoro che non vengono utilizzati spesso. Applicazioni di esempio includono: dati archiviati, hosting di database di grandi dimensioni con dati legacy o immagini di dischi virtuali del sistema di memoria virtuale come backup. |
-  | 2 IOPS/GB | Questa opzione è progettata per i carichi di lavoro più generici. Applicazioni di esempio includono: hosting di database di piccole dimensioni, backup di applicazioni web o immagini di dischi di VM (Virtual Machine) per un hypervisor. |
-  | 4 IOPS/GB | Questa opzione è progettata per i carichi di lavoro ad alta intensità che hanno un'alta percentuale di dati attivi alla volta. Applicazioni di esempio includono: database transazionali. |
-  | 10 IOPS/GB | Questa opzione è progettata per i tipi di carichi di lavoro più impegnativi, come l'analisi. Applicazioni di esempio includono: database ad alte transazioni e altri database sensibili alle prestazioni. Questo livello di prestazioni è limitato a una capacità massima di 4 TB per condivisione file. |
+|:------------- |:------------- |
+| 0,25 IOPS/GB | Questa opzione è progettata per i carichi di lavoro che non vengono utilizzati spesso. Applicazioni di esempio includono: dati archiviati, hosting di database di grandi dimensioni con dati legacy o immagini di dischi virtuali del sistema di memoria virtuale come backup. |
+| 2 IOPS/GB | Questa opzione è progettata per i carichi di lavoro più generici. Applicazioni di esempio includono: hosting di database di piccole dimensioni, backup di applicazioni web o immagini di dischi di VM (Virtual Machine) per un hypervisor. |
+| 4 IOPS/GB | Questa opzione è progettata per i carichi di lavoro ad alta intensità che hanno un'alta percentuale di dati attivi alla volta. Applicazioni di esempio includono: database transazionali. |
+| 10 IOPS/GB | Questa opzione è progettata per i tipi di carichi di lavoro più impegnativi, come l'analisi. Applicazioni di esempio includono: database ad alte transazioni e altri database sensibili alle prestazioni. Questo livello di prestazioni è limitato a una capacità massima di 4 TB per condivisione file. |
+{: caption="Tabella 3. Opzioni del livello di prestazioni NFS" caption-side="top"}
 
 ### Dischi locali
 {: #vc_addingviewingclusters-adding-local-disks}
@@ -252,7 +252,7 @@ Non puoi modificare il nome del cluster. La modifica del nome del cluster potreb
   * **Azioni**: fai clic sull'icona **Elimina** per eliminare il cluster.
 4. Fai clic sul nome di un cluster per visualizzare i dettagli del server ESXi, dell'archiviazione e dell'interfaccia di rete.
 
-Tabella 4. Dettagli del server ESXi
+Visualizza i dettagli del server ESXi:
 
 | Elemento        | Descrizione       |  
 |:------------- |:------------- |
@@ -261,10 +261,9 @@ Tabella 4. Dettagli del server ESXi
 | Credenziali | Il nome utente e la password per accedere al server ESXi. |
 | IP privato | L'indirizzo IP privato del server ESXi. |
 | Stato | Lo stato del server ESXi, che può assumere uno dei seguenti valori:<br> **Aggiunto** Il server ESXi è stato aggiunto ed è pronto per l'uso.<br> **In fase di aggiunta** Il server ESXi è in fase di aggiunta.<br> **In fase di eliminazione** Il server ESXi è in fase di eliminazione. |
+{: caption="Tabella 4. Dettagli del server ESXi" caption-side="top"}
 
-Espandi il server ESXi per ulteriori dettagli.
-
-Tabella 5. Dettagli aggiuntivi del server ESXi
+Espandi il server ESXi per ulteriori dettagli:
 
 | Elemento        | Descrizione       |  
 |:------------- |:------------- |
@@ -273,8 +272,9 @@ Tabella 5. Dettagli aggiuntivi del server ESXi
 | Dischi vSAN personalizzati | Il numero di dischi vSAN nel cluster, incluso il tipo di disco e la capacità. |
 | Dischi cache vSAN | Il tipo e il numero di dischi cache vSAN. |
 | Rete |Le impostazioni di abilitazione della scheda di interfaccia di rete (NIC, network interface card) di Rete pubblica e privata o Solo rete privata. |
+{: caption="Tabella 5. Dettagli aggiuntivi del server ESXi" caption-side="top"}
 
-Tabella 6. Dettagli dell'archiviazione
+Visualizza i dettagli di archiviazione:
 
 | Elemento        | Descrizione       |  
 |:------------- |:------------- |
@@ -282,8 +282,9 @@ Tabella 6. Dettagli dell'archiviazione
 | Dimensione | La capacità di archiviazione. |
 | IOPS/GB | Il livello di prestazioni dell'archiviazione. |
 | Protocollo NFS | La versione NFS dell'archiviazione. |
+{: caption="Tabella 6. Dettagli dell'archiviazione" caption-side="top"}
 
-Tabella 7. Interfaccia di rete - Dettagli della VLAN
+Visualizza i dettagli dell'interfaccia di rete:
 
 | Elemento        | Descrizione       |  
 |:------------- |:------------- |
@@ -291,24 +292,27 @@ Tabella 7. Interfaccia di rete - Dettagli della VLAN
 | Descrizione | La descrizione della VLAN.  |
 | Ubicazione | L'ubicazione del data center. |
 | Rotta primaria | La rotta primaria della VLAN. |
+{: caption="Tabella 7. Interfaccia di rete - Dettagli della VLAN" caption-side="top"}
 
 Fai clic su **View Resource** per accedere ai dettagli della VLAN.
 
-Tabella 8. Interfaccia di rete - Dettagli della sottorete
+Visualizza i dettagli della sottorete:
 
 | Elemento        | Descrizione       |  
 |:------------- |:------------- |
 | Nome | Il nome della sottorete. Fai clic sul nome per accedere ai dettagli della sottorete. |
 | Tipo | Il tipo di sottorete: primaria o portatile. |
 | Descrizione | La descrizione della sottorete. |
+{: caption="Tabella 8. Interfaccia di rete - Dettagli della sottorete" caption-side="top"}
 
-Tabella 9. Interfaccia di rete - Dettagli IP
+Visualizza i dettagli IP:
 
 | Elemento        | Descrizione       |  
 |:------------- |:------------- |
 | IP | L'indirizzo IP. |
 | Stato | Lo stato dell'indirizzo IP. |
 | Descrizione |La descrizione dell'indirizzo IP.  |
+{: caption="Tabella 9. Interfaccia di rete - Dettagli IP" caption-side="top"}
 
 ## Eliminazione di cluster dalle istanze vCenter Server
 {: #vc_addingviewingclusters-deleting}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-06-27"
 
 subcollection: vmware-solutions
 
@@ -67,7 +67,7 @@ Cette restructuration de la solution voit émerger une plateforme commune pour e
   -	IBM MQ Advanced
   -	IBM MQ Advanced for Developers
   -	Rabbit MQ (open source)
-  -	IBM Event Streams Tech Preview (basé sur Kafka)
+  -	Aperçu technologique d'IBM Event Streams (basé sur Apache Kafka)
 
 * Digital Business Automation
   -	IBM Operational Decision Manager
@@ -91,7 +91,7 @@ Cette restructuration de la solution voit émerger une plateforme commune pour e
 * HPC/HPDA
   -	IBM Spectrum LSF Community Edition
   -	IBM Spectrum Symphony Community Edition
-  -	IBM Spectrum Conductor Technical Preview
+  -	Aperçu technologique d'IBM Spectrum Conductor
 
 * Gestion multi-cloud
   -	{{site.data.keyword.cloud_notm}} Automation Manager
@@ -156,7 +156,7 @@ type=NFS
 server = nfs.server.ip.address
 path = /shared/db2trader1`
 
-Dans l'interface utilisateur du catalogue, recherchez “Db2” et cliquez sur ibm-db2oldp-dev
+Dans l'interface utilisateur du catalogue, recherchez "Db2" et cliquez sur ibm-db2oldp-dev.
 Lisez le fichier Readme, puis cliquez sur Configurer.
 
 La section Configuration comporte une section Démarrage rapide et une section Tous les paramètres. Ouvrez la section Tous les paramètres puisque Todd doit spécifier davantage de configuration :

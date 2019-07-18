@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: Zerto certificate, Zerto config, update Zerto replication
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -25,7 +26,7 @@ subcollection: vmware-solutions
 ## 独自の証明書を Zerto に使用する
 {: #managingzertodr-ssl-cert}
 
-ベスト・プラクティスとして、Zerto Virtual Manager (ZVM) には独自の SSL 証明書を使用します。 Zerto on {{site.data.keyword.cloud_notm}} をデプロイした後、ZVM 用の SSL 証明書を独自の証明書に置き換えてください。 詳しくは、[How to use a CER SSL Certificate to Replace the Self-Signed Certificate for the ZVM, ZSSP, or ZCM](https://www.zerto.com/myzerto/knowledge-base/how-to-use-a-cer-ssl-certificate-to-replace-the-self-signed-certificate-for-the-zvm-zssp-or-zcm/){:new_window} を参照してください。
+ベスト・プラクティスとして、Zerto Virtual Manager (ZVM) には独自の SSL 証明書を使用します。 Zerto on {{site.data.keyword.cloud_notm}} をデプロイした後、ZVM 用の SSL 証明書を独自の証明書に置き換えてください。 詳しくは、[How to use a CER SSL Certificate to Replace the Self-Signed Certificate for the ZVM, ZSSP, or ZCM](https://www.zerto.com/myzerto/knowledge-base/how-to-use-a-cer-ssl-certificate-to-replace-the-self-signed-certificate-for-the-zvm-zssp-or-zcm/){:external} を参照してください。
 
 ## Zerto レプリケーションの構成の管理
 {: #managingzertodr-manage}
@@ -53,8 +54,8 @@ Zerto Virtual Replication を更新するには、Zerto Virtual Replication コ�
 {: #managingzertodr-related}
 
 * [Zerto on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)
-* [Zerto on {{site.data.keyword.cloud_notm}} 用マネージド・サービスの要求](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
-* [zerto.com Web サイト](https://www.zerto.com){:new_window}
-* [Zerto 技術資料](https://www.zerto.com/myzerto/technical-documentation/){:new_window}
-* [Zerto 災害復旧](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/zerto){:new_window}
-* [Explanation of Zerto Virtual Replication Alerts](https://www.zerto.com/myzerto/knowledge-base/explanation-of-zvr-alerts/)
+* [Zerto on {{site.data.keyword.cloud_notm}} 用マネージド・サービス](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
+* [zerto.com Web サイト](https://www.zerto.com){:external}
+* [Zerto 技術資料](https://www.zerto.com/myzerto/technical-documentation/){:external}
+* [Zerto 災害復旧](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/zerto){:external}
+* [Explanation of Zerto Virtual Replication Alerts](https://www.zerto.com/myzerto/knowledge-base/explanation-of-zvr-alerts/){:external}

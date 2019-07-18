@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-06-28"
 
 keywords: vSphere upgrade, NSX upgrade, PSC upgrade
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -36,8 +37,8 @@ vCenter Server 设计为支持“滚动”升级。即，如果完成以下过�
 
 开始升级之前，请先满足以下需求：  
 * 您负责在 vCenter Server 环境中升级任何扩展或插入件。在规划升级之前，请查看以下文档：
-  * [VMware vCenter Server 6.7 Update 1b Release Notes](https://docs.vmware.com/en/VMware-vSphere/6.7/rn/vsphere-vcenter-server-67u1b-release-notes.html){:new_window}
-  * [About VMware ESXi Upgrade](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.esxi.upgrade.doc/GUID-65B5B313-3DBB-4490-82D2-A225446F4C99.html){:new_window}
+  * [VMware vCenter Server 6.7 Update 1b Release Notes](https://docs.vmware.com/en/VMware-vSphere/6.7/rn/vsphere-vcenter-server-67u1b-release-notes.html){:external}
+  * [About VMware ESXi Upgrade](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.esxi.upgrade.doc/GUID-65B5B313-3DBB-4490-82D2-A225446F4C99.html){:external}
 * 在 vCenter Server 实例中设置 vSphere Update Manager (VUM)，以从 VMware vSphere 下载最新更新。有关更多信息，请参阅 [VMware Update Manager 简介](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vum-intro#vum-intro)。
 * 向 {{site.data.keyword.vmwaresolutions_short}} 团队开具支持凭单，以通知他们将执行升级。该凭单会保持待处理状态，直到实例在 {{site.data.keyword.vmwaresolutions_short}} 控制台中以升级后的级别注册。
 * 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，确认要升级的 vCenter Server 实例是作为主实例还是辅助实例链接到其他 vCenter Server 实例。在特定站点升级过程中，所有链接的实例都必须首先升级其 Platform Services Controller (PSC)。
@@ -59,7 +60,7 @@ vCenter Server 设计为支持“滚动”升级。即，如果完成以下过�
 如果环境中已有 VSI 跳板机，请跳过第一步。
 {:note}
 
-1. 在 [IBM Cloud 基础架构客户门户网站](https://control.softlayer.com/)中订购每小时或每月 VSI。订购以下属性：
+1. 在 [IBM Cloud 基础架构客户门户网站](https://control.softlayer.com/){:external}中订购每小时或每月 VSI。订购以下属性：
   * Windows 2012 或 2016 Server Standard
   * 2 个 CPU
   * 16 GB 内存
@@ -91,9 +92,9 @@ vCenter Server 设计为支持“滚动”升级。即，如果完成以下过�
 
 开始升级之前，请备份每个组件。
 
-* 有关备份 vCenter Server 和 PSC 的信息，请参阅 [vCenter Server 6.x 中备份和复原选项概述 (2149237)](https://kb.vmware.com/s/article/2149237?lang=en_US){:new_window}。
+* 有关备份 vCenter Server 和 PSC 的信息，请参阅 [vCenter Server 6.x 中备份和复原选项概述 (2149237)](https://kb.vmware.com/s/article/2149237?lang=en_US){:external}。
 * 有关备份 vCenter Server 和 PSC 的其他注意事项和信息，请参阅 [vCenter 基于文件的备份](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_backingup#solution_backingup-vcenter)。
-* 有关备份 NSX 的信息，请参阅 [Backing Up NSX Manager Data](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window}。
+* 有关备份 NSX 的信息，请参阅 [Backing Up NSX Manager Data](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:external}。
 
 建议使用基于文件的备份。VMware VSphere 6.7 中不支持基于映像的备份（使用 vSphere Data Protection）。
 {:note}
@@ -123,9 +124,9 @@ vCenter Server 设计为支持“滚动”升级。即，如果完成以下过�
 #### 升级 VMware NSX 的过程
 {: #vc_vsphere_upgrade-procedure-nsx-procedure}
 
-有关以下过程的相关详细信息，请参阅 [NSX Upgrade Guide](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.upgrade.doc/GUID-4613AC10-BC73-4404-AF80-26E924EF5FE0.html){:new_window}。
+有关以下过程的相关详细信息，请参阅 [NSX Upgrade Guide](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.upgrade.doc/GUID-4613AC10-BC73-4404-AF80-26E924EF5FE0.html){:external}。
 
-1. 请阅读 NSX 6.4.4 的发行说明，以确保与特定环境配置的兼容性。有关更多信息，请参阅 [VMware NSX Data Center for vSphere 6.4.4 Release Notes](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/rn/releasenotes_nsx_vsphere_644.html){:new_window}。
+1. 请阅读 NSX 6.4.4 的发行说明，以确保与特定环境配置的兼容性。有关更多信息，请参阅 [VMware NSX Data Center for vSphere 6.4.4 Release Notes](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/rn/releasenotes_nsx_vsphere_644.html){:external}。
 2. 首先升级 NSX Manager。如果有多个 NSX 环境使用交叉 vCenter 链接方式，请在 NSX 用户界面的**升级协调程序**中升级组件之前，先升级所有 NSX Manager。
 3. 使用 vCenter 用户界面的 NSX 用户界面中的**升级协调程序**来升级 NSX 组件。
 4. 在解决了可能的问题之后，继续在 vCenter 用户界面中复查并监视 NSX 升级用户界面，以确保升级继续执行，直到所有组件均已升级为止。
@@ -150,7 +151,7 @@ vCenter Server 设计为支持“滚动”升级。即，如果完成以下过�
     2. 使用 shell **passwd** 命令为 PSC 和 vCenter 设置新的 root 用户密码。
     3. 保存 {{site.data.keyword.vmwaresolutions_short}} 控制台上显示的密码或由 IBM 支持人员提供给您的密码。稍后升级设备时，将复用这些密码。
 2. 使用内置的 Windows ISO 安装功能在跳板机中安装 vCenter 6.7u1b ISO。
-3. 遵循 VMware 指示信息以首先升级所有 PSC。有关更多信息，请参阅 [Upgrade a vCenter Server Appliance 6.0 or 6.5 with an External vCenter Single Sign-On or Platform Services Controller Instance by Using the GUI](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html)。
+3. 遵循 VMware 指示信息以首先升级所有 PSC。有关更多信息，请参阅 [Upgrade a vCenter Server Appliance 6.0 or 6.5 with an External vCenter Single Sign-On or Platform Services Controller Instance by Using the GUI](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html){:external}。
 
 其中，声明的需求 **You must run the GUI upgrade from a Windows, Linux, or Mac machine that is in the same network as the appliance that you want to upgrade**（必须从与要升级的设备位于同一个网络的 Windows、Linux 或 Mac 计算机运行 GUI 升级）适用于您帐户中 {{site.data.keyword.cloud_notm}} 内的任何子网。
 {:note}
@@ -176,7 +177,7 @@ vCenter Server 设计为支持“滚动”升级。即，如果完成以下过�
     2. 使用 shell **passwd** 命令为 PSC 和 vCenter 设置新的 root 用户密码。
     3. 保存 {{site.data.keyword.vmwaresolutions_short}} 控制台上显示的密码或由 IBM 支持人员提供给您的密码。稍后升级设备时，将复用这些密码。
 2. 使用内置的 Windows ISO 安装功能在跳板机中安装 vCenter 6.7u1b ISO。
-3. 遵循 VMware 指示信息以升级 vCenter。有关更多信息，请参阅 [Upgrade a vCenter Server Appliance 6.0 or 6.5 with an External vCenter Single Sign-On or Platform Services Controller Instance by Using the GUI](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html)。VMware 指示信息类似于 PSC 的升级过程。但是，对于升级过程，请指向 vCenter FQDN/IP，而不是指向 PSC。
+3. 遵循 VMware 指示信息以升级 vCenter。有关更多信息，请参阅 [Upgrade a vCenter Server Appliance 6.0 or 6.5 with an External vCenter Single Sign-On or Platform Services Controller Instance by Using the GUI](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html){:external}。VMware 指示信息类似于 PSC 的升级过程。但是，对于升级过程，请指向 vCenter FQDN/IP，而不是指向 PSC。
 
 **注**：
 * 其中，声明的需求 **You must run the GUI upgrade from a Windows, Linux, or Mac machine that is in the same network as the appliance that you want to upgrade**（必须从与要升级的设备位于同一个网络的 Windows、Linux 或 Mac 计算机运行 GUI 升级）适用于您帐户中 {{site.data.keyword.cloud_notm}} 内的任何子网。
@@ -186,7 +187,7 @@ vCenter Server 设计为支持“滚动”升级。即，如果完成以下过�
 #### 将 PSC 功能合并到 vCenter 中
 
 1. 成功完成 PSC 和 vCenter 升级后，登录到基于 vCenter FLEX 的用户界面，然后在**系统配置**部分中，检查与 vCenter 和 PSC 相关的所有服务的运行状况。  
-2. 备份 PSC。建议使用基于文件的备份。有关更多信息，请参阅 [vSphere 6.7 中基于文件的备份](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.install.doc/GUID-8A16C037-F1E0-40C9-B106-05C30625B9CB.html){:new_window}。
+2. 备份 PSC。建议使用基于文件的备份。有关更多信息，请参阅 [vSphere 6.7 中基于文件的备份](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.install.doc/GUID-8A16C037-F1E0-40C9-B106-05C30625B9CB.html){:external}。
 3. 导航至 ``<VCSA 6.7 iso mount>:\vcsa-converge-cli\templates\converge`` 目录。
 4. 将 ``converge.json`` 文件复制到跳板 VM 上的本地驱动器。
   * 如果这是第一个要合并的 PSC，那么必须从 ``json`` 文件中除去 **replication** 部分。
@@ -199,7 +200,7 @@ vCenter Server 设计为支持“滚动”升级。即，如果完成以下过�
    1. 输入 **Y** 以确认 PSC 已备份，然后继续。
    2. 过程完成后，输入 **Y** 以确认重新引导 vCenter。
 
-   如果聚合过程失败，且显示 ``ERROR converge Failed to get vecs users and permissions`` 消息，请参阅 [Converge to embedded failed!](https://virtualtassie.com/2018/vcenter-6-7-update-1-converge-to-embedded-failed/#comment-3713){:new_window}，以获取解决此错误的步骤。
+   如果聚合过程失败，且显示 ``ERROR converge Failed to get vecs users and permissions`` 消息，请参阅 [Converge to embedded failed!](https://virtualtassie.com/2018/vcenter-6-7-update-1-converge-to-embedded-failed/#comment-3713){:external}，以获取解决此错误的步骤。
    {:note}
 
 10. 重新引导 vCenter 后，通过登录到 vCenter 用户界面来验证运行是否正常。
@@ -238,7 +239,7 @@ vCenter 中的 VMware Update Manager 功能用于将 ESXi 主机升级并修补�
 6. 预先修复检查成功后，单击**修复**。使用修复实体任务监视升级过程。
 7. 升级完成后，查看主机的摘要部分以确认是否显示了 ``VMware ESXi, 6.7.0``。
 
-如果升级过程立即失败并显示**主机无法进入维护模式**错误消息，请关闭 Zerto ZVA，然后重试。在每个服务器退出修复后，ZVRA VM 会自动启动。有关在升级过程中继续 Zerto 复制的信息，请参阅 [How to Place a Host with an Associated VRA into Maintenance Mode](https://www.zerto.com/myzerto/knowledge-base/place-host-into-maintenance-mode-with-vra/){:new_window}。
+如果升级过程立即失败并显示**主机无法进入维护模式**错误消息，请关闭 Zerto ZVA，然后重试。在每个服务器退出修复后，ZVRA VM 会自动启动。有关在升级过程中继续 Zerto 复制的信息，请参阅 [How to Place a Host with an Associated VRA into Maintenance Mode](https://www.zerto.com/myzerto/knowledge-base/place-host-into-maintenance-mode-with-vra/){:external}。
 {:note}
 
 #### 向 VUM 存储库添加 Intel NVME 驱动程序补丁
@@ -310,7 +311,7 @@ vCenter 中的 VMware Update Manager 功能用于将 ESXi 主机升级并修补�
 1. 从包含主机的集群，单击**配置**。
 2. 从 **VMware EVC** 单击**编辑**，将 EVC 方式更改为 **Intel Skylake 生成**。
 
-有关更多信息，请参阅[增强 vMotion 兼容性 (EVC) 处理器支持 (1003212)](https://kb.vmware.com/s/article/1003212){:new_window}。
+有关更多信息，请参阅[增强 vMotion 兼容性 (EVC) 处理器支持 (1003212)](https://kb.vmware.com/s/article/1003212){:external}。
 
 #### 重新配置 NSX Manager 和 HCX Manager 以指向 PSC
 
@@ -335,6 +336,6 @@ vCenter 中的 VMware Update Manager 功能用于将 ESXi 主机升级并修补�
 ## 相关链接
 {: #vc_vsphere_upgrade-related}
 
-* [VMware NSX Data Center for vSphere 6.4.4 Release Notes](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/rn/releasenotes_nsx_vsphere_644.html){:new_window}
-* [NSX Upgrade Guide](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.upgrade.doc/GUID-4613AC10-BC73-4404-AF80-26E924EF5FE0.html){:new_window}
+* [VMware NSX Data Center for vSphere 6.4.4 Release Notes](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/rn/releasenotes_nsx_vsphere_644.html){:external}
+* [NSX Upgrade Guide](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.upgrade.doc/GUID-4613AC10-BC73-4404-AF80-26E924EF5FE0.html){:external}
 * [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

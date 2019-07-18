@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -28,7 +28,7 @@ Skate Advisor consiste principalmente de un chatbot que acepta texto o reconocim
 
 El elemento de datos principal de Skate Advisor es el truco. El lenguaje de truco define un truco de forma exclusiva. Este lenguaje se puede utilizar para llevar a cabo las tareas siguientes:
 - Conversar con el chatbot sobre los trucos.
-- Buscar trucos a través de Watson Discovery.
+- Buscar trucos utilizando Watson Discovery.
 - Identificar y clasificar trucos al entrenar a Watson Discovery a partir de artículos de origen.
 - Identificar un truco para ver la ubicación y mostrarlo en los medios.
 
@@ -83,7 +83,7 @@ Tabla 2. Interacciones de chatbot
 Paso | Descripción
 ---|---
 1 | Iniciar una conversación válida, consulte la sección sobre Secuencias de conversación.
-2 | El chatbot envía voz al servicio de Speech to Text.
+2 | El chatbot envía voz al servicio Speech to Text.
 3 | El servicio Speech to Text envía texto al chatbot.
 4 | El chatbot envía una consulta de texto a Skate Advisor.
 5 | Skate Advisor evalúa la solicitud y la envía a Watson Assistant.
@@ -91,7 +91,7 @@ Paso | Descripción
 7 | Skate Advisor solicita un conjunto de datos a Discovery Service.
 8 | Discovery Service evalúa la consulta y envía la respuesta.
 9 |Skate Advisor forma una respuesta y la envía al chatbot en forma de texto.
-10 | El chatbot envía la respuesta de texto al servicio Text To Speech.
+10 | El chatbot envía la respuesta de texto al servicio Text to Speech.
 11 | Los resultados se envían al usuario a través del chatbot.
 
 ### Representación de vídeo

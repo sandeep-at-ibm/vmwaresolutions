@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: Zerto certificate, Zerto config, update Zerto replication
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -25,7 +26,7 @@ Zerto on {{site.data.keyword.cloud}} 服务部署到实例后，可以配置或�
 ## 使用您自己的 Zerto 证书
 {: #managingzertodr-ssl-cert}
 
-作为最佳实践，请对 Zerto Virtual Manager (ZVM) 使用您自己的 SSL 证书。部署了 Zerto on {{site.data.keyword.cloud_notm}} 后，请将 ZVM 的 SSL 证书替换为您自己的证书。有关更多信息，请参阅[如何使用 CER SSL 证书来替换 ZVM、ZSSP 或 ZCM 的自签名证书](https://www.zerto.com/myzerto/knowledge-base/how-to-use-a-cer-ssl-certificate-to-replace-the-self-signed-certificate-for-the-zvm-zssp-or-zcm/){:new_window}。
+作为最佳实践，请对 Zerto Virtual Manager (ZVM) 使用您自己的 SSL 证书。部署了 Zerto on {{site.data.keyword.cloud_notm}} 后，请将 ZVM 的 SSL 证书替换为您自己的证书。有关更多信息，请参阅 [How to use a CER SSL Certificate to Replace the Self-Signed Certificate for the ZVM, ZSSP, or ZCM](https://www.zerto.com/myzerto/knowledge-base/how-to-use-a-cer-ssl-certificate-to-replace-the-self-signed-certificate-for-the-zvm-zssp-or-zcm/){:external}。
 
 ## 管理 Zerto 复制的配置
 {: #managingzertodr-manage}
@@ -53,8 +54,8 @@ Zerto 复制不支持网络地址转换 (NAT) 遍历。在 {{site.data.keyword.c
 {: #managingzertodr-related}
 
 * [Zerto on {{site.data.keyword.cloud_notm}} 概述](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)
-* [请求 Zerto on {{site.data.keyword.cloud_notm}} 的受管服务](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
-* [zerto.com Web 站点](https://www.zerto.com){:new_window}
-* [Zerto 技术文档](https://www.zerto.com/myzerto/technical-documentation/){:new_window}
-* [Zerto 灾难恢复](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/zerto){:new_window}
-* [Zerto Virtual Replication 警报的说明](https://www.zerto.com/myzerto/knowledge-base/explanation-of-zvr-alerts/)
+* [Zerto on {{site.data.keyword.cloud_notm}} 的受管服务](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
+* [zerto.com Web 站点](https://www.zerto.com){:external}
+* [Zerto 技术文档](https://www.zerto.com/myzerto/technical-documentation/){:external}
+* [Zerto 灾难恢复](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/zerto){:external}
+* [Zerto Virtual Replication 警报的说明](https://www.zerto.com/myzerto/knowledge-base/explanation-of-zvr-alerts/){:external}

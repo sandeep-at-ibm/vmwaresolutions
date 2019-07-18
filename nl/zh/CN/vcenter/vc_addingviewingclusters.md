@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server add cluster, view cluster vCenter Server, delete cluster vCenter Server
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -34,7 +35,7 @@ subcollection: vmware-solutions
 {: #vc_addingviewingclusters-before-add}
 
 * 尽可能使用 {{site.data.keyword.vmwaresolutions_full}} 控制台添加集群，因为在 VMware vSphere Web Client 上所做的更改不会与 {{site.data.keyword.vmwaresolutions_short}} 控制台同步。因此，将集群添加到 vCenter Server 仅适用于内部部署集群，或者无法或不会在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理的集群。
-* 对于部署在（或已升级到）V2.5 和更高版本中的实例，集群数、主机数和 VM 数将决定可以添加的最大集群数限制。您必须遵守适用于部署的 VMware 大小调整准则和限制。有关最大限制的更多信息，请参阅 [VMware 配置最大值](https://configmax.vmware.com/home){:new_window}。
+* 对于部署在（或已升级到）V2.5 和更高版本中的实例，集群数、主机数和 VM 数将决定可以添加的最大集群数限制。您必须遵守适用于部署的 VMware 大小调整准则和限制。有关最大限制的更多信息，请参阅 [VMware 配置最大值](https://configmax.vmware.com/home){:external}。
 * 对于部署在（或已升级到）V2.2、2.3 或 2.4 的实例，最多可以添加 10 个集群。
 * 对于部署在 V2.1 或更低版本中的实例，最多可以添加 5 个集群。
 
@@ -69,13 +70,12 @@ subcollection: vmware-solutions
 
 对于 **Skylake** 设置，您有各种 **CPU 型号**和 **RAM** 选项。可用选项可能有所不同，具体取决于初始部署实例的版本。
 
-表 1. Skylake {{site.data.keyword.baremetal_short}} 的选项
-
 | CPU 模型选项   |RAM 选项|
 |:------------- |:------------- |
 |双 Intel Xeon Silver 4110 处理器 / 共 16 个核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
 |双 Intel Xeon Gold 5120 处理器 / 共 28 个核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
 |双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
+{: caption="表 1. Skylake {{site.data.keyword.baremetal_short}} 的选项" caption-side="top"}
 
 #### SAP 认证
 {: #vc_addingviewingclusters-adding-sap}
@@ -96,12 +96,11 @@ subcollection: vmware-solutions
 
 对于 **Broadwell** 设置，您有多个 **CPU 型号**和 **RAM** 选项。可用选项可能有所不同，具体取决于初始部署实例的版本。
 
-表 2. Broadwell {{site.data.keyword.baremetal_short}} 的选项
-
 | CPU 模型选项   |RAM 选项|
 |:------------- |:------------- |
 |四核 Intel Xeon E7-4820 V4 / 共 40 个核心，1.9 GHz|128 GB、256 GB、512 GB、1 TB、2 TB、3 TB|
 |四核 Intel Xeon E7-4850 V4 / 共 64 个核心，2.2 GHz|128 GB、256 GB、512 GB、1 TB、2 TB、3 TB|
+{: caption="表 2. Broadwell {{site.data.keyword.baremetal_short}} 的选项" caption-side="top"}
 
 #### 裸机服务器的数量
 {: #vc_addingviewingclusters-adding-bare-metal-number}
@@ -145,14 +144,15 @@ subcollection: vmware-solutions
 * **性能**：选择基于工作负载需求的 IOPS（每秒输入/输出操作数）/GB。
 * **添加 NFS**：选择此项以添加使用不同配置设置的单个文件共享。
 
-表 3. NFS 性能级别选项
+性能级别详细信息：
 
 |选项|详细信息|
-  |:------------- |:------------- |
-  |0.25 IOPS/GB |此选项旨在用于不常用的工作负载。示例应用包括：保险库文件数据、托管具有旧数据的大型数据库或虚拟内存系统的虚拟磁盘映像（作为备份）。|
-  |2 IOPS/GB|此选项旨在用于大多数通用工作负载。示例应用包括：托管小型数据库、备份 Web 应用程序或系统管理程序的虚拟机 (VM) 磁盘映像。|
-  |4 IOPS/GB|此选项旨在用于同时活动数据百分比高的更高强度工作负载。示例应用包括：事务性数据库。|
-  |10 IOPS/GB|此选项旨在用于要求最苛刻的工作负载类型（如分析）。示例应用包括：高事务数据库和其他性能敏感型数据库。此性能级别限制为每个文件共享的最大容量为 4 TB。|
+|:------------- |:------------- |
+|0.25 IOPS/GB |此选项旨在用于不常用的工作负载。示例应用包括：保险库文件数据、托管具有旧数据的大型数据库或虚拟内存系统的虚拟磁盘映像（作为备份）。|
+|2 IOPS/GB|此选项旨在用于大多数通用工作负载。示例应用包括：托管小型数据库、备份 Web 应用程序或系统管理程序的虚拟机 (VM) 磁盘映像。|
+|4 IOPS/GB|此选项旨在用于同时活动数据百分比高的更高强度工作负载。示例应用包括：事务性数据库。|
+|10 IOPS/GB|此选项旨在用于要求最苛刻的工作负载类型（如分析）。示例应用包括：高事务数据库和其他性能敏感型数据库。此性能级别限制为每个文件共享的最大容量为 4 TB。|
+{: caption="表 3. NFS 性能级别选项" caption-side="top"}
 
 ### 本地磁盘
 {: #vc_addingviewingclusters-adding-local-disks}
@@ -251,9 +251,9 @@ subcollection: vmware-solutions
         <dd class="dd">集群已删除。</dd>
     </dl>
   * **操作**：单击**删除**图标以删除集群。
-4. 单击集群名称以查看 ESXi 服务器、存储和网络接口详细信息：
+4. 单击集群名称以查看 ESXi 服务器、存储器和网络接口详细信息。
 
-表 4. ESXi 服务器详细信息
+查看 ESXi 服务器详细信息：
 
 |项|描述|  
 |:------------- |:------------- |
@@ -262,10 +262,9 @@ subcollection: vmware-solutions
 |凭证|用于访问 ESXi 服务器的用户名和密码。|
 |专用 IP|ESXi 服务器的专用 IP 地址。|
 |状态|ESXi 服务器的状态，可以是下列某个值：<br> **已添加** ESXi 服务器已添加并随时可供使用。<br> **正在添加** 正在添加 ESXi 服务器。<br> **正在删除** 正在删除 ESXi 服务器。|
+{: caption="表 4. ESXi 服务器详细信息" caption-side="top"}
 
-展开 ESXi 服务器以获取其他详细信息。
-
-表 5. 其他 ESXi 服务器详细信息
+展开 ESXi 服务器以获取其他详细信息：
 
 |项|描述|  
 |:------------- |:------------- |
@@ -274,8 +273,9 @@ subcollection: vmware-solutions
 |定制 vSAN 磁盘数|集群中的 vSAN 磁盘数，包括磁盘类型和容量。|
 |vSAN 高速缓存磁盘|vSAN 高速缓存磁盘的类型和数量。|
 |联网|公用和专用网络或仅专用网络的网络接口卡 (NIC) 启用设置。|
+{: caption="表 5. 其他 ESXi 服务器详细信息" caption-side="top"}
 
-表 6. 存储器详细信息
+查看存储器详细信息：
 
 |项|描述|  
 |:------------- |:------------- |
@@ -283,8 +283,9 @@ subcollection: vmware-solutions
 |大小|存储的容量。|
 |IOPS/GB|存储的性能级别。|
 |NFS 协议|存储的 NFS 版本。|
+{: caption="表 6. 存储器详细信息" caption-side="top"}
 
-表 7. 网络接口 - VLAN 详细信息
+查看网络接口详细信息：
 
 |项|描述|  
 |:------------- |:------------- |
@@ -292,24 +293,27 @@ subcollection: vmware-solutions
 |描述|VLAN 的描述。|
 |位置| 数据中心位置。|
 |主路由|VLAN 的主路由。|
+{: caption="表 7. 网络接口 - VLAN 详细信息" caption-side="top"}
 
 单击**查看资源**以访问 VLAN 详细信息。
 
-表 8. 网络接口 - 子网详细信息
+查看子网详细信息：
 
 |项|描述|  
 |:------------- |:------------- |
 |名称|子网名称。单击名称以访问子网详细信息。|
 |类型| 子网的类型：主子网或可移植子网。|
 |描述|子网的描述。|
+{: caption="表 8. 网络接口 - 子网详细信息" caption-side="top"}
 
-表 9. 网络接口 - IP 详细信息
+查看 IP 详细信息：
 
 |项|描述|  
 |:------------- |:------------- |
 |IP 数|IP 地址。|
 |状态|IP 地址的状态。|
 |描述|IP 地址的描述。|
+{: caption="表 9. 网络接口 - IP 详细信息" caption-side="top"}
 
 ## 从 vCenter Server 实例中删除集群
 {: #vc_addingviewingclusters-deleting}

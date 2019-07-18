@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-06-27"
 
 subcollection: vmware-solutions
 
@@ -23,7 +23,7 @@ Le dispositif virtuel Services cloud hybrides doit être sous tension pour pouvo
 ## Procédure pour l'enregistrement de HCX Manager auprès de vCenter
 {: #hcx-archi-reg-vcenter-proc-register}
 
-1. Connectez-vous au dispositif virtuel du service cloud hybride.
+1. Connectez-vous au dispositif virtuel du service Hybrid Cloud Services. Par exemple, `https:My-HCX-Manager:9443/`.
 2. Cliquez sur la vignette **Manage Settings**.
   1. Dans le volet gauche, sous **Configure Systems**, sélectionnez vCenter.
   2. Cliquez sur **Add vCenter** dans l'angle supérieur droit.

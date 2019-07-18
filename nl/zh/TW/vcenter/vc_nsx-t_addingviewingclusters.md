@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server NSX-T add cluster, view cluster vCenter Server NSX-T, delete cluster vCenter Server NSX-T
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -31,7 +32,7 @@ subcollection: vmware-solutions
 {: #vc_nsx-t_addingviewingclusters-before-add}
 
 * 盡可能使用 {{site.data.keyword.vmwaresolutions_full}} 主控台新增叢集，因為您在 VMware vSphere Web Client 上所做的變更不會與 {{site.data.keyword.vmwaresolutions_short}} 主控台同步。因此，請只針對內部部署叢集或您在 {{site.data.keyword.vmwaresolutions_short}} 主控台中無法或不會管理的叢集，將叢集新增至 vCenter Server。
-* 叢集、主機及虛擬機器 (VM) 的數目決定您可以新增的叢集數目上限。您必須遵守 VMware 大小準則及部署限制。如需上限的相關資訊，請參閱 [VMware 配置上限](https://configmax.vmware.com/home){:new_window}。
+* 叢集、主機及虛擬機器 (VM) 的數目決定您可以新增的叢集數目上限。您必須遵守 VMware 大小準則及部署限制。如需上限的相關資訊，請參閱 [VMware 配置上限](https://configmax.vmware.com/home){:external}。
 
 ### 系統設定
 {: #vc_nsx-t_addingviewingclusters-adding-sys-settings}
@@ -64,25 +65,23 @@ subcollection: vmware-solutions
 
 若為 **Skylake** 設定，您有數個選項可用於 **CPU 型號**及 **RAM**。可用的選項可能會根據一開始部署您實例所用的版本而不同。
 
-表 1. Skylake {{site.data.keyword.baremetal_short}} 的選項
-
 | CPU 型號選項             |RAM 選項          |
 |:------------- |:------------- |
 |雙重 Intel Xeon Silver 4110 處理器 / 總計 16 核心，2.1 GHz| 128 GB、192 GB、384 GB、768 GB、1.5 TB |
 |雙重 Intel Xeon Gold 5120 處理器 / 總計 28 核心，2.2 GHz| 128 GB、192 GB、384 GB、768 GB、1.5 TB |
 |雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz| 128 GB、192 GB、384 GB、768 GB、1.5 TB |
+{: caption="表 1. Skylake {{site.data.keyword.baremetal_short}} 的選項" caption-side="top"}
 
 #### Broadwell
 {: #vc_nsx-t_addingviewingclusters-adding-broadwell}
 
 若為 **Broadwell** 設定，您有數個選項可用於 **CPU 型號**和 **RAM**。可用的選項可能會根據一開始部署您實例所用的版本而不同。
 
-表 2. Broadwell {{site.data.keyword.baremetal_short}} 的選項
-
 | CPU 型號選項             |RAM 選項          |
 |:------------- |:------------- |
 |四重 Intel Xeon E7-4820 v4 / 總計 40 核心，1.9 GHz |128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 |四重 Intel Xeon E7-4850 v4 / 總計 64 核心，2.2 GHz |128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
+{: caption="表 2. Broadwell {{site.data.keyword.baremetal_short}} 的選項" caption-side="top"}
 
 #### Bare Metal Server 數目
 {: #vc_nsx-t_addingviewingclusters-adding-bare-metal-number}
@@ -126,14 +125,15 @@ subcollection: vmware-solutions
 * **效能**：根據您的工作負載需求，選取每 GB 的 IOPS（每秒輸入/輸出作業數）。
 * **新增 NFS**：選取以新增要使用不同配置設定的個別檔案共用。
 
-表 3. NFS 效能層次選項
+效能層次詳細資料：
 
 |選項          |詳細資料     |
-  |:------------- |:------------- |
-  |0.25 IOPS/GB |這個選項是為未經常使用的工作負載而設計。應用的範例包括：加密配置檔資料、管理具有舊版資料的大型資料庫，或是作為備份之虛擬記憶體系統的虛擬磁碟映像檔。|
-  |2 IOPS/GB |這個選項是為大部分通用工作負載而設計。應用的範例包括：管理小型資料庫、備份 Web 應用程式，或是 Hypervisor 用的虛擬機器 (VM) 磁碟映像檔。|
-  |4 IOPS/GB |這個選項是為一次擁有高百分比作用中資料的高密度工作負載而設計。應用的範例包括：交易式資料庫。|
-  |10 IOPS/GB |這個選項是為要求最嚴苛的工作負載類型而設計，例如分析。應用的範例包括：高交易量資料庫，以及其他對效能敏感的資料庫。此效能層次限制為每個檔案共用的容量上限為 4 TB。|
+|:------------- |:------------- |
+|0.25 IOPS/GB |這個選項是為未經常使用的工作負載而設計。應用的範例包括：加密配置檔資料、管理具有舊版資料的大型資料庫，或是作為備份之虛擬記憶體系統的虛擬磁碟映像檔。|
+|2 IOPS/GB |這個選項是為大部分通用工作負載而設計。應用的範例包括：管理小型資料庫、備份 Web 應用程式，或是 Hypervisor 用的虛擬機器 (VM) 磁碟映像檔。|
+|4 IOPS/GB |這個選項是為一次擁有高百分比作用中資料的高密度工作負載而設計。應用的範例包括：交易式資料庫。|
+|10 IOPS/GB |這個選項是為要求最嚴苛的工作負載類型而設計，例如分析。應用的範例包括：高交易量資料庫，以及其他對效能敏感的資料庫。此效能層次限制為每個檔案共用的容量上限為 4 TB。|
+{: caption="表 3. NFS 效能層次選項" caption-side="top"}
 
 ### 授權設定
 {: #vc_nsx-t_addingviewingclusters-adding-licensing-settings}
@@ -221,8 +221,6 @@ subcollection: vmware-solutions
   * **動作**：按一下**刪除**圖示，以刪除叢集。
 4. 按一下叢集名稱來檢視 ESXi 伺服器、儲存空間和網路介面詳細資料：
 
-表 4. ESXi 伺服器詳細資料
-
 |項目        |說明       |  
 |:------------- |:------------- |
 |名稱 |ESXi 伺服器的名稱格式如下：<br> `<host_prefix><n>.<subdomain_label>.<root_domain>` <br> 其中：<br> `host_prefix` 是主機名稱字首<br> `n` 是伺服器序列<br> `subdomain_label` 是子網域標籤<br> `root_domain` 是根網域名稱|
@@ -230,8 +228,9 @@ subcollection: vmware-solutions
 |認證|用來存取 ESXi 伺服器的使用者名稱和密碼。|
 |專用 IP |ESXi 伺服器的專用 IP 位址。|
 |狀態|ESXi 伺服器的狀態，可以是下列其中一個值：<br> **已新增** ESXi 伺服器已完成新增並已備妥可供使用。<br> **正在新增** 正在新增 ESXi 伺服器。<br> **正在刪除** 正在刪除 ESXi 伺服器。|
+{: caption="表 4. ESXi 伺服器詳細資料" caption-side="top"}
 
-表 5. 儲存空間詳細資料
+檢視儲存空間詳細資料：
 
 |項目        |說明       |  
 |:------------- |:------------- |
@@ -239,33 +238,37 @@ subcollection: vmware-solutions
 |大小|儲存空間的容量。|
 | IOPS/GB |儲存空間的效能層次。|
 | NFS 通訊協定| 儲存空間的 NFS 版本。|
+{: caption="表 5. 儲存空間詳細資料" caption-side="top"}
 
-表 6. 網路介面 - VLAN 詳細資料
+檢視網路介面詳細資料：
 
 |項目        |說明              |  
 |:------------- |:------------- |
 | VLAN 號碼 | 唯一的 VLAN 號碼。 |
-|說明       | VLAN 的說明。|
+|說明              | VLAN 的說明。|
 |位置| 資料中心位置。 |
 | 主要路徑 | VLAN 的主要路徑。 |
+{: caption="表 6. 網路介面 - VLAN 詳細資料" caption-side="top"}
 
 按一下**檢視資源**來存取 VLAN 詳細資料。
 
-表 7. 網路介面 - 子網路詳細資料
+檢視子網路詳細資料：
 
-|項目        |說明       |  
+|項目        |說明              |  
 |:------------- |:------------- |
 |名稱 | 子網路名稱。按一下名稱來存取子網路詳細資料。|
 |類型      | 子網路的類型：主要或可攜式。 |
-|說明       | 子網路的說明。|
+|說明              | 子網路的說明。|
+{: caption="表 7. 網路介面 - 子網路詳細資料" caption-side="top"}
 
-表 8. 網路介面 - IP 詳細資料
+檢視 IP 詳細資料：
 
-|項目        |說明       |  
+|項目        |說明              |  
 |:------------- |:------------- |
 | IP    | IP 位址。 |
 |狀態| IP 位址的狀態。 |
-|說明       |IP 位址的說明。|
+|說明              |IP 位址的說明。|
+{: caption="表 8. 網路介面 - IP 詳細資料" caption-side="top"}
 
 ## 從 vCenter Server with NSX-T 實例刪除叢集
 {: #vc_nsx-t_addingviewingclusters-deleting}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server network config, network configuration NSX-T, manage NSX-T ESG
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -23,7 +24,7 @@ subcollection: vmware-solutions
 VMware vCenter Server 인스턴스에 배치된 VMware NSX-T Edge Services Gateway(ESG)를 활용할 수 있도록 가상 머신의 네트워크를 구성하십시오. 보안 위험을 최소화하도록 제공된 보안 조치에 대한 자세한 정보는 [관리 서비스 NSX Edge는 보안 문제점을 발생시킵니까?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)를 참조하십시오.
 
 VMware NSX-T는 격리된 네트워크의 가상화를 허용하고 스위치, 라우팅 및 방화벽과 같은 여러 네트워킹 서비스를 제공하는
-네트워크 가상화 플랫폼입니다. NSX에 대한 자세한 정보는 [Overview of NSX](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}를 참조하십시오.
+네트워크 가상화 플랫폼입니다. NSX에 대한 자세한 정보는 [Overview of NSX](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:external}를 참조하십시오.
 
 vCenter Server with NSX-T 인스턴스에 대한 주문 프로세스의 일부로 다음 조치가 사용자 대신 완료됩니다.
 * 사설 고객 서브넷은 {{site.data.keyword.cloud}} 인프라 사설 네트워크에 액세스하기 위해 가상 머신(VM)에서 사용하도록 주문됩니다.
@@ -62,7 +63,7 @@ vCenter Server with NSX-T 인스턴스에 대한 주문 프로세스의 일부�
 ## SNAT 규칙 사용
 {: #vc_nsx-t_esg_config-procedure-enable-snat-rule}
 
-기본적으로 NSX-T는 SNAT 규칙을 사용합니다. 기존 규칙 수정에 대한 자세한 정보는 [Configure Source and Destination NAT on a Tier-0 Logical Router](https://docs.vmware.com/en/VMware-NSX-T-Data-Center/2.4/administration/GUID-45949ACD-9029-4674-B29C-C2EABEB39E1D.html){:new_window}를 참조하십시오.
+기본적으로 NSX-T는 SNAT 규칙을 사용합니다. 기존 규칙 수정에 대한 자세한 정보는 [Configure Source and Destination NAT on a Tier-0 Logical Router](https://docs.vmware.com/en/VMware-NSX-T-Data-Center/2.4/administration/GUID-45949ACD-9029-4674-B29C-C2EABEB39E1D.html){:external}를 참조하십시오.
 
 ## 고객 서브넷 세부사항을 식별하는 프로시저
 {: #vc_nsx-t_esg_config-procedure-identify-customer-subnets-details}
@@ -83,7 +84,7 @@ vCenter Server with NSX-T 인스턴스에 대한 주문 프로세스의 일부�
 3. IP 주소에 표시된 참고사항을 검토하십시오. 이 참고사항은 초기 설정 중에 주문되고 사용된 서브넷과 및 IP 주소를 식별합니다.
 
    초기 설정 중에 주문되고 사용된 IP 주소를 사용하지 마십시오. 그러나 사용자의 요구사항에 따라 이 서브넷에
-   다른 IP 주소를 사용할 수 있습니다. 추가 네트워크 주소 변환을 설정하려면 [Managing NAT rules](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}를 참조하십시오.
+   다른 IP 주소를 사용할 수 있습니다. 추가 네트워크 주소 변환을 설정하려면 [Managing NAT rules](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:external}를 참조하십시오.
    {:important}
 
 ## 관련 링크
@@ -91,4 +92,4 @@ vCenter Server with NSX-T 인스턴스에 대한 주문 프로세스의 일부�
 
 * [vCenter Server 아티팩트 변경에 대한 고려사항](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter_chg_impact#vcenter_chg_impact)
 * [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}
+* [ NSX Edge Services Gateway ](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:external}

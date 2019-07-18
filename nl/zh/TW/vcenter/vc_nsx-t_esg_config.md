@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server network config, network configuration NSX-T, manage NSX-T ESG
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -22,7 +23,7 @@ subcollection: vmware-solutions
 
 配置虛擬機器的網路，以便利用 VMware vCenter Server 實例中所部署的 VMware NSX-T Edge Services Gateway (ESG)。如需為協助降低安全風險而設的安全措施相關資訊，請參閱[管理服務 NSX Edge 是否造成安全風險？](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
-VMware NSX-T 是一種網路虛擬化平台，可將隔離的網路虛擬化，並提供數個網路服務，例如交換器、遞送及防火牆。如需 NSX 的相關資訊，請參閱 [Overview of NSX](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}。
+VMware NSX-T 是一種網路虛擬化平台，可將隔離的網路虛擬化，並提供數個網路服務，例如交換器、遞送及防火牆。如需 NSX 的相關資訊，請參閱 [Overview of NSX](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:external}。
 
 在訂購 vCenter Server with NSX-T 實例程序的過程中，將代表您完成下列動作：
 * 訂購專用客戶子網路，供您的 VM（虛擬機器）用來存取 {{site.data.keyword.cloud}} 基礎架構專用網路。
@@ -60,7 +61,7 @@ VMware NSX-T 是一種網路虛擬化平台，可將隔離的網路虛擬化，�
 ## 啟用 SNAT 規則
 {: #vc_nsx-t_esg_config-procedure-enable-snat-rule}
 
-依預設，NSX-T 會啟用 SNAT 規則。如需修改現有規則的相關資訊，請參閱[在層級 0 邏輯路由器上配置來源和目的地 NAT](https://docs.vmware.com/en/VMware-NSX-T-Data-Center/2.4/administration/GUID-45949ACD-9029-4674-B29C-C2EABEB39E1D.html){:new_window}。
+依預設，NSX-T 會啟用 SNAT 規則。如需修改現有規則的相關資訊，請參閱[在層級 0 邏輯路由器上配置來源和目的地 NAT](https://docs.vmware.com/en/VMware-NSX-T-Data-Center/2.4/administration/GUID-45949ACD-9029-4674-B29C-C2EABEB39E1D.html){:external}。
 
 ## 識別客戶子網路詳細資料的程序
 {: #vc_nsx-t_esg_config-procedure-identify-customer-subnets-details}
@@ -80,7 +81,7 @@ VMware NSX-T 是一種網路虛擬化平台，可將隔離的網路虛擬化，�
 2. 按一下過濾器功能表，然後在**子網路**欄位中，輸入在 NSX-T Web Client 的 **customer-nsx-edge0** 說明中所看到的 ID。
 3. 檢閱針對 IP 位址所顯示的附註。這些附註可識別在起始設定期間所訂購及使用的子網路和 IP 位址。
 
-   請勿使用在起始設定期間所訂購及使用的 IP 位址。不過，您可以根據自己的需求使用這些子網路上的其他 IP 位址。若要設定其他網址轉換規則，請參閱 [Managing NAT rules](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}。
+   請勿使用在起始設定期間所訂購及使用的 IP 位址。不過，您可以根據自己的需求使用這些子網路上的其他 IP 位址。若要設定其他網址轉換規則，請參閱 [Managing NAT rules](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:external}。
    {:important}
 
 ## 相關鏈結
@@ -88,4 +89,4 @@ VMware NSX-T 是一種網路虛擬化平台，可將隔離的網路虛擬化，�
 
 * [變更 vCenter Server 構件的考量](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter_chg_impact#vcenter_chg_impact)
 * [常見問題](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}
+* [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:external}

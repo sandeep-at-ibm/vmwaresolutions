@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-20"
 
 keywords: IBM Cloud Private Hosted, ICP configuration, order Cloud Private
 
@@ -23,14 +23,14 @@ Vous pouvez commander le service {{site.data.keyword.cloud}} Private Hosted lors
 
 Vous pouvez commander une nouvelle instance avec le service {{site.data.keyword.cloud_notm}} Private Hosted inclus en utilisant l'une des méthodes suivantes :
 * Depuis la console {{site.data.keyword.vmwaresolutions_short}}, lorsque vous commandez une nouvelle instance, sélectionnez **IBM Cloud Private Hosted** dans la section **Services facultatifs**.
-* Depuis le catalogue {{site.data.keyword.cloud_notm}}, sélectionnez **IBM Cloud Private Hosted**, spécifiez les paramètres de service et sélectionnez **Ajouter à une nouvelle instance**.
+* Dans le catalogue {{site.data.keyword.cloud_notm}}, cliquez sur l'icône **VMware** dans le panneau de navigation de gauche, puis cliquez sur **IBM Cloud Private Hosted** dans la section **Services VMware**. Spécifiez les paramètres de service et sélectionnez **Ajouter à une nouvelle instance**.
 
 ## Commande d'IBM Cloud Private Hosted pour une instance existante
 {: #icp_ordering-existing}
 
 Vous pouvez ajouter le service {{site.data.keyword.cloud_notm}} Private Hosted dans une instance existante en utilisant l'une des méthodes suivantes :
 * Depuis la console {{site.data.keyword.vmwaresolutions_short}}, affichez l'instance pour laquelle vous souhaitez ajouter le service, cliquez sur **Services** dans le panneau de navigation de gauche, puis cliquez sur **Ajouter**.
-* Depuis le catalogue {{site.data.keyword.cloud_notm}}, sélectionnez **IBM Cloud Private Hosted**, spécifiez les paramètres de service et sélectionnez **Ajouter à une instance existante**.
+* Dans le catalogue {{site.data.keyword.cloud_notm}}, cliquez sur l'icône **VMware** dans le panneau de navigation de gauche, puis cliquez sur **IBM Cloud Private Hosted** dans la section **Services VMware**. Spécifiez les paramètres de service et sélectionnez **Ajouter à une instance existante**.
 
 ## Configuration du service IBM Cloud Private Hosted
 {: #icp_ordering-config}

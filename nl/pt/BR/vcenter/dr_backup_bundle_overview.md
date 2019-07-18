@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-01"
 
 keywords: single-node trial, data protection DR, tech specs data protection DR
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -30,9 +31,9 @@ A avaliação é projetada para migração de até 20 cargas de trabalho de dese
 O Single-node Trial for Data Protection and Disaster Recovery é somente para prova de conceito (POC). Não execute cargas de trabalho de trabalho de produção nesse ambiente. As funções de gerenciamento, como a inclusão e a remoção de hosts e clusters, o pedido de serviços de complemento adicionais e a aplicação de atualizações, não são suportadas.
 {:important}
 
-Após a implementação da instância do Single-node Trial, é possível usar o [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:new_window} por meio do [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:new_window} para obter assistência com sua assistência. Além disso, o [{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/){:new_window} pode ajudar a acelerar a modernização do aplicativo por meio das práticas nativas de nuvem mais recentes.
+Após a implementação da instância do Single-node Trial, é possível usar o [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:external} por meio do [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:external} para obter assistência com sua assistência. Além disso, o [{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/){:external} pode ajudar a acelerar a modernização do aplicativo por meio das práticas nativas de nuvem mais recentes.
 
-Essa avaliação é destinada ao uso de até 90 dias. Os encargos contínuos mensais são faturados com base em seu planejamento de faturamento, não quando a instância é pedida. Se a instância não for cancelada no último dia de seu ciclo de faturamento ou antes, você será cobrado pelo mês seguinte. Muito provavelmente, uma avaliação de 90 dias resulta em quatro meses de encargos, a menos que o cancelamento seja concluído antes do início do quarto mês.
+Essa avaliação é destinada ao uso de até 90 dias. Os encargos contínuos mensais são cobrados com base em seu planejamento de faturamento e não quando a instância é solicitada. Se a instância não for cancelada no último dia de seu ciclo de faturamento ou antes, você será cobrado pelo mês seguinte. Uma avaliação de 90 dias pode resultar em quatro meses de cobranças, a menos que o cancelamento seja concluído antes do início do quarto mês.
 {:note}
 
 Quando você tiver concluído a avaliação, será possível excluir esse ambiente e provisionar um novo ambiente que atenda às suas necessidades de capacidade.
@@ -165,12 +166,12 @@ O Single-node Trial for Data Protection and Disaster Recovery inclui o Zerto on 
 ## Especificações técnicas para o IBM Cloud Automation Manager
 {: #dr_backup_bundle_overview-cam-tech-specs}
 
-O {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2 é instalado usando a topologia de Desenvolvimento/Teste em todas as instâncias do Single-node Trial for Data Protection and Disaster Recovery. Para obter mais informações sobre o {{site.data.keyword.cloud_notm}} Automation Manager, consulte a [documentação do{{site.data.keyword.cloud_notm}} Automation Manager](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: new_window}.
+O {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2 é instalado usando a topologia de Desenvolvimento/Teste em todas as instâncias do Single-node Trial for Data Protection and Disaster Recovery. Para obter mais informações sobre o {{site.data.keyword.cloud_notm}} Automation Manager, consulte a [Documentação do {{site.data.keyword.cloud_notm}} Automation Manager](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: external}.
 
 ## Links relacionados
 {: #dr_backup_bundle_overview-related}
 
-* [Recursos do VMware HCX](https://hcx.vmware.com/#/docs){:new_window}
-* [Guia do Usuário do VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}
+* [Recursos do VMware HCX](https://hcx.vmware.com/#/docs){:external}
+* [Guia do Usuário do VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}
 * [Gerenciando o Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-managingveeam)
 * [Gerenciando o Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-managingzertodr)

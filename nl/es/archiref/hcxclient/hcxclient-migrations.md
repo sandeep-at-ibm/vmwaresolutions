@@ -14,9 +14,9 @@ subcollection: vmware-solutions
 # Migraciones de VMware Hybrid Cloud
 {: #hcxclient-migrations}
 
-Una vez que se han suministrado y ampliado las extensiones de red y la malla de servicio HCX, el paso siguiente es la migración de las máquinas virtuales. 
+Una vez que se han suministrado y ampliado las extensiones de red y la malla de servicio HCX, el paso siguiente es la migración de las máquinas virtuales.
 
-Hay tres tipos de migración: 
+Hay tres tipos de migración:
   - vMotion
   - Migración masiva
   - Migración en frío
@@ -31,7 +31,7 @@ Revertir la migración de máquinas virtuales solo es posible desde el portal de
 ## vMotion
 {: #hcxclient-migrations-vmotion}
 
-La función vMotion dentro de HCX amplía la función de vSphere vMotion para que funcione en distintas versiones de vSphere, dominios de SSO independientes y varios tipos de conectividad de red a través de Internet. HCX presupone que la red que se utiliza para la conexión no es segura y siempre mueve el tráfico entre túneles cifrados, independientemente del tipo de conectividad. 
+La función vMotion dentro de HCX amplía la función de vSphere vMotion para que funcione en distintas versiones de vSphere, dominios de SSO independientes y varios tipos de conectividad de red a través de Internet. HCX presupone que la red que se utiliza para la conexión no es segura y siempre mueve el tráfico entre túneles cifrados, independientemente del tipo de conectividad.
 
 ### Conceptos y mejores prácticas para vMotion
 {: #hcxclient-migrations-best-practices-vmotion}
@@ -41,7 +41,7 @@ HCX es básicamente un proxy bidireccional de vMotion. Cada instancia de HCX emu
 Al mismo tiempo, se inicia una migración de vMotion desde el host de proxy ESXi remoto al host ESXi físico de vSphere de destino, mientras recibe datos del CGW de origen a través del túnel. Cuando se utiliza vMotion, a diferencia de la opción de migración masiva, solo se ejecuta una operación de migración de máquina virtual a la vez. Debido a esto, para migrar grandes cantidades de máquinas virtuales, se recomienda que utilice vMotion solo cuando el tiempo de inactividad
 no sea una opción o haya riesgo en el rearranque de la máquina virtual. Sin embargo, como vMotion estándar, la máquina virtual puede estar en directo durante el proceso.
 
-Se ha observado que un solo vMotion se desplazará a alrededor de 1,7 Gbps en la LAN y entre 300 y 400 Mbps en la WAN a través del optimizador de WAN. Esto no implica que 1,7 Gbps en la LAN sean equivalentes a 400 Mbps en la WAN a través del optimizador de WAN, sino más bien que estos valores máximos se han observado en entornos específicos. Un entorno de este tipo constaba de una red vMotion LAN de 10 GB y un enlace ascendente de Internet de 1 GB, compartido con el tráfico web de producción. 
+Se ha observado que un solo vMotion se desplazará a alrededor de 1,7 Gbps en la LAN y entre 300 y 400 Mbps en la WAN a través del optimizador de WAN. Esto no implica que 1,7 Gbps en la LAN sean equivalentes a 400 Mbps en la WAN a través del optimizador de WAN, sino más bien que estos valores máximos se han observado en entornos específicos. Un entorno de este tipo constaba de una red vMotion LAN de 10 GB y un enlace ascendente de Internet de 1 GB, compartido con el tráfico web de producción.
 
 Utilice vMotion cuando:
 - Puede causar problemas apagar o iniciar la máquina virtual o si el tiempo de funcionamiento puede extenderse demasiado, con riesgo de que se apague.
@@ -68,7 +68,7 @@ A continuación se exponen las ventajas de la migración masiva sobre vMotion:
 - Uso de ancho de banda más coherente. vMotion puede generar fluctuaciones en el uso del ancho de banda que serían visibles como picos y valles dentro de las herramientas de supervisión de red o la interfaz de usuario del optimizador de WAN.
 - Utilice la migración masiva para obtener un uso superior de una capacidad de ancho de banda de red, en comparación con el de un solo vMotion.
 - Planifique la migración masiva para cambiar a las máquinas virtuales recién migradas durante una ventana de parada planificada.
-- Permita la migración de máquinas virtuales que estén utilizando actualmente características de CPU, que difieren del lado de la nube. La migración de vMotion puede fallar en estos casos. 
+- Permita la migración de máquinas virtuales que estén utilizando actualmente características de CPU, que difieren del lado de la nube. La migración de vMotion puede fallar en estos casos.
 
 A continuación se exponen los inconvenientes de la migración masiva sobre vMotion:
 - Las máquinas virtuales a nivel individual se migran de forma mucho más lenta que con vMotion.
@@ -108,14 +108,14 @@ Complete los pasos siguientes para migrar un clúster habilitado para discos de 
 ### Máquinas virtuales generales
 {: #hcxclient-migrations-general-vms}
 
-Una vez que se ha generado confianza alrededor de la función de HCX, se debe utilizar la migración masiva. La migración masiva es necesaria para las aplicaciones redundantes. Por ejemplo, los servidores web y cuando se van a migrar varios cientos o miles de máquinas virtuales. 
+Una vez que se ha generado confianza alrededor de la función de HCX, se debe utilizar la migración masiva. La migración masiva es necesaria para las aplicaciones redundantes. Por ejemplo, los servidores web y cuando se van a migrar varios cientos o miles de máquinas virtuales.
 
 ### Máquinas virtuales que utilizan NAS de conexión directa
 {: #hcxclient-migrations-vms-direct-nas}
 
-NFS se utiliza normalmente para compartir datos en muchos servidores, como contenido del servidor web. Se puede utilizar iSCSI en varios nodos de máquina virtual que constituyen un clúster de aplicación, como el correo electrónico o RDBMS, y suelen ser más sensibles a la latencia que NFS. 
+NFS se utiliza normalmente para compartir datos en muchos servidores, como contenido del servidor web. Se puede utilizar iSCSI en varios nodos de máquina virtual que constituyen un clúster de aplicación, como el correo electrónico o RDBMS, y suelen ser más sensibles a la latencia que NFS.
 
-En cualquier caso, si la latencia se puede mantener baja para el {{site.data.keyword.CloudDataCent_notm}} (< ~7 ms para iSCSI y lo que tolere la aplicación para NFS) y permitir que la aplicación pueda funcionar con un ancho de banda de ~ 1 Gbps o menos, la red NAS se puede extender con HCX en una ubicación de {{site.data.keyword.cloud_notm}}. Después de realizar esta acción, las máquinas virtuales se pueden migrar o trasladar con vMotion con HCX. 
+En cualquier caso, si la latencia se puede mantener baja para el {{site.data.keyword.CloudDataCent_notm}} (< ~7 ms para iSCSI y lo que tolere la aplicación para NFS) y permitir que la aplicación pueda funcionar con un ancho de banda de ~ 1 Gbps o menos, la red NAS se puede extender con HCX en una ubicación de {{site.data.keyword.cloud_notm}}. Después de realizar esta acción, las máquinas virtuales se pueden migrar o trasladar con vMotion con HCX.
 
 Después de la migración, los volúmenes de iSCSI se pueden duplicar con el sistema operativo en otra solución de almacenamiento en nube local y los datos de NFS se pueden replicar en cualquier solución de nube. Las consideraciones son las siguientes:
 - Latencia (iSCSI o tolerancia de aplicaciones para NFS)
@@ -148,7 +148,7 @@ Solución: es frecuente que los proveedores de WAN filtren las rutas /32 que se 
 A continuación se indican algunas consideraciones e implicaciones:
 - Las aplicaciones que comparten subred, vLAN y VXLAN tienen que moverse juntas.
 - Las aplicaciones detrás de un equilibrador de carga que utiliza una IP direccionable interna pueden requerir cambios de direccionamiento si no se pueden mover juntas o no es deseable hacerlo. Por ejemplo, si se percibe demasiado implicando demasiadas aplicaciones en una sola oscilación.
-- Los administradores de VMware, los administradores de red (incluidos los clientes y proveedores de WAN) y los propietarios de las aplicaciones deben estar implicados, incluso aunque no se haya planificado que haya un impacto en un sistema o equipamiento de red concreto. 
+- Los administradores de VMware, los administradores de red (incluidos los clientes y proveedores de WAN) y los propietarios de las aplicaciones deben estar implicados, incluso aunque no se haya planificado que haya un impacto en un sistema o equipamiento de red concreto.
 
 ## Enlaces relacionados
 {: #hcxclient-migrations-related}

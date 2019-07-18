@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-28"
 
 keywords: notifications console, filter notifications, system notification
 
@@ -24,46 +24,15 @@ Puoi controllare le notifiche per verificare lo stato delle operazioni di sistem
 1. Dalla console {{site.data.keyword.vmwaresolutions_full}}, fai clic su **Notifiche** nel riquadro di navigazione a sinistra.
 2. Visualizza il riepilogo su tutte le notifiche.
 
-   Tabella 1. Cronologia delle notifiche
-
-    <table>
-      <tr>
-        <th>Colonna</th>
-        <th>Descrizione</th>
-      </tr>
-      <tr>
-        <td>Severità</td>
-        <td>La severità dell'evento segnalato dalla notifica.
-          <dl class="dl">
-          <dt class="dt dlterm">Critico</dt>
-          <dd class="dd">Un evento critico potrebbe influire sull'intero sistema o servizio.</dd>
-          <dt class="dt dlterm">Errore</dt>
-          <dd class="dd">Si verifica un evento di errore durante un'operazione che potrebbe richiedere l'intervento dell'amministratore o dell'utente.</dd>
-          <dt class="dt dlterm">Avvertenza</dt>
-          <dd class="dd">Un componente produce errori o non funziona correttamente. Tuttavia, l'errore non interrompere il processo in corso del componente.</dd>
-            <dt class="dt dlterm">Informativo</dt>
-            <dd class="dd">È stata completata un'operazione di sistema o utente. In genere, i seguenti eventi segnalano notifiche informative:<br>Un servizio è stato installato.<br>Un servizio è stato aggiornato.<br>Un servizio è stato rimosso.<br>Tutti i servizi sono stati riconfigurati per i server ESXi aggiunti.<br>Tutti i servizi sono stati riconfigurati per i server ESXi rimossi.
-            </dd>
-          </dl>
-        </td>
-       </tr>
-       <tr>
-         <td>Tipo</td>
-         <td>Il tipo di componente a cui è correlato l'evento segnalato:<br>Istanze vCenter Server<br>Servizi<br>Sistema</td>
-       </tr>
-       <tr>
-         <td>Risorsa</td>
-         <td>Il nome dell'istanza o del servizio che invia la notifica.</td>
-       </tr>
-       <tr>
-         <td>Descrizione</td>
-         <td>Una breve descrizione della notifica.</td>
-       </tr>
-       <tr>
-         <td>Data</td>
-         <td>La data e ora in cui la notifica è stata inviata.</td>
-       </tr>
-    </table>                                       
+| Colonna | Descrizione |
+|:------ |:----------- |
+| Severità | La severità dell'evento segnalato dalla notifica.<br>**Critico**: un evento critico potrebbe influire sull'intero sistema o servizio.<br>**Errore**: durante un'operazione si verifica un evento di errore che potrebbe richiedere l'intervento dell'amministratore o dell'utente.<br>**Avvertenza**: un componente produce errori o non funziona correttamente. Tuttavia, l'errore non interrompere il processo in corso del
+componente.<br>**Informativo**: è stata completata un'operazione di sistema o dell'utente. In genere, i seguenti eventi segnalano notifiche informative:<br>Un servizio è stato installato.<br>Un servizio è stato aggiornato.<br>Un servizio è stato rimosso.<br>Tutti i servizi sono stati riconfigurati per i server ESXi aggiunti.<br>Tutti i servizi sono stati riconfigurati per i server ESXi rimossi. |
+| Tipo | Il tipo di componente a cui è correlato l'evento segnalato: istanze vCenter Server, servizi, sistema |
+| Risorsa | Il nome dell'istanza o del servizio che invia la notifica. |
+| Descrizione | Una breve descrizione della notifica. |
+| Data | La data e ora in cui la notifica è stata inviata. |
+{: caption="Tabella 1. Cronologia delle notifiche" caption-side="top"}
 
 3. Fai clic su una riga di notifica per visualizzarne i dettagli.
 

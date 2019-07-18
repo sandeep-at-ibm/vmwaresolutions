@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-22"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -17,7 +17,7 @@ subcollection: vmware-solutions
 ## VRF (Virtual Routing and Forwarding)
 {: #vcscar-arch-overview-infrastructure-vrf}
 
-Gli account {{site.data.keyword.cloud}} possono essere configurati come account VRF (Virtual Routing and Forwarding). Un account VRF abilita l'instradamento globale automatico tra i blocchi IP della sottorete. Tutti gli account con connessioni Direct Link devono essere convertiti o creati come un account VRF.
+Gli account {{site.data.keyword.cloud}} possono essere configurati come account VRF (Virtual Routing and Forwarding). Un account VRF abilita l'instradamento globale automatico tra i blocchi IP della sottorete. Tutti gli account con connessioni Direct-Link devono essere convertiti o creati come account VRF.
 
 ## Direct Link
 {: #vcscar-arch-overview-infrastructure-direct-link}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-20"
 
 keywords: IBM Cloud Private Hosted, ICP configuration, order Cloud Private
 
@@ -23,16 +23,16 @@ subcollection: vmware-solutions
 
 É possível pedir uma nova instância com o serviço {{site.data.keyword.cloud_notm}} Private Hosted incluído usando um dos métodos a seguir:
 * No console do {{site.data.keyword.vmwaresolutions_short}}, ao pedir uma nova instância, selecione **IBM Cloud Private Hosted** na seção **Serviços opcionais**.
-* No catálogo do {{site.data.keyword.cloud_notm}}, selecione **IBM Cloud Private Hosted**, especifique as configurações de serviço e, em seguida, selecione **Incluir em nova instância**.
+* No catálogo do {{site.data.keyword.cloud_notm}}, clique no ícone **VMware** na área de janela de navegação esquerda e, em seguida, clique no cartão **IBM Cloud Private Hosted** da seção **Serviços do VMware**. Especifique as configurações do serviço e selecione **Incluir na nova instância**.
 
 ## Pedindo o IBM Cloud Private Hosted para uma instância existente
 {: #icp_ordering-existing}
 
 É possível incluir o serviço {{site.data.keyword.cloud_notm}} Private Hosted em uma instância existente usando um dos métodos a seguir:
 * No console do {{site.data.keyword.vmwaresolutions_short}}, visualize a instância para a qual você deseja incluir o serviço, clique em **Serviços** na área de janela de navegação esquerda e, em seguida, clique em **Incluir**.
-* No catálogo do {{site.data.keyword.cloud_notm}}, selecione **IBM Cloud Private Hosted**, especifique as configurações de serviço e, em seguida, selecione **Incluir em instância existente**.
+* No catálogo do {{site.data.keyword.cloud_notm}}, clique no ícone **VMware** na área de janela de navegação esquerda e, em seguida, clique no cartão **IBM Cloud Private Hosted** da seção **Serviços do VMware**. Especifique as configurações do serviço e selecione **Incluir na instância existente**.
 
-## Configuração do serviço Hospedado do IBM Cloud Privado
+## Configuração do serviço IBM Cloud Private Hosted
 {: #icp_ordering-config}
 
 Ao pedir o serviço, forneça as configurações a seguir:

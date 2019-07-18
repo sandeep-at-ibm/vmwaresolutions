@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-20"
 
 keywords: vSphere order cluster, vSphere configuration, order vSphere cluster
 
@@ -33,7 +33,7 @@ Assegure-se de que tenha concluído as tarefas a seguir:
 ## Procedimento para pedir clusters do vSphere com base nas configurações existentes
 {: #vs_orderingbasedonexistingconfig-procedure}
 
-1. No catálogo do {{site.data.keyword.cloud_notm}}, clique em **VMware** na área de janela de navegação à esquerda e, em seguida, clique em **VMware vSphere** na seção **Datacenters virtuais**.
+1. No catálogo do {{site.data.keyword.cloud_notm}}, clique no ícone **VMware** da área de janela de navegação esquerda e, em seguida, clique no cartão **VMware vSphere on IBM Cloud** da seção **Data centers virtuais do VMware**.
 2. Na página **VMware vSphere on IBM Cloud**, clique em **Criar**.  
 3. Clique na guia **Criar novo** e selecione um modelo de configuração na lista **Configurações de cluster**.
 4. Insira um novo nome do cluster.

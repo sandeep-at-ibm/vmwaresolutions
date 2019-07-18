@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-28"
 
 keywords: VMware HCX deployment, HCX configuration, order HCX
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -52,7 +53,7 @@ Pour installer HCX on {{site.data.keyword.cloud_notm}}, définissez les paramèt
   * **Clé privée :** entrez la clé privée du certificat de l'autorité de certification.
   * (Facultatif) **Mot de passe :** entrez le mot de passe de la clé privée si elle est chiffrée.
   * (Facultatif) **Confirmer le mot de passe :** saisissez à nouveau le mot de passe de la clé privée.
-  * (Facultatif) **Nom d'hôte :** nom d'hôte à mapper au nom usuel (CN) du certificat de l'autorité de certification. HCX on {{site.data.keyword.cloud_notm}} nécessite que le format du certificat de l'autorité de certification soit accepté par NSX Edge. Pour plus d'informations sur les formats de certificat NSX Edge, voir [Importation de certificats SSL](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html).
+  * (Facultatif) **Nom d'hôte :** nom d'hôte à mapper au nom usuel (CN) du certificat de l'autorité de certification. HCX on {{site.data.keyword.cloud_notm}} nécessite que le format du certificat de l'autorité de certification soit accepté par NSX Edge. Pour plus d'informations sur les formats de certificat NSX Edge, voir [Importation de certificats SSL](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html){:external}.
   <!--Need enhancement, it is still not clear what the key pair is used for, is it for connecting to NSX? This is not in architecture doc either. -->
 
 ## Processus de déploiement du service HCX on IBM Cloud
@@ -94,5 +95,5 @@ Le déploiement du service HCX on {{site.data.keyword.cloud_notm}} est automatis
 * [Commande, affichage et retrait de services pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
 * [Glossaire des termes HCX](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
 * [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
-* [Présentation de VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx)
-* [Documentation VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)
+* [Présentation de VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx){:external}
+* [Documentation VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources){:external}

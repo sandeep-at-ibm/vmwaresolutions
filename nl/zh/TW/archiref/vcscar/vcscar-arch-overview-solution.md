@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -138,7 +138,7 @@ CAM 需要工作者節點具有較高的 vCPU 和記憶體配置。
 ### CAM Proxy
 {: #vcscar-arch-overview-solution-cam-proxy}
 
-提供對 CAM 的 nginx proxy 存取權。
+提供對 CAM 的 `nginx` Proxy 存取權。
 
 ### CAM 使用者介面
 {: #vcscar-arch-overview-solution-cam-ui}

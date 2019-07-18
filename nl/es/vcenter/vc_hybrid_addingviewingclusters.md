@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-26"
 
 keywords: vCenter Server Hybridity add cluster, view cluster vCenter Server Hybridity, delete cluster vCenter Server Hybridity
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -32,7 +33,7 @@ Puede añadir clústeres a la instancia de VMware vCenter Server on {{site.data.
 
 * Siempre que sea posible, añada clústeres utilizando la consola de {{site.data.keyword.vmwaresolutions_full}}, ya que los cambios que realice en el cliente web de VMware vSphere no se sincronizan con la consola de {{site.data.keyword.vmwaresolutions_short}}. Por lo tanto, añada clústeres a vCenter Server solo para clústeres locales o clústeres que no pueda o no vaya a gestionar en la consola de
 {{site.data.keyword.vmwaresolutions_short}}.
-* Para las instancias que se han desplegado en V2.5 y posteriores o que se han actualizado a las mismas, el número de clústeres, hosts y máquinas virtuales determina el límite máximo para el número de clústeres que puede añadir. Debe respetar las directrices de dimensionamiento de VMware y los límites para el despliegue. Para obtener más información sobre los límites máximos, consulte [Máximos de configuración de VMware](https://configmax.vmware.com/home){:new_window}.
+* Para las instancias que se han desplegado en V2.5 y posteriores o que se han actualizado a las mismas, el número de clústeres, hosts y máquinas virtuales determina el límite máximo para el número de clústeres que puede añadir. Debe respetar las directrices de dimensionamiento de VMware y los límites para el despliegue. Para obtener más información sobre los límites máximos, consulte [Máximos de configuración de VMware](https://configmax.vmware.com/home){:external}.
 * Para instancias que se han desplegado en (o se han actualizado a) V2.3 y V2.4, puede añadir hasta 10 clústeres.
 
 ### Valores del sistema
@@ -66,25 +67,23 @@ Puede elegir **Skylake** o **Broadwell**. Las opciones pueden variar dependiendo
 
 Cuando selecciona **Skylake**, puede elegir la combinación de CPU y RAM según sus necesidades.
 
-Tabla 1. Opciones para servidores nativos Skylake
-
 | Opciones de modelo de CPU        | Opciones de RAM       |
 |:------------- |:------------- |
 | Procesador Dual Intel Xeon Silver 4110 / 16 núcleos en total, 2,1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Procesador Dual Intel Xeon Gold 5120 / 28 núcleos en total, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon Gold Procesador 6140 / 36 núcleos en total, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+{: caption="Tabla 1. Opciones para servidores nativos Skylake" caption-side="top"}
 
 #### Broadwell
 {: #vc_hybrid_addingviewingclusters-adding-broadwell}
 
 Cuando selecciona **Broadwell**, puede elegir la combinación de CPU y RAM según sus necesidades.
 
-Tabla 2. Opciones para servidores nativos Broadwell
-
 | Opciones de modelo de CPU        | Opciones de RAM       |
 |:------------- |:------------- |
 | Quad Intel Xeon E7-4820 v4 / 40 núcleos en total, 1,9 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 núcleos en total, 2,2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+{: caption="Tabla 2. Opciones para servidores nativos Broadwell" caption-side="top"}
 
 #### Número de servidores nativos
 {: #vc_hybrid_addingviewingclusters-adding-bare-metal-number}
@@ -126,9 +125,9 @@ Los valores de tarjeta de interfaz de red (NIC) se basan en la selección de **R
 ### Resumen del pedido
 {: #vc_hybrid_addingviewingclusters-adding-order-summary}
 
-En función de la configuración seleccionada para el clúster, el coste estimado se genera y se muestra al instante en el panel derecho **Resumen de pedido**. Pulse **Detalle de precios** para generar un documento PDF con el resumen de coste de los recursos de {{site.data.keyword.vmwaresolutions_short}}. 
+En función de la configuración seleccionada para el clúster, el coste estimado se genera y se muestra al instante en el panel derecho **Resumen de pedido**. Pulse **Detalle de precios** para generar un documento PDF con el resumen de coste de los recursos de {{site.data.keyword.vmwaresolutions_short}}.
 
-También puede añadir los recursos suministrados a la herramienta de estimación {{site.data.keyword.cloud_notm}}, pulsando **Añadir a estimación**. Esto es útil si desea estimar el coste de los recursos estimare {{site.data.keyword.vmwaresolutions_short}} seleccionados junto con otros recursos de {{site.data.keyword.cloud_notm}} que le podría interesar adquirir. 
+También puede añadir los recursos suministrados a la herramienta de estimación {{site.data.keyword.cloud_notm}}, pulsando **Añadir a estimación**. Esto es útil si desea estimar el coste de los recursos estimare {{site.data.keyword.vmwaresolutions_short}} seleccionados junto con otros recursos de {{site.data.keyword.cloud_notm}} que le podría interesar adquirir.
 
 ## Procedimiento para añadir clústeres a instancias de vCenter Server con el paquete híbrido (Hybridity)
 {: #vc_hybrid_addingviewingclusters-adding-procedure}

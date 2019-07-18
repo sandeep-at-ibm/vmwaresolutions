@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-28"
 
 keywords: Veeam console, Veeam backup restore, update Veeam license
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # 管理 Veeam on IBM Cloud
 {: #managingveeam}
@@ -37,9 +39,9 @@ subcollection: vmware-solutions
 
 Veeam on {{site.data.keyword.cloud_notm}} 服务可以配置为使用 Veeam 控制台来备份管理组件。有关更多信息，请参阅[备份组件](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup)。
 
-对于部署在（或升级到）V1.8 或更高发行版的实例，不会自动备份对环境的配置更改。因此，在更改环境配置之前，建议通过在 Veeam 控制台中运行管理备份作业，手动备份管理组件。有关手动备份的更多信息，请参阅 [Veeam 技术指示信息](https://helpcenter.veeam.com/backup/vsphere/scheduing_manual.html){:new_window}。
+对于部署在（或升级到）V1.8 或更高发行版的实例，不会自动备份对环境的配置更改。因此，在更改环境配置之前，建议通过在 Veeam 控制台中运行管理备份作业，手动备份管理组件。有关手动备份的更多信息，请参阅 [Veeam 技术指示信息](https://helpcenter.veeam.com/backup/vsphere/scheduing_manual.html){:external}。
 
-管理组件发生故障时，可以使用 Veeam 控制台将管理组件复原到先前的备份。有关手动复原的更多信息，请参阅 [Veeam 技术指示信息]( https://helpcenter.veeam.com/backup/vsphere/performing_full_recovery.html){:new_window}。
+管理组件发生故障时，可以使用 Veeam 控制台将管理组件复原到先前的备份。有关手动复原的更多信息，请参阅 [Veeam 技术指示信息]( https://helpcenter.veeam.com/backup/vsphere/performing_full_recovery.html){:external}。
 
 ## 对 Veeam on IBM Cloud 应用更新
 {: #managingveeam-updates}
@@ -62,7 +64,7 @@ Veeam on {{site.data.keyword.cloud_notm}} 服务可以配置为使用 Veeam 控�
 ### 针对部署有公用和专用网络的实例更新 Veeam 许可证
 {: #managingveeam-update-license-public-private}
 
-如果 Veeam 服务安装在使用公用和专用网络的实例上，那么可以通过遵循[更新许可证]( https://helpcenter.veeam.com/docs/backup/vsphere/license_update.html)中的 Veeam 指示信息来自动或手动更新 Veeam 许可证。
+如果 Veeam 服务安装在使用公用和专用网络的实例上，那么可以通过遵循[更新许可证]( https://helpcenter.veeam.com/docs/backup/vsphere/license_update.html){:external}中的 Veeam 指示信息来自动或手动更新 Veeam 许可证。
 
 ### 针对仅部署有专用网络的实例更新 Veeam 许可证
 {: #managingveeam-update-license-private}
@@ -90,7 +92,8 @@ Veeam on {{site.data.keyword.cloud_notm}} 服务可以同时备份管理组件�
 {: #managingveeam-related}
 
 * [Veeam on {{site.data.keyword.cloud_notm}} 概述](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)
+* [Veeam on {{site.data.keyword.cloud_notm}} 的受管服务](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
 * [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [常见问题](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Veeam.com Web 站点](https://www.veeam.com/)
-* [Veeam 技术文档](https://www.veeam.com/documentation-guides-datasheets.html)
+* [Veeam.com Web 站点](https://www.veeam.com/){:external}
+* [Veeam 技术文档](https://www.veeam.com/documentation-guides-datasheets.html){:external}

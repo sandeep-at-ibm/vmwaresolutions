@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server delete instance, delete vCenter Server, delete multi-site
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -40,8 +41,8 @@ Per l'istanza eliminata ti vengono addebitati costi fino alla fine del ciclo di 
 
 1. Rimuovi tutti i servizi dall'istanza secondaria di vCenter Server.
 2. Assicurarti che nessun oggetto NSX sia espanso nell'istanza secondaria che vuoi eliminare.
-3. Elimina il vCenter Server secondario dal dominio SSO (Single Sign-On) primario. Per ulteriori informazioni, vedi [Unregister vCenter Server from Single Sign-On](https://kb.vmware.com/s/article/2106736){:new_window}.
-4. Riduci il livello dell'istanza di servizio virtuale (o VSI, Virtual Service Instance) del controller di dominio locale. Per ulteriori informazioni, vedi [Demoting domain controllers and domains](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-){:new_window}.
+3. Elimina il vCenter Server secondario dal dominio SSO (Single Sign-On) primario. Per ulteriori informazioni, vedi [Unregister vCenter Server from Single Sign-On](https://kb.vmware.com/s/article/2106736){:external}.
+4. Riduci il livello dell'istanza di servizio virtuale (o VSI, Virtual Service Instance) del controller di dominio locale. Per ulteriori informazioni, vedi [Demoting domain controllers and domains](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-){:external}.
 5. Elimina l'istanza secondaria vCenter Server dalla console {{site.data.keyword.vmwaresolutions_short}}.
 6. Ripeti i passi da 1 a 5 per tutte le istanze vCenter Server secondarie nella tua configurazione multisito.
 7. Dopo aver eliminato tutte le istanze secondarie, puoi anche eliminare l'istanza primaria dalla console {{site.data.keyword.vmwaresolutions_short}}.

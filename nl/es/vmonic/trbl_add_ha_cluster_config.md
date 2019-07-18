@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-26"
 
 keywords: troubleshooting, vSphere configuration issue, HA cluster issue
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # Problema de configuración de la consola de vSphere al añadir un clúster HA
 {: #trbl_add_ha_cluster_config}
@@ -28,4 +30,4 @@ Cuando se añade una configuración de clúster HA (alta disponibilidad) con una
 
 Este problema se produce cuando no hay redundancia en el almacenamiento compartido para permitir el control de latido del almacén de datos.
 
-Para obtener más información y ver los pasos a seguir para solucionar el problema, consulte [Error de HA: El número de almacenes de datos de latido para el host es 1, que es menor que el necesario: 2 (2004739)](https://kb.vmware.com/s/article/2004739).
+Para obtener más información y ver los pasos a seguir para solucionar el problema, consulte [Error de HA: El número de almacenes de datos de latido para el host es 1, que es menor que el necesario: 2 (2004739)](https://kb.vmware.com/s/article/2004739).{:external}

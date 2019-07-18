@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: Zerto certificate, Zerto config, update Zerto replication
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -25,7 +26,7 @@ subcollection: vmware-solutions
 ## 使用您自己的 Zerto 憑證
 {: #managingzertodr-ssl-cert}
 
-最佳作法是將您自己的 SSL 憑證用於 Zerto Virtual Manager (ZVM)。部署 Zerto on {{site.data.keyword.cloud_notm}} 之後，請將 ZVM 的 SSL 憑證取代為您自己的憑證。如需相關資訊，請參閱[如何使用 CER SSL 憑證以取代 ZVM、ZSSP 或 ZCM 的自簽憑證](https://www.zerto.com/myzerto/knowledge-base/how-to-use-a-cer-ssl-certificate-to-replace-the-self-signed-certificate-for-the-zvm-zssp-or-zcm/){:new_window}。
+最佳作法是將您自己的 SSL 憑證用於 Zerto Virtual Manager (ZVM)。部署 Zerto on {{site.data.keyword.cloud_notm}} 之後，請將 ZVM 的 SSL 憑證取代為您自己的憑證。如需相關資訊，請參閱[如何使用 CER SSL 憑證以取代 ZVM、ZSSP 或 ZCM 的自簽憑證](https://www.zerto.com/myzerto/knowledge-base/how-to-use-a-cer-ssl-certificate-to-replace-the-self-signed-certificate-for-the-zvm-zssp-or-zcm/){:external}
 
 ## 管理 Zerto 抄寫的配置
 {: #managingzertodr-manage}
@@ -53,8 +54,8 @@ Management VMware NSX Edge Services Gateway (ESG) 已預先配置成容許源自
 {: #managingzertodr-related}
 
 * [Zerto on {{site.data.keyword.cloud_notm}} 概觀](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)
-* [要求 Zerto on {{site.data.keyword.cloud_notm}} 的受管理服務](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
-* [zerto.com 網站](https://www.zerto.com){:new_window}
-* [Zerto 技術文件](https://www.zerto.com/myzerto/technical-documentation/){:new_window}
-* [Zerto 災難回復](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/zerto){:new_window}
-* [Zerto Virtual Replication 警示說明](https://www.zerto.com/myzerto/knowledge-base/explanation-of-zvr-alerts/)
+* [Managed Services for Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
+* [zerto.com 網站](https://www.zerto.com){:external}
+* [Zerto 技術文件](https://www.zerto.com/myzerto/technical-documentation/){:external}
+* [Zerto 災難回復](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/zerto){:external}
+* [Zerto Virtual Replication 警示說明](https://www.zerto.com/myzerto/knowledge-base/explanation-of-zvr-alerts/){:external}

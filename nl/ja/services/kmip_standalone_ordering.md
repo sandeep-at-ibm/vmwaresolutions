@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-21"
 
 keywords: KMIP for VMware, order KMIP stand-alone, KMIP for VMware configuration
 
@@ -29,7 +29,7 @@ KMIP for VMware on {{site.data.keyword.cloud}} インスタンスは VMware イ�
 {: #kmip_standalone_ordering-procedure}
 
 1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「開始 (Getting started)」**をクリックします。
-2. **「追加サービスの注文 (Order additional services)」**領域で、**「KMIP for VMware on IBM Cloud」**をクリックします。
+2. **「VMware サービス」**セクションで、**「KMIP for VMware on IBM Cloud」**カードをクリックします。
 3. **「KMIP for VMware on IBM Cloud」**ページで、必要に応じてサービス設定を構成します。
 4. **「プロビジョン」**をクリックします。
 
@@ -50,8 +50,6 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} インスタンスをホス�
 
 {{site.data.keyword.cloud_notm}} は、可用性の高い KMIP for VMware on {{site.data.keyword.cloud_notm}} ネットワーク・サービス・エンドポイントを、サービスが使用可能な各ロケーションで維持管理しています。
 
-表 1. KMIP for VMware on {{site.data.keyword.cloud_notm}} ネットワーク・サービス・エンドポイントのロケーション
-
 | ロケーション         | エンドポイント               |
 |:---------------|:-----------------------|
 | ダラス | <<code>kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696</code><br>および<br><code>kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696</code> |
@@ -60,6 +58,7 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} インスタンスをホス�
 | シドニー | <code>kmip-1.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code><br>および<br><code>kmip-2.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code> |
 | 東京 | <code>kmip-1.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code><br>および<br><code>kmip-2.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code> |
 | ワシントン DC | <code>kmip-1.private.us-east.vmware-solutions.cloud.ibm.com:5696</code><br>および<br><code>kmip-2.private.us-east.vmware-solutions.cloud.ibm.com:5696</code> |
+{: caption="表 1. KMIP for VMware on {{site.data.keyword.cloud_notm}} ネットワーク・サービス・エンドポイントのロケーション" caption-side="top"}
 
 ### サービス ID の API キー
 {: #kmip_standalone_ordering-config-api-key}

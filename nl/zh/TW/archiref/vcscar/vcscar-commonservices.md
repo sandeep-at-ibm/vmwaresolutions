@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -14,7 +14,7 @@ subcollection: vmware-solutions
 # VMware 和 Skate Advisor 概念車的共用服務元件
 {: #vcscar-commonservices}
 
-共用服務提供雲端管理平台中其他服務所使用的服務。共用服務包括身分及存取服務、網域名稱服務及 NTP 服務。
+共用服務提供雲端管理平台中其他服務所使用的服務。共用服務包括身分及存取服務、網域名稱服務及 NTP（網路時間通訊協定）服務。
 
 ![{{site.data.keyword.icpfull_notm}} 共用服務](../../images/vcscar-common-services.svg "{{site.data.keyword.icpfull_notm}} 共用服務")
 

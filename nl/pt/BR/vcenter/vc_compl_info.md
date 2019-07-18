@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server compliance, compliance info, vCenter Server policy
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -56,15 +57,16 @@ Este Serviço de nuvem não foi projetado para nenhum requisito de segurança es
 ## Configurações de política
 {: #vc_compl_info-default-policy-config}
 
-A senha gerada do vCenter para as instâncias primárias do vCenter Server tem agora 15 caracteres de comprimento. Anteriormente, a senha gerada era o padrão de oito caracteres de comprimento do vCenter.
+A senha gerada do vCenter para as instâncias primárias do vCenter Server tem agora 15 caracteres de comprimento. Anteriormente, a senha gerada era o padrão do vCenter com oito caracteres de comprimento
 
-Tabela 1. Configurações de política do vCenter para uma nova instância primária
+A tabela a seguir detalha as configurações de política do vCenter para uma nova instância primária.
 
 | Política | V3.1 ou mais recente | V3.0 ou anterior |
 |:------------- |:------------------------------ |:------------- |
 | Política de senha do vCenter | Comprimento mínimo de 15 caracteres | Comprimento mínimo de 8 caracteres (padrão do vCenter) |
 | Política de bloqueio de acesso do vCenter | Máximo de três tentativas falhas de login | Máximo de cinco tentativas falhas de login (padrão do vCenter) |
 | Política de bloqueio de acesso do vCenter | 900 segundos entre falhas de login | 180 segundos entre falhas de login (padrão do vCenter) |
+{: caption="Tabela 1. Configurações de política do vCenter" caption-side="top"}
 
 A senha do NSX Manager gerada para as instâncias primárias do vCenter Server tem agora 15 caracteres de comprimento. Anteriormente, a senha gerada tinha oito caracteres de comprimento.
 
@@ -98,7 +100,7 @@ Os ambientes do VMware vCenter Server, que são entregues como {{site.data.keywo
 * Devido ao nível de especialização necessário para manter o conhecimento técnico superior no nível da equipe, às vezes é necessário envolver mais de uma equipe de suporte na resolução de um problema de software específico. Isso é facilmente manipulado, uma vez que nossas equipes de suporte estão todas em rede juntas e trabalham como uma para resolver quaisquer problemas ou problemas que surjam.
 * Para investigar o problema, a IBM pode precisar acessar informações sobre o sistema relativas à falha ou pode precisar recriar a falha para obter informações adicionais.
 * Um chamado de suporte gerado pelo cliente serve como reconhecimento de que o Suporte IBM pode acessar a camada de gerenciamento do VMware para investigação, depuração e triagem. Se a indisponibilidade de manutenção ou mudanças no ambiente forem necessárias, o Suporte IBM solicitará confirmação adicional documentada do cliente por meio de chamados como parte de nosso processo de gerenciamento de mudanças.
-* Para obter mais informações sobre chamados de suporte, consulte [Guia de suporte IBM](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923) e [Contatando o suporte IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
+* Para obter mais informações sobre chamados de suporte, consulte [Guia de suporte IBM](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923){:external} e [Contatando o suporte IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
 
 ## Responsabilidades do cliente
 {: #vc_compl_info-client-responsibilities}
@@ -137,7 +139,7 @@ Os ambientes do VMware vCenter Server, que são entregues como {{site.data.keywo
 * Esses programas não IBM são licenciados diretamente por seus provedores. O Cliente concorda em usar os programas não IBM sob os termos e condições do fornecedor. Eles são fornecidos no contrato de licenciamento da IBM que acompanha a oferta IBM no momento da compra.
 * A IBM testa para assegurar que os produtos de terceiros funcionem com os programas IBM e de forma adequada.
 * O suporte de Software IBM diagnosticará problemas relacionados a problemas do cliente utilizando o conhecimento de como nossas ofertas IBM funcionam com o software de terceiros. Assim que for concluído que o programa IBM está funcionando corretamente, mas o problema ainda existe, a IBM deve referir o cliente ao fornecedor de terceiro para diagnóstico adicional.
-* Informações adicionais sobre as responsabilidades do cliente referentes ao software ou código de Terceiros podem ser localizadas no [Guia de suporte IBM](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923).
+* Informações adicionais sobre as responsabilidades do cliente referentes ao software ou código de Terceiros podem ser localizadas no [Guia de suporte IBM](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923){:external}.
 
 ## Consentimento para acessar ambientes do cliente
 {: #vc_compl_info-consent-to-access-client-environment}

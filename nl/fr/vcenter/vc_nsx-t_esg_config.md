@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server network config, network configuration NSX-T, manage NSX-T ESG
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -23,7 +24,7 @@ subcollection: vmware-solutions
 Configurez le réseau pour vos machines virtuelles de manière à tirer parti de la passerelle VMware NSX-T ESG (Edge Services Gateway) déployée dans vos instances VMware vCenter Server. Pour plus d'informations sur les mesures de sécurité mises en place afin de réduire les risques en matière de sécurité, voir [La passerelle NSX Edge des services de gestion présente-t-elle un risque pour la sécurité ?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
 VMware NSX-T est une plateforme de virtualisation de réseau qui permet de virtualiser des réseaux isolés et qui fournit plusieurs services de
-mise en réseau, tels que des commutateurs, des routages et des pare-feu. Pour plus d'informations sur NSX, voir [Présentation de NSX](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}.
+mise en réseau, tels que des commutateurs, des routages et des pare-feu. Pour plus d'informations sur NSX, voir [Présentation de NSX](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:external}.
 
 Dans le cadre du processus de commande de votre instance vCenter Server with NSX-T, les actions suivantes sont effectuées pour vous :
 * Commande d'un sous-réseau client privé pour permettre à vos machines virtuelles d'accéder au réseau privé d'infrastructure {{site.data.keyword.cloud}}.
@@ -62,7 +63,7 @@ Pour profiter des avantages de NSX-T sur vos machines virtuelles de charge de tr
 ## Activation de la règle SNAT
 {: #vc_nsx-t_esg_config-procedure-enable-snat-rule}
 
-NSX-T active par défaut la règle SNAT. Pour plus d'informations sur la modification de règles existantes, voir [Configuration d'une règle NAT et de destination sur in routeur logique de niveau 0](https://docs.vmware.com/en/VMware-NSX-T-Data-Center/2.4/administration/GUID-45949ACD-9029-4674-B29C-C2EABEB39E1D.html){:new_window}.
+NSX-T active par défaut la règle SNAT. Pour plus d'informations sur la modification de règles existantes, voir [Configuration d'une règle NAT et de destination sur in routeur logique de niveau 0](https://docs.vmware.com/en/VMware-NSX-T-Data-Center/2.4/administration/GUID-45949ACD-9029-4674-B29C-C2EABEB39E1D.html){:external}.
 
 ## Procédure d'identification des détails des sous-réseaux client
 {: #vc_nsx-t_esg_config-procedure-identify-customer-subnets-details}
@@ -82,7 +83,7 @@ Vous trouverez d'autres détails concernant les sous-réseaux client en effectua
 2. Cliquez sur le menu de filtre et, dans la zone **Subnet**, entrez l'identificateur tel qu'indiqué dans la description du serveur Edge **customer-nsx-edge0** dans le client Web NSX-T.
 3. Passez en revue les remarques affichées pour les adresses IP. Ces remarques identifient les sous-réseaux et adresses IP commandés et utilisés au cours de la configuration initiale.
 
-   N'utilisez pas les adresses IP commandées et utilisées au cours de la configuration initiale. Toutefois, vous pouvez, au besoin, utiliser d'autres adresses IP sur ces sous-réseaux. Pour définir des règles de conversion d'adresses réseau supplémentaires, voir [Gestion des règles de conversion d'adresses réseau](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.
+   N'utilisez pas les adresses IP commandées et utilisées au cours de la configuration initiale. Toutefois, vous pouvez, au besoin, utiliser d'autres adresses IP sur ces sous-réseaux. Pour définir des règles de conversion d'adresses réseau supplémentaires, voir [Gestion des règles de conversion d'adresses réseau](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:external}.
    {:important}
 
 ## Liens connexes
@@ -90,4 +91,4 @@ Vous trouverez d'autres détails concernant les sous-réseaux client en effectua
 
 * [Remarques relatives à la modification des artefacts vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter_chg_impact#vcenter_chg_impact)
 * [Foire aux questions](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Passerelle NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}
+* [Passerelle NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:external}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-28"
 
 keywords: Veeam console, Veeam backup restore, update Veeam license
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # Gerenciando o Veeam no IBM Cloud
 {: #managingveeam}
@@ -40,11 +42,11 @@ O serviço Veeam on {{site.data.keyword.cloud_notm}} pode ser configurado para f
 
 Para instâncias implementadas na V1.8 ou em liberações mais recentes (ou que passaram por upgrade para elas), as mudanças de configuração
 para o seu ambiente não são automaticamente submetidas a backup. Portanto, antes de mudar a configuração de seu ambiente, é recomendado fazer backup dos componentes de gerenciamento manualmente executando a tarefa de backup de gerenciamento no console do Veeam. Para obter mais informações sobre como fazer backup manualmente, consulte
-as [Instruções técnicas do Veeam](https://helpcenter.veeam.com/backup/vsphere/scheduing_manual.html){:new_window}.
+as [Instruções técnicas do Veeam](https://helpcenter.veeam.com/backup/vsphere/scheduing_manual.html){:external}.
 
 Quando ocorrem falhas nos componentes de gerenciamento, é possível restaurar os componentes de gerenciamento para um backup anterior usando o console do Veeam. Para obter mais informações sobre como restaurar manualmente, consulte as
 [Instruções
-técnicas do Veeam]( https://helpcenter.veeam.com/backup/vsphere/performing_full_recovery.html){:new_window}.
+técnicas do Veeam]( https://helpcenter.veeam.com/backup/vsphere/performing_full_recovery.html){:external}.
 
 ## Aplicando atualizações ao Veeam on IBM Cloud
 {: #managingveeam-updates}
@@ -67,7 +69,7 @@ Se o serviço Veeam estiver instalado em uma instância apenas com rede privada,
 ### Atualizando licenças do Veeam para instâncias implementadas com redes pública e privada
 {: #managingveeam-update-license-public-private}
 
-Se o serviço Veeam estiver instalado em uma instância com rede pública e privada, será possível atualizar a licença do Veeam automaticamente ou manualmente seguindo as instruções do Veeam em [Atualizando a licença]( https://helpcenter.veeam.com/docs/backup/vsphere/license_update.html).
+Se o serviço Veeam estiver instalado em uma instância com rede pública e privada, será possível atualizar a licença do Veeam automaticamente ou manualmente seguindo as instruções do Veeam em [Atualizando a licença]( https://helpcenter.veeam.com/docs/backup/vsphere/license_update.html){:external}.
 
 ### Atualizando licenças do Veeam para instâncias implementadas somente com rede privada
 {: #managingveeam-update-license-private}
@@ -99,7 +101,8 @@ Depois que o novo serviço Veeam no {{site.data.keyword.cloud_notm}} é implemen
 {: #managingveeam-related}
 
 * [Veeam no {{site.data.keyword.cloud_notm}} visão geral](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)
+* [Serviços gerenciados para o Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
 * [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [Perguntas mais frequentes](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Website Veeam.com](https://www.veeam.com/)
-* [Documentação técnica do Veeam](https://www.veeam.com/documentation-guides-datasheets.html)
+* [Website Veeam.com](https://www.veeam.com/){:external}
+* [Documentação técnica do Veeam](https://www.veeam.com/documentation-guides-datasheets.html){:external}

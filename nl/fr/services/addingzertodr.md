@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-21"
 
 keywords: Zerto, Zerto components, tech specs Zerto
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -55,8 +56,8 @@ Disque (SAN) 100 Go
 * VSI
   * Une adresse IP privée principale
   * Liaison montante de réseau privé 1 Gbps
-* Dispositifs VRA (Virtual Replication Appliance) 
-  * Un sous-réseau portable privé pour le déploiement de VRA 
+* Dispositifs VRA (Virtual Replication Appliance)
+  * Un sous-réseau portable privé pour le déploiement de VRA
 
 ### Licences et frais
 {: #addingzertodr-specs-licenses}
@@ -68,6 +69,6 @@ Licence Zerto Replication V6.5 mise à jour 3
 
 * [Commande de Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-zerto_ordering)
 * [Gestion de Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingzertodr)
-* [Demande de services gérés pour Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
-* [Site Web zerto.com](https://www.zerto.com){:new_window}
-* [Documentation technique Zerto](https://www.zerto.com/myzerto/technical-documentation/){:new_window}
+* [Services gérés pour Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
+* [Site Web zerto.com](https://www.zerto.com){: external}
+* [Documentation technique Zerto](https://www.zerto.com/myzerto/technical-documentation/){: external}

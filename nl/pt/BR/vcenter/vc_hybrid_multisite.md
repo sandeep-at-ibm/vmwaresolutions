@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-06-26"
 
 keywords: vCenter Server Hybridity multi-site, multi-site configuration Hybridity, multi-site deployment vCenter Server Hybridity
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -66,6 +67,6 @@ A exclusão de instâncias do vCenter Server with Hybridity Bundle que fazem par
 ## Links relacionados
 {: #vc_hybrid_multisite-related}
 
-* [Designar função principal ao NSX Manager](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/com.vmware.nsx-cross-vcenter-install.doc/GUID-44E8AE16-BA3F-4DD9-B582-FC1E137E6CFC.html){:new_window}
-* [Configurando gerenciadores NSX secundários](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-9E48BC57-15E3-49C7-8BC5-F94ED8918BBE.html){:new_window}
-* [Microsoft Active Directory Trusts suportado com o VMware vCenter Single Sign-On](https://kb.vmware.com/s/article/2064250){:new_window}
+* [Designar função principal ao NSX Manager](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/com.vmware.nsx-cross-vcenter-install.doc/GUID-44E8AE16-BA3F-4DD9-B582-FC1E137E6CFC.html){:external}
+* [Configurando gerenciadores NSX secundários](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-9E48BC57-15E3-49C7-8BC5-F94ED8918BBE.html){:external}
+* [Microsoft Active Directory Trusts suportado com o VMware vCenter Single Sign-On](https://kb.vmware.com/s/article/2064250){:external}

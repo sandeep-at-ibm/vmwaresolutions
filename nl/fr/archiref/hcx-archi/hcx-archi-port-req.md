@@ -10,7 +10,7 @@ subcollection: vmware-solutions
 
 
 ---
-# Conditions d'accès au port pour VMware HCX on IBM Cloud 
+# Conditions d'accès au port pour VMware HCX on IBM Cloud
 {: #hcx-archi-port-req}
 
 HCX doit traverser l'Internet public et des lignes privées, et se connecter à des composants de centre de données, comme des réseaux, des commutateurs et des groupes de ports.

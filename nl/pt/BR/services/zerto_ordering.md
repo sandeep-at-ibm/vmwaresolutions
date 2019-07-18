@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-28"
 
 keywords: Zerto, Zerto replication billing, order Zerto
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -42,14 +43,14 @@ No console do {{site.data.keyword.vmwaresolutions_short}}, você é solicitado a
 
 É possível pedir uma nova instância com o Zerto on {{site.data.keyword.cloud_notm}} usando um dos métodos a seguir:
 * No console do {{site.data.keyword.vmwaresolutions_short}}, quando você pedir uma nova instância, selecione **Zerto on IBM Cloud** na seção **Serviços**.
-* No catálogo do {{site.data.keyword.cloud_notm}}, selecione **Zerto on IBM Cloud**, especifique as configurações de serviço e selecione **Incluir em nova instância**.
+* No catálogo do {{site.data.keyword.cloud_notm}}, clique no ícone **VMware** da área de janela de navegação esquerda e, em seguida, clique no cartão **Zerto on IBM Cloud** da seção **Serviços do VMware**. Especifique as configurações do serviço e selecione **Incluir na nova instância**.
 
 ## Pedindo o Zerto on IBM Cloud para uma instância existente
 {: #zerto_ordering-existing}
 
 É possível incluir o serviço Zerto on {{site.data.keyword.cloud_notm}} em uma instância existente usando um dos métodos a seguir:
 * No console do {{site.data.keyword.vmwaresolutions_short}}, visualize a instância na qual você deseja incluir o serviço, clique em **Serviços** na área de janela de navegação esquerda e clique em **Incluir**.
-* No catálogo do {{site.data.keyword.cloud_notm}}, selecione **Zerto on IBM Cloud**, especifique as configurações de serviço e selecione **Incluir em instância existente**.
+* No catálogo do {{site.data.keyword.cloud_notm}}, clique no ícone **VMware** da área de janela de navegação esquerda e, em seguida, clique no cartão **Zerto on IBM Cloud** da seção **Serviços do VMware**. Especifique as configurações do serviço e selecione **Incluir na instância existente**.
 
 Caso você inclua o Zerto on {{site.data.keyword.cloud_notm}} em uma instância do vCenter Server que tenha um servidor ESXi que está no modo de manutenção, deve-se usar o console do Zerto Virtual Manager (ZVM) e o endereço IP pré-preenchido do Zerto Virtual Replication Appliance (VRA) para implementar manualmente a máquina virtual (VM) do VRA.
 {:note}
@@ -59,13 +60,13 @@ Caso você inclua o Zerto on {{site.data.keyword.cloud_notm}} em uma instância 
 
 Se desejar incluir o Zerto on {{site.data.keyword.cloud_notm}} em uma instância somente privada, assegure-se de que os requisitos a seguir sejam atendidos:
 * Você é responsável por configurar seu próprio servidor proxy para se conectar à Internet. Para obter mais informações, consulte [Conectividade de rede pública](/docs/services/vmwaresolutions/services?topic=vmware-solutions-design_virtualinfrastructure#public-network-connectivity).
-* Deve-se configurar também o recurso Call Home para o Zerto. Para obter mais informações sobre o Zerto Call Home, consulte [Relatório do Zerto para ambientes corporativos (Call Home)](https://www.zerto.com/myzerto/knowledge-base/zerto-reporting-for-enterprise-environments-call-home/){:new_window}.
+* Deve-se configurar também o recurso Call Home para o Zerto. Para obter mais informações sobre o Zerto Call Home, consulte [Relatório do Zerto para ambientes corporativos (Call Home)](https://www.zerto.com/myzerto/knowledge-base/zerto-reporting-for-enterprise-environments-call-home/){:external}.
 
 ## Links relacionados
 {: #zerto_ordering-related}
 
 * [ Zerto on  {{site.data.keyword.cloud_notm}}  visão geral ](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)
 * [Gerenciando o Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingzertodr)
-* [Solicitando serviços gerenciados para o Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
-* [Website zerto.com](https://www.zerto.com){:new_window}
-* [Documentação técnica do Zerto](https://www.zerto.com/myzerto/technical-documentation/){:new_window}
+* [Serviços gerenciados para o Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
+* [Website zerto.com](https://www.zerto.com){:external}
+* [Documentação técnica do Zerto](https://www.zerto.com/myzerto/technical-documentation/){:external}

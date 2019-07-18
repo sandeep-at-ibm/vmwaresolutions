@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-06"
+lastupdated: "2019-07-01"
 
 ---
 
@@ -27,7 +27,7 @@ In questa progettazione, ogni ubicazione ha un cluster vRLI indipendente distrib
 * Nodo master - Nodo iniziale richiesto nel cluster. Il nodo master è responsabile delle query e dell'inserimento dei log. L'IU web del nodo master è l'unico pannello di controllo per tale cluster di vRealize Log Insight. Tutte le query eseguite sui dati vengono indirizzate al master che, a sua volta, distribuisce il carico di lavoro ai nodi di lavoro.
 * Nodo di lavoro - Sono necessari almeno tre nodi per formare un cluster con la possibilità di aggiungere più nodi di lavoro per il ridimensionamento incrementale. Un nodo di lavoro acquisisce i log e li archivia localmente.
 * Programma di bilanciamento del carico integrato - Fornisce l'alta disponibilità utilizzando la configurazione di bilanciamento del carico proprietaria (non è richiesto alcun programma di bilanciamento del carico esterno).
-* Forwarder Log Insight – Viene distribuito per ricevere i log dai componenti di sovrapposizione NSX. Inoltre, può essere utilizzato da un cliente se desidera inviare i log dalle VM di calcolo. Il Forwarder Log Insight è un singolo nodo master di vRealize Log Insight che viene utilizzato come aggregatore di syslog remoto per inoltrare gli avvisi al cluster vRLI. Poiché gli indirizzi supportati da VXLA sono fuori dallo spazio di indirizzi BYOIP, è necessario implementare delle regole NAT sull'ESG NSX. 
+* Forwarder Log Insight – Viene distribuito per ricevere i log dai componenti di sovrapposizione NSX. Inoltre, può essere utilizzato da un cliente se desidera inviare i log dalle VM di calcolo. Il Forwarder Log Insight è un singolo nodo master di vRealize Log Insight che viene utilizzato come aggregatore di syslog remoto per inoltrare gli avvisi al cluster vRLI. Poiché gli indirizzi supportati da VXLAN sono al di fuori dello spazio di indirizzi BYOIP, è necessario implementare delle regole NAT sull'ESG NSX.
 
 Sono disponibili le seguenti dimensioni e viene selezionata quella appropriata:
 * Small – 2.000 eventi al secondo

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-20"
 
 keywords: vmware offering, vmware solutions functions, function support
 
@@ -18,8 +18,6 @@ subcollection: vmware-solutions
 
 Consulta il seguente grafico per comprendere le differenze nel supporto delle funzioni per le istanze VMware vCenter Server, VMware vCenter Server with Hybridity Bundle e i cluster VMware vSphere.
 
-Tabella 1. Funzioni supportate per le istanze vCenter Server, vCenter Server with Hybridity Bundle e i cluster vSphere
-
 | Funzione | vCenter Server | vCenter Server with Hybridity | VMware vSphere |
 |:--- |:--- |:--- |:--- |
 | Automazione avanzata con tecnologia {{site.data.keyword.IBM}} <sup>1</sup> | Sì | Sì | No. Auto-costruito e configurato |
@@ -30,7 +28,7 @@ Tabella 1. Funzioni supportate per le istanze vCenter Server, vCenter Server wit
 | Aggiunta di server ESXi | Supportato | Supportato | Supportato. Configurazione automatizzata non inclusa |
 | Rimozione di server ESXi | Supportato | Supportato | Supportato. Configurazione automatizzata non inclusa |
 | Supporto multicluster | Il numero massimo dipende dalle direttive di dimensionamento VMware | Il numero massimo dipende dalle direttive di dimensionamento VMware | Supportato. Configurazione automatizzata non inclusa |
-| Aggiornamento e correzione gestiti dal client dello stack VMware | Aggiornamenti gestiti dal client:<br/>Strumenti Native VMware (VMware Update Manager) | Aggiornamenti gestiti dal client:<br/>Strumenti Native VMware (VMware Update Manager) | Aggiornamenti gestiti dal client:<br/>Strumenti Native VMware (VMware Update Manager) |
+| Aggiornamento e correzione gestiti dal client dello stack VMware | Aggiornamenti gestiti dal client:<br/>Strumenti VMware nativi (VMware Update Manager) | Aggiornamenti gestiti dal client:<br/>Strumenti VMware nativi (VMware Update Manager) | Aggiornamenti gestiti dal client:<br/>Strumenti VMware nativi (VMware Update Manager) |
 | Backup e ripristino | Manualmente utilizzando IBM Spectrum Protect Plus o Veeam | Manualmente utilizzando IBM Spectrum Protect Plus o Veeam | Soluzione di backup e ripristino non inclusa |
 | SDN (software-defined networking) | NSX Base, Advanced o Enterprise | NSX Advanced o Enterprise | NSX Standard, Base o Enterprise. Configurazione automatizzata non inclusa |
 | BYOL per vSphere e vSAN | Completamente supportato per cluster | Non supportato | Supportato |
@@ -38,6 +36,7 @@ Tabella 1. Funzioni supportate per le istanze vCenter Server, vCenter Server wit
 | Opzioni di aggiornamento licenze NSX | Aggiornamento disponibile da NSX Base ad Advanced o Enterprise e da NSX Advanced a Enterprise. Aggiornamento disponibile a vCenter Server with Hybridity Bundle. | Aggiornamento disponibile da NSX Advanced a Enterprise  | Nessuna |
 | Edizioni della licenza vSAN | vSAN Advanced o Enterprise | vSAN Advanced o Enterprise | vSAN Advanced o Enterprise  |
 | Servizi aggiuntivi | Supportato, HCX on {{site.data.keyword.cloud_notm}} escluso. Aggiornamento disponibile a vCenter Server with Hybridity Bundle. | Supportato, HCX on {{site.data.keyword.cloud_notm}} incluso. | Non supportato dall'automazione di questa soluzione, ma puoi portare e installare il tuo proprio software. |
+{: caption="Tabella 1. Funzioni supportate per le istanze vCenter Server, vCenter Server with Hybridity Bundle e i cluster vSphere" caption-side="top"}
 
 ## Note
 {: #inst_comp_chart-notes}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-20"
 
 keywords: vSphere scale cluster, scale vSphere, scale vSphere cluster
 
@@ -33,7 +33,7 @@ Assicurati di aver completato le seguenti attività:
 ## Procedura per ridimensionare i cluster esistenti
 {: #vs_scalingexistingclusters-procedure}
 
-1. Dal catalogo {{site.data.keyword.cloud_notm}}, fai clic su **VMware** nel riquadro di navigazione a sinistra e poi su **VMware vSphere** nella sezione **Data center virtuali**.
+1. Dal catalogo {{site.data.keyword.cloud_notm}}, fai clic sull'icona **VMware** nel riquadro di navigazione a sinistra e quindi sulla scheda **VMware vSphere on IBM Cloud** nella sezione **VMware Virtual Data Centers**.
 2. Nella pagina **VMware vSphere on IBM Cloud**, fai clic su **Crea**.  
 3. Fai clic sulla scheda **Scala esistente** e seleziona il cluster che vuoi ridimensionare dall'elenco **Configurazioni cluster**.
 4. Esamina le impostazioni del cluster che vengono completate automaticamente.

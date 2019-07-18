@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -19,24 +19,28 @@ subcollection: vmware-solutions
 ## Introducción al lenguaje de skateboarding
 {: #vcscar-preface-intro}
 
-La forma en que los skaters combinan movimientos y submovimientos en sus trucos impone una especie de gramática o sintaxis, que se basa en la física de lo que está pasando; la nomenclatura de la química ha evolucionado por razones similares. Hoy en día, un skater en un lado del planeta puede enviar por texto el nombre de un truco a otro patinador situado en el otro lado, y sus complejos movimientos se entienden.
+La forma en que los skaters combinan movimientos y submovimientos en sus trucos impone una especie de gramática o sintaxis que se basa en la física de lo que está pasando; la nomenclatura de la química ha evolucionado por razones similares. Hoy en día, un skater en un lado del planeta puede enviar por texto el nombre de un truco a otro patinador situado en el otro lado, y sus complejos movimientos se entienden.
 
-La riqueza del lenguaje se alimenta de la propia complejidad del skateboarding. Los movimientos de la tabla son intricados, lo que da lugar a docenas de trucos básicos que se pueden ejecutar de varias formas y que se pueden integrar con varias variables, lo que da lugar a un gran número de combinaciones. Una estructura de tipo sufijo-raíz-sufijo de cada componente dicta el modo en que se combina cada elemento o movimiento, que corresponden a conjuntos reales de movimientos tanto de la tabla como del skater. La orientación física y la mecánica de las fuerzas determinan lo que encaja y lo que no, que es lo que impone dicha sintaxis.
+La riqueza del lenguaje se alimenta de la propia complejidad del skateboarding. Los movimientos de la tabla son intricados, lo que da lugar a docenas de trucos básicos que se pueden ejecutar de varias formas y que se pueden integrar con varias variables, lo que da lugar a un gran número de combinaciones.
+
+Una estructura de tipo sufijo-raíz-sufijo de cada componente dicta el modo en que se combina cada elemento o movimiento, que corresponden a conjuntos reales de movimientos tanto de la tabla como del skater. La orientación física y la mecánica de las fuerzas determinan lo que encaja y lo que no, que es lo que impone dicha sintaxis.
 
 Los trucos se pueden realizar desde la parte posterior o desde la parte delantera de la tabla, *Ollie* o
 *Nollie*, que corresponden al pie delantero o posterior del skater. La tabla voltea, rueda y gira en combinaciones que se repiten sobre tres ejes, en cualquier dirección, en el sentido de las agujas del reloj o en el sentido contrario. El skater combina sus movimientos con los movimientos de la tabla, lo que añade varias dimensiones a las iteraciones, en función de la dirección, la rotación, la "postura" y de si el giro se realiza en el mismo sentido que el volteo de la tabla o en el contrario.
 
 Estas dos últimas variables merecen un poco más de explicación. En primer lugar, *postura* se confunde fácilmente con direccionalidad lineal. Todos los skaters tienen una postura nativa, con el pie izquierdo o el derecho al frente; por lo tanto,
-hacer un truco *switch* (switch-stance) significa que es la imagen en el espejo del mismo (al igual que sucede con un bateador en béisbol). El sentido hacia atrás es casual; la principal distinción es la lateralidad o dominio de una mano o de un pie.  Por lo tanto, cualquier truco *switch* merece más reconocimiento no porque sea hacia atrás, sino porque todas las funciones motoras se invierten al lado más débil o al pie "malo". Hacer un truco hacia atrás o “fakie” es simplemente poner un signo menos en el sentido e implica las mismas funciones motoras, que son marginalmente más difíciles.
+hacer un truco *switch* (switch-stance) significa que es la imagen en el espejo del mismo (al igual que sucede con un bateador en béisbol). El sentido hacia atrás es casual; la principal distinción es la lateralidad o dominio de una mano o de un pie. Por lo tanto, cualquier truco *switch* merece más reconocimiento no porque sea hacia atrás, sino porque todas las funciones motoras se invierten al lado más débil o al pie "malo". Hacer un truco hacia atrás o “fakie” es simplemente poner un signo menos en el sentido e implica las mismas funciones motoras, que son marginalmente más difíciles.
 
 El segundo aspecto importante para los skaters de alto nivel se aplica a un volteo hacia dentro (*inward*) o hacia fuera (*outward*), dependiendo de cómo voltee y rote (2 ejes) la tabla en relación con el propio cuerpo. En los trucos de volteo (flip)
-se rueda con cualquiera de los pies desde cualquier extremo de la tabla; en los *kickflips* se puede rodar con la punta del pie, mientras que en los *heelflips* se hace lo contrario, volteando según el flujo natural del movimiento o en contra del mismo. Por lo tanto, los volteos hacia dentro son tan poco naturales que se merecen un término, que es *hard-flips*. Es decir, un *nollie-inward-kickflip* es idéntico a un *nollie-hardflip*, pero requiere más precisión puesto que se realiza a contrapelo.
+se rueda con cualquiera de los pies desde cualquier extremo de la tabla; en los *kickflips* se puede rodar con la punta del pie, mientras que en los *heelflips* se hace lo contrario, volteando según el flujo natural del movimiento o en contra del mismo.
+
+Por lo tanto, los volteos hacia dentro son tan poco naturales que se merecen un término, que es *hard-flips*. Es decir, un *nollie-inward-kickflip* es idéntico a un *nollie-hardflip*, pero requiere más precisión puesto que se realiza a contrapelo.
 
 Por lo tanto, cada componente de esta estructura prefijo-raíz-sufijo se puede desglosar en tres elementos binarios más, que son rotación, sentido y postura; en algunos trucos hay que especificar si el volteo es hacia dentro o hacia fuera. El skating sería un juego de niños si no fuera por la posibilidad de combinar trucos, lo que aumenta el número de iteraciones. Se pueden concatenar varios trucos básicos en agrupaciones formadas por dos, tres o incluso cinco o seis trucos, en el caso de los más experimentados.
 
 Hasta ahora, el número de iteraciones prácticas nos lleva hasta cientos de ellas, lo que establece la base; la complejidad real se puede ver en la calle (*streetskating*), donde el número de combinaciones se convierte en miles.
 
-Al principio de los 90, los skaters partían de trucos en suelo plano y los proyectaban en el entorno “orgánico” que les rodeaba: escaleras, bancos, barandillas, mesas de pícnic, maceteros; todo esto abrió la dimensionalidad que los definió. Las formas casi infinitas en que podían combinar trucos y superficies en pares de tipo yin-yang tuvo ocupados a los skaters durante décadas. Esto también se aplica a *vert-skating* (skating vertical), practicado por
+Al principio de los 90, los skaters partían de trucos en suelo plano y los proyectaban en el entorno “orgánico” que les rodeaba: escaleras, bancos, barandillas, mesas de pícnic, maceteros; todo esto abrió la dimensionalidad que los definió. Las formas casi infinitas en que pueden combinar trucos y superficies en pares de tipo yin-yang tuvo ocupados a los skaters durante décadas. Esto también se aplica a *vert-skating* (skating vertical), practicado por
 Tony Hawk en rampas.
 
 Aunque la mayoría de los trucos básicos se han ido definiendo a lo largo de los años, es la capacidad de combinarlos y adaptarlos lo que a menudo diferencia a los expertos. Esta es otra razón por la que el skating se puede considerar más un arte que un deporte. La expresión personal siempre prevalece sobre la propia ejecución. También es el motor que impulsó a los artistas que crearon la franquicia de vídeo juegos de Activision, *Tony Hawk Pro Skater*, que ha funcionado durante casi una década, y que también dio lugar a juegos rivales de *Electronic Arts*.
@@ -69,8 +73,7 @@ Por ejemplo, un skater puede pedir a Watson Assistant una lista de todas las var
 ## La plataforma de nube
 {: #vcscar-preface-cloud-platform}
 
-La capa creativa de los sistemas de TI para generar nuevas combinaciones constituye la parte más apreciada para los skaters. Tiene la capacidad de conectar con su creatividad para inspirar formas de innovar, en cualquier punto del globo.
-Nada de esto se habría conseguido sin {{site.data.keyword.cloud}}.
+La capa creativa de los sistemas de TI para generar nuevas combinaciones constituye la parte más apreciada para los skaters. Tiene la capacidad de conectar con su creatividad para inspirar formas de innovar, en cualquier punto del globo. Nada de esto se habría conseguido sin {{site.data.keyword.cloud}}.
 
 ## Enlaces relacionados
 {: #vcscar-preface-related}

@@ -28,7 +28,7 @@ También puede especificar si desea recibir notificaciones por correo electróni
 {: #useraccount-reqs}
 
 * Solo puede enlazar una cuenta de infraestructura de {{site.data.keyword.cloud_notm}} a una cuenta de usuario de {{site.data.keyword.cloud_notm}}.
-* La cuenta de infraestructura de {{site.data.keyword.cloud_notm}} que está utilizando debe cumplir determinados requisitos. Para obtener más información, consulte [Requisitos de cuenta de infraestructura de {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req). 
+* La cuenta de infraestructura de {{site.data.keyword.cloud_notm}} que está utilizando debe cumplir determinados requisitos. Para obtener más información, consulte [Requisitos de cuenta de infraestructura de {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req).
 * Si la clave de API para su cuenta de infraestructura de {{site.data.keyword.cloud_notm}} cambia, debe actualizar la clave en la página **Valores** de la consola de {{site.data.keyword.vmwaresolutions_short}}.
 
    Es su responsabilidad asegurarse de que la clave de API que se guarda en la página **Configuración** es correcta y está actualizada. De lo contrario, las operaciones que requieren la validación de clave de API podrían fallar.
@@ -45,11 +45,11 @@ También puede especificar si desea recibir notificaciones por correo electróni
 {: #useraccount-set-cred}
 
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Valores** en el panel de navegación de la izquierda.
-2. En el área **IBM Cloud Infrastructure Credentials**, revise la información para los pasos que debe realizar. 
-3. Si tiene una cuenta de infraestructura {{site.data.keyword.cloud_notm}} y una cuenta {{site.data.keyword.cloud_notm}} que están enlazadas, pulse **Recuperar** para completar las credenciales automáticamente. 
-4. Si tiene un cuenta de infraestructura de {{site.data.keyword.cloud_notm}} y una cuenta de {{site.data.keyword.cloud_notm}} que no están enlazadas, debe enlazarlas. Siga las instrucciones de [Enlazar cuentas de IBMid](/docs/account?topic=account-unifyingaccounts#link_accounts) y, a continuación, pulse **Recuperar** para completar las credenciales automáticamente. 
-5. Si no dispone de una cuenta de infraestructura de {{site.data.keyword.cloud_notm}}, y no tiene una cuenta de {{site.data.keyword.cloud_notm}} facturable, [actualice antes su cuenta](/docs/account?topic=account-upgrading-account) y luego [cree una clave de API de infraestructura clásica](/docs/iam?topic=iam-classic_keys). 
-6. Si no tiene una cuenta de infraestructura de {{site.data.keyword.cloud_notm}}, y tiene una cuenta de {{site.data.keyword.cloud_notm}} facturable, debe [crear una clave de API de infraestructura clásica](/docs/iam?topic=iam-classic_keys). 
+2. En el área **IBM Cloud Infrastructure Credentials**, revise la información para los pasos que debe realizar.
+3. Si tiene una cuenta de infraestructura {{site.data.keyword.cloud_notm}} y una cuenta {{site.data.keyword.cloud_notm}} que están enlazadas, pulse **Recuperar** para completar las credenciales automáticamente.
+4. Si tiene un cuenta de infraestructura de {{site.data.keyword.cloud_notm}} y una cuenta de {{site.data.keyword.cloud_notm}} que no están enlazadas, debe enlazarlas. Siga las instrucciones de [Enlazar cuentas de IBMid](/docs/account?topic=account-unifyingaccounts#link_accounts) y, a continuación, pulse **Recuperar** para completar las credenciales automáticamente.
+5. Si no dispone de una cuenta de infraestructura de {{site.data.keyword.cloud_notm}}, y no tiene una cuenta de {{site.data.keyword.cloud_notm}} facturable, [actualice antes su cuenta](/docs/account?topic=account-upgrading-account) y luego [cree una clave de API de infraestructura clásica](/docs/iam?topic=iam-classic_keys).
+6. Si no tiene una cuenta de infraestructura de {{site.data.keyword.cloud_notm}}, y tiene una cuenta de {{site.data.keyword.cloud_notm}} facturable, debe [crear una clave de API de infraestructura clásica](/docs/iam?topic=iam-classic_keys).
 7. Pulse **Guardar credenciales**.
 
 ## Resultados

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server network config, network configuration NSX-T, manage NSX-T ESG
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -23,7 +24,7 @@ subcollection: vmware-solutions
 Configura la rete per le tue VM (Virtual Machine) in modo da poter usufruire del gateway dei servizi edge (ESG, Edge Services Gateway) VMware NSX-T che viene distribuito nelle tue istanze VMware vCenter Server. Per ulteriori informazioni sulle misure di sicurezza implementate per ridurre al minimo il rischio di sicurezza, vedi [L'edge NSX dei servizi di gestione rappresenta un rischio per la sicurezza?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
 VMware NSX-T è una piattaforma di virtualizzazione di rete che consente la virtualizzazione di reti isolate e fornisce numerosi servizi
-di rete come switch, instradamento e firewall. Per ulteriori informazioni su NSX, vedi [Overview of NSX](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}.
+di rete come switch, instradamento e firewall. Per ulteriori informazioni su NSX, vedi [Overview of NSX](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:external}.
 
 Come parte del processo di ordine per la tua istanza di vCenter Server with NSX-T, le seguenti azioni vengono completate per tuo conto:
 * Una sottorete del cliente privata viene ordinata per essere utilizzata dalle tue VM (Virtual Machine) per accedere alla rete privata dell'infrastruttura {{site.data.keyword.cloud}}.
@@ -63,7 +64,7 @@ Per usufruire di NSX-T per le tue VM del carico di lavoro, devi configurare una 
 ## Abilitazione della regola SNAT
 {: #vc_nsx-t_esg_config-procedure-enable-snat-rule}
 
-NSX-T abilita la regola SNAT per impostazione predefinita. Per informazioni sulla modifica di regole esistenti, vedi [Configure Source and Destination NAT on a Tier-0 Logical Router](https://docs.vmware.com/en/VMware-NSX-T-Data-Center/2.4/administration/GUID-45949ACD-9029-4674-B29C-C2EABEB39E1D.html){:new_window}.
+NSX-T abilita la regola SNAT per impostazione predefinita. Per informazioni sulla modifica di regole esistenti, vedi [Configure Source and Destination NAT on a Tier-0 Logical Router](https://docs.vmware.com/en/VMware-NSX-T-Data-Center/2.4/administration/GUID-45949ACD-9029-4674-B29C-C2EABEB39E1D.html){:external}.
 
 ## Procedura per identificare i dettagli delle sottoreti del cliente
 {: #vc_nsx-t_esg_config-procedure-identify-customer-subnets-details}
@@ -84,7 +85,7 @@ Inoltre, puoi trovare ulteriori dettagli sulle sottoreti del cliente completando
 3. Riesamina le note che vengono visualizzate per gli indirizzi IP. Queste note identificano quali sottoreti e indirizzi IP vengono ordinati e utilizzati durante la configurazione iniziale.
 
    Non utilizzare gli indirizzi IP che vengono ordinati e utilizzati durante la configurazione iniziale. Puoi comunque utilizzare altri indirizzi IP
-su queste sottoreti in base ai tuoi requisiti. Per configurare ulteriori regole NAT (network address translation), vedi [Managing NAT rules](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.
+su queste sottoreti in base ai tuoi requisiti. Per configurare ulteriori regole NAT (network address translation), vedi [Managing NAT rules](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:external}.
    {:important}
 
 ## Link correlati
@@ -92,4 +93,4 @@ su queste sottoreti in base ai tuoi requisiti. Per configurare ulteriori regole 
 
 * [Considerazioni sulla modifica delle risorse vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter_chg_impact#vcenter_chg_impact)
 * [Domande frequenti](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Gateway dei servizi edge NSX](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}
+* [ Gateway dei servizi edge NSX ](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:external}

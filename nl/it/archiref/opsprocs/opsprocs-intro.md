@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-30"
+lastupdated: "2019-07-01"
 
 ---
 
@@ -21,7 +21,7 @@ Molte organizzazioni IT documentano le proprie procedure operative in un runbook
     * Chi sono i contatti principali per il servizio?
     * Come segnalare problemi con il servizio.
  * Build - Questa sezione si concentra sui team di sviluppo, sui principali componenti software del servizio e su come viene creato il servizio. Informazioni su prodotti software, posizioni di OVA, supporti di distribuzione o posizione del codice sorgente. I passi richiesti per l'assemblaggio o la distribuzione della release. Include tutte le istruzioni necessarie allo sviluppatore per iniziare a lavorare.
- * Distribuzione - Questa sezione si concentra sul team delle operazioni e su come distribuire il software. Include dettagli sull'hardware e sull'infrastruttura virtualizzata e su come creare le macchine virtuali (VM), tra cui: requisiti di vCPU, RAM e disco, versione e configurazione del sistema operativo e configurazione, middleware o pacchetti da installare. 
+ * Distribuzione - Questa sezione si concentra sul team delle operazioni e su come distribuire il software. Include dettagli sull'hardware e sull'infrastruttura virtualizzata e su come creare le macchine virtuali (VM), tra cui: requisiti di vCPU, RAM e disco, versione e configurazione del sistema operativo e configurazione, middleware o pacchetti da installare.
  * Procedure - Istruzioni dettagliate per attività comuni quali: aggiunta, modifica ed eliminazione, problemi comuni e relative soluzioni, consigli per la risoluzione dei problemi.
  * Risoluzione dei problemi - Un elenco di avvisi comuni dal sistema di monitoraggio, comprese le attività dettagliate per questi avvisi e le indicazioni generiche sulla risoluzione dei problemi del servizio.
  * Piani e procedure di ripristino di emergenza - Dettagli su come ripristinare il servizio in un'altra ubicazione a causa di un'emergenza nell'ubicazione principale.
@@ -32,8 +32,9 @@ La maggior parte delle organizzazioni IT dispone di più runbook che fungono da 
 1. La prima fase consiste nel decidere quali procedure devono essere documentate e, una volta elencate, documentare ciascuna di esse con dettagli sufficienti.
 2. La seconda fase è continuativa e consiste nel gestire, aggiornare e correggere queste procedure, aggiungere nuove procedure e ritirare quelle che non sono più necessarie.
 
-{{site.data.keyword.vmwaresolutions_full}} ti consente di utilizzare le competenze, le serie di strumenti e i runbook esistenti del tuo team in loco per gestire le tue istanze in {{site.data.keyword.cloud_notm}}. Come indicazione, la seguente documentazione generale copre le attività, le guide e le procedure comuni.
+{{site.data.keyword.vmwaresolutions_full}} ti consente di utilizzare le competenze, le serie di strumenti e i runbook esistenti del tuo team in loco per gestire le tue istanze in {{site.data.keyword.cloud_notm}}.
 
+Il seguente elenco contiene le procedure, le guide e le attività più comuni:
 * Attività di configurazione - Queste sono le attività comuni che gli amministratori di sistema devono eseguire per personalizzare l'ambiente in base alle esigenze aziendali e rispondere alle richieste di servizio come: aggiungere nuove VM e aumentare la capacità. Queste attività sono raggruppate nella seguente struttura:
  * Indicazioni generiche
  * Procedure per VM

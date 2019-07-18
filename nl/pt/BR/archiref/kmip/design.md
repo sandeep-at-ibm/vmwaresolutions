@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-21"
 
 subcollection: vmware-solutions
 
@@ -59,7 +59,7 @@ Quando o KMIP for VMware é usado junto com a criptografia do vSAN ou a criptogr
 
 Se você planeja girar chaves, revise as informações a seguir sobre os níveis em que as chaves podem ser giradas:
 * Sua customer root key (CRK) protege todas as chaves do VMware. As chaves podem ser giradas na instância do IBM Key Protect ou do Hyper Protect Crypto Services que está associada à sua instância do KMIP for VMware.
-* O KMIP for VMware usa sua CRK para proteger as chaves que ele gera e distribui para o VMware. O VMware considera essas chaves como "chaves de criptografia de chaves" (KEKs).
+* O KMIP for VMware usa sua CRK para proteger as chaves que ele gera e distribui para o VMware. O VMware considera essas chaves como _chaves de criptografia de chaves (KEKs)_.
   * Se você estiver usando a criptografia do vSphere, será possível girar as chaves usando o comando PowerShell **Set-VMEncryptionKey**.
   * Se você estiver usando a criptografia do vSAN, será possível girar as chaves na interface com o usuário do vSAN.
 * O VMware usa essas KEKs para proteger as chaves reais que ele usa para criptografar unidades de disco e discos da MV. É possível girar essas chaves usando o que o VMware chama de um rechaveamento "detalhado". Essa operação criptografa novamente todos os dados criptografados, portanto, isso pode levar um longo tempo.
@@ -74,7 +74,7 @@ A criptografia do VMware vSAN e a criptografia do vSphere são compatíveis com 
 ### Chaves dentro das chaves
 {: #kmip-design-keys}
 
-Os sistemas de gerenciamento de chave normalmente usam uma técnica conhecida como *criptografia de envelope* para agrupar ou proteger chaves com outras chaves. Essas chaves são chamadas de *chaves raiz* ou *chaves de criptografia de chaves* (KEKs). Para acessar uma chave, é necessário decriptografar ou desagrupar a chave usando sua chave raiz correspondente. Destruir a chave raiz é uma maneira efetiva de invalidar todas as chaves que ela protegeu. Essas chaves não precisam ser armazenadas próximas da chave raiz. Controlar o acesso à chave raiz é importante.
+Os sistemas de gerenciamento de chave normalmente usam uma técnica conhecida como *criptografia de envelope* para agrupar ou proteger chaves com outras chaves. Essas chaves são chamadas de _chaves raiz_ ou _chaves de criptografia de chaves (KEKs)_. Para acessar uma chave, é necessário decriptografar ou desagrupar a chave usando sua chave raiz correspondente. Destruir a chave raiz é uma maneira efetiva de invalidar todas as chaves que ela protegeu. Essas chaves não precisam ser armazenadas próximas da chave raiz. Controlar o acesso à chave raiz é importante.
 
 O {{site.data.keyword.cloud_notm}} Key Protect e o Hyper Protect Crypto Services fornecem este serviço usando um *customer root key* (CRK). O Key Protect armazena CRKs exclusivamente no hardware {{site.data.keyword.cloud_notm}} CloudHSM do qual eles não podem ser extraídos; o Hyper Protect Crypto Services armazena chaves nos IBM zSeries HSMs. Essas CRKs são, então, usadas para agrupar mais chaves de criptografia, como as geradas pelo KMIP for VMware para sua instância do VMware.
 

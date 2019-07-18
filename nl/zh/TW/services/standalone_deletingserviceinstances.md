@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: VMware HCX standalone, HCX on-premises, delete HCX
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # 刪除內部部署 VMware HCX on IBM Cloud 實例
 {: #standalone_deletingserviceinstances}
@@ -37,4 +39,4 @@ subcollection: vmware-solutions
 * [訂購內部部署 HCX on {{site.data.keyword.cloud_notm}} 實例](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_orderingserviceinstances)
 * [檢視內部部署 HCX on {{site.data.keyword.cloud_notm}} 實例](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_viewingserviceinstances)
 * [HCX 術語名詞解釋](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
-* [VMware Hybrid Cloud Extension 文件](https://cloud.vmware.com/vmware-hcx/resources)
+* [VMware Hybrid Cloud Extension 文件](https://cloud.vmware.com/vmware-hcx/resources){:external}

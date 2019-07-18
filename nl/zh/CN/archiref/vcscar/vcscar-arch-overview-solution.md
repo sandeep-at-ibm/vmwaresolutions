@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -140,7 +140,7 @@ CAM 需要工作程序节点具有更高的 vCPU 和内存配置。
 ### CAM 代理
 {: #vcscar-arch-overview-solution-cam-proxy}
 
-通过 Nginx 代理访问 CAM。
+通过 `nginx` 代理访问 CAM。
 
 ### CAM 用户界面
 {: #vcscar-arch-overview-solution-cam-ui}

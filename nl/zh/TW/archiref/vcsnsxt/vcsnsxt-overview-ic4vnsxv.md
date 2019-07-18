@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-21"
 
 subcollection: vmware-solutions
 
@@ -95,11 +95,11 @@ SDDC-Dswitch-Public	  |SDDC-DPortGroup-External	|來源虛擬埠| 作用中：0�
 此設計指定 NSX 元件的配置，但不會套用任何網路層疊元件配置。客戶可根據需求自行決定設計網路層疊。
 
 已配置下列元件：
--	管理伺服器及控制器已安裝並整合至 vCenter Web 使用者介面。
--	已安裝 ESXi 代理程式，並配置每部 ESXi 主機的 VTEP IP 位址。
--	VTEP 配置、控制器配置、VXLAN 配置（傳輸區域）。
--	供管理元件使用的 NSX Edge Services Gateway (ESG) 應用裝置。
--	僅針對 vCenter Server，NSX Edge Services Gateway (ESG) 應用裝置供客戶使用。
+- 管理伺服器及控制器已安裝並整合至 vCenter Web 使用者介面。
+- 已安裝 ESXi 代理程式，並配置每部 ESXi 主機的 VTEP IP 位址。
+- VTEP 配置、控制器配置、VXLAN 配置（傳輸區域）。
+- 供管理元件使用的 NSX Edge Services Gateway (ESG) 應用裝置。
+- 僅針對 vCenter Server，NSX Edge Services Gateway (ESG) 應用裝置供客戶使用。
 
 未配置下列元件：
 - 虛擬分散式路由器

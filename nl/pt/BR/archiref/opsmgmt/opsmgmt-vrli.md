@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-06"
+lastupdated: "2019-07-01"
 
 ---
 
@@ -27,7 +27,7 @@ Nesse design, cada local tem um cluster vRLI independente que é implementado no
 * Nó Principal - Nó inicial necessário no Cluster. O Nó Principal é responsável pela ingestão de consultas e logs. A IU da web do Nó principal é o único painel de controle para esse vRealize Log Insight Cluster. Todas as consultas com relação a dados são direcionadas ao principal, que, por sua vez, distribui a carga de trabalho para os Trabalhadores.
 * Nó do trabalhador - são necessários três nós mínimos para formar um cluster com a capacidade de incluir mais Trabalhadores para ampliação. Um Nó do trabalhador alimenta logs e armazena-os localmente.
 * Balanceador de carga integrado - Isso fornece alta disponibilidade usando a configuração de balanceamento de carga proprietária (não é necessário nenhum balanceador de carga externo).
-* Encaminhador do Log Insight – É implementado para receber logs dos componentes de sobreposição do NSX. Além disso, pode ser utilizado por um cliente que deseje enviar logs de VMs de cálculo. O Encaminhador do Log Insight é um Nó Principal único do vRealize Log Insight usado como um agregador de syslog remoto para encaminhar alertas para o cluster do vRLI. Como os endereços suportados por VXLAN estão fora do espaço de endereço de BYOIP, as regras NAT devem ser implementadas no NSX ESG.
+* Encaminhador do Log Insight – É implementado para receber logs dos componentes de sobreposição do NSX. Além disso, pode ser utilizado por um cliente que deseje enviar logs de VMs de cálculo. O Encaminhador do Log Insight é um Nó Principal único do vRealize Log Insight usado como um agregador de syslog remoto para encaminhar alertas para o cluster do vRLI. Como os endereços suportados por VXLAN estão fora do espaço de endereço BYOIP, as regras NAT devem ser implementadas no NSX ESG.
 
 Os tamanhos a seguir estão disponíveis e o apropriado é selecionado:
 * Pequeno - 2.000 eventos por segundo

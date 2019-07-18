@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-28"
 
 keywords: VMware HCX standalone, HCX on-premises, tech specs HCX
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -57,7 +58,7 @@ HCX の全機能を利用するには、インターネットにアクセスで�
 
 オンプレミス HCX Manager の基本的なセットアップがこれで完了しました。 続いて、オンプレミス HCX on {{site.data.keyword.cloud_notm}} サイトをクラウド側 HCX サイトとペアにします。
 
-詳しくは、[VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx) を参照してください。
+詳しくは、[VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx){:external} を参照してください。
 
 ## オンプレミス HCX on IBM Cloud インスタンスを削除する前の考慮事項
 {: #standalone_considerations-delete}
@@ -80,5 +81,5 @@ HCX の全機能を利用するには、インターネットにアクセスで�
 
 * [オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスの参照](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_viewingserviceinstances)
 * [HCX の用語集](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
-* [VMware Hybrid Cloud Extension の資料](https://cloud.vmware.com/vmware-hcx/resources)
+* [VMware Hybrid Cloud Extension の資料](https://cloud.vmware.com/vmware-hcx/resources){:external}
 * [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

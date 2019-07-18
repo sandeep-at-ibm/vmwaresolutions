@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: HTKC WebGUI, HTKC console, enable internet HTKC
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -47,16 +48,16 @@ Ces règles vous permettent d'activer l'accès Internet pour les machines virtue
 Pour les environnements vCenter Server exclusivement privés, la passerelle VMware NSX ESG (Edge Services Gateway) **mgmt-nsx-edge** n'est pas ajoutée ; les règles de pare-feu et SNAT ne sont donc pas définies. Par conséquent, la connectivité Internet ne peut pas être activée pour les instances privées uniquement et les licences HyTrust expirent chaque année.
 {:note}
 
-### Procédure de recherche des règles de pare-feu et SNAT définies 
+### Procédure de recherche des règles de pare-feu et SNAT définies
 {: #managinghtkc-proc-find-firewall}
 
 1. Connectez-vous au client VMware vSphere Web Client (FLEX) et recherchez la passerelle ESG **mgmt-nsx-edge**.
 2. Cliquez sur **Home > Networking & Security > NSX Edges**.
 3. Cliquez deux fois sur la passerelle ESG **mgmt-nsx-edge** et cliquez sur l'onglet **Manage**.
 4. Accédez à l'onglet **Firewall** et recherchez les règles HyTrust. Notez les adresses IP source. Il s'agit des adresses IP des machines virtuelles (VM) HyTrust.
-5. Accédez à l'onglet **NAT** et recherchez les règles SNAT créées pour les VM HyTrust. Les adresses IP source correspondent aux adresses IP que vous avez notées à l'étape précédente. 
+5. Accédez à l'onglet **NAT** et recherchez les règles SNAT créées pour les VM HyTrust. Les adresses IP source correspondent aux adresses IP que vous avez notées à l'étape précédente.
 
-### Procédure d'activation de la connectivité Internet pour HTKC 
+### Procédure d'activation de la connectivité Internet pour HTKC
 {: #managinghtkc-proc-enable-internet}
 
 1. Effectuez les étapes 1 à 3 de la procédure précédente.
@@ -65,10 +66,10 @@ Pour les environnements vCenter Server exclusivement privés, la passerelle VMwa
 4. Connectez-vous à la console à l'aide des données d'identification de console qui figurent sur la page des détails du service HyTrust KeyControl on IBM Cloud sur la console {{site.data.keyword.vmwaresolutions_short}}.
 5. Pour obtenir l'adresse IP de passerelle par défaut actuelle de la machine virtuelle, cliquez sur **Manage Network Settings > Show Current Network Configuration**. Notez l'adresse IP répertoriée pour **Gateway**. Cette adresse devient la passerelle utilisée pour la route statique.
 6. Pour définir une route statique pour la machine virtuelle, cliquez sur **Manage Network Settings > Manage Static Routes > Add Static Route**. Définissez **Network address** sur `10.0.0.0/8` et **Gateway** sur l'adresse IP indiquée à l'étape précédente.
-7. Pour définir l'adresse IP de passerelle par défaut pour la machine virtuelle, cliquez sur **Manage Network Settings > Change Current Network Configuration**. Si vous recevez un message d'avertissement, cliquez sur **OK**, puis sur **Custom Configuration**. Définissez la zone **Gateway** sur l'adresse IP de liaison montante privée notée à l'étape 2, puis cliquez sur **OK**. Attendez que la nouvelle configuration réseau soit installée et que les services réseau soient redémarrés. 
+7. Pour définir l'adresse IP de passerelle par défaut pour la machine virtuelle, cliquez sur **Manage Network Settings > Change Current Network Configuration**. Si vous recevez un message d'avertissement, cliquez sur **OK**, puis sur **Custom Configuration**. Définissez la zone **Gateway** sur l'adresse IP de liaison montante privée notée à l'étape 2, puis cliquez sur **OK**. Attendez que la nouvelle configuration réseau soit installée et que les services réseau soient redémarrés.
 8. Si vous voyez un message demandant une nouvelle authentification HyTrust SecureOS, cliquez sur **OK** et entrez l'adresse IP de l'autre machine virtuelle HyTrust pour cette installation. Si vous êtes invité à indiquer un mot de passe composé de 16 caractères, appuyez sur entrée pour revenir au menu principal. Vérifiez la configuration réseau pour vous assurer que les modifications sont appliquées.
-9. Pour confirmer que la machine virtuelle dispose d'un accès à internet, exécuter la commande ping sur l'adresse IP publique ou le site web. Cliquez sur **Manage Network Settings > Network Diagnostic Tools > Ping Another Server**. Entrez une adresse de site Web public, par exemple, `www.ibm.com`, cliquez sur **OK** et attendez qu'un message s'affiche, par exemple, `www.ibm.com responds to ping`. 
-10. Répétez les étapes 3 à 9 pour l'autre machine virtuelle HyTrust. 
+9. Pour confirmer que la machine virtuelle dispose d'un accès à internet, exécuter la commande ping sur l'adresse IP publique ou le site web. Cliquez sur **Manage Network Settings > Network Diagnostic Tools > Test Inbound Ports of Another Server**. Entrez une adresse de site Web public, par exemple, `www.ibm.com`, cliquez sur **OK**, entrez `80 443` pour les ports (ou tout autre port que vous souhaitez tester). Une réponse doit s'afficher immédiatement avec les ports d'entrée et un message tel que `80 (OK) 443 (OK)`. 
+10. Répétez les étapes 3 à 9 pour l'autre machine virtuelle HyTrust.
 
 ## Liens connexes
 {: #managinghtkc-related}
@@ -76,4 +77,4 @@ Pour les environnements vCenter Server exclusivement privés, la passerelle VMwa
 * [Présentation de HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htkc_considerations)
 * [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [Foire aux questions](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Site Web HyTrust](https://www.hytrust.com/)
+* [Site Web HyTrust](https://www.hytrust.com/){:external}

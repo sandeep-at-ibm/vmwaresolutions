@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-06-27"
 
 subcollection: vmware-solutions
 
@@ -68,7 +68,7 @@ Esta refactorización de la solución genera una plataforma común en la que eje
   -	IBM MQ Advanced
   -	IBM MQ Advanced for Developers
   -	Rabbit MQ (código abierto)
-  -	IBM Event Streams Tech Preview (basado en Apache Kafka)
+  -	Presentación técnica de IBM Event Streams (basado en Apache Kafka)
 
 * Digital Business Automation
   -	IBM Operational Decision Manager
@@ -92,7 +92,7 @@ Esta refactorización de la solución genera una plataforma común en la que eje
 * HPC / HPDA
   -	IBM Spectrum LSF Community Edition
   -	IBM Spectrum Symphony Community Edition
-  -	IBM Spectrum Conductor Technical Preview
+  -	Presentación técnica de IBM Spectrum Conductor
 
 * Gestión multinube
   -	{{site.data.keyword.cloud_notm}} Automation Manager
@@ -159,8 +159,7 @@ type=NFS
 server = nfs.server.ip.address
 path = /shared/db2trader1`
 
-En la interfaz de usuario del catálogo, busca “Db2” y pulsa ibm-db2oldp-dev
-Revisa el archivo readme y pulsa Configurar.
+En la interfaz de usuario del catálogo, busque “Db2” y pulse ibm-db2oldp-dev. Revise el archivo léame y, a continuación, pulse Configurar.
 
 En la sección Configurar, hay una sección Inicio rápido y una sección Todos los parámetros. Abre la sección Todos los parámetros porque Todd tiene que especificar más configuración:
 
@@ -228,11 +227,7 @@ Para optimizarlos, Jane ha seguido los pasos siguientes:
 -	Ha añadido un conducto (Jane ha utilizado Jenkins)
 -	Ha compilado con Maven
 
-A continuación se muestra un ejemplo del [repositorio de
-código](https://github.com/IBMStockTrader/) de Jane, junto con el archivo
-Jenkins, server.xml y más. Con todo esto, Jane puede codificar libremente funciones adicionales mediante secretos
-para acceder a servicios como ODM y
-Watson, junto con más microservicios como repositorios individuales en GitHub.
+En el ejemplo siguiente se muestra el [repositorio de código](https://github.com/IBMStockTrader/) de Jane, junto con el archivo Jenkins, server.xml, y más. Con todo esto, Jane puede programar libremente funciones adicionales mediante secretos para acceder a servicios como ODM y Watson, junto con más microservicios como repositorios individuales en GitHub.
 
 ### Adición de secretos
 {: #vcscontent-addmidware-add-secrets}

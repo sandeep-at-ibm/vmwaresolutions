@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-10"
+lastupdated: "2019-06-27"
 
 keywords: vCenter Server add service, view service vCenter Server, remove service vCenter Server
 
@@ -27,11 +27,9 @@ Vous pouvez commander des services pour vos instances VMware vCenter Server, tel
 
 Le tableau suivant présente les services disponibles sur les instances vCenter Server, ainsi que les versions installées de ces services :
 
-Tableau 1. Services disponibles pour les instances vCenter Server
-
 | Nom de service | Version de service en cours | Version d'instance |
 |----------------------------------------------------------------------------------------|------------------|
-| [Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_considerations) | 2.2 | A partir de V2.9 |
+| [Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_considerations) | 2.2.1 | A partir de V2.9 |
 | [F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations) | BIG-IP VE v14.1.0.2 | A partir de V1.9 |
 | [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations) | Série 300 | A partir de V2.0 |
 | [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations) | 6.0.3 | A partir de V2.0 |
@@ -43,13 +41,14 @@ Tableau 1. Services disponibles pour les instances vCenter Server
 | [KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations) | 2.0  | Non applicable  |
 | [Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations) | 9.5u4 | A partir de V1.8 |
 | [Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr) | 6.5 update 3 | A partir de V1.2 |
+{: caption="Tableau 1. Services disponibles pour les instances vCenter Server" caption-side="top"}
 
 ## Procédure d'ajout de services à des instances vCenter Server
 {: #vc_addingremovingservices-adding-procedure}
 
 Pour ajouter un service à votre instance vCenter Server, cliquez sur le lien de service approprié dans le tableau précédent pour passer en revue les remarques relatives au service et vérifiez les composants qui sont déployés. Suivez ensuite les instructions de la rubrique sur la commande de service afin d'ajouter le service à votre instance.
 
-### Que se passe-t-il après l'installation d'un service ?  
+### Que se passe-t-il après l'installation d'un service ?
 {: #vc_addingremovingservices-adding-results}
 
 Lorsque l'installation du service est terminée, vous êtes prévenu par un courrier électronique, et le service s'affiche sur la page **Services** de l'instance avec le statut **Installé**.

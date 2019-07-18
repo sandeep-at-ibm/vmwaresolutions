@@ -47,7 +47,7 @@ subcollection: vmware-solutions
 1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「設定」**をクリックします。
 2. **「IBM Cloud インフラストラクチャー資格情報 (IBM Cloud Infrastructure Credentials)」**領域で、実行する必要がある手順を確認します。
 3. {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントと {{site.data.keyword.cloud_notm}} アカウントの両方があり、それらがリンクされている場合は、**「取得 (Retrieve)」**をクリックすると、資格情報が自動的に入力されます。
-4. {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントと{{site.data.keyword.cloud_notm}} アカウントの両方があり、それらがリンクされていない場合は、それらのアカウントをリンクさせる必要があります。[IBMid アカウントのリンク](/docs/account?topic=account-unifyingaccounts#link_accounts)の手順を実行してから、**「取得 (Retrieve)」**をクリックして、資格情報を自動的に取り込みます。
+4. {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントと{{site.data.keyword.cloud_notm}} アカウントの両方があり、それらがリンクされていない場合は、それらのアカウントをリンクさせる必要があります。 [IBMid アカウントのリンク](/docs/account?topic=account-unifyingaccounts#link_accounts)の手順を実行してから、**「取得 (Retrieve)」**をクリックして、資格情報を自動的に取り込みます。
 5. {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントがなく、{{site.data.keyword.cloud_notm}} 請求可能アカウントもない場合には、まず[アカウントをアップグレード](/docs/account?topic=account-upgrading-account)してから、[クラシック・インフラストラクチャー API キーを作成](/docs/iam?topic=iam-classic_keys)します。
 6. {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントがなく、{{site.data.keyword.cloud_notm}} 請求可能アカウントがある場合には、[クラシック・インフラストラクチャー API キーを作成](/docs/iam?topic=iam-classic_keys)する必要があります。
 7. **「資格情報の保存」**をクリックします。

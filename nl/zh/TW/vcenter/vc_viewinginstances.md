@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-06-28"
 
 keywords: view vCenter Server, view instance, view instance details
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -31,8 +32,6 @@ subcollection: vmware-solutions
 2. 從主控台橫幅，按一下您的使用者帳戶圖示，然後按一下**帳戶**欄位，以選取您要檢查其實例的使用者帳戶。  
 3. 在 **vCenter Server 實例**表格中，檢視佈建在所選取使用者帳戶中的實例清單。
 
-表 1. vCenter Server 實例項目
-
 |項目        |說明       |  
 |:------------- |:------------- |
 |名稱 |實例的名稱|
@@ -41,10 +40,9 @@ subcollection: vmware-solutions
 |位置|管理實例所在的 {{site.data.keyword.CloudDataCent_notm}} |  
 |建立時間|建立實例的日期和時間|
 |狀態|實例的狀態|   
+{: caption="表 1. vCenter Server 實例項目" caption-side="top"}
 
 實例可以具有一定範圍的狀態。
-
-表 2. vCenter Server 實例狀態說明
 
 |狀態|說明       |
 |:------------- |:------------- |
@@ -56,6 +54,7 @@ subcollection: vmware-solutions
 |正在刪除|正在刪除實例。|
 |刪除錯誤|刪除實例時發生錯誤。|
 |已刪除|已刪除實例。|
+{: caption="表 2. vCenter Server 實例狀態說明" caption-side="top"}
 
 ## 檢視 vCenter Server 實例內容詳細資料的程序
 {: #vc_viewinginstances-procedure-view-inst-property}
@@ -64,8 +63,6 @@ subcollection: vmware-solutions
 
 1. 在 **vCenter Server 實例**表格中，按一下實例名稱。
 2. 在**內容**下，檢視實例的詳細資料。
-
-表 3. vCenter Server 實例內容
 
 |內容        |說明       |
 |:------------- |:------------- |
@@ -82,13 +79,12 @@ subcollection: vmware-solutions
 |DNS、子網域|子網域是本端 vCenter Server 實例主機名稱所在之根網域名稱的 DNS 子網域名稱。子網域名稱的格式為 <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp>。|
 | Hybridity Bundle |指出是否已安裝 vCenter Server with Hybridity Bundle。|
 |狀態|實例的狀態。<br><br>顯示的資訊會提供關於部署進度或對實例所採取動作的更新。如果發生問題，可能會顯示訊息，以協助您調查及解決問題。|
+{: caption="表 3. vCenter Server 實例內容" caption-side="top"}
 
 ## 檢視 vCenter Server 實例存取資訊的程序
 {: #vc_viewinginstances-procedure-view-access-info}
 
 在**存取資訊**下，檢視實例相關元件的存取資訊。顯示的密碼是系統產生的起始密碼。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台以外變更它們，則不會在實例摘要頁面上更新它們。
-
-表 4. 實例相關元件的 vCenter Server 存取資訊
 
 |元件        |說明       |
 |:------------- |:------------- |
@@ -102,18 +98,18 @@ subcollection: vmware-solutions
 |vCenter FQDN  |vCenter Server 的完整網域名稱 (FQDN)。|
 |vCenter ADMIN  |您可以用來使用 vSphere Web Client 登入 vCenter Server 的 VMware vCenter Single Sign-On 使用者名稱及密碼。|
 |vCenter SSH  |您可以用來透過 SSH 連線存取 vCenter Server VM 的使用者名稱及密碼。|
+{: caption="表 4. 實例相關元件的 vCenter Server 存取資訊" caption-side="top"}
 
 ## 檢視 vCenter Server 實例部署歷程的程序
 {: #vc_viewinginstances-procedure-view-deploy-history}
 
 按一下左導覽窗格中的**部署歷程**，以檢視該實例的部署歷程。
 
-表 5. vCenter Server 實例部署歷程
-
 |項目        |說明       |  
 |:------------- |:------------- |
 |日期 |變更實例狀態的日期和時間|
 |摘要 |變更的詳細資料|
+{: caption="表 5. vCenter Server 實例部署歷程" caption-side="top"}
 
 ## 發生錯誤時要執行的作業
 {: #vc_viewinginstances-if-errors-occur}
@@ -130,7 +126,7 @@ subcollection: vmware-solutions
 
 如需可協助您完成登入指示的資訊，請檢閱下列主題：
 *  如需存取 vSphere Web Client 之前的需求及必要步驟，請參閱[連接至 vSphere Web Client 時發生逾時](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_timeout_vc_console)。
-*  如需使用 VPN 登入 {{site.data.keyword.cloud_notm}} 基礎架構「專用網路」的存取點清單，請參閱 [VPN 存取](http://www.softlayer.com/vpn-access){:new_window}。
+*  如需使用 VPN 登入 {{site.data.keyword.cloud_notm}} 基礎架構「專用網路」的存取點清單，請參閱 [VPN 存取](http://www.softlayer.com/vpn-access){:external}。
 *  如果您在使用 vSphere Web Client 部署 OVF（開放式虛擬化格式）檔案時發生問題，請參閱[使用 vSphere Web Client 部署 OVF 檔案](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_deploy_ovf)。
 
 ## 相關鏈結

@@ -98,10 +98,10 @@ CloudBuilder 및 CloudDriver는 사설 메시지 큐를 통해 IBM 관리 플레
 ### 자동화 플로우
 {: #design_infrastructuremgmt-auto-flow}
 
-다음은 {{site.data.keyword.vmwaresolutions_short}} 콘솔을 사용하여 VMware 인스턴스의 순서를 지정할 때 이벤트의 순서에 대해 설명합니다.
-1. {{site.data.keyword.cloud_notm}}에서 네트워킹에 대한 VLAN 및 서브넷의 순서 지정.
-2. vSphere Hypervisor가 설치된 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}의 순서 지정.
-3. Active Directory 도메인 제어기의 역할을 수행하기 위한 Microsoft Windows VSI의 순서 지정.
+다음은 {{site.data.keyword.vmwaresolutions_short}} 콘솔을 사용하여 VMware 인스턴스를 주문할 때 이벤트의 순서에 대해 설명합니다.
+1. {{site.data.keyword.cloud_notm}}에서 네트워킹에 대한 VLAN 및 서브넷 주문.
+2. vSphere Hypervisor가 설치된 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} 주문.
+3. Active Directory 도메인 제어기의 역할을 수행하기 위한 Microsoft Windows VSI 주문.
 4. Cloud Driver VSI의 배치.
 5. 네트워킹 및 배치된 하드웨어의 유효성 검증.
 6. 해당되는 경우, 단일 노드 vSAN의 초기 구성.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-26"
 
 keywords: FAQ, user account, patch management
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -30,7 +31,7 @@ Encuentre las respuestas a las preguntas más frecuentes sobre {{site.data.keywo
 * **Cuenta de IBMid**. Se necesita esta cuenta para acceder a la consola de {{site.data.keyword.vmwaresolutions_short}}. La consola es una interfaz de usuario autónoma, independiente del {{site.data.keyword.slportal}}. Para obtener más información, consulte
 [Iniciación](/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started).
 * **Cuenta de {{site.data.keyword.cloud_notm}}**. Se necesita esta cuenta para el suministro. Puede registrarse para una cuenta de {{site.data.keyword.cloud_notm}} utilizando un **IBMid** existente o creando un nuevo **IBMid**.
-* **Cuenta de infraestructura de {{site.data.keyword.cloud_notm}}**. Esta cuenta se utiliza para iniciar la sesión en el portal de clientes de infraestructura de {{site.data.keyword.cloud_notm}} que proporciona alguna función adicional para gestionar los productos y servicios de la infraestructura. Puede obtener una cuenta de infraestructura de {{site.data.keyword.cloud_notm}} actualizando su **cuenta de {{site.data.keyword.cloud_notm}}** a un tipo de cuenta facturable, o enlazando su cuenta de infraestructura de {{site.data.keyword.cloud_notm}} existente con su cuenta de {{site.data.keyword.cloud_notm}}. La cuenta de infraestructura de {{site.data.keyword.cloud_notm}} que está utilizando debe cumplir determinados requisitos. Para obtener más información, consulte [Registro para cuentas necesarias](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts) y [Requisitos de cuenta de infraestructura de {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req). 
+* **Cuenta de infraestructura de {{site.data.keyword.cloud_notm}}**. Esta cuenta se utiliza para iniciar la sesión en el portal de clientes de infraestructura de {{site.data.keyword.cloud_notm}} que proporciona alguna función adicional para gestionar los productos y servicios de la infraestructura. Puede obtener una cuenta de infraestructura de {{site.data.keyword.cloud_notm}} actualizando su **cuenta de {{site.data.keyword.cloud_notm}}** a un tipo de cuenta facturable, o enlazando su cuenta de infraestructura de {{site.data.keyword.cloud_notm}} existente con su cuenta de {{site.data.keyword.cloud_notm}}. La cuenta de infraestructura de {{site.data.keyword.cloud_notm}} que está utilizando debe cumplir determinados requisitos. Para obtener más información, consulte [Registro para cuentas necesarias](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts) y [Requisitos de cuenta de infraestructura de {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req).
 
 ## ¿Cómo puedo asociar mis credenciales de la infraestructura IBM Cloud a la consola de IBM Cloud for VMware Solutions?
 {: #faq-associate-credentials}
@@ -79,11 +80,11 @@ En el despliegue mínimo de dos nodos, un nodo tiene un controlador NSX y el otr
 
 Cuando se añade un tercer nodo a un clúster de dos nodos, vCenter Server vuelve a equilibrar automáticamente los tres controladores NSX entre los tres nodos y crea un entorno altamente disponible.
 
-## ¿Puedo definir una configuración de alta disponibilidad de VMware vCenter 6.5?
+## ¿Puedo definir una configuración de alta disponibilidad de VMware vCenter?
 {: #faq-ha}
 {: faq}
 
-No, no se recomienda. Podrían producirse errores en las funciones de {{site.data.keyword.vmwaresolutions_short}}.
+Puede configurar la alta disponibilidad de vCenter, pero {{site.data.keyword.vmwaresolutions_short}} no proporciona soporte para la configuración.
 
 ## ¿Se puede cambiar el nombre de los clústeres?
 {: #faq-rename-cluster}
@@ -105,7 +106,7 @@ El usuario es el responsable de todas las demás actualizaciones de los componen
 Para las instancias desplegadas en V2.0 o posteriores, VMware Update Manager (VUM) está integrado en vCenter Server. Puede configurar VUM para descargar actualizaciones de ESXi desde VMware.
 
 Para más información, consulte los siguientes recursos:
-* [Soporte de VMware](https://www.vmware.com/support.html)
+* [Soporte de VMware](https://www.vmware.com/support.html){:external}
 * [Aplicación de actualizaciones a instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates)
 * [Aplicación de actualizaciones a instancias de vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_applyingupdates)
 

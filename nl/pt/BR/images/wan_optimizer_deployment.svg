@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 686 794" style="enable-background:new 0 0 686 794;" xml:space="preserve">
 <style type="text/css">
@@ -59,7 +59,7 @@
 			<line class="st6" x1="633.5" y1="106.6" x2="633.5" y2="232.4"/>
 		</g>
 	</g>
-	<text transform="matrix(1 0 0 1 378 226)" class="st7 st8">Espaço de endereço público</text>
+	<text transform="matrix(1 0 0 1 428 226)" class="st7 st8">Espaço de endereço público</text>
 </g>
 <g id="Private_address_space_rectangle">
 	<g>
@@ -75,7 +75,7 @@
 			<line class="st10" x1="633.5" y1="263.6" x2="633.5" y2="650.4"/>
 		</g>
 	</g>
-	<text transform="matrix(1 0 0 1 379 643)" class="st7 st8">Espaço de endereço privado</text>
+	<text transform="matrix(1 0 0 1 421 643)" class="st7 st8">Espaço de endereço privado</text>
 </g>
 <g id="ibm_cloud">
 	<path class="st11" d="M141.2,59.9c0-11.4-13.4-20.6-29.9-20.6c-1.6,0-3.2,0.1-4.7,0.3c-1-2.2-2.6-4.2-4.6-5.8
@@ -168,7 +168,7 @@
 			</g>
 		</g>
 	</g>
-	<text transform="matrix(1 0 0 1 363 780)" class="st7 st15">Gateway em nuvem</text>
+	<text transform="matrix(1 0 0 1 370 780)" class="st7 st15">Gateway em nuvem</text>
 </g>
 <g id="gear_bottom">
 	<g>
@@ -199,7 +199,7 @@
 				<rect x="562.9" y="744.8" transform="matrix(0.7071 0.7071 -0.7071 0.7071 694.2971 -181.0563)" class="st0" width="5.5" height="5.5"/>
 		</g>
 	</g>
-	<text transform="matrix(1 0 0 1 534 780)" class="st7 st15">WAN Optimizer</text>
+	<text transform="matrix(1 0 0 1 519 780)" class="st7 st15">WAN Optimizer</text>
 </g>
 <g id="gear_icon">
 	<g>
@@ -273,7 +273,7 @@
 				</g>
 			</g>
 		</g>
-		<text transform="matrix(1 0 0 1 260 466)" class="st7 st8">Rede de Comutador Lógico (VXLAN)</text>
+		<text transform="matrix(1 0 0 1 276 466)" class="st7 st8">Rede de Comutador Lógico (VXLAN)</text>
 	</g>
 	<g id="Layer_9">
 	</g>
@@ -306,7 +306,7 @@
 				<rect x="104.5" y="280" class="st18" width="47.3" height="47.3"/>
 				<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="135.9627" y1="296.7212" x2="124.5096" y2="338.8456">
 					<stop  offset="0" style="stop-color:#CCE0F4"/>
-					<stop  offset="7.748766e-002" style="stop-color:#C5DDF3"/>
+					<stop  offset="7.748766e-02" style="stop-color:#C5DDF3"/>
 					<stop  offset="0.1918" style="stop-color:#B1D5EF"/>
 					<stop  offset="0.329" style="stop-color:#90C9EA"/>
 					<stop  offset="0.4838" style="stop-color:#63B7E2"/>
@@ -348,7 +348,7 @@
 					<g>
 						<g>
 							
-								<rect x="130.2" y="306.1" transform="matrix(0.7268 -0.6868 0.6868 0.7268 -177.623 175.9507)" class="st0" width="4.3" height="10.4"/>
+								<rect x="130.2" y="306.1" transform="matrix(0.7268 -0.6868 0.6868 0.7268 -177.6229 175.9507)" class="st0" width="4.3" height="10.4"/>
 						</g>
 					</g>
 				</g>
@@ -363,7 +363,7 @@
 				<rect x="108.5" y="720.9" class="st18" width="38.1" height="38.1"/>
 				<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="133.8253" y1="734.3933" x2="124.6063" y2="768.3004">
 					<stop  offset="0" style="stop-color:#CCE0F4"/>
-					<stop  offset="7.748766e-002" style="stop-color:#C5DDF3"/>
+					<stop  offset="7.748766e-02" style="stop-color:#C5DDF3"/>
 					<stop  offset="0.1918" style="stop-color:#B1D5EF"/>
 					<stop  offset="0.329" style="stop-color:#90C9EA"/>
 					<stop  offset="0.4838" style="stop-color:#63B7E2"/>
@@ -388,7 +388,7 @@
 					<g>
 						<g>
 							
-								<rect x="118.6" y="731.8" transform="matrix(0.7268 -0.6868 0.6868 0.7268 -472.2413 283.4423)" class="st0" width="3.3" height="7.2"/>
+								<rect x="118.6" y="731.8" transform="matrix(0.7268 -0.6868 0.6868 0.7268 -472.2414 283.4423)" class="st0" width="3.3" height="7.2"/>
 						</g>
 					</g>
 				</g>
@@ -423,7 +423,7 @@
 		<text transform="matrix(1 0 0 1 229.2979 746.4043)" class="st0 st7 st25">MV</text>
 		<text transform="matrix(1 0 0 1 269.9365 746.4043)" class="st0 st7 st25">Nuvem HCX</text>
 	</g>
-	<text transform="matrix(1 0 0 1 201 780)" class="st7 st15">Gerenciador de HCX</text>
+	<text transform="matrix(1 0 0 1 229 780)" class="st7 st15">Gerenciador de HCX</text>
 </g>
 <g id="VM_HCX">
 	<g>

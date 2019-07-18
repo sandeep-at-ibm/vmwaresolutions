@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-06-30"
 
 keywords: vCenter Server Hybridity update, patch vCenter Server Hybridity, IBM component update
 
@@ -44,13 +44,12 @@ Expanda la entrada de actualización pulsando la flecha hacia abajo y verifique 
 
 En la tabla siguiente se muestra el modo en que diferentes niveles de impacto afectan al sistema.
 
-Tabla 1. Niveles de actualización e impacto
-
 | Nivel de actualización  | Impacto        |  
 |:------------- |:------------- |
 | Bajo    | Esta actualización no afecta a ningún sistema. No es necesario que la aplique durante un tiempo de inactividad planificado. |  
 | Medio | Esta actualización puede afectar a algunos sistemas. Se recomienda aplicarla durante un tiempo de inactividad planificado. |  
-| Grave  | Esta actualización afecta a algunos o a todos los sistemas. Debe aplicarla durante un tiempo de inactividad planificado. |  
+| Grave  | Esta actualización afecta a algunos o a todos los sistemas. Debe aplicarla durante un tiempo de inactividad planificado. |
+{: caption="Tabla 1. Niveles de actualización e impacto" caption-side="top"}
 
 ## Procedimiento para aplicar actualizaciones de componentes de gestión de IBM (instancias de V2.3 y V2.4)
 {: #vc_hybrid_applyingupdates-procedure}

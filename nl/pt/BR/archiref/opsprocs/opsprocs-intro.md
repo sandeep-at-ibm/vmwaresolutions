@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-30"
+lastupdated: "2019-07-01"
 
 ---
 
@@ -32,8 +32,9 @@ A maioria das organizações de TI tem diversos runbooks que atuam como seus man
 1. O primeiro estágio é decidir quais procedimentos precisam ser documentados e, quando listados, documentar cada um com detalhes suficientes.
 2. O segundo estágio é contínuo e consiste em manter, atualizar e corrigir esses procedimentos, incluindo novos procedimentos e retirando procedimentos que não são mais necessários.
 
-O {{site.data.keyword.vmwaresolutions_full}} permite que você use qualificações, conjuntos de ferramentas e runbooks existentes da equipe que você tem no local para gerenciar suas instâncias no {{site.data.keyword.cloud_notm}}. Como recomendação, a documentação geral a seguir captura procedimentos comuns, guias e tarefas:
+O {{site.data.keyword.vmwaresolutions_full}} permite que você use qualificações, conjuntos de ferramentas e runbooks existentes da equipe que você tem no local para gerenciar suas instâncias no {{site.data.keyword.cloud_notm}}.
 
+A lista a seguir contém os procedimentos, guias e tarefas mais comuns:
 * Tarefas de configuração - Essas tarefas são atividades comuns que os administradores de sistema precisam executar para customizar o ambiente de acordo com as necessidades da empresa e responder a solicitações de serviço, como: incluir novas VMs e aumentar a capacidade. Essas tarefas são agrupadas na estrutura a seguir:
  * Orientação genérica
  * Procedimentos de VM

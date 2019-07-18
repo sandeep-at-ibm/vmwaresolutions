@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-31"
+lastupdated: "2019-06-20"
 
 keywords: planning vSphere, data center, vSphere data centers
 
@@ -37,8 +37,6 @@ vSphere 部署對實體基礎架構有嚴格的需求。因此，您只能在符
 
 如果您選取 vSAN 元件，則會依 SSD（固態硬碟）可用性來過濾位置清單。
 {:note}
-
-表 1. vSphere 叢集可用的 {{site.data.keyword.CloudDataCents_notm}}
 
 | {{site.data.keyword.CloudDataCent_notm}} |位置|地區           |
 |:----------------------|:---------|:---------------|
@@ -75,6 +73,7 @@ vSphere 部署對實體基礎架構有嚴格的需求。因此，您只能在符
 |WDC04 |華盛頓特區|NA 東部|
 |WDC06 |華盛頓特區|NA 東部|
 |WDC07 |華盛頓特區|NA 東部|
+{: caption="表 1. vSphere 叢集可用的 {{site.data.keyword.CloudDataCents_notm}}" caption-side="top"}
 
 ## 相關鏈結
 {: #vs_planning-related}

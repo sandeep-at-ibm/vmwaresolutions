@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-28"
 
 keywords: Veeam console, Veeam backup restore, update Veeam license
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # Veeam on IBM Cloud 관리
 {: #managingveeam}
@@ -37,9 +39,9 @@ Windows IP 주소 및 관리자 인증 정보는 Veeam on {{site.data.keyword.cl
 
 Veeam 콘솔을 사용하여 관리 컴포넌트를 백업하도록 Veeam on {{site.data.keyword.cloud_notm}} 서비스를 구성할 수 있습니다. 자세한 정보는 [컴포넌트 백업](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup)을 참조하십시오.
 
-V1.8 이상 릴리스로 배치된(또는 이러한 릴리스로 업그레이드된) 인스턴스의 경우에는 환경에 대한 구성 변경사항이 자동으로 백업되지 않습니다. 따라서 환경의 구성을 변경하기 전에 Veeam 콘솔에서 관리 백업 작업을 실행하여 수동으로 관리 컴포넌트를 백업하도록 권장합니다. 수동 백업에 대한 자세한 정보는 [Veeam 기술 지시사항](https://helpcenter.veeam.com/backup/vsphere/scheduing_manual.html){:new_window}을 참조하십시오.
+V1.8 이상 릴리스로 배치된(또는 이러한 릴리스로 업그레이드된) 인스턴스의 경우에는 환경에 대한 구성 변경사항이 자동으로 백업되지 않습니다. 따라서 환경의 구성을 변경하기 전에 Veeam 콘솔에서 관리 백업 작업을 실행하여 수동으로 관리 컴포넌트를 백업하도록 권장합니다. 수동 백업에 대한 자세한 정보는 [Veeam 기술 지시사항](https://helpcenter.veeam.com/backup/vsphere/scheduing_manual.html){:external}을 참조하십시오.
 
-관리 컴포넌트에서 실패가 발생하는 경우 Veeam 콘솔을 사용하여 관리 컴포넌트를 이전 백업으로 복원할 수 있습니다. 수동 복원에 대한 자세한 정보는 [Veeam 기술 지시사항]( https://helpcenter.veeam.com/backup/vsphere/performing_full_recovery.html){:new_window}을 참조하십시오.
+관리 컴포넌트에서 실패가 발생하는 경우 Veeam 콘솔을 사용하여 관리 컴포넌트를 이전 백업으로 복원할 수 있습니다. 수동 복원에 대한 자세한 정보는 [Veeam 기술 지시사항]( https://helpcenter.veeam.com/backup/vsphere/performing_full_recovery.html){:external}을 참조하십시오.
 
 ## Veeam on IBM Cloud에 업데이트 적용
 {: #managingveeam-updates}
@@ -62,7 +64,7 @@ V1.8 이상 릴리스로 배치된(또는 이러한 릴리스로 업그레이드
 ### 공용 및 사설 네트워크를 사용하여 배치된 인스턴스에 대한 Veeam 라이센스 업데이트
 {: #managingveeam-update-license-public-private}
 
-공용 및 사설 네트워크를 사용하여 Veeam 서비스가 인스턴스에 설치되는 경우 [라이센스 업데이트]( https://helpcenter.veeam.com/docs/backup/vsphere/license_update.html)에 있는 Veem 지시사항을 따라 Veem 라이센스를 자동으로 또는 수동으로 업데이트할 수 있습니다.
+공용 및 사설 네트워크를 사용하여 Veeam 서비스가 인스턴스에 설치되는 경우 [라이센스 업데이트]( https://helpcenter.veeam.com/docs/backup/vsphere/license_update.html){:external}에 있는 Veem 지시사항을 따라 Veem 라이센스를 자동으로 또는 수동으로 업데이트할 수 있습니다.
 
 ### 사설 네트워크만 사용하여 배치된 인스턴스에 대한 Veeam 라이센스 업데이트
 {: #managingveeam-update-license-private}
@@ -90,7 +92,8 @@ Veeam 서비스가 사설 네트워크만의 인스턴스에 설치된 경우에
 {: #managingveeam-related}
 
 * [Veeam on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)
+* [Veeam on {{site.data.keyword.cloud_notm}}에 대한 관리 서비스](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
 * [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Veeam.com 웹 사이트](https://www.veeam.com/)
-* [Veeam 기술 문서](https://www.veeam.com/documentation-guides-datasheets.html)
+* [Veeam.com 웹 사이트](https://www.veeam.com/){:external}
+* [Veeam 기술 문서](https://www.veeam.com/documentation-guides-datasheets.html){:external}

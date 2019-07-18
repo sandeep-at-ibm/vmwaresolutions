@@ -113,7 +113,7 @@ Tableau 4. Ports d'Operation Manager
 ### Authentification
 {: #opsmgmt-vrops-auth}
 
-La gestion des utilisateurs de vROps nécessite VMware Identity Manager (vIDM), qui est intégré à Active Directory. Les comptes de service sont utilisés pour la communication d'application à application depuis vRealize Operations Manager vers les adaptateurs suivants avec l'ensemble minimum de permissions nécessaires pour la collecte de métrique et pour le mappage topologique : 
+La gestion des utilisateurs de vROps nécessite VMware Identity Manager (vIDM), qui est intégré à Active Directory. Les comptes de service sont utilisés pour la communication d'application à application depuis vRealize Operations Manager vers les adaptateurs suivants avec l'ensemble minimum de permissions nécessaires pour la collecte de métrique et pour le mappage topologique :
 
 * NSX Manager
 * vCenter

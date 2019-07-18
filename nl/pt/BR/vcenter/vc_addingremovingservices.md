@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-10"
+lastupdated: "2019-06-27"
 
 keywords: vCenter Server add service, view service vCenter Server, remove service vCenter Server
 
@@ -27,11 +27,9 @@ subcollection: vmware-solutions
 
 A tabela a seguir mostra os serviços que estão disponíveis para instâncias do vCenter Server, juntamente com as versões de serviço instaladas.
 
-Tabela 1. Serviços disponíveis para instâncias do vCenter Server
-
 | Nome do Serviço | Versão do serviço atual | Versão da instância |
 |----------------------------------------------------------------------------------------|------------------|
-| [Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_considerations) | 2.2 | V2.9 e mais recente |
+| [Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_considerations) | 2.2.1 | V2.9 e mais recente |
 | [F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations) | BIG-IP VE v14.1.0.2 | V1.9 e mais recentes |
 | [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations) | Série 300 | V2.0 e mais recentes |
 | [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations) | 6.0.3 | V2.0 e mais recentes |
@@ -43,6 +41,7 @@ Tabela 1. Serviços disponíveis para instâncias do vCenter Server
 | [KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations) | 2.0  | N/A  |
 | [Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations) | 9.5u4 | V1.8 e mais recentes |
 | [Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr) | 6,5 de atualização 3 | V1.2 e mais recentes |
+{: caption="Tabela 1. Serviços disponíveis para instâncias do vCenter Server" caption-side="top"}
 
 ## Procedimento para incluir serviços em instâncias do vCenter Server
 {: #vc_addingremovingservices-adding-procedure}

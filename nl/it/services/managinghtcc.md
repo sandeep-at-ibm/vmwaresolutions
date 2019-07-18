@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: HTCC WebGUI, HTCC console, enable internet HTCC
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -82,11 +83,12 @@ La seguente procedura si applica per l'aggiornamento delle impostazioni di rete 
 
   La VM primaria avrà ora accesso a internet.
 
-7. Per confermare che la VM primaria ha accesso a internet, esegui un comando `ping` a un sito web o a un indirizzo IP pubblico. Per eseguire tale operazione, torna a vCenter e fai clic con il tasto destro del mouse su **CC1 > Open Console**. Esegui l'accesso alla console utilizzando le credenziali della console dalla pagina dei dettagli del servizio HyTrust CloudControl on IBM Cloud. Esegui un comando `ping`, come ad esempio `ping www.ibm.com` e dovresti ottenere una risposta immediata. Premi `Ctrl + C` per terminare il ping e assicurati che la perdita di pacchetti sia dello 0%. 
+7. Per confermare che la VM primaria ha accesso a internet, esegui un comando `wget` su un indirizzo IP pubblico o un sito web. Per eseguire tale operazione, torna a vCenter e fai clic con il tasto destro del mouse su **CC1 > Open Console**. Esegui l'accesso alla console utilizzando le credenziali della console dalla pagina dei dettagli del servizio HyTrust CloudControl on IBM Cloud. Esegui un comando `wget` come `wget www.ibm.com` e dovresti ricevere una risposta immediata. Conferma che la richiesta sia stata inviata e che sia stata ricevuta una risposta `200`.
+
 ## Link correlati
 {: #managinghtcc-related}
 
 * [Panoramica di HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htcc_considerations)
 * [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [Domande frequenti](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Sito web HyTrust](https://www.hytrust.com/)
+* [Sito web HyTrust](https://www.hytrust.com/){:external}

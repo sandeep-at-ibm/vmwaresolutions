@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-26"
 
 keywords: F5 license activation, F5 configuration, order F5
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -27,14 +28,14 @@ subcollection: vmware-solutions
 
 您可以使用下列其中一種方法，訂購包含 F5 on {{site.data.keyword.cloud_notm}} 的新實例：
 * 當您從 {{site.data.keyword.vmwaresolutions_short}} 主控台訂購新實例時，請選取**服務**區段中的 **F5 on IBM Cloud**。
-* 從 {{site.data.keyword.cloud_notm}} 型錄中，選取 **F5 on IBM Cloud**，指定服務設定，然後選取**新增至新實例**。
+* 從 {{site.data.keyword.cloud_notm}} 型錄中，按一下左導覽窗格上的 **VMware** 圖示，然後按一下 **VMware Services** 區段中的 **F5 on IBM Cloud** 卡。指定服務設定，然後選取**新增至新實例**。
 
 ## 為現有實例訂購 F5 on IBM Cloud
 {: #f5_ordering-existing}
 
 您可以使用下列其中一種方法，將 F5 on {{site.data.keyword.cloud_notm}} 服務新增至現有實例：
 * 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，檢視您要為其新增服務的實例，按一下左導覽窗格上的**服務**，然後按一下**新增**。
-* 從 {{site.data.keyword.cloud_notm}} 型錄中，選取 **F5 on IBM Cloud**，指定服務設定，然後選取**新增至現有實例**。
+* 從 {{site.data.keyword.cloud_notm}} 型錄中，按一下左導覽窗格上的 **VMware** 圖示，然後按一下 **VMware Services** 區段中的 **F5 on IBM Cloud** 卡。指定服務設定，然後選取**新增至現有實例**。
 
 ## 為專用實例訂購 F5 on IBM Cloud
 {: #f5_ordering-private}
@@ -98,4 +99,4 @@ F5 on {{site.data.keyword.cloud_notm}} 服務的授權模型提供下列選項�
 * [訂購、檢視及移除 vCenter Server with Hybridity Bundle 實例的服務](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
 * [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [常見問題](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [F5 部署手冊](https://www.f5.com/services/resources/deployment-guides){:new_window}
+* [F5 部署手冊](https://www.f5.com/services/resources/deployment-guides){:external}

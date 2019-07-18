@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: FortiGate console, FortiGate VA, login FortiGate console
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # Gerenciando o FortiGate Virtual Appliance no IBM Cloud
 {: #managingfortinetvm}
@@ -31,5 +33,5 @@ Para obter mais informações, veja [Pedindo, visualizando e removendo serviços
 * [FortiGate Virtual Appliance no {{site.data.keyword.cloud_notm}} visão geral](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations)
 * [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [Perguntas mais frequentes](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Website fortinet.com](https://www.fortinet.com/)
-* [Biblioteca de documentos do Fortinet](https://docs.fortinet.com/product/fortigate/6.2)
+* [Website fortinet.com](https://www.fortinet.com/){:external}
+* [Biblioteca de documentos do Fortinet](https://docs.fortinet.com/product/fortigate/6.2){:external}

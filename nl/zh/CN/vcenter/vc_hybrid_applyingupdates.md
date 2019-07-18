@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-06-30"
 
 keywords: vCenter Server Hybridity update, patch vCenter Server Hybridity, IBM component update
 
@@ -44,13 +44,12 @@ subcollection: vmware-solutions
 
 下表显示不同的更新级别对系统产生的影响。
 
-表 1. 更新级别和影响
-
 |更新级别|影响|  
 |:------------- |:------------- |
 |低|此更新不会影响任何系统。不必在安排的停机时间内应用更新。|  
 |中|此更新可能会影响某些系统。建议在安排的停机时间内应用更新。|  
-|重大|此更新会影响部分系统或所有系统。必须在安排的停机时间内应用更新。|  
+|重大|此更新会影响部分系统或所有系统。必须在安排的停机时间内应用更新。|
+{: caption="表 1. 更新级别和影响" caption-side="top"}
 
 ## 应用 IBM 管理组件更新的过程（实例 V2.3 和 V2.4）
 {: #vc_hybrid_applyingupdates-procedure}

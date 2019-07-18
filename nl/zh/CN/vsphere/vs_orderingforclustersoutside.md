@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-20"
 
 keywords: vSphere scale cluster, scale vSphere, external vSphere cluster
 
@@ -26,13 +26,13 @@ subcollection: vmware-solutions
 {: #vs_orderingforclustersoutside-req}
 
 确保已完成以下任务：
-*  已在**设置**页面上配置 {{site.data.keyword.cloud_notm}} 基础架构凭证。有关更多信息，请参阅[管理用户帐户和设置](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)。
-*  已查看[针对 VMware vSphere on {{site.data.keyword.cloud_notm}} 的需求和规划](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning)中的需求和注意事项。
+* 已在**设置**页面上配置 {{site.data.keyword.cloud_notm}} 基础架构凭证。有关更多信息，请参阅[管理用户帐户和设置](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)。
+* 已查看[针对 VMware vSphere on {{site.data.keyword.cloud_notm}} 的需求和规划](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning)中的需求和注意事项。
 
 ## 缩放在控制台外部创建的集群的过程
 {: #vs_orderingforclustersoutside-procedure}
 
-1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格上的 **VMware**，然后单击**虚拟数据中心**部分中的 **VMware vSphere**。
+1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格中的 **VMware** 图标，然后单击 **VMware 虚拟数据中心**部分中的 **VMware vSphere on IBM Cloud** 卡。
 2. 在 **VMware vSphere on IBM Cloud** 页面上，单击**创建**。  
    确保位于**新建**选项卡上，并且**集群配置**列表中显示了**新集群**。
 3. 使用与现有集群（在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部创建）相同的设置来创建集群。有关更多信息，请参阅[订购新的 vSphere 集群](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)。  

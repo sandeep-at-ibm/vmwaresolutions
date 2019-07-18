@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-01"
 
 subcollection: vmware-solutions
 
@@ -52,7 +52,7 @@ recomenda-se sempre implementar o WAN Optimizer com o CGW. O
 benefício adicional de implementação do WAN Optimizer é estendido para limitar a
 largura de banda da WAN consumida pelo tráfego de migração da MV. A interface de
 gerenciamento do WAN Optimizer não é configurada por padrão.
-- Network Extension (HCX-NE) - Fornece os recursos de extensão de rede da Camada 2, permitindo migrações entre o local e o ambiente do vSphere com a necessidade de refazer o IP das máquinas virtuais.
+- Extensão de rede (HCX-NE) - Fornece recursos de extensão de rede de Camada 2, permitindo migrações entre o local e o ambiente do vSphere com a necessidade de redesignar endereços IP às VMs.
 - Host ESXi do Proxy - Sempre que o HCX-IX estiver configurado para se conectar ao site do HCX do lado da nuvem, um host ESXi do proxy aparecerá no vCenter fora de qualquer cluster. Esse host ESXi tem o mesmo endereço IP de gerenciamento e do vMotion que o dispositivo HCX-IX correspondente. Isso permite que o ambiente do
 vSphere nos lados do cliente e da nuvem funcione como se estivesse
 executando um vMotion local. Benefícios para este método:

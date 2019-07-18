@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-31"
+lastupdated: "2019-06-28"
 
 keywords: planning vCenter Server Hybridity, data center hybridity, vCenter Server Hybridity
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # Requisitos e planejamento para instâncias do vCenter Server with Hybridity Bundle
 {: #vc_hybrid_planning}
@@ -27,8 +29,6 @@ A conta do {{site.data.keyword.cloud_notm}} que você está usando deve atender 
 {: #vc_hybrid_planning-dc-availability}
 
 A implementação do vCenter Server with Hybridity Bundle tem requisitos estritos na infraestrutura física. Portanto, é possível implementar instâncias apenas em {{site.data.keyword.CloudDataCents_notm}} que atendam aos requisitos. Os {{site.data.keyword.CloudDataCents_notm}} a seguir estão disponíveis para implementação do vCenter Server with Hybridity Bundle:
-
-Tabela 1. Instâncias disponíveis do {{site.data.keyword.CloudDataCents_notm}} for vCenter Server with Hybridity Bundle
 
 | {{site.data.keyword.CloudDataCent_notm}} | Localização | Região |
 |:----------------------|:---------|:---------------|
@@ -65,16 +65,16 @@ Tabela 1. Instâncias disponíveis do {{site.data.keyword.CloudDataCents_notm}} 
 | WDC04 | Washington, DC | NA Leste |
 | WDC06 | Washington, DC | NA Leste |
 | WDC07 | Washington, DC | NA Leste |
+{: caption="Tabela 1. Instâncias disponíveis do {{site.data.keyword.CloudDataCents_notm}} for vCenter Server with Hybridity Bundle" caption-side="top"}
 
 Dependendo da disponibilidade e do fornecimento do inventário, o {{site.data.keyword.CloudDataCents_notm}} pode exibir um indicador de status no console do {{site.data.keyword.vmwaresolutions_short}} para ajudá-lo a planejar suas implementações.
-
-Tabela 2. Indicadores de status para {{site.data.keyword.CloudDataCents_notm}} ao pedir instâncias do vCenter Server with Hybridity Bundle
 
 | Barra de Status | Detalhes do status |
 |:------------------------------|:--------------------------------------------------|
 | Em breve                   | O {{site.data.keyword.CloudDataCent_notm}} não está disponível atualmente. |
 | Provisoriamente fora do inventário  | O  {{site.data.keyword.CloudDataCent_notm}}  não tem nenhuma disponibilidade atualmente. |
 | Inventário limitado             | O {{site.data.keyword.CloudDataCent_notm}} limitou a disponibilidade e o pedido pode não estar concluído. |
+{: caption="Tabela 2. Indicadores de status para {{site.data.keyword.CloudDataCents_notm}} ao pedir instâncias do vCenter Server with Hybridity Bundle" caption-side="top"}
 
 ## Backup de componentes de gerenciamento
 {: #vc_hybrid_planning-backup-mgmt-components}
@@ -95,7 +95,7 @@ Quando você implementar esse serviço, conclua as configurações a seguir:
   * **Chave privada**: insira a chave privada do certificado de autoridade de certificação.
   * (Opcional) **Senha**: insira a senha para a chave privada se ela estiver criptografada.
   * (Opcional) **Inserir a senha novamente**: insira a senha para a chave privada novamente.
-  * (Opcional) **Nome do host**: insira o nome do host a ser mapeado para o nome comum (CN) do certificado de autoridade de certificação. O HCX on {{site.data.keyword.cloud_notm}} requer o certificado de autoridade de certificação para estar em um formato que seja aceito pelo NSX Edge. Para obter mais informações sobre os formatos de certificados do NSX Edge, veja [Importando SSL Certificates](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html).
+  * (Opcional) **Nome do host**: insira o nome do host a ser mapeado para o nome comum (CN) do certificado de autoridade de certificação. O HCX on {{site.data.keyword.cloud_notm}} requer o certificado de autoridade de certificação para estar em um formato que seja aceito pelo NSX Edge. Para obter mais informações sobre os formatos de certificados do NSX Edge, veja [Importando SSL Certificates](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html){:external}.
 
 É possível pedir outros serviços de complemento para sua instância com base em suas necessidades, por exemplo, recuperação de desastre. Para obter mais informações, veja [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices).
 

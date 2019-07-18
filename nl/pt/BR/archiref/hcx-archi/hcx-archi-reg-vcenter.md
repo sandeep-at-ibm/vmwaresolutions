@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-06-27"
 
 subcollection: vmware-solutions
 
@@ -23,7 +23,7 @@ O dispositivo virtual do Hybrid Cloud Services deve ser ligado antes que ele pos
 ## Procedimento para registrar o HCX Manager com o vCenter
 {: #hcx-archi-reg-vcenter-proc-register}
 
-1. Efetue login no dispositivo virtual de serviço Hybrid Cloud Services.
+1. Efetue login no dispositivo virtual de serviço Hybrid Cloud Services. Por exemplo, `https:My-HCX-Manager:9443/`.
 2. Clique no tile  ** Gerenciar configurações ** .
   1. Na área de janela esquerda, em **Configurar sistemas**, selecione vCenter.
   2. Clique em **Incluir vCenter** na parte superior direita.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-28"
 
 keywords: Veeam console, Veeam backup restore, update Veeam license
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # Gestione di Veeam on IBM Cloud
 {: #managingveeam}
@@ -37,9 +39,9 @@ Per ulteriori informazioni, vedi [Ordine, visualizzazione e rimozione dei serviz
 
 Il servizio Veeam on {{site.data.keyword.cloud_notm}} può essere configurato per eseguire il backup dei componenti di gestione utilizzando la console Veeam. Per ulteriori informazioni, vedi [Backup dei componenti](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup).
 
-Per le istanze distribuite in o aggiornate alle release V1.8 o successive, le modifiche alla configurazione del tuo ambiente non vengono automaticamente sottoposte a backup. Pertanto, prima di modificare la configurazione del tuo ambiente, si consiglia di eseguire manualmente il backup dei componenti di gestione eseguendo il lavoro di backup di gestione nella console Veeam. Per ulteriori informazioni sul backup manuale, consulta le [istruzioni tecniche di Veeam](https://helpcenter.veeam.com/backup/vsphere/scheduing_manual.html){:new_window}.
+Per le istanze distribuite in o aggiornate alle release V1.8 o successive, le modifiche alla configurazione del tuo ambiente non vengono automaticamente sottoposte a backup. Pertanto, prima di modificare la configurazione del tuo ambiente, si consiglia di eseguire manualmente il backup dei componenti di gestione eseguendo il lavoro di backup di gestione nella console Veeam. Per ulteriori informazioni sul backup manuale, consulta le [istruzioni tecniche di Veeam](https://helpcenter.veeam.com/backup/vsphere/scheduing_manual.html){:external}.
 
-Quando si verificano errori nei componenti di gestione, puoi ripristinare tali componenti a un backup precedente utilizzando la console Veeam. Per ulteriori informazioni sul ripristino manuale, consulta le [istruzioni tecniche di Veeam]( https://helpcenter.veeam.com/backup/vsphere/performing_full_recovery.html){:new_window}.
+Quando si verificano errori nei componenti di gestione, puoi ripristinare tali componenti a un backup precedente utilizzando la console Veeam. Per ulteriori informazioni sul ripristino manuale, consulta le [istruzioni tecniche di Veeam]( https://helpcenter.veeam.com/backup/vsphere/performing_full_recovery.html){:external}.
 
 ## Applicazione degli aggiornamenti a Veeam on IBM Cloud
 {: #managingveeam-updates}
@@ -62,7 +64,7 @@ Se il servizio Veeam viene installato su un'istanza solo con la rete privata, po
 ### Aggiornamento delle licenze Veeam per le istanze distribuite con rete pubblica e privata
 {: #managingveeam-update-license-public-private}
 
-Se il servizio Veeam è installato su un'istanza con rete pubblica e privata, puoi aggiornare la tua licenza Veeam automaticamente o manualmente seguendo le istruzioni Veeam in [Updating license]( https://helpcenter.veeam.com/docs/backup/vsphere/license_update.html).
+Se il servizio Veeam è installato su un'istanza con rete pubblica e privata, puoi aggiornare la tua licenza Veeam automaticamente o manualmente seguendo le istruzioni Veeam in [Updating license]( https://helpcenter.veeam.com/docs/backup/vsphere/license_update.html){:external}.
 
 ### Aggiornamento delle licenze Veeam per le istanze distribuite solo con rete privata
 {: #managingveeam-update-license-private}
@@ -90,7 +92,8 @@ Una volta distribuito il nuovo servizio Veeam on {{site.data.keyword.cloud_notm}
 {: #managingveeam-related}
 
 * [Panoramica di Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)
+* [Servizi gestiti per Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
 * [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [Domande frequenti](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Sito web Veeam.com](https://www.veeam.com/)
-* [Documentazione tecnica di Veeam](https://www.veeam.com/documentation-guides-datasheets.html)
+* [Sito web Veeam.com](https://www.veeam.com/){:external}
+* [Documentazione tecnica di Veeam](https://www.veeam.com/documentation-guides-datasheets.html){:external}

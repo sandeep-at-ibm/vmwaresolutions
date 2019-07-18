@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-20"
 
 keywords: planning NetApp ONTAP, data center, NetApp data centers
 
@@ -21,14 +21,12 @@ Revise los siguientes requisitos antes de solicitar sus instancias de NetApp ONT
 ## Requisitos de la cuenta de IBM Cloud
 {: #np_planning-account-req}
 
-La cuenta de {{site.data.keyword.cloud_notm}} que utilice debe cumplir ciertos requisitos. Para obtener más información, consulte [Requisitos para la cuenta de {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req). 
+La cuenta de {{site.data.keyword.cloud_notm}} que utilice debe cumplir ciertos requisitos. Para obtener más información, consulte [Requisitos para la cuenta de {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req).
 
 ## Disponibilidad del centro de datos de IBM Cloud
 {: #np_planning-dc-availability}
 
 El despliegue de NetApp ONTAP Select impone requisitos estrictos en cuanto a la infraestructura física. Por lo tanto, en {{site.data.keyword.CloudDataCents_notm}} solo puede desplegar instancias que cumplan los requisitos. Están disponibles los siguientes {{site.data.keyword.CloudDataCents_notm}} para el despliegue de NetApp ONTAP Select:
-
-Tabla 1. {{site.data.keyword.CloudDataCents_notm}} disponibles para instancias de NetApp ONTAP Select
 
 | {{site.data.keyword.CloudDataCent_notm}} | Ubicación | Región | Opciones servidor |
 |:------|:----------------|:----------------|:---------------------------|
@@ -62,6 +60,7 @@ Tabla 1. {{site.data.keyword.CloudDataCents_notm}} disponibles para instancias d
 | WDC04 | Washington, DC | América del Norte este | Alto rendimiento (Medio), Alto rendimiento (Grande), Alta capacidad
 | WDC06 | Washington, DC | América del Norte este | Alto rendimiento (Medio), Alto rendimiento (Grande), Alta capacidad
 | WDC07 | Washington, DC | América del Norte este | Alto rendimiento (Medio), Alto rendimiento (Grande), Alta capacidad
+{: caption="Tabla 1. {{site.data.keyword.CloudDataCents_notm}} disponibles para instancias de NetApp ONTAP Select" caption-side="top"}
 
 ## Enlaces relacionados
 {: #np_planning-related}

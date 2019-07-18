@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-21"
 
 keywords: KMIP for VMware, order KMIP stand-alone, KMIP for VMware configuration
 
@@ -29,7 +29,7 @@ subcollection: vmware-solutions
 {: #kmip_standalone_ordering-procedure}
 
 1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **시작하기**를 클릭하십시오.
-2. **추가 서비스 주문** 영역에서 **KMIP for VMware on IBM Cloud**를 클릭하십시오.
+2. **VMware Services** 섹션에서 **KMIP for VMware on IBM Cloud** 카드를 클릭하십시오.
 3. **KMIP for VMware on IBM Cloud** 페이지에서 필요에 따라 서비스 설정을 구성하십시오.
 4. **프로비저닝**을 클릭하십시오.
 
@@ -50,8 +50,6 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} 인스턴스가 호스팅될
 
 {{site.data.keyword.cloud_notm}}는 서비스가 사용 가능한 각 위치에서 고가용성 KMIP for VMware on {{site.data.keyword.cloud_notm}} 네트워크 서비스 엔드포인트를 유지보수합니다.
 
-표 1. KMIP for VMware on {{site.data.keyword.cloud_notm}} 네트워크 서비스 엔드포인트 위치
-
 | 위치         |엔드포인트               |
 |:---------------|:-----------------------|
 |댈러스 | <<code>kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696</code><br>및<br><code>kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696</code> |
@@ -60,6 +58,7 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} 인스턴스가 호스팅될
 |시드니 |<code>kmip-1.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code><br>및<br><code>kmip-2.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code> |
 |도쿄 |<code>kmip-1.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code><br>및<br><code>kmip-2.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code> |
 |워싱턴 DC |<code>kmip-1.private.us-east.vmware-solutions.cloud.ibm.com:5696</code><br>및<br><code>kmip-2.private.us-east.vmware-solutions.cloud.ibm.com:5696</code> |
+{: caption="표 1. KMIP for VMware on {{site.data.keyword.cloud_notm}} 네트워크 서비스 엔드포인트 위치" caption-side="top"}
 
 ### 서비스 ID의 API 키
 {: #kmip_standalone_ordering-config-api-key}

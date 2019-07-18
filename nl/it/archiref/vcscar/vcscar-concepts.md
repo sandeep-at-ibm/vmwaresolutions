@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -20,9 +20,9 @@ subcollection: vmware-solutions
 Un aspetto chiave di Skate Advisor è la possibile conversazione con il chatbot controllato da Watson. La seguente sezione descrive le regole di conversazione che definiscono un'interazione umana con il chatbot di Skate Advisor.
 
 Il linguaggio skater è il fulcro del sistema ed è utilizzato nel seguente modo:
-* Riconoscimento dei trick: utilizzato da Watson Discovery per acquisire materiale da origini online per riconoscere trick esistenti e associarli al materiale di origine.
+* Riconoscimento dei trick: utilizzato da Watson Discovery per acquisire materiale da origini online in modo che possa riconoscere i trick esistenti e associarli al materiale di origine.
 * Conversazioni sullo skate: utilizzate dal chatbot per avere conversazioni significative con l'utente del sistema.
-* Classificazione dei trick: memorizzare e classificare un trick in base alla sua descrizione testuale. I trick classificati in questo modo possono avere dei metadati associati come i riferimenti di posizione e video.
+* Classificazione dei trick: memorizzare e classificare un trick in base alla sua descrizione testuale. I metadati, come i riferimenti di posizione e video, possono essere collegati ai trick che vengono classificati.
 
 ## Elementi del linguaggio
 {: #vcscar-concepts-lang-elem}
@@ -39,7 +39,7 @@ Tipo di elemento | Testo del linguaggio
 Direzione | fakie<br>nollie<br>switch
 Rotazione | halfcab<br>cab<br>180<br>360<br>540
 Base | kickflip<br>heelflip<br>hardflip<br>bigspin<br>shuvit<br>impossibile
-atterraggio | manual (2 ruote indietro)<br>nosemanual (2 ruote avanti)<br>5-0 (grind)<br>nosegrind<br>tailslide<br>noseslide<br>crooked grind<br>smithgrind<br>boardslide<br>lipslide<br>
+atterraggio | manual (due ruote indietro)<br>nosemanual (due ruote avanti)<br>5-0 (grind)<br>nosegrind<br>tailslide<br>noseslide<br>crooked grind<br>smithgrind<br>boardslide<br>lipslide<br>
 
 ### Modificatori di elemento
 {: #vcscar-concepts-elem-modifiers}

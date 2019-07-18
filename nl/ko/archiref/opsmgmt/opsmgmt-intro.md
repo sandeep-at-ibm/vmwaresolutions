@@ -33,20 +33,20 @@ lastupdated: "2019-05-29"
 
 ![아키텍처 다이어그램](../../images/opsmgmt-architecture.svg "아키텍처 다이어그램")
 
-* 실제 계층 - 아키텍처의 최하위 계층은 {{site.data.keyword.cloud_notm}}에서 활용되는 컴퓨팅, 네트워크 및 스토리지 컴포넌트로 구성되는 실제 계층입니다. 
+* 실제 계층 - 아키텍처의 최하위 계층은 {{site.data.keyword.cloud_notm}}에서 활용되는 컴퓨팅, 네트워크 및 스토리지 컴포넌트로 구성되는 실제 계층입니다.
   * 관리, 에지 및 컴퓨팅 워크로드를 실행하는 {{site.data.keyword.baremetal_short}}
   * VLAN, 서브넷, 프론트엔드 및 백엔드 고객 라우터(FCR/BCR)로 구성되는 {{site.data.keyword.cloud_notm}} 네트워크
   * {{site.data.keyword.baremetal_short}}의 SSD에서 통합되는 데이터 저장소인 vSAN 스토리지 및 Endurance 스토리지
 
 * 가상 인프라 계층 - 가상 인프라 계층은 실제 계층 컴포넌트에서 실행됩니다. 가상 인프라 계층은 기본 실제 인프라에 대한 액세스를 제어하고 관리 및 컴퓨팅 워크로드에 대한 리소스를 제어하고 할당합니다. 관리 워크로드는 가상 인프라 계층의 요소로 자체적으로 구성되거나 클라우드 관리, 서비스 관리, 비즈니스 연속성 및 보안 계층의 요소와 함께 구성됩니다.
 
-* 비즈니스 연속성 계층 - 이 계층에는 데이터 백업, 복원 및 재해 복구를 제공하여 비즈니스 연속성을 지원하는 요소가 포함됩니다. 자세한 정보는 {{site.data.keyword.vmwaresolutions_short}} 백업 및 복원 아키텍처, Veeam, IBM Spectrum Protect Plus 및 Zerto 재해 복구 참조 아키텍처를 참조하십시오. 
+* 비즈니스 연속성 계층 - 이 계층에는 데이터 백업, 복원 및 재해 복구를 제공하여 비즈니스 연속성을 지원하는 요소가 포함됩니다. 자세한 정보는 {{site.data.keyword.vmwaresolutions_short}} 백업 및 복원 아키텍처, Veeam, IBM Spectrum Protect Plus 및 Zerto 재해 복구 참조 아키텍처를 참조하십시오.
 
 * 보안 계층 - 이 계층에는 위험을 줄이고 규제 준수를 늘리는 요소가 포함됩니다. 자세한 정보는 Fortinet, F5, NSX, HyTrust 및 Caveonix 참조 아키텍처를 참조하십시오.
 
 이 문서는 다음 계층을 {{site.data.keyword.vmwaresolutions_short}} 아키텍처에 추가합니다.
 
-* 오퍼레이션 관리 계층 - 오퍼레이션 관리 계층의 아키텍처에는 실제 계층 및 가상 계층과 실시간 컴퓨팅 워크로드(선택사항)에 대한 지원을 제공하는 관리 컴포넌트가 포함됩니다. 오퍼레이션 관리 계층은 실제, 가상, 컴퓨팅, 네트워킹 및 스토리지 리소스의 {{site.data.keyword.vmwaresolutions_short}} 토폴로지를 이해하고 있습니다. 오퍼레이션 관리 계층은 주로 모니터링 및 로깅 기능으로 구성됩니다. 
+* 오퍼레이션 관리 계층 - 오퍼레이션 관리 계층의 아키텍처에는 실제 계층 및 가상 계층과 실시간 컴퓨팅 워크로드(선택사항)에 대한 지원을 제공하는 관리 컴포넌트가 포함됩니다. 오퍼레이션 관리 계층은 실제, 가상, 컴퓨팅, 네트워킹 및 스토리지 리소스의 {{site.data.keyword.vmwaresolutions_short}} 토폴로지를 이해하고 있습니다. 오퍼레이션 관리 계층은 주로 모니터링 및 로깅 기능으로 구성됩니다.
 
   정보는 다음 양식으로 수집됩니다.
     * 메트릭 - 구조화된 데이터입니다(예: 성능 및 용량).
@@ -59,7 +59,7 @@ lastupdated: "2019-05-29"
 * vRNI(vRealize Network Insight) - vRNI는 소프트웨어 정의 네트워킹 및 보안을 위해 지능형 오퍼레이션을 제공합니다. 가상 및 실제 네트워크에서 가시성을 지원하고, 운영 보기를 제공하여 NSX 배치를 관리 및 스케일링하고, 마이크로 세그먼트화 계획 및 배치를 가속화합니다.
 * VUM(VMware Update Manager) - VUM을 사용하면 VMware vSphere에 대한 자동화된 중앙 집중식 패치 및 버전 관리가 가능하며 vSphere 호스트의 업그레이드 및 패치, 호스트에 서드파티 소프트웨어의 설치 및 업데이트, VM 하드웨어, VMware Tools 및 가상 어플라이언스의 업그레이드를 제공합니다.
 
-전체 엔터프라이즈 아키텍처의 경우 다음 계층이 필요할 수 있으나 {{site.data.keyword.vmwaresolutions_short}} 아키텍처의 외부에 있습니다. 
+전체 엔터프라이즈 아키텍처의 경우 다음 계층이 필요할 수 있으나 {{site.data.keyword.vmwaresolutions_short}} 아키텍처의 외부에 있습니다.
 
 * 클라우드 관리 계층 - 클라우드 관리 계층은 클라우드 아키텍처의 상위 계층입니다. 이 계층은 리소스를 요청하고 사용자 인터페이스 또는 API(Application Programming Interface)에서 하위 계층을 조정합니다. vRealize Automation은 {{site.data.keyword.cloud_notm}}에서 클라우드 자동화를 사용으로 설정합니다. 자세한 정보는 [vRA(vRealize Automation) 참조 아키텍처](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_VRA_Architecture_v1.pdf){:new_window}를 참조하십시오.
 

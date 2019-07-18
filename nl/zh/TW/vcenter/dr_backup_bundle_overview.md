@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-01"
 
 keywords: single-node trial, data protection DR, tech specs data protection DR
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -29,9 +30,9 @@ subcollection: vmware-solutions
 Data Protection and Disaster Recovery 單一節點試用版僅用於概念驗證 (POC)。不要在此環境中執行正式作業工作負載。新增及移除主機和叢集、訂購其他附加程式服務，以及套用更新項目等管理功能皆不受支援。
 {:important}
 
-部署單一節點試用版實例之後，可以使用 [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:new_window} 提供的 [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:new_window} 來輔助使用實例。此外，[{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/){:new_window} 還可協助您透過最新的雲端原生作法來加速應用程式現代化。
+部署單一節點試用版實例之後，可以使用 [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:external} 提供的 [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:external} 來輔助使用實例。此外，[{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/){:external} 還可協助您透過最新的雲端原生作法來加速應用程式現代化。
 
-此試用版最多可使用 90 天。每月週期性計費會根據您的計費排定來計費，而不是在訂購實例時計費。如果在計費週期的最後一天或之前未取消實例，將向您收取下個月的費用。很有可能在試用 90 天後會收取四個月的費用，除非在第四個月開始之前完成取消。
+此試用版最多可使用 90 天。每月週期性計費會根據您的計費排定來計費，而不是在訂購實例時計費。如果在計費週期的最後一天或之前未取消實例，將向您收取下個月的費用。90 天試用可能會收取四個月的費用，除非在第四個月開始之前完成取消。
 {:note}
 
 完成試用後，您可以刪除此環境，然後佈建符合您容量需求的新環境。
@@ -141,7 +142,7 @@ Data Protection and Disaster Recovery 單一節點試用版包含 HCX on {{site.
 
 Data Protection and Disaster Recovery 單一節點試用版包含 Veeam on {{site.data.keyword.cloud_notm}}。Veeam on {{site.data.keyword.cloud_notm}} 服務中訂購並包含了下列元件。
 
-* Veeam Availability Suite 的 25 套件授權
+* Veeam Availability Suite 的 25 個套件授權
 * 4000 GB 儲存空間
 * 0.25 IOPS/GB 儲存空間效能
 * Windows Server 2016 Standard Edition（64 位元）
@@ -165,12 +166,12 @@ Data Protection and Disaster Recovery 單一節點試用版包含 Zerto on {{sit
 ## IBM Cloud Automation Manager 的技術規格
 {: #dr_backup_bundle_overview-cam-tech-specs}
 
-在所有 Data Protection and Disaster Recovery 單一節點試用版實例上，都會使用開發/測試拓蹼安裝 {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2。如需 {{site.data.keyword.cloud_notm}} Automation Manager 的相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} Automation Manager 文件](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: new_window}。
+在所有 Data Protection and Disaster Recovery 單一節點試用版實例上，都會使用開發/測試拓蹼安裝 {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2。如需 {{site.data.keyword.cloud_notm}} Automation Manager 的相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} Automation Manager 文件](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: external}。
 
 ## 相關鏈結
 {: #dr_backup_bundle_overview-related}
 
-* [VMware HCX 資源](https://hcx.vmware.com/#/docs){:new_window}
-* [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}
+* [VMware HCX 資源](https://hcx.vmware.com/#/docs){:external}
+* [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}
 * [管理 Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-managingveeam)
 * [管理 Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-managingzertodr)

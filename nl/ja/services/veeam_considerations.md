@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: Veeam, Veeam install, tech specs Veeam
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -47,9 +48,9 @@ Veeam on {{site.data.keyword.cloud}} サービスは VMware ハイパーバイ�
 * ストレージ・パフォーマンス (0.25、2、または 4 IOPS/GB)
 
 Veeam サービスのインストールおよび構成の一部として、以下のリポジトリーが作成されます。
-* Veeam 構成バックアップ・ファイルの場合: `IC4V Default Config Backup Repository` という名前のリポジトリー。Veeam バックアップが保管されているフォルダーのパスは、`<Drive>:\ConfigBackup\` です。
-* スケールアウトの場合: `IC4V Scale-Out Repository` という名前のリポジトリー。詳しくは、[スケールアウト・リポジトリーの追加](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icos_ordering#icos_ordering-scale-repo)を参照してください。
-* 仮想マシン (VM) バックアップの場合: ``IC4V Default VM Backup Repository`` という名前のリポジトリー。VM バックアップが保管されているフォルダーのパスは、``<Drive>:\VMBackup\` です。このリポジトリーは、エクステントとして IC4V Scale-Out Repository`` に追加されます。
+* Veeam 構成バックアップ・ファイルの場合: `IC4V Default Config Backup Repository` という名前のリポジトリー。 Veeam バックアップが保管されているフォルダーのパスは、`<Drive>:\ConfigBackup\` です。
+* スケールアウトの場合: `IC4V Scale-Out Repository` という名前のリポジトリー。 詳しくは、[スケールアウト・リポジトリーの追加](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icos_ordering#icos_ordering-scale-repo)を参照してください。
+* 仮想マシン (VM) バックアップの場合: ``IC4V Default VM Backup Repository`` という名前のリポジトリー。 VM バックアップが保管されているフォルダーのパスは、``<Drive>:\VMBackup\` です。 このリポジトリーは、エクステントとして IC4V Scale-Out Repository`` に追加されます。
 
 ### ネットワーキング
 {: #veeam_considerations-specs-networking}
@@ -76,8 +77,7 @@ Veeam on {{site.data.keyword.cloud_notm}} サービスを削除すると、す�
 
 * [Veeam on {{site.data.keyword.cloud_notm}} の注文](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_ordering)
 * [Veeam on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
-* [Veeam on {{site.data.keyword.cloud_notm}} 用マネージド・サービスの要求](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
-* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [Veeam on {{site.data.keyword.cloud_notm}} 用マネージド・サービス](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
 * [よくある質問](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Veeam の Web サイト](https://www.veeam.com/){:new_window}
-* [Veeam Help Center](https://www.veeam.com/documentation-guides-datasheets.html){:new_window}
+* [Veeam の Web サイト](https://www.veeam.com/){:external}
+* [Veeam Help Center](https://www.veeam.com/documentation-guides-datasheets.html){:external}

@@ -52,7 +52,7 @@ Tableau 1. Valeurs de déploiement
 | Masque de réseau | 255.255.255.192 | |
 | Passerelle| Adresse IP de la liaison montante privée customer-nsx-edge | Il s'agit du paramètre de passerelle par défaut pour le serveur proxy, qui correspond à l'adresse IP de la liaison montante privée de customer-nsx-edge. L'adresse IP peut être obtenue en consultant l'onglet **Paramètres** pour **customer-nsx-edge**. |
 | Serveur DNS | Adresse IP AD/DNS | Cette adresse IP peut être obtenue sur la page **Ressources** dans la console {{site.data.keyword.vmwaresolutions_short}}. |
-| IP BCR | Adresse IP du routeur BCR | Sur la même page où vous avez sélectionné l'adresse IP proxy ci-dessus, notez l'adresse intitulée Gateway.  Il s'agit de l'adresse IP du routeur BCR (Backend Customer Router) d'{{site.data.keyword.cloud_notm}} qui est la passerelle pour 10.0.0.0/8 et 161.26.0.0/16. Vous utiliserez cette adresse ci-dessous pour une route statique dans le serveur proxy afin qu'elle puisse atteindre le VCSA et le serveur AD/DNS. |
+| IP BCR | Adresse IP du routeur BCR | Sur la même page où vous avez sélectionné l'adresse IP proxy ci-dessus, notez l'adresse intitulée Gateway. Il s'agit de l'adresse IP du routeur BCR (Backend Customer Router) d'{{site.data.keyword.cloud_notm}} qui est la passerelle pour 10.0.0.0/8 et 161.26.0.0/16. Vous utiliserez cette adresse ci-dessous pour une route statique dans le serveur proxy afin qu'elle puisse atteindre le VCSA et le serveur AD/DNS. |
 | IP de conversion d'adresse réseau | customer-nsx-edge public uplink ip | L'adresse publique de la passerelle NSX ESG client sert d'adresse NAT publique pour le proxy. Cette adresse IP peut être obtenue en consultant l'onglet **Paramètres** pour **customer-nsx-edge**. |
 
 ## Configuration de NSX

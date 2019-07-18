@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-21"
 
 keywords: IBM Integrated Managed Infrastructure, request IBM IMI, tech specs IMI
 
@@ -13,7 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
-# IMI が提供するマネージド・サービスの要求
+# IMI からのマネージド・サービス
 {: #managing_imi}
 
 {{site.data.keyword.IBM}} Integrated Managed Infrastructure (IMI) は、モジュラー・サービスを使用して VMware 仮想インフラストラクチャーの管理を簡素化できます。 IMI は、高度な自動化と分析を使用して世界中の重要なインフラストラクチャー・コンポーネントを管理し、広範囲の従来型仮想インフラストラクチャーとクラウド仮想インフラストラクチャーに動的リモート管理サービスを提供します。
@@ -36,7 +36,7 @@ IMI マネージド・サービスには以下の仕様が含まれています�
 {: #managing_imi-procedure}
 
 1. {{site.data.keyword.vmwaresolutions_short}} コンソールで、左側のナビゲーション・ペインの**「開始」**をクリックします。
-2. ページをスクロールダウンし、**「追加マネージド・サービスの注文 (Order additional managed services)」**で、**「IMI からのマネージド・サービス (Managed Services from IMI)」**カードをクリックします。
+2. ページをスクロールダウンし、**「VMware マネージド・サービス」**の下の**「IMI からのマネージド・サービス」**カードをクリックします。
 3. **「IMI のマネージド・サービス」**ページの**「IMI プリセールスを予約」**ボックスに、IMI サービスの要件に関する説明を入力し、**「コンサルテーションを要求」**をクリックします。
 
   {{site.data.keyword.vmwaresolutions_short}} の担当者が、お客様の {{site.data.keyword.cloud_notm}} の連絡先情報を使用してお客様に連絡し、必要な解決方法が分かるようにお手伝いします。

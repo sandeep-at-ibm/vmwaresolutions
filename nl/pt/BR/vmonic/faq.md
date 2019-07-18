@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-26"
 
 keywords: FAQ, user account, patch management
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -78,11 +79,11 @@ Na implementação mínima de dois nós, um nó tem um NSX Controller e o outro 
 
 Quando um terceiro nó é incluído em um cluster de dois nós, o vCenter Server automaticamente reequilibra os três NSX Controllers nos três nós e cria um ambiente altamente disponível.
 
-## Posso definir a configuração de HA do VMware vCenter 6.5?
+## Posso definir a configuração de alta disponibilidade do VMware vCenter?
 {: #faq-ha}
 {: faq}
 
-Não, não é recomendado. Podem ocorrer falhas nas funções do {{site.data.keyword.vmwaresolutions_short}}.
+É possível configurar a alta disponibilidade do vCenter, no entanto, o suporte de configuração não é fornecido pelo {{site.data.keyword.vmwaresolutions_short}}.
 
 ## Os clusters podem ser renomeados?
 {: #faq-rename-cluster}
@@ -104,7 +105,7 @@ Você é responsável por todas as outras atualizações para componentes do VMw
 Para instâncias que foram implementadas na V2.0 ou superior, o VMware Update Manager (VUM) é integrado em seu vCenter Server. É possível configurar o VUM para fazer download de atualizações do ESXi por meio do VMware.
 
 Para obter mais informações, consulte os recursos a seguir:
-* [Suporte ao VMware](https://www.vmware.com/support.html)
+* [Suporte ao VMware](https://www.vmware.com/support.html){:external}
 * [Aplicando atualizações a instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates)
 * [Aplicando atualizações a instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_applyingupdates)
 

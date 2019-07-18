@@ -47,7 +47,7 @@ Caveonix RiskForesight には、ゾーンの概念があります。
 - クラウド・プロバイダー - このゾーンには、アプリケーションがホストされる以下のインフラストラクチャーが用意されています。
     - プライベート – VMware on {{site.data.keyword.cloud}}、およびオンプレミスの VMware インフラストラクチャー・プラットフォーム。 これらのプラットフォームは、vCenter、NSX Manager、VMware Cloud Director (vCD)、または vRealize Automation (vRA) によって RiskForesight に統合されます。
     - パブリック – 現在サポートされているパブリック・クラウド・プロバイダーは AWS だけです。 {{site.data.keyword.cloud_notm}} は、間もなく使用可能になります。
-    - コンテナー - 現在は AWS Elastic Kubernetes Service (EKS) だけがサポートされています。 {{site.data.keyword.cloud_notm}} Private と {{site.data.keyword.cloud_notm}} Kubernetes Services (IKS) は、間もなく使用可能になります。
+    - コンテナー - 現在は AWS Elastic Kubernetes Service (EKS) だけがサポートされています。 {{site.data.keyword.cloud_notm}} Private と {{site.data.keyword.cloud_notm}} Kubernetes Services は、間もなく使用可能になります。
 -	テナント・ゾーンまたは顧客環境ゾーン – これらのゾーンは、テナント、顧客、または事業単位を分離するために使用されます。 これらのゾーン内にはワークロードが存在するので、Remote Collector が必要になります。 最小のデプロイメントでは 1 つの Remote Collector が必要ですが、一般的なデプロイメントでは、テナント/顧客/事業単位ごとに 1 つの Remote Collector が必要になります。
 
 

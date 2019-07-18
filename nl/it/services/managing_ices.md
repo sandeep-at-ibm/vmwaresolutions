@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-07-01"
 
 keywords: IBM Cloud Expert Services, request IBM Cloud Expert, tech specs Cloud Expert
 
@@ -27,9 +27,9 @@ Puoi scegliere da una selezione di offerte che integrano questa metodologia per 
 
 Gli strumenti predefiniti di Expert Services includono OnDemand Consulting, Jumpstart for {{site.data.keyword.cloud_notm}} vCenter Server, Jumpstart for VMware Hybridity Bundle e un workshop di consulenza nella progettazione, Architectural Consultancy.
 
-Expert Services ODC (OnDemand Consulting) è per i clienti con uno staff tecnico (ODC) interessato a un'assistenza tempestiva, flessibile e privata alle sue domande e a un tutoraggio che vada oltre un impegno attivo con IBM. ODC fornisce ai clienti una leadership quando ne hanno bisogno tramite un singolo punto di contatto, consigliando loro le soluzioni e agendo nell'interesse della loro attività di business di importanza critica.
+OnDemand Consulting (ODC) di Expert Services è destinato ai clienti con personale tecnico interessato a un'assistenza tecnica tempestiva, flessibile e privata alle loro domande e al tutoraggio al di fuori di un impegno attivo con IBM. ODC fornisce ai clienti una leadership quando ne hanno bisogno tramite un singolo punto di contatto, consigliando loro le soluzioni e agendo nell'interesse della loro attività di business di importanza critica.
 
-Hybridity Bundle Jumpstart semplifica lo spostamento dei carichi di lavoro VMware, che si trovano in loco o su altri provider cloud, a IBM Cloud. Expert Services ti assiste nella valutazione iniziale, in una panoramica di IBM Cloud for VMware Solutions con HCX e nella progettazione e pianificazione. Questo coinvolgimento include una stretta consulenza nell'ordinazione, configurazione e migrazione dell'infrastruttura delle tue prime 20 VM.
+Hybridity Bundle Jumpstart semplifica lo spostamento dei carichi di lavoro VMware, che si trovano in loco o su altri provider cloud, a IBM Cloud. Il team di Expert Services ti guida attraverso una valutazione iniziale, una panoramica di IBM Cloud for VMware Solutions con HCX nonché nella progettazione e pianificazione. Questo impegno include una stretta consulenza sull'ordinazione dell'infrastruttura, sulla sua configurazione e sulla migrazione delle tue prime 20 VM.
 
 Questa offerta accelera l'adozione di VMware on IBM Cloud guidando il cliente nella valutazione delle sue esigenze di virtualizzazione e in una panoramica di IBM Cloud for VMware Solutions, seguite dalla progettazione e pianificazione della loro soluzione VMWare. IBM fornisce quindi una stretta consulenza nell'ordinazione e configurazione iniziale dell'infrastruttura. Facoltativamente, ciò può essere seguito da OnDemand Consulting per fornire assistenza continua al cliente.
 
@@ -56,14 +56,14 @@ Questa offerta accelera l'adozione di VMware on IBM Cloud guidando il cliente ne
 * Prassi ottimali prescrittive per l'implementazione della soluzione mediante l'utilizzo di prodotti e funzioni IBM Cloud
 * Apprendimento rapido e mitigazione dei rischi grazie all'accesso agli esperti di IBM Cloud
 
-## Procedura per richiedere i servizi gestiti da IBM Cloud Expert Services
+## Procedura per richiedere IBM Cloud Expert Services
 {: #managing_ices-procedure}
 
 1. Dalla console {{site.data.keyword.vmwaresolutions_full}}, fai clic su **Introduzione** nel riquadro di navigazione a sinistra.
-2. Scorri la pagina verso il basso e, sotto **Ordina servizi gestiti aggiuntivi** fai clic sulla scheda **Servizi gestiti da IBM Cloud Expert Services**.
+2. Scorri la pagina verso il basso e sotto **VMware Professional Services**, fai clic sulla scheda **IBM Cloud Expert Services**.
 3. Nella pagina {{site.data.keyword.cloud_notm}} Expert Services, nella casella **Attività pre-vendita di Cloud Expert Services**, fai clic su **Richiesta di una consultazione**.
 
-  Un rappresentante di {{site.data.keyword.vmwaresolutions_short}} ti contatterà utilizzando le tue informazioni di contatto {{site.data.keyword.cloud_notm}} per aiutarti con la soluzione di cui hai bisogno.
+  Un rappresentante di IBM Cloud Expert Services ti contatterà utilizzando le tue informazioni di contatto {{site.data.keyword.cloud_notm}} per aiutarti a trovare la soluzione di cui hai bisogno.
 
 ## Link correlati
 {: #managing_ices-related}

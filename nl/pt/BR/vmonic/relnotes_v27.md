@@ -36,7 +36,7 @@ Para obter mais informações, veja a seção *Configurações do {{site.data.ke
 ## Atualizações para serviços complementares
 {: #relnotes_v27-services}
 
-### IBM Cloud Privado Hospedado
+### IBM Cloud Private Hosted
 {: #relnotes_v27-icp}
 
 O serviço {{site.data.keyword.cloud_notm}} Private Hosted está agora disponível para instâncias do VMware vCenter Server with Hybridity Bundle, além das instâncias do VMware vCenter Server que são implementadas em (ou submetidas a upgrade para) liberações da V2.5 e mais recente. Agora é possível pedir uma instância do vCenter Server ou uma instância do vCenter Server with Hybridity Bundle com o serviço incluído. Também é possível incluir o serviço em uma instância existente do vCenter Server ou em uma instância do vCenter Server with Hybridity Bundle após a implementação inicial.

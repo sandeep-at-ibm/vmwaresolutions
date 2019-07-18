@@ -19,7 +19,7 @@ Inoltre:
 * Supporta la convalida delle soluzioni rispetto all'architettura di riferimento comprovata.
 * Incoraggia l'aderenza a standard, specifiche e modelli comuni.
 
- L'obiettivo principale di questa architettura di riferimento è documentare la capacità di Operations Management per fornire monitoraggio e avvisi dell'ambiente {{site.data.keyword.vmwaresolutions_short}} che viene distribuito per il cliente. Gli strumenti sono stati configurati con i parametri e le soglie di procedure consigliate per l'utilizzo da parte del team delle operazioni del cliente.
+L'obiettivo principale di questa architettura di riferimento è documentare la capacità di Operations Management per fornire monitoraggio e avvisi dell'ambiente {{site.data.keyword.vmwaresolutions_short}} che viene distribuito per il cliente. Gli strumenti sono stati configurati con i parametri e le soglie di procedure consigliate per l'utilizzo da parte del team delle operazioni del cliente.
 
 La progettazione consente al cliente di completare le seguenti attività:
 * Eseguire un ridimensionamento incrementale o decrementale secondo necessità.

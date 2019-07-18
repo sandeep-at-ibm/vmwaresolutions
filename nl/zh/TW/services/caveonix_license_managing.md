@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-21"
 
 keywords: Caveonix view license, Caveonix manage license, delete Caveonix license
 
@@ -29,26 +29,12 @@ subcollection: vmware-solutions
 
 1. 從左導覽窗格中，按一下**資源**，然後向下捲動至 **Caveonix RiskForesight 授權**表格來檢視您所訂購的 Caveonix RiskForesight 授權的摘要。
 
-   表 1. Caveonix RiskForesight 授權項目的說明
-
-    <table>
-      <tr>
-        <th>項目        </th>
-        <th>說明       </th>
-      </tr>
-      <tr>
-        <td>名稱 </td>
-        <td>授權的名稱。</td>
-       </tr>
-       <tr>
-         <td>建立時間</td>
-         <td>授權的建立日期和時間。</td>
-       </tr>
-       <tr>
-         <td>狀態</td>
-         <td>授權的狀態。<ul><li>正在修改：正在建立實例。</li><li>已安裝：授權已備妥可供使用。</li><li>正在移除：正在刪除授權。</li></ul></td>
-       </tr>
-    </table>   
+|項目        |說明       |
+|:-----|:------------|
+|名稱 |授權的名稱。|
+|建立時間|授權的建立日期和時間。|
+|狀態|授權的狀態。<br>正在修改：正在建立實例。<br>已安裝：授權已備妥可供使用。<br>正在移除：正在刪除授權。|
+{: caption="表 1. Caveonix RiskForesight 授權項目的說明" caption-side="top"}
 
 2. 若要檢視特定授權的詳細資料，請按一下授權。
 

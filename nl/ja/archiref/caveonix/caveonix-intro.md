@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-06-20"
 
 subcollection: vmware-solutions
 
@@ -30,33 +30,36 @@ Caveonix RiskForesight は、ハイブリッド・クラウド用のマルチテ
 
 RiskForesight GUI で使用可能な 3 つの主要サービスは、Risk Management、Compliance Risk、Forensic Management です。
 
-**Risk Management**
--	継続的サイバー・リスク管理
+## Risk Management
+
+- 継続的サイバー・リスク管理
 - サイバー・リスク・スコアリング
--	脆弱性スコアリングおよび優先順位付け
--	業界最高レベルの脆弱性/構成スキャン・ツールのサポート
--	国際的なベンチマーキング標準
--	サイバー・リスク・レポートの作成
+- 脆弱性スコアリングおよび優先順位付け
+- 業界最高レベルの脆弱性/構成スキャン・ツールのサポート
+- 国際的なベンチマーキング標準
+- サイバー・リスク・レポートの作成
 
-**Compliance Risk**
+## Compliance Risk
+
 - コンプライアンス・モニタリングの自動化
--	コンプライアンス・リスク・スコアリング・ダッシュボード
--	情報保証 (IA) 管理評価の自動化
--	サポート: PCI、FISMA、FEDRAMP、HIPAA、GLBA、GDPR、NERC CIP Reports Against SCAP、OVAL、XCCDF および他の国際的な構成ベンチマーキング標準
--	IA 管理と標準ライブラリーの継続的な更新とマッピング
+- コンプライアンス・リスク・スコアリング・ダッシュボード
+- 情報保証 (IA) 管理評価の自動化
+- サポート: PCI、FISMA、FEDRAMP、HIPAA、GLBA、GDPR、NERC CIP Reports Against SCAP、OVAL、XCCDF および他の国際的な構成ベンチマーキング標準
+- IA 管理と標準ライブラリーの継続的な更新とマッピング
 
-**Forensic Management**
--	ログ管理
--	複数のソースからのログ収集
--	イベントの検出、分析、可視化
--	結果のグラフィカルな可視化
--	複数のソースからのデータ集約
--	イベント・ベースの分析
--	イベント/ログ・ベースの分析のためのフルドリルダウン機能
--	アラートと通知
+## Forensic Management
+
+- ログ管理
+- 複数のソースからのログ収集
+- イベントの検出、分析、可視化
+- 結果のグラフィカルな可視化
+- 複数のソースからのデータ集約
+- イベント・ベースの分析
+- イベント/ログ・ベースの分析のためのフルドリルダウン機能
+- アラートと通知
 
 ## 関連リンク
 {: #caveonix-intro-related}
 
-*   [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
-*   [Caveonix の Web サイト](https://www.caveonix.com/)
+* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+* [Caveonix の Web サイト](https://www.caveonix.com/)

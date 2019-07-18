@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -21,14 +21,18 @@ subcollection: vmware-solutions
 
 La manière dont les skateurs combinent des mouvements et des sous-mouvements pour former des tricks nécessite de mettre au point une grammaire ou une syntaxe spécifique, basée sur la physique de ce qui se produit, la nomenclature de chimie élaborée pour des raisons similaires. Aujourd'hui, un skateur peut envoyer par texto le nom d'un trick à un autre skateur vivant à l'autre bout de la planète, et le second comprend parfaitement les mouvements complexes décrits par le premier.
 
-La richesse du langage se nourrit de la complexité de la pratique du skateboard proprement dite. Les mouvements du skate sont complexes, et donnent lieu à des douzaines de tricks de base qui peuvent être réalisés de plusieurs façons, répétées avec plusieurs variables, afin de générer un très grand nombre de combinaisons. Une structure préfixe-racine-suffixe pour chaque composant spécifie la façon dont chaque élément ou mouvement s'enchaîne, correspondant à des impulsions réelles données par le skate et le skateur. L'orientation physique et les mécanismes des forces déterminent ce qui s'emboîte et ce qui ne s'emboîte pas, et c'est ce qui impose cette syntaxe.
+La richesse du langage se nourrit de la complexité de la pratique du skateboard proprement dite. Les mouvements du skate sont complexes, et donnent lieu à des douzaines de tricks de base qui peuvent être réalisés de plusieurs façons, répétées avec plusieurs variables, afin de générer un très grand nombre de combinaisons.
+
+Une structure préfixe-racine-suffixe pour chaque composant spécifie la façon dont chaque élément ou mouvement s'enchaîne, correspondant à des impulsions réelles données par le skate et le skateur. L'orientation physique et les mécanismes des forces déterminent ce qui s'emboîte et ce qui ne s'emboîte pas, et c'est ce qui impose cette syntaxe.
 
 Les tricks peuvent être réalisés sur la partie arrière (*Ollie*) ou la partie avant (*Nollie*) de la planche, avec le pied avant ou arrière du skateur. La planche tourne, roule et tombe dans des combinaisons qui sont répétées sur trois axes, et dans le sens des aiguilles du montre ou dans le sens contraire des aiguilles d'une montre. Le skateur associe ses mouvements aux mouvements de la planche, ajoutant ainsi plusieurs dimensions aux répétitions en fonction du sens, de la rotation, de la position et selon que le skateur tourne en suivant ou non le mouvement de la planche.
 
-Ces deux dernières variables nécessitent un peu plus d'explications. Tout d'abord, le terme *stance* (position) se confond facilement avec la directionnalité linéaire. Chaque skateur a sa position de prédilection, à savoir, le pied gauche ou droit vers l'avant ; par conséquent, réaliser un *switch* (pousser le skateboard avec le pied opposé) signifie qu'il s'agit d'une image inversée, comparable à un frappeur ambidextre en baseball. Le sens vers l'arrière est secondaire ; la principale distinction repose sur l'usage des mains (manualité) ou des pieds.  Par conséquent, n'importe quel trick que vous réalisez avec un *switch* a beaucoup plus de mérite, non pas parce qu'il est réalisé en arrière, mais parce que toutes les fonctions motrices sont inversées par rapport à votre côté le plus faible ou à votre "mauvais" pied. Réaliser un "fakie" (rouler en arrière sur son skate) consiste à ignorer le sens et implique les mêmes fonctions motrices, qui ne sont que légèrement plus difficiles.
+Ces deux dernières variables nécessitent un peu plus d'explications. Tout d'abord, le terme *stance* (position) se confond facilement avec la directionnalité linéaire. Chaque skateur a sa position de prédilection, à savoir, le pied gauche ou droit vers l'avant ; par conséquent, réaliser un *switch* (pousser le skateboard avec le pied opposé) signifie qu'il s'agit d'une image inversée, comparable à un frappeur ambidextre en baseball. Le sens vers l'arrière est secondaire ; la principale distinction repose sur l'usage des mains (manualité) ou des pieds. Par conséquent, n'importe quel trick que vous réalisez avec un *switch* a beaucoup plus de mérite, non pas parce qu'il est réalisé en arrière, mais parce que toutes les fonctions motrices sont inversées par rapport à votre côté le plus faible ou à votre "mauvais" pied. Réaliser un "fakie" (rouler en arrière sur son skate) consiste à ignorer le sens et implique les mêmes fonctions motrices, qui ne sont que légèrement plus difficiles.
 
 La seconde subtilité essentielle aux yeux des skateurs de plus haut niveau concerne le flip *vers l'intérieur* ou *vers l'extérieur*, qui varie selon la manière dont la planche se retourne et pivote (2 axes) par rapport au corps proprement dit. Les tricks avec flip font appel à l'un ou l'autre des côtés du pied sur l'un ou l'autre des bords de la planche :
-les *kickflips* peuvent être réalisés dans le sens des aiguilles d'une montre, tandis que les *heelflips* sont réalisés dans le sens inverse, avec un retournement dans le sens ou à contre-courant de l'enchaînement naturel du mouvement. Ainsi, le fait de tourner sa planche vers l'intérieur est tellement peu naturel qu'un terme bien distinct, *hard-flip*, est utilisé à juste titre pour nommer cette figure. Par conséquent, un *nollie-inward-kickflip* est identique à un *nollie-hardflip*, mais il nécessite plus de précision car il s'effectue dans le sens inverse.
+les *kickflips* peuvent être réalisés dans le sens des aiguilles d'une montre, tandis que les *heelflips* sont réalisés dans le sens inverse, avec un retournement dans le sens ou à contre-courant de l'enchaînement naturel du mouvement.
+
+Ainsi, le fait de tourner sa planche vers l'intérieur est tellement peu naturel qu'un terme bien distinct, *hard-flip*, est utilisé à juste titre pour nommer cette figure. Par conséquent, un *nollie-inward-kickflip* est identique à un *nollie-hardflip*, mais il nécessite plus de précision car il s'effectue dans le sens inverse.
 
 Par conséquent, chaque composant de cette structure préfixe-racine-suffixe peut être décomposée en trois autres éléments binaires relatifs à la rotation, au sens et à la position ; certains tricks nécessitent de spécifier si le retournement se fait vers l'intérieur ou vers l'extérieur. Le skateboard serait un jeu d'enfants si ce n'était la possibilité de combiner des tricks, entraînant la multiplication du nombre d'itérations. Il est possible d'enchaîner plusieurs tricks de base à la suite deux fois, trois fois, voir même jusqu'à cinq ou six fois pour les professionnels chevronnés.
 
@@ -63,8 +67,7 @@ Par exemple, un skateur peut demander à Watson Assistant la liste de toutes les
 ## Plateforme cloud
 {: #vcscar-preface-cloud-platform}
 
-La superposition créative des systèmes informatiques pour générer de nouvelles combinaisons est au coeur du skateboard. Elle a des répercussions sur les vies de personnes créatives et favorise l'innovation partout dans le monde, où que nous allions.
-Rien de tout cela ne serait possible sans {{site.data.keyword.cloud}}.
+La superposition créative des systèmes informatiques pour générer de nouvelles combinaisons est au coeur du skateboard. Elle a des répercussions sur les vies de personnes créatives et favorise l'innovation partout dans le monde, où que nous allions. Rien de tout cela ne serait possible sans {{site.data.keyword.cloud}}.
 
 ## Liens connexes
 {: #vcscar-preface-related}

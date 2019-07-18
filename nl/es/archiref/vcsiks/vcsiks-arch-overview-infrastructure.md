@@ -17,14 +17,14 @@ subcollection: vmware-solutions
 ## Direccionamiento virtual y reenvío
 {: #vcsiks-arch-overview-infrastructure-vrf}
 
-Las cuentas de {{site.data.keyword.cloud}} se pueden configurar como cuentas de direccionamiento virtual y reenvío (VRF). Las cuentas VRF habilitan el direccionamiento global automático entre bloques de IP de subred. Todas las cuentas con las conexiones de Direct Link deben convertirse a, o crearse como, una cuenta de VRF. 
+Las cuentas de {{site.data.keyword.cloud}} se pueden configurar como cuentas de direccionamiento virtual y reenvío (VRF). Las cuentas VRF habilitan el direccionamiento global automático entre bloques de IP de subred. Todas las cuentas con las conexiones de Direct Link deben convertirse a, o crearse como, una cuenta de VRF.
 
 ## Direct Link
 {: #vcsiks-arch-overview-infrastructure-direct-link}
 
 {{site.data.keyword.cloud_notm}} Direct Link Connect ofrece acceso privado a su infraestructura de {{site.data.keyword.cloud_notm}} y a cualquier otra nube enlazada a su proveedor de servicios de red, a través de su {{site.data.keyword.CloudDataCent_notm}}. Esta opción es perfecta para crear conectividad multinube en un entorno único.
 
-Conectamos a los clientes con la red {{site.data.keyword.cloud_notm}} Private, utilizando una topología de ancho de banda compartida. Al igual que sucede con todos los productos de Direct Link, puede añadir direccionamiento global, que permite el tráfico de red privada a todas las ubicaciones de {{site.data.keyword.cloud_notm}}. 
+Conectamos a los clientes con la red {{site.data.keyword.cloud_notm}} Private, utilizando una topología de ancho de banda compartida. Al igual que sucede con todos los productos de Direct Link, puede añadir direccionamiento global, que permite el tráfico de red privada a todas las ubicaciones de {{site.data.keyword.cloud_notm}}.
 
 ## Redes privadas virtuales
 {: #vcsiks-arch-overview-infrastructure-virt-private-network}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-06-26"
 
 keywords: single-node trial, migration app modernization, tech specs migration app modernization
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -29,7 +30,7 @@ subcollection: vmware-solutions
 「單一節點試用版移轉及應用程式現代化」僅用於概念證明 (POC)。不要在此環境中執行正式作業工作負載。新增及移除主機和叢集、訂購附加服務，以及套用更新項目這類管理功能皆不受支援。
 {:important}
 
-若要充分了解「單一節點試用版」實例，您可以從可協助您將 VMware 工作負載移轉至 {{site.data.keyword.cloud_notm}} 的 [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:new_window}，使用 [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:new_window}。此外，[{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/){:new_window} 還可協助您透過最新的雲端原生作法來加速應用程式現代化。
+若要充分了解「單一節點試用版」實例，您可以從可協助您將 VMware 工作負載移轉至 {{site.data.keyword.cloud_notm}} 的 [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:external}，使用 [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:external}。此外，[{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/){:external} 還可協助您透過最新的雲端原生作法來加速應用程式現代化。
 
 此試用版最多可使用 90 天。完成試用後，您可以刪除此環境，然後佈建符合您容量需求的新環境。
 {:note}
@@ -141,12 +142,12 @@ subcollection: vmware-solutions
 ## IBM Cloud Automation Manager 的技術規格
 {: #cloud_modern_bundle_overview-cam-tech-specs}
 
-{{site.data.keyword.cloud_notm}} Automation Manager 3.1.2 是使用「開發/測試」拓蹼安裝在所有「單一節點試用版移轉及應用程式現代化」實例上。如需 {{site.data.keyword.cloud_notm}} Automation Manager 的相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} Automation Manager 文件](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: new_window}。
+{{site.data.keyword.cloud_notm}} Automation Manager 3.1.2 是使用「開發/測試」拓蹼安裝在所有「單一節點試用版移轉及應用程式現代化」實例上。如需 {{site.data.keyword.cloud_notm}} Automation Manager 的相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} Automation Manager 文件](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: external}。
 
 ## 相關鏈結
 {: #cloud_modern_bundle_overview-related}
 
 * [vCenter Server 和 {{site.data.keyword.cloud_notm}} Private 手冊](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [開立 {{site.data.keyword.cloud_notm}} Private 的問題單](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
-* [VMware HCX 資源](https://hcx.vmware.com/#/docs){:new_window}
-* [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}
+* [開立 {{site.data.keyword.cloud_notm}} Private 的問題單](https://www.ibm.com/mysupport/s/?language=en_US){:external}
+* [VMware HCX 資源](https://hcx.vmware.com/#/docs){:external}
+* [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}

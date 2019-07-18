@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-20"
 
 keywords: KMIP for VMware, view KMIP stand-alone, KMIP for VMware status
 
@@ -23,24 +23,22 @@ subcollection: vmware-solutions
 
 在左侧导航窗格中，单击**资源**，然后向下滚动到 **KMIP for VMware on {{site.data.keyword.cloud_notm}} 实例**表，以查看有关所订购实例的信息：
 
-表 1. KMIP for VMware on {{site.data.keyword.cloud_notm}} 实例项
-
 |项|描述|  
 |:----------- |:----------------- |
 |名称|实例的名称。|
 |区域|托管实例的 {{site.data.keyword.cloud_notm}} 区域。|
 |创建时间|创建实例的日期和时间。|  
 |状态|实例的状态。|
+{: caption="表 1. KMIP for VMware on {{site.data.keyword.cloud_notm}} 实例项" caption-side="top"}
 
 实例状态可以有一系列选项。
-
-表 2. KMIP for VMware on {{site.data.keyword.cloud_notm}} 实例状态描述
 
 |状态|描述|
 |:------------- |:------------- |
 |正在安装|正在创建实例。|
 |已安装|实例准备就绪，可供使用。|
 |正在除去|正在删除实例。|
+{: caption="表 2. KMIP for VMware on {{site.data.keyword.cloud_notm}} 实例状态描述" caption-side="top"}
 
 ## 相关链接
 {: #kmip_standalone_viewing-related}

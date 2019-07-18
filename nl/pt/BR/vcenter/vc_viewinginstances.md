@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-06-28"
 
 keywords: view vCenter Server, view instance, view instance details
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -31,8 +32,6 @@ Para visualizar um resumo de todas as instâncias do vCenter Server que são pro
 2. No banner do console, clique em seu ícone de conta do usuário e, em seguida, clique no campo **Conta** para selecionar a conta do usuário da qual você deseja verificar as instâncias.  
 3. Na tabela **Instâncias do vCenter Server**, visualize a lista de instâncias que são provisionadas na conta do usuário selecionada.
 
-Tabela 1. Itens de instância do vCenter Server
-
 | Item        | Descrição       |  
 |:------------- |:------------- |
 | Nome | O nome da instância |
@@ -41,10 +40,9 @@ Tabela 1. Itens de instância do vCenter Server
 | Localização | O {{site.data.keyword.CloudDataCent_notm}} no qual a instância é hospedada |  
 | Horário de criação | A data e hora em que a instância foi criada |
 | Barra de Status | O status da instância |   
+{: caption="Tabela 1. Itens de instância do vCenter Server" caption-side="top"}
 
 A instância pode ter um intervalo de status.
-
-Tabela 2. Descrições do status de instâncias do vCenter Server
 
 | Barra de Status        | Descrição       |
 |:------------- |:------------- |
@@ -56,6 +54,7 @@ Tabela 2. Descrições do status de instâncias do vCenter Server
 | Excluindo | A instância está sendo excluída. |
 | Erro de exclusão | Ocorreu um erro quando a instância estava sendo excluída. |
 | Excluído | A instância foi excluída. |
+{: caption="Tabela 2. Descrições do status de instâncias do vCenter Server" caption-side="top"}
 
 ## Procedimento para visualizar os detalhes da propriedade de instância do vCenter Server
 {: #vc_viewinginstances-procedure-view-inst-property}
@@ -64,8 +63,6 @@ Para visualizar os detalhes da propriedade de uma instância:
 
 1. Na tabela **Instâncias do vCenter Server**, clique em um nome de instância.
 2. Em **Propriedades**, visualize os detalhes da instância.
-
-Tabela 3. Propriedades da instância do vCenter Server
 
 | Propriedade        | Descrição       |
 |:------------- |:------------- |
@@ -82,13 +79,12 @@ Tabela 3. Propriedades da instância do vCenter Server
 | DNS, subdomínio | O subdomínio é o nome do subdomínio do DNS no nome de domínio-raiz no qual os nomes de host da instância local do vCenter Server residem. O nome do subdomínio está no formato <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp>. |
 | Hybridity Bundle | Indica se o Pacote configurável vCenter Server with Hybridity está instalado. |
 | Barra de Status  | O status da instância.<br><br>As informações exibidas fornecem uma atualização sobre o progresso da implementação ou a ação que é executada na instância. Se houver problemas, uma mensagem poderá ser exibida para ajudá-lo a investigar e resolver o problema. |
+{: caption="Tabela 3. Propriedades da instância do vCenter Server" caption-side="top"}
 
 ## Procedimento para visualizar as informações de acesso para instâncias do vCenter Server
 {: #vc_viewinginstances-procedure-view-access-info}
 
 Em **Informações de acesso**, visualize as informações de acesso dos componentes relacionados à instância. As senhas exibidas são senhas iniciais geradas pelo sistema. Se você as mudar fora do console do {{site.data.keyword.vmwaresolutions_short}}, elas não serão atualizadas na página de resumo da instância.
-
-Tabela 4. Informações de acesso do vCenter Server para componentes relacionados à instância
 
 | Componente        | Descrição       |
 |:------------- |:------------- |
@@ -102,18 +98,18 @@ Tabela 4. Informações de acesso do vCenter Server para componentes relacionado
 | FQDN do vCenter  | O nome completo do domínio (FQDN) do vCenter Server.  |
 | ADMINISTRADOR do vCenter  | O nome do usuário e a senha do VMware vCenter Single Sign-On que podem ser usados para efetuar login no vCenter Server usando o vSphere Web Client.  |
 | SSH do vCenter  | O nome do usuário e a senha que podem ser usados para acessar a VM do vCenter Server por meio da conexão SSH.  |
+{: caption="Tabela 4. Informações de acesso do vCenter Server para componentes relacionados à instância" caption-side="top"}
 
 ## Procedimento para visualizar o histórico de implementação para instâncias do vCenter Server
 {: #vc_viewinginstances-procedure-view-deploy-history}
 
 Clique em **Histórico de implementação** na área de janela de navegação esquerda para visualizar o histórico de implementação da instância.
 
-Tabela 5. Histórico de implementação da instância do vCenter Server
-
 | Item        | Descrição       |  
 |:------------- |:------------- |
 | Data | A data e hora em que o status da instância muda |
 | Resumo | Os detalhes da mudança |
+{: caption="Tabela 5. Histórico de implementação da instância do vCenter Server" caption-side="top"}
 
 ## O que fazer se ocorrerem erros
 {: #vc_viewinginstances-if-errors-occur}
@@ -130,7 +126,7 @@ Antes de clicar no **Console do vCenter** na página de resumo da instância par
 
 Revise os tópicos a seguir para obter informações que ajudarão a concluir as instruções de login:
 *  Para obter os requisitos e as etapas necessárias antes de acessar o vSphere Web Client, veja [Tempo limite atingido ao se conectar ao vSphere Web Client](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_timeout_vc_console).
-*  Para obter uma lista de pontos de acesso para efetuar login na Rede Privada da infraestrutura do {{site.data.keyword.cloud_notm}} usando a VPN, veja [Acesso à VPN](http://www.softlayer.com/vpn-access){:new_window}.
+*  Para obter uma lista de pontos de acesso para efetuar login na Rede Privada da infraestrutura do {{site.data.keyword.cloud_notm}} usando a VPN, veja [Acesso à VPN](http://www.softlayer.com/vpn-access){:external}.
 *  Se tiver problemas ao implementar um arquivo OVF (Open Virtualization Format) usando o vSphere Web Client, veja [Implementando um arquivo OVF usando o vSphere Web Client](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_deploy_ovf).
 
 ## Links relacionados

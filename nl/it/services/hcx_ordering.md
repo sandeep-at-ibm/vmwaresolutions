@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-28"
 
 keywords: VMware HCX deployment, HCX configuration, order HCX
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -52,7 +53,7 @@ Per installare HCX on {{site.data.keyword.cloud_notm}}, completa le seguenti imp
   * **Chiave privata:** immetti la chiave privata del certificato CA.
   * (Facoltativo) **Password:** immetti la password per la chiave privata, se è crittografata.
   * (Facoltativo) **Immettere nuovamente la password:** immetti di nuovo la password per la chiave privata.
-  * (Facoltativo) **Nome host:** il nome host da associare al nome comune (CN) del certificato CA. HCX on {{site.data.keyword.cloud_notm}} richiede che il formato del certificato CA sia accettato da Edge NSX. Per ulteriori informazioni sui formati dei certificati Edge NSX, vedi [Importazione di certificati SSL](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html).
+  * (Facoltativo) **Nome host:** il nome host da associare al nome comune (CN) del certificato CA. HCX on {{site.data.keyword.cloud_notm}} richiede che il formato del certificato CA sia accettato da Edge NSX. Per ulteriori informazioni sui formati dei certificati Edge NSX, vedi [Importazione di certificati SSL](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html){:external}.
   <!--Need enhancement, it is still not clear what the key pair is used for, is it for connecting to NSX? This is not in architecture doc either. -->
 
 ## Processo di distribuzione per HCX on IBM Cloud
@@ -94,5 +95,5 @@ La distribuzione di HCX on {{site.data.keyword.cloud_notm}} è automatizzata. Si
 * [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
 * [Glossario dei termini HCX](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
 * [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
-* [Panoramica di VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx)
-* [Documentazione di VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)
+* [Panoramica di VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx){:external}
+* [Documentazione di VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources){:external}

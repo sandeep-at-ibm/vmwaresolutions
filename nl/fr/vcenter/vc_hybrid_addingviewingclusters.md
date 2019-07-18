@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-26"
 
 keywords: vCenter Server Hybridity add cluster, view cluster vCenter Server Hybridity, delete cluster vCenter Server Hybridity
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -31,7 +32,7 @@ Vous pouvez ajouter des clusters à votre instance VMware vCenter Server on {{si
 {: #vc_hybrid_addingviewingclusters-before-add}
 
 * Dans la mesure du possible, vous devez ajouter les clusters à l'aide de la console {{site.data.keyword.vmwaresolutions_full}} car les modifications apportées au client VMware vSphere Web Client ne sont pas synchronisées avec la console {{site.data.keyword.vmwaresolutions_short}}. Par conséquent, ajoutez des clusters à vCenter Server uniquement pour les clusters sur site ou les clusters que vous ne pouvez ou ne voulez pas gérer dans la console {{site.data.keyword.vmwaresolutions_short}}.
-* Pour les instances déployées dans (ou mises à niveau vers) la version 2.5 et des versions ultérieures, le nombre de clusters, d'hôtes et de machines virtuelles détermine la limite maximum relative au nombre de clusters que vous pouvez ajouter. Vous devez respecter les règles et limites de dimensionnement VMware pour votre déploiement. Pour plus d'informations sur les limites maximum, voir [VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window}.
+* Pour les instances déployées dans (ou mises à niveau vers) la version 2.5 et des versions ultérieures, le nombre de clusters, d'hôtes et de machines virtuelles détermine la limite maximum relative au nombre de clusters que vous pouvez ajouter. Vous devez respecter les règles et limites de dimensionnement VMware pour votre déploiement. Pour plus d'informations sur les limites maximum, voir [VMware Configuration Maximums](https://configmax.vmware.com/home){:external}.
 * Pour les instances déployées dans (ou mises à niveau vers) la version 2.3 et 2.4, vous pouvez ajouter jusqu'à 10 clusters.
 
 ### Paramètres système
@@ -65,25 +66,23 @@ Vous pouvez choisir l'option **Skylake** ou **Broadwell**. Les options peuvent v
 
 Lorsque vous sélectionnez **Skylake**, vous pouvez choisir la combinaison de modèle d'UC et de mémoire RAM adaptée à vos besoins.
 
-Tableau 1. Options pour les serveurs Skylake bare metal
-
 | Options de modèle d'UC        | Options de RAM       |
 |:------------- |:------------- |
 | Processeur Dual Intel Xeon Silver 4110/16 coeurs au total, 2,1 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
 | Processeur Dual Intel Xeon Gold 5120/28 coeurs au total, 2,2 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
 | Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
+{: caption="Tableau 1. Options pour les serveurs Skylake bare metal" caption-side="top"}
 
 #### Broadwell
 {: #vc_hybrid_addingviewingclusters-adding-broadwell}
 
 Lorsque vous sélectionnez **Broadwell**, vous pouvez choisir la combinaison de modèle d'UC et de mémoire RAM adaptée à vos besoins.
 
-Tableau 2. Options pour les serveurs Broadwell bare metal
-
 | Options de modèle d'UC        | Options de RAM       |
 |:------------- |:------------- |
 | Quad Intel Xeon E7-4820 v4/40 coeurs au total, 1,9 GHz | 128 Go, 256 Go, 512 Go, 1 To, 2 To, 3 To |
 | Quad Intel Xeon E7-4850 v4/64 coeurs au total, 2,2 GHz | 128 Go, 256 Go, 512 Go, 1 To, 2 To, 3 To |
+{: caption="Tableau 2. Options pour les serveurs Broadwell bare metal" caption-side="top"}
 
 #### Nombre de serveurs bare metal
 {: #vc_hybrid_addingviewingclusters-adding-bare-metal-number}
@@ -125,7 +124,7 @@ Les paramètres de carte d'interface réseau varient selon que vous sélectionne
 ### Récapitulatif de la commande
 {: #vc_hybrid_addingviewingclusters-adding-order-summary}
 
-Selon la configuration que vous avez sélectionnée pour le cluster, le coût estimé est généré et affiché instantanément dans la section **Récapitulatif de la commande** sur le panneau de droite. Cliquez sur **Détails concernant la tarification** pour générer un document PDF contenant le récapitulatif des coûts pour les ressources {{site.data.keyword.vmwaresolutions_short}}. 
+Selon la configuration que vous avez sélectionnée pour le cluster, le coût estimé est généré et affiché instantanément dans la section **Récapitulatif de la commande** sur le panneau de droite. Cliquez sur **Détails concernant la tarification** pour générer un document PDF contenant le récapitulatif des coûts pour les ressources {{site.data.keyword.vmwaresolutions_short}}.
 
 Vous pouvez également ajouter les ressources mises à disposition à l’outil d’estimation {{site.data.keyword.cloud_notm}} en cliquant sur **Ajouter à l'estimation**. Cela est utile si vous souhaitez estimer le coût des ressources {{site.data.keyword.vmwaresolutions_short}} sélectionnées avec d'autres ressources {{site.data.keyword.cloud_notm}} que vous pourriez envisager d'acheter.
 
@@ -151,7 +150,7 @@ Vous pouvez également ajouter les ressources mises à disposition à l’outil 
    3. Cliquez sur le ou les liens des conditions applicables à votre commande et prenez soin d'accepter ces conditions avant d'ajouter le cluster.
    4. Cliquez sur **Mettre à disposition**.
 
-### Que se passe-t-il après l'ajout de clusters à des instances vCenter Server with Hybridity Bundle ?  
+### Que se passe-t-il après l'ajout de clusters à des instances vCenter Server with Hybridity Bundle ?
 {: #vc_hybrid_addingviewingclusters-adding-results}
 
 1. Le déploiement du cluster démarre automatiquement et celui-ci prend le statut **Initialisation en cours**. Vous pouvez vérifier le statut du déploiement en affichant l'historique de déploiement sur la page **Récapitulatif** de l'instance.

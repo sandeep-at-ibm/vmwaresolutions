@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-06-27"
 
 subcollection: vmware-solutions
 
@@ -68,7 +68,7 @@ subcollection: vmware-solutions
   -	IBM MQ Advanced
   -	IBM MQ Advanced for Developers
   -	Rabbit MQ(오픈 소스)
-  -	IBM Event Streams Tech Preview(Apache Kafka 기반)
+  -	IBM Event Streams 기술 미리보기(Apache Kafka 기반)
 
 * 디지털 비즈니스 자동화
   -	IBM Operational Decision Manager
@@ -92,7 +92,7 @@ subcollection: vmware-solutions
 * HPC/HPDA
   -	IBM Spectrum LSF Community Edition
   -	IBM Spectrum Symphony Community Edition
-  -	IBM Spectrum Conductor Technical Preview
+  -	IBM Spectrum Conductor 기술 미리보기
 
 * 다중 클라우드 관리
   -	{{site.data.keyword.cloud_notm}} Automation Manager
@@ -159,8 +159,7 @@ type=NFS
 server = nfs.server.ip.address
 path = /shared/db2trader1`
 
-카탈로그 사용자 인터페이스에서 "Db2"를 찾아서 ibm -db2oldp -dev를 클릭하십시오. readme 파일을 검토한 다음
-구성을 클릭하십시오.
+카탈로그 사용자 인터페이스에서 “Db2”를 검색하고 ibm-db2oldp-dev를 클릭하십시오. readme 파일을 검토한 후 구성을 클릭하십시오.
 
 구성 섹션에는 빠른 시작 섹션과 모든 매개변수 섹션이 있습니다. Todd가 추가 구성을 입력해야 하기 때문에 모든 매개변수를 여십시오.
 
@@ -229,7 +228,7 @@ Kubernetes 세계에서 Jane의 마이크로 서비스(코드 다시 작성 및 
 -	파이프라인 추가(Jane은 Jenkins 사용)
 -	Maven을 사용하여 빌드
 
-다음은 Jane의 [코드 저장소](https://github.com/IBMStockTrader/)의 예입니다. Jenkins 파일, server.xml 등도 함께 제공됩니다. 이를 사용하면 Jane은 GitHub의 개별 저장소로의 더 많은 마이크로 서비스와 함께 ODM 및 Watson과 같은 서비스에 액세스하기 위해 시크릿을 통해 추가 기능을 자유롭게 코드화할 수 있습니다.
+다음 예제에서는 Jenkins 파일 server.xml 등과 함께 Jane의 [코드 저장소](https://github.com/IBMStockTrader/)를 표시합니다. 이를 사용하면 Jane은 GitHub의 개별 저장소로의 더 많은 마이크로 서비스와 함께 ODM 및 Watson과 같은 서비스에 액세스하기 위해 시크릿을 통해 추가 기능을 자유롭게 코드화할 수 있습니다.
 
 ### 시크릿 추가
 {: #vcscontent-addmidware-add-secrets}

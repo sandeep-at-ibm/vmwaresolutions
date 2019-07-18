@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-06-27"
 
 subcollection: vmware-solutions
 
@@ -78,7 +78,7 @@ ma alcuni contenuti richiedono l'acquisto e il download da Passport Advantage.
   -	IBM MQ Advanced
   -	IBM MQ Advanced for Developers
   -	Rabbit MQ (open source)
-  -	IBM Event Streams Tech Preview (Basato su Apache Kafka)
+  -	Anteprima della tecnologia di IBM Event Streams (basato su Apache Kafka)
 
 * Automazione del business digitale
   -	IBM Operational Decision Manager
@@ -102,7 +102,7 @@ ma alcuni contenuti richiedono l'acquisto e il download da Passport Advantage.
 * HPC / HPDA
   -	IBM Spectrum LSF Community Edition
   -	IBM Spectrum Symphony Community Edition
-  -	IBM Spectrum Conductor Technical Preview
+  -	Anteprima della tecnologia di IBM Spectrum Conductor
 
 * Gestione multi-cloud
   -	{{site.data.keyword.cloud_notm}} Automation Manager
@@ -135,7 +135,7 @@ prodotto PowerVC)
   - Cluster di archiviazione GlusterFS con gestione del ciclo di vita Heketi (open
 source)
   -	NFS di esempio di CSI (Container Storage Interface)
-  -	driver (open source)
+  -	Driver (open source)
   -	Rook Ceph Cluster (open source)
 
 * Strumenti
@@ -176,8 +176,7 @@ type=NFS
 server = nfs.server.ip.address
 path = /shared/db2trader1`
 
-Nell'interfaccia utente del catalogo, cerca “Db2” e fai clic su ibm-db2oldp-dev
-Controlla il file readme e fai clic su Configure.
+Nell'interfaccia utente del catalogo, cerca “Db2” e fai clic su ibm-db2oldp-dev. Controlla il file readme e fai clic su Configure.
 
 Nella sezione Configure, c'è una sezione Quick Start e una sezione All
 Parameters. Apri la sezione All Parameters poiché Todd deve inserire
@@ -266,9 +265,7 @@ Per ottimizzare, Jane ha compiuto i seguenti passi:
 -	Ha aggiunto una pipeline (Jane ha usato Jenkins)
 -	Ha creato utilizzando Maven
 
-Di seguito è riportato un esempio del [repository
-di codice](https://github.com/IBMStockTrader/) di Jane, insieme al file
-Jenkins, server.xml e altro. Con questa disposizione, Jane può codificare liberamente
+Il seguente esempio mostra il [repository di codice](https://github.com/IBMStockTrader/) di Jane, insieme al file Jenkins, server.xml, e altro. Con questa disposizione, Jane può codificare liberamente
 funzionalità aggiuntive tramite segreti per accedere ai servizi come ODM e
 Watson, insieme ad altri microservizi come singoli repository
 in GitHub.

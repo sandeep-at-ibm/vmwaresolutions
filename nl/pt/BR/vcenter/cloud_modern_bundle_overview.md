@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-06-26"
 
 keywords: single-node trial, migration app modernization, tech specs migration app modernization
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -29,7 +30,7 @@ A avaliação é projetada para migração de até 20 cargas de trabalho de dese
 O Single-node Trial for Migration and App Modernization é somente para prova de conceito (POC). Não execute cargas de trabalho de trabalho de produção nesse ambiente. Funções de gerenciamento, como a inclusão e a remoção de hosts e clusters, o pedido de serviços complementares e a aplicação de atualizações, não são suportadas.
 {:important}
 
-Para obter o máximo da instância do Single-node Trial, é possível usar o [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:new_window} por meio do [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:new_window}, que pode ajudar a migrar suas cargas de trabalho do VMware para o {{site.data.keyword.cloud_notm}}. Além disso, o [{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/){:new_window} pode ajudar a acelerar a modernização do aplicativo por meio das práticas nativas de nuvem mais recentes.
+Para obter o máximo da instância do Single-node Trial, é possível usar o [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:external} por meio do [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:external}, que pode ajudar a migrar suas cargas de trabalho do VMware para o {{site.data.keyword.cloud_notm}}. Além disso, o [{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/){:external} pode ajudar a acelerar a modernização do aplicativo por meio das práticas nativas de nuvem mais recentes.
 
 Essa avaliação é destinada ao uso de até 90 dias. Quando você tiver concluído a avaliação, será possível excluir esse ambiente e provisionar um novo ambiente que atenda às suas necessidades de capacidade.
 {:note}
@@ -141,12 +142,12 @@ O {{site.data.keyword.cloud_notm}} Private Hosted 3.1.2 é instalado usando a to
 ## Especificações técnicas para o IBM Cloud Automation Manager
 {: #cloud_modern_bundle_overview-cam-tech-specs}
 
-O {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2 é instalado usando a topologia de Desenvolvimento/Teste em todas as instâncias do Single-node Trial for Migration and App Modernization. Para obter mais informações sobre o {{site.data.keyword.cloud_notm}} Automation Manager, consulte a [documentação do{{site.data.keyword.cloud_notm}} Automation Manager](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: new_window}.
+O {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2 é instalado usando a topologia de Desenvolvimento/Teste em todas as instâncias do Single-node Trial for Migration and App Modernization. Para obter mais informações sobre o {{site.data.keyword.cloud_notm}} Automation Manager, consulte a [Documentação do {{site.data.keyword.cloud_notm}} Automation Manager](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: external}.
 
 ## Links relacionados
 {: #cloud_modern_bundle_overview-related}
 
 * [ vCenter Server e  {{site.data.keyword.cloud_notm}}  Guia privado ](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [Abrir um chamado para o {{site.data.keyword.cloud_notm}} Private](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
-* [Recursos do VMware HCX](https://hcx.vmware.com/#/docs){:new_window}
-* [Guia do Usuário do VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}
+* [Abrir um chamado para o {{site.data.keyword.cloud_notm}} Private](https://www.ibm.com/mysupport/s/?language=en_US){:external}
+* [Recursos do VMware HCX](https://hcx.vmware.com/#/docs){:external}
+* [Guia do Usuário do VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}

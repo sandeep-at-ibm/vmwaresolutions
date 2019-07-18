@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -91,7 +91,7 @@ Skate Advisor の中核となるデータ・エレメントはトリックです
 7 | Skate Advisor が Discovery Service にデータ・セットを要求します。
 8 | Discovery Service が照会を評価し、応答を送信します。
 9 |Skate Advisor が応答を形成し、テキストでチャットボットに送信します。
-10 | チャットボットがテキスト応答を「Text To Speech」サービスに送信します。
+10 | チャットボットがテキスト応答を「Text to Speech」サービスに送信します。
 11 | 結果がチャットボットからユーザーに送信されます。
 
 ### ビデオ・レンダリング

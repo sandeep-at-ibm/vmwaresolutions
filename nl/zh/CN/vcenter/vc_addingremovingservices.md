@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-10"
+lastupdated: "2019-06-27"
 
 keywords: vCenter Server add service, view service vCenter Server, remove service vCenter Server
 
@@ -27,11 +27,9 @@ subcollection: vmware-solutions
 
 下表显示了可用于 vCenter Server 实例的服务以及已安装服务的版本。
 
-表 1. 可用于 vCenter Server 实例的服务
-
 |服务名称|当前服务版本|实例版本|
 |----------------------------------------------------------------------------------------|------------------|
-| [Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_considerations) | 2.2 | V2.9 和更高版本|
+| [Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_considerations) |2.2.1| V2.9 和更高版本|
 |[F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations)| BIG-IP VE v14.1.0.2 | V1.9 和更高版本 |
 |[FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations)|300 系列| V2.0 和更高版本 |
 |[FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations)|6.0.3| V2.0 和更高版本 |
@@ -43,6 +41,7 @@ subcollection: vmware-solutions
 |[KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations)|2.0|不适用|
 |[Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)| 9.5u4 | V1.8 和更高版本 |
 |[Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)| 6.5 update 3 | V1.2 和更高版本 |
+{: caption="表 1. 可用于 vCenter Server 实例的服务" caption-side="top"}
 
 ## 向 vCenter Server 实例添加服务的过程
 {: #vc_addingremovingservices-adding-procedure}

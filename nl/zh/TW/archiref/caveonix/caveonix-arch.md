@@ -47,7 +47,7 @@ Caveonix RiskForesight 有區域的概念：
 - 雲端提供者 - 此區域提供管理應用程式所在的基礎架構：
     - 專用 - {{site.data.keyword.cloud}} 上的 VMWare，以及內部部署的 VMware 基礎架構平台。這些平台透過下列方式整合至 RiskForesight：vCenter、NSX Manager、VMware Cloud Director (vCD) 或 vRealize Automation (vRA)。
     - 公用 - 目前唯一受支援的公用雲端提供者為 AWS。即將提供 {{site.data.keyword.cloud_notm}}。
-    - 容器 - 目前只支援 AWS Elastic Kubernetes Service (EKS)。即將提供 {{site.data.keyword.cloud_notm}} Private and {{site.data.keyword.cloud_notm}} Kubernetes Services (IKS)。
+    - 容器 - 目前只支援 AWS Elastic Kubernetes Service (EKS)。即將提供 {{site.data.keyword.cloud_notm}} Private and {{site.data.keyword.cloud_notm}} Kubernetes Services。
 -	承租戶或客戶環境區域 - 這些區域用來隔離承租戶、客戶或業務單位。這些區域中有工作負載，因此需要遠端收集器。以最小部署而言，您需要一個遠端收集器，但如果是一般部署，則每個承租戶/客戶/業務單位都需要一個遠端收集器。
 
 

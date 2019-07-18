@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server Hybridity delete instance, delete vCenter Server Hybridity, delete multi-site
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -40,8 +41,8 @@ L'instance supprimée vous est facturée jusqu'à échéance du cycle de factura
 
 1. Retirez tous les services de l'instance vCenter Server with Hybridity Bundle secondaire.
 2. Vérifiez qu'aucun objet NSX n'est développé dans l'instance secondaire que vous voulez supprimer.
-3. Supprimez le vCenter Server secondaire du domaine SSO (Single Sign-On) principal. Pour plus d'informations, voir [Désenregistrement du serveur vCenter Server de la connexion unique](https://kb.vmware.com/s/article/2106736){:new_window}.
-4. Démontez l'instance de service virtuel (VSI, Virtual Service Instance) du contrôleur de domaine local. Pour plus d'informations, voir [Démontage des contrôleurs de domaine et des domaines](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-){:new_window}.
+3. Supprimez le vCenter Server secondaire du domaine SSO (Single Sign-On) principal. Pour plus d'informations, voir [Désenregistrement du serveur vCenter Server de la connexion unique](https://kb.vmware.com/s/article/2106736){:external}.
+4. Démontez l'instance de service virtuel (VSI, Virtual Service Instance) du contrôleur de domaine local. Pour plus d'informations, voir [Démontage des contrôleurs de domaine et des domaines](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-){:external}.
 5. Supprimez l'instance vCenter Server with Hybridity Bundle secondaire depuis la console {{site.data.keyword.vmwaresolutions_short}}.
 6. Répétez les étapes 1 à 5 pour toutes les instances vCenter Server with Hybridity Bundle secondaires de votre configuration multisite.
 7. Après avoir supprimé toutes les instances secondaires, vous pouvez également supprimer l'instance principale de la console {{site.data.keyword.vmwaresolutions_short}}.

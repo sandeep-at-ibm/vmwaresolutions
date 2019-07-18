@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: Veeam, Veeam install, tech specs Veeam
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -76,8 +77,7 @@ Veeam on {{site.data.keyword.cloud_notm}} 服务中订购并包含了以下组�
 
 * [订购 Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_ordering)
 * [管理 Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
-* [请求 Veeam on {{site.data.keyword.cloud_notm}} 的受管服务](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
-* [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [Veeam on {{site.data.keyword.cloud_notm}} 的受管服务](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
 * [常见问题](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Veeam Web 站点](https://www.veeam.com/){:new_window}
-* [Veeam 帮助中心](https://www.veeam.com/documentation-guides-datasheets.html){:new_window}
+* [Veeam Web 站点](https://www.veeam.com/){:external}
+* [Veeam 帮助中心](https://www.veeam.com/documentation-guides-datasheets.html){:external}

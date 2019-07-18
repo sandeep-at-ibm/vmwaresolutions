@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server Hybridity compliance, compliance info Hybridity, vCenter Server Hybridity policy
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # Información de conformidad para vCenter Server con el paquete híbrido (Hybridity)
 {: #vc_hybrid_compl_info}
@@ -21,7 +23,7 @@ Revise la información siguiente para obtener detalles sobre la conformidad de l
 ## Responsabilidad del cliente y de IBM con relación a vCenter Server IBM Cloud con el paquete híbrido (Hybridity)
 {: #vc_hybrid_compl_info-responsibility}
 
-En el diagrama siguiente encontrará información sobre las responsabilidades del cliente (usted) y de IBM en relación a las actividades de conformidad.
+En el diagrama siguiente encontrará información sobre las responsabilidades del cliente (usted) y de IBM en relación con las actividades de conformidad.
 
 ![Matriz de responsabilidad del cliente frente a IBM](../images/customer_ibm_responsibility_matrix.svg "Matriz de responsabilidad del cliente frente a IBM")
 
@@ -76,7 +78,7 @@ Los entornos VMware vCenter Server, que se suministran como {{site.data.keyword.
 * Debido al nivel de especialización que se necesita para ofrecer una experiencia técnica superior a nivel de equipo, a veces es necesario implicar a más de un equipo de soporte en la resolución de un problema de software concreto. Esto se gestiona fácilmente, ya que nuestros equipos de soporte trabajan en red y como uno solo para resolver los problemas que puedan surgir.
 * Para investigar el problema, es posible que IBM necesite acceder a la información del sistema relacionada con el problema o puede que sea necesario reproducir la anomalía para obtener información adicional.
 * Una incidencia de soporte generada por el cliente sirve como acuse de recibo de que el equipo de soporte de IBM puede acceder a la capa de gestión de VMware para su investigación, depuración y selección. Si es necesario interrumpir el mantenimiento o realizar cambios en el entorno, el equipo de soporte de IBM solicitará confirmación documentada adicional del cliente mediante incidencias como parte de nuestro proceso de gestión de cambios.
-* Para obtener más información sobre las incidencias de soporte, consulte [Guía de soporte de IBM](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923) y [Cómo ponerse en contacto con el equipo de soporte de IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
+* Para obtener más información sobre las incidencias de soporte, consulte [Guía de soporte de IBM](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923){:external} y [Cómo ponerse en contacto con el equipo de soporte de IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
 
 ## Responsabilidades del cliente
 {: #vc_hybrid_compl_info-client-responsibilities}
@@ -116,7 +118,7 @@ responsabilidad del Cliente, que debe ponerse en contacto con el soporte de IBM 
 * La licencia de estos programas que no son de IBM viene proporcionada directamente por sus proveedores. El cliente acepta utilizar los programas que no son de IBM bajo los términos y condiciones del proveedor. Estos se proporcionan en el acuerdo de licencia de IBM adjunto a la oferta de IBM en el momento de la compra.
 * IBM realiza pruebas para asegurarse de que los productos de terceros funcionarán con los programas de IBM y lo harán adecuadamente.
 * El servicio soporte de software de IBM diagnosticará los problemas de los clientes aplicando su conocimiento sobre cómo funcionan las ofertas de IBM con el software de terceros. Una vez que se haya llegado a la conclusión de que el programa de IBM funciona correctamente, pero el problema se sigue produciendo, IBM redirigirá al cliente al proveedor de terceros para que realice un diagnóstico más amplio.
-* Encontrará más información sobre las responsabilidades del cliente en relación a software o código de terceros en el [Guía de soporte de IBM](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923).
+* Encontrará más información sobre las responsabilidades del cliente en relación con software o código de terceros en el [Guía de soporte de IBM](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923){:external}.
 
 ## Consentimiento para acceder a entornos del cliente
 {: #vc_hybrid_compl_info-consent-to-access-client-environment}

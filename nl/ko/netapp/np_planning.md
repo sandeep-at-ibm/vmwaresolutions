@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-20"
 
 keywords: planning NetApp ONTAP, data center, NetApp data centers
 
@@ -27,8 +27,6 @@ NetApp ONTAP Select 인스턴스를 주문하기 전에 다음 요구사항을 �
 {: #np_planning-dc-availability}
 
 NetApp ONTAP Select 배치에는 실제 인프라에 대한 엄격한 요구사항이 있습니다. 그러므로, 요구사항을 충족하는 {{site.data.keyword.CloudDataCents_notm}}에만 인스턴스를 배치할 수 있습니다. 다음 {{site.data.keyword.CloudDataCents_notm}}는 NetApp ONTAP Select 배치에 사용 가능합니다.
-
-표 1. NetApp ONTAP Select 인스턴스에 사용 가능한 {{site.data.keyword.CloudDataCents_notm}}
 
 | {{site.data.keyword.CloudDataCent_notm}} |위치 |지역 |서버 옵션 |
 |:------|:----------------|:----------------|:---------------------------|
@@ -62,6 +60,7 @@ NetApp ONTAP Select 배치에는 실제 인프라에 대한 엄격한 요구사�
 |WDC04 |워싱턴, DC |북미 동부 |고성능(중형), 고성능(대형), 고용량
 |WDC06 |워싱턴, DC |북미 동부 |고성능(중형), 고성능(대형), 고용량
 |WDC07 |워싱턴, DC |북미 동부 |고성능(중형), 고성능(대형), 고용량
+{: caption="표 1. NetApp ONTAP Select 인스턴스에 사용 가능한 {{site.data.keyword.CloudDataCents_notm}}" caption-side="top"}
 
 ## 관련 링크
 {: #np_planning-related}

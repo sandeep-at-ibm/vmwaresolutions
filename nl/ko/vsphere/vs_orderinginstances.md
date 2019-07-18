@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-28"
 
 keywords: vSphere order cluster, order vSphere, order vSphere cluster
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -51,14 +52,13 @@ subcollection: vmware-solutions
 
 IBM 비즈니스 파트너인 경우 새 vSphere 클러스터를 주문할 때 컴포넌트 라이센스 번들을 선택할 수 있습니다. 다음 번들이 사용 가능합니다.
 
-표 1. vSphere 클러스터에 대한 IBM 비즈니스 파트너 컴포넌트 번들
-
 |번들 |컴포넌트                   |
 |:------------------------- |:----------------------- |
 |관리가 포함된 표준 |vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vRealize Operations Enterprise |
 |고급                 |vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vCloud Director, NSX Base |
 |네트워킹이 포함된 고급 |vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, NSX Advanced |
 |네트워킹 및 관리가 포함된 고급 |vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vRealize Operations Enterprise, vCloud Director, NSX Enterprise |
+{: caption="표 1. vSphere 클러스터에 대한 IBM 비즈니스 파트너 컴포넌트 번들" caption-side="top"}
 
 다음 VMware 컴포넌트를 주문에 포함할 수도 있습니다.
 * VMware vSAN
@@ -104,7 +104,9 @@ vSphere Enterprise Plus 및 vCenter Server를 제외한 라이센스를 구매�
 
 클러스터가 호스팅될 {{site.data.keyword.CloudDataCent_notm}}를 선택하십시오.
 
-**참고:**
+#### 참고
+{: #vs_orderinginstances-notes}
+
 * vSAN 컴포넌트를 선택하는 경우 SSD 가용성을 기준으로 위치 목록이 필터링됩니다.
 * Broadwell Bare Metal Server는 **FRA05 - 프랑크푸르트** 데이터 센터 위치에서 사용할 수 없습니다.
 * SAP 인증 및 Broadwell Bare Metal Server는 **LON05 - 런던** 데이터 센터 위치에서 사용할 수 없습니다.
@@ -114,13 +116,12 @@ vSphere Enterprise Plus 및 vCenter Server를 제외한 라이센스를 구매�
 
 **Skylake**를 선택하는 경우 필요에 따라 Bare Metal Server의 CPU 및 RAM 조합을 선택할 수 있습니다. 사용 가능한 옵션은 선택한 VMware vSAN 컴포넌트에 따라 달라집니다.
 
-표 2. Skylake {{site.data.keyword.baremetal_short}}의 옵션
-
 | CPU 모델 옵션        |RAM 옵션       |
 |:------------- |:------------- |
 |듀얼 Intel Xeon Silver 4110 프로세서 / 총 16개의 코어, 2.1GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
 |듀얼 Intel Xeon Gold 5120 프로세서 / 총 28개의 코어, 2.2GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
 |듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개의 코어, 2.3GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
+{: caption="표 2. Skylake {{site.data.keyword.baremetal_short}}의 옵션" caption-side="top"}
 
 ### SAP 인증
 {: #vs_orderinginstances-sap}
@@ -141,12 +142,11 @@ vSphere Enterprise Plus 및 vCenter Server를 제외한 라이센스를 구매�
 
 **Broadwell**을 선택하는 경우 필요에 따라 Bare Metal Server의 CPU 및 RAM 조합을 선택할 수 있습니다. 사용 가능한 옵션은 선택한 VMware vSAN 컴포넌트에 따라 달라집니다.
 
-표 3. Broadwell {{site.data.keyword.baremetal_short}}의 옵션
-
 | CPU 모델 옵션        |RAM 옵션       |
 |:------------- |:------------- |
 | 쿼드 Intel Xeon E7-4820 v4 / 총 40개의 코어, 2.0GHz |128GB, 256GB, 512GB, 1TB, 2TB, 3TB |
 | 쿼드 Intel Xeon E7-4850 v4 / 총 64개의 코어, 2.1GHz |128GB, 256GB, 512GB, 1TB, 2TB, 3TB |
+{: caption="표 3. Broadwell {{site.data.keyword.baremetal_short}}의 옵션" caption-side="top"}
 
 ### Bare Metal Server 수
 {: #vs_orderinginstances-bare-metal-number}
@@ -235,7 +235,9 @@ vSAN이 포함된 주문의 경우, 주문된 12개의 디스크 섀시와 4개�
   * **기본 서브넷**은 공용 네트워크 액세스를 위한 실제 호스트에 지정됩니다.
   * **사설 기본 서브넷**은 관리 트래픽을 위한 실제 호스트에 지정됩니다.
 
-**중요:**
+##### 중요
+{: #vs_orderinginstances-important}
+
 * 선택된 VLAN의 방화벽 구성이 관리 데이터 트래픽을 차단하지 않는지 확인하십시오.
 * 선택한 모든 VLAN이 동일한 팟(Pod)에 있는지 확인하십시오. 혼합 팟(pod) VLAN에서 ESXi 서버를 프로비저닝할 수 없습니다.
 
@@ -247,14 +249,14 @@ vSAN이 포함된 주문의 경우, 주문된 12개의 디스크 섀시와 4개�
 ## 주문 요약
 {: #vs_orderinginstances-order-summary}
 
-선택한 구성에 따라 예상 비용이 즉시 생성되어 **주문 요약** 오른쪽 분할창에 표시됩니다. **가격 세부사항**을 클릭하여 {{site.data.keyword.vmwaresolutions_short}} 리소스에 대한 비용 요약이 포함된 PDF 문서를 생성하십시오. 
+선택한 구성에 따라 예상 비용이 즉시 생성되어 **주문 요약** 오른쪽 분할창에 표시됩니다. **가격 세부사항**을 클릭하여 {{site.data.keyword.vmwaresolutions_short}} 리소스에 대한 비용 요약이 포함된 PDF 문서를 생성하십시오.
 
-**예상 금액에 추가**를 클릭하여 {{site.data.keyword.cloud_notm}} 예상 도구에 프로비저닝된 리소스를 추가할 수도 있습니다. 구매를 고려할 수 있는 기타 {{site.data.keyword.cloud_notm}} 리소스와 함께 선택된 {{site.data.keyword.vmwaresolutions_short}} 리소스의 비용을 예상하려는 경우 유용합니다. 
+**예상 금액에 추가**를 클릭하여 {{site.data.keyword.cloud_notm}} 예상 도구에 프로비저닝된 리소스를 추가할 수도 있습니다. 구매를 고려할 수 있는 기타 {{site.data.keyword.cloud_notm}} 리소스와 함께 선택된 {{site.data.keyword.vmwaresolutions_short}} 리소스의 비용을 예상하려는 경우 유용합니다.
 
 ## vSphere 클러스터를 주문하는 프로시저
 {: #vs_orderinginstances-procedure}
 
-1. {{site.data.keyword.cloud_notm}} 카탈로그의 왼쪽 탐색 분할창에 있는 **VMware**를 클릭한 다음 **가상 데이터 센터** 섹션에 있는 **VMware vSphere**를 클릭하십시오.
+1. {{site.data.keyword.cloud_notm}} 카탈로그에서 왼쪽 탐색 분할창에 있는 **VMware** 아이콘을 클릭한 다음 **VMware 가상 데이터 센터** 섹션에 있는 **VMware vSphere on IBM Cloud** 카드를 클릭하십시오.
 2. **VMware vSphere on IBM Cloud** 페이지에서 **작성**을 클릭하십시오.  
    사용자가 **새로 작성** 탭에 있으며 **클러스터 구성** 목록에 **새 클러스터**가 표시되어 있는지 확인하십시오.
 3. 클러스터 이름을 입력하십시오.
@@ -263,7 +265,7 @@ vSAN이 포함된 주문의 경우, 주문된 12개의 디스크 섀시와 4개�
   * 비즈니스 파트너가 아닌 사용자의 경우에는 컴포넌트, 에디션(있는 경우)을 선택하고 라이센싱 옵션을 지정하십시오.
   VMware vSphere Enterprise Plus에 대해 고유한 라이센스를 가져오도록(BYOL) 선택한 경우 주문한 {{site.data.keyword.baremetal_short}}에 대한 기본 vSphere 라이센스를 사용자가 제공하는 라이센스로 대체하도록 요청하기 위해 {{site.data.keyword.cloud_notm}} 티켓이 사용자를 대신하여 자동으로 열립니다.   
 
-    **중요:** 새로 주문된 ESXi 서버에서 vSphere 라이센스를 대체하도록 티켓을 추적해야 합니다. {{site.data.keyword.cloud_notm}} 인프라는 초기에 제공된 {{site.data.keyword.cloud_notm}} 인프라 vSphere 라이센스 비용 취소를 승인합니다. ESXi vSphere 라이센스를 대체하려면 [Configure License Settings for an ESXi Host](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}를 참조하십시오.
+    **중요:** 새로 주문된 ESXi 서버에서 vSphere 라이센스를 대체하도록 티켓을 추적해야 합니다. {{site.data.keyword.cloud_notm}} 인프라는 초기에 제공된 {{site.data.keyword.cloud_notm}} 인프라 vSphere 라이센스 비용 취소를 승인합니다. ESXi vSphere 라이센스를 대체하려면 [Configure License Settings for an ESXi Host](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:external}를 참조하십시오.
 5. Bare Metal Server 설정을 완료하십시오.
    1. 클러스터를 호스팅할 {{site.data.keyword.CloudDataCent_notm}}를 선택하십시오.
    2. Bare Metal Server 구성을 선택하십시오.

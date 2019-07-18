@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-02"
 
 subcollection: vmware-solutions
 
@@ -31,7 +31,8 @@ Questa connessione crea una interconnettività accoppiata approssimativamente tr
 siti.
 * Rete ottimizzata – seleziona la connettività migliore e allarga in modo efficace
 la connessione in modo che il traffico di rete venga spostato il più velocemente possibile.
-* Deduplicazione dei dati - può essere raggiunta la riduzione del 50% del traffico di rete Instradamento intelligente - quando un carico di lavoro viene spostato, l'instradamento di prossimità può modificare il percorso di rete (ossia il gateway) in modo che il traffico di rete utilizzi il gateway del sito di destinazione e non “torni” al sito di origine.
+* Deduplicazione dei dati – può essere raggiunta la riduzione del 50% del traffico di rete
+* Instradamento intelligente – quando un carico di lavoro viene spostato, l'instradamento di prossimità può modificare il percorso di rete (ossia il gateway) in modo che il traffico di rete utilizzi il gateway del sito di destinazione e non “torni” al sito di origine.
 * Migrazione senza tempo di inattività – un sistema in esecuzione può essere spostato nel o tolto dal cloud utilizzando vMotion.
 * Migrazione pianificata – qualsiasi numero di VM (Virtual Machine) può essere replicato nel sito di destinazione e quindi attivato su quel sito in un momento designato, sostituendo i sistemi in esecuzione sul sito di origine.
 * Migrazione delle politiche di sicurezza – se viene utilizzato NSX in loco, tutti i firewall o le politiche di sicurezza

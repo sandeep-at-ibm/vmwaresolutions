@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-20"
 
 keywords: IBM Cloud Private Hosted, ICP configuration, order Cloud Private
 
@@ -23,14 +23,14 @@ Puoi ordinare il servizio {{site.data.keyword.cloud}} Private Hosted quando ordi
 
 Puoi ordinare una nuova istanza con il servizio {{site.data.keyword.cloud_notm}} Private Hosted utilizzando uno dei seguenti metodi:
 * Dalla console {{site.data.keyword.vmwaresolutions_short}}, quando ordini una nuova istanza, seleziona **IBM Cloud Private Hosted** nella sezione **Servizi facoltativi**.
-* Dal catalogo {{site.data.keyword.cloud_notm}}, seleziona **IBM Cloud Private Hosted**, specifica le impostazioni del servizio e seleziona **Aggiungi alla nuova istanza**.
+* Dal catalogo {{site.data.keyword.cloud_notm}}, fai clic sull'icona **VMware** nel riquadro di navigazione a sinistra e quindi sulla scheda **IBM Cloud Private Hosted** nella sezione **VMware Services**. Specifica le impostazioni del servizio e seleziona **Aggiungi alla nuova istanza**.
 
 ## Ordine di IBM Cloud Private Hosted per un'istanza esistente
 {: #icp_ordering-existing}
 
 Puoi aggiungere il servizio {{site.data.keyword.cloud_notm}} Private Hosted in un'istanza esistente utilizzando uno dei seguenti metodi:
 * Dalla console {{site.data.keyword.vmwaresolutions_short}}, visualizza l'istanza per la quale vuoi aggiungere il servizio, fai clic su **Servizi** nel riquadro di navigazione a sinistra e quindi su **Aggiungi**.
-* Dal catalogo {{site.data.keyword.cloud_notm}}, seleziona **IBM Cloud Private Hosted**, specifica le impostazioni del servizio e seleziona **Aggiungi a un'istanza esistente**.
+* Dal catalogo {{site.data.keyword.cloud_notm}}, fai clic sull'icona **VMware** nel riquadro di navigazione a sinistra e quindi sulla scheda **IBM Cloud Private Hosted** nella sezione **VMware Services**. Specifica le impostazioni del servizio e seleziona **Aggiungi all'istanza esistente**.
 
 ## Configurazione del servizio IBM Cloud Private Hosted
 {: #icp_ordering-config}

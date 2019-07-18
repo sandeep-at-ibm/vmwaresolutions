@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-10"
+lastupdated: "2019-06-27"
 
 keywords: vCenter Server Hybridity add service, view service vCenter Server Hybridity, remove service vCenter Server Hybridity
 
@@ -27,11 +27,9 @@ subcollection: vmware-solutions
 
 다음 서비스는 설치된 서비스 버전과 함께 vCenter Server with Hybridity Bundle 인스턴스에 사용 가능합니다.
 
-표 1. vCenter Server with Hybridity Bundle 인스턴스에 사용 가능한 서비스
-
 | 서비스 이름 | 현재 서비스 버전 | 인스턴스 버전 |
 |----------------------------------------------------------------------------------------|------------------|
-| [Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_considerations) | 2.2 | V2.9 이상 |
+| [Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_considerations) | 2.2.1 | V2.9 이상 |
 | [F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations) | BIG-IP VE v14.1.0.2 | V1.9 이상 |
 | [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations)       | 300 시리즈 | V1.8 이상 |
 | [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations) | 6.0.3 | V2.0 이상 |
@@ -44,6 +42,7 @@ subcollection: vmware-solutions
 | [Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations) | 9.5u4 | V1.8 이상 |
 | [VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_considerations#hcx_considerations) | 3.5.1 | V2.3 이상 |
 | [Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr) | 6.5 update 3 | V1.2 이상 |
+{: caption="표 1. vCenter Server with Hybridity Bundle 인스턴스에 사용 가능한 서비스" caption-side="top"}
 
 ## vCenter Server with Hybridity Bundle 인스턴스에 서비스를 추가하는 프로시저
 {: #vc_hybrid_addingremovingservices-adding-procedure}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-01"
 
 keywords: single-node trial, data protection DR, tech specs data protection DR
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -21,18 +22,18 @@ subcollection: vmware-solutions
 {: #dr_backup_bundle_overview}
 
 Single-node Trial for Data Protection and Disaster Recovery では、VMware ワークロードをマイグレーションしてから
-{{site.data.keyword.cloud_notm}} にリカバリーする、という {{site.data.keyword.cloud}} のテスト・ドライブを行うことができます。また、Single-node Trial for Data Protection and Disaster Recovery には、Veeam on {{site.data.keyword.cloud_notm}}、VMware HCX on {{site.data.keyword.cloud_notm}}、および Zerto on {{site.data.keyword.cloud_notm}} のサービスが含まれます。
+{{site.data.keyword.cloud_notm}} にリカバリーする、という {{site.data.keyword.cloud}} のテスト・ドライブを行うことができます。 また、Single-node Trial for Data Protection and Disaster Recovery には、Veeam on {{site.data.keyword.cloud_notm}}、VMware HCX on {{site.data.keyword.cloud_notm}}、および Zerto on {{site.data.keyword.cloud_notm}} のサービスが含まれます。
 
-Single-node Trial は、オンプレミス環境と同じツールで管理できる単一テナントの VMware プラットフォームを提供する VMware vCenter Server on {{site.data.keyword.cloud_notm}} のトライアル・バージョンです。制御性および可視性はオンプレミスと同じレベルに保ったまま、クラウドの速度およびスケールというメリットを享受できます。
+Single-node Trial は、オンプレミス環境と同じツールで管理できる単一テナントの VMware プラットフォームを提供する VMware vCenter Server on {{site.data.keyword.cloud_notm}} のトライアル・バージョンです。 制御性および可視性はオンプレミスと同じレベルに保ったまま、クラウドの速度およびスケールというメリットを享受できます。
 
-このトライアルの目的は、vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle を使用して開発用またはテスト用の単純なワークロードを最大 20 個移行することです。 数時間のうちに、自動化機能によって VMware HCX が {{site.data.keyword.cloud_notm}} にインストールされて構成され、オンプレミス HCX アクティベーション・キーが提供され、Veeam on {{site.data.keyword.cloud_notm}} および Zerto on {{site.data.keyword.cloud_notm}} がインストールされます。Veeam on {{site.data.keyword.cloud_notm}} および Zerto on {{site.data.keyword.cloud_notm}} を使用して、20 の仮想マシン (VM) をバックアップおよび複製できます。
+このトライアルの目的は、vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle を使用して開発用またはテスト用の単純なワークロードを最大 20 個移行することです。 数時間のうちに、自動化機能によって VMware HCX が {{site.data.keyword.cloud_notm}} にインストールされて構成され、オンプレミス HCX アクティベーション・キーが提供され、Veeam on {{site.data.keyword.cloud_notm}} および Zerto on {{site.data.keyword.cloud_notm}} がインストールされます。 Veeam on {{site.data.keyword.cloud_notm}} および Zerto on {{site.data.keyword.cloud_notm}} を使用して、20 の仮想マシン (VM) をバックアップおよび複製できます。
 
-Single-node Trial for Data Protection and Disaster Recovery は PoC (概念検証) のみを目的としています。この環境では実動ワークロードを実行しないでください。 ホストやクラスターの追加と削除、追加アドオン・サービスの注文、更新の適用などの管理機能はサポートされていません。
+Single-node Trial for Data Protection and Disaster Recovery は PoC (概念検証) のみを目的としています。 この環境では実動ワークロードを実行しないでください。 ホストやクラスターの追加と削除、追加アドオン・サービスの注文、更新の適用などの管理機能はサポートされていません。
 {:important}
 
-Single-node Trial インスタンスのデプロイ後、[IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:new_window} の [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:new_window} を使用して、インスタンスの操作に関する支援を受けることができます。さらに、[{{site.data.keyword.cloud_notm}}Garage Services](https://www.ibm.com/cloud/garage/){:new_window} を使用すれば、クラウド・ネイティブの最新の手法でアプリケーションのモダナイゼーションを加速化できます。
+Single-node Trial インスタンスのデプロイ後、[IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:external} の [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:external} を使用して、インスタンスの操作に関する支援を受けることができます。 さらに、[{{site.data.keyword.cloud_notm}}Garage Services](https://www.ibm.com/cloud/garage/){:external} を使用すれば、クラウド・ネイティブの最新の手法でアプリケーションのモダナイゼーションを加速化できます。
 
-このトライアル版は最大 90 日間使用できます。 月額料金は、インスタンスの注文時期ではなく、請求スケジュールに基づいて請求されます。請求サイクルの最終日以前にインスタンスをキャンセルしない場合、その次の月の分の料金が発生することになります。90 日間のトライアルでは、4 カ月分の料金が発生してしまうことがよくあります。しかし、4 カ月目が始まる前にキャンセルを完了すれば、そうはなりません。
+このトライアル版は最大 90 日間使用できます。 インスタンスをいつ注文したかではなく、請求スケジュールに基づいて月額料金が請求されます。請求サイクルの最終日以前にインスタンスをキャンセルしない場合、その次の月の分の料金が発生することになります。 4 カ月目が始まる前にキャンセルしないと、90 日間のトライアルのために 4 カ月分の料金が請求される可能性があります。
 {:note}
 
 トライアル期間が終了したら、この環境を削除し、キャパシティーのニーズを満たす新しい環境をプロビジョンできます。
@@ -77,7 +78,7 @@ vCenter Server 管理、HCX、およびカスタマー・ワークロード VM 2
 *  以下の 2 つの VMware NSX Edge Services Gateway
   * アウトバウンド HTTPS 管理トラフィック用のセキュアな管理サービス VMware NSX Edge Services Gateway (ESG)。これは、管理ネットワーキング・トポロジーの一部として IBM がデプロイします。 この ESG は、IBM 管理 VM が、自動化に関連する特定の外部 IBM 管理コンポーネントと通信するために使用します。
 
-    ユーザーは、この ESG にアクセスすることはできず、使用できません。 これを変更すると、{{site.data.keyword.vmwaresolutions_short}} コンソールから Single-node Trial for Data Protection and Disaster Recovery インスタンスを管理できなくなる可能性があります。また、ファイアウォールを使用したり、外部 IBM 管理コンポーネントへの ESG 通信を無効にしたりすると、{{site.data.keyword.vmwaresolutions_short}} が使用不可になります。
+    ユーザーは、この ESG にアクセスすることはできず、使用できません。 これを変更すると、{{site.data.keyword.vmwaresolutions_short}} コンソールから Single-node Trial for Data Protection and Disaster Recovery インスタンスを管理できなくなる可能性があります。 また、ファイアウォールを使用したり、外部 IBM 管理コンポーネントへの ESG 通信を無効にしたりすると、{{site.data.keyword.vmwaresolutions_short}} が使用不可になります。
     {:important}
   * アウトバウンドとインバウンドの HTTPS ワークロード・トラフィック用のユーザー管理のセキュアな VMware NSX Edge Services Gateway。これは、VPN アクセスまたはパブリック・アクセスを提供するためにユーザーが変更可能なテンプレートとして IBM がデプロイします。
 
@@ -108,7 +109,7 @@ Single-node Trial for Data Protection and Disaster Recovery インスタンス�
 ## VMware HCX on IBM Cloud の技術仕様
 {: #dr_backup_bundle_overview-hcx-tech-specs}
 
-Single-node Trial for Data Protection and Disaster Recovery には HCX on {{site.data.keyword.cloud_notm}} が含まれています。以下のコンポーネントが注文されて HCX on {{site.data.keyword.cloud_notm}} サービスに組み込まれます。
+Single-node Trial for Data Protection and Disaster Recovery には HCX on {{site.data.keyword.cloud_notm}} が含まれています。 以下のコンポーネントが注文されて HCX on {{site.data.keyword.cloud_notm}} サービスに組み込まれます。
 
 オンプレミスの HCX インスタンスには、ライセンス交付とアクティベーションのみが含まれます。
 {:note}
@@ -139,9 +140,9 @@ Single-node Trial for Data Protection and Disaster Recovery には HCX on {{site
 ## Veeam on {{site.data.keyword.cloud_notm}} の技術仕様
 {: #dr_backup_bundle_overview-veeam-tech-specs}
 
-Single-node Trial for Data Protection and  Disaster Recovery には Veeam on {{site.data.keyword.cloud_notm}} が含まれています。以下のコンポーネントが注文されて Veeam on {{site.data.keyword.cloud_notm}} サービスに組み込まれます。
+Single-node Trial for Data Protection and  Disaster Recovery には Veeam on {{site.data.keyword.cloud_notm}} が含まれています。 以下のコンポーネントが注文されて Veeam on {{site.data.keyword.cloud_notm}} サービスに組み込まれます。
 
-* Veeam Availability Suite の 25 Pack License
+* Veeam Availability Suite の 25 パッケージ・ライセンス
 * 4000 GB ストレージ
 * 0.25 IOPS/GB ストレージ・パフォーマンス
 * Windows Server 2016 Standard Edition (64 ビット)
@@ -153,7 +154,7 @@ Single-node Trial for Data Protection and  Disaster Recovery には Veeam on {{s
 ## Zerto on {{site.data.keyword.cloud_notm}} の技術仕様
 {: #dr_backup_bundle_overview-zerto-tech-specs}
 
-Single-node Trial for Data Protection and Disaster Recovery には Zerto on {{site.data.keyword.cloud_notm}} が含まれています。以下のコンポーネントが注文されて Zerto on {{site.data.keyword.cloud_notm}} サービスに組み込まれます。
+Single-node Trial for Data Protection and Disaster Recovery には Zerto on {{site.data.keyword.cloud_notm}} が含まれています。 以下のコンポーネントが注文されて Zerto on {{site.data.keyword.cloud_notm}} サービスに組み込まれます。
 
 * Zerto Virtual Replication V6.5u3 ライセンス
 * 1 つの仮想サービス・インスタンス (VSI) - Zerto Virtual Manager
@@ -165,12 +166,12 @@ Single-node Trial for Data Protection and Disaster Recovery には Zerto on {{si
 ## IBM Cloud Automation Manager の技術仕様
 {: #dr_backup_bundle_overview-cam-tech-specs}
 
-すべての Single-node Trial for Data Protection and Disaster Recovery インスタンスに、{{site.data.keyword.cloud_notm}} Automation Manager 3.1.2 が、開発/テスト用のトポロジーを使用してインストールされます。{{site.data.keyword.cloud_notm}} Automation Manager について詳しくは、[{{site.data.keyword.cloud_notm}} Automation Manager の資料](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: new_window}を参照してください。
+すべての Single-node Trial for Data Protection and Disaster Recovery インスタンスに、{{site.data.keyword.cloud_notm}} Automation Manager 3.1.2 が、開発/テスト用のトポロジーを使用してインストールされます。 {{site.data.keyword.cloud_notm}} Automation Manager について詳しくは、[{{site.data.keyword.cloud_notm}} Automation Manager の資料](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: external}を参照してください。
 
 ## 関連リンク
 {: #dr_backup_bundle_overview-related}
 
-* [VMware HCX リソース](https://hcx.vmware.com/#/docs){:new_window}
-* [VMware HCX ユーザー・ガイド](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}
+* [VMware HCX リソース](https://hcx.vmware.com/#/docs){:external}
+* [VMware HCX ユーザー・ガイド](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}
 * [Veeam on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions?topic=vmware-solutions-managingveeam)
 * [Zerto on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions?topic=vmware-solutions-managingzertodr)

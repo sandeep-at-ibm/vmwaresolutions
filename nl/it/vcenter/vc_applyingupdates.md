@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-06-21"
 
 keywords: vCenter Server update, patch vCenter Server, IBM component update
 
@@ -44,26 +44,12 @@ Espandi la voce dell'aggiornamento facendo clic sulla freccia in giù e verifica
 * L'impatto dell'aggiornamento sull'ambiente virtuale VMware. La tabella 1 mostra come i diversi livelli di impatto degli aggiornamenti sul sistema.
 * I dettagli dell'aggiornamento.
 
-Tabella 1. Livelli di aggiornamento e impatto
-
-<table>
-  <tr>
-    <th>Livello di aggiornamento</th>
-    <th>Impatto</th>
-  </tr>
-  <tr>
-    <td>Basso</td>
-    <td>Questo aggiornamento non influisce su alcun sistema. Non devi applicarlo durante i tempi di inattività pianificati.</td>
-  </tr>
-  <tr>
-    <td>Medio</td>
-  <td>Questo aggiornamento potrebbe influire su alcuni sistemi. Si consiglia di applicarlo durante i tempi di inattività pianificati.</td>
-  </tr>
-    <tr>
-    <td>Maggiore</td>
-  <td>Questo aggiornamento influisce su alcuni o tutti i sistemi. Devi applicarlo durante i tempi di inattività pianificati.</td>
-  </tr>
-</table>
+| Livello di aggiornamento | Impatto |
+|:------------ |:------ |
+| Basso | Questo aggiornamento non influisce su alcun sistema. Non devi applicarlo durante i tempi di inattività pianificati. |
+| Medium | Questo aggiornamento potrebbe influire su alcuni sistemi. Si consiglia di applicarlo durante i tempi di inattività pianificati. |
+| Maggiore | Questo aggiornamento influisce su alcuni o tutti i sistemi. Devi applicarlo durante i tempi di inattività pianificati. |
+{: caption="Tabella 1. Livelli di aggiornamento e impatto" caption-side="top"}
 
 ## Procedura per applicare gli aggiornamenti del componente di gestione IBM (istanze dalla V2.1 alla V2.4)
 {: #vc_applyingupdates-procedure}
@@ -89,38 +75,16 @@ Tabella 1. Livelli di aggiornamento e impatto
 
 2. Per i dettagli sugli stati di aggiornamento, consulta la seguente tabella.
 
-   Tabella 2. Dettagli degli stati di aggiornamento
-
-    <table>
-      <tr>
-        <th>Stato</th>
-        <th>Dettagli</th>
-      </tr>
-      <tr>
-        <td>Disponibile</td>
-        <td>L'aggiornamento è disponibile per l'applicazione. Non puoi selezionare un aggiornamento disponibile finché non vengono applicati tutti gli aggiornamenti precedenti.</td>
-      </tr>
-      <tr>
-        <td>In corso</td>
-      <td>Il lavoro di aggiornamento è iniziato ma non è ancora terminato. Non puoi applicare altri aggiornamenti finché non viene completato il lavoro di aggiornamento corrente. </td>
-      </tr>
-        <tr>
-        <td>Installato</td>
-      <td>Il lavoro di aggiornamento è completato. Il componente corrispondente della piattaforma VMware è aggiornato.</td>
-      </tr>
-        <tr>
-        <td>Non riuscito</td>
-      <td>Il lavoro di aggiornamento non riesce. La console segnala un errore di aggiornamento. Esamina l'errore e correggi il problema segnalato prima di riapplicare l'aggiornamento.</td>
-      </tr>
-          <tr>
-        <td>Pianificato</td>
-      <td>Il lavoro di aggiornamento è pianificato per un secondo momento. Il lavoro di aggiornamento si avvia automaticamente all'ora pianificata.</td>
-      </tr>
-          <tr>
-        <td>Sconosciuto</td>
-      <td>Non è possibile ottenere lo stato del lavoro di aggiornamento. Contatta il supporto IBM per assistenza.</td>
-      </tr>
-    </table>
+| Stato | Dettagli |
+|:------ |:------- |
+| Disponibile | L'aggiornamento è disponibile per l'applicazione. Non puoi selezionare un aggiornamento disponibile finché non vengono applicati tutti gli aggiornamenti precedenti. |
+| In corso | Il lavoro di aggiornamento è iniziato ma non è ancora terminato. Non puoi applicare altri aggiornamenti finché non viene completato il lavoro di aggiornamento corrente. |
+| Installato | Il lavoro di aggiornamento è completato. Il componente corrispondente della piattaforma VMware è aggiornato. |
+| Non riuscito | Il lavoro di aggiornamento non riesce. La console segnala un errore di aggiornamento. Esamina l'errore e correggi il problema segnalato prima
+di riapplicare l'aggiornamento. |
+| Pianificato | Il lavoro di aggiornamento è pianificato per un secondo momento. Il lavoro di aggiornamento si avvia automaticamente all'ora pianificata. |
+| Sconosciuto | Non è possibile ottenere lo stato del lavoro di aggiornamento. Contatta il supporto IBM per assistenza. |
+{: caption="Tabella 2. Dettagli degli stati di aggiornamento" caption-side="top"}
 
 3. Se il processo di aggiornamento non riesce in un passo specifico, [contatta il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support) per assistenza. Ti verrà comunicato come risolvere il problema e sarai guidato ad applicare gli aggiornamenti e le patch dal passo non riuscito.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -147,7 +147,7 @@ CAM에서는 작업자 노드가 더 높은 vCPU 및 메모리 구성을 포함�
 ### CAM 프록시
 {: #vcscar-arch-overview-solution-cam-proxy}
 
-CAM에 대한 nginx 프록시 액세스를 제공합니다.
+CAM에 대한 `nginx` 프록시 액세스를 제공합니다.
 
 ### CAM 사용자 인터페이스
 {: #vcscar-arch-overview-solution-cam-ui}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-10"
+lastupdated: "2019-06-27"
 
 keywords: vCenter Server Hybridity add service, view service vCenter Server Hybridity, remove service vCenter Server Hybridity
 
@@ -27,11 +27,9 @@ VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle イ�
 
 vCenter Server with Hybridity Bundle インスタンスで使用できるサービスと、インストール済みのサービスのバージョンを以下にまとめます。
 
-表 1. vCenter Server with Hybridity Bundle インスタンスに使用可能なサービス
-
 | サービス名 | 現在のサービスのバージョン | インスタンスのバージョン |
 |----------------------------------------------------------------------------------------|------------------|
-| [Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_considerations) | 2.2 | V2.9 以降 |
+| [Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_considerations) | 2.2.1 | V2.9 以降 |
 | [F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations) | BIG-IP VE v14.1.0.2 | V1.9 以降 |
 | [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations)       | 300 シリーズ | V1.8 以降 |
 | [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations) | 6.0.3 | V2.0 以降 |
@@ -44,6 +42,7 @@ vCenter Server with Hybridity Bundle インスタンスで使用できるサー�
 | [Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations) | 9.5u4 | V1.8 以降 |
 | [VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_considerations#hcx_considerations) | 3.5.1 | V2.3 以降 |
 | [Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr) | 6.5 update 3 | V1.2 以降 |
+{: caption="表 1. vCenter Server with Hybridity Bundle インスタンスに使用可能なサービス" caption-side="top"}
 
 ## vCenter Server with Hybridity Bundle インスタンスにサービスを追加する手順
 {: #vc_hybrid_addingremovingservices-adding-procedure}

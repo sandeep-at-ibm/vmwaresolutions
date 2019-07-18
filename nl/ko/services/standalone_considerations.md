@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-28"
 
 keywords: VMware HCX standalone, HCX on-premises, tech specs HCX
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -57,7 +58,7 @@ HCX on {{site.data.keyword.cloud_notm}} 컴포넌트는 {{site.data.keyword.clou
 
 이제 온프레미스 HCX Manager의 기본 설정을 완료했습니다. 온프레미스 HCX on {{site.data.keyword.cloud_notm}} 사이트와 클라우드 측 HCX 사이트의 페어링을 진행할 수 있습니다.
 
-자세한 정보는 [VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx)을 참조하십시오.
+자세한 정보는 [VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx){:external}을 참조하십시오.
 
 ## 온프레미스 HCX on IBM Cloud 인스턴스 삭제 전 고려사항
 {: #standalone_considerations-delete}
@@ -80,5 +81,5 @@ HCX on {{site.data.keyword.cloud_notm}} 컴포넌트는 {{site.data.keyword.clou
 
 * [온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스 보기](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_viewingserviceinstances)
 * [HCX 용어집](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
-* [VMware Hybrid Cloud Extension 문서](https://cloud.vmware.com/vmware-hcx/resources)
+* [VMware Hybrid Cloud Extension 문서](https://cloud.vmware.com/vmware-hcx/resources){:external}
 * [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

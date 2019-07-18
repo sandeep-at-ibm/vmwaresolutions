@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-06-27"
 
 subcollection: vmware-solutions
 
@@ -23,7 +23,7 @@ Hybrid Cloud Services 虚拟设备的电源必须打开后才能进行注册。
 ## 向 vCenter 注册 HCX Manager 的过程
 {: #hcx-archi-reg-vcenter-proc-register}
 
-1. 登录到 Hybrid Cloud Services 服务虚拟设备。
+1. 登录到 Hybrid Cloud Services 服务虚拟设备。例如，`https:My-HCX-Manager:9443/`。
 2. 单击**管理设置**磁贴。
   1. 在左侧窗格中的**配置系统**下，选择 vCenter。
   2. 单击右上方的**添加 vCenter**。

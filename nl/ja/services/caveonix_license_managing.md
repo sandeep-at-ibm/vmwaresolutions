@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-21"
 
 keywords: Caveonix view license, Caveonix manage license, delete Caveonix license
 
@@ -29,26 +29,12 @@ subcollection: vmware-solutions
 
 1. 左側のナビゲーション・ペインの**「リソース」**をクリックし、**「Caveonix RiskForesight ライセンス (Caveonix RiskForesight Licenses)」**テーブルまでスクロールダウンして、注文した Caveonix RiskForesight ライセンスの要約を確認します。
 
-   表 1. Caveonix RiskForesight ライセンス項目の説明
-
-    <table>
-      <tr>
-        <th>項目</th>
-        <th>説明</th>
-      </tr>
-      <tr>
-        <td>名前</td>
-        <td>ライセンスの名前。</td>
-       </tr>
-       <tr>
-         <td>作成時間</td>
-         <td>ライセンスが作成された日時。</td>
-       </tr>
-       <tr>
-         <td>状況</td>
-         <td>ライセンスの状況: <ul><li>変更中: ライセンスは作成されています。</li><li>インストール済み: ライセンスは使用できます。</li><li>削除中: ライセンスは削除中です。</li></ul></td>
-       </tr>
-    </table>   
+| 項目 | 説明 |
+|:-----|:------------|
+| 名前 | ライセンスの名前。 |
+| 作成時間 | ライセンスが作成された日時。 |
+| 状況 | ライセンスの状況: <br>変更中: ライセンスは作成されています。<br>インストール済み: ライセンスは使用できます。<br>削除中: ライセンスは削除中です。 |
+{: caption="表 1. Caveonix RiskForesight ライセンス項目の説明" caption-side="top"}
 
 2. 特定のライセンスの詳細を表示するには、そのライセンスをクリックします。
 

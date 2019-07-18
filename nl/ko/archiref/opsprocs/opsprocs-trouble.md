@@ -4,33 +4,33 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-07"
+lastupdated: "2019-07-01"
 
 ---
 
 # 문제점 해결
 {: #opsprocs-trouble}
 
-vCenter Server 인스턴스의 문제점을 해결하려면 시스템 관리자는 문제의 증상을 식별하고, 영향을 주는 솔루션 컴포넌트를 판별하고, 수정사항 또는 임시 해결책을 조사 및 제안하고, 수정사항을 테스트해야 합니다. 
+vCenter Server 인스턴스의 문제점을 해결하려면 시스템 관리자는 문제의 증상을 식별하고, 영향을 주는 솔루션 컴포넌트를 판별하고, 수정사항 또는 임시 해결책을 조사 및 제안하고, 수정사항을 테스트해야 합니다.
 
-* 증상 식별 - 가능한 수 많은 원인으로 인해 인스턴스의 성능이 저하되거나 성능이 유실될 수 있습니다. 효율적인 문제점 해결의 첫 번째 단계는 잘못된 점을 정확하게 식별하는 것입니다. 이 증상은 vSphere 이벤트 및 알람, Operations Management in {{site.data.keyword.cloud}}에서 보고되거나 사용자 중 하나의 서비스 데스크를 통해 보고될 수 있습니다. 
+* 증상 식별 - 가능한 수 많은 원인으로 인해 인스턴스의 성능이 저하되거나 성능이 유실될 수 있습니다. 효율적인 문제점 해결의 첫 번째 단계는 잘못된 점을 정확하게 식별하는 것입니다. 이 증상은 vSphere 이벤트 및 알람, Operations Management in {{site.data.keyword.cloud}}에서 보고되거나 사용자 중 하나의 서비스 데스크를 통해 보고될 수 있습니다.
 * 영향을 받는 컴포넌트 격리 - 문제의 증상을 식별한 후 영향을 주고 문제의 원인이 될 수 있는 소프트웨어 또는 하드웨어 컴포넌트를 식별하고 포함되지 않는 해당 컴포넌트를 식별해야 합니다. {{site.data.keyword.cloud_notm}}의 vCenter 오퍼레이션 관리와 같은 도구는 이 단계를 지원합니다.
 * 수정사항 또는 임시 해결책 제안 - 컴포넌트를 격리한 증상을 이해한 후 가능성 있는 수정사항 및 임시 해결책을 조사할 수 있습니다. 시스템 관리자는 IBM ServiceNow 및 VMware Knowledgebase를 비롯한 이 문서의 문제점 해결 시나리오를 포함하여 {{site.data.keyword.cloud_notm}} Portal도 사용합니다. 또한 많은 위키 및 블로그가 도움이 될 수 있습니다. 보다 빠른 해결을 위해 Operations Management in {{site.data.keyword.cloud_notm}}에는 식별된 문제에 대한 다수의 조치방안이 포함됩니다.
 * 가능한 솔루션 테스트 - 문제의 증상, 관련된 컴포넌트 및 수정사항/임시 해결책을 제안한 컴포넌트를 알게 되면 문제가 해결될 때까지 시스템 관리자가 솔루션을 체계적으로 테스트합니다.
 
  \vSphere는 전체 vSphere 환경에서 발생하는 이벤트를 추적하는 사용자 구성 가능 이벤트 및 알람 서브시스템을 포함하고 로그 파일 및 vCenter 데이터베이스에 데이터를 저장합니다. 이 서브시스템을 통해 시스템 관리자가 경보가 트리거되는 조건을 지정할 수도 있습니다. 알람은 시스템 조건이 변경됨에 따라 경고에서 보다 심각한 경보로 상태를 변경하고 시스템 관리자 팀에 이메일 발송과 같은 목적으로 자동화된 알람 조치를 트리거할 수 있습니다. 이 기능은 특정 이벤트 또는 조건이 특정 인벤토리 오브젝트 또는 오브젝트 그룹에 대해 발생하는 경우에 알림을 받거나 즉각적인 조치를 취하려고 할 때 유용합니다.
 
-Operations Management on {{site.data.keyword.cloud_notm}} 아키텍처에 통합된 도구와 같은 추가 도구는 증상 식별, 영향을 받은 컴포넌트 격리 및 수정사항 또는 임시 해결책 제안에 대한 더 큰 지원을 제공합니다. 
+Operations Management on {{site.data.keyword.cloud_notm}} 아키텍처에 통합된 도구와 같은 추가 도구는 증상 식별, 영향을 받은 컴포넌트 격리 및 수정사항 또는 임시 해결책 제안에 대한 더 큰 지원을 제공합니다.
 
 ## 가이드라인
 {: #opsprocs-trouble-guidelines}
 
-다음 지침은 {{site.data.keyword.vmwaresolutions_short}} 문제를 해결하기 위한 우수 사례로 간주됩니다. 
+다음 지침은 {{site.data.keyword.vmwaresolutions_short}} 문제를 해결하기 위한 우수 사례로 간주됩니다.
 * 체계적으로 문제점 해결에 접근하십시오.
-* 가용성, 활용도 또는 구성에 관련된 증상입니다. 
+* 가용성, 활용도 또는 구성에 관련된 증상입니다.
  *  가용성 - 이 증상은 하드웨어 및 소프트웨어 컴포넌트의 가용성에 관련되어 있으며 응답 없음이 특징입니다. 고가용성 디자인은 이 문제가 워크로드 및 사용자에 직접 영향을 주지 않도록 이 문제를 마스킹하기도 합니다.
  * 활용도 - 이 증상은 용량 및 성능에 관련되어 있으며 느린 실행 또는 로드 불가능이 특징입니다. 사전 예방적으로 용량을 관리하면 이 문제가 크게 감소됩니다.
- * 구성 - 이 문제는 일반적으로 새 서비스의 프로비저닝에서 발견되거나 변경사항을 적용하는 데 따른 결과입니다. 올바르지 않은 설정은 가용성 또는 활용도 증상으로 표시될 수 있습니다. 예를 들어, 올바르지 않은 IP 주소는 가용성 문제로 표시되지만 가상 머신(VM) RAM을 너무 낮게 설정하면 활용도 증상이 발생합니다. 
+ * 구성 - 이 문제는 일반적으로 새 서비스의 프로비저닝에서 발견되거나 변경사항을 적용하는 데 따른 결과입니다. 올바르지 않은 설정은 가용성 또는 활용도 증상으로 표시될 수 있습니다. 예를 들어, 올바르지 않은 IP 주소는 가용성 문제로 표시되지만 가상 머신(VM) RAM을 너무 낮게 설정하면 활용도 증상이 발생합니다.
 * 문제를 환경의 컴포넌트로 분리해 보십시오.
 * 단계를 추적할 수 있도록 적어 두십시오.
 * 소프트웨어 버전을 이해하고 문서화하십시오.
@@ -51,7 +51,7 @@ Operations Management on {{site.data.keyword.cloud_notm}} 아키텍처에 통합
 ## 로그 파일을 사용한 문제점 해결
 {: #opsprocs-trouble-logs}
 
-로그 파일은 문제를 해결하기 위한 최상의 정보 소스입니다. 그러나 로그 파일 수 및 각 로그 항목의 방대한 양은 문제 해결을 어렵게 만듭니다. [로그 파일을 사용한 문제점 해결 KB0012074](https://watson.service-now.com/nav_to.do?uri=kb_knowledge.do?sys_id=c74f91d0dbe4f7c06001327e9d9619b1){:new_window}에서는 VMware 환경에 있는 이 로그 파일의 위치에 대한 세부사항을 제공합니다. 로그 파일의 수 및 각 로그 항목의 방대한 수로 인해, 이벤트 로그의 캡처와 분석을 지원하려면 Operations Management on {{site.data.keyword.cloud_notm}}의 도구를 고려해야 합니다. 
+로그 파일은 문제를 해결하기 위한 최상의 정보 소스입니다. 그러나 로그 파일 수 및 각 로그 항목의 방대한 양은 문제 해결을 어렵게 만듭니다. [로그 파일을 사용한 문제점 해결 KB0012074](https://watson.service-now.com/nav_to.do?uri=kb_knowledge.do?sys_id=c74f91d0dbe4f7c06001327e9d9619b1){:new_window}에서는 VMware 환경에 있는 이 로그 파일의 위치에 대한 세부사항을 제공합니다. 로그 파일의 수 및 각 로그 항목의 방대한 수로 인해, 이벤트 로그의 캡처와 분석을 지원하려면 Operations Management on {{site.data.keyword.cloud_notm}}의 도구를 고려해야 합니다.
 
 ## 공통 시나리오 문제점 해결
 {: #opsprocs-trouble-common}
@@ -84,7 +84,7 @@ Operations Management on {{site.data.keyword.cloud_notm}} 아키텍처에 통합
 | VM 스냅샷 | 스냅샷은 유용하지만 VM 스냅샷의 양과 수명은 VM의 성능에 직접적인 영향을 줍니다. 이 문제 해결에 대한 정보는 [스냅샷 통합](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-2F4A6D8B-33FF-4C6B-9B02-C984D151F0D5.html){:new_window}을 참조하십시오. |
 | VM 로깅 | 로깅이 올바르게 구성되어 있지 않으면 스냅샷의 용량에 부정적인 영향을 줄 수 있습니다. 이 문제 해결에 대한 정보는 [게스트 운영 체제에 대한 로깅 레벨 구성](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.monitoring.doc/GUID-F465D340-6556-49E8-B137-C0B4A060E83B.html){:new_window}을 참조하십시오. |
 | 네트워크 연결 문제 해결 | 증상에는 VM이 네트워크 연결에 실패함 또는 단일 VM으로의 네트워크 연결 또는 단일 VM에서의 네트워크 연결 없음이 포함될 수 있습니다. 이 문제 해결에 대한 정보는 [가상 머신 네트워크 연결 문제 해결(1003893)](https://kb.vmware.com/s/article/1003893?CoveoV2.CoveoLightningApex.getInitializationData=1&r=2&ui-communities-components-aura-components-forceCommunity-seoAssistant.SeoAssistant.getSeoData=1&other.KM_Utility.getArticleDetails=1&other.KM_Utility.getArticleMetadata=2&other.KM_Utility.getUrl=1&other.KM_Utility.getUser=1&other.KM_Utility.getAllTranslatedLanguages=2&ui-comm-runtime-components-aura-components-siteforce-qb.Quarterback.validateRoute=1){:new_window}을 참조하십시오.  |
-| 다중 가상 CPU로 인해 성능 문제가 발생하는지를 판별함 | VM이 다중 CPU로 구성될 때 경험하는 성능 문제 해결에 대한 정보는 [다중 가상 CPU로 인해 성능 문제가 발생하는지를 판별함(1005362)](https://kb.vmware.com/s/article/1005362?CoveoV2.CoveoLightningApex.getInitializationData=1&r=2&ui-communities-components-aura-components-forceCommunity-seoAssistant.SeoAssistant.getSeoData=1&other.KM_Utility.getArticleDetails=1&other.KM_Utility.getArticleMetadata=2&other.KM_Utility.getUrl=1&other.KM_Utility.getUser=1&other.KM_Utility.getAllTranslatedLanguages=2&ui-comm-runtime-components-aura-components-siteforce-qb.Quarterback.validateRoute=1){:new_window}을 참조하십시오. 여기에는 데이터를 VM에서 또는 VM으로 데이터를 복사할 때 전송 속도가 느려지거나, 백업 작업이 제한시간을 초과하거나 속도가 느려지거나, VM 성능이 저하되는 문제가 포함될 수 있습니다. |
+| 다중 가상 CPU로 인해 성능 문제가 발생하는지를 판별함  | VM이 다중 CPU로 구성될 때 경험하는 성능 문제 해결에 대한 정보는 [다중 가상 CPU로 인해 성능 문제가 발생하는지를 판별함(1005362)](https://kb.vmware.com/s/article/1005362?CoveoV2.CoveoLightningApex.getInitializationData=1&r=2&ui-communities-components-aura-components-forceCommunity-seoAssistant.SeoAssistant.getSeoData=1&other.KM_Utility.getArticleDetails=1&other.KM_Utility.getArticleMetadata=2&other.KM_Utility.getUrl=1&other.KM_Utility.getUser=1&other.KM_Utility.getAllTranslatedLanguages=2&ui-comm-runtime-components-aura-components-siteforce-qb.Quarterback.validateRoute=1){:new_window}을 참조하십시오. 여기에는 데이터를 VM에서 또는 VM으로 데이터를 복사할 때 전송 속도가 느려지거나, 백업 작업이 제한시간을 초과하거나 속도가 느려지거나, VM 성능이 저하되는 문제가 포함될 수 있습니다.  |
 | VM의 전원이 꺼지거나 다시 시작됨  | 문제 해결에 대한 정보는 [가상 머신의 전원이 꺼지거나 다시 시작되는 이유를 판별함(1019064)](https://kb.vmware.com/s/article/1019064?CoveoV2.CoveoLightningApex.getInitializationData=1&r=2&ui-communities-components-aura-components-forceCommunity-seoAssistant.SeoAssistant.getSeoData=1&other.KM_Utility.getArticleDetails=1&other.KM_Utility.getArticleMetadata=2&other.KM_Utility.getUrl=1&other.KM_Utility.getUser=1&other.KM_Utility.getAllTranslatedLanguages=2&ui-comm-runtime-components-aura-components-siteforce-qb.Quarterback.validateRoute=1){:new_window}을 참조하십시오. |
 | 하나 이상의 VM 응답 시간이 느려짐 | vSphere ESXi 호스트에 대한 성능 문제 격리에 대한 정보는 [ESX/ESXi 가상 머신 성능 문제 해결(2001003)](https://kb.vmware.com/s/article/2001003?lang=en_US){:new_window}을 참조하십시오. 성능 문제는 CPU 제한조건, 메모리 과다 할당, 스토리지 대기 시간 또는 네트워크 대기 시간으로 인해 발생할 수 있습니다. |
 
@@ -129,7 +129,7 @@ Operations Management on {{site.data.keyword.cloud_notm}} 아키텍처에 통합
 | 제목 |설명 |
 |---|---|
 | NSX Edge/var/log는 활성 에지에 가득 찼음 | 에지 디스크의 여유 공간이 없다는 경보가 발행되고 /var/log 파티션이 가득 차 있음을 발견한 경우의 임시 해결책에 대한 정보는 [NSX Edge/var/log가 활성 에지에서 가득 참(50108355)](https://kb.vmware.com/s/article/50108355){:new_window}을 참조하십시오.  |
-| HCX 대역폭 테스트  | HCX에 네트워크 대역폭 문제가 있는 경우 HCX 터널 내에 사용 가능한 대역폭을 찾기 위해 `perftest`를 사용하는 데 대한 정보는 [HCX에서 Perftest를 실행하는 단계(56211)](https://kb.vmware.com/s/article/56211?lang=en_US){:new_window}를 참조하십시오. 각 `perftest`에 대한 양방향 테스트가 수행됩니다. 게이트웨이 쌍의 경우 하나는 OnPrem라고 하는 소스 데이터 센터 내에 있고 다른 하나는 {{site.data.keyword.cloud_notm}}에 있습니다. `perftest` 처리량의 작동 방식은 발신자가 링크를 유지할 수 있는 만큼 빠르게 전송하도록 하는 것입니다. 그러므로 각 테스트에서 높은 "전송자" 비율이 "수신자" 비율보다 더 높아짐을 알게 됩니다. "수신자" 비율 값을 단방향 처리량 결과로 간주할 수 있습니다. |
+| HCX 대역폭 테스트  | HCX에 네트워크 대역폭 문제가 있는 경우 HCX 터널 내에 사용 가능한 대역폭을 찾기 위해 `perftest`를 사용하는 데 대한 정보는 [HCX에서 Perftest를 실행하는 단계(56211)](https://kb.vmware.com/s/article/56211?lang=en_US){:new_window}를 참조하십시오. 각 `perftest`에 대한 양방향 테스트가 수행됩니다. 게이트웨이 쌍의 경우 하나는 OnPrem라고 하는 소스 데이터 센터 내에 있고 다른 하나는 {{site.data.keyword.cloud_notm}}에 있습니다. `perftest` 처리량의 작동 방식은 발신자가 링크를 유지할 수 있는 만큼 빠르게 전송하도록 하는 것입니다. 따라서 각 테스트에서 "전송자" 비율이 "수신자" 비율보다 더 높아짐을 알게 됩니다. "수신자" 비율 값을 단방향 처리량 결과로 간주할 수 있습니다. |
 |HCX 문제점 해결 |자세한 정보는 [HCX 문제점 해결](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-troubleshooting)을 참조하십시오. |
 | HCX 동기화 상태는 0%의 진행상태와 0바이트를 표시하며 상태 오류가 발생함 | 자세한 정보는 [HCX 복제본이 동기화 상태로 0%의 진행상태와 0바이트를 표시하며 상태 오류가 발생함(56710)](https://kb.vmware.com/s/article/56710?lang=en_US#q=HCX){:new_window}을 참조하십시오. |
 | VM 네트워크 성능이 나쁨 | VM 가상 NIC 설정을 검토하십시오. VMware는 성능을 위해 설계된 최신 Paravirtualized NIC이므로 VM용 VMXNET 3 가상 NIC를 권장합니다. VMXNET 3의 호환성을 확인하고 지원되는 경우 추가 네트워크 성능을 위해 가상 NIC를 변경하십시오. 자세한 정보는 [네트워킹 문제점 해결](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.networking.doc/GUID-217384C2-B361-471D-90C8-BC2676A0ECA6.html){:new_window}을 참조하십시오. |

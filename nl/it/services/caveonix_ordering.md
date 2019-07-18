@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-20"
 
 keywords: Caveonix RiskForesight, Caveonix configuration, order Caveonix
 
@@ -25,12 +25,17 @@ Puoi ordinare il servizio Caveonix RiskForesight on {{site.data.keyword.cloud}} 
 ## Ordine di Caveonix RiskForesight on IBM Cloud per una nuova istanza
 {: #caveonix_ordering-new}
 
-Per ordinare una nuova istanza VMware vCenter Server on {{site.data.keyword.cloud_notm}} con Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}, seleziona **Caveonix RiskForesight on IBM Cloud** nella sezione **Servizi** quando ordini l'istanza dalla console {{site.data.keyword.vmwaresolutions_short}}.
+Puoi ordinare una nuova istanza con Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} utilizzando uno dei seguenti metodi:
+* Dalla console {{site.data.keyword.vmwaresolutions_short}}, quando ordini una nuova istanza, seleziona **Caveonix RiskForesight on IBM Cloud** nella sezione **Servizi**.
+* Dal catalogo {{site.data.keyword.cloud_notm}}, fai clic sull'icona **VMware** nel riquadro di navigazione a sinistra e quindi sulla scheda **Caveonix RiskForesight on IBM Cloud** nella sezione **VMware Services**. Specifica le impostazioni del servizio e seleziona **Aggiungi alla nuova istanza**.
+
 
 ## Ordine di Caveonix RiskForesight on IBM Cloud per un'istanza esistente
 {: #caveonix_ordering-existing}
 
-Per aggiungere il servizio Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} in un'istanza VMware vCenter Server on {{site.data.keyword.cloud_notm}} esistente, visualizza l'istanza per cui desideri aggiungere il servizio, fai clic su **Servizi** nel riquadro di navigazione a sinistra e fai quindi clic su **Aggiungi**.
+Puoi aggiungere il servizio Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} in un'istanza esistente utilizzando uno dei seguenti metodi:
+* Dalla console {{site.data.keyword.vmwaresolutions_short}}, visualizza l'istanza per la quale vuoi aggiungere il servizio, fai clic su **Servizi** nel riquadro di navigazione a sinistra e quindi su **Aggiungi**.
+* Dal catalogo {{site.data.keyword.cloud_notm}}, fai clic sull'icona **VMware** nel riquadro di navigazione a sinistra e quindi sulla scheda **Caveonix RiskForesight on IBM Cloud** nella sezione **VMware Services**. Specifica le impostazioni del servizio e seleziona **Aggiungi all'istanza esistente**.
 
 ## Configurazione di Caveonix RiskForesight on IBM Cloud
 {: #caveonix_ordering-config}

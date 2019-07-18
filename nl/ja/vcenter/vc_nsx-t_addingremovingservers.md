@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: vCenter Server NSX-T add hosts, add servers to vCenter Server NSX-T, remove hosts from vCenter Server NSX-T
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -22,7 +23,7 @@ subcollection: vmware-solutions
 
 VMware vCenter Server with NSX-T インスタンスの容量は、ESXi サーバーまたはネットワーク・ファイル・システム (NFS) ストレージを追加/削除することで、ビジネス・ニーズに応じて拡張/縮小できます。
 
-* V3.1 リリース以降では、既存のクラスターに新しい ESXi サーバーを追加できます。その場合には、既存の構成か、クラスター内の既存のホストとは別の代替の構成を選択します。新しいサーバーを注文する際には、既存の構成がすぐに選択できるように表示されます。パフォーマンスや安定性で問題が生じるのを避けるため、CPU、RAM、ストレージに関しては、すべてのクラスターで同じか類似した構成を使用することをお勧めします。この機能は、同じクラスター内でハードウェア更新を行うときに役立ちます。1 つのクラスターに設定できるのは 1 つのタイプのストレージのみです。
+* V3.1 リリース以降では、既存のクラスターに新しい ESXi サーバーを追加できます。その場合には、既存の構成か、クラスター内の既存のホストとは別の代替の構成を選択します。 新しいサーバーを注文する際には、既存の構成がすぐに選択できるように表示されます。 パフォーマンスや安定性で問題が生じるのを避けるため、CPU、RAM、ストレージに関しては、すべてのクラスターで同じか類似した構成を使用することをお勧めします。 この機能は、同じクラスター内でハードウェア更新を行うときに役立ちます。 1 つのクラスターに設定できるのは 1 つのタイプのストレージのみです。
 * V3.0 リリース以降、**「使用可能」**状態にある複数のクラスターで、NFS ストレージと ESXi サーバーを同時に追加/削除できるようになりました。 例えば、あるクラスターで ESXi サーバーを追加または削除したり、別のクラスターで NFS ストレージを追加または削除したりできます。
 * V2.9 リリース以降では、サーバーが保守モードの間に、新規 ESXi サーバーをクラスターに追加できます。 また、複数のクラスター間で同時に ESXi サーバーを追加/削除できます。
 
@@ -51,7 +52,8 @@ VMware vCenter Server with NSX-T インスタンスの容量は、ESXi サーバ
 6. **「サーバーの追加」**ウィンドウで、追加するサーバーの数を入力します。
 7. オプションで、保守モード中にサーバーを追加するためのチェック・ボックスを選択します。 このチェック・ボックスはデフォルトで選択されます。
 
-   新しい ESXi サーバーをプロビジョニングする際、**「保守モード (Maintenance Mode)」**チェック・ボックスを選択していない場合には仮想マシン (VM) が新しいサーバーにすぐにマイグレーションされます。マイグレーション開始前に確認メッセージは表示されません。{:important}
+   新しい ESXi サーバーをプロビジョニングする際、**「保守モード (Maintenance Mode)」**チェック・ボックスを選択していない場合には仮想マシン (VM) が新しいサーバーにすぐにマイグレーションされます。 マイグレーション開始前に確認メッセージは表示されません。
+   {:important}
 
 8. ベア・メタル構成を次の手順で実行します。
    * クラスター内の既存のホストから構成を選択します。
@@ -59,7 +61,7 @@ VMware vCenter Server with NSX-T インスタンスの容量は、ESXi サーバ
 9. ストレージ構成を次の手順で実行します。 容量ディスクおよびキャッシュ・ディスクのディスク・タイプ、ディスク数、vSAN ライセンス・エディションを指定します。 さらにストレージが必要な場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。
 10. 見積もりコストを確認し、**「追加」**をクリックします。
 
-  また、**「見積もりに追加」**をクリックして、プロビジョン済みリソースを {{site.data.keyword.cloud_notm}} 見積もりツールに追加することもできます。この操作は、購入を検討している他の {{site.data.keyword.cloud_notm}} リソースと一緒に、選択した {{site.data.keyword.vmwaresolutions_short}}リソースのコストを見積もる場合に役立ちます。
+  また、**「見積もりに追加」**をクリックして、プロビジョン済みリソースを {{site.data.keyword.cloud_notm}} 見積もりツールに追加することもできます。 この操作は、購入を検討している他の {{site.data.keyword.cloud_notm}} リソースと一緒に、選択した {{site.data.keyword.vmwaresolutions_short}}リソースのコストを見積もる場合に役立ちます。
 
 ### ESXi サーバーを追加した結果
 {: #vc_nsx-t_addingremovingservers-adding-results}
@@ -121,7 +123,7 @@ VMware vSphere Web クライアントから NFS ストレージの追加を行�
    * ファイル共有を個々に追加して構成する場合は、**「共有を個別に構成」**を選択し、ファイル共有ごとに、** 「共有ストレージの追加」**ラベルの横にある**「+」**アイコンをクリックして、**「パフォーマンス」**と**「サイズ (GB)」**を選択します。 少なくとも 1 つのファイル共有を選択する必要があります。
 7. 見積もりコストを確認し、**「NFS ストレージの追加 (Add NFS Storage)」**をクリックします。
 
-  また、**「見積もりに追加」**をクリックして、プロビジョン済みリソースを {{site.data.keyword.cloud_notm}} 見積もりツールに追加することもできます。この操作は、購入を検討している他の {{site.data.keyword.cloud_notm}} リソースと一緒に、選択した {{site.data.keyword.vmwaresolutions_short}}リソースのコストを見積もる場合に役立ちます。
+  また、**「見積もりに追加」**をクリックして、プロビジョン済みリソースを {{site.data.keyword.cloud_notm}} 見積もりツールに追加することもできます。 この操作は、購入を検討している他の {{site.data.keyword.cloud_notm}} リソースと一緒に、選択した {{site.data.keyword.vmwaresolutions_short}}リソースのコストを見積もる場合に役立ちます。
 
 ### NFS ストレージを追加した結果
 {: #vc_nsx-t_addingremovingservers-adding-nfs-storage-results}
@@ -168,5 +170,5 @@ VMware vSphere Web クライアントから NFS ストレージの追加を行�
 * [vCenter Server インスタンスの要件と計画](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [vCenter Server with NSX-T インスタンスの注文](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_orderinginstance)
 * [vCenter Server with NSX-T インスタンスのクラスターの追加、表示、削除](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_nsx-t_addingviewingcluster#vc_nsx-t_addingviewingcluster)
-* [ホストをメンテナンス モードに切り替える](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.resmgmt.doc/GUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
-* [Enhanced vMotion Compatibility (EVC) processor support](https://kb.vmware.com/s/article/1003212){:new_window}
+* [ホストをメンテナンス モードに切り替える](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.resmgmt.doc/GUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:external}
+* [Enhanced vMotion Compatibility (EVC) processor support](https://kb.vmware.com/s/article/1003212){:external}

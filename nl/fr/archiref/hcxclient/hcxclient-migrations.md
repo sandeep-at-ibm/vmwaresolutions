@@ -14,9 +14,9 @@ subcollection: vmware-solutions
 # Migrations de VMware Hybrid Cloud
 {: #hcxclient-migrations}
 
-Une fois les composants HCX Service Mesh et Network Extensions mis à disposition et étendus, l'étape suivante consiste à faire migrer les machines virtuelles (VM). 
+Une fois les composants HCX Service Mesh et Network Extensions mis à disposition et étendus, l'étape suivante consiste à faire migrer les machines virtuelles (VM).
 
-Il existe trois types de migrations : 
+Il existe trois types de migrations :
   - vMotion
   - Migration en bloc
   - Migration à froid

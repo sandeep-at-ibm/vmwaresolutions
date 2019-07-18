@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-06-21"
 
 subcollection: vmware-solutions
 
@@ -35,7 +35,7 @@ subcollection: vmware-solutions
 アクター  |  説明
 ---|---
 システム管理者 |システム管理者は、vCenter および HCX プラグインを使用する企業の人的 VMware リソースです。 マイグレーション候補の決定、ネットワークの拡張、VM のマイグレーション、および NSX-V の管理を行います。 {{site.data.keyword.cloud_notm}} コンソールを使用して VMware vCenter Server on {{site.data.keyword.cloud_notm}} インスタンスをプロビジョンし、容量を拡張できます。
-開発者	| 開発者は、{{site.data.keyword.containerlong_notm}}、{{site.data.keyword.icpfull_notm}}、および CAM コンソールと API を使用してコンテナーを作成、管理する、企業の熟達した人的コンテナー・リソースです。 アプリケーション・モダナイゼーションの一環として新規サービスを作成します。
+開発者 | 開発者は、{{site.data.keyword.containerlong_notm}}、{{site.data.keyword.icpfull_notm}}、および CAM コンソールと API を使用してコンテナーを作成、管理する、企業の熟達した人的コンテナー・リソースです。 アプリケーション・モダナイゼーションの一環として新規サービスを作成します。
 企業ユーザー | この企業リソースは、コンテンツの更新などのビジネス・プロセスを完遂するために、アプリケーションへのネットワーク・アクセスを必要とします。
 お客様 | お客様は、企業のサービスを利用する外部のアクターです。 Acme Skateboards 社の場合は、スケート製品を購入するスケーターです。 お客様は、カタログへのセキュアなインターネット・アクセスが必要です。
 {{site.data.keyword.containerlong_notm}} | サービスの {{site.data.keyword.containerlong_notm}} マスター・ノードを管理する IBM の人的リソースです。
@@ -55,7 +55,7 @@ vCenter | vCenter は、システム管理者がオンプレミス VM を管理�
 NSX-V | vCenter Server の NSX-V は、システム管理者が管理するソフトウェア定義オーバーレイ・ネットワークを提供します。 このオーバーレイ・ネットワークが、HCX で拡張されるネットワークのターゲットであり、{{site.data.keyword.icpfull_notm}} の VM からのトラフィックを処理します。 NSX-V には、vSphere 分散スイッチ (vDS) を使用した、VMware 内のオンデマンド仮想ネットワークおよびマイクロ・セグメンテーション・サービスのデプロイ、再構成、破棄などの機能を備えたリファレンス・アーキテクチャーが用意されています。 詳しくは、[NSX–V の概要](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv)を参照してください。
 CAM | {{site.data.keyword.cloud_notm}} Automation Manager (CAM) は、{{site.data.keyword.icpfull_notm}} 上で実行され、単一画面でテンプレートを使用して、Kubernetes ベースのワークロードと一緒に VM ベースのワークロードをプロビジョンできます。 開発者は、CAM を使用して以下を行うことができます。 <br> - vCenter Server、{{site.data.keyword.icpfull_notm}}、または {{site.data.keyword.containerlong_notm}} にワークロードをプロビジョンする。<br> - VM とコンテナーの両方から構成されるサービスを作成およびオーケストレーションする。 <br> - DevOps ツールチェーンと Day 2 の ITSM ソリューションを統合する。
 コンテナー化アプリケーション | アプリケーション・モダナイゼーション・ジャーニーを経て、コンテナーとして稼働するようになったアプリ。 このリファレンス・アーキテクチャーの Acme Skateboards 社の事例では、コンテナー化アプリケーションの 1 つは、オンライン・プレゼンス・ワークロードの一部である Web サーバーです。
-Watson | このリファレンス・アーキテクチャーの Acme Skateboards 社の例では、Watson が、「コンセプト・カー」アーキテクチャーで使用される AI サービスになります。
+Watson | このリファレンス・アーキテクチャーの Acme Skateboards 社の例では、Watson が、_「コンセプト・カー」アーキテクチャー_で使用される AI サービスになります。
 
 ## 関連リンク
 {: #vcsnsxt-systemcontext-related}

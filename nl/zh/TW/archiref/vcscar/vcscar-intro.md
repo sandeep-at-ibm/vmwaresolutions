@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-03"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -29,9 +29,9 @@ subcollection: vmware-solutions
 
 「概念車」的實作是稱為 Skate Advisor 之示範性 Acme Skateboard 應用程式的延伸。Skate Advisor 是一個工具，它容許使用者與 Watson 驅動引擎進行滑板技巧對話。下列報價是交談範例：
 
--   「Watson，顯示 Casper 技巧的組合」
--   「Watson，顯示可執行技巧的一般位置」
--   「Watson，顯示 Casper 技巧的視訊」
+-`Watson, show me combinations of the trick Casper`
+- `Watson, show me common locations to perform a trick`
+- `Watson, show me a video of the trick Casper`
 
 Acme Skate Advisor 利用 Watson Discovery Service 來汲取文章、視訊、部落格及其他網際網路型內容，以建立學習到且可由應用程式查詢的技巧資料庫。
 
@@ -50,12 +50,12 @@ ACME Skate Advisor 應用程式利用 Watson 平台及應用程式現代化平�
 ### 使用 Watson Assistant 的 Watson 語音辨識
 {: #vcscar-intro-speech}
 
-Acme Skate Advisor 透過 Watson 平台所提供的語音轉文字及文字轉語音服務以與使用者進行通訊。
+Acme Skate Advisor 透過 Watson 平台所提供的語音轉文字及「文字轉語音服務」以與使用者進行通訊。
 
 ### Watson Discovery Service 用法及訓練
 {: #vcscar-intro-watson-disc}
 
-Acme Skate Advisor 使用 Watson Discovery Service 來追蹤已套用分類語言的「技巧」資料庫，以及從線上服務探索到的技巧。
+Acme Skate Advisor 使用 Watson Discovery Service 來監視已套用分類語言的技巧資料庫，以及從線上服務探索到的技巧。
 
 ### Watson 服務用法
 {: #vcscar-intro-watson-services}

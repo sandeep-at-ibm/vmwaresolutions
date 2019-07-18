@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: Veeam, Veeam install, tech specs Veeam
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -36,17 +37,17 @@ Les composants suivants sont commandés et inclus dans le service Veeam on {{sit
 * Une instance de serveur virtuel unique avec Veeam Backup and Replication 9.5 OS Add-on et Veeam Availability Suite 9.5.
 * Windows Server 2016 Standard Edition (64 bits)
 * 4 coeurs de 2 GHz
-* 8 UC virtuelles, 32 Go de RAM   
+* 8 UC virtuelles, 32 Go de RAM
 * Liaison montante de réseau privé 1 Gbps
 * Disque 100 Go (SAN)
 
 ### Stockage pour les sauvegardes
 {: #veeam_considerations-specs-storage}
 
-* Stockage iSCSI Endurance (2 000, 4 000, 8 000 ou 12 000 Go) 
+* Stockage iSCSI Endurance (2 000, 4 000, 8 000 ou 12 000 Go)
 * Performances de stockage (0,25, 2 ou 4 IOPS/Go)
 
-Dans le cadre de l’installation et de la configuration du service Veeam, les référentiels suivants sont créés : 
+Dans le cadre de l’installation et de la configuration du service Veeam, les référentiels suivants sont créés :
 * Pour les fichiers de sauvegarde de la configuration Veeam : un référentiel nommé `IC4V Default Config Backup Repository`. Le chemin du dossier où sont stockées les sauvegardes Veeam est `<Drive>:\ConfigBackup\`.
 * Pour l’extension, un référentiel nommé `IC4V Scale-Out Repository`. Pour plus d'informations, voir [Ajout d'un référentiel d'extension](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icos_ordering#icos_ordering-scale-repo).
 * Pour les sauvegardes de machine virtuelle (VM) : un référentiel nommé ``IC4V Default VM Backup Repository``. Le chemin du dossier où sont stockées les sauvegardes de VM est ``<Drive>:\VMBackup\`. Ce référentiel est ajouté en tant qu'extension à ``IC4V Scale-Out repository`.
@@ -76,8 +77,7 @@ Le retrait du service Veeam on {{site.data.keyword.cloud_notm}} arrête toutes l
 
 * [Commande de Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_ordering)
 * [Gestion de Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
-* [Demande de services gérés pour Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
-* [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [Services gérés pour Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
 * [Foire aux questions](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Site Web Veeam](https://www.veeam.com/){:new_window}
-* [Centre d'information Veeam](https://www.veeam.com/documentation-guides-datasheets.html){:new_window}
+* [Site Web Veeam](https://www.veeam.com/){:external}
+* [Centre d'information Veeam](https://www.veeam.com/documentation-guides-datasheets.html){:external}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-19"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server order instance, order vCenter Server, order vCenter Server instance
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -30,15 +31,14 @@ subcollection: vmware-solutions
 * 您已檢閱 [vCenter Server 實例的需求及規劃](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)中的資訊。
 * 您已檢閱實例及網域名稱格式。網域名稱及子網域標籤已用來產生實例的使用者名稱及伺服器名稱。
 
-表 1. 實例及網域名稱的值格式
-
 |名稱 |值格式            |
-  |:------------|:------------ |
-  |網域名稱    | `<root_domain>` |  
-  |vCenter Server 登入使用者名稱  | `<user_id>@<root_domain>`（Microsoft Active Directory 使用者）或 `administrator@vsphere.local` |
-  |vCenter Server（具有內嵌的 PSC）FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`。長度上限為 50 個字元。|
-  |單一登入 (SSO) 站台名稱| `<subdomain_label>` |
-  |完整的 ESXi 伺服器名稱| `<host_prefix><n>.<subdomain_label>.<root_domain>`，其中 `<n>` 是 ESXi 伺服器序列。長度上限為 50 個字元。|
+|:------------|:------------ |
+|網域名稱    | `<root_domain>` |  
+|vCenter Server 登入使用者名稱  | `<user_id>@<root_domain>`（Microsoft Active Directory 使用者）或 `administrator@vsphere.local` |
+|vCenter Server（具有內嵌的 PSC）FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`。長度上限為 50 個字元。|
+|單一登入 (SSO) 站台名稱| `<subdomain_label>` |
+|完整的 ESXi 伺服器名稱| `<host_prefix><n>.<subdomain_label>.<root_domain>`，其中 `<n>` 是 ESXi 伺服器序列。長度上限為 50 個字元。|
+{: caption="表 1. 實例及網域名稱的值格式" caption-side="top"}
 
 請不要修改在訂購或部署實例期間設定的任何值。這樣做會讓您的實例無法使用。例如，如果公用網路關閉、伺服器和虛擬伺服器實例 (VSI) 在佈建進行中移到 Vyatta 之後，或者 IBM CloudBuilder VSI 停止或遭到刪除。
 {:important}
@@ -106,13 +106,12 @@ vSphere Enterprise Plus 6.7u1 僅適用於 Broadwell 及 Skylake {{site.data.key
 
 當您選取 **Skylake** 時，可以根據需求來為 Bare Metal Server 選擇 CPU 與 RAM 組合。
 
-表 2. Skylake {{site.data.keyword.baremetal_short}} 的選項
-
 | CPU 型號選項             |RAM 選項          |
 |:------------- |:------------- |
 |雙重 Intel Xeon Silver 4110 處理器 / 總計 16 核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 |雙重 Intel Xeon Gold 5120 處理器 / 總計 28 核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 |雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+{: caption="表 2. Skylake {{site.data.keyword.baremetal_short}} 的選項" caption-side="top"}
 
 ### SAP 認證
 {: #vc_orderinginstance-sap}
@@ -133,12 +132,11 @@ vSphere Enterprise Plus 6.7u1 僅適用於 Broadwell 及 Skylake {{site.data.key
 
 當您選取 **Broadwell** 時，可以根據需求來為 Bare Metal Server 選擇 CPU 與 RAM 組合。
 
-表 3. Broadwell {{site.data.keyword.baremetal_short}} 的選項
-
 | CPU 型號選項             |RAM 選項          |
 |:------------- |:------------- |
 |四重 Intel Xeon E7-4820 v4 / 總計 40 核心，2.0 GHz |128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 |四重 Intel Xeon E7-4850 v4 / 總計 64 核心，2.1 GHz |128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
+{: caption="表 3. Broadwell {{site.data.keyword.baremetal_short}} 的選項" caption-side="top"}
 
 ### Bare Metal Server 數目
 {: #vc_orderinginstance-bare-metal-number}
@@ -183,14 +181,15 @@ vSAN 僅適用於 **Skylake** 或 **Broadwell** Bare Metal 配置。請指定下
 * **大小 (GB)**：選取符合共用儲存空間需求的容量。
 * **新增共用儲存空間**：選取以新增要使用不同配置設定的個別檔案共用。
 
-表 4. NFS 效能層次選項
+根據需求，選擇效能層次選項。
 
 |選項          |詳細資料      |
-  |:------------- |:------------- |
-  |0.25 IOPS/GB |這個選項是為未經常使用的工作負載而設計。應用的範例包括：加密配置檔資料、管理具有舊版資料的大型資料庫，或是作為備份之虛擬記憶體系統的虛擬磁碟映像檔。|
-  |2 IOPS/GB |這個選項是為大部分一般工作負載而設計。應用的範例包括：管理小型資料庫、備份 Web 應用程式，或是 Hypervisor 用的虛擬機器磁碟映像檔。|
-  |4 IOPS/GB |這個選項是為一次擁有高百分比作用中資料的高密度工作負載而設計。應用的範例包括：交易式資料庫。|
-  |10 IOPS/GB |這個選項是為要求最嚴苛的工作負載類型而設計，例如分析。應用的範例包括：高交易量資料庫，以及其他對效能敏感的資料庫。此效能層次限制為每個檔案共用的容量上限為 4 TB。|
+|:------------- |:------------- |
+|0.25 IOPS/GB |這個選項是為未經常使用的工作負載而設計。應用的範例包括：加密配置檔資料、管理具有舊版資料的大型資料庫，或是作為備份之虛擬記憶體系統的虛擬磁碟映像檔。|
+|2 IOPS/GB |這個選項是為大部分一般工作負載而設計。應用的範例包括：管理小型資料庫、備份 Web 應用程式，或是 Hypervisor 用的虛擬機器磁碟映像檔。|
+|4 IOPS/GB |這個選項是為一次擁有高百分比作用中資料的高密度工作負載而設計。應用的範例包括：交易式資料庫。|
+|10 IOPS/GB |這個選項是為要求最嚴苛的工作負載類型而設計，例如分析。應用的範例包括：高交易量資料庫，以及其他對效能敏感的資料庫。此效能層次限制為每個檔案共用的容量上限為 4 TB。|
+{: caption="表 4. NFS 效能層次選項" caption-side="top"}
 
 ### 本端磁碟
 {: #vc_orderinginstance-local-disks}
@@ -288,7 +287,7 @@ vSAN 僅適用於 **Skylake** 或 **Broadwell** Bare Metal 配置。請指定下
 
 您有 30 天的時間可啟動 VM。
 
-如需訂購 Windows Server 2016 授權的相關資訊，請參閱[開始使用 Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:new_window}。
+如需訂購 Windows Server 2016 授權的相關資訊，請參閱[開始使用 Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:external}。
 
 ## 服務設定
 {: #vc_orderinginstance-addon-services}
@@ -305,7 +304,7 @@ vSAN 僅適用於 **Skylake** 或 **Broadwell** Bare Metal 配置。請指定下
 ## 訂購 vCenter Server 實例的程序
 {: #vc_orderinginstance-procedure}
 
-1. 從 {{site.data.keyword.cloud_notm}} 型錄中，按一下左導覽窗格中的 **VMware**，然後按一下**虛擬資料中心**區段中的 **vCenter Server**。
+1. 從 {{site.data.keyword.cloud_notm}} 型錄中，按一下左導覽窗格中的 **VMware** 圖示，然後按一下 **VMware Services** 區段中的 **VMware vCenter Server on IBM Cloud** 卡。
 2. 在 **VMware vCenter Server on IBM Cloud** 頁面上，按一下 **vCenter Server** 卡片，然後按一下**建立**。
 3. 在 **vCenter Server** 頁面上，輸入實例名稱。
 5. 選取 vSphere 版本。

@@ -4,11 +4,11 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-30"
+lastupdated: "2019-07-01"
 
 ---
 
-# Introduction aux procédures opérationnelles 
+# Introduction aux procédures opérationnelles
 {: #opsprocs-intro}
 
 De nombreuses sociétés informatiques documentent leurs procédures opérationnelles dans un dossier d'exploitation. Un dossier d'exploitation est un ensemble de documents, de références et de procédures normalisés qui expliquent les tâches informatiques communes récurrentes. Le personnel informatique se réfère au dossier d'exploitation pour trouver la meilleure façon d'effectuer son travail. Les dossiers d'exploitation améliorent l'efficacité de l'organisation grâce à la standardisation et facilitent l'intégration des employés. Il existe généralement deux types de dossiers d'exploitation :
@@ -32,8 +32,9 @@ La plupart des organisations informatiques ont plusieurs dossiers d'exploitation
 1. La première étape consiste à décider quelles procédures doivent être documentées et, lorsqu'elles sont répertoriées, à documenter chacune d'entre elles avec suffisamment de détails.
 2. La deuxième étape est continue et consiste à maintenir, mettre à jour et corriger ces procédures, ajouter de nouvelles procédures et retirer des procédures qui ne sont plus nécessaires.
 
-{{site.data.keyword.vmwaresolutions_full}} vous permet d'utiliser des compétences, des outils et des dossiers d'exploitation existants de votre équipe pour gérer vos instances dans {{site.data.keyword.cloud_notm}}. A titre de recommandation, la documentation générale suivante répertorie les procédures, guides et tâches courants :
+{{site.data.keyword.vmwaresolutions_full}} vous permet d'utiliser des compétences, des outils et des dossiers d'exploitation existants de votre équipe pour gérer vos instances dans {{site.data.keyword.cloud_notm}}.
 
+La liste suivante répertorie les procédures, guides et tâches les plus couramment utilisés :
 * Tâches de configuration - Ces tâches sont des activités courantes que les administrateurs système doivent exécuter pour adapter l'environnement aux besoins de l'entreprise et répondre aux demandes de service telles que l'ajout de nouvelles machines virtuelles et l'augmentation de capacité. Elles sont regroupées dans la structure suivante :
  * Recommandations générales
  * Procédures de machines virtuelles
@@ -42,7 +43,7 @@ La plupart des organisations informatiques ont plusieurs dossiers d'exploitation
  * Procédures de stockage
  * Procédures de réseau
 * Alarmes - vSphere inclut un sous-système d'événements et d'alarmes qui suit les événements se produisant dans l'environnement vSphere et rend ces informations disponibles dans vCenter. Cette section décrit ce sous-système et explique comment activer et utiliser les alarmes dans votre entreprise.
-* Contrôles quotidiens proactifs - Ces contrôles permettent aux administrateurs système de maintenir un environnement sain. Lorsqu'ils sont effectués au quotidien, ils doivent permettre d'éviter que de nombreux problèmes courants liés à la capacité et aux performances n'aient une incidence sur vos charges de travail. 
+* Contrôles quotidiens proactifs - Ces contrôles permettent aux administrateurs système de maintenir un environnement sain. Lorsqu'ils sont effectués au quotidien, ils doivent permettre d'éviter que de nombreux problèmes courants liés à la capacité et aux performances n'aient une incidence sur vos charges de travail.
 * Dépannage - Même lorsque vous effectuez des vérifications quotidiennes proactives, des problèmes peuvent se produire et affecter votre charge de travail. Par conséquent, vous devez résoudre le problème sous-jacent le plus rapidement possible. Ces guides de dépannage et certains scénarios de dépannage courants aident les administrateurs système à identifier et à résoudre rapidement ces problèmes.
 * Conformité - Le guide de conformité donne un aperçu du maintien de la conformité de l'environnement par rapport à un régime de conformité réglementaire ou aux meilleures pratiques de l'industrie. Ce guide se concentre sur le guide de renforcement VMware, qui contient des listes de bonnes pratiques documentées pour un environnement VMware.
 

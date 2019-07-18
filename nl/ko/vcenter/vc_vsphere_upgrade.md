@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-06-28"
 
 keywords: vSphere upgrade, NSX upgrade, PSC upgrade
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -36,8 +37,8 @@ vCenter Server는 "롤링" 업그레이드를 허용하도록 설계되었습니
 
 업그레이드를 시작하기 전에 다음 요구사항을 완료하십시오.  
 * 사용자는 vCenter Server 환경에서 확장 또는 스냅인을 업그레이드해야 합니다. 업그레이드를 계획하려면 다음 문서를 검토하십시오.
-  * [VMware vCenter Server 6.7 Update 1b 릴리스 정보](https://docs.vmware.com/en/VMware-vSphere/6.7/rn/vsphere-vcenter-server-67u1b-release-notes.html){:new_window}
-  * [VMware ESXi 업그레이드 정보](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.esxi.upgrade.doc/GUID-65B5B313-3DBB-4490-82D2-A225446F4C99.html){:new_window}
+  * [VMware vCenter Server 6.7 Update 1b 릴리스 정보](https://docs.vmware.com/en/VMware-vSphere/6.7/rn/vsphere-vcenter-server-67u1b-release-notes.html){:external}
+  * [VMware ESXi 업그레이드 정보](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.esxi.upgrade.doc/GUID-65B5B313-3DBB-4490-82D2-A225446F4C99.html){:external}
 * vCenter Server 인스턴스 내의 VUM(vSphere Update Manager)을 설정하여 VMware vSphere에서 최신 업데이트를 다운로드하십시오. 자세한 정보는 [VMware Update Manager 소개](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vum-intro#vum-intro)를 참조하십시오.
 * 업그레이드가 수행 중임을 알리려면 {{site.data.keyword.vmwaresolutions_short}} 팀을 통해 지원 티켓을 여십시오. 티켓은 인스턴스가 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 업그레이드된 레벨로 등록될 때까지 열려 있습니다.
 * 업그레이드 중인 vCenter Server 인스턴스가 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 기본 또는 보조로서 다른 vCenter Server 인스턴스에 연결되는지 여부를 확인하십시오. 연결된 모든 인스턴스에서는 특정 사이트 업그레이드 일부로 먼저 PSC(Platform Services Controllers)를 업그레이드해야 합니다.
@@ -59,7 +60,7 @@ VSI 점프 박스를 주문하려면 다음 단계를 완료하십시오.
 사용자 환경에 VSI 점프 박스가 이미 설치되어 있으면 첫 번째 단계를 건너뛰십시오.
 {:note}
 
-1. [IBM Cloud 인프라 고객 포털](https://control.softlayer.com/)에서 시간별 또는 월별 VSI를 주문하십시오. 다음 속성을 주문하십시오.
+1. [IBM Cloud 인프라 고객 포털](https://control.softlayer.com/){:external}에서 시간별 또는 월별 VSI를 주문하십시오. 다음 속성을 주문하십시오.
   * Windows 2012 또는 2016 Server Standard
   * 2개의 CPU
   * 16GB 메모리
@@ -91,9 +92,9 @@ https://my.vmware.com/group/vmware/details?downloadGroup=DT-ESX67-INTEL-INTEL-NV
 
 업그레이드를 시작하기 전에 각 컴포넌트를 백업하십시오.
 
-* vCenter Server 및 PSC 백업에 대한 정보는 [ vCenter Server 6.x(2149237)의 백업 및 복원 옵션 개요](https://kb.vmware.com/s/article/2149237?lang=en_US){:new_window}를 참조하십시오.
+* vCenter Server 및 PSC 백업에 대한 정보는 [ vCenter Server 6.x(2149237)의 백업 및 복원 옵션 개요](https://kb.vmware.com/s/article/2149237?lang=en_US){:external}를 참조하십시오.
 * vCenter Server 및 PSC 백업에 대한 추가 고려사항 및 정보는 [vCenter 파일 기반 백업](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_backingup#solution_backingup-vcenter)을 참조하십시오.
-* NSX 백업에 대한 정보는 [NSX Manager 데이터 백업](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window}을 참조하십시오.
+* NSX 백업에 대한 정보는 [NSX Manager 데이터 백업](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:external}을 참조하십시오.
 
 파일 기반 백업을 사용하는 것이 좋습니다. VMware vSphere 6.7에서는 이미지 기반 백업(vSphere Data Protection 사용)이 지원되지 않습니다.
 {:note}
@@ -122,9 +123,9 @@ https://my.vmware.com/group/vmware/details?downloadGroup=DT-ESX67-INTEL-INTEL-NV
 #### VMware NSX를 업그레이드하는 프로시저
 {: #vc_vsphere_upgrade-procedure-nsx-procedure}
 
-다음 프로시저와 관련된 자세한 내용은 [NSX 업그레이드 안내서](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.upgrade.doc/GUID-4613AC10-BC73-4404-AF80-26E924EF5FE0.html){:new_window}를 참조하십시오.
+다음 프로시저와 관련된 자세한 내용은 [NSX 업그레이드 안내서](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.upgrade.doc/GUID-4613AC10-BC73-4404-AF80-26E924EF5FE0.html){:external}를 참조하십시오.
 
-1. 특정 환경 구성과의 호환성을 확인하려면 NSX 6.4.4에 대한 릴리스 정보를 읽으십시오. 자세한 정보는 [VMware NSX Data Center for vSphere 6.4.4 릴리스 정보](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/rn/releasenotes_nsx_vsphere_644.html){:new_window}를 참조하십시오.
+1. 특정 환경 구성과의 호환성을 확인하려면 NSX 6.4.4에 대한 릴리스 정보를 읽으십시오. 자세한 정보는 [VMware NSX Data Center for vSphere 6.4.4 릴리스 정보](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/rn/releasenotes_nsx_vsphere_644.html){:external}를 참조하십시오.
 2. 먼저 NSX 관리자를 업그레이드하십시오. 교차 vCenter 연결 모드를 사용하는 다중 NSX 환경을 보유하고 있는 경우 NSX 사용자 인터페이스 **조정자 업그레이드**에서 컴포넌트를 업그레이드하기 전에 모든 NSX 관리자를 업그레이드하십시오.
 3. NSX 컴포넌트를 업그레이드하려면 vCenter 사용자 인터페이스 내의 NSX 사용자 인터페이스에서 **조정자 업그레이드**를 사용하십시오.
 4. 발생 가능한 문제가 해결되면 모든 컴포넌트가 업그레이드될 때까지 업그레이드가 진행되는지 확인하기 위해 vCenter 사용자 인터페이스 내의 NSX 업그레이드 사용자 인터페이스를 계속해서 검토하고 모니터하십시오.
@@ -149,7 +150,7 @@ vCenter Server가 인스턴스에 연결된 경우 vCenter Server 기본 및 보
     2. 쉘 **passwd** 명령을 사용하여 PSC 및 vCenter의 새 루트 비밀번호를 설정하십시오.
     3. {{site.data.keyword.vmwaresolutions_short}} 콘솔에 표시되거나 IBM 지원 센터에서 제공한 비밀번호를 저장하십시오. 어플라이언스를 업그레이드하면 나중에 이 비밀번호가 다시 사용됩니다.
 2. 기본 제공 Windows ISO 마운트 기능을 사용하여 점프 박스 내에서 vCenter 6.7u1b ISO를 마운트하십시오.
-3. 먼저 VMware 지시사항에 따라 모든 PSC를 업그레이드하십시오. 자세한 정보는 [Upgrade a vCenter Server Appliance 6.0 or 6.5 with an External vCenter Single Sign-On or Platform Services Controller Instance by Using the GUI](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html)를 참조하십시오.
+3. 먼저 VMware 지시사항에 따라 모든 PSC를 업그레이드하십시오. 자세한 정보는 [Upgrade a vCenter Server Appliance 6.0 or 6.5 with an External vCenter Single Sign-On or Platform Services Controller Instance by Using the GUI](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html){:external}를 참조하십시오.
 
 **업그레이드할 어플라이언스와 동일한 네트워크에 있는 Windows, Linux 또는 Mac 머신에서 GUI 업그레이드를 실행해야 함**이라는 요구사항이 사용자 계정의 {{site.data.keyword.cloud_notm}} 내의 모든 서브넷에 적용됩니다.
 {:note}
@@ -175,7 +176,7 @@ vCenter Server가 인스턴스에 연결된 경우 vCenter Server 기본 보조 
     2. 쉘 **passwd** 명령을 사용하여 PSC 및 vCenter의 새 루트 비밀번호를 설정하십시오.
     3. {{site.data.keyword.vmwaresolutions_short}} 콘솔에 표시되거나 IBM 지원 센터에서 제공한 비밀번호를 저장하십시오. 어플라이언스를 업그레이드하면 나중에 이 비밀번호가 다시 사용됩니다.
 2. 기본 제공 Windows ISO 마운트 기능을 사용하여 점프 박스 내에서 vCenter 6.7u1b ISO를 마운트하십시오.
-3. VMware 지시사항에 따라 vCenter를 업그레이드하십시오. 자세한 정보는 [Upgrade a vCenter Server Appliance 6.0 or 6.5 with an External vCenter Single Sign-On or Platform Services Controller Instance by Using the GUI](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html)를 참조하십시오. VMware 지시사항은 PSC의 업그레이드 프로세스와 유사합니다. 그러나 PSC를 가리키는 대신 업그레이드 프로세스의 경우 vCenter FQDN/IP를 가리킵니다.
+3. VMware 지시사항에 따라 vCenter를 업그레이드하십시오. 자세한 정보는 [Upgrade a vCenter Server Appliance 6.0 or 6.5 with an External vCenter Single Sign-On or Platform Services Controller Instance by Using the GUI](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html){:external}를 참조하십시오. VMware 지시사항은 PSC의 업그레이드 프로세스와 유사합니다. 그러나 PSC를 가리키는 대신 업그레이드 프로세스의 경우 vCenter FQDN/IP를 가리킵니다.
 
 **참고**:
 * **업그레이드할 어플라이언스와 동일한 네트워크에 있는 Windows, Linux 또는 Mac 머신에서 GUI 업그레이드를 실행해야 함**이라는 요구사항이 사용자 계정의 {{site.data.keyword.cloud_notm}} 내의 모든 서브넷에 적용됩니다.
@@ -184,7 +185,7 @@ vCenter Server가 인스턴스에 연결된 경우 vCenter Server 기본 보조 
 #### PSC 기능을 vCenter에 통합
 
 1. PSC 및 vCenter의 업그레이드를 완료한 후 vCenter FLEX 기반 사용자 인터페이스에 로그인하고 **시스템 구성** 섹션에서 vCenter 및 PSC와 연관된 모든 서비스의 상태를 확인하십시오.  
-2. PSC를 백업하십시오.  파일 기반 백업을 사용하는 것이 좋습니다. 자세한 정보는 [vSphere 6.7의 파일 기반 백업](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.install.doc/GUID-8A16C037-F1E0-40C9-B106-05C30625B9CB.html){:new_window}을 참조하십시오.
+2. PSC를 백업하십시오.  파일 기반 백업을 사용하는 것이 좋습니다. 자세한 정보는 [vSphere 6.7의 파일 기반 백업](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.install.doc/GUID-8A16C037-F1E0-40C9-B106-05C30625B9CB.html){:external}을 참조하십시오.
 3. ``<VCSA 6.7 iso mount>:\vcsa-converge-cli\templates\converge`` 디렉토리로 이동하십시오.
 4. ``converge.json`` 파일을 점프 VM의 로컬 드라이브에 복사하십시오.
   * 통합하는 첫 번째 PSC인 경우 ``json`` 파일에서 **replication** 섹션을 제거해야 합니다.
@@ -197,7 +198,7 @@ vCenter Server가 인스턴스에 연결된 경우 vCenter Server 기본 보조 
    1. PSC가 백업되었는지 확인하려면 **Y**를 입력하여 계속 진행하십시오.
    2. 프로세스가 완료된 경우 vCenter의 다시 부팅을 확인하려면 **Y**를 입력하십시오.
 
-   통합 프로세스가 ``ERROR converge Failed to get vecs users and permissions`` 메시지와 함께 실패하는 경우 오류를 해결하기 위한 단계는 [Converge to embedded failed!](https://virtualtassie.com/2018/vcenter-6-7-update-1-converge-to-embedded-failed/#comment-3713){:new_window}를 참조하십시오.
+   통합 프로세스가 ``ERROR converge Failed to get vecs users and permissions`` 메시지와 함께 실패하는 경우 오류를 해결하기 위한 단계는 [Converge to embedded failed!](https://virtualtassie.com/2018/vcenter-6-7-update-1-converge-to-embedded-failed/#comment-3713){:external}를 참조하십시오.
    {:note}
 
 10. vCenter가 다시 부팅된 후 vCenter 사용자 인터페이스에 로그인하여 정상적으로 작동하는지 확인하십시오.
@@ -236,7 +237,7 @@ vCenter 내의 VMware Update Manager 기능은 ESXi 호스트를 6.7u1 레벨로
 6. 사전 수정 검사에 성공한 후 **수정**을 클릭하십시오. 엔티티 수정 태스크를 사용하여 업그레이드 프로세스를 모니터하십시오.
 7. 업그레이드가 완료된 후 호스트의 요약 섹션을 검토하여 ``VMware ESXi, 6.7.0``이 표시되는지 확인하십시오.
 
-업그레이드 프로세스가 즉시 실패하고 **호스트가 유지보수 모드로 전환될 수 없음** 오류 메시지가 표시되는 경우 Zerto ZVA를 종료하고 다시 시도하십시오. 각 서버의 수정이 완료되면 ZVRA VM이 자동으로 시작됩니다. 업그레이드 프로세스 중에 Zerto 복제 진행에 대한 자세한 정보는 [How to Place a Host with an Associated VRA into Maintenance Mode](https://www.zerto.com/myzerto/knowledge-base/place-host-into-maintenance-mode-with-vra/){:new_window}를 참조하십시오.
+업그레이드 프로세스가 즉시 실패하고 **호스트가 유지보수 모드로 전환될 수 없음** 오류 메시지가 표시되는 경우 Zerto ZVA를 종료하고 다시 시도하십시오. 각 서버의 수정이 완료되면 ZVRA VM이 자동으로 시작됩니다. 업그레이드 프로세스 중에 Zerto 복제 진행에 대한 자세한 정보는 [How to Place a Host with an Associated VRA into Maintenance Mode](https://www.zerto.com/myzerto/knowledge-base/place-host-into-maintenance-mode-with-vra/){:external}를 참조하십시오.
 {:note}
 
 #### Intel NVME 드라이버 패치를 VUM 저장소에 추가
@@ -308,7 +309,7 @@ VMware 게스트 도구와 유사하게 vCenter Server 환경 업그레이드로
 1. 호스트가 포함된 클러스터에서 **구성**을 클릭하십시오.
 2. **VMware EVC**에서 **편집**을 클릭하고 EVC 모드를 **Intel "Skylake" 세대**로 변경하십시오.
 
-자세한 정보는 [Enhanced vMotion Compatibility (EVC) processor support (1003212)](https://kb.vmware.com/s/article/1003212){:new_window}를 참조하십시오.
+자세한 정보는 [Enhanced vMotion Compatibility (EVC) processor support (1003212)](https://kb.vmware.com/s/article/1003212){:external}를 참조하십시오.
 
 #### PSC를 가리키도록 NSX Manager 및 HCX Manager 재구성
 
@@ -333,6 +334,6 @@ VMware 게스트 도구와 유사하게 vCenter Server 환경 업그레이드로
 ## 관련 링크
 {: #vc_vsphere_upgrade-related}
 
-* [VMware NSX Data Center for vSphere 6.4.4 Release Notes](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/rn/releasenotes_nsx_vsphere_644.html){:new_window}
-* [NSX Upgrade Guide](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.upgrade.doc/GUID-4613AC10-BC73-4404-AF80-26E924EF5FE0.html){:new_window}
+* [VMware NSX Data Center for vSphere 6.4.4 Release Notes](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/rn/releasenotes_nsx_vsphere_644.html){:external}
+* [NSX Upgrade Guide](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.upgrade.doc/GUID-4613AC10-BC73-4404-AF80-26E924EF5FE0.html){:external}
 * [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

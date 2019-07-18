@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-06-27"
 
 subcollection: vmware-solutions
 
@@ -23,7 +23,7 @@ VMware vSphere Web Client でハイブリッド・クラウド・サービス・
 ## HCX Manager を vCenter に登録する手順
 {: #hcx-archi-reg-vcenter-proc-register}
 
-1. ハイブリッド・クラウド・サービスのサービス仮想アプライアンスにログインします。
+1. ハイブリッド・クラウド・サービスのサービス仮想アプライアンスにログインします。 例えば、`https:My-HCX-Manager:9443/` などです。
 2. **「設定の管理 (Manage Settings)」**タイルをクリックします。
   1. 左のペインの**「システムの構成 (Configure Systems)」**で、vCenter を選択します。
   2. 右上の**「vCenter の追加 (Add vCenter)」**をクリックします。

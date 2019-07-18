@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: Veeam, Veeam install, tech specs Veeam
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -76,8 +77,7 @@ Veeam on {{site.data.keyword.cloud_notm}} 서비스를 제거하면 모든 백�
 
 * [Veeam on {{site.data.keyword.cloud_notm}} 주문](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_ordering)
 * [Veeam on {{site.data.keyword.cloud_notm}} 관리](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
-* [Veeam on {{site.data.keyword.cloud_notm}}에 대한 관리 서비스 요청](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
-* [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [Veeam on {{site.data.keyword.cloud_notm}}에 대한 관리 서비스](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
 * [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Veeam 웹 사이트](https://www.veeam.com/){:new_window}
-* [Veeam Help Center](https://www.veeam.com/documentation-guides-datasheets.html){:new_window}
+* [Veeam 웹 사이트](https://www.veeam.com/){:external}
+* [Veeam Help Center](https://www.veeam.com/documentation-guides-datasheets.html){:external}

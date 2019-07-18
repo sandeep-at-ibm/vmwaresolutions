@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-31"
+lastupdated: "2019-06-18"
 
 keywords: user account, user permissions, VRF account
 
@@ -29,8 +29,6 @@ La cuenta de infraestructura de {{site.data.keyword.cloud_notm}} que utilice deb
 
 Los usuarios autorizados pueden verificar y actualizar los permisos para una cuenta de infraestructura de {{site.data.keyword.cloud_notm}} en el {{site.data.keyword.slportal}}. Para obtener más información, consulte [Edición de los permisos del portal de clientes de un usuario](/docs/customer-portal?topic=customer-portal-customerportal_accuserprof#cp_editusercpperm){:new_window}.
 
-Tabla 1. Permisos necesarios para la cuenta de infraestructura de {{site.data.keyword.cloud_notm}}
-
 | Permiso         | Detalles                                 |
 |:------------------ |:--------------------------------------- |
 | Añadir servidor | Este permiso es necesario para las siguientes operaciones: para solicitar los {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} en los que se ejecuta VMware ESXi y para suministrar los servidores virtuales por hora que se utilizan para las operaciones de configuración, mantenimiento y soporte de la instancia. |
@@ -49,6 +47,7 @@ Tabla 1. Permisos necesarios para la cuenta de infraestructura de {{site.data.ke
 | Ver licencias | Este permiso es necesario para recuperar y validar las licencias que utiliza su instancia. |
 | Ver contraseñas | Este permiso es necesario para poder administrar las VSI solicitadas. |
 | Gestionar supervisión de servidor | Este permiso no es necesario realizar un pedido, pero sí que se necesita para recuperar y validar el estado de supervisión de los {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} en los que se ejecutan los servidores VMware ESXi en la instancia. |
+{: caption="Tabla 1. Permisos necesarios para la cuenta de infraestructura de {{site.data.keyword.cloud_notm}}" caption-side="top"}
 
 ## VRF con puntos finales de servicio habilitados
 {: #cloud-infra-acct-req-vrf-se}

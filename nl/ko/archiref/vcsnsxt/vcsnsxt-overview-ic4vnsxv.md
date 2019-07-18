@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-21"
 
 subcollection: vmware-solutions
 
@@ -96,11 +96,11 @@ SDDC-Dswitch-Public	  |SDDC-DPortGroup-External	| 원래 가상 포트	| 활성:
 이 디자인은 NSX 컴포넌트의 구성을 지정하지만 네트워크 오버레이 컴포넌트 구성은 적용하지 않습니다. 고객은 직접 자신의 요구에 맞게 네트워크 오버레이를 설계할 수 있습니다.
 
 다음 컴포넌트가 구성됩니다.
--	관리 서버 및 제어기가 설치되어 vCenter 웹 사용자 인터페이스에 통합됨.
--	ESXi 에이전트가 설치되며 VTEP IP IP 주소가 ESXi 호스트마다 구성됨.
--	VTEP 구성, 제어기 구성, VXLAN 구성(전송 구역).
--	관리 컴포넌트에서 사용할 NSX ESG(Edge Services Gateway) 어플라이언스.
--	(vCenter Server만 해당) 고객 사용을 위한 NSX ESG(Edge Services Gateway) 어플라이언스.
+- 관리 서버 및 제어기가 설치되어 vCenter 웹 사용자 인터페이스에 통합됨.
+- ESXi 에이전트가 설치되며 VTEP IP IP 주소가 ESXi 호스트마다 구성됨.
+- VTEP 구성, 제어기 구성, VXLAN 구성(전송 구역).
+- 관리 컴포넌트에서 사용할 NSX ESG(Edge Services Gateway) 어플라이언스.
+- (vCenter Server만 해당) 고객 사용을 위한 NSX ESG(Edge Services Gateway) 어플라이언스.
 
 다음 컴포넌트가 구성됩니다.
 - 가상 분배 라우터

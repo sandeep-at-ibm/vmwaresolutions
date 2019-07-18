@@ -49,7 +49,7 @@ El primer paso consiste en añadir las credenciales de my.vmware.com al motor de
 {: #vum-updating-vsan-config-vcsa-proxy}
 
 1.	Desde el navegador web del servidor de gestión, conéctese a la interfaz de gestión de VCSA `https://<vCenter ip>:5480`
-2.	Mediante las credenciales de la consola de IBM Cloud for VMware Solutions, inicie sesión en la interfaz de gestión de VCSA como usuario root. 
+2.	Mediante las credenciales de la consola de IBM Cloud for VMware Solutions, inicie sesión en la interfaz de gestión de VCSA como usuario root.
 3.	En la interfaz de gestión de dispositivos del servidor de vCenter, pulse **Redes** y pulse **Gestionar**.
 4.	Para configurar un servidor proxy, pulse **Editar** en el panel Valores de proxy.
 5.	Seleccione **Utilizar un servidor proxy**, especifique los valores del servidor proxy y pulse **Aceptar**.

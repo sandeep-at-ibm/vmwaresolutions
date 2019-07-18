@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-31"
+lastupdated: "2019-06-18"
 
 keywords: user account, user permissions, VRF account
 
@@ -29,8 +29,6 @@ A conta de infraestrutura do {{site.data.keyword.cloud_notm}} que você está us
 
 Os usuários autorizados podem verificar e atualizar as permissões para uma conta de infraestrutura do {{site.data.keyword.cloud_notm}} no {{site.data.keyword.slportal}}. Para obter mais informações, consulte [Editando permissões do portal do cliente de um usuário](/docs/customer-portal?topic=customer-portal-customerportal_accuserprof#cp_editusercpperm){:new_window}.
 
-Tabela 1. Permissões necessárias para a conta de infraestrutura do {{site.data.keyword.cloud_notm}}
-
 | Permissão         | Detalhes                                 |
 |:------------------ |:--------------------------------------- |
 | Incluir servidor | Essa permissão é necessária para as seguintes operações: para pedir o {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} no qual o VMware ESXi é executado e para fornecer, a cada hora, servidores virtuais que são usados para operações de configuração, manutenção e suporte de instâncias. |
@@ -49,6 +47,7 @@ Tabela 1. Permissões necessárias para a conta de infraestrutura do {{site.data
 | Visualizar licenças | Essa permissão é necessária para recuperar e validar as licenças que são usadas pela sua instância. |
 | Visualizar senhas | Essa permissão é necessária para poder administrar os VSIs pedidos. |
 | Gerenciar Monitoramento do Servidor | Essa permissão não é necessária para fazer um pedido, mas é necessária para recuperar e validar o status de monitoramento do {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} no qual os servidores VMware ESXi estão em execução em sua instância. |
+{: caption="Tabela 1. Permissões necessárias para a conta de infraestrutura do {{site.data.keyword.cloud_notm}}" caption-side="top"}
 
 ## VRF com terminais em serviço ativados
 {: #cloud-infra-acct-req-vrf-se}

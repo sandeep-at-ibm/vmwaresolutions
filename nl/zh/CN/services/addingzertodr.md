@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-21"
 
 keywords: Zerto, Zerto components, tech specs Zerto
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -69,6 +70,6 @@ Zerto Replication V6.5 update 3 许可证
 
 * [订购 Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-zerto_ordering)
 * [管理 Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingzertodr)
-* [请求 Zerto on {{site.data.keyword.cloud_notm}} 的受管服务](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
-* [zerto.com Web 站点](https://www.zerto.com){:new_window}
-* [Zerto 技术文档](https://www.zerto.com/myzerto/technical-documentation/){:new_window}
+* [Zerto on {{site.data.keyword.cloud_notm}} 的受管服务](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
+* [zerto.com Web 站点](https://www.zerto.com){: external}
+* [Zerto 技术文档](https://www.zerto.com/myzerto/technical-documentation/){: external}

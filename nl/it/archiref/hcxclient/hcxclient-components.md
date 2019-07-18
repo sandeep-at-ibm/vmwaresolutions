@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-01"
 
 subcollection: vmware-solutions
 
@@ -40,7 +40,7 @@ I componenti della rete di servizi HCX sono responsabili della creazione dei pia
 - Interconnect Appliance (HCX-IX) - il dispositivo di interconnessione crea dei tunnel crittografati che supportano il traffico (migrazione in blocco) di replica e vMotion.
 - WAN Optimizer Appliance (HCX-WAN) - HCX include un dispositivo di ottimizzazione Silver Peak™ WAN distribuito facoltativamente. Viene distribuito come un dispositivo VM. Quando viene distribuito, il traffico di tunnel CGW viene reindirizzato per passare attraverso l'ottimizzatore WAN. Poiché l'ottimizzatore WAN riduce considerevolmente il traffico attraverso la WAN (quello osservato di norma è
 da 3:1 a 6:1) aumentando al tempo stesso l'affidabilità della connessione, si consiglia di distribuire sempre l'ottimizzatore WAN con CGW. L'ulteriore vantaggio offerto dalla distribuzione dell'ottimizzatore WAN si estende alla limitazione della larghezza di banda della WAN consumata dal traffico di migrazione di VM. L'interfaccia di gestione dell'ottimizzatore WAN non è configurata per impostazione predefinita.
-- Network Extension (HCX-NE) - fornisce le funzionalità di estensione di rete di livello 2, consentendo le migrazioni tra l'ubicazione in loco e l'ambiente vSphere con la necessità di riassegnare l'IP delle macchine virtuali.
+- Network Extension (HCX-NE) - Fornisce le funzionalità di estensione della rete di livello 2, consentendo le migrazioni tra l'ubicazione in loco e l'ambiente vSphere con la necessità di riassegnare gli indirizzi IP alle VM.
 - Host ESXi proxy - Ogni volta che HCX-IX è configurato per stabilire una connessione al sito HCX lato cloud, nel vCenter è presente un host ESXi proxy esternamente a qualsiasi cluster. Questo host ESXi ha lo stesso indirizzo IP vMotion e di gestione del dispositivo HCX-IX corrispondente. Ciò consente un funzionamento dell'ambiente vSphere
 sia sul lato client che su quello cloud come se stesse eseguendo un vMotion locale. Questo metodo offre i seguenti vantaggi:
   - Gli intervalli IP di gestione sull'uno o sull'altro lato possono essere in sovrapposizione senza alcuna perdita di funzionalità.
@@ -56,7 +56,7 @@ sia sul lato client che su quello cloud come se stesse eseguendo un vMotion loca
 {: #hcxclient-components-related}
 
 * [Requisiti di accesso alla porta per VMware HCX on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-port-req)
-* [Preparazione dell'ambiente di installazione](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-planning-prep-install)
+* [Preparazione dell'ambiente di installazione ](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-planning-prep-install)
 * [Distribuzione client HCX](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-vcs-client-deployment)
 * [Rete di servizi in loco HCX](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-vcs-mesh-deployment)
 * [Migrazioni VMware Hybrid Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-migrations)

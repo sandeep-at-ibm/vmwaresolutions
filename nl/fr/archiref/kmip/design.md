@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-21"
 
 subcollection: vmware-solutions
 
@@ -58,7 +58,7 @@ Lorsque KMIP for VMware est utilisé avec le chiffrement vSAN ou le chiffrement 
 
 Si vous envisagez d'effectuer une rotation des clés, passez en revue les informations suivantes sur les niveaux de rotation possibles :
 * Votre clé racine de client protège toutes les clés VMware. La rotation des clés peut être effectuée dans l'instance IBM Key Protect ou Hyper Protect Crypto Services qui est associée à votre instance KMIP for VMware.
-* KMIP for VMware utilise votre clé racine de client pour protéger les clés qu'il génère et distribue à VMware. VMware considère qu'il s'agit de "clés de chiffrement de clé" (KEK).
+* KMIP for VMware utilise votre clé racine de client pour protéger les clés qu'il génère et distribue à VMware. VMware considère qu'il s'agit de _clés de chiffrement de clé (KEK)_.
   * Si vous utilisez le chiffrement vSphere, vous pouvez effectuer une rotation des clés à l'aide de la commande PowerShell **Set-VMEncryptionKey**.
   * Si vous utilisez le chiffrement vSAN, vous pouvez effectuer une rotation des clés dans l'interface utilisateur vSAN.
 * VMware utilise ces clés KEK pour protéger les clés réellement utilisées pour chiffrer les unités de disque et les disques de machine virtuelle. Vous pouvez effectuer une rotation de ces clés à l'aide d'appels VMware et d'un changement de clé "profond". Cette opération chiffre de nouveau toutes vos données chiffrées, elle peut donc durer un certain temps.
@@ -73,7 +73,7 @@ Le chiffrement VMware vSAN et le chiffrement vSphere sont compatibles avec de no
 ### Clés au sein de clés
 {: #kmip-design-keys}
 
-Les systèmes de gestion de clés utilisent couramment une technique connue sous le nom de *chiffrement d'enveloppe* pour l'encapsulation ou la protection des clés à l'aide d'autres clés. Ces clés sont appelées *clés racine* ou *clés de chiffrement de clé* (KEK). Pour accéder à une clé, vous devez déchiffrer ou désencapsuler la clé à l'aide de sa clé racine correspondante. Détruire la clé racine est un moyen efficace d'invalider toutes les clés qu'elle a protégées. Ces clés doivent être stockées à proximité de la clé racine. Le contrôle d'accès à la clé racine est important.
+Les systèmes de gestion de clés utilisent couramment une technique connue sous le nom de *chiffrement d'enveloppe* pour l'encapsulation ou la protection des clés à l'aide d'autres clés. Ces clés sont appelées _clés racine_ ou _clés de chiffrement de clé (KEK)_. Pour accéder à une clé, vous devez déchiffrer ou désencapsuler la clé à l'aide de sa clé racine correspondante. Détruire la clé racine est un moyen efficace d'invalider toutes les clés qu'elle a protégées. Ces clés doivent être stockées à proximité de la clé racine. Le contrôle d'accès à la clé racine est important.
 
 {{site.data.keyword.cloud_notm}} Key Protect et Hyper Protect Crypto Services fournissent ce service en utilisant une *clé racine de client*. Key Protect stocke les clés racine de client exclusivement sur du matériel {{site.data.keyword.cloud_notm}} CloudHSM d'où elles ne peuvent pas être extraites. Hyper Protect Crypto Services stocke les clés dans des modules HSM IBM zSeries. Ces clés racine de client sont ensuite utilisées pour encapsuler d'autres clés de chiffrement telles que celles générées par KMIP for VMware pour votre instance VMware.
 

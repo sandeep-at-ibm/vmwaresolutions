@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-20"
 
 keywords: vmware offering, vmware solutions functions, function support
 
@@ -17,8 +17,6 @@ subcollection: vmware-solutions
 {: #inst_comp_chart}
 
 查看以下图表，以了解 VMware vCenter Server 实例、VMware vCenter Server with Hybridity Bundle 实例和 VMware vSphere 集群在功能支持方面的差异。
-
-表 1. vCenter Server、vCenter Server with Hybridity Bundle 和 vSphere 集群支持的功能
 
 |功能|vCenter Server| vCenter Server with Hybridity|VMware vSphere|
 |:--- |:--- |:--- |:--- |
@@ -38,6 +36,7 @@ subcollection: vmware-solutions
 |NSX 许可证升级选项|可从 NSX Base 升级到 Advanced 或 Enterprise，也可从 NSX Advanced 升级到 Enterprise。可升级到 vCenter Server with Hybridity Bundle。|可从 NSX Advanced 升级到 Enterprise|无|
 |vSAN 许可证版本|vSAN Advanced 或 Enterprise|vSAN Advanced 或 Enterprise|vSAN Advanced 或 Enterprise|
 |附加组件服务|支持，不包括 HCX on {{site.data.keyword.cloud_notm}}。可升级到 vCenter Server with Hybridity Bundle。|支持，包括 HCX on {{site.data.keyword.cloud_notm}}。|此解决方案的自动化不支持，但您可以使用并安装自己的软件。|
+{: caption="表 1. vCenter Server、vCenter Server with Hybridity Bundle 和 vSphere 集群支持的功能" caption-side="top"}
 
 ## 注释
 {: #inst_comp_chart-notes}

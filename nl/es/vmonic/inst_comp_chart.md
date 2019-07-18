@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-20"
 
 keywords: vmware offering, vmware solutions functions, function support
 
@@ -17,8 +17,6 @@ subcollection: vmware-solutions
 {: #inst_comp_chart}
 
 Revise el siguiente gráfico para entender las diferencias en cuanto a soporte de funciones entre las instancias de VMware vCenter Server, las instancias de VMware vCenter Server con el paquete híbrido (Hybridity) y los clústeres de VMware vSphere.
-
-Tabla 1. Funciones soportadas para vCenter Server, vCenter Server con el paquete híbrido (Hybridity) y clústeres de vSphere
 
 | Función | vCenter Server | vCenter Server with Hybridity | VMware vSphere |
 |:--- |:--- |:--- |:--- |
@@ -38,6 +36,7 @@ Tabla 1. Funciones soportadas para vCenter Server, vCenter Server con el paquete
 | Opciones de actualización de licencias NSX | Actualización disponible desde NSX Base a Advanced o Enterprise y desde NSX Advanced a Enterprise. Está disponible la actualización a vCenter Server con el paquete híbrido (Hybridity). | Actualización disponible desde NSX Advanced a Enterprise  | Ninguna |
 | Ediciones de licencias de vSAN | vSAN Advanced o Enterprise | vSAN Advanced o Enterprise | vSAN Advanced o Enterprise  |
 | Servicios complementarios | Soportado, sin incluir HCX on {{site.data.keyword.cloud_notm}}. Está disponible la actualización a vCenter Server con el paquete híbrido (Hybridity). | Soportado, incluido HCX on {{site.data.keyword.cloud_notm}}. | No soportado por la automatización de esta solución, pero puede traer e instalar su propio software. |
+{: caption="Tabla 1. Funciones soportadas para vCenter Server, vCenter Server con el paquete híbrido (Hybridity) y clústeres de vSphere" caption-side="top"}
 
 ## Notas
 {: #inst_comp_chart-notes}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-26"
 
 keywords: VMware HCX, HCX, tech specs HCX
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -97,5 +98,5 @@ HCX on {{site.data.keyword.cloud_notm}} 서비스를 제거하기 전에 다음 
 * [HCX on {{site.data.keyword.cloud_notm}} 관리](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghcx)
 * [HCX 용어집](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
 * [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
-* [VMware Hybrid Cloud Extension 개요](https://cloud.vmware.com/vmware-hcx)
-* [VMware Hybrid Cloud Extension 문서](https://cloud.vmware.com/vmware-hcx/resources)
+* [VMware Hybrid Cloud Extension 개요](https://cloud.vmware.com/vmware-hcx){:external}
+* [VMware Hybrid Cloud Extension 문서](https://cloud.vmware.com/vmware-hcx/resources){:external}

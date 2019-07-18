@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-02"
 
 subcollection: vmware-solutions
 
@@ -30,7 +30,8 @@ Essa conexão cria uma interconectividade fracamente acoplada entre no local e o
 * Criptografia – o tráfego de rede é criptografado com segurança entre os dois
 lados.
 * Rede otimizada – seleciona a melhor conexão e faz com que, de maneira eficiente, ela tenha uma sobrecarga a fim de que o tráfego da rede seja movido o mais rápido possível.
-* Deduplicação de dados - uma redução de até 50% no tráfego de rede pode ser alcançada no roteamento Inteligente - quando uma carga de trabalho é movida, o roteamento de proximidade pode mudar o caminho de rede (ou seja, gateway) para que o tráfego de rede use o gateway do site de destino e não faça "hairpin" de volta ao site de origem.
+* Deduplicação de dados - pode-se atingir até 50% de redução no tráfego de rede
+* Roteamento inteligente - quando uma carga de trabalho é movida, o roteamento de proximidade pode mudar o caminho da rede (ou seja, o gateway) para que o tráfego de rede use o gateway do site de destino e não "recue" para o site de origem.
 * Migração de tempo de inatividade zero - um sistema em execução pode ser movido para e de volta da nuvem usando o vMotion.
 * Migração planejada - qualquer número de máquinas virtuais pode ser replicado para o site de destino e, em seguida, ativado nesse site em um horário designado, que substitui os sistemas que estão em execução no site de origem.
 * Migração de políticas de segurança - se o NSX for usado no local, quaisquer políticas de segurança ou firewalls serão

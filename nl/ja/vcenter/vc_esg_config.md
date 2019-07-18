@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server network config, network configuration, manage NSX ESG
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -22,7 +23,7 @@ subcollection: vmware-solutions
 
 VMware vCenter Server インスタンスにデプロイされている VMware NSX Edge Services Gateway (ESG) を活用できるように、仮想マシンのネットワークを構成します。 セキュリティー・リスクを最小化するために適用されるセキュリティー対策について詳しくは、[管理サービスの NSX Edge にはセキュリティーのリスクがありますか?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-) を参照してください。
 
-VMware NSX は、分離したネットワークの仮想化を可能にし、スイッチ、ルーティング、ファイアウォールなどの複数のネットワーク・サービスを提供するネットワーク仮想化プラットフォームです。 NSX について詳しくは、[NSX の概要](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}を参照してください。
+VMware NSX は、分離したネットワークの仮想化を可能にし、スイッチ、ルーティング、ファイアウォールなどの複数のネットワーク・サービスを提供するネットワーク仮想化プラットフォームです。 NSX について詳しくは、[NSX の概要](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:external}を参照してください。
 
 vCenter Server インスタンスの注文プロセスの中で、以下のアクションが自動的に実行されます。
 * VM (仮想マシン) が {{site.data.keyword.cloud}} インフラストラクチャーのプライベート・ネットワークにアクセスするために使用する、プライベート・カスタマー・サブネットが注文されます。
@@ -69,7 +70,7 @@ vCenter Server インスタンスの注文プロセスの中で、以下のア�
 3. **「管理」>「NAT」**をクリックして、**「NAT」**タブを開きます。
 4. テーブルでデフォルトの SNAT ルールを選択し、テーブルの上にある緑色のチェック・マークをクリックしてそのルールを有効にします。
 
-NSX Edge NAT ルールについて詳しくは、[NAT ルールの管理](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}を参照してください。
+NSX Edge NAT ルールについて詳しくは、[NAT ルールの管理](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:external}を参照してください。
 
 ## カスタマー・サブネットの詳細を指定する手順
 {: #vc_esg_config-procedure-identify-customer-subnets-details}
@@ -88,7 +89,7 @@ NSX Edge NAT ルールについて詳しくは、[NAT ルールの管理](https:
 2. フィルター・メニューをクリックし、VMware vSphere Web クライアントの **customer-nsx-edge** の説明に表示されていた識別子を**「サブネット」**フィールドに入力します。
 3. IP アドレスについて表示されるメモを確認します。 これらのメモに、初期セットアップ時に注文され、使用されたサブネットと IP アドレスが示されています。
 
-   初期セットアップ時に注文され、使用された IP アドレスは使用しないでください。 ただし、必要に応じてこれらのサブネット上の他の IP アドレスを使用できます。 追加のネットワーク・アドレス変換ルールをセットアップするには、[NAT ルールの管理](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}を参照してください。
+   初期セットアップ時に注文され、使用された IP アドレスは使用しないでください。 ただし、必要に応じてこれらのサブネット上の他の IP アドレスを使用できます。 追加のネットワーク・アドレス変換ルールをセットアップするには、[NAT ルールの管理](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:external}を参照してください。
    {:important}
 
 ## 関連リンク
@@ -96,4 +97,4 @@ NSX Edge NAT ルールについて詳しくは、[NAT ルールの管理](https:
 
 * [トラブルシューティング](/docs/services/vmwaresolutions?topic=vmware-solutions-vcenter_chg_impact#vcenter_chg_impact)
 * [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}
+* [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:external}

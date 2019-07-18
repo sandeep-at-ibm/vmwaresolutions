@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-26"
 
 keywords: IBM Cloud Private, ICP, tech specs ICP
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -26,27 +27,25 @@ subcollection: vmware-solutions
 * V2.7 이상에 배치되는(또는 업그레이드되는) vCenter Server with Hybridity Bundle 인스턴스
 * V2.5 이상에 배치되는(또는 업그레이드되는) vCenter Server 인스턴스
 
-V3.0 이상에 배치되는(또는 업그레이드되는) 인스턴스의 경우 {{site.data.keyword.cloud_notm}} Automation Manager는 {{site.data.keyword.cloud}} Private Hosted 서비스 주문의 일부로도 배치됩니다.
+설치된 현재 IBM Cloud Private 버전은 3.1.2입니다. {{site.data.keyword.cloud_notm}} Automation Manager는 {{site.data.keyword.cloud}} Private Hosted 서비스 주문의 일부로도 배치됩니다.
 {:note}
+
 
 ## IBM Cloud Private Hosted의 기술 스펙
 {: #icp_overview-specs}
 
 다음 표에는 **프로덕션에 사용 가능** 환경 및 **개발/테스트** 환경에 대한 IBM Cloud Private Hosted 서비스를 주문하는 데 필요한 최소 요구사항이 나열되어 있습니다.
 
-표 1. 프로덕션에 사용 가능 및 개발/테스트 환경에 대한 최소 요구사항
-
 |환경 | 코어 수 |  메모리(GB) | 호스트 수 | 스토리지(GB) |
 |:---------- |:---- |:------ |:---- |:------- |
 | 프로덕션에 사용 가능 | 52 | 640 | 3 | 8,000 |
 | 개발/테스트 | 30 | 200 | 3 | 4,000 |
+{: caption="표 1. 프로덕션에 사용 가능 및 개발/테스트 환경에 대한 최소 요구사항" caption-side="top"}
 
 ### IBM Cloud Private Hosted에 대한 리소스 요구사항
 {: #icp_overview-resource-req}
 
-다음 표에는 프로덕션에 사용 가능 및 개발/테스트 환경의 {{site.data.keyword.cloud_notm}} Private Hosted 서비스에 대한 리소스 요구사항이 나열되어 있습니다.
-
-표 2. 프로덕션에 사용 가능 환경의 {{site.data.keyword.cloud_notm}} Private Hosted 리소스 요구사항
+다음 표에는 프로덕션에 사용 가능 환경의 {{site.data.keyword.cloud_notm}} Private Hosted 서비스에 대한 리소스 요구사항이 나열되어 있습니다.
 
 | 노드 유형  | CPU 코어 수   |  메모리(GB) | 디스크 1(GB) | 디스크 2(GB) | VM 수 |
 |:---------- |:----------- |:------------ |:----------- |:----------- |:------------- |
@@ -60,8 +59,9 @@ V3.0 이상에 배치되는(또는 업그레이드되는) 인스턴스의 경우
 | NFS 서버 |8 | 4  | 350 |1 |1 |
 | NSX Edge Services Gateway |2 |1 | 0.5 | 0.5 |2 |
 | 문서화된 제한조건 | 52 | 640 |  | 8,000 |   |
+{: caption="표 2. 프로덕션에 사용 가능 환경" caption-side="top"}
 
-표 3. 개발/테스트 환경의 {{site.data.keyword.cloud_notm}} Private Hosted 리소스 요구사항
+다음 표에는 개발 및 테스트 환경의 {{site.data.keyword.cloud_notm}} Private Hosted 서비스에 대한 리소스 요구사항이 나열되어 있습니다.
 
 | 노드 유형  | CPU 코어 수   |  메모리(GB) | 디스크 1(GB) | 디스크 2(GB) | VM 수 |
 |:---------- |:----------- |:------------ |:----------- |:----------- |:------------- |
@@ -75,6 +75,7 @@ V3.0 이상에 배치되는(또는 업그레이드되는) 인스턴스의 경우
 | NFS 서버 |8 | 4  | 350 |1 |1 |
 | NSX Edge Services Gateway |2 |1 | 0.5 | 0.5 |2 |
 | 문서화된 제한조건 | 30 | 200 |  | 4,000 |  |
+{: caption="표 3. {{site.data.keyword.cloud_notm}} 개발 및 테스트 환경" caption-side="top"}
 
 ### IBM Cloud Private Hosted 공간 요구사항을 계산하기 위한 공식
 {: #icp_overview-formulas}
@@ -84,9 +85,9 @@ V3.0 이상에 배치되는(또는 업그레이드되는) 인스턴스의 경우
 #### 사용 가능한 코어 수를 계산하는 공식
 {: #icp_overview-formulas-1}
 
-`AvailableCores = [HostCoreCount - HostOverheadCores - (HostVSanOverheadCorePercentage * HostCoreCount)] * (HostCount - vSphereHAHostTolerance) - MgmtOverheadCores`
+다음 표에는 공식 1의 변수가 나열되어 있습니다.
 
-표 4. 공식 1의 변수에 대한 설명
+`AvailableCores = [HostCoreCount - HostOverheadCores - (HostVSanOverheadCorePercentage * HostCoreCount)] * (HostCount - vSphereHAHostTolerance) - MgmtOverheadCores`
 
 | 변수 |설명 |단위 |vSAN 예제 | NFS 예제 |
 |:--------- |:----------- |:---- |:------------- |:----------- |
@@ -97,13 +98,14 @@ V3.0 이상에 배치되는(또는 업그레이드되는) 인스턴스의 경우
 | MgmtOverheadCores |vCenter Server 관리 컴포넌트(vCenter Server, PSC, AD/DNS, Edges)에 의해 예약되는 코어의 수(5개 코어와 동일함) | 코어 수 |5 |5 |
 | vSphereHAHostTolerance |vSphere HA 구성에서 허용하는 호스트 수(하나의 호스트와 동일함) |	 호스트 수	 |1 |1 |
 | HostVsanOverheadCorePercentage | vSAN에서 사용되는 호스트 코어의 백분율이며 10%이거나 호스트가 비vSAN인 경우 0% | % | 10% |0% |
+{: caption="표 4. 공식 1의 변수에 대한 설명" caption-side="top"}
 
 #### 사용 가능한 메모리를 계산하는 공식
 {: #icp_overview-formulas-2}
 
-`AvailableMemory = [HostMemory - HostOverheadMemory - HostVsanOverheadMemory - (HostVsanOverheadMemoryDiskPercentage * HostVsanCapacityDiskSize)] * (HostCount - vSphereHAHostTolerance) - MgmtOverheadMemory`
+다음 표에는 공식 2의 변수가 나열되어 있습니다.
 
-표 5. 공식 2의 변수에 대한 설명
+`AvailableMemory = [HostMemory - HostOverheadMemory - HostVsanOverheadMemory - (HostVsanOverheadMemoryDiskPercentage * HostVsanCapacityDiskSize)] * (HostCount - vSphereHAHostTolerance) - MgmtOverheadMemory`
 
 | 변수 |설명 |단위 |vSAN 예제 | NFS 예제 |
 |:--------- |:----------- |:---- |:------------- |:----------- |
@@ -116,6 +118,7 @@ V3.0 이상에 배치되는(또는 업그레이드되는) 인스턴스의 경우
 | vSphereHAHostTolerance |vSphere HA 구성에서 허용하는 호스트 수(하나의 호스트와 동일함) | 호스트 수	|1 |1 |
 | HostVsanOverheadMemoryDiskPercentage | vSAN 관리(용량 vSAN 디스크 중 하나의 백분율로 표시됨)에 의해 예약되는 메모리의 크기(GB)이며 2.75%와 같음 | % | 2.75% | 2.75% |
 | HostVsanOverheadMemory | 디스크 크기와 상관없이 vSAN 관리에 의해 예약되는 메모리의 크기(GB)이며 7GB이거나 호스트가 비vSAN인 경우 0GB임 | GB |7 | 0 |
+{: caption="표 5. 공식 2의 변수에 대한 설명" caption-side="top"}
 
 ## IBM Cloud Private Hosted 설치 시 고려사항
 {: #icp_overview-install}
@@ -136,6 +139,6 @@ V3.0 이상에 배치되는(또는 업그레이드되는) 인스턴스의 경우
 
 * [{{site.data.keyword.cloud_notm}} Private Hosted 주문](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_ordering)
 * [vCenter Server 및 {{site.data.keyword.cloud_notm}} Private 안내서](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [{{site.data.keyword.cloud_notm}} Private의 티켓 열기](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
-* [{{site.data.keyword.cloud_notm}} Automation Manager 라이센스 부여](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/licensing.html){:new_window}
-* [{{site.data.keyword.cloud_notm}} Automation Manager 컴포넌트](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/cam_managed_components.html){:new_window}
+* [{{site.data.keyword.cloud_notm}} Private의 티켓 열기](https://www.ibm.com/mysupport/s/?language=en_US){:external}
+* [{{site.data.keyword.cloud_notm}} Automation Manager 라이센스 부여](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/licensing.html){:external}
+* [{{site.data.keyword.cloud_notm}} Automation Manager 컴포넌트](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/cam_managed_components.html){:external}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-06-27"
 
 subcollection: vmware-solutions
 
@@ -23,7 +23,7 @@ subcollection: vmware-solutions
 ## 向 vCenter 登錄 HCX Manager 的程序
 {: #hcx-archi-reg-vcenter-proc-register}
 
-1. 登入 Hybrid Cloud Services 服務虛擬應用裝置。
+1. 登入 Hybrid Cloud Services 服務虛擬應用裝置。例如，`https:My-HCX-Manager:9443/`。
 2. 按一下**管理設定**磚。
   1. 在左窗格的**配置系統**下，選取 vCenter。
   2. 按一下右上方的**新增 vCenter**。

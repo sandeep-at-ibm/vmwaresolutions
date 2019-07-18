@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-20"
 
 keywords: planning NetApp ONTAP, data center, NetApp data centers
 
@@ -27,8 +27,6 @@ NetApp ONTAP Select インスタンスを注文する前に、以下の要件を
 {: #np_planning-dc-availability}
 
 NetApp ONTAP Select のデプロイメントには、物理インフラストラクチャーに関して厳密な要件があります。 そのため、要件を満たす {{site.data.keyword.CloudDataCents_notm}}にしかインスタンスはデプロイできません。 NetApp ONTAP Select のデプロイメントには、以下の {{site.data.keyword.CloudDataCents_notm}}を使用できます。
-
-表 1. NetApp ONTAP Select インスタンスに使用できる {{site.data.keyword.CloudDataCents_notm}}
 
 | {{site.data.keyword.CloudDataCent_notm}} | ロケーション | 地域 | サーバー・オプション |
 |:------|:----------------|:----------------|:---------------------------|
@@ -62,6 +60,7 @@ NetApp ONTAP Select のデプロイメントには、物理インフラストラ
 | WDC04 | ワシントン、DC | 北米東部 | ハイパフォーマンス (ミディアム)、ハイパフォーマンス (ラージ)、大容量
 | WDC06 | ワシントン、DC | 北米東部 | ハイパフォーマンス (ミディアム)、ハイパフォーマンス (ラージ)、大容量
 | WDC07 | ワシントン、DC | 北米東部 | ハイパフォーマンス (ミディアム)、ハイパフォーマンス (ラージ)、大容量
+{: caption="表 1. NetApp ONTAP Select インスタンスに使用できる {{site.data.keyword.CloudDataCents_notm}}" caption-side="top"}
 
 ## 関連リンク
 {: #np_planning-related}

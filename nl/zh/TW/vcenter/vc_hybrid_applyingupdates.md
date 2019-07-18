@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-06-30"
 
 keywords: vCenter Server Hybridity update, patch vCenter Server Hybridity, IBM component update
 
@@ -44,13 +44,12 @@ subcollection: vmware-solutions
 
 下表顯示不同的更新層次對於系統有何影響。
 
-表 1. 更新層次及影響
-
 |更新層次|影響|  
 |:------------- |:------------- |
 |低|此更新不會影響任何系統。您不需要在排定的關閉時間套用它。|  
 |中|此更新可能會影響部分系統。建議您在排定的關閉時間套用它。|  
-|重大|此更新會影響部分或所有系統。您必須在排定的關閉時間套用它。|  
+|重大|此更新會影響部分或所有系統。您必須在排定的關閉時間套用它。|
+{: caption="表 1. 更新層次及影響" caption-side="top"}
 
 ## 套用 IBM 管理元件更新的程序（實例 2.3 版及 2.4 版）
 {: #vc_hybrid_applyingupdates-procedure}

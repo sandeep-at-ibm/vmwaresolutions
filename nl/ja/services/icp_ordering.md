@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-20"
 
 keywords: IBM Cloud Private Hosted, ICP configuration, order Cloud Private
 
@@ -23,14 +23,14 @@ subcollection: vmware-solutions
 
 以下のいずれかの方法を使用して、{{site.data.keyword.cloud_notm}} Private Hosted サービスを組み込む形で新しいインスタンスを注文できます。
 * {{site.data.keyword.vmwaresolutions_short}} コンソールから新しいインスタンスを注文する時に、**「オプション・サービス」**セクションの**「IBM Cloud Private Hosted」**を選択します。
-* {{site.data.keyword.cloud_notm}} カタログから**「IBM Cloud Private Hosted」**を選択し、サービス設定を指定し、**「新規インスタンスに追加」**を選択します。
+* {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**アイコンをクリックしてから、**「VMware サービス」**セクションの**「IBM Cloud Private Hosted」**カードをクリックします。サービス設定を指定し、**「Add to New Instance」**を選択します。
 
 ## 既存のインスタンスでの IBM Cloud Private Hosted の注文
 {: #icp_ordering-existing}
 
 以下のいずれかの方法を使用して、既存のインスタンスに {{site.data.keyword.cloud_notm}} Private Hosted サービスを追加できます。
 * {{site.data.keyword.vmwaresolutions_short}} コンソールから、サービスを追加する対象のインスタンスを表示し、左側のナビゲーション・ペインにある**「サービス」**をクリックし、**「追加」**をクリックします。
-* {{site.data.keyword.cloud_notm}} カタログから**「IBM Cloud Private Hosted」**を選択し、サービス設定を指定し、**「既存のインスタンスに追加」**を選択します。
+* {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**アイコンをクリックしてから、**「VMware サービス」**セクションの**「IBM Cloud Private Hosted」**カードをクリックします。サービス設定を指定し、**「Add to Existing Instance」**を選択します。
 
 ## IBM Cloud Private Hosted サービスの構成
 {: #icp_ordering-config}

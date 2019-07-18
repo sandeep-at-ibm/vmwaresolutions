@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server Hybridity compliance, compliance info Hybridity, vCenter Server Hybridity policy
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # Informazioni sulla conformità per le istanze vCenter Server with Hybridity Bundle
 {: #vc_hybrid_compl_info}
@@ -76,7 +78,7 @@ Gli ambienti vCenter Server, che vengono forniti come {{site.data.keyword.vmware
 * A causa del livello di specializzazione richiesto per mantenere una competenza tecnica superiore a livello di team, a volte è necessario coinvolgere più di un team di supporto nella risoluzione di un particolare problema software. Questo è gestito facilmente, poiché i nostri team di supporto sono tutti collegati in rete e lavorano come una squadra per risolvere i problemi o le questioni che vengono individuati.
 * Per analizzare il problema, IBM potrebbe avere bisogno di accedere alle informazioni sul tuo sistema relative all'errore o potrebbe essere necessario ricreare l'errore per ottenere ulteriori informazioni.
 * Un certificato di supporto generato dal cliente serve come riconoscimento che il supporto IBM può accedere al livello di gestione VMware per le indagini, il debug e l'intervento. Se sono necessari l'interruzione della manutenzione o delle modifiche all'ambiente, il supporto IBM richiederà una ulteriore conferma documentata dal cliente tramite ticket come parte del nostro processo di gestione delle modifiche.
-* Per ulteriori informazioni sui ticket di supporto, consulta [IBM Support Guide](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923) e [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
+* Per ulteriori informazioni sui ticket di supporto, consulta [IBM Support Guide](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923){:external} e [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
 
 ## Responsabilità del cliente
 {: #vc_hybrid_compl_info-client-responsibilities}
@@ -115,7 +117,7 @@ Gli ambienti vCenter Server, che vengono forniti come {{site.data.keyword.vmware
 * Questi programmi non IBM sono autorizzati direttamente dai loro provider. Il cliente accetta di utilizzare i programmi non IBM in base ai termini e alle condizioni del provider. Questi sono forniti nell'accordo di licenza IBM che accompagna l'offerta IBM al momento dell'acquisto.
 * IBM esegue test per garantire che i prodotti di terze parti funzionino con i programmi IBM e funzionino in modo appropriato.
 * Il supporto software IBM diagnosticherà i problemi relativi ai problemi del cliente utilizzando la conoscenza di come funzionano le nostre offerte IBM con il software di terze parti. Una volta concluso che il programma IBM funziona correttamente, ma il problema esiste ancora, IBM deve far fare riferimento al cliente al fornitore di terze parti per ulteriori diagnosi.
-* Ulteriori informazioni sulle responsabilità del cliente riguardo il codice o il software di terze parti possono essere trovate in [IBM Support Guide](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923).
+* Ulteriori informazioni sulle responsabilità del cliente riguardo il codice o il software di terze parti possono essere trovate in [IBM Support Guide](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923){:external}.
 
 ## Consenso all'accesso agli ambienti client
 {: #vc_hybrid_compl_info-consent-to-access-client-environment}

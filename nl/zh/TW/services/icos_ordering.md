@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-28"
 
 keywords: IBM Cloud Object Storage, ICOS configuration, order Cloud Object Storage
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -44,12 +45,12 @@ subcollection: vmware-solutions
 
 * 作為 Veeam 服務安裝和配置的一部分，將建立一個名為 `IC4V 橫向擴充儲存庫`的橫向擴充備份儲存庫。`IC4V 預設 VM 備份儲存庫`將作為範圍新增到橫向擴充儲存庫。
 * 建立備份工作時，必須選取 `IC4V 橫向擴充儲存庫`作為備份儲存庫，而不是選取 `IC4V 預設配置備份儲存庫`。IC4V 預設配置備份儲存庫是用於 Veeam 配置備份。
-* 您可以將更多儲存庫新增到此預設儲存庫，例如，類型為 Object Storage 的備份儲存庫。如需相關資訊，請參閱 [Adding Scale-Out Repositories](https://helpcenter.veeam.com/docs/backup/vsphere/sobr_add.html?ver=95u4){:new_window}。請遵循這些步驟並回到本節，以繼續執行下列作業。
+* 您可以將更多儲存庫新增到此預設儲存庫，例如，類型為 Object Storage 的備份儲存庫。如需相關資訊，請參閱 [Adding Scale-Out Repositories](https://helpcenter.veeam.com/docs/backup/vsphere/sobr_add.html?ver=95u4){:external}。請遵循這些步驟並回到本節，以繼續執行下列作業。
 
 ## 維護及管理雲端層級
 {: #icos_ordering-manage-cloud}
 
-如需相關資訊，請參閱 [Managing Capacity Tier Data](https://helpcenter.veeam.com/docs/backup/vsphere/capacity_tier_managing_data.html?ver=95u4){:new_window}。
+如需相關資訊，請參閱 [Managing Capacity Tier Data](https://helpcenter.veeam.com/docs/backup/vsphere/capacity_tier_managing_data.html?ver=95u4){:external}。
 
 ## 相關鏈結
 {: #icos_ordering-related}
@@ -57,6 +58,6 @@ subcollection: vmware-solutions
 * [Veeam on {{site.data.keyword.cloud_notm}} 概觀](/docs/services/vmwaresolutions?topic=vmware-solutions-veeam_considerations)
 * [訂購 Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_ordering)
 * [管理 Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
-* [要求 Veeam on {{site.data.keyword.cloud_notm}} 的受管理服務](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
+* [Managed Services for Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
 * [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [常見問題](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)

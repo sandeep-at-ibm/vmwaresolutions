@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-26"
 
 keywords: user account, ibm cloud account, ibm cloud infrastructure
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -37,6 +38,6 @@ subcollection: vmware-solutions
 
 * [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [{{site.data.keyword.cloud_notm}} 인프라 계정에 대한 요구사항](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req)
-* [동영상 - {{site.data.keyword.cloud_notm}} 계정을 작성하는 방법](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
+* [동영상 - {{site.data.keyword.cloud_notm}} 계정을 작성하는 방법](https://www.youtube.com/watch?v=HBkY-Fs1d6E){:external}
 * [vCenter Server 인스턴스 주문](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
 * [IBM ID로 전환 및 계정 연결](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)

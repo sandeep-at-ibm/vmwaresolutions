@@ -18,7 +18,7 @@ subcollection: vmware-solutions
 # Arquitectura de origen de VMware HCX on IBM Cloud
 {: #hcx-archi-source}
 
-Revise la arquitectura de cada componente de HCX que se despliega en el entorno de origen. 
+Revise la arquitectura de cada componente de HCX que se despliega en el entorno de origen.
 
 ## Introducción a HCX
 {: #hcx-archi-source-intro-hcx}
@@ -28,7 +28,7 @@ La tecnología HCX integra fácilmente redes vSphere vCenter en la plataforma VC
 En esta introducción encontrará un resumen de las tareas que se pueden llevar a cabo y las características que dan soporte y mejoran la migración y la extensión de red.
 
 * HCX es propietario de los procesos de cifrado y de descifrado de origen y de destino, lo que garantiza la seguridad y proporciona métodos de admisión para flujos de trabajo híbridos, como migración de máquinas virtuales y extensión de red.
-* HCX crea una WAN optimizada definida por software para aumentar el rendimiento de la red extendida, ofreciendo un rendimiento que se acerca a la velocidad de la LAN. 
+* HCX crea una WAN optimizada definida por software para aumentar el rendimiento de la red extendida, ofreciendo un rendimiento que se acerca a la velocidad de la LAN.
 * HCX también permite la carga de trabajo bidireccional y la migración de políticas de seguridad de VMware NSX a los servicios de red de IBM Cloud.
 * HCX se integra con vSphere vCenter y se gestiona desde el cliente web de vSphere.
 
@@ -83,7 +83,7 @@ Las siguientes características de red están integradas en la pasarela de nube 
 
 HCX da soporte a una relación de muchos a muchos entre vCenters locales e IBM Cloud. Se da soporte a vCenter Server en modalidad enlazada.
 
-Durante la instalación, el dispositivo virtual HCX Manager se importa y se configura como plugin para el vCenter local. A continuación, este plugin se utiliza para configurar el despliegue del servicio WAN definido por software. La configuración automática suministra cada dispositivo de servicio híbrido como una máquina virtual en el vCenter local y despliega una máquina virtual correspondiente en IBM Cloud. 
+Durante la instalación, el dispositivo virtual HCX Manager se importa y se configura como plugin para el vCenter local. A continuación, este plugin se utiliza para configurar el despliegue del servicio WAN definido por software. La configuración automática suministra cada dispositivo de servicio híbrido como una máquina virtual en el vCenter local y despliega una máquina virtual correspondiente en IBM Cloud.
 
 Un despliegue satisfactorio necesita:
 * Suficientes recursos para los dispositivos virtuales
@@ -94,7 +94,7 @@ Un despliegue satisfactorio necesita:
 
 La máquina virtual de HCX Manager se instala en primer lugar, y gestiona la instalación de cualquier otro dispositivo de máquina virtual de servicio local las instalaciones y en la nube.
 
-Los pasos siguientes son tareas de instalación básicas: 
+Los pasos siguientes son tareas de instalación básicas:
 1. Obtenga el archivo OVA del dispositivo virtual Hybrid Cloud Enterprise.
 2. Desde el cliente web de vSphere, instale el dispositivo virtual de servicio de HCX Manager en el vCenter local que se conecta a IBM Cloud.
 3. Desde el cliente web de vSphere, registre un punto final de IBM Cloud con el plugin HCX. El registro establece la relación de uno a uno entre el HCX local y la instancia de HCX en IBM Cloud.
@@ -105,9 +105,9 @@ Los pasos siguientes son tareas de instalación básicas:
 ### Consideraciones sobre el rendimiento del componente de despliegue
 {: #hcx-archi-source-perf-consid}
 
-La planificación de la arquitectura incluye las VM que se van a migrar, las redes utilizadas para el tráfico de máquina virtual y las redes que se van a extender.  
+La planificación de la arquitectura incluye las VM que se van a migrar, las redes utilizadas para el tráfico de máquina virtual y las redes que se van a extender. 
 
-Los valores máximo y mínimo para los componentes de despliegue son: 
+Los valores máximo y mínimo para los componentes de despliegue son:
 * vSphere vCenter. El dispositivo HCX Manager se debe instalar en el vCenter que necesita los servicios híbridos. Solo puede haber un despliegue de HCX por vCenter. Esta restricción se aplica a la modalidad enlazada. El
 dispositivo de gestión de HCX solo se instala en el vCenter primario. HCX da soporte a un máximo de cinco vCenters registrados en modalidad enlazada.
 * Registros de nube. El número máximo de puntos finales de nube es diez. Para encontrar el número de puntos finales, Hybrid Cloud Services realiza un seguimiento de las conexiones de vCenter con la nube.
@@ -122,7 +122,7 @@ dispositivo de gestión de HCX solo se instala en el vCenter primario. HCX da so
 ### HCX Management Enterprise
 {: #hcx-archi-source-hcxme}
 
-HCX Management Enterprise OVA se despliega en el entorno de origen y se registra como plugin para el vCenter Server que gestiona la infraestructura de vSphere de origen. Luego este plugin se utiliza para configurar los servicios de migración y de red necesarios para habilitar la migración entre nubes y la extensión de red L2. 
+HCX Management Enterprise OVA se despliega en el entorno de origen y se registra como plugin para el vCenter Server que gestiona la infraestructura de vSphere de origen. Luego este plugin se utiliza para configurar los servicios de migración y de red necesarios para habilitar la migración entre nubes y la extensión de red L2.
 
 Solo puede haber un despliegue de HCX por vCenter. Esta restricción se aplica a la modalidad enlazada; el dispositivo HCX Manager solo se instala en el vCenter primario. HCX Manager da soporte a un máximo de cinco vCenters registrados en modalidad enlazada.
 {:note}
@@ -173,7 +173,7 @@ La migración de máquina virtual se basa en la combinación de pasarela de nube
 El concentrador de capa 2 (L2C) proporciona el servicio de extensión de red. Extiende la red de capa 2 desde el centro de datos de vSphere local a IBM Cloud y permite una integración sin problemas entre el centro de datos y la nube. El concentrador de capa 2 se necesita para extender la red local a IBM.
 
 El dispositivo Concentrador de capa 2 tiene dos interfaces:
-* Interfaz troncal interna: maneja el tráfico de la máquina virtual local para las redes ampliadas utilizando una correlación de puente de traslado con una red extendida correspondiente en IBM Cloud. 
+* Interfaz troncal interna: maneja el tráfico de la máquina virtual local para las redes ampliadas utilizando una correlación de puente de traslado con una red extendida correspondiente en IBM Cloud.
 * Interfaz de enlace ascendente: HCX utiliza esta interfaz para enviar el tráfico de superposición encapsulado a y desde IBM Cloud. Los datos de la aplicación viajan a través de esta interfaz.
 
 ![Concentrador L2 de origen](../../images/source_l2_concentrator.svg "Concentrador L2 de origen")
@@ -185,7 +185,7 @@ La configuración mínima para realizar la migración solo requiere el gestor de
 
 Para extender una red y mantener la dirección IP original, se debe configurar un conmutador virtual distribuido en el vSphere vCenter local.
 
-WAN Optimization puede mejorar la velocidad en las situaciones descritas. La configuración de la Pasarela de Cloud para utilizar una línea de alta velocidad (por ejemplo, una conexión directa) mejora la velocidad proporcionando un enlace de ancho de banda más alto para el tráfico optimizado de WAN. 
+WAN Optimization puede mejorar la velocidad en las situaciones descritas. La configuración de la Pasarela de Cloud para utilizar una línea de alta velocidad (por ejemplo, una conexión directa) mejora la velocidad proporcionando un enlace de ancho de banda más alto para el tráfico optimizado de WAN.
 
 La migración de máquinas virtuales en redes extendidas a IBM Cloud resulta ventajosa ya que reduce el tiempo de inactividad y la configuración no cambia en la máquina virtual. La máquina virtual puede conservar las direcciones IP, las direcciones MAC, los nombres de sistema y los nombres de máquina virtual. La conservación de estas propiedades simplifica enormemente la migración a IBM Cloud y permite realizar viajes de fácil retorno al centro de datos local. La característica de extensión de red requiere un conmutador distribuido de vSphere, que está disponible con vSphere Enterprise Plus Edition.
 
@@ -203,15 +203,15 @@ Para desplegar HCX, se debe disponer del número adecuado de direcciones IP tant
   * Una para cada concentrador de capa 2 estándar
 
 * IBM Cloud
-  * Dos direcciones IP por dispositivo de HCX Manager conectadas a IBM Cloud. Las direcciones se pueden utilizar para conectarse a Internet o a una o más líneas de Direct Connect. 
+  * Dos direcciones IP por dispositivo de HCX Manager conectadas a IBM Cloud. Las direcciones se pueden utilizar para conectarse a Internet o a una o más líneas de Direct Connect.
   * Una más una si hay una conexión de red de vMotion separada.
 
 ### Característica de direccionamiento de proximidad
 {: #hcx-archi-source-prox-routing-feat}
 
-El direccionamiento de proximidad es una característica de red, que se puede habilitar cuando se configura la pasarela de nube. 
+El direccionamiento de proximidad es una característica de red, que se puede habilitar cuando se configura la pasarela de nube.
 
-El direccionamiento de proximidad garantiza que el reenvío entre máquinas virtuales, que están conectadas a redes extendidas y direccionadas, tanto en el entorno local como en la nube, es simétrico. Esta característica requiere que el direccionamiento dinámico esté configurado entre el entorno local del cliente y la nube. 
+El direccionamiento de proximidad garantiza que el reenvío entre máquinas virtuales, que están conectadas a redes extendidas y direccionadas, tanto en el entorno local como en la nube, es simétrico. Esta característica requiere que el direccionamiento dinámico esté configurado entre el entorno local del cliente y la nube.
 
 Cuando los usuarios extienden sus redes a la nube, la conectividad de capa 2 se extiende a IBM Cloud. Sin embargo, sin la optimización de direccionamiento, las solicitudes de comunicación de capa 3 deben volver al origen de red local que se direccionen. Este viaje de retorno se denomina "tromboning" o "hairpinning".
 
@@ -229,7 +229,7 @@ En el diagrama, los componentes `N*a` de la izquierda residen en el centro de da
 
 R1 es la pasarela predeterminada para N1-b. Por lo tanto, N1-b debe volver a R1 para direccionar el tráfico a través de R2. Para evitar el direccionamiento asimétrico, HCX inyecta las rutas de host dentro de la superposición de NSX del despliegue de IBM Cloud VCS. Si la máquina virtual se ha creado recientemente en la nube, o se ha transferido con una migración con bajo tiempo de inactividad, la ruta de host se inyecta inmediatamente.
 
-Si la máquina virtual se ha transferido mediante vMotion, la ruta no se inyecta hasta que se rearranca la máquina virtual. El hecho de esperar a que se realice el rearranque garantiza que los dispositivos locales con estado siguen prestando servicio en la sesión existente hasta que se rearranca la máquina virtual. Después del rearranque, la información de direccionamiento es coherente tanto en el entorno local como en la nube. 
+Si la máquina virtual se ha transferido mediante vMotion, la ruta no se inyecta hasta que se rearranca la máquina virtual. El hecho de esperar a que se realice el rearranque garantiza que los dispositivos locales con estado siguen prestando servicio en la sesión existente hasta que se rearranca la máquina virtual. Después del rearranque, la información de direccionamiento es coherente tanto en el entorno local como en la nube.
 
 Es decir, R1 puede utilizar el direccionamiento para acceder a una determinada máquina virtual a través de R2, en lugar de utilizar la red extendida conectada localmente. R2 es el único propietario de la vía de acceso para que otras redes accedan a máquinas virtuales con direccionamiento de proximidad habilitado.
 
@@ -245,7 +245,7 @@ Es decir, R1 puede utilizar el direccionamiento para acceder a una determinada m
   * Orden de NIC de Linux: en Linux, si la dirección MAC se modifica en una máquina virtual, es posible que el número de dispositivo Ethernet de NIC se modifique tras el rearranque. El cambio de un número de dispositivo puede modificar el orden de presentación de NIC dentro del sistema operativo, interrumpiendo las aplicaciones o los scripts que dependen del orden de NIC.
   * Menos tiempo de inactividad si la red está extendida: si la máquina virtual se migra sobre una red extendida, el hecho de habilitar la opción **Conservar MAC** minimiza el tiempo de inactividad porque la red no tiene que aprender una nueva dirección MAC.
   * El recuadro de selección se encuentra en la página **Seleccionar red de destino**
-durante la operación de migración. 
+durante la operación de migración.
 
 ### Migración de políticas de seguridad
 {: #hcx-archi-source-sec-policy-mig}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-28"
 
 keywords: NetApp migrate instance, add account NetApp ONTAP, migrate cloud account
 
@@ -12,6 +12,12 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+
 
 # Migrando instâncias do NetApp ONTAP Select pré-V2.5 para contas do IBM Cloud
 {: #np_addinstancetousraccount}
@@ -25,7 +31,7 @@ Para obter instâncias que foram implementadas na V2.4 e em liberações anterio
 
 Assegure-se de que a conta do {{site.data.keyword.cloud_notm}} para a qual você deseja migrar a instância não seja uma conta somente IaaS. Uma conta somente IaaS é uma conta de infraestrutura {{site.data.keyword.cloud_notm}} (IBM Cloud) que não está vinculada a uma conta do {{site.data.keyword.cloud_notm}}.
 
-Para obter mais informações sobre como vincular sua conta somente IaaS à sua conta PaaS, consulte [Siga estas etapas para vincular suas contas IaaS e PaaS](https://www.ibm.com/cloud/blog/follow-steps-link-iaas-paas-accounts){:new_window}.
+Para obter mais informações sobre como vincular sua conta somente IaaS à sua conta PaaS, consulte [Siga estas etapas para vincular suas contas IaaS e PaaS](https://www.ibm.com/cloud/blog/follow-steps-link-iaas-paas-accounts){: external}.
 
 ## Procedimento para migrar instâncias
 {: #np_addinstancetousraccount-procedure}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-06"
+lastupdated: "2019-07-01"
 
 ---
 
@@ -24,19 +24,19 @@ vRLI(vRealize Log Insight)는 {{site.data.keyword.vmwaresolutions_full}} 환경�
 
 이 디자인의 각 위치에는 관리 클러스터에 배치된 별도의 vRLI 클러스터가 있습니다. vRLI 클러스터는 {{site.data.keyword.cloud_notm}} 포터블 IP 주소를 사용하여 도구 서브넷에 배치됩니다. 이를 통해 {{site.data.keyword.cloud_notm}} RFC1918 주소 공간 밖에서 처리되는 모든 컴포넌트와 쉽게 통신할 수 있습니다. 이 컴포넌트에는 vSphere 호스트, Platform Services Controller, NSX Manager 및 NSX Controller가 포함됩니다. vRLI 클러스터에는 마스터 노드와 최소 두 개의 작업자 노드(통합된 로드 밸런서 포함)가 있습니다.
 
-* 마스터 노드 - 클러스터에 필요한 초기 노드입니다. 마스터 노드는 조회 및 로그 수집을 담당합니다. 마스터 노드 웹 UI는 해당 vRealize Log Insight Cluster의 단일 분할창 방식입니다. 데이터에 대한 모든 조회는 워크로드를 다시 작업자에게 분배하는 마스터를 대상으로 합니다. 
-* 마스터 노드 - 스케일 확장을 위해 더 많은 작업자를 추가할 수 있는 기능을 사용하여 클러스터를 구성하려면 최소 세 개의 노드가 필요합니다. 작업자 노드는 로그를 수집하고 로컬로 로그를 저장합니다. 
-* 통합된 로드 밸런서 - 전용 로드 밸런싱 구성을 사용하여 고가용성을 제공합니다(추가 로드 밸런서는 필요하지 않음). 
-* Log Insight 포워더 - NSX 오버레이 컴포넌트에서 로그를 수신하도록 배치됩니다. 또한 컴퓨팅 VM에서 로그를 전송할 경우 클라이언트에서 활용할 수 있습니다. Log Insight 포워더는 vRLI 클러스터에 경보를 전송하도록 원격 Syslog 집계자로 사용되는 단일 vRealize Log Insight 마스터 노드입니다. VXLAN 지원 주소가 BYOIP 주소 공간 밖에 있음에 따라 NAT 규칙은 NSX ESG에서 구현되어야 합니다. 
+* 마스터 노드 - 클러스터에 필요한 초기 노드입니다. 마스터 노드는 조회 및 로그 수집을 담당합니다. 마스터 노드 웹 UI는 해당 vRealize Log Insight Cluster의 단일 분할창 방식입니다. 데이터에 대한 모든 조회는 워크로드를 다시 작업자에게 분배하는 마스터를 대상으로 합니다.
+* 마스터 노드 - 스케일 확장을 위해 더 많은 작업자를 추가할 수 있는 기능을 사용하여 클러스터를 구성하려면 최소 세 개의 노드가 필요합니다. 작업자 노드는 로그를 수집하고 로컬로 로그를 저장합니다.
+* 통합된 로드 밸런서 - 전용 로드 밸런싱 구성을 사용하여 고가용성을 제공합니다(추가 로드 밸런서는 필요하지 않음).
+* Log Insight 포워더 - NSX 오버레이 컴포넌트에서 로그를 수신하도록 배치됩니다. 또한 컴퓨팅 VM에서 로그를 전송할 경우 클라이언트에서 활용할 수 있습니다. Log Insight 포워더는 vRLI 클러스터에 경보를 전송하도록 원격 Syslog 집계자로 사용되는 단일 vRealize Log Insight 마스터 노드입니다. VXLAN 지원 주소가 BYOIP 주소 공간 외부에 있으므로 NAT 규칙은 NSX ESG에서 구현되어야 합니다.
 
-다음 크기가 사용 가능하며 적합한 크기가 선택됩니다. 
+다음 크기가 사용 가능하며 적합한 크기가 선택됩니다.
 * 소형 - 초당 2,000개의 이벤트
 * 중형 - 초당 5,000개의 이벤트
 * 대형 - 초당 15,000개의 이벤트
 
 ![Log Insights 컴포넌트 다이어그램](../../images/opsmgmt-vrlicomponents.svg "Log Insights 컴포넌트 다이어그램")
 
-vRLI는 중앙 위치에서 환경에 대한 모니터링 정보를 제공하기 위해 로그를 수집합니다. 
+vRLI는 중앙 위치에서 환경에 대한 모니터링 정보를 제공하기 위해 로그를 수집합니다.
 
 vRLI는 다음과 같은 가상 인프라 및 클라우드 관리 컴포넌트(로깅 클라이언트)에서 로그 이벤트를 수집합니다.
 * vCenter
@@ -91,7 +91,7 @@ vRLI 어플라이언스 배치 시 도구 사설 포터블 서브넷에서 세 �
 * 고객 네트워크
 * NTP 서버(`time.services.softlayer.com`)
 * {{site.data.keyword.vmwaresolutions_short}} Active Directory/DNS
-* 원격 콜렉터에는 마스터 노드, 마스터 노드 복제본 및 데이터 노드에 대한 연결을 사용으로 설정할 수 있도록 NSX ESG의 NAT 규칙이 필요합니다. 
+* 원격 콜렉터에는 마스터 노드, 마스터 노드 복제본 및 데이터 노드에 대한 연결을 사용으로 설정할 수 있도록 NSX ESG의 NAT 규칙이 필요합니다.
 
 ## 포트
 {: #opsmgmt-vrli-ports}
@@ -117,7 +117,7 @@ vRLI 어플라이언스 배치 시 도구 사설 포터블 서브넷에서 세 �
 ## 인증
 {: #opsmgmt-vrli-auth}
 
-vRLI를 위한 사용자 관리에는 Active Directory와 통합하는 vIDM(VMware Identity Manager)가 필요합니다. 서비스 계정은 메트릭 콜렉션 및 토폴로지 맵핑에 필요한 최소 권한 세트를 사용하여 vRealize Operations Manager부터 다음 어댑터까지의 애플리케이션 대 애플리케이션 통신에 사용됩니다. 
+vRLI를 위한 사용자 관리에는 Active Directory와 통합하는 vIDM(VMware Identity Manager)가 필요합니다. 서비스 계정은 메트릭 콜렉션 및 토폴로지 맵핑에 필요한 최소 권한 세트를 사용하여 vRealize Operations Manager부터 다음 어댑터까지의 애플리케이션 대 애플리케이션 통신에 사용됩니다.
 * NSX Manager
 * vCenter
 * vSAN

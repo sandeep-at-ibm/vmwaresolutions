@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-26"
 
 keywords: FAQ, user account, patch management
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -77,11 +78,11 @@ subcollection: vmware-solutions
 
 當第三個節點新增至雙節點叢集時，vCenter Server 會自動在三個節點之間重新平衡三個 NSX Controller，並建立高可用性環境。
 
-## 我可以設定 VMware vCenter 6.5 HA 配置嗎？
+## 我可以設定 VMware vCenter HA 配置嗎？
 {: #faq-ha}
 {: faq}
 
-不，不建議這麼做。可能會發生 {{site.data.keyword.vmwaresolutions_short}} 功能失敗。
+您可以配置 vCenter HA，但 {{site.data.keyword.vmwaresolutions_short}} 未提供配置支援。
 
 ## 叢集可以重新命名嗎？
 {: #faq-rename-cluster}
@@ -103,7 +104,7 @@ IBM 提供 IBM 程式碼的持續更新，方法是隨需應變部署 IBM CloudD
 對於在 2.0 版或更新版本上部署的實例，VMware Update Manager (VUM) 已整合至 vCenter Server。您可以配置 VUM 來下載 VMware 的 ESXi 更新。
 
 如需相關資訊，請參閱下列資源：
-* [VMware 支援](https://www.vmware.com/support.html)
+* [VMware 支援](https://www.vmware.com/support.html){:external}
 * [將更新套用至 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates)
 * [將更新套用至 vCenter Server with Hybridity Bundle 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_applyingupdates)
 
@@ -149,7 +150,7 @@ IBM 提供 IBM 程式碼的持續更新，方法是隨需應變部署 IBM CloudD
 {: #faq-vss-automation}
 {: faq}
 
-否，VMware vSphere on {{site.data.keyword.cloud_notm}} 未使用 vCenter Server 平台中的進階自動化。根據您訂購的內容，平台會提供選用的 VMware 授權、ESXi 伺服器，以及選擇性地提供 FortiGate 實體防火牆的 HA 配對。如果建立新的叢集，則也會佈建三個新的 VLAN：一個公用 VLAN，兩個專用 VLAN。
+否。VMware vSphere on {{site.data.keyword.cloud_notm}} 並未使用來自 vCenter Server 平台的進階自動化。根據您訂購的內容，平台會提供選用的 VMware 授權、ESXi 伺服器，以及選擇性地提供 FortiGate 實體防火牆的 HA 配對。如果建立新的叢集，則也會佈建三個新的 VLAN：一個公用 VLAN，兩個專用 VLAN。
 
 VMware ESXi 會自動安裝在每一部裸機伺服器上，但您必須負責安裝其他任何 VMware 元件，諸如 vCenter Server 或 NSX。雖然 vSphere on {{site.data.keyword.cloud_notm}} 可確保根據所選取的 VMware 元件來訂購 VMware 相容硬體，但沒有自動化可配置及啟動 VMware 環境。您必須負責設計及架構 IBM 管理的環境。
 

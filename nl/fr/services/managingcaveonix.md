@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-28"
 
 keywords: Caveonix console, Caveonix RiskForesight license, login Caveonix console
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -38,7 +39,7 @@ Pour gérer le service Caveonix RiskForesight on {{site.data.keyword.cloud}}, vo
 ## Application de mises à jour à Caveonix RiskForesight on IBM Cloud
 {: #managingcaveonix-update}
 
-C'est à vous qu'il incombe de faire en sorte que le logiciel Caveonix RiskForesight soit toujours utilisé dans sa version la plus récente. Vous pouvez télécharger les mises à jour requises à partir de la page [Caveonix Service Provider Portal](https://support.caveonix.com).
+C'est à vous qu'il incombe de faire en sorte que le logiciel Caveonix RiskForesight soit toujours utilisé dans sa version la plus récente. Vous pouvez télécharger les mises à jour requises à partir de la page [Caveonix Service Provider Portal](https://support.caveonix.com){:external}.
 
 ## Mise à jour des licences Caveonix RiskForesight
 

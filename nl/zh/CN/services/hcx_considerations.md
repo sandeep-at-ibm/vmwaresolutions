@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-26"
 
 keywords: VMware HCX, HCX, tech specs HCX
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -98,5 +99,5 @@ HCX on {{site.data.keyword.cloud_notm}} 服务中订购并包含了以下组件�
 * [管理 HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghcx)
 * [HCX 术语的词汇表](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
 * [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
-* [VMware Hybrid Cloud Extension 概述](https://cloud.vmware.com/vmware-hcx)
-* [VMware Hybrid Cloud Extension 文档](https://cloud.vmware.com/vmware-hcx/resources)
+* [VMware Hybrid Cloud Extension 概述](https://cloud.vmware.com/vmware-hcx){:external}
+* [VMware Hybrid Cloud Extension 文档](https://cloud.vmware.com/vmware-hcx/resources){:external}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-18"
 
 keywords: IAM user, user role, user permission
 
@@ -38,18 +38,15 @@ Les rôles de gestion de plateforme permettent aux utilisateurs d'effectuer des 
 
 Le tableau suivant fournit des informations sur les actions qui sont mappées aux rôles de gestion de plateforme.
 
-Tableau 1. Rôles de gestion de plateforme et actions autorisées
-
 | Rôle de gestion de plateforme | Actions | Exemples d'actions |
 |:----------------- |:----------------- |:----------------- |
 | Afficheur | Actions en lecture seule | Afficher le récapitulatif d'instances<br>Afficher les détails d'une instance |
 | Editeur | Mettre à jour une instance spécifique | Ajouter ou retirer des serveurs ESXi<br>Ajouter ou retirer des clusters<br>Ajouter ou retirer des services<br>Mettre à niveau une instance vers une version ultérieure |
 | Opérateur | Actions en lecture seule | Répertorier des instances<br>Afficher les détails d'une instance |
 | Administrateur | Accès de gestion complet | Créer de nouvelles instances<br>Supprimer des instances<br>Accorder l'accès à une plateforme à d'autres utilisateurs|
+{: caption="Tableau 1. Rôles de gestion de plateforme et actions autorisées" caption-side="top"}
 
 Pour {{site.data.keyword.vmwaresolutions_short}}, les actions suivantes existent :
-
-Tableau 2. Descriptions des actions et des rôles requis
 
 | Action | Opération sur le service | Rôle |
 |:------ |:-------------------- |:---- |
@@ -58,6 +55,7 @@ Tableau 2. Descriptions des actions et des rôles requis
 | vmware-solutions.instances.view | Répertorier des instances<br>Afficher les détails d'une instance | Afficheur, opérateur, éditeur et administrateur |
 | vmware-solutions.instances.update | Ajouter ou retirer des serveurs ESXi<br>Ajouter ou retirer des clusters<br>Ajouter ou retirer des services<br>Mettre à niveau une instance vers une version ultérieure | Editeur et administrateur |
 | vmware-solutions.account.update | Mettre à jour les paramètres de compte | Administrateur |
+{: caption="Tableau 2. Descriptions des actions et des rôles requis" caption-side="top"}
 
 ## Gestion de l'accès des utilisateurs
 {: #iam-users}

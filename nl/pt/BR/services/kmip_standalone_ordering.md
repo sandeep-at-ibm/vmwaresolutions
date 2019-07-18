@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-21"
 
 keywords: KMIP for VMware, order KMIP stand-alone, KMIP for VMware configuration
 
@@ -29,7 +29,7 @@ Assegure-se de que tenha concluído as tarefas a seguir:
 {: #kmip_standalone_ordering-procedure}
 
 1. No console do {{site.data.keyword.vmwaresolutions_short}}, clique em **Introdução** na área de janela de navegação esquerda.
-2. Na área **Pedir serviços adicionais**, clique em **KMIP for VMware on IBM Cloud**.
+2. Na seção **Serviços do VMware**, clique no cartão **KMIP for VMware on IBM Cloud**.
 3. Na página **KMIP for VMware on IBM Cloud**, defina as configurações de serviço conforme necessário.
 4. Clique em **Provisão**.
 
@@ -50,8 +50,6 @@ Selecione o local do {{site.data.keyword.cloud_notm}} no qual a instância do KM
 
 O {{site.data.keyword.cloud_notm}} mantém um terminal em serviço de rede altamente disponível do KMIP for VMware on {{site.data.keyword.cloud_notm}} em cada local em que o serviço está disponível.
 
-Tabela 1. Locais do terminal em serviço de rede do KMIP for VMware on {{site.data.keyword.cloud_notm}}
-
 | Localização         | Terminais               |
 |:---------------|:-----------------------|
 | Dallas | <<code>kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696</code><br>e<br><code>kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696</code> |
@@ -60,6 +58,7 @@ Tabela 1. Locais do terminal em serviço de rede do KMIP for VMware on {{site.da
 | Sydney | <code> kmip-1.private.ap-south.vmware-solutions.cloud.ibm.com:5696 </code><br>e<br><code>kmip-2.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code> |
 | Tóquio | <code> kmip-1.private.ap-north.vmware-solutions.cloud.ibm.com:5696 </code><br>e<br><code>kmip-2.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code> |
 | Washington DC | <code>kmip-1.private.us-east.vmware-solutions.cloud.ibm.com:5696</code><br>e<br><code>kmip-2.private.us-east.vmware-solutions.cloud.ibm.com:5696</code> |
+{: caption="Tabela 1. Locais do terminal em serviço de rede do KMIP for VMware on {{site.data.keyword.cloud_notm}}" caption-side="top"}
 
 ### Chave API para o ID do serviço
 {: #kmip_standalone_ordering-config-api-key}

@@ -11,11 +11,11 @@ lastupdated: "2019-05-31"
 # Riesgo de
 {: #opsprocs-compliance}
 
-La conformidad es un conjunto de requisitos necesarios para cumplir los controles mínimos establecidos por una agencia reguladora o basados en las mejores prácticas del sector. Los marcos de cumplimiento de normativas suelen ser marcos amplios que proporcionan orientación sobre un amplio abanico de tecnologías, mientras que las mejores prácticas del sector son, por lo general, tecnologías específicas para abordar riesgos tecnológicos. 
+La conformidad es un conjunto de requisitos necesarios para cumplir los controles mínimos establecidos por una agencia reguladora o basados en las mejores prácticas del sector. Los marcos de cumplimiento de normativas suelen ser marcos amplios que proporcionan orientación sobre un amplio abanico de tecnologías, mientras que las mejores prácticas del sector son, por lo general, tecnologías específicas para abordar riesgos tecnológicos.
 
-Para su instancia de vCenter Server, sugerimos gestionar la seguridad utilizando un postdespliegue con un equipo dedicado. Esta separación de tareas debe aumentar y supervisar la posición de seguridad de su instancia. HyTrust CloudControl puede dar asistencia a sus equipos con su separación de tareas basada en roles. 
+Para su instancia de vCenter Server, sugerimos gestionar la seguridad utilizando un postdespliegue con un equipo dedicado. Esta separación de tareas debe aumentar y supervisar la posición de seguridad de su instancia. HyTrust CloudControl puede dar asistencia a sus equipos con su separación de tareas basada en roles.
 
-HyTrust DataControl y KeyControl pueden ayudarle a ofrecer una protección de la carga de trabajo, como por ejemplo el cifrado en reposo y el geofencing. Puede que le interese desplegar el servicio Caveonix RiskForesight para ayudarle, no sólo en sus requisitos de conformidad, sino también en gestionar ciberriesgos y en la gestión forense. 
+HyTrust DataControl y KeyControl pueden ayudarle a ofrecer una protección de la carga de trabajo, como por ejemplo el cifrado en reposo y el geofencing. Puede que le interese desplegar el servicio Caveonix RiskForesight para ayudarle, no sólo en sus requisitos de conformidad, sino también en gestionar ciberriesgos y en la gestión forense.
 
 Las Guías para reforzar la seguridad en VMware proporcionan instrucciones prescriptivas sobre cómo desplegar y utilizar productos VMware de forma segura. Las guías para vSphere se proporcionan en un formato de hoja de cálculo fácil de utilizar, con metadatos enriquecidos para permitir la clasificación de directrices y la evaluación de riesgos. También incluyen ejemplos de scripts para permitir automatizar la seguridad. Se proporcionan documentos de comparación que listan los cambios en las sucesivas versiones de la guía.
 

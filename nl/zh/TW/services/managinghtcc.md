@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: HTCC WebGUI, HTCC console, enable internet HTCC
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -82,7 +83,7 @@ subcollection: vmware-solutions
 
   主要 VM 現在就可以存取網際網路了。
 
-7. 若要確認主要 VM 能存取網際網路，請對公用 IP 位址或網站執行 `ping` 指令。若要這麼做，請回到 vCenter 並用滑鼠右鍵按一下 **CC1 > 開啟主控台**。使用 HyTrust CloudControl on IBM Cloud 服務詳細資料頁面的主控台認證登入到主控台。執行 `ping` 指令，如 `ping www.ibm.com`，您應該會立即獲得回應。按 `Ctrl + C` 以結束 ping，確保封包流失率為 0%。
+7. 若要確認主要 VM 能存取網際網路，請對公用 IP 位址或網站執行 `wget` 指令。若要這麼做，請回到 vCenter 並用滑鼠右鍵按一下 **CC1 > 開啟主控台**。使用 HyTrust CloudControl on IBM Cloud 服務詳細資料頁面的主控台認證登入到主控台。執行 `wget` 指令（例如 `wget www.ibm.com`），您應該會立即獲得回應。請確認已傳送要求，且收到 `200` 回應。
 
 ## 相關鏈結
 {: #managinghtcc-related}
@@ -90,4 +91,4 @@ subcollection: vmware-solutions
 * [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 概觀](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htcc_considerations)
 * [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [常見問題](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [HyTrust 網站](https://www.hytrust.com/)
+* [HyTrust 網站](https://www.hytrust.com/){:external}

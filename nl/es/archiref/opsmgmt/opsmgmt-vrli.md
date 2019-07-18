@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-06"
+lastupdated: "2019-07-01"
 
 ---
 
@@ -24,19 +24,19 @@ vRealize Log Insight (vRLI) habilita el registro en tiempo real de componentes e
 
 En este diseño, cada ubicación tiene un clúster vRLI independiente, que se despliega en el clúster de gestión. El clúster vRLI se despliega en la subred de herramientas, utilizando direcciones IP portátiles de {{site.data.keyword.cloud_notm}}. Esto facilita la comunicación a todos los componentes que se redirigen hacia fuera del espacio de direcciones RFC1918 de {{site.data.keyword.cloud_notm}}. Estos componentes incluyen: hosts de vSphere, vCenter, Platform Services Controller, NSX Manager, y Controladores NSX. Un clúster vRLI contiene un nodo maestro y, como mínimo, dos nodos de trabajo con un equilibrador de carga integrado.
 
-* Nodo maestro: Nodo inicial obligatorio en el clúster. El Nodo maestro es responsable de las consultas y de la ingesta de registros. La interfaz de usuario web del nodo maestro es el único panel de interacción con el clúster de vRealize Log Insight. Todas las consultas sobre datos se dirigen al maestro que, a su vez distribuye la carga de trabajo a los Trabajadores. 
-* Nodo trabajador: se requieren al menos tres nodos mínimos para formar un clúster con la posibilidad de añadir más trabajadores para escalarlo. Un nodo trabajador ingiere registros y almacena registros localmente. 
-* Equilibrador de carga integrado: Proporciona alta disponibilidad utilizando configuración de equilibrio de carga propietaria (no se requiere ningún equilibrador de carga externo). 
-* Reenviador de Log Insight: Se despliega para recibir registros de los componentes subyacentes de NSX. Además, puede aprovecharlo un cliente si desea enviar registros desde las máquinas virtuales de cálculo. El Reenviador de Log Insight es un único Nodo maestro de vRealize Log Insight que se utiliza como un agregador de syslog remoto para reenviar alertas al clúster vRLI. Como las direcciones con copia de seguridad en VXLAN se dirigen fuera del espacio de direcciones BYOIP, se deben implementar reglas NAT en NSX ESG. 
+* Nodo maestro: Nodo inicial obligatorio en el clúster. El Nodo maestro es responsable de las consultas y de la ingesta de registros. La interfaz de usuario web del nodo maestro es el único panel de interacción con el clúster de vRealize Log Insight. Todas las consultas sobre datos se dirigen al maestro que, a su vez distribuye la carga de trabajo a los Trabajadores.
+* Nodo trabajador: se requieren al menos tres nodos mínimos para formar un clúster con la posibilidad de añadir más trabajadores para escalarlo. Un nodo trabajador ingiere registros y almacena registros localmente.
+* Equilibrador de carga integrado: Proporciona alta disponibilidad utilizando configuración de equilibrio de carga propietaria (no se requiere ningún equilibrador de carga externo).
+* Reenviador de Log Insight: Se despliega para recibir registros de los componentes subyacentes de NSX. Además, puede aprovecharlo un cliente si desea enviar registros desde las máquinas virtuales de cálculo. El Reenviador de Log Insight es un único Nodo maestro de vRealize Log Insight que se utiliza como un agregador de syslog remoto para reenviar alertas al clúster vRLI. Como las direcciones con copia de seguridad en VXLAN están fuera del espacio de direcciones BYOIP, se deben implementar reglas NAT en NSX ESG.
 
-Hay los tamaños siguientes disponibles y se selecciona el adecuado: 
+Hay los tamaños siguientes disponibles y se selecciona el adecuado:
 * Pequeño – 2000 sucesos por segundo
 * Medio – 5000 sucesos por segundo
 * Grande - 15 000 sucesos por segundo
 
 ![Diagrama de componentes de Log Insights](../../images/opsmgmt-vrlicomponents.svg "Diagrama de componentes de Log Insights")
 
-vRLI recopila registros para proporcionar información de supervisión sobre el entorno desde una ubicación central. 
+vRLI recopila registros para proporcionar información de supervisión sobre el entorno desde una ubicación central.
 
 vRLI recopila sucesos de registro de los siguientes componentes de infraestructura virtual y gestión de nube (clientes de registro):
 * vCenter
@@ -90,7 +90,7 @@ El despliegue del dispositivo vRLI requiere tres direcciones IP de la subred de 
 * Redes de clientes
 * Servidor NTP (`time.services.softlayer.com`)
 * Active Directory/DNS de {{site.data.keyword.vmwaresolutions_short}}
-* Los recopiladores remotos requieren reglas NAT en NSX ESG para habilitar la conectividad con el nodo maestro, la réplica de nodo maestro y los nodos de datos. 
+* Los recopiladores remotos requieren reglas NAT en NSX ESG para habilitar la conectividad con el nodo maestro, la réplica de nodo maestro y los nodos de datos.
 
 ## Puertos
 {: #opsmgmt-vrli-ports}
@@ -116,7 +116,7 @@ Tabla 2. Puertos de Log Insight
 ## Autenticación
 {: #opsmgmt-vrli-auth}
 
-La gestión de usuarios de vRLI requiere VMware Identity Manager (vIDM), que se integra con Active Directory. Las cuentas de servicio se utilizan para la comunicación de aplicación a aplicación desde vRealize Operations Manager a los siguientes adaptadores con el conjunto mínimo de permisos que se necesitan para la recopilación de métricas y la correlación de topologías. 
+La gestión de usuarios de vRLI requiere VMware Identity Manager (vIDM), que se integra con Active Directory. Las cuentas de servicio se utilizan para la comunicación de aplicación a aplicación desde vRealize Operations Manager a los siguientes adaptadores con el conjunto mínimo de permisos que se necesitan para la recopilación de métricas y la correlación de topologías.
 * NSX Manager
 * vCenter
 * vSAN

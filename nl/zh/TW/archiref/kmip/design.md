@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-21"
 
 subcollection: vmware-solutions
 
@@ -58,7 +58,7 @@ KMIP for VMware 與 vSAN 加密或 vSphere 加密搭配使用時，具有數層�
 
 如果您計劃替換金鑰，則請檢閱可替換金鑰之層次的下列資訊：
 * 您的客戶根金鑰 (CRK) 保護所有 VMware 金鑰。在與 KMIP for VMware 實例相關聯的 IBM Key Protect 或 Hyper Protect Crypto Services 實例中，可以替換金鑰。
-* KMIP for VMware 使用 CRK 來保護由它所產生並配送至 VMware 的金鑰。VMware 將這些視為「金鑰加密金鑰」(KEK)。
+* KMIP for VMware 使用 CRK 來保護由它所產生並配送至 VMware 的金鑰。VMware 將這些視為_金鑰加密金鑰」(KEK)_。
   * 如果您使用 vSphere 加密，則可以使用 **Set-VMEncryptionKey** PowerShell 指令來替換金鑰。
   * 如果您使用 vSAN 加密，則可以在 vSAN 使用者介面上替換金鑰。
 * VMware 使用這些 KEK 來保護它用來加密磁碟機及 VM 磁碟的實際金鑰。您可以使用 VMware 稱為「深度」重設金鑰的項目，來替換這些金鑰。此作業會重新加密所有已加密資料，因此可能需要較長的時間。
@@ -73,7 +73,7 @@ VMware vSAN 加密及 vSphere 加密與許多金鑰管理伺服器相容。KMIP 
 ### 金鑰內的金鑰
 {: #kmip-design-keys}
 
-金鑰管理系統一般使用稱為*封套加密* 的技術，以使用其他金鑰來包裝或保護金鑰。這些金鑰稱為*根金鑰* 或*金鑰加密金鑰* (KEK)。若要存取金鑰，您需要使用金鑰的對應根金鑰來解密或解除包裝金鑰。破壞根金鑰是讓它所保護的所有金鑰都失效的有效方式。這些金鑰不需要儲存在根金鑰附近。控制對根金鑰的存取十分重要。
+金鑰管理系統一般使用稱為*封套加密* 的技術，以使用其他金鑰來包裝或保護金鑰。這些金鑰稱為_根金鑰_ 或_金鑰加密金鑰 (KEK)_。若要存取金鑰，您需要使用金鑰的對應根金鑰來解密或解除包裝金鑰。破壞根金鑰是讓它所保護的所有金鑰都失效的有效方式。這些金鑰不需要儲存在根金鑰附近。控制對根金鑰的存取十分重要。
 
 {{site.data.keyword.cloud_notm}} Key Protect 及 Hyper Protect Crypto Services 使用*客戶根金鑰* (CRK) 來提供此服務。Key Protect 將 CRK 專門儲存在無法從中擷取 CRK 的 {{site.data.keyword.cloud_notm}} CloudHSM 硬體中；Hyper Protect Crypto Services 將金鑰儲存在 IBM zSeries HSM 中。接著使用這些 CRK 來包裝其他加密金鑰，例如 KMIP for VMware 針對您 VMware 實例所產生的加密金鑰。
 

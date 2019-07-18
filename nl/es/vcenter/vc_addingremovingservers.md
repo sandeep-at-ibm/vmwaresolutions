@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: vCenter Server add host, add server vCenter Server, remove host vCenter Server
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -22,7 +23,7 @@ subcollection: vmware-solutions
 
 Puede ampliar o reducir la capacidad de la instancia de VMware vCenter Server según sus necesidades empresariales añadiendo o eliminando servidores ESXi o almacenamiento del sistema de archivos de red (NFS).
 
-* A partir del release de v3.1, puede añadir nuevos servidores ESXi a un clúster existente seleccionando una configuración existente o una configuración alternativa a la de los hosts existentes en el clúster. Las configuraciones existentes están disponibles para la selección instantánea cuando se hace el pedido del nuevo servidor. Para evitar problemas de rendimiento o estabilidad, se recomienda que los clústeres utilicen la misma configuración o una configuración similar con respecto a la CPU, la RAM y el almacenamiento. Esta funcionalidad es útil para actualizaciones de hardware dentro del mismo clúster. Un clúster sólo puede tener un tipo de almacenamiento. 
+* A partir del release de v3.1, puede añadir nuevos servidores ESXi a un clúster existente seleccionando una configuración existente o una configuración alternativa a la de los hosts existentes en el clúster. Las configuraciones existentes están disponibles para la selección instantánea cuando se hace el pedido del nuevo servidor. Para evitar problemas de rendimiento o estabilidad, se recomienda que los clústeres utilicen la misma configuración o una configuración similar con respecto a la CPU, la RAM y el almacenamiento. Esta funcionalidad es útil para actualizaciones de hardware dentro del mismo clúster. Un clúster sólo puede tener un tipo de almacenamiento.
 * A partir del release V3.0, puede añadir o eliminar de forma simultánea almacenamiento NFS y servidores ESXi en los clústeres que tengan el estado
 **Listo para su uso**. Por ejemplo, puede añadir o eliminar un servidor ESXi en un clúster y añadir o eliminar almacenamiento NFS en otro clúster.
 * A partir del release V2.9, puede añadir nuevos servidores ESXi a un clúster mientras los servidores estén en modalidad de mantenimiento. Además, puede añadir o eliminar simultáneamente servidores ESXi en varios clústeres.
@@ -52,21 +53,22 @@ Puede ampliar o reducir la capacidad de la instancia de VMware vCenter Server se
 3. Pulse **Infraestructura** en el panel de navegación izquierdo.
 4. En la tabla **CLÚSTERES**, pulse el clúster al que desea añadir servidores ESXi.
 5. En la sección **Servidores ESXi**, pulse **Añadir**.
-6. En la ventana **Añadir servidor**, seleccione el número de servidores que desea añadir. 
-7. Opcionalmente, marque el recuadro de selección para añadir servidores durante la modalidad de mantenimiento. El recuadro de selección está seleccionado de forma predeterminada. 
+6. En la ventana **Añadir servidor**, seleccione el número de servidores que desea añadir.
+7. Opcionalmente, marque el recuadro de selección para añadir servidores durante la modalidad de mantenimiento. El recuadro de selección está seleccionado de forma predeterminada.
 
-   Cuando se suministre el nuevo servidor ESXi, las máquinas virtuales (VM) se migran inmediatamente a los nuevos servidores si no selecciona la casilla de verificación **Modalidad de mantenimiento**. No se recibe un mensaje de confirmación antes de que empiece la migración. {:important}
+   Cuando se suministre el nuevo servidor ESXi, las máquinas virtuales (VM) se migran inmediatamente a los nuevos servidores si no selecciona la casilla de verificación **Modalidad de mantenimiento**. No se recibe un mensaje de confirmación antes de que empiece la migración.
+   {:important}
 
 8. Complete la configuración del servidor nativo.
-   * Seleccione una configuración a partir de los hosts existentes en el clúster. 
-   * Seleccione una configuración nueva de {{site.data.keyword.baremetal_short_sing}}. 
-      * Para **Skylake** o **Broadwell**, especifique el valor de **Modelo de CPU**, la cantidad de **RAM** y el valor de **Número de {{site.data.keyword.baremetal_short}}**.      
-      * Para **Certificado por SAP**, especifique el **modelo de CPU y RAM** y el **Número de {{site.data.keyword.baremetal_short}}**. 
+   * Seleccione una configuración a partir de los hosts existentes en el clúster.
+   * Seleccione una configuración nueva de {{site.data.keyword.baremetal_short_sing}}.
+      * Para **Skylake** o **Broadwell**, especifique el valor de **Modelo de CPU**, la cantidad de **RAM** y el valor de **Número de {{site.data.keyword.baremetal_short}}**.     
+      * Para **Certificado por SAP**, especifique el **modelo de CPU y RAM** y el **Número de {{site.data.keyword.baremetal_short}}**.
 9. Complete la configuración del almacenamiento. Especifique los tipos de disco para la capacidad y los
 discos de memoria caché, el número de discos y la edición de licencia vSAN. Si desea más almacenamiento, marque el recuadro **Intel Optane de alto rendimiento**.
 10. Revise el coste estimado y pulse **Añadir**.
 
-  También puede añadir los recursos suministrados a la herramienta de estimación {{site.data.keyword.cloud_notm}}, pulsando **Añadir a estimación**. Esto es útil si desea estimar el coste de los recursos estimare {{site.data.keyword.vmwaresolutions_short}} seleccionados junto con otros recursos de {{site.data.keyword.cloud_notm}} que le podría interesar adquirir. 
+  También puede añadir los recursos suministrados a la herramienta de estimación {{site.data.keyword.cloud_notm}}, pulsando **Añadir a estimación**. Esto es útil si desea estimar el coste de los recursos estimare {{site.data.keyword.vmwaresolutions_short}} seleccionados junto con otros recursos de {{site.data.keyword.cloud_notm}} que le podría interesar adquirir.
 
 ### Resultados después de añadir servidores ESXi
 {: #vc_addingremovingservers-adding-results}
@@ -76,11 +78,10 @@ discos de memoria caché, el número de discos y la edición de licencia vSAN. S
 3. Si no ve que los nuevos servidores ESXi se han añadido a la lista del clúster, compruebe las notificaciones de correo electrónico o de la consola para ver más detalles sobre la anomalía.
 4. Debe utilizar la consola de Zerto Virtual Manager (ZVM) y la dirección IP de Zerto Virtual Replication Appliance (VRA) llenada previamente para desplegar de forma manual la máquina virtual del VRA
 en las circunstancias siguientes:
-
    * Si añade servidores ESXi a un clúster predeterminado mientras los servidores están en modalidad de mantenimiento y está instalado Zerto para {{site.data.keyword.cloud_notm}}.
    * Si añade Zerto para {{site.data.keyword.cloud_notm}} a una instancia de vCenter Server que tiene un servidor ESXi que está en modalidad de mantenimiento.
 
-Si va a añadir servidores ESXi durante la modalidad de mantenimiento, las máquinas virtuales no se migran a los nuevos servidores hasta que se elimina la modalidad de mantenimiento.    
+Si va a añadir servidores ESXi durante la modalidad de mantenimiento, las máquinas virtuales no se migran a los nuevos servidores hasta que se elimina la modalidad de mantenimiento.   
 {:important}
 
 ## Eliminación de servidores ESXi de instancias de vCenter Server
@@ -134,9 +135,9 @@ No añada almacenamiento NFS desde el cliente web de VMware vSphere. Los cambios
 6. En la ventana **Almacenamiento**, complete la configuración del almacenamiento.
    * Si desea añadir y configurar los mismos valores para todas las comparticiones de archivos, especifique el **Número de comparticiones**, el **Rendimiento** y el **Tamaño (GB)**.
    * Si añadir y configurar comparticiones de archivos individualmente, seleccione **Configurar comparticiones individualmente** y luego pulse el icono **+** junto a la etiqueta **Añadir almacenamiento compartido** y seleccione el **rendimiento** y el **Tamaño (GB)** para cada compartición de archivos individual. Debe seleccionar al menos una unidad compartida de archivo.
-7. Revise el coste estimado y pulse **Añadir almacenamiento NFS**. 
+7. Revise el coste estimado y pulse **Añadir almacenamiento NFS**.
 
-  También puede añadir los recursos suministrados a la herramienta de estimación {{site.data.keyword.cloud_notm}}, pulsando **Añadir a estimación**. Esto es útil si desea estimar el coste de los recursos estimare {{site.data.keyword.vmwaresolutions_short}} seleccionados junto con otros recursos de {{site.data.keyword.cloud_notm}} que le podría interesar adquirir. 
+  También puede añadir los recursos suministrados a la herramienta de estimación {{site.data.keyword.cloud_notm}}, pulsando **Añadir a estimación**. Esto es útil si desea estimar el coste de los recursos estimare {{site.data.keyword.vmwaresolutions_short}} seleccionados junto con otros recursos de {{site.data.keyword.cloud_notm}} que le podría interesar adquirir.
 
 ### Resultados después de añadir almacenamiento NFS
 {: #vc_addingremovingservers-adding-nfs-storage-results}
@@ -183,5 +184,5 @@ No añada almacenamiento NFS desde el cliente web de VMware vSphere. Los cambios
 * [Requisitos y planificación de instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [Pedido de instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
 * [Adición, visualización y supresión de clústeres para instancias de vCenter Server](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
-* [Colocación de un host en modalidad de mantenimiento](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.resmgmt.doc/GUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
-* [Soporte del procesador Enhanced vMotion Compatibility (EVC)](https://kb.vmware.com/s/article/1003212){:new_window}
+* [Colocación de un host en modalidad de mantenimiento](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.resmgmt.doc/GUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:external}
+* [Soporte del procesador Enhanced vMotion Compatibility (EVC)](https://kb.vmware.com/s/article/1003212){:external}

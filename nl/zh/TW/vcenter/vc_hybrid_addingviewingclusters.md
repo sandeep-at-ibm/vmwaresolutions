@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-26"
 
 keywords: vCenter Server Hybridity add cluster, view cluster vCenter Server Hybridity, delete cluster vCenter Server Hybridity
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -31,7 +32,7 @@ subcollection: vmware-solutions
 {: #vc_hybrid_addingviewingclusters-before-add}
 
 * 盡可能使用 {{site.data.keyword.vmwaresolutions_full}} 主控台新增叢集，因為您在 VMware vSphere Web Client 上所做的變更不會與 {{site.data.keyword.vmwaresolutions_short}} 主控台同步。因此，請只針對內部部署叢集或您在 {{site.data.keyword.vmwaresolutions_short}} 主控台中無法或不會管理的叢集，將叢集新增至 vCenter Server。
-* 對於已部署在（或升級至）2.5 版及更新版本的實例，叢集、主機及 VM 數目決定您可新增的叢集數目上限。您必須遵守 VMware 大小準則及部署限制。如需上限的相關資訊，請參閱 [VMware 配置上限](https://configmax.vmware.com/home){:new_window}。
+* 對於已部署在（或升級至）2.5 版及更新版本的實例，叢集、主機及 VM 數目決定您可新增的叢集數目上限。您必須遵守 VMware 大小準則及部署限制。如需上限的相關資訊，請參閱 [VMware 配置上限](https://configmax.vmware.com/home){:external}。
 * 對於已部署在（或升級至）2.3 版及 2.4 版的實例，您最多可以新增 10 個叢集。
 
 ### 系統設定
@@ -65,25 +66,23 @@ subcollection: vmware-solutions
 
 當您選取 **Skylake** 時，可以根據需求來選擇 CPU 與 RAM 組合。
 
-表 1. Skylake Bare Metal Server 的選項
-
 | CPU 型號選項             |RAM 選項          |
 |:------------- |:------------- |
 |雙重 Intel Xeon Silver 4110 處理器/總計 16 核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 |雙重 Intel Xeon Gold 5120 處理器/總計 28 核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 |雙重 Intel Xeon Gold 6140 Processor / 總計 36 核心，2.3 GHz |64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+{: caption="表 1. Skylake Bare Metal Server 的選項" caption-side="top"}
 
 #### Broadwell
 {: #vc_hybrid_addingviewingclusters-adding-broadwell}
 
 當您選取 **Broadwell** 時，可以根據需求來選擇 CPU 與 RAM 組合。
 
-表 2. Broadwell Bare Metal Server 的選項
-
 | CPU 型號選項             |RAM 選項          |
 |:------------- |:------------- |
 |四重 Intel Xeon E7-4820 v4 / 總計 40 核心，1.9 GHz |128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 |四重 Intel Xeon E7-4850 v4 / 總計 64 核心，2.2 GHz |128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
+{: caption="表 2. Broadwell Bare Metal Server 的選項" caption-side="top"}
 
 #### Bare Metal Server 數目
 {: #vc_hybrid_addingviewingclusters-adding-bare-metal-number}

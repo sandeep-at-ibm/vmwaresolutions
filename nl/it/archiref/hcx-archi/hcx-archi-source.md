@@ -105,7 +105,7 @@ Le seguenti operazioni sono attività di installazione di base:
 ### Considerazioni sulle prestazioni del componente della distribuzione
 {: #hcx-archi-source-perf-consid}
 
-La pianificazione dell'architettura include le VM che devono essere migrate, le reti utilizzate per il traffico della VM (Virtual Machine) e le reti che devono essere estese.  
+La pianificazione dell'architettura include le VM che devono essere migrate, le reti utilizzate per il traffico della VM (Virtual Machine) e le reti che devono essere estese. 
 
 I valori massimo e minimo per i componenti di distribuzione sono:
 * vSphere vCenter. Il dispositivo HCX Manager deve essere installato sul vCenter che necessita dei servizi ibridi. Può esserci soltanto una distribuzione HCX per vCenter. Questa limitazione si applica alla modalità collegata. Il dispositivo di gestione HCX è installato solo nel vCenter primario. HCX supporta fino a cinque vCenter registrati nella modalità di collegamento.

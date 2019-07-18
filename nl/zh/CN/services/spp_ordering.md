@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: IBM Spectrum Protect Plus, SPP configuration, order SPP
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # 订购 IBM Spectrum Protect Plus on IBM Cloud
 {: #spp_ordering}
@@ -23,14 +25,14 @@ subcollection: vmware-solutions
 
 可以使用下列其中一种方法订购包含 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 的新实例：
 * 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，订购新实例时，请在**服务**部分中选择 **IBM Spectrum Protect Plus on IBM Cloud**。
-* 在 {{site.data.keyword.cloud_notm}}“目录”中，选择 **IBM Spectrum Protect Plus on IBM Cloud**，指定服务设置，然后选择**添加到新实例**。
+* 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格上的 **VMware** 图标，然后单击 **VMware 服务**部分中的 **IBM Spectrum Protect Plus on IBM Cloud** 卡。指定服务设置，然后选择**添加到新实例**。
 
 ## 为现有实例订购 IBM Spectrum Protect Plus on IBM Cloud
 {: #spp_ordering-existing}
 
 可以使用下列其中一种方法将 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服务添加到现有实例中：
 * 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，查看要为其添加服务的实例，单击左侧导航窗格上的**服务**，然后单击**添加**。
-* 在 {{site.data.keyword.cloud_notm}}“目录”中，选择 **IBM Spectrum Protect Plus on IBM Cloud**，指定服务设置，然后选择**添加到现有实例**。
+* 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格上的 **VMware** 图标，然后单击 **VMware 服务**部分中的 **IBM Spectrum Protect Plus on IBM Cloud** 卡。指定服务设置，然后选择**添加到现有实例**。
 
 ## IBM Spectrum Protect Plus on IBM Cloud 服务配置
 {: #spp_ordering-config}
@@ -71,9 +73,9 @@ IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 的部署会自动
 {: #spp_ordering-related}
 
 * [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 概述](/docs/services/vmwaresolutions/services?topic=vmware-solutions-spp_considerations)
-* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 预防性服务规划](https://www-01.ibm.com/support/docview.wss?uid=swg22012650){:new_window}
+* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 预防性服务规划](https://www-01.ibm.com/support/docview.wss?uid=swg22012650){:external}
 * [管理 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingspp)
 * [订购、查看和除去 vCenter Server 实例的服务](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
 * [订购、查看和除去 vCenter Server with Hybridity Bundle 实例的服务](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
-* [IBM Spectrum Protect Plus 文档](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html){:new_window}
+* [IBM Spectrum Protect Plus 文档](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html){:external}
 * [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

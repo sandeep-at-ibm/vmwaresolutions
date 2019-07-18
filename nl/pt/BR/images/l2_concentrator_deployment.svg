@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 779 794" style="enable-background:new 0 0 779 794;" xml:space="preserve">
 <style type="text/css">
@@ -61,7 +61,7 @@
 			<line class="st6" x1="739.5" y1="106.6" x2="739.5" y2="232.4"/>
 		</g>
 	</g>
-	<text transform="matrix(1 0 0 1 484 226)" class="st7 st8">Espaço de endereço público</text>
+	<text transform="matrix(1 0 0 1 522 226)" class="st7 st8">Espaço de endereço público</text>
 </g>
 <g id="Private_address_space_rectangle">
 	<g>
@@ -77,7 +77,7 @@
 			<line class="st10" x1="740.5" y1="263.6" x2="740.5" y2="650.4"/>
 		</g>
 	</g>
-	<text transform="matrix(1 0 0 1 485 643)" class="st7 st8">Espaço de endereço privado</text>
+	<text transform="matrix(1 0 0 1 519 643)" class="st7 st8">Espaço de endereço privado</text>
 </g>
 <g id="ibm_cloud">
 	<g>
@@ -202,7 +202,7 @@
 				<rect x="509.9" y="744.8" transform="matrix(0.7071 0.7071 -0.7071 0.7071 678.7737 -143.5796)" class="st0" width="5.5" height="5.5"/>
 		</g>
 	</g>
-	<text transform="matrix(1 0 0 1 482 780)" class="st7 st15">WAN Optimizer</text>
+	<text transform="matrix(1 0 0 1 466 780)" class="st7 st15">WAN Optimizer</text>
 </g>
 <g id="gear_icon">
 	<g>
@@ -346,7 +346,7 @@
 					<rect x="97.5" y="280" class="st20" width="47.3" height="47.3"/>
 					<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="128.9627" y1="296.7212" x2="117.5096" y2="338.8456">
 						<stop  offset="0" style="stop-color:#CCE0F4"/>
-						<stop  offset="7.748766e-002" style="stop-color:#C5DDF3"/>
+						<stop  offset="7.748766e-02" style="stop-color:#C5DDF3"/>
 						<stop  offset="0.1918" style="stop-color:#B1D5EF"/>
 						<stop  offset="0.329" style="stop-color:#90C9EA"/>
 						<stop  offset="0.4838" style="stop-color:#63B7E2"/>
@@ -404,7 +404,7 @@
 				<rect x="50.5" y="720.9" class="st20" width="38.1" height="38.1"/>
 				<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="75.8253" y1="734.3933" x2="66.6063" y2="768.3004">
 					<stop  offset="0" style="stop-color:#CCE0F4"/>
-					<stop  offset="7.748766e-002" style="stop-color:#C5DDF3"/>
+					<stop  offset="7.748766e-02" style="stop-color:#C5DDF3"/>
 					<stop  offset="0.1918" style="stop-color:#B1D5EF"/>
 					<stop  offset="0.329" style="stop-color:#90C9EA"/>
 					<stop  offset="0.4838" style="stop-color:#63B7E2"/>
@@ -446,7 +446,7 @@
 					<g>
 						<g>
 							
-								<rect x="71.2" y="741.9" transform="matrix(0.7268 -0.6868 0.6868 0.7268 -492.5203 253.9218)" class="st0" width="3.5" height="8.4"/>
+								<rect x="71.2" y="741.9" transform="matrix(0.7268 -0.6868 0.6868 0.7268 -492.5203 253.9219)" class="st0" width="3.5" height="8.4"/>
 						</g>
 					</g>
 				</g>
@@ -481,7 +481,7 @@
 		<text transform="matrix(1 0 0 1 170.2979 746.4043)" class="st0 st7 st27">MV</text>
 		<text transform="matrix(1 0 0 1 208.9365 746.4043)" class="st0 st7 st27">Nuvem HCX</text>
 	</g>
-	<text transform="matrix(1 0 0 1 148 780)" class="st7 st15">Gerenciador de HCX</text>
+	<text transform="matrix(1 0 0 1 176 780)" class="st7 st15">Gerenciador de HCX</text>
 </g>
 <g id="VM_HCX">
 	<g>

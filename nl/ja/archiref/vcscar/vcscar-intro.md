@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-03"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -29,9 +29,9 @@ subcollection: vmware-solutions
 
 この「コンセプト・カー」は、Skate Advisor というデモ用の Acme Skateboard アプリケーションの機能拡張として実装します。 Skate Advisor は、Watson 駆動型エンジンとの間でスケートボードの技についての会話ができるツールです。 以下の引用文は、会話の例です。
 
--   “Watson、キャスパー・トリックのコンビネーションを見せて”
--   “Watson、トリックがよく行われている場所を見せて”
--   “Watson、キャスパー・トリックのビデオを見せて”
+-`Watson、キャスパー・トリックのコンビネーションを見せて`
+- `Watson、トリックがよく行われている場所を見せて`
+- `Watson、キャスパー・トリックのビデオを見せて`
 
 Acme Skate Advisor は、Watson Discovery Service を利用して、記事、ビデオ、ブログ、およびその他のインターネット・ベースのコンテンツを取り込み、トリックの学習データベースを作成します。このデータベースをアプリケーションで照会できます。
 
@@ -47,7 +47,7 @@ Acme Skate Advisor アプリケーションは、Watson プラットフォーム
 ### アプリケーション・モダナイゼーションのデモンストレーション
 {: #vcscar-intro-app-mod-demo}
 
-アプリケーション・モダナイゼーション・プラットフォームにデプロイされたアプリケーションをデモンストレーションします。 このプラットフォームには、VMware vCenter Server on {{site.data.keyword.cloud_notm}} オファリングで {{site.data.keyword.cloud_notm}} に
+アプリケーション・モダナイゼーション・プラットフォームにデプロイされたアプリケーションをデモンストレーションします。このプラットフォームには、VMware vCenter Server on {{site.data.keyword.cloud_notm}} オファリングで {{site.data.keyword.cloud_notm}} に
 デプロイされた {{site.data.keyword.icpfull_notm}}、CAM、および NSX の各コンポーネントが含まれています。
 
 ### Watson Assistant を使用した Watson 音声認識
@@ -58,7 +58,7 @@ Acme Skate Advisor は、Watson プラットフォームで提供されている
 ### Watson Discovery Service の使用およびトレーニング
 {: #vcscar-intro-watson-disc}
 
-Acme Skate Advisor は、Watson Discovery Services を使用して、分類言語を適用するトリックと、オンライン・サービスから検出したトリックをデータベースに記録します。
+Acme Skate Advisor は、Watson Discovery Services を使用して、分類言語を適用するトリックと、オンライン・サービスから検出したトリックのデータベースをモニターします。
 
 ### Watson サービスの使用
 {: #vcscar-intro-watson-services}

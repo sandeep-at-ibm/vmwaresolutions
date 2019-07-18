@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-31"
+lastupdated: "2019-06-20"
 
 keywords: planning vSphere, data center, vSphere data centers
 
@@ -37,8 +37,6 @@ vSphere 배치에는 실제 인프라에 대한 엄격한 요구사항이 있습
 
 vSAN 컴포넌트를 선택하면 위치 목록이 SSD(Solid-State Disk) 가용성을 기준으로 필터링됩니다.
 {:note}
-
-표 1. vSphere 클러스터에 사용 가능한 {{site.data.keyword.CloudDataCents_notm}}
 
 | {{site.data.keyword.CloudDataCent_notm}} |위치 |지역 |
 |:----------------------|:---------|:---------------|
@@ -75,6 +73,7 @@ vSAN 컴포넌트를 선택하면 위치 목록이 SSD(Solid-State Disk) 가용�
 |WDC04 |워싱턴, DC |북미 동부 |
 |WDC06 |워싱턴, DC |북미 동부 |
 |WDC07 |워싱턴, DC |북미 동부 |
+{: caption="표 1. vSphere 클러스터에 사용 가능한 {{site.data.keyword.CloudDataCents_notm}}" caption-side="top"}
 
 ## 관련 링크
 {: #vs_planning-related}

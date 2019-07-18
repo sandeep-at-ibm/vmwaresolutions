@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-21"
 
 subcollection: vmware-solutions
 
@@ -96,11 +96,11 @@ SDDC-Dswitch-Public	  |SDDC-DPortGroup-External	|起点仮想ポート	|アク�
 この設計では、NSX コンポーネントの構成を指定しますが、ネットワーク・オーバーレイ・コンポーネント構成は適用しません。 ネットワーク・オーバーレイは、お客様がニーズに応じて設計できるようになっています。
 
 以下のコンポーネントが構成されます。
--	管理サーバーとコントローラーがインストールされ、vCenter Web ユーザー・インターフェースに組み込まれます。
--	ESXi ホストごとに ESXi エージェントがインストールされ、VTEP IP アドレスが構成されます。
--	VTEP 構成、コントローラー構成、VXLAN 構成 (トランスポート・ゾーン)。
--	管理コンポーネント用 NSX Edge Services Gateway (ESG) アプライアンス。
--	vCenter Server の場合のみ、お客様用の NSX Edge Services Gateway (ESG) アプライアンス。
+- 管理サーバーとコントローラーがインストールされ、vCenter Web ユーザー・インターフェースに組み込まれます。
+- ESXi ホストごとに ESXi エージェントがインストールされ、VTEP IP アドレスが構成されます。
+- VTEP 構成、コントローラー構成、VXLAN 構成 (トランスポート・ゾーン)。
+- 管理コンポーネント用 NSX Edge Services Gateway (ESG) アプライアンス。
+- vCenter Server の場合のみ、お客様用の NSX Edge Services Gateway (ESG) アプライアンス。
 
 以下のコンポーネントは構成されません。
 - 仮想分散ルーター

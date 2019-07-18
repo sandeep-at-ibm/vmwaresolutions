@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-06-21"
 
 subcollection: vmware-solutions
 
@@ -116,13 +116,13 @@ Los valores de vSAN se configuran en función de los métodos recomendados para 
 ## Almacenamiento conectado con NFS
 {: #design_virtualinfrastructure-nfs-storage}
 
-Al utilizar almacenamiento de red conectado con NFS, esta arquitectura prescribe el uso de NFS v3 en lugar de NFS v4.1, debido a que las migraciones LIF del servidor NFS pueden provocar una latencia excesiva al utilizar NFS v4.1. Cada host de vSphere se conecta al almacenamiento NFS utilizando su nombre de host. 
+Al utilizar almacenamiento de red conectado con NFS, esta arquitectura prescribe el uso de NFS v3 en lugar de NFS v4.1, debido a que las migraciones LIF del servidor NFS pueden provocar una latencia excesiva al utilizar NFS v4.1. Cada host de vSphere se conecta al almacenamiento NFS utilizando su nombre de host.
 
-Se conecta un almacén de datos NFS de 2 TB a un clúster para su uso por parte de los componentes de gestión con un nivel de rendimiento de 4 IOPS/GB. Se pueden conectar almacenes de datos adicionales a un clúster para uso de la carga de trabajo, con diversos tamaños y niveles de rendimiento. 
+Se conecta un almacén de datos NFS de 2 TB a un clúster para su uso por parte de los componentes de gestión con un nivel de rendimiento de 4 IOPS/GB. Se pueden conectar almacenes de datos adicionales a un clúster para uso de la carga de trabajo, con diversos tamaños y niveles de rendimiento.
 
 Además, esta arquitectura requiere que todos los hosts tengan creada una ruta de subred donde reside el almacenamiento NFS. La finalidad de esta ruta de subred es direccionar todo el tráfico NFS para utilizar el grupo de puertos, subred y VLAN designados para el tráfico NFS en este diseño. Si se conectan varios almacenes de datos NFS, es posible que sea necesario configurar varias rutas, ya que estos almacenes de datos podrían estar ubicados en distintas subredes remotas.
 
-Es posible que las máquinas virtuales de gestión se encuentren en un almacén de datos NFS. Esto crea un problema de carga, ya que es posible que algunas de las máquinas de gestión sean responsables de los servicios DNS que se utilizan para resolver el nombre de host NFS. Por lo tanto, esta arquitectura especifica que al menos una de las direcciones IP para el almacén de datos de gestión debe estar grabada en código en `/etc/hosts` en cada uno de los hosts. 
+Es posible que las máquinas virtuales de gestión se encuentren en un almacén de datos NFS. Esto crea un problema de carga, ya que es posible que algunas de las máquinas de gestión sean responsables de los servicios DNS que se utilizan para resolver el nombre de host NFS. Por lo tanto, esta arquitectura especifica que al menos una de las direcciones IP para el almacén de datos de gestión debe estar grabada en código en `/etc/hosts` en cada uno de los hosts.
 
 ## Diseño de VMware NSX-V
 {: #design_virtualinfrastructure-nsx-design}
@@ -249,13 +249,13 @@ Los aspectos siguientes no están configurados:
 
 Existen diversos motivos por los que puede necesitar conectividad de red pública para su instancia. Estos pueden incluir el acceso a servicios de actualización públicos u otros servicio públicos para la carga de trabajo, como las bases de datos de geolocalización o datos meteorológicos. Es posible que los servicios de complementos y gestión de la virtualización también requieran o se beneficien de la conectividad pública. Por ejemplo, vCenter puede actualizar su base de datos HCL y obtener actualizaciones de [VMware Update Manager (VUM)](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-intro) a través de la red pública. Zerto, Veeam, VMware HCX, F5 BIG-IP y FortiGate-VM utilizan todos la conectividad de red pública para una parte de la licencia de sus productos, la activación o los informes de uso. Además, es posible utilizar túneles a través de la red pública para la conectividad con el centro de datos local para fines de réplica.
 
-Normalmente, estas comunicaciones se dirigen de forma selectiva y se convierten con NAT a la red pública a través de Edge Services Gateway (ESG) de gestión o de cliente. No obstante, es posible que tenga requisitos de seguridad adicionales, o que prefiera utilizar un proxy para simplificar la vía de acceso de comunicación. Además, si ha desplegado su instancia con las interfaces públicas inhabilitadas, no podrá utilizar ESG para direccionar a la red pública. 
+Normalmente, estas comunicaciones se dirigen de forma selectiva y se convierten con NAT a la red pública a través de Edge Services Gateway (ESG) de gestión o de cliente. No obstante, es posible que tenga requisitos de seguridad adicionales, o que prefiera utilizar un proxy para simplificar la vía de acceso de comunicación. Además, si ha desplegado su instancia con las interfaces públicas inhabilitadas, no podrá utilizar ESG para direccionar a la red pública.
 
 Esta arquitectura permite las opciones siguientes para el direccionamiento o el envío mediante proxy del tráfico a la red pública:
 
 Método|Descripción|Limitaciones
 --|--|--
-Pasarela virtualizada|Despliegue una pasarela virtualizada (por ejemplo, NSX ESG, F5 BIG-IP, FortiGate-VM o un dispositivo virtual de su elección) que cruce la red privada y la red pública. Configure el direccionamiento en el sistema de origen (por ejemplo, vCenter, Zerto, su carga de trabajo) para dirigir únicamente el tráfico de red pública a la pasarela, y configure la pasarela según sus necesidades. |Aplicable únicamente a instancias con interfaces públicas habilitadas. Esta configuración permite tanto patrones de tráfico de salida como de entrada.
+Pasarela virtualizada|Despliegue una pasarela virtualizada (por ejemplo, NSX ESG, F5 BIG-IP, FortiGate-VM o un dispositivo virtual de su elección) que cruce la red privada y la red pública. Configure el direccionamiento en el sistema de origen (por ejemplo, vCenter, Zerto, su carga de trabajo) para dirigir únicamente el tráfico de red pública a la pasarela, y configure la pasarela según sus necesidades.|Aplicable únicamente a instancias con interfaces públicas habilitadas. Esta configuración permite tanto patrones de tráfico de salida como de entrada.
 Pasarela virtualizada con proxy|Despliegue una pasarela virtualizada como la anterior. Detrás de esta pasarela, [despliegue un servidor proxy](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-init-config#vum-init-config) y configure los servicios y aplicaciones para que se conecten a la red pública a través de este proxy.|Aplicable únicamente a instancias con interfaces públicas habilitadas. Los patrones de tráfico de salida pueden utilizar el proxy, pero los patrones de tráfico de entrada se deben gestionar en la pasarela.
 Pasarela de hardware|Despliegue un [dispositivo de pasarela de hardware](https://cloud.ibm.com/catalog/infrastructure/gateway-appliance) en la VLAN de gestión. Configure la pasarela para la salida con NAT en la red pública según sus necesidades.|Aplicable a todas las instancias, con o sin interfaces públicas habilitadas. Esta configuración permite tanto patrones de tráfico de salida como de entrada.
 Pasarela de hardware con proxy|Despliegue un dispositivo de pasarela como se ha indicado anteriormente. Detrás de esta pasarela, [despliegue un servidor proxy](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-init-config#vum-init-config) y configure los servicios y aplicaciones para que se conecten a la red pública a través de este proxy.|Aplicable a todas las instancias, con o sin interfaces públicas habilitadas. Los patrones de tráfico de salida pueden utilizar el proxy, pero los patrones de tráfico de entrada se deben gestionar mediante la pasarela.

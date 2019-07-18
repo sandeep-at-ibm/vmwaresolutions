@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-28"
 
 keywords: VMware HCX standalone, HCX on-premises, tech specs HCX
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -57,7 +58,7 @@ HCX on {{site.data.keyword.cloud_notm}} 元件必須同時安裝在 {{site.data.
 
 您現在已完成內部部署 HCX Manager 的基本設定。您可以繼續將內部部署 HCX on {{site.data.keyword.cloud_notm}} 站台與雲端 HCX 站台配對。
 
-如需相關資訊，請參閱 [VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx)。
+如需相關資訊，請參閱 [VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx){:external}。
 
 ## 刪除內部部署 HCX on IBM Cloud 實例之前的考量
 {: #standalone_considerations-delete}
@@ -80,5 +81,5 @@ HCX on {{site.data.keyword.cloud_notm}} 元件必須同時安裝在 {{site.data.
 
 * [檢視內部部署 HCX on {{site.data.keyword.cloud_notm}} 實例](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_viewingserviceinstances)
 * [HCX 術語名詞解釋](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
-* [VMware Hybrid Cloud Extension 文件](https://cloud.vmware.com/vmware-hcx/resources)
+* [VMware Hybrid Cloud Extension 文件](https://cloud.vmware.com/vmware-hcx/resources){:external}
 * [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

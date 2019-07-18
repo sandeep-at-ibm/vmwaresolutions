@@ -28,7 +28,7 @@ La technologie HCX s'intègre en toute transparence aux réseaux vSphere vCenter
 Cette introduction récapitule les tâches qui peuvent être accomplies et les fonctions qui prennent en charge et améliorent la migration et l'extension réseau.
 
 * HCX détient les processus de chiffrement et déchiffrement source et destination, en garantissant une sécurité cohérente et en permettant l'admission de flux de travaux hybrides comme la migration de machine virtuelle et l'extension de réseau.
-* HCX crée un réseau WAN optimisé, défini par les logiciels pour l'augmentation des performances de réseau étendu, avec des performances proches de celles de la vitesse d'un réseau local. 
+* HCX crée un réseau WAN optimisé, défini par les logiciels pour l'augmentation des performances de réseau étendu, avec des performances proches de celles de la vitesse d'un réseau local.
 * HCX permet également la migration de la charge de travail bidirectionnelle et de la politique de sécurité VMware NSX® vers les services IBM Cloud.
 * HCX s'intègre à vSphere vCenter et est géré depuis le client vSphere Web Client.
 
@@ -94,7 +94,7 @@ Pour qu'un déploiement réussisse :
 
 La machine virtuelle HCX Manager est installée en premier, puis elle gère l'installation des autres dispositifs de machine virtuelle de service en local et dans le cloud.
 
-Les étapes suivantes constituent des tâches d'installation de base : 
+Les étapes suivantes constituent des tâches d'installation de base :
 1. Obtenir le fichier OVA du dispositif virtuel Hybrid Cloud Enterprise.
 2. Depuis le client vSphere Web Client, installer le dispositif virtuel de service HCX Manager sur le site vCenter local qui se connecte à IBM Cloud.
 3. Depuis le client vSphere Web Client, enregistrer un noeud final IBM Cloud avec le plug-in HCX. L'enregistrement établit la relation un-à-un entre l'instance HCX locale et l'instance HCX dans IBM Cloud.
@@ -105,7 +105,7 @@ Les étapes suivantes constituent des tâches d'installation de base :
 ### Remarques relatives aux performances des composants de déploiement
 {: #hcx-archi-source-perf-consid}
 
-La planification d'architecture inclut les machines virtuelles à migrer, les réseaux utilisés pour le trafic de machine virtuelle, ainsi que les réseaux à étendre.  
+La planification d'architecture inclut les machines virtuelles à migrer, les réseaux utilisés pour le trafic de machine virtuelle, ainsi que les réseaux à étendre. 
 
 Les valeurs maximum et minimum pour les composants de déploiement sont les suivantes :
 * vSphere vCenter. Le dispositif HCX Manager doit être installé sur le site vCenter qui nécessite des services hybrides. Il peut y avoir un seul déploiement HCX par vCenter. Cette restriction s'applique au mode lié. Le dispositif de gestion HXC est uniquement installé dans le vCenter principal. HCX prend en charge jusqu'à cinq vCenters en mode lié.
@@ -211,7 +211,7 @@ Pour déployer HCX, le nombre correct d'adresses IP doit être disponible à la 
 
 Proximity Routing (routage de proximité) est une fonction réseau qui peut être activée lorsque la passerelle cloud est configurée.
 
-Proximity Routing garantit que l'acheminement entre les machines virtuelles qui sont connectées aux réseaux étendus et routés, à la fois en local et dans le cloud, est symétrique. Cette fonctionnalité nécessite la configuration du routage dynamique entre les locaux du client et le cloud. 
+Proximity Routing garantit que l'acheminement entre les machines virtuelles qui sont connectées aux réseaux étendus et routés, à la fois en local et dans le cloud, est symétrique. Cette fonctionnalité nécessite la configuration du routage dynamique entre les locaux du client et le cloud.
 
 Lorsque des utilisateurs étendent leurs réseaux au cloud, la connectivité de couche 2 est étendue sur IBM Cloud. Toutefois, sans optimisation de route, les demandes de communication de couche 3 doivent retourner vers l'origine du réseau local pour être routées. Ce trajet retour est appelé "tromboning" ou "hairpinning".
 

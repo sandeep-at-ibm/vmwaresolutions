@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-28"
 
 keywords: vSphere order cluster, order vSphere, order vSphere cluster
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -51,14 +52,13 @@ Seleccione los componentes de VMware que desea solicitar con el clúster y espec
 
 Si es un usuario de IBM Business Partner, puede seleccionar un paquete de licencias de componente al solicitar un nuevo clúster de vSphere. Están disponibles los paquetes siguientes:
 
-Tabla 1. Paquetes de componentes de Business Partner de IBM para clústeres de vSphere
-
 | Paquete | Componentes                   |
 |:------------------------- |:----------------------- |
 | Standard with Management | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vRealize Operations Enterprise |
 | Advanced                 | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vCloud Director, NSX Base |
 | Advanced with Networking | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, NSX Advanced |
 | Advanced with Networking and Management | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vRealize Operations Enterprise, vCloud Director, NSX Enterprise |
+{: caption="Tabla 1. Paquetes de componentes de Business Partner de IBM para clústeres de vSphere" caption-side="top"}
 
 También puede incluir los siguientes componentes de VMware en su pedido:
 * VMware vSAN
@@ -104,7 +104,9 @@ El uso de claves de licencia individuales junto con las claves de licencia combi
 
 Seleccione el {{site.data.keyword.CloudDataCent_notm}} en el que se va a alojar el clúster.
 
-**Notas:**
+#### Notas
+{: #vs_orderinginstances-notes}
+
 * Si selecciona un componente vSAN, la lista de ubicaciones se filtra por disponibilidad de SSD.
 * Los servidores nativos Broadwell no están disponibles para la ubicación del centro de datos **FRA05 - Frankfurt**.
 * Los servidores nativos Broadwell y certificados por SAP no están disponibles para la ubicación del centro de datos **LON05 - London**.
@@ -114,13 +116,12 @@ Seleccione el {{site.data.keyword.CloudDataCent_notm}} en el que se va a alojar 
 
 Si selecciona **Skylake**, puede elegir la combinación de CPU y RAM del servidor nativo que se ajuste a sus necesidades. Las opciones disponibles dependen de si ha seleccionado el componente VMware vSAN.
 
-Tabla 2. Opciones para {{site.data.keyword.baremetal_short}} Skylake
-
 | Opciones de modelo de CPU        | Opciones de RAM       |
 |:------------- |:------------- |
 | Procesador Dual Intel Xeon Silver 4110 / 16 núcleos en total, 2,1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Procesador Dual Intel Xeon Gold 5120 / 28 núcleos en total, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon Gold Procesador 6140 / 36 núcleos en total, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+{: caption="Tabla 2. Opciones para {{site.data.keyword.baremetal_short}} Skylake" caption-side="top"}
 
 ### Certificado por SAP
 {: #vs_orderinginstances-sap}
@@ -141,12 +142,11 @@ En función de sus requisitos, seleccione una configuración de servidor nativo:
 
 Si selecciona **Broadwell**, puede elegir la combinación de CPU y RAM del servidor nativo que se ajuste a sus necesidades. Las opciones disponibles dependen de si ha seleccionado el componente VMware vSAN.
 
-Tabla 3. Opciones para {{site.data.keyword.baremetal_short}} Broadwell
-
 | Opciones de modelo de CPU        | Opciones de RAM       |
 |:------------- |:------------- |
 | Quad Intel Xeon E7-4820 v4 / 40 núcleos en total, 2,0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 núcleos en total, 2,1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+{: caption="Tabla 3. Opciones para {{site.data.keyword.baremetal_short}} Broadwell" caption-side="top"}
 
 ### Número de servidores nativos
 {: #vs_orderinginstances-bare-metal-number}
@@ -235,7 +235,9 @@ En función del {{site.data.keyword.CloudDataCent_notm}} que haya seleccionado, 
   * **Subred primaria** se asigna a hosts físicos para acceder a la red pública.
   * **Subred primaria privada** se asigna a hosts físicos para el tráfico de gestión.
 
-**Importante:**
+##### Importante
+{: #vs_orderinginstances-important}
+
 * Asegúrese de que la configuración del cortafuegos en las VLAN seleccionadas no bloquee el tráfico de datos de gestión.
 * Asegúrese de que todas las VLAN que seleccione estén en el mismo pod. Los servidores ESXi no se pueden suministrar en VLAN en pods mixtos.
 
@@ -247,14 +249,14 @@ También puede seleccionar si desea incluir el par de alta disponibilidad de dis
 ## Resumen del pedido
 {: #vs_orderinginstances-order-summary}
 
-En función de la configuración seleccionada, el coste estimado se genera y se muestra al instante en el panel derecho **Resumen de pedido**. Pulse **Detalle de precios** para generar un documento PDF con el resumen de coste de los recursos de {{site.data.keyword.vmwaresolutions_short}}. 
+En función de la configuración seleccionada, el coste estimado se genera y se muestra al instante en el panel derecho **Resumen de pedido**. Pulse **Detalle de precios** para generar un documento PDF con el resumen de coste de los recursos de {{site.data.keyword.vmwaresolutions_short}}.
 
-También puede añadir los recursos suministrados a la herramienta de estimación {{site.data.keyword.cloud_notm}}, pulsando **Añadir a estimación**. Esto es útil si desea estimar el coste de los recursos estimare {{site.data.keyword.vmwaresolutions_short}} seleccionados junto con otros recursos de {{site.data.keyword.cloud_notm}} que le podría interesar adquirir. 
+También puede añadir los recursos suministrados a la herramienta de estimación {{site.data.keyword.cloud_notm}}, pulsando **Añadir a estimación**. Esto es útil si desea estimar el coste de los recursos estimare {{site.data.keyword.vmwaresolutions_short}} seleccionados junto con otros recursos de {{site.data.keyword.cloud_notm}} que le podría interesar adquirir.
 
 ## Procedimiento para solicitar clústeres de vSphere
 {: #vs_orderinginstances-procedure}
 
-1. Desde el catálogo de {{site.data.keyword.cloud_notm}}, pulse **VMware** en el panel de navegación izquierdo y pulse **VMware vSphere** en la sección **Centros de datos virtuales**.
+1. En el catálogo de {{site.data.keyword.cloud_notm}}, pulse el icono **VMware** en el panel de navegación de la izquierda y, a continuación, pulse la tarjeta **VMware vSphere on IBM Cloud** en la sección **Centros de datos virtuales de VMware**.
 2. En la página **VMware vSphere on IBM Cloud**, pulse **Crear**.  
    Asegúrese de que está en el separador **Crear nuevo** y de que se muestra **Nuevo clúster** en la lista **Configuraciones de clúster**.
 3. Escriba el nombre del clúster.
@@ -263,7 +265,7 @@ También puede añadir los recursos suministrados a la herramienta de estimació
   * Si no es un Business Partner, seleccione el componente, la edición, si la hay, y especifique la opción de licencia.
   Cuando opta por traer su propia licencia (BYOL) para VMware vSphere Enterprise Plus, se abre automáticamente una incidencia de {{site.data.keyword.cloud_notm}} en su nombre para solicitar que las licencias predeterminadas de vSphere de los {{site.data.keyword.baremetal_short}} solicitados se sustituyan por las licencias que proporcione.   
 
-    **Importante:** El usuario es el responsable de realizar el seguimiento de la incidencia para que se sustituya la licencia de vSphere de los servidores ESXi recién solicitados. De esta forma, la infraestructura de {{site.data.keyword.cloud_notm}} permite la cancelación del cargo inicialmente suministrado por la licencia de vSphere de la infraestructura de {{site.data.keyword.cloud_notm}}. Para sustituir la licencia de ESXi vSphere, consulte [Configuración de valores de licencia para un host ESXi](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}.
+    **Importante:** El usuario es el responsable de realizar el seguimiento de la incidencia para que se sustituya la licencia de vSphere de los servidores ESXi recién solicitados. De esta forma, la infraestructura de {{site.data.keyword.cloud_notm}} permite la cancelación del cargo inicialmente suministrado por la licencia de vSphere de la infraestructura de {{site.data.keyword.cloud_notm}}. Para sustituir la licencia de ESXi vSphere, consulte [Configuración de valores de licencia para un host ESXi](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:external}.
 5. Complete los valores del servidor nativo:
    1. Seleccione el {{site.data.keyword.CloudDataCent_notm}} en el que se va a alojar el clúster.
    2. Seleccione la configuración del servidor nativo.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-06-21"
 
 subcollection: vmware-solutions
 
@@ -35,7 +35,7 @@ Tabla 1. Actores
 Actor  |  Descripción
 ---|---
 Administrador del sistema |Los administradores del sistema son los recursos de VMware de empresa que utilizan vCenter y el plugin HCX. Identifican los candidatos a la migración, amplían las redes, migran las VM y gestionan NSX-V. Utilizan la consola de {{site.data.keyword.cloud_notm}} para suministrar instancias de VMware vCenter Server on {{site.data.keyword.cloud_notm}} y para escalar la capacidad.
-Desarrollador	| Los desarrolladores son los recursos expertos en contenedores de la empresa que utilizan las consolas de {{site.data.keyword.containerlong_notm}}, {{site.data.keyword.icpfull_notm}} y CAM y las API para crear y gestionar contenedores. Crean los nuevos servicios como parte de la modernización de la aplicación.
+Desarrollador | Los desarrolladores son los recursos expertos en contenedores de la empresa que utilizan las consolas de {{site.data.keyword.containerlong_notm}}, {{site.data.keyword.icpfull_notm}} y CAM y las API para crear y gestionar contenedores. Crean los nuevos servicios como parte de la modernización de la aplicación.
 Usuario de empresa | Este recurso de empresa requiere acceso de red a las aplicaciones para llevar a cabo procesos de empresa, como por ejemplo la actualización de contenido.
 Cliente | El cliente es un actor externo que quiere consumir servicios de la empresa. Para Acme Skateboards, es un skater que quiere comprar productos de skating. El cliente requiere acceso seguro a Internet para acceder al catálogo.
 {{site.data.keyword.containerlong_notm}} | Se trata de un recurso de IBM que gestiona el nodo maestro {{site.data.keyword.containerlong_notm}} del servicio.
@@ -56,7 +56,8 @@ VM en la nube | Las VM en la nube alojan las aplicaciones que se han migrado des
 NSX-V | NSX-V en vCenter Server proporciona la red de superposición definida por software que gestiona el administrador del sistema. La red de superposición es el destino de las redes ampliadas HCX, ya que maneja el tráfico procedente de las VM para {{site.data.keyword.icpfull_notm}}. NSX-V proporciona la arquitectura de referencia con características como, por ejemplo, el despliegue, la reconfiguración y la destrucción de redes virtuales bajo demanda y servicios de microsegmentación dentro de VMware utilizando los conmutadores distribuidos de vSphere (vDS). Para obtener más información, consulte [Visión general de NSX-V](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv).
 CAM | {{site.data.keyword.cloud_notm}} Automation Manager (CAM) se ejecuta en {{site.data.keyword.icpfull_notm}} y proporciona un único panel para suministrar cargas de trabajo basadas en VM junto con cargas de trabajo basadas en Kubernetes utilizando plantillas. CAM permite al desarrollador: <br> - Suministrar cargas de trabajo en vCenter Server, {{site.data.keyword.icpfull_notm}} o {{site.data.keyword.containerlong_notm}}.<br> - Componer y coordinar servicios que procedentes tanto de VM como de contenedores. <br> - Integrar sus cadenas de herramientas de DevOps y la solución ITSM del segundo día.
 Aplicaciones contenerizadas | Las apps que han pasado por el proceso de modernización de aplicaciones y que ahora se ejecutan como contenedores. En el caso de esta arquitectura de referencia y en este ejemplo de Acme Skateboards, una de las apps contenerizadas es un servidor web que forma parte de la carga de trabajo con presencia en línea.
-Watson | En el caso de esta arquitectura de referencia y en este ejemplo de Acme Skateboards, Watson representa el servicio de IA que se utiliza en la arquitectura "Concept Car".
+Watson | En el caso de esta arquitectura de referencia y en este ejemplo de Acme Skateboards, Watson representa el servicio de IA que se utiliza en la
+_arquitectura Concept Car_.
 
 ## Enlaces relacionados
 {: #vcsnsxt-systemcontext-related}

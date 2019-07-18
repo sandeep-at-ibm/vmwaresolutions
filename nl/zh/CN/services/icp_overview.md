@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-26"
 
 keywords: IBM Cloud Private, ICP, tech specs ICP
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -26,27 +27,25 @@ subcollection: vmware-solutions
 * 部署在（或已升级到）V2.7 和更高版本的 vCenter Server with Hybridity Bundle 实例
 * 部署在（或已升级到）V2.5 和更高版本的 vCenter Server 实例
 
-对于部署在（或已升级到）V3.0 或更高版本的实例，{{site.data.keyword.cloud_notm}} Automation Manager 还会作为 {{site.data.keyword.cloud}} Private Hosted 服务订单的一部分进行部署。
+当前安装的 IBM Cloud Private 版本为 3.1.2。{{site.data.keyword.cloud_notm}} Automation Manager 还会作为 {{site.data.keyword.cloud}} Private Hosted 服务订单的一部分进行部署。
 {:note}
+
 
 ## IBM Cloud Private Hosted 的技术规范
 {: #icp_overview-specs}
 
 下表列出了为**生产就绪**环境和**开发/测试**环境订购 IBM Cloud Private Hosted 服务的最低需求。
 
-表 1. 生产就绪环境和开发/测试环境的最低需求
-
 |环境|核心数|内存 (GB)|主机数|存储器 (GB) |
 |:---------- |:---- |:------ |:---- |:------- |
 |生产就绪|52|640|3|8,000|
 |开发/测试|30|200|3|4,000|
+{: caption="表 1. 生产就绪环境和开发/测试环境的最低需求" caption-side="top"}
 
 ### IBM Cloud Private Hosted 的资源需求
 {: #icp_overview-resource-req}
 
-以下各表列出了 {{site.data.keyword.cloud_notm}} Private Hosted 服务在生产就绪环境和开发/测试环境中的资源需求。
-
-表 2. {{site.data.keyword.cloud_notm}} Private Hosted 在生产就绪环境中的资源需求
+下表列出了 {{site.data.keyword.cloud_notm}} Private Hosted 服务在生产就绪环境中的资源需求。
 
 |节点类型|CPU 核心数|内存 (GB)|磁盘 1 (GB)|磁盘 2 (GB)|VM 数|
 |:---------- |:----------- |:------------ |:----------- |:----------- |:------------- |
@@ -60,8 +59,9 @@ subcollection: vmware-solutions
 |NFS 服务器|8|4|350|1|1|
 |NSX Edge 服务网关|2|1|0.5|0.5|2|
 |记录的约束|52|640|  |8,000|   |
+{: caption="表 2. 生产就绪环境" caption-side="top"}
 
-表 3. {{site.data.keyword.cloud_notm}} Private Hosted 在开发/测试环境中的资源需求
+下表列出了 {{site.data.keyword.cloud_notm}} Private Hosted 服务在开发和测试环境中的资源需求。
 
 |节点类型|CPU 核心数|内存 (GB)|磁盘 1 (GB)|磁盘 2 (GB)|VM 数|
 |:---------- |:----------- |:------------ |:----------- |:----------- |:------------- |
@@ -75,6 +75,7 @@ subcollection: vmware-solutions
 |NFS 服务器|8|4|350|1|1|
 |NSX Edge 服务网关|2|1|0.5|0.5|2|
 |记录的约束|30|200|  |4,000|  |
+{: caption="表 3. {{site.data.keyword.cloud_notm}} 开发和测试环境" caption-side="top"}
 
 ### 用于计算 IBM Cloud Private Hosted 空间需求的公式
 {: #icp_overview-formulas}
@@ -84,9 +85,9 @@ subcollection: vmware-solutions
 #### 计算可用核心数的公式
 {: #icp_overview-formulas-1}
 
-`AvailableCores = [HostCoreCount - HostOverheadCores - (HostVSanOverheadCorePercentage * HostCoreCount)] * (HostCount - vSphereHAHostTolerance) - MgmtOverheadCores`
+下表列出了公式 1 中的变量：
 
-表 4. 公式 1 中变量的描述
+`AvailableCores = [HostCoreCount - HostOverheadCores - (HostVSanOverheadCorePercentage * HostCoreCount)] * (HostCount - vSphereHAHostTolerance) - MgmtOverheadCores`
 
 |变量|描述|单位|vSAN 示例|NFS 示例|
 |:--------- |:----------- |:---- |:------------- |:----------- |
@@ -97,13 +98,14 @@ subcollection: vmware-solutions
 |MgmtOverheadCores|vCenter Server 管理组件（vCenter Server、PSC、AD/DNS 和 Edge）保留的核心数，值为 5 个核心|核心数| 5 | 5 |
 |vSphereHAHostTolerance|vSphere HA 配置中容许的主机数，值为 1 个主机|	主机数|1|1|
 |HostVsanOverheadCorePercentage|vSAN 使用的主机核心的百分比，值为 10%，如果是非 vSAN 主机，值为 0%| % |10%|0%|
+{: caption="表 4. 公式 1 中变量的描述" caption-side="top"}
 
 #### 计算可用内存的公式
 {: #icp_overview-formulas-2}
 
-`AvailableMemory = [HostMemory - HostOverheadMemory - HostVsanOverheadMemory - (HostVsanOverheadMemoryDiskPercentage * HostVsanCapacityDiskSize)] * (HostCount - vSphereHAHostTolerance) - MgmtOverheadMemory`
+下表列出了公式 2 中的变量：
 
-表 5. 公式 2 中变量的描述
+`AvailableMemory = [HostMemory - HostOverheadMemory - HostVsanOverheadMemory - (HostVsanOverheadMemoryDiskPercentage * HostVsanCapacityDiskSize)] * (HostCount - vSphereHAHostTolerance) - MgmtOverheadMemory`
 
 |变量|描述|单位|vSAN 示例|NFS 示例|
 |:--------- |:----------- |:---- |:------------- |:----------- |
@@ -116,6 +118,7 @@ subcollection: vmware-solutions
 |vSphereHAHostTolerance|vSphere HA 配置中容许的主机数，值为 1 个主机|主机数|1|1|
 |HostVsanOverheadMemoryDiskPercentage|vSAN 管理保留的内存 GB 数（以其中一个容量 vSAN 磁盘的百分比表示）, 值为 2.75%| % |2.75%|2.75%|
 |HostVsanOverheadMemory|vSAN 管理保留的内存 GB 数（不考虑磁盘大小），值为 7 GB，如果是非 vSAN 主机，值为 0 GB|GB|7|0|
+{: caption="表 5. 公式 2 中变量的描述" caption-side="top"}
 
 ## 安装 IBM Cloud Private Hosted 时的注意事项
 {: #icp_overview-install}
@@ -136,6 +139,6 @@ subcollection: vmware-solutions
 
 * [订购 {{site.data.keyword.cloud_notm}} Private Hosted](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_ordering)
 * [vCenter Server 和 {{site.data.keyword.cloud_notm}} Private 指南](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [开具有关 {{site.data.keyword.cloud_notm}} Private 的凭单](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
-* [{{site.data.keyword.cloud_notm}} Automation Manager 许可](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/licensing.html){:new_window}
-* [{{site.data.keyword.cloud_notm}} Automation Manager 组件](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/cam_managed_components.html){:new_window}
+* [开具有关 {{site.data.keyword.cloud_notm}} Private 的凭单](https://www.ibm.com/mysupport/s/?language=en_US){:external}
+* [{{site.data.keyword.cloud_notm}} Automation Manager 许可](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/licensing.html){:external}
+* [{{site.data.keyword.cloud_notm}} Automation Manager 组件](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/cam_managed_components.html){:external}

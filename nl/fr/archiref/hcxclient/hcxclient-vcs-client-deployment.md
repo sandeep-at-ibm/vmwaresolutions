@@ -28,14 +28,14 @@ Le côté client de HCX peut s'installer sur n'importe quelle version de vSphere
 | HCX Network Extension (HCX-NE) | 4 | 3G |  2G |
 | HCX WAN Optimizer (HCX-WAN) | 8 | 14G |  100G |
 
-## Licence client 
+## Licence client
 {: #hcxclient-vcs-client-deployment-licensing}
 
 HCX est un service. HCX est concédé sous licence pour chaque site et pour chaque machine virtuelle à travers des serveurs de licences maintenus par VMware. Les instances HCX côté cloud et côté client ont besoin de communiquer avec le site d'enregistrement VMware durant toute leur durée de vie.
 - Le trafic sur 80 et 443 doit être autorisé dans `https://connect.hybridity.vmware.com`
 - Une clé d'enregistrement à usage unique est fournie par la console {{site.data.keyword.vmwaresolutions_full}} pour l'installation côté client. Une clé est requise pour chaque installation HCX côté client.
 
-### Procédure de commande de licences HCX locales 
+### Procédure de commande de licences HCX locales
 {: #hcxclient-vcs-client-deployment-license-ordering-procedure}
 
 1. Dans la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Ressources** dans le panneau de navigation de gauche.
@@ -61,7 +61,7 @@ Pour déployer HCX, le nombre correct d'adresses IP doit être disponible à la 
   * Deux adresses IP par dispositif HCX Manager connecté à IBM Cloud. Les adresses peuvent être utilisées pour la connexion à Internet ou à une ou plusieurs lignes de connexion directes.
   * Ajoutez-en une autre s'il y a un réseau vMotion distinct.
 
-## Téléchargement de fichier OVA côté client 
+## Téléchargement de fichier OVA côté client
 {: #hcxclient-vcs-client-deployment-client-ova}
 
 HCX côté client est déployé par l'utilisateur et nécessite des droits de niveau administrateur pour l'accès au vCenter source. A l'heure de la présente publication, le fichier OVA du gestionnaire de côté client HCX est d'environ 1,7 Go. Lorsque vous utilisez la console {{site.data.keyword.vmwaresolutions_short}} pour commander HCX, une URL est fournie avec un lien permettant de télécharger la version de HCX pour le côté client qui correspond à la version de HCX déployée du côté cloud. Ce lien est fourni dans l'interface utilisateur de HCX Manager côté cloud.
@@ -120,22 +120,22 @@ Tableau 1. Valeurs exemple pour les propriétés réseau
   * Consultez l'onglet **Summary**, la console indique **Powered On** et le bouton **Play** est vert.
 10. HCX Manager est sous tension et prêt pour un enregistrement auprès du vCenter local.
 
-## Configuration initiale du dispositif HCX Manager 
+## Configuration initiale du dispositif HCX Manager
 {: #hcxclient-vcs-client-deployment-inital-config}
 
 1. Assurez-vous que le dispositif virtuel Hybrid Cloud Service dispose d'un accès sortant à `https://connect.hcx.vmware.com`
 2. Connectez-vous à l'interface d'administration du dispositif virtuel Hybrid Cloud Services `https://<IP>:9443` avec **admin**
-3. Indiquez la clé de licence collectée dans les conditions préalables côté client. 
-4. Emplacement du centre de données HCX Cloud 
-    - Entrez la ville la plus proche du centre de données où réside l'instance HCX Cloud. Si la ville n'apparaît pas, sélectionnez la ville principale la plus proche. 
+3. Indiquez la clé de licence collectée dans les conditions préalables côté client.
+4. Emplacement du centre de données HCX Cloud
+    - Entrez la ville la plus proche du centre de données où réside l'instance HCX Cloud. Si la ville n'apparaît pas, sélectionnez la ville principale la plus proche.
 5. Indiquez le nom du système
 
-## Importation d'un certificat vSphere Server 
+## Importation d'un certificat vSphere Server
 {: #hcxclient-vcs-client-deployment-import-cert}
 
 1. Connectez-vous à l'interface d'administration de HCX Manager `https://<IP>:9443`
 2. Sélectionnez l'onglet **Administration** sous **Certificate** -> **Trusted CA Certificate**
-3. Importez le site Web vSphere Server 
+3. Importez le site Web vSphere Server
    1. Sélectionnez l'importation des certificats de l'URL et la clé dans l'URL d'enregistrement côté cloud HCX.
      * Sao Paulo : `https://ssao01dirhcx01.vmware-solutions.cloud.ibm.com`
 
@@ -155,10 +155,10 @@ Tableau 1. Valeurs exemple pour les propriétés réseau
   7. Cliquez sur **Edit** en regard de la zone de texte **Lookup Service URL**.
   8. Entrez le noeud final de service de réseau recherche sous la forme suivante :
     * Pour vCenter Server 6.5 `https://psc/`
-  9.  Indiquez les détails NSX si nécessaire. 
+  9.  Indiquez les détails NSX si nécessaire.
   10. Cliquez sur **OK**. Ne redémarrez pas lorsqu'un message demandant le redémarrage du moteur Web s'affiche.
 4. Cliquez sur l'onglet **Summary** et recherchez la section **Hybridity Management Components**. Arrêtez et redémarrez à la fois le moteur d'applications et le moteur Web.
-5. Pour finaliser l'enregistrement, déconnectez-vous du client vSphere Web Client. Reconnectez-vous à vSphere Web Client pour vérifier que l'onglet HCX est présent. 
+5. Pour finaliser l'enregistrement, déconnectez-vous du client vSphere Web Client. Reconnectez-vous à vSphere Web Client pour vérifier que l'onglet HCX est présent.
 
 ## Résultats
 {: #hcxclient-vcs-client-deployment-reg-vcenter-results}

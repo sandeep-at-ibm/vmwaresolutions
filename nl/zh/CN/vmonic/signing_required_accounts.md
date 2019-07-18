@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-26"
 
 keywords: user account, ibm cloud account, ibm cloud infrastructure
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -37,6 +38,6 @@ subcollection: vmware-solutions
 
 * [常见问题](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [{{site.data.keyword.cloud_notm}} 基础架构帐户的需求](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req)
-* [视频 - 如何创建 {{site.data.keyword.cloud_notm}} 帐户](https://www.youtube.com/watch?v=HBkY-Fs1d6E)
+* [视频 - 如何创建 {{site.data.keyword.cloud_notm}} 帐户](https://www.youtube.com/watch?v=HBkY-Fs1d6E){:external}
 * [订购 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
 * [切换到 IBM 标识并链接帐户](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-06-21"
 
 subcollection: vmware-solutions
 
@@ -55,7 +55,7 @@ vCenter| vCenter 是系統管理者的主要介面，用於管理內部部署 VM
 NSX-V| vCenter Server 上的 NSX-V 提供由系統管理者管理的軟體定義層疊網路。層疊網路是 HCX 延伸網路的目標，因為它會處理來自 {{site.data.keyword.icpfull_notm}} 之 VM 的資料流量。NSX-V 使用 vSphere Distributed Switch (vDS) 提供部署、重新配置及毀損 VMware 內隨需應變虛擬網路及微分段服務這類特性的參照架構。如需相關資訊，請參閱 [NSX-V 概觀](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv)。
 CAM| {{site.data.keyword.cloud_notm}} Automation Manager (CAM) 在 {{site.data.keyword.icpfull_notm}} 上執行，並提供單一窗格，可以使用範本，同時佈建 VM 型工作負載及 Kubernetes 型工作負載。CAM 容許「開發人員」執行下列動作：<br> - 在 vCenter Server、{{site.data.keyword.icpfull_notm}} 或 {{site.data.keyword.containerlong_notm}} 上佈建工作負載。<br> - 組合及編排可理解 VM 和容器的服務。<br> - 整合其 DevOps 工具鏈及 Day 2 ITSM 解決方案。
 容器化應用程式 | 這些應用程式完成應用程式現代化旅程，且目前作為容器執行。對於此參照架構和此 Acme Skateboards 範例，其中一個容器化應用程式是 Web 伺服器，它是線上呈現工作負載的一部分。
-Watson | 對於此參照架構及此 Acme Skateboards 範例，Watson 代表「概念車」架構中使用的 AI 服務。
+Watson | 對於此參照架構和此 Acme Skateboards 範例而言，Watson 代表_概念車架構_ 中使用的 AI 服務。
 
 ## 相關鏈結
 {: #vcsnsxt-systemcontext-related}

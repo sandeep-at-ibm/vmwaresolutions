@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: HTKC WebGUI, HTKC console, enable internet HTKC
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -67,7 +68,7 @@ Para ambientes do vCenter Server somente privado, o VMware NSX Edge Services Gat
 6. Para configurar uma rota estática para a VM, clique em **Gerenciar configurações de rede > Gerenciar rotas estáticas > Incluir rota estática**. Configure **Endereço de rede** para `10.0.0.0/8` e **Gateway** para o endereço IP anotado na etapa anterior.
 7. Para configurar o IP do gateway padrão para a VM, clique em **Gerenciar configurações de rede > Mudar a configuração de rede atual**. Se você receber uma mensagem de aviso, clique em **OK** e, em seguida, clique em **Configuração customizada**. Configure o campo **Gateway** para o endereço IP de uplink privado anotado na etapa 2 e clique em **OK**. Aguarde até que a nova configuração de rede esteja instalada e os serviços de rede sejam reiniciados.
 8. Se você vir uma mensagem solicitando a reautenticação do HyTrust SecureOS, clique em **OK** e insira o endereço IP da outra VM do HyTrust para esta instalação. Se você for solicitado a informar uma passphrase de 16 caracteres, pressione Enter para retornar ao menu principal. Verifique a configuração de rede atual para assegurar-se de que suas mudanças sejam aplicadas.
-9. Para confirmar que a VM tem acesso à Internet, execute ping em um endereço IP público ou website. Clique em **Gerenciar configurações de rede > Ferramentas de diagnóstico de rede > Executar ping de outro servidor**. Digite um endereço de website público, por exemplo, `www.ibm.com`, clique em **OK** e espere que uma mensagem seja exibida, por exemplo, `www.ibm.com responds to ping`.
+9. Para confirmar que a VM tem acesso à Internet, execute ping em um endereço IP público ou website. Clique em **Gerenciar as configurações de rede > Ferramentas de diagnóstico de rede > Testar portas de entrada de outro servidor**. Digite o endereço de um website público, por exemplo, `www.ibm.com`, clique em **OK**, digite `80 443` para as portas (ou quaisquer outras portas que queira testar) e obtenha uma resposta imediata mostrando as portas de entrada com uma mensagem semelhante a `80 (OK) 443 (OK)`.
 10. Repita as etapas de 3 a 9 para a outra VM do HyTrust.
 
 ## Links relacionados
@@ -76,4 +77,4 @@ Para ambientes do vCenter Server somente privado, o VMware NSX Edge Services Gat
 * [Visão geral do HyTrust KeyControl no {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htkc_considerations)
 * [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [Perguntas mais frequentes](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [HyTrust Website](https://www.hytrust.com/)
+* [HyTrust Website](https://www.hytrust.com/){:external}

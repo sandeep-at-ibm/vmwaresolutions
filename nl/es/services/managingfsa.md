@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: FortiGate Security console, FortiGate 300 console, login FortiGate console
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -40,5 +41,5 @@ Para obtener más información, consulte [Solicitud, visualización y eliminaci�
 * [Visión general de FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations)
 * [Cómo ponerse en contacto con el equipo de soporte de IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [Preguntas frecuentes](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Sitio web fortinet.com](https://www.fortinet.com/)
-* [Biblioteca de documentos de Fortinet](https://docs.fortinet.com/product/fortigate/6.2)
+* [Sitio web fortinet.com](https://www.fortinet.com/){:external}
+* [Biblioteca de documentos de Fortinet](https://docs.fortinet.com/product/fortigate/6.2){:external}

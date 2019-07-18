@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-26"
 
 keywords: F5 BIG-IP, F5 install, tech specs F5
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -60,8 +61,6 @@ F5 on {{site.data.keyword.cloud_notm}} 서비스를 설치하기 전에 다음 �
 
 선택한 라이센스 모델 및 대역폭에 따라 다음 구성으로 두 BIG-IP VE 가상 머신(VM)이 배치됩니다.
 
-표 1. 다양한 대역폭 및 라이센스 모델 선택사항에 대한 CPU 및 RAM 배치
-
 |최대 대역폭 |라이센스 모델: 양호 |라이센스 모델: 나음 |라이센스 모델: 최적 |
 |:------------------|:--------------------|:----------------------|:--------------------|
 |25Mbps           |2개의 vCPU, 4GB RAM    |4개의 vCPU, 8GB RAM      |8개의 vCPU, 16GB RAM   |
@@ -70,6 +69,7 @@ F5 on {{site.data.keyword.cloud_notm}} 서비스를 설치하기 전에 다음 �
 |3Gbps            |8개의 vCPU, 16GB RAM   |8개의 vCPU, 16GB RAM     |8개의 vCPU, 16GB RAM   |
 |5Gbps            |8개의 vCPU, 16GB RAM   |8개의 vCPU, 16GB RAM     |8개의 vCPU, 16GB RAM   |
 |10Gbps           |8개의 vCPU, 16GB RAM   |8개의 vCPU, 16GB RAM     |8개의 vCPU, 16GB RAM   |
+{: caption="표 1. 다양한 대역폭 및 라이센스 모델 선택사항에 대한 CPU 및 RAM 배치" caption-side="top"}
 
 ### 추가 고려사항
 {: #f5_considerations-additional}
@@ -128,4 +128,4 @@ F5 on {{site.data.keyword.cloud_notm}} 서비스를 제거하기 전에 기존 B
 * [F5 on {{site.data.keyword.cloud_notm}} 관리](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_f5)
 * [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [F5 웹 사이트](https://www.f5.com/){:new_window}
+* [F5 웹 사이트](https://www.f5.com/){:external}

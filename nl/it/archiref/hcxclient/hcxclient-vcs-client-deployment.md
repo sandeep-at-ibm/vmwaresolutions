@@ -22,7 +22,7 @@ può essere installato su qualsiasi versione di vSphere supportata da HCX, presu
 ## Requisiti
 {: #hcxclient-vcs-client-deployment-req}
 
-| Componente | Conteggio CPU | Memoria (GB) | Disco (GB)|
+| Componente | Conteggio CPU | Memoria (GB) | Disco (GB) |
 |--------|--------|---------|-------|
 | HCX Manager | 4 | 12G |  60G |
 | HCX Interconnect (HCX-IX) | 4 | 3G |  2G |
@@ -171,7 +171,7 @@ Nota l'icona **Hybrid Cloud** esistente e la voce di menu **Hybrid Cloud Service
 {: #hcxclient-vcs-client-deployment-related}
 
 * [Glossario di componenti e termini HCX](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-components)
-* [Preparazione dell'ambiente di installazione](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-planning-prep-install)
+* [Preparazione dell'ambiente di installazione ](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-planning-prep-install)
 * [Rete di servizi in loco HCX](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-vcs-mesh-deployment)
 * [Migrazioni VMware Hybrid Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-migrations)
 * [Monitoraggio di parametri e componenti](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-monitoring)

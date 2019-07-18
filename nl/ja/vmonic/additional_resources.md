@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-26"
 
 keywords: vmware solutions data sheet, vmware solutions developerWorks, vmware solutions video
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # 追加リソース
 {: #additional_resources}
@@ -25,22 +27,22 @@ subcollection: vmware-solutions
 ## データ・シート
 {: #additional_resources-data-sheets}
 
-* [{{site.data.keyword.vmwaresolutions_short}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:new_window}
+* [{{site.data.keyword.vmwaresolutions_short}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:external}
 
 ## developerWorks レシピ
 {: #additional_resources-dWrecipes}
 
-* [developerWorks レシピ](https://developer.ibm.com/recipes/tutorials/?s=VMware+Solutions){:new_window}
+* [developerWorks レシピ](https://developer.ibm.com/recipes/tutorials/?s=VMware+Solutions){:external}
 
 ## IBM Cloud のパターン
 {: #additional_resources-patterns}
 
-* [IBM Cloud のパターン](https://ibmcloudpatterns.mybluemix.net/#862581F800007C53/862581F800007DD5/862581D000837B23)
+* [IBM Cloud のパターン](https://ibmcloudpatterns.mybluemix.net/#862581F800007C53/862581F800007DD5/862581D000837B23){:external}
 
 ## プラットフォーム拡張
 {: #additional_resources-plat-extensions}
 
-すべての[仮想化プラットフォーム拡張機能](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/allvirtualizationextensions){:new_window}のアーキテクチャーを確認します。次のものが含まれます。
+すべての[仮想化プラットフォーム拡張機能](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/allvirtualizationextensions){:external}のアーキテクチャーを確認します。次のものが含まれます。
 * FortiGate Security Appliance
 * {{site.data.keyword.cloud_notm}} のファイル・ストレージとブロック・ストレージ
 * NSX Edge Services Gateway
@@ -52,11 +54,11 @@ subcollection: vmware-solutions
 ## ビデオおよびデモンストレーション
 {: #additional_resources-demos}
 
-* [リソースおよびビデオ](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/resources){:new_window}
-* [Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware){:new_window}
-* [主なリソースおよびケース・スタディー](https://www.ibm.com/cloud/vmware/resources){:new_window}
+* [リソースおよびビデオ](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/resources){:external}
+* [Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware){:external}
+* [主なリソースおよびケース・スタディー](https://www.ibm.com/cloud/vmware/resources){:external}
 
 ## VMware の資料
 {: #additional_resources-vmware-doc}
 
-* [VMware Hybrid Cloud Extension の資料](https://cloud.vmware.com/vmware-hcx/resources){:new_window}
+* [VMware Hybrid Cloud Extension の資料](https://cloud.vmware.com/vmware-hcx/resources){:external}

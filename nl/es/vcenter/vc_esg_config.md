@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server network config, network configuration, manage NSX ESG
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -22,7 +23,7 @@ subcollection: vmware-solutions
 
 Configure la red para las máquinas virtuales de modo que pueda aprovechar el servicio VMware NSX Servicios Edge Gateway (ESG) que se despliega en las instancias de VMware vCenter Server. Para obtener más información sobre las medidas de seguridad en vigor para ayudar a minimizar los riesgos de seguridad, consulte [¿Representa NSX Edge se servicios de gestión un riesgo para la seguridad?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
-VMware NSX es una plataforma de virtualización de red que permite la virtualización de redes aisladas y proporciona varios servicios de red, como conmutadores, direccionamiento y cortafuegos. Para obtener más información sobre NSX, consulte [Visión general de NSX](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}.
+VMware NSX es una plataforma de virtualización de red que permite la virtualización de redes aisladas y proporciona varios servicios de red, como conmutadores, direccionamiento y cortafuegos. Para obtener más información sobre NSX, consulte [Visión general de NSX](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:external}.
 
 Como parte del proceso de pedido de la instancia de vCenter Server, se llevan a cabo las siguientes acciones en su nombre:
 * Se solicita una subred de cliente privada que utilizarán las VM (máquinas virtuales) para acceder a la red privada de la infraestructura de {{site.data.keyword.cloud}}.
@@ -69,7 +70,7 @@ Si desea que sus máquinas virtuales de carga de trabajo tengan acceso de salida
 3. Pulse **Gestión > NAT** para abrir el separador **NAT**.
 4. Seleccione la regla SNAT predeterminada en la tabla y pulse la marca de comprobación verde que hay sobre la tabla para habilitar la regla.
 
-Para obtener más información sobre las reglas NAT de NSX Edge, consulte [Gestión de reglas NAT](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.
+Para obtener más información sobre las reglas NAT de NSX Edge, consulte [Gestión de reglas NAT](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:external}.
 
 ## Procedimiento para identificar los detalles de subredes del cliente
 {: #vc_esg_config-procedure-identify-customer-subnets-details}
@@ -88,7 +89,7 @@ Encontrará más detalles sobre las subredes del cliente siguiendo estos pasos e
 2. Pulse el menú de filtro y en el campo **Subred** escriba el identificador tal como aparece en la descripción de **customer-nsx-edge** del cliente web de VMware vSphere.
 3. Revise las notas que se muestran para las direcciones IP. Estas notas identifican cuáles de las subredes y direcciones IP se han solicitado y utilizado durante la configuración inicial.
 
-   No utilice las direcciones IP que se ha solicitado y utilizado durante la configuración inicial. Sin embargo, puede utilizar otras direcciones IP en estas subredes según sus requisitos. Para configurar reglas adicionales de conversión de direcciones de red, consulte [Gestión de reglas NAT](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.
+   No utilice las direcciones IP que se ha solicitado y utilizado durante la configuración inicial. Sin embargo, puede utilizar otras direcciones IP en estas subredes según sus requisitos. Para configurar reglas adicionales de conversión de direcciones de red, consulte [Gestión de reglas NAT](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:external}.
    {:important}
 
 ## Enlaces relacionados
@@ -96,4 +97,4 @@ Encontrará más detalles sobre las subredes del cliente siguiendo estos pasos e
 
 * [Resolución de problemas](/docs/services/vmwaresolutions?topic=vmware-solutions-vcenter_chg_impact#vcenter_chg_impact)
 * [Preguntas frecuentes](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}
+* [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:external}

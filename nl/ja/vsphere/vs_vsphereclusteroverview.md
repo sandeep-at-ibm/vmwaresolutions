@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-26"
 
 keywords: vSphere, vSphere component, tech specs vSphere
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -22,7 +23,7 @@ subcollection: vmware-solutions
 
 VMware vSphere on {{site.data.keyword.cloud}} は、合理化、最適化された VMware の注文プラットフォームです。 このプラットフォームでは、選択した VMware コンポーネントに基づいて VMware 互換ハードウェアをカスタマイズして注文することで、IBM によってホストされるお客様独自の VMware 環境を構築できます。
 
-{{site.data.keyword.vmwaresolutions_short}} コンソールでは、お客様が選択した VMware コンポーネントに基づいて、ハードウェアが自動的にフィルタリングされます。 例えば、オール・フラッシュの VMware vSAN クラスターを新規作成する場合は、[VMware Compatibility Guide](https://www.vmware.com/resources/compatibility/search.php) に照らして確認されたハードウェアのみが示されます。 また、最小 4 台の ESXi サーバーが必要です。
+{{site.data.keyword.vmwaresolutions_short}} コンソールでは、お客様が選択した VMware コンポーネントに基づいて、ハードウェアが自動的にフィルタリングされます。 例えば、オール・フラッシュの VMware vSAN クラスターを新規作成する場合は、[VMware Compatibility Guide](https://www.vmware.com/resources/compatibility/search.php){:external} に照らして確認されたハードウェアのみが示されます。 また、最小 4 台の ESXi サーバーが必要です。
 
 VMware vSphere on {{site.data.keyword.cloud_notm}} では、オプションの VMware コンポーネントのインストールや構成や起動が自動化されません。 このプラットフォームでは、ホスト対象の VMware 環境を、VMware 互換ハードウェアを組み込みながら設計して構築するための柔軟性が最大化されています。
 

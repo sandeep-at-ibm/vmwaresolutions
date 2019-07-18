@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server NSX-T add cluster, view cluster vCenter Server NSX-T, delete cluster vCenter Server NSX-T
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -31,7 +32,7 @@ subcollection: vmware-solutions
 {: #vc_nsx-t_addingviewingclusters-before-add}
 
 * 가능하면 {{site.data.keyword.vmwaresolutions_full}} 콘솔을 사용하여 클러스터를 추가하십시오. VMware vSphere Web Client에서 수행하는 변경사항은 {{site.data.keyword.vmwaresolutions_short}} 콘솔과 동기화되지 않기 때문입니다. 따라서 온프레미스 클러스터 서버 또는 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 관리할 수 없거나 관리하지 않을 클러스터에 대해서만 클러스터를 vCenter Server에 추가하십시오.
-* 클러스터, 호스트, 가상 머신(VM)의 수는 추가할 수 있는 클러스터의 수에 대한 최대 한계를 결정합니다. 배치를 위해 VMware 크기 조정 가이드라인 및 제한사항을 계속 준수해야 합니다. 최대 제한에 대한 자세한 정보는 [VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window}를 참조하십시오.
+* 클러스터, 호스트, 가상 머신(VM)의 수는 추가할 수 있는 클러스터의 수에 대한 최대 한계를 결정합니다. 배치를 위해 VMware 크기 조정 가이드라인 및 제한사항을 계속 준수해야 합니다. 최대 제한에 대한 자세한 정보는 [VMware Configuration Maximums](https://configmax.vmware.com/home){:external}를 참조하십시오.
 
 ### 시스템 설정
 {: #vc_nsx-t_addingviewingclusters-adding-sys-settings}
@@ -64,25 +65,23 @@ vCenter Server with NSX-T 인스턴스에 클러스터를 추가할 때는 다�
 
 **Skylake** 설정의 경우 **CPU 모델** 및 **RAM**에 대한 옵션이 있습니다. 사용 가능한 옵션은 인스턴스가 처음에 배치된 버전에 따라 다를 수 있습니다.
 
-표 1. Skylake {{site.data.keyword.baremetal_short}}의 옵션
-
 | CPU 모델 옵션        |RAM 옵션       |
 |:------------- |:------------- |
 |듀얼 Intel Xeon Silver 4110 프로세서 / 총 16개의 코어, 2.1GHz | 128GB, 192GB, 384GB, 768GB, 1.5TB |
 |듀얼 Intel Xeon Gold 5120 프로세서 / 총 28개의 코어, 2.2GHz | 128GB, 192GB, 384GB, 768GB, 1.5TB |
 |듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개의 코어, 2.3GHz | 128GB, 192GB, 384GB, 768GB, 1.5TB |
+{: caption="표 1. Skylake {{site.data.keyword.baremetal_short}}의 옵션" caption-side="top"}
 
 #### Broadwell
 {: #vc_nsx-t_addingviewingclusters-adding-broadwell}
 
 **Broadwell** 설정의 경우 **CPU 모델** 및 **RAM**에 대한 몇 가지 옵션이 있습니다. 사용 가능한 옵션은 인스턴스가 처음에 배치된 버전에 따라 다를 수 있습니다.
 
-표 2. Broadwell {{site.data.keyword.baremetal_short}}의 옵션
-
 | CPU 모델 옵션        |RAM 옵션       |
 |:------------- |:------------- |
 | 쿼드 Intel Xeon E7-4820 v4 / 총 40개의 코어, 1.9GHz |128GB, 256GB, 512GB, 1TB, 2TB, 3TB |
 | 쿼드 Intel Xeon E7-4850 v4 / 총 64개의 코어, 2.2GHz |128GB, 256GB, 512GB, 1TB, 2TB, 3TB |
+{: caption="표 2. Broadwell {{site.data.keyword.baremetal_short}}의 옵션" caption-side="top"}
 
 #### Bare Metal Server 수
 {: #vc_nsx-t_addingviewingclusters-adding-bare-metal-number}
@@ -126,14 +125,15 @@ vCenter Server with NSX-T 인스턴스에 클러스터를 추가할 때는 다�
 * **성능**: 워크로드 요구사항에 기반한 GB당 IOPS(Input/output Operations Per Second)를 선택하십시오.
 * **NFS 추가**: 다른 구성 설정을 사용하는 개별 파일 공유를 추가하도록 선택하십시오.
 
-표 3. NFS 성능 레벨 옵션
+성능 레벨 세부사항:
 
 |옵션        |세부사항       |
-  |:------------- |:------------- |
-  |0.25 IOPS/GB |이 옵션은 자주 사용되지 않는 워크로드를 위해 설계되었습니다. 예제 애플리케이션에는 보관된 데이터, 호스팅하는 대형 데이터베이스(레거시 데이터 포함) 또는 백업으로서의 가상 메모리 시스템의 가상 디스크 이미지가 포함됩니다. |
-  |2IOPS/GB |이 옵션은 가장 일반적인 워크로드를 위해 설계되었습니다. 애플리케이션 예로 소형 데이터베이스 호스팅, 웹 애플리케이션 백업 또는 하이퍼바이저용 가상 머신(VM) 디스크 이미지가 있습니다. |
-  |4IOPS/GB |이 옵션은 동시에 활성 데이터의 높은 백분율을 보유한 고강도 워크로드를 위해 설계되었습니다. 애플리케이션 예로 트랜잭션 데이터베이스가 있습니다. |
-  |10IOPS/GB |이 옵션은 분석과 같이 가장 처리가 어려운 워크로드 유형을 위해 설계되었습니다. 애플리케이션 예로 높은 트랜잭션 데이터베이스 및 기타 성능에 민감한 데이터베이스가 있습니다. 이 성능 레벨은 파일 공유당 4TB의 최대 용량으로 제한됩니다. |
+|:------------- |:------------- |
+|0.25 IOPS/GB |이 옵션은 자주 사용되지 않는 워크로드를 위해 설계되었습니다. 예제 애플리케이션에는 보관된 데이터, 호스팅하는 대형 데이터베이스(레거시 데이터 포함) 또는 백업으로서의 가상 메모리 시스템의 가상 디스크 이미지가 포함됩니다. |
+|2IOPS/GB |이 옵션은 가장 일반적인 워크로드를 위해 설계되었습니다. 애플리케이션 예로 소형 데이터베이스 호스팅, 웹 애플리케이션 백업 또는 하이퍼바이저용 가상 머신(VM) 디스크 이미지가 있습니다. |
+|4IOPS/GB |이 옵션은 동시에 활성 데이터의 높은 백분율을 보유한 고강도 워크로드를 위해 설계되었습니다. 애플리케이션 예로 트랜잭션 데이터베이스가 있습니다. |
+|10IOPS/GB |이 옵션은 분석과 같이 가장 처리가 어려운 워크로드 유형을 위해 설계되었습니다. 애플리케이션 예로 높은 트랜잭션 데이터베이스 및 기타 성능에 민감한 데이터베이스가 있습니다. 이 성능 레벨은 파일 공유당 4TB의 최대 용량으로 제한됩니다. |
+{: caption="표 3. NFS 성능 레벨 옵션" caption-side="top"}
 
 ### 라이센스 부여 설정
 {: #vc_nsx-t_addingviewingclusters-adding-licensing-settings}
@@ -150,9 +150,9 @@ vCenter Server with NSX-T 인스턴스에 클러스터를 추가할 때는 다�
 ### 주문 요약
 {: #vc_nsx-t_addingviewingclusters-adding-order-summary}
 
-클러스터에 대해 선택한 구성에 따라 예상 비용이 즉시 생성되어 **주문 요약** 오른쪽 분할창에 표시됩니다. **가격 세부사항**을 클릭하여 {{site.data.keyword.vmwaresolutions_short}} 리소스에 대한 비용 요약이 포함된 PDF 문서를 생성하십시오. 
+클러스터에 대해 선택한 구성에 따라 예상 비용이 즉시 생성되어 **주문 요약** 오른쪽 분할창에 표시됩니다. **가격 세부사항**을 클릭하여 {{site.data.keyword.vmwaresolutions_short}} 리소스에 대한 비용 요약이 포함된 PDF 문서를 생성하십시오.
 
-**예상 금액에 추가**를 클릭하여 {{site.data.keyword.cloud_notm}} 예상 도구에 프로비저닝된 리소스를 추가할 수도 있습니다. 구매를 고려할 수 있는 기타 {{site.data.keyword.cloud_notm}} 리소스와 함께 선택된 {{site.data.keyword.vmwaresolutions_short}} 리소스의 비용을 예상하려는 경우 유용합니다. 
+**예상 금액에 추가**를 클릭하여 {{site.data.keyword.cloud_notm}} 예상 도구에 프로비저닝된 리소스를 추가할 수도 있습니다. 구매를 고려할 수 있는 기타 {{site.data.keyword.cloud_notm}} 리소스와 함께 선택된 {{site.data.keyword.vmwaresolutions_short}} 리소스의 비용을 예상하려는 경우 유용합니다.
 
 ## vCenter Server with NSX-T 인스턴스에 클러스터를 추가하는 프로시저
 {: #vc_nsx-t_addingviewingclusters-adding-procedure}
@@ -221,8 +221,6 @@ vCenter Server with NSX-T 인스턴스에 클러스터를 추가할 때는 다�
   * **조치**: **삭제** 아이콘을 클릭하여 클러스터를 삭제하십시오.
 4. 클러스터 이름을 클릭하여 ESXi 서버, 스토리지 및 네트워크 인터페이스 세부사항을 보십시오.
 
-표 4. ESXi 서버 세부사항
-
 | 항목        | 설명       |  
 |:------------- |:------------- |
 |이름 | ESXi 서버의 이름은 다음 형식으로 되어 있습니다.<br> `<host_prefix><n>.<subdomain_label>.<root_domain>` <br> 여기서,<br> `host_prefix`는 호스트 이름 접두부이고<br> `n`은 서버의 순서이며<br> `subdomain_label`은 하위 도메인 레이블이고<br> `root_domain`은 루트 도메인 이름입니다. |
@@ -230,8 +228,9 @@ vCenter Server with NSX-T 인스턴스에 클러스터를 추가할 때는 다�
 |인증 정보 |ESXi 서버에 액세스하는 데 사용되는 사용자 이름 및 비밀번호입니다. |
 |사설 IP |ESXi 서버의 사설 IP 주소입니다. |
 |상태 |ESXi 서버의 상태이며, 다음 값 중 하나일 수 있습니다.<br> **추가됨** ESXi 서버가 추가되었으며 사용할 준비가 되었습니다.<br> **추가 중** ESXi 서버가 추가되고 있습니다.<br> **삭제 중** ESXi 서버가 삭제되고 있습니다. |
+{: caption="표 4. ESXi 서버 세부사항" caption-side="top"}
 
-표 5. 스토리지 세부사항
+스토리지 세부사항 보기:
 
 | 항목        | 설명       |  
 |:------------- |:------------- |
@@ -239,8 +238,9 @@ vCenter Server with NSX-T 인스턴스에 클러스터를 추가할 때는 다�
 |크기 |스토리지의 용량입니다. |
 |IOPS/GB |스토리지의 성능 레벨입니다. |
 |NFS 프로토콜 |스토리지의 NFS 버전입니다. |
+{: caption="표 5. 스토리지 세부사항" caption-side="top"}
 
-표 6. 네트워크 인터페이스 - VLAN 세부사항
+네트워크 인터페이스 세부사항 보기:
 
 | 항목        | 설명       |  
 |:------------- |:------------- |
@@ -248,24 +248,27 @@ vCenter Server with NSX-T 인스턴스에 클러스터를 추가할 때는 다�
 |설명 | VLAN의 설명입니다.  |
 | 위치 | 데이터 센터 위치입니다. |
 | 기본 라우트 | VLAN의 기본 라우트입니다. |
+{: caption="표 6. 네트워크 인터페이스 - VLAN 세부사항" caption-side="top"}
 
 VLAN 세부사항에 액세스하려면 **리소스 보기**를 클릭하십시오.
 
-표 7. 네트워크 인터페이스 - 서브넷 세부사항
+서브넷 세부사항 보기:
 
 | 항목        | 설명       |  
 |:------------- |:------------- |
 |이름 | 서브넷 이름입니다. 서브넷 세부사항에 액세스하려면 이름을 클릭하십시오. |
 |유형 | 서브넷의 유형: 기본 또는 포터블. |
 |설명 | 서브넷의 설명입니다. |
+{: caption="표 7. 네트워크 인터페이스 - 서브넷 세부사항" caption-side="top"}
 
-표 8. 네트워크 인터페이스 - IP 세부사항
+IP 세부사항 보기:
 
 | 항목        | 설명       |  
 |:------------- |:------------- |
 | IP | IP 주소입니다. |
 |상태 | IP 주소의 상태입니다. |
 |설명 | IP 주소의 설명입니다.  |
+{: caption="표 8. 네트워크 인터페이스 - IP 세부사항" caption-side="top"}
 
 ## vCenter Server with NSX-T 인스턴스에서 클러스터 삭제
 {: #vc_nsx-t_addingviewingclusters-deleting}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-06-28"
 
 keywords: vSphere upgrade, NSX upgrade, PSC upgrade
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -36,8 +37,8 @@ El tiempo estimado para realizar la actualización es desconocido. Es posible qu
 
 Complete los requisitos previos siguientes antes de comenzar la actualización:  
 * Es responsabilidad del usuario actualizar las extensiones o complementos dentro del entorno de vCenter Server. Revise la documentación siguiente antes de planificar la actualización:
-  * [Notas del release de VMware vCenter Server 6.7 Actualización 1b](https://docs.vmware.com/en/VMware-vSphere/6.7/rn/vsphere-vcenter-server-67u1b-release-notes.html){:new_window}
-  * [Acerca de la actualización de VMware ESXi](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.esxi.upgrade.doc/GUID-65B5B313-3DBB-4490-82D2-A225446F4C99.html){:new_window}
+  * [Notas del release de VMware vCenter Server 6.7 Actualización 1b](https://docs.vmware.com/en/VMware-vSphere/6.7/rn/vsphere-vcenter-server-67u1b-release-notes.html){:external}
+  * [Acerca de la actualización de VMware ESXi](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.esxi.upgrade.doc/GUID-65B5B313-3DBB-4490-82D2-A225446F4C99.html){:external}
 * Configure vSphere Update Manager (VUM) dentro de la instancia de vCenter Server para descargar las actualizaciones más recientes de VMware vSphere. Para obtener más información, consulte
 [Introducción a VMware Update Manager](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vum-intro#vum-intro).
 * Abra una incidencia de soporte con el equipo de {{site.data.keyword.vmwaresolutions_short}} para notificarles que se va a realizar una actualización. La incidencia seguirá abierta hasta que se registre la instancia en el nivel actualizado en la consola de
@@ -62,7 +63,7 @@ Realice los pasos siguientes para solicitar un saltador de VSI.
 Omita el primer paso si ya tiene un saltador de VSI en el entorno.
 {:note}
 
-1. Solicite una VSI por hora o por mes desde el [Portal de clientes de infraestructura de IBM Cloud](https://control.softlayer.com/). Solicite los atributos siguientes:
+1. Solicite una VSI por hora o por mes desde el [Portal de clientes de infraestructura de IBM Cloud](https://control.softlayer.com/){:external}. Solicite los atributos siguientes:
   * Windows 2012 o 2016 Server Standard
   * 2 CPU
   * 16 GB de memoria
@@ -94,14 +95,14 @@ Localice el archivo ``VMW-ESX-6.7.0-intel-nvme-vmd-1.4.0.1016-8733247.zip`` para
 
 #### Copia de seguridad de los componentes
 
-Antes de comenzar la actualización, realice una copia de seguridad de cada componente. 
+Antes de comenzar la actualización, realice una copia de seguridad de cada componente.
 
 * Para obtener información sobre cómo realizar una copia de seguridad de vCenter Server y los PSC, consulte
-[Visión general de las opciones de copia de seguridad y restauración de vCenter Server 6.x (2149237)](https://kb.vmware.com/s/article/2149237?lang=en_US){:new_window}.
+[Visión general de las opciones de copia de seguridad y restauración de vCenter Server 6.x (2149237)](https://kb.vmware.com/s/article/2149237?lang=en_US){:external}.
 * Para ver consideraciones adicionales e información sobre cómo realizar la copia de seguridad de vCenter Server y los PSC, consulte
 [Copia de seguridad basada en archivos de vCenter](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_backingup#solution_backingup-vcenter).
 * Para obtener información sobre cómo realizar la copia de seguridad de NSX, consulte
-[Copia de seguridad de datos de NSX Manager](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window}.
+[Copia de seguridad de datos de NSX Manager](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:external}.
 
 Se recomienda utilizar la copia de seguridad basada en archivos. No hay soporte para la copia de seguridad basada en imágenes (utilizando vSphere Data Protection) en VMware vSphere 6.7.
 {:note}
@@ -132,9 +133,9 @@ La actualización de VMware NSX puede llevar cierto tiempo, ya que el proceso de
 {: #vc_vsphere_upgrade-procedure-nsx-procedure}
 
 Consulte la
-[Guía de actualización de NSX](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.upgrade.doc/GUID-4613AC10-BC73-4404-AF80-26E924EF5FE0.html){:new_window} para obtener detalles relacionados con el procedimiento siguiente.
+[Guía de actualización de NSX](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.upgrade.doc/GUID-4613AC10-BC73-4404-AF80-26E924EF5FE0.html){:external} para obtener detalles relacionados con el procedimiento siguiente.
 
-1. Lea las notas del release de NSX 6.4.4 para asegurarse de que exista compatibilidad con la configuración de su entorno específico. Para obtener más información, consulte [Notas del release de VMware NSX Data Center for vSphere 6.4.4](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/rn/releasenotes_nsx_vsphere_644.html){:new_window}.
+1. Lea las notas del release de NSX 6.4.4 para asegurarse de que exista compatibilidad con la configuración de su entorno específico. Para obtener más información, consulte [Notas del release de VMware NSX Data Center for vSphere 6.4.4](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/rn/releasenotes_nsx_vsphere_644.html){:external}.
 2. Actualice NSX Manager en primer lugar. Si tiene varios entornos de NSX que utilicen la modalidad con enlace cruzado a vCenter, actualice todos los NSX Managers antes de actualizar componentes en el
 **Coordinador de actualización** de la interfaz de usuario de NSX.
 3. Utilice el **Coordinador de actualización** de la interfaz de usuario de NSX dentro de la interfaz de usuario de vCenter para actualizar los componentes de NSX.
@@ -150,8 +151,8 @@ Si tiene instancias enlazadas de vCenter Server, debe actualizar todas las insta
 
 * Haga que sus contraseñas de root de vCenter y PSC estén disponibles para el procedimiento siguiente. Utilice la consola de
 {{site.data.keyword.vmwaresolutions_short}} para ver si la versión de su instancia de vCenter Server se ha actualizado de V2.4 o anterior a V2.7 o posterior.
-* En la consola de {{site.data.keyword.vmwaresolutions_short}}, se muestra una única contraseña para root tanto para PSC como para vCenter. No obstante, esta es solo la contraseña de vCenter. Debe [consultar al soporte de IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support) para la contraseña PSC raíz. 
-* Para evitar conflictos, utilice la dirección IP de la parte superior de la misma subred que utilizan actualmente vCenter y el PSC. Debe utilizar una dirección IP temporal para el nuevo despliegue de dispositivo. 
+* En la consola de {{site.data.keyword.vmwaresolutions_short}}, se muestra una única contraseña para root tanto para PSC como para vCenter. No obstante, esta es solo la contraseña de vCenter. Debe [consultar al soporte de IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support) para la contraseña PSC raíz.
+* Para evitar conflictos, utilice la dirección IP de la parte superior de la misma subred que utilizan actualmente vCenter y el PSC. Debe utilizar una dirección IP temporal para el nuevo despliegue de dispositivo.
 
 #### Procedimiento para actualizar Platform Services Controller
 {: #vc_vsphere_upgrade-procedure-psc-procedure}
@@ -163,7 +164,7 @@ Si tiene instancias enlazadas de vCenter Server, debe actualizar todas las insta
 {{site.data.keyword.vmwaresolutions_short}} o que le ha proporcionado el soporte de IBM. Estas contraseñas se reutilizarán más adelante al actualizar los dispositivos.
 2. Utilice la función de montaje ISO incorporada en Windows para montar el ISO de vCenter 6.7u1b dentro del saltador.
 3. Siga las instrucciones de VMware para actualizar todos los PSC en primer lugar. Para obtener más información, consulte
-[Actualización de vCenter Server Appliance 6.0 o 6.5 con una instancia de Platform Services Controller o del inicio de sesión único de vCenter externa utilizando la GUI](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html).
+[Actualización de vCenter Server Appliance 6.0 o 6.5 con una instancia de Platform Services Controller o del inicio de sesión único de vCenter externa utilizando la GUI](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html){:external}.
 
 El requisito **Debe ejecutar la actualización de GUI desde una máquina Windows, Linux o Mac que esté en la misma red que el dispositivo que desea actualizar** indicado se aplica a cualquier subred dentro de su cuenta de
 {{site.data.keyword.cloud_notm}}.
@@ -181,7 +182,7 @@ Para instancias enlazadas a vCenter Server, aunque se recomienda actualizar toda
 
 * Haga que sus contraseñas de root de vCenter y PSC estén disponibles para el procedimiento siguiente. Utilice la consola de
 {{site.data.keyword.vmwaresolutions_short}} para ver si la versión de su instancia de vCenter Server se ha actualizado de V2.4 o anterior a V2.7 o posterior.
-* Para evitar conflictos, utilice la dirección IP de la parte superior de la misma subred que utilizan actualmente vCenter y el PSC. Debe utilizar una dirección IP temporal para el nuevo despliegue de dispositivo. 
+* Para evitar conflictos, utilice la dirección IP de la parte superior de la misma subred que utilizan actualmente vCenter y el PSC. Debe utilizar una dirección IP temporal para el nuevo despliegue de dispositivo.
 
 #### Procedimiento para actualizar vCenter
 {: #vc_vsphere_upgrade-procedure-vcenter-procedure}
@@ -193,7 +194,7 @@ Para instancias enlazadas a vCenter Server, aunque se recomienda actualizar toda
 {{site.data.keyword.vmwaresolutions_short}} o que le ha proporcionado el soporte de IBM. Estas contraseñas se reutilizarán más adelante al actualizar los dispositivos.
 2. Utilice la función de montaje ISO incorporada en Windows para montar el ISO de vCenter 6.7u1b dentro del saltador.
 3. Siga las instrucciones de VMware para actualizar vCenter. Para obtener más información, consulte
-[Actualización de vCenter Server Appliance 6.0 o 6.5 con una instancia de Platform Services Controller o del inicio de sesión único de vCenter externa utilizando la GUI](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html). Las instrucciones de VMware son similares al proceso de actualización de PSC. No obstante, en lugar de hacer referencia al PSC, haga referencia al FQDN/IP de vCenter en el proceso de actualización.
+[Actualización de vCenter Server Appliance 6.0 o 6.5 con una instancia de Platform Services Controller o del inicio de sesión único de vCenter externa utilizando la GUI](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html){:external}. Las instrucciones de VMware son similares al proceso de actualización de PSC. No obstante, en lugar de hacer referencia al PSC, haga referencia al FQDN/IP de vCenter en el proceso de actualización.
 
 **Notas**:
 * El requisito **Debe ejecutar la actualización de GUI desde una máquina Windows, Linux o Mac que esté en la misma red que el dispositivo que desea actualizar** indicado se aplica a cualquier subred dentro de su cuenta de
@@ -203,7 +204,7 @@ Para instancias enlazadas a vCenter Server, aunque se recomienda actualizar toda
 #### Consolidación de la función de PSC en vCenter
 
 1. Una vez que se haya completado correctamente la actualización de PSC y vCenter, inicie sesión en la interfaz de usuario basada en FLEX de vCenter y compruebe el estado de todos los servicios relacionados con vCenter y el PSC en la sección **Configuración del sistema**.  
-2. Realice una copia de seguridad del PSC.  Se recomienda utilizar la copia de seguridad basada en archivos. Para obtener más información, consulte [Copia de seguridad basada en archivos en vSphere 6.7](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.install.doc/GUID-8A16C037-F1E0-40C9-B106-05C30625B9CB.html){:new_window}.
+2. Realice una copia de seguridad del PSC.  Se recomienda utilizar la copia de seguridad basada en archivos. Para obtener más información, consulte [Copia de seguridad basada en archivos en vSphere 6.7](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.install.doc/GUID-8A16C037-F1E0-40C9-B106-05C30625B9CB.html){:external}.
 3. Vaya al directorio ``<VCSA 6.7 iso mount>:\vcsa-converge-cli\templates\converge``.
 4. Copie el archivo ``converge.json`` a una unidad local de su máquina virtual de salto.
   * Si este es el primer PSC que va a consolidar, deberá eliminar la sección
@@ -218,7 +219,7 @@ Para instancias enlazadas a vCenter Server, aunque se recomienda actualizar toda
    1. Escriba **Y** para confirmar que se ha realizado la copia de seguridad del PSC para continuar.
    2. Cuando finalice el proceso, escriba **Y** para confirmar el rearranque de vCenter.
 
-   Si el proceso de convergencia falla con el mensaje ``ERROR converge Failed to get vecs users and permissions``, consulte [Converge to embedded failed!](https://virtualtassie.com/2018/vcenter-6-7-update-1-converge-to-embedded-failed/#comment-3713){:new_window} para ver los pasos para resolver el error.
+   Si el proceso de convergencia falla con el mensaje ``ERROR converge Failed to get vecs users and permissions``, consulte [Converge to embedded failed!](https://virtualtassie.com/2018/vcenter-6-7-update-1-converge-to-embedded-failed/#comment-3713){:external} para ver los pasos para resolver el error.
    {:note}
 
 10. Una vez que se haya rearrancado vCenter, compruebe que el funcionamiento sea normal iniciando sesión en la interfaz de usuario de vCenter.
@@ -265,7 +266,7 @@ La función de VMware Update Manager dentro de vCenter se utiliza para actualiza
 ``VMware ESXi, 6.7.0``.
 
 Si el proceso de actualización falla inmediatamente y aparece el mensaje de error **el host no puede entrar en la modalidad de mantenimiento**, concluya los ZVA de Zerto y vuelva a intentarlo. Las máquinas virtuales de ZVRA se inician automáticamente a medida que cada servidor sale de la corrección. Para obtener información sobre cómo continuar con la réplica de Zerto durante el proceso de actualización, consulte
-[Cómo colocar un host con un VRA asociado en la modalidad](https://www.zerto.com/myzerto/knowledge-base/place-host-into-maintenance-mode-with-vra/){:new_window}.
+[Cómo colocar un host con un VRA asociado en la modalidad](https://www.zerto.com/myzerto/knowledge-base/place-host-into-maintenance-mode-with-vra/){:external}.
 {:note}
 
 #### Adición de un parche de controlador NVME de Intel al repositorio de VUM
@@ -341,7 +342,7 @@ Puede establecer los hosts con la generación Intel Skylake de un clúster en la
 1. En el clúster que contiene los hosts, pulse **Configurar**.
 2. En **VMware EVC**, pulse **Editar** y cambie la modalidad EVC a **Generación Intel "Skylake"**.
 
-Para obtener más información, consulte [Soporte de procesador de EVC (compatibilidad mejorada de vMotion) (1003212)](https://kb.vmware.com/s/article/1003212){:new_window}.
+Para obtener más información, consulte [Soporte de procesador de EVC (compatibilidad mejorada de vMotion) (1003212)](https://kb.vmware.com/s/article/1003212){:external}.
 
 #### Reconfiguración de NSX Manager y HCX Manager para que hagan referencia al PSC
 
@@ -369,6 +370,6 @@ Cuando haya finalizado la actualización, actualice la incidencia de soporte con
 ## Enlaces relacionados
 {: #vc_vsphere_upgrade-related}
 
-* [Notas del release de VMware NSX Data Center for vSphere 6.4.4](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/rn/releasenotes_nsx_vsphere_644.html){:new_window}
-* [Guía de actualización de NSX](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.upgrade.doc/GUID-4613AC10-BC73-4404-AF80-26E924EF5FE0.html){:new_window}
+* [Notas del release de VMware NSX Data Center for vSphere 6.4.4](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/rn/releasenotes_nsx_vsphere_644.html){:external}
+* [Guía de actualización de NSX](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.upgrade.doc/GUID-4613AC10-BC73-4404-AF80-26E924EF5FE0.html){:external}
 * [Cómo ponerse en contacto con el equipo de soporte de IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

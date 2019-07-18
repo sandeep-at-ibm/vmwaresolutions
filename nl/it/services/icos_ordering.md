@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-28"
 
 keywords: IBM Cloud Object Storage, ICOS configuration, order Cloud Object Storage
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -44,12 +45,12 @@ Per creare le credenziali del servizio, incluse le credenziali HMAC, vedi [Crede
 
 * Come parte dell'installazione e della configurazione del servizio Veeam, viene creato un repository di backup di ridimensionamento incrementale con il nome `IC4V Scale-Out Repository`. `IC4V Default VM Backup Repository` viene aggiunto al repository di ridimensionamento incrementale come un'estensione.
 * Quando crei il lavoro di backup, devi selezionare `IC4V Scale-Out Repository` come repository di backup e non `IC4V Default Config Backup Repository`. Quest'ultimo repository è previsto per i backup di configurazione Veeam.
-* Puoi aggiungere più repository a questo repository predefinito, come ad esempio un repository di backup di tipo Object Storage. Per ulteriori informazioni, vedi [Adding scale-Out repositories](https://helpcenter.veeam.com/docs/backup/vsphere/sobr_add.html?ver=95u4){:new_window}.Segui le istruzioni e ritorna in questa sezione per continuare con le attività seguenti.
+* Puoi aggiungere più repository a questo repository predefinito, come ad esempio un repository di backup di tipo Object Storage. Per ulteriori informazioni, vedi [Adding scale-Out repositories](https://helpcenter.veeam.com/docs/backup/vsphere/sobr_add.html?ver=95u4){:external}. Segui le istruzioni e ritorna in questa sezione per continuare con le attività seguenti.
 
 ## Manutenzione e gestione del tuo livello cloud
 {: #icos_ordering-manage-cloud}
 
-Per ulteriori informazioni, vedi [Managing capacity tier data](https://helpcenter.veeam.com/docs/backup/vsphere/capacity_tier_managing_data.html?ver=95u4){:new_window}.  
+Per ulteriori informazioni, vedi [Managing capacity tier data](https://helpcenter.veeam.com/docs/backup/vsphere/capacity_tier_managing_data.html?ver=95u4){:external}.
 
 ## Link correlati
 {: #icos_ordering-related}
@@ -57,6 +58,6 @@ Per ulteriori informazioni, vedi [Managing capacity tier data](https://helpcente
 * [Panoramica di Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-veeam_considerations)
 * [Ordine di Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_ordering)
 * [Gestione di Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
-* [Richiesta di servizi gestiti per Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
+* [Servizi gestiti per Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
 * [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [Domande frequenti](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)

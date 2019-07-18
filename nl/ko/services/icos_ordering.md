@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-28"
 
 keywords: IBM Cloud Object Storage, ICOS configuration, order Cloud Object Storage
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -42,14 +43,14 @@ HMAC 인증 정보를 포함한 서비스 인증 정보를 작성하려면 [서�
 ## 스케일 확장 저장소 추가
 {: #icos_ordering-scale-repo}
 
-* Veeam 서비스 설치 및 구성의 일부로 이름이 `IC4V Scale-Out Repository`인 스케일 확장 백업 저장소가 작성됩니다. `IC4V Default VM Backup Repository`가 범위로 스케일 확장 저장소에 추가됩니다. 
-* 백업 작업을 작성하는 경우 백업 저장소로 `IC4V Default Config Backup Repository`가 아닌 `IC4V Scale-Out Repository`를 선택해야 합니다. `IC4V Default Config Backup Repository` 저장소는 Veeam 구성 백업용입니다. 
-* 더 많은 저장소를 이 기본 저장소(예: 오브젝트 스토리지 유형의 백업 저장소)에 추가할 수 있습니다. 자세한 정보는 [스케일 확장 저장소 추가](https://helpcenter.veeam.com/docs/backup/vsphere/sobr_add.html?ver=95u4){:new_window}를 참조하십시오. 다음 태스크를 계속 수행하려면 단계를 따르고 이 섹션으로 돌아가십시오.
+* Veeam 서비스 설치 및 구성의 일부로 이름이 `IC4V Scale-Out Repository`인 스케일 확장 백업 저장소가 작성됩니다. `IC4V Default VM Backup Repository`가 범위로 스케일 확장 저장소에 추가됩니다.
+* 백업 작업을 작성하는 경우 백업 저장소로 `IC4V Default Config Backup Repository`가 아닌 `IC4V Scale-Out Repository`를 선택해야 합니다. `IC4V Default Config Backup Repository` 저장소는 Veeam 구성 백업용입니다.
+* 더 많은 저장소를 이 기본 저장소(예: 오브젝트 스토리지 유형의 백업 저장소)에 추가할 수 있습니다. 자세한 정보는 [스케일 확장 저장소 추가](https://helpcenter.veeam.com/docs/backup/vsphere/sobr_add.html?ver=95u4){:external}를 참조하십시오. 다음 태스크를 계속 수행하려면 단계를 따르고 이 섹션으로 돌아가십시오.
 
 ## 클러스터 티어 유지보수 및 관리
 {: #icos_ordering-manage-cloud}
 
-자세한 정보는 [용량 계층 데이터 관리](https://helpcenter.veeam.com/docs/backup/vsphere/capacity_tier_managing_data.html?ver=95u4){:new_window}를 참조하십시오.
+자세한 정보는 [용량 계층 데이터 관리](https://helpcenter.veeam.com/docs/backup/vsphere/capacity_tier_managing_data.html?ver=95u4){:external}를 참조하십시오.
 
 ## 관련 링크
 {: #icos_ordering-related}
@@ -57,6 +58,6 @@ HMAC 인증 정보를 포함한 서비스 인증 정보를 작성하려면 [서�
 * [Veeam on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions?topic=vmware-solutions-veeam_considerations)
 * [Veeam on {{site.data.keyword.cloud_notm}} 주문](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_ordering)
 * [Veeam on {{site.data.keyword.cloud_notm}} 관리](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
-* [Veeam on {{site.data.keyword.cloud_notm}}에 대한 관리 서비스 요청](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
+* [Veeam on {{site.data.keyword.cloud_notm}}에 대한 관리 서비스](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
 * [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)

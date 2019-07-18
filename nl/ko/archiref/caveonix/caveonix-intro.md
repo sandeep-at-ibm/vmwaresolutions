@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-06-20"
 
 subcollection: vmware-solutions
 
@@ -30,33 +30,36 @@ Caveonix RiskForesight는 하이브리드 클라우드의 멀티 테넌트 사�
 
 RiskForesight GUI를 통해 사용 가능한 세 가지 주요 서비스는 위험 관리, 규제 준수 위험 및 사후조사 관리입니다.
 
-**위험 관리**
--	지속적인 사이버 위험
+## 위험 관리
+
+- 지속적인 사이버 위험
 - 사이버 위험 스코어링
--	취약성 스코어링 및 우선순위 지정
--	업계 최고의 취약성 및 구성 스캔 도구 지원
--	글로벌 벤치마크 표준
--	사이버 위험 보고
+- 취약성 스코어링 및 우선순위 지정
+- 업계 최고의 취약성 및 구성 스캔 도구 지원
+- 글로벌 벤치마크 표준
+- 사이버 위험 보고
 
-**규제 준수 위험**
+## 규제 준수 위험
+
 - 자동화된 규제 준수 모니터링
--	규제 준수 위험 스코어링 대시보드
--	자동화된 IA 제어 평가
--	SCAP, OVAL, XCCDF 및 기타 글로벌 구성 벤치마킹 표준에 따른 PCI, FISMA, FEDRAMP, HIPAA, GLBA, GDPR, NERC CIP 보고서 지원
--	지속적으로 업데이트하고 맵핑된 IA 제어 및 표준 라이브러리
+- 규제 준수 위험 스코어링 대시보드
+- 자동화된 IA 제어 평가
+- SCAP, OVAL, XCCDF 및 기타 글로벌 구성 벤치마킹 표준에 따른 PCI, FISMA, FEDRAMP, HIPAA, GLBA, GDPR, NERC CIP 보고서 지원
+- 지속적으로 업데이트하고 맵핑된 IA 제어 및 표준 라이브러리
 
-**사후조사 관리**
--	로그 관리
--	여러 소스의 로그 콜렉션
--	이벤트 발견, 분석 및 시각화
--	결과의 그래픽 시각화
--	여러 소스에서 데이터 집계
--	이벤트 기반 분석
--	이벤트 및 로그 기반 분석을 위한 전체 드릴 다운 기능
--	경보 및 알림
+## 사후조사 관리
+
+- 로그 관리
+- 여러 소스의 로그 콜렉션
+- 이벤트 발견, 분석 및 시각화
+- 결과의 그래픽 시각화
+- 여러 소스에서 데이터 집계
+- 이벤트 기반 분석
+- 이벤트 및 로그 기반 분석을 위한 전체 드릴 다운 기능
+- 경보 및 알림
 
 ## 관련 링크
 {: #caveonix-intro-related}
 
-*   [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
-*   [Caveonix 웹 사이트](https://www.caveonix.com/)
+* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+* [Caveonix 웹 사이트](https://www.caveonix.com/)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server NSX-T add cluster, view cluster vCenter Server NSX-T, delete cluster vCenter Server NSX-T
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -31,7 +32,7 @@ Vous pouvez ajouter vos propres clusters à vos instances VMware vCenter Server 
 {: #vc_nsx-t_addingviewingclusters-before-add}
 
 * Dans la mesure du possible, vous devez ajouter les clusters à l'aide de la console {{site.data.keyword.vmwaresolutions_full}} car les modifications apportées au client VMware vSphere Web Client ne sont pas synchronisées avec la console {{site.data.keyword.vmwaresolutions_short}}. Par conséquent, ajoutez des clusters à vCenter Server uniquement pour les clusters sur site ou les clusters que vous ne pouvez ou ne voulez pas gérer dans la console {{site.data.keyword.vmwaresolutions_short}}.
-* Le nombre de clusters, d'hôtes et de machines virtuelles détermine la limite maximum relative au nombre de clusters que vous pouvez ajouter. Vous devez respecter les règles et limites de dimensionnement VMware pour votre déploiement. Pour plus d'informations sur les limites maximum, voir [VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window}.
+* Le nombre de clusters, d'hôtes et de machines virtuelles détermine la limite maximum relative au nombre de clusters que vous pouvez ajouter. Vous devez respecter les règles et limites de dimensionnement VMware pour votre déploiement. Pour plus d'informations sur les limites maximum, voir [VMware Configuration Maximums](https://configmax.vmware.com/home){:external}.
 
 ### Paramètres système
 {: #vc_nsx-t_addingviewingclusters-adding-sys-settings}
@@ -64,25 +65,23 @@ Vous pouvez choisir l'option **Skylake** ou **Broadwell**.
 
 Avec l'option **Skylake**, un certain nombre d'options est disponible pour les paramètres **Modèle UC** et **Mémoire RAM**. Les options disponibles peuvent varier en fonction de la version dans laquelle votre instance a été initialement déployée.
 
-Tableau 1. Options pour les serveurs Skylake {{site.data.keyword.baremetal_short}}
-
 | Options de modèle d'UC        | Options de RAM       |
 |:------------- |:------------- |
 | Processeur Dual Intel Xeon Silver 4110/16 coeurs au total, 2,1 GHz | 128 Go, 192 Go, 384 Go, 768 Go, 1.5 To |
 | Processeur Dual Intel Xeon Gold 5120/28 coeurs au total, 2,2 GHz | 128 Go, 192 Go, 384 Go, 768 Go, 1.5 To |
 | Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz | 128 Go, 192 Go, 384 Go, 768 Go, 1.5 To |
+{: caption="Tableau 1. Options pour les serveurs Skylake {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 #### Broadwell
 {: #vc_nsx-t_addingviewingclusters-adding-broadwell}
 
 Avec l'option **Broadwell**, un certain nombre d'options est disponible pour les paramètres **Modèle UC** et **Mémoire RAM**. Les options disponibles peuvent varier en fonction de la version dans laquelle votre instance a été initialement déployée.
 
-Tableau 2. Options pour les serveurs Broadwell {{site.data.keyword.baremetal_short}}
-
 | Options de modèle d'UC        | Options de RAM       |
 |:------------- |:------------- |
 | Quad Intel Xeon E7-4820 v4/40 coeurs au total, 1,9 GHz | 128 Go, 256 Go, 512 Go, 1 To, 2 To, 3 To |
 | Quad Intel Xeon E7-4850 v4/64 coeurs au total, 2,2 GHz | 128 Go, 256 Go, 512 Go, 1 To, 2 To, 3 To |
+{: caption="Tableau 2. Options pour les serveurs Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 #### Nombre de serveurs bare metal
 {: #vc_nsx-t_addingviewingclusters-adding-bare-metal-number}
@@ -126,14 +125,15 @@ Le nombre de partages de fichiers doit être compris entre 1 et 32.
 * **Performances** : sélectionnez la valeur IOPS (opérations d'entrée/sortie par seconde) par Go adaptée à vos besoins en matière de charge de travail.
 * **Ajouter NFS** : permet d'ajouter des partages de fichiers individuels avec des paramètres de configuration différents.
 
-Tableau 3. Options de niveau de performance NFS
+Détails relatifs au niveau de performance :
 
 | Option        | Détails       |
-  |:------------- |:------------- |
-  | 0,25 IOPS/Go | Cette option est conçue pour les charges de travail qui ne sont pas souvent utilisées. Exemples d'applications : données de coffre, hébergement de bases de données de grande taille avec des données existantes ou images de disque virtuel de système de mémoire virtuelle en tant que sauvegarde. |
-  | 2 IOPS/Go | Cette option est adaptée à la plupart des charges de travail d'usage général. Entre autres exemples d'application, citons l'hébergement de petites bases de données, la sauvegarde d'applications Web ou les images de disque de machine virtuelle pour un hyperviseur. |
-  | 4 IOPS/Go | Cette option est adaptée aux charges de travail de grande intensité qui ont un pourcentage élevé de données actives simultanément. Les bases de données transactionnelles en sont un exemple. |
-  | 10 IOPS/Go | Cette option est adaptée aux types de charge de travail les plus exigeants, tels que les analyses. Les bases de données à transactions élevées et autres bases de données sensibles aux performances en sont des exemples. Ce niveau de performance est limité à une capacité maximale de 4 To par partage de fichiers. |
+|:------------- |:------------- |
+| 0,25 IOPS/Go | Cette option est conçue pour les charges de travail qui ne sont pas souvent utilisées. Exemples d'applications : données de coffre, hébergement de bases de données de grande taille avec des données existantes ou images de disque virtuel de système de mémoire virtuelle en tant que sauvegarde. |
+| 2 IOPS/Go | Cette option est adaptée à la plupart des charges de travail d'usage général. Entre autres exemples d'application, citons l'hébergement de petites bases de données, la sauvegarde d'applications Web ou les images de disque de machine virtuelle pour un hyperviseur. |
+| 4 IOPS/Go | Cette option est adaptée aux charges de travail de grande intensité qui ont un pourcentage élevé de données actives simultanément. Les bases de données transactionnelles en sont un exemple. |
+| 10 IOPS/Go | Cette option est adaptée aux types de charge de travail les plus exigeants, tels que les analyses. Les bases de données à transactions élevées et autres bases de données sensibles aux performances en sont des exemples. Ce niveau de performance est limité à une capacité maximale de 4 To par partage de fichiers. |
+{: caption="Tableau 3. Options de niveau de performance NFS" caption-side="top"}
 
 ### Paramètres d'octroi de licence
 {: #vc_nsx-t_addingviewingclusters-adding-licensing-settings}
@@ -150,7 +150,7 @@ Les paramètres d'activation de carte d'interface réseau varient selon que vous
 ### Récapitulatif de la commande
 {: #vc_nsx-t_addingviewingclusters-adding-order-summary}
 
-Selon la configuration que vous avez sélectionnée pour le cluster, le coût estimé est généré et affiché instantanément dans la section **Récapitulatif de la commande** sur le panneau de droite. Cliquez sur **Détails concernant la tarification** pour générer un document PDF contenant le récapitulatif des coûts pour les ressources {{site.data.keyword.vmwaresolutions_short}}. 
+Selon la configuration que vous avez sélectionnée pour le cluster, le coût estimé est généré et affiché instantanément dans la section **Récapitulatif de la commande** sur le panneau de droite. Cliquez sur **Détails concernant la tarification** pour générer un document PDF contenant le récapitulatif des coûts pour les ressources {{site.data.keyword.vmwaresolutions_short}}.
 
 Vous pouvez également ajouter les ressources mises à disposition à l’outil d’estimation {{site.data.keyword.cloud_notm}} en cliquant sur **Ajouter à l'estimation**. Cela est utile si vous souhaitez estimer le coût des ressources {{site.data.keyword.vmwaresolutions_short}} sélectionnées avec d'autres ressources {{site.data.keyword.cloud_notm}} que vous pourriez envisager d'acheter.
 
@@ -221,8 +221,6 @@ Vous ne pouvez pas modifier le nom du cluster. La modification du nom du cluster
   * **Actions** : cliquez sur l'icône **Supprimer** pour supprimer le cluster.
 4. Cliquez sur un nom de cluster pour afficher les détails relatifs au serveur ESXi, au stockage et à l'interface réseau :
 
-Tableau 4. Informations relatives au serveur ESXi
-
 | Elément        | Description       |  
 |:------------- |:------------- |
 | Nom | Le nom du serveur ESXi a le format suivant :<br> `<host_prefix><n>.<subdomain_label>.<root_domain>` <br> où :<br> `host_prefix` est le préfixe du nom d'hôte<br> `n` est la séquence du serveur<br> `subdomain_label` est le libellé de sous-domaine<br> `root_domain` est le nom du domaine racine |
@@ -230,8 +228,9 @@ Tableau 4. Informations relatives au serveur ESXi
 | Données d'identification | Nom d'utilisateur et mot de passe d'accès au serveur ESXi. |
 | Adresse IP privée | Adresse IP privée du serveur ESXi. |
 | Statut | Statut du serveur ESXi, qui peut avoir l'une des valeurs suivantes :<br> **Ajouté** : le serveur ESXi est ajouté et prêt à être utilisé.<br> **Ajout en cours** : le serveur ESXi est en cours d'ajout.<br> **Suppression en cours** : le serveur ESXi est en cours de suppression. |
+{: caption="Tableau 4. Informations relatives au serveur ESXi" caption-side="top"}
 
-Tableau 5. Informations relatives au stockage
+Détails relatifs au stockage :
 
 | Elément        | Description       |  
 |:------------- |:------------- |
@@ -239,8 +238,9 @@ Tableau 5. Informations relatives au stockage
 | Taille | Capacité du stockage. |
 | IOPS/Go | Niveau de performance du stockage. |
 | Protocole NFS | Version NFS du stockage. |
+{: caption="Tableau 5. Informations relatives au stockage" caption-side="top"}
 
-Tableau 6. Interface réseau - Détails VLAN
+Détails relatifs à l'interface réseau :
 
 | Elément        | Description       |  
 |:------------- |:------------- |
@@ -248,24 +248,27 @@ Tableau 6. Interface réseau - Détails VLAN
 | Description | Description du réseau local virtuel.  |
 | Emplacement | Emplacement du centre de données. |
 | Route principale | Route principale du VLAN. |
+{: caption="Tableau 6. Interface réseau - Détails VLAN" caption-side="top"}
 
 Cliquez sur **Afficher la ressource** pour accéder aux détails du réseau local virtuel.
 
-Tableau 7. Interface réseau - Détails de sous-réseau
+Détails relatifs au sous-réseau :
 
 | Elément        | Description       |  
 |:------------- |:------------- |
 | Nom | Nom du sous-réseau. Cliquez sur le nom pour accéder aux détails du sous-réseau. |
 | Type | Type de sous-réseau : principal ou portable. |
 | Description | Description du sous-réseau. |
+{: caption="Tableau 7. Interface réseau - Détails de sous-réseau" caption-side="top"}
 
-Tableau 8. Interface réseau - Détails d'adresse IP
+Détails relatifs à l'adresse IP :
 
 | Elément        | Description       |  
 |:------------- |:------------- |
 | IP | Adresse IP. |
 | Statut | Statut de l'adresse IP. |
 | Description |Description de l'adresse IP.  |
+{: caption="Tableau 8. Interface réseau - Détails d'adresse IP" caption-side="top"}
 
 ## Suppression de clusters des instances vCenter Server with NSX-T
 {: #vc_nsx-t_addingviewingclusters-deleting}

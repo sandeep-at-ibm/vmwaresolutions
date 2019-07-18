@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-31"
+lastupdated: "2019-06-28"
 
 keywords: planning vCenter Server Hybridity, data center hybridity, vCenter Server Hybridity
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # 针对 vCenter Server with Hybridity Bundle 实例的需求和规划
 {: #vc_hybrid_planning}
@@ -27,8 +29,6 @@ subcollection: vmware-solutions
 {: #vc_hybrid_planning-dc-availability}
 
 vCenter Server with Hybridity Bundle 部署对物理基础架构有严格要求。因此，只能将实例部署在满足这些需求的 {{site.data.keyword.CloudDataCents_notm}} 中。以下 {{site.data.keyword.CloudDataCents_notm}} 可用于 vCenter Server with Hybridity Bundle 部署：
-
-表 1. 可用于 vCenter Server with Hybridity Bundle 实例的 {{site.data.keyword.CloudDataCents_notm}}
 
 | {{site.data.keyword.CloudDataCent_notm}} |位置|区域|
 |:----------------------|:---------|:---------------|
@@ -65,16 +65,16 @@ vCenter Server with Hybridity Bundle 部署对物理基础架构有严格要求�
 |WDC04|华盛顿|北美东部|
 |WDC06|华盛顿|北美东部|
 |WDC07|华盛顿|北美东部|
+{: caption="表 1. 可用于 vCenter Server with Hybridity Bundle 实例的 {{site.data.keyword.CloudDataCents_notm}}" caption-side="top"}
 
 根据可用性和库存供应，{{site.data.keyword.CloudDataCents_notm}} 可能会在 {{site.data.keyword.vmwaresolutions_short}} 控制台中显示状态指示符，以帮助您规划部署。
-
-表 2. 订购 vCenter Server with Hybridity Bundle 实例时 {{site.data.keyword.CloudDataCents_notm}} 的状态指示符
 
 |状态|状态详细信息|
 |:------------------------------|:--------------------------------------------------|
 |即将提供|{{site.data.keyword.CloudDataCent_notm}} 当前不可用。|
 |暂时库存不足|{{site.data.keyword.CloudDataCent_notm}} 当前不可用。|
 |有限库存|{{site.data.keyword.CloudDataCent_notm}} 具有有限可用性，并且订单可能未完成。|
+{: caption="表 2. 订购 vCenter Server with Hybridity Bundle 实例时 {{site.data.keyword.CloudDataCents_notm}} 的状态指示符" caption-side="top"}
 
 ## 备份管理组件
 {: #vc_hybrid_planning-backup-mgmt-components}
@@ -95,7 +95,7 @@ vCenter Server with Hybridity Bundle 实例包含授权您使用 VMware HCX on {
   * **专用密钥**：输入 CA 证书的专用密钥。
   * （可选）**密码**：输入专用密钥的密码（如果对专用密钥进行了加密）。
   * （可选）**重新输入密码**：重新输入专用密钥的密码。
-  * （可选）**主机名**：输入要映射到 CA 证书的公共名称 (CN) 的主机名。HCX on {{site.data.keyword.cloud_notm}} 需要 CA 证书采用 NSX Edge 接受的格式。有关 NSX Edge 证书格式的更多信息，请参阅[导入 SSL 证书](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html)。
+  * （可选）**主机名**：输入要映射到 CA 证书的公共名称 (CN) 的主机名。HCX on {{site.data.keyword.cloud_notm}} 需要 CA 证书采用 NSX Edge 接受的格式。有关 NSX Edge 证书格式的更多信息，请参阅[导入 SSL 证书](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html){:external}。
 
 您可以根据需要订购适用于实例的其他附加组件服务，例如灾难恢复。有关更多信息，请参阅[订购、查看和除去 vCenter Server with Hybridity Bundle 实例的服务](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)。
 

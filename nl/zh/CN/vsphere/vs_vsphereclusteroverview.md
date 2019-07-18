@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-26"
 
 keywords: vSphere, vSphere component, tech specs vSphere
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -22,7 +23,7 @@ subcollection: vmware-solutions
 
 VMware vSphere on {{site.data.keyword.cloud}} 是经过简化和优化的 VMware 订购平台。利用此平台，可以构建您自己的由 IBM 托管的 VMware 环境，方法是根据所选的 VMware 组件定制和订购与 VMware 兼容的硬件。
 
-{{site.data.keyword.vmwaresolutions_short}} 控制台会基于您选择的 VMware 组件自动过滤硬件。例如，创建新的全闪存 VMware vSAN 集群时，仅显示针对 [VMware 兼容性指南](https://www.vmware.com/resources/compatibility/search.php)验证过的硬件。此外，至少需要四个 ESXi 服务器。
+{{site.data.keyword.vmwaresolutions_short}} 控制台会基于您选择的 VMware 组件自动过滤硬件。例如，创建新的全闪存 VMware vSAN 集群时，仅显示针对 [VMware 兼容性指南](https://www.vmware.com/resources/compatibility/search.php){:external}验证过的硬件。此外，至少需要四个 ESXi 服务器。
 
 VMware vSphere on {{site.data.keyword.cloud_notm}} 不会自动安装、配置、启动可选 VMware 组件。利用此平台可实现最大的灵活性，在包含与 VMware 兼容的硬件的同时，设计并构建托管的 VMware 环境。
 

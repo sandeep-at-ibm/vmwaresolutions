@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-28"
 
 keywords: IBM Spectrum Protect Plus, SPP, tech specs SPP
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -40,7 +41,7 @@ subcollection: vmware-solutions
    * 370 GB のディスク
 * IBM Spectrum Protect Plus vSnap サーバーと VADP プロキシーを実行しているセカンダリー VM
    * Linux 3.10.0-693.11.1.el7.x86_64 オペレーティング・システム
-   * 選択したストレージ・サイズと [IBM Spectrum Protect Plus Blueprint](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints) サイジング・ガイダンスに基づいて構成された CPU および RAM
+   * 選択したストレージ・サイズと [IBM Spectrum Protect Plus Blueprint](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints){:external} サイジング・ガイダンスに基づいて構成された CPU および RAM
    * 150 GB のディスク
 
 ### バックアップ用ストレージ
@@ -51,7 +52,7 @@ subcollection: vmware-solutions
 * 各エンデュランス・ファイル・ストレージ: 500、1000、2000、4000、8000、または 12000 GB
 * ストレージ・パフォーマンス: 0.25、2、または 4 IOPS/GB
 
-計画とサイズ変更について詳しくは、[IBM Spectrum Protect Plus blueprint and sizing tool](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints) を参照してください。
+計画とサイズ変更について詳しくは、[IBM Spectrum Protect Plus blueprint and sizing tool](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints){:external} を参照してください。
 
 ### 管理用のストレージ
 {: #spp_considerations-mgmt-storage}
@@ -77,7 +78,7 @@ IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} サービスをイ
 * インスタンスのデフォルト・クラスター内の CPU とメモリーが、IBM Spectrum Protect Plus 仮想マシンを使用するのに十分であることを確認します。
 * ESXi サーバーで使用できる NFS マウントが、ESXi サーバーのバージョンに基づいて十分であることを確認します。
 
-  V2.2 以降のリリースでデプロイ (または V2.2 以降のリリースにアップグレード) されたインスタンスでは、VMware に `NFS.MaxVolumes` パラメーターの設定があります。 このパラメーターは、ESXi サーバー上の NFS マウントの最大数を定義するもので、最大 256 に設定できます (ESXi サーバーのバージョンに固有)。 詳しくは、[Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239) を参照してください。
+  V2.2 以降のリリースでデプロイ (または V2.2 以降のリリースにアップグレード) されたインスタンスでは、VMware に `NFS.MaxVolumes` パラメーターの設定があります。 このパラメーターは、ESXi サーバー上の NFS マウントの最大数を定義するもので、最大 256 に設定できます (ESXi サーバーのバージョンに固有)。 詳しくは、[Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239){:external} を参照してください。
 
   IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} サービスは、インスタンスのデフォルト・クラスターにおける ESXi サーバーごとに、最大 11 個の NFS ボリュームを使用します。 さらに、このサービスは、バックアップとリストア用の一時的な NFS マウントを作成します。 そのため、確実にサービスを正常にインストールして機能させるためには、NFS マウント数を 64 個以上に設定する必要があります。
 
@@ -92,8 +93,8 @@ IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} サービスを削
 ## 関連リンク
 {: #spp_considerations-related}
 
-* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} Preventive Service Planning](https://www-01.ibm.com/support/docview.wss?uid=swg22012650){:new_window}
+* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} Preventive Service Planning](https://www-01.ibm.com/support/docview.wss?uid=swg22012650){:external}
 * [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingspp) の管理
 * [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-spp_ordering) の注文
-* [IBM Spectrum Protect Plus の資料](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html)
+* [IBM Spectrum Protect Plus の資料](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html){:external}
 * [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

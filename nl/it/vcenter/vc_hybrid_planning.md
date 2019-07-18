@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-31"
+lastupdated: "2019-06-28"
 
 keywords: planning vCenter Server Hybridity, data center hybridity, vCenter Server Hybridity
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # Requisiti e pianificazione per le istanze vCenter Server with Hybridity Bundle
 {: #vc_hybrid_planning}
@@ -27,8 +29,6 @@ L'account {{site.data.keyword.cloud_notm}} che utilizzi deve soddisfare determin
 {: #vc_hybrid_planning-dc-availability}
 
 La distribuzione di vCenter Server with Hybridity Bundle ha requisiti rigorosi sull'infrastruttura fisica. Pertanto, puoi distribuire le istanze solo nei {{site.data.keyword.CloudDataCents_notm}} che soddisfano i requisiti. Per la distribuzione di vCenter Server with Hybridity Bundle sono disponibili i seguenti {{site.data.keyword.CloudDataCents_notm}}:
-
-Tabella 1. {{site.data.keyword.CloudDataCents_notm}} disponibili per le istanze vCenter Server with Hybridity Bundle
 
 | {{site.data.keyword.CloudDataCent_notm}} | Ubicazione | Regione |
 |:----------------------|:---------|:---------------|
@@ -65,16 +65,16 @@ Tabella 1. {{site.data.keyword.CloudDataCents_notm}} disponibili per le istanze 
 | WDC04 | Washington, DC | Nord America orientale |
 | WDC06 | Washington, DC | Nord America orientale |
 | WDC07 | Washington, DC | Nord America orientale |
+{: caption="Tabella 1. {{site.data.keyword.CloudDataCents_notm}} disponibili per le istanze vCenter Server with Hybridity Bundle" caption-side="top"}
 
 A seconda della disponibilità e della fornitura di inventario, i {{site.data.keyword.CloudDataCents_notm}} potrebbero visualizzare un indicatore di stato nella console {{site.data.keyword.vmwaresolutions_short}} per aiutarti a pianificare le tue distribuzioni.
-
-Tabella 2. Indicatori di stato per i {{site.data.keyword.CloudDataCents_notm}} quando ordini le istanze vCenter Server with Hybridity Bundle
 
 | Stato | Dettagli sullo stato |
 |:------------------------------|:--------------------------------------------------|
 | Coming Soon                   | Il {{site.data.keyword.CloudDataCent_notm}} non è attualmente disponibile. |
 | Temporarily Out of Inventory  | Il {{site.data.keyword.CloudDataCent_notm}} al momento non ha disponibilità. |
 | Limited Inventory             | Il {{site.data.keyword.CloudDataCent_notm}} ha una disponibilità limitata e l'ordine potrebbe non essere completato. |
+{: caption="Tabella 2. Indicatori di stato per i {{site.data.keyword.CloudDataCents_notm}} quando ordini le istanze vCenter Server with Hybridity Bundle" caption-side="top"}
 
 ## Backup dei componenti di gestione
 {: #vc_hybrid_planning-backup-mgmt-components}
@@ -95,7 +95,7 @@ Quando distribuisci questo servizio, completa le seguenti impostazioni:
   * **Chiave privata**: immetti la chiave privata del certificato CA.
   * (Facoltativo) **Password**: immetti la password per la chiave privata, se è crittografata.
   * (Facoltativo) **Immettere nuovamente la password**: immetti di nuovo la password per la chiave privata.
-  * (Facoltativo) **Nome host**: immetti il nome host da associare al nome comune (CN) del certificato CA. HCX on {{site.data.keyword.cloud_notm}} richiede che il certificato CA sia in un formato accettato da Edge NSX. Per ulteriori informazioni sui formati dei certificati Edge NSX, vedi [Importazione di certificati SSL](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html).
+  * (Facoltativo) **Nome host**: immetti il nome host da associare al nome comune (CN) del certificato CA. HCX on {{site.data.keyword.cloud_notm}} richiede che il certificato CA sia in un formato accettato da Edge NSX. Per ulteriori informazioni sui formati dei certificati Edge NSX, vedi [Importazione di certificati SSL](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html){:external}.
 
 Puoi ordinare altri servizi aggiuntivi per la tua istanza in base alle tue esigenze, come ad esempio il ripristino di emergenza. Per ulteriori informazioni, vedi [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices).
 

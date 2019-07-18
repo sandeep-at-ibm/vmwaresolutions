@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-06-28"
 
 keywords: view vCenter Server, view instance, view instance details
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -31,8 +32,6 @@ subcollection: vmware-solutions
 2. 콘솔 배너에서 사용자 계정 아이콘을 클릭한 다음 **계정** 필드를 클릭하여 인스턴스를 확인하려는 사용자 계정을 선택하십시오.  
 3. **vCenter Server 인스턴스** 테이블에서, 선택된 사용자 계정에서 프로비저닝된 인스턴스의 목록을 보십시오.
 
-표 1. vCenter Server 인스턴스 항목
-
 |항목        |설명       |  
 |:------------- |:------------- |
 |이름 |인스턴스의 이름입니다. |
@@ -41,10 +40,9 @@ subcollection: vmware-solutions
 |위치 |인스턴스가 호스팅되는 {{site.data.keyword.CloudDataCent_notm}}입니다. |  
 |작성 시간 |인스턴스가 작성된 날짜 및 시간입니다. |
 |상태 |인스턴스의 상태입니다. |   
+{: caption="표 1. vCenter Server 인스턴스 항목" caption-side="top"}
 
 인스턴스에는 다양한 상태가 있습니다.
-
-표 2. vCenter Server 인스턴스 상태 설명
 
 |상태        |설명       |
 |:------------- |:------------- |
@@ -56,6 +54,7 @@ subcollection: vmware-solutions
 |삭제 중 |인스턴스가 삭제 중입니다. |
 |삭제 오류 |인스턴스가 삭제 중일 때 오류가 발생했습니다. |
 |삭제됨 |인스턴스가 삭제됩니다. |
+{: caption="표 2. vCenter Server 인스턴스 상태 설명" caption-side="top"}
 
 ## vCenter Server 인스턴스 특성 세부사항을 보는 프로시저
 {: #vc_viewinginstances-procedure-view-inst-property}
@@ -64,8 +63,6 @@ subcollection: vmware-solutions
 
 1. **vCenter Server 인스턴스** 테이블에서 인스턴스 이름을 클릭하십시오.
 2. **특성**에서 인스턴스의 세부사항을 보십시오.
-
-표 3. vCenter Server 인스턴스 특성
 
 |특성        |설명       |
 |:------------- |:------------- |
@@ -82,13 +79,12 @@ subcollection: vmware-solutions
 |DNS, 하위 도메인 |하위 도메인은 로컬 vCenter Server 인스턴스 호스트 이름이 상주하는 루트 도메인 이름의 DNS 하위 도메인 이름입니다. 하위 도메인 이름은 <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp> 형식으로 되어 있습니다. |
 | Hybridity Bundle |vCenter Server with Hybridity Bundle의 설치 여부를 표시합니다. |
 |상태  |인스턴스의 상태입니다.<br><br>표시된 정보는 배치의 진행상태 또는 인스턴스에서 수행되는 조치에 대한 업데이트를 제공합니다. 문제가 있는 경우 문제점을 조사하고 해결하는 데 도움이 되는 메시지가 표시될 수 있습니다. |
+{: caption="표 3. vCenter Server 인스턴스 특성" caption-side="top"}
 
 ## vCenter Server 인스턴스에 대한 액세스 정보를 보는 프로시저
 {: #vc_viewinginstances-procedure-view-access-info}
 
 **액세스 정보**에서 인스턴스 관련 컴포넌트의 액세스 정보를 보십시오. 표시된 비밀번호는 시스템에서 생성된 초기 비밀번호입니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 비밀번호를 변경하는 경우 이 비밀번호는 인스턴스 요약 페이지에서 업데이트되지 않습니다.
-
-표 4. 인스턴스 관련 컴포넌트에 대한 vCenter Server 액세스 정보
 
 |컴포넌트        |설명       |
 |:------------- |:------------- |
@@ -102,18 +98,18 @@ subcollection: vmware-solutions
 |vCenter FQDN  |vCenter Server의 완전한 도메인 이름(FQDN)입니다.  |
 |vCenter ADMIN  |vSphere Web Client를 사용하여 vCenter Server에 로그인하는 데 사용할 수 있는 VMware vCenter Single Sign-On 사용자 이름 및 비밀번호입니다.  |
 |vCenter SSH  |SSH 연결을 통해 vCenter Server VM에 액세스하는 데 사용할 수 있는 사용자 이름 및 비밀번호입니다.  |
+{: caption="표 4. 인스턴스 관련 컴포넌트에 대한 vCenter Server 액세스 정보" caption-side="top"}
 
 ## vCenter Server 인스턴스에 대한 배치 히스토리를 보는 프로시저
 {: #vc_viewinginstances-procedure-view-deploy-history}
 
 왼쪽 탐색 분할창에서 **배치 히스토리**를 클릭하여 인스턴스에 대한 배치 히스토리를 보십시오.
 
-표 5. vCenter Server 인스턴스 배치 히스토리
-
 |항목        |설명       |  
 |:------------- |:------------- |
 |날짜 |인스턴스 상태가 변경된 날짜 및 시간입니다. |
 |요약 |변경의 세부사항입니다. |
+{: caption="표 5. vCenter Server 인스턴스 배치 히스토리" caption-side="top"}
 
 ## 오류 발생 시 수행할 작업
 {: #vc_viewinginstances-if-errors-occur}
@@ -130,7 +126,7 @@ subcollection: vmware-solutions
 
 로그인 지시사항을 완료하는 데 도움이 되는 정보는 다음 주제를 검토하십시오.
 *  vSphere Web Client에 액세스하기 전의 요구사항 및 필요한 단계는 [vSphere Web Client에 연결하는 중에 제한시간이 초과함](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_timeout_vc_console)을 참조하십시오.
-*  VPN을 사용하여 {{site.data.keyword.cloud_notm}} 인프라 사설 네트워크에 로그인하기 위한 액세스 지점의 목록은 [VPN 액세스](http://www.softlayer.com/vpn-access){:new_window}를 참조하십시오.
+*  VPN을 사용하여 {{site.data.keyword.cloud_notm}} 인프라 사설 네트워크에 로그인하기 위한 액세스 지점의 목록은 [VPN 액세스](http://www.softlayer.com/vpn-access){:external}를 참조하십시오.
 *  vSphere Web Client를 사용하여 OVF(Open Virtualization Format) 파일을 배치할 때 문제점이 발생하면 [vSphere Web Client를 사용하여 OVF 파일 배치](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_deploy_ovf)를 참조하십시오.
 
 ## 관련 링크

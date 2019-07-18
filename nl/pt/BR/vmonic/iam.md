@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-18"
 
 keywords: IAM user, user role, user permission
 
@@ -38,18 +38,15 @@ As funções de gerenciamento de plataforma permitem que os usuários executem t
 
 A tabela a seguir fornece informações sobre as ações que são mapeadas para funções de gerenciamento de plataforma.
 
-Tabela 1. Funções de gerenciamento de plataforma e ações permitidas
-
 | Função de gerenciamento de plataforma | Ações | Exemplo de ações |
 |:----------------- |:----------------- |:----------------- |
 | Visualizador | Ações somente leitura | Visualizar o resumo de instâncias<br>Visualizar os detalhes de uma instância |
 | Editor | Atualizar uma instância específica | Incluir ou remover servidores ESXi<br>Incluir ou remover clusters<br>Incluir ou remover serviços<br>Fazer upgrade de uma instância para uma versão superior |
 | Operador | Ações somente leitura | Listar instâncias<br>Visualizar os detalhes de uma instância |
 | Administrador | Acesso total ao gerenciamento | Criar novas instâncias<br>Excluir instâncias<br>Conceda acesso à plataforma a outros usuários|
+{: caption="Tabela 1. Funções de gerenciamento de plataforma e ações permitidas" caption-side="top"}
 
 Para  {{site.data.keyword.vmwaresolutions_short}}, existem as seguintes ações:
-
-Tabela 2. Descrições de ação e funções necessárias
 
 | Ação | Operação em serviço | Atribuição |
 |:------ |:-------------------- |:---- |
@@ -58,6 +55,7 @@ Tabela 2. Descrições de ação e funções necessárias
 | vmware-solutions.instances.view | Listar instâncias<br>Visualizar os detalhes de uma instância | Visualizador, Operador, Editor e Administrador |
 | vmware-solutions.instances.update | Incluir ou remover servidores ESXi<br>Incluir ou remover clusters<br>Incluir ou remover serviços<br>Fazer upgrade de uma instância para uma versão superior | Editor e Administrador |
 | vmware-solutions.account.update | Atualizar configurações da conta | Administrador |
+{: caption="Tabela 2. Descrições de ação e funções necessárias" caption-side="top"}
 
 ## Gerenciando o acesso para usuários
 {: #iam-users}

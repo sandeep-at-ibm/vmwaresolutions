@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: NetApp order instance, order NetApp ONTAP, order NetApp
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -114,12 +115,12 @@ NetApp ONTAP Select インスタンスの ESXi サーバーの数は、デフォ
 
 選択した構成に基づいて、見積もりコストがすぐに生成され、右側のペインの**「注文の要約」**に表示されます。  **「料金詳細」**をクリックすると、{{site.data.keyword.vmwaresolutions_short}} リソースのコスト・サマリーが記載された PDF 文書を生成できます。
 
-また、**「見積もりに追加」**をクリックして、プロビジョン済みリソースを {{site.data.keyword.cloud_notm}} 見積もりツールに追加することもできます。この操作は、購入を検討している他の {{site.data.keyword.cloud_notm}} リソースと一緒に、選択した {{site.data.keyword.vmwaresolutions_short}}リソースのコストを見積もる場合に役立ちます。
+また、**「見積もりに追加」**をクリックして、プロビジョン済みリソースを {{site.data.keyword.cloud_notm}} 見積もりツールに追加することもできます。 この操作は、購入を検討している他の {{site.data.keyword.cloud_notm}} リソースと一緒に、選択した {{site.data.keyword.vmwaresolutions_short}}リソースのコストを見積もる場合に役立ちます。
 
 ## NetApp ONTAP Select インスタンスを注文する手順
 {: #ordering-netapp-ontap-select-instances}
 
-1. {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**をクリックしてから、**「Virtual Data Centers」**セクションの**「NetApp ONTAP Select」**をクリックします。
+1. {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**アイコンをクリックしてから、**「VMware 仮想データ・センター」**セクションの**「NetApp ONTAP Select」**カードをクリックします。
 2. **「NetApp ONTAP Select」**ページで、**「作成」**をクリックします。
 3. **「NetApp ONTAP」**ページで、インスタンス名を入力します。
 4. **「ホスト名接頭部」**、**「サブドメイン・ラベル」**、および**「ドメイン・ネーム」**を入力して、ネットワーク・インターフェースの設定を完了します。
@@ -160,5 +161,5 @@ NetApp ONTAP Select インスタンスの ESXi サーバーの数は、デフォ
 
 * [NetApp ONTAP Select インスタンスの表示](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_viewinginstances)
 * [NetApp ONTAP Select インスタンスの削除](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_deletinginstance)
-* [　 NetApp ONTAP 9 ドキュメント・センター](http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.exp-clus-peer%2Fhome.html)
-* [Attach dedicated storage to NetApp ONTAP Select deployments](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)
+* [NetApp ONTAP ドキュメント・センター](http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.exp-clus-peer%2Fhome.html){: external}
+* [Attach dedicated storage to NetApp ONTAP Select deployments](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/){: external}

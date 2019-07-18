@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-26"
 
 keywords: vCenter Server Hybridity add cluster, view cluster vCenter Server Hybridity, delete cluster vCenter Server Hybridity
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -31,7 +32,7 @@ VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle イ�
 {: #vc_hybrid_addingviewingclusters-before-add}
 
 * 可能であれば、{{site.data.keyword.vmwaresolutions_full}} コンソールを使用してクラスターを追加してください。これは、VMware vSphere Web Client で行った変更は、{{site.data.keyword.vmwaresolutions_short}} コンソールと同期されないためです。 したがって、オンプレミスのクラスター、または {{site.data.keyword.vmwaresolutions_short}} コンソールで管理できない、または管理しないクラスターに対してのみ、クラスターを vCenter Server に追加します。
-* V2.5 以降でデプロイ (または V2.5 以降にアップグレード) されたインスタンスの場合は、追加できるクラスター数の上限は、クラスター、ホスト、および VM の数によって決まります。 VMware のサイズ設定についてのガイドラインおよびデプロイに応じた上限を守る必要があります。 上限について詳しくは、[VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window} を参照してください。
+* V2.5 以降でデプロイ (または V2.5 以降にアップグレード) されたインスタンスの場合は、追加できるクラスター数の上限は、クラスター、ホスト、および VM の数によって決まります。 VMware のサイズ設定についてのガイドラインおよびデプロイに応じた上限を守る必要があります。 上限について詳しくは、[VMware Configuration Maximums](https://configmax.vmware.com/home){:external} を参照してください。
 * V2.3 および V2.4 でデプロイ (または V2.3 および V2.4 にアップグレード) されたインスタンスの場合は、最大 10 個のクラスターを追加できます。
 
 ### システム設定
@@ -65,25 +66,23 @@ vCenter Server with Hybridity Bundle インスタンスにクラスターを追�
 
 **「Skylake」**を選択した場合、必要に応じて CPU と RAM の組み合わせを選択できます。
 
-表 1. Skylake ベアメタル・サーバーのオプション
-
 | CPU モデル・オプション        | RAM オプション       |
 |:------------- |:------------- |
 | Dual Intel Xeon Silver 4110 プロセッサー / 合計 16 コア、2.1 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 | Dual Intel Xeon Gold 5120 Processor / 合計 28 コア、2.2 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 | Dual Intel Xeon Gold 6140 Processor / 合計 36 コア、2.3 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+{: caption="表 1. Skylake ベアメタル・サーバーのオプション" caption-side="top"}
 
 #### Broadwell
 {: #vc_hybrid_addingviewingclusters-adding-broadwell}
 
 **「Broadwell」**を選択した場合、必要に応じて CPU と RAM の組み合わせを選択できます。
 
-表 2. Broadwell ベアメタル・サーバーのオプション
-
 | CPU モデル・オプション        | RAM オプション       |
 |:------------- |:------------- |
 | クワッド Intel Xeon E7-4820 v4 / 合計 40 コア、1.9 GHz | 128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 | クワッド Intel Xeon E7-4850 v4 / 合計 64 コア、2.2 GHz | 128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
+{: caption="表 2. Broadwell ベアメタル・サーバーのオプション" caption-side="top"}
 
 #### ベア・メタル・サーバーの数
 {: #vc_hybrid_addingviewingclusters-adding-bare-metal-number}
@@ -127,7 +126,7 @@ IBM では、以下の VMware コンポーネントのライセンスを提供�
 
 選択したクラスター構成に基づいて、見積もりコストがすぐに生成され、右側のペインの**「注文の要約」**に表示されます。 **「料金詳細」**をクリックすると、{{site.data.keyword.vmwaresolutions_short}} リソースのコスト・サマリーが記載された PDF 文書を生成できます。
 
-また、**「見積もりに追加」**をクリックして、プロビジョン済みリソースを {{site.data.keyword.cloud_notm}} 見積もりツールに追加することもできます。この操作は、購入を検討している他の {{site.data.keyword.cloud_notm}} リソースと一緒に、選択した {{site.data.keyword.vmwaresolutions_short}}リソースのコストを見積もる場合に役立ちます。
+また、**「見積もりに追加」**をクリックして、プロビジョン済みリソースを {{site.data.keyword.cloud_notm}} 見積もりツールに追加することもできます。 この操作は、購入を検討している他の {{site.data.keyword.cloud_notm}} リソースと一緒に、選択した {{site.data.keyword.vmwaresolutions_short}}リソースのコストを見積もる場合に役立ちます。
 
 ## vCenter Server with Hybridity Bundle インスタンスにクラスターを追加する手順
 {: #vc_hybrid_addingviewingclusters-adding-procedure}

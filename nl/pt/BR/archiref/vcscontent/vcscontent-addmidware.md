@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-06-27"
 
 subcollection: vmware-solutions
 
@@ -67,14 +67,14 @@ O {{site.data.keyword.cloud_notm}} Private tem uma ampla seleção de conteúdo 
 * Conectividade
   -	IBM Voice Gateway Developer Trial
 
-* Conjunto de ferramentas de modernização de aplicativo
+* Ferramentas de modernização de aplicativo
   -	IBM Transformation Advisor
 
 * Sistema de mensagens
   -	IBM MQ Advanced
   -	IBM MQ Advanced for Developers
   -	Rabbit MQ (software livre)
-  -	IBM Event Streams Tech Preview (baseado no Apache Kafka)
+  -	Visualização de tecnologia do IBM Event Streams (baseada no Apache Kafka)
 
 * Automação de negócios digitais
   -	IBM Operational Decision Manager
@@ -98,7 +98,7 @@ O {{site.data.keyword.cloud_notm}} Private tem uma ampla seleção de conteúdo 
 * HPC / HPDA
   -	IBM Spectrum LSF Community Edition
   -	IBM Spectrum Symphony Community Edition
-  -	IBM Spectrum Conductor Technical Preview
+  -	Visualização de tecnologia do IBM Spectrum Conductor
 
 * Gerenciamento de multinuvem
   -	{{site.data.keyword.cloud_notm}} Automation Manager
@@ -131,7 +131,7 @@ produto PowerVC)
   - Cluster de armazenamento GlusterFS com gerenciamento de ciclo de vida do Heketi (software
 livre)
   -	NFS de amostra do Container Storage Interface (CSI)
-  -	driver (software livre)
+  -	Driver (software livre)
   -	Cluster Rook Ceph (software livre)
 
 * Tools (Ferramentas)
@@ -172,8 +172,7 @@ type=NFS
 server = nfs.server.ip.address
 path = /shared/db2trader1`
 
-Na interface com o usuário do catálogo, procure "Db2" e clique em ibm-db2oldp-dev.
-Revise o arquivo leia-me, em seguida, clique em Configurar.
+Na interface com o usuário do catálogo, procure “Db2” e clique em ibm-db2oldp-dev. Revise o arquivo leia-me e clique em Configurar.
 
 Na seção Configurar, há uma seção Iniciação rápida e uma seção Todos
 os parâmetros. Abra Todos os parâmetros, uma vez que Todd precisa inserir
@@ -262,9 +261,7 @@ Para otimizar, Jane executou as etapas a seguir:
 -	Incluiu um pipeline (Jane usou o Jenkins)
 -	Construiu usando o Maven
 
-A seguir, um exemplo de [repositório de
-código] (https://github.com/IBMStockTrader/) de Jane, junto ao
-arquivo do Jenkins, server.xml, etc. Com isso no lugar, Jane pode codificar livremente
+O exemplo a seguir mostra o [repositório de código](https://github.com/IBMStockTrader/) de Jane, além do arquivo do Jenkins, server.xml, e muito mais. Com isso no lugar, Jane pode codificar livremente
 recursos extras por meio de segredos para acessar serviços como o ODM e
 o Watson, juntamente com mais microsserviços como repositórios individuais
 no GitHub.

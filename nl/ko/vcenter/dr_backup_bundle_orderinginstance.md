@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-28"
 
 keywords: single-node trial, data protection DR, order data protection DR
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -55,7 +56,7 @@ subcollection: vmware-solutions
 ## 데이터 보호 및 재해 복구를 위한 단일 노드 평가판 인스턴스를 주문하는 프로시저
 {: #dr_backup_bundle_orderinginstance-procedure}
 
-1. {{site.data.keyword.cloud_notm}} 카탈로그의 왼쪽 탐색 분할창에 있는 **VMware**를 클릭한 후 **가상 데이터 센터** 섹션에 있는 **데이터 보호 및 재해 복구를 위한 단일 노드 평가판**을 클릭하십시오.
+1. {{site.data.keyword.cloud_notm}} 카탈로그에서 왼쪽 탐색 분할창에 있는 **VMware** 아이콘을 클릭한 다음 **VMware 가상 데이터 센터** 섹션에 있는 **데이터 보호 및 재해 복구를 위한 단일 노드 평가판** 카드를 클릭하십시오.
 2. **데이터 보호 및 재해 복구를 위한 단일 노드 평가판** 페이지에서 **계속**을 클릭하십시오.
 3. {{site.data.keyword.cloud_notm}} 인프라 계정을 요청하는 단계를 완료하거나 기존의 **사용자 이름** 및 **API 키**를 제공하고 **검색**을 클릭하십시오.
 
@@ -76,8 +77,8 @@ subcollection: vmware-solutions
 {: #dr_backup_bundle_orderinginstance-results}
 
 * 인스턴스의 배치가 자동으로 시작되고 온프레미스 HCX on {{site.data.keyword.cloud_notm}} 서비스 활성 키가 주문됩니다.
-* 인스턴스 세부사항의 **배치 히스토리** 섹션을 보고 주의해야 하는 문제가 포함된 배치 상태를 확인할 수 있습니다. 
-* 인스턴스가 성공적으로 배치된 경우에는 [데이터 보호 및 재해 복구를 위한 단일 노드 평가판 인스턴스의 기술 스펙](https://test.cloud.ibm.com/docs/services/vmwaresolutions/services?topic=vmware-solutions-dr_backup_bundle_overview#dr_backup_bundle_overview-tech-specs)에서 설명된 컴포넌트가 설치됩니다. 
+* 인스턴스 세부사항의 **배치 히스토리** 섹션을 보고 주의해야 하는 문제가 포함된 배치 상태를 확인할 수 있습니다.
+* 인스턴스가 성공적으로 배치된 경우에는 [데이터 보호 및 재해 복구를 위한 단일 노드 평가판 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/services?topic=vmware-solutions-dr_backup_bundle_overview#dr_backup_bundle_overview-tech-specs)에서 설명된 컴포넌트가 설치됩니다.
 * 인스턴스를 사용할 준비가 되면 인스턴스의 상태가 **사용할 준비가 됨**으로 변경되고 이메일로 알림을 받습니다.
 
 #### HCX on IBM Cloud에 대한 배치 프로세스
@@ -140,7 +141,7 @@ HCX on {{site.data.keyword.cloud_notm}}의 배치가 자동화됩니다. 다음 
       1. **관리** 탭을 클릭하십시오.
       2. **시스템 업데이트** 탭에서 **REQUEST DOWNLOAD LINK**를 클릭하십시오.
       3. **COPY LINK**를 클릭한 후 이 링크를 사용하여 온프레미스 vSphere 환경에 대한 액세스 권한으로 HCX Enterprise Client를 온프레미스 환경에 다운로드하십시오.
-3. VMware vSphere Web Client에서 HCX Manager 가상 어플라이언스(HCX Manager)로 HCX Enterprise Client를 온프레미스 환경에 배치하십시오. [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}의 지시사항을 따르십시오.
+3. VMware vSphere Web Client에서 HCX Manager 가상 어플라이언스(HCX Manager)로 HCX Enterprise Client를 온프레미스 환경에 배치하십시오. [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}의 지시사항을 따르십시오.
 
 사설 네트워크의 온프레미스 HCX Manager를 배치하고 해당 HCX Manager가 공용 네트워크에 액세스할 수 있도록 해야 합니다. NSX Edge, Vyatta 또는 유사한 게이트웨이를 사용하여 온프레미스 HCX Manager에 대한 인터넷 액세스를 허용할 수 있습니다. 사설 네트워크 액세스와 공용 네트워크 액세스에 사용된 게이트웨이가 서로 다른 경우, 사설 네트워크 액세스에 대한 정적 라우트를 작성하도록 기본 게이트웨이를 사용하여 공용 네트워크 액세스 및 온프레미스 **HCX Manager 관리 콘솔**을 허용하는 것이 좋습니다.  
     {:note}
@@ -148,16 +149,16 @@ HCX on {{site.data.keyword.cloud_notm}}의 배치가 자동화됩니다. 다음 
   1. OVA 배치 시 지정된 인증 정보를 사용하여 온프레미스 HCX Enterprise Manager VM에 로그인하십시오.
   2. 프롬프트가 표시되면 정품 인증 키를 입력하십시오.
 
-  [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}의 지시사항을 따르십시오.
+  [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}의 지시사항을 따르십시오.
 
 5. 자체 서명된 SSL 인증서가 HCX on {{site.data.keyword.cloud_notm}} 서비스에서 생성되었습니다. 다음 단계를 완료하여 인증서를 온프레미스 HCX Manager로 가져와야 합니다.
     1. 온프레미스 **HCX Manager 관리 콘솔**에서 **관리** 탭을 클릭하십시오.
     2. 왼쪽 탐색 분할창에서 **신뢰할 수 있는 CA 인증서**를 클릭한 후 오른쪽의 **IMPORT**를 클릭하십시오.
     3. **URL**을 클릭한 후 적용할 인증서의 URL을 입력하십시오. 즉, {{site.data.keyword.vmwaresolutions_short}} 콘솔의 HCX on {{site.data.keyword.cloud_notm}} 서비스 세부사항 페이지에서 찾을 수 있는 **HCX Cloud IP**(``https://<cloud-side public IP>``)입니다.
     4. **APPLY**를 클릭하십시오.
-6. 초기 구성을 계속하고 상호연결을 빌드하십시오. [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}의 지시사항을 따르십시오.
-7. VMware HCX의 네트워크를 온프레미스에서 {{site.data.keyword.cloud_notm}}로 확장하십시오. [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}의 지시사항을 따르십시오.
-8. 온프레미스와 {{site.data.keyword.cloud_notm}} 간에 VM을 마이그레이션하십시오. [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}의 지시사항을 따르십시오.
+6. 초기 구성을 계속하고 상호연결을 빌드하십시오. [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}의 지시사항을 따르십시오.
+7. VMware HCX의 네트워크를 온프레미스에서 {{site.data.keyword.cloud_notm}}로 확장하십시오. [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}의 지시사항을 따르십시오.
+8. 온프레미스와 {{site.data.keyword.cloud_notm}} 간에 VM을 마이그레이션하십시오. [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}의 지시사항을 따르십시오.
 
 {{site.data.keyword.slportal}} 또는 콘솔 이외의 다른 수단이 아닌 {{site.data.keyword.vmwaresolutions_short}} 콘솔의 {{site.data.keyword.cloud_notm}} 계정에만 작성되는 {{site.data.keyword.vmwaresolutions_short}} 인프라 컴포넌트 관리해야 합니다.
 {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 컴포넌트를 변경하는 경우 변경사항이 콘솔과 동기화되지 않으며 환경을 불안정하게 할 수 있습니다.
@@ -193,9 +194,9 @@ HCX on {{site.data.keyword.cloud_notm}}의 배치가 자동화됩니다. 다음 
 {: #dr_backup_bundle_orderinginstance-related}
 
 * [vCenter Server 및 IBM Cloud Private 안내서](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [IBM Cloud Private의 티켓 열기](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
-* [VMware HCX 리소스](https://hcx.vmware.com/#/docs){:new_window}
-* [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}
+* [IBM Cloud Private의 티켓 열기](https://www.ibm.com/mysupport/s/?language=en_US){:external}
+* [VMware HCX 리소스](https://hcx.vmware.com/#/docs){:external}
+* [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}
 * [가상 서버 취소](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)
 * [Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-managingveeam) 관리
 * [Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-managingzertodr) 관리

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-03"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -29,12 +29,12 @@ El objetivo era demostrar una interacción entre la inteligencia artificial de W
 
 La implementación del “concept car” constituye una extensión de la aplicación de Acme Skateboard de demostración llamada Skate Advisor. Skate Advisor es una herramienta que permite a los usuarios tener conversaciones sobre skateboarding con un motor controlado por Watson. Estos son algunos ejemplos de conversaciones:
 
--   “Watson, muéstrame combinaciones del truco Casper”
--   “Watson, muéstrame ubicaciones comunes donde realizar un truco”
--   “Watson, muéstrame un vídeo del truco Casper”
+-`Watson, muéstrame combinaciones del truco Casper`
+- `Watson, muéstrame ubicaciones comunes donde realizar un truco`
+- `Watson, muéstrame un vídeo del truco Casper`
 
 Acme Skate Advisor aprovecha Watson Discovery Service para ingerir artículos, vídeos,
-blogs y otro contenido de Internet con el fin de crear una base de datos de trucos, que la aplicación puede consultar. 
+blogs y otro contenido de Internet con el fin de crear una base de datos de trucos, que la aplicación puede consultar.
 
 La aplicación Skate Advisor también se implementa en la plataforma de modernización de aplicaciones, que proporciona servicios basados en contenedor mediante {{site.data.keyword.icpfull_notm}} alojado en la plataforma {{site.data.keyword.cloud_notm}} for VMware Services.
 
@@ -56,7 +56,7 @@ Acme Skate Advisor se comunica con los usuarios a través de un servicio de conv
 ### Uso y entrenamiento de Watson Discovery Service
 {: #vcscar-intro-watson-disc}
 
-Acme Skate Advisor utiliza Watson Discovery Services para realizar el seguimiento de una base de datos de trucos para la que se aplica un lenguaje de clasificación y los trucos descubiertos en los servicios en línea.
+Acme Skate Advisor utiliza Watson Discovery Services para supervisar una base de datos de trucos para la que se aplica un lenguaje de clasificación y los trucos descubiertos en los servicios en línea.
 
 ### Uso de los servicios de Watson
 {: #vcscar-intro-watson-services}
@@ -90,7 +90,7 @@ IBM comprende que el 70% de la adopción de la nube privada está impulsada por 
 - Las cargas de trabajo sensibles a la seguridad y algunas cargas de trabajo reguladas, que se pueden trasladar a la nube pública, se están moviendo a entornos dedicados.
 - Los sistemas colaborativos (SoE), como web, móvil, IoT, IA o vídeo, se están trasladando a nubes públicas.
 
-Por ejemplo, un patrón común consiste en desplegar las aplicaciones SoE frontales como contenedores con bases de datos y middleware antiguo que se despliegan en máquinas virtuales en una nube privada.
+Por ejemplo, un patrón común consiste en desplegar las aplicaciones SoE frontales como contenedores con bases de datos y middleware heredado que se despliegan en máquinas virtuales en una nube privada.
 
 Puesto que la infraestructura de TI y las necesidades empresariales son exclusivas, un enfoque de modernización debe proporcionar las siguientes prioridades:
 * Acelerar el valor empresarial

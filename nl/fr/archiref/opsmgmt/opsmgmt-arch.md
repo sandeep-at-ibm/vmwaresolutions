@@ -51,7 +51,7 @@ La gestion des opérations de {{site.data.keyword.vmwaresolutions_short}} se com
 ## Mise en réseau de la gestion des opérations
 {: #opsmgmt-arch-network}
 
-Le diagramme suivant montre la vue d'ensemble du réseau. 
+Le diagramme suivant montre la vue d'ensemble du réseau.
 
 ![Diagramme du réseau](../../images/opsmgmt-network.svg "Diagramme du réseau")
 

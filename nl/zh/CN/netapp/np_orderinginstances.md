@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: NetApp order instance, order NetApp ONTAP, order NetApp
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -119,7 +120,7 @@ subcollection: vmware-solutions
 ## 订购 NetApp ONTAP Select 实例的过程
 {: #ordering-netapp-ontap-select-instances}
 
-1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格中的 **VMware**，然后单击**虚拟数据中心**部分中的 **NetApp ONTAP Select**。
+1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格中的 **VMware** 图标，然后单击 **VMware 虚拟数据中心**部分中的 **NetApp ONTAP Select** 卡。
 2. 在 **NetApp ONTAP Select** 页面上，单击**创建**。
 3. 在 **NetApp ONTAP** 页面上，输入实例名称。
 4. 通过输入**主机名前缀**、**子域标签**和**域名**，完成网络接口设置。
@@ -160,5 +161,5 @@ subcollection: vmware-solutions
 
 * [查看 NetApp ONTAP Select 实例](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_viewinginstances)
 * [删除 NetApp ONTAP Select 实例](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_deletinginstance)
-* [NetApp ONTAP 文档中心](http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.exp-clus-peer%2Fhome.html)
-* [将专用存储器连接到 NetApp ONTAP Select 部署](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)
+* [NetApp ONTAP 文档中心](http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.exp-clus-peer%2Fhome.html){: external}
+* [将专用存储器连接到 NetApp ONTAP Select 部署](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/){: external}

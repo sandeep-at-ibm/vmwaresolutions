@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2019
 
-lastupdated: "2019-05-31"
+lastupdated: "2019-06-28"
 
 keywords: IBM Cloud for VMware Solutions, getting started, vmware solutions offerings, add-on services for vmwaresolutions, vmwaresolutions use cases
 
@@ -23,16 +23,16 @@ subcollection: vmware-solutions
 {:tip: .tip}
 {:table: .aria-labeledby="caption"}
 
-# Guía de aprendizaje de iniciación
+# Iniciación a IBM Cloud for VMware Solutions
 {: #getting-started}
 
-En esta guía de aprendizaje de inicio, le guiamos a través del proceso de pedido de una instancia y algunos servicios adicionales para el mismo.
+En esta guía de aprendizaje de iniciación a {{site.data.keyword.vmwaresolutions_full}}, le guiamos a través del proceso de pedido de una instancia y algunos servicios adicionales para el mismo.
 {:shortdesc}
 
 ## Antes de empezar
 {: #getting-started-prereqs}
 
-Antes de empezar a trabajar con {{site.data.keyword.vmwaresolutions_full}}, revise la siguiente información importante sobre los requisitos del navegador, las cuentas de usuario, las opciones de despliegue y los servicios de complemento.
+Antes de empezar a trabajar con {{site.data.keyword.vmwaresolutions_short}}, revise la siguiente información importante sobre los requisitos del navegador, las cuentas de usuario, las opciones de despliegue y los servicios de complemento.
 
 ### Requisitos del navegador
 {: #getting-started-browser-req}
@@ -52,116 +52,47 @@ Para ver y trabajar mejor con la consola de {{site.data.keyword.vmwaresolutions_
 
 Necesita una cuenta de {{site.data.keyword.cloud_notm}} y una cuenta de infraestructura de {{site.data.keyword.cloud_notm}}. Estas cuentas deben cumplir ciertos requisitos.
 
-   Tabla 1. Cuentas de usuario necesarias
-   <table>
-   <tr>
-      <th>Cuenta</th>
-      <th>Descripción</th>
-   </tr>
-   <tr>
-      <td>IBMid</td>
-      <td>Al utilizar el **IBMid**, puede tener un único nombre de usuario de inicio de sesión para todos los productos y servicios de IBM que utilice, incluido {{site.data.keyword.cloud_notm}}. {{site.data.keyword.vmwaresolutions_short}} se proporciona como una solución de infraestructura en el catálogo de {{site.data.keyword.cloud_notm}}. Para acceder a la consola de {{site.data.keyword.vmwaresolutions_short}}, debe tener un **IBMid**.<br><br>Para utilizar **IBMid** para iniciar sesión en la consola de {{site.data.keyword.vmwaresolutions_short}}, debe asociar el **IBMid** con una cuenta de {{site.data.keyword.cloud_notm}}. Cuando inicie una sesión en la consola por primera vez, se le indicará que asocie su **IBMid** existente con una cuenta de {{site.data.keyword.cloud_notm}} o que se registre para conseguir una nueva cuenta de {{site.data.keyword.cloud_notm}}. La nueva cuenta de {{site.data.keyword.cloud_notm}} se asociará automáticamente con el **IBMid**. Debe pasar por este proceso una sola vez.<br><br>Si tiene problemas para asociar su **IBMid** con una cuenta de {{site.data.keyword.cloud_notm}}, consulte [Resolución de problemas para acceder a {{site.data.keyword.cloud_notm}}](/docs/account?topic=account-accessing#accessing).</td>
-   </tr>
-   <tr>
-      <td>Cuenta de IBM Cloud</td>
-      <td>Para solicitar y utilizar servicios de {{site.data.keyword.cloud_notm}}, se necesita una cuenta de {{site.data.keyword.cloud_notm}}. La información de facturación está asociada a la cuenta de {{site.data.keyword.cloud_notm}}. El coste de la infraestructura física y virtual y las licencias resultantes se cargarán a su cuenta de {{site.data.keyword.cloud_notm}}.</td>
-   </tr>
-   <tr>
-      <td>Cuenta de la infraestructura IBM Cloud</td>
-      <td>Para obtener información sobre los requisitos de una cuenta de infraestructura de {{site.data.keyword.cloud_notm}},
-consulte [Requisitos para la cuenta de infraestructura de {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req). <br><br>Puede enlazar las cuentas de infraestructura de {{site.data.keyword.cloud_notm}} con las cuentas de {{site.data.keyword.cloud_notm}} para utilizar la infraestructura combinada como servicio (IaaS) y los recursos de la plataforma como servicio (PaaS). A continuación, puede acceder a los recursos de IaaS y a los recursos de PaaS desde un solo inicio de sesión. El enlace de las cuentas también le proporciona una sola factura para todos los recursos de PaaS e IaaS que utiliza.<ul><li>Si no tiene una cuenta de infraestructura de {{site.data.keyword.cloud_notm}}, solicite una siguiendo el procedimiento de [Inicio de sesión para una cuenta de infraestructura de IBM Cloud](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts#signing_required_accounts-infra) y, a continuación, enlace la cuenta de infraestructura de {{site.data.keyword.cloud_notm}} con la cuenta de {{site.data.keyword.cloud_notm}} siguiendo el procedimiento de [Cómo cambiar a IBMid y enlazar cuentas](/docs/account?topic=account-unifyingaccounts#unifyingaccounts).</li><li>Si tiene una cuenta de infraestructura de {{site.data.keyword.cloud_notm}}, puede enlazarla con la cuenta de {{site.data.keyword.cloud_notm}} siguiendo el procedimiento de [Cómo cambiar a IBMid y enlazar cuentas](/docs/account?topic=account-unifyingaccounts#unifyingaccounts).</li></ul></td>
-   </tr>
-   </table>
+| Cuenta | Descripción |
+|:------- |:---------- |
+| IBMid | Al utilizar el **IBMid**, puede tener un único nombre de usuario de inicio de sesión para todos los productos y servicios de IBM que utilice, incluido {{site.data.keyword.cloud_notm}}. {{site.data.keyword.vmwaresolutions_short}} se proporciona como una solución de infraestructura en el catálogo de {{site.data.keyword.cloud_notm}}. Para acceder a la consola de {{site.data.keyword.vmwaresolutions_short}}, debe tener un **IBMid**.<br><br>Para utilizar **IBMid** para iniciar sesión en la consola de {{site.data.keyword.vmwaresolutions_short}}, debe asociar el **IBMid** con una cuenta de {{site.data.keyword.cloud_notm}}. Cuando inicie una sesión en la consola por primera vez, se le indicará que asocie su **IBMid** existente con una cuenta de {{site.data.keyword.cloud_notm}} o que se registre para conseguir una nueva cuenta de {{site.data.keyword.cloud_notm}}. La nueva cuenta de {{site.data.keyword.cloud_notm}} se asociará automáticamente con el **IBMid**. Debe pasar por este proceso una sola vez.<br><br>Si tiene problemas para asociar su **IBMid** con una cuenta de {{site.data.keyword.cloud_notm}}, consulte [Resolución de problemas para acceder a {{site.data.keyword.cloud_notm}}](/docs/account?topic=account-accessing#accessing). |
+| Cuenta de IBM Cloud | Para solicitar y utilizar servicios de {{site.data.keyword.cloud_notm}}, se necesita una cuenta de {{site.data.keyword.cloud_notm}}. La información de facturación está asociada a la cuenta de {{site.data.keyword.cloud_notm}}. El coste de la infraestructura física y virtual y las licencias resultantes se cargarán a su cuenta de {{site.data.keyword.cloud_notm}}. |
+| Cuenta de la infraestructura IBM Cloud | Para obtener información sobre los requisitos de una cuenta de infraestructura de {{site.data.keyword.cloud_notm}},
+consulte [Requisitos para la cuenta de infraestructura de {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req).<br><br>Puede enlazar las cuentas de infraestructura de {{site.data.keyword.cloud_notm}} con las cuentas de {{site.data.keyword.cloud_notm}} para utilizar la infraestructura combinada como servicio (IaaS) y los recursos de la plataforma como servicio (PaaS). A continuación, puede acceder a los recursos de IaaS y a los recursos de PaaS desde un solo inicio de sesión. El enlace de las cuentas también le proporciona una sola factura para todos los recursos de PaaS e IaaS que utiliza:<br>Si no tiene una cuenta de infraestructura de {{site.data.keyword.cloud_notm}}, solicite una siguiendo el procedimiento de [Inicio de sesión para una cuenta de infraestructura de IBM Cloud](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts#signing_required_accounts-infra) y, a continuación, enlace la cuenta de infraestructura de {{site.data.keyword.cloud_notm}} con la cuenta de {{site.data.keyword.cloud_notm}} siguiendo el procedimiento de [Cómo cambiar a IBMid y enlazar cuentas](/docs/account?topic=account-unifyingaccounts#unifyingaccounts).<br>Si tiene una cuenta de infraestructura de {{site.data.keyword.cloud_notm}}, puede enlazarla con la cuenta de {{site.data.keyword.cloud_notm}} siguiendo el procedimiento de [Cómo cambiar a IBMid y enlazar cuentas](/docs/account?topic=account-unifyingaccounts#unifyingaccounts).
+{: caption="Tabla 1. Cuentas de usuario necesarias" caption-side="top"}
 
 ### Ofertas de despliegue
 {: #getting-started-depl-offerings}
 
 Revise y elija la oferta de despliegue.
 
-  Tabla 2. Ofertas de despliegue
-  <table>
-    <tr>
-       <th>Oferta de despliegue</th>
-       <th>Descripción</th>
-    </tr>
-    <tr>
-       <td>[VMware vCenter Server on IBM Cloud](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)</td>
-       <td>Con la oferta de vCenter Server, puede desplegar un entorno virtual de VMware utilizando recursos de cálculo, almacenamiento y red personalizados para que se adapten mejor a sus necesidades empresariales.</td>
-    </tr>
-    <tr>
-       <td>[VMware vCenter Server on IBM Cloud con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)</td>
-       <td>La oferta de vCenter Server con el paquete híbrido (Hybridity) es una nube privada alojada que permite ampliar la infraestructura local a la nube de forma rápida y sencilla. El entorno VMware se basa en licencias de centro de datos definido por software de VMware proporcionadas por IBM e incluye VMware Hybrid Cloud Extension (HCX). Mediante el uso de HCX, puede conectarse de forma segura a un entorno vSphere 5.0+ local con sitios de {{site.data.keyword.cloud_notm}} para ofrecer una infraestructura híbrida y una auténtica movilidad de aplicaciones.</td>
-    </tr>
-    <tr>
-       <td>[VMware vSphere on IBM Cloud](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview)</td>
-       <td>La oferta de vSphere on {{site.data.keyword.cloud_notm}} proporciona un servicio de virtualización personalizable que combina {{site.data.keyword.baremetal_short}} compatibles con VMware, componentes de hardware y licencias para crear su propio entorno VMware alojado por IBM.</td>
-    </tr>
-    <tr>
-       <td>[NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview)</td>
-       <td>La oferta NetApp ONTAP Select le permite desplegar un clúster de almacenamiento definido por software que se ajusta a sus necesidades de un dispositivo de almacenamiento dedicado y altamente disponible basado en NetApp ONTAP Select.</td>
-    </tr>
-  </table>
+| Oferta de despliegue | Descripción |
+|:------------------- |:----------- |
+| [VMware vCenter Server on IBM Cloud](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview) | Con la oferta de vCenter Server, puede desplegar un entorno virtual de VMware utilizando recursos de cálculo, almacenamiento y red personalizados para que se adapten mejor a sus necesidades empresariales.
+| [VMware vCenter Server on IBM Cloud con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview) | La oferta de vCenter Server con el paquete híbrido (Hybridity) es una nube privada alojada que permite ampliar la infraestructura local a la nube de forma rápida y sencilla. El entorno VMware se basa en licencias de centro de datos definido por software de VMware proporcionadas por IBM e incluye VMware Hybrid Cloud Extension (HCX). Mediante el uso de HCX, puede conectarse de forma segura a un entorno vSphere 5.0+ local con sitios de {{site.data.keyword.cloud_notm}} para ofrecer una infraestructura híbrida y una auténtica movilidad de aplicaciones.
+| [VMware vSphere on IBM Cloud](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview) | La oferta de vSphere on {{site.data.keyword.cloud_notm}} proporciona un servicio de virtualización personalizable que combina {{site.data.keyword.baremetal_short}} compatibles con VMware, componentes de hardware y licencias para crear su propio entorno VMware alojado por IBM. |
+| [NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview) | La oferta NetApp ONTAP Select le permite desplegar un clúster de almacenamiento definido por software que se ajusta a sus necesidades de un dispositivo de almacenamiento dedicado y altamente disponible basado en NetApp ONTAP Select. |
+{: caption="Tabla 2. Ofertas de despliegue" caption-side="top"}
 
 ### Servicios complementarios
 {: #getting-started-add-on-services}
 
 Revise y elija los servicios de complemento para la oferta de despliegue.
 
-  Tabla 3. Servicios de complementos disponibles para las ofertas de despliegue
-  <table>
-    <tr>
-       <th>Nombre de servicio</th>
-       <th>Descripción</th>
-    </tr>
-    <tr>
-       <td>[F5 on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations)</td>
-       <td>El servicio F5 on {{site.data.keyword.cloud_notm}} (F5 BIG-IP® Virtual Edition) proporciona servicios de equilibrio inteligente de carga L4-L7 y de gestión del tráfico a escala local y global, potentes funciones de protección de red y de cortafuegos de aplicaciones web y acceso seguro y federado a las aplicaciones.</td>
-    </tr>
-    <tr>
-       <td>[FortiGate Security Appliance on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations)</td>
-       <td>El servicio FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} despliega un par de dispositivos FortiGate Security Appliance (FSA) serie 300 en modalidad altamente disponible para ofrecer servicios de cortafuegos, direccionamiento, NAT y VPN para proteger todos los servidores y máquinas virtuales de la VLAN pública de sus instancias.</td>
-    </tr>
-    <tr>
-       <td>[FortiGate Virtual Appliance on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations)</td>
-       <td>El servicio FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} despliega un par de dispositivos FortiGate Virtual Appliance en el entorno, lo que puede ayudar a reducir el riesgo implementando controles de seguridad críticos dentro de su infraestructura virtual.</td>
-    </tr>
-    <tr>
-       <td>[HyTrust CloudControl on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htcc_considerations)</td>
-       <td>El servicio HyTrust CloudControl on {{site.data.keyword.cloud_notm}} aplica y controla el cumplimiento de las normas de seguridad y proporciona funciones detalladas de control de acceso basado en roles (RBAC), aprobación y auditoría. Cuando se combina con HyTrust DataControl, el servicio puede asegurarse de que los datos de las cargas de trabajo y las máquinas virtuales no abandonen una región, un clúster o un servidor ESXi determinados en el {{site.data.keyword.CloudDataCent_notm}}.</td>
-    </tr>
-    <tr>
-       <td>[HyTrust DataControl on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htdc_considerations)</td>
-       <td>El servicio HyTrust DataControl on {{site.data.keyword.cloud_notm}} ofrece un cifrado de alta seguridad con claves de gestión integrada para proteger las cargas de trabajo en todo su ciclo de vida. El servicio puede proporcionar cifrado tanto a nivel de sistema operativo como a nivel de datos, lo que significa que se puede cifrar y descifrar cualquier directorio, carpeta o archivo de una carga de trabajo.</td>
-    </tr>
-    <tr>
-       <td>[HyTrust KeyControl on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htkc_considerations)</td>
-       <td>El servicio HyTrust KeyControl on {{site.data.keyword.cloud_notm}} simplifica la gestión de las cargas de trabajo cifradas automatizando y simplificando el ciclo de vida de las claves de cifrado. El servicio puede gestionar fácilmente las claves de cifrado a escala utilizando el cifrado compatible con FIPS 140-2.</td>
-    </tr>
-    <tr>
-       <td>[IBM Cloud Private Hosted](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_overview)</td>
-       <td>{{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} incorpora la potencia de los microservicios y contenedores al entorno VMware en {{site.data.keyword.cloud_notm}}. Con este servicio, puede ampliar el mismo modelo operativo VMware e {{site.data.keyword.cloud_notm}} privado con el que está familiarizado y las herramientas del entorno local en {{site.data.keyword.cloud_notm}}.</td>
-    </tr>
-    <tr>
-       <td>[IBM Spectrum Protect Plus on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-spp_considerations)</td>
-       <td>El servicio IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} proporciona una solución eficiente y escalable para la protección de datos, la reutilización de datos y la recuperación de datos para entornos virtuales. Puede implementar el servicio como una solución autónoma o integrarlo con su entorno IBM Spectrum Protect para descargar copias para su almacenamiento y gestión de datos a largo plazo.</td>
-    </tr>
-    <tr>
-       <td>[KMIP for VMware on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations)</td>
-       <td>El servicio KMIP for VMware on {{site.data.keyword.cloud_notm}} ofrece un servicio altamente disponible para gestionar las claves de cifrado que utiliza VMware en {{site.data.keyword.cloud_notm}}. Este servicio ofrece capacidad de tiempo de ejecución que permite a los clientes crear, recuperar, activar, revocar y destruir las claves de cifrado. También proporciona capacidad de gestión para mantener las asociaciones entre las credenciales del cliente y las claves de cifrado.</td>
-    </tr>
-    <tr>
-       <td>[Veeam on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)</td>
-       <td>El servicio Veeam on {{site.data.keyword.cloud_notm}} se puede integrar de forma fácil y directa con sus hipervisores VMware para ayudar a la empresa a alcanzar un alto grado de disponibilidad. Este servicio puede proporcionar objetivos de puntos de recuperación y de tiempo para sus datos y aplicaciones. Los objetivos de puntos de recuperación y de tiempo se pueden proporcionar menos de 15 minutos después de finalizar la configuración. Con este servicio, puede controlar directamente las copias de seguridad y las operaciones de restauración de todas las máquinas virtuales de la infraestructura desde la consola de Veeam.</td>
-    </tr>
-    <tr>
-       <td>[VMware HCX on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_considerations#hcx_considerations)</td>
-       <td>El servicio HCX on {{site.data.keyword.cloud_notm}} permite ampliar fácilmente las redes de centros de datos locales en {{site.data.keyword.cloud_notm}}, lo que permite migrar las máquinas virtuales (VM) de {{site.data.keyword.cloud_notm}} y al mismo sin realizar ninguna conversión ni cambio.</td>
-    </tr>
-    <tr>
-       <td>[Zerto on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)</td>
-       <td>El servicio Zerto on {{site.data.keyword.cloud_notm}} ofrece funciones de réplica y de recuperación tras desastre, que se pueden integrar en las ofertas de despliegue para proteger y recuperar los datos del entorno virtual VMware en {{site.data.keyword.cloud_notm}}.</td>
-    </tr>
-   </table>
+| Nombre de servicio | Descripción |
+|:------------ |:----------- |
+| [F5 on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations) | El servicio F5 on {{site.data.keyword.cloud_notm}} (F5 BIG-IP® Virtual Edition) proporciona servicios de equilibrio inteligente de carga L4-L7 y de gestión del tráfico a escala local y global, potentes funciones de protección de red y de cortafuegos de aplicaciones web y acceso seguro y federado a las aplicaciones. |
+| [FortiGate Security Appliance on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations) | El servicio FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} despliega un par de dispositivos FortiGate Security Appliance (FSA) serie 300 en modalidad altamente disponible para ofrecer servicios de cortafuegos, direccionamiento, NAT y VPN para proteger todos los servidores y máquinas virtuales de la VLAN pública de sus instancias. |
+| [FortiGate Virtual Appliance on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations) | El servicio FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} despliega un par de dispositivos FortiGate Virtual Appliance en el entorno, lo que puede ayudar a reducir el riesgo implementando controles de seguridad críticos dentro de su infraestructura virtual. |
+| [HyTrust CloudControl on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htcc_considerations) | El servicio HyTrust CloudControl on {{site.data.keyword.cloud_notm}} aplica y controla el cumplimiento de las normas de seguridad y proporciona funciones detalladas de control de acceso basado en roles (RBAC), aprobación y auditoría. Cuando se combina con HyTrust DataControl, el servicio puede asegurarse de que los datos de las cargas de trabajo y las máquinas virtuales no abandonen una región, un clúster o un servidor ESXi determinados en el {{site.data.keyword.CloudDataCent_notm}}. |
+| [HyTrust DataControl on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htdc_considerations) | El servicio HyTrust DataControl on {{site.data.keyword.cloud_notm}} ofrece un cifrado de alta seguridad con claves de gestión integrada para proteger las cargas de trabajo en todo su ciclo de vida. El servicio puede proporcionar cifrado tanto a nivel de sistema operativo como a nivel de datos, lo que significa que se puede cifrar y descifrar cualquier directorio, carpeta o archivo de una carga de trabajo.|
+| [HyTrust KeyControl on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htkc_considerations) | El servicio HyTrust KeyControl on {{site.data.keyword.cloud_notm}} simplifica la gestión de las cargas de trabajo cifradas automatizando y simplificando el ciclo de vida de las claves de cifrado. El servicio puede gestionar fácilmente las claves de cifrado a escala utilizando el cifrado compatible con FIPS 140-2. |
+| [IBM Cloud Private Hosted](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_overview) | {{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} incorpora la potencia de los microservicios y contenedores al entorno VMware en {{site.data.keyword.cloud_notm}}. Con este servicio, puede ampliar el mismo modelo operativo VMware e {{site.data.keyword.cloud_notm}} privado con el que está familiarizado y las herramientas del entorno local en {{site.data.keyword.cloud_notm}}. |
+| [IBM Spectrum Protect Plus on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-spp_considerations) | El servicio IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} proporciona una solución eficiente y escalable para la protección de datos, la reutilización de datos y la recuperación de datos para entornos virtuales. Puede implementar el servicio como una solución autónoma o integrarlo con su entorno IBM Spectrum Protect para descargar copias para su almacenamiento y gestión de datos a largo plazo. |
+| [KMIP for VMware on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations) | El servicio KMIP for VMware on {{site.data.keyword.cloud_notm}} ofrece un servicio altamente disponible para gestionar las claves de cifrado que utiliza VMware en {{site.data.keyword.cloud_notm}}. Este servicio ofrece capacidad de tiempo de ejecución que permite a los clientes crear, recuperar, activar, revocar y destruir las claves de cifrado. También proporciona capacidad de gestión para mantener las asociaciones entre las credenciales del cliente y las claves de cifrado. |
+| [Veeam on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations) | El servicio Veeam on {{site.data.keyword.cloud_notm}} se puede integrar de forma fácil y directa con sus hipervisores VMware para ayudar a la empresa a alcanzar un alto grado de disponibilidad. Este servicio puede proporcionar objetivos de puntos de recuperación y de tiempo para sus datos y aplicaciones. Los objetivos de puntos de recuperación y de tiempo se pueden proporcionar menos de 15 minutos después de finalizar la configuración. Con este servicio, puede controlar directamente las copias de seguridad y las operaciones de restauración de todas las máquinas virtuales de la infraestructura desde la consola de Veeam. |
+| [VMware HCX on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_considerations#hcx_considerations) | El servicio HCX on {{site.data.keyword.cloud_notm}} permite ampliar fácilmente las redes de centros de datos locales en {{site.data.keyword.cloud_notm}}, lo que permite migrar las máquinas virtuales (VM) de {{site.data.keyword.cloud_notm}} y al mismo sin realizar ninguna conversión ni cambio.|
+| [Zerto on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr) | El servicio Zerto on {{site.data.keyword.cloud_notm}} ofrece funciones de réplica y de recuperación tras desastre, que se pueden integrar en las ofertas de despliegue para proteger y recuperar los datos del entorno virtual VMware en {{site.data.keyword.cloud_notm}}. |
+{: caption="Tabla 3. Servicios de complementos disponibles para las ofertas de despliegue" caption-side="top"}
 
 ## Paso 1: Acceso a la consola de IBM Cloud for VMware Solutions
 {: #getting-started-step1}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-06-27"
 
 subcollection: vmware-solutions
 
@@ -118,7 +118,7 @@ subcollection: vmware-solutions
   -	IBM PowerVC FlexVolume Driver（开放式源代码，受 PowerVC 产品支持）
   - 带有 Heketi 生命周期管理功能的 GlusterFS 存储集群（开放式源代码）
   -	容器存储接口 (CSI) 样本 NFS
-  -	驱动程序（开放式源代码）
+  -	Driver（开放式源代码）
   -	Rook Ceph 集群（开放式源代码）
 
 * 工具
@@ -156,8 +156,7 @@ type=NFS
 server = nfs.server.ip.address
 path = /shared/db2trader1`
 
-在目录用户界面中，搜索“Db2”，然后单击 ibm-db2oldp-dev。
-查看该自述文件，然后单击“配置”。
+在目录用户界面中，搜索“Db2”，然后单击 ibm-db2oldp-dev。查看该自述文件，然后单击“配置”。
 
 在“配置”部分中，有“快速入门”部分和“所有参数”部分。打开“所有参数”，因为 Todd 需要输入更多配置：
 
@@ -223,7 +222,7 @@ App password = LEAVE BLANK`
 -	添加了管道（Jane 使用的是 Jenkins）
 -	使用 Maven 进行构建
 
-下面是 Jane 的[代码存储库](https://github.com/IBMStockTrader/)以及 Jenkins 文件、server.xml 等的示例。这些就绪后，Jane 即可以通过私钥自由地对额外功能进行编码，以访问 ODM 和 Watson 等服务，同时将更多微服务作为 GitHub 中的单个存储库。
+以下示例显示了 Jane 的[代码存储库](https://github.com/IBMStockTrader/)以及 Jenkins 文件、server.xml 等。这些就绪后，Jane 即可以通过私钥自由地对额外功能进行编码，以访问 ODM 和 Watson 等服务，同时将更多微服务作为 GitHub 中的单个存储库。
 
 ### 添加私钥
 {: #vcscontent-addmidware-add-secrets}

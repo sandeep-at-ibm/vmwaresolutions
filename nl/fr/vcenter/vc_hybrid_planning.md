@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-31"
+lastupdated: "2019-06-28"
 
 keywords: planning vCenter Server Hybridity, data center hybridity, vCenter Server Hybridity
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # Exigences et planification pour les instances vCenter Server with Hybridity Bundle
 {: #vc_hybrid_planning}
@@ -27,8 +29,6 @@ Le compte {{site.data.keyword.cloud_notm}} que vous utilisez doit répondre à c
 {: #vc_hybrid_planning-dc-availability}
 
 Le déploiement vCenter Server with Hybridity Bundle a des exigences strictes quant à l'infrastructure physique. Par conséquent, vous ne pouvez déployer des instances que dans des {{site.data.keyword.CloudDataCents_notm}} qui répondent à ces exigences. Les {{site.data.keyword.CloudDataCents_notm}} suivants sont disponibles pour le déploiement vCenter Server with Hybridity Bundle :
-
-Tableau 1. {{site.data.keyword.CloudDataCents_notm}} disponibles pour les instances vCenter Server with Hybridity Bundle
 
 | {{site.data.keyword.CloudDataCent_notm}} | Emplacement | Région |
 |:----------------------|:---------|:---------------|
@@ -65,16 +65,16 @@ Tableau 1. {{site.data.keyword.CloudDataCents_notm}} disponibles pour les instan
 | WDC04 | Washington, DC | Est des Etats-Unis |
 | WDC06 | Washington, DC | Est des Etats-Unis |
 | WDC07 | Washington, DC | Est des Etats-Unis |
+{: caption="Tableau 1. {{site.data.keyword.CloudDataCents_notm}} disponibles pour les instances vCenter Server with Hybridity Bundle" caption-side="top"}
 
 Selon la disponibilité et l'approvisionnement du stock, les {{site.data.keyword.CloudDataCents_notm}} peuvent afficher un indicateur de statut sur la console {{site.data.keyword.vmwaresolutions_short}} pour vous aider à planifier vos déploiements.
-
-Tableau 2. Indicateurs de statut pour les {{site.data.keyword.CloudDataCents_notm}} lors de la commande d'instances Center Server with Hybridity Bundle
 
 | Statut | Détails du statut |
 |:------------------------------|:--------------------------------------------------|
 | Coming Soon                   | L'{{site.data.keyword.CloudDataCent_notm}} n'est pas disponible actuellement. |
 | Temporarily Out of Inventory  | L'{{site.data.keyword.CloudDataCent_notm}} n'est pas disponible actuellement. |
 | Limited Inventory             | L'{{site.data.keyword.CloudDataCent_notm}} a une disponibilité limitée et la commande risque de ne pas être honorée. |
+{: caption="Tableau 2. Indicateurs de statut pour les {{site.data.keyword.CloudDataCents_notm}} lors de la commande d'instances Center Server with Hybridity Bundle" caption-side="top"}
 
 ## Sauvegarde des composants de gestion
 {: #vc_hybrid_planning-backup-mgmt-components}
@@ -95,7 +95,7 @@ Lorsque vous déployez ce service, définissez les paramètres suivants :
   * **Clé privée** : entrez la clé privée du certificat de l'autorité de certification.
   * (Facultatif) **Mot de passe** : entrez le mot de passe de la clé privée si elle est chiffrée.
   * (Facultatif) **Confirmer le mot de passe** : entrez de nouveau le mot de passe de la clé privée.
-  * (Facultatif) **Nom d'hôte** : entrez le nom d'hôte à mapper au nom usuel du certificat de l'autorité de certification. HCX on {{site.data.keyword.cloud_notm}} exige que le certificat de l'autorité de certification soit dans un format accepté par NSX Edge. Pour plus d'informations sur les formats de certificat NSX Edge, voir [Importation de certificats SSL](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html).
+  * (Facultatif) **Nom d'hôte** : entrez le nom d'hôte à mapper au nom usuel du certificat de l'autorité de certification. HCX on {{site.data.keyword.cloud_notm}} exige que le certificat de l'autorité de certification soit dans un format accepté par NSX Edge. Pour plus d'informations sur les formats de certificat NSX Edge, voir [Importation de certificats SSL](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html){:external}.
 
 Vous pouvez commander d'autres services complémentaires pour votre instance en fonction de vos besoins, par exemple, la reprise après incident. Pour plus d'informations, voir [Commande, affichage et retrait de services pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices).
 

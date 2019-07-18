@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-07-01"
 
 keywords: release notes, what's new, version 3.1
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -21,7 +22,7 @@ subcollection: vmware-solutions
 # 3.1 版的版本注意事項
 {: #relnotes_v31}
 
-此版本包括新增特性、元件更新、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之提示的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
+此版本包括新增特性、元件更新、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之提示的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:external}。
 
 ## Data Protection and Disaster Recovery 單一節點試用版實例
 {: #relnotes_v31-dr-bundle}
@@ -78,6 +79,11 @@ subcollection: vmware-solutions
 ## 附加服務的更新
 {: #relnotes_v31-services}
 
+### Caveonix RiskForesight on IBM Cloud
+{: #relnotes_v31-services-caveonix}
+
+現行版本會將 Caveonix RiskForesight 2.2.1 安裝在所有新部署的實例。如需 Caveonix RiskForesight 的相關資訊，請參閱 [Caveonix 網站](https://www.caveonix.com/){:external}。
+
 ### HyTrust 授權的自動更新
 {: #relnotes_v31-services-ht}
 
@@ -113,7 +119,7 @@ subcollection: vmware-solutions
 
 * 已更新 Activity Tracker 實例管理事件和 KMIP for VMware on IBM Cloud 服務的事件。如需相關資訊，請參閱 [Activity Tracker 事件](/docs/services/vmwaresolutions?topic=vmware-solutions-at-events)。
 * 使用者 ID 參考文件藉由 {{site.data.keyword.cloud_notm}} 服務自動化，以用於安裝和配置服務的使用者 ID 進行更新。如需相關資訊，請參閱 [IBM 使用者 ID](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_user_ids) 中的*服務使用者 ID* 區段。
-* 為新的 API ``擷取叢集的詳細網路介面``提供了參考文件。如需相關資訊，請參閱 [API 參考資料](https://cloud.ibm.com/apidocs/vmware-solutions){:new_window}。
+* 為新的 API ``擷取叢集的詳細網路介面``提供了參考文件。如需相關資訊，請參閱 [API 參考資料](https://cloud.ibm.com/apidocs/vmware-solutions){:external}。
 * 下列技術文件是使用者說明文件的*參照*小節中的新增內容：
   * [作業管理](/docs/services/vmwaresolutions?topic=vmware-solutions-opsmgmt-intro)
   * [第 2 天操作程序](/docs/services/vmwaresolutions?topic=vmware-solutions-opsprocs-intro)

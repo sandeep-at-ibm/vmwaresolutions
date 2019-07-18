@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-07"
+lastupdated: "2019-07-01"
 
 ---
 
@@ -129,7 +129,7 @@ vSphere 包含用户可配置的事件和警报子系统，用于跟踪在整个
 |标题|描述|
 |---|---|
 |NSX Edge 的 /var/log 在活动 Edge 上将满|如果获得警报称 Edge 磁盘将满，并发现 /var/log 分区将满，请参阅 [NSX Edge /var/log is getting full on active Edge (50108355)](https://kb.vmware.com/s/article/50108355){:new_window}，以获取针对此情况的变通方法的信息。|
-|测试 HCX 带宽|有关使用 `perftest` 来查找 HCX 隧道内可用带宽（如果您认为 HCX 有网络带宽问题）的信息，请参阅 [Steps to Run Perftest in HCX (56211)](https://kb.vmware.com/s/article/56211?lang=en_US){:new_window}。对每个 `perftest` 都会执行双向测试。对于网关对，一个网关位于称为 OnPrem 的源数据中心内，另一个位于 {{site.data.keyword.cloud_notm}} 中。对吞吐量执行 `perftest` 的工作方式是让发送方尝试以链路可维持的最快速度执行发送。因此，对于每个测试，都会看到“发送方”速率高于“接收方”速率。您可以将“接收方”速率值视为单向吞吐量结果。 |
+|测试 HCX 带宽|有关使用 `perftest` 来查找 HCX 隧道内可用带宽（如果您认为 HCX 有网络带宽问题）的信息，请参阅 [Steps to Run Perftest in HCX (56211)](https://kb.vmware.com/s/article/56211?lang=en_US){:new_window}。对每个 `perftest` 都会执行双向测试。对于网关对，一个网关位于称为 OnPrem 的源数据中心内，另一个位于 {{site.data.keyword.cloud_notm}} 中。对吞吐量执行 `perftest` 的工作方式是让发送方尝试以链路可维持的最快速度执行发送。因此，对于每个测试，都会看到“发送方”速率高于“接收方”速率。您可以将“接收方”速率值视为单向吞吐量结果。|
 |HCX 故障诊断|有关更多信息，请参阅 [HCX 故障诊断](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-troubleshooting)。|
 |HCX 同步状态的进度为 0% ，字节数为 0，并且状态为“错误”|有关更多信息，请参阅 [HCX replication are in Syncing state with 0% progress and 0 bytes with status Error (56710)](https://kb.vmware.com/s/article/56710?lang=en_US#q=HCX){:new_window}。|
 |VM 网络性能不佳|复查 VM 虚拟 NIC 设置。VMware 建议对 VM 使用 VMXNET 3 虚拟 NIC，因为这是为实现高性能而设计的最新一代半虚拟化 NIC。使用 VMware 兼容性列表来检查 VMXNET 3 的兼容性，如果支持，请更改虚拟 NIC 以获取额外的网络性能。有关更多信息，请参阅[网络故障排除](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.networking.doc/GUID-217384C2-B361-471D-90C8-BC2676A0ECA6.html){:new_window}。|

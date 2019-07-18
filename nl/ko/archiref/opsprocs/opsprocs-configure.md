@@ -11,7 +11,7 @@ lastupdated: "2019-06-07"
 # 구성 태스크
 {: #opsprocs-configure}
 
-vCenter Server 인스턴스가 프로비저닝된 후 시스템 관리자가 엔터프라이즈의 요구로 초기 환경을 사용자 조정하도록 실행하고 향후 서비스 요구사항에 응답해야 할 수 있는 많은 구성 태스크가 있습니다. 
+vCenter Server 인스턴스가 프로비저닝된 후 시스템 관리자가 엔터프라이즈의 요구로 초기 환경을 사용자 조정하도록 실행하고 향후 서비스 요구사항에 응답해야 할 수 있는 많은 구성 태스크가 있습니다.
 
 구성 태스크는 다음과 같습니다.
 
@@ -143,7 +143,7 @@ vCenter Server 인스턴스가 프로비저닝된 후 시스템 관리자가 엔
 | 웹 프록시 배치 |	VMware Server 인스턴스가 배치되면 vCenter Server Appliance(VCSA)에는 vSAN 상태 검사의 업데이트를 사용으로 설정할 수 있도록 하는 VMware 저장소에 대한 직접적인 액세스 권한이 제공되지 않습니다. 이 저장소에 대한 액세스를 허용하기 위한 Squid 웹 프록시 배치에 대한 정보는 [초기 구성](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-init-config#vum-init-config-install-cfg-squid)을 참조하십시오. 이 프로시저는 다른 공급업체의 기타 프록시 애플리케이션과도 관련이 있습니다. |
 | 방화벽 로깅 | NSX Edge 및 분산 방화벽은 감사 로그, 규칙 메시지 로그 및 시스템 이벤트 로그와 같은 로그 파일을 생성하고 저장합니다. 방화벽을 사용으로 설정한 각 클러스터마다 Syslog 서버를 구성해야 합니다. 자세한 정보는 [방화벽 로그](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.admin.doc/GUID-6F9DC53E-222D-464B-8613-AB2D517CE5E3.html){:new_window}를 참조하십시오. Operations Management in {{site.data.keyword.cloud_notm}}에는 Syslog 서버의 역할을 수행하는 vRealize Log Insights가 포함됩니다. |
 | NSX 로깅 및 시스템 이벤트 |NSX 컴포넌트의 Syslog 서버 구성에 대한 정보 및 시스템 이벤트, 알람, 감사 로그 및 기술 지원 로그 수집에 대한 정보는 [NSX 로깅 및 시스템 이벤트](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.logging.doc/GUID-3F08DC2E-2D82-4C89-8829-EF1EA0160B13.html){:new_window}를 참조하십시오. |
-| HCX 온프레미스 배치| 자세한 정보는 [온프레미스 VMware HCX on IBM Cloud 인스턴스에 대한 고려사항](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_considerations#standalone_considerations){:new_window}을 참조하십시오. |
+| HCX 온프레미스 배치 | 자세한 정보는 [온프레미스 VMware HCX on IBM Cloud 인스턴스에 대한 고려사항](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_considerations#standalone_considerations){:new_window}을 참조하십시오. |
 | HCX 검사 | HCX on {{site.data.keyword.cloud_notm}} 서비스는 온프레미스 데이터 센터의 네트워크를 {{site.data.keyword.cloud_notm}}로 원활하게 확장하며, 이를 통해 변환이나 변경 없이 {{site.data.keyword.cloud_notm}} 간에 VM을 마이그레이션할 수 있습니다. HCX Cloud Management 콘솔 액세스 및 HCX on {{site.data.keyword.cloud_notm}}에 업데이트 적용에 대한 자세한 정보는 [VMware HCX on IBM Cloud 관리](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghcx#managing-vmware-hcx-on-ibm-cloud)를 참조하십시오. |
 
 

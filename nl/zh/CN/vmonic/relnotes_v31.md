@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-07-01"
 
 keywords: release notes, what's new, version 3.1
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -21,7 +22,7 @@ subcollection: vmware-solutions
 # V3.1 发行说明
 {: #relnotes_v31}
 
-此发行版包含新增功能、组件更新、易用性增强功能和错误修订。有关不同发行版中的已修复问题、产品已知问题以及使用 {{site.data.keyword.vmwaresolutions_full}} 的提示的列表，请参阅 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
+此发行版包含新增功能、组件更新、易用性增强功能和错误修订。有关不同发行版中的已修复问题、产品已知问题以及使用 {{site.data.keyword.vmwaresolutions_full}} 的提示的列表，请参阅 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:external}。
 
 ## Data Protection and Disaster Recovery 单节点试用版实例
 {: #relnotes_v31-dr-bundle}
@@ -78,6 +79,11 @@ subcollection: vmware-solutions
 ## 对附加组件服务的更新
 {: #relnotes_v31-services}
 
+### Caveonix RiskForesight on IBM Cloud
+{: #relnotes_v31-services-caveonix}
+
+当前发行版在所有新部署的实例上安装 Caveonix RiskForesight 2.2.1。有关 Caveonix RiskForesight 的更多信息，请参阅 [Caveonix Web 站点](https://www.caveonix.com/){:external}。
+
 ### HyTrust 许可证的自动更新
 {: #relnotes_v31-services-ht}
 
@@ -113,7 +119,7 @@ subcollection: vmware-solutions
 
 * 更新了 Activity Tracker 实例管理事件和 KMIP for VMware on IBM Cloud 服务的事件。有关更多信息，请参阅 [Activity Tracker 事件](/docs/services/vmwaresolutions?topic=vmware-solutions-at-events)。
 * 用户标识参考文档通过 {{site.data.keyword.cloud_notm}} 服务自动化使用用于安装和配置服务的用户标识进行了更新。有关更多信息，请参阅 [IBM 用户标识](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_user_ids)中的*服务用户标识*部分。
-* 为新的 API ``检索集群的详细网络接口``提供了参考文档。有关更多信息，请参阅 [API 参考](https://cloud.ibm.com/apidocs/vmware-solutions){:new_window}。
+* 为新的 API ``检索集群的详细网络接口``提供了参考文档。有关更多信息，请参阅 [API 参考](https://cloud.ibm.com/apidocs/vmware-solutions){:external}。
 * 以下技术文档是用户文档的*参考*部分中的新增内容：
   * [操作管理](/docs/services/vmwaresolutions?topic=vmware-solutions-opsmgmt-intro)
   * [第 2 天操作过程](/docs/services/vmwaresolutions?topic=vmware-solutions-opsprocs-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-06-28"
 
 keywords: view vCenter Server Hybridity, view instance, view instance details
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -30,8 +31,6 @@ subcollection: vmware-solutions
 2. 在控制台条幅中，单击您的用户帐户图标，然后单击**帐户**字段以选择要检查其实例的用户帐户。
 3. 在 **vCenter Server 实例**表中，查看所选用户帐户中供应的实例的列表。
 
-表 1. vCenter Server with Hybridity Bundle 实例项
-
 |项|描述|  
 |:------------- |:------------- |
 |名称|实例的名称|
@@ -39,11 +38,10 @@ subcollection: vmware-solutions
 |版本|实例部署或升级到的发行版版本|  
 |位置|托管实例的 {{site.data.keyword.CloudDataCent_notm}}|  
 |创建时间|创建实例的日期和时间|  
-|状态|实例的状态|  
+|状态|实例的状态|
+{: caption="表 1. vCenter Server with Hybridity Bundle 实例项" caption-side="top"}
 
 实例可以有一系列状态。
-
-表 2. vCenter Server with Hybridity Bundle 实例状态描述
 
 |状态|描述|
 |:------------- |:------------- |
@@ -55,6 +53,7 @@ subcollection: vmware-solutions
 |正在删除|正在删除实例。|
 |删除错误|删除实例时发生错误。|
 |已删除|实例已删除。|
+{: caption="表 2. vCenter Server with Hybridity Bundle 实例状态描述" caption-side="top"}
 
 ## 查看 vCenter Server with Hybridity Bundle 实例属性详细信息的过程
 {: #vc_hybrid_viewinginstances-procedure-view-inst-property}
@@ -62,8 +61,6 @@ subcollection: vmware-solutions
 要查看 vCenter Server with Hybridity Bundle 实例的属性详细信息，请执行以下操作：
 1. 在 **vCenter Server 实例**表中，单击实例名称。
 2. 在**属性**下，查看实例的详细信息。
-
-表 3. vCenter Server with Hybridity Bundle 实例属性
 
 |属性|描述|
 |:------------- |:------------- |
@@ -79,13 +76,12 @@ subcollection: vmware-solutions
 |DNS - 子域|子域是本地 vCenter Server with Hybridity Bundle 实例主机名所在的根域名的 DNS 子域名。子域名的格式为 <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp>。|
 |Hybridity Bundle|指示是否安装了 vCenter Server with Hybridity Bundle。|
 |状态|实例的状态。<br><br>显示的信息提供有关部署进度或对实例所执行操作的更新。如果存在问题，那么可能会显示一条消息以帮助您调查和解决问题。|
+{: caption="表 3. vCenter Server with Hybridity Bundle 实例属性" caption-side="top"}
 
 ## 查看 vCenter Server with Hybridity Bundle 实例的访问信息的过程
 {: #vc_hybrid_viewinginstances-procedure-view-access-info}
 
 在**访问信息**下，查看与实例相关的组件的访问信息。显示的密码是系统生成的初始密码。如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部对这些信息进行更改，那么不会在实例摘要页面上更新这些信息。
-
-表 4. 与实例相关的组件的 vCenter Server with Hybridity Bundle 访问信息
 
 |组件|描述|
 |:------------- |:------------- |
@@ -99,18 +95,18 @@ subcollection: vmware-solutions
 |vCenter FQDN|vCenter Server 标准域名 (FQDN)。|
 |vCenter ADMIN|可用于通过 vSphere Web Client 登录到 vCenter Server 的 VMware vCenter Single Sign-On 用户名和密码。|
 |vCenter SSH|可用于通过 SSH 连接访问 vCenter Server VM 的用户名和密码。|
+{: caption="表 4. 与实例相关的组件的 vCenter Server with Hybridity Bundle 访问信息" caption-side="top"}
 
 ## 查看 vCenter Server with Hybridity Bundle 实例的部署历史记录的过程
 {: #vc_hybrid_viewinginstances-procedure-view-deploy-history}
 
 单击左侧导航窗格中的**部署历史记录**，以查看实例的部署历史记录。
 
-表 5. vCenter Server with Hybridity Bundle 实例部署历史记录
-
 |项|描述|  
 |:------------- |:------------- |
 |日期|更改实例状态的日期和时间|
 |摘要|更改的详细信息|
+{: caption="表 5. vCenter Server with Hybridity Bundle 实例部署历史记录" caption-side="top"}
 
 ## 发生错误时要执行的操作
 {: #vc_hybrid_viewinginstances-if-errors-occur}
@@ -127,7 +123,7 @@ subcollection: vmware-solutions
 
 查看以下主题，以获取有关帮助您完成登录指示信息的信息：
 *  有关访问 vSphere Web Client 之前的需求和必需步骤，请参阅[连接到 vSphere Web Client 时发生超时](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_timeout_vc_console)。
-*  有关使用 VPN 登录到 {{site.data.keyword.cloud_notm}} 基础架构专用网络的访问点的列表，请参阅 [VPN 访问](http://www.softlayer.com/vpn-access){:new_window}。
+*  有关使用 VPN 登录到 {{site.data.keyword.cloud_notm}} 基础架构专用网络的访问点的列表，请参阅 [VPN 访问](http://www.softlayer.com/vpn-access){:external}。
 *  如果使用 vSphere Web Client 部署 OVF（开放式虚拟化格式）文件时发生问题，请参阅[使用 vSphere Web Client 部署 OVF 文件](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_deploy_ovf)。
 
 ## 相关链接

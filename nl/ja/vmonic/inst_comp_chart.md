@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-20"
 
 keywords: vmware offering, vmware solutions functions, function support
 
@@ -17,8 +17,6 @@ subcollection: vmware-solutions
 {: #inst_comp_chart}
 
 次の表で、VMware vCenter Server インスタンス、VMware vCenter Server with Hybridity Bundle インスタンス、VMware vSphere クラスターの機能サポートの違いを確認してください。
-
-表 1.vCenter Server、vCenter Server with Hybridity Bundle、vSphere クラスターでサポートされる機能
 
 | 機能 | vCenter Server | vCenter Server with Hybridity | VMware vSphere |
 |:--- |:--- |:--- |:--- |
@@ -38,6 +36,7 @@ subcollection: vmware-solutions
 | NSX ライセンス・アップグレード・オプション | NSX Base から Advanced または Enterprise へのアップグレード、NSX Advanced から Enterprise へのアップグレードが可能。 vCenter Server with Hybridity Bundle へのアップグレードが可能。 | NSX Advanced から Enterprise へのアップグレードが可能  | なし |
 | vSAN ライセンス・エディション | vSAN Advanced または Enterprise | vSAN Advanced または Enterprise | vSAN Advanced または Enterprise  |
 | アドオン・サービス | HCX on {{site.data.keyword.cloud_notm}} 以外サポートあり。 vCenter Server with Hybridity Bundle へのアップグレードが可能。 | HCX on {{site.data.keyword.cloud_notm}} を含めてサポートあり。 | このソリューションの自動化によってはサポートされませんが、独自のソフトウェアを持ち込んでインストールできます。 |
+{: caption="表 1.vCenter Server、vCenter Server with Hybridity Bundle、vSphere クラスターでサポートされる機能" caption-side="top"}
 
 ## メモ
 {: #inst_comp_chart-notes}

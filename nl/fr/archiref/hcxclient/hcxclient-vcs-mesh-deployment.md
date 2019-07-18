@@ -4,60 +4,53 @@ copyright:
 
   years:  2019, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-06-28"
 
 subcollection: vmware-solutions
 
 
 ---
 
-# Maillage de services sur site HCX 
+# Maillage de services sur site HCX
 {: #hcxclient-vcs-mesh-deployment}
 
-La section suivante détaille les étapes de configuration de l'instance du client HCX. 
-  1. Appariement de sites IBM Cloud for VMware Solutions Environment 
-  2. Création de profils de réseau sur site HCX 
-  3. Création de profils de calcul sur site HCX 
-  4. Création de maillage de services HCX 
-  5. Extension de réseaux
+Passez en revue les étapes suivantes pour configurer l'instance du client HCX :
 
-## Appariement de sites IBM Cloud for VMware Solutions Environment 
+## Appariement de sites IBM Cloud for VMware Solutions Environment
 {: #hcxclient-vcs-mesh-deployment-sitepair}
 
-1. Connectez-vous à vSphere Web Client
+1. Connectez-vous à VMware vSphere Web Client.
 2. Dans le menu **Home**, sélectionnez l'option **HCX**.
-3. Sous **Infrastructure** -> **InterConnect**, cliquez sur **Add Site Pairing**
-   1. URL du site : HCX Cloud Manager URL
-     * par exemple, `https://x.x.x.x.x`
-   2. UserName et Password : HCX Manager Admin Details
-     * admin / password
-   3. Les informations précédentes peuvent être obtenues à partir d'IBM Cloud Portal, sous **Services**, HCX on IBM Cloud** pour l'instance de solution IBM Cloud for VMware.
-4. Cliquez sur **Connect**
+3. Sous **Infrastructure**, **InterConnect**, cliquez sur **Add Site Pairing**.
+  1. Affectez à l'URL de site l'URL de HCX Cloud Manager, par exemple, `https://x.x.x.x.x`.
+  2. Définissez le nom d'utilisateur et le mot de passe avec les détails d'administrateur de HCX Manager : admin/password.
+
+    Les informations précédentes peuvent être obtenues auprès d'IBM Cloud à partir de la console VMware Solutions, sous **Services**, **HCX on IBM Cloud** pour l'instance vCenter Server. 
+    
+4. Cliquez sur **Connect**.
 
 ### Résultats
 {: #hcxclient-vcs-mesh-deployment-sitepair-results}
 
-L'appariement de sites a été enregistré et affiché avec succès dans l'interface utilisateur. 
+L'appariement de sites a été enregistré et affiché avec succès dans l'interface utilisateur.
 
-## Création de profils sur site HCX 
+## Création de profils sur site HCX
 {: #hcxclient-vcs-mesh-deployment-profiles}
 
-## Profils de réseau de maillage de services sur site 
+## Profils de réseau de maillage de services sur site
 {: #hcxclient-vcs-mesh-deployment-profiles-network}
 
-1. Connectez-vous à vSphere Web Client
+1. Connectez-vous au client vSphere Web Client.
 2. Dans le menu **Home**, sélectionnez l'option **HCX**.
-3. Sous **Infrastructure** -> **InterConnect**
-4. Sous Multi-Site Service Mesh, cliquez sur **Network Profiles**
-5. A partir de **Create Network Profile**
-   1. Sélectionnez un groupe de ports distribués : par exemple, External
-   2. Indiquez une plage d'adresses IP externes 
-   3. Indiquez une longueur de préfixe de sous-réseau externe 
-   4. Indiquez une passerelle externe 
-   5. Indiquez des détails DNS 
-   6. Définissez MTU sur 1500. 
-   7. Cliquez sur Create.
-6. Répétez les étapes précédentes pour les réseaux de gestion et vMotion. Remarque : MTU doit être défini sur 9000.
+3. Sous **Infrastructure**, cliquez sur **InterConnect**.
+4. Sous **Multi-Site Service Mesh**, cliquez sur **Network Profiles**.
+5. A partir de **Create Network Profile** :
+   1. Sélectionnez Distributed Port Group, par exemple, External.
+   2. Indiquez une plage d'adresses IP externes, une longueur de préfixe de sous-réseau externe, une passerelle externe et des détails DNS. 
+   3. Définissez MTU sur 1500.
+   4. Cliquez sur **Create**.
+6. Répétez les étapes précédentes pour les réseaux de gestion et vMotion.
+   Remarque : MTU doit être défini sur 9000.
 
 ## Résultats
 {: #hcxclient-vcs-mesh-deployment-profiles-network-results}
@@ -71,52 +64,51 @@ L'appariement de sites a été enregistré et affiché avec succès dans l'inter
 ## Profils de calcul de maillage de services sur site
 {: #hcxclient-vcs-mesh-deployment-profiles-compute}
 
-1. Connectez-vous à vSphere Web Client
+1. Connectez-vous au client vSphere Web Client.
 2. Dans le menu **Home**, sélectionnez l'option **HCX**.
-3. Sous **Infrastructure** -> **InterConnect**
-4. Sous Multi-Site Service Mesh, cliquez sur **Compute Profiles**
-5. A partir de **Create Compute Profile**
-   1. Indiquez le nom du profil de calcul 
-   2. Sélectionnez tous les services à activer, cliquez sur **Continue**
-   3. Sélectionnez le cluster, cliquez sur **Continue**
-   4. Sélectionnez le magasin de données, cliquez sur **Continue**
-   5. Sélectionnez Network Profile for Management, cliquez sur **Continue**
-   6. Sélectionnez Network Profile for External/Uplink, cliquez sur **Continue**
-   7. Sélectionnez Network Profile for vMotion, cliquez sur **Continue**
-   8. Sélectionnez Network Profile for vSphere Replication (Management), cliquez sur **Continue**
-   9. Sélectionnez Distribute Switch for extension, par exemple, Private-Switch
-   10. Cliquez sur Finish
+3. Sous **Infrastructure**, cliquez sur **InterConnect**.
+4. Sous **Multi-Site Service Mesh**, cliquez sur **Compute Profiles**.
+5. A partir de **Create Compute Profile** :
+   1. Indiquez un nom de profil de calcul. 
+   2. Sélectionnez tous les services à activer, puis cliquez sur **Continue**
+   3. Sélectionnez le cluster, puis cliquez sur **Continue**
+   4. Sélectionnez le magasin de données, puis cliquez sur **Continue**
+   5. Sélectionnez Network Profile for Management, puis cliquez sur **Continue**.
+   6. Sélectionnez Network Profile for External/Uplink, puis cliquez sur **Continue**.
+   7. Sélectionnez Network Profile for vMotion, puis cliquez sur **Continue**.
+   8. Sélectionnez Network Profile for vSphere Replication (Management), puis cliquez sur **Continue**.
+   9. Sélectionnez Distribute Switch for extension, par exemple, Private-Switch, puis cliquez sur **Finish**.
 
 ## Résultats
 {: #hcxclient-vcs-mesh-deployment-profiles-compute-results}
 
-Un profil de calcul pour la combinaison cluster/stockage a été créé et est disponible avec la création du maillage de services. 
+Un profil de calcul pour la combinaison cluster/stockage a été créé et est disponible avec la création du maillage de services.
 
-## Maillage de service sur site HCX 
+## Maillage de service sur site HCX
 {: #hcxclient-vcs-mesh-deployment-servicemesh}
 
-## Création de maillage de services sur site 
+## Création de maillage de services sur site
 {: #hcxclient-vcs-mesh-deployment-servicemesh-creation}
 
-1. Connectez-vous à vSphere Web Client
+1. Connectez-vous au client vSphere Web Client.
 2. Dans le menu **Home**, sélectionnez l'option **HCX**.
-3. Sous **Infrastructure** -> **InterConnect**
-4. Sous Multi-Site Service Mesh, cliquez sur **Service Mesh**
-5. A partir de **Create Service Mesh**
-   1. Sélectionnez les sites : sur site et vCloud Organization, puis cliquez sur Continue
-   2. Sélectionnez le profil de calcul source
+3. Sous **Infrastructure**, cliquez sur **InterConnect**.
+4. Sous **Multi-Site Service Mesh**, cliquez sur **Service Mesh**.
+5. A partir de **Create Service Mesh**:
+   1. Sélectionnez les sites : sur site et vCloud Organization, puis cliquez sur **Continue**. 
+   2. Sélectionnez le profil de calcul source. 
    3. Sélectionnez le profil de calcul distant. Par exemple, CloudCompute.
-   4. Sélectionnez tous les services, puis cliquez sur Continue
-   5. Cliquez sur Continue, dans la page Advanced Configuration - Override Uplink Network profiles (Optional)
-   6. Cliquez sur Continue 
-   7. Cliquez sur Continue, conservez les valeurs par défaut à la page Advanced Configuration - Configure WAN Optimization Service Bandwidth Limit
-   8. Indiquez le nom du service, cliquez sur **Finish**
+   4. Sélectionnez All Services, puis cliquez sur **Continue**.
+   5. Cliquez sur **Continue** sur la page Advanced Configuration - Override Uplink Network profiles (Optional)
+   6. Cliquez sur **Continue**.
+   7. Cliquez sur **Continue**, conserver les valeurs par défaut sur la page Advanced Configuration - Configure WAN Optimization Service Bandwidth Limit.
+   8. Indiquez un nom de service, puis cliquez sur **Finish**.
 6. Observez la liste des tâches de création de maillage de services. Vous devriez voir trois dispositifs HCX à l’emplacement sur site et trois à l’emplacement dans le cloud.
 
 ## Résultats
 {: #hcxclient-vcs-mesh-deployment-servicemesh-results}
 
-Un maillage de services HCX est la configuration efficace des services HCX pour un site source et un site de destination. Un maillage de services peut être ajouté à une paire de sites connectée ayant un profil de calcul valide créé sur les deux sites. 
+Un maillage de services HCX est la configuration efficace des services HCX pour un site source et un site de destination. Un maillage de services peut être ajouté à une paire de sites connectée ayant un profil de calcul valide créé sur les deux sites.
 
 L'ajout d'un maillage de services lance le déploiement de dispositifs virtuels HCX Interconnect sur les deux sites. Un maillage de services d'interconnexion est toujours créé sur le site source.
 
@@ -128,11 +120,11 @@ L'ajout d'un maillage de services lance le déploiement de dispositifs virtuels 
 
 Pour étendre un réseau (VLAN ou VXLAN) avec HCX, suivez les étapes suivantes à partir de l'interface web vCenter côté client.
 
-1. Connectez-vous à vSphere Web Client
+1. Connectez-vous au client vSphere Web Client.
 2. Dans le menu **Home**, sélectionnez l'option **HCX**.
-3. Menu de gauche, sous **Services** -> **Network Extension**
-4. Cliquez sur **Extend Network**
-   1. Sélectionnez le réseau à étendre 
+3. Dans le menu de gauche, sous **Services**, cliquez sur **Network Extension**.
+4. Cliquez sur **Extend Network**:
+   1. Sélectionnez le réseau à étendre. 
    2. Tapez la passerelle par défaut actuelle et le masque de sous-réseau au format CIDR.
    3. Cliquez sur **Stretch** au bas de l'écran pour lancer le flux d'extension du réseau.
 

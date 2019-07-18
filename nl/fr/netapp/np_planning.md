@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-20"
 
 keywords: planning NetApp ONTAP, data center, NetApp data centers
 
@@ -27,8 +27,6 @@ Le compte {{site.data.keyword.cloud_notm}} que vous utilisez doit répondre à c
 {: #np_planning-dc-availability}
 
 Un déploiement NetApp ONTAP Select a des exigences strictes quant à l'infrastructure physique. Par conséquent, vous ne pouvez déployer des instances que dans des {{site.data.keyword.CloudDataCents_notm}} qui répondent à ces exigences. Les {{site.data.keyword.CloudDataCents_notm}} suivants sont disponibles pour un déploiement NetApp ONTAP Select :
-
-Tableau 1. {{site.data.keyword.CloudDataCents_notm}} disponibles pour les instances NetApp ONTAP Select
 
 | {{site.data.keyword.CloudDataCent_notm}} | Emplacement | Région | Options de serveur |
 |:------|:----------------|:----------------|:---------------------------|
@@ -62,6 +60,7 @@ Tableau 1. {{site.data.keyword.CloudDataCents_notm}} disponibles pour les instan
 | WDC04 | Washington, DC | Est des Etats-Unis | Hautes performances (Moyenne), Hautes performances (Grande), Haute capacité
 | WDC06 | Washington, DC | Est des Etats-Unis | Hautes performances (Moyenne), Hautes performances (Grande), Haute capacité
 | WDC07 | Washington, DC | Est des Etats-Unis | Hautes performances (Moyenne), Hautes performances (Grande), Haute capacité
+{: caption="Tableau 1. {{site.data.keyword.CloudDataCents_notm}} disponibles pour les instances NetApp ONTAP Select" caption-side="top"}
 
 ## Liens connexes
 {: #np_planning-related}

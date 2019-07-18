@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-31"
+lastupdated: "2019-06-28"
 
 keywords: planning vCenter Server Hybridity, data center hybridity, vCenter Server Hybridity
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # vCenter Server with Hybridity Bundle 인스턴스에 대한 요구사항 및 계획
 {: #vc_hybrid_planning}
@@ -27,8 +29,6 @@ VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 인�
 {: #vc_hybrid_planning-dc-availability}
 
 vCenter Server with Hybridity Bundle 배치에는 실제 인프라에 대한 엄격한 요구사항이 있습니다. 그러므로, 요구사항을 충족하는 {{site.data.keyword.CloudDataCents_notm}}에만 인스턴스를 배치할 수 있습니다. 다음 {{site.data.keyword.CloudDataCents_notm}}는 vCenter Server with Hybridity Bundle 배치에 사용 가능합니다.
-
-표 1. vCenter Server with Hybridity Bundle 인스턴스에 사용 가능한 {{site.data.keyword.CloudDataCents_notm}}
 
 | {{site.data.keyword.CloudDataCent_notm}} |위치 |지역 |
 |:----------------------|:---------|:---------------|
@@ -65,16 +65,16 @@ vCenter Server with Hybridity Bundle 배치에는 실제 인프라에 대한 엄
 |WDC04 |워싱턴, DC |북미 동부 |
 |WDC06 |워싱턴, DC |북미 동부 |
 |WDC07 |워싱턴, DC |북미 동부 |
+{: caption="표 1. vCenter Server with Hybridity Bundle 인스턴스에 사용 가능한 {{site.data.keyword.CloudDataCents_notm}}" caption-side="top"}
 
 가용성 및 인벤토리 제공에 따라 {{site.data.keyword.CloudDataCents_notm}}는 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 상태 표시기를 표시하여 배치를 계획할 수 있습니다.
-
-표 2. vCenter Server with Hybridity Bundle 인스턴스 주문 시 {{site.data.keyword.CloudDataCents_notm}}에 대한 상태 표시기
 
 |상태 |상태 세부사항 |
 |:------------------------------|:--------------------------------------------------|
 |서비스 예정                   |{{site.data.keyword.CloudDataCent_notm}}는 현재 사용할 수 없습니다. |
 |임시적으로 사용 불가능  |{{site.data.keyword.CloudDataCent_notm}}는 현재 사용 가능하지 않습니다. |
 |제한된 인벤토리             |{{site.data.keyword.CloudDataCent_notm}}에는 제한된 가용성이 있으며 주문이 완료되지 않을 수 있습니다. |
+{: caption="표 2. vCenter Server with Hybridity Bundle 인스턴스 주문 시 {{site.data.keyword.CloudDataCents_notm}}에 대한 상태 표시기" caption-side="top"}
 
 ## 관리 컴포넌트의 백업
 {: #vc_hybrid_planning-backup-mgmt-components}
@@ -95,7 +95,7 @@ vCenter Server with Hybridity Bundle 인스턴스에는 VMware HCX on {{site.dat
   * **개인 키**: CA 인증서의 개인 키를 입력하십시오.
   * (선택사항) **비밀번호**: 개인 키가 암호화된 경우 개인 키의 비밀번호를 입력하십시오.
   * (선택사항) **비밀번호 다시 입력**: 개인 키의 비밀번호를 한 번 더 입력하십시오.
-  * (선택사항) **호스트 이름**: CA 인증서의 공통 이름(CN)에 맵핑될 호스트 이름을 입력하십시오. HCX on {{site.data.keyword.cloud_notm}}에서는 NSX Edge에서 허용하는 형식의 CA 인증서를 필요로 합니다. NSX Edge 인증서 형식에 대한 자세한 정보는 [SSL 인증서 가져오기](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html)를 참조하십시오.
+  * (선택사항) **호스트 이름**: CA 인증서의 공통 이름(CN)에 맵핑될 호스트 이름을 입력하십시오. HCX on {{site.data.keyword.cloud_notm}}에서는 NSX Edge에서 허용하는 형식의 CA 인증서를 필요로 합니다. NSX Edge 인증서 형식에 대한 자세한 정보는 [SSL 인증서 가져오기](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html){:external}를 참조하십시오.
 
 사용자의 요구에 따라 인스턴스에 대한 다른 추가 기능 서비스를 주문할 수 있습니다(예: 재해 복구). 자세한 정보는 [vCenter Server with Hybridity Bundle 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)를 참조하십시오.
 

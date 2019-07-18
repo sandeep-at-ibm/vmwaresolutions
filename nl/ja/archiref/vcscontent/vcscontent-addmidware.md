@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-06-27"
 
 subcollection: vmware-solutions
 
@@ -67,7 +67,7 @@ Stock Trader をコンテナーで実行できるようになり、Jane も現�
   -	IBM MQ Advanced
   -	IBM MQ Advanced for Developers
   -	Rabbit MQ (オープン・ソース)
-  -	IBM Event Streams Tech Preview (Apache Kafka ベース)
+  -	IBM Event Streams テクノロジー・プレビュー (Apache Kafka ベース)
 
 * デジタル・ビジネス自動化
   -	IBM Operational Decision Manager
@@ -91,7 +91,7 @@ Stock Trader をコンテナーで実行できるようになり、Jane も現�
 * HPC / HPDA
   -	IBM Spectrum LSF Community Edition
   -	IBM Spectrum Symphony Community Edition
-  -	IBM Spectrum Conductor Technical Preview
+  -	IBM Spectrum Conductor テクノロジー・プレビュー
 
 * マルチクラウド管理
   -	{{site.data.keyword.cloud_notm}} Automation Manager
@@ -117,7 +117,7 @@ Cloud Private (ディスカバリー用の ILAN ライセンス交付済み、�
   -	IBM PowerVC FlexVolume Driver (オープン・ソース、PowerVC 製品でサポート)
   - Heketi ライフサイクル管理を備えた GlusterFS ストレージ・クラスター (オープン・ソース)
   -	Container Storage Interface (CSI) サンプル NFS
-  -	ドライバー (オープン・ソース)
+  -	Driver (オープン・ソース)
   -	Rook Ceph Cluster (オープン・ソース)
 
 * ツール
@@ -155,7 +155,7 @@ type=NFS
 server = nfs.server.ip.address
 path = /shared/db2trader1`
 
-カタログ・ユーザー・インターフェースで、「Db2」を検索し、「ibm-db2oldp-dev」をクリックします。README ファイルを確認し、「構成」をクリックします。
+カタログ・ユーザー・インターフェースで、「Db2」を検索し、「ibm-db2oldp-dev」をクリックします。 README ファイルを確認し、「構成」をクリックします。
 
 「構成」セクションには、「クイック・スタート」セクションと「すべてのパラメーター (All Parameters)」セクションがあります。 Todd は以下の追加構成を入力する必要があるので、「すべてのパラメーター (All Parameters)」を開きます。
 
@@ -221,7 +221,7 @@ Kubernetes に合うように Jane のマイクロサービスを最適化する
 -	パイプラインを追加しました (Jenkins を使用しました)
 -	Maven を使用して構築しました
 
-Jane の [コード・リポジトリー](https://github.com/IBMStockTrader/) の例と Jenkins ファイル、server.xml などを提供しています。 これにより、Jane は、ODM や Watson などのサービスや、GitHub の個々のリポジトリーである他のマイクロサービスにシークレットを使用してアクセスし、追加の機能を自由にコーディングできます。
+次の例は、Jane の[コード・リポジトリー](https://github.com/IBMStockTrader/)、Jenkins ファイル、server.xml などを示しています。これにより、Jane は、ODM や Watson などのサービスや、GitHub の個々のリポジトリーである他のマイクロサービスにシークレットを使用してアクセスし、追加の機能を自由にコーディングできます。
 
 ### シークレットの追加
 {: #vcscontent-addmidware-add-secrets}

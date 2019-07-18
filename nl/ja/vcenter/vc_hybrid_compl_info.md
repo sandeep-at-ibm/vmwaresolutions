@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server Hybridity compliance, compliance info Hybridity, vCenter Server Hybridity policy
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # vCenter Server with Hybridity Bundle インスタンスのコンプライアンス情報
 {: #vc_hybrid_compl_info}
@@ -76,7 +78,7 @@ VMware vCenter Server の環境が、{{site.data.keyword.vmwaresolutions_short}}
 * チーム・レベルで高度な技術的専門知識を維持するためには、専門性のレベルにもよりますが、特定のソフトウェアの問題を解決するのに複数のサポート・チームの関与が必要になる場合があります。 IBM のサポート・チームの間には完全なネットワークが作られているのでこれは簡単です。どのような問題が発生しても 1 つのチームとして解決に取り組むことができます。
 * 問題を調査するために、IBM がお客様のシステム上にある障害関連の情報にアクセスしたり、詳しい情報を得るために障害を再現したりする必要がある場合があります。
 * お客様がサポート・チケットを作成すれば、調査、デバッグ、優先順位付けのために IBM サポートが VMware 管理層にアクセスすることをお客様が承認することになります。 保守のための停止や環境の変更が必要になった場合、IBM サポートは、変更管理プロセスの一環として、新たにチケットを介してお客様に書面による確認を要求します。
-* サポート・チケットについて詳しくは、[IBM サポート・ガイド](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923)と [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)を参照してください。
+* サポート・チケットについて詳しくは、[IBM サポート・ガイド](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923){:external}と [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)を参照してください。
 
 ## お客様の責任
 {: #vc_hybrid_compl_info-client-responsibilities}
@@ -115,7 +117,7 @@ VMware vCenter Server の環境が、{{site.data.keyword.vmwaresolutions_short}}
 * そのような IBM 以外のプログラムのライセンスは、それぞれのプロバイダーから直接交付されます。 お客様は、プロバイダーの契約条件に従って IBM 以外のプログラムの使用に同意します。 そのような条件は、購入時に IBM オファリングに付属する IBM の使用条件に含まれた形で提供されます。
 * IBM は、サード・パーティー製品が IBM プログラムと連携して適切に機能することを確認するためにテストを行います。
 * IBM ソフトウェア・サポートは、IBM オファリングがサード・パーティー・ソフトウェアと連携する方法に関する情報を活用して、お客様の問題に関する問題診断を行います。 IBM プログラムが正しく機能するという結論が出ているにもかかわらず、引き続き問題が存在している場合は、IBM はさらに診断するためにお客様をサード・パーティー・ベンダーに照会する必要があります。
-* サード・パーティーのソフトウェアやコードに関するお客様の責任について詳しくは、[IBM サポート・ガイド](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923)を参照してください。
+* サード・パーティーのソフトウェアやコードに関するお客様の責任について詳しくは、[IBM サポート・ガイド](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923){:external}を参照してください。
 
 ## お客様の環境へのアクセスの同意
 {: #vc_hybrid_compl_info-consent-to-access-client-environment}

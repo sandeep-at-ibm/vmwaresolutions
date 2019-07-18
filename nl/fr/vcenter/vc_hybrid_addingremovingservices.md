@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-10"
+lastupdated: "2019-06-27"
 
 keywords: vCenter Server Hybridity add service, view service vCenter Server Hybridity, remove service vCenter Server Hybridity
 
@@ -27,11 +27,9 @@ Vous pouvez commander des services pour vos instances VMware vCenter Server on {
 
 Les services suivants sont disponibles pour les instances vCenter Server with Hybridity Bundle, ainsi que les versions installées de ces services :
 
-Tableau 1. Services disponibles pour les instances vCenter Server with Hybridity Bundle
-
 | Nom de service | Version de service en cours | Version d'instance |
 |----------------------------------------------------------------------------------------|------------------|
-| [Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_considerations) | 2.2 | A partir de V2.9 |
+| [Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_considerations) | 2.2.1 | A partir de V2.9 |
 | [F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations) | BIG-IP VE v14.1.0.2 | A partir de V1.9 |
 | [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations)       | Série 300 | A partir de V1.8 |
 | [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations) | 6.0.3 | A partir de V2.0 |
@@ -44,13 +42,14 @@ Tableau 1. Services disponibles pour les instances vCenter Server with Hybridity
 | [Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations) | 9.5u4 | A partir de V1.8 |
 | [VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_considerations#hcx_considerations) | 3.5.1 | A partir de V2.3 |
 | [Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr) | 6.5 update 3 | A partir de V1.2 |
+{: caption="Tableau 1. Services disponibles pour les instances vCenter Server with Hybridity Bundle" caption-side="top"}
 
 ## Procédure d'ajout de services à des instances vCenter Server with Hybridity Bundle
 {: #vc_hybrid_addingremovingservices-adding-procedure}
 
 Afin d'appliquer un service à votre instance vCenter Server with Hybridity Bundle, cliquez sur les liens dans le tableau pour passer en revue les remarques relatives au service. Ensuite, vérifiez les composants qui sont déployés et suivez les instructions décrites dans les rubriques de commande pour passer votre commande.
 
-### Que se passe-t-il après l'installation d'un service ?  
+### Que se passe-t-il après l'installation d'un service ?
 {: #vc_hybrid_addingremovingservices-adding-results}
 
 Lorsque l'installation du service est terminée, vous êtes prévenu par un courrier électronique, et le service s'affiche sur l'onglet **Services** de la page des détails de l'instance avec le statut **Installé**.
@@ -73,7 +72,7 @@ Lorsque l'installation du service est terminée, vous êtes prévenu par un cour
 4. Sur la page **Services**, localisez l'instance de service que vous souhaitez retirer et cliquez sur l'icône **Supprimer**.
 5. Dans la fenêtre **Supprimer un service**, passez en revue, le cas échéant, les remarques ou avertissements. Sélectionnez **Je comprends** et cliquez sur **Supprimer**.
 
-### Que se passe-t-il après le retrait d'un service ? 
+### Que se passe-t-il après le retrait d'un service ?
 {: #vc_hybrid_addingremovingservices-removing-results}
 
 Une fois votre demande de retrait du service acceptée, le service prend le statut **Retrait en cours**.

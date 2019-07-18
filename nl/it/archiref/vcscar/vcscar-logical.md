@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -28,7 +28,7 @@ Skate Advisor è costituito principalmente da un chatbot che può accettare il r
 
 L'elemento dati principale di Skate Advisor è il trick. Il linguaggio di trick definisce univocamente un trick. Questo linguaggio può essere utilizzato per svolgere le seguenti attività:
 - Conversare con il chatbot in merito ai trick.
-- Cercare i trick tramite Watson Discovery.
+- Cercare i trick utilizzando Watson Discovery.
 - Identificare e classificare i trick durante la formazione di Watson Discovery dagli articoli di origine.
 - Identificare un trick per scopi di visualizzazione di posizioni e supporti multimediali.
 
@@ -91,7 +91,7 @@ Passo | Descrizione
 7 | Skate Advisor richiede una serie di dati dal Discovery Service.
 8 | Il Discovery Service valuta la query e invia la risposta.
 9 |Skate Advisor forma una risposta e la invia al chatbot in testo.
-10 | Il chatbot invia la risposta di testo al servizio Text To Speech.
+10 | Il chatbot invia la risposta di testo al servizio Text to Speech.
 11 | Il risultato viene inviato all'utente tramite il chatbot.
 
 ### Rendering video

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-26"
 
 keywords: IBM Cloud Private, ICP, tech specs ICP
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -26,27 +27,25 @@ subcollection: vmware-solutions
 * V2.7 以降にデプロイ (または V2.7 以降にアップグレード) された vCenter Server with Hybridity Bundle インスタンス
 * V2.5 以降にデプロイ (または V2.5 以降にアップグレード) された vCenter Server インスタンス
 
-V3.0 以降にデプロイ (またはアップグレード) されたインスタンスの場合、{{site.data.keyword.cloud_notm}} Automation Manager は、{{site.data.keyword.cloud}} Private Hosted サービス注文の一部としてもデプロイされます。
+現在インストールされている IBM Cloud Private のバージョンは 3.1.2 です。{{site.data.keyword.cloud_notm}} Automation Manager は、{{site.data.keyword.cloud}} Private Hosted サービス注文の一部としてもデプロイされます。
 {:note}
+
 
 ## IBM Cloud Private Hosted の技術仕様
 {: #icp_overview-specs}
 
 **「実動対応 (Production-Ready)」**環境および**「開発/テスト (Development/Test)」**環境用に IBM Cloud Private Hosted サービスを注文するための最小要件を以下の表にリストします。
 
-表 1. 実動対応環境および開発/テスト環境での最小要件
-
 |環境 | コア | メモリー (GB) | ホスト | ストレージ (GB) |
 |:---------- |:---- |:------ |:---- |:------- |
 | 実動対応 | 52 | 640 | 3 | 8,000 |
 | 開発/テスト | 30 | 200 | 3 | 4,000 |
+{: caption="表 1. 実動対応環境および開発/テスト環境での最小要件" caption-side="top"}
 
 ### IBM Cloud Private Hosted のリソース要件
 {: #icp_overview-resource-req}
 
-実動対応環境および開発/テスト環境での {{site.data.keyword.cloud_notm}} Private Hosted サービスのリソース要件を次の表にリストします。
-
-表 2. 実動対応環境での {{site.data.keyword.cloud_notm}} Private Hosted のリソース要件
+実動対応環境での {{site.data.keyword.cloud_notm}} Private Hosted サービスのリソース要件を次の表にリストします。
 
 | ノード・タイプ  | CPU コア   |  メモリー (GB) | ディスク 1 (GB) | ディスク 2 (GB) | VM の数 |
 |:---------- |:----------- |:------------ |:----------- |:----------- |:------------- |
@@ -60,8 +59,9 @@ V3.0 以降にデプロイ (またはアップグレード) されたインス�
 | NFS サーバー | 8 | 4  | 350 | 1 | 1 |
 | NSX Edge Services Gateway | 2 | 1 | 0.5 | 0.5 | 2 |
 | 文書化された制約 | 52 | 640 |  | 8,000 |   |
+{: caption="表 2. 実動対応環境" caption-side="top"}
 
-表 3. 開発/テスト環境での {{site.data.keyword.cloud_notm}} Private Hosted のリソース要件
+開発環境およびテスト環境での {{site.data.keyword.cloud_notm}} Private Hosted サービスのリソース要件を次の表にリストします。
 
 | ノード・タイプ  | CPU コア   |  メモリー (GB) | ディスク 1 (GB) | ディスク 2 (GB) | VM の数 |
 |:---------- |:----------- |:------------ |:----------- |:----------- |:------------- |
@@ -75,6 +75,7 @@ V3.0 以降にデプロイ (またはアップグレード) されたインス�
 | NFS サーバー | 8 | 4  | 350 | 1 | 1 |
 | NSX Edge Services Gateway | 2 | 1 | 0.5 | 0.5 | 2 |
 | 文書化された制約 | 30 | 200 |  | 4,000 |  |
+{: caption="表 3. {{site.data.keyword.cloud_notm}} 開発およびテスト環境" caption-side="top"}
 
 ### IBM Cloud Private Hosted のスペース所要量の計算式
 {: #icp_overview-formulas}
@@ -84,9 +85,9 @@ IBM Cloud Private および管理オーバーヘッドのスペース所要量�
 #### 使用可能なコア数の計算式
 {: #icp_overview-formulas-1}
 
-`AvailableCores = [HostCoreCount - HostOverheadCores - (HostVSanOverheadCorePercentage * HostCoreCount)] * (HostCount - vSphereHAHostTolerance) - MgmtOverheadCores`
+次の表に、数式 1 の変数をリストします。
 
-表 4. 計算式 1 の変数の説明
+`AvailableCores = [HostCoreCount - HostOverheadCores - (HostVSanOverheadCorePercentage * HostCoreCount)] * (HostCount - vSphereHAHostTolerance) - MgmtOverheadCores`
 
 | 変数 | 説明 | 単位 | vSAN の例 | NFS の例 |
 |:--------- |:----------- |:---- |:------------- |:----------- |
@@ -97,13 +98,14 @@ IBM Cloud Private および管理オーバーヘッドのスペース所要量�
 | MgmtOverheadCores | vCenter Server 管理コンポーネント (vCenter Server、PSC、AD/DNS、Edge) によって予約されているコアの数 (5 コア) | コア | 5 | 5 |
 | vSphereHAHostTolerance | vSphere HA 構成で許容されるホストの数 (1 ホスト) |	ホスト	 | 1 | 1 |
 | HostVsanOverheadCorePercentage | vSAN で使用するホストのコアの割合 (10%。ホストが vSAN でない場合は 0%) | % | 10% | 0% |
+{: caption="表 4. 計算式 1 の変数の説明" caption-side="top"}
 
 #### 使用可能メモリーの計算式
 {: #icp_overview-formulas-2}
 
-`AvailableMemory = [HostMemory - HostOverheadMemory - HostVsanOverheadMemory - (HostVsanOverheadMemoryDiskPercentage * HostVsanCapacityDiskSize)] * (HostCount - vSphereHAHostTolerance) - MgmtOverheadMemory`
+次の表に、数式 2 の変数をリストします。
 
-表 5. 計算式 2 の変数の説明
+`AvailableMemory = [HostMemory - HostOverheadMemory - HostVsanOverheadMemory - (HostVsanOverheadMemoryDiskPercentage * HostVsanCapacityDiskSize)] * (HostCount - vSphereHAHostTolerance) - MgmtOverheadMemory`
 
 | 変数 | 説明 | 単位 | vSAN の例 | NFS の例 |
 |:--------- |:----------- |:---- |:------------- |:----------- |
@@ -116,6 +118,7 @@ IBM Cloud Private および管理オーバーヘッドのスペース所要量�
 | vSphereHAHostTolerance | vSphere HA 構成で許容されるホストの数 (1 ホスト) | ホスト	| 1 | 1 |
 | HostVsanOverheadMemoryDiskPercentage | vSAN 管理に予約するメモリーの GB 数 (容量 vSAN ディスク 1 台に対するパーセンテージで表される) (2.75%) | % | 2.75% | 2.75% |
 | HostVsanOverheadMemory | ディスク・サイズに関係なく vSAN 管理に予約するメモリーの GB 数 (7 GB。ホストが VSAN でない場合は 0 GB) | GB |  7 | 0 |
+{: caption="表 5. 計算式 2 の変数の説明" caption-side="top"}
 
 ## IBM Cloud Private Hosted をインストールする際の考慮事項
 {: #icp_overview-install}
@@ -136,6 +139,6 @@ IBM Cloud Private および管理オーバーヘッドのスペース所要量�
 
 * [{{site.data.keyword.cloud_notm}} Private Hosted の注文](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_ordering)
 * [vCenter Server および {{site.data.keyword.cloud_notm}} Private ガイド](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [{{site.data.keyword.cloud_notm}} Private のチケットをオープン](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
-* [{{site.data.keyword.cloud_notm}} Automation Manager のライセンス](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/licensing.html){:new_window}
-* [{{site.data.keyword.cloud_notm}} Automation Manager コンポーネント](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/cam_managed_components.html){:new_window}
+* [{{site.data.keyword.cloud_notm}} Private のチケットをオープン](https://www.ibm.com/mysupport/s/?language=en_US){:external}
+* [{{site.data.keyword.cloud_notm}} Automation Manager のライセンス](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/licensing.html){:external}
+* [{{site.data.keyword.cloud_notm}} Automation Manager コンポーネント](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/cam_managed_components.html){:external}

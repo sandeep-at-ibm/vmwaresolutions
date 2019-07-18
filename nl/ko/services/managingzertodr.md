@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: Zerto certificate, Zerto config, update Zerto replication
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -25,7 +26,7 @@ Zerto on {{site.data.keyword.cloud}} 서비스가 인스턴스에 배치된 후 
 ## Zerto용 고유한 인증서 사용
 {: #managingzertodr-ssl-cert}
 
-우수 사례로서, ZVM(Zerto Virtual Manager)용 고유한 SSL 인증서를 사용하십시오. Zerto on {{site.data.keyword.cloud_notm}}를 배치한 후 ZVM용 SSL 인증서를 고유한 인증서로 대체하십시오. 자세한 정보는 [How to use a CER SSL Certificate to Replace the Self-Signed Certificate for the ZVM, ZSSP, or ZCM](https://www.zerto.com/myzerto/knowledge-base/how-to-use-a-cer-ssl-certificate-to-replace-the-self-signed-certificate-for-the-zvm-zssp-or-zcm/){:new_window}을 참조하십시오.
+우수 사례로서, ZVM(Zerto Virtual Manager)용 고유한 SSL 인증서를 사용하십시오. Zerto on {{site.data.keyword.cloud_notm}}를 배치한 후 ZVM용 SSL 인증서를 고유한 인증서로 대체하십시오. 자세한 정보는 [How to use a CER SSL Certificate to Replace the Self-Signed Certificate for the ZVM, ZSSP, or ZCM](https://www.zerto.com/myzerto/knowledge-base/how-to-use-a-cer-ssl-certificate-to-replace-the-self-signed-certificate-for-the-zvm-zssp-or-zcm/){:external}을 참조하십시오.
 
 ## Zerto 복제의 구성 관리
 {: #managingzertodr-manage}
@@ -53,8 +54,8 @@ Zerto Virtual Replication을 업데이트하려면 Zerto Virtual Replication 콘
 {: #managingzertodr-related}
 
 * [Zerto on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)
-* [Zerto on {{site.data.keyword.cloud_notm}}에 대한 관리 서비스 요청](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
-* [zerto.com 웹 사이트](https://www.zerto.com){:new_window}
-* [Zerto 기술 문서](https://www.zerto.com/myzerto/technical-documentation/){:new_window}
-* [Zerto 재해 복구](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/zerto){:new_window}
-* [Zerto Virtual Replication Alerts의 설명](https://www.zerto.com/myzerto/knowledge-base/explanation-of-zvr-alerts/)
+* [Zerto on {{site.data.keyword.cloud_notm}}에 대한 관리 서비스](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
+* [zerto.com 웹 사이트](https://www.zerto.com){:external}
+* [Zerto 기술 문서](https://www.zerto.com/myzerto/technical-documentation/){:external}
+* [Zerto 재해 복구](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/zerto){:external}
+* [Zerto Virtual Replication Alerts의 설명](https://www.zerto.com/myzerto/knowledge-base/explanation-of-zvr-alerts/){:external}

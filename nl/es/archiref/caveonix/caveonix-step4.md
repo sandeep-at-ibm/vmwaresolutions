@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-15"
+lastupdated: "2019-06-21"
 
 subcollection: vmware-solutions
 
@@ -32,12 +32,12 @@ La configuración del proveedor de servicios tiene ocho subpasos:
 
 La configuración de organización o arrendatario tiene siete subpasos:
 
--	Paso 1: Organización - Añada detalles para su organización primaria. También puede crear suborganizaciones. Utilice las organizaciones para segmentar sus usuarios, o como una de las formas de agrupar sus activos. Puede crear más organizaciones con una de las organizaciones existentes como padre. Cuando crea una nueva organización, puede seleccionar el "Valor de impacto empresarial", que se utiliza para generar puntuaciones de ciberriesgo.
--	Paso 2: Activos de la organización - Los nuevos activos/cargas de trabajo se agrupan automáticamente por ubicación, proveedor de nube y repositorio de activos. Los activos se pueden asignar solo a una organización al mismo tiempo. El proveedor de servicios tiene que asignar activos a una organización.
--	Paso 3: Asocie el entorno y la ubicación – Opcional. Los entornos están definidos por el proveedor de servicios.
--	Paso 4 y 5: Cree subaplicaciones o aplicaciones - Se utiliza para agrupar activos entre ubicaciones y organizaciones y ver sus flujos y políticas asociados. Cree aplicaciones que coincidan con los servicios de negocio y de TI. Por ejemplo, Application=SAP, Sub-Applications=SAP Front End, SAP Middle Tier y SAP Back End. El valor de impacto empresarial se corresponde con una aplicación, los regímenes de conformidad se aplican a una aplicación.
--	Paso 6: Acceso remoto - El acceso remoto es necesario para ejecutar exploraciones sobre activos, puede ser una cuenta de servicio predeterminada o una cuenta específica del activo.
--	Paso 7: Planificador de tareas - Planifique exploraciones para que se ejecuten de forma periódica. Los tipos de tareas incluyen: Exploración de SCAP-Vulnerabilidad, Exploración de SCAP-XCCDF, Exploración de flujo NSX, exploración de software, exploración de extractos de registro.
+- Paso 1: Organización - Añada detalles para su organización primaria. También puede crear suborganizaciones. Utilice las organizaciones para segmentar sus usuarios, o como una de las formas de agrupar sus activos. Puede crear más organizaciones con una de las organizaciones existentes como padre. Cuando crea una nueva organización, puede seleccionar el **Valor de impacto empresarial**, que se utiliza para generar puntuaciones de ciberriesgo.
+- Paso 2: Activos de la organización - Los nuevos activos/cargas de trabajo se agrupan automáticamente por ubicación, proveedor de nube y repositorio de activos. Los activos se pueden asignar solo a una organización al mismo tiempo. El proveedor de servicios tiene que asignar activos a una organización.
+- Paso 3: Asocie el entorno y la ubicación – Opcional. Los entornos están definidos por el proveedor de servicios.
+- Paso 4 y 5: Cree subaplicaciones o aplicaciones - Se utiliza para agrupar activos entre ubicaciones y organizaciones y ver sus flujos y políticas asociados. Cree aplicaciones que coincidan con los servicios de negocio y de TI. Por ejemplo, Application=SAP, Sub-Applications=SAP Front End, SAP Middle Tier y SAP Back End. El **Valor de impacto empresarial** se corresponde con una aplicación, los regímenes de conformidad se aplican a una aplicación.
+- Paso 6: Acceso remoto - El acceso remoto es necesario para ejecutar exploraciones sobre activos, puede ser una cuenta de servicio predeterminada o una cuenta específica del activo.
+- Paso 7: Planificador de tareas - Planifique exploraciones para que se ejecuten de forma periódica. Los tipos de tareas incluyen: Exploración de SCAP-Vulnerabilidad, Exploración de SCAP-XCCDF, Exploración de flujo NSX, exploración de software, exploración de extractos de registro.
 
 La siguiente información se recopila del usuario en el momento del pedido y se utiliza en la configuración de la aplicación.
 

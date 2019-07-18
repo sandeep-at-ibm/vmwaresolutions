@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server BOM, bill of materials vCenter Server, BOM
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -27,20 +28,17 @@ Esamina le informazioni relative alla distinta base (Diba) per le istanze VMware
 
 La seguente tabella mostra in dettaglio le informazioni sulla Diba per le VLAN di vCenter Server.
 
-Tabella 1. Diba per le VLAN nelle istanze vCenter Server
-
 | VLAN       | Tipo       | Dettagli       |
 |:---------- |:---------- |:------------- |
 | VLAN1     | Pubblica, Primaria | Assegnata ai server ESXi fisici per l'accesso alla rete pubblica. Ai server viene assegnato un indirizzo IP pubblico ma questo indirizzo IP non è configurato sui server, quindi non sono direttamente accessibili sulla rete pubblica. È previsto invece che la VLAN pubblica fornisca l'accesso a internet pubblico per altri componenti, come ad esempio gli NSX ESG (Edge Services Gateway). |
 | VLAN2     | Privata A, Primaria | Assegnata da {{site.data.keyword.cloud}} ai server ESXi fisici. Utilizzata dall'interfaccia di gestione per il traffico di gestione VMware vSphere.<br><br>Assegnata alle VM (macchine virtuali) che funzionano come componenti di gestione.<br><br>Assegnata al VTEP (VXLAN Tunnel Endpoint) VMware NSX |
 | VLAN3     | Privata B, Portatile | Assegnata a VMware vSAN, se utilizzato.<br><br>Assegnata a VMware NFS, se utilizzato.<br><br>Assegnata a VMware vSphere vMotion.<br><br>Per NSX-T, assegnata al VTEP (VXLAN Tunnel Endpoint) VMware NSX.|
+{: caption="Tabella 1. Diba per le VLAN nelle istanze vCenter Server" caption-side="top"}
 
 ## Diba di software per le istanze vCenter Server
 {: #vc_bom-software}
 
 La seguente tabella mostra in dettaglio le informazioni sulla Diba per i componenti software di vCenter Server.
-
-Tabella 2. Diba per i componenti software nelle istanze vCenter Server
 
 | Produttore  | Componente                      | Versione    |
 |:------------- |:------------------------------ |:------------- |
@@ -53,6 +51,7 @@ Tabella 2. Diba per i componenti software nelle istanze vCenter Server
 | VMware       | NSX per vSphere                 | 6.4.4 (build 11197766)    |
 | VMware       | NSX-T for vSphere               | 2.4                       |
 | Microsoft    | Windows Server Standard edition | 2016       |
+{: caption="Tabella 2. Diba per i componenti software nelle istanze vCenter Server" caption-side="top"}
 
 VMware vSAN è un componente facoltativo.
 {:note}
@@ -63,8 +62,6 @@ VMware vSAN è un componente facoltativo.
 Esamina la seguente tabella per una panoramica delle impostazioni di configurazione avanzate che vengono applicate ai server ESXi. Queste impostazioni variano a seconda che l'istanza vCenter Server sia distribuita nella V2.2 o successive o aggiornata alla V2.2 o successive dalla V2.1 o precedenti.
 
 Le impostazioni si applicano alle nuove istanze e ai nuovi cluster nelle nuove istanze della V2.2 o successive. Le impostazioni non si applicano ai nuovi cluster nelle istanze esistenti della V2.1 o precedenti o nelle istanze esistenti aggiornate alla V2.2 o successive.
-
-Tabella 3. Impostazioni di configurazione avanzate dei server ESXi per le istanze e i cluster vCenter Server
 
 | Impostazione di configurazione | Se appena distribuita nella V2.2 o successiva  | Se aggiornata dalla V2.1 o precedente |
 |:------------- |:------------- |:------------- |
@@ -77,14 +74,17 @@ Tabella 3. Impostazioni di configurazione avanzate dei server ESXi per le istanz
 | Soglia completa della coda | **QFullThreshold** = 8 | **/Disk/QFullThreshold** = 8 |
 | Dimensione heap TCP/IP | **TcpipHeapSize** = 32 | Non impostato |
 | Numero massimo di heap TCP/IP | **TcpipHeapMax** = 1536 | Non impostato |
+{: caption="Tabella 3. Impostazioni di configurazione avanzate dei server ESXi per le istanze e i cluster vCenter Server" caption-side="top"}
 
-**Note:**
+### Note
+{: #vc_bom-notes}
+
 * L'impostazione **MaxVolumes** è obbligatoria per il servizio IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} perché il servizio potrebbe utilizzare più del numero predefinito di montaggi NFS sul server ESXi.
 * Il valore **Non impostato** per un'impostazione di configurazione indica che la nuova impostazione non viene applicata automaticamente perché richiede il riavvio dei server ESXi, il che potrebbe causare un'interruzione.
 
   Si consiglia di modificare le impostazioni di configurazione **Non impostato** nei nuovi valori per garantire coerenza tra tutte le istanze e per consentire il supporto adeguato per l'espansione dell'archiviazione. IBM prevede di eseguire test solo con queste nuove impostazioni per tutte le release di {{site.data.keyword.vmwaresolutions_short}} V2.2 e versioni successive.
 
-  Per ulteriori informazioni, vedi [Increasing the default value that defines the maximum number of NFS mounts on an ESXi host](https://kb.vmware.com/s/article/2239).
+  Per ulteriori informazioni, vedi [Increasing the default value that defines the maximum number of NFS mounts on an ESXi host](https://kb.vmware.com/s/article/2239){:external}.
 
 ## Impostazioni di configurazione di NSX e del gruppo di porte
 {: #vc_bom-nsx-port-group-config}
@@ -92,8 +92,6 @@ Tabella 3. Impostazioni di configurazione avanzate dei server ESXi per le istanz
 Esamina la seguente tabella per una panoramica delle impostazioni di configurazione di VMware NSX e del gruppo di porte per le istanze vCenter Server e le differenze tra le release.
 
 Le impostazioni si applicano alle nuove istanze e ai nuovi cluster nelle nuove istanze della V2.2 o successive. Le impostazioni non si applicano ai nuovi cluster nelle istanze esistenti della V2.1 o precedenti o nelle istanze esistenti aggiornate alla V2.2 o successive.
-
-Tabella 4. Impostazioni di configurazione di NSX e del gruppo di porte per le istanze vCenter Server
 
 | Impostazione di configurazione | V2.1 o precedente  | V2.2 o successiva |   
 |:------------- |:------------- |:------------- |
@@ -104,6 +102,7 @@ Tabella 4. Impostazioni di configurazione di NSX e del gruppo di porte per le is
 | Gruppo di porte SDDC-DPortGroup-VSAN (se applicabile) | **Active uplinks** impostato su **uplink1** e **Standby uplinks** impostato su **uplink2** | **Active uplinks** impostato su **uplink2** e **Standby uplinks** impostato su **uplink1** |  
 | Gruppo di porte SDDC-DPortGroup-Mgmt | **Port binding** impostato su **Ephemeral - no binding** e **Load balancing** impostato su **Route based on originating virtual port** | **Port binding** impostato su **Static binding** e **Load balancing** impostato su **Route based on physical NIC load** |  
 | Gruppo di porte SDDC-DPortGroup-External | **Port binding** impostato su **Ephemeral - no binding** | **Port binding** impostato su **Static binding** |
+{: caption="Tabella 4. Impostazioni di configurazione di NSX e del gruppo di porte per le istanze vCenter Server" caption-side="top"}
 
 ## Impostazioni di configurazione MTU della rete
 {: #vc_bom-network-mtu-config}
@@ -116,12 +115,11 @@ Nella V2.1 o successive, le connessioni alla rete pubblica utilizzano una MTU Et
 
 Riesamina la seguente tabella per una panoramica delle impostazioni di configurazione MTU della rete applicate al DVS (Distributed Virtual Switch) pubblico e privato, a seconda che l'istanza vCenter Server sia distribuita nella V2.1 o successive.
 
-Tabella 5. Impostazioni di configurazione MTU per le istanze e i cluster vCenter Server a seconda della versione dell'istanza
-
 | vDS | V2.1 o successive  | V2.0 o precedenti (o aggiornati dalla V2.0 o precedenti) |
 |:-------------- |:-------------- |:------------- |
 | Switch pubblico  | 1500 (predefinito) | 9000 (Frame Jumbo) |
 | Switch privato | 9000 (Frame Jumbo) | 9000 (Frame Jumbo) |
+{: caption="Tabella 5. Impostazioni di configurazione MTU per le istanze e i cluster vCenter Server a seconda della versione dell'istanza" caption-side="top"}
 
 Le impostazioni si applicano alle nuove istanze e ai nuovi cluster delle istanze distribuite nella V2.1 o successive. Le impostazioni si applicano anche ai nuovi cluster tra i {{site.data.keyword.CloudDataCents_notm}} dalle istanze aggiornate alla V2.1 o successive.
 
@@ -143,9 +141,9 @@ Per aggiornare l'impostazione MTU per lo Switch pubblico, completa la seguente p
 ## Link correlati
 {: #vc_bom-related}
 
-* [Build numbers and versions of VMware ESXi and ESX (2143832)](https://kb.vmware.com/s/article/2143832)
-* [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
-* [Enabling Jumbo Frames on virtual distributed switches](https://kb.vmware.com/s/article/1038827)
-* [{{site.data.keyword.vmwaresolutions_short}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:new_window}
+* [Build numbers and versions of VMware ESXi and ESX (2143832)](https://kb.vmware.com/s/article/2143832){:external}
+* [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838){:external}
+* [Enabling Jumbo Frames on virtual distributed switches](https://kb.vmware.com/s/article/1038827){:external}
+* [{{site.data.keyword.vmwaresolutions_short}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:external}
 * [Panoramica di vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
 * [Pianificazione per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)

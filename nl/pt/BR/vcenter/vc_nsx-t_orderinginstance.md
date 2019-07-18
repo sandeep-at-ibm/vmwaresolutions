@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server NSX-T order instance, order vCenter Server NSX-T, order NSX-T
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -30,15 +31,14 @@ Assegure-se de que tenha concluído as tarefas a seguir:
 * Você revisou as informações em [Requisitos e planejamento para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning).
 * Você revisou o formato de nome da instância e do domínio. O nome do domínio e o rótulo do subdomínio são usados para gerar o nome do usuário e os nomes do servidor da instância.
 
-Tabela 1. Formato de valor para nomes de instância e de domínio
-
 | Nome        | Formato do valor      |
-  |:------------|:------------ |
-  | Nome de domínio | `<root_domain>` |  
-  | Nome do usuário de login do vCenter Server | `<user_id>@<root_domain>` (usuário do Microsoft Active Directory) ou `administrator@vsphere.local` |
-  | FQDN do vCenter Server (com PSC integrado) | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. O comprimento máximo é 50 caracteres. |
-  | Nome do site de Conexão única (SSO) | `<subdomain_label>` |
-  | Nome do servidor ESXi totalmente qualificado | `<host_prefix><n>.<subdomain_label>.<root_domain>`, em que `<n>` é a sequência do servidor ESXi. O comprimento máximo é de 50 caracteres. |
+|:------------|:------------ |
+| Nome de domínio | `<root_domain>` |  
+| Nome do usuário de login do vCenter Server | `<user_id>@<root_domain>` (usuário do Microsoft Active Directory) ou `administrator@vsphere.local` |
+| FQDN do vCenter Server (com PSC integrado) | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. O comprimento máximo é 50 caracteres. |
+| Nome do site de Conexão única (SSO) | `<subdomain_label>` |
+| Nome do servidor ESXi totalmente qualificado | `<host_prefix><n>.<subdomain_label>.<root_domain>`, em que `<n>` é a sequência do servidor ESXi. O comprimento máximo é de 50 caracteres. |
+{: caption="Tabela 1. Formato de valor para nomes de instância e de domínio" caption-side="top"}
 
 Não modifique nenhum valor que seja configurado durante o pedido ou a implementação da instância. Fazer isso pode tornar sua instância inutilizável. Por exemplo, se a rede pública for encerrada, se os servidores e as Virtual Server Instances (VSIs) ficarem atrás de uma provisão intermediária do Vyatta ou se o IBM CloudBuilder VSI parar ou for excluído.
 {:important}
@@ -103,25 +103,23 @@ Selecione o {{site.data.keyword.CloudDataCent_notm}} no qual a instância deve s
 
 Quando você seleciona **Skylake**, é possível escolher a combinação de CPU e RAM para o Bare Metal Server, de acordo com suas necessidades.
 
-Tabela 2. Opções para o Skylake {{site.data.keyword.baremetal_short}}
-
 | Opções de modelo da CPU        | Opções de RAM       |
 |:------------- |:------------- |
 | Processador Dual Intel Xeon Silver 4110/total de 16 núcleos, 2,1 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Processador Dual Intel Xeon Gold 5120/total de 28 núcleos, 2,2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Processador Dual Intel Xeon Gold 6140/Total de 36 núcleos, 2,3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+{: caption="Tabela 2. Opções para o Skylake {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 ### Broadwell
 {: #vc_nsx-t_orderinginstance-broadwell}
 
 Quando você seleciona **Broadwell**, é possível escolher a combinação de CPU e RAM para o Bare Metal Server, de acordo com suas necessidades.
 
-Tabela 3. Opções para o Broadwell {{site.data.keyword.baremetal_short}}
-
 | Opções de modelo da CPU        | Opções de RAM       |
 |:------------- |:------------- |
 | Quad Intel Xeon E7-4820 v4/total de 40 núcleos, 2.0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4/total de 64 núcleos, 2.1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+{: caption="Tabela 3. Opções para o Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 ### Número de Bare Metal Servers
 {: #vc_nsx-t_orderinginstance-bare-metal-number}
@@ -170,14 +168,15 @@ diferentes definições de configuração para cada compartilhamento de arquivo.
 * **Tamanho (GB)**: selecione a capacidade que atenda às suas necessidades de armazenamento compartilhado.
 * **Incluir armazenamento compartilhado**: selecione para incluir compartilhamentos de arquivos individuais que usam definições de configuração diferentes.
 
-Tabela 4. Opções de nível de desempenho do NFS
+Detalhes do nível de desempenho:
 
 | Opção        | Detalhes       |
-  |:------------- |:------------- |
-  | 0,25 IOPS/GB | Essa opção foi projetada para cargas de trabalho não usadas frequentemente. Os aplicativos de exemplo incluem: dados de área segura, hospedando bancos de dados grandes com dados anteriores ou imagens de disco virtual do sistema de memória virtual como backup. |
-  | 2 IOPS/GB | Esta opção foi projetada para a maioria de cargas de trabalho de propósito geral. Os aplicativos de exemplo incluem: hospedagem de bancos de dados pequenos, backup de aplicativos da web ou imagens de disco da máquina virtual para um hypervisor. |
-  | 4 IOPS/GB | Esta opção foi projetada para cargas de trabalho de maior intensidade que possuem uma alta porcentagem de dados ativos de cada vez. Os aplicativos de exemplo incluem: bancos de dados transacionais. |
-  | 10 IOPS/GB | Esta opção foi projetada para os tipos de carga de trabalho mais exigentes, como analítica. Os aplicativos de exemplo incluem: bancos de dados de alta transação e outros bancos de dados sensíveis ao desempenho. Esse nível de desempenho é limitado a uma capacidade máxima de 4 TB por compartilhamento de arquivo. |
+|:------------- |:------------- |
+| 0,25 IOPS/GB | Essa opção foi projetada para cargas de trabalho não usadas frequentemente. Os aplicativos de exemplo incluem: dados de área segura, hospedando bancos de dados grandes com dados anteriores ou imagens de disco virtual do sistema de memória virtual como backup. |
+| 2 IOPS/GB | Esta opção foi projetada para a maioria de cargas de trabalho de propósito geral. Os aplicativos de exemplo incluem: hospedagem de bancos de dados pequenos, backup de aplicativos da web ou imagens de disco da máquina virtual para um hypervisor. |
+| 4 IOPS/GB | Esta opção foi projetada para cargas de trabalho de maior intensidade que possuem uma alta porcentagem de dados ativos de cada vez. Os aplicativos de exemplo incluem: bancos de dados transacionais. |
+| 10 IOPS/GB | Esta opção foi projetada para os tipos de carga de trabalho mais exigentes, como analítica. Os aplicativos de exemplo incluem: bancos de dados de alta transação e outros bancos de dados sensíveis ao desempenho. Esse nível de desempenho é limitado a uma capacidade máxima de 4 TB por compartilhamento de arquivo. |
+{: caption="Tabela 4. Opções de nível de desempenho do NFS" caption-side="top"}
 
 ## Configurações da interface de rede
 {: #vc_nsx-t_orderinginstance-network-interface-settings}
@@ -260,7 +259,7 @@ Cada licença pode ser designada apenas a um único servidor físico e abrange a
 
 Você tem 30 dias para ativar as MVs.
 
-Para obter mais informações sobre o pedido de licenças do Windows Server 2016, consulte [Introdução ao Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:new_window}.
+Para obter mais informações sobre o pedido de licenças do Windows Server 2016, consulte [Introdução ao Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:external}.
 
 ## Resumo do Pedido
 {: #vc_nsx-t_orderinginstance-order-summary}
@@ -272,7 +271,7 @@ Também é possível incluir os recursos provisionados na ferramenta de estimati
 ## Procedimento para pedir instâncias do vCenter Server com NSX-T
 {: #vc_nsx-t_orderinginstance-procedure}
 
-1. No catálogo do {{site.data.keyword.cloud_notm}}, clique em **VMware** na área de janela de navegação esquerda e, em seguida, clique em **vCenter Server** na seção **Data centers virtuais**.
+1. No catálogo do {{site.data.keyword.cloud_notm}}, clique no ícone **VMware** da área de janela de navegação esquerda e, em seguida, clique no cartão **VMware vCenter Server on IBM Cloud** da seção **Data centers virtuais do VMware**.
 2. Na página **VMware vCenter Server on IBM Cloud**, clique no cartão **vCenter Server** e clique em **Criar**.
 3. Na página **vCenter Server**, insira o nome da instância.
 4. Selecione o tipo de instância:

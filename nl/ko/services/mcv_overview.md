@@ -4,16 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-21"
 
-keywords: Mission Critical VMware, Mission Critical, tech specs Mission Critical
+keywords: Mission Critical VMware, request Mission Critical, tech specs Mission Critical
 
 subcollection: vmware-solutions
 
 
 ---
 
-# Mission Critical VMware on IBM Cloud 개요
+# Mission Critical VMware on IBM Cloud
 {: #mcv_overview}
 
 Mission Critical VMware on {{site.data.keyword.cloud}}는 다중 구역 클라우드 아키텍처를 제공하여 엔터프라이즈에서 클라우드 애플리케이션에 대한 가동 중단 시간이 발생하지 않도록 지원하고 클라우드 지역 내에서 장애 복구를 자동화합니다.
@@ -84,7 +84,19 @@ vSphere + vSAN 확장 클러스터 아키텍처에는 다음과 같은 스펙이
 * VM-A에 대한 vMotion 활동 중에 트래픽은 {{site.data.keyword.cloud_notm}} 가용성 구역 #1을 통해 계속 유입 및 유출됩니다.
 * 사이트 또는 에지 장애가 발생하는 경우 트래픽은 남아 있는 사용 가능한 사이트 외부로 라우팅됩니다.
 
+## Mission Critical VMware on IBM Cloud 요청 프로시저
+{: #mcv_overview-proc}
+
+1. {{site.data.keyword.vmwaresolutions_full}} 콘솔의 왼쪽 탐색 분할창에서 **시작하기**를 클릭하십시오.
+2. 페이지를 아래로 스크롤하여 **VMware 관리 서비스**에서 **Mission Critical VMware on IBM Cloud** 카드를 클릭하십시오.
+3. Mission Critical VMware on {{site.data.keyword.cloud_notm}} 페이지에서 **Mission Critical VMware에 대해 문의하기** 상자에 있는 **컨설팅 요청**을 클릭하십시오.
+4. IBM Services Expert Hub 페이지에서 **상담 스케줄링**을 클릭하여 서비스 전문가와 30분을 예약하십시오.
+
+  {{site.data.keyword.cloud_notm}} 담당자가 사용자에게 필요한 솔루션에 대한 도움을 드리기 위해 사용자의 {{site.data.keyword.cloud_notm}} 연락처 정보를 사용하여 연락을 드립니다.
+
 ## 관련 링크
 {: #mcv_overview-related}
 
-* [Mission Critical VMware on IBM Cloud 요청](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_mcv)
+* [IMI의 관리 서비스](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_imi)
+* [Veeam on IBM Cloud에 대한 관리 서비스](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
+* [Zerto on IBM Cloud에 대한 관리 서비스](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-26"
 
 keywords: VMware HCX, HCX site, HCX definition
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # HCX 術語名詞解釋
 {: #hcx_glossary}
@@ -29,4 +31,4 @@ subcollection: vmware-solutions
 ## 相關鏈結
 {: #hcx_glossary-related}
 
-* [VMware Hybrid Cloud Extension 文件](https://cloud.vmware.com/vmware-hcx/resources)
+* [VMware Hybrid Cloud Extension 文件](https://cloud.vmware.com/vmware-hcx/resources){:external}

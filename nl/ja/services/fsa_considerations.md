@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-26"
 
 keywords: FortiGate security, FortiGate Sirtual Appliance, tech specs FortiGate
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -76,5 +77,5 @@ FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} サービスを
 * [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingfsa)
 * [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [よくある質問](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Fortinet Web サイト](https://www.fortinet.com/){:new_window}
-* [Fortinet Document Library](https://docs.fortinet.com/product/fortigate/6.2){:new_window}
+* [Fortinet Web サイト](https://www.fortinet.com/){:external}
+* [Fortinet Document Library](https://docs.fortinet.com/product/fortigate/6.2){:external}

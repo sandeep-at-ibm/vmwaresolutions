@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-20"
 
 keywords: KMIP for VMware, view KMIP stand-alone, KMIP for VMware status
 
@@ -23,24 +23,22 @@ Utilizza questa procedura per visualizzare le istanze KMIP for VMware on {{site.
 
 Fai clic su **Risorse** nel riquadro di navigazione a sinistra e scorri fino alla tabella **Istanze KMIP for VMware on {{site.data.keyword.cloud_notm}}** per visualizzare informazioni sulle istanze che hai ordinato:
 
-Tabella 1. Elementi delle istanze KMIP for VMware on {{site.data.keyword.cloud_notm}}
-
 | Elemento        | Descrizione       |  
 |:----------- |:----------------- |
 | Nome | Il nome dell'istanza. |
 | Regione | La regione {{site.data.keyword.cloud_notm}} in cui è ospitata l'istanza. |
-| Data/ora di creazione | La data e ora di creazione dell'istanza. |  
+| Ora di creazione | La data e ora di creazione dell'istanza. |  
 | Stato | Lo stato dell'istanza. |
+{: caption="Tabella 1. Elementi delle istanze KMIP for VMware on {{site.data.keyword.cloud_notm}}" caption-side="top"}
 
 Lo stato dell'istanza può avere una gamma di opzioni.
-
-Tabella 2. Descrizioni dello stato delle istanze KMIP for VMware on {{site.data.keyword.cloud_notm}}
 
 | Stato        | Descrizione       |
 |:------------- |:------------- |
 | In fase di installazione | L'istanza è in fase di creazione. |
 | Installato | L'istanza è pronta per l'uso. |
 | In fase di rimozione | L'istanza è in fase di eliminazione. |
+{: caption="Tabella 2. Descrizioni dello stato delle istanze KMIP for VMware on {{site.data.keyword.cloud_notm}}" caption-side="top"}
 
 ## Link correlati
 {: #kmip_standalone_viewing-related}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-28"
 
 keywords: Caveonix console, Caveonix RiskForesight license, login Caveonix console
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -38,7 +39,7 @@ subcollection: vmware-solutions
 ## IBM Cloud의 Caveonix RiskForesight에 업데이트 적용
 {: #managingcaveonix-update}
 
-사용자는 Caveonix RiskForesight가 항상 최신 버전으로 업데이트되어 있도록 유지보수해야 합니다. [Caveonix Service Provider Portal](https://support.caveonix.com)에서 필수 업데이트를 다운로드할 수 있습니다.
+사용자는 Caveonix RiskForesight가 항상 최신 버전으로 업데이트되어 있도록 유지보수해야 합니다. [Caveonix Service Provider Portal](https://support.caveonix.com){:external}에서 필수 업데이트를 다운로드할 수 있습니다.
 
 ## Caveonix RiskForesight 라이센스 업데이트
 

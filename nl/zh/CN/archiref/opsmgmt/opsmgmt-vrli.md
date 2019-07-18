@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-06"
+lastupdated: "2019-07-01"
 
 ---
 
@@ -27,7 +27,7 @@ vRealize Log Insights (vRLI) 支持对 {{site.data.keyword.vmwaresolutions_full}
 * 主节点 - 集群中必需的初始节点。主节点负责查询和日志摄入。主节点 web UI 是该 vRealize Log Insights 集群的单一虚拟管理平台。针对数据的所有查询都会定向到主节点，然后由主节点将工作负载分发给工作程序。
 * 工作程序节点 - 构成一个集群至少需要三个节点，并且集群有能力添加更多工作程序以进行横向扩展。工作程序节点用于摄入日志并本地存储这些日志。
 * 集成负载均衡器 - 此组件使用专有负载均衡配置来提供高可用性（无需外部负载均衡器）。
-* Log Insight 转发器 - 此组件部署用于从 NSX 覆盖组件接收日志。此外，如果客户机要从计算 VM 发送日志，也可以利用此组件。Log Insight 转发器是单个 vRealize Log Insights 主节点，用作远程 syslog 聚集器，以将警报转发到 vRLI 集群。由于 VXLAN 支持的地址属于 BYOIP 地址空间，因此必须在 NSX ESG 上实现 NAT 规则。
+* Log Insight 转发器 - 此组件部署用于从 NSX 覆盖组件接收日志。此外，如果客户机要从计算 VM 发送日志，也可以利用此组件。Log Insight 转发器是单个 vRealize Log Insights 主节点，用作远程 syslog 聚集器，以将警报转发到 vRLI 集群。由于 VXLAN 支持的地址不属于 BYOIP 地址空间，因此必须在 NSX ESG 上实现 NAT 规则。
 
 有以下大小可用，并选择了相应的大小：
 * 小型 - 2,000 个事件/秒

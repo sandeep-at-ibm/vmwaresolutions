@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: vCenter Server Hybridity add host, add server vCenter Server Hybridity, remove host vCenter Server Hybridity
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -22,7 +23,7 @@ subcollection: vmware-solutions
 
 Puede ampliar o reducir la capacidad de la instancia de VMware vCenter Server on {{site.data.keyword.cloud}} con el paquete híbrido (Hybridity) según sus necesidades empresariales añadiendo o eliminando servidores ESXi.
 
-A partir del release de v3.1, puede añadir nuevos servidores ESXi a un clúster existente seleccionando una configuración existente o una configuración alternativa a la de los hosts existentes en el clúster. Las configuraciones existentes están disponibles para la selección instantánea cuando se hace el pedido del nuevo servidor. Para evitar problemas de rendimiento o estabilidad, se recomienda que los clústeres utilicen la misma configuración o una configuración similar con respecto a la CPU, la RAM y el almacenamiento. Esta funcionalidad es útil para actualizaciones de hardware dentro del mismo clúster. Un clúster sólo puede tener un tipo de almacenamiento. 
+A partir del release de v3.1, puede añadir nuevos servidores ESXi a un clúster existente seleccionando una configuración existente o una configuración alternativa a la de los hosts existentes en el clúster. Las configuraciones existentes están disponibles para la selección instantánea cuando se hace el pedido del nuevo servidor. Para evitar problemas de rendimiento o estabilidad, se recomienda que los clústeres utilicen la misma configuración o una configuración similar con respecto a la CPU, la RAM y el almacenamiento. Esta funcionalidad es útil para actualizaciones de hardware dentro del mismo clúster. Un clúster sólo puede tener un tipo de almacenamiento.
 
 A partir del release V2.9, puede añadir nuevos servidores ESXi a un clúster mientras el clúster esté en modalidad de mantenimiento. Además, puede añadir o eliminar simultáneamente servidores ESXi en varios clústeres. Están disponibles las siguientes operaciones simultáneas:
 
@@ -52,18 +53,19 @@ Puesto que el clúster inicial tiene vSAN como almacenamiento, el hecho de añad
 4. En la tabla **CLÚSTERES**, pulse el clúster al que desea añadir servidores ESXi.
 5. En la tabla **Servidores ESXi**, pulse **Añadir**.
 6. En la ventana **Añadir servidor**, escriba el número de servidores que desea añadir.
-7. Opcionalmente, marque el recuadro de selección para añadir servidores durante la modalidad de mantenimiento. El recuadro de selección está seleccionado de forma predeterminada. 
+7. Opcionalmente, marque el recuadro de selección para añadir servidores durante la modalidad de mantenimiento. El recuadro de selección está seleccionado de forma predeterminada.
 
-   Cuando se suministre el nuevo servidor ESXi, las máquinas virtuales (VM) se migran inmediatamente a los nuevos servidores si no selecciona la casilla de verificación **Modalidad de mantenimiento**. No se recibe un mensaje de confirmación antes de que empiece la migración. {:important}
+   Cuando se suministre el nuevo servidor ESXi, las máquinas virtuales (VM) se migran inmediatamente a los nuevos servidores si no selecciona la casilla de verificación **Modalidad de mantenimiento**. No se recibe un mensaje de confirmación antes de que empiece la migración.
+   {:important}
 
 8. Complete la configuración del servidor nativo.
-   * Seleccione una configuración a partir de los hosts existentes en el clúster. 
-   * Seleccione una configuración nueva de {{site.data.keyword.baremetal_short_sing}} y especifique el modelo de CPU y el tamaño de RAM. 
+   * Seleccione una configuración a partir de los hosts existentes en el clúster.
+   * Seleccione una configuración nueva de {{site.data.keyword.baremetal_short_sing}} y especifique el modelo de CPU y el tamaño de RAM.
 9. Complete la configuración del almacenamiento. Especifique los tipos de disco para la capacidad y los
 discos de memoria caché, el número de discos y la edición de licencia vSAN. Si desea más almacenamiento, marque el recuadro **Intel Optane de alto rendimiento**.
 10. Revise el coste estimado y pulse **Añadir**.
 
-  También puede añadir los recursos suministrados a la herramienta de estimación {{site.data.keyword.cloud_notm}}, pulsando **Añadir a estimación**. Esto es útil si desea estimar el coste de los recursos estimare {{site.data.keyword.vmwaresolutions_short}} seleccionados junto con otros recursos de {{site.data.keyword.cloud_notm}} que le podría interesar adquirir. 
+  También puede añadir los recursos suministrados a la herramienta de estimación {{site.data.keyword.cloud_notm}}, pulsando **Añadir a estimación**. Esto es útil si desea estimar el coste de los recursos estimare {{site.data.keyword.vmwaresolutions_short}} seleccionados junto con otros recursos de {{site.data.keyword.cloud_notm}} que le podría interesar adquirir.
 
 ### Resultados después de añadir servidores ESXi
 {: #vc_hybrid_addingremovingservers-adding-results}
@@ -113,5 +115,5 @@ Si va a añadir servidores ESXi durante la modalidad de mantenimiento, las máqu
 * [Lista de materiales de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
 * [Requisitos y planificación de instancias de vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)
 * [Adición, visualización y supresión de clústeres para instancias de vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingviewingclusters)
-* [Colocación de un host en modalidad de mantenimiento](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.resmgmt.doc/GUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
-* [Soporte del procesador Enhanced vMotion Compatibility (EVC)](https://kb.vmware.com/s/article/1003212){:new_window}
+* [Colocación de un host en modalidad de mantenimiento](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.resmgmt.doc/GUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:external}
+* [Soporte del procesador Enhanced vMotion Compatibility (EVC)](https://kb.vmware.com/s/article/1003212){:external}

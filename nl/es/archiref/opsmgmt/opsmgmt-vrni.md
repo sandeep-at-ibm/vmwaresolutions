@@ -11,7 +11,7 @@ lastupdated: "2019-05-31"
 # vRealize Network Insight
 {: #opsmgmt-vrni}
 
-El entorno vRealize Network Insight (vRNI) consiste en dos máquinas virtuales (VM), una plataforma (UI) y un nodo de controlador. 
+El entorno vRealize Network Insight (vRNI) consiste en dos máquinas virtuales (VM), una plataforma (UI) y un nodo de controlador.
 
 ![Diagrama de Network Insights](../../images/opsmgmt-vrninw.svg "Diagrama de Network Insights")
 
@@ -22,7 +22,7 @@ El dispositivo vRNI Platform proporciona las analíticas, la interfaz de usuario
 ## Requisitos del sistema
 {: #opsmgmt-vrni-requirements}
 
-Esta arquitectura da soporte a 3000 VM utilizando un tamaño de ladrillo medio. 
+Esta arquitectura da soporte a 3000 VM utilizando un tamaño de ladrillo medio.
 
 Tabla 1. Requisitos de plataforma de Network Insight
 

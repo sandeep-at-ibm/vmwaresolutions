@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-06-26"
 
 keywords: single-node trial, migration app modernization, tech specs migration app modernization
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -29,7 +30,7 @@ subcollection: vmware-solutions
 마이그레이션 및 앱 현대화를 위한 단일 노드 평가판은 개념 증명(POC)에만 사용됩니다. 이 환경에 프로덕션 워크로드를 실행하지 마십시오. 호스트 및 클러스터 추가 및 제거, 추가 기능 서비스 주문 및 업데이트 적용과 같은 관리 기능은 지원되지 않습니다.
 {:important}
 
-최신 단일 노드 평가판 인스턴스를 가져오기 위해 [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:new_window}에서 [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:new_window}를 사용할 수 있으며, 이는 VMware 워크로드를 {{site.data.keyword.cloud_notm}}에 마이그레이션하는 데 도움이 됩니다. 또한 [{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/){:new_window}는 최신 클라우드 기본 사례를 통해 애플리케이션 현대화를 가속화하는 데 유용합니다.
+최신 단일 노드 평가판 인스턴스를 가져오기 위해 [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:external}에서 [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:external}를 사용할 수 있으며, 이는 VMware 워크로드를 {{site.data.keyword.cloud_notm}}에 마이그레이션하는 데 도움이 됩니다. 또한 [{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/){:external}는 최신 클라우드 기본 사례를 통해 애플리케이션 현대화를 가속화하는 데 유용합니다.
 
 이 평가판은 최대 90일 동안 사용할 수 있습니다. 평가판 사용이 완료되면 이 환경을 삭제한 다음 용량 요구사항을 충족하는 새 환경을 프로비저닝할 수 있습니다.
 {:note}
@@ -141,12 +142,12 @@ L2 연결, WAN 최적화 및 게이트웨이 연결을 위해 필요에 따라 �
 ## IBM Cloud Automation Manager의 기술 스펙
 {: #cloud_modern_bundle_overview-cam-tech-specs}
 
-{{site.data.keyword.cloud_notm}} Automation Manager 3.1.2는 마이그레이션 및 앱 현대화를 위한 모든 단일 노드 평가판 인스턴스의 문서/테스트 토폴로지를 사용하여 설치됩니다. {{site.data.keyword.cloud_notm}} Automation Manager에 대한 자세한 정보는 [{{site.data.keyword.cloud_notm}} Automation Manager 문서](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: new_window}를 참조하십시오.
+{{site.data.keyword.cloud_notm}} Automation Manager 3.1.2는 마이그레이션 및 앱 현대화를 위한 모든 단일 노드 평가판 인스턴스의 문서/테스트 토폴로지를 사용하여 설치됩니다. {{site.data.keyword.cloud_notm}} Automation Manager에 대한 자세한 정보는 [{{site.data.keyword.cloud_notm}} Automation Manager 문서](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: external}를 참조하십시오.
 
 ## 관련 링크
 {: #cloud_modern_bundle_overview-related}
 
 * [vCenter Server 및 {{site.data.keyword.cloud_notm}} Private 안내서](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [{{site.data.keyword.cloud_notm}} Private의 티켓 열기](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
-* [VMware HCX 리소스](https://hcx.vmware.com/#/docs){:new_window}
-* [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}
+* [{{site.data.keyword.cloud_notm}} Private의 티켓 열기](https://www.ibm.com/mysupport/s/?language=en_US){:external}
+* [VMware HCX 리소스](https://hcx.vmware.com/#/docs){:external}
+* [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}

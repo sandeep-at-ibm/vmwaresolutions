@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-06-20"
 
 subcollection: vmware-solutions
 
@@ -29,35 +29,38 @@ Caveonix RiskForesight 是面向混合云的多租户网络风险与合规性管
 
 通过机器学习和 CaveoIQ 风险分析引擎，该解决方案可提供主动工作负载保护，防御因网络威胁带来的风险。它在混合云环境中提供一致的安全和策略框架，并完全集成到 VMware 和公共云提供者（如 AWS）提供的云技术堆栈中。
 
-通过 RiskForesight GUI 提供的三种关键服务为“风险管理”、“合规性风险”和“取证管理”：
+通过 RiskForesight GUI 提供的三种关键服务为：“风险管理”、“合规性风险”和“取证管理”。
 
-**风险管理**
--	持续网络风险
+## 风险管理
+
+- 持续网络风险
 - 网络风险评分
--	漏洞评分和优先级划分
--	支持业界领先的漏洞和配置扫描工具
--	全球基准标准
--	网络风险报告
+- 漏洞评分和优先级划分
+- 支持业界领先的漏洞和配置扫描工具
+- 全球基准标准
+- 网络风险报告
 
-**合规性风险**
+## 合规性风险
+
 - 自动合规性监视
--	合规性风险评分仪表板
--	自动化 IA 控制评估
--	支持：PCI、FISMA、FEDRAMP、HIPAA、GLBA、GDPR、基于 SCAP 的 NERC CIP 报告、OVAL、XCCDF 和其他全球配置基准标准
--	持续更新和映射的 IA 控制与标准库
+- 合规性风险评分仪表板
+- 自动化 IA 控制评估
+- 支持：PCI、FISMA、FEDRAMP、HIPAA、GLBA、GDPR、基于 SCAP 的 NERC CIP 报告、OVAL、XCCDF 和其他全球配置基准标准
+- 持续更新和映射的 IA 控制与标准库
 
-**取证管理**
--	日志管理
--	从多个源收集日志
--	事件检测、分析和可视化
--	对结果进行图形可视化
--	从多个源聚集数据
--	基于事件的分析
--	对基于事件/基于日志的分析进行完全向下钻取的功能
--	警报和通知
+## 取证管理
+
+- 日志管理
+- 从多个源收集日志
+- 事件检测、分析和可视化
+- 对结果进行图形可视化
+- 从多个源聚集数据
+- 基于事件的分析
+- 对基于事件/基于日志的分析进行完全向下钻取的功能
+- 警报和通知
 
 ## 相关链接
 {: #caveonix-intro-related}
 
-*   [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
-*   [Caveonix Web 站点](https://www.caveonix.com/)
+* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+* [Caveonix Web 站点](https://www.caveonix.com/)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-28"
 
 keywords: Veeam, Veeam configuration, order Veeam
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -27,14 +28,14 @@ Veeam on {{site.data.keyword.cloud}} サービスを注文するには、その�
 
 以下のいずれかの方法を使用して、新しいインスタンスで Veeam on {{site.data.keyword.cloud_notm}} を注文できます。
 * {{site.data.keyword.vmwaresolutions_short}} コンソールから新しいインスタンスを注文する時に、**「サービス」**セクションで**「Veeam on IBM Cloud」**を選択します。
-* {{site.data.keyword.cloud_notm}} カタログから**「Veeam on IBM Cloud」**を選択し、サービス設定を指定し、**「Add to New Instance」**を選択します。
+* {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**アイコンをクリックしてから、**「VMware サービス」**セクションの**「Veeam on IBM Cloud」**カードをクリックします。サービス設定を指定し、**「Add to New Instance」**を選択します。
 
 ## 既存のインスタンスでの Veeam on IBM Cloud の注文
 {: #veeam_ordering-existing}
 
 以下のいずれかの方法を使用して、既存のインスタンスに Veeam on {{site.data.keyword.cloud_notm}} サービスを追加できます。
 * {{site.data.keyword.vmwaresolutions_short}} コンソールから、サービスを追加する対象のインスタンスを表示し、左側のナビゲーション・ペインにある**「サービス」**をクリックし、**「追加」**をクリックします。
-* {{site.data.keyword.cloud_notm}} カタログから**「Veeam on IBM Cloud」**を選択し、サービス設定を指定し、**「Add to Existing Instance」**を選択します。
+* {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**アイコンをクリックしてから、**「VMware サービス」**セクションの**「Veeam on IBM Cloud」**カードをクリックします。サービス設定を指定し、**「Add to Existing Instance」**を選択します。
 
 ## Veeam on IBM Cloud サービスの構成
 {: #veeam_ordering-config}
@@ -49,7 +50,7 @@ Veeam on {{site.data.keyword.cloud}} サービスを注文するには、その�
 ### ストレージ・サイズ
 {: #veeam_ordering-config-storage-size}
 
-ストレージのニーズを満たす容量。 ストレージ・サイズを見積もるための考慮事項については、[Estimating Repository Capacity](https://bp.veeam.expert/repository_server/repository_planning/repository_planning_sizing) を参照してください。
+ストレージのニーズを満たす容量。 ストレージ・サイズを見積もるための考慮事項については、[Estimating Repository Capacity](https://bp.veeam.expert/repository_server/repository_planning/repository_planning_sizing){:external} を参照してください。
 
 ### ストレージ・パフォーマンス
 {: #veeam_ordering-config-storage-performance}
@@ -59,12 +60,9 @@ Veeam on {{site.data.keyword.cloud}} サービスを注文するには、その�
 ## 関連リンク
 {: #veeam_ordering-related}
 
-* [Veeam on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)
 * [Veeam on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
 * [vCenter Server インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
 * [vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
-* [Veeam on {{site.data.keyword.cloud_notm}} 用マネージド・サービスの要求](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
-* [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
-* [よくある質問](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Veeam の Web サイト](https://www.veeam.com/){:new_window}
-* [Veeam Help Center](https://www.veeam.com/documentation-guides-datasheets.html){:new_window}
+* [Veeam on {{site.data.keyword.cloud_notm}} 用マネージド・サービス](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
+* [Veeam の Web サイト](https://www.veeam.com/){:external}
+* [Veeam Help Center](https://www.veeam.com/documentation-guides-datasheets.html){:external}

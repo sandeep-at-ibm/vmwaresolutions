@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-26"
 
 keywords: FAQ, user account, patch management
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -77,11 +78,11 @@ subcollection: vmware-solutions
 
 将第三个节点添加到双节点集群后，vCenter Server 会自动在这三个节点之间重新均衡三个 NSX Controller，并创建高可用性环境。
 
-## 可以设置 VMware vCenter 6.5 HA 配置吗？
+## 可以设置 VMware vCenter HA 配置吗？
 {: #faq-ha}
 {: faq}
 
-不，建议不要这样做。否则，{{site.data.keyword.vmwaresolutions_short}} 功能中可能会出现故障。
+可以配置 vCenter HA，但 {{site.data.keyword.vmwaresolutions_short}} 未提供相关配置支持。
 
 ## 可以重命名集群吗？
 {: #faq-rename-cluster}
@@ -103,7 +104,7 @@ IBM 通过按需部署 IBM CloudDriver 虚拟服务器实例 (VSI)，提供 IBM 
 对于部署到 V2.0 或更高版本的实例，VMware Update Manager (VUM) 将集成到 vCenter Server 中。可以将 VUM 配置为从 VMware 下载 ESXi 更新。
 
 有关更多信息，请参阅以下资源：
-* [VMware 支持](https://www.vmware.com/support.html)
+* [VMware 支持](https://www.vmware.com/support.html){:external}
 * [对 vCenter Server 实例应用更新](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates)
 * [对 vCenter Server with Hybridity Bundle 实例应用更新](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_applyingupdates)
 

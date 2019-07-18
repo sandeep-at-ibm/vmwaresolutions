@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-06-28"
 
 keywords: vSphere upgrade, NSX upgrade, PSC upgrade
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -36,8 +37,8 @@ vCenter Server は「ローリング」アップグレードができるよう�
 
 アップグレードを開始する前に、以下の要件を満たしてください。  
 * vCenter Server 環境内の拡張やスナップインのアップグレードは、お客様が行う必要があります。 アップグレードを計画する前に、以下の資料を確認してください。
-  * [VMware vCenter Server 6.7 Update 1b Release Notes](https://docs.vmware.com/en/VMware-vSphere/6.7/rn/vsphere-vcenter-server-67u1b-release-notes.html){:new_window}
-  * [About VMware ESXi Upgrade](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.esxi.upgrade.doc/GUID-65B5B313-3DBB-4490-82D2-A225446F4C99.html){:new_window}
+  * [VMware vCenter Server 6.7 Update 1b Release Notes](https://docs.vmware.com/en/VMware-vSphere/6.7/rn/vsphere-vcenter-server-67u1b-release-notes.html){:external}
+  * [About VMware ESXi Upgrade](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.esxi.upgrade.doc/GUID-65B5B313-3DBB-4490-82D2-A225446F4C99.html){:external}
 * VMware vSphere から最新の更新プログラムをダウンロードするように vCenter Server インスタンス内の vSphere Update Manager (VUM) をセットアップします。 詳しくは、[VMware Update Manager の概要](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vum-intro#vum-intro)を参照してください。
 * {{site.data.keyword.vmwaresolutions_short}} チームに対してサポート・チケットを開き、アップグレードが行われることをチームに通知します。 アップグレードされたレベルのインスタンスが {{site.data.keyword.vmwaresolutions_short}} コンソールで登録されるまで、チケットは開いたままです。
 * アップグレードする vCenter Server インスタンスが別の vCenter Server インスタンスにプライマリーまたはセカンダリーとしてリンクされているかどうかを {{site.data.keyword.vmwaresolutions_short}} コンソールで確認します。 リンクされたすべてのインスタンスの Platform Services Controller (PSC) は、特定のサイトのアップグレードの一環として最初にアップグレードされなければなりません。
@@ -59,13 +60,13 @@ VSI ジャンプボックスを注文するには、以下のステップを実�
 ご使用の環境に VSI ジャンプボックスが既にある場合は、最初のステップをスキップしてください。
 {:note}
 
-1. [IBM Cloud インフラストラクチャー・カスタマー・ポータル](https://control.softlayer.com/)から、時間単位または月単位の VSI を注文します。 以下の属性を注文します。
+1. [IBM Cloud インフラストラクチャー・カスタマー・ポータル](https://control.softlayer.com/){:external}から、時間単位または月単位の VSI を注文します。 以下の属性を注文します。
   * Windows Server Standard 2012 または 2016
   * 2 CPU
   * 16 GB メモリー
   * 100 G ディスク
   * 1 Gbps のパブリック・アップリンクとプライベート・アップリンク
-2. VSI がプロビジョンされたら、コントロール・パネル内の {{site.data.keyword.cloud_notm}} Access Control List (ACL) を構成して、プライベート・リンクからのすべての入口/出口、パブリックからの出口のみを許可します。 Windows VSI への Remote Desktop Protocol (RDP) セッションには、{{site.data.keyword.cloud_notm}} クライアント・アクセス VPN を使用する必要があります。
+2. VSI がプロビジョンされたら、コントロール・パネル内の {{site.data.keyword.cloud_notm}} Access Control List (ACL) を構成して、プライベート・リンクからのすべての受信/送信、パブリックからの送信のみを許可します。 Windows VSI への Remote Desktop Protocol (RDP) セッションには、{{site.data.keyword.cloud_notm}} クライアント・アクセス VPN を使用する必要があります。
 3. Windows VSI に RDP 接続します。 アップグレードする vCenter Server インスタンス内の Windows AD サーバーのみを指すように、プライベート・ネットワーク・アダプター上のドメイン・ネーム・システム (DNS) 設定を変更します。
 4. Google Chrome ブラウザーをダウンロードしてインストールします。 Mozilla Firefox は使用できますが、vCenter ユーザー・インターフェース内の VUM 画面を使用するときにキャッシュの問題が発生します。
 5. 任意の SSH ターミナル・ソフトウェアをダウンロードします。 例えば、Putty などです。
@@ -91,9 +92,9 @@ https://my.vmware.com/group/vmware/details?downloadGroup=DT-ESX67-INTEL-INTEL-NV
 
 アップグレードを開始する前に、各コンポーネントをバックアップします。
 
-* vCenter Server および PSC のバックアップについて詳しくは、[Overview of Backup and Restore options in vCenter Server 6.x (2149237)](https://kb.vmware.com/s/article/2149237?lang=en_US){:new_window} を参照してください。
+* vCenter Server および PSC のバックアップについて詳しくは、[Overview of Backup and Restore options in vCenter Server 6.x (2149237)](https://kb.vmware.com/s/article/2149237?lang=en_US){:external} を参照してください。
 * vCenter Server および PSC のバックアップに関するその他の考慮事項や情報については、[vCenter のファイル・ベースのバックアップ](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_backingup#solution_backingup-vcenter)を参照してください。
-* NSX のバックアップについては、[Backing Up NSX Manager Data](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window} を参照してください。
+* NSX のバックアップについては、[Backing Up NSX Manager Data](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:external} を参照してください。
 
 ファイル・ベースのバックアップを使用することをお勧めします。 (vSphere Data Protection を使用した) イメージ・ベースのバックアップは VMware vSphere 6.7 ではサポートされていません。
 {:note}
@@ -122,9 +123,9 @@ VMware NSX のアップグレード処理は、ESXi ホスト上の vSphere イ�
 #### VMware NSX をアップグレードする手順
 {: #vc_vsphere_upgrade-procedure-nsx-procedure}
 
-以下の手順について詳しくは、[NSX アップグレード・ガイド](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.upgrade.doc/GUID-4613AC10-BC73-4404-AF80-26E924EF5FE0.html){:new_window}を参照してください。
+以下の手順について詳しくは、[NSX アップグレード・ガイド](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.upgrade.doc/GUID-4613AC10-BC73-4404-AF80-26E924EF5FE0.html){:external}を参照してください。
 
-1. NSX 6.4.4 のリリース・ノートを読み、お客様固有の環境構成に適合することを確認します。 詳しくは、[VMware NSX Data Center for vSphere 6.4.4 リリース・ノート](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/rn/releasenotes_nsx_vsphere_644.html){:new_window}を参照してください。
+1. NSX 6.4.4 のリリース・ノートを読み、お客様固有の環境構成に適合することを確認します。 詳しくは、[VMware NSX Data Center for vSphere 6.4.4 リリース・ノート](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/rn/releasenotes_nsx_vsphere_644.html){:external}を参照してください。
 2. まず、NSX マネージャーをアップグレードします。 クロス vCenter リンク・モードを使用する複数の NSX 環境がある場合は、NSX ユーザー・インターフェース **Upgrade Coordinator** でコンポーネントをアップグレードする前に、すべての NSX マネージャーをアップグレードします。
 3. vCenter ユーザー・インターフェース内の NSX ユーザー・インターフェースにある **Upgrade Coordinator** を使用して、NSX コンポーネントをアップグレードします。
 4. vCenter ユーザー・インターフェース内の NSX アップグレード・ユーザー・インターフェースの確認と監視を続けます。潜在的な問題が解決されると、すべてのコンポーネントがアップグレードされるまでアップグレードが進行します。
@@ -149,7 +150,7 @@ VMware NSX のアップグレード処理は、ESXi ホスト上の vSphere イ�
     2. シェルの **passwd** コマンドを使用して、PSC と vCenter の両方に新しい root パスワードを設定します。
     3. {{site.data.keyword.vmwaresolutions_short}} コンソールに表示されたパスワード、または IBM サポートから提供されたパスワードを保存します。 後でアプライアンスをアップグレードするときに、これらのパスワードをもう一度使用します。
 2. 標準の Windows ISO マウント機能を使用して、vCenter 6.7u1b ISO をジャンプボックス内にマウントします。
-3. まずは、VMware の手順に従い、すべての PSC をアップグレードします。 詳しくは、[Upgrade a vCenter Server Appliance 6.0 or 6.5 with an External vCenter Single Sign-On or Platform Services Controller Instance by Using the GUI](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html) を参照してください。
+3. まずは、VMware の手順に従い、すべての PSC をアップグレードします。 詳しくは、[Upgrade a vCenter Server Appliance 6.0 or 6.5 with an External vCenter Single Sign-On or Platform Services Controller Instance by Using the GUI](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html){:external} を参照してください。
 
 「**アップグレードするアプライアンスと同じネットワーク内にある Windows、Linux、または Mac のマシンから GUI アップグレードを実行する必要がある**」という要件は、お客様のアカウントの {{site.data.keyword.cloud_notm}} 内のすべてのサブネットに適用されます。
 {:note}
@@ -175,7 +176,7 @@ VMware NSX のアップグレード処理は、ESXi ホスト上の vSphere イ�
     2. シェルの **passwd** コマンドを使用して、PSC と vCenter の両方に新しい root パスワードを設定します。
     3. {{site.data.keyword.vmwaresolutions_short}} コンソールに表示されたパスワード、または IBM サポートから提供されたパスワードを保存します。 後でアプライアンスをアップグレードするときに、これらのパスワードをもう一度使用します。
 2. 標準の Windows ISO マウント機能を使用して、vCenter 6.7u1b ISO をジャンプボックス内にマウントします。
-3. VMware の手順に従い、vCenter をアップグレードします。 詳しくは、[Upgrade a vCenter Server Appliance 6.0 or 6.5 with an External vCenter Single Sign-On or Platform Services Controller Instance by Using the GUI](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html) を参照してください。 VMware の手順は、PSC のアップグレード・プロセスに似ています。 ただし、このアップグレード・プロセスでは PSC を指定するのではなく、
+3. VMware の手順に従い、vCenter をアップグレードします。 詳しくは、[Upgrade a vCenter Server Appliance 6.0 or 6.5 with an External vCenter Single Sign-On or Platform Services Controller Instance by Using the GUI](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html){:external} を参照してください。 VMware の手順は、PSC のアップグレード・プロセスに似ています。 ただし、このアップグレード・プロセスでは PSC を指定するのではなく、
 vCenter FQDN/IP を指定します。
 
 **注**:
@@ -185,7 +186,7 @@ vCenter FQDN/IP を指定します。
 #### PSC 機能の vCenter への統合
 
 1. PSC と vCenter のアップグレードが正常に完了したら、vCenter FLEX ベースのユーザー・インターフェースにログインし、**「System Configuration」**セクションで vCenter と PSC に関連するすべてのサービスの正常性を確認します。  
-2. PSC をバックアップします。  ファイル・ベースのバックアップを使用することをお勧めします。 詳しくは、[File based backup in vSphere 6.7](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.install.doc/GUID-8A16C037-F1E0-40C9-B106-05C30625B9CB.html){:new_window} を参照してください。
+2. PSC をバックアップします。  ファイル・ベースのバックアップを使用することをお勧めします。 詳しくは、[File based backup in vSphere 6.7](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.install.doc/GUID-8A16C037-F1E0-40C9-B106-05C30625B9CB.html){:external} を参照してください。
 3. ``<VCSA 6.7 iso mount>:&#xa5;vcsa-converge-cli&#xa5;templates&#xa5;converge`` ディレクトリーに移動します。
 4. ``converge.json`` ファイルをジャンプ VM のローカル・ドライブにコピーします。
   * 最初の PSC を統合するときには、``json`` ファイルの**「replication」**セクションを削除します。
@@ -198,7 +199,7 @@ vCenter FQDN/IP を指定します。
    1. **Y** を入力し、PSC をバックアップしたことを確認して次に進みます。
    2. プロセスが完了したら、**Y** を入力して vCenter のリブートを確認します。
 
-   コンバージ・プロセスが ``ERROR converge Failed to get vecs users and permissions`` というメッセージで失敗する場合、[Converge to embedded failed!](https://virtualtassie.com/2018/vcenter-6-7-update-1-converge-to-embedded-failed/#comment-3713){:new_window} でエラーを解決する手順を確認してください。
+   コンバージ・プロセスが ``ERROR converge Failed to get vecs users and permissions`` というメッセージで失敗する場合、[Converge to embedded failed!](https://virtualtassie.com/2018/vcenter-6-7-update-1-converge-to-embedded-failed/#comment-3713){:external} でエラーを解決する手順を確認してください。
    {:note}
 
 10. vCenter のリブートが完了したら、vCenter ユーザー・インターフェースにログインして正常に動作することを確認します。
@@ -237,7 +238,7 @@ ESXi ホストを 6.7u1 レベルにアップグレードしてパッチを適�
 6. 事前修正検査が正常に実行されたら、**「修正」**をクリックします。 修正エンティティー・タスクでアップグレード・プロセスをモニターします。
 7. アップグレードの完了後、ホストの要約セクションで、``VMware ESXi, 6.7.0`` と表示されることを確認します。
 
-アップグレード・プロセスがすぐに失敗し、**「host cannot enter maintenance mode」**エラー・メッセージが表示された場合、Zerto ZVA をシャットダウンしてから、もう一度試してください。 各サーバーの修正が完了すると、ZVRA VM が自動的に始動します。 アップグレード・プロセス中に Zerto レプリケーションを継続する方法については、[How to Place a Host with an Associated VRA into Maintenance Mode](https://www.zerto.com/myzerto/knowledge-base/place-host-into-maintenance-mode-with-vra/){:new_window}を参照してください。
+アップグレード・プロセスがすぐに失敗し、**「host cannot enter maintenance mode」**エラー・メッセージが表示された場合、Zerto ZVA をシャットダウンしてから、もう一度試してください。 各サーバーの修正が完了すると、ZVRA VM が自動的に始動します。 アップグレード・プロセス中に Zerto レプリケーションを継続する方法については、[How to Place a Host with an Associated VRA into Maintenance Mode](https://www.zerto.com/myzerto/knowledge-base/place-host-into-maintenance-mode-with-vra/){:external}を参照してください。
 {:note}
 
 #### Intel NVME ドライバー・パッチの VUM リポジトリーへの追加
@@ -309,7 +310,7 @@ VMware ゲスト・ツールと同様に、vCenter Server 環境のアップグ�
 1. ホストが含まれるクラスターから、**「構成」**をクリックします。
 2. **「VMware EVC」**で**「編集」**をクリックし、EVC モードを**「Intel "Skylake" 世代」**に変更します。
 
-詳しくは、[Enhanced vMotion Compatibility (EVC) processor support (1003212)](https://kb.vmware.com/s/article/1003212){:new_window} を参照してください。
+詳しくは、[Enhanced vMotion Compatibility (EVC) processor support (1003212)](https://kb.vmware.com/s/article/1003212){:external} を参照してください。
 
 #### PSC を指すための NSX Manager と HCX Manager の再構成
 
@@ -334,6 +335,6 @@ VMware ゲスト・ツールと同様に、vCenter Server 環境のアップグ�
 ## 関連リンク
 {: #vc_vsphere_upgrade-related}
 
-* [VMware NSX Data Center for vSphere 6.4.4 リリース・ノート](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/rn/releasenotes_nsx_vsphere_644.html){:new_window}
-* [NSX アップグレード・ガイド](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.upgrade.doc/GUID-4613AC10-BC73-4404-AF80-26E924EF5FE0.html){:new_window}
+* [VMware NSX Data Center for vSphere 6.4.4 リリース・ノート](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/rn/releasenotes_nsx_vsphere_644.html){:external}
+* [NSX アップグレード・ガイド](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.upgrade.doc/GUID-4613AC10-BC73-4404-AF80-26E924EF5FE0.html){:external}
 * [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

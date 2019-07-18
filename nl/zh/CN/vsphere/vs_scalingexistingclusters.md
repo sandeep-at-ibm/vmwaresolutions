@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-20"
 
 keywords: vSphere scale cluster, scale vSphere, scale vSphere cluster
 
@@ -33,7 +33,7 @@ subcollection: vmware-solutions
 ## 扩展现有集群的过程
 {: #vs_scalingexistingclusters-procedure}
 
-1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格上的 **VMware**，然后单击**虚拟数据中心**部分中的 **VMware vSphere**。
+1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格中的 **VMware** 图标，然后单击 **VMware 虚拟数据中心**部分中的 **VMware vSphere on IBM Cloud** 卡。
 2. 在 **VMware vSphere on IBM Cloud** 页面上，单击**创建**。  
 3. 单击**扩展现有**选项卡，然后从**集群配置**列表中选择要扩展的集群。
 4. 复查自动填写的集群设置。

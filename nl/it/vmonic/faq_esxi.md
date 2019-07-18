@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-26"
 
 keywords: FAQ, host, ESXi server
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -43,8 +44,8 @@ Per le istanze distribuite nella V2.1 o precedenti, devi abilitare il supporto v
 
    `esxcli system settings advanced set -o /Net/TcpipHeapMax -i 1576`
 
-2. Riavvia ogni server ESXi. Per ulteriori informazioni, vedi [Creating a vSAN 6.x cluster with up to 64 hosts](https://kb.vmware.com/s/article/2110081).
-3. Potresti dover aumentare le dimensioni di vCenter Server per ospitare le VM (Virtual Machine) e i server ESXi aggiunti.
+2. Riavvia ogni server ESXi. Per ulteriori informazioni, vedi [Creating a vSAN 6.x cluster with up to 64 hosts](https://kb.vmware.com/s/article/2110081).{:external}
+3. Potresti dover aumentare le dimensioni di vCenter Server per ospitare le macchine virtuali e i server ESXi aggiunti.
 4. Apri un ticket di supporto IBM per indicare che hai applicato manualmente le modifiche vSAN completando i passi da 1 a 3. Nel ticket, richiedi che la tua istanza aggiornata sia abilitata per avere più di 32 server ESXi.
 
 ## Posso modificare i nomi e gli indirizzi IP del server ESXi?

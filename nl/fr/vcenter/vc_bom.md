@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server BOM, bill of materials vCenter Server, BOM
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -27,20 +28,17 @@ Passez en revue les informations de nomenclature des instances VMware vCenter Se
 
 Le tableau suivant fournit des informations de nomenclature détaillées concernant les réseaux locaux virtuels de vCenter Server.
 
-Tableau 1. Nomenclature des réseaux locaux virtuels des instances vCenter Server
-
 | VLAN       | Type       | Détails       |
 |:---------- |:---------- |:------------- |
 | VLAN1     | Public, Principal | Affectés à des serveurs ESXi physiques pour accès au réseau public. Une adresse IP publique est attribuée aux serveurs, mais cette adresse IP n'est pas configurée sur les serveurs. Ils ne sont donc pas directement accessibles sur le réseau public. Au lieu de cela, le réseau local virtuel public est destiné à fournir un accès Internet public à d'autres composants, tels que les passerelles NSX Edge Services Gateways (ESG). |
 | VLAN2     | Privé A, Principal | Affectés par {{site.data.keyword.cloud}} à des serveurs ESXi physiques. Utilisés par l'interface de gestion pour le trafic de gestion VMware vSphere.<br><br>Affectés à des machines virtuelles qui fonctionnent en tant que composants de gestion.<br><br>Affectés à VMware NSX VTEP (point d'extrémité du tunnel VXLAN) |
 | VLAN3     | Privé B, Portable | Affectés à VMware vSAN, si utilisés.<br><br>Affectés à VMware NFS, si utilisés.<br><br>Affectés à VMware vSphere vMotion.<br><br>Pour NSX-T, affectés à VMware NSX VTEP (point d'extrémité du tunnel VXLAN).|
+{: caption="Tableau 1. Nomenclature des réseaux locaux virtuels des instances vCenter Server" caption-side="top"}
 
 ## Nomenclature logicielle pour les instances vCenter Server
 {: #vc_bom-software}
 
 Le tableau suivant fournit des informations de nomenclature détaillées concernant les composants logiciels vCenter Server.
-
-Tableau 2. Nomenclature des composants logiciels des instances vCenter Server
 
 | Fabricant  | Composant                      | Version    |
 |:------------- |:------------------------------ |:------------- |
@@ -53,6 +51,7 @@ Tableau 2. Nomenclature des composants logiciels des instances vCenter Server
 | VMware       | NSX for vSphere                 | 6.4.4 (build 11197766)    |
 | VMware       | NSX-T for vSphere               | 2.4                       |
 | Microsoft    | Windows Server édition Standard | 2016       |
+{: caption="Tableau 2. Nomenclature des composants logiciels des instances vCenter Server" caption-side="top"}
 
 VMware vSAN est un composant optionnel.
 {:note}
@@ -63,8 +62,6 @@ VMware vSAN est un composant optionnel.
 Consultez le tableau suivant pour obtenir une présentation des paramètres de configuration avancée appliqués aux serveurs ESXi. Ces paramètres varient selon que l'instance vCenter Server est déployée dans la version V2.2 ou dans une version ultérieure, ou mise à niveau vers la version 2.2 ou une version ultérieure à partir de la version 2.1 ou d'une version antérieure.
 
 Les paramètres s'appliquent aux nouvelles instances et aux nouveaux clusters des instances de version 2.2 ou ultérieure. Ils ne s'appliquent pas aux nouveaux clusters d'instances existantes de la version 2.1 ou d'une version antérieure ou d'instances existantes qui sont mises au niveau vers la version 2.2 ou une version ultérieure.
-
-Tableau 3. Paramètres de configuration avancée des serveurs ESXi pour les instances et clusters vCenter Server
 
 | Paramètre de configuration | Nouveau déploiement en version 2.2 ou ultérieure  | Mise à niveau depuis la version 2.1 ou antérieure |
 |:------------- |:------------- |:------------- |
@@ -77,14 +74,17 @@ Tableau 3. Paramètres de configuration avancée des serveurs ESXi pour les inst
 | Queue Full Threshold | **QFullThreshold** = 8 | **/Disk/QFullThreshold** = 8 |
 | TCP/IP Heap Size | **TcpipHeapSize** = 32 | Non défini |
 | TCP/IP Heap Maximum | **TcpipHeapMax** = 1536 | Non défini |
+{: caption="Tableau 3. Paramètres de configuration avancée des serveurs ESXi pour les instances et clusters vCenter Server" caption-side="top"}
 
-**Remarques :**
+### Remarques
+{: #vc_bom-notes}
+
 * Le paramètre **MaxVolumes** est obligatoire pour le service IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} car ce service risque d'utiliser plus que le nombre de montages NFS par défaut sur le serveur ESXi.
 * La valeur **Non défini** d'un paramètre de configuration indique que le nouveau paramètre n'est pas automatiquement appliqué car il nécessite un réamorçage des serveurs ESXi, ce qui risque de provoquer une interruption.
 
   Il est recommandé de remplacer les paramètres de configuration **Non défini** par les nouvelles valeurs afin de garantir la cohérence entre toutes les instances et de permettre la prise en charge appropriée d'une extension de stockage. IBM prévoit de n'effectuer ses tests qu'avec ces nouvelles valeurs pour toutes les {{site.data.keyword.vmwaresolutions_short}} de version 2.2 et éditions ultérieures.
 
-  Pour plus d'informations, voir [Augmentation de la valeur par défaut qui définit le nombre maximum de montages NFS sur un hôte ESXi](https://kb.vmware.com/s/article/2239).
+  Pour plus d'informations, voir [Augmentation de la valeur par défaut qui définit le nombre maximum de montages NFS sur un hôte ESXi](https://kb.vmware.com/s/article/2239){:external}.
 
 ## Paramètres de configuration de NSX et des groupes de ports
 {: #vc_bom-nsx-port-group-config}
@@ -92,8 +92,6 @@ Tableau 3. Paramètres de configuration avancée des serveurs ESXi pour les inst
 Consultez le tableau suivant pour une présentation des paramètres de configuration de VMware NSX et des groupes de ports pour des instances vCenter Server, et pour les différences entre les éditions.
 
 Les paramètres s'appliquent aux nouvelles instances et aux nouveaux clusters des instances de version 2.2 ou ultérieure. Ils ne s'appliquent pas aux nouveaux clusters d'instances existantes de la version 2.1 ou d'une version antérieure ou d'instances existantes qui sont mises au niveau vers la version 2.2 ou une version ultérieure.
-
-Tableau 4. Paramètres de configuration de NSX et des groupes de ports pour des instances vCenter Server
 
 | Paramètre de configuration | Version 2.1 ou antérieure  | Version 2.2 ou ultérieure |   
 |:------------- |:------------- |:------------- |
@@ -104,6 +102,7 @@ Tableau 4. Paramètres de configuration de NSX et des groupes de ports pour des 
 | Port group SDDC-DPortGroup-VSAN (si applicable) | **Active uplinks** défini sur **uplink1** et **Standby uplinks** défini sur **uplink2** | **Active uplinks** défini sur **uplink2** et **Standby uplinks** défini sur **uplink1** |  
 | Port group SDDC-DPortGroup-Mgmt | **Port binding** défini sur **Ephemeral - no binding** et **Load balancing** défini sur **Route based on originating virtual port** | **Port binding** défini sur **Static binding** et **Load balancing** défini sur **Route based on physical NIC load** |  
 | Port group SDDC-DPortGroup-External | **Port binding** défini sur **Ephemeral - no binding** | **Port binding** défini sur **Static binding** |
+{: caption="Tableau 4. Paramètres de configuration de NSX et des groupes de ports pour des instances vCenter Server" caption-side="top"}
 
 ## Paramètres de configuration de MTU réseau
 {: #vc_bom-network-mtu-config}
@@ -116,12 +115,11 @@ A partir de la version 2.1, les connexions de réseau public utilisent 1500 comm
 
 Consultez le tableau suivant pour obtenir une présentation des paramètres de configuration de MTU réseau appliqués au commutateur Distributed Virtual Switch (DVS) public et privé selon que l'instance vCenter Server est déployée en V2.1 ou dans une édition ultérieure.
 
-Tableau 5. Paramètres de configuration de MTU pour les instances et clusters vCenter Server en fonction de la version d'instance
-
 | vDS | V2.1 ou édition ultérieure  | V2.0 ou édition antérieure (ou mise à niveau depuis V2.0 ou une édition antérieure) |
 |:-------------- |:-------------- |:------------- |
 | Commutateur public  | 1500 (valeur par défaut) | 9000 (trames Jumbo) |
 | Commutateur privé | 9000 (trames Jumbo) | 9000 (trames Jumbo) |
+{: caption="Tableau 5. Paramètres de configuration de MTU pour les instances et clusters vCenter Server en fonction de la version d'instance" caption-side="top"}
 
 Les paramètres s'appliquent aux nouvelles instances et aux nouveaux clusters des instances déployées en V2.1 ou dans une édition ultérieure. Les paramètres s'appliquent également aux nouveaux clusters présents dans des {{site.data.keyword.CloudDataCents_notm}} à partir d'instances qui ont été mises à niveau vers V2.1 ou une édition ultérieure.
 
@@ -143,9 +141,9 @@ Afin de mettre à jour le paramètre de MTU pour le commutateur public, procéde
 ## Liens connexes
 {: #vc_bom-related}
 
-* [Numéros et versions de génération de VMware ESXi et ESX (2143832)](https://kb.vmware.com/s/article/2143832)
-* [Numéros et versions de génération de VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
-* [Activation de trames Jumbo sur des commutateurs distribués virtuels](https://kb.vmware.com/s/article/1038827)
-* [{{site.data.keyword.vmwaresolutions_short}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:new_window}
+* [Numéros et versions de génération de VMware ESXi et ESX (2143832)](https://kb.vmware.com/s/article/2143832){:external}
+* [Numéros et versions de génération de VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838){:external}
+* [Activation de trames Jumbo sur des commutateurs distribués virtuels](https://kb.vmware.com/s/article/1038827){:external}
+* [{{site.data.keyword.vmwaresolutions_short}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:external}
 * [Présentation de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
 * [Planification des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)

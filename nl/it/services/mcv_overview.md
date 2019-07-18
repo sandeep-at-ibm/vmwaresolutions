@@ -4,16 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-21"
 
-keywords: Mission Critical VMware, Mission Critical, tech specs Mission Critical
+keywords: Mission Critical VMware, request Mission Critical, tech specs Mission Critical
 
 subcollection: vmware-solutions
 
 
 ---
 
-# Panoramica di Mission Critical VMware on IBM Cloud
+# Mission Critical VMware on IBM Cloud
 {: #mcv_overview}
 
 Mission Critical VMware on {{site.data.keyword.cloud}} offre un'architettura a più zone per aiutare le aziende ad evitare il tempo di inattività delle applicazioni cloud e ad automatizzare i failover in una regione cloud.
@@ -84,7 +84,19 @@ L'architettura di rete ha le seguenti specifiche:
 * Durante un'attività vMotion per VM-A, il traffico continuerà ad entrare ed uscire tramite la zona di disponibilità {{site.data.keyword.cloud_notm}} #1.
 * Durante un malfunzionamento del sito o dell'edge, il traffico sarà instradato al sito disponibile rimanente.
 
+## Procedura per richiedere Mission Critical VMware on IBM Cloud
+{: #mcv_overview-proc}
+
+1. Dalla console {{site.data.keyword.vmwaresolutions_full}}, fai clic su **Introduzione** nel riquadro di navigazione a sinistra.
+2. Scorri la pagina verso il basso e sotto **Servizi gestiti VMware**, fai clic sulla scheda **Mission Critical VMware on IBM Cloud**.
+3. Nella pagina Mission Critical VMware on {{site.data.keyword.cloud_notm}}, nella casella **Contact us for Mission Critical VMware**, fai clic su **Request a consultation**.
+4. Nella pagina IBM Services Expert Hub, fai clic su **Schedule a consultation** per prenotare 30 minuti con un esperto sul servizio.
+
+  Un rappresentante di {{site.data.keyword.vmwaresolutions_short}} ti contatterà utilizzando le tue informazioni di contatto {{site.data.keyword.cloud_notm}} per aiutarti con la soluzione di cui hai bisogno.
+
 ## Link correlati
 {: #mcv_overview-related}
 
-* [Richiesta di Mission Critical VMware on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_mcv)
+* [Servizi gestiti da IMI](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_imi)
+* [Servizi gestiti per Veeam on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
+* [Servizi gestiti per Zerto on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)

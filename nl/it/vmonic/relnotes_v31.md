@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-07-01"
 
 keywords: release notes, what's new, version 3.1
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -21,7 +22,7 @@ subcollection: vmware-solutions
 # Note sulla release per la V3.1
 {: #relnotes_v31}
 
-Questa release include nuove funzioni, aggiornamenti dei componenti, miglioramenti dell'usabilità e correzioni di bug. Per un elenco di problemi risolti nelle diverse release, problemi noti con il prodotto e suggerimenti per l'utilizzo di {{site.data.keyword.vmwaresolutions_full}}, vedi [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Questa release include nuove funzioni, aggiornamenti dei componenti, miglioramenti dell'usabilità e correzioni di bug. Per un elenco di problemi risolti nelle diverse release, problemi noti con il prodotto e suggerimenti per l'utilizzo di {{site.data.keyword.vmwaresolutions_full}}, vedi [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:external}.
 
 ## Istanze Single-node Trial for Data Protection and Disaster Recovery
 {: #relnotes_v31-dr-bundle}
@@ -78,6 +79,11 @@ La password NSX Manager generata per le istanze primarie vCenter Server ha ora u
 ## Aggiornamenti per i servizi aggiuntivi
 {: #relnotes_v31-services}
 
+### Caveonix RiskForesight on IBM Cloud
+{: #relnotes_v31-services-caveonix}
+
+La release corrente installa Caveonix RiskForesight 2.2.1 su tutte le istanze di nuova distribuzione. Per ulteriori informazioni su Caveonix RiskForesight, vedi il [sito web di Caveonix](https://www.caveonix.com/){:external}.
+
 ### Rinnovo automatico per le licenze HyTrust
 {: #relnotes_v31-services-ht}
 
@@ -113,7 +119,7 @@ Per ordinare Zerto on {{site.data.keyword.cloud_notm}}, il tuo account {{site.da
 
 * Gli eventi di gestione dell'istanza Activity Tracker e gli eventi per il servizio KMIP for VMware on IBM Cloud sono stati aggiornati. Per ulteriori informazioni, vedi [Eventi di Activity Tracker](/docs/services/vmwaresolutions?topic=vmware-solutions-at-events).
 * La documentazione di riferimento degli ID utente è stata aggiornata con gli ID utente utilizzati per l'installazione e la configurazione dei servizi da parte dell'automazione dei servizi {{site.data.keyword.cloud_notm}}. Per ulteriori informazioni, vedi la sezione relativa all'*ID utente di servizio* in [ID utente IBM](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_user_ids).
-* È disponibile della documentazione di riferimento per la nuova API ``Retrieve the detailed network interface of a cluster``. Per ulteriori informazioni, vedi [Riferimento API](https://cloud.ibm.com/apidocs/vmware-solutions){:new_window}.
+* È disponibile della documentazione di riferimento per la nuova API ``Retrieve the detailed network interface of a cluster``. Per ulteriori informazioni, vedi [Riferimento API](https://cloud.ibm.com/apidocs/vmware-solutions){:external}.
 * I seguenti documenti tecnici sono nuovi nella sezione *Riferimento* della documentazione dell'utente:
   * [Gestione delle operazioni](/docs/services/vmwaresolutions?topic=vmware-solutions-opsmgmt-intro)
   * [Procedure operative successive](/docs/services/vmwaresolutions?topic=vmware-solutions-opsprocs-intro)

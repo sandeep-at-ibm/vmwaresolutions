@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-21"
 
 subcollection: vmware-solutions
 
@@ -96,11 +96,11 @@ SDDC-Dswitch-Public	  |SDDC-DPortGroup-External	|Porta virtuale di origine	|Atti
 Questa progettazione specifica la configurazione dei componenti NSX ma non applica alcuna configurazione dei componenti della sovrapposizione di rete. È compito del cliente progettare la sovrapposizione di rete in base alle proprie esigenze.
 
 Sono configurati i seguenti componenti:
--	I server di gestione e i controller sono installati e integrati nell'interfaccia utente web vCenter
--	Gli agent ESXi sono installati e gli indirizzi IP VTEP sono configurati per ogni host ESXi.
--	Configurazione VTEP, configurazione dei controller, configurazione VXLAN (zona di trasporto).
--	Dispositivi Gateway dei servizi edge (ESG) NSX che possono essere utilizzati dai componenti di gestione.
--	Solo per vCenter Server, dispositivi Gateway dei servizi edge (ESG) NSX per l'utilizzo da parte dei clienti.
+- I server di gestione e i controller sono installati e integrati nell'interfaccia utente web vCenter
+- Gli agent ESXi sono installati e gli indirizzi IP VTEP sono configurati per ogni host ESXi.
+- Configurazione VTEP, configurazione dei controller, configurazione VXLAN (zona di trasporto).
+- Dispositivi Gateway dei servizi edge (ESG) NSX che possono essere utilizzati dai componenti di gestione.
+- Solo per vCenter Server, dispositivi Gateway dei servizi edge (ESG) NSX per l'utilizzo da parte dei clienti.
 
 I seguenti componenti non sono configurati:
 - Router distribuiti virtuali

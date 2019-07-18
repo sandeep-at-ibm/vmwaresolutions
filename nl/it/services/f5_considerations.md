@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-26"
 
 keywords: F5 BIG-IP, F5 install, tech specs F5
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -60,8 +61,6 @@ Prima di installare il servizio F5 on {{site.data.keyword.cloud_notm}}, esamina 
 
 In base al modello di licenza e alla larghezza di banda che selezioni, vengono distribuite due VM (Virtual Machine) di BIG-IP VE con la seguente configurazione:
 
-Tabella 1. distribuzioni di CPU e RAM per diverse selezioni di larghezza di banda e modello di licenza
-
 | Larghezza di banda massima | Modello di licenza: Buono | Modello di licenza: Migliore | Modello di licenza: Massimo |
 |:------------------|:--------------------|:----------------------|:--------------------|
 | 25 Mbps           | 2 vCPU, 4 GB di RAM    | 4 vCPU, 8 GB di RAM      | 8 vCPU, 16 GB di RAM   |
@@ -70,6 +69,7 @@ Tabella 1. distribuzioni di CPU e RAM per diverse selezioni di larghezza di band
 | 3 Gbps            | 8 vCPU, 16 GB di RAM   | 8 vCPU, 16 GB di RAM     | 8 vCPU, 16 GB di RAM   |
 | 5 Gbps            | 8 vCPU, 16 GB di RAM   | 8 vCPU, 16 GB di RAM     | 8 vCPU, 16 GB di RAM   |
 | 10 Gbps           | 8 vCPU, 16 GB di RAM   | 8 vCPU, 16 GB di RAM     | 8 vCPU, 16 GB di RAM   |
+{: caption="Tabella 1. distribuzioni di CPU e RAM per diverse selezioni di larghezza di banda e modello di licenza" caption-side="top"}
 
 ### Ulteriori considerazioni
 {: #f5_considerations-additional}
@@ -128,4 +128,4 @@ Prima di rimuovere il servizio F5 on {{site.data.keyword.cloud_notm}}, assicurat
 * [Gestione di F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_f5)
 * [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [Domande frequenti](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Sito web F5](https://www.f5.com/){:new_window}
+* [Sito web F5](https://www.f5.com/){:external}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-26"
 
 keywords: vCenter Server Hybridity add cluster, view cluster vCenter Server Hybridity, delete cluster vCenter Server Hybridity
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -31,7 +32,7 @@ subcollection: vmware-solutions
 {: #vc_hybrid_addingviewingclusters-before-add}
 
 * 尽可能使用 {{site.data.keyword.vmwaresolutions_full}} 控制台添加集群，因为在 VMware vSphere Web Client 上所做的更改不会与 {{site.data.keyword.vmwaresolutions_short}} 控制台同步。因此，将集群添加到 vCenter Server 仅适用于内部部署集群，或者无法或不会在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理的集群。
-* 对于部署在（或已升级到）V2.5 和更高版本中的实例，集群数、主机数和 VM 数将决定可以添加的最大集群数限制。您必须遵守适用于部署的 VMware 大小调整准则和限制。有关最大限制的更多信息，请参阅 [VMware 配置最大值](https://configmax.vmware.com/home){:new_window}。
+* 对于部署在（或已升级到）V2.5 和更高版本中的实例，集群数、主机数和 VM 数将决定可以添加的最大集群数限制。您必须遵守适用于部署的 VMware 大小调整准则和限制。有关最大限制的更多信息，请参阅 [VMware 配置最大值](https://configmax.vmware.com/home){:external}。
 * 对于部署在（或已升级到）V2.3 和 V2.4 的实例，最多可以添加 10 个集群。
 
 ### 系统设置
@@ -65,25 +66,23 @@ subcollection: vmware-solutions
 
 选择 **Skylake** 时，可以根据需要选择 CPU 和 RAM 组合。
 
-表 1. Skylake 裸机服务器的选项
-
 | CPU 模型选项   |RAM 选项|
 |:------------- |:------------- |
 |双 Intel Xeon Silver 4110 处理器 / 共 16 个核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
 |双 Intel Xeon Gold 5120 处理器 / 共 28 个核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
 |双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
+{: caption="表 1. Skylake 裸机服务器的选项" caption-side="top"}
 
 #### Broadwell
 {: #vc_hybrid_addingviewingclusters-adding-broadwell}
 
 选择 **Broadwell** 时，可以根据需要选择 CPU 和 RAM 组合。
 
-表 2. Broadwell 裸机服务器的选项
-
 | CPU 模型选项   |RAM 选项|
 |:------------- |:------------- |
 |四核 Intel Xeon E7-4820 V4 / 共 40 个核心，1.9 GHz|128 GB、256 GB、512 GB、1 TB、2 TB、3 TB|
 |四核 Intel Xeon E7-4850 V4 / 共 64 个核心，2.2 GHz|128 GB、256 GB、512 GB、1 TB、2 TB、3 TB|
+{: caption="表 2. Broadwell 裸机服务器的选项" caption-side="top"}
 
 #### 裸机服务器的数量
 {: #vc_hybrid_addingviewingclusters-adding-bare-metal-number}

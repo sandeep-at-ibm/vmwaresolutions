@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: VMware HCX standalone, HCX on-premises, view HCX status
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # オンプレミス VMware HCX on IBM Cloud インスタンスの参照
 {: #standalone_viewingserviceinstances}
@@ -23,8 +25,6 @@ subcollection: vmware-solutions
 
 左側のナビゲーション・ペインの**「リソース」**をクリックし、**「オンプレミス HCX インスタンス」**テーブルまでスクロールダウンして、注文したインスタンスに関する情報を確認します。
 
-表 1. オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスの項目
-
 | 項目        | 説明       |  
 |:------------- |:------------- |
 | 名前 | インスタンスの名前。 |
@@ -32,16 +32,16 @@ subcollection: vmware-solutions
 | 作成時間 | インスタンスが作成された日時。 |
 | 状況 | インスタンスの状況。 |  
 | アクション | インスタンスを削除するには、**「削除」**アイコンをクリックします。 |
+{: caption="表 1. オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスの項目" caption-side="top"}
 
 インスタンスの状況にはいくつかの種類があります。
-
-表 2. オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスの状況の説明
 
 | 状況        | 説明       |
 |:------------- |:------------- |
 | 変更中 | インスタンスは作成中です。 |
 | インストール済み | インスタンスは使用可能です。 |
 | 削除中 | インスタンスは削除中です。 |
+{: caption="表 2. オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスの状況の説明" caption-side="top"}
 
 ## 関連リンク
 {: #standalone_viewingserviceinstances-related}
@@ -49,4 +49,4 @@ subcollection: vmware-solutions
 * [オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスの注文](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_orderingserviceinstances)
 * [オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスの削除](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_deletingserviceinstances)
 * [HCX の用語集](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
-* [VMware Hybrid Cloud Extension の資料](https://cloud.vmware.com/vmware-hcx/resources)
+* [VMware Hybrid Cloud Extension の資料](https://cloud.vmware.com/vmware-hcx/resources){:external}

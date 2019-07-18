@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-28"
 
 keywords: single-node trial, data protection DR, order data protection DR
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -55,7 +56,7 @@ Controlla i requisiti del nome dell'istanza:
 ## Procedura per ordinare istanze Single-node Trial for Data Protection and Disaster Recovery
 {: #dr_backup_bundle_orderinginstance-procedure}
 
-1. Dal catalogo {{site.data.keyword.cloud_notm}}, fai clic su **VMware** dal riquadro di navigazione a sinistra e fai quindi clic su **Single-node Trial for Data Protection and Disaster Recovery** nella sezione **Data center virtuali**.
+1. Dal catalogo {{site.data.keyword.cloud_notm}}, fai clic sull'icona **VMware** nel riquadro di navigazione a sinistra e quindi sulla scheda **Single-node Trial for Data Protection and Disaster Recovery** nella sezione **VMware Virtual Data Centers**.
 2. Nella pagina **Single-node Trial for Data Protection and Disaster Recovery**, fai clic su **Continua**.
 3. Completa la procedura per richiedere un account dell'infrastruttura {{site.data.keyword.cloud_notm}} o fornisci i tuoi **Nome utente** e **Chiave API** esistenti e fai clic su **Recupera**.
 
@@ -78,7 +79,7 @@ del tuo ordine, fai clic sull'icona **Stampa** o **Download** nella parte superi
 
 * La distribuzione dell'istanza inizia automaticamente e viene ordinata la chiave di attivazione del servizio HCX on {{site.data.keyword.cloud_notm}}.
 * Puoi verificare lo stato della distribuzione, inclusi gli eventuali problemi che potrebbero richiedere la tua attenzione, visualizzando la sezione **Cronologia distribuzione** dei dettagli dell'istanza.
-* Quando l'istanza viene distribuita correttamente, vengono installati i componenti descritti in [Specifiche tecniche per le istanze Single-node Trial for Data Protection and Disaster Recovery](https://test.cloud.ibm.com/docs/services/vmwaresolutions/services?topic=vmware-solutions-dr_backup_bundle_overview#dr_backup_bundle_overview-tech-specs).
+* Quando l'istanza viene distribuita correttamente, vengono installati i componenti descritti in [Specifiche tecniche per le istanze Single-node Trial for Data Protection and Disaster Recovery](/docs/services/vmwaresolutions/services?topic=vmware-solutions-dr_backup_bundle_overview#dr_backup_bundle_overview-tech-specs).
 * Quando l'istanza è pronta per l'uso, lo stato dell'istanza viene modificato in **Pronto per l'utilizzo** e riceverai una notifica via e-mail.
 
 #### Processo di distribuzione per HCX on IBM Cloud
@@ -134,14 +135,14 @@ Installa HCX Enterprise Manager in loco e configura la connessione alla tua ista
     2. In **Informazioni di accesso**, individua e prendi nota delle credenziali vCenter.
     3. Fai clic su **Servizi** dal riquadro di navigazione a sinistra.
     4. Nella pagina **Servizi**, fai clic su **Servizi installati**.
-    5. Nella pagina dei dettagli **HCX on IBM Cloud**, individua e prendi nota dell'**HCX Cloud IP**.
+    5. Nella pagina dei dettagli **HCX on IBM Cloud**, individua e prendi nota dell'**IP cloud HCX**.
     6. Assicurati di essere collegato alla VPN per accedere alla tua rete privata {{site.data.keyword.cloud_notm}}.
     7. Fai clic su **Visualizza console cloud HCX**.
   2. Nella **Console cloud HCX**, completa la seguente procedura:
       1. Fai clic sulla scheda **Amministrazione**.
       2. Nella scheda **Aggiornamenti di sistema**, fai clic su **RICHIEDI LINK DI DOWNLOAD**.
       3. Fai clic su **COPIA LINK** e utilizza quindi questo link per scaricare HCX Enterprise Client in un ambiente in loco con accesso al tuo ambiente vSphere in loco.
-3. Nel client web VMware vSphere, distribuisci HCX Enterprise Client come dispositivo virtuale HCX Manager nel tuo ambiente in loco. Attieniti alle istruzioni contenute nel manuale [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}.
+3. Nel client web VMware vSphere, distribuisci HCX Enterprise Client come dispositivo virtuale HCX Manager nel tuo ambiente in loco. Attieniti alle istruzioni contenute nel manuale [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}.
 
     Devi distribuire l'HCX Manager in loco su una rete privata e consentirgli l'accesso alla rete pubblica. Puoi utilizzare un gateway Edge NSX, Vyatta o simile per consentire l'accesso a internet all'HCX Manager in loco. Se i gateway utilizzati per l'accesso alla rete privata e l'accesso alla rete pubblica sono diversi, si consiglia di utilizzare il gateway predefinito per consentire l'accesso alla rete pubblica e la **Console di gestione HCX Manager** per creare una rotta statica per l'accesso alla rete privata.  
     {:note}
@@ -149,16 +150,16 @@ Installa HCX Enterprise Manager in loco e configura la connessione alla tua ista
   1. Accedi alla tua VM HCX Enterprise Manager in loco utilizzando le credenziali specificate durante la distribuzione di OVA.
   2. Immetti la chiave di attivazione quando richiesto.
 
-  Attieniti alle istruzioni contenute nel manuale [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}.
+  Attieniti alle istruzioni contenute nel manuale [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}.
 
 5. Un certificato SSL autofirmato è stato generato dal servizio HCX on {{site.data.keyword.cloud_notm}}. Devi importare il certificato nell'HCX Manager in loco completando le seguenti istruzioni:
     1. Nella **Console di gestione HCX Manager** in loco, fai clic sulla scheda **Amministrazione**.
     2. Dal riquadro di navigazione a sinistra, fai clic su **Certificato CA attendibile** e quindi su **IMPORTA** sulla destra.
     3. Fai clic su **URL** e immetti quindi l'URL del certificato che vuoi applicare. Si tratta dell'**IP cloud HCX** (``https://<cloud-side public IP>``) che puoi trovare nella pagina dei dettagli del servizio HCX on {{site.data.keyword.cloud_notm}} nella console {{site.data.keyword.vmwaresolutions_short}}.
     4. Fai clic su **APPLICA**.
-6. Continua la configurazione iniziale e crea l'interconnessione. Attieniti alle istruzioni contenute nel manuale [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}.
-7. Estendi le reti in VMware HCX dal locale a {{site.data.keyword.cloud_notm}}. Attieniti alle istruzioni contenute nel manuale [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}.
-8. Migra le VM tra i locale e {{site.data.keyword.cloud_notm}}. Attieniti alle istruzioni contenute nel manuale [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}.
+6. Continua la configurazione iniziale e crea l'interconnessione. Attieniti alle istruzioni contenute nel manuale [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}.
+7. Estendi le reti in VMware HCX dal locale a {{site.data.keyword.cloud_notm}}. Attieniti alle istruzioni contenute nel manuale [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}.
+8. Migra le VM tra i locale e {{site.data.keyword.cloud_notm}}. Attieniti alle istruzioni contenute nel manuale [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}.
 
 Devi gestire i componenti dell'infrastruttura {{site.data.keyword.vmwaresolutions_short}} creati nel tuo account {{site.data.keyword.cloud_notm}} solo attraverso la console {{site.data.keyword.vmwaresolutions_short}}, non il {{site.data.keyword.slportal}} o qualsiasi altro mezzo all'esterno della console.
 Se modifichi questi componenti al di fuori della console {{site.data.keyword.vmwaresolutions_short}}, le modifiche non saranno sincronizzate con la console e il tuo ambiente potrebbe diventare instabile.
@@ -194,9 +195,9 @@ Completa la seguente procedura per eliminare un'istanza Single-node Trial for Da
 {: #dr_backup_bundle_orderinginstance-related}
 
 * [Guida di vCenter Server e IBM Cloud Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [Apri un ticket per IBM Cloud privato](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
-* [Risorse VMware HCX](https://hcx.vmware.com/#/docs){:new_window}
-* [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}
+* [Apri un ticket per IBM Cloud privato](https://www.ibm.com/mysupport/s/?language=en_US){:external}
+* [Risorse VMware HCX](https://hcx.vmware.com/#/docs){:external}
+* [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}
 * [Annullamento dei server virtuali](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)
 * [Gestione di Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-managingveeam)
 * [Gestione di Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-managingzertodr)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-28"
 
 keywords: VMware HCX deployment, HCX configuration, order HCX
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -52,7 +53,7 @@ HCX on {{site.data.keyword.cloud_notm}} をインストールするには、以�
   * **秘密鍵:** CA 証明書の秘密鍵を入力します。
   * (オプション) **パスワード:** 秘密鍵が暗号化されている場合は、秘密鍵のパスワードを入力します。
   * (オプション) **パスワードの再入力:** 秘密鍵のパスワードをもう一度入力します。
-  * (オプション) **ホスト名:** CA 証明書の共通名 (CN) にマップするホスト名。 HCX on {{site.data.keyword.cloud_notm}} では、CA 証明書の形式を NSX Edge で有効な形式にしなければなりません。 NSX Edge の証明書の形式について詳しくは、[SSL 証明書のインポート](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html)を参照してください。
+  * (オプション) **ホスト名:** CA 証明書の共通名 (CN) にマップするホスト名。 HCX on {{site.data.keyword.cloud_notm}} では、CA 証明書の形式を NSX Edge で有効な形式にしなければなりません。 NSX Edge の証明書の形式について詳しくは、[SSL 証明書のインポート](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html){:external}を参照してください。
   <!--Need enhancement, it is still not clear what the key pair is used for, is it for connecting to NSX? This is not in architecture doc either. -->
 
 ## HCX on IBM Cloud のデプロイメント・プロセス
@@ -94,5 +95,5 @@ HCX on {{site.data.keyword.cloud_notm}} のデプロイメントは自動的に�
 * [vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
 * [HCX の用語集](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
 * [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
-* [VMware Hybrid Cloud Extension の概要](https://cloud.vmware.com/vmware-hcx)
-* [VMware Hybrid Cloud Extension の資料](https://cloud.vmware.com/vmware-hcx/resources)
+* [VMware Hybrid Cloud Extension の概要](https://cloud.vmware.com/vmware-hcx){:external}
+* [VMware Hybrid Cloud Extension の資料](https://cloud.vmware.com/vmware-hcx/resources){:external}

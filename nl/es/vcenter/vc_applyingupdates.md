@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-06-21"
 
 keywords: vCenter Server update, patch vCenter Server, IBM component update
 
@@ -44,26 +44,12 @@ Expanda la entrada de actualización pulsando la flecha hacia abajo y verifique 
 * El impacto de la actualización sobre el entorno virtual VMware. En la Tabla 1 se muestra cómo afectan al sistema distintos niveles de impacto.
 * Los detalles de la actualización.
 
-Tabla 1. Niveles de actualización e impacto
-
-<table>
-  <tr>
-    <th>Nivel de actualización</th>
-    <th>Impacto</th>
-  </tr>
-  <tr>
-    <td>Bajo</td>
-    <td>Esta actualización no afecta a ningún sistema. No es necesario que la aplique durante un tiempo de inactividad planificado.</td>
-  </tr>
-  <tr>
-    <td>Medio</td>
-  <td>Esta actualización puede afectar a algunos sistemas. Se recomienda aplicarla durante un tiempo de inactividad planificado.</td>
-  </tr>
-    <tr>
-    <td>Grave</td>
-  <td>Esta actualización afecta a algunos o a todos los sistemas. Debe aplicarla durante un tiempo de inactividad planificado.</td>
-  </tr>
-</table>
+| Nivel de actualización | Impacto |
+|:------------ |:------ |
+| Bajo | Esta actualización no afecta a ningún sistema. No es necesario que la aplique durante un tiempo de inactividad planificado. |
+| Medio | Esta actualización puede afectar a algunos sistemas. Se recomienda aplicarla durante un tiempo de inactividad planificado. |
+| Grave | Esta actualización afecta a algunos o a todos los sistemas. Debe aplicarla durante un tiempo de inactividad planificado. |
+{: caption="Tabla 1. Niveles de actualización e impacto" caption-side="top"}
 
 ## Procedimiento para aplicar actualizaciones de componentes de gestión de IBM (instancias de V2.1 a V2.4)
 {: #vc_applyingupdates-procedure}
@@ -89,38 +75,15 @@ Tabla 1. Niveles de actualización e impacto
 
 2. Para ver detalles sobre los estados de una actualización, consulte la tabla siguiente.
 
-   Tabla 2. Detalles de los estados de actualización
-
-    <table>
-      <tr>
-        <th>Estado</th>
-        <th>Detalles</th>
-      </tr>
-      <tr>
-        <td>Disponible</td>
-        <td>La actualización está lista para ser aplicarse. No puede seleccionar una actualización disponible hasta que se hayan aplicado sus actualizaciones anteriores.</td>
-      </tr>
-      <tr>
-        <td>En curso</td>
-      <td>El trabajo de actualización se ha iniciado pero todavía no ha finalizado. No puede aplicar ninguna otra actualización hasta que finalice el trabajo de actualización actual. </td>
-      </tr>
-        <tr>
-        <td>Instalado</td>
-      <td>El trabajo de actualización ha finalizado. El componente correspondiente de la plataforma VMware se ha actualizado.</td>
-      </tr>
-        <tr>
-        <td>Fallido</td>
-      <td>El trabajo de actualización ha fallado. La consola muestra un error correspondiente a la anomalía de actualización. Revise el error y solucione el problema antes de aplicar la actualización.</td>
-      </tr>
-          <tr>
-        <td>Planificado</td>
-      <td>El trabajo de actualización está planificado para un momento posterior. El trabajo de actualización se inicia automáticamente en el momento planificado.</td>
-      </tr>
-          <tr>
-        <td>Desconocido</td>
-      <td>No se puede obtener el estado del trabajo de actualización. Póngase en contacto con el servicio de soporte de IBM para obtener ayuda.</td>
-      </tr>
-    </table>
+| Estado | Detalles |
+|:------ |:------- |
+| Disponible | La actualización está lista para ser aplicarse. No puede seleccionar una actualización disponible hasta que se hayan aplicado sus actualizaciones anteriores. |
+| En curso | El trabajo de actualización se ha iniciado pero todavía no ha finalizado. No puede aplicar ninguna otra actualización hasta que finalice el trabajo de actualización actual. |
+| Instalado | El trabajo de actualización ha finalizado. El componente correspondiente de la plataforma VMware se ha actualizado. |
+| Fallido | El trabajo de actualización ha fallado. La consola muestra un error correspondiente a la anomalía de actualización. Revise el error y solucione el problema antes de aplicar la actualización. |
+| Planificado | El trabajo de actualización está planificado para un momento posterior. El trabajo de actualización se inicia automáticamente en el momento planificado. |
+| Desconocido | No se puede obtener el estado del trabajo de actualización. Póngase en contacto con el servicio de soporte de IBM para obtener ayuda. |
+{: caption="Tabla 2. Detalles de los estados de actualización" caption-side="top"}
 
 3. Si el proceso de actualización falla en un paso específico, [póngase en contacto con el equipo de soporte de IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support) para obtener ayuda. Obtendrá información sobre cómo resolver el problema e instrucciones para aplicar las actualizaciones y parches desde el paso que ha fallado.
 

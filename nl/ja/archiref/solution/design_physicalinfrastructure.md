@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-11"
+lastupdated: "2019-07-02"
 
 subcollection: vmware-solutions
 
@@ -24,7 +24,7 @@ subcollection: vmware-solutions
   <dt class="dt dlterm">物理コンピュート</dt>
   <dd class="dd">物理コンピュートは、仮想インフラストラクチャーによって使用される物理処理と物理メモリーを提供します。 この設計では、コンピュート・コンポーネントは {{site.data.keyword.baremetal_long}}によって提供されます。これらのコンポーネントは、[VMware Hardware Compatibility Guide (HCG)](https://www.vmware.com/resources/compatibility/search.php) にリストされています。</dd>
   <dt class="dt dlterm">物理ストレージ</dt>
-  <dd class="dd">物理ストレージは、仮想インフラストラクチャーによって使用されるロー・ストレージ容量を提供します。 ストレージ・コンポーネントは、{{site.data.keyword.baremetal_short}}、または NFS v3<!-- or iSCSI --> を使用する共有 Network Attached Storage (NAS) アレイのいずれかによって提供されます。</dd>
+  <dd class="dd">物理ストレージは、仮想インフラストラクチャーによって使用されるロー・ストレージ容量を提供します。 ストレージ・コンポーネントは、{{site.data.keyword.baremetal_short}}、または NFS v3 を使用する共有 Network Attached Storage (NAS) アレイのいずれかによって提供されます。</dd>
   <dt class="dt dlterm">物理ネットワーク</dt>
   <dd class="dd">物理ネットワークは、後にネットワーク仮想化で使用される環境へのネットワーク接続を提供します。 このネットワークは {{site.data.keyword.cloud_notm}} サービス・ネットワークによって提供され、DNS や NTP などの追加のサービスが含まれています。</dd>
 </dl>
@@ -91,7 +91,7 @@ subcollection: vmware-solutions
 
 {{site.data.keyword.cloud_notm}} は、{{site.data.keyword.cloud_notm}} インフラストラクチャー内で使用される 2 つのタイプの IP アドレスを割り振ります。
 * プライマリー IP アドレスは、{{site.data.keyword.cloud_notm}} によってプロビジョンされるデバイス、ベア・メタル・サーバー、仮想サーバーに割り当てられます。 これらのブロックでは、どのような IP アドレスも割り当てないでください。
-* 必要に応じて割り当てたり管理したりするために、ポータブル IP アドレスが用意されています。 vCenter Server は、その用途のために幾つかのポータブル IP 範囲をプロビジョンします。 お客様用として指定されている NSX-T または NSX-V のコンポーネントに割り当てられているポータブル範囲だけを使用してください。 例えば、**お客様エッジ**です。
+* 必要に応じて割り当てたり管理したりするために、ポータブル IP アドレスが用意されています。 vCenter Server は、その用途のために幾つかのポータブル IP 範囲をプロビジョンします。 特定の NSX-T または NSX-V のコンポーネントに割り当てられ、お客様用として指定されている、ポータブル IP アドレス範囲だけを使用してください。例えば、**お客様エッジ**です。
 
 アカウントを**「Virtual Routing and Forwarding (VRF)」**アカウントとして構成すると、アカウントに属する VLAN にプライマリー IP アドレスまたはポータブル IP アドレスをルーティングできるようになります。
 
@@ -128,7 +128,6 @@ vCenter Server オファリング内で使用するベアメタル・サーバ�
 * 残りのサブネットは、ストレージ・トラフィックに使用されます。
    * vSAN 使用時は、vSAN トラフィックに使用されるカーネル・ポート・グループにサブネットが割り当てられます。
    * NFS 接続の NAS を使用する場合は、NFS トラフィック専用のポート・グループにサブネットが割り当てられます。
-<!--* For iSCSI attachment, two port groups are created to allow multipathing active-active across both private NIC ports as only one NIC port can be active at a time per the VMware iSCSI documentation.-->
 
 vCenter Server 自動デプロイメントの一部として構成されたすべてのサブネットで、{{site.data.keyword.cloud_notm}} 管理範囲が使用されます。 これは、今すぐまたはこれから接続が必要なときに {{site.data.keyword.cloud_notm}} アカウントの範囲内のどのデータ・センターにもどのような IP アドレスでもルーティングできるようにするためです。
 
@@ -138,14 +137,13 @@ vCenter Server 自動デプロイメントの一部として構成されたす�
 
 | VLAN | タイプ | 説明 |
 |:---- |:---- |:----------- |
-| パブリック| プライマリー  | パブリック・ネットワーク・アクセス用に物理ホストに割り当てられます。 ホストにパブリック IP アドレスが割り当てられていますが、この IP アドレスはホスト上で構成されていないため、パブリック・ネットワーク上で直接アクセスできません。代わりに、パブリック VLAN は、NSX Edge Services Gateway (ESG) などの他のコンポーネントにパブリック・インターネット・アクセスを提供することを目的としています。 |
+| パブリック| プライマリー  | パブリック・ネットワーク・アクセス用に物理ホストに割り当てられます。 ホストにパブリック IP アドレスが割り当てられていますが、この IP アドレスはホスト上で構成されていないため、パブリック・ネットワーク上で直接アクセスできません。 代わりに、パブリック VLAN は、NSX Edge Services Gateway (ESG) などの他のコンポーネントにパブリック・インターネット・アクセスを提供することを目的としています。 |
 | プライベート A | プライマリー  | {{site.data.keyword.cloud_notm}} によって割り当てられる物理ホストに割り当てられる単一サブネット。 管理インターフェースで vSphere 管理トラフィック用に使用されます。 |
 | プライベート A | ポータブル | 管理コンポーネントとして機能する仮想マシンに割り当てられる単一サブネット |
 | プライベート A | ポータブル | NSX-V または NSX-T の VTEP に割り当てられる 1 つのサブネット |
 | プライベート B | ポータブル | 使用中の場合に vSAN 用に割り当てられる単一サブネット |
 | プライベート B | ポータブル | 使用中の場合に NAS 用に割り当てられる単一サブネット |
 | プライベート B | ポータブル | vMotion 用に割り当てられる単一サブネット |
-<!--| Private B | Portable | Two subnets assigned for iSCSI NAS, if in use (one per physical NIC port) |-->
 
 この設計では、デフォルト・ルートとして {{site.data.keyword.cloud_notm}} バックエンド「プライベート・ネットワーク」カスタマー・ルーター (BCR) を指すようにすべての VLAN-backed ホストおよび仮想マシンが構成されます。 vCenter Server インスタンスによってソフトウェア定義ネットワーキング (SDN) が使用可能になりますが、VMware インスタンス内で作成されて内部サブネットへのルーティングを含むネットワーク・オーバーレイは、{{site.data.keyword.cloud_notm}} 管理ルーターでは認識されません。
 
@@ -182,22 +180,6 @@ vSphere ESXi ハイパーバイザーは、永続ロケーションにインス�
 購入時または購入後に、どのホストでもワークロードに応じてさらにファイル共有をコンソール内で割り振ってマウントできます。 対応する {{site.data.keyword.CloudDataCent_notm}}内の使用可能な {{site.data.keyword.cloud_notm}} エンデュランス・ファイル・ストレージ容量オプションとパフォーマンス・ティアの中から選択できます。 共有はすべて、NFS v3 プロトコルを使用して接続されます。 また、NetApp ONTAP Select オファリングを適用することによって NFS v3 ファイル共有を接続することができます。
 
 10 IOPS/GB の可用性は IBM Cloud データ・センターに依存しています。 10 IOPS/GB パフォーマンス・ティアを提供する {{site.data.keyword.CloudDataCents_notm}}は、保存中のデータのプロバイダー管理暗号化 (AES-256 暗号化) も備えており、オール・フラッシュ・ストレージによってバックアップされます。 10 IOPS/GB パフォーマンス・ティアの容量は、最大 4 TB に制限されます。 このソリューションで使用される共有 NAS について詳しくは、[共有ストレージのアーキテクチャー](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits)を参照してください。
-
-<!--
-### Shared iSCSI storage
-{: #design_physicalinfrastructure-shared-iscsi}
-
-This architecture allows you to use iSCSI storage, however iSCSI storage is not automatically provisioned by IBM Cloud for VMware Solutions. You can provision it manually.
-
-Similar to NFS, for shared iSCSI storage, one 2-TB iSCSI LUN will be attached to the hosts that comprise the initial VMware cluster. This iSCSI LUN is used for management components such as the VMware vCenter Server, Platform Services Controller, and VMware NSX. The storage is attached through the iSCSI protocol at a 2 IOPS/GB level from IBM Cloud.
-
-![iSCSI LUNs attached to VMware deployment](../../images/vcsv4radiagrams-ra-iscsi-lun.svg "iSCSI LUNs attached to VMware deployment"){: caption="Figure 5. iSCSI LUNs attached to VMware deployment" caption-side="bottom"}
-
-Additional iSCSI LUNs for workloads can also be allocated and mounted across all hosts. Select from the available IBM Cloud Endurance block storage capacity options and performance tiers in the corresponding IBM Cloud Data Center. All LUNs are attached by using the iSCSI protocol. Additionally, it is possible to attach iSCSI LUNs from the NetApp ONTAP Select offering.
-
-The availability of the 10 IOPS/GB depends on the IBM Cloud Data Center. Data centers that offer the 10 IOPS/GB performance tier also include provider–managed encryption of data at rest (AES–256 encryption), and are backed by all–flash storage. The 10 IOPS/GB performance tier is limited to a maximum capacity of 4 TB.
-
--->
 
 このソリューションで使用される共有 NAS について詳しくは、[共有ストレージのアーキテクチャー](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits)を参照してください。
 

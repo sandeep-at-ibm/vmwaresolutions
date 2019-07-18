@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server Hybridity migrate instance, add account vCenter Server Hybridity, migrate cloud account Hybridity
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # 將 2.5 版之前的 vCenter Server with Hybridity Bundle 實例移轉至 IBM Cloud 帳戶
 {: #vc_hybrid_addinstancetousraccount}
@@ -25,7 +27,7 @@ subcollection: vmware-solutions
 
 請確定您要將實例移轉至的 {{site.data.keyword.cloud_notm}} 帳戶不是僅限 IaaS 帳戶。僅限 IaaS 帳戶是未鏈結至 {{site.data.keyword.cloud_notm}} 帳戶的 {{site.data.keyword.cloud_notm}} 基礎架構帳戶。
 
-如需如何將僅限 IaaS 帳戶鏈結至 PaaS 帳戶的相關資訊，請參閱 [Follow these steps to link your IaaS and PaaS accounts](https://www.ibm.com/cloud/blog/follow-steps-link-iaas-paas-accounts){:new_window}。
+如需如何將僅限 IaaS 帳戶鏈結至 PaaS 帳戶的相關資訊，請參閱 [Follow these steps to link your IaaS and PaaS accounts](https://www.ibm.com/cloud/blog/follow-steps-link-iaas-paas-accounts){:external}。
 
 ## 移轉實例的程序
 {: #vc_hybrid_addinstancetousraccount-procedure}

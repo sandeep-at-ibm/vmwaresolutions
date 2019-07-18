@@ -22,7 +22,7 @@ Antes de iniciar esta tarea, recupere todos los hosts físicos de direcciones IP
 
 Para cada host, de forma sucesiva:
 1. Utilice el cliente web de vSphere para colocar el host de vSphere ESXi en modalidad de mantenimiento, seleccionando **Inicio** > **Hosts y clústeres**. En el panel Navegador, seleccione el host de ESXi de vSphere y pulse con el botón derecho del ratón en el host y seleccione **Modalidad de mantenimiento** > **Entrar en modalidad de mantenimiento**. Como el host forma parte de un clúster DRS automatizado, las máquinas virtuales se migran a hosts diferentes cuando el host entra en modalidad de mantenimiento.
-2. Ejecute SSH en el host de vSphere ESXi con los detalles de la consola de IBM Cloud for VMware Solutions. 
+2. Ejecute SSH en el host de vSphere ESXi con los detalles de la consola de IBM Cloud for VMware Solutions.
 3. Ejecute el mandato vCLI siguiente para habilite los controladores nativos ixgben:
   `esxcli system module set --enabled=true --module=ixgben`
 4. Ejecute el siguiente mandato vCLI para rearrancar el host de vSphere ESXi:

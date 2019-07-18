@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-31"
+lastupdated: "2019-06-28"
 
 keywords: planning vCenter Server Hybridity, data center hybridity, vCenter Server Hybridity
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # Requisitos y planificación de instancias de vCenter Server con el paquete híbrido (Hybridity)
 {: #vc_hybrid_planning}
@@ -21,14 +23,12 @@ Revise los siguientes requisitos antes de solicitar su instancia de VMware vCent
 ## Requisitos de la cuenta de IBM Cloud
 {: #vc_hybrid_planning-account-req}
 
-La cuenta de {{site.data.keyword.cloud_notm}} que utilice debe cumplir ciertos requisitos. Para obtener más información, consulte [Requisitos para la cuenta de {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req). 
+La cuenta de {{site.data.keyword.cloud_notm}} que utilice debe cumplir ciertos requisitos. Para obtener más información, consulte [Requisitos para la cuenta de {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req).
 
 ## Disponibilidad del centro de datos de IBM Cloud
 {: #vc_hybrid_planning-dc-availability}
 
 El despliegue de vCenter Server con el paquete híbrido (Hybridity) impone requisitos estrictos en cuanto a la infraestructura física. Por lo tanto, en {{site.data.keyword.CloudDataCents_notm}} solo puede desplegar instancias que cumplan los requisitos. Están disponibles los siguientes {{site.data.keyword.CloudDataCents_notm}} para el despliegue de vCenter Server con el paquete híbrido (Hybridity):
-
-Tabla 1. Disponible {{site.data.keyword.CloudDataCents_notm}} para instancias de vCenter Server con el paquete híbrido (Hybridity)
 
 | {{site.data.keyword.CloudDataCent_notm}} | Ubicación | Región |
 |:----------------------|:---------|:---------------|
@@ -65,16 +65,16 @@ Tabla 1. Disponible {{site.data.keyword.CloudDataCents_notm}} para instancias de
 | WDC04 | Washington, DC | América del Norte este |
 | WDC06 | Washington, DC | América del Norte este |
 | WDC07 | Washington, DC | América del Norte este |
+{: caption="Tabla 1. Disponible {{site.data.keyword.CloudDataCents_notm}} para instancias de vCenter Server con el paquete híbrido (Hybridity)" caption-side="top"}
 
 En función de la disponibilidad y del suministro de inventario, {{site.data.keyword.CloudDataCents_notm}} puede mostrar un indicador de estado en la consola de {{site.data.keyword.vmwaresolutions_short}} que le ayudará a planificar sus despliegues.
-
-Tabla 2. Indicadores de estado para {{site.data.keyword.CloudDataCents_notm}} cuando se solicitan instancias de vCenter Server con el paquete híbrido (Hybridity)
 
 | Estado | Detalles del estado |
 |:------------------------------|:--------------------------------------------------|
 | Coming Soon                   | El {{site.data.keyword.CloudDataCent_notm}} no está disponible actualmente. |
 | Temporarily Out of Inventory  | El {{site.data.keyword.CloudDataCent_notm}} no tiene disponibilidad actualmente. |
 | Limited Inventory             | El {{site.data.keyword.CloudDataCent_notm}} ofrece disponibilidad limitada y es posible que el pedido no se complete. |
+{: caption="Tabla 2. Indicadores de estado para {{site.data.keyword.CloudDataCents_notm}} cuando se solicitan instancias de vCenter Server con el paquete híbrido (Hybridity)" caption-side="top"}
 
 ## Copia de seguridad de los componentes de gestión
 {: #vc_hybrid_planning-backup-mgmt-components}
@@ -95,7 +95,7 @@ Al desplegar este servicio, siga los valores siguientes:
   * **Clave privada**: especifique la clave privada del certificado de CA.
   * (Opcional) **Contraseña**: especifique la contraseña para la clave privada si está cifrada.
   * (Opcional) **Vuelva a escribir la contraseña**: vuelva a escribir la contraseña para la clave privada.
-  * (Opcional) **Nombre de host**: especifique el nombre de host que se correlacionará con el nombre común (CN) del certificado de CA. HCX on {{site.data.keyword.cloud_notm}} requiere que el certificado de CA esté en un formato aceptado por NSX Edge. Para obtener más información sobre los formatos de certificado NSX Edge, consulte [Importación de certificados SSL](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html).
+  * (Opcional) **Nombre de host**: especifique el nombre de host que se correlacionará con el nombre común (CN) del certificado de CA. HCX on {{site.data.keyword.cloud_notm}} requiere que el certificado de CA esté en un formato aceptado por NSX Edge. Para obtener más información sobre los formatos de certificado NSX Edge, consulte [Importación de certificados SSL](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html){:external}.
 
 Puede solicitar otros servicios complementarios para su instancia en función de sus necesidades, por ejemplo, la recuperación tras desastre. Para obtener más información, consulte [Solicitud, visualización y eliminación de servicios para instancias de vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices).
 

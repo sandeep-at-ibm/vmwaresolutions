@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-31"
+lastupdated: "2019-06-28"
 
 keywords: planning vCenter Server Hybridity, data center hybridity, vCenter Server Hybridity
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # vCenter Server with Hybridity Bundle インスタンスの要件と計画
 {: #vc_hybrid_planning}
@@ -27,8 +29,6 @@ Hybridity Bundle インスタンスを使用して、VMware vCenter Server on {{
 {: #vc_hybrid_planning-dc-availability}
 
 vCenter Server with Hybridity Bundle のデプロイメントには、物理インフラストラクチャーに関する厳密な要件があります。 そのため、要件を満たす {{site.data.keyword.CloudDataCents_notm}}にしかインスタンスはデプロイできません。 vCenter Server with Hybridity Bundle のデプロイメントには、以下の {{site.data.keyword.CloudDataCents_notm}}を使用できます。
-
-表 1. vCenter Server with Hybridity Bundle インスタンスに使用可能な {{site.data.keyword.CloudDataCents_notm}}
 
 | {{site.data.keyword.CloudDataCent_notm}} | ロケーション | 地域 |
 |:----------------------|:---------|:---------------|
@@ -65,16 +65,16 @@ vCenter Server with Hybridity Bundle のデプロイメントには、物理イ�
 | WDC04 | ワシントン、DC | 北米東部 |
 | WDC06 | ワシントン、DC | 北米東部 |
 | WDC07 | ワシントン、DC | 北米東部 |
+{: caption="表 1. vCenter Server with Hybridity Bundle インスタンスに使用可能な {{site.data.keyword.CloudDataCents_notm}}" caption-side="top"}
 
 入手可能状況と在庫状況によっては、デプロイメントの計画に役立つように、{{site.data.keyword.CloudDataCents_notm}}の {{site.data.keyword.vmwaresolutions_short}} コンソールに状況標識が表示される場合があります。
-
-表 2. vCenter Server with Hybridity Bundle インスタンスの注文時の {{site.data.keyword.CloudDataCents_notm}}の状況標識
 
 | 状況 | 状況の詳細 |
 |:------------------------------|:--------------------------------------------------|
 | 近日対応                   | 現在、{{site.data.keyword.CloudDataCent_notm}}は対応していません。 |
 | 一時的な在庫切れ  | 現時点では、{{site.data.keyword.CloudDataCent_notm}}には在庫がありません。 |
 | 限定在庫             | {{site.data.keyword.CloudDataCent_notm}}の在庫は限られているため、注文が満たされない可能性があります。 |
+{: caption="表 2. vCenter Server with Hybridity Bundle インスタンスの注文時の {{site.data.keyword.CloudDataCents_notm}}の状況標識" caption-side="top"}
 
 ## 管理コンポーネントのバックアップ
 {: #vc_hybrid_planning-backup-mgmt-components}
@@ -95,7 +95,7 @@ vCenter Server with Hybridity Bundle インスタンスには VMware Hybrid Clou
   * **秘密鍵**: CA 証明書の秘密鍵を入力します。
   * (オプション) **パスワード**: 秘密鍵が暗号化されている場合は、秘密鍵のパスワードを入力します。
   * (オプション) **パスワードの再入力**: 秘密鍵のパスワードをもう一度入力します。
-  * (オプション) **ホスト名**: CA 証明書の共通名 (CN) にマップするホスト名を入力します。 HCX on {{site.data.keyword.cloud_notm}} には、NSX Edge で受け入れられる形式の CA 証明書を使用する必要があります。 NSX Edge の証明書の形式について詳しくは、[SSL 証明書のインポート](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html)を参照してください。
+  * (オプション) **ホスト名**: CA 証明書の共通名 (CN) にマップするホスト名を入力します。 HCX on {{site.data.keyword.cloud_notm}} には、NSX Edge で受け入れられる形式の CA 証明書を使用する必要があります。 NSX Edge の証明書の形式について詳しくは、[SSL 証明書のインポート](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html){:external}を参照してください。
 
 それぞれのニーズに基づいて、インスタンスの他のアドオン・サービスを注文できます。例えば、災害復旧などがあります。 詳しくは、[vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)を参照してください。
 

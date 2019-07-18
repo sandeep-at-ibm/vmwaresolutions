@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-26"
 
 keywords: F5 BIG-IP, F5 install, tech specs F5
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -60,8 +61,6 @@ Antes de instalar el servicio F5 on {{site.data.keyword.cloud_notm}}, revise las
 
 En función del modelo de licencia y del ancho de banda que selecciona, se despliegan dos VM (máquinas virtuales) BIG-IP VE con la configuración siguiente:
 
-Tabla 1. Despliegues de CPU y de RAM para distintas las selecciones de ancho de banda y modelo de licencia
-
 | Ancho de banda máximo | Modelo de licencia: Good | Modelo de licencia: Better | Modelo de licencia: Best |
 |:------------------|:--------------------|:----------------------|:--------------------|
 | 25 Mbps           | 2 vCPU, 4 GB de RAM    | 4 vCPU, 8 GB de RAM      | 8 vCPU, 16 GB de RAM   |
@@ -70,6 +69,7 @@ Tabla 1. Despliegues de CPU y de RAM para distintas las selecciones de ancho de 
 | 3 Gbps            | 8 vCPU, 16 GB de RAM   | 8 vCPU, 16 GB de RAM     | 8 vCPU, 16 GB de RAM   |
 | 5 Gbps            | 8 vCPU, 16 GB de RAM   | 8 vCPU, 16 GB de RAM     | 8 vCPU, 16 GB de RAM   |
 | 10 Gbps           | 8 vCPU, 16 GB de RAM   | 8 vCPU, 16 GB de RAM     | 8 vCPU, 16 GB de RAM   |
+{: caption="Tabla 1. Despliegues de CPU y de RAM para distintas las selecciones de ancho de banda y modelo de licencia" caption-side="top"}
 
 ### Consideraciones adicionales
 {: #f5_considerations-additional}
@@ -128,4 +128,4 @@ Antes de eliminar el servicio F5 on {{site.data.keyword.cloud_notm}}, asegúrese
 * [Gestión de F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_f5)
 * [Cómo ponerse en contacto con el equipo de soporte de IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [Preguntas frecuentes](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Sitio web de F5](https://www.f5.com/){:new_window}
+* [Sitio web de F5](https://www.f5.com/){:external}

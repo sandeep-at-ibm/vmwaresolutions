@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-07"
+lastupdated: "2019-07-01"
 
 ---
 
@@ -129,7 +129,7 @@ vSphere 包括使用者可配置的事件及警示子系統，它會追蹤在整
 |標題|說明       |
 |---|---|
 | 作用中 Edge 上的 NSX Edge /var/log 將滿 | 如需警告您 Edge 磁碟將填滿並發現 /var/log 分割區將滿時的暫行解決方法的相關資訊，請參閱 [NSX Edge /var/log is getting full on active Edge (50108355)](https://kb.vmware.com/s/article/50108355){:new_window}。|
-| 測試 HCX 頻寬 | 如需在您認為 HCX 發生網路頻寬問題時使用 `perftest` 尋找 HCX 通道內可用頻寬的相關資訊，請參閱 [Steps to Run Perftest in HCX (56211)](https://kb.vmware.com/s/article/56211?lang=en_US){:new_window}。對每個 `perftest` 都會執行雙向測試。閘道配對的其中一個位在來源資料中心（稱為 OnPrem）內，另一個則位在 {{site.data.keyword.cloud_notm}} 中。`perftest` 傳輸量的運作方式是讓傳送端嘗試在鏈結可以承受時快速傳送。因此，針對每個測試，您會看到「傳送端」速率高於「接收端」速率。您可以將「接收端」速率值視為單向傳輸量結果。 |
+| 測試 HCX 頻寬 | 如需在您認為 HCX 發生網路頻寬問題時使用 `perftest` 尋找 HCX 通道內可用頻寬的相關資訊，請參閱 [Steps to Run Perftest in HCX (56211)](https://kb.vmware.com/s/article/56211?lang=en_US){:new_window}。對每個 `perftest` 都會執行雙向測試。閘道配對的其中一個位在來源資料中心（稱為 OnPrem）內，另一個則位在 {{site.data.keyword.cloud_notm}} 中。`perftest` 傳輸量的運作方式是讓傳送端嘗試在鏈結可以承受時快速傳送。因此，針對每個測試，您會看到「傳送端」速率高於「接收端」速率。您可以將「接收端」速率值視為單向傳輸量結果。|
 | HCX 疑難排解|如需相關資訊，請參閱 [HCX 疑難排解](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-troubleshooting)。|
 | 具有 0% 進度和 0 位元組且狀態為「錯誤」的 HCX 同步狀態 | 如需相關資訊，請參閱 [HCX replication are in Syncing state with 0% progress and 0 bytes with status Error (56710)](https://kb.vmware.com/s/article/56710?lang=en_US#q=HCX){:new_window}。|
 | VM 網路效能不佳 | 檢閱 VM 虛擬 NIC 設定。VMware 建議對 VM 使用 VMXNET 3 虛擬 NIC，因為這是為實現高效能而設計的最新一代半虛擬化 NIC。使用 VMware 相容性清單檢查 VMXNET 3 相容性，如果支援，請變更虛擬 NIC 以獲得額外的網路效能。如需相關資訊，請參閱 [Troubleshooting Networking](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.networking.doc/GUID-217384C2-B361-471D-90C8-BC2676A0ECA6.html){:new_window}。|

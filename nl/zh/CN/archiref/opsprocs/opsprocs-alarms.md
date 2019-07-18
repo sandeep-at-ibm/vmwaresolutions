@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-02"
 
 ---
 
@@ -20,26 +20,44 @@ lastupdated: "2019-06-17"
 
 vSphere 包含事件和警报子系统，用于跟踪 vSphere 环境中发生的事件，并在 vCenter 中提供这些信息。在此子系统中使用了以下术语：
 
-* 事件 - 事件是 vCenter 中对象（例如，主机和虚拟机 (VM)）上发生的系统或用户操作的记录。事件数据包含有关事件的详细信息，例如事件生成方、事件发生时间以及事件类型。在 vSphere Web Client 中，事件数据显示在“监视”选项卡中。事件分类如下：
- * 错误 - 指示系统中发生了无法恢复的问题，将终止进程或操作。
- * 警告 - 指示系统存在潜在风险，需要进行修复。此事件不会终止进程或操作。
- * 参考 - 描述用户或系统操作已成功完成。
- * 审计 - 审计日志数据包含有关操作描述、操作执行者、操作执行时间以及用户 IP 地址的信息。
-* 警报 - 警报是为了响应事件、一组条件或清单对象状态而激活的通知。在 vSphere Client 中，警报定义包含以下元素：
- * 名称和描述 - 提供标识性标签和描述。
- * 目标 - 定义受监视对象的类型。
- * 警报规则 - 定义触发警报的事件、条件或状态，以及定义通知严重性。此外，还定义为了响应触发的警报而执行的操作。
- * 上次修改时间 - 上次修改已定义警报的日期和时间。
- * 警报具有以下严重性级别：
-   * 正常 - 绿色。
-   * 警告 - 黄色。
-   * 警报 - 红色。
-* 警报定义 - 警报定义与清单中选择的对象相关联，并监视其定义中指定的清单对象的类型。警报定义包含以下元素：
- * 名称和描述 - 提供标识性标签和描述。
- * 警报类型 - 定义受监视对象的类型。
- * 触发器 - 定义触发警报的事件、条件或状态，以及定义通知严重性。
- * 容错阈值（报告）- 提供对条件和状态触发器阈值的更多限制，必须超过这些阈值后方可触发警报。
- * 操作 - 定义为了响应触发的警报而执行的操作。VMware 提供了特定于清单对象类型的预定义操作集。
+### 事件
+{: #opsprocs-alarms-events}
+
+事件是 vCenter 中对象（例如，主机和虚拟机 (VM)）上发生的系统或用户操作的记录。事件数据包含有关事件的详细信息，例如事件生成方、事件发生时间以及事件类型。在 vSphere Web Client 中，事件数据显示在“监视”选项卡中。
+
+事件分类如下：
+* 错误 - 指示系统中发生了无法恢复的问题，将终止进程或操作。
+* 警告 - 指示系统存在潜在风险，需要进行修复。此事件不会终止进程或操作。
+* 参考 - 描述用户或系统操作已成功完成。
+* 审计 - 审计日志数据包含有关操作描述、操作执行者、操作执行时间以及用户 IP 地址的信息。
+
+### 警报
+{: #opsprocs-alarms-alarms}
+
+警报是为了响应事件、一组条件或清单对象状态而激活的通知。
+
+在 vSphere Client 中，警报定义包含以下元素：
+* 名称和描述 - 提供标识性标签和描述。
+* 目标 - 定义受监视对象的类型。
+* 警报规则 - 定义触发警报的事件、条件或状态，以及定义通知严重性。此外，还定义为了响应触发的警报而执行的操作。
+* 上次修改时间 - 上次修改已定义警报的日期和时间。
+
+警报具有以下严重性级别：
+* 正常 - 绿色。
+* 警告 - 黄色。
+* 警报 - 红色。
+
+### 警报定义
+{: #opsprocs-alarms-def}
+
+警报定义与清单中选择的对象相关联，并监视其定义中指定的清单对象的类型。
+
+警报定义包含以下元素：
+* 名称和描述 - 提供标识性标签和描述。
+* 警报类型 - 定义受监视对象的类型。
+* 触发器 - 定义触发警报的事件、条件或状态，以及定义通知严重性。
+* 容错阈值（报告）- 提供对条件和状态触发器阈值的更多限制，必须超过这些阈值后方可触发警报。
+* 操作 - 定义为了响应触发的警报而执行的操作。VMware 提供了特定于清单对象类型的预定义操作集。
 * 警报操作 - 警报操作是为了响应触发器而执行的操作。例如，可以在触发警报时，向一个或多个管理员发送电子邮件通知。
 * 确认触发的警报 - 确认警报后，将停止警报操作。确认警报后，不会清除或重置警报。通过确认警报，可以让其他用户知道您在负责处理此问题。
 * 重置触发的警报 - 如果 vCenter 检索不到标识正常条件的事件，那么事件触发的警报可能无法重置为正常状态。在此类情况下，请手动重置警报。
@@ -53,19 +71,19 @@ VMware 提供了以下各表中所述的预配置 vCenter 警报，但为这些�
 警报设置工作流程如下所示：
 * 配置 SMTP 服务器详细信息。
 * 为集群、主机、数据存储和关键虚拟设备（VCSA、PSC、NSX Manager 和 NSX Controller）配置警报操作：
- * 集群 - VMware 高可用性错误。
- * 主机 - CPU 状态、内存状态、存储器状态和硬件状态（即电压、温度或电源状态更改）。
- * 数据存储 - 可用磁盘空间不足。
- * 关键虚拟设备 - CPU 使用率、内存使用率和磁盘等待时间
+  * 集群 - VMware 高可用性错误。
+  * 主机 - CPU 状态、内存状态、存储器状态和硬件状态（即电压、温度或电源状态更改）。
+  * 数据存储 - 可用磁盘空间不足。
+  * 关键虚拟设备 - CPU 使用率、内存使用率和磁盘等待时间
 * 使用主动每日任务：
- * 复查发送的警报 - 是否确实需要这些警报？
- * 复查未发送的警报 - 是否需要了解有关这些警报的信息？
- * 复查度量值 - 度量值是否正确；例如，既然您已了解基线，那么是否 CPU 使用率应该设置为 75%，而不是 90%？
- * 是否需要配置您自己的警报？
- * 是否需要包含虚拟机？
+  * 复查发送的警报 - 是否确实需要这些警报？
+  * 复查未发送的警报 - 是否需要了解有关这些警报的信息？
+  * 复查度量值 - 度量值是否正确；例如，既然您已了解基线，那么是否 CPU 使用率应该设置为 75%，而不是 90%？
+  * 是否需要配置您自己的警报？
+  * 是否需要包含虚拟机？
 
 ##  典型警报工作流程
-{: #opsprocs-alarms- alarm-workflow}
+{: #opsprocs-alarms-alarm-workflow}
 
 警报设置后，下面是触发警报时警报工作流程的示例，系统管理员通常会采用此工作流程：
 
@@ -187,7 +205,7 @@ VMware 提供了以下各表中所述的预配置 vCenter 警报，但为这些�
 |VMKernel NIC 未正确配置*|配置为在发生以下严重事件时发送一次电子邮件：在 `/Migrate/VMknic` 中指定的 `vmknic` 无效。|[网络故障排除](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.networking.doc/GUID-217384C2-B361-471D-90C8-BC2676A0ECA6.html){:new_window}|
 |无法连接到存储器*|配置为在发生以下严重事件时发送一次电子邮件：存储器连接丢失，存储路径冗余丢失，存储路径冗余已降级或失去与 NFS 服务器的连接。| [识别 ESX/ESXi 主机上的光纤通道、iSCSI 和 NFS 存储问题 (1003659)g](https://kb.vmware.com/s/article/1003659){:new_window} |
 |迁移错误*|配置为在发生以下严重事件时发送一次电子邮件：无法迁移 VM，迁移错误，迁移主机错误，无法重定位 VM 或 VM 孤立。|[VM 的 vMotion 或 Storage vMotion 失败并显示以下错误：迁移超出了 100 秒的最长转换时间 (2141355)](https://kb.vmware.com/s/article/2141355){:new_window}|
-|退出备用错误|在 vCenter Server 实例中未配置，因为不建议使用 DPM。|在低资源利用率期间，VM 会迁移到较少的主机上，并且不需要的 ESX 主机的电源会关闭，因此 vSphere 分布式电源管理 (DPM) 通过动态合并工作负载，节省内部部署的功耗。但通过关闭 IBM Cloud 裸机服务器的电源，无法实现节省功耗。|
+|退出备用错误|在 vCenter Server 实例中未配置，因为不建议使用 DPM。|在低资源利用率期间，VM 会迁移到较少的主机上，并且不需要的 ESX 主机的电源会关闭，因此 vSphere 分布式电源管理 (DPM) 通过动态合并工作负载，节省了内部部署的功耗。但通过关闭 IBM Cloud 裸机服务器的电源，无法实现节省功耗。|
 
 \* 表示无状态警报。vCenter 不会保留无状态警报的数据，也不会计算或显示其状态。无法确认或重置无状态警报。
 {:note}
@@ -212,93 +230,93 @@ VMware 提供了以下各表中所述的预配置 vCenter 警报，但为这些�
 |vSAN 许可证已到期|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[有关 vSAN 许可证的注意事项](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vsan-planning.doc/GUID-20731F2A-B001-4A05-AB4D-30C5B0044EC5.html){:new_window}|
 |vSAN 有时间限制的许可证已到期|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[有关 vSAN 许可证的注意事项](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vsan-planning.doc/GUID-20731F2A-B001-4A05-AB4D-30C5B0044EC5.html){:new_window}|
 |vSAN 硬件兼容性问题|不视为有必要通知。警报作为主动日常检查的一部分进行复查。| [vSAN Health Check Information (2114803)](https://kb.vmware.com/s/article/2114803?CoveoV2.CoveoLightningApex.getInitializationData=1&r=2&ui-communities-components-aura-components-forceCommunity-seoAssistant.SeoAssistant.getSeoData=1&other.KM_Utility.getArticleDetails=1&other.KM_Utility.getArticleMetadata=2&other.KM_Utility.getUrl=1&other.KM_Utility.getUser=1&other.KM_Utility.getAllTranslatedLanguages=2&ui-comm-runtime-components-aura-components-siteforce-qb.Quarterback.validateRoute=1){:new_window} |
-|vSAN 运行状况警报“活动多点广播连接检查”|配置为在发生严重事件时发送一次电子邮件。|[Virtual SAN 运行状况服务 - 网络运行状况 - 活动多播连接检查 (2116296)](https://kb.vmware.com/s/article/2116296){:new_window}|
-|vSAN 运行状况警报“高级 vSAN 配置同步”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[vSAN Health Service - 群集运行状况 - 高级 vSAN 配置同步 (2107713)](https://kb.vmware.com/s/article/2107713){:new_window}|
-|vSAN 运行状况警报“再次发生主机故障后”|配置为在发生严重事件时发送一次电子邮件。| [vSAN health warning “after one additional host failure” is reported incorrectly on two node ROBO/stretched clusters (2150568)](https://kb.vmware.com/s/article/2150568?lang=en_US){:new_window} |
-|vSAN 运行状况警报“提供统计信息的所有主机”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[Virtual SAN 运行状况服务 - 性能服务 - 提供统计信息的所有主机检查 (2144400)](https://kb.vmware.com/s/article/2144400){:new_window}|
-|vSAN 运行状况警报“所有主机均已配置 vSAN vmknic”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。| [vSAN 运行状况服务 - 网络运行状况 - 所有主机均已配置 vSAN vmknic (2108062)](https://kb.vmware.com/s/article/2108062){:new_window} |
-|vSAN 运行状况警报“所有主机均具有匹配的多点广播设置”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[Virtual SAN 运行状况服务 - 网络运行状况 - 所有主机均具有匹配的多播设置 (2108092)](https://kb.vmware.com/s/article/2108092){:new_window}|
-|vSAN 运行状况警报“所有主机都具有匹配的子网”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[Virtual SAN 运行状况服务 - 网络运行状况 - 所有主机都具有匹配的子网 (2108066)](https://kb.vmware.com/s/article/2108066){:new_window}|
-|vSAN 运行状况警报“基本（单点广播）连接检查（正常 ping 操作）”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[Virtual SAN 运行状况服务 - 网络运行状况 - 主机小数据包 ping 测试（连接检查）和主机大数据包 ping 测试（MTU 检查）(2108285)](https://kb.vmware.com/s/article/2108285){:new_window}|
-|vSAN 运行状况警报“集群运行状况”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[vSAN 运行状况服务 - 群集运行状况 - vSAN 运行状况服务安装 (2109874)](https://kb.vmware.com/s/article/2109874){:new_window}|
-|vSAN 运行状况警报“组件元数据运行状况”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[组件元数据运行状况检查失败并显示无效状态错误 (2145347)](https://kb.vmware.com/s/article/2145347){:new_window}|
-|vSAN 运行状况警报“拥堵”|配置为在发生严重事件时发送一次电子邮件。|[vSAN 运行状况服务 - 物理磁盘运行状况 - 拥堵 (2109255)](https://kb.vmware.com/s/article/2109255){:new_window}|
-|vSAN 运行状况警报“控制器磁盘组方式经过 VMware 认证”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[vSAN 运行状况服务 - vSAN HCL 运行状况 - vSAN HCL 上的 SCSI 控制器 (2109871)](https://kb.vmware.com/s/article/2109871){:new_window}|
-|vSAN 运行状况警报“控制器驱动程序经过 VMware 认证”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[vSAN 运行状况服务 - vSAN HCL 运行状况 - 控制器驱动程序 (2109263)](https://kb.vmware.com/s/article/2109263){:new_window}|
-|vSAN 运行状况警报“控制器固件经过 VMware 认证”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[Controller firmware health check warning if multiple firmware versions are supported (2150398)](https://kb.vmware.com/s/article/2150398){:new_window}|
-|vSAN 运行状况警报“对于 ESXi 发行版，控制器经过 VMware 认证”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[vSAN 运行状况服务 - vSAN HCL 运行状况 - 控制器版本支持 (2109262)](https://kb.vmware.com/s/article/2109262){:new_window}|
-|vSAN 运行状况警报“主机上禁用了 CPU AES-NI”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。| [vSAN Health Service - Encryption - CPU AES-NI Host Enablement Check (2149499)](https://kb.vmware.com/s/article/2149499){:new_window} |
-|vSAN 运行状况警报“当前集群情况”|配置为在发生严重事件时发送一次电子邮件。|[vSAN 运行状况服务 - 限制运行状况 – 当前群集情况 (2108740)](https://kb.vmware.com/s/article/2108740){:new_window}|
-|vSAN 运行状况警报“客户体验改进计划 (CEIP)”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。| [vSAN Health Service - Online Health - CEIP Check (2148866)](https://kb.vmware.com/s/article/2148866){:new_window} |
-|vSAN 运行状况警报“数据运行状况”|配置为在发生严重事件时发送一次电子邮件。|[vSAN 运行状况服务 - 数据运行状况 - vSAN 对象运行状况 (2108319)](https://kb.vmware.com/s/article/2108319){:new_window}|
-|vSAN 运行状况警报“磁盘容量”|配置为在发生警告事件时发送一次电子邮件。|[vSAN 运行状况服务 - 物理磁盘运行状况 - 磁盘容量 (2108907)](https://kb.vmware.com/s/article/2108907){:new_window}|
-|vSAN 运行状况警报“磁盘格式版本”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[vSAN 运行状况服务 - 集群 - 磁盘格式版本 (2146135)](https://kb.vmware.com/s/article/2146135){:new_window}|
-|vSAN 运行状况警报“ESXi vSAN 运行状况服务安装”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[vSAN 运行状况服务 - 群集运行状况 - 最新 VSAN 运行状况服务 (2107705)](https://kb.vmware.com/s/article/2107705){:new_window}|
-|vSAN 运行状况警报“主目录对象”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。| [vSAN Health Service - vSAN iSCSI target service - Home object (2147601)](https://kb.vmware.com/s/article/2147601){:new_window} |
-|vSAN 运行状况警报“主机组件限制”|配置为在发生严重事件时发送一次电子邮件。| [vSAN 运行状况服务 - 限制 - 主机组件 (2146130)](https://kb.vmware.com/s/article/2146130){:new_window} |
-|vSAN 运行状况警报“检索硬件信息时发生主机问题”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。| [vSAN Health Service - HCL Health - Host issues retrieving hardware information (2149290)](https://kb.vmware.com/s/article/2149290){:new_window} |
-|vSAN 运行状况警报“主机维护模式和取消配置状态”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[vSAN 主机维护模式与 vSAN 节点取消配置状态同步 (51464)](https://kb.vmware.com/s/article/51464){:new_window}|
-|vSAN 运行状况警报“主机已与 VC 断开连接”|配置为在发生严重事件时发送一次电子邮件。|[vSAN 运行状况服务 - 网络运行状况 - 主机与 vCenter 断开连接 (2108004)](https://kb.vmware.com/s/article/2108004){:new_window}|
-|vSAN 运行状况警报“存在连接问题的主机”|配置为在发生严重事件时发送一次电子邮件。|[vSAN 运行状况服务 - 网络运行状况 - 存在连接问题的主机 (2108317)](https://kb.vmware.com/s/article/2108317){:new_window}|
-|vSAN 运行状况警报“见证主机上的首选容错域无效”|仅当 vSAN 已延伸时，才视为警报。|[vSAN 运行状况服务 - 见证主机上的首选容错域无效 (2130589)](https://kb.vmware.com/s/article/2130589){:new_window} |
-|vSAN 运行状况警报“单点广播代理程序无效”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[Virtual SAN 运行状况服务 - 无效的单播代理测试 (2144398)](https://kb.vmware.com/s/article/2144398){:new_window}|
-|vSAN 运行状况警报“iSCSI 目标服务”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。| [vSAN Health Service - vSAN iSCSI target service – Network configuration (2147602)](https://kb.vmware.com/s/article/2147602){:new_window} |
-|vSAN 运行状况警报“限制运行状况”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|无其他信息|
-|vSAN 运行状况警报“内存池（堆）”|配置为在发生严重事件时发送一次电子邮件。|[vSAN 运行状况服务 - 物理磁盘运行状况 - 内存池 (2109256)](https://kb.vmware.com/s/article/2109256){:new_window}|
-|vSAN 运行状况警报“内存池（板）”|配置为在发生严重事件时发送一次电子邮件。|[vSAN 运行状况服务 - 物理磁盘运行状况 - 内存池 (2109256)](https://kb.vmware.com/s/article/2109256){:new_window}|
-|vSAN 运行状况警报“MTU 检查（使用较大的包大小执行 ping 操作）”|配置为在发生严重事件时发送一次电子邮件。|[Virtual SAN 运行状况服务 - 网络运行状况 - 主机小数据包 ping 测试（连接检查）和主机大数据包 ping 测试（MTU 检查）(2108285)](https://kb.vmware.com/s/article/2108285){:new_window}|
-|vSAN 运行状况警报“基于其他检查的多点广播评估”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[vSAN 运行状况服务 - 网络运行状况 – 基于其他检查的多播评估 (2108318)](https://kb.vmware.com/s/article/2108318){:new_window}|
-|vSAN 运行状况警报“网络配置”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|无其他信息|
-|vSAN 运行状况警报“网络运行状况”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|无其他信息|
-|vSAN 运行状况警报“网络等待时间检查”|配置为在发生警告事件时发送一次电子邮件。| [vSAN Health Service - Network Health - Network Latency Check (2149511)](https://kb.vmware.com/s/article/2149511){:new_window} |
-|vSAN 运行状况警报“见证主机上未声明任何磁盘”|仅当 vSAN 已延伸时，才视为警报。|[vSAN 运行状况服务 - 见证主机上未声明任何磁盘 (2130584)](https://kb.vmware.com/s/article/2130584){:new_window}|
-|vSAN 运行状况警报“联机运行状况连接”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。| [vSAN Health Service - Online Health - Internet Connectivity Check (2149196)](https://kb.vmware.com/s/article/2149196){:new_window} |
-|vSAN 运行状况警报“操作运行状况”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|无其他信息|
-|vSAN 运行状况警报“性能数据收集”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[性能服务上的 vSAN 运行状况测试失败 (2150589)](https://kb.vmware.com/s/article/2150589){:new_window}|
-|vSAN 运行状况警报“性能服务状态”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[性能服务上的 vSAN 运行状况测试失败 (2150589)](https://kb.vmware.com/s/article/2150589){:new_window}|
-|vSAN 运行状况警报“物理磁盘组件限制运行状况”|配置为在发生严重事件时发送一次电子邮件。|[vSAN 运行状况服务 - 物理磁盘 - 组件数上限 (2146086)](https://kb.vmware.com/s/article/2146086){:new_window}|
-|vSAN 运行状况警报“物理磁盘运行状况检索问题”|配置为在发生严重事件时发送一次电子邮件。| [vSAN Health Service - Physical Disk Health - Physical disk health retrieval issue (2149291)](https://kb.vmware.com/s/article/2149291){:new_window} |
-|vSAN 运行状况警报“物理磁盘运行状况 - 元数据运行状况”|配置为在发生严重事件时发送一次电子邮件。|[vSAN 运行状况服务 - 物理磁盘运行状况 - 元数据运行状况 (2108690)](https://kb.vmware.com/s/article/2108690){:new_window}|
-|vSAN 运行状况警报“首选容错域未设置”|仅当 vSAN 已延伸时，才视为警报。|[vSAN 运行状况服务 - 首选容错域未设置 (2130590)](https://kb.vmware.com/s/article/2130590){:new_window}|
-|vSAN 运行状况警报“再同步操作调速”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。| [vSAN Health Service - Cluster Health - Resynchronization Operations Throttling Check (2149504)](https://kb.vmware.com/s/article/2149504){:new_window} |
-|vSAN 运行状况警报“SCSI 控制器经过 VMware 认证”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[vSAN 运行状况服务 - vSAN HCL 运行状况 - 控制器驱动程序 (2109263)](https://kb.vmware.com/s/article/2109263){:new_window}|
-|vSAN 运行状况警报“服务运行时状态”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|无其他信息|
-|vSAN 运行状况警报“站点等待时间运行状况”|仅当 vSAN 已延伸时，才视为警报。| [vSAN Health Service - Stretched cluster - Site latency (2146133)](https://kb.vmware.com/s/article/2146133){:new_window} |
-|vSAN 运行状况警报“软件版本兼容性”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[vSAN 运行状况服务 - 群集 - 软件版本兼容性 (2146134)](https://kb.vmware.com/s/article/2146134){:new_window}|
-|vSAN 运行状况警报“空间效率配置一致性”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|无其他信息|
-|vSAN 运行状况警报“空间效率使用情况运行状况”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|无其他信息|
-|vSAN 运行状况警报“统计数据库对象冲突”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[vSAN 运行状况服务 - 性能服务 - 统计数据库对象冲突检查 (2144405)](https://kb.vmware.com/s/article/2144405){:new_window}|
-|vSAN 运行状况警报“统计数据库对象”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[vSAN 运行状况服务 - 性能服务 - 统计数据库对象检查 (2144403)](https://kb.vmware.com/s/article/2144403){:new_window}|
-|vSAN 运行状况警报“统计主节点选举”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[vSAN 运行状况服务 - 性能服务 - 统计主节点选举检查 (2144408)](https://kb.vmware.com/s/article/2144408){:new_window}|
-|vSAN 运行状况警报“延伸集群运行状况”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|无其他信息|
-|vSAN 运行状况警报“时间在主机和 VC 之间未同步”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。| [vSAN Health Service - Cluster Health - Time Synchronization Across Hosts and VC (2149505)](https://kb.vmware.com/s/article/2149505){:new_window} |
-|vSAN 运行状况警报“容错域数量异常”|仅当 vSAN 已延伸时，才视为警报。|[SAN 运行状况服务 - 容错域数量异常 (2130581)](https://kb.vmware.com/s/article/2130581){:new_window}|
-|vSAN 运行状况警报“单点广播代理程序配置不一致”|仅当 vSAN 已延伸时，才视为警报。|[vSAN 运行状况服务 - 单播代理配置不一致 (2130580)](https://kb.vmware.com/s/article/2130580){:new_window}|
-|vSAN 运行状况警报“单点广播代理程序未配置”|仅当 vSAN 已延伸时，才视为警报。|[vSAN 运行状况服务 - 单点代理未配置 (2130582)](https://kb.vmware.com/s/article/2130582){:new_window}|
-|vSAN 运行状况警报“主机版本不受支持”|仅当 vSAN 已延伸时，才视为警报。|[vSAN 运行状况服务 - 主机版本不受支持 (2130583)](https://kb.vmware.com/s/article/2130583){:new_window}|
-|vSAN 运行状况警报“vCenter 或主机未连接到密钥管理服务器”|仅当启用了 vSAN 加密时，才视为警报。| [vSAN Health Service - Unsupported host version (2130583)](https://kb.vmware.com/s/article/2149497){:new_window} |
-|vSAN 运行状况警报“vCenter 状态具有权威性”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。| [vSAN Health Service - Cluster health – vCenter state is authoritative (2150916)](https://kb.vmware.com/s/article/2150916){:new_window} |
-|vSAN 运行状况警报“详细模式”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[vSAN 运行状况服务中的“性能服务 - 详细模式”(51527)](https://kb.vmware.com/s/article/51527){:new_window}|
-|vSAN 运行状况警报“vSAN 构建推荐引擎构建建议”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。| [vSAN Health Service - vSphere Update Manager - vSAN build recommendation engine health (2150914)](https://kb.vmware.com/s/article/2150914){:new_window} |
-|vSAN 运行状况警报“vSAN 构建推荐引擎运行状况”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。| [vSAN Health Service - vSphere Update Manager - vSAN build recommendation engine health (2150914)](https://kb.vmware.com/s/article/2150914){:new_window} |
-|vSAN 运行状况警报“vSAN 构建推荐引擎运行状况”配置问题|不视为有必要通知。警报作为主动日常检查的一部分进行复查。| [vSAN Health Service - vSphere Update Manager - vSAN build recommendation engine health (2150914)](https://kb.vmware.com/s/article/2150914){:new_window} |
-|vSAN 运行状况警报“vSAN CLOMD 活动性”|配置为在发生严重事件时发送一次电子邮件。|[vSAN 运行状况服务 - 群集运行状况 - CLOMD 活动性检查 (2109873)](https://kb.vmware.com/s/article/2109873){:new_window}|
-|vSAN 运行状况警报“vSAN 集群配置一致性”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[vSAN 群集配置一致性 (2149506)](https://kb.vmware.com/s/article/2149506){:new_window}|
-|vSAN 运行状况警报“vSAN 集群分区”|配置为在发生严重事件时发送一次电子邮件。|[vSAN 运行状况服务 - 网络运行状况 - vSAN 群集分区 (2108011)](https://kb.vmware.com/s/article/2108011){:new_window}|
-|vSAN 运行状况警报“vSAN 磁盘平衡”|配置为在发生警告事件时发送一次电子邮件。|[vSAN 运行状况服务 - 群集运行状况 - vSAN 磁盘平衡 (2144278)](https://kb.vmware.com/s/article/2144278){:new_window}|
-|vSAN 运行状况警报“vSAN HCL 数据库自动更新”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[vSAN 运行状况服务 - 硬件兼容性 - vSAN HCL 数据库自动更新 (2146132)](https://kb.vmware.com/s/article/2146132){:new_window}|
-|vSAN 运行状况警报“vSAN HCL 数据库已为最新”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[vSAN 运行状况服务 - vSAN HCL 运行状况 - vSAN HCL 数据库已为最新 (2109870)](https://kb.vmware.com/s/article/2109870){:new_window}|
-|vSAN 运行状况警报“vSAN HCL 运行状况”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|无其他信息|
-|vSAN 运行状况警报“vSAN 运行状况服务已为最新”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。| [vSAN Health Service - vSAN Build Recommendation - vSAN release catalog up-to-date (58891)](https://kb.vmware.com/s/article/58891){:new_window} |
-|vSAN 运行状况警报“vSAN 对象运行状况”|配置为在发生严重事件时发送一次电子邮件。|[vSAN 运行状况服务 - 数据运行状况 - vSAN 对象运行状况 (2108319)](https://kb.vmware.com/s/article/2108319){:new_window}|
-|vSAN 运行状况警报“vSAN 性能服务运行状况”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。| [vSAN Health Service - Performance Service - Status Check (2149406)](https://kb.vmware.com/s/article/2149406){:new_window} |
-|vSAN 运行状况警报“vSAN VM 运行状况”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|无其他信息|
-|vSAN 运行状况警报“vSphere 集群成员与 vSAN 集群成员不匹配”|不视为有必要通知。警报作为主动日常检查的一部分进行复查。| [vSAN Health Service - Cluster Health - vSphere and vSAN Cluster Members Match vSAN (2149507)](https://kb.vmware.com/s/article/2149507){:new_window} |
-|vSAN 运行状况警报“见证主机容错域配置错误”| 仅当 vSAN 已延伸时，才视为警报。|[vSAN 运行状况服务 - 见证主机容错域配置错误 (2130586)](https://kb.vmware.com/s/article/2130586){:new_window}|
-|vSAN 运行状况警报“找不到见证主机”|仅当 vSAN 已延伸时，才视为警报。|[vSAN 运行状况服务 - 找不到见证主机 (2130585)](https://kb.vmware.com/s/article/2130585){:new_window}|
-|vSAN 运行状况警报“见证主机位于 vCenter 集群内”|仅当 vSAN 已延伸时，才视为警报。|[vSAN 运行状况服务 - 见证主机位于 vCenter 群集内 (2130587)](https://kb.vmware.com/s/article/2130587){:new_window}|
-|针对 vMotion 的 vSAN 运行状况警报“基本（单点广播）连接检查（正常 ping 操作）”|配置为在发生严重事件时发送一次电子邮件。| [VSAN health shows connectivity errors](https://developer.ibm.com/answers/questions/452172/vsan-health-shows-connectivity-errors/){:new_window} |
-|针对 vMotion 的 vSAN 运行状况警报“MTU 检查（使用较大的包大小执行 ping 操作）”|配置为在发生严重事件时发送一次电子邮件。|[Virtual SAN 运行状况服务 - 网络运行状况 - 主机小数据包 ping 测试（连接检查）和主机大数据包 ping 测试（MTU 检查）(2108285)](https://kb.vmware.com/s/article/2108285){:new_window}|
+|vSAN 运行状况警报`活动多点广播连接检查`|配置为在发生严重事件时发送一次电子邮件。|[Virtual SAN 运行状况服务 - 网络运行状况 - 活动多播连接检查 (2116296)](https://kb.vmware.com/s/article/2116296){:new_window}|
+|vSAN 运行状况警报`高级 vSAN 配置同步`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[vSAN Health Service - 群集运行状况 - 高级 vSAN 配置同步 (2107713)](https://kb.vmware.com/s/article/2107713){:new_window}|
+|vSAN 运行状况警报`再次发生主机故障后`|配置为在发生严重事件时发送一次电子邮件。|[vSAN health warning `after one additional host failure` is reported incorrectly on two node ROBO/stretched clusters (2150568)](https://kb.vmware.com/s/article/2150568?lang=en_US){:new_window}|
+|vSAN 运行状况警报`提供统计信息的所有主机`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[Virtual SAN 运行状况服务 - 性能服务 - 提供统计信息的所有主机检查 (2144400)](https://kb.vmware.com/s/article/2144400){:new_window}|
+|vSAN 运行状况警报`所有主机均已配置 vSAN vmknic`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。| [vSAN 运行状况服务 - 网络运行状况 - 所有主机均已配置 vSAN vmknic (2108062)](https://kb.vmware.com/s/article/2108062){:new_window} |
+|vSAN 运行状况警报`所有主机均具有匹配的多点广播设置`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[Virtual SAN 运行状况服务 - 网络运行状况 - 所有主机均具有匹配的多播设置 (2108092)](https://kb.vmware.com/s/article/2108092){:new_window}|
+|vSAN 运行状况警报`所有主机都具有匹配的子网`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[Virtual SAN 运行状况服务 - 网络运行状况 - 所有主机都具有匹配的子网 (2108066)](https://kb.vmware.com/s/article/2108066){:new_window}|
+|vSAN 运行状况警报`基本（单点广播）连接检查（正常 ping 操作）`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[Virtual SAN 运行状况服务 - 网络运行状况 - 主机小数据包 ping 测试（连接检查）和主机大数据包 ping 测试（MTU 检查）(2108285)](https://kb.vmware.com/s/article/2108285){:new_window}|
+|vSAN 运行状况警报`集群运行状况`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[vSAN 运行状况服务 - 群集运行状况 - vSAN 运行状况服务安装 (2109874)](https://kb.vmware.com/s/article/2109874){:new_window}|
+|vSAN 运行状况警报`组件元数据运行状况`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[组件元数据运行状况检查失败并显示无效状态错误 (2145347)](https://kb.vmware.com/s/article/2145347){:new_window}|
+|vSAN 运行状况警报`拥堵`|配置为在发生严重事件时发送一次电子邮件。|[vSAN 运行状况服务 - 物理磁盘运行状况 - 拥堵 (2109255)](https://kb.vmware.com/s/article/2109255){:new_window}|
+|vSAN 运行状况警报`控制器磁盘组方式经过 VMware 认证`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[vSAN 运行状况服务 - vSAN HCL 运行状况 - vSAN HCL 上的 SCSI 控制器 (2109871)](https://kb.vmware.com/s/article/2109871){:new_window}|
+|vSAN 运行状况警报`控制器驱动程序经过 VMware 认证`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[vSAN 运行状况服务 - vSAN HCL 运行状况 - 控制器驱动程序 (2109263)](https://kb.vmware.com/s/article/2109263){:new_window}|
+|vSAN 运行状况警报`控制器固件经过 VMware 认证`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[Controller firmware health check warning if multiple firmware versions are supported (2150398)](https://kb.vmware.com/s/article/2150398){:new_window}|
+|vSAN 运行状况警报`对于 ESXi 发行版，控制器经过 VMware 认证`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[vSAN 运行状况服务 - vSAN HCL 运行状况 - 控制器版本支持 (2109262)](https://kb.vmware.com/s/article/2109262){:new_window}|
+|vSAN 运行状况警报`主机上禁用了 CPU AES-NI`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。| [vSAN Health Service - Encryption - CPU AES-NI Host Enablement Check (2149499)](https://kb.vmware.com/s/article/2149499){:new_window} |
+|vSAN 运行状况警报`当前集群情况`|配置为在发生严重事件时发送一次电子邮件。|[vSAN 运行状况服务 - 限制运行状况 – 当前群集情况 (2108740)](https://kb.vmware.com/s/article/2108740){:new_window}|
+|vSAN 运行状况警报`客户体验改进计划 (CEIP)`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。| [vSAN Health Service - Online Health - CEIP Check (2148866)](https://kb.vmware.com/s/article/2148866){:new_window} |
+|vSAN 运行状况警报`数据运行状况`|配置为在发生严重事件时发送一次电子邮件。|[vSAN 运行状况服务 - 数据运行状况 - vSAN 对象运行状况 (2108319)](https://kb.vmware.com/s/article/2108319){:new_window}|
+|vSAN 运行状况警报`磁盘容量`|配置为在发生警告事件时发送一次电子邮件。|[vSAN 运行状况服务 - 物理磁盘运行状况 - 磁盘容量 (2108907)](https://kb.vmware.com/s/article/2108907){:new_window}|
+|vSAN 运行状况警报`磁盘格式版本`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[vSAN 运行状况服务 - 集群 - 磁盘格式版本 (2146135)](https://kb.vmware.com/s/article/2146135){:new_window}|
+|vSAN 运行状况警报 `ESXi vSAN 运行状况服务安装`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[vSAN 运行状况服务 - 群集运行状况 - 最新 VSAN 运行状况服务 (2107705)](https://kb.vmware.com/s/article/2107705){:new_window}|
+|vSAN 运行状况警报`主目录对象`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。| [vSAN Health Service - vSAN iSCSI target service - Home object (2147601)](https://kb.vmware.com/s/article/2147601){:new_window} |
+|vSAN 运行状况警报`主机组件限制`|配置为在发生严重事件时发送一次电子邮件。| [vSAN 运行状况服务 - 限制 - 主机组件 (2146130)](https://kb.vmware.com/s/article/2146130){:new_window} |
+|vSAN 运行状况警报`检索硬件信息时发生主机问题`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。| [vSAN Health Service - HCL Health - Host issues retrieving hardware information (2149290)](https://kb.vmware.com/s/article/2149290){:new_window} |
+|vSAN 运行状况警报`主机维护模式和停用状态`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[vSAN 主机维护模式与 vSAN 节点取消配置状态同步 (51464)](https://kb.vmware.com/s/article/51464){:new_window}|
+|vSAN 运行状况警报`主机已与 VC 断开连接`|配置为在发生严重事件时发送一次电子邮件。|[vSAN 运行状况服务 - 网络运行状况 - 主机与 vCenter 断开连接 (2108004)](https://kb.vmware.com/s/article/2108004){:new_window}|
+|vSAN 运行状况警报`存在连接问题的主机`|配置为在发生严重事件时发送一次电子邮件。|[vSAN 运行状况服务 - 网络运行状况 - 存在连接问题的主机 (2108317)](https://kb.vmware.com/s/article/2108317){:new_window}|
+|vSAN 运行状况警报`见证主机上的首选容错域无效`|仅当 vSAN 已延伸时，才视为警报。|[vSAN 运行状况服务 - 见证主机上的首选容错域无效 (2130589)](https://kb.vmware.com/s/article/2130589){:new_window} |
+|vSAN 运行状况警报`单点广播代理程序无效`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[Virtual SAN 运行状况服务 - 无效的单播代理测试 (2144398)](https://kb.vmware.com/s/article/2144398){:new_window}|
+|vSAN 运行状况警报 `iSCSI 目标服务`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。| [vSAN Health Service - vSAN iSCSI target service – Network configuration (2147602)](https://kb.vmware.com/s/article/2147602){:new_window} |
+|vSAN 运行状况警报`限制运行状况`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|无其他信息|
+|vSAN 运行状况警报`内存池（堆）`|配置为在发生严重事件时发送一次电子邮件。|[vSAN 运行状况服务 - 物理磁盘运行状况 - 内存池 (2109256)](https://kb.vmware.com/s/article/2109256){:new_window}|
+|vSAN 运行状况警报`内存池（板）`|配置为在发生严重事件时发送一次电子邮件。|[vSAN 运行状况服务 - 物理磁盘运行状况 - 内存池 (2109256)](https://kb.vmware.com/s/article/2109256){:new_window}|
+|vSAN 运行状况警报 `MTU 检查（使用较大的包大小执行 ping 操作）`|配置为在发生严重事件时发送一次电子邮件。|[Virtual SAN 运行状况服务 - 网络运行状况 - 主机小数据包 ping 测试（连接检查）和主机大数据包 ping 测试（MTU 检查）(2108285)](https://kb.vmware.com/s/article/2108285){:new_window}|
+|vSAN 运行状况警报`基于其他检查的多点广播评估`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[vSAN 运行状况服务 - 网络运行状况 – 基于其他检查的多播评估 (2108318)](https://kb.vmware.com/s/article/2108318){:new_window}|
+|vSAN 运行状况警报`网络配置`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|无其他信息|
+|vSAN 运行状况警报`网络运行状况`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|无其他信息|
+|vSAN 运行状况警报`网络等待时间检查`|配置为在发生警告事件时发送一次电子邮件。| [vSAN Health Service - Network Health - Network Latency Check (2149511)](https://kb.vmware.com/s/article/2149511){:new_window} |
+|vSAN 运行状况警报`见证主机上未声明任何磁盘`|仅当 vSAN 已延伸时，才视为警报。|[vSAN 运行状况服务 - 见证主机上未声明任何磁盘 (2130584)](https://kb.vmware.com/s/article/2130584){:new_window}|
+|vSAN 运行状况警报`联机运行状况连接`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。| [vSAN Health Service - Online Health - Internet Connectivity Check (2149196)](https://kb.vmware.com/s/article/2149196){:new_window} |
+|vSAN 运行状况警报`操作运行状况`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|无其他信息|
+|vSAN 运行状况警报`性能数据收集`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[性能服务上的 vSAN 运行状况测试失败 (2150589)](https://kb.vmware.com/s/article/2150589){:new_window}|
+|vSAN 运行状况警报`性能服务状态`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[性能服务上的 vSAN 运行状况测试失败 (2150589)](https://kb.vmware.com/s/article/2150589){:new_window}|
+|vSAN 运行状况警报`物理磁盘组件限制运行状况`|配置为在发生严重事件时发送一次电子邮件。|[vSAN 运行状况服务 - 物理磁盘 - 组件数上限 (2146086)](https://kb.vmware.com/s/article/2146086){:new_window}|
+|vSAN 运行状况警报`物理磁盘运行状况检索问题`|配置为在发生严重事件时发送一次电子邮件。| [vSAN Health Service - Physical Disk Health - Physical disk health retrieval issue (2149291)](https://kb.vmware.com/s/article/2149291){:new_window} |
+|vSAN 运行状况警报`物理磁盘运行状况 - 元数据运行状况`|配置为在发生严重事件时发送一次电子邮件。|[vSAN 运行状况服务 - 物理磁盘运行状况 - 元数据运行状况 (2108690)](https://kb.vmware.com/s/article/2108690){:new_window}|
+|vSAN 运行状况警报`首选容错域未设置`|仅当 vSAN 已延伸时，才视为警报。|[vSAN 运行状况服务 - 首选容错域未设置 (2130590)](https://kb.vmware.com/s/article/2130590){:new_window}|
+|vSAN 运行状况警报`再同步操作调速`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。| [vSAN Health Service - Cluster Health - Resynchronization Operations Throttling Check (2149504)](https://kb.vmware.com/s/article/2149504){:new_window} |
+|vSAN 运行状况警报 `SCSI 控制器经过 VMware 认证`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[vSAN 运行状况服务 - vSAN HCL 运行状况 - 控制器驱动程序 (2109263)](https://kb.vmware.com/s/article/2109263){:new_window}|
+|vSAN 运行状况警报`服务运行时状态`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|无其他信息|
+|vSAN 运行状况警报`站点等待时间运行状况`|仅当 vSAN 已延伸时，才视为警报。| [vSAN Health Service - Stretched cluster - Site latency (2146133)](https://kb.vmware.com/s/article/2146133){:new_window} |
+|vSAN 运行状况警报`软件版本兼容性`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[vSAN 运行状况服务 - 群集 - 软件版本兼容性 (2146134)](https://kb.vmware.com/s/article/2146134){:new_window}|
+|vSAN 运行状况警报`空间效率配置一致性`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|无其他信息|
+|vSAN 运行状况警报`空间效率使用情况运行状况`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|无其他信息|
+|vSAN 运行状况警报`统计数据库对象冲突`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[vSAN 运行状况服务 - 性能服务 - 统计数据库对象冲突检查 (2144405)](https://kb.vmware.com/s/article/2144405){:new_window}|
+|vSAN 运行状况警报`统计数据库对象`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[vSAN 运行状况服务 - 性能服务 - 统计数据库对象检查 (2144403)](https://kb.vmware.com/s/article/2144403){:new_window}|
+|vSAN运行状况警报`统计主节点选择`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[vSAN 运行状况服务 - 性能服务 - 统计主节点选举检查 (2144408)](https://kb.vmware.com/s/article/2144408){:new_window}|
+|vSAN 运行状况警报`延伸集群运行状况`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|无其他信息|
+|vSAN 运行状况警报`时间在主机和 VC 之间未同步`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。| [vSAN Health Service - Cluster Health - Time Synchronization Across Hosts and VC (2149505)](https://kb.vmware.com/s/article/2149505){:new_window} |
+|vSAN 运行状况警报`容错域数量异常`|仅当 vSAN 已延伸时，才视为警报。|[SAN 运行状况服务 - 容错域数量异常 (2130581)](https://kb.vmware.com/s/article/2130581){:new_window}|
+|vSAN 运行状况警报`单点广播代理程序配置不一致` |仅当 vSAN 已延伸时，才视为警报。|[vSAN 运行状况服务 - 单播代理配置不一致 (2130580)](https://kb.vmware.com/s/article/2130580){:new_window}|
+|vSAN 运行状况警报`单点广播代理程序未配置` |仅当 vSAN 已延伸时，才视为警报。|[vSAN 运行状况服务 - 单点代理未配置 (2130582)](https://kb.vmware.com/s/article/2130582){:new_window}|
+|vSAN 运行状况警报`不支持的主机版本`|仅当 vSAN 已延伸时，才视为警报。|[vSAN 运行状况服务 - 主机版本不受支持 (2130583)](https://kb.vmware.com/s/article/2130583){:new_window}|
+|vSAN 运行状况警报 `vCenter 或主机未连接到密钥管理服务器`|仅当启用了 vSAN 加密时，才视为警报。| [vSAN Health Service - Unsupported host version (2130583)](https://kb.vmware.com/s/article/2149497){:new_window} |
+|vSAN 运行状况警报 `vCenter 状态具有权威性`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。| [vSAN Health Service - Cluster health – vCenter state is authoritative (2150916)](https://kb.vmware.com/s/article/2150916){:new_window} |
+|vSAN 运行状况警报`详细方式`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[vSAN 运行状况服务中的“性能服务 - 详细模式”(51527)](https://kb.vmware.com/s/article/51527){:new_window}|
+|vSAN 运行状况警报 `vSAN 构建推荐引擎构建建议`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。| [vSAN Health Service - vSphere Update Manager - vSAN build recommendation engine health (2150914)](https://kb.vmware.com/s/article/2150914){:new_window} |
+|vSAN 运行状况警报 `vSAN 构建推荐引擎运行状况`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。| [vSAN Health Service - vSphere Update Manager - vSAN build recommendation engine health (2150914)](https://kb.vmware.com/s/article/2150914){:new_window} |
+|vSAN 运行状况警报 `vSAN 构建推荐引擎运行状况`配置问题|不视为有必要通知。警报作为主动日常检查的一部分进行复查。| [vSAN Health Service - vSphere Update Manager - vSAN build recommendation engine health (2150914)](https://kb.vmware.com/s/article/2150914){:new_window} |
+|vSAN 运行状况警报 `vSAN CLOMD 活性`|配置为在发生严重事件时发送一次电子邮件。|[vSAN 运行状况服务 - 群集运行状况 - CLOMD 活动性检查 (2109873)](https://kb.vmware.com/s/article/2109873){:new_window}|
+|vSAN 运行状况警报 `vSAN 集群配置一致性`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[vSAN 群集配置一致性 (2149506)](https://kb.vmware.com/s/article/2149506){:new_window}|
+|vSAN 运行状况警报 `vSAN 集群分区`|配置为在发生严重事件时发送一次电子邮件。|[vSAN 运行状况服务 - 网络运行状况 - vSAN 群集分区 (2108011)](https://kb.vmware.com/s/article/2108011){:new_window}|
+|vSAN 运行状况警报 `vSAN 磁盘均衡`|配置为在发生警告事件时发送一次电子邮件。|[vSAN 运行状况服务 - 群集运行状况 - vSAN 磁盘平衡 (2144278)](https://kb.vmware.com/s/article/2144278){:new_window}|
+|vSAN 运行状况警报 `vSAN HCL 数据库自动更新`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[vSAN 运行状况服务 - 硬件兼容性 - vSAN HCL 数据库自动更新 (2146132)](https://kb.vmware.com/s/article/2146132){:new_window}|
+|vSAN 运行状况警报 `vSAN HCL 数据库已为最新`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|[vSAN 运行状况服务 - vSAN HCL 运行状况 - vSAN HCL 数据库已为最新 (2109870)](https://kb.vmware.com/s/article/2109870){:new_window}|
+|vSAN 运行状况警报 `vSAN HCL 运行状况`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|无其他信息|
+|vSAN 运行状况警报 `vSAN 运行状况服务已为最新`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。| [vSAN Health Service - vSAN Build Recommendation - vSAN release catalog up-to-date (58891)](https://kb.vmware.com/s/article/58891){:new_window} |
+|vSAN 运行状况警报 `vSAN 对象运行状况`|配置为在发生严重事件时发送一次电子邮件。|[vSAN 运行状况服务 - 数据运行状况 - vSAN 对象运行状况 (2108319)](https://kb.vmware.com/s/article/2108319){:new_window}|
+|vSAN 运行状况警报 `vSAN 性能服务运行状况`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。| [vSAN Health Service - Performance Service - Status Check (2149406)](https://kb.vmware.com/s/article/2149406){:new_window} |
+|vSAN 运行状况警报 `vSAN VM 运行状况`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|无其他信息|
+|vSAN 运行状况警报 `vSphere 集群成员与 vSAN 集群成员不匹配`|不视为有必要通知。警报作为主动日常检查的一部分进行复查。| [vSAN Health Service - Cluster Health - vSphere and vSAN Cluster Members Match vSAN (2149507)](https://kb.vmware.com/s/article/2149507){:new_window} |
+|vSAN 运行状况警报`见证主机容错域配置错误`|仅当 vSAN 已延伸时，才视为警报。|[vSAN 运行状况服务 - 见证主机容错域配置错误 (2130586)](https://kb.vmware.com/s/article/2130586){:new_window}|
+|vSAN 运行状况警报`找不到见证主机`|仅当 vSAN 已延伸时，才视为警报。|[vSAN 运行状况服务 - 找不到见证主机 (2130585)](https://kb.vmware.com/s/article/2130585){:new_window}|
+|vSAN 运行状况警报`见证主机位于 vCenter 集群内`|仅当 vSAN 已延伸时，才视为警报。|[vSAN 运行状况服务 - 见证主机位于 vCenter 群集内 (2130587)](https://kb.vmware.com/s/article/2130587){:new_window}|
+|针对 vMotion 的 vSAN 运行状况警报`基本（单点广播）连接检查（正常 ping 操作）`|配置为在发生严重事件时发送一次电子邮件。| [VSAN health shows connectivity errors](https://developer.ibm.com/answers/questions/452172/vsan-health-shows-connectivity-errors/){:new_window} |
+|针对 vMotion 的 vSAN 运行状况警报 `MTU 检查（使用较大的包大小执行 ping 操作）`|配置为在发生严重事件时发送一次电子邮件。|[Virtual SAN 运行状况服务 - 网络运行状况 - 主机小数据包 ping 测试（连接检查）和主机大数据包 ping 测试（MTU 检查）(2108285)](https://kb.vmware.com/s/article/2108285){:new_window}|
 |vSAN 运行状况服务警报|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|无其他信息|
 |针对总体运行状况摘要的 vSAN 运行状况服务警报|不视为有必要通知。警报作为主动日常检查的一部分进行复查。|无其他信息|
 

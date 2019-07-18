@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-26"
 
 keywords: troubleshooting, vSphere configuration issue, HA cluster issue
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # Problema de configuração do console vSphere que é visto ao incluir o cluster de HA
 {: #trbl_add_ha_cluster_config}
@@ -28,4 +30,4 @@ Quando você inclui uma configuração de cluster HA (Alta Disponibilidade) com 
 
 Esse problema ocorrerá se não houver redundância no armazenamento compartilhado para permitir pulsação de armazenamento de dados.
 
-Para obter mais informações e etapas sobre como corrigir o problema, veja [Erro de HA: o número de armazenamentos de dados de pulsação para o host é 1, que é menos que o necessário: 2 (2004739)](https://kb.vmware.com/s/article/2004739).
+Para obter mais informações e etapas sobre como corrigir o problema, veja [Erro de HA: o número de armazenamentos de dados de pulsação para o host é 1, que é menos que o necessário: 2 (2004739)](https://kb.vmware.com/s/article/2004739).{:external}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -43,7 +43,7 @@ La aplicación Skate Advisor aprovecha la plataforma de modernización de aplica
 ### Empaquetado y despliegue de aplicaciones
 {: #vcscar-physical-app-pack-depl}
 
-La aplicación se despliega como una coordinación de CAM que contiene los siguientes elementos:
+La aplicación se despliega como una coordinación de CAM, que contiene los siguientes elementos:
 * Coordinación de servicios: una coordinación de servicios CAM es un recurso de flujo de trabajo que describe
 las plantillas de Terraform y los diagramas de Helm que se van a desplegar como parte de un servicio. Un servicio se puede publicar y constituye el artefacto de control desde el que se coordina todo el despliegue.
 * Diagrama de Helm: el diagrama de Helm reside en el repositorio de {{site.data.keyword.icpfull_notm}} local y despliega contenedores y otros recursos en {{site.data.keyword.icpfull_notm}}. Un diagrama de Helm es una descripción de los recursos
@@ -144,7 +144,7 @@ Acme Skate Advisor reside en {{site.data.keyword.cloud_notm}} y, como tal, const
 
 Este diagrama representa {{site.data.keyword.icpfull_notm}} y CAM desplegados en una instancia de vCenter Server, con conexiones con el vCenter local y el servicio {{site.data.keyword.containerlong_notm}}. Con CAM, los administradores del sistema y los desarrolladores pueden desplegar máquinas virtuales locales en la instancia de vCenter Server y los contenedores en los clústeres de {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}}.
 
-En el diagrama, CAM crea de forma lógica conexiones en la nube con los entornos de vCenters, proveedores de nube, {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}}. Los clústeres de {{site.data.keyword.icpfull_notm}} se despliegan en cada entorno de centro de datos/nube, y MCM proporciona el mecanismo para conectar los clústeres de {{site.data.keyword.icpfull_notm}} en una única vista de gestión.
+En el diagrama, CAM crea de forma lógica conexiones en la nube con los entornos de vCenters, proveedores de nube, {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}}. Los clústeres de {{site.data.keyword.icpfull_notm}} se despliegan en cada entorno de centro de datos o de nube, y MCM proporciona el mecanismo para conectar los clústeres de {{site.data.keyword.icpfull_notm}} en una única vista de gestión.
 
 ## Enlaces relacionados
 {: #vcscar-physical-related}

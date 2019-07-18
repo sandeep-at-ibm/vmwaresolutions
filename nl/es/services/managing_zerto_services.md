@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-28"
 
 keywords: Zerto, request Zerto Orchestrated, Zerto managed service
 
@@ -13,7 +13,9 @@ subcollection: vmware-solutions
 
 ---
 
-# Solicitud de servicios gestionados para Zerto on IBM Cloud
+{:external: target="_blank" .external}
+
+# Servicios gestionados para Zerto on IBM Cloud
 {: #managing_zerto_services}
 
 El servicio Zerto on {{site.data.keyword.cloud}} proporciona funciones de réplica y recuperación tras desastre. Estas funciones se pueden integrar en las ofertas de despliegue para proteger y recuperar los datos del entorno virtual VMware en {{site.data.keyword.cloud_notm}}.
@@ -31,20 +33,20 @@ En este modelo, se suministra el servicio {{site.data.keyword.cloud_notm}} Resil
 
 IBM Resiliency Services Global Command Center gestiona todas las funciones mediante el panel de control de {{site.data.keyword.cloud_notm}} Resiliency Orchestration.
 
-Para obtener más información, consulte [IBM Resiliency Orchestration](https://www.ibm.com/us-en/marketplace/disaster-recovery-orchestration).
+Para obtener más información, consulte [IBM Resiliency Orchestration](https://www.ibm.com/us-en/marketplace/disaster-recovery-orchestration){:external}.
 
-## IBM Managed Services para Zerto (sin coordinación)
+## Servicios gestionados por IBM para Zerto (sin coordinación)
 {: #managing_zerto_services-without-orchestrated}
 
 En este modelo, se suministra una solución de DR completamente gestionada para Zerto on {{site.data.keyword.cloud_notm}}. Este modelo resulta adecuado si desea un servicio gestionado solo para Zerto Virtual Replication, sin el servicio {{site.data.keyword.cloud_notm}} Resiliency Orchestration en {{site.data.keyword.cloud_notm}}.
 
-Para obtener más información, consulte [IBM Resiliency Disaster Recovery as a Service](https://www.ibm.com/us-en/marketplace/disaster-recovery-as-a-service#product-header-top).
+Para obtener más información, consulte [IBM Resiliency Disaster Recovery as a Service](https://www.ibm.com/us-en/marketplace/disaster-recovery-as-a-service#product-header-top){:external}.
 
 ## Procedimiento para solicitar servicios gestionados para Zerto on IBM Cloud
 {: #managing_zerto_services-procedure}
 
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Cómo comenzar** en el panel de navegación izquierdo.
-2. Desplácese hacia abajo por la página y bajo **Pedido de servicios gestionados adicionales**, pulse la tarjeta **Servicios gestionados para Zerto on IBM Cloud**.
+2. Desplácese hacia abajo por la página y bajo **Servicios gestionados de VMware**, pulse la tarjeta **Servicios gestionados para Zerto on IBM Cloud**.
 3. En la página **Zerto on IBM Cloud**, revise la descripción y las especificaciones técnicas para Zerto on {{site.data.keyword.cloud_notm}} como un servicio gestionado y, a continuación, pulse **Crear**.
 4. Especifique los valores de configuración que se ajusten a sus necesidades o acepte los valores predeterminados.
 5. Pulse **vCenter Server** para añadir el servicio a una de sus instancias.

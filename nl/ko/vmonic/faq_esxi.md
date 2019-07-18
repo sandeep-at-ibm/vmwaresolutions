@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-26"
 
 keywords: FAQ, host, ESXi server
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -43,7 +44,7 @@ V2.1 이전에 배치된 인스턴스의 경우, 필요한 vSAN 지원을 사용
 
    `esxcli system settings advanced set -o /Net/TcpipHeapMax -i 1576`
 
-2. 각 ESXi 서버를 다시 시작하십시오. 자세한 정보는 [Creating a vSAN 6.x cluster with up to 64 hosts](https://kb.vmware.com/s/article/2110081)를 참조하십시오.
+2. 각 ESXi 서버를 다시 시작하십시오. 자세한 정보는 [Creating a vSAN 6.x cluster with up to 64 hosts](https://kb.vmware.com/s/article/2110081)를 참조하십시오.{:external}
 3. 추가된 가상 머신 및 ESXi 서버를 포함하도록 vCenter Server의 크기를 늘려야 합니다.
 4. IBM 지원 센터 티켓을 열어 1 - 3단계를 완료하여 vSAN 변경사항을 수동으로 적용했음을 표시하십시오. 티켓에서 업그레이드된 인스턴스가 32개가 넘는 ESXi 서버에 사용되도록 요청하십시오.
 

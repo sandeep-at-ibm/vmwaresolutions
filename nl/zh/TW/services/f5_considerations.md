@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-26"
 
 keywords: F5 BIG-IP, F5 install, tech specs F5
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -60,8 +61,6 @@ F5 on {{site.data.keyword.cloud_notm}} 服務隨附下列元件：
 
 根據您選取的授權模型及頻寬，使用下列配置來部署兩部 BIG-IP VE VM（虛擬機器）：
 
-表 1. 不同頻寬及授權模型選取項目的 CPU 和 RAM 部署
-
 |頻寬上限          |授權模型：良好      |授權模型：更佳        |授權模型：最佳      |
 |:------------------|:--------------------|:----------------------|:--------------------|
 |25 Mbps           |2 個 vCPU、4 GB RAM |4 個 vCPU、8 GB RAM   |8 個 vCPU、16 GB RAM  |
@@ -70,6 +69,7 @@ F5 on {{site.data.keyword.cloud_notm}} 服務隨附下列元件：
 |3 Gbps            |8 個 vCPU、16 GB RAM|8 個 vCPU、16 GB RAM|8 個 vCPU、16 GB RAM|
 |5 Gbps            |8 個 vCPU、16 GB RAM|8 個 vCPU、16 GB RAM|8 個 vCPU、16 GB RAM|
 |10 Gbps           |8 個 vCPU、16 GB RAM|8 個 vCPU、16 GB RAM|8 個 vCPU、16 GB RAM|
+{: caption="表 1. 不同頻寬及授權模型選取項目的 CPU 和 RAM 部署" caption-side="top"}
 
 ### 其他考量
 {: #f5_considerations-additional}
@@ -128,4 +128,4 @@ F5 on {{site.data.keyword.cloud_notm}} 服務隨附下列元件：
 * [管理 F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_f5)
 * [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [常見問題](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [F5 網站](https://www.f5.com/){:new_window}
+* [F5 網站](https://www.f5.com/){:external}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-31"
+lastupdated: "2019-06-27"
 
 keywords: planning vCenter Server, data center, vCenter Server data centers
 
@@ -21,18 +21,17 @@ Revise los siguientes requisitos antes de solicitar sus instancias de VMware vCe
 ## Requisitos de la cuenta de IBM Cloud
 {: #vc_planning-account-req}
 
-La cuenta de {{site.data.keyword.cloud_notm}} que utilice debe cumplir ciertos requisitos. Para obtener más información, consulte [Requisitos para la cuenta de {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req). 
+La cuenta de {{site.data.keyword.cloud_notm}} que utilice debe cumplir ciertos requisitos. Para obtener más información, consulte [Requisitos para la cuenta de {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req).
 
 ## Disponibilidad del centro de datos de IBM Cloud
 {: #vc_planning-dc-availability}
 
 El despliegue de vCenter Server impone requisitos estrictos en cuanto a la infraestructura física. Por lo tanto, en {{site.data.keyword.CloudDataCents_notm}} solo puede desplegar instancias que cumplan los requisitos. Están disponibles los siguientes {{site.data.keyword.CloudDataCents_notm}} para el despliegue de vCenter Server:
 
-Tabla 1. {{site.data.keyword.CloudDataCents_notm}} disponibles para instancias de vCenter Server
-
 | {{site.data.keyword.CloudDataCent_notm}} | Ubicación | Región | Opciones servidor |
 |:----------------------|:---------|:-------|:---------------|
-| AMS03 | Amsterdam | Europa | Skylake, Broadwell |
+| AMS01 | Amsterdam | Europa | Skylake, Certificado por SAP, Broadwell |
+| AMS03 | Amsterdam | Europa | Skylake, Certificado por SAP, Broadwell |
 | CHE01 | Chennai | Asia Pacífico | Skylake, Certificado por SAP, Broadwell |
 | DAL09 | Dallas | América del Norte sur | Skylake, Certificado por SAP, Broadwell |
 | DAL10 | Dallas | América del Norte sur | Skylake, Certificado por SAP, Broadwell |
@@ -40,8 +39,8 @@ Tabla 1. {{site.data.keyword.CloudDataCents_notm}} disponibles para instancias d
 | DAL13 | Dallas | América del Norte sur | Skylake, Certificado por SAP, Broadwell |
 | FRA02 | Frankfurt | Europa | Skylake, Certificado por SAP, Broadwell |
 | FRA04 | Frankfurt | Europa | Skylake, Certificado por SAP, Broadwell |
-| FRA05 | Frankfurt | Europa | Skylake, Broadwell |
-| HKG02 | Hong Kong | Asia Pacífico | Skylake, Broadwell |
+| FRA05 | Frankfurt | Europa | Skylake, Certificado por SAP, Broadwell |
+| HKG02 | Hong Kong | Asia Pacífico | Skylake, Certificado por SAP, Broadwell |
 | LON02 | Londres | Europa | Skylake, Broadwell |
 | LON04 | Londres | Europa | Skylake, Certificado por SAP, Broadwell |
 | LON05 | Londres | Europa | Skylake, Broadwell |
@@ -50,30 +49,33 @@ Tabla 1. {{site.data.keyword.CloudDataCents_notm}} disponibles para instancias d
 | MEX01 | Queretaro | América del Norte sur | Skylake, Certificado por SAP, Broadwell |
 | MIL01 | Milán | Europa | Skylake, Certificado por SAP, Broadwell |
 | MON01 | Montreal | América del Norte este | Skylake, Certificado por SAP, Broadwell |
-| OSL01 | Oslo | Europa | Skylake, Broadwell |
-| PAR01 | París | Europa | Skylake, Broadwell |
+| OSL01 | Oslo | Europa | Skylake, Certificado por SAP, Broadwell |
+| PAR01 | París | Europa | Skylake, Certificado por SAP, Broadwell |
 | SAO01 | Sao Paulo | América del Sur | Skylake, Certificado por SAP, Broadwell |
 | SEO01 | Seúl | Asia Pacífico | Skylake, Certificado por SAP, Broadwell |
 | SJC03 | San José | América del Norte oeste | Skylake, Broadwell |
 | SJC04 | San José | América del Norte oeste | Skylake, Broadwell |
-| SNG01 | Singapur | Asia Pacífico | Skylake, Broadwell |
-| SYD01 | Sídney | Asia Pacífico | Skylake, Broadwell |
+| SNG01 | Singapur | Asia Pacífico | Skylake, Certificado por SAP, Broadwell |
+| SYD01 | Sídney | Asia Pacífico | Skylake, Certificado por SAP, Broadwell |
 | SYD04 | Sídney | Asia Pacífico | Skylake, Certificado por SAP, Broadwell |
+| SYD05 | Sídney | Asia Pacífico | Skylake, Certificado por SAP, Broadwell |
 | TOK02 | Tokio | Asia Pacífico | Skylake, Certificado por SAP, Broadwell |
+| TOK04 | Tokio | Asia Pacífico | Skylake, Certificado por SAP, Broadwell |
+| TOK05 | Tokio | Asia Pacífico | Skylake, Certificado por SAP, Broadwell |
 | TOR01 | Toronto | América del Norte este | Skylake, Certificado por SAP, Broadwell |
 | WDC04 | Washington, DC | América del Norte este | Skylake, Certificado por SAP, Broadwell |
 | WDC06 | Washington, DC | América del Norte este | Skylake, Certificado por SAP, Broadwell |
 | WDC07 | Washington, DC | América del Norte este | Skylake, Certificado por SAP, Broadwell |
+{: caption="Tabla 1. {{site.data.keyword.CloudDataCents_notm}} disponibles para instancias de vCenter Server" caption-side="top"}
 
 En función de la disponibilidad y del suministro de inventario, {{site.data.keyword.CloudDataCents_notm}} puede mostrar un indicador de estado en la consola de {{site.data.keyword.vmwaresolutions_short}} que le ayudará a planificar sus despliegues.
-
-Tabla 2. Indicadores de estado para {{site.data.keyword.CloudDataCents_notm}} cuando se solicitan instancias de vCenter Server
 
 | Estado | Detalles del estado |
 |:------------------------------|:--------------------------------------------------|
 | Coming Soon                   | El {{site.data.keyword.CloudDataCent_notm}} no está disponible actualmente. |
 | Temporarily Out of Inventory  | El {{site.data.keyword.CloudDataCent_notm}} no tiene disponibilidad actualmente. |
 | Limited Inventory             | El {{site.data.keyword.CloudDataCent_notm}} ofrece disponibilidad limitada y es posible que el pedido no se complete. |
+{: caption="Tabla 2. Indicadores de estado para {{site.data.keyword.CloudDataCents_notm}} cuando se solicitan instancias de vCenter Server" caption-side="top"}
 
 ## Copia de seguridad de los componentes de gestión
 {: #vc_planning-backup-mgmt-components}

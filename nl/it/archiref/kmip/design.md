@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-21"
 
 subcollection: vmware-solutions
 
@@ -58,7 +58,7 @@ Quando KMIP for VMware viene utilizzato con la codifica vSAN o vSphere, sono pre
 
 Se pensi di ruotare le chiavi, rivedi le seguenti informazioni sui livelli a cui possono essere ruotate le chiavi:
 * La tua chiave root del cliente (CRK) protegge tutte le chiavi VMware. Le chiavi possono essere ruotate nell'istanza IBM Key Protect o Hyper Protect Crypto Services associata alla tua istanza KMIP for VMware.
-* KMIP for VMware utilizza la tua CRK per proteggere le chiavi che genera e distribuisce a VMware. VMware le considera come una "chiave di codifica delle chiavi" (KEK).
+* KMIP for VMware utilizza la tua CRK per proteggere le chiavi che genera e distribuisce a VMware. VMware le considera come una _chiave di crittografia delle chiavi (KEK)_.
   * Se stai utilizzando la codifica vSphere, puoi ruotare le chiavi utilizzando il comando **Set-VMEncryptionKey** PowerShell.
   * Se stai utilizzando la codifica vSAN, puoi ruotare le chiavi sull'interfaccia utente vSAN.
 * VMware utilizza queste KEK per proteggere le chiavi reali che utilizza per codificare le unità disco e i dischi della VM. Puoi ruotare queste chiavi utilizzando una cosa nota a VMware come una reimpostazione delle chiavi "approfondita". Questa operazione ricodifica tutti tuoi dati codificati per cui può richiedere molto tempo.
@@ -73,7 +73,7 @@ Le codifiche VMware vSAN e vSphere sono compatibili con molti server di gestione
 ### Chiavi all'interno di chiavi
 {: #kmip-design-keys}
 
-I sistemi di gestione delle chiavi normalmente utilizzano una tecnica nota come *crittografia envelope* per impacchettare o proteggere le chiavi con altre chiavi. Queste chiavi sono denominate *chiavi root* o *chiave di codifica delle chiavi* (KEK). Per accedere a una chiave, devi decodificare o spacchettare la chiave utilizzando la chiave root corrispondente. L'eliminazione permanente della chiave root è un modo efficace per annullare la validità di tutte le chiavi che ha protetto. Queste chiavi non devono essere archiviate accanto alla chiave root. Il controllo dell'accesso alla chiave root è importante.
+I sistemi di gestione delle chiavi normalmente utilizzano una tecnica nota come *crittografia envelope* per impacchettare o proteggere le chiavi con altre chiavi. Queste chiavi sono chiamate _chiavi root_ o _chiave di crittografia delle chiavi (KEK)_. Per accedere a una chiave, devi decodificare o spacchettare la chiave utilizzando la chiave root corrispondente. L'eliminazione permanente della chiave root è un modo efficace per annullare la validità di tutte le chiavi che ha protetto. Queste chiavi non devono essere archiviate accanto alla chiave root. Il controllo dell'accesso alla chiave root è importante.
 
 {{site.data.keyword.cloud_notm}} Key Protect e Hyper Protect Crypto Services forniscono questo servizio utilizzando una *chiave root del cliente* (CRK). Key Protect archivia le CRK esclusivamente nell'hardware {{site.data.keyword.cloud_notm}} CloudHSM da cui non possono essere estratte; Hyper Protect Crypto Services archivia le chiavi in HSM di IBM zSeries. Queste CRK vengono poi utilizzate per impacchettare ulteriori chiavi di codifica come ad esempio quelle generate da KMIP for VMware per la tua istanza VMware.
 

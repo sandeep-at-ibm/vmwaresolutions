@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-28"
 
 keywords: vSphere order cluster, order vSphere, order vSphere cluster
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -51,14 +52,13 @@ subcollection: vmware-solutions
 
 如果您是 IBM 业务合作伙伴用户，那么可以在订购新的 vSphere 集群时选择组件许可证捆绑软件。以下捆绑软件可用：
 
-表 1. 用于 vSphere 集群的 IBM 业务合作伙伴组件捆绑软件
-
 |捆绑软件|组件|
 |:------------------------- |:----------------------- |
 |标准（带管理）|vSphere Enterprise Plus、vCenter Server Standard、vRealize Log Insight 和 vRealize Operations Enterprise|
 |高级|vSphere Enterprise Plus、vCenter Server Standard、vRealize Log Insight、vCloud Director 和 NSX Base|
 |高级（带联网）|vSphere Enterprise Plus、vCenter Server Standard、vRealize Log Insight 和 NSX Advanced|
 |高级（带联网和管理）|vSphere Enterprise Plus、vCenter Server Standard、vRealize Log Insight、vRealize Operations Enterprise、vCloud Director 和 NSX Enterprise|
+{: caption="表 1. 用于 vSphere 集群的 IBM 业务合作伙伴组件捆绑软件" caption-side="top"}
 
 您还可以在订单中包含以下 VMware 组件：
 * VMware vSAN
@@ -104,7 +104,9 @@ subcollection: vmware-solutions
 
 选择要托管集群的 {{site.data.keyword.CloudDataCent_notm}}。
 
-**注：**
+#### 注释
+{: #vs_orderinginstances-notes}
+
 * 如果选择的是 vSAN 组件，那么位置列表将按 SSD 可用性进行过滤。
 
 * Broadwell 裸机服务器不可用于 **FRA05 - 法兰克福**数据中心位置。
@@ -115,13 +117,12 @@ subcollection: vmware-solutions
 
 选择 **Skylake** 时，可以根据需要为裸机服务器选择 CPU 和 RAM 组合。可用的选项取决于是否选择了 VMware vSAN 组件。
 
-表 2. Skylake {{site.data.keyword.baremetal_short}} 的选项
-
 | CPU 模型选项   |RAM 选项|
 |:------------- |:------------- |
 |双 Intel Xeon Silver 4110 处理器 / 共 16 个核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
 |双 Intel Xeon Gold 5120 处理器 / 共 28 个核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
 |双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
+{: caption="表 2. Skylake {{site.data.keyword.baremetal_short}} 的选项" caption-side="top"}
 
 ### SAP 认证
 {: #vs_orderinginstances-sap}
@@ -142,12 +143,11 @@ subcollection: vmware-solutions
 
 选择 **Broadwell** 时，可以根据需要为裸机服务器选择 CPU 和 RAM 组合。可用的选项取决于是否选择了 VMware vSAN 组件。
 
-表 3. Broadwell {{site.data.keyword.baremetal_short}} 的选项
-
 | CPU 模型选项   |RAM 选项|
 |:------------- |:------------- |
 |四核 Intel Xeon E7-4820 V4 / 共 40 个核心，2.0 GHz|128 GB、256 GB、512 GB、1 TB、2 TB、3 TB|
 |四核 Intel Xeon E7-4850 V4 / 共 64 个核心，2.1 GHz|128 GB、256 GB、512 GB、1 TB、2 TB、3 TB|
+{: caption="表 3. Broadwell {{site.data.keyword.baremetal_short}} 的选项" caption-side="top"}
 
 ### 裸机服务器的数量
 {: #vs_orderinginstances-bare-metal-number}
@@ -236,7 +236,9 @@ subcollection: vmware-solutions
   * **主子网**分配给物理主机以用于公用网络访问。
   * **主专用子网**分配给物理主机以用于管理流量。
 
-**重要信息：**
+##### 重要
+{: #vs_orderinginstances-important}
+
 * 确保所选 VLAN 上的防火墙配置不会阻止管理数据流量。
 * 确保您选择的所有 VLAN 都在相同的 pod 上。在混合 pod VLAN 上无法供应 ESXi 服务器。
 
@@ -255,7 +257,7 @@ subcollection: vmware-solutions
 ## 订购 vSphere 集群的过程
 {: #vs_orderinginstances-procedure}
 
-1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格上的 **VMware**，然后单击**虚拟数据中心**部分中的 **VMware vSphere**。
+1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格中的 **VMware** 图标，然后单击 **VMware 虚拟数据中心**部分中的 **VMware vSphere on IBM Cloud** 卡。
 2. 在 **VMware vSphere on IBM Cloud** 页面上，单击**创建**。  
    确保位于**新建**选项卡上，并且**集群配置**列表中显示了**新集群**。
 3. 输入集群名称。
@@ -263,7 +265,7 @@ subcollection: vmware-solutions
   * 如果您是 IBM 业务合作伙伴，请选择许可证捆绑软件和其他任何可用的 VMware 组件。
   * 如果您是非业务合作伙伴，请选择组件、版本（如果有），并指定许可选项。选择对 VMware vSphere Enterprise Plus 使用自带许可证 (BYOL) 时，系统将代表您自动开具 {{site.data.keyword.cloud_notm}} 凭单，以请求将所订购 {{site.data.keyword.baremetal_short}} 的缺省 vSphere 许可证替换为您提供的许可证。   
 
-    **重要信息**：您负责跟踪凭单以确保替换新订购的 ESXi 服务器上的 vSphere 许可证。这样 {{site.data.keyword.cloud_notm}} 基础架构就会授权取消对初始提供的 {{site.data.keyword.cloud_notm}} 基础架构 vSphere 许可证收费。要替换 ESXi vSphere 许可证，请参阅[为 ESXi 主机配置许可证设置](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}。
+    **重要信息**：您负责跟踪凭单以确保替换新订购的 ESXi 服务器上的 vSphere 许可证。这样 {{site.data.keyword.cloud_notm}} 基础架构就会授权取消对初始提供的 {{site.data.keyword.cloud_notm}} 基础架构 vSphere 许可证收费。要替换 ESXi vSphere 许可证，请参阅[为 ESXi 主机配置许可证设置](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:external}。
 5. 完成裸机服务器设置：
    1. 选择要托管集群的 {{site.data.keyword.CloudDataCent_notm}}。
    2. 选择裸机服务器配置。

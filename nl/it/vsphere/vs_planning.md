@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-31"
+lastupdated: "2019-06-20"
 
 keywords: planning vSphere, data center, vSphere data centers
 
@@ -37,8 +37,6 @@ La distribuzione di vSphere ha requisiti rigorosi sull'infrastruttura fisica. Pe
 
 Se selezioni un componente vSAN, l'elenco di ubicazioni viene filtrato in base alla disponibilità SSD (Solid-State Disk).
 {:note}
-
-Tabella 1. {{site.data.keyword.CloudDataCents_notm}} disponibili per i cluster vSphere
 
 | {{site.data.keyword.CloudDataCent_notm}} | Ubicazione | Regione |
 |:----------------------|:---------|:---------------|
@@ -75,6 +73,7 @@ Tabella 1. {{site.data.keyword.CloudDataCents_notm}} disponibili per i cluster v
 | WDC04 | Washington, DC | Nord America orientale |
 | WDC06 | Washington, DC | Nord America orientale |
 | WDC07 | Washington, DC | Nord America orientale |
+{: caption="Tabella 1. {{site.data.keyword.CloudDataCents_notm}} disponibili per i cluster vSphere" caption-side="top"}
 
 ## Link correlati
 {: #vs_planning-related}

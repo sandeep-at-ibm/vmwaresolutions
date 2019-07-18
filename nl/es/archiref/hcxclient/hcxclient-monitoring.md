@@ -62,7 +62,7 @@ Los cambios se pierden si vuelve a desplegar HCX CGW desde la interfaz de usuari
 {:note}
 
 1. Inicie sesión en la interfaz de usuario web del optimizador de WAN.
-2. En el separador **Configuración**, seleccione **Modelador** del menú. 
+2. En el separador **Configuración**, seleccione **Modelador** del menú.
 3. En el recuadro **Ancho de banda máximo**, establezca el ancho de banda máximo disponible en el dispositivo optimizador de WAN en Kbps. No supere el ancho de banda máximo del enlace WAN. Para establecer el valor en Mbps, multiplique por 1.000. Para establecer el valor en Gbps, multiplique por 1.000.000. El valor predeterminado es 10 Gbps (10.000.000 Kbps).
 4. Pulse **Aplicar**.
 

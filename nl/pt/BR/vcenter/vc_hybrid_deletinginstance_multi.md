@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server Hybridity delete instance, delete vCenter Server Hybridity, delete multi-site
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -40,8 +41,8 @@ Você é faturado até o final do ciclo de faturamento da infraestrutura do {{si
 
 1. Remova todos os serviços da instância secundária do vCenter Server with Hybridity Bundle.
 2. Assegure-se de que não tenha objetos NSX expandidos na instância secundária que deseja excluir.
-3. Exclua o vCenter Server secundário do domínio SSO (Conexão única) primário. Para obter mais informações, veja [Cancelar o registro do vCenter Server da conexão única](https://kb.vmware.com/s/article/2106736){:new_window}.
-4. Rebaixar a VSI (Virtual Service Instance) do controlador de domínio local. Para obter mais informações, veja [Rebaixando os controladores de domínio e os domínios](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-){:new_window}.
+3. Exclua o vCenter Server secundário do domínio SSO (Conexão única) primário. Para obter mais informações, veja [Cancelar o registro do vCenter Server da conexão única](https://kb.vmware.com/s/article/2106736){:external}.
+4. Rebaixar a VSI (Virtual Service Instance) do controlador de domínio local. Para obter mais informações, veja [Rebaixando os controladores de domínio e os domínios](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-){:external}.
 5. Exclua a instância secundária do vCenter Server with Hybridity Bundle do console do {{site.data.keyword.vmwaresolutions_short}}.
 6. Repita as etapas 1 a 5 para todas as instâncias secundárias do vCenter Server with Hybridity Bundle em sua configuração multisite.
 7. Depois de excluir todas as instâncias secundárias, também será possível excluir a instância primária do console do {{site.data.keyword.vmwaresolutions_short}}.

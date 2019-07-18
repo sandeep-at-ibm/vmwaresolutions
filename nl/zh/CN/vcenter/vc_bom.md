@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server BOM, bill of materials vCenter Server, BOM
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -27,20 +28,17 @@ subcollection: vmware-solutions
 
 下表详细描述了 vCenter Server VLAN 的 BOM 信息。
 
-表 1. vCenter Server 实例中 VLAN 的 BOM
-
 |VLAN|类型|详细信息|
 |:---------- |:---------- |:------------- |
 |VLAN1|公用，主|分配给物理 ESXi 服务器以用于公用网络访问。将为服务器分配公共 IP 地址，但在这些服务器上未配置此 IP 地址，因此无法在公用网络上直接访问这些服务器。相反，公用 VLAN 旨在为其他组件（例如，NSX Edge 服务网关 (ESG)）提供公用因特网访问。|
 |VLAN2|专用 A，主|由 {{site.data.keyword.cloud}} 分配给物理 ESXi 服务器。通过管理界面用于 VMware vSphere 管理流量。<br><br>分配给充当管理组件的 VM（虚拟机）。<br><br>分配给 VMware NSX VTEP（VXLAN 隧道端点）|
 |VLAN3|专用 B，可移植|分配给 VMware vSAN（如果使用）。<br><br>分配给 VMware NFS（如果使用）。<br><br>分配给 VMware vSphere vMotion。<br><br>对于 NSX-T，分配给 VMware NSX VTEP（VXLAN 隧道端点）。|
+{: caption="表 1. vCenter Server 实例中 VLAN 的 BOM" caption-side="top"}
 
 ## vCenter Server 实例的软件 BOM
 {: #vc_bom-software}
 
 下表详细描述了 vCenter Server 软件组件的 BOM 信息。
-
-表 2. vCenter Server 实例中软件组件的 BOM
 
 |制造商|组件|版本|
 |:------------- |:------------------------------ |:------------- |
@@ -49,10 +47,11 @@ subcollection: vmware-solutions
 |VMware|vSphere 6.5|Distributed vSwitch 6.5.0|
 |VMware|vCenter Server Appliance|6.7 Update 1b（构建 6.7.0-11727113）或 <br/>6.5 Update 2g（构建 6.5.0-13638625）|
 |VMware|Platform Services Controller|6.7 Update 1b（构建 6.7.0-11727113）或 <br/>6.5 Update 2d（构建 6.5.0-10964411）|
-|VMware|vSAN|6.7 Update 1 或 <br/>6.6.1|
+|VMware|vSAN|6.7 Update 1 或<br/>6.6.1|
 |VMware|NSX for vSphere| 6.4.4（构建 11197766）|
 |VMware|NSX-T for vSphere|2.4|
 |Microsoft|Windows Server Standard Edition|2016|
+{: caption="表 2. vCenter Server 实例中软件组件的 BOM" caption-side="top"}
 
 VMware vSAN 是可选组件。
 {:note}
@@ -63,8 +62,6 @@ VMware vSAN 是可选组件。
 查看下表以了解应用于 ESXi 服务器的高级配置设置的概述。这些设置取决于 vCenter Server 实例是部署在 V2.2 或更高版本中，还是从 V2.1 或更低版本升级到 V2.2 或更高版本。
 
 这些设置会应用于新实例以及新实例 V2.2 或更高版本中的新集群。这些设置不会应用于 V2.1 或更低版本的现有实例中的新集群，也不会应用于升级到 V2.2 或更高版本的现有实例中的新集群。
-
-表 3. vCenter Server 实例和集群的 ESXi 服务器高级配置设置
 
 |配置设置|如果是新部署在 V2.2 或更高版本中|如果是从 V2.1 或更低版本升级|
 |:------------- |:------------- |:------------- |
@@ -77,14 +74,17 @@ VMware vSAN 是可选组件。
 |队列已满阈值|**QFullThreshold** = 8|**/Disk/QFullThreshold** = 8|
 |TCP/IP 堆大小|**TcpipHeapSize** = 32|未设置|
 |最大 TCP/IP 堆大小|**TcpipHeapMax** = 1536|未设置|
+{: caption="表 3. vCenter Server 实例和集群的 ESXi 服务器高级配置设置" caption-side="top"}
 
-**注：**
+### 注释
+{: #vc_bom-notes}
+
 * IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 服务需要 **MaxVolumes** 设置，因为该服务可能会在 ESXi 服务器上使用超过缺省数量的 NFS 安装。
 * 配置设置的**未设置**值指示不会自动应用新设置，因为这需要重新引导 ESXi 服务器，这样可能有破坏性。
 
   建议将**未设置**配置设置更改为新值，以实现在所有实例上的一致性，并为存储扩展提供充分支持。对于所有 {{site.data.keyword.vmwaresolutions_short}} V2.2 和更高发行版，IBM 计划仅测试这些新设置。
 
-  有关更多信息，请参阅[增大定义 ESXi 主机上 NFS 最大安装数的缺省值](https://kb.vmware.com/s/article/2239)。
+  有关更多信息，请参阅[增大定义 ESXi 主机上 NFS 最大安装数的缺省值](https://kb.vmware.com/s/article/2239){:external}。
 
 ## NSX 和端口组配置设置
 {: #vc_bom-nsx-port-group-config}
@@ -92,8 +92,6 @@ VMware vSAN 是可选组件。
 查看下表以了解 vCenter Server 实例的 VMware NSX 和端口组配置设置的概述，以及发行版之间的差异。
 
 这些设置会应用于新实例以及新实例 V2.2 或更高版本中的新集群。这些设置不会应用于 V2.1 或更低版本的现有实例中的新集群，也不会应用于升级到 V2.2 或更高版本的现有实例中的新集群。
-
-表 4. vCenter Server 实例的 NSX 和端口组配置设置
 
 |配置设置|V2.1 或更低版本|V2.2 或更高版本|   
 |:------------- |:------------- |:------------- |
@@ -104,6 +102,7 @@ VMware vSAN 是可选组件。
 |端口组 SDDC-DPortGroup-VSAN（如果适用）|**活动上行链路**设置为 **uplink1**，**备用上行链路**设置为 **uplink2**|**活动上行链路**设置为 **uplink2**，**备用上行链路**设置为 **uplink1**|  
 |端口组 SDDC-DPortGroup-Mgmt|**端口绑定**设置为**临时 - 无绑定**，**负载均衡**设置为**基于发起虚拟端口进行路由**|**端口绑定**设置为**静态绑定**，**负载均衡**设置为**基于物理 NIC 负载进行路由**|  
 |端口组 SDDC-DPortGroup-External|**端口绑定**设置为**临时 - 无绑定**|**端口绑定**设置为**静态绑定**|
+{: caption="表 4. vCenter Server 实例的 NSX 和端口组配置设置" caption-side="top"}
 
 ## 网络 MTU 配置设置
 {: #vc_bom-network-mtu-config}
@@ -116,12 +115,11 @@ vSphere 集群使用两个 vSphere 分布式交换机 (vDS)，一个用于公用
 
 查看下表以了解应用于公用和专用分布式虚拟交换机 (DVS) 的网络 MTU 配置设置的概述，具体取决于 vCenter Server 实例是否部署在 V2.1 或更高版本中。
 
-表 5. 基于实例版本的 vCenter Server 实例和集群的 MTU 配置设置
-
 |vDS|V2.1 或更高版本|V2.0 或更低版本（或从 V2.0 或更低版本升级）|
 |:-------------- |:-------------- |:------------- |
 |公共交换机|1500（缺省值）|9000（巨型帧）|
 |专用交换机|9000（巨型帧）|9000（巨型帧）|
+{: caption="表 5. 基于实例版本的 vCenter Server 实例和集群的 MTU 配置设置" caption-side="top"}
 
 这些设置会应用于新实例以及部署在 V2.1 或更高版本中的实例中的新集群。这些设置还会应用于已升级到 V2.1 或更高版本的实例中多个 {{site.data.keyword.CloudDataCents_notm}} 中的新集群。
 
@@ -143,9 +141,9 @@ vSphere 集群使用两个 vSphere 分布式交换机 (vDS)，一个用于公用
 ## 相关链接
 {: #vc_bom-related}
 
-* [VMware ESXi 和 ESX 的构建号和版本 (2143832)](https://kb.vmware.com/s/article/2143832)
-* [VMware vCenter Server 的构建号和版本 (2143838)](https://kb.vmware.com/s/article/2143838)
-* [在虚拟分布式交换机上启用巨型帧](https://kb.vmware.com/s/article/1038827)
-* [{{site.data.keyword.vmwaresolutions_short}} 保护数据表](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:new_window}
+* [VMware ESXi 和 ESX 的构建号和版本 (2143832)](https://kb.vmware.com/s/article/2143832){:external}
+* [VMware vCenter Server 的构建号和版本 (2143838)](https://kb.vmware.com/s/article/2143838){:external}
+* [在虚拟分布式交换机上启用巨型帧](https://kb.vmware.com/s/article/1038827){:external}
+* [{{site.data.keyword.vmwaresolutions_short}} 保护数据表](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:external}
 * [vCenter Server 概述](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
 * [规划 vCenter Server 实例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)

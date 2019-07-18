@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: NetApp order instance, order NetApp ONTAP, order NetApp
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -119,7 +120,7 @@ Também é possível incluir os recursos provisionados na ferramenta de estimati
 ## Procedimento para pedir instâncias do NetApp ONTAP Select
 {: #ordering-netapp-ontap-select-instances}
 
-1. No catálogo do {{site.data.keyword.cloud_notm}}, clique em **VMware** na área de janela de navegação à esquerda e, em seguida, clique em **NetApp ONTAP Select** na seção **Data centers virtuais**.
+1. No catálogo do {{site.data.keyword.cloud_notm}}, clique no ícone **VMware** da área de janela de navegação esquerda e, em seguida, clique no cartão **NetApp ONTAP Select** da seção **Data centers virtuais do VMware**.
 2. Na página **NetApp ONTAP Select**, clique em **Criar**.
 3. Na página **NetApp ONTAP**, insira o nome da instância.
 4. Conclua as configurações da interface de rede inserindo o **Prefixo de nome do host**, **Rótulo do subdomínio** e **Nome de domínio**.
@@ -161,5 +162,5 @@ Deve-se gerenciar os componentes do {{site.data.keyword.vmwaresolutions_short}} 
 
 * [Visualizando instâncias do NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_viewinginstances)
 * [Excluindo instâncias do NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_deletinginstance)
-* [Centro de Documentação do NetApp ONTAP](http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.exp-clus-peer%2Fhome.html)
-* [Anexar armazenamento dedicado a implementações do NetApp ONTAP Select](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)
+* [Centro de Documentação do NetApp ONTAP](http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.exp-clus-peer%2Fhome.html){: external}
+* [Anexar armazenamento dedicado a implementações do NetApp ONTAP Select](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/){: external}

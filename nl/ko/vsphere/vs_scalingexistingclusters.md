@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-20"
 
 keywords: vSphere scale cluster, scale vSphere, scale vSphere cluster
 
@@ -33,7 +33,7 @@ subcollection: vmware-solutions
 ## 기존 클러스터를 스케일링하는 프로시저
 {: #vs_scalingexistingclusters-procedure}
 
-1. {{site.data.keyword.cloud_notm}} 카탈로그의 왼쪽 탐색 분할창에 있는 **VMware**를 클릭한 다음 **가상 데이터 센터** 섹션에 있는 **VMware vSphere**를 클릭하십시오.
+1. {{site.data.keyword.cloud_notm}} 카탈로그에서 왼쪽 탐색 분할창에 있는 **VMware** 아이콘을 클릭한 다음 **VMware 가상 데이터 센터** 섹션에 있는 **VMware vSphere on IBM Cloud** 카드를 클릭하십시오.
 2. **VMware vSphere on IBM Cloud** 페이지에서 **작성**을 클릭하십시오.  
 3. **기존 항목 스케일링** 탭을 클릭하고 **클러스터 구성** 목록에서 스케일링할 클러스터를 선택하십시오.
 4. 자동으로 완료된 클러스터 설정을 검토하십시오.

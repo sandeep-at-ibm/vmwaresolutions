@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-10"
+lastupdated: "2019-06-27"
 
 keywords: vCenter Server add service, view service vCenter Server, remove service vCenter Server
 
@@ -27,11 +27,9 @@ subcollection: vmware-solutions
 
 下表顯示可用於 vCenter Server 實例的服務，以及已安裝的服務版本。
 
-表 1. vCenter Server 實例的可用服務
-
 | 服務名稱                                                                               | 現行服務版本 | 實例版本 |
 |----------------------------------------------------------------------------------------|------------------|
-| [Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_considerations) | 2.2 | 2.9 版以及更新版本 |
+| [Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_considerations) | 2.2.1 | 2.9 版以及更新版本 |
 | [F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations)                                 | BIG-IP VE v14.1.0.2 | 1.9 版以及更新版本 |
 | [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations)       | 300 系列 | 2.0 版以及更新版本 |
 | [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations) | 6.0.3 | 2.0 版以及更新版本 |
@@ -43,6 +41,7 @@ subcollection: vmware-solutions
 | [KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations)                  | 2.0 |N/A    |
 | [Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)                           | 9.5u4 | 1.8 版以及更新版本 |
 | [Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)                                  | 6.5 Update 3 | 1.2 版以及更新版本 |
+{: caption="表 1. vCenter Server 實例的可用服務" caption-side="top"}
 
 ## 將服務新增至 vCenter Server 實例的程序
 {: #vc_addingremovingservices-adding-procedure}

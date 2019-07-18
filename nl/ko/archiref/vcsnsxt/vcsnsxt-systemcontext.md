@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-06-21"
 
 subcollection: vmware-solutions
 
@@ -35,7 +35,7 @@ subcollection: vmware-solutions
 액터  |설명
 ---|---
 시스템 관리자 |시스템 관리자는 vCenter와 HCX 플러그인을 사용하는 엔터프라이즈 VMware 리소스입니다. 마이그레이션, 스트레치 네트워크의 후보를 식별하고 VM을 마이그레이션하고 NSX-V를 관리합니다. {{site.data.keyword.cloud_notm}} 콘솔을 사용하여 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 인스턴스를 프로비저닝하고 용량을 확장합니다.
-개발자	| 개발자는 {{site.data.keyword.containerlong_notm}}, {{site.data.keyword.icpfull_notm}} 및 CAM 콘솔과 API를 사용하여 컨테이너를 작성하고 관리하는 엔터프라이즈의 숙련된 컨테이너 리소스입니다. 개발자는 애플리케이션 현대화의 일환으로 새 서비스를 작성합니다.
+개발자 | 개발자는 {{site.data.keyword.containerlong_notm}}, {{site.data.keyword.icpfull_notm}} 및 CAM 콘솔과 API를 사용하여 컨테이너를 작성하고 관리하는 엔터프라이즈의 숙련된 컨테이너 리소스입니다. 개발자는 애플리케이션 현대화의 일환으로 새 서비스를 작성합니다.
 엔터프라이즈 사용자 | 이 엔터프라이즈 리소스는 컨텐츠 업데이트와 같은 비즈니스 프로세스를 완료하기 위해 애플리케이션에 대한 네트워크 액세스가 필요합니다.
 고객 | 고객은 엔터프라이즈의 서비스를 소비하려는 외부 액터입니다. Acme Skateboards의 경우, 스케이트 제품을 구매하려는 스케이트를 타는 사람입니다. 고객은 카탈로그에 대한 보안 인터넷 액세스가 필요합니다.
 {{site.data.keyword.containerlong_notm}} | 이는 서비스의 {{site.data.keyword.containerlong_notm}} 마스터 노드를 관리하는 IBM 리소스입니다.
@@ -55,7 +55,7 @@ On cloud VM | On cloud VM은 온프레미스에서 마이그레이션된 애플�
 NSX-V | NSX-V on vCenter Server는 시스템 관리자가 관리하는 소프트웨어 정의 오버레이 네트워크를 제공합니다. 오버레이 네트워크는 {{site.data.keyword.icpfull_notm}}를 위한 VM에서 트래픽을 처리하는 HCX 스트레치 네트워크의 대상이 됩니다. NSX-V는 vDS(vSphere distributed switch)를 사용하여 VMware 내에 마이크로 세그먼트화 서비스 및 On-Demand 가상 네트워크의 배치, 재구성 및 폐기 등의 기능을 갖춘 참조 아키텍처를 제공합니다. 자세한 정보는 [NSX–V 개요](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv)를 참조하십시오.
 CAM | {{site.data.keyword.cloud_notm}} Automation Manager(CAM)는 {{site.data.keyword.icpfull_notm}}에서 실행되고, 템플리트를 사용하여 Kubernetes 기반 워크로드와 함께 VM 기반 워크로드를 프로비저닝하는 단일 분할창을 제공합니다. 개발자는 CAM을 사용하여 다음을 수행할 수 있습니다. <br> - vCenter Server, {{site.data.keyword.icpfull_notm}} 또는 {{site.data.keyword.containerlong_notm}}에서 워크로드를 프로비저닝합니다.<br> - VM과 컨테이너로 구성된 서비스를 작성하고 오케스트레이션합니다. <br> - 해당 DevOps 도구 체인과 2일 ITSM 솔루션을 통합합니다.
 컨테이너화된 애플리케이션 |애플리케이션 현대화 과정을 완료하고 이제 컨테이너로 실행 중인 앱입니다. 이 참조 아키텍처와 Acme Skateboards 예의 경우, 컨테이너화된 앱 중 하나가 웹 서버이며 이는 온라인 상태 워크로드의 일부입니다.
-Watson | 이 참조 아키텍처 및 Acme Skateboards 예의 경우, Watson은 "컨셉트 카" 아키텍처에 사용되는 AI 서비스를 나타냅니다.
+Watson | 이 참조 아키텍처 및 Acme Skateboards 예의 경우, Watson은 _컨셉트 카 아키텍처_에 사용되는 AI 서비스를 나타냅니다.
 
 ## 관련 링크
 {: #vcsnsxt-systemcontext-related}

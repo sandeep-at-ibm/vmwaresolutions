@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-28"
 
 keywords: vSphere order cluster, order vSphere, order vSphere cluster
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -51,14 +52,13 @@ subcollection: vmware-solutions
 
 IBM ビジネス・パートナーのユーザーは、新規 vSphere クラスターを注文するときにコンポーネント・ライセンス・バンドルを選択できます。 使用可能なバンドルは次のとおりです。
 
-表 1. IBM ビジネス・パートナー向けの vSphere クラスター用のコンポーネント・バンドル
-
 | バンドル | コンポーネント                   |
 |:------------------------- |:----------------------- |
 | Standard with Management | vSphere Enterprise Plus、vCenter Server Standard、vRealize Log Insight、vRealize Operations Enterprise |
 | Advanced                 | vSphere Enterprise Plus、vCenter Server Standard、vRealize Log Insight、vCloud Director、NSX Base |
 | Advanced with Networking | vSphere Enterprise Plus、vCenter Server Standard、vRealize Log Insight、NSX Advanced |
 | Advanced with Networking and Management | vSphere Enterprise Plus、vCenter Server Standard、vRealize Log Insight、vRealize Operations Enterprise、vCloud Director、NSX Enterprise |
+{: caption="表 1. IBM ビジネス・パートナー向けの vSphere クラスター用のコンポーネント・バンドル" caption-side="top"}
 
 また、次の VMware コンポーネントを注文に含めることもできます。
 * VMware vSAN
@@ -104,7 +104,9 @@ vSphere Enterprise Plus と vCenter Server を除き、ライセンスを購入�
 
 クラスターをホストする {{site.data.keyword.CloudDataCent_notm}}を選択します。
 
-**注:**
+#### メモ
+{: #vs_orderinginstances-notes}
+
 * vSAN コンポーネントを選択した場合は、SSD の使用可否によってロケーション・リストがフィルタリングされます。
 * Broadwell ベア・メタル・サーバーは、**FRA05 - フランクフルト**のデータ・センター・ロケーションでは使用できません。
 * SAP 認定ベア・メタル・サーバーと Broadwell ベア・メタル・サーバーは、**LON05 - ロンドン**のデータ・センター・ロケーションでは使用できません。
@@ -114,13 +116,12 @@ vSphere Enterprise Plus と vCenter Server を除き、ライセンスを購入�
 
 **「Skylake」**を選択した場合、必要に応じてベアメタル・サーバーの CPU と RAM の組み合わせを選択できます。 使用できるオプションは、VMware vSAN コンポーネントを選択したかどうかによって異なります。
 
-表 2. Skylake {{site.data.keyword.baremetal_short}}のオプション
-
 | CPU モデル・オプション        | RAM オプション       |
 |:------------- |:------------- |
 | Dual Intel Xeon Silver 4110 プロセッサー / 合計 16 コア、2.1 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 | Dual Intel Xeon Gold 5120 Processor / 合計 28 コア、2.2 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 | Dual Intel Xeon Gold 6140 Processor / 合計 36 コア、2.3 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+{: caption="表 2. Skylake {{site.data.keyword.baremetal_short}}のオプション" caption-side="top"}
 
 ### SAP 認定
 {: #vs_orderinginstances-sap}
@@ -141,12 +142,11 @@ VMware vSAN を以前に選択した場合、**「SAP 認定」**タブは使用
 
 **「Broadwell」**を選択した場合、必要に応じてベアメタル・サーバーの CPU と RAM の組み合わせを選択できます。 使用できるオプションは、VMware vSAN コンポーネントを選択したかどうかによって異なります。
 
-表 3. Broadwell {{site.data.keyword.baremetal_short}}のオプション
-
 | CPU モデル・オプション        | RAM オプション       |
 |:------------- |:------------- |
 | クワッド Intel Xeon E7-4820 v4 / 合計 40 コア、2.0 GHz | 128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 | クワッド Intel Xeon E7-4850 v4 / 合計 64 コア、2.1 GHz | 128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
+{: caption="表 3. Broadwell {{site.data.keyword.baremetal_short}}のオプション" caption-side="top"}
 
 ### ベア・メタル・サーバーの数
 {: #vs_orderinginstances-bare-metal-number}
@@ -235,7 +235,9 @@ vSAN ありの注文の場合、ESXi サーバー用に 12 ディスクのシャ
   * **プライマリー・サブネット**は、パブリック・ネットワーク・アクセス用に物理ホストに割り当てられます。
   * **プライマリー・プライベート・サブネット**は、管理トラフィック用に物理ホストに割り当てられます。
 
-**重要:**
+##### 重要
+{: #vs_orderinginstances-important}
+
 * 選択した VLAN のファイアウォール構成が管理用データ・トラフィックをブロックしていないことを確認してください。
 * 選択したすべての VLAN が同じポッドに含まれていることを確認してください。 複数のポッドの VLAN に ESXi サーバーをプロビジョンすることはできません。
 
@@ -249,12 +251,12 @@ vSAN ありの注文の場合、ESXi サーバー用に 12 ディスクのシャ
 
 選択した構成に基づいて、見積もりコストがすぐに生成され、右側のペインの**「注文の要約」**に表示されます。 **「料金詳細」**をクリックすると、{{site.data.keyword.vmwaresolutions_short}} リソースのコスト・サマリーが記載された PDF 文書を生成できます。
 
-また、**「見積もりに追加」**をクリックして、プロビジョン済みリソースを {{site.data.keyword.cloud_notm}} 見積もりツールに追加することもできます。この操作は、購入を検討している他の {{site.data.keyword.cloud_notm}} リソースと一緒に、選択した {{site.data.keyword.vmwaresolutions_short}}リソースのコストを見積もる場合に役立ちます。
+また、**「見積もりに追加」**をクリックして、プロビジョン済みリソースを {{site.data.keyword.cloud_notm}} 見積もりツールに追加することもできます。 この操作は、購入を検討している他の {{site.data.keyword.cloud_notm}} リソースと一緒に、選択した {{site.data.keyword.vmwaresolutions_short}}リソースのコストを見積もる場合に役立ちます。
 
 ## vSphere クラスターを注文する手順
 {: #vs_orderinginstances-procedure}
 
-1. {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**をクリックしてから、**「仮想データ・センター」**セクションの**「VMware vSphere」**をクリックします。
+1. {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**アイコンをクリックしてから、**「VMware 仮想データ・センター」**セクションの**「VMware vSphere on IBM Cloud」**カードをクリックします。
 2. **「VMware vSphere on IBM Cloud」**ページで、**「作成」**をクリックします。  
    **「新規作成」**タブが表示され、**「クラスター構成」**リストに**「新規クラスター」**が表示されていることを確認します。
 3. クラスター名を入力します。
@@ -263,7 +265,7 @@ vSAN ありの注文の場合、ESXi サーバー用に 12 ディスクのシャ
   * 非ビジネス・パートナーは、コンポーネントとエディション (ある場合) を選択して、ライセンス・オプションを指定してください。
   VMware vSphere Enterprise Plus でライセンス持ち込み (BYOL) を選択すると、注文した{{site.data.keyword.baremetal_short}}のデフォルトの vSphere ライセンスを、自分で提供したライセンスに置き換えるよう要求する {{site.data.keyword.cloud_notm}} チケットが自動的に開きます。   
 
-    **重要:** このチケットを追跡し、新しく注文した ESXi サーバー上で vSphere ライセンスを置き換える作業は、お客様が行う必要があります。 このようにして、最初に提供された {{site.data.keyword.cloud_notm}} インフラストラクチャーの vSphere ライセンス料の取り消しが {{site.data.keyword.cloud_notm}} インフラストラクチャーによって許可されます。 ESXi vSphere ライセンスを置き換えるには、[Configure License Settings for an ESXi Host](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window} を参照してください。
+    **重要:** このチケットを追跡し、新しく注文した ESXi サーバー上で vSphere ライセンスを置き換える作業は、お客様が行う必要があります。 このようにして、最初に提供された {{site.data.keyword.cloud_notm}} インフラストラクチャーの vSphere ライセンス料の取り消しが {{site.data.keyword.cloud_notm}} インフラストラクチャーによって許可されます。 ESXi vSphere ライセンスを置き換えるには、[Configure License Settings for an ESXi Host](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:external} を参照してください。
 5. ベア・メタル・サーバーの設定を次の手順で実行します。
    1. クラスターをホストする {{site.data.keyword.CloudDataCent_notm}}を選択します。
    2. ベア・メタル・サーバー構成を選択します。

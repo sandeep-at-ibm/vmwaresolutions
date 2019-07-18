@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-21"
 
 keywords: Caveonix view license, Caveonix manage license, delete Caveonix license
 
@@ -29,26 +29,12 @@ subcollection: vmware-solutions
 
 1. Clique em **Recursos** na área de janela de navegação à esquerda e role para baixo até a tabela **Licenças do Caveonix RiskForesight** para visualizar o resumo das licenças do Caveonix RiskForesight que você pediu.
 
-   Tabela 1. Descrição dos itens de licença do Caveonix RiskForesight
-
-    <table>
-      <tr>
-        <th>Item</th>
-        <th>Descrição</th>
-      </tr>
-      <tr>
-        <td>Nome</td>
-        <td>O nome da licença.</td>
-       </tr>
-       <tr>
-         <td>Horário de criação</td>
-         <td>A data e hora em que a licença foi criada.</td>
-       </tr>
-       <tr>
-         <td>Status</td>
-         <td>O status da licença: <ul><li>Modificando: a licença está sendo criada.</li><li>Instalada: a licença está pronta para uso.</li><li>Removendo: A licença está sendo excluída.</li></ul></td>
-       </tr>
-    </table>   
+| Item | Descrição |
+|:-----|:------------|
+| Nome | O nome da licença. |
+| Horário de criação | A data e hora em que a licença foi criada. |
+| Barra de Status | O status da licença: <br>Modificando: a licença está sendo criada.<br>Instalada: a licença está pronta para uso.<br>Removendo: A licença está sendo excluída. |
+{: caption="Tabela 1. Descrição dos itens de licença do Caveonix RiskForesight" caption-side="top"}
 
 2. Para visualizar os detalhes de uma licença específica, clique na licença.
 

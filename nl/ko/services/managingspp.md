@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-28"
 
 keywords: SPP management console, apply SPP updates, login SPP console
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # IBM Spectrum Protect Plus on IBM Cloud 관리
 {: #managingspp}
@@ -26,7 +28,7 @@ subcollection: vmware-solutions
 ## IBM Spectrum Protect Plus on IBM Cloud에 업데이트 적용
 {: #managingspp-updates}
 
-사용자는 IBM Spectrum Protect Plus가 항상 최신 버전으로 업데이트되어 있도록 유지보수해야 합니다. [IBM Spectrum Protect Plus 지원](https://www.ibm.com/mysupport/s/topic/0TO50000000IQWtGAO/spectrum-protect-plus){:new_window} 페이지에서 필수 업데이트를 다운로드할 수 있습니다.
+사용자는 IBM Spectrum Protect Plus가 항상 최신 버전으로 업데이트되어 있도록 유지보수해야 합니다. [IBM Spectrum Protect Plus 지원](https://www.ibm.com/mysupport/s/topic/0TO50000000IQWtGAO/spectrum-protect-plus){:external}에서 필수 업데이트를 다운로드하십시오.
 
 자세한 정보는 [vCenter Server 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)를 참조하십시오.
 
@@ -39,6 +41,6 @@ IBM Spectrum Protect Plus VM의 운영 체제를 업데이트하려면 **루트*
 {: #managingspp-related}
 
 * [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions/services?topic=vmware-solutions-spp_considerations){:new_window}
-* [How to increase vsnap storage for IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} post deployment](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/){:new_window}
-* [How to configure IBM Spectrum Protect Plus to offload to IBM Cloud Object Storage](https://developer.ibm.com/recipes/tutorials/how-to-configure-ibm-spectrum-protect-plus-to-offload-to-ibm-cloud-object-storage/){:new_window}
-* [IBM Spectrum Protect Plus 문서](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html){:new_window}
+* [How to increase vsnap storage for IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} post deployment](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/){:external}
+* [How to configure IBM Spectrum Protect Plus to offload to IBM Cloud Object Storage](https://developer.ibm.com/recipes/tutorials/how-to-configure-ibm-spectrum-protect-plus-to-offload-to-ibm-cloud-object-storage/){:external}
+* [IBM Spectrum Protect Plus 문서](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html){:external}

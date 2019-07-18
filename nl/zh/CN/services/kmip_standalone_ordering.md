@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-21"
 
 keywords: KMIP for VMware, order KMIP stand-alone, KMIP for VMware configuration
 
@@ -29,7 +29,7 @@ subcollection: vmware-solutions
 {: #kmip_standalone_ordering-procedure}
 
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**开始**。
-2. 在**订购其他服务**区域中，单击 **KMIP for VMware on IBM Cloud**。
+2. 在 **VMware 服务**部分中，单击 **KMIP for VMware on IBM Cloud** 卡。
 3. 在 **KMIP for VMware on IBM Cloud** 页面上，根据需要配置服务设置。
 4. 单击**供应**。
 
@@ -50,8 +50,6 @@ subcollection: vmware-solutions
 
 {{site.data.keyword.cloud_notm}} 在提供了 KMIP for VMware on {{site.data.keyword.cloud_notm}} 网络服务的每个位置中维护该服务的高可用性端点。
 
-表 1. KMIP for VMware on {{site.data.keyword.cloud_notm}} 网络服务端点位置
-
 |位置|端点|
 |:---------------|:-----------------------|
 |达拉斯| <<code>kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696</code><br>和<br><code>kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696</code> |
@@ -60,6 +58,7 @@ subcollection: vmware-solutions
 |悉尼|<code>kmip-1.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code><br>和<br><code>kmip-2.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code> |
 |东京|<code>kmip-1.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code><br>和<br><code>kmip-2.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code> |
 | 华盛顿|<code>kmip-1.private.us-east.vmware-solutions.cloud.ibm.com:5696</code><br>和<br><code>kmip-2.private.us-east.vmware-solutions.cloud.ibm.com:5696</code> |
+{: caption="表 1. KMIP for VMware on {{site.data.keyword.cloud_notm}} 网络服务端点位置" caption-side="top"}
 
 ### 服务标识的 API 密钥
 {: #kmip_standalone_ordering-config-api-key}

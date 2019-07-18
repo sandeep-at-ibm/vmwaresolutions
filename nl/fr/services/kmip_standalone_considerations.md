@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-28"
 
 keywords: KMIP for VMware, KMIP stand-alone, tech specs KMIP
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -30,7 +31,7 @@ Le service KMIP for VMware on {{site.data.keyword.cloud_notm}} est disponible en
 Les spécifications suivantes sont incluses avec le service KMIP for VMware on {{site.data.keyword.cloud_notm}} :
 
 * Un protocole KMIP (Key Management Interoperability Protocol) compatible VMware
-* Deux services gérés : [IBM Key Protect for {{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/catalog/services/key-protect) et [{{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services)
+* Deux services gérés : [IBM Key Protect for {{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/catalog/services/key-protect){:external} et [{{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services){:external}
 * Disponible dans plusieurs régions géographiques du monde entier
 * Deux noeuds finaux de service de réseau KMIP fournis dans chaque région pour la haute disponibilité
 
@@ -49,8 +50,8 @@ Passez en revue les remarques suivantes avant d'installer une instance KMIP for 
       * Au niveau de l'accès au service : droit de gestionnaire sur votre instance du service Key Protect ou HPCS
    * Vous disposez d'une clé d'API pour l'ID de service créé. La clé est requise lorsque vous commandez le service.
    * Vous avez créé au moins une clé racine de client en utilisant l'interface graphique ou l'API Key Protect ou HPCS :
-      * Pour plus d'informations sur la création de clés racine avec l'interface graphique ou l'API Key Protect, voir [Création de clés racine](/docs/services/key-protect?topic=key-protect-create-root-keys#create-root-keys) ou [API IBM Key Protect](https://cloud.ibm.com/apidocs/key-protect).
-      * Pour plus d'informations sur la création de clés racine avec l'interface graphique ou l'API HPCS, voir [Création de clés racine](/docs/hs-crypto/get-started?topic=hs-crypto-create-root-keys) ou [API IBM Cloud Hyper Protect Crypto Services](https://cloud.ibm.com/apidocs/hs-crypto).
+      * Pour plus d'informations sur la création de clés racine avec l'interface graphique ou l'API Key Protect, voir [Création de clés racine](/docs/services/key-protect?topic=key-protect-create-root-keys#create-root-keys) ou [API IBM Key Protect](https://cloud.ibm.com/apidocs/key-protect){:external}.
+      * Pour plus d'informations sur la création de clés racine avec l'interface graphique ou l'API HPCS, voir [Création de clés racine](/docs/hs-crypto/get-started?topic=hs-crypto-create-root-keys) ou [API IBM Cloud Hyper Protect Crypto Services](https://cloud.ibm.com/apidocs/hs-crypto){:external}.
 
      **Important :** vous ne pouvez pas commander le service sans clé racine de client. Il est vivement recommandé d'utiliser la méthode de création d'une clé racine de client à l'aide du matériel de clé existant et de sauvegarder le matériel de clé que vous créez. Ainsi, vous êtes sûr de pouvoir récupérer vos clés en cas de panne du centre de données dans lequel Key Protect ou HPCS est utilisé pour stocker vos clés racine de client.
 * Assurez-vous que votre compte d'infrastructure {{site.data.keyword.cloud_notm}} est activé pour le service Routage et transfert virtuel (VRF) et pour la connectivité aux noeuds finaux de service. Pour plus d'informations, voir :

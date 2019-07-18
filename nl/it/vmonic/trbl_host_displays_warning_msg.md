@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-26"
 
 keywords: troubleshooting, configuration issue, ESXi server issue
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # Problema di configurazione nel server ESXi
 {: #trbl_host_displays_warning_msg}
@@ -30,4 +32,4 @@ Il messaggio viene visualizzato anche se ci sono due uplink disponibili per lo s
 ## Risoluzione
 {: #trbl_host_displays_warning_msg-resolution}
 
-Questo è un problema noto di VMware. Per risolvere il problema, segui le istruzioni in [ESX/ESXi host displays warning message when test condition is false (2008602)](https://kb.vmware.com/s/article/2008602){:new_window}.
+Questo è un problema noto di VMware. Per risolvere il problema, segui le istruzioni in [ESX/ESXi host displays warning message when test condition is false (2008602)](https://kb.vmware.com/s/article/2008602).{:external}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -42,7 +42,7 @@ L'application Skate Advisor exploite la plateforme de modernisation des applicat
 ### Conditionnement et déploiement d'application
 {: #vcscar-physical-app-pack-depl}
 
-L'application est déployée sous la forme d'une orchestration CAM contenant les éléments énumérés ci-après.
+L'application est déployée sous la forme d'une orchestration CAM contenant les éléments suivants :
 * Orchestration de service - Une orchestration de service CAM est une ressource de workflow qui décrit les modèles Terraform et les chartes Helm à déployer en tant que facette d'un service. Un service peut être publié et correspond à l'artefact de contrôle à partir duquel l'ensemble du déploiement est orchestré.
 * Charte Helm - La charte Helm réside dans le référentiel {{site.data.keyword.icpfull_notm}} local et déploie des conteneurs et d'autres ressources sur {{site.data.keyword.icpfull_notm}}. Une charte Helm est une description de ressources Kubernetes incluant les éléments suivants :
   - Déploiements de conteneur
@@ -134,7 +134,7 @@ L'application Acme Skate Advisor réside sur {{site.data.keyword.cloud_notm}} et
 
 Ce diagramme représente {{site.data.keyword.icpfull_notm}} et CAM déployés sur une instance vCenter Server, avec des connexions aux services vCenter et {{site.data.keyword.containerlong_notm}} sur site. A l'aide de CAM, les administrateurs système et les développeurs peuvent déployer des machines virtuelles présentes sur site ou dans l'instance et les conteneurs vCenter Server vers les clusters {{site.data.keyword.icpfull_notm}} et {{site.data.keyword.containerlong_notm}}.
 
-Dans le diagramme, CAM crée des connexions de cloud aux services vCenter, aux fournisseurs de cloud et aux environnements {{site.data.keyword.icpfull_notm}} et {{site.data.keyword.containerlong_notm}} de façon logique. Des clusters {{site.data.keyword.icpfull_notm}} sont déployés dans chaque centre de données/environnement de cloud, MCM fournissant le mécanisme de connexion aux clusters {{site.data.keyword.icpfull_notm}} dans une seule vue de gestion.
+Dans le diagramme, CAM crée des connexions de cloud aux services vCenter, aux fournisseurs de cloud et aux environnements {{site.data.keyword.icpfull_notm}} et {{site.data.keyword.containerlong_notm}} de façon logique. Des clusters {{site.data.keyword.icpfull_notm}} sont déployés dans chaque centre de données ou environnement de cloud, MCM fournissant le mécanisme de connexion aux clusters {{site.data.keyword.icpfull_notm}} dans une seule vue de gestion.
 
 ## Liens connexes
 {: #vcscar-physical-related}

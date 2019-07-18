@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-26"
 
 keywords: Caveonix license, Caveonix license issue, delete Caveonix license
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -27,7 +28,7 @@ subcollection: vmware-solutions
 
 Mozilla Firefox をブラウザーとして使用している場合、開始日および終了日が、Caveonix RiskForesight コンソールで値なしで表示される可能性があります。 この問題を解決するには、ライセンス情報を Google Chrome などの別のブラウザーで表示してください。
 
-この問題が発生し、使用できるブラウザーが Firefox だけである場合は、[Caveonix Support](https://www.caveonix.com/support/){:new_window} にお問い合わせください。
+この問題が発生し、使用できるブラウザーが Firefox だけである場合は、[Caveonix Support](https://www.caveonix.com/support/){:external} にお問い合わせください。
 {:note}
 
 ## ライセンスを削除する際の考慮事項

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-06"
+lastupdated: "2019-07-01"
 
 ---
 
@@ -27,7 +27,7 @@ vRealize Log Insight (vRLI) 能夠在 {{site.data.keyword.vmwaresolutions_full}}
 * 主節點 - 叢集裡的必要起始節點。主節點負責查詢及日誌汲取。主節點 web 使用者介面是該 vRealize Log Insights 叢集的單一窗格。對於資料的所有查詢都會根據主節點而導向，主節點則將工作負載分散給工作者節點。
 * 工作者節點 - 必須有至少三個節點才能構成叢集，讓叢集可以新增更多工作者節點來進行橫向擴充。工作者節點會汲取日誌並將日誌儲存在本端。
 * 整合負載平衡器 - 此項使用專有負載平衡配置來提供高可用性（無需外部負載平衡器）。
-* Log Insight Forwarder - 此部署是為了接收來自 NSX 層疊元件的日誌。此外，如果客戶想要從運算 VM 傳送日誌，可以利用它。Log Insight Forwarder 是單一 vRealize Log Insight 主節點，用來作為遠端 syslog 聚集器，以便將警示轉遞給 vRLI 叢集。由於 VXLAN 支援的位址在 BYOIP 位址空間之外，因此必須在 NSX ESG 上實作 NAT 規則。
+* Log Insight Forwarder - 此部署是為了接收來自 NSX 層疊元件的日誌。此外，如果客戶想要從運算 VM 傳送日誌，可以利用它。Log Insight Forwarder 是單一 vRealize Log Insight 主節點，用來作為遠端 syslog 聚集器，以便將警示轉遞給 vRLI 叢集。由於 VXLAN 支援的位址在 BYOIP 位址空間外部，因此必須在 NSX ESG 上實作 NAT 規則。
 
 有下列大小可用，並選取了適當的大小：
 * 小型 - 2,000 個事件/秒

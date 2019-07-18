@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server NSX-T add cluster, view cluster vCenter Server NSX-T, delete cluster vCenter Server NSX-T
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -32,7 +33,7 @@ Puede añadir sus propios clústeres a las instancias de VMware vCenter Server c
 
 * Siempre que sea posible, añada clústeres utilizando la consola de {{site.data.keyword.vmwaresolutions_full}}, ya que los cambios que realice en el cliente web de VMware vSphere no se sincronizan con la consola de {{site.data.keyword.vmwaresolutions_short}}. Por lo tanto, añada clústeres a vCenter Server solo para clústeres locales o clústeres que no pueda o no vaya a gestionar en la consola de
 {{site.data.keyword.vmwaresolutions_short}}.
-* El número de clústeres, hosts y máquinas virtuales (VM) determina el límite máximo para el número de clústeres que puede añadir. Debe respetar las directrices de dimensionamiento de VMware y los límites para el despliegue. Para obtener más información sobre los límites máximos, consulte [Máximos de configuración de VMware](https://configmax.vmware.com/home){:new_window}.
+* El número de clústeres, hosts y máquinas virtuales (VM) determina el límite máximo para el número de clústeres que puede añadir. Debe respetar las directrices de dimensionamiento de VMware y los límites para el despliegue. Para obtener más información sobre los límites máximos, consulte [Máximos de configuración de VMware](https://configmax.vmware.com/home){:external}.
 
 ### Valores del sistema
 {: #vc_nsx-t_addingviewingclusters-adding-sys-settings}
@@ -65,25 +66,23 @@ Puede elegir **Skylake** o **Broadwell**.
 
 Para el valor **Skylake**, dispone de varias opciones para **Modelo de CPU** y **RAM**. Las opciones disponibles pueden variar dependiendo de la versión en que se desplegó inicialmente la instancia.
 
-Tabla 1. Opciones para {{site.data.keyword.baremetal_short}} Skylake
-
 | Opciones de modelo de CPU        | Opciones de RAM       |
 |:------------- |:------------- |
 | Procesador Dual Intel Xeon Silver 4110 / 16 núcleos en total, 2,1 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Procesador Dual Intel Xeon Gold 5120 / 28 núcleos en total, 2,2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon Gold Procesador 6140 / 36 núcleos en total, 2,3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+{: caption="Tabla 1. Opciones para {{site.data.keyword.baremetal_short}} Skylake" caption-side="top"}
 
 #### Broadwell
 {: #vc_nsx-t_addingviewingclusters-adding-broadwell}
 
 Para el valor **Broadwell**, dispone de varias opciones para **Modelo de CPU** y **RAM**. Las opciones disponibles pueden variar dependiendo de la versión en que se desplegó inicialmente la instancia.
 
-Tabla 2. Opciones para {{site.data.keyword.baremetal_short}} Broadwell
-
 | Opciones de modelo de CPU        | Opciones de RAM       |
 |:------------- |:------------- |
 | Quad Intel Xeon E7-4820 v4 / 40 núcleos en total, 1,9 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 núcleos en total, 2,2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+{: caption="Tabla 2. Opciones para {{site.data.keyword.baremetal_short}} Broadwell" caption-side="top"}
 
 #### Número de servidores nativos
 {: #vc_nsx-t_addingviewingclusters-adding-bare-metal-number}
@@ -128,14 +127,15 @@ El número de comparticiones de archivo debe estar comprendido entre 1 y 32.
 * **Rendimiento**: Seleccione el valor de IOPS (operaciones de entrada/salida por segundo) por GB en función de sus requisitos de carga de trabajo.
 * **AÑADIR NFS**: Seleccione esta opción para añadir comparticiones de archivos individuales con distintos valores de configuración.
 
-Tabla 3. Opciones de nivel de rendimiento de NFS
+Detalles de nivel de rendimiento:
 
 | Opción        | Detalles       |
-  |:------------- |:------------- |
-  | 0,25 IOPS/GB | Esta opción está diseñada para cargas de trabajo que no se utilizan a menudo. Estas son algunas aplicaciones de ejemplo: datos en caja fuerte, alojamiento de bases de datos grandes con datos antiguos o imágenes de disco virtual del sistema de memoria virtual como copia de seguridad. |
-  | 2 IOPS/GB | Esta opción está diseñada para la mayoría de cargas de trabajo generales. Entre las aplicaciones de ejemplo se encuentran alojamiento de bases de datos pequeñas, copia de seguridad de aplicaciones web o imágenes de disco de máquina virtual (VM) para un hipervisor. |
-  | 4 IOPS/GB | Esta opción está diseñada para cargas de trabajo de mayor intensidad que tienen un alto porcentaje de datos activos en un momento determinado. Las aplicaciones de ejemplo incluyen bases de datos transaccionales. |
-  | 10 IOPS/GB | Esta opción está diseñada para los tipos de carga de trabajo más exigentes, como las analíticas. Las aplicaciones de ejemplo incluyen bases de datos con un gran número de transacciones y otras bases de datos sensibles al rendimiento. Este nivel de rendimiento está limitado a una capacidad máxima de 4 TB por compartición de archivo. |
+|:------------- |:------------- |
+| 0,25 IOPS/GB | Esta opción está diseñada para cargas de trabajo que no se utilizan a menudo. Estas son algunas aplicaciones de ejemplo: datos en caja fuerte, alojamiento de bases de datos grandes con datos antiguos o imágenes de disco virtual del sistema de memoria virtual como copia de seguridad. |
+| 2 IOPS/GB | Esta opción está diseñada para la mayoría de cargas de trabajo generales. Entre las aplicaciones de ejemplo se encuentran alojamiento de bases de datos pequeñas, copia de seguridad de aplicaciones web o imágenes de disco de máquina virtual (VM) para un hipervisor. |
+| 4 IOPS/GB | Esta opción está diseñada para cargas de trabajo de mayor intensidad que tienen un alto porcentaje de datos activos en un momento determinado. Las aplicaciones de ejemplo incluyen bases de datos transaccionales. |
+| 10 IOPS/GB | Esta opción está diseñada para los tipos de carga de trabajo más exigentes, como las analíticas. Las aplicaciones de ejemplo incluyen bases de datos con un gran número de transacciones y otras bases de datos sensibles al rendimiento. Este nivel de rendimiento está limitado a una capacidad máxima de 4 TB por compartición de archivo. |
+{: caption="Tabla 3. Opciones de nivel de rendimiento de NFS" caption-side="top"}
 
 ### Valores de licencia
 {: #vc_nsx-t_addingviewingclusters-adding-licensing-settings}
@@ -152,9 +152,9 @@ Los valores de habilitación de la tarjeta de interfaz de red (NIC) se basan en 
 ### Resumen del pedido
 {: #vc_nsx-t_addingviewingclusters-adding-order-summary}
 
-En función de la configuración seleccionada para el clúster, el coste estimado se genera y se muestra al instante en el panel derecho **Resumen de pedido**. Pulse **Detalle de precios** para generar un documento PDF con el resumen de coste de los recursos de {{site.data.keyword.vmwaresolutions_short}}. 
+En función de la configuración seleccionada para el clúster, el coste estimado se genera y se muestra al instante en el panel derecho **Resumen de pedido**. Pulse **Detalle de precios** para generar un documento PDF con el resumen de coste de los recursos de {{site.data.keyword.vmwaresolutions_short}}.
 
-También puede añadir los recursos suministrados a la herramienta de estimación {{site.data.keyword.cloud_notm}}, pulsando **Añadir a estimación**. Esto es útil si desea estimar el coste de los recursos estimare {{site.data.keyword.vmwaresolutions_short}} seleccionados junto con otros recursos de {{site.data.keyword.cloud_notm}} que le podría interesar adquirir. 
+También puede añadir los recursos suministrados a la herramienta de estimación {{site.data.keyword.cloud_notm}}, pulsando **Añadir a estimación**. Esto es útil si desea estimar el coste de los recursos estimare {{site.data.keyword.vmwaresolutions_short}} seleccionados junto con otros recursos de {{site.data.keyword.cloud_notm}} que le podría interesar adquirir.
 
 ## Procedimiento para añadir clústeres a instancias de vCenter Server con NSX-T
 {: #vc_nsx-t_addingviewingclusters-adding-procedure}
@@ -225,8 +225,6 @@ No puede cambiar el nombre de clúster. Si se cambia el nombre del clúster, es 
   * **Acciones**: Pulse el icono **Suprimir** para suprimir el clúster.
 4. Pulse un nombre de clúster para ver los detalles del servidor ESXi, almacenamiento e interfaz de red:
 
-Tabla 4. Detalles del servidor ESXi
-
 | Elemento        | Descripción       |  
 |:------------- |:------------- |
 | Nombre | El nombre del servidor ESXi está en el formato siguiente:<br> `<host_prefix><n>.<subdomain_label>.<root_domain>` <br> donde:<br> `host_prefix` es el prefijo del nombre de host<br> `n` es la secuencia del servidor<br> `subdomain_label` es la etiqueta de subdominio<br> `root_domain` es el nombre de dominio raíz |
@@ -234,8 +232,9 @@ Tabla 4. Detalles del servidor ESXi
 | Credenciales | El nombre de usuario y la contraseña para acceder al servidor ESXi. |
 | IP privada | La dirección IP privada del servidor ESXi. |
 | Estado | El estado del servidor ESXi, que puede tener uno de estos valores:<br> **Añadido** El servidor ESXi se ha añadido y está listo para ser utilizado.<br> **Añadiendo** El servidor ESXi se está añadiendo.<br> **Suprimiendo** El servidor ESXi se está suprimiendo. |
+{: caption="Tabla 4. Detalles del servidor ESXi" caption-side="top"}
 
-Tabla 5. Detalles de almacenamiento
+Visualice los detalles de almacenamiento:
 
 | Elemento        | Descripción       |  
 |:------------- |:------------- |
@@ -243,8 +242,9 @@ Tabla 5. Detalles de almacenamiento
 | Tamaño | La capacidad de almacenamiento. |
 | IOPS/GB | El nivel de rendimiento del almacenamiento. |
 | Protocolo NFS | La versión NFS del almacenamiento. |
+{: caption="Tabla 5. Detalles de almacenamiento" caption-side="top"}
 
-Tabla 6. Interfaz de red - Detalles de VLAN
+Visualice los detalles de la interfaz de red:
 
 | Elemento        | Descripción       |  
 |:------------- |:------------- |
@@ -252,24 +252,27 @@ Tabla 6. Interfaz de red - Detalles de VLAN
 | Descripción | La descripción de la VLAN.  |
 | Ubicación | La ubicación del centro de datos. |
 | Ruta primaria | La ruta primaria de la VLAN. |
+{: caption="Tabla 6. Interfaz de red - Detalles de VLAN" caption-side="top"}
 
 Pulse **Ver recurso** para acceder a los detalles de la VLAN.
 
-Tabla 7. Interfaz de red - Detalles de subred
+Visualice los detalles de subred:
 
 | Elemento        | Descripción       |  
 |:------------- |:------------- |
 | Nombre | El nombre de la subred. Pulse sobre el nombre para acceder a los detalles de la subred. |
 | Tipo | El tipo de subred: primario o portátil. |
 | Descripción | La descripción de la subred. |
+{: caption="Tabla 7. Interfaz de red - Detalles de subred" caption-side="top"}
 
-Tabla 8. Interfaz de red - Detalles de IP
+Visualice los detalles de IP:
 
 | Elemento        | Descripción       |  
 |:------------- |:------------- |
 | IP | Dirección IP. |
 | Estado | El estado de la dirección IP. |
 | Descripción |La descripción de la dirección IP.  |
+{: caption="Tabla 8. Interfaz de red - Detalles de IP" caption-side="top"}
 
 ## Supresión de clústeres de instancias de vCenter Server con NSX-T
 {: #vc_nsx-t_addingviewingclusters-deleting}

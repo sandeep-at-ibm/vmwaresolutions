@@ -10,7 +10,7 @@ lastupdated: "2019-06-03"
 
 # 오퍼레이션 관리 아키텍처 개요
 {: #opsmgmt-arch}
-오퍼레이션 관리 계층에 있는 제품의 아키텍처는 {{site.data.keyword.vmwaresolutions_full}}의 로깅 데이터를 사용하여 중앙 집중식 모니터링을 제공합니다. 오퍼레이션 관리 계층은 실시간으로 실제 인프라, 가상 인프라 및 클라이언트의 컴퓨팅 워크로드(선택사항)를 모니터합니다. 
+오퍼레이션 관리 계층에 있는 제품의 아키텍처는 {{site.data.keyword.vmwaresolutions_full}}의 로깅 데이터를 사용하여 중앙 집중식 모니터링을 제공합니다. 오퍼레이션 관리 계층은 실시간으로 실제 인프라, 가상 인프라 및 클라이언트의 컴퓨팅 워크로드(선택사항)를 모니터합니다.
 
 상위 레벨에서 다음 정보가 수집됩니다.
 * 토폴로지 데이터. 예를 들면, 실제 및 가상 컴퓨팅, 네트워킹 및 스토리지 오브젝트입니다.
@@ -21,7 +21,7 @@ lastupdated: "2019-06-03"
 ## 오퍼레이션 관리 플로우
 {: #opsmgmt-arch-flows}
 
-다음 다이어그램은 오퍼레이션 관리 도구의 핵심 상호작용 및 통합을 보여줍니다. 
+다음 다이어그램은 오퍼레이션 관리 도구의 핵심 상호작용 및 통합을 보여줍니다.
 
 ![관리 플로우 다이어그램](../../images/opsmgmt-mgmtflows.svg "관리 플로우 다이어그램")
 
@@ -30,17 +30,17 @@ lastupdated: "2019-06-03"
 
   환경에서 문제가 발생하면 vROps는 다음 세 가지 영향 유형의 경보를 생성합니다.
     * 상태 경보 - 환경의 상태에 영향을 주고 즉각적인 주의를 요하는 문제를 표시합니다.
-    * 위험 경보 - 즉각적인 위협은 아니지만 곧 해결되어야 하는 문제(용량 문제)를 표시합니다. 
+    * 위험 경보 - 즉각적인 위협은 아니지만 곧 해결되어야 하는 문제(용량 문제)를 표시합니다.
     * 효율성 경보 - 성능을 향상시키거나 리소스를 재확보하기 위한 정보입니다.
 
   vROps 경보는 데이터 분석이 정상 메트릭 값의 편차를 표시하는 경우 또는 모니터된 컴포넌트 중 하나에 문제가 발생하는 경우 모니터된 오브젝트에서 발생하는 이벤트입니다. vROps 경보는 다음 세 가지 카테고리 중 하나로 지정됩니다.
-    * 위험 - 발생 즉시 조치를 취해야 합니다. 
-    * 즉각적 - 가능한 빨리 조치를 취해야 합니다. 
-    * 경고 - 시간이 허용되면 확인해야 합니다. 
+    * 위험 - 발생 즉시 조치를 취해야 합니다.
+    * 즉각적 - 가능한 빨리 조치를 취해야 합니다.
+    * 경고 - 시간이 허용되면 확인해야 합니다.
 
-* 로깅 - vRLI(vRealize Log Insight)는 {{site.data.keyword.vmwaresolutions_short}} 아키텍처의 실제 및 가상 오브젝트에서 기계 학습 기반 지능형 그룹화, 고성능 검색 및 문제점 해결 기능을 갖춘 실시간 로그 관리 및 로그 분석을 제공합니다. vRLI는 `syslog` 프로토콜을 사용하여 vSphere 호스트에서 데이터를 수집합니다. vCenter Server와 같은 기타 VMware 제품에 대한 이벤트, 태스크 및 알람 데이터도 수집합니다. vRops와 통합하여 알림 이벤트를 전송하고 컨텍스트에서 실행할 수 있도록 합니다. `syslog` 데이터를 전송할 수 있는 {{site.data.keyword.vmwaresolutions_short}} 아키텍처의 기타 오브젝트는 vRLI로 지정됩니다. 선택적으로 클라이언트는 Syslog 데이터를 전송할 수 있는 시스템을 구성하여 이 데이터를 vRLI로 전달할 수 있습니다. 
+* 로깅 - vRLI(vRealize Log Insight)는 {{site.data.keyword.vmwaresolutions_short}} 아키텍처의 실제 및 가상 오브젝트에서 기계 학습 기반 지능형 그룹화, 고성능 검색 및 문제점 해결 기능을 갖춘 실시간 로그 관리 및 로그 분석을 제공합니다. vRLI는 `syslog` 프로토콜을 사용하여 vSphere 호스트에서 데이터를 수집합니다. vCenter Server와 같은 기타 VMware 제품에 대한 이벤트, 태스크 및 알람 데이터도 수집합니다. vRops와 통합하여 알림 이벤트를 전송하고 컨텍스트에서 실행할 수 있도록 합니다. `syslog` 데이터를 전송할 수 있는 {{site.data.keyword.vmwaresolutions_short}} 아키텍처의 기타 오브젝트는 vRLI로 지정됩니다. 선택적으로 클라이언트는 Syslog 데이터를 전송할 수 있는 시스템을 구성하여 이 데이터를 vRLI로 전달할 수 있습니다.
 
-* 네트워크 상태 - vRealize Network Insight는 사전 예방적인 사용에 중점을 둔 분석 도구입니다. 
+* 네트워크 상태 - vRealize Network Insight는 사전 예방적인 사용에 중점을 둔 분석 도구입니다.
   * 네트워크 상태 및 성능 모니터링
   * 엔드 투 엔드 문제점 해결
   * 360° 가시성 및 분석
@@ -81,7 +81,7 @@ vSphere 호스트의 모니터링은 vCenter를 통해 vROps로 수행되고 vRL
 ### vSAN의 모니터링
 {: #opsmgmt-arch-components-vsan}
 
-vSAN을 모니터하기 위해 vROps 및 vRLI가 사용됩니다. vCenter에는 사용할 수 있는 추가적인 vSAN 상태 검사 세트가 있습니다. Management Pack for vSAN을 설치하면 vSAN의 모니터링에 도움이 되는 추가 대시보드가 제공됩니다. 
+vSAN을 모니터하기 위해 vROps 및 vRLI가 사용됩니다. vCenter에는 사용할 수 있는 추가적인 vSAN 상태 검사 세트가 있습니다. Management Pack for vSAN을 설치하면 vSAN의 모니터링에 도움이 되는 추가 대시보드가 제공됩니다.
 
 VMware vSAN 어댑터가 모니터하는 스토리지 영역 네트워크의 SDDC 제품 컴포넌트에서 문제점이 발생하는 경우 vROps는 경보를 생성합니다. 구성 규제 준수 및 상태와 관련된 경보는 VMware vSAN Management Pack의 VMware SDDC Health Solution Management Pack을 통해 전달됩니다. vSAN은 vSAN 어댑터를 사용하여 vCentre 어플라이언스를 통해 vROps vSAN Management Pack으로 모니터됩니다. 기본 콜렉션 간격은 5분이며 vSAN 어댑터는 vSphere 오브젝트에서 상태 검사 서비스 및 성능 서비스 메트릭도 수집합니다. 상태 검사 서비스 간격은 vSphere 인터페이스에서 구성되며 기본적으로 60분입니다.
 
@@ -97,7 +97,7 @@ NSX를 모니터하기 위해 다음 도구가 구현됩니다.
 
 이를 통해 시스템 관리자는 VMware NSX를 모니터하고, 관리하고, 문제점을 해결할 수 있습니다. vROps Management Pack for VMware NSX는 네트워크 토폴로지에 대한 가시성을 제공합니다. NSX 대시보드는 NSX 환경의 빠른 개요와 컴포넌트의 상태를 제공합니다. NSX 오브젝트와 vSphere 오브젝트 간의 상관은 문제점을 쉽게 해결할 수 있도록 합니다.
 
-vROps는 관리 팩을 사용하여 구성, 성능 및 지원 데이터에 적합한 VMware NSX를 폴링합니다. vROps 대신, 관리 팩은 폴링 요청을 REST API 호출로 변환하여 NSX Manager에서 필요한 데이터를 검색합니다. 
+vROps는 관리 팩을 사용하여 구성, 성능 및 지원 데이터에 적합한 VMware NSX를 폴링합니다. vROps 대신, 관리 팩은 폴링 요청을 REST API 호출로 변환하여 NSX Manager에서 필요한 데이터를 검색합니다.
 
 NSX 컴포넌트는 Syslog를 vRLI에 전송하도록 구성되어야 합니다.
 
@@ -116,7 +116,7 @@ NSX-T를 모니터하기 위해 다음 도구가 구현됩니다.
 * vROps(vRealize Operations Manager)
 * vRLI(vRealize Log Insight)
 
-VMware SDDC Health Management Pack은 다음 컴포넌트를 모니터합니다. 
+VMware SDDC Health Management Pack은 다음 컴포넌트를 모니터합니다.
 * 논리 스위치 - 논리 스위치의 관리 상태를 모니터합니다.
 * 제어기 클러스터 - HA에 대해 배치된 클러스터 노드 수를 모니터하고 쿼럼을 유지보수합니다.
 * 제어기 노드 - 제어기 클러스터 및 관리자 노드와의 노드 연결을 모니터합니다.
@@ -149,7 +149,7 @@ VMware SDDC Health Management Pack에는 다음 이벤트에 대한 경보 정�
 
 ||vROps|vRLI|vRNI| 프록시|
 |---|---|---|---|---|---|
-|VM 양|4|4|1+1|1|
+|VM 수량|4|4|1+1|1|
 |vCPU|8|8|4 + 8|4|
 |RAM(GB)|32|16|12 + 32| 0.5|
 |디스크(GB)| 254|1042|158 + 1000|80|

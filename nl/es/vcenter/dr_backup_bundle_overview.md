@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-01"
 
 keywords: single-node trial, data protection DR, tech specs data protection DR
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -20,7 +21,7 @@ subcollection: vmware-solutions
 # Visión general de Prueba de un solo nodo de Protección de datos y Recuperación tras desastre.
 {: #dr_backup_bundle_overview}
 
-La Prueba de un solo nodo de Protección de datos y Recuperación tras desastre le permite probar {{site.data.keyword.cloud}} para migrar y recuperar cargas de trabajo de VMware a {{site.data.keyword.cloud_notm}}. Además, la prueba de un solo nodo de Protección de datos y Recuperación tras desastre incluye los servicios Veeam on {{site.data.keyword.cloud_notm}}, VMware HCX on {{site.data.keyword.cloud_notm}} y Zerto on {{site.data.keyword.cloud_notm}}. 
+La Prueba de un solo nodo de Protección de datos y Recuperación tras desastre le permite probar {{site.data.keyword.cloud}} para migrar y recuperar cargas de trabajo de VMware a {{site.data.keyword.cloud_notm}}. Además, la prueba de un solo nodo de Protección de datos y Recuperación tras desastre incluye los servicios Veeam on {{site.data.keyword.cloud_notm}}, VMware HCX on {{site.data.keyword.cloud_notm}} y Zerto on {{site.data.keyword.cloud_notm}}.
 
 La Prueba de un solo nodo es una versión de prueba de VMware vCenter Server on {{site.data.keyword.cloud_notm}} que proporciona la plataforma VMware de un solo arrendatario que se puede gestionar utilizando las mismas herramientas que en los entornos de instalaciones locales. Puede aprovechar la velocidad y la capacidad de escalado de la nube mientras mantiene el mismo nivel de control y visibilidad que se proporciona en el entorno local.
 
@@ -29,16 +30,17 @@ La Prueba está diseñada para la migración de un máximo de 20 cargas de traba
 La Prueba de un solo nodo para protección de datos y recuperación tras desastre es solo como muestra de viabilidad(POC). No ejecute cargas de trabajo de producción en este entorno. Las funciones de gestión, como la adición y eliminación de hosts y clústeres, la solicitud de servicios complementarios adicionales y la aplicación de actualizaciones, no reciben soporte.
 {:important}
 
-Tras desplegar su instancia de Prueba de un solo nodo, puede utilizar [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:new_window} desde [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:new_window} como ayuda para su instancia. Además, [{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/){:new_window} le puede ayudar a acelerar la modernización de aplicaciones con las prácticas nativas de la nube más avanzadas.
+Tras desplegar su instancia de Prueba de un solo nodo, puede utilizar [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:external} desde [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:external} como ayuda para su instancia. Además, [{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/){:external} le puede ayudar a acelerar la modernización de aplicaciones con las prácticas nativas de la nube más avanzadas.
 
-Esta versión de prueba está pensada para utilizarla durante un máximo de 90 días. Los cargos recurrentes mensuales se facturan en función de su planificación de facturación, no cuando se solicita la instancia. Si la instancia no se cancela el último día (o antes) del ciclo de facturación, se le carga el mes siguiente. Lo más probable es que una prueba de 90 días corresponda a cuatro meses de cargos, a menos que se realice la cancelación antes de que empiece el cuarto mes. {:note}
+Esta versión de prueba está pensada para utilizarla durante un máximo de 90 días. Los cargos recurrentes mensuales se facturan en función de su planificación de facturación, y no cuando se solicita la instancia. Si la instancia no se cancela el último día (o antes) del ciclo de facturación, se le carga el mes siguiente. Es posible que una prueba de 90 días corresponda a cuatro meses de cargos, a menos que se realice la cancelación antes de que empiece el cuarto mes.
+{:note}
 
 Cuando finalice el periodo de prueba, puede suprimir este entorno y suministrar un nuevo entorno que se ajuste a sus necesidades de capacidad.
 
-## Especificaciones técnicas para instancias de prueba de un solo nodo de Protección de datos y Recuperación tras desastre. 
+## Especificaciones técnicas para instancias de prueba de un solo nodo de Protección de datos y Recuperación tras desastre.
 {: #dr_backup_bundle_overview-tech-specs}
 
-En la instancia de prueba de un solo nodo para la protección de datos y recuperación tras desastre se incluyen los siguientes componentes. 
+En la instancia de prueba de un solo nodo para la protección de datos y recuperación tras desastre se incluyen los siguientes componentes.
 
 La disponibilidad y los precios de las configuraciones estandarizadas de hardware pueden variar en función del {{site.data.keyword.CloudDataCent_notm}} seleccionado para el despliegue.
 {:note}
@@ -46,7 +48,7 @@ La disponibilidad y los precios de las configuraciones estandarizadas de hardwar
 ### Servidor nativo
 {: #dr_backup_bundle_overview-bare-metal}
 
-Procesador Skylake Dual Intel Xeon Gold 5120 / 28 cores en total, 2,2 GHz con 384 GB RAM para hasta 20 VM. 
+Procesador Skylake Dual Intel Xeon Gold 5120 / 28 cores en total, 2,2 GHz con 384 GB RAM para hasta 20 VM.
 
 #### Sobrecargas de CPU
 {: #dr_backup_bundle_overview-cpu}
@@ -65,7 +67,7 @@ Sobrecarga de 16:1 de CPU para gestión de vCenter Server, HCX y 20 VM de carga 
 * 2 TB para gestión
 * 1 TB para carga de trabajo de cliente (para 20 VM de cliente)
 
-### Especificaciones de red para instancias de prueba de un solo nodo de Protección de datos y Recuperación tras desastre. 
+### Especificaciones de red para instancias de prueba de un solo nodo de Protección de datos y Recuperación tras desastre.
 {: #dr_backup_bundle_overview-networking-specs}
 
 Se solicitan los siguientes componentes del sistema de redes:
@@ -92,7 +94,7 @@ Se solicitan las siguientes instancias de servidor virtual (VSI):
 ### Licencias proporcionadas por IBM y tarifas
 {: #dr_backup_bundle_overview-license-and-fee}
 
-En el pedido de la instancia de prueba de un solo nodo para la protección de datos y recuperación tras desastre se incluyen las licencias siguientes. 
+En el pedido de la instancia de prueba de un solo nodo para la protección de datos y recuperación tras desastre se incluyen las licencias siguientes.
 
 * Licencias de vCenter Server with Hybridity Bundle:
   * VMware vSphere Enterprise Plus 6.7u1
@@ -137,9 +139,9 @@ Los dispositivos HCX adicionales se despliegan durante la configuración, según
 ## Especificaciones técnicas para Veeam on {{site.data.keyword.cloud_notm}}
 {: #dr_backup_bundle_overview-veeam-tech-specs}
 
-La Prueba de un solo nodo para la protección de datos y la recuperación tras desastre incluye Veeam on {{site.data.keyword.cloud_notm}}. Los siguientes componentes se solicitan y se incluyen en el servicio Veeam on {{site.data.keyword.cloud_notm}}. 
+La Prueba de un solo nodo para la protección de datos y la recuperación tras desastre incluye Veeam on {{site.data.keyword.cloud_notm}}. Los siguientes componentes se solicitan y se incluyen en el servicio Veeam on {{site.data.keyword.cloud_notm}}.
 
-* Licencia de paquete de 25 de la Veeam Availability Suite
+* Licencia de 25 paquetes de la Veeam Availability Suite
 * 4000 GB de almacenamiento
 * Rendimiento del almacenamiento de 0,25 IOPS/GB
 * Windows Server 2016 Standard Edition (64 bits)
@@ -163,12 +165,12 @@ La Prueba de un solo nodo para la protección de datos y la recuperación tras d
 ## Especificaciones técnicas de IBM Cloud Automation Manager
 {: #dr_backup_bundle_overview-cam-tech-specs}
 
-{{site.data.keyword.cloud_notm}} Automation Manager 3.1.2 se instala utilizando la topología de desarrollo o de prueba en todas las instancias de prueba de un solo nodo para la protección de datos y la recuperación tras desastre. Para obtener más información sobre {{site.data.keyword.cloud_notm}} Automation Manager, consulte [Documentación de {{site.data.keyword.cloud_notm}} Automation Manager](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: new_window}.
+{{site.data.keyword.cloud_notm}} Automation Manager 3.1.2 se instala utilizando la topología de desarrollo o de prueba en todas las instancias de prueba de un solo nodo para la protección de datos y la recuperación tras desastre. Para obtener más información sobre {{site.data.keyword.cloud_notm}} Automation Manager, consulte [Documentación de {{site.data.keyword.cloud_notm}} Automation Manager](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: external}.
 
 ## Enlaces relacionados
 {: #dr_backup_bundle_overview-related}
 
-* [Recursos de VMware HCX](https://hcx.vmware.com/#/docs){:new_window}
-* [Guía de usuario de VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}
+* [Recursos de VMware HCX](https://hcx.vmware.com/#/docs){:external}
+* [Guía de usuario de VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}
 * [Gestión de Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-managingveeam)
 * [Gestión de Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-managingzertodr)

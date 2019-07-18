@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-06-20"
 
 subcollection: vmware-solutions
 
@@ -28,35 +28,38 @@ Caveonix RiskForesight est une plateforme de gestion des risques cybernétiques 
 
 Grâce à l'apprentissage machine et au moteur d'analyse des risques CaveoIQ, la solution offre une protection proactive de la charge de travail contre les risques liés aux cybermenaces. Elle offre un cadre de sécurité et de politiques cohérentes dans un environnement de cloud hybride et est entièrement intégrée dans la pile de technologies de cloud de VMware et des fournisseurs de cloud public tels que AWS.
 
-Les trois services clés disponibles via l'interface graphique RiskForesight sont : Risk Management, Compliance Risk et Forensic Management.
+Les trois services clés disponibles via l'interface graphique RiskForesight sont Gestion des risques, Risque de conformité et Gestion contextuelle. 
 
-**Gestion des risques**
--	Risque cybernétique continu
+## Gestion des risques
+
+- Risque cybernétique continu
 - Evaluation du risque cybernétique
--	Evaluation des vulnérabilités et définition des priorités
--	Prise en charge des principaux outils d'analyse des vulnérabilités et de la configuration de l'industrie
--	Normes de benchmarking mondiales
--	Signalement des risques cybernétiques
+- Evaluation des vulnérabilités et définition des priorités
+- Prise en charge des principaux outils d'analyse des vulnérabilités et de la configuration de l'industrie
+- Normes de benchmarking mondiales
+- Signalement des risques cybernétiques
 
-**Risque de conformité**
+## Risque de conformité
+
 - Surveillance automatisée de la conformité
--	Tableau de bord d'évaluation des risques de conformité
--	Evaluation automatisée des contrôles d'assurance de l'information
--	Prise en charge des rapports PCI, FISMA, FEDRAMP, HIPAA, GLBA, GDPR, NERC CIP Reports Against SCAP, OVAL, XCCDF et autres normes de benchmarking de configuration globales
--	Mise à jour et mappage continus des contrôles d'assurance de l'information et des bibliothèques de normes
+- Tableau de bord d'évaluation des risques de conformité
+- Evaluation automatisée des contrôles d'assurance de l'information
+- Prise en charge des rapports PCI, FISMA, FEDRAMP, HIPAA, GLBA, GDPR, NERC CIP Reports Against SCAP, OVAL, XCCDF et autres normes de benchmarking de configuration globales
+- Mise à jour et mappage continus des contrôles d'assurance de l'information et des bibliothèques de normes
 
-**Gestion contextuelle**
--	Gestion des journaux
--	Collecte des journaux à partir de sources multiples
--	Détection, analyse et visualisation d'événements
--	Visualisation graphique des résultats
--	Agrégation de données provenant de sources multiples
--	Analyse basée sur les événements
--	Capacité d'analyse approfondie des événements et journaux
--	Alertes et notifications
+## Gestion contextuelle
+
+- Gestion des journaux
+- Collecte des journaux à partir de sources multiples
+- Détection, analyse et visualisation d'événements
+- Visualisation graphique des résultats
+- Agrégation de données provenant de sources multiples
+- Analyse basée sur les événements
+- Capacité d'analyse approfondie des événements et journaux
+- Alertes et notifications
 
 ## Liens connexes
 {: #caveonix-intro-related}
 
-*   [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
-*   [Site Web de Caveonix](https://www.caveonix.com/)
+* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+* [Site Web de Caveonix](https://www.caveonix.com/)

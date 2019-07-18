@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-20"
 
 keywords: planning NetApp ONTAP, data center, NetApp data centers
 
@@ -27,8 +27,6 @@ subcollection: vmware-solutions
 {: #np_planning-dc-availability}
 
 NetApp ONTAP Select 部署对物理基础架构有严格要求。因此，只能将实例部署在满足这些需求的 {{site.data.keyword.CloudDataCents_notm}} 中。以下 {{site.data.keyword.CloudDataCents_notm}} 可用于部署 NetApp ONTAP Select：
-
-表 1. 可用于 NetApp ONTAP Select 实例的 {{site.data.keyword.CloudDataCents_notm}}
 
 | {{site.data.keyword.CloudDataCent_notm}} |位置|区域|服务器选项|
 |:------|:----------------|:----------------|:---------------------------|
@@ -62,7 +60,7 @@ NetApp ONTAP Select 部署对物理基础架构有严格要求。因此，只能
 |WDC04|华盛顿|北美东部|高性能（中型）、高性能（大型）、高容量
 |WDC06|华盛顿|北美东部|高性能（中型）、高性能（大型）、高容量
 |WDC07|华盛顿|北美东部|高性能（中型）、高性能（大型）、高容量
-
+{: caption="表 1. 可用于 NetApp ONTAP Select 实例的 {{site.data.keyword.CloudDataCents_notm}}" caption-side="top"}
 
 ## 相关链接
 {: #np_planning-related}

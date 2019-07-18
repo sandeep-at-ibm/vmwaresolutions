@@ -18,7 +18,7 @@ subcollection: vmware-solutions
 # IBM Cloud のネットワーキング・サービス
 {: #nsx-networking_services}
 
-{{site.data.keyword.cloud}} のネットワーキング・サービスは、{{site.data.keyword.cloud_notm}} と、仮想プライベート・ネットワーク (VPN) を介したパブリック・インターネットまたはカスタマー・オンプレミス・ネットワークとの間の通信用に、VMware NSX Edge Services Gateway (ESG) の 2 つのペアで構成されています。 これらの ESG は、内部 {{site.data.keyword.cloud_notm}} 管理機能、出口トラフィック、顧客関連ネットワーク・トラフィックの入口をサポートするために分離されます。
+{{site.data.keyword.cloud}} のネットワーキング・サービスは、{{site.data.keyword.cloud_notm}} と、仮想プライベート・ネットワーク (VPN) を介したパブリック・インターネットまたはカスタマー・オンプレミス・ネットワークとの間の通信用に、VMware NSX Edge Services Gateway (ESG) の 2 つのペアで構成されています。 これらの ESG は、内部 {{site.data.keyword.cloud_notm}} 管理機能、egress トラフィック、顧客関連ネットワーク・トラフィックの受信をサポートするために分離されます。
 
 以下の図は、管理のペアとワークロード ESG のペアを表す単純化されたネットワーク図です。 また、NSX 分散論理ルーター (DLR) およびワークロード VXLAN も示しています。 これらのコンポーネントは、NSX 内でセットアップするための特定の知識を必要とせずに、お客様のワークロードの初期ランディング・ポイントとなります。 通常、DLR は、インスタンス内の個別のレイヤー 2 ネットワーク間で、VMware vCenter Server と東西トラフィックの間のトラフィックをルーティングするために使用されます。 この動作は、vCenter Server インスタンスの南北ネットワーク・トラフィックの通過を実現する ESG とは大きく異なります。
 

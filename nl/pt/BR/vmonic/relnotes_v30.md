@@ -87,7 +87,7 @@ A liberação atual instala o HyTrust DataControl 4.3 em todas as instâncias re
 
 A liberação atual instala o HyTrust KeyControl 4.3 em todas as instâncias recém-implementadas. Para obter mais informações sobre os novos recursos no HyTrust KeyControl 4.3, consulte [O que há de novo no KeyControl e no DataControl Versão 4.3](https://docs.hytrust.com/DataControl/4.3/Online/Content/Books/aaCommon/New-Changed-4x.html){:new_window}.
 
-### IBM Cloud Privado Hospedado
+### IBM Cloud Private Hosted
 {: #relnotes_v30-services-icp}
 
 A liberação atual instala o {{site.data.keyword.cloud_notm}} Private Hosted 3.1.2, junto com o {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2, em todas as instâncias recém-implementadas.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-26"
 
 keywords: FAQ, host, ESXi server
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -43,7 +44,7 @@ subcollection: vmware-solutions
 
    `esxcli system settings advanced set -o /Net/TcpipHeapMax -i 1576`
 
-2. 重新啟動每一部 ESXi 伺服器。如需相關資訊，請參閱 [Creating a vSAN 6.x cluster with up to 64 hosts](https://kb.vmware.com/s/article/2110081)。
+2. 重新啟動每一部 ESXi 伺服器。如需相關資訊，請參閱 [Creating a vSAN 6.x cluster with up to 64 hosts](https://kb.vmware.com/s/article/2110081)。{:external}
 3. 您可能需要增加 vCenter Server 的大小，以容納所新增的虛擬機器及 ESXi 伺服器。
 4. 開啟「IBM 支援中心」問題單，指出您完成步驟 1 - 3 來手動套用 vSAN 變更。在問題單中，要求針對超過 32 部的 ESXi 伺服器啟用已升級實例。
 

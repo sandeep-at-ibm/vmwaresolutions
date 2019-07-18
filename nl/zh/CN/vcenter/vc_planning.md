@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-31"
+lastupdated: "2019-06-27"
 
 keywords: planning vCenter Server, data center, vCenter Server data centers
 
@@ -28,11 +28,10 @@ subcollection: vmware-solutions
 
 vCenter Server 部署对物理基础架构有严格要求。因此，只能将实例部署在满足这些需求的 {{site.data.keyword.CloudDataCents_notm}} 中。以下 {{site.data.keyword.CloudDataCents_notm}} 可用于 vCenter Server 部署：
 
-表 1. 可用于 vCenter Server 实例的 {{site.data.keyword.CloudDataCents_notm}}
-
 | {{site.data.keyword.CloudDataCent_notm}} |位置|区域|服务器选项|
 |:----------------------|:---------|:-------|:---------------|
-|AMS03|阿姆斯特丹|欧洲|Skylake、Broadwell|
+|AMS01|阿姆斯特丹|欧洲|Skylake、SAP 认证、Broadwell|
+|AMS03|阿姆斯特丹|欧洲|Skylake、SAP 认证、Broadwell|
 |CHE01|金奈|亚太地区|Skylake、SAP 认证、Broadwell|
 |DAL09|达拉斯|北美南部|Skylake、SAP 认证、Broadwell|
 |DAL10|达拉斯|北美南部|Skylake、SAP 认证、Broadwell|
@@ -40,8 +39,8 @@ vCenter Server 部署对物理基础架构有严格要求。因此，只能将�
 |DAL13|达拉斯|北美南部|Skylake、SAP 认证、Broadwell|
 |FRA02|法兰克福|欧洲|Skylake、SAP 认证、Broadwell|
 |FRA04|法兰克福|欧洲|Skylake、SAP 认证、Broadwell|
-|FRA05|法兰克福|欧洲|Skylake、Broadwell|
-|HKG02|中国香港特别行政区|亚太地区|Skylake、Broadwell|
+|FRA05|法兰克福|欧洲|Skylake、SAP 认证、Broadwell|
+|HKG02|中国香港特别行政区|亚太地区|Skylake、SAP 认证、Broadwell|
 |LON02|伦敦|欧洲|Skylake、Broadwell|
 |LON04|伦敦|欧洲|Skylake、SAP 认证、Broadwell|
 |LON05|伦敦|欧洲|Skylake、Broadwell|
@@ -50,30 +49,33 @@ vCenter Server 部署对物理基础架构有严格要求。因此，只能将�
 |MEX01|克雷塔罗|北美南部|Skylake、SAP 认证、Broadwell|
 |MIL01|米兰|欧洲|Skylake、SAP 认证、Broadwell|
 |MON01|蒙特利尔|北美东部|Skylake、SAP 认证、Broadwell|
-|OSL01|奥斯陆|欧洲|Skylake、Broadwell|
-|PAR01|巴黎|欧洲|Skylake、Broadwell|
+|OSL01|奥斯陆|欧洲|Skylake、SAP 认证、Broadwell|
+|PAR01|巴黎|欧洲|Skylake、SAP 认证、Broadwell|
 |SAO01|圣保罗|南美洲|Skylake、SAP 认证、Broadwell|
 |SEO01|首尔|亚太地区|Skylake、SAP 认证、Broadwell|
 |SJC03|圣何塞|北美西部|Skylake、Broadwell|
 |SJC04|圣何塞|北美西部|Skylake、Broadwell|
-|SNG01|新加坡|亚太地区|Skylake、Broadwell|
-|SYD01|悉尼|亚太地区|Skylake、Broadwell|
+|SNG01|新加坡|亚太地区|Skylake、SAP 认证、Broadwell|
+|SYD01|悉尼|亚太地区|Skylake、SAP 认证、Broadwell|
 |SYD04|悉尼|亚太地区|Skylake、SAP 认证、Broadwell|
+|SYD05|悉尼|亚太地区|Skylake、SAP 认证、Broadwell|
 |TOK02|东京|亚太地区|Skylake、SAP 认证、Broadwell|
+|TOK04|东京|亚太地区|Skylake、SAP 认证、Broadwell|
+|TOK05|东京|亚太地区|Skylake、SAP 认证、Broadwell|
 |TOR01|多伦多|北美东部|Skylake、SAP 认证、Broadwell|
 |WDC04|华盛顿|北美东部|Skylake、SAP 认证、Broadwell|
 |WDC06|华盛顿|北美东部|Skylake、SAP 认证、Broadwell|
 |WDC07|华盛顿|北美东部|Skylake、SAP 认证、Broadwell|
+{: caption="表 1. 可用于 vCenter Server 实例的 {{site.data.keyword.CloudDataCents_notm}}" caption-side="top"}
 
 根据可用性和库存供应，{{site.data.keyword.CloudDataCents_notm}} 可能会在 {{site.data.keyword.vmwaresolutions_short}} 控制台中显示状态指示符，以帮助您规划部署。
-
-表 2. 订购 vCenter Server 实例时 {{site.data.keyword.CloudDataCents_notm}} 的状态指示符
 
 |状态|状态详细信息|
 |:------------------------------|:--------------------------------------------------|
 |即将提供|{{site.data.keyword.CloudDataCent_notm}} 当前不可用。|
 |暂时库存不足|{{site.data.keyword.CloudDataCent_notm}} 当前不可用。|
 |有限库存|{{site.data.keyword.CloudDataCent_notm}} 具有有限可用性，并且订单可能未完成。|
+{: caption="表 2. 订购 vCenter Server 实例时 {{site.data.keyword.CloudDataCents_notm}} 的状态指示符" caption-side="top"}
 
 ## 备份管理组件
 {: #vc_planning-backup-mgmt-components}

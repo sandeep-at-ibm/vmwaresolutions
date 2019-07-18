@@ -46,7 +46,7 @@ Puoi anche specificare se vuoi ricevere notifiche via e-mail o via console per i
 
 1. Nella console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Impostazioni** dal riquadro di navigazione a sinistra.
 2. Nell'area **Credenziali infrastruttura IBM Cloud**, esamina le informazioni per la procedura che devi eseguire.
-3. Se hai sia un account dell'infrastruttura {{site.data.keyword.cloud_notm}} che un account {{site.data.keyword.cloud_notm}} collegati, fai clic su **Richiama** per completare le credenziali automaticamente. 
+3. Se hai sia un account dell'infrastruttura {{site.data.keyword.cloud_notm}} che un account {{site.data.keyword.cloud_notm}} collegati, fai clic su **Richiama** per completare le credenziali automaticamente.
 4. Se hai sia un account dell'infrastruttura {{site.data.keyword.cloud_notm}} che un account {{site.data.keyword.cloud_notm}} che non sono collegati, devi collegarli. Attieniti alle istruzioni contenute in [Collegamento di account ID IBM](/docs/account?topic=account-unifyingaccounts#link_accounts) e fai quindi clic su **Richiama** per completare le credenziali automaticamente.
 5. Se non hai un account dell'infrastruttura {{site.data.keyword.cloud_notm}} e non hai un account {{site.data.keyword.cloud_notm}} fatturabile, prima [esegui l'upgrade del tuo account](/docs/account?topic=account-upgrading-account) e quindi [crea una chiave API dell'infrastruttura classica](/docs/iam?topic=iam-classic_keys).
 6. Se non hai un account dell'infrastruttura {{site.data.keyword.cloud_notm}} e hai un account {{site.data.keyword.cloud_notm}} fatturabile, devi [creare una chiave API dell'infrastruttura classica](/docs/iam?topic=iam-classic_keys).

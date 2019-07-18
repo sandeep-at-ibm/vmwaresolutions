@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-26"
 
 keywords: F5 BIG-IP, F5 install, tech specs F5
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -60,8 +61,6 @@ F5 on {{site.data.keyword.cloud_notm}} サービスをインストールする�
 
 選択したライセンス・モデルと帯域幅に基づいて、次の構成の 2 つの BIG-IP VE VM (仮想マシン) がデプロイされます。
 
-表 1. さまざまな帯域幅やライセンス・モデルを選択した場合の CPU と RAM のデプロイメント
-
 | 最大帯域幅 | ライセンス・モデル: Good | ライセンス・モデル: Better | ライセンス・モデル: Best |
 |:------------------|:--------------------|:----------------------|:--------------------|
 | 25 Mbps           | 2 vCPU、4 GB RAM    | 4 vCPU、8 GB RAM      | 8 vCPU、16 GB RAM   |
@@ -70,6 +69,7 @@ F5 on {{site.data.keyword.cloud_notm}} サービスをインストールする�
 | 3 Gbps            | 8 vCPU、16 GB RAM   | 8 vCPU、16 GB RAM     | 8 vCPU、16 GB RAM   |
 | 5 Gbps            | 8 vCPU、16 GB RAM   | 8 vCPU、16 GB RAM     | 8 vCPU、16 GB RAM   |
 | 10 Gbps           | 8 vCPU、16 GB RAM   | 8 vCPU、16 GB RAM     | 8 vCPU、16 GB RAM   |
+{: caption="表 1. さまざまな帯域幅やライセンス・モデルを選択した場合の CPU と RAM のデプロイメント" caption-side="top"}
 
 ### 追加の考慮事項
 {: #f5_considerations-additional}
@@ -128,4 +128,4 @@ F5 on {{site.data.keyword.cloud_notm}} サービスを削除する前に、既�
 * [F5 on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_f5)
 * [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [よくある質問](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [F5 Web サイト](https://www.f5.com/){:new_window}
+* [F5 Web サイト](https://www.f5.com/){:external}

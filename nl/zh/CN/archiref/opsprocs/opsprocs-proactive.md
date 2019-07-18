@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-04"
+lastupdated: "2019-07-02"
 
 ---
 
@@ -66,7 +66,7 @@ lastupdated: "2019-06-04"
 |vSphere vSAN 修补|有关检查 vSphere vSAN 补丁可用性和修补过程的信息，请参阅[更新 vSAN 集群](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-updating-vsan#vum-updating-vsan)。|
 |vCenter 修补|有关检查 VCSA 补丁可用性并应用更新的更多信息，请参阅 [VCSA 更新和 SSO 链接的 vCenter](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-updating-vcsa#vum-updating-vcsa)。|
 |更新 NSX|有关检查 NSX 补丁可用性并应用升级的更多信息，请参阅 [NSX 修补](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-updating-nsx#vum-updating-nsx)。|
-|检查没有安装 VM Tools 的 VM|最好安装 VM Tools，因为这将支持加强与操作系统的交互，例如正常关闭 VM 的电源。可以使用 vCenter 通过导航至集群，选择“相关对象”> VM，然后在包含表示 VM Tools 正在运行的列和 VM Tools 版本的列的表中，检查哪些 VM 未安装 VM Tools。复查列表并根据需要安装 VM Tools。|
+|检查没有安装 VM Tools 的 VM|最好安装 VM Tools，因为这将支持加强与操作系统的交互，例如正常关闭 VM 的电源。可以使用 vCenter 来检查哪些 VM 未安装 VM Tools。转至集群，选择**相关对象** > **VM**，然后在表中启用 **VM Tools 运行**和 **VM Tools 版本**的列。复查列表并根据需要安装 VM Tools。|
 |使用快照的 VM|有关使用快照的最佳实践的信息，请参阅[在 vSphere 环境中使用快照的最佳实践 (1025279)](https://kb.vmware.com/s/article/1025279){:new_window}。识别使用快照的 VM 是否存在非常重要，因为单个快照的使用时间超过 72 小时后，会创建一个快照文件，该文件的大小会持续增长，可能导致快照存储位置空间不足，并影响系统性能。要复查使用快照的 VM，请使用 Web Client 连接到 vCenter，选择 vCenter Server，然后转至“相关对象”选项卡。右键单击列标题，并转至“显示/隐藏列”列表。从列的列表中，选择“需要合并”选项。此列会显示当前正在运行的所有 VM 的摘要。|
 |AD/DNS 操作系统修补|Microsoft Active Directory (AD) / 域名服务器 (DNS) 自动设置为仅下载更新。有关更多信息，请参阅[更多限制和注意事项](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_limitations#trbl_limitations)，以获取进一步的更新建议。|
 |检查存储器等待时间|检查存储器等待时间可了解访问数据存储的 vSphere ESXi 主机的任何变化。等待时间过长会导致在 VM 中托管的应用程序的速度变慢。在 vCenter 中，转至每个数据存储，并在“性能”选项卡上复查每个 VM 的平均写等待时间。|

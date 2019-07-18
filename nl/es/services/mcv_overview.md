@@ -4,16 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-21"
 
-keywords: Mission Critical VMware, Mission Critical, tech specs Mission Critical
+keywords: Mission Critical VMware, request Mission Critical, tech specs Mission Critical
 
 subcollection: vmware-solutions
 
 
 ---
 
-# Visión general de Mission Critical VMware on IBM Cloud
+# Mission Critical VMware on IBM Cloud
 {: #mcv_overview}
 
 Mission Critical VMware on {{site.data.keyword.cloud}} proporciona una arquitectura de nube multizona que ayuda a las empresas a evitar el tiempo de inactividad de las aplicaciones en la nube y a automatizar las migraciones tras error dentro de una región de nube.
@@ -84,7 +84,20 @@ La arquitectura de red tiene las siguientes especificaciones:
 * Durante una actividad vMotion para VM-A, el tráfico seguirá entrando y saliendo a través de la zona de disponibilidad 1 de {{site.data.keyword.cloud_notm}}.
 * Si se produce un error del sitio o del extremo, el tráfico se dirigirá hacia el sitio disponible restante.
 
+## Procedimiento para solicitar Mission Critical VMware on IBM Cloud
+{: #mcv_overview-proc}
+
+1. En la consola de {{site.data.keyword.vmwaresolutions_full}}, pulse **Cómo comenzar** en el panel de navegación izquierdo.
+2. Desplácese hacia abajo en la página y, en **Servicios gestionados de VMware**, pulse la tarjeta
+**Mission Critical VMware on IBM Cloud**.
+3. En la página de Mission Critical VMware on {{site.data.keyword.cloud_notm}}, en el recuadro **Póngase en contacto con nosotros para Mission Critical VMware**, pulse **Solicitar una consulta**.
+4. En la página de IBM Services Expert Hub, pulse **Programar una consulta** para reservar 30 minutos con un experto en servicios.
+
+  Un representante de {{site.data.keyword.vmwaresolutions_short}} se pondrá en contacto con usted utilizando su información de contacto de {{site.data.keyword.cloud_notm}} para ayudarle con la solución que necesita.
+
 ## Enlaces relacionados
 {: #mcv_overview-related}
 
-* [Solicitud de Mission Critical VMware on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_mcv)
+* [Servicios gestionados de IMI](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_imi)
+* [Servicios gestionados para Veeam on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
+* [Servicios gestionados para Zerto on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)

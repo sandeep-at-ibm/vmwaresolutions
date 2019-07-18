@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-26"
 
 keywords: FAQ, user account, patch management
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -77,11 +78,11 @@ Dans le déploiement minimum à deux noeuds, l'un des noeuds reçoit un contrôl
 
 Lorsqu'un troisième noeud est ajouté à un cluster à deux noeuds, vCenter Server rééquilibre automatiquement les trois contrôleurs NSX entre les trois noeuds et crée un environnement à haute disponibilité.
 
-## Puis-je définir une configuration VMware vCenter 6.5 à haute disponibilité ?
+## Puis-je définir une configuration VMware vCenter à haute disponibilité ?
 {: #faq-ha}
 {: faq}
 
-Non, ce n'est pas recommandé. Vous risquez des incidents au niveau des fonctions {{site.data.keyword.vmwaresolutions_short}}.
+Vous pouvez configurer vCenter à haute disponibilité, mais le prise en charge de la configuration n'est pas fournie par {{site.data.keyword.vmwaresolutions_short}}.
 
 ## Les clusters peuvent-ils être renommés ?
 {: #faq-rename-cluster}
@@ -103,7 +104,7 @@ Vous êtes responsable de toutes les autres mises à jour des composants VMware,
 Pour les instances déployées en version 2.0 ou ultérieure, le gestionnaire de mises à jour VMware (VUM, VMware Update Manager) est intégré à votre serveur vCenter Server. Vous pouvez configurer VUM afin de télécharger des mises à jour ESXi depuis VMware.
 
 Pour plus d'informations, consultez les ressources suivantes :
-* [Support VMware](https://www.vmware.com/support.html)
+* [Support VMware](https://www.vmware.com/support.html){:external}
 * [Application de mises à jour à des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates)
 * [Application de mises à jour à des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_applyingupdates)
 

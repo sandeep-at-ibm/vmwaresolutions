@@ -47,7 +47,7 @@ Caveonix RiskForesight tiene el concepto de zonas:
 - Proveedores de nube - Esta zona proporciona la infraestructura sobre la cual están alojadas las aplicaciones:
     - Privada – VMware on {{site.data.keyword.cloud}}, y en local, plataformas de infraestructura VMware. Estas plataformas están integradas en RiskForesight a través de: vCenter, NSX Manager, VMware Cloud Director (vCD) o vRealize Automation (vRA).
     - Pública – Actualmente, el único proveedor de nube pública admitido es AWS. {{site.data.keyword.cloud_notm}} estará disponible pronto.
-    - Contenedores - Actualmente solo se admite AWS Elastic Kubernetes Service (EKS). {{site.data.keyword.cloud_notm}} Private e {{site.data.keyword.cloud_notm}} Kubernetes Services (IKS) estarán disponibles pronto.
+    - Contenedores - Actualmente solo se admite AWS Elastic Kubernetes Service (EKS). {{site.data.keyword.cloud_notm}} Private e {{site.data.keyword.cloud_notm}} Kubernetes Services estarán disponibles pronto.
 -	Zona de entorno de cliente o arrendatario – Estas zonas se utilizan para segregar arrendatarios, clientes o unidades de negocio. Existen cargas de trabajo en estas zonas y, por tanto, se necesita un recopilador remoto. Para un despliegue mínimo, necesita un recopilador remoto, pero para un despliegue general, necesita un Recopilador remoto por cada arrendatario/cliente/unidad de negocio.
 
 

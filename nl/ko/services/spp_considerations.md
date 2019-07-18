@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-28"
 
 keywords: IBM Spectrum Protect Plus, SPP, tech specs SPP
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -40,7 +41,7 @@ subcollection: vmware-solutions
    * 370GB 디스크
 * IBM Spectrum Protect Plus vSnap 서버 및 VADP 프록시를 실행 중인 보조 VM
    * Linux 3.10.0-693.11.1.el7.x86_64 운영 체제
-   * 선택된 스토리지 크기 및 [IBM Spectrum Protect Plus 블루프린트](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints) 크기 조정 지침에 따라 구성된 CPU 및 RAM
+   * 선택된 스토리지 크기 및 [IBM Spectrum Protect Plus 블루프린트](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints){:external} 크기 조정 지침에 따라 구성된 CPU 및 RAM
    * 150GB 디스크
 
 ### 백업용 스토리지
@@ -51,7 +52,7 @@ subcollection: vmware-solutions
 * 각 endurance 파일 스토리지: 500, 1000, 2000, 4000, 8000 또는 12000GB
 * 스토리지 성능: 0.25, 2 또는 4IOPS/GB
 
-계획 및 크기 조정에 대해서는 [IBM Spectrum Protect Plus 블루프린트 및 크기 조정 도구](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints)를 참조하십시오.
+계획 및 크기 조정에 대해서는 [IBM Spectrum Protect Plus 블루프린트 및 크기 조정 도구](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints){:external}를 참조하십시오.
 
 ### 관리용 스토리지
 {: #spp_considerations-mgmt-storage}
@@ -77,7 +78,7 @@ IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 서비스를 설�
 * 인스턴스의 기본 클러스터에서 IBM Spectrum Protect Plus 가상 머신에 충분한 CPU 및 메모리가 있는지 확인하십시오.
 * ESXi 서버의 버전에 따라 ESXi 서버에 사용 가능한 NFS 마운트가 충분한지 확인하십시오.
 
-  V2.2 이상 릴리스로 배치된(또는 업그레이드된) 인스턴스에는 VMware의 `NFS.MaxVolumes` 매개변수 설정이 있습니다. 이 매개변수는 ESXi 서버에서 최대 NFS 마운트 수를 정의하고 ESXi 서버의 버전에 특정한 최대 256의 값으로 설정될 수 있습니다. 자세한 정보는 [Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239)를 참조하십시오.
+  V2.2 이상 릴리스로 배치된(또는 업그레이드된) 인스턴스에는 VMware의 `NFS.MaxVolumes` 매개변수 설정이 있습니다. 이 매개변수는 ESXi 서버에서 최대 NFS 마운트 수를 정의하고 ESXi 서버의 버전에 특정한 최대 256의 값으로 설정될 수 있습니다. 자세한 정보는 [Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239){:external}를 참조하십시오.
 
   IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 서비스는 인스턴스의 기본 클러스터의 각 ESXi 서버에서 최대 11개의 NFS 볼륨을 사용할 수 있습니다. 또한 서비스는 백업 및 복원을 위해 임시 NFS 마운트를 작성합니다. 그러므로 서비스를 설치하고 작동할 수 있도록 NFS 마운트 수를 최소 64의 값으로 설정해야 합니다.
 
@@ -92,8 +93,8 @@ IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 서비스를 제�
 ## 관련 링크
 {: #spp_considerations-related}
 
-* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} Preventive Service 계획](https://www-01.ibm.com/support/docview.wss?uid=swg22012650){:new_window}
+* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} Preventive Service 계획](https://www-01.ibm.com/support/docview.wss?uid=swg22012650){:external}
 * [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 관리](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingspp)
 * [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 주문](/docs/services/vmwaresolutions/services?topic=vmware-solutions-spp_ordering)
-* [IBM Spectrum Protect Plus 문서](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html)
+* [IBM Spectrum Protect Plus 문서](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html){:external}
 * [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-28"
 
 keywords: view NetApp, view instance, view instance details
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -31,15 +32,14 @@ subcollection: vmware-solutions
 2. 콘솔 배너에서 사용자 계정 아이콘을 클릭한 다음 **계정** 필드를 클릭하여 인스턴스를 확인하려는 사용자 계정을 선택하십시오.
 3. **NetApp ONTAP Select 인스턴스** 테이블에서, 선택된 사용자 계정에서 프로비저닝된 인스턴스의 목록을 보십시오.
 
-표 1. NetApp ONTAP Select 인스턴스 항목
-
 |항목        |설명       |  
 |:------------- |:--------------- |
 |이름 |인스턴스의 이름입니다. |
 |버전 |인스턴스의 버전입니다. |  
 |위치 |인스턴스가 호스팅되는 데이터 센터입니다. |
 |작성 시간 |인스턴스가 작성된 날짜 및 시간입니다. |   
-|상태 |인스턴스의 상태입니다. 상태는 다음 값 중 하나를 포함할 수 있습니다.<ul><li>작성 중: 인스턴스가 작성되는 중입니다.</li><li>빌드 중: 인스턴스가 구성되는 중입니다.</li><li>사용할 준비가 됨: 인스턴스가 사용할 준비가 되었습니다.</li><li>수정 중: 인스턴스가 수정되는 중입니다.</li><li>실패: 작성, 구성 또는 수정 프로세스가 실패했습니다.</li><li>삭제 중: 인스턴스가 삭제되는 중입니다.</li><li>삭제 오류: 인스턴스가 삭제되는 중에 오류가 발생했습니다.</li><li>삭제됨: 인스턴스가 삭제되었습니다.</li></ul>|
+|상태 |인스턴스의 상태입니다. 상태는 다음 값 중 하나를 포함할 수 있습니다.<br>작성 중: 인스턴스가 작성되는 중입니다.<br>빌드 중: 인스턴스가 구성되는 중입니다.<br>사용할 준비가 됨: 인스턴스가 사용할 준비가 되었습니다.<br>수정 중: 인스턴스가 수정되는 중입니다.<br>실패: 작성, 구성 또는 수정 프로세스가 실패했습니다.<br>삭제 중: 인스턴스가 삭제되는 중입니다.<br>삭제 오류: 인스턴스가 삭제되는 중에 오류가 발생했습니다.<br>삭제됨: 인스턴스가 삭제되었습니다. |
+{: caption="표 1. NetApp ONTAP Select 인스턴스 항목" caption-side="top"}
 
 ## NetApp ONTAP Select 인스턴스 특성 세부사항을 보는 프로시저
 {: #np_viewinginstances-procedure-view-inst-property}
@@ -48,8 +48,6 @@ subcollection: vmware-solutions
 
 1. **NetApp ONTAP Select 인스턴스** 테이블에서 인스턴스 이름을 클릭하십시오.
 2. **특성**에서 인스턴스의 세부사항을 보십시오.
-
-표 2. NetApp ONTAP Select 인스턴스 특성
 
 |특성        |설명       |
 |:--------------- |:----------------- |
@@ -66,13 +64,12 @@ subcollection: vmware-solutions
 |DNS, SSO 도메인 |SSO 도메인은 vSphere Single Sign-On 도메인입니다. SSO 도메인 이름은 배치된 모든 NetApp ONTAP Select 인스턴스(`vsphere.local` 값 포함)에 대해 설정됩니다. |
 |DNS, 하위 도메인 |하위 도메인은 로컬 NetApp ONTAP Select 인스턴스 호스트 이름이 상주하는 루트 도메인 이름의 DNS 하위 도메인 이름입니다. 하위 도메인 이름은 `<subdomain_label>.<root_domain>` 형식으로 되어 있습니다. |
 |상태 |인스턴스의 상태입니다. |
+{: caption="표 2. NetApp ONTAP Select 인스턴스 특성" caption-side="top"}
 
 ## NetApp ONTAP Select 인스턴스에 대한 액세스 정보를 보는 프로시저
 {: #np_viewinginstances-procedure-view-inst-access-info}
 
 **액세스 정보**에서 인스턴스 관련 컴포넌트의 액세스 정보를 보십시오. 이 비밀번호는 시스템에서 생성된 초기 비밀번호입니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔 외부에서 비밀번호를 변경하는 경우 이 비밀번호는 인스턴스 요약 페이지에서 업데이트되지 않습니다.
-
-표 3. NetApp ONTAP Select 인스턴스 관련 컴포넌트의 액세스 정보
 
 |컴포넌트        |설명       |
 |:---------------- |:----------------- |
@@ -92,18 +89,18 @@ subcollection: vmware-solutions
 |vCenter FQDN |vCenter Server의 완전한 도메인 이름입니다. |
 |vCenter ADMIN |vSphere Web Client를 사용하여 vCenter Server에 로그인하는 데 사용할 수 있는 VMware vCenter Single Sign-On 사용자 이름 및 비밀번호입니다. |
 |vCenter SSH |SSH 연결을 통해 vCenter Server VM에 액세스하는 데 사용할 수 있는 사용자 이름 및 비밀번호입니다. |
+{: caption="표 3. NetApp ONTAP Select 인스턴스 관련 컴포넌트의 액세스 정보" caption-side="top"}
 
 ## NetApp ONTAP Select 인스턴스에 대한 배치 히스토리를 보는 프로시저
 {: #np_viewinginstances-procedure-view-inst-deploy-history}
 
 왼쪽 탐색 분할창에서 **배치 히스토리**를 클릭하여 인스턴스에 대한 배치 히스토리를 보십시오.
 
-표 4. NetApp ONTAP Select 인스턴스 배치 히스토리
-
 |항목        |설명       |  
 |:------------|:------------- |
 |날짜 |인스턴스 상태가 변경된 날짜 및 시간입니다. |
 |요약 |변경의 세부사항입니다. |
+{: caption="표 4. NetApp ONTAP Select 인스턴스 배치 히스토리" caption-side="top"}
 
 인스턴스 배치 또는 인스턴스 삭제 중에 오류가 발생하는 경우 {{site.data.keyword.cloud_notm}} 지원 팀에 자동으로 알림이 전송됩니다. 티켓의 상태에 대해 문의하려는 경우에는 [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)할 수 있습니다.
 
@@ -113,54 +110,20 @@ subcollection: vmware-solutions
 1. 왼쪽 탐색 분할창에서 **인프라**를 클릭하십시오.
 2. **클러스터**에서 NetApp ONTAP Select 클러스터에 대한 요약을 보십시오.
 
-	표 5. NetApp ONTAP Select 클러스터 항목
-
-	 <table>
-	   <tr>
-	     <th>항목</th>
-	     <th>설명</th>
-	   </tr>
-	   <tr>
-	     <td>이름</td>
-	     <td>클러스터의 이름입니다.</td>
-	   </tr>
-	   <tr>
-	     <td>ESXi 서버</td>
-	     <td>클러스터에 있는 ESXi 서버의 수입니다.</td>
-	   </tr>
-	   <tr>
-	      <td>CPU</td>
-	      <td>클러스터에 있는 ESXi 서버의 CPU 스펙입니다.</td>
-	   </tr>
-	   <tr>
-	      <td>유효 스토리지</td>
-	      <td>클러스터에 있는 ESXi 서버의 총 디스크 용량입니다.</td>
-	   </tr>
-	   <tr>
-	      <td>메모리</td>
-	      <td>클러스터에 있는 ESXi 서버의 총 메모리 크기입니다.</td>
-	   </tr>
-	   <tr>
-	      <td>데이터 센터 위치</td>
-	      <td>클러스터가 호스팅되는 데이터 센터입니다. 인스턴스의 데이터 센터 위치와 동일합니다.</td>
-	   </tr>
-		 <tr>
-		   <td>팟(Pod)</td>
-			 <td>클러스터가 작성된 팟(Pod)입니다.</td>
-		 </tr>
-		 <tr>
-		  <td>상태</td>
-			<td>클러스터의 상태입니다. 상태는 다음 값 중 하나를 포함할 수 있습니다.<ul><li>초기화 중: 클러스터가 작성되어 구성되는 중입니다.</li><li>수정 중: 클러스터가 수정되는 중입니다.</li><li>사용할 준비가 됨: 인스턴스가 사용할 준비가 되었습니다.</li></ul></td>
-		 </tr>
-		 <tr>
-		  <td>조치</td>
-			<td>클러스터를 삭제하려면 **삭제** 아이콘을 클릭하십시오.</td>
-		 </tr>
-	 </table>
+|항목 |설명 |
+|:---- | :-----------|
+|이름 |클러스터의 이름입니다. |
+|ESXi 서버 |클러스터에 있는 ESXi 서버의 수입니다. |
+|CPU |클러스터에 있는 ESXi 서버의 CPU 스펙입니다. |
+|유효 스토리지 |클러스터에 있는 ESXi 서버의 총 디스크 용량입니다. |
+| 메모리 |클러스터에 있는 ESXi 서버의 총 메모리 크기입니다. |
+|데이터 센터 위치 |클러스터가 호스팅되는 데이터 센터입니다. 인스턴스의 데이터 센터 위치와 동일합니다. |
+|팟(Pod) |클러스터가 작성된 팟(Pod)입니다. |
+|상태 |클러스터의 상태입니다. 상태는 다음 값 중 하나를 포함할 수 있습니다.<br>초기화 중: 클러스터가 작성되어 구성되는 중입니다.<br>수정 중: 클러스터가 수정되는 중입니다.<br>사용할 준비가 됨: 인스턴스가 사용할 준비가 되었습니다. |
+|조치 |클러스터를 삭제하려면 **삭제** 아이콘을 클릭하십시오. |
+{: caption="표 5. NetApp ONTAP Select 클러스터 항목" caption-side="top"}
 
 3. 클러스터 이름을 클릭하여 ESXi 서버 세부사항을 보십시오.
-
-표 6. NetApp ONTAP Select 클러스터의 ESXi 서버 세부사항
 
 |항목        |설명       |  
 |:------------|:----------------- |
@@ -169,6 +132,7 @@ subcollection: vmware-solutions
 |인증 정보 |ESXi 서버에 액세스하는 데 사용되는 사용자 이름 및 비밀번호입니다. |
 |사설 IP |ESXi 서버의 사설 IP 주소입니다. |
 |상태 |ESXi 서버의 상태이며, 다음 값 중 하나일 수 있습니다.<ul><li>활성: ESXi 서버가 사용할 준비가 되었습니다.</li><li>삭제 중: ESXi 서버가 삭제되는 중입니다.</li></ul> |
+{: caption="표 6. NetApp ONTAP Select 클러스터의 ESXi 서버 세부사항" caption-side="top"}
 
 ## 수행할 작업
 {: #np_viewinginstances-next}
@@ -181,7 +145,7 @@ subcollection: vmware-solutions
 로그인 지시사항을 완료하는 데 도움이 되는 자세한 정보는 다음 주제를 검토하십시오.
 
 *  vSphere Web Client에 액세스하기 전의 요구사항 및 필요한 단계는 [vSphere Web Client에 연결하는 중에 제한시간이 초과함](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_timeout_vc_console)을 참조하십시오.
-*  VPN을 사용하여 {{site.data.keyword.cloud_notm}} 인프라 사설 네트워크에 로그인하기 위한 액세스 지점의 목록은 [VPN 액세스](http://www.softlayer.com/vpn-access){:new_window}를 참조하십시오.
+*  VPN을 사용하여 {{site.data.keyword.cloud_notm}} 인프라 사설 네트워크에 로그인하기 위한 액세스 지점의 목록은 [VPN 액세스](http://www.softlayer.com/vpn-access){: external}를 참조하십시오.
 *  vSphere Web Client를 사용하여 OVF(Open Virtualization Format) 파일을 배치할 때 문제점이 발생하면 [vSphere Web Client를 사용하여 OVF 파일 배치](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_deploy_ovf)를 참조하십시오.
 
 ## 관련 링크
@@ -189,4 +153,4 @@ subcollection: vmware-solutions
 
 * [NetApp ONTAP Select 인스턴스 주문](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)
 * [NetApp ONTAP Select 인스턴스 삭제](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_deletinginstance)
-* [NetApp ONTAP Select 배치에 전용 스토리지 연결](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)
+* [NetApp ONTAP Select 배치에 전용 스토리지 연결](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/){: external}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-26"
 
 keywords: vCenter Server Hybridity add cluster, view cluster vCenter Server Hybridity, delete cluster vCenter Server Hybridity
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -31,7 +32,7 @@ Os servidores ESXi configurados quando você pediu uma instância são agrupados
 {: #vc_hybrid_addingviewingclusters-before-add}
 
 * Sempre que possível, inclua clusters usando o console do {{site.data.keyword.vmwaresolutions_full}}, pois as mudanças feitas no VMware vSphere Web Client não são sincronizadas com o console do {{site.data.keyword.vmwaresolutions_short}}. Portanto, inclua clusters no vCenter Server somente para clusters no local ou clusters que você não possa ou não gerenciará no console do {{site.data.keyword.vmwaresolutions_short}}.
-* Para instâncias que foram implementadas (ou submetidas a upgrade) na V2.5 e mais recente, o número de clusters, de hosts e de MVs determina o limite máximo para o número de clusters que podem ser incluídos. Deve-se permanecer dentro das diretrizes de dimensionamento do VMware e limites para sua implementação. Para obter mais informações sobre os limites máximos, consulte [Máximos de configuração do VMware](https://configmax.vmware.com/home){:new_window}.
+* Para instâncias que foram implementadas (ou submetidas a upgrade) na V2.5 e mais recente, o número de clusters, de hosts e de MVs determina o limite máximo para o número de clusters que podem ser incluídos. Deve-se permanecer dentro das diretrizes de dimensionamento do VMware e limites para sua implementação. Para obter mais informações sobre os limites máximos, consulte [Máximos de configuração do VMware](https://configmax.vmware.com/home){:external}.
 * Para instâncias que foram implementadas em (ou submetidas a upgrade para) V2.3 e V2.4, é possível incluir até 10 clusters.
 
 ### Configurações do sistema
@@ -65,25 +66,23 @@ Se você implementar o cluster em um pod de infraestrutura diferente do {{site.d
 
 Quando você seleciona **Skylake**, é possível escolher a combinação de CPU e RAM de acordo com suas necessidades.
 
-Tabela 1. Opções para Bare Metal Servers Skylake
-
 | Opções de modelo da CPU        | Opções de RAM       |
 |:------------- |:------------- |
 | Processador Dual Intel Xeon Silver 4110/total de 16 núcleos, 2,1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Processador Dual Intel Xeon Gold 5120/total de 28 núcleos, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Processador Dual Intel Xeon Gold 6140/Total de 36 núcleos, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+{: caption="Tabela 1. Opções para Bare Metal Servers Skylake" caption-side="top"}
 
 #### Broadwell
 {: #vc_hybrid_addingviewingclusters-adding-broadwell}
 
 Quando você seleciona **Broadwell**, é possível escolher a combinação de CPU e RAM de acordo com suas necessidades.
 
-Tabela 2. Opções para Bare Metal Servers Broadwell
-
 | Opções de modelo da CPU        | Opções de RAM       |
 |:------------- |:------------- |
 | Quad Intel Xeon E7-4820 v4/total de 40 núcleos, 1.9 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4/total de 64 núcleos, 2.2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+{: caption="Tabela 2. Opções para Bare Metal Servers Broadwell" caption-side="top"}
 
 #### Número de Bare Metal Servers
 {: #vc_hybrid_addingviewingclusters-adding-bare-metal-number}

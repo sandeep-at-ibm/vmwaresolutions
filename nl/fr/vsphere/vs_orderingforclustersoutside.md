@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-20"
 
 keywords: vSphere scale cluster, scale vSphere, external vSphere cluster
 
@@ -26,13 +26,13 @@ Vous pouvez utiliser l'offre VMware vSphere pour mettre à l'échelle des cluste
 {: #vs_orderingforclustersoutside-req}
 
 Assurez-vous que :
-*  Vous avez configuré les données d'identification de l'infrastructure {{site.data.keyword.cloud_notm}} sur la page **Paramètres**. Pour plus d'informations, voir [Gestion des paramètres et comptes utilisateur](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount).
-*  Vous avez passé en revue les exigences et les remarques énoncées dans [Exigences et planification pour VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning).
+* Vous avez configuré les données d'identification de l'infrastructure {{site.data.keyword.cloud_notm}} sur la page **Paramètres**. Pour plus d'informations, voir [Gestion des paramètres et comptes utilisateur](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount).
+* Vous avez passé en revue les exigences et les remarques énoncées dans [Exigences et planification pour VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning).
 
 ## Procédure de mise à l'échelle des clusters créés en dehors de la console
 {: #vs_orderingforclustersoutside-procedure}
 
-1. Dans le catalogue {{site.data.keyword.cloud_notm}}, cliquez sur **VMware** dans le panneau de navigation de gauche, puis cliquez sur **VMware vSphere** dans la section **Centres de données virtuels**.
+1. Dans le catalogue {{site.data.keyword.cloud_notm}}, cliquez sur l'icône **VMware** dans le panneau de navigation de gauche, puis cliquez sur **VMware vSphere on IBM Cloud** dans la section **Centres de données virtuels VMware**.
 2. Sur la page **VMware vSphere on IBM Cloud**, cliquez sur **Créer**.  
    Vérifiez que vous vous trouvez sur l'onglet **Créer** et que **Nouveau cluster** est affiché dans la liste **Configurations de cluster**.
 3. Créez un cluster avec les mêmes paramètres que le cluster existant créé en dehors de la console {{site.data.keyword.vmwaresolutions_short}}. Pour plus d'informations, voir [Commande de nouveaux clusters vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances).  

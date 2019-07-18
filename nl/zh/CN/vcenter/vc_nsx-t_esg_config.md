@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server network config, network configuration NSX-T, manage NSX-T ESG
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -22,7 +23,7 @@ subcollection: vmware-solutions
 
 为虚拟机配置网络，以便您可以利用 VMware vCenter Server 实例中部署的 VMware NSX-T Edge 服务网关 (ESG)。有关为帮助最大限度降低安全风险而实施的安全措施的更多信息，请参阅[管理服务 NSX Edge 会构成安全风险吗？](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
-VMware NSX-T 是一个网络虚拟化平台，支持对隔离的网络进行虚拟化，并提供多种联网服务，例如交换机、路由和防火墙。有关 NSX 的更多信息，请参阅 [NSX 概述](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}。
+VMware NSX-T 是一个网络虚拟化平台，支持对隔离的网络进行虚拟化，并提供多种联网服务，例如交换机、路由和防火墙。有关 NSX 的更多信息，请参阅 [NSX 概述](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:external}。
 
 作为 vCenter Server with NSX-T 实例订购过程的一部分，将代表您完成以下操作：
 * 订购专用客户子网供 VM（虚拟机）用于访问 {{site.data.keyword.cloud}} 基础架构专用网络。
@@ -60,7 +61,7 @@ VMware NSX-T 是一个网络虚拟化平台，支持对隔离的网络进行虚�
 ## 启用 SNAT 规则
 {: #vc_nsx-t_esg_config-procedure-enable-snat-rule}
 
-缺省情况下，NSX-T 支持 SNAT 规则。有关修改现有规则的信息，请参阅 [Configure Source and Destination NAT on a Tier-0 Logical Router](https://docs.vmware.com/en/VMware-NSX-T-Data-Center/2.4/administration/GUID-45949ACD-9029-4674-B29C-C2EABEB39E1D.html){:new_window}。
+缺省情况下，NSX-T 支持 SNAT 规则。有关修改现有规则的信息，请参阅 [Configure Source and Destination NAT on a Tier-0 Logical Router](https://docs.vmware.com/en/VMware-NSX-T-Data-Center/2.4/administration/GUID-45949ACD-9029-4674-B29C-C2EABEB39E1D.html){:external}。
 
 ## 确定客户子网详细信息的过程
 {: #vc_nsx-t_esg_config-procedure-identify-customer-subnets-details}
@@ -80,7 +81,7 @@ VMware NSX-T 是一个网络虚拟化平台，支持对隔离的网络进行虚�
 2. 单击过滤器菜单，在**子网**字段中输入标识，如 NSX-T Web 客户机中 **customer-nsx-edge0** 的描述中所示。
 3. 查看为 IP 地址显示的注释。这些注释用于确定在初始设置期间订购和使用的子网和 IP 地址。
 
-   不要使用初始设置期间订购和使用的 IP 地址。但是，可以根据需求使用这些子网上的其他 IP 地址。要设置其他网络地址转换规则，请参阅[管理 NAT 规则](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}。
+   不要使用初始设置期间订购和使用的 IP 地址。但是，可以根据需求使用这些子网上的其他 IP 地址。要设置其他网络地址转换规则，请参阅[管理 NAT 规则](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:external}。
    {:important}
 
 ## 相关链接
@@ -88,4 +89,4 @@ VMware NSX-T 是一个网络虚拟化平台，支持对隔离的网络进行虚�
 
 * [关于更改 vCenter Server 工件的注意事项](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter_chg_impact#vcenter_chg_impact)
 * [常见问题](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [NSX Edge 服务网关](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}
+* [NSX Edge 服务网关](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:external}

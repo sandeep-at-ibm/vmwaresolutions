@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-06-20"
 
 subcollection: vmware-solutions
 
@@ -28,35 +28,38 @@ Caveonix RiskForesight 是混合式雲端的多方承租戶網路風險和「法
 
 透過機器學習和 CaveoIQ Risk Analytics 引擎，該解決方案為網路威脅帶來的風險提供主動的工作負載保護。它在混合雲端環境中提供一致的安全與原則架構，並從 VMware 和公有雲提供者（例如 AWS）中完全整合至雲端技術堆疊。
 
-可透過 RiskForesight GUI 使用的三個主要服務是風險管理、法規遵循風險及鑑識管理：
+可透過 RiskForesight GUI 使用的三個主要服務：風險管理、法規遵循風險及鑑識管理。
 
-**風險管理**
--	連續網路風險
+## 風險管理
+
+- 連續網路風險
 - 網路風險評分
--	漏洞的評分和優先順序
--	支援領先業界的漏洞和配置掃描工具
--	全球評比標準
--	網路風險報告
+- 漏洞的評分和優先順序
+- 支援領先業界的漏洞和配置掃描工具
+- 全球評比標準
+- 網路風險報告
 
-**法規遵循風險**
+## 法規遵循風險
+
 - 自動化法規遵循監視
--	法規遵循風險評分儀表板
--	自動化 IA 控制評量
--	支援：針對 SCAP、OVAL、XCCDF 及其他全球配置評比標準的 PCI、FISMA、FEDRAMP、HIPAA、GLBA、GDPR、NERC CIP 報告
--	持續更新及對映的 IA 控制和標準程式庫
+- 法規遵循風險評分儀表板
+- 自動化 IA 控制評量
+- 支援：針對 SCAP、OVAL、XCCDF 及其他全球配置評比標準的 PCI、FISMA、FEDRAMP、HIPAA、GLBA、GDPR、NERC CIP 報告
+- 持續更新及對映的 IA 控制和標準程式庫
 
-**鑑識管理**
--	日誌管理
--	來自多個來源的日誌收集
--	事件偵測、分析和視覺化
--	結果的圖形視覺化
--	來自多個來源的資料聚集
--	事件型分析
--	事件及日誌型分析的完整往下探查功能
--	警示及通知
+## 鑑識管理
+
+- 日誌管理
+- 來自多個來源的日誌收集
+- 事件偵測、分析和視覺化
+- 結果的圖形視覺化
+- 來自多個來源的資料聚集
+- 事件型分析
+- 事件及日誌型分析的完整往下探查功能
+- 警示及通知
 
 ## 相關鏈結
 {: #caveonix-intro-related}
 
-*   [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
-*   [Caveonix 網站](https://www.caveonix.com/)
+* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+* [Caveonix 網站](https://www.caveonix.com/)

@@ -35,18 +35,18 @@ El diseño permite al cliente completar las tareas siguientes:
 
 * Capa física: la capa inferior de la arquitectura es la capa física que consta de los componentes de cálculo, de red y de almacenamiento, que se aprovechan de {{site.data.keyword.cloud_notm}}:
   * {{site.data.keyword.baremetal_short}} que ejecuta las cargas de trabajo de gestión, edge y de cálculo.
-  * Red de {{site.data.keyword.cloud_notm}} que consiste en VLAN, subredes, Direccionadores de cliente frontales y de fondo (FCR/BCR - Frontend and Backend Customer Routers). 
-  * Almacenamiento de vSAN, que es un almacén de datos consolidado de los SSD en el almacenamiento {{site.data.keyword.baremetal_short}} o en el almacenamiento resistente. 
+  * Red de {{site.data.keyword.cloud_notm}} que consiste en VLAN, subredes, Direccionadores de cliente frontales y de fondo (FCR/BCR - Frontend and Backend Customer Routers).
+  * Almacenamiento de vSAN, que es un almacén de datos consolidado de los SSD en el almacenamiento {{site.data.keyword.baremetal_short}} o en el almacenamiento resistente.
 
 * Capa de infraestructura virtual: la capa de infraestructura virtual se ejecuta en la parte superior de los componentes de la capa física. La capa de infraestructura virtual controla el acceso a la infraestructura física subyacente, y controla y asigna recursos a las cargas de trabajo de gestión y de cálculo. Las cargas de trabajo de gestión consisten en elementos de la propia capa de infraestructura virtual, junto con elementos de las capas de gestión de nube, gestión de servicios, continuidad de negocio y seguridad.
 
-* Capa de continuidad de negocio: esta capa contiene elementos para dar soporte a la continuidad de negocio proporcionando copia de seguridad de datos, restauración y recuperación tras desastre. Para obtener más información, consulte la arquitectura de copia de seguridad y restauración de {{site.data.keyword.vmwaresolutions_short}} y las arquitecturas de referencia de recuperación tras desastre de Veeam, IBM Spectrum Protect Plus y Zerto. 
+* Capa de continuidad de negocio: esta capa contiene elementos para dar soporte a la continuidad de negocio proporcionando copia de seguridad de datos, restauración y recuperación tras desastre. Para obtener más información, consulte la arquitectura de copia de seguridad y restauración de {{site.data.keyword.vmwaresolutions_short}} y las arquitecturas de referencia de recuperación tras desastre de Veeam, IBM Spectrum Protect Plus y Zerto.
 
 * Capa de seguridad: esta capa contiene los elementos para reducir el riesgo y aumentar la conformidad. Para obtener más información, consulte las arquitecturas de referencia Fortinet, F5, NSX, HyTrust y Caveonix.
 
 Este documento añade la siguiente capa a la arquitectura {{site.data.keyword.vmwaresolutions_short}}:
 
-* Capa de Gestión de operaciones: la arquitectura de la capa de gestión de operaciones incluye los componentes de gestión que proporcionan soporte para las capas físicas y virtuales y, opcionalmente, las cargas de trabajo de cálculo en tiempo real. La capa de gestión de operaciones entiende la topología de {{site.data.keyword.vmwaresolutions_short}}: recursos físicos, virtuales, de cálculo, de red y de almacenamiento. La capa de gestión de operaciones consiste principalmente en las funciones de supervisión y registro. 
+* Capa de Gestión de operaciones: la arquitectura de la capa de gestión de operaciones incluye los componentes de gestión que proporcionan soporte para las capas físicas y virtuales y, opcionalmente, las cargas de trabajo de cálculo en tiempo real. La capa de gestión de operaciones entiende la topología de {{site.data.keyword.vmwaresolutions_short}}: recursos físicos, virtuales, de cálculo, de red y de almacenamiento. La capa de gestión de operaciones consiste principalmente en las funciones de supervisión y registro.
 
   La información se recopila de las formas siguientes:
     * Métricas - datos estructurados tales como rendimiento y capacidad
@@ -59,7 +59,7 @@ La capa de Gestión de operaciones está formada por las herramientas siguientes
 * vRealize Network Insight (vRNI) - vRNI ofrece operaciones inteligentes para redes definidas por software y para la seguridad. Permite la visibilidad entre redes virtuales y redes físicas, proporciona vistas operativas para gestionar y escalar despliegues de NSX y acelera la planificación y el despliegue de la microsegmentación.
 * VMware Update Manager (VUM) - VUM permite la gestión centralizada y automatizada de parches y versiones para VMware vSphere y ofrece actualización y aplicación de parches de hosts de vSphere, instalación y actualización de software de terceros en hosts, y actualización de hardware de VM, Herramientas de VMware y aplicaciones virtuales.
 
-Para una arquitectura de empresa completa, es posible que se necesiten las capas siguientes, pero están fuera de la arquitectura {{site.data.keyword.vmwaresolutions_short}}: 
+Para una arquitectura de empresa completa, es posible que se necesiten las capas siguientes, pero están fuera de la arquitectura {{site.data.keyword.vmwaresolutions_short}}:
 
 * Capa de gestión de nube - La capa de gestión de nube es la capa superior de la arquitectura de nube. Esta capa solicita recursos y orquesta las capas inferiores a partir de una interfaz de usuario o interfaz de programación de aplicaciones (API). vRealize Automation habilita la automatización de la nube en {{site.data.keyword.cloud_notm}}. Para obtener más información, consulte [Arquitectura de referencia vRealize Automation (vRA)](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_VRA_Architecture_v1.pdf){:new_window}.
 

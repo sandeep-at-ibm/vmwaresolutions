@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-21"
 
 keywords: IBM Integrated Managed Infrastructure, request IBM IMI, tech specs IMI
 
@@ -13,7 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
-# Demande de services gérés issus d'IMI
+# Services gérés issus d'IMI
 {: #managing_imi}
 
 {{site.data.keyword.IBM}} Integrated Managed Infrastructure (IMI) simplifie la gestion de l'infrastructure virtuelle VMware à l'aide de services modulaires. IMI fait appel à des fonctions d'automatisation et d'analyse pour gérer des composants d'infrastructure critiques dans le monde entier et pour offrir des services de gestion à distance dynamique à un large éventail d'infrastructures virtuelles de cloud et d'infrastructures traditionnelles.
@@ -32,11 +32,11 @@ Les spécifications suivantes sont incluses dans le service géré IMI :
 * Gestion et génération de rapports pour les services une fois par jour et une fois par semaine
 * Services à valeur ajoutée sans augmentation des coûts pour l'amélioration continue
 
-## Procédure pour demander des services gérés issus d'IMI
+## Procédure de demande de Services gérés issus d'IMI
 {: #managing_imi-procedure}
 
 1. A partir de la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Initiation** dans le panneau de navigation de gauche.
-2. Faites défiler la page vers le bas et cliquez sur la carte **Services gérés issus d'IMI** qui se trouve sous **Commander des services gérés supplémentaires**.
+2. Faites défiler la page vers le bas et sous **Services gérés VMware**, cliquez sur la carte **Services gérés issus d'IMI**.
 3. Sur la page **Services gérés issus d'IMI**, dans la zone **Prendre contact avec l'équipe de pré-vente IMI**, entrez une description de vos besoins en matière de services IMI, puis cliquez sur **Demander un rendez-vous**.
 
   Vous serez contacté par un représentant {{site.data.keyword.vmwaresolutions_short}} à l'aide de vos informations de contact {{site.data.keyword.cloud_notm}} pour vous aider à choisir les solution qu'il vous faut.

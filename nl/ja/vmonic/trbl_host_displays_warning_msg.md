@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-26"
 
 keywords: troubleshooting, configuration issue, ESXi server issue
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # ESXi サーバーに構成の問題が表示される
 {: #trbl_host_displays_warning_msg}
@@ -30,4 +32,4 @@ ESXi サーバーの**「問題」**タブに、次のメッセージが表示�
 ## 解決方法
 {: #trbl_host_displays_warning_msg-resolution}
 
-これは VMware の既知の問題です。 この問題を解決するには、[ESX/ESXi host displays warning message when test condition is false (2008602)](https://kb.vmware.com/s/article/2008602){:new_window} の説明に従ってください。
+これは VMware の既知の問題です。 この問題を解決するには、[ESX/ESXi host displays warning message when test condition is false (2008602)](https://kb.vmware.com/s/article/2008602) の説明に従ってください。{:external}

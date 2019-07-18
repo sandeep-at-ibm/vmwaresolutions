@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-28"
 
 keywords: single-node trial, migration app modernization, order migration app modernization
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -52,7 +53,7 @@ subcollection: vmware-solutions
 ## 訂購單一節點試用版移轉及應用程式現代化實例的程序
 {: #cloud_modern_bundle_orderinginstance-procedure}
 
-1. 從 {{site.data.keyword.cloud_notm}} 型錄中，按一下左導覽窗格中的 **VMware**，然後按一下**虛擬資料中心**區段中的**單一節點試用版移轉及應用程式現代化**。
+1. 從 {{site.data.keyword.cloud_notm}} 型錄中，按一下左導覽窗格中的 **VMware** 圖示，然後按一下 **VMware Services** 區段中的**單一節點試用版移轉及應用程式現代化**卡。
 2. 在**單一節點試用版移轉及應用程式現代化**頁面上，按一下**繼續**。
 3. 完成要求 {{site.data.keyword.cloud_notm}} 基礎架構帳戶的步驟，或提供您現有的**使用者名稱**和 **API 金鑰**，然後按一下**擷取**。
 
@@ -137,7 +138,7 @@ subcollection: vmware-solutions
       1. 按一下**管理**標籤。
       2. 在**系統更新**標籤上，按一下**要求下載鏈結**。
       3. 按一下**複製鏈結**，然後使用此鏈結將 HCX Enterprise Client 下載至內部部署環境，而且可以存取您的內部部署 vSphere 環境。
-3. 在 VMware vSphere Web Client 中，將 HCX Enterprise Client 當成 HCX Manager 虛擬應用裝置 (HCX Manager) 部署至內部部署環境。請遵循 [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window} 中的指示。
+3. 在 VMware vSphere Web Client 中，將 HCX Enterprise Client 當成 HCX Manager 虛擬應用裝置 (HCX Manager) 部署至內部部署環境。請遵循 [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external} 中的指示。
 
     您必須在專用網路上部署內部部署 HCX Manager，並容許它存取公用網路。您可以使用 NSX Edge、Vyatta 或類似閘道，容許透過網際網路存取內部部署 HCX Manager。如果用於專用網路存取及公用網路存取的閘道不同，則建議您使用預設閘道來容許公用網路存取及內部部署 **HCX Manager 管理主控台**，以建立進行專用網路存取的靜態路徑。  
     {:note}
@@ -145,16 +146,16 @@ subcollection: vmware-solutions
   1. 使用部署 OVA 時指定的認證，登入您的內部部署 HCX Enterprise Manager VM。
   2. 系統提示時，輸入啟動鍵。
 
-  請遵循 [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window} 中的指示。
+  請遵循 [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external} 中的指示。
 
 5. 自簽 SSL 憑證由 HCX on {{site.data.keyword.cloud_notm}} 服務產生。您必須完成下列步驟，將憑證匯入至內部部署 HCX Manager：
     1. 在內部部署 **HCX Manager 管理主控台**中，按一下**管理**標籤。
     2. 從左導覽窗格中，按一下**授信 CA 憑證**，然後按一下右側的**匯入**。
     3. 按一下 **URL**，然後輸入您要套用之憑證的 URL。這是您可以在 {{site.data.keyword.vmwaresolutions_short}} 主控台的 HCX on {{site.data.keyword.cloud_notm}} 服務詳細資料頁面上找到的 **HCX Cloud IP** (``https://<cloud-side public IP>``)。
     4. 按一下**套用**。
-6. 繼續起始配置並建置交互連接。請遵循 [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window} 中的指示。
-7. 將 VMware HCX 中的網路從內部部署延伸到 {{site.data.keyword.cloud_notm}}。請遵循 [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window} 中的指示。
-8. 在內部部署與 {{site.data.keyword.cloud_notm}} 之間移轉 VM。請遵循 [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window} 中的指示。
+6. 繼續起始配置並建置交互連接。請遵循 [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external} 中的指示。
+7. 將 VMware HCX 中的網路從內部部署延伸到 {{site.data.keyword.cloud_notm}}。請遵循 [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external} 中的指示。
+8. 在內部部署與 {{site.data.keyword.cloud_notm}} 之間移轉 VM。請遵循 [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external} 中的指示。
 
 您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台，而不能從 {{site.data.keyword.slportal}} 或透過主控台以外的任何其他方法，來管理在 {{site.data.keyword.cloud_notm}} 帳戶中建立的 {{site.data.keyword.vmwaresolutions_short}} 基礎架構元件。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台之外變更這些元件，這些變更不會與主控台同步化，而且會使您的環境不穩定。
 {:important}
@@ -188,7 +189,7 @@ subcollection: vmware-solutions
 {: #cloud_modern_bundle_orderinginstance-related}
 
 * [vCenter Server 和 IBM Cloud Private 手冊](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [開立 IBM Cloud Private 的問題單](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
-* [VMware HCX 資源](https://hcx.vmware.com/#/docs){:new_window}
-* [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}
+* [開立 IBM Cloud Private 的問題單](https://www.ibm.com/mysupport/s/?language=en_US){:external}
+* [VMware HCX 資源](https://hcx.vmware.com/#/docs){:external}
+* [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}
 * [取消虛擬伺服器](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-31"
+lastupdated: "2019-06-27"
 
 keywords: planning vCenter Server, data center, vCenter Server data centers
 
@@ -28,11 +28,10 @@ Le compte {{site.data.keyword.cloud_notm}} que vous utilisez doit répondre à c
 
 Les déploiements unifiés vCenter Server ont des exigences strictes quant à l'infrastructure physique. Par conséquent, vous ne pouvez déployer des instances que dans des {{site.data.keyword.CloudDataCents_notm}} qui répondent à ces exigences. Les {{site.data.keyword.CloudDataCents_notm}} suivants sont disponibles pour un déploiement vCenter Server :
 
-Tableau 1. {{site.data.keyword.CloudDataCents_notm}} disponibles pour les instances vCenter Server
-
 | {{site.data.keyword.CloudDataCent_notm}} | Emplacement | Région | Options de serveur |
 |:----------------------|:---------|:-------|:---------------|
-| AMS03 | Amsterdam | Europe | Skylake, Broadwell |
+| AMS01 | Amsterdam | Europe | Skylake, Certifié SAP, Broadwell |
+| AMS03 | Amsterdam | Europe | Skylake, Certifié SAP, Broadwell |
 | CHE01 | Chennai | Asie-Pacifique | Skylake, Certifié SAP, Broadwell |
 | DAL09 | Dallas | Sud des Etats-Unis | Skylake, Certifié SAP, Broadwell |
 | DAL10 | Dallas | Sud des Etats-Unis | Skylake, Certifié SAP, Broadwell |
@@ -40,8 +39,8 @@ Tableau 1. {{site.data.keyword.CloudDataCents_notm}} disponibles pour les instan
 | DAL13 | Dallas | Sud des Etats-Unis | Skylake, Certifié SAP, Broadwell |
 | FRA02 | Francfort | Europe | Skylake, Certifié SAP, Broadwell |
 | FRA04 | Francfort | Europe | Skylake, Certifié SAP, Broadwell |
-| FRA05 | Francfort | Europe | Skylake, Broadwell |
-| HKG02 | Hong Kong | Asie-Pacifique | Skylake, Broadwell |
+| FRA05 | Francfort | Europe | Skylake, Certifié SAP, Broadwell |
+| HKG02 | Hong Kong | Asie-Pacifique | Skylake, Certifié SAP, Broadwell |
 | LON02 | Londres | Europe | Skylake, Broadwell |
 | LON04 | Londres | Europe | Skylake, Certifié SAP, Broadwell |
 | LON05 | Londres | Europe | Skylake, Broadwell |
@@ -50,30 +49,33 @@ Tableau 1. {{site.data.keyword.CloudDataCents_notm}} disponibles pour les instan
 | MEX01 | Querétaro | Sud des Etats-Unis | Skylake, Certifié SAP, Broadwell |
 | MIL01 | Milan | Europe | Skylake, Certifié SAP, Broadwell |
 | MON01 | Montréal | Est des Etats-Unis | Skylake, Certifié SAP, Broadwell |
-| OSL01 | Oslo | Europe | Skylake, Broadwell |
-| PAR01 | Paris | Europe | Skylake, Broadwell |
+| OSL01 | Oslo | Europe | Skylake, Certifié SAP, Broadwell |
+| PAR01 | Paris | Europe | Skylake, Certifié SAP, Broadwell |
 | SAO01 | São Paulo | Amérique du Sud | Skylake, Certifié SAP, Broadwell |
 | SEO01 | Séoul | Asie-Pacifique | Skylake, Certifié SAP, Broadwell |
 | SJC03 | San José | Ouest des Etats-Unis | Skylake, Broadwell |
 | SJC04 | San José | Ouest des Etats-Unis | Skylake, Broadwell |
-| SNG01 | Singapour | Asie-Pacifique | Skylake, Broadwell |
-| SYD01 | Sydney | Asie-Pacifique | Skylake, Broadwell |
+| SNG01 | Singapour | Asie-Pacifique | Skylake, Certifié SAP, Broadwell |
+| SYD01 | Sydney | Asie-Pacifique | Skylake, Certifié SAP, Broadwell |
 | SYD04 | Sydney | Asie-Pacifique | Skylake, Certifié SAP, Broadwell |
+| SYD05 | Sydney | Asie-Pacifique | Skylake, Certifié SAP, Broadwell |
 | TOK02 | Tokyo | Asie-Pacifique | Skylake, Certifié SAP, Broadwell |
+| TOK04 | Tokyo | Asie-Pacifique | Skylake, Certifié SAP, Broadwell |
+| TOK05 | Tokyo | Asie-Pacifique | Skylake, Certifié SAP, Broadwell |
 | TOR01 | Toronto | Est des Etats-Unis | Skylake, Certifié SAP, Broadwell |
 | WDC04 | Washington, DC | Est des Etats-Unis | Skylake, Certifié SAP, Broadwell |
 | WDC06 | Washington, DC | Est des Etats-Unis | Skylake, Certifié SAP, Broadwell |
 | WDC07 | Washington, DC | Est des Etats-Unis | Skylake, Certifié SAP, Broadwell |
+{: caption="Tableau 1. {{site.data.keyword.CloudDataCents_notm}} disponibles pour les instances vCenter Server" caption-side="top"}
 
 Selon la disponibilité et l'approvisionnement du stock, les {{site.data.keyword.CloudDataCents_notm}} peuvent afficher un indicateur de statut sur la console {{site.data.keyword.vmwaresolutions_short}} pour vous aider à planifier vos déploiements.
-
-Tableau 2. Indicateurs de statut pour les {{site.data.keyword.CloudDataCents_notm}} lors de la commande d'instances vCenter Server
 
 | Statut | Détails du statut |
 |:------------------------------|:--------------------------------------------------|
 | Coming Soon                   | L'{{site.data.keyword.CloudDataCent_notm}} n'est pas disponible actuellement. |
 | Temporarily Out of Inventory  | L'{{site.data.keyword.CloudDataCent_notm}} n'est pas disponible actuellement. |
 | Limited Inventory             | L'{{site.data.keyword.CloudDataCent_notm}} a une disponibilité limitée et la commande risque de ne pas être honorée. |
+{: caption="Tableau 2. Indicateurs de statut pour les {{site.data.keyword.CloudDataCents_notm}} lors de la commande d'instances vCenter Server" caption-side="top"}
 
 ## Sauvegarde des composants de gestion
 {: #vc_planning-backup-mgmt-components}

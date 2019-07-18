@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: NetApp order instance, order NetApp ONTAP, order NetApp
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -112,14 +113,14 @@ NetApp ONTAP Select 인스턴스를 주문할 때는 다음 네트워크 인터�
 ## 주문 요약
 {: #np_orderinginstances-order-summary}
 
-선택한 구성에 따라 예상 비용이 즉시 생성되어 **주문 요약** 오른쪽 분할창에 표시됩니다. **가격 세부사항**을 클릭하여 {{site.data.keyword.vmwaresolutions_short}} 리소스에 대한 비용 요약이 포함된 PDF 문서를 생성하십시오. 
+선택한 구성에 따라 예상 비용이 즉시 생성되어 **주문 요약** 오른쪽 분할창에 표시됩니다.  **가격 세부사항**을 클릭하여 {{site.data.keyword.vmwaresolutions_short}} 리소스에 대한 비용 요약이 포함된 PDF 문서를 생성하십시오.
 
-**예상 금액에 추가**를 클릭하여 {{site.data.keyword.cloud_notm}} 예상 도구에 프로비저닝된 리소스를 추가할 수도 있습니다. 구매를 고려할 수 있는 기타 {{site.data.keyword.cloud_notm}} 리소스와 함께 선택된 {{site.data.keyword.vmwaresolutions_short}} 리소스의 비용을 예상하려는 경우 유용합니다. 
+**예상 금액에 추가**를 클릭하여 {{site.data.keyword.cloud_notm}} 예상 도구에 프로비저닝된 리소스를 추가할 수도 있습니다. 구매를 고려할 수 있는 기타 {{site.data.keyword.cloud_notm}} 리소스와 함께 선택된 {{site.data.keyword.vmwaresolutions_short}} 리소스의 비용을 예상하려는 경우 유용합니다.
 
 ## NetApp ONTAP Select 인스턴스를 주문하는 프로시저
 {: #ordering-netapp-ontap-select-instances}
 
-1. {{site.data.keyword.cloud_notm}} 카탈로그의 왼쪽 탐색 분할창에 있는 **VMware**를 클릭한 후 **가상 데이터 센터** 섹션에 있는 **NetApp ONTAP Select**를 클릭하십시오.
+1. {{site.data.keyword.cloud_notm}} 카탈로그에서 왼쪽 탐색 분할창에 있는 **VMware** 아이콘을 클릭한 다음 **VMware 가상 데이터 센터** 섹션에 있는 **NetApp ONTAP Select** 카드를 클릭하십시오.
 2. **NetApp ONTAP Select** 페이지에서 **작성**을 클릭하십시오.
 3. **NetApp ONTAP** 페이지에서 인스턴스 이름을 입력하십시오.
 4. **호스트 이름 접두부**, **하위 도메인 레이블** 및 **도메인 이름**을 입력하여 네트워크 인터페이스 설정을 완료하십시오.
@@ -137,7 +138,7 @@ NetApp ONTAP Select 인스턴스를 주문할 때는 다음 네트워크 인터�
 ## NetApp ONTAP 인스턴스를 주문한 후의 결과
 {: #np_orderinginstances-results}
 
-* 인스턴스의 배치가 자동으로 시작되고 주문이 처리 중이라는 확인을 수신합니다. 인스턴스 세부사항의 **배치 히스토리** 섹션을 보고 주의해야 하는 문제가 포함된 배치 상태를 확인할 수 있습니다. 
+* 인스턴스의 배치가 자동으로 시작되고 주문이 처리 중이라는 확인을 수신합니다. 인스턴스 세부사항의 **배치 히스토리** 섹션을 보고 주의해야 하는 문제가 포함된 배치 상태를 확인할 수 있습니다.
 * 인스턴스가 성공적으로 배치된 경우에는 [NetApp ONTAP Select 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#specs)에서 설명된 컴포넌트가 VMware 가상 플랫폼에 설치됩니다.
 * 인스턴스를 사용할 준비가 되면 인스턴스의 상태가 **사용할 준비가 됨**으로 변경되고 이메일로 알림을 받습니다.
 
@@ -160,5 +161,5 @@ NetApp ONTAP Select 인스턴스를 주문할 때는 다음 네트워크 인터�
 
 * [NetApp ONTAP Select 인스턴스 보기](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_viewinginstances)
 * [NetApp ONTAP Select 인스턴스 삭제](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_deletinginstance)
-* [NetApp ONTAP Documentation Center](http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.exp-clus-peer%2Fhome.html)
-* [NetApp ONTAP Select 배치에 전용 스토리지 연결](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)
+* [NetApp ONTAP Documentation Center](http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.exp-clus-peer%2Fhome.html){: external}
+* [NetApp ONTAP Select 배치에 전용 스토리지 연결](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/){: external}

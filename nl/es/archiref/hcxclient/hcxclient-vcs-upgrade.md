@@ -16,9 +16,9 @@ subcollection: vmware-solutions
 
 La actualización de HCX es un proceso sencillo que utiliza la interfaz de usuario web (IU) del cliente en la actualización de HCX Manager del lado del cliente y la interfaz de usuario web de la nube en la actualización de HCX Manager del lado de la nube.
 
-Debe actualizar ambos lados, ya que cualquier actualización de componente de flota provoca que ambos vuelvan a desplegar los componentes de flota con el nivel de código que se instala en HCX Manager. 
+Debe actualizar ambos lados, ya que cualquier actualización de componente de flota provoca que ambos vuelvan a desplegar los componentes de flota con el nivel de código que se instala en HCX Manager.
 
-Si el soporte de VMware solicita el ID de sistema, proporcione tanto el lado del cliente como el de la nube. Utilice SSH en el gestor HCX (cliente o en la nube) y ejecute `cat /common/location` para localizar el ID del sistema. 
+Si el soporte de VMware solicita el ID de sistema, proporcione tanto el lado del cliente como el de la nube. Utilice SSH en el gestor HCX (cliente o en la nube) y ejecute `cat /common/location` para localizar el ID del sistema.
 
 ## Enlaces relacionados
 {: #hcxclient-vcs-upgrade-related}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-20"
 
 keywords: KMIP for VMware, view KMIP stand-alone, KMIP for VMware status
 
@@ -23,24 +23,22 @@ Cette procédure permet d'afficher les instances KMIP for VMware on {{site.data.
 
 Cliquez sur **Ressources** dans le panneau de navigation de gauche, puis faites défiler l'écran vers le tableau **KMIP for VMware on {{site.data.keyword.cloud_notm}} Instances** pour afficher des informations relatives aux instances que vous avez commandées :
 
-Table 1. Eléments des instances KMIP for VMware on {{site.data.keyword.cloud_notm}}
-
 | Elément        | Description       |  
 |:----------- |:----------------- |
 | Nom | Nom de l'instance. |
 | Région | Région {{site.data.keyword.cloud_notm}} où l'instance est hébergée. |
 | Heure de création | Date et heure de création de l'instance. |  
 | Statut | Statut de l'instance. |
+{: caption="Table 1. Eléments des instances KMIP for VMware on {{site.data.keyword.cloud_notm}}" caption-side="top"}
 
 Le statut de l'instance peut avoir différentes valeurs.
-
-Table 2. Description du statut des instances KMIP for VMware on {{site.data.keyword.cloud_notm}}
 
 | Statut        | Description       |
 |:------------- |:------------- |
 | Installation | L'instance est en cours de création. |
 | Installé | L'instance est prête pour utilisation. |
 | Retrait en cours | L'instance est en cours de suppression. |
+{: caption="Table 2. Description du statut des instances KMIP for VMware on {{site.data.keyword.cloud_notm}}" caption-side="top"}
 
 ## Liens connexes
 {: #kmip_standalone_viewing-related}

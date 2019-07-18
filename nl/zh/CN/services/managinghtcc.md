@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: HTCC WebGUI, HTCC console, enable internet HTCC
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -44,7 +45,8 @@ subcollection: vmware-solutions
 
 这些规则允许您为 HyTrust 虚拟机 (VM) 启用因特网访问。如果未启用因特网访问，那么应用于 HTCC 安装的许可证将在一年后到期。
 
-对于仅专用的 vCenter Server 环境，未添加 VMware NSX Edge Services Gateway (ESG) **mgmt-nsx-edge**，因此未定义防火墙和 SNAT 规则。因此，无法为仅专用实例启用因特网连接，并且 HyTrust 许可证每年到期。{:note}
+对于仅专用的 vCenter Server 环境，未添加 VMware NSX Edge Services Gateway (ESG) **mgmt-nsx-edge**，因此未定义防火墙和 SNAT 规则。因此，无法为仅专用实例启用因特网连接，并且 HyTrust 许可证每年到期。
+{:note}
 
 ### 查找已定义的防火墙和 SNAT 规则的过程
 {: #managinghtcc-proc-find-firewall}
@@ -58,7 +60,8 @@ subcollection: vmware-solutions
 ### 启用 HTCC 因特网连接的过程
 {: #managinghtcc-enable-internet}
 
-以下步骤适用于更新用于许可证升级的主虚拟机 (VM) 上的 HTCC 网络设置。无需更新辅助 VM 的设置。{:note}
+以下步骤适用于更新用于许可证升级的主虚拟机 (VM) 上的 HTCC 网络设置。无需更新辅助 VM 的设置。
+{:note}
 
 1. 完成上一个过程中的步骤 1-3。
 2. 单击**设置**，然后单击**接口**。记下专用上行链路的 IP 地址，这将成为新的缺省网关。
@@ -75,11 +78,12 @@ subcollection: vmware-solutions
 
 6. 更改缺省网关。例如，对于 HTCC 5.5.1，单击**配置 > 网络**，并将**网关**字段中的 IP 地址替换为您在步骤 3 中记下的地址，然后单击**保存**。
 
-  请确保在更改缺省网关之前设置了静态路由，否则 Web 控制台可能变为不可访问。{:important}
+  请确保在更改缺省网关之前设置了静态路由，否则 Web 控制台可能变为不可访问。
+  {:important}
 
   主 VM 现在就可以访问因特网了。
 
-7. 要确认主 VM 是否具有因特网访问权，请对公共 IP 地址或 Web 站点运行 `ping` 命令。要执行此操作，请返回到 vCenter 并右键单击 **CC1 > 打开控制台**。使用 HyTrust CloudControl on IBM Cloud 服务详细信息页面的控制台凭证登录到控制台。运行 `ping` 命令，如 `ping www.ibm.com`，您应该会立即获得响应。按 `Ctrl + C` 以结束 ping，确保丢包率为 0%。
+7. 要确认主 VM 是否具有因特网访问权，请对公共 IP 地址或 Web 站点运行 `wget` 命令。要执行此操作，请返回到 vCenter 并右键单击 **CC1 > 打开控制台**。使用 HyTrust CloudControl on IBM Cloud 服务详细信息页面的控制台凭证登录到控制台。运行 `wget` 命令，如 `wget www.ibm.com`，您应该会立即获得响应。确认请求已发送，并收到 `200` 响应。
 
 ## 相关链接
 {: #managinghtcc-related}
@@ -87,4 +91,4 @@ subcollection: vmware-solutions
 * [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 概述](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htcc_considerations)
 * [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [常见问题](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [HyTrust Web 站点](https://www.hytrust.com/)
+* [HyTrust Web 站点](https://www.hytrust.com/){:external}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-20"
 
 keywords: IBM Cloud Private Hosted, ICP configuration, order Cloud Private
 
@@ -23,14 +23,14 @@ Puede solicitar el servicio {{site.data.keyword.cloud}} Private Hosted cuando so
 
 Puede solicitar una nueva instancia con el servicio {{site.data.keyword.cloud_notm}} Private Hosted incluido utilizando uno de los métodos siguientes:
 * Desde la consola de {{site.data.keyword.vmwaresolutions_short}}, cuando solicite una nueva instancia, seleccione **IBM Cloud Private Hosted** en la sección **Servicios opcionales**.
-* Desde el catálogo de {{site.data.keyword.cloud_notm}}, seleccione **IBM Cloud Private Hosted**, especifique los valores del servicio y, a continuación, seleccione **Añadir a instancia nueva**.
+* En el catálogo de {{site.data.keyword.cloud_notm}}, pulse el icono **VMware** en el panel de navegación de la izquierda y, a continuación, pulse la tarjeta **IBM Cloud Private Hosted** en la sección **Servicios de VMware**. Especifique los valores del servicio y seleccione **Añadir a instancia nueva**.
 
 ## Solicitud de IBM Cloud Private Hosted para una instancia existente
 {: #icp_ordering-existing}
 
 Puede añadir el servicio {{site.data.keyword.cloud_notm}} Private Hosted a una instancia existente utilizando uno de los métodos siguientes:
 * Desde la consola de {{site.data.keyword.vmwaresolutions_short}}, visualice la instancia a la que desea añadir el servicio, pulse **Servicios** en el panel de navegación izquierdo y pulse **Añadir**.
-* Desde el catálogo de {{site.data.keyword.cloud_notm}}, seleccione **IBM Cloud Private Hosted**, especifique los valores del servicio y, a continuación, seleccione **Añadir a instancia existente**.
+* En el catálogo de {{site.data.keyword.cloud_notm}}, pulse el icono **VMware** en el panel de navegación de la izquierda y, a continuación, pulse la tarjeta **IBM Cloud Private Hosted** en la sección **Servicios de VMware**. Especifique los valores del servicio y seleccione **Añadir a instancia existente**.
 
 ## Configuración del servicio IBM Cloud Private Hosted
 {: #icp_ordering-config}

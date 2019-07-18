@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-20"
 
 keywords: planning NetApp ONTAP, data center, NetApp data centers
 
@@ -27,8 +27,6 @@ L'account {{site.data.keyword.cloud_notm}} che utilizzi deve soddisfare determin
 {: #np_planning-dc-availability}
 
 La distribuzione di NetApp ONTAP Select ha requisiti rigorosi sull'infrastruttura fisica. Pertanto, puoi distribuire le istanze solo nei {{site.data.keyword.CloudDataCents_notm}} che soddisfano i requisiti. Per la distribuzione di NetApp ONTAP Select sono disponibili i seguenti {{site.data.keyword.CloudDataCents_notm}}:
-
-Tabella 1. {{site.data.keyword.CloudDataCents_notm}} disponibili per le istanze NetApp ONTAP Select
 
 | {{site.data.keyword.CloudDataCent_notm}} | Ubicazione | Regione | Opzioni server |
 |:------|:----------------|:----------------|:---------------------------|
@@ -62,6 +60,7 @@ Tabella 1. {{site.data.keyword.CloudDataCents_notm}} disponibili per le istanze 
 | WDC04 | Washington, DC | Nord America orientale | Alte prestazioni (medio), Alte prestazioni (elevato), Alta capacità
 | WDC06 | Washington, DC | Nord America orientale | Alte prestazioni (medio), Alte prestazioni (elevato), Alta capacità
 | WDC07 | Washington, DC | Nord America orientale | Alte prestazioni (medio), Alte prestazioni (elevato), Alta capacità
+{: caption="Tabella 1. {{site.data.keyword.CloudDataCents_notm}} disponibili per le istanze NetApp ONTAP Select" caption-side="top"}
 
 ## Link correlati
 {: #np_planning-related}

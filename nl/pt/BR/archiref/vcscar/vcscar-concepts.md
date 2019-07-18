@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -20,9 +20,9 @@ subcollection: vmware-solutions
 Um aspecto chave do Skate Advisor são as conversas possíveis com o robô de bate-papo orientado pelo Watson. A seção a seguir detalha as regras de conversação que definem uma interação humana com o robô de bate-papo do Skate Advisor.
 
 A Linguagem do Skatista é o núcleo do sistema e é usada da maneira a seguir:
-* Reconhecimento de manobra: usado pelo Watson Discovery para alimentar material de fontes on-line para reconhecer as manobras existentes e mapear para o material de origem.
+* Reconhecimento de manobra: usado pelo Watson Discovery para obter material de origens on-line para reconhecimento de manobras existentes e mapeamento do material da origem.
 * Conversas sobre skate: usadas pelo robô de bate-papo para ter conversas significativas com o usuário do sistema.
-* Classificação de manobra: armazenar e classificar uma manobra com base em sua descrição textual. As manobras que são classificadas dessa maneira podem ter metadados anexados a elas, como referências de local e vídeo.
+* Classificação de manobra: armazenar e classificar uma manobra com base em sua descrição textual. Metadados, como referências de localização e vídeo, podem ser anexados a manobras classificadas.
 
 ## Elementos de linguagem
 {: #vcscar-concepts-lang-elem}
@@ -39,7 +39,7 @@ Tipo de elemento | Texto de linguagem
 Direção | fakie<br>nollie<br>switch
 Rotação | halfcab<br>cab<br>180<br>360<br>540
 Base | kickflip<br>heelflip<br>hardflip<br>bigspin<br>shuvit<br>impossible
-Aterrissagem | manual (2 rodas de trás)<br>nosemanual (2 rodas da frente)<br>5-0 (grind)<br>nosegrind<br>tailslide<br>noseslide<br>crooked grind<br>smithgrind<br>boardslide<br>lipslide<br>
+Aterrissagem | manual (duas rodas de trás)<br>nosemanual (duas rodas da frente)<br>5-0 (grind)<br>nosegrind<br>tailslide<br>noseslide<br>crooked grind<br>smithgrind<br>boardslide<br>lipslide<br>
 
 ### Modificadores de elementos
 {: #vcscar-concepts-elem-modifiers}

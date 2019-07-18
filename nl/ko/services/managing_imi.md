@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-21"
 
 keywords: IBM Integrated Managed Infrastructure, request IBM IMI, tech specs IMI
 
@@ -13,7 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
-# IMI의 관리 서비스 요청
+# IMI의 관리 서비스
 {: #managing_imi}
 
 {{site.data.keyword.IBM}} Integrated Managed Infrastructure(IMI)는 모듈화 서비스로 VMware 가상 인프라 관리를 간소화할 수 있습니다. IMI는 고급 자동화 및 분석을 사용하여 전세계적으로 중요 인프라 컴포넌트를 관리하고 광범위한 일반 및 클라우드 가상 인프라에 대한 동적 원격 관리 서비스를 제공합니다.
@@ -32,14 +32,14 @@ IMI는 vCenter Server 인스턴스에 대한 관리 서비스를 제공합니다
 * 일별 및 주별 서비스 관리 및 보고
 * 지속적 개선에 대한 비용 증가 없는 부가 가치 서비스
 
-## IMI의 관리 서비스를 요청하는 프로시저
+## IMI의 관리 서비스 요청 프로시저
 {: #managing_imi-procedure}
 
 1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **시작하기**를 클릭하십시오.
-2. 페이지를 아래로 스크롤하여 **추가 관리 서비스 주문** 아래에 있는 **IMI의 관리 서비스** 카드를 클릭하십시오.
+2. 페이지를 아래로 스크롤하여 **VMware 관리 서비스**에서 **IMI의 관리 서비스** 카드를 클릭하십시오.
 3. **IMI의 관리 서비스** 페이지의 **IMI 사전 영업 참여** 상자에 IMI 서비스에 대한 요구사항을 입력하고 **컨설팅 요청**을 클릭하십시오.
 
-  {{site.data.keyword.cloud_notm}} 담당자는 사용자가 필요한 솔루션에 대한 도움을 드리기 위해 사용자의 {{site.data.keyword.cloud_notm}} 연락처 정보를 사용하여 연락을 드립니다.
+  {{site.data.keyword.cloud_notm}} 담당자는 사용자에게 필요한 솔루션에 대한 도움을 드리기 위해 사용자의 {{site.data.keyword.cloud_notm}} 연락처 정보를 사용하여 연락을 드립니다.
 
 ## 관련 링크
 {: #managing_imi-related}

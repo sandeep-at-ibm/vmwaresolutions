@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-20"
 
 keywords: vmware offering, vmware solutions functions, function support
 
@@ -17,8 +17,6 @@ subcollection: vmware-solutions
 {: #inst_comp_chart}
 
 VMware vCenter Server 인스턴스, VMware vCenter Server with Hybridity Bundle 인스턴스 및 VMware vSphere 클러스터에 대한 기능 지원의 차이점을 이해하려면 다음 차트를 검토하십시오.
-
-표 1. vCenter Server, vCenter Server with Hybridity Bundle 및 vSphere 클러스터에 지원되는 기능
 
 |기능 |vCenter Server | vCenter Server with Hybridity |VMware vSphere |
 |:--- |:--- |:--- |:--- |
@@ -38,6 +36,7 @@ VMware vCenter Server 인스턴스, VMware vCenter Server with Hybridity Bundle 
 |NSX 라이센스 업그레이드 옵션 |NSX Base에서 Advanced 또는 Enterprise로, NSX Advanced에서 Enterprise로 업그레이드할 수 있음. vCenter Server with Hybridity Bundle로 업그레이드할 수 있음. |NSX Advanced에서 Enterprise로 업그레이드할 수 있음  |없음 |
 |vSAN 라이센스 에디션 |vSAN Advanced 또는 Enterprise |vSAN Advanced 또는 Enterprise |vSAN Advanced 또는 Enterprise  |
 |추가 기능 서비스 |지원됨(HCX on {{site.data.keyword.cloud_notm}} 미포함). vCenter Server with Hybridity Bundle로 업그레이드할 수 있음. |지원됨(HCX on {{site.data.keyword.cloud_notm}} 포함). |이 솔루션의 자동화로 지원되지는 않지만 고유의 소프트웨어를 가져와서 설치할 수 있습니다. |
+{: caption="표 1. vCenter Server, vCenter Server with Hybridity Bundle 및 vSphere 클러스터에 지원되는 기능" caption-side="top"}
 
 ## 참고
 {: #inst_comp_chart-notes}

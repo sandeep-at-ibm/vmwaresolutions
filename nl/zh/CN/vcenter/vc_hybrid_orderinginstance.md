@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-19"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server Hybridity order instance, order vCenter Server Hybridity, order Hybridity
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -30,15 +31,14 @@ subcollection: vmware-solutions
 *  已查看[针对 vCenter Server with Hybridity Bundle 的需求和规划](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)中的信息。
 * 已复查实例和域名格式。域名和子域标签用于生成实例的用户名和服务器名称。
 
-表 1. 实例和域名的值格式
-
 |名称|值格式|
-  |:------------- |:------------- |
-  |域名| `<root_domain>` |  
-  |vCenter Server 登录用户名|`<user_id>@<root_domain>`（Microsoft Active Directory 用户）或 `administrator@vsphere.local`|
-  | vCenter Server（具有嵌入式 PSC）FQDN|`vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`。最大长度为 50 个字符。|
-  |Single Sign-On (SSO) 站点名称| `<subdomain_label>` |
-  |标准 ESXi 服务器名称| `<host_prefix><n>.<subdomain_label>.<root_domain>`，其中 `<n>` 是 ESXi 服务器的序列。最大长度为 50 个字符。|
+|:------------- |:------------- |
+|域名| `<root_domain>` |  
+|vCenter Server 登录用户名|`<user_id>@<root_domain>`（Microsoft Active Directory 用户）或 `administrator@vsphere.local`|
+| vCenter Server（具有嵌入式 PSC）FQDN|`vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`。最大长度为 50 个字符。|
+|Single Sign-On (SSO) 站点名称| `<subdomain_label>` |
+|标准 ESXi 服务器名称| `<host_prefix><n>.<subdomain_label>.<root_domain>`，其中 `<n>` 是 ESXi 服务器的序列。最大长度为 50 个字符。|
+{: caption="表 1. 实例和域名的值格式" caption-side="top"}
 
 不要修改在实例订购或部署期间设置的任何值。这样做可能会使您的实例不可用。例如，如果公用网络关闭，如果服务器和虚拟服务器实例 (VSI) 在供应期间移至 Vyatta 后，或者如果 IBM CloudBuilder VSI 停止或被删除。
 {:important}
@@ -103,25 +103,23 @@ vCenter Server with Hybridity Bundle 实例订单中包含以下 VMware 许可�
 
 选择 **Skylake** 时，可以根据需要为裸机服务器选择 CPU 和 RAM 组合。
 
-表 2. Skylake {{site.data.keyword.baremetal_short}} 的选项
-
 | CPU 模型选项   |RAM 选项|
 |:------------- |:------------- |
 |双 Intel Xeon Silver 4110 处理器 / 共 16 个核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
 |双 Intel Xeon Gold 5120 处理器 / 共 28 个核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
 |双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
+{: caption="表 2. Skylake {{site.data.keyword.baremetal_short}} 的选项" caption-side="top"}
 
 ### Broadwell
 {: #vc_hybrid_orderinginstance-broadwell}
 
 选择 **Broadwell** 时，可以根据需要为裸机服务器选择 CPU 和 RAM 组合。
 
-表 3. Broadwell {{site.data.keyword.baremetal_short}} 的选项
-
 | CPU 模型选项   |RAM 选项|
 |:------------- |:------------- |
 |四核 Intel Xeon E7-4820 V4 / 共 40 个核心，2.0 GHz|128 GB、256 GB、512 GB、1 TB、2 TB、3 TB|
 |四核 Intel Xeon E7-4850 V4 / 共 64 个核心，2.1 GHz|128 GB、256 GB、512 GB、1 TB、2 TB、3 TB|
+{: caption="表 3. Broadwell {{site.data.keyword.baremetal_short}} 的选项" caption-side="top"}
 
 ### 裸机服务器的数量
 {: #vc_hybrid_orderinginstance-bare-metal-number}
@@ -224,7 +222,7 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
 
 您有 30 天的时间来激活 VM。
 
-有关订购 Windows Server 2016 许可证的更多信息，请参阅 [Windows Server 2016 入门](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:new_window}。
+有关订购 Windows Server 2016 许可证的更多信息，请参阅 [Windows Server 2016 入门](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:external}。
 
 ## 服务设置
 {: #vc_hybrid_orderinginstance-addon-services}
@@ -241,7 +239,7 @@ vCenter Server with Hybridity Bundle 实例订单中包含 VMware vSAN 6.6。请
 ## 订购 vCenter Server with Hybridity Bundle 实例的过程
 {: #vc_hybrid_orderinginstance-procedure}
 
-1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格中的 **VMware**，然后单击**虚拟数据中心**部分中的 **vCenter Server**。
+1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格中的 **VMware** 图标，然后单击 **VMware 虚拟数据中心**部分中的 **VMware vCenter Server on IBM Cloud** 卡。
 2. 在 **VMware vCenter Server on IBM Cloud** 页面上，单击 **vCenter Server with Hybridity Bundle** 卡，然后单击**创建**。
 3. 在 **vCenter Server** 页面上，输入实例名称。
 5. 选择 vSphere 版本。

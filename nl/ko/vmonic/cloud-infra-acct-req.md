@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-31"
+lastupdated: "2019-06-18"
 
 keywords: user account, user permissions, VRF account
 
@@ -29,8 +29,6 @@ subcollection: vmware-solutions
 
 권한 부여된 사용자는 {{site.data.keyword.slportal}}에서 {{site.data.keyword.cloud_notm}} 인프라 계정에 대한 권한을 확인하고 업데이트할 수 있습니다. 자세한 정보는 [사용자의 고객 포털 권한 편집](/docs/customer-portal?topic=customer-portal-customerportal_accuserprof#cp_editusercpperm){:new_window}을 참조하십시오.
 
-표 1. {{site.data.keyword.cloud_notm}} 인프라 계정에 대한 필수 권한
-
 |권한         |세부사항                                 |
 |:------------------ |:--------------------------------------- |
 |서버 추가 |이 권한은 VMware ESXi가 실행되는 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}를 주문하고 인스턴스 구성, 유지보수 및 지원 오퍼레이션에 사용되는 가상 서버를 매시간 프로비저닝하는 데 필요합니다. |
@@ -49,6 +47,7 @@ subcollection: vmware-solutions
 |라이센스 보기 |이 권한은 인스턴스에서 사용되는 라이센스를 검색하고 유효성 검증하는 데 필요합니다. |
 |비밀번호 보기 |이 권한은 주문된 VSI를 관리하는 데 필요합니다. |
 | 서버 모니터링 관리 |이 권한은 주문하는 데 필요하지 않지만 인스턴스에서 VMware ESXi 서버가 실행되는 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}의 모니터링 상태를 검색하고 유효성 검증하는 데 필요합니다. |
+{: caption="표 1. {{site.data.keyword.cloud_notm}} 인프라 계정에 대한 필수 권한" caption-side="top"}
 
 ## 서비스 엔드포인트가 사용으로 설정된 VRF
 {: #cloud-infra-acct-req-vrf-se}

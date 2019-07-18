@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: IBM Spectrum Protect Plus, SPP configuration, order SPP
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # Pedindo o IBM Spectrum Protect Plus on IBM Cloud
 {: #spp_ordering}
@@ -23,14 +25,14 @@ subcollection: vmware-solutions
 
 É possível pedir uma nova instância com o IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} usando um dos métodos a seguir:
 * No console do {{site.data.keyword.vmwaresolutions_short}}, quando você pedir uma nova instância, selecione **IBM Spectrum Protect Plus on IBM Cloud** na seção **Serviços**.
-* No catálogo do {{site.data.keyword.cloud_notm}}, selecione o **IBM Spectrum Protect Plus on IBM Cloud**, especifique as configurações de serviço e selecione **Incluir em nova instância**.
+* No catálogo do {{site.data.keyword.cloud_notm}}, clique no ícone **VMware** da área de janela de navegação esquerda e, em seguida, clique no cartão **IBM Spectrum Protect Plus on IBM Cloud** da seção **Serviços do VMware**. Especifique as configurações do serviço e selecione **Incluir na nova instância**.
 
 ## Pedindo o IBM Spectrum Protect Plus on IBM Cloud para uma instância existente
 {: #spp_ordering-existing}
 
 É possível incluir o serviço IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} em uma instância existente usando um dos métodos a seguir:
 * No console do {{site.data.keyword.vmwaresolutions_short}}, visualize a instância para a qual você deseja incluir o serviço, clique em **Serviços** na área de janela de navegação esquerda e clique em **Incluir**.
-* No catálogo do {{site.data.keyword.cloud_notm}}, selecione **IBM Spectrum Protect Plus on IBM Cloud**, especifique as configurações de serviço e selecione **Incluir em instância existente**.
+* No catálogo do {{site.data.keyword.cloud_notm}}, clique no ícone **VMware** da área de janela de navegação esquerda e, em seguida, clique no cartão **IBM Spectrum Protect Plus on IBM Cloud** da seção **Serviços do VMware**. Especifique as configurações do serviço e selecione **Incluir na instância existente**.
 
 ## Configuração do serviço IBM Spectrum Protect Plus on IBM Cloud
 {: #spp_ordering-config}
@@ -77,9 +79,9 @@ de backup é configurado.
 {: #spp_ordering-related}
 
 * [IBM Spectrum Protect Plus no {{site.data.keyword.cloud_notm}} visão geral](/docs/services/vmwaresolutions/services?topic=vmware-solutions-spp_considerations)
-* [Planejamento de serviço preventivo do IBM Spectrum Protect Plus no {{site.data.keyword.cloud_notm}}](https://www-01.ibm.com/support/docview.wss?uid=swg22012650){:new_window}
+* [Planejamento preventivo de serviços do IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](https://www-01.ibm.com/support/docview.wss?uid=swg22012650){:external}
 * [Gerenciando o IBM Spectrum Protect Plus no {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingspp)
 * [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
 * [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
-* [Documentação do IBM Spectrum Protect Plus](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html){:new_window}
+* [Documentação do IBM Spectrum Protect Plus](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html){:external}
 * [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

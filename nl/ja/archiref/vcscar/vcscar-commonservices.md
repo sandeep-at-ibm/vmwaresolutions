@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -14,7 +14,7 @@ subcollection: vmware-solutions
 # VMware および Skate Advisor Concept Car の共通サービス・コンポーネント
 {: #vcscar-commonservices}
 
-共通サービスは、クラウド管理プラットフォームの他のサービスによって使用されるサービスを提供します。 共通サービスには、ID およびアクセスのサービス、ドメイン・ネーム・サービス、NTP サービスなどがあります。
+共通サービスは、クラウド管理プラットフォームの他のサービスによって使用されるサービスを提供します。 共通サービスには、ID およびアクセスのサービス、ドメイン・ネーム・サービス、NTP (Network Time Protocol) サービスなどがあります。
 
 ![{{site.data.keyword.icpfull_notm}} 共通サービス](../../images/vcscar-common-services.svg "{{site.data.keyword.icpfull_notm}} 共通サービス")
 

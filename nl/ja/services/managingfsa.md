@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: FortiGate Security console, FortiGate 300 console, login FortiGate console
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -40,5 +41,5 @@ FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} サービスを
 * [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations)
 * [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [よくある質問](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [fortinet.com Web サイト](https://www.fortinet.com/)
-* [Fortinet 文書ライブラリー](https://docs.fortinet.com/product/fortigate/6.2)
+* [fortinet.com Web サイト](https://www.fortinet.com/){:external}
+* [Fortinet 文書ライブラリー](https://docs.fortinet.com/product/fortigate/6.2){:external}

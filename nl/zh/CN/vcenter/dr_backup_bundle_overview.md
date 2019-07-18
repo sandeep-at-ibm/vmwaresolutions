@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-01"
 
 keywords: single-node trial, data protection DR, tech specs data protection DR
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -29,9 +30,9 @@ subcollection: vmware-solutions
 Data Protection and Disaster Recovery 单节点试用版仅用于概念验证 (POC)。不要在此环境中运行生产工作负载。不支持添加和除去主机和集群、订购其他附加组件服务以及应用更新等管理功能。
 {:important}
 
-部署单节点试用版实例之后，可以使用 [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:new_window} 提供的 [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:new_window} 来辅助使用实例。此外，[{{site.data.keyword.cloud_notm}} Garage 服务](https://www.ibm.com/cloud/garage/){:new_window}可以通过最新的云本机实践帮助您加速应用程序现代化。
+部署单节点试用版实例之后，可以使用 [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:external} 提供的 [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:external} 来辅助使用实例。此外，[{{site.data.keyword.cloud_notm}} Garage 服务](https://www.ibm.com/cloud/garage/){:external}可以通过最新的云本机实践帮助您加速应用程序现代化。
 
-此试用版最长可使用 90 天。每月周期性费用根据您的计费安排来计费，而不是在订购实例时计费。如果在计费周期的最后一天或之前未取消实例，那么将向您收取下个月的费用。很有可能在试用 90 天后会收取四个月的费用，除非在第四个月开始之前完成取消。
+此试用版最长可使用 90 天。每月周期性费用根据您的计费安排来计费，而不是在订购实例时计费。如果在计费周期的最后一天或之前未取消实例，那么将向您收取下个月的费用。在试用 90 天后可能会收取四个月的费用，除非在第四个月开始之前完成取消。
 {:note}
 
 试用版使用时间到期后，可以删除此环境，然后供应满足您的容量需求的新环境。
@@ -165,12 +166,12 @@ Data Protection and Disaster Recovery 单节点试用版包含 Zerto on {{site.d
 ## IBM Cloud Automation Manager 的技术规范
 {: #dr_backup_bundle_overview-cam-tech-specs}
 
-在所有 Data Protection and Disaster Recovery 单节点试用版实例上，都会使用开发/测试拓扑安装 {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2。有关 {{site.data.keyword.cloud_notm}} Automation Manager 的更多信息，请参阅 [{{site.data.keyword.cloud_notm}} Automation Manager 文档](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: new_window}。
+在所有 Data Protection and Disaster Recovery 单节点试用版实例上，都会使用开发/测试拓扑安装 {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2。有关 {{site.data.keyword.cloud_notm}} Automation Manager 的更多信息，请参阅 [{{site.data.keyword.cloud_notm}} Automation Manager 文档](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: external}。
 
 ## 相关链接
 {: #dr_backup_bundle_overview-related}
 
-* [VMware HCX 资源](https://hcx.vmware.com/#/docs){:new_window}
-* [VMware HCX 用户指南](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}
+* [VMware HCX 资源](https://hcx.vmware.com/#/docs){:external}
+* [VMware HCX 用户指南](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}
 * [管理 Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-managingveeam)
 * [管理 Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-managingzertodr)

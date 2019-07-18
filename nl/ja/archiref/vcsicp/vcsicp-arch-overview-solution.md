@@ -52,7 +52,7 @@ NSX Edge Services Gateway (ESG) のペアがデプロイされます。 すべ�
 |:--------- |:------------- |
 | Edge Service Gateway | 仮想アプライアンス |
 | Edge サイズ「大」 | vCPU 数	2 |
-| メモリー | 1 GB のディスク <br>ローカル・データ・ストアに 1000 GB |
+| メモリー | 1 GB のディスク<br>ローカル・データ・ストアに 1000 GB |
 
 表 2. {{site.data.keyword.icpfull_notm}} DLR の仕様
 

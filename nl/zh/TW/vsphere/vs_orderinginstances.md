@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-28"
 
 keywords: vSphere order cluster, order vSphere, order vSphere cluster
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -51,14 +52,13 @@ subcollection: vmware-solutions
 
 如果您是「IBM 事業夥伴」使用者，則可以在訂購新的 vSphere 叢集時選取元件授權組合。可用的組合如下：
 
-表 1. vSphere 叢集的「IBM 事業夥伴」元件組合
-
 |組合|元件|
 |:------------------------- |:----------------------- |
 |Standard with Management      |vSphere Enterprise Plus、vCenter Server Standard、vRealize Log Insight、vRealize Operations Enterprise                 |
 |Advanced                 |vSphere Enterprise Plus、vCenter Server Standard、vRealize Log Insight、vCloud Director、NSX Base |
 |Advanced with Networking      |vSphere Enterprise Plus、vCenter Server Standard、vRealize Log Insight、NSX Advanced |
 |Advanced with Networking and Management |vSphere Enterprise Plus、vCenter Server Standard、vRealize Log Insight、vRealize Operations Enterprise、vCloud Director、NSX Enterprise |
+{: caption="表 1. vSphere 叢集的「IBM 事業夥伴」元件組合" caption-side="top"}
 
 您也可以在訂單中包括下列 VMware 元件：
 * VMware vSAN
@@ -104,7 +104,9 @@ subcollection: vmware-solutions
 
 選取要在其中管理叢集的 {{site.data.keyword.CloudDataCent_notm}}。
 
-**附註：**
+####  附註 
+{: #vs_orderinginstances-notes}
+
 * 如果您選取 vSAN 元件，則會依 SSD 可用性來過濾位置清單。
 * Broadwell Bare Metal Server 不適用於 **FRA05 - 法蘭克福**資料中心位置。
 * SAP 認證及 Broadwell Bare Metal Server 不適用於 **LON05 - 倫敦**資料中心位置。
@@ -114,13 +116,12 @@ subcollection: vmware-solutions
 
 當您選取 **Skylake** 時，可以根據需求來為 Bare Metal Server 選擇 CPU 與 RAM 組合。可用的選項取決於您是否已選取 VMware vSAN 元件。
 
-表 2. Skylake {{site.data.keyword.baremetal_short}} 的選項
-
 | CPU 型號選項             |RAM 選項          |
 |:------------- |:------------- |
 |雙重 Intel Xeon Silver 4110 處理器 / 總計 16 核心，2.1 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 |雙重 Intel Xeon Gold 5120 處理器 / 總計 28 核心，2.2 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 |雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+{: caption="表 2. Skylake {{site.data.keyword.baremetal_short}} 的選項" caption-side="top"}
 
 ### SAP 認證
 {: #vs_orderinginstances-sap}
@@ -141,12 +142,11 @@ subcollection: vmware-solutions
 
 當您選取 **Broadwell** 時，可以根據需求來為 Bare Metal Server 選擇 CPU 與 RAM 組合。可用的選項取決於您是否已選取 VMware vSAN 元件。
 
-表 3. Broadwell {{site.data.keyword.baremetal_short}} 的選項
-
 | CPU 型號選項             |RAM 選項          |
 |:------------- |:------------- |
 |四重 Intel Xeon E7-4820 v4 / 總計 40 核心，2.0 GHz |128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 |四重 Intel Xeon E7-4850 v4 / 總計 64 核心，2.1 GHz |128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
+{: caption="表 3. Broadwell {{site.data.keyword.baremetal_short}} 的選項" caption-side="top"}
 
 ### Bare Metal Server 數目
 {: #vs_orderinginstances-bare-metal-number}
@@ -235,7 +235,9 @@ subcollection: vmware-solutions
   * **主要子網路**已指派給實體主機，以進行公用網路存取。
   * **主要專用子網路**已指派給實體主機，以處理管理資料流量。
 
-**重要事項：**
+##### 重要
+{: #vs_orderinginstances-important}
+
 * 確保所選取 VLAN 上的防火牆配置未封鎖管理資料流量。
 * 確保您選取的所有 VLAN 都在相同的 Pod 中。無法在混合 Pod VLAN 上佈建 ESXi 伺服器。
 
@@ -254,7 +256,7 @@ subcollection: vmware-solutions
 ## 訂購 vSphere 叢集的程序
 {: #vs_orderinginstances-procedure}
 
-1. 從 {{site.data.keyword.cloud_notm}} 型錄中，按一下左導覽窗格上的 **VMware**，然後按一下**虛擬資料中心**區段中的 **VMware vSphere**。
+1. 從 {{site.data.keyword.cloud_notm}} 型錄中，按一下左導覽窗格上的 **VMware** 圖示，然後按一下 **VMware Services** 區段中的 **VMware vSphere on IBM Cloud** 卡。
 2. 在 **VMware vSphere on IBM Cloud** 頁面上，按一下**建立**。  
    請確定您位於**建立新項目**標籤，並在**叢集配置**清單中顯示**新叢集**。
 3. 輸入叢集名稱。
@@ -262,7 +264,7 @@ subcollection: vmware-solutions
   * 如果您是「IBM 事業夥伴」，則請選取一個授權組合及任何其他可用的 VMware 元件。
   * 如果您是非「事業夥伴」，則請選取元件（如果有的話，則請選取版本），並指定授權選項。當您選擇針對 VMware vSphere Enterprise Plus「自帶授權 (BYOL)」時，會代表您自動開立 {{site.data.keyword.cloud_notm}} 問題單，要求將您訂購的 {{site.data.keyword.baremetal_short}} 上的預設 vSphere 授權取代為您提供的授權。   
 
-    **重要事項：**您負責追蹤問題單，以在新訂購的 ESXi 伺服器上取代 vSphere 授權。因此 {{site.data.keyword.cloud_notm}} 基礎架構授權取消初始提供的 {{site.data.keyword.cloud_notm}} 基礎架構 vSphere 授權費。若要取代您的 ESXi vSphere 授權，請參閱[配置 ESXi 主機的授權設定](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}。
+    **重要事項：**您負責追蹤問題單，以在新訂購的 ESXi 伺服器上取代 vSphere 授權。因此 {{site.data.keyword.cloud_notm}} 基礎架構授權取消初始提供的 {{site.data.keyword.cloud_notm}} 基礎架構 vSphere 授權費。若要取代您的 ESXi vSphere 授權，請參閱[配置 ESXi 主機的授權設定](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:external}。
 5. 完成 Bare Metal Server 設定：
    1. 選取 {{site.data.keyword.CloudDataCent_notm}} 來管理叢集。
    2. 選取 Bare Metal Server 配置。

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-26"
 
 keywords: F5 license activation, F5 configuration, order F5
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -27,14 +28,14 @@ Puoi ordinare il servizio F5 on {{site.data.keyword.cloud}} quando ordini una nu
 
 Puoi ordinare una nuova istanza con F5 on {{site.data.keyword.cloud_notm}} utilizzando uno dei seguenti metodi:
 * Dalla console {{site.data.keyword.vmwaresolutions_short}}, quando ordini una nuova istanza, seleziona **F5 on IBM Cloud** nella sezione **Servizi**.
-* Dal catalogo {{site.data.keyword.cloud_notm}}, seleziona **F5 on IBM Cloud**, specifica le impostazioni del servizio e seleziona **Aggiungi alla nuova istanza**.
+* Dal catalogo {{site.data.keyword.cloud_notm}}, fai clic sull'icona **VMware** nel riquadro di navigazione a sinistra e quindi sulla scheda **F5 on IBM Cloud** nella sezione **VMware Services**. Specifica le impostazioni del servizio e seleziona **Aggiungi alla nuova istanza**.
 
 ## Ordine di F5 on IBM Cloud per un'istanza esistente
 {: #f5_ordering-existing}
 
 Puoi aggiungere il servizio F5 on {{site.data.keyword.cloud_notm}} in un'istanza esistente utilizzando uno dei seguenti metodi:
 * Dalla console {{site.data.keyword.vmwaresolutions_short}}, visualizza l'istanza per la quale vuoi aggiungere il servizio, fai clic su **Servizi** nel riquadro di navigazione a sinistra e quindi su **Aggiungi**.
-* Dal catalogo {{site.data.keyword.cloud_notm}}, seleziona **F5 on IBM Cloud**, specifica le impostazioni del servizio e seleziona **Aggiungi all'istanza esistente**.
+* Dal catalogo {{site.data.keyword.cloud_notm}}, fai clic sull'icona **VMware** nel riquadro di navigazione a sinistra e quindi sulla scheda **F5 on IBM Cloud** nella sezione **VMware Services**. Specifica le impostazioni del servizio e seleziona **Aggiungi all'istanza esistente**.
 
 ## Ordine di F5 on IBM Cloud per le istanze private
 {: #f5_ordering-private}
@@ -98,4 +99,4 @@ Non puoi modificare il modello di licenza dopo l'installazione del servizio. Per
 * [Ordine, visualizzazione e rimozione dei servizi per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
 * [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [Domande frequenti](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Guide di distribuzione F5](https://www.f5.com/services/resources/deployment-guides){:new_window}
+* [Guide di distribuzione F5](https://www.f5.com/services/resources/deployment-guides){:external}

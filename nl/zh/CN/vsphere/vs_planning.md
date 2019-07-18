@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-31"
+lastupdated: "2019-06-20"
 
 keywords: planning vSphere, data center, vSphere data centers
 
@@ -37,8 +37,6 @@ vSphere 部署对物理基础架构有严格要求。因此，只能将集群部
 
 如果选择的是 vSAN 组件，那么位置列表将按 SSD（固态磁盘）可用性进行过滤。
 {:note}
-
-表 1. 可用于 vSphere 集群的 {{site.data.keyword.CloudDataCents_notm}}
 
 | {{site.data.keyword.CloudDataCent_notm}} |位置|区域|
 |:----------------------|:---------|:---------------|
@@ -75,6 +73,7 @@ vSphere 部署对物理基础架构有严格要求。因此，只能将集群部
 |WDC04|华盛顿|北美东部|
 |WDC06|华盛顿|北美东部|
 |WDC07|华盛顿|北美东部|
+{: caption="表 1. 可用于 vSphere 集群的 {{site.data.keyword.CloudDataCents_notm}}" caption-side="top"}
 
 ## 相关链接
 {: #vs_planning-related}

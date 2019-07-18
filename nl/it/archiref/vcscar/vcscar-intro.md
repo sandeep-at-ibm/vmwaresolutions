@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-03"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -14,8 +14,7 @@ subcollection: vmware-solutions
 # Introduzione a VMware e Skate Advisor Concept Car
 {: #vcscar-intro}
 
-La seguente architettura di riferimento è una “concept car”, ossia un meccanismo per
-evidenziare e mostrare le tecnologie che risolvono i problemi del mondo reale. La “concept car” non rappresenta in alcun modo
+La seguente architettura di riferimento è una “concept car”, ossia un meccanismo per evidenziare e mostrare le tecnologie che risolvono i problemi del mondo reale. La “concept car” non rappresenta in alcun modo
 un servizio facilmente disponibile oggi.
 
 L'architettura di riferimento fornisce anche le seguenti informazioni:
@@ -38,9 +37,9 @@ area.
 L'implementazione della “concept car” è un'estensione
 dell'applicazione dimostrativa Acme Skateboard chiamata Skate Advisor. Skate Advisor è uno strumento, che permette agli utenti di avere conversazioni di skateboarding con un motore controllato da Watson. Le seguenti citazioni sono una conversazione di esempio:
 
--   “Watson, mostrami le combinazioni del trick Casper”
--   “Watson, mostrami le posizioni comuni per eseguire un trick”
--   “Watson, mostrami un video del trick Casper”
+-`Watson, show me combinations of the trick Casper`
+- `Watson, show me common locations to perform a trick`
+- `Watson, show me a video of the trick Casper`
 
 Acme Skate Advisor si avvale del servizio Watson Discovery per acquisire articoli, video, blog e altri contenuti basati su internet per creare un database aggiornato di trick, che può essere interrogato dall'applicazione.
 
@@ -57,22 +56,19 @@ che la piattaforma di modernizzazione dell'applicazione.
 ### Dimostrazione di modernizzazione dell'applicazione
 {: #vcscar-intro-app-mod-demo}
 
-Dimostrare un'applicazione che è stata distribuita nella piattaforma
-di modernizzazione dell'applicazione. La piattaforma include componenti {{site.data.keyword.icpfull_notm}}, CAM e NSX
+Dimostra un'applicazione distribuita sulla piattaforma di modernizzazione dell'applicazione. La piattaforma include componenti {{site.data.keyword.icpfull_notm}}, CAM e NSX
 distribuiti su {{site.data.keyword.cloud_notm}} per l'offerta VMware vCenter Server
 on {{site.data.keyword.cloud_notm}}.
 
 ### Riconoscimento vocale di Watson con Watson Assistant
 {: #vcscar-intro-speech}
 
-Acme Skate Advisor comunica con gli utenti attraverso un servizio speech-to-text e
-text-to-speech fornito con la piattaforma Watson.
+Acme Skate Advisor comunica con gli utenti attraverso un servizio di riconoscimento e sintesi vocale fornito con la piattaforma Watson.
 
 ### Utilizzo e formazione del servizio Watson Discovery
 {: #vcscar-intro-watson-disc}
 
-Acme Skate Advisor utilizza i servizi Watson Discovery per tenere
-traccia di un database di trick per cui viene applicato un linguaggio di classificazione e i trick rilevati dai servizi online.
+Acme Skate Advisor utilizza i servizi Watson Discovery per monitorare un database di trick per cui viene applicato un linguaggio di classificazione e i trick rilevati dai servizi online.
 
 ### Utilizzo dei servizi Watson
 {: #vcscar-intro-watson-services}
@@ -109,8 +105,7 @@ metal.
 - Alcuni carichi di lavoro regolamentati e importanti per la sicurezza, che possono essere spostati nel cloud pubblico si stanno spostando negli ambienti dedicati.
 - I System of Engagement (SoE) come web, mobile, IoT, AI o Video si stanno spostando sui cloud pubblici.
 
-Ad esempio, un modello comune è quello di avere applicazioni SOE di front-end distribuite come contenitori con database e middleware heritage distribuito
-sulle VM su un cloud privato.
+Ad esempio, un modello comune consiste nel disporre di applicazioni SoE di frontend distribuite come contenitori con database e middleware heritage distribuito sulle VM su un cloud privato.
 
 Poiché le esigenze di infrastruttura IT e aziendali sono uniche, un approccio alla modernizzazione deve fornire le seguenti priorità:
 * Accelerare il valore aziendale
@@ -118,7 +113,9 @@ Poiché le esigenze di infrastruttura IT e aziendali sono uniche, un approccio a
 * Ridurre i rischi
 * Preservare gli investimenti esistenti.
 
-IBM fornisce proprio un approccio di questo tipo alla modernizzazione dell'applicazione che può essere personalizzato per affrontare le tue esigenze uniche di tecnologia e di business.
+IBM fornisce proprio un approccio di questo tipo alla modernizzazione
+dell'applicazione che può essere personalizzato per affrontare le tue esigenze
+uniche di tecnologia e di business.
 
 I seguenti documenti forniscono diversi punti di vista sulle tecnologie utilizzate nel percorso di modernizzazione dell'applicazione in {{site.data.keyword.cloud_notm}}:
 
@@ -136,4 +133,5 @@ I seguenti documenti forniscono diversi punti di vista sulle tecnologie utilizza
 ## Link correlati
 {: #vcscar-intro-related}
 
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
+](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

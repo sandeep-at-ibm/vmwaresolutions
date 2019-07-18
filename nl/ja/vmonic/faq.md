@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-26"
 
 keywords: FAQ, user account, patch management
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -29,7 +30,7 @@ subcollection: vmware-solutions
 
 * **IBMid アカウント**。 {{site.data.keyword.vmwaresolutions_short}} コンソールにアクセスするためには、このアカウントが必要です。 このコンソールは、{{site.data.keyword.slportal}}とは別のスタンドアロンのユーザー・インターフェースです。 詳しくは、[概説](/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started)を参照してください。
 * **{{site.data.keyword.cloud_notm}} アカウント**。 プロビジョニングにはこのアカウントが必要です。 {{site.data.keyword.cloud_notm}} アカウントを登録するには、既存の **IBMid** を使用するか、新しい **IBMid** を作成します。
-* **{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウント**。 このアカウントを使用して、インフラストラクチャー製品およびサービスを管理するためのいくつかの追加機能を提供する、{{site.data.keyword.cloud_notm}} インフラストラクチャー・カスタマー・ポータルにログインします。 {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントは、**{{site.data.keyword.cloud_notm}} アカウント**を請求可能アカウントにアップグレードすることにより、または既存の {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントを {{site.data.keyword.cloud_notm}} アカウントにリンクすることにより取得できます。使用する {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントは特定の要件を満たしている必要があります。 詳しくは、[必要なアカウントの登録](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts)および [{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの要件](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req)を参照してください。
+* **{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウント**。 このアカウントを使用して、インフラストラクチャー製品およびサービスを管理するためのいくつかの追加機能を提供する、{{site.data.keyword.cloud_notm}} インフラストラクチャー・カスタマー・ポータルにログインします。 {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントは、**{{site.data.keyword.cloud_notm}} アカウント**を請求可能アカウントにアップグレードすることにより、または既存の {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントを {{site.data.keyword.cloud_notm}} アカウントにリンクすることにより取得できます。 使用する {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントは特定の要件を満たしている必要があります。 詳しくは、[必要なアカウントの登録](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts)および [{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの要件](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req)を参照してください。
 
 ## IBM Cloud インフラストラクチャーの資格情報を IBM Cloud for VMware Solutions コンソールに関連付けるにはどうすればよいですか?
 {: #faq-associate-credentials}
@@ -77,11 +78,11 @@ VMware vSphere DRS (Distributed Resource Scheduler) と VMware HA (High Availabi
 
 2 ノード・クラスターに 3 つ目のノードを追加すると、vCenter Server が 3 つのノードの間で 3 つの NSX コントローラーを自動的に再調整するので、可用性の高い環境になります。
 
-## VMware vCenter 6.5 HA 構成をセットアップすることはできますか?
+## VMware vCenter HA 構成をセットアップすることはできますか?
 {: #faq-ha}
 {: faq}
 
-いいえ、推奨されません。 {{site.data.keyword.vmwaresolutions_short}} 機能に障害が発生する可能性があります。
+vCenter HA は構成できますが、{{site.data.keyword.vmwaresolutions_short}} では構成サポートを提供していません。
 
 ## クラスターの名前は変更できますか?
 {: #faq-rename-cluster}
@@ -103,7 +104,7 @@ V2.1 以上でデプロイされた VMware vCenter Server インスタンス、�
 V2.0 以上でデプロイしたインスタンスの場合は、VMware Update Manager (VUM) が vCenter Server に統合されています。 VMware から ESXi の更新をダウンロードするように VUM を構成できます。
 
 詳しくは、以下のリソースを参照してください。
-* [VMware サポート](https://www.vmware.com/support.html)
+* [VMware サポート](https://www.vmware.com/support.html){:external}
 * [vCenter Server インスタンスへの更新の適用](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates)
 * [vCenter Server with Hybridity Bundle インスタンスへの更新の適用](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_applyingupdates)
 

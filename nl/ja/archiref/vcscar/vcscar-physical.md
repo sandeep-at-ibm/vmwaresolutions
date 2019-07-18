@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 2. 同じデータ・センター内の別の {{site.data.keyword.cloud_notm}} ポッド。
 3. 別の地域および同じデータ・センター内別の {{site.data.keyword.cloud_notm}} ポッド。
 
-{{site.data.keyword.icpfull_notm}} および Cloud Automation Manager (CAM) 製品をオンプレミスの仮想化プラットフォームに手動でデプロイして、オンプレミスの場所からクラウド管理を行うことができます。 また、{{site.data.keyword.icpfull_notm}} および CAM は、既存または新規の VMware vCenter Server on {{site.data.keyword.cloud_notm}} デプロイメントのサービス拡張として自動化機能によって提供され、{{site.data.keyword.cloud_notm}} からのクラウド管理を可能にします。
+{{site.data.keyword.icpfull_notm}} および Cloud Automation Manager (CAM) 製品をオンプレミスの仮想化プラットフォームに手動でデプロイして、オンプレミスの場所からクラウド管理を行うことができます。 また、{{site.data.keyword.icpfull_notm}} および CAM は、既存または新規の VMware vCenter Server on {{site.data.keyword.cloud_notm}} デプロイメントのサービス拡張として提供されているので、自動化機能を使用して {{site.data.keyword.cloud_notm}} からクラウドを管理することもできます。
 
 {{site.data.keyword.icpfull_notm}} は、オンプレミスのコンテナー化されたアプリケーションを開発および管理するためのアプリケーション・プラットフォームです。 これは、コンテナー・オーケストレーター Kubernetes、プライベート・イメージ・リポジトリー、管理コンソール、モニター・フレームワークを含む、コンテナーを管理するための統合環境です。
 
@@ -35,7 +35,9 @@ IBM Multi-Cluster Manager は、複数のクラウドおよびクラスターに
 
 ![Skate Advisor 物理コンポーネント](../../images/vcscar-physical.svg "Skate Advisor 物理コンポーネント")
 
-Skate Advisor アプリケーションは、既存の Acme Web アプリケーションを、Watson と対話するマイクロサービス・ベースのコンポーネント、および Web およびマイクロサービス・コンテナーに要求を中継するための nginx コンテナーを使用して拡張したものです。
+Skate Advisor アプリケーションは、既存の Acme Web アプリケーションを、
+Watson と対話するマイクロサービス・ベースのコンポーネント、および Web およびマイクロサービス・コンテナーに要求を中継するための nginx コンテナーを使用して
+拡張したものです。
 
 Skate Advisor アプリケーションは、必要なホスティング・インフラストラクチャーを備えたアプリケーション・モダナイゼーション・プラットフォームを利用します。
 
@@ -82,7 +84,8 @@ Acme Skate Web アプリケーションは、Spring Framework に基づく Java 
 ### Acme Skate Advisor アプリケーション
 {: #vcscar-physical-acme-skate-advisor-app}
 
-Acme Skate Advisor アプリケーションは、WebSphere Liberty コンテナーにデプロイされるマイクロサービス・ベースのアプリケーションです。 nginx Web サーバーが、マイクロサービスのフロントエンドになります。
+Acme Skate Advisor アプリケーションは、WebSphere Liberty コンテナーにデプロイされるマイクロサービス・ベースのアプリケーションです。 nginx Web サーバーが、
+マイクロサービスのフロントエンドになります。
 
 ### Acme Skate データベース
 {: #vcscar-physical-acme-skate-db}
@@ -133,7 +136,9 @@ Acme Skate Advisor は {{site.data.keyword.cloud_notm}} に存在します。こ
 
 この図は、vCenter Server インスタンスにデプロイされた {{site.data.keyword.icpfull_notm}} と CAM を表しています。これらは、オンプレミスの vCenter および {{site.data.keyword.containerlong_notm}} サービスに接続されています。 システム管理者および開発者は、CAM を使用して、仮想マシンをオンプレミスまたは vCenter Server インスタンスにデプロイし、コンテナーを {{site.data.keyword.icpfull_notm}} クラスターおよび {{site.data.keyword.containerlong_notm}} クラスターにデプロイできます。
 
-この図では、CAM は、vCenter、クラウド・プロバイダー、{{site.data.keyword.icpfull_notm}} 環境、および {{site.data.keyword.containerlong_notm}} 環境へのクラウド接続を論理的に作成します。 {{site.data.keyword.icpfull_notm}} クラスターを単一の管理ビューに接続するメカニズムを提供する MCM を使用して、各データ・センター/クラウド環境に {{site.data.keyword.icpfull_notm}} クラスターがデプロイされます。
+この図では、CAM は、vCenter、クラウド・プロバイダー、{{site.data.keyword.icpfull_notm}} 環境、および {{site.data.keyword.containerlong_notm}} 環境へのクラウド接続を論理的に作成します。 {{site.data.keyword.icpfull_notm}} クラスターを
+単一の管理ビューに接続するメカニズムを提供する MCM を使用して、各データ・センター/クラウド環境に
+{{site.data.keyword.icpfull_notm}} クラスターがデプロイされます。
 
 ## 関連リンク
 {: #vcscar-physical-related}

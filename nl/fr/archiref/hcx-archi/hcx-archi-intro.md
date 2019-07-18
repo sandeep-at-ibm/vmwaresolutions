@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-02"
 
 subcollection: vmware-solutions
 
@@ -29,7 +29,8 @@ Cette connexion crée une interconnectivité à couplage lâche entre le site lo
 * Extension de couche 2 - Les réseaux locaux sont étendus au cloud. Ils incluent les sous-réseaux locaux et l'adressage IP.
 * Chiffrement – Le trafic réseau est chiffré entre les deux sites.
 * Réseau optimisé – Sélectionne la meilleure connexion et achemine efficacement la connexion de sorte que le trafic réseau soit déplacé le plus rapidement possible.
-* Dédoublonnage de données – Jusqu'à 50 % de réduction de trafic réseau peut être réalisé Routage intelligent – Lorsqu'une charge de travail est déplacée, le routage de proximité peut modifier le chemin réseau (c'est-à-dire la passerelle) de sorte que le trafic réseau utilise la passerelle de site cible et ne dessine pas une "courbe en épingle à cheveux" vers le site d'origine.
+* Dédoublonnage de données - Jusqu'à 50 % de réduction de trafic réseau peut être réalisé.
+* Routage intelligent – Lorsqu'une charge de travail est déplacée, le routage de proximité peut modifier le chemin réseau (c'est-à-dire la passerelle) de sorte que le trafic réseau utilise la passerelle de site cible et ne dessine pas une "courbe en épingle à cheveux" vers le site d'origine.
 * Migration sans interruption – Un système en cours d'exécution peut être déplacé vers et depuis le cloud à l'aide de vMotion.
 * Migration planifiée – N'importe quel nombre de machines virtuelles peut être répliqué vers le site de destination, puis activé sur ce site à une heure précise afin de remplacer les systèmes qui s'exécutent sur le site d'origine.
 * Migration de règles de sécurité – Si NSX est utilisé sur site, toutes les règles de sécurité ou tous les pare-feux sont déplacés en même temps que la charge de travail.

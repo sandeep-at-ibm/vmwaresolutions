@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server NSX-T add cluster, view cluster vCenter Server NSX-T, delete cluster vCenter Server NSX-T
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -31,7 +32,7 @@ Os servidores ESXi configurados quando você pediu uma instância são agrupados
 {: #vc_nsx-t_addingviewingclusters-before-add}
 
 * Sempre que possível, inclua clusters usando o console do {{site.data.keyword.vmwaresolutions_full}}, pois as mudanças feitas no VMware vSphere Web Client não são sincronizadas com o console do {{site.data.keyword.vmwaresolutions_short}}. Portanto, inclua clusters no vCenter Server somente para clusters no local ou clusters que você não possa ou não gerenciará no console do {{site.data.keyword.vmwaresolutions_short}}.
-* O número de clusters, hosts e máquinas virtuais (VMs) determina o limite máximo para o número de clusters que podem ser incluídos. Deve-se permanecer dentro das diretrizes de dimensionamento do VMware e limites para sua implementação. Para obter mais informações sobre os limites máximos, consulte [Máximos de configuração do VMware](https://configmax.vmware.com/home){:new_window}.
+* O número de clusters, hosts e máquinas virtuais (VMs) determina o limite máximo para o número de clusters que podem ser incluídos. Deve-se permanecer dentro das diretrizes de dimensionamento do VMware e limites para sua implementação. Para obter mais informações sobre os limites máximos, consulte [Máximos de configuração do VMware](https://configmax.vmware.com/home){:external}.
 
 ### Configurações do sistema
 {: #vc_nsx-t_addingviewingclusters-adding-sys-settings}
@@ -64,25 +65,23 @@ Se você implementar o cluster em um pod de infraestrutura diferente do {{site.d
 
 Para a configuração **Skylake**, você tem opções para o **Modelo de CPU** e **RAM**. As opções disponíveis podem diferir dependendo da versão na qual a sua instância foi inicialmente implementada.
 
-Tabela 1. Opções para Skylake  {{site.data.keyword.baremetal_short}}
-
 | Opções de modelo da CPU        | Opções de RAM       |
 |:------------- |:------------- |
 | Processador Dual Intel Xeon Silver 4110/total de 16 núcleos, 2,1 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Processador Dual Intel Xeon Gold 5120/total de 28 núcleos, 2,2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Processador Dual Intel Xeon Gold 6140/Total de 36 núcleos, 2,3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+{: caption="Tabela 1. Opções para Skylake  {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 #### Broadwell
 {: #vc_nsx-t_addingviewingclusters-adding-broadwell}
 
 Para a configuração do **Broadwell**, há várias opções para o **Modelo de CPU** e a **RAM**. As opções disponíveis podem diferir dependendo da versão na qual a sua instância foi inicialmente implementada.
 
-Tabela 2. Opções para Broadwell  {{site.data.keyword.baremetal_short}}
-
 | Opções de modelo da CPU        | Opções de RAM       |
 |:------------- |:------------- |
 | Quad Intel Xeon E7-4820 v4/total de 40 núcleos, 1.9 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4/total de 64 núcleos, 2.2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+{: caption="Tabela 2. Opções para Broadwell  {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 #### Número de Bare Metal Servers
 {: #vc_nsx-t_addingviewingclusters-adding-bare-metal-number}
@@ -127,14 +126,15 @@ diferentes definições de configuração para cada compartilhamento de arquivo.
 * **Desempenho**: selecione o IOPS (operações de entrada/saída por segundo) por GB com base em seus requisitos de carga de trabalho.
 * **INCLUIR NFS**: selecione para incluir compartilhamentos de arquivos individuais com definições de configuração diferentes.
 
-Tabela 3. Opções de nível de desempenho do NFS
+Detalhes do nível de desempenho:
 
 | Opção        | Detalhes       |
-  |:------------- |:------------- |
-  | 0,25 IOPS/GB | Essa opção foi projetada para cargas de trabalho não usadas frequentemente. Os aplicativos de exemplo incluem: dados de área segura, hospedando bancos de dados grandes com dados anteriores ou imagens de disco virtual do sistema de memória virtual como backup. |
-  | 2 IOPS/GB | Esta opção foi projetada para a maioria de cargas de trabalho de propósito geral. Os aplicativos de exemplo incluem: hospedando bancos de dados pequenos, fazendo backup de aplicativos da web ou imagens de disco da máquina virtual (MV) para um hypervisor. |
-  | 4 IOPS/GB | Esta opção foi projetada para cargas de trabalho de maior intensidade que possuem uma alta porcentagem de dados ativos de cada vez. Os aplicativos de exemplo incluem: bancos de dados transacionais. |
-  | 10 IOPS/GB | Esta opção foi projetada para os tipos de carga de trabalho mais exigentes, como analítica. Os aplicativos de exemplo incluem: bancos de dados de alta transação e outros bancos de dados sensíveis ao desempenho. Esse nível de desempenho é limitado a uma capacidade máxima de 4 TB por compartilhamento de arquivo. |
+|:------------- |:------------- |
+| 0,25 IOPS/GB | Essa opção foi projetada para cargas de trabalho não usadas frequentemente. Os aplicativos de exemplo incluem: dados de área segura, hospedando bancos de dados grandes com dados anteriores ou imagens de disco virtual do sistema de memória virtual como backup. |
+| 2 IOPS/GB | Esta opção foi projetada para a maioria de cargas de trabalho de propósito geral. Os aplicativos de exemplo incluem: hospedando bancos de dados pequenos, fazendo backup de aplicativos da web ou imagens de disco da máquina virtual (MV) para um hypervisor. |
+| 4 IOPS/GB | Esta opção foi projetada para cargas de trabalho de maior intensidade que possuem uma alta porcentagem de dados ativos de cada vez. Os aplicativos de exemplo incluem: bancos de dados transacionais. |
+| 10 IOPS/GB | Esta opção foi projetada para os tipos de carga de trabalho mais exigentes, como analítica. Os aplicativos de exemplo incluem: bancos de dados de alta transação e outros bancos de dados sensíveis ao desempenho. Esse nível de desempenho é limitado a uma capacidade máxima de 4 TB por compartilhamento de arquivo. |
+{: caption="Tabela 3. Opções de nível de desempenho do NFS" caption-side="top"}
 
 ### Configurações de licenciamento
 {: #vc_nsx-t_addingviewingclusters-adding-licensing-settings}
@@ -222,8 +222,6 @@ Não é possível mudar o nome do cluster. Mudar o nome do cluster pode causar f
   * **Ações**: clique no ícone **Excluir** para excluir o cluster.
 4. Clique em um nome do cluster para visualizar os detalhes do servidor do ESXi, de armazenamento e de interface de rede:
 
-Tabela 4. Detalhes do servidor ESXi
-
 | Item        | Descrição       |  
 |:------------- |:------------- |
 | Nome | O nome do servidor ESXi está no formato a seguir:<br> `<host_prefix><n>.<subdomain_label>.<root_domain>` <br> em que:<br> `host_prefix` é o prefixo do nome do host<br> `n` é a sequência do servidor<br> `subdomain_label` é o rótulo do subdomínio<br> `root_domain` é o nome do domínio raiz |
@@ -231,8 +229,9 @@ Tabela 4. Detalhes do servidor ESXi
 | Credenciais | O nome de usuário e a senha para acessar o servidor ESXi. |
 | IP privado | O endereço IP privado do servidor ESXi. |
 | Barra de Status | O status do servidor ESXi, que pode ser um dos valores a seguir:<br> **Incluído** o servidor do ESXi foi incluído e está pronto para uso.<br> **Incluindo** o servidor do ESXi está sendo incluído.<br> **Excluindo** o servidor do ESXi está sendo excluído. |
+{: caption="Tabela 4. Detalhes do servidor ESXi" caption-side="top"}
 
-Tabela 5. Detalhes do armazenamento
+Visualizar os detalhes de armazenamento:
 
 | Item        | Descrição       |  
 |:------------- |:------------- |
@@ -240,8 +239,9 @@ Tabela 5. Detalhes do armazenamento
 | Tamanho | A capacidade do armazenamento. |
 | IOPS/GB | O nível de desempenho do armazenamento. |
 | Protocolo do NFS | A versão NFS do armazenamento. |
+{: caption="Tabela 5. Detalhes do armazenamento" caption-side="top"}
 
-Tabela 6. Interface de rede - detalhes da VLAN
+Visualizar os detalhes da interface de rede:
 
 | Item        | Descrição       |  
 |:------------- |:------------- |
@@ -249,24 +249,27 @@ Tabela 6. Interface de rede - detalhes da VLAN
 | Descrição | A descrição da VLAN.  |
 | Localização | O local do data center. |
 | Rota primária | A rota primária da VLAN. |
+{: caption="Tabela 6. Interface de rede - detalhes da VLAN" caption-side="top"}
 
 Clique em **Visualizar recurso** para acessar os detalhes da VLAN.
 
-Tabela 7. Interface de rede - detalhes de sub-rede
+Visualizar os detalhes da sub-rede:
 
 | Item        | Descrição       |  
 |:------------- |:------------- |
 | Nome | O nome da sub-rede. Clique no nome para acessar os detalhes da sub-rede. |
 | Tipo | O tipo de sub-rede: primária ou móvel. |
 | Descrição | A descrição da sub-rede. |
+{: caption="Tabela 7. Interface de rede - detalhes de sub-rede" caption-side="top"}
 
-Tabela 8. Interface de rede - detalhes do IP
+Visualizar os detalhes do IP:
 
 | Item        | Descrição       |  
 |:------------- |:------------- |
 | IP | O endereço IP. |
 | Barra de Status | O status do endereço IP. |
 | Descrição |A descrição do endereço IP.  |
+{: caption="Tabela 8. Interface de rede - detalhes do IP" caption-side="top"}
 
 ## Excluindo clusters das instâncias do vCenter Server com NSX-T
 {: #vc_nsx-t_addingviewingclusters-deleting}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-28"
 
 keywords: IBM Spectrum Protect Plus, SPP, tech specs SPP
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -40,7 +41,7 @@ IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服务中订购并
    * 370 GB 磁盘
 * 运行 IBM Spectrum Protect Plus vSnap 服务器和 VADP 代理的辅助 VM
    * Linux 3.10.0-693.11.1.el7.x86_64 操作系统
-   * 根据所选存储器大小和 [IBM Spectrum Protect Plus 蓝图](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints)中的大小调整指南而配置的 CPU 和 RAM
+   * 根据所选存储器大小和 [IBM Spectrum Protect Plus 蓝图](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints){:external}中的大小调整指南而配置的 CPU 和 RAM
    * 150 GB 磁盘
 
 ### 用于备份的存储器
@@ -51,7 +52,7 @@ IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服务中订购并
 * 每个耐久性文件存储器：500、1000、2000、4000、8000 或 12000 GB
 * 存储器性能：0.25、2 或 4 IOPS/GB
 
-请参阅 [IBM Spectrum Protect Plus 蓝图和大小调整工具](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints)以进行规划和大小调整。
+请参阅 [IBM Spectrum Protect Plus 蓝图和大小调整工具](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints){:external}以进行规划和大小调整。
 
 ### 用于管理的存储器
 {: #spp_considerations-mgmt-storage}
@@ -77,7 +78,7 @@ IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服务中订购并
 * 确保实例的缺省集群中的 CPU 和内存足够用于 IBM Spectrum Protect Plus 虚拟机。
 * 确保根据 ESXi 服务器版本，ESXi 服务器上的可用 NFS 安装足够。
 
-  部署在（或升级到）V2.2 或更高发行版的实例在 VMware 中有 `NFS.MaxVolumes` 参数设置。此参数定义 ESXi 服务器上的最大 NFS 安装数，并可设置为最大值 256（特定于 ESXi 服务器版本）。有关更多信息，请参阅[增大定义 ESXi/ESX 主机上 NFS 最大挂载量的默认值](https://kb.vmware.com/s/article/2239)。
+  部署在（或升级到）V2.2 或更高发行版的实例在 VMware 中有 `NFS.MaxVolumes` 参数设置。此参数定义 ESXi 服务器上的最大 NFS 安装数，并可设置为最大值 256（特定于 ESXi 服务器版本）。有关更多信息，请参阅[增大定义 ESXi/ESX 主机上 NFS 最大挂载量的默认值](https://kb.vmware.com/s/article/2239){:external}。
 
   在实例的缺省集群中的每个 ESXi 服务器上，IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服务最多可以使用 11 个 NFS 卷。此外，该服务将创建瞬态 NFS 安装以用于备份和复原。因此，必须将 NFS 安装数设置为最小值 64，以确保可以成功安装并运行此服务。
 
@@ -92,8 +93,8 @@ IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 服务中订购并
 ## 相关链接
 {: #spp_considerations-related}
 
-* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 预防性服务规划](https://www-01.ibm.com/support/docview.wss?uid=swg22012650){:new_window}
+* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 预防性服务规划](https://www-01.ibm.com/support/docview.wss?uid=swg22012650){:external}
 * [管理 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingspp)
 * [订购 IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-spp_ordering)
-* [IBM Spectrum Protect Plus 文档](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html)
+* [IBM Spectrum Protect Plus 文档](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html){:external}
 * [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

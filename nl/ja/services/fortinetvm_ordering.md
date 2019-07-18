@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-26"
 
 keywords: FortiGate VA, FortiGate configuration, order FortiGate
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -27,14 +28,14 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud}} サービスを注文
 
 以下のいずれかの方法を使用して、新しいインスタンスで FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} を注文できます。
 * {{site.data.keyword.vmwaresolutions_short}} コンソールから新しいインスタンスを注文する時に、**「サービス」**セクションで**「FortiGate Virtual Appliance on IBM Cloud」**を選択します。
-* {{site.data.keyword.cloud_notm}} カタログから**「FortiGate Virtual Appliance on IBM Cloud」**を選択し、サービス設定を指定し、**「Add to New Instance」**を選択します。
+* {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**アイコンをクリックしてから、**「VMware サービス」**セクションの**「FortiGate Virtual Appliance on IBM Cloud」**カードをクリックします。サービス設定を指定し、**「Add to New Instance」**を選択します。
 
 ## 既存のインスタンスでの FortiGate Virtual Appliance on IBM Cloud の注文
 {: #fortinetvm_ordering-existing}
 
 以下のいずれかの方法を使用して、既存のインスタンスに FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} サービスを追加できます。
 * {{site.data.keyword.vmwaresolutions_short}} コンソールから、サービスを追加する対象のインスタンスを表示し、左側のナビゲーション・ペインにある**「サービス」**をクリックし、**「追加」**をクリックします。
-* {{site.data.keyword.cloud_notm}} カタログから**「FortiGate Virtual Appliance on IBM Cloud」**を選択し、サービス設定を指定し、**「Add to Existing Instance」**を選択します。
+* {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**アイコンをクリックしてから、**「VMware サービス」**セクションの**「FortiGate Virtual Appliance on IBM Cloud」**カードをクリックします。サービス設定を指定し、**「Add to Existing Instance」**を選択します。
 
 ## プライベート・インスタンスでの FortiGate Virtual Appliance on IBM Cloud の注文
 {: #fortinetvm_ordering-private}
@@ -78,7 +79,7 @@ FortiGuard に**「パブリック・ネットワーク」**または**「プラ
 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} のライセンス・モデルには、以下のオプションがあります。
 <dl class="dl">
         <dt class="dt dlterm">標準 FW</dt>
-        <dd class="dd">このバンドルには、ステートフル・パケット・インスペクション、VLAN の保護と詳細ロギング、入り口/出口ファイアウォール・ルール、SSL/IPSec VPN 終端、24 時間 365 日サポートが含まれています。</dd>
+        <dd class="dd">このバンドルには、ステートフル・パケット・インスペクション、VLAN の保護と詳細ロギング、Ingress/Egress ファイアウォール・ルール、SSL/IPSec VPN 終端、24 時間 365 日サポートが含まれています。</dd>
         <dt class="dt dlterm">標準 FW + UTM</dt>
         <dd class="dd">このバンドルには、標準的なファイアウォール・サービスすべてに加えて、Advanced Malware Protection (AMP) サービスが含まれています。 これには、アンチウィルス、ボットネット IP/ドメイン・サービス、モバイル・マルウェア・セキュリティー、FortiSandbox クラウド、ウィルス発生保護サービス、コンテンツ無害化、および再構築が含まれます。 また、Web フィルタリング、IPS、アンチスパム、アプリケーション制御、および FortiCare サービスも含まれています。</dd>
         <dt class="dt dlterm">標準 FW + Enterprise</dt>
@@ -100,5 +101,5 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} のライセン�
 * [vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
 * [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [よくある質問](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Fortinet Web サイト](https://www.fortinet.com/){:new_window}
-* [Fortinet Document Library](https://docs.fortinet.com/product/fortigate/6.2){:new_window}
+* [Fortinet Web サイト](https://www.fortinet.com/){:external}
+* [Fortinet Document Library](https://docs.fortinet.com/product/fortigate/6.2){:external}

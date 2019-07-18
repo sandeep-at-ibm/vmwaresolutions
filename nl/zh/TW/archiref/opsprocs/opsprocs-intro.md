@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-30"
+lastupdated: "2019-07-01"
 
 ---
 
@@ -32,8 +32,9 @@ lastupdated: "2019-05-30"
 1. 第一個階段是決定需要記錄哪些程序，並且在列出時，記錄每個程序的足夠詳細資料。
 2. 第二個階段是持續性的，包含了維護、更新及更正這些程序、新增程序以及淘汰不再需要的程序。
 
-{{site.data.keyword.vmwaresolutions_full}} 可讓您善用團隊內部部署的現有技能、工具集及 Runbook，以在 {{site.data.keyword.cloud_notm}} 中管理實例。我們的建議是，下列一般文件擷取常用程序、手冊和作業：
+{{site.data.keyword.vmwaresolutions_full}} 可讓您善用團隊內部部署的現有技能、工具集及 Runbook，以在 {{site.data.keyword.cloud_notm}} 中管理實例。
 
+下列清單包含常用程序、手冊和作業：
 * 配置作業 - 這些作業是系統管理者需要執行的常見活動，用於對環境進行自訂，以滿足企業需求和回應服務要求，例如新增新 VM 和增加容量。這些作業會分組成下列結構：
  * 一般指引
  * VM 程序

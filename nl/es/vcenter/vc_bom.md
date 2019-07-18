@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server BOM, bill of materials vCenter Server, BOM
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -27,21 +28,18 @@ Revise la información de la Lista de materiales (BOM) de las instancias de VMwa
 
 En la tabla siguiente se muestra la información de la lista de materiales para las VLAN de vCenter Server.
 
-Tabla 1. Lista de materiales para las VLAN de instancias de vCenter Server
-
 | VLAN       | Tipo       | Detalles       |
 |:---------- |:---------- |:------------- |
 | VLAN1     | Pública, Primaria | Asignada a servidores ESXi físicos para acceso público de red. Los servidores se asignan a una dirección IP pública pero dicha dirección IP no está configurada en servidores, por lo que no son directamente accesibles en la red pública. En su lugar, la VLAN pública está pensada para proporcionar acceso a
 Internet público para otros componentes, como NSX Edge Services Gateways (ESG). |
 | VLAN2     | Privada A, Primaria | Asignado por {{site.data.keyword.cloud}} a servidores físicos de ESXi. La utiliza la interfaz de gestión para el tráfico de gestión de VMware vSphere.<br><br>Asignada a VM (máquinas virtuales) que funcionan como componentes de gestión.<br><br>Asignada a VMware NSX VTEP (punto final de túnel VXLAN) |
 | VLAN3     | Privada B, Portátil | Asignada a VMware vSAN, si se utiliza.<br><br>Asignada a VMware NFS, si se utiliza.<br><br>Asignada a VMware vSphere vMotion.<br><br>Para NSX-T, asignada a VMware NSX VTEP (punto final de túnel de VXLAN).|
+{: caption="Tabla 1. Lista de materiales para las VLAN de instancias de vCenter Server" caption-side="top"}
 
 ## Lista de materiales de software para instancias de vCenter Server
 {: #vc_bom-software}
 
 En la tabla siguiente se muestra la información de la lista de materiales para los componentes de software de vCenter Server.
-
-Tabla 2. Lista de materiales para los componentes de software de instancias de vCenter Server
 
 | Fabricante  | Componente                      | Versión    |
 |:------------- |:------------------------------ |:------------- |
@@ -54,6 +52,7 @@ Tabla 2. Lista de materiales para los componentes de software de instancias de v
 | VMware       | NSX for vSphere                 | 6.4.4 (build 11197766)    |
 | VMware       | NSX-T for vSphere               | 2.4                       |
 | Microsoft    | Windows Server Standard Edition | 2016       |
+{: caption="Tabla 2. Lista de materiales para los componentes de software de instancias de vCenter Server" caption-side="top"}
 
 VMware vSAN es un componente opcional.
 {:note}
@@ -64,8 +63,6 @@ VMware vSAN es un componente opcional.
 Revise la tabla siguiente para obtener una visión general de los valores de configuración avanzada que se aplican a los servidores ESXi. Estos valores dependen de si la instancia de vCenter Server se ha desplegado en V2.2 o posterior, o se ha actualizado a V2.2 o posterior desde V2.1 o anterior.
 
 Los valores se aplican a instancias nuevas y a clústeres nuevos de instancias nuevas V2.2 o posteriores. Los valores no se aplican a clústeres nuevos de instancias existentes de V2.1 o anteriores ni a instancia existentes actualizadas a V2.2 o posterior.
-
-Tabla 3. Valores de configuración avanzada de servidores ESXi para clústeres e instancias de vCenter Server
 
 | Valor de configuración | Si se ha desplegado en 2.2 o post.  | Si se ha actualizado desde V2.1 o ant. |
 |:------------- |:------------- |:------------- |
@@ -78,14 +75,17 @@ Tabla 3. Valores de configuración avanzada de servidores ESXi para clústeres e
 | Umbral cola completa | **QFullThreshold** = 8 | **/Disk/QFullThreshold** = 8 |
 | Tamaño pila TCP/IP | **TcpipHeapSize** = 32 | No definido |
 | Máx. pila TCP/IP | **TcpipHeapMax** = 1536 | No definido |
+{: caption="Tabla 3. Valores de configuración avanzada de servidores ESXi para clústeres e instancias de vCenter Server" caption-side="top"}
 
-**Notas:**
+### Notas
+{: #vc_bom-notes}
+
 * El valor **MaxVolumes** es obligatorio para el servicio IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} porque el servicio puede utilizar más del número predeterminado de montajes de NFS en el servidor ESXi.
 * Un valor de **No definido** para un valor de configuración indica que el nuevo valor no se aplica automáticamente porque requiere que se rearranquen los servidores ESXi, lo que puede suponer una interrupción.
 
   Se recomienda cambiar los valores de configuración **No definido** por los nuevos valores para mantener la coherencia entre todas las instancias y permitir un soporte adecuado para la ampliación de almacenamiento. IBM tiene intención de realizar pruebas solo con estos nuevos valores para {{site.data.keyword.vmwaresolutions_short}} V2.2 y releases posteriores.
 
-  Para obtener más información, consulte [Cómo aumentar el valor predeterminado que define el número máximo de montajes NFS en un host ESXi](https://kb.vmware.com/s/article/2239).
+  Para obtener más información, consulte [Cómo aumentar el valor predeterminado que define el número máximo de montajes NFS en un host ESXi](https://kb.vmware.com/s/article/2239){:external}.
 
 ## Valores de configuración de grupos de puertos y NSX
 {: #vc_bom-nsx-port-group-config}
@@ -93,8 +93,6 @@ Tabla 3. Valores de configuración avanzada de servidores ESXi para clústeres e
 Revise la tabla siguiente para obtener una visión general de los valores de configuración de grupos de puertos y NSX de VMware para instancias de vCenter Server y las diferencias entre releases.
 
 Los valores se aplican a instancias nuevas y a clústeres nuevos de instancias nuevas V2.2 o posteriores. Los valores no se aplican a clústeres nuevos de instancias existentes de V2.1 o anteriores ni a instancia existentes actualizadas a V2.2 o posterior.
-
-Tabla 4. Valores de configuración de grupos de puertos y NSX para instancias de vCenter Server
 
 | Valor de configuración | V2.1 o anterior  | V2.2 o posterior |   
 |:------------- |:------------- |:------------- |
@@ -105,6 +103,7 @@ Tabla 4. Valores de configuración de grupos de puertos y NSX para instancias de
 | Grupo puestos SDDC-DPortGroup-VSAN (si procede) | **Enlaces ascendentes activos** establecido en **uplink1** y **Enlaces ascendentes en espera** establecido en **uplink2** | **Enlaces ascendentes activos** establecido en **uplink2** y **Enlaces ascendentes en espera** establecido en **uplink1** |  
 | Grupo puertos SDDC-DPortGroup-Gestión | **Enlace de puertos** establecido en **Efímero - sin enlace** y **Equilibrio de carga** establecido en **Ruta basada en el puerto virtual de origen** | **Enlace de puertos** establecido en **Enlace estático** y **Equilibro de carga** establecido en **Redirigir basado en carga de NIC física** |  
 | Grupo puertos SDDC-DPortGroup-Externo | **Enlace de puertos** establecido en **Efímero - sin enlace** | **Enlace de puertos** establecido en **Enlace estático** |
+{: caption="Tabla 4. Valores de configuración de grupos de puertos y NSX para instancias de vCenter Server" caption-side="top"}
 
 ## Valores de configuración de MTU de red
 {: #vc_bom-network-mtu-config}
@@ -117,12 +116,11 @@ En V2.1 o posterior, las conexiones de red pública utilizan una MTU estándar d
 
 Revise la tabla siguiente para obtener una visión general de los valores de configuración de MTU de red que se aplican a los conmutadores virtuales distribuidos (DVS) público y privado en función de si la instancia de vCenter Server se ha desplegado en V2.1 o posterior.
 
-Tabla 5. Valores de configuración de MTU para clústeres e instancias de vCenter Server según la versión de la instancia
-
 | vDS | V2.1 o posterior  | V2.0 o anterior (o actualizado desde V2.0 o anterior) |
 |:-------------- |:-------------- |:------------- |
 | Conmutador público  | 1500 (predeterminado) | 9000 (tramas Jumbo) |
 | Conmutador privado | 9000 (tramas Jumbo) | 9000 (tramas Jumbo) |
+{: caption="Tabla 5. Valores de configuración de MTU para clústeres e instancias de vCenter Server según la versión de la instancia" caption-side="top"}
 
 Los valores se aplican a instancias nuevas y a clústeres nuevos de instancias desplegadas en V2.1 o posterior. Los valores también se aplican a los clústeres nuevos entre {{site.data.keyword.CloudDataCents_notm}} de instancias que se han actualizado a V2.1 o posterior.
 
@@ -144,9 +142,9 @@ Para actualizar el valor de MTU del conmutador público, siga estos pasos en el 
 ## Enlaces relacionados
 {: #vc_bom-related}
 
-* [Números de compilación y versiones de VMware ESXi y ESX (2143832)](https://kb.vmware.com/s/article/2143832)
-* [Números de compilación y versiones de VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
-* [Habilitación de tramas de gran tamaño en conmutadores distribuidos virtuales](https://kb.vmware.com/s/article/1038827)
-* [Hoja de protección de datos de {{site.data.keyword.vmwaresolutions_short}}](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:new_window}
+* [Números de compilación y versiones de VMware ESXi y ESX (2143832)](https://kb.vmware.com/s/article/2143832){:external}
+* [Números de compilación y versiones de VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838){:external}
+* [Habilitación de tramas de gran tamaño en conmutadores distribuidos virtuales](https://kb.vmware.com/s/article/1038827){:external}
+* [Hoja de protección de datos de {{site.data.keyword.vmwaresolutions_short}}](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:external}
 * [Visión general de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
 * [Planificación de instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)

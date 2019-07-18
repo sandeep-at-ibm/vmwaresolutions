@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-06-20"
 
 subcollection: vmware-solutions
 
@@ -28,35 +28,38 @@ O Caveonix RiskForesight é uma plataforma de gerenciamento de risco cibernétic
 
 Com o aprendizado de máquina e o mecanismo de Análise de risco CaveoIQ, a solução fornece proteção proativa de carga de trabalho contra riscos devido a ameaças cibernéticas. Ela fornece uma segurança consistente e uma estrutura de política em um ambiente de nuvem híbrida e é totalmente integrada à pilha de tecnologia de nuvem do VMware e a provedores em nuvem pública, como o AWS.
 
-Os três serviços principais disponíveis por meio da GUI do RiskForesight são: Gerenciamento de risco, Risco de conformidade e Gerenciamento forense:
+Os três principais serviços disponíveis por meio da GUI do RiskForesight são: Risk Management, Compliance Risk e Forensic Management.
 
-** Gerenciamento de risco **
--	Risco cibernético contínuo
+## Gerenciamento de risco
+
+- Risco cibernético contínuo
 - Pontuação de risco cibernética
--	Pontuação de Vulnerabilidade e Priorização
--	Suporta vulnerabilidade líder de mercado e ferramentas de varredura de configuração
--	Padrões comparativos globais
--	Relatório Cyber-risk
+- Pontuação de Vulnerabilidade e Priorização
+- Suporta vulnerabilidade líder de mercado e ferramentas de varredura de configuração
+- Padrões comparativos globais
+- Relatório Cyber-risk
 
-** Risco de conformidade **
+## Risco de conformidade
+
 - Monitoramento de conformidade automatizada
--	Painel de pontuação de risco de conformidade
--	Avaliação de controles de IA automatizada
--	Suporta: relatórios PCI, FISMA, FEDRAMP, HIPAA, GLBA, GDPR, NERC CIP com relação a SCAP, OVAL, XCCDF e outros padrões comparativos de configuração global
--	Controles de IA e bibliotecas padrão atualizados e mapeados continuamente
+- Painel de pontuação de risco de conformidade
+- Avaliação de controles de IA automatizada
+- Suporta: relatórios PCI, FISMA, FEDRAMP, HIPAA, GLBA, GDPR, NERC CIP com relação a SCAP, OVAL, XCCDF e outros padrões comparativos de configuração global
+- Controles de IA e bibliotecas padrão atualizados e mapeados continuamente
 
-** Gerenciamento forense **
--	Gerenciamento de log
--	Coleta de log de várias origens
--	Detecção de eventos, analítica e visualização
--	Visualização Gráfica dos Resultados
--	Agregação de dados de várias origens
--	Analítica Baseada em Evento
--	Recurso completo de drill down para eventos e análise baseada em log
--	Alertas e notificações
+## Gerenciamento forense
+
+- Gerenciamento de log
+- Coleta de log de várias origens
+- Detecção de eventos, analítica e visualização
+- Visualização Gráfica dos Resultados
+- Agregação de dados de várias origens
+- Analítica Baseada em Evento
+- Recurso completo de drill down para eventos e análise baseada em log
+- Alertas e notificações
 
 ## Links relacionados
 {: #caveonix-intro-related}
 
-*   [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
-*   [ Website do Caveonix ](https://www.caveonix.com/)
+* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+* [ Website do Caveonix ](https://www.caveonix.com/)

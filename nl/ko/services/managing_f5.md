@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: F5 console, BIG-IP Web UI, login F5 console
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # F5 on IBM Cloud 관리
 {: #managing_f5}
@@ -29,4 +31,4 @@ F5 on {{site.data.keyword.cloud}} 서비스를 관리하려면 F5 on {{site.data
 * [F5 on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations)
 * [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [F5 웹 사이트](https://www.f5.com/){:new_window}
+* [F5 웹 사이트](https://www.f5.com/){:external}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-26"
 
 keywords: troubleshooting, vSphere configuration issue, HA cluster issue
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # HA 클러스터 추가 시 발생하는 vSphere 콘솔 구성 문제
 {: #trbl_add_ha_cluster_config}
@@ -28,4 +30,4 @@ subcollection: vmware-solutions
 
 이 문제는 공유 스토리지에 데이터 저장소 하트비트를 감안하는 중복성이 없는 경우 발생합니다.
 
-문제점을 해결하는 방법에 대한 자세한 정보 및 단계는 [HA error: The number of heartbeat data stores for host is 1, which is less than required: 2 (2004739)](https://kb.vmware.com/s/article/2004739)를 참조하십시오.
+문제점을 해결하는 방법에 대한 자세한 정보 및 단계는 [HA error: The number of heartbeat data stores for host is 1, which is less than required: 2 (2004739)](https://kb.vmware.com/s/article/2004739)를 참조하십시오.{:external}

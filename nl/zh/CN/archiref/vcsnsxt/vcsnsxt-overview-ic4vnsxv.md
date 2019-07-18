@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-21"
 
 subcollection: vmware-solutions
 
@@ -96,11 +96,11 @@ SDDC-Dswitch-Public|SDDC-DPortGroup-External|发起虚拟端口|活动：0、1|V
 此设计指定 NSX 组件的配置，但不会应用任何网络覆盖组件配置。由客户来决定根据自己的需求设计网络覆盖。
 
 配置了以下组件：
--	安装管理服务器和控制器，并将其集成到 vCenter Web 用户界面中。
--	安装 ESXi 代理程序，并且为每个 ESXi 主机配置 VTEP IP 地址。
--	VTEP 配置、控制器配置和 VXLAN 配置（传输专区）。
--	NSX Edge 服务网关 (ESG) 设备，供管理组件使用。
--	（仅限 vCenter Server）NSX Edge 服务网关 (ESG) 设备，供客户使用。
+- 安装管理服务器和控制器，并将其集成到 vCenter Web 用户界面中。
+- 安装 ESXi 代理程序，并且为每个 ESXi 主机配置 VTEP IP 地址。
+- VTEP 配置、控制器配置和 VXLAN 配置（传输专区）。
+- NSX Edge 服务网关 (ESG) 设备，供管理组件使用。
+- （仅限 vCenter Server）NSX Edge 服务网关 (ESG) 设备，供客户使用。
 
 未配置以下组件：
 - 虚拟分布式路由器

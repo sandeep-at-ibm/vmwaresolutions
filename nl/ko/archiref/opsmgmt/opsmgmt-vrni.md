@@ -11,7 +11,7 @@ lastupdated: "2019-05-31"
 # vRealize Network Insight
 {: #opsmgmt-vrni}
 
-vRNI(vRealize Network Insight) 환경은 두 개의 가상 머신(VM)인 플랫폼(UI)과 제어 노드로 구성됩니다. 
+vRNI(vRealize Network Insight) 환경은 두 개의 가상 머신(VM)인 플랫폼(UI)과 제어 노드로 구성됩니다.
 
 ![Network Insights 다이어그램](../../images/opsmgmt-vrninw.svg "Network Insights 다이어그램")
 
@@ -22,7 +22,7 @@ vRNI 플랫폼 어플라이언스는 분석, 사용자 인터페이스 및 데�
 ## 시스템 요구사항
 {: #opsmgmt-vrni-requirements}
 
-이 아키텍처는 중형 브릭 크기를 사용하여 3000개의 VM을 지원합니다. 
+이 아키텍처는 중형 브릭 크기를 사용하여 3000개의 VM을 지원합니다.
 
 표 1. Network Insight Platform 시스템 요구사항
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-26"
 
 keywords: Hytrust KeyControl, Hytrust configuration, order Hytrust
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # HyTrust KeyControl on IBM Cloud の注文
 {: #htkc_ordering}
@@ -23,14 +25,14 @@ HyTrust KeyControl on {{site.data.keyword.cloud}} サービスを注文するに
 
 以下のいずれかの方法を使用して、新しいインスタンスで HyTrust KeyControl on {{site.data.keyword.cloud_notm}} を注文できます。
 * {{site.data.keyword.vmwaresolutions_short}} コンソールから新しいインスタンスを注文する時に、**「サービス」**セクションで**「HyTrust KeyControl on IBM Cloud」**を選択します。
-* {{site.data.keyword.cloud_notm}} カタログから**「HyTrust KeyControl on IBM Cloud」**を選択し、サービス設定を指定し、**「Add to New Instance」**を選択します。
+* {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**アイコンをクリックしてから、**「VMware サービス」**セクションの**「HyTrust KeyControl on IBM Cloud」**カードをクリックします。サービス設定を指定し、**「Add to New Instance」**を選択します。
 
 ## 既存のインスタンスでの HyTrust KeyControl on IBM Cloud の注文
 {: #htkc_ordering-existing}
 
 以下のいずれかの方法を使用して、既存のインスタンスに HyTrust KeyControl on {{site.data.keyword.cloud_notm}} サービスを追加できます。
 * {{site.data.keyword.vmwaresolutions_short}} コンソールから、サービスを追加する対象のインスタンスを表示し、左側のナビゲーション・ペインにある**「サービス」**をクリックし、**「追加」**をクリックします。
-* {{site.data.keyword.cloud_notm}} カタログから**「HyTrust KeyControl on IBM Cloud」**を選択し、サービス設定を指定し、**「Add to Existing Instance」**を選択します。
+* {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**アイコンをクリックしてから、**「VMware サービス」**セクションの**「HyTrust KeyControl on IBM Cloud」**カードをクリックします。サービス設定を指定し、**「Add to Existing Instance」**を選択します。
 
 ## HyTrust KeyControl on IBM Cloud サービスの構成
 {: #htkc_ordering-config}
@@ -50,4 +52,4 @@ HyTrust KeyControl on {{site.data.keyword.cloud}} サービスを注文するに
 * [vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
 * [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [よくある質問](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [HyTrust Web サイト](https://www.hytrust.com/)
+* [HyTrust Web サイト](https://www.hytrust.com/){:external}

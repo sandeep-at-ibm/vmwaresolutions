@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-03"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -14,8 +14,7 @@ subcollection: vmware-solutions
 # Introdução ao VMware e ao Protótipo do Skate Advisor
 {: #vcscar-intro}
 
-A arquitetura de referência a seguir é um “protótipo”, isto é, um mecanismo para
-destacar e mostrar tecnologias que resolvem problemas do mundo real. O “protótipo” não representa de modo algum um
+A arquitetura de referência a seguir é um “protótipo”, ou seja, um mecanismo que destaca e mostra tecnologias que resolvem problemas do mundo real. O “protótipo” não representa de modo algum um
 serviço prontamente disponível hoje.
 
 A arquitetura de referência também fornece as informações a seguir:
@@ -36,9 +35,9 @@ mais profundamente a cultura do skateboarding. Demonstramos os serviços dispon�
 A implementação do "protótipo" é uma extensão do
 aplicativo Acme Skateboard demonstrativo, chamado Skate Advisor. O Skate Advisor é uma ferramenta, que permite que os usuários tenham conversas sobre truques de skate com um mecanismo acionado pelo Watson. As citações a seguir são uma conversa de amostra:
 
--   “Watson, mostre-me as combinações da manobra Casper”
--   “Watson, mostre-me locais comuns para executar uma manobra”
--   “Watson, mostre-me um vídeo da manobra Casper”
+-`Watson, mostre-me combinações da manobra Casper`
+- `Watson, mostre-me locais comuns para realizar uma manobra`
+- `Watson, mostre-me um vídeo da manobra Casper`
 
 O Acme Skate Advisor aproveita o Watson Discovery Service para alimentar artigos, vídeos, blogs e outros conteúdos baseados na Internet para
 criar um banco de dados de manobras aprendidas, que pode ser consultado pelo aplicativo.
@@ -56,22 +55,19 @@ Watson quanto a plataforma de modernização de aplicativo.
 ### Demonstração de modernização de aplicativo
 {: #vcscar-intro-app-mod-demo}
 
-Demonstre um aplicativo que tenha sido implementado na plataforma de
-modernização de aplicativo. A plataforma inclui os componentes {{site.data.keyword.icpfull_notm}}, CAM e NSX
+Demonstre um aplicativo implementado na plataforma de modernização de aplicativo. A plataforma inclui os componentes {{site.data.keyword.icpfull_notm}}, CAM e NSX
 implementados no {{site.data.keyword.cloud_notm}} para a oferta do VMware vCenter Server on
 {{site.data.keyword.cloud_notm}}.
 
 ### Reconhecimento de voz do Watson com o Watson Assistant
 {: #vcscar-intro-speech}
 
-O Acme Skate Advisor se comunica com os usuários por meio de um serviço de
-fala para texto e de texto para fala que é fornecido com a plataforma Watson.
+O Acme Skate Advisor se comunica com os usuários por meio dos serviços Speech to Speech e Text to Speech fornecidos com a plataforma Watson.
 
 ### Uso e treinamento do Watson Discovery Service
 {: #vcscar-intro-watson-disc}
 
-O Acme Skate Advisor usa o Watson Discovery Services para manter
-o controle de um banco de dados de Manobras para as quais uma linguagem de classificação é aplicada e as manobras descobertas por meio de serviços on-line.
+O Acme Skate Advisor usa o Watson Discovery Services para monitorar um banco de dados de manobras para as quais uma linguagem de classificação é aplicada e as manobras descobertas nos serviços on-line.
 
 ### Uso de serviços do Watson
 {: #vcscar-intro-watson-services}
@@ -108,8 +104,7 @@ recursos bare metal.
 - As cargas de trabalho reguladas e sensíveis à segurança, que podem ser movidas para a nuvem pública, estão se movendo para ambientes dedicados.
 - Os sistemas de engajamento (SoE), como web, móvel, IoT, IA ou vídeo, estão sendo transferidos para nuvens públicas.
 
-Por exemplo, um padrão comum é ter aplicativos SoE de front-end implementados como contêineres com bancos de dados e middleware legado que são implementados em
-MVs em uma nuvem privada.
+Por exemplo, um padrão comum é ter aplicativos SoE de front-end implementados como contêineres com bancos de dados e middleware legados implementados em VMs de uma nuvem privada.
 
 Como a infraestrutura de TI e as necessidades de negócios são exclusivas, uma abordagem à modernização deve fornecer as prioridades a seguir:
 * Acelerar valor de negócios
@@ -129,7 +124,7 @@ Os documentos a seguir fornecem diferentes visualizações sobre as tecnologias 
    - **VMware vCenter Server on IBM Cloud** – o vCenter Server é uma oferta do {{site.data.keyword.vmwaresolutions_short}} que é uma plataforma baseada em VMware provisionada automaticamente no {{site.data.keyword.cloud_notm}}.
    - **{{site.data.keyword.containerlong_notm}}** - o {{site.data.keyword.containerlong_notm}} é um serviço gerenciado no {{site.data.keyword.cloud_notm}} que usa o Kubernetes como o mecanismo de orquestração para automatizar a implementação, o ajuste de escala e as operações de contêineres de aplicativos em um cluster de único locatário.
 * [Rede do vCenter Server](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro) - concentra-se nas tecnologias de rede usadas para integração entre o vCenter Server, o {{site.data.keyword.icpfull_notm}} e o {{site.data.keyword.containerlong_notm}}, como NSX-V e Calico, com uma visualização de tecnologia do NSX-T.
-* _Guia do VMware e do Protótipo do Skate Advisor_ - uma arquitetura de referência que é um “protótipo”, ou seja, um mecanismo para destacar e mostrar tecnologias que resolvem problemas reais do mundo. Queríamos demonstrar uma interação entre o Watson AI e o aprendizado de máquina de uma maneira real. Por meio da cultura do skate, demonstramos os serviços de nuvem de uma maneira exclusiva. A implementação do "carro conceito" é uma extensão do aplicativo Acme Skateboard, chamado Skate Advisor. O Skate Advisor é uma ferramenta, que permite que os usuários tenham conversas sobre truques de skate com um mecanismo acionado pelo Watson.
+* _Guia do VMware e do protótipo Skate Advisor_ - Uma arquitetura de referência que é um “protótipo”, ou seja, um mecanismo que destaca e mostra tecnologias que resolvem problemas do mundo real. Queríamos demonstrar uma interação entre o Watson AI e o aprendizado de máquina de uma maneira real. Por meio da cultura do skate, demonstramos os serviços de nuvem de uma maneira exclusiva. A implementação do "carro conceito" é uma extensão do aplicativo Acme Skateboard, chamado Skate Advisor. O Skate Advisor é uma ferramenta, que permite que os usuários tenham conversas sobre truques de skate com um mecanismo acionado pelo Watson.
 * [VMware: a jornada de modernização do Stock Trader](/docs/services/vmwaresolutions/archiref/vcscontent?topic=vmware-solutions-vcscontent-modjourney) - um caso de uso de referência que descreve um aplicativo clássico do WebSphere Application Server que é modernizado usando o {{site.data.keyword.cloud_notm}} Private, o conteúdo do IBM Middleware, o {{site.data.keyword.containerlong_notm}} e o vCenter Server on {{site.data.keyword.cloud_notm}}. Estamos todos em uma jornada de nuvem e estamos todos em pontos diferentes nessa jornada. Por meio de etapas incrementais da arquiteta de aplicativo, Jane, e do arquiteto de infraestrutura em nuvem, Todd, modernizamos um aplicativo existente chamado Stock Trader. Revise exemplos que ajudam a executar cada etapa em sua jornada e o valor que é realizado para seus negócios, independentemente de cada etapa ser grande ou pequena. Concentramo-nos em quatro temas: aplicativos, DevOps, integração e gerenciamento. Todos os temas trabalham em conjunto para ajudá-lo a atingir suas metas. Modernizar um tema sem os outros pode resultar em problemas.
 
 ## Links relacionados

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-26"
 
 keywords: vmware solutions data sheet, vmware solutions developerWorks, vmware solutions video
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # Recursos adicionais
 {: #additional_resources}
@@ -25,23 +27,23 @@ Revise os recursos a seguir para iniciar mais rápido ou obter informações té
 ## Folhas de dados
 {: #additional_resources-data-sheets}
 
-* [ Proteção de Dados de Proteção do {{site.data.keyword.vmwaresolutions_short}}  ](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:new_window}
+* [{{site.data.keyword.vmwaresolutions_short}}  Proteção de dados de proteção ](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:external}
 
 ## receitas do developerWorks
 {: #additional_resources-dWrecipes}
 
-* [receitas do developerWorks](https://developer.ibm.com/recipes/tutorials/?s=VMware+Solutions){:new_window}
+* [receitas do developerWorks](https://developer.ibm.com/recipes/tutorials/?s=VMware+Solutions){:external}
 
 ## Padrões do IBM Cloud
 {: #additional_resources-patterns}
 
-* [Padrões do IBM Cloud](https://ibmcloudpatterns.mybluemix.net/#862581F800007C53/862581F800007DD5/862581D000837B23)
+* [Padrões do IBM Cloud](https://ibmcloudpatterns.mybluemix.net/#862581F800007C53/862581F800007DD5/862581D000837B23){:external}
 
 ## Extensões da plataforma
 {: #additional_resources-plat-extensions}
 
 Revise a arquitetura de todas as [Extensões
-do Virtualization Platform](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/allvirtualizationextensions){:new_window}, tais como:
+do Virtualization Platform](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/allvirtualizationextensions){:external}, tais como:
 * FortiGate Security Appliance
 * {{site.data.keyword.cloud_notm}}  armazenamento de arquivo e de bloco
 * Gateway de Serviços de Edge NSX
@@ -53,11 +55,11 @@ do Virtualization Platform](https://www.ibm.com/cloud/garage/architectures/virtu
 ## Vídeos e demonstrações
 {: #additional_resources-demos}
 
-* [ Recursos e Vídeos ](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/resources){:new_window}
-* [ Compromisso Técnico Digital ](https://ibm-dte.mybluemix.net/vmware){:new_window}
-* [ Recursos Apresentados e Estudos de Caso ](https://www.ibm.com/cloud/vmware/resources){:new_window}
+* [ Recursos e Vídeos ](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/resources){:external}
+* [ Compromisso Técnico Digital ](https://ibm-dte.mybluemix.net/vmware){:external}
+* [ Recursos Apresentados e Estudos de Caso ](https://www.ibm.com/cloud/vmware/resources){:external}
 
 ## Documentação do VMware
 {: #additional_resources-vmware-doc}
 
-* [Documentação do VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources){:new_window}
+* [Documentação do VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources){:external}

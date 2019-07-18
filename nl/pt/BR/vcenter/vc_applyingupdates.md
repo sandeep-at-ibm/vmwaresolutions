@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-06-21"
 
 keywords: vCenter Server update, patch vCenter Server, IBM component update
 
@@ -44,26 +44,12 @@ Expanda a entrada de atualização clicando na seta para baixo e verifique as in
 * O impacto da atualização no ambiente virtual do VMware. A Tabela 1 mostra como os diferentes níveis de atualizações afetam o sistema.
 * Os detalhes da atualização.
 
-Tabela 1. Atualize os níveis e o impacto
-
-<table>
-  <tr>
-    <th>Atualizar nível</th>
-    <th>Impacto</th>
-  </tr>
-  <tr>
-    <td>Baixo</td>
-    <td>Esta atualização não afeta nenhum sistema. Não é necessário aplicá-lo durante o tempo de inatividade planejado.</td>
-  </tr>
-  <tr>
-    <td>Médio</td>
-  <td>Esta atualização pode afetar alguns sistemas. Recomenda-se aplicar durante o tempo de inatividade planejado.</td>
-  </tr>
-    <tr>
-    <td>Grave</td>
-  <td>Esta atualização afeta alguns ou todos os sistemas. Deve-se aplicá-lo durante o tempo de inatividade planejado.</td>
-  </tr>
-</table>
+| Nível de atualização | Impacto |
+|:------------ |:------ |
+| Baixo | Esta atualização não afeta nenhum sistema. Não é necessário aplicá-lo durante o tempo de inatividade planejado. |
+| Médio | Esta atualização pode afetar alguns sistemas. Recomenda-se aplicar durante o tempo de inatividade planejado. |
+| Grave | Esta atualização afeta alguns ou todos os sistemas. Deve-se aplicá-lo durante o tempo de inatividade planejado. |
+{: caption="Tabela 1. Atualize os níveis e o impacto" caption-side="top"}
 
 ## Procedimento para aplicar as atualizações de componente de gerenciamento da IBM (instâncias V2.1 a V2.4)
 {: #vc_applyingupdates-procedure}
@@ -89,38 +75,15 @@ Tabela 1. Atualize os níveis e o impacto
 
 2. Para obter detalhes sobre os status de atualização, veja a tabela a seguir.
 
-   Tabela 2. Detalhes de status de atualização
-
-    <table>
-      <tr>
-        <th>Status</th>
-        <th>Detalhes</th>
-      </tr>
-      <tr>
-        <td>Disponível</td>
-        <td>A atualização está disponível para ser aplicada. Não é possível selecionar uma atualização disponível até que todas as suas atualizações anteriores sejam aplicadas.</td>
-      </tr>
-      <tr>
-        <td>Em andamento</td>
-      <td>A tarefa de atualização foi iniciada, mas não foi concluída ainda. Não será possível aplicar nenhuma outra atualização até que a tarefa de atualização atual esteja concluída. </td>
-      </tr>
-        <tr>
-        <td>Instalado</td>
-      <td>A tarefa de atualização está concluída. O componente correspondente da plataforma VMware foi atualizado.</td>
-      </tr>
-        <tr>
-        <td>Com falha</td>
-      <td>A tarefa de atualização falha. O console relata um erro para a falha de atualização. Revise o erro e corrija o problema relatado antes de reaplicar a atualização.</td>
-      </tr>
-          <tr>
-        <td>Planejado</td>
-      <td>A tarefa de atualização está planejada para um momento posterior. A tarefa de atualização é iniciada automaticamente no momento planejado.</td>
-      </tr>
-          <tr>
-        <td>Desconhecido</td>
-      <td>O status da tarefa de atualização não pode ser obtido. Entre em contato com o Suporte IBM para obter assistência.</td>
-      </tr>
-    </table>
+| Barra de Status | Detalhes |
+|:------ |:------- |
+| Disponível | A atualização está disponível para ser aplicada. Não é possível selecionar uma atualização disponível até que todas as suas atualizações anteriores sejam aplicadas. |
+| Em andamento | A tarefa de atualização foi iniciada, mas não foi concluída ainda. Não será possível aplicar nenhuma outra atualização até que a tarefa de atualização atual esteja concluída. |
+| Instalado | A tarefa de atualização está concluída. O componente correspondente da plataforma VMware foi atualizado. |
+| Com falha | A tarefa de atualização falha. O console relata um erro para a falha de atualização. Revise o erro e corrija o problema relatado antes de reaplicar a atualização. |
+| Planejado | A tarefa de atualização está planejada para um momento posterior. A tarefa de atualização é iniciada automaticamente no momento planejado. |
+| Desconhecido | O status da tarefa de atualização não pode ser obtido. Entre em contato com o Suporte IBM para obter assistência. |
+{: caption="Tabela 2. Detalhes de status de atualização" caption-side="top"}
 
 3. Se o processo de atualização falhar em uma etapa específica, [entre em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support) para obter assistência. Você será avisado sobre como resolver o problema e orientado a aplicar as atualizações e correções da etapa que falhou.
 

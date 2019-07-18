@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-31"
+lastupdated: "2019-06-27"
 
 keywords: planning vCenter Server, data center, vCenter Server data centers
 
@@ -28,11 +28,10 @@ subcollection: vmware-solutions
 
 vCenter Server 部署具有嚴格的實體基礎架構需求。因此，您只能在符合需求的 {{site.data.keyword.CloudDataCents_notm}} 中部署實例。下列 {{site.data.keyword.CloudDataCents_notm}} 可用於 vCenter Server 部署：
 
-表 1. vCenter Server 實例可用的 {{site.data.keyword.CloudDataCents_notm}}
-
 | {{site.data.keyword.CloudDataCent_notm}} |位置|地區           |伺服器選項     |
 |:----------------------|:---------|:-------|:---------------|
-|AMS03 |阿姆斯特丹|歐洲| Skylake、Broadwell |
+|AMS01 |阿姆斯特丹|歐洲| Skylake、SAP 認證、Broadwell |
+|AMS03 |阿姆斯特丹|歐洲| Skylake、SAP 認證、Broadwell |
 |CHE01 |清奈|亞太地區| Skylake、SAP 認證、Broadwell |
 |DAL09 |達拉斯|NA 南部| Skylake、SAP 認證、Broadwell |
 |DAL10 |達拉斯|NA 南部| Skylake、SAP 認證、Broadwell |
@@ -40,8 +39,8 @@ vCenter Server 部署具有嚴格的實體基礎架構需求。因此，您只�
 |DAL13 |達拉斯|NA 南部| Skylake、SAP 認證、Broadwell |
 |FRA02 |法蘭克福|歐洲| Skylake、SAP 認證、Broadwell |
 |FRA04 |法蘭克福|歐洲| Skylake、SAP 認證、Broadwell |
-|FRA05 |法蘭克福|歐洲| Skylake、Broadwell |
-|HKG02 |香港|亞太地區| Skylake、Broadwell |
+|FRA05 |法蘭克福|歐洲| Skylake、SAP 認證、Broadwell |
+|HKG02 |香港|亞太地區| Skylake、SAP 認證、Broadwell |
 |LON02 |倫敦|歐洲| Skylake、Broadwell |
 |LON04 |倫敦|歐洲| Skylake、SAP 認證、Broadwell |
 |LON05 |倫敦|歐洲| Skylake、Broadwell |
@@ -50,30 +49,33 @@ vCenter Server 部署具有嚴格的實體基礎架構需求。因此，您只�
 |MEX01 |克雷塔羅|NA 南部| Skylake、SAP 認證、Broadwell |
 |MIL01 |米蘭|歐洲| Skylake、SAP 認證、Broadwell |
 |MON01 |蒙特婁|NA 東部| Skylake、SAP 認證、Broadwell |
-|OSL01 |奧斯陸|歐洲| Skylake、Broadwell |
-|PAR01 |巴黎|歐洲| Skylake、Broadwell |
+|OSL01 |奧斯陸|歐洲| Skylake、SAP 認證、Broadwell |
+|PAR01 |巴黎|歐洲| Skylake、SAP 認證、Broadwell |
 |SAO01 |聖保羅|南美洲| Skylake、SAP 認證、Broadwell |
 |SEO01 |首爾|亞太地區| Skylake、SAP 認證、Broadwell |
 |SJC03 |聖荷西|NA 西部| Skylake、Broadwell |
 |SJC04 |聖荷西|NA 西部| Skylake、Broadwell |
-|SNG01 |新加坡|亞太地區| Skylake、Broadwell |
-|SYD01 |雪梨|亞太地區| Skylake、Broadwell |
+|SNG01 |新加坡|亞太地區| Skylake、SAP 認證、Broadwell |
+|SYD01 |雪梨|亞太地區| Skylake、SAP 認證、Broadwell |
 |SYD04 |雪梨|亞太地區| Skylake、SAP 認證、Broadwell |
+|SYD05 |雪梨|亞太地區| Skylake、SAP 認證、Broadwell |
 |TOK02 |東京|亞太地區| Skylake、SAP 認證、Broadwell |
+| TOK04 |東京|亞太地區| Skylake、SAP 認證、Broadwell |
+|TOK05 |東京|亞太地區| Skylake、SAP 認證、Broadwell |
 |TOR01 |多倫多|NA 東部| Skylake、SAP 認證、Broadwell |
 |WDC04 |華盛頓特區|NA 東部| Skylake、SAP 認證、Broadwell |
 |WDC06 |華盛頓特區|NA 東部| Skylake、SAP 認證、Broadwell |
 |WDC07 |華盛頓特區|NA 東部| Skylake、SAP 認證、Broadwell |
+{: caption="表 1. vCenter Server 實例可用的 {{site.data.keyword.CloudDataCents_notm}}" caption-side="top"}
 
 根據可用性及庫存供應，{{site.data.keyword.CloudDataCents_notm}} 可能會在 {{site.data.keyword.vmwaresolutions_short}} 主控台中顯示狀態指示器，以協助您規劃部署。
-
-表 2. 訂購 vCenter Server 實例時 {{site.data.keyword.CloudDataCents_notm}} 的狀態指示器
 
 |狀態|狀態詳細資料|
 |:------------------------------|:--------------------------------------------------|
 |即將推出                   |目前並未提供 {{site.data.keyword.CloudDataCent_notm}}。|
 |暫時沒有庫存                  |目前並未提供 {{site.data.keyword.CloudDataCent_notm}}。|
 |庫存受限             |{{site.data.keyword.CloudDataCent_notm}} 的可用性受限，可能無法完成訂單。|
+{: caption="表 2. 訂購 vCenter Server 實例時 {{site.data.keyword.CloudDataCents_notm}} 的狀態指示器" caption-side="top"}
 
 ## 管理元件的備份
 {: #vc_planning-backup-mgmt-components}

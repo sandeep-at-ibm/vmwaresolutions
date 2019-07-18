@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-26"
 
 keywords: IBM Cloud Private, ICP, tech specs ICP
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -26,27 +27,25 @@ Ce service est disponible pour les instances suivantes :
 * Les instances vCenter Server with Hybridity Bundle qui sont déployées dans (ou mises à niveau vers) la version 2.7 et des versions ultérieures
 * Les instances vCenter Server qui sont déployées dans (ou mises à niveau vers) la version 2.5 et des versions ultérieures
 
-Pour les instances qui sont déployées dans (ou mises à niveau vers) la version 3.0 ou des versions ultérieures, {{site.data.keyword.cloud_notm}} Automation Manager est également déployé lorsque vous commandez le service {{site.data.keyword.cloud}} Private Hosted.
+La version d'IBM Cloud Private en cours qui est installée est la version 3.1.2. {{site.data.keyword.cloud_notm}} Automation Manager est également déployé dans le cadre de la commande du service {{site.data.keyword.cloud}} Private Hosted.
 {:note}
+
 
 ## Spécifications techniques pour IBM Cloud Private Hosted
 {: #icp_overview-specs}
 
 Le tableau ci-après répertorie les exigences minimales requises pour commander le service IBM Cloud Private Hosted pour l'environnement **Prêt pour la production** et l'environnement **Développement/Test**.
 
-Tableau 1. Exigences minimales requises pour les environnements Prêt pour la production et Développement/Test
-
 |Environnement | Coeurs | Mémoire (Go) | Hôtes | Stockage (Go) |
 |:---------- |:---- |:------ |:---- |:------- |
 | Prêt pour la production | 52 | 640 | 3 | 8 000 |
 | Développement/Test | 30 | 200 | 3 | 4 000 |
+{: caption="Tableau 1. Exigences minimales requises pour les environnements Prêt pour la production et Développement/Test" caption-side="top"}
 
 ### Besoins en ressources d'IBM Cloud Private Hosted
 {: #icp_overview-resource-req}
 
-Les tableaux ci-après répertorient les besoins en ressources du service {{site.data.keyword.cloud_notm}} Private Hosted dans les environnements Prêt pour la production et Développement/Test.
-
-Tableau 2. Besoins en ressources d'{{site.data.keyword.cloud_notm}} Private Hosted dans l'environnement Prêt pour la production
+Le tableau ci-après répertorie les besoins en ressources du service {{site.data.keyword.cloud_notm}} Private Hosted dans l'environnement Prêt pour la production. 
 
 | Type de noeud  | Coeurs d'UC   |  Mémoire (Go) | Disque 1 (Go) | Disque 2 (Go) | Nombre de machines virtuelles |
 |:---------- |:----------- |:------------ |:----------- |:----------- |:------------- |
@@ -60,8 +59,9 @@ Tableau 2. Besoins en ressources d'{{site.data.keyword.cloud_notm}} Private Host
 | Serveur NFS | 8 | 4  | 350 | 1 | 1 |
 | Passerelle NSX ESG (Edge Services Gateway) | 2 | 1 | 0,5 | 0,5 | 2 |
 | Contraintes documentées | 52 | 640 |  | 8 000 |   |
+{: caption="Tableau 2. Environnement Prêt pour la production" caption-side="top"}
 
-Tableau 3. Besoins en ressources d'{{site.data.keyword.cloud_notm}} Private Hosted dans l'environnement Développement/Test
+Le tableau ci-après répertorie les besoins en ressources du service {{site.data.keyword.cloud_notm}} Private Hosted dans les environnements Développement et Test. 
 
 | Type de noeud  | Coeurs d'UC   |  Mémoire (Go) | Disque 1 (Go) | Disque 2 (Go) | Nombre de machines virtuelles |
 |:---------- |:----------- |:------------ |:----------- |:----------- |:------------- |
@@ -75,18 +75,19 @@ Tableau 3. Besoins en ressources d'{{site.data.keyword.cloud_notm}} Private Host
 | Serveur NFS | 8 | 4  | 350 | 1 | 1 |
 | Passerelle NSX ESG (Edge Services Gateway) | 2 | 1 | 0,5 | 0,5 | 2 |
 | Contraintes documentées | 30 | 200 |  | 4 000 |  |
+{: caption="Tableau 3. Environnements Développement et Test d'{{site.data.keyword.cloud_notm}}" caption-side="top"}
 
 ### Formules de calcul des exigences d'espace pour IBM Cloud Private Hosted
 {: #icp_overview-formulas}
 
 Les formules suivantes sont utilisées pour calculer l'espace requis pour IBM Cloud Private et les surcharges de gestion :
 
-#### Formule permettant de calculer le nombre de coeurs disponibles 
+#### Formule permettant de calculer le nombre de coeurs disponibles
 {: #icp_overview-formulas-1}
 
-`AvailableCores = [HostCoreCount - HostOverheadCores - (HostVSanOverheadCorePercentage * HostCoreCount)] * (HostCount - vSphereHAHostTolerance) - MgmtOverheadCores`
+Le tableau suivant répertorie les variables de la formule 1 :
 
-Tableau 4. Description des variables de la formule 1
+`AvailableCores = [HostCoreCount - HostOverheadCores - (HostVSanOverheadCorePercentage * HostCoreCount)] * (HostCount - vSphereHAHostTolerance) - MgmtOverheadCores`
 
 | Variables | Description | Unité | Exemple vSAN | Exemple NFS |
 |:--------- |:----------- |:---- |:------------- |:----------- |
@@ -97,13 +98,14 @@ Tableau 4. Description des variables de la formule 1
 | MgmtOverheadCores | Nombre de coeurs réservés par les composants de gestion vCenter Server (vCenter Server, PSC, AD/DNS, Edges), égal à cinq coeurs | Coeurs | 5 | 5 |
 | vSphereHAHostTolerance | Nombre d'hôtes à tolérer dans la configuration vSphere HA, égal à un hôte |	Hôtes	 | 1 | 1 |
 | HostVsanOverheadCorePercentage | Pourcentage de coeurs d'un hôte utilisé par vSAN, égal à 10 % ou à 0 % pour un hôte hors VSAN | % | 10 % | 0 % |
+{: caption="Tableau 4. Description des variables de la formule 1" caption-side="top"}
 
-#### Formule permettant de calculer la mémoire disponible 
+#### Formule permettant de calculer la mémoire disponible
 {: #icp_overview-formulas-2}
 
-`AvailableMemory = [HostMemory - HostOverheadMemory - HostVsanOverheadMemory - (HostVsanOverheadMemoryDiskPercentage * HostVsanCapacityDiskSize)] * (HostCount - vSphereHAHostTolerance) - MgmtOverheadMemory`
+Le tableau suivant répertorie les variables de la formule 2 :
 
-Tableau 5. Description des variables de la formule 2
+`AvailableMemory = [HostMemory - HostOverheadMemory - HostVsanOverheadMemory - (HostVsanOverheadMemoryDiskPercentage * HostVsanCapacityDiskSize)] * (HostCount - vSphereHAHostTolerance) - MgmtOverheadMemory`
 
 | Variables | Description | Unité | Exemple vSAN | Exemple NFS |
 |:--------- |:----------- |:---- |:------------- |:----------- |
@@ -116,6 +118,7 @@ Tableau 5. Description des variables de la formule 2
 | vSphereHAHostTolerance | Nombre d'hôtes à tolérer dans la configuration vSphere HA, égal à un hôte | Hôtes	| 1 | 1 |
 | HostVsanOverheadMemoryDiskPercentage | Nombre de Go de mémoire réservés par les composants vSAN (représenté en tant que pourcentage de l'un des disques vSAN de capacité), égal à 2,75 % | % | 2,75% | 2,75% |
 | HostVsanOverheadMemory | Nombre de Go de mémoire réservés par la gestion vSAN quelle que soit la taille du disque, égal à 7 Go ou à 0 Go pour un hôte hors VSAN | Go |  7 | 0 |
+{: caption="Tableau 5. Description des variables de la formule 2" caption-side="top"}
 
 ## Remarques relatives à l'installation d'IBM Cloud Private Hosted
 {: #icp_overview-install}
@@ -136,6 +139,6 @@ Tableau 5. Description des variables de la formule 2
 
 * [Commande d'{{site.data.keyword.cloud_notm}} Private Hosted](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_ordering)
 * [Guide vCenter Server et {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [Ouvrir un ticket au sujet d'{{site.data.keyword.cloud_notm}} Private](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
-* [Licence pour {{site.data.keyword.cloud_notm}} Automation Manager](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/licensing.html){:new_window}
-* [Composants d'{{site.data.keyword.cloud_notm}} Automation Manager](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/cam_managed_components.html){:new_window}
+* [Ouvrir un ticket au sujet d'{{site.data.keyword.cloud_notm}} Private](https://www.ibm.com/mysupport/s/?language=en_US){:external}
+* [Octroi de licence pour {{site.data.keyword.cloud_notm}} Automation Manager](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/licensing.html){:external}
+* [Composants {{site.data.keyword.cloud_notm}} Automation Manager](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/cam_managed_components.html){:external}

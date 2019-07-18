@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server Hybridity migrate instance, add account vCenter Server Hybridity, migrate cloud account Hybridity
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # Migration d'instances vCenter Server with Hybridity Bundle antérieures à la version 2.5 vers des comptes IBM Cloud
 {: #vc_hybrid_addinstancetousraccount}
@@ -25,7 +27,7 @@ Quant aux instances déployées dans la version 2.4 et dans des éditions antér
 
 Assurez-vous que le compte {{site.data.keyword.cloud_notm}} vers lequel vous souhaitez faire migrer l'instance n'est pas un compte IaaS-only. Un compte IaaS-only est un compte d'infrastructure {{site.data.keyword.cloud_notm}} qui n'est pas lié à un compte {{site.data.keyword.cloud_notm}}.
 
-Pour savoir comment lier votre compte Iaas-only à votre compte PaaS, voir [Follow these steps to link your IaaS and PaaS accounts](https://www.ibm.com/cloud/blog/follow-steps-link-iaas-paas-accounts){:new_window}.
+Pour savoir comment lier votre compte Iaas-only à votre compte PaaS, voir [Follow these steps to link your IaaS and PaaS accounts](https://www.ibm.com/cloud/blog/follow-steps-link-iaas-paas-accounts){:external}.
 
 ## Procédure de migration des instances
 {: #vc_hybrid_addinstancetousraccount-procedure}

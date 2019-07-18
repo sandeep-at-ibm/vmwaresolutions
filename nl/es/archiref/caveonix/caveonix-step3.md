@@ -14,7 +14,7 @@ subcollection: vmware-solutions
 # Paso 3 - Configuración de aplicaciones
 {: #caveonix-step3}
 
-En este paso se utiliza el script de configuración de Caveonix RiskForesight. Para el despliegue "todo en uno", este script se inicia a través de la automatización de IBM Cloud for VMware Solutions. 
+En este paso se utiliza el script de configuración de Caveonix RiskForesight. Para el despliegue "todo en uno", este script se inicia a través de la automatización de IBM Cloud for VMware Solutions.
 
 Para el escalado, el cliente tiene que llamar al script para suministrar las topologías parcial o completamente distribuidas. El script configura los servicios de RiskForesight:
 - Apps de Caveonix (API, recopilador central)

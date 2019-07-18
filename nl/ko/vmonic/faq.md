@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-26"
 
 keywords: FAQ, user account, patch management
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -77,11 +78,11 @@ subcollection: vmware-solutions
 
 세 번째 노드가 두 개의 노드 클러스터에 추가되면 vCenter Server가 세 개의 노드에서 세 개의 NSX Controller를 자동으로 다시 밸런싱하고 고가용성 환경을 작성합니다.
 
-## VMware vCenter 6.5 HA 구성을 설정할 수 있습니까?
+## VMware vCenter HA 구성을 설정할 수 있습니까?
 {: #faq-ha}
 {: faq}
 
-아니오, 권장하지 않습니다. {{site.data.keyword.vmwaresolutions_short}}에서 실패가 발생할 수 있습니다.
+vCenter HA를 구성할 수 있지만 구성 지원은 {{site.data.keyword.vmwaresolutions_short}}에서 제공되지 않습니다.
 
 ## 클러스터의 이름을 바꿀 수 있습니까?
 {: #faq-rename-cluster}
@@ -103,7 +104,7 @@ V2.1 이상에 배치되거나 V2.1 이상으로 업그레이드된 VMware vCent
 V2.0 이상에 배치된 인스턴스의 경우, VUM(VMware Update Manager)은 vCenter 서버에 통합됩니다. VUM을 구성하여 VMware에서 ESXi 업데이트를 다운로드할 수 있습니다.
 
 자세한 정보는 다음 리소스를 참조하십시오.
-* [VMware Support](https://www.vmware.com/support.html)
+* [VMware Support](https://www.vmware.com/support.html){:external}
 * [vCenter Server 인스턴스에 업데이트 적용](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates)
 * [vCenter Server with Hybridity Bundle 인스턴스에 업데이트 적용](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_applyingupdates)
 

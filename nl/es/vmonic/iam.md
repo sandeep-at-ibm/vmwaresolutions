@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-18"
 
 keywords: IAM user, user role, user permission
 
@@ -38,18 +38,15 @@ Los roles de gestión de plataformas permiten a los usuarios realizar tareas en 
 
 La tabla siguiente proporciona información sobre las acciones que se correlacionan en los roles de gestión de plataforma.
 
-Tabla 1. Roles de gestión de plataforma y acciones permitidas
-
-| Rol de gestión de plataforma | Acciones | Accione de ejemplo |
+| Rol de gestión de plataforma | Acciones | Acciones de ejemplo |
 |:----------------- |:----------------- |:----------------- |
 | Visor | Acciones de solo lectura | Ver el resumen de instancias<br>Ver los detalles de una instancia |
 | Editor | Actualizar una instancia específica | Añadir o eliminar servidores ESXi<br>Añadir o eliminar clústeres<br>Añadir o eliminar servicios<br>Actualizar una instancia a una versión superior |
 | Operador | Acciones de solo lectura | Listar instancias<br>Ver los detalles de una instancia |
 | Administrador | Acceso de gestión completa | Crear nuevas instancias<br>Suprimir instancias<br>Otorgar acceso de plataforma a otros usuarios|
+{: caption="Tabla 1. Roles de gestión de plataforma y acciones permitidas" caption-side="top"}
 
 Para {{site.data.keyword.vmwaresolutions_short}}, existen las acciones siguientes:
-
-Tabla 2. Descripciones de acciones y roles necesarios
 
 | Acción | Operación en servicio | Rol |
 |:------ |:-------------------- |:---- |
@@ -58,6 +55,7 @@ Tabla 2. Descripciones de acciones y roles necesarios
 | vmware-solutions.instances.view | Listar instancias<br>Ver el detalle de una instancia | Visor, Operador, Editor y Administrador |
 | vmware-solutions.instances.update | Añadir o eliminar servidores ESXi<br>Añadir o eliminar clústeres<br>Añadir o eliminar servicios<br>Actualizar una instancia a una versión superior | Editor y Administrador |
 | vmware-solutions.account.update | Actualizar valores de cuenta | Administrador |
+{: caption="Tabla 2. Descripciones de acciones y roles necesarios" caption-side="top"}
 
 ## Gestión del acceso para usuarios
 {: #iam-users}

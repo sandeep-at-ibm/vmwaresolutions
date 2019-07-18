@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-18"
 
 keywords: IAM user, user role, user permission
 
@@ -38,18 +38,15 @@ subcollection: vmware-solutions
 
 下表提供對映至平台管理角色之動作的相關資訊。
 
-表 1. 平台管理角色及容許的動作
-
 | 平台管理角色 |動作| 範例動作 |
 |:----------------- |:----------------- |:----------------- |
 | 檢視者 | 唯讀動作 |檢視實例的摘要<br>檢視實例的詳細資料|
 | 編輯者 | 更新特定實例 |新增或移除 ESXi 伺服器<br>新增或移除叢集<br>新增或移除服務<br>將實例升級至更高版本|
 | 操作員 | 唯讀動作 |列出實例<br>檢視實例的詳細資料|
 | 管理者 | 完整管理存取權 |建立新實例<br>刪除實例<br>將平台存取權授與其他使用者|
+{: caption="表 1. 平台管理角色及容許的動作" caption-side="top"}
 
 對於 {{site.data.keyword.vmwaresolutions_short}}，存在下列動作：
-
-表 2. 動作說明及必要角色
 
 | 動作 | 服務上的作業 | 角色 |
 |:------ |:-------------------- |:---- |
@@ -58,6 +55,7 @@ subcollection: vmware-solutions
 | vmware-solutions.instances.view |列出實例<br>檢視實例的詳細資料| 檢視者、操作員、編輯者及管理者 |
 | vmware-solutions.instances.update |新增或移除 ESXi 伺服器<br>新增或移除叢集<br>新增或移除服務<br>將實例升級至更高版本| 編輯者及管理者 |
 | vmware-solutions.account.update | 更新帳戶設定 | 管理者 |
+{: caption="表 2. 動作說明及必要角色" caption-side="top"}
 
 ## 管理使用者的存取權
 {: #iam-users}

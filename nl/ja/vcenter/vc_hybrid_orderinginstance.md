@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-19"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server Hybridity order instance, order vCenter Server Hybridity, order Hybridity
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -30,15 +31,14 @@ subcollection: vmware-solutions
 *  [vCenter Server with Hybridity Bundle の要件と計画](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)の情報を確認する。
 * インスタンス名とドメイン・ネームの形式を確認する。 ドメイン・ネームとサブドメイン・ラベルは、インスタンスのユーザー名とサーバー名の生成に使用されます。
 
-表 1. インスタンス名とドメイン・ネームの値の形式
-
 | 名前        | 値の形式      |
-  |:------------- |:------------- |
-  | ドメイン・ネーム | `<root_domain>` |  
-  | vCenter Server ログイン・ユーザー名 | `<user_id>@<root_domain>` (Microsoft Active Directory ユーザー) または `administrator@vsphere.local` |
-  | vCenter Server (PSC が組み込まれたもの) の FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`。最大長は 50 文字です。 |
-  | シングル・サインオン (SSO) サイト名 | `<subdomain_label>` |
-  | 完全修飾 ESXi サーバー名 | `<host_prefix><n>.<subdomain_label>.<root_domain>`。`<n>` は ESXi サーバーのシーケンスです。 最大長は 50 文字です。 |
+|:------------- |:------------- |
+| ドメイン・ネーム | `<root_domain>` |  
+| vCenter Server ログイン・ユーザー名 | `<user_id>@<root_domain>` (Microsoft Active Directory ユーザー) または `administrator@vsphere.local` |
+| vCenter Server (PSC が組み込まれたもの) の FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`。最大長は 50 文字です。 |
+| シングル・サインオン (SSO) サイト名 | `<subdomain_label>` |
+| 完全修飾 ESXi サーバー名 | `<host_prefix><n>.<subdomain_label>.<root_domain>`。`<n>` は ESXi サーバーのシーケンスです。 最大長は 50 文字です。 |
+{: caption="表 1. インスタンス名とドメイン・ネームの値の形式" caption-side="top"}
 
 インスタンスの注文時およびデプロイ時に設定した値は変更しないでください。 変更すると、インスタンスを使用できなくなる可能性があります。 例えば、パブリック・ネットワークがシャットダウンしたり、プロビジョニング中にサーバーや仮想サーバー・インスタンス (VSI) が Vyatta の内側に移動したり、IBM CloudBuilder VSI が停止したり、削除されたりすることがあります。
 {:important}
@@ -103,25 +103,23 @@ vSAN 構成の場合、初期クラスターとデプロイメント後のクラ
 
 **「Skylake」**を選択した場合、必要に応じてベアメタル・サーバーの CPU と RAM の組み合わせを選択できます。
 
-表 2. Skylake {{site.data.keyword.baremetal_short}}のオプション
-
 | CPU モデル・オプション        | RAM オプション       |
 |:------------- |:------------- |
 | Dual Intel Xeon Silver 4110 プロセッサー / 合計 16 コア、2.1 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 | Dual Intel Xeon Gold 5120 Processor / 合計 28 コア、2.2 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 | Dual Intel Xeon Gold 6140 Processor / 合計 36 コア、2.3 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
+{: caption="表 2. Skylake {{site.data.keyword.baremetal_short}}のオプション" caption-side="top"}
 
 ### Broadwell
 {: #vc_hybrid_orderinginstance-broadwell}
 
 **「Broadwell」**を選択した場合、必要に応じてベアメタル・サーバーの CPU と RAM の組み合わせを選択できます。
 
-表 3. Broadwell {{site.data.keyword.baremetal_short}}のオプション
-
 | CPU モデル・オプション        | RAM オプション       |
 |:------------- |:------------- |
 | クワッド Intel Xeon E7-4820 v4 / 合計 40 コア、2.0 GHz | 128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 | クワッド Intel Xeon E7-4850 v4 / 合計 64 コア、2.1 GHz | 128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
+{: caption="表 3. Broadwell {{site.data.keyword.baremetal_short}}のオプション" caption-side="top"}
 
 ### ベア・メタル・サーバーの数
 {: #vc_hybrid_orderinginstance-bare-metal-number}
@@ -224,7 +222,7 @@ vCenter Server with Hybridity Bundle インスタンスを注文する際には�
 
 VM は 30 日以内に有効にしてください。
 
-Windows Server 2016 ライセンスの注文について詳しくは、[Windows Server 2016 の使用を開始する](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:new_window}を参照してください。
+Windows Server 2016 ライセンスの注文について詳しくは、[Get started with Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:external} を参照してください。
 
 ## サービスの設定
 {: #vc_hybrid_orderinginstance-addon-services}
@@ -234,14 +232,14 @@ vCenter Server with Hybridity Bundle インスタンスを注文するときに�
 ## 注文のサマリー
 {: #vc_hybrid_orderinginstance-order-summary}
 
-選択したインスタンス構成とアドオン・サービス構成に基づいて、見積もりコストがすぐに生成され、右側の**「発注要約」**ペインに表示されます。**「料金詳細」**をクリックすると、{{site.data.keyword.vmwaresolutions_short}} リソースのコスト・サマリーが記載された PDF 文書を生成できます。
+選択したインスタンス構成とアドオン・サービス構成に基づいて、見積もりコストがすぐに生成され、右側の**「発注要約」**ペインに表示されます。 **「料金詳細」**をクリックすると、{{site.data.keyword.vmwaresolutions_short}} リソースのコスト・サマリーが記載された PDF 文書を生成できます。
 
-また、**「見積もりに追加」**をクリックして、プロビジョン済みリソースを {{site.data.keyword.cloud_notm}} 見積もりツールに追加することもできます。この操作は、購入を検討している他の {{site.data.keyword.cloud_notm}} リソースと一緒に、選択した {{site.data.keyword.vmwaresolutions_short}}リソースのコストを見積もる場合に役立ちます。
+また、**「見積もりに追加」**をクリックして、プロビジョン済みリソースを {{site.data.keyword.cloud_notm}} 見積もりツールに追加することもできます。 この操作は、購入を検討している他の {{site.data.keyword.cloud_notm}} リソースと一緒に、選択した {{site.data.keyword.vmwaresolutions_short}}リソースのコストを見積もる場合に役立ちます。
 
 ## vCenter Server with Hybridity Bundle インスタンスを注文する手順
 {: #vc_hybrid_orderinginstance-procedure}
 
-1. {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**をクリックしてから、**「仮想データ・センター」**セクションの**「vCenter サーバー」**をクリックします。
+1. {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**アイコンをクリックしてから、**「VMware 仮想データ・センター」**セクションの**「VMware vCenter Server on IBM Cloud」**カードをクリックします。
 2. **「VMware vCenter Server on IBM Cloud」**ページで、**「vCenter Server with Hybridity Bundle」**カードをクリックし、**「作成」**をクリックします。
 3. **「vCenter サーバー」**ページで、インスタンス名を入力します。
 5. vSphere バージョンを選択します。

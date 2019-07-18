@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-28"
 
 keywords: vSphere order cluster, order vSphere, order vSphere cluster
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -51,14 +52,13 @@ Selecione os componentes do VMware a serem pedidos com seu cluster e especifique
 
 Se você for um usuário do Parceiro de Negócios IBM, será possível selecionar um pacote configurável de licença do componente ao pedir um novo cluster do vSphere. Os pacotes configuráveis a seguir estão disponíveis:
 
-Tabela 1. Pacotes configuráveis de componentes do Parceiro de Negócios IBM para clusters do vSphere
-
 | Pacote configurável | Componentes                   |
 |:------------------------- |:----------------------- |
 | Padrão com Gerenciamento | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vRealize Operations Enterprise |
 | Avançado                 | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vCloud Director, NSX Base |
 | Avançado com Rede | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, NSX Advanced |
 | Avançado com Rede e Gerenciamento | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vRealize Operations Enterprise, vCloud Director, NSX Enterprise |
+{: caption="Tabela 1. Pacotes configuráveis de componentes do Parceiro de Negócios IBM para clusters do vSphere" caption-side="top"}
 
 Também é possível incluir os seguintes componentes do VMware em seu pedido:
 * VMware vSAN
@@ -104,7 +104,9 @@ O uso de chaves de licença individuais junto com as chaves de licença combinad
 
 Selecione o {{site.data.keyword.CloudDataCent_notm}} em que o cluster deve ser hospedado.
 
-**Notas:**
+#### Notas
+{: #vs_orderinginstances-notes}
+
 * Se você selecionar um componente vSAN, a lista de locais será filtrada pela disponibilidade do SSD.
 * Os Broadwell Bare Metal Servers não estão disponíveis para o local do Data Center **FRA05 - Frankfurt**.
 * Os Broadwell Bare Metal Servers certificados pela SAP não estão disponíveis para o local do Data Center **LON05 - Londres**.
@@ -114,13 +116,12 @@ Selecione o {{site.data.keyword.CloudDataCent_notm}} em que o cluster deve ser h
 
 Quando você seleciona **Skylake**, é possível escolher a combinação de CPU e RAM para o Bare Metal Server, de acordo com suas necessidades. As opções disponíveis dependem de se você selecionou o componente vSAN do VMware.
 
-Tabela 2. Opções para o Skylake {{site.data.keyword.baremetal_short}}
-
 | Opções de modelo da CPU        | Opções de RAM       |
 |:------------- |:------------- |
 | Processador Dual Intel Xeon Silver 4110/total de 16 núcleos, 2,1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Processador Dual Intel Xeon Gold 5120/total de 28 núcleos, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Processador Dual Intel Xeon Gold 6140/Total de 36 núcleos, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+{: caption="Tabela 2. Opções para o Skylake {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 ### SAP-certificado
 {: #vs_orderinginstances-sap}
@@ -141,12 +142,11 @@ Com base em seus requisitos, selecione uma configuração do Bare Metal Server:
 
 Quando você seleciona **Broadwell**, é possível escolher a combinação de CPU e RAM para o Bare Metal Server, de acordo com suas necessidades. As opções disponíveis dependem de se você selecionou o componente vSAN do VMware.
 
-Tabela 3. Opções para o Broadwell {{site.data.keyword.baremetal_short}}
-
 | Opções de modelo da CPU        | Opções de RAM       |
 |:------------- |:------------- |
 | Quad Intel Xeon E7-4820 v4/total de 40 núcleos, 2.0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4/total de 64 núcleos, 2.1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+{: caption="Tabela 3. Opções para o Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 ### Número de Bare Metal Servers
 {: #vs_orderinginstances-bare-metal-number}
@@ -235,7 +235,9 @@ Dependendo do {{site.data.keyword.CloudDataCent_notm}} selecionado, VLANs públi
   * **Sub-rede primária** é designada a hosts físicos para o acesso à rede pública.
   * **Sub-rede privada primária** é designada a hosts físicos para o tráfego de gerenciamento.
 
-** Importante: **
+##### Importante
+{: #vs_orderinginstances-important}
+
 * Assegure-se de que a configuração de firewall nas VLANs selecionadas não bloqueie o tráfego de dados de gerenciamento.
 * Assegure-se de que todas as VLANs que você selecionar estejam no mesmo pod. Os servidores ESXi não podem ser provisionados em VLANs de pod misto.
 
@@ -254,7 +256,7 @@ Também é possível incluir os recursos provisionados na ferramenta de estimati
 ## Procedimento para pedir clusters do vSphere
 {: #vs_orderinginstances-procedure}
 
-1. No catálogo do {{site.data.keyword.cloud_notm}}, clique em **VMware** na área de janela de navegação à esquerda e, em seguida, clique em **VMware vSphere** na seção **Datacenters virtuais**.
+1. No catálogo do {{site.data.keyword.cloud_notm}}, clique no ícone **VMware** da área de janela de navegação esquerda e, em seguida, clique no cartão **VMware vSphere on IBM Cloud** da seção **Data centers virtuais do VMware**.
 2. Na página **VMware vSphere on IBM Cloud**, clique em **Criar**.  
    Assegure-se de que está na guia **Criar novo** e que **Novo cluster** está exibido na lista **Configurações de cluster**.
 3. Insira o nome do cluster.
@@ -263,7 +265,7 @@ Também é possível incluir os recursos provisionados na ferramenta de estimati
   * Se você for um Parceiro não Comercial, selecione o componente, a edição, se houver alguma, e especifique a opção de licenciamento.
   Quando você escolhe Bring Your Own License (BYOL) para o VMware vSphere Enterprise Plus, um chamado {{site.data.keyword.cloud_notm}} é aberto automaticamente em seu nome para solicitar que as licenças padrão do vSphere no seu {{site.data.keyword.baremetal_short}} pedido sejam substituídas por suas licenças fornecidas.   
 
-    **Importante:** você é responsável por rastrear o chamado para que você substitua a licença do vSphere nos servidores ESXi recém-ordenados. Dessa forma, a infraestrutura do {{site.data.keyword.cloud_notm}} concede o cancelamento do encargo de licença do vSphere da infraestrutura do {{site.data.keyword.cloud_notm}} inicialmente fornecida. Para substituir sua licença ESXi vSphere, veja [Definir Configurações da Licença para um Host ESXi](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}.
+    **Importante:** você é responsável por rastrear o chamado para que você substitua a licença do vSphere nos servidores ESXi recém-ordenados. Dessa forma, a infraestrutura do {{site.data.keyword.cloud_notm}} concede o cancelamento do encargo de licença do vSphere da infraestrutura do {{site.data.keyword.cloud_notm}} inicialmente fornecida. Para substituir sua licença ESXi vSphere, veja [Definir Configurações da Licença para um Host ESXi](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:external}.
 5. Conclua as configurações do Bare Metal Server:
    1. Selecione o {{site.data.keyword.CloudDataCent_notm}} para hospedar o cluster.
    2. Selecione a configuração do Bare Metal Server.

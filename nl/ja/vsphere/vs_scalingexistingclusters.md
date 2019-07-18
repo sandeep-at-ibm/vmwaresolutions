@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-20"
 
 keywords: vSphere scale cluster, scale vSphere, scale vSphere cluster
 
@@ -33,7 +33,7 @@ subcollection: vmware-solutions
 ## 既存のクラスターを拡張する手順
 {: #vs_scalingexistingclusters-procedure}
 
-1. {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**をクリックしてから、**「仮想データ・センター」**セクションの**「VMware vSphere」**をクリックします。
+1. {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**アイコンをクリックしてから、**「VMware 仮想データ・センター」**セクションの**「VMware vSphere on IBM Cloud」**カードをクリックします。
 2. **「VMware vSphere on IBM Cloud」**ページで、**「作成」**をクリックします。  
 3. **「既存の拡張」**タブをクリックして、拡張するクラスターを**「クラスター構成」**リストから選択します。
 4. 自動的に入力されたクラスター設定を確認します。

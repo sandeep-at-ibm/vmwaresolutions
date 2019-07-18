@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-26"
 
 keywords: vmware solutions data sheet, vmware solutions developerWorks, vmware solutions video
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # 其他資源
 {: #additional_resources}
@@ -25,22 +27,22 @@ subcollection: vmware-solutions
 ## 資料表
 {: #additional_resources-data-sheets}
 
-* [{{site.data.keyword.vmwaresolutions_short}} 保護資料表](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:new_window}
+* [{{site.data.keyword.vmwaresolutions_short}} 保護資料表](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:external}
 
 ## developerWorks 秘訣
 {: #additional_resources-dWrecipes}
 
-* [developerWorks 秘訣](https://developer.ibm.com/recipes/tutorials/?s=VMware+Solutions){:new_window}
+* [developerWorks 秘訣](https://developer.ibm.com/recipes/tutorials/?s=VMware+Solutions){:external}
 
 ## IBM Cloud 型樣
 {: #additional_resources-patterns}
 
-* [IBM Cloud 型樣](https://ibmcloudpatterns.mybluemix.net/#862581F800007C53/862581F800007DD5/862581D000837B23)
+* [IBM Cloud 型樣](https://ibmcloudpatterns.mybluemix.net/#862581F800007C53/862581F800007DD5/862581D000837B23){:external}
 
 ## 平台延伸規格
 {: #additional_resources-plat-extensions}
 
-請檢閱所有[虛擬化平台延伸規格](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/allvirtualizationextensions){:new_window}的架構，例如：
+請檢閱所有[虛擬化平台延伸規格](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/allvirtualizationextensions){:external}的架構，例如：
 * FortiGate Security Appliance
 * {{site.data.keyword.cloud_notm}} 檔案及區塊儲存空間
 * NSX Edge Services Gateway
@@ -52,11 +54,11 @@ subcollection: vmware-solutions
 ## 視訊及示範
 {: #additional_resources-demos}
 
-* [Resources and videos](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/resources){:new_window}
-* [Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware){:new_window}
-* [Featured resources and case studies](https://www.ibm.com/cloud/vmware/resources){:new_window}
+* [Resources and videos](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/resources){:external}
+* [Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware){:external}
+* [Featured resources and case studies](https://www.ibm.com/cloud/vmware/resources){:external}
 
 ## VMware 文件
 {: #additional_resources-vmware-doc}
 
-* [VMware Hybrid Cloud Extension 文件](https://cloud.vmware.com/vmware-hcx/resources){:new_window}
+* [VMware Hybrid Cloud Extension 文件](https://cloud.vmware.com/vmware-hcx/resources){:external}

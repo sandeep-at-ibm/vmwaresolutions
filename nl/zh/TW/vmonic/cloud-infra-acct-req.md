@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-31"
+lastupdated: "2019-06-18"
 
 keywords: user account, user permissions, VRF account
 
@@ -29,8 +29,6 @@ subcollection: vmware-solutions
 
 獲授權的使用者可以在 {{site.data.keyword.slportal}} 中驗證及更新 {{site.data.keyword.cloud_notm}} 基礎架構帳戶的許可權。如需相關資訊，請參閱[編輯使用者的客戶入口網站許可權](/docs/customer-portal?topic=customer-portal-customerportal_accuserprof#cp_editusercpperm){:new_window}。
 
-表 1. {{site.data.keyword.cloud_notm}} 基礎架構帳戶的必要許可權
-
 |許可權|詳細資料     |
 |:------------------ |:--------------------------------------- |
 |新增伺服器|下列作業需要此許可權：要訂購執行 VMware ESXi 的 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}，以及佈建用於實例配置、維護及支援作業的每小時虛擬伺服器。|
@@ -49,6 +47,7 @@ subcollection: vmware-solutions
 |檢視授權|需要此許可權，才能擷取及驗證實例所使用的授權。|
 |檢視密碼|需要此許可權，才能管理已訂購的 VSI。|
 |管理伺服器監視|下訂單不需要此許可權，但需要它才能擷取及驗證在實例中執行 VMware ESXi 伺服器的 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} 的監視狀態。|
+{: caption="表 1. {{site.data.keyword.cloud_notm}} 基礎架構帳戶的必要許可權" caption-side="top"}
 
 ## 已啟用具有服務端點的 VRF
 {: #cloud-infra-acct-req-vrf-se}

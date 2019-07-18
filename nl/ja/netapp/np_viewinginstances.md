@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-28"
 
 keywords: view NetApp, view instance, view instance details
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -31,15 +32,14 @@ subcollection: vmware-solutions
 2. コンソール・バナーのユーザー・アカウント・アイコンをクリックし、**「アカウント」**フィールドをクリックして、インスタンスの確認対象となるユーザー・アカウントを選択します。
 3. **「NetApp ONTAP Select インスタンス」**の表で、選択されたユーザー・アカウントでプロビジョンされたインスタンスのリストを表示します。
 
-表 1. NetApp ONTAP Select インスタンスの項目
-
 | 項目        | 説明       |  
 |:------------- |:--------------- |
 | 名前 | インスタンスの名前。 |
 | バージョン | インスタンスのバージョン。 |  
 | ロケーション | インスタンスがホストされるデータ・センター。 |
 | 作成時間 | インスタンスが作成された日時。 |   
-| 状況 | インスタンスの状況。 状況は、以下のいずれかの値になります。<ul><li>作成中: インスタンスは作成中です。</li><li>構築中: インスタンスは構成中です。</li><li>使用可能: インスタンスは使用可能です。</li><li>変更中: インスタンスは変更中です。</li><li>失敗: 作成、構成、または変更のプロセスが失敗しました。</li><li>削除中: インスタンスは削除中です。</li><li>削除エラー: インスタンスの削除中にエラーが発生しました。</li><li>削除済み: インスタンスは削除されました。</li></ul>|
+| 状況 | インスタンスの状況。 状況は、以下のいずれかの値になります。<br>作成中: インスタンスは作成中です。<br>構築中: インスタンスは構成中です。<br>使用可能: インスタンスは使用可能です。<br>変更中: インスタンスは変更中です。<br>失敗: 作成、構成、または変更のプロセスが失敗しました。<br>削除中: インスタンスは削除中です。<br>削除エラー: インスタンスの削除中にエラーが発生しました。<br>削除済み: インスタンスは削除されました。 |
+{: caption="表 1. NetApp ONTAP Select インスタンスの項目" caption-side="top"}
 
 ## NetApp ONTAP Select インスタンスのプロパティーの詳細を表示する手順
 {: #np_viewinginstances-procedure-view-inst-property}
@@ -48,8 +48,6 @@ subcollection: vmware-solutions
 
 1. **「NetApp ONTAP Select インスタンス」**テーブルで、インスタンス名をクリックします。
 2. **「プロパティー」**の下で、インスタンスの詳細を確認します。
-
-表 2. NetApp ONTAP Select インスタンスのプロパティー
 
 | プロパティー        | 説明       |
 |:--------------- |:----------------- |
@@ -66,13 +64,12 @@ subcollection: vmware-solutions
 | DNS、SSO ドメイン | SSO ドメインは、vSphere のシングル・サインオン・ドメインです。 デプロイされたすべての NetApp ONTAP Select インスタンスで、SSO ドメイン・ネームが値 `vsphere.local` に設定されています。 |
 | DNS、サブドメイン | サブドメインは、ローカル NetApp ONTAP Select インスタンスのホスト名が存在するルート・ドメイン・ネームの DNS サブドメイン名です。 サブドメイン名の形式は `<subdomain_label>.<root_domain>` になります。 |
 | 状況 | インスタンスの状況。 |
+{: caption="表 2. NetApp ONTAP Select インスタンスのプロパティー" caption-side="top"}
 
 ## NetApp ONTAP Select インスタンスのアクセス情報を表示する手順
 {: #np_viewinginstances-procedure-view-inst-access-info}
 
 **「アクセス情報」**の下に、インスタンス関連コンポーネントのアクセス情報が表示されます。 以下のパスワードは、システムで生成される初期パスワードです。 それらを {{site.data.keyword.vmwaresolutions_short}} コンソール以外で変更した場合、インスタンスのサマリー・ページでは更新されません。
-
-表 3. NetApp ONTAP Select インスタンス関連コンポーネントのアクセス情報
 
 | コンポーネント        | 説明       |
 |:---------------- |:----------------- |
@@ -92,18 +89,18 @@ subcollection: vmware-solutions
 | vCenter FQDN | vCenter Server の完全修飾ドメイン・ネーム。 |
 | vCenter ADMIN | vSphere Web Client を使用して vCenter Server にログインするために使用できる VMware vCenter Single Sign-On ユーザー名とパスワード。 |
 | vCenter SSH | SSH 接続で vCenter Server VM にアクセスするために使用できるユーザー名とパスワード。 |
+{: caption="表 3. NetApp ONTAP Select インスタンス関連コンポーネントのアクセス情報" caption-side="top"}
 
 ## NetApp ONTAP Select インスタンスのデプロイメント履歴を表示する手順
 {: #np_viewinginstances-procedure-view-inst-deploy-history}
 
 左側のナビゲーション・ペインで**「デプロイメント履歴」**をクリックすると、インスタンスのデプロイメント履歴が表示されます。
 
-表 4. NetApp ONTAP Select インスタンスのデプロイメント履歴
-
 | 項目        | 説明       |  
 |:------------|:------------- |
 | 日付 | インスタンスの状況が変更された日時 |
 | サマリー | 変更の詳細 |
+{: caption="表 4. NetApp ONTAP Select インスタンスのデプロイメント履歴" caption-side="top"}
 
 インスタンスのデプロイメント中またはインスタンスの削除中にエラーが発生した場合、{{site.data.keyword.cloud_notm}} サポート・チームに自動的に通知されます。 チケットの状況については、[IBM サポートにお問い合わせください](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)。
 
@@ -113,54 +110,20 @@ subcollection: vmware-solutions
 1. 左側のナビゲーション・ペインの**「インフラストラクチャー」**をクリックします。
 2. **「クラスター」**の下で、NetApp ONTAP Select クラスターに関するサマリーを確認します。
 
-	表 5. NetApp ONTAP Select クラスターの項目
-
-	 <table>
-	   <tr>
-	     <th>項目</th>
-	     <th>説明</th>
-	   </tr>
-	   <tr>
-	     <td>名前</td>
-	     <td>クラスターの名前。</td>
-	   </tr>
-	   <tr>
-	     <td>ESXi サーバー</td>
-	     <td>クラスター内の ESXi サーバーの数。</td>
-	   </tr>
-	   <tr>
-	      <td>CPU</td>
-	      <td>クラスター内の ESXi サーバーの CPU 仕様。</td>
-	   </tr>
-	   <tr>
-	      <td>Effective storage</td>
-	      <td>クラスター内の ESXi サーバーの合計ディスク容量。</td>
-	   </tr>
-	   <tr>
-	      <td>メモリー</td>
-	      <td>クラスター内の ESXi サーバーの合計メモリー・サイズ。</td>
-	   </tr>
-	   <tr>
-	      <td>データ・センターの場所</td>
-	      <td>クラスターがホストされるデータ・センター。 インスタンスのデータ・センターの場所と同じです。</td>
-	   </tr>
-		 <tr>
-		   <td>ポッド</td>
-			 <td>クラスターが作成されるポッド。</td>
-		 </tr>
-		 <tr>
-		  <td>状況</td>
-			<td>クラスターの状況。 状況は、以下のいずれかの値になります。<ul><li>初期化中: クラスターは作成され、構成されています。</li><li>変更中: クラスターは変更されています。</li><li>使用可能: クラスターは使用可能です。</li></ul></td>
-		 </tr>
-		 <tr>
-		  <td>アクション</td>
-			<td>クラスターを削除するには、**「削除」**アイコンをクリックします。</td>
-		 </tr>
-	 </table>
+| 項目 | 説明 |
+|:---- | :-----------|
+| 名前 | クラスターの名前。 |
+| ESXi サーバー | クラスター内の ESXi サーバーの数。 |
+| CPU | クラスター内の ESXi サーバーの CPU 仕様。 |
+| Effective storage | クラスター内の ESXi サーバーの合計ディスク容量。 |
+| メモリー | クラスター内の ESXi サーバーの合計メモリー・サイズ。 |
+| データ・センターの場所 | クラスターがホストされるデータ・センター。 インスタンスのデータ・センターの場所と同じです。 |
+| ポッド | クラスターが作成されるポッド。 |
+| 状況 | クラスターの状況。 状況は、以下のいずれかの値になります。<br>初期化中: クラスターは作成され、構成されています。<br>変更中: クラスターは変更されています。<br>使用可能: クラスターは使用可能です。 |
+| アクション | クラスターを削除するには、**「削除」**アイコンをクリックします。 |
+{: caption="表 5. NetApp ONTAP Select クラスターの項目" caption-side="top"}
 
 3. クラスター名をクリックして、その ESXi サーバーの詳細を表示します。
-
-表 6. NetApp ONTAP Select クラスターの ESXi サーバーの詳細
 
 | 項目        | 説明       |  
 |:------------|:----------------- |
@@ -169,6 +132,7 @@ subcollection: vmware-solutions
 | 資格情報 | ESXi サーバーにアクセスするために使用するユーザー名とパスワード。 |
 | プライベート IP | ESXi サーバーのプライベート IP アドレス。 |
 | 状況 | ESXi サーバーの状況。次の値のいずれかになります。<ul><li>アクティブ: ESXi サーバーを使用する準備ができています。</li><li>削除中: ESXi サーバーが削除されています。</li></ul> |
+{: caption="表 6. NetApp ONTAP Select クラスターの ESXi サーバーの詳細" caption-side="top"}
 
 ## 次に行うこと
 {: #np_viewinginstances-next}
@@ -181,7 +145,7 @@ subcollection: vmware-solutions
 ログイン手順を実行するには、以下のトピックを参照してください。
 
 *  vSphere Web Client にアクセスするための要件と必要な手順については、[Timeout reached while connecting to the vSphere Web Client](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_timeout_vc_console) を参照してください。
-*  VPN を使用して {{site.data.keyword.cloud_notm}} インフラストラクチャーのプライベート・ネットワークにログインするためのアクセス・ポイントのリストについては、[VPN アクセス](http://www.softlayer.com/vpn-access){:new_window}を参照してください。
+*  VPN を使用して {{site.data.keyword.cloud_notm}} インフラストラクチャーのプライベート・ネットワークにログインするためのアクセス・ポイントのリストについては、[VPN アクセス](http://www.softlayer.com/vpn-access){: external}を参照してください。
 *  vSphere Web Client を使用して OVF (Open Virtualization Format) ファイルをデプロイする際に問題が発生した場合は、[vSphere Web Client を使用して OVF ファイルをデプロイする方法](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_deploy_ovf)を参照してください。
 
 ## 関連リンク
@@ -189,4 +153,4 @@ subcollection: vmware-solutions
 
 * [NetApp ONTAP Select インスタンスの注文](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)
 * [NetApp ONTAP Select インスタンスの削除](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_deletinginstance)
-* [Attach dedicated storage to NetApp ONTAP Select deployments](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)
+* [Attach dedicated storage to NetApp ONTAP Select deployments](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/){: external}

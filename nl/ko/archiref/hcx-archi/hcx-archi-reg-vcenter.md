@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-06-27"
 
 subcollection: vmware-solutions
 
@@ -23,7 +23,7 @@ VMware vSphere Web Client에 하이브리드 클라우드 서비스 플러그인
 ## vCenter에 HCX Manager를 등록하는 프로시저
 {: #hcx-archi-reg-vcenter-proc-register}
 
-1. 하이브리드 클라우드 서비스 서비스 가상 어플라이언스에 로그인하십시오.
+1. 하이브리드 클라우드 서비스의 서비스 가상 어플라이언스에 로그인하십시오. 예를 들어, `https:My-HCX-Manager:9443/`입니다.
 2. **설정 관리** 타일을 클릭하십시오.
   1. 왼쪽 분할창의 **시스템 구성**에서 vCenter를 선택하십시오.
   2. 오른쪽 상단의 **vCenter 추가**를 클릭하십시오.

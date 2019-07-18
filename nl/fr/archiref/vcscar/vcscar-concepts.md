@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -22,7 +22,7 @@ Un aspect essentiel de Skate Advisor concerne les conversations possibles avec l
 Le langage du skateur est au coeur du système et il est utilisé de la façon suivante :
 * Reconnaissance de trick : utilisé par Watson Discovery pour ingérer des documents à partir de sources en ligne afin de reconnaître des tricks existants et les mapper à des documents source.
 * Conversations sur le skate : utilisé par l'agent conversationnel pour avoir de vraies conversations avec l'utilisateur système.
-* Classification de trick : stocker et classifier un trick en fonction de son descriptif. Les tricks classifiés de cette façon peuvent se voir associer des métadonnées, telles que des références de lieu et de vidéo.
+* Classification de trick : stocker et classifier un trick en fonction de son descriptif. Des métadonnées, telles que des références d'emplacement et de vidéo, peuvent être associées aux tricks qui sont classifiés. 
 
 ## Eléments de langage
 {: #vcscar-concepts-lang-elem}

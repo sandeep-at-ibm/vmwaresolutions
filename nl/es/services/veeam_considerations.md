@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: Veeam, Veeam install, tech specs Veeam
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -47,9 +48,9 @@ Los siguientes componentes se solicitan y se incluyen en el servicio Veeam on {{
 * Rendimiento del almacenamiento (0,25, 2 o 4 IOPS/GB)
 
 Como parte de la instalación y configuración del servicio Veeam, se crean los repositorios siguientes:
-* Para los archivos de copia de seguridad de configuración de Veeam: un repositorio denominado `Repositorio de copia de seguridad de configuración predeterminado de IC4V`. La vía de acceso a la carpeta en la que se almacenan las copias de seguridad de Veeam es ` <Unidad>: \ConfigBackup\`. 
-* Para el escalado, un repositorio denominado `IC4V Scale-Out Repository`. Para obtener más información, consulte [Añadir un repositorio de escalado](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icos_ordering#icos_ordering-scale-repo). 
-* Para las copias de seguridad de máquina virtual (MV): un repositorio denominado ``Repositorio de copias seguridad de MV predeterminado de IC4V``. La vía de acceso a la carpeta donde se almacenan las copias de seguridad de la máquina virtual es ``<Unidad>:\VMBackup\`. Este repositorio se añade como extensión al ``Repositorio de escalado de IC4V `. 
+* Para los archivos de copia de seguridad de configuración de Veeam: un repositorio denominado `Repositorio de copia de seguridad de configuración predeterminado de IC4V`. La vía de acceso a la carpeta en la que se almacenan las copias de seguridad de Veeam es ` <Unidad>: \ConfigBackup\`.
+* Para el escalado, un repositorio denominado `IC4V Scale-Out Repository`. Para obtener más información, consulte [Añadir un repositorio de escalado](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icos_ordering#icos_ordering-scale-repo).
+* Para las copias de seguridad de máquina virtual (MV): un repositorio denominado ``Repositorio de copias seguridad de MV predeterminado de IC4V``. La vía de acceso a la carpeta donde se almacenan las copias de seguridad de la máquina virtual es ``<Unidad>:\VMBackup\`. Este repositorio se añade como extensión al ``Repositorio de escalado de IC4V `.
 
 ### Redes
 {: #veeam_considerations-specs-networking}
@@ -76,8 +77,7 @@ La eliminación del servicio Veeam on {{site.data.keyword.cloud_notm}} detiene t
 
 * [Solicitud de Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_ordering)
 * [Gestión de Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
-* [Solicitud de servicios gestionados para Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
-* [Cómo ponerse en contacto con el equipo de soporte de IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [Servicios gestionados para Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
 * [Preguntas frecuentes](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Sitio web de Veeam](https://www.veeam.com/){:new_window}
-* [Centro de ayuda de Veeam](https://www.veeam.com/documentation-guides-datasheets.html){:new_window}
+* [Sitio web de Veeam](https://www.veeam.com/){:external}
+* [Centro de ayuda de Veeam](https://www.veeam.com/documentation-guides-datasheets.html){:external}

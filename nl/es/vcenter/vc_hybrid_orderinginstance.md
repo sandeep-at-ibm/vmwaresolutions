@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-19"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server Hybridity order instance, order vCenter Server Hybridity, order Hybridity
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -30,15 +31,14 @@ Asegúrese de haber realizado las tareas siguientes:
 *  Ha revisado la información de [Requisitos y planificación para vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning).
 * Ha revisado el formato del nombre de dominio e instancia. El nombre de dominio y la etiqueta de subdominio se utilizan para generar el nombre de usuario y los nombres de servidor de la instancia.
 
-Tabla 1. Formato del valor de nombres de instancia y de dominio
-
 | Nombre        | Formato del valor      |
-  |:------------- |:------------- |
-  | Nombre de dominio | `<root_domain>` |  
-  | Nombre usuario inicio sesión vCenter Server | `<user_id>@<root_domain>` (usuario de Microsoft Active Directory) o `administrator@vsphere.local` |
-  | vCenter Server (con PSC incorporado) FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. La longitud máxima es de 50 caracteres. |
-  | Nombre sitio inicio sesión único (SSO) | `<subdomain_label>` |
-  | Nombre completo de servidor ESXi | `<host_prefix><n>.<subdomain_label>.<root_domain>`, donde `<n>` es la secuencia del servidor ESXi. La longitud máxima es de 50 caracteres. |
+|:------------- |:------------- |
+| Nombre de dominio | `<root_domain>` |  
+| Nombre usuario inicio sesión vCenter Server | `<user_id>@<root_domain>` (usuario de Microsoft Active Directory) o `administrator@vsphere.local` |
+| vCenter Server (con PSC incorporado) FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. La longitud máxima es de 50 caracteres. |
+| Nombre sitio inicio sesión único (SSO) | `<subdomain_label>` |
+| Nombre completo de servidor ESXi | `<host_prefix><n>.<subdomain_label>.<root_domain>`, donde `<n>` es la secuencia del servidor ESXi. La longitud máxima es de 50 caracteres. |
+{: caption="Tabla 1. Formato del valor de nombres de instancia y de dominio" caption-side="top"}
 
 No modifique ningún valor definido durante la solicitud o el despliegue de la instancia. Hacerlo puede hacer que la instancia se vuelva inutilizable. Por ejemplo, si se cierra la red pública, si los servidores y las Instancias de servidor virtual (VSI) se mueven detrás de una media disposición de Vyatta, o si el VSI de IBM CloudBuilder se detiene o se suprime.
 {:important}
@@ -103,25 +103,23 @@ Seleccione el {{site.data.keyword.CloudDataCent_notm}} en el que se alojará la 
 
 Si selecciona **Skylake**, puede elegir la combinación de CPU y RAM del servidor nativo que se ajuste a sus necesidades.
 
-Tabla 2. Opciones para {{site.data.keyword.baremetal_short}} Skylake
-
 | Opciones de modelo de CPU        | Opciones de RAM       |
 |:------------- |:------------- |
 | Procesador Dual Intel Xeon Silver 4110 / 16 núcleos en total, 2,1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Procesador Dual Intel Xeon Gold 5120 / 28 núcleos en total, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon Gold Procesador 6140 / 36 núcleos en total, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+{: caption="Tabla 2. Opciones para {{site.data.keyword.baremetal_short}} Skylake" caption-side="top"}
 
 ### Broadwell
 {: #vc_hybrid_orderinginstance-broadwell}
 
 Si selecciona **Broadwell**, puede elegir la combinación de CPU y RAM del servidor nativo que se ajuste a sus necesidades.
 
-Tabla 3. Opciones para {{site.data.keyword.baremetal_short}} Broadwell
-
 | Opciones de modelo de CPU        | Opciones de RAM       |
 |:------------- |:------------- |
 | Quad Intel Xeon E7-4820 v4 / 40 núcleos en total, 2,0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 núcleos en total, 2,1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+{: caption="Tabla 3. Opciones para {{site.data.keyword.baremetal_short}} Broadwell" caption-side="top"}
 
 ### Número de servidores nativos
 {: #vc_hybrid_orderinginstance-bare-metal-number}
@@ -162,7 +160,7 @@ La etiqueta de subdominio debe cumplir los siguientes requisitos:
 * Solo se permiten caracteres alfanuméricos y el guión (-).
 * La etiqueta de subdominio debe empezar por un carácter alfabético y terminar por un carácter alfanumérico.
 * La longitud máxima de la etiqueta de subdominio es de 10 caracteres.
-* La etiqueta de subdominio debe ser exclusiva dentro de todas las instancias de su configuración multisitio. 
+* La etiqueta de subdominio debe ser exclusiva dentro de todas las instancias de su configuración multisitio.
 
 ### Nombre de dominio
 {: #vc_hybrid_orderinginstance-domain-name}
@@ -217,13 +215,14 @@ Seleccione la configuración de DNS (sistema de nombres de dominio) para la inst
 * **Una sola VSI pública de Windows para Active Directory/DNS**: Se despliega y se puede consultar una sola VSI de Microsoft Windows Server para Microsoft Active Directory (AD), que funciona como DNS para la instancia en la que se han registrado los hosts y VM.
 * **Dos VM dedicadas y altamente disponibles de Windows Server en el clúster de gestión**: Se despliegan dos VM Microsoft Windows, que ayudan a mejorar la seguridad y la solidez.
 
-Debe proporcionar dos licencias de Microsoft Windows Server 2016 Standard Edition si configura la instancia de modo que utilice las dos máquinas virtuales Microsoft Windows. {:important}
+Debe proporcionar dos licencias de Microsoft Windows Server 2016 Standard Edition si configura la instancia de modo que utilice las dos máquinas virtuales Microsoft Windows.
+{:important}
 
 Cada licencia solo se puede asignar a un solo servidor físico y cubre un máximo de dos procesadores físicos. Una licencia de Standard Edition puede ejecutar dos VM Microsoft Windows virtualizadas por servidor de 2 procesadores. Por lo tanto, se necesitan dos licencias, ya que se despliegan dos VM Microsoft Windows en dos hosts distintos.
 
 Tiene 30 días para activar las VM.
 
-Para obtener más información sobre cómo solicitar licencias de Windows Server 2016, consulte [Iniciación a Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:new_window}.
+Para obtener más información sobre cómo solicitar licencias de Windows Server 2016, consulte [Iniciación a Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:external}.
 
 ## Valores de servicios
 {: #vc_hybrid_orderinginstance-addon-services}
@@ -233,14 +232,14 @@ Cuando solicite una instancia de vCenter Server con el paquete híbrido (Hybridi
 ## Resumen del pedido
 {: #vc_hybrid_orderinginstance-order-summary}
 
-En función de la configuración seleccionada para la instancia y los servicios de complementos, el coste estimado se genera y se muestra al instante en el panel **Resumen de pedido** de la derecha. Pulse **Detalle de precios** para generar un documento PDF con el resumen de coste de los recursos de {{site.data.keyword.vmwaresolutions_short}}. 
+En función de la configuración seleccionada para la instancia y los servicios de complementos, el coste estimado se genera y se muestra al instante en el panel **Resumen de pedido** de la derecha. Pulse **Detalle de precios** para generar un documento PDF con el resumen de coste de los recursos de {{site.data.keyword.vmwaresolutions_short}}.
 
-También puede añadir los recursos suministrados a la herramienta de estimación {{site.data.keyword.cloud_notm}}, pulsando **Añadir a estimación**. Esto es útil si desea estimar el coste de los recursos estimare {{site.data.keyword.vmwaresolutions_short}} seleccionados junto con otros recursos de {{site.data.keyword.cloud_notm}} que le podría interesar adquirir. 
+También puede añadir los recursos suministrados a la herramienta de estimación {{site.data.keyword.cloud_notm}}, pulsando **Añadir a estimación**. Esto es útil si desea estimar el coste de los recursos estimare {{site.data.keyword.vmwaresolutions_short}} seleccionados junto con otros recursos de {{site.data.keyword.cloud_notm}} que le podría interesar adquirir.
 
 ## Procedimiento para solicitar instancias de vCenter Server con el paquete híbrido (Hybridity)
 {: #vc_hybrid_orderinginstance-procedure}
 
-1. Desde el catálogo de {{site.data.keyword.cloud_notm}}, pulse **VMware** desde el panel de navegación de la izquierda y, a continuación, pulse **vCenter Server** en la sección **Centros de datos virtuales**.
+1. En el catálogo de {{site.data.keyword.cloud_notm}}, pulse el icono **VMware** del panel de navegación de la izquierda y, a continuación, pulse la tarjeta **VMware vCenter Server on IBM Cloud** en la sección **Centros de datos virtuales de VMware**.
 2. En la página **VMware vCenter Server on IBM Cloud**, pulse la tarjeta **vCenter Server con el paquete híbrido (Hybridity)** y pulse **Crear**.
 3. En la página **vCenter Server**, escriba el nombre de la instancia.
 5. Seleccione la versión de vSphere.
@@ -275,7 +274,7 @@ Para obtener más información sobre cómo proporcionar valores para un servicio
 ## Resultados después de solicitar instancias de vCenter Server with Hybridity Bundle
 {: #vc_hybrid_orderinginstance-results}
 
-* El despliegue de la instancia se inicia automáticamente y se recibe la confirmación de que el pedido se está procesando. Puede comprobar el estado de despliegue, incluidos los problemas que puedan requerir su atención, mediante la visualización de la sección **Historial de despliegue** de los detalles de la instancia. 
+* El despliegue de la instancia se inicia automáticamente y se recibe la confirmación de que el pedido se está procesando. Puede comprobar el estado de despliegue, incluidos los problemas que puedan requerir su atención, mediante la visualización de la sección **Historial de despliegue** de los detalles de la instancia.
 * Cuando la instancia se haya desplegado correctamente, los componentes que se describen en [Especificaciones técnicas para las instancias de vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#specs) se instalan en la plataforma virtual de VMware. Los servidores ESXi que ha solicitado se agrupan de forma predeterminada como **cluster1**. Si ha solicitado servicios adicionales, el despliegue de los servicios se inicia después de que se haya completado el pedido.
 * Cuando la instancia esté lista para ser utilizada, el estado de la instancia pasará a ser **Listo para su uso** y recibirá una notificación por correo electrónico.
 * Cuando se solicita una instancia secundaria, es posible que el cliente web de VMware vSphere para la instancia primaria (enlazada a la secundaria) se rearranque cuando finalice el pedido de la instancia secundaria.

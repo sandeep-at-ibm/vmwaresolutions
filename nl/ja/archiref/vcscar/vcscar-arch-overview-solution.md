@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -138,7 +138,7 @@ CAM が機能するためには、ワーカー・ノードの vCPU とメモリ�
 ### CAM プロキシー
 {: #vcscar-arch-overview-solution-cam-proxy}
 
-CAM への nginx プロキシー・アクセスを提供します。
+CAM への `nginx` プロキシー・アクセスを提供します。
 
 ### CAM ユーザー・インターフェース
 {: #vcscar-arch-overview-solution-cam-ui}

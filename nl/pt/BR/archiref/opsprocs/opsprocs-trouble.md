@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-07"
+lastupdated: "2019-07-01"
 
 ---
 
@@ -129,7 +129,7 @@ Tabela 4. Resolução de problemas de rede típica
 | Título | Descrição |
 |---|---|
 |  NSX Edge /var/log está ficando cheio no Edge ativo | Para obter informações sobre uma solução alternativa se você foi alertado sobre o disco do Edge estar enchendo e descobriu que a partição /var/log também está ficando cheia, consulte [O NSX Edge /var/log está ficando cheio no Edge ativo (50108355)](https://kb.vmware.com/s/article/50108355){:new_window}.  |
-| Testando a largura da banda do HCX  | Para obter informações sobre como usar `perftest` para localizar largura de banda disponível nos túneis HCX, caso você ache que há um problema de largura de banda de rede com o HCX, consulte [Etapas para executar perftest no HCX (56211)](https://kb.vmware.com/s/article/56211?lang=en_US){:new_window}. São executados testes bidirecionais para cada `perftest`. Para o par de gateways, um está dentro do data center de origem, chamado OnPrem, e o outro está no {{site.data.keyword.cloud_notm}}. A maneira com que o rendimento do `perftest` funciona é fazer com que o emissor tente enviar o mais rápido que o link possa sustentar. Portanto, para cada teste, você vê taxa do "emissor" maior que taxa do "receptor". É possível considerar o valor da taxa do "receptor" como um resultado de rendimento unidirecional. |
+| Testando a largura da banda do HCX  | Para obter informações sobre como usar `perftest` para localizar largura de banda disponível nos túneis HCX, caso você ache que há um problema de largura de banda de rede com o HCX, consulte [Etapas para executar perftest no HCX (56211)](https://kb.vmware.com/s/article/56211?lang=en_US){:new_window}. São executados testes bidirecionais para cada `perftest`. Para o par de gateways, um está dentro do data center de origem, chamado OnPrem, e o outro está no {{site.data.keyword.cloud_notm}}. A maneira com que o rendimento do `perftest` funciona é fazer com que o emissor tente enviar o mais rápido que o link possa sustentar. Portanto, para cada teste, você vê uma taxa de "remetente" mais alta do que a taxa de "destinatário". É possível considerar o valor da taxa de "destinatário" como um resultado de rendimento unidirecional. |
 | Resolução de problemas do HCX | Para obter mais informações, consulte [Resolução de problemas do HCX](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-troubleshooting). |
 | Estado de sincronização do HCX com 0% de progresso e 0 bytes com Erro de status | Para obter mais informações, consulte [A replicação do HCX está no estado de Sincronização com 0% de progresso e 0 bytes com Erro de status (56710)](https://kb.vmware.com/s/article/56710?lang=en_US#q=HCX){:new_window}. |
 | Desempenho ruim da rede da VM | Revise as configurações de NIC virtual da VM. O VMware recomenda 3 NICs virtuais VMXNET para VMs, uma vez que é a geração mais recente de NICs paravirtualizadas projetadas para desempenho. Verifique a compatibilidade do VMXNET 3 usando a lista de compatibilidade do VMware e, se suportado, mude o NIC virtual para obter desempenho de rede adicional. Para obter mais informações, consulte [Resolução de problemas de rede](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.networking.doc/GUID-217384C2-B361-471D-90C8-BC2676A0ECA6.html){:new_window}. |

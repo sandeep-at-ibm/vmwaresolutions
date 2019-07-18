@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-19"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server order instance, order vCenter Server, order vCenter Server instance
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -30,15 +31,14 @@ Assicurati di aver completato le seguenti attività:
 * Hai esaminato le informazioni in [Requisiti e pianificazione per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning).
 * Hai esaminato il formato del nome di istanza e di dominio. Il nome del dominio e l'etichetta del dominio secondario vengono utilizzati per generare il nome utente e i nomi server dell'istanza.
 
-Tabella 1. Formato del valore per i nomi di istanza e di dominio
-
 | Nome        | Formato del valore      |
-  |:------------|:------------ |
-  | Nome dominio | `<root_domain>` |  
-  | Nome utente di accesso vCenter Server | `<user_id>@<root_domain>` (Microsoft Active Directory user) o `administrator@vsphere.local` |
-  | Dome di dominio completo vCenter Server (con PSC integrato) | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. La lunghezza massima è di 50 caratteri. |
-  | Nome del sito SSO (Single Sign-On) | `<subdomain_label>` |
-  | Nome completo server ESXi | `<host_prefix><n>.<subdomain_label>.<root_domain>`, dove `<n>` è la sequenza del server ESXi. La lunghezza massima è di 50 caratteri. |
+|:------------|:------------ |
+| Nome dominio | `<root_domain>` |  
+| Nome utente di accesso vCenter Server | `<user_id>@<root_domain>` (Microsoft Active Directory user) o `administrator@vsphere.local` |
+| Dome di dominio completo vCenter Server (con PSC integrato) | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. La lunghezza massima è di 50 caratteri. |
+| Nome del sito SSO (Single Sign-On) | `<subdomain_label>` |
+| Nome completo server ESXi | `<host_prefix><n>.<subdomain_label>.<root_domain>`, dove `<n>` è la sequenza del server ESXi. La lunghezza massima è di 50 caratteri. |
+{: caption="Tabella 1. Formato del valore per i nomi di istanza e di dominio" caption-side="top"}
 
 Non modificare alcun valore impostato durante l'ordine o la distribuzione dell'istanza. La modifica può rendere inutilizzabile la tua istanza. Ad esempio, se la rete pubblica si interrompe, se i server e le VSI (Virtual Server Instance) vanno dietro una fornitura media di Vyatta o se la VSI di IBM CloudBuilder si arresta o viene eliminata.
 {:important}
@@ -106,13 +106,12 @@ Seleziona il {{site.data.keyword.CloudDataCent_notm}} in cui deve essere ospitat
 
 Se selezioni **Skylake**, puoi scegliere la combinazione di CPU e RAM del Bare Metal Server in base alle tue esigenze.
 
-Tabella 2. Opzioni per Skylake {{site.data.keyword.baremetal_short}}
-
 | Opzioni del modello CPU        | Opzioni RAM       |
 |:------------- |:------------- |
 | Processore Dual Intel Xeon Silver 4110 / 16 core totali, 2,1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Processore Dual Intel Xeon Gold 5120 / 28 core totali, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+{: caption="Tabella 2. Opzioni per Skylake {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 ### Certificato SAP
 {: #vc_orderinginstance-sap}
@@ -133,19 +132,18 @@ In base ai tuoi requisiti, seleziona una configurazione di Bare Metal Server:
 
 Se selezioni **Broadwell**, puoi scegliere la combinazione di CPU e RAM del Bare Metal Server in base alle tue esigenze.
 
-Tabella 3. Opzioni per Broadwell {{site.data.keyword.baremetal_short}}
-
 | Opzioni del modello CPU        | Opzioni RAM       |
 |:------------- |:------------- |
 | Quad Intel Xeon E7-4820 v4 / 40 core totali, 2,0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 core totali, 2,1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+{: caption="Tabella 3. Opzioni per Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 ### Numero di server Bare Metal
 {: #vc_orderinginstance-bare-metal-number}
 
 * Tutti i server che ordini hanno la stessa configurazione.
 * Se intendi utilizzare l'archiviazione vSAN, puoi ordinare da 4 a 20 server.
-* Se intendi utilizzare l'archiviazione NFS, puoi ordinare da 2 a 20 server.Tuttavia, per i carichi di lavoro di produzione, ti consigliamo un numero minimo di tre server. Per ulteriori informazioni, vedi [Un'istanza vCenter Server a due nodi è altamente disponibile?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)
+* Se intendi utilizzare l'archiviazione NFS, puoi ordinare da 2 a 20 server. Tuttavia, per i carichi di lavoro di produzione, ti consigliamo un numero minimo di tre server. Per ulteriori informazioni, vedi [Un'istanza vCenter Server a due nodi è altamente disponibile?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ## Impostazioni di archiviazione
 {: #vc_orderinginstance-storage-settings}
@@ -183,14 +181,15 @@ Il numero di condivisioni file deve essere compreso tra 1 e 32.
 * **Dimensione (GB)**: seleziona la capacità che soddisfa le tue esigenze di archiviazione condivisa.
 * **Aggiungi storage condiviso**: seleziona questa opzione per aggiungere singole condivisioni file che utilizzano impostazioni di configurazione diverse.
 
-Tabella 4. Opzioni del livello di prestazioni NFS
+Scegli le opzioni del livello di prestazioni in base alle tue esigenze.
 
 | Opzione        | Dettagli       |
-  |:------------- |:------------- |
-  | 0,25 IOPS/GB | Questa opzione è progettata per i carichi di lavoro che non vengono utilizzati spesso. Applicazioni di esempio includono: dati archiviati, hosting di database di grandi dimensioni con dati legacy o immagini di dischi virtuali del sistema di memoria virtuale come backup. |
-  | 2 IOPS/GB | Questa opzione è progettata per i carichi di lavoro più generici. Applicazioni di esempio includono: hosting di piccoli database, backup di applicazioni web o immagini disco di VM (Virtual Machine) per un hypervisor. |
-  | 4 IOPS/GB | Questa opzione è progettata per i carichi di lavoro ad alta intensità che hanno un'alta percentuale di dati attivi alla volta. Applicazioni di esempio includono: database transazionali. |
-  | 10 IOPS/GB | Questa opzione è progettata per i tipi di carichi di lavoro più impegnativi, come l'analisi. Applicazioni di esempio includono: database ad alte transazioni e altri database sensibili alle prestazioni. Questo livello di prestazioni è limitato a una capacità massima di 4 TB per condivisione file. |
+|:------------- |:------------- |
+| 0,25 IOPS/GB | Questa opzione è progettata per i carichi di lavoro che non vengono utilizzati spesso. Applicazioni di esempio includono: dati archiviati, hosting di database di grandi dimensioni con dati legacy o immagini di dischi virtuali del sistema di memoria virtuale come backup. |
+| 2 IOPS/GB | Questa opzione è progettata per i carichi di lavoro più generici. Applicazioni di esempio includono: hosting di piccoli database, backup di applicazioni web o immagini disco di macchine virtuali per un hypervisor. |
+| 4 IOPS/GB | Questa opzione è progettata per i carichi di lavoro ad alta intensità che hanno un'alta percentuale di dati attivi alla volta. Applicazioni di esempio includono: database transazionali. |
+| 10 IOPS/GB | Questa opzione è progettata per i tipi di carichi di lavoro più impegnativi, come l'analisi. Applicazioni di esempio includono: database ad alte transazioni e altri database sensibili alle prestazioni. Questo livello di prestazioni è limitato a una capacità massima di 4 TB per condivisione file. |
+{: caption="Tabella 4. Opzioni del livello di prestazioni NFS" caption-side="top"}
 
 ### Dischi locali
 {: #vc_orderinginstance-local-disks}
@@ -288,7 +287,7 @@ Ogni licenza può essere assegnata solo a un singolo server fisico e comprende f
 
 Hai 30 giorni per attivare le VM.
 
-Per ulteriori informazioni su come ordinare le licenze Windows Server 2016, vedi [Get started with Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:new_window}.
+Per ulteriori informazioni su come ordinare le licenze Windows Server 2016, vedi [Get started with Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:external}.
 
 ## Impostazioni dei servizi
 {: #vc_orderinginstance-addon-services}
@@ -305,7 +304,7 @@ Puoi anche aggiungere le risorse di cui è stato eseguito il provisioning allo s
 ## Procedura per ordinare le istanze vCenter Server
 {: #vc_orderinginstance-procedure}
 
-1. Dal catalogo {{site.data.keyword.cloud_notm}}, fai clic su **VMware** nel riquadro di navigazione a sinistra e quindi su **vCenter Server** nella sezione **Data center virtuali**.
+1. Dal catalogo {{site.data.keyword.cloud_notm}}, fai clic sull'icona **VMware** nel riquadro di navigazione a sinistra e quindi sulla scheda **VMware vCenter Server on IBM Cloud** nella sezione **VMware Virtual Data Centers**.
 2. Nella pagina **VMware vCenter Server on IBM Cloud**, fai clic sulla scheda **vCenter Server** e quindi su **Crea**.
 3. Nella pagina **vCenter Server**, immetti il nome dell'istanza.
 5. Seleziona la versione di vSphere.

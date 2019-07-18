@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -29,7 +29,7 @@ Skate Advisor는 구조화된 방식으로 시스템과 상호작용하기 위�
 
 Skate Advisor의 핵심 데이터 요소는 트릭입니다. 트릭 언어는 트릭을 고유하게 정의합니다. 이 언어를 사용하여 다음 태스크를 완료할 수 있습니다.
 - 트릭에 대하여 챗봇과 대화를 나누십시오.
-- Watson Discovery를 통해 트릭을 검색하십시오.
+- Watson Discovery를 사용하여 트릭을 검색하십시오.
 - 소스 문서를 통해 Watson Discovery를 훈련할 때 트릭을 식별하고 분류하십시오.
 - 위치와 매체 표시 목적으로 트릭을 식별하십시오.
 
@@ -84,15 +84,15 @@ Skate Advisor의 핵심 데이터 요소는 트릭입니다. 트릭 언어는 �
 단계 |설명
 ---|---
 1 | 유효한 대화를 초기화하고 Conversation Streams의 섹션을 참조하십시오.
-2 | 챗봇이 음성을 Speech to Text 서비스로 보냅니다.
-3 | Speech to Text service가 텍스트를 챗봇으로 보냅니다.
+2 | 챗봇이 음성을 음성-문자 변환 서비스로 보냅니다.
+3 | 음성-문자 변환 서비스가 텍스트를 챗봇으로 보냅니다.
 4 | 챗봇이 텍스트 조회를 Skate Advisor로 보냅니다.
 5 | Skate Advisor가 요청을 평가하여 Watson Assistant로 보냅니다.
 6 | Watson Assistant가 요청을 분류하고 수행할 조치를 Skate Advisor로 보내 응답합니다.
 7 | Skate Advisor가 Discovery Service에서 데이터 세트를 요청합니다.
 8 | Discovery Service가 조회를 평가하고 응답을 보냅니다.
 9 |Skate Advisor가 응답을 만들어 챗봇에 텍스트로 보냅니다.
-10 | 챗봇이 텍스트 응답을 Text To Speech 서비스로 보냅니다.
+10 | 챗봇이 텍스트 응답을 문자-음성 변환 서비스로 보냅니다.
 11 | 챗봇을 통해 결과가 사용자에게 전송됩니다.
 
 ### 동영상 렌더링

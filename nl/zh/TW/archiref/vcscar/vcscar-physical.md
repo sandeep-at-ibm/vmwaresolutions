@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -132,7 +132,7 @@ Acme Skate Advisor 位於 {{site.data.keyword.cloud_notm}}，因此是「架構�
 
 此圖代表 vCenter Server 實例上所部署的 {{site.data.keyword.icpfull_notm}} 及 CAM，以及與內部部署 vCenter 及 {{site.data.keyword.containerlong_notm}} 服務的連線。使用 CAM，系統管理者及開發人員可以將虛擬機器部署至內部部署或 vCenter Server 實例，以及將容器部署至 {{site.data.keyword.icpfull_notm}} 及 {{site.data.keyword.containerlong_notm}} 叢集。
 
-在圖表中，CAM 邏輯地建立與 vCenter、雲端提供者以及 {{site.data.keyword.icpfull_notm}} 和 {{site.data.keyword.containerlong_notm}} 環境的雲端連線。「{{site.data.keyword.icpfull_notm}} 叢集」部署至每個資料中心/雲端環境，並由 MCM 提供將 {{site.data.keyword.icpfull_notm}} 叢集連接至單一管理視圖的機制。
+在圖表中，CAM 邏輯地建立與 vCenter、雲端提供者以及 {{site.data.keyword.icpfull_notm}} 和 {{site.data.keyword.containerlong_notm}} 環境的雲端連線。「{{site.data.keyword.icpfull_notm}} 叢集」部署至每個資料中心或雲端環境，並由 MCM 提供將 {{site.data.keyword.icpfull_notm}} 叢集連接至單一管理視圖的機制。
 
 ## 相關鏈結
 {: #vcscar-physical-related}

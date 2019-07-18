@@ -45,9 +45,9 @@ subcollection: vmware-solutions
 {: #useraccount-set-cred}
 
 1. {{site.data.keyword.vmwaresolutions_short}} 콘솔의 왼쪽 탐색 분할창에서 **설정**을 클릭하십시오.
-2. **IBM Cloud 인프라 인증 정보** 영역에서 수행해야 하는 단계에 대한 정보를 검토하십시오. 
-3. 링크된 {{site.data.keyword.cloud_notm}} 인프라 계정 및 {{site.data.keyword.cloud_notm}} 계정이 있는 경우 **검색**을 클릭하여 인증 정보를 자동으로 완료하십시오. 
-4. 링크되지 않은 {{site.data.keyword.cloud_notm}} 인프라 계정 및 {{site.data.keyword.cloud_notm}} 계정이 있는 경우 링크해야 합니다. [IBM ID 계정 링크](/docs/account?topic=account-unifyingaccounts#link_accounts)의 지시사항을 따른 후 **검색**을 클릭하여 인증 정보를 자동으로 완료하십시오. 
+2. **IBM Cloud 인프라 인증 정보** 영역에서 수행해야 하는 단계에 대한 정보를 검토하십시오.
+3. 링크된 {{site.data.keyword.cloud_notm}} 인프라 계정 및 {{site.data.keyword.cloud_notm}} 계정이 있는 경우 **검색**을 클릭하여 인증 정보를 자동으로 완료하십시오.
+4. 링크되지 않은 {{site.data.keyword.cloud_notm}} 인프라 계정 및 {{site.data.keyword.cloud_notm}} 계정이 있는 경우 링크해야 합니다. [IBM ID 계정 링크](/docs/account?topic=account-unifyingaccounts#link_accounts)의 지시사항을 따른 후 **검색**을 클릭하여 인증 정보를 자동으로 완료하십시오.
 5. {{site.data.keyword.cloud_notm}} 인프라 계정이 없고 청구 가능 {{site.data.keyword.cloud_notm}} 계정이 없는 경우 먼저 [계정 업그레이드](/docs/account?topic=account-upgrading-account)를 수행한 후 [클래식 인프라 API 키를 작성](/docs/iam?topic=iam-classic_keys)하십시오.
 6. {{site.data.keyword.cloud_notm}} 인프라 계정이 없고 청구 가능 {{site.data.keyword.cloud_notm}} 계정이 있는 경우 [클래식 인프라 API 키를 작성](/docs/iam?topic=iam-classic_keys)하십시오.
 7. **인증 정보 저장**을 클릭하십시오.

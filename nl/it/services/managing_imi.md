@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-21"
 
 keywords: IBM Integrated Managed Infrastructure, request IBM IMI, tech specs IMI
 
@@ -13,7 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
-# Richiesta di servizi gestiti da IMI
+# Servizi gestiti da IMI
 {: #managing_imi}
 
 {{site.data.keyword.IBM}} Integrated Managed Infrastructure (IMI) può semplificare la gestione dell'infrastruttura virtuale VMware con servizi modulari. IMI utilizza automazione e analisi avanzate per gestire componenti di infrastrutture critiche in tutto il mondo e per offrire servizi di gestione remota dinamici per una vasta gamma di infrastrutture virtuali tradizionali e cloud.
@@ -36,7 +36,7 @@ Nel servizio gestito IMI sono incluse le seguenti specifiche:
 {: #managing_imi-procedure}
 
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Introduzione** nel riquadro di navigazione a sinistra.
-2. Scorri la pagina e fai clic sulla scheda **Servizi gestiti da IMI** che si trova in **Ordina servizi gestiti aggiuntivi**.
+2. Scorri la pagina verso il basso e sotto **Servizi gestiti VMware**, fai clic sulla scheda **Servizi gestiti da IMI**.
 3. Nella pagina **Servizi gestiti da IMI**, nella casella **Attività pre-vendita di IMI**, immetti una descrizione dei tuoi requisiti per i servizi IMI e fai clic su **Richiesta di una consultazione**.
 
   Un rappresentante di {{site.data.keyword.vmwaresolutions_short}} ti contatterà utilizzando le tue informazioni di contatto {{site.data.keyword.cloud_notm}} per aiutarti con la soluzione di cui hai bisogno.

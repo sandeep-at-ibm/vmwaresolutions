@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-26"
 
 keywords: vSphere, vSphere component, tech specs vSphere
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -22,7 +23,7 @@ subcollection: vmware-solutions
 
 VMware vSphere on {{site.data.keyword.cloud}}는 간소화되고 최적화된 VMware용 주문 플랫폼입니다. 이 플랫폼을 통해 선택된 VMware 컴포넌트 기반의 VMware 호환 하드웨어를 사용자 정의하고 주문하여 고유한 IBM 호스팅 VMware 환경을 빌드할 수 있습니다.
 
-{{site.data.keyword.vmwaresolutions_short}} 콘솔은 선택하는 VMware 컴포넌트에 따라 하드웨어를 자동으로 필터링합니다. 예를 들어, 새로운 올플래시(all-flash) VMware vSAN 클러스터를 작성하는 경우 [VMware Compatibility Guide](https://www.vmware.com/resources/compatibility/search.php)와 비교하여 유효성 검증된 하드웨어만 표시됩니다. 또한 최소 네 개의 ESXi 서버가 필요합니다.
+{{site.data.keyword.vmwaresolutions_short}} 콘솔은 선택하는 VMware 컴포넌트에 따라 하드웨어를 자동으로 필터링합니다. 예를 들어, 새로운 올플래시(all-flash) VMware vSAN 클러스터를 작성하는 경우 [VMware Compatibility Guide](https://www.vmware.com/resources/compatibility/search.php){:external}와 비교하여 유효성 검증된 하드웨어만 표시됩니다. 또한 최소 네 개의 ESXi 서버가 필요합니다.
 
 VMware vSphere on {{site.data.keyword.cloud_notm}}는 선택적 VMware 컴포넌트의 설치, 구성 및 가져오기를 자동화하지 않습니다. 플랫폼은 VMware 호환 하드웨어를 통합하면서 호스팅된 VMware 환경을 디자인하고 빌드할 수 있는 최대한의 유연성을 허용합니다.
 

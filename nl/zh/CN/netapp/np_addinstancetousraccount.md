@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-28"
 
 keywords: NetApp migrate instance, add account NetApp ONTAP, migrate cloud account
 
@@ -12,6 +12,12 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+
 
 # 将 V2.5 之前的 NetApp ONTAP Select 实例迁移到 IBM Cloud 帐户
 {: #np_addinstancetousraccount}
@@ -25,7 +31,7 @@ subcollection: vmware-solutions
 
 确保要将实例迁移到的 {{site.data.keyword.cloud_notm}} 帐户不是仅 IaaS 帐户。仅 IaaS 帐户是未链接到 {{site.data.keyword.cloud_notm}} 帐户的 {{site.data.keyword.cloud_notm}} 基础架构 (IBM Cloud) 帐户。
 
-有关如何将仅 IaaS 帐户链接到 PaaS 帐户的更多信息，请参阅[执行以下步骤来链接 IaaS 和 PaaS 帐户](https://www.ibm.com/cloud/blog/follow-steps-link-iaas-paas-accounts){:new_window}。
+有关如何将仅 IaaS 帐户链接到 PaaS 帐户的更多信息，请参阅[执行以下步骤来链接 IaaS 和 PaaS 帐户](https://www.ibm.com/cloud/blog/follow-steps-link-iaas-paas-accounts){: external}。
 
 ## 迁移实例的过程
 {: #np_addinstancetousraccount-procedure}

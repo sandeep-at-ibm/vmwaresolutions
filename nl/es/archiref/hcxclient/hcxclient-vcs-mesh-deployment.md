@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-06-28"
 
 subcollection: vmware-solutions
 
@@ -14,30 +14,26 @@ subcollection: vmware-solutions
 # Malla de servicio en instalaciones locales de HCX
 {: #hcxclient-vcs-mesh-deployment}
 
-En la sección siguiente se detallan los pasos para configurar la instancia de cliente de HCX. 
-  1. Entorno de emparejamiento de sitios de IBM Cloud para soluciones VMware
-  2. Crear perfiles de red de HCX On-Premise
-  3. Crear perfiles de cálculo de HCX On-Premise
-  4. Crear malla de servicio de HCX
-  5. Redes de extensión
+Revise los pasos siguientes para configurar la instancia del cliente de HCX.
 
 ## Entorno de emparejamiento de sitios de IBM Cloud para soluciones VMware
 {: #hcxclient-vcs-mesh-deployment-sitepair}
 
-1. Inicie una sesión en el cliente web de vSphere. 
-2. En el menú **Inicio**, seleccione la opción **HCX**. 
-3. En **Infraestructura** -> **InterConnect**, pulse **Añadir emparejamiento de sitio**
-   1. URL del sitio: URL de HCX Cloud Manager
-     * por ejemplo, `https://x.x.x.x.x`
-   2. Nombre de usuario y contraseña Detalles de HCX Manager Admin
-     * admin / password
-   3. Los detalles anteriores se pueden obtener de IBM Cloud Portal, bajo **Servicios**, HCX on IBM Cloud** para la instancia de solución de IBM Cloud for VMware. 
-4. Pulse en **Conectar**
+1. Inicie sesión en el cliente web de VMware vSphere.
+2. En el menú **Inicio**, seleccione la opción **HCX**.
+3. En **Infraestructura**, **InterConnect**, pulse **Añadir emparejamiento de sitio**.
+  1. Establezca el URL del sitio en el URL de HCX Cloud Manager, por ejemplo, `https://x.x.x.x.x`.
+  2. Establezca el nombre de usuario y la contraseña en los detalles de administración de HCX Manager: admin / password.
+
+    Los detalles anteriores se pueden obtener desde la consola de IBM Cloud for VMware Solutions, en
+**Servicios**, **HCX on IBM Cloud** para la instancia de vCenter Server.
+    
+4. Pulse **Conectar**.
 
 ### Resultados
 {: #hcxclient-vcs-mesh-deployment-sitepair-results}
 
-El emparejamiento de sitios (Site Pairing) se ha registrado correctamente y se muestra en la interfaz. 
+El emparejamiento de sitios (Site Pairing) se ha registrado correctamente y se muestra en la interfaz.
 
 ## Creación de perfiles de HCX On-Premise
 {: #hcxclient-vcs-mesh-deployment-profiles}
@@ -45,20 +41,17 @@ El emparejamiento de sitios (Site Pairing) se ha registrado correctamente y se m
 ## Perfiles de red de malla de servicio en la instalación local
 {: #hcxclient-vcs-mesh-deployment-profiles-network}
 
-1. Inicie una sesión en el cliente web de vSphere. 
-2. En el menú **Inicio**, seleccione la opción **HCX**. 
-3. En **Infraestructura** -> **InterConnect** 
-4. En Multi-Site Service Mesh, pulse **Perfiles de red**
-5. Desde: **Cree el perfil de red**
-   1. Seleccione Grupo de puertos distribuidos: por ejemplo, Externo
-   2. Proporcione un rango de direcciones IP de IP externas
-   3. Proporcione longitud de prefijo de subred externa
-   4. Proporcione pasarela externa
-   5. Proporcione detalles de DNS
-   6. Establezca MTU en 1500
-   7. Pulse Crear. 
+1. Inicie una sesión en el cliente web de vSphere.
+2. En el menú **Inicio**, seleccione la opción **HCX**.
+3. En **Infraestructura**, pulse **InterConnect**.
+4. En **Malla de servicios de varios sitios**, pulse **Perfiles de red**.
+5. En **Crear perfil de red**:
+   1. Seleccione Grupo de puertos distribuidos, por ejemplo, Externo.
+   2. Proporcione un rango de direcciones IP de IP externas, Longitud de prefijo de subred externa, Pasarela externa y Detalles de DNS.
+   3. Establezca MTU en 1500
+   4. Pulse **Crear**.
 6. Repita los pasos anteriores para las redes de gestión y vMotion.
-    Nota: la MTU se debe establecer en 9000. 
+   Nota: la MTU se debe establecer en 9000.
 
 ## Resultados
 {: #hcxclient-vcs-mesh-deployment-profiles-network-results}
@@ -72,26 +65,25 @@ El emparejamiento de sitios (Site Pairing) se ha registrado correctamente y se m
 ## Perfiles de cálculo de malla de servicio en la instalación local
 {: #hcxclient-vcs-mesh-deployment-profiles-compute}
 
-1. Inicie una sesión en el cliente web de vSphere. 
-2. En el menú **Inicio**, seleccione la opción **HCX**. 
-3. En **Infraestructura** -> **InterConnect** 
-4. En Multi-Site Service Mesh, pulse **Perfiles de cálculo**
-5. Desde: **Cree el perfil de cálculo**
-   1. Proporcione un nombre de perfil de cálculo
-   2. Seleccione Todos los servicios que desea habilitar, y pulse **continuar**
-   3. Seleccione el clúster, y pulse **continuar**
-   4. Seleccione el almacén de datos, y pulse **continuar**
-   5. Seleccione el perfil de red para gestión, y pulse **continuar**
-   6. Seleccione el perfil de red para externo/enlace ascendente, y pulse **continuar**
-   7. Seleccione el perfil de red para vMotion, y pulse **continuar**
-   8. Seleccione el perfil de red para vSphere Replication (gestión), y pulse **continuar**
-   9. Seleccione Distribuir conmutador para la extensión, por ejemplo, Private-Switch
-   10. Pulse Finalizar
+1. Inicie una sesión en el cliente web de vSphere.
+2. En el menú **Inicio**, seleccione la opción **HCX**.
+3. En **Infraestructura**, pulse **InterConnect**.
+4. En **Malla de servicios de varios sitios**, pulse **Perfiles de cálculo**.
+5. En **Crear perfil de cálculo**:
+   1. Proporcione el Nombre de perfil de cálculo.
+   2. Seleccione Todos los servicios que desea habilitar, y pulse **Continuar**.
+   3. Seleccione el Clúster y pulse **Continuar**.
+   4. Seleccione el Almacén de datos y pulse **Continuar**.
+   5. Seleccione Perfil de red para gestión y pulse **Continuar**.
+   6. Seleccione Perfil de red para externo/enlace ascendente y pulse **Continuar**.
+   7. Seleccione Perfil de red para vMotion y pulse **Continuar**.
+   8. Seleccione Perfil de red para la réplica de vSphere (gestión) y pulse **Continuar**.
+   9. Seleccione Conmutador distribuido para extensión, por ejemplo, Private-Switch, y pulse **Finalizar**.
 
 ## Resultados
 {: #hcxclient-vcs-mesh-deployment-profiles-compute-results}
 
-Se ha creado un perfil de cálculo para la combinación de clúster/almacenamiento, y está disponible con la creación de la malla de servicios. 
+Se ha creado un perfil de cálculo para la combinación de clúster/almacenamiento, y está disponible con la creación de la malla de servicios.
 
 ## Malla de servicio en instalaciones locales de HCX
 {: #hcxclient-vcs-mesh-deployment-servicemesh}
@@ -99,27 +91,27 @@ Se ha creado un perfil de cálculo para la combinación de clúster/almacenamien
 ## Creación de malla de servicio en la instalación local
 {: #hcxclient-vcs-mesh-deployment-servicemesh-creation}
 
-1. Inicie una sesión en el cliente web de vSphere. 
-2. En el menú **Inicio**, seleccione la opción **HCX**. 
-3. En **Infraestructura** -> **InterConnect** 
-4. En Multi-Site Service Mesh, pulse **Malla de servicio**
-5. Desde: **Crear malla de servicio**
-   1. Seleccione sitios; en local y en la organización de vCloud, pulse continuar
-   2. Seleccione el perfil de cálculo de origen
-   3. Seleccione el perfil de cálculo remoto. Por ejemplo, CloudCompute. 
-   4. Seleccione todos los servicios, y pulse continuar
-   5. Pulse en continuar, en la página Configuración avanzada - Sustituir perfiles de red de enlace ascendente (Opcional)
-   6. Pulse continuar
-   7. Pulse Continuar, deje los valores predeterminados en la página Configuración avanzada - Configurar el límite de ancho de banda del Servicio de optimización de WAN
-   8. Proporcione el nombre de servicio, pulse **Finalizar**
-6. Vea la lista de tareas para la creación de malla de servicio; al final debe haber tres dispositivos HCX en la ubicación local y tres en la ubicación de la nube. 
+1. Inicie una sesión en el cliente web de vSphere.
+2. En el menú **Inicio**, seleccione la opción **HCX**.
+3. En **Infraestructura**, pulse **InterConnect**.
+4. En **Malla de servicios de varios sitios**, pulse **Malla de servicios**.
+5. En **Crear malla de servicios**:
+   1. Seleccione los sitios local y organización de vCloud, y pulse **Continuar**.
+   2. Seleccione el perfil de cálculo de origen.
+   3. Seleccione el perfil de cálculo remoto. Por ejemplo, CloudCompute.
+   4. Seleccione Todos los servicios y pulse **Continuar**.
+   5. Pulse **Continuar** en la página Configuración avanzada - Sustituir perfiles de red de enlace ascendente (Opcional)
+   6. Pulse **Continuar**.
+   7. Pulse **Continuar**, deje los valores predeterminados en la página Configuración avanzada - Configurar el límite de ancho de banda del Servicio de optimización de WAN.
+   8. Proporcione el nombre de servicio, pulse **Finalizar**.
+6. Vea la lista de tareas para la creación de malla de servicio; al final debe haber tres dispositivos HCX en la ubicación local y tres en la ubicación de la nube.
 
 ## Resultados
 {: #hcxclient-vcs-mesh-deployment-servicemesh-results}
 
-Una malla de servicio HCX es la configuración de servicios HCX efectiva para un sitio de origen y de destino. Se puede añadir una malla de servicio a un Emparejamiento de sitio conectado que tiene un perfil de cálculo válido creado en ambos sitios. 
+Una malla de servicio HCX es la configuración de servicios HCX efectiva para un sitio de origen y de destino. Se puede añadir una malla de servicio a un Emparejamiento de sitio conectado que tiene un perfil de cálculo válido creado en ambos sitios.
 
-La adición de una malla de servicio inicia el despliegue de los dispositivos virtuales HCX Interconnect en ambos sitios. Siempre se crea una malla de servicio de interconexión en el sitio de origen. 
+La adición de una malla de servicio inicia el despliegue de los dispositivos virtuales HCX Interconnect en ambos sitios. Siempre se crea una malla de servicio de interconexión en el sitio de origen.
 
 ## Extensión de red
 {: #hcxclient-vcs-mesh-deployment-network-stretching}
@@ -129,11 +121,11 @@ La adición de una malla de servicio inicia el despliegue de los dispositivos vi
 
 Para extender una red (VLAN o VXLAN) con HCX, complete los siguientes pasos desde la interfaz de usuario web de vCenter del lado del cliente.
 
-1. Inicie una sesión en el cliente web de vSphere. 
-2. En el menú **Inicio**, seleccione la opción **HCX**. 
-3. Menú de la izquierda, en **Servicios** -> **Extensión de red**
-4. pulse **red ampliada**
-   1. Seleccione la red a ampliar
+1. Inicie una sesión en el cliente web de vSphere.
+2. En el menú **Inicio**, seleccione la opción **HCX**.
+3. En el menú de la izquierda, en **Servicios**, pulse **Extensión de red**.
+4. Pulse **Ampliar red**:
+   1. Seleccione la red que desee ampliar.
    2. Escriba la pasarela y la máscara de subred predeterminadas en formato CIDR.
    3. Pulse **Extender** en la parte inferior de la pantalla para comenzar el flujo de trabajo de extensión de red.
 
@@ -142,9 +134,9 @@ El progreso de red se supervisa en el panel de tareas del cliente de vCenter.
 ## Conceptos y mejores prácticas para la extensión de red
 {: #hcxclient-vcs-mesh-deployment-stretching-best-practices-network}
 
-El pegamento que une la red del lado del cliente con la VXLAN del lado de la nube es una red privada virtual (VPN) sofisticada de varios túneles basada en tecnología HCX patentada. No se basa en NSX, pero sí funciona con NSX y amplía su capacidad. Este proceso está controlado por la interfaz de usuario web de vCenter del lado del cliente y automatiza el despliegue y activa ambos puntos finales en el lado del cliente y de la nube. La selección de la red que se va a extender se realiza de forma individual o por lotes.
+El pegamento que une la red del lado del cliente con la VXLAN del lado de la nube es una red privada virtual (VPN) sofisticada de varios túneles basada en tecnología HCX patentada. No se basa en NSX, pero sí funciona con NSX y amplía su capacidad. Este proceso se controla mediante la interfaz de usuario web de vCenter del lado del cliente y automatiza el despliegue y el inicio de ambos puntos finales en el lado del cliente y en el lado de la nube. La selección de la red que se va a extender se realiza de forma individual o por lotes.
 
-Además, como parte del flujo de trabajo de extensión de red, NSX en el lado de la nube tiene autorización para crear una VXLAN que luego se conecta a una interfaz creada en el dispositivo L3 del lado de la nube especificado (DLR o ESG dejado en un estado no conectado) y el dispositivo Ampliación de red del lado de la nube. 
+Además, como parte del flujo de trabajo de extensión de red, NSX en el lado de la nube tiene autorización para crear una VXLAN que luego se conecta a una interfaz creada en el dispositivo L3 del lado de la nube especificado (DLR o ESG dejado en un estado no conectado) y el dispositivo Ampliación de red del lado de la nube.
 
 Normalmente, al migrar una aplicación concreta, todas las redes que utilizan las máquinas virtuales (VM) aplicables deben extenderse en la instancia de {{site.data.keyword.cloud}}.
 

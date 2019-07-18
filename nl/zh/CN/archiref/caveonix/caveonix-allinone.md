@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-06-28"
 
 subcollection: vmware-solutions
 
@@ -26,7 +26,7 @@ subcollection: vmware-solutions
 |RAM|32 GB|
 |磁盘|80 GB|
 |操作系统|CentOS 7|
-|已安装的应用程序组件|	UI、应用程序、插件、中央收集器、索引数据存储、消息传递数据存储、关系数据存储和远程收集器|
+|已安装的应用程序组件|	UI、应用程序、插件、中央收集器、索引数据存储、消息传递数据存储、关系数据存储、索引数据存储和远程收集器|
 
 下表中显示了其他远程收集器 VM 详细信息。
 

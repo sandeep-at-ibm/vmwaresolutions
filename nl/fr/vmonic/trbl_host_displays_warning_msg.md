@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-26"
 
 keywords: troubleshooting, configuration issue, ESXi server issue
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # Problème de configuration de l'affichage des serveurs ESXi
 {: #trbl_host_displays_warning_msg}
@@ -30,4 +32,4 @@ Ce message s'affiche alors que deux liaisons montantes sont disponibles pour le 
 ## Résolution
 {: #trbl_host_displays_warning_msg-resolution}
 
-Il s'agit d'un problème VMware connu. Pour résoudre le problème, suivez les instructions fournies dans la rubrique [ESX/ESXi host displays warning message when test condition is false (2008602)](https://kb.vmware.com/s/article/2008602){:new_window}.
+Il s'agit d'un problème VMware connu. Pour résoudre le problème, suivez les instructions fournies dans la rubrique [ESX/ESXi host displays warning message when test condition is false (2008602)](https://kb.vmware.com/s/article/2008602).{:external}

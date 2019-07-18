@@ -11,9 +11,9 @@ lastupdated: "2019-06-03"
 # vRealize Operations Manager 디자인
 {: #opsmgmt-vrops}
 
-vROps 분석 클러스터에는 모니터된 컴포넌트의 데이터를 분석 및 저장하는 노드가 포함되어 있으며, 이 배치에서는 네 개의 노드가 배치되고 두 개의 NSX 로드 밸런서가 배치됩니다. 이 크기를 설정하면 최대 30,000개의 VM과 9,000,000개의 메트릭에 대한 모니터링을 수집할 수 있습니다. 
+vROps 분석 클러스터에는 모니터된 컴포넌트의 데이터를 분석 및 저장하는 노드가 포함되어 있으며, 이 배치에서는 네 개의 노드가 배치되고 두 개의 NSX 로드 밸런서가 배치됩니다. 이 크기를 설정하면 최대 30,000개의 VM과 9,000,000개의 메트릭에 대한 모니터링을 수집할 수 있습니다.
 
-4 노드 분석 클러스터는 다음 컴포넌트로 구성됩니다. 
+4 노드 분석 클러스터는 다음 컴포넌트로 구성됩니다.
 * 마스터 노드 - 마스터 노드는 vROps 클러스터의 초기 노드입니다. 대형 환경에서 이 노드는 기타 모든 노드를 관리합니다.
 * 마스터 노드 복제본 - 이 노드는 마스터 노드의 고가용성을 사용으로 설정합니다.
 * 데이터 노드 - 데이터 노드는 대형 환경에서 vROps의 스케일 확장을 사용으로 설정하고, 두 개의 노드가 이 디자인에서 배치됩니다.
@@ -27,7 +27,7 @@ vROps 분석 클러스터에는 모니터된 컴포넌트의 데이터를 분석
 
 ![오퍼레이션 관리자 컴포넌트 다이어그램](../../images/opsmgmt-vropscomponent.svg "오퍼레이션 관리자 컴포넌트 다이어그램")
 
-vROps 분석 클러스터는 관리 사용자 인터페이스를 사용하거나 API를 사용하여 액세스되고 컴포넌트와 통합됩니다. 
+vROps 분석 클러스터는 관리 사용자 인터페이스를 사용하거나 API를 사용하여 액세스되고 컴포넌트와 통합됩니다.
 * vCenter
 * vRealize Log Insight
 
@@ -40,12 +40,12 @@ vROps는 다음에서 데이터를 수집합니다.
 * NSX - NSX Manager, NSX Controller 및 NSX Edge
 * vRLI
 
-클라이언트는 vRealize Automation 및 vRealize Business for Cloud에서 데이터를 수집하도록 vROps를 수동으로 구성할 수 있습니다. 
+클라이언트는 vRealize Automation 및 vRealize Business for Cloud에서 데이터를 수집하도록 vROps를 수동으로 구성할 수 있습니다.
 
 ## 시스템 요구사항
 {: #opsmgmt-vrops-requirements}
 
-분석 서버는 한 개의 마스터 노드, 한 개의 마스터 복제본 노드, 스케일 확장 및 고가용성을 사용으로 설정할 두 개의 데이터 노드로 구성됩니다. 추가 데이터 노드가 스케일 확장을 위해 추가됩니다. 분석 클러스터는 최대 여덟 개의 중형 노드로 확장할 수 있습니다. 
+분석 서버는 한 개의 마스터 노드, 한 개의 마스터 복제본 노드, 스케일 확장 및 고가용성을 사용으로 설정할 두 개의 데이터 노드로 구성됩니다. 추가 데이터 노드가 스케일 확장을 위해 추가됩니다. 분석 클러스터는 최대 여덟 개의 중형 노드로 확장할 수 있습니다.
 
 표 1. 오퍼레이션 관리자 마스터/복제본 노드 시스템 설정
 
@@ -94,7 +94,7 @@ vROps 어플라이언스 배치 시 도구 사설 포터블 서브넷에서 여�
 * 고객 네트워크
 * NTP 서버(`time.services.softlayer.com`)
 * {{site.data.keyword.vmwaresolutions_short}} Active Directory/DNS
-* 원격 콜렉터에는 마스터 노드, 마스터 노드 복제본 및 데이터 노드에 대한 연결을 사용으로 설정할 수 있도록 NSX ESG의 NAT 규칙이 필요합니다. 
+* 원격 콜렉터에는 마스터 노드, 마스터 노드 복제본 및 데이터 노드에 대한 연결을 사용으로 설정할 수 있도록 NSX ESG의 NAT 규칙이 필요합니다.
 
 ## 포트
 {: #opsmgmt-vrops-ports}
@@ -114,7 +114,7 @@ vROps 어플라이언스 배치 시 도구 사설 포터블 서브넷에서 여�
 ### 인증
 {: #opsmgmt-vrops-auth}
 
-vROps를 위한 사용자 관리에는 Active Directory와 통합하는 vIDM(VMware Identity Manager)가 필요합니다. 서비스 계정은 메트릭 콜렉션 및 토폴로지 맵핑에 필요한 최소 권한 세트를 사용하여 vRealize Operations Manager부터 다음 어댑터까지의 애플리케이션 대 애플리케이션 통신에 사용됩니다. 
+vROps를 위한 사용자 관리에는 Active Directory와 통합하는 vIDM(VMware Identity Manager)가 필요합니다. 서비스 계정은 메트릭 콜렉션 및 토폴로지 맵핑에 필요한 최소 권한 세트를 사용하여 vRealize Operations Manager부터 다음 어댑터까지의 애플리케이션 대 애플리케이션 통신에 사용됩니다.
 
 * NSX Manager
 * vCenter
@@ -123,7 +123,7 @@ vROps를 위한 사용자 관리에는 Active Directory와 통합하는 vIDM(VMw
 ## 관리 팩
 {: #opsmgmt-vrops-management}
 
-Management Packs for vROps는 제품별 경보 및 대시보드를 제공하도록 vROps 플랫폼의 운영 관리 기능을 확장합니다. 
+Management Packs for vROps는 제품별 경보 및 대시보드를 제공하도록 vROps 플랫폼의 운영 관리 기능을 확장합니다.
 
 기본적으로 다음 관리 팩이 vROps에 설치됩니다.
 * Management Pack for VMware vCenter Server
@@ -172,11 +172,11 @@ VMware SDDC Health Management Pack for vROps는 SDDC 관리 스택을 모니터�
 * VMware Site Recovery Manager
 
 VMware SDDC Health Management Pack은 다음 대시보드를 제공합니다.
-* SDDC Management Health 개요 대시보드 - SDDC Management Health 개요 대시보드를 사용하여 SDDC 컴포넌트에서 애플리케이션별 문제점을 보고 분석할 수 있습니다. 
+* SDDC Management Health 개요 대시보드 - SDDC Management Health 개요 대시보드를 사용하여 SDDC 컴포넌트에서 애플리케이션별 문제점을 보고 분석할 수 있습니다.
 * SDDC 상태 히스토리 경향 대시보드 - VMware SDDC Health Management Pack은 SDDC 스택의 각 컴포넌트마다 상태 경향을 표시하는 SDDC 상태 히스토리 경향 대시보드로 구성됩니다.
 * SDDC vRealize Operations Manager 크기 지정 대시보드 - SDDC vRealize Operations Manager 크기 지정 대시보드는 오브젝트 및 메트릭을 처리하도록 vRealize Operations Manager 클러스터 용량을 제공합니다.
 
-VMware SDDC Health Management Pack의 플러그인은 플러그인에 포함된 오브젝트 유형에 맞는 메트릭을 수집합니다. 이 관리 팩은 다음 컴포넌트에 대한 상태 메트릭을 수집합니다. 
+VMware SDDC Health Management Pack의 플러그인은 플러그인에 포함된 오브젝트 유형에 맞는 메트릭을 수집합니다. 이 관리 팩은 다음 컴포넌트에 대한 상태 메트릭을 수집합니다.
 * vCenter Server
 * Management Pack for NSX for vSphere
 * vRealize Automation
@@ -215,7 +215,7 @@ vRealize Operations Federation Management Pack은 다중 사이트 vROps를 단�
 ### Management Pack for Hybrid Cloud Extension(HCX)
 {: #opsmgmt-vrops-management-hcx}
 
-vRealize Operations Management Pack for HCX는 vROps의 오퍼레이션 관리 기능을 HCX로 표시되는 하이브리드 기능으로 확장합니다. 이 관리 팩을 사용하면 HCX에서 메트릭, 변경 이벤트 및 리소스 토폴로지 정보를 수집할 수 있습니다. 이를 통해 HCX 상호연결, 마이그레이션 또는 보호된 워크로드에서 성능 병목 현상을 모니터하고, 분리하고, 해결할 수 있습니다. 
+vRealize Operations Management Pack for HCX는 vROps의 오퍼레이션 관리 기능을 HCX로 표시되는 하이브리드 기능으로 확장합니다. 이 관리 팩을 사용하면 HCX에서 메트릭, 변경 이벤트 및 리소스 토폴로지 정보를 수집할 수 있습니다. 이를 통해 HCX 상호연결, 마이그레이션 또는 보호된 워크로드에서 성능 병목 현상을 모니터하고, 분리하고, 해결할 수 있습니다.
 
 ## 관련 링크
 {: #opsmgmt-vrops-management-links}

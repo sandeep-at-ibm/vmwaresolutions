@@ -47,7 +47,7 @@ Caveonix RiskForesight 具有区域的概念：
 - 云提供者 - 此区域提供托管应用程序的基础架构：
     - 专用 - VMware on {{site.data.keyword.cloud}} 和内部部署 VMware 基础架构平台。这两个平台通过 vCenter、NSX Manager、VMware Cloud Director (vCD) 或 vRealize Automation (vRA) 集成到 RiskForesight 中。
     - 公共 - 目前支持的唯一公共云提供者是 AWS。{{site.data.keyword.cloud_notm}} 即将可用。
-    - 容器 - 目前仅支持 AWS Elastic Kubernetes Service (EKS)。{{site.data.keyword.cloud_notm}} Private 和 {{site.data.keyword.cloud_notm}} Kubernetes Services (IKS) 即将可用。
+    - 容器 - 目前仅支持 AWS Elastic Kubernetes Service (EKS)。{{site.data.keyword.cloud_notm}} Private 和 {{site.data.keyword.cloud_notm}} Kubernetes Services 即将可用。
 -	租户或客户环境区域 - 这些区域用于隔离租户、客户或业务单位。工作负载位于这些区域中，因此需要远程收集器。对于最小部署，需要一个远程收集器，但对于常规部署，每个租户/客户/业务单元需要一个远程收集器。
 
 

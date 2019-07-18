@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-21"
 
 subcollection: vmware-solutions
 
@@ -60,7 +60,7 @@ KMIP for VMware 与 vSAN 加密或 vSphere 加密一起使用时，存在多层�
 
 如果您计划轮换密钥，请查看以下有关可以轮换密钥的级别的信息：
 * 客户根密钥 (CRK) 用于保护所有 VMware 密钥。可以在与 KMIP for VMware 实例关联的 IBM Key Protect 或 Hyper Protect Crypto Services 实例中轮换这些密钥。
-* KMIP for VMware 使用 CRK 来保护它生成并分发给 VMware 的密钥。VMware 将这些密钥视为“密钥加密密钥”(KEK)。
+* KMIP for VMware 使用 CRK 来保护它生成并分发给 VMware 的密钥。VMware 将这些密钥视为_密钥加密密钥 (KEK)_。
   * 如果使用的是 vSphere 加密，那么可以通过 **Set-VMEncryptionKey** PowerShell 命令来轮换密钥。
   * 如果使用的是 vSAN 加密，那么可以在 vSAN 用户界面上轮换密钥。
 * VMware 使用这些 KEK 来保护它用于加密磁盘驱动器和 VM 磁盘的实际密钥。您可以使用 VMware 称之为“深度”再加密的方式来轮换这些密钥。此操作会重新加密所有加密数据，因此可能需要很长时间。
@@ -75,7 +75,7 @@ VMware vSAN 加密和 vSphere 加密与许多密钥管理服务器兼容。KMIP 
 ### 密钥中的密钥
 {: #kmip-design-keys}
 
-密钥管理系统通常使用称为*包络加密*的技术，以通过其他密钥来包装或保护密钥。这些密钥称为*根密钥*或*密钥加密密钥* (KEK)。要访问密钥，您需要使用其对应的根密钥来解密或解包密钥。销毁根密钥是使受其保护的所有密钥失效的有效方法。这些密钥不需要存储在根密钥附近。控制对根密钥的访问非常重要。
+密钥管理系统通常使用称为*包络加密*的技术，以通过其他密钥来包装或保护密钥。这些密钥称为_根密钥_或_密钥加密密钥 (KEK)_。要访问密钥，您需要使用其对应的根密钥来解密或解包密钥。销毁根密钥是使受其保护的所有密钥失效的有效方法。这些密钥不需要存储在根密钥附近。控制对根密钥的访问非常重要。
 
 {{site.data.keyword.cloud_notm}} Key Protect 和 Hyper Protect Crypto Services 使用*客户根密钥* (CRK) 来提供此服务。Key Protect 将 CRK 专门存储在 {{site.data.keyword.cloud_notm}} CloudHSM 硬件中，无法从该硬件中抽取 CRK；Hyper Protect Crypto Services 将密钥存储在 IBM zSeries HSM 中。然后，这些 CRK 用于包装更多加密密钥，例如由 KMIP for VMware 为 VMware 实例生成的加密密钥。
 

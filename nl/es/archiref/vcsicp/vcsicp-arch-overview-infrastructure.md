@@ -18,7 +18,7 @@ subcollection: vmware-solutions
 ## Direccionamiento virtual y reenvío
 {: #vcsicp-arch-overview-infrastructure-vrf}
 
-Puede configurar las cuentas de {{site.data.keyword.cloud}} como cuentas de direccionamiento virtual y reenvío (VRF), lo que habilita el direccionamiento global automático entre bloques de IP de subred. Todas las cuentas con las conexiones de Direct Link deben convertirse a, o crearse como, una cuenta de VRF. 
+Puede configurar las cuentas de {{site.data.keyword.cloud}} como cuentas de direccionamiento virtual y reenvío (VRF), lo que habilita el direccionamiento global automático entre bloques de IP de subred. Todas las cuentas con las conexiones de Direct Link deben convertirse a, o crearse como, una cuenta de VRF.
 
 ## Direct Link
 {: #vcsicp-arch-overview-infrastructure-direct-link}

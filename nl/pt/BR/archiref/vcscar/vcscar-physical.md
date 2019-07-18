@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -24,7 +24,7 @@ de ampliar em mais regiões de nuvem que estão localizadas em uma das opções 
 
 Os produtos {{site.data.keyword.icpfull_notm}} e Cloud Automation Manager (CAM)
 podem ser implementados manualmente em sua plataforma de virtualização no local,
-permitindo o gerenciamento de nuvem por meio de locais no local. Como alternativa, o {{site.data.keyword.icpfull_notm}} e o CAM são oferecidos como extensões de serviço para uma implementação nova ou existente do VMware vCenter Server on {{site.data.keyword.cloud_notm}}, via automação, permitindo o gerenciamento de nuvem por meio do {{site.data.keyword.cloud_notm}}.
+permitindo o gerenciamento de nuvem por meio de locais no local. Como alternativa, o {{site.data.keyword.icpfull_notm}} e o CAM são oferecidos como extensões de serviço para uma implementação nova ou existente do VMware vCenter Server on {{site.data.keyword.cloud_notm}}, por meio da automação, permitindo o gerenciamento de nuvem por meio do {{site.data.keyword.cloud_notm}}.
 
 O {{site.data.keyword.icpfull_notm}} é uma plataforma de aplicativo para desenvolver e gerenciar aplicativos conteinerizados no local. É um ambiente integrado para gerenciar
 contêineres que inclui o orquestrador de contêineres Kubernetes, um
@@ -49,10 +49,7 @@ aplicativo.
 
 ![Componentes físicos do Skate Advisor](../../images/vcscar-physical.svg "Componentes físicos do Skate Advisor")
 
-O aplicativo Skate Advisor amplia o aplicativo da web Acme existente
-com um componente baseado em microsserviços que interage com o Watson e um
-contêiner nginx para solicitações de proxy para o contêiner da web e de
-microsserviços.
+O aplicativo Skate Advisor amplia o aplicativo da web Acme existente com um componente baseado em microsserviços, que interage com o Watson e com um contêiner nginx para as solicitações de proxy para o contêiner da web e de microsserviços.
 
 O aplicativo Skate Advisor aproveita a plataforma de
 modernização de aplicativo que fornece a infraestrutura de hospedagem
@@ -61,7 +58,7 @@ necessária.
 ### Empacotamento e implementação de aplicativo
 {: #vcscar-physical-app-pack-depl}
 
-O aplicativo é implementado como uma Orquestração do CAM que contém os elementos a seguir:
+O aplicativo é implementado como uma Orquestração do CAM, que contém os seguintes elementos:
 * Orquestração de serviço - uma orquestração de serviço do CAM é um recurso de
 fluxo de trabalho que descreve os modelos do Terraform e os gráficos Helm para
 implementar como um aspecto de um serviço. Um serviço pode ser publicado e é o
@@ -90,8 +87,7 @@ e o esquema do banco de dados pré-instalados.
 ### Balanceamento de carga e proxy
 {: #vcscar-physical-load-balance-proxy}
 
-O balanceamento de carga e o proxying são implementados por meio do componente {{site.data.keyword.icpfull_notm}} Ingress
-Controller. Esse componente manipula o ajuste de escala e o failover
+O balanceamento de carga e o proxy são implementados por meio do componente {{site.data.keyword.icpfull_notm}} Ingress Controller. Esse componente manipula o ajuste de escala e o failover
 do contêiner de uma maneira contínua.
 
 O proxy de aplicativo é fornecido pelo contêiner nginx que equilibra
@@ -118,8 +114,7 @@ Framework. O aplicativo é implementado em um contêiner do WebSphere Liberty.
 ### Aplicativo Acme Skate Advisor
 {: #vcscar-physical-acme-skate-advisor-app}
 
-O aplicativo Acme Skate Advisor é um aplicativo baseado em microsserviço implementado em um contêiner do WebSphere Liberty. Um servidor da web nginx fornece
-um front-end para os microsserviços.
+O aplicativo Acme Skate Advisor é um aplicativo baseado em microsserviço implementado em um contêiner do WebSphere Liberty. Um servidor da web nginx fornece um front-end para os microsserviços.
 
 ### Banco de dados Acme Skate
 {: #vcscar-physical-acme-skate-db}
@@ -194,9 +189,7 @@ implementar máquinas virtuais no local ou na instância do vCenter Server,
 além de contêineres para os clusters do {{site.data.keyword.icpfull_notm}} e do {{site.data.keyword.containerlong_notm}}.
 
 No diagrama, o CAM cria logicamente conexões em nuvem para os vCenters,
-os provedores em nuvem e os ambientes do {{site.data.keyword.icpfull_notm}} e do {{site.data.keyword.containerlong_notm}}. Os Clusters do {{site.data.keyword.icpfull_notm}} são
-implementados em cada data center /ambiente de nuvem, com o MCM fornecendo o
-mecanismo para conectar os clusters do {{site.data.keyword.icpfull_notm}} a uma única visualização de gerenciamento.
+os provedores em nuvem e os ambientes do {{site.data.keyword.icpfull_notm}} e do {{site.data.keyword.containerlong_notm}}. Os clusters do {{site.data.keyword.icpfull_notm}} são implementados em cada data center ou ambiente de nuvem, com o fornecimento pelo MCM do mecanismo de conexão dos clusters do {{site.data.keyword.icpfull_notm}} em uma única visualização de gerenciamento.
 
 ## Links relacionados
 {: #vcscar-physical-related}

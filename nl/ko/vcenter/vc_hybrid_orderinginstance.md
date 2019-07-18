@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-19"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server Hybridity order instance, order vCenter Server Hybridity, order Hybridity
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -30,15 +31,14 @@ subcollection: vmware-solutions
 *  [vCenter Server with Hybridity Bundle에 대한 요구사항 및 계획](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)의 정보를 검토했습니다.
 * 인스턴스 및 도메인 이름 형식을 검토했습니다. 도메인 이름 및 하위 도메인 레이블은 인스턴스의 사용자 이름 및 서버 이름을 생성하는 데 사용됩니다.
 
-표 1. 인스턴스 및 도메인 이름의 값 형식
-
 |이름        |값 형식      |
-  |:------------- |:------------- |
-  |도메인 이름 | `<root_domain>` |  
-  |vCenter Server 로그인 사용자 이름 | `<user_id>@<root_domain>`(Microsoft Active Directory 사용자) 또는 `administrator@vsphere.local` |
-  |vCenter Server(임베디드 PSC 포함) FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. 최대 길이는 50자입니다. |
-  |SSO(Single Sign-On) 사이트 이름 | `<subdomain_label>` |
-  |완전한 ESXi 서버 이름 | `<host_prefix><n>.<subdomain_label>.<root_domain>`, 여기서 `<n>`은 ESXi 서버의 순서입니다. 최대 길이는 50자입니다. |
+|:------------- |:------------- |
+|도메인 이름 | `<root_domain>` |  
+|vCenter Server 로그인 사용자 이름 | `<user_id>@<root_domain>`(Microsoft Active Directory 사용자) 또는 `administrator@vsphere.local` |
+|vCenter Server(임베디드 PSC 포함) FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. 최대 길이는 50자입니다. |
+|SSO(Single Sign-On) 사이트 이름 | `<subdomain_label>` |
+|완전한 ESXi 서버 이름 | `<host_prefix><n>.<subdomain_label>.<root_domain>`, 여기서 `<n>`은 ESXi 서버의 순서입니다. 최대 길이는 50자입니다. |
+{: caption="표 1. 인스턴스 및 도메인 이름의 값 형식" caption-side="top"}
 
 인스턴스 주문 또는 배치 중에 설정되는 값은 수정하지 마십시오. 수정하는 경우 인스턴스를 사용할 수 없게 됩니다. 예를 들어, 공용 네트워킹이 종료되는 경우, 서버 및 가상 서버 인스턴스(VSI)가 Vyatta 뒤로 이동하는 경우, IBM CloudBuilder VSI가 중지하거나 삭제된 경우입니다.
 {:important}
@@ -103,25 +103,23 @@ vSAN 구성의 초기 및 사후 배치 클러스터 모두에 네 개의 ESXi �
 
 **Skylake**를 선택하는 경우 필요에 따라 Bare Metal Server의 CPU 및 RAM 조합을 선택할 수 있습니다.
 
-표 2. Skylake {{site.data.keyword.baremetal_short}}의 옵션
-
 | CPU 모델 옵션        |RAM 옵션       |
 |:------------- |:------------- |
 |듀얼 Intel Xeon Silver 4110 프로세서 / 총 16개의 코어, 2.1GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
 |듀얼 Intel Xeon Gold 5120 프로세서 / 총 28개의 코어, 2.2GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
 |듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개의 코어, 2.3GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
+{: caption="표 2. Skylake {{site.data.keyword.baremetal_short}}의 옵션" caption-side="top"}
 
 ### Broadwell
 {: #vc_hybrid_orderinginstance-broadwell}
 
 **Broadwell**을 선택하는 경우 필요에 따라 Bare Metal Server의 CPU 및 RAM 조합을 선택할 수 있습니다.
 
-표 3. Broadwell {{site.data.keyword.baremetal_short}}의 옵션
-
 | CPU 모델 옵션        |RAM 옵션       |
 |:------------- |:------------- |
 | 쿼드 Intel Xeon E7-4820 v4 / 총 40개의 코어, 2.0GHz |128GB, 256GB, 512GB, 1TB, 2TB, 3TB |
 | 쿼드 Intel Xeon E7-4850 v4 / 총 64개의 코어, 2.1GHz |128GB, 256GB, 512GB, 1TB, 2TB, 3TB |
+{: caption="표 3. Broadwell {{site.data.keyword.baremetal_short}}의 옵션" caption-side="top"}
 
 ### Bare Metal Server 수
 {: #vc_hybrid_orderinginstance-bare-metal-number}
@@ -224,7 +222,7 @@ vCenter Server with Hybridity Bundle 인스턴스를 주문할 때는 다음 네
 
 VM을 활성화할 수 있는 30일의 기간이 제공됩니다.
 
-Windows Server 2016 라이센스 주문에 대한 자세한 정보는 [Get started with Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:new_window}을 참조하십시오.
+Windows Server 2016 라이센스 주문에 대한 자세한 정보는 [Get started with Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:external}을 참조하십시오.
 
 ## 서비스 설정
 {: #vc_hybrid_orderinginstance-addon-services}
@@ -234,14 +232,14 @@ vCenter Server with Hybridity Bundle 인스턴스를 주문할 때 추가 서비
 ## 주문 요약
 {: #vc_hybrid_orderinginstance-order-summary}
 
-인스턴스 및 추가 기능 서비스에 대해 선택한 구성에 따라 예상 비용이 즉시 생성되어 **주문 요약** 오른쪽 분할창에 표시됩니다. **가격 세부사항**을 클릭하여 {{site.data.keyword.vmwaresolutions_short}} 리소스에 대한 비용 요약이 포함된 PDF 문서를 생성하십시오. 
+인스턴스 및 추가 기능 서비스에 대해 선택한 구성에 따라 예상 비용이 즉시 생성되어 **주문 요약** 오른쪽 분할창에 표시됩니다. **가격 세부사항**을 클릭하여 {{site.data.keyword.vmwaresolutions_short}} 리소스에 대한 비용 요약이 포함된 PDF 문서를 생성하십시오.
 
-**예상 금액에 추가**를 클릭하여 {{site.data.keyword.cloud_notm}} 예상 도구에 프로비저닝된 리소스를 추가할 수도 있습니다. 구매를 고려할 수 있는 기타 {{site.data.keyword.cloud_notm}} 리소스와 함께 선택된 {{site.data.keyword.vmwaresolutions_short}} 리소스의 비용을 예상하려는 경우 유용합니다. 
+**예상 금액에 추가**를 클릭하여 {{site.data.keyword.cloud_notm}} 예상 도구에 프로비저닝된 리소스를 추가할 수도 있습니다. 구매를 고려할 수 있는 기타 {{site.data.keyword.cloud_notm}} 리소스와 함께 선택된 {{site.data.keyword.vmwaresolutions_short}} 리소스의 비용을 예상하려는 경우 유용합니다.
 
 ## vCenter Server with Hybridity Bundle 인스턴스를 주문하는 프로시저
 {: #vc_hybrid_orderinginstance-procedure}
 
-1. {{site.data.keyword.cloud_notm}} 카탈로그의 왼쪽 탐색 분할창에서 **VMware**를 클릭한 후 **가상 데이터 센터** 섹션에 있는 **vCenter Server**를 클릭하십시오.
+1. {{site.data.keyword.cloud_notm}} 카탈로그에서 왼쪽 탐색 분할창에 있는 **VMware** 아이콘을 클릭한 다음 **VMware 가상 데이터 센터** 섹션에 있는 **VMware vCenter Server on IBM Cloud** 카드를 클릭하십시오.
 2. **VMware vCenter Server on IBM Cloud** 페이지에서 **vCenter Server with Hybridity Bundle** 카드를 클릭하고 **작성**을 클릭하십시오.
 3. **vCenter Server** 페이지에서 인스턴스 이름을 입력하십시오.
 5. vSphere 버전을 선택하십시오.
@@ -276,7 +274,7 @@ vCenter Server with Hybridity Bundle 인스턴스를 주문할 때 추가 서비
 ## vCenter Server with Hybridity Bundle 인스턴스를 주문한 후의 결과
 {: #vc_hybrid_orderinginstance-results}
 
-* 인스턴스의 배치가 자동으로 시작되고 주문이 처리 중이라는 확인을 수신합니다. 인스턴스 세부사항의 **배치 히스토리** 섹션을 보고 주의해야 하는 문제가 포함된 배치 상태를 확인할 수 있습니다. 
+* 인스턴스의 배치가 자동으로 시작되고 주문이 처리 중이라는 확인을 수신합니다. 인스턴스 세부사항의 **배치 히스토리** 섹션을 보고 주의해야 하는 문제가 포함된 배치 상태를 확인할 수 있습니다.
 * 인스턴스가 성공적으로 배치된 경우에는 [Hybridity Bundle 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#specs)에서 설명된 컴포넌트가 VMware 가상 플랫폼에 설치됩니다. 기본적으로 주문한 ESXi 서버는 **cluster1**로 그룹화됩니다. 추가 기능 서비스를 주문한 경우 주문이 완료된 후 서비스의 배치가 시작됩니다.
 * 인스턴스를 사용할 준비가 되면 인스턴스의 상태가 **사용할 준비가 됨**으로 변경되고 이메일로 알림을 받습니다.
 * 보조 인스턴스를 주문하는 경우 보조 인스턴스 주문이 완료된 후 기본 인스턴스(보조 인스턴스로 링크됨)의 VMware vSphere Web Client가 다시 시작될 수 있습니다.

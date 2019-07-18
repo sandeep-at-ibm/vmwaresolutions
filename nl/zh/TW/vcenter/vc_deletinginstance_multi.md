@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server delete instance, delete vCenter Server, delete multi-site
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -40,8 +41,8 @@ subcollection: vmware-solutions
 
 1. 從次要 vCenter Server 實例移除所有服務。
 2. 確定未將任何 NSX 物件擴充至您要刪除的次要實例。
-3. 從主要 SSO（單一登入）網域刪除次要 vCenter Server。如需相關資訊，請參閱 [Unregister vCenter Server from Single Sign-On](https://kb.vmware.com/s/article/2106736){:new_window}。
-4. 將本端網域控制站 VSI（虛擬服務實例）降級。如需相關資訊，請參閱 [Demoting domain controllers and domains](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-){:new_window}。
+3. 從主要 SSO（單一登入）網域刪除次要 vCenter Server。如需相關資訊，請參閱 [Unregister vCenter Server from Single Sign-On](https://kb.vmware.com/s/article/2106736){:external}。
+4. 將本端網域控制站 VSI（虛擬服務實例）降級。如需相關資訊，請參閱 [Demoting domain controllers and domains](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-){:external}。
 5. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台刪除次要 vCenter Server 實例。
 6. 針對多站台配置中的所有次要 vCenter Server 實例，重複步驟 1 - 5。
 7. 刪除所有次要實例之後，您也可以從 {{site.data.keyword.vmwaresolutions_short}} 主控台刪除主要實例。

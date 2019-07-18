@@ -120,7 +120,7 @@ Mientras las migraciones siguen en curso, se solicita la conectividad de red de 
 ## Servidores físicos
 {: #hcxclient-planning-physical-servers}
 
-Cuando el objetivo es la migración del centro de datos a la nube, cualquier servidor físico que interactúe con las máquinas virtuales que se están migrando se puede evaluar para determinar la migración a {{site.data.keyword.cloud_notm}} como máquina virtual (P2V), servidor nativo o permanecer en el origen. Si el servidor físico va a permanecer en el origen, y HCX solo se utilizará durante la migración hasta que se establezca una red dedicada, es importante comprender si reside en cualquier red que se extienda en la nube con HCX. En este caso de ejemplo, HCX no solo permite migrar las máquinas virtuales, sino toda la subred a la nube. 
+Cuando el objetivo es la migración del centro de datos a la nube, cualquier servidor físico que interactúe con las máquinas virtuales que se están migrando se puede evaluar para determinar la migración a {{site.data.keyword.cloud_notm}} como máquina virtual (P2V), servidor nativo o permanecer en el origen. Si el servidor físico va a permanecer en el origen, y HCX solo se utilizará durante la migración hasta que se establezca una red dedicada, es importante comprender si reside en cualquier red que se extienda en la nube con HCX. En este caso de ejemplo, HCX no solo permite migrar las máquinas virtuales, sino toda la subred a la nube.
 
 Para eliminar HCX al final de la migración, la subred no puede existir en el origen y en el destino si se desea mantener la conexión entre los dispositivos físicos y las máquinas virtuales migradas. Esto implica que los dispositivos físicos que quedan en el sitio de origen y que existen en las redes L2 extendidas, deben migrarse a otra subred de red que pueda ser direccionada al lado de la nube. La excepción a esto es si se utiliza alguna otra tecnología de L2 extendida, como NSX L2 VPN, para sustituir los puntos finales de la L2 extendida de HCX.
 
@@ -132,12 +132,12 @@ Las máquinas virtuales con VMDK de varios escritores compartidos, como los clú
 ## Oscilación de red
 {: #hcxclient-planning-net-swing}
 
-La oscilación de red se produce tras completarse la evacuación de las máquinas virtuales en las redes del lado del origen y una vez finalizado el diseño/implementación de la red en el lado de la nube. La configuración de HCX para eliminar la extensión de las redes relacionadas con las máquinas virtuales completadas en las migraciones, permite a las máquinas virtuales migradas direccionar el tráfico de red utilizando la infraestructura de NSX del lado de la nube. 
+La oscilación de red se produce tras completarse la evacuación de las máquinas virtuales en las redes del lado del origen y una vez finalizado el diseño/implementación de la red en el lado de la nube. La configuración de HCX para eliminar la extensión de las redes relacionadas con las máquinas virtuales completadas en las migraciones, permite a las máquinas virtuales migradas direccionar el tráfico de red utilizando la infraestructura de NSX del lado de la nube.
 
 ## Plataformas de cliente soportadas
 {: #hcxclient-planning-client-platforms}
 
-Para la extensión de red, solo se admiten los grupos de puertos con un conmutador distribuido virtual (vDS) de vSphere. Esto también implica que no se admiten los hosts ESXi autónomos, ya que solo puede tener un vDS cuando los hosts ESXi están gestionados por vCenter. 
+Para la extensión de red, solo se admiten los grupos de puertos con un conmutador distribuido virtual (vDS) de vSphere. Esto también implica que no se admiten los hosts ESXi autónomos, ya que solo puede tener un vDS cuando los hosts ESXi están gestionados por vCenter.
 - vSphere 5.1 (línea de mandatos solo para vCenter 5.1 a través de API)
 - vSphere 5.5 (interfaz de usuario de cliente web soportada en vCenter 5.5u3 y superior)
 - vSphere 6.0

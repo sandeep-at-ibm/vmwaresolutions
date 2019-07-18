@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-20"
 
 keywords: vmware offering, vmware solutions functions, function support
 
@@ -17,8 +17,6 @@ subcollection: vmware-solutions
 {: #inst_comp_chart}
 
 Passez en revue le graphique suivant pour comprendre les différentes fonctions prises en charge pour les instances VMware vCenter Server, les instances VMware vCenter Server with Hybridity Bundle et les clusters VMware vSphere.
-
-Tableau 1. Fonctions prises en charge pour les instances vCenter Server et vCenter Server with Hybridity Bundle et les clusters vSphere
 
 | Fonction | vCenter Server | vCenter Server with Hybridity | VMware vSphere |
 |:--- |:--- |:--- |:--- |
@@ -38,6 +36,7 @@ Tableau 1. Fonctions prises en charge pour les instances vCenter Server et vCent
 | Options de mise à niveau de licence NSX | Mise à niveau disponible depuis NSX Base vers Advanced ou Enterprise et depuis NSX Advanced vers Enterprise La mise à niveau vers l'instance vCenter Server with Hybridity Bundle est disponible. | Mise à niveau disponible depuis NSX Advanced vers Enterprise  | Aucun |
 | Editions de licence vSAN | vSAN Advanced ou Enterprise | vSAN Advanced ou Enterprise | vSAN Advanced ou Enterprise  |
 | Services complémentaires | Pris en charge, sans inclure le service HCX on {{site.data.keyword.cloud_notm}}. La mise à niveau vers l'instance vCenter Server with Hybridity Bundle est disponible. | Pris en charge, avec le service HCX on {{site.data.keyword.cloud_notm}} inclus. | Non pris en charge par l'automatisation de cette solution, mais vous pouvez fournir et installer vos propres logiciels. |
+{: caption="Tableau 1. Fonctions prises en charge pour les instances vCenter Server et vCenter Server with Hybridity Bundle et les clusters vSphere" caption-side="top"}
 
 ## Remarques
 {: #inst_comp_chart-notes}

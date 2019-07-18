@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-26"
 
 keywords: FortiGate VA, FortiGate Virtual Appliance, tech specs FortiGate VA
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -112,5 +113,5 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스를 제
 * [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 관리](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingfortinetvm)
 * [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Fortinet 웹 사이트](https://www.fortinet.com/){:new_window}
-* [Fortinet Document Library](https://docs.fortinet.com/product/fortigate/6.2){:new_window}
+* [Fortinet 웹 사이트](https://www.fortinet.com/){:external}
+* [Fortinet Document Library](https://docs.fortinet.com/product/fortigate/6.2){:external}

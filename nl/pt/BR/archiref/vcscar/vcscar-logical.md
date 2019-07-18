@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -28,7 +28,7 @@ O Skate Advisor consiste principalmente em um robô de bate-papo que pode aceita
 
 O elemento central de dados do Skate Advisor é a manobra. A linguagem de manobra define exclusivamente uma manobra. Essa linguagem pode ser usada para realizar as tarefas a seguir:
 - Conversar com o robô de bate-papo sobre manobras.
-- Procurar manobras por meio do Watson Discovery.
+- Procure manobras com o Watson Discovery.
 - Identificar e classificar as manobras ao treinar o Watson Discovery por meio de artigos de origem.
 - Identificar uma manobra para propósitos de exibição de local e mídia.
 
@@ -83,16 +83,16 @@ Tabela 2. Interações do robô de bate-papo
 Etapa | Descrição
 ---|---
 1 | Inicie uma conversa válida, veja a seção sobre Fluxos de conversa.
-2 | O robô de bate-papo envia Fala para o serviço Speech to Text.
-3 | O serviço Speech to Text envia Texto para o robô de bate-papo.
+2 | O robô de bate-papo envia o discurso para o serviço Speech to Text.
+3 | O serviço Speech to Text envia o texto para o robô de bate-papo.
 4 | O robô de bate-papo envia a Consulta de texto para o Skate Advisor.
 5 | O Skate Advisor avalia a solicitação e envia para o Watson Assistant.
 6 | O Watson Assistant classifica a solicitação e responde ao Skate Advisor com a ação a ser tomada.
 7 | O Skate Advisor solicita um conjunto de dados do Discovery Service.
 8 | O Discovery Service avalia a consulta e envia a resposta.
 9 |O Skate Advisor forma uma resposta e envia para o Robô de bate-papo no texto.
-10 | O Robô de bate-papo envia a resposta de texto ao serviço Text to Speech.
-11 | O resultado é enviado para o usuário por meio do Robô de bate-papo.
+10 | O robô de bate-papo envia a resposta de texto para o serviço Text to Speech.
+11 | O resultado é enviado ao usuário por meio do robô de bate-papo.
 
 ### Renderização de vídeo
 {: #vcscar-logical-video-render}

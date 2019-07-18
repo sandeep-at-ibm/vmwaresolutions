@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -22,7 +22,7 @@ Un aspecto clave de Skate Advisor son las conversaciones posibles gracias al cha
 El lenguaje de skater es el núcleo del sistema y se utiliza de la forma siguiente:
 * Reconocimiento de trucos: utilizado por Watson Discovery para ingerir material de fuentes en línea a fin de reconocer los trucos existentes y correlacionarlos con el material de origen.
 * Conversaciones sobre skate: utilizado por el chatbot para mantener conversaciones con sentido con el usuario del sistema.
-* Clasificación de trucos: almacenar y clasificar un truco en función de la descripción textual del truco. Los trucos que se clasifican de esta forma pueden tener metadatos adjuntos, como referencias de ubicación y vídeos.
+* Clasificación de trucos: almacenar y clasificar un truco en función de la descripción textual del truco. Se pueden adjuntar metadatos, como referencias de ubicación y de vídeo, a los trucos que se clasifican.
 
 ## Elementos del lenguaje
 {: #vcscar-concepts-lang-elem}
@@ -39,7 +39,7 @@ Tipo de elemento | Texto del lenguaje
 Direction | fakie<br>nollie<br>switch
 Rotation | halfcab<br>cab<br>180<br>360<br>540
 Base | kickflip<br>heelflip<br>hardflip<br>bigspin<br>shuvit<br>impossible
-landing | manual (2 ruedas posteriores)<br>nosemanual (2 ruedas frontales)<br>5-0 (grind)<br>nosegrind<br>tailslide<br>noseslide<br>crooked grind<br>smithgrind<br>boardslide<br>lipslide<br>
+landing | manual (dos ruedas posteriores)<br>nosemanual (dos ruedas frontales)<br>5-0 (grind)<br>nosegrind<br>tailslide<br>noseslide<br>crooked grind<br>smithgrind<br>boardslide<br>lipslide<br>
 
 ### Modificadores de elementos
 {: #vcscar-concepts-elem-modifiers}

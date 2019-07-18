@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-28"
 
 keywords: Zerto, request Zerto Orchestrated, Zerto managed service
 
@@ -13,7 +13,9 @@ subcollection: vmware-solutions
 
 ---
 
-# 请求 Zerto on IBM Cloud 的受管服务
+{:external: target="_blank" .external}
+
+# Zerto on IBM Cloud 的受管服务
 {: #managing_zerto_services}
 
 Zerto on {{site.data.keyword.cloud}} 服务提供了复制和灾难恢复功能。这些功能可以集成到部署产品中，以在 {{site.data.keyword.cloud_notm}} 上保护和恢复 VMware 虚拟环境中的数据。
@@ -29,22 +31,22 @@ Zerto on {{site.data.keyword.cloud}} 服务提供了复制和灾难恢复功能�
 
 在此模型中，供应了 {{site.data.keyword.cloud_notm}} Resiliency Orchestration 服务以用于 Zerto on {{site.data.keyword.cloud_notm}}。此模型可以通过不间断 DR 测试、RTO/RPO（恢复时间目标/恢复点目标）可视性、故障转移和故障恢复能力，持续保护 {{site.data.keyword.cloud_notm}} 上的虚拟机、操作系统和数据。
 
-所有功能都通过 IBM Resiliency Services 全球指挥中心的 {{site.data.keyword.cloud_notm}} Resiliency Orchestration 仪表板进行管理。
+所有功能都由 IBM Resiliency Services 全球指挥中心通过 {{site.data.keyword.cloud_notm}} Resiliency Orchestration 仪表板进行管理。
 
-有关更多信息，请参阅 [IBM Resiliency Orchestration](https://www.ibm.com/us-en/marketplace/disaster-recovery-orchestration)。
+有关更多信息，请参阅 [IBM Resiliency Orchestration](https://www.ibm.com/us-en/marketplace/disaster-recovery-orchestration){:external}。
 
-## IBM Managed Services for Zerto（无编排）
+## IBM 管理的针对 Zerto 的服务（无编排）
 {: #managing_zerto_services-without-orchestrated}
 
 在此模型中，针对 Zerto on {{site.data.keyword.cloud_notm}} 供应了完全受管的 DR 解决方案。如果仅需要 Zerto Virtual Replication 的受管服务，而不需要 {{site.data.keyword.cloud_notm}} 上的 {{site.data.keyword.cloud_notm}} Resiliency Orchestration 服务，那么此模型适用。
 
-有关更多信息，请参阅 [IBM Resiliency Disaster Recovery as a Service](https://www.ibm.com/us-en/marketplace/disaster-recovery-as-a-service#product-header-top)。
+有关更多信息，请参阅 [IBM Resiliency Disaster Recovery as a Service](https://www.ibm.com/us-en/marketplace/disaster-recovery-as-a-service#product-header-top){:external}。
 
 ## 请求 Zerto on IBM Cloud 的受管服务的过程
 {: #managing_zerto_services-procedure}
 
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格中的**开始**。
-2. 向下滚动该页面，在**订购更多受管服务**下，单击 **Zerto on IBM Cloud 的受管服务**卡。
+2. 向下滚动该页面，在 **VMware 受管服务**下，单击 **Zerto on IBM Cloud 的受管服务**卡。
 3. 在 **Zerto on IBM Cloud** 页面上，查看 Zerto on {{site.data.keyword.cloud_notm}} 作为受管服务的描述和技术规范，然后单击**创建**。
 4. 根据需求指定配置设置，或者接受缺省值。
 5. 单击 **vCenter Server** 以将相应服务添加到其中一个实例。

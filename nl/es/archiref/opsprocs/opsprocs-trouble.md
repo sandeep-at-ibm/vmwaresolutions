@@ -4,33 +4,33 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-07"
+lastupdated: "2019-07-01"
 
 ---
 
 # Resolución de problemas
 {: #opsprocs-trouble}
 
-Para identificar problemas de su instancia de vCenter Server, los administradores del sistema deben identificar los síntomas del problema, determinar cuál de los componentes de la solución se ven afectados, investigar y proponer un arreglo o un método alternativo y probar el arreglo. 
+Para identificar problemas de su instancia de vCenter Server, los administradores del sistema deben identificar los síntomas del problema, determinar cuál de los componentes de la solución se ven afectados, investigar y proponer un arreglo o un método alternativo y probar el arreglo.
 
-* Identificar los síntomas - Hay muchas causas que pueden llevar a un infrarrendimiento o no rendimiento de su instancia. El primer paso para una resolución de problemas eficaz consiste en identificar exactamente qué es lo que va mal. Estos síntomas pueden notificarse desde sucesos y alarmas de vSphere, Operations Management en	{{site.data.keyword.cloud}} o a través del servicio de atención al usuario, procedente de uno de sus usuarios. 
+* Identificar los síntomas - Hay muchas causas que pueden llevar a un infrarrendimiento o no rendimiento de su instancia. El primer paso para una resolución de problemas eficaz consiste en identificar exactamente qué es lo que va mal. Estos síntomas pueden notificarse desde sucesos y alarmas de vSphere, Operations Management en	{{site.data.keyword.cloud}} o a través del servicio de atención al usuario, procedente de uno de sus usuarios.
 * Aislar los componentes afectados - Una vez que ha identificado los síntomas del problema, debe identificar los componentes de hardware o de software que se ven afectados y que pueden estar provocando este problema y los que no están implicados. Para ayudarle en este paso, dispone de herramientas tales como vCenter Operations Management en {{site.data.keyword.cloud_notm}}.
 * Proponer un arreglo o un método alternativo - Una vez que comprenda los síntomas y haya aislado los componentes, puede investigar posibles arreglos y métodos alternativos. Los administradores del sistema también utilizan el Portal de {{site.data.keyword.cloud_notm}}, incluyendo los escenarios de resolución de problemas de este documento, IBM ServiceNow y la base de conocimiento de VMware. Además, hay muchos wikis y blogs que pueden ser de ayuda. Para resoluciones aún más rápidas, Operations Management en {{site.data.keyword.cloud_notm}} incluye una serie de remedios para problemas identificados.
 * Probar las posibles soluciones - Cuando ya sabe cuáles son los síntomas del problema, los componentes afectados y ya ha propuesto un arreglo o un método alternativo, los administradores del sistema prueban de forma sistemática las soluciones hasta resolver el problema.
 
 vSphere incluye un subsistema configurable por el usuario de sucesos y alarmas que hace un seguimiento de los sucesos que se producen en todo el entorno de vSphere y almacena los datos en archivos de registro y en la base de datos de vCenter. Este subsistema también permite a los administradores del sistema especificar las condiciones bajo las que se desencadenan las alarmas. Las alarmas cambian de estado, desde avisos a alertas más serias a medida que cambian las condiciones del sistema, y pueden desencadenar acciones de alarma automatizadas, tales como enviar un correo electrónico al equipo de administración del sistema. Esta funcionalidad es útil cuando desea que se le informe, o que se emprenda una acción inmediata, cuando se producen determinados sucesos o condiciones en un objeto o grupo de objetos de inventario específico.
 
-Otras herramientas adicionales, como las incorporadas en la arquitectura de Operations Management on {{site.data.keyword.cloud_notm}} proporcionan una mayor asistencia en: identificar síntomas, aislar los componentes afectados y proponer un arreglo o solución temporal. 
+Otras herramientas adicionales, como las incorporadas en la arquitectura de Operations Management on {{site.data.keyword.cloud_notm}} proporcionan una mayor asistencia en: identificar síntomas, aislar los componentes afectados y proponer un arreglo o solución temporal.
 
 ## Directrices
 {: #opsprocs-trouble-guidelines}
 
-Las directrices siguientes se consideran las mejores prácticas para la resolución de problemas en {{site.data.keyword.vmwaresolutions_short}}: 
+Las directrices siguientes se consideran las mejores prácticas para la resolución de problemas en {{site.data.keyword.vmwaresolutions_short}}:
 * Aborde la resolución de problemas de forma sistemática.
-* Los síntomas están relacionados con disponibilidad, utilización o configuración: 
+* Los síntomas están relacionados con disponibilidad, utilización o configuración:
  *  Disponibilidad - Estos síntomas están relacionados con la disponibilidad de componentes de hardware y software y se caracterizan por una falta de respuesta. A menudo, el diseño de alta disponibilidad enmascara estos problemas para que no afecten directamente a las cargas de trabajo y a los usuarios.
  * Utilización - Estos síntomas se relacionan con la capacidad y el rendimiento y se caracterizan por una lenta velocidad de ejecución o la falta de capacidad de carga. La gestión proactiva de la capacidad reduce drásticamente estos problemas.
- * Configuración - Estos problemas se descubren normalmente en la prestación de nuevos servicios o en el resultado de la aplicación de un cambio. Los valores incorrectos pueden aflorar como síntomas de disponibilidad o de utilización. Por ejemplo, una dirección IP incorrecta se visualiza como un problema de disponibilidad, mientras que unos valores de RAM de máquina virtual (MV) demasiado bajos pueden dar síntomas de utilización. 
+ * Configuración - Estos problemas se descubren normalmente en la prestación de nuevos servicios o en el resultado de la aplicación de un cambio. Los valores incorrectos pueden aflorar como síntomas de disponibilidad o de utilización. Por ejemplo, una dirección IP incorrecta se visualiza como un problema de disponibilidad, mientras que unos valores de RAM de máquina virtual (MV) demasiado bajos pueden dar síntomas de utilización.
 * Intente aislar el problema en un componente del entorno.
 * Tome notas para poder rastrear los pasos.
 * Entienda y documente sus versiones de software.
@@ -38,13 +38,13 @@ Las directrices siguientes se consideran las mejores prácticas para la resoluci
 * Tanga diagramas en su red. Necesita varios diagramas que muestren las capas físicas (underlay) y lógicas (overlay).
 * Comprenda los cambios recientes en el entorno.
 * Investigue el impacto del arreglo, no cierre la sesión de las interfaces de gestión.
-* Asegúrese de tener copias de seguridad de todos los componentes clave, por si se tienen que volver a cargar o restablecer. 
+* Asegúrese de tener copias de seguridad de todos los componentes clave, por si se tienen que volver a cargar o restablecer.
 * No cambie más de una cosa a la vez.
 * Documente cada cambio y su resultado.
 * Al hacer una solicitud de soporte, asegúrese de documentar cuidadosamente y proporcionar la información pertinente. Tenga claro los síntomas que está viendo e identifique los componentes que cree que son defectuosos. Asegúrese de utilizar la terminología correcta. Intente minimizar cualquier malentendido o ambigüedad en su elección de palabras.
 * Los archivos de configuración de vSphere ESXi and vCenter Server controlan el comportamiento del sistema, debe saber dónde se encuentran. La mayoría de los valores de los archivos de configuración se establecen durante la instalación, pero se pueden modificar después de ésta.
 * Los archivos de registro capturan los mensajes generados por el kernel y los distintos subsistemas y servicios. Los servicios de vSphere ESXi y vCenter mantienen archivos de registro separados. Debe saber dónde están ubicados y
-cómo se puede acceder a ellos. 
+cómo se puede acceder a ellos.
 * Comprenda cómo utilizar las herramientas de administración de sistemas populares para obtener ayuda en los diagnósticos.
 
 Para obtener más información, consulte [Directrices para la resolución de problemas KB0012073](https://watson.service-now.com/nav_to.do?uri=kb_knowledge.do?sys_id=4a205910dbe0f7c06001327e9d96197b){:new_window}.
@@ -52,7 +52,7 @@ Para obtener más información, consulte [Directrices para la resolución de pro
 ## Resolución de problemas con archivos de registro
 {: #opsprocs-trouble-logs}
 
-Los archivos de registro son una excelente fuente de información para resolver problemas. El gran número de archivos de registro y la ingente cantidad de entradas en cada archivo de registro es difícil de diagnosticar. En la sección [Resolución de problemas con archivos de registro KB0012074](https://watson.service-now.com/nav_to.do?uri=kb_knowledge.do?sys_id=c74f91d0dbe4f7c06001327e9d9619b1){:new_window} se detalla dónde se encuentran estos archivos de registro en el entorno de VMware. Debido al número de archivos de registro y a la ingente cantidad de entradas de cada registro, puede considerar la posibilidad de utilizar las herramientas de Operations Management on {{site.data.keyword.cloud_notm}} para ayudar a capturar y analizar los registros de sucesos. 
+Los archivos de registro son una excelente fuente de información para resolver problemas. El gran número de archivos de registro y la ingente cantidad de entradas en cada archivo de registro es difícil de diagnosticar. En la sección [Resolución de problemas con archivos de registro KB0012074](https://watson.service-now.com/nav_to.do?uri=kb_knowledge.do?sys_id=c74f91d0dbe4f7c06001327e9d9619b1){:new_window} se detalla dónde se encuentran estos archivos de registro en el entorno de VMware. Debido al número de archivos de registro y a la ingente cantidad de entradas de cada registro, puede considerar la posibilidad de utilizar las herramientas de Operations Management on {{site.data.keyword.cloud_notm}} para ayudar a capturar y analizar los registros de sucesos.
 
 ## Resolución de problemas con escenarios comunes
 {: #opsprocs-trouble-common}
@@ -101,7 +101,7 @@ Tabla 2. Resolución de problemas típicos de hosts ESXi de vSphere
 y los mandatos de la vCLI (interfaz de línea de mandatos de VMware® vSphere), consulte [Iniciación a las interfaces de línea de mandatos de vSphere](https://vdc-download.vmware.com/vmwb-repository/dcr-public/bc4fa31a-40ac-4aa9-a6a1-7171d1fff7f4/740990ee-4d65-4627-a9d4-0f046cb78aec/vsphere-esxi-vcenter-server-67-command-line-interface-getting-started-guide.pdf){:new_window}. |
 | Estados de host de alta disponibilidad de vSphere | Si vCenter informa de un estado de host de alta disponibilidad de vSphere que indica una condición de error en el host, es necesario corregirlo pues este problema puede evitar que HA de vSphere vuelva a iniciar máquinas virtuales después de un error. Para obtener más información, consulte [Resolución de problemas de Estados de host de HA de vSphere](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vcenterhost.doc/GUID-DF7CEF44-98EC-458A-8614-50CCAEC0A7C5.html){:new_window}. |
 | El host de vSphere ESXi se encuentra en un estado que no responde | Para obtener información sobre la resolución de problemas de un host de vSphere ESXi que aparece como No Responde, Desconectado o cuando las VM del host aparecen como no disponibles en vCenter, consulte [Los hosts ESX/ESXi no responden y se muestran en gris (1019082)](https://kb.vmware.com/s/article/1019082){:new_window}. |
-| Al encender una máquina virtual, aparece el error `No se ha encontrado el archivo`.  | Para obtener información sobre cómo volver a crear un archivo de descriptor de disco virtual perdido (VMDK), consulte [Recreación de un archivo de descriptor de disco de máquina virtual que falta (1002511)](https://kb.vmware.com/s/article/1002511){:new_window}. |
+| Al encender una máquina virtual, aparece el error `No se ha encontrado el archivo`. | Para obtener información sobre cómo volver a crear un archivo de descriptor de disco virtual perdido (VMDK), consulte [Recreación de un archivo de descriptor de disco de máquina virtual que falta (1002511)](https://kb.vmware.com/s/article/1002511){:new_window}. |
 | Problemas de rendimiento de VM | Para obtener información sobre cómo aislar un problema de rendimiento en un host ESXi de vSphere, consulte [Resolución de problemas de rendimiento de máquinas virtuales ESX/ESXi (2001003)](https://kb.vmware.com/s/article/2001003?lang=en_US){:new_window}. Los problemas de rendimiento pueden deberse a restricciones de CPU, sobreasignación de memoria, latencia de almacenamiento o latencia de red. |
 | El servidor nativo está inactivo | Si el servidor nativo que ejecuta vSphere ESXi no responde o está inactivo, inicie sesión en la IU de gestión o la consola de {{site.data.keyword.cloud_notm}} y compruebe el estado. Si es necesario, abra un caso para obtener ayuda con el servidor nativo. Para obtener más información, consulte [Cómo trabajar con casos de soporte](/docs/get-support?topic=get-support-open-case#open-case){:new_window}. |
 | El host ESXi de vSphere está desconectado o no responde  | Para obtener más información, consulte [Resolución de problemas de un host ESXi/ESX que no responde (1003409)](https://kb.vmware.com/s/article/1003409?lang=en_US){:new_window}. |
@@ -132,8 +132,8 @@ Tabla 4. Resolución de problemas típicos de red
 | Título | Descripción |
 |---|---|
 |  /var/log de NSX Edge se está llenando en el Edge activo | Para obtener información sobre una solución temporal si recibe un aviso de que el disco de Edge se está llenando y descubre que la partición /var/log se está llenando, consulte [/var/log de NSX Edge se está llenando en el Edge activo (50108355)](https://kb.vmware.com/s/article/50108355){:new_window}.  |
-| Prueba del ancho de banda de HCX  | Para obtener información sobre cómo utilizar `perftest` para encontrar el ancho de banda disponible dentro de los túneles HCX si cree que tiene un problema de ancho de banda de red con HCX, consulte [Pasos para ejecutar Perftest en HCX (56211)](https://kb.vmware.com/s/article/56211?lang=en_US){:new_window}. Se realizan pruebas bidireccionales para cada `perftest`. Para el par de pasarelas, una se encuentra dentro del centro de datos de origen, que llamamos OnPrem y el otro está en {{site.data.keyword.cloud_notm}}. La forma como funciona el rendimiento de `perftest` es que el emisor intente enviar tan rápido como el enlace pueda soportar. Por lo tanto, para cada prueba, verá una tasa de "remitente" más alta que la tasa de "destinatario". Se
-puede considerar la tasa de "destinatario" como el resultado de rendimiento en un solo sentido. |
+| Prueba del ancho de banda de HCX  | Para obtener información sobre cómo utilizar `perftest` para encontrar el ancho de banda disponible dentro de los túneles HCX si cree que tiene un problema de ancho de banda de red con HCX, consulte [Pasos para ejecutar Perftest en HCX (56211)](https://kb.vmware.com/s/article/56211?lang=en_US){:new_window}. Se realizan pruebas bidireccionales para cada `perftest`. Para el par de pasarelas, una se encuentra dentro del centro de datos de origen, que llamamos OnPrem y el otro está en {{site.data.keyword.cloud_notm}}. La forma como funciona el rendimiento de `perftest` es que el emisor intente enviar tan rápido como el enlace pueda soportar. Por lo tanto, para cada prueba, podrá ver una tasa de "remitente" mayor que la de "destinatario". Se
+puede considerar la tasa de "destinatario" como un resultado de rendimiento en un solo sentido. |
 | Resolución de problemas de HCX | Para obtener más información, consulte [Resolución de problemas de HCX](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-troubleshooting). |
 | Estado de sincronización de HCX con 0% de progreso y 0 bytes con estado Error | Para obtener más información, consulte [La réplica de HCX está en Estado de sincronización de HCX con 0% de progreso y 0 bytes con estado Error (56710)](https://kb.vmware.com/s/article/56710?lang=en_US#q=HCX){:new_window}. |
 | Rendimiento de red de la VM bajo | Revise los valores de NIC virtual de la VM. VMware recomienda a NIC virtuales VMXNET 3 para las máquinas virtuales, puesto que es la última generación de NIC paravirtualizados diseñados para el rendimiento. Compruebe la compatibilidad de VMXNET 3 utilizando la lista de compatibilidad de VMware y, si es compatible, cambie el NIC virtual para un mejor rendimiento de red. Para obtener más información, consulte [Resolución de problemas de red](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.networking.doc/GUID-217384C2-B361-471D-90C8-BC2676A0ECA6.html){:new_window}. |

@@ -133,7 +133,7 @@ che internet per la migrazione e il traffico L2 esteso.
 
 Quando l'obiettivo è la migrazione del data center nel cloud, qualsiasi server fisico
 che interagisce con le VM in fase di migrazione può essere valutato per la migrazione in {{site.data.keyword.cloud_notm}} come una VM (P2V), bare metal o rimanere all'origine. Se il server fisico deve rimanere all'origine, e HCX verrà utilizzato solo durante la migrazione finché non viene stabilita una rete dedicata, è importante comprendere se risiede su qualsiasi rete estesa nel cloud
-con HCX. In questo scenario, HCX sta consentendo la migrazione nel cloud non solo delle VM ma dell'intera sottorete. 
+con HCX. In questo scenario, HCX sta consentendo la migrazione nel cloud non solo delle VM ma dell'intera sottorete.
 
 Per rimuovere HCX alla fine della migrazione, la sottorete non può esistere nell'origine e nella
 destinazione se deve essere mantenuta la connessione tra i dispositivi fisici e le

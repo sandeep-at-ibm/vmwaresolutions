@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server Hybridity delete instance, delete vCenter Server Hybridity, delete multi-site
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -40,8 +41,8 @@ vCenter Server with Hybridity Bundle 인스턴스를 삭제하면 다음 컴포�
 
 1. 보조 vCenter Server with Hybridity Bundle 인스턴스에서 모든 서비스를 제거하십시오.
 2. 삭제할 보조 인스턴스로 확장되는 NSX 오브젝트가 없는지 확인하십시오.
-3. 기본 SSO(Single Sign-On) 도메인에서 보조 vCenter Server를 삭제하십시오. 자세한 정보는 [Unregister vCenter Server from Single Sign-On](https://kb.vmware.com/s/article/2106736){:new_window}을 참조하십시오.
-4. 로컬 도메인 컨트롤러 VSI(Virtual Service Instance)를 내리십시오. 자세한 정보는 [내리기 도메인 컨트롤러 및 도메인](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-){:new_window}을 참조하십시오.
+3. 기본 SSO(Single Sign-On) 도메인에서 보조 vCenter Server를 삭제하십시오. 자세한 정보는 [Unregister vCenter Server from Single Sign-On](https://kb.vmware.com/s/article/2106736){:external}을 참조하십시오.
+4. 로컬 도메인 컨트롤러 VSI(Virtual Service Instance)를 내리십시오. 자세한 정보는 [내리기 도메인 컨트롤러 및 도메인](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-){:external}을 참조하십시오.
 5. {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 보조 vCenter Server with Hybridity Bundle 인스턴스를 삭제하십시오.
 6. 다중 사이트 구성의 모든 보조 vCenter Server with Hybridity Bundle 인스턴스에 대해 1 - 5단계를 반복하십시오.
 7. 모든 보조 인스턴스를 삭제하고 나면 {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 기본 인스턴스도 삭제할 수 있습니다.

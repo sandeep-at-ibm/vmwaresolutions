@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -145,7 +145,7 @@ e gli amministratori a soddisfare le richieste di business.
 ### Proxy CAM
 {: #vcscar-arch-overview-solution-cam-proxy}
 
-Fornisce un accesso proxy nginx in CAM.
+Fornisce un accesso proxy `nginx` in CAM.
 
 ### Interfaccia utente CAM
 {: #vcscar-arch-overview-solution-cam-ui}

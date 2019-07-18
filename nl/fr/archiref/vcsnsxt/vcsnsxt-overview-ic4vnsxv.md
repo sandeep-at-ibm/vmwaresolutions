@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-21"
 
 subcollection: vmware-solutions
 
@@ -96,11 +96,11 @@ SDDC-Dswitch-Public	  |SDDC-DPortGroup-External	|Port virtuel d'origine	|Actives
 Cette conception spécifie la configuration des composants NSX mais n'applique aucune configuration de réseau dissocié. Il appartient au client de concevoir le réseau dissocié en fonction de ses besoins.
 
 Les composants suivants sont configurés :
--	Les serveurs et contrôleurs de gestion sont installés et intégrés dans l'interface utilisateur Web vCenter.
--	Les agents ESXi sont installés et des adresses IP VTEP sont configurées par hôte ESXi.
--	Configuration VTEP, configuration de contrôleur et configuration VXLAN (zone de transfert).
--	Dispositifs NSX Edge Services Gateway (ESG) destinés à être utilisés par les composants de gestion.
--	Pour vCenter Server uniquement, dispositifs ESG (NSX Edge Services Gateway) pour une utilisation par les clients.
+- Les serveurs et contrôleurs de gestion sont installés et intégrés dans l'interface utilisateur Web vCenter.
+- Les agents ESXi sont installés et des adresses IP VTEP sont configurées par hôte ESXi.
+- Configuration VTEP, configuration de contrôleur et configuration VXLAN (zone de transfert).
+- Dispositifs NSX Edge Services Gateway (ESG) destinés à être utilisés par les composants de gestion.
+- Pour vCenter Server uniquement, dispositifs ESG (NSX Edge Services Gateway) pour une utilisation par les clients.
 
 Les composants suivants ne sont pas configurés :
 - Routeurs distribués virtuels

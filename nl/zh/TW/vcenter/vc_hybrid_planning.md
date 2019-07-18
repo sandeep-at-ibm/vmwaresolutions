@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-31"
+lastupdated: "2019-06-28"
 
 keywords: planning vCenter Server Hybridity, data center hybridity, vCenter Server Hybridity
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # vCenter Server with Hybridity Bundle 實例的需求及規劃
 {: #vc_hybrid_planning}
@@ -27,8 +29,6 @@ subcollection: vmware-solutions
 {: #vc_hybrid_planning-dc-availability}
 
 vCenter Server with Hybridity Bundle 部署具有嚴格的實體基礎架構需求。因此，您只能在符合需求的 {{site.data.keyword.CloudDataCents_notm}} 中部署實例。下列 {{site.data.keyword.CloudDataCents_notm}} 適用於 vCenter Server with Hybridity Bundle 部署：
-
-表 1. vCenter Server with Hybridity Bundle 實例的可用 {{site.data.keyword.CloudDataCents_notm}}
 
 | {{site.data.keyword.CloudDataCent_notm}} |位置|地區           |
 |:----------------------|:---------|:---------------|
@@ -65,16 +65,16 @@ vCenter Server with Hybridity Bundle 部署具有嚴格的實體基礎架構需�
 |WDC04 |華盛頓特區|NA 東部|
 |WDC06 |華盛頓特區|NA 東部|
 |WDC07 |華盛頓特區|NA 東部|
+{: caption="表 1. vCenter Server with Hybridity Bundle 實例的可用 {{site.data.keyword.CloudDataCents_notm}}" caption-side="top"}
 
 根據可用性及庫存供應，{{site.data.keyword.CloudDataCents_notm}} 可能會在 {{site.data.keyword.vmwaresolutions_short}} 主控台中顯示狀態指示器，以協助您規劃部署。
-
-表 2. 訂購 vCenter Server with Hybridity Bundle 實例時 {{site.data.keyword.CloudDataCents_notm}} 的狀態指示器
 
 |狀態|狀態詳細資料|
 |:------------------------------|:--------------------------------------------------|
 |即將推出                   |目前並未提供 {{site.data.keyword.CloudDataCent_notm}}。|
 |暫時沒有庫存                  |目前並未提供 {{site.data.keyword.CloudDataCent_notm}}。|
 |庫存受限             |{{site.data.keyword.CloudDataCent_notm}} 的可用性受限，可能無法完成訂單。|
+{: caption="表 2. 訂購 vCenter Server with Hybridity Bundle 實例時 {{site.data.keyword.CloudDataCents_notm}} 的狀態指示器" caption-side="top"}
 
 ## 管理元件的備份
 {: #vc_hybrid_planning-backup-mgmt-components}
@@ -95,7 +95,7 @@ vCenter Server with Hybridity Bundle 實例包括可授權您使用 VMware HCX o
   * **私密金鑰**：輸入 CA 憑證的私密金鑰。
   * （選用）**密碼**：如果私密金鑰已加密，請輸入密碼。
   * （選用）**重新輸入密碼**：再次輸入私密金鑰的密碼。
-  * （選用）**主機名稱**：輸入要對映至 CA 憑證通用名稱 (CN) 的主機名稱。HCX on {{site.data.keyword.cloud_notm}} 要求 CA 憑證為 NSX Edge 接受的格式。如需 NSX Edge 憑證格式的相關資訊，請參閱[匯入 SSL 憑證](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html)。
+  * （選用）**主機名稱**：輸入要對映至 CA 憑證通用名稱 (CN) 的主機名稱。HCX on {{site.data.keyword.cloud_notm}} 要求 CA 憑證為 NSX Edge 接受的格式。如需 NSX Edge 憑證格式的相關資訊，請參閱[匯入 SSL 憑證](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html){:external}。
 
 您可以根據需要來訂購實例基礎的其他附加程式服務（例如災難回復）。如需相關資訊，請參閱[訂購、檢視及移除 vCenter Server with Hybridity Bundle 實例的服務](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)。
 

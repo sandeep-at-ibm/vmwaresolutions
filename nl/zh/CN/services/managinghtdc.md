@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: HTDC WebGUI, HTDC console, enable internet HTDC
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -67,7 +68,7 @@ subcollection: vmware-solutions
 6. 要为 VM 设置静态路由，请单击**管理网络设置 > 管理静态路由 > 添加静态路由**。将**网络地址**设置为 `10.0.0.0/8`，将**网关**设置为上一步中记录的 IP 地址。
 7. 要设置 VM 的缺省网关 IP，请单击**管理网络设置 > 更改当前网络配置**。如果收到警告消息，请单击**确定**，然后单击**定制配置**。将**网关**字段设置为步骤 2 中记录的专用上行链路 IP 地址，然后单击**确定**。等待安装新的网络配置并重新启动网络服务。
 8. 如果看到要求 HyTrust SecureOS 重新认证的消息，请单击**确定**，然后输入此安装的其他 HyTrust VM 的 IP 地址。如果要求您输入 16 个字符的口令，请按 Enter 键以返回到主菜单。验证当前网络配置以确保应用更改。
-9. 要确认 VM 是否有权访问因特网，请对公共 IP 地址或 Web 站点执行 ping 操作。单击**管理网络设置 > 网络诊断工具 > Ping 其他服务器**。输入公共 Web 站点地址（例如，`www.ibm.com`），单击**确定**并等待显示消息，例如 `www.ibm.com responds to ping`。
+9. 要确认 VM 是否有权访问因特网，请对公共 IP 地址或 Web 站点执行 ping 操作。单击**管理网络设置 > 网络诊断工具 > 测试其他服务器的入站端口**。输入公共 Web 站点地址（例如，`www.ibm.com`），单击**确定**，输入 `80 443` 作为端口（或要测试的其他任何端口），您应该立即获得响应，其中显示入站端口以及类似于 `80 (OK) 443 (OK)` 的消息。
 10. 对另一个 HyTrust VM 重复步骤 3 - 9。
 
 
@@ -77,4 +78,4 @@ subcollection: vmware-solutions
 * [HyTrust DataControl on {{site.data.keyword.cloud_notm}} 概述](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htdc_considerations)
 * [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [常见问题](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [HyTrust Web 站点](https://www.hytrust.com/)
+* [HyTrust Web 站点](https://www.hytrust.com/){:external}

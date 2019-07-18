@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-06"
+lastupdated: "2019-07-01"
 
 ---
 
@@ -116,7 +116,7 @@ Tableau 2. Port de Log Insight
 ## Authentification
 {: #opsmgmt-vrli-auth}
 
-La gestion des utilisateurs de vRLI nécessite VMware Identity Manager (vIDM), qui est intégré à Active Directory. Les comptes de service sont utilisés pour la communication d'application à application depuis vRealize Operations Manager vers les adaptateurs suivants avec l'ensemble minimum de permissions nécessaires pour la collecte de métrique et pour le mappage topologique. 
+La gestion des utilisateurs de vRLI nécessite VMware Identity Manager (vIDM), qui est intégré à Active Directory. Les comptes de service sont utilisés pour la communication d'application à application depuis vRealize Operations Manager vers les adaptateurs suivants avec l'ensemble minimum de permissions nécessaires pour la collecte de métrique et pour le mappage topologique.
 * NSX Manager
 * vCenter
 * vSAN

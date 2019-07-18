@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-26"
 
 keywords: F5 BIG-IP, F5 install, tech specs F5
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -60,8 +61,6 @@ F5 on {{site.data.keyword.cloud_notm}} 服务随附以下组件：
 
 基于选择的许可模型和带宽，将使用以下配置部署两个 BIG-IP VE VM（虚拟机）：
 
-表 1. 不同带宽和许可模型选择的 CPU 和 RAM 部署
-
 |最大带宽|许可模型：良好|许可模型：更佳|许可模型：最佳|
 |:------------------|:--------------------|:----------------------|:--------------------|
 |25 Mbps|2 个 vCPU，4 GB RAM|4 个 vCPU，8 GB RAM|8 个 vCPU，16 GB RAM|
@@ -70,6 +69,7 @@ F5 on {{site.data.keyword.cloud_notm}} 服务随附以下组件：
 |3 Gbps|8 个 vCPU，16 GB RAM|8 个 vCPU，16 GB RAM|8 个 vCPU，16 GB RAM|
 |5 Gbps|8 个 vCPU，16 GB RAM|8 个 vCPU，16 GB RAM|8 个 vCPU，16 GB RAM|
 |10 Gbps|8 个 vCPU，16 GB RAM|8 个 vCPU，16 GB RAM|8 个 vCPU，16 GB RAM|
+{: caption="表 1. 不同带宽和许可模型选择的 CPU 和 RAM 部署" caption-side="top"}
 
 ### 其他注意事项
 {: #f5_considerations-additional}
@@ -128,4 +128,4 @@ F5 on {{site.data.keyword.cloud_notm}} 服务随附以下组件：
 * [管理 F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_f5)
 * [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [常见问题](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [F5 Web 站点](https://www.f5.com/){:new_window}
+* [F5 Web 站点](https://www.f5.com/){:external}

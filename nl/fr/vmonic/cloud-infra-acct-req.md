@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-31"
+lastupdated: "2019-06-18"
 
 keywords: user account, user permissions, VRF account
 
@@ -29,8 +29,6 @@ Le compte d'infrastructure {{site.data.keyword.cloud_notm}} que vous utilisez do
 
 Les utilisateurs autorisés peuvent vérifier et mettre à jour les autorisations d'un compte d'infrastructure {{site.data.keyword.cloud_notm}} sur le portail {{site.data.keyword.slportal}}. Pour plus d'informations, voir [Edition des autorisations de portail client d'un utilisateur](/docs/customer-portal?topic=customer-portal-customerportal_accuserprof#cp_editusercpperm){:new_window}.
 
-Tableau 1. Autorisations requises pour le compte d'infrastructure {{site.data.keyword.cloud_notm}}
-
 | Droit         | Détails                                 |
 |:------------------ |:--------------------------------------- |
 | Ajout de serveur | Ce droit est nécessaire pour les opérations suivantes : commande de serveurs {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} sur lesquels s'exécute VMware ESXi et mise à disposition de serveurs virtuels horaires qui sont utilisés pour des opérations de configuration, de maintenance et de prise en charge d'instance. |
@@ -49,6 +47,7 @@ Tableau 1. Autorisations requises pour le compte d'infrastructure {{site.data.ke
 | Affichage des licences | Ce droit est nécessaire pour extraire et valider les licences utilisées par votre instance. |
 | Affichage des mots de passe | Ce droit est nécessaire pour pouvoir administrer les instances de serveur virtuel commandées. |
 | Gestion de la surveillance du serveur | Ce droit n'est pas nécessaire pour passer une commande mais il l'est pour extraire et valider le statut de surveillance des serveurs {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} sur lesquels les serveurs VMware ESXi exécutent votre instance. |
+{: caption="Tableau 1. Autorisations requises pour le compte d'infrastructure {{site.data.keyword.cloud_notm}}" caption-side="top"}
 
 ## VRF avec noeuds finaux de service activés
 {: #cloud-infra-acct-req-vrf-se}

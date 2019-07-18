@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -14,7 +14,7 @@ subcollection: vmware-solutions
 # Servizi comuni per i componenti di VMware e Skate Advisor Concept Car
 {: #vcscar-commonservices}
 
-I servizi comuni forniscono i servizi che vengono utilizzati da altri servizi nella piattaforma di gestione cloud. I servizi comuni includono i servizi di identità e di accesso, i servizi di nome dominio e i servizi NTP.
+I servizi comuni forniscono i servizi che vengono utilizzati da altri servizi nella piattaforma di gestione cloud. I servizi comuni includono i servizi di identità e accesso, i servizi di nome dominio e i servizi NTP (Network Time Protocol).
 
 ![{{site.data.keyword.icpfull_notm}} - servizi comuni](../../images/vcscar-common-services.svg "{{site.data.keyword.icpfull_notm}} - servizi comuni")
 

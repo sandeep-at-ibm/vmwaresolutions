@@ -47,7 +47,7 @@ Caveonix RiskForesight에는 다음과 같은 구역의 개념이 있습니다.
 - 클라우드 제공자 - 이 구역에서는 애플리케이션을 호스팅하는 인프라를 제공합니다.
     - 프라이빗 – VMware on {{site.data.keyword.cloud}}, 온프레미스, VMware 인프라 플랫폼. 해당 플랫폼은 vCenter, NSX Manager, vCD(VMware Cloud Director) 또는 vRA(vRealize Automation)를 통해 RiskForesight에 통합됩니다.
     - 퍼블릭 - 현재 지원되는 퍼블릭 클라우드 제공자는 AWS뿐입니다. {{site.data.keyword.cloud_notm}}는 곧 사용 가능합니다.
-    - 컨테이너 - 현재 AWS EKS(Elastic Kubernetes Service)만 지원됩니다. {{site.data.keyword.cloud_notm}} 프라이빗과 IKS({{site.data.keyword.cloud_notm}} Kubernetes Service)는 곧 사용 가능합니다.
+    - 컨테이너 - 현재 AWS EKS(Elastic Kubernetes Service)만 지원됩니다. {{site.data.keyword.cloud_notm}} Private 및 {{site.data.keyword.cloud_notm}} Kubernetes Services는 곧 사용 가능합니다.
 -	테넌트 또는 고객 환경 구역 - 해당 구역은 테넌트, 고객 또는 비즈니스 단위를 구분하는 데 사용합니다. 워크로드는 해당 구역에 있으므로 원격 콜렉터가 필요합니다. 최소 배치의 경우 하나의 원격 콜렉터가 필요하지만, 일반 배치의 경우 테넌트/고객/비즈니스 단위당 하나의 원격 콜렉터가 필요합니다.
 
 

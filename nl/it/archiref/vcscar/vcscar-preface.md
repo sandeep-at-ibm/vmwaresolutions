@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -19,16 +19,16 @@ subcollection: vmware-solutions
 ## Introduzione al linguaggio di skateboarding
 {: #vcscar-preface-intro}
 
-Il modo in cui gli skateboarder combinano movimenti e submovimenti in trick
-impone una sorta di grammatica o di sintassi, che si basano sulla fisica di ciò che sta
-accadendo; la nomenclatura chimica si è evoluta per ragioni simili. Oggi, uno skater su un lato del pianeta può
+Il modo in cui gli skateboarder combinano movimenti e submovimenti in trick impone una sorta di grammatica o di sintassi che si basa sulla fisica di ciò che sta accadendo; la nomenclatura chimica si è evoluta per ragioni simili. Oggi, uno skater su un lato del pianeta può
 inviare un messaggio con il nome di un trick a un altro skater che sta sull'altro lato e i suoi
 movimenti complessi vengono compresi.
 
 La ricchezza del linguaggio è alimentata dalla complessità dello skateboarding
 in sé. I movimenti della tavola sono intricati, dando luogo a dozzine di
 trick di base che possono essere eseguiti in più modi, ripetuti su più
-variabili, per produrre un numero enorme di combinazioni. Una
+variabili, per produrre un numero enorme di combinazioni.
+
+Una
 struttura di prefisso-radice-suffisso per ogni componente determina il modo
 in cui si concatena ogni elemento o movimento, che corrisponde alla serie di momenti reali
 della tavola e del suo rider. L'orientamento fisico e la meccanica delle
@@ -48,8 +48,7 @@ Queste ultime due variabili meritano un po' più di spiegazione. Innanzitutto, l
 *posizione* è facilmente confusa con la direzionalità lineare. Gli skater hanno tutti
 una posizione nativa, con piede sinistro o destro in avanti; quindi, eseguire un trick
 *switch* (posizione switch) significa fare l'immagine speculare di questa posizione, simile a un
-battitore ambidestro nel baseball. La direzione all'indietro è incidentale; la
-distinzione principale è la tendenza a utilizzare in modo naturale il piede destro o sinistro.  Quindi, qualsiasi
+battitore ambidestro nel baseball. La direzione all'indietro è incidentale; la distinzione principale è la tendenza a utilizzare in modo naturale il piede destro o sinistro. Quindi, qualsiasi
 trick eseguito in *switch* merita più credito non perché sia all'indietro,
 ma perché tutte le funzioni motorie sono invertite sul lato più debole o sul piede
 “sbagliato”. Per fare un trick all'indietro o “fakie” si mette semplicemente un
@@ -62,7 +61,9 @@ salta e ruota la tavola (2 assi), rispetto al corpo stesso. I flip trick
 si eseguono da entrambi i lati del piede dal bordo della tavola:
 i *kickflip* possono ruotare in senso orario dall'avampiede, mentre gli *heelflip* fanno
 esattamente l'opposto, saltando verso o contro il flusso naturale del
-movimento. Quindi, i salti verso l'interno sono così innaturali che assumono
+movimento.
+
+Quindi, i salti verso l'interno sono così innaturali che assumono
 un meritato termine separato, chiamato *hard-flip*. Pertanto, un
 *nollie-inward-kickflip* è identico a un *nollie-hardflip*,
 che richiedono più precisione perché sono nel senso opposto.
@@ -84,9 +85,7 @@ migliaia.
 Nei primi anni 90, gli skater presero i primi trick flat-ground, ovvero eseguiti al
 suolo, e li proiettarono nell'ambiente “organico” circostante: scale,
 cornicioni, corrimano, banchine, tetti spioventi, barre piatte, tavoli da picnic, fioriere; tutto
-questo ha aperto la dimensionalità di ciò che li ha definiti. Gli infiniti
-modi in cui potevano combinare trick e suolo in accoppiamenti yin-yang
-hanno tenuto gli skater occupati per anni. Questo vale anche per il *vert-skating*,
+questo ha aperto la dimensionalità di ciò che li ha definiti. Gli infiniti modi in cui possono combinare trick e suolo in accoppiamenti yin-yang hanno tenuto gli skater occupati per anni. Questo vale anche per il *vert-skating*,
 esemplificato da Tony Hawk in rampe e piscine.
 
 Mentre la maggior parte dei trick di base sono stati stabiliti nel corso degli anni, è
@@ -175,8 +174,7 @@ vita creativa di tutti gli skater professionisti.
 
 La stratificazione creativa dei sistemi IT per generare nuove combinazioni parla
 al cuore dello skateboarding. Ha il potere di incastrarsi nella vita
-dei creativi per ispirare l'innovazione, in tutto il mondo, ovunque andiamo.
-Niente di tutto ciò potrebbe essere ottenuto senza {{site.data.keyword.cloud}}.
+dei creativi per ispirare l'innovazione, in tutto il mondo, ovunque andiamo. Niente di tutto ciò potrebbe essere ottenuto senza {{site.data.keyword.cloud}}.
 
 ## Link correlati
 {: #vcscar-preface-related}

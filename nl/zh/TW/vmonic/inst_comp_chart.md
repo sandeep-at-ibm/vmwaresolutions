@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-20"
 
 keywords: vmware offering, vmware solutions functions, function support
 
@@ -17,8 +17,6 @@ subcollection: vmware-solutions
 {: #inst_comp_chart}
 
 請檢閱下列圖表，來瞭解 VMware vCenter Server 實例、VMware vCenter Server with Hybridity Bundle 實例，以及 VMware vSphere 叢集的功能支援的差異。
-
-表 1. vCenter Server、vCenter Server with Hybridity Bundle，以及 vSphere 叢集支援的功能
 
 |功能                          |vCenter Server | vCenter Server with Hybridity |VMware vSphere |
 |:--- |:--- |:--- |:--- |
@@ -38,6 +36,7 @@ subcollection: vmware-solutions
 |NSX 授權升級選項           |可從 NSX Base 升級至 Advanced 或 Enterprise，以及從 NSX Advanced 升級至 Enterprise。可以升級至 vCenter Server with Hybridity Bundle。|可從 NSX Advanced 升級至 Enterprise  |無   |
 |vSAN 授權版本         |vSAN Advanced 或 Enterprise  |vSAN Advanced 或 Enterprise  |vSAN Advanced 或 Enterprise  |
 |附加服務               |支援，不包括 HCX on {{site.data.keyword.cloud_notm}}。可以升級至 vCenter Server with Hybridity Bundle。|支援，包括 HCX on {{site.data.keyword.cloud_notm}}。| 此解決方案的自動化不支援，但您可以啟動及安裝自己的軟體。|
+{: caption="表 1. vCenter Server、vCenter Server with Hybridity Bundle，以及 vSphere 叢集支援的功能" caption-side="top"}
 
 ##  附註 
 {: #inst_comp_chart-notes}

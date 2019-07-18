@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: HCX updates, HCX management console, login HCX console
 
@@ -12,6 +12,9 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
+
 
 # 管理 VMware HCX on IBM Cloud
 {: #managinghcx}
@@ -40,5 +43,5 @@ HCX on {{site.data.keyword.cloud_notm}} 通过 VMware Hybrid Cloud Extension 技
 
 * [HCX on {{site.data.keyword.cloud_notm}} 概述](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations)
 * [HCX 术语的词汇表](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
-* [VMware Hybrid Cloud Extension 概述](https://cloud.vmware.com/vmware-hcx)
-* [VMware Hybrid Cloud Extension 文档](https://cloud.vmware.com/vmware-hcx/resources)
+* [VMware Hybrid Cloud Extension 概述](https://cloud.vmware.com/vmware-hcx){:external}
+* [VMware Hybrid Cloud Extension 文档](https://cloud.vmware.com/vmware-hcx/resources){:external}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server compliance, compliance info, vCenter Server policy
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -56,17 +57,18 @@ HIPAA のお客様には、VMware vCenter Server on {{site.data.keyword.cloud_no
 ## ポリシー構成
 {: #vc_compl_info-default-policy-config}
 
-vCenter Server プライマリー・インスタンス用に生成される vCenter パスワードの長さが 15 文字になりました。以前は、生成されるパスワードの長さは、vCenter のデフォルトである 8 文字でした。
+vCenter Server プライマリー・インスタンス用に生成される vCenter パスワードの長さが 15 文字になりました。 以前は、生成されるパスワードの長さは、vCenter のデフォルトである 8 文字でした。
 
-表 1. 新しいプライマリー・インスタンスの vCenter ポリシー構成
+以下の表は、新規 1 次インスタンスの vCenter ポリシー構成の詳細を示しています。
 
 | ポリシー | V3.1 以降 | V3.0 以前 |
 |:------------- |:------------------------------ |:------------- |
 | vCenter パスワード・ポリシー | 最小長 15 文字 | 最小長 8 文字 (vCenter デフォルト) |
 | vCenter ロックアウト・ポリシー | 失敗ログイン最大試行回数 3 回 | 失敗ログイン最大試行回数 5 回 (vCenter デフォルト) |
 | vCenter ロックアウト・ポリシー | ログイン失敗間 900 秒 | ログイン失敗間 180 秒 (vCenter デフォルト) |
+{: caption="表 1. vCenter ポリシーの構成" caption-side="top"}
 
-vCenter Server プライマリー・インスタンス用に生成される NSX Manager パスワードの長さが 15 文字になりました。以前は、生成されるパスワードの長さは 8 文字でした。
+vCenter Server プライマリー・インスタンス用に生成される NSX Manager パスワードの長さが 15 文字になりました。 以前は、生成されるパスワードの長さは 8 文字でした。
 
 ## お客様のインスタンスへのアクセスに関するポリシー
 {: #vc_compl_info-policy-for-access-client-inst}
@@ -98,7 +100,7 @@ VMware vCenter Server の環境が、{{site.data.keyword.vmwaresolutions_short}}
 * チーム・レベルで高度な技術的専門知識を維持するためには、専門性のレベルにもよりますが、特定のソフトウェアの問題を解決するのに複数のサポート・チームの関与が必要になる場合があります。 IBM のサポート・チームの間には完全なネットワークが作られているのでこれは簡単です。どのような問題が発生しても 1 つのチームとして解決に取り組むことができます。
 * 問題を調査するために、IBM がお客様のシステム上にある障害関連の情報にアクセスしたり、詳しい情報を得るために障害を再現したりする必要がある場合があります。
 * お客様がサポート・チケットを作成すれば、調査、デバッグ、優先順位付けのために IBM サポートが VMware 管理層にアクセスすることをお客様が承認することになります。 保守のための停止や環境の変更が必要になった場合、IBM サポートは、変更管理プロセスの一環として、新たにチケットを介してお客様に書面による確認を要求します。
-* サポート・チケットについて詳しくは、[IBM サポート・ガイド](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923)と [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)を参照してください。
+* サポート・チケットについて詳しくは、[IBM サポート・ガイド](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923){:external}と [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)を参照してください。
 
 ## お客様の責任
 {: #vc_compl_info-client-responsibilities}
@@ -137,7 +139,7 @@ VMware vCenter Server の環境が、{{site.data.keyword.vmwaresolutions_short}}
 * そのような IBM 以外のプログラムのライセンスは、それぞれのプロバイダーから直接交付されます。 お客様は、プロバイダーの契約条件に従って IBM 以外のプログラムの使用に同意します。 そのような条件は、購入時に IBM オファリングに付属する IBM の使用条件に含まれた形で提供されます。
 * IBM は、サード・パーティー製品が IBM プログラムと連携して適切に機能することを確認するためにテストを行います。
 * IBM ソフトウェア・サポートは、IBM オファリングがサード・パーティー・ソフトウェアと連携する方法に関する情報を活用して、お客様の問題に関する問題診断を行います。 IBM プログラムが正しく機能するという結論が出ているにもかかわらず、引き続き問題が存在している場合は、IBM はさらに診断するためにお客様をサード・パーティー・ベンダーに照会する必要があります。
-* サード・パーティーのソフトウェアやコードに関するお客様の責任について詳しくは、[IBM サポート・ガイド](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923)を参照してください。
+* サード・パーティーのソフトウェアやコードに関するお客様の責任について詳しくは、[IBM サポート・ガイド](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923){:external}を参照してください。
 
 ## お客様の環境へのアクセスの同意
 {: #vc_compl_info-consent-to-access-client-environment}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-26"
 
 keywords: FAQ, host, ESXi server
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -43,7 +44,7 @@ subcollection: vmware-solutions
 
    `esxcli system settings advanced set -o /Net/TcpipHeapMax -i 1576`
 
-2. 重新启动每个 ESXi 服务器。有关更多信息，请参阅[创建具有最多 64 个主机的 vSAN 6.x 集群](https://kb.vmware.com/s/article/2110081)。
+2. 重新启动每个 ESXi 服务器。有关更多信息，请参阅[创建具有最多 64 个主机的 vSAN 6.x 集群](https://kb.vmware.com/s/article/2110081)。{:external}
 3. 可能需要增大 vCenter Server 的大小以容纳添加的虚拟机和 ESXi 服务器。
 4. 开具 IBM 支持凭单以表明您已通过完成步骤 1 - 3 手动应用了 vSAN 更改。在凭单中，请求为超过 32 个的 ESXi 服务器启用已升级的实例。
 

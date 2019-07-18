@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-15"
+lastupdated: "2019-06-21"
 
 subcollection: vmware-solutions
 
@@ -32,14 +32,14 @@ A configuração do Provedor de serviços tem oito subetapas:
 
 A Configuração do locatário ou da Organização tem sete subetapas:
 
--	Etapa 1: Organização - Incluir detalhes para sua organização primária. Também é possível criar sub-organizações. Use as organizações para segmentar seus usuários ou como uma das maneiras de agrupar seus ativos. É possível criar mais organizações com uma de suas organizações existentes como mãe. Ao criar uma nova organização, é possível selecionar o "Valor do impacto nos negócios", que é usado para gerar pontuações de risco cibernético.
--	Etapa 2: Ativos da organização - Novos ativos/cargas de trabalho são agrupados automaticamente por local, provedor em nuvem e repositório de ativos. Os Ativos podem ser designados a apenas uma organização de cada vez. O Provedor de serviços precisa designar ativos a uma organização.
--	Etapa 3: Associar ambiente e local - Opcional. Os ambientes são definidos pelo Provedor de serviços.
--	Etapas 4 e 5: Criar Subaplicativos ou Aplicativos - usado para agrupar ativos em locais e organizações e ver seus fluxos e políticas associados. Criar aplicativos que correspondam aos serviços de negócios e de TI. Por exemplo, Aplicativo=SAP, Subaplicativos=Front-end do SAP, Camada do meio do SAP e Back-end do SAP. O valor do impacto nos negócios corresponde a um Aplicativo; os regimes de conformidade aplicam-se a um aplicativo.
--	Etapa 6: Acesso remoto - o Acesso remoto é necessário para executar varreduras em ativos, pode ser uma conta de serviço padrão ou uma conta específica do ativo.
--	Etapa 7: Planejador de tarefas - Planejar varreduras para execução em uma base periódica. Os tipos de tarefas incluem: Vulnerabilidade de varredura do SCAP, XCCDF de varredura do SCAP, Varredura de fluxo do NSX, Varredura de software, Varredura de extração de log.
+- Etapa 1: Organização - Incluir detalhes para sua organização primária. Também é possível criar sub-organizações. Use as organizações para segmentar seus usuários ou como uma das maneiras de agrupar seus ativos. É possível criar mais organizações com uma de suas organizações existentes como mãe. Ao criar uma nova organização, é possível selecionar o **Valor de impacto no negócio**, que é usado para gerar pontuações de risco cibernético.
+- Etapa 2: Ativos da organização - Novos ativos/cargas de trabalho são agrupados automaticamente por local, provedor em nuvem e repositório de ativos. Os Ativos podem ser designados a apenas uma organização de cada vez. O Provedor de serviços precisa designar ativos a uma organização.
+- Etapa 3: Associar ambiente e local - Opcional. Os ambientes são definidos pelo Provedor de serviços.
+- Etapas 4 e 5: Criar Subaplicativos ou Aplicativos - usado para agrupar ativos em locais e organizações e ver seus fluxos e políticas associados. Criar aplicativos que correspondam aos serviços de negócios e de TI. Por exemplo, Aplicativo=SAP, Subaplicativos=Front-end do SAP, Camada do meio do SAP e Back-end do SAP. O **Valor de impacto no negócio** corresponde a um aplicativo; os regimes de conformidade são aplicados em um aplicativo.
+- Etapa 6: Acesso remoto - o Acesso remoto é necessário para executar varreduras em ativos, pode ser uma conta de serviço padrão ou uma conta específica do ativo.
+- Etapa 7: Planejador de tarefas - Planejar varreduras para execução em uma base periódica. Os tipos de tarefas incluem: Vulnerabilidade de varredura do SCAP, XCCDF de varredura do SCAP, Varredura de fluxo do NSX, Varredura de software, Varredura de extração de log.
 
-As informações a seguir são coletadas do usuário no momento do pedido e são usadas para a configuração do aplicativo.
+As informações a seguir são coletadas do usuário no momento do pedido e são usadas na configuração do aplicativo.
 
 Tabela 1. Informações coletadas do usuário
 

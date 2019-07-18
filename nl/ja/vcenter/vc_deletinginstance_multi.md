@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server delete instance, delete vCenter Server, delete multi-site
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -40,8 +41,8 @@ vCenter Server インスタンスを削除すると、以下のコンポーネ�
 
 1. セカンダリー vCenter Server インスタンスからすべてのサービスを削除します。
 2. 削除するセカンダリー・インスタンスに NSX オブジェクトを展開していないことを確認します。
-3. プライマリー SSO (シングル・サインオン) ドメインからセカンダリー vCenter Server を削除します。 詳しくは、[シングル・サインオンからの vCenter Server の登録解除](https://kb.vmware.com/s/article/2106736){:new_window}を参照してください。
-4. ローカル・ドメイン・コントローラー VSI (仮想サービス・インスタンス) を降格します。 詳しくは、[ドメイン・コントローラーとドメインの降格](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-){:new_window}を参照してください。
+3. プライマリー SSO (シングル・サインオン) ドメインからセカンダリー vCenter Server を削除します。 詳しくは、[シングル・サインオンからの vCenter Server の登録解除](https://kb.vmware.com/s/article/2106736){:external}を参照してください。
+4. ローカル・ドメイン・コントローラー VSI (仮想サービス・インスタンス) を降格します。 詳しくは、[ドメイン・コントローラーとドメインの降格](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-){:external}を参照してください。
 5. {{site.data.keyword.vmwaresolutions_short}} コンソールからセカンダリー vCenter Server インスタンスを削除します。
 6. マルチサイト構成のすべてのセカンダリー vCenter Server インスタンスについて手順 1 から 5 までを繰り返します。
 7. すべてのセカンダリー・インスタンスを削除したら、{{site.data.keyword.vmwaresolutions_short}} コンソールからプライマリー・インスタンスも削除できます。

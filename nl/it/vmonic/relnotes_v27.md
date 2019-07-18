@@ -64,14 +64,14 @@ Ora quando ordini il servizio F5 on {{site.data.keyword.cloud_notm}}, puoi selez
 
 Nel terzo quadrimestre del 2018, Fortinet ha modificato i propri pacchetti di sottoscrizione. Per ulteriori informazioni, vedi [Ordine di FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_ordering).
 
-Per FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} distribuito nelle istanze Cloud Foundation e vCenter Server della V2.1 e successive, viene fornito FortiOS 6.0.3.
+Per FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} distribuito nelle istanze Cloud Foundation e vCenter Server della V2.7 e successive, viene fornito FortiOS 6.0.3.
 
 Quando ordini FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, puoi selezionare se desideri che FortiGuard applichi la licenza e gli aggiornamenti di sicurezza sulla rete pubblica o sulla rete privata con un server proxy. Per ulteriori informazioni, vedi [Ordine di FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_ordering).
 
 ### Aggiornamenti dei componenti del servizio Zerto on IBM Cloud
 {: #relnotes_v27-zerto}
 
-Per il servizio Zerto on {{site.data.keyword.cloud_notm}} distribuito nelle istanze Cloud Foundation e vCenter Server della V2.1 e successive, viene fornito Zerto Virtual Replication 6.0 aggiornamento 3. Per ulteriori informazioni, vedi [Panoramica di Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr).
+Per il servizio Zerto on {{site.data.keyword.cloud_notm}} distribuito nelle istanze Cloud Foundation e vCenter Server della V2.7 e successive, viene fornito Zerto Virtual Replication 6.0 aggiornamento 3. Per ulteriori informazioni, vedi [Panoramica di Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr).
 
 ### Integrazione di KMIP for VMware on IBM Cloud con il programma di traccia dell'attività IBM Cloud
 {: #relnotes_v27-kmip-icat}

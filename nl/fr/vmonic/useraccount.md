@@ -41,13 +41,13 @@ Vous pouvez également indiquer si vous voulez recevoir des notifications par co
 2. Si vous voulez être prévenu par courrier électronique de la survenue d'événements, cliquez sur **Activer les notifications par courrier électronique**.
 3. Si vous voulez être prévenu sur la console de la survenue d'événements, cliquez sur **Activer les notifications par console**.
 
-## Procédure de définition des données d'identification de compte d'utilisateur 
+## Procédure de définition des données d'identification de compte d'utilisateur
 {: #useraccount-set-cred}
 
 1. Dans la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Paramètres** dans le panneau de navigation de gauche.
-2. Dans la zone **Données d'identification d'infrastructure IBM Cloud**, examinez les informations relatives aux étapes à suivre. 
+2. Dans la zone **Données d'identification d'infrastructure IBM Cloud**, examinez les informations relatives aux étapes à suivre.
 3. Si vous disposez d'un compte d'infrastructure {{site.data.keyword.cloud_notm}} et d'un compte {{site.data.keyword.cloud_notm}} liés, cliquez sur **Extraire** pour compléter automatiquement les données d'identification.
-4. Si vous disposez d'un compte d'infrastructure {{site.data.keyword.cloud_notm}} et d'un compte {{site.data.keyword.cloud_notm}} qui ne sont pas liés, vous devez les lier. Suivez les instructions de la section [Liaison des comptes IBMid](/docs/account?topic=account-unifyingaccounts#link_accounts), puis cliquez sur **Extraire** pour compléter les données d'identification automatiquement. 
+4. Si vous disposez d'un compte d'infrastructure {{site.data.keyword.cloud_notm}} et d'un compte {{site.data.keyword.cloud_notm}} qui ne sont pas liés, vous devez les lier. Suivez les instructions de la section [Liaison des comptes IBMid](/docs/account?topic=account-unifyingaccounts#link_accounts), puis cliquez sur **Extraire** pour compléter les données d'identification automatiquement.
 5. Si vous ne possédez pas de compte d'infrastructure {{site.data.keyword.cloud_notm}} et si vous ne possédez pas de compte {{site.data.keyword.cloud_notm}} facturable, [mettez d'abord à niveau votre compte](/docs/account?topic=account-upgrading-account), puis [créez une clé d'API d'infrastructure classique](/docs/iam?topic=iam-classic_keys).
 6. Si vous ne possédez pas de compte d'infrastructure {{site.data.keyword.cloud_notm}} et si vous possédez un compte {{site.data.keyword.cloud_notm}} facturable, vous devez [créer une clé d'API d'infrastructure classique](/docs/iam?topic=iam-classic_keys).
 7. Cliquez sur **Sauvegarder les données d'identification**.

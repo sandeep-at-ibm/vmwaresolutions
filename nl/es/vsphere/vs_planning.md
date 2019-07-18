@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-31"
+lastupdated: "2019-06-20"
 
 keywords: planning vSphere, data center, vSphere data centers
 
@@ -28,7 +28,7 @@ El usuario es el responsable de configurar el entorno y de instalar y configurar
 ## Requisitos de la cuenta de IBM Cloud
 {: #vs_planning-account-req}
 
-La cuenta de {{site.data.keyword.cloud_notm}} que utilice debe cumplir ciertos requisitos. Para obtener más información, consulte [Requisitos para la cuenta de {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req). 
+La cuenta de {{site.data.keyword.cloud_notm}} que utilice debe cumplir ciertos requisitos. Para obtener más información, consulte [Requisitos para la cuenta de {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req).
 
 ## Disponibilidad del centro de datos de IBM Cloud
 {: #vs_planning-dc-availability}
@@ -37,8 +37,6 @@ El despliegue de vSphere impone requisitos estrictos en cuanto a la infraestruct
 
 Si selecciona un componente vSAN, la lista de ubicaciones se filtra por disponibilidad de SSD (disco en estado sólido).
 {:note}
-
-Tabla 1. {{site.data.keyword.CloudDataCents_notm}} disponibles para clústeres de vSphere
 
 | {{site.data.keyword.CloudDataCent_notm}} | Ubicación | Región |
 |:----------------------|:---------|:---------------|
@@ -75,6 +73,7 @@ Tabla 1. {{site.data.keyword.CloudDataCents_notm}} disponibles para clústeres d
 | WDC04 | Washington, DC | América del Norte este |
 | WDC06 | Washington, DC | América del Norte este |
 | WDC07 | Washington, DC | América del Norte este |
+{: caption="Tabla 1. {{site.data.keyword.CloudDataCents_notm}} disponibles para clústeres de vSphere" caption-side="top"}
 
 ## Enlaces relacionados
 {: #vs_planning-related}

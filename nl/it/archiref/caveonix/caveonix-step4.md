@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-15"
+lastupdated: "2019-06-21"
 
 subcollection: vmware-solutions
 
@@ -32,14 +32,14 @@ L'impostazione del provider di servizi si articola in otto passi secondari:
 
 L'impostazione di tenant od organizzazione si articola in sette passi secondari:
 
--	Passo 1: Organizzazione - aggiunge i dettagli per la tua organizzazione primaria. Puoi anche creare delle organizzazioni secondarie. utilizza le organizzazioni per segmentare i tuoi utenti oppure come uno dei modi per raggruppare i tuoi asset. Puoi creare ulteriori organizzazioni con una delle tue organizzazioni esistenti come elemento principale. Quando crei una nuova organizzazione, puoi selezionare il valore dell'impatto di business ("Business Impact Value"), che viene utilizzato per generare i punteggi di rischio informatico.
--	Passo 2: asset dell'organizzazione - i nuovi asset/carichi di lavoro vengono raggruppati automaticamente in base a ubicazione, provider cloud e repository di asset. Gli asset possono essere assegnati solo a una singola organizzazione per volta. Il provider di servizi deve assegnare gli asset a un'organizzazione.
--	Passo 3: associa ambiente e ubicazione – facoltativo. Gli ambienti sono definiti dal provider di servizi.
--	Passo 4 e 5: crea le applicazioni secondarie o le applicazioni – utilizzato per raggruppare gli asset nelle ubicazioni e organizzazioni e visualizzarne i flussi e le politiche associati. Crea le applicazioni che corrispondono ai servizi IT e di business. Ad esempio, Applicazione=SAP (Application=SAP), Applicazione secondaria=Front end SAP (Sub-Applications=SAP Front End), Livello medio SAP (SAP Middle Tier) e Back end SAP (SAP Back End). Il valore dell'impatto di business corrisponde a un'applicazione, i regimi di conformità si applicano a un'applicazione.
--	Passo 6: Accesso remoto - l'accesso remoto è richiesto per eseguire le scansioni sugli asset e può essere un account di servizio predefinito o un account specifico per l'asset.
--	Passo 7: Programma di pianificazione delle attività - pianifica le scansioni per l'esecuzione su una base periodica. I tipi di attività includono; Scansione SCAP-vulnerabilità (SCAP Scan-Vulnerability), Scansione SCAP--XCCDF (SCAP Scan-XCCDF), Scansione del flusso NSX (NSX Flow Scan), Scansione software (Software Scan), Scansione estratto log (Log Extract Scan).
+- Passo 1: Organizzazione - aggiunge i dettagli per la tua organizzazione primaria. Puoi anche creare delle organizzazioni secondarie. utilizza le organizzazioni per segmentare i tuoi utenti oppure come uno dei modi per raggruppare i tuoi asset. Puoi creare ulteriori organizzazioni con una delle tue organizzazioni esistenti come elemento principale. Quando crei una nuova organizzazione, puoi selezionare il valore dell'impatto di business (**Business Impact Value**), che viene utilizzato per generare i punteggi di rischio informatico.
+- Passo 2: asset dell'organizzazione - i nuovi asset/carichi di lavoro vengono raggruppati automaticamente in base a ubicazione, provider cloud e repository di asset. Gli asset possono essere assegnati solo a una singola organizzazione per volta. Il provider di servizi deve assegnare gli asset a un'organizzazione.
+- Passo 3: associa ambiente e ubicazione – facoltativo. Gli ambienti sono definiti dal provider di servizi.
+- Passo 4 e 5: crea le applicazioni secondarie o le applicazioni – utilizzato per raggruppare gli asset nelle ubicazioni e organizzazioni e visualizzarne i flussi e le politiche associati. Crea le applicazioni che corrispondono ai servizi IT e di business. Ad esempio, Applicazione=SAP (Application=SAP), Applicazione secondaria=Front end SAP (Sub-Applications=SAP Front End), Livello medio SAP (SAP Middle Tier) e Back end SAP (SAP Back End). Il **Business Impact Value** corrisponde a un'applicazione, i regimi di conformità si applicano a un'applicazione.
+- Passo 6: Accesso remoto - l'accesso remoto è richiesto per eseguire le scansioni sugli asset e può essere un account di servizio predefinito o un account specifico per l'asset.
+- Passo 7: Programma di pianificazione delle attività - pianifica le scansioni per l'esecuzione su una base periodica. I tipi di attività includono; Scansione SCAP-vulnerabilità (SCAP Scan-Vulnerability), Scansione SCAP--XCCDF (SCAP Scan-XCCDF), Scansione del flusso NSX (NSX Flow Scan), Scansione software (Software Scan), Scansione estratto log (Log Extract Scan).
 
-Le seguenti informazioni vengono raccolte dall'utente al momento dell'ordine e vengono utilizzate nell'impostazione dell'applicazione.
+Le seguenti informazioni vengono raccolte dall'utente al momento dell'ordine e vengono utilizzate nella configurazione dell'applicazione.
 
 Tabella 1. Informazioni raccolte dall'utente.
 

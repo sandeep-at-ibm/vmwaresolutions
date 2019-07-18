@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-01"
 
 keywords: single-node trial, data protection DR, tech specs data protection DR
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -24,14 +25,14 @@ Single-node Trial for Data Protection and Disaster Recovery ti consente di esegu
 
 Single-node Trial è una versione di prova di VMware vCenter Server on {{site.data.keyword.cloud_notm}} che fornisce la piattaforma VMware a singolo tenant che può essere gestita utilizzando gli stessi strumenti degli ambienti in loco. Puoi sfruttare la velocità e le funzionalità di ridimensionamento del cloud mantenendo allo stesso tempo il medesimo livello di controllo e di visibilità fornito in loco.
 
-La versione di prova è progettata per la migrazione di un massimo di 20 semplici carichi di lavoro di sviluppo o test utilizzando vCenter Server on {{site.data.keyword.cloud_notm}} con Hybridity Bundle. L'automazione installerà e configurerà VMware HCX in {{site.data.keyword.cloud_notm}}, fornirà una chiave di attivazione HCX in loco e installerà Veeam on {{site.data.keyword.cloud_notm}} e Zerto on {{site.data.keyword.cloud_notm}} nel giro di poche ore. Puoi eseguire il backup e la replica di 20 macchine virtuali (VM, Virtual Machine) con Veeam on {{site.data.keyword.cloud_notm}} e Zerto on {{site.data.keyword.cloud_notm}}. 
+La versione di prova è progettata per la migrazione di un massimo di 20 semplici carichi di lavoro di sviluppo o test utilizzando vCenter Server on {{site.data.keyword.cloud_notm}} con Hybridity Bundle. L'automazione installerà e configurerà VMware HCX in {{site.data.keyword.cloud_notm}}, fornirà una chiave di attivazione HCX in loco e installerà Veeam on {{site.data.keyword.cloud_notm}} e Zerto on {{site.data.keyword.cloud_notm}} nel giro di poche ore. Puoi eseguire il backup e la replica di 20 macchine virtuali (VM) con Veeam on {{site.data.keyword.cloud_notm}} e Zerto on {{site.data.keyword.cloud_notm}}. 
 
 Single-node Trial for Data Protection and Disaster Recovery è solo per una prova di utilizzo PoC (proof of concept). Non eseguire i carichi di lavoro di produzione su questo ambiente. Le funzioni di gestione come l'aggiunta o la rimozione degli host e dei cluster, l'ordine di ulteriori servizi di componenti aggiuntivi e l'applicazione degli aggiornamenti non sono supportate.
 {:important}
 
-Una volta distribuita la tua istanza Single-node Trial, puoi utilizzare [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:new_window} da [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:new_window} per assistenza con la tua istanza. Inoltre, [{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/){:new_window} può aiutarti ad accelerare la modernizzazione dell'applicazione attraverso le più recenti pratiche native cloud.
+Una volta distribuita la tua istanza Single-node Trial, puoi utilizzare [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:external} da [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:external} per assistenza con la tua istanza. Inoltre, [{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/){:external} può aiutarti ad accelerare la modernizzazione dell'applicazione attraverso le più recenti pratiche native cloud.
 
-Questa versione di prova è destinata ad essere utilizzata per un massimo di 90 giorni. Vengono fatturati degli addebiti ricorrenti mensili sulla base della tua pianificazione di fatturazione, non quando l'istanza viene ordinata. Se l'istanza non viene annullata l'ultimo giorno del tuo ciclo di fatturazione, o prima, ti viene addebitato il mese successivo. Molto probabilmente, un periodo di prova di 90 giorni comporta addebiti per quattro mesi se l'annullamento non viene completato prima che il quarto mese inizi.
+Questa versione di prova è destinata ad essere utilizzata per un massimo di 90 giorni. Gli addebiti ricorrenti mensili sono fatturati in base alla tua pianificazione di fatturazione e non quando viene ordinata l'istanza. Se l'istanza non viene annullata l'ultimo giorno del tuo ciclo di fatturazione, o prima, ti viene addebitato il mese successivo. Una versione di prova di 90 giorni potrebbe comportare quattro mesi di addebito, a meno che l'annullamento non venga completato prima dell'inizio del quarto mese.
 {:note}
 
 Al termine della versione di prova, puoi eliminare questo ambiente ed eseguire il provisioning di un nuovo ambiente che soddisfi le tue esigenze di capacità.
@@ -140,7 +141,7 @@ Ulteriori dispositivi HCX vengono distribuiti durante la configurazione in base 
 
 Single-node Trial for Data Protection and  Disaster Recovery include Veeam on {{site.data.keyword.cloud_notm}}. Nel servizio Veeam on {{site.data.keyword.cloud_notm}} vengono ordinati e inclusi i seguenti componenti.
 
-* Pacchetto da 25 licenze della Veeam Availability Suite
+* Licenza di 25 pacchetti di Veeam Availability Suite
 * 4000 GB di archiviazione
 * Prestazioni dell'archiviazione di 0,25 IOPS/GB
 * Windows Server 2016 Standard Edition (64 bit)
@@ -164,12 +165,12 @@ Single-node Trial for Data Protection and Disaster Recovery include Zerto on {{s
 ## Specifiche tecniche per IBM Cloud Automation Manager
 {: #dr_backup_bundle_overview-cam-tech-specs}
 
-{{site.data.keyword.cloud_notm}} Automation Manager 3.1.2 viene installato utilizzando la topologia di sviluppo/test su tutte le istanze Single-node Trial for Data Protection and Disaster Recovery. Per ulteriori informazioni su {{site.data.keyword.cloud_notm}} Automation Manager, vedi la [documentazione di {{site.data.keyword.cloud_notm}} Automation Manager](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: new_window}.
+{{site.data.keyword.cloud_notm}} Automation Manager 3.1.2 viene installato utilizzando la topologia di sviluppo/test su tutte le istanze Single-node Trial for Data Protection and Disaster Recovery. Per ulteriori informazioni su {{site.data.keyword.cloud_notm}} Automation Manager, vedi [{{site.data.keyword.cloud_notm}} Automation Manager documentation](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: external}.
 
 ## Link correlati
 {: #dr_backup_bundle_overview-related}
 
-* [Risorse VMware HCX](https://hcx.vmware.com/#/docs){:new_window}
-* [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}
+* [Risorse VMware HCX](https://hcx.vmware.com/#/docs){:external}
+* [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}
 * [Gestione di Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-managingveeam)
 * [Gestione di Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-managingzertodr)

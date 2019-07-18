@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: Veeam, Veeam install, tech specs Veeam
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -48,7 +49,7 @@ Nel servizio Veeam on {{site.data.keyword.cloud_notm}} vengono ordinati e inclus
 
 Come parte dell'installazione e della configurazione del servizio Veeam, vengono creati i seguenti repository:
 * Per i file di backup della configurazione di Veeam: un repository denominato `IC4V Default Config Backup Repository`. Il percorso alla cartella dove sono archiviati i backup Veeam è `<Drive>:\ConfigBackup\`.
-* Per il ridimensionamento incrementale, un repository denominato `IC4V Scale-Out Repository`. Per ulteriori informazioni, vedi [Aggiunta di un repository di ridimensionamento incrementale](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icos_ordering#icos_ordering-scale-repo). 
+* Per il ridimensionamento incrementale, un repository denominato `IC4V Scale-Out Repository`. Per ulteriori informazioni, vedi [Aggiunta di un repository di ridimensionamento incrementale](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icos_ordering#icos_ordering-scale-repo).
 * Per i backup di VM (Virtual Machine), un repository denominato ``IC4V Default VM Backup Repository``. Il percorso alla cartella dove sono archiviati i backup di VM è ``<Drive>:\VMBackup\`. Questo repository viene aggiunto come estensione al repository ``IC4V Scale-Out'.
 
 ### Rete
@@ -76,8 +77,7 @@ La rimozione del servizio Veeam on {{site.data.keyword.cloud_notm}} arresta tutt
 
 * [Ordine di Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_ordering)
 * [Gestione di Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
-* [Richiesta di servizi gestiti per Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
-* [Come contattare il supporto IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [Servizi gestiti per Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
 * [Domande frequenti](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Sito web Veeam](https://www.veeam.com/){:new_window}
-* [Veeam Help Center](https://www.veeam.com/documentation-guides-datasheets.html){:new_window}
+* [Sito web Veeam](https://www.veeam.com/){:external}
+* [Veeam Help Center](https://www.veeam.com/documentation-guides-datasheets.html){:external}

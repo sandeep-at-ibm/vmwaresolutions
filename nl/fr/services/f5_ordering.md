@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-26"
 
 keywords: F5 license activation, F5 configuration, order F5
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -27,14 +28,14 @@ Vous pouvez commander le service F5 on {{site.data.keyword.cloud}} lors de la co
 
 Vous pouvez commander une nouvelle instance avec F5 on {{site.data.keyword.cloud_notm}} en utilisant l'une des méthodes suivantes :
 * Depuis la console {{site.data.keyword.vmwaresolutions_short}}, lorsque vous commandez une nouvelle instance, sélectionnez **F5 on IBM Cloud** dans la section **Services**.
-* Depuis le catalogue {{site.data.keyword.cloud_notm}}, sélectionnez **F5 on IBM Cloud**, spécifiez les paramètres de service et sélectionnez **Ajouter à une nouvelle instance**.
+* Dans le catalogue {{site.data.keyword.cloud_notm}}, cliquez sur l'icône **VMware** dans le panneau de navigation de gauche, puis cliquez sur **F5 on IBM Cloud** dans la section **Services VMware**. Spécifiez les paramètres de service et sélectionnez **Ajouter à une nouvelle instance**.
 
 ## Commande de F5 on IBM Cloud pour une instance existante
 {: #f5_ordering-existing}
 
 Vous pouvez ajouter le service F5 on {{site.data.keyword.cloud_notm}} dans une instance existante en utilisant l'une des méthodes suivantes :
 * Depuis la console {{site.data.keyword.vmwaresolutions_short}}, affichez l'instance pour laquelle vous souhaitez ajouter le service, cliquez sur **Services** dans le panneau de navigation de gauche, puis cliquez sur **Ajouter**.
-* Depuis le catalogue {{site.data.keyword.cloud_notm}}, sélectionnez **F5 on IBM Cloud**, spécifiez les paramètres de service et sélectionnez **Ajouter à une instance existante**.
+* Dans le catalogue {{site.data.keyword.cloud_notm}}, cliquez sur l'icône **VMware** dans le panneau de navigation de gauche, puis cliquez sur **F5 on IBM Cloud** dans la section **Services VMware**. Spécifiez les paramètres de service et sélectionnez **Ajouter à une instance existante**.
 
 ## Commande de F5 on IBM Cloud pour des instances privées
 {: #f5_ordering-private}
@@ -98,4 +99,4 @@ Vous ne pouvez pas modifier le modèle de licence après installation du service
 * [Commande, affichage et retrait de services pour des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
 * [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [Foire aux questions](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Guides de déploiement de F5](https://www.f5.com/services/resources/deployment-guides){:new_window}
+* [Guides de déploiement de F5](https://www.f5.com/services/resources/deployment-guides){:external}

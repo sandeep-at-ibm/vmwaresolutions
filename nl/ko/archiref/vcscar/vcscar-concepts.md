@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -22,7 +22,7 @@ Skate Advisor의 중요한 점은 Watson 구동 챗봇과의 대화입니다. �
 스케이터 언어는 시스템의 핵심이고 다음 방식으로 사용됩니다.
 * 트릭 인식: Watson Discovery에서 사용되어 온라인 소스에서 자료를 수집합니다. 이를 통해 기존 트릭을 인식하여 소스 자료에 맵핑합니다.
 * 스케이트 대화: 챗봇에서 사용되어 시스템 사용자와 의미 있는 대화를 나눕니다.
-* 트릭 분류: 트릭에 대한 텍스트적 설명을 기반으로 트릭을 저장하고 분류합니다. 이 방식으로 분류되는 트릭에는 위치 및 동영상 참조 등에 연결된 메타데이터가 있습니다.
+* 트릭 분류: 트릭에 대한 텍스트적 설명을 기반으로 트릭을 저장하고 분류합니다. 위치 및 비디오 참조와 같은 메타데이터를 분류된 트릭에 첨부할 수 있습니다.
 
 ## 언어 요소
 {: #vcscar-concepts-lang-elem}
@@ -39,7 +39,7 @@ Skate Advisor의 중요한 점은 Watson 구동 챗봇과의 대화입니다. �
 Direction | fakie<br>nollie<br>switch
 Rotation | halfcab<br>cab<br>180<br>360<br>540
  Base | kickflip<br>heelflip<br>hardflip<br>bigspin<br>shuvit<br>impossible
-landing | manual(뒤로 2개 휠)<br>nosemanual(앞으로 2개 휠)<br>5-0(grind)<br>nosegrind<br>tailslide<br>noseslide<br>crooked grind<br>smithgrind<br>boardslide<br>lipslide<br>
+landing | manual(뒤로 2개의 휠)<br>nosemanual(앞으로 2개의 휠)<br>5-0(grind)<br>nosegrind<br>tailslide<br>noseslide<br>crooked grind<br>smithgrind<br>boardslide<br>lipslide<br>
 
 ### 요소 수정자
 {: #vcscar-concepts-elem-modifiers}

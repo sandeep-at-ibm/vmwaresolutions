@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-28"
 
 keywords: Veeam console, Veeam backup restore, update Veeam license
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # Veeam on IBM Cloud の管理
 {: #managingveeam}
@@ -37,9 +39,9 @@ Windows IP アドレスと Administrator 資格情報は、Veeam on {{site.data.
 
 Veeam コンソールを使用して管理コンポーネントをバックアップするように、Veeam on {{site.data.keyword.cloud_notm}} サービスを構成できます。 詳しくは、[コンポーネントのバックアップ](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup)を参照してください。
 
-V1.8 以降のリリースでデプロイ (または V1.8 以降のリリースにアップグレード) されたインスタンスの場合、環境の構成変更の自動バックアップは行われません。 そのため、環境の構成を変更する前に、管理バックアップ・ジョブを Veeam コンソールで実行して、管理コンポーネントを手動でバックアップすることをお勧めします。 手動バックアップについて詳しくは、[Veeam 技術説明](https://helpcenter.veeam.com/backup/vsphere/scheduing_manual.html){:new_window}を参照してください。
+V1.8 以降のリリースでデプロイ (または V1.8 以降のリリースにアップグレード) されたインスタンスの場合、環境の構成変更の自動バックアップは行われません。 そのため、環境の構成を変更する前に、管理バックアップ・ジョブを Veeam コンソールで実行して、管理コンポーネントを手動でバックアップすることをお勧めします。 手動バックアップについて詳しくは、[Veeam 技術説明](https://helpcenter.veeam.com/backup/vsphere/scheduing_manual.html){:external}を参照してください。
 
-管理コンポーネント上で障害が発生した場合は、Veeam コンソールを使用して、管理コンポーネントを以前のバックアップにリストアできます。 手動リストアについて詳しくは、[Veeam 技術説明]( https://helpcenter.veeam.com/backup/vsphere/performing_full_recovery.html){:new_window}を参照してください。
+管理コンポーネント上で障害が発生した場合は、Veeam コンソールを使用して、管理コンポーネントを以前のバックアップにリストアできます。 手動リストアについて詳しくは、[Veeam 技術説明]( https://helpcenter.veeam.com/backup/vsphere/performing_full_recovery.html){:external}を参照してください。
 
 ## Veeam on IBM Cloud への更新の適用
 {: #managingveeam-updates}
@@ -62,7 +64,7 @@ Veeam ソフトウェアを最新バージョンに更新する責任は、ユ�
 ### パブリック・ネットワークおよびプライベート・ネットワークを使用してデプロイされたインスタンスの Veeam ライセンスを更新する
 {: #managingveeam-update-license-public-private}
 
-パブリック・ネットワークとプライベート・ネットワークを持つインスタンスに Veeam サービスがインストールされている場合は、Veeam ライセンスを自動で更新することも、[ライセンスの更新]( https://helpcenter.veeam.com/docs/backup/vsphere/license_update.html)にある Veeam の説明に従って手動で更新することもできます。
+パブリック・ネットワークとプライベート・ネットワークを持つインスタンスに Veeam サービスがインストールされている場合は、Veeam ライセンスを自動で更新することも、[ライセンスの更新]( https://helpcenter.veeam.com/docs/backup/vsphere/license_update.html){:external}にある Veeam の説明に従って手動で更新することもできます。
 
 ### プライベート・ネットワークのみを使用してデプロイされたインスタンスの Veeam ライセンスを更新する
 {: #managingveeam-update-license-private}
@@ -90,7 +92,8 @@ Veeam ソフトウェアを最新バージョンに更新する責任は、ユ�
 {: #managingveeam-related}
 
 * [Veeam on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)
+* [Veeam on {{site.data.keyword.cloud_notm}} 用マネージド・サービス](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
 * [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [よくある質問](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Veeam.com Web サイト](https://www.veeam.com/)
-* [Veeam 技術資料](https://www.veeam.com/documentation-guides-datasheets.html)
+* [Veeam.com Web サイト](https://www.veeam.com/){:external}
+* [Veeam 技術資料](https://www.veeam.com/documentation-guides-datasheets.html){:external}

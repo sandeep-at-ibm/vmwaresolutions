@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server delete instance, delete vCenter Server, delete multi-site
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -40,8 +41,8 @@ subcollection: vmware-solutions
 
 1. 从辅助 vCenter Server 实例中除去所有服务。
 2. 确保没有任何 NSX 对象扩展到要删除的辅助实例中。
-3. 从主 SSO (Single Sign-On) 域中删除辅助 vCenter Server。有关更多信息，请参阅[从 Single Sign-On 取消注册 vCenter Server](https://kb.vmware.com/s/article/2106736){:new_window}。
-4. 降级本地域控制器 VSI（虚拟服务实例）。有关更多信息，请参阅[降级域控制器和域](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-){:new_window}。
+3. 从主 SSO (Single Sign-On) 域中删除辅助 vCenter Server。有关更多信息，请参阅[从 Single Sign-On 取消注册 vCenter Server](https://kb.vmware.com/s/article/2106736){:external}。
+4. 降级本地域控制器 VSI（虚拟服务实例）。有关更多信息，请参阅[降级域控制器和域](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-){:external}。
 5. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中删除辅助 vCenter Server 实例。
 6. 对于多站点配置中的所有辅助 vCenter Server 实例，重复步骤 1 到 5。
 7. 删除所有辅助实例后，还可以在 {{site.data.keyword.vmwaresolutions_short}} 控制台中删除主实例。

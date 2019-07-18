@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-26"
 
 keywords: F5 BIG-IP, F5 install, tech specs F5
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -60,8 +61,6 @@ Avant d'installer le service F5 on {{site.data.keyword.cloud_notm}}, passez en r
 
 En fonction du modèle de licence et de la bande passante que vous sélectionnez, deux machines virtuelles BIG-IP VE sont déployées avec la configuration suivante :
 
-Tableau 1. Déploiements d'UC et de RAM selon la bande passante et le modèle de licence sélectionnés
-
 | Bande passante maximale | Modèle de licence : Bien | Modèle de licence : Mieux | Modèle de licence : Meilleur |
 |:------------------|:--------------------|:----------------------|:--------------------|
 | 25 Mbit/s           | 2 UC virtuelles, 4 Go de RAM    | 4 UC virtuelles, 8 Go de RAM      | 8 UC virtuelles, 16 Go de RAM   |
@@ -70,6 +69,7 @@ Tableau 1. Déploiements d'UC et de RAM selon la bande passante et le modèle de
 | 3 Gbit/s            | 8 UC virtuelles, 16 Go de RAM   | 8 UC virtuelles, 16 Go de RAM     | 8 UC virtuelles, 16 Go de RAM   |
 | 5 Gbit/s            | 8 UC virtuelles, 16 Go de RAM   | 8 UC virtuelles, 16 Go de RAM     | 8 UC virtuelles, 16 Go de RAM   |
 | 10 Gbit/s           | 8 UC virtuelles, 16 Go de RAM   | 8 UC virtuelles, 16 Go de RAM     | 8 UC virtuelles, 16 Go de RAM   |
+{: caption="Tableau 1. Déploiements d'UC et de RAM selon la bande passante et le modèle de licence sélectionnés" caption-side="top"}
 
 ### Autres remarques
 {: #f5_considerations-additional}
@@ -128,4 +128,4 @@ Avant de supprimer le service F5 on {{site.data.keyword.cloud_notm}}, vérifiez 
 * [Gestion de F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_f5)
 * [Contacter le support IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [Foire aux questions](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Site Web de F5](https://www.f5.com/){:new_window}
+* [Site Web de F5](https://www.f5.com/){:external}

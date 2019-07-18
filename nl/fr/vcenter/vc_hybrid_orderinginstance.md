@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-19"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server Hybridity order instance, order vCenter Server Hybridity, order Hybridity
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -30,15 +31,14 @@ Assurez-vous que :
 *  Vous avez passé en revue les informations décrites dans la rubrique [Exigences et planification pour les instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning).
 * Vous avez passé en revue le format des noms d'instance et de domaine. Le nom de domaine et le libellé de sous-domaine sont utilisés pour générer le nom d'utilisateur et les noms de serveur de l'instance.
 
-Tableau 1. Format de la valeur des noms d'instance et de domaine
-
 | Nom        | Format de la valeur      |
-  |:------------- |:------------- |
-  | Nom de domaine | `<root_domain>` |  
-  | Nom d'utilisateur de connexion vCenter Server | `<user_id>@<root_domain>` (utilisateur Microsoft Active Directory) ou `administrator@vsphere.local` |
-  | vCenter Server (avec PSC intégré) FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. La longueur maximale est de 50 caractères. |
-  | Nom du site de connexion unique | `<subdomain_label>` |
-  | Nom de serveur ESXi qualifié complet | `<host_prefix><n>.<subdomain_label>.<root_domain>`, où `<n>` est la séquence du serveur ESXi. La longueur maximale admise est de 50 caractères. |
+|:------------- |:------------- |
+| Nom de domaine | `<root_domain>` |  
+| Nom d'utilisateur de connexion vCenter Server | `<user_id>@<root_domain>` (utilisateur Microsoft Active Directory) ou `administrator@vsphere.local` |
+| vCenter Server (avec PSC intégré) FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. La longueur maximale est de 50 caractères. |
+| Nom du site de connexion unique | `<subdomain_label>` |
+| Nom de serveur ESXi qualifié complet | `<host_prefix><n>.<subdomain_label>.<root_domain>`, où `<n>` est la séquence du serveur ESXi. La longueur maximale admise est de 50 caractères. |
+{: caption="Tableau 1. Format de la valeur des noms d'instance et de domaine" caption-side="top"}
 
 Ne modifiez aucune des valeurs définies lors de la commande ou du déploiement de l'instance. Cela rendrait votre instance inutilisable. Par exemple, si le réseau public s'arrête, si les serveurs et les instances de serveur virtuel passent derrière un mi-parcours Vyatta ou si l'instance de serveur virtuel IBM CloudBuilder s'arrête ou est supprimée.
 {:important}
@@ -103,25 +103,23 @@ Sélectionnez l'{{site.data.keyword.CloudDataCent_notm}} où l'instance doit êt
 
 Lorsque vous sélectionnez **Skylake**, vous pouvez choisir la combinaison de modèle d'UC et de mémoire RAM de serveur bare metal adaptée à vos besoins.
 
-Tableau 2. Options pour les serveurs Skylake {{site.data.keyword.baremetal_short}}
-
 | Options de modèle d'UC        | Options de RAM       |
 |:------------- |:------------- |
 | Processeur Dual Intel Xeon Silver 4110/16 coeurs au total, 2,1 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
 | Processeur Dual Intel Xeon Gold 5120/28 coeurs au total, 2,2 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
 | Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
+{: caption="Tableau 2. Options pour les serveurs Skylake {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 ### Broadwell
 {: #vc_hybrid_orderinginstance-broadwell}
 
 Lorsque vous sélectionnez **Broadwell**, vous pouvez choisir la combinaison de modèle d'UC et de mémoire RAM de serveur bare metal adaptée à vos besoins.
 
-Tableau 3. Options pour les serveurs Broadwell {{site.data.keyword.baremetal_short}}
-
 | Options de modèle d'UC        | Options de RAM       |
 |:------------- |:------------- |
 | Quad Intel Xeon E7-4820 v4/40 coeurs au total, 2,0 GHz | 128 Go, 256 Go, 512 Go, 1 To, 2 To, 3 To |
 | Quad Intel Xeon E7-4850 v4/64 coeurs au total, 2,1 GHz | 128 Go, 256 Go, 512 Go, 1 To, 2 To, 3 To |
+{: caption="Tableau 3. Options pour les serveurs Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 ### Nombre de serveurs bare metal
 {: #vc_hybrid_orderinginstance-bare-metal-number}
@@ -224,7 +222,7 @@ Chaque licence ne peut être affectée qu'à un seul serveur physique et couvre 
 
 Vous disposez de 30 jours pour activer les machines virtuelles.
 
-Pour en savoir plus sur la commande des licences Windows Server 2016, voir [Prise en main de Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:new_window}.
+Pour en savoir plus sur la commande des licences Windows Server 2016, voir [Prise en main de Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:external}.
 
 ## Paramètres de services
 {: #vc_hybrid_orderinginstance-addon-services}
@@ -234,14 +232,14 @@ Lorsque vous commandez une instance vCenter Server with Hybridity Bundle, vous p
 ## Récapitulatif de la commande
 {: #vc_hybrid_orderinginstance-order-summary}
 
-Selon la configuration que vous avez sélectionnée pour l'instance et les services complémentaires, le coût estimé est généré et affiché instantanément dans la section **Récapitulatif de la commande** sur le panneau de droite. Cliquez sur **Détails concernant la tarification** pour générer un document PDF contenant le récapitulatif des coûts pour les ressources {{site.data.keyword.vmwaresolutions_short}}. 
+Selon la configuration que vous avez sélectionnée pour l'instance et les services complémentaires, le coût estimé est généré et affiché instantanément dans la section **Récapitulatif de la commande** sur le panneau de droite. Cliquez sur **Détails concernant la tarification** pour générer un document PDF contenant le récapitulatif des coûts pour les ressources {{site.data.keyword.vmwaresolutions_short}}.
 
 Vous pouvez également ajouter les ressources mises à disposition à l’outil d’estimation {{site.data.keyword.cloud_notm}} en cliquant sur **Ajouter à l'estimation**. Cela est utile si vous souhaitez estimer le coût des ressources {{site.data.keyword.vmwaresolutions_short}} sélectionnées avec d'autres ressources {{site.data.keyword.cloud_notm}} que vous pourriez envisager d'acheter.
 
 ## Procédure de commande d'instances vCenter Server with Hybridity Bundle
 {: #vc_hybrid_orderinginstance-procedure}
 
-1. Dans le catalogue {{site.data.keyword.cloud_notm}}, cliquez sur **VMware** dans le panneau de navigation de gauche, puis cliquez sur **vCenter Server** dans la section **Centres de données virtuels**.
+1. Dans le catalogue {{site.data.keyword.cloud_notm}}, cliquez sur l'icône **VMware** dans le panneau de navigation de gauche, puis cliquez sur **VMware vCenter Server on IBM Cloud** dans la section **Centres de données virtuels VMware**.
 2. Sur la page **VMware vCenter Server on IBM Cloud**, cliquez sur la carte **vCenter Server with Hybridity Bundle**, puis sur **Créer**.
 3. Sur la page **vCenter Server**, entrez le nom de l'instance.
 5. Sélectionnez la version vSphere.
@@ -276,7 +274,7 @@ Pour savoir comment indiquer les paramètres d'un service, voir la rubrique de c
 ## Que se passe-t-il après la commande d'instances vCenter Server with Hybridity Bundle ?
 {: #vc_hybrid_orderinginstance-results}
 
-* Le déploiement de l'instance démarre automatiquement et vous recevez la confirmation que la commande est en cours de traitement. Vous pouvez vérifier l'état du déploiement, y compris tout problème pouvant nécessiter votre attention, en consultant la section **Historique de déploiement** des détails de l'instance. 
+* Le déploiement de l'instance démarre automatiquement et vous recevez la confirmation que la commande est en cours de traitement. Vous pouvez vérifier l'état du déploiement, y compris tout problème pouvant nécessiter votre attention, en consultant la section **Historique de déploiement** des détails de l'instance.
 * Une fois l'instance correctement déployée, les composants décrits dans [Spécifications techniques relatives aux instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#specs) sont installés sur votre plateforme virtuelle VMware. Les serveurs ESXi que vous avez commandés sont, par défaut, regroupés en **cluster1**. Si vous avez commandé des services complémentaires, le déploiement des services commence une fois votre commande honorée.
 * Lorsque l'instance est prête pour utilisation, elle prend le statut **Prêt à l'emploi** et vous recevez une notification par courrier électronique.
 * Lorsque vous commandez une instance secondaire, le client Web VMware vSphere de l'instance principale (liée à l'instance secondaire) devra peut-être être redémarré une fois la commande d'instance secondaire honorée.

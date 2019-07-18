@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-06-28"
 
 keywords: view vCenter Server, view instance, view instance details
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -31,8 +32,6 @@ Per visualizzare un riepilogo di tutte le istanze vCenter Server fornite per un 
 2. Dal banner della console, fai clic sull'icona del tuo account utente e quindi sul campo **Account** per selezionare l'account utente per il quale vuoi controllare le istanze.  
 3. Nella tabella **Istanze di vCenter Server**, visualizza l'elenco delle istanze fornite nell'account utente selezionato.
 
-Tabella 1. Elementi dell'istanza vCenter Server
-
 | Elemento        | Descrizione       |  
 |:------------- |:------------- |
 | Nome | Il nome dell'istanza |
@@ -41,10 +40,9 @@ Tabella 1. Elementi dell'istanza vCenter Server
 | Ubicazione | Il {{site.data.keyword.CloudDataCent_notm}} in cui è ospitata l'istanza |  
 | Data/ora di creazione | La data e ora di creazione dell'istanza |
 | Stato | Lo stato dell'istanza |   
+{: caption="Tabella 1. Elementi dell'istanza vCenter Server" caption-side="top"}
 
 L'istanza può avere una serie di stati.
-
-Tabella 2. Descrizioni dello stato delle istanze vCenter Server
 
 | Stato        | Descrizione       |
 |:------------- |:------------- |
@@ -56,6 +54,7 @@ Tabella 2. Descrizioni dello stato delle istanze vCenter Server
 | In fase di eliminazione | L'istanza è in fase di eliminazione. |
 | Errore di eliminazione | Si è verificato un errore durante l'eliminazione dell'istanza. |
 | Eliminato | L'istanza è stata eliminata. |
+{: caption="Tabella 2. Descrizioni dello stato delle istanze vCenter Server" caption-side="top"}
 
 ## Procedura per visualizzare i dettagli delle proprietà delle istanze vCenter Server
 {: #vc_viewinginstances-procedure-view-inst-property}
@@ -64,8 +63,6 @@ Per visualizzare i dettagli delle proprietà di un'istanza:
 
 1. Nella tabella **Istanze vCenter Server**, fai clic sul nome di un'istanza.
 2. In **Proprietà**, visualizza i dettagli dell'istanza.
-
-Tabella 3. Proprietà dell'istanza vCenter Server
 
 | Proprietà        | Descrizione       |
 |:------------- |:------------- |
@@ -82,13 +79,12 @@ Tabella 3. Proprietà dell'istanza vCenter Server
 | DNS, Domino secondario | Il dominio secondario è il nome del dominio secondario DNS del nome di dominio root in cui risiedono i nomi host delle istanze vCenter Server locali. Il nome del dominio secondario è nel formato <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp>. |
 | Hybridity Bundle | Indica se vCenter Server with Hybridity Bundle è installato. |
 | Stato  | Lo stato dell'istanza.<br><br>Le informazioni visualizzate forniscono un aggiornamento sullo stato di avanzamento della distribuzione o sull'azione eseguita sull'istanza. Se ci sono problemi, potrebbe essere visualizzato un messaggio per aiutarti ad analizzare e risolvere il problema. |
+{: caption="Tabella 3. Proprietà dell'istanza vCenter Server" caption-side="top"}
 
 ## Procedura per visualizzare le informazioni di accesso per le istanze vCenter Server
 {: #vc_viewinginstances-procedure-view-access-info}
 
 In **Informazioni sull'accesso**, visualizza le informazioni di accesso per i componenti relativi all'istanza. Le password visualizzate sono password iniziali generate dal sistema. Se le modifichi all'esterno della console {{site.data.keyword.vmwaresolutions_short}}, non vengono aggiornate nella pagina di riepilogo dell'istanza.
-
-Tabella 4. Informazioni di accesso di vCenter Server per i componenti relativi all'istanza
 
 | Componente        | Descrizione       |
 |:------------- |:------------- |
@@ -102,18 +98,18 @@ Tabella 4. Informazioni di accesso di vCenter Server per i componenti relativi a
 | Nome di dominio completo vCenter  | Il nome di dominio completo di vCenter Server.  |
 | ADMIN vCenter  | Il nome utente e la password di VMware vCenter Single Sign-On che puoi utilizzare per accedere a vCenter Server utilizzando il client web vSphere.  |
 | SSH vCenter  | Il nome utente e la password che puoi utilizzare per accedere alla VM di vCenter Server tramite una connessione SSH.  |
+{: caption="Tabella 4. Informazioni di accesso di vCenter Server per i componenti relativi all'istanza" caption-side="top"}
 
 ## Procedura per visualizzare la cronologia di distribuzione per le istanze vCenter Server
 {: #vc_viewinginstances-procedure-view-deploy-history}
 
 Fai clic su **Cronologia distribuzione** dal riquadro di navigazione a sinistra per visualizzare la cronologia di distribuzione per l'istanza.
 
-Tabella 5. Cronologia di distribuzione delle istanze vCenter Server
-
 | Elemento        | Descrizione       |  
 |:------------- |:------------- |
 | Data | La data e l'ora in cui lo stato dell'istanza è stato modificato |
 | Riepilogo | I dettagli della modifica |
+{: caption="Tabella 5. Cronologia di distribuzione delle istanze vCenter Server" caption-side="top"}
 
 ## Cosa fare se si verificano errori
 {: #vc_viewinginstances-if-errors-occur}
@@ -130,7 +126,7 @@ Prima di fare clic su **Console vCenter** nella pagina di riepilogo dell'istanza
 
 Rivedi i seguenti argomenti per informazioni utili per completare le istruzioni di accesso:
 *  Per i requisiti e i passi necessari prima di accedere al client web vSphere, vedi [Timeout raggiunto durante la connessione al client web vSphere](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_timeout_vc_console).
-*  Per un elenco di punti di accesso per accedere alla rete privata dell'infrastruttura {{site.data.keyword.cloud_notm}} tramite VPN, vedi [Accesso VPN](http://www.softlayer.com/vpn-access){:new_window}.
+*  Per un elenco di punti di accesso per accedere alla rete privata dell'infrastruttura {{site.data.keyword.cloud_notm}} tramite VPN, vedi [Accesso VPN](http://www.softlayer.com/vpn-access){:external}.
 *  Se hai dei problemi durante la distribuzione di un file OVF (Open Virtualization Format) utilizzando il client web vSphere, vedi [Distribuzione di un file OVF mediante il client web vSphere](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_deploy_ovf).
 
 ## Link correlati

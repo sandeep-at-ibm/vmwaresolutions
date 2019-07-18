@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-21"
 
 keywords: IBM Integrated Managed Infrastructure, request IBM IMI, tech specs IMI
 
@@ -13,7 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
-# 從 IMI 要求受管理服務
+# IMI 的受管理服務
 {: #managing_imi}
 
 {{site.data.keyword.IBM}} Integrated Managed Infrastructure (IMI) 可以使用模組化服務來簡化 VMware 虛擬基礎架構管理。IMI 使用進階自動化及分析來管理全球重要基礎架構元件，以及為各種不同的傳統及雲端虛擬基礎架構提供動態遠端管理服務。
@@ -32,11 +32,11 @@ IMI 管理服務隨附下列規格：
 * 每日及每週服務管理和報告
 * 不增加持續改善成本的加值型服務
 
-## 從 IMI 要求受管理服務的程序
+## 要求 IMI 的受管理服務的程序
 {: #managing_imi-procedure}
 
 1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台，按一下左導覽窗格中的**開始使用**。
-2. 向下捲動頁面，然後按一下位在**訂購其他受管理服務**下的 **IMI 的受管理服務**卡片。
+2. 向下捲動頁面，然後按一下 **VMware 受管理服務**下的 **IMI 的受管理服務**卡。
 3. 在 **IMI 的受管理服務**頁面的**參與 IMI 售前**方框中，輸入您 IMI 服務需求的說明，然後按一下**要求商議**。
 
   {{site.data.keyword.vmwaresolutions_short}} 業務代表將會使用您的 {{site.data.keyword.cloud_notm}} 聯絡資訊來與您聯絡，以協助提供您所需的解決方案。

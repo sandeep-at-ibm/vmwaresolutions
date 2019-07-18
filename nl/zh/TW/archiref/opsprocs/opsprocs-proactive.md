@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-04"
+lastupdated: "2019-07-02"
 
 ---
 
@@ -66,7 +66,7 @@ lastupdated: "2019-06-04"
 | vSphere vSAN 修補 |如需檢查 vSphere vSAN 修補程式可用性及修補處理程序的相關資訊，請參閱[更新 vSAN 叢集](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-updating-vsan#vum-updating-vsan)。|
 | vCenter 修補 |如需檢查 VCSA 修補程式可用性及套用更新的相關資訊，請參閱 [VCSA 更新及 SSO 鏈結的 vCenter](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-updating-vcsa#vum-updating-vcsa)。|
 | 更新 NSX |如需檢查 NSX 修補程式可用性及套用升級的相關資訊，請參閱[NSX 修補](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-updating-nsx#vum-updating-nsx)。|
-| 不使用 VM 工具檢查 VM | 最佳作法是安裝 VM 工具，因為這容許與 OS 進行更大的互動，例如循序關閉 VM 的電源。您可以使用 vCenter 來檢查哪些 VM 未安裝 VM 工具，方法為導覽至叢集、選取「相關物件」、VM，然後是表格中啟用以執行 VM 工具的直欄及 VM 工具的版本。檢閱清單並根據需要安裝 VM 工具。|
+| 不使用 VM 工具檢查 VM | 最佳作法是安裝 VM 工具，因為這容許與 OS 進行更大的互動，例如循序關閉 VM 的電源。您可以使用 vCenter 來檢查哪些 VM 未安裝 VM Tools。移至叢集、選取**相關物件**、**VM**，然後是表格中啟用以**執行 VM Tools** 的直欄及 **VM Tools 版本**。檢閱清單並根據需要安裝 VM 工具。|
 | 具有 Snapshot 的 VM | 如需使用 Snapshot 時的最佳作法的相關資訊，請參閱[在 vSphere 環境中使用 Snapshot 的最佳作法 (1025279)](https://kb.vmware.com/s/article/1025279){:new_window}。識別具有 Snapshot 的 VM 是否存在很重要，因為使用單一 Snapshot 超過 72 小時會建立一個大小持續成長的 Snapshot 檔案，可能導致 Snapshot 儲存空間位置耗盡空間，並影響系統效能。若要檢閱具有 Snapshot 的 VM，請使用 Web Client 連接至 vCenter、選取 vCenter Server，然後移至「相關物件」標籤。用滑鼠右鍵按一下直欄標題，然後移至「顯示/隱藏直欄」清單。從直欄清單中，選擇「需要合併」選項。此直欄會顯示目前執行中的所有 VM 的摘要。|
 | AD/DNS OS 修補 | Microsoft Active Directory (AD) / 網域名稱伺服器 (DNS) 自動設定為只下載更新。如需相關資訊，請參閱[其他限制及考量](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_limitations#trbl_limitations)，以進一步更新建議。|
 | 檢查儲存空間延遲 | 檢查儲存空間延遲，以瞭解對 vSphere ESXi 主機存取資料儲存庫的所有變更。等待時間過長會導致在 VM 中管理的應用程式的速度變慢。在 vCenter 中，移至每個資料儲存庫，並在「效能」標籤上檢閱每個 VM 的平均寫入延遲。|
