@@ -6,6 +6,8 @@ copyright:
 
 lastupdated: "2019-05-03"
 
+keywords: release notes, what's new, version 3.0
+
 subcollection: vmware-solutions
 
 
@@ -54,7 +56,7 @@ Mit diesem Release werden die folgenden Upgrades und Verbesserungen angewendet:
 
 Weitere Informationen Sie in der [vCenter Server-Teileliste](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
 
-Windows-Software, die für Microsoft Active Directory-Services (AD) und DNS-Services (Domain Name System) bestellt wird, wird für beide Konfigurationsoptionen auf Windows Server 2016 aktualisiert: die VSIs (Virtual Server Instances) und die beiden hoch verfügbaren Windows-VMs. Weitere Informationen zum Auswählen Ihrer VMware-Komponenten finden Sie im Abschnitt [Software-BOM für vCenter-Serverinstanzen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_bom#vc_bom-software).
+Windows-Software, die für Microsoft Active Directory-Services (AD) und DNS-Services (Domain Name System) bestellt wird, wird für beide Konfigurationsoptionen auf Windows Server 2016 aktualisiert: die VSIs (Virtual Server Instances) und die beiden hoch verfügbaren Windows-VMs. Weitere Informationen zum Auswählen Ihrer VMware-Komponenten finden Sie im Abschnitt [Software-BOM für vCenter Server-Instanzen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_bom#vc_bom-software).
 
 ### Erweiterungen für vSAN-Speicher
 {: #relnotes_v30-vcs-vsan}
@@ -112,7 +114,7 @@ Sie können Zerto on {{site.data.keyword.cloud_notm}} nur für rein private Inst
 
 * In der Dokumentation finden Sie jetzt unterstützende Schritte für das Upgrade von {{site.data.keyword.vmwaresolutions_short}}-Komponenten auf VMware vSphere 6.7. Dieses Upgrade ist erforderlich, wenn Sie weiterhin von der {{site.data.keyword.vmwaresolutions_short}}-Automatisierung profitieren möchten. Weitere Informationen finden Sie im Abschnitt [Upgrade von vCenter Server vSphere-Software von VMware vSphere 6.5 auf Version 6.7 durchführen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_vsphere_upgrade#vc_vsphere_upgrade).
 * Es ist jetzt eine Referenzdokumentation verfügbar, um Ihnen Benutzer-IDs zur Verfügung zu stellen, die {{site.data.keyword.vmwaresolutions_short}} für die Verwendung im Rahmen der {{site.data.keyword.cloud_notm}}-Automatisierung verwaltet. In den Systemprotokollen für Ihre Instanz können Sie zudem dort möglicherweise enthaltene Nachrichten überprüfen. Weitere Informationen finden Sie im Abschnitt zu den [IBM Benutzer-IDs](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_user_ids) und zu den [Instanzprotokollnachrichten](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_messages).
-* Die Berechtigung **Warmstart/Steuerung** wurde der Tabelle hinzugefügt, in der die erforderlichen Berechtigungen für das IBM Cloud-Infrastrukturkonto beschrieben werden. Weitere Informationen finden Sie unter [Berechtigungen für das {{site.data.keyword.cloud_notm}}-Infrastrukturkonto](/docs/services/vmwaresolutions/services?topic=vmware-solutions-slaccountrequirement#slaccountrequirement-permissions).
+* Die Berechtigung **Warmstart/Steuerung** wurde der Tabelle hinzugefügt, in der die erforderlichen Berechtigungen für das IBM Cloud-Infrastrukturkonto beschrieben werden. Weitere Informationen finden Sie unter [Berechtigungen für das {{site.data.keyword.cloud_notm}}-Infrastrukturkonto](/docs/services/vmwaresolutions/services?topic=vmware-solutions-cloud-infra-acct-req#cloud-infra-acct-req-permissions).
 * Für die folgenden APIs ist eine neue Referenzdokumentation verfügbar. Weitere Informationen finden Sie in [API-Referenz](https://cloud.ibm.com/apidocs/vmware-solutions){:new_window}.
   * Auflisten aller Protokollnachrichten für eine angegebene VMware vCenter Server-Instanz
   * Hinzufügen von gemeinsam genutztem Speicher zu einem angegebenen Cluster

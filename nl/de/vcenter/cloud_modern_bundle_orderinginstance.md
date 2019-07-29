@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-06"
+lastupdated: "2019-06-18"
+
+keywords: single-node trial, migration app modernization, order migration app modernization
 
 subcollection: vmware-solutions
 
@@ -18,7 +20,7 @@ subcollection: vmware-solutions
 # Single-node Trial für Migration und App-Modernisierung bestellen, anzeigen und löschen
 {: #cloud_modern_bundle_orderinginstance}
 
-Überprüfen Sie die Planungsvoraussetzungen, bevor Sie eine Single-Node Trial-Instanz für Migration und Anwendungsmodernisierung bestellen.
+Überprüfen Sie die Planungsvoraussetzungen, bevor Sie eine Single-node Trial-Instanz für Migration und Anwendungsmodernisierung bestellen.
 
 ## Voraussetzungen und Planung für die Bestellung von Single-node Trial-Instanzen für Migration und Anwendungsmodernisierung
 {: #cloud_modern_bundle_orderinginstance-req}
@@ -30,7 +32,7 @@ subcollection: vmware-solutions
 
 * Erfordert VMware vSphere und vCenter 5.5 oder höher.
 * Die vSphere-Umgebung muss über verteilte Switches für die VMs verfügen, die zu {{site.data.keyword.cloud_notm}} migriert werden.
-* HCX Manager Virtual Appliance muss in einem privaten Netzwerk in der lokalen Umgebung bereitgestellt werden können und auf das öffentliche Internet zugreifen dürfen.
+* HCX Manager Virtual Appliance muss in einem privaten Netz in der lokalen Umgebung bereitgestellt werden können und auf das öffentliche Internet zugreifen dürfen.
 
 ### IBM Cloud-Infrastrukturkonto
 {: #cloud_modern_bundle_orderinginstance-account-req}
@@ -67,10 +69,13 @@ Machen Sie sich mit den Anforderungen für die Instanznamen vertraut:
    3. Klicken Sie auf den Link bzw. die Links für die Bedingungen, die für Ihre Bestellung gelten, und vergewissern Sie sich, dass Sie mit diesen Bedingungen einverstanden sind, bevor Sie die Instanz bestellen.
    4. Klicken Sie auf **Bereitstellung**.
 
-### Ergebnisse
+### Ergebnisse nach dem Bestellen von Single-node Trial-Instanzen für Migration und Anwendungsmodernisierung
 {: #cloud_modern_bundle_orderinginstance-results}
 
-Die Bereitstellung der Instanz wird automatisch gestartet und der Aktivierungsschlüssel für den lokalen HCX on {{site.data.keyword.cloud_notm}}-Service wird bestellt.
+* Die Bereitstellung der Instanz wird automatisch gestartet und der Aktivierungsschlüssel für den lokalen HCX on {{site.data.keyword.cloud_notm}}-Service wird bestellt.
+* Sie können den Bereitstellungsstatus, einschließlich aller Probleme, die eventuell Ihre Aufmerksamkeit erfordern, durch Anzeigen des Abschnitts **Bereitstellungsverlauf** der Instanzdetails überprüfen.
+* Nachdem die Instanz erfolgreich bereitgestellt wurde, sind die Komponenten installiert, die unter [Technische Spezifikationen für Single-node Trial-Instanzen für Migration und Anwendungsmodernisierung](/docs/services/vmwaresolutions/services?topic=vmware-solutions-cloud_modern_bundle_overview#cloud_modern_bundle_overview-tech-specs) beschrieben werden.
+* Sobald die Instanz einsatzbereit ist, ändert sich der Status der Instanz in **Bereit** und Sie empfangen per E-Mail eine Benachrichtigung.
 
 #### Bereitstellungsprozess für HCX on IBM Cloud
 {: #cloud_modern_bundle_orderinginstance-hcx-deploy-process}
@@ -188,3 +193,4 @@ Führen Sie folgende Schritte aus, um eine Single-node Trial-Instanz für Migrat
 * [Ticket für IBM Cloud Private öffnen](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
 * [VMware HCX-Ressourcen](https://hcx.vmware.com/#/docs){:new_window}
 * [Benutzerhandbuch zu VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}
+* [Virtuelle Server stornieren](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)

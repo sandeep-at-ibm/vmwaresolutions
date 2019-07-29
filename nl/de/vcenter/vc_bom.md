@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-11"
+
+keywords: vCenter Server BOM, bill of materials vCenter Server, BOM
 
 subcollection: vmware-solutions
 
@@ -29,7 +31,7 @@ Tabelle 1. Teileliste für VLANs in vCenter Server-Instanzen
 
 | VLAN       | Typ       | Details       |
 |:---------- |:---------- |:------------- |
-| VLAN1     | Öffentlich, Primär | Wird physischen ESXi-Servern für den Zugriff auf öffentliche Netze zugeordnet. Wird nach der Erstbereitstellung nicht mehr verwendet. Für den Internetzugriff verfügbar. |
+| VLAN1     | Öffentlich, Primär | Wird physischen ESXi-Servern für den Zugriff auf öffentliche Netze zugeordnet. Den Servern wird zwar eine öffentliche IP-Adresse zugewiesen, diese IP-Adresse ist jedoch nicht für die Server konfiguriert, sodass sie nicht direkt im öffentlichen Netz zugänglich sind. Stattdessen soll das öffentliche VLAN den öffentlichen Internetzugang für andere Komponenten, wie zum Beispiel NSX Edge Services Gateways (ESGs), bereitstellen. |
 | VLAN2     | VLAN "Privat A", Primär | Wird durch {{site.data.keyword.cloud}} physischen ESXi-Servern zugeordnet. Wird von der Managementschnittstelle für den VMware vSphere-Managementdatenverkehr verwendet.<br><br>Wird virtuellen Maschinen (VMs) zugeordnet, die als Managementkomponenten fungieren.<br><br>Wird VMware NSX VTEP (VXLAN-Tunnelendpunkt) zugeordnet. |
 | VLAN3     | VLAN "Privat B", Portierbar | Wird VMware vSAN zugeordnet, sofern verwendet.<br><br>Wird VMware NFS zugeordnet, sofern verwendet.<br><br>Wird VMware vSphere vMotion zugeordnet.<br><br>Für NSX-T; Wird VMware NSX VTEP (VXLAN-Tunnelendpunkt) zugeordnet.|
 
@@ -42,10 +44,10 @@ Tabelle 2. Teileliste für Softwarekomponenten in vCenter Server-Instanzen
 
 | Hersteller  | Komponente                      | Version    |
 |:------------- |:------------------------------ |:------------- |
-| VMware       | vSphere ESXi                    | 6.7 Update 1 (Build 6.7.0-13004448) oder <br/>6.5 Update 2 (Build 6.5.0-13004031) |
+| VMware       | vSphere ESXi                    | 6.7 Update 1 (Build 6.7.0-13004448) oder <br/>6.5 Update 2 (Build 6.5.0-13635690) |
 | VMware       | vSphere 6.7                     | Distributed vSwitch 6.6.0 |
 | VMware       | vSphere 6.5                     | Distributed vSwitch 6.5.0 |
-| VMware       | vCenter Server Appliance        | 6.7 Update 1b (Build 6.7.0-11727113) oder <br/>6.5 Update 2d (Build 6.5.0-10964411) |
+| VMware       | vCenter Server Appliance        | 6.7 Update 1b (Build 6.7.0-11727113) oder <br/>6.5 Update 2g (Build 6.5.0-13638625) |
 | VMware       | Platform Services Controller    | 6.7 Update 1b (Build 6.7.0-11727113) oder <br/>6.5 Update 2d (Build 6.5.0-10964411) |
 | VMware       | vSAN                            | 6.7 Update 1 oder <br/>6.6.1       |
 | VMware       | NSX for vSphere                 | 6.4.4 (Build 11197766)    |

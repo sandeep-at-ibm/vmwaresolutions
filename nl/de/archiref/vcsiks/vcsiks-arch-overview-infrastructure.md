@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-22"
 
 subcollection: vmware-solutions
 
@@ -17,12 +17,13 @@ subcollection: vmware-solutions
 ## Virtual Routing and Forwarding
 {: #vcsiks-arch-overview-infrastructure-vrf}
 
-{{site.data.keyword.cloud}}-Konten können als Konto mit Virtual Routing and Forwarding (VRF) konfiguriert werden. VRF-Konten aktivieren das automatische globale Routing zwischen Teilnetz-IP-Blöcken. Alle Konten mit direkten Verbindungen (Direct-Link) müssen in VRF-Konten konvertiert oder als solche erstellt werden.
+{{site.data.keyword.cloud}}-Konten können als Konto mit Virtual Routing and Forwarding (VRF) konfiguriert werden. VRF-Konten aktivieren das automatische globale Routing zwischen Teilnetz-IP-Blöcken. Alle Konten mit Direct Link-Verbindungen müssen in VRF-Konten konvertiert oder als solche erstellt werden.
 
 ## Direct Link
 {: #vcsiks-arch-overview-infrastructure-direct-link}
 
 {{site.data.keyword.cloud_notm}} Direct Link Connect bietet privaten Zugriff auf Ihre {{site.data.keyword.cloud_notm}}-Infrastruktur und auf alle anderen Clouds, die mit Ihrem Netzserviceanbieter über Ihr lokales {{site.data.keyword.CloudDataCent_notm}} verbunden sind. Diese Option ist optimal für die Konnektivität zu mehreren Clouds in einer einzelnen Umgebung geeignet.
+
 Wir verbinden Kunden mithilfe einer gemeinsamen Bandbreitentopologie mit dem privaten {{site.data.keyword.cloud_notm}}-Netz. Wie bei allen Direct Link-Produkten können Sie globales Routing hinzufügen, das privaten Netzverkehr zu allen {{site.data.keyword.cloud_notm}}-Standorten ermöglicht.
 
 ## Virtuelle private Netze

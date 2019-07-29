@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-06-11"
+
+keywords: notifications console, filter notifications, system notification
 
 subcollection: vmware-solutions
 
@@ -40,21 +42,14 @@ Sie können Benachrichtigungen über den Status von System- oder Benutzeroperati
           <dt class="dt dlterm">Warnung</dt>
           <dd class="dd">Eine Komponente ist fehlgeschlagen oder funktioniert nicht ordnungsgemäß. Der Fehler führt jedoch nicht zu einer Unterbrechung des laufenden Komponentenprozesses.</dd>
             <dt class="dt dlterm">Information</dt>
-            <dd class="dd">Eine System- oder Benutzeroperation wurde ausgeführt. Benachrichtigungen mit der Prioritätsstufe "Information" werden in der Regel durch die folgenden Ereignisse gemeldet:
-              <ul class="ul">
-                <li class="li">Installation eines Service</li>
-                <li class="li">Upgrade eines Service</li>
-                <li class="li">Löschung eines Service</li>
-                <li class="li">Rekonfiguration aller Services für hinzugefügte ESXi-Server</li>
-                <li class="li">Rekonfiguration aller Services für entfernte ESXi-Server</li>
-              </ul>
+            <dd class="dd">Eine System- oder Benutzeroperation wurde ausgeführt. Benachrichtigungen mit der Prioritätsstufe "Information" werden in der Regel durch die folgenden Ereignisse gemeldet:<br>Installation eines Service<br>Upgrade eines Service<br>Löschung eines Service<br>Rekonfiguration aller Services für hinzugefügte ESXi-Server<br>Rekonfiguration aller Services für entfernte ESXi-Server
             </dd>
           </dl>
         </td>
        </tr>
        <tr>
          <td>Typ</td>
-         <td>Der Typ der Komponente, auf die sich das gemeldete Ereignis bezieht:<ul><li>vCenter Server-Instanzen</li><li>Services</li><li>System</li></ul></td>
+         <td>Der Typ der Komponente, auf die sich das gemeldete Ereignis bezieht:<br>vCenter Server-Instanzen<br>Services<br>System</td>
        </tr>
        <tr>
          <td>Ressource</td>

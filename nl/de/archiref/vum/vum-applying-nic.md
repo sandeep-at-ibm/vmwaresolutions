@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-07"
 
 subcollection: vmware-solutions
 
@@ -22,7 +22,7 @@ Bevor Sie diese Task starten, rufen Sie alle physischen IPMI-IP-Adressen, Anmeld
 
 Führen Sie die folgenden Schritte für jeden Host in der angegebenen Reihenfolge aus:
 1. Verwenden Sie den vSphere Web Client, um den vSphere ESXi-Host in den Wartungsmodus zu versetzen, indem Sie **Home** > **Hosts und Cluster** auswählen. Wählen Sie im Navigatorfenster den vSphere ESXi-Host aus, klicken Sie mit der rechten Maustaste auf den Host und wählen Sie **Wartungsmodus** > **In Wartungsmodus wechseln** aus. Da der Host Teil eines automatisierten DRS-Clusters ist, werden virtuelle Maschinen auf verschiedene Hosts migriert, wenn der Host in den Wartungsmodus wechselt.
-2. Greifen Sie über SSH auf den vSphere ESXi-Host zu und verwenden Sie dabei die Details von der IC4VS-Konsole.
+2. Greifen Sie über SSH auf den vSphere ESXi-Host zu und verwenden Sie dabei die Details aus der IBM Cloud for VMware Solutions-Konsole.
 3. Führen Sie den folgenden vCLI-Befehl aus, um die nativen ixgben-Treiber zu aktivieren:
   `esxcli system module set --enabled=true --module=ixgben`
 4. Führen Sie den folgenden vCLI-Befehl aus, um den vSphere ESXi-Host erneut zu starten:
@@ -38,7 +38,7 @@ Führen Sie die folgenden Schritte für jeden Host in der angegebenen Reihenfolg
 
 Wenn Sie den Vorgang rückgängig machen müssen und Sie nicht über SSH auf den vSphere ESXi-Host zugreifen können, müssen Sie sich bei der KVM-Konsole für den Host anmelden, der über das {{site.data.keyword.cloud_notm}}-Steuerfenster zurückgesetzt werden muss.
 
-Verwenden Sie die ID und das Kennwort, die im {{site.data.keyword.cloud_notm}}-Steuerfenster mit der IPMI-IP-Adresse aufgelistet sind, um sich an der IPMI-Webschnittstelle anzumelden. Sie müssen mit dem Rechenzentrum, in dem sich der Host befindet, über VPN verbunden sein. Weitere Informationen finden Sie unter [Einführung in die Arbeit mit VPN](/docs/infrastructure/iaas-vpn?topic=VPN-gettingstarted-with-virtual-private-networking#gettingstarted-with-virtual-private-networking).
+Verwenden Sie die ID und das Kennwort, die im {{site.data.keyword.cloud_notm}}-Steuerfenster mit der IPMI-IP-Adresse aufgelistet sind, um sich an der IPMI-Webschnittstelle anzumelden. Sie müssen mit dem Rechenzentrum, in dem sich der Host befindet, über VPN verbunden sein. Weitere Informationen finden Sie unter [Einführung in die Arbeit mit VPN](/docs/infrastructure/iaas-vpn?topic=VPN-getting-started).
 
 1. Wechseln Sie zur Seite "Gerätedetails, Fernverwaltung" für den vSphere ESXi-Host und wählen Sie **Aktionen** > **KVM-Konsole** aus. Ein anderes Fenster wird geöffnet, in dem Sie den IPMI-Benutzer und das zugehörige Kennwort eingeben können.
 2. Wählen Sie **Fernsteuerung** > **iKVM/HTML5** aus und klicken Sie auf **iKVM/HTML5**, um neu zu starten. Sie können nun auf die Konsole des vSphere ESXi-Hosts zugreifen.

@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-16"
+lastupdated: "2019-06-14"
+
+keywords: set credentials, user credentials, set notifications
 
 subcollection: vmware-solutions
 
@@ -26,23 +28,29 @@ Sie können außerdem angeben, ob Sie E-Mail- und Konsolenbenachrichtigungen fü
 {: #useraccount-reqs}
 
 * Sie können nur ein Konto der {{site.data.keyword.cloud_notm}}-Infrastruktur mit einem {{site.data.keyword.cloud_notm}}-Benutzerkonto verknüpfen.
-* Das Konto der {{site.data.keyword.cloud_notm}}-Infrastruktur, das Sie verwenden, muss bestimmte Anforderungen erfüllen. Weitere Informationen finden Sie in [Anforderungen an das Konto der {{site.data.keyword.cloud_notm}}-Infrastruktur](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-slaccountrequirement).
+* Das Konto der {{site.data.keyword.cloud_notm}}-Infrastruktur, das Sie verwenden, muss bestimmte Anforderungen erfüllen. Weitere Informationen finden Sie in [Anforderungen an das Konto der {{site.data.keyword.cloud_notm}}-Infrastruktur](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req).
 * Wenn der API-Schlüssel für Ihr Konto der {{site.data.keyword.cloud_notm}}-Infrastruktur geändert wird, müssen Sie den Schlüssel auf der Seite **Einstellungen** in der Konsole von {{site.data.keyword.vmwaresolutions_short}} aktualisieren.
 
-   **Wichtig:** Sie müssen dafür sorgen, dass der auf der Seite **Einstellungen** gespeicherte API-Schlüssel richtig und aktuell ist. Andernfalls können Operationen fehlschlagen, die eine Validierung des API-Schlüssels erforderlich machen.
+   Sie müssen dafür sorgen, dass der auf der Seite **Einstellungen** gespeicherte API-Schlüssel richtig und aktuell ist. Andernfalls können Operationen fehlschlagen, die eine Validierung des API-Schlüssels erforderlich machen.
+   {:important}
 
-## Vorgehensweise zum Verwalten von Benutzerkonten und -einstellungen
-{: #useraccount-procedure}
+## Vorgehensweise zum Festlegen von Benachrichtigungen
+{: #useraccount-set-notif}
 
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Einstellungen**.
-2. Geben Sie im Bereich **Benachrichtigungen** Ihre Benachrichtigungseinstellungen an.
-   * Wenn Sie bei Auftreten von Ereignissen per E-Mail benachrichtigt werden wollen, klicken Sie auf **E-Mail-Benachrichtigungen aktivieren**.
-   * Wenn Sie in der Konsole bei Auftreten von Ereignissen benachrichtigt werden wollen, klicken Sie auf **Konsolenbenachrichtigungen aktivieren**.
-3. Geben Sie im Bereich **Berechtigungsnachweise für IBM Cloud-Infrastruktur** den Benutzernamen und den API-Schlüssel Ihres Kontos der {{site.data.keyword.cloud_notm}}-Infrastruktur ein:
-   * Wenn Ihr Konto der {{site.data.keyword.cloud_notm}}-Infrastruktur und Ihr {{site.data.keyword.cloud_notm}}-Konto verknüpft sind, klicken Sie auf **Abrufen**, um die Berechtigungsnachweise automatisch eintragen zu lassen.
-   * Wenn Ihr Konto der {{site.data.keyword.cloud_notm}}-Infrastruktur und Ihr {{site.data.keyword.cloud_notm}}-Konto nicht verknüpft sind, stellen Sie die Verknüpfung her. Melden Sie sich im [Kundenportal der {{site.data.keyword.cloud_notm}}](https://control.softlayer.com/) an und rufen Sie die Berechtigungsnachweise wie in der Konsole angegeben ab. Geben Sie die Berechtigungsnachweise anschließend ein.
-   * Wenn Sie kein Konto für die {{site.data.keyword.cloud_notm}}-Infrastruktur haben, [registrieren Sie sich für ein Konto](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_softlayer_account). Befolgen Sie dann die Anweisungen in der Konsole, um die Berechtigungsnachweise abzurufen, und geben Sie die Berechtigungsnachweise anschließend ein.
-4. Klicken Sie auf **Berechtigungsnachweise speichern**.
+2. Wenn Sie bei Auftreten von Ereignissen per E-Mail benachrichtigt werden wollen, klicken Sie auf **E-Mail-Benachrichtigungen aktivieren**.
+3. Wenn Sie in der Konsole bei Auftreten von Ereignissen benachrichtigt werden wollen, klicken Sie auf **Konsolenbenachrichtigungen aktivieren**.
+
+## Vorgehensweise zum Festlegen der Benutzerkontoberechtigungsnachweise
+{: #useraccount-set-cred}
+
+1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_short}}-Konsole im linken Navigationsfenster auf **Einstellungen**.
+2. Überprüfen Sie im Bereich **Berechtigungsnachweise für IBM Cloud-Infrastruktur** die Informationen für die Schritte, die Sie ausführen müssen.
+3. Wenn Sie über ein {{site.data.keyword.cloud_notm}}-Infrastrukturkonto und ein {{site.data.keyword.cloud_notm}}-Konto verfügen, die miteinander verknüpft sind, klicken Sie auf **Abrufen**, damit die Berechtigungsnachweise automatisch ausgefüllt werden.
+4. Wenn Sie über ein {{site.data.keyword.cloud_notm}}-Infrastrukturkonto und ein {{site.data.keyword.cloud_notm}}-Konto verfügen, beide jedoch nicht miteinander verknüpft sind, müssen Sie diese miteinander verknüpfen. Gehen Sie gemäß den Anweisungen in [IBMid-Konten verknüpfen](/docs/account?topic=account-unifyingaccounts#link_accounts) vor und klicken Sie anschließend auf **Abrufen**, damit die Berechtigungsnachweise automatisch ausgefüllt werden.
+5. Wenn Sie nicht über ein {{site.data.keyword.cloud_notm}}-Infrastrukturkonto und nicht über ein gebührenpflichtiges {{site.data.keyword.cloud_notm}}-Konto verfügen, führen Sie zuerst [ein Upgrade für Ihr Konto](/docs/account?topic=account-upgrading-account) durch und [erstellen einen API-Schlüssel für die klassische Infrastruktur](/docs/iam?topic=iam-classic_keys).
+6. Wenn Sie nicht über ein {{site.data.keyword.cloud_notm}}-Infrastrukturkonto, jedoch über ein gebührenpflichtiges {{site.data.keyword.cloud_notm}}-Konto verfügen, müssen Sie [einen API-Schlüssel für die klassische Infrastruktur erstellen](/docs/iam?topic=iam-classic_keys).
+7. Klicken Sie auf **Berechtigungsnachweise speichern**.
 
 ## Ergebnisse
 {: #useraccount-results}

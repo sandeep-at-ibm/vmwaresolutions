@@ -4,25 +4,25 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-17"
+lastupdated: "2019-05-31"
 
 ---
 
 # vRealize Network Insight
 {: #opsmgmt-vrni}
 
-Die vRealize Network Insight-Umgebung (vRNI) besteht aus zwei virtuellen Maschinen (VMs), einer Plattform (UI) und einem Controllerknoten. 
+Die vRealize Network Insight-Umgebung (vRNI) besteht aus zwei virtuellen Maschinen (VMs), einer Plattform (UI) und einem Controllerknoten.
 
 ![Network Insights-Diagramm](../../images/opsmgmt-vrninw.svg "Network Insights-Diagramm")
 
-Die vRNI-Plattform-Appliance stellt die Analysen, die Benutzerschnittstelle und das Datenmanagement bereit und stellt eine Verbindung zur Controller-Appliance her, die Daten aus den verschiedenen Datenquellen wie NSX Edges, vCenter usw. erfasst. Alle vRNI-Komponenten nutzen private portierbare {{site.data.keyword.cloud}}-IP-Adressen. vRLI wird als Syslog-Server für vRNI konfiguriert. 
+Die vRNI-Plattform-Appliance stellt die Analysen, die Benutzerschnittstelle und das Datenmanagement bereit und stellt eine Verbindung zur Controller-Appliance her, die Daten aus den verschiedenen Datenquellen wie NSX Edges, vCenter erfasst. Alle vRNI-Komponenten nutzen private portierbare {{site.data.keyword.cloud}}-IP-Adressen. vRLI wird als Syslog-Server für vRNI konfiguriert.
 
 ![Network Insights-Komponenten](../../images/opsmgmt-vrnicomponents.svg "Network Insights-Komponenten")
 
 ## Systemvoraussetzungen
 {: #opsmgmt-vrni-requirements}
 
-Diese Architektur unterstützt 3000 VMs mit einer mittleren Bausteingröße. 
+Diese Architektur unterstützt 3000 VMs mit einer mittleren Bausteingröße.
 
 Tabelle 1. Network Insight-Systemvoraussetzungen für die Plattform
 
@@ -43,13 +43,13 @@ Tabelle 2. Network Insight-Systemvoraussetzungen für Kollektoren
 ## Netzbetrieb
 {: #opsmgmt-vrni-network}
 
-Die Bereitstellung der vRNI-Appliance erfordert zwei IP-Adressen aus dem privaten portablen Tools-Teilnetz. Für die Netzkonnektivität erfordert vRNI Zugriff auf: 
+Die Bereitstellung der vRNI-Appliance erfordert zwei IP-Adressen aus dem privaten portablen Tools-Teilnetz. Für die Netzkonnektivität erfordert vRNI Zugriff auf:
 * vCenter-Appliance
 * vRealize Log Insight-Appliance
 * NSX-V/T-Appliances
 * Tools-Erweiterung VXLAN
 * Kundennetze
-* NTP-Server (time.services.softlayer.com)
+* NTP-Server (`time.services.softlayer.com`)
 * {{site.data.keyword.vmwaresolutions_short}} Active Directory/DNS
 
 ## Ports
@@ -60,7 +60,7 @@ Tabelle 3. Network Insight-Ports
 | Beschreibung |Port | Protokoll |
 |---|---|---|
 | Kommunikation zwischen den VMs von vRealize Network Insight | 443 | HTTPS |
-| Services, für die Internetzugriff erforderlich ist <br>svc.ni.vmware.com<br>support2.ni.vmware.com<br>reg.ni.vmware.com|443|HTTPS
+| Services, für die Internetzugriff erforderlich ist<br>svc.ni.vmware.com<br>support2.ni.vmware.com<br>reg.ni.vmware.com|443|HTTPS
 | Log Insight-Aufnahme-API | 9000 | TCP |
 | Log Insight-Aufnahme-API über SSL | 9543 | TCP |
 | Benutzerschnittstelle | 80,443 | TCP |

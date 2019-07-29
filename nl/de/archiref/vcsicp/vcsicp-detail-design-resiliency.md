@@ -64,7 +64,7 @@ Sicherungen der etcd-Datenbank werden dem Kunden als Teil des verwalteten Servic
 Nach der Erstbereitstellung der Hosts kann der Benutzer die Rechenkapazität aus dem {{site.data.keyword.cloud_notm}} for VMware-Portal heraus skalieren.
 
 Für dieses Skalieren der Umgebung gibt es die folgenden Möglichkeiten:
-- Hinzufügen neuer Standorte, die von separaten vCenter-Servern verwaltet werden
+- Hinzufügen neuer Standorte, die von separaten vCenter Server-Instanzen verwaltet werden
 - Hinzufügen neuer Cluster
 - Hinzufügen neuer Hosts zu einem vorhandenen Cluster
 

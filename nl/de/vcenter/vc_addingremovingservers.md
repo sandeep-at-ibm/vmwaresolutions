@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-03"
+lastupdated: "2019-06-18"
+
+keywords: vCenter Server add host, add server vCenter Server, remove host vCenter Server
 
 subcollection: vmware-solutions
 
@@ -20,6 +22,7 @@ subcollection: vmware-solutions
 
 Sie können die Kapazität Ihrer VMware vCenter Server-Instanz entsprechend Ihren Geschäftsanforderungen erweitern oder verringern, indem Sie ESXi-Server oder NFS-Speicher (Network File System) hinzufügen oder entfernen.
 
+* Ab dem Release V3.1 können Sie einem vorhandenen Cluster neue ESXi-Server hinzufügen, indem Sie entweder eine vorhandene Konfiguration oder eine alternative Konfiguration als die vorhandenen Hosts im Cluster auswählen. Vorhandene Konfigurationen stehen zur sofortigen Auswahl bereit, wenn Sie eine neuen Server bestellen. Zur Vermeidung von Leistungs- und Stabilitätsproblemen wird empfohlen, für die Cluster dieselben oder ähnliche Konfiguration für CPU, RAM und Speicher zu verwenden. Diese Funktion ist für Hardwareaktualisierungen innerhalb desselben Clusters nützlich. Ein Cluster kann nur einen Speichertyp aufweisen.
 * Ab dem Release V3.0 können Sie gleichzeitig NFS-Speicher und ESXi-Server zu Clustern hinzufügen, die sich im Status **Bereit** befinden, bzw. daraus entfernen. Sie können z. B. einen ESXi-Server in einem Cluster hinzufügen oder entfernen und einen NFS-Speicher in einem weiteren Cluster hinzufügen oder entfernen.
 * Ab dem Release V2.9 können Sie einem Cluster neue ESXi-Server hinzufügen, während sich die Server im Wartungsmodus befinden. Darüber hinaus können Sie ESXi-Server über mehrere Cluster hinweg gleichzeitig hinzufügen oder entfernen.
 
@@ -47,9 +50,21 @@ Sie können die Kapazität Ihrer VMware vCenter Server-Instanz entsprechend Ihre
 3. Klicken Sie im linken Navigationsfenster auf **Infrastruktur**.
 4. Klicken Sie in der Tabelle **CLUSTER** auf den Cluster, zu dem ESXi-Server hinzugefügt werden sollen.
 5. Klicken Sie im Abschnitt **ESXi-Server** auf **Hinzufügen**.
-6. Geben Sie im Fenster **Server hinzufügen** die Anzahl der Server an, die hinzugefügt werden sollen.
-7. Wählen Sie optional das Kontrollkästchen zum Hinzufügen von Servern während des Wartungsmodus aus.
-8. Überprüfen Sie die geschätzten Kosten und klicken Sie auf **Hinzufügen**.
+6. Wählen Sie im Fenster **Server hinzufügen** die Anzahl der Server aus, die hinzugefügt werden sollen.
+7. Wählen Sie optional das Kontrollkästchen zum Hinzufügen von Servern während des Wartungsmodus aus. Das Kontrollkästchen ist standardmäßig ausgewählt.
+
+   Wenn Sie den neuen ESXi-Server bereitstellen, werden die virtuellen Maschinen (VMs) sofort auf die neuen Server migriert, falls Sie das Kontrollkästchen **Wartungsmodus** nicht auswählen. Sie empfangen die Bestätigungsnachricht erst, wenn die Migration beginnt.
+{:important}
+
+8. Führen Sie die Bare-Metal-Konfiguration durch.
+   * Wählen Sie eine Konfiguration aus den vorhandenen Hosts im Cluster aus.
+   * Wählen Sie eine neue {{site.data.keyword.baremetal_short_sing}}-Konfiguration aus.
+      * Geben Sie für **Skylake** oder **Broadwell** das **CPU-Modell**, die Größe des **RAM** und die **Anzahl der {{site.data.keyword.baremetal_short}}-Instanzen** an.     
+      * Geben Sie für **SAP-zertifiziert** entsprechende Werte für **CPU-Modell und RAM** und einen Wert für **Anzahl der {{site.data.keyword.baremetal_short}}-Instanzen** an.
+9. Führen Sie die Speicherkonfiguration durch. Geben Sie die Plattentypen für die Kapazitäts- und Cacheplatten, die Anzahl der Platten und die vSAN-Lizenzedition an. Falls Sie mehr Speicher benötigen, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen.
+10. Überprüfen Sie die geschätzten Kosten und klicken Sie auf **Hinzufügen**.
+
+  Sie können die bereitgestellten Ressourcen auch durch Klicken auf **Zur Schätzung hinzufügen** zum {{site.data.keyword.cloud_notm}}-Schätztool hinzufügen. Dies ist nützlich, wenn Sie die Kosten für die ausgewählten {{site.data.keyword.vmwaresolutions_short}}-Ressourcen zusammen mit anderen {{site.data.keyword.cloud_notm}} Ressourcen schätzen möchten, die Sie für den Kauf in Betracht ziehen könnten.
 
 ### Ergebnisse nach dem Hinzufügen von ESXi-Servern
 {: #vc_addingremovingservers-adding-results}
@@ -57,11 +72,11 @@ Sie können die Kapazität Ihrer VMware vCenter Server-Instanz entsprechend Ihre
 1. Es kann eine leichte Verzögerung in der Konsole auftreten, während sich der Instanzstatus von **Bereit** in **Wird geändert** ändert. Warten Sie, bis die Operation vollständig abgeschlossen ist, bevor Sie weitere Änderungen an der Instanz vornehmen.
 2. Sie werden per E-Mail benachrichtigt, dass Ihre Anforderung zum Hinzufügen von ESXi-Servern verarbeitet wird. In der Konsole wird der Status des Clusters, der den ESXi-Servern zugeordnet ist, in **Wird geändert** geändert.
 3. Wenn die neuen ESXi-Server nicht zur Liste im Cluster hinzugefügt werden, überprüfen Sie die E-Mail- oder Konsolenbenachrichtigungen, um weitere Details über den Fehler zu ermitteln.
-4. In den folgenden Situationen müssen Sie die Konsole von Zerto Virtual Manager (ZVM) und die bereits ausgefüllte IP-Adresse von Zerto Virtual Replication Appliance (VRA) verwenden, um die virtuelle VRA-Maschine (VM) manuell bereitzustellen:
+4. In den folgenden Situationen müssen Sie die Konsole von Zerto Virtual Manager (ZVM) und die bereits ausgefüllte IP-Adresse von Zerto Virtual Replication Appliance (VRA) verwenden, um die virtuelle VRA-Maschine manuell bereitzustellen:
    * Wenn Sie ESXi-Server zu einem Standardcluster hinzufügen, während sich die Server im Wartungsmodus befinden und Zerto for {{site.data.keyword.cloud_notm}} installiert ist.
    * Wenn Sie Zerto for {{site.data.keyword.cloud_notm}} zu einer vCenter Server-Instanz hinzufügen, die über einen ESXi-Server im Wartungsmodus verfügt.
 
-Wenn Sie ESXi-Server während des Wartungsmodus hinzufügen, werden virtuelle Maschinen erst dann auf die neuen Server migriert, wenn Sie den Wartungsmodus beenden.   
+Wenn Sie ESXi-Server während des Wartungsmodus hinzufügen, werden virtuelle Maschinen (VMs) erst dann auf die neuen Server migriert, wenn Sie den Wartungsmodus beenden.   
 {:important}
 
 ## ESXi-Server in vCenter Server-Instanzen entfernen
@@ -74,7 +89,7 @@ Wenn Sie ESXi-Server während des Wartungsmodus hinzufügen, werden virtuelle Ma
 * Eine vCenter Server-Instanz mit NFS-Speicher benötigt mindestens 2 ESXi-Server und eine vCenter Server-Instanz mit vSAN-Speicher muss über mindestens 4 ESXi-Server verfügen.
 * Bevor Sie ESXi-Server mit installiertem Service "F5 on {{site.data.keyword.cloud_notm}}" oder "FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}" entfernen, müssen Sie die VMs für F5 BIG-IP und FortiGate auf einen ESXi-Server verlagern, auf dem die VMs nicht gehostet werden.
 * Stellen Sie vor dem Entfernen von ESXi-Servern mit installiertem Service "IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}" sicher, dass keine (fehlgeschlagenen oder laufenden) Sicherungs- oder Wiederherstellungsoperationen aktiv sind, da diese aktiven Operationen das Entfernen der ESXi-Server verhindern könnten.
-* Wenn Sie ESXi-Server entfernen, werden die Server in den Wartungsmodus versetzt. Anschließend werden alle virtuellen Maschinen (VMs), die auf den Servern ausgeführt werden, migriert, bevor sie aus vCenter Server entfernt werden. Damit die Verlagerung von VMs maximal gesteuert werden kann, empfiehlt es sich, die zu entfernenden ESXi-Server in den Wartungsmodus zu versetzen und die auf ihnen ausgeführten VMs manuell mithilfe von VMware vSphere Web Client zu migrieren. Anschließend entfernen Sie die ESXi-Server mithilfe der {{site.data.keyword.vmwaresolutions_short}}-Konsole.
+* Wenn Sie ESXi-Server entfernen, werden die Server in den Wartungsmodus versetzt. Anschließend werden alle auf den Servern ausgeführten VMs migriert, bevor sie aus vCenter Server entfernt werden. Damit die Verlagerung von VMs maximal gesteuert werden kann, empfiehlt es sich, die zu entfernenden ESXi-Server in den Wartungsmodus zu versetzen und die auf ihnen ausgeführten VMs manuell mithilfe von VMware vSphere Web Client zu migrieren. Anschließend entfernen Sie die ESXi-Server mithilfe der {{site.data.keyword.vmwaresolutions_short}}-Konsole.
 
 ### Vorgehensweise beim Entfernen von ESXi-Servern
 {: #vc_addingremovingservers-removing-procedure}
@@ -95,7 +110,7 @@ Wenn Sie ESXi-Server während des Wartungsmodus hinzufügen, werden virtuelle Ma
    Die entfernten ESXi-Server werden Ihnen bis zum Ende des Abrechnungszyklus für die {{site.data.keyword.cloud_notm}}-Infrastruktur berechnet.
    {:note}
 
-## NFS-Speicher zu vCenter-Server-Instanzen hinzufügen
+## NFS-Speicher zu vCenter Server-Instanzen hinzufügen
 {: #section-adding-nfs-storage-to-vcenter-server-instances}
 
 ### Vor dem Hinzufügen von NFS-Speicher
@@ -114,7 +129,9 @@ Fügen Sie NFS-Speicher nicht über VMware vSphere Web Client hinzu. Die Änderu
 6. Führen Sie im Fenster **Speicher** die Speicherkonfiguration durch.
    * Wenn Sie für alle Dateifreigaben dieselben Einstellungen hinzufügen und konfigurieren wollen, geben Sie **Anzahl der gemeinsam genutzten Ressourcen**, **Leistung** und **Größe (GB)** an.
    * Wenn Sie Dateifreigaben einzeln hinzufügen und konfigurieren wollen, wählen Sie **Gemeinsam genutzte Ressourcen einzeln konfigurieren** an, klicken auf das Plussymbol (**+**) neben der Bezeichnung **Gemeinsam genutzten Speicher hinzufügen** und wählen für jede einzelne Dateifreigabe die **Leistung** und **Größe (GB)** aus. Sie müssen mindestens eine gemeinsam genutzte Dateiressource auswählen.
-7. Klicken Sie auf **NFS-Speicher hinzufügen**.
+7. Überprüfen Sie die geschätzten Kosten und klicken Sie auf **NFS-Speicher hinzufügen**.
+
+  Sie können die bereitgestellten Ressourcen auch durch Klicken auf **Zur Schätzung hinzufügen** zum {{site.data.keyword.cloud_notm}}-Schätztool hinzufügen. Dies ist nützlich, wenn Sie die Kosten für die ausgewählten {{site.data.keyword.vmwaresolutions_short}}-Ressourcen zusammen mit anderen {{site.data.keyword.cloud_notm}} Ressourcen schätzen möchten, die Sie für den Kauf in Betracht ziehen könnten.
 
 ### Ergebnisse nach dem Hinzufügen von NFS-Speicher
 {: #vc_addingremovingservers-adding-nfs-storage-results}

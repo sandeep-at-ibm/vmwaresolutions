@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-22"
 
 subcollection: vmware-solutions
 
@@ -18,7 +18,7 @@ subcollection: vmware-solutions
 ## Virtual Routing and Forwarding
 {: #vcsicp-arch-overview-infrastructure-vrf}
 
-Sie können {{site.data.keyword.cloud}}-Konten als VRF-Konten (Virtual Routing and Forwarding) konfigurieren. Dadurch wird das automatische globale Routing zwischen Teilnetz-IP-Blöcken aktiviert. Alle Konten mit direkten Verbindungen (Direct-Link) müssen in VRF-Konten konvertiert oder als solche erstellt werden.
+Sie können {{site.data.keyword.cloud}}-Konten als VRF-Konten (Virtual Routing and Forwarding) konfigurieren. Dadurch wird das automatische globale Routing zwischen Teilnetz-IP-Blöcken aktiviert. Alle Konten mit Direct Link-Verbindungen müssen in VRF-Konten konvertiert oder als solche erstellt werden.
 
 ## Direct Link
 {: #vcsicp-arch-overview-infrastructure-direct-link}
@@ -52,7 +52,7 @@ CPU | 28 Kerne 2,2 GHz | 28 Kerne 2,2 GHz
 RAM | 384 GB | 384 GB
 Speicher | 2000 GB 2IOPS/GB Management, 2000 GB 4 IOPS/GB Workload, 4000 GB 4 IOPS/GB {{site.data.keyword.icpfull_notm}} | Mindest-SSD 960 GB x 2
 
-Zusätzlich zu der Hardware, die für {{site.data.keyword.icpfull_notm}} vorausgesetzt wird, müssen Sie persistente Datenträger in der {{site.data.keyword.icpfull_notm}}-Umgebung erstellen, um die CAM-Datenbank- und -Protokolldaten (CAM = Cloud Automation Manager) zu speichern. CAM unterstützt zwar alle persistenten Datenträgertypen, die von {{site.data.keyword.cloud_notm}} unterstützt werden, für CAM empfohlen werden aber die Speicherkonfigurationen NFS und GlusterFS.
+Zusätzlich zu der Hardware, die für {{site.data.keyword.icpfull_notm}} vorausgesetzt wird, müssen Sie persistente Datenträger in der {{site.data.keyword.icpfull_notm}}-Umgebung erstellen, um die CAM-Datenbank- und -Protokolldaten (CAM = Cloud Automation Manager) zu speichern. CAM unterstützt zwar alle persistenten Datenträgertypen, die von {{site.data.keyword.icpfull_notm}} unterstützt werden, für CAM empfohlen werden aber die Speicherkonfigurationen NFS und GlusterFS.
 
 ## Virtuelle Struktur
 {: #vcsicp-arch-overview-infrastructure-virtual-struct}

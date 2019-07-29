@@ -1,8 +1,12 @@
 ---
 
 copyright:
+
   years: 2016, 2019
-lastupdated: "2019-05-13"
+
+lastupdated: "2019-05-31"
+
+keywords: user IDs vCenter, PSC user, user ID service
 
 subcollection: vmware-solutions
 
@@ -16,7 +20,7 @@ subcollection: vmware-solutions
 # IBM Benutzer-IDs
 {: #audit_user_ids}
 
-{{site.data.keyword.vmwaresolutions_short}} verwaltet eine Gruppe von Benutzern in Ihrem Konto für die Verwendung durch die {{site.data.keyword.cloud_notm}}-Automatisierung, wenn Sie Operationen, wie das Hinzufügen von Hosts, Clustern oder Speicher zu Ihrer VMware-Instanz, ausführen. In den folgenden Abschnitten finden Sie die Benutzer-IDs für die {{site.data.keyword.cloud_notm}}-Automatisierung.
+{{site.data.keyword.vmwaresolutions_short}} verwaltet eine Gruppe von Benutzern in Ihrem Konto für die Verwendung durch die {{site.data.keyword.cloud_notm}}-Automatisierung, wenn Sie Operationen, wie das Hinzufügen von Hosts, Clustern oder Speicher zu Ihrer VMware-Instanz, ausführen. Benutzer im Konto können auch für die Installation und Konfiguration von Services durch die {{site.data.keyword.cloud_notm}}-Serviceautomatisierung verwendet werden. In den folgenden Abschnitten finden Sie die Benutzer-IDs für die {{site.data.keyword.cloud_notm}}-Automatisierung.
 
 VMware-Instanzoperationen schlagen fehl, wenn die IBM Benutzer-IDs gelöscht oder inaktiviert oder die entsprechenden Kennwörter geändert werden.
 {:important}
@@ -67,6 +71,30 @@ Tabelle 4. Active Directory-Benutzer-IDs
 |:---------|:------------- |:------------|
 | IBM      | automation    | Dient zum Hinzufügen eines Hosts, zum Hinzufügen einer virtuellen Maschine für den Service und zum Festlegen von Active Directory- und DNS-Einträgen. |
 | Kunde | Administrator | Nur für die Verwendung durch den Kunden erstellt. |
+
+## Servicebenutzer-IDs
+{: #audit_user_ids-services}
+
+Tabelle 5. Servicebenutzer-IDs
+
+| Benutzer-ID                                    | Beschreibung |
+|:-------------------------------------------|:----------- |
+| prod-BigIP-``dynamic_ID``-@``domain name`` | Wird für die Installation und Konfiguration des Service 'F5 on {{site.data.keyword.cloud_notm}}' verwendet. |
+| prod-Caveonix-``dynamic_ID``-@``domain name`` | Wird für die Installation und Konfiguration des Service 'Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}' verwendet. |
+| prod-Fortigate-``dynamic_ID``-@``domain name`` | Wird für die Installation und Konfiguration des Service 'FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}' verwendet. |
+| prod-FortigateVM-``dynamic_ID``-@``domain name`` | Wird für die Installation und Konfiguration des Service 'FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}' verwendet. |
+| prod-HyTrustCC-``5_letter_ID``-@``domain name`` | Wird für die Installation und Konfiguration des Service 'HyTrust CloudControl on {{site.data.keyword.cloud_notm}}' verwendet. |
+| prod-HyTrustDC-``5_letter_ID``-@``domain name`` | Wird für die Installation und Konfiguration des Service 'HyTrust DataControl on {{site.data.keyword.cloud_notm}}' verwendet. |
+| prod-HyTrustKC-``5_letter_ID``-@``domain name`` | Wird für die Installation und Konfiguration des Service 'HyTrust KeyControl on {{site.data.keyword.cloud_notm}}' verwendet. |
+| prod-KMIPAdapter-``dynamic_ID``-@``domain name`` | Wird für die Installation und Konfiguration des Service 'KMIP for VMware on {{site.data.keyword.cloud_notm}}' verwendet. |
+| prod-ICP-``dynamic_ID``-@``domain name`` | Wird für die Installation und Konfiguration des Service '{{site.data.keyword.cloud_notm}} Private Hosted' verwendet. |
+| prod-SPPlus-``dynamic_ID``-@``domain name`` | Wird für die Installation und Konfiguration des Service 'IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}' verwendet. |
+| prod-Veeam-``dynamic_ID``-@``domain name`` | Wird für die Installation und Konfiguration des Service 'Veeam on {{site.data.keyword.cloud_notm}}' verwendet. |
+| prod-HCX-``dynamic_ID``-@``domain name`` | Wird für die Installation und Konfiguration des Service 'VMware HCX on {{site.data.keyword.cloud_notm}}' verwendet. |
+| prod-Zerto-``dynamic_ID``-@``domain name`` | Wird für die Installation und Konfiguration des Service 'Zerto on {{site.data.keyword.cloud_notm}}' verwendet. |
+
+Die Länge dynamischer IDs liegt zwischen acht und zehn Buchstaben.
+{:note}
 
 ## Zugehörige Links
 {: #audit_user_ids-related}

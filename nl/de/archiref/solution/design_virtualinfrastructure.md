@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-17"
 
 subcollection: vmware-solutions
 
@@ -113,46 +113,16 @@ vSAN-Einstellungen werden nach bewährten Verfahren für die Bereitstellung von 
    * vSAN - 100 gemeinsam genutzte Ressourcen
 * vSAN-Kernel-Ports: **Explicit Failover**
 
-## Über NFS angehängte Speichereinheit
+## Über NFS zugeordnete Speichereinheit
 {: #design_virtualinfrastructure-nfs-storage}
 
-Bei der Verwendung von über NFS angehängtem Speicher schreibt diese Architektur die Verwendung von NFS v3 statt NFS v4.1 vor, da die NFS-Server-LIF-Migrationen bei Verwendung von NFS v4.1 zu einer exzessiven Latenzzeit führen können. Jeder vSphere-Host wird unter Verwendung seines Hostnamens mit dem NFS-Speicher verbunden.
+Bei der Verwendung von über NFS zugeordnetem Speicher schreibt diese Architektur die Verwendung von NFS v3 statt NFS v4.1 vor, da die NFS-Server-LIF-Migrationen bei Verwendung von NFS v4.1 zu einer exzessiven Latenzzeit führen können. Jeder vSphere-Host wird unter Verwendung seines Hostnamens mit dem NFS-Speicher verbunden.
 
-Ein 2-TB-NFS-Datenspeicher wird einem Cluster zugeordnet, der von Verwaltungskomponenten mit einem Leistungstier von 4 IOPS/GB verwendet werden kann. Zusätzliche Datenspeicher können einem Cluster für den Verarbeitungsprozess zugeordnet werden; dabei können verschiedene Größen und Leistungstiers verwendet werden.
+Ein 2-TB-NFS-Datenspeicher wird einem Cluster zugeordnet, der von Verwaltungskomponenten mit einem Leistungstier von 4 IOPS/GB verwendet werden kann. Weitere Datenspeicher können einem Cluster für den Verarbeitungsprozess zugeordnet werden; dabei können verschiedene Größen und Leistungstiers verwendet werden.
 
 Darüber hinaus ist für diese Architektur erforderlich, dass alle Hosts über eine Teilnetzroute verfügen, die für das Teilnetz erstellt wird, in dem sich der NFS-Speicher befindet. Der Zweck dieser Teilnetzroute besteht darin, den gesamten NFS-Datenverkehr so weiterzuleiten, dass die Portgruppe, das Teilnetz und das VLAN verwendet werden, die durch dieses Design für den NFS-Datenverkehr bestimmt sind. Sind mehrere NFS-Datenspeicher angehängt, müssen möglicherweise mehrere Routen konfiguriert werden, da sich diese Datenspeicher in unterschiedlichen fernen Teilnetzen befinden können.
 
 Virtuelle Maschinen für das Management können sich in einem NFS-Datenspeicher befinden. Dies führt zu einem Bootstrapping-Problem, da einige der Managementmaschinen für DNS-Services, die zum Auflösen des NFS-Hostnamens verwendet werden, verantwortlich sein können. Daher gibt diese Architektur an, dass mindestens eine der IP-Adressen für den Managementdatenspeicher auf jedem der Hosts fest in `/etc/hosts` codiert ist.
-
-## Angehängter iSCSI-Speicher
-{: #design_virtualinfrastructure-iscsi-storage}
-
-Im Gegensatz zum angehängten NFS v3-Speicher unterstützt der angehängte iSCSI-Speicher aktiv-aktive Pfade über alle konfigurierten NIC-Karten-Ports und Zielports hinweg. Aus diesem Grund kann ein höherer Durchsatz erreicht werden und stellt somit eine wünschenswerte Alternative zum angehängten NFS-Speicher dar. Dies führt jedoch zu einer höheren Komplexität.
-
-{{site.data.keyword.cloud_notm}} Der Endurance-Blockspeicher unterstützt maximal 64 IP-Adressen, die bei der Verwendung von VMware pro LUN zugeordnet werden. Dadurch können bis zu 32 Hosts im Rahmen dieses Designs verwendet werden.
-
-Eine 2-TB-iSCSI-LUN ist für die Verwendung der Managementkomponenten an den vSphere-Cluster angeschlossen und mindestens eine iSCSI-LUN wird für die Verwendung durch die Kunden konfiguriert. Dieser Speicher wird pro LUN als Dateisystem VMFS 6.x formatiert.
-
-Diese Architektur gibt die Verwendung der iSCSI-Portbindung, eine Umlaufrichtlinie für Multipath, eine maximale Warteschlangenlänge von 64 und ein Umlauf-IOPS-Limit von 1 an.
-
-### Einrichtung des virtuellen Netzes für iSCSI
-{: #design_virtualinfrastructure-setup-iscsi}
-
-Bei diesem Design darf der iSCSI-Datenverkehr in einer aktiv-aktiven Konfiguration beide privaten, angehängten NIC-Karten-Ports verwenden. Da vSphere nur einen Port der Netzschnittstellenkarte zulässt, der in einer bestimmten Portgruppe in einem vDS aktiv ist, müssen im Speicher-VLAN zwei Portgruppen erstellt werden (A und B).
-
-Ein ESXi-Kernel-Port wird mit einer eindeutigen IP-Adresse in einzelnen Teilnetzen erstellt, um Skalierbarkeit zu ermöglichen. Jeder Kernel-Port wird einer eigenen iSCSI-Portgruppe zugeordnet. Beide Kernel-Ports sind einem virtuellen ESXi-ISCSI-Host-Bus-Adapter (HBA) zugeordnet. Für jeden Kernel-Port wird der Standard-Gateway-Override-Switch verwendet, um das Standardgateway für das lokale Teilnetz für diesen Kernel-Port zu verwenden. Siehe die folgende Tabelle:
-
-Tabelle 2. iSCSi-Portgruppen
-
-vDS-Portgruppe | Kernel-Port-Teilnetz | VMHBA
---|:---|:--
-**SDDC-Dprotgroup-iSCSI-A** |Teilnetz-A |  vmhba64
-**SDDC-Dprotgroup-iSCSI-B** | Teilnetz-B | vmhba64
-
-#### Storage I/O Control - SIOC
-{: #design_virtualinfrastructure-sioc}
-
-iSCSI-LUNS werden in einem VMFS-Dateisystem mit einer einzigen Datei pro LUN bereitgestellt und formatiert. Die empfohlene Standardeinstellung für SIOC ist 90 % des Spitzendurchsatzes.
 
 ## Design von VMware NSX-V
 {: #design_virtualinfrastructure-nsx-design}
@@ -204,7 +174,7 @@ Tabelle 4. VLAN-Zuordnung zu Datenverkehrstypen
 | VLAN  | Ziel | Datenverkehrstyp |
 |:----- |:----------- |:------------ |
 | VLAN 1 | Privat A   | ESXi-Management, Management, VXLAN (VTEP) |
-| VLAN 2 | Privat B   | vSAN, NFS, vMotion, iSCSI |
+| VLAN 2 | Privat B   | vSAN, NFS, vMotion |
 | VLAN 3 | Öffentlich      | Für Internetzugriff verfügbar |
 
 Datenverkehr von Workloads fließt über VXLAN­gestützte logische Switches.
@@ -231,7 +201,7 @@ Tabelle 6. Einstellungen für die Portgruppenkonfiguration für verteilte Switch
 | Failback           | Nein |
 | Failover-Reihenfolge     | Aktive Uplinks: uplink1, uplink2 \* |
 
-\* Die vSAN-Portgruppe verwendet explizites Failover mit Aktiv/Standby-Konfiguration, da sie keinen Lastausgleich für vSAN-Speicherdatenverkehr unterstützt. iSCSI-Portgruppen verfügen jeweils nur über eine aktive Uplink-Datei (iSCSI A - Uplink1, iSCSI B - Uplink 2).
+\* Die vSAN-Portgruppe verwendet explizites Failover mit Aktiv/Standby-Konfiguration, da sie keinen Lastausgleich für vSAN-Speicherdatenverkehr unterstützt.
 {:note}
 
 Tabelle 7. Portgruppen und VLANs für virtuelle Switches konvergierter Cluster, verteilter Switch **SDDC-Dswitch-Private**
@@ -242,10 +212,8 @@ SDDC-DPortGroup-Mgmt|Virtueller Ursprungsport|Aktiv: 0, 1|VLAN 1
 SDDC-DPortGroup-vMotion|Virtueller Ursprungsport|Aktiv: 0, 1|VLAN 2
 SDDC-DPortGroup-VSAN|Explizites Failover|Aktiv: 0, Standby: 1|VLAN 2
 SDDC-DPortGroup-NFS|Virtueller Ursprungsport|Aktiv: 0, 1|VLAN 2
-NSX-generiert|Virtueller Ursprungsport|Aktiv: 0,1|VLAN 1
+NSX-generiert|Virtueller Ursprungsport|Aktiv: 0, 1|VLAN 1
 SDDC-DPortGroup-External|Virtueller Ursprungsport|Aktiv: 0, 1|VLAN 3
-SDDC-DPortGroup-iSCSI-A|Virtueller Ursprungsport|Aktiv: 0|VLAN 2
-SDDC-DPortGroup-iSCSI-B|Virtueller Ursprungsport|Aktiv: 0|VLAN 2
 
 Tabelle 8. VM-Kernel-Adapter konvergierter Cluster, verteilter Switch **SDDC-Dswitch-Private**
 
@@ -256,8 +224,6 @@ vMotion|SDDC-DPortGroup-vMotion|vMotion-Datenverkehr|9000
 VTEP|NSX-generiert|-|9000
 vSAN|SDDC-DPortGroup-VSAN|vSAN|9000
 NAS|SDDC-DPortGroup-NFS|NAS|9000
-iSCSI|SDDC-DPortGroup-iSCSI-A|iSCSI|9000
-iSCSI|SDDC-DPortGroup-iSCSI-B|iSCSI|9000
 
 ### NSX-Konfiguration
 {: #design_virtualinfrastructure-nsx-config}
@@ -281,16 +247,16 @@ Die folgenden Aspekte werden nicht konfiguriert:
 
 ## Öffentliche Netzkonnektivität
 
-Es gibt verschiedene Gründe dafür, warum Sie möglicherweise eine öffentliche Netzverbindung für Ihre Instanz benötigen. Dazu können der Zugriff auf öffentliche Aktualisierungsservices oder andere öffentliche Services für Ihre Workload, wie Geoortungsdatenbanken oder Wetterdaten, zählen. Außerdem kann es auch sein, dass Sie eine öffentliche Verbindung für Ihr Virtualisierungsmanagement und Ihre Add-on-Services benötigen. vCenter kann beispielsweise die zugehörige HCL-Datenbank aktualisieren und Updates für [VMware Update Manager (VUM)](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-intro) über das öffentliche Netz anfordern. Zerto, Veeam, VMware HCX, F5 BIG-IP und FortiGate-VM verwenden alle öffentlichen Netzverbindungen für bestimmte Bereiche der Produktlizenzierung und Lizenzaktivierung und für Nutzungsberichte. Darüber hinaus können Sie Tunnel über das öffentliche Netz verwenden, um die Verbindung zu Ihrem On-Premises-Rechenzentrum für Replikationszwecke zu nutzen.
+Es gibt verschiedene Gründe dafür, warum Sie möglicherweise eine öffentliche Netzverbindung für Ihre Instanz benötigen. Dazu können der Zugriff auf öffentliche Aktualisierungsservices oder andere öffentliche Services für die Workload zählen, zum Beispiel auf Geoortungsdatenbanken oder Wetterdaten. Außerdem kann es auch sein, dass Sie eine öffentliche Verbindung für Ihr Virtualisierungsmanagement und Ihre Add-on-Services benötigen. vCenter kann beispielsweise die zugehörige HCL-Datenbank aktualisieren und Updates für [VMware Update Manager (VUM)](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-intro) über das öffentliche Netz anfordern. Zerto, Veeam, VMware HCX, F5 BIG-IP und FortiGate-VM verwenden alle öffentlichen Netzverbindungen für bestimmte Bereiche der Produktlizenzierung und Lizenzaktivierung und für Nutzungsberichte. Darüber hinaus können Sie Tunnel über das öffentliche Netz verwenden, um die Verbindung zu Ihrem On-Premises-Rechenzentrum für Replikationszwecke zu nutzen.
 
-In der Regel werden diese Übertragungen selektiv über das Management-Edge-Gateway oder das Kunden-ESG (ESG, Edge Services Gateway) unter Verwendung von NAT an das öffentliche Netz geleitet. Möglicherweise verfügen Sie jedoch über zusätzliche Sicherheitsanforderungen oder möchten einen Proxy verwenden, um den Kommunikationspfad zu vereinfachen. Wenn Sie Ihre Instanz mit inaktivierten öffentlichen Schnittstellen bereitgestellt haben, können Sie zudem keine ESGs zum Weiterleiten an das öffentliche Netz verwenden.
+In der Regel werden diese Übertragungen selektiv über das Management-Edge-Gateway oder das Kunden-ESG (ESG, Edge Services Gateway) unter Verwendung von NAT an das öffentliche Netz geleitet. Sie können jedoch über mehr Sicherheitsanforderungen verfügen oder einen Proxy verwenden, um den Weg der Kommunikation zu vereinfachen. Wenn Sie Ihre Instanz mit inaktivierten öffentlichen Schnittstellen bereitgestellt haben, können Sie zudem keine ESGs zum Weiterleiten an das öffentliche Netz verwenden.
 
 Diese Architektur ermöglicht die folgenden Optionen für die Weiterleitung (via Proxys) des Datenverkehrs an das öffentliche Netz:
 
 Methode|Beschreibung|Einschränkungen
 --|--|--
-Virtualisiertes Gateway|Implementieren Sie ein virtualisiertes Gateway (z. B. NSX ESG, F5 BIG-IP, FortiGate-VM oder eine virtuelle Appliance Ihrer Wahl) zum Traversieren des privaten und öffentlichen Netzes. Konfigurieren Sie das Routing auf dem Quellensystem (z. B. vCenter, Zerto, Ihre Workload), um nur den öffentlichen Netzdatenverkehr an das Gateway zu leiten, und konfigurieren Sie das Gateway entsprechend Ihren Anforderungen.|Anwendbar nur auf Instanzen mit aktivierter öffentlicher Schnittstelle. Diese Konfiguration ermöglicht sowohl ausgehende als auch eingehende Datenverkehrsmuster.
-Virtualisiertes Gateway mit Proxy|Implementieren Sie ein virtualisiertes Gateway wie oben beschrieben. Hinter diesem Gateway [implementieren Sie einen Proxy-Server](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-init-config#vum-init-config) und konfigurieren Ihre Services und Anwendungen so, dass sie über diesen Proxy mit dem öffentlichen Netz verbunden sind.|Anwendbar nur auf Instanzen mit aktivierter öffentlicher Schnittstelle. Abgehende Datenverkehrsmuster können den Proxy verwenden, aber eingehende Datenverkehrsmuster müssen am Gateway verwaltet werden.
+Virtualisiertes Gateway|Stellen Sie ein virtualisiertes Gateway (z. B. NSX ESG, F5 BIG-IP, FortiGate-VM oder eine virtuelle Appliance Ihrer Wahl) zum Durchqueren des privaten und öffentlichen Netzes bereit. Konfigurieren Sie das Routing auf dem Quellensystem (z. B. vCenter, Zerto, Ihre Workload), um nur den öffentlichen Netzdatenverkehr an das Gateway zu leiten, und konfigurieren Sie das Gateway entsprechend Ihren Anforderungen.|Anwendbar nur auf Instanzen mit aktivierter öffentlicher Schnittstelle. Diese Konfiguration ermöglicht sowohl ausgehende als auch eingehende Datenverkehrsmuster.
+Virtualisiertes Gateway mit Proxy|Stellen Sie ein virtualisiertes Gateway wie oben beschrieben bereit. Hinter diesem Gateway [implementieren Sie einen Proxy-Server](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-init-config#vum-init-config) und konfigurieren Ihre Services und Anwendungen so, dass sie über diesen Proxy mit dem öffentlichen Netz verbunden sind.|Anwendbar nur auf Instanzen mit aktivierter öffentlicher Schnittstelle. Abgehende Datenverkehrsmuster können den Proxy verwenden, aber eingehende Datenverkehrsmuster müssen am Gateway verwaltet werden.
 Hardware-Gateway|Implementieren Sie eine [Hardware-Gateway-Appliance](https://cloud.ibm.com/catalog/infrastructure/gateway-appliance) in Ihrem Management-VLAN. Konfigurieren Sie das Gateway für NAT bei ausgehendem Datenverkehr entsprechend Ihren Anforderungen an das öffentliche Netz.|Anwendbar auf alle Instanzen, mit oder ohne aktivierte öffentliche Schnittstellen. Diese Konfiguration ermöglicht sowohl ausgehende als auch eingehende Datenverkehrsmuster.
 Hardware-Gateway mit Proxy|Implementieren Sie eine Gateway-Appliance wie oben beschrieben. Hinter diesem Gateway [implementieren Sie einen Proxy-Server](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-init-config#vum-init-config) und konfigurieren Ihre Services und Anwendungen so, dass sie über diesen Proxy mit dem öffentlichen Netz verbunden sind.|Anwendbar auf alle Instanzen, mit oder ohne aktivierte öffentliche Schnittstellen. Abgehende Datenverkehrsmuster können den Proxy verwenden, aber eingehende Datenverkehrsmuster müssen vom Gateway verwaltet werden.
 Lastausgleichsfunktion|IBM Cloud bietet verschiedene [Lastausgleichsservices](https://cloud.ibm.com/catalog/infrastructure/load-balancer-group), mit denen Sie Zugriff auf eingehenden Netzverkehr für Ihre Anwendungen bereitstellen können.|Anwendbar auf alle Instanzen, aber beschränkt auf eingehende Datenverkehrsmuster.

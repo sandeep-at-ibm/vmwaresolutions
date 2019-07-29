@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-28"
+
+keywords: vCenter Server Hybridity delete instance, delete vCenter Server Hybridity, delete multi-site
 
 subcollection: vmware-solutions
 
@@ -38,7 +40,7 @@ Die gelöschten Instanzen werden Ihnen bis zum Ende des Abrechnungszyklus für d
 
 1. Entfernen Sie alle Services aus der sekundären vCenter Server with Hybridity Bundle-Instanz.
 2. Stellen Sie sicher, dass in die zu löschende sekundäre Instanz keine NSX-Objekte erweitert wurden.
-3. Löschen Sie den sekundären vCenter-Server aus der primären SSO-Domäne (Single Sign-On). Weitere Informationen finden Sie unter [Unregister vCenter Server from Single Sign-On](https://kb.vmware.com/s/article/2106736){:new_window}.
+3. Löschen Sie die sekundäre vCenter Server-Instanz aus der primären SSO-Domäne (Single Sign-On). Weitere Informationen finden Sie unter [Unregister vCenter Server from Single Sign-On](https://kb.vmware.com/s/article/2106736){:new_window}.
 4. Stufen Sie die virtuelle Serviceinstanz (VSI) für den lokalen Domänencontroller herab. Weitere Informationen finden Sie unter [Demoting domain controllers and domains](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-){:new_window}.
 5. Löschen Sie die sekundäre vCenter Server with Hybridity Bundle-Instanz in der {{site.data.keyword.vmwaresolutions_short}}-Konsole.
 6. Wiederholen Sie die Schritte 1-5 für alle sekundären vCenter Server with Hybridity Bundle-Instanzen in Ihrer Konfiguration mit mehreren Standorten.
@@ -49,3 +51,4 @@ Die gelöschten Instanzen werden Ihnen bis zum Ende des Abrechnungszyklus für d
 
 * [vCenter Server with Hybridity Bundle-Instanzen löschen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_deletinginstance)
 * [Services für vCenter Server with Hybridity Bundle-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
+* [Virtuelle Server stornieren](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)

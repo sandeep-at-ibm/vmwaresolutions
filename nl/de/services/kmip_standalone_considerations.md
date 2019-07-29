@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-14"
+
+keywords: KMIP for VMware, KMIP stand-alone, tech specs KMIP
 
 subcollection: vmware-solutions
 
@@ -48,7 +50,7 @@ Lesen Sie die folgenden Hinweise, bevor Sie eine KMIP for VMware on {{site.data.
    * Sie verfügen über einen API-Schlüssel für die erstellte Service-ID. Der Schlüssel ist zum Bestellen des Service erforderlich.
    * Sie haben mindestens einen Stammschlüssel für Kunden (Customer Root Key, CRK) über die GUI oder API von Key Protect oder HPCS erstellt:
       * Weitere Informationen zum Erstellen von Stammschlüsseln mit der Key Protect-GUI oder -API finden Sie im Abschnitt [Stammschlüssel erstellen](/docs/services/key-protect?topic=key-protect-create-root-keys#create-root-keys) oder [IBM Key Protect-API](https://cloud.ibm.com/apidocs/key-protect).
-      * Weitere Informationen zum Erstellen von Stammschlüsseln mit der HPCS-GUI oder -API finden Sie im Abschnitt [Stammschlüssel erstellen](/docs/hs-crypto/get-started?topic=hs-crypto-create-root-keys) oder [IBM Cloud Hyper Protect Crypto Services-API](https://cloud.ibm.com/apidocs/hp-crypto).
+      * Weitere Informationen zum Erstellen von Stammschlüsseln mit der HPCS-GUI oder -API finden Sie im Abschnitt [Stammschlüssel erstellen](/docs/hs-crypto/get-started?topic=hs-crypto-create-root-keys) oder [IBM Cloud Hyper Protect Crypto Services-API](https://cloud.ibm.com/apidocs/hs-crypto).
 
      **Wichtig:** Der Service kann nicht ohne Stammschlüssel für Kunden (Customer Root Key, CRK) bestellt werden. Es wird dringend empfohlen, das Verfahren für die Erstellung eines Stammschlüssels für Kunden unter Verwendung vorhandener Schlüsselinformationen zu verwenden und die erstellten Schlüsselinformationen zu sichern. Dadurch stellen Sie sicher, dass Sie Ihre Schlüssel im Falle eines Ausfalls des Rechenzentrums, in dem Key Protect oder HPCS Ihre Stammschlüssel für Kunden speichert, wiederherstellen können.
 * Stellen Sie sicher, dass Ihr {{site.data.keyword.cloud_notm}}-Infrastrukturkonto für Virtual Routing and Forwarding (VRF) und für die Verbindung zu Serviceendpunkten aktiviert ist. Weitere Informationen finden Sie in den folgenden Abschnitten:

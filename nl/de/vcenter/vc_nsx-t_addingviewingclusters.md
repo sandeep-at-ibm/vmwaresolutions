@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-18"
+lastupdated: "2019-06-13"
+
+keywords: vCenter Server NSX-T add cluster, view cluster vCenter Server NSX-T, delete cluster vCenter Server NSX-T
 
 subcollection: vmware-solutions
 
@@ -87,7 +89,7 @@ Tabelle 2. Optionen für Broadwell {{site.data.keyword.baremetal_short}}
 
 * Alle Server, die Sie bestellen, haben die gleiche Konfiguration.
 * Für vSAN-Speicher können Sie zwischen 4 und 59 Server bestellen.
-* Für NFS-Speicher können Sie zwischen 2 und 59 Server bestellen. Für die Auslastung im Produktionsbetrieb werden jedoch mindestens drei Server empfohlen. Weitere Informationen finden Sie im Abschnitt [Ist eine vCenter-Serverinstanz mit zwei Knoten hoch verfügbar?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-).
+* Für NFS-Speicher können Sie zwischen 2 und 59 Server bestellen. Für die Auslastung im Produktionsbetrieb werden jedoch mindestens drei Server empfohlen. Weitere Informationen finden Sie im Abschnitt [Ist eine vCenter Server-Instanz mit zwei Knoten hoch verfügbar?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-).
 
 ### Speichereinstellungen
 {: #vc_nsx-t_addingviewingclusters-adding-storage-settings}
@@ -148,7 +150,9 @@ Die Einstellungen für die Aktivierung der Netzschnittstellenkarte (NIC - Networ
 ### Bestellübersicht
 {: #vc_nsx-t_addingviewingclusters-adding-order-summary}
 
-Auf Basis der für den Cluster ausgewählten Konfiguration werden die geschätzten Kosten sofort generiert und im rechten Fenster **Bestellübersicht** angezeigt.
+Auf Basis der für den Cluster ausgewählten Konfiguration werden die geschätzten Kosten sofort generiert und im rechten Fenster **Bestellübersicht** angezeigt. Klicken Sie auf **Preisdetails**, um ein PDF-Dokument mit der Kostenübersicht für die {{site.data.keyword.vmwaresolutions_short}}-Ressourcen zu generieren.
+
+Sie können die bereitgestellten Ressourcen auch durch Klicken auf **Zur Schätzung hinzufügen** zum {{site.data.keyword.cloud_notm}}-Schätztool hinzufügen. Dies ist nützlich, wenn Sie die Kosten für die ausgewählten {{site.data.keyword.vmwaresolutions_short}}-Ressourcen zusammen mit anderen {{site.data.keyword.cloud_notm}}-Ressourcen schätzen möchten, die Sie für den Kauf in Betracht ziehen könnten.
 
 ## Vorgehensweise zum Hinzufügen von Clustern zu vCenter Server with NSX-T-Instanzen
 {: #vc_nsx-t_addingviewingclusters-adding-procedure}

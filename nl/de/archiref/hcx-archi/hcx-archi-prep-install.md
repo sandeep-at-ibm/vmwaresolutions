@@ -21,7 +21,7 @@ Für die Installation von VMware HCX on IBM Cloud gelten die folgenden Softwarev
 ## Netzkonnektivität konfigurieren
 {: #hcx-archi-prep-install-config-net}
 
-HCX muss das öffentliche Internet und Privatleitungen traversieren sowie Verbindungen zu Rechenzentrumskomponenten wie Netzwerke, Switches und Portgruppen herstellen.
+HCX muss das öffentliche Internet und Privatleitungen traversieren sowie Verbindungen zu Rechenzentrumskomponenten wie Netze, Switches und Portgruppen herstellen.
 * [Portzugriffsvoraussetzungen](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-port-req) listet Ports auf, die geöffnet werden müssen, damit die virtuellen HCX-Appliances erfolgreich installiert werden können.
 * Sowohl die lokale vSphere-Umgebung als auch die VCS HCX Cloud-Umgebung müssen die Uhrzeitsynchronisation "Network Time Protocol" (NTP) zwischen lokalen vSphere-Einheiten und den VCS HCX-Einheiten zulassen. UDP-Port 123 muss für virtuelle HCX-Appliances und -Netze zugänglich sein.
 

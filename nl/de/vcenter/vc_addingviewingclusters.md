@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-18"
+lastupdated: "2019-06-17"
+
+keywords: vCenter Server add cluster, view cluster vCenter Server, delete cluster vCenter Server
 
 subcollection: vmware-solutions
 
@@ -81,9 +83,9 @@ Tabelle 1. Optionen für Skylake {{site.data.keyword.baremetal_short}}
 Wenn Sie **SAP-zertifiziert** auswählen, dann können Sie die CPU- oder RAM-Einstellungen nicht ändern.
 
 Wählen Sie gemäß Ihren Anforderungen eine Bare Metal Server-Konfiguration aus:
-* Dual Intel Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,3 GHzDual / 192 GB RAM
-* Dual Intel Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,3 GHzDual / 384 GB RAM
-* Dual Intel Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,3 GHzDual / 768 GB RAM
+* Dual Intel Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,3 GHz Dual / 192 GB RAM
+* Dual Intel Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,3 GHz Dual / 384 GB RAM
+* Dual Intel Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,3 GHz Dual / 768 GB RAM
 * Dual Intel Xeon E5-2690 v4-Prozessor / 28 Kerne insgesamt, 2,6 GHz / 512 GB RAM
 * Quad Intel Xeon E7-8890 v4-Prozessor / 96 Kerne insgesamt, 2,2 GHz / 1024 GB RAM
 * Quad Intel Xeon E7-8890 v4-Prozessor / 96 Kerne insgesamt, 2,2 GHz / 2048 GB RAM
@@ -106,7 +108,7 @@ Tabelle 2. Optionen für Broadwell {{site.data.keyword.baremetal_short}}
 
 * Alle Server, die Sie bestellen, haben die gleiche Konfiguration.
 * Für vSAN-Speicher können Sie zwischen 4 und 59 Server bestellen.
-* Für NFS-Speicher können Sie zwischen 2 und 59 Server bestellen. Für die Auslastung im Produktionsbetrieb werden jedoch mindestens drei Server empfohlen. Weitere Informationen finden Sie im Abschnitt [Ist eine vCenter-Serverinstanz mit zwei Knoten hoch verfügbar?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-).
+* Für NFS-Speicher können Sie zwischen 2 und 59 Server bestellen. Für die Auslastung im Produktionsbetrieb werden jedoch mindestens drei Server empfohlen. Weitere Informationen finden Sie im Abschnitt [Ist eine vCenter Server-Instanz mit zwei Knoten hoch verfügbar?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-).
 
 ### Speichereinstellungen
 {: #vc_addingviewingclusters-adding-storage-settings}
@@ -178,7 +180,9 @@ Die Einstellungen für die Aktivierung der Netzschnittstellenkarte (NIC - Networ
 ### Bestellübersicht
 {: #vc_addingviewingclusters-adding-order-summary}
 
-Auf Basis der für den Cluster ausgewählten Konfiguration werden die geschätzten Kosten sofort generiert und im rechten Fenster **Bestellübersicht** angezeigt.
+Auf Basis der für den Cluster ausgewählten Konfiguration werden die geschätzten Kosten sofort generiert und im rechten Fenster **Bestellübersicht** angezeigt. Klicken Sie auf **Preisdetails**, um ein PDF-Dokument mit der Kostenübersicht für die {{site.data.keyword.vmwaresolutions_short}}-Ressourcen zu generieren.
+
+Sie können die bereitgestellten Ressourcen auch durch Klicken auf **Zur Schätzung hinzufügen** zum {{site.data.keyword.cloud_notm}}-Schätztool hinzufügen. Dies ist nützlich, wenn Sie die Kosten für die ausgewählten {{site.data.keyword.vmwaresolutions_short}}-Ressourcen zusammen mit anderen {{site.data.keyword.cloud_notm}}-Ressourcen schätzen möchten, die Sie für den Kauf in Betracht ziehen könnten.
 
 ## Vorgehensweise zum Hinzufügen von Clustern zu vCenter Server-Instanzen
 {: #vc_addingviewingclusters-adding-procedure}
@@ -229,9 +233,7 @@ Der Clustername kann nicht geändert werden. Wenn Sie den Clusternamen ändern, 
 3. Klicken Sie im linken Navigationsfenster auf **Infrastruktur**. Prüfen Sie in der Tabelle **CLUSTER** die Zusammenfassung für die Cluster:
   * **Name**: Der Name des Clusters.
   * **ESXi-Server**: Die Anzahl der ESXi-Server im Cluster.
-  * **CPU**: Die CPU-Spezifikation der ESXi-Server im Cluster.
-  * **Angepasste vSAN-Platten**: Die Anzahl der vSAN-Platten im Cluster, einschließlich des Plattentyps und der Kapazität.
-  * **Speicher**: Die Gesamtspeichergröße der ESXi-Server im Cluster.
+  * **Speicher**: Der Speichertyp, der vom Cluster verwendet wird.
   * **Standort des Rechenzentrums**: Das {{site.data.keyword.CloudDataCent_notm}}, in dem der Cluster gehostet wird.
   * **Pod**: Der Pod, in dem der Cluster bereitgestellt wird.
   * **Status**: Der Status des Clusters. Der Status kann einen der folgenden Werte aufweisen:
@@ -260,7 +262,19 @@ Tabelle 4. Details zum ESXi-Server
 | Private IP | Die private IP-Adresse des ESXi-Servers. |
 | Status | Der Status des ESXi-Servers, der einen der folgenden Werte aufweisen kann:<br> **Hinzugefügt** Der ESXi-Server wurde hinzugefügt und kann verwendet werden.<br> **Wird hinzugefügt** Der ESXi-Server wird gerade hinzugefügt.<br> **Wird gelöscht** Der ESXi-Server wird gerade gelöscht. |
 
-Tabelle 5. Speicherdetails
+Erweitern Sie den ESXi-Server, um weitere Details anzuzeigen.
+
+Tabelle 5. Weitere Details des ESXi-Servers
+
+| Element        | Beschreibung       |  
+|:------------- |:------------- |
+| CPU | Die CPU-Spezifikation der ESXi-Server im Cluster. |
+| Speicher | Die Gesamtspeichergröße der ESXi-Server im Cluster. |
+| Angepasste vSAN-Platten | Die Anzahl der vSAN-Platten im Cluster, einschließlich des Plattentyps und der Kapazität. |
+| vSAN-Cacheplatten | Der Typ und die Anzahl der vSAN-Cacheplatten. |
+| Netzbetrieb | Die Einstellungen für die Aktivierung der Netzschnittstellenkarte (NIC) entweder des öffentlichen und privaten Netzes oder nur des privaten Netzes. |
+
+Tabelle 6. Speicherdetails
 
 | Element        | Beschreibung       |  
 |:------------- |:------------- |
@@ -269,7 +283,7 @@ Tabelle 5. Speicherdetails
 | IOPS/GB | Die Leistungsstufe des Speichers. |
 | NFS-Protokoll | Die NFS-Version des Speichers. |
 
-Tabelle 6. Netzschnittstelle - VLAN-Details
+Tabelle 7. Netzschnittstelle - VLAN-Details
 
 | Element        | Beschreibung       |  
 |:------------- |:------------- |
@@ -280,7 +294,7 @@ Tabelle 6. Netzschnittstelle - VLAN-Details
 
 Klicken Sie auf **Ressourcen anzeigen**, um auf die VLAN-Details zuzugreifen.
 
-Tabelle 7. Netzschnittstelle - Teilnetzdetails
+Tabelle 8. Netzschnittstelle - Teilnetzdetails
 
 | Element        | Beschreibung       |  
 |:------------- |:------------- |
@@ -288,7 +302,7 @@ Tabelle 7. Netzschnittstelle - Teilnetzdetails
 | Typ | Der Typ des Teilnetzes: primär oder portierbar. |
 | Beschreibung | Die Beschreibung des Teilnetzes. |
 
-Tabelle 8. Netzschnittstelle - IP-Details
+Tabelle 9. Netzschnittstelle - IP-Details
 
 | Element        | Beschreibung       |  
 |:------------- |:------------- |

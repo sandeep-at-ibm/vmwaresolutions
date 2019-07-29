@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-13"
+lastupdated: "2019-06-03"
 
 subcollection: vmware-solutions
 
@@ -200,7 +200,7 @@ Workload von T1- bis T0-Gateway - virtueller Edge-Cluster
 
 ![Von NSX-T bereitgestelltes virtuelles T0-Edge-Gateway für die Topologie](../../images/vcsv4radiagrams-topology-1.svg "Von NSX-T bereitgestelltes virtuelles T0-Edge-Gateway für die Topologie")
 
-Die mit IC4V bereitgestellte Topologie 1 ist im Wesentlichen die gleiche Topologie, die mit den NSX-V-DLR- und Edge-Gateways bereitgestellt wird. Bei NSX-T ist keine dynamische Routing-Protokollkonfiguration zwischen T1 und T0 vorhanden. RFC-1891 Der IP-Adressraum wird für das Workload-Overlay-Netzwerk und das Transit-Overlay-Netzwerk verwendet. Dem Kunden wird ein privater und öffentlicher portabler IP-Bereich zugeordnet, der für den Kunden verwendet wird. Ein vom Kunden als bezeichneter privater und öffentlicher portierbarer {{site.data.keyword.cloud_notm}}-IP-Bereich wird dem T0 zur Verwendung durch den Kunden zugewiesen.
+Die mit IC4V bereitgestellte Topologie 1 ist im Wesentlichen die gleiche Topologie, die mit den NSX-V-DLR- und Edge-Gateways bereitgestellt wird. Bei NSX-T ist keine dynamische Routing-Protokollkonfiguration zwischen T1 und T0 vorhanden. RFC-1891 Der IP-Adressraum wird für das Workload-Overlay-Netz und das Transit-Overlay-Netz verwendet. Dem Kunden wird ein privater und öffentlicher portabler IP-Bereich zugeordnet, der für den Kunden verwendet wird. Ein vom Kunden als bezeichneter privater und öffentlicher portierbarer {{site.data.keyword.cloud_notm}}-IP-Bereich wird dem T0 zur Verwendung durch den Kunden zugewiesen.
 
 Ab diesem Design haben Sie die Möglichkeit, diese IP-Bereiche nicht zu löschen, wenn die vCenter Server-Instanz stillgelegt und gelöscht wird.
 
@@ -216,7 +216,7 @@ Workload von ICP- bis T0-Gateway - virtueller Edge-Cluster
 
 ![Von NSX-T bereitgestellte Topologie mit ICP-NSX-T-Integration und virtuellem T0-Edge-Gateway](../../images/vcsv4radiagrams-topology-3.svg "Von NSX-T bereitgestellte Topologie mit ICP-NSX-T-Integration und virtuellem T0-Edge-Gateway")
 
-Die bereitgestellte Topologie 3 enthält die Topologie 1 mit der Zusatz einer ICP-Bereitstellung, die die NSX-T-Integration anstelle von Calico enthält, dem Standardnetzwerkstapel innerhalb einer ICP-Bereitstellung. Der Kunde kann zusätzliche Containernamensbereiche in ICP bereitstellen, wodurch die Erstellung von logischen Switches, IP-Teilnetzadressierung und T1-Gateway-Instanzen für jeden Namensbereich automatisiert wird.
+Die bereitgestellte Topologie 3 enthält die Topologie 1 mit dem Zusatz einer ICP-Bereitstellung, die die NSX-T-Integration anstelle von Calico enthält, dem Standardnetzstapel innerhalb einer ICP-Bereitstellung. Der Kunde kann zusätzliche Containernamensbereiche in ICP bereitstellen, wodurch die Erstellung von logischen Switches, IP-Teilnetzadressierung und T1-Gateway-Instanzen für jeden Namensbereich automatisiert wird.
 
 Ein umfassendes Verständnis der Funktionsweise von ICP auf vCenter Server finden Sie in der Dokumentation zu ICP in der vCenter Server-Architektur. Ein vom Kunden als bezeichneter privater und öffentlicher portierbarer {{site.data.keyword.cloud_notm}}-IP-Bereich wird dem T0 zur Verwendung durch den Kunden zugewiesen.
 

@@ -1,8 +1,12 @@
 ---
 
 copyright:
+
   years: 2016, 2019
-lastupdated: "2019-04-03"
+
+lastupdated: "2019-06-17"
+
+keywords: vmware solutions events, activity tracker, event details
 
 subcollection: vmware-solutions
 
@@ -12,9 +16,9 @@ subcollection: vmware-solutions
 # Activity Tracker-Ereignisse
 {: #at-events}
 
-Verwenden Sie den {{site.data.keyword.cloudaccesstrailfull}}-Service, um zu verfolgen, wie Benutzer und Anwendungen mit {{site.data.keyword.vmwaresolutions_short}} in {{site.data.keyword.Bluemix_notm}} interagieren.
+Verwenden Sie den {{site.data.keyword.cloudaccesstrailfull}}-Service, um zu verfolgen, wie Benutzer und Anwendungen mit {{site.data.keyword.vmwaresolutions_short}} in {{site.data.keyword.cloud_notm}} interagieren.
 
-Der {{site.data.keyword.cloudaccesstrailfull_notm}}-Service zeichnet benutzerinitiierte Aktivitäten auf, die den Status eines Service in {{site.data.keyword.Bluemix_notm}} ändern. Weitere Informationen finden Sie im Abschnitt [Informationen zu {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov#activity_tracker_ov).
+Der {{site.data.keyword.cloudaccesstrailfull_notm}}-Service zeichnet benutzerinitiierte Aktivitäten auf, die den Status eines Service in {{site.data.keyword.cloud_notm}} ändern. Weitere Informationen finden Sie im Abschnitt [Informationen zu {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov#activity_tracker_ov).
 
 ## Activity Tracker-Ereignistabelle
 {: #at-events-table}
@@ -47,30 +51,29 @@ Tabelle 2. Beschreibung von Aktionen, die Managementereignisse generieren
 
 | Aktion                                   | Beschreibung | Ergebnis |
 |:-----------------------------------------|:------------|:-------|
-| `vmware-solutions.user_account.update`    | <ul><li>Die Anforderung zum Aktualisieren des Benutzerkontos wird empfangen.</li><li>Die Anforderung zum Aktualisieren des Benutzerkontos wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
-| `vmware-solutions.notification.update` | <ul><li>Die Anforderung zum Aktualisieren von Benachrichtigungen wird empfangen.</li><li>Die Anforderung zum Aktualisieren von Benachrichtigungen wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
-| `vmware-solutions.secure_data.wipe`       | <ul><li>Die Anforderung zum Bereinigen von gesicherten Daten wird empfangen.</li><li>Die Anforderung zum Bereinigen von gesicherten Daten wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
-| `vmware-solutions.bss_account.migrate` | <ul><li>Die Anforderung zum Migrieren auf ein bss-Konto wird empfangen.</li><li>Die Anforderung zum Migrieren auf ein bss-Konto wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
-| `vmware-solutions.vcs.order`                 | <ul><li>Die Anforderung zum Bestellen einer vCenter Server-Instanz wird empfangen.</li><li>Die Anforderung zum Bestellen einer vCenter Server-Instanz wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
-| `vmware-solutions.vcs.delete`                | <ul><li>Die Anforderung zum Löschen einer vCenter Server-Instanz wird empfangen.</li><li>Die Anforderung zum Löschen einer vCenter Server-Instanz wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
-| `vmware-solutions.vcs.add_host`              | <ul><li>Die Anforderung zum Hinzufügen von ESXi-Servern zu einer vCenter Server-Instanz wird empfangen.</li><li>Die Anforderung zum Hinzufügen von ESXi-Servern zu einer vCenter Server-Instanz wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
-| `vmware-solutions.vcs.remove_hosts`          | <ul><li>Die Anforderung zum Löschen von ESXi-Servern von einer vCenter Server-Instanz wird empfangen.</li><li>Die Anforderung zum Löschen von ESXi-Servern von einer vCenter Server-Instanz wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
-| `vmware-solutions.vcs.schedule_update`       | <ul><li>Die Anforderung zum Planen einer Aktualisierung für eine vCenter Server-Instanz wird empfangen.</li><li>Die Anforderung zum Planen einer Aktualisierung für eine vCenter Server-Instanz wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
-| `vmware-solutions.vcs.create_cluster`        | <ul><li>Die Anforderung zum Erstellen eines Clusters für eine vCenter Server-Instanz wird empfangen.</li><li>Die Anforderung zum Erstellen eines Clusters für eine vCenter Server-Instanz wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
-| `vmware-solutions.vcs.delete_cluster`        | <ul><li>Die Anforderung zum Löschen eines Clusters aus einer vCenter Server-Instanz wird empfangen.</li> <li>Die Anforderung zum Löschen eines Clusters aus einer vCenter Server-Instanz wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
-| `vmware-solutions.vcs.update_nsx_license`        | <ul><li>Die Anforderung zum Aktualisieren der VMware NSX-Lizenz wird empfangen.</li><li>Die Anforderung zum Aktualisieren der VMware NSX-Lizenz wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
-| `vmware-solutions.vcs.upgrade_to_hybridity`   | <ul><li>Die Anforderung für ein Upgrade einer vCenter Server-Instsanz mit Hybridity Bundle-Instanz wird empfangen.</li><li>Die Anforderung für ein Upgrade einer vCenter Server-Instsanz mit Hybridity Bundle-Instanz wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
-| `vmware-solutions.vsphere.order`              | <ul><li>Die Anforderung zum Bestellen eines vSphere-Clusters wird empfangen.</li><li>Die Anforderung zum Bestellen eines vSphere-Clusters wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
-| `vmware-solutions.vsphere.update`             | <ul><li>Die Anforderung zum Aktualisieren eines vSphere-Clusters wird empfangen.</li><li>Die Anforderung zum Aktualisieren eines vSphere-Clusters wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
-| `vmware-solutions.vsphere.save_template`      | <ul><li>Die Anforderung zum Speichern eines vSphere-Clusters wird empfangen.</li><li>Die Anforderung zum Speichern eines vSphere-Clusters wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
-| `vmware-solutions.netapp.order`               | <ul><li>Die Anforderung zum Bestellen einer NetApp ONTAP Select-Instanz wird empfangen.</li><li>Die Anforderung zum Bestellen einer NetApp ONTAP Select-Instanz wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
-| `vmware-solutions.netapp.delete`              | <ul><li>Die Anforderung zum Löschen einer NetApp ONTAP Select-Instanz wird empfangen.</li><li>Die Anforderung zum Löschen einer NetApp ONTAP Select-Instanz wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
-| `vmware-solutions.service_variable.update`    | <ul><li>Die Anforderung zum Aktualisieren der Konfiguration eines Service wird empfangen.</li><li>Die Anforderung zum Aktualisieren der Konfiguration eines Service wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
-| `vmware-solutions.service.order`              | <ul><li>Die Anforderung, einen Service für eine Instanz zu bestellen, wird empfangen.</li><li>Die Anforderung, einen Service für eine Instanz zu bestellen, wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
-| `vmware-solutions.service.delete_by_id`       | <ul><li>Die Anforderung zum Löschen eines Service aus einer Instanz wird empfangen.</li><li>Die Anforderung zum Löschen eines Service aus einer Instanz wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
-| `vmware-solutions.service.upgrade_to_hybridity` | <ul><li>Die Anforderung, ein Upgrade einer vorhandenen vCenter Server-Instanz auf einen vCenter Server mit Hybridity Bundle-Instanz durchzuführen, wird empfangen.</li><li>Die Anforderung, ein Upgrade einer vorhandenen vCenter Server-Instanz auf einen vCenter Server mit Hybridity Bundle-Instanz durchzuführen, wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
-| `vmware-solutions.service.deploy` | Die Aktion zum Implementieren eines Service für eine Instanz wird ausgeführt. | `erfolgreich` |
-| `vmware-solutions.service.undeploy` | Die Aktion zum Entfernen eines Service aus einer Instanz wird ausgeführt. | `erfolgreich` |
+| `vmware-solutions.account-apikey.update` |	Der Infrastruktur-API-Schlüssel für ein Konto wird aktualisiert. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.account-notification.update` | Die Benachrichtigungseinstellung für ein Konto wird aktualisiert. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.instance-secure-data.wipe` | Die sicheren Daten der Instanz werden gelöscht. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.instance-bss-account.migrate` |	Eine Instanz wird auf ein BSS-Konto migriert. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs.create` |	Eine vCenter Server-Instanz wird erstellt. |`pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs.delete` |	Eine vCenter Server-Instanz wird gelöscht. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-host.add` |	Ein Host wird zu einer vCenter Server-Instanz hinzugefügt. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-host.remove` |	Ein Host wird von einer vCenter Server-Instanz entfernt. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs.update`	| Eine vCenter Server-Instanz wird aktualisiert. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-cluster.create`	| Für eine vCenter Server-Instanz wird ein Cluster erstellt. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-cluster.delete`	| Ein Cluster für eine vCenter Server-Instanz wird gelöscht. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-nsx-license.update`	| Die NSX-Lizenz für eine vCenter Server-Instanz wird aktualisiert. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-hybridity.add`	| Für eine vCenter Server-Instanz wird ein Upgrade für Hybridity Bundle durchgeführt. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-hybridity.remove`	| Hybridity Bundle wird aus einer vCenter Server-Instanz entfernt. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-nfs-storage.add`	|NFS-Speicher wird zu einer vCenter Server-Instanz hinzugefügt. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-nfs-storage.remove`	| NFS-Speicher wird aus einer vCenter Server-Instanz entfernt. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vcs-plan.update`	| Der Plan einer vCenter Server-Instanz wird aktualisiert. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vss.create`	|Eine vSphere-Instanz wird erstellt. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vss.update`	| Eine vSphere-Instanz wird aktualisiert. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vss-template.remove` |	Eine vSphere-Vorlage wird entfernt. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.service.create`	| Ein Service wird erstellt. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.service.delete`	| Ein Service wird gelöscht. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.service-hybridity.upgrade` | Für Hybridity Bundle wird ein Upgrade auf `version` durchgeführt. | `pending`<br>`success`<br>`failure` |
 
 ## Ereignisse für den Service "KMIP for VMware on IBM Cloud" verfolgen
 {: #at-events-kmip}
@@ -83,18 +86,17 @@ Tabelle 3. Beschreibung der Aktionen, die Ereignisse für den Service "KMIP for 
 
 | Aktion                                      | Beschreibung                               | Ergebnis |
 |:--------------------------------------------|:------------------------------------------|:-------|
-| `vmware-solutions.key.create`               | <ul><li>Die Anforderung zum Erstellen eines Schlüssels wird empfangen.</li><li>Die Anforderung zum Erstellen eines Schlüssels wird beantwortet.</li></ul> | <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
-| `vmware-solutions.key.get`                  | <ul><li>Die Anforderung zum Abrufen des Inhalts eines Schlüssels wird empfangen.</li><li>Die Anforderung zum Abrufen des Inhalts eines Schlüssels wird beantwortet.</li></ul> |  <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
-| `vmware-solutions.key.get_attributes`       | <ul><li>Die Anforderung zum Abrufen der Attribute eines Schlüssels wird empfangen.</li><li>Die Anforderung zum Abrufen der Attribute eines Schlüssels wird beantwortet.</li></ul> |  <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
-| `vmware-solutions.key.activate`             | <ul><li>Die Anforderung zum Aktivieren eines Schlüssels wird empfangen.</li><li>Die Anforderung zum Aktivieren eines Schlüssels wird beantwortet.</li></ul> |  <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
-| `vmware-solutions.key.revoke`               | <ul><li>Die Anforderung zum Widerrufen eines Schlüssels wird empfangen.</li><li>Die Anforderung zum Widerrufen eines Schlüssels wird beantwortet.</li></ul> |  <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
-| `vmware-solutions.key.destroy`              | <ul><li>Die Anforderung zum Löschen eines Schlüssels wird empfangen.</li><li>Die Anforderung zum Löschen eines Schlüssels wird beantwortet.</li></ul> |  <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
-| `vmware-solutions.key.discover_versions`    | <ul><li>Die Anforderung zum Suchen der Version des KMIP for VMware on {{site.data.keyword.cloud_notm}}-Service wird empfangen.</li><li>Die Anforderung zum Suchen der Version des KMIP for VMware on {{site.data.keyword.cloud_notm}}-Service wird beantwortet.</li></ul> |  <ul><li>`anstehend`</li><li>`erfolgreich` oder `fehlgeschlagen`</li></ul> |
+| `vmware-solutions.kmip-key.create` |	Ein KMIP-Schlüssel wird erstellt. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.kmip-key.retrieve` |	Ein KMIP-Schlüssel wird abgerufen. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.kmip-key-attributes.retrieve` |	Die Attribute eines KMIP-Schlüssels werden abgerufen. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.kmip-key.activate` |	Ein KMIP-Schlüssel wird aktiviert. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.kmip-key.revoke` |	Ein KMIP-Schlüssel wird widerrufen. | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.kmip-key.destroy` |	Ein KMIP-Schlüssel wird gelöscht. | `pending`<br>`success`<br>`failure` |
 
 ## Ort zum Anzeigen der Ereignisse
 {: #at-events-viewing}
 
-{{site.data.keyword.cloudaccesstrailshort}}-Ereignisse sind in der {{site.data.keyword.cloudaccesstrailshort}} **Kontodomäne** verfügbar, die ihrerseits in der {{site.data.keyword.Bluemix_notm}}-Region verfügbar ist, in der die Ereignisse generiert werden.
+{{site.data.keyword.cloudaccesstrailshort}}-Ereignisse sind in der {{site.data.keyword.cloudaccesstrailshort}} **Kontodomäne** verfügbar, die ihrerseits in der {{site.data.keyword.cloud_notm}}-Region verfügbar ist, in der die Ereignisse generiert werden.
 
 ## Zugehörige Links
 {: #at-events-related}

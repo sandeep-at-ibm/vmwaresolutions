@@ -151,7 +151,7 @@ Im Gegensatz zum Cloud-Gateway ist die Appliance des WAN-Optimierungsprogramms a
 
 Die dritte Komponente wird als "Layer-2-Konzentrator" (L2-Konzentrator oder L2C) bezeichnet und ist Teil der Network Extension Services. Der L2C ist die virtuelle Maschine, die die Erweiterung von lokalen Rechenzentrumsnetzen hin zu IBM Cloud ermöglicht. Der L2C erweitert lokale VLANs und/oder VXLANs. Jeder L2C bietet eine Erweiterung auf bis zu 4096 VLANs. Bei Paarung mit seinem lokalen Partner kann jeder L2C bis zu 1 Gb/s pro "Fluss" und bis zu einem Aggregat von 4 Gb/s pro VLAN (oder VXLAN) bereitstellen. Wenn mehr Netzdurchsätze erforderlich sind, wird auch die Bereitstellung von weiteren L2C-Appliances unterstützt.
 
-Im Rahmen dieses Designs wird die L2C-Appliance so bereitgestellt, dass ein Kunde über das öffentliche Internet oder das private Netzwerk mittels Direktverbindung mehrere VLANs und VLXANs hin zu IBM Cloud erweitern kann. Die Dimensionierungsspezifikationen für die L2C-Appliance für IBM Cloud ist in der folgenden Tabelle aufgeführt.
+Im Rahmen dieses Designs wird die L2C-Appliance so bereitgestellt, dass ein Kunde über das öffentliche Internet oder das private Netz mittels Direktverbindung mehrere VLANs und VLXANs hin zu IBM Cloud erweitern kann. Die Dimensionierungsspezifikationen für die L2C-Appliance für IBM Cloud ist in der folgenden Tabelle aufgeführt.
 
 Tabelle 10. Dimensionierung der L2C-Appliance für hohen Durchsatz
 

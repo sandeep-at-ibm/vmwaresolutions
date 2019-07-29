@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-05-28"
+
+keywords: FAQ, host, ESXi server
 
 subcollection: vmware-solutions
 
@@ -25,7 +27,7 @@ Hier finden Sie Antworten auf häufig gestellte Fragen zu den ESXi-Servern, die 
 {: #faq_esxi-instance}
 {: faq}
 
-Mit Ihrer vCenter-Serverinstanz können Sie den Standardcluster auf bis zu 51 ESXi-Server erweitern. Jeder Cluster, bei dem es sich nicht um den Standardcluster handelt, kann auf bis zu 59 ESXi-Server erweitert werden. Da Sie bis zu 10 Cluster zu einer Instanz hinzufügen können, kann jede bereitgestellte Instanz in allen Clustern maximal 51 + 9 x 59 = 582 ESXi-Server umfassen.
+Mit Ihrer vCenter Server-Instanz können Sie den Standardcluster auf bis zu 51 ESXi-Server erweitern. Jeder Cluster, bei dem es sich nicht um den Standardcluster handelt, kann auf bis zu 59 ESXi-Server erweitert werden. Da Sie bis zu 10 Cluster zu einer Instanz hinzufügen können, kann jede bereitgestellte Instanz in allen Clustern maximal 51 + 9 x 59 = 582 ESXi-Server umfassen.
 
 ## Wie viele ESXi-Server kann ich zu einem Cluster hinzufügen?
 {: #faq_esxi-cluster}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-15"
 
 subcollection: vmware-solutions
 
@@ -16,7 +16,7 @@ subcollection: vmware-solutions
 
 vCenter beinhaltet ein Feature "Hostprofile". Dieses Feature erstellt ein Profil, das eine vorkonfigurierte und validierte Referenzhostkonfiguration erfasst und einem Systemadministrator hilft, die Hostkonfigurationen in einem Cluster zu verwalten. Hostprofile stellen einen automatisierten und zentral verwalteten Mechanismus für die Hostkonfiguration und die Konfigurationskonformität bereit. Hostprofile ermöglichen es, eine Konfiguration als verwaltetes Objekt zu behandeln, das einen Katalog von Parametern für die Konfiguration enthält: für den Netzbetrieb, den Speicher, die Sicherheit und andere Parameter auf der Hostebene. Diese Hostprofile können auf einzelne Hosts, einen Cluster oder auf alle Hosts und Cluster, die einem Hostprofil zugeordnet sind, angewendet werden.
 
-Da mehr vSphere ESXi-Hosts für VMware vCenter Server on {{site.data.keyword.cloud}} von der IC4VS-Automatisierung implementiert werden, die den ursprünglichen Cluster bereitgestellt hat, gibt es weniger Konfigurationsabweichungen als bei manuellen Methoden zum Hinzufügen von Hosts. Neben Automatisierung können Systemadministratoraktionen jedoch auch die Hostkonfiguration anders gestalten. Zum Beispiel können mehr NFS-Speicher oder zusätzliche VLANs hinzugefügt werden. Die Verwendung von Hostprofilen zur Validierung der Konfiguration eines neuen Hosts durch die Überprüfung der Konformität dieses Hosts mit einem vorhandenen Host ist ein gültiger Anwendungsfall dieses Tools in {{site.data.keyword.cloud_notm}}.
+Da mehr vSphere ESXi-Hosts für VMware vCenter Server on {{site.data.keyword.cloud}} von der IBM Cloud for VMware Solutions-Automatisierung implementiert werden, von der der ursprüngliche Cluster bereitgestellt wurde, gibt es weniger Konfigurationsabweichungen als bei manuellen Methoden zum Hinzufügen von Hosts. Neben Automatisierung können Systemadministratoraktionen jedoch auch die Hostkonfiguration anders gestalten. Zum Beispiel können mehr NFS-Speicher oder zusätzliche VLANs hinzugefügt werden. Die Verwendung von Hostprofilen zur Validierung der Konfiguration eines neuen Hosts durch die Überprüfung der Konformität dieses Hosts mit einem vorhandenen Host ist ein gültiger Anwendungsfall dieses Tools in {{site.data.keyword.cloud_notm}}.
 
 Informationen zum Hinzufügen weiterer Hosts zu Ihrem vCenter Server-Cluster finden Sie unter [Kapazität für vCenter Server-Instanzen erweitern und verringern](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers).
 

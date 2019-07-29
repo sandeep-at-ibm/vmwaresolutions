@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-06-14"
+
+keywords: Zerto, Zerto components, tech specs Zerto
 
 subcollection: vmware-solutions
 
@@ -20,8 +22,11 @@ subcollection: vmware-solutions
 
 Der Service "Zerto on {{site.data.keyword.cloud}}" integriert Replikations- und Disaster-Recovery-Funktionen in die Bereitstellungsangebote, um Daten in Ihrer virtuellen VMware-Umgebung in {{site.data.keyword.cloud_notm}} zu schützen und wiederherzustellen.
 
-Dieser Service ist nur für Instanzen verfügbar, die in V1.2 (oder höher) bereitgestellt werden. Die aktuell installierte Zerto-Version ist 6.5 Update 3.
-{:note}
+## Vorbereitende Schritte
+{: #addingzertodr-req}
+
+* Stellen Sie sicher, dass Ihr {{site.data.keyword.cloud_notm}}-Konto ein Abrechnungskonto ist und dass es mit dem {{site.data.keyword.cloud_notm}}-Infrastrukturkonto verbunden ist, in dem Ihre Instanz bereitgestellt wird. Informationen hierzu finden Sie unter [Abrechnung für Zerto-Replikation](/docs/services/vmwaresolutions/services?topic=vmware-solutions-zerto_ordering#zerto_ordering-billing).
+* Dieser Service ist nur für Instanzen verfügbar, die in V1.2 (oder höher) bereitgestellt werden. Die aktuell installierte Zerto-Version ist 6.5 Update 3.
 
 ## Technische Spezifikationen für Zerto on IBM Cloud
 {: #addingzertodr-specs}
@@ -31,7 +36,7 @@ Mit dem Service "Zerto on {{site.data.keyword.cloud_notm}}" werden die folgenden
 Komponenten von Zerto Virtual Replication Appliance (VRA, Appliance für die virtuelle Replikation) werden nur in den Standardclustern bereitgestellt.
 {:note}
 
-### VSIs
+### Virtuelle Serviceinstanzen
 {: #addingzertodr-specs-vsi}
 
 * Eine Virtual Service Instance (VSI) - Zerto Virtual Manager
@@ -47,8 +52,11 @@ Komponenten von Zerto Virtual Replication Appliance (VRA, Appliance für die vir
 ### Vernetzung
 {: #addingzertodr-specs-network}
 
-* Eine primäre private IP-Adresse
-* Uplink zum privaten Netz mit 1 Gb/s
+* VSI
+  * Eine primäre private IP-Adresse
+  * Uplink zum privaten Netz mit 1 Gb/s
+* Virtual Replication Appliances (VRAs)
+  * Ein privates portierbares Teilnetz für VRA-Bereitstellung
 
 ### Lizenzen und Gebühren
 {: #addingzertodr-specs-licenses}

@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-09"
+lastupdated: "2019-06-18"
+
+keywords: Zerto, Zerto replication billing, order Zerto
 
 subcollection: vmware-solutions
 
@@ -20,6 +22,21 @@ subcollection: vmware-solutions
 
 Sie können den Service "Zerto on {{site.data.keyword.cloud}}" durch Bestellen einer neuen Instanz, die den Service beinhaltet, oder durch Hinzufügen des Service zu Ihrer vorhandenen Instanz bestellen.
 
+## Abrechnung für Zerto-Replikation
+{: #zerto_ordering-billing}
+
+Die Metriken von virtuellen Maschinen, die unter Verwendung von Zerto repliziert werden, werden von Zerto und {{site.data.keyword.cloud_notm}} gemessen. Ihre Rechnung für diese Nutzung wird über ein gebührenpflichtiges {{site.data.keyword.cloud_notm}}-Konto und nicht ein {{site.data.keyword.cloud_notm}}-Infrastrukturkonto abgerechnet.
+
+Stellen Sie vor dem Bestellen von Zerto on {{site.data.keyword.cloud_notm}} sicher, dass Ihr {{site.data.keyword.cloud_notm}}-Konto ein Abrechnungskonto ist und dass es mit dem {{site.data.keyword.cloud_notm}}-Infrastrukturkonto verknüpft ist, in dem Ihre Instanz bereitgestellt wird.
+
+Falls Sie über eine Zerto on {{site.data.keyword.cloud_notm}}-Installation der Version 3.0 oder einer früheren Version verfügen, werden die Replikationskosten Ihrer virtuellen Maschinen weiterhin über die Abrechnung der {{site.data.keyword.cloud_notm}}-Infrastruktur in Rechnung gestellt. Wenn Ihre Konten- und Abrechnungseinstellungen die oben aufgelisteten Anforderungen erfüllen, können Sie zur Zerto-Abrechnungsmethode wechseln.
+
+Sie werden in der {{site.data.keyword.vmwaresolutions_short}}-Konsole aufgefordert, den {{site.data.keyword.cloud_notm}}-Infrastrukturplan in einen kostenpflichtigen Plan umzuwandeln und für Ihr {{site.data.keyword.cloud_notm}}-Konto ein Upgrade auf ein gebührenpflichtiges Konto durchzuführen (sofern erforderlich).
+
+* Informationen zu kostenlosen Konten und gebührenpflichtigen Konten finden Sie unter [Kontotypen](/docs/account?topic=account-accounts).
+* Informationen zu einem Upgrade auf ein gebührenpflichtiges Konto finden Sie unter [Upgrade für Konto durchführen](/docs/account?topic=account-upgrading-account).
+* Informationen zum Verknüpfen von {{site.data.keyword.cloud_notm}} mit Ihren {{site.data.keyword.cloud_notm}}-Infrastrukturkonten finden Sie unter [Zur IBMid wechseln und Konten verknüpfen](/docs/account?topic=account-unifyingaccounts).
+
 ## Zerto on IBM Cloud für eine neue Instanz bestellen
 {: #zerto_ordering-new}
 
@@ -34,7 +51,7 @@ Sie können den Service "Zerto on {{site.data.keyword.cloud_notm}}" mit einer de
 * Zeigen Sie über die {{site.data.keyword.vmwaresolutions_short}}-Konsole die Instanz an, für die der Service hinzugefügt werden soll, klicken Sie im linken Navigationsfenster auf **Services** und anschließend auf **Hinzufügen**.
 * Wählen Sie im {{site.data.keyword.cloud_notm}}-Katalog **Zerto on IBM Cloud** aus, geben Sie die Serviceeinstellungen an und wählen Sie **Zu vorhandener Instanz hinzufügen** aus.
 
-Wenn Sie Zerto for {{site.data.keyword.cloud_notm}} zu einer vCenter Server-Instanz hinzufügen, die einen ESXi-Server im Wartungsmodus enthält, müssen Sie die Konsole von Zerto Virtual Manager (ZVM) und die bereits ausgefüllte IP-Adresse von Zerto Virtual Replication Appliance (VRA) verwenden, um die virtuelle VRA-Maschine (VM) manuell bereitzustellen.
+Wenn Sie Zerto on {{site.data.keyword.cloud_notm}} zu einer vCenter Server-Instanz hinzufügen, die über einen ESXi-Server im Wartungsmodus verfügt, müssen Sie die Konsole von Zerto Virtual Manager (ZVM) und die bereits ausgefüllte IP-Adresse von Zerto Virtual Replication Appliance (VRA) verwenden, um die virtuelle VRA-Maschine (VM) manuell bereitzustellen.
 {:note}
 
 ## Zerto on IBM Cloud nur für private Instanzen bestellen

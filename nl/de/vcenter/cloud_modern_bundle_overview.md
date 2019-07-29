@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-06"
+lastupdated: "2019-05-27"
+
+keywords: single-node trial, migration app modernization, tech specs migration app modernization
 
 subcollection: vmware-solutions
 
@@ -27,7 +29,7 @@ Die Testversion ist für die Migration von bis zu 20 einfachen Entwicklungs- ode
 Single-node Trial für Migration und App-Modernisierung ist nur für den Machbarkeitsnachweis (proof of concept, POC) vorgesehen. Die Umgebung ist nicht für Workloads im Produktionsbetrieb geeignet. Managementfunktionen wie das Hinzufügen und Entfernen von Hosts und Clustern, das Bestellen von Add-on-Services und das Anwenden von Updates werden nicht unterstützt.
 {:important}
 
-Um den größtmöglichen Nutzen aus der Single-node Trial-Instanz zu ziehen, können Sie [bedarfsgerechte Beratung zu IBM Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:new_window} der [Expertenservices für IBM Analytics Cloud](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:new_window} in Anspruch neh,en. Hier finden Sie Unterstützung für die Migration Ihrer VMware-Workloads nach {{site.data.keyword.cloud_notm}}. Darüber hinaus kann [{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/){:new_window} Sie bei der Beschleunigung der Anwendungsmodernisierung mithilfe der neuesten Cloud Native-Praktiken unterstützen.
+Um den größtmöglichen Nutzen aus der Single-node Trial-Instanz zu ziehen, können Sie [bedarfsgerechte Beratung zu IBM Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:new_window} der [Expertenservices für IBM Analytics Cloud](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:new_window} in Anspruch nehmen. Hier finden Sie Unterstützung für die Migration Ihrer VMware-Workloads nach {{site.data.keyword.cloud_notm}}. Darüber hinaus kann [{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/){:new_window} Sie bei der Beschleunigung der Anwendungsmodernisierung mithilfe der neuesten Cloud Native-Praktiken unterstützen.
 
 Diese Testversion ist für eine Nutzung von bis zu 90 Tagen vorgesehen. Wenn Sie das Testen abschlossen haben, können Sie die Umgebung löschen und anschließend eine neue Umgebung einrichten, die Ihren Kapazitätsanforderungen entspricht.
 {:note}

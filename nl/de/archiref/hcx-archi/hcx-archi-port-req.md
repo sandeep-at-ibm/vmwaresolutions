@@ -4,16 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-06-17"
 
 subcollection: vmware-solutions
 
 
 ---
-# VMware HCX on IBM Cloud - Portzugriffsvoraussetzungen
+# Portzugriffsvoraussetzungen für VMware HCX on IBM Cloud
 {: #hcx-archi-port-req}
 
-HCX muss das öffentliche Internet und Privatleitungen traversieren sowie Verbindungen zu Rechenzentrumskomponenten wie Netzwerke, Switches und Portgruppen herstellen.
+HCX muss das öffentliche Internet und Privatleitungen traversieren sowie Verbindungen zu Rechenzentrumskomponenten wie Netze, Switches und Portgruppen herstellen.
 
 In der folgenden Tabelle sind die Ports aufgelistet, die geöffnet werden müssen, damit die virtuellen Appliances von Hybrid-Cloud-Services erfolgreich installiert werden können. Sowohl die vSphere-Umgebung als auch die IBM Cloud-Umgebung müssen die Uhrzeitsynchronisation "Network Time Protocol" (NTP) zwischen den vSphere- und den IBM Cloud-Einheiten zulassen. UDP-Port 123 muss für die virtuellen Hybrid-Cloud-Services-Appliances und -Netze zugänglich sein. Installierte NTP-Server können angegeben werden, wenn die Hybrid-Cloud-Services-Appliance installiert ist.
 
@@ -27,7 +27,7 @@ Tabelle 1. Portzugriffsvoraussetzungen
 | HCX    | PSC in IBM Cloud | 443 | TCP | HCX-REST-Service | HTTPS |
 | HCX    | connect.hcx.vmware.com | 443 | TCP | Registrierungsservice | HTTPS |
 | Webbrowser | HCX | 9443 | TCP | Managementschnittstelle der virtuellen HCX-Appliance für die HCX-Systemkonfiguration | HTTPS |
-| Admin-Netzwerk | HCX | 22 | SSH | Administrator-SSH-Zugriff auf Hybrid-Cloud-Services | SSH |
+| Admin-Netz | HCX | 22 | SSH | Administrator-SSH-Zugriff auf Hybrid-Cloud-Services | SSH |
 | HCX | ESXi-Hosts | 902 | TCP | Senden von Verwaltungs-und Bereitstellungsanweisungen von HCX an ESXi-Hosts in IBM Cloud. | Intern |
 | HCX | vCenter-SSO-Server | 7444 | TCP | vSphere-Suchservice |  |
 | HCX | NTP-Server | 123 | UDP | Zeitsynchronisation | |
@@ -40,8 +40,8 @@ Tabelle 1. Portzugriffsvoraussetzungen
 | Cloud-Gateway | ESXi-Hosts | 80, 902  | TCP | Management und OVF-Bereitstellung | Intern |
 | ESXi-Hosts | Cloud-Gateway | 31031, 44046 | TCP | Interner hostbasierter Replikationsdatenverkehr | Intern |
 | Cloud-Gateway | ESXi-Hosts | 8000  | TCP | vMotion (Migration ohne Ausfallzeit) |  |
-| Cloud-Gateway (lokal) | Cloud-Gateway</br>(fern) | 4500  | UDP | Internet key exchange (IKEv2) zum Kapseln von Workloads für den bidirektionalen Tunnnel | IPSEC |
-| Cloud-Gateway (lokal) | Cloud-Gateway</br>(fern) | 500  | UDP | Internet key exchange (ISAKMP) für den bidirektionalen Tunnel | IPSEC |
+| Cloud-Gateway (lokal) | Cloud-Gateway</br>(fern) | 4500  | UDP | Internet Key Exchange (IKEv2) zum Kapseln von Workloads für den bidirektionalen Tunnel | IPSEC |
+| Cloud-Gateway (lokal) | Cloud-Gateway</br>(fern) | 500  | UDP | Internet Key Exchange (ISAKMP) für den bidirektionalen Tunnel | IPSEC |
 
 ## Zugehörige Links
 {: #hcx-archi-port-req-related}

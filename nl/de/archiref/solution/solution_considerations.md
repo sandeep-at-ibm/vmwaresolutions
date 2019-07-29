@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-01"
+lastupdated: "2019-05-22"
 
 subcollection: vmware-solutions
 
@@ -45,8 +45,8 @@ Machen Sie sich mit den folgenden für Ihre Instanz geltenden Einschränkungen v
 Führen Sie folgende Schritte aus, um den Zugriff auf Ihr {{site.data.keyword.cloud_notm}}-Netz und Ihre VMware-Managementkomponenten zu verwalten und Ihre {{site.data.keyword.cloud_notm}}-Netztopologie zu planen.
 
 - Greifen Sie mithilfe des [{{site.data.keyword.cloud_notm}}-VPNs](https://www.softlayer.com/vpn-access) oder Ihrer [{{site.data.keyword.cloud_notm}} Direct Link-Verbindung](https://www.ibm.com/cloud/direct-link) auf die Endpunkte des Instanzmanagements zu.
-- Erarbeiten Sie eine Strategie für die Konnektivität zum öffentlichen Netz aus Ihrer Instanz heraus. Zu Ihren Optionen gehören Folgende: das VMware NSX Edge Services Beispiel-Gateway (ESG) für Kunden, Gateway-Appliances wie Vyatta und FortiGate sowie Proxy-Server, die über Direct Link im {{site.data.keyword.cloud_notm}}-Netz oder Ihrem eigenen Netz bereitgestellt werden.
-- Planen Sie, ob Ihre Workload in {{site.data.keyword.cloud_notm}}-VLANs mit [portierbaren {{site.data.keyword.cloud_notm}}-IP-Adressen](/docs/infrastructure/subnets?topic=subnets-getting-started-subnets-ips#getting-started-subnets-ips) oder [ unter Verwendung Ihrer eigenen IP-Adresse über logische NSX-Switches (VXLANs)](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_overview) bereitgestellt werden soll. Beachten Sie, dass die Verwendung von Software-Defined Networking (SDN) von NSX Ihnen größte Flexibilität bei der Verwaltung und Sicherung Ihres Workload-Netzes in {{site.data.keyword.cloud_notm}} bietet.
+- Erarbeiten Sie eine Strategie für die Konnektivität zum öffentlichen Netz aus Ihrer Instanz heraus. Folgende Optionen stehen zur Verfügung: Das VMware NSX Edge Services Beispiel-Gateway (ESG) für Kunden, Gateway-Appliances wie Vyatta und FortiGate sowie Proxy-Server, die über Direct Link im {{site.data.keyword.cloud_notm}}-Netz oder Ihrem eigenen Netz bereitgestellt werden.
+- Planen Sie, ob Ihre Workload in {{site.data.keyword.cloud_notm}}-VLANs mit [portierbaren {{site.data.keyword.cloud_notm}}-IP-Adressen](/docs/infrastructure/subnets?topic=subnets-getting-started) oder [unter Verwendung Ihrer eigenen IP-Adresse über logische NSX-Switches (VXLANs)](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_overview) bereitgestellt werden soll. Beachten Sie, dass die Verwendung von Software-Defined Networking (SDN) von NSX Ihnen größte Flexibilität bei der Verwaltung und Sicherung Ihres Workload-Netzes in {{site.data.keyword.cloud_notm}} bietet.
 - Verwenden Sie NSX Edge Services Gateways (ESGs), [IBM Cloud Vyatta](https://cloud.ibm.com/catalog/infrastructure/virtual-router-appliance) und das Direct Link-Peering, um die Konnektivität zu Workloads (Netzadressumsetzung, Virtual Private Network, Routing) zu planen.
 - Wenn Sie Cross-vCenter NSX implementieren, müssen Sie vor der Bereitstellung lokaler Workloads sicherstellen, dass sich die Bereiche der IDs lokaler Segmente nicht überschneiden.
 
@@ -128,7 +128,7 @@ Ihre VMware-Instanz wird auf Bare Metal Servern in {{site.data.keyword.cloud_not
 
 Führen Sie zusätzlich zur Kapazitätsplanung die folgenden Maßnahmen aus, um sicherzustellen, dass Ihre Speicherkonfiguration Ihren Leistungs- und Verfügbarkeitsanforderungen entspricht.
 
-- Die Speicherleistung hängt von verschiedenen Faktoren ab; dazu gehören folgende: RAID-Konfiguration, Plattenstriping, Netzkonfiguration, Blockgröße, Anzahl konfigurierte IOPS (Ein-/Ausgabeoperationen pro Sekunde) für den NAS-Speicher (NAS - Network-attached Storage), VM-Hardwarekonfiguration und Konfigurationsmethode für Speicheranhänge, Clustering- und Replikationsmethoden sowie die Verwendung von Speicherrichtlinien, wie z. B. für Verschlüsselung, Deduplizierung und Komprimierung. Planen Sie Zeit ein, um Ihre Konfiguration zu testen und zu optimieren, sodass sie Ihren Anforderungen an die Speicherleistung entspricht.
+- Die Speicherleistung hängt von verschiedenen Faktoren ab; dazu gehören folgende: RAID-Konfiguration, Plattenstriping, Netzkonfiguration, Blockgröße, Anzahl konfigurierte IOPS (Ein-/Ausgabeoperationen pro Sekunde) für den NAS-Speicher (NAS - Network-attached Storage), VM-Hardwarekonfiguration und Konfigurationsmethode für Speicherzuordnungen, Clustering- und Replikationsmethoden sowie die Verwendung von Speicherrichtlinien, wie z. B. für Verschlüsselung, Deduplizierung und Komprimierung. Planen Sie Zeit ein, um Ihre Konfiguration zu testen und zu optimieren, sodass sie Ihren Anforderungen an die Speicherleistung entspricht.
 - Überprüfen Sie Ihre vSAN-Speicherrichtlinie.
   - RAID 1 bietet eine bessere Leistung, ist weniger anfällig für nachfolgende Ausfälle und benötigt weniger Zeit für einen erneuten Build als RAID 5. Der Systemaufwand für den Speicher ist bei RAID 5 jedoch geringer.
   - RAID 6 bietet Schutz vor dual auftretenden Ausfällen, erfordert jedoch mindestens sechs Hosts im Vergleich zu vier Hosts für RAID 5.

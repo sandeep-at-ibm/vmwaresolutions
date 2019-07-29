@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-02"
+lastupdated: "2019-06-17"
+
+keywords: vCenter Server compliance, compliance info, vCenter Server policy
 
 subcollection: vmware-solutions
 
@@ -50,6 +52,21 @@ Im Falle eines Systemausfalls kann ein Service-Provider eines anderen Anbieters 
 {: #vc_compl_info-personal-info-and-regulated-data}
 
 Dieser Cloud-Service ist nicht auf spezielle Sicherheitsanforderungen für schutzwürdige Inhalte ausgelegt, wie z. B. personenbezogene Daten oder sensible personenbezogene Daten. Der Kunde ist dafür verantwortlich festzustellen, ob dieser Cloud-Service den Kundenanforderungen bezüglich der Art des Inhalts entspricht, die der Kunde in Verbindung mit dem Cloud-Service verwendet.
+
+## Richtlinienkonfigurationen
+{: #vc_compl_info-default-policy-config}
+
+Die Länge des generierten vCenter-Kennworts für primäre vCenter Server-Instanzen beträgt jetzt 15 Zeichen. Vorher entsprach die Länge des generierten Kennworts dem vCenter-Standard von acht Zeichen.
+
+Tabelle 1. vCenter-Richtlinienkonfigurationen für neue primäre Instanz
+
+| Richtlinien- | V3.1 oder höher | V3.0 oder früher  |
+|:------------- |:------------------------------ |:------------- |
+| vCenter-Kennwortrichtlinie | Mindestlänge von 15 Zeichen | Mindestlänge von 8 Zeichen (vCenter-Standard) |
+| vCenter-Sperrrichtlinie | Maximal drei fehlgeschlagene Anmeldeversuche | Maximal fünf fehlgeschlagene Anmeldeversuche (vCenter-Standard) |
+| vCenter-Sperrrichtlinie | 900 Sekunden zwischen Anmeldefehlern | 180 Sekunden zwischen Anmeldefehlern (vCenter-Standard) |
+
+Die Länge des generierten NSX Manager-Kennworts für primäre vCenter Server-Instanzen beträgt jetzt 15 Zeichen. Vorher betrug die Länge des generierten Kennworts acht Zeichen.
 
 ## Richtlinien für den Zugriff auf Kundeninstanzen
 {: #vc_compl_info-policy-for-access-client-inst}

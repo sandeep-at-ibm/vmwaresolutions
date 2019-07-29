@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-21"
+lastupdated: "2019-05-22"
 
 subcollection: vmware-solutions
 
@@ -28,7 +28,7 @@ Das physische Netz von {{site.data.keyword.cloud_notm}} ist in drei verschiedena
 ## Privates Netz
 {: #vcsnsxt-overview-ic4vnetwork-private-net}
 
-Alle {{site.data.keyword.CloudDataCents_notm}} und Bereitstellungspunkte (PoPs) werden durch den privaten Netzbackbone verbunden. Dieses private Netz ist vom öffentlichen Netz getrennt und ermöglicht Konnektivität zu Services in {{site.data.keyword.CloudDataCents_notm}} auf der ganzen Welt. Die Datenübertragung zwischen Rechenzentren erfolgt über mehrere Verbindungen mit 10 oder 40 Gb/s, die zum privaten Netz bestehen. Ähnlich wie das öffentliche Netz ist das private Netz dadurch mehrschichtig gestaltet, dass Server und andere Infrastruktur mit zusammengefassten Back-end-Kundenswitches (BCS - Back-end Customer Switch) verbunden sind. Diese zusammengefassten Switches sind mit einem Paar separater Router (also Back-End-Kundenroutern, BCR) für den L3-Netzbetrieb verbunden. Das private Netz unterstützt zudem die Möglichkeit, für physische Hostverbindungen Jumbo-Frames (MTU 9000) zu verwenden.
+Alle {{site.data.keyword.CloudDataCents_notm}} und Bereitstellungspunkte (PoPs) werden durch den privaten Netzbackbone verbunden. Dieses private Netz ist vom öffentlichen Netz getrennt und ermöglicht Konnektivität zu Services in {{site.data.keyword.CloudDataCents_notm}} auf der ganzen Welt. Die Datenübertragung zwischen Rechenzentren erfolgt über mehrere Verbindungen mit 10 Gb/s oder 40 Gb/s, die zum privaten Netz bestehen. Ähnlich wie das öffentliche Netz ist das private Netz dadurch mehrschichtig gestaltet, dass Server und andere Infrastruktur mit zusammengefassten Back-end-Kundenswitches (BCS - Back-end Customer Switch) verbunden sind. Diese zusammengefassten Switches sind mit einem Paar separater Router (also Back-End-Kundenroutern, BCR) für den L3-Netzbetrieb verbunden. Das private Netz unterstützt zudem die Möglichkeit, für physische Hostverbindungen Jumbo-Frames (MTU 9000) zu verwenden.
 
 ## Managementnetz
 {: #vcsnsxt-overview-ic4vnetwork-mgmt-net}
@@ -47,7 +47,7 @@ Primäre oder portierbare IP-Adressen können an ein beliebiges VLAN im Kundenko
 ## Virtual Routing and Forwarding
 {: #vcsnsxt-overview-ic4vnetwork-vrf}
 
-{{site.data.keyword.cloud_notm}}-Konten können auch als Konto mit Virtual Routing and Forwarding (VRF) konfiguriert werden. Ein VRF-Konto aktiviert das automatische globale Routing zwischen den Teilnetz-IP-Blöcken innerhalb des Kontos. Alle Konten mit direkten Verbindungen (Direct-Link) müssen in VRF-Konten konvertiert oder als solche erstellt werden.
+{{site.data.keyword.cloud_notm}}-Konten können auch als Konto mit Virtual Routing and Forwarding (VRF) konfiguriert werden. Ein VRF-Konto aktiviert das automatische globale Routing zwischen den Teilnetz-IP-Blöcken innerhalb des Kontos. Alle Konten mit Direct Link-Verbindungen müssen in VRF-Konten konvertiert oder als solche erstellt werden.
 
 ## Physische Hostverbindungen
 {: #vcsnsxt-overview-ic4vnetwork-host-connect}
@@ -84,7 +84,7 @@ Privat B 	|Portierbar 	|Zugeordnet für vSAN, falls verwendet.
 Privat B 	|Portierbar 	|Zugeordnet für NAS, falls verwendet.
 Privat B 	|Portierbar 	|Zugeordnet für vMotion.
 
-Dieses Design wird mit physischen Hosts und virtuellen Systeminstanzen (VSI) in VLANs bereitgestellt und so konfiguriert, dass als Standardroute auf den Back-End-Kundenrouter (Backend Customer Router, BCR) des privaten Netzes von {{site.data.keyword.cloud_notm}} verwiesen wird. Die Verwendung eines softwaredefinierten Netzbetriebs wird währenddessen durch vCenter Server-Instanzen ermöglicht. Alle von NSX erstellten Netzoverlays, die eine Weiterleitung an VLAN-Teilnetze einbeziehen, sind für die von {{site.data.keyword.cloud_notm}} verwalteten Router unbekannt und Sie müssen möglicherweise statische Routen, Firewallregeln und NAT-Regeln erstellen, damit die Netzflüsse ordnungsgemäß verwaltet werden können.
+Dieses Design wird mit physischen Hosts und virtuellen Systeminstanzen (VSI) in VLANs bereitgestellt und so konfiguriert, dass als Standardroute auf den Back-End-Kundenrouter (Backend Customer Router, BCR) des privaten Netzes von {{site.data.keyword.cloud_notm}} verwiesen wird. Obwohl vCenter Server-Instanzen die Verwendung von Software-Defined Networking (SDN) ermöglichen, sind Netzoverlays, die von NSX erstellt werden und das Routing an interne VLAN-Teilnetze einschließen, den verwalteten {{site.data.keyword.cloud_notm}}-Routern nicht bekannt. Sie müssen möglicherweise statische Routen, Firewallregeln und NAT-Regeln erstellen, damit die Netzflüsse ordnungsgemäß verwaltet werden können.
 
 Die privaten Netzverbindungen werden so konfiguriert, dass sie Jumbo-Frames mit einer MTU-Größe von 9000 verwenden, was die Leistung für große Datenübertragungen wie für Speicher- und vMotion-Operationen zu verbessert. Dies ist der maximale MTU-Wert, der in VMware und von {{site.data.keyword.cloud_notm}} zulässig ist. Die öffentlichen Netzverbindungen verwenden den Standardwert für Ethernet-MTU von 1500. Dieser Wert muss beibehalten werden, da Änderungen zu einer Paketfragmentierung bei der Übertragung über das Internet führen können.
 

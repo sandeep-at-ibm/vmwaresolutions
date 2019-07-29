@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-05-15"
 
 subcollection: vmware-solutions
 
@@ -18,7 +18,7 @@ Nachdem die virtuellen Maschinen (VMs) bereitgestellt und die Anwendungskomponen
 
 Der Service-Provider ist die Organisation der höchsten Ebene und es gibt mindestens einen Tenant/eine Organisation, der/die vom Service-Provider bedient wird bzw. werden. Der Service-Provider ordnet die von vCenter erfassten Assets dem Tenant oder den Organisationen zu, die sie anschließend zu Anwendungen oder Unteranwendungen zuordnen. Diese Anwendungen unterliegen dann den Konformitätsvorschriften.
 
-Dieser Schritt wird zunächst von der IC4VS-Automatisierung anhand von Informationen ausgeführt, die der Kunde während des Bestellprozesses angibt, sowie anhand von Standardinformationen. Der Konfigurationsprozess kann vom Kunden nach der Bereitstellung gestartet werden, um den Service-Provider oder die Tenant-Organisation gegebenenfalls nach der Installation zu ändern.
+Dieser Schritt wird zunächst von der IBM Cloud for VMware Solutions-Automatisierung anhand von Informationen ausgeführt, die der Kunde während des Bestellprozesses angibt, sowie anhand von Standardinformationen. Der Konfigurationsprozess kann vom Kunden nach der Bereitstellung gestartet werden, um den Service-Provider oder die Tenant-Organisation gegebenenfalls nach der Installation zu ändern.
 
 Die Konfiguration des Service-Providers erfolgt in acht Unterschritten:
 -	Schritt 1: Organisationsdetails - Fügen Sie die Details für die übergeordnete Organisation für Ihren Cloud-Service-Provider hinzu. Diese Organisation kann über mehrere physische Standorte und mehrere Rechenzentren verfügen. Organisationen für Ihre Tenants und Unterorganisationen für Ihren Service-Provider werden später hinzugefügt.

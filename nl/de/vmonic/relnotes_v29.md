@@ -24,7 +24,7 @@ Dieses Release stellt neue Funktionen, Komponentenaktualisierungen, Verbesserung
 ## VMware vCenter Server on IBM Cloud with NSX-T
 {: #relnotes_v29-vcs-nsx-t}
 
-In diesem Release wird das Angebot VMware vCenter Server on {{site.data.keyword.cloud_notm}} with NSX-T für den Konzeptnachweis oder Sandboxtests eingeführt. vCenter Server with NSX-T ist eine privat gehostete Cloud, die Ihnen den Test der VMware-Netzwerkplattform der nächsten Generation, NSX-T, ermöglicht.
+In diesem Release wird das Angebot VMware vCenter Server on {{site.data.keyword.cloud_notm}} with NSX-T für den Konzeptnachweis oder Sandboxtests eingeführt. vCenter Server with NSX-T ist eine privat gehostete Cloud, die Ihnen den Test der VMware-Netzplattform der nächsten Generation, NSX-T, ermöglicht.
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-05-22"
 
 subcollection: vmware-solutions
 
@@ -17,15 +17,14 @@ subcollection: vmware-solutions
 ## Virtual Routing and Forwarding
 {: #vcscar-arch-overview-infrastructure-vrf}
 
-{{site.data.keyword.cloud}}-Konten können als Konto mit Virtual Routing and Forwarding (VRF) konfiguriert werden. Ein VRF-Konto aktiviert das automatische globale Routing zwischen Teilnetz-IP-Blöcken. Alle Konten mit direkten Verbindungen (Direct-Link) müssen in VRF-Konten konvertiert oder als solche erstellt werden.
+{{site.data.keyword.cloud}}-Konten können als Konto mit Virtual Routing and Forwarding (VRF) konfiguriert werden. Ein VRF-Konto aktiviert das automatische globale Routing zwischen Teilnetz-IP-Blöcken. Alle Konten mit Direct Link-Verbindungen müssen in VRF-Konten konvertiert oder als solche erstellt werden.
 
 ## Direct Link
 {: #vcscar-arch-overview-infrastructure-direct-link}
 
 {{site.data.keyword.cloud_notm}} Direct Link Connect bietet privaten Zugriff auf Ihre {{site.data.keyword.cloud_notm}}-Infrastruktur und auf alle anderen Clouds, die mit Ihrem Netzserviceanbieter über Ihr lokales {{site.data.keyword.CloudDataCent_notm}} verbunden sind. Diese Option ist optimal für die Konnektivität zu mehreren Clouds in einer einzelnen Umgebung geeignet.
 
-Wir verbinden Kunden mithilfe einer gemeinsamen Bandbreitentopologie mit dem privaten {{site.data.keyword.cloud_notm}}-Netz. Wie bei allen Direct Link-Produkten können Sie globales Routing hinzufügen, das privaten Netzverkehr zu allen {{site.data.keyword.cloud_notm}}-Standorten
-ermöglicht.
+Wir verbinden Kunden mithilfe einer gemeinsamen Bandbreitentopologie mit dem privaten {{site.data.keyword.cloud_notm}}-Netz. Wie bei allen Direct Link-Produkten können Sie globales Routing hinzufügen, das privaten Netzverkehr zu allen {{site.data.keyword.cloud_notm}}-Standorten ermöglicht.
 
 ## Virtuelle private Netze
 {: #vcscar-arch-overview-infrastructure-virt-private-net}
@@ -52,17 +51,16 @@ Tabelle 1. vCenter Server-Spezifikation für {{site.data.keyword.icpfull_notm}}
 | Anzahl der Server | 3 | 4 |
 | CPU | 28 Kerne 2,2 GHz | 28 Kerne 2,2 GHz |
 | Speicher | 384 GB | 384 GB |
-| Speicher | 2000 GB 2IOPS/GB Management, 2000 GB 4IOPS/GB Workload, 4000 GB 4IOPS/GB {{site.data.keyword.icpfull_notm}} | Mindest-SSD 960-GB x 2 |
+| Speicher | 2000 GB 2 IOPS/GB Management, 2000 GB 4 IOPS/GB Workload, 4000 GB 4 IOPS/GB {{site.data.keyword.icpfull_notm}} | Mindest-SSD 960-GB x 2 |
 
-Zusätzlich zu der Hardware, die für {{site.data.keyword.cloud_notm}} Private vorausgesetzt wird, müssen Sie persistente Datenträger in der {{site.data.keyword.cloud_notm}}-Umgebung erstellen, um die CAM-Datenbank- und -Protokolldaten (CAM = Cloud Automation Manager) zu speichern. CAM unterstützt zwar alle persistenten Datenträgertypen, die von {{site.data.keyword.cloud_notm}} unterstützt werden, für CAM empfohlen werden aber die Speicherkonfigurationen NFS und GlusterFS.
+Zusätzlich zu der Hardware, die für {{site.data.keyword.cloud_notm}} Private vorausgesetzt wird, müssen Sie persistente Datenträger in der {{site.data.keyword.icpfull_notm}}-Umgebung erstellen, um die CAM-Datenbank- und -Protokolldaten (CAM = Cloud Automation Manager) zu speichern. CAM unterstützt zwar alle persistenten Datenträgertypen, die von {{site.data.keyword.icpfull_notm}} unterstützt werden, für CAM empfohlen werden aber die Speicherkonfigurationen NFS und GlusterFS.
 
 ## Virtuelle Struktur
 {: #vcscar-arch-overview-infrastructure-virt-structure}
 
 ![Struktur der vCenter Server- und {{site.data.keyword.icpfull_notm}}-Bereitstellung](../../images/vcscar-icp.svg "Struktur der vCenter Server- und {{site.data.keyword.icpfull_notm}}-Bereitstellung")
 
-In der vCenter Server-Instanz wird die {{site.data.keyword.icpfull_notm}}-Instanz mit einem dedizierten NSX Edge Services Gateway (ESG) und dem Distributed Logical Router (DLR) bereitgestellt.
-Die {{site.data.keyword.icpfull_notm}}-Installation wird in das VXLAN-Teilnetz geladen, das in den vorgenannten Komponenten definiert ist.
+In der vCenter Server-Instanz wird die {{site.data.keyword.icpfull_notm}}-Instanz mit einem dedizierten NSX Edge Services Gateway (ESG) und dem Distributed Logical Router (DLR) bereitgestellt. Die {{site.data.keyword.icpfull_notm}}-Installation wird in das VXLAN-Teilnetz geladen, das in den vorgenannten Komponenten definiert ist.
 
 Das ESG ist mit einer Quellen-NAT-Regel (SNAT) konfiguriert, um abgehenden Datenverkehr zu ermöglichen, wodurch die Internetverbindung zum Download der {{site.data.keyword.icpfull_notm}} -Voraussetzungen und zur Konnektivität mit GitHub und Docker befähigt wird. Alternativ können Sie einen Web-Proxy für die Internetkonnektivität verwenden. Das ESG ist auch für den Zugriff auf DNS- und NTP-Services konfiguriert.
 

@@ -52,7 +52,8 @@ Tabelle 1. Werte für die Bereitstellung
 | Netzmaske | 255.255.255.192 | |
 | Gateway| customer-nsx-edge private uplink ip | Dies ist die Standardgateway-Einstellung für den Proxy-Server, nämlich die private Uplink-IP-Adresse "customer-nsx-edge". Die IP findet sich auf der Registerkarte **Einstellungen** für **customer-nsx-edge**. |
 | DNS-Server | AD/DNS ip | Diese IP-Adresse befindet sich auf der Instanzseite in der {{site.data.keyword.vmwaresolutions_short}}-Konsole auf der Seite **Ressourcen**. |
-| BCR-IP | bcr ip | Dies ist die IP-Adresse des {{site.data.keyword.cloud_notm}} Backend Customer Router und fungiert als Gateway für 10.0.0.0/8 und 161.26.0.0/16. Diese Adresse wird in einer statischen Route im Proxy-Server verwendet, sodass sie die VCSA und den AD/DNS-Server erreichen kann. |
+| BCR-IP | bcr ip | Notieren Sie sich auf derselben Seite, auf der Sie die oben genannte Proxy-IP-Adresse ausgewählt haben, das mit der Adresse gekennzeichnete Gateway.  Diese Adresse ist die IP-Adresse des {{site.data.keyword.cloud_notm}} Backend Customer Router und fungiert als Gateway für 10.0.0.0/8 und 161.26.0.0/16. Diese Adresse wird in einer statischen Route im Proxy-Server verwendet, sodass sie die VCSA und den AD/DNS-Server erreichen kann. |
+| NAT-IP | customer-nsx-edge public uplink ip | Die öffentliche Adresse von NSX Edge Service Gateway des Kunden dient als öffentliche NAT-Adresse für den Proxy. Diese IP-Adresse wird in der Registerkarte **Einstellungen** für **customer-nsx-edge** angegeben. |
 
 ## NSX konfigurieren
 {: #vum-init-config-config-nsx}

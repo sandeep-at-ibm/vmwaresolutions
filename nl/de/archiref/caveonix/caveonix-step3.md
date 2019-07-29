@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-05-15"
 
 subcollection: vmware-solutions
 
@@ -14,7 +14,7 @@ subcollection: vmware-solutions
 # Schritt 3 - Konfiguration der Anwendung
 {: #caveonix-step3}
 
-Bei diesem Schritt wird das Caveonix RiskForesight-Konfigurationsscript verwendet. Für die umfassende Bereitstellung wird dieses Script über die IC4VS-Automatisierung gestartet.
+Bei diesem Schritt wird das Caveonix RiskForesight-Konfigurationsscript verwendet. Für die umfassende Bereitstellung wird dieses Script über die IBM Cloud for VMware Solutions-Automatisierung gestartet.
 
 Für die Skalierung muss der Client das Script aufrufen, um die teilweise oder vollständig verteilten Topologien bereitzustellen. Das Script konfiguriert die RiskForesight-Services:
 - Caveonix-Apps (API, zentraler Kollektor)

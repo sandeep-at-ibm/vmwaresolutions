@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-12"
+lastupdated: "2019-06-11"
+
+keywords: IAM user, user role, user permission
 
 subcollection: vmware-solutions
 
@@ -40,10 +42,10 @@ Tabelle 1. Plattformmanagementrollen und zugelassene Aktionen
 
 | Plattformmanagementrolle | Aktionen | Beispielaktionen |
 |:----------------- |:----------------- |:----------------- |
-| Anzeigeberechtigter (Viewer) | Aktionen unter Schreibschutz | <ul><li>Zusammenfassung der Instanzen anzeigen</li><li>Details einer Instanz anzeigen</li></ul>|
-| Editor (Bearbeiter) | Bestimmte Instanz aktualisieren |<ul><li>ESXi-Server hinzufügen oder entfernen</li><li>Cluster hinzufügen oder entfernen</li><li>Services hinzufügen oder entfernen</li><li>Upgrade einer Instanz auf höhere Version durchführen</li></ul> |
-| Operator | Aktionen unter Schreibschutz | <ul><li>Instanzen auflisten</li><li>Details einer Instanz anzeigen</li></ul> |
-| Administrator | Vollständiger Managementzugriff |<ul><li>Neue Instanzen erstellen</li><li>Instanzen löschen</li><li>Plattformzugriff anderen Benutzern erteilen</li></ul>|
+| Anzeigeberechtigter (Viewer) | Aktionen unter Schreibschutz | Zusammenfassung der Instanzen anzeigen<br>Details einer Instanz anzeigen |
+| Editor (Bearbeiter) | Bestimmte Instanz aktualisieren | ESXi-Server hinzufügen oder entfernen<br>Cluster hinzufügen oder entfernen<br>Services hinzufügen oder entfernen<br>Upgrade einer Instanz auf höhere Version durchführen |
+| Operator | Aktionen unter Schreibschutz | Instanzen auflisten<br>Details einer Instanz anzeigen |
+| Administrator | Vollständiger Managementzugriff | Neue Instanzen erstellen<br>Instanzen löschen<br>Plattformzugriff anderen Benutzern erteilen|
 
 Für {{site.data.keyword.vmwaresolutions_short}} sind die folgenden Aktionen verfügbar:
 
@@ -53,8 +55,8 @@ Tabelle 2. Aktionsbeschreibungen und erforderliche Rollen
 |:------ |:-------------------- |:---- |
 | vmware-solutions.instances.create | Neue Instanzen erstellen | Administrator |
 | vmware-solutions.instances.delete | Instanzen löschen | Administrator |
-| vmware-solutions.instances.view | <ul><li>Instanzen auflisten</li><li>Details einer Instanz anzeigen</li></ul> | Anzeigeberechtigter, Operator, Editor und Administrator |
-| vmware-solutions.instances.update | <ul><li>ESXi-Server hinzufügen oder entfernen</li><li>Cluster hinzufügen oder entfernen</li><li>Services hinzufügen oder entfernen</li><li>Upgrade einer Instanz auf höhere Version durchführen</li></ul> | Editor und Administrator |
+| vmware-solutions.instances.view | Instanzen auflisten<br>Details einer Instanz anzeigen | Anzeigeberechtigter, Operator, Editor und Administrator |
+| vmware-solutions.instances.update | ESXi-Server hinzufügen oder entfernen<br>Cluster hinzufügen oder entfernen<br>Services hinzufügen oder entfernen<br>Upgrade einer Instanz auf höhere Version durchführen | Editor und Administrator |
 | vmware-solutions.account.update | Kontoeinstellungen aktualisieren | Administrator |
 
 ## Zugriff für Benutzer verwalten

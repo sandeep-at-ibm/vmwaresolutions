@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-28"
 
 subcollection: vmware-solutions
 
@@ -102,11 +102,11 @@ Die folgenden Komponenten werden konfiguriert:
 -	NSX Edge Services Gateway-Appliances zur Verwendung durch Managementkomponenten.
 -	Nur für vCenter Server: NSX Edge Services Gateway-Appliances zur Verwendung durch den Kunden.
 
-Die folgenden Komponenten werden NICHT konfiguriert:
--	Virtuelle verteilte Router.
--	Mikrosegmentierung.
--	VXLANs.
--	Verknüpftes NSX-Management mit anderen VMware-Instanzen.
+Die folgenden Komponenten werden nicht konfiguriert:
+- Virtuelle verteilte Router
+- Mikrosegmentierung
+- VXLANs
+- Verknüpftes NSX-Management mit anderen VMware-Instanzen
 
 ### Sicherheit von NSX-V
 {: #vcsnsxt-overview-ic4vnsxv-nsx-v-security}
@@ -114,9 +114,9 @@ Die folgenden Komponenten werden NICHT konfiguriert:
 Mit NSX for vSphere können Organisationen das Rechenzentrum in separate Sicherheitssgemente aufteilen. Dies kann hinunter bis auf die Ebene einer einzelnen Workload erfolgen und unabhängig davon, wo die Workload ausgeführt wird. IT-Teams können für jede Workload basierend auf Anwendungs- und Benutzerkontext Richtlinien definieren, was sofortige Antworten auf Sicherheitsbedrohungen innerhalb des Rechenzentrums und deren Durchsetzung bis zur Anwendung  sicherstellt.
 
 Die NSX-Schlüsselkomponenten sind unter anderem Folgende:
--	Die dezentrale statusabhängige Firewall von NSX ist in den Hypervisorkernel für bis zu 20 Gb/s Firewallkapazität pro Hypervisorhost integriert. Sie stellt Nord-Süd-Firewallfunktionalität über NSX Edge bereit.
--	NSX ermöglicht die Erstellung von dynamischen Sicherheitsgruppen und zugehörigen Richtlinien für mehr als nur IP-Adressen und MAC. Diese Richtlinien beinhalten vCenter-Objekte und -Tags, den Betriebssystemtyp sowie Layer-7-Anwendungsinformationen, um eine auf dem Kontext der Anwendung basierende Mikrosegmentierung zu ermöglichen.
--	Eine identitätsbasierte Richtlinie, die Anmeldeinformationen aus VMs, Active Directory und der Integration von Mobile Device Management nutzt, ermöglicht eine auf dem Benutzer basierende Sicherheit, was die Sicherheit auf  Sitzungsebene in fernen und virtuellen Desktopumgebungen einschließt.
+- Die dezentrale statusabhängige Firewall von NSX ist in den Hypervisorkernel für bis zu 20 Gb/s Firewallkapazität pro Hypervisorhost integriert. Sie stellt Nord-Süd-Firewallfunktionalität über NSX Edge bereit.
+- NSX ermöglicht die Erstellung von dynamischen Sicherheitsgruppen und zugehörigen Richtlinien für mehr als nur IP-Adressen und MAC. Diese Richtlinien beinhalten vCenter-Objekte und -Tags, den Betriebssystemtyp sowie Layer-7-Anwendungsinformationen, um eine auf dem Kontext der Anwendung basierende Mikrosegmentierung zu ermöglichen.
+- Eine identitätsbasierte Richtlinie, die Anmeldeinformationen aus VMs, Active Directory und der Integration von Mobile Device Management nutzt, ermöglicht eine auf dem Benutzer basierende Sicherheit, was die Sicherheit auf  Sitzungsebene in fernen und virtuellen Desktopumgebungen einschließt.
 - Der Anwendungsregelmanager und die Endpunktüberwachung ermöglichen die durchgängige Visualisierung des Datenflusses im Netzverkehr bis hin zu Layer 7. Hierdurch werden Anwendungsteams in die Lage versetzt, Endpunkte sowohl in als auch zwischen Rechenzentren zu identifizieren und mit der Erstellung geeigneter Sicherheitsregeln zu reagieren.
 - Unterstützung für Management, Steuerebene und Datenebene mit anderen Anbietern wie beispielsweise Firewalls der nächsten Generation, IDS/IPS, agentenunabhängiger Virenschutz, Switching, erweiterte Sicherheit und mehr werden unterstützt.
 

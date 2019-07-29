@@ -19,7 +19,7 @@ Das Installationsprogramm stellt für jede virtuelle Service-Appliance eine virt
 {: #hcx-archi-install-cfg-hybrid-prereq}
 
 * Der HCX-Manager muss lokal installiert und bei einem für VCS HCX aktivierten Cloud-Endpunkt registriert werden.
-* Das virtuelle Zieldatenzentrum muss über genügend Ressourcen verfügen.
+* Das virtuelle Zielrechenzentrum muss über genügend Ressourcen verfügen.
 
 ## Konfigurationsübersicht
 {: #hcx-archi-install-cfg-hybrid-config-ovw}

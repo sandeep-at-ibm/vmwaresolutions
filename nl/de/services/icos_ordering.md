@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-13"
+lastupdated: "2019-06-18"
+
+keywords: IBM Cloud Object Storage, ICOS configuration, order Cloud Object Storage
 
 subcollection: vmware-solutions
 
@@ -40,12 +42,14 @@ Informationen zum Erstellen von Serviceberechtigungsnachweisen, einschließlich 
 ## Ein Scale-out-Repository hinzufügen
 {: #icos_ordering-scale-repo}
 
-Wenn Sie ein Scale-out-Repository in Veeam hinzufügen möchten, lesen Sie die Informationen im Abschnitt [Scale-Out-Repositorys hinzufügen](https://helpcenter.veeam.com/docs/backup/vsphere/sobr_add.html?ver=95u4){:new_window}. Führen Sie die Schritte aus und kehren Sie zu diesem Abschnitt zurück, um mit den folgenden Tasks fortzufahren.
+* Im Rahmen der Installation und Konfiguration des Veeam-Service wird ein Scale-out-Repository mit dem Namen `IC4V Scale-Out Repository` erstellt. Als Erweiterung wird `IC4V Default VM Backup Repository` zum Scale-out-Repository hinzugefügt.
+* Wenn Sie den Sicherungsjob erstellen, müssen Sie `IC4V Scale-Out Repository` als Sicherungsrepository auswählen und nicht `IC4V Default Config Backup Repository`. Das letztere Repository ist für die Sicherungen der Veeam-Konfiguration vorgesehen.
+* Zu diesem Standardrepository können Sie weitere Repositorys hinzufügen, zum Beispiel ein Sicherungsrepository des Typs 'Objektspeicher'. Weitere Informationen finden Sie unter [Scale-Out-Repositorys hinzufügen](https://helpcenter.veeam.com/docs/backup/vsphere/sobr_add.html?ver=95u4){:new_window}. Führen Sie die Schritte aus und kehren Sie zu diesem Abschnitt zurück, um mit den folgenden Tasks fortzufahren.
 
 ## Ihre Cloud-Tier warten und verwalten
 {: #icos_ordering-manage-cloud}
 
-Informationen zum Warten und Verwalten Ihrer Cloud-Tier finden Sie im Abschnitt [Kapazitäts-Tier-Daten verwalten](https://helpcenter.veeam.com/docs/backup/vsphere/capacity_tier_managing_data.html?ver=95u4){:new_window}.
+Weitere Informationen finden Sie unter [Verwalten der Daten der Kapazitätsschicht](https://helpcenter.veeam.com/docs/backup/vsphere/capacity_tier_managing_data.html?ver=95u4){:new_window}.
 
 ## Zugehörige Links
 {: #icos_ordering-related}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-11"
 
 subcollection: vmware-solutions
 
@@ -24,7 +24,7 @@ Die physische Infrastruktur besteht aus den folgenden Komponenten:
   <dt class="dt dlterm">Physische Rechenressourcen</dt>
   <dd class="dd">Die physischen Rechenressourcen stellen die physischen Verarbeitungs- und Arbeitsspeicherressourcen bereit, die von der Virtualisierungsinfrastruktur genutzt werden. Für dieses Design werden die Rechenkomponenten durch {{site.data.keyword.baremetal_long}} bereitgestellt und im [VMware Hardware Compatibility Guide (HCG)](https://www.vmware.com/resources/compatibility/search.php) aufgelistet.</dd>
   <dt class="dt dlterm">Physischer Speicher</dt>
-  <dd class="dd">Der physische Speicher stellt die von der Virtualisierungsinfrastruktur genutzte Bruttospeicherkapazität bereit. Speicherkomponenten werden entweder durch {{site.data.keyword.baremetal_short}} oder durch ein gemeinsam genutztes NAS-Array (Network Attached Storage) mit NFSv3 oder iSCSI bereitgestellt.</dd>
+  <dd class="dd">Der physische Speicher stellt die von der Virtualisierungsinfrastruktur genutzte Bruttospeicherkapazität bereit. Speicherkomponenten werden entweder durch {{site.data.keyword.baremetal_short}} oder durch ein gemeinsam genutztes NAS-Array (NAS - Network Attached Storage) mit NFS v3 <!-- or iSCSI --> bereitgestellt.</dd>
   <dt class="dt dlterm">Physisches Netz</dt>
   <dd class="dd">Das physische Netz stellt die Netzkonnektivität in die Umgebung bereit, die dann durch die Netzvirtualisierung genutzt wird. Das Netz wird durch das {{site.data.keyword.cloud_notm}}-Servicenetz bereitgestellt und es schließt weitere Services wie DNS und NTP ein.</dd>
 </dl>
@@ -124,12 +124,12 @@ Das private Netz besteht aus zwei VLANs in diesem Design. Drei Teilnetze werden 
 * Das zweite Teilnetz wird für virtuelle Maschinen für das Management wie vCenter Server Appliance und Platform Services Controller verwendet.
 * Das dritte Teilnetz wird für die eingekapselten Overlay-Netz-Tunnelendpunkte (VTEPs) verwendet, die jedem Host über den NSX Manager zugeordnet sind.
 
-Neben dem VLAN "Privat A" ist ein zweites privates VLAN (hier als VLAN "Privat B" bezeichnet) vorhanden, um VMware-Features wie vSAN vMotion, NFS und iSCSI zu unterstützen und die Konnektivität zum NAS-Speicher (NAS - Network Attached Storage) herzustellen. Das VLAN als solches ist in zwei, drei oder vier portierbare Teilnetze unterteilt:
+Neben dem VLAN 'Privat A' ist ein zweites privates VLAN (hier als VLAN 'Privat B' bezeichnet) vorhanden, um VMware-Features wie vSAN vMotion und NFS<!--, and iSCSI--> zu unterstützen und die Konnektivität zum NAS-Speicher (NAS - Network Attached Storage) herzustellen. Das VLAN als solches ist in zwei, drei oder vier portierbare Teilnetze unterteilt:
 * Das erste Teilnetz wird einer Kernelportgruppe für vMotion-Datenverkehr zugeordnet.
 * Die übrigen Teilnetze werden für Speicherdatenverkehr verwendet:
    * Bei Verwendung von vSAN wird ein Teilnetz Kernelportgruppen zugeordnet, die für vSAN-Datenverkehr verwendet werden.
    * Bei Verwendung von NFS-angeschlossenen NAS wird ein Teilnetz einer Portgruppe zugeordnet, die für NFS-Datenverkehr dediziert ist.
-   * Für den iSCSI-Anschluss werden zwei Portgruppen erstellt, um Multipathing-Aktiv-Aktiv für beide private NIC-Ports zu ermöglichen, da in der VMware-iSCSI-Dokumentation jeweils nur ein NIC-Port aktiv sein kann.
+<!--* For iSCSI attachment, two port groups are created to allow multipathing active-active across both private NIC ports as only one NIC port can be active at a time per the VMware iSCSI documentation.-->
 
 Alle Teilnetze, die als Bestandteil einer automatisierten vCenter Server-Bereitstellung konfiguriert werden, verwenden verwaltete {{site.data.keyword.cloud_notm}}-Bereiche. Dadurch wird sichergestellt, dass eine beliebige IP-Adresse an jedes Rechenzentrum innerhalb des {{site.data.keyword.cloud_notm}}-Kontos geleitet werden kann, wenn Sie die Verbindung jetzt oder in Zukunft benötigen.
 
@@ -139,14 +139,14 @@ Tabelle 1. VLAN- und Teilnetzzusammenfassung
 
 | VLAN | Typ | Beschreibung |
 |:---- |:---- |:----------- |
-| Öffentlich| Primär  | Physischen Hosts für öffentlichen Netzzugriff zugeordnet. Bei der Erstbereitstellung nicht verwendet. |
+| Öffentlich| Primär  | Physischen Hosts für öffentlichen Netzzugriff zugeordnet. Den Hosts wird zwar eine öffentliche IP-Adresse zugewiesen, diese IP-Adresse ist jedoch nicht für die Hosts konfiguriert, sodass sie nicht direkt im öffentlichen Netz zugänglich sind. Stattdessen soll das öffentliche VLAN den öffentlichen Internetzugang für andere Komponenten, wie zum Beispiel NSX Edge Services Gateways (ESGs), bereitstellen. |
 | Privat A | Primär  | Einzelnes Teilnetz, das physischen Hosts zugeordnet ist, die von {{site.data.keyword.cloud_notm}} zugeordnet werden. Von der Managementschnittstelle für vSphere-Managementdatenverkehr verwendet. |
 | Privat A | Portierbar | Einzelnes Teilnetz, das virtuellen Maschinen zugeordnet ist, die als Managementkomponenten fungieren |
 | Privat A | Portierbar | Einzelnes Teilnetz, das NSX-V oder NSX-T VTEP zugeordnet ist |
 | Privat B | Portierbar | Einzelnes Teilnetz, das für vSAN (sofern verwendet) zugeordnet ist |
 | Privat B | Portierbar | Einzelnes Teilnetz, das für NAS (sofern verwendet) zugeordnet ist |
-| Privat B | Portierbar | Zwei Teilnetze, die für iSCSI-NAS zugeordnet sind, sofern verwendet (1 pro physischem NIC-Port) |
 | Privat B | Portierbar | Einzelnes Teilnetz, das für vMotion zugeordnet ist |
+<!--| Private B | Portable | Two subnets assigned for iSCSI NAS, if in use (one per physical NIC port) |-->
 
 In diesem Design werden alle VLAN-gestützten Hosts und virtuellen Maschinen so konfiguriert, dass sie auf den {{site.data.keyword.cloud_notm}}-Back-End-Kundenrouter (BCR - Back-end Customer Router) des “privaten Netzes” als Standardroute verweisen. Obwohl die vCenter Server-Instanzen die Verwendung von Software-Defined Networking (SDN) ermöglichen, sind Netzoverlays, die in einer VMware-Instanz erstellt werden und das Routing an interne Teilnetze einschließen, den verwalteten {{site.data.keyword.cloud_notm}}-Routern nicht bekannt.
 
@@ -176,26 +176,29 @@ Weitere Informationen zu den unterstützten Konfigurationen finden Sie unter [vC
 
 Bei Verwendung von gemeinsam genutztem Speicher auf Dateiebene wird eine zwei Terabyte große, gemeinsam genutzte NFS-Ressource an die Hosts angehängt, die den ersten VMware-Cluster bilden. Diese gemeinsam genutzte Ressource, die als gemeinsam genutzte Managementressource bezeichnet wird, wird für das Management von Komponenten wie VMware vCenter Server, Platform Services Controller (PSC) und VMware NSX verwendet.
 
-Der Speicher wird mithilfe des Protokolls NFSv3 angehängt und unterstützt 2 IOPS pro GB von IBM Cloud. IBM normalisiert die IOP-Ebene, die mit einer 16-K-Blockgröße bereitgestellt wird, so dass größere Blockgrößen einen niedrigeren Grenzwert und kleinere Blockgrößen einen höheren Grenzwert erkennen.
+Der Speicher wird mithilfe des Protokolls NFS v3 zugeordnet und unterstützt 2 IOPS pro GB von IBM Cloud.
 
 ![An die VMware-Bereitstellung angehängte, gemeinsam genutzte NFS-Ressourcen](../../images/vcsv4radiagrams-ra-nfs-shares.svg "An die VMware-Bereitstellung angehängte, gemeinsam genutzte NFS-Ressourcen: gemeinsam genutzte Managementressource und vom Kunden angegebene, gemeinsam genutzte Ressource")
 
-Sie können beim Kauf oder später weitere gemeinsam genutzte Dateiressourcen für alle Hosts für Ihre Workloads in der Konsole zuordnen und anhängen. Sie können unter den verfügbaren Kapazitätsoptionen für {{site.data.keyword.cloud_notm}} Endurance-Dateispeicher und den Leistungsstufen in dem entsprechenden {{site.data.keyword.CloudDataCent_notm}} auswählen. Alle gemeinsam genutzten Ressourcen werden unter Verwendung des Protokolls NFSv3 angehängt. Darüber hinaus ist es möglich, gemeinsam genutzte NFSv3-Dateiressourcen durch Anwenden des NetApp ONTAP Select-Angebots anzuhängen.
+Sie können beim Kauf oder später weitere gemeinsam genutzte Dateiressourcen für alle Hosts für Ihre Workloads in der Konsole zuordnen und anhängen. Sie können unter den verfügbaren Kapazitätsoptionen für {{site.data.keyword.cloud_notm}} Endurance-Dateispeicher und den Leistungsstufen in dem entsprechenden {{site.data.keyword.CloudDataCent_notm}} auswählen. Alle gemeinsam genutzten Ressourcen werden unter Verwendung des Protokolls NFS v3 zugeordnet. Darüber hinaus ist es möglich, gemeinsam genutzte NFS v3-Dateiressourcen durch Anwenden des NetApp ONTAP Select-Angebots zuzuordnen.
 
 Die Verfügbarkeit der 10 IOPS/GB hängt vom IBM Cloud Data Center ab. {{site.data.keyword.CloudDataCents_notm}}, die das Leistungstier mit 10 IOPS/GB anbieten, schließen auch eine vom Provider verwaltete Verschlüsselung ruhender Daten (AES-256-Verschlüsselung) ein und werden mithilfe von reinem Flashspeicher gesichert. Die Leistungsstufe von 10 IOPS/GB ist auf eine maximale Kapazität von 4 TB beschränkt. Weitere Informationen zu gemeinsam genutztem NAS-Speicher in dieser Lösung finden Sie im Dokument [Architektur des gemeinsam genutzten Speichers](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits).
 
-### Gemeinsam genutzter iSCSI-Speicher
+<!--
+### Shared iSCSI storage
 {: #design_physicalinfrastructure-shared-iscsi}
 
-Wie bei NFS wird bei der Verwendung von gemeinsam genutztem iSCSI-Speicher eine zwei Terabyte große iSCSI-Ressource an die Hosts angehängt, die den ersten VMware-Cluster bilden. Diese iSCSI-LUN wird für das Management von Komponenten wie VMware vCenter Server, Platform Services Controller (PSC) und VMware NSX verwendet. Der Speicher wird mithilfe des Protokolls iSCSI angehängt und unterstützt 2 IOPs pro GB von IBM Cloud.
+This architecture allows you to use iSCSI storage, however iSCSI storage is not automatically provisioned by IBM Cloud for VMware Solutions. You can provision it manually.
 
-IBM normalisiert die IOP-Ebene, die mit einer 16-K-Blockgröße bereitgestellt wird, so dass größere Blockgrößen einen niedrigeren Grenzwert und kleinere Blockgrößen einen höheren Grenzwert erkennen.
+Similar to NFS, for shared iSCSI storage, one 2-TB iSCSI LUN will be attached to the hosts that comprise the initial VMware cluster. This iSCSI LUN is used for management components such as the VMware vCenter Server, Platform Services Controller, and VMware NSX. The storage is attached through the iSCSI protocol at a 2 IOPS/GB level from IBM Cloud.
 
-![An die VMware-Bereitstellung angehängte iSCSI-LUNs](../../images/vcsv4radiagrams-ra-iscsi-lun.svg "An die VMware-Bereitstellung angehängte iSCSI-LUNs")
+![iSCSI LUNs attached to VMware deployment](../../images/vcsv4radiagrams-ra-iscsi-lun.svg "iSCSI LUNs attached to VMware deployment"){: caption="Figure 5. iSCSI LUNs attached to VMware deployment" caption-side="bottom"}
 
-Zusätzliche iSCSI-LUNs für Workloads können auch über alle Hosts zum Zeitpunkt des Erwerbs oder später in der Konsole verteilt und angehängt werden. Wählen Sie im entsprechenden IBM Cloud Data Center aus den verfügbaren Optionen die IBM Cloud Endurance-Speicherkapazität und -Leistungsstufen aus. Alle LUNs werden über das iSCSI-Protokoll angehängt. Darüber hinaus ist es möglich, iSCSI-LUNs durch Anwenden des NetApp ONTAP Select-Angebots anzuhängen.
+Additional iSCSI LUNs for workloads can also be allocated and mounted across all hosts. Select from the available IBM Cloud Endurance block storage capacity options and performance tiers in the corresponding IBM Cloud Data Center. All LUNs are attached by using the iSCSI protocol. Additionally, it is possible to attach iSCSI LUNs from the NetApp ONTAP Select offering.
 
-Die Verfügbarkeit der 10 IOPS/GB hängt vom IBM Cloud Data Center ab. Rechenzentren, die das Leistungstier mit 10 IOPS/GB anbieten, schließen auch eine vom Provider verwaltete Verschlüsselung ruhender Daten (AES–256-Verschlüsselung) ein und werden mithilfe von reinem Flashspeicher gesichert. Die Leistungsstufe von 10 IOPS/GB ist auf eine maximale Kapazität von 4 TB beschränkt.
+The availability of the 10 IOPS/GB depends on the IBM Cloud Data Center. Data centers that offer the 10 IOPS/GB performance tier also include provider–managed encryption of data at rest (AES–256 encryption), and are backed by all–flash storage. The 10 IOPS/GB performance tier is limited to a maximum capacity of 4 TB.
+
+-->
 
 Weitere Informationen zu gemeinsam genutztem NAS-Speicher in dieser Lösung finden Sie im Dokument [Architektur des gemeinsam genutzten Speichers](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits).
 

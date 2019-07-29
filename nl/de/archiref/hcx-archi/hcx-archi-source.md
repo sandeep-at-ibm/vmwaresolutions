@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-06"
+lastupdated: "2019-06-12"
 
 subcollection: vmware-solutions
 
@@ -18,7 +18,7 @@ subcollection: vmware-solutions
 # VMware HCX on IBM Cloud - quellenseitige Architektur
 {: #hcx-archi-source}
 
-In diesem Abschnitt wird die Architektur der einzelnen HCX-Komponenten beschrieben, die in der Quellenumgebung bereitgestellt sind.
+Überprüfen Sie die Architektur jeder einzelnen HCX-Komponente, die in der Quellenumgebung bereitgestellt wird.
 
 ## Einführung in HCX
 {: #hcx-archi-source-intro-hcx}
@@ -47,14 +47,14 @@ In dieser Einführung werden die Tasks zusammengefasst, die ausgeführt werden k
 ### Migration mit geringer Ausfallzeit
 {: #hcx-archi-source-low-downtime-mig}
 
-Die Migration mit geringer Ausfallzeit beruht auf der vSphere-Replikation, einer verteilten Technologie, die im VMware ESX/ESXi-Hypervisor implementiert ist. HCX erstellt ein Replikat einer virtuellen Live-Maschine, verschiebt es in IBM Cloud und führt eine Umschaltung durch, um die virtuelle Quellenmaschine auszuschalten und die migrierte virtuelle Maschine einzuschalten.
+Die Migration mit geringer Ausfallzeit beruht auf der vSphere-Replikation - einer verteilten Technologie, die im VMware ESX/ESXi-Hypervisor implementiert ist. HCX erstellt ein Replikat einer virtuellen Live-Maschine, verschiebt es in IBM Cloud und führt eine Umschaltung durch, um die virtuelle Quellenmaschine auszuschalten und die migrierte virtuelle Maschine einzuschalten.
 * Der Migrationspfad führt immer über das Cloud-Gateway. Die Übertragung kann über das Internet, ein erweitertes Layer-2-Netz oder eine Direktverbindung erfolgen.
 * Eine virtuelle Maschine kann in beide Richtungen mehrere Male migriert werden.
 
 ### vMotion-Migration
 {: #hcx-archi-source-vmotion-mig}
 
-Die vMotion-Migration verwendet vMotion zur Übertragung einer virtuellen Live-Maschine über ein Netz, das hin zu IBM Cloud erweitert wurde. Die vMotion-Migration wird auch als "Migration ohne Ausfallzeit" oder "cloudumfassende vMotion" bezeichnet.
+Die vMotion-Migration verwendet vMotion, um eine virtuelle Live-Maschine über ein Netz zu übertragen, das in IBM Cloud erweitert wird. Die vMotion-Migration wird auch als "Migration ohne Ausfallzeit" oder "cloudumfassende vMotion" bezeichnet.
 
 ### Cold Migration
 {: #hcx-archi-source-cold-mig}
@@ -81,7 +81,7 @@ Die folgenden Netzfunktionen sind in das Cloud-Gateway und die Layer-2-Konzentra
 ## Erläuterungen zu HCX
 {: #hcx-archi-source-understand-hcx}
 
-HCX unterstützt eine Viele-zu-viele-Beziehung zwischen lokalen vCenter-Instanzen und IBM Cloud. vCenter Server im Verbindungsmodus wird unterstützt. Dieser Abschnitt enthält eine allgemeine Übersicht über die Interaktion des Installationsprogramms sowohl mit dem lokalen Rechenzentrum als auch mit IBM Cloud.
+HCX unterstützt eine Viele-zu-viele-Beziehung zwischen lokalen vCenter-Instanzen und IBM Cloud. vCenter Server im Verbindungsmodus wird unterstützt.
 
 Während der Installation wird die virtuelle HCX-Manager-Appliance importiert und als Plug-in für die lokale vCenter-Instanz konfiguriert. Dieses Plug-in wird anschließend verwendet, um die softwaredefinierte WAN-Servicebereitstellung zu konfigurieren. Die automatisierte Konfiguration stellt jede Hybrid-Service-Appliance als virtuelle Maschine in der lokalen vCenter-Instanz und eine entsprechende virtuelle Maschine in IBM Cloud bereit.
 
@@ -94,7 +94,7 @@ Für eine erfolgreiche Bereitstellung ist Folgendes erforderlich:
 
 Die virtuelle HCX-Manager-Maschine wird zuerst installiert. Sie verwaltet die Installation aller anderen virtuellen Servicemaschinen-Appliances, lokal wie auch in der Cloud.
 
-Im Folgenden finden Sie eine Zusammenfassung der grundlegenden Installationstasks:
+Bei den folgenden Schritten handelt es sich um grundlegende Installationsaufgaben:
 1. Fordern Sie die OVA-Datei der virtuellen Appliance von Hybrid Cloud Enterprise an.
 2. Installieren Sie in vSphere Web Client die virtuelle HCX-Manager-Appliance in der lokalen vCenter-Instanz, die eine Verbindung zu IBM Cloud herstellt.
 3. Registrieren Sie über vSphere Web Client einen IBM Cloud-Endpunkt beim HCX-Plug-in. Durch die Registrierung wird die Eins-zu-eins-Beziehung zwischen der lokalen HCX-Instanz und der HCX-Instanz in IBM Cloud eingerichtet.
@@ -105,8 +105,10 @@ Im Folgenden finden Sie eine Zusammenfassung der grundlegenden Installationstask
 ### Leistungsaspekte der Bereitstellungskomponente
 {: #hcx-archi-source-perf-consid}
 
-Die Architekturplanung umfasst die zu migrierten VMs, die Netze, die für den virtuellen Datenverkehr verwendet werden, und die Netze, die erweitert werden sollen. In diesem Thema werden einige Mindest- und Höchstwerte für die Bereitstellungskomponenten zusammengefasst.
-* vSphere vCenter. Die HCX-Manager-Appliance muss in der vCenter-Instanz installiert sein, die die Hybrid-Services benötigt. Pro vCenter-Instanz kann es nur eine HCX-Bereitstellung geben. Diese Einschränkung gilt für den Verbindungsmodus; die HCX-Management-Appliance wird nur in der primären vCenter-Instanz installiert. HCX unterstützt bis zu fünf registrierte vCenter-Instanzen im Verbindungsmodus.
+Die Architekturplanung umfasst die zu migrierenden VMs, die Netze, die für den virtuellen Datenverkehr verwendet werden, und die Netze, die erweitert werden sollen.  
+
+Für die Bereitstellungskomponenten gelten die folgenden Mindest- und Höchstwerte:
+* vSphere vCenter. Die HCX-Manager-Appliance muss in der vCenter-Instanz installiert sein, die die Hybrid-Services benötigt. Pro vCenter-Instanz kann es nur eine HCX-Bereitstellung geben. Diese Einschränkung gilt für den Verbindungsmodus. Die HCX-Management-Appliance wird nur in der primären vCenter-Instanz installiert. HCX unterstützt bis zu fünf registrierte vCenter-Instanzen im Verbindungsmodus.
 * Cloud-Registrierungen. Die maximale Anzahl an Cloud-Endpunkten beträgt zehn. Um die Anzahl der Endpunkte zu ermitteln, überwacht Hybrid-Cloud-Services die vCenter-Verbindungen in die Cloud.
 
 ### Maximale Anzahl von Migrationen und Netzerweiterungen
@@ -170,7 +172,7 @@ Die Migration von virtuellen Maschinen beruht auf der Kombination aus Cloud-Gate
 Der Network Extension Service wird vom Layer-2-Konzentrator (L2C) bereitgestellt. Er erweitert ein Layer-2-Netz vom lokalen vSphere-Rechenzentrum hin zu IBM Cloud und ermöglicht eine nahtlose Migration zwischen dem Rechenzentrum und der Cloud. Der Layer-2-Konzentrator ist erforderlich, um das lokale Netz nach IBM zu erweitern.
 
 Die Layer-2-Konzentrator-Appliance besitzt zwei Schnittstellen:
-* Interne Trunkschnittstelle: Bearbeitet den virtuellen Maschinen-Datenverkehr lokal für die erweiterten Netze mithilfe einer translationalen Brückenzuordnung zu einem entsprechenden hin zu IBM Cloud erweiterten Netz.
+* Interne Trunk-Schnittstelle: Bearbeitet den Datenverkehr der virtuellen Maschinen lokal für die erweiterten Netze mithilfe einer translationalen Brückenzuordnung zu einem entsprechenden erweiterten Netz in IBM Cloud.
 * Uplink-Schnittstelle: HCX verwendet diese Schnittstelle, um eingekapselten Overlay-Datenverkehr an und von IBM Cloud zu senden. Über diese Schnittstelle werden Anwendungsdaten gesendet.
 
 ![L2-Konzentrator als Quelle](../../images/source_l2_concentrator.svg "L2-Konzentrator als Quelle")
@@ -178,11 +180,11 @@ Die Layer-2-Konzentrator-Appliance besitzt zwei Schnittstellen:
 ### Nur Migration
 {: #hcx-archi-source-mig-only}
 
-Die Minimalkonfiguration für die Migration erfordert nur den HCX-Manager und die Cloud-Gateway-Appliances. Es ist möglich, virtuelle Maschinen ohne Netzerweiterung zu migrieren. In diesem Fall ruft die virtuelle Maschine nach der Migration eine neue IP-Adresse mithilfe des Service für die Gastanpassung ab.
+Die Minimalkonfiguration für die Migration erfordert nur den HCX-Manager und die Cloud-Gateway-Appliances. Es ist möglich, virtuelle Maschinen ohne Netzerweiterung zu migrieren. In diesem Fall wird von der virtuellen Maschine nach der Migration eine neue IP-Adresse mithilfe des Service für die Gastanpassung abgerufen.
 
-Um ein Netzwerk zu erweitern und die ursprüngliche IP-Adresse zu verwalten, muss ein verteilter virtueller Switch in der lokalen vSphere vCenter-Instanz konfiguriert werden.
+Um ein Netz zu erweitern und die ursprüngliche IP-Adresse zu verwalten, muss ein verteilter virtueller Switch in der lokalen vSphere vCenter-Instanz konfiguriert werden.
 
-Das WAN-Optimierungsprogramm kann die Geschwindigkeit in den beschriebenen Situationen verbessern. Die Konfiguration des Cloud-Gateways für die Verwendung einer Hochgeschwindigkeitsverbindung (z. B. eine Direktverbindung) erhöht die Geschwindigkeit, indem eine höhere Bandbreitenverbindung für WAN-optimierten Datenverkehr geschaffen wird.
+Durch eine WAN-Optimierung kann die Geschwindigkeit in den beschriebenen Situationen verbessert werden. Die Konfiguration des Cloud-Gateways für die Verwendung einer Hochgeschwindigkeitsverbindung (zum Beispiel eine Direktverbindung) erhöht die Geschwindigkeit, da eine höhere Bandbreitenverbindung für WAN-optimierten Datenverkehr geschaffen wird.
 
 Die Migration von virtuellen Maschinen für erweiterte Netzen in IBM Cloud ist vorteilhaft, da dadurch Ausfallzeit reduziert wird und die Konfiguration auf der virtuellen Maschine nicht geändert wird. Die virtuelle Maschine kann die IP-Adressen, MAC-Adressen, Computernamen und VM-Namen beibehalten. Durch das Beibehalten dieser Eigenschaften wird die Migration auf IBM Cloud erheblich vereinfacht und es werden einfache Rückgaben an das lokale Rechenzentrum ermöglicht. Die Funktion "Network Extension" erfordert einen verteilten vSphere-Switch, der mit vSphere Enterprise Plus Edition bereitgestellt wird.
 
@@ -224,9 +226,9 @@ Um das Tromboning zu verhindern, verwendet HCX intelligentes Routenmanagement un
 
 Im Diagramm befinden sich die `N*a`-Komponenten auf der linken Seite im lokalen Rechenzentrum, die `N*b`-Komponenten auf der rechten Seite hingegen in der Cloud.
 
-R1 ist das Standard-Gateway für N1-b. Deshalb muss N1-b zu R1 zurückkehren, damit der Datenverkehr durch R2 geleitet wird. Um ein asymmetrisches Routing zu verhindern, fügt HCX Hostrouten in das NSX-Overlay der IBM Cloud VCS-Bereitstellung ein. Wenn die virtuelle Maschine in der Cloud neu erstellt oder mit niedriger Ausfallzeit migriert wurde, wird die Hostroute sofort eingefügt.
+R1 ist das Standardgateway für N1-b. Deshalb muss N1-b zu R1 zurückkehren, damit der Datenverkehr durch R2 geleitet wird. Um ein asymmetrisches Routing zu verhindern, fügt HCX Hostrouten in das NSX-Overlay der IBM Cloud VCS-Bereitstellung ein. Wenn die virtuelle Maschine in der Cloud neu erstellt oder mit niedriger Ausfallzeit migriert wurde, wird die Hostroute sofort eingefügt.
 
-Wurde die virtuelle Maschine mit vMotion übertragen, wird die Route erst dann eingefügt, wenn die virtuelle Maschine neu gestartet wird. Indem Sie bis nach dem Warmstart warten, stellen Sie sicher, dass die lokalen statusabhängigen Einheiten die vorhandene Sitzung weiterhin bedienen, bis die virtuelle Maschine neu gestartet wurde. Nach dem Warmstart sind die Routing-Informationen lokal und in der Cloud konsistent.
+Wurde die virtuelle Maschine mit vMotion übertragen, wird die Route erst dann eingefügt, wenn die virtuelle Maschine neu gestartet wird. Wenn Sie bis nach dem Warmstart warten, stellen Sie sicher, dass die lokalen statusabhängigen Einheiten die vorhandene Sitzung weiterhin bedienen, bis die virtuelle Maschine neu gestartet wurde. Nach dem Neustart sind die Routing-Informationen lokal und in der Cloud konsistent.
 
 Das heißt, R1 kann Routing verwenden, um eine bestimmte virtuelle Maschine über R2 zu erreichen, anstatt das lokal verbundene erweiterte Netz zu verwenden. R2 ist vollständiger Eigner des Pfades für andere Netze, die virtuelle Maschinen mit aktiviertem Proximity Routing erreichen sollen.
 
@@ -239,9 +241,9 @@ Das heißt, R1 kann Routing verwenden, um eine bestimmte virtuelle Maschine übe
 * Standardmäßig ist die Option **MAC-Adresse beibehalten** aktiviert, wenn sich die virtuelle Quellenmaschine in einem erweiterten Netz befindet, und inaktiviert, wenn das Netz nicht erweitert wurde. Wenn die MAC-Adresse nicht beibehalten wird, ruft die virtuelle Maschine nach Abschluss der Migration eine neue Adresse ab. Die Entscheidung, eine MAC-Adresse beizubehalten oder eine neue anzufordern, kann sich auf den Migrationsprozess und den Netzdatenfluss nach der Migration auswirken.
 * Das Beibehalten der MAC-Adresse kann aus folgenden Gründen erforderlich sein:
   * Lizenzen auf Basis der MAC-Adresse: Manche Softwareprodukte paaren die Lizenz mit der MAC-Adresse der VM. Wenn Sie die MAC-Adresse einer virtuellen Maschine ändern, wird die Lizenz ungültig.
-  * Linux-NIC-Reihenfolge: Unter Linux kann sich die NIC-Ethernet-Einheitennummer nach einem Warmstart ändern, wenn die MAC-Adresse einer virtuellen Maschine geändert wurde. Eine Änderung der Einheitennummer kann die Reihenfolge der NIC-Darstellung im Betriebssystem ändern, was zur Störung von Anwendungen oder Scripts führen könnte, die von der NIC-Reihenfolge abhängig sind.
+  * Linux-NIC-Reihenfolge: Unter Linux kann sich die NIC-Ethernet-Einheitennummer nach einem Neustart ändern, wenn die MAC-Adresse einer virtuellen Maschine geändert wurde. Eine Änderung der Einheitennummer kann die Reihenfolge der NIC-Darstellung im Betriebssystem ändern, was zur Störung von Anwendungen oder Scripts führen könnte, die von der NIC-Reihenfolge abhängig sind.
   * Weniger Ausfallzeiten, wenn das Netz erweitert wird: Wenn die virtuelle Maschine über ein erweitertes Netz migriert wird, minimiert die Option **MAC-Adresse beibehalten** die Ausfallzeit, da dem Netz keine neue MAC-Adresse angegeben werden muss.
-  * Das Kontrollkästchen befindet sich während der Migrationsoperation auf der Seite für die Netzauswahl.
+  * Das Kontrollkästchen befindet sich während der Migrationsoperation auf der Seite **Zielnetz auswählen**.
 
 ### Migration von Sicherheitsrichtlinien
 {: #hcx-archi-source-sec-policy-mig}

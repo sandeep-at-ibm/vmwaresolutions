@@ -58,7 +58,7 @@ Weitere Informationen zu VLANs finden Sie im Abschnitt zum _physischen Netzdesig
 ## Design des physischen Speichers
 {: #storage-infra-design-phys-storage-design}
 
-In folgenden Abschnitt ist die Konfiguration der angehängten Speichereinheit beschrieben, die in {{site.data.keyword.cloud_notm}} vorhanden ist. Die angehängte Speichereinheit ergänzt die vorhandene vCenter-Server-Lösung. Demzufolge werden lokal angeschlossene Platteneinheiten, die interne Komponenten der physischen Hosts sind, nicht dargestellt.
+In folgenden Abschnitt ist die Konfiguration der angehängten Speichereinheit beschrieben, die in {{site.data.keyword.cloud_notm}} vorhanden ist. Die angehängte Speichereinheit ergänzt die vorhandene vCenter Server-Lösung. Demzufolge werden lokal angeschlossene Platteneinheiten, die interne Komponenten der physischen Hosts sind, nicht dargestellt.
 
 ## Leistung des angehängten Speichers
 {: #storage-infra-design-perf}

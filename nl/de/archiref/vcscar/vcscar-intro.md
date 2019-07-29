@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-06-03"
 
 subcollection: vmware-solutions
 
@@ -17,7 +17,6 @@ subcollection: vmware-solutions
 Die hier vorgestellte Referenzarchitektur ist ein so genanntes "Concept Car", also ein Mechanismus, mit dem in einer Art Designstudie Technologien zur Lösung von realen Problemen herausgestellt und demonstriert werden. Ein Concept Car stellt in keinerlei Hinsicht einen heute einsatzbereiten und verfügbaren Service dar.
 
 Die Referenzarchitektur stellt außerdem die folgenden Informationen bereit:
-
 -   Allgemeine Sprache für die unterschiedlichen Beteiligten
 -   Konsistente Implementierung der Technologie zur Problemlösung
 -   Unterstützte Validierung von Lösungen anhand einer bewährten Referenzarchitektur
@@ -26,13 +25,15 @@ Die Referenzarchitektur stellt außerdem die folgenden Informationen bereit:
 ## Informationen zu Acme Skate Advisor
 {: #vcscar-intro-about}
 
-Es soll auf realistische Weise eine Interaktion zwischen der künstlichen Intelligenz von Watson und maschinellem Lernen veranschaulicht und dabei auch die Skateboarding-Szene eingehender erkundet werden. Die verfügbaren Services und die Cloudinfrastruktur werden durch die Demonstration der technischen Möglichkeiten und Weiterentwicklungen in diesem Bereich auf verständliche Weise erläutert. Die Implementierung der Designstudie erweitert die Demoanwendung "Acme Skateboard" durch das Tool "Skate Advisor". Mit dem Tool "Skate Advisor" können sich Benutzer durch eine Watson-gesteuerte Engine über Skateboard-Tricks austauschen. Bei den folgenden Zitaten handelt es sich um einen Beispieldialog:
+Es soll auf realistische Weise eine Interaktion zwischen der künstlichen Intelligenz von Watson und maschinellem Lernen veranschaulicht und dabei auch die Skateboarding-Szene eingehender erkundet werden. Die verfügbaren Services und die Cloudinfrastruktur werden durch die Demonstration der technischen Möglichkeiten und Weiterentwicklungen in diesem Bereich auf verständliche Weise erläutert.
+
+Die Implementierung der Designstudie erweitert die Demoanwendung "Acme Skateboard" durch das Tool "Skate Advisor". Mit dem Tool "Skate Advisor" können sich Benutzer durch eine Watson-gesteuerte Engine über Skateboard-Tricks austauschen. Bei den folgenden Zitaten handelt es sich um einen Beispieldialog:
 
 -   Watson, zeig mir Kombinationen des Tricks "Casper"
 -   Watson, zeig mir öffentliche Spots, an denen man Tricks ausführen kann
 -   Watson, zeig mir ein Video des Tricks "Casper"
 
-Acme Skate Advisor nutzt den Watson Discovery-Service zum Aufnehmen von Artikeln, Videos, Blogs und anderem Internetbasierten Inhalt für die Erstellung einer Lerndatenbank mit Tricks, die von der Anwendung abgefragt werden kann.
+Acme Skate Advisor nutzt den Watson Discovery-Service zum Aufnehmen von Artikeln, Videos, Blogs und anderem internetbasierten Inhalt für die Erstellung einer Lerndatenbank mit Tricks, die von der Anwendung abgefragt werden kann.
 
 Die Anwendung "Skate Advisor" wird ebenfalls auf der Anwendungsmodernisierungsplattform implementiert, die containerbasierte Services über {{site.data.keyword.icpfull_notm}} bereitstellt, das auf einer {{site.data.keyword.cloud_notm}} for VMware Services-Plattform gehostet wird.
 
@@ -79,7 +80,7 @@ Die Anwendungsmodernisierung bietet folgende Vorteile:
 - Sie reduziert die Kosten für die Erstellung neuer Features.
 - Sie erweitert zeitnah die bereitgestellte Kapazität.
 
-IBM geht davon aus, dass 70 Prozent der eingesetzten privaten Clouds durch die Notwendigkeit der Modernisierung von Anwendungsumgebungen motiviert sind. Die meisten Unternehmen verfolgen bei der Anwendungsmodernisierung jedoch einen stufenweisen Ansatz, was Hybridumgebungen und Umgebungen mit mehreren Clouds erforderlich macht. Die Szenarien zeichnen sich durch folgende Merkmale aus:
+IBM geht davon aus, dass 70 % der eingesetzten privaten Clouds durch die Notwendigkeit der Modernisierung von Anwendungsumgebungen motiviert sind. Die meisten Unternehmen verfolgen bei der Anwendungsmodernisierung jedoch einen stufenweisen Ansatz, was Hybridumgebungen und Umgebungen mit mehreren Clouds erforderlich macht. Die Szenarien zeichnen sich durch folgende Merkmale aus:
 
 - Komplexe und monolithische traditionelle Anwendungen, die in der Regel auf Mainframes oder UNIX-Systemen ausgeführt werden, werden weiterhin lokal betrieben.
 - x86-Umgebungen, die für Systems of Record (SoR) verwendet werden, und Anwendungen, die sicherheitskritische und regulierte Workloads beinhalten, werden in eine virtualisierte Infrastruktur oder in eine private Cloud verlegt.
@@ -90,7 +91,6 @@ IBM geht davon aus, dass 70 Prozent der eingesetzten privaten Clouds durch die N
 Ein gängiges Vorgehen ist beispielsweise, die Front-End-SoE-Anwendungen als Container mit Datenbanken bereitzustellen und traditionelle Middleware auf VMs in einer private Cloud bereitzustellen.
 
 Da IT-Infrastruktur und Geschäftsanforderungen für jeden Einzelfall unterschiedlich sein können, muss ein Modernisierungsansatz die folgenden Prioritäten umsetzen:
-
 * Schneller geschäftlicher Nutzen
 * Minimale Bereitstellungszeit
 * Geringe Risiken

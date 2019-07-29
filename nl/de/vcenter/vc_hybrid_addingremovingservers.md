@@ -4,7 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-18"
+lastupdated: "2019-06-18"
+
+keywords: vCenter Server Hybridity add host, add server vCenter Server Hybridity, remove host vCenter Server Hybridity
 
 subcollection: vmware-solutions
 
@@ -19,6 +21,8 @@ subcollection: vmware-solutions
 {: #vc_hybrid_addingremovingservers}
 
 Sie können die Kapazität Ihrer VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle-Instanz entsprechend Ihren Geschäftsanforderungen erweitern oder verringern, indem Sie ESXi-Server hinzufügen oder entfernen.
+
+Ab dem Release V3.1 können Sie einem vorhandenen Cluster neue ESXi-Server hinzufügen, indem Sie entweder eine vorhandene Konfiguration oder eine alternative Konfiguration als die vorhandenen Hosts im Cluster auswählen. Vorhandene Konfigurationen stehen zur sofortigen Auswahl bereit, wenn Sie einen neuen Server bestellen. Zur Vermeidung von Leistungs- und Stabilitätsproblemen wird empfohlen, für die Cluster dieselben oder ähnliche Konfiguration für CPU, RAM und Speicher zu verwenden. Diese Funktion ist für Hardwareaktualisierungen innerhalb desselben Clusters nützlich. Ein Cluster kann nur einen Speichertyp aufweisen.
 
 Ab dem Release V2.9 können Sie einem Cluster neue ESXi-Server hinzufügen, während sich der Cluster im Wartungsmodus befindet. Darüber hinaus können Sie ESXi-Server über mehrere Cluster hinweg gleichzeitig hinzufügen oder entfernen. Die folgenden gleichzeitigen Operationen sind verfügbar:
 
@@ -47,8 +51,18 @@ Da Ihr erster Cluster vSAN als Speicher verwendet, kann das Hinzufügen einzelne
 4. Klicken Sie in der Tabelle **CLUSTER** auf den Cluster, zu dem ESXi-Server hinzugefügt werden sollen.
 5. Klicken Sie in der Tabelle **ESXi-Server** auf **Hinzufügen**.
 6. Geben Sie im Fenster **Server hinzufügen** die Anzahl der Server an, die hinzugefügt werden sollen.
-7. Wählen Sie optional das Kontrollkästchen zum Hinzufügen von Servern während des Wartungsmodus aus.
-8. Überprüfen Sie die geschätzten Kosten und klicken Sie auf **Hinzufügen**.
+7. Wählen Sie optional das Kontrollkästchen zum Hinzufügen von Servern während des Wartungsmodus aus. Das Kontrollkästchen ist standardmäßig ausgewählt.
+
+   Wenn Sie den neuen ESXi-Server bereitstellen, werden die virtuellen Maschinen (VMs) sofort auf die neuen Server migriert, falls Sie das Kontrollkästchen **Wartungsmodus** nicht auswählen. Sie empfangen die Bestätigungsnachricht erst, wenn die Migration beginnt.
+{:important}
+
+8. Führen Sie die Bare-Metal-Konfiguration durch.
+   * Wählen Sie eine Konfiguration aus den vorhandenen Hosts im Cluster aus.
+   * Wählen Sie eine neue {{site.data.keyword.baremetal_short_sing}}-Konfiguration aus und geben Sie anschließend das CPU-Modell und die RAM-Größe an.
+9. Führen Sie die Speicherkonfiguration durch. Geben Sie die Plattentypen für die Kapazitäts- und Cacheplatten, die Anzahl der Platten und die vSAN-Lizenzedition an. Falls Sie mehr Speicher benötigen, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen.
+10. Überprüfen Sie die geschätzten Kosten und klicken Sie auf **Hinzufügen**.
+
+  Sie können die bereitgestellten Ressourcen auch durch Klicken auf **Zur Schätzung hinzufügen** zum {{site.data.keyword.cloud_notm}}-Schätztool hinzufügen. Dies ist nützlich, wenn Sie die Kosten für die ausgewählten {{site.data.keyword.vmwaresolutions_short}}-Ressourcen zusammen mit anderen {{site.data.keyword.cloud_notm}}-Ressourcen schätzen möchten, die Sie für den Kauf in Betracht ziehen könnten.
 
 ### Ergebnisse nach dem Hinzufügen von ESXi-Servern
 {: #vc_hybrid_addingremovingservers-adding-results}
