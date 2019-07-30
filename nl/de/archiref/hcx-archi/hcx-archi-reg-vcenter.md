@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-06-27"
 
 subcollection: vmware-solutions
 
@@ -23,7 +23,7 @@ Damit die virtuelle Hybrid-Cloud-Services-Appliance registriert werden kann, mus
 ## Vorgehensweise zum Registrieren von HCX Manager bei vCenter
 {: #hcx-archi-reg-vcenter-proc-register}
 
-1. Melden Sie sich bei der virtuellen Hybrid-Cloud-Services-Appliance an.
+1. Melden Sie sich an der virtuellen Hybrid-Cloud-Services-Appliance an. Beispiel: `https:My-HCX-Manager:9443/`.
 2. Klicken Sie auf die Kachel **Einstellungen verwalten**.
   1. Wählen Sie im linken Teilfenster unter **Systeme konfigurieren** die Option "vCenter" aus.
   2. Klicken Sie oben rechts auf **vCenter hinzufügen**.

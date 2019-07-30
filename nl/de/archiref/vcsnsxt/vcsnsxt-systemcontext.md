@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-06-21"
 
 subcollection: vmware-solutions
 
@@ -32,10 +32,10 @@ Im Systemkontextdiagramm sind die folgenden Akteure angegeben.
 
 Tabelle 1. Akteure
 
-Akteur | Beschreibung 
+Akteur  |  Beschreibung
 ---|---
 Systemadministrator |Die Systemadministratoren sind die Unternehmensressourcen für VMware, die vCenter und das HCX-Plug-in nutzen. Sie ermitteln Kandidaten für die Migration, vergrößern Netze, migrieren virtuelle Maschinen (VMs) und verwalten NSX-V. Mithilfe der {{site.data.keyword.cloud_notm}}-Konsole stellen sie VMware vCenter Server-Instanzen bereit und skalieren die Kapazität.
-Entwickler	| Die Entwickler sind die qualifizierten Unternehmensressourcen für Container, die unter Verwendung der Konsolen und APIs von {{site.data.keyword.containerlong_notm}}, {{site.data.keyword.icpfull_notm}} und CAM Container erstellen und verwalten. Sie richten die neuen Services im Rahmen der Anwendungsmodernisierung ein.
+Entwickler | Die Entwickler sind die qualifizierten Unternehmensressourcen für Container, die unter Verwendung der Konsolen und APIs von {{site.data.keyword.containerlong_notm}}, {{site.data.keyword.icpfull_notm}} und CAM Container erstellen und verwalten. Sie richten die neuen Services im Rahmen der Anwendungsmodernisierung ein.
 Unternehmensbenutzer | Diese Unternehmensressource benötigt Netzzugriff auf die Anwendungen, um Geschäftsprozesse wie die Aktualisierung von Inhalten auszuführen.
 Kunde | Der Kunde ist ein externer Akteur, der Services aus dem Unternehmen nutzen möchte. Bei Acme Skateboards ist der Kunde ein Skater, der Skateboarding-Produkte erwerben möchte. Der Kunde benötigt einen sicheren Internetzugriff auf den Katalog.
 {{site.data.keyword.containerlong_notm}} | Dies ist eine IBM Ressource, die den {{site.data.keyword.containerlong_notm}}-Masterknoten des Service verwaltet.
@@ -53,9 +53,9 @@ vCenter | vCenter ist die primäre Schnittstelle für den Systemadministrator zu
 Lokale VMs | Die lokalen VMs hosten die Anwendungen, die in die Cloud migriert werden. Sie werden zunächst als VMs migriert und anschließend im Anwendungsmodernisierungprozess aus VMs in Container migriert.
 Cloud-VMs | Cloud-VMs hosten Anwendungen, die aus lokalen VMs migriert wurden. Sie kommunizieren mit lokalen Anwendungen über das erweiterte L2-Netz. Bei dieser Referenzarchitektur und diesem Beispiel für Acme Skateboards ist eine der Cloud-VMs ein Datenbankserver, der Teil der Workload der Onlinepräsenz ist.
 NSX-V | NSX-V auf vCenter Server stellt das vom System definierte Overlay-Netz bereit, das vom Systemadministrator verwaltet wird. Das Overlay-Netz ist das Ziel für erweiterte HCX-Netze, da es von den VMs ausgehenden Datenverkehr für {{site.data.keyword.icpfull_notm}} abwickelt. NSX-V stellt die Referenzarchitektur mit Funktionen wie Bereitstellung, Rekonfiguration und Löschung von bedarfsgesteuerten virtuellen Netzen und Mikrosegmentierungsservices in VMware unter Verwendung von vSphere-Switches (vSphere) zur Verfügung. Weitere Informationen enthält der Abschnitt [Übersicht über NSX-V](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv).
-CAM | {{site.data.keyword.cloud_notm}} Automation Manager (CAM) wird in {{site.data.keyword.icpfull_notm}} ausgeführt und bietet eine zentrale Bereitstellungsposition für VM-basierte Workloads sowie Kubernetes-Workloads, die durch die Verwendung von Vorlagen ermöglicht wird. Durch CAM erhält ein Entwickler die folgenden Möglichkeiten: <br> - Workloads in vCenter, {{site.data.keyword.icpfull_notm}} oder {{site.data.keyword.containerlong_notm}} bereitstellen. <br> - Services erstellen und orchestrieren, die sowohl aus VMs als auch aus Containern bestehen. <br> - DevOps-Toolchains und Day-2-ITSM-Lösung integrieren.
+CAM | {{site.data.keyword.cloud_notm}} Automation Manager (CAM) wird in {{site.data.keyword.icpfull_notm}} ausgeführt und bietet eine zentrale Bereitstellungsposition für VM-basierte Workloads sowie Kubernetes-Workloads, die durch die Verwendung von Vorlagen ermöglicht wird. Durch CAM erhält ein Entwickler die folgenden Möglichkeiten: <br> - Workloads in vCenter, {{site.data.keyword.icpfull_notm}} oder {{site.data.keyword.containerlong_notm}} bereitstellen.<br> - Services erstellen und orchestrieren, die sowohl aus VMs als auch aus Containern bestehen. <br> - DevOps-Toolchains und Day-2-ITSM-Lösung integrieren.
 Containerisierte Anwendungen | Die Anwendungen, die den Anwendungsmodernisierungsprozess durchlaufen haben und jetzt als Container ausgeführt werden. Bei dieser Referenzarchitektur und in diesem Beispiel für Acme Skateboards ist eine der containerisierten Anwendungen ein Web-Server, der Teil der Workload für die Onlinepräsenz ist.
-Watson | Für diese Referenzarchitektur und in diesem Beispiel für Acme Skateboards stellt Watson den AI-Service dar, der in der Concept-Car-Architektur verwendet wird.
+Watson | Für diese Referenzarchitektur und in diesem Beispiel für Acme Skateboards stellt Watson den AI-Service dar, der in der _Concept-Car-Architektur_ verwendet wird.
 
 ## Zugehörige Links
 {: #vcsnsxt-systemcontext-related}

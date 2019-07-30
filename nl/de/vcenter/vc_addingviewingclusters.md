@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server add cluster, view cluster vCenter Server, delete cluster vCenter Server
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -34,7 +35,7 @@ Die Funktion zum Löschen von Clustern steht nur für Instanzen zur Verfügung, 
 {: #vc_addingviewingclusters-before-add}
 
 * Fügen Sie Cluster nach Möglichkeit über die {{site.data.keyword.vmwaresolutions_full}}-Konsole hinzu, da Änderungen, die Sie am VMware vSphere Web Client vornehmen, nicht mit der {{site.data.keyword.vmwaresolutions_short}}-Konsole synchronisiert werden. Fügen Sie daher Cluster nur für On-Premise-Cluster oder Cluster hinzu, die Sie nicht in der {{site.data.keyword.vmwaresolutions_short}}-Konsole verwalten können/möchten.
-* Für Instanzen, die in (oder einem Upgrade auf) V2.5 und höher implementiert wurden, legt die Anzahl der Cluster, Hosts und VMs die maximale Begrenzung für die Anzahl der Cluster fest, die Sie hinzufügen können. Sie müssen die Richtlinien und Grenzwerte für die VMware-Dimensionierung für Ihre Implementierung beibehalten. Weitere Informationen zu maximalen Grenzwerten finden Sie in [VMware Configuration Maximums](https://configmax.vmware.com/home){:new_window}.
+* Für Instanzen, die in (oder einem Upgrade auf) V2.5 und höher implementiert wurden, legt die Anzahl der Cluster, Hosts und VMs die maximale Begrenzung für die Anzahl der Cluster fest, die Sie hinzufügen können. Sie müssen die Richtlinien und Grenzwerte für die VMware-Dimensionierung für Ihre Implementierung beibehalten. Weitere Informationen zu maximalen Grenzwerten finden Sie in [VMware Configuration Maximums](https://configmax.vmware.com/home){:external}.
 * Für Instanzen, die in V2.2, 2.3 oder 2.4, bereitgestellt (oder für die Upgrades auf diese Releases durchgeführt) wurden, können Sie bis zu 10 Cluster hinzufügen.
 * Für Instanzen, die in V2.1 oder früher bereitgestellt wurden, können Sie bis zu fünf Cluster hinzufügen.
 
@@ -69,13 +70,12 @@ Sie können **Skylake**, **SAP-zertifiziert** oder **Broadwell** auswählen. Die
 
 Für die Einstellung **Skylake** stehen Ihnen Optionen für **CPU-Modell** und **RAM** zur Verfügung. Die verfügbaren Optionen können je nach der Version, in der Ihre Instanz ursprünglich bereitgestellt wurde, variieren.
 
-Tabelle 1. Optionen für Skylake {{site.data.keyword.baremetal_short}}
-
 | CPU-Modelloptionen        | RAM-Optionen       |
 |:------------- |:------------- |
 | Dual Intel Xeon Silver 4110-Prozessor / 16 Kerne insgesamt, 2,1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon Gold 5120-Prozessor / 28 Kerne insgesamt, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+{: caption="Tabelle 1. Optionen für Skylake {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 #### SAP-zertifiziert
 {: #vc_addingviewingclusters-adding-sap}
@@ -96,12 +96,11 @@ Wählen Sie gemäß Ihren Anforderungen eine Bare Metal Server-Konfiguration aus
 
 Für die Einstellung **Broadwell** steht eine Reihe von Optionen für **CPU-Modell** und **RAM** zur Verfügung. Die verfügbaren Optionen können je nach der Version, in der Ihre Instanz ursprünglich bereitgestellt wurde, variieren.
 
-Tabelle 2. Optionen für Broadwell {{site.data.keyword.baremetal_short}}
-
 | CPU-Modelloptionen        | RAM-Optionen       |
 |:------------- |:------------- |
 | Quad Intel Xeon E7-4820 v4 / 40 Kerne insgesamt, 1,9 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 Kerne insgesamt, 2,2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+{: caption="Tabelle 2. Optionen für Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 #### Bare Metal Server-Anzahl
 {: #vc_addingviewingclusters-adding-bare-metal-number}
@@ -145,14 +144,15 @@ Die Anzahl der gemeinsam genutzten Dateiressourcen muss zwischen 1 und 32 liegen
 * **Leistung**: Wählen Sie basierend auf Ihren Workloadanforderungen die pro GB geltende Anzahl von E/A-Operationen pro Sekunde aus.
 * **NFS hinzufügen**: Wählen Sie diese Option aus, um einzelne gemeinsam genutzte Dateiressourcen mit anderen Konfigurationseinstellungen hinzuzufügen.
 
-Tabelle 3. Optionen für die NFS-Leistungsstufe
+Details der Leistungsstufe:
 
 | Option        | Details       |
-  |:------------- |:------------- |
-  | 0,25 IOPS/GB | Diese Option ist für Workloads vorgesehen, die nicht häufig verwendet werden. Zu den Beispielanwendungen gehören: durch Vaulting geschützte Daten, das Hosting großer Datenbanken mit übernommenen Daten oder Images von virtuellen Platten des virtuellen Speichersystems als Sicherung. |
-  | 2 IOPS/GB | Diese Option ist für die meisten allgemeinen Workloads geeignet. Anwendungsbeispiele sind das Hosting von kompakten Datenbanken, die Sicherung von Webanwendungen oder Plattenimages von virtuellen Maschinen (VM) für einen Hypervisor. |
-  | 4 IOPS/GB | Diese Option ist für Workloads mit höherer Intensität geeignet, die zu einem bestimmten Zeitpunkt einen hohen Prozentsatz an aktiven Daten aufweisen. Anwendungsbeispiele sind transaktionsorientierte Datenbanken. |
-  | 10 IOPS/GB | Diese Option ist für die aufwändigsten Workloadtypen wie beispielsweise die Analyse gedacht. Anwendungsbeispiele sind Hochtransaktionsdatenbanken und andere leistungskritische Datenbanken. Diese Leistungsstufe ist auf eine maximale Kapazität von 4 TB pro gemeinsam genutzte Dateiressource begrenzt. |
+|:------------- |:------------- |
+| 0,25 IOPS/GB | Diese Option ist für Workloads vorgesehen, die nicht häufig verwendet werden. Zu den Beispielanwendungen gehören: durch Vaulting geschützte Daten, das Hosting großer Datenbanken mit übernommenen Daten oder Images von virtuellen Platten des virtuellen Speichersystems als Sicherung. |
+| 2 IOPS/GB | Diese Option ist für die meisten allgemeinen Workloads geeignet. Anwendungsbeispiele sind das Hosting von kompakten Datenbanken, die Sicherung von Webanwendungen oder Plattenimages von virtuellen Maschinen (VM) für einen Hypervisor. |
+| 4 IOPS/GB | Diese Option ist für Workloads mit höherer Intensität geeignet, die zu einem bestimmten Zeitpunkt einen hohen Prozentsatz an aktiven Daten aufweisen. Anwendungsbeispiele sind transaktionsorientierte Datenbanken. |
+| 10 IOPS/GB | Diese Option ist für die aufwändigsten Workloadtypen wie beispielsweise die Analyse gedacht. Anwendungsbeispiele sind Hochtransaktionsdatenbanken und andere leistungskritische Datenbanken. Diese Leistungsstufe ist auf eine maximale Kapazität von 4 TB pro gemeinsam genutzte Dateiressource begrenzt. |
+{: caption="Tabelle 3. Optionen für die NFS-Leistungsstufe" caption-side="top"}
 
 ### Lokale Platten
 {: #vc_addingviewingclusters-adding-local-disks}
@@ -250,9 +250,9 @@ Der Clustername kann nicht geändert werden. Wenn Sie den Clusternamen ändern, 
         <dd class="dd">Der Cluster wurde gelöscht.</dd>
     </dl>
   * **Aktionen**: Klicken Sie auf das Symbol **Löschen**, um den Cluster zu löschen.
-4. Klicken Sie auf einen Clusternamen, um die Details zum ESXi-Server, zum Speicher und zur Netzschnittstelle anzuzeigen:
+4. Klicken Sie auf einen Clusternamen, um die Details zum ESXi-Server, zum Speicher und zur Netzschnittstelle anzuzeigen.
 
-Tabelle 4. Details zum ESXi-Server
+Details des ESXi-Servers anzeigen:
 
 | Element        | Beschreibung       |  
 |:------------- |:------------- |
@@ -261,10 +261,9 @@ Tabelle 4. Details zum ESXi-Server
 | Berechtigungsnachweise | Der Benutzername und das Kennwort für den Zugriff auf den ESXi-Server. |
 | Private IP | Die private IP-Adresse des ESXi-Servers. |
 | Status | Der Status des ESXi-Servers, der einen der folgenden Werte aufweisen kann:<br> **Hinzugefügt** Der ESXi-Server wurde hinzugefügt und kann verwendet werden.<br> **Wird hinzugefügt** Der ESXi-Server wird gerade hinzugefügt.<br> **Wird gelöscht** Der ESXi-Server wird gerade gelöscht. |
+{: caption="Tabelle 4. Details zum ESXi-Server" caption-side="top"}
 
-Erweitern Sie den ESXi-Server, um weitere Details anzuzeigen.
-
-Tabelle 5. Weitere Details des ESXi-Servers
+ESXi-Server zum Anzeigen weiterer Details erweitern:
 
 | Element        | Beschreibung       |  
 |:------------- |:------------- |
@@ -272,9 +271,10 @@ Tabelle 5. Weitere Details des ESXi-Servers
 | Speicher | Die Gesamtspeichergröße der ESXi-Server im Cluster. |
 | Angepasste vSAN-Platten | Die Anzahl der vSAN-Platten im Cluster, einschließlich des Plattentyps und der Kapazität. |
 | vSAN-Cacheplatten | Der Typ und die Anzahl der vSAN-Cacheplatten. |
-| Netzbetrieb | Die Einstellungen für die Aktivierung der Netzschnittstellenkarte (NIC) entweder des öffentlichen und privaten Netzes oder nur des privaten Netzes. |
+| Netzbetrieb |Die Einstellungen für die Aktivierung der Netzschnittstellenkarte (NIC) entweder des öffentlichen und privaten Netzes oder nur des privaten Netzes. |
+{: caption="Tabelle 5. Weitere Details des ESXi-Servers" caption-side="top"}
 
-Tabelle 6. Speicherdetails
+Speicherdetails anzeigen:
 
 | Element        | Beschreibung       |  
 |:------------- |:------------- |
@@ -282,8 +282,9 @@ Tabelle 6. Speicherdetails
 | Größe | Die Kapazität des Speichers. |
 | IOPS/GB | Die Leistungsstufe des Speichers. |
 | NFS-Protokoll | Die NFS-Version des Speichers. |
+{: caption="Tabelle 6. Speicherdetails" caption-side="top"}
 
-Tabelle 7. Netzschnittstelle - VLAN-Details
+Details der Netzschnittstelle anzeigen:
 
 | Element        | Beschreibung       |  
 |:------------- |:------------- |
@@ -291,24 +292,27 @@ Tabelle 7. Netzschnittstelle - VLAN-Details
 | Beschreibung | Die Beschreibung des VLAN.  |
 | Standort | Der Standort des Rechenzentrums. |
 | Primäre Route | Die primäre Route des VLAN. |
+{: caption="Tabelle 7. Netzschnittstelle - VLAN-Details" caption-side="top"}
 
 Klicken Sie auf **Ressourcen anzeigen**, um auf die VLAN-Details zuzugreifen.
 
-Tabelle 8. Netzschnittstelle - Teilnetzdetails
+Details des Teilnetzes anzeigen:
 
 | Element        | Beschreibung       |  
 |:------------- |:------------- |
 | Name | Der Teilnetzname. Klicken Sie auf den Namen, um auf die Teilnetzdetails zuzugreifen. |
 | Typ | Der Typ des Teilnetzes: primär oder portierbar. |
 | Beschreibung | Die Beschreibung des Teilnetzes. |
+{: caption="Tabelle 8. Netzschnittstelle - Teilnetzdetails" caption-side="top"}
 
-Tabelle 9. Netzschnittstelle - IP-Details
+Details der IP-Adressen anzeigen:
 
 | Element        | Beschreibung       |  
 |:------------- |:------------- |
 | IP | Die IP-Adresse. |
 | Status | Der Status der IP-Adresse. |
 | Beschreibung |Die Beschreibung der IP-Adresse.  |
+{: caption="Tabelle 9. Netzschnittstelle - IP-Details" caption-side="top"}
 
 ## Cluster aus vCenter Server-Instanzen löschen
 {: #vc_addingviewingclusters-deleting}

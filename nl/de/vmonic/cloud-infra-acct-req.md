@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-31"
+lastupdated: "2019-06-18"
 
 keywords: user account, user permissions, VRF account
 
@@ -29,8 +29,6 @@ Das von Ihnen verwendete {{site.data.keyword.cloud_notm}}-Infrastrukturkonto mus
 
 Berechtigte Benutzer können die Berechtigungen für ein {{site.data.keyword.cloud_notm}}-Infrastrukturkonto im {{site.data.keyword.slportal}} prüfen und aktualisieren. Weitere Informationen hierzu finden Sie im Abschnitt [Kundenportalberechtigungen eines Benutzers bearbeiten](/docs/customer-portal?topic=customer-portal-customerportal_accuserprof#cp_editusercpperm){:new_window}.
 
-Tabelle 1. Erforderliche Berechtigungen für das {{site.data.keyword.cloud_notm}}-Infrastrukturkonto
-
 | Berechtigung         | Details                                 |
 |:------------------ |:--------------------------------------- |
 | Server hinzufügen | Diese Berechtigung ist für die folgenden Operationen erforderlich: {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}-Instanzen bestellen, auf denen VMware ESXi ausgeführt wird, und stündlich virtuelle Server bereitstellen, die für Operationen zur Konfiguration, zur Verwaltung und zum Support für Instanzen verwendet werden. |
@@ -49,6 +47,7 @@ Tabelle 1. Erforderliche Berechtigungen für das {{site.data.keyword.cloud_notm}
 | Lizenzen anzeigen | Diese Berechtigung ist erforderlich, um die Lizenzen abzurufen und zu validieren, die von Ihrer Instanz verwendet werden. |
 | Kennwörter anzeigen | Diese Berechtigung ist erforderlich, um die bestellten VSIs zu verwalten. |
 | Serverüberwachung verwalten | Diese Berechtigung ist nicht erforderlich, um eine Bestellung aufzugeben, sie wird jedoch benötigt, um den Überwachungsstatus der {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}-Instanzen abzurufen und zu validieren, auf denen die VMware ESXi-Server in Ihrer Instanz ausgeführt werden. |
+{: caption="Tabelle 1. Erforderliche Berechtigungen für das {{site.data.keyword.cloud_notm}}-Infrastrukturkonto" caption-side="top"}
 
 ## VRF mit aktivierten Serviceendpunkten
 {: #cloud-infra-acct-req-vrf-se}

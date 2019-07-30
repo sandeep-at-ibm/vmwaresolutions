@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-26"
 
 keywords: F5 license activation, F5 configuration, order F5
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -27,14 +28,14 @@ Sie können den Service "F5 on {{site.data.keyword.cloud}}" durch Bestellen eine
 
 Sie können mithilfe einer der folgenden Methoden eine neue Instanz mit F5 on {{site.data.keyword.cloud_notm}} bestellen:
 * Wählen Sie beim Bestellen einer neuen Instanz von der {{site.data.keyword.vmwaresolutions_short}}-Konsole **F5 on IBM Cloud** im Abschnitt **Services** aus.
-* Wählen Sie im {{site.data.keyword.cloud_notm}}-Katalog **F5 on IBM Cloud** aus, geben Sie die Serviceeinstellungen an und wählen Sie **Zu neuer Instanz hinzufügen** aus.
+* Klicken Sie im {{site.data.keyword.cloud_notm}}-Katalog im linken Navigationsfenster auf das Symbol **VMware** und anschließend im Abschnitt **VMware Services** auf die Karte **F5 on IBM Cloud**. Geben Sie die Serviceeinstellungen an und wählen Sie **Zu neuer Instanz hinzufügen** aus.
 
 ## F5 on IBM Cloud für eine vorhandene Instanz bestellen
 {: #f5_ordering-existing}
 
 Sie können den Service "F5 on {{site.data.keyword.cloud_notm}}" mit einer der folgenden Methoden zu einer vorhandenen Instanz hinzufügen:
 * Zeigen Sie über die {{site.data.keyword.vmwaresolutions_short}}-Konsole die Instanz an, für die der Service hinzugefügt werden soll, klicken Sie im linken Navigationsfenster auf **Services** und anschließend auf **Hinzufügen**.
-* Wählen Sie im {{site.data.keyword.cloud_notm}}-Katalog **F5 on IBM Cloud** aus, geben Sie die Serviceeinstellungen an und wählen Sie **Zu vorhandener Instanz hinzufügen** aus.
+* Klicken Sie im {{site.data.keyword.cloud_notm}}-Katalog im linken Navigationsfenster auf das Symbol **VMware** und anschließend im Abschnitt **VMware Services** auf die Karte **F5 on IBM Cloud**. Geben Sie die Serviceeinstellungen an und wählen Sie **Zu vorhandener Instanz hinzufügen** aus.
 
 ## F5 on IBM Cloud für private Instanzen bestellen
 {: #f5_ordering-private}
@@ -98,4 +99,4 @@ Sie können das Lizenzmodell nach der Serviceinstallation nicht mehr ändern. We
 * [Services für vCenter Server with Hybridity Bundle-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
 * [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [Häufig gestellte Fragen](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [F5 Deployment Guides](https://www.f5.com/services/resources/deployment-guides){:new_window}
+* [F5 Deployment Guides](https://www.f5.com/services/resources/deployment-guides){:external}

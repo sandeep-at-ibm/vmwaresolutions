@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-11"
+lastupdated: "2019-07-02"
 
 subcollection: vmware-solutions
 
@@ -24,7 +24,7 @@ Die physische Infrastruktur besteht aus den folgenden Komponenten:
   <dt class="dt dlterm">Physische Rechenressourcen</dt>
   <dd class="dd">Die physischen Rechenressourcen stellen die physischen Verarbeitungs- und Arbeitsspeicherressourcen bereit, die von der Virtualisierungsinfrastruktur genutzt werden. Für dieses Design werden die Rechenkomponenten durch {{site.data.keyword.baremetal_long}} bereitgestellt und im [VMware Hardware Compatibility Guide (HCG)](https://www.vmware.com/resources/compatibility/search.php) aufgelistet.</dd>
   <dt class="dt dlterm">Physischer Speicher</dt>
-  <dd class="dd">Der physische Speicher stellt die von der Virtualisierungsinfrastruktur genutzte Bruttospeicherkapazität bereit. Speicherkomponenten werden entweder durch {{site.data.keyword.baremetal_short}} oder durch ein gemeinsam genutztes NAS-Array (NAS - Network Attached Storage) mit NFS v3 <!-- or iSCSI --> bereitgestellt.</dd>
+  <dd class="dd">Der physische Speicher stellt die von der Virtualisierungsinfrastruktur genutzte Bruttospeicherkapazität bereit. Speicherkomponenten werden entweder durch {{site.data.keyword.baremetal_short}} oder durch ein gemeinsam genutztes NAS-Array (NAS - Network Attached Storage) mit NFS v3 bereitgestellt.</dd>
   <dt class="dt dlterm">Physisches Netz</dt>
   <dd class="dd">Das physische Netz stellt die Netzkonnektivität in die Umgebung bereit, die dann durch die Netzvirtualisierung genutzt wird. Das Netz wird durch das {{site.data.keyword.cloud_notm}}-Servicenetz bereitgestellt und es schließt weitere Services wie DNS und NTP ein.</dd>
 </dl>
@@ -92,7 +92,7 @@ Zusätzlich zu den öffentlichen und privaten Netzen ist jeder {{site.data.keywo
 
 {{site.data.keyword.cloud_notm}} ordnet zwei Typen von IP-Adressen zur Verwendung in der {{site.data.keyword.cloud_notm}}-Infrastruktur zu:
 * Primäre IP-Adressen werden Einheiten (Geräten), Bare Metal Servern und virtuellen Servern zugeordnet, die von {{site.data.keyword.cloud_notm}} bereitgestellt werden. Weisen Sie keine IP-Adressen in diesen Blöcken zu.
-* Portierbare IP-Adressen werden zur Verfügung gestellt, die Sie nach Bedarf zuweisen und verwalten können. vCenter Server stellt mehrere portierbare IP-Bereiche zur Verfügung. Verwenden Sie nur die portierbaren Bereiche, die bestimmten NSX-T- oder NSX-V-Komponenten zugeordnet sind, die für die Verwendung durch den Kunden angegeben sind. Beispiel: **Customer EDGE**.
+* Portierbare IP-Adressen werden zur Verfügung gestellt, die Sie nach Bedarf zuweisen und verwalten können. vCenter Server stellt mehrere portierbare IP-Bereiche zur Verfügung. Verwenden Sie nur die portierbaren IP-Adressbereiche, die bestimmten NSX-T- oder NSX-V-Komponenten zugeordnet und für die Verwendung durch den Kunden angegeben sind. Beispiel: **Customer EDGE**.
 
 Primäre oder portierbare IP-Adressen können an ein beliebiges VLAN in Ihrem Konto weiterleitbar gemacht werden, wenn das Konto als VRF-Konto (VRF - **Virtual Routing and Forwarding**) konfiguriert wurde.
 
@@ -129,7 +129,6 @@ Neben dem VLAN 'Privat A' ist ein zweites privates VLAN (hier als VLAN 'Privat B
 * Die übrigen Teilnetze werden für Speicherdatenverkehr verwendet:
    * Bei Verwendung von vSAN wird ein Teilnetz Kernelportgruppen zugeordnet, die für vSAN-Datenverkehr verwendet werden.
    * Bei Verwendung von NFS-angeschlossenen NAS wird ein Teilnetz einer Portgruppe zugeordnet, die für NFS-Datenverkehr dediziert ist.
-<!--* For iSCSI attachment, two port groups are created to allow multipathing active-active across both private NIC ports as only one NIC port can be active at a time per the VMware iSCSI documentation.-->
 
 Alle Teilnetze, die als Bestandteil einer automatisierten vCenter Server-Bereitstellung konfiguriert werden, verwenden verwaltete {{site.data.keyword.cloud_notm}}-Bereiche. Dadurch wird sichergestellt, dass eine beliebige IP-Adresse an jedes Rechenzentrum innerhalb des {{site.data.keyword.cloud_notm}}-Kontos geleitet werden kann, wenn Sie die Verbindung jetzt oder in Zukunft benötigen.
 
@@ -146,7 +145,6 @@ Tabelle 1. VLAN- und Teilnetzzusammenfassung
 | Privat B | Portierbar | Einzelnes Teilnetz, das für vSAN (sofern verwendet) zugeordnet ist |
 | Privat B | Portierbar | Einzelnes Teilnetz, das für NAS (sofern verwendet) zugeordnet ist |
 | Privat B | Portierbar | Einzelnes Teilnetz, das für vMotion zugeordnet ist |
-<!--| Private B | Portable | Two subnets assigned for iSCSI NAS, if in use (one per physical NIC port) |-->
 
 In diesem Design werden alle VLAN-gestützten Hosts und virtuellen Maschinen so konfiguriert, dass sie auf den {{site.data.keyword.cloud_notm}}-Back-End-Kundenrouter (BCR - Back-end Customer Router) des “privaten Netzes” als Standardroute verweisen. Obwohl die vCenter Server-Instanzen die Verwendung von Software-Defined Networking (SDN) ermöglichen, sind Netzoverlays, die in einer VMware-Instanz erstellt werden und das Routing an interne Teilnetze einschließen, den verwalteten {{site.data.keyword.cloud_notm}}-Routern nicht bekannt.
 
@@ -183,22 +181,6 @@ Der Speicher wird mithilfe des Protokolls NFS v3 zugeordnet und unterstützt 2 I
 Sie können beim Kauf oder später weitere gemeinsam genutzte Dateiressourcen für alle Hosts für Ihre Workloads in der Konsole zuordnen und anhängen. Sie können unter den verfügbaren Kapazitätsoptionen für {{site.data.keyword.cloud_notm}} Endurance-Dateispeicher und den Leistungsstufen in dem entsprechenden {{site.data.keyword.CloudDataCent_notm}} auswählen. Alle gemeinsam genutzten Ressourcen werden unter Verwendung des Protokolls NFS v3 zugeordnet. Darüber hinaus ist es möglich, gemeinsam genutzte NFS v3-Dateiressourcen durch Anwenden des NetApp ONTAP Select-Angebots zuzuordnen.
 
 Die Verfügbarkeit der 10 IOPS/GB hängt vom IBM Cloud Data Center ab. {{site.data.keyword.CloudDataCents_notm}}, die das Leistungstier mit 10 IOPS/GB anbieten, schließen auch eine vom Provider verwaltete Verschlüsselung ruhender Daten (AES-256-Verschlüsselung) ein und werden mithilfe von reinem Flashspeicher gesichert. Die Leistungsstufe von 10 IOPS/GB ist auf eine maximale Kapazität von 4 TB beschränkt. Weitere Informationen zu gemeinsam genutztem NAS-Speicher in dieser Lösung finden Sie im Dokument [Architektur des gemeinsam genutzten Speichers](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits).
-
-<!--
-### Shared iSCSI storage
-{: #design_physicalinfrastructure-shared-iscsi}
-
-This architecture allows you to use iSCSI storage, however iSCSI storage is not automatically provisioned by IBM Cloud for VMware Solutions. You can provision it manually.
-
-Similar to NFS, for shared iSCSI storage, one 2-TB iSCSI LUN will be attached to the hosts that comprise the initial VMware cluster. This iSCSI LUN is used for management components such as the VMware vCenter Server, Platform Services Controller, and VMware NSX. The storage is attached through the iSCSI protocol at a 2 IOPS/GB level from IBM Cloud.
-
-![iSCSI LUNs attached to VMware deployment](../../images/vcsv4radiagrams-ra-iscsi-lun.svg "iSCSI LUNs attached to VMware deployment"){: caption="Figure 5. iSCSI LUNs attached to VMware deployment" caption-side="bottom"}
-
-Additional iSCSI LUNs for workloads can also be allocated and mounted across all hosts. Select from the available IBM Cloud Endurance block storage capacity options and performance tiers in the corresponding IBM Cloud Data Center. All LUNs are attached by using the iSCSI protocol. Additionally, it is possible to attach iSCSI LUNs from the NetApp ONTAP Select offering.
-
-The availability of the 10 IOPS/GB depends on the IBM Cloud Data Center. Data centers that offer the 10 IOPS/GB performance tier also include provider–managed encryption of data at rest (AES–256 encryption), and are backed by all–flash storage. The 10 IOPS/GB performance tier is limited to a maximum capacity of 4 TB.
-
--->
 
 Weitere Informationen zu gemeinsam genutztem NAS-Speicher in dieser Lösung finden Sie im Dokument [Architektur des gemeinsam genutzten Speichers](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits).
 

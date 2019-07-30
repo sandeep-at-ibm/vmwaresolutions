@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: NetApp order instance, order NetApp ONTAP, order NetApp
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -112,14 +113,14 @@ Die Anzahl der ESXi-Server einer NetApp ONTAP Select-Instanz ist standardmäßig
 ## Bestellübersicht
 {: #np_orderinginstances-order-summary}
 
-Auf Basis der ausgewählten Konfiguration werden die geschätzten Kosten sofort generiert und im rechten Fenster **Bestellübersicht** angezeigt. Klicken Sie auf **Preisdetails**, um ein PDF-Dokument mit der Kostenübersicht für die {{site.data.keyword.vmwaresolutions_short}}-Ressourcen zu generieren.
+Auf Basis der ausgewählten Konfiguration werden die geschätzten Kosten sofort generiert und im rechten Fenster **Bestellübersicht** angezeigt.  Klicken Sie auf **Preisdetails**, um ein PDF-Dokument mit der Kostenübersicht für die {{site.data.keyword.vmwaresolutions_short}}-Ressourcen zu generieren.
 
 Sie können die bereitgestellten Ressourcen auch durch Klicken auf **Zur Schätzung hinzufügen** zum {{site.data.keyword.cloud_notm}}-Schätztool hinzufügen. Dies ist nützlich, wenn Sie die Kosten für die ausgewählten {{site.data.keyword.vmwaresolutions_short}}-Ressourcen zusammen mit anderen {{site.data.keyword.cloud_notm}}-Ressourcen schätzen möchten, die Sie für den Kauf in Betracht ziehen könnten.
 
 ## Vorgehensweise zum Bestellen von NetApp ONTAP Select-Instanzen
 {: #ordering-netapp-ontap-select-instances}
 
-1. Klicken Sie im {{site.data.keyword.cloud_notm}}-Katalog im linken Navigationsfenster auf **VMware** und anschließend im Abschnitt **Virtuelle Rechenzentren** auf **NetApp ONTAP Select**.
+1. Klicken Sie im {{site.data.keyword.cloud_notm}}-Katalog im linken Navigationsfenster auf das Symbol **VMware** und anschließend im Abschnitt **Virtuelle VMware-Rechenzentren** auf die Karte **NetApp ONTAP Select**.
 2. Klicken Sie auf der Seite **NetApp ONTAP Select** auf **Erstellen**.
 3. Geben Sie auf der Seite **NetApp ONTAP** den Instanznamen ein.
 4. Füllen Sie die Netzschnittstelleneinstellungen aus. Geben Sie dazu Werte für **Hostnamenspräfix**, für **Unterdomänenbezeichnung** und für **Domänenname** ein.
@@ -160,5 +161,5 @@ Sie dürfen die {{site.data.keyword.vmwaresolutions_short}}-Komponenten, die in 
 
 * [NetApp ONTAP Select-Instanzen anzeigen](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_viewinginstances)
 * [NetApp ONTAP Select-Instanzen löschen](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_deletinginstance)
-* [NetApp ONTAP Documentation Center](http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.exp-clus-peer%2Fhome.html)
-* [Dedizierten Speicher für NetApp ONTAP Select-Bereitstellungen zuordnen](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/)
+* [NetApp ONTAP Documentation Center](http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.exp-clus-peer%2Fhome.html){: external}
+* [Dedizierten Speicher für NetApp ONTAP Select-Bereitstellungen zuordnen](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/){: external}

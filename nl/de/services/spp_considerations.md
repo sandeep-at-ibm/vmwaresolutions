@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-28"
 
 keywords: IBM Spectrum Protect Plus, SPP, tech specs SPP
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -40,7 +41,7 @@ Mit dem Service "IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}" 
    * 370 GB Plattenspeicher
 * Sekundäre VM mit vSnap-Server und VADP-Proxy für IBM Spectrum Protect Plus
    * Betriebssystem Linux 3.10.0-693.11.1.el7.x86_64
-   * CPU und RAM in der ausgewählten Speichergröße und entsprechend der Dimensionierungsanleitung in [IBM Spectrum Protect Plus Blueprint](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints) konfiguriert
+   * CPU und RAM in der ausgewählten Speichergröße und entsprechend der Dimensionierungsanleitung in [IBM Spectrum Protect Plus Blueprint](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints){:external} konfiguriert
    * 150 GB Plattenspeicher
 
 ### Speicher für Sicherungen
@@ -51,7 +52,7 @@ Anpassbarer Speicher für Sicherungen mit den folgenden Optionen:
 * Jede Endurance File Storage-Instanz: 500, 1000, 2000, 4000, 8000 oder 12000 GB
 * Speicherleistung: 0,25, 2 oder 4 E/A-Operationen pro Sekunde und GB
 
-Informationen zur Planung und Dimensionierung finden Sie unter [IBM Spectrum Protect Plus Blueprint and Sizing Tool](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints).
+Informationen zur Planung und Dimensionierung finden Sie unter [IBM Spectrum Protect Plus Blueprint and Sizing Tool](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints){:external}.
 
 ### Speicher für Management
 {: #spp_considerations-mgmt-storage}
@@ -77,7 +78,7 @@ Lesen Sie die folgenden Hinweise, bevor Sie den Service "IBM Spectrum Protect Pl
 * Stellen Sie sicher, dass die CPU und der Speicher im Standardcluster Ihrer Instanz für die virtuelle Maschine von IBM Spectrum Protect Plus ausreichen.
 * Stellen Sie sicher, dass die NFS-Mounts, die auf den ESXi-Servern verfügbar sind, auf der Basis der Version der ESXi-Server ausreichend sind.
 
-  Instanzen, die in V2.2 oder höheren Releases bereitgestellt (oder auf diese Releases aktualisiert) werden, verfügen über eine Einstellung für den Parameter `NFS.MaxVolumes` in VMware. Dieser Parameter definiert die maximale Anzahl der NFS-Mounts auf einem ESXi-Server und kann je nach Version des ESXi-Servers auf maximal 256 gesetzt werden. Weitere Informationen finden Sie unter [Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239).
+  Instanzen, die in V2.2 oder höheren Releases bereitgestellt (oder auf diese Releases aktualisiert) werden, verfügen über eine Einstellung für den Parameter `NFS.MaxVolumes` in VMware. Dieser Parameter definiert die maximale Anzahl der NFS-Mounts auf einem ESXi-Server und kann je nach Version des ESXi-Servers auf maximal 256 gesetzt werden. Weitere Informationen finden Sie unter [Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239){:external}.
 
   Der Service "IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}" kann bis zu 11 der NFS-Datenträger auf jedem ESXi-Server im Standardcluster Ihrer Instanz verwenden. Darüber hinaus erstellt der Service transiente NFS-Mounts für Sicherungs- und Wiederherstellungszwecke. Daher müssen Sie die Anzahl der NFS-Mounts auf mindestens 64 setzen, um sicherzustellen, dass der Service installiert und erfolgreich ausgeführt werden kann.
 
@@ -92,8 +93,8 @@ Lesen Sie die folgenden Hinweise, bevor Sie den Service "IBM Spectrum Protect Pl
 ## Zugehörige Links
 {: #spp_considerations-related}
 
-* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} Preventive Service Planning](https://www-01.ibm.com/support/docview.wss?uid=swg22012650){:new_window}
+* [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} Preventive Service Planning](https://www-01.ibm.com/support/docview.wss?uid=swg22012650){:external}
 * [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} verwalten](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingspp)
 * [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} bestellen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-spp_ordering)
-* [IBM Spectrum Protect Plus-Dokumentation](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html)
+* [IBM Spectrum Protect Plus-Dokumentation](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html){:external}
 * [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

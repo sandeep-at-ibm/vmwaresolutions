@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-21"
 
 subcollection: vmware-solutions
 
@@ -58,10 +58,10 @@ Wenn KMIP for VMware zusammen mit vSAN- oder vSphere-Verschlüsselung verwendet 
 
 Wenn Sie vorhaben, die Schlüssel rotieren zu lassen, lesen Sie die folgenden Informationen zu den möglichen Rotationsebenen für die Schlüssel:
 * Ihr Stammschlüssel für Kunden (Customer Root Key, CRK) schützt sämtliche VMware-Schlüssel. Die Schlüssel können innerhalb der IBM Key Protect- oder Hyper Protect Crypto Services-Instanz rotieren, die Ihrer KMIP for VMware-Instanz zugeordnet ist.
-* KMIP for VMware verwendet Ihren CRK zum Schutz der selbst generierten und an VMware verteilten Schlüssel. VMware betrachtet diese als Schlüsselverschlüsselungsschlüssel ("key encrypting keys", KEKs).
+* KMIP for VMware verwendet Ihren CRK zum Schutz der selbst generierten und an VMware verteilten Schlüssel. Von VMware werden diese als _Schlüsselverschlüsselungsschlüssel (Key Encrypting Keys, KEKs)_ betrachtet.
   * Wenn Sie die vSphere-Verschlüsselung verwenden, können Sie die Schlüssel mit dem PowerShell-Befehl **Set-VMEncryptionKey** rotieren lassen.
   * Wenn Sie die vSAN-Verschlüsselung verwenden, können Sie die Schlüssel in der vSAN-Benutzerschnittstelle rotieren lassen.
-* VMware verwendet solche KEKs zum Schutz der tatsächlichen Schlüssel, mit denen es Plattenlaufwerke und VM-Platten verschlüsselt. Sie können diese Schlüssel durch Erstellen eines neuen Schlüssels rotieren lassen, was von WMware als "deep rekey" bezeichnet wird. Bei dieser Operation werden alle Ihre verschlüsselten Daten erneut verschlüsselt, was möglicherweise einige Zeit in Anspruch nimmt.
+* VMware verwendet solche KEKs zum Schutz der tatsächlichen Schlüssel, mit denen es Plattenlaufwerke und VM-Platten verschlüsselt. Sie können diese Schlüssel durch Erstellen eines neuen Schlüssels rotieren lassen, was von VMware als "deep rekey" bezeichnet wird. Bei dieser Operation werden alle Ihre verschlüsselten Daten erneut verschlüsselt, was möglicherweise einige Zeit in Anspruch nimmt.
   * Wenn Sie die vSphere-Verschlüsselung verwenden, können Sie einen "deep rekey" mit dem PowerShell-Befehl **Set-VMEncryptionKey** durchführen.
   * Wenn Sie die vSAN-Verschlüsselung verwenden, können Sie einen "deep rekey" über die vSAN-Benutzerschnittstelle durchführen.
 
@@ -73,7 +73,7 @@ Die VMware vSAN-Verschlüsselung und die vSphere-Verschlüsselung sind mit viele
 ### Schlüssel innerhalb von Schlüsseln
 {: #kmip-design-keys}
 
-Schlüsselmanagementsysteme verwenden häufig ein Verfahren, das als *Envelope-Verschlüsselung* bezeichnet wird, um Schlüssel in andere Schlüssel einzuschließen oder durch sie zu schützen. Solche Schlüssel werden als *Stammschlüssel* oder *Schlüsselverschlüsselungsschlüssel* (key encrypting keys, KEKs) bezeichnet. Für den Zugriff auf einen Schlüssel müssen Sie diesen entschlüsseln oder das Wrapping aufheben, indem Sie den entsprechenden Rootschlüssel verwenden. Das Löschen des Stammschlüssels ist eine effektive Methode, um alle Schlüssel ungültig zu machen, die dieser geschützt hat. Diese Schlüssel müssen nicht in der Nähe des Stammschlüssels gespeichert sein. Wichtig ist die Steuerung des Zugriffs auf den Stammschlüssel.
+Schlüsselmanagementsysteme verwenden häufig ein Verfahren, das als *Envelope-Verschlüsselung* bezeichnet wird, um Schlüssel in andere Schlüssel einzuschließen oder durch sie zu schützen. Solche Schlüssel werden als _Stammschlüssel_ oder _Schlüsselverschlüsselungsschlüssel (Key Encrypting Keys, KEKs)_ bezeichnet. Für den Zugriff auf einen Schlüssel müssen Sie diesen entschlüsseln oder das Wrapping aufheben, indem Sie den entsprechenden Rootschlüssel verwenden. Das Löschen des Stammschlüssels ist eine effektive Methode, um alle Schlüssel ungültig zu machen, die dieser geschützt hat. Diese Schlüssel müssen nicht in der Nähe des Stammschlüssels gespeichert sein. Wichtig ist die Steuerung des Zugriffs auf den Stammschlüssel.
 
 {{site.data.keyword.cloud_notm}} Key Protect und Hyper Protect Crypto Services stellen diesen Service mit einem *Stammschlüssel für Kunden* (CRK) bereit. Key Protect speichert CRKs ausschließlich in {{site.data.keyword.cloud_notm}} CloudHSM-Hardware, aus der sie nicht extrahiert werden können. Hyper Protect Crypto Services speichert Schlüssel in IBM zSeries HSMs. Diese CRKs werden dann verwendet, um weitere Verschlüsselungsschlüssel einzuschließen, wie z. B. die von KMIP for VMware für Ihre VMware-Instanz generierten Verschlüsselungsschlüssel.
 

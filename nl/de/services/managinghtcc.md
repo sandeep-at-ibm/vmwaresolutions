@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: HTCC WebGUI, HTCC console, enable internet HTCC
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -78,15 +79,16 @@ Die folgenden Schritte gelten für die Aktualisierung der HTCC-Netzeinstellungen
 6. Ändern Sie das Standardgateway. Klicken Sie zum Beispiel für HTCC 5.5.1 auf **Konfiguration > Netz** und ersetzen Sie die IP-Adresse im Feld **Gateway** durch die, die Sie in Schritt 3 notiert haben, und klicken Sie auf **Speichern**. 
 
   Stellen Sie sicher, dass Sie die statische Route festlegen, bevor Sie das Standardgateway ändern, da die Webkonsole andernfalls nicht mehr erreichbar sein kann.
-{:important}
+  {:important}
 
   Die primäre virtuelle Maschine verfügt jetzt über Internetzugriff.
 
-7. Wenn Sie sich vergewissern möchten, dass die primäre virtuelle Maschine über Internetzugriff verfügt, führen Sie den Befehl `ping` für eine öffentliche IP-Adresse oder Website aus. Wechseln Sie hierzu wieder zurück zu vCenter und klicken Sie mit der rechten Maustaste auf **CC1 > Konsole öffnen**. Melden Sie sich an der Konsole mithilfe der Konsolenberechtigungsdetails von der Detailseite des HyTrust CloudControl on IBM Cloud-Service an. Führen Sie einen `ping`-Befehl aus, zum Beispiel `ping www.ibm.com`; darauf muss sofort eine Antwort zurückgegeben werden. Drücken Sie die Tastenkombination `Strg + C`, um den Pingbefehl zu beenden und sicherzustellen, dass der Paketverlust 0 % beträgt.
+7. Wenn Sie sich vergewissern möchten, dass die primäre virtuelle Maschine über Internetzugriff verfügt, führen Sie den Befehl `wget` für eine öffentliche IP-Adresse oder Website aus. Wechseln Sie hierzu wieder zurück zu vCenter und klicken Sie mit der rechten Maustaste auf **CC1 > Konsole öffnen**. Melden Sie sich an der Konsole mithilfe der Konsolenberechtigungsdetails von der Detailseite des HyTrust CloudControl on IBM Cloud-Service an. Führen Sie einen `wget`-Befehl aus, zum Beispiel `wget www.ibm.com`; darauf muss sofort eine Antwort zurückgegeben werden. Vergewissern Sie sich, dass die Anforderung gesendet wurde und die Antwort `200` empfangen wurde.
+
 ## Zugehörige Links
 {: #managinghtcc-related}
 
 * [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htcc_considerations)
 * [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [Häufig gestellte Fragen](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [HyTrust-Website](https://www.hytrust.com/)
+* [HyTrust-Website](https://www.hytrust.com/){:external}

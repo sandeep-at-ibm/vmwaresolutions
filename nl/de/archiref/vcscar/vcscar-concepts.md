@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -20,9 +20,9 @@ subcollection: vmware-solutions
 Ein wichtiger Aspekt von Skate Advisor sind die über den mit Watson gesteuerten Chatbot ermöglichten Dialoge. Der folgende Abschnitt enthält detaillierte Informationen zu den Dialogregeln, die eine Benutzerinteraktion mit dem Chatbot von Skate Advisor definieren.
 
 Die Skater-Sprache ist der zentrale Teil des Systems und wird folgendermaßen eingesetzt:
-* Erkennung von Tricks: Hiermit nimmt Watson Discovery Material aus Online-Quellen auf, um vorhandene Tricks zu erkennen und zu Quellenmaterial zuzuordnen.
+* Erkennung von Tricks: Hiermit nimmt Watson Discovery Material aus Online-Quellen auf, sodass vorhandene Tricks erkannt werden und dem Quellenmaterial zugeordnet werden können.
 * Skater-Dialoge: Hiermit erzeugt der Chatbot aussagekräftige Dialoge mit dem Systembenutzer.
-* Klassifizierung von Tricks: Hiermit wird ein Trick auf Grundlage der Textbeschreibung des Tricks gespeichert und klassifiziert. Tricks, die auf diese Weise klassifiziert sind, können Metadaten wie beispielsweise Standort- und Videoreferenzen zugeordnet sein.
+* Klassifizierung von Tricks: Hiermit wird ein Trick auf Grundlage der Textbeschreibung des Tricks gespeichert und klassifiziert. Metadaten wie Standort- und Videoverweise können klassifizierten Tricks zugeordnet werden.
 
 ## Sprachelemente
 {: #vcscar-concepts-lang-elem}
@@ -39,7 +39,7 @@ Elementtyp | Sprachtext
 Richtung | Fakie<br>Nollie<br>Switch
 Drehung | Halfcab<br>Cab<br>180<br>360<br>540
 Basis | Kickflip<br>Heelflip<br>Hardflip<br>Bigspin<br>Shuvit<br>Impossible
-Landung | Manual (Hinterachse)<br>Nose Manual (Vorderachse)<br>5-0 (Grind)<br>Nosegrind<br>Tailslide<br>Noseslide<br>Crooked Grind<br>Smithgrind<br>Boardslide<br>Lipslide<br>
+Landung | Manual (Hinterachse) <br>Nose Manual (Vorderachse)<br>5-0 (Grind)<br>Nosegrind<br>Tailslide<br>Noseslide<br>Crooked Grind<br>Smithgrind<br>Boardslide<br>Lipslide<br>
 
 ### Elementmodifikatoren
 {: #vcscar-concepts-elem-modifiers}

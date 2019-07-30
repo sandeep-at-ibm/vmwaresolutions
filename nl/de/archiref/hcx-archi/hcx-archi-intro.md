@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-02"
 
 subcollection: vmware-solutions
 
@@ -29,7 +29,8 @@ Durch diese Verbindung wird eine flexible Interkonnektivität zwischen lokalen S
 * Layer-2-Erweiterung - Lokale Netze werden in die Cloud erweitert. Zu diesen Netzen zählen auch lokale Teilnetze und IP-Adressierung.
 * Verschlüsselung - Der Datenaustausch im Netz wird zwischen den beiden Standorten sicher verschlüsselt.
 * Netzoptimierung - Wählt die beste Verbindung aus und nutzt die Verbindung effizient aus, sodass der Datenaustausch im Netz mit maximaler Geschwindigkeit erfolgt.
-* Datendeduplizierung – Eine Reduktion des Netzverkehrs um bis zu 50% kann durch intelligentes Routing erreicht werden: Wenn eine Workload verschoben wird, kann das "Proximity Routing" den Netzpfad (d. h. Gateway) ändern, sodass der Datenaustausch im Netz das Gateway des Zielstandorts verwendet (anstelle eines "Hairpinnings" zum ursprünglichen Standort).
+* Datendeduplizierung - Eine Reduzierung von bis zu 50 % des Netzverkehrs ist möglich.
+* Intelligentes Routing - Wenn eine Workload verlagert wird, kann das 'Proximity Routing' den Netzpfad (d. h. Gateway) ändern, sodass der Datenaustausch im Netz das Gateway des Zielstandorts verwendet (anstelle eines 'Hairpinnings' zum ursprünglichen Standort).
 * Migration ohne Ausfallzeit – Ein aktives System kann mit vMotion in oder aus der Cloud verschoben werden.
 * Geplante Migration - Eine beliebige Anzahl virtueller Maschinen kann an den Zielstandort repliziert und dann zu einem bestimmten Zeitpunkt an diesem Standort aktiviert werden und die Systeme ersetzen, die am ursprünglichen Standort ausgeführt werden.
 * Migration von Sicherheitsrichtlinien - Wenn NSX lokal verwendet wird, werden zusammen mit der Workload alle vorhandenen Sicherheitsrichtlinien oder Firewalls verschoben.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-31"
+lastupdated: "2019-06-20"
 
 keywords: planning vSphere, data center, vSphere data centers
 
@@ -37,8 +37,6 @@ Die vSphere-Bereitstellung stellt strenge Anforderungen an die physische Infrast
 
 Falls Sie eine vSAN-Komponente auswählen, wird die Liste der Standorte nach Verfügbarkeit von SSD (Solid-State-Platten) gefiltert.
 {:note}
-
-Tabelle 1. Verfügbare {{site.data.keyword.CloudDataCents_notm}} für vSphere-Cluster
 
 | {{site.data.keyword.CloudDataCent_notm}} | Standort | Region |
 |:----------------------|:---------|:---------------|
@@ -75,6 +73,7 @@ Tabelle 1. Verfügbare {{site.data.keyword.CloudDataCents_notm}} für vSphere-Cl
 | WDC04 | Washington, DC | NA Ost |
 | WDC06 | Washington, DC | NA Ost |
 | WDC07 | Washington, DC | NA Ost |
+{: caption="Tabelle 1. Verfügbare {{site.data.keyword.CloudDataCents_notm}} für vSphere-Cluster" caption-side="top"}
 
 ## Zugehörige Links
 {: #vs_planning-related}

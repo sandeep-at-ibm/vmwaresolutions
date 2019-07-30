@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-06-27"
 
 subcollection: vmware-solutions
 
@@ -67,7 +67,7 @@ Dieses Refactoring der Lösung ergibt eine gemeinsame Plattform für die Ausfüh
   -	IBM MQ Advanced
   -	IBM MQ Advanced for Developers
   -	Rabbit MQ (Open Source)
-  -	IBM Event Streams Tech Preview (basiert auf Apache Kafka)
+  -	IBM Event Streams Technology Preview (basiert auf Apache Kafka)
 
 * Digitale Geschäftsautomatisierung
   -	IBM Operational Decision Manager
@@ -91,7 +91,7 @@ Dieses Refactoring der Lösung ergibt eine gemeinsame Plattform für die Ausfüh
 * HPC / HPDA
   -	IBM Spectrum LSF Community Edition
   -	IBM Spectrum Symphony Community Edition
-  -	IBM Spectrum Conductor Technical Preview
+  -	IBM Spectrum Conductor Technology Preview
 
 * Multi-Cloud-Management
   -	{{site.data.keyword.cloud_notm}} Automation Manager
@@ -118,7 +118,7 @@ Netcool Insights-Produkt)
   -	IBM PowerVC FlexVolume Driver (Open Source und von PowerVC unterstützt)
   - GlusterFS-Speichercluster mit Heketi-Lebenszyklusmanagement (Open Source)
   -	Beispiel-NFS für Container Storage Interface (CSI)
-  -	Treiber (Open Source)
+  -	Driver (Open Source)
   -	Rook Ceph Cluster (Open Source)
 
 * Tools
@@ -220,7 +220,7 @@ Zur Optimierung hat Jane die folgenden Schritte ausgeführt:
 -	Sie hat eine Pipeline hinzufügt (hierzu verwendet sie Jenkins).
 -	Sie hat den Build mit Maven erstellt.
 
-Das folgende Beispiel zeigt Janes [Code-Repository](https://github.com/IBMStockTrader/) zusammen mit der Jenkins-Datei "server.xml" und anderem. Auf dieser bestehenden Grundlage kann Jane nach Belieben zusätzliche Funktionalität über geheime Schlüssel für den Zugriff auf Services wie ODM und Watson sowie weitere Mikroservices als einzelne Repositorys in GitHub codieren.
+Im folgenden Beispiel werden Janes [Code-Repository](https://github.com/IBMStockTrader/), die Jenkins-Datei 'server.xml' und noch mehr angezeigt. Auf dieser bestehenden Grundlage kann Jane nach Belieben zusätzliche Funktionalität über geheime Schlüssel für den Zugriff auf Services wie ODM und Watson sowie weitere Mikroservices als einzelne Repositorys in GitHub codieren.
 
 ### Geheime Schlüssel hinzufügen
 {: #vcscontent-addmidware-add-secrets}

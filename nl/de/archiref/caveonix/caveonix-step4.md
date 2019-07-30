@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-15"
+lastupdated: "2019-06-21"
 
 subcollection: vmware-solutions
 
@@ -32,12 +32,12 @@ Die Konfiguration des Service-Providers erfolgt in acht Unterschritten:
 
 Die Konfiguration des Tenants oder der Organisation erfolgt in sieben Unterschritten:
 
--	Schritt 1: Organisation - Fügen Sie Details für Ihre primäre Organisation hinzu. Sie können auch Unterorganisationen erstellen. Verwenden Sie Organisationen, um Ihre Benutzer zu segmentieren, oder als eine Möglichkeit, Ihre Assets zu gruppieren. Sie können weitere Organisationen mit einer Ihrer vorhandenen Organisationen als übergeordnetem Element erstellen. Wenn Sie eine neue Organisation erstellen, können Sie den Wert für den Einfluss auf die Geschäftsabläufe auswählen, der zum Generieren der Scores für das Cyberrisiko verwendet wird.
--	Schritt 2: Organisations-Assets - Neue Assets oder Workloads werden automatisch nach Standort, Cloud-Provider und Asset-Repository gruppiert. Assets können jeweils nur einer Organisation zugewiesen sein. Der Service-Provider muss Assets zu einer Organisation zuordnen.
--	Schritt 3: Umgebung und Standort zuordnen - Optional. Umgebungen werden vom Service-Provider definiert.
--	Schritte 4 und 5: Unteranwendungen oder Anwendungen erstellen - Dies geschieht, um Assets über Standorte und Organisationen hinweg zu gruppieren und die zugehörigen Flüsse und Richtlinien anzuzeigen. Erstellen Sie Anwendungen, die Business- und IT-Services entsprechen. Beispiel: Anwendung = SAP, Unteranwendungen = SAP-Front-End, SAP-Mittelschicht und SAP-Back-End. Der Wert für den Einfluss auf die Geschäftsabläufe entspricht einer Anwendung, die Konformitätsvorschriften gelten für eine Anwendung.
--	Schritt 6: Fernzugriff - Dieser ist erforderlich, um Scans an Assets durchzuführen. Dabei kann es sich um ein Standard-Servicekonto oder ein Asset-spezifisches Konto handeln.
--	Schritt 7: Task-Scheduler - Sie können die Ausführung von Scans in regelmäßigen Abständen planen. Typen von Tasks sind SCAP-Sicherheitslücken-Scan, SCAP-XCCDF-Scan, Scan von NSX-Datenflüssen, Software-Scan oder Scans von Protokollauszügen.
+- Schritt 1: Organisation - Fügen Sie Details für Ihre primäre Organisation hinzu. Sie können auch Unterorganisationen erstellen. Verwenden Sie Organisationen, um Ihre Benutzer zu segmentieren, oder als eine Möglichkeit, Ihre Assets zu gruppieren. Sie können weitere Organisationen mit einer Ihrer vorhandenen Organisationen als übergeordnetem Element erstellen. Wenn Sie eine neue Organisation erstellen, können Sie den **Wert für den Einfluss auf die Geschäftsabläufe** auswählen, der zum Generieren der Scores für das Cyberrisiko verwendet wird.
+- Schritt 2: Organisations-Assets - Neue Assets oder Workloads werden automatisch nach Standort, Cloud-Provider und Asset-Repository gruppiert. Assets können jeweils nur einer Organisation zugewiesen sein. Der Service-Provider muss Assets zu einer Organisation zuordnen.
+- Schritt 3: Umgebung und Standort zuordnen - Optional. Umgebungen werden vom Service-Provider definiert.
+- Schritte 4 und 5: Unteranwendungen oder Anwendungen erstellen - Dies geschieht, um Assets über Standorte und Organisationen hinweg zu gruppieren und die zugehörigen Flüsse und Richtlinien anzuzeigen. Erstellen Sie Anwendungen, die Business- und IT-Services entsprechen. Beispiel: Anwendung = SAP, Unteranwendungen = SAP-Front-End, SAP-Mittelschicht und SAP-Back-End. Der **Wert für den Einfluss auf die Geschäftsabläufe** entspricht einer Anwendung, die Konformitätsvorschriften gelten für eine Anwendung.
+- Schritt 6: Fernzugriff - Dieser ist erforderlich, um Scans an Assets durchzuführen. Dabei kann es sich um ein Standard-Servicekonto oder ein Asset-spezifisches Konto handeln.
+- Schritt 7: Task-Scheduler - Sie können die Ausführung von Scans in regelmäßigen Abständen planen. Typen von Tasks sind SCAP-Sicherheitslücken-Scan, SCAP-XCCDF-Scan, Scan von NSX-Datenflüssen, Software-Scan oder Scans von Protokollauszügen.
 
 Die folgenden Informationen werden vom Benutzer zum Zeitpunkt der Bestellung erfasst und in der Anwendungskonfiguration verwendet.
 

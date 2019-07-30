@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-01"
 
 keywords: single-node trial, data protection DR, tech specs data protection DR
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -29,9 +30,9 @@ Die Testversion ist für die Migration von bis zu 20 einfachen Entwicklungs- ode
 Single-node Trial für Datenschutz und Disaster-Recovery ist nur für den Machbarkeitsnachweis (proof of concept, POC) vorgesehen. Die Umgebung ist nicht für Workloads im Produktionsbetrieb geeignet. Managementfunktionen wie das Hinzufügen und Entfernen von Hosts und Clustern, das Bestellen weiterer Add-on-Services und das Anwenden von Updates werden nicht unterstützt.
 {:important}
 
-Nach der Bereitstellung der Single-node Trial-Instanz können Sie die [bedarfsgerechte Beratung zu IBM Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:new_window} der [Expertenservices für IBM Analytics Cloud](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:new_window} zur Unterstützung für Ihre Instanz nutzen. Darüber hinaus kann [{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/){:new_window} Sie bei der Beschleunigung der Anwendungsmodernisierung mithilfe der neuesten Cloud Native-Praktiken unterstützen.
+Nach der Bereitstellung der Single-node Trial-Instanz können Sie die [bedarfsgerechte Beratung zu IBM Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:external} der [Expertenservices für IBM Analytics Cloud](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:external} zur Unterstützung für Ihre Instanz nutzen. Darüber hinaus kann [{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/){:external} Sie bei der Beschleunigung der Anwendungsmodernisierung mithilfe der neuesten Cloud Native-Praktiken unterstützen.
 
-Diese Testversion ist für eine Nutzung von bis zu 90 Tagen vorgesehen. Monatlich wiederkehrende Gebühren werden nicht bei der Bestellung der Instanz, sondern auf der Grundlage Ihres Abrechnungsplans in Rechnung gestellt. Wenn die Instanz nicht am oder vor dem letzten Tag des Abrechnungszyklus storniert wird, wird Sie für den nächsten Monat in Rechnung gestellt. Höchstwahrscheinlich werden für eine 90-Tage-Testversion vier Monate an Gebühren abgerechnet, wenn nicht vor Beginn des vierten Monats storniert wird.
+Diese Testversion ist für eine Nutzung von bis zu 90 Tagen vorgesehen. Monatlich wiederkehrende Gebühren werden nicht bei der Bestellung der Instanz, sondern auf der Grundlage Ihres Abrechnungsplans in Rechnung gestellt. Wenn die Instanz nicht am oder vor dem letzten Tag des Abrechnungszyklus storniert wird, wird Sie für den nächsten Monat in Rechnung gestellt. Für eine 90-Tage-Testversion können vier Monate an Gebühren abgerechnet werden, wenn nicht vor Beginn des vierten Monats storniert wird.
 {:note}
 
 Wenn Sie das Testen abschlossen haben, können Sie die Umgebung löschen und anschließend eine neue Umgebung einrichten, die Ihren Kapazitätsanforderungen entspricht.
@@ -140,7 +141,7 @@ Weitere HCX-Appliances werden bei der Konfiguration wie für die L2-Konnektivit�
 
 Single-node Trial für Datenschutz und Disaster-Recovery umfasst Veeam on {{site.data.keyword.cloud_notm}}. Mit dem Service 'Veeam on {{site.data.keyword.cloud_notm}}' werden die folgenden Komponenten bestellt und einbezogen.
 
-* 25-Pack-Lizenz von Veeam Availability Suite
+* Lizenz für 25 Pakete von Veeam Availability Suite
 * 4.000 GB Speicher
 * 0,25 IOPS/GB Speicherleistung
 * Windows Server 2016 Standard Edition (64-Bit)
@@ -164,12 +165,12 @@ Single-node Trial für Datenschutz und Disaster-Recovery umfasst Zerto on {{site
 ## Technische Spezifikationen für IBM Cloud Automation Manager
 {: #dr_backup_bundle_overview-cam-tech-specs}
 
-{{site.data.keyword.cloud_notm}} Automation Manager 3.1.2 wird unter Verwendung der Entwicklungs-/Test-Topologie auf allen Single-node Trial-Instanzen für Datenschutz und Disaster-Recovery installiert. Weitere Informationen zu {{site.data.keyword.cloud_notm}} Automation Manager finden Sie in der [Dokumentation zu {{site.data.keyword.cloud_notm}} Automation Manager](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: new_window}.
+{{site.data.keyword.cloud_notm}} Automation Manager 3.1.2 wird unter Verwendung der Entwicklungs-/Test-Topologie auf allen Single-node Trial-Instanzen für Datenschutz und Disaster-Recovery installiert. Weitere Informationen zu {{site.data.keyword.cloud_notm}} Automation Manager finden Sie in der [Dokumentation zu {{site.data.keyword.cloud_notm}} Automation Manager](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: external}.
 
 ## Zugehörige Links
 {: #dr_backup_bundle_overview-related}
 
-* [VMware HCX-Ressourcen](https://hcx.vmware.com/#/docs){:new_window}
-* [Benutzerhandbuch zu VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}
+* [VMware HCX-Ressourcen](https://hcx.vmware.com/#/docs){:external}
+* [Benutzerhandbuch zu VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}
 * [Veeam on {{site.data.keyword.cloud_notm}} verwalten](/docs/services/vmwaresolutions?topic=vmware-solutions-managingveeam)
 * [Zerto on {{site.data.keyword.cloud_notm}} verwalten](/docs/services/vmwaresolutions?topic=vmware-solutions-managingzertodr)

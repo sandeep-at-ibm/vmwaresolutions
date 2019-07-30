@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-06-21"
 
 subcollection: vmware-solutions
 
@@ -174,7 +174,7 @@ Tabelle 4. VLAN-Zuordnung zu Datenverkehrstypen
 | VLAN  | Ziel | Datenverkehrstyp |
 |:----- |:----------- |:------------ |
 | VLAN 1 | Privat A   | ESXi-Management, Management, VXLAN (VTEP) |
-| VLAN 2 | Privat B   | vSAN, NFS, vMotion |
+| VLAN 2 | Privat B   | vSAN, NFS, vMotion|
 | VLAN 3 | Öffentlich      | Für Internetzugriff verfügbar |
 
 Datenverkehr von Workloads fließt über VXLAN­gestützte logische Switches.

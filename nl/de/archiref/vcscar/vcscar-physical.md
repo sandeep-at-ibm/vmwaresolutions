@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -133,7 +133,7 @@ Die Anwendung "Acme Skate Advisor" befindet sich in der {{site.data.keyword.clou
 
 Das obige Diagramm zeigt {{site.data.keyword.icpfull_notm}} und CAM in einer Bereitstellung auf einer vCenter Server-Instanz mit Verbindungen zum lokalen vCenter und dem {{site.data.keyword.containerlong_notm}}-Service. Mithilfe von CAM können Systemadministratoren und Anwendungsentwickler virtuelle Maschinen lokal oder in der vCenter Server-Instanz und in Containern für die {{site.data.keyword.icpfull_notm}}- und {{site.data.keyword.containerlong_notm}}-Cluster bereitstellen.
 
-Im Diagramm erstellt CAM logische Cloudverbindungen zu den vCenter-Instanzen, Cloud-Providern sowie den {{site.data.keyword.icpfull_notm}}- und {{site.data.keyword.containerlong_notm}}-Umgebungen. {{site.data.keyword.icpfull_notm}}-Cluster werden in jeder Rechenzentrums- und Cloudumgebung bereitgestellt. MCM stellt den Mechanismus zur Verfügung, mit dem die {{site.data.keyword.icpfull_notm}}-Cluster in einer Managementansicht verbunden werden können.
+Im Diagramm erstellt CAM logische Cloudverbindungen zu den vCenter-Instanzen, Cloud-Providern sowie den {{site.data.keyword.icpfull_notm}}- und {{site.data.keyword.containerlong_notm}}-Umgebungen. {{site.data.keyword.icpfull_notm}}-Cluster werden in jeder Rechenzentrums- oder Cloudumgebung bereitgestellt. MCM stellt den Mechanismus zur Verfügung, mit dem die {{site.data.keyword.icpfull_notm}}-Cluster in einer Managementansicht verbunden werden können.
 
 ## Zugehörige Links
 {: #vcscar-physical-related}

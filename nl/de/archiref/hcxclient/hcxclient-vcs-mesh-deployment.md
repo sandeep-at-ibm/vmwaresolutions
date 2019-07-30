@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-06-28"
 
 subcollection: vmware-solutions
 
@@ -14,25 +14,20 @@ subcollection: vmware-solutions
 # Lokales HCX-Servicenetz
 {: #hcxclient-vcs-mesh-deployment}
 
-Im folgenden Abschnitt werden die Schritte zum Konfigurieren einer HCX-Clientinstanz ausführlich erläutert.
-  1. Standortpaarung für IBM Cloud for VMware Solutions-Umgebung
-  2. Erstellen von lokalen HCX-Netzprofilen
-  3. Erstellen von lokalen HCX-Rechenprofilen
-  4. Erstellen eines HCX-Servicenetzes
-  5. Vergrößern der Netze
+Überprüfen Sie die folgenden Schritte zum Konfigurieren der HCX-Clientinstanz.
 
 ## Standortpaarung für IBM Cloud for VMware Solutions-Umgebung
 {: #hcxclient-vcs-mesh-deployment-sitepair}
 
-1. Melden Sie sich an vSphere Web Client an. 
+1. Melden Sie sich an VMware vSphere Web Client an.
 2. Wählen Sie im Menü **Home** die Option **HCX** aus.
-3. Klicken Sie unter **Infrastructure** -> **InterConnect** auf **Add Site Pairing**.
-   1. URL der Site: URL des HCX-Cloud-Managers
-     * Beispiel: `https://x.x.x.x.x`
-   2. Benutzername und Kennwort: Details des Administrators von HCX Manager
-     * Admin / Kennwort
-   3. Die obigen Details können über das IBM Cloud-Portal unter **Services**, HCX on IBM Cloud**, für die IBM Cloud for VMware Solutions-Instanz abgerufen werden.
-4. Klicken Sie auf **Connect**.
+3. Klicken Sie unter **Infrastruktur**, **InterConnect** auf **Standortpaarung hinzufügen**.
+  1. Legen Sie als Site-URL die URL des HCX-Cloud-Managers fest, zum Beispiel `https://x.x.x.x.x`.
+  2. Legen Sie für den Benutzernamen und das Kennwort die Details des HCX-Manager-Administrators fest: admin / password.
+
+    Die obigen Details können in der IBM Cloud for VMware Solutions-Konsole unter **Services**, **HCX on IBM Cloud** für die vCenter Server-Instanz abgerufen werden.
+    
+4. Klicken Sie auf **Verbinden**.
 
 ### Ergebnisse
 {: #hcxclient-vcs-mesh-deployment-sitepair-results}
@@ -45,18 +40,15 @@ Die Standortpaarung wurde erfolgreich registriert und wird in der Benutzerschnit
 ## Netzprofile für das lokale Servicenetz
 {: #hcxclient-vcs-mesh-deployment-profiles-network}
 
-1. Melden Sie sich an vSphere Web Client an. 
+1. Melden Sie sich an vSphere Web Client an.
 2. Wählen Sie im Menü **Home** die Option **HCX** aus.
-3. Wählen Sie **Infrastructure** -> **InterConnect** aus.
-4. Klicken Sie unter 'Multi-Site Service Mesh' auf **Network Profiles**.
-5. Gehen Sie unter **Create Network Profile** wie folgt vor:
-   1. Wählen Sie einen Wert für die verteilte Portgruppe aus; Beispiel 'External'.
-   2. Geben Sie den IP-Adressbereich der externen IP-Adressen an.
-   3. Geben Sie die Präfixlänge des externen Teilnetzes an.
-   4. Geben Sie ein externes Gateway an.
-   5. Geben Sie DNS-Details an.
-   6. Legen Sie als MTU-Wert 1500 fest.
-   7. Klicken Sie auf 'Create'.
+3. Klicken Sie unter **Infrastruktur** auf **InterConnect**.
+4. Klicken Sie unter **Servicenetz an mehreren Standorten** auf **Netzprofile**.
+5. Gehen Sie unter **Netzprofil erstellen** wie folgt vor:
+   1. Wählen Sie einen Wert für die verteilte Portgruppe aus; Beispiel 'Extern'.
+   2. Geben Sie den IP-Adressbereich der externen IP-Adressen, die Präfixlänge des externen Teilnetzes, das externe Gateway und die DNS-Details an.
+   3. Legen Sie als MTU-Wert 1500 fest.
+   4. Klicken Sie auf **Erstellen**.
 6. Wiederholen Sie die obigen Schritte für Netze des Typs 'Management' und 'vMotion'.
    Hinweis: für MTU muss 9000 festgelegt sein.
 
@@ -65,28 +57,27 @@ Die Standortpaarung wurde erfolgreich registriert und wird in der Benutzerschnit
 
 | Netzname | MTU |
 | -----| ----|
-| External | 1500|
+| Extern | 1500|
 | Management | 9000|
 | vMotion | 9000|
 
 ## Rechenprofile für das lokale Servicenetz
 {: #hcxclient-vcs-mesh-deployment-profiles-compute}
 
-1. Melden Sie sich an vSphere Web Client an. 
+1. Melden Sie sich bei vSphere Web Client an.
 2. Wählen Sie im Menü **Home** die Option **HCX** aus.
-3. Wählen Sie **Infrastructure** -> **InterConnect** aus.
-4. Klicken Sie unter 'Multi-Site Service Mesh' auf **Compute Profiles**.
-5. Gehen Sie unter **Create Compute Profile** wie folgt vor:
+3. Klicken Sie unter **Infrastruktur** auf **InterConnect**.
+4. Klicken Sie unter **Servicenetz an mehreren Standorten** auf **Rechenprofile**.
+5. Gehen Sie unter **Rechenprofil erstellen** wie folgt vor:
    1. Geben Sie den Namen des Rechenprofils an.
-   2. Wählen Sie Alle Services aus, die aktiviert werden sollen, und klicken Sie auf **Continue**.
-   3. Wählen Sie den Cluster aus und klicken Sie auf **Continue**.
-   4. Wählen Sie den Datenspeicher aus und klicken Sie auf **Continue**.
-   5. Wählen Sie das Netzprofil für 'Management' aus und klicken Sie auf **Continue**.
-   6. Wählen Sie das Netzprofil für 'External/Uplink' aus und klicken Sie auf **Continue**.
-   7. Wählen Sie das Netzprofil für 'vMotion' aus und klicken Sie auf **Continue**.
-   8. Wählen Sie das Netzprofil für 'vSphere Replication (Management)' aus und klicken Sie auf **Continue**.
-   9. Wählen Sie 'Distribute Switch' für die Erweiterung aus, zum Beispiel 'Private-Switch'.
-   10. Klicken Sie auf 'Finish'.
+   2. Wählen Sie Alle Services aus, die aktiviert werden sollen, und klicken Sie auf **Weiter**.
+   3. Wählen Sie den Cluster aus und klicken Sie auf **Weiter**.
+   4. Wählen Sie den Datenspeicher aus und klicken Sie auf **Weiter**.
+   5. Wählen Sie das Netzprofil für 'Management' aus und klicken Sie auf **Weiter**.
+   6. Wählen Sie das Netzprofil für 'Extern/Uplink' aus und klicken Sie auf **Weiter**.
+   7. Wählen Sie das Netzprofil für 'vMotion' aus und klicken Sie auf **Weiter**.
+   8. Wählen Sie das Netzprofil für 'vSphere-Replikation (Management)' aus und klicken Sie auf **Weiter**.
+   9. Wählen Sie 'Switch verteilen' für die Erweiterung aus, zum Beispiel 'Privater Switch', und klicken Sie auf **Fertigstellen**.
 
 ## Ergebnisse
 {: #hcxclient-vcs-mesh-deployment-profiles-compute-results}
@@ -99,19 +90,19 @@ Ein Rechenprofil für die Cluster-/Speicherkombination wurde erstellt und ist mi
 ## Erstellen des lokalen Servicenetzes
 {: #hcxclient-vcs-mesh-deployment-servicemesh-creation}
 
-1. Melden Sie sich an vSphere Web Client an. 
+1. Melden Sie sich bei vSphere Web Client an.
 2. Wählen Sie im Menü **Home** die Option **HCX** aus.
-3. Wählen Sie **Infrastructure** -> **InterConnect** aus.
-4. Klicken Sie unter 'Multi-Site Service Mesh' auf **Service Mesh**.
-5. Gehen Sie unter **Create Service Mesh** wie folgt vor:
-   1. Wählen Sie Sites aus ('On-Premises' oder 'vCloud Organization') und klicken Sie auf 'Continue'.
+3. Klicken Sie unter **Infrastruktur** auf **InterConnect**.
+4. Klicken Sie unter **Servicenetz an mehreren Standorten** auf **Servicenetz**.
+5. Gehen Sie unter **Servicenetz erstellen** wie folgt vor:
+   1. Wählen Sie Sites aus ('Lokal' oder 'vCloud-Organisation') und klicken Sie auf **Weiter**.
    2. Wählen Sie das Quellenrechenprofil aus.
    3. Wählen Sie ein fernes Rechenprofil aus. Beispiel: 'CloudCompute'.
-   4. Wählen Sie 'All Services' aus und klicken Sie auf 'Continue'.
-   5. Klicken Sie auf der Seite 'Advanced Configuration - Override Uplink Network Profiles (Optional)' auf 'Continue'.
-   6. Klicken Sie auf 'Continue'.
-   7. Klicken Sie auf 'Continue' und lassen Sie den Standardwert auf der Seite 'Advanced Configuration - Configure WAN Optimization Service Bandwidth Limit' unverändert.
-   8. Geben Sie den Servicenamen an und klicken Sie auf **Finish**.
+   4. Wählen Sie 'Alle Services' aus und klicken Sie auf **Weiter**.
+   5. Klicken Sie auf der Seite 'Erweiterte Konfiguration - Uplinknetzprofile überschreiben (optional)' auf **Weiter**.
+   6. Klicken Sie auf **Weiter**.
+   7. Klicken Sie auf **Weiter** und lassen Sie den Standardwert auf der Seite 'Erweiterte Konfiguration - Bandbreitenlimit für WAN-Optimierungsservice konfigurieren' unverändert.
+   8. Geben Sie den Servicenamen an und klicken Sie auf **Fertigstellen**.
 6. Überprüfen Sie Taskliste auf die Erstellung des Servicenetzes; am Ende müssen drei HCX-Appliances für den lokalen Standort und drei am Cloudstandort vorhanden sein.
 
 ## Ergebnisse
@@ -129,11 +120,11 @@ Mit dem Hinzufügen eines Servicenetzes beginnt die Bereitstellung von virtuelle
 
 Zum Erweitern eines Netzes (VLAN oder VXLAN) mit HCX führen Sie die folgenden Schritte über die vCenter-Webbenutzerschnittstelle auf Clientseite aus.
 
-1. Melden Sie sich an vSphere Web Client an. 
+1. Melden Sie sich an vSphere Web Client an.
 2. Wählen Sie im Menü **Home** die Option **HCX** aus.
-3. Wählen Sie im Menü auf der linken Seite unter **Services** -> **Network Extension** aus.
-4. Klicken Sie auf **Extend Network**.
-   1. Wählen Sie das zu erweiternde Netz aus.
+3. Klicken Sie im linken Menü unter **Services** auf **Netzerweiterung**.
+4. Klicken Sie auf **Netz erweitern**
+   1. Wählen Sie das Netz aus, das erweitert werden soll.
    2. Geben Sie das aktuelle Standardgateway und die Teilnetzmaske im CIDR-Format ein.
    3. Klicken Sie unten in der Anzeige auf **Erweiterung**, um den Workflow für die Netzerweiterung zu starten.
 
@@ -142,7 +133,7 @@ Der Netzfortschritt wird im Teilfenster für vCenter-Client-Tasks überwacht.
 ## Konzepte und bewährte Verfahren für die Netzerweiterung
 {: #hcxclient-vcs-mesh-deployment-stretching-best-practices-network}
 
-Was die Brücke des clientseitigen Netzes zum cloudseitigen VXLAN zusammenhält, ist ein hoch entwickeltes VPN mit mehreren Tunneln, das aus proprietärer HCX-Technologie besteht. Es basiert nicht auf NSX, arbeitet aber mit NSX zusammen und erweitert dessen Funktionalität. Dieser Prozess wird von der clientseitigen vCenter-Webbenutzerschnittstelle (UI) gesteuert, automatisiert die Bereitstellung und führt die beiden Endpunkte auf der Client- und der Cloudseite aus. Die Auswahl des zu erweiternden Netzes geschieht einzeln oder stapelweise.
+Was die Brücke des clientseitigen Netzes zum cloudseitigen VXLAN zusammenhält, ist ein hoch entwickeltes VPN mit mehreren Tunneln, das aus proprietärer HCX-Technologie besteht. Es basiert nicht auf NSX, arbeitet aber mit NSX zusammen und erweitert dessen Funktionalität. Dieser Prozess wird von der clientseitigen vCenter-Webbenutzerschnittstelle gesteuert und automatisiert die Bereitstellung und das Starten beider Endpunkte auf der Client- und der Cloudseite. Die Auswahl des zu erweiternden Netzes geschieht einzeln oder stapelweise.
 
 Zusätzlich erhält NSX im Rahmen des Workflows zur Netzerweiterung auf Cloudseite die Berechtigung zum Erstellen eines VXLAN; dieses wird anschließend mit einer Schnittstelle verbunden, die auf der angegebenen cloudseitigen L3-Einheit (DLR oder ESG in nicht verbundenem Zustand) und der cloudseitigen Appliance für Netzerweiterungen erstellt wird.
 

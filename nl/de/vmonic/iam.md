@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-18"
 
 keywords: IAM user, user role, user permission
 
@@ -38,18 +38,15 @@ Plattformmanagementrollen ermöglichen Benutzern die Ausführung von Tasks auf S
 
 Die folgende Tabelle enthält Informationen zu den Aktionen, die den Plattformmanagementrollen zugeordnet sind.
 
-Tabelle 1. Plattformmanagementrollen und zugelassene Aktionen
-
 | Plattformmanagementrolle | Aktionen | Beispielaktionen |
 |:----------------- |:----------------- |:----------------- |
 | Anzeigeberechtigter (Viewer) | Aktionen unter Schreibschutz | Zusammenfassung der Instanzen anzeigen<br>Details einer Instanz anzeigen |
 | Editor (Bearbeiter) | Bestimmte Instanz aktualisieren | ESXi-Server hinzufügen oder entfernen<br>Cluster hinzufügen oder entfernen<br>Services hinzufügen oder entfernen<br>Upgrade einer Instanz auf höhere Version durchführen |
 | Operator | Aktionen unter Schreibschutz | Instanzen auflisten<br>Details einer Instanz anzeigen |
 | Administrator | Vollständiger Managementzugriff | Neue Instanzen erstellen<br>Instanzen löschen<br>Plattformzugriff anderen Benutzern erteilen|
+{: caption="Tabelle 1. Plattformmanagementrollen und zugelassene Aktionen" caption-side="top"}
 
 Für {{site.data.keyword.vmwaresolutions_short}} sind die folgenden Aktionen verfügbar:
-
-Tabelle 2. Aktionsbeschreibungen und erforderliche Rollen
 
 | Aktion | Operation für Service | Rolle |
 |:------ |:-------------------- |:---- |
@@ -58,6 +55,7 @@ Tabelle 2. Aktionsbeschreibungen und erforderliche Rollen
 | vmware-solutions.instances.view | Instanzen auflisten<br>Details einer Instanz anzeigen | Anzeigeberechtigter, Operator, Editor und Administrator |
 | vmware-solutions.instances.update | ESXi-Server hinzufügen oder entfernen<br>Cluster hinzufügen oder entfernen<br>Services hinzufügen oder entfernen<br>Upgrade einer Instanz auf höhere Version durchführen | Editor und Administrator |
 | vmware-solutions.account.update | Kontoeinstellungen aktualisieren | Administrator |
+{: caption="Tabelle 2. Aktionsbeschreibungen und erforderliche Rollen" caption-side="top"}
 
 ## Zugriff für Benutzer verwalten
 {: #iam-users}

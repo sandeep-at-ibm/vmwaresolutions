@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server BOM, bill of materials vCenter Server, BOM
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -27,20 +28,17 @@ In diesem Abschnitt erhalten Sie Informationen zur Teileliste (Bill of Materials
 
 Die folgende Tabelle enthält detaillierte Informationen zur Teileliste für die vCenter Server-VLANs.
 
-Tabelle 1. Teileliste für VLANs in vCenter Server-Instanzen
-
 | VLAN       | Typ       | Details       |
 |:---------- |:---------- |:------------- |
 | VLAN1     | Öffentlich, Primär | Wird physischen ESXi-Servern für den Zugriff auf öffentliche Netze zugeordnet. Den Servern wird zwar eine öffentliche IP-Adresse zugewiesen, diese IP-Adresse ist jedoch nicht für die Server konfiguriert, sodass sie nicht direkt im öffentlichen Netz zugänglich sind. Stattdessen soll das öffentliche VLAN den öffentlichen Internetzugang für andere Komponenten, wie zum Beispiel NSX Edge Services Gateways (ESGs), bereitstellen. |
 | VLAN2     | VLAN "Privat A", Primär | Wird durch {{site.data.keyword.cloud}} physischen ESXi-Servern zugeordnet. Wird von der Managementschnittstelle für den VMware vSphere-Managementdatenverkehr verwendet.<br><br>Wird virtuellen Maschinen (VMs) zugeordnet, die als Managementkomponenten fungieren.<br><br>Wird VMware NSX VTEP (VXLAN-Tunnelendpunkt) zugeordnet. |
 | VLAN3     | VLAN "Privat B", Portierbar | Wird VMware vSAN zugeordnet, sofern verwendet.<br><br>Wird VMware NFS zugeordnet, sofern verwendet.<br><br>Wird VMware vSphere vMotion zugeordnet.<br><br>Für NSX-T; Wird VMware NSX VTEP (VXLAN-Tunnelendpunkt) zugeordnet.|
+{: caption="Tabelle 1. Teileliste für VLANs in vCenter Server-Instanzen" caption-side="top"}
 
 ## Softwareteileliste für vCenter Server-Instanzen
 {: #vc_bom-software}
 
 Die folgende Tabelle enthält detaillierte Informationen zur Teileliste für die vCenter Server-Softwarekomponenten.
-
-Tabelle 2. Teileliste für Softwarekomponenten in vCenter Server-Instanzen
 
 | Hersteller  | Komponente                      | Version    |
 |:------------- |:------------------------------ |:------------- |
@@ -53,6 +51,7 @@ Tabelle 2. Teileliste für Softwarekomponenten in vCenter Server-Instanzen
 | VMware       | NSX for vSphere                 | 6.4.4 (Build 11197766)    |
 | VMware       | NSX-T for vSphere               | 2.4                       |
 | Microsoft    | Windows Server Standard Edition | 2016       |
+{: caption="Tabelle 2. Teileliste für Softwarekomponenten in vCenter Server-Instanzen" caption-side="top"}
 
 VMware vSAN ist eine optionale Komponente.
 {:note}
@@ -63,8 +62,6 @@ VMware vSAN ist eine optionale Komponente.
 Die folgende Tabelle gibt Ihnen eine Übersicht über die erweiterten Konfigurationseinstellungen, die auf ESXi-Server angewendet werden. Die Auswahl dieser Einstellungen hängt davon ab, ob die vCenter Server-Instanz in V2.2 oder höher bereitgestellt oder für sie ein Upgrade von V2.1 oder älter auf V2.2 oder höher durchgeführt wird.
 
 Die Einstellungen gelten für neue Instanzen und neue Cluster in neuen Instanzen aus V2.2 oder höher. Die Einstellungen gelten nicht für neue Cluster in vorhandenen Instanzen aus V2.1 oder früher oder in vorhandenen Instanzen, für die ein Upgrade auf V2.2 oder höher durchgeführt wurde.
-
-Tabelle 3. Erweiterte Konfigurationseinstellungen für ESXi-Server für vCenter Server-Instanzen und -Cluster
 
 | Konfigurationseinstellung | Bei Neubereitstellung in V2.2 oder höher  | Bei Upgrade aus V2.1 oder früher |
 |:------------- |:------------- |:------------- |
@@ -77,14 +74,17 @@ Tabelle 3. Erweiterte Konfigurationseinstellungen für ESXi-Server für vCenter 
 | Schwellenwert für volle Warteschlange | **QFullThreshold** = 8 | **/Disk/QFullThreshold** = 8 |
 | TCP/IP-Heapspeichergröße | **TcpipHeapSize** = 32 | Nicht festgelegt |
 | Max. TCP/IP-Heapspeicher | **TcpipHeapMax** = 1536 | Nicht festgelegt |
+{: caption="Tabelle 3. Erweiterte Konfigurationseinstellungen für ESXi-Server für vCenter Server-Instanzen und -Cluster" caption-side="top"}
 
-**Hinweise:**
+### Hinweise
+{: #vc_bom-notes}
+
 * Die Einstellung **MaxVolumes** ist für den Service "IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}" erforderlich, weil der Service möglicherweise mehr als die Standardanzahl von NFS-Mounts auf dem ESXi-Server verwendet.
 * Der Wert **Nicht festgelegt** für eine Konfigurationseinstellung gibt an, dass die neue Einstellung nicht automatisch angewendet wird, da dies einen Warmstart für die ESXi-Server erforderlich macht, der zu einer Unterbrechung des Betriebs führen könnte.
 
   Es wird empfohlen, die mit **Nicht festgelegt** gekennzeichneten Konfigurationseinstellungen auf die neuen Werte zu setzen, um eine instanzübergreifende Konsistenz zu erreichen und eine adäquate Unterstützung für die Speichererweiterung zu ermöglichen. IBM plant, Tests ausschließlich mit diesen neuen Einstellungen für alle Releases von {{site.data.keyword.vmwaresolutions_short}} V2.2 und höher vorzunehmen.
 
-  Weitere Informationen finden Sie unter [Increasing the default value that defines the maximum number of NFS mounts on an ESXi host](https://kb.vmware.com/s/article/2239).
+  Weitere Informationen finden Sie unter [Increasing the default value that defines the maximum number of NFS mounts on an ESXi host](https://kb.vmware.com/s/article/2239){:external}.
 
 ## Konfigurationseinstellungen für NSX und Portgruppe
 {: #vc_bom-nsx-port-group-config}
@@ -92,8 +92,6 @@ Tabelle 3. Erweiterte Konfigurationseinstellungen für ESXi-Server für vCenter 
 Die folgende Tabelle gibt Ihnen eine Übersicht über die Konfigurationseinstellungen für VMware NSX und für Portgruppen bei vCenter Server-Instanzen sowie über die releaseabhängigen Unterschiede.
 
 Die Einstellungen gelten für neue Instanzen und neue Cluster in neuen Instanzen aus V2.2 oder höher. Die Einstellungen gelten nicht für neue Cluster in vorhandenen Instanzen aus V2.1 oder früher oder in vorhandenen Instanzen, für die ein Upgrade auf V2.2 oder höher durchgeführt wurde.
-
-Tabelle 4. Konfigurationseinstellungen für NSX und Portgruppen bei vCenter Server-Instanzen
 
 | Konfigurationseinstellung | V2.1 oder früher  | V2.2 oder höher |   
 |:------------- |:------------- |:------------- |
@@ -104,6 +102,7 @@ Tabelle 4. Konfigurationseinstellungen für NSX und Portgruppen bei vCenter Serv
 | SDDC-DPortGroup-VSAN für Portgruppe (sofern maßgeblich) | **Aktive Uplinks** auf **uplink1** und **Standby-Uplinks** auf **uplink2** gesetzt | **Aktive Uplinks** auf **uplink2** und **Standby-Uplinks** auf **uplink1** gesetzt |  
 | SDDC-DPortGroup-Mgmt für Portgruppe | **Portbindung** auf **Ephemer - keine Bindung** und **Lastausgleich** auf **Route auf Basis des virtuellen Ursprungsports** gesetzt | **Portbindung** auf **Statische Bindung** und **Lastausgleich** auf **Routenbasiert auf physischer NIC-Arbeitslast** gesetzt |  
 | SDDC-DPortGroup-External für Portgruppe | **Portbindung** auf **Ephemer - keine Bindung** gesetzt | **Portbindung** auf **Statische Bindung** gesetzt |
+{: caption="Tabelle 4. Konfigurationseinstellungen für NSX und Portgruppen bei vCenter Server-Instanzen" caption-side="top"}
 
 ## Konfigurationseinstellungen für Netz-MTU
 {: #vc_bom-network-mtu-config}
@@ -116,12 +115,11 @@ In V2.1 oder höheren Releases verwenden die Verbindungen zum öffentlichen Netz
 
 Die folgende Tabelle gibt Ihnen eine Übersicht über die Konfigurationseinstellungen für die Netz-MTU, die für den öffentlichen und privaten DVS (Distributed Virtual Switch) abhängig davon angewendet werden, ob die vCenter Server-Instanz in V2.1 oder höheren Releases bereitgestellt wird.
 
-Tabelle 5. MTU-Konfigurationseinstellungen für vCenter Server-Instanzen und -Cluster je nach Version der Instanz
-
 | vDS | V2.1 oder höher  | V2.0 oder früher (oder Upgrade von V2.0 oder früher) |
 |:-------------- |:-------------- |:------------- |
 | Öffentlicher Switch  | 1500 (Standardwert) | 9000 (Jumbo-Frames) |
 | Privater Switch | 9000 (Jumbo-Frames) | 9000 (Jumbo-Frames) |
+{: caption="Tabelle 5. MTU-Konfigurationseinstellungen für vCenter Server-Instanzen und -Cluster je nach Version der Instanz" caption-side="top"}
 
 Die Einstellungen gelten für neue Instanzen und neue Cluster aus Instanzen, die in V2.1 oder höheren Releases bereitgestellt wurden. Die Einstellungen gelten auch für neue Cluster in übergreifenden {{site.data.keyword.CloudDataCents_notm}}, die aus Instanzen stammen, für die ein Upgrade auf V2.1 oder höhere Releases durchgeführt wurde.
 
@@ -143,9 +141,9 @@ Führen Sie zum Aktualisieren der MTU-Einstellung für den öffentlichen Switch 
 ## Zugehörige Links
 {: #vc_bom-related}
 
-* [Build numbers and versions of VMware ESXi and ESX (2143832)](https://kb.vmware.com/s/article/2143832)
-* [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
-* [Enabling Jumbo Frames on virtual distributed switches](https://kb.vmware.com/s/article/1038827)
-* [{{site.data.keyword.vmwaresolutions_short}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:new_window}
+* [Build numbers and versions of VMware ESXi and ESX (2143832)](https://kb.vmware.com/s/article/2143832){:external}
+* [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838){:external}
+* [Enabling Jumbo Frames on virtual distributed switches](https://kb.vmware.com/s/article/1038827){:external}
+* [{{site.data.keyword.vmwaresolutions_short}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:external}
 * [Übersicht über vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
 * [vCenter Server-Instanzen planen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)

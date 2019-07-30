@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: Zerto certificate, Zerto config, update Zerto replication
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -25,7 +26,7 @@ Nachdem der Service "Zerto on {{site.data.keyword.cloud}}" in Ihrer Instanz bere
 ## Eigenes Zertifikat für Zerto verwenden
 {: #managingzertodr-ssl-cert}
 
-Als bewährtes Verfahren sollten Sie Ihr eigenes SSL-Zertifikat für Zerto Virtual Manager (ZVM) verwenden. Nachdem Sie Zerto on {{site.data.keyword.cloud_notm}} bereitgestellt haben, ersetzen Sie das SSL-Zertifikat für Zerto durch Ihr eigenes Zertifikat. Führen Sie hierzu die Anweisungen im Abschnitt [How to use a CER SSL Certificate to Replace the Self-Signed Certificate for the ZVM, ZSSP, or ZCM](https://www.zerto.com/myzerto/knowledge-base/how-to-use-a-cer-ssl-certificate-to-replace-the-self-signed-certificate-for-the-zvm-zssp-or-zcm/){:new_window} aus.
+Als bewährtes Verfahren sollten Sie Ihr eigenes SSL-Zertifikat für Zerto Virtual Manager (ZVM) verwenden. Nachdem Sie Zerto on {{site.data.keyword.cloud_notm}} bereitgestellt haben, ersetzen Sie das SSL-Zertifikat für Zerto durch Ihr eigenes Zertifikat. Führen Sie hierzu die Anweisungen unter [Vorgehensweise zum Verwenden eines CER-SSL-Zertifikats zum Ersetzen eines selbst signierten Zertifikats für ZVM, ZSSP oder ZCM](https://www.zerto.com/myzerto/knowledge-base/how-to-use-a-cer-ssl-certificate-to-replace-the-self-signed-certificate-for-the-zvm-zssp-or-zcm/){:external} aus.
 
 ## Konfiguration von Zerto-Replikationen verwalten
 {: #managingzertodr-manage}
@@ -53,8 +54,8 @@ Wenn Sie ESXi-Server für den primären Cluster Ihrer Instanz hinzufügen oder e
 {: #managingzertodr-related}
 
 * [Zerto on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)
-* [Verwaltete Services für Zerto on {{site.data.keyword.cloud_notm}} anfordern](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
-* [Website "zerto.com"](https://www.zerto.com){:new_window}
-* [Technische Dokumentation zu Zerto (englisch)](https://www.zerto.com/myzerto/technical-documentation/){:new_window}
-* [Disaster-Recovery mit Zerto](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/zerto){:new_window}
-* [Erläuterung von Zerto Virtual Replication-Alerts (englisch)](https://www.zerto.com/myzerto/knowledge-base/explanation-of-zvr-alerts/)
+* [Verwaltete Services für Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
+* [Website "zerto.com"](https://www.zerto.com){:external}
+* [Technische Dokumentation zu Zerto (englisch)](https://www.zerto.com/myzerto/technical-documentation/){:external}
+* [Disaster-Recovery mit Zerto](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/zerto){:external}
+* [Erläuterung von Zerto Virtual Replication-Alerts (englisch)](https://www.zerto.com/myzerto/knowledge-base/explanation-of-zvr-alerts/){:external}

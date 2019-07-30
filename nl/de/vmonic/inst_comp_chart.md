@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-20"
 
 keywords: vmware offering, vmware solutions functions, function support
 
@@ -17,8 +17,6 @@ subcollection: vmware-solutions
 {: #inst_comp_chart}
 
 Das folgende Diagramm gibt Aufschluss über die Unterschiede bei der Funktionsunterstützung für VMware vCenter Server-Instanzen, VMware vCenter Server with Hybridity Bundle-Instanzen und VMware vSphere-Clustern.
-
-Tabelle 1. Unterstützte Funktionen für vCenter Server, vCenter Server with Hybridity Bundle und vSphere-Cluster
 
 | Funktion | vCenter Server | vCenter Server with Hybridity | VMware vSphere |
 |:--- |:--- |:--- |:--- |
@@ -38,6 +36,7 @@ Tabelle 1. Unterstützte Funktionen für vCenter Server, vCenter Server with Hyb
 | Optionen für Aktualisierung der NSX-Lizenz | Upgrade verfügbar von NSX Base auf Advanced oder Enterprise und von NSX Advanced auf Enterprise. Upgrade verfügbar auf vCenter Server with Hybridity Bundle. | Upgrade verfügbar von NSX Advanced auf Enterprise  | Keine |
 | vSAN-Lizenzeditionen | vSAN Advanced oder Enterprise | vSAN Advanced oder Enterprise | vSAN Advanced oder Enterprise  |
 | Add-on-Services | Unterstützt, ohne HCX on {{site.data.keyword.cloud_notm}}. Upgrade verfügbar auf vCenter Server with Hybridity Bundle. | Unterstützt, mit HCX on {{site.data.keyword.cloud_notm}}. | Von der Automatisierung dieser Lösung nicht unterstützt, jedoch können Sie eigene Software installieren und verwenden. |
+{: caption="Tabelle 1. Unterstützte Funktionen für vCenter Server, vCenter Server with Hybridity Bundle und vSphere-Cluster" caption-side="top"}
 
 ## Hinweise
 {: #inst_comp_chart-notes}

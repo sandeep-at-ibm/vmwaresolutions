@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-28"
 
 keywords: KMIP for VMware, KMIP stand-alone, tech specs KMIP
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -30,7 +31,7 @@ Der Service "KMIP for VMware on {{site.data.keyword.cloud_notm}}" ist als eigens
 Die folgenden Spezifikationen werden mit dem Service "KMIP for VMware on {{site.data.keyword.cloud_notm}}" einbezogen:
 
 * Ein VMware-kompatibles Key Management Interoperability Protocol (KMIP)
-* Zwei verwaltete Services: [IBM Key Protect for {{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/catalog/services/key-protect) und [{{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services)
+* Zwei verwaltete Services: [IBM Key Protect for {{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/catalog/services/key-protect){:external} und [{{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services){:external}
 * Verfügbar in mehreren geografischen Regionen weltweit
 * Zwei in jeder Region bereitgestellte KMIP-Netzserviceendpunkte für hohe Verfügbarkeit
 
@@ -49,8 +50,8 @@ Lesen Sie die folgenden Hinweise, bevor Sie eine KMIP for VMware on {{site.data.
       * Auf Servicezugriffsebene: Verwaltungsberechtigung für Ihre Serviceinstanz von Key Protect oder HPCS.
    * Sie verfügen über einen API-Schlüssel für die erstellte Service-ID. Der Schlüssel ist zum Bestellen des Service erforderlich.
    * Sie haben mindestens einen Stammschlüssel für Kunden (Customer Root Key, CRK) über die GUI oder API von Key Protect oder HPCS erstellt:
-      * Weitere Informationen zum Erstellen von Stammschlüsseln mit der Key Protect-GUI oder -API finden Sie im Abschnitt [Stammschlüssel erstellen](/docs/services/key-protect?topic=key-protect-create-root-keys#create-root-keys) oder [IBM Key Protect-API](https://cloud.ibm.com/apidocs/key-protect).
-      * Weitere Informationen zum Erstellen von Stammschlüsseln mit der HPCS-GUI oder -API finden Sie im Abschnitt [Stammschlüssel erstellen](/docs/hs-crypto/get-started?topic=hs-crypto-create-root-keys) oder [IBM Cloud Hyper Protect Crypto Services-API](https://cloud.ibm.com/apidocs/hs-crypto).
+      * Weitere Informationen zum Erstellen von Stammschlüsseln mit der Key Protect-GUI oder -API finden Sie im Abschnitt [Stammschlüssel erstellen](/docs/services/key-protect?topic=key-protect-create-root-keys#create-root-keys) oder [IBM Key Protect-API](https://cloud.ibm.com/apidocs/key-protect){:external}.
+      * Weitere Informationen zum Erstellen von Stammschlüsseln mit der HPCS-GUI oder -API finden Sie im Abschnitt [Stammschlüssel erstellen](/docs/hs-crypto/get-started?topic=hs-crypto-create-root-keys) oder [IBM Cloud Hyper Protect Crypto Services-API](https://cloud.ibm.com/apidocs/hs-crypto){:external}.
 
      **Wichtig:** Der Service kann nicht ohne Stammschlüssel für Kunden (Customer Root Key, CRK) bestellt werden. Es wird dringend empfohlen, das Verfahren für die Erstellung eines Stammschlüssels für Kunden unter Verwendung vorhandener Schlüsselinformationen zu verwenden und die erstellten Schlüsselinformationen zu sichern. Dadurch stellen Sie sicher, dass Sie Ihre Schlüssel im Falle eines Ausfalls des Rechenzentrums, in dem Key Protect oder HPCS Ihre Stammschlüssel für Kunden speichert, wiederherstellen können.
 * Stellen Sie sicher, dass Ihr {{site.data.keyword.cloud_notm}}-Infrastrukturkonto für Virtual Routing and Forwarding (VRF) und für die Verbindung zu Serviceendpunkten aktiviert ist. Weitere Informationen finden Sie in den folgenden Abschnitten:

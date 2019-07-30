@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -91,7 +91,7 @@ Schritt | Beschreibung
 7 | Skate Advisor fordert einen Datensatz vom Discovery-Service an.
 8 | Der Discovery-Service wertet die Abfrage aus und sendet die Antwort.
 9 |Skate Advisor bildet eine Antwort und sendet sie in Textform an den Chatbot.
-10 | Der Chatbot sendet die Textantwort an den Service "Text To Speech".
+10 | Der Chatbot sendet die Textantwort an den Service "Text to Speech".
 11 | Das Ergebnis wird über den Chatbot an den Benutzer gesendet.
 
 ### Videowiedergabe

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-20"
 
 keywords: IBM Cloud Private Hosted, ICP configuration, order Cloud Private
 
@@ -23,14 +23,14 @@ Sie können den Service "{{site.data.keyword.cloud}} Private Hosted" durch Beste
 
 Sie können mithilfe einer der folgenden Methoden eine neue Instanz mit dem enthaltenen Service "{{site.data.keyword.cloud_notm}} Private Hosted" bestellen:
 * Wählen Sie beim Bestellen einer neuen Instanz von der {{site.data.keyword.vmwaresolutions_short}}-Konsole **IBM Cloud Private Hosted** im Abschnitt **Optionale Services** aus.
-* Wählen Sie im {{site.data.keyword.cloud_notm}}-Katalog **IBM Cloud Private Hosted** aus, geben Sie die Serviceeinstellungen an und wählen Sie anschließend **Zu neuer Instanz hinzufügen** aus.
+* Klicken Sie im {{site.data.keyword.cloud_notm}}-Katalog im linken Navigationsfenster auf das Symbol **VMware** und anschließend im Abschnitt **VMware Services** auf die Karte **IBM Cloud Private Hosted**. Geben Sie die Serviceeinstellungen an und wählen Sie **Zu neuer Instanz hinzufügen** aus.
 
 ## IBM Cloud Private Hosted für eine vorhandene Instanz bestellen
 {: #icp_ordering-existing}
 
 Sie können den Service "{{site.data.keyword.cloud_notm}} Private Hosted" mit einer der folgenden Methoden zu einer vorhandenen Instanz hinzufügen:
 * Zeigen Sie über die {{site.data.keyword.vmwaresolutions_short}}-Konsole die Instanz an, für die der Service hinzugefügt werden soll, klicken Sie im linken Navigationsfenster auf **Services** und anschließend auf **Hinzufügen**.
-* Wählen Sie im {{site.data.keyword.cloud_notm}}-Katalog **IBM Cloud Private Hosted** aus, geben Sie die Serviceeinstellungen an und wählen Sie anschließend **Zu vorhandener Instanz hinzufügen** aus.
+* Klicken Sie im {{site.data.keyword.cloud_notm}}-Katalog im linken Navigationsfenster auf das Symbol **VMware** und anschließend im Abschnitt **VMware Services** auf die Karte **IBM Cloud Private Hosted**. Geben Sie die Serviceeinstellungen an und wählen Sie **Zu vorhandener Instanz hinzufügen** aus.
 
 ## Konfiguration des IBM Cloud Private Hosted-Service
 {: #icp_ordering-config}

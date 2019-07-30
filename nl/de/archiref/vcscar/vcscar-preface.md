@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -21,13 +21,17 @@ subcollection: vmware-solutions
 
 Die Kombination, in der Skater Bewegungen und Teilbewegungen in Tricks zusammenführen, bringt eine Art Grammatik oder Syntax hervor, die auf den stattfindenden Bewegungsabläufen basiert (vergleichbar mit der aus ähnlichen Gründen entwickelten chemischen Nomenklatur). Heutzutage kann ein Skater auf der einen Seite der Erde eine SMS mit dem Namen eines Tricks an einen anderen Skater auf der entgegengesetzten Seite des Planeten schicken und sicher sein, dass seine komplexen Bewegungsabläufe verstanden werden.
 
-Der Reichtum der Sprache entsteht durch die Komplexität des Skateboardings selbst. Die Bewegungen des Skateboards (auch "Deck" genannt) sind kompliziert und lassen Dutzende von Basistricks zu, die auf unterschiedliche Weise ausgeführt sowie in zahlreichen Varianten wiederholt werden können und so eine riesige Zahl von Kombinationen ermöglichen. Eine Struktur im Format "Präfix-Stammelement-Suffix" für jede Komponente legt fest, wie die einzelnen Elemente bzw. Bewegungen verkettet werden; sie entspricht somit den realen Bewegungsabläufen von Deck und Skater gleichermaßen. Die physische Richtung und Mechanik der Kräfte bestimmt, welche Elemente zusammenpassen und welche nicht (was also diese Syntax hervorbringt).
+Der Reichtum der Sprache entsteht durch die Komplexität des Skateboardings selbst. Die Bewegungen des Skateboards (auch "Deck" genannt) sind kompliziert und lassen Dutzende von Basistricks zu, die auf unterschiedliche Weise ausgeführt sowie in zahlreichen Varianten wiederholt werden können und so eine riesige Zahl von Kombinationen ermöglichen.
+
+Eine Struktur im Format "Präfix-Stammelement-Suffix" für jede Komponente legt fest, wie die einzelnen Elemente bzw. Bewegungen verkettet werden; sie entspricht somit den realen Bewegungsabläufen von Deck und Skater gleichermaßen. Die physische Richtung und Mechanik der Kräfte bestimmt, welche Elemente zusammenpassen und welche nicht (was also diese Syntax hervorbringt).
 
 Tricks können vom Heck (dem so genannten "Tail") oder vom Bug (der so genannten "Nose") des Decks ausgehen (z. B. *Ollie* oder *Nollie*), was dem vorderen oder dem hinteren Fuß des Skaters entspricht. Das Deck kippt, rollt und überschlägt sich in Kombinationen, die über drei Achsen in beiden Richtungen (im Uhrzeigersinn und gegen den Uhrzeigersinn) wiederholt werden. Der Skater kombiniert dann die Bewegungen des Decks mit seinen eigenen Bewegungen, was die Wiederholungen aufgrund von Richtung, Drehung und Grundhaltung durch mehrere Dimensionen ergänzt, die zusätzlich darauf basieren können, ob die Drehung in oder entgegen der Kipprichtung des Decks erfolgt.
 
-Diese letzten beiden Varianten verdienen eine genauere Erläuterung. Zunächst einmal wird *Grundhaltung* leicht mit der linearen Richtung verwechselt. Alle Skater besitzen eine eigene Grundhaltung (entweder steht der linke oder der rechte Fuß vorne); die Ausführung eines *Switch*-Tricks (Wechsel der Grundhaltung) entspricht somit einem Spiegelbild des Tricks, ähnlich wie ein beidhändiger Schlagmann beim Baseball. Die Rückwärtsrichtung ist nebensächlich; primär wird nach "Händigkeit" oder "Füßigkeit" unterschieden.  Jeder Trick mit einem *Switch* verdient daher weitaus mehr Anerkennung und zwar nicht, weil er rückwärts ausgeführt wird, sondern weil alle Antriebsfunktionen auf die schwächere Seite, nämlich den "falschen" Fuß verlagert werden. Um einen Trick einfach rückwärts auszuführen (einen "Fakie"), werden einfach ein Minuszeichen vor die Richtung gesetzt und dieselben Antriebsfunktionen einbezogen, die nur unwesentlich schwieriger sind.
+Diese letzten beiden Varianten verdienen eine genauere Erläuterung. Zunächst einmal wird *Grundhaltung* leicht mit der linearen Richtung verwechselt. Alle Skater besitzen eine eigene Grundhaltung (entweder steht der linke oder der rechte Fuß vorne); die Ausführung eines *Switch*-Tricks (Wechsel der Grundhaltung) entspricht somit einem Spiegelbild des Tricks, ähnlich wie ein beidhändiger Schlagmann beim Baseball. Die Rückwärtsrichtung ist nebensächlich; primär wird nach "Händigkeit" oder "Füßigkeit" unterschieden. Jeder Trick mit einem *Switch* verdient daher weitaus mehr Anerkennung und zwar nicht, weil er rückwärts ausgeführt wird, sondern weil alle Antriebsfunktionen auf die schwächere Seite, nämlich den "falschen" Fuß verlagert werden. Um einen Trick einfach rückwärts auszuführen (einen "Fakie"), werden einfach ein Minuszeichen vor die Richtung gesetzt und dieselben Antriebsfunktionen einbezogen, die nur unwesentlich schwieriger sind.
 
-Die zweite, für fortgeschrittenere Skater wichtige Raffinesse hängt damit zusammen, ob der Flip *einwärts* oder *auswärts* erfolgt, abhängig davon, wie das (zweiachsige) Deck in Bezug auf den Körper kippt und dreht. Flip-Tricks können an beiden Enden des Decks auf jeder Seite des Fußes beginnen: *Kickflips* können im Uhrzeigersinn an den Zehenspitzen beginnen, während *Heelflips* genau entgegengesetzt ablaufen, wobei der Flip entweder mit dem oder gegen den natürlichen Bewegungsablauf erfolgt. Ein einwärts ausgeführter Flip ("Inward Flip") ist so unnatürlich, dass es dafür einen eigenen Begriff gibt, den so genannten *Hardflip*. Ein *Nollie Inward Kickflip* ist daher mit einem *Nollie Hardflip* identisch; beide erfordern eine größere Präzision, weil sie "gegen den Strich" ausgeführt werden.
+Die zweite, für fortgeschrittenere Skater wichtige Raffinesse hängt damit zusammen, ob der Flip *einwärts* oder *auswärts* erfolgt, abhängig davon, wie das (zweiachsige) Deck in Bezug auf den Körper kippt und dreht. Flip-Tricks können an beiden Enden des Decks auf jeder Seite des Fußes beginnen: *Kickflips* können im Uhrzeigersinn an den Zehenspitzen beginnen, während *Heelflips* genau entgegengesetzt ablaufen, wobei der Flip entweder mit dem oder gegen den natürlichen Bewegungsablauf erfolgt.
+
+Ein einwärts ausgeführter Flip ("Inward Flip") ist so unnatürlich, dass es dafür einen eigenen Begriff gibt, den so genannten *Hardflip*. Ein *Nollie Inward Kickflip* ist daher mit einem *Nollie Hardflip* identisch; beide erfordern eine größere Präzision, weil sie "gegen den Strich" ausgeführt werden.
 
 Jede Komponente dieser Präfix-Basiselement-Suffix-Struktur kann somit in drei eher binäre Elemente aus Drehung, Richtung und Grundhaltung untergliedert werden; bei einigen Tricks muss angegeben werden, ob das Kippen ein- oder auswärts erfolgt. Das Skateboarding wäre ein Kinderspiel, wenn es nicht die Möglichkeit gäbe, Tricks zu kombinieren, was die Anzahl der Iterationen wie bei einem Schneeballsystem vergrößert. Mehrere Basistricks können in einzelnen Clustern aufgereiht werden, die aus Zweier-, Dreier- oder bei absoluten Profis selbst aus Fünfer- und sogar Sechsergruppen bestehen.
 
@@ -60,8 +64,7 @@ Ein Skater kann Watson Assistant beispielsweise nach einer Liste aller mögliche
 ## Cloudplattform
 {: #vcscar-preface-cloud-platform}
 
-Die kreative Ebene von IT-Systemen für die Generierung neuer Kombinationen spricht den Kernpunkt des Skateboardings an. Sie ist in der Lage, sich allmählich im Leben von Kreativen auszubreiten und sie überall auf der  ganzen Welt zu Innovationen zu inspirieren.
-All dies wäre ohne die {{site.data.keyword.cloud}} nicht möglich.
+Die kreative Ebene von IT-Systemen für die Generierung neuer Kombinationen spricht den Kernpunkt des Skateboardings an. Sie ist in der Lage, sich allmählich im Leben von Kreativen auszubreiten und sie überall auf der  ganzen Welt zu Innovationen zu inspirieren. All dies wäre ohne die {{site.data.keyword.cloud}} nicht möglich.
 
 ## Zugehörige Links
 {: #vcscar-preface-related}

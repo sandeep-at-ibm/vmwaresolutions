@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-03"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -29,9 +29,9 @@ Es soll auf realistische Weise eine Interaktion zwischen der künstlichen Intell
 
 Die Implementierung der Designstudie erweitert die Demoanwendung "Acme Skateboard" durch das Tool "Skate Advisor". Mit dem Tool "Skate Advisor" können sich Benutzer durch eine Watson-gesteuerte Engine über Skateboard-Tricks austauschen. Bei den folgenden Zitaten handelt es sich um einen Beispieldialog:
 
--   Watson, zeig mir Kombinationen des Tricks "Casper"
--   Watson, zeig mir öffentliche Spots, an denen man Tricks ausführen kann
--   Watson, zeig mir ein Video des Tricks "Casper"
+-`Watson, zeig mir Kombinationen des Tricks "Casper"`
+- `Watson, zeig mir öffentliche Spots, an denen man Tricks ausführen kann`
+- `Watson, zeig mir ein Video des Tricks "Casper"`
 
 Acme Skate Advisor nutzt den Watson Discovery-Service zum Aufnehmen von Artikeln, Videos, Blogs und anderem internetbasierten Inhalt für die Erstellung einer Lerndatenbank mit Tricks, die von der Anwendung abgefragt werden kann.
 

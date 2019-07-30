@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-06-21"
 
 keywords: vCenter Server update, patch vCenter Server, IBM component update
 
@@ -44,26 +44,12 @@ Erweitern Sie den Updateeintrag, indem Sie auf den Abwärtspfeil klicken und die
 * Stellen Sie fest, wie sich das Update auf die virtuelle VMware-Umgebung auswirkt. Tabelle 1 zeigt, wie sich die verschiedenen Aktualisierungsstufen auf das System auswirken.
 * Lesen Sie die Details über das Update.
 
-Tabelle 1. Aktualisierungsstufen und Auswirkungen
-
-<table>
-  <tr>
-    <th>Aktualisierungsstufe</th>
-    <th>Auswirkung</th>
-  </tr>
-  <tr>
-    <td>Niedrig</td>
-    <td>Dieses Update hat keine Auswirkungen auf Systeme. Sie müssen es nicht während einer geplante Ausfallzeit anwenden.</td>
-  </tr>
-  <tr>
-    <td>Mittel</td>
-  <td>Dieses Update kann sich auf einige Systeme auswirken. Es empfiehlt sich, es während einer geplanten Ausfallzeit anzuwenden.</td>
-  </tr>
-    <tr>
-    <td>Bedeutend</td>
-  <td>Dieses Update wirkt sich auf einige oder alle Systeme aus. Sie müssen es während einer geplanten Ausfallzeit anwenden.</td>
-  </tr>
-</table>
+| Aktualisierungsstufe | Auswirkung |
+|:------------ |:------ |
+| Niedrig | Dieses Update hat keine Auswirkungen auf Systeme. Sie müssen es nicht während einer geplante Ausfallzeit anwenden. |
+| Mittel | Dieses Update kann sich auf einige Systeme auswirken. Es empfiehlt sich, es während einer geplanten Ausfallzeit anzuwenden. |
+| Bedeutend | Dieses Update wirkt sich auf einige oder alle Systeme aus. Sie müssen es während einer geplanten Ausfallzeit anwenden. |
+{: caption="Tabelle 1. Aktualisierungsstufen und Auswirkungen" caption-side="top"}
 
 ## Vorgehensweise zum Anwenden von Updates für IBM Managementkomponenten (V2.1 bis V2.4-Instanzen)
 {: #vc_applyingupdates-procedure}
@@ -89,38 +75,15 @@ Tabelle 1. Aktualisierungsstufen und Auswirkungen
 
 2. Details zu den Statuswerten für Updates finden Sie in der folgenden Tabelle.
 
-   Tabelle 2. Details zu den Statuswerten für Updates
-
-    <table>
-      <tr>
-        <th>Status</th>
-        <th>Details</th>
-      </tr>
-      <tr>
-        <td>Verfügbar</td>
-        <td>Das Update ist für eine Anwendung verfügbar. Sie können ein verfügbares Update erst dann auswählen, nachdem alle zugehörigen vorherigen Updates angewendet wurden.</td>
-      </tr>
-      <tr>
-        <td>In Bearbeitung</td>
-      <td>Der Update-Job wurde initialisiert, ist aber noch nicht beendet. Sie können keine anderen Updates anwenden, bis der aktuelle Update-Job abgeschlossen ist. </td>
-      </tr>
-        <tr>
-        <td>Installiert</td>
-      <td>Der Update-Job ist abgeschlossen. Die entsprechende Komponente der VMware-Plattform wurde aktualisiert.</td>
-      </tr>
-        <tr>
-        <td>Fehlgeschlagen</td>
-      <td>Der Update-Job ist fehlschlagen. In der Konsole wird ein Fehler für das Fehlschlagen des Updates gemeldet. Überprüfen Sie den Fehler und lösen Sie das gemeldete Problem, bevor Sie das Update erneut anwenden.</td>
-      </tr>
-          <tr>
-        <td>Geplant</td>
-      <td>Der Update-Job ist für einen späteren Zeitpunkt geplant. Er wird am geplanten Zeitpunkt automatisch gestartet.</td>
-      </tr>
-          <tr>
-        <td>Unbekannt</td>
-      <td>Der Status des Update-Jobs kann nicht abgerufen werden. Bitten Sie den IBM Support um Unterstützung.</td>
-      </tr>
-    </table>
+| Status | Details |
+|:------ |:------- |
+| Verfügbar | Das Update ist für eine Anwendung verfügbar. Sie können ein verfügbares Update erst dann auswählen, nachdem alle zugehörigen vorherigen Updates angewendet wurden. |
+| In Bearbeitung | Der Update-Job wurde initialisiert, ist aber noch nicht beendet. Sie können keine anderen Updates anwenden, bis der aktuelle Update-Job abgeschlossen ist. |
+| Installiert | Der Update-Job ist abgeschlossen. Die entsprechende Komponente der VMware-Plattform wurde aktualisiert. |
+| Fehlgeschlagen | Der Update-Job ist fehlschlagen. In der Konsole wird ein Fehler für das Fehlschlagen des Updates gemeldet. Überprüfen Sie den Fehler und lösen Sie das gemeldete Problem, bevor Sie das Update erneut anwenden. |
+| Geplant | Der Update-Job ist für einen späteren Zeitpunkt geplant. Er wird am geplanten Zeitpunkt automatisch gestartet. |
+| Unbekannt | Der Status des Update-Jobs kann nicht abgerufen werden. Bitten Sie den IBM Support um Unterstützung. |
+{: caption="Tabelle 2. Details zu den Statuswerten für Updates" caption-side="top"}
 
 3. Falls der Updateprozess bei einem bestimmten Schritt fehlschlägt, [wenden Sie sich an den IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support), um Unterstützung zu erhalten. Sie erhalten Hilfe bei der Lösung des Problems und Anweisungen, wie Sie die Updates und Patches von dem Schritt aus ausführen können, der fehlgeschlagen ist.
 

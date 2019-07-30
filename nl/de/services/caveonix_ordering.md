@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-20"
 
 keywords: Caveonix RiskForesight, Caveonix configuration, order Caveonix
 
@@ -25,12 +25,17 @@ Sie können den Service "Caveonix RiskForesight on {{site.data.keyword.cloud}}" 
 ## Caveonix RiskForesight on IBM Cloud für eine neue Instanz bestellen
 {: #caveonix_ordering-new}
 
-Zum Bestellen einer neuen VMware vCenter Server on {{site.data.keyword.cloud_notm}}-Instanz mit Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} wählen Sie **Caveonix RiskForesight on IBM Cloud** im Abschnitt **Services** aus, wenn Sie die Instanz über die {{site.data.keyword.vmwaresolutions_short}}-Konsole bestellen.
+Sie können mithilfe einer der folgenden Methoden eine neue Instanz mit Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} bestellen:
+* Wählen Sie beim Bestellen einer neuen Instanz in der {{site.data.keyword.vmwaresolutions_short}}-Konsole **Caveonix RiskForesight on IBM Cloud** im Abschnitt **Services** aus.
+* Klicken Sie im {{site.data.keyword.cloud_notm}}-Katalog im linken Navigationsfenster auf das Symbol **VMware** und anschließend im Abschnitt **VMware Services** auf die Karte **Caveonix RiskForesight on IBM Cloud**. Geben Sie die Serviceeinstellungen an und wählen Sie **Zu neuer Instanz hinzufügen** aus.
+
 
 ## Caveonix RiskForesight on IBM Cloud für eine vorhandene Instanz bestellen
 {: #caveonix_ordering-existing}
 
-Wenn Sie den Service "Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}" einer vorhandenen VMware vCenter Server on {{site.data.keyword.cloud_notm}}-Instanz hinzufügen möchten, zeigen Sie die Instanz an, für die der Service hinzugefügt werden soll. Klicken Sie dann im linken Navigationsfenster auf **Services** und anschließend auf **Hinzufügen**.
+Sie können den Service "Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}" auf einer der folgenden Methoden zu einer vorhandenen Instanz hinzufügen:
+* Zeigen Sie über die {{site.data.keyword.vmwaresolutions_short}}-Konsole die Instanz an, für die der Service hinzugefügt werden soll, klicken Sie im linken Navigationsfenster auf **Services** und anschließend auf **Hinzufügen**.
+* Klicken Sie im {{site.data.keyword.cloud_notm}}-Katalog im linken Navigationsfenster auf das Symbol **VMware** und anschließend im Abschnitt **VMware Services** auf die Karte **Caveonix RiskForesight on IBM Cloud**. Geben Sie die Serviceeinstellungen an und wählen Sie **Zu vorhandener Instanz hinzufügen** aus.
 
 ## Konfiguration von Caveonix RiskForesight on IBM Cloud
 {: #caveonix_ordering-config}

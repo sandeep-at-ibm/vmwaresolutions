@@ -47,7 +47,7 @@ Caveonix RiskForesight besitzt ein Zonenkonzept:
 - Cloud-Provider: Diese Zone stellt die Infrastruktur bereit, in der Anwendungen gehostet werden:
     - Privat: VMware on {{site.data.keyword.cloud}} sowie lokale VMware-Infrastrukturplattformen. Diese Plattformen sind in RiskForesight integriert durch vCenter, NSX-Manager, VMware Cloud Director (vCD) oder vRealize Automation (vRA).
     - Öffentlich: Derzeit ist AWS der einzige unterstützte öffentliche Cloud-Provider. {{site.data.keyword.cloud_notm}} ist demnächst verfügbar.
-    - Container: Derzeit wird nur AWS Elastic Kubernetes Service (EKS) unterstützt. {{site.data.keyword.cloud_notm}} Private und {{site.data.keyword.cloud_notm}} Kubernetes Services (IKS) sind in Kürze verfügbar.
+    - Container: Derzeit wird nur AWS Elastic Kubernetes Service (EKS) unterstützt. {{site.data.keyword.cloud_notm}} Private- und {{site.data.keyword.cloud_notm}} Kubernetes-Services sind in Kürze verfügbar.
 -	Tenant- oder Kundenumgebungszone: Diese Zonen werden zur Trennung von Tenants, von Kunden- oder Geschäftseinheiten verwendet. In diesen Zonen gibt es Workloads, weshalb ein ferner Kollektor erforderlich ist. Für eine Mindestbereitstellung benötigen Sie einen fernen Kollektor; für eine allgemeine Bereitstellung hingegen benötigen Sie einen fernen Kollektor pro Tenant/Kunden/Geschäftseinheit.
 
 

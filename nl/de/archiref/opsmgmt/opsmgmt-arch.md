@@ -10,7 +10,7 @@ lastupdated: "2019-06-03"
 
 # Übersicht über die Operations Management-Architektur
 {: #opsmgmt-arch}
-Die Architektur der Produkte in der Operations Management-Schicht stellt eine zentralisierte Überwachung mit Protokollierungsdaten aus {{site.data.keyword.vmwaresolutions_full}} bereit. Von der Operations Management-Schicht werden in Echtzeit die physische Infrastruktur, die virtuelle Infrastruktur und optional die Rechenworkloads des Clients überwacht. 
+Die Architektur der Produkte in der Operations Management-Schicht stellt eine zentralisierte Überwachung mit Protokollierungsdaten aus {{site.data.keyword.vmwaresolutions_full}} bereit. Von der Operations Management-Schicht werden in Echtzeit die physische Infrastruktur, die virtuelle Infrastruktur und optional die Rechenworkloads des Clients überwacht.
 
 Ganz grob werden die folgenden Informationen erfasst:
 * Topologiedaten, z. B. physische und virtuelle Rechen-, Netz- und Speicherobjekte.
@@ -21,7 +21,7 @@ Ganz grob werden die folgenden Informationen erfasst:
 ## Operations Management-Abläufe
 {: #opsmgmt-arch-flows}
 
-Im folgenden Diagramm werden die wichtigsten Interaktionen und die Integration der Operations Management-Tools dargestellt. 
+Im folgenden Diagramm werden die wichtigsten Interaktionen und die Integration der Operations Management-Tools dargestellt.
 
 ![Diagramm der Management-Abläufe](../../images/opsmgmt-mgmtflows.svg "Diagramm der Management-Abläufe")
 
@@ -81,7 +81,7 @@ Die Überwachung der vSphere-Hosts erfolgt mit vROps über vCenter und der Erfas
 ### Überwachung von vSAN
 {: #opsmgmt-arch-components-vsan}
 
-Zur Überwachung von vSAN werden vROps und vRLI verwendet. In vCenter gibt es einen zusätzlichen Satz an vSAN-Statusprüfungen, die verwendet werden können. Die Installation des Management Pack for vSAN stellt zusätzliche Dashboards für die Überwachung von vSAN bereit. 
+Zur Überwachung von vSAN werden vROps und vRLI verwendet. In vCenter gibt es einen zusätzlichen Satz an vSAN-Statusprüfungen, die verwendet werden können. Die Installation des Management Pack for vSAN stellt zusätzliche Dashboards für die Überwachung von vSAN bereit.
 
 vROps generiert einen Alert, wenn ein Problem in den SDDC-Produktkomponenten im Speicherbereichsnetz auftritt, das vom VMware vSAN-Adapter überwacht wird. Ein Alert, der mit der Konfigurationskonformität und dem Status verknüpft ist, wird über das VMware SDDC Health Solution Management Pack aus VMware vSAN Management Pack übergeben. vSAN wird mit dem vROps vSAN Management Pack über die vCenter-Appliance mithilfe eines vSAN-Adapters überwacht. Das Standarderfassungsintervall beträgt fünf Minuten und der vSAN-Adapter erfasst auch die Metriken der Dienste für Statusprüfung und Leistung von vSphere-Objekten. Das Intervall des Diensts für Statusprüfung wird in der vSphere-Schnittstelle konfiguriert und beträgt standardmäßig 60 Sekunden.
 
@@ -97,7 +97,7 @@ Zur Überwachung von NSX werden die folgenden Tools implementiert:
 
 Damit können Systemadministratoren VMware NSX überwachen, verwalten und relevante Fehler beheben. Das vROps Management Pack for VMware NSX bietet Einblicke in die Netztopologie. NSX-Dashboards geben einen schnellen Überblick über die NSX-Umgebung und den Status ihrer Komponenten. Die Korrelation zwischen NSX-Objekten und vSphere-Objekten ermöglicht eine einfache Fehlerbehebung.
 
-vROps verwendet das Management Pack, um von VMware NSX Konfigurations-, Leistungs- und Supportdaten abzufragen. Für vROps konvertiert das Management Pack die Abfrageanforderungen in REST-API-Aufrufe, um die erforderlichen Daten von NSX Manager abzurufen. 
+vROps verwendet das Management Pack, um von VMware NSX Konfigurations-, Leistungs- und Supportdaten abzufragen. Für vROps konvertiert das Management Pack die Abfrageanforderungen in REST-API-Aufrufe, um die erforderlichen Daten von NSX Manager abzurufen.
 
 Die NSX-Komponenten müssen so konfiguriert werden, dass sie Syslog an vRLI senden.
 

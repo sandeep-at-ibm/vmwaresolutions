@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: HTKC WebGUI, HTKC console, enable internet HTKC
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -67,7 +68,7 @@ Da bei rein privaten vCenter Server-Umgebungen VMware NSX Edge Services Gateway 
 6. Klicken Sie zum Festlegen einer statischen Route für die virtuelle Maschine auf **Netzeinstellungen verwalten > Statische Routen verwalten > Statische Route hinzufügen**. Legen Sie für **Netzadresse** den Wert `10.0.0.0/8` und für **Gateway** die IP-Adresse fest, die Sie im vorherigen Schritt notiert haben.
 7. Klicken Sie zum Festlegen der IP-Adresse für das Standardgateway für die VM auf **Netzeinstellungen verwalten > Aktuelle Netzkonfiguration ändern**. Falls eine Warnung auftritt, klicken Sie auf **OK** und anschließend auf **Angepasste Konfiguration**. Geben Sie im Feld **Gateway** die IP-Adresse für den privaten Uplink ein, die Sie in Schritt 2 notiert haben, und klicken Sie auf **OK**. Warten Sie, bis die neue Netzkonfiguration installiert ist und die Netzservices erneut gestartet werden.
 8. Wenn eine Nachricht angezeigt wird, in der Sie zu einer erneuten Authentifizierung von HyTrust SecureOS aufgefordert werden, klicken Sie auf **OK** und geben die IP-Adresse der anderen HyTrust-VM für diese Installation ein. Wenn Sie zum Eingeben einer aus 16 Zeichen bestehenden Kennphrase aufgefordert werden, drücken Sie die Eingabetaste, um zum Hauptmenü zurückzukehren. Überprüfen Sie die aktuelle Netzkonfiguration, um sicherzustellen, dass die Änderungen angewendet werden.
-9. Wenn Sie sich vergewissern möchten, dass die virtuelle Maschine über Internetzugriff verfügt, setzen Sie einen Pingbefehl für eine öffentliche IP-Adresse oder Website ab. Klicken Sie auf **Netzeinstellungen verwalten > Netzdiagnosetools > Pingsignal an weiteren Server absetzen**. Geben Sie eine Adresse für eine öffentliche Website wie zum Beispiel `www.ibm.com` ein, klicken Sie auf **OK** und warten Sie, bis eine Nachricht angezeigt wird; Beispiel: `www.ibm.com responds to ping`.
+9. Wenn Sie sich vergewissern möchten, dass die virtuelle Maschine über Internetzugriff verfügt, setzen Sie einen Pingbefehl für eine öffentliche IP-Adresse oder Website ab. Klicken Sie auf **Netzeinstellungen verwalten > Netzdiagnosetools > Port für eingehende Daten eines weiteren Servers testen**. Geben Sie eine öffentliche Websiteadresse wie zum Beispiel `www.ibm.com` ein, klicken Sie auf **OK**, geben Sie `80 443` für die Ports ein (oder andere Ports, die Sie testen möchten); daraufhin sollten Sie eine sofortige Antwort erhalten, in der Ports für eingehende Daten zusammen mit einer Nachricht angegeben werden, die der Zeichenfolge `80 (OK) 443 (OK)` ähnelt.
 10. Wiederholen Sie die Schritte 3 bis 9 für weitere virtuelle HyTrust-Maschinen.
 
 ## Zugehörige Links
@@ -76,4 +77,4 @@ Da bei rein privaten vCenter Server-Umgebungen VMware NSX Edge Services Gateway 
 * [HyTrust KeyControl on {{site.data.keyword.cloud_notm}} - Übersicht](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htkc_considerations)
 * [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [Häufig gestellte Fragen](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [HyTrust-Website](https://www.hytrust.com/)
+* [HyTrust-Website](https://www.hytrust.com/){:external}

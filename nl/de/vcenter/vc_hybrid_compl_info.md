@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server Hybridity compliance, compliance info Hybridity, vCenter Server Hybridity policy
 
@@ -12,6 +12,8 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # Konformitätsinformationen für vCenter Server with Hybridity Bundle-Instanzen
 {: #vc_hybrid_compl_info}
@@ -76,7 +78,7 @@ VMware vCenter Server-Umgebungen, die als {{site.data.keyword.vmwaresolutions_sh
 * Aufgrund des Grades an Spezialisierung, der erforderlich ist, um das technische Know-how auf Teamebene aufrecht zu erhalten, ist es in manchen Fällen nötig, dass mehr als ein Support-Team an der Lösung eines bestimmten Softwareproblems beteiligt ist. Dies ist ohne großen Aufwand durchsetzbar, da unsere Support-Teams gut miteinander vernetzt sind und Hand in Hand an aufgetretenen Probleme arbeiten.
 * Um das Problem zu untersuchen, muss IBM möglicherweise auf Informationen zu Ihrem System in Bezug auf den Fehler zugreifen oder den Fehler erneut generieren, um zusätzliche Informationen zu erhalten.
 * Ein vom Kunden geöffnetes Support-Ticket dient als Bestätigung seitens des Kunden, dass IBM Support für das Durchführen von Untersuchungen, Debugging und Triage auf die VMware-Managementschicht zugreifen kann. Wenn Wartungsunterbrechungen oder Änderungen an der Umgebung erforderlich sind, fordert IBM Support zusätzliche dokumentierte Bestätigungen vom Kunden über Tickets als Teil unseres Änderungsmanagementprozesses an.
-* Weitere Informationen zu Support-Tickets finden Sie im [IBM Support Guide](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923) und unter [Kontaktaufnahmen mit IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
+* Weitere Informationen zu Support-Tickets finden Sie im [IBM Support Guide](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923){:external} und unter [Kontaktaufnahmen mit IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
 
 ## Verantwortlichkeiten des Kunden
 {: #vc_hybrid_compl_info-client-responsibilities}
@@ -115,7 +117,7 @@ VMware vCenter Server-Umgebungen, die als {{site.data.keyword.vmwaresolutions_sh
 * Diese Programme, die keine IBM Programme sind, werden direkt von den jeweiligen Anbietern lizenziert. Der Kunde verpflichtet sich, die Programme, die keine IBM Programme sind, gemäß den Bedingungen des Anbieters zu verwenden. Diese sind in der IBM Lizenzvereinbarung enthalten, die Bestandteil des IBM Angebots zum Zeitpunkt des Erwerbs ist.
 * IBM testet, ob die Produkte anderer Anbieter mit IBM Programmen verwendet werden können und ordnungsgemäß funktionieren.
 * IBM Software Support diagnostiziert Kundenprobleme anhand der Kenntnisse zur Funktionsweise Ihrer IBM Angebote mit Software anderer Anbieter. Sobald festgestellt wurde, dass das IBM Programm ordnungsgemäß funktioniert, das Problem jedoch weiterhin existiert, muss IBM den Kunden zur weiteren Diagnose an den Drittanbieter verweisen.
-* Weitere Informationen zur Verantwortlichkeiten des Kunden bezüglich der Software oder des Codes anderer Anbieter finden Sie im [IBM Support Guide](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923).
+* Weitere Informationen zur Verantwortlichkeiten des Kunden bezüglich der Software oder des Codes anderer Anbieter finden Sie im [IBM Support Guide](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923){:external}.
 
 ## Zustimmung für den Zugriff auf Kundenumgebungen
 {: #vc_hybrid_compl_info-consent-to-access-client-environment}

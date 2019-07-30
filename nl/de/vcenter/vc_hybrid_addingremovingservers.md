@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-26"
 
 keywords: vCenter Server Hybridity add host, add server vCenter Server Hybridity, remove host vCenter Server Hybridity
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -54,7 +55,7 @@ Da Ihr erster Cluster vSAN als Speicher verwendet, kann das Hinzufügen einzelne
 7. Wählen Sie optional das Kontrollkästchen zum Hinzufügen von Servern während des Wartungsmodus aus. Das Kontrollkästchen ist standardmäßig ausgewählt.
 
    Wenn Sie den neuen ESXi-Server bereitstellen, werden die virtuellen Maschinen (VMs) sofort auf die neuen Server migriert, falls Sie das Kontrollkästchen **Wartungsmodus** nicht auswählen. Sie empfangen die Bestätigungsnachricht erst, wenn die Migration beginnt.
-{:important}
+   {:important}
 
 8. Führen Sie die Bare-Metal-Konfiguration durch.
    * Wählen Sie eine Konfiguration aus den vorhandenen Hosts im Cluster aus.
@@ -111,5 +112,5 @@ Wenn Sie ESXi-Server während des Wartungsmodus hinzufügen, werden virtuelle Ma
 * [vCenter Server-Teileliste](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
 * [Voraussetzungen und Planung für vCenter Server with Hybridity Bundle-Instanzen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)
 * [Cluster für vCenter Server with Hybridity Bundle-Instanzen hinzufügen, anzeigen und löschen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingviewingclusters)
-* [Versetzen eines Hosts in den Wartungsmodus](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.resmgmt.doc/GUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
-* [Prozessorunterstützung für EVC (Enhanced vMotion Compatibility)](https://kb.vmware.com/s/article/1003212){:new_window}
+* [Versetzen eines Hosts in den Wartungsmodus](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.resmgmt.doc/GUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:external}
+* [Prozessorunterstützung für EVC (Enhanced vMotion Compatibility)](https://kb.vmware.com/s/article/1003212){:external}

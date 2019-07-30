@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-30"
+lastupdated: "2019-07-01"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2019-05-30"
 Viele IT-Organisationen dokumentieren ihre Betriebsprozesse in einem Runbook. Ein Runbook ist ein Satz standardisierter Dokumente, Referenzen und Prozeduren, die häufig wiederkehrende IT-Tasks erläutern. IT-Mitarbeiter beziehen sich auf das Runbook, um ihre Arbeit optimal zu erledigen. Runbooks verbessern die organisatorische Effizienz durch Standardisierung und unterstützen ein effizienteres Onboarding von Mitarbeitern. Es gibt zwei Typen von Runbooks:
 
 1. Eine allgemeine Dokumentation der Prozeduren, Leitfäden und Tasks. Diese ist in der Regel eher allgemein gehalten und verweist auf die von Anbietern bereits bereitgestellte Dokumentation.
-2. Eine spezialisierte Dokumentation für das Unternehmen. Diese Dokumentation ist für ein System, eine Anwendung oder eine Suite von Anwendungen spezifisch; die darin enthaltenen Themen werden in der Dokumentation der Anbieter nicht abgedeckt. Die folgende Struktur für Ihre spezialisierte Dokumentation wird empfohlen: 
+2. Eine spezialisierte Dokumentation für das Unternehmen. Diese Dokumentation ist für ein System, eine Anwendung oder eine Suite von Anwendungen spezifisch; die darin enthaltenen Themen werden in der Dokumentation der Anbieter nicht abgedeckt. Die folgende Struktur für Ihre spezialisierte Dokumentation wird empfohlen:
 
  * Übersicht - Eine Übersicht über den Service mit Abschnitten, die Folgendes beschreiben:
     * Was ist der Service und warum ist er für das Unternehmen erforderlich?
@@ -32,8 +32,9 @@ Die meisten IT-Organisationen verfügen über mehrere Runbooks, die als Referenz
 1. Die erste Phase ist die Entscheidung, welche Prozeduren dokumentiert werden müssen, und diese dann mit ausreichend Details zu unterlegen.
 2. Die zweite Phase endet nie und besteht darin, diese Prozeduren zu verwalten, zu aktualisieren und zu korrigieren, neue Prozeduren hinzuzufügen und nicht mehr benötigte Prozeduren zu entfernen.
 
-Mit {{site.data.keyword.vmwaresolutions_full}} können Sie das Know-how Ihres Teams, die Toolsets und Runbooks nutzen, die lokal vorhanden sind, um Ihre Instanzen in {{site.data.keyword.cloud_notm}} zu verwalten. Es wird empfohlen, sich mit den folgenden allgemeinen Prozeduren, Leitfäden und Tasks in den Screenshots der Dokumentation vertraut zu machen:
+Mit {{site.data.keyword.vmwaresolutions_full}} können Sie das Know-how Ihres Teams, die Toolsets und Runbooks nutzen, die lokal vorhanden sind, um Ihre Instanzen in {{site.data.keyword.cloud_notm}} zu verwalten.
 
+In der folgenden Liste werden die gängigsten Prozeduren, Leitfäden und Tasks aufgeführt:
 * Konfigurationstasks - Bei diesen Tasks handelt es sich um allgemeine Aktivitäten, die von Systemadministratoren ausgeführt werden müssen, um die Umgebung an die Anforderungen des Unternehmens anzupassen und um auf Serviceanforderungen zu reagieren, z. B. neue VMs hinzuzufügen und die Kapazität zu erhöhen. Diese Tasks können wie folgt klassifiziert werden:
  * Allgemeine Anweisungen
  * VM-Prozeduren

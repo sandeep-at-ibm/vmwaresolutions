@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-19"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server Hybridity order instance, order vCenter Server Hybridity, order Hybridity
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -30,15 +31,14 @@ Stellen Sie sicher, dass Sie die folgenden Tasks ausgeführt haben:
 *  Sie haben die Informationen in [Voraussetzungen und Planung für vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning) gelesen.
 * Sie haben das Instanz- und Domänennamensformat geprüft. Der Domänenname und die Unterdomänenbezeichnung werden verwendet, um den Benutzernamen und die Servernamen der Instanz zu generieren.
 
-Tabelle 1. Wertformat für Instanz- und Domänennamen
-
 | Name        | Wertformat      |
-  |:------------- |:------------- |
-  | Domänenname | `<root_domain>` |  
-  | Anmeldebenutzername für vCenter Server | `<user_id>@<root_domain>` (Microsoft Active Directory-Benutzer) oder `administrator@vsphere.local` |
-  | vCenter Server (mit integriertem PSC) FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. Die maximale Länge beträgt 50 Zeichen. |
-  | SSO-Standortname | `<subdomain_label>` |
-  | Vollständig qualifizierter Name des ESXi-Servers | `<host_prefix><n>.<subdomain_label>.<root_domain>`. Dabei ist `<n>` die Folgenummer des ESXi-Servers. Die maximale Länge beträgt 50 Zeichen. |
+|:------------- |:------------- |
+| Domänenname | `<root_domain>` |  
+| Anmeldebenutzername für vCenter Server | `<user_id>@<root_domain>` (Microsoft Active Directory-Benutzer) oder `administrator@vsphere.local` |
+| vCenter Server (mit integriertem PSC) FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. Die maximale Länge beträgt 50 Zeichen. |
+| SSO-Standortname | `<subdomain_label>` |
+| Vollständig qualifizierter Name des ESXi-Servers | `<host_prefix><n>.<subdomain_label>.<root_domain>`. Dabei ist `<n>` die Folgenummer des ESXi-Servers. Die maximale Länge beträgt 50 Zeichen. |
+{: caption="Tabelle 1. Wertformat für Instanz- und Domänennamen" caption-side="top"}
 
 Nehmen Sie keine Änderungen an Werten vor, die während der Bestellung oder Bereitstellung der Instanz festgelegt werden. Dies kann dazu führen, dass Ihre Instanz unbrauchbar wird. Beispielsweise, wenn der öffentliche Netzbetrieb beendet wird, Server sowie virtuelle Serverinstanzen (VSIs) mitten in einer Bereitstellung hinter eine Vyatta-Einheit versetzt werden oder wenn die Virtual Server-Instanz für IBM CloudBuilder gestoppt oder gelöscht wird.
 {:important}
@@ -103,25 +103,23 @@ Wählen Sie das {{site.data.keyword.CloudDataCent_notm}} aus, das als Host für 
 
 Wenn Sie **Skylake** auswählen, dann können Sie die Kombination aus CPU und RAM für den Bare Metal Server entsprechend Ihren Anforderungen auswählen.
 
-Tabelle 2. Optionen für Skylake {{site.data.keyword.baremetal_short}}
-
 | CPU-Modelloptionen        | RAM-Optionen       |
 |:------------- |:------------- |
 | Dual Intel Xeon Silver 4110-Prozessor / 16 Kerne insgesamt, 2,1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon Gold 5120-Prozessor / 28 Kerne insgesamt, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
+{: caption="Tabelle 2. Optionen für Skylake {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 ### Broadwell
 {: #vc_hybrid_orderinginstance-broadwell}
 
 Wenn Sie **Broadwell** auswählen, dann können Sie die Kombination aus CPU und RAM für den Bare Metal Server entsprechend Ihren Anforderungen auswählen.
 
-Tabelle 3. Optionen für Broadwell {{site.data.keyword.baremetal_short}}
-
 | CPU-Modelloptionen        | RAM-Optionen       |
 |:------------- |:------------- |
 | Quad Intel Xeon E7-4820 v4 / 40 Kerne insgesamt, 2,0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 Kerne insgesamt, 2,1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+{: caption="Tabelle 3. Optionen für Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 ### Bare Metal Server-Anzahl
 {: #vc_hybrid_orderinginstance-bare-metal-number}
@@ -224,7 +222,7 @@ Jede Lizenz kann nur einem einzigen physischen Server zugeordnet werden und deck
 
 Sie haben 30 Tage Zeit, um die VMs zu aktivieren.
 
-Weitere Informationen zur Bestellung von Lizenzen für Windows Server 2016 finden Sie unter [Erste Schritte mit Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:new_window}.
+Weitere Informationen zur Bestellung von Lizenzen für Windows Server 2016 finden Sie unter [Erste Schritte mit Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:external}.
 
 ## Serviceeinstellungen
 {: #vc_hybrid_orderinginstance-addon-services}
@@ -241,7 +239,7 @@ Sie können die bereitgestellten Ressourcen auch durch Klicken auf **Zur Schätz
 ## Vorgehensweise zum Bestellen von vCenter Server with Hybridity Bundle-Instanzen
 {: #vc_hybrid_orderinginstance-procedure}
 
-1. Klicken Sie im {{site.data.keyword.cloud_notm}}-Katalog im linken Navigationsfenster auf **VMware** und klicken Sie anschließend im Abschnitt **Virtuelle Rechenzentren** auf **vCenter Server**.
+1. Klicken Sie im {{site.data.keyword.cloud_notm}}-Katalog im linken Navigationsfenster auf das Symbol **VMware** und anschließend im Abschnitt **Virtuelle VMware-Rechenzentren** auf die Karte **VMware vCenter Server on IBM Cloud**.
 2. Klicken Sie auf der Seite **VMware vCenter Server on IBM Cloud** auf die Karte **vCenter Server with Hybridity Bundle** und dann auf **Erstellen**.
 3. Geben Sie auf der Seite **vCenter Server** den Instanznamen ein.
 5. Wählen Sie die vSphere-Version aus.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-06-26"
 
 subcollection: vmware-solutions
 
@@ -14,7 +14,7 @@ subcollection: vmware-solutions
 # Allgemeine Servicekomponenten für VMware und Skate Advisor Concept Car
 {: #vcscar-commonservices}
 
-Allgemeine Services stellen die Services bereit, die von anderen Services auf der Cloud-Management-Plattform verwendet werden. Zu den allgemeinen Services gehören Identitäts-und Zugriffsservices, Domänennamensservices und NTP-Services.
+Allgemeine Services stellen die Services bereit, die von anderen Services auf der Cloud-Management-Plattform verwendet werden. Zu den allgemeinen Services gehören Identitäts- und Zugriffsservices, Domänennamensservices und NTP-Services (NTP - Network Time Protocol).
 
 ![Allgemeine {{site.data.keyword.icpfull_notm}}-Services](../../images/vcscar-common-services.svg "Allgemeine {{site.data.keyword.icpfull_notm}}-Services")
 

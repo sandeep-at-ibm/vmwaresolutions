@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-11"
+lastupdated: "2019-06-28"
 
 keywords: notifications console, filter notifications, system notification
 
@@ -24,46 +24,14 @@ Sie können Benachrichtigungen über den Status von System- oder Benutzeroperati
 1. Klicken Sie in der {{site.data.keyword.vmwaresolutions_full}}-Konsole im linken Navigationsfenster auf **Benachrichtigungen**.
 2. Zeigen Sie die Zusammenfassung zu allen Benachrichtigungen an.
 
-   Tabelle 1. Benachrichtigungsprotokoll
-
-    <table>
-      <tr>
-        <th>Spalte</th>
-        <th>Beschreibung</th>
-      </tr>
-      <tr>
-        <td>Bewertung</td>
-        <td>Die Dringlichkeit des Ereignisses, das durch die Benachrichtigung gemeldet wird.
-          <dl class="dl">
-          <dt class="dt dlterm">Kritisch</dt>
-          <dd class="dd">Ein kritisches Ereignis hat möglicherweise Auswirkungen auf das gesamte System oder den gesamten Service.</dd>
-          <dt class="dt dlterm">Fehler</dt>
-          <dd class="dd">Während einer Operation ist ein Fehlerereignis aufgetreten, dass möglicherweise das Eingreifen des Administrators oder Benutzers erfordert.</dd>
-          <dt class="dt dlterm">Warnung</dt>
-          <dd class="dd">Eine Komponente ist fehlgeschlagen oder funktioniert nicht ordnungsgemäß. Der Fehler führt jedoch nicht zu einer Unterbrechung des laufenden Komponentenprozesses.</dd>
-            <dt class="dt dlterm">Information</dt>
-            <dd class="dd">Eine System- oder Benutzeroperation wurde ausgeführt. Benachrichtigungen mit der Prioritätsstufe "Information" werden in der Regel durch die folgenden Ereignisse gemeldet:<br>Installation eines Service<br>Upgrade eines Service<br>Löschung eines Service<br>Rekonfiguration aller Services für hinzugefügte ESXi-Server<br>Rekonfiguration aller Services für entfernte ESXi-Server
-            </dd>
-          </dl>
-        </td>
-       </tr>
-       <tr>
-         <td>Typ</td>
-         <td>Der Typ der Komponente, auf die sich das gemeldete Ereignis bezieht:<br>vCenter Server-Instanzen<br>Services<br>System</td>
-       </tr>
-       <tr>
-         <td>Ressource</td>
-         <td>Der Name der Instanz oder des Service, von der/dem die Benachrichtigung gesendet wird.</td>
-       </tr>
-       <tr>
-         <td>Beschreibung</td>
-         <td>Eine kurze Beschreibung der Benachrichtigung.</td>
-       </tr>
-       <tr>
-         <td>Datum</td>
-         <td>Der Zeitpunkt (Datum und Uhrzeit), zu dem die Benachrichtigung gesendet wird.</td>
-       </tr>
-    </table>                                       
+| Spalte | Beschreibung |
+|:------ |:----------- |
+| Bewertung | Die Dringlichkeit des Ereignisses, das durch die Benachrichtigung gemeldet wird.<br>**Kritisch**: Ein kritisches Ereignis hat möglicherweise Auswirkungen auf das gesamte System oder den gesamten Service.<br>**Fehler**: Während einer Operation ist ein Fehlerereignis aufgetreten, das möglicherweise das Eingreifen des Administrators oder Benutzers erfordert.<br>**Warnung**: Eine Komponente ist fehlgeschlagen oder funktioniert nicht ordnungsgemäß. Der Fehler führt jedoch nicht zu einer Unterbrechung des laufenden Komponentenprozesses.<br>**Information**: Eine System- oder Benutzeroperation wurde ausgeführt. Benachrichtigungen mit der Prioritätsstufe "Information" werden in der Regel durch die folgenden Ereignisse gemeldet:<br>Installation eines Service<br>Upgrade eines Service<br>Löschung eines Service<br>Rekonfiguration aller Services für hinzugefügte ESXi-Server<br>Rekonfiguration aller Services für entfernte ESXi-Server |
+| Typ | Der Typ der Komponente, auf die sich das gemeldete Ereignis bezieht: vCenter Server-Instanzen, Services oder das System. |
+| Ressource | Der Name der Instanz oder des Service, von der/dem die Benachrichtigung gesendet wird. |
+| Beschreibung | Eine kurze Beschreibung der Benachrichtigung. |
+| Datum | Der Zeitpunkt (Datum und Uhrzeit), zu dem die Benachrichtigung gesendet wird. |
+{: caption="Tabelle 1. Benachrichtigungsprotokoll" caption-side="top"}
 
 3. Klicken Sie auf die Zeile für eine Benachrichtigung, um die Details der Benachrichtigung anzuzeigen.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-26"
 
 keywords: vSphere, vSphere component, tech specs vSphere
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -22,7 +23,7 @@ subcollection: vmware-solutions
 
 Bei VMware vSphere on {{site.data.keyword.cloud}} handelt es sich um eine optimierte Bestellplattform für VMware. Mit dieser Plattform können Sie Ihre eigene von IBM gehostete VMware-Umgebung aufbauen, indem Sie die VMware-kompatible Hardware anpassen und bestellen, die Sie für die von Ihnen ausgewählten VMware-Komponenten benötigen.
 
-In der {{site.data.keyword.vmwaresolutions_short}}-Konsole wird die Hardware automatisch abhängig von den ausgewählten VMware-Komponenten gefiltert. Wenn Sie beispielsweise einen neuen VMware vSAN-Cluster mit reinem Flashspeicher erstellen, wird nur solche Hardware angezeigt, die anhand des [VMware Compatibility Guide](https://www.vmware.com/resources/compatibility/search.php) validiert wurde. Darüber hinaus sind mindestens vier ESXi-Server erforderlich.
+In der {{site.data.keyword.vmwaresolutions_short}}-Konsole wird die Hardware automatisch abhängig von den ausgewählten VMware-Komponenten gefiltert. Wenn Sie beispielsweise einen neuen VMware vSAN-Cluster mit reinem Flashspeicher erstellen, wird nur solche Hardware angezeigt, die anhand des [VMware Compatibility Guide](https://www.vmware.com/resources/compatibility/search.php){:external} validiert wurde. Darüber hinaus sind mindestens vier ESXi-Server erforderlich.
 
 {{site.data.keyword.cloud_notm}} automatisiert weder Installation und Konfiguration noch Inbetriebnahme der optionalen VMware-Komponenten. Die Plattform stattet Sie mit einem hohen Maß an Flexibilität hinsichtlich des Designs und Aufbaus Ihrer gehosteten VMware-Umgebung beim Integrieren der VMware-kompatiblen Hardware aus.
 

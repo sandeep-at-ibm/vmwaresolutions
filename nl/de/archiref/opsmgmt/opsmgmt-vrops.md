@@ -93,7 +93,7 @@ Die Bereitstellung der vROps-Appliance erfordert sechs IP-Adressen aus dem priva
 * Kundennetze
 * NTP-Server (`time.services.softlayer.com`)
 * {{site.data.keyword.vmwaresolutions_short}} Active Directory/DNS
-* Für die fernen Kollektoren sind NAT-Regeln für das NSX ESG erforderlich, um die Konnektivität zum Masterknoten, zum Masterknotenreplikat und zu den Datenknoten zu ermöglichen. 
+* Für die fernen Kollektoren sind NAT-Regeln für das NSX ESG erforderlich, um die Konnektivität zum Masterknoten, zum Masterknotenreplikat und zu den Datenknoten zu ermöglichen.
 
 ## Ports
 {: #opsmgmt-vrops-ports}

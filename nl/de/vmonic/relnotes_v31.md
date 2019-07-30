@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-07-01"
 
 keywords: release notes, what's new, version 3.1
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -21,9 +22,9 @@ subcollection: vmware-solutions
 # Releaseinformationen für Version 3.1
 {: #relnotes_v31}
 
-Dieses Release stellt neue Funktionen, Komponentenaktualisierungen, Verbesserungen des Bedienungskomforts und Fehlerkorrekturen zur Verfügung. Eine Liste mit den in den unterschiedlichen Releases behobenen Problemen, den bekannten Problemen beim Produkt sowie Tipps für die Verwendung von {{site.data.keyword.vmwaresolutions_full}} finden Sie unter [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Dieses Release stellt neue Funktionen, Komponentenaktualisierungen, Verbesserungen des Bedienungskomforts und Fehlerkorrekturen zur Verfügung. Eine Liste mit den in den unterschiedlichen Releases behobenen Problemen, den bekannten Problemen beim Produkt sowie Tipps für die Verwendung von {{site.data.keyword.vmwaresolutions_full}} finden Sie unter [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:external}.
 
-## Single-node Trial-Instanzen für Datenschutz und Disaster-Recovery 
+## Single-node Trial-Instanzen für Datenschutz und Disaster-Recovery
 {: #relnotes_v31-dr-bundle}
 
 Mit Single-node Trial für Datenschutz und Disaster-Recovery können Sie schnell überprüfen, ob in {{site.data.keyword.cloud_notm}} VMware-Workloads nach {{site.data.keyword.cloud_notm}} migriert und wiederhergestellt werden. Diese Testversion von VMware vCenter Server on IBM Cloud ist eine Single-Tenant-VMware-Plattform, die mit den gleichen Tools wie in lokalen Umgebungen verwaltet werden kann. Diese Testversion umfasst die Services 'Veeam on {{site.data.keyword.cloud_notm}}', 'VMware HCX on {{site.data.keyword.cloud_notm}}' und 'Zerto on {{site.data.keyword.cloud_notm}}'.
@@ -58,7 +59,7 @@ Weitere Informationen Sie in der [vCenter Server-Teileliste](/docs/services/vmwa
 
 Sie können jetzt einem vorhandenen Cluster neue ESXi-Server hinzufügen, indem Sie entweder eine vorhandene Konfiguration oder eine alternative Konfiguration als die vorhandenen Hosts im Cluster auswählen. Wenn Sie im Fenster **Server hinzufügen** neue Server bestellen, können Sie sofort eine vorhandene Konfiguration im Cluster oder eine neue {{site.data.keyword.baremetal_short_sing}}-Konfiguration auswählen. Dies gilt für alle vCenter Server-, vCenter Server with Hybridity- und vCenter Server with NSX-T-Instanzen.
 
-Zur Vermeidung von Leistungs- und Stabilitätsproblemen wird empfohlen, für die Cluster dieselbe oder eine ähnliche Konfiguration für CPU, RAM und Speicher zu verwenden. Diese Funktion ist für Hardwareaktualisierungen innerhalb desselben Clusters nützlich. 
+Zur Vermeidung von Leistungs- und Stabilitätsproblemen wird empfohlen, für die Cluster dieselbe oder eine ähnliche Konfiguration für CPU, RAM und Speicher zu verwenden. Diese Funktion ist für Hardwareaktualisierungen innerhalb desselben Clusters nützlich.
 
 Weitere Informationen finden Sie unter [Kapazität für vCenter Server-Instanzen erweitern und verringern](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservers).
 
@@ -77,6 +78,11 @@ Die Länge des generierten NSX Manager-Kennworts für primäre vCenter Server-In
 
 ## Updates für Add-on-Services
 {: #relnotes_v31-services}
+
+### Caveonix RiskForesight on IBM Cloud
+{: #relnotes_v31-services-caveonix}
+
+Vom aktuellen Release wird Caveonix RiskForesight 2.2.1 auf allen neu bereitgestellten Instanzen installiert. Weitere Informationen zu Caveonix RiskForesight finden Sie auf der [Caveonix-Website](https://www.caveonix.com/){:external}.
 
 ### Automatische Verlängerung von HyTrust-Lizenzen
 {: #relnotes_v31-services-ht}
@@ -104,7 +110,7 @@ Im aktuellen Release wird Veeam Availability Suite 9.5 auf allen neu bereitgeste
 ### Zerto on IBM Cloud
 {: #relnotes_v31-services-zerto}
 
-Bei neuen Instanzen, die ab Version 3.1 bereitgestellt werden, ist für Installationen von 'Zerto on {{site.data.keyword.cloud_notm}}' ein gebührenpflichtiges {{site.data.keyword.cloud_notm}}-Konto erforderlich. Für die Kosten der VM-Replikation wird jetzt ein kostenpflichtiger {{site.data.keyword.cloud_notm}}-Plan anstatt einer Abrechnung über die {{site.data.keyword.cloud_notm}}-Infrastruktur verwendet. 
+Bei neuen Instanzen, die ab Version 3.1 bereitgestellt werden, ist für Installationen von 'Zerto on {{site.data.keyword.cloud_notm}}' ein gebührenpflichtiges {{site.data.keyword.cloud_notm}}-Konto erforderlich. Für die Kosten der VM-Replikation wird jetzt ein kostenpflichtiger {{site.data.keyword.cloud_notm}}-Plan anstatt einer Abrechnung über die {{site.data.keyword.cloud_notm}}-Infrastruktur verwendet.
 
 Damit Sie 'Zerto on {{site.data.keyword.cloud_notm}}' bestellen können, muss Ihr {{site.data.keyword.cloud_notm}}-Konto die folgenden Voraussetzungen erfüllen. Wenn Sie über eine vorhandene Installation von 'Zerto on {{site.data.keyword.cloud_notm}}' verfügen, können Sie den Abrechnungstyp für Zerto-VMs in ein kostenpflichtiges Konto umwandeln. Weitere Informationen hierzu finden Sie unter [Abrechnung für Zerto-Replikation](/docs/services/vmwaresolutions?topic=vmware-solutions-zerto_ordering#zerto_ordering-billing).
 
@@ -113,7 +119,7 @@ Damit Sie 'Zerto on {{site.data.keyword.cloud_notm}}' bestellen können, muss Ih
 
 * Die Managementereignisse und Ereignisse der Activity Tracker-Instanz für den Service 'KMIP for VMware on IBM Cloud' werden aktualisiert. Weitere Informationen finden Sie unter [Activity Tracker-Ereignisse](/docs/services/vmwaresolutions?topic=vmware-solutions-at-events).
 * Die Referenzdokumentation zur Benutzer-ID wird unter Verwendung der Benutzer-IDs für die Installation und Konfiguration von Services durch die {{site.data.keyword.cloud_notm}}-Serviceautomatisierung aktualisiert. Weitere Informationen finden Sie im Abschnitt *Servicebenutzer-ID* in [IBM Benutzer-IDs](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_user_ids).
-* Für die neue API ``Detaillierte Netzschnittstelle eines Clusters abrufen`` steht Referenzdokumentation zur Verfügung. Weitere Informationen finden Sie in [API-Referenz](https://cloud.ibm.com/apidocs/vmware-solutions){:new_window}.
+* Für die neue API ``Detaillierte Netzschnittstelle eines Clusters abrufen`` steht Referenzdokumentation zur Verfügung. Weitere Informationen finden Sie in [API-Referenz](https://cloud.ibm.com/apidocs/vmware-solutions){:external}.
 * Die folgenden technischen Dokumente im Abschnitt *Referenz* der Benutzerdokumentation sind neu:
   * [Operations Management](/docs/services/vmwaresolutions?topic=vmware-solutions-opsmgmt-intro)
   * [Tag 2 - Betriebsprozesse](/docs/services/vmwaresolutions?topic=vmware-solutions-opsprocs-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-26"
 
 keywords: FAQ, user account, patch management
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -77,11 +78,11 @@ In der Minimalbereitstellung mit zwei Knoten befindet sich auf einem Knoten eine
 
 Wenn zu einem Cluster mit zwei Knoten ein dritter Knoten hinzugefügt wird, verteilt vCenter Server die drei NSX-Controller automatisch gleichmäßig auf die drei Knoten und erstellt eine hoch verfügbare Umgebung.
 
-## Kann ich eine HA-Konfiguration für VMware vCenter 6.5 einrichten?
+## Kann ich eine HA-Konfiguration für VMware vCenter einrichten?
 {: #faq-ha}
 {: faq}
 
-Nein, dies ist nicht zu empfehlen. Es könnte zu Störungen bei den {{site.data.keyword.vmwaresolutions_short}}-Funktionen kommen.
+Sie können vCenter für Hochgeschwindigkeit (High Availability, HA) konfigurieren, aber die Konfigurationsunterstützung wird von {{site.data.keyword.vmwaresolutions_short}} nicht bereitgestellt.
 
 ## Können Cluster umbenannt werden?
 {: #faq-rename-cluster}
@@ -103,7 +104,7 @@ Für alle anderen Updates von VMware-Komponenten sind Sie selbst verantwortlich;
 Bei Instanzen, die in V2.0 oder höher bereitgestellt wurden, ist VMware Update Manager (VUM) in Ihre vCenter Server-Instanz integriert. Sie können VUM auf Wunsch so konfigurieren, dass ESXi-Updates von VMware heruntergeladen werden.
 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
-* [VMware Support](https://www.vmware.com/support.html)
+* [VMware Support](https://www.vmware.com/support.html){:external}
 * [Updates auf vCenter Server-Instanzen anwenden](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates)
 * [Updates auf vCenter Server with Hybridity Bundle-Instanzen anwenden](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_applyingupdates)
 

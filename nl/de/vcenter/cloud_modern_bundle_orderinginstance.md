@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-28"
 
 keywords: single-node trial, migration app modernization, order migration app modernization
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -52,8 +53,8 @@ Machen Sie sich mit den Anforderungen für die Instanznamen vertraut:
 ## Vorgehensweise zum Bestellen von Single-node Trial-Instanzen für Migration und Anwendungsmodernisierung
 {: #cloud_modern_bundle_orderinginstance-procedure}
 
-1. Klicken Sie im {{site.data.keyword.cloud_notm}}-Katalog im linken Navigationsfenster auf **VMware** und anschließend im Abschnitt **Virtuelle VMware-Rechenzentren** auf **Single-node Trial for Migration and App Modernization**.
-2. Klicken Sie auf der Seite **Single-node Trial for Migration and App Modernization** auf **Weiter**.
+1. Klicken Sie im {{site.data.keyword.cloud_notm}}-Katalog im linken Navigationsfenster auf das Symbol **VMware** und anschließend im Abschnitt **Virtuelle VMware-Rechenzentren** auf die Karte **Single-node Trial für Migration und Anwendungsmodernisierung**.
+2. Klicken Sie auf der Seite **Single-node Trial für Migration und Anwendungsmodernisierung** auf **Weiter**.
 3. Führen Sie die Schritte aus, um ein {{site.data.keyword.cloud_notm}}-Infrastrukturkonto anzufordern, oder geben Sie Ihren vorhandenen **Benutzernamen** und **API-Schlüssel** an. Klicken Sie anschließend auf **Abrufen**.
 
  Wenn der API-Schlüssel vorhanden ist, ist dieser Abschnitt ausgeblendet.
@@ -137,7 +138,7 @@ Installieren Sie den lokalen HCX Enterprise Manager und konfigurieren Sie die Ve
       1. Klicken Sie auf die Registerkarte **Verwaltung**.
       2. Klicken Sie auf der Registerkarte **Systemupdates** auf **DOWNLOAD-LINK ANFORDERN**.
       3. Klicken Sie auf **LINK KOPIEREN** und verwenden Sie anschließend diesen Link, um HCX Enterprise Client in eine lokale Umgebung herunterzuladen, die Zugriff auf Ihre lokale vSphere-Umgebung besitzt.
-3. Stellen Sie HCX Enterprise Client in VMware vSphere Web Client als virtuelle Appliance für den HCX-Manager (kurz "HCX-Manager") in Ihrer lokalen Umgebung bereit. Folgen Sie den Anweisungen im [Benutzerhandbuch von VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}.
+3. Stellen Sie HCX Enterprise Client in VMware vSphere Web Client als virtuelle Appliance für den HCX-Manager (kurz "HCX-Manager") in Ihrer lokalen Umgebung bereit. Folgen Sie den Anweisungen im [Benutzerhandbuch von VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}.
 
     Sie müssen den lokalen HCX-Manager in einem privaten Netz bereitstellen und ihm den Zugriff auf das öffentliche Netz ermöglichen. Sie können NSX Edge, Vyatta oder ähnliche Gateways verwenden, um dem lokalen HCX-Manager den Internetzugriff zu ermöglichen. Falls für den Zugriff auf das private Netz und auf das öffentliche Netz verschiedene Gateways verwendet werden, empfiehlt es sich, das Standardgateway für den Zugriff auf das öffentliche Netz zu verwenden und mit der lokalen **Administratorkonsole für den HCX-Manager** eine statische Route für den Zugriff auf das private Netz zu erstellen.  
     {:note}
@@ -145,16 +146,16 @@ Installieren Sie den lokalen HCX Enterprise Manager und konfigurieren Sie die Ve
   1. Melden Sie sich bei der lokalen virtuellen HCX Enterprise Manager-Maschine mit den Berechtigungsnachweisen an, die bei der Bereitstellung von OVA angegeben wurden.
   2. Geben Sie den Aktivierungsschlüssel ein, wenn Sie dazu aufgefordert werden.
 
-  Folgen Sie den Anweisungen im [Benutzerhandbuch von VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}.
+  Folgen Sie den Anweisungen im [Benutzerhandbuch von VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}.
 
 5. Ein selbst signiertes SSL-Zertifikat wurde vom HCX on {{site.data.keyword.cloud_notm}}-Service generiert. Sie müssen das Zertifikat in den lokalen HCX-Manager importieren, indem Sie die folgenden Schritte ausführen:
     1. Klicken Sie in der lokalen **Administratorkonsole für den HCX-Manager** auf die Registerkarte **Verwaltung**.
     2. Klicken Sie im linken Navigationsfenster auf **Anerkanntes CA-Zertifikat** und dann rechts auf **IMPORTIEREN**.
     3. Klicken Sie auf **URL** und geben Sie dann die URL des Zertifikats ein, das Sie anwenden möchten. Dies ist die **HCX-Cloud-IP** (``https://<cloud-side public IP>``), die Sie auf der Seite mit den Details für den Service "HCX on {{site.data.keyword.cloud_notm}}" in der {{site.data.keyword.vmwaresolutions_short}}-Konsole finden.
     4. Klicken Sie auf **ANWENDEN**.
-6. Fahren Sie mit der Erstkonfiguration fort und erstellen Sie die Verbindung. Folgen Sie den Anweisungen im [Benutzerhandbuch von VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}.
-7. Erweitern Sie Netze in VMware HCX von lokal auf {{site.data.keyword.cloud_notm}}. Folgen Sie den Anweisungen im [Benutzerhandbuch von VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}.
-8. Migrieren Sie virtuelle Maschinen (VMs) zwischen lokalen Umgebungen und {{site.data.keyword.cloud_notm}}-Umgebungen. Folgen Sie den Anweisungen im [Benutzerhandbuch von VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}.
+6. Fahren Sie mit der Erstkonfiguration fort und erstellen Sie die Verbindung. Folgen Sie den Anweisungen im [Benutzerhandbuch von VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}.
+7. Erweitern Sie Netze in VMware HCX von lokal auf {{site.data.keyword.cloud_notm}}. Folgen Sie den Anweisungen im [Benutzerhandbuch von VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}.
+8. Migrieren Sie virtuelle Maschinen (VMs) zwischen lokalen Umgebungen und {{site.data.keyword.cloud_notm}}-Umgebungen. Folgen Sie den Anweisungen im [Benutzerhandbuch von VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}.
 
 Sie dürfen die {{site.data.keyword.vmwaresolutions_short}}-Infrastrukturkomponenten, die in Ihrem {{site.data.keyword.cloud_notm}}-Konto erstellt werden, nur über die {{site.data.keyword.vmwaresolutions_short}}-Konsole und nicht im {{site.data.keyword.slportal}} oder über ein anderes Verfahren außerhalb der Konsole verwalten.
 Wenn Sie diese Komponenten außerhalb der {{site.data.keyword.vmwaresolutions_short}}-Konsole ändern, werden die Änderungen nicht mit der Konsole synchronisiert. Dies kann die Stabilität Ihrer Umgebung beeinträchtigen.
@@ -190,7 +191,7 @@ Führen Sie folgende Schritte aus, um eine Single-node Trial-Instanz für Migrat
 {: #cloud_modern_bundle_orderinginstance-related}
 
 * [vCenter Server und IBM Cloud Private - Leitfaden](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [Ticket für IBM Cloud Private öffnen](https://www.ibm.com/mysupport/s/?language=en_US){:new_window}
-* [VMware HCX-Ressourcen](https://hcx.vmware.com/#/docs){:new_window}
-* [Benutzerhandbuch zu VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:new_window}
+* [Ticket für IBM Cloud Private öffnen](https://www.ibm.com/mysupport/s/?language=en_US){:external}
+* [VMware HCX-Ressourcen](https://hcx.vmware.com/#/docs){:external}
+* [Benutzerhandbuch zu VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}
 * [Virtuelle Server stornieren](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)

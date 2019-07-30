@@ -52,7 +52,7 @@ Tabelle 1. {{site.data.keyword.icpfull_notm}} ESG-Spezifikationen
 |:--------- |:------------- |
 | Edge Service Gateway | Virtual Appliance |
 | Edge-Größe "Large" | Anzahl vCPUs	2 |
-| Speicher | 1 GB-Platte <br>1000 GB auf lokalem Datenspeicher |
+| Speicher | 1 GB-Platte<br>1000 GB auf lokalem Datenspeicher |
 
 Tabelle 2. {{site.data.keyword.icpfull_notm}} DLR-Spezifikationen
 
@@ -60,7 +60,7 @@ Tabelle 2. {{site.data.keyword.icpfull_notm}} DLR-Spezifikationen
 |:--------- |:------------- |
 | Distributed Logical Router | Virtual Appliance |
 | Edge-Größe "Compact" | Anzahl vCPUs	1 |
-| Speicher	| 512 MB-Platte <br>1000 GB auf lokalem Datenspeicher |
+| Speicher	| 512 MB-Platte<br>1000 GB auf lokalem Datenspeicher |
 
 ## Komponenten von IBM Cloud Private
 {: #vcsicp-arch-overview-solution-icp-comp}

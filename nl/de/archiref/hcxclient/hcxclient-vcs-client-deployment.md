@@ -23,10 +23,10 @@ Die HCX-Clientseite kann in jeder Version von vSphere bereitgestellt werden, die
 
 | Komponente | CPU-Anzahl | Speicher (GB) | Platte (GB) |
 |--------|--------|---------|-------|
-| HCX Manager | 4 | 12 GB | 60 GB |
-| HCX Interconnect (HCX-IX) | 4 | 3 GB | 2 GB |
-| HCX Network Extension (HCX-NE) | 4 | 3 GB | 2 GB |
-| HCX WAN Optimizer (HCX-WAN) | 8 | 14 GB | 100 GB |
+| HCX Manager | 4 | 12 GB |  60 GB |
+| HCX Interconnect (HCX-IX) | 4 | 3 GB |  2 GB |
+| HCX Network Extension (HCX-NE) | 4 | 3 GB |  2 GB |
+| HCX WAN Optimizer (HCX-WAN) | 8 | 14 GB |  100 GB |
 
 ## Lizenzierung der Clients
 {: #hcxclient-vcs-client-deployment-licensing}

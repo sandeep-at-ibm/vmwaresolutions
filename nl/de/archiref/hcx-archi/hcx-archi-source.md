@@ -105,7 +105,7 @@ Bei den folgenden Schritten handelt es sich um grundlegende Installationsaufgabe
 ### Leistungsaspekte der Bereitstellungskomponente
 {: #hcx-archi-source-perf-consid}
 
-Die Architekturplanung umfasst die zu migrierenden VMs, die Netze, die für den virtuellen Datenverkehr verwendet werden, und die Netze, die erweitert werden sollen.  
+Die Architekturplanung umfasst die zu migrierenden VMs, die Netze, die für den virtuellen Datenverkehr verwendet werden, und die Netze, die erweitert werden sollen. 
 
 Für die Bereitstellungskomponenten gelten die folgenden Mindest- und Höchstwerte:
 * vSphere vCenter. Die HCX-Manager-Appliance muss in der vCenter-Instanz installiert sein, die die Hybrid-Services benötigt. Pro vCenter-Instanz kann es nur eine HCX-Bereitstellung geben. Diese Einschränkung gilt für den Verbindungsmodus. Die HCX-Management-Appliance wird nur in der primären vCenter-Instanz installiert. HCX unterstützt bis zu fünf registrierte vCenter-Instanzen im Verbindungsmodus.

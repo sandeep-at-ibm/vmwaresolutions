@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-06-28"
 
 keywords: vCenter Server network config, network configuration, manage NSX ESG
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -22,7 +23,7 @@ subcollection: vmware-solutions
 
 Konfigurieren Sie das Netz für Ihre virtuellen Maschinen, damit Sie die Vorteile von VMware NSX Edge Services Gateway (ESG) nutzen können, das in Ihren VMware vCenter Server-Instanzen bereitgestellt wird. Weitere Informationen zu den bestehenden Sicherheitsmaßnahmen, die Sicherheitsrisiken verringern, finden Sie im Abschnitt [Stellt das NSX Edge für Management-Services ein Sicherheitsrisiko dar?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
-VMware NSX ist eine Plattform für die Netzvirtualisierung, die eine Virtualisierung von isolierten Netzen ermöglicht und verschiedene Netzservices wie Switches, Routing und Firewalls zur Verfügung stellt. Weitere Informationen zu NSX finden Sie unter [Overview of NSX](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}.
+VMware NSX ist eine Plattform für die Netzvirtualisierung, die eine Virtualisierung von isolierten Netzen ermöglicht und verschiedene Netzservices wie Switches, Routing und Firewalls zur Verfügung stellt. Weitere Informationen zu NSX finden Sie unter [Overview of NSX](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:external}.
 
 Im Rahmen des Bestellablaufs für Ihre vCenter Server-Instanz werden die folgenden Aktionen für Sie automatisch ausgeführt:
 * Ein privates Kundenteilnetz wird für die Verwendung durch Ihre virtuellen Maschinen (VMs) für den Zugriff auf das private Netz der {{site.data.keyword.cloud}}-Infrastruktur bestellt.
@@ -69,7 +70,7 @@ Falls Ihre Workload-VMs abgehenden Zugriff auf das Internet besitzen sollen, mü
 3. Klicken Sie auf **Management > NAT**, um die Registerkarte **NAT** zu öffnen.
 4. Wählen Sie die SNAT-Standardregel in der Tabelle aus und klicken Sie auf das grüne Häkchen über der Tabelle, um die Regel zu aktivieren.
 
-Weitere Informationen zu NAT-Regeln für NSX Edge finden Sie auf der Seite [Managing NAT rules](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.
+Weitere Informationen zu NAT-Regeln für NSX Edge finden Sie auf der Seite [Managing NAT rules](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:external}.
 
 ## Vorgehensweise zum Angeben von Details für Kundenteilnetze
 {: #vc_esg_config-procedure-identify-customer-subnets-details}
@@ -88,7 +89,7 @@ Weitere Details über die Kundenteilnetze können Sie außerdem mit den folgende
 2. Klicken Sie auf das Filtermenü und geben Sie im Feld **Teilnetz** die ID ein, die in der Beschreibung für **customer-nsx-edge** im VMware vSphere Web Client angezeigt wird.
 3. Lesen Sie die Hinweise, die für die IP-Adressen angezeigt werden. Diese Hinweise geben an, welche der Teilnetze und IP-Adressen bestellt und während der Erstkonfiguration verwendet werden.
 
-   Verwenden Sie nicht die IP-Adressen, die bestellt und während der Erstkonfiguration verwendet werden. Sie können jedoch nach Bedarf andere IP-Adressen in diesen Teilnetzen verwenden. Informationen zum Konfigurieren zusätzlicher Regeln für die Netzadressumsetzung finden Sie auf der Seite [Managing NAT rules](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:new_window}.
+   Verwenden Sie nicht die IP-Adressen, die bestellt und während der Erstkonfiguration verwendet werden. Sie können jedoch nach Bedarf andere IP-Adressen in diesen Teilnetzen verwenden. Informationen zum Konfigurieren zusätzlicher Regeln für die Netzadressumsetzung finden Sie auf der Seite [Managing NAT rules](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:external}.
    {:important}
 
 ## Zugehörige Links
@@ -96,4 +97,4 @@ Weitere Details über die Kundenteilnetze können Sie außerdem mit den folgende
 
 * [Fehlerbehebung](/docs/services/vmwaresolutions?topic=vmware-solutions-vcenter_chg_impact#vcenter_chg_impact)
 * [Häufig gestellte Fragen](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}
+* [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:external}

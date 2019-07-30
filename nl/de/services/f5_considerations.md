@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-26"
 
 keywords: F5 BIG-IP, F5 install, tech specs F5
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -60,8 +61,6 @@ Lesen Sie vor der Installation des Service "F5 on {{site.data.keyword.cloud_notm
 
 Basierend auf dem von Ihnen ausgewählten Lizenzmodell und der ausgewählten Bandbreite werden zwei virtuelle Maschinen für BIG-IP VE mit der folgenden Konfiguration bereitgestellt:
 
-Tabelle 1. CPU- und RAM-Bereitstellungen für unterschiedliche Bandbreiten- und Lizenzmodellauswahl
-
 | Maximale Bandbreite | Lizenzmodell: Gut | Lizenzmodell: Besser | Lizenzmodell: Optimal |
 |:------------------|:--------------------|:----------------------|:--------------------|
 | 25 MB/s           | 2 vCPU, 4 GB RAM    | 4 vCPU, 8 GB RAM      | 8 vCPU, 16 GB RAM   |
@@ -70,6 +69,7 @@ Tabelle 1. CPU- und RAM-Bereitstellungen für unterschiedliche Bandbreiten- und 
 | 3 Gb/s            | 8 vCPU, 16 GB RAM   | 8 vCPU, 16 GB RAM     | 8 vCPU, 16 GB RAM   |
 | 5 Gb/s            | 8 vCPU, 16 GB RAM   | 8 vCPU, 16 GB RAM     | 8 vCPU, 16 GB RAM   |
 | 10 Gb/s           | 8 vCPU, 16 GB RAM   | 8 vCPU, 16 GB RAM     | 8 vCPU, 16 GB RAM   |
+{: caption="Tabelle 1. CPU- und RAM-Bereitstellungen für unterschiedliche Bandbreiten- und Lizenzmodellauswahl" caption-side="top"}
 
 ### Weitere Aspekte
 {: #f5_considerations-additional}
@@ -128,4 +128,4 @@ Bevor Sie den Service "F5 on {{site.data.keyword.cloud_notm}}" entfernen, müsse
 * [F5 on {{site.data.keyword.cloud_notm}} verwalten](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_f5)
 * [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [Häufig gestellte Fragen](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [F5-Website](https://www.f5.com/){:new_window}
+* [F5-Website](https://www.f5.com/){:external}

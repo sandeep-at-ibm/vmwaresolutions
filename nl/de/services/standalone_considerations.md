@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-28"
 
 keywords: VMware HCX standalone, HCX on-premises, tech specs HCX
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
@@ -57,7 +58,7 @@ Zur erfolgreichen Installation auf der lokalen HCX on {{site.data.keyword.cloud_
 
 Die Basiskonfiguration für den lokalen HCX-Manager ist hiermit abgeschlossen. Sie können nun den lokalen HCX on {{site.data.keyword.cloud_notm}}-Standort mit dem cloudseitigen HCX-Standort verbinden.
 
-Weitere Informationen finden Sie auf der Seite [VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx).
+Weitere Informationen finden Sie auf der Seite [VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx){:external}.
 
 ## Hinweise vor dem Löschen von lokalen HCX on IBM Cloud-Instanzen
 {: #standalone_considerations-delete}
@@ -80,5 +81,5 @@ Lesen Sie die folgenden Hinweise, bevor Sie eine HCX on {{site.data.keyword.clou
 
 * [Lokale HCX on {{site.data.keyword.cloud_notm}}-Instanzen anzeigen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_viewingserviceinstances)
 * [Glossar der HCX-Begriffe](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
-* [Dokumentation zu VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)
+* [Dokumentation zu VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources){:external}
 * [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

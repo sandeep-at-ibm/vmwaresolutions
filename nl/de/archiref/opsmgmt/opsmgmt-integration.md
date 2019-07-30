@@ -26,7 +26,7 @@ vROps stellt die folgenden ausgehenden Alert-Plug-ins bereit:
 * Automatisierte Aktion – Standardmäßig aktiviert.
 * Standard-E-Mail - Simple Mail Transfer Protocol (SMTP) zum Senden von Alertbenachrichtigungen von vRealize Operations Manager per E-Mail an relevante Personen.
 * SNMP-Trap – Protokolliert Alerts auf Ihrem SNMP-Trap-Server.
-* REST-Benachrichtigung - Sendet vROps-Alerts an eine andere REST-fähige Anwendung, in der Sie einen REST-Web-Service aktiviert haben, der diese Nachrichten akzeptiert. 
+* REST-Benachrichtigung - Sendet vROps-Alerts an eine andere REST-fähige Anwendung, in der Sie einen REST-Web-Service aktiviert haben, der diese Nachrichten akzeptiert.
 * Protokolldatei – Aktiviert vROps zum Protokollieren von Alerts in einer Datei auf jedem Ihrer vRealize Operations Manager-Knoten. Wenn Sie vRealize Operations Manager als Cluster mit mehreren Knoten installiert haben, verarbeitet und protokolliert jeder Knoten die Alerts für die Objekte, die er überwacht. Jeder Knoten protokolliert die Alerts für die von ihm verarbeiteten Objekte.
 * Smarts SAM-Benachrichtigung - Sendet Alertbenachrichtigungen an EMC Smarts Server Assurance Manager.
 * Netzfreigabe - Sendet Berichte an einen gemeinsam genutzten Standort, unterstützt SMB Version 2.0.
@@ -36,7 +36,7 @@ Benachrichtigungen sind Alertbenachrichtigungen, die die Filterkriterien in den 
 ## Anwendungsfall für die Integration
 {: #opsmgmt-integration-usecase}
 
-Der folgende Beispielanwendungsfall basiert auf einer vorhandenen generischen Service-Management-Schicht eines Unternehmens. Der Kunde verfügt über eine vCenter Server-Instanz mit der Operations Management-Option und möchte diese Plattform in seine Service-Management-Plattform integrieren. Er verwendet ein Ereignisaggregationssystem, um die Alerts zu integrieren, die von den domänenspezifischen Überwachungstools generiert werden: 
+Der folgende Beispielanwendungsfall basiert auf einer vorhandenen generischen Service-Management-Schicht eines Unternehmens. Der Kunde verfügt über eine vCenter Server-Instanz mit der Operations Management-Option und möchte diese Plattform in seine Service-Management-Plattform integrieren. Er verwendet ein Ereignisaggregationssystem, um die Alerts zu integrieren, die von den domänenspezifischen Überwachungstools generiert werden:
 
 * Ein Toolset zum Überwachen des Betriebssystems, der Middleware und der Anwendungen in allen UNIX-, Linux- und Windows-Workloads; von diesem Tool werden jedoch nicht Infrastrukturkomponenten wie VMware, Netzeinheiten oder Speicher überwacht.
 * Ein SNMP-Manager für den Empfang von SNMP-Traps aus der Netzinfrastruktur. Dieses Tool erfasst auch SNMP-Messwerte zu Aktivierung der Alertausgabe für Leistung und Kapazität.

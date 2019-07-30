@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-31"
+lastupdated: "2019-06-27"
 
 keywords: planning vCenter Server, data center, vCenter Server data centers
 
@@ -28,11 +28,10 @@ Das {{site.data.keyword.cloud_notm}}-Konto, das Sie verwenden, muss bestimmte Vo
 
 Die vCenter Server-Bereitstellung stellt strenge Anforderungen an die physische Infrastruktur. Sie können Instanzen daher nur in {{site.data.keyword.CloudDataCents_notm}} bereitstellen, die diese Anforderungen erfüllen. Die folgenden {{site.data.keyword.CloudDataCents_notm}} stehen für die Bereitstellung von vCenter Server zur Verfügung:
 
-Tabelle 1. Verfügbare {{site.data.keyword.CloudDataCents_notm}} für vCenter Server-Instanzen
-
 | {{site.data.keyword.CloudDataCent_notm}} | Standort | Region | Serveroptionen |
 |:----------------------|:---------|:-------|:---------------|
-| AMS03 | Amsterdam | Europa | Skylake, Broadwell |
+| AMS01 | Amsterdam | Europa | Skylake, SAP-zertifiziert, Broadwell |
+| AMS03 | Amsterdam | Europa | Skylake, SAP-zertifiziert, Broadwell |
 | CHE01 | Chennai | Asien/Pazifik | Skylake, SAP-zertifiziert, Broadwell |
 | DAL09 | Dallas | NA Süd | Skylake, SAP-zertifiziert, Broadwell |
 | DAL10 | Dallas | NA Süd | Skylake, SAP-zertifiziert, Broadwell |
@@ -40,8 +39,8 @@ Tabelle 1. Verfügbare {{site.data.keyword.CloudDataCents_notm}} für vCenter Se
 | DAL13 | Dallas | NA Süd | Skylake, SAP-zertifiziert, Broadwell |
 | FRA02 | Frankfurt | Europa | Skylake, SAP-zertifiziert, Broadwell |
 | FRA04 | Frankfurt | Europa | Skylake, SAP-zertifiziert, Broadwell |
-| FRA05 | Frankfurt | Europa | Skylake, Broadwell |
-| HKG02 | Hongkong | Asien/Pazifik | Skylake, Broadwell |
+| FRA05 | Frankfurt | Europa | Skylake, SAP-zertifiziert, Broadwell |
+| HKG02 | Hongkong | Asien/Pazifik | Skylake, SAP-zertifiziert, Broadwell |
 | LON02 | London | Europa | Skylake, Broadwell |
 | LON04 | London | Europa | Skylake, SAP-zertifiziert, Broadwell |
 | LON05 | London | Europa | Skylake, Broadwell |
@@ -50,30 +49,33 @@ Tabelle 1. Verfügbare {{site.data.keyword.CloudDataCents_notm}} für vCenter Se
 | MEX01 | Queretaro | NA Süd | Skylake, SAP-zertifiziert, Broadwell |
 | MIL01 | Mailand | Europa | Skylake, SAP-zertifiziert, Broadwell |
 | MON01 | Montreal | NA Ost | Skylake, SAP-zertifiziert, Broadwell |
-| OSL01 | Oslo | Europa | Skylake, Broadwell |
-| PAR01 | Paris | Europa | Skylake, Broadwell |
+| OSL01 | Oslo | Europa | Skylake, SAP-zertifiziert, Broadwell |
+| PAR01 | Paris | Europa | Skylake, SAP-zertifiziert, Broadwell |
 | SAO01 | Sao Paulo | Südamerika | Skylake, SAP-zertifiziert, Broadwell |
 | SEO01 | Seoul | Asien/Pazifik | Skylake, SAP-zertifiziert, Broadwell |
 | SJC03 | San Jose | NA West | Skylake, Broadwell |
 | SJC04 | San Jose | NA West | Skylake, Broadwell |
-| SNG01 | Singapur | Asien/Pazifik | Skylake, Broadwell |
-| SYD01 | Sydney | Asien/Pazifik | Skylake, Broadwell |
+| SNG01 | Singapur | Asien/Pazifik | Skylake, SAP-zertifiziert, Broadwell |
+| SYD01 | Sydney | Asien/Pazifik | Skylake, SAP-zertifiziert, Broadwell |
 | SYD04 | Sydney | Asien/Pazifik | Skylake, SAP-zertifiziert, Broadwell |
+| SYD05 | Sydney | Asien/Pazifik | Skylake, SAP-zertifiziert, Broadwell |
 | TOK02 | Tokio | Asien/Pazifik | Skylake, SAP-zertifiziert, Broadwell |
+| TOK04 | Tokio | Asien/Pazifik | Skylake, SAP-zertifiziert, Broadwell |
+| TOK05 | Tokio | Asien/Pazifik | Skylake, SAP-zertifiziert, Broadwell |
 | TOR01 | Toronto | NA Ost | Skylake, SAP-zertifiziert, Broadwell |
 | WDC04 | Washington, DC | NA Ost | Skylake, SAP-zertifiziert, Broadwell |
 | WDC06 | Washington, DC | NA Ost | Skylake, SAP-zertifiziert, Broadwell |
 | WDC07 | Washington, DC | NA Ost | Skylake, SAP-zertifiziert, Broadwell |
+{: caption="Tabelle 1. Verfügbare {{site.data.keyword.CloudDataCents_notm}} für vCenter Server-Instanzen" caption-side="top"}
 
 Je nach Verfügbarkeit und Bestandsangebot ist für {{site.data.keyword.CloudDataCents_notm}} möglicherweise ein Statusanzeiger in der {{site.data.keyword.vmwaresolutions_short}}-Konsole dargestellt, der Ihnen bei der Planung Ihrer Bereitstellungen hilft.
-
-Tabelle 2. Statusanzeiger für {{site.data.keyword.CloudDataCents_notm}} bei der Bestellung von vCenter Server-Instanzen
 
 | Status | Statusdetails |
 |:------------------------------|:--------------------------------------------------|
 | Demnächst verfügbar                   | Das {{site.data.keyword.CloudDataCent_notm}} ist gegenwärtig nicht verfügbar. |
 | Vorübergehend ohne Bestand  | Das {{site.data.keyword.CloudDataCent_notm}} ist gegenwärtig nicht verfügbar. |
 | Eingeschränkter Bestand             | Das {{site.data.keyword.CloudDataCent_notm}} bietet eine begrenzte Verfügbarkeit und die Bestellung kann möglicherweise nicht ausgeführt werden. |
+{: caption="Tabelle 2. Statusanzeiger für {{site.data.keyword.CloudDataCents_notm}} bei der Bestellung von vCenter Server-Instanzen" caption-side="top"}
 
 ## Sicherung von Managementkomponenten
 {: #vc_planning-backup-mgmt-components}

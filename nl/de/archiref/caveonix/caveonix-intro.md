@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-06-20"
 
 subcollection: vmware-solutions
 
@@ -28,35 +28,38 @@ Caveonix RiskForesight ist eine Multi-Tenant-Plattform für Cyberrisiko- und Kon
 
 Mit maschinellem Lernen und der CaveoIQ Risk Analytics-Engine bietet die Lösung proaktiven Workload-Schutz vor Risiken aufgrund von Cyberbedrohungen. Sie bietet ein konsistentes Sicherheits- und Richtlinienframework in einer Hybrid-Cloudumgebung und ist voll in den Cloud-Technologie-Stack von VMware und öffentlichen Cloud-Providern wie AWS integriert.
 
-Die drei wichtigsten Services, die über die GUI von RiskForesight zur Verfügung stehen, sind Risikomanagement, Konformitätsrisiko und Forensik-Management:
+Die drei wichtigsten Services, die über die GUI von RiskForesight zur Verfügung stehen, sind Risikomanagement, Konformitätsrisiko und Forensik-Management.
 
-**Risikomanagement**
--	Kontinuierliches Cyberrisiko
+## Risikomanagement
+
+- Kontinuierliches Cyberrisiko
 - Cyberrisiko-Scoring
--	Schwachstellenbewertung und -priorisierung
--	Unterstützt branchenführende Anfälligkeits- und Konfigurations-Scanning-Tools
--	Globale Benchmarking-Standards
--	Cyberrisiko-Berichterstellung
+- Schwachstellenbewertung und -priorisierung
+- Unterstützt branchenführende Anfälligkeits- und Konfigurations-Scanning-Tools
+- Globale Benchmarking-Standards
+- Cyberrisiko-Berichterstellung
 
-**Konformitätsrisiko**
+## Konformitätsrisiko
+
 - Automatisierte Konformitätsüberwachung
--	Dashboard zur Bewertung des Konformitätsrisikos
--	Bewertung der automatisierten IA-Steuerung
--	Unterstützung für: PCI, FISMA, FEDRAMP, HIPAA, GLBA, DSGVO, NERC CIP Reports Against SCAP, OVAL, XCCDF und andere Benchmarking-Standards für die globale Konfiguration
--	Kontinuierlich aktualisierte und zugeordnete IA-Steuerungen und Bibliotheken für Standards
+- Dashboard zur Bewertung des Konformitätsrisikos
+- Bewertung der automatisierten IA-Steuerung
+- Unterstützung für: PCI, FISMA, FEDRAMP, HIPAA, GLBA, DSGVO, NERC CIP Reports Against SCAP, OVAL, XCCDF und andere Benchmarking-Standards für die globale Konfiguration
+- Kontinuierlich aktualisierte und zugeordnete IA-Steuerungen und Bibliotheken für Standards
 
-**Forensik-Management**
--	Protokollmanagement
--	Protokollerfassung aus mehreren Quellen
--	Ereigniserkennung, -analyse und -visualisierung
--	Grafische Darstellung der Ergebnisse
--	Datenaggregation aus mehreren Quellen
--	Ereignisbasierte Analyse
--	Vollständige Drilldown-Funktionalität für Ereignisse und protokollbasierte Analyse
--	Alerts und Benachrichtigungen
+## Forensik-Management
+
+- Protokollmanagement
+- Protokollerfassung aus mehreren Quellen
+- Ereigniserkennung, -analyse und -visualisierung
+- Grafische Darstellung der Ergebnisse
+- Datenaggregation aus mehreren Quellen
+- Ereignisbasierte Analyse
+- Vollständige Drilldown-Funktionalität für Ereignisse und protokollbasierte Analyse
+- Alerts und Benachrichtigungen
 
 ## Zugehörige Links
 {: #caveonix-intro-related}
 
-*   [VMware vCenter Server on {{site.data.keyword.cloud}} mit Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
-*   [Caveonix-Website](https://www.caveonix.com/)
+* [VMware vCenter Server on {{site.data.keyword.cloud}} mit Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+* [Caveonix-Website](https://www.caveonix.com/)

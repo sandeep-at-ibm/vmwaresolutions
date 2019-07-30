@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-21"
 
 subcollection: vmware-solutions
 
@@ -96,11 +96,11 @@ SDDC-Dswitch-Public	  |SDDC-DPortGroup-External	|Virtueller Ursprungsport	|Aktiv
 Dieses Design spezifiziert die Konfiguration von NSX-Komponenten, wendet jedoch keine Konfiguration von Netzoverlay-Komponenten an. Es ist Aufgabe des Kunden, das Design des Netzoverlays entsprechend seinen Anforderungen festzulegen.
 
 Die folgenden Komponenten werden konfiguriert:
--	Management-Server und -Controller werden installiert und in die vCenter-Webbenutzerschnittstelle integriert.
--	ESXi-Agenten werden installiert und VTEP-IP-Adressen werden für jeden ESXi-Host konfiguriert.
--	VTEP-Konfiguration, Controllerkonfiguration, VXLAN-Konfiguration (Transportzone).
--	NSX Edge Services Gateway-Appliances zur Verwendung durch Managementkomponenten.
--	Nur für vCenter Server: NSX Edge Services Gateway-Appliances zur Verwendung durch den Kunden.
+- Management-Server und -Controller werden installiert und in die vCenter-Webbenutzerschnittstelle integriert.
+- ESXi-Agenten werden installiert und VTEP-IP-Adressen werden für jeden ESXi-Host konfiguriert.
+- VTEP-Konfiguration, Controllerkonfiguration, VXLAN-Konfiguration (Transportzone).
+- NSX Edge Services Gateway-Appliances zur Verwendung durch Managementkomponenten.
+- Nur für vCenter Server: NSX Edge Services Gateway-Appliances zur Verwendung durch den Kunden.
 
 Die folgenden Komponenten werden nicht konfiguriert:
 - Virtuelle verteilte Router
