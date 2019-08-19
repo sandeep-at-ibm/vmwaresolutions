@@ -106,7 +106,7 @@ The current release installs IBM Spectrum Protect&trade; Plus V10.1.1, as the de
 ## New and updated documentation
 {: #relnotes_v23-new-docs}
 
-A new developerWorks recipe is available with step-by-step instructions on how to add storage to IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} post deployment. For more information, see [Adding storage to IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} post deployment](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/).
+A new IBM Developer recipe is available with step-by-step instructions on how to add storage to IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} post deployment. For more information, see [Adding storage to IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} post deployment](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/).
 
 ## User interface updates and enhancements
 {: #relnotes_v23-ui}

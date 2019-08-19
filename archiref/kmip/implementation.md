@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-07-16"
 
 subcollection: vmware-solutions
 
@@ -23,7 +23,7 @@ subcollection: vmware-solutions
 
 To enable vSphere encryption or vSAN encryption by using KMIP for VMware on {{site.data.keyword.cloud_notm}}, you need to complete the following tasks:
 
-1. [Enabling your account for using Service Endpoints using IBM Cloud CLI](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps).
+1. [Enable service endpoints in your account](/docs/account?topic=account-vrf-service-endpoint#service-endpoint).
 2. Create a key manager instance, using either [IBM Key Protect](/docs/services/key-protect?topic=key-protect-getting-started-tutorial) or [IBM Cloud Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-get-started#get-started). If you are using Hyper Protect Crypto Services, be sure to [initialize your crypto instance](/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-hsm) so that Hyper Protect Crypto Services can provide key related functions.
 3. Create a customer root key (CRK) within your key manager instance.
 4. Create an Identity and Access Management (IAM) [service ID and API key](/docs/iam?topic=iam-serviceidapikeys) for use with KMIP for VMware. Grant this service ID platform viewer access and service write access to your key manager instance.

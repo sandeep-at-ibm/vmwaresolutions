@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -105,10 +105,5 @@ Users can provision an {{site.data.keyword.containerlong_notm}} environment by u
 
 Application deployments into {{site.data.keyword.containerlong_notm}} are possible by using the following methods:
 -	{{site.data.keyword.containerlong_notm}} connection and services are developed in CAM and published to {{site.data.keyword.icpfull_notm}} catalog.
--	Multi Cloud Manager, a future enhancement to manage {{site.data.keyword.containerlong_notm}} instances.
--	Helm command line.
-
-## Related links
-{: #vcsnsxt-operations-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+- Multi Cloud Manager, a future enhancement to manage {{site.data.keyword.containerlong_notm}} instances.
+- Helm command line.

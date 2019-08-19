@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-22"
 
 keywords: FortiGate VA, FortiGate configuration, order FortiGate
 
@@ -98,7 +98,6 @@ You can't change the license model after service installation. To change the lic
 * [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations)
 * [Managing FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingfortinetvm)
 * [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
-* [Ordering, viewing, and removing services for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
 * [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [Fortinet website](https://www.fortinet.com/){:external}

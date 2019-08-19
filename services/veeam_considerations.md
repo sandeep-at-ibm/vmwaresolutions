@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-13"
 
 keywords: Veeam, Veeam install, tech specs Veeam
 
@@ -23,7 +23,7 @@ subcollection: vmware-solutions
 
 The Veeam on {{site.data.keyword.cloud}} service seamlessly integrates directly with your VMware hypervisors to help your enterprise achieve high availability. This service provides recovery points and time objectives for your applications and data. The recovery points and time objectives can be provided in less than 15 minutes after configuration is completed. By using this service, you control both the backup and restore of all virtual machines (VMs) for your infrastructure directly from the Veeam console.
 
-This service is available only to instances that are deployed in V1.8 or later. The current Veeam version that is installed is 9.5u4.
+This service is available only to instances that are deployed in V1.8 or later. The current Veeam version that is installed is 9.5u4b.
 {:note}
 
 ## Technical specifications for Veeam on IBM Cloud
@@ -66,6 +66,12 @@ One primary private IP address.
 {: #veeam_considerations-install}
 
 The storage repository and the Veeam server are in the original pod and data center. Therefore, the performance of the backup operations for remote clusters might deteriorate.
+
+**Notes:**
+
+* Before the service is installed in your environment, a check is performed against the available capacity of the default cluster in the environment to ensure that the service components can fit.
+* If the capacity check fails, the service is not installed and the service state is set to **Capacity Validation Failed** on the console. In addition, a console message with more details is displayed and you are notified by email.
+* To install the service, you must increase the capacity in your default cluster by either adding more hosts or by freeing up RAM, CPU, or disk space, and then add the service again in the console. After that, you can remove the existing service in the **Capacity Validation Failed** state by clicking the delete icon next to it.
 
 ## Considerations when you remove Veeam on IBM Cloud
 {: #veeam_considerations-remove}

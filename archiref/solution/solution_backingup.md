@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-14"
+lastupdated: "2019-08-15"
 
 subcollection: vmware-solutions
 
@@ -38,7 +38,7 @@ To host these backups, deploy a Linux file server into your cluster by using the
 ## vCenter file-based backup
 {: #solution_backingup-vcenter}
 
-VMware vCenter Server with embedded PSC provides an [appliance management user interface and API to export the database and configuration to a file server](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.install.doc/GUID-3EAED005-B0A3-40CF-B40D-85AD247D7EA4.html){:new_window} using various protocols. VMware documents an example of how you can configure this to [run periodically as a cron job](https://pubs.vmware.com/vsphere-6-5/index.jsp?topic=%2Fcom.vmware.vsphere.vcsapg-rest.doc%2FGUID-222400F3-678E-4028-874F-1F83036D2E85.html){:new_window} directly on the vCenter Server Appliance and PSC, which you can adapt for your use.
+VMware vCenter Server with embedded PSC provides an [appliance management user interface and API to export the database and configuration to a file server](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.install.doc/GUID-3EAED005-B0A3-40CF-B40D-85AD247D7EA4.html){:new_window} using various protocols. VMware documents an example of how you can configure this to run periodically as a cron job directly on the vCenter Server Appliance and PSC, which you can adapt for your use.
 
 If you have an external PSC, you must back up both the vCenter Server Appliance and the PSC separately by using this technique. If you have an embedded PSC, then the PSC backup is included in your vCenter backup. Familiarize yourself with and plan for the considerations and limitations that are documented by VMware. Also, plan for a regular rotation and expiration of the file backups on your file server.
 
@@ -48,7 +48,7 @@ VMware requires the backup location to be an empty folder, so plan for your back
 ## NSX file-based backup
 {: #solution_backingup-nsx}
 
-Proper backup of all NSX components is crucial to restoring the system to its working state if a failure occurs. The design requires you to configure NSX backup through the NSX manager backup function. For this purpose, you can [configure NSX manager to regularly perform backups](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window} to your file server. Ensure that your file server or its data is backed up correctly, and ensure the rotation of old NSX backups.
+Proper backup of all NSX components is crucial to restoring the system to its working state if a failure occurs. The design requires you to configure NSX backup through the NSX manager backup function. For this purpose, you can configure NSX manager to regularly perform backups to your file server. Ensure that your file server or its data is backed up correctly, and ensure the rotation of old NSX backups.
 
 ## Image-based backup of management virtual machines
 {: #solution_backingup-image}
@@ -68,7 +68,7 @@ If you deploy add-on solution components into your instance, you should also pla
 
 * Zerto Virtual Replication: The Zerto Virtual Manager (ZVM) system is deployed as an {{site.data.keyword.cloud_notm}} virtual server instance (VSI) and its backup is not supported by Veeam or IBM Spectrum Protect Plus. If your disaster recovery strategy requires you to recover the ZVM without performing a site failover, you should use your preferred Windows backup solution to back up and restore the ZVM.
 * F5 BIG-IP: F5 recommends [file-based backup of the F5 configuration](https://support.f5.com/csp/article/K13132){:new_window}, which you can direct to your file server.
-* FortiGate Security Appliance or VM: Fortinet recommends [file-based backup of the FortiGate configuration](http://help.fortinet.com/fos50hlp/54/Content/FortiOS/fortigate-best-practices-54/Firmware/Performing_Config_Backup.htm){:new_window}, which you can direct to your file server.
+* FortiGate Security Appliance or VM: Fortinet recommends [file-based backup of the FortiGate configuration](https://help.fortinet.com/fos50hlp/54/Content/FortiOS/fortigate-best-practices-54/Firmware/Performing_Config_Backup.htm){:new_window}, which you can direct to your file server.
 * HyTrust Cloud Control and Data Control: HyTrust supports both image and file-based backup of the HyTrust server appliances. For more information, see the HyTrust administration guides.
 * VMware HCX: The HCX appliance management interface allows you to create and download a file-based backup of the HCX manager configuration similar to the vCenter Server Appliance.
 

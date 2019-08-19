@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-22"
 
 keywords: VMware HCX standalone, HCX on-premises, order HCX
 
@@ -18,7 +18,7 @@ subcollection: vmware-solutions
 # Ordering on-premises VMware HCX on IBM Cloud instances
 {: #standalone_orderingserviceinstances}
 
-You can order an on-premises HCX on {{site.data.keyword.cloud}} instance without associating it to any vCenter Server with Hybridity Bundle instance for licensing and activation of your on-premises HCX on {{site.data.keyword.cloud_notm}} installation.
+You can order an on-premises HCX on {{site.data.keyword.cloud}} instance without associating it to any vCenter Server instance for licensing and activation of your on-premises HCX on {{site.data.keyword.cloud_notm}} installation.
 
 ## Before you begin
 {: #standalone_orderingserviceinstances-reqs}

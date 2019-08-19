@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-23"
 
 keywords: HTDC WebGUI, HTDC console, enable internet HTDC
 
@@ -63,7 +63,7 @@ For private-only vCenter Server environments, the VMware NSX Edge Services Gatew
 1. Complete steps 1 - 3 in the previous procedure.
 2. Click **Settings** and then **Interfaces**. Note the IP address for the private uplink. This address becomes the new default gateway.
 3. Click **Home > Hosts and Clusters** and find the HyTrust VMs. Right-click one of the VMs and click **Open Console**.
-4. Log in to the console by using the console credentials that you can find on the HyTrust DataControl on IBM Cloud service details page on the {{site.data.keyword.vmwaresolutions_short}} console.
+4. Log in to the console by using the console credentials that you can find on the HyTrust DataControl on {{site.data.keyword.cloud_notm}} service details page on the {{site.data.keyword.vmwaresolutions_short}} console.
 5. To get the current default gateway IP address from the VM, click **Manage Network Settings > Show Current Network Configuration**. Note the IP address that is listed for **Gateway**. This address becomes the gateway that is used for the static route.
 6. To set a static route for the VM, click **Manage Network Settings > Manage Static Routes > Add Static Route**. Set **Network address** to `10.0.0.0/8` and **Gateway** to the IP address noted in the previous step.
 7. To set the default gateway IP for the VM, click **Manage Network Settings > Change Current Network Configuration**. If you get a warning message, click **OK**, then click **Custom Configuration**. Set the **Gateway** field to the private uplink IP address noted in step 2 and click **OK**. Wait until the new network configuration is installed and the network services are restarted.

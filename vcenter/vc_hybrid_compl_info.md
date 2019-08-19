@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-16"
 
 keywords: vCenter Server Hybridity compliance, compliance info Hybridity, vCenter Server Hybridity policy
 
@@ -23,14 +23,14 @@ Review the following information for details about compliance for VMware vCenter
 ## Customer versus IBM responsibility for vCenter Server IBM Cloud with Hybridity Bundle
 {: #vc_hybrid_compl_info-responsibility}
 
-The following diagram provides details about the customer (you) and IBM responsibilities for compliance activities.
+The following diagram provides details about the customer (you) and {{site.data.keyword.IBM}} responsibilities for compliance activities.
 
 ![Customer versus IBM responsibility matrix](../images/customer_ibm_responsibility_matrix.svg "Customer versus IBM responsibility matrix"){: caption="Figure 1. Customer versus IBM responsibility matrix for vCenter Server on IBM Cloud with Hybridity Bundle" caption-side="bottom"}
 
 ## Health data restrictions
 {: #vc_hybrid_compl_info-health-data-restrictions}
 
-Terms in this section apply to the entire {{site.data.keyword.vmwaresolutions_full}} portfolio.
+Terms in this section apply to the entire {{site.data.keyword.vmwaresolutions_short}} portfolio.
 
 ### HIPAA
 {: #vc_hybrid_compl_info-hipaa}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-15"
 
 keywords: view NetApp, view instance, view instance details
 
@@ -127,7 +127,7 @@ If errors occur during instance deployment or instance deletion, the {{site.data
 
 | Item        | Description       |  
 |:------------|:----------------- |
-| Name | The name of the ESXi server is in the format `<host_prefix><n>.<subdomain_label>.<root_domain>`, where:<br><br>`host_prefix` is the host name prefix, `n` is the sequence of the server, `subdomain_label` is the subdomain label, and `root_domain` is the root domain name. |
+| Name | The name of the ESXi server is in the format `<host_prefix><n>.<subdomain_label>.<root_domain>`, where `n` is the sequence of the ESXi server. |
 | Version | The version of the ESXi server. |
 | Credentials | The user name and password to access the ESXi server. |
 | Private IP | The private IP address of the ESXi server. |
@@ -145,7 +145,7 @@ Before you click **vCenter console** on the instance summary page to go to the v
 For more information to help you complete the login instructions, review the following topics:
 
 *  For the requirements and necessary steps before you access the vSphere Web Client, see [Timeout reached while connecting to the vSphere Web Client](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_timeout_vc_console).
-*  For a list of access points to log in to the {{site.data.keyword.cloud_notm}} infrastructure Private Network using VPN, see [VPN Access](http://www.softlayer.com/vpn-access){: external}.
+*  For a list of access points to log in to the {{site.data.keyword.cloud_notm}} infrastructure Private Network using VPN, see [VPN Access](https://www.ibm.com/cloud/vpn-access){: external}.
 *  If you have problems when you deploy an OVF (Open Virtualization Format) file using the vSphere Web Client, see [Deploying an OVF file using the vSphere Web Client](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_deploy_ovf).
 
 ## Related links

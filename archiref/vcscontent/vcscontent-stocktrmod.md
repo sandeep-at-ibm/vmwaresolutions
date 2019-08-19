@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-23"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -106,8 +106,3 @@ In the end, the resulting Stock Trader layout options are:
 
 Todd didn't alter the data source during the transformation step. Transformation Advisor takes the WebSphere Application Server Network Deployment data source configuration and adds it to the Liberty container’s server.xml.
 {:important}
-
-## Related links
-{: #vcscontent-stocktrmod-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

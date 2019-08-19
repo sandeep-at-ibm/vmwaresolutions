@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -19,9 +19,3 @@ The {{site.data.keyword.vmwaresolutions_full}} automation requests an additional
 - Connect to vCenter and NSX Manager through the BCR.
 - Connect to Remote Collectors, either on VXLANs or hosted off-premise.
 - Allow the client to manage the IP address space when scaling up.
-
-
-## Related links
-{: #caveonix-step2-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-15"
 
 keywords: about vmware solutions, product overview, benefits
 
@@ -44,7 +44,7 @@ Before ordering a vCenter Server instance, you must configure your {{site.data.k
 
 When ordering your vCenter Server instance, you first choose its name and the VMware vSphere version. All VMware instances are deployed together with Microsoft Active Directory domain controllers, and for single sign-on purposes, you must designate your instance as either a primary or secondary site. A primary instance is the first or the only instance in your single sign-on domain. You can deploy more secondary instances and associate them with the same single sign-on domain of an existing primary instance. Next, you choose whether to bring your own VMware licenses, or which edition of license you want to rent from {{site.data.keyword.cloud_notm}}. Finally, you choose the {{site.data.keyword.cloud_notm}} region and data center for your instance, as well as the CPU and memory characteristics for the hosts in your cluster.
 
-In the next part of the order page, you enter the storage and networking characteristics for your instance. You can choose between vSAN and NFS storage for your cluster, with the ability to choose the size and number of vSAN Flash disks and the vSAN license edition, or the size and count and performance of NFS storage volumes. For networking, you choose the host name prefix for your hosts and the subdomain and domain for the cluster. You have the option of deploying the Active Directory controllers as a single {{site.data.keyword.cloud_notm}} virtual server instance (VSI), or two virtual machines within your cluster for which you need to provide licensing and activation.
+In the next part of the order page, you enter the storage and networking characteristics for your instance. You can choose between vSAN and NFS storage for your cluster, with the ability to choose the size and number of vSAN Flash disks and the vSAN license edition, or the size and count and performance of NFS storage volumes. For networking, you choose the host name prefix for your hosts and the subdomain and domain for the cluster. You have the option of deploying the Active Directory controllers as a single {{site.data.keyword.cloud_notm}} virtual server instance (VSI). Or, you can deploy the controllers as two virtual machines (VMs) within your cluster (for those VMs, you need to provide licensing and activation).
 
 At the bottom of the vCenter Server order page, you can select from various add-on services that you can deploy for your VMware instance and which are billed to your {{site.data.keyword.cloud_notm}} account. Some services require additional configuration, which you specify as part of the order form.
 
@@ -126,7 +126,7 @@ For all instances, vSphere Hypervisor is installed on the bare metal servers. {{
 ### Additional components
 {: #under_the_hood-add-comp}
 
-Depending on your choice, either one Microsoft Windows VSI or two Microsoft Windows virtual machines are deployed alongside or into your cluster as Active Directory servers for management components. You can optionally add your own Active Directory servers as additional identity sources for management access.
+Depending on your choice, either one Microsoft Windows VSI or two Microsoft Windows VMs are deployed alongside or into your cluster as Active Directory servers for management components. You can optionally add your own Active Directory servers as additional identity sources for management access.
 
 Regardless of how you choose to provide business continuity for your own workloads, {{site.data.keyword.cloud_notm}} strongly recommends that you back up the management components of your instance. The {{site.data.keyword.vmwaresolutions_short}} console allows you to deploy an integrated IBM Spectrum Protect Plus backup server or a Veeam Backup & Replication backup server together with your instance. These backup services can be used as part of a [complete backup solution](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_backingup) for your instance.
 
@@ -147,7 +147,7 @@ Your vCenter Server instance has two private VLANs that are trunked together on 
 ### Connecting to your instance
 {: #under_the_hood-connect-inst}
 
-You have a number of options for connecting to your instances. You can connect directly to private IP addresses in your instance (for example, vCenter) by using the [{{site.data.keyword.cloud_notm}} VPN](https://www.softlayer.com/VPN-Access){:external}. You can also order [{{site.data.keyword.cloud_notm}} network appliances](https://www.ibm.com/cloud/network-appliances){:external} and [{{site.data.keyword.cloud_notm}} hardware or virtual firewalls](https://www.ibm.com/cloud/network-security) such as FortiGate and vSRX for your account. {{site.data.keyword.cloud_notm}} also offers [direct links](https://www.ibm.com/cloud/direct-link){:external} between your network and the VLANs in your {{site.data.keyword.cloud_notm}} account.
+You have a number of options for connecting to your instances. You can connect directly to private IP addresses in your instance (for example, vCenter) by using the [{{site.data.keyword.cloud_notm}} VPN](https://www.ibm.com/cloud/vpn-access){:external}. You can also order [{{site.data.keyword.cloud_notm}} network appliances](https://www.ibm.com/cloud/network-appliances){:external} and [{{site.data.keyword.cloud_notm}} hardware or virtual firewalls](https://www.ibm.com/cloud/network-security) such as FortiGate and vSRX for your account. {{site.data.keyword.cloud_notm}} also offers [direct links](https://www.ibm.com/cloud/direct-link){:external} between your network and the VLANs in your {{site.data.keyword.cloud_notm}} account.
 
 For access to your deployed VMs, you can apply public IP addresses directly to your VMs. However, you can also use the {{site.data.keyword.cloud_notm}} network appliance and firewall capabilities to set up more secure public access to your VMs by using NAT and firewall. You can also deploy NSX Edge servers, and use these servers to set up VPN or NAT connectivity for your VMs.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-08-12"
 
 keywords: Caveonix, Caveonix RiskForesight, tech specs Caveonix
 
@@ -50,12 +50,14 @@ A Caveonix RiskForesight license key is ordered for each instance of the service
 ## Considerations when you install Caveonix RiskForesight on IBM Cloud
 {: #caveonix_considerations-install}
 
-Before you install the Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} service, ensure that the CPU and memory in the default cluster of your service instance is sufficient for the Caveonix RiskForesight virtual machine.
+* Before the service is installed in your environment, a check is performed against the available capacity of the default cluster in the environment to ensure that the service components can fit.
+* If the capacity check fails, the service is not installed and the service state is set to **Capacity Validation Failed** on the console. In addition, a console message with more details is displayed and you are notified by email.
+* To install the service, you must increase the capacity in your default cluster by either adding more hosts or by freeing up RAM, CPU, or disk space, and then add the service again in the console. After that, you can remove the existing service in the **Capacity Validation Failed** state by clicking the delete icon next to it.
 
 ## Considerations when you remove Caveonix RiskForesight on IBM Cloud
 {: #caveonix_considerations-remove}
 
-Review the following considerations before you remove the Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} service:
+Review the following considerations before you remove the service:
 * Removing the Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} service does not cancel the Caveonix RiskForesight license. You must delete the Caveonix RiskForesight license from the **Caveonix RiskForesight Licenses** table on the **Resources** page in the {{site.data.keyword.vmwaresolutions_short}} console.
 * When you remove the service, the {{site.data.keyword.vmwaresolutions_short}} automation deletes only the single "all-in-one" Caveonix VM that was deployed and the dedicated private subnet that was ordered for it. Therefore,
    * If you scaled out the Caveonix VM into multiple VMs, those additional VMs are not removed.

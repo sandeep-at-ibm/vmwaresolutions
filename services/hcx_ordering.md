@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-14"
 
 keywords: VMware HCX deployment, HCX configuration, order HCX
 
@@ -21,34 +21,40 @@ subcollection: vmware-solutions
 # Ordering VMware HCX on IBM Cloud
 {: #hcx_ordering}
 
-You can order the VMware HCX on {{site.data.keyword.cloud}} service while ordering a new VMware vCenter Server with Hybridity Bundle instance with the service included or by adding the service to your existing instance.
+You can order the VMware HCX on {{site.data.keyword.cloud}} service while ordering a new VMware vCenter Server with the service included or by adding the service to your existing instance.
 
-## Ordering VMware HCX on IBM Cloud for a new instance
-{: #hcx_ordering-new}
+A 12-month commitment is required when you order the VMware HCX on {{site.data.keyword.cloud_notm}} service. Your account continues to be charged for the HCX components if you delete a host or cluster before the end of the 12-month commitment period.
+{:important}
 
-To order a new VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle instance with VMware HCX on {{site.data.keyword.cloud_notm}}, select **VMware HCX on IBM Cloud** in the **Services** section when you order the instance from the {{site.data.keyword.vmwaresolutions_short}} console.
+To order a new VMware vCenter Server instance with VMware HCX on {{site.data.keyword.cloud_notm}}, select **HCX on IBM Cloud 3.5** in the **Services** section when you order the instance from the {{site.data.keyword.vmwaresolutions_short}} console.
 
 
 ## Ordering VMware HCX on IBM Cloud for an existing instance
 {: #hcx_ordering-existing}
 
-To add the VMware HCX on {{site.data.keyword.cloud_notm}} service into an existing VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle instance, view the instance that you want to add the service for, click **Services** on the left navigation pane, and click **Add**.
+To add the VMware HCX on {{site.data.keyword.cloud_notm}} service into an existing VMware vCenter Server instance, view the instance that you want to add the service for, click **Services** on the left navigation pane, and click **Add**.
 
 ## VMware HCX on IBM Cloud configuration
 {: #hcx_ordering-config}
 
 To install HCX on {{site.data.keyword.cloud_notm}}, complete the following settings:
-1. Specify the **HCX interconnect type** by selecting one of the following options:
-  * **Public network:** HCX creates an encrypted connection between sites over the public network. License registration and metering are performed over the public network.
-  * **Private interconnect:** HCX creates an encrypted connection between sites over the private network. License registration and metering are performed over the public network.
-  * **Private network:** HCX creates an encrypted connection between sites over the private network. License registration and metering are performed over private network through HTTP proxy.
-3. If you select **Private network**, complete the following fields:
+
+Steps 1 and 2 do not apply to HCX on {{site.data.keyword.cloud_notm}} installations on existing vCenter Server with Hybridity Bundle instances.
+{:note}
+
+1. Select the check box to confirm that you agree with the 12-month agreement associated with ordering the HCX on {{site.data.keyword.cloud_notm}} service.
+2. If using BYOL for your NSX license, select the check box to confirm that your NSX license is either Advanced or Enterprise edition.
+3. Specify the **HCX Network Connection** by selecting one of the following options:
+  * **Public Network:** HCX creates an encrypted connection between sites over the public network. License registration and metering are performed over the public network.
+  * **Private Interconnect:** HCX creates an encrypted connection between sites over the private network. License registration and metering are performed over the public network.
+  * **Private Network:** HCX creates an encrypted connection between sites over the private network. License registration and metering are performed over private network through HTTP proxy.
+4. If you select **Private Network**, complete the following fields:
   * **Proxy Address:** The IPv4 address of the proxy server.
   * **Proxy Port:** The proxy server port. The port number is typically 8080 or 3128.
   * **Username:** The user name if proxy authentication is required.
   * **Password:** The password if proxy authentication is required.
   * **Reenter Password:** Reenter the password for proxy authentication validation.
-2. Specify the **Public endpoint certificate type**. If you select **CA Certificate**, configure the following settings:
+5. Specify the **Public Endpoint Certificate Type**. If you select **CA Certificate**, configure the following settings:
   * **Certificate Contents:** Enter the contents of the CA certificate.
   * **Private Key:** Enter the private key of the CA certificate.
   * (Optional) **Password:** Enter the password for the private key if it is encrypted.
@@ -59,7 +65,7 @@ To install HCX on {{site.data.keyword.cloud_notm}}, complete the following setti
 ## Deployment process for HCX on IBM Cloud
 {: #hcx_ordering-deploy}
 
-The deployment of HCX on {{site.data.keyword.cloud_notm}} is automated. Whether you order a vCenter Server with Hybridity Bundle instance with the service included or you deploy the service later into your instance, the following steps are completed by the {{site.data.keyword.vmwaresolutions_short}} automation process:
+The deployment of HCX on {{site.data.keyword.cloud_notm}} is automated. Whether you order a vCenter Server instance with the service included or you deploy the service later into your instance, the following steps are completed by the {{site.data.keyword.vmwaresolutions_short}} automation process:
 1. Three subnets are ordered for HCX from the {{site.data.keyword.cloud_notm}} infrastructure:
    * One private portable subnet for HCX management.
    * One private portable subnet for HCX interconnects. This subnet is used when the **Private network** option is selected for **HCX interconnect type**.
@@ -67,7 +73,7 @@ The deployment of HCX on {{site.data.keyword.cloud_notm}} is automated. Whether 
 
    The IP addresses in the subnets that are ordered for HCX are intended to be managed by the VMware on {{site.data.keyword.cloud_notm}} automation. These IP addresses cannot be assigned to VMware resources, such as VMs and NSX Edges, that are created by you. If you need additional IP addresses for your VMware artifacts, you must order your own subnets from {{site.data.keyword.cloud_notm}}.
    {:important}
-2. If **Private network** was selected for **HCX interconnect type**, a port group that is named **SDDC-DPortGroup-HCX-Private** is created on the private Distributed Virtual Switch (DVS).
+2. If **Private Network** was selected for **HCX Network Connection**, a port group that is named **SDDC-DPortGroup-HCX-Private** is created on the private Distributed Virtual Switch (DVS).
 3. An HCX activation key is ordered from VMware.
 4. Three resource pools and VM folders for HCX are created, which are needed for the HCX interconnects, local HCX components, and remote HCX components.
 5. A pair of VMware NSX Edge Services Gateways (ESGs) for the HCX management traffic is deployed and configured:
@@ -92,7 +98,7 @@ The deployment of HCX on {{site.data.keyword.cloud_notm}} is automated. Whether 
 
 * [HCX on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_considerations#hcx_considerations)
 * [Managing HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghcx)
-* [Ordering, viewing, and removing services for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
+* [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
 * [Glossary of HCX terms](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
 * [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [VMware Hybrid Cloud Extension overview](https://cloud.vmware.com/vmware-hcx){:external}

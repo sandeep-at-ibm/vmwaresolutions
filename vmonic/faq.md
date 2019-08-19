@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-01"
 
 keywords: FAQ, user account, patch management
 
@@ -88,7 +88,7 @@ You can configure vCenter HA, but configuration support is not provided by {{sit
 {: #faq-rename-cluster}
 {: faq}
 
-For a new vCenter Server instance, the first cluster that is created during deployment has a default name of **cluster1**. You can rename the default cluster in the VMware vSphere Client. When you add a cluster to a vCenter Server instance, you can specify the name that you want on the {{site.data.keyword.vmwaresolutions_short}} console.
+For a new vCenter Server instance, you can set the name of the initial cluster that is created during deployment. When you add a cluster to a vCenter Server instance, you can specify the name that you want on the {{site.data.keyword.vmwaresolutions_short}} console.
 
 ## How are patches managed?
 {: #faq-patches}
@@ -106,7 +106,6 @@ For instances that were deployed at V2.0 or higher, VMware Update Manager (VUM) 
 For more information, see the following resources:
 * [VMware Support](https://www.vmware.com/support.html){:external}
 * [Applying updates to vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates)
-* [Applying updates to vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_applyingupdates)
 
 ## Does the management services NSX Edge pose a security risk?
 {: #faq-mgmt-nsx}
@@ -136,7 +135,6 @@ The instance deployments have strict physical infrastructure requirements, which
 
 For more information, see the _IBM Cloud Data Center availability_ sections in:
 * [Requirements and planning for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
-* [Requirements and planning for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)
 * [Requirements and planning for VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning)
 * [Requirements and planning for NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_planning)
 

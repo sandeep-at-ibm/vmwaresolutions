@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-07-22"
 
 keywords: about vmware solutions, product overview, benefits
 
@@ -50,13 +50,6 @@ You can easily deploy your VMware virtual environments and manage the infrastruc
 The vCenter Server offering allows you to deploy a VMware virtual environment by using custom compute, storage, and network resources to best fit your business needs.
 
 For more information, see [vCenter Server overview](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview).
-
-### VMware vCenter Server on IBM Cloud with Hybridity Bundle
-{: #prod_overview-hybridity}
-
-The vCenter Server with Hybridity offering is a hosted private cloud that helps quickly and easily extend your on-premises infrastructure into the cloud. The VMware environment is based on IBM-provided VMware Software Defined Data Center licenses and it includes VMware Hybrid Cloud Extension (HCX). Using HCX, you can securely connect a vSphere 5.0+ environment on-premises with {{site.data.keyword.cloud_notm}} sites for seamless infrastructure hybridity and true application mobility.
-
-For more information, see [vCenter Server with Hybridity Bundle overview](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview).
 
 ### VMware vSphere on IBM Cloud
 {: #prod_overview-vss}

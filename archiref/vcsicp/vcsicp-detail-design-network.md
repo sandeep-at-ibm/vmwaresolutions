@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -128,8 +128,3 @@ The {{site.data.keyword.icpfull_notm}} NSX NAT, is configured with the following
 *	SNAT for VXLAN networks access to public access.
 *	SNAT for VXLAN networks access to private {{site.data.keyword.cloud_notm}} network access.
 *	DNAT for {{site.data.keyword.icpfull_notm}} Cluster vIPs.
-
-## Related links
-{: #vcsicp-detail-design-network-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

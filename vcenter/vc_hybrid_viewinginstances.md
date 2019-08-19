@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-16"
 
 keywords: view vCenter Server Hybridity, view instance, view instance details
 
@@ -33,12 +33,12 @@ To view a summary of all the vCenter Server with Hybridity Bundle instances that
 
 | Item        | Description       |  
 |:------------- |:------------- |
-| Name | The name of the instance |
-| Type | The type of vCenter Server instance |
-| Version | The release version that the instance was deployed in, or upgraded to |  
-| Location | The {{site.data.keyword.CloudDataCent_notm}} where the instance is hosted |  
-| Creation time | The date and time when the instance was created |  
-| Status | The status of the instance |
+| Name | The name of the instance. |
+| Type | The type of vCenter Server instance. |
+| Version | The release version that the instance was deployed in, or upgraded to. |  
+| Location | The {{site.data.keyword.CloudDataCent_notm}} where the instance is hosted. |  
+| Creation time | The date and time when the instance was created. |  
+| Status | The status of the instance. |
 {: caption="Table 1. vCenter Server with Hybridity Bundle instance items" caption-side="top"}
 
 The instance can have a range of statuses.
@@ -104,8 +104,8 @@ Click **Deployment History** from the left navigation pane to view the deploymen
 
 | Item        | Description       |  
 |:------------- |:------------- |
-| Date | The date and time when the instance status is changed |
-| Summary | The details of the change |
+| Date | The date and time when the instance status is changed. |
+| Summary | The details of the change. |
 {: caption="Table 5. vCenter Server with Hybridity Bundle instance deployment history" caption-side="top"}
 
 ## What to do if errors occur
@@ -123,7 +123,7 @@ Before you click **vCenter console** on the instance summary page to go to the v
 
 Review the following topics for information to help you complete the login instructions:
 *  For the requirements and necessary steps before you access the vSphere Web Client, see [Timeout reached while connecting to the vSphere Web Client](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_timeout_vc_console).
-*  For a list of access points to log in to the {{site.data.keyword.cloud_notm}} infrastructure Private Network using VPN, see [VPN Access](http://www.softlayer.com/vpn-access){:external}.
+*  For a list of access points to log in to the {{site.data.keyword.cloud_notm}} infrastructure Private Network using VPN, see [VPN Access](https://www.ibm.com/cloud/vpn-access){:external}.
 *  If you have problems when you deploy an OVF (Open Virtualization Format) file using the vSphere Web Client, see [Deploying an OVF file using the vSphere Web Client](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_deploy_ovf).
 
 ## Related links

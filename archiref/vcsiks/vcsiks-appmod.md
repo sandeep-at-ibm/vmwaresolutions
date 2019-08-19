@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -66,8 +66,3 @@ In summary, the {{site.data.keyword.cloud_notm}} for VMware offerings:
 Customers moving toward cloud native application platforms such as {{site.data.keyword.icpfull_notm}} and {{site.data.keyword.containerlong_notm}} are focused on speed and innovation and don’t always have security and networking in mind. Application time to value decreases if they need to wait until networking or security teams can order services like load balancers, firewalls, switches, and routers.
 
 This reference architecture shows how VCS, {{site.data.keyword.icpfull_notm}}, and {{site.data.keyword.containerlong_notm}} move Acme Skateboards securely along the application modernization journey.
-
-## Related links
-{: #vcsiks-appmod-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

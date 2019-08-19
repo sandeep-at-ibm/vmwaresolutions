@@ -12,6 +12,7 @@ IBM Cloud for VMware Solutions
 
     {: .topicgroup}
     Release notes
+        vmonic/relnotes_v32.md
         vmonic/relnotes_v31.md
         vmonic/relnotes_v30.md
         vmonic/relnotes_v29.md
@@ -72,14 +73,9 @@ IBM Cloud for VMware Solutions
     {: .topicgroup}
     vCenter Server on IBM Cloud with Hybridity Bundle
         vcenter/vc_hybrid_overview.md
-        vcenter/vc_hybrid_planning.md
-        vcenter/vc_hybrid_networkingonvcenterserver.md
-        vcenter/vc_hybrid_multisite.md
         vcenter/vc_hybrid_compl_info.md
-        vcenter/vc_hybrid_orderinginstance.md
         vcenter/vc_hybrid_addingviewingclusters.md
         vcenter/vc_hybrid_addingremovingservers.md
-        vcenter/vc_hybrid_applyingupdates.md
         vcenter/vc_hybrid_upgrade-lic.md
         vcenter/vc_hybrid_addingremovingservices.md
         vcenter/vc_hybrid_viewinginstances.md
@@ -132,7 +128,6 @@ IBM Cloud for VMware Solutions
         services/caveonix_considerations.md
         services/caveonix_ordering.md
         services/managingcaveonix.md
-        services/caveonix_license_considerations.md
         services/caveonix_license_ordering.md
         services/caveonix_license_managing.md
 
@@ -210,6 +205,12 @@ IBM Cloud for VMware Solutions
         services/hcx_glossary.md
 
     {: .topicgroup}
+    VMware vRealize Operations and vRealize Log Insight on IBM Cloud
+        services/vrops_overview.md
+        services/vrops_ordering.md
+        services/managing_vrops.md
+
+    {: .topicgroup}
     Zerto on IBM Cloud
         services/addingzertodr.md
         services/zerto_ordering.md
@@ -225,6 +226,13 @@ IBM Cloud for VMware Solutions
     {: .topicgroup}
     IBM Cloud Expert Services
         services/managing_ices.md
+
+    {: .topicgroup}
+    (Experimental) IBM Cloud for VMware Solutions Shared
+        shared/shared_overview.md
+        shared/shared_ordering_ondemand.md
+        shared/shared_ordering_reserved.md
+        shared/shared_managing.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
@@ -252,7 +260,8 @@ IBM Cloud for VMware Solutions
 
     {: .navgroup id="reference"}
     vmonic/at-events.md
-    [API reference](https://cloud.ibm.com/apidocs/vmware-solutions)
+    [IBM Cloud for VMware Solutions API reference](https://cloud.ibm.com/apidocs/vmware-solutions)
+    [IBM Cloud for VMware Solutions Shared API reference](https://cloud.ibm.com/apidocs/vmware-solutions-shared)
 
     {: .topicgroup}
     Auditing

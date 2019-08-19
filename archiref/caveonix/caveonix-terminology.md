@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-06"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -68,8 +68,3 @@ This glossary provides some descriptions for terms that are associated with the 
 Job: "Caveo Logs" Anomaly score is > 90 then Mark asset for quarantine and send Notification to slack Channel.`
 Job: "Caveo Network" Anomaly score is > 95 then quarantine the asset and send email notification and also send UI notification.
 ```
-
-## Related links
-{: #caveonix-terminology-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

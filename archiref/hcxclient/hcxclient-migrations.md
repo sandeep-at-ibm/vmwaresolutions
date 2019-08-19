@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -36,9 +36,9 @@ The vMotion capability within HCX extends the vSphere vMotion capability to work
 ### Concepts and best practices for vMotion
 {: #hcxclient-migrations-best-practices-vmotion}
 
-HCX is essentially a vMotion two-way proxy. Each instance of HCX emulates a single ESXi host within the vSphere data center, outside any clusters that is itself a “front” for the cloud gateway fleet component (CGW). A proxy host appears for each HCX site that is linked to the currently viewed site. When a vMotion is initiated to a remote host, the local ESXi host will vMotion that VM to the local proxy ESXi host that fronts the CGW that also is maintaining an encrypted tunnel with the CGW on the remote side.
+HCX is essentially a vMotion two-way proxy. Each instance of HCX emulates a single ESXi host within the vSphere data center, outside any clusters that is itself a “front” for the cloud gateway fleet component (CGW). A proxy host appears for each HCX site that is linked to the currently viewed site. When a vMotion is initiated to a remote host, the local ESXi host will migrate that VM to the local proxy ESXi host that fronts the CGW that also is maintaining an encrypted tunnel with the CGW on the remote side.
 
-At the same time, a vMotion migration is initiated from the remote ESXi proxy host to the destination vSphere physical ESXi host, while it receives data from the source CGW across the tunnel. When vMotion is employed, unlike the bulk migration option, only a single VM migration operation runs at a time. Because of this, for many VMs to be migrated, it's recommended to use vMotion only when downtime is not an option or if there is a risk in rebooting the VM. However, like standard vMotion, the VM can be live during the process.
+A vMotion migration is initiated from the remote ESXi proxy host to the destination vSphere physical ESXi host, while it receives data from the source CGW across the tunnel. When vMotion is employed, unlike the bulk migration option, only a single VM migration operation runs at a time. Because of this, for many VMs to be migrated, it's recommended to use vMotion only when downtime is not an option or if there is a risk in rebooting the VM. However, like standard vMotion, the VM can be live during the process.
 
 It has been observed that a single vMotion will top out at around 1.7 Gbps on the LAN and 300 - 400 Mbps on the WAN through the WAN Optimizer. This does not mean that 1.7 Gbps on the LAN equals to 400 Mbps on the WAN through the WAN Optimizer, but rather that these maximums were observed on specific environments. Such an environment consisted of 10 GB LAN vMotion Network and 1 GB internet uplink, which is shared with production web traffic.
 
@@ -122,7 +122,7 @@ Post migration, iSCSI volumes can be mirrored with the OS to another local cloud
 - Bandwidth (~1 Gbps per stretched network)
 - Underlay link bandwidth
 
-After the migration lifecycle, test Development or staging applications before attempting on production. QoS can be employed for the underlay tunnel traffic (udp 500 / 4500) between the L2C HCX appliances that support latency sensitive stretched L2 networks.
+After the migration lifecycle, test Development or staging applications before attempting on production. QoS can be employed for the underlay tunnel traffic (UDP 500/4500) between the L2C HCX appliances that support latency sensitive stretched L2 networks.
 
 ## Network swing
 {: #hcxclient-migrations-network-swing}

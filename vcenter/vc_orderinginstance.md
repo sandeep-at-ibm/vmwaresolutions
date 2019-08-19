@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-15"
 
 keywords: vCenter Server order instance, order vCenter Server, order vCenter Server instance
 
@@ -35,9 +35,9 @@ Ensure that you completed the following tasks:
 |:------------|:------------ |
 | Domain name | `<root_domain>` |  
 | vCenter Server login user name | `<user_id>@<root_domain>` (Microsoft Active Directory user) or `administrator@vsphere.local` |
-| vCenter Server (with embedded PSC) FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. The maximum length is 50 characters. |
+| vCenter Server (with embedded PSC) FQDN | `<instance_name>-vc.<root_domain>`. The maximum length is 50 characters. |
 | Single Sign-On (SSO) site name | `<subdomain_label>` |
-| Fully qualified ESXi server name | `<host_prefix><n>.<subdomain_label>.<root_domain>`, where `<n>` is the sequence of the ESXi server. The maximum length is 50 characters. |
+| Fully qualified ESXi server name | `<host_prefix><n>.<subdomain_label>.<root_domain>`, where `n` is the sequence of the ESXi server. The maximum length is 50 characters. |
 {: caption="Table 1. Value format for instance and domain names" caption-side="top"}
 
 Don't modify any values that are set during instance order or deployment. Doing so can make your instance unusable. For example, if public networking shuts down, if servers and Virtual Server Instances (VSIs) move behind a Vyatta mid-provision, or if the IBM CloudBuilder VSI stops or is deleted.
@@ -52,17 +52,28 @@ You must specify the following system settings when you order a vCenter Server i
 {: #vc_orderinginstance-inst-name}
 
 The instance name must meet the following requirements:
-* Only alphanumeric and dash (-) characters are allowed.
-* The instance name must start with an alphabetic character and end with an alphanumeric character.
+* Only lowercase alphabetic, numeric, and dash (-) characters are allowed.
+* The instance name must start with a lowercase alphabetic character.
+* The instance name must end with a lowercase alphabetic or numeric character.
 * The maximum length of the instance name is 10 characters.
 * The instance name must be unique within your account.
 
-### VMware vSphere licenses
+### Initial cluster name
+{: #vc_orderinginstance-cluster-name}
+
+The initial cluster name must meet the following requirements:
+* Only lowercase alphabetic, numeric, and dash (-) characters are allowed.
+* The cluster name must start with a lowercase alphabetic character.
+* The cluster name must end with a lowercase alphabetic or numeric character.
+* The maximum length of the cluster name is 30 characters.
+* The cluster name must be unique within the vCenter Server instance.
+
+### VMware vSphere version
 {: #vc_orderinginstance-vsphere-license}
 
-Select whether to order vSphere Enterprise Plus 6.7u1 or vSphere Enterprise Plus 6.5u2.
+Select whether to order vSphere Enterprise Plus 6.7u2 or vSphere Enterprise Plus 6.5u2.
 
-vSphere Enterprise Plus 6.7u1 is available for only Broadwell and Skylake {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}.
+vSphere Enterprise Plus 6.7u2 is available for only Skylake, Cascade, and Broadwell {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}.
 {:note}
 
 ### Primary or secondary
@@ -77,6 +88,9 @@ Specify the licensing options for the following VMware components in the instanc
 * vCenter Server 6.5
 * vSphere Enterprise Plus 6.5 or 6.7
 * NSX Service Providers 6.4 (Base, Advanced, or Enterprise edition)
+
+The VMware HCX on {{site.data.keyword.cloud_notm}} service requires either the NSX Advanced or NSX Enterprise edition license.
+{:note}
 
 For Business Partner users, the vCenter Server license (Standard edition), the vSphere license (Enterprise Plus edition), and the NSX license are included and purchased on your behalf. However, you must specify the edition for the NSX license.
 
@@ -113,6 +127,22 @@ When you select **Skylake**, you can choose the CPU and RAM combination for the 
 | Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 {: caption="Table 2. Options for Skylake {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
+### Cascade
+{: #vc_orderinginstance-cascade}
+
+For the **Cascade** setting, you have options for the **CPU Model** and **RAM**.
+
+Cascade {{site.data.keyword.baremetal_short}} are available only for VMware vSphere Enterprise Plus 6.7 U2 instances.
+{:note}
+
+| CPU model options        | RAM options       |
+|:------------- |:------------- |
+| Dual Intel Xeon Gold 4210 Processor / 20 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 5218 Processor / 32 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6248 Processor / 40 cores total, 2.5 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
+{: caption="Table 3. Options for Cascade {{site.data.keyword.baremetal_short}}" caption-side="top"}
+
+
 ### SAP-certified
 {: #vc_orderinginstance-sap}
 
@@ -136,7 +166,7 @@ When you select **Broadwell**, you can choose the CPU and RAM combination for th
 |:------------- |:------------- |
 | Quad Intel Xeon E7-4820 v4 / 40 cores total, 2.0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 cores total, 2.1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
-{: caption="Table 3. Options for Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
+{: caption="Table 4. Options for Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 ### Number of Bare Metal Servers
 {: #vc_orderinginstance-bare-metal-number}
@@ -156,12 +186,12 @@ For instances V2.8 and later, you can add NFS storage shares to an existing NFS 
 ### vSAN storage
 {: #vc_orderinginstance-vsan-storage}
 
-vSAN is available for the **Skylake** and **Broadwell** Bare Metal configuration only. Specify the following vSAN options:
+vSAN is available for the **Skylake**, **Cascade**, and **Broadwell** Bare Metal configuration only. Specify the following vSAN options:
 * **Disk Type and Size for vSAN Capacity Disks**: Select an option for the capacity disks that you need.
 * **Number of vSAN Capacity Disks**: Specify the number of capacity disks that you want to add.
 * If you want to add capacity over the limit of 10 disks, select the **High-Performance with Intel Optane** box. This option provides two extra capacity disk bays for a total of 12 capacity disks and is useful for workloads that require less latency and higher IOPS throughput.
 
-  The **High-Performance with Intel Optane** option is available only for the Skylake CPU models.
+  The **High-Performance with Intel Optane** option is available only for the Skylake and Cascade CPU models.
   {:note}
 
 * Review the **Disk Type for vSAN Cache Disks** and **Number of vSAN Cache Disks** values. These values depend on whether you checked the **High-Performance with Intel Optane** box.
@@ -189,7 +219,7 @@ Choose performance level options according to your needs.
 | 2 IOPS/GB | This option is designed for most general-purpose workloads. Example applications include: hosting small databases, backing up web applications, or virtual machine disk images for a hypervisor. |
 | 4 IOPS/GB | This option is designed for higher-intensity workloads that have a high percentage of active data at a time. Example applications include: transactional databases. |
 | 10 IOPS/GB | This option is designed for the most demanding workload types, such as analytics. Example applications include: high-transaction databases and other performance-sensitive databases. This performance level is limited to a maximum capacity of 4 TB per file share. |
-{: caption="Table 4. NFS performance level options" caption-side="top"}
+{: caption="Table 5. NFS performance level options" caption-side="top"}
 
 ### Local Disks
 {: #vc_orderinginstance-local-disks}
@@ -207,27 +237,30 @@ You must specify the following network interface settings when you order a vCent
 {: #vc_orderinginstance-host-name-prefix}
 
 The host name prefix must meet the following requirements:
-*  Only alphanumeric and dash (-) characters are allowed.
-*  The host name prefix must start and end with an alphanumeric character.
-*  The maximum length of the host name prefix is 10 characters.
+* Only lowercase alphabetic, numeric, and dash (-) characters are allowed.
+* The host name prefix must start with a lowercase alphabetic character.
+* The host name prefix must end with a lowercase alphabetic or numeric character.
+* The maximum length of the host name prefix is 10 characters.
 
 ### Subdomain label
 {: #vc_orderinginstance-subdomain-label}
 
 The subdomain label must meet the following requirements:
-*  Only alphanumeric and dash (-) characters are allowed.
-*  The subdomain label must start with an alphabetic character and end with an alphanumeric character.
-*  The maximum length of the subdomain label is 10 characters.
-*  The subdomain label must be unique within all instances in your multi-site configuration.
+* Only lowercase alphabetic, numeric, and dash (-) characters are allowed.
+* The subdomain label must start with a lowercase alphabetic character.
+* The subdomain label must end with a lowercase alphabetic or numeric character.
+* The maximum length of the subdomain label is 10 characters.
+* The subdomain label must be unique within all instances in your multi-site configuration.
 
 ### Domain name
 {: #vc_orderinginstance-domain-name}
 
 The root domain name must meet the following requirements:
 * The domain name must consist of two or more strings that are separated by period (.)
-* The first string must start with an alphabetic character and end with an alphanumeric character.
-* All strings, except for the last one, can contain only alphanumeric and dash (-) characters.
-* The last string can contain only alphabetic characters.
+* The first string must start with a lowercase alphabetic character.
+* The first string must end with a lowercase alphabetic or numeric character.
+* All strings, except for the last one, can contain only lowercase alphabetic, numeric, and dash (-) characters.
+* The last string can contain only lowercase alphabetic characters.
 * The length of the last string must be in the range 2 - 24 characters.
 
 The maximum length of the Fully Qualified Domain Name (FQDN) for hosts and VMs is 50 characters. Domain names must accommodate for this maximum length.
@@ -294,6 +327,9 @@ For more information on ordering Windows Server 2016 licenses, see [Get started 
 
 When you order a vCenter Server instance, you can also order add-on services. For more information about the services, see [Available services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices#available-services-for-vcenter-server-instances).
 
+A 12-month commitment is required when you order the VMware HCX on {{site.data.keyword.cloud_notm}} service.
+{:note}
+
 ## Order summary
 {: #vc_orderinginstance-order-summary}
 
@@ -307,8 +343,8 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 1. From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon from the left navigation pane and then click the **VMware vCenter Server on IBM Cloud** card in the **VMware Virtual Data Centers** section.
 2. On the **VMware vCenter Server on IBM Cloud** page, click the **vCenter Server** card and click **Create**.
 3. On the **vCenter Server** page, enter the instance name.
-5. Select the vSphere version.
-4. Select the instance type:
+4. Select the vSphere version.
+5. Select the instance type:
    * Click **Primary Instance** to deploy a single instance in the environment or to deploy the first instance in a multi-site topology.
    * Click **Secondary Instance** to connect the instance with an existing (primary) instance in the environment for high availability and complete the following steps:
      1. Select the primary instance that you want the secondary instance to be connected with.
@@ -321,7 +357,7 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 7. Complete the Bare Metal Server settings.
     1. Select the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
     2. Select the Bare Metal Server configuration.
-       * When you select **Skylake** or **Broadwell**, specify the CPU model and the RAM size.
+       * When you select **Skylake**, **Cascade**, or **Broadwell**, specify the CPU model and the RAM size.
        * When you select **SAP-certified**, choose one of the preset configurations.
     3. Specify the number of {{site.data.keyword.baremetal_short}}. If you're planning to use vSAN storage, a minimum of four {{site.data.keyword.baremetal_short}} are needed.  
 8. Complete the storage configuration.
@@ -350,7 +386,7 @@ For more information about how to provide settings for a service, see the corres
 {: #vc_orderinginstance-results}
 
 * The deployment of the instance starts automatically and you receive confirmation that the order is being processed. You can check the deployment status, including any issues that might require your attention, by viewing the **Deployment History** section of the instance details.
-* When the instance is successfully deployed, the components that are described in [Technical specifications for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs) are installed on your VMware virtual platform. The ESXi servers that you ordered are grouped as **cluster1** by default. If you ordered add-on services, the deployment of the services starts after your order is completed.
+* When the instance is successfully deployed, the components that are described in [Technical specifications for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs) are installed on your VMware virtual platform. If you ordered add-on services, the deployment of the services starts after your order is completed.
 * When the instance is ready to use, the status of the instance is changed to **Ready to Use** and you receive a notification by email.
 * When you order a secondary instance, the VMware vSphere Web Client for the primary instance (linked to the secondary one) might be restarted after your secondary instance order is completed.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-21"
+lastupdated: "2019-08-16"
 
 keywords: vCenter Server update, patch vCenter Server, IBM component update
 
@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 # Applying IBM management component updates to vCenter Server instances
 {: #vc_applyingupdates}
 
-The procedure in this section applies to updating IBM management components for instances that are deployed in V2.1 to V2.4 releases.
+The procedure in this section applies to updating {{site.data.keyword.IBM}} management components for instances that are deployed in V2.1 to V2.4 releases.
 
 For instances deployed in (or upgraded to) V2.5 or later, updates and patches for the IBM management components are applied automatically, as needed.
 

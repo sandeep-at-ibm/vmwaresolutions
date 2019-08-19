@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -57,7 +57,7 @@ You can now use the WAN Opt web UI to monitor throughput rates, compression rati
 ### Migration bandwidth throttling
 {: #hcxclient-monitoring-mig-bandwidth}
 
-Before you migrate VMs, do an assessment of the network link that is used. Work with the networking engineers for the network that contains the source instance of vSphere or review weekly and monthly traffic use. Limit available bandwidth for migrations if that traffic traverses over a link that is critical to your business, especially if that link is less than 1 Gbps. Use the side with the most constrained bandwidth, which is typically the client side.
+Before you migrate VMs, do an assessment of the network link that is used. Work with the networking specialists for the network that contains the source instance of vSphere or review weekly and monthly traffic use. Limit available bandwidth for migrations if that traffic traverses over a link that is critical to your business, especially if that link is less than 1 Gbps. Use the side with the most constrained bandwidth, which is typically the client side.
 
 Do so when you deploy the fleet components in the HCX Client UI, but post deployment requires you go into the WAN opt UI.
 

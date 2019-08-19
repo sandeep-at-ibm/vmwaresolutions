@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-16"
 
 keywords: vCenter Server NSX-T networking, networking components, networking NSX-T
 
@@ -31,7 +31,7 @@ To review the networking components that are included in your vCenter Server wit
 {: #vc_nsx-t_networkingonvcenterserver-firewall-considerations}
 {: faq}
 
-If you're using firewalls, you must configure rules for all communications from the {{site.data.keyword.IBM}} CloudDriver virtual server instance (VSI) and the SDDC Manager virtual machines (VMs). These rules must allow all protocols to communicate on the IP addresses `10.0.0.0/8` and `161.26.0.0/16`. Examples of such firewalls are NSX Distributed Firewalls (DFW) or Vyatta firewalls.
+If you're using firewalls, you must configure rules for all communications from the IBM CloudDriver virtual server instance (VSI) and the SDDC Manager virtual machines (VMs). These rules must allow all protocols to communicate on the IP addresses `10.0.0.0/8` and `161.26.0.0/16`. Examples of such firewalls are NSX Distributed Firewalls (DFW) or Vyatta firewalls.
 
 ## Using NSX with your virtual machines
 {: #vc_nsx-t_networkingonvcenterserver-using-nsx-with-vm}

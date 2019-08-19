@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -48,8 +48,3 @@ example might be, `List all records for the Casper Trick`.
 * Database - The Acme Skate Advisor database is hosted on a virtual machine that is managed by vCenter Server.
 * Application Containers - The applications that went through the application modernization journey and are now running as containers. For this reference architecture and in this example for Acme Skateboards, one of the containerized apps is a web server that is part of the online presence workload. The ACME containers host the Acme web application and the Acme Skate Advisor application.
 * NSX Edge - NSX edges are virtual appliances that manage north-south traffic into and out of the vCenter Server instance.
-
-## Related links
-{: #vcscar-syscontext-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

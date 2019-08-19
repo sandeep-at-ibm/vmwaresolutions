@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-13"
 
-keywords: vmware solutions data sheet, vmware solutions developerWorks, vmware solutions video
+keywords: vmware solutions data sheet, vmware solutions developer, vmware solutions video
 
 subcollection: vmware-solutions
 
@@ -15,7 +15,7 @@ subcollection: vmware-solutions
 
 {:external: target="_blank" .external}
 
-# Additional resources
+# More resources
 {: #additional_resources}
 
 Review the following resources to get started faster or gain more in-depth technical information for {{site.data.keyword.vmwaresolutions_full}}.
@@ -27,17 +27,12 @@ Review the following resources to get started faster or gain more in-depth techn
 ## Data sheets
 {: #additional_resources-data-sheets}
 
-* [{{site.data.keyword.vmwaresolutions_short}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:external}
+* [{{site.data.keyword.vmwaresolutions_short}} Protection data sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:external}
 
-## developerWorks recipes
+## IBM Developer recipes
 {: #additional_resources-dWrecipes}
 
-* [developerWorks recipes](https://developer.ibm.com/recipes/tutorials/?s=VMware+Solutions){:external}
-
-## IBM Cloud Patterns
-{: #additional_resources-patterns}
-
-* [IBM Cloud Patterns](https://ibmcloudpatterns.mybluemix.net/#862581F800007C53/862581F800007DD5/862581D000837B23){:external}
+* [IBM Developer recipes](https://developer.ibm.com/recipes/tutorials/?s=VMware+Solutions){:external}
 
 ## Platform extensions
 {: #additional_resources-plat-extensions}
@@ -54,9 +49,18 @@ Review the architecture of all the [Virtualization Platform Extensions](https://
 ## Videos and demonstrations
 {: #additional_resources-demos}
 
+### Digital Technical Engagement
+{: #additional_resources-dte}
+
+* [VMware on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/){:external}
+* [Veeam on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/demos/collection/Veeam-on-IBM-Cloud){:external}
+* [Zerto on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/demos/collection/Zerto-on-IBM-Cloud){:external}
+
+### More videos and demonstrations
+{: #additional_resources-more}
+
 * [Resources and videos](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/resources){:external}
-* [Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware){:external}
-* [Featured resources and case studies](https://www.ibm.com/cloud/vmware/resources){:external}
+* [Featured resources and case studies](https://www.ibm.com/cloud/vmware){:external}
 
 ## VMware documentation
 {: #additional_resources-vmware-doc}

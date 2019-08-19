@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-07-22"
 
 keywords: IAM user, user role, user permission
 
@@ -71,7 +71,6 @@ Because of the integration of {{site.data.keyword.vmwaresolutions_short}} with I
 
 For your existing instances that were deployed in V2.4 and earlier releases, you can migrate them to specified {{site.data.keyword.cloud_notm}} accounts for IAM-enabled management. For more information, see the following topics:
 * [Migrating pre-V2.5 vCenter Server instances to IBM Cloud accounts](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addinstancetousraccount)
-* [Migrating pre-V2.5 vCenter Server with Hybridity Bundle instances to IBM Cloud accounts](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addinstancetousraccount)
 * [Migrating pre-V2.5 NetApp ONTAP Select instances to IBM Cloud accounts](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_addinstancetousraccount)
 
 ## Related links

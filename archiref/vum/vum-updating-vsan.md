@@ -153,4 +153,4 @@ Many basic administrative tasks can be done much more efficiently than clicking 
 {: #vum-updating-vsan-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware) (demonstrations)
+* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/) (demonstrations)

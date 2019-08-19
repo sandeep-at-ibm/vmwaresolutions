@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -37,9 +37,9 @@ The design also provides the option to deploy two highly available MSAD servers 
 If you choose the option with two highly available MSAD servers, you're responsible to provide Microsoft licensing and activation.
 {:note}
 
-Active Directory serves to authenticate accesses to manage the VMware instance only and not to house users of the workloads in the deployed instances. The forest root domain name of the Active Directory server equals to the DNS domain name that you specify. This domain name is specified only for the primary vCenter Server instance if multiple instances are linked. For linked instances, each instance contains an Active Directory server that sits in the forest root replica ring. The DNS zone files are also replicated on the Active Directory servers.
+Active Directory serves to authenticate accesses to manage the VMware instance only and not to house users of the workloads in the deployed instances. The forest root domain name of the Active Directory server equals to the Domain Name Services (DNS) domain name that you specify. This domain name is specified only for the primary vCenter Server instance if multiple instances are linked. For linked instances, each instance contains an Active Directory server that sits in the forest root replica ring. The DNS zone files are also replicated on the Active Directory servers.
 
-### vSphere SSO domain
+### vSphere Single Sign On (SSO) domain
 {: #design_commonservice-vsphere-sso}
 
 The vSphere Single Sign On (SSO) domain is used as the initial authentication mechanism for a single instance or multiple linked instances. The SSO domain also serves to connect a VMware instance or multiple linked instances to the MSAD server. The following SSO configuration is applied:  
@@ -69,19 +69,19 @@ This design integrates DNS services on the AD VSIs in the following configuratio
 ### Secondary vCenter Server instances
 {: #design_commonservice-secondary-vcs}
 
-For cross instance redundancy; when the first secondary vCenter Server instance is added to an existing primary vCenter Server instance or current stand-alone vCenter Server instance, that primary instance AD DNS server IP address is used in the secondary vCenter Server instance and any subsequent secondary vCenter Server instance “secondary DNS” entry for all components that require a DNS server entry. For example, ESXi, vCenter, and NSX manager. This includes add on components, such as, HCX, Zerto, and Veeam. The primary site secondary DNS entry is then changed to the first secondary vCenter Server instances AD/DNS IP address.
+For cross instance redundancy, when the first secondary vCenter Server instance is added to an existing primary vCenter Server instance or current stand-alone vCenter Server instance, that primary instance AD DNS server IP address is used in the secondary vCenter Server instance and any subsequent secondary vCenter Server instance “secondary DNS” entry for all components that require a DNS server entry. For example, ESXi, vCenter, and NSX manager, and also add-on components, such as, HCX, Zerto, and Veeam. The primary site secondary DNS entry is then changed to the first secondary vCenter Server instances AD/DNS IP address.
 
 ## NTP services
 {: #design_commonservice-ntp}
 
-This design utilizes the {{site.data.keyword.cloud_notm}} infrastructure NTP servers. All deployed components are configured to utilize these NTP servers. Having all components within the design using the same NTP server is critical for certificates and Active Directory authentication to function correctly.
+This design uses the {{site.data.keyword.cloud_notm}} infrastructure NTP servers. All deployed components are configured to use these NTP servers. It is critical that all components within the design use the same NTP server is critical for certificates and Active Directory authentication to function correctly.
 
 ![NTP and DNS services](../../images/vcsv4radiagrams-ra-servicesinterconnections.svg "NTP and DNS services"){: caption="Figure 2. NTP and DNS services" caption-side="bottom"}
 
 ## Certificate authority services
 {: #design_commonservice-cas}
 
-By default, VMware vSphere uses TLS certificates that are signed by the VMware Certificate Authority (VMCA), which resides on the VMware Platform Services Controller appliance. These certificates are not trusted by the end­ user devices or browsers. It is a security best practice to replace user-facing certificates with certificates that are signed by a third-party or enterprise certificate authority (CA). Certificates for machine-to-machine communication can remain as VMCA–signed certificates, however, you are recommended to follow best practices for your organization, which typically involve using an identified enterprise CA.
+By default, VMware vSphere uses TLS certificates that are signed by the VMware certificate authority (VMCA), located on the VMware Platform Services Controller appliance. These certificates are not trusted by the user devices or browsers. It is a security best practice to replace user-facing certificates with certificates that are signed by a third-party or enterprise certificate authority (CA). Certificates for machine-to-machine communication can remain as VMCA–signed certificates. However, it is recommended that you follow best practices for your organization, which typically involve the use of an identified enterprise CA.
 
 You can use the Windows AD servers within this design to create certificates that are signed by the local instance. However, you can also choose to configure CA services if needed.
 

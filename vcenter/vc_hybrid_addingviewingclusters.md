@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-16"
 
 keywords: vCenter Server Hybridity add cluster, view cluster vCenter Server Hybridity, delete cluster vCenter Server Hybridity
 
@@ -31,7 +31,7 @@ You can add clusters to your VMware vCenter Server on {{site.data.keyword.cloud}
 ### Before you add clusters
 {: #vc_hybrid_addingviewingclusters-before-add}
 
-* Whenever possible, add clusters by using the {{site.data.keyword.vmwaresolutions_full}} console, because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, add clusters to vCenter Server only for on-premises clusters or clusters that you can't or won't manage in the {{site.data.keyword.vmwaresolutions_short}} console.
+* Whenever possible, add clusters by using the {{site.data.keyword.vmwaresolutions_short}} console, because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, add clusters to vCenter Server only for on-premises clusters or clusters that you can't or won't manage in the {{site.data.keyword.vmwaresolutions_short}} console.
 * For instances that were deployed in (or upgraded to) V2.5 and later, the number of clusters, hosts, and VMs determines the maximum limit for the number of clusters you can add. You must remain within the VMware sizing guidelines and limits for your deployment. For more information about maximum limits, see [VMware Configuration Maximums](https://configmax.vmware.com/home){:external}.
 * For instances that were deployed in (or upgraded to) V2.3 and V2.4, you can add up to 10 clusters.
 
@@ -59,7 +59,7 @@ If you deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}
 ### Bare Metal Server settings
 {: #vc_hybrid_addingviewingclusters-adding-bare-metal}
 
-You can choose **Skylake** or **Broadwell**. Options might differ depending on the version that your instance was initially deployed in.
+You can choose **Skylake**, **Cascade**, or **Broadwell**. Options might differ depending on the version that your instance was initially deployed in.
 
 #### Skylake
 {: #vc_hybrid_addingviewingclusters-adding-skylake}
@@ -72,6 +72,20 @@ When you select **Skylake**, you can choose the CPU and RAM combination accordin
 | Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 {: caption="Table 1. Options for Skylake Bare Metal Servers" caption-side="top"}
+
+#### Cascade
+{: #vc_hybrid_addingviewingclusters-adding-cascade}
+
+For the **Cascade** setting, you have options for the **CPU Model** and **RAM**.
+
+Cascade {{site.data.keyword.baremetal_short}} are available only for VMware vSphere Enterprise Plus 6.7 U2 instances.
+{:note}
+
+| CPU model options        | RAM options       |
+|:------------- |:------------- |
+| Dual Intel Xeon Gold 5218 Processor / 32 cores total, 2.3 GHz | 32 GB, 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6248 Processor / 40 cores total, 2.5 GHz | 32 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
+{: caption="Table 2. Options for Cascade {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 #### Broadwell
 {: #vc_hybrid_addingviewingclusters-adding-broadwell}
@@ -238,7 +252,7 @@ You might want to delete a cluster from an instance when it's no longer needed.
 ### Before you delete
 {: #vc_hybrid_addingviewingclusters-deleting-prereq}
 
-* Whenever possible, delete clusters by using the {{site.data.keyword.vmwaresolutions_full}} console, because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, delete clusters from vCenter Server only for on-premises clusters or clusters that you can't or won't manage in the {{site.data.keyword.vmwaresolutions_short}} console.
+* Whenever possible, delete clusters by using the {{site.data.keyword.vmwaresolutions_short}} console, because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, delete clusters from vCenter Server only for on-premises clusters or clusters that you can't or won't manage in the {{site.data.keyword.vmwaresolutions_short}} console.
 * You can delete a single cluster at a time. To delete multiple clusters, you must do it in sequence; waiting for the previous cluster to be deleted before you delete the next cluster.
 * Ensure that all nodes in a cluster are powered on and operational before you delete the cluster.
 * When you delete a cluster, all VMs (virtual machines) from the cluster are also deleted and they can't be recovered. If you want to keep the VMs, migrate them to other clusters.

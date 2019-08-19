@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-08-16"
 
 keywords: vCenter Server Hybridity, hybridity, tech specs vCenter Server Hybridity
 
@@ -20,7 +20,8 @@ subcollection: vmware-solutions
 # vCenter Server with Hybridity Bundle overview
 {: #vc_hybrid_overview}
 
-VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle is an instance available in V2.3 and later releases. Beginning with V2.6, the vCenter Server with Hybridity Bundle instance is available to Business Partners.
+The VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle is not supported for new installations. Instead, deploy the standard VMware vCenter Server instance with the HCX on {{site.data.keyword.cloud_notm}} service.
+{:note}
 
 The vCenter Server with Hybridity Bundle is a hosted private cloud that delivers the VMware vSphere stack as a service. The VMware environment is built on top of a minimum of four {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}, includes VMware vSAN as dedicated storage, provides automatic deployment and configuration of an easy-to-manage logical edge firewall that is powered by VMware NSX, and includes the VMware HCX on {{site.data.keyword.cloud_notm}} service.
 
@@ -83,21 +84,22 @@ The availability and pricing of standardized hardware configurations might vary 
 
 You can order four or more {{site.data.keyword.baremetal_short}} with one of the following configurations:
   * **Skylake**: 2-CPU Intel Skylake generation servers (Intel Xeon 4100/5100/6100 series) with your selected CPU model and RAM size.
+  * **Cascade**: 2-CPU Intel Cascade generation servers (Intel Xeon 5200/6200 series) with your selected CPU model and RAM size.
   * **Broadwell**: 4-CPU Intel Broadwell generation servers (Intel Xeon E7-4800 series) with your selected CPU model and RAM size.
 
 ### Networking
 {: #vc_hybrid_overview-networking}
 
 The following networking components are ordered:
-*  10 Gbps dual public and private network uplinks
-*  Three VLANs (Virtual LANs): one public VLAN and two private VLANs
+*  10 Gbps dual public and private network uplinks.
+*  Three VLANs (Virtual LANs): one public VLAN and two private VLANs.
 *  One VXLAN (Virtual eXtensible LAN) with DLR (Distributed Logical Router) for potential east-west communication between local workloads that are connected to layer 2 (L2) networks. The VXLAN is deployed as a sample routing topology, which you can modify, build on it, or remove it. You can also add security zones by attaching additional VXLANs to new logical interfaces on the DLR.
 *  Two VMware NSX Edge Services Gateways:
   * A secure management services VMware NSX Edge Services Gateway (ESG) for outbound HTTPS management traffic, which is deployed by IBM as part of the management networking typology. This ESG is used by the IBM management VMs to communicate with specific external IBM management components that are related to automation. For more information, see [Configuring your network to use the customer-managed ESG](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_esg_config#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
     This ESG is not accessible to you and you cannot use it. If you modify it, you might not be able to manage the vCenter Server with Hybridity Bundle instance from the {{site.data.keyword.vmwaresolutions_short}} console. In addition, note that using a firewall or disabling the ESG communications to the external IBM management components will cause {{site.data.keyword.vmwaresolutions_short}} to become unusable.
     {:important}
-  * A secure customer-managed VMware NSX Edge Services Gateway for outbound and inbound HTTPS workload traffic, which is deployed by IBM as a template that can be modified by you to provide VPN access or public access. For more information, see [Does the customer-managed NSX Edge pose a security risk?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#faq-customer-nsx)
+  * A secure customer-managed VMware NSX Edge Services Gateway for outbound and inbound HTTPS workload traffic, which is deployed by IBM as a template that can be modified by you to provide VPN access or public access. For more information, see [Does the customer-managed NSX Edge pose a security risk?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#faq-customer-nsx).
 
 For more information on networking components ordered when deploying the HCX on {{site.data.keyword.cloud_notm}} service, see [HCX on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations).
 
@@ -123,7 +125,7 @@ vSAN storage offers customized configurations, with various options for disk typ
 
 The following licenses are included with your vCenter Server with Hybridity Bundle instance order.
 
-* VMware vSphere Enterprise Plus 6.5u2 or 6.7u1
+* VMware vSphere Enterprise Plus 6.5u2 or 6.7u2
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Edition (Advanced or Enterprise) 6.4
 * VMware vSAN (Advanced or Enterprise) 6.6
@@ -143,7 +145,7 @@ One Bare Metal Server with the configuration presented in [Technical specificati
 ### Licenses and fees for expansion nodes
 {: #vc_hybrid_overview-expansion-node-license-and-fee}
 
-* One VMware vSphere Enterprise Plus 6.5u2 or 6.7u1
+* One VMware vSphere Enterprise Plus 6.5u2 or 6.7u2
 * One VMware NSX Service Providers Edition (Advanced or Enterprise) 6.4
 * One Support and Services fee
 * VMware vSAN (Advanced or Enterprise) 6.6

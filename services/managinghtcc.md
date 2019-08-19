@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-03-23"
 
 keywords: HTCC WebGUI, HTCC console, enable internet HTCC
 
@@ -65,7 +65,7 @@ These following steps apply for updating the HTCC network settings on the primar
 
 1. Complete steps 1-3 in the previous procedure.
 2. Click **Settings** and then click **Interfaces**. Note the IP address for the private uplink, which becomes the new default gateway. 
-3. Go to the HyTrust CloudControl on IBM Cloud service details page, click **View HTCC Web UI** and log in with the credentials from the service details page.
+3. Go to the HyTrust CloudControl on {{site.data.keyword.cloud_notm}} service details page, click **View HTCC Web UI** and log in with the credentials from the service details page.
 4. Note the existing default gateway. For example, for HTCC 5.5.1, click **Configuration > Network**. Note the gateway IP address that is listed, which becomes the gateway for the static route.
 5. Add a static route. For example, for HTCC 5.5.1, click **Configuration > Static Routes**. Click **Add**, enter the following information, and click **OK**.
 
@@ -83,7 +83,7 @@ These following steps apply for updating the HTCC network settings on the primar
 
   The primary VM will now have access to the internet.
 
-7. To confirm that the primary VM has internet access, run a `wget` command to a public IP address or website. To do so, go back to vCenter and right-click **CC1 > Open Console**. Log in to the console by using the console credentials from the HyTrust CloudControl on IBM Cloud service details page. Run a `wget` command such as `wget www.ibm.com`, and you should get an immediate response. Confirm that the request was sent and a `200` response was received.
+7. To confirm that the primary VM has internet access, run a `wget` command to a public IP address or website. To do so, go back to vCenter and right-click **CC1 > Open Console**. Log in to the console by using the console credentials from the HyTrust CloudControl on {{site.data.keyword.cloud_notm}} service details page. Run a `wget` command such as `wget www.ibm.com`, and you should get an immediate response. Confirm that the request was sent and a `200` response was received.
 
 ## Related links
 {: #managinghtcc-related}

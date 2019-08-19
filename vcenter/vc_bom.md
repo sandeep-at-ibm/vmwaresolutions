@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-08"
 
 keywords: vCenter Server BOM, bill of materials vCenter Server, BOM
 
@@ -42,13 +42,13 @@ The following table details the BOM information for vCenter Server software comp
 
 | Manufacturer  | Component                      | Version    |
 |:------------- |:------------------------------ |:------------- |
-| VMware       | vSphere ESXi                    | 6.7 Update 1 (build 6.7.0-13004448) or <br/>6.5 Update 2 (build 6.5.0-13635690) |
+| VMware       | vSphere ESXi                    | 6.7 EP 10 (build 6.7.0-13981272) or <br/>6.5 Update 2 (build 6.5.0-13635690) |
 | VMware       | vSphere 6.7                     | Distributed vSwitch 6.6.0 |
 | VMware       | vSphere 6.5                     | Distributed vSwitch 6.5.0 |
-| VMware       | vCenter Server Appliance        | 6.7 Update 1b (build 6.7.0-11727113) or <br/>6.5 Update 2g (build 6.5.0-13638625) |
-| VMware       | Platform Services Controller    | 6.7 Update 1b (build 6.7.0-11727113) or <br/>6.5 Update 2d (build 6.5.0-10964411) |
+| VMware       | vCenter Server Appliance        | 6.7 Update 2b (6.7.0-13843469) or <br/>6.5 Update 2g (build 6.5.0-13638625) |
+| VMware       | Platform Services Controller    | 6.7 Update 2b (6.7.0-13843469) or <br/>6.5 Update 2g (build 6.5.0-13638625) |
 | VMware       | vSAN                            | 6.7 Update 1 or <br/>6.6.1       |
-| VMware       | NSX for vSphere                 | 6.4.4 (build 11197766)    |
+| VMware       | NSX for vSphere                 | 6.4.5 (build 13282012)    |
 | VMware       | NSX-T for vSphere               | 2.4                       |
 | Microsoft    | Windows Server Standard edition | 2016       |
 {: caption="Table 2. BOM for the software components in vCenter Server instances" caption-side="top"}
@@ -137,6 +137,18 @@ To update the MTU setting for the Public Switch, complete the following steps in
 
    When the MTU size in a vDS is changed, the attached uplinks (physical NICs) are brought down and up again. As a result, a brief outage occurs for the VMs that are using the uplink. Therefore, it is recommended to plan the MTU setting update during scheduled downtime.
    {:note}
+
+## Enhanced VMware vMotion Compatibility (EVC) mode settings
+{: #vc_bom-evc-mode-settings}
+
+Review the following table for an overview of the EVC mode settings for vCenter Server instances and the differences between vSphere versions.
+
+| Bare Metal Server CPU model | vSphere 6.5  | vSphere 6.7 |
+|:------------- |:------------- |:------------- |
+| Broadwell | EVC is set to Intel **Broadwell** Generation | EVC is set to Intel **Broadwell** Generation |
+| Skylake | EVC is set to Intel **Broadwell** Generation | EVC is set to Intel **Skylake** Generation |
+| Cascade | Not supported | EVC is set to Intel **Skylake** Generation |
+{: caption="Table 6. EVC mode settings for vCenter Server instances and clusters" caption-side="top"}
 
 ## Related links
 {: #vc_bom-related}

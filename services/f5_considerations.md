@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-13"
 
 keywords: F5 BIG-IP, F5 install, tech specs F5
 
@@ -25,7 +25,7 @@ The F5 on {{site.data.keyword.cloud}} service (F5 BIG-IP® Virtual Edition) prov
 
 You can install more than one instance of this service as needed.
 
-This service is available only to instances that are deployed in V1.9 or later. The current BIG-IP VE version that is installed is v14.1.0.2.
+This service is available only to instances that are deployed in V1.9 or later. The current BIG-IP VE version that is installed is v15.0.0.
 {:note}
 
 ## Technical specifications for F5 on IBM Cloud
@@ -54,7 +54,7 @@ License fees for each VM are applied to each billing cycle depending on the lice
 You cannot change the licensing level after service installation. To change the licensing level, you must remove the existing service and reinstall the service using a different licensing option.
 {:important}
 
-## Installation considerations for F5 on IBM Cloud
+## Considerations when you install F5 on IBM Cloud
 {: #f5_considerations-install}
 
 Before you install the F5 on {{site.data.keyword.cloud_notm}} service, review the following considerations.
@@ -95,6 +95,12 @@ You must meet the following requirements to avoid failures with F5 on {{site.dat
 
 Due to these requirements, you must plan for the space that is needed for F5 on {{site.data.keyword.cloud_notm}}. If needed, before you order F5 on {{site.data.keyword.cloud_notm}}, add 1-2 ESXi servers to your instance, or reduce vSphere HA CPU reservation for failover, or both.
 
+**Notes**:
+
+* Before the service is installed in your environment, a check is performed against the available capacity of the default cluster in the environment to ensure that the service components can fit.
+* If the capacity check fails, the service is not installed and the service state is set to **Capacity Validation Failed** on the console. In addition, a console message with more details is displayed and you are notified by email.
+* To install the service, you must increase the capacity in your default cluster by either adding more hosts or by freeing up RAM, CPU, or disk space, and then add the service again in the console. After that, you can remove the existing service in the **Capacity Validation Failed** state by clicking the delete icon next to it.
+
 ## F5 on IBM Cloud order example
 {: #f5_considerations-example}
 
@@ -116,7 +122,7 @@ Since there will be other workloads present on the ESXi servers, for example, VM
 
 In this case, the F5 on {{site.data.keyword.cloud_notm}} installation might fail, unless at least one ESXi server is added to the environment and vShpere HA failover reservations are updated appropriately to ensure that there are enough resources for two BIG-IP VE VMs. If additional resources are needed to run the F5 on {{site.data.keyword.cloud_notm}} service, you can add more ESXi servers before installing F5 on {{site.data.keyword.cloud_notm}}.
 
-## Considerations when removing F5 on IBM Cloud
+## Considerations when you remove F5 on IBM Cloud
 {: #f5_considerations-remove}
 
 Before you remove the F5 on {{site.data.keyword.cloud_notm}} service, ensure that the existing BIG-IP VE configuration is removed correctly. Specifically, network traffic must be routed around BIG-IP VE instead of through BIG-IP VE. Otherwise, the existing data traffic from your environment might be impacted.

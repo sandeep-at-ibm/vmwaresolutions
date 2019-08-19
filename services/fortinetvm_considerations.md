@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-13"
 
 keywords: FortiGate VA, FortiGate Virtual Appliance, tech specs FortiGate VA
 
@@ -59,7 +59,7 @@ License fees for each virtual machine are applied to each billing cycle dependin
 You cannot change the licensing level after service installation. To change the licensing level, you must remove the existing service and reinstall the service using a different licensing option.
 {:important}
 
-## Considerations when installing FortiGate Virtual Appliance on IBM Cloud
+## Considerations when you install FortiGate Virtual Appliance on IBM Cloud
 {: #fortinetvm_considerations-install}
 
 Review the following considerations before you install the FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} service:
@@ -77,6 +77,12 @@ Review the following considerations before you install the FortiGate Virtual App
    * VMware vSphere HA has enough resources to host two FortiGate VMs with 100% CPU and RAM.
 
   Due to these requirements, you must plan for the space needed for FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} carefully. If needed, before ordering FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}, add 1 - 2 ESXi servers to your instance, or reduce the vSphere HA CPU reservation for failover, or both.
+
+**Notes**:
+
+* Before the service is installed in your environment, a check is performed against the available capacity of the default cluster in the environment to ensure that the service components can fit.
+* If the capacity check fails, the service is not installed and the service state is set to **Capacity Validation Failed** on the console. In addition, a console message with more details is displayed and you are notified by email.
+* To install the service, you must increase the capacity in your default cluster by either adding more hosts or by freeing up RAM, CPU, or disk space, and then add the service again in the console. After that, you can remove the existing service in the **Capacity Validation Failed** state by clicking the delete icon next to it.
 
 ## FortiGate Virtual Appliance on IBM Cloud order example
 {: #fortinetvm_considerations-example}
@@ -101,7 +107,7 @@ In this case, the FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}
 
 If additional resources are needed to run the FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} service, you can add more ESXi servers before installing the service.
 
-## Considerations when removing FortiGate Virtual Appliance on IBM Cloud
+## Considerations when you remove FortiGate Virtual Appliance on IBM Cloud
 {: #fortinetvm_considerations-remove}
 
 Before you remove the FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} service, ensure that the configuration of the existing FortiGate Virtual Appliances is removed correctly. Specifically, network traffic must be routed around FortiGate Virtual Appliances instead of through FortiGate Virtual Appliances. Otherwise, the existing data traffic within your environment might be impacted.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-27"
+lastupdated: "2019-07-08"
 
 subcollection: vmware-solutions
 
@@ -24,10 +24,10 @@ The Hybrid Cloud Services virtual appliance must be powered on before it can be 
 {: #hcx-archi-reg-vcenter-proc-register}
 
 1. Log in to the Hybrid Cloud Services service virtual appliance. For example, `https:My-HCX-Manager:9443/`.
-2. Click the **Manage Settings** tile.
+2. On the **Dashboard** panel, complete the following steps:
   1. In the left pane, under **Configure Systems**, select vCenter.
   2. Click **Add vCenter** on the upper right.
-  3. Enter the IP address of the vCenter Server in the form `https:vCenter-host-name` or `https:vCenter-IP-address`. For example, `https:My-vCenter` or `https:10.108.26.211`.
+  3. Enter the IP address of the vCenter Server in the form `https:vCenter-host-name` or `https:vCenter-IP-address`. For example, `https:My-vCenter` or `https:10.108.26.211`
   4. Enter the vCenter Server user name and password. The account that is used must have the vCenter Administrator role.
   5. Click **OK**. Do not restart when the _You need to restart the app_ message is displayed.
 3. Configure the lookup service.

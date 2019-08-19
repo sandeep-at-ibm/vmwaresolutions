@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-22"
+lastupdated: "2019-08-15"
 
 subcollection: vmware-solutions
 
@@ -44,7 +44,7 @@ Familiarize yourself with the following limitations for your instance:
 
 Complete the following steps to manage access to your {{site.data.keyword.cloud_notm}} network and to your VMware management components and to plan your {{site.data.keyword.cloud_notm}} network topology.
 
-- Access instance management endpoints by using the [{{site.data.keyword.cloud_notm}} VPN](https://www.softlayer.com/vpn-access) or your [{{site.data.keyword.cloud_notm}} Direct Link connection](https://www.ibm.com/cloud/direct-link).
+- Access instance management endpoints by using the [{{site.data.keyword.cloud_notm}} VPN](https://www.ibm.com/cloud/vpn-access) or your [{{site.data.keyword.cloud_notm}} Direct Link connection](https://www.ibm.com/cloud/direct-link).
 - Devise a strategy for public network connectivity from within your instance. Your options include: the sample customer VMware NSX Edge Services Gateway (ESG), gateway appliances such as Vyatta and FortiGate, and proxy servers deployed in the {{site.data.keyword.cloud_notm}} network or on your own network accessed through Direct Link.
 - Plan whether to deploy your workload on {{site.data.keyword.cloud_notm}} VLANs with [{{site.data.keyword.cloud_notm}} portable IP addresses](/docs/infrastructure/subnets?topic=subnets-getting-started) or [on NSX logical switches (VXLANs) using your own IP addresses](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_overview). Note that using NSX software-defined networking (SDN) gives you the greatest flexibility to manage and secure your workload network in the {{site.data.keyword.cloud_notm}}.
 - Use NSX ESGs, [IBM Cloud Vyatta](https://cloud.ibm.com/catalog/infrastructure/virtual-router-appliance), and Direct Link peering to plan for connectivity to workloads (Network Address Translation, Virtual Private Network, routing).
@@ -135,7 +135,7 @@ In addition to capacity planning, complete the following to ensure that your sto
 - To add more storage to your vSAN cluster, you must add new hosts to the cluster or add {{site.data.keyword.cloud_notm}} Endurance NFS storage instead. Adding disks to the existing hosts is not currently supported.
 - If you mount additional {{site.data.keyword.cloud_notm}} Endurance NFS storage to your cluster, ensure that you follow the architecture guidance and configure host routes to the storage using the `SDDC-DPortGroup-NFS` port group addresses. You must authorize these addresses, rather than the hosts themselves, to the storage. For more information, see [Attached storage infrastructure management](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-infra-mgmt#vsphere-host-static-routing).
 
-In addition, see the developerWorks recipe showing how to [add more endurance storage to your VMware cluster](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/) using IBM Spectrum Protect Plus as an example.
+In addition, see the IBM Developer recipe showing how to [add more endurance storage to your VMware cluster](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/) using IBM Spectrum Protect Plus as an example.
 
 ## Related links
 {: #solution_considerations-related}

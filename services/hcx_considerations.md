@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-14"
 
 keywords: VMware HCX, HCX, tech specs HCX
 
@@ -21,15 +21,22 @@ subcollection: vmware-solutions
 # VMware HCX on IBM Cloud overview
 {: #hcx_considerations}
 
-The HCX on {{site.data.keyword.cloud}} service seamlessly extends the networks of on-premises data centers into {{site.data.keyword.cloud_notm}}, which allows you to migrate virtual machines (VMs) to and from the {{site.data.keyword.cloud_notm}} without any conversion or change.
+The HCX on {{site.data.keyword.cloud}} service seamlessly extends the networks of on-premises data centers into {{site.data.keyword.cloud_notm}}, which allows you to migrate virtual machines (VMs) to and from the {{site.data.keyword.cloud_notm}} without any conversion or change. HCX creates an abstraction layer that enables application mobility and infrastructure hybridity through securely stretched networks. You can simply modernize your VMware environment from vSphere 5.1 to the latest vSphere version without needing to refractor or modify your existing application, as HCX enables this seamless transformation. HCX allows you to bring your IP subnet ranges into {{site.data.keyword.cloud_notm}} ensuring the IP consistency through a hybrid deployment, while providing high level security with end-to-end Suite B encryptions.
 
-This service is available only to VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle instances that are deployed in V2.3 and later. The current HCX on {{site.data.keyword.cloud_notm}} version that is installed is 3.5.1.
+HCX on {{site.data.keyword.cloud_notm}} requires you to consume either NSX Advanced or Enterprise through {{site.data.keyword.cloud_notm}} or an equivalent version using BYOL (Bring Your Own License). A 12-month commitment is required when you order the VMware HCX on {{site.data.keyword.cloud_notm}} service. You are charged for 12 consecutive months after the initial deployment of HCX. Any additional nodes are included within the initial provisioning expiration date. After the 12-month commitment expires, you can install and uninstall the HCX on {{site.data.keyword.cloud_notm}} service and you can add and remove hosts and clusters without restrictions. Your account is then charged on a monthly basis and you can cancel at anytime.
+
+The 12-month commitment expiration date is available on the HCX on {{site.data.keyword.cloud_notm}} details page. For information about viewing service details, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure).
 {:note}
-
-You can upgrade your existing vCenter Server instance to a vCenter Server with Hybridity Bundle instance. For more information about upgrading your instance and deploying the HCX on {{site.data.keyword.cloud_notm}} service, see [Procedure to upgrade to Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_upgrade-lic#vc_upgrade-lic-procedure-upgrade-to-hybridity).
 
 A vCenter Server instance with HCX on {{site.data.keyword.cloud_notm}} is limited to three simultaneous connections from on-premises sites.
-{:note}
+
+HCX on {{site.data.keyword.cloud_notm}} is supported on the following platforms:
+
+* vSphere 5.1 (command line only for vCenter 5.1 using API)
+* vSphere 5.5 ( Web client UI supported on vCenter 5.5u3 and above.)
+* vSphere 6.0
+* vSphere 6.5 (vDS must be at a 6.0 level)
+* vSphere 6.7
 
 ## Technical specifications for HCX on IBM Cloud
 {: #hcx_considerations-specs}
@@ -77,11 +84,24 @@ The HCX on {{site.data.keyword.cloud_notm}} service cannot be installed into an 
 
 Before you install the HCX on {{site.data.keyword.cloud_notm}} service, you must add a firewall rule to any existing firewalls to allow all outbound HTTPS traffic so that the HCX Manager virtual appliance (HCX Manager) can register itself. After the HCX Manager installation is completed, you can remove the firewall rule. In addition, you must configure firewall rules to allow HCX to function properly. For more information, see [VMware HCX on {{site.data.keyword.cloud_notm}} port access requirements](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-port-req#hcx-archi-port-req).
 
+**Notes**:
+
+* Before the service is installed in your environment, a check is performed against the available capacity of the default cluster in the environment to ensure that the service components can fit.
+* If the capacity check fails, the service is not installed and the service state is set to **Capacity Validation Failed** on the console. In addition, a console message with more details is displayed and you are notified by email.
+* To install the service, you must increase the capacity in your default cluster by either adding more hosts or by freeing up RAM, CPU, or disk space, and then add the service again in the console. After that, you can remove the existing service in the **Capacity Validation Failed** state by clicking the delete icon next to it.
+
 ## Considerations when you remove HCX on IBM Cloud
 {: #hcx_considerations-delete}
 
+This section does not apply to vCenter Server with Hybridity Bundle instances.
+
+A 12-month commitment is required when you order the HCX on {{site.data.keyword.cloud_notm}} service. You cannot delete the service until your 12-month period has expired. The 12-month commitment expiration date is available on the HCX on {{site.data.keyword.cloud_notm}} details page. For information about viewing service details, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure). The 12-month commitment and charging structure do not apply to existing vCenter Server with Hybridity Bundle instances.
+
+{:note}
+
 Review the following considerations before you remove the HCX on {{site.data.keyword.cloud_notm}} service:
 * Ensure that the interconnects and extended networks between the on-premises source site and the {{site.data.keyword.cloud_notm}} target sites are removed. To remove the interconnects and extended networks, use the HCX user interface in the on-premises VMware vSphere Web Client.
+
 * Ensure that the site pairings between the on-premises source site and the {{site.data.keyword.cloud_notm}} target sites are removed. To remove the site pairings, use the HCX user interface in the on-premises VMware vSphere Web Client.
 * The removal of HCX on {{site.data.keyword.cloud_notm}} is automated. The following procedures are completed for the successful removal of this service:
    * The HCX license that is ordered for the cloud-side HCX Manager is deactivated.
@@ -96,6 +116,7 @@ Review the following considerations before you remove the HCX on {{site.data.key
 
 * [Ordering HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_ordering)
 * [Managing HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghcx)
+* [VMware HCX on IBM Cloud guided demo: Learn how to migrate a VM by using HCX](https://www.ibm.com/cloud/garage/dte/producttour/vmware-hcx-ibm-cloud-guided-demo-learn-how-migrate-vm-using-hcx){:external}
 * [Glossary of HCX terms](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
 * [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [VMware Hybrid Cloud Extension overview](https://cloud.vmware.com/vmware-hcx){:external}

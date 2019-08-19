@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-16"
 
 keywords: view vCenter Server, view instance, view instance details
 
@@ -34,12 +34,12 @@ To view a summary of all the vCenter Server instances that are provisioned for a
 
 | Item        | Description       |  
 |:------------- |:------------- |
-| Name | The name of the instance |
-| Type | The type of vCenter Server instance |
-| Version | The release version that the instance was deployed in, or upgraded to |  
-| Location | The {{site.data.keyword.CloudDataCent_notm}} where the instance is hosted |  
-| Creation time | The date and time when the instance was created |
-| Status | The status of the instance |   
+| Name | The name of the instance. |
+| Type | The type of vCenter Server instance. |
+| Version | The release version that the instance was deployed in, or upgraded to. |  
+| Location | The {{site.data.keyword.CloudDataCent_notm}} where the instance is hosted. |  
+| Creation time | The date and time when the instance was created. |
+| Status | The status of the instance. |   
 {: caption="Table 1. vCenter Server instance items" caption-side="top"}
 
 The instance can have a range of statuses.
@@ -77,7 +77,6 @@ To view the property details of an instance:
 | DNS, Root Domain | The root domain name is the DNS (Domain Name System) domain name and the Microsoft Active Directory (AD) forest root name. |
 | DNS, SSO Domain | The SSO domain is the vSphere Single Sign-On domain. The SSO domain name is fixed for all deployed vCenter Server instances with a value of <samp class="ph codeph">vsphere.local</samp>. |
 | DNS, Subdomain | The subdomain is the DNS subdomain name of the root domain name where the local vCenter Server instance host names reside. The subdomain name is in the format <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp>. |
-| Hybridity Bundle | Indicates if the vCenter Server with Hybridity Bundle is installed. |
 | Status  | The status of the instance.<br><br>The information that is displayed provides an update on the progress of the deployment or the action that is taken on the instance. If there are issues, a message might be displayed to help you investigate and resolve the problem. |
 {: caption="Table 3. vCenter Server instance properties" caption-side="top"}
 
@@ -107,8 +106,8 @@ Click **Deployment History** from the left navigation pane to view the deploymen
 
 | Item        | Description       |  
 |:------------- |:------------- |
-| Date | The date and time when the instance status is changed |
-| Summary | The details of the change |
+| Date | The date and time when the instance status is changed. |
+| Summary | The details of the change. |
 {: caption="Table 5. vCenter Server instance deployment history" caption-side="top"}
 
 ## What to do if errors occur
@@ -126,7 +125,7 @@ Before you click **vCenter console** on the instance summary page to go to the v
 
 Review the following topics for information to help you complete the login instructions:
 *  For the requirements and necessary steps before you access the vSphere Web Client, see [Timeout reached while connecting to the vSphere Web Client](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_timeout_vc_console).
-*  For a list of access points to log in to the {{site.data.keyword.cloud_notm}} infrastructure Private Network using VPN, see [VPN Access](http://www.softlayer.com/vpn-access){:external}.
+*  For a list of access points to log in to the {{site.data.keyword.cloud_notm}} infrastructure Private Network using VPN, see [VPN Access](https://www.ibm.com/cloud/vpn-access){:external}.
 *  If you have problems when you deploy an OVF (Open Virtualization Format) file using the vSphere Web Client, see [Deploying an OVF file using the vSphere Web Client](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_deploy_ovf).
 
 ## Related links

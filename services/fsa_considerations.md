@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-13"
 
 keywords: FortiGate security, FortiGate Sirtual Appliance, tech specs FortiGate
 
@@ -61,6 +61,12 @@ Review the following considerations before you install the FortiGate Security Ap
 * After the FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} service is installed successfully, you can manage and configure firewall rules for the FSA from the FortiGate console. You must ensure that the FSA firewall rules are defined to allow outbound HTTPS (TCP port 443) communications that are started by management components such as the Zerto Virtual Manager to communicate with the external management database on {{site.data.keyword.cloud_notm}} over the internet. The outbound HTTPS (TCP port 443) communications originate from the public IP address of the management services VMware NSX Edge Services Gateway (ESG) in your instance.
 * You must manage the FortiGate Security Appliance configuration carefully to allow only necessary communications and deny all other communications.
 * If you order additional clusters, the public VLANs for these newly added clusters do not have the HA-pair of Security Appliances.
+
+**Notes**:
+
+* Before the service is installed in your environment, a check is performed against the available capacity of the default cluster in the environment to ensure that the service components can fit.
+* If the capacity check fails, the service is not installed and the service state is set to **Capacity Validation Failed** on the console. In addition, a console message with more details is displayed and you are notified by email.
+* To install the service, you must increase the capacity in your default cluster by either adding more hosts or by freeing up RAM, CPU, or disk space, and then add the service again in the console. After that, you can remove the existing service in the **Capacity Validation Failed** state by clicking the delete icon next to it.
 
 ## Considerations when you remove FortiGate Security Appliance on IBM Cloud
 {: #fsa_considerations-remove}

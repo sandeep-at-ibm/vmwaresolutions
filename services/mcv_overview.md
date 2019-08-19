@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-21"
+lastupdated: "2019-08-16"
 
 keywords: Mission Critical VMware, request Mission Critical, tech specs Mission Critical
 
@@ -20,7 +20,7 @@ Mission Critical VMware on {{site.data.keyword.cloud}} delivers a multi-zone clo
 
 With this cloud architecture, customers can achieve a higher availability and failover success rate than most VMware clients can achieve with on-premises environments or competing cloud platforms.
 
-This architecture supports existing mission-critical, legacy workloads, including non-cloud native applications, at a targeted aggregate availability of 99.99%. IBM Cloud multi-zone regions are designed to keep mission-critical workloads online if a site outage occurs. Workloads in a failed site are automatically restarted in near real time, while workloads in adjoining sites remain online and available.
+This architecture supports existing mission-critical, legacy workloads, including non-cloud native applications, at a targeted aggregate availability of 99.99%. {{site.data.keyword.cloud_notm}} multi-zone regions are designed to keep mission-critical workloads online if a site outage occurs. Workloads in a failed site are automatically restarted in near real time, while workloads in adjoining sites remain online and available.
 
 The architecture covers various enterprise services, including networks, storage, resiliency, and other tools built for monitoring and troubleshooting cloud-based applications. In addition, this architecture can be integrated with the IBM Services Platform with Watson, built on the {{site.data.keyword.cloud_notm}}, to allow for a broader consumption of services. Using the platform’s cognitive capabilities, clients can mine data more effectively for new business insights to help maintain continuous operations.
 
@@ -40,9 +40,9 @@ The Mission Critical VMware on {{site.data.keyword.cloud_notm}} architecture is 
   * Resiliency patterns (backup and recovery)
 
 Mission Critical VMware on {{site.data.keyword.cloud_notm}} is available in the following regions:
-* America: NA South - all IBM Cloud Data Centers in Dallas and NA East: all IBM Cloud Data Centers in Washington, DC
-* Europe: all IBM Cloud Data Centers in Frankfurt and London
-* Asia-Pacific: all IBM Cloud Data Centers in Sydney and Tokyo
+* America: NA South - all {{site.data.keyword.cloud_notm}} Data Centers in Dallas and NA East: all {{site.data.keyword.cloud_notm}} Data Centers in Washington, DC
+* Europe: all {{site.data.keyword.cloud_notm}} Data Centers in Frankfurt and London
+* Asia-Pacific: all {{site.data.keyword.cloud_notm}} Data Centers in Sydney and Tokyo
 
 ### Base infrastructure architecture specifications
 {: #mcv_overview-base-specs}
@@ -87,7 +87,7 @@ The network architecture has the following specifications:
 ## Procedure to request Mission Critical VMware on IBM Cloud
 {: #mcv_overview-proc}
 
-1. From the {{site.data.keyword.vmwaresolutions_full}} console, click **Getting Started** from the left navigation pane.
+1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Getting Started** from the left navigation pane.
 2. Scroll down the page and under **VMware Managed Services**, click the **Mission Critical VMware on IBM Cloud** card.
 3. On the Mission Critical VMware on {{site.data.keyword.cloud_notm}} page, in the **Contact us for Mission Critical VMware** box, click **Request a consultation**.
 4. On the IBM Services Expert Hub page, click **Schedule a consultation** to book 30 minutes with a services expert.
@@ -98,5 +98,5 @@ The network architecture has the following specifications:
 {: #mcv_overview-related}
 
 * [Managed services from IMI](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_imi)
-* [Managed services for Veeam on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
-* [Managed services for Zerto on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
+* [Managed services for Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
+* [Managed services for Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)

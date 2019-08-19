@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -40,8 +40,3 @@ Table 2. Remote collector
 |Disk	|1 TB|
 |OS	|CentOS 7|
 |Installed Application Components	|Remote Collector|
-
-## Related links
-{: #caveonix-allinone-related}
-
-*   [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

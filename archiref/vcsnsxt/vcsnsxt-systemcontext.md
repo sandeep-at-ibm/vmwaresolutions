@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-21"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -50,14 +50,9 @@ Table 2. Systems
 Actor | Description
 ---|---
 vCenter | The vCenter is the primary interface for the system administrator to manage the on-premises VMs and access the HCX plug-in to stretch networks and migrate VMs. With vCenter Server with Hybridity Bundle the systems administrator can seamlessly integrate on-premises vSphere networks into the vCenter Server instance that runs on {{site.data.keyword.cloud_notm}}. Hybrid networking extends the on-premises networks into the {{site.data.keyword.cloud_notm}} allowing customers to migrate their applications into a vCenter Server instance that runs on {{site.data.keyword.cloud_notm}} and back to on-premises if required. For more details on the vCenter Server with Hybridity Bundle, see [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro).
-On-premise VMs | The on-premises VMs host the applications migrating to the cloud. Initially, they are migrated as VMs and then via the application modernization journey migrated from VMs to containers.
+On-premises VMs | The on-premises VMs host the applications migrating to the cloud. Initially, they are migrated as VMs and then via the application modernization journey migrated from VMs to containers.
 On cloud VMs | On cloud VMs host applications that were migrated from on-premises. They communicate with on-premises applications via the stretched L2 network. For this reference architecture and in this example for Acme Skateboards, one of the on cloud VMs is a database server, which is part of the online presence workload.
 NSX-V | NSX-V on vCenter Server provides the software defined overlay network that is managed by the system administrator. The overlay network is the target for HCX stretched networks as it handles traffic from the VMs for {{site.data.keyword.icpfull_notm}}. NSX-V provides the reference architecture with features such as deployment, reconfiguration, and destruction of on-demand virtual networks and micro-segmentation services within VMware by using vSphere distributed switches (vDS). For more information, see [NSX–V overview](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv).
 CAM | {{site.data.keyword.cloud_notm}} Automation Manager (CAM) runs on {{site.data.keyword.icpfull_notm}} and provides a single pane of glass to provision VM-based workloads alongside Kubernetes based workloads by using templates. CAM allows the Developer to: <br> - Provision workloads on vCenter Server, {{site.data.keyword.icpfull_notm}}, or {{site.data.keyword.containerlong_notm}}.<br> - Compose and orchestrate services that are made out of both VMs and containers. <br> - Integrate their DevOps toolchains and day-2 ITSM solution.
 Containerized Applications | The apps that went through the application modernization journey and are now running as containers. For this reference architecture and in this example for Acme Skateboards, one of the containerized apps is a web server, which is part of the online presence workload.
 Watson | For this reference architecture and in this example for Acme Skateboards, Watson represents the AI service that is used in the _Concept Car architecture_.
-
-## Related links
-{: #vcsnsxt-systemcontext-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

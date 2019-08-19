@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-30"
 
 keywords: vCenter Server networking, networking components, networking vCenter
 
@@ -45,10 +45,11 @@ An NSX Edge Services Gateway is also deployed to be used by your workload virtua
 {: #vc_networkingonvcenterserver-change-nsx-component-password-considerations}
 {: faq}
 
-Review the following considerations before you change the passwords for the NSX Manager, NSX Controllers, and NSX Edges:
-* Do not change the NSX Manager's password that you can find on the **Summary** page of the instance in the {{site.data.keyword.vmwaresolutions_short}} console.
-* You can change passwords for NSX Controllers. For instructions on how to change passwords for NSX Controllers, see [Change Controller Password](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/com.vmware.nsx.admin.doc/GUID-2667DD9E-E2F5-4403-BAC2-C7D1BBC23228.html){:external}.
-* You can change the password and SSH settings for the customer-managed VMware NSX Edge Services Gateway (ESG). Do not change the password for the Management VMware NSX Edge Services Gateway (ESG) and related Distributed Logical Router.
+Review the following considerations before you attempt to change the passwords for the NSX Manager, NSX Controllers, and NSX Edges:
+* You can change the NSX Manager password. This password is displayed on the **Summary** page of the instance in the {{site.data.keyword.vmwaresolutions_short}} console.
+* You can change passwords for NSX Controllers. For instructions about how to change these passwords, see [Change Controller Password](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/com.vmware.nsx.admin.doc/GUID-2667DD9E-E2F5-4403-BAC2-C7D1BBC23228.html){:external}.
+* You can change the password and SSH settings for the customer-managed VMware NSX Edge Services Gateway (ESG). 
+* Do not change the passwords for the Management VMware NSX Edge Services Gateway (ESG) and the related Distributed Logical Router.
 
 ## Related links
 {: #vc_networkingonvcenterserver-related}

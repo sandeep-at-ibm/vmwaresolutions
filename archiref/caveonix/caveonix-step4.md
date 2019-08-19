@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-21"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -71,8 +71,3 @@ Table 2. Default information used in application setup
 |Task |Four tasks are set up; Asset Scan, NSX Flows, VMware Infrastructure Scan, and VMware Vulnerability. ScanName is set to DC1AssetScan, NSXFlows, VMWInfraScan, VMWVulnScan |
 |Task |Four tasks are set up; Asset Scan, NSX Flows, VMware Infrastructure Scan, and VMware Vulnerability. Type is set to vCenter, NSX, VMWareInfrastructureScan, VMWareVulnerabilityScan |
 |Task |Schedule is set to Hourly for DC1AssetScan and Daily for the others |
-
-## Related links
-{: #caveonix-step4-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

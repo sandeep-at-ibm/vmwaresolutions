@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-16"
 
 keywords: vSphere upgrade, NSX upgrade, PSC upgrade
 
@@ -60,7 +60,7 @@ Complete the following steps to order a VSI jumpbox.
 Skip the first step if you already have a VSI jumpbox in your environment.
 {:note}
 
-1. Order an hourly or monthly VSI from the [IBM Cloud infrastructure customer portal](https://control.softlayer.com/){:external}. Order the following attributes:
+1. Order an hourly or monthly VSI from the [{{site.data.keyword.cloud_notm}} infrastructure customer portal](https://control.softlayer.com/){:external}. Order the following attributes:
   * Windows 2012 or 2016 Server Standard
   * 2 CPUs
   * 16 GB of memory
@@ -81,7 +81,7 @@ Skip the first step if you already have a VSI jumpbox in your environment.
 Use your Windows VSI jumpbox and log into your https://my.vmware.com account to download the following binary files:
 
 * VMware vSphere 6.7u1 Hypervisor (ESXi ISO) image (Includes VMware Tools)
-* vCenter 6.7u1b appliance ISO. Not the update bundle.
+* vCenter 6.7u1b appliance ISO. Not the update bundle
 * NSX for vSphere 6.4.4 Upgrade Bundle
 
 For Intel Optane drives, download the following file to use as part of the post upgrade patching process that utilizes VMware Update Manager.
@@ -171,7 +171,7 @@ For vCenter Server linked instances, although it is recommended to upgrade all v
 #### Procedure to upgrade vCenter
 {: #vc_vsphere_upgrade-procedure-vcenter-procedure}
 
-1. Log in to both the PSC, ``https://<psc-fqdn>:5480``, and vCenter appliance management user interfaces to confirm whether or not the root password has expired. If the password expiration date is **1970** then it has expired and you must enable SSH and the bash shell in the PSC appliance management user interface.
+1. Log in to both the PSC, `https://<psc-fqdn>:5480`, and vCenter appliance management user interfaces to confirm whether or not the root password has expired. If the password expiration date is **1970** then it has expired and you must enable SSH and the bash shell in the PSC appliance management user interface.
     1. SSH into the PSC with the root ID and password. Even though the password has expired it allows you to log in.
     2. Use the shell **passwd** command to set a new root password for both the PSC and vCenter.
     3. Save the passwords that were displayed on the {{site.data.keyword.vmwaresolutions_short}} console or given to you by IBM Support. These passwords are reused later when you upgrade the appliances.
@@ -320,7 +320,7 @@ For more information, see [Enhanced vMotion Compatibility (EVC) processor suppor
 ## Results after you upgrade vCenter Server vSphere software
 {: #vc_vsphere_upgrade-results}
 
-Running the vSAN health check after your upgrade is complete may bring up warnings about firmware updates for the IBM Cloud supplied RAID and network controllers. After you determine the hosts that need firmware updates, open a ticket with IBM Support to get the firmware updated to the recommended versions.
+Running the vSAN health check after your upgrade is complete may bring up warnings about firmware updates for the {{site.data.keyword.cloud_notm}}-supplied RAID and network controllers. After you determine the hosts that need firmware updates, open a ticket with IBM Support to get the firmware updated to the recommended versions.
 
 1. From the vCenter user interface, select the cluster containing the vSAN with health to be checked.
 2. Select the **Monitor** tab and then select the **vSAN** tab.

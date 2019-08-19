@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-01"
+lastupdated: "2019-07-22"
 
 keywords: single-node trial, data protection DR, tech specs data protection DR
 
@@ -26,7 +26,7 @@ The Single-node Trial for Data Protection and Disaster Recovery allows you to te
 
 The Single-node Trial is a trial version of VMware vCenter Server on {{site.data.keyword.cloud_notm}} that provides the single-tenant VMware platform that can be managed using the same tools as in on-premises environments. You can take advantage of the speed and scale of the cloud while maintaining the same level of control and visibility that is provided on-premises.
 
-The trial is designed for migration of up to 20 simple development or test workloads using vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle. Automation will install and configure VMware HCX in the {{site.data.keyword.cloud_notm}}, provide an on-premises HCX activation key, and install Veeam on {{site.data.keyword.cloud_notm}} and Zerto on {{site.data.keyword.cloud_notm}} in a matter of hours. You can back up and replicate 20 virtual machines (VMs) with Veeam on {{site.data.keyword.cloud_notm}} and Zerto on {{site.data.keyword.cloud_notm}}. 
+The trial is designed for migration of up to 20 simple development or test workloads using vCenter Server. Automation will install and configure VMware HCX in the {{site.data.keyword.cloud_notm}}, provide an on-premises HCX activation key, and install Veeam on {{site.data.keyword.cloud_notm}} and Zerto on {{site.data.keyword.cloud_notm}} in a matter of hours. You can back up and replicate 20 virtual machines (VMs) with Veeam on {{site.data.keyword.cloud_notm}} and Zerto on {{site.data.keyword.cloud_notm}}. 
 
 The Single-node Trial for Data Protection and Disaster Recovery is for proof of concept (POC) only. Do not run production workloads on this environment. Management functions such as adding and removing hosts and clusters, ordering additional add-on services, and applying updates are not supported.
 {:important}
@@ -97,8 +97,8 @@ The following virtual server instances (VSIs) are ordered:
 
 The following licenses are included with your Single-node Trial for Data Protection and Disaster Recovery instance order.
 
-* The vCenter Server with Hybridity Bundle licenses:
-  * VMware vSphere Enterprise Plus 6.7u1
+* The vCenter Server licenses:
+  * VMware vSphere Enterprise Plus 6.7u2
   * VMware vCenter Server 6.5
   * VMware NSX Service Providers Advanced Edition 6.4
 * {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2

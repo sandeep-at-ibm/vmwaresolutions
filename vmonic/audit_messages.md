@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-07-24"
 
 keywords: history message, audit history, error messages
 
@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 # Instance history messages
 {: #audit_messages}
 
-All operations that {{site.data.keyword.cloud_notm}} performs for your VMware instance are logged in the instance history. You can use the instance history as a reference to review these operations. For more information about reviewing your instance history, see [Procedure to view the deployment history for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances#vc_viewinginstances-procedure-view-deploy-history).
+All operations that {{site.data.keyword.cloud}} performs for your VMware instance are logged in the instance history. You can use the instance history as a reference to review these operations. For more information about reviewing your instance history, see [Procedure to view the deployment history for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances#vc_viewinginstances-procedure-view-deploy-history).
 
 The following sections provide all of the possible messages that can be issued to your instance history.
 
@@ -51,7 +51,7 @@ The following sections provide all of the possible messages that can be issued t
 * ``Cancelling <environment> upcharges...``
 * ``VMware license cancellation in progress...``
 * ``VMware license cancellation is complete.``
-* ``The SoftLayer order failed or timed out.``
+* ``The {{site.data.keyword.cloud_notm}} infrastructure order failed or timed out.``
 
 ## Instance error messages
 {: #audit_messages-error}
@@ -60,9 +60,9 @@ The following sections provide all of the possible messages that can be issued t
 
 * ``Error ordering VMware licenses. Open a service ticket for assistance.``
 * ``Error ordering subnets. Open a service ticket for assistance.``
-* ``Error: The SoftLayer API key is not valid. Open a service ticket for assistance.``
-* ``Error: The SoftLayer data center is not valid. Open a service ticket for assistance.``
-* ``Error using a shared image in the provided SoftLayer account. Open a service ticket for assistance.``
+* ``Error: The {{site.data.keyword.cloud_notm}} infrastructure API key is not valid. Open a service ticket for assistance.``
+* ``Error: The {{site.data.keyword.cloud_notm}} infrastructure data center is not valid. Open a service ticket for assistance.``
+* ``Error using a shared image in the provided {{site.data.keyword.cloud_notm}} infrastructure account. Open a service ticket for assistance.``
 * ``Error ordering service entries. Open a service ticket for assistance.``
 * ``Error ordering subnets. Open a service ticket for assistance.``
 * ``Error ordering licenses. Open a service ticket for assistance.``
@@ -235,18 +235,6 @@ The following sections provide all of the possible messages that can be issued t
 * ``The default services are successfully enabled.``
 * ``Service entry cancellation in progress...``
 * ``Service entry cancellation is complete.``
-
-## vCenter Server with Hybridity Bundle history messages
-{: #audit_messages-hybridity}
-
-{{site.data.keyword.vmwaresolutions_short}} issues the following messages for the vCenter Server with Hybridity Bundle instances:
-
-* ``Ordering vCenter Server with Hybridity Bundle licenses...``
-* ``Starting the vCenter Server with Hybridity Bundle conversion...``
-* ``The vCenter Server with Hybridity Bundle conversion is complete.``
-* ``Removing the vCenter Server with Hybridity Bundle...``
-* ``The vCenter Server with Hybridity Bundle is successfully removed.``
-* ``Cancelling the vCenter Server with Hybridity Bundle conversion...``
 
 ## Related links
 {: #audit_messages-related}

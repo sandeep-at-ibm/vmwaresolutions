@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-01"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -14,16 +14,15 @@ subcollection: vmware-solutions
 # Glossary of HCX components and terms
 {: #hcxclient-components}
 
-HCX consists of a cloud side (target/VCD Environment) and one or more clients (source). An instance of HCX must be deployed per vCenter, even if the vCenters where HCX is deployed are linked in the same SSO domain on the client or cloud side. Configurations that are supported by HCX are, one-to-one, one-to-many, many-to-one, and many-to-many.
+HCX consists of a cloud side (target or VCD environment) and one or more clients (source). An instance of HCX must be deployed per vCenter, even if the vCenters where HCX is deployed are linked in the same SSO domain on the client or cloud side. Configurations that are supported by HCX are, one-to-one, one-to-many, many-to-one, and many-to-many.
 
 ## Target side and client side
 {: #hcxclient-components-cloud-client-side}
 
-HCX has the concept of cloud side (target/VCD Environment) and client side (source).
+HCX has the concept of cloud side (target or VCD environment) and client side (source).
 
 - Target side - HCX Cloud Manager is pre-deployed and configured with the network and compute profiles ready for service mesh creation.  
-- Client side - Any vSphere instances meeting the prerequisites for installation and operation. The client side of HCX is the master that
-controls the cloud side slave instance through its vCenter web client user interface (UI) snap-in.
+- Client side - Any vSphere instances that meet the prerequisites for installation and operation. The client side of HCX is the master that controls the cloud side slave instance through its vCenter web client user interface (UI) snap-in.
 
 ## HCX Managers
 {: #hcxclient-components-hcx-manager}
@@ -46,7 +45,7 @@ HCX Service Mesh components are responsible for creating the data and control pl
 ## HCX user portals
 {: #hcxclient-components-hcx-user-portals}
 
-- Client web UI – The HCX client web portal is the main UI for HCX. Once the client-side HCX manager is installed, it shows up as a snap-in to the vCenter web UI. It controls remote cloud HCX registration (site pairing), fleet component deployment, network stretching, and VM migration into and out of the Cloud.
+- Client web UI – The HCX client web portal is the main UI for HCX. After the client-side HCX manager is installed, it shows up as a snap-in to the vCenter web UI. It controls remote cloud HCX registration (site pairing), fleet component deployment, network stretching, and VM migration into and out of the Cloud.
 - Cloud side UI – The cloud side HCX UI is accessible through the public registration URL given for HCX client registration. By default, it uses the cloud side vCenter Admin credentials `administrator@vsphere.local`. It is typically used for upgrading the installation and modifying some network configuration.
 
 ## Related links

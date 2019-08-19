@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-06"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -54,6 +54,4 @@ Caveonix RiskForesight has the concept of zones:
 ## Related links
 {: #caveonix-arch-related}
 
-
-*   [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
-*   [Caveonix Detailed Design](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-detailed)
+* [Caveonix Detailed Design](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-detailed)

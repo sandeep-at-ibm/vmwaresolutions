@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -193,8 +193,3 @@ In the diagram, CAM logically creates cloud connections to the vCenters,
 cloud providers, and {{site.data.keyword.icpfull_notm}} and {{site.data.keyword.containerlong_notm}} environments. {{site.data.keyword.icpfull_notm}} Clusters are
 deployed to each datacenter or cloud environment, with MCM providing the
 mechanism to connect the {{site.data.keyword.icpfull_notm}} clusters into a single management view.
-
-## Related links
-{: #vcscar-physical-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

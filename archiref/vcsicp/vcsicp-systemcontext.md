@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -46,7 +46,7 @@ Table 2. Systems
 Actor | Description
 --|--
 vCenter Server | Primary interface the system administrator uses to manage both the on-premises VMs and the {{site.data.keyword.cloud_notm}} VMs in the vCenter Server instance.
-On-premise VMs| Virtualized servers that host the applications targeted for migration into {{site.data.keyword.cloud_notm}}. Initially migrated as VMs and refactored from VMs to containers for application modernization.
+On-premises VMs| Virtualized servers that host the applications targeted for migration into {{site.data.keyword.cloud_notm}}. Initially migrated as VMs and refactored from VMs to containers for application modernization.
 {{site.data.keyword.cloud_notm}} VMs | Virtualized servers that host the applications migrated from the on-premises data center. For this reference architecture and for Acme Skateboards, one of the {{site.data.keyword.cloud_notm}} VMs is a database server, which is part of the online presence workload.
 Enterprise Content catalog | Centralized location from which you can browse for and install packages in your cluster. The catalog has a number of IBM packages that are used to create containers and access to Helm charts. Helm is a tool for managing Kubernetes charts. Charts are packages of preconfigured Kubernetes resources that makes it easy to version, package, release, deploy, delete, upgrade and even rollback container deployments. Helm is the Kubernetes native package management system, and is used for application management inside an {{site.data.keyword.icpfull_notm}} cluster.
 Core Operational Services | {{site.data.keyword.icpfull_notm}} includes a number of tools to collect, store, and query logs and metrics. These tools provide a centralized store for all logs and metrics and deliver improved performance and increased stability when they access and query logs and metrics.
@@ -59,8 +59,3 @@ Containerized applications | Applications that completed the application moderni
 Watson | For this reference architecture and Acme Skateboards, Watson represents the AI service that is used in the “Concept Car” architecture.
 
 Application migration, networking, and security often are the most challenging aspects of application modernization. vCenter Server, VMware Hybridity, VMware NSX, {{site.data.keyword.icpfull_notm}}, and the {{site.data.keyword.containerlong_notm}} address these challenges and enable you to build resilient, secure, and robust modern applications.
-
-## Related links
-{: #vcsicp-systemcontext-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

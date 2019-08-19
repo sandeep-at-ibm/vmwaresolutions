@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-29"
+lastupdated: "2019-08-05"
 
 ---
 
@@ -66,8 +66,3 @@ For a full enterprise architecture, the following layers might be required but a
 For more information about how this architecture can be extended with Chef integration, see [vRA with Chef integration reference Architecture](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_VRA_Chef_Integration_Architecture.pdf){:new_window}.
 
 * Service Management Layer – This layer focuses on the full lifecycle of the IT environment and is typically implemented at the enterprise level combining inputs from all the silos of IT Operations and technologies. This layer has traditionally been, architected on IT Service Management (ITSM) frameworks such as; the IT Infrastructure Library (ITIL) and ISO/IEC 20000, which are a framework of best practices for delivering IT services through the processes and stages of the IT service lifecycle. At a product level, ITSM is typified by a centralized workflow management system for handling incidents, service requests, problems, changes, and knowledge connected to a configuration management database.
-
-## Related links
-{: #opsmgmt-intro-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

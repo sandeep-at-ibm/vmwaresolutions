@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-03"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -15,7 +15,7 @@ subcollection: vmware-solutions
 {: #nsx-t-design}
 
 Unlike NSX-V (NSX on vSphere), VMware NSX-T is designed to address application frameworks and architectures that have heterogeneous endpoints and technology stacks. In addition to vSphere, these
-environments can include other hypervisors, KVM, containers, and bare metal. NSX is designed to span a software defined network and security infrastructure across platforms other than just vSphere alone. While it is possible to deploy NSX-T components without needing vSphere, this design focuses on NSX-T and its integration primarily within a vCenter Server vSphere automated deployment.
+environments can include other hypervisors, KVM, containers, and bare metal. VMware NSX is designed to span a software defined network and security infrastructure across platforms other than just vSphere alone. While it is possible to deploy NSX-T components without needing vSphere, this design focuses on NSX-T and its integration primarily within a vCenter Server vSphere automated deployment.
 
 There are many advanced features within NSX-T such as firewall policies, inclusion of guest introspection within firewall policies, and advanced net flow tracking. Describing these features is beyond the scope of this document. See the VMware documentation for NSX-T. In this design, the NSX-T Management Infrastructure is deployed during the initial vCenter Server cluster deployment in place of NSX-V.
 
@@ -55,7 +55,7 @@ Table 2. NSX-T Manager - controller specifications
 
 Attribute | Specification
 --|--
-**NSX Manager / Controller** | 3 Virtual appliances
+**NSX Manager / Controller** | Three Virtual Appliances
 **Number of vCPUs** | 4
 **Memory** |  16 GB
 **Disk** | 60 GB
@@ -69,7 +69,7 @@ The following figure shows the placement of the NSX Manager-controllers in relat
 ## Deployment considerations
 {: #nsx-t-design-deployment}
 
-With NSX-T on vSphere, the N-VDS must be assigned the physical adapters within the hosts. As an N-VDS can only be configured within NSX-T Manager, this implies that if redundancy is to be maintained, no physical adapters are available for native local switch or vDS assignment in a cluster that houses both the NSX-T components and the associated overlay network components.
+With NSX-T on vSphere, the N-VDS must be assigned the physical adapters within the hosts. As an N-VDS can be configured only within NSX-T Manager, this implies that if redundancy is to be maintained, no physical adapters are available for native local switch or vDS assignment in a cluster that houses both the NSX-T components and the associated overlay network components.
 
 For this reason, during the installation of NSX-T and its configuration, one physical NIC port on one adapter must remain assigned to a local vSphere vSwitch or a virtual distributed switch (vDS). Post NSX-T deployment, any ESX kernel ports need to be migrated to an N-VDS and off any local vSwitch or VDS. After the kernel ports are removed, the remaining physical NIC ports can be assigned as an N-VDS uplink achieving redundancy the N-VDS.
 
@@ -129,14 +129,14 @@ Uplink profile Name | VLAN | Included teamings | MTU
 --|:-----|:---|:---
 **SDDC-Private-Uplink** | default | Default, Management | 9000
 **SDDC-Public-Uplink** | default| Default | 1500
-**SDDC-Storage-Uplink** | Storage VLAN | vSAN, iSCSI-A&B,NFS | 9000
+**SDDC-Storage-Uplink** | Storage VLAN | vSAN, iSCSI-A&B, NFS | 9000
 
 ## Teaming
 {: #nsx-t-design-teaming}
 
 Table 7. NSX-T NIC port teaming specification
 
-Teaming name | Failover or Loadbalance | Active NIC | Standby NIC
+Teaming name | Failover or Load balance | Active NIC | Standby NIC
 --|:----|:---|:---
 **Default** | Load balance source | Uplink 1, 2 | N/A
 **Management** | Failover| Uplink 1 | Uplink 2
@@ -192,7 +192,7 @@ An NSX-T Tier-1 logical gateway has downlink ports to connect to NSX-T Data Cent
 #### Tier 1 to Tier 0 route advertisement
 {: #nsx-t-design-tier-1-tier-0}
 
-To provide Layer three connectivity between VMs connected to logical switches that are attached to different tier-1 logical gateways, it is necessary to enable tier-1 route advertisement towards tier-0. No need to configure a routing protocol or static routes between tier-1 and tier-0 logical routers. NSX-T creates static routes automatically when you enable route advertisement. For this design, route advertisement is always enabled for any IC4V automation created T-1 gateways.
+To provide Layer 3 connectivity between VMs connected to logical switches that are attached to different tier-1 logical gateways, it is necessary to enable tier-1 route advertisement towards tier-0. No need to configure a routing protocol or static routes between tier-1 and tier-0 logical routers. NSX-T creates static routes automatically when you enable route advertisement. For this design, route advertisement is always enabled for any IC4V automation created T-1 gateways.
 
 ### Preconfigured topologies
 {: #nsx-t-design-preconfig-topo}
@@ -217,13 +217,8 @@ Workload with ICP to T0 gateway – virtual edge cluster:
 
 ![NSX-T deployed topology with ICP NSX-T integration and virtual T0 Edge Gateway](../../images/vcsv4radiagrams-topology-3.svg "[NSX-T deployed topology with ICP NSX-T integration and virtual T0 Edge Gateway"){: caption="Figure 6. NSX-T deployed topology with ICP NSX-T integration and virtual T0 Edge Gateway" caption-side="bottom"}
 
-The deployed Topology 3 contains Topology 1 with the addition of an ICP deployment that features the NSX-T integration in place of Calico, which is the default networking stack within an ICP deployment. The customer can provision additional container name spaces within ICP, which automates the creation of logical switches, IP subnetting, and T1 Gateway instances per each namespace.
+The deployed Topology 3 contains Topology 1 with the addition of an ICP deployment that features the NSX-T integration in place of Calico, which is the default networking stack within an ICP deployment. The customer can provision more container name spaces within ICP, which automates the creation of logical switches, IP subnetting, and T1 Gateway instances per each namespace.
 
 For a complete understanding of how ICP functions on vCenter Server, see the ICP on vCenter Server architecture documentation. A customer designated {{site.data.keyword.cloud_notm}} private and public portable IP space is assigned to each T0 for customer use.
 
 As of this design, you have the option not to delete these IP ranges if the vCenter Server instance is decommissioned and deleted.
-
-## Related links
-{: #nsx-t-design-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

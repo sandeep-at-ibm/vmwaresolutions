@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -54,8 +54,3 @@ The following diagram represents {{site.data.keyword.icpfull_notm}} running on a
 Using the {{site.data.keyword.cloud_notm}} automation, Acme Skateboards can provision a hybrid solution that encompasses VMware on {{site.data.keyword.cloud_notm}} to run their database VMs and {{site.data.keyword.icpfull_notm}} on VMware on {{site.data.keyword.cloud_notm}} to run their apps and front-end web services in containers. NSX gives them a common set of management tools for network and security in the overlay network.
 
 ![vCenter Server with {{site.data.keyword.icpfull_notm}}](../../images/vcsicp-virtual-icp-deployment-vcs.svg "vCenter Server with {{site.data.keyword.icpfull_notm}}"){: caption="Figure 3. vCenter Server with {{site.data.keyword.icpfull_notm}}" caption-side="bottom"}
-
-## Related links
-{: #vcsicp-usecases-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

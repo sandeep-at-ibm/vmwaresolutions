@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -96,8 +96,3 @@ be entirely portable for use in other Kubernetes environments.
 6. Modernize DevOps. Throughout this journey, Jane improves how she delivers Stock Trader.
 
 7. Modernize Management. Todd and Jane worked to improve how they manage Stock Trader, and the platform it runs on, even across more than one cluster and cloud environment.
-
-## Related links
-{: #vcscontent-modjourney-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

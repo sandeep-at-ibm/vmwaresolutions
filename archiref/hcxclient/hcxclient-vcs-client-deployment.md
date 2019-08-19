@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-08-08"
 
 subcollection: vmware-solutions
 
@@ -33,7 +33,7 @@ The HCX client side can install on any version of vSphere supported by HCX assum
 
 HCX is a service. HCX is licensed per site and per virtual machine (VM) managed through licensing servers that are maintained by VMware. The HCX cloud and client-side instances require communication with the VMware registration site throughout their lifecycle.
 - Traffic on 80 and 443 must be allowed to `https://connect.hybridity.vmware.com`
-- A one-time use registration key is provided for the client-side installation provided by {{site.data.keyword.vmwaresolutions_full}} console. A key is required for each client-side HCX installation.
+- A one-time use registration key is provided by the {{site.data.keyword.vmwaresolutions_full}} console is for the client-side installation. A key is required for each client-side HCX installation.
 
 ### Procedure to order on-premises HCX licenses
 {: #hcxclient-vcs-client-deployment-license-ordering-procedure}
@@ -119,15 +119,15 @@ Table 1. Sample values for network properties
   * Check the **Power on after deployment** box.
   * Review the Hybrid Cloud Services settings, and click **Finish**. It might take several minutes for the Hybrid Cloud Services appliance to power on.
   * To check the status, go to the vSphere Web Client home page, and on the **Home** tab, go to **Inventories** and click **Hosts and Clusters**. Expand the data center hierarchy, and click the Hybrid Cloud Services service virtual machine to display a summary in the center pane.
-  * View the **Summary** tab, the console reads **Powered On** and the **Play** button is green.
-10. The HCX Manager is powered on and ready to be registered with the On-Premise vCenter.
+  * View the **Summary** tab, the console reads **Powered On** and the **Play** icon is green.
+10. The HCX Manager is powered on and ready to be registered with the on-premises vCenter.
 
 ## Initial configuration of the HCX Manager Appliance
 {: #hcxclient-vcs-client-deployment-inital-config}
 
-1. Ensure that the Hybrid Cloud Service virtual appliance has outbound access to `https://connect.hcx.vmware.com`
+1. Ensure that the Hybrid Cloud Service virtual appliance has outbound access to `https://connect.hcx.vmware.com` and `https://hybridity-depot.vmware.com`
 2. Log in to Hybrid Cloud Services virtual appliance admin interface `https://<IP>:9443` with **admin**
-3. Provide the license key collected in Client Side Prerequisites.
+3. Provide the license key collected in Client-Side Prerequisites.
 4. HCX Cloud Datacenter Location
     - Enter the city nearest to the Datacenter where the HCX Cloud Instance resides. If the city is not present, select the nearest major city.
 5. Provide System name
@@ -138,18 +138,15 @@ Table 1. Sample values for network properties
 1. Log in to HCX Manager Admin Interface `https://<IP>:9443`
 2. Select the **Administration** tab, under **Certificate** -> **Trusted CA Certificate**
 3. Import vSphere Server website
-   1. Select to import certificates from URL and key in the HCX cloud side registration URL.
-     * Sao Paulo: `https://ssao01dirhcx01.vmware-solutions.cloud.ibm.com`
 
 ## Procedure to register HCX Manager with vCenter/SSO/NSX
 {: #hcxclient-vcs-client-deployment-reg-vcenter}
 
 1. Log in to Hybrid Cloud Services service virtual appliance.
-2. Click the **Manage Settings** tile.
+2. On the **Dashboard** pane, complete the following steps:
   1. In the left pane, under **Configure Systems**, select vCenter.
   2. Click **Add vCenter** on the upper right.
-  3. Enter the IP address of the vCenter Server in the form `https://vCenter-host-name` or `https://vCenter-IP-address`.
-    * For example, `https://My-vCenter` or `https://10.108.26.211`.
+  3. Enter the IP address of the vCenter Server in the form `https://vCenter-host-name` or `https://vCenter-IP-address`. For example, `https://My-vCenter` or `https://1.1.1.1`
   4. Enter the vCenter Server user name and password. The account that is used must have the vCenter Administrator role.
   5. Click **OK**. Do not restart when the _You need to restart the app_ message is displayed.
 3. Configure the SSO / lookup service.

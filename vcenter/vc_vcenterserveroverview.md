@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-08-16"
 
 keywords: vCenter Server, vCenter Server architecture, tech specs vCenter Server
 
@@ -75,6 +75,7 @@ The availability and pricing of standardized hardware configurations might vary 
 
 You can order three or more {{site.data.keyword.baremetal_short}} with one of the following configurations:
 * **Skylake**: 2-CPU Intel Skylake generation servers (Intel Xeon 4100/5100/6100 series) with your selected CPU model and RAM size.
+* **Cascade**: 2-CPU Intel Cascade generation servers (Intel Xeon 4200/5200/6200 series) with your selected CPU model and RAM size.
 * **SAP-certified**: Intel Skylake or Intel Broadwell generation servers (Intel Xeon 6140/E5-2690/E7-8890 series) with your selected CPU model.
 * **Broadwell**: 4-CPU Intel Broadwell generation servers (Intel Xeon E7-4800 series) with your selected CPU model and RAM size.
 
@@ -85,15 +86,15 @@ If you plan to use vSAN storage, the configuration requires a minimum of four {{
 {: #vc_vcenterserveroverview-networking}
 
 The following networking components are ordered:
-*  10 Gbps dual public and private network uplinks
-*  Three VLANs (Virtual LANs): one public VLAN and two private VLANs
+*  10 Gbps dual public and private network uplinks.
+*  Three VLANs (Virtual LANs): one public VLAN and two private VLANs.
 *  One VXLAN (Virtual eXtensible LAN) with DLR (Distributed Logical Router) for potential east-west communication between local workloads that are connected to layer 2 (L2) networks. The VXLAN is deployed as a sample routing topology, which you can modify, build on it, or remove it. You can also add security zones by attaching extra VXLANs to new logical interfaces on the DLR.
 *  Two VMware NSX Edge Services Gateways:
   * A secure management services VMware NSX Edge Services Gateway (ESG) for outbound HTTPS management traffic, which is deployed by IBM as part of the management networking typology. This ESG is used by the IBM management virtual machines to communicate with specific external IBM management components that are related to automation. For more information, see [Configuring your network to use the customer-managed ESG](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_esg_config#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
     This ESG is named **mgmt-nsx-edge**, it's not accessible to you and you can't use it. If you modify it, you might not be able to manage the vCenter Server instance from the {{site.data.keyword.vmwaresolutions_short}} console. In addition, by using a firewall or disabling the ESG communications to the external IBM management components might cause {{site.data.keyword.vmwaresolutions_short}} to become unusable.
     {:important}
-  * A secure customer-managed VMware NSX Edge Services Gateway for outbound and inbound HTTPS workload traffic. This gateway is deployed by IBM as a template that can be modified by you to provide VPN access or public access. For more information, see [Does the customer-managed NSX Edge pose a security risk?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#faq-customer-nsx)
+  * A secure customer-managed VMware NSX Edge Services Gateway for outbound and inbound HTTPS workload traffic. This gateway is deployed by IBM as a template that can be modified by you to provide VPN access or public access. For more information, see [Does the customer-managed NSX Edge pose a security risk?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#faq-customer-nsx).
 
 ### Virtual Server Instances
 {: #vc_vcenterserveroverview-vsi}
@@ -117,7 +118,7 @@ For instances V2.8 and later, you can add NFS storage shares to an existing NFS 
 
 The vSAN option offers customized configurations, with various options for disk type, size, and quantity:
 * Disk quantity: 2, 4, 6, or 8
-* Storage disk: 960 GB SSD SED, 1.9 TB SSD SED, or 3.8 TB SSD SED.
+* Storage disk: 960 GB SSD SED, 1.9 TB SSD SED, or 3.8 TB SSD SED
 
   In addition, two cache disks of 960 GB are also ordered per host.
 
@@ -130,8 +131,8 @@ The vSAN option offers customized configurations, with various options for disk 
 
 The NFS option offers customized shared file-level storage for workloads with various options for size and performance:
 * Size: 20 GB to 24 TB
-* Performance: 0.25, 2, 4, or 10 IOPS/GB.
-* Individual configuration of file shares.
+* Performance: 0.25, 2, 4, or 10 IOPS/GB
+* Individual configuration of file shares
 
   The 10 IOPS/GB performance level is limited to a maximum capacity of 4 TB per file share.
   {:note}
@@ -146,7 +147,7 @@ The local disks option, available to the **SAP-certified** Quad Intel Xeon E7-88
 ### Licenses (IBM-provided or BYOL) and fees
 {: #vc_vcenterserveroverview-license-and-fee}
 
-* VMware vSphere Enterprise Plus 6.5u2 or 6.7u1
+* VMware vSphere Enterprise Plus 6.5u2 or 6.7u2
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.4
 * (For vSAN clusters) VMware vSAN Advanced or Enterprise 6.6
@@ -165,7 +166,7 @@ One Bare Metal Server with the configuration presented in [Technical specificati
 ### Licenses and fees for expansion nodes
 {: #vc_vcenterserveroverview-expansion-node-license-and-fee}
 
-* One VMware vSphere Enterprise Plus 6.5u2 or 6.7u1
+* One VMware vSphere Enterprise Plus 6.5u2 or 6.7u2
 * One VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.4
 * One Support and Services fee
 * (For vSAN clusters) VMware vSAN Advanced or Enterprise 6.6

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-12"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -39,7 +39,7 @@ The NSX Manager is deployed on the initial cluster. Additionally, the NSX Manage
 
 The {{site.data.keyword.cloud}} automation deploys three NSX Controllers within the initial cluster. The controllers are assigned a VLAN–backed IP address from the private portable subnet that is designated for management components.
 
-### NSX Edge / DLR
+### NSX Edge and Distributed Logical Router (DLR)
 {: #vcsicp-arch-overview-solution-nsx-edge}
 
 NSX Edge Services Gateway (ESG) pairs are deployed. In all cases, one gateway pair is used for outbound traffic from automation components that reside on the private network. For vCenter Server and {{site.data.keyword.icpfull_notm}}, a second gateway, which is known as the icp–managed edge, is deployed and configured with an uplink to the public network and an interface that is assigned to the private network. Any required NSX component such as Distributed Logical Router (DLR), logical switches, and firewalls can be configured by the administrator. The [vCenter Server networking guide](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro) provides greater detail on the network design.
@@ -145,12 +145,12 @@ The CAM APIs are split across more than one container.
 ### Helm
 {: #vcsicp-arch-overview-solution-helm}
 
-A container with the required binaries to deploy helm charts into Kubernetes clusters.
+A container with the required binary files to deploy helm charts into Kubernetes clusters.
 
 ### Terraform
 {: #vcsicp-arch-overview-solution-terraform}
 
-A container with the required binaries to deploy Terraform resources across more than one cloud.
+A container with the required binary files to deploy Terraform resources across more than one cloud.
 
 ### Logs
 {: #vcsicp-arch-overview-solution-logs}
@@ -176,8 +176,3 @@ A graphical user interface to create Terraform templates, with a drag feature of
 {: #vcsicp-arch-overview-solution-maria-db}
 
 The database for the template designer application.
-
-## Related links
-{: #vcsicp-arch-overview-solution-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

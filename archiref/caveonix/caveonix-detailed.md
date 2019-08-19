@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-06"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -85,9 +85,3 @@ Table 2. VLAN and subnets
 |Private B 	|Portable 	|Assigned for vSAN, if in use.|
 |Private B 	|Portable 	|Assigned for NAS, if in use.|
 |Private B 	|Portable 	|Assigned for vMotion.|
-
-
-## Related links
-{: #caveonix-detailed-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-08-16"
 
 keywords: vCenter Server NSX-T, NSX-T, tech specs vCenter Server NSX-T
 
@@ -74,6 +74,7 @@ The availability and pricing of standardized hardware configurations might vary 
 
 You can order three or more {{site.data.keyword.baremetal_short}} with one of the following configurations:
 * **Skylake**: 2-CPU Intel Skylake generation servers (Intel Xeon 4100/5100/6100 series) with your selected CPU model and RAM size.  
+*  **Cascade**: 2-CPU Intel Cascade generation servers (Intel Xeon 4200/5200/6200 series) with your selected CPU model and RAM size.
 * **Broadwell**: 4-CPU Intel Broadwell generation servers (Intel Xeon E7-4800 series) with your selected CPU model and RAM size.
 
 If you plan to use vSAN storage, the configuration requires a minimum of four {{site.data.keyword.baremetal_short}}.
@@ -113,7 +114,7 @@ After deployment, you can add NFS storage shares to an existing NFS or vSAN clus
 
 The vSAN option offers customized configurations, with various options for disk type, size, and quantity:
 * Disk quantity: 2, 4, 6, or 8
-* Storage disk: 960 GB SSD SED, 1.9 TB SSD SED, or 3.8 TB SSD SED.
+* Storage disk: 960 GB SSD SED, 1.9 TB SSD SED, or 3.8 TB SSD SED
 
   In addition, two cache disks of 960 GB are also ordered per host.
 
@@ -137,7 +138,7 @@ If you choose the NFS option, one 2 TB and 4 IOPS/GB file share for management c
 ### Licenses (IBM-provided or BYOL) and fees
 {: #vc_nsx-t_overview-license-and-fee}
 
-* VMware vSphere Enterprise Plus 6.7u1
+* VMware vSphere Enterprise Plus 6.7u2
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.4 (IBM-provided only)
 * (For vSAN clusters) VMware vSAN Advanced or Enterprise 6.6
@@ -156,7 +157,7 @@ One Bare Metal Server with the configuration presented in [Technical specificati
 ### Licenses and fees for expansion nodes
 {: #vc_nsx-t_overview-expansion-node-license-and-fee}
 
-* One VMware vSphere Enterprise Plus 6.7u1
+* One VMware vSphere Enterprise Plus 6.7u2
 * One VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.4
 * One Support and Services fee
 * (For vSAN clusters) VMware vSAN Advanced or Enterprise 6.6

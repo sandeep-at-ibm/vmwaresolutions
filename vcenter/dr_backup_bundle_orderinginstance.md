@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-16"
 
 keywords: single-node trial, data protection DR, order data protection DR
 
@@ -35,7 +35,7 @@ Ensure that you confirm the following requirements and complete the following ta
 {: #dr_backup_bundle_orderinginstance-hcx-req}
 
 * Requires VMware vSphere and vCenter 5.5 or higher.
-* The vSphere environment must have distributed switches for the VMs that will be migrated to the {{site.data.keyword.cloud_notm}}.
+* The vSphere environment must have distributed switches for the VMs that will be migrated to the {{site.data.keyword.cloud}}.
 * The HCX Manager Virtual Appliance must be able to be deployed on a private network in the on-premises environment and must be allowed to access the public internet.
 
 ### IBM Cloud infrastructure account
@@ -47,9 +47,10 @@ Ensure that you confirm the following requirements and complete the following ta
 ### Instance name requirements
 {: #dr_backup_bundle_orderinginstance-inst-name-req}
 
-Review the instance name requirements:
-* Only alphanumeric and dash (-) characters are allowed.
-* The instance name must start with an alphabetic character and end with an alphanumeric character.
+The instance name must meet the following requirements:
+* Only lowercase alphabetic, numeric, and dash (-) characters are allowed.
+* The instance name must start with a lowercase alphabetic character.
+* The instance name must end with a lowercase alphabetic or numeric character.
 * The maximum length of the instance name is 10 characters.
 * The instance name must be unique within your account.
 
@@ -193,8 +194,8 @@ Complete the following steps to delete a Single-node Trial for Data Protection a
 ## Related links
 {: #dr_backup_bundle_orderinginstance-related}
 
-* [vCenter Server and IBM Cloud Private guide](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [Open a Ticket for IBM Cloud Private](https://www.ibm.com/mysupport/s/?language=en_US){:external}
+* [vCenter Server and {{site.data.keyword.cloud_notm}} Private guide](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
+* [Open a Ticket for I{{site.data.keyword.cloud_notm}} Private](https://www.ibm.com/mysupport/s/?language=en_US){:external}
 * [VMware HCX resources](https://hcx.vmware.com/#/docs){:external}
 * [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}
 * [Canceling virtual servers](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)

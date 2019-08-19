@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -113,8 +113,3 @@ The following documents provide different views on the technologies that are use
 * [vCenter Server networking](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro) - Focuses on the network technologies that are used for integration between vCenter Server, {{site.data.keyword.icpfull_notm}}, and {{site.data.keyword.containerlong_notm}} such as NSX-V and Calico along with a technology preview of NSX-T.
 * _VMware and Skate Advisor Concept Car guide_ - A reference architecture that is a “concept car”, that is, a mechanism to highlight and show technologies that solve real world problems. We wanted to demonstrate an interaction between Watson AI and machine learning in a real way. Through the culture of skateboarding, we demonstrate cloud services in a unique way. The implementation of the “concept car” is an extension to the Acme Skateboard application called Skate Advisor. Skate Advisor is a tool, which allows users to have skateboarding trick conversations with a Watson driven engine.
 * [VMware: The modernization journey of Stock Trader](/docs/services/vmwaresolutions/archiref/vcscontent?topic=vmware-solutions-vcscontent-modjourney) - A reference use case that describes a classic WebSphere Application Server application that is modernized by using {{site.data.keyword.cloud_notm}} Private, IBM Middleware content, {{site.data.keyword.containerlong_notm}}, and vCenter Server on {{site.data.keyword.cloud_notm}}. We're all on a cloud journey, and we're all at different points on that journey. Through incremental steps by the application architect, Jane, and the cloud infrastructure architect, Todd, we modernize an existing application called Stock Trader. Review examples that help you take each step in your journey, and the value that is realized to your business, no matter how large, or small each step is. We focus on four themes: applications, DevOps, integration, and management. All themes work together to help you achieve your goals. Modernizing one theme without the others might result in problems.
-
-## Related links
-{: #vcscar-intro-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

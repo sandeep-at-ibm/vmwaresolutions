@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-07"
+lastupdated: "2019-08-15"
 
 ---
 
@@ -64,7 +64,7 @@ Table 2. VM procedures
 | Hot migrate | For information about how to vMotion a VM between vSphere hosts in the same cluster, see [Managing virtual machines](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-B7023DD7-F790-4DF8-89B4-FF09DA3DBFB1.html?hWord=N4IghgNiBcIBYHsAuACAtgSwOYCcxIFMUA3NEAXyA){:new_window}. |
 | Cold migrate | For information about migrating a VM between vCenter Server instances, see [Migrate a Powered Off or Suspended Virtual Machine](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-E8DE930E-8079-4AC0-AEC2-B6EA1604F4E3.html){:new_window}. |
 | Remove a VM | For information about removing a VM, see [Remove VMs or VM Templates from vCenter Server or from the Datastore](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-27E53D26-F13F-4F94-8866-9C6CFA40471C.html){:new_window}. |
-| Disk remove | For information about removing a disk from a VM, see [Remove a Hard Disk from a Virtual Machine](https://pubs.vmware.com/vsphere-4-esx-vcenter/index.jsp?topic=/com.vmware.vsphere.webaccess.doc_41/configuring_virtual_machine_options_and_resources/t_remove_an_existing_hard_disk.html){:new_window}. |
+| Disk remove | For information about removing a disk from a VM, see steps included in [Add an Existing Hard Disk to a Virtual Machine](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-BDDECFBC-2FD5-4E4A-ABC7-AD274F4F40B4.html?hWord=N4IghgNiBcIEoFMC2B7AbggBGTAJMATgCaYAiAlgM4DWIAvkA){:new_window}. |
 | VM Tools | For information about the process for updating VM Tools, see [Creating baselines and attaching to inventory objects](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-baselines#vum-baselines). |
 | Determine the virtual disk format and convert a virtual disk from the thin provision format to a thick provision format | For information about the process to convert a VM disk to the thick provision format if it was created as a virtual disk in the thin provision format, see [Determine the Virtual Disk Format and Convert a Virtual Disk from the Thin Provision Format to a Thick Provision Format](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-E8F50BEC-F575-4AB1-BC77-D9A13CDBDCF7.html){:new_window}. |
 | AD/DNS server OS Updates  | The Microsoft Active Directory (AD) / Domain Name Server (DNS) is automatically set up to download updates only. For more information, see [Windows automatic installation of updates](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_limitations#trbl_limitations-windows-update). |

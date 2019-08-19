@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-13"
 
 keywords: Veeam console, Veeam backup restore, update Veeam license
 
@@ -18,15 +18,15 @@ subcollection: vmware-solutions
 # Managing Veeam on IBM Cloud
 {: #managingveeam}
 
-After the service is deployed into your instance, you can access the Veeam console by using RDP to manage the backup and restore of all the virtual machines in your environment, including the backup and restore of the management components. You can also upgrade the service by downloading and installing the Veeam updates from the Veeam website.
+After the service is deployed into your instance, you can access the Veeam console by using Remote Desktop Protocol. With Remote Desktop Protocol, you can manage the backup and restore of all the virtual machines in your environment, including the management components. You can also upgrade the service by downloading and installing the Veeam updates from the Veeam website.
 
-For instances that were deployed in releases earlier than V1.8, if you want to use the Veeam on {{site.data.keyword.cloud}} service, you must replace the existing Veeam VSI in the instances. For more information, see the [Replacing the Veeam VSI of pre-V1.8 instances with Veeam on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam#managingveeam-replace-vsi).
+For instances that were deployed in releases earlier than V1.8, if you want to use the Veeam on {{site.data.keyword.cloud}} service, you must replace the existing Veeam VSI in the instances. For more information, see the [Replacing the Veeam VSI of pre-V1.8 instances with Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam#managingveeam-replace-vsi).
 
-## Accessing the Veeam console by using RDP
+## Accessing the Veeam console by using Remote Desktop Protocol
 {: #managingveeam-accessing}
 
 To manage the Veeam on {{site.data.keyword.cloud_notm}} service, access the Veeam console by completing the following steps:
-1. Use Remote Desktop Protocol (RDP) to connect to the Windows IP address.
+1. Use Remote Desktop Protocol to connect to the Windows IP address.
 2. Log in to the Windows console by using the Administrator credentials.
 3. Access the Veeam console from the Windows console by using the Administrator credentials.
 
@@ -34,7 +34,7 @@ You can find the Windows IP address and the Administrator credentials on the Vee
 
 For more information, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).
 
-## Backing up and restoring management components for instances that have Veeam on IBM Cloud installed
+## Backing up and restoring management components for instances with Veeam on IBM Cloud installations
 {: #managing-veeam-backup-and-replication}
 
 The Veeam on {{site.data.keyword.cloud_notm}} service can be configured to back up the management components by using the Veeam console. For more information, see [Backing up components](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup).
@@ -48,12 +48,12 @@ When failures occur on the management components, you can restore the management
 
 You are responsible for maintaining the Veeam software to keep it updated to the most recent version.
 
-### Applying updates for instances deployed with public and private network
+### Applying updates to instances deployed with public and private network
 {: #managingveeam-updates-public-private}
 
 If the Veeam service is installed on an instance with public and private network, you can check for and download the updates by using the Veeam software itself.
 
-### Applying updates for instances deployed with private network only
+### Applying updates to instances deployed with private network only
 {: #managingveeam-updates-private}
 
 If the Veeam service is installed on an instance with private network only, because the Veeam VSI is configured with no public network access, you cannot check for or download updates by using the Veeam software itself. Instead, you must download updates from the Veeam website, transfer them to the Veeam VM, and then install them.

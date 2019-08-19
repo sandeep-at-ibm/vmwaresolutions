@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -43,8 +43,3 @@ An {{site.data.keyword.cloud_notm}} Private cluster has four main classes of nod
 Calico uses layer 3 or the network layer, of the Open System Interconnection (OSI) model. Calico uses Border Gateway Protocol (BGP) to build routing tables that facilitate communication among agent nodes.
 
 For more information about Calico networking, see [{{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-iks).
-
-## Related links
-{: #vcsnsxt-overview-icp-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-22"
 
 keywords: Hytrust DataControl, Hytrust configuration, order Hytrust
 
@@ -40,7 +40,6 @@ You can add the HyTrust DataControl on {{site.data.keyword.cloud_notm}} service 
 * [HyTrust DataControl on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htdc_considerations)
 * [Managing HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghtdc)
 * [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
-* [Ordering, viewing, and removing services for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
 * [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [HyTrust website](https://www.hytrust.com/){:external}

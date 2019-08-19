@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-13"
 
 keywords: HyTrust CloudControl, HTCC, tech specs HTCC
 
@@ -48,6 +48,13 @@ Two CloudControl appliances are deployed in an active-passive configuration.
 {: #htcc_considerations-licenses}
 
 Per-host license: A HyTrust CloudControl license is ordered for each host in the environment.
+
+## Considerations when you install HyTrust CloudControl on IBM Cloud
+{: #htcc_considerations-install}
+
+* Before the service is installed in your environment, a check is performed against the available capacity of the default cluster in the environment to ensure that the service components can fit.
+* If the capacity check fails, the service is not installed and the service state is set to **Capacity Validation Failed** on the console. In addition, a console message with more details is displayed and you are notified by email.
+* To install the service, you must increase the capacity in your default cluster by either adding more hosts or by freeing up RAM, CPU, or disk space, and then add the service again in the console. After that, you can remove the existing service in the **Capacity Validation Failed** state by clicking the delete icon next to it.
 
 ## Considerations when you remove HyTrust CloudControl on IBM Cloud
 {: #htcc_considerations-remove}

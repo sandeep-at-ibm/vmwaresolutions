@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -106,11 +106,6 @@ Table 4. Summary
 
 **Notes:**
 When you remove the Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} service, the {{site.data.keyword.vmwaresolutions_short}} automation deletes only the single "all-in-one" Caveonix VM that was deployed and the dedicated private subnet that was ordered for it. Therefore,
-* If you scaled out the Caveonix VM into multiple VMs, those additional VMs are not removed. 
-* If you used the IP addresses of the dedicated private subnet on additional VMs, those VMs must be assigned new IP addresses to continue to function. 
+* If you scaled out the Caveonix VM into multiple VMs, those additional VMs are not removed.
+* If you used the IP addresses of the dedicated private subnet on additional VMs, those VMs must be assigned new IP addresses to continue to function.
 * If you delete vCenter Server instance A with the Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} service installed, and you used the IP addresses of the dedicated private subnet ordered for the service in vCenter Server instance B, the dedicated private subnet is canceled upon deletion of vCenter Server instance A.
-
-## Related links
-{: #caveonix-deploy-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

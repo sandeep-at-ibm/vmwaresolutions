@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-22"
 
 keywords: Zerto, request Zerto Orchestrated, Zerto managed service
 
@@ -50,7 +50,7 @@ For more information, see [IBM Resiliency Disaster Recovery as a Service](https:
 3. On the **Zerto on IBM Cloud** page, review the description and technical specifications for Zerto on {{site.data.keyword.cloud_notm}} as a managed service, and then click **Create**.
 4. Specify the configuration settings according to your requirements or accept the default values.
 5. Click **vCenter Server** to add the service to one of your instances.
-6. To add the service while you order a new instance, click **Add to New Instance**, and then continue with ordering a new [vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance) or [vCenter Server with Hybridity](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance) instance.
+6. To add the service while you order a new instance, click **Add to New Instance**, and then continue with ordering a new [vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance) instance.
 7. To add the service to an existing instance, click **Add to Existing Instance**, select the instance that you want from the list, and then confirm that you want to proceed with the order by clicking **Provision**.
 
 ## Related links

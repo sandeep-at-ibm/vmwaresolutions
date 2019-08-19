@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-27"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -241,8 +241,3 @@ Jane wants a unified code base, even when Stock Trader might run on more than on
 Because Jane committed to refactoring her Stock Trader solution, and Todd installing middleware into {{site.data.keyword.cloud_notm}} Private Hosted, all of the core Stock Trader solution is running in a private cloud. Jane now adds more micro-services such a Twitter notification service. Istio routing rules enable dynamic loyalty level messaging via an internal Slack channel or a public Twitter channel.
 
 ![Stock Trader enrichment](../../images/vcscontent-enrich.svg "Stock Trader enrichment"){: caption="Figure 3. Enrichment of Stock Trader" caption-side="bottom"}
-
-## Related links
-{: #vcscontent-addmidware-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

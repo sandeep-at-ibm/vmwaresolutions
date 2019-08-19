@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-27"
+lastupdated: "2019-08-06"
 
 keywords: planning vCenter Server, data center, vCenter Server data centers
 
@@ -12,6 +12,10 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Requirements and planning for vCenter Server instances
 {: #vc_planning}
@@ -26,7 +30,12 @@ The {{site.data.keyword.cloud_notm}} account that you are using must meet certai
 ## IBM Cloud Data Center availability
 {: #vc_planning-dc-availability}
 
-The vCenter Server deployment has strict requirements on the physical infrastructure. Therefore, you can deploy instances only in {{site.data.keyword.CloudDataCents_notm}} that meet the requirements. The following {{site.data.keyword.CloudDataCents_notm}} are available for vCenter Server deployment:
+The vCenter Server deployment has strict requirements on the physical infrastructure. Therefore, you can deploy instances only in {{site.data.keyword.CloudDataCents_notm}} that meet the requirements. The following {{site.data.keyword.CloudDataCents_notm}} are available for vCenter Server deployment.
+
+Cascade Lake {{site.data.keyword.baremetal_short}} are available on Multi-Zone Region
+{{site.data.keyword.CloudDataCents_notm}}. For more information, see [Multi-Zone Region (MZR) Overview
+](/docs/infrastructure/loadbalancer-service?topic=loadbalancer-service-multi-zone-region-mzr-overview).
+{:note}
 
 | {{site.data.keyword.CloudDataCent_notm}} | Location | Region | Server options |
 |:----------------------|:---------|:-------|:---------------|
@@ -89,6 +98,22 @@ You can order add-on services for your instance base on your needs, for example,
 
 Services are supported for vCenter Server with NSX-T instances.
 {:note}
+
+### Planning for VMware HCX on IBM Cloud
+{: #vc_planning-addon-services-hcx}
+
+The VMware HCX on {{site.data.keyword.cloud_notm}} service can seamlessly extend the networks of on-premises data centers into {{site.data.keyword.cloud_notm}}, which allows virtual machines (VMs) to be migrated to and from the {{site.data.keyword.cloud_notm}} without any conversion or change.
+
+When you deploy this service, complete the following settings:
+* Specify the **HCX interconnect type** by selecting one of the following options:
+  * **Public network**: HCX creates an encrypted connection between sites over the public network.
+  * **Private network**: HCX creates an encrypted connection between sites over the private network.
+* Specify the **Public endpoint certificate type**. If you select **CA Certificate**, configure the following settings:
+  * **Certificate Contents**: Enter the contents of the CA certificate.
+  * **Private Key**: Enter the private key of the CA certificate.
+  * (Optional) **Password**: Enter the password for the private key if it is encrypted.
+  * (Optional) **Reenter Password**: Enter the password for the private key again.
+  * (Optional) **Hostname**: Enter the host name to be mapped to the common name (CN) of the CA certificate. HCX on {{site.data.keyword.cloud_notm}} requires the CA certificate to be in a format that is accepted by NSX Edge. For more information about NSX Edge certificate formats, see [Importing SSL Certificates](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html){:external}.
 
 ## Capacity considerations
 {: #vc_planning-capacity-considerations}

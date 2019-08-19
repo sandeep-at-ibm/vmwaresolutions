@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-16"
 
 keywords: single-node trial, migration app modernization, tech specs migration app modernization
 
@@ -21,11 +21,11 @@ subcollection: vmware-solutions
 # Single-node Trial for Migration and App Modernization overview
 {: #cloud_modern_bundle_overview}
 
-The Single-node Trial for Migration and App Modernization allows you to test drive {{site.data.keyword.cloud_notm}} to migrate VMware workloads to the {{site.data.keyword.cloud}} and then modernize simple workloads using containers.
+The Single-node Trial for Migration and App Modernization allows you to test drive {{site.data.keyword.cloud}} to migrate VMware workloads to the {{site.data.keyword.cloud_notm}} and then modernize simple workloads using containers.
 
 The Single-node Trial is a trial version of {{site.data.keyword.cloud_notm}} Private Hosted on VMware vCenter Server on {{site.data.keyword.cloud_notm}} that provides the Kubernetes management platform for containers and the single-tenant VMware platform that can be managed using the same tools as in on-premises environments. You can take advantage of the speed and scale of the cloud while maintaining the same level of control and visibility that is provided on-premises.
 
-The trial is designed for migration of up to 20 simple development or test workloads using vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle and containerization of those workloads with the Kubernetes-based {{site.data.keyword.cloud_notm}} Private Hosted application development platform. Automation will install and configure VMware HCX in the {{site.data.keyword.cloud_notm}}, provide an on-premises HCX activation key, and install and configure a small development/test topology of {{site.data.keyword.cloud_notm}} Private Hosted in a matter of hours.
+The trial is designed for migration of up to 20 simple development or test workloads using vCenter Server on {{site.data.keyword.cloud_notm}} and containerization of those workloads with the Kubernetes-based {{site.data.keyword.cloud_notm}} Private Hosted application development platform. Automation will install and configure VMware HCX in the {{site.data.keyword.cloud_notm}}, provide an on-premises HCX activation key, and install and configure a small development/test topology of {{site.data.keyword.cloud_notm}} Private Hosted in a matter of hours.
 
 The Single-node Trial for Migration and App Modernization is for proof of concept (POC) only. Do not run production workloads on this environment. Management functions such as adding and removing hosts and clusters, ordering add-on services, and applying updates are not supported.
 {:important}
@@ -46,7 +46,7 @@ The availability and pricing of standardized hardware configurations might vary 
 ### Bare Metal Server
 {: #cloud_modern_bundle_overview-bare-metal}
 
-Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz with 384 GB RAM) for up to about 20 VMs
+Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz with 384 GB RAM) for up to about 20 VMs.
 
 #### CPU over-commits
 {: #cloud_modern_bundle_overview-cpu}
@@ -94,7 +94,7 @@ The following virtual server instances (VSIs) are ordered:
 
 The following licenses are included with your Single-node Trial for Migration and App Modernization instance order.
 
-* VMware vSphere Enterprise Plus 6.7u1
+* VMware vSphere Enterprise Plus 6.7u2
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Advanced Edition 6.4
 * {{site.data.keyword.cloud_notm}} Private Hosted 3.1.2

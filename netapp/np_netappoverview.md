@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-16"
 
 keywords: NetApp ONTAP, NetApp, tech specs NetApp ONTAP
 
@@ -133,7 +133,7 @@ You must manage the {{site.data.keyword.vmwaresolutions_short}} components that 
 ## Firewall considerations
 {: #np_netappoverview-firewall-considerations}
 
-If you're using firewalls, you must configure rules for all communications from the {{site.data.keyword.IBM}} CloudDriver virtual server instance (VSI) and the SDDC Manager virtual machines (VMs). These rules must allow all protocols to communicate on the IP addresses `10.0.0.0/8` and `161.26.0.0/16`. Examples of such firewalls are NSX Distributed Firewalls (DFW) or Vyatta firewalls.
+If you're using firewalls, you must configure rules for all communications from the IBM CloudDriver virtual server instance (VSI) and the SDDC Manager virtual machines (VMs). These rules must allow all protocols to communicate on the IP addresses `10.0.0.0/8` and `161.26.0.0/16`. Examples of such firewalls are NSX Distributed Firewalls (DFW) or Vyatta firewalls.
 
 ## Related links
 {: #np_netappoverview-related}

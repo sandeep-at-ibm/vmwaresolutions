@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-08-16"
 
-keywords: Caveonix license, Caveonix order license, order Caveonix license
+keywords: Caveonix license, Caveonix order license, Caveonix BYOL license
 
 subcollection: vmware-solutions
 
@@ -21,7 +21,7 @@ You can order a Caveonix RiskForesight license without associating it to any vCe
 ## Before you begin
 {: #caveonix_license_ordering-reqs}
 
-Ensure that you configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount).
+Ensure that you configured the {{site.data.keyword.cloud}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount).
 
 ## Procedure to order Caveonix RiskForesight licenses
 {: #caveonix_license_ordering-procedure}
@@ -38,11 +38,6 @@ Ensure that you configured the {{site.data.keyword.cloud_notm}} infrastructure c
 The ordering of the Caveonix RiskForesight license starts automatically. You receive confirmation that the order is being processed and you can check the status of the order by viewing the license details.
 
 When the license is ready to use, the status of the license is changed to **Installed** and you receive a notification by email.
-
-## What to do next
-{: #caveonix_license_ordering-next}
-
-Manage the Caveonix RiskForesight licenses that you ordered.
 
 ## Related links
 {: #caveonix_license_ordering-related}

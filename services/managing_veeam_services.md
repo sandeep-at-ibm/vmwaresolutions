@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-13"
 
 keywords: Veeam, request Veeam, Veeam managed service
 
@@ -23,7 +23,7 @@ The Veeam on {{site.data.keyword.cloud}} service seamlessly integrates with your
 IBM Resiliency Backup as a Service offers a robust range of onsite, offsite, and hybrid cloud-based data protection solutions to support information resiliency. For more information, see [IBM Resiliency Backup as a Service](https://www.ibm.com/us-en/marketplace/managed-backup-services){:external}.
 
 When you request managed services for Veeam on {{site.data.keyword.cloud_notm}}, use both Veeam backup software and IBM Resiliency Backup as a Service to deploy a fully managed backup environment. This combination helps you in the following ways:
-* You have a choice of data protection solutions to enable security-rich and automated protection of critical business data on dedicated on-premises environment, {{site.data.keyword.cloud_notm}} infrastructures, or IBM Resiliency Services Center, either as primary or secondary locations.
+* You have different data protection solutions to enable security-rich and automated protection of critical business data. This data is located on dedicated on-premises environments, {{site.data.keyword.cloud_notm}} infrastructures, or IBM Resiliency Services Center, either as a primary or secondary location.
 * You also get a scalable and flexible data protection solution to reduce the total cost of ownership and manage your compliance requirements.
 
 ## Procedure to request Managed Services for Veeam on IBM Cloud
@@ -34,8 +34,8 @@ When you request managed services for Veeam on {{site.data.keyword.cloud_notm}},
 3. On the **Veeam on IBM Cloud** page, review the description and technical specifications for Veeam on {{site.data.keyword.cloud_notm}} as a managed service, and then click **Create**.
 4. Specify the configuration settings according to your requirements or accept the default values.
 5. Click **vCenter Server** to add the service to one of your instances.
-6. To add the service while you order a new instance, click **Add to New Instance**, and then continue with ordering a new [vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance) or [vCenter Server with Hybridity](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance) instance.
-7. To add the service to an existing instance, click **Add to Existing Instance**, select the instance that you want from the list, and then confirm that you want to proceed with the order by clicking **Provision**.
+6. To add the service while you order a new instance, click **Add to New Instance**, and then continue with ordering a new [vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance) instance.
+7. To add the service to an existing instance, click **Add to Existing Instance**, select the instance, and then click **Provision** to confirm.
 
 ## Related links
 {: #managing_veeam_services-related}

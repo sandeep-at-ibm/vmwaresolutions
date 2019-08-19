@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-22"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -18,7 +18,7 @@ subcollection: vmware-solutions
 ## Virtual Routing and Forwarding
 {: #vcsicp-arch-overview-infrastructure-vrf}
 
-You can configure {{site.data.keyword.cloud}} accounts as a Virtual Routing and Forwarding (VRF) account, which enables automatic global routing between subnet IP blocks. All accounts with Direct Link connections must be converted to, or created as, a VRF account.
+You can configure {{site.data.keyword.cloud}} accounts as a Virtual Routing and Forwarding (VRF) account, which enables automatic global routing between subnet IP blocks. All accounts with Direct-Link connections must be converted to, or created as, a VRF account.
 
 ## Direct Link
 {: #vcsicp-arch-overview-infrastructure-direct-link}
@@ -36,7 +36,7 @@ The strongSwan IPSec VPN service provides a secure end-to-end communication chan
 ### Hybridity (HCX)
 {: #vcsicp-arch-overview-infrastructure-hcx}
 
-The vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle seamlessly extends the networks of on-premises data centers into {{site.data.keyword.cloud_notm}}, which allows virtual machines (VMs) to be migrated to and from the {{site.data.keyword.cloud_notm}} without any conversion or change.
+The vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle seamlessly extends the networks of on-premises data centers into {{site.data.keyword.cloud_notm}}. This process allows virtual machines (VMs) to be migrated to and from the {{site.data.keyword.cloud_notm}} without any conversion or change.
 
 ## Physical structure
 {: #vcsicp-arch-overview-infrastructure-phys-struct}
@@ -64,8 +64,3 @@ Within the vCenter Server instance, the {{site.data.keyword.icpfull_notm}} insta
 The ESG is configured with a source NAT rule (SNAT) to allow outbound traffic, which enables internet connectivity to download the {{site.data.keyword.icpfull_notm}} prerequisites and to connect to GitHub and Docker. Alternatively, you can use a web-proxy for internet connectivity. The ESG is also configured to provide access to DNS and NTP services.
 
 The ESG is also configured with a destination NAT rule (DNAT) to the {{site.data.keyword.icpfull_notm}} Master/Proxy virtual IP addresses from the {{site.data.keyword.cloud_notm}} 10.x network to the VXLAN environment.
-
-## Related links
-{: #vcsicp-arch-overview-infrastructure-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

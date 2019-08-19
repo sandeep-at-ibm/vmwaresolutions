@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -33,8 +33,3 @@ The deployment uses the deployed AD VSIs as Domain Name System (DNS) servers for
 {: #vcscar-commonservices-ntp}
 
 The vCenter Server deployment uses the {{site.data.keyword.cloud_notm}} infrastructure Network Time Protocol (NTP) servers. All deployed components are configured to use these NTP servers. Having all components that use the same NTP servers is critical for certificates and AD authentication to function correctly.
-
-## Related links
-{: #vcscar-commonservices-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

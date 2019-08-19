@@ -129,4 +129,4 @@ Improvements are made throughout the user interface:
 ## New and updated documentation
 {: #relnotes_v21-new-docs}
 
-A new developerWorks recipe is available with step-by-step instructions on how to attach dedicated storage to existing {{site.data.keyword.vmwaresolutions_full}} deployments that use NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}. For more information, see [Steps to attach dedicated storage to VMware Solutions on IBM Cloud](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/).
+A new IBM Developer recipe is available with step-by-step instructions on how to attach dedicated storage to existing {{site.data.keyword.vmwaresolutions_full}} deployments that use NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}. For more information, see [Steps to attach dedicated storage to VMware Solutions on IBM Cloud](https://developer.ibm.com/recipes/tutorials/steps-to-attach-dedicated-storage-to-existing-ic4v-deployments-on-ibm-cloud/).

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -52,8 +52,3 @@ The {{site.data.keyword.icpfull_notm}} and Cloud Automation Manager (CAM) produc
 The following diagram represents {{site.data.keyword.icpfull_notm}} running on top of a vCenter Server instance. NSX-V is configured with a dedicated switch/VXLAN, a DLR, and an ESG specifically for the {{site.data.keyword.icpfull_notm}} overlay network, routing is set up through the ESG for access to the underlaying network.
 
 Using the {{site.data.keyword.cloud_notm}} automation, Acme Skateboards can provision a hybrid solution that encompasses VMware on {{site.data.keyword.cloud_notm}} to run their database VMs and {{site.data.keyword.icpfull_notm}} on VMware on {{site.data.keyword.cloud_notm}} to run their apps and front-end web services in containers. NSX gives them a common set of management tools for network and security in the overlay network.
-
-## Related links
-{: #vcsiks-usecases-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

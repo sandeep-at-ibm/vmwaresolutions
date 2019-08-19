@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-29"
 
 keywords: NetApp order instance, order NetApp ONTAP, order NetApp
 
@@ -42,8 +42,9 @@ When you order a NetApp ONTAP Select instance, you must specify the following ba
 {: #np_orderinginstances-instance-name}
 
 The instance name must meet the following requirements:
-* Only alphanumeric and dash (-) characters are allowed.
-* The instance name must start with an alphabetic character and end with an alphanumeric character.
+* Only lowercase alphabetic, numeric, and dash (-) characters are allowed.
+* The instance name must start with a lowercase alphabetic character.
+* The instance name must end with a lowercase alphabetic or numeric character.
 * The maximum length of the instance name is 10 characters.
 * The instance name must be unique within your account.
 
@@ -56,26 +57,29 @@ You must specify the following network interface settings when you order a NetAp
 {: #np_orderinginstances-host-name-prefix}
 
 The host name prefix must meet the following requirements:
-*  Only alphanumeric and dash (-) characters are allowed.
-*  The host name prefix must start and end with an alphanumeric character.
-*  The maximum length of the host name prefix is 10 characters.
+* Only lowercase alphabetic, numeric, and dash (-) characters are allowed.
+* The host name prefix must start with a lowercase alphabetic character.
+* The host name prefix must end with a lowercase alphabetic or numeric character.
+* The maximum length of the host name prefix is 10 characters.
 
 ### Subdomain label
 {: #np_orderinginstances-subdomain-label}
 
 The subdomain label must meet the following requirements:
-*  Only alphanumeric and dash (-) characters are allowed.
-*  The subdomain label must start with an alphabetic character and end with an alphanumeric character.
-*  The maximum length of the subdomain label is 10 characters.
+* Only lowercase alphabetic, numeric, and dash (-) characters are allowed.
+* The subdomain label must start with a lowercase alphabetic character.
+* The subdomain label must end with a lowercase alphabetic or numeric character.
+* The maximum length of the subdomain label is 10 characters.
 
 ### Domain name
 {: #np_orderinginstances-domain-name}
 
 The root domain name must meet the following requirements:
 * The domain name must consist of two or more strings that are separated by period (.)
-* The first string must start with an alphabetic character and end with an alphanumeric character.
-* All strings, except for the last one, can include only alphanumeric and dash (-) characters.
-* The last string can include only alphabetic characters.
+* The first string must start with a lowercase alphabetic character.
+* The first string must end with a lowercase alphabetic or numeric character.
+* All strings, except for the last one, can contain only lowercase alphabetic, numeric, and dash (-) characters.
+* The last string can contain only lowercase alphabetic characters.
 * The length of the last string must be in the range 2 - 24 characters.
 
 The maximum length of the FQDN (Fully Qualified Domain Name) for hosts and VMs (virtual machines) is 50 characters. Domain names must accommodate for this maximum length.
@@ -108,7 +112,7 @@ Select a Bare Metal Server configuration based on your requirements:
 ### Number of Bare Metal Servers
 {: #np_orderinginstances-bare-metal-number}
 
-The number of ESXi servers of a NetApp ONTAP Select instance is 4 by default. You cannot change it. All the ESXi servers share configuration.
+The number of ESXi servers of a NetApp ONTAP Select instance is four by default. You cannot change it. All the ESXi servers share configuration.
 
 ## Order summary
 {: #np_orderinginstances-order-summary}

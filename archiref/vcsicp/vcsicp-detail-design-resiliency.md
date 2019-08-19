@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -118,4 +118,3 @@ Use the folloiwng for application deployments into {{site.data.keyword.container
 * [Adding worker nodes by resizing an existing worker pool](/docs/containers?topic=containers-clusters)
 * [How to back up and restore {{site.data.keyword.cloud_notm}} Private](https://medium.com/ibm-cloud/how-to-backup-and-restore-ibm-cloud-private-part-1-b6300dc1d7d8)
 * [{{site.data.keyword.icpfull_notm}} backup GitHub](https://github.com/ibm-cloud-architecture/icp-backup/)
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

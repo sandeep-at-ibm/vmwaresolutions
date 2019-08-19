@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-16"
 
 keywords: vCenter Server add cluster, view cluster vCenter Server, delete cluster vCenter Server
 
@@ -20,8 +20,6 @@ subcollection: vmware-solutions
 
 # Adding, viewing, and deleting clusters for vCenter Server instances
 {: #vc_addingviewingclusters}
-
-The ESXi servers that you configured when you ordered an instance are grouped as **cluster1** by default.
 
 You can add your own clusters to VMware vCenter Server instances to expand the compute and storage capacity. Within a cluster, you can manage ESXi servers for better resource allocation and high availability. When no longer needed, delete the added clusters from your instances.
 
@@ -48,9 +46,10 @@ When you add a cluster for a vCenter Server instance, you must specify the follo
 {: #vc_addingviewingclusters-adding-cluster-name}
 
 The cluster name must meet the following requirements:
-* Only alphanumeric and dash (-) characters are allowed.
-* The cluster name must start and end with an alphanumeric character.
-* The maximum number of characters is 30.
+* Only lowercase alphabetic, numeric, and dash (-) characters are allowed.
+* The cluster name must start with a lowercase alphabetic character.
+* The cluster name must end with a lowercase alphabetic or numeric character.
+* The maximum length of the cluster name is 30 characters.
 * The cluster name must be unique within the vCenter Server instance.
 
 #### Data center location
@@ -63,7 +62,7 @@ If you deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}
 ### Bare Metal Server settings
 {: #vc_addingviewingclusters-bare-metal-settings}
 
-You can choose **Skylake**, **SAP-certified**, or **Broadwell**. Options might differ depending on the version that your instance was initially deployed in.
+You can choose **Skylake**, **Cascade**, **SAP-certified**, or **Broadwell**. Options might differ depending on the version that your instance was initially deployed in.
 
 #### Skylake
 {: #vc_addingviewingclusters-adding-skylake}
@@ -76,6 +75,21 @@ For the **Skylake** setting, you have options for the **CPU Model** and **RAM**.
 | Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 {: caption="Table 1. Options for Skylake {{site.data.keyword.baremetal_short}}" caption-side="top"}
+
+#### Cascade
+{: #vc_addingviewingclusters-adding-cascade}
+
+For the **Cascade** setting, you have options for the **CPU Model** and **RAM**.
+
+Cascade {{site.data.keyword.baremetal_short}} are available only for VMware vSphere Enterprise Plus 6.7 U2 instances.
+{:note}
+
+| CPU model options        | RAM options       |
+|:------------- |:------------- |
+| Dual Intel Xeon Gold 4210 Processor / 20 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 5218 Processor / 32 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6248 Processor / 40 cores total, 2.5 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
+{: caption="Table 2. Options for Cascade {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 #### SAP-certified
 {: #vc_addingviewingclusters-adding-sap}
@@ -100,7 +114,7 @@ For the **Broadwell** setting, you have a number of options for the **CPU Model*
 |:------------- |:------------- |
 | Quad Intel Xeon E7-4820 v4 / 40 cores total, 1.9 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 cores total, 2.2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
-{: caption="Table 2. Options for Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
+{: caption="Table 3. Options for Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 #### Number of Bare Metal Servers
 {: #vc_addingviewingclusters-adding-bare-metal-number}
@@ -122,7 +136,7 @@ Specify the following vSAN options:
 * **Number of vSAN Capacity Disks**: Specify the number of capacity disks that you want to add.
 * If you want to add capacity disks over the limit of 10, check the **High-Performance Intel Optane** box. This option provides two extra capacity disk bays for a total of 12 capacity disks and is useful for workloads that require less latency and higher IOPS throughput.
 
-  The **High-Performance Intel Optane** option is available only for the Skylake CPU models.
+  The **High-Performance Intel Optane** option is available only for the Skylake and Cascade CPU models.
   {:note}
 
 * Review the **Disk Type for vSAN Cache Disks** and **Number of vSAN Cache Disks** values. These values depend on whether you checked the **High-Performance Intel Optane** box.
@@ -152,7 +166,7 @@ Performance level details:
 | 2 IOPS/GB | This option is designed for most general-purpose workloads. Example applications include: hosting small databases, backing up web applications, or virtual machine (VM) disk images for a hypervisor. |
 | 4 IOPS/GB | This option is designed for higher-intensity workloads that have a high percentage of active data at a time. Example applications include: transactional databases. |
 | 10 IOPS/GB | This option is designed for the most demanding workload types, such as analytics. Example applications include: high-transaction databases and other performance-sensitive databases. This performance level is limited to a maximum capacity of 4 TB per file share. |
-{: caption="Table 3. NFS performance level options" caption-side="top"}
+{: caption="Table 4. NFS performance level options" caption-side="top"}
 
 ### Local Disks
 {: #vc_addingviewingclusters-adding-local-disks}
@@ -171,11 +185,42 @@ Specify the licensing option for the VMware vSphere component in the cluster:
 ### Network interface settings
 {: #vc_addingviewingclusters-adding-network-interface-settings}
 
+When you add a cluster for a vCenter Server instance, you must specify the following network interface settings.
+
+#### Public or private network
+
 Network interface card (NIC) enablement settings are based on your selection of either **Public and Private Network** or **Private Network Only**. The following add-on services require public NICs and are not available if you select the private option:
 
 * F5 on {{site.data.keyword.cloud_notm}}
 * Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
 * Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
+
+#### VLANs
+{: #vc_orderinginstance-vlans}
+
+Network settings are based on your selection of either **Order New VLANs** or **Select Existing VLANs**.
+
+One public VLAN and two private VLANs are required for your instance order. The two private VLANs are trunked into each Bare Metal Server.
+
+##### Order New VLANs
+{: #vc_orderinginstance-new-vlans}
+
+Select to order one new public VLAN and two new private VLANs.
+
+##### Select Existing VLANs
+{: #vc_orderinginstance-existing-vlans}
+
+Depending on the {{site.data.keyword.CloudDataCent_notm}} that you selected, existing public and private VLANs might be available.
+
+When you select to reuse existing public and private VLANs, specify the VLANs and subnets:
+* **Public VLAN** is for public network access.
+* **Private VLAN** is for connectivity among the data centers and services within the {{site.data.keyword.cloud_notm}}.
+* **Secondary private VLAN** is for VMware features such as vSAN.
+* **Primary Subnet** is assigned to physical hosts for public network access.
+* **Primary Private Subnet** is assigned to physical hosts for management traffic.
+
+Ensure that the firewall configuration on the selected VLANs does not block the management data traffic. Also, ensure that all the VLANs that you select are in the same pod. ESXi servers cannot be provisioned on mixed-pod VLANs.
+{:important}
 
 ### Order summary
 {: #vc_addingviewingclusters-adding-order-summary}
@@ -196,7 +241,7 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 4. On the **Add Cluster** page, enter the cluster name.
 5. If you want to host the cluster in a different {{site.data.keyword.CloudDataCent_notm}} than the one that the instance is hosted in, under **Bare Metal Server**, check the **Select a different location** check box and choose the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
 6. Complete the Bare Metal configuration.
-   * If you selected **Skylake** or **Broadwell**, specify the **CPU Model**, the amount of **RAM**, and the **Number of {{site.data.keyword.baremetal_short}}**.
+   * If you selected **Skylake**, **Cascade**, or **Broadwell**, specify the **CPU Model**, the amount of **RAM**, and the **Number of {{site.data.keyword.baremetal_short}}**.
    * If you selected **SAP-certified**, specify the CPU model.
 7. Complete the storage configuration.
   * If you select **vSAN Storage**, specify the disk types for the capacity and cache disks, the number of disks, and the vSAN License edition. If you want more storage, check the **High-Performance Intel Optane** box.
@@ -256,12 +301,12 @@ View ESXi server details:
 
 | Item        | Description       |  
 |:------------- |:------------- |
-| Name | The name of the ESXi server is in the following format:<br> `<host_prefix><n>.<subdomain_label>.<root_domain>` <br> where:<br> `host_prefix` is the host name prefix<br> `n` is the sequence of the server<br> `subdomain_label` is the subdomain label<br> `root_domain` is the root domain name |
+| Name | The name of the ESXi server is in the following format: `<host_prefix><n>.<subdomain_label>.<root_domain>`, where `n` is the sequence of the ESXi server. |
 | Version | The version of the ESXi server. |
 | Credentials | The user name and password to access the ESXi server. |
 | Private IP | The private IP address of the ESXi server. |
 | Status | The status of the ESXi server, which can be one of the following values:<br> **Added** The ESXi server is added and is ready for use.<br> **Adding** The ESXi server is being added.<br> **Deleting** The ESXi server is being deleted. |
-{: caption="Table 4. ESXi server details" caption-side="top"}
+{: caption="Table 5. ESXi server details" caption-side="top"}
 
 Expand the ESXi server for additional details:
 
@@ -272,7 +317,7 @@ Expand the ESXi server for additional details:
 | Customized vSAN Disks | The number of vSAN disks in the cluster, including the disk type and capacity. |
 | vSAN Cache Disks | The type and number of vSAN cache disks. |
 | Networking |The network interface card (NIC) enablement settings of either Public and Private Network or Private Network Only. |
-{: caption="Table 5. Additional ESXi server details" caption-side="top"}
+{: caption="Table 6. Additional ESXi server details" caption-side="top"}
 
 View storage details:
 
@@ -282,7 +327,7 @@ View storage details:
 | Size | The capacity of the storage. |
 | IOPS/GB | The performance level of the storage. |
 | NFS Protocol | The NFS version of the storage. |
-{: caption="Table 6. Storage details" caption-side="top"}
+{: caption="Table 7. Storage details" caption-side="top"}
 
 View network interface details:
 
@@ -292,7 +337,7 @@ View network interface details:
 | Description | The description of the VLAN.  |
 | Location | The data center location. |
 | Primary Route | The primary route of the VLAN. |
-{: caption="Table 7. Network Interface - VLAN details" caption-side="top"}
+{: caption="Table 8. Network Interface - VLAN details" caption-side="top"}
 
 Click **View Resource** to access the VLAN details.
 
@@ -303,7 +348,7 @@ View subnet details:
 | Name | The subnet name. Click the name to access the subnet details. |
 | Type | The type of subnet: primary or portable. |
 | Description | The description of the subnet. |
-{: caption="Table 8. Network Interface - Subnet details" caption-side="top"}
+{: caption="Table 9. Network Interface - Subnet details" caption-side="top"}
 
 View IP details:
 
@@ -312,7 +357,7 @@ View IP details:
 | IP | The IP address. |
 | Status | The status of the IP address. |
 | Description |The description of the IP address.  |
-{: caption="Table 9. Network Interface - IP details" caption-side="top"}
+{: caption="Table 10. Network Interface - IP details" caption-side="top"}
 
 ## Deleting clusters from vCenter Server instances
 {: #vc_addingviewingclusters-deleting}
@@ -324,11 +369,14 @@ You might want to delete a cluster from an instance when it's no longer needed.
 
 * Use this procedure to delete clusters from instances that are deployed in V2.3 or later.
 * For clusters deployed in V2.2 or earlier instances, you must upgrade the instance to V2.3 if you want to delete the clusters that you added to the instance.
-* Whenever possible, delete clusters by using the {{site.data.keyword.vmwaresolutions_full}} console, because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, delete clusters from vCenter Server only for on-premises clusters or clusters that you can't or won't manage in the {{site.data.keyword.vmwaresolutions_short}} console.
+* Whenever possible, delete clusters by using the {{site.data.keyword.vmwaresolutions_short}} console, because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, delete clusters from vCenter Server only for on-premises clusters or clusters that you can't or won't manage in the {{site.data.keyword.vmwaresolutions_short}} console.
 * You can delete a single cluster at a time. To delete more than one cluster, you must do it in sequence. Wait for the previous cluster to be deleted before you delete the next cluster.
 * Ensure that all nodes in a cluster are powered on and operational before you delete the cluster.
 * When you delete a cluster, all VMs from the cluster are also deleted and they can't be recovered. If you want to keep the VMs, migrate them to other clusters.
 * The default cluster can't be deleted.
+
+A 12-month commitment is required when you order the VMware HCX on {{site.data.keyword.cloud_notm}} service. Your account continues to be charged for the HCX components if you delete a cluster before the end of 12-month commitment period. The 12-month commitment expiration date is available on the HCX on {{site.data.keyword.cloud_notm}} details page. For more information about viewing service details, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure).
+{:important}
 
 ### Procedure to delete clusters from vCenter Server instances
 {: #vc_addingviewingclusters-deleting-procedure}

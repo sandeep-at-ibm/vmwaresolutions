@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -23,8 +23,8 @@ The installation of VMware HCX on IBM Cloud has the following software requireme
 {: #hcxclient-planning-config-net}
 
 HCX must traverse the public internet and private lines, and connect to data center components, such as networks, switches, and port groups.
-* [Port access requirements](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-port-req) lists ports that must be opened so that HCX virtual appliances can install successfully.
-* Both the on-premises vSphere environment and the VCS HCX Cloud environment must permit Network Time Protocol (NTP) clock synchronization among vSphere on-premises devices and the VCS HCX devices. UDP port 123 must be accessible to HCX virtual appliances and networks.
+* For information about the ports that must be opened so that HCX virtual appliances can install successfully, see [Port access requirements](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-port-req).
+* Both the on-premises vSphere environment and the VCS HCX Cloud environment must allow Network Time Protocol (NTP) clock synchronization among vSphere on-premises devices and the VCS HCX devices. UDP port 123 must be accessible to HCX virtual appliances and networks.
 
 ## On-premises environment
 {: #hcxclient-planning-on-prem-env}
@@ -100,12 +100,12 @@ Extending the network merely means to take the existing VLAN or VXLAN from the s
 ## Pre-flight tests
 {: #hcxclient-planning-preflight-tests}
 
-Pre-flight tests involve performing an HCX migration with both the vMotion and bulk migration function in order to establish a baseline transfer rate.
+Pre-flight tests involve performing an HCX migration with both the vMotion and bulk migration function to establish a baseline transfer rate.
 
 ## Migration of non-production apps
 {: #hcxclient-planning-mig-non-prod-apps}
 
-Migration of VMs begins with the planned stages of less critical VMs. Development, test, and so on, use internet connectivity for migration and stretched L2 traffic.
+Migration of VMs begins with the planned stages of less critical VMs. Development and Test teams use internet connectivity for migration and stretched L2 traffic.
 
 ## Cloud network design and implementation begins
 {: #hcxclient-planning-cloud-net-begins}
@@ -123,7 +123,7 @@ While migrations continue, private WAN network connectivity is ordered as it typ
 When the goal is data center migration into the cloud, any physical servers that interact with the VMs being migrated can be assessed for
 migration into the {{site.data.keyword.cloud_notm}} as either a VM (P2V), bare metal or remain at the source. If the physical server is to remain at the source, and HCX will be used only during migration, until a dedicated network is established, it is important to understand if it resides on any network that is stretched into the cloud with HCX. In this scenario, HCX is allowing not only the VMs, but the entire subnet to be migrated into the cloud.
 
-To remove HCX at the end of the migration, the subnet cannot exist in the source and destination if connection between physical devices and the migrated VMs is to be maintained. This implies that any physical devices left behind at the source site that exist on stretched L2 networks, must be migrated to another network subnet that would be capable of being routed to the cloud side. The exception to this is if some other stretched L2 technology is employed, such as NSX L2 VPN, to replace HCX stretched L2 endpoints.
+To remove HCX at the end of the migration, the subnet cannot exist in the source and destination if connection between physical devices and the migrated VMs is to be maintained. This implies that any physical devices left behind at the source site that exist on stretched L2 networks, must be migrated to another network subnet that can be routed to the cloud side. The exception to this is if some other stretched L2 technology is employed, such as NSX L2 VPN, to replace HCX stretched L2 endpoints.
 
 ## Migrate production and complex applications
 {: #hcxclient-planning-mig-prod-complex-app}

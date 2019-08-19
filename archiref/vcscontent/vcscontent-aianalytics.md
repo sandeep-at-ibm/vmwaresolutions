@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -21,9 +21,10 @@ Enriching Stock Trader is not a one-time step. For Todd and Jane, it is an itera
 ## AI Watson Tone Analyzer
 {: #vcscontent-aianalytics-ai-watson}
 
-The following sample is a simple way to enrich an application, but is deceptively powerful. Jane browses the [{{site.data.keyword.cloud}} catalog](https://cloud.ibm.com/catalog/) for [AI](https://cloud.ibm.com/catalog/?category=ai) and [Analytics](https://cloud.ibm.com/catalog/?category=analytics) services, and finds the catalog rich with content.
+The following sample is a simple way to enrich an application, but is deceptively powerful. Jane browses the [{{site.data.keyword.cloud}} catalog](https://cloud.ibm.com/catalog) for [AI](https://cloud.ibm.com/catalog?category=ai) and [Analytics](https://cloud.ibm.com/catalog?category=analytics) services, and finds the catalog rich with content.
 
 Jane selects [Tone Analyzer](https://cloud.ibm.com/catalog/services/tone-analyzer), opting for the Standard plan, and then is provided credentials to call.
+
 Jane refactored Stock Trader and just creates a Kubernetes secret for Tone Analyzer. That way, even if Jane changes plans or regions, it isn't necessary to rebuild the code.
 
 Thanks to refactoring, Jane experimented with various user interface frameworks without disrupting the user experience. As a result, the new user interface is available to use and to help understand the tone of the user feedback.
@@ -33,14 +34,9 @@ In the future, Jane can provide predictive stock recommendations based on the va
 ## Loyalty Level business rule
 {: #vcscontent-aianalytics-loyalty-rule}
 
-Originally, Jane had logic in her code to determine what monetary amount
-that is likely to result in a bump in loyalty. However, after repeated requests to
-change the range from the Stock Trader marketing director, Jane decided
-to offload that decision into a business rule that the marketing
-director might alter without Jane’s involvement.
+Originally, Jane had logic in her code to determine what monetary amount that is likely to result in a bump in loyalty. However, after repeated requests to change the range from the Stock Trader marketing director, Jane decided to offload that decision into a business rule that the marketing director might alter without Jane’s involvement.
 
-Jane talked to Todd, who added the
-[service](https://cloud.ibm.com/catalog/services/decision-optimization), then created the decision.
+Jane talked to Todd, who added the [service](https://cloud.ibm.com/catalog/services/decision-optimization), then created the decision.
 
 Now, Margaret, the marketing director, can log in and change the loyalty level ranges whenever a campaign is going on without changing any code.
 
@@ -54,8 +50,3 @@ Originally, she used API Connect to simplify the response from the original stoc
 Now, Jane is delighted because when she changed the stock service, she just changed how it maps to the simplified API she created, and her code didn’t even have to restart. The Stock Trader solution just kept requesting the data from the same API as if it hadn't changed. All API changes were masked behind the scenes.
 
 Further, with the monitoring and metering in API Connect, Jane is able to track who is using her simplified API.
-
-## Related links
-{: #vcscontent-aianalytics-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
