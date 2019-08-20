@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-30"
 
 keywords: vSphere upgrade, NSX upgrade, PSC upgrade
 
@@ -60,7 +60,7 @@ vCenter Server 的設計旨在容許「漸進式」升級。亦即，如果您�
 如果您的環境中已有 VSI jumpbox，請跳過第一個步驟。
 {:note}
 
-1. 從 [IBM Cloud 基礎架構客戶入口網站](https://control.softlayer.com/){:external}訂購每小時或每月 VSI。請訂購下列屬性：
+1. 在 [{{site.data.keyword.cloud_notm}} 基礎架構客戶入口網站](https://control.softlayer.com/){:external}中訂購按小時或按月 VSI。請訂購下列屬性：
   * Windows 2012 或 2016 Server Standard
   * 2 個 CPU
   * 16 GB 記憶體
@@ -96,7 +96,7 @@ vCenter Server 的設計旨在容許「漸進式」升級。亦即，如果您�
 * 如需有關備份 vCenter Server 及 PSC 的其他考量及資訊，請參閱 [vCenter 檔案型備份](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_backingup#solution_backingup-vcenter)。
 * 如需備份 NSX 的相關資訊，請參閱[備份 NSX Manager 資料](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:external}。
 
-建議使用以檔案為基礎的備份。VMware VSphere 6.7 不支援以映像檔為基礎的備份（使用 vSphere Data Protection)。
+建議使用以檔案為基礎的備份。VMware VSphere 6.7 不支援以映像檔為基礎的備份（使用 vSphere Data Protection）。
 {:note}
 
 ## 將 IBM vCenter Server vSphere 軟體從 6.5 升級至 6.7 的程序
@@ -171,7 +171,7 @@ vCenter Server 的設計旨在容許「漸進式」升級。亦即，如果您�
 #### 升級 vCenter 的程序
 {: #vc_vsphere_upgrade-procedure-vcenter-procedure}
 
-1. 同時登入 PSC (``https://<psc-fqdn>:5480``) 及 vCenter 應用裝置管理使用者介面，以確認 root 密碼是否過期。如果密碼到期日是 **1970**，則它已過期，且您必須在 PSC 應用裝置管理使用者介面中啟用 SSH 和 Bash Shell。
+1. 同時登入 PSC (`https://<psc-fqdn>:5480`) 及 vCenter 應用裝置管理使用者介面，以確認 root 密碼是否過期。如果密碼到期日是 **1970**，則它已過期，且您必須在 PSC 應用裝置管理使用者介面中啟用 SSH 和 Bash Shell。
     1. 使用 root ID 及密碼 SSH 至 PSC。即使密碼過期，它仍可讓您登入。
     2. 使用 Shell **passwd** 指令，為 PSC 及 vCenter 設定新的 root 密碼。
     3. 儲存顯示在 {{site.data.keyword.vmwaresolutions_short}} 主控台的密碼，或「IBM 支援中心」提供給您的密碼。稍後在您升級應用裝置時會重複使用這些密碼。
@@ -321,7 +321,7 @@ vCenter 內的 VMware Update Manager 功能是用來升級及修補 ESXi 主機�
 ## 升級 vCenter Server vSphere 軟體之後的結果
 {: #vc_vsphere_upgrade-results}
 
-升級完成之後執行 vSAN 性能檢查可能會對 IBM Cloud 提供的 RAID 及網路控制器產生有關韌體更新的警告。在判定需要韌體更新的主機之後，請向「IBM 支援中心」開立問題單，以將韌體更新至建議的版本。
+升級完成之後執行 vSAN 性能檢查可能會對 {{site.data.keyword.cloud_notm}} 提供的 RAID 及網路控制器產生有關韌體更新的警告。在判定需要韌體更新的主機之後，請向「IBM 支援中心」開立問題單，以將韌體更新至建議的版本。
 
 1. 從 vCenter 使用者介面中，選取包含要檢查其性能之 vSAN 的叢集。
 2. 選取**監視**標籤，然後選取 **vSAN** 標籤。

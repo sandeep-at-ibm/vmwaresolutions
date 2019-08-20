@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-27"
+lastupdated: "2019-08-01"
 
 keywords: vCenter Server add service, view service vCenter Server, remove service vCenter Server
 
@@ -22,6 +22,9 @@ subcollection: vmware-solutions
 
 Sie können Services für Ihre VMware vCenter Server-Instanzen bestellen, beispielsweise eine Disaster-Recovery-Lösung. Sobald Sie diese Services nicht mehr benötigen, können Sie sie aus Ihren Instanzen entfernen.
 
+Für die Bestellung des VMware HCX on {{site.data.keyword.cloud_notm}}-Service ist eine Verpflichtung über 12 Monate erforderlich. Sie können den Service erst dann löschen, wenn Ihr 12-Monats-Zeitraum abgelaufen ist. Das Ablaufdatum der 12-monatigen Verpflichtung ist auf der Detailseite von HCX on {{site.data.keyword.cloud_notm}} verfügbar. Weitere Informationen zum Anzeigen von Servicedetails finden Sie unter [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure).
+{:note}
+
 ## Verfügbare Services für vCenter Server-Instanzen
 {: #vc_addingremovingservices-available-services}
 
@@ -33,6 +36,7 @@ In der folgenden Tabelle sind die Services aufgeführt, die für vCenter Server-
 | [F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations) | BIG-IP VE V14.1.0.2 | V1.9 und höher |
 | [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations) | 300 Series | V2.0 und höher |
 | [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations) | 6.0.3 | V2.0 und höher |
+| [HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_considerations) | 3.5.1 | V2.1 und höher |
 | [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htcc_considerations) | 5.5.1 | V2.3 und höher |
 | [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htdc_considerations)  | 4.3.2 | V2.3 und höher |
 | [HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htkc_considerations) | 4.3.2 | V2.5 und höher |
@@ -40,6 +44,7 @@ In der folgenden Tabelle sind die Services aufgeführt, die für vCenter Server-
 | [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-spp_considerations) | 10.1.3 | V2.2 und höher |
 | [KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations) | 2.0  | Nicht zutreffend  |
 | [Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations) | 9.5u4 | V1.8 und höher |
+| [VMware vRealize Operations und vRealize Log Insight on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vrops_overview) | 9.7 | V3.2 und höher |
 | [Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr) | 6.5 Update 3 | V1.2 und höher |
 {: caption="Tabelle 1. Verfügbare Services für vCenter Server-Instanzen" caption-side="top"}
 
@@ -61,6 +66,9 @@ Nachdem die Installation des Service erfolgreich abgeschlossen wurde, werden Sie
 3. Klicken Sie im linken Navigationsfenster auf **Services**.
 4. Klicken Sie auf der Seite **Services** auf einen Service, um die zugehörigen Informationen, beispielsweise den Servicestatus und andere Details, zu prüfen.
 5. Je nach dem angezeigten Service können Sie über die in den Servicedetails bereitgestellten Berechtigungsnachweise auf die Servicekonsolen zugreifen und den Service von hier aus verwalten.
+
+Das Ablaufdatum der 12-monatigen Verpflichtung für VMware HCX on {{site.data.keyword.cloud_notm}} ist verfügbar auf der Detailseite für HCX on {{site.data.keyword.cloud_notm}}.
+{:note}
 
 ## Vorgehensweise zum Entfernen von Services für vCenter Server-Instanzen
 {: #vc_addingremovingservices-removing-procedure}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -105,10 +105,5 @@ VMware on {{site.data.keyword.cloud_notm}} 可以使用 {{site.data.keyword.clou
 
 通过使用以下方法，可以将应用程序部署到 {{site.data.keyword.containerlong_notm}} 中：
 -	{{site.data.keyword.containerlong_notm}} 连接和服务在 CAM 中开发，然后发布到 {{site.data.keyword.icpfull_notm}} 目录。
--	多云管理器，这是未来用于管理 {{site.data.keyword.containerlong_notm}} 实例的增强功能。
--	Helm 命令行。
-
-## 相关链接
-{: #vcsnsxt-operations-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+- 多云管理器，这是未来用于管理 {{site.data.keyword.containerlong_notm}} 实例的增强功能。
+- Helm 命令行。

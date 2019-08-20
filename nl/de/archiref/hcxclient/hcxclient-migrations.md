@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -36,9 +36,9 @@ Die vMotion-Funktionalität in HCX erweitert die vSphere vMotion-Funktionalität
 ### Konzepte und bewährte Verfahren für vMotion
 {: #hcxclient-migrations-best-practices-vmotion}
 
-HCX ist im Wesentlichen ein vMotion-Zweiwege-Proxy. Jede Instanz von HCX emuliert einen einzigen ESXi-Host innerhalb des vSphere-Rechenzentrums, außerhalb von Clustern, die selbst eine "Front" der Paketkomponente Cloud-Gateway (CGW) darstellen. Für jeden HCX-Standort wird ein Proxy-Host angezeigt, der mit dem aktuell angezeigten Standort verknüpft ist. Wenn eine vMotion für einen fernen Host initiiert wird, migriert der lokale ESXi-Host diese VM mittels vMotion auf den lokalen Proxy-ESXi-Host, der die Front des CGW bildet, das ebenfalls einen verschlüsselten Tunnel mit dem CGW auf der fernen Seite aufrechterhält.
+HCX ist im Wesentlichen ein vMotion-Zweiwege-Proxy. Jede Instanz von HCX emuliert einen einzigen ESXi-Host innerhalb des vSphere-Rechenzentrums, außerhalb von Clustern, die selbst eine "Front" der Paketkomponente Cloud-Gateway (CGW) darstellen. Für jeden HCX-Standort wird ein Proxy-Host angezeigt, der mit dem aktuell angezeigten Standort verknüpft ist. Wenn eine vMotion für einen fernen Host initiiert wird, migriert der lokale ESXi-Host diese VM auf den lokalen Proxy-ESXi-Host, der die Front des CGW bildet, das ebenfalls einen verschlüsselten Tunnel mit dem CGW auf der fernen Seite aufrechterhält.
 
-Gleichzeitig wird eine vMotion-Migration vom fernen ESXi-Proxy-Host zu dem physischen ESXi-Zielhost von vSphere initialisiert, während Daten vom Quell-CGW über den Tunnel empfangen werden. Wenn vMotion verwendet wird, wird im Gegensatz zur Massenmigrationsoption nur eine einzige VM-Migrationsoperation ausgeführt. Aus diesem Grund wird für große Anzahlen von zu migrierenden VMs empfohlen, vMotion nur dort einzusetzen, wo es keine Ausfallzeiten geben darf oder das Risiko eines Neustarts der VM besteht. Allerdings kann die VM wie bei der Standard-vMotion während des Prozesses aktiv sein.
+Eine vMotion-Migration wird vom fernen ESXi-Proxy-Host zu dem physischen ESXi-Zielhost von vSphere initialisiert, während Daten vom Quell-CGW über den Tunnel empfangen werden. Wenn vMotion verwendet wird, wird im Gegensatz zur Massenmigrationsoption nur eine einzige VM-Migrationsoperation ausgeführt. Aus diesem Grund wird für große Anzahlen von zu migrierenden VMs empfohlen, vMotion nur dort einzusetzen, wo es keine Ausfallzeiten geben darf oder das Risiko eines Neustarts der VM besteht. Allerdings kann die VM wie bei der Standard-vMotion während des Prozesses aktiv sein.
 
 Es wurde beobachtet, dass eine einzelne vMotion bis zu ca. 1,7 Gb/s im LAN und 300 bis 400 Mb/s im WAN über das WAN-Optimierungsprogramm erreicht. Dies bedeutet nicht, dass 1,7 Gb/s im LAN 400 Mb/s im WAN über das WAN-Optimierungsprogramm entsprechen, sondern dies sind die festgestellten Maximalwerte in bestimmten Umgebungen. Eine solche Umgebung bestand aus einem vMotion-Netz mit 10-GB-LAN und einem Internet-Uplink mit 1 GB, die gemeinsam mit dem Webdatenverkehr der Produktionsumgebung genutzt wurden.
 
@@ -121,7 +121,7 @@ Nach der Migration können iSCSI-Datenträger mit dem Betriebssystem in eine and
 - Bandbreite (ca. 1 Gb/s pro erweitertes Netz)
 - Underlay-Verbindungsbandbreite
 
-Führen Sie nach dem Migrationslebenszyklus Tests mit Entwicklungs- oder Staging-Anwendungen aus, bevor Sie die Produktionsumgebung migrieren. QoS kann für den Underlay-Tunnelverkehr ('udp' 500/4500) zwischen den L2C-HCX-Appliances eingesetzt werden, die latenzsensitive erweiterte L2-Netze unterstützen.
+Führen Sie nach dem Migrationslebenszyklus Tests mit Entwicklungs- oder Staging-Anwendungen aus, bevor Sie die Produktionsumgebung migrieren. QoS kann für den Underlay-Tunnelverkehr ('UDP' 500/4500) zwischen den L2C-HCX-Appliances eingesetzt werden, die latenzsensitive erweiterte L2-Netze unterstützen.
 
 ## Netz-Swing
 {: #hcxclient-migrations-network-swing}

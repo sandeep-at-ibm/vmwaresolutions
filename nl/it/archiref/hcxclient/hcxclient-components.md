@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-01"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -14,14 +14,14 @@ subcollection: vmware-solutions
 # Glossario di componenti e termini HCX
 {: #hcxclient-components}
 
-HCX consiste in un lato cloud (destinazione/ambiente VCD) e uno o più client (origine). Deve essere distribuita un'istanza di HCX per ogni vCenter, anche se i vCenter dove
+HCX consiste in un lato cloud (destinazione o ambiente VCD) e uno o più client (origine). Deve essere distribuita un'istanza di HCX per ogni vCenter, anche se i vCenter dove
 viene distribuito HCX sono collegati nello stesso dominio SSO sul lato client o cloud. Le configurazioni supportate da HCX sono uno-a-uno,
 uno-a-molti, molti-a-uno e molti-a-molti.
 
 ## Lato di destinazione e lato client
 {: #hcxclient-components-cloud-client-side}
 
-HCX ha il concetto di lato cloud (destinazione/ambiente VCD) e lato client (origine).
+HCX ha il concetto di lato cloud (destinazione o ambiente VCD) e lato client (origine).
 
 - Lato di destinazione - HCX Cloud Manager è predistribuito e configurato con i profili di rete e calcolo pronti per la creazione della rete di servizi.  
 - Lato client - qualsiasi istanza vSphere che soddisfa i prerequisiti per l'installazione e il funzionamento. Il lato client di HCX è il master che controlla l'istanza slave lato cloud tramite il suo snap-in di IU (interfaccia utente) client web vCenter.

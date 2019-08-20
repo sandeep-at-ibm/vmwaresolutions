@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-23"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -103,8 +103,3 @@ Jane 已按一下 Stock Trader，並看到建議以在 Liberty 中執行每個 w
 
 Todd 在轉變步驟期間未變更資料來源。Transformation Advisor 採用 WebSphere Application Server Network Deployment 資料來源配置，並將它新增至 Liberty 容器的 server.xml。
 {:important}
-
-## 相關鏈結
-{: #vcscontent-stocktrmod-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

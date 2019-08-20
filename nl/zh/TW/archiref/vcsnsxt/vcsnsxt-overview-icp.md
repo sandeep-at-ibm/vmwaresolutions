@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -42,8 +42,3 @@ subcollection: vmware-solutions
 使用 Calico 可促進 {{site.data.keyword.icpfull_notm}} 網路管理。Calico 使用 Open System Interconnection (OSI) 模型的第 3 層或網路層。Calico 使用「邊界閘道通訊協定 (BGP)」來建置遞送表，以促進代理程式節點之間的通訊。
 
 如需 Calico 網路的相關資訊，請參閱 [{{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-iks)。
-
-## 相關鏈結
-{: #vcsnsxt-overview-icp-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

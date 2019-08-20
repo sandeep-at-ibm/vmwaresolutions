@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-16"
 
 keywords: vSphere BOM, bill of materials vSphere, BOM
 
@@ -22,7 +22,7 @@ Le tableau suivant fournit des informations détaillées concernant la nomenclat
 
 | Fabricant | Composant                       | Version |
 |:-------------|:--------------------------------|:--------|
-| VMware       | vSphere ESXi                    | Either 6.7 Update 1 ou 6.5 Update 2 |
+| VMware       | vSphere ESXi                    | 6.7 Update 2 ou 6.5 Update 2 |
 {: caption="Tableau 1. Nomenclature pour les clusters VMware vSphere" caption-side="top"}
 
 ## Liens connexes

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-16"
 
 keywords: vSphere BOM, bill of materials vSphere, BOM
 
@@ -22,7 +22,7 @@ subcollection: vmware-solutions
 
 |제조업체 |컴포넌트                       |버전 |
 |:-------------|:--------------------------------|:--------|
-|VMware       |vSphere ESXi                    | 6.7 Update 1 또는 6.5 Update 2 |
+|VMware       |vSphere ESXi                    |6.7 Update 2 또는 6.5 Update 2 |
 {: caption="표 1. VMware vSphere 클러스터에 대한 BOM" caption-side="top"}
 
 ## 관련 링크

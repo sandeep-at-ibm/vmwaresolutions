@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-01"
+lastupdated: "2019-07-22"
 
 keywords: single-node trial, data protection DR, tech specs data protection DR
 
@@ -25,7 +25,7 @@ Mit Single-node Trial für Datenschutz und Disaster-Recovery können Sie in {{si
 
 Single-node Trial ist eine Testversion von VMware vCenter Server on {{site.data.keyword.cloud_notm}}, von der die Single-Tenant-VMware-Plattform bereitstellt wird, die mit den gleichen Tools wie in lokalen Umgebungen verwaltet werden kann. Sie können die Geschwindigkeit und die Skalierung der Cloud nutzen und gleichzeitig das gleiche Niveau an Kontrolle und Sichtbarkeit aufrechterhalten, das Sie auch beim lokalen Betrieb erhalten.
 
-Die Testversion ist für die Migration von bis zu 20 einfachen Entwicklungs- oder Testworkloads mit vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle konzipiert. Mittels Automatisierung werden innerhalb weniger Stunden 'VMware HCX on {{site.data.keyword.cloud_notm}}' installiert und konfiguriert, ein lokaler HCX-Aktivierungsschlüssel bereitgestellt und 'Veeam on {{site.data.keyword.cloud_notm}}' sowie 'Zerto on {{site.data.keyword.cloud_notm}}' installiert und konfiguriert. Mit 'Veeam on {{site.data.keyword.cloud_notm}}' und 'Zerto on {{site.data.keyword.cloud_notm}}' können Sie 20 virtuelle Maschinen sichern und replizieren.
+Die Testversion ist für die Migration von bis zu 20 einfachen Entwicklungs- oder Testworkloads mit vCenter Server konzipiert. Mittels Automatisierung werden innerhalb weniger Stunden 'VMware HCX on {{site.data.keyword.cloud_notm}}' installiert und konfiguriert, ein lokaler HCX-Aktivierungsschlüssel bereitgestellt und 'Veeam on {{site.data.keyword.cloud_notm}}' sowie 'Zerto on {{site.data.keyword.cloud_notm}}' installiert und konfiguriert. Mit 'Veeam on {{site.data.keyword.cloud_notm}}' und 'Zerto on {{site.data.keyword.cloud_notm}}' können Sie 20 virtuelle Maschinen sichern und replizieren.
 
 Single-node Trial für Datenschutz und Disaster-Recovery ist nur für den Machbarkeitsnachweis (proof of concept, POC) vorgesehen. Die Umgebung ist nicht für Workloads im Produktionsbetrieb geeignet. Managementfunktionen wie das Hinzufügen und Entfernen von Hosts und Clustern, das Bestellen weiterer Add-on-Services und das Anwenden von Updates werden nicht unterstützt.
 {:important}
@@ -96,8 +96,8 @@ Die folgenden VSIs (Virtual Server-Instanzen) werden bestellt:
 
 Ihre Bestellung der Single-node Trial-Instanz für Datenschutz und Disaster-Recovery enthält die folgenden Lizenzen:
 
-* Die Lizenzen von vCenter Server with Hybridity Bundle:
-  * VMware vSphere Enterprise Plus 6.7u1
+* Die Lizenzen für vCenter Server:
+  * VMware vSphere Enterprise Plus 6.7u2
   * VMware vCenter Server 6.5
   * VMware NSX Service Providers Advanced Edition 6.4
 * {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2

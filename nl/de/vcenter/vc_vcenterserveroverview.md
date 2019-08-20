@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-07-26"
 
 keywords: vCenter Server, vCenter Server architecture, tech specs vCenter Server
 
@@ -75,6 +75,7 @@ Verfügbarkeit und Preisgestaltung standardisierter Hardwarekonfigurationen kön
 
 Sie können drei oder mehr {{site.data.keyword.baremetal_short}}-Instanzen mit einer der folgenden Konfigurationen bestellen:
 * **Skylake**: 2-CPU Intel Skylake Generation-Server (Intel Xeon 4100/5100/6100 Series) mit dem ausgewählten CPU-Modell und der RAM-Größe.
+* **Cascade**: 2-CPU Intel Cascade Generation-Server (Intel Xeon 4200/5200/6200 series) mit dem ausgewählten CPU-Modell und der RAM-Größe.
 * **SAP-zertifiziert**: Intel Skylake oder Intel Broadwell Generation-Server (Intel Xeon 6140/E5-2690/E7-8890 Series) mit dem ausgewählten CPU-Modell.
 * **Broadwell**: 4-CPU Intel Broadwell Generation-Server (Intel Xeon E7-4800 Series) mit dem ausgewählten CPU-Modell und der RAM-Größe.
 
@@ -146,7 +147,7 @@ Die Option für lokale Festplatten, die nur für die Bare-Metal-Konfiguration de
 ### Lizenzen (von IBM bereitgestellt oder eigene) und Gebühren
 {: #vc_vcenterserveroverview-license-and-fee}
 
-* VMware vSphere Enterprise Plus 6.5u2 oder 6.7u1
+* VMware vSphere Enterprise Plus 6.5u2 oder 6.7u2
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Edition (Base, Advanced oder Enterprise) 6.4
 * (Für vSAN-Cluster) VMware vSAN Advanced oder Enterprise 6.6
@@ -165,7 +166,7 @@ Jeder vCenter Server-Erweiterungsknoten stellt folgende Komponenten in Ihrem {{s
 ### Lizenzen und Gebühren für Erweiterungsknoten
 {: #vc_vcenterserveroverview-expansion-node-license-and-fee}
 
-* 1 Lizenz für VMware vSphere Enterprise Plus 6.5u2 oder 6.7u1
+* 1 Lizenz für VMware vSphere Enterprise Plus 6.5u2 oder 6.7u2
 * 1 Lizenz für VMware NSX Service Providers Edition (Base, Advanced oder Enterprise) 6.4
 * 1 Support- und Servicegebühr
 * (Für vSAN-Cluster) VMware vSAN Advanced oder Enterprise 6.6

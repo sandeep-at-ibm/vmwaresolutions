@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-03-23"
 
 keywords: HTCC WebGUI, HTCC console, enable internet HTCC
 
@@ -65,7 +65,7 @@ HTCC 5.5.1 이상의 경우 {{site.data.keyword.vmwaresolutions_short}}는 콜�
 
 1. 이전 프로시저의 1 - 3단계를 완료하십시오.
 2. **설정**을 클릭한 후 **인터페이스**를 클릭하십시오. 사설 업링크의 IP 주소를 적어 두십시오. 이 주소는 새 기본 게이트웨이가 됩니다.
-3. HyTrust CloudControl on IBM Cloud 서비스 세부사항 페이지로 이동하여 **HTCC 웹 UI 보기**를 클릭하고 서비스 세부사항 페이지에서 인증 정보로 로그인하십시오.
+3. HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 서비스 세부사항 페이지로 이동하여 **HTCC 웹 UI 보기**를 클릭하고 서비스 세부사항 페이지에서 인증 정보로 로그인하십시오.
 4. 기존의 기본 게이트웨이를 적어 두십시오. 예를 들어, HTCC 5.5.1의 경우 **구성 > 네트워크**를 클릭하십시오. 나열된 게이트웨이 IP 주소를 적어 두십시오. 이 주소는 정적 라우트의 게이트웨이가 됩니다.
 5. 정적 라우트를 추가하십시오. 예를 들어, HTCC 5.5.1의 경우 **구성 > 정적 라우트**를 클릭하십시오. **추가**를 클릭하고 다음 정보를 입력한 후 **확인**을 클릭하십시오.
 
@@ -83,7 +83,7 @@ HTCC 5.5.1 이상의 경우 {{site.data.keyword.vmwaresolutions_short}}는 콜�
 
   이제 기본 VM에 인터넷에 대한 액세스 권한이 제공됩니다.
 
-7. 기본 VM에 인터넷 액세스 권한이 있는지 확인하려면 공인 IP 주소 또는 웹 사이트에 대해 `wget` 명령을 실행하십시오. 이를 수행하려면 vCenter로 다시 돌아가서 **CC1 > Open 콘솔 열기**를 마우스 오른쪽 단추로 클릭하십시오. HyTrust CloudControl on IBM Cloud service 세부사항 페이지의 콘솔 인증 정보를 사용하여 콘솔에 로그인하십시오. `wget` 명령(예: `wget www.ibm.com`)을 실행하면 즉각적인 응답을 받게 됩니다. 요청이 전송되었고 `200` 응답이 수신되었는지 확인하십시오.
+7. 기본 VM에 인터넷 액세스 권한이 있는지 확인하려면 공인 IP 주소 또는 웹 사이트에 대해 `wget` 명령을 실행하십시오. 이를 수행하려면 vCenter로 다시 돌아가서 **CC1 > Open 콘솔 열기**를 마우스 오른쪽 단추로 클릭하십시오. HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 세부사항 페이지의 콘솔 인증 정보를 사용하여 콘솔에 로그인하십시오. `wget` 명령(예: `wget www.ibm.com`)을 실행하면 즉각적인 응답을 받게 됩니다. 요청이 전송되었고 `200` 응답이 수신되었는지 확인하십시오.
 
 ## 관련 링크
 {: #managinghtcc-related}

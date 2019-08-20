@@ -73,4 +73,4 @@ VUM 클라이언트 인터페이스는 두 가지 기본 보기를 제공합니�
 {: #vum-overview-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 솔루션 아키텍처](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} 디지털 기술 업무](https://ibm-dte.mybluemix.net/vmware)(데모)
+* [{{site.data.keyword.vmwaresolutions_full}} 데모](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/)

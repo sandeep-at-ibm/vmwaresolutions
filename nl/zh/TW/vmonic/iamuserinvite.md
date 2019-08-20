@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-07-23"
 
 keywords: IAM user, invite user, service access
 
@@ -48,6 +48,5 @@ subcollection: vmware-solutions
 * [管理身分及存取](/docs/iam?topic=iam-getstarted)
 * [邀請使用者](/docs/iam?topic=iam-iamuserinv#iamuserinv)
 * [何謂 IAM](/docs/iam?topic=iam-iamoverview)
-* [將 2.5 版之前的 vCenter Server 實例移轉至 IBM Cloud 帳戶](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addinstancetousraccount)
-* [將 2.5 版之前的 vCenter Server with Hybridity Bundle 實例移轉至 IBM Cloud 帳戶](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addinstancetousraccount)
-* [將 2.5 版之前的 NetApp ONTAP Select 實例移轉至 IBM Cloud 帳戶](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_addinstancetousraccount)
+* [將 2.5 版之前的 vCenter Server 實例移轉至 {{site.data.keyword.cloud_notm}} 帳戶](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addinstancetousraccount)
+* [將 2.5 版之前的 NetApp ONTAP Select 實例移轉至 {{site.data.keyword.cloud_notm}} 帳戶](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_addinstancetousraccount)

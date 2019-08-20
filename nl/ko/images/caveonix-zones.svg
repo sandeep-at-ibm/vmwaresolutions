@@ -479,7 +479,7 @@
              display="inline-block"
              text-align="inherit"
              text-decoration="inherit"
-             style="background-color:#ffffff">Service Provider</xhtml:div>
+             style="background-color:#ffffff">서비스 제공자</xhtml:div>
         </xhtml:div>
       </foreignObject>
       <text
@@ -534,7 +534,7 @@
              display="inline-block"
              text-align="inherit"
              text-decoration="inherit"
-             style="background-color:#ffffff">Tenant</xhtml:div>
+             style="background-color:#ffffff">테넌트</xhtml:div>
         </xhtml:div>
       </foreignObject>
       <text
@@ -589,7 +589,7 @@
              display="inline-block"
              text-align="inherit"
              text-decoration="inherit"
-             style="background-color:#ffffff">Tenant</xhtml:div>
+             style="background-color:#ffffff">테넌트</xhtml:div>
         </xhtml:div>
       </foreignObject>
       <text
@@ -644,7 +644,7 @@
              display="inline-block"
              text-align="inherit"
              text-decoration="inherit"
-             style="background-color:#ffffff">Tenant</xhtml:div>
+             style="background-color:#ffffff">테넌트</xhtml:div>
         </xhtml:div>
       </foreignObject>
       <text

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -65,8 +65,3 @@ VMware vCenter Server on {{site.data.keyword.cloud_notm}} Hybridity Bundle 服�
 ESG 配置了源 NAT (SNAT) 规则以允许出站流量，支持因特网连接以下载 {{site.data.keyword.icpfull_notm}} 必备软件，以及连接到 GitHub 和 Docker。或者，可以使用 Web 代理进行因特网连接。此外，还将 ESG 配置为能够提供对 DNS 和 NTP 服务的访问权。
 
 ESG 还配置了目标 NAT 规则 (DNAT)，用于从 {{site.data.keyword.cloud_notm}} 10.x 网络中的 {{site.data.keyword.icpfull_notm}} 主/代理虚拟 IP 地址路由到 VXLAN 环境。
-
-## 相关链接
-{: #vcscar-arch-overview-infrastructure-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -25,14 +25,14 @@ HyTrust KeyControl on {{site.data.keyword.cloud}} サービスを注文するに
 
 以下のいずれかの方法を使用して、新しいインスタンスで HyTrust KeyControl on {{site.data.keyword.cloud_notm}} を注文できます。
 * {{site.data.keyword.vmwaresolutions_short}} コンソールから新しいインスタンスを注文する時に、**「サービス」**セクションで**「HyTrust KeyControl on IBM Cloud」**を選択します。
-* {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**アイコンをクリックしてから、**「VMware サービス」**セクションの**「HyTrust KeyControl on IBM Cloud」**カードをクリックします。サービス設定を指定し、**「Add to New Instance」**を選択します。
+* {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**アイコンをクリックしてから、**「VMware サービス」**セクションの**「HyTrust KeyControl on IBM Cloud」**カードをクリックします。 サービス設定を指定し、**「Add to New Instance」**を選択します。
 
 ## 既存のインスタンスでの HyTrust KeyControl on IBM Cloud の注文
 {: #htkc_ordering-existing}
 
 以下のいずれかの方法を使用して、既存のインスタンスに HyTrust KeyControl on {{site.data.keyword.cloud_notm}} サービスを追加できます。
 * {{site.data.keyword.vmwaresolutions_short}} コンソールから、サービスを追加する対象のインスタンスを表示し、左側のナビゲーション・ペインにある**「サービス」**をクリックし、**「追加」**をクリックします。
-* {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**アイコンをクリックしてから、**「VMware サービス」**セクションの**「HyTrust KeyControl on IBM Cloud」**カードをクリックします。サービス設定を指定し、**「Add to Existing Instance」**を選択します。
+* {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**アイコンをクリックしてから、**「VMware サービス」**セクションの**「HyTrust KeyControl on IBM Cloud」**カードをクリックします。 サービス設定を指定し、**「Add to Existing Instance」**を選択します。
 
 ## HyTrust KeyControl on IBM Cloud サービスの構成
 {: #htkc_ordering-config}

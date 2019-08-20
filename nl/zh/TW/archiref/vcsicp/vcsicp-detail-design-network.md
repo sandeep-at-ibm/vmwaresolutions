@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -127,8 +127,3 @@ ESG 和 vRouter 中的路徑表格移入方式，取決於整合的方法。請�
 *	SNAT，讓 VXLAN 網路存取公用存取。
 *	SNAT，讓 VXLAN 網路存取專用 {{site.data.keyword.cloud_notm}} 網路存取。
 *	DNAT，適用於「{{site.data.keyword.icpfull_notm}} 叢集 vIP」。
-
-## 相關鏈結
-{: #vcsicp-detail-design-network-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

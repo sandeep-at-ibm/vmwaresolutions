@@ -43,14 +43,14 @@ V3.0 以前の Zerto on {{site.data.keyword.cloud_notm}} インストール済�
 
 以下のいずれかの方法を使用して、新しいインスタンスで Zerto on {{site.data.keyword.cloud_notm}} を注文できます。
 * {{site.data.keyword.vmwaresolutions_short}} コンソールから新しいインスタンスを注文する時に、**「サービス」**セクションで**「Zerto on IBM Cloud」**を選択します。
-* {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**アイコンをクリックしてから、**「VMware サービス」**セクションの**「Zerto on IBM Cloud」**カードをクリックします。サービス設定を指定し、**「Add to New Instance」**を選択します。
+* {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**アイコンをクリックしてから、**「VMware サービス」**セクションの**「Zerto on IBM Cloud」**カードをクリックします。 サービス設定を指定し、**「Add to New Instance」**を選択します。
 
 ## 既存のインスタンスでの Zerto on IBM Cloud の注文
 {: #zerto_ordering-existing}
 
 以下のいずれかの方法を使用して、既存のインスタンスに Zerto on {{site.data.keyword.cloud_notm}} サービスを追加できます。
 * {{site.data.keyword.vmwaresolutions_short}} コンソールから、サービスを追加する対象のインスタンスを表示し、左側のナビゲーション・ペインにある**「サービス」**をクリックし、**「追加」**をクリックします。
-* {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**アイコンをクリックしてから、**「VMware サービス」**セクションの**「Zerto on IBM Cloud」**カードをクリックします。サービス設定を指定し、**「Add to Existing Instance」**を選択します。
+* {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**アイコンをクリックしてから、**「VMware サービス」**セクションの**「Zerto on IBM Cloud」**カードをクリックします。 サービス設定を指定し、**「Add to Existing Instance」**を選択します。
 
 保守モードの ESXi サーバーを持つ vCenter Server インスタンスに Zerto on {{site.data.keyword.cloud_notm}} を追加する場合は、Zerto Virtual Manager (ZVM) コンソールと事前定義済みの Zerto Virtual Replication Appliance (VRA) IP アドレスを使用して、VRA 仮想マシン (VM) を手動でデプロイする必要があります。
 {:note}

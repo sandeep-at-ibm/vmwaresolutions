@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-06"
 
 keywords: vCenter Server NSX-T order instance, order vCenter Server NSX-T, order NSX-T
 
@@ -35,9 +35,9 @@ subcollection: vmware-solutions
 |:------------|:------------ |
 | ドメイン・ネーム | `<root_domain>` |  
 | vCenter Server ログイン・ユーザー名 | `<user_id>@<root_domain>` (Microsoft Active Directory ユーザー) または `administrator@vsphere.local` |
-| vCenter Server (PSC が組み込まれたもの) の FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`。最大長は 50 文字です。 |
+| vCenter Server (PSC が組み込まれたもの) の FQDN | `<instance_name>-vc.<root_domain>`。最大長は 50 文字です。 |
 | シングル・サインオン (SSO) サイト名 | `<subdomain_label>` |
-| 完全修飾 ESXi サーバー名 | `<host_prefix><n>.<subdomain_label>.<root_domain>`。ここで、`<n>` は ESXi サーバーのシーケンスです。 最大長は 50 文字です。 |
+| 完全修飾 ESXi サーバー名 | `<data_center>-<host_prefix><n>.<subdomain_label>.<root_domain>`。ここで、`n` は ESXi サーバーのシーケンスです。 最大長は 50 文字です。 |
 {: caption="表 1. インスタンス名とドメイン・ネームの値の形式" caption-side="top"}
 
 インスタンスの注文時およびデプロイ時に設定した値は変更しないでください。 変更すると、インスタンスを使用できなくなる可能性があります。 例えば、パブリック・ネットワークがシャットダウンしたり、プロビジョニング中にサーバーや仮想サーバー・インスタンス (VSI) が Vyatta の内側に移動したり、IBM CloudBuilder VSI が停止したり、削除されたりすることがあります。
@@ -52,15 +52,26 @@ vCenter Server インスタンスを注文する際には、以下のシステ�
 {: #vc_nsx-t_orderinginstance-inst-name}
 
 インスタンス名は、次の要件を満たす必要があります。
-* 英数字とダッシュ (-) の文字だけを使用できます。
-* インスタンス名の先頭は英字、末尾は英数字でなければなりません。
+* 英字の小文字、数字、およびダッシュ (-) の文字だけを使用できます。
+* インスタンス名は小文字の英字で始まらなければなりません。
+* インスタンス名は小文字の英字または数字で終わらなければなりません。
 * インスタンス名の最大の長さは 10 文字です。
 * インスタンス名はアカウント内で固有である必要があります。
 
-### VMware vSphere ライセンス
+### 初期クラスター名
+{: #vc_nsx-t_orderinginstance-cluster-name}
+
+初期のクラスター名は、以下の要件を満たしている必要があります。
+* 英字の小文字、数字、およびダッシュ (-) の文字だけを使用できます。
+* クラスター名は小文字の英字で始まらなければなりません。
+* クラスター名は小文字の英字または数字で終わらなければなりません。
+* クラスター名の最大の長さは 30 文字です。
+* クラスター名は、vCenter Server インスタンス内で固有のものでなければなりません。
+
+### VMware vSphere のバージョン
 {: ##vc_nsx-t_orderinginstance-vsphere-license}
 
-デフォルトで vSphere Enterprise Plus 6.7u1 ライセンスが選択されています。
+デフォルトで vSphere Enterprise Plus 6.7u2 ライセンスが選択されています。
 
 ### プライマリーまたはセカンダリー
 {: #vc_nsx-t_orderinginstance-primary-secondary}
@@ -110,6 +121,21 @@ vCenter Server インスタンスを注文する際には、以下のシステ�
 | Dual Intel Xeon Gold 6140 Processor / 合計 36 コア、2.3 GHz | 128 GB、192 GB、384 GB、768 GB、1.5 TB |
 {: caption="表 2. Skylake {{site.data.keyword.baremetal_short}}のオプション" caption-side="top"}
 
+### Cascade
+{: #vc_nsx-t_orderinginstance-cascade}
+
+**「Cascade」**設定の場合、**「CPU モデル」**と**「RAM」**には複数のオプションがあります。
+
+Cascade {{site.data.keyword.baremetal_short}} は、VMware vSphere Enterprise Plus 6.7 U2 インスタンスでのみ使用できます。
+{:note}
+
+| CPU モデル・オプション        | RAM オプション       |
+|:------------- |:------------- |
+| Dual Intel Xeon Gold 4210 Processor / 合計 20 コア、2.3 GHz | 64 GB、96 GB、128 GB、192 GB、768 GB、1.5 TB |
+| Dual Intel Xeon Gold 5218 Processor / 合計 32 コア、2.3 GHz | 64 GB、96 GB、128 GB、192 GB、768 GB、1.5 TB |
+| Dual Intel Xeon Gold 6248 Processor / 合計 40 コア、2.5 GHz | 64 GB、96 GB、128 GB、192 GB、768 GB、1.5 TB |
+{: caption="表 3. Cascade {{site.data.keyword.baremetal_short}}のオプション" caption-side="top"}
+
 ### Broadwell
 {: #vc_nsx-t_orderinginstance-broadwell}
 
@@ -119,7 +145,7 @@ vCenter Server インスタンスを注文する際には、以下のシステ�
 |:------------- |:------------- |
 | クワッド Intel Xeon E7-4820 v4 / 合計 40 コア、2.0 GHz | 128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 | クワッド Intel Xeon E7-4850 v4 / 合計 64 コア、2.1 GHz | 128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
-{: caption="表 3. Broadwell {{site.data.keyword.baremetal_short}}のオプション" caption-side="top"}
+{: caption="表 4. Broadwell {{site.data.keyword.baremetal_short}}のオプション" caption-side="top"}
 
 ### ベア・メタル・サーバーの数
 {: #vc_nsx-t_orderinginstance-bare-metal-number}
@@ -139,12 +165,12 @@ vCenter Server インスタンスを注文する際には、以下のシステ�
 ### vSAN ストレージ
 {: #vc_nsx-t_orderinginstance-vsan-storage}
 
-vSAN は、**「Skylake」**と**「Broadwell」**のベアメタル構成でのみ使用できます。 以下の vSAN オプションを指定します。
+vSAN は、**「Skylake」**、**「Cascade」**、および**「Broadwell」**のベアメタル構成でのみ使用できます。 以下の vSAN オプションを指定します。
 * **vSAN 容量ディスクのディスク・タイプとサイズ**: 必要な容量ディスクのオプションを選択します。
 * **vSAN 容量ディスクの数**: 追加する容量ディスク数を指定します。
 * 容量ディスクを上限の 10 個を超えて追加する場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。 このオプションを指定すると、合計 12 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されます。したがって、このオプションは、より少ない待ち時間とより高い IOPS スループットが求められるワークロードに有用です。
 
-  **「High-Performance Intel Optane」**オプションは、Skylake CPU モデルでのみ使用できます。
+  **「High-Performance Intel Optane」**オプションは、Skylake および Cascade の CPU モデルでのみ使用できます。
   {:note}
 
 * **「Disk Type for vSAN Cache Disks」**および**「Number of vSAN Cache Disks」**の値を確認します。 これらの値は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けたかどうかによって異なります。
@@ -172,7 +198,7 @@ vSAN は、**「Skylake」**と**「Broadwell」**のベアメタル構成での
 | 2 IOPS/GB | このオプションは、最も汎用的なワークロード用に設計されています。 例えば、小規模なデータベースのホスト、Web アプリケーションのバックアップ、ハイパーバイザーの仮想マシン・ディスク・イメージなどの用途があります。 |
 | 4 IOPS/GB | このオプションは、同時に高い割合のデータがアクティブになる高負荷のワークロード用に設計されています。 例えば、トランザクション・データベースなどの用途があります。 |
 | 10 IOPS/GB | このオプションは、分析などの最も要求の厳しいワークロード・タイプ用に設計されています。 例えば、トランザクションの多いデータベースやその他のパフォーマンス重視のデータベースなどの用途があります。 このパフォーマンス・レベルは、ファイル共有あたり最大 4 TB の容量に制限されています。 |
-{: caption="表 4. NFS パフォーマンス・レベルのオプション" caption-side="top"}
+{: caption="表 5. NFS パフォーマンス・レベルのオプション" caption-side="top"}
 
 ## ネットワーク・インターフェースの設定
 {: #vc_nsx-t_orderinginstance-network-interface-settings}
@@ -183,26 +209,29 @@ vCenter Server インスタンスを注文する際には、以下のネット�
 {: #vc_nsx-t_orderinginstance-host-name-prefix}
 
 ホスト名接頭部は、次の要件を満たす必要があります。
-*  英数字とダッシュ (-) の文字だけを使用できます。
-*  ホスト名接頭部の先頭と末尾は英数字である必要があります。
-*  ホスト名接頭部の最大長は 10 文字です。
+* 英字の小文字、数字、およびダッシュ (-) の文字だけを使用できます。
+* ホスト名接頭部は小文字の英字で始まらなければなりません。
+* ホスト名接頭部は小文字の英字または数字で終わらなければなりません。
+* ホスト名接頭部の最大長は 10 文字です。
 
 ### サブドメイン・ラベル
 {: #vc_nsx-t_orderinginstance-subdomain-label}
 
 サブドメイン・ラベルは、次の要件を満たす必要があります。
-*  英数字とダッシュ (-) の文字だけを使用できます。
-*  サブドメイン・ラベルの先頭は英字、末尾は英数字でなければなりません。
-*  サブドメイン・ラベルの最大長は 10 文字です。
+* 英字の小文字、数字、およびダッシュ (-) の文字だけを使用できます。
+* サブドメイン・ラベルは小文字の英字で始まらなければなりません。
+* サブドメイン・ラベルは小文字の英字または数字で終わらなければなりません。
+* サブドメイン・ラベルの最大長は 10 文字です。
 
 ### ドメイン・ネーム
 {: #vc_nsx-t_orderinginstance-domain-name}
 
 ルート・ドメイン・ネームは、次の要件を満たす必要があります。
 * ドメイン・ネームは、ピリオド (.) で区切られた 2 つ以上のストリングで構成されていなければなりません。
-* 最初の文字列は、英字で始まり英数字で終わらなければなりません。
-* 最後の文字列を除き、文字列で使用できるのは、英数字とダッシュ (-) のみです。
-* 最後の文字列には、英字しか使用できません。
+* 最初の文字列は小文字の英字で始まらなければなりません。
+* 最初の文字列は小文字の英字または数字で終わらなければなりません。
+* 最後の文字列を除き、文字列で使用できるのは、英小文字、数字、およびダッシュ (-) のみです。
+* 最後の文字列には、英字の小文字しか使用できません。
 * 最後の文字列の長さは、2 文字から 24 文字までの範囲でなければなりません。
 
 ホストと VM の完全修飾ドメイン・ネーム (FQDN) の最大長は 50 文字です。 この最大長に対応するドメイン・ネームにする必要があります。
@@ -306,7 +335,7 @@ Windows Server 2016 ライセンスの注文について詳しくは、[Get star
 {: #vc_nsx-t_orderinginstance-results}
 
 * インスタンスのデプロイメントが自動的に開始され、注文が処理中であることを示す確認を受け取ります。 「インスタンスの詳細」の**「デプロイメント履歴 (Deployment History)」**セクションを表示すると、注意すべき問題を含め、デプロイメント状況を確認できます。
-* インスタンスが正常にデプロイされると、[vCenter Server with NSX-T インスタンスの技術仕様](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_overview#vc_nsx-t_overview-specs)に記述されているコンポーネントが VMware 仮想プラットフォームにインストールされます。 注文した ESXi サーバーは、デフォルトでは **cluster1** としてグループ化されます。
+* インスタンスが正常にデプロイされると、[vCenter Server with NSX-T インスタンスの技術仕様](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_overview#vc_nsx-t_overview-specs)に記述されているコンポーネントが VMware 仮想プラットフォームにインストールされます。
 * インスタンスが使用可能になると、インスタンスの状況が**「使用可能」**に変わり、E メールで通知されます。
 * セカンダリー・インスタンスを注文した場合は、セカンダリー・インスタンスの注文が完了した後に、(セカンダリー・インスタンスにリンクされた) プライマリー・インスタンスの VMware vSphere Web Client が再始動されることがあります。
 

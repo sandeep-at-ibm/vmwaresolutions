@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-06"
 
 keywords: vCenter Server add cluster, view cluster vCenter Server, delete cluster vCenter Server
 
@@ -20,8 +20,6 @@ subcollection: vmware-solutions
 
 # Cluster für vCenter Server-Instanzen hinzufügen, anzeigen und löschen
 {: #vc_addingviewingclusters}
-
-Die ESXi-Server, die Sie bei der Bestellung einer Instanz konfiguriert haben, werden standardmäßig unter **cluster1** gruppiert.
 
 Sie können eigene Cluster zu Ihren VMware vCenter Server-Instanzen hinzufügen, um die Rechen- und Speicherkapazität zu erweitern. In einem Cluster können Sie ESXi-Server verwalten, um eine bessere Ressourcenzuordnung und hohe Verfügbarkeit zu erreichen. Löschen Sie die hinzufügten Cluster aus Ihrer Instanz, wenn sie nicht mehr benötigt werden.
 
@@ -48,9 +46,10 @@ Wenn Sie einen Cluster für eine vCenter Server-Instanz hinzufügen, müssen Sie
 {: #vc_addingviewingclusters-adding-cluster-name}
 
 Der Clustername muss die folgenden Anforderungen erfüllen:
-* Es sind nur alphanumerische Zeichen und Bindestriche (-) zulässig.
-* Der Clustername muss mit einem alphanumerischen Zeichen beginnen und enden.
-* Die maximale Anzahl an Zeichen beträgt 30.
+* Es sind nur Kleinbuchstaben, Ziffern und Gedankenstriche (-) zulässig.
+* Der Clustername muss mit einem Kleinbuchstaben beginnen.
+* Der Clustername muss entweder auf einen Kleinbuchstaben oder auf eine Ziffer enden.
+* Die maximale Länge des Clusternamens beträgt 30 Zeichen.
 * Der Clustername muss innerhalb der vCenter Server-Instanz eindeutig sein.
 
 #### Standort des Rechenzentrums
@@ -63,7 +62,7 @@ Wenn Sie den Cluster in einem anderen {{site.data.keyword.CloudDataCent_notm}}- 
 ### Einstellungen für Bare Metal Server
 {: #vc_addingviewingclusters-bare-metal-settings}
 
-Sie können **Skylake**, **SAP-zertifiziert** oder **Broadwell** auswählen. Die Optionen können je nach der Version, in der Ihre Instanz ursprünglich bereitgestellt wurde, variieren.
+Sie können **Skylake**, **Cascade**, **SAP-zertifiziert** oder **Broadwell** auswählen. Die Optionen können je nach der Version, in der Ihre Instanz ursprünglich bereitgestellt wurde, variieren.
 
 #### Skylake
 {: #vc_addingviewingclusters-adding-skylake}
@@ -76,6 +75,21 @@ Für die Einstellung **Skylake** stehen Ihnen Optionen für **CPU-Modell** und *
 | Dual Intel Xeon Gold 5120-Prozessor / 28 Kerne insgesamt, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 {: caption="Tabelle 1. Optionen für Skylake {{site.data.keyword.baremetal_short}}" caption-side="top"}
+
+#### Cascade
+{: #vc_addingviewingclusters-adding-cascade}
+
+Für die Einstellung **Cascade** stehen Ihnen Optionen für **CPU-Modell** und **RAM** zur Verfügung.
+
+Cascade-{{site.data.keyword.baremetal_short}} stehen nur für VMware vSphere Enterprise Plus 6.7u2-Instanzen zur Verfügung.
+{:note}
+
+| CPU-Modelloptionen        | RAM-Optionen       |
+|:------------- |:------------- |
+|Dual Intel Xeon Gold 4210-Prozessor / 20 Kerne insgesamt, 2,3 GHz| 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1,5 TB |
+|Dual Intel Xeon Gold 5218-Prozessor / 32 Kerne insgesamt, 2,3 GHz| 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1,5 TB |
+|Dual Intel Xeon Gold 6248-Prozessor / 40 Kerne insgesamt, 2,5 GHz| 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1,5 TB |
+{: caption="Tabelle 2. Optionen für Cascade-{{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 #### SAP-zertifiziert
 {: #vc_addingviewingclusters-adding-sap}
@@ -100,7 +114,7 @@ Für die Einstellung **Broadwell** steht eine Reihe von Optionen für **CPU-Mode
 |:------------- |:------------- |
 | Quad Intel Xeon E7-4820 v4 / 40 Kerne insgesamt, 1,9 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 Kerne insgesamt, 2,2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
-{: caption="Tabelle 2. Optionen für Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
+{: caption="Tabelle 3. Optionen für Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 #### Bare Metal Server-Anzahl
 {: #vc_addingviewingclusters-adding-bare-metal-number}
@@ -122,7 +136,7 @@ Geben Sie die folgenden vSAN-Optionen an:
 * **Anzahl der vSAN-Kapazitätsplatten**: Geben Sie die Anzahl der hinzuzufügenden Kapazitätsplatten an.
 * Wenn Sie über den Grenzwert von zehn Stück hinaus Kapazitätsplatten hinzufügen möchten, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen. Diese Option stellt zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 12 Kapazitätsplatten bereit und ist für Workloads nützlich, die eine geringere Latenzzeit und einen höheren Durchsatz an E/A-Operationen pro Sekunde erfordern.
 
-  Die Option **Hohe Leistung mit Intel Optane** ist nur für die Skylake-CPU-Modelle verfügbar.
+  Die Option **Hohe Leistung mit Intel Optane** ist nur für die Skylake- und Cascade-CPU-Modelle verfügbar.
   {:note}
 
 * Überprüfen Sie die Werte für **Plattentyp für vSAN-Cacheplatten** und **Anzahl der vSAN-Cacheplatten**. Diese Werte hängen davon ab, ob Sie das Feld **Hohe Leistung mit Intel Optane** ausgewählt haben.
@@ -152,7 +166,7 @@ Details der Leistungsstufe:
 | 2 IOPS/GB | Diese Option ist für die meisten allgemeinen Workloads geeignet. Anwendungsbeispiele sind das Hosting von kompakten Datenbanken, die Sicherung von Webanwendungen oder Plattenimages von virtuellen Maschinen (VM) für einen Hypervisor. |
 | 4 IOPS/GB | Diese Option ist für Workloads mit höherer Intensität geeignet, die zu einem bestimmten Zeitpunkt einen hohen Prozentsatz an aktiven Daten aufweisen. Anwendungsbeispiele sind transaktionsorientierte Datenbanken. |
 | 10 IOPS/GB | Diese Option ist für die aufwändigsten Workloadtypen wie beispielsweise die Analyse gedacht. Anwendungsbeispiele sind Hochtransaktionsdatenbanken und andere leistungskritische Datenbanken. Diese Leistungsstufe ist auf eine maximale Kapazität von 4 TB pro gemeinsam genutzte Dateiressource begrenzt. |
-{: caption="Tabelle 3. Optionen für die NFS-Leistungsstufe" caption-side="top"}
+{: caption="Tabelle 4. Optionen für die NFS-Leistungsstufe" caption-side="top"}
 
 ### Lokale Platten
 {: #vc_addingviewingclusters-adding-local-disks}
@@ -171,11 +185,42 @@ Geben Sie die Lizenzierungsoption für die Komponente "VMware vSphere" im Cluste
 ### Netzschnittstelleneinstellungen
 {: #vc_addingviewingclusters-adding-network-interface-settings}
 
+Wenn Sie einen Cluster für eine vCenter Server-Instanz hinzufügen, müssen Sie die folgenden Netzschnittstelleneinstellungen angeben.
+
+#### Öffentliches oder privates Netz
+
 Die Einstellungen für die Aktivierung der Netzschnittstellenkarte (NIC - Network Interface Card) basieren darauf, ob Sie **Öffentliches und privates Netz** oder **Nur privates Netz** auswählen. Die folgenden Add-on-Services benötigen öffentliche NICs und sind nicht verfügbar, wenn Sie die private Option auswählen:
 
 * F5 on {{site.data.keyword.cloud_notm}}
 * FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}
 * FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}
+
+#### VLANs
+{: #vc_orderinginstance-vlans}
+
+Die Netzeinstellungen basieren auf Ihrer Auswahl von entweder **Neue VLANs bestellen** oder **Vorhandene VLANs auswählen**.
+
+Für Ihre Instanzbestellung sind 1 öffentliches VLAN und 2 private VLANs erforderlich. Die zwei privaten VLANs werden in jedem Bare Metal Server zusammengelegt.
+
+##### Neue VLANs bestellen
+{: #vc_orderinginstance-new-vlans}
+
+Wählen Sie diese Option aus, um ein neues öffentliches VLANs und zwei neue private VLANs zu bestellen.
+
+##### Vorhandene VLANs auswählen
+{: #vc_orderinginstance-existing-vlans}
+
+Abhängig vom ausgewählten {{site.data.keyword.CloudDataCent_notm}} sind möglicherweise vorhandene öffentliche und private VLANs verfügbar.
+
+Wenn Sie vorhandene öffentliche und private VLANs wiederverwenden wollen, dann geben Sie die VLANs und Teilnetze an:
+* **Öffentliches VLAN** - Wird für den Zugriff auf öffentliche Netze verwendet.
+* **Privates VLAN** - Wird für die Konnektivität zwischen den Rechenzentren und Services in {{site.data.keyword.cloud_notm}} verwendet.
+* **Sekundäres privates VLAN** - Wird für VMware-Funktionen wie z. B. vSAN verwendet.
+* **Primäres Teilnetz** - Wird physischen Hosts für den Zugriff auf öffentliche Netze zugewiesen.
+* **Primäres privates Teilnetz** - Wird physischen Hosts für den Managementdatenverkehr zugewiesen.
+
+Stellen Sie sicher, dass die Firewallkonfiguration bei den ausgewählten VLANs den Managementdatenverkehr nicht sperrt. Stellen Sie außerdem sicher, dass sich alle von Ihnen ausgewählten VLANs in demselben Pod befinden. ESXi-Server können nicht in VLANs mit unterschiedlichen Pods bereitgestellt werden.
+{:important}
 
 ### Bestellübersicht
 {: #vc_addingviewingclusters-adding-order-summary}
@@ -196,7 +241,7 @@ Sie können die bereitgestellten Ressourcen auch durch Klicken auf **Zur Schätz
 4. Geben Sie auf der Seite **Cluster hinzufügen** den Clusternamen ein.
 5. Wenn Sie für den Cluster ein anderes {{site.data.keyword.CloudDataCent_notm}} als Host verwenden möchten als das, in dem die Instanz gehostet wird, aktivieren Sie unter **Bare Metal Server** das Kontrollkästchen **Anderen Standort auswählen** und wählen Sie dann das gewünschte {{site.data.keyword.CloudDataCent_notm}} als Host für die Instanz aus.
 6. Führen Sie die Bare-Metal-Konfiguration durch.
-   * Wenn Sie **Skylake** oder **Broadwell** ausgewählt haben, geben Sie das **CPU-Modell**, die Größe des **RAM** und die **Anzahl der {{site.data.keyword.baremetal_short}}-Instanzen** an.
+   * Wenn Sie **Skylake**, **Cascade** oder **Broadwell** ausgewählt haben, geben Sie das **CPU-Modell**, die **RAM**-Größe und die **Anzahl der {{site.data.keyword.baremetal_short}}** an.
    * Wenn Sie **SAP-zertifiziert** ausgewählt haben, geben Sie das CPU-Modell an.
 7. Führen Sie die Speicherkonfiguration durch.
   * Wenn Sie **vSAN-Speicher** auswählen, geben Sie die Plattentypen für die Kapazitäts- und Cacheplatten, die Anzahl der Platten und die vSAN-Lizenzedition an. Falls Sie mehr Speicher benötigen, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen.
@@ -256,12 +301,12 @@ Details des ESXi-Servers anzeigen:
 
 | Element        | Beschreibung       |  
 |:------------- |:------------- |
-| Name | Der Name des ESXi-Servers weist das folgende Format auf:<br> `<host_prefix><n>.<subdomain_label>.<root_domain>` <br> Hierbei gilt Folgendes:<br> `host_prefix` ist das Hostnamenspräfix,<br> `n` ist die Folgenummer des Servers,<br> `subdomain_label` ist die Unterdomänenbezeichnung und<br> `root_domain` ist der Rootdomänenname |
+| Name | Der Name des ESXi-Servers hat das Format `<data_center>-<host_prefix><n>.<subdomain_label>.<root_domain>`, wobei `n` die Folgenummer des ESXi-Servers ist. |
 | Version | Die Version des ESXi-Servers. |
 | Berechtigungsnachweise | Der Benutzername und das Kennwort für den Zugriff auf den ESXi-Server. |
 | Private IP | Die private IP-Adresse des ESXi-Servers. |
 | Status | Der Status des ESXi-Servers, der einen der folgenden Werte aufweisen kann:<br> **Hinzugefügt** Der ESXi-Server wurde hinzugefügt und kann verwendet werden.<br> **Wird hinzugefügt** Der ESXi-Server wird gerade hinzugefügt.<br> **Wird gelöscht** Der ESXi-Server wird gerade gelöscht. |
-{: caption="Tabelle 4. Details zum ESXi-Server" caption-side="top"}
+{: caption="Tabelle 5. Details zum ESXi-Server" caption-side="top"}
 
 ESXi-Server zum Anzeigen weiterer Details erweitern:
 
@@ -272,7 +317,7 @@ ESXi-Server zum Anzeigen weiterer Details erweitern:
 | Angepasste vSAN-Platten | Die Anzahl der vSAN-Platten im Cluster, einschließlich des Plattentyps und der Kapazität. |
 | vSAN-Cacheplatten | Der Typ und die Anzahl der vSAN-Cacheplatten. |
 | Netzbetrieb |Die Einstellungen für die Aktivierung der Netzschnittstellenkarte (NIC) entweder des öffentlichen und privaten Netzes oder nur des privaten Netzes. |
-{: caption="Tabelle 5. Weitere Details des ESXi-Servers" caption-side="top"}
+{: caption="Tabelle 6. Weitere Details zum ESXi-Server" caption-side="top"}
 
 Speicherdetails anzeigen:
 
@@ -282,7 +327,7 @@ Speicherdetails anzeigen:
 | Größe | Die Kapazität des Speichers. |
 | IOPS/GB | Die Leistungsstufe des Speichers. |
 | NFS-Protokoll | Die NFS-Version des Speichers. |
-{: caption="Tabelle 6. Speicherdetails" caption-side="top"}
+{: caption="Tabelle 7. Speicherdetails" caption-side="top"}
 
 Details der Netzschnittstelle anzeigen:
 
@@ -292,7 +337,7 @@ Details der Netzschnittstelle anzeigen:
 | Beschreibung | Die Beschreibung des VLAN.  |
 | Standort | Der Standort des Rechenzentrums. |
 | Primäre Route | Die primäre Route des VLAN. |
-{: caption="Tabelle 7. Netzschnittstelle - VLAN-Details" caption-side="top"}
+{: caption="Tabelle 8. Netzschnittstelle - VLAN-Details" caption-side="top"}
 
 Klicken Sie auf **Ressourcen anzeigen**, um auf die VLAN-Details zuzugreifen.
 
@@ -303,7 +348,7 @@ Details des Teilnetzes anzeigen:
 | Name | Der Teilnetzname. Klicken Sie auf den Namen, um auf die Teilnetzdetails zuzugreifen. |
 | Typ | Der Typ des Teilnetzes: primär oder portierbar. |
 | Beschreibung | Die Beschreibung des Teilnetzes. |
-{: caption="Tabelle 8. Netzschnittstelle - Teilnetzdetails" caption-side="top"}
+{: caption="Tabelle 9. Netzschnittstelle - Teilnetzdetails" caption-side="top"}
 
 Details der IP-Adressen anzeigen:
 
@@ -312,7 +357,7 @@ Details der IP-Adressen anzeigen:
 | IP | Die IP-Adresse. |
 | Status | Der Status der IP-Adresse. |
 | Beschreibung |Die Beschreibung der IP-Adresse.  |
-{: caption="Tabelle 9. Netzschnittstelle - IP-Details" caption-side="top"}
+{: caption="Tabelle 10. Netzschnittstelle - IP-Details" caption-side="top"}
 
 ## Cluster aus vCenter Server-Instanzen löschen
 {: #vc_addingviewingclusters-deleting}
@@ -329,6 +374,9 @@ Wird ein Cluster nicht mehr benötigt, kann er aus einer Instanz gelöscht werde
 * Stellen Sie sicher, dass alle Knoten in einem Cluster eingeschaltet und betriebsbereit sind, bevor Sie den Cluster löschen.
 * Wenn Sie einen Cluster löschen, werden auch alle VMs des Clusters gelöscht und können nicht wiederhergestellt werden. Sollen die VMs beibehalten werden, dann müssen Sie sie auf andere Cluster migrieren.
 * Der Standardcluster kann nicht gelöscht werden.
+
+Für die Bestellung des VMware HCX on {{site.data.keyword.cloud_notm}}-Service ist eine Verpflichtung über 12 Monate erforderlich. Wenn Sie einen Cluster vor dem Ende des 12-monatigen Verpflichtungszeitraums löschen, wird Ihr Konto weiterhin für die HCX-Komponenten belastet. Das Ablaufdatum der 12-monatigen Verpflichtung ist auf der Detailseite von HCX on {{site.data.keyword.cloud_notm}} verfügbar. Weitere Informationen zum Anzeigen von Servicedetails finden Sie unter [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure).
+{:important}
 
 ### Vorgehensweise zum Löschen von Clustern aus vCenter Server-Instanzen
 {: #vc_addingviewingclusters-deleting-procedure}

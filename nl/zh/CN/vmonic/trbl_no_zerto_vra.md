@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-08-01"
 
 keywords: troubleshooting, Zerto Virtual Replication, Zerto ESXi server
 
@@ -24,7 +24,7 @@ subcollection: vmware-solutions
 ## 解决方法
 {: #trbl_no_zerto_vra-resolution}
 
-对于 vCenter Server 实例，Zerto 灾难恢复服务仅安装在缺省集群 **cluster1** 中的 ESXi 服务器上。在同一 vCenter Server 环境中创建其他集群时，或将 ESXi 服务器添加到其他集群时，不会在这些其他集群上自动安装 Zerto 灾难恢复。
+Zerto 灾难恢复服务仅安装在缺省集群（对于部署在 V3.1 或更低版本中的实例，缺省集群为 **cluster1**）中的 ESXi 服务器上。在同一 vCenter Server 环境中创建其他集群时，或将 ESXi 服务器添加到其他集群时，不会在这些其他集群上自动安装 Zerto 灾难恢复。
 
 在其他集群上，必须单独安装 Zerto 灾难恢复。
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -59,8 +59,3 @@ Applicazioni inserite nel contenitore | Applicazioni che hanno completato il per
 Watson | Per questa architettura di riferimento e per Acme Skateboards, Watson rappresenta il servizio AI utilizzato nell'architettura “Concept Car”.
 
 La rete, la sicurezza e la migrazione dell'applicazione sono spesso gli aspetti più impegnativi della modernizzazione dell'applicazione. VMware vCenter Server on {{site.data.keyword.cloud_notm}}, VMware Hybridity, VMware NSX, {{site.data.keyword.cloud_notm}} Private e {{site.data.keyword.containerlong_notm}} affrontano queste sfide e ti consentono di creare applicazioni moderne solide, sicure e resilienti.
-
-## Link correlati
-{: #vcsiks-systemcontext-related}
-
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

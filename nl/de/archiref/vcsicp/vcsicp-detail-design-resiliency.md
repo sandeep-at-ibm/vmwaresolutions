@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -118,4 +118,3 @@ Verwenden Sie den folgenden Ordner für Anwendungsimplementierungen in {{site.da
 * [Workerknoten durch das Anpassen der Größe eines vorhandenen Workerpools](/docs/containers?topic=containers-clusters)
 * [Vorgehensweise zum Sichern und Wiederherstellen von {{site.data.keyword.cloud_notm}} Private](https://medium.com/ibm-cloud/how-to-backup-and-restore-ibm-cloud-private-part-1-b6300dc1d7d8)
 * [{{site.data.keyword.icpfull_notm}}-Backup GitHub](https://github.com/ibm-cloud-architecture/icp-backup/)
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

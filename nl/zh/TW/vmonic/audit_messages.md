@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-07-24"
 
 keywords: history message, audit history, error messages
 
@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 # 實例歷程訊息
 {: #audit_messages}
 
-{{site.data.keyword.cloud_notm}} 針對 VMware 實例執行的所有作業，都會記載在實例歷程中。您可以使用實例歷程作為參照，來檢閱這些作業。如需檢閱實例歷程的相關資訊，請參閱[檢視 vCenter Server 實例部署歷程的程序](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances#vc_viewinginstances-procedure-view-deploy-history)。
+{{site.data.keyword.cloud}} 針對 VMware 實例執行的所有作業，都會記載在實例歷程中。您可以使用實例歷程作為參照，來檢閱這些作業。如需檢閱實例歷程的相關資訊，請參閱[檢視 vCenter Server 實例部署歷程的程序](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances#vc_viewinginstances-procedure-view-deploy-history)。
 
 下列各節提供可以發出至實例歷程的所有可能訊息。
 
@@ -51,7 +51,7 @@ subcollection: vmware-solutions
 * ``正在取消 <environment> 附加費用...``
 * ``VMware 授權取消進行中...``
 * ``VMware 授權取消已完成。``
-* ``SoftLayer 訂購失敗或逾時。``
+* ``{{site.data.keyword.cloud_notm}} 基礎架構訂購失敗或逾時。``
 
 ## 實例錯誤訊息
 {: #audit_messages-error}
@@ -60,9 +60,9 @@ subcollection: vmware-solutions
 
 * ``訂購 VMware 授權時發生錯誤。請開立服務問題單，以取得協助。``
 * ``訂購子網路時發生錯誤。請開立服務問題單，以取得協助。``
-* ``錯誤：SoftLayer API 金鑰無效。請開立服務問題單，以取得協助。``
-* ``錯誤：SoftLayer 資料中心無效。請開立服務問題單，以取得協助。``
-* ``在提供的 SoftLayer 帳戶中使用共用映像檔時發生錯誤。請開立服務問題單，以取得協助。``
+* ``錯誤：{{site.data.keyword.cloud_notm}} 基礎架構 API 金鑰無效。請開立服務問題單，以取得協助。``
+* ``錯誤：{{site.data.keyword.cloud_notm}} 基礎架構資料中心無效。請開立服務問題單，以取得協助。``
+* ``在提供的 {{site.data.keyword.cloud_notm}} 基礎架構帳戶中使用共用映像檔時發生錯誤。請開立服務問題單，以取得協助。``
 * ``訂購服務項目時發生錯誤。請開立服務問題單，以取得協助。``
 * ``訂購子網路時發生錯誤。請開立服務問題單，以取得協助。``
 * ``訂購授權時發生錯誤。請開立服務問題單，以取得協助。``
@@ -235,18 +235,6 @@ subcollection: vmware-solutions
 * ``預設服務已順利啟用。``
 * ``服務項目取消進行中...``
 * ``服務項目取消已完成。``
-
-## vCenter Server with Hybridity Bundle 歷程訊息
-{: #audit_messages-hybridity}
-
-{{site.data.keyword.vmwaresolutions_short}} 會針對 vCenter Server with Hybridity Bundle 實例發出下列訊息：
-
-* ``正在訂購 vCenter Server with Hybridity Bundle 授權...``
-* ``正在啟動 vCenter Server with Hybridity Bundle 轉換...``
-* ``vCenter Server with Hybridity Bundle 轉換已完成。``
-* ``正在移除 vCenter Server with Hybridity Bundle...``
-* ``已順利移除 vCenter Server with Hybridity Bundle。``
-* ``正在取消 vCenter Server with Hybridity Bundle 轉換...``
 
 ## 相關鏈結
 {: #audit_messages-related}

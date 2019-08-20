@@ -122,7 +122,7 @@
        id="g22">
       <text
          x="281"
-         y="401.5"
+         y="411.5"
          id="text24">
         <tspan
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gulim;-inkscape-font-specification:Gulim"
@@ -163,8 +163,8 @@
          id="text34">Cloud Automation Manager</text>
       <text
          x="243"
-         y="482"
-         id="text36">Containers</text>
+         y="484"
+         id="text36">Container</text>
     </g>
     <image
        x="199"
@@ -189,7 +189,7 @@
        id="g42">
       <text
          x="411.5"
-         y="482"
+         y="484"
          id="text44">Kubernetes</text>
     </g>
     <g
@@ -563,7 +563,7 @@
        font-size="12px"
        id="g156">
       <text
-         x="395"
+         x="411.5"
          y="451"
          id="text158">NSX-T</text>
     </g>

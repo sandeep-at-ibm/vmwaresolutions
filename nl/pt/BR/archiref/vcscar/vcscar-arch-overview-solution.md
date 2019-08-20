@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -196,8 +196,3 @@ Uma interface gráfica com o usuário para criar modelos do Terraform com um rec
 {: #vcscar-arch-overview-solution-maria-db}
 
 O banco de dados para o aplicativo de designer modelo.
-
-## Links Relacionados
-{: #vcscar-arch-overview-solution-related}
-
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

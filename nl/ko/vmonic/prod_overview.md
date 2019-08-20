@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-07-22"
 
 keywords: about vmware solutions, product overview, benefits
 
@@ -50,13 +50,6 @@ subcollection: vmware-solutions
 vCenter Server 오퍼링은 비즈니스 요구사항에 가장 적합하도록 사용자 정의 컴퓨팅, 스토리지 및 네트워크 리소스를 사용하여 VMware 가상 환경을 배치할 수 있도록 허용합니다.
 
 자세한 정보는 [vCenter Server 개요](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)를 참조하십시오.
-
-### VMware vCenter Server on IBM Cloud with Hybridity Bundle
-{: #prod_overview-hybridity}
-
-vCenter Server with Hybridity 오퍼링은 온프레미스 인프라를 클라우드로 손쉽고 빠르게 확장하는 데 도움을 주는 호스팅된 프라이빗 클라우드입니다. VMware 환경은 IBM 제공 VMware 소프트웨어 정의 데이터 센터 라이센스를 기반으로 하며 VMware Hybrid Cloud Extension(HCX)를 포함합니다. HCX를 사용하면 원활한 인프라 하이브리디티 및 진정한 애플리케이션 이동성을 위해 온프레미스 vSphere 5.0+ 환경을 {{site.data.keyword.cloud_notm}} 사이트와 안전하게 연결할 수 있습니다.
-
-자세한 정보는 [vCenter Server with Hybridity Bundle 개요](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)를 참조하십시오.
 
 ### VMware vSphere on IBM Cloud
 {: #prod_overview-vss}

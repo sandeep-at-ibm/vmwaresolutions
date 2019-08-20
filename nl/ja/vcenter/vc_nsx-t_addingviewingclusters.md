@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-06"
 
 keywords: vCenter Server NSX-T add cluster, view cluster vCenter Server NSX-T, delete cluster vCenter Server NSX-T
 
@@ -20,8 +20,6 @@ subcollection: vmware-solutions
 
 # vCenter Server with NSX-T インスタンスのクラスターの追加、表示、削除
 {: #vc_nsx-t_addingviewingcluster}
-
-インスタンスの注文時に構成した ESXi サーバーは、デフォルトでは **cluster1** としてグループ化されます。
 
 VMware vCenter Server with NSX-T インスタンスに独自のクラスターを追加して、コンピュート能力やストレージ容量を拡張できます。 クラスター内で ESXi サーバーを管理すると、リソース割り振りを改善したり高可用性を実現したりできます。 不要になった場合は、追加したクラスターをインスタンスから削除します。
 
@@ -43,10 +41,11 @@ vCenter Server with NSX-T インスタンスにクラスターを追加すると
 {: #vc_nsx-t_addingviewingclusters-adding-cluster-name}
 
 クラスター名は、以下の要件を満たしている必要があります。
-* 英数字とダッシュ (-) の文字だけを使用できます。
-* クラスター名の先頭と末尾は、英数字でなければなりません。
-* 最大文字数は 30 です。
-* クラスター名は、vCenter Server インスタンス内で固有のものでなければなりません。
+* 英字の小文字、数字、およびダッシュ (-) の文字だけを使用できます。
+* クラスター名は小文字の英字で始まらなければなりません。
+* クラスター名は小文字の英字または数字で終わらなければなりません。
+* クラスター名の最大の長さは 30 文字です。
+* クラスター名は、vCenter Server with NSX-T インスタンス内で固有でなければなりません。
 
 #### データ・センターの場所
 {: #vc_nsx-t_addingviewingclusters-adding-dc-location}
@@ -58,7 +57,7 @@ vCenter Server with NSX-T インスタンスにクラスターを追加すると
 ### ベア・メタル・サーバーの設定
 {: #vc_nsx-t_addingviewingclusters-bare-metal-settings}
 
-**「Skylake」**または**「Broadwell」**のいずれかを選択できます。
+**「Skylake」**、**「Cascade」**、または**「Broadwell」**のいずれかを選択できます。
 
 #### Skylake
 {: #vc_nsx-t_addingviewingclusters-adding-skylake}
@@ -72,6 +71,21 @@ vCenter Server with NSX-T インスタンスにクラスターを追加すると
 | Dual Intel Xeon Gold 6140 Processor / 合計 36 コア、2.3 GHz | 128 GB、192 GB、384 GB、768 GB、1.5 TB |
 {: caption="表 1. Skylake {{site.data.keyword.baremetal_short}}のオプション" caption-side="top"}
 
+#### Cascade
+{: #vc_nsx-t_addingviewingclusters-adding-cascade}
+
+**「Cascade」**設定の場合、**「CPU モデル」**と**「RAM」**には複数のオプションがあります。
+
+Cascade {{site.data.keyword.baremetal_short}} は、VMware vSphere Enterprise Plus 6.7 U2 インスタンスでのみ使用できます。
+{:note}
+
+| CPU モデル・オプション        | RAM オプション       |
+|:------------- |:------------- |
+| Dual Intel Xeon Gold 4210 Processor / 合計 20 コア、2.3 GHz | 64 GB、96 GB、128 GB、192 GB、768 GB、1.5 TB |
+| Dual Intel Xeon Gold 5218 Processor / 合計 32 コア、2.3 GHz | 64 GB、96 GB、128 GB、192 GB、768 GB、1.5 TB |
+| Dual Intel Xeon Gold 6248 Processor / 合計 40 コア、2.5 GHz | 64 GB、96 GB、128 GB、192 GB、768 GB、1.5 TB |
+{: caption="表 2. Cascade {{site.data.keyword.baremetal_short}}のオプション" caption-side="top"}
+
 #### Broadwell
 {: #vc_nsx-t_addingviewingclusters-adding-broadwell}
 
@@ -81,7 +95,7 @@ vCenter Server with NSX-T インスタンスにクラスターを追加すると
 |:------------- |:------------- |
 | クワッド Intel Xeon E7-4820 v4 / 合計 40 コア、1.9 GHz | 128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 | クワッド Intel Xeon E7-4850 v4 / 合計 64 コア、2.2 GHz | 128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
-{: caption="表 2. Broadwell {{site.data.keyword.baremetal_short}}のオプション" caption-side="top"}
+{: caption="表 3. Broadwell {{site.data.keyword.baremetal_short}}のオプション" caption-side="top"}
 
 #### ベア・メタル・サーバーの数
 {: #vc_nsx-t_addingviewingclusters-adding-bare-metal-number}
@@ -103,7 +117,7 @@ vCenter Server with NSX-T インスタンスにクラスターを追加すると
 * **vSAN 容量ディスクの数**: 追加する容量ディスク数を指定します。
 * 容量ディスクを上限の 10 個を超えて追加する場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。 このオプションを指定すると、合計 12 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されます。したがって、このオプションは、より少ない待ち時間とより高い IOPS スループットが求められるワークロードに有用です。
 
-  **「High-Performance Intel Optane」**オプションは、Skylake CPU モデルでのみ使用できます。
+  **「High-Performance Intel Optane」**オプションは、Skylake および Cascade の CPU モデルでのみ使用できます。
   {:note}
 
 * **「Disk Type for vSAN Cache Disks」**および**「Number of vSAN Cache Disks」**の値を確認します。 これらの値は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けたかどうかによって異なります。
@@ -133,7 +147,7 @@ vCenter Server with NSX-T インスタンスにクラスターを追加すると
 | 2 IOPS/GB | このオプションは、最も汎用的なワークロード用に設計されています。 例えば、小規模なデータベースのホスト、Web アプリケーションのバックアップ、ハイパーバイザーの仮想マシン (VM) ディスク・イメージなどの用途があります。 |
 | 4 IOPS/GB | このオプションは、同時に高い割合のデータがアクティブになる高負荷のワークロード用に設計されています。 例えば、トランザクション・データベースなどの用途があります。 |
 | 10 IOPS/GB | このオプションは、分析などの最も要求の厳しいワークロード・タイプ用に設計されています。 例えば、トランザクションの多いデータベースやその他のパフォーマンス重視のデータベースなどの用途があります。 このパフォーマンス・レベルは、ファイル共有あたり最大 4 TB の容量に制限されています。 |
-{: caption="表 3. NFS パフォーマンス・レベルのオプション" caption-side="top"}
+{: caption="表 4. NFS パフォーマンス・レベルのオプション" caption-side="top"}
 
 ### ライセンス交付の設定
 {: #vc_nsx-t_addingviewingclusters-adding-licensing-settings}
@@ -223,12 +237,12 @@ vCenter Server with NSX-T インスタンスにクラスターを追加すると
 
 | 項目        | 説明       |  
 |:------------- |:------------- |
-| 名前 | ESXi サーバーの名前は以下の形式です。<br> `<host_prefix><n>.<subdomain_label>.<root_domain>` <br> 各部の意味は、次のとおりです。<br> `host_prefix` はホスト名の接頭部です<br> `n` はサーバーの順序です<br> `subdomain_label` はサブドメイン・ラベルです<br> `root_domain` はルート・ドメイン名です |
+| 名前 | ESXi サーバーの名前は、`<data_center>-<host_prefix><n>.<subdomain_label>.<root_domain>` という形式です。ここで、`n` は ESXi サーバーのシーケンスです。|
 | バージョン | ESXi サーバーのバージョン。 |
 | 資格情報 | ESXi サーバーにアクセスするために使用するユーザー名とパスワード。 |
 | プライベート IP | ESXi サーバーのプライベート IP アドレス。 |
 | 状況 | ESXi サーバーの状況。次の値のいずれかになります。<br> **追加済み** ESXi サーバーが追加され、使用可能な状態です。<br> **追加中** ESXi サーバーが追加されています。<br> **削除中** ESXi サーバーが削除されています。 |
-{: caption="表 4. ESXi サーバーの詳細" caption-side="top"}
+{: caption="表 5. ESXi サーバーの詳細" caption-side="top"}
 
 ストレージの詳細を表示します。
 
@@ -238,7 +252,7 @@ vCenter Server with NSX-T インスタンスにクラスターを追加すると
 | サイズ | ストレージの容量。 |
 | IOPS/GB | ストレージのパフォーマンス・レベル。 |
 | NFS プロトコル | ストレージの NFS バージョン。 |
-{: caption="表 5. ストレージの詳細" caption-side="top"}
+{: caption="表 6. ストレージの詳細" caption-side="top"}
 
 ネットワーク・インターフェースの詳細を表示します。
 
@@ -248,7 +262,7 @@ vCenter Server with NSX-T インスタンスにクラスターを追加すると
 | 説明 | VLAN の説明。  |
 | ロケーション | データ・センターのロケーション。 |
 | 1 次経路 | VLAN の 1 次経路。 |
-{: caption="表 6. ネットワーク・インターフェース - VLAN の詳細" caption-side="top"}
+{: caption="表 7. ネットワーク・インターフェース - VLAN の詳細" caption-side="top"}
 
 VLAN の詳細にアクセスするには**「リソースの表示」**をクリックします。
 
@@ -259,7 +273,7 @@ VLAN の詳細にアクセスするには**「リソースの表示」**をク�
 | 名前 | サブネット名。 サブネットの詳細にアクセスするには名前をクリックします。 |
 | タイプ | サブネットのタイプ: 1 次またはポータブル。 |
 | 説明 | サブネットの説明。 |
-{: caption="表 7. ネットワーク・インターフェース - サブネットの詳細" caption-side="top"}
+{: caption="表 8. ネットワーク・インターフェース - サブネットの詳細" caption-side="top"}
 
 IP の詳細を表示します。
 
@@ -268,7 +282,7 @@ IP の詳細を表示します。
 | IP | IP アドレス。 |
 | 状況 | IP アドレスの状況。 |
 | 説明 |IP アドレスの説明。  |
-{: caption="表 8. ネットワーク・インターフェース - IP の詳細" caption-side="top"}
+{: caption="表 9. ネットワーク・インターフェース - IP の詳細" caption-side="top"}
 
 ## vCenter Server with NSX-T インスタンスからのクラスターの削除
 {: #vc_nsx-t_addingviewingclusters-deleting}

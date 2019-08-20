@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -141,8 +141,3 @@ Depois de treinado, o Discovery Service pode responder a consultas, como:
 - Mostre-me todas as manobras com a manobra base de heelflip.
 - Mostre-me todas as manobras.
 - Mostre-me todas as manobras com múltiplas combinações.
-
-## Links relacionados
-{: #vcscar-logical-related}
-
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

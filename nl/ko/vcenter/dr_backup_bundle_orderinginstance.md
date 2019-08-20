@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-25"
 
 keywords: single-node trial, data protection DR, order data protection DR
 
@@ -47,9 +47,10 @@ subcollection: vmware-solutions
 ### 인스턴스 이름 요구 사항
 {: #dr_backup_bundle_orderinginstance-inst-name-req}
 
-인스턴스 이름 요구사항을 검토하십시오.
-* 영숫자 문자 및 대시(-) 문자만 사용할 수 있습니다.
-* 인스턴스 이름은 영문자로 시작하고 영숫자로 끝나야 합니다.
+인스턴스 이름은 다음 요구사항을 충족해야 합니다.
+* 소문자 영문자, 숫자 및 대시(-) 문자만 사용할 수 있습니다.
+* 인스턴스 이름은 소문자 영문자로 시작해야 합니다.
+* 인스턴스 이름은 소문자 영문자 또는 숫자로 끝나야 합니다.
 * 인스턴스 이름의 최대 길이는 10자입니다.
 * 인스턴스 이름은 계정 내에서 고유해야 합니다.
 
@@ -193,8 +194,8 @@ HCX on {{site.data.keyword.cloud_notm}}의 배치가 자동화됩니다. 다음 
 ## 관련 링크
 {: #dr_backup_bundle_orderinginstance-related}
 
-* [vCenter Server 및 IBM Cloud Private 안내서](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [IBM Cloud Private의 티켓 열기](https://www.ibm.com/mysupport/s/?language=en_US){:external}
+* [vCenter Server 및 {{site.data.keyword.cloud_notm}} Private 안내서](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
+* [{{site.data.keyword.cloud_notm}} Private의 티켓 열기](https://www.ibm.com/mysupport/s/?language=en_US){:external}
 * [VMware HCX 리소스](https://hcx.vmware.com/#/docs){:external}
 * [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}
 * [가상 서버 취소](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)

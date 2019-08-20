@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-25"
 
 keywords: single-node trial, migration app modernization, order migration app modernization
 
@@ -44,9 +44,10 @@ Assegure-se de que você confirme os requisitos a seguir e conclua as tarefas a 
 ### Requisitos de nome da instância
 {: #cloud_modern_bundle_orderinginstance-inst-name-req}
 
-Revise os requisitos de nome da instância:
-* Apenas caracteres alfanuméricos e o traço (-) são permitidos.
-* O nome da instância deve iniciar com um caractere alfabético e terminar com um caractere alfanumérico.
+O nome da instância deve atender aos requisitos a seguir:
+* Somente caracteres alfabéticos minúsculos, numéricos e de traço (-) são permitidos.
+* O nome da instância deve começar com um caractere alfabético minúsculo.
+* O nome da instância deve terminar com um caractere alfabético minúsculo ou numérico.
 * O comprimento máximo do nome da instância é de 10 caracteres.
 * O nome da instância deve ser exclusivo dentro de sua conta.
 
@@ -191,8 +192,8 @@ Conclua as etapas a seguir para excluir uma instância do Single-node Trial for 
 ## Links relacionados
 {: #cloud_modern_bundle_orderinginstance-related}
 
-* [Guia do vCenter Server e do IBM Cloud Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [Abra um chamado para o IBM Cloud Private](https://www.ibm.com/mysupport/s/?language=en_US){:external}
+* [ vCenter Server e  {{site.data.keyword.cloud_notm}}  Guia privado ](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
+* [Abrir um chamado para o {{site.data.keyword.cloud_notm}} Private](https://www.ibm.com/mysupport/s/?language=en_US){:external}
 * [Recursos do VMware HCX](https://hcx.vmware.com/#/docs){:external}
 * [Guia do Usuário do VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}
 * [Cancelando servidores virtuais](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)

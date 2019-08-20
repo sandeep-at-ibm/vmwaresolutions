@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-22"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -68,7 +68,7 @@ Stockage | 100 Go |  SATA : 2 To / SSD : 960 Go
 ## Structure virtuelle
 {: #vcsiks-arch-overview-infrastructure-virtual-structure}
 
-![Structure physique des déploiements {{site.data.keyword.containerlong_notm}} et {{site.data.keyword.icpfull_notm}}](../../images/vcsiks-phy-ics-iks-deployment.svg "Structure physique des déploiements {{site.data.keyword.containerlong_notm}} et {{site.data.keyword.icpfull_notm}}"){: caption="Figure 1. Structure physique des déploiements {{site.data.keyword.containerlong_notm}} et {{site.data.keyword.icpfull_notm}}" caption-side="bottom"}
+![Structure physique de {{site.data.keyword.containerlong_notm}} et {{site.data.keyword.icpfull_notm}} Diagramme de déploiement](../../images/vcsiks-phy-ics-iks-deployment.svg "Structure physique de {{site.data.keyword.containerlong_notm}} et {{site.data.keyword.icpfull_notm}} Diagramme de déploiement")
 
 Dans l'instance vCenter Server, les machines virtuelles de client sont déployées sur des passerelles NSX Edge Services Gateway (ESG) et des routeurs logiques distribués (DLR) dédiés.
 
@@ -87,8 +87,7 @@ Le déploiement vCenter Server utilise un seul contrôleur PSC externe installé
 ### vCenter Server
 {: #vcsiks-arch-overview-infrastructure-vcs}
 
-A l'instar du contrôleur PSC, vCenter Server est déployé en tant que dispositif.
-En outre, vCenter Server est installé sur un sous-réseau portable, sur le VLAN privé associé aux machines virtuelles de gestion. Le routeur BCR lui sert de passerelle par défaut.
+A l'instar du contrôleur PSC, vCenter Server est déployé en tant que dispositif. En outre, vCenter Server est installé sur un sous-réseau portable, sur le VLAN privé associé aux machines virtuelles de gestion. Le routeur BCR lui sert de passerelle par défaut.
 
 ### NSX Manager
 {: #vcsiks-arch-overview-infrastructure-nsx-manager}
@@ -104,6 +103,7 @@ L'automatisation {{site.data.keyword.cloud_notm}} déploie trois contrôleurs NS
 {: #vcsiks-arch-overview-infrastructure-nsx-esg}
 
 Des paires de passerelles NSX ESG (Edge Services Gateway) sont déployées. Dans tous les cas, une paire de passerelles est utilisée pour le trafic sortant des composants d'automatisation qui résident sur le réseau privé. Pour vCenter Server et {{site.data.keyword.icpfull_notm}}, une seconde passerelle, appelée serveur de périphérie géré ICP, est déployée et configurée avec une liaison montante au réseau public et une interface qui est affectée au réseau privé.
+
 Les composants NSX requis, tels que le routeur DLR (Distributed Logical Router), les commutateurs logiques et les pare-feu peuvent être configurés par l'administrateur. Pour plus d'informations sur les passerelles NSX ESG déployées dans le cadre de la solution, voir le [guide de mise en réseau de vCenter Server](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro).
 
 Les tableaux ci-après répertorient les spécifications {{site.data.keyword.icpfull_notm}} ESG/DLR pour ICP.
@@ -140,8 +140,3 @@ Le maître Kubernetes est chargé de gérer toutes les ressources de calcul, de 
 {: #vcsiks-arch-overview-infrastructure-worker-node}
 
 Chaque noeud worker est une machine physique (bare metal) ou une machine virtuelle qui s'exécute sur du matériel physique dans l'environnement de cloud. Lorsque vous mettez à disposition un noeud worker, vous déterminez les ressources disponibles dans les conteneurs qui sont hébergés sur ce noeud worker. Prêts à l'emploi, vos noeuds worker sont configurés avec un moteur Docker géré par IBM, des ressources de calcul distinctes, la mise en réseau et un services de volumes. Les fonctions de sécurité intégrées assurent l'isolement, offrent des capacités de gestion des ressources et garantissent la conformité des noeuds worker en matière de sécurité.
-
-## Liens connexes
-{: #vcsiks-arch-overview-infrastructure-related}
-
-* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

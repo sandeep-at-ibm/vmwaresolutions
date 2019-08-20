@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-23"
 
 keywords: vCenter Server migrate instance, add account vCenter Server, migrate cloud account
 
@@ -49,4 +49,4 @@ subcollection: vmware-solutions
 
 * [利用 IAM 管理使用者存取](/docs/services/vmwaresolutions/services?topic=vmware-solutions-iam#iam)
 * [邀請使用者存取服務及資源](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-iamuserinvite)
-* [何謂 IBM Cloud IAM](/docs/iam?topic=iam-iamoverview)
+* [何謂 {{site.data.keyword.cloud_notm}} IAM](/docs/iam?topic=iam-iamoverview)

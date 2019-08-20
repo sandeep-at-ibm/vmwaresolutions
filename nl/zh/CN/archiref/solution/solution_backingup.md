@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-14"
+lastupdated: "2019-07-16"
 
 subcollection: vmware-solutions
 
@@ -68,7 +68,7 @@ VMware 要求备份位置为空文件夹，因此您应该计划备份轮换或�
 
 * Zerto Virtual Replication：Zerto Virtual Manager (ZVM) 系统部署为 {{site.data.keyword.cloud_notm}} 虚拟服务器实例 (VSI)，但 Veeam 或 IBM Spectrum Protect Plus 不支持其备份。如果灾难恢复策略需要您在不执行站点故障转移的情况下恢复 ZVM，那么应使用首选 Windows 备份解决方案来备份和复原 ZVM。
 * F5 BIG-IP：F5 建议使用[基于文件的 F5 配置备份](https://support.f5.com/csp/article/K13132){:new_window}，您可以将其定向到文件服务器。
-* FortiGate Security Appliance 或 VM：Fortinet 建议使用[基于文件的 FortiGate 配置备份](http://help.fortinet.com/fos50hlp/54/Content/FortiOS/fortigate-best-practices-54/Firmware/Performing_Config_Backup.htm){:new_window}，您可以将其定向到文件服务器。
+* FortiGate Security Appliance 或 VM：Fortinet 建议使用[基于文件的 FortiGate 配置备份](https://help.fortinet.com/fos50hlp/54/Content/FortiOS/fortigate-best-practices-54/Firmware/Performing_Config_Backup.htm){:new_window}，您可以将其定向到文件服务器。
 * HyTrust Cloud Control 和 Data Control：HyTrust 支持对 HyTrust 服务器设备进行基于映像和基于文件的备份。有关更多信息，请参阅 HyTrust 管理指南。
 * VMware HCX：与 vCenter Server Appliance 类似，HCX 设备管理界面也支持创建和下载基于文件的 HCX Manager 配置备份。
 

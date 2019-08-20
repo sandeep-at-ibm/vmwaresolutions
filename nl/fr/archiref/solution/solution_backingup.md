@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-14"
+lastupdated: "2019-07-16"
 
 subcollection: vmware-solutions
 
@@ -68,7 +68,7 @@ Si vous déployez des composants de solution complémentaires dans votre instanc
 
 * Réplication virtuelle Zerto : le système ZVM (Zerto Virtual Manager) est déployé en tant qu'instance de serveur virtuel {{site.data.keyword.cloud_notm}} et sa sauvegarde n'est pas prise en charge par Veeam ou IBM Spectrum Protect Plus. Si votre stratégie de reprise après incident nécessite de restaurer le système ZVM sans effectuer un basculement de site, vous devez utiliser votre solution de sauvegarde Windows préférée pour sauvegarder et restaurer le système ZVM.
 * F5 BIG-IP : F5 recommande la [sauvegarde de niveau fichier de la configuration BIG-IP](https://support.f5.com/csp/article/K13132){:new_window}, que vous pouvez diriger vers votre serveur de fichiers.
-* FortiGate Security Appliance ou machine virtuelle : Fortinet recommande la [sauvegarde de niveau fichier de la configuration FortiGate](http://help.fortinet.com/fos50hlp/54/Content/FortiOS/fortigate-best-practices-54/Firmware/Performing_Config_Backup.htm){:new_window}, que vous pouvez diriger vers votre serveur de fichiers.
+* FortiGate Security Appliance ou machine virtuelle : Fortinet recommande la [sauvegarde de niveau fichier de la configuration FortiGate](https://help.fortinet.com/fos50hlp/54/Content/FortiOS/fortigate-best-practices-54/Firmware/Performing_Config_Backup.htm){:new_window}, que vous pouvez diriger vers votre serveur de fichiers.
 * HyTrust Cloud Control et Data Control : HyTrust prend en charge la sauvegarde par image et la sauvegarde de niveau fichier des dispositifs de serveur HyTrust. Pour plus d'informations, voir les guides d'administration HyTrust.
 * VMware HCX : l'interface de gestion de dispositif HCX vous permet de créer et télécharger une sauvegarde de niveau fichier de la configuration HCX Manager qui est semblable à celle du dispositif vCenter Server Appliance.
 

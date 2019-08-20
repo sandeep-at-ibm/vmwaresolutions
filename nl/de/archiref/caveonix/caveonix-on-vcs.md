@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -52,8 +52,3 @@ Die Hauptvorteile von Caveonix RiskForesight on IBM Cloud sind:
 -	Proaktive Verwaltung des Gesamtrisikos in der Hybrid-Cloud, um entsprechende Verstöße zu vermeiden.
 -	Gewinnung einer vollständigen Einsicht in Workload-Schwachstellen und Konfigurationsprobleme auf Ebene der Infrastruktur, Plattform und Anwendung vor dem Hintergrund von Sicherheits- und Konformitätsanforderungen.
 -	Möglichkeiten für das Unternehmen, ein proaktives Risikomanagement-Framework in Hinblick auf die NIST-Kriterien (National Institute of Standards and Technology) bereitzustellen.
-
-## Zugehörige Links
-{: #caveonix-on-vcs-related}
-
-*   [VMware vCenter Server on {{site.data.keyword.cloud_notm}} mit Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-06"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -85,9 +85,3 @@ subcollection: vmware-solutions
 |专用 B|可移植|分配用于 vSAN（如果在使用 vSAN）。|
 |专用 B|可移植|分配用于 NAS（如果在使用 NAS）。|
 |专用 B|可移植|分配用于 vMotion。|
-
-
-## 相关链接
-{: #caveonix-detailed-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

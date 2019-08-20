@@ -288,7 +288,7 @@
          id="text88">
         <tspan
            style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
-           id="tspan4384">검색</tspan>
+           id="tspan4384">Discovery</tspan>
       </text>
       <text
          x="239.25"
@@ -296,7 +296,7 @@
          id="text90">
         <tspan
            style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
-           id="tspan4382">서비스</tspan>
+           id="tspan4382">Service</tspan>
       </text>
     </g>
     <rect
@@ -672,7 +672,7 @@
            id="text210">
           <tspan
              style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
-             id="tspan4392">배치</tspan>
+             id="tspan4392">애플리케이션</tspan>
         </text>
         <text
            x="689"
@@ -680,7 +680,7 @@
            id="text212">
           <tspan
              style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
-             id="tspan4390">애플리케이션</tspan>
+             id="tspan4390">배치</tspan>
         </text>
       </g>
     </g>

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-16"
 
 keywords: vCenter Server multi-site, multi-site configuration, multi-site deployment vCenter Server
 
@@ -32,16 +32,16 @@ La configurazione multisito per le istanze vCenter Server è supportata solo per
 Una distribuzione multisito è costituita dai seguenti componenti.
 
 * **Istanza primaria**: l'istanza VMware vCenter Server primaria ha la seguente configurazione:
-  *  Dominio root Microsoft Active Directory (AD) e DNS (Domain Name System)
-  *  Dominio secondario vCenter Server
-  *  Dominio SSO (Single Sign-On)
-  *  Nome del sito SSO
+  * Dominio root Microsoft Active Directory (AD) e DNS (Domain Name System)
+  * Dominio secondario vCenter Server
+  * Dominio SSO (Single Sign-On)
+  * Nome del sito SSO
+  * Per le istanze primarie distribuite nella V2.8 o successiva: vCenter Server Appliance (vCSA) con PSC (Platform Services Controller) integrato
 * **Istanza o istanze secondarie**: una o più istanze vCenter Server secondarie, collegate all'istanza primaria, con la seguente configurazione:
-   *  Nome del sito SSO
-   *  Dominio secondario DNS collegato al dominio root sull'istanza primaria
-   *  Replica DNS e AD configurata tra le VM (Virtual Machine) AD sulle istanze primarie e secondarie
-   *  Per le istanze primarie distribuite nella V2.8 o successiva: vCenter Server Appliance (vCSA) con PSC (Platform Services Controller) integrato viene distribuito e configurato
-   *  VMware vCenter sulle istanze secondarie è configurato con la modalità di collegamento migliorata per vCenter sull'istanza primaria
+  * Nome del sito SSO
+  * Dominio secondario DNS collegato al dominio root sull'istanza primaria
+  * Replica DNS e AD configurata tra le VM (Virtual Machine) AD sulle istanze primarie e secondarie
+  * VMware vCenter sulle istanze secondarie è configurato con la modalità di collegamento migliorata per vCenter sull'istanza primaria
 
 ## Distribuzione multisito di vCenter Server
 {: #vc_multisite-deployment}

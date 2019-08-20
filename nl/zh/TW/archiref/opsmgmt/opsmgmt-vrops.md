@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-03"
+lastupdated: "2019-08-05"
 
 ---
 
@@ -45,7 +45,7 @@ vROps 會從下列項目收集資料：
 ## 系統需求
 {: #opsmgmt-vrops-requirements}
 
-分析叢集由一個主節點、一個主節點抄本節點和兩個資料節點組成，支持橫向擴充和高可用性。額外的資料節點會新增以進行擴增。分析叢集最多可擴充為具有八個中等大小的節點。
+分析叢集由一個主節點、一個主節點抄本節點和兩個資料節點組成，能啟用橫向擴充和高可用性。額外的資料節點會新增以進行擴增。分析叢集最多可擴充為具有八個中等大小的節點。
 
 表 1. Operations Manager 主節點/抄本節點系統設定
 
@@ -220,7 +220,6 @@ vRealize Operations Management Pack for HCX 會將 vROps 的作業管理功能�
 ## 相關鏈結
 {: #opsmgmt-vrops-management-links}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
 * [vRealize Operations Manager 7.0 Sizing Guidelines](https://kb.vmware.com/s/article/57903){:new_window}
 * [vRealize Operations Manager 說明文件](https://docs.vmware.com/en/vRealize-Operations-Manager/index.html){:new_window}
 * [Management Pack for vSAN](https://marketplace.vmware.com/resources/vsx/product_files/31742/original/Management-Pack-for-vSAN-Guide6d2a8895b022a5f626a86e8e84b031b5.pdf){:new_window}

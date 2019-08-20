@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-07-22"
 
 keywords: about vmware solutions, product overview, benefits
 
@@ -51,13 +51,6 @@ A oferta vCenter Server permite implementar um ambiente virtual VMware usando re
 
 Para obter mais informações, veja [Visão geral do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview).
 
-### VMware vCenter Server on IBM Cloud with Hybridity Bundle
-{: #prod_overview-hybridity}
-
-A oferta vCenter Server with Hybridity é uma nuvem particular host que ajuda a estender de forma rápida e fácil sua infraestrutura no local para a nuvem. O ambiente do VMware é baseado nas licenças do Data Center definido pelo software VMware fornecido pela IBM e ele inclui o VMware Hybrid Cloud Extension (HCX). Usando o HCX, é possível conectar com segurança um ambiente do vSphere 5.0+ no local com os sites do {{site.data.keyword.cloud_notm}} para hibridismo de infraestrutura contínua e mobilidade de aplicativo verdadeira.
-
-Para obter mais informações, veja [Visão geral do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview).
-
 ### VMware vSphere on IBM Cloud
 {: #prod_overview-vss}
 
@@ -65,7 +58,7 @@ A oferta vSphere on {{site.data.keyword.cloud_notm}} fornece um serviço de virt
 
 Para obter mais informações, consulte [Visão geral do VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview).
 
-### NetApp ONTAP Select
+### NetApp  ONTAP  Select
 {: #prod_overview-netapp}
 
 A oferta NetApp ONTAP Select permite implementar um cluster de armazenamento definido por software que direciona as suas necessidades para um dispositivo de armazenamento dedicado e altamente disponível com base no NetApp ONTAP Select.

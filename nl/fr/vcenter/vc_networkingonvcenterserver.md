@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-30"
 
 keywords: vCenter Server networking, networking components, networking vCenter
 
@@ -45,10 +45,11 @@ Une passerelle NSX Edge Services Gateway est également déployée pour être ut
 {: #vc_networkingonvcenterserver-change-nsx-component-password-considerations}
 {: faq}
 
-Passez en revue les remarques suivantes avant de modifier les mots de passe de NSX Manager, des contrôleurs NSX et de la passerelle NSX Edge :
-* Ne modifiez pas le mot de passe de NSX Manager figurant sur la page **Récapitulatif** de l'instance dans la console {{site.data.keyword.vmwaresolutions_short}}.
-* Ne modifiez pas les mots de passe des contrôleurs NSX. Pour savoir comment modifier les mots de passe des contrôleurs NSX, voir [Modification du mot de passe d'un contrôleur](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/com.vmware.nsx.admin.doc/GUID-2667DD9E-E2F5-4403-BAC2-C7D1BBC23228.html){:external}.
-* Ne modifiez pas le mot de passe et les paramètres SSH de la passerelle VMware NSX ESG (Edge Services Gateway) gérée par le client. Ne modifiez pas le mot de passe de la passerelle VMware NSX ESG (Edge Services Gateway) de gestion et du routeur logique distribué associé.
+Passez en revue les remarques suivantes avant de tenter de modifier les mots de passe de NSX Manager, des contrôleurs NSX et de la passerelle NSX Edge :
+* Vous pouvez modifier le mot de passe de NSX Manager. Ce mot de passe s'affiche sur la page **Summary** de l'instance dans la console {{site.data.keyword.vmwaresolutions_short}}.
+* Ne modifiez pas les mots de passe des contrôleurs NSX. Pour savoir comment modifier ces mots de passe, voir [Modification du mot de passe d'un contrôleur](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/com.vmware.nsx.admin.doc/GUID-2667DD9E-E2F5-4403-BAC2-C7D1BBC23228.html){:external}.
+* Ne modifiez pas le mot de passe et les paramètres SSH de la passerelle VMware NSX ESG (Edge Services Gateway) gérée par le client. 
+* Ne modifiez pas les mots de passe de la passerelle VMware NSX ESG (Edge Services Gateway) de gestion et du routeur logique distribué associé.
 
 ## Liens connexes
 {: #vc_networkingonvcenterserver-related}

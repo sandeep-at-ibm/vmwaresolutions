@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-23"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -104,8 +104,3 @@ Jane 单击 Stock Trader，并查看了在 Liberty 中运行每个 WAR 文件的
 
 Todd 在转换步骤期间未变更数据源。Transformation Advisor 获取了 WebSphere Application Server Network Deployment 数据源配置，并将其添加到 Liberty 容器的 server.xml。
 {:important}
-
-## 相关链接
-{: #vcscontent-stocktrmod-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

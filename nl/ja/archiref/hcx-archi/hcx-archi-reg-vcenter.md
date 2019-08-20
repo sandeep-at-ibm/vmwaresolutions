@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-27"
+lastupdated: "2019-07-08"
 
 subcollection: vmware-solutions
 
@@ -24,7 +24,7 @@ VMware vSphere Web Client でハイブリッド・クラウド・サービス・
 {: #hcx-archi-reg-vcenter-proc-register}
 
 1. ハイブリッド・クラウド・サービスのサービス仮想アプライアンスにログインします。 例えば、`https:My-HCX-Manager:9443/` などです。
-2. **「設定の管理 (Manage Settings)」**タイルをクリックします。
+2. **「ダッシュボード」**パネルで、以下の手順を実行します。
   1. 左のペインの**「システムの構成 (Configure Systems)」**で、vCenter を選択します。
   2. 右上の**「vCenter の追加 (Add vCenter)」**をクリックします。
   3. vCenter Server の IP アドレスを `https:vCenter-host-name` または `https:vCenter-IP-address` という形式で入力します。 例えば、`https:My-vCenter` や `https:10.108.26.211` などです。

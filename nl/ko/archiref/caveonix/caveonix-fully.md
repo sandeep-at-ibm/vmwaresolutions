@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -126,8 +126,3 @@ subcollection: vmware-solutions
 |디스크	|1TB |
 |OS	|CentOS 7 |
 |설치된 애플리케이션 컴포넌트	|원격 콜렉터 |
-
-## 관련 링크
-{: #caveonix-fully-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

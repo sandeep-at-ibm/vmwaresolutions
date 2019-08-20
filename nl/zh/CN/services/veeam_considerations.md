@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-02"
 
 keywords: Veeam, Veeam install, tech specs Veeam
 
@@ -23,7 +23,7 @@ subcollection: vmware-solutions
 
 Veeam on {{site.data.keyword.cloud}} 服务可与 VMware 系统管理程序无缝集成，以帮助企业实现高可用性。此服务可为应用程序和数据提供恢复点和时间目标。在完成配置后的 15 分钟内就会提供恢复点和时间目标。通过使用此服务，您可在 Veeam 控制台中直接控制基础架构的所有虚拟机 (VM) 的备份和复原。
 
-此服务仅可用于在 V1.8 或更高版本中部署的实例。当前安装的 Veeam 版本为 9.5u4。
+此服务仅可用于在 V1.8 或更高版本中部署的实例。当前安装的 Veeam 版本为 9.5u4b。
 {:note}
 
 ## Veeam on IBM Cloud 的技术规范

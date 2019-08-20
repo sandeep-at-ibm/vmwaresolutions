@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -33,7 +33,7 @@ HCX 客户机端可以安装在 HCX 支持的任何版本的 vSphere 上，前�
 
 HCX 是一项服务。HCX 按站点和虚拟机 (VM) 获得许可，这通过 VMware 维护的许可服务器进行管理。HCX 云和客户机端实例需要在其整个生命周期内与 VMware 注册站点进行通信。
 - 必须允许 80 和 443 上的流量流至 `https://connect.hybridity.vmware.com`
-- 针对 {{site.data.keyword.vmwaresolutions_full}} 控制台提供的客户机端安装，提供了一次性使用的注册密钥。每个客户机端 HCX 安装都需要一个密钥。
+- {{site.data.keyword.vmwaresolutions_full}} 控制台提供用于客户机端安装的一次性使用的注册密钥。每个客户机端 HCX 安装都需要一个密钥。
 
 ### 订购内部部署 HCX 许可证的过程
 {: #hcxclient-vcs-client-deployment-license-ordering-procedure}
@@ -117,7 +117,7 @@ HCX 是一项服务。HCX 按站点和虚拟机 (VM) 获得许可，这通过 VM
   * 选中**部署后打开电源**框。
   * 复查 Hybrid Cloud Services 设置，然后单击**完成**。Hybrid Cloud Services 设备可能需要几分钟才能打开电源。
   * 要检查状态，请转至 vSphere Web Client 主页，然后在**主页**选项卡上，转至**清单**，然后单击**主机和集群**。展开数据中心层次结构，然后单击 Hybrid Cloud Services 虚拟机以在中央窗格中显示摘要。
-  * 查看**摘要**选项卡，控制台会显示**已打开电源**，并且**启动**按钮为绿色。
+  * 查看**摘要**选项卡，控制台会显示**已打开电源**，并且**启动**图标为绿色。
 10. HCX Manager 已打开电源并准备好向内部部署 vCenter 注册。
 
 ## HX Manager Appliance 的初始配置
@@ -125,7 +125,7 @@ HCX 是一项服务。HCX 按站点和虚拟机 (VM) 获得许可，这通过 VM
 
 1. 确保混合云服务虚拟设备具有对 `https://connect.hcx.vmware.com` 的出站访问权
 2. 使用 **admin** 登录到混合云服务虚拟设备管理界面 `https://<IP>:9443`
-3. 提供客户机端必备软件中收集的许可证密钥。
+3. 提供客户机端先决条件中收集的许可证密钥。
 4. HCX 云数据中心位置
     - 输入离 HCX 云实例所在的数据中心最近的城市。如果该城市不存在，请选择最近的主要城市。
 5. 提供系统名称
@@ -143,11 +143,10 @@ HCX 是一项服务。HCX 按站点和虚拟机 (VM) 获得许可，这通过 VM
 {: #hcxclient-vcs-client-deployment-reg-vcenter}
 
 1. 登录到 Hybrid Cloud Services 服务虚拟设备。
-2. 单击**管理设置**磁贴。
+2. 在**仪表板**窗格上，完成以下步骤：
   1. 在左侧窗格中的**配置系统**下，选择 vCenter。
   2. 单击右上方的**添加 vCenter**。
-  3. 输入格式为 `https://vCenter` 或 `https://vCenter` 的 vCenter Server 的 IP 地址。
-    * 例如，`https://My-vCenter` 或 `https://10.108.26.211`。
+  3. 输入格式为 `https://vCenter` 或 `https://vCenter` 的 vCenter Server 的 IP 地址。例如，`https://My-vCenter` 或 `https://10.108.26.211`。
   4. 输入 vCenter Server 用户名和密码。使用的帐户必须具有 vCenter 管理员角色。
   5. 单击**确定**。显示_您需要重新启动应用程序_消息时，不要重新启动。
 3. 配置 SSO/查找服务。

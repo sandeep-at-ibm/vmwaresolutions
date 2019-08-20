@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-03"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -14,7 +14,7 @@ subcollection: vmware-solutions
 # Conception VMware NSX-T
 {: #nsx-t-design}
 
-A la différence de NSX-V (NSX on vSphere), VMware NSX-T a été conçu pour prendre en charge les structures et les architectures d'application comportant des points finaux et des piles technologiques hétérogènes. En plus de vSphere, ces environnements peuvent inclure d'autres hyperviseurs, KVM, des conteneurs et des serveurs bare metal. NSX est conçu pour étendre une infrastructure de sécurité et de réseau définie par logiciels sur d'autres plateformes que vSphere. Bien qu'il soit possible de déployer des composants NSX-T sans avoir besoin de vSphere, cette conception est axée sur NSX-T et son intégration, principalement au sein d'un déploiement automatisé vCenter Server vSphere.
+A la différence de NSX-V (NSX on vSphere), VMware NSX-T a été conçu pour prendre en charge les structures et les architectures d'application comportant des points finaux et des piles technologiques hétérogènes. En plus de vSphere, ces environnements peuvent inclure d'autres hyperviseurs, KVM, des conteneurs et des serveurs bare metal. VMware NSX est conçu pour étendre une infrastructure de sécurité et de réseau définie par logiciels sur d'autres plateformes que vSphere. Bien qu'il soit possible de déployer des composants NSX-T sans avoir besoin de vSphere, cette conception est axée sur NSX-T et son intégration, principalement au sein d'un déploiement automatisé vCenter Server vSphere.
 
 Il existe de nombreuses fonctionnalités avancées dans NSX-T, telles que des règles d'administration des pare-feux, l'inclusion de l'introspection des invités dans les règles d'administration des pare-feux et le suivi avancé du trafic réseau. La description de ces fonctionnalités dépasse le cadre du présent document. Consultez la documentation VMware pour NSX-T. Dans cette conception, l'infrastructure de gestion NSX-T est déployée lors du déploiement initial du cluster vCenter Server à la place de NSX-V.
 
@@ -54,7 +54,7 @@ Tableau 2. NSX-T Manager - spécifications pour le contrôleur
 
 Attribut | Spécification
 --|--
-**NSX Manager / Controller** | 3 dispositifs virtuels
+**NSX Manager / Controller** | Trois dispositifs virtuels
 **Nombre d'UC virtuelles** | 4
 **Mémoire** |  16 Go
 **Disque** | 60 Go
@@ -192,7 +192,7 @@ Une passerelle logique de niveau 1 NSX-T dispose de ports de liaison descendante
 #### Annonces de routage du niveau 1 vers le niveau 0
 {: #nsx-t-design-tier-1-tier-0}
 
-Afin de fournir une connectivité de couche 3 entre les machines virtuelles connectées aux commutateurs logiques reliés à différentes passerelles logiques de niveau 1, il est nécessaire d'activer les annonces de routage du niveau 1 à destination du niveau 0. Inutile de configurer un protocole de routage ou des routes statiques entre les routeurs logiques de niveau 1 et de niveau 0. NSX-T crée automatiquement des routes statiques lorsque vous activez les annonces de routage. Pour cette conception, les annonces de routage sont toujours activées pour toutes les passerelles de niveau 1 créées par automatisation IC4V.
+ Afin de fournir une connectivité de couche 3 entre les machines virtuelles connectées aux commutateurs logiques reliés à différentes passerelles logiques de niveau 1, il est nécessaire d'activer les annonces de routage du niveau 1 à destination du niveau 0. Inutile de configurer un protocole de routage ou des routes statiques entre les routeurs logiques de niveau 1 et de niveau 0. NSX-T crée automatiquement des routes statiques lorsque vous activez les annonces de routage. Pour cette conception, les annonces de routage sont toujours activées pour toutes les passerelles de niveau 1 créées par automatisation IC4V.
 
 ### Topologies préconfigurées
 {: #nsx-t-design-preconfig-topo}
@@ -222,8 +222,3 @@ La topologie 3 déployée contient la topologie 1 à laquelle s'ajoute un déplo
 Pour parfaitement comprendre comment fonctionne ICP sur vCenter Server, consultez la documentation relative à l'architecture ICP sur vCenter Server. Un espace d'adresses IP portables privées et publiques {{site.data.keyword.cloud_notm}} désigné par le client est affecté à T0 pour une utilisation par le client.
 
 A partir de cette conception, vous avez la possibilité de ne pas supprimer ces plages d'adresses IP si l'instance vCenter Server est déclassée et supprimée.
-
-## Liens connexes
-{: #nsx-t-design-related}
-
-* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

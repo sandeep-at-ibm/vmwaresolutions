@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-31"
+lastupdated: "2019-08-05"
 
 ---
 
@@ -79,5 +79,4 @@ Die vRNI-Benutzerauthentifizierung ist direkt mit einem Active Directory-Server 
 ## Zugehörige Links
 {: #opsmgmt-vrni-links}
 
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
 * [vRealize Network Insights](https://docs.vmware.com/en/VMware-vRealize-Network-Insight/index.html){:new_window}

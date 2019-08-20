@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-06"
 
 keywords: vCenter Server add cluster, view cluster vCenter Server, delete cluster vCenter Server
 
@@ -20,8 +20,6 @@ subcollection: vmware-solutions
 
 # Ajout, affichage et suppression de clusters pour des instances vCenter Server
 {: #vc_addingviewingclusters}
-
-Les serveurs ESXi que vous avez configurés lors de la commande d'une instance sont, par défaut, regroupés sous **cluster1**.
 
 Vous pouvez ajouter vos propres clusters à vos instances VMware vCenter Server afin d'étendre la capacité de calcul et de stockage. Au sein d'un cluster, vous pouvez gérer des serveurs ESXi afin d'optimiser l'allocation des ressources et la haute disponibilité. Lorsque vous n'en avez plus besoin, supprimez les clusters que vous avez ajoutés à vos instances.
 
@@ -48,9 +46,10 @@ Lorsque vous ajoutez un cluster pour une instance vCenter Server, vous devez sp�
 {: #vc_addingviewingclusters-adding-cluster-name}
 
 Le nom du cluster qui doit respecter les règles suivantes :
-* Seuls les caractères alphanumériques et le tiret (-) sont autorisés.
-* Le nom de cluster doit commencer et se terminer par un caractère alphanumérique.
-* Le nombre maximal de caractères autorisés est 30.
+* Seuls les caractères alphabétiques minuscules, numériques et tirets (-) sont autorisés.
+* Le nom du cluster doit commencer par un caractère alphabétique minuscule.
+* Le nom du cluster doit se terminer par un caractère alphabétique minuscule ou un caractère numérique.
+* Le nom de cluster ne doit pas dépasser 30 caractères.
 * Le nom de cluster doit être unique au sein de l'instance vCenter Server.
 
 #### Emplacement de centre de données
@@ -63,7 +62,7 @@ Si vous déployez le cluster dans un autre {{site.data.keyword.CloudDataCent_not
 ### Paramètres de serveur bare metal
 {: #vc_addingviewingclusters-bare-metal-settings}
 
-Vous pouvez choisir l'option **Skylake**, **Certifiés SAP** ou **Broadwell**. Les options peuvent varier en fonction de la version dans laquelle votre instance a été initialement déployée.
+Vous pouvez choisir l'option **Skylake**, **Cascade**, **Certifiés SAP** ou **Broadwell**. Les options peuvent varier en fonction de la version dans laquelle votre instance a été initialement déployée.
 
 #### Skylake
 {: #vc_addingviewingclusters-adding-skylake}
@@ -76,6 +75,21 @@ Avec l'option **Skylake**, un certain nombre d'options est disponible pour les p
 | Processeur Dual Intel Xeon Gold 5120/28 coeurs au total, 2,2 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
 | Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz | 64 Go, 96 Go, 128 Go, 192 Go, 384 Go, 768 Go, 1,5 To |
 {: caption="Tableau 1. Options pour les serveurs Skylake {{site.data.keyword.baremetal_short}}" caption-side="top"}
+
+#### Cascade
+{: #vc_addingviewingclusters-adding-cascade}
+
+Pour le paramétrage de **Cascade**, vous disposez d'options pour le **Modèle d'UC** et la **RAM**.
+
+Cascade {{site.data.keyword.baremetal_short}} est disponible uniquement pour les instances VMware vSphere Enterprise Plus 6.7 U2.
+{:note}
+
+| Options de modèle d'UC        | Options de RAM       |
+|:------------- |:------------- |
+|Processeur Dual Intel Xeon Gold 4210 / 20 coeurs au total, 2,3 GHz| 64 Go, 96 Go, 128 Go, 192 Go, 768 Go, 1,5 To |
+|Processeur Dual Intel Xeon Gold 5218 / 32 coeurs au total, 2,3 GHz| 64 Go, 96 Go, 128 Go, 192 Go, 768 Go, 1,5 To |
+|Processeur Dual Intel Xeon Gold 6248 / 40 coeurs au total, 2,5 GHz| 64 Go, 96 Go, 128 Go, 192 Go, 768 Go, 1,5 To |
+{: caption="Tableau 2. Options pour Cascade {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 #### Certifiés SAP
 {: #vc_addingviewingclusters-adding-sap}
@@ -100,7 +114,7 @@ Avec l'option **Broadwell**, un certain nombre d'options est disponible pour les
 |:------------- |:------------- |
 | Quad Intel Xeon E7-4820 v4/40 coeurs au total, 1,9 GHz | 128 Go, 256 Go, 512 Go, 1 To, 2 To, 3 To |
 | Quad Intel Xeon E7-4850 v4/64 coeurs au total, 2,2 GHz | 128 Go, 256 Go, 512 Go, 1 To, 2 To, 3 To |
-{: caption="Tableau 2. Options pour les serveurs Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
+{: caption="Tableau 3. Options pour les serveurs Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 #### Nombre de serveurs bare metal
 {: #vc_addingviewingclusters-adding-bare-metal-number}
@@ -122,7 +136,7 @@ Spécifiez les options vSAN suivantes :
 * **Nombre de disques de capacité vSAN** : indiquez le nombre de disques de capacité que vous souhaitez ajouter.
 * Si vous souhaitez augmenter la capacité au-delà de la limite de 10 disques, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de 12 disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée.
 
-  L'option **Hautes performances avec Intel Optane** n'est disponible que pour les modèles d'unités centrales Skylake.
+  L'option **Hautes performances avec Intel Optane** n'est disponible que pour les modèles d'unités centrales Skylake et Cascade.
   {:note}
 
 * Passez en revue les valeurs de **type de disque pour les disques de cache vSAN** et de **nombre de disques de cache vSAN**. Ces valeurs dépendent de la sélection de la case **Hautes performances avec Intel Optane**.
@@ -152,7 +166,7 @@ Détails relatifs au niveau de performance :
 | 2 IOPS/Go | Cette option est adaptée à la plupart des charges de travail d'usage général. Entre autres exemples d'application, citons l'hébergement de petites bases de données, la sauvegarde d'applications Web ou les images de disque de machine virtuelle pour un hyperviseur. |
 | 4 IOPS/Go | Cette option est adaptée aux charges de travail de grande intensité qui ont un pourcentage élevé de données actives simultanément. Les bases de données transactionnelles en sont un exemple. |
 | 10 IOPS/Go | Cette option est adaptée aux types de charge de travail les plus exigeants, tels que les analyses. Les bases de données à transactions élevées et autres bases de données sensibles aux performances en sont des exemples. Ce niveau de performance est limité à une capacité maximale de 4 To par partage de fichiers. |
-{: caption="Tableau 3. Options de niveau de performance NFS" caption-side="top"}
+{: caption="Tableau 4. Options de niveau de performance NFS" caption-side="top"}
 
 ### Disques locaux
 {: #vc_addingviewingclusters-adding-local-disks}
@@ -171,11 +185,42 @@ Spécifiez l'option d'octroi de licence pour le composant VMware vSphere dans le
 ### Paramètres d'interface réseau
 {: #vc_addingviewingclusters-adding-network-interface-settings}
 
+Lorsque vous ajoutez un cluster pour une instance vCenter Server, vous devez spécifier les paramètres d'interface réseau suivants.
+
+#### Réseau public ou privé
+
 Les paramètres d'activation de carte d'interface réseau varient selon que vous sélectionnez **Réseau public et réseau privé** ou **Réseau privé uniquement**. Les services complémentaires suivants nécessitent des cartes d'interface réseau publiques et ne sont pas disponibles si vous sélectionnez l'option privée :
 
 * F5 on {{site.data.keyword.cloud_notm}}
 * Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
 * Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
+
+#### Réseaux locaux virtuels
+{: #vc_orderinginstance-vlans}
+
+Les paramètres de réseau varient selon que vous sélectionnez **Commander de nouveaux VLAN** ou **Sélectionner des VLAN existants**.
+
+Un VLAN public et deux VLAN privés sont nécessaires pour votre commande d'instance. Les deux VLAN privés sont liés respectivement à chaque serveur bare metal.
+
+##### Commander de nouveaux VLAN
+{: #vc_orderinginstance-new-vlans}
+
+Sélectionnez cette option pour commander un nouveau VLAN public et deux nouveaux VLAN privés.
+
+##### Sélectionner des VLAN existants
+{: #vc_orderinginstance-existing-vlans}
+
+En fonction de l'{{site.data.keyword.CloudDataCent_notm}} que vous avez sélectionné, des VLAN publics et privés existants peuvent être disponibles.
+
+Lorsque vous sélectionnez cette option pour réutiliser des VLAN publics et privés existants, spécifiez les VLAN et les sous-réseaux :
+* **VLAN public**, pour l'accès au réseau public.
+* **VLAN privé**, pour la connectivité entre les centres de données et les services dans {{site.data.keyword.cloud_notm}}.
+* **VLAN privé secondaire**, pour les dispositifs VMware, tels que vSAN.
+* **Sous-réseau principal**, affecté aux hôtes physiques pour l'accès au réseau public.
+* **Sous-réseau privé principal**, affecté aux hôtes physiques pour le trafic de gestion.
+
+Vérifiez que la configuration de pare-feu sur les VLAN sélectionnés ne bloque pas le trafic des données de gestion. Vérifiez également que tous les VLAN sélectionnés se trouvent dans le même pod. Les serveurs ESXi ne peuvent pas être mis à disposition sur des VLAN multi-pods.
+{:important}
 
 ### Récapitulatif de la commande
 {: #vc_addingviewingclusters-adding-order-summary}
@@ -196,7 +241,7 @@ Vous pouvez également ajouter les ressources mises à disposition à l’outil 
 4. Sur la page **Ajouter un cluster**, entrez le nom du cluster.
 5. Si vous souhaitez héberger le cluster dans un autre {{site.data.keyword.CloudDataCent_notm}} que celui dans lequel l'instance est hébergée, sous **Serveur bare metal**, cochez la case **Sélectionner un autre emplacement** et choisissez l'{{site.data.keyword.CloudDataCent_notm}} dans lequel héberger l'instance.
 6. Procédez à la configuration du serveur bare metal.
-   * Si vous avez sélectionné **Skylake** ou **Broadwell**, renseignez les zones **Modèle d'UC**, **Mémoire RAM** et **Nombre de serveurs {{site.data.keyword.baremetal_short}}**.
+   * Si vous avez sélectionné **Skylake**, **Cascade** ou **Broadwell**, renseignez les zones **Modèle d'UC**, **Mémoire RAM** et **Nombre de serveurs {{site.data.keyword.baremetal_short}}**.
    * Si vous avez sélectionné **Certifiés SAP**, spécifiez le modèle d'UC.
 7. Procédez à la configuration du stockage.
   * Si vous sélectionnez **Stockage vSAN**, spécifiez les types de disque pour les disques de cache et de capacité, le nombre de disques et l'édition de licence vSAN. Si vous souhaitez obtenir davantage de stockage, cochez la zone **Hautes performances avec Intel Optane**.
@@ -250,20 +295,20 @@ Vous ne pouvez pas modifier le nom du cluster. La modification du nom du cluster
         <dd class="dd">Le cluster est supprimé.</dd>
     </dl>
   * **Actions** : cliquez sur l'icône **Supprimer** pour supprimer le cluster.
-4. Cliquez sur un nom de cluster pour afficher les détails relatifs au serveur ESXi, au stockage et à l'interface réseau. 
+4. Cliquez sur un nom de cluster pour afficher les détails relatifs au serveur ESXi, au stockage et à l'interface réseau.
 
 Détails relatifs au serveur ESXi :
 
 | Elément        | Description       |  
 |:------------- |:------------- |
-| Nom | Le nom du serveur ESXi a le format suivant :<br> `<host_prefix><n>.<subdomain_label>.<root_domain>` <br> où :<br> `host_prefix` est le préfixe du nom d'hôte<br> `n` est la séquence du serveur<br> `subdomain_label` est le libellé de sous-domaine<br> `root_domain` est le nom du domaine racine |
+| Nom | Le nom du serveur ESXi est au format suivant : `<data_center>-<host_prefix><n>.<subdomain_label>.<root_domain>`, où `n` est la séquence du serveur ESXi. |
 | Version | Version du serveur ESXi. |
 | Données d'identification | Nom d'utilisateur et mot de passe d'accès au serveur ESXi. |
 | Adresse IP privée | Adresse IP privée du serveur ESXi. |
 | Statut | Statut du serveur ESXi, qui peut avoir l'une des valeurs suivantes :<br> **Ajouté** : le serveur ESXi est ajouté et prêt à être utilisé.<br> **Ajout en cours** : le serveur ESXi est en cours d'ajout.<br> **Suppression en cours** : le serveur ESXi est en cours de suppression. |
-{: caption="Tableau 4. Informations relatives au serveur ESXi" caption-side="top"}
+{: caption="Tableau 5. Détails relatifs au serveur ESXi" caption-side="top"}
 
-Développez le serveur ESXi pour plus de détails : 
+Développez le serveur ESXi pour plus de détails :
 
 | Elément        | Description       |  
 |:------------- |:------------- |
@@ -272,7 +317,7 @@ Développez le serveur ESXi pour plus de détails :
 | Disques vSAN personnalisés | Nombre de disques vSAN dans le cluster, ainsi que le type et la capacité des disques. |
 | Disques de cache vSAN | Type et nombre de disques de cache vSAN. |
 | Utilisation en réseau |Paramètres d'activation de la carte d'interface réseau (NIC) des Réseaux public et privé ou du Réseau privé uniquement. |
-{: caption="Tableau 5. Informations supplémentaires relatives au serveur ESXi" caption-side="top"}
+{: caption="Tableau 6. Détails supplémentaires relatifs au serveur ESXi" caption-side="top"}
 
 Détails relatifs au stockage :
 
@@ -282,7 +327,7 @@ Détails relatifs au stockage :
 | Taille | Capacité du stockage. |
 | IOPS/Go | Niveau de performance du stockage. |
 | Protocole NFS | Version NFS du stockage. |
-{: caption="Tableau 6. Informations relatives au stockage" caption-side="top"}
+{: caption="Tableau 7. Détails relatifs au stockage" caption-side="top"}
 
 Détails relatifs à l'interface réseau :
 
@@ -292,7 +337,7 @@ Détails relatifs à l'interface réseau :
 | Description | Description du réseau local virtuel.  |
 | Emplacement | Emplacement du centre de données. |
 | Route principale | Route principale du VLAN. |
-{: caption="Tableau 7. Interface réseau - Détails VLAN" caption-side="top"}
+{: caption="Tableau 8. Interface réseau - Détails VLAN" caption-side="top"}
 
 Cliquez sur **Afficher la ressource** pour accéder aux détails du réseau local virtuel.
 
@@ -303,7 +348,7 @@ Détails relatifs au sous-réseau :
 | Nom | Nom du sous-réseau. Cliquez sur le nom pour accéder aux détails du sous-réseau. |
 | Type | Type de sous-réseau : principal ou portable. |
 | Description | Description du sous-réseau. |
-{: caption="Tableau 8. Interface réseau - Détails de sous-réseau" caption-side="top"}
+{: caption="Tableau 9. Interface réseau - Détails relatifs au sous-réseau" caption-side="top"}
 
 Détails relatifs à l'adresse IP :
 
@@ -312,7 +357,7 @@ Détails relatifs à l'adresse IP :
 | IP | Adresse IP. |
 | Statut | Statut de l'adresse IP. |
 | Description |Description de l'adresse IP.  |
-{: caption="Tableau 9. Interface réseau - Détails d'adresse IP" caption-side="top"}
+{: caption="Tableau 10. Interface réseau - Détails relatifs à l'adresse IP" caption-side="top"}
 
 ## Suppression de clusters des instances vCenter Server
 {: #vc_addingviewingclusters-deleting}
@@ -329,6 +374,9 @@ Vous souhaiterez peut-être supprimer un cluster d'une instance si vous n'en ave
 * Assurez-vous que tous les noeuds présents dans un cluster sont sous tension et opérationnels avant de supprimer le cluster.
 * Lorsque vous supprimez un cluster, toutes les machines virtuelles présentes sur le cluster sont également supprimées et ne peuvent pas être récupérées. Si vous souhaitez conserver les machines virtuelles, faites-les migrer vers d'autres clusters.
 * Le cluster par défaut ne peut pas être supprimé.
+
+Un engagement de 12 mois est demandé lorsque vous commandez le service VMware HCX on {{site.data.keyword.cloud_notm}}. Votre compte continue d'être facturé pour les composants HCX si vous supprimez un cluster avant la fin de la période d'engagement de 12 mois. La date d'expiration de l'engagement de 12 mois est disponible sur la page des détails relatifs à HCX {{site.data.keyword.cloud_notm}}. Pour plus d'informations sur l'affichage des détails du service, voir [Commande, affichage et suppression de services pour les instances vCenter Server](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure).
+{:important}
 
 ### Procédure de suppression de clusters des instances vCenter Server
 {: #vc_addingviewingclusters-deleting-procedure}

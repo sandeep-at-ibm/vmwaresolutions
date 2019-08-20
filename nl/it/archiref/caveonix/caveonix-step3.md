@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -27,8 +27,3 @@ Per il ridimensionamento, il client deve richiamare lo script per eseguire il pr
 - Certificati per tutti i servizi
 
 Alla fine di questo passo, i componenti dell'applicazione sono installati sulle VM (Virtual Machine) richieste.
-
-## Link correlati
-{: #caveonix-step3-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

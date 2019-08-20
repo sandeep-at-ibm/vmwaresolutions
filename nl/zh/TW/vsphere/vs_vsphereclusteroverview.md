@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-26"
 
 keywords: vSphere, vSphere component, tech specs vSphere
 
@@ -41,7 +41,7 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} 不會使選用的 VMware 元
 {: #vs_vsphereclusteroverview-specs-vmware-components}
 
 請選取下列 VMware 元件的授權（IBM 提供或 BYOL）：
-* VMware vSphere Enterprise Plus 6.7 U1 或 6.5 U2
+* VMware vSphere Enterprise Plus 6.7 U2 或 6.5 U2
 * 以下是選用的 VMware 元件：
    * VMware vCenter Server Standard
    * VMware NSX（Base、Advanced 或 Enterprise）
@@ -56,6 +56,7 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} 不會使選用的 VMware 元
 
 您可以訂購具有下列其中一個配置的一個以上的 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}：
 * **Skylake**：2-CPU Intel Skylake 產生伺服器（Intel Xeon 4100/5100/6100 系列），搭配您選取的 CPU 型號及 RAM 大小。
+* **Cascade**：2-CPU Intel Cascade 世代伺服器（Intel Xeon 4200/5200/6200 系列），搭配您選取的 CPU 型號及 RAM 大小。
 * **SAP 認證**：Intel Skylake 或 Intel Broadwell 產生伺服器（Intel Xeon 6140/E5-2690/E7-8890 系列），搭配您選取的 CPU 型號。
 * **Broadwell**：4-CPU Intel Broadwell 世代伺服器（Intel Xeon E7-4800 系列），搭配您選取的 CPU 型號及 RAM 大小。
 
@@ -102,7 +103,7 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} 不會使選用的 VMware 元
 ### 擴充節點的 VMware 元件
 {: #vs_vsphereclusteroverview-expansion-node-specs-vmware-components}
 
-* 一個具有 VMware vSphere Enterprise Plus 6.7u1 或 6.5u2 的 {{site.data.keyword.cloud_notm}} Bare Metal Server。  
+* 一個具有 VMware vSphere Enterprise Plus 6.7u2 或 6.5u2 的 {{site.data.keyword.cloud_notm}} Bare Metal Server。  
 * 在 [VMware vSphere on {{site.data.keyword.cloud_notm}} 叢集的技術規格](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#specs)中所呈現的選用 VMWare 元件。
 
 您只能從 {{site.data.keyword.slportal}} 管理 ESXi 伺服器、選用的 VMware 元件和其他已訂購及遞送至您的 {{site.data.keyword.cloud_notm}} 帳戶中的硬體。在 {{site.data.keyword.vmwaresolutions_short}} 主控台中建立新的叢集之後，您可以回到主控台，並使用已儲存的資訊來擴充新的叢集。如需相關資訊，請參閱[擴充現有 vSphere 叢集](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters)。

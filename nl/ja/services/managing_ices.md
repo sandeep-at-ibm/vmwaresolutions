@@ -27,9 +27,9 @@ subcollection: vmware-solutions
 
 事前定義の Expert Services には OnDemand Consulting、Jumpstart for {{site.data.keyword.cloud_notm}} vCenter Server、Jumpstart for VMware Hybridity Bundle、および Architectural Consultancy ワークショップが組み込まれています。
 
-Expert Services の OnDemand Consulting (ODC) は、素早く柔軟かつプライベートに質問に答えてくれる技術支援や、IBM とのアクティブな契約の範囲外のメンタリングに興味を持っている技術スタッフがいるお客様を対象としています。ODC は、お客様がリーダーシップを必要とするときに、そのリーダーシップを 1 つの窓口を通して提供し、ソリューションについてのアドバイスを行い、また不可欠なビジネスの成功のために役割を果たします。
+Expert Services の OnDemand Consulting (ODC) は、素早く柔軟かつプライベートに質問に答えてくれる技術支援や、IBM とのアクティブな契約の範囲外のメンタリングに興味を持っている技術スタッフがいるお客様を対象としています。 ODC は、お客様がリーダーシップを必要とするときに、そのリーダーシップを 1 つの窓口を通して提供し、ソリューションについてのアドバイスを行い、また不可欠なビジネスの成功のために役割を果たします。
 
-Hybridity Bundle Jumpstart は、オンプレミス・プロバイダーまたは他のクラウド・プロバイダーから IBM Cloud への VMware ワークロードの移行を単純化します。 Expert Services チームは、初期の評価、HCX 対応 IBM Cloud for VMware Solutions の概要、設計および計画を先導します。このエンゲージメントには、インフラストラクチャーの注文、その構成、および最初の 20 台の VM のマイグレーションについての密接なガイドが含まれています。
+Hybridity Bundle Jumpstart は、オンプレミス・プロバイダーまたは他のクラウド・プロバイダーから IBM Cloud への VMware ワークロードの移行を単純化します。 Expert Services チームは、初期の評価、HCX 対応 IBM Cloud for VMware Solutions の概要、設計および計画を先導します。 このエンゲージメントには、インフラストラクチャーの注文、その構成、および最初の 20 台の VM のマイグレーションについての密接なガイドが含まれています。
 
 このオファリングは、お客様の仮想化のニーズの評価、IBM Cloud for VMware Solutions の概要、続いて VMWare ソリューションの設計および計画についてのサポートを行うことによって、VMWare on IBM Cloud を迅速に適応させます。 その後で、インフラストラクチャーのご注文および初期構成について、IBM が密接なガイドを提供します。 オプションで、その後 OnDemand Consulting によるクライアントへの継続的な支援を提供できます。
 

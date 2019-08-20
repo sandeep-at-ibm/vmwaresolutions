@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-20"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -61,5 +61,4 @@ RiskForesight GUI를 통해 사용 가능한 세 가지 주요 서비스는 위�
 ## 관련 링크
 {: #caveonix-intro-related}
 
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
-* [Caveonix 웹 사이트](https://www.caveonix.com/)
+* [Caveonix 웹 사이트](https://www.caveonix.com)

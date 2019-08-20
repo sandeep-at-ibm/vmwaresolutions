@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-22"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -75,8 +75,7 @@ Armazenamento | 100 GB |  SATA: 2 TB / SSD: 960 GB
 ## Estrutura virtual
 {: #vcsiks-arch-overview-infrastructure-virtual-structure}
 
-![Estrutura física do {{site.data.keyword.containerlong_notm}} e Diagrama de implementação do {{site.data.keyword.icpfull_notm}}]
-(../../images/vcsiks-phy-ics-iks-deployment.svg "Estrutura física do {{site.data.keyword.containerlong_notm}} e Diagrama de implementação do {{site.data.keyword.icpfull_notm}}"){: caption="Figura 1. Estrutura física de implementações do {{site.data.keyword.containerlong_notm}} e do {{site.data.keyword.icpfull_notm}}" caption-side="bottom"}
+![Diagrama da estrutura física da implementação do {{site.data.keyword.containerlong_notm}} e do {{site.data.keyword.icpfull_notm}}](../../images/vcsiks-phy-ics-iks-deployment.svg "Diagrama da estrutura física da implementação do {{site.data.keyword.containerlong_notm}} e do {{site.data.keyword.icpfull_notm}}")
 
 Na instância do vCenter Server, os VMSs do cliente são implementados para os NSX
 Edge Services Gateways (ESG) e Distributed Logical Routers (DLR) dedicados.
@@ -93,14 +92,12 @@ O ESG é configurado com uma regra NAT de origem (SNAT) para permitir tráfego d
 
 A implementação do vCenter Server usa um único platform services controller (PSC)
 externo instalado em uma sub-rede móvel na VLAN privada associada a
-MVs de gerenciamento. Seu gateway padrão é configurado para o
-backend customer router (BCR).
+MVs de gerenciamento. Seu gateway padrão é configurado para o backend customer router (BCR).
 
 ### vCenter Server
 {: #vcsiks-arch-overview-infrastructure-vcs}
 
-Como o PSC, o vCenter Server é implementado como um dispositivo.
-Além disso, o vCenter é instalado em uma sub-rede móvel na
+Como o PSC, o vCenter Server é implementado como um dispositivo. Além disso, o vCenter é instalado em uma sub-rede móvel na
 VLAN privada associada a MVs de gerenciamento. Seu gateway
 padrão é configurado para o BCR.
 
@@ -121,14 +118,9 @@ sub-rede móvel privada que é designada a componentes de gerenciamento.
 ### NSX ESGs/DLRs
 {: #vcsiks-arch-overview-infrastructure-nsx-esg}
 
-Os pares do NSX Edge Services Gateway (ESG) são implementados. Em todos os casos, um
-par de gateway é usado para o tráfego de saída dos componentes de automação que
-residem na rede privada. Para o vCenter Server e o {{site.data.keyword.icpfull_notm}}, um segundo gateway, conhecido
-como a borda gerenciada por icp, é implementado e configurado com um
-uplink para a rede pública e uma interface designada à rede privada.
-Qualquer componente NSX necessário, como o Distributed Logical
-Router (DLR), os comutadores lógicos e os firewalls, pode ser configurado pelo
-administrador. Para obter mais informações sobre os NSX Edges que são
+Os pares do NSX Edge Services Gateway (ESG) são implementados. Em todos os casos, um par de gateway é usado para o tráfego de saída dos componentes de automação que residem na rede privada. Para o vCenter Server e o {{site.data.keyword.icpfull_notm}}, um segundo gateway, conhecido como a borda gerenciada por icp, é implementado e configurado com um uplink para a rede pública e uma interface designada à rede privada.
+
+Qualquer componente NSX necessário, como o Distributed Logical Router (DLR), os comutadores lógicos e os firewalls, pode ser configurado pelo administrador. Para obter mais informações sobre os NSX Edges que são
 implementados como parte da solução, veja [Guia de rede do vCenter Server](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro).
 
 As tabelas a seguir resumem as especificações do {{site.data.keyword.icpfull_notm}} ESG/DLR.
@@ -168,15 +160,8 @@ trabalhador no cluster.
 {: #vcsiks-arch-overview-infrastructure-worker-node}
 
 Cada nó do trabalhador é uma máquina física (bare metal) ou uma MV
-que é executada no hardware físico no ambiente de nuvem. Ao provisionar um nó
-do trabalhador, você determina os recursos que estão disponíveis para os
-contêineres hospedados nesse nó do trabalhador. Prontos para utilização,
+que é executada no hardware físico no ambiente de nuvem. Ao provisionar um nó do trabalhador, você determina os recursos que estão disponíveis para os contêineres hospedados nesse nó do trabalhador. Prontos para utilização,
 os nós do trabalhador são configurados com um Mecanismo de Docker gerenciado pela IBM, recursos
 de cálculo separados, rede e um serviço de volume. Os recursos de segurança
 integrada fornecem isolamento, capacidades de gerenciamento de recurso e
 conformidade de segurança do nó do trabalhador.
-
-## Links relacionados
-{: #vcsiks-arch-overview-infrastructure-related}
-
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

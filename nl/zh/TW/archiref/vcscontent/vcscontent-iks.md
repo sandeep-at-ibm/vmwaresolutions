@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -19,8 +19,3 @@ subcollection: vmware-solutions
 Todd 接著新增 strongSwan VPN，以在每個叢集的專用網路之間進行連接。
 
 ![作為真實混合式應用程式的 Stock Trader](../../images/vcscontent-truehybrid.svg "作為真實混合式應用程式的 Stock Trader")
-
-## 相關鏈結
-{: #vcscontent-iks-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

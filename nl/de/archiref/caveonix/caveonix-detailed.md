@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-06"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -85,9 +85,3 @@ Tabelle 2. VLAN und Teilnetze
 |Privat B 	|Portierbar 	|Zugeordnet zu vSAN, falls verwendet.|
 |Privat B 	|Portierbar 	|Zugeordnet zu NAS, falls verwendet.|
 |Privat B 	|Portierbar 	|Zugeordnet für vMotion.|
-
-
-## Zugehörige Links
-{: #caveonix-detailed-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} mit Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

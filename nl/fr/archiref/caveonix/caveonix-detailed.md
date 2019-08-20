@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-06"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -85,9 +85,3 @@ Tableau 2. Réseau local virtuel et sous-réseau
 |Privé B 	|Portable 	|Affecté au réseau de stockage virtuel, si utilisé.|
 |Privé B 	|Portable 	|Affecté au stockage sur réseau, si utilisé.|
 |Privé B 	|Portable 	|Affecté pour vMotion.|
-
-
-## Liens connexes
-{: #caveonix-detailed-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

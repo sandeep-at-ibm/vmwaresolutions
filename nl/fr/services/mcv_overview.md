@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-21"
+lastupdated: "2019-07-23"
 
 keywords: Mission Critical VMware, request Mission Critical, tech specs Mission Critical
 
@@ -20,7 +20,7 @@ Mission Critical VMware on {{site.data.keyword.cloud}} fournit une architecture 
 
 Grâce à cette architecture de cloud, les clients peuvent atteindre un taux de réussite de disponibilité et de basculement plus élevé que celui obtenu par la plupart des clients VMware avec des environnements sur site ou des plateformes cloud concurrentes.
 
-Cette architecture prend en charge des charges de travail existantes indispensables à la mission, y compris des applications natives non-cloud, à un taux de disponibilité en agrégat ciblée de 99,99 %. Les régions IBM Cloud multi-zone sont conçues pour maintenir les charges de travail indispensables à la mission en ligne en cas de panne sur le site. Les charges de travail sur un site en échec sont automatiquement redémarrées en temps quasi réel, tandis que les charges de travail sur les sites voisins restent en ligne et disponibles.
+ette architecture prend en charge des charges de travail existantes indispensables à la mission, y compris des applications natives non-cloud,  à un taux de disponibilité en agrégat ciblée de 99,99%. Les régions {{site.data.keyword.cloud_notm}} multi-zone sont conçues pour maintenir les charges de travail indispensables à la mission en ligne en cas de panne sur le site. Les charges de travail sur un site en échec sont automatiquement redémarrées en temps quasi réel, tandis que les charges de travail sur les sites voisins restent en ligne et disponibles.
 
 L'architecture couvre divers services d'entreprise, y compris les réseaux, le stockage, la résilience et d'autres outils créés pour la surveillance et le traitement des incidents liés aux applications cloud. De plus, cette architecture peut être intégrée à IBM Services Platform with Watson, créé sur {{site.data.keyword.cloud_notm}}, afin de permettre une plus grande consommation de services. Grâce aux fonctions cognitives de la plateforme, les clients peuvent exploiter des données de manière plus efficace et obtenir de nouvelles connaissances métier permettant la continuité des opérations.
 
@@ -40,9 +40,9 @@ L'architecture Mission Critical VMware on {{site.data.keyword.cloud_notm}} est u
   * Modèles de résilience (sauvegarde et reprise)
 
 Mission Critical VMware on {{site.data.keyword.cloud_notm}} est disponible dans les régions suivantes :
-* Amérique : Sud de l'Amérique du Nord - tous les centres de données IBM Cloud situés à Dallas et Est de l'Amérique du Nord - tous les centres de données IBM Cloud situés à Washington, DC
-* Europe : tous les centres de données IBM Cloud situés à Francfort et à Londres
-* Asie-Pacifique : tous les centres de données IBM Cloud situés à Sydney et à Tokyo
+* Amérique : Sud de l'Amérique du Nord - tous les centres de données {{site.data.keyword.cloud_notm}} situés à Dallas et Est de l'Amérique du Nord - tous les centres de données {{site.data.keyword.cloud_notm}} situés à Washington, DC
+* Europe : tous les centres de données {{site.data.keyword.cloud_notm}} situés à Francfort et à Londres
+* Asie-Pacifique : tous les centres de données {{site.data.keyword.cloud_notm}} situés à Sydney et à Tokyo
 
 ### Spécifications d'architecture de l'infrastructure de base :
 {: #mcv_overview-base-specs}
@@ -98,5 +98,5 @@ Les spécifications de l'architecture de réseau sont les suivantes :
 {: #mcv_overview-related}
 
 * [Services gérés issus d'IMI](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_imi)
-* [Managed services for Veeam on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
-* [Managed services for Zerto on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
+* [Services gérés pour Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
+* [Services gérés pour Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)

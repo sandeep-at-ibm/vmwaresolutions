@@ -8,7 +8,7 @@ lastupdated: "2019-07-01"
 
 ---
 
-# Resolução de problemas
+# Solução de Problemas
 {: #opsprocs-trouble}
 
 Para solucionar problemas de instâncias do vCenter Server, os administradores de sistema devem identificar os sintomas do problema, determinar quais dos componentes da solução foram afetados, pesquisar e propor uma correção ou uma solução alternativa, além de testar a correção.

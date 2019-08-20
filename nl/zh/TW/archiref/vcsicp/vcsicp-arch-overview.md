@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-09"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -47,8 +47,3 @@ IBM Multi-Cluster Manager (MCM) 提供使用者可見性、以應用程式為中
 strongSwan VPN 可用來建立與已部署 {{site.data.keyword.containerlong_notm}} 容器的連線。strongSwan VPM 可能會取代為 Direct Link 連線。
 
 在圖表中，CAM 邏輯地建立與 vCenter、雲端提供者、{{site.data.keyword.icpfull_notm}} 及 {{site.data.keyword.containerlong_notm}} 環境的雲端連線。{{site.data.keyword.icpfull_notm}} 叢集必須部署至每個資料中心雲端環境，並由 MCM 提供將 {{site.data.keyword.icpfull_notm}} 叢集連接至單一管理視圖的機制。
-
-## 相關鏈結
-{: #vcsicp-arch-overview-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

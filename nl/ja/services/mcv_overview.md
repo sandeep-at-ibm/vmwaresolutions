@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-21"
+lastupdated: "2019-07-23"
 
 keywords: Mission Critical VMware, request Mission Critical, tech specs Mission Critical
 
@@ -20,7 +20,7 @@ Mission Critical VMware on {{site.data.keyword.cloud}} では、企業がクラ�
 
 ほとんどの場合、お客様がこのクラウド・アーキテクチャーを使用すると、オンプレミス環境または競合他社のクラウド・プラットフォームで VMware ユーザーが作業する場合より、高い可用性とフェイルオーバー成功率を実現できます。
 
-このアーキテクチャーは、クラウド・ネイティブではないアプリケーションを含む既存のミッション・クリティカルなレガシー・ワークロードを、総計 99.99% という可用性目標でサポートします。IBM Cloud のマルチゾーン領域は、サイトに障害が発生した場合に基幹業務ワークロードをオンライン状態に保つように設計されています。 障害が発生したサイトのワークロードは、ほぼリアルタイムで自動的に再開しますが、隣接するサイトのワークロードはオンライン状態を保ち、引き続き使用できます。
+このアーキテクチャーは、クラウド・ネイティブではないアプリケーションを含む既存のミッション・クリティカルなレガシー・ワークロードを、総計 99.99% という可用性目標でサポートします。{{site.data.keyword.cloud_notm}} のマルチゾーン領域は、サイトに障害が発生した場合に基幹業務ワークロードをオンライン状態に保つように設計されています。 障害が発生したサイトのワークロードは、ほぼリアルタイムで自動的に再開しますが、隣接するサイトのワークロードはオンライン状態を保ち、引き続き使用できます。
 
 このアーキテクチャーは、さまざまなエンタープライズ・サービスを網羅し、クラウド・ベースのアプリケーションの監視とトラブルシューティングを行うために作成されたネットワーク、ストレージ、回復力などのツールを備えています。 さらに、このアーキテクチャーは、{{site.data.keyword.cloud_notm}} 上に構築された IBM Services Platform with Watson と統合することができますので、より広範囲にサービスを利用できます。 お客様はプラットフォームのコグニティブ機能を使用して、継続的運用の維持に役立つ新しいビジネス洞察を得るために、より効率的にデータをマイニングできます。
 
@@ -40,9 +40,9 @@ Mission Critical VMware on {{site.data.keyword.cloud_notm}} のアーキテク�
   * 回復力パターン (バックアップとリカバリー)
 
 Mission Critical VMware on {{site.data.keyword.cloud_notm}} は、以下の地域で使用可能です。
-* アメリカ: 北米南部地域: ダラスのすべての IBM Cloud データ・センター。北米東部地域: ワシントン DC のすべての IBM Cloud データ・センター
-* ヨーロッパ: フランクフルトとロンドンのすべての IBM Cloud データ・センター
-* アジア太平洋: シドニーと東京のすべての IBM Cloud データ・センター
+* アメリカ: 北米南部地域: ダラスのすべての {{site.data.keyword.cloud_notm}} データ・センター。北米東部地域: ワシントン DC のすべての {{site.data.keyword.cloud_notm}} データ・センター
+* ヨーロッパ: フランクフルトとロンドンのすべての {{site.data.keyword.cloud_notm}} データ・センター
+* アジア太平洋: シドニーと東京のすべての {{site.data.keyword.cloud_notm}} データ・センター
 
 ### 基本インフラストラクチャー・アーキテクチャーの仕様
 {: #mcv_overview-base-specs}
@@ -98,5 +98,5 @@ vSphere + vSAN 拡張クラスター・アーキテクチャーには以下の�
 {: #mcv_overview-related}
 
 * [IMI からのマネージド・サービス](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_imi)
-* [Veeam on IBM Cloud 用マネージド・サービス](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
-* [Zerto on IBM Cloud 用マネージド・サービス](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
+* [Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services) 用マネージド・サービス
+* [Zerto on {{site.data.keyword.cloud_notm}} 用マネージド・サービス](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)

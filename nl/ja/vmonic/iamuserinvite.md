@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-07-23"
 
 keywords: IAM user, invite user, service access
 
@@ -48,6 +48,5 @@ subcollection: vmware-solutions
 * [ID およびアクセス権限の管理](/docs/iam?topic=iam-getstarted)
 * [ユーザーの招待](/docs/iam?topic=iam-iamuserinv#iamuserinv)
 * [IAM とは](/docs/iam?topic=iam-iamoverview)
-* [IBM Cloud アカウントへの V2.5 より前の vCenter Server インスタンスのマイグレーション](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addinstancetousraccount)
-* [IBM Cloud アカウントへの V2.5 より前の vCenter Server with Hybridity Bundle インスタンスのマイグレーション](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addinstancetousraccount)
-* [V2.5 以前の NetApp ONTAP Select インスタンスの IBM Cloud アカウントへのマイグレーション](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_addinstancetousraccount)
+* [{{site.data.keyword.cloud_notm}} アカウントへの V2.5 より前の vCenter Server インスタンスのマイグレーション](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addinstancetousraccount)
+* [V2.5 以前の NetApp ONTAP Select インスタンスの {{site.data.keyword.cloud_notm}} アカウントへのマイグレーション](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_addinstancetousraccount)

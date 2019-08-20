@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -95,8 +95,3 @@ Für Todd und Jane ergeben sich im Prozess für Stock Trader die folgenden Schri
 6. Es muss eine Modernisierung von DevOps stattfinden. Während dieses Prozesses verbessert Jane das Verfahren, mit dem sie Stock Trader bereitstellt.
 
 7. Das Management muss modernisiert werden. Todd und Jane haben daran gearbeitet, die Verwaltung von Stock Trader und der zugrunde liegenden Plattform zu verbessern, sogar in mehreren Clustern und Cloudumgebungen.
-
-## Zugehörige Links
-{: #vcscontent-modjourney-related}
-
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

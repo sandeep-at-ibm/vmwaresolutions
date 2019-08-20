@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -175,9 +175,3 @@ vita creativa di tutti gli skater professionisti.
 La stratificazione creativa dei sistemi IT per generare nuove combinazioni parla
 al cuore dello skateboarding. Ha il potere di incastrarsi nella vita
 dei creativi per ispirare l'innovazione, in tutto il mondo, ovunque andiamo. Niente di tutto ciò potrebbe essere ottenuto senza {{site.data.keyword.cloud}}.
-
-## Link correlati
-{: #vcscar-preface-related}
-
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

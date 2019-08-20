@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -54,8 +54,3 @@ Acme Skateboards 希望在其应用程序现代化之旅中，在 {{site.data.ke
 通过使用 {{site.data.keyword.cloud_notm}} 自动化，Acme Skateboards 可以供应混合解决方案，该解决方案包含 VMware on {{site.data.keyword.cloud_notm}}（用于运行其数据库 VM）和 {{site.data.keyword.icpfull_notm}} on VMware on {{site.data.keyword.cloud_notm}}（用于在容器中运行其应用程序和前端 Web Service）。NSX 为其提供了一组通用管理工具，用于管理网络和覆盖网络中的安全性。
 
 ![vCenter Server with {{site.data.keyword.icpfull_notm}}](../../images/vcsicp-virtual-icp-deployment-vcs.svg "vCenter Server with {{site.data.keyword.icpfull_notm}}")
-
-## 相关链接
-{: #vcsicp-usecases-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

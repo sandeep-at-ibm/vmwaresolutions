@@ -126,7 +126,7 @@ lastupdated: "2019-06-07"
 |標題|說明       |
 |---|---|
 |網路考量|如需相關資訊，請參閱 [vCenter Server 實例的網路考量](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_networkingonvcenterserver){:new_window}. |
-|HCX 的規劃|VMware 混合雲端服務 (HCX) 可讓 vSphere 軟體定義的資料中心 (SDDC) 的不同實例在各種網路類型之間交互作業。HCX 設計的宗旨是要解決安全、相容性、複雜性和效能問題，當您嘗試達到多重實例、多網站部署 vSphere，跨越內部部署和雲端提供者界限進行延伸時，會遇到這些問題。如需相關資訊，請參閱[準備安裝環境](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-planning-prep-install)。|
+|HCX 的規劃|VMware Hybrid Cloud Services (HCX) 可讓 vSphere 軟體定義的資料中心 (SDDC) 的不同實例在各種網路類型之間交互作業。HCX 設計的宗旨是要解決安全、相容性、複雜性和效能問題，當您嘗試達到多重實例、多網站部署 vSphere，跨越內部部署和雲端提供者界限進行延伸時，會遇到這些問題。如需相關資訊，請參閱[準備安裝環境](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-planning-prep-install)。|
 |起始 NSX 配置|在部署 vCenter Server 實例時，會有一個範例客戶網路可用，它包含專用子網路、公用子網路、NSX 邏輯交換器、分散式邏輯路由器，並且會部署並配置 NSX Edge 應用裝置以執行網址轉換。如需為 VM 配置此範例客戶網路的步驟，請參閱[配置網路以使用客戶管理的 NSX ESG 來搭配您的 VM](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_esg_config#vc_esg_config){:new_window}。|
 |新增邏輯交換器|邏輯交換器類似於 VLAN，因為它們提供網路連線，而您可以將 VM 連接至這些網路連線。如果 VM 連接至相同的邏輯交換器，則 VM 便可以透過 VXLAN 彼此通訊。當您新增邏輯交換器時，請務必記住您要建置的特定拓蹼。如需相關資訊，請參閱 [Add a Logical Switch](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.install.doc/GUID-DD31D6BC-2E56-4E91-B45F-FCA3E80FF786.html){:new_window}。|
 |新增 DLR|「分散式邏輯路由器 (DLR)」是在連接的邏輯交換器之間，進行遞送的虛擬應用裝置（東西向資料流量）。如需相關資訊，請參閱 [Add a Distributed Logical Router](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.install.doc/GUID-E825C0C7-F4CC-4B26-90AF-A2167AC519DB.html){:new_window}。|

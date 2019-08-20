@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -66,8 +66,3 @@ vCenter Server 提供包括 VMware vSphere、vCenter Server、NSX 以及共用�
 朝向雲端原生應用程式平台（例如 {{site.data.keyword.icpfull_notm}} 及 {{site.data.keyword.containerlong_notm}}）移動的客戶著重於速度與創新，而不必隨時心中掛記著安全與網路。如果他們需要等待網路或安全團隊可訂購負載平衡器、防火牆、交換器及路由器這類服務，則會縮短應用程式創造價值的時間。
 
 此參照架構顯示 VCS、{{site.data.keyword.icpfull_notm}} 及 {{site.data.keyword.containerlong_notm}} 如何安全地推動 Acme Skateboards 的應用程式現代化旅程。
-
-## 相關鏈結
-{: #vcsiks-appmod-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

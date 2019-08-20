@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-01"
+lastupdated: "2019-07-22"
 
 keywords: single-node trial, data protection DR, tech specs data protection DR
 
@@ -26,7 +26,7 @@ o {{site.data.keyword.cloud}} para migrar e recuperar cargas de trabalho do VMwa
 
 O Single-node Trial é uma versão de avaliação do VMware vCenter Server on {{site.data.keyword.cloud_notm}} que fornece a plataforma VMware de único locatário que pode ser gerenciada usando as mesmas ferramentas que em ambientes locais. É possível aproveitar a velocidade e a escala da nuvem enquanto mantém o mesmo nível de controle e visibilidade que é fornecido no local.
 
-A avaliação é projetada para migração de até 20 cargas de trabalho de desenvolvimento ou teste simples usando o vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle. A automação instalará e configurará o VMware HCX no {{site.data.keyword.cloud_notm}}, fornecerá uma chave de ativação local do HCX e instalará o Veeam on {{site.data.keyword.cloud_notm}} e o Zerto on {{site.data.keyword.cloud_notm}} em questão de horas. É possível fazer backup e replicar 20 máquinas virtuais (VMs) com o Veeam on {{site.data.keyword.cloud_notm}} e o Zerto on {{site.data.keyword.cloud_notm}}. 
+A avaliação é projetada para migração de até 20 cargas de trabalho de desenvolvimento ou de teste simples usando o vCenter Server. A automação instalará e configurará o VMware HCX no {{site.data.keyword.cloud_notm}}, fornecerá uma chave de ativação local do HCX e instalará o Veeam on {{site.data.keyword.cloud_notm}} e o Zerto on {{site.data.keyword.cloud_notm}} em questão de horas. É possível fazer backup e replicar 20 máquinas virtuais (VMs) com o Veeam on {{site.data.keyword.cloud_notm}} e o Zerto on {{site.data.keyword.cloud_notm}}. 
 
 O Single-node Trial for Data Protection and Disaster Recovery é somente para prova de conceito (POC). Não execute cargas de trabalho de trabalho de produção nesse ambiente. As funções de gerenciamento, como a inclusão e a remoção de hosts e clusters, o pedido de serviços de complemento adicionais e a aplicação de atualizações, não são suportadas.
 {:important}
@@ -97,8 +97,8 @@ Os virtual server instances (VSIs) a seguir são pedidos:
 
 As licenças a seguir são incluídas com seu pedido de instância do Single-node Trial for Data Protection and Disaster Recovery.
 
-* As licenças do vCenter Server with Hybridity Bundle:
-  * VMware vSphere Enterprise Plus 6.7u1
+* As licenças do vCenter Server:
+  * VMware vSphere Enterprise Plus 6.7u2
   * VMware vCenter Server 6.5
   * VMware NSX Service Providers Advanced Edition 6.4
 * {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-29"
+lastupdated: "2019-08-05"
 
 ---
 
@@ -66,8 +66,3 @@ lastupdated: "2019-05-29"
 Chef 統合を使用してこのアーキテクチャーを拡張する方法について詳しくは、[vRA with Chef integration reference Architecture](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_VRA_Chef_Integration_Architecture.pdf){:new_window} を参照してください。
 
 * サービス管理層 – この層は、IT 環境のライフサイクル全体に焦点を当てたものであり、通常は、IT 運用部門や技術部門のあらゆる垣根を越えて意見を組み合わせ、企業レベルで実装されます。 この層は、従来より、IT サービス管理 (ITSM) のフレームワーク (IT インフラストラクチャー・ライブラリー (ITIL) や ISO/IEC 20000 など) 上に構築されています。これらは、IT サービスのライフサイクルのすべてのプロセスおよびステージを通して IT サービスを提供するためのベスト・プラクティスのフレームワークです。 製品レベルでは、ITSM の代表的な例は、構成管理データベースに接続され、インシデント、サービス要求、問題、変更、およびナレッジを扱える、一元化されたワークフロー管理システムです。
-
-## 関連リンク
-{: #opsmgmt-intro-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

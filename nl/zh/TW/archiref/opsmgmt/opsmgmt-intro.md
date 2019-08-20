@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-29"
+lastupdated: "2019-08-05"
 
 ---
 
@@ -66,8 +66,3 @@ lastupdated: "2019-05-29"
 如需如何使用 Chef 整合來延伸此架構的相關資訊，請參閱 [vRA 與 Chef 整合參考架構](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_VRA_Chef_Integration_Architecture.pdf){:new_window}。
 
 * 服務管理層 - 這層聚焦於 IT 環境的完整生命週期，通常是在企業層級實作，並結合 IT 作業與技術所有專業分工的輸入。這層傳統上是建構在 IT 服務管理 (ITSM) 架構上，例如 IT 基礎架構程式庫 (ITIL) 和 ISO/IEC 20000，進行架構，這些架構是透過 IT 服務生命週期的處理程序和階段而提供 IT 服務最佳作法的架構。在產品層次中，ITSM 是以中央工作流程管理系統為典型，用來處理與配置管理資料庫相連的突發事件、服務要求、問題、變更及知識。
-
-## 相關鏈結
-{: #opsmgmt-intro-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

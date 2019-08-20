@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-25"
 
 keywords: view NetApp, view instance, view instance details
 
@@ -129,7 +129,7 @@ subcollection: vmware-solutions
 
 |項目        |說明       |  
 |:------------|:----------------- |
-|名稱 |ESXi 伺服器的名稱格式為 `<host_prefix><n>.<subdomain_label>.<root_domain>`，其中：<br><br>`host_prefix` 是主機名稱字首、`n` 是伺服器的序列、`subdomain_label` 是子網域標籤，而 `root_domain` 是根網域名稱。|
+|名稱 |ESXi 伺服器名稱的格式為 `<data_center>-<host_prefix><n>.<subdomain_label>.<root_domain>`，其中 `n` 是 ESXi 伺服器序列。|
 |版本|ESXi 伺服器的版本。|
 |認證|用來存取 ESXi 伺服器的使用者名稱和密碼。|
 |專用 IP |ESXi 伺服器的專用 IP 位址。|

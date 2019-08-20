@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-07-23"
 
 keywords: FAQ, license, BYOL
 
@@ -91,7 +91,7 @@ VMware vSphere on {{site.data.keyword.cloud_notm}}에 대한 새 클러스터를
 * 계속해서 기존 BYOL 키 사용
 * 해당 클러스터를 위해 IBM 제공 라이센싱 구매
 
-현재 클러스터당 VMware vSphere Enterprise 및 VMware vSAN만 라이센싱할 수 잇습니다.
+현재 클러스터당 VMware vSphere Enterprise 및 VMware vSAN만 라이센싱할 수 있습니다.
 
 ## 클러스터 작성 시 BYOL을 사용할 수 있습니까?
 {: #faq_byol-cluster}
@@ -99,7 +99,7 @@ VMware vSphere on {{site.data.keyword.cloud_notm}}에 대한 새 클러스터를
 
 예. 클러스터 작성 시 기존 BYOL 라이센스에서 BYOL을 수행하거나 새 BYOL을 입력할 수 있습니다. 또한 클러스터 작성 시 IBM 제공 구독 라이센스를 구매할 수 있습니다.
 
-현재 클러스터당 VMware vSphere Enterprise 및 VMware vSAN만 라이센싱할 수 잇습니다.
+현재 클러스터당 VMware vSphere Enterprise 및 VMware vSAN만 라이센싱할 수 있습니다.
 
 ## 내 BYOL 라이센스를 관리할 수 있는 방법은 무엇입니까?
 {: #faq_byol-mgmt}
@@ -146,42 +146,6 @@ BYOL 기능의 도입으로 수동 프로세스를 계속 사용하는 것은 �
 {: faq}
 
 아니오, 이 VMware 제품은 인스턴스 배치의 일부가 아니기 때문입니다. 초기 배치 외에 이 VMware 제품이 설치될 수 있으며, 이 경우 이 제품을 설치하고 라이센싱하는 데 클라이언트 또는 해당 에이전트가 필요합니다.
-
-## vCenter Server with Hybridity Bundle과 함께 NFS 스토리지를 주문할 수 있습니까?
-{: #faq_byol-nfs}
-{: faq}
-
-새로 배치된 인스턴스의 경우 vSAN의 올플래시(all-flash) 스토리지만 지원됩니다. vCenter Server with Hybridity Bundle 오퍼링에 vSAN Advanced 또는 Enterprise 라이센싱이 포함됩니다.
-
-NFS 스토리지를 사용하는 vCenter Server 인스턴스가 있는 경우 기존 인스턴스를 vCenter Server with Hybridity Bundle로 업그레이드할 수 있습니다. vSAN Advanced 라이센싱이 업그레이드 중에 주문될 때 올플래시(all-flash) vSAN 클러스터를 프로비저닝하지 않아도 됩니다.
-
-## vCenter Server with Hybridity Bundle과 함께 BYOL을 사용할 수 있습니까?
-{: #faq_byol-hybridity}
-{: faq}
-
-{{site.data.keyword.cloud_notm}}로 고유한 VMware 라이센싱을 가져올 수(BYOL) 없습니다. vCenter Server with Hybridity Bundle에서는 모든 VMware 라이센스가 IBM에서 제공되어야 합니다.
-
-## vCenter Server with Hybridity Bundle 라이센싱과 vCenter Server 라이센싱 간의 차이는 무엇입니까?
-{: #faq_byol-hybridity-vcs}
-{: faq}
-
-vCenter Server에서 사용 가능한 개별 VMware 라이센스는 CPU당 가격이 책정됩니다. IBM에서 제공되는 모든 CPU당 VMware 라이센스와 같이 예를 들어, 듀얼 Intel Xeon Gold 6140의 경우 CPU당 16개가 넘는 코어가 있는 모든 서버에서 가격이 1.3배 증가합니다.
-
-vCenter Server with Hybridity Bundle은 CPU가 아닌 코어마다 라이센스가 부여되는 VMware 라이센스 및 에디션의 지정된 세트입니다. 따라서 이러한 인스턴스에 대한 라이센싱 가격은 변경되지 않습니다.
-
-## vCenter Server with Hybridity Bundle에 사용 가능한 IBM 제공 VMware 라이센스 컴포넌트 및 에디션은 무엇입니까?
-{: #faq_byol-hybridity-avail}
-{: faq}
-
-vCenter Server with Hybridity Bundle의 새 인스턴스에는 VMware vSphere Enterprise Plus, VMware vCenter Standard, VMware NSX Advanced 또는 Enterprise, VMware vSAN Advanced 또는 Enterprise 및 VMware Hybrid Cloud Extension(HCX)가 포함됩니다.
-
-NSX Base 에디션을 사용하는 vCenter Server 인스턴스가 있는 경우 vCenter Server with Hybridity Bundle을 주문할 때 NSX Advanced로 자동으로 업그레이드됩니다.
-
-## vCenter Server with Hybridity Bundle에 포함된 NSX Advanced 에디션을 NSX Enterprise 에디션으로 업그레이드할 수 있습니까?
-{: #faq_byol-nsx-upgrade}
-{: faq}
-
-vCenter Server with Hybridity Bundle에 NSX Advanced가 포함되어 있을 때 vCenter Server with Hybridity Bundle을 주문한 후 NSX Enterprise 에디션으로 업그레이드할 수 있습니다. 이렇게 하려면 {{site.data.keyword.vmwaresolutions_short}} 콘솔의 인스턴스 세부사항 페이지 탭에서 **업데이트 및 패치** 탭을 사용하십시오.
 
 ## 관련 링크
 {: #faq_byol-related}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-01"
+lastupdated: "2019-07-22"
 
 keywords: single-node trial, data protection DR, tech specs data protection DR
 
@@ -26,14 +26,14 @@ Single-node Trial for Data Protection and Disaster Recovery では、VMware ワ�
 
 Single-node Trial は、オンプレミス環境と同じツールで管理できる単一テナントの VMware プラットフォームを提供する VMware vCenter Server on {{site.data.keyword.cloud_notm}} のトライアル・バージョンです。 制御性および可視性はオンプレミスと同じレベルに保ったまま、クラウドの速度およびスケールというメリットを享受できます。
 
-このトライアルの目的は、vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle を使用して開発用またはテスト用の単純なワークロードを最大 20 個移行することです。 数時間のうちに、自動化機能によって VMware HCX が {{site.data.keyword.cloud_notm}} にインストールされて構成され、オンプレミス HCX アクティベーション・キーが提供され、Veeam on {{site.data.keyword.cloud_notm}} および Zerto on {{site.data.keyword.cloud_notm}} がインストールされます。 Veeam on {{site.data.keyword.cloud_notm}} および Zerto on {{site.data.keyword.cloud_notm}} を使用して、20 の仮想マシン (VM) をバックアップおよび複製できます。
+このトライアルの目的は、vCenter Server を使用して開発用またはテスト用の単純なワークロードを最大 20 個移行することです。数時間のうちに、自動化機能によって VMware HCX が {{site.data.keyword.cloud_notm}} にインストールされて構成され、オンプレミス HCX アクティベーション・キーが提供され、Veeam on {{site.data.keyword.cloud_notm}} および Zerto on {{site.data.keyword.cloud_notm}} がインストールされます。 Veeam on {{site.data.keyword.cloud_notm}} および Zerto on {{site.data.keyword.cloud_notm}} を使用して、20 の仮想マシン (VM) をバックアップおよび複製できます。
 
 Single-node Trial for Data Protection and Disaster Recovery は PoC (概念検証) のみを目的としています。 この環境では実動ワークロードを実行しないでください。 ホストやクラスターの追加と削除、追加アドオン・サービスの注文、更新の適用などの管理機能はサポートされていません。
 {:important}
 
 Single-node Trial インスタンスのデプロイ後、[IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:external} の [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:external} を使用して、インスタンスの操作に関する支援を受けることができます。 さらに、[{{site.data.keyword.cloud_notm}}Garage Services](https://www.ibm.com/cloud/garage/){:external} を使用すれば、クラウド・ネイティブの最新の手法でアプリケーションのモダナイゼーションを加速化できます。
 
-このトライアル版は最大 90 日間使用できます。 インスタンスをいつ注文したかではなく、請求スケジュールに基づいて月額料金が請求されます。請求サイクルの最終日以前にインスタンスをキャンセルしない場合、その次の月の分の料金が発生することになります。 4 カ月目が始まる前にキャンセルしないと、90 日間のトライアルのために 4 カ月分の料金が請求される可能性があります。
+このトライアル版は最大 90 日間使用できます。 インスタンスをいつ注文したかではなく、請求スケジュールに基づいて月額料金が請求されます。 請求サイクルの最終日以前にインスタンスをキャンセルしない場合、その次の月の分の料金が発生することになります。 4 カ月目が始まる前にキャンセルしないと、90 日間のトライアルのために 4 カ月分の料金が請求される可能性があります。
 {:note}
 
 トライアル期間が終了したら、この環境を削除し、キャパシティーのニーズを満たす新しい環境をプロビジョンできます。
@@ -97,8 +97,8 @@ vCenter Server 管理、HCX、およびカスタマー・ワークロード VM 2
 
 Single-node Trial for Data Protection and Disaster Recovery インスタンスの注文には、以下のライセンスが含まれます。
 
-* vCenter Server with Hybridity Bundle ライセンス:
-  * VMware vSphere Enterprise Plus 6.7u1
+* vCenter Server ライセンス:
+  * VMware vSphere Enterprise Plus 6.7u2
   * VMware vCenter Server 6.5
   * VMware NSX Service Providers Advanced Edition 6.4
 * {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2

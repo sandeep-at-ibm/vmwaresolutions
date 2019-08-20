@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-29"
 
 keywords: IBM Cloud Private, ICP, tech specs ICP
 
@@ -29,7 +29,6 @@ subcollection: vmware-solutions
 
 설치된 현재 IBM Cloud Private 버전은 3.1.2입니다. {{site.data.keyword.cloud_notm}} Automation Manager는 {{site.data.keyword.cloud}} Private Hosted 서비스 주문의 일부로도 배치됩니다.
 {:note}
-
 
 ## IBM Cloud Private Hosted의 기술 스펙
 {: #icp_overview-specs}

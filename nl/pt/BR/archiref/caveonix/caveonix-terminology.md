@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-06"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -69,8 +69,3 @@ Tarefa: a pontuação de Anomalia de "Logs de Caveo" é > 90, então marque o at
 Tarefa: a pontuação de anomalia da "Caveo Network" é > 95, então coloque o ativo em quarentena e envie uma notificação
 por e-mail e uma notificação de IU.
 ```
-
-## Links relacionados
-{: #caveonix-terminology-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

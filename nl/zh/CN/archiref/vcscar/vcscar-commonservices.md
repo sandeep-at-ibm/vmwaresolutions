@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -32,8 +32,3 @@ subcollection: vmware-solutions
 {: #vcscar-commonservices-ntp}
 
 vCenter Server 部署使用 {{site.data.keyword.cloud_notm}} 基础架构网络时间协议 (NTP) 服务器。所有部署的组件均配置为使用这些 NTP 服务器。使所有组件都使用相同的 NTP 服务器对于证书和 AD 认证正常运行至关重要。
-
-## 相关链接
-{: #vcscar-commonservices-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

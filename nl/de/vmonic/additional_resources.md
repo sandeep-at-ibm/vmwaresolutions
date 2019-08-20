@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-23"
 
 keywords: vmware solutions data sheet, vmware solutions developerWorks, vmware solutions video
 
@@ -37,7 +37,7 @@ Nutzen Sie die folgenden Ressourcen, um den Einstieg zu beschleunigen oder auf d
 ## IBM Cloud-Muster
 {: #additional_resources-patterns}
 
-* [IBM Cloud-Muster](https://ibmcloudpatterns.mybluemix.net/#862581F800007C53/862581F800007DD5/862581D000837B23){:external}
+* [{{site.data.keyword.cloud_notm}}-Muster](https://ibmcloudpatterns.mybluemix.net/#862581F800007C53/862581F800007DD5/862581D000837B23){:external}
 
 ## Plattformerweiterungen
 {: #additional_resources-plat-extensions}
@@ -54,9 +54,18 @@ Informieren Sie sich über die Architektur der [Erweiterungen für die Virtualis
 ## Videos und Demonstrationen
 {: #additional_resources-demos}
 
+### Digital Technical Engagement
+{: #additional_resources-dte}
+
+* [VMware on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/){:external}
+* [Veeam on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/demos/collection/Veeam-on-IBM-Cloud){:external}
+* [Zerto on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/demos/collection/Zerto-on-IBM-Cloud){:external}
+
+### Weitere Videos und Demonstrationen
+{: #additional_resources-more}
+
 * [Ressourcen und Videos](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/resources){:external}
-* [Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware){:external}
-* [Ausgewählte Ressourcen und Fallstudien](https://www.ibm.com/cloud/vmware/resources){:external}
+* [Ausgewählte Ressourcen und Fallstudien](https://www.ibm.com/cloud/vmware){:external}
 
 ## VMware-Dokumentation
 {: #additional_resources-vmware-doc}

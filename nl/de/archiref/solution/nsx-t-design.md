@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-03"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -14,7 +14,7 @@ subcollection: vmware-solutions
 # VMware NSX-T-Design
 {: #nsx-t-design}
 
-Im Gegensatz zu NSX-V (NSX on vSphere) wurde VMware NSX-T für Anwendungsframeworks und Architekturen entwickelt, die heterogene Endpunkte und Technologie-Stacks aufweisen. Neben vSphere können diese Umgebungen weitere Hypervisoren, KVM, Container und Bare-Metal-Instanzen enthalten. NSX ist so konzipiert, dass es eine softwaredefinierte Netz- und Sicherheitsinfrastruktur über andere Plattformen als nur vSphere hinweg umfasst. Obwohl es möglich ist, NSA-T-Komponenten ohne vSphere zu implementieren, konzentriert sich dieses Design auf NSX-T und seine Integration in erster Linie innerhalb einer automatisierten vCenter Server vSphere-Bereitstellung.
+Im Gegensatz zu NSX-V (NSX on vSphere) wurde VMware NSX-T für Anwendungsframeworks und Architekturen entwickelt, die heterogene Endpunkte und Technologie-Stacks aufweisen. Neben vSphere können diese Umgebungen weitere Hypervisoren, KVM, Container und Bare-Metal-Instanzen enthalten. VMware NSX ist so konzipiert, dass es eine softwaredefinierte Netz- und Sicherheitsinfrastruktur über andere Plattformen als nur vSphere hinweg umfasst. Obwohl es möglich ist, NSA-T-Komponenten ohne vSphere zu implementieren, konzentriert sich dieses Design auf NSX-T und seine Integration in erster Linie innerhalb einer automatisierten vCenter Server vSphere-Bereitstellung.
 
 Innerhalb von NSX-T gibt es viele erweiterte Funktionen, wie z. B. Firewallrichtlinien, die Einbindung von Gast-Introspektionen in Firewallrichtlinien und das erweiterte Netzflusstracking. Das Beschreiben dieser Funktionen liegt außerhalb des Geltungsbereichs dieses Dokuments. Weitere Informationen finden Sie in der VMware-Dokumentation für NSX-T. In diesem Design wird die NSX-T-Managementinfrastruktur während der erstmaligen vCenter Server-Cluster-Bereitstellung anstelle von NSX-V bereitgestellt.
 
@@ -54,7 +54,7 @@ Tabelle 2. NSX-T Manager - Controller-Spezifikationen
 
 Attribut | Spezifikation
 --|--
-**NSX Manager / Controller** | 3 Virtuelle Appliances
+**NSX Manager / Controller** | Drei virtuelle Appliances
 **Anzahl vCPUs** | 4
 **Speicher** |  16 GB
 **Platte** | 60 GB
@@ -221,8 +221,3 @@ Die bereitgestellte Topologie 3 enthält die Topologie 1 mit dem Zusatz einer IC
 Ein umfassendes Verständnis der Funktionsweise von ICP auf vCenter Server finden Sie in der Dokumentation zu ICP in der vCenter Server-Architektur. Ein vom Kunden als bezeichneter privater und öffentlicher portierbarer {{site.data.keyword.cloud_notm}}-IP-Bereich wird dem T0 zur Verwendung durch den Kunden zugewiesen.
 
 Ab diesem Design haben Sie die Möglichkeit, diese IP-Bereiche nicht zu löschen, wenn die vCenter Server-Instanz stillgelegt und gelöscht wird.
-
-## Zugehörige Links
-{: #nsx-t-design-related}
-
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

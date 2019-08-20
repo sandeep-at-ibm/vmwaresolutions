@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -52,8 +52,3 @@ Acme Skateboards 希望在其应用程序现代化之旅中，在 {{site.data.ke
 下图表示基于 vCenter Server 实例运行的 {{site.data.keyword.icpfull_notm}}。NSX-V 配置有专用交换机/VXLAN、DLR 和专门针对 {{site.data.keyword.icpfull_notm}} 覆盖网络的 ESG，并且路由设置为通过 ESG 对底层网络进行访问。
 
 通过使用 {{site.data.keyword.cloud_notm}} 自动化，Acme Skateboards 可以供应混合解决方案，该解决方案包含 VMware on {{site.data.keyword.cloud_notm}}（用于运行其数据库 VM）和 {{site.data.keyword.icpfull_notm}} on VMware on {{site.data.keyword.cloud_notm}}（用于在容器中运行其应用程序和前端 Web Service）。NSX 为其提供了一组通用管理工具，用于管理网络和覆盖网络中的安全性。
-
-## 相关链接
-{: #vcsiks-usecases-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

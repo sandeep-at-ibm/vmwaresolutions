@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-22"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -67,8 +67,7 @@ Archiviazione | 100 GB |  SATA: 2 TB / SSD: 960 GB
 ## Struttura virtuale
 {: #vcsiks-arch-overview-infrastructure-virtual-structure}
 
-![Struttura fisica delle distribuzioni {{site.data.keyword.containerlong_notm}} e {{site.data.keyword.icpfull_notm}}- diagramma](../../images/vcsiks-phy-ics-iks-deployment.svg "Struttura fisica delle distribuzioni {{site.data.keyword.containerlong_notm}} e {{site.data.keyword.icpfull_notm}} -
-diagramma{: caption="Figura 1. Struttura fisica delle distribuzioni {{site.data.keyword.containerlong_notm}} e {{site.data.keyword.icpfull_notm}}" caption-side="bottom"}
+![Diagramma della struttura fisica delle distribuzioni di {{site.data.keyword.containerlong_notm}} e {{site.data.keyword.icpfull_notm}} ](../../images/vcsiks-phy-ics-iks-deployment.svg "Diagramma della struttura fisica delle distribuzioni di {{site.data.keyword.containerlong_notm}} e {{site.data.keyword.icpfull_notm}} ")
 
 All'interno dell'istanza vCenter Server, le VM del cliente sono distribuite a DLR (Distributed Logical Router) e ESG (Edge Services Gateway) NSX dedicati.
 
@@ -88,8 +87,7 @@ esterno installato su una sottorete portatile nella VLAN privata associata alle 
 ### vCenter Server
 {: #vcsiks-arch-overview-infrastructure-vcs}
 
-Come il PSC, vCenter Server viene distribuito come un dispositivo.
-Inoltre, il vCenter viene installato su una sottorete portatile nella VLAN privata associata alle VM di gestione. Il suo
+Come il PSC, vCenter Server viene distribuito come un dispositivo. Inoltre, il vCenter viene installato su una sottorete portatile nella VLAN privata associata alle VM di gestione. Il suo
 gateway predefinito è impostato sul BCR.
 
 ### NSX Manager
@@ -109,6 +107,7 @@ L'automazione di {{site.data.keyword.cloud_notm}} distribuisce tre controller NS
 Vengono distribuite coppie di gateway dei servizi edge (ESG) NSX. In tutti i casi, una coppia di gateway viene utilizzata per il traffico in uscita dai componenti di automazione che risiedono sulla rete privata. Per vCenter Server e {{site.data.keyword.icpfull_notm}}, un secondo gateway noto come
 edge gestito da ICP, viene distribuito e configurato con un uplink alla
 rete pubblica e un'interfaccia che è assegnata alla rete privata.
+
 Tutti i componenti NSX necessari, come Distributed Logical Router (DLR), switch logici e firewall possono essere configurati dall'amministratore. Per ulteriori informazioni sugli edge NSX distribuiti come parte della soluzione, vedi la [Guida di rete di vCenter Server](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro).
 
 Le seguenti tabelle riepilogano le specifiche ESG / DLR {{site.data.keyword.icpfull_notm}}.
@@ -152,8 +151,3 @@ che viene eseguita su hardware fisico nell'ambiente cloud. Quando esegui il prov
 un nodo di lavoro, determini le risorse che sono disponibili nei contenitori
 ospitati su tale nodo di lavoro. Come dotazione standard, i tuoi nodi di lavoro sono configurati con un
 Docker Engine gestito da IBM, risorse di calcolo separate, rete e un servizio volumi. Le funzioni di sicurezza integrate forniscono isolamento, funzionalità di gestione delle risorse e conformità di sicurezza dei nodi di lavoro.
-
-## Link correlati
-{: #vcsiks-arch-overview-infrastructure-related}
-
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

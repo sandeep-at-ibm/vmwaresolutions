@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-23"
 
 keywords: vCenter Server compliance, compliance info, vCenter Server policy
 
@@ -73,7 +73,7 @@ subcollection: vmware-solutions
 ## 存取客戶實例的原則
 {: #vc_compl_info-policy-for-access-client-inst}
 
-作為 {{site.data.keyword.vmwaresolutions_short}} 提供的 VMware vCenter Server 環境提供 VMWare 管理平台層，讓我們的客戶能夠管理虛擬化功能。在 IBM Cloud for VMware 產品與服務的生命週期內，可能需要「IBM 支援中心」以協助保證其能夠順利完成。「IBM 支援中心」的人為介入多半是客戶要求（亦即支援問題單）的結果。不過，在少數情況下，沒有客戶撰寫支援問題單，「IBM 支援中心」也會提供預防性協助，以防止未來的問題發生。此存取是透過 IBM Cloud 內部支援網路進行，並透過「IBM 支援中心」開立的支援問題單加以記載，再由 IBM Cloud SOC 持續監視。未經客戶事先同意，「IBM 支援中心」不會修改實例配置。存取是針對 VMware 管理元件及/或 IBM Cloud 管理元件，決不會存取用戶端虛擬機器或應用程式。
+作為 {{site.data.keyword.vmwaresolutions_short}} 提供的 VMware vCenter Server 環境提供 VMWare 管理平台層，讓我們的客戶能夠管理虛擬化功能。在 {{site.data.keyword.cloud_notm}} for VMware 產品與服務的生命週期內，可能需要「IBM 支援中心」以協助保證其能夠順利完成。「IBM 支援中心」的人為介入多半是客戶要求（亦即支援問題單）的結果。不過，在少數情況下，沒有客戶撰寫支援問題單，「IBM 支援中心」也會提供預防性協助，以防止未來的問題發生。此存取是透過 {{site.data.keyword.cloud_notm}} 內部支援網路進行，並透過「IBM 支援中心」開立的支援問題單加以記載，再由 {{site.data.keyword.cloud_notm}} SOC 持續監視。未經客戶事先同意，「IBM 支援中心」不會修改實例配置。存取是針對 VMware 管理元件及/或 {{site.data.keyword.cloud_notm}} 管理元件，決不會存取用戶端虛擬機器或應用程式。
 
 ## 預防支援
 {: #vc_compl_info-proactive-support}
@@ -83,14 +83,14 @@ subcollection: vmware-solutions
 
 * 在實例或服務的起始訂購及佈建期間，「IBM 支援中心」可能會在未事先通知客戶的情況下存取客戶實例及資訊，以確保適當履行訂單。
 * 除了訂購、佈建及安裝程序之外，「IBM 支援中心」還會主動監視新增主機這類的實例生命週期作業。
-* 為了解決已發生或未來可能發生的問題，「IBM 支援中心」可能會採取一些動作，包括但不限於：檢閱客戶訂單詳細資料、重新啟動自動化工作、執行「作業系統」重新載入作業，或使用所提供的客戶 IBM Cloud 使用者名稱及 API 金鑰來開啟 IBM Cloud 問題單。
+* 為了解決已發生或未來可能發生的問題，「IBM 支援中心」可能會採取一些動作，包括但不限於：檢閱客戶訂單詳細資料、重新啟動自動化工作、執行「作業系統」重新載入作業，或使用所提供的客戶 {{site.data.keyword.cloud_notm}} 使用者名稱及 API 金鑰來開立 {{site.data.keyword.cloud_notm}} 問題單。
 
 ### 穩定狀態作業的預防支援
 {: #vc_compl_info-proactive-support-for-steady-state-operations}
 
 * 在少數情況下，「IBM 支援中心」可能需要在穩定狀態作業期間存取用戶端實例，以對實例問題進行預防性疑難排解，或驗證所佈建服務或元件的功能。
-* 此存取是透過 IBM Cloud 內部支援網路進行。未經客戶事先同意，「IBM 支援中心」不會修改實例配置。
-* 存取是針對 VMware 管理元件及/或 IBM Cloud 管理元件，決不會存取用戶端虛擬機器或應用程式。
+* 此存取是透過 {{site.data.keyword.cloud_notm}} 內部支援網路進行。未經客戶事先同意，「IBM 支援中心」不會修改實例配置。
+* 存取是針對 VMware 管理元件及/或 {{site.data.keyword.cloud_notm}} 管理元件，決不會存取用戶端虛擬機器或應用程式。
 
 ### 支援問題單
 {: #vc_compl_info-support-tickets}
@@ -105,8 +105,8 @@ subcollection: vmware-solutions
 ## 客戶責任
 {: #vc_compl_info-client-responsibilities}
 
-* 雖然我們建議客戶採取一些步驟讓其環境更加安全，但應該注意，有些作法可能會對 IBM Cloud for VMware 的效益產生負面影響。
-* 客戶需對其建立的防火牆負責，也要負責對 IBM Cloud for VMware 元件之間進行通訊所加諸的結果限制。這些防火牆也可能妨礙「IBM 支援中心」存取客戶實例及解決問題的能力。
+* 雖然我們建議客戶採取一些步驟讓其環境更加安全，但應該注意，有些作法可能會對 {{site.data.keyword.cloud_notm}} for VMware 的效益產生負面影響。
+* 客戶需對其建立的防火牆負責，也要負責對 {{site.data.keyword.cloud_notm}} for VMware 元件之間進行通訊所加諸的結果限制。這些防火牆也可能妨礙「IBM 支援中心」存取客戶實例及解決問題的能力。
 * 客戶需完全負責對其系統中的資料進行加密。
 * 在起始部署時，供應項目的自動化及客戶的帳戶是分開的。我們容許並鼓勵客戶變更入口網站中 IBM 提供的所有密碼。
 * vCenter 存取和認證是在起始部署期間建立並提供給客戶。「IBM 支援中心」必須保留對管理層的完整存取權，以提供生命週期管理及支援我們的客戶，這是我們供應項目需求的一部分。

@@ -1,127 +1,589 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="816px" height="216px" version="1.1" viewBox="-.5 -.5 816 216" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
- <metadata>
-  <rdf:RDF>
-   <cc:Work rdf:about="">
-    <dc:format>image/svg+xml</dc:format>
-    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:title/>
-   </cc:Work>
-  </rdf:RDF>
- </metadata>
- <g fill="#f5f5f5" pointer-events="none" stroke="#e6e6e6">
-  <rect x="185" y="165.5" width="630" height="50"/>
-  <rect x="185" y="110.5" width="630" height="50"/>
-  <rect x="185" y="55.5" width="630" height="50"/>
-  <rect x="185" y=".5" width="630" height="50"/>
- </g>
- <rect x="25" y=".5" width="160" height="50" fill="#007fff" pointer-events="none"/>
- <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
-  <text x="104.5" y="22">RiskForesight</text>
-  <text x="104.5" y="34">Painéis</text>
- </g>
- <rect x="25" y="55.5" width="160" height="50" fill="#007fff" pointer-events="none"/>
- <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
-  <text x="104.5" y="77">Política Orchestraton</text>
-  <text x="104.5" y="89">&amp; Aplicação</text>
- </g>
- <rect x="25" y="110.5" width="160" height="50" fill="#007fff" pointer-events="none"/>
- <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
-  <text x="104.5" y="132">CaveoIQ</text>
-  <text x="104.5" y="144">Mecanismo Analytics</text>
- </g>
- <rect x="25" y="165.5" width="160" height="50" fill="#007fff" pointer-events="none"/>
- <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
-  <text x="104.5" y="187">Carga de trabalho,</text>
-  <text x="104.5" y="199">&amp; Segurança</text>
- </g>
- <rect x="223" y="5.5" width="80" height="40" fill="#007fff" pointer-events="none"/>
- <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
-  <text x="262.5" y="22">Provedor de Serviços</text>
-  <text x="262.5" y="34">Portal</text>
- </g>
- <rect x="343" y="5.5" width="80" height="40" fill="#007fff" pointer-events="none"/>
- <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
-  <text x="382.5" y="22">Locatário</text>
-  <text x="382.5" y="34">Portal</text>
- </g>
- <rect x="463" y="5.5" width="80" height="40" fill="#007fff" pointer-events="none"/>
- <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
-  <text x="502.5" y="28">Risco do Cyber</text>
- </g>
- <rect x="583" y="5.5" width="80" height="40" fill="#007fff" pointer-events="none"/>
- <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
-  <text x="622.5" y="22">Conformidade</text>
-  <text x="622.5" y="34">Risco</text>
- </g>
- <rect x="703" y="5.5" width="80" height="40" fill="#007fff" pointer-events="none"/>
- <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
-  <text x="742.5" y="22">Forense</text>
-  <text x="742.5" y="34">Análise</text>
- </g>
- <rect x="263" y="60.5" width="80" height="40" fill="#007fff" pointer-events="none"/>
- <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
-  <text x="302.5" y="83">RMCP</text>
- </g>
- <rect x="393" y="60.5" width="80" height="40" fill="#007fff" pointer-events="none"/>
- <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
-  <text x="432.5" y="77">Política</text>
-  <text x="432.5" y="89">Aplicação</text>
- </g>
- <rect x="523" y="60.5" width="80" height="40" fill="#007fff" pointer-events="none"/>
- <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
-  <text x="562.5" y="77">Política</text>
-  <text x="562.5" y="89">Análise</text>
- </g>
- <rect x="653" y="60.5" width="80" height="40" fill="#007fff" pointer-events="none"/>
- <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
-  <text x="692.5" y="77">Política</text>
-  <text x="692.5" y="89">Modelagem</text>
- </g>
- <rect x="323" y="116.5" width="80" height="40" fill="#007fff" pointer-events="none"/>
- <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
-  <text x="362.5" y="133">Máquina</text>
-  <text x="362.5" y="145">Aprendizado</text>
- </g>
- <rect x="463" y="116.5" width="80" height="40" fill="#007fff" pointer-events="none"/>
- <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
-  <text x="502.5" y="133">Multidimensionais</text>
-  <text x="502.5" y="145">Analítica</text>
- </g>
- <rect x="603" y="116.5" width="80" height="40" fill="#007fff" pointer-events="none"/>
- <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
-  <text x="642.5" y="139">Análise de Risco</text>
- </g>
- <rect x="263" y="170.5" width="80" height="40" fill="#007fff" pointer-events="none"/>
- <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
-  <text x="302.5" y="187">Remoto</text>
-  <text x="302.5" y="199">Coletor</text>
- </g>
- <rect x="393" y="170.5" width="80" height="40" fill="#007fff" pointer-events="none"/>
- <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
-  <text x="432.5" y="187">VMware</text>
-  <text x="432.5" y="199">Integração</text>
- </g>
- <rect x="523" y="170.5" width="80" height="40" fill="#007fff" pointer-events="none"/>
- <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
-  <text x="562.5" y="187">Contêiner</text>
-  <text x="562.5" y="199">Integração</text>
- </g>
- <rect x="653" y="170.5" width="80" height="40" fill="#007fff" pointer-events="none"/>
- <g fill="#fff" font-family="Helvetica" font-size="10px" text-anchor="middle">
-  <text x="692.5" y="187">Nuvem pública</text>
-  <text x="692.5" y="199">Integração</text>
- </g>
- <ellipse cx="26" cy="191" rx="25" ry="25" fill="#fff" pointer-events="none" stroke="#007fff"/>
- <g fill="#06c" font-family="Helvetica" font-size="12px" font-weight="bold" text-anchor="middle">
-  <text x="25.5" y="194">Detectar</text>
- </g>
- <ellipse cx="25" cy="136" rx="25" ry="25" fill="#fff" pointer-events="none" stroke="#007fff"/>
- <g fill="#06c" font-family="Helvetica" font-size="12px" font-weight="bold" text-anchor="middle">
-  <text x="24.5" y="139">Prever</text>
- </g>
- <ellipse cx="26" cy="81" rx="25" ry="25" fill="#fff" pointer-events="none" stroke="#007fff"/>
- <g fill="#06c" font-family="Helvetica" font-size="12px" font-weight="bold" text-anchor="middle">
-  <text x="25.5" y="84">Ato</text>
- </g>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="816px"
+   height="216px"
+   version="1.1"
+   viewBox="-.5 -.5 816 216"
+   id="svg2"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="caveonix-architecture.svg">
+  <defs
+     id="defs190" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1280"
+     inkscape:window-height="748"
+     id="namedview188"
+     showgrid="false"
+     inkscape:zoom="0.84436275"
+     inkscape:cx="408"
+     inkscape:cy="108"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <metadata
+     id="metadata4">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     fill="#f5f5f5"
+     pointer-events="none"
+     stroke="#e6e6e6"
+     id="g6">
+    <rect
+       x="185"
+       y="165.5"
+       width="630"
+       height="50"
+       id="rect8" />
+    <rect
+       x="185"
+       y="110.5"
+       width="630"
+       height="50"
+       id="rect10" />
+    <rect
+       x="185"
+       y="55.5"
+       width="630"
+       height="50"
+       id="rect12" />
+    <rect
+       x="185"
+       y=".5"
+       width="630"
+       height="50"
+       id="rect14" />
+  </g>
+  <rect
+     x="25"
+     y=".5"
+     width="160"
+     height="50"
+     fill="#007fff"
+     pointer-events="none"
+     id="rect16" />
+  <g
+     fill="#fff"
+     font-family="Helvetica"
+     font-size="10px"
+     text-anchor="middle"
+     id="g18">
+    <text
+       x="104.5"
+       y="22"
+       id="text20">RiskForesight</text>
+    <text
+       x="104.5"
+       y="34"
+       id="text22">Painéis</text>
+  </g>
+  <rect
+     x="25"
+     y="55.5"
+     width="160"
+     height="50"
+     fill="#007fff"
+     pointer-events="none"
+     id="rect24" />
+  <g
+     fill="#fff"
+     font-family="Helvetica"
+     font-size="10px"
+     text-anchor="middle"
+     id="g26">
+    <text
+       x="104.5"
+       y="77"
+       id="text28">Política Orchestraton</text>
+    <text
+       x="104.5"
+       y="89"
+       id="text30">&amp; Aplicação</text>
+  </g>
+  <rect
+     x="25"
+     y="110.5"
+     width="160"
+     height="50"
+     fill="#007fff"
+     pointer-events="none"
+     id="rect32" />
+  <g
+     font-size="10px"
+     id="g34"
+     transform="translate(12,0)"
+     style="font-size:10px;font-family:Helvetica;text-anchor:middle;fill:#ffffff">
+    <text
+       x="104.5"
+       y="132"
+       id="text36">CaveoIQ</text>
+    <text
+       x="104.5"
+       y="144"
+       id="text38">Mecanismo Analytics</text>
+  </g>
+  <rect
+     x="25"
+     y="165.5"
+     width="160"
+     height="50"
+     fill="#007fff"
+     pointer-events="none"
+     id="rect40" />
+  <g
+     fill="#fff"
+     font-family="Helvetica"
+     font-size="10px"
+     text-anchor="middle"
+     id="g42">
+    <text
+       x="104.5"
+       y="187"
+       id="text44">Carga de trabalho,</text>
+    <text
+       x="104.5"
+       y="199"
+       id="text46">&amp; Segurança</text>
+  </g>
+  <rect
+     x="223"
+     y="5.5"
+     width="80"
+     height="40"
+     fill="#007fff"
+     pointer-events="none"
+     id="rect48" />
+  <g
+     font-size="10px"
+     id="g50"
+     transform="matrix(0.72419004,0,0,1,70.836773,0)"
+     style="font-size:10px;font-family:Helvetica;text-anchor:middle;fill:#ffffff">
+    <text
+       x="262.5"
+       y="22"
+       id="text52">Provedor de Serviços</text>
+    <text
+       x="262.5"
+       y="34"
+       id="text54">Portal</text>
+  </g>
+  <rect
+     x="343"
+     y="5.5"
+     width="80"
+     height="40"
+     fill="#007fff"
+     pointer-events="none"
+     id="rect56" />
+  <g
+     fill="#fff"
+     font-family="Helvetica"
+     font-size="10px"
+     text-anchor="middle"
+     id="g58">
+    <text
+       x="382.5"
+       y="22"
+       id="text60">Locatário</text>
+    <text
+       x="382.5"
+       y="34"
+       id="text62">Portal</text>
+  </g>
+  <rect
+     x="463"
+     y="5.5"
+     width="80"
+     height="40"
+     fill="#007fff"
+     pointer-events="none"
+     id="rect64" />
+  <g
+     fill="#fff"
+     font-family="Helvetica"
+     font-size="10px"
+     text-anchor="middle"
+     id="g66">
+    <text
+       x="502.5"
+       y="28"
+       id="text68">Risco do Cyber</text>
+  </g>
+  <rect
+     x="583"
+     y="5.5"
+     width="80"
+     height="40"
+     fill="#007fff"
+     pointer-events="none"
+     id="rect70" />
+  <g
+     fill="#fff"
+     font-family="Helvetica"
+     font-size="10px"
+     text-anchor="middle"
+     id="g72">
+    <text
+       x="622.5"
+       y="22"
+       id="text74">Conformidade</text>
+    <text
+       x="622.5"
+       y="34"
+       id="text76">Risco</text>
+  </g>
+  <rect
+     x="703"
+     y="5.5"
+     width="80"
+     height="40"
+     fill="#007fff"
+     pointer-events="none"
+     id="rect78" />
+  <g
+     fill="#fff"
+     font-family="Helvetica"
+     font-size="10px"
+     text-anchor="middle"
+     id="g80">
+    <text
+       x="742.5"
+       y="22"
+       id="text82">Forense</text>
+    <text
+       x="742.5"
+       y="34"
+       id="text84">Análise</text>
+  </g>
+  <rect
+     x="263"
+     y="60.5"
+     width="80"
+     height="40"
+     fill="#007fff"
+     pointer-events="none"
+     id="rect86" />
+  <g
+     fill="#fff"
+     font-family="Helvetica"
+     font-size="10px"
+     text-anchor="middle"
+     id="g88">
+    <text
+       x="302.5"
+       y="83"
+       id="text90">RMCP</text>
+  </g>
+  <rect
+     x="393"
+     y="60.5"
+     width="80"
+     height="40"
+     fill="#007fff"
+     pointer-events="none"
+     id="rect92" />
+  <g
+     fill="#fff"
+     font-family="Helvetica"
+     font-size="10px"
+     text-anchor="middle"
+     id="g94">
+    <text
+       x="432.5"
+       y="77"
+       id="text96">Política</text>
+    <text
+       x="432.5"
+       y="89"
+       id="text98">Aplicação</text>
+  </g>
+  <rect
+     x="523"
+     y="60.5"
+     width="80"
+     height="40"
+     fill="#007fff"
+     pointer-events="none"
+     id="rect100" />
+  <g
+     fill="#fff"
+     font-family="Helvetica"
+     font-size="10px"
+     text-anchor="middle"
+     id="g102">
+    <text
+       x="562.5"
+       y="77"
+       id="text104">Política</text>
+    <text
+       x="562.5"
+       y="89"
+       id="text106">Análise</text>
+  </g>
+  <rect
+     x="653"
+     y="60.5"
+     width="80"
+     height="40"
+     fill="#007fff"
+     pointer-events="none"
+     id="rect108" />
+  <g
+     fill="#fff"
+     font-family="Helvetica"
+     font-size="10px"
+     text-anchor="middle"
+     id="g110">
+    <text
+       x="692.5"
+       y="77"
+       id="text112">Política</text>
+    <text
+       x="692.5"
+       y="89"
+       id="text114">Modelagem</text>
+  </g>
+  <rect
+     x="323"
+     y="116.5"
+     width="80"
+     height="40"
+     fill="#007fff"
+     pointer-events="none"
+     id="rect116" />
+  <g
+     fill="#fff"
+     font-family="Helvetica"
+     font-size="10px"
+     text-anchor="middle"
+     id="g118">
+    <text
+       x="362.5"
+       y="133"
+       id="text120">Máquina</text>
+    <text
+       x="362.5"
+       y="145"
+       id="text122">Aprendizado</text>
+  </g>
+  <rect
+     x="463"
+     y="116.5"
+     width="80"
+     height="40"
+     fill="#007fff"
+     pointer-events="none"
+     id="rect124" />
+  <g
+     font-size="10px"
+     id="g126"
+     transform="matrix(0.90942312,0,0,1,45.084884,0)"
+     style="font-size:10px;font-family:Helvetica;text-anchor:middle;fill:#ffffff">
+    <text
+       x="502.5"
+       y="133"
+       id="text128">Multidimensionais</text>
+    <text
+       x="502.5"
+       y="145"
+       id="text130">Analítica</text>
+  </g>
+  <rect
+     x="603"
+     y="116.5"
+     width="80"
+     height="40"
+     fill="#007fff"
+     pointer-events="none"
+     id="rect132" />
+  <g
+     fill="#fff"
+     font-family="Helvetica"
+     font-size="10px"
+     text-anchor="middle"
+     id="g134">
+    <text
+       x="642.5"
+       y="139"
+       id="text136">Análise de Risco</text>
+  </g>
+  <rect
+     x="263"
+     y="170.5"
+     width="80"
+     height="40"
+     fill="#007fff"
+     pointer-events="none"
+     id="rect138" />
+  <g
+     fill="#fff"
+     font-family="Helvetica"
+     font-size="10px"
+     text-anchor="middle"
+     id="g140">
+    <text
+       x="302.5"
+       y="187"
+       id="text142">Remoto</text>
+    <text
+       x="302.5"
+       y="199"
+       id="text144">Coletor</text>
+  </g>
+  <rect
+     x="393"
+     y="170.5"
+     width="80"
+     height="40"
+     fill="#007fff"
+     pointer-events="none"
+     id="rect146" />
+  <g
+     fill="#fff"
+     font-family="Helvetica"
+     font-size="10px"
+     text-anchor="middle"
+     id="g148">
+    <text
+       x="432.5"
+       y="187"
+       id="text150">VMware</text>
+    <text
+       x="432.5"
+       y="199"
+       id="text152">Integração</text>
+  </g>
+  <rect
+     x="523"
+     y="170.5"
+     width="80"
+     height="40"
+     fill="#007fff"
+     pointer-events="none"
+     id="rect154" />
+  <g
+     fill="#fff"
+     font-family="Helvetica"
+     font-size="10px"
+     text-anchor="middle"
+     id="g156">
+    <text
+       x="562.5"
+       y="187"
+       id="text158">Contêiner</text>
+    <text
+       x="562.5"
+       y="199"
+       id="text160">Integração</text>
+  </g>
+  <rect
+     x="653"
+     y="170.5"
+     width="80"
+     height="40"
+     fill="#007fff"
+     pointer-events="none"
+     id="rect162" />
+  <g
+     fill="#fff"
+     font-family="Helvetica"
+     font-size="10px"
+     text-anchor="middle"
+     id="g164">
+    <text
+       x="692.5"
+       y="187"
+       id="text166">Nuvem pública</text>
+    <text
+       x="692.5"
+       y="199"
+       id="text168">Integração</text>
+  </g>
+  <ellipse
+     cx="26"
+     cy="191"
+     rx="25"
+     ry="25"
+     fill="#fff"
+     pointer-events="none"
+     stroke="#007fff"
+     id="ellipse170" />
+  <g
+     fill="#06c"
+     font-family="Helvetica"
+     font-size="12px"
+     font-weight="bold"
+     text-anchor="middle"
+     id="g172">
+    <text
+       x="25.5"
+       y="194"
+       id="text174">Detectar</text>
+  </g>
+  <ellipse
+     cx="25"
+     cy="136"
+     rx="25"
+     ry="25"
+     fill="#fff"
+     pointer-events="none"
+     stroke="#007fff"
+     id="ellipse176" />
+  <g
+     fill="#06c"
+     font-family="Helvetica"
+     font-size="12px"
+     font-weight="bold"
+     text-anchor="middle"
+     id="g178">
+    <text
+       x="24.5"
+       y="139"
+       id="text180">Prever</text>
+  </g>
+  <ellipse
+     cx="26"
+     cy="81"
+     rx="25"
+     ry="25"
+     fill="#fff"
+     pointer-events="none"
+     stroke="#007fff"
+     id="ellipse182" />
+  <g
+     fill="#06c"
+     font-family="Helvetica"
+     font-size="12px"
+     font-weight="bold"
+     text-anchor="middle"
+     id="g184">
+    <text
+       x="25.5"
+       y="84"
+       id="text186">Ato</text>
+  </g>
 </svg>

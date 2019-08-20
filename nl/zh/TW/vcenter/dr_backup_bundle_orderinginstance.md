@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-25"
 
 keywords: single-node trial, data protection DR, order data protection DR
 
@@ -18,15 +18,15 @@ subcollection: vmware-solutions
 {:note: .note}
 {:important: .important}
 
-# 訂購、檢視和刪除 Data Protection and Disaster Recovery 單一節點試用版實例
+# 訂購、檢視及刪除 Single-node Trial for Data Protection and Disaster Recovery 實例
 {: #dr_backup_bundle_orderinginstance}
 
-訂購 Data Protection and Disaster Recovery 單一節點試用版實例之前，請檢閱規劃需求。
+訂購 Single-node Trial for Data Protection and Disaster Recovery 實例之前，請檢閱規劃需求。
 
-此試用版在 90 天後會自動刪除。Data Protection and Disaster Recovery 單一節點試用版實例的到期倒數計時顯示在實例詳細資料頁面上。
+此試用版在 90 天後會自動刪除。Single-node Trial for Data Protection and Disaster Recovery 實例的到期倒數計時顯示在實例詳細資料頁面上。
 {:important}
 
-## 訂購 Data Protection and Disaster Recovery 單一節點試用版實例的需求和規劃
+## 訂購 Single-node Trial for Data Protection and Disaster Recovery 實例的需求和規劃
 {: #dr_backup_bundle_orderinginstance-req}
 
 您務必確認下列需求並完成下列作業。
@@ -47,17 +47,18 @@ subcollection: vmware-solutions
 ### 實例名稱需求
 {: #dr_backup_bundle_orderinginstance-inst-name-req}
 
-檢閱實例名稱需求：
-* 只容許英數及橫線 (-) 字元。
-* 實例名稱的開頭必須是英文字母，而且結尾必須是英數字元。
+實例名稱必須滿足下列需求：
+* 只容許小寫英文字母、數字及橫線 (-) 字元。
+* 實例名稱的開頭必須是小寫英文字母。
+* 實例名稱的結尾必須是小寫英文字母或數值字元。
 * 實例名稱的長度上限為 10 個字元。
 * 實例名稱在您的帳戶中必須是唯一的。
 
-## 訂購 Data Protection and Disaster Recovery 單一節點試用版實例的程序
+## 訂購 Single-node Trial for Data Protection and Disaster Recovery 實例的程序
 {: #dr_backup_bundle_orderinginstance-procedure}
 
-1. 從 {{site.data.keyword.cloud_notm}} 型錄中，按一下左導覽窗格中的 **VMware** 圖示，然後按一下 **VMware Services** 區段中的 **Data Protection and Disaster Recovery 單一節點試用版**卡。
-2. 在 **Data Protection and Disaster Recovery 單一節點試用版**頁面上，按一下**繼續**。
+1. 從 {{site.data.keyword.cloud_notm}} 型錄中，按一下左導覽窗格中的 **VMware** 圖示，然後按一下 **VMware Services** 區段中的 **Single-node Trial for Data Protection and Disaster Recovery** 卡。
+2. 在 **Single-node Trial for Data Protection and Disaster Recovery** 頁面上，按一下**繼續**。
 3. 完成要求 {{site.data.keyword.cloud_notm}} 基礎架構帳戶的步驟，或提供您現有的**使用者名稱**和 **API 金鑰**，然後按一下**擷取**。
 
  如果 API 金鑰存在，則會隱藏本節。
@@ -73,12 +74,12 @@ subcollection: vmware-solutions
    3. 按一下適用於您的訂單的條款鏈結，並先確認您同意這些條款，再訂購實例。
    4. 按一下**佈建**。
 
-### 訂購 Data Protection and Disaster Recovery 單一節點試用版實例之後的結果
+### 訂購 Single-node Trial for Data Protection and Disaster Recovery 實例之後的結果
 {: #dr_backup_bundle_orderinginstance-results}
 
 * 自動啟動實例的部署作業，並且會訂購內部部署 HCX on {{site.data.keyword.cloud_notm}} 服務啟動金鑰。
 * 您可以檢查部署狀態，包括可能需要注意的任何問題，方法是檢視實例詳細資料的**部署歷程**區段。
-* 順利部署實例後，就會安裝[Data Protection and Disaster Recovery 單一節點試用版實例的技術規格](/docs/services/vmwaresolutions/services?topic=vmware-solutions-dr_backup_bundle_overview#dr_backup_bundle_overview-tech-specs)中說明的元件。
+* 順利部署實例後，就會安裝 [Single-node Trial for Data Protection and Disaster Recovery 實例的技術規格](/docs/services/vmwaresolutions/services?topic=vmware-solutions-dr_backup_bundle_overview#dr_backup_bundle_overview-tech-specs)中說明的元件。
 * 實例已備妥可供使用時，實例的狀態會變更為**備妥使用**，而且您會透過電子郵件收到通知。
 
 #### HCX on IBM Cloud 的部署處理程序
@@ -125,12 +126,12 @@ subcollection: vmware-solutions
 
 1. 在**資源**頁面上尋找內部部署啟動金鑰。
   1. 在 {{site.data.keyword.vmwaresolutions_short}} 主控台中，從左導覽窗格按一下**資源**。
-  2. 在 **vCenter Server 實例**表格中，檢閱**類型**直欄，以找出「單一節點試用版移轉及應用程式現代化」實例，並記下實例名稱。
+  2. 在 **vCenter Server 實例**表格中，檢閱**類型**直欄，以找出 Single-node Trial for Migration and App Modernization 實例，並記下實例名稱。
   3. 捲動至**內部部署 HCX 實例**表格，檢閱**名稱**直欄，以找出與使用 *-OnPrem* 字尾所訂購之單一節點實例同名的實例。
   4. 記下**啟動金鑰**欄位中的金鑰。
 2. 從 HCX on {{site.data.keyword.cloud_notm}} HCX Manager 主控台取得內部部署 HCA Enterprise Manager Open Virtual Appliance (OVA)。
   1. 連接至「HCX Cloud 主控台」。
-    1. 在 **vCenter Server 實例**表格中，按一下「單一節點試用版移轉及應用程式現代化」實例，以檢視實例詳細資料。
+    1. 在 **vCenter Server 實例**表格中，按一下 Single-node Trial for Migration and App Modernization 實例，以檢視實例詳細資料。
     2. 在**存取資訊**之下，尋找並記下 vCenter 認證。
     3. 從左導覽窗格中，按一下**服務**。
     4. 在**服務**頁面上，按一下 **HCX on IBM Cloud**。
@@ -163,10 +164,10 @@ subcollection: vmware-solutions
 您只能從 {{site.data.keyword.vmwaresolutions_short}} 主控台，而不能從 {{site.data.keyword.slportal}} 或透過主控台以外的任何其他方法，來管理在 {{site.data.keyword.cloud_notm}} 帳戶中建立的 {{site.data.keyword.vmwaresolutions_short}} 基礎架構元件。如果您在 {{site.data.keyword.vmwaresolutions_short}} 主控台之外變更這些元件，這些變更不會與主控台同步化，而且會使您的環境不穩定。
 {:important}
 
-## 刪除 Data Protection and Disaster Recovery 單一節點試用版實例的程序
+## 刪除 Single-node Trial for Data Protection and Disaster Recovery 實例的程序
 {: #dr_backup_bundle_orderinginstance-deleting-procedure}
 
-刪除 Data Protection and Disaster Recovery 單一節點試用版實例時，會按順序釋出下列元件：
+當您刪除 Single-node Trial for Disaster Recover 實例時，會循序釋出下列元件：
 
 1. 所有已部署的服務
 3. VMware 產品授權
@@ -179,7 +180,7 @@ subcollection: vmware-solutions
 將針對已刪除的實例，向您收取到 {{site.data.keyword.cloud_notm}} 基礎架構計費週期結束為止的費用。
 {:note}
 
-要刪除 Data Protection and Disaster Recovery 單一節點試用版實例，請完成下列步驟：
+要刪除 Single-node Trial for Data Protection and Disaster Recovery 實例，請完成下列步驟：
 
 1. 從 {{site.data.keyword.vmwaresolutions_short}} 主控台中，按一下左導覽窗格中的**資源**。
 2. 在 **vCenter Server 實例**表格中，尋找要刪除的實例。
@@ -191,8 +192,8 @@ subcollection: vmware-solutions
 ## 相關鏈結
 {: #dr_backup_bundle_orderinginstance-related}
 
-* [vCenter Server 和 IBM Cloud Private 手冊](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [開立 IBM Cloud Private 的問題單](https://www.ibm.com/mysupport/s/?language=en_US){:external}
+* [vCenter Server 和 {{site.data.keyword.cloud_notm}} Private 手冊](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
+* [開立 {{site.data.keyword.cloud_notm}} Private 問題單](https://www.ibm.com/mysupport/s/?language=en_US){:external}
 * [VMware HCX 資源](https://hcx.vmware.com/#/docs){:external}
 * [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}
 * [取消虛擬伺服器](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)

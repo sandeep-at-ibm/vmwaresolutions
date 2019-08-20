@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 
 共用服務提供雲端管理平台中其他服務所使用的服務。解決方案的共用服務包括身分及存取服務、網域名稱服務、NTP 服務、SMTP 服務及憑證管理中心服務。
 
-![共用服務](../../images/vcsv4radiagrams-ra-commonservices.svg "共用服務")
+![共用服務](../../images/vcsv4radiagrams-ra-commonservices.svg "共用服務"){: caption="圖 1. 共用服務" caption-side="bottom"}
 
 ## 身分及存取服務
 {: #design_commonservice-identity-access}
@@ -37,9 +37,9 @@ subcollection: vmware-solutions
 如果您選擇具有兩部高可用性 MSAD 伺服器的選項，則須負責提供 Microsoft 授權並啟動。
 {:note}
 
-Active Directory 僅用來鑑別管理 VMware 實例的存取權，並不會將工作負載的使用者存放至已部署的實例中。Active Directory 伺服器的樹系根網域名稱等於您指定的 DNS 網域名稱。只有在鏈結多個實例時，才會針對主要 vCenter Server 實例指定此網域名稱。如果是已鏈結的實例，則每個實例都會包含位於樹系根抄本環中的 Active Directory 伺服器。DNS 區域檔案也會在 Active Directory 伺服器上進行抄寫。
+Active Directory 僅用來鑑別管理 VMware 實例的存取權，並不會將工作負載的使用者存放至已部署的實例中。Active Directory 伺服器的樹系根網域名稱等於您指定的網域名稱服務 (DNS) 網域名稱。只有在鏈結多個實例時，才會針對主要 vCenter Server 實例指定此網域名稱。如果是已鏈結的實例，則每個實例都會包含位於樹系根抄本環中的 Active Directory 伺服器。DNS 區域檔案也會在 Active Directory 伺服器上進行抄寫。
 
-### vSphere SSO 網域
+### vSphere Single Sign On (SSO) 網域
 {: #design_commonservice-vsphere-sso}
 
 vSphere Single Sign On (SSO) 網域用來作為單一實例或多個已鏈結實例的起始鑑別機制。SSO 網域也可用來將某個 VMware 實例或多個已鏈結實例連接至 MSAD 伺服器。會套用下列 SSO 配置：  
@@ -69,19 +69,19 @@ vCenter Server 部署會將已部署的 AD VSI 用作實例的 DNS 伺服器。�
 ### 次要 vCenter Server 實例
 {: #design_commonservice-secondary-vcs}
 
-若為跨實例備援；當第一個次要 vCenter Server 實例新增至現有的主要 vCenter Server 實例或現行獨立式 vCenter Server 實例時，對於需要 DNS 伺服器項目的所有元件，該主要實例 AD DNS 伺服器 IP 位址會用於次要 vCenter Server 實例，以及任何後續的次要 vCenter Server 實例「次要 DNS」項目。例如，ESXi、vCenter 及 NSX 管理程式。這包括附加元件，例如 HCX、Zerto 及 Veeam。然後，主要站台次要 DNS 項目會變更為第一個次要 vCenter Server 實例 AD/DNS IP 位址。
+若為跨實例備援，當第一個次要 vCenter Server 實例新增至現有的主要 vCenter Server 實例或現行獨立式 vCenter Server 實例時，對於需要 DNS 伺服器項目的所有元件，該主要實例 AD DNS 伺服器 IP 位址會用於次要 vCenter Server 實例，以及任何後續的次要 vCenter Server 實例「次要 DNS」項目。例如，ESXi、vCenter 和 NSX Manager 以及 HCX、Zerto 和 Veeam 這類附加程式元件。然後，主要站台次要 DNS 項目會變更為第一個次要 vCenter Server 實例 AD/DNS IP 位址。
 
 ## NTP 服務
 {: #design_commonservice-ntp}
 
-此設計利用 {{site.data.keyword.cloud_notm}} 基礎架構 NTP 伺服器。所有已部署的元件都已配置成利用這些 NTP 伺服器。為了讓憑證及 Active Directory 鑑別正常運作，使此設計內的所有元件都使用相同的 NTP 伺服器十分重要。
+此設計使用 {{site.data.keyword.cloud_notm}} 基礎架構 NTP 伺服器。所有已部署的元件都已配置成使用這些 NTP 伺服器。為了讓憑證及 Active Directory 鑑別正常運作，設計內的所有元件都使用相同的 NTP 伺服器十分重要。
 
-![NTP 和 DNS 服務](../../images/vcsv4radiagrams-ra-servicesinterconnections.svg "NTP 和 DNS 服務")
+![NTP 和 DNS 服務](../../images/vcsv4radiagrams-ra-servicesinterconnections.svg "NTP 和 DNS 服務"){: caption="圖 2. NTP 和 DNS 服務" caption-side="bottom"}
 
 ## 憑證管理中心服務
 {: #design_commonservice-cas}
 
-依預設，VMware vSphere 會使用位於 VMware Platform Services Controller 應用裝置之「VMware 憑證管理中心 (VMCA)」所簽署的 TLS 憑證。一般使用者裝置或瀏覽器不會信任這些憑證。將使用者面向的憑證取代為協力廠商或企業憑證管理中心 (CA) 所簽署的憑證，是一種安全最佳作法。機器對機器通訊的憑證可以保留作為 VMCA 所簽署的憑證，不過，建議您遵循組織的最佳作法，這通常涉及使用已識別的企業 CA。
+依預設，VMware vSphere 會使用位於 VMware Platform Services Controller 應用裝置之 VMware 憑證管理中心 (VMCA) 所簽署的 TLS 憑證。使用者裝置或瀏覽器不信任這些憑證。將使用者面向的憑證取代為協力廠商或企業憑證管理中心 (CA) 所簽署的憑證，是一種安全最佳作法。機器對機器通訊的憑證可以保留作為 VMCA 所簽署的憑證。不過，建議您遵循組織的最佳作法，這通常涉及使用已識別的企業 CA。
 
 您可以使用此設計內的 Windows AD 伺服器來建立本端實例所簽署的憑證。不過，必要的話，您也可以選擇配置 CA 服務。
 

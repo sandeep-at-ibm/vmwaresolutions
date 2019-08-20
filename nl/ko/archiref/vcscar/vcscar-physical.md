@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -62,7 +62,7 @@ Skate Advisor 애플리케이션은 필수 호스팅 인프라를 제공하는 �
 ### 로드 밸런싱 및 프록싱
 {: #vcscar-physical-load-balance-proxy}
 
-로드 밸런싱과 프록싱은 {{site.data.keyword.icpfull_notm}} Ingress 제어기 컴포넌트를 통해
+로드 밸런싱과 프록싱은 {{site.data.keyword.icpfull_notm}} Ingress Controller 컴포넌트를 통해
 구현됩니다. 이 컴포넌트는 컨테이너 스케일링과 장애 복구를 원활하게 처리합니다.
 
 애플리케이션 프록싱은 다음과 같이 로드 밸런싱되는 nginx 컨테이너에 의해 제공됩니다.
@@ -151,8 +151,3 @@ Server 인스턴스에 배치된 {{site.data.keyword.icpfull_notm}} 및 CAM을 �
 {{site.data.keyword.containerlong_notm}} 환경에 클라우드 연결을 논리적으로 작성합니다. {{site.data.keyword.icpfull_notm}}
 클러스터는 각 데이터 센터 또는 클라우드 환경에 배치되며, MCM은 {{site.data.keyword.icpfull_notm}} 클러스터를
 단일 관리 보기에 연결하는 메커니즘을 제공합니다.
-
-## 관련 링크
-{: #vcscar-physical-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

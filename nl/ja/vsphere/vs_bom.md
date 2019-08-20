@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-16"
 
 keywords: vSphere BOM, bill of materials vSphere, BOM
 
@@ -22,7 +22,7 @@ VMware vSphere ソフトウェア・コンポーネントの部品構成表 (BOM
 
 | 製造元 | コンポーネント                       | バージョン |
 |:-------------|:--------------------------------|:--------|
-| VMware       | vSphere ESXi                    | 6.7 更新 1 または 6.5 更新 2 |
+| VMware       | vSphere ESXi                    | 6.7 更新 2 または 6.5 更新 2 |
 {: caption="表 1. VMware vSphere クラスターの BOM" caption-side="top"}
 
 ## 関連リンク

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-02"
 
 keywords: Veeam, Veeam install, tech specs Veeam
 
@@ -23,7 +23,7 @@ subcollection: vmware-solutions
 
 Le service Veeam on {{site.data.keyword.cloud}} s'intègre directement et en toute transparence à vos hyperviseurs VMware afin d'aider votre entreprise à obtenir la haute disponibilité requise. Il fournit des objectifs de points de récupération et de temps de reprise pour vos applications et vos données. Ces objectifs peuvent être fournis en moins de 15 minutes après la fin de la configuration. Ce service vous permet de contrôler directement à la fois la sauvegarde et la restauration de toutes les machines virtuelles de votre infrastructure depuis la console Veeam.
 
-Ce service est disponible uniquement sur les instances déployées en version 1.8 ou dans des éditions ultérieures. La version de Veeam en cours qui est installée est la version 9.5u4.
+Ce service est disponible uniquement sur les instances déployées en version 1.8 ou dans des éditions ultérieures. La version actuelle de Veeam installée est la version 9.5u4b.
 {:note}
 
 ## Spécifications techniques relatives à Veeam on IBM Cloud

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-07-22"
 
 keywords: about vmware solutions, product overview, benefits
 
@@ -50,13 +50,6 @@ subcollection: vmware-solutions
 vCenter Server 供應項目容許您使用自訂運算、儲存空間及網路資源來部署 VMware 虛擬環境，以充分配合您的商業需要。
 
 如需相關資訊，請參閱 [vCenter Server 概觀](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)。
-
-### VMware vCenter Server on IBM Cloud with Hybridity Bundle
-{: #prod_overview-hybridity}
-
-vCenter Server with Hybridity 供應項目是一種受管理的專用雲端，有助於快速且輕鬆地將內部部署基礎架構延伸到雲端。VMware 環境根據 IBM 提供的「VMware 軟體定義資料中心」授權，並包括 VMware Hybrid Cloud Extension (HCX)。使用 HCX，您可以透過內部部署方式安全地連接 vSphere 5.0+ 環境與 {{site.data.keyword.cloud_notm}} 站台，來獲得無縫的基礎架構混合及實際應用程式行動性。
-
-如需相關資訊，請參閱 [vCenter Server with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)。
 
 ### VMware vSphere on IBM Cloud
 {: #prod_overview-vss}

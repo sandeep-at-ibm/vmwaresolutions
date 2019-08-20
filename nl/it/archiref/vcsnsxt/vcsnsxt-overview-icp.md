@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -43,9 +43,3 @@ La gestione della rete di {{site.data.keyword.icpfull_notm}} è facilitata dall'
 Calico utilizza il livello 3 o il livello di rete, del modello OSI (Open System Interconnection). Calico utilizza BGP (Border Gateway Protocol) per creare tabelle di instradamento che facilitano la comunicazione tra i nodi agent.
 
 Per ulteriori informazioni sulla rete di Calico, vedi [{{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-iks).
-
-## Link correlati
-{: #vcsnsxt-overview-icp-related}
-
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

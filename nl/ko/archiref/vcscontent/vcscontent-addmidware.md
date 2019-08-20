@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-27"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -255,8 +255,3 @@ Twitter 알림 서비스와 같은 마이크로 서비스를 더 추가합니다
 Slack 채널이나 공용 Twitter 채널을 통해 동적 로열티 레벨 메시징을 사용할 수 있습니다.
 
 ![Stock Trader 인리치먼트](../../images/vcscontent-enrich.svg "Stock Trader 인리치먼트")
-
-## 관련 링크
-{: #vcscontent-addmidware-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

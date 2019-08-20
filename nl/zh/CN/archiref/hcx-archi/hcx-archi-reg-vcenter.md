@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-27"
+lastupdated: "2019-07-08"
 
 subcollection: vmware-solutions
 
@@ -24,7 +24,7 @@ Hybrid Cloud Services 虚拟设备的电源必须打开后才能进行注册。
 {: #hcx-archi-reg-vcenter-proc-register}
 
 1. 登录到 Hybrid Cloud Services 服务虚拟设备。例如，`https:My-HCX-Manager:9443/`。
-2. 单击**管理设置**磁贴。
+2. 在**仪表板**面板上，完成以下步骤：
   1. 在左侧窗格中的**配置系统**下，选择 vCenter。
   2. 单击右上方的**添加 vCenter**。
   3. 输入 vCenter Server 的 IP 地址，格式为 `https:vCenter-host-name` 或 `https:vCenter-IP-address`。例如，`https:My-vCenter` 或 `https:10.108.26.211`。

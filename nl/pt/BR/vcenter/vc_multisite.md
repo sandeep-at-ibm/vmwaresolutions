@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-16"
 
 keywords: vCenter Server multi-site, multi-site configuration, multi-site deployment vCenter Server
 
@@ -32,16 +32,16 @@ A configuração multissite para instâncias do vCenter Server é suportada some
 Uma implementação de vários sites consiste nos componentes a seguir.
 
 * **Instância primária**: a instância primária do VMware vCenter Server tem a seguinte configuração:
-  *  Domínio-raiz do Microsoft Active Directory (AD) e DNS (Sistema de Nomes de Domínio)
-  *  Subdomínio do vCenter Server
-  *  Domínio SSO (Conexão Única)
-  *  Nome do site SSO
+  * Domínio-raiz do Microsoft Active Directory (AD) e DNS (Sistema de Nomes de Domínio)
+  * Subdomínio do vCenter Server
+  * Domínio SSO (Conexão Única)
+  * Nome do site SSO
+  * Para instâncias primárias que são implementadas na V2.8 ou mais recente: vCenter Server Appliance (vCSA) com o Platform Services Controller (PSC) integrado
 * **Instância ou instâncias secundárias**: uma ou mais instâncias secundárias do vCenter Server, ligadas à instância primária, com a seguinte configuração:
-   *  Nome do site SSO
-   *  Subdomínio do DNS que é vinculado ao domínio-raiz na instância primária
-   *  Configuração de replicação do DNS e AD entre as máquinas virtuais do AD nas instâncias primárias e secundárias
-   *  Para instâncias primárias que são implementadas na V2.8 ou mais recente: o vCenter Server Appliance (vCSA) com o Platform Services Controller (PSC) integrado é implementado e configurado
-   *  O VMware vCenter nas instâncias secundárias é configurado com o Modo vinculado aprimorado para o vCenter na instância primária
+  * Nome do site SSO
+  * Subdomínio do DNS que é vinculado ao domínio-raiz na instância primária
+  * Configuração de replicação do DNS e AD entre as máquinas virtuais do AD nas instâncias primárias e secundárias
+  * O VMware vCenter nas instâncias secundárias é configurado com o Modo vinculado aprimorado para o vCenter na instância primária
 
 ## Implementação de vários sites do vCenter Server
 {: #vc_multisite-deployment}

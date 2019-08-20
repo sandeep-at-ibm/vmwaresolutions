@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -117,7 +117,7 @@ Tableau 1. Valeurs exemple pour les propriétés réseau
   * Sélectionnez l'option **Power on after deployment**.
   * Passez en revue les paramètres des Services cloud hybrides, puis cliquez sur **Finish**. Plusieurs minutes peuvent être nécessaires pour que le dispositif des Services cloud hybrides se mette sous tension.
   * Pour vérifier l'état, accédez à la page d'accueil de vSphere Web Client, et, sous l'onglet **Home**, accédez à **Inventories** et cliquez sur **Hosts and Clusters**. Développez la hiérarchie du centre de données, puis cliquez sur la machine virtuelle du service cloud hybride pour afficher un récapitulatif dans le volet central.
-  * Consultez l'onglet **Summary**, la console indique **Powered On** et le bouton **Play** est vert.
+  * Affichez l'onglet **Summary**, la console indique **Powered On** et l'icône **Play** est verte.
 10. HCX Manager est sous tension et prêt pour un enregistrement auprès du vCenter local.
 
 ## Configuration initiale du dispositif HCX Manager
@@ -143,11 +143,10 @@ Tableau 1. Valeurs exemple pour les propriétés réseau
 {: #hcxclient-vcs-client-deployment-reg-vcenter}
 
 1. Connectez-vous au dispositif virtuel du service cloud hybride.
-2. Cliquez sur la vignette **Manage Settings**.
+2. Dans le panneau **Dashboard**, effectuez les opérations suivantes :
   1. Dans le volet gauche, sous **Configure Systems**, sélectionnez vCenter.
   2. Cliquez sur **Add vCenter** dans l'angle supérieur droit.
-  3. Entrez l'adresse IP de vCenter Server au format `https://vCenter-host-name` ou `https://vCenter-IP-address`.
-    * Par exemple, `https://My-vCenter` ou `https://10.108.26.211`.
+  3. Entrez l'adresse IP de vCenter Server au format `https://vCenter-host-name` ou `https://vCenter-IP-address`. Par exemple, `https://My-vCenter` ou `https://10.108.26.211`
   4. Entrez le nom d'utilisateur et le mot de passe de vCenter Server. Le compte qui est utilisé doit avoir le rôle de l'administrateur vCenter.
   5. Cliquez sur **OK**. Ne redémarrez pas lorsque le message _You need to restart the app_ s'affiche.
 3. Configurez le service de recherche / de connexion unique (SSO).

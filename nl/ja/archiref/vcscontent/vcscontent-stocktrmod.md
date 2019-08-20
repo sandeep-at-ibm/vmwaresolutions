@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-23"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -106,8 +106,3 @@ Jane が Stock Trader をクリックすると、Liberty で各 war ファイル
 
 この変換の段階では、Todd はデータ・ソースを変更しませんでした。 Transformation Advisor が WebSphere Application Server Network Deployment データ・ソース構成を取得し、それを Liberty コンテナーの server.xml に追加します。
 {:important}
-
-## 関連リンク
-{: #vcscontent-stocktrmod-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

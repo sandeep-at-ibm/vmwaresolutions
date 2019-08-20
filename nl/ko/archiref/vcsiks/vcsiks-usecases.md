@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -55,8 +55,3 @@ Acme Skateboards는 애플리케이션 현대화에 대한 과정을 위해 vCen
 다음 다이어그램은 vCenter Server 인스턴스에서 실행 중인 {{site.data.keyword.icpfull_notm}}를 나타냅니다. NSX-V는 전용 스위치/VXLAN, DLR 및 {{site.data.keyword.icpfull_notm}} 오버레이 네트워크에 특정한 ESG로 구성되며, 언더레이 네트워크에 대한 액세스를 위해 라우팅이 ESG를 통해 설정됩니다.
 
 {{site.data.keyword.cloud_notm}} 자동화를 사용하면, Acme Skateboards에서 {{site.data.keyword.cloud_notm}}의 VMware를 포함하는 하이브리드 솔루션을 프로비저닝하여 앱과 프론트 엔드 웹 서비스를 컨테이너에서 실행하기 위해 데이터베이스 VM 및 VMware on {{site.data.keyword.cloud_notm}}의 {{site.data.keyword.icpfull_notm}}를 실행할 수 있습니다. NSX는 오버레이 네트워크에서 네트워크 및 보안을 위한 공통 관리 도구 세트를 제공합니다.
-
-## 관련 링크
-{: #vcsiks-usecases-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -194,8 +194,3 @@ VMware on {{site.data.keyword.cloud_notm}}는 IBM Cloud의 전세계 데이터 �
 {: #vcsiks-overview-network-sec-compliance}
 
 엄격한 업계 가이드라인 준수에 관해 {{site.data.keyword.cloud_notm}}는 사용자를 위해 준수를 촉진하는 작업을 수행했습니다. [{{site.data.keyword.cloud_notm}}의 규제 준수](https://www.ibm.com/cloud/compliance)에서는 보안 및 개인정보 보호를 위한 특정한 준수 인증, 글로벌 규정, 맞춤 및 프레임워크에 대해 자세히 설명합니다. [{{site.data.keyword.containerlong_notm}}에 대한 보안](/docs/containers?topic=containers-security#security)에는 {{site.data.keyword.containerlong_notm}} 보안 기능이 자세히 설명되어 있습니다.
-
-## 관련 링크
-{: #vcsiks-overview-network-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-30"
 
 keywords: vSphere upgrade, NSX upgrade, PSC upgrade
 
@@ -60,7 +60,7 @@ Conclua as etapas a seguir para pedir um jumpbox de VSI.
 Ignore a primeira etapa se você já tiver um jumpbox de VSI em seu ambiente.
 {:note}
 
-1. Peça uma VSI por hora ou mensal por meio do [portal do cliente de infraestrutura do IBM Cloud](https://control.softlayer.com/){:external}. Peça os atributos a seguir:
+1. Peça uma VSI por hora ou mensal por meio do portal do cliente de infraestrutura do [{{site.data.keyword.cloud_notm}}](https://control.softlayer.com/){:external}. Peça os atributos a seguir:
   * Windows 2012 ou 2016 Server Standard
   * 2 CPUs
   * 16 GB de memória
@@ -171,7 +171,7 @@ Para instâncias vinculadas do vCenter Server, embora seja recomendável fazer u
 #### Procedimento para fazer upgrade do vCenter
 {: #vc_vsphere_upgrade-procedure-vcenter-procedure}
 
-1. Efetue login nas interfaces com o usuário de gerenciamento de dispositivo do PSC, ``https://<psc-fqdn>:5480`` e do vCenter para confirmar se a senha raiz expirou ou não. Se a data de expiração de senha é **1970**, então ela expirou e deve-se ativar o SSH e o shell bash na interface com o usuário de gerenciamento de dispositivo do PSC.
+1. Efetue login nas interfaces com o usuário de gerenciamento de dispositivo do PSC, `https://<psc-fqdn>:5480` e do vCenter para confirmar se a senha raiz expirou ou não. Se a data de expiração de senha é **1970**, então ela expirou e deve-se ativar o SSH e o shell bash na interface com o usuário de gerenciamento de dispositivo do PSC.
     1. Use SSH para o PSC com o ID raiz e a senha. Mesmo que a senha tenha expirado, ela permite que você efetue login.
     2. Use o comando shell **passwd** para configurar uma nova senha raiz para o PSC e o vCenter.
     3. Salve as senhas que foram exibidas no console do {{site.data.keyword.vmwaresolutions_short}} ou fornecidas a você pelo Suporte IBM. Essas senhas são reutilizadas posteriormente ao fazer upgrade dos dispositivos.
@@ -321,7 +321,7 @@ Para obter mais informações, consulte [Suporte ao processador Enhanced vMotion
 ## Resultados após o upgrade do software vCenter Server vSphere
 {: #vc_vsphere_upgrade-results}
 
-A execução da verificação de funcionamento do vSAN após seu upgrade ser concluído pode trazer avisos sobre atualizações de firmware para os controladores RAID e de rede fornecidos pelo IBM Cloud. Depois de determinar os hosts que precisam de atualizações de firmware, abra um chamado com o Suporte IBM para obter o firmware atualizado para as versões recomendadas.
+A execução da verificação de funcionamento do vSAN após o upgrade ser concluído pode trazer avisos sobre atualizações de firmware para os controladores RAID e de rede fornecidos pelo {{site.data.keyword.cloud_notm}}. Depois de determinar os hosts que precisam de atualizações de firmware, abra um chamado com o Suporte IBM para obter o firmware atualizado para as versões recomendadas.
 
 1. Na interface com o usuário do vCenter, selecione o cluster que contém o vSAN com funcionamento a ser verificado.
 2. Selecione a guia **Monitorar** e, em seguida, selecione a guia **vSAN**.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-22"
 
 keywords: single-node trial, migration app modernization, tech specs migration app modernization
 
@@ -18,16 +18,16 @@ subcollection: vmware-solutions
 {:note: .note}
 {:important: .important}
 
-# 單一節點試用版移轉及應用程式現代化概觀
+# Single-node Trial for Migration and App Modernization 概觀
 {: #cloud_modern_bundle_overview}
 
-「單一節點試用版移轉及應用程式現代化」可讓您測試磁碟機 {{site.data.keyword.cloud_notm}} 以將 VMware 工作負載移轉至 {{site.data.keyword.cloud}}，然後使用容器來現代化簡單工作負載。
+Single-node Trial for Migration and App Modernization 可讓您測試磁碟機 {{site.data.keyword.cloud_notm}} 以將 VMware 工作負載移轉至 {{site.data.keyword.cloud}}，然後使用容器來現代化簡單工作負載。
 
 「單一節點試用版」是 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 上的 {{site.data.keyword.cloud_notm}} Private Hosted 試用版本，提供容器的 Kubernetes 管理平台，以及可使用與內部部署環境相同之工具所管理的單一承租戶 VMware 平台。您可以充分運用雲端的速度及規模，同時維護在內部部署提供之相同層次的控制權及可見性。
 
-試用版設計成使用 vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 來移轉最多 20 個簡單開發或測試工作負載，以及使用 Kubernetes 型 {{site.data.keyword.cloud_notm}} Private Hosted 應用程式開發平台來容器化這些工作負載。自動化將會在 {{site.data.keyword.cloud_notm}} 中安裝及配置 VMware HCX，提供內部部署 HCX 啟動金鑰，然後只要數小時就能安裝及配置 {{site.data.keyword.cloud_notm}} Private Hosted 的小型開發/測試拓蹼。
+試用版設計成使用 vCenter Server on {{site.data.keyword.cloud_notm}} 來移轉最多 20 個簡單開發或測試工作負載，以及使用 Kubernetes 型 {{site.data.keyword.cloud_notm}} Private Hosted 應用程式開發平台來容器化這些工作負載。自動化將會在 {{site.data.keyword.cloud_notm}} 中安裝及配置 VMware HCX，提供內部部署 HCX 啟動金鑰，然後只要數小時就能安裝及配置 {{site.data.keyword.cloud_notm}} Private Hosted 的小型開發/測試拓蹼。
 
-「單一節點試用版移轉及應用程式現代化」僅用於概念證明 (POC)。不要在此環境中執行正式作業工作負載。新增及移除主機和叢集、訂購附加服務，以及套用更新項目這類管理功能皆不受支援。
+Single-node Trial for Migration and App Modernization 僅用於概念證明 (POC)。不要在此環境中執行正式作業工作負載。新增及移除主機和叢集、訂購附加服務，以及套用更新項目這類管理功能皆不受支援。
 {:important}
 
 若要充分了解「單一節點試用版」實例，您可以從可協助您將 VMware 工作負載移轉至 {{site.data.keyword.cloud_notm}} 的 [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:external}，使用 [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:external}。此外，[{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/){:external} 還可協助您透過最新的雲端原生作法來加速應用程式現代化。
@@ -35,10 +35,10 @@ subcollection: vmware-solutions
 此試用版最多可使用 90 天。完成試用後，您可以刪除此環境，然後佈建符合您容量需求的新環境。
 {:note}
 
-## 單一節點試用版移轉及應用程式現代化實例的技術規格
+## Single-node Trial for Migration and App Modernization 實例的技術規格
 {: #cloud_modern_bundle_overview-tech-specs}
 
-下列元件內含在「單一節點試用版移轉及應用程式現代化」實例中。
+下列元件包含在 Single-node Trial for Migration and App Modernization 實例中。
 
 標準化硬體配置的可用性及定價可能會根據選取以用於部署的 {{site.data.keyword.CloudDataCent_notm}} 而有所不同。
 {:note}
@@ -67,7 +67,7 @@ subcollection: vmware-solutions
 * 1 TB 用於客戶工作負載（適用於 20 部客戶 VM）
 * 4 TB 用於 {{site.data.keyword.cloud_notm}} Private Hosted
 
-### 單一節點試用版移轉及應用程式現代化實例的網路規格
+### Single-node Trial for Migration and App Modernization 實例的網路連線功能規格
 {: #cloud_modern_bundle_overview-networking-specs}
 
 訂購了下列網路元件：
@@ -77,7 +77,7 @@ subcollection: vmware-solutions
 *  兩個 VMware NSX Edge Services Gateway：
   * 用於出埠 HTTPS 管理資料流量的安全管理服務 VMware NSX Edge Services Gateway (ESG)，IBM 將它部署為管理網路拓蹼的一部分。IBM 管理 VM 使用此 ESG，以與跟自動化相關的特定外部 IBM 管理元件進行通訊。
 
-您無法存取此 ESG，因此無法使用它。如果您修改它，則可能無法從 {{site.data.keyword.vmwaresolutions_short}} 主控台管理「單一節點試用版移轉及應用程式現代化」實例。此外，請注意，使用防火牆或停用與外部 IBM 管理元件的 ESG 通訊，將導致 {{site.data.keyword.vmwaresolutions_short}} 變成無法使用。
+您無法存取此 ESG，因此無法使用它。如果您修改它，則可能無法從 {{site.data.keyword.vmwaresolutions_short}} 主控台管理 Single-node Trial for Migration and App Modernization 實例。此外，請注意，使用防火牆或停用與外部 IBM 管理元件的 ESG 通訊，將導致 {{site.data.keyword.vmwaresolutions_short}} 變成無法使用。
 {:important}
   * 用於出埠和入埠 HTTPS 工作負載資料流量的安全客戶管理 VMware NSX Edge Services Gateway，IBM 將它部署為範本，您可以修改它來提供 VPN 存取或公用存取。
 
@@ -92,21 +92,21 @@ subcollection: vmware-solutions
 ### IBM 提供的授權及費用
 {: #cloud_modern_bundle_overview-license-and-fee}
 
-「單一節點試用版移轉及應用程式現代化」實例訂購隨附下列授權。
+Single-node Trial for Migration and App Modernization 實例訂購隨附下列授權。
 
-* VMware vSphere Enterprise Plus 6.7u1
+* VMware vSphere Enterprise Plus 6.7u2
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Advanced Edition 6.4
 * {{site.data.keyword.cloud_notm}} Private Hosted 3.1.2
 * {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2
 
-「單一節點試用版移轉及應用程式現代化」實例不支援「自帶授權」。
+Single-node Trial for Migration and App Modernization 實例不支援「自帶授權」。
 {:note}
 
 ## VMware HCX on IBM Cloud 的技術規格
 {: #cloud_modern_bundle_overview-hcx-tech-specs}
 
-「單一節點試用版移轉及應用程式現代化」包括 HCX on {{site.data.keyword.cloud_notm}}。下列元件已訂購並包括在 HCX on {{site.data.keyword.cloud_notm}} 服務中。
+Single-node Trial for Migration and App Modernization 包括 HCX on {{site.data.keyword.cloud_notm}}。下列元件已訂購並包括在 HCX on {{site.data.keyword.cloud_notm}} 服務中。
 
 內部部署 HCX 實例只包括授權及啟動。
 {:note}
@@ -137,12 +137,12 @@ subcollection: vmware-solutions
 ## IBM Cloud Private Hosted 的技術規格
 {: #cloud_modern_bundle_overview-icp-tech-specs}
 
-{{site.data.keyword.cloud_notm}} Private Hosted 3.1.2 是使用「開發/測試」拓蹼安裝在所有「單一節點試用版移轉及應用程式現代化」實例上。如需 {{site.data.keyword.cloud_notm}} Private Hosted 的相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} Private Hosted 概觀](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_overview)。
+{{site.data.keyword.cloud_notm}} Private Hosted 3.1.2 是使用「開發/測試」拓蹼安裝在所有 Single-node Trial for Migration and App Modernization 實例上。如需 {{site.data.keyword.cloud_notm}} Private Hosted 的相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} Private Hosted 概觀](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_overview)。
 
 ## IBM Cloud Automation Manager 的技術規格
 {: #cloud_modern_bundle_overview-cam-tech-specs}
 
-{{site.data.keyword.cloud_notm}} Automation Manager 3.1.2 是使用「開發/測試」拓蹼安裝在所有「單一節點試用版移轉及應用程式現代化」實例上。如需 {{site.data.keyword.cloud_notm}} Automation Manager 的相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} Automation Manager 文件](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: external}。
+{{site.data.keyword.cloud_notm}} Automation Manager 3.1.2 是使用「開發/測試」拓蹼安裝在所有 Single-node Trial for Migration and App Modernization 實例上。如需 {{site.data.keyword.cloud_notm}} Automation Manager 的相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} Automation Manager 文件](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: external}。
 
 ## 相關鏈結
 {: #cloud_modern_bundle_overview-related}

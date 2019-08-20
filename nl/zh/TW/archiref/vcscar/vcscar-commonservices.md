@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -16,7 +16,7 @@ subcollection: vmware-solutions
 
 共用服務提供雲端管理平台中其他服務所使用的服務。共用服務包括身分及存取服務、網域名稱服務及 NTP（網路時間通訊協定）服務。
 
-![{{site.data.keyword.icpfull_notm}} 共用服務](../../images/vcscar-common-services.svg "{{site.data.keyword.icpfull_notm}} 共用服務")
+![{{site.data.keyword.icpfull_notm}} 共用服務](../../images/vcscar-common-services.svg "{{site.data.keyword.icpfull_notm}} 共用服務"){: caption="圖 1. {{site.data.keyword.icpfull_notm}} 共用服務" caption-side="bottom"}
 
 ## 身分及存取服務
 {: #vcscar-commonservices-identity}
@@ -32,8 +32,3 @@ subcollection: vmware-solutions
 {: #vcscar-commonservices-ntp}
 
 vCenter Server 部署使用 {{site.data.keyword.cloud_notm}} 基礎架構「網路時間通訊協定 (NTP)」伺服器。所有已部署的元件都已配置成使用這些 NTP 伺服器。為了讓憑證和 AD 鑑別正常運作，使所有元件都使用相同的 NTP 伺服器十分重要。
-
-## 相關鏈結
-{: #vcscar-commonservices-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -19,9 +19,3 @@ L'automatisation {{site.data.keyword.vmwaresolutions_full}} demande un sous-rés
 - Se connecter à vCenter et à NSX Manager via le routeur BCR.
 - Se connecter aux collecteurs distants (sur les réseaux VXLAN ou hébergés sur site).
 - Permettre au client de gérer l'espace d'adresse IP lors de la mise à l'échelle.
-
-
-## Liens connexes
-{: #caveonix-step2-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

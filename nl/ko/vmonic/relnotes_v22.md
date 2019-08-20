@@ -146,7 +146,7 @@ IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} 서비스는 워�
 
 Veeam on {{site.data.keyword.cloud_notm}} 서비스는 엔터프라이즈가 고가용성(HA)을 달성할 수 있도록 VMware 하이퍼바이저와 원활하게 통합합니다. Veeam 백업 소프트웨어 및 IBM Resiliency Backup as a Service를 모두 사용하여 완전히 관리된 백업 환경을 배치할 수 있습니다.
 
-Zerto on {{site.data.keyword.cloud_notm}} 서비스는 {{site.data.keyword.cloud_notm}}의 VMware virtual 환경에서 데이터를 보호하고 복구하도록 배치 오퍼링으로 통합될 수 있는 복제 및 재해 복구 기능을 제공합니다. Zerto DR 소프트웨어 및 IBM Resiliency Services를 모두 사용하여 완전히 관리된 재해 복구(DR) 환경을 배치할 수 있습니다.
+Zerto on {{site.data.keyword.cloud_notm}} 서비스는 {{site.data.keyword.cloud_notm}}의 VMware 가상 환경에서 데이터를 보호하고 복구하도록 배치 오퍼링으로 통합될 수 있는 복제 및 재해 복구 기능을 제공합니다. Zerto DR 소프트웨어 및 IBM Resiliency Services를 모두 사용하여 완전히 관리된 재해 복구(DR) 환경을 배치할 수 있습니다.
 
 새 인스턴스를 주문하거나 서비스를 기존 인스턴스에 추가하여 **시작하기** 페이지에서 인스턴스를 위한 관리 서비스를 요청할 수 있습니다.
 

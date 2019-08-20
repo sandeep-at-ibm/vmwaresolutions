@@ -22,10 +22,10 @@ O HCX permite a migração bidirecional: de no local para a nuvem ou da nuvem pa
 
 ## Migração baixa de tempo de in
 
-A migração de tempo de inatividade baixo usa a replicação baseada em host para mover uma máquina virtual em tempo real de um vCenter para um datacenter virtual ou para a direção oposta. Para reduzir o tempo de inatividade, a MV de origem permanece on-line durante a replicação e é autoinicializada no host ESX de destino após a conclusão da replicação.
+A migração de tempo de inatividade baixo usa a replicação baseada em host para mover uma máquina virtual em tempo real de um vCenter para um data center virtual ou para a direção oposta. Para reduzir o tempo de inatividade, a MV de origem permanece on-line durante a replicação e é autoinicializada no host ESX de destino após a conclusão da replicação.
 
 1. Uma solicitação de migração aciona as ações a seguir:
-  * A replicação inicia uma transferência de sincronização total para um datacenter virtual do VCS HCX. O tempo que leva para replicar depende do tamanho da MV e da largura de banda disponível.
+  * A replicação inicia uma transferência de sincronização total para um data center virtual do VCS HCX. O tempo que leva para replicar depende do tamanho da MV e da largura de banda disponível.
   * O consumo de largura da banda de replicação varia, dependendo de como a carga de trabalho muda os blocos no disco.
 2. Quando a sincronização total é concluída, ocorre uma sincronização delta.
 3. Quando a sincronização delta é concluída, o HCX aciona uma comutação. A comutação pode ser iniciada imediatamente ou planejada até um horário específico.

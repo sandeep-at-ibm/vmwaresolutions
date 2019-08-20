@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-22"
 
 keywords: view vCenter Server, view instance, view instance details
 
@@ -77,7 +77,6 @@ subcollection: vmware-solutions
 | DNS、ルート・ドメイン | ルート・ドメイン・ネームは、DNS (ドメイン・ネーム・システム) ドメイン・ネームと Microsoft Active Directory (AD) フォレストのルート名です。 |
 | DNS、SSO ドメイン | SSO ドメインは、vSphere のシングル・サインオン・ドメインです。 SSO ドメイン・ネームは、デプロイされたすべての vCenter Server インスタンスで <samp class="ph codeph">vsphere.local</samp> という値に固定されています。 |
 | DNS、サブドメイン | サブドメインは、ローカル vCenter Server インスタンスのホスト名が存在するルート・ドメイン・ネームの DNS サブドメイン・ネームです。 サブドメイン名の形式は <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp> になります。 |
-| Hybridity Bundle | vCenter Server with Hybridity Bundle がインストールされているかどうかを示します。 |
 | 状況  | インスタンスの状況。<br><br>デプロイメント、またはインスタンスで実行したアクションの進行状況を示す情報が表示され、更新されます。 問題がある場合は、問題の調査と解決に役立つメッセージが表示されることがあります。 |
 {: caption="表 3. vCenter Server インスタンスのプロパティー" caption-side="top"}
 

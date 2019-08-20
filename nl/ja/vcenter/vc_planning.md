@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-27"
+lastupdated: "2019-08-06"
 
 keywords: planning vCenter Server, data center, vCenter Server data centers
 
@@ -12,6 +12,10 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # vCenter Server インスタンスの要件と計画
 {: #vc_planning}
@@ -27,6 +31,11 @@ VMware vCenter Server インスタンスを注文する前に、以下の要件�
 {: #vc_planning-dc-availability}
 
 vCenter Server のデプロイメントには、物理インフラストラクチャーに関する厳密な要件があります。 そのため、要件を満たす {{site.data.keyword.CloudDataCents_notm}}にしかインスタンスはデプロイできません。 vCenter Server のデプロイメントには、以下の {{site.data.keyword.CloudDataCents_notm}}を使用できます。
+
+Cascade Lake {{site.data.keyword.baremetal_short}} は、マルチゾーン領域
+{{site.data.keyword.CloudDataCents_notm}} で使用可能です。詳しくは、[マルチゾーン領域 (MZR) の概要
+](/docs/infrastructure/loadbalancer-service?topic=loadbalancer-service-multi-zone-region-mzr-overview) を参照してください。
+{:note}
 
 | {{site.data.keyword.CloudDataCent_notm}} | ロケーション | 地域 | サーバー・オプション |
 |:----------------------|:---------|:-------|:---------------|
@@ -89,6 +98,22 @@ vCenter Server のデプロイメントには、物理インフラストラク�
 
 vCenter Server with NSX-T インスタンスのサービスはサポートされます。
 {:note}
+
+### VMware HCX on IBM Cloud の計画
+{: #vc_planning-addon-services-hcx}
+
+VMware HCX on {{site.data.keyword.cloud_notm}} サービスでは、オンプレミス・データ・センターのネットワークを {{site.data.keyword.cloud_notm}} にシームレスに拡張できるので、変換も変更も行わずに {{site.data.keyword.cloud_notm}} との間で仮想マシン (VM) をマイグレーションできます。
+
+このサービスをデプロイする際には、以下の設定を行います。
+* **「HCX interconnect type」**を指定します。以下のいずれかのオプションを選択します。
+  * **Public network**: HCX がパブリック・ネットワークでサイト間の暗号化接続を作成します。
+  * **Private network**: HCX がプライベート・ネットワークでサイト間の暗号化接続を作成します。
+* **「Public endpoint certificate type」**を指定します。 **「CA 証明書」**を選択する場合、以下の設定を構成してください。
+  * **証明書の内容**: CA 証明書の内容を入力します。
+  * **秘密鍵**: CA 証明書の秘密鍵を入力します。
+  * (オプション) **パスワード**: 秘密鍵が暗号化されている場合は、秘密鍵のパスワードを入力します。
+  * (オプション) **パスワードの再入力**: 秘密鍵のパスワードをもう一度入力します。
+  * (オプション) **ホスト名**: CA 証明書の共通名 (CN) にマップするホスト名を入力します。 HCX on {{site.data.keyword.cloud_notm}} には、NSX Edge で受け入れられる形式の CA 証明書を使用する必要があります。 NSX Edge の証明書の形式について詳しくは、[SSL 証明書のインポート](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html){:external}を参照してください。
 
 ## キャパシティーに関する考慮事項
 {: #vc_planning-capacity-considerations}

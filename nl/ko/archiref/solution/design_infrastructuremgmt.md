@@ -37,11 +37,11 @@ subcollection: vmware-solutions
 
 | 속성                    | 스펙                       |
 |------------------------------|-------------------------------------|
-|vCenter Server               | 가상 어플라이언스                   |
+| vCenter Server               | 가상 어플라이언스                   |
 | 어플라이언스 설치 크기  | 대형(최대 1,000개의 호스트 및 10,000개의 VM) |
-|Platform Services Controller | 통합됨                            |
-| vCPU 수              |16                                   |
-|메모리                       |32GB                               |
+| Platform Services Controller | 통합됨                            |
+| vCPU 수              | 16                                   |
+| 메모리                       | 32GB                               |
 | 디스크                         | 로컬 데이터 저장소의 990GB(대형 디스크 배치) |
 | 디스크 유형                    | 씬 프로비저닝됨                    |
 

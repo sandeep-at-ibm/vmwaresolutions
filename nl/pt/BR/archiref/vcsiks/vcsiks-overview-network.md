@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -209,8 +209,3 @@ podem ser feitas por meio de:
 {: #vcsiks-overview-network-sec-compliance}
 
 Quando se trata de atender às diretrizes estritas da indústria, o {{site.data.keyword.cloud_notm}} faz o trabalho para você, promovendo a conformidade verdadeira. [A conformidade no {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/compliance) fornece detalhes sobre as certificações de conformidade específicas, regulamentações globais, alinhamentos e estruturas para segurança e privacidade. [ Segurança para detalhes de segurança do  {{site.data.keyword.containerlong_notm}} ](/docs/containers?topic=containers-security#security)   {{site.data.keyword.containerlong_notm}} .
-
-## Links relacionados
-{: #vcsiks-overview-network-related}
-
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

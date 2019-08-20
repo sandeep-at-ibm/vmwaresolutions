@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-23"
 
 keywords: vmware solutions data sheet, vmware solutions developerWorks, vmware solutions video
 
@@ -29,7 +29,7 @@ Revise os recursos a seguir para iniciar mais rápido ou obter informações té
 
 * [{{site.data.keyword.vmwaresolutions_short}}  Proteção de dados de proteção ](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:external}
 
-## receitas do developerWorks
+## Receitas do developerWorks
 {: #additional_resources-dWrecipes}
 
 * [receitas do developerWorks](https://developer.ibm.com/recipes/tutorials/?s=VMware+Solutions){:external}
@@ -37,7 +37,7 @@ Revise os recursos a seguir para iniciar mais rápido ou obter informações té
 ## Padrões do IBM Cloud
 {: #additional_resources-patterns}
 
-* [Padrões do IBM Cloud](https://ibmcloudpatterns.mybluemix.net/#862581F800007C53/862581F800007DD5/862581D000837B23){:external}
+* [Padrões do {{site.data.keyword.cloud_notm}}](https://ibmcloudpatterns.mybluemix.net/#862581F800007C53/862581F800007DD5/862581D000837B23){:external}
 
 ## Extensões da plataforma
 {: #additional_resources-plat-extensions}
@@ -55,9 +55,18 @@ do Virtualization Platform](https://www.ibm.com/cloud/garage/architectures/virtu
 ## Vídeos e demonstrações
 {: #additional_resources-demos}
 
+### Engajamento técnico digital
+{: #additional_resources-dte}
+
+* [VMware on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/){:external}
+* [Veeam on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/demos/collection/Veeam-on-IBM-Cloud){:external}
+* [Zerto on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/demos/collection/Zerto-on-IBM-Cloud){:external}
+
+### Vídeos e demonstrações adicionais
+{: #additional_resources-more}
+
 * [ Recursos e Vídeos ](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/resources){:external}
-* [ Compromisso Técnico Digital ](https://ibm-dte.mybluemix.net/vmware){:external}
-* [ Recursos Apresentados e Estudos de Caso ](https://www.ibm.com/cloud/vmware/resources){:external}
+* [ Recursos Apresentados e Estudos de Caso ](https://www.ibm.com/cloud/vmware){:external}
 
 ## Documentação do VMware
 {: #additional_resources-vmware-doc}

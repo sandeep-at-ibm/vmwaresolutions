@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-12"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -39,7 +39,7 @@ NSX Manager は初期クラスター内にデプロイされます。 さらに�
 
 {{site.data.keyword.cloud}} の自動化機能によって、初期クラスター内に 3 つの NSX Controller がデプロイされます。 管理コンポーネント用に指定されたプライベート・ポータブル・サブネットから VLAN–backed IP アドレスがコントローラーに割り当てられます。
 
-### NSX Edge / DLR
+### NSX Edge および分散論理ルーター (DLR)
 {: #vcsicp-arch-overview-solution-nsx-edge}
 
 NSX Edge Services Gateway (ESG) のペアがデプロイされます。 すべての場合において、プライベート・ネットワークに常駐する自動化コンポーネントからのアウトバウンド・トラフィックにゲートウェイ・ペアが 1 つ使用されます。 vCenter Server と {{site.data.keyword.icpfull_notm}} のための 2 つ目のゲートウェイ ({{site.data.keyword.icpfull_notm}} 管理エッジと呼ばれる) がデプロイされ、パブリック・ネットワークへのアップリンクとプライベート・ネットワークに割り当てられたインターフェースが構成されます。 分散論理ルーター (DLR)、論理スイッチ、ファイアウォールなどの必要な NSX コンポーネントは、管理者が構成できます。 [vCenter Server ネットワーキング・ガイド](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro)に、ネットワーク設計に関する詳細情報があります。
@@ -145,12 +145,12 @@ CAM API は複数のコンテナーに分かれています。
 ### Helm
 {: #vcsicp-arch-overview-solution-helm}
 
-Helm チャートを Kubernetes クラスターにデプロイするために必要なバイナリーを入れたコンテナー。
+Helm チャートを Kubernetes クラスターにデプロイするために必要なバイナリー・ファイルを入れたコンテナー。
 
 ### Terraform
 {: #vcsicp-arch-overview-solution-terraform}
 
-Terraform リソースを複数のクラウドにデプロイするために必要なバイナリーを入れたコンテナー。
+Terraform リソースを複数のクラウドにデプロイするために必要なバイナリー・ファイルを入れたコンテナー。
 
 ### ログ
 {: #vcsicp-arch-overview-solution-logs}
@@ -176,8 +176,3 @@ Terraform テンプレートを作成するためのグラフィカル・ユー�
 {: #vcsicp-arch-overview-solution-maria-db}
 
 Template Designer アプリケーションのデータベース。
-
-## 関連リンク
-{: #vcsicp-arch-overview-solution-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

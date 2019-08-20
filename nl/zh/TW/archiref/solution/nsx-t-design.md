@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-03"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -14,7 +14,7 @@ subcollection: vmware-solutions
 # VMware NSX-T 設計
 {: #nsx-t-design}
 
-與 NSX-V（vSphere 上的 NSX）不同，VMware NSX-T 設計成處理具有異質端點及技術堆疊的應用程式架構。除了 vSphere 之外，這些環境還可以包括其他 Hypervisor、KVM、容器及裸機。NSX 的設計是要跨距各平台的軟體定義網路和安全基礎架構，而不只是 vSphere。雖然可以在不需要 vSphere 的情況下部署 NSX-T 元件，但此設計著重在 NSX-T 上，且其整合主要在 vCenter Server vSphere 自動化部署內。
+與 NSX-V（vSphere 上的 NSX）不同，VMware NSX-T 設計成處理具有異質端點及技術堆疊的應用程式架構。除了 vSphere 之外，這些環境還可以包括其他 Hypervisor、KVM、容器及裸機。VMware NSX 的設計是要跨各平台的軟體定義網路和安全基礎架構，而不只是 vSphere。雖然可以在不需要 vSphere 的情況下部署 NSX-T 元件，但此設計著重在 NSX-T 上，且其整合主要在 vCenter Server vSphere 自動化部署內。
 
 NSX-T 內有許多進階特性，例如防火牆原則、在防火牆原則內併入來賓內部檢查，以及進階網路流程追蹤。說明這些特性不在本文件的範圍內。請參閱 NSX-T 的 VMware 文件。在此設計中，「NSX-T 管理基礎架構」是在起始 vCenter Server 叢集部署期間部署的，用來取代 NSX-V。
 
@@ -54,7 +54,7 @@ NSX-V 或 vSphere 原生 |NSX-T
 
  屬性            | 規格                           
 --|--
-**NSX Manager / 控制器** | 3 個虛擬應用裝置
+**NSX Manager / 控制器** |三個虛擬應用裝置
 **vCPU 數目** |4 
 **記憶體** | 16 GB 
 **磁碟** |60 GB
@@ -135,7 +135,7 @@ NSX-V 或 vSphere 原生 |NSX-T
 
 表 7. NSX-T NIC 埠團隊規格
 
-團隊名稱 | 失效接手或負載平衡 | 作用中 NIC | 待命 NIC
+團隊名稱 |失效接手或負載平衡| 作用中 NIC | 待命 NIC
 --|:----|:---|:---
 **預設** | 負載平衡來源 | 上行鏈路 1、2 |N/A
 **管理** | 失效接手| 上行鏈路 1 | 上行鏈路 2
@@ -191,7 +191,7 @@ NSX-T 邏輯交換器會在與基礎硬體完全取消連結的虛擬環境中�
 #### 層級 1 至層級 0 路徑公告
 {: #nsx-t-design-tier-1-tier-0}
 
-若要在連接至邏輯交換器的 VM 之間提供「第三層」連線功能，而這些邏輯交換器會連接至不同的層級 1 邏輯閘道，必須對層級 0 啟用層級 1 路徑公告。不需要在層級 1 與層級 0 邏輯路由器之間配置遞送通訊協定或靜態路徑。當您啟用路徑公告時，NSX-T 會自動建立靜態路徑。對於此設計，一律會對任何 IC4V 自動化建立的 T-1 閘道啟用路徑公告。
+若要在連接至邏輯交換器的 VM 之間提供「第 3 層」連線功能，而這些邏輯交換器會連接至不同的層級 1 邏輯閘道，必須對層級 0 啟用層級 1 路徑公告。不需要在層級 1 與層級 0 邏輯路由器之間配置遞送通訊協定或靜態路徑。當您啟用路徑公告時，NSX-T 會自動建立靜態路徑。對於此設計，一律會對任何 IC4V 自動化建立的 T-1 閘道啟用路徑公告。
 
 ### 預先配置的拓蹼
 {: #nsx-t-design-preconfig-topo}
@@ -221,8 +221,3 @@ ICP 至 T0 閘道的工作負載 – 虛擬邊緣叢集：
 如需全盤瞭解 ICP 如何在 vCenter Server 上運作，請參閱 vCenter Server 架構文件上的 ICP。將客戶指定的 {{site.data.keyword.cloud_notm}} 專用和公用可攜式 IP 空間指派給每個 T0，以供客戶使用。
 
 根據此設計，如果 vCenter Server 實例已解除任務並遭刪除，則您可以選擇不刪除這些 IP 範圍。
-
-## 相關鏈結
-{: #nsx-t-design-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

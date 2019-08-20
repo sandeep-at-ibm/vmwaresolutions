@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-22"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -67,7 +67,7 @@ CPU | 2 – 56개 코어 | 4 – 28개 코어
 ## 가상 구조
 {: #vcsiks-arch-overview-infrastructure-virtual-structure}
 
-![{{site.data.keyword.containerlong_notm}} 및 {{site.data.keyword.icpfull_notm}} 배치의 물리적 구조 다이어그램](../../images/vcsiks-phy-ics-iks-deployment.svg "{{site.data.keyword.containerlong_notm}} 및 {{site.data.keyword.icpfull_notm}} 배치의 물리적 구조 다이어그램"){: caption="그림 1. {{site.data.keyword.containerlong_notm}} 및 {{site.data.keyword.icpfull_notm}} 배치의 물리적 구조" caption-side="bottom"}
+![{{site.data.keyword.containerlong_notm}} 및 {{site.data.keyword.icpfull_notm}} 배치의 물리적 구조 다이어그램](../../images/vcsiks-phy-ics-iks-deployment.svg "{{site.data.keyword.containerlong_notm}} 및 {{site.data.keyword.icpfull_notm}} 배치의 물리적 구조 다이어그램")
 
 vCenter Server 인스턴스 내에서, 고객 VMS는 전용 NSX ESG(Edge Services Gateway) 및 DLR(Distributed Logical Router)로 배치됩니다.
 
@@ -86,8 +86,7 @@ vCenter Server 배치는 관리 VM과 연관된 사설 VLAN의 포터블 서브�
 ### vCenter Server
 {: #vcsiks-arch-overview-infrastructure-vcs}
 
-PSC처럼 vCenter Server는 어플라이언스로 배치됩니다.
-또한 vCenter는 관리 VM과 연관된 사설 VLAN의 포터블 서브넷에 설치됩니다. 기본 게이트웨이는 BCR로 설정됩니다.
+PSC처럼 vCenter Server는 어플라이언스로 배치됩니다. 또한 vCenter는 관리 VM과 연관된 사설 VLAN의 포터블 서브넷에 설치됩니다. 기본 게이트웨이는 BCR로 설정됩니다.
 
 ### NSX
 Manager
@@ -107,6 +106,7 @@ Controller
 NSX Edge Services Gateway(ESG) 쌍이 배치됩니다. 모든 경우에, 하나의 게이트웨이 쌍은 사설 네트워크에 상주하는 자동화 컴포넌트의 아웃바운드 트래픽에 사용됩니다. vCenter Server 및 {{site.data.keyword.icpfull_notm}}의 경우,
 ICP 관리 에지라고 하는 두 번째 게이트웨이가 배치되며 사설 네트워크에 지정된 인터페이스와
 공용 네트워크에 대한 업링크로 구성됩니다.
+
 관리자는 DLR(Distributed Logical Router), 논리 스위치 및 방화벽과 같은 필수 컴포넌트를 구성할 수 있습니다. 솔루션의 일부로 배치되는 NSX Edges에 대한 자세한 정보는 [vCenter
 Server 네트워킹 안내서](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro)를 참조하십시오.
 
@@ -144,8 +144,3 @@ Kubernetes 마스터는 클러스터에서 모든 컴퓨팅, 네트워크 및 �
 {: #vcsiks-arch-overview-infrastructure-worker-node}
 
 각 작업자 노드는 클라우드 환경의 실제 하드웨어에서 실행되는 실제 시스템(베어메탈) 또는 VM입니다. 작업자 노드를 프로비저닝할 때 해당 작업자 노드에 호스팅되는 컨테이너에 사용 가능한 리소스를 판별합니다. 작업자 노드는 기본적으로 IBM 관리 Docker Engine, 별도의 컴퓨팅 리소스, 네트워킹 및 볼륨 서비스로 설정됩니다. 내장 보안 기능은 격리, 리소스 관리 기능 및 작업자 노드 보안 준수를 제공합니다.
-
-## 관련 링크
-{: #vcsiks-arch-overview-infrastructure-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-07-22"
 
 keywords: IAM user, user role, user permission
 
@@ -71,7 +71,6 @@ A causa dell'integrazione di {{site.data.keyword.vmwaresolutions_short}} con IAM
 
 Le istanze esistenti distribuite nelle release della V2.4 e precedenti possono essere migrate ad account {{site.data.keyword.cloud_notm}} specificati per la gestione abilitata a IAM. Per ulteriori informazioni, consulta i seguenti argomenti:
 * [Migrazione di istanze vCenter Server precedenti alla V2.5 agli account IBM Cloud](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addinstancetousraccount)
-* [Migrazione di istanze vCenter Server with Hybridity Bundle precedenti alla V2.5 agli account IBM Cloud](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addinstancetousraccount)
 * [Migrazione di istanze NetApp ONTAP Select precedenti alla V2.5 agli account IBM Cloud](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_addinstancetousraccount)
 
 ## Link correlati

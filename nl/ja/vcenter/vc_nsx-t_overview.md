@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-07-26"
 
 keywords: vCenter Server NSX-T, NSX-T, tech specs vCenter Server NSX-T
 
@@ -74,6 +74,7 @@ vCenter Server with NSX-T インスタンスには、以下のコンポーネン
 
 以下のいずれかの構成で{{site.data.keyword.baremetal_short}}を 3 つ以上注文できます。
 * **Skylake**: 選択した CPU モデルおよび RAM サイズの 2 CPU Intel Skylake 世代サーバー (Intel Xeon 4100/5100/6100 シリーズ)。  
+*  **Cascade**: 選択した CPU モデルおよび RAM サイズの 2 CPU Intel Cascade 世代サーバー (Intel Xeon 4200/5200/6200 シリーズ)。
 * **Broadwell**: 選択した CPU モデルおよび RAM サイズの 4 CPU Intel Broadwell 世代サーバー (Intel Xeon E7-4800 シリーズ)。
 
 vSAN ストレージを使用する予定である場合は、構成に最低 4 つの{{site.data.keyword.baremetal_short}}が必要です。
@@ -137,7 +138,7 @@ NFS オプションを選択すると、管理コンポーネント用の 2 TB �
 ### ライセンス (IBM 提供または BYOL) および料金
 {: #vc_nsx-t_overview-license-and-fee}
 
-* VMware vSphere Enterprise Plus 6.7u1
+* VMware vSphere Enterprise Plus 6.7u2
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Edition (Base、Advanced、または Enterprise) 6.4 (IBM 提供のみ)
 * (vSAN クラスターの場合) VMware vSAN Advanced または Enterprise 6.6
@@ -156,7 +157,7 @@ vCenter Server with NSX-T 拡張ノードごとに、{{site.data.keyword.cloud_n
 ### 拡張ノード用のライセンスと料金
 {: #vc_nsx-t_overview-expansion-node-license-and-fee}
 
-* VMware vSphere Enterprise Plus 6.7u1 1 つ
+* VMware vSphere Enterprise Plus 6.7u2 1 つ
 * VMware NSX Service Providers Edition (Base、Advanced、Enterprise) 6.4 1 つ
 * 1 つのサポートとサービスの料金
 * (vSAN クラスターの場合) VMware vSAN Advanced または Enterprise 6.6

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-08-01"
 
 keywords: troubleshooting, Zerto Virtual Replication, Zerto ESXi server
 
@@ -24,7 +24,7 @@ O Virtual Replication Appliances (VRA) não é exibido no console do Zerto Virtu
 ## Resolução
 {: #trbl_no_zerto_vra-resolution}
 
-Para instâncias do vCenter Server, o serviço de recuperação de desastre Zerto é instalado apenas no servidor ESXi do cluster padrão, **cluster1**. Quaisquer clusters adicionais no mesmo ambiente do vCenter Server não têm a recuperação de desastres do Zerto instalada automaticamente quando o cluster adicional é criado nem quando o servidor ESXi é incluído nesse cluster adicional.
+O serviço de recuperação de desastre Zerto é instalado somente no servidor ESXi por meio do cluster padrão (**cluster1** para instâncias que são implementadas na V3.1 ou anterior). Quaisquer clusters adicionais no mesmo ambiente do vCenter Server não têm a recuperação de desastres do Zerto instalada automaticamente quando o cluster adicional é criado nem quando o servidor ESXi é incluído nesse cluster adicional.
 
 Nos clusters adicionais, deve-se instalar a recuperação de desastre do Zerto separadamente.
 

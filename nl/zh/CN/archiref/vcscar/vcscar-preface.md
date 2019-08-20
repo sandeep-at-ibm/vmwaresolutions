@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -65,8 +65,3 @@ Watson Knowledge Studio 根据特定滑板手的查询，使用技巧描述、�
 {: #vcscar-preface-cloud-platform}
 
 IT 系统的创造性分层可生成新组合，代表了滑板的核心。不管我们去哪儿，它都有能力影响到创新生活，在全球范围内激发创新。没有 {{site.data.keyword.cloud}}，这一切都不可能实现。
-
-## 相关链接
-{: #vcscar-preface-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

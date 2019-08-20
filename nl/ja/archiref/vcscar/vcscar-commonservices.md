@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -32,8 +32,3 @@ VMware vCenter Server on {{site.data.keyword.cloud_notm}} 自動化機能の一�
 {: #vcscar-commonservices-ntp}
 
 vCenter Server のデプロイメントでは、{{site.data.keyword.cloud_notm}} インフラストラクチャーの Network Time Protocol (NTP) サーバーを使用します。 デプロイ済みのすべてのコンポーネントは、これらの NTP サーバーを使用するように構成されます。 証明書と AD 認証が正常に機能するためには、すべてのコンポーネントで同じ NTP サーバーを使用することが必要不可欠です。
-
-## 関連リンク
-{: #vcscar-commonservices-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

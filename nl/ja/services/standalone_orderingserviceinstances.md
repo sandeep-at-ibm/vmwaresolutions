@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-22"
 
 keywords: VMware HCX standalone, HCX on-premises, order HCX
 
@@ -18,7 +18,7 @@ subcollection: vmware-solutions
 # オンプレミス VMware HCX on IBM Cloud インスタンスの注文
 {: #standalone_orderingserviceinstances}
 
-オンプレミスの HCX on {{site.data.keyword.cloud}} インスタンスを注文するときに、オンプレミスの HCX on {{site.data.keyword.cloud_notm}} インストールのライセンスとアクティベーションのために vCenter Server with Hybridity Bundle インスタンスと関連付ける必要はありません。
+オンプレミスの HCX on {{site.data.keyword.cloud}} インスタンスを注文するときに、オンプレミスの HCX on {{site.data.keyword.cloud_notm}} インストールのライセンスとアクティベーションのために vCenter Server インスタンスと関連付ける必要はありません。
 
 ## 始める前に
 {: #standalone_orderingserviceinstances-reqs}

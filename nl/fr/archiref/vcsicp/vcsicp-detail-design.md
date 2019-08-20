@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-09"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -60,8 +60,3 @@ L'architecture de NSX-T est telle qu'une plateforme de mise en réseau pouvant s
 {{site.data.keyword.icpfull_notm}} fournit une option permettant de remplacer la mise en réseau Calico par une instance NSX-T, fournissant ainsi un emplacement unique pour la gestion de la mise en réseau et de la sécurité.
 
 ![{{site.data.keyword.icpfull_notm}} avec mise en réseau NSX-T](../../images/vcsicp-icp-nsxt-networking.svg "{{site.data.keyword.icpfull_notm}} avec mise en réseau NSX-T")
-
-## Liens connexes
-{: #vcsicp-detail-design-related}
-
-* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

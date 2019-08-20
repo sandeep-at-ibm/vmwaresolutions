@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -118,5 +118,3 @@ Utilizza quanto segue per le distribuzioni dell'applicazione in {{site.data.keyw
 * [Aggiunta di nodi di lavoro ridimensionando un pool di nodi di lavoro esistente](/docs/containers?topic=containers-clusters)
 * [How to back up and restore {{site.data.keyword.cloud_notm}} Private](https://medium.com/ibm-cloud/how-to-backup-and-restore-ibm-cloud-private-part-1-b6300dc1d7d8)
 * [{{site.data.keyword.icpfull_notm}} backup GitHub](https://github.com/ibm-cloud-architecture/icp-backup/)
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

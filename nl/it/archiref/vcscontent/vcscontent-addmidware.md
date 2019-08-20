@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-27"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -301,8 +301,3 @@ di instradamento di Istio consentono la messaggistica dinamica del livello di fe
 canale Slack interno o un canale Twitter pubblico.
 
 ![Arricchimento di Stock Trader](../../images/vcscontent-enrich.svg "Arricchimento di Stock Trader")
-
-## Link correlati
-{: #vcscontent-addmidware-related}
-
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

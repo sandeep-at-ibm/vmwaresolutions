@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-25"
 
 keywords: single-node trial, migration app modernization, order migration app modernization
 
@@ -18,12 +18,12 @@ subcollection: vmware-solutions
 {:note: .note}
 {:important: .important}
 
-# 订购、查看和删除 Migration and App Modernization 单节点试用版实例
+# 订购、查看和删除 Single-node Trial for Migration and App Modernization 实例
 {: #cloud_modern_bundle_orderinginstance}
 
-订购 Migration and App Modernization 单节点试用版实例之前，请复查规划需求。
+订购 Single-node Trial for Migration and App Modernization 实例之前，请复查规划需求。
 
-## 订购 Migration and App Modernization 单节点试用版实例的需求和规划
+## 订购 Single-node Trial for Migration and App Modernization 实例的需求和规划
 {: #cloud_modern_bundle_orderinginstance-req}
 
 确保确认以下需求并完成以下任务。
@@ -44,17 +44,18 @@ subcollection: vmware-solutions
 ### 实例名称需求
 {: #cloud_modern_bundle_orderinginstance-inst-name-req}
 
-复查实例名称需求：
-* 只允许使用字母数字字符和短划线 (-) 字符。
-* 实例名称必须以字母字符开头并以字母数字字符结尾。
+实例名称必须满足以下需求：
+* 只允许使用小写字母、数字和短划线 (-) 字符。
+* 实例名称必须以小写字母字符开头。
+* 实例名称必须以小写字母或数字字符结尾。
 * 实例名称的最大长度为 10 个字符。
 * 实例名称在您的帐户中必须唯一。
 
-## 订购 Migration and App Modernization 单节点试用版实例的过程
+## 订购 Single-node Trial for Migration and App Modernization 实例的过程
 {: #cloud_modern_bundle_orderinginstance-procedure}
 
-1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格中的 **VMware** 图标，然后单击 **VMware 虚拟数据中心**部分中的 **Migration and App Modernization 单节点试用版**卡。
-2. 在 **Migration and App Modernization 单节点试用版**页面上，单击**继续**。
+1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格中的 **VMware** 图标，然后单击 **VMware 虚拟数据中心**部分中的 **Single-node Trial for Migration and App Modernization** 卡。
+2. 在 **Single-node Trial for Migration and App Modernization** 页面上，单击**继续**。
 3. 完成请求 {{site.data.keyword.cloud_notm}} 基础架构帐户的步骤，或提供现有**用户名**和 **API 密钥**，然后单击**检索**。
 
  如果 API 密钥已存在，那么将隐藏此部分。
@@ -70,12 +71,12 @@ subcollection: vmware-solutions
    3. 单击订单适用条款的链接，并在订购实例之前确认您同意这些条款。
    4. 单击**供应**。
 
-### 订购 Migration and App Modernization 单节点试用版实例之后的结果
+### 订购 Single-node Trial for Migration and App Modernization 实例之后的结果
 {: #cloud_modern_bundle_orderinginstance-results}
 
 * 实例的部署会自动启动，并会订购内部部署 HCX on {{site.data.keyword.cloud_notm}} 服务激活密钥。
 * 通过查看实例详细信息的**部署历史记录**部分，可以检查部署状态，包括可能需要注意的任何问题。
-* 成功部署实例后，[Migration and App Modernization 单节点试用版实例的技术规范](/docs/services/vmwaresolutions/services?topic=vmware-solutions-cloud_modern_bundle_overview#cloud_modern_bundle_overview-tech-specs)中描述的组件已安装。
+* 成功部署实例后，[Single-node Trial for Migration and App Modernization 实例的技术规范](/docs/services/vmwaresolutions/services?topic=vmware-solutions-cloud_modern_bundle_overview#cloud_modern_bundle_overview-tech-specs)中描述的组件已安装。
 * 实例准备就绪可供使用后，该实例的状态会更改为**可供使用**，并且您将收到通过电子邮件发送的通知。
 
 #### HCX on IBM Cloud 的部署过程
@@ -122,12 +123,12 @@ subcollection: vmware-solutions
 
 1. 在**资源**页面上找到内部部署激活密钥。
   1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**资源**。
-  2. 在 **vCenter Server 实例**表中，查看**类型**列以找到 Migration and App Modernization 单节点试用版实例，并记下该实例的名称。
+  2. 在 **vCenter Server 实例**表中，查看**类型**列以找到 Single-node Trial for Migration and App Modernization 实例，并记下该实例的名称。
   3. 滚动到**内部部署 HCX 实例**表并查看**名称**列，以找到与订购的单节点实例同名但后缀为 *-OnPrem* 的实例。
   4. 记下**激活密钥**字段中的密钥。
 2. 在 HCX on {{site.data.keyword.cloud_notm}} HCX Manager 控制台中获取内部部署 HCX Enterprise Manager Open Virtual Appliance (OVA)。
   1. 连接到 HCX 云控制台。
-    1. 在 **vCenter Server 实例**表中，单击 Migration and App Modernization 单节点试用版实例以查看实例详细信息。
+    1. 在 **vCenter Server 实例**表中，单击 Single-node Trial for Migration and App Modernization 实例以查看实例详细信息。
     2. 在**访问信息**下，找到并记下 vCenter 凭证。
     3. 在左侧导航窗格中，单击**服务**。
     4. 在**服务**页面上，单击 **HCX on IBM Cloud**。
@@ -160,10 +161,10 @@ subcollection: vmware-solutions
 您只能在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理在 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 基础架构组件，而不能在 {{site.data.keyword.slportal}} 中或在该控制台外部通过其他任何方法对这些组件进行管理。如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步，并且会使环境变得不稳定。
 {:important}
 
-## 删除 Migration and App Modernization 单节点试用版实例的过程
+## 删除 Single-node Trial for Migration and App Modernization 实例的过程
 {: #cloud_modern_bundle_orderinginstance-deleting-procedure}
 
-删除 Migration and App Modernization 单节点试用版实例时，会按顺序释放以下组件：
+删除 Single-node Trial for Migration and App Modernization 实例时，会按顺序释放以下组件：
 
 1. 所有部署的服务
 3. VMware 产品许可证
@@ -176,7 +177,7 @@ subcollection: vmware-solutions
 在所删除实例的 {{site.data.keyword.cloud_notm}} 基础架构计费周期结束之前，仍然会对您计费。
    {:note}
 
-要删除 Migration and App Modernization 单节点试用版实例，请完成以下步骤：
+要删除 Single-node Trial for Migration and App Modernization 实例，请完成以下步骤：
 
 1. 在 {{site.data.keyword.vmwaresolutions_short}} 控制台中，单击左侧导航窗格上的**资源**。
 2. 在 **vCenter Server 实例**表中，找到要删除的实例。
@@ -189,8 +190,8 @@ subcollection: vmware-solutions
 ## 相关链接
 {: #cloud_modern_bundle_orderinginstance-related}
 
-* [vCenter Server 和 IBM Cloud Private 指南](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [开具有关 IBM Cloud Private 的凭单](https://www.ibm.com/mysupport/s/?language=en_US){:external}
+* [vCenter Server 和 {{site.data.keyword.cloud_notm}} Private 指南](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
+* [开具有关 {{site.data.keyword.cloud_notm}} Private 的凭单](https://www.ibm.com/mysupport/s/?language=en_US){:external}
 * [VMware HCX 资源](https://hcx.vmware.com/#/docs){:external}
 * [VMware HCX 用户指南](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}
 * [取消虚拟服务器](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)

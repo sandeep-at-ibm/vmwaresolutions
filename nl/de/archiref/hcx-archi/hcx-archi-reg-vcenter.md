@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-27"
+lastupdated: "2019-07-08"
 
 subcollection: vmware-solutions
 
@@ -24,10 +24,10 @@ Damit die virtuelle Hybrid-Cloud-Services-Appliance registriert werden kann, mus
 {: #hcx-archi-reg-vcenter-proc-register}
 
 1. Melden Sie sich an der virtuellen Hybrid-Cloud-Services-Appliance an. Beispiel: `https:My-HCX-Manager:9443/`.
-2. Klicken Sie auf die Kachel **Einstellungen verwalten**.
+2. Führen Sie in der **Dashboardanzeige** die folgenden Schritte aus:
   1. Wählen Sie im linken Teilfenster unter **Systeme konfigurieren** die Option "vCenter" aus.
   2. Klicken Sie oben rechts auf **vCenter hinzufügen**.
-  3. Geben Sie die IP-Adresse von vCenter Server in der Form `https:vCenter-host-name` oder `https:vCenter-IP-address` ein. Beispiel: `https:My-vCenter` oder `https:10.108.26.211`.
+  3. Geben Sie die IP-Adresse von vCenter Server in der Form `https:vCenter-host-name` oder `https:vCenter-IP-address` ein. Beispiel: `https:My-vCenter` oder `https:10.108.26.211`
   4. Geben Sie Benutzername und Kennwort für vCenter Server ein. Das verwendete Konto muss über die Rolle des vCenter-Administrators verfügen.
   5. Klicken Sie auf **OK**. Wenn die Nachricht _Die Anwendung muss neu gestartet werden_ angezeigt wird, führen Sie keinen Neustart aus.
 3. Konfigurieren Sie den Suchservice.
@@ -35,7 +35,7 @@ Damit die virtuelle Hybrid-Cloud-Services-Appliance registriert werden kann, mus
   2. Klicken Sie auf die Schaltfläche **Bearbeiten** ganz rechts von dem Textfeld **URL des Suchservice**.
   3. Geben Sie den Netzserviceendpunkt für die Suche im folgenden Format an:
     * Für vCenter Server 5.5u3: `https://ssoip:/7444/lookupservice/sdk`
-    * Für vCenter Server 6.0 Update 2: `https://ssoip/lookupservice/sdk`
+    * Für vCenter Server 6.0u2: `https://ssoip/lookupservice/sdk`
   4. Klicken Sie auf **OK**. Führen Sie keinen Neustart aus, wenn eine Nachricht zum Neustart der Web-Engine angezeigt wird.
 4. Klicken Sie auf die Registerkarte **Zusammenfassung** und suchen Sie den Abschnitt **Hybriditäts-Managementkomponenten**. Stoppen und starten Sie sowohl die Anwendungsengine als auch die Web-Engine.
 5. Um die Registrierung abzuschließen, melden Sie sich von vSphere Web Client ab. Melden Sie sich wieder an, um zu überprüfen, ob die Aktualisierung des Bildschirms erfolgt ist.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-21"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -71,8 +71,3 @@ subcollection: vmware-solutions
 |任务|设置了四个任务：资产扫描、NSX 流、VMware 基础架构扫描和 VMware 漏洞。ScanName 设置为 DC1AssetScan、NSXFlows、VMWInfraScan 和 VMWVulnScan|
 |任务|设置了四个任务：资产扫描、NSX 流、VMware 基础架构扫描和 VMware 漏洞。类型设置为 vCenter、NSX、VMWareInfrastructureScan 和 VMWareVulnerabilityScan|
 |任务|对于 DC1AssetScan，安排设置为“每小时”，对于其他项，设置为“每天”|
-
-## 相关链接
-{: #caveonix-step4-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

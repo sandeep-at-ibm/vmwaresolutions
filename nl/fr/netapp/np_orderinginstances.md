@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-29"
 
 keywords: NetApp order instance, order NetApp ONTAP, order NetApp
 
@@ -42,8 +42,9 @@ Lorsque vous commandez une instance NetApp ONTAP Select, vous devez spécifier l
 {: #np_orderinginstances-instance-name}
 
 Le nom de l'instance qui doit respecter les règles suivantes :
-* Seuls les caractères alphanumériques et le tiret (-) sont autorisés.
-* Le nom d'instance doit commencer par un caractère alphabétique et se terminer par un caractère alphanumérique.
+* Seuls les caractères alphabétiques minuscules, numériques et tirets (-) sont autorisés.
+* Le nom d'instance doit commencer par un caractère alphabétique minuscule.
+* Le nom d'instance doit se terminer par un caractère alphabétique minuscule ou un caractère numérique.
 * Le nom d'instance ne doit pas dépasser 10 caractères.
 * Le nom d'instance doit être unique au sein de votre compte.
 
@@ -56,26 +57,29 @@ Vous devez spécifier les paramètres d'interface réseau suivants lorsque vous 
 {: #np_orderinginstances-host-name-prefix}
 
 Le préfixe du nom d'hôte qui doit respecter les règles suivantes :
-*  Seuls les caractères alphanumériques et le tiret (-) sont autorisés.
-*  Le préfixe de nom d'hôte doit commencer et se terminer par un caractère alphanumérique.
-*  Le préfixe de nom d'hôte ne doit pas dépasser 10 caractères.
+* Seuls les caractères alphabétiques minuscules, numériques et tirets (-) sont autorisés.
+* Le préfixe du nom d'hôte doit commencer par un caractère alphabétique minuscule.
+* Le préfixe du nom d'hôte doit se terminer par un caractère alphabétique minuscule ou un caractère numérique.
+* Le préfixe de nom d'hôte ne doit pas dépasser 10 caractères.
 
 ### Libellé de sous-domaine
 {: #np_orderinginstances-subdomain-label}
 
 Le libellé du sous-domaine qui doit respecter les règles suivantes :
-*  Seuls les caractères alphanumériques et le tiret (-) sont autorisés.
-*  Le libellé de sous-domaine doit commencer par un caractère alphabétique et se terminer par un caractère alphanumérique.
-*  Le libellé de sous-domaine ne doit pas dépasser 10 caractères.
+* Seuls les caractères alphabétiques minuscules, numériques et tirets (-) sont autorisés.
+* Le libellé du sous-domaine doit commencer par un caractère alphabétique minuscule.
+* Le libellé du sous-domaine doit se terminer par un caractère alphabétique minuscule ou un caractère numérique.
+* Le libellé de sous-domaine ne doit pas dépasser 10 caractères.
 
 ### Nom de domaine
 {: #np_orderinginstances-domain-name}
 
 Le nom du domaine racine qui doit respecter les règles suivantes :
 * Le nom de domaine doit être composé d'au moins deux chaînes séparées par un point (.)
-* La première chaîne doit commencer par un caractère alphabétique et se terminer par un caractère alphanumérique.
-* Toutes les chaînes, à l'exception de la dernière, ne peuvent contenir que des caractères alphanumériques et des tirets (-).
-* La dernière chaîne ne peut contenir que des caractères alphabétiques.
+* La première chaîne doit commencer par un caractère alphabétique minuscule.
+* La première chaîne doit se terminer par un caractère alphabétique minuscule ou un caractère numérique.
+* Toutes les chaînes, à l'exception de la dernière, ne peuvent contenir que des caractères numériques, alphabétiques minuscules et des tiret (-).
+* La dernière chaîne ne peut contenir que des caractères alphabétiques minuscules.
 * La dernière chaîne doit comporter entre 2 et 24 caractères.
 
 La longueur maximale du nom de domaine complet des hôtes et des machines virtuelles est de 50 caractères. Les noms de domaine doivent respecter cette longueur maximale.
@@ -108,7 +112,7 @@ Les unités SSD de 3,8 To sont prises en charge une fois qu'elles sont officiell
 ### Nombre de serveurs bare metal
 {: #np_orderinginstances-bare-metal-number}
 
-Le nombre de serveurs ESXi d'une instance NetApp ONTAP Select est de 4 par défaut. Vous ne pouvez pas modifier cette valeur. Tous les serveurs ESXi partagent la même configuration.
+Le nombre de serveurs ESXi d'une instance NetApp ONTAP Select est de quatre par défaut. Vous ne pouvez pas modifier cette valeur. Tous les serveurs ESXi partagent la même configuration.
 
 ## Récapitulatif de la commande
 {: #np_orderinginstances-order-summary}

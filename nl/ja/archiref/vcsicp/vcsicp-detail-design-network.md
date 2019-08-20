@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -128,8 +128,3 @@ ESG と vRouter 内の経路テーブルにどのようにデータが取り込�
 *	パブリック・アクセスへの VXLAN ネットワーク・アクセスのための SNAT。
 *	プライベート {{site.data.keyword.cloud_notm}} ネットワーク・アクセスへの VXLAN ネットワーク・アクセスのための SNAT。
 *	{{site.data.keyword.icpfull_notm}} クラスター vIP のための DNAT。
-
-## 関連リンク
-{: #vcsicp-detail-design-network-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

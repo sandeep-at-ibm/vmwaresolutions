@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-07-24"
 
 keywords: history message, audit history, error messages
 
@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 # Mensagens do histórico da instância
 {: #audit_messages}
 
-Todas as operações que o {{site.data.keyword.cloud_notm}} executa para a instância do VMware são registradas no histórico da instância. É possível usar o histórico da instância como uma referência para revisar essas operações. Para obter mais informações sobre como revisar o histórico da instância, consulte [Procedimento para visualizar o histórico de implementação para instâncias do vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances#vc_viewinginstances-procedure-view-deploy-history).
+Todas as operações que o {{site.data.keyword.cloud}} executa para a instância do VMware são registradas no histórico da instância. É possível usar o histórico da instância como uma referência para revisar essas operações. Para obter mais informações sobre como revisar o histórico da instância, consulte [Procedimento para visualizar o histórico de implementação para instâncias do vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances#vc_viewinginstances-procedure-view-deploy-history).
 
 As seções a seguir fornecem todas as mensagens possíveis que podem ser emitidas para o histórico da instância.
 
@@ -51,7 +51,7 @@ O {{site.data.keyword.vmwaresolutions_short}} emite as mensagens a seguir para a
 * ``Cancelando encargos do <environment>...``
 * ``Cancelamento da licença do VMware em andamento...``
 * ``O cancelamento da licença do VMware está concluído.``
-* ``A ordem do SoftLayer falhou ou atingiu o tempo limite.``
+* ``O pedido de infraestrutura do {{site.data.keyword.cloud_notm}} falhou ou atingiu o tempo limite.``
 
 ## Mensagens de erro da instância
 {: #audit_messages-error}
@@ -60,9 +60,9 @@ O {{site.data.keyword.vmwaresolutions_short}} emite as mensagens de erro do hist
 
 * ``Erro ao pedir licenças do VMware. Abra um chamado de serviço para obter assistência.``
 * ``Erro ao pedir sub-redes. Abra um chamado de serviço para obter assistência.``
-* ``Erro: a chave de API do SoftLayer não é válida. Abra um chamado de serviço para obter assistência.``
-* ``Erro: o data center do SoftLayer não é válido. Abra um chamado de serviço para obter assistência.``
-* ``Erro ao usar uma imagem compartilhada na conta do SoftLayer fornecida. Abra um chamado de serviço para obter assistência.``
+* ``Erro: a chave de API de infraestrutura do {{site.data.keyword.cloud_notm}} não é válida. Abra um chamado de serviço para obter assistência.``
+* ``Erro: o data center de infraestrutura do {{site.data.keyword.cloud_notm}} não é válido. Abra um chamado de serviço para obter assistência.``
+* ``Erro ao usar uma imagem compartilhada na conta de infraestrutura do {{site.data.keyword.cloud_notm}} fornecida. Abra um chamado de serviço para obter assistência.``
 * ``Erro ao pedir entradas de serviço. Abra um chamado de serviço para obter assistência.``
 * ``Erro ao pedir sub-redes. Abra um chamado de serviço para obter assistência.``
 * ``Erro ao pedir licenças. Abra um chamado de serviço para obter assistência.``
@@ -236,20 +236,8 @@ O {{site.data.keyword.vmwaresolutions_short}} emite as mensagens a seguir para o
 * ``Cancelamento da entrada de serviço em andamento...``
 * ``O cancelamento da entrada de serviço está concluído.``
 
-## Mensagens do histórico do vCenter Server with Hybridity Bundle
-{: #audit_messages-hybridity}
-
-O {{site.data.keyword.vmwaresolutions_short}} emite as mensagens a seguir para as instâncias do vCenter Server with Hybridity Bundle:
-
-* ``Pedindo licenças do vCenter Server with Hybridity Bundle...``
-* ``Iniciando a conversão do vCenter Server with Hybridity Bundle...``
-* ``A conversão do vCenter Server with Hybridity Bundle está concluída.``
-* ``Removendo o vCenter Server with Hybridity Bundle...``
-* ``O vCenter Server with Hybridity Bundle foi removido com êxito.``
-* ``Cancelando a conversão do vCenter Server with Hybridity Bundle...``
-
 ## Links relacionados
 {: #audit_messages-related}
 
 * [Considerações sobre como alterar os artefatos do vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vcenter_chg_impact#vcenter_chg_impact-automation-id)
-* [Eventos do Activity Tracker](/docs/services/vmwaresolutions?topic=vmware-solutions-at-events#at-events)
+* [Eventos de rastreador de atividade](/docs/services/vmwaresolutions?topic=vmware-solutions-at-events#at-events)

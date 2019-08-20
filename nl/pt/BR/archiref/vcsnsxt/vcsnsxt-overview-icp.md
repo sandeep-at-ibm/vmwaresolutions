@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -43,8 +43,3 @@ O gerenciamento de rede do {{site.data.keyword.icpfull_notm}} é facilitado pelo
 O Calico usa a camada 3 ou a camada de rede do modelo Open System Interconnection (OSI). O Calico usa o Protocolo de Roteamento de Borda (BGP) para construir tabelas de roteamento que facilitam a comunicação entre os nós do agente.
 
 Para obter mais informações sobre a rede Calico, veja [{{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-iks).
-
-## Links relacionados
-{: #vcsnsxt-overview-icp-related}
-
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

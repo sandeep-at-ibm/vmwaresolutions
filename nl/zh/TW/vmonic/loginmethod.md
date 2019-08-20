@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-07-16"
 
 keywords: vmware solutions console, vmware portal, vmware solutions catalog
 
@@ -30,7 +30,7 @@ subcollection: vmware-solutions
 {: #loginmethod-cloud-catalog}
 
 若要從 {{site.data.keyword.cloud_notm}} 型錄存取主控台，請完成下列步驟：
-1. 移至 https://cloud.ibm.com。
+1. 移至 https://cloud.ibm.com/login。
 2. 使用您的 **IBM ID** 帳戶登入 {{site.data.keyword.cloud_notm}}。
 3. 在橫幅左側，按一下**型錄**。
 4. 在**型錄**頁面頂端的搜尋方框上，輸入 **VMware Solutions**。

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-01"
 
 keywords: vCenter Server add host, add server vCenter Server, remove host vCenter Server
 
@@ -23,12 +23,13 @@ subcollection: vmware-solutions
 
 您可以根據商業需要，藉由新增或移除 ESXi 伺服器或是網路檔案系統 (NFS) 儲存空間來擴充或縮減 VMware vCenter Server 實例的容量。
 
+* 從 3.2 版開始，使用 vSphere Enterprise Plus 6.7u1 的現有實例可以選擇新增使用 vSphere Enterprise Plus 6.7u1 或 vSphere Enterprise Plus 6.7u2 的新主機。
 * 從 3.1 版開始，您可以藉由選取現有的配置，或叢集裡現有主機以外的替代配置，來新增 ESXi 伺服器至現有的叢集。當您訂購新的伺服器時，現有配置可用於即時選取。為了避免效能或穩定性問題，建議叢集在 CPU、RAM 及儲存空間等方面使用相同或類似的配置。這個功能適用於相同叢集內的硬體更新。叢集只能有一種類型的儲存空間。
 * 從 3.0 版開始，您可以在叢集中同時新增或移除 NFS 儲存空間及**備妥使用**狀態的 ESXi 伺服器。例如，您可以在一個叢集裡新增或移除 ESXi 伺服器，然後在另一個叢集裡新增或移除 NFS 儲存空間。
 * 從 2.9 版開始，您可以在伺服器處於維護模式時將新的 ESXi 伺服器新增至叢集。此外，您還可以跨越多個叢集同時新增或移除 ESXi 伺服器。
 
 **附註**：
-* 如果您的起始叢集以 vSAN 作為其儲存空間，則在部署之後新增一部以上的 ESXi 伺服器，可增加叢集儲存空間容量。
+* 如果初始叢集將 vSAN 作為其儲存空間，則在部署後新增一個以上 ESXi 伺服器可以增加叢集儲存空間容量。
 * 您可以在現有 NFS 或 vSAN vCenter Server 叢集中新增或移除 NFS 儲存空間共用。
 
 
@@ -61,7 +62,8 @@ subcollection: vmware-solutions
 8. 完成 Bare Metal Server 配置。
    * 從叢集裡的現有主機選取配置。
    * 選取新的 {{site.data.keyword.baremetal_short_sing}} 配置。
-      * 針對 **Skylake** 或 **Broadwell**，請指定 **CPU 型號**、**RAM** 數量，以及 **{{site.data.keyword.baremetal_short}} 數目**。     
+      * 對於具有 vSphere Enterprise Plus 6.7u1 的實例，請為新主機指定 Vmware vSphere 版本。
+      * 對於 **Skylake**、**Cascade** 或 **Broadwell**，請指定 **CPU 型號**、**RAM** 數量和 **{{site.data.keyword.baremetal_short}} 數目**。     
       * 對於 **SAP 認證**，指定 **CPU 型號和 RAM** 以及 **{{site.data.keyword.baremetal_short}}** 的數目。
 9. 完成儲存空間配置。請指定容量及快取磁碟的磁碟類型、磁碟數目以及「vSAN 授權」版本。如果您要更多儲存空間，請勾選**高效能 Intel Optane** 方框。
 10. 檢閱預估成本，然後按一下**新增**。
@@ -92,6 +94,9 @@ subcollection: vmware-solutions
 * 移除已安裝 F5 on {{site.data.keyword.cloud_notm}} 或 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 服務的 ESXi 伺服器之前，您必須將 F5 BIG-IP 及 FortiGate VM 移轉至與管理 VM 不同的 ESXi 伺服器。
 * 移除已安裝 IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 服務的 ESXi 伺服器之前，請確定沒有作用中（失敗或進行中）的備份或還原作業，因為這些作用中作業可能會導致無法移除 ESXi 伺服器。
 * 當您移除 ESXi 伺服器時，伺服器會進入維護模式，之後，會移轉伺服器上執行的所有 VM，然後再從 vCenter Server 將它們移除。如果要對 VM 重新定位擁有最大控制權，建議您讓要移除的 ESXi 伺服器進入維護模式，並使用 VMware vSphere Web Client 手動移轉在它們上面執行的 VM。之後，請使用 {{site.data.keyword.vmwaresolutions_short}} 主控台來移除 ESXi 伺服器。
+
+當您訂購 VMware HCX on {{site.data.keyword.cloud_notm}} 服務時，需要 12 個月的承諾。如果您在 12 個月的承諾期間結束之前便刪除叢集，則會持續向您的帳戶收取 HCX 元件的費用。12 個月的承諾到期日提供於 HCX on {{site.data.keyword.cloud_notm}} 詳細資料頁面上。如需檢視服務詳細資料的相關資訊，請參閱[訂購、檢視及移除 vCenter Server 實例的服務](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure)。
+{:important}
 
 ### 移除 ESXi 伺服器的程序
 {: #vc_addingremovingservers-removing-procedure}

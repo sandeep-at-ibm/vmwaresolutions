@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -140,8 +140,3 @@ Watson Discovery 必须通过机器学习模型进行训练，该模型是由主
 - 显示包含跟翻基本技巧的所有技巧。
 - 显示所有技巧。
 - 显示包含多个组合的所有技巧。
-
-## 相关链接
-{: #vcscar-logical-related}
-
-* [vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-30"
 
 keywords: vCenter Server networking, networking components, networking vCenter
 
@@ -45,10 +45,11 @@ subcollection: vmware-solutions
 {: #vc_networkingonvcenterserver-change-nsx-component-password-considerations}
 {: faq}
 
-在變更 NSX Manager、NSX Controller 及 NSX Edge 的密碼之前，請檢閱下列考量：
-* 不要變更 NSX Manager 密碼，您可以在 {{site.data.keyword.vmwaresolutions_short}} 主控台之實例的**摘要**頁面上找到此密碼。
-* 您可以變更 NSX Controller 的密碼。如需如何變更 NSX Controller 密碼的指示，請參閱 [Change Controller Password](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/com.vmware.nsx.admin.doc/GUID-2667DD9E-E2F5-4403-BAC2-C7D1BBC23228.html){:external}。
-* 您可以變更客戶管理的 VMware NSX Edge Services Gateway (ESG) 的密碼和 SSH 設定。請勿變更 Management VMware NSX Edge Services Gateway (ESG) 及相關「分散式邏輯路由器」的密碼。
+在嘗試變更 NSX Manager、NSX Controller 及 NSX Edge 的密碼之前，請檢閱下列考量：
+* 您可以變更 NSX Manager 密碼。此密碼顯示在 {{site.data.keyword.vmwaresolutions_short}} 主控台中實例的**摘要**頁面上。
+* 您可以變更 NSX Controller 的密碼。如需如何變更這些密碼的指示，請參閱[變更控制器密碼](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/com.vmware.nsx.admin.doc/GUID-2667DD9E-E2F5-4403-BAC2-C7D1BBC23228.html){:external}。
+* 您可以變更客戶管理的 VMware NSX Edge Services Gateway (ESG) 的密碼和 SSH 設定。 
+* 不要變更 Management VMware NSX Edge Services Gateway (ESG) 及相關「分散式邏輯路由器」的密碼。
 
 ## 相關鏈結
 {: #vc_networkingonvcenterserver-related}

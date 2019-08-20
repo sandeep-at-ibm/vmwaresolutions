@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-06"
 
 keywords: vCenter Server NSX-T add cluster, view cluster vCenter Server NSX-T, delete cluster vCenter Server NSX-T
 
@@ -20,8 +20,6 @@ subcollection: vmware-solutions
 
 # Ajout, affichage et suppression de clusters pour des instances vCenter Server with NSX-T
 {: #vc_nsx-t_addingviewingcluster}
-
-Les serveurs ESXi que vous avez configurés lors de la commande d'une instance sont, par défaut, regroupés sous **cluster1**.
 
 Vous pouvez ajouter vos propres clusters à vos instances VMware vCenter Server with NSX-T afin d'étendre la capacité de calcul et de stockage. Au sein d'un cluster, vous pouvez gérer des serveurs ESXi afin d'optimiser l'allocation des ressources et la haute disponibilité. Lorsque vous n'en avez plus besoin, supprimez les clusters que vous avez ajoutés à vos instances.
 
@@ -43,10 +41,11 @@ Lorsque vous ajoutez un cluster pour une instance vCenter Server with NSX-T, vou
 {: #vc_nsx-t_addingviewingclusters-adding-cluster-name}
 
 Le nom du cluster qui doit respecter les règles suivantes :
-* Seuls les caractères alphanumériques et le tiret (-) sont autorisés.
-* Le nom de cluster doit commencer et se terminer par un caractère alphanumérique.
-* Le nombre maximal de caractères autorisés est 30.
-* Le nom de cluster doit être unique au sein de l'instance vCenter Server.
+* Seuls les caractères alphabétiques minuscules, numériques et tirets (-) sont autorisés.
+* Le nom du cluster doit commencer par un caractère alphabétique minuscule.
+* Le nom du cluster doit se terminer par un caractère alphabétique minuscule ou un caractère numérique.
+* Le nom de cluster ne doit pas dépasser 30 caractères.
+* Le nom de cluster doit être unique au sein de l'instance vCenter Server with NSX-T.
 
 #### Emplacement de centre de données
 {: #vc_nsx-t_addingviewingclusters-adding-dc-location}
@@ -58,7 +57,7 @@ Si vous déployez le cluster dans un autre {{site.data.keyword.CloudDataCent_not
 ### Paramètres de serveur bare metal
 {: #vc_nsx-t_addingviewingclusters-bare-metal-settings}
 
-Vous pouvez choisir l'option **Skylake** ou **Broadwell**.
+Vous pouvez choisir l'option **Skylake**, **Cascade** ou **Broadwell**.
 
 #### Skylake
 {: #vc_nsx-t_addingviewingclusters-adding-skylake}
@@ -72,6 +71,21 @@ Avec l'option **Skylake**, un certain nombre d'options est disponible pour les p
 | Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz | 128 Go, 192 Go, 384 Go, 768 Go, 1.5 To |
 {: caption="Tableau 1. Options pour les serveurs Skylake {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
+#### Cascade
+{: #vc_nsx-t_addingviewingclusters-adding-cascade}
+
+Pour le paramétrage de **Cascade**, vous disposez d'options pour le **Modèle d'UC** et la **RAM**.
+
+Cascade {{site.data.keyword.baremetal_short}} est disponible uniquement pour les instances VMware vSphere Enterprise Plus 6.7 U2.
+{:note}
+
+| Options de modèle d'UC        | Options de RAM       |
+|:------------- |:------------- |
+|Processeur Dual Intel Xeon Gold 4210 / 20 coeurs au total, 2,3 GHz| 64 Go, 96 Go, 128 Go, 192 Go, 768 Go, 1,5 To |
+|Processeur Dual Intel Xeon Gold 5218 / 32 coeurs au total, 2,3 GHz| 64 Go, 96 Go, 128 Go, 192 Go, 768 Go, 1,5 To |
+|Processeur Dual Intel Xeon Gold 6248 / 40 coeurs au total, 2,5 GHz| 64 Go, 96 Go, 128 Go, 192 Go, 768 Go, 1,5 To |
+{: caption="Tableau 2. Options pour Cascade {{site.data.keyword.baremetal_short}}" caption-side="top"}
+
 #### Broadwell
 {: #vc_nsx-t_addingviewingclusters-adding-broadwell}
 
@@ -81,7 +95,7 @@ Avec l'option **Broadwell**, un certain nombre d'options est disponible pour les
 |:------------- |:------------- |
 | Quad Intel Xeon E7-4820 v4/40 coeurs au total, 1,9 GHz | 128 Go, 256 Go, 512 Go, 1 To, 2 To, 3 To |
 | Quad Intel Xeon E7-4850 v4/64 coeurs au total, 2,2 GHz | 128 Go, 256 Go, 512 Go, 1 To, 2 To, 3 To |
-{: caption="Tableau 2. Options pour les serveurs Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
+{: caption="Tableau 3. Options pour les serveurs Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 #### Nombre de serveurs bare metal
 {: #vc_nsx-t_addingviewingclusters-adding-bare-metal-number}
@@ -103,7 +117,7 @@ Spécifiez les options vSAN suivantes :
 * **Nombre de disques de capacité vSAN** : indiquez le nombre de disques de capacité que vous souhaitez ajouter.
 * Si vous souhaitez augmenter la capacité au-delà de la limite de 10 disques, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de 12 disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée.
 
-  L'option **Hautes performances avec Intel Optane** n'est disponible que pour les modèles d'unités centrales Skylake.
+  L'option **Hautes performances avec Intel Optane** n'est disponible que pour les modèles d'unités centrales Skylake et Cascade.
   {:note}
 
 * Passez en revue les valeurs de **type de disque pour les disques de cache vSAN** et de **nombre de disques de cache vSAN**. Ces valeurs dépendent de la sélection de la case **Hautes performances avec Intel Optane**.
@@ -133,7 +147,7 @@ Détails relatifs au niveau de performance :
 | 2 IOPS/Go | Cette option est adaptée à la plupart des charges de travail d'usage général. Entre autres exemples d'application, citons l'hébergement de petites bases de données, la sauvegarde d'applications Web ou les images de disque de machine virtuelle pour un hyperviseur. |
 | 4 IOPS/Go | Cette option est adaptée aux charges de travail de grande intensité qui ont un pourcentage élevé de données actives simultanément. Les bases de données transactionnelles en sont un exemple. |
 | 10 IOPS/Go | Cette option est adaptée aux types de charge de travail les plus exigeants, tels que les analyses. Les bases de données à transactions élevées et autres bases de données sensibles aux performances en sont des exemples. Ce niveau de performance est limité à une capacité maximale de 4 To par partage de fichiers. |
-{: caption="Tableau 3. Options de niveau de performance NFS" caption-side="top"}
+{: caption="Tableau 4. Options de niveau de performance NFS" caption-side="top"}
 
 ### Paramètres d'octroi de licence
 {: #vc_nsx-t_addingviewingclusters-adding-licensing-settings}
@@ -223,12 +237,12 @@ Vous ne pouvez pas modifier le nom du cluster. La modification du nom du cluster
 
 | Elément        | Description       |  
 |:------------- |:------------- |
-| Nom | Le nom du serveur ESXi a le format suivant :<br> `<host_prefix><n>.<subdomain_label>.<root_domain>` <br> où :<br> `host_prefix` est le préfixe du nom d'hôte<br> `n` est la séquence du serveur<br> `subdomain_label` est le libellé de sous-domaine<br> `root_domain` est le nom du domaine racine |
+| Nom | Le nom du serveur ESXi est au format suivant : `<data_center>-<host_prefix><n>.<subdomain_label>.<root_domain>`, où `n` est la séquence du serveur ESXi. |
 | Version | Version du serveur ESXi. |
 | Données d'identification | Nom d'utilisateur et mot de passe d'accès au serveur ESXi. |
 | Adresse IP privée | Adresse IP privée du serveur ESXi. |
 | Statut | Statut du serveur ESXi, qui peut avoir l'une des valeurs suivantes :<br> **Ajouté** : le serveur ESXi est ajouté et prêt à être utilisé.<br> **Ajout en cours** : le serveur ESXi est en cours d'ajout.<br> **Suppression en cours** : le serveur ESXi est en cours de suppression. |
-{: caption="Tableau 4. Informations relatives au serveur ESXi" caption-side="top"}
+{: caption="Tableau 5. Détails relatifs au serveur ESXi" caption-side="top"}
 
 Détails relatifs au stockage :
 
@@ -238,7 +252,7 @@ Détails relatifs au stockage :
 | Taille | Capacité du stockage. |
 | IOPS/Go | Niveau de performance du stockage. |
 | Protocole NFS | Version NFS du stockage. |
-{: caption="Tableau 5. Informations relatives au stockage" caption-side="top"}
+{: caption="Tableau 6. Détails relatifs au stockage" caption-side="top"}
 
 Détails relatifs à l'interface réseau :
 
@@ -248,7 +262,7 @@ Détails relatifs à l'interface réseau :
 | Description | Description du réseau local virtuel.  |
 | Emplacement | Emplacement du centre de données. |
 | Route principale | Route principale du VLAN. |
-{: caption="Tableau 6. Interface réseau - Détails VLAN" caption-side="top"}
+{: caption="Tableau 7. Interface réseau - Détails VLAN" caption-side="top"}
 
 Cliquez sur **Afficher la ressource** pour accéder aux détails du réseau local virtuel.
 
@@ -259,7 +273,7 @@ Détails relatifs au sous-réseau :
 | Nom | Nom du sous-réseau. Cliquez sur le nom pour accéder aux détails du sous-réseau. |
 | Type | Type de sous-réseau : principal ou portable. |
 | Description | Description du sous-réseau. |
-{: caption="Tableau 7. Interface réseau - Détails de sous-réseau" caption-side="top"}
+{: caption="Tableau 8. Interface réseau - Détails de sous-réseau" caption-side="top"}
 
 Détails relatifs à l'adresse IP :
 
@@ -268,7 +282,7 @@ Détails relatifs à l'adresse IP :
 | IP | Adresse IP. |
 | Statut | Statut de l'adresse IP. |
 | Description |Description de l'adresse IP.  |
-{: caption="Tableau 8. Interface réseau - Détails d'adresse IP" caption-side="top"}
+{: caption="Tableau 9. Interface réseau - Détails d'adresse IP" caption-side="top"}
 
 ## Suppression de clusters des instances vCenter Server with NSX-T
 {: #vc_nsx-t_addingviewingclusters-deleting}

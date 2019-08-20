@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -172,8 +172,3 @@ vida criativa de todos os skatistas profissionais.
 A definição de camadas criativas de sistemas de TI para gerar novas combinações fala
 ao coração do skateboarding. Isso tem o poder de ondulação na vida de
 pessoas criativas para inspirar inovação, em todo o mundo, onde quer que nós formos. Nada disso seria alcançado sem o {{site.data.keyword.cloud}}.
-
-## Links relacionados
-{: #vcscar-preface-related}
-
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -128,8 +128,3 @@ Ingress는 인바운드 연결이 클러스터 서비스에 도달하도록 허�
 *	공용 액세스에 대한 VXLAN 네트워크 액세스용 SNAT
 *	사설 {{site.data.keyword.cloud_notm}} 네트워크 액세스에 대한 VXLAN 네트워크 액세스용 SNAT
 *	{{site.data.keyword.icpfull_notm}} 클러스터 vIP에 대한 DNAT
-
-## 관련 링크
-{: #vcsicp-detail-design-network-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

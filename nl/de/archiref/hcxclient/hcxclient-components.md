@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-01"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -14,12 +14,12 @@ subcollection: vmware-solutions
 # Glossar der HCX-Komponenten und -Begriffe
 {: #hcxclient-components}
 
-HCX besteht aus einer Cloud-Seite (Ziel/VCD-Umgebung) und mindestens einem Client (Quelle). Pro vCenter muss eine Instanz von HCX bereitgestellt werden, selbst wenn die vCenter-Instanzen, in denen HCX implementiert ist, in derselben SSO-Domäne auf der Client- oder Cloudseite verbunden sind. Konfigurationen, die von HCX unterstützt werden, sind Eins-zu-eins-, Eins-zu-viele-, Viele-zu-eins- und Viele-zu-viele.
+HCX besteht aus einer Cloudseite (Ziel- oder VCD-Umgebung) und einem oder mehreren Clients (Quelle). Pro vCenter muss eine Instanz von HCX bereitgestellt werden, selbst wenn die vCenter-Instanzen, in denen HCX implementiert ist, in derselben SSO-Domäne auf der Client- oder Cloudseite verbunden sind. Konfigurationen, die von HCX unterstützt werden, sind Eins-zu-eins-, Eins-zu-viele-, Viele-zu-eins- und Viele-zu-viele.
 
 ## Zielseite und Clientseite
 {: #hcxclient-components-cloud-client-side}
 
-Von HCX wird das Konzept einer Cloudseite (Ziel/VCD-Umgebung) und einer Clientseite (Quelle) verwendet.
+HCX hat das Konzept der Cloudseite (Ziel- oder VCD-Umgebung) und der Clientseite (Quelle).
 
 - Zielseite - Der HCX-Cloud-Manager wird vorab mit Netz- und Rechenprofilen bereitgestellt und konfiguriert, die für die Erstellung eines Servicenetzes verwendet werden können.  
 - Die Clientseite besteht aus beliebigen vSphere-Instanzen, die die Voraussetzungen für die Installation und den Betrieb erfüllen. Die Clientseite von HCX ist der Master, der die cloudseitige Slaveinstanz über das Snap-in ihrer vCenter-Web-Client-Benutzerschnittstelle steuert.
@@ -45,7 +45,7 @@ Die Komponenten des Servicenetzes sind zuständig für die Erstellung der Daten-
 ## HCX-Benutzerportale
 {: #hcxclient-components-hcx-user-portals}
 
-- Client-Webbenutzerschnittstelle: Das Webportal des HCX-Clients ist die Hauptbenutzerschnittstelle für HCX. Sobald der clientseitige HCX-Manager installiert ist, wird er als Snap-in für die vCenter-Webbenutzerschnittstelle angezeigt. Er steuert die HCX-Registrierung bei der fernen Cloud (Standortpaarung), die Bereitstellung der Paketkomponente, die Netzerweiterung und die VM-Migration in und aus der Cloud.
+- Client-Webbenutzerschnittstelle: Das Webportal des HCX-Clients ist die Hauptbenutzerschnittstelle für HCX. Nachdem der clientseitige HCX-Manager installiert ist, wird er als Snap-in für die vCenter-Webbenutzerschnittstelle angezeigt. Er steuert die HCX-Registrierung bei der fernen Cloud (Standortpaarung), die Bereitstellung der Paketkomponente, die Netzerweiterung und die VM-Migration in und aus der Cloud.
 - Cloudseitige Benutzerschnittstelle: Die cloudseitige HCX-Benutzerschnittstelle ist über die öffentliche Registrierungs-URL für die HCX-Clientregistrierung zugänglich. Standardmäßig werden die cloudseitigen Berechtigungsnachweise des vCenter-Administrators (`administrator@vsphere.local`) verwendet. In der Regel wird sie für das Upgrade der Installation und zum Ändern einiger Netzkonfigurationen verwendet.
 
 ## Zugehörige Links

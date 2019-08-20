@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -194,8 +194,3 @@ Terraform 모듈의 끌어서 놓기 기능을 사용하여 Terraform 템플리�
 {: #vcscar-arch-overview-solution-maria-db}
 
 템플리트 디자이너 애플리케이션의 데이터베이스
-
-## 관련 링크
-{: #vcscar-arch-overview-solution-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

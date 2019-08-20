@@ -130,11 +130,11 @@ vSphere 與 IBM Cloud 之間的安全頻道防止網路「中程傳輸」安全�
 
 本節說明 IBM Cloud 及用戶端內部部署的 HCX 元件佈置。在此設計中，該架構指定來源環境與 IBM Cloud 之間的集中分支模型。因此，來源財產作為連接至不同 IBM Cloud 環境的中心，如下圖所示。
 
-![具有單一來源的 HCX](../../images/cloudfoundation_hybrid_cloud_services.svg "具有單一來源的 HCX")
+![具有單一來源的 HCX](../../images/cloudfoundation_hybrid_cloud_services.svg "具有單一來源的 HCX"){: caption="圖 1. 具有單一來源的 HCX" caption-side="bottom"}
 
 來源也可以放在 IBM Cloud 環境；分支一律是此設計內的雲端部署，如下圖所示。
 
-![具有多個來源的 HCX](../../images/hcx_multiple_sources.svg "具有多個來源的 HCX")
+![具有多個來源的 HCX](../../images/hcx_multiple_sources.svg "具有多個來源的 HCX"){: caption="圖 2. 具有多個來源的 HCX" caption-side="bottom"}
 
 ### 用法概觀
 {: #hcx-archi-overview-usage-ovw}

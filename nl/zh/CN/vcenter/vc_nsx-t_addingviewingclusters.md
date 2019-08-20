@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-06"
 
 keywords: vCenter Server NSX-T add cluster, view cluster vCenter Server NSX-T, delete cluster vCenter Server NSX-T
 
@@ -20,8 +20,6 @@ subcollection: vmware-solutions
 
 # 添加、查看和删除 vCenter Server with NSX-T 实例的集群
 {: #vc_nsx-t_addingviewingcluster}
-
-缺省情况下，订购实例时配置的 ESXi 服务器会分组为 **cluster1**。
 
 可以向 VMware vCenter Server with NSX-T 实例添加您自己的集群以扩展计算和存储容量。在集群中，可以管理 ESXi 服务器以获得更佳的资源分配和高可用性。不再需要添加的集群时，请从实例中将其删除。
 
@@ -43,10 +41,11 @@ subcollection: vmware-solutions
 {: #vc_nsx-t_addingviewingclusters-adding-cluster-name}
 
 集群名称必须满足以下需求：
-* 只允许使用字母数字字符和短划线 (-) 字符。
-* 集群名称必须以字母数字字符开头和结尾。
-* 最大字符数为 30。
-* 集群名称在 vCenter Server 实例中必须唯一。
+* 只允许使用小写字母、数字和短划线 (-) 字符。
+* 集群名称必须以小写字母字符开头。
+* 集群名称必须以小写字母或数字字符结尾。
+* 集群名称的最大长度为 30 个字符。
+* 集群名称在 vCenter Server with NSX-T 实例中必须唯一。
 
 #### 数据中心位置
 {: #vc_nsx-t_addingviewingclusters-adding-dc-location}
@@ -58,7 +57,7 @@ subcollection: vmware-solutions
 ### 裸机服务器设置
 {: #vc_nsx-t_addingviewingclusters-bare-metal-settings}
 
-可以选择 **Skylake** 或 **Broadwell**。
+您可以选择 **Skylake**、**Cascade** 或 **Broadwell**。
 
 #### Skylake
 {: #vc_nsx-t_addingviewingclusters-adding-skylake}
@@ -72,6 +71,21 @@ subcollection: vmware-solutions
 |双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz|128 GB、192 GB、384 GB、768 GB、1.5 TB|
 {: caption="表 1. Skylake {{site.data.keyword.baremetal_short}} 的选项" caption-side="top"}
 
+#### Cascade
+{: #vc_nsx-t_addingviewingclusters-adding-cascade}
+
+对于 **Cascade** 设置，您有各种 **CPU 型号**和 **RAM** 选项。
+
+Cascade {{site.data.keyword.baremetal_short}} 仅可用于 VMware vSphere Enterprise Plus 6.7 U2 实例。
+{:note}
+
+| CPU 模型选项   |RAM 选项|
+|:------------- |:------------- |
+|双 Intel Xeon Gold 4210 处理器 / 共 20 个核心，2.3 GHz|64 GB、96 GB、128 GB、192 GB、768 GB、1.5 TB|
+|双 Intel Xeon Gold 5218 处理器 / 共 32 个核心，2.3 GHz|64 GB、96 GB、128 GB、192 GB、768 GB、1.5 TB|
+|双 Intel Xeon Gold 6248 处理器 / 共 40 个核心，2.5 GHz|64 GB、96 GB、128 GB、192 GB、768 GB、1.5 TB|
+{: caption="表 2. Cascade {{site.data.keyword.baremetal_short}} 的选项" caption-side="top"}
+
 #### Broadwell
 {: #vc_nsx-t_addingviewingclusters-adding-broadwell}
 
@@ -81,7 +95,7 @@ subcollection: vmware-solutions
 |:------------- |:------------- |
 |四核 Intel Xeon E7-4820 V4 / 共 40 个核心，1.9 GHz|128 GB、256 GB、512 GB、1 TB、2 TB、3 TB|
 |四核 Intel Xeon E7-4850 V4 / 共 64 个核心，2.2 GHz|128 GB、256 GB、512 GB、1 TB、2 TB、3 TB|
-{: caption="表 2. Broadwell {{site.data.keyword.baremetal_short}} 的选项" caption-side="top"}
+{: caption="表 3. Broadwell {{site.data.keyword.baremetal_short}} 的选项" caption-side="top"}
 
 #### 裸机服务器的数量
 {: #vc_nsx-t_addingviewingclusters-adding-bare-metal-number}
@@ -103,7 +117,7 @@ subcollection: vmware-solutions
 * **vSAN 容量磁盘数**：指定要添加的容量磁盘数。
 * 如果要添加的容量磁盘数超过 10 个的限制，请选中**高性能 Intel Optane** 框。此选项用于提供两个额外的容量磁盘托架，总共可容纳 12 个容量磁盘；此选项对于需要更短等待时间和更高 IOPS 吞吐量的工作负载而言非常有用。
 
-  **高性能 Intel Optane** 选项仅可用于 Skylake CPU 型号。
+  **高性能 Intel Optane** 选项仅可用于 Skylake 和 Cascade CPU 型号。
 {:note}
 
 * 查看 **vSAN 高速缓存磁盘的磁盘类型**和 **vSAN 高速缓存磁盘数**值。这些值依赖于是否选中了**高性能 Intel Optane** 框。
@@ -133,7 +147,7 @@ subcollection: vmware-solutions
 |2 IOPS/GB|此选项旨在用于大多数通用工作负载。示例应用包括：托管小型数据库、备份 Web 应用程序或系统管理程序的虚拟机 (VM) 磁盘映像。|
 |4 IOPS/GB|此选项旨在用于同时活动数据百分比高的更高强度工作负载。示例应用包括：事务性数据库。|
 |10 IOPS/GB|此选项旨在用于要求最苛刻的工作负载类型（如分析）。示例应用包括：高事务数据库和其他性能敏感型数据库。此性能级别限制为每个文件共享的最大容量为 4 TB。|
-{: caption="表 3. NFS 性能级别选项" caption-side="top"}
+{: caption="表 4. NFS 性能级别选项" caption-side="top"}
 
 ### 许可证设置
 {: #vc_nsx-t_addingviewingclusters-adding-licensing-settings}
@@ -223,12 +237,12 @@ subcollection: vmware-solutions
 
 |项|描述|  
 |:------------- |:------------- |
-|名称|ESXi 服务器的名称采用以下格式：<br> `<host_prefix><n>.<subdomain_label>.<root_domain>` <br> 其中：<br> `host_prefix` 是主机名前缀<br> `n` 是服务器的序列号<br> `subdomain_label` 是子域标签<br> `root_domain` 是根域名|
+|名称|ESXi 服务器名称的格式为 `<data_center>-<host_prefix><n>.<subdomain_label>.<root_domain>`，其中 `n` 是 ESXi 服务器的序列。|
 |版本|ESXi 服务器的版本。|
 |凭证|用于访问 ESXi 服务器的用户名和密码。|
 |专用 IP|ESXi 服务器的专用 IP 地址。|
 |状态|ESXi 服务器的状态，可以是下列某个值：<br> **已添加** ESXi 服务器已添加并随时可供使用。<br> **正在添加** 正在添加 ESXi 服务器。<br> **正在删除** 正在删除 ESXi 服务器。|
-{: caption="表 4. ESXi 服务器详细信息" caption-side="top"}
+{: caption="表 5. ESXi 服务器详细信息" caption-side="top"}
 
 查看存储器详细信息：
 
@@ -238,7 +252,7 @@ subcollection: vmware-solutions
 |大小|存储的容量。|
 |IOPS/GB|存储的性能级别。|
 |NFS 协议|存储的 NFS 版本。|
-{: caption="表 5. 存储详细信息" caption-side="top"}
+{: caption="表 6. 存储器详细信息" caption-side="top"}
 
 查看网络接口详细信息：
 
@@ -248,7 +262,7 @@ subcollection: vmware-solutions
 |描述|VLAN 的描述。|
 |位置| 数据中心位置。|
 |主路由|VLAN 的主路由。|
-{: caption="表 6. 网络接口 - VLAN 详细信息" caption-side="top"}
+{: caption="表 7. 网络接口 - VLAN 详细信息" caption-side="top"}
 
 单击**查看资源**以访问 VLAN 详细信息。
 
@@ -259,7 +273,7 @@ subcollection: vmware-solutions
 |名称|子网名称。单击名称以访问子网详细信息。|
 |类型| 子网的类型：主子网或可移植子网。|
 |描述|子网的描述。|
-{: caption="表 7. 网络接口 - 子网详细信息" caption-side="top"}
+{: caption="表 8. 网络接口 - 子网详细信息" caption-side="top"}
 
 查看 IP 详细信息：
 
@@ -268,7 +282,7 @@ subcollection: vmware-solutions
 |IP 数|IP 地址。|
 |状态|IP 地址的状态。|
 |描述|IP 地址的描述。|
-{: caption="表 8. 网络接口 - IP 详细信息" caption-side="top"}
+{: caption="表 9. 网络接口 - IP 详细信息" caption-side="top"}
 
 ## 从 vCenter Server with NSX-T 实例中删除集群
 {: #vc_nsx-t_addingviewingclusters-deleting}

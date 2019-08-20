@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -105,10 +105,5 @@ VMware on {{site.data.keyword.cloud_notm}}는 {{site.data.keyword.cloud_notm}}�
 
 다음 방법을 사용하여 애플리케이션을 {{site.data.keyword.containerlong_notm}}에 배치할 수 있습니다.
 -	{{site.data.keyword.containerlong_notm}} 연결 및 서비스는 CAM에서 개발되고 {{site.data.keyword.icpfull_notm}} 카탈로그에 공개됩니다.
--	다중 클라우드 관리자, 향후 {{site.data.keyword.containerlong_notm}} 인스턴스 관리 개선사항.
--	Helm 명령행.
-
-## 관련 링크
-{: #vcsnsxt-operations-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+- 다중 클라우드 관리자, 향후 {{site.data.keyword.containerlong_notm}} 인스턴스 관리 개선사항.
+- Helm 명령행.

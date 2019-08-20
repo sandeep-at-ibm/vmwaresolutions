@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-22"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -36,7 +36,7 @@ strongSwan IPSec VPN サービスは、業界標準の Internet Protocol Securit
 ### Hybridity (HCX)
 {: #vcsicp-arch-overview-infrastructure-hcx}
 
-vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle はオンプレミス・データ・センターのネットワークを {{site.data.keyword.cloud_notm}} にシームレスに拡張するので、変換も変更も行わずに  {{site.data.keyword.cloud_notm}} との間で仮想マシン (VM) をマイグレーションできるようになります。
+vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle はオンプレミス・データ・センターのネットワークを {{site.data.keyword.cloud_notm}} にシームレスに拡張します。このプロセスにより、変換も変更も行わずに {{site.data.keyword.cloud_notm}} との間で仮想マシン (VM) をマイグレーションできるようになります。
 
 ## 物理構造
 {: #vcsicp-arch-overview-infrastructure-phys-struct}
@@ -64,8 +64,3 @@ vCenter Server インスタンス内で、{{site.data.keyword.icpfull_notm}} イ
 アウトバウンド・トラフィックを許可するためのソース NAT ルール (SNAT) が ESG に構成されます。これにより、インターネット接続で {{site.data.keyword.icpfull_notm}} 前提条件をダウンロードし、GitHub および Docker に接続できるようになります。 代わりに、Web プロキシーを使用してインターネットに接続することもできます。 DNS および NTP サービスにもアクセスできるように ESG が構成されます。
 
 {{site.data.keyword.cloud_notm}} 10.x ネットワークの {{site.data.keyword.icpfull_notm}} マスター/プロキシー仮想 IP アドレスを VXLAN 環境に変換する宛先 NAT ルール (DNAT) も ESG に構成されます。
-
-## 関連リンク
-{: #vcsicp-arch-overview-infrastructure-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

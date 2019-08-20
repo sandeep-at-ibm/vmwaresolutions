@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -186,8 +186,3 @@ Redis 数据库用于存储 CAM 中的会话高速缓存和锁定。
 {: #vcscar-arch-overview-solution-maria-db}
 
 模板设计器应用程序的数据库。
-
-## 相关链接
-{: #vcscar-arch-overview-solution-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

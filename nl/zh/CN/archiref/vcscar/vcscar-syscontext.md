@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -46,8 +46,3 @@ subcollection: vmware-solutions
 * 数据库 - Acme Skate Advisor 数据库在 vCenter Server 管理的虚拟机上进行托管。
 * 应用程序容器 - 完成了应用程序现代化之旅并且现在作为容器运行的应用程序。对于此参考体系结构以及此 Acme Skateboards 示例，其中一个容器化应用程序是 Web 服务器，这是联机在线工作负载的一部分。ACME 容器托管 Acme Web 应用程序和 Acme Skate Advisor 应用程序。
 * NSX Edge - NSX Edge 是用于管理进出 vCenter Server 实例的南北流量的虚拟设备。
-
-## 相关链接
-{: #vcscar-syscontext-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

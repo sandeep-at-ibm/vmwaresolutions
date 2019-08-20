@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-30"
 
 keywords: vSphere upgrade, NSX upgrade, PSC upgrade
 
@@ -60,7 +60,7 @@ vCenter Server 设计为支持“滚动”升级。即，如果完成以下过�
 如果环境中已有 VSI 跳板机，请跳过第一步。
 {:note}
 
-1. 在 [IBM Cloud 基础架构客户门户网站](https://control.softlayer.com/){:external}中订购每小时或每月 VSI。订购以下属性：
+1. 在 [{{site.data.keyword.cloud_notm}} 基础架构客户门户网站](https://control.softlayer.com/){:external}中订购每小时或每月 VSI。订购以下属性：
   * Windows 2012 或 2016 Server Standard
   * 2 个 CPU
   * 16 GB 内存
@@ -172,7 +172,7 @@ vCenter Server 设计为支持“滚动”升级。即，如果完成以下过�
 #### 升级 vCenter 的过程
 {: #vc_vsphere_upgrade-procedure-vcenter-procedure}
 
-1. 登录到 PSC ``https://<psc-fqdn>:5480`` 和 vCenter 设备管理用户界面，以确认 root 用户密码是否已到期。如果密码到期日期为 **1970**，说明密码已到期，因此您必须在 PSC 设备管理用户界面中启用 SSH 和 bash shell。
+1. 登录到 PSC `https://<psc-fqdn>:5480` 和 vCenter 设备管理用户界面，以确认 root 用户密码是否已到期。如果密码到期日期为 **1970**，说明密码已到期，因此您必须在 PSC 设备管理用户界面中启用 SSH 和 bash shell。
     1. 使用 root 用户标识和密码通过 SSH 登录到 PSC。尽管密码已到期，也仍然允许您登录。
     2. 使用 shell **passwd** 命令为 PSC 和 vCenter 设置新的 root 用户密码。
     3. 保存 {{site.data.keyword.vmwaresolutions_short}} 控制台上显示的密码或由 IBM 支持人员提供给您的密码。稍后升级设备时，将复用这些密码。
@@ -322,7 +322,7 @@ vCenter 中的 VMware Update Manager 功能用于将 ESXi 主机升级并修补�
 ## 升级 vCenter Server vSphere 软件后的结果
 {: #vc_vsphere_upgrade-results}
 
-升级完成后运行 vSAN 运行状况检查可能会导致出现 IBM Cloud 提供的 RAID 和网络控制器的固件更新相关警告。确定需要固件更新的主机后，请向 IBM 支持人员开具凭单，以将固件更新为建议的版本。
+升级完成后运行 vSAN 运行状况检查可能会导致出现 {{site.data.keyword.cloud_notm}} 提供的 RAID 和网络控制器的固件更新相关警告。确定需要固件更新的主机后，请向 IBM 支持人员开具凭单，以将固件更新为建议的版本。
 
 1. 在 vCenter 用户界面中，选择包含要检查其运行状况的 vSAN 的集群。
 2. 选择**监视**选项卡，然后选择 **vSAN** 选项卡。

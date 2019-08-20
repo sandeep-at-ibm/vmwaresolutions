@@ -19,7 +19,7 @@ subcollection: vmware-solutions
 
 架構由單一雲端地區組成，可支援延伸至位於另一個地理位置的其他雲端地區，以及延伸至相同資料中心內的另一個 {{site.data.keyword.cloud_notm}} Pod。地區定義為唯一的 vCenter Server 實例。此設計也容許在 vCenter Server 實例內自動擴充及縮減虛擬容量。
 
-![{{site.data.keyword.vmwaresolutions_short}} 的解決方案元件](../../images/vcsv4radiagrams-ra-full.svg "此解決方案包含實體基礎架構、虛擬基礎架構、基礎架構管理和共用服務。")
+![{{site.data.keyword.vmwaresolutions_short}} 的解決方案元件](../../images/vcsv4radiagrams-ra-full.svg "此解決方案包含實體基礎架構、虛擬基礎架構、基礎架構管理和共用服務。"){: caption="圖 1. {{site.data.keyword.vmwaresolutions_short}} 的解決方案元件" caption-side="bottom"}
 
 ## 相關鏈結
 {: #design_overview-related}

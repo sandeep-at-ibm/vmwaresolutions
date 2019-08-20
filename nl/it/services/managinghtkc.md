@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-23"
 
 keywords: HTKC WebGUI, HTKC console, enable internet HTKC
 
@@ -63,7 +63,7 @@ Per gli ambienti vCenter Server solo privati, l'**mgmt-nsx-edge** dell'ESG (Edge
 1. Completa i passi da 1 a 3 nella procedura precedente.
 2. Fai clic su **Settings** e quindi su **Interfaces**. Prendi nota dell'indirizzo IP per l'uplink privato. Questo indirizzo sarà il nuovo gateway predefinito.
 3. Fai clic su **Home > Hosts and Clusters** e trova le VM HyTrust. Fai clic con il tasto destro del mouse su una delle VM e fai clic su **Open Console**.
-4. Accedi alla console utilizzando le credenziali della console che puoi trovare nella pagina dei dettagli del servizio HyTrust KeyControl on IBM Cloud nella console {{site.data.keyword.vmwaresolutions_short}}.
+4. Accedi alla console utilizzando le credenziali della console che puoi trovare nella pagina dei dettagli del servizio HyTrust KeyControl on {{site.data.keyword.cloud_notm}} nella console {{site.data.keyword.vmwaresolutions_short}}.
 5. Per ottenere l'indirizzo IP del gateway predefinito corrente dalla VM, fai clic su **Manage Network Settings > Show Current Network Configuration**. Prendi nota dell'indirizzo IP che è elencato per **Gateway**. Questo indirizzo diventa il gateway utilizzato per la rotta statica.
 6. Per impostare una rotta statica per la >VM, fai clic su **Manage Network Settings > Manage Static Routes > Add Static Route**. Imposta **Network address** su `10.0.0.0/8` e **Gateway** sull'indirizzo IP annotato nel passo precedente.
 7. Per impostare l'IP gateway predefinito per la VM, fai clic su **Manage Network Settings > Change Current Network Configuration**. Se ottieni un messaggio di avvertenza, fai clic su **OK** e fai quindi clic su **Custom Configuration**. Imposta il campo **Gateway** sull'indirizzo IP di uplink privato che hai annotato nel passo 2 e fai clic su **OK**. Attendi che la nuova configurazione di rete sia installata e che i servizi di rete siano riavviati.

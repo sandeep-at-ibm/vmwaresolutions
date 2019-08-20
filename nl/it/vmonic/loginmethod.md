@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-07-16"
 
 keywords: vmware solutions console, vmware portal, vmware solutions catalog
 
@@ -30,7 +30,7 @@ Per accedere direttamente alla console, completa la seguente procedura:
 {: #loginmethod-cloud-catalog}
 
 Per accedere alla console dal catalogo {{site.data.keyword.cloud_notm}}, completa la seguente procedura:
-1. Vai all'indirizzo https://cloud.ibm.com.
+1. Vai all'indirizzo https://cloud.ibm.com/login.
 2. Accedi a {{site.data.keyword.cloud_notm}} con il tuo account **ID IBM**.
 3. Sul lato sinistro del banner, fai clic su **Catalogo**.
 4. Nella casella di ricerca nella parte superiore della pagina **Catalogo**, immetti **VMware Solutions**.

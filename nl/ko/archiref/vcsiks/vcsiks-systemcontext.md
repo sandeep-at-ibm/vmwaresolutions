@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -60,8 +60,3 @@ Chef |  구성 관리 및 규제 준수 자동화를 담당합니다. Chef에서
 Watson | 이 참조 아키텍처 및 Acme Skateboards의 경우, Watson은 "컨셉트 카" 아키텍처에 사용되는 AI 서비스를 나타냅니다.
 
 애플리케이션 마이그레이션, 네트워킹 및 보안은 애플리케이션 현대화의 가장 어려운 과제입니다. VMware vCenter Server on {{site.data.keyword.cloud_notm}}, VMware Hybridity, VMware NSX, {{site.data.keyword.cloud_notm}} Private 및 {{site.data.keyword.containerlong_notm}}를 통해 이러한 과제를 해결하고 복원 가능한 안전하고 강력한 현대 애플리케이션을 빌드할 수 있습니다.
-
-## 관련 링크
-{: #vcsiks-systemcontext-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

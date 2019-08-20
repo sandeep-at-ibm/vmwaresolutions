@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-20"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -28,7 +28,7 @@ Caveonix RiskForesight est une plateforme de gestion des risques cybernétiques 
 
 Grâce à l'apprentissage machine et au moteur d'analyse des risques CaveoIQ, la solution offre une protection proactive de la charge de travail contre les risques liés aux cybermenaces. Elle offre un cadre de sécurité et de politiques cohérentes dans un environnement de cloud hybride et est entièrement intégrée dans la pile de technologies de cloud de VMware et des fournisseurs de cloud public tels que AWS.
 
-Les trois services clés disponibles via l'interface graphique RiskForesight sont Gestion des risques, Risque de conformité et Gestion contextuelle. 
+Les trois services clés disponibles via l'interface graphique RiskForesight sont Gestion des risques, Risque de conformité et Gestion contextuelle.
 
 ## Gestion des risques
 
@@ -61,5 +61,4 @@ Les trois services clés disponibles via l'interface graphique RiskForesight son
 ## Liens connexes
 {: #caveonix-intro-related}
 
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
-* [Site Web de Caveonix](https://www.caveonix.com/)
+* [Site Web de Caveonix](https://www.caveonix.com)

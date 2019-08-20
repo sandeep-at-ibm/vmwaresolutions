@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -95,8 +95,3 @@ Les étapes de Todd et de Jane tout au long du parcours Stock Trader sont les su
 6. Modernisation de DevOps. Tout au long de ce parcours, Jane améliore sa façon de distribuer Stock Trader.
 
 7. Modernisation de la gestion. Todd et Jane ont conjugué leurs efforts pour améliorer leur façon de gérer l'application Stock Trader et la plateforme sur laquelle elle s'exécute, y compris sur plusieurs environnements de cluster et de cloud.
-
-## Liens connexes
-{: #vcscontent-modjourney-related}
-
-* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

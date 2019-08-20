@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-07-22"
 
 keywords: about vmware solutions, product overview, benefits
 
@@ -50,13 +50,6 @@ subcollection: vmware-solutions
 この vCenter Server オファリングでは、ビジネス・ニーズに最適なカスタムのコンピュート、ストレージ、ネットワークのリソースを使用して、VMware 仮想環境をデプロイできます。
 
 詳しくは、[vCenter Server の概要](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)を参照してください。
-
-### VMware vCenter Server on IBM Cloud with Hybridity Bundle
-{: #prod_overview-hybridity}
-
-この vCenter Server with Hybridity オファリングは、オンプレミスのインフラストラクチャーを素早く簡単にクラウドに拡張できるホステッド・プライベート・クラウドです。 この VMware 環境は、IBM 提供の VMware Software Defined Data Center ライセンスに基づくものであり、VMware Hybrid Cloud Extension (HCX) が含まれています。 HCX を使用すると、オンプレミスの vSphere 5.0+ 環境と {{site.data.keyword.cloud_notm}} サイトを安全に接続して、インフラストラクチャーのシームレスなハイブリッド化と真のアプリケーション・モビリティーを実現できます。
-
-詳しくは、[vCenter Server with Hybridity Bundle の概要](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)を参照してください。
 
 ### VMware vSphere on IBM Cloud
 {: #prod_overview-vss}

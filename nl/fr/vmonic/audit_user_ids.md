@@ -91,8 +91,8 @@ HTTP est utilisé pour l'installation et la configuration de vCenter, ainsi que 
 
 où :
 
-* ``dynamicID`` est l'identificateur de 8 à 10 caractères qui est généré de façon dynamique durant l'installation du service. 
-* ``shortID`` est l'identificateur de 5 caractères qui est généré de façon dynamique durant l'installation du service. 
+* ``dynamicID`` est l'identificateur de 8 à 10 caractères qui est généré de façon dynamique durant l'installation du service.
+* ``shortID`` est l'identificateur de 5 caractères qui est généré de façon dynamique durant l'installation du service.
 * ``domainName`` est le nom de domaine de votre instance.
 
 ## Liens connexes

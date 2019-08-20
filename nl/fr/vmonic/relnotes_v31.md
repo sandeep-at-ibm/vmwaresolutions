@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-01"
+lastupdated: "2019-07-16"
 
 keywords: release notes, what's new, version 3.1
 
@@ -82,7 +82,7 @@ Le mot de passe NSX Manager généré pour les instances principales de vCenter 
 ### Caveonix RiskForesight on IBM Cloud
 {: #relnotes_v31-services-caveonix}
 
-L'édition en cours installe Caveonix RiskForesight 2.2.1 sur toutes les instances nouvellement déployées. Pour plus d'informations sur Caveonix RiskForesight, voir le [site Web Caveonix](https://www.caveonix.com/){:external}.
+L'édition en cours installe Caveonix RiskForesight 2.2.1 sur toutes les instances nouvellement déployées. Pour plus d'informations sur Caveonix RiskForesight, voir le [site Web Caveonix](https://www.caveonix.com){:external}.
 
 ### Renouvellement automatique des licences HyTrust
 {: #relnotes_v31-services-ht}

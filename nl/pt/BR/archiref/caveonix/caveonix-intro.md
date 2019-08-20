@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-20"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -30,7 +30,7 @@ Com o aprendizado de máquina e o mecanismo de Análise de risco CaveoIQ, a solu
 
 Os três principais serviços disponíveis por meio da GUI do RiskForesight são: Risk Management, Compliance Risk e Forensic Management.
 
-## Gerenciamento de risco
+## Gerenciamento de Risco
 
 - Risco cibernético contínuo
 - Pontuação de risco cibernética
@@ -61,5 +61,4 @@ Os três principais serviços disponíveis por meio da GUI do RiskForesight são
 ## Links relacionados
 {: #caveonix-intro-related}
 
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
-* [ Website do Caveonix ](https://www.caveonix.com/)
+* [ Website do Caveonix ](https://www.caveonix.com)

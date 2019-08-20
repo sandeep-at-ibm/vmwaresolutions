@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -23,8 +23,8 @@ L'installation de VMware HCX on IBM Cloud exige la configuration logicielle suiv
 {: #hcxclient-planning-config-net}
 
 HCX doit traverser l'Internet public et des lignes privées, et se connecter à des composants de centre de données, comme des réseaux, des commutateurs et des groupes de ports.
-* La section [Accès aux ports requis](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-port-req) répertorie les ports qui doivent être ouverts afin que des dispositifs virtuels HCX puissent être installés.
-* L'environnement vSphere local et l'environnement VCS HCX Cloud doivent permettre une synchronisation des horloges NTP (Network Time Protocol) entre les unités vSphere locales et les unités VCS HCX. Le port UDP 123 doit être accessible aux dispositifs virtuels et aux réseaux HCX.
+* Pour plus d'informations sur les ports devant être ouverts pour que les dispositifs virtuels HCX puissent s'installer correctement, voir [Accès aux ports requis](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-port-req).
+* L'environnement vSphere local et l'environnement VCS HCX Cloud doivent autoriser la synchronisation des horloges NTP (Network Time Protocol) entre les unités vSphere locales et les unités VCS HCX. Le port UDP 123 doit être accessible aux dispositifs virtuels et aux réseaux HCX.
 
 ## Environnement local
 {: #hcxclient-planning-on-prem-env}
@@ -105,7 +105,7 @@ Les tests pré-implémentation consistent à effectuer une migration HCX avec la
 ## Migration des applications de non-production
 {: #hcxclient-planning-mig-non-prod-apps}
 
-La migration des machines virtuelles commence avec les vagues prévues de machines virtuelles moins critiques. Le développement, les tests, etc., utilisent la connectivité Internet pour la migration et le trafic L2 étendu.
+La migration des machines virtuelles commence avec les vagues prévues de machines virtuelles moins critiques. Les équipes de développement et de test utilisent la connectivité Internet pour la migration et le trafic L2 étendu.
 
 ## Début de la conception et de l'implantation du réseau cloud
 {: #hcxclient-planning-cloud-net-begins}
@@ -122,7 +122,7 @@ Pendant que les migrations se poursuivent, la connectivité du réseau WAN priv�
 
 Lorsque l'objectif est la migration du centre de données dans le cloud, tous les serveurs physiques qui interagissent avec les machines virtuelles en cours de migration peuvent être évalués pour la migration dans {{site.data.keyword.cloud_notm}} en tant que machines virtuelles (P2V), bare metal ou rester à la source. Si le serveur physique doit rester à la source, et HCX ne sera utilisé que pendant la migration jusqu'à ce qu'un réseau dédié soit établi, il est important de comprendre s'il réside sur un réseau qui est étendu dans le cloud avec HCX. Dans ce scénario, HCX permet non seulement aux machines virtuelles, mais à l'ensemble du sous-réseau d'être migrés dans le cloud.
 
-Pour supprimer HCX à la fin de la migration, le sous-réseau ne peut pas exister dans la source et la destination si la connexion entre les dispositifs physiques et les machines virtuelles migrées doit être maintenue. Cela implique que tous les dispositifs physiques laissés sur le site source qui existent sur des réseaux L2 étendus doivent être migrés vers un autre sous-réseau du réseau qui pourrait être routé vers le côté cloud. L'exception à cette règle est l'utilisation d'une autre technologie L2 étendue, telle que le VPN NSX L2, pour remplacer les noeuds finaux L2 étendus de HCX.
+Pour supprimer HCX à la fin de la migration, le sous-réseau ne peut pas exister dans la source et la destination si la connexion entre les dispositifs physiques et les machines virtuelles migrées doit être maintenue. Cela implique que tous les dispositifs physiques laissés sur le site source qui existent sur des réseaux L2 étendus doivent être migrés vers un autre sous-réseau du réseau qui peut être routé vers le côté cloud. L'exception à cette règle est l'utilisation d'une autre technologie L2 étendue, telle que le VPN NSX L2, pour remplacer les noeuds finaux L2 étendus de HCX.
 
 ## Migration de la production et des applications complexes
 {: #hcxclient-planning-mig-prod-complex-app}

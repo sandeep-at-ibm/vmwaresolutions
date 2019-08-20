@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-02"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -35,8 +35,3 @@ Hybridity によって、オンプレミスと {{site.data.keyword.cloud_notm}} 
 * セキュリティー・ポリシーのマイグレーション – NSX をオンプレミスで使用している場合は、セキュリティー・ポリシーやファイアウォール、その他のセキュリティー・アイテムがすべてワークロードと一緒に移動されます。
 
 Todd は Stock Trader をオンプレミスの VMware 環境から VMware on {{site.data.keyword.cloud_notm}} 環境にマイグレーションし、ダウン時間をゼロまたはほぼゼロにしてアプリケーションは再構成しないという要件に応えることができました。
-
-## 関連リンク
-{: #vcscontent-hcx-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

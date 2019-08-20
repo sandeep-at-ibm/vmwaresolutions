@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-07-23"
 
 keywords: user account, user permissions, VRF account
 
@@ -55,12 +55,12 @@ Gli utenti autorizzati possono verificare e aggiornare le autorizzazioni per un 
 Il tuo account dell'infrastruttura {{site.data.keyword.cloud_notm}} deve essere un account VRF (Virtual Routing and Forwarding). Se il tuo account è non VRF, devi eseguire la conversione a un account VRF. Ti consigliamo inoltre di abilitare il tuo account VRF per l'utilizzo degli endpoint del servizio.
 
 Per ulteriori informazioni, vedi:
-* [Panoramica di VRF on IBM Cloud](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-* [Abilitazione del tuo account per l'utilizzo degli endpoint del servizio](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
+* [Panoramica di VRF on {{site.data.keyword.cloud_notm}}](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
+* [Abilitazione degli endpoint del servizio](/docs/account?topic=account-vrf-service-endpoint#service-endpoint)
 
 ## Link correlati
 {: #cloud-infra-acct-req-related}
 
 * [Requisiti per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [Account utente e impostazioni](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)
-* [Panoramica di VRF on IBM Cloud](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
+* [Panoramica di VRF on {{site.data.keyword.cloud_notm}}](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)

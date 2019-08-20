@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -110,8 +110,3 @@ Discovery Service에는 지역 우편 번호, 크기 또는 사용 가능 여부
 {: #vcscar-preface-cloud-platform}
 
 새로운 조합을 만들기 위한 IT 시스템의 창의적인 계층화는 스케이트보딩의 핵심입니다. 이는 전세계 어디에서든지 혁신에 영감을 주는 창의적인 삶에 파급되는 영향력을 가지고 있습니다. 이 중 어느 것도 {{site.data.keyword.cloud}} 없이는 이루어지지 않을 것입니다.
-
-## 관련 링크
-{: #vcscar-preface-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

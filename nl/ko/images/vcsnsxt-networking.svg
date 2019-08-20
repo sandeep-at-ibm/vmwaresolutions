@@ -217,7 +217,7 @@
          id="rect58" />
     </g>
     <g
-       transform="translate(290.5,490.5)"
+       transform="translate(275.5,485.5)"
        id="g60">
       <switch
          id="switch62">
@@ -237,7 +237,7 @@
             <xhtml:div
                display="inline-block"
                text-align="inherit"
-               text-decoration="inherit">On Cloud VMs</xhtml:div>
+               text-decoration="inherit">온클라우드 VM</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text
@@ -245,7 +245,7 @@
            y="12"
            font-size="12px"
            id="text64"
-           style="font-size:12px;font-family:Helvetica;text-anchor:middle;fill:#000000">On Cloud VM</text>
+           style="font-size:12px;font-family:Helvetica;text-anchor:middle;fill:#000000">온클라우드 VM</text>
       </switch>
     </g>
     <rect
@@ -627,7 +627,7 @@
                display="inline-block"
                text-align="inherit"
                text-decoration="inherit"
-               style="background-color:#ffffff">Provision</xhtml:div>
+               style="background-color:#ffffff">프로비저닝</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text
@@ -670,7 +670,7 @@
          id="rect176" />
       <text
          x="113"
-         y="347"
+         y="352"
          id="text178">
         <tspan
            style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
@@ -678,7 +678,7 @@
       </text>
       <text
          x="113"
-         y="375"
+         y="370"
          id="text180">
         <tspan
            style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
@@ -1128,11 +1128,11 @@
       <text
          x="640"
          y="484.02"
-         id="text320">개발</text>
+         id="text320">컨텐츠</text>
       <text
          x="640"
          y="498.02"
-         id="text322">컨텐츠</text>
+         id="text322">개발</text>
     </g>
     <ellipse
        cx="300"

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-06"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -85,9 +85,3 @@ subcollection: vmware-solutions
 |プライベート B 	|ポータブル 	|vSAN 用に割り当てられます (使用する場合)。|
 |プライベート B 	|ポータブル 	|NAS 用に割り当てられます (使用する場合)。|
 |プライベート B 	|ポータブル 	|vMotion 用に割り当てられます。|
-
-
-## 関連リンク
-{: #caveonix-detailed-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

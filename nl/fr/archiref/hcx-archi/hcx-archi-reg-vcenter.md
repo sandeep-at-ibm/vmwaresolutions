@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-27"
+lastupdated: "2019-07-08"
 
 subcollection: vmware-solutions
 
@@ -24,10 +24,10 @@ Le dispositif virtuel Services cloud hybrides doit être sous tension pour pouvo
 {: #hcx-archi-reg-vcenter-proc-register}
 
 1. Connectez-vous au dispositif virtuel du service Hybrid Cloud Services. Par exemple, `https:My-HCX-Manager:9443/`.
-2. Cliquez sur la vignette **Manage Settings**.
+2. Dans le panneau **Dashboard**, effectuez les opérations suivantes :
   1. Dans le volet gauche, sous **Configure Systems**, sélectionnez vCenter.
   2. Cliquez sur **Add vCenter** dans l'angle supérieur droit.
-  3. Entrez l'adresse IP de vCenter Server sous la forme `https:vCenter-host-name` ou `https:vCenter-IP-address`. Par exemple, `https:My-vCenter` ou `https:10.108.26.211`.
+  3. Entrez l'adresse IP de vCenter Server sous la forme `https:vCenter-host-name` ou `https:vCenter-IP-address`. Par exemple, `https:My-vCenter` ou `https:10.108.26.211`
   4. Entrez le nom d'utilisateur et le mot de passe de vCenter Server. Le compte qui est utilisé doit avoir le rôle de l'administrateur vCenter.
   5. Cliquez sur **OK**. Ne redémarrez pas lorsque le message _You need to restart the app_ s'affiche.
 3. Configurez le service de recherche.

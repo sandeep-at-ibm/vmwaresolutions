@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-21"
+lastupdated: "2019-07-16"
 
 subcollection: vmware-solutions
 
@@ -102,7 +102,7 @@ KMIP for VMware est disponible dans un certain nombre de régions {{site.data.ke
 
 Au sein de chaque région MZR, KMIP for VMware fournit deux noeuds finaux de service sur le réseau privé {{site.data.keyword.cloud_notm}} pour la haute disponibilité. Configurez ces deux noeuds finaux dans votre configuration KMS vCenter en tant que cluster KMS. Pour obtenir la liste des noeuds finaux dans chaque zone MZR et les signatures de certificat de serveur KMIP, voir la section [Documentation relative au service VMware](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering).
 
-Pour permettre l'accès à KMIP for VMware sur le réseau privé, votre compte d'infrastructure {{site.data.keyword.cloud_notm}} doit être activé pour la fonction VRF (Virtual Routing and Forwarding) et les routes du noeud final de service de réseau {{site.data.keyword.cloud_notm}} doivent être ajoutées aux routes VRF de votre compte. Pour plus d'informations, voir [Activation de votre compte pour l'utilisation des noeuds finaux de service à l'aide de l'interface CLI IBM Cloud](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps).
+Pour permettre l'accès à KMIP for VMware sur le réseau privé, votre compte d'infrastructure {{site.data.keyword.cloud_notm}} doit être activé pour la fonction VRF (Virtual Routing and Forwarding) et les routes du noeud final de service de réseau {{site.data.keyword.cloud_notm}} doivent être ajoutées aux routes VRF de votre compte. Pour plus d'informations, voir [Activation des noeuds finaux de service](/docs/account?topic=account-vrf-service-endpoint#service-endpoint).
 
 KMIP for VMware se connecte également à {{site.data.keyword.cloud_notm}} Key Protect à l'aide du réseau privé {{site.data.keyword.cloud_notm}} au lieu de l'Internet public.
 

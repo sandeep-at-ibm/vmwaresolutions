@@ -340,7 +340,7 @@
          stroke-width="0"
          id="rect100" />
       <text
-         x="107.01"
+         x="113"
          y="469.91"
          id="text102">IBM Cloud <tspan
    style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
@@ -708,7 +708,7 @@
          stroke-width="0"
          id="rect206" />
       <text
-         x="105"
+         x="107"
          y="187.31"
          id="text208">IBM Cloud <tspan
    style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
@@ -956,7 +956,7 @@
             <xhtml:div
                display="inline-block"
                text-align="inherit"
-               text-decoration="inherit">NSX-V Host Prep</xhtml:div>
+               text-decoration="inherit">NSX-V 호스트 준비</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text

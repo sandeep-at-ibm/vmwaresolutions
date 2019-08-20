@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-27"
+lastupdated: "2019-08-06"
 
 keywords: planning vCenter Server, data center, vCenter Server data centers
 
@@ -12,6 +12,10 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # vCenter Server 인스턴스 요구사항 및 계획
 {: #vc_planning}
@@ -27,6 +31,9 @@ VMware vCenter Server 인스턴스를 주문하기 전에 다음 요구사항을
 {: #vc_planning-dc-availability}
 
 vCenter Server 배치에는 실제 인프라에 대한 엄격한 요구사항이 있습니다. 그러므로, 요구사항을 충족하는 {{site.data.keyword.CloudDataCents_notm}}에만 인스턴스를 배치할 수 있습니다. 다음 {{site.data.keyword.CloudDataCents_notm}}는 vCenter Server 배치에 사용 가능합니다.
+
+Cascade Lake {{site.data.keyword.baremetal_short}}는 다중 구역 지역(MZR) {{site.data.keyword.CloudDataCents_notm}}에서 사용 가능합니다. 자세한 정보는 [다중 구역 지역(MZR) 개요](/docs/infrastructure/loadbalancer-service?topic=loadbalancer-service-multi-zone-region-mzr-overview)를 참조하십시오.
+{:note}
 
 | {{site.data.keyword.CloudDataCent_notm}} |위치 |지역 |서버 옵션 |
 |:----------------------|:---------|:-------|:---------------|
@@ -89,6 +96,22 @@ vCenter Server 배치에는 실제 인프라에 대한 엄격한 요구사항이
 
 서비스는 NSX-T 인스턴스가 있는 vCenter Server에 지원됩니다.
 {:note}
+
+### VMware HCX on IBM Cloud를 위한 계획
+{: #vc_planning-addon-services-hcx}
+
+VMware HCX on {{site.data.keyword.cloud_notm}} 서비스는 {{site.data.keyword.cloud_notm}}로 온프레미스 데이터 센터의 네트워크를 원활하게 확장할 수 있으며, 이를 통해 변환이나 변경 없이 {{site.data.keyword.cloud_notm}}에서 가상 머신(VM)을 마이그레이션할 수 있습니다.
+
+이 서비스를 배치할 때 다음 설정을 완료하십시오.
+* 다음 옵션 중 하나를 선택하여 **HCX 상호연결 유형**을 지정하십시오.
+  * **공용 네트워크**: HCX는 공용 네트워크를 통해 사이트 간에 암호화된 연결을 작성합니다.
+  * **사설 네트워크**: HCX는 사설 네트워크를 통해 사이트 간에 암호화된 연결을 작성합니다.
+* **공용 엔드포인트 인증서 유형**을 지정하십시오. **CA 인증서**를 선택하는 경우 다음 설정을 구성하십시오.
+  * **인증서 컨텐츠**: CA 인증서의 컨텐츠를 입력하십시오.
+  * **개인 키**: CA 인증서의 개인 키를 입력하십시오.
+  * (선택사항) **비밀번호**: 개인 키가 암호화된 경우 개인 키의 비밀번호를 입력하십시오.
+  * (선택사항) **비밀번호 다시 입력**: 개인 키의 비밀번호를 한 번 더 입력하십시오.
+  * (선택사항) **호스트 이름**: CA 인증서의 공통 이름(CN)에 맵핑될 호스트 이름을 입력하십시오. HCX on {{site.data.keyword.cloud_notm}}에서는 NSX Edge에서 허용하는 형식의 CA 인증서를 필요로 합니다. NSX Edge 인증서 형식에 대한 자세한 정보는 [SSL 인증서 가져오기](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html){:external}를 참조하십시오.
 
 ## 용량 고려사항
 {: #vc_planning-capacity-considerations}

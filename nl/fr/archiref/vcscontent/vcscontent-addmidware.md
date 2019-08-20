@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-27"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -156,8 +156,7 @@ type=NFS
 server = nfs.server.ip.address
 path = /shared/db2trader1`
 
-Dans l'interface utilisateur du catalogue, recherchez "Db2" et cliquez sur ibm-db2oldp-dev.
-Lisez le fichier Readme, puis cliquez sur Configurer.
+Dans l'interface utilisateur du catalogue, recherchez "Db2" et cliquez sur ibm-db2oldp-dev. Lisez le fichier Readme, puis cliquez sur Configurer.
 
 La section Configuration comporte une section Démarrage rapide et une section Tous les paramètres. Ouvrez la section Tous les paramètres puisque Todd doit spécifier davantage de configuration :
 
@@ -242,8 +241,3 @@ Jane souhaite avoir une base de code unifiée, même lorsque Stock Trader peut s
 Jane ayant restructuré sa solution Stock Trader et Todd ayant installé des logiciels intermédiaires dans {{site.data.keyword.cloud_notm}} Private Hosted, l'ensemble de la solution Stock Trader s'exécute dans un cloud privé. Jane ajoute à présent d'autres micro-services, tels qu'un service de notification Twitter. Les règles de routage Istio activent une messagerie de niveau de fidélité dynamique via un canal Slack interne ou un canal Twitter public.
 
 ![Enrichissement de Stock Trader](../../images/vcscontent-enrich.svg "Enrichissement de Stock Trader")
-
-## Liens connexes
-{: #vcscontent-addmidware-related}
-
-* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

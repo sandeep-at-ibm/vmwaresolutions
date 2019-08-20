@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-07-24"
 
 keywords: history message, audit history, error messages
 
@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 # Protokollnachrichten für Instanzen
 {: #audit_messages}
 
-Alle Operationen, die {{site.data.keyword.cloud_notm}} für Ihre VMware-Instanz ausführt, werden im Instanzprotokoll protokolliert. Sie können das Instanzprotokoll als Referenz verwenden, um diese Operationen zu überprüfen. Weitere Informationen zum Überprüfen Ihres Instanzprotokolls finden Sie in [Vorgehensweise zum Anzeigen des Bereitstellungsverlaufs für vCenter Server-Instanzen](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances#vc_viewinginstances-procedure-view-deploy-history).
+Alle Operationen, die {{site.data.keyword.cloud}} für Ihre VMware-Instanz ausführt, werden im Instanzprotokoll protokolliert. Sie können das Instanzprotokoll als Referenz verwenden, um diese Operationen zu überprüfen. Weitere Informationen zum Überprüfen Ihres Instanzprotokolls finden Sie in [Vorgehensweise zum Anzeigen des Bereitstellungsverlaufs für vCenter Server-Instanzen](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances#vc_viewinginstances-procedure-view-deploy-history).
 
 In den folgenden Abschnitten sind alle möglichen Nachrichten aufgeführt, die in Ihrem Instanzprotokoll ausgegeben werden können.
 
@@ -51,7 +51,7 @@ In den folgenden Abschnitten sind alle möglichen Nachrichten aufgeführt, die i
 * ``Aufpreise für <environment> werden storniert...``
 * ``Stornierung der VMware-Lizenz wird durchgeführt...``
 * ``Die Stornierung der VMware-Lizenz ist abgeschlossen.``
-* ``Die SoftLayer-Bestellung ist fehlgeschlagen oder hat das zulässige Zeitlimit überschritten.``
+* ``Die Bestellung der {{site.data.keyword.cloud_notm}}-Infrastruktur ist fehlgeschlagen oder hat das zulässige Zeitlimit überschritten.``
 
 ## Instanzfehlernachrichten
 {: #audit_messages-error}
@@ -60,9 +60,9 @@ In den folgenden Abschnitten sind alle möglichen Nachrichten aufgeführt, die i
 
 * ``Fehler beim Bestellen der VMware-Lizenzen. Um Unterstützung zu erhalten, öffnen Sie ein Service-Ticket.``
 * ``Fehler beim Bestellen von Teilnetzen. Um Unterstützung zu erhalten, öffnen Sie ein Service-Ticket.``
-* ``Fehler: Der SoftLayer-API-Schlüssel ist nicht gültig. Um Unterstützung zu erhalten, öffnen Sie ein Service-Ticket.``
-* ``Fehler: Das SoftLayer-Rechenzentrum ist nicht gültig. Um Unterstützung zu erhalten, öffnen Sie ein Service-Ticket.``
-* ``Fehler beim Verwenden eines gemeinsam genutzten Image im bereitgestellten SoftLayer-Konto. Um Unterstützung zu erhalten, öffnen Sie ein Service-Ticket.``
+* ``Fehler: Der API-Schlüssel der {{site.data.keyword.cloud_notm}}-Infrastruktur ist nicht gültig. Um Unterstützung zu erhalten, öffnen Sie ein Service-Ticket.``
+* ``Fehler: Das Rechenzentrum der {{site.data.keyword.cloud_notm}}-Infrastruktur ist nicht gültig. Um Unterstützung zu erhalten, öffnen Sie ein Service-Ticket.``
+* ``Fehler beim Verwenden eines gemeinsam genutzten Images im bereitgestellten {{site.data.keyword.cloud_notm}}-Infrastrukturkonto. Um Unterstützung zu erhalten, öffnen Sie ein Service-Ticket.``
 * ``Fehler beim Bestellen von Serviceeinträgen. Um Unterstützung zu erhalten, öffnen Sie ein Service-Ticket.``
 * ``Fehler beim Bestellen von Teilnetzen. Um Unterstützung zu erhalten, öffnen Sie ein Service-Ticket.``
 * ``Fehler beim Bestellen von Lizenzen. Um Unterstützung zu erhalten, öffnen Sie ein Service-Ticket.``
@@ -235,18 +235,6 @@ In den folgenden Abschnitten sind alle möglichen Nachrichten aufgeführt, die i
 * ``Die Standardservices wurden erfolgreich aktiviert.``
 * ``Stornierung der Serviceeinträge wird durchgeführt...``
 * ``Die Stornierung der Serviceeinträge ist abgeschlossen.``
-
-## Protokollnachrichten für vCenter Server with Hybridity Bundle
-{: #audit_messages-hybridity}
-
-{{site.data.keyword.vmwaresolutions_short}} gibt die folgenden Nachrichten für die vCenter Server with Hybridity Bundle-Instanzen aus:
-
-* ``vCenter Server with Hybridity Bundle-Lizenzen werden bestellt...``
-* ``Konvertierung für vCenter Server with Hybridity Bundle wird gestartet...``
-* ``Die Konvertierung für vCenter Server with Hybridity Bundle ist abgeschlossen.``
-* ``vCenter Server with Hybridity Bundle wird entfernt...``
-* ``vCenter Server with Hybridity Bundle wurde erfolgreich entfernt.``
-* ``Konvertierung für vCenter Server with Hybridity Bundle wird abgebrochen...``
 
 ## Zugehörige Links
 {: #audit_messages-related}

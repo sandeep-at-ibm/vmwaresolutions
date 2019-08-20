@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-27"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -240,8 +240,3 @@ von der Cloud verwalteten Service ausgeführt wird.
 Da Jane das Refactoring ihrer Lösung "Stock Trader" festgeschrieben hat und Todd Middleware in {{site.data.keyword.cloud_notm}} Private Hosted installiert hat, wird die Lösung "Stock Trader" vollständig in einer privaten Cloud ausgeführt. Jane fügt jetzt weitere Mikroservices wie beispielsweise einen Benachrichtigungsservice für Twitter hinzu. Istio-Routing-Regeln ermöglichen das dynamische Messaging nach Kundentreuestufen über einen internen Slack-Kanal oder einen öffentlichen Twitter-Kanal.
 
 ![Anreicherung von Stock Trader](../../images/vcscontent-enrich.svg "Anreicherung von Stock Trader")
-
-## Zugehörige Links
-{: #vcscontent-addmidware-related}
-
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

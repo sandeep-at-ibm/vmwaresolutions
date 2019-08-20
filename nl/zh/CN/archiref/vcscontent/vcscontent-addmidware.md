@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-27"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -241,8 +241,3 @@ Jane 需要一个统一的代码库，即使 Stock Trader 可能会在多个云�
 Jane 致力于重构了自己的 Stock Trader 解决方案，而 Todd 则致力于将中间件安装到 {{site.data.keyword.cloud_notm}} Private Hosted 中，因此整个核心 Stock Trader 解决方案都在私有云中运行。Jane 现在添加了更多微服务，例如推特通知服务。Istio 路由规则通过内部 Slack 通道或公共推特通道，支持动态忠诚度消息传递。
 
 ![Stock Trader 扩充](../../images/vcscontent-enrich.svg "Stock Trader 扩充")
-
-## 相关链接
-{: #vcscontent-addmidware-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

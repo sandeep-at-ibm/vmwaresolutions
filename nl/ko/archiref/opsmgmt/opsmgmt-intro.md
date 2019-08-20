@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-29"
+lastupdated: "2019-08-05"
 
 ---
 
@@ -66,8 +66,3 @@ lastupdated: "2019-05-29"
 이 아키텍처가 Chef 통합을 사용하여 확장될 수 있는 방법에 대한 자세한 정보는 [Chef 통합을 사용한 vRA 참조 아키텍처](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_VRA_Chef_Integration_Architecture.pdf){:new_window}를 참조하십시오.
 
 * 서비스 관리 계층 - 이 계층은 IT 환경의 전체 라이프사이클에 중점을 두고 있으며 일반적으로 IT 오퍼레이션과 기술에 대한 모든 사일로의 입력을 결합하여 엔터프라이즈 레벨에서 구현됩니다. 이 계층은 예전부터 ITIL(IT Infrastructure Library) 및 ISO/IEC 20000과 같은 ITSM(IT Service Management) 프레임워크에서 구성되었습니다. 이는 IT 서비스 라이프사이클의 프로세스 및 단계를 통해 IT 서비스를 제공하기 위한 우수 사례의 프레임워크입니다. 제품 레벨에서 ITSM은 구성 관리 데이터베이스에 연결된 인시던트, 서비스 요청, 문제점, 변경사항 및 지식을 처리하기 위한 중앙 집중식 워크플로우 관리 시스템이 특징입니다.
-
-## 관련 링크
-{: #opsmgmt-intro-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

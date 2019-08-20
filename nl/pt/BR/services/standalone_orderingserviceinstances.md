@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-22"
 
 keywords: VMware HCX standalone, HCX on-premises, order HCX
 
@@ -18,7 +18,7 @@ subcollection: vmware-solutions
 # Pedindo instâncias do VMware HCX on IBM Cloud no local
 {: #standalone_orderingserviceinstances}
 
-É possível pedir uma instância do HCX on {{site.data.keyword.cloud}} no local sem associá-la a nenhuma instância do vCenter Server with Hybridity Bundle para licenciamento e ativação de sua instalação do HCX on {{site.data.keyword.cloud_notm}} no local.
+É possível pedir uma instância do HCX on {{site.data.keyword.cloud}} no local sem associá-la a nenhuma instância do vCenter Server para licenciamento e ativação de sua instalação do HCX on {{site.data.keyword.cloud_notm}} no local.
 
 ## Antes de iniciar
 {: #standalone_orderingserviceinstances-reqs}

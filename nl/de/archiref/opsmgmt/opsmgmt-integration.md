@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-29"
+lastupdated: "2019-08-05"
 
 ---
 
@@ -62,7 +62,6 @@ Der Kunde möchte sein vorhandenes Betriebssystem, seine vorhandene Middleware u
 ## Zugehörige Links
 {: #opsmgmt-integration-related}
 
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
 * [Realize Operations-RESTful-API](https://docs.vmware.com/en/vRealize-Operations-Manager/7.0/vrealize-operations-manager-70-api-guide.pdf){:new_window}
 * [VMware-Code-API-Explorer](https://code.vmware.com/apis?socv=1&numPerPage=164&sorter=pv){:new_window}
 * [Postman Client Collection Tool for vRealize Operations](https://code.vmware.com/samples/4663/postman-client-collection-for-vrealize-operations-rest-apis){:new_window}

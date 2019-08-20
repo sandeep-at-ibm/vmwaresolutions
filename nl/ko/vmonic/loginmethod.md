@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-07-16"
 
 keywords: vmware solutions console, vmware portal, vmware solutions catalog
 
@@ -30,7 +30,7 @@ subcollection: vmware-solutions
 {: #loginmethod-cloud-catalog}
 
 {{site.data.keyword.cloud_notm}} 카탈로그에서 콘솔에 액세스하려면 다음 단계를 완료하십시오.
-1. https://cloud.ibm.com으로 이동하십시오.
+1. https://cloud.ibm.com/login으로 이동하십시오.
 2. **IBM ID** 계정으로 {{site.data.keyword.cloud_notm}}에 로그인하십시오.
 3. 배너의 왼쪽에서 **카탈로그**를 클릭하십시오.
 4. **카탈로그** 페이지 맨 위의 검색 상자에서 **VMware Solutions**를 입력하십시오.

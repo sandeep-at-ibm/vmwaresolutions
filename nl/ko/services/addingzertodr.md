@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-21"
+lastupdated: "2019-08-02"
 
 keywords: Zerto, Zerto components, tech specs Zerto
 
@@ -21,7 +21,10 @@ subcollection: vmware-solutions
 # Zerto on IBM Cloud 개요
 {: #addingzertodr}
 
-Zerto on {{site.data.keyword.cloud}} 서비스는 {{site.data.keyword.cloud_notm}}의 VMware virtual 환경에서 데이터를 보호하고 복구하도록 복제 및 재해 복구 기능을 배치 오퍼링에 통합합니다.
+Zerto on {{site.data.keyword.cloud}} 서비스는 {{site.data.keyword.cloud_notm}}의 VMware 가상 환경에서 데이터를 보호하고 복구하도록 복제 및 재해 복구 기능을 배치 오퍼링에 통합합니다.
+
+설치된 현재 Zerto on {{site.data.keyword.cloud_notm}} 버전은 6.5 Update 4입니다.
+{:note}
 
 ## 시작하기 전에
 {: #addingzertodr-req}

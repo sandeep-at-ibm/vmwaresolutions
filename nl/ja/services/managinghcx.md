@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-22"
 
 keywords: HCX updates, HCX management console, login HCX console
 
@@ -27,14 +27,14 @@ HCX on {{site.data.keyword.cloud}} サービスを管理するには、HCX Cloud
 2. HCX Cloud Console にアクセスするには、HCX on {{site.data.keyword.cloud_notm}} サービスの詳細ページで**「View HCX Cloud Console」**をクリックしてから、vCenter Server 資格情報を使用してログインします。
 3. HCX Manager Admin Console にアクセスするには、HCX on {{site.data.keyword.cloud_notm}} サービスの詳細ページで**「View HCX Manager Admin Console」**をクリックしてから、同じサービス詳細ページにリストされる HCX Manager 資格情報を使用してログインします。
 
-詳しくは、[vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)を参照してください。
+詳しくは、[vCenter Server インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)を参照してください。
 
 ## HCX on IBM Cloud への更新の適用
 {: #managinghcx-updates}
 
 HCX on {{site.data.keyword.cloud_notm}} は、VMware Hybrid Cloud Extension テクノロジーのテスト済みの最新ビルドでデプロイされます。 VMware では、そうしたビルドの更新 (重要なフィックスや新機能など) が定期的に配信されます。 それらのビルドは、HCX on {{site.data.keyword.cloud}} のインストール済み環境に自動的にプッシュされます。オンプレミスの HCX インストール済み環境の場合も同様です。
 
-ご使用の環境にプッシュされたメンテナンス・フィックスを適用するには、オンプレミスのデータ・センターと、vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle インスタンスで、HCX Manager の管理コンソールを使用する必要があります。
+ご使用の環境にプッシュされたメンテナンス・フィックスを適用するには、オンプレミスのデータ・センターと、vCenter Server on {{site.data.keyword.cloud_notm}} インスタンスで、HCX Manager の管理コンソールを使用する必要があります。
 
 あるはずのビルド更新が表示されない場合や、HCX で問題が発生した場合や、最新の HCX ビルドをすぐにシステムにプッシュしてほしい場合は、[IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)のステップを実行してサポート・チケットを開いてください。
 

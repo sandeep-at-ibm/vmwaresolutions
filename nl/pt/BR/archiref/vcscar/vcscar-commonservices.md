@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -37,8 +37,3 @@ DNS padrão. Os exemplos de componentes implementados incluem hosts vCenter, PSC
 A implementação do vCenter Server usa os servidores Network Time Protocol (NTP) da infraestrutura do {{site.data.keyword.cloud_notm}}. Todos os componentes implementados são configurados para usar esses servidores NTP. Ter todos os componentes que usam os mesmos servidores NTP
 é crítico para que os certificados e a autenticação do AD funcionem
 corretamente.
-
-## Links relacionados
-{: #vcscar-commonservices-related}
-
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

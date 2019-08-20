@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -37,9 +37,9 @@ La progettazione offre inoltre la possibilità di distribuire due server MSAD al
 Se scegli l'opzione con due server MSAD altamente disponibili, sei responsabile di fornire licenze e attivazione Microsoft.
 {:note}
 
-Active Directory serve per autenticare gli accessi per gestire solo l'istanza VMware e non per ospitare gli utenti dei carichi di lavoro nelle istanze distribuite. Il nome di dominio root dell'insieme di strutture del server Active Directory corrisponde al nome di dominio DNS da te specificato. Questo nome di dominio è specificato solo per l'istanza primaria di vCenter Server se sono collegate più istanze. Per le istanze collegate, ciascuna istanza contiene un server Active Directory che si trova nell'anello di replica root dell'insieme di strutture. Anche i file di zona DNS vengono replicati sui server Active Directory.
+Active Directory serve per autenticare gli accessi per gestire solo l'istanza VMware e non per ospitare gli utenti dei carichi di lavoro nelle istanze distribuite. Il nome di dominio root dell'insieme di strutture del server Active Directory corrisponde al nome di dominio DNS (Domain Name Service) da te specificato. Questo nome di dominio è specificato solo per l'istanza primaria di vCenter Server se sono collegate più istanze. Per le istanze collegate, ciascuna istanza contiene un server Active Directory che si trova nell'anello di replica root dell'insieme di strutture. Anche i file di zona DNS vengono replicati sui server Active Directory.
 
-### Dominio SSO vSphere
+### Dominio SSO (Single Sign On) vSphere
 {: #design_commonservice-vsphere-sso}
 
 Il dominio SSO (Single Sign On) vSphere viene utilizzato come meccanismo di autenticazione iniziale per una singola istanza o più istanze collegate. Il dominio SSO serve anche per connettere un'istanza VMware o più istanze collegate al server MSAD. Viene applicata la seguente configurazione SSO:  
@@ -71,19 +71,19 @@ Questa progettazione integra i servizi DNS sulle VSI AD nella seguente configura
 ### Istanze vCenter Server secondarie
 {: #design_commonservice-secondary-vcs}
 
-Per la ridondanza tra le istanze; quando viene aggiunta la prima istanza vCenter Server secondaria a un'istanza vCenter Server primaria o a un'istanza vCenter Server autonoma corrente, l'indirizzo IP del server AD DNS dell'istanza primaria viene utilizzato nell'istanza vCenter Server secondaria e in tutte le successive voci “secondary DNS” dell'istanza vCenter Server secondaria per tutti i componenti che richiedono una voce server DNS. Ad esempio, ESXi, vCenter e NSX Manager. Inclusi i componenti aggiuntivi come, HCX, Zerto e Veeam. La voce DNS secondaria del sito primario viene modificata con il primo indirizzo IP AD/DNS delle istanze vCenter Server secondarie.
+Per la ridondanza tra le istanze, quando viene aggiunta la prima istanza vCenter Server secondaria a un'istanza vCenter Server primaria o a un'istanza vCenter Server autonoma corrente, l'indirizzo IP del server AD DNS dell'istanza primaria viene utilizzato nell'istanza vCenter Server secondaria e in tutte le successive voci “secondary DNS” dell'istanza vCenter Server secondaria per tutti i componenti che richiedono una voce server DNS. Ad esempio, ESXi, vCenter e NSX Manager ed anche i componenti aggiuntivi come, HCX, Zerto e Veeam. La voce DNS secondaria del sito primario viene modificata con il primo indirizzo IP AD/DNS delle istanze vCenter Server secondarie.
 
 ## Servizi NTP
 {: #design_commonservice-ntp}
 
-Questa progettazione utilizza i server NTP dell'infrastruttura {{site.data.keyword.cloud_notm}}. Tutti i componenti distribuiti sono configurati per utilizzare questi server NTP. Per il corretto funzionamento dei certificati e dell'autenticazione di Active Directory è fondamentale che tutti i componenti all'interno della progettazione utilizzino lo stesso server NTP.
+Questa progettazione utilizza i server NTP dell'infrastruttura {{site.data.keyword.cloud_notm}}. Tutti i componenti distribuiti sono configurati per utilizzare questi server NTP. Per il corretto funzionamento dei certificati e dell'autenticazione di Active Directory, è fondamentale che tutti i componenti all'interno della progettazione utilizzino lo stesso server NTP.
 
 ![Servizi NTP e DNS](../../images/vcsv4radiagrams-ra-servicesinterconnections.svg "Servizi NTP e DNS")
 
 ## Servizi CA (Certificate Authority)
 {: #design_commonservice-cas}
 
-Per impostazione predefinita, VMware vSphere utilizza i certificati TLS firmati da VMware Certificate Authority (VMCA), che risiede sul dispositivo VMware PSC (Platform Services Controller). Questi certificati non sono considerati attendibili dai dispositivi o dai browser dell'utente finale. È buona norma per la sicurezza sostituire i certificati rivolti all'utente con certificati firmati da un'autorità di certificazione (CA) di terze parti o di livello aziendale. I certificati per la comunicazione machine-to-machine possono rimanere come certificati firmati da VMCA, tuttavia, si consiglia di seguire le procedure ottimali per la tua organizzazione, che in genere implicano l'utilizzo di una CA aziendale identificata.
+Per impostazione predefinita, VMware vSphere utilizza i certificati TLS firmati da VMware certificate authority (VMCA), ubicati sul dispositivo VMware PSC (Platform Services Controller). Questi certificati non sono considerati attendibili dai dispositivi o dai browser dell'utente. È buona norma per la sicurezza sostituire i certificati rivolti all'utente con certificati firmati da un'autorità di certificazione (CA) di terze parti o di livello aziendale. I certificati per la comunicazione machine-to-machine possono rimanere come certificati firmati da VMCA. Tuttavia, si consiglia di seguire le procedure ottimali per la tua organizzazione, che in genere implicano l'utilizzo di una CA aziendale identificata.
 
 Puoi utilizzare i server Windows AD in questa progettazione per creare certificati firmati dall'istanza locale. Tuttavia, puoi anche scegliere di configurare i servizi CA, laddove necessario.
 

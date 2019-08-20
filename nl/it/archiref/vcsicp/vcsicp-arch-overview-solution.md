@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-12"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -39,7 +39,7 @@ NSX Manager viene distribuito sul cluster iniziale. Inoltre, a NSX Manager viene
 
 L'automazione di {{site.data.keyword.cloud}} distribuisce tre controller NSX all'interno del cluster iniziale. Ai controller viene assegnato un indirizzo IP di backend della VLAN dalla sottorete portatile privata progettato per i componenti di gestione.
 
-### Edge NSX / DLR
+### NSX Edge e DLR (Distributed Logical Router)
 {: #vcsicp-arch-overview-solution-nsx-edge}
 
 Vengono distribuite coppie di gateway dei servizi edge (ESG) NSX. In tutti i casi, una coppia di gateway viene utilizzata per il traffico in uscita dai componenti di automazione che risiedono sulla rete privata. Per vCenter Server e {{site.data.keyword.icpfull_notm}}, un secondo gateway noto come edge gestito da ICP, viene distribuito e configurato con un uplink alla rete pubblica e un'interfaccia che è assegnata alla rete privata. Tutti i componenti NSX necessari, come Distributed Logical Router (DLR), switch logici e firewall possono essere configurati dall'amministratore. La [Guida di rete di vCenter Server](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro) fornisce maggiori dettagli sulla progettazione della rete.
@@ -177,8 +177,3 @@ Una GUI (graphical user interface) per creare modelli Terraform, con una funzion
 {: #vcsicp-arch-overview-solution-maria-db}
 
 Il database per l'applicazione designer del modello.
-
-## Link correlati
-{: #vcsicp-arch-overview-solution-related}
-
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

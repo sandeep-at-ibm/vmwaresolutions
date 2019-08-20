@@ -69,4 +69,4 @@ NSX Manager를 업그레이드된 후 NSX를 다운그레이드할 수 없습니
 {: #vum-updating-nsx-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 솔루션 아키텍처](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} 디지털 기술 업무](https://ibm-dte.mybluemix.net/vmware)(데모)
+* [{{site.data.keyword.vmwaresolutions_full}} 데모](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-21"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -56,8 +56,3 @@ NSX-V | NSX-V su vCenter Server fornisce la rete di sovrapposizione definita dal
 CAM | CAM ({{site.data.keyword.cloud_notm}} Automation Manager) viene eseguito su {{site.data.keyword.icpfull_notm}} e fornisce un unico pannello di controllo per il provisioning dei carichi di lavoro basati su VM insieme ai carichi di lavoro basati su Kubernetes utilizzando dei template. CAM consente allo sviluppatore di: <br> - Eseguire il provisioning di carichi di lavoro su vCenter Server, {{site.data.keyword.icpfull_notm}} o {{site.data.keyword.containerlong_notm}}.<br> - Comporre e orchestrare servizi realizzati sia con le VM che con i contenitori. <br> - Integrare le loro toolchain DevOps e la soluzione di day-2 ITSM.
 Applicazioni inserite nel contenitore | Le applicazioni che hanno attraversato il percorso di modernizzazione dell'applicazione e che ora sono in esecuzione come contenitori. Per questa architettura di riferimento e in questo esempio per Acme Skateboards, una delle applicazioni inserite nei contenitori è un server web, che fa parte del carico di lavoro di presenza online.
 Watson | Per questa architettura di riferimento e in questo esempio per Acme Skateboards, Watson rappresenta il servizio AI utilizzato nell'_architettura Concept Car_.
-
-## Link correlati
-{: #vcsnsxt-systemcontext-related}
-
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

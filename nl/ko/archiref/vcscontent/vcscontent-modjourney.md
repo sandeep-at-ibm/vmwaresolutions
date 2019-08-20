@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -99,8 +99,3 @@ Kubernetes 환경에서도 사용할 수 있도록 완전히 이식 가능한 �
 6. DevOps를 현대화합니다. 이 과정을 통해 Jane은 Stock Trader를 제공하는 방법을 개선합니다.
 
 7. 관리를 현대화합니다. Todd와 Jane은 Stock Trader를 관리하는 방법과 심지어 둘 이상의 클러스터와 클라우드 환경에서 Stock Trader가 실행되는 플랫폼을 관리하는 방법을 개선했습니다.
-
-## 관련 링크
-{: #vcscontent-modjourney-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

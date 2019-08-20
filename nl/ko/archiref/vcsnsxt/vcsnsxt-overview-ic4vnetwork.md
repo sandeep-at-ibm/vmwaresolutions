@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-22"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -88,8 +88,3 @@ VLAN 	|서브넷 유형 	|설명
 BCR(백엔드 "사설 네트워크" 고객 라우터)을 기본 라우트로 지정하도록 구성됩니다. vCenter Server 인스턴스로 인해 소프트웨어 정의 네트워킹의 사용은 가능하지만, VLAN 서브넷으로의 라우팅을 포함한 NSX로 작성된 네트워크 오버레이를 {{site.data.keyword.cloud_notm}} 관리 라우터는 알지 못합니다. 네트워크 플로우를 적절하게 관리하기 위해서는 정적 라우트, 방화벽 규칙 및 NAT 규칙을 만들어야 할 수 있습니다.
 
 사설 네트워크 연결은 MTU 크기가 9000인 점보 프레임을 사용하도록 구성되어 있어 스토리지 및 vMotion 등의 대형 데이터 전송에 대한 성능이 향상됩니다. 이는 VMware 내에서 그리고 {{site.data.keyword.cloud_notm}}에 의해 허용되는 최대 MTU입니다. 공용 네트워크 연결은 1500의 표준 이더넷 MTU를 사용합니다. 이를 변경하면 인터넷 상에서 패킷 단편화가 발생할 수 있으므로 이를 그대로 유지해야 합니다.
-
-## 관련 링크
-{: #vcsnsxt-overview-ic4vnetwork-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

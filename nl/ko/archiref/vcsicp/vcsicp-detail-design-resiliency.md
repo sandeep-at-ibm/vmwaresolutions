@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -118,4 +118,3 @@ VMware on {{site.data.keyword.cloud_notm}}는 IBM Cloud의 전세계 데이터 �
 * [기존 작업자 풀을 크기 조정하여 작업자 노드 추가](/docs/containers?topic=containers-clusters)
 * [{{site.data.keyword.cloud_notm}} Private 백업 및 복원 방법](https://medium.com/ibm-cloud/how-to-backup-and-restore-ibm-cloud-private-part-1-b6300dc1d7d8)
 * [{{site.data.keyword.icpfull_notm}} 백업 GitHub](https://github.com/ibm-cloud-architecture/icp-backup/)
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -70,7 +70,7 @@ FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} サービスを�
   単一の FortiGate VM 用の CPU と RAM の予約を計算するには、次の数式を使用します。
    * `CPU 予約 = ESXi サーバーの CPU 速度 * vCPU の数`
    * `RAM 予約 = RAM サイズ`
-* ご使用のインスタンスに FortiGate Virtual Appliance の HA ペアをデプロイすると、Management NSX Edge Services Gateway (ESG) 上に SNAT とファイアウォールのルールが定義されるとともに、FortiGate Virtual Appliance 上に静的経路が定義されます。これにより、ライセンス・アクティベーションの場合や、最新のセキュリティー・ポリシーとコンテンツを取得する場合に、インスタンスからパブリック・ネットワークへのアウトバウンド HTTPS 通信が可能になります。
+* ご使用のインスタンスに FortiGate Virtual Appliance の HA ペアをデプロイすると、Management NSX Edge Services Gateway (ESG) 上に SNAT とファイアウォールのルールが定義されるとともに、FortiGate Virtual Appliance 上に静的ルートが定義されます。これにより、ライセンス・アクティベーションの場合や、最新のセキュリティー・ポリシーとコンテンツを取得する場合に、インスタンスからパブリック・ネットワークへのアウトバウンド HTTPS 通信が可能になります。
 * サービスのインストール後にライセンス・レベルを変更することはできません。 ライセンス・レベルを変更するには、既存のサービスを削除してから、別のライセンス・オプションを選択してサービスを再インストールする必要があります。
 * FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} での失敗を避けるために、以下の要件を満たす必要があります。
    * 各 VM を別々のサーバーに配置するというアンチアフィニティー・ルールに従ってデプロイされる 2 つの FortiGate VM に、少なくとも 2 台のアクティブ ESXi サーバーを使用できる。

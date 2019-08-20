@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -60,8 +60,3 @@ IBM 瞭解，有 70% 專用雲端的採用是受到應用程式環境現代化�
 * [vCenter Server 網路](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro) - 聚焦在 vCenter Server、{{site.data.keyword.icpfull_notm}} 及 {{site.data.keyword.containerlong_notm}} 內使用的網路技術，例如 NSX-V、NSX-T 和 Calico。
 * [VMware 及 Skate Advisor 概念車](/docs/services/vmwaresolutions/archiref/vcscar?topic=vmware-solutions-vcscar-intro) - 此參照架構是一種「概念車」，亦即，用來強調及顯示解決真實世界問題之技術的機制。我們想要以真實方式示範 Watson AI 與機器學習之間的互動。我們透過滑板運動的文化，以獨特方式來示範雲端服務。「概念車」的實作是一個稱為 Skate Advisor 的 Acme Skateboard 應用程式的延伸。Skate Advisor 是一個工具，它容許使用者與 Watson 驅動引擎進行滑板技巧對話。
 * [VMware：Stock Trader 的現代化旅程](/docs/services/vmwaresolutions/archiref/vcscontent?topic=vmware-solutions-vcscontent-modjourney) - 我們的參照使用案例說明典型 WebSphere Application Server 應用程式使用 {{site.data.keyword.cloud_notm}} Private、IBM Middleware 內容、{{site.data.keyword.containerlong_notm}} 及 vCenter Server on {{site.data.keyword.cloud_notm}} 進行現代化。我們全都在雲端旅程中，而且各自在該旅程的不同定點上。透過應用程式架構設計師 Jane 與雲端基礎架構設計師 Todd 的漸進式步驟，我們將一個稱為 Stock Trader 的現有應用程式進行現代化。它顯示的範例可協助您在旅程中採取每一個步驟，並實現您的企業價值（不論每一個步驟是大是小）。我們聚焦在以下四個主題：應用程式、DevOps、整合和管理。所有佈景主題都會共同運作，協助您達到目標。現代化一個佈景主題，而未現代化其他佈景主題，可能會導致問題。
-
-## 相關鏈結
-{: #vcsiks-intro-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

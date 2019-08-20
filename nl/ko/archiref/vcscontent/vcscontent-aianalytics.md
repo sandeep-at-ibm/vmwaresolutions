@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -21,9 +21,10 @@ Stock Trader 강화는 일회성 단계가 아닙니다. Todd와 Jane에게 이 
 ## AI Watson Tone Analyzer
 {: #vcscontent-aianalytics-ai-watson}
 
-다음 샘플은 애플리케이션을 강화하는 간단한 방법이지만 믿을 수 없을 정도로 강력합니다. Jane은 [AI](https://cloud.ibm.com/catalog/?category=ai) 및 [Analytics](https://cloud.ibm.com/catalog/?category=analytics) 서비스에 대한 [{{site.data.keyword.cloud}} 카탈로그](https://cloud.ibm.com/catalog/)를 검색하고 컨텐츠가 풍부한 카탈로그를 찾습니다.
+다음 샘플은 애플리케이션을 강화하는 간단한 방법이지만 믿을 수 없을 정도로 강력합니다. Jane은 [AI](https://cloud.ibm.com/catalog?category=ai) 및 [Analytics](https://cloud.ibm.com/catalog?category=analytics) 서비스에 대한 [{{site.data.keyword.cloud}} 카탈로그](https://cloud.ibm.com/catalog)를 검색하고 컨텐츠가 풍부한 카탈로그를 찾습니다.
 
 Jane은 표준 플랜의 옵션인 [Tone Analyzer](https://cloud.ibm.com/catalog/services/tone-analyzer)를 선택한 다음 호출할 인증 정보를 제공합니다.
+
 Jane은 Stock Trader를 리팩토링했으며 Tone Analyzer에 대한 Kubernetes 시크릿을 작성합니다. 그렇게 하면 Jane이 플랜이나 지역을 변경해도 코드를 다시 빌드할 필요가 없습니다.
 
 리팩토링의 덕분에 Jane은 사용자 환경에 지장을 주지 않고 여러 사용자 인터페이스를 사용하여 실험할 수 있었습니다. 결과적으로 새 사용자 인터페이스를 사용하여 사용자 피드백의 톤을 이해할 수 있습니다.
@@ -52,8 +53,3 @@ Jane은 [서비스](https://cloud.ibm.com/catalog/services/decision-optimization
 
 또한 API Connect에서 모니터링과 미터링 기능을 사용하여 Jane은 그녀의 단순화된 API를 사용하고 있는 사용자를 추적할 수
 있습니다.
-
-## 관련 링크
-{: #vcscontent-aianalytics-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

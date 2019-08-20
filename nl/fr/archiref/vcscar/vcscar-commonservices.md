@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -32,8 +32,3 @@ Le déploiement utilise les instances de serveur virtuel AD déployées comme se
 {: #vcscar-commonservices-ntp}
 
 Le déploiement vCenter Server utilise les serveurs NTP de l'infrastructure {{site.data.keyword.cloud_notm}}. Tous les composants déployés sont configurés pour utiliser ces serveurs NTP. Il est essentiel que tous les composants utilisent les mêmes serveurs NTP pour que les certificats et l'authentification AD puissent fonctionner correctement.
-
-## Liens connexes
-{: #vcscar-commonservices-related}
-
-* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

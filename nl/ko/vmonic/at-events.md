@@ -4,9 +4,9 @@ copyright:
 
   years: 2016, 2019
 
-lastupdated: "2019-07-02"
+lastupdated: "2019-07-23"
 
-keywords: vmware solutions events, activity tracker, event details
+keywords: IBM, activity tracker, LogDNA, event, security, VMware solutions events
 
 subcollection: vmware-solutions
 
@@ -18,84 +18,62 @@ subcollection: vmware-solutions
 
 {{site.data.keyword.cloudaccesstrailfull}} 서비스를 사용하여 사용자 및 애플리케이션이 {{site.data.keyword.cloud_notm}}에서 {{site.data.keyword.vmwaresolutions_short}}와 상호작용하는 방법을 추적하십시오.
 
-{{site.data.keyword.cloudaccesstrailfull_notm}} 서비스는 {{site.data.keyword.cloud_notm}}에서 서비스 상태가 변경된 사용자 시작 활동을 기록합니다. 자세한 정보는 [IBM® Cloud Activity Tracker with LogDNA 정보](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#gs_ov)를 참조하십시오.
-
-## Activity Tracker 이벤트 테이블
-{: #at-events-table}
-
-활동 트래커 이벤트 테이블의 열에 대한 설명을 보려면 다음 표를 확인하십시오.
-
-|열                |값 유형 |설명 |
-|:----------------------|:-----------|:------------|
-| Time                  |해당사항 없음        | 이벤트가 작성된 날짜 및 시간입니다. |
-| initiator.name        | 문자열     | 조치를 시작한 사용자의 IBM ID입니다. |
-| target_name           | 문자열     | 조치가 실행되는 리소스입니다. |
-| target.typeURI        | 문자열     | 조치가 실행되는 대상의 UUID(Universally Unique Identifier)입니다. |
-| action                | 문자열     | 이벤트를 트리거하는 조치입니다. 올바른 값은 `create`, `update` 및 `delete`입니다. |
-| outcome               | 문자열     | 조치의 결과입니다. 값은 `success`, `failure` 또는 `pending`입니다. |
-| reason_reasonCode     | 정수    | 결과의 이유 코드입니다. |
-| initiator_host_address| 문자열     | 요청이 발생하는 IP 주소입니다. |
-{: caption="표 1. 활동 트래커 이벤트 테이블에 대한 설명" caption-side="top"}
-
-자세한 정보는 [이벤트 필드](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-event)를 참조하십시오.
+{{site.data.keyword.at_full_notm}}는 {{site.data.keyword.cloud_notm}}에서 서비스의 상태를 변경하는 사용자 시작 활동을 기록합니다. 이 서비스를 사용하여 비정상 활동 및 위험 조치를 조사하고 규정 감사 요구사항을 준수할 수 있습니다. 또한 발생 시 조치에 대한 경보를 받을 수 있습니다. 수집되는 이벤트는 CADF(Cloud Auditing Data Federation) 표준을 준수합니다. 자세한 정보는 [{{site.data.keyword.cloud_notm}} Activity Tracker with LogDNA](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started)를 참조하십시오.
 
 ## 인스턴스 관리 이벤트 추적
 {: #at-events-instance-mgmt}
 
-{{site.data.keyword.vmwaresolutions_short}}에서 사용자 계정, 인스턴스, 클러스터 및 서비스를 관리하는 경우 활동 트래커에서 이벤트가 생성되고 **계정 도메인**에 전송됩니다.
+{{site.data.keyword.vmwaresolutions_short}}에서 사용자 계정, 인스턴스, 클러스터 및 서비스를 관리하는 경우 이벤트가 생성되고 서비스가 프로비저닝된 위치에 있는 서비스의 인스턴스 또는 글로벌 도메인에 전송됩니다. 자세한 정보는 [글로벌 및 위치 기반 이벤트 모니터링](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-monitor_events#mon_def_event_type)을 참조하십시오.
 
-관리 이벤트를 생성하고 활동 트래커로 전송하는 조치를 보려면 다음 표를 확인하십시오.
+다음 표에는 관리 이벤트를 생성하고 Activity Tracker로 전송하는 조치가 제공됩니다.
 
-| 조치                                   |설명 | 결과 |
-|:-----------------------------------------|:------------|:-------|
-| `vmware-solutions.account-apikey.update` |계정의 인프라 API 키가 업데이트됩니다. |`pending`<br>`success`<br>`failure` |
-| `vmware-solutions.account-notification.update` | 계정의 알림 설정이 업데이트됩니다. |`pending`<br>`success`<br>`failure` |
-| `vmware-solutions.instance-secure-data.wipe` | 인스턴스 보안 데이터가 삭제됩니다. |`pending`<br>`success`<br>`failure` |
-| `vmware-solutions.instance-bss-account.migrate` |	인스턴스가 BSS 계정으로 마이그레이션됩니다. |`pending`<br>`success`<br>`failure` |
-| `vmware-solutions.vcs.create` |vCenter Server 인스턴스가 작성됩니다. |`pending`<br>`success`<br>`failure` |
-| `vmware-solutions.vcs.delete` |vCenter Server 인스턴스가 삭제됩니다. |`pending`<br>`success`<br>`failure` |
-| `vmware-solutions.vcs-host.add` |호스트가 vCenter Server 인스턴스에 추가됩니다. |`pending`<br>`success`<br>`failure` |
-| `vmware-solutions.vcs-host.remove` |호스트가 vCenter Server 인스턴스에서 제거됩니다. |`pending`<br>`success`<br>`failure` |
-| `vmware-solutions.vcs.update` |vCenter Server 인스턴스가 업데이트됩니다. |`pending`<br>`success`<br>`failure` |
-| `vmware-solutions.vcs-cluster.create` |클러스터가 vCenter Server 인스턴스에 대해 작성됩니다. |`pending`<br>`success`<br>`failure` |
-| `vmware-solutions.vcs-cluster.delete` |클러스터가 vCenter Server 인스턴스에 대해 삭제됩니다. |`pending`<br>`success`<br>`failure` |
-| `vmware-solutions.vcs-nsx-license.update` |NSX 라이센스가 vCenter 서버 인스턴스에 대해 업데이트됩니다. |`pending`<br>`success`<br>`failure` |
-| `vmware-solutions.vcs-hybridity.add` |하이브리디티 번들이 vCenter 서버 인스턴스에 대해 업그레이드됩니다. |`pending`<br>`success`<br>`failure` |
-| `vmware-solutions.vcs-hybridity.remove` |하이브리디티 번들이 vCenter 서버 인스턴스에서 제거됩니다. |`pending`<br>`success`<br>`failure` |
-| `vmware-solutions.vcs-nfs-storage.add` |NFS 스토리지가 vCenter Server 인스턴스에 추가됩니다. |`pending`<br>`success`<br>`failure` |
-| `vmware-solutions.vcs-nfs-storage.remove` |NFS 스토리지가 vCenter Server 인스턴스에서 제거됩니다. |`pending`<br>`success`<br>`failure` |
-| `vmware-solutions.vcs-plan.update` |vCenter Server 인스턴스의 플랜이 업데이트됩니다. |`pending`<br>`success`<br>`failure` |
-| `vmware-solutions.vss.create` |vSphere 인스턴스가 작성됩니다. |`pending`<br>`success`<br>`failure` |
-| `vmware-solutions.vss.update` |vSphere 인스턴스가 업데이트됩니다. |`pending`<br>`success`<br>`failure` |
-| `vmware-solutions.vss-template.remove` |vSphere 템플리트가 제거됩니다. |`pending`<br>`success`<br>`failure` |
-| `vmware-solutions.service.create` |서비스가 작성됩니다. |`pending`<br>`success`<br>`failure` |
-| `vmware-solutions.service.delete` |서비스가 삭제됩니다. |`pending`<br>`success`<br>`failure` |
-| `vmware-solutions.service-hybridity.upgrade` |하이브리디티 번들이 `version`으로 업그레이드됩니다. |`pending`<br>`success`<br>`failure` |
-{: caption="표 2. 관리 이벤트를 생성하는 조치에 대한 설명" caption-side="top"}
+| 조치                                   |설명 |
+|:-----------------------------------------|:------------|
+| `vmware-solutions.account-apikey.update` |계정의 인프라 API 키가 업데이트됩니다. |
+| `vmware-solutions.account-notification.update` | 계정의 알림 설정이 업데이트됩니다. |
+| `vmware-solutions.instance-secure-data.wipe` | 인스턴스 보안 데이터가 삭제됩니다. |
+| `vmware-solutions.instance-bss-account.migrate` |	인스턴스가 BSS 계정으로 마이그레이션됩니다. |
+| `vmware-solutions.vcs.create` |vCenter Server 인스턴스가 작성됩니다. |
+| `vmware-solutions.vcs.delete` |vCenter Server 인스턴스가 삭제됩니다. |
+| `vmware-solutions.vcs-host.add` |호스트가 vCenter Server 인스턴스에 추가됩니다. |
+| `vmware-solutions.vcs-host.remove` |호스트가 vCenter Server 인스턴스에서 제거됩니다. |
+| `vmware-solutions.vcs.update` |vCenter Server 인스턴스가 업데이트됩니다. |
+| `vmware-solutions.vcs-cluster.create` |클러스터가 vCenter Server 인스턴스에 대해 작성됩니다. |
+| `vmware-solutions.vcs-cluster.delete` |클러스터가 vCenter Server 인스턴스에 대해 삭제됩니다. |
+| `vmware-solutions.vcs-nsx-license.update` |NSX 라이센스가 vCenter 서버 인스턴스에 대해 업데이트됩니다. |
+| `vmware-solutions.vcs-nfs-storage.add` |NFS 스토리지가 vCenter Server 인스턴스에 추가됩니다. |
+| `vmware-solutions.vcs-nfs-storage.remove` |NFS 스토리지가 vCenter Server 인스턴스에서 제거됩니다. |
+| `vmware-solutions.vcs-plan.update` |vCenter Server 인스턴스의 플랜이 업데이트됩니다. |
+| `vmware-solutions.vss.create` |vSphere 인스턴스가 작성됩니다. |
+| `vmware-solutions.vss.update` |vSphere 인스턴스가 업데이트됩니다. |
+| `vmware-solutions.vss-template.remove` |vSphere 템플리트가 제거됩니다. |
+| `vmware-solutions.service.create` |서비스가 작성됩니다. |
+| `vmware-solutions.service.delete` |서비스가 삭제됩니다. |
+{: caption="표 1. 관리 이벤트를 생성하는 조치에 대한 설명" caption-side="top"}
 
 ## KMIP for VMware on IBM Cloud 서비스에 대한 이벤트 추적
 {: #at-events-kmip}
 
-KMIP for VMware on {{site.data.keyword.cloud_notm}} 서비스에 대한 키를 관리하는 경우 활동 트래커에서 이벤트가 생성되고 **계정 도메인**에 전송됩니다.
+KMIP for VMware on {{site.data.keyword.cloud_notm}} 서비스에 대한 키를 관리하는 경우 이벤트가 생성되고 서비스가 프로비저닝된 위치에 있는 서비스의 인스턴스 또는 글로벌 도메인에 전송됩니다. 자세한 정보는 [글로벌 및 위치 기반 이벤트 모니터링](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-monitor_events#mon_def_event_type)을 참조하십시오.
 
-KMIP for VMware on {{site.data.keyword.cloud_notm}} 서비스에 대한 이벤트를 생성하고 전송하는 조치를 보려면 다음 표를 확인하십시오.
+다음 표에는 KMIP for VMware on {{site.data.keyword.cloud_notm}} 서비스에 대한 이벤트를 생성하고 전송하는 조치가 제공됩니다.
 
-| 조치                                      |설명                               | 결과 |
-|:--------------------------------------------|:------------------------------------------|:-------|
-| `vmware-solutions.kmip-key.create` |KMIP 키가 작성됩니다. |`pending`<br>`success`<br>`failure` |
-| `vmware-solutions.kmip-key.retrieve` |KMIP 키가 검색됩니다. |`pending`<br>`success`<br>`failure` |
-| `vmware-solutions.kmip-key-attributes.retrieve` |KMIP 키의 속성이 검색됩니다. |`pending`<br>`success`<br>`failure` |
-| `vmware-solutions.kmip-key.activate` |KMIP 키가 활성화됩니다. |`pending`<br>`success`<br>`failure` |
-| `vmware-solutions.kmip-key.revoke` |KMIP 키가 취소됩니다. |`pending`<br>`success`<br>`failure` |
-| `vmware-solutions.kmip-key.destroy` |KMIP 키가 영구 삭제됩니다. |`pending`<br>`success`<br>`failure` |
-{: caption="표 3. KMIP for VMware on {{site.data.keyword.cloud_notm}} 서비스에 대한 이벤트를 생성하는 조치에 대한 설명" caption-side="top"}
+| 조치                                      |설명                               |
+|:--------------------------------------------|:------------------------------------------|
+| `vmware-solutions.kmip-key.create` |KMIP 키가 작성됩니다. |
+| `vmware-solutions.kmip-key.retrieve` |KMIP 키가 검색됩니다. |
+| `vmware-solutions.kmip-key-attributes.retrieve` |KMIP 키의 속성이 검색됩니다. |
+| `vmware-solutions.kmip-key.activate` |KMIP 키가 활성화됩니다. |
+| `vmware-solutions.kmip-key.revoke` |KMIP 키가 취소됩니다. |
+| `vmware-solutions.kmip-key.destroy` |KMIP 키가 영구 삭제됩니다. |
+{: caption="표 2. KMIP for VMware on {{site.data.keyword.cloud_notm}} 서비스에 대한 이벤트를 생성하는 조치에 대한 설명" caption-side="top"}
 
 ## 이벤트 표시 위치
 {: #at-events-viewing}
 
-{{site.data.keyword.cloudaccesstrailshort}} 이벤트는 **계정 도메인** 이벤트가 생성된 {{site.data.keyword.cloud_notm}} 지역에서 사용할 수 있는 {{site.data.keyword.cloudaccesstrailshort}}에서 사용 가능합니다.
+이벤트는 **프랑크푸르트** 위치에서 사용 가능합니다.
 
-{{site.data.keyword.cloud_notm}} Activity Tracker with LogDNA를 사용하여 인스턴스를 보십시오. 자세한 정보는 [이벤트 보기](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-view_events)를 참조하십시오.
+위치당 하나의 {{site.data.keyword.at_full_notm}} 인스턴스만 있습니다. 이벤트를 보려면 **EU-DE** 위치에 있는 {{site.data.keyword.at_full_notm}} 서비스의 웹 UI에 액세스해야 합니다. 자세한 정보는 [IBM Cloud UI를 통해 웹 UI 실행](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-launch#launch_step2)을 참조하십시오.
 
 ## 관련 링크
 {: #at-events-related}

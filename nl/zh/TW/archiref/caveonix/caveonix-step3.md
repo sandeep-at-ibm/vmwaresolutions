@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -27,8 +27,3 @@ subcollection: vmware-solutions
 - 所有服務的憑證
 
 在此步驟結束時，應用程式元件已安裝在必要的虛擬機器 (VM) 上。
-
-## 相關鏈結
-{: #caveonix-step3-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

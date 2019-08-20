@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -59,8 +59,3 @@ Containerisierte Anwendungen | Anwendungen, die die Anwendungsmodernisierung dur
 Watson | Im Falle dieser Referenzarchitektur und bei Acme Skateboards stellt Watson den AI-Service dar, der in der Concept-Car-Architektur verwendet wird.
 
 Die Anwendungsmigration, der Netzbetrieb und die Sicherheit stellen häufig die anspruchsvollsten Aspekte der Anwendungsmodernisierung dar. VMware vCenter Server on {{site.data.keyword.cloud_notm}}, VMware Hybridity, VMware NSX, {{site.data.keyword.cloud_notm}} Private und {{site.data.keyword.containerlong_notm}} bewältigen diese Herausforderungen und ermöglichen Ihnen das Erstellen widerstandsfähiger, sicherer und leistungsfähiger moderner Anwendungen.
-
-## Zugehörige Links
-{: #vcsiks-systemcontext-related}
-
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-07-26"
 
 keywords: vCenter Server NSX-T, NSX-T, tech specs vCenter Server NSX-T
 
@@ -74,6 +74,7 @@ La disponibilità e il prezzo delle configurazioni hardware standardizzate posso
 
 Puoi ordinare tre o più {{site.data.keyword.baremetal_short}} con una delle seguenti configurazioni:
 * **Skylake**: server di generazione 2-CPU Intel Skylake (Intel Xeon 4100/5100/6100 series) con il modello di CPU e la dimensione della RAM da te selezionati.  
+*  **Cascade**: server di generazione 2-CPU Intel Cascade (Intel Xeon 4200/5200/6200 series) con il modello di CPU e la dimensione della RAM da te selezionati.
 * **Broadwell**: server di generazione 4-CPU Intel Broadwell (Intel Xeon E7-4800 series) con il modello di CPU e la dimensione della RAM da te selezionati.
 
 Se intendi utilizzare l'archiviazione vSAN, la configurazione richiede almeno quattro {{site.data.keyword.baremetal_short}}.
@@ -137,7 +138,7 @@ Se scegli l'opzione NFS, viene ordinata una condivisione file da 2 TB e 4 IOPS/G
 ### Licenze (fornite da IBM o BYOL) e tariffe
 {: #vc_nsx-t_overview-license-and-fee}
 
-* VMware vSphere Enterprise Plus 6.7u1
+* VMware vSphere Enterprise Plus 6.7u2
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.4 (solo fornito da IBM)
 * (Per i cluster vSAN) VMware vSAN Advanced o Enterprise 6.6
@@ -156,7 +157,7 @@ Un Bare Metal Server con la configurazione presentata in [Specifiche tecniche pe
 ### Licenze e tariffe per i nodi di espansione
 {: #vc_nsx-t_overview-expansion-node-license-and-fee}
 
-* Un VMware vSphere Enterprise Plus 6.7u1
+* Un VMware vSphere Enterprise Plus 6.7u2
 * Un VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.4
 * Una tariffa per supporto e servizi
 * (Per i cluster vSAN) VMware vSAN Advanced o Enterprise 6.6

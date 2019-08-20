@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-06"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -68,8 +68,3 @@ Dieses Glossar enthält einige Beschreibungen für Begriffe, die zu der Caveonix
 Job: "Caveo-Protokolle". Wenn der Anomalie-Score bei > 90 liegt, markieren Sie das Asset für die Quarantäne und senden Sie eine Benachrichtigung an den Slack-Kanal.`
 Job: "Caveo-Netz". Wenn der Anomalie-Score bei > 95 liegt, markieren Sie das Asset für die Quarantäne und senden Sie sowohl eine E-Mail- als auch eine UI-Benachrichtigung.
 ```
-
-## Zugehörige Links
-{: #caveonix-terminology-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud}} mit Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

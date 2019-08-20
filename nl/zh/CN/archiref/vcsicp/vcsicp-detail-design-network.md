@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -127,8 +127,3 @@ ESG 和 vRouter 中的路由表填充方式取决于集成方法。请参阅“{
 *	用于从 VXLAN 网络访问权转换为公共访问权的 SNAT
 *	用于从 VXLAN 网络访问权转换为专用 {{site.data.keyword.cloud_notm}} 网络访问权的 SNAT。
 *	用于 {{site.data.keyword.icpfull_notm}} 集群 vIP 的 DNAT。
-
-## 相关链接
-{: #vcsicp-detail-design-network-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

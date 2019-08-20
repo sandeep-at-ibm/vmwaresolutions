@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-23"
 
 keywords: vCenter Server compliance, compliance info, vCenter Server policy
 
@@ -73,7 +73,7 @@ NSX Server 기본 인스턴스에 대해 생성된 NSX Manager 비밀번호는 �
 ## 고객 인스턴스 액세스에 대한 정책
 {: #vc_compl_info-policy-for-access-client-inst}
 
-{{site.data.keyword.vmwaresolutions_short}}로 제공되는 VMware vCenter Server 환경에서는 고객이 가상화 기능을 관리할 수 있는 VMware 관리 플랫폼 계층을 제공합니다. IBM Cloud for VMware 제품 및 서비스의 라이프사이클 전반에서 성공을 보장하기 위해 IBM 지원 센터의 도움이 필요할 수 있습니다. 대부분 IBM 지원 센터의 개입은 고객 요청(즉, 지원 티켓)으로 발생합니다. 그러나 드문 경우에 IBM 지원 센터에서 향후 발생할 수 있는 문제를 방지하기 위해 고객이 작성한 지원 티켓 없이 사전 예방적으로 지원할 수 있습니다. 이 액세스는 IBM Cloud 내부 지원 네트워크를 통해 이루어지며 IBM 지원 센터에서 열고 IBM Cloud SOC에서 지속적으로 모니터하는 지원 티켓을 통해 문서화됩니다. IBM 지원 센터에서는 고객의 사전 동의 없이 인스턴스 구성을 수정하지 않습니다. VMware 관리 컴포넌트 및/또는 IBM Cloud 관리 컴포넌트에 액세스하며 고객 가상 머신 또는 애플리케이션에는 액세스하지 않습니다.
+{{site.data.keyword.vmwaresolutions_short}}로 제공되는 VMware vCenter Server 환경에서는 고객이 가상화 기능을 관리할 수 있는 VMware 관리 플랫폼 계층을 제공합니다. {{site.data.keyword.cloud_notm}} for VMware 제품 및 서비스의 라이프사이클 전반에서 성공을 보장하기 위해 IBM 지원 센터의 도움이 필요할 수 있습니다. 대부분 IBM 지원 센터의 개입은 고객 요청(즉, 지원 티켓)으로 발생합니다. 그러나 드문 경우에 IBM 지원 센터에서 향후 발생할 수 있는 문제를 방지하기 위해 고객이 작성한 지원 티켓 없이 사전 예방적으로 지원할 수 있습니다. 이 액세스는 {{site.data.keyword.cloud_notm}} 내부 지원 네트워크를 통해 이루어지며 IBM 지원 센터에서 열고 {{site.data.keyword.cloud_notm}} SOC에서 지속적으로 모니터하는 지원 티켓을 통해 문서화됩니다. IBM 지원 센터에서는 고객의 사전 동의 없이 인스턴스 구성을 수정하지 않습니다. VMware 관리 컴포넌트 및/또는 {{site.data.keyword.cloud_notm}} 관리 컴포넌트에 액세스하며 고객 가상 머신 또는 애플리케이션에는 액세스하지 않습니다.
 
 ## 사전 예방적 지원
 {: #vc_compl_info-proactive-support}
@@ -83,14 +83,14 @@ NSX Server 기본 인스턴스에 대해 생성된 NSX Manager 비밀번호는 �
 
 * 인스턴스 또는 서비스의 초기 주문 또는 프로비저닝 중에 IBM 지원 센터에서 주문이 제대로 이행되는지 확인하기 위해 고객에게 사전 통지 없이 고객 인스턴스 및 정보에 액세스할 수 있습니다.
 * IBM 지원 센터에서는 주문, 프로비저닝 및 설치 프로세스 외에도 새 호스트 추가와 같은 인스턴스 라이프사이클 오퍼레이션을 적극적으로 모니터합니다.
-* IBM 지원 센터에서는 이미 발생했거나 향후 발생할 수 있는 문제를 해결하기 위해 고객 주문 세부사항 검토, 자동화 작업 다시 시작, 운영 체제 다시 로드 오퍼레이션 수행 또는 제공된 고객 IBM Cloud 사용자 이름 및 API 키를 사용하여 IBM Cloud 티켓 열기를 포함하여(단, 이에 한하지 않음) 다양한 조치를 취할 수 있습니다.
+* IBM 지원 센터에서는 이미 발생했거나 향후 발생할 수 있는 문제를 해결하기 위해 고객 주문 세부사항 검토, 자동화 작업 다시 시작, 운영 체제 다시 로드 오퍼레이션 수행 또는 제공된 고객 {{site.data.keyword.cloud_notm}} 사용자 이름 및 API 키를 사용하여 {{site.data.keyword.cloud_notm}} 티켓 열기를 포함하여(단, 이에 한하지 않음) 다양한 조치를 취할 수 있습니다.
 
 ### 고정 상태의 오퍼레이션을 위한 예방적 지원
 {: #vc_compl_info-proactive-support-for-steady-state-operations}
 
 * 드문 경우이지만 IBM 지원 센터에서 인스턴스 문제를 사전에 해결하거나 프로비저닝된 서비스 또는 컴포넌트의 기능을 확인하기 위해 고정 상태의 오퍼레이션 중에 고객 인스턴스에 액세스해야 할 수도 있습니다.
-* 이 액세스는 IBM Cloud 내부 지원 네트워크를 통해 이루어집니다. IBM 지원 센터에서는 고객의 사전 동의 없이 인스턴스 구성을 수정하지 않습니다.
-* VMware 관리 컴포넌트 및/또는 IBM Cloud 관리 컴포넌트에 액세스하며 고객 가상 머신 또는 애플리케이션에는 액세스하지 않습니다.
+* 이 액세스는 {{site.data.keyword.cloud_notm}} 내부 지원 네트워크를 통해 이루어집니다. IBM 지원 센터에서는 고객의 사전 동의 없이 인스턴스 구성을 수정하지 않습니다.
+* VMware 관리 컴포넌트 및/또는 {{site.data.keyword.cloud_notm}} 관리 컴포넌트에 액세스하며 고객 가상 머신 또는 애플리케이션에는 액세스하지 않습니다.
 
 ### 지원 티켓
 {: #vc_compl_info-support-tickets}
@@ -105,8 +105,8 @@ NSX Server 기본 인스턴스에 대해 생성된 NSX Manager 비밀번호는 �
 ## 고객 책임사항
 {: #vc_compl_info-client-responsibilities}
 
-* IBM에서 고객에게 환경의 보안을 더 강화하기 위해 조치를 취하도록 권장하지만 일부 사례는 IBM Cloud for VMware의 효과에 부정적인 영향을 미칠 수 있음에 주의해야 합니다.
-* 고객은 자신이 작성한 방화벽과 그에 따른 IBM Cloud for VMware 컴포넌트 간 통신에 부과된 제한사항에 대해 책임이 있습니다. 이러한 방화벽은 IBM 지원 센터에서 고객 인스턴스에 액세스하여 문제를 해결하는 데 방해가 될 수도 있습니다.
+* IBM에서 고객에게 환경의 보안을 더 강화하기 위해 조치를 취하도록 권장하지만 일부 사례는 {{site.data.keyword.cloud_notm}} for VMware의 효과에 부정적인 영향을 미칠 수 있음에 주의해야 합니다.
+* 고객은 자신이 작성한 방화벽과 그에 따른 {{site.data.keyword.cloud_notm}} for VMware 컴포넌트 간 통신에 부과된 제한사항에 대해 책임이 있습니다. 이러한 방화벽은 IBM 지원 센터에서 고객 인스턴스에 액세스하여 문제를 해결하는 데 방해가 될 수도 있습니다.
 * 고객 시스템의 데이터를 암호화하는 것은 전적으로 고객의 책임입니다.
 * 초기 배치 시 오퍼링의 자동화 및 고객 계정은 별도로 제공됩니다. 고객은 포털에서 IBM이 제공하는 모든 비밀번호를 변경할 수 있으며 변경하도록 권장됩니다.
 * vCenter 액세스 권한 및 인증 정보는 초기 배치 중에 작성되며 고객에게 제공됩니다. IBM 오퍼링 요구사항의 일부로 IBM 지원 센터에서는 고객에게 지원과 라이프사이클 관리를 제공하기 위해 관리 계층에 대한 전체 액세스 권한을 보유해야 합니다.

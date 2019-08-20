@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-23"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -105,8 +105,3 @@ Jane이 Stock Trader를 추가했고 Liberty에서 각 war 파일을 실행하�
 
 Todd는 변환 단계 중에 데이터 소스를 변경하지 않았습니다. Transformation Advisor는 WebSphere Application Server Network Deployment 데이터 소스 구성을 가져와서 Liberty 컨테이너의 server.xml에 추가합니다.
 {:important}
-
-## 관련 링크
-{: #vcscontent-stocktrmod-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

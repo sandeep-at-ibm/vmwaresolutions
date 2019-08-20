@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -186,8 +186,3 @@ VMware on {{site.data.keyword.cloud_notm}} 可以使用 IBM Cloud 的全球資�
 {: #vcsiks-overview-network-sec-compliance}
 
 符合嚴格業界準則時，{{site.data.keyword.cloud_notm}} 會為您完成工作，以符合真正的法規遵循。[{{site.data.keyword.cloud_notm}} 的法規遵循](https://www.ibm.com/cloud/compliance)提供安全及隱私權之特定法規遵循憑證、廣域法規、協調一致及架構的詳細資料。[{{site.data.keyword.containerlong_notm}} 的安全](/docs/containers?topic=containers-security#security)詳述 {{site.data.keyword.containerlong_notm}} 安全特性。
-
-## 相關鏈結
-{: #vcsiks-overview-network-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-12"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -39,7 +39,7 @@ O NSX Manager é implementado no cluster inicial. Além disso, o NSX Manager é 
 
 A automação do {{site.data.keyword.cloud}} implementa três Controladores NSX dentro do cluster inicial. Os controladores são designados a um endereço IP suportado pela VLAN por meio da sub-rede móvel privada que é designada a componentes de gerenciamento.
 
-### NSX Edge / DLR
+### NSX Edge e Distributed Logical Router (DLR)
 {: #vcsicp-arch-overview-solution-nsx-edge}
 
 Os pares do NSX Edge Services Gateway (ESG) são implementados. Em todos os casos, um par de gateway é usado para o tráfego de saída dos componentes de automação que residem na rede privada. Para o vCenter Server e o {{site.data.keyword.icpfull_notm}}, um segundo gateway, conhecido como a borda gerenciada por icp, é implementado e configurado com um uplink para a rede pública e uma interface designada à rede privada. Qualquer componente NSX necessário, como o Distributed Logical Router (DLR), os comutadores lógicos e os firewalls, pode ser configurado pelo administrador. O [Guia de rede do vCenter Server](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro) fornece mais detalhes sobre o design da rede.
@@ -145,12 +145,14 @@ As APIs do CAM são divididas em mais de um contêiner.
 ### Helm
 {: #vcsicp-arch-overview-solution-helm}
 
-Um contêiner com os binários necessários para implementar gráficos helm em clusters do Kubernetes.
+Um contêiner com os arquivos binários necessários para implementar gráficos helm em
+clusters do Kubernetes.
 
 ### Terraform
 {: #vcsicp-arch-overview-solution-terraform}
 
-Um contêiner com os binários necessários para implementar recursos do Terraform em mais de uma nuvem.
+Um contêiner com os arquivos binários necessários para implementar recursos do Terraform
+em mais de uma nuvem.
 
 ### Registros
 {: #vcsicp-arch-overview-solution-logs}
@@ -176,8 +178,3 @@ Uma interface gráfica com o usuário para criar modelos do Terraform, com um re
 {: #vcsicp-arch-overview-solution-maria-db}
 
 O banco de dados para o aplicativo de designer modelo.
-
-## Links relacionados
-{: #vcsicp-arch-overview-solution-related}
-
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

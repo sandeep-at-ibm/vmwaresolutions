@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-07-16"
 
 subcollection: vmware-solutions
 
@@ -23,7 +23,7 @@ subcollection: vmware-solutions
 
 Para ativar a criptografia do vSphere ou a criptografia do vSAN usando o KMIP for VMware on {{site.data.keyword.cloud_notm}}, é necessário concluir as tarefas a seguir:
 
-1. [Ativando sua conta para usar Terminais em serviço usando a CLI do IBM Cloud](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps).
+1. [Ative os terminais em serviço em sua conta](/docs/account?topic=account-vrf-service-endpoint#service-endpoint).
 2. Crie uma instância do gerenciador de chave, usando o [IBM Key Protect](/docs/services/key-protect?topic=key-protect-getting-started-tutorial) ou o [IBM Cloud Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-get-started#get-started). Se você estiver usando o Hyper Protect Crypto Services, certifique-se de [inicializar sua instância criptográfica](/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-hsm) para que o Hyper Protect Crypto Services possa fornecer funções relacionadas à chave.
 3. Crie um customer root key (CRK) dentro de sua instância do gerenciador de chave.
 4. Crie um [ID do serviço e uma chave de API](/docs/iam?topic=iam-serviceidapikeys) do Identity and Access Management (IAM) para uso com o KMIP for VMware. Conceda a esse ID de serviço acesso de visualizador e acesso de gravação de serviço para a instância do gerenciador de chave.

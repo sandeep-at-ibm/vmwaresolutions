@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -19,9 +19,3 @@ Die {{site.data.keyword.vmwaresolutions_full}}-Automatisierung fordert ein zusä
 - Herstellen einer Verbindung zu vCenter und zum NSX-Manager über den BCR.
 - Herstellen einer Verbindung zu fernen Kollektoren, sei es über VXLANs oder Off-Premises-Hosting.
 - Ermöglichen der Verwaltung des IP-Adressbereichs durch den Client bei der Skalierung.
-
-
-## Zugehörige Links
-{: #caveonix-step2-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} mit Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

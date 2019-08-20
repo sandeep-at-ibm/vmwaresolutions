@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-30"
 
 keywords: vSphere upgrade, NSX upgrade, PSC upgrade
 
@@ -60,7 +60,7 @@ Effectuez les étapes suivantes pour commander une jumpbox VSI.
 Sautez la première étape si vous avez déjà une jumpbox VSI dans votre environnement.
 {:note}
 
-1. Commandez une VSI horaire ou mensuelle sur le [portail client de l'infrastructure IBM Cloud](https://control.softlayer.com/){:external}. Commandez les attributs suivants :
+1. Commandez une VSI horaire ou mensuelle sur le [portail client de l'infrastructure {{site.data.keyword.cloud_notm}}](https://control.softlayer.com/){:external}. Commandez les attributs suivants :
   * Windows 2012 ou 2016 Server Standard
   * 2 unités centrales
   * 16 Go de mémoire
@@ -171,7 +171,7 @@ Pour les instances liées à vCenter Server, bien qu'il soit recommandé de mett
 #### Procédure de mise à niveau de vCenter
 {: #vc_vsphere_upgrade-procedure-vcenter-procedure}
 
-1. Connectez-vous à la fois à l'interface utilisateur PSC, ``https://<psc-fqdn>:5480``, et à l'interface de gestion des dispositifs vCenter pour confirmer si le mot de passe root a expiré ou pas. Si la date d'expiration du mot de passe est **1970** alors il a expiré et vous devez activer SSH et l'interpréteur de commandes bash dans l'interface utilisateur de gestion des dispositifs PSC.
+1. Connectez-vous à la fois à l'interface utilisateur PSC, `https://<psc-fqdn>:5480`, et à l'interface de gestion des dispositifs vCenter pour confirmer si le mot de passe root a expiré ou pas. Si la date d'expiration du mot de passe est **1970** alors il a expiré et vous devez activer SSH et l'interpréteur de commandes bash dans l'interface utilisateur de gestion des dispositifs PSC.
     1. Effectuez une connexion SSH dans PSC avec l'ID et le mot de passe root. Même si le mot de passe est expiré, il vous permet de vous connecter.
     2. Utilisez la commande shell **passwd** pour définir un nouveau mot de passe root pour le PSC et vCenter.
     3. Sauvegardez les mots de passe qui ont été affichés sur la console {{site.data.keyword.vmwaresolutions_short}} ou qui vous ont été fournis par le support IBM. Ces mots de passe seront réutilisés ultérieurement lors de la mise à niveau des dispositifs.
@@ -320,7 +320,7 @@ Pour plus d'informations, voir [Enhanced vMotion Compatibility (EVC) processor s
 ## Que se passe-t-il après la mise à niveau du logiciel vCenter Server vSphere ?
 {: #vc_vsphere_upgrade-results}
 
-Une fois votre mise à niveau terminée, l'exécution du bilan de santé du vSAN peut faire apparaître des avertissements concernant les mises à jour du firmware pour les contrôleurs RAID et réseau fournis par IBM Cloud. Une fois que vous avez déterminé les hôtes qui ont besoin de mises à jour du firmware, ouvrez un ticket auprès du support IBM pour que le firmware soit mis à jour vers les versions recommandées.
+Une fois votre mise à niveau terminée, l'exécution du bilan de santé du vSAN peut faire apparaître des avertissements concernant les mises à jour du firmware pour les contrôleurs RAID et réseau fournis par {{site.data.keyword.cloud_notm}}. Une fois que vous avez déterminé les hôtes qui ont besoin de mises à jour du firmware, ouvrez un ticket auprès du support IBM pour que le firmware soit mis à jour vers les versions recommandées.
 
 1. Dans l'interface utilisateur de vCenter, sélectionnez le cluster contenant le vSAN avec l'état de santé à vérifier.
 2. Sélectionnez l'onglet **Monitor** puis l'onglet **vSAN** .

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-06"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -68,8 +68,3 @@ Ce glossaire fournit quelques descriptions de termes propres à la solution Cave
 Si le score d'anomalie du travail "Caveo Logs" est > 90, alors mettre en quarantaine l'actif et envoyer une notification au canal Slack.`
 Si le score d'anomalie du travail "Caveo Network" est > 95, alors mettre en quarantaine l'actif et envoyer une notification par courrier électronique ainsi qu'une notification sur l'interface utilisateur.
 ```
-
-## Liens connexes
-{: #caveonix-terminology-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-07-26"
 
 keywords: vCenter Server NSX-T, NSX-T, tech specs vCenter Server NSX-T
 
@@ -73,7 +73,8 @@ La disponibilité et la tarification des configurations matérielles normalisée
 {: #vc_nsx-t_overview-bare-metal}
 
 Vous pouvez commander trois serveurs {{site.data.keyword.baremetal_short}} ou plus dans l'une des configurations suivantes :
-* **Skylake** : Génération Intel Skylake 2 UC (série Intel Xeon 4100/5100/6100) avec le modèle d'UC et la taille de mémoire RAM que vous avez sélectionnés.  
+* **Skylake** : serveurs des générations Intel Skylake 2 UC (série Intel Xeon 4100/5100/6100) avec le modèle d'UC et la taille de mémoire RAM que vous avez sélectionnés.  
+*  **Cascade** : serveurs des générations Intel Cascade à 4 UC (série Intel Xeon 4200/5200/6200) avec le modèle d'UC et la taille de mémoire RAM que vous avez sélectionnés.
 * **Broadwell** : serveurs des générations Intel Broadwell à 4 UC (Intel série Xeon E7-4800) avec vos modèle d'UC et taille de RAM sélectionnés.
 
 Si vous prévoyez d'utiliser un stockage vSAN, la configuration requiert un minimum de quatre serveurs {{site.data.keyword.baremetal_short}}.
@@ -137,7 +138,7 @@ Si vous sélectionnez l'option NFS, un partage de fichiers de 2 To et 4 IOPS/Go 
 ### Licences (fournies par IBM ou BYOL) et frais
 {: #vc_nsx-t_overview-license-and-fee}
 
-* VMware vSphere Enterprise Plus 6.7u1
+* VMware vSphere Enterprise Plus 6.7u2
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Edition (Base, Advanced ou Enterprise) 6.4 (fourni par IBM uniquement)
 * (Pour les clusters vSAN) VMware vSAN Advanced ou Enterprise 6.6
@@ -156,7 +157,7 @@ Un serveur bare metal doté de la configuration présentée dans [Spécification
 ### Licences et frais pour les noeuds d'extension
 {: #vc_nsx-t_overview-expansion-node-license-and-fee}
 
-* Une pour VMware vSphere Enterprise Plus 6.7u1
+* Une pour VMware vSphere Enterprise Plus 6.7u2
 * Une pour VMware NSX Service Providers Edition (Base, Advanced ou Enterprise) 6.4
 * Frais de support et de services
 * (Pour les clusters vSAN) VMware vSAN Advanced ou Enterprise 6.6

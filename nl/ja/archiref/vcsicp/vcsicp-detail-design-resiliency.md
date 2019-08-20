@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -118,4 +118,3 @@ VMware on {{site.data.keyword.cloud_notm}} は、IBM Cloud の世界規模のデ
 * [既存のワーカー・プールのサイズを変更してワーカー・ノードを追加する](/docs/containers?topic=containers-clusters)
 * [How to back up and restore {{site.data.keyword.cloud_notm}} Private](https://medium.com/ibm-cloud/how-to-backup-and-restore-ibm-cloud-private-part-1-b6300dc1d7d8)
 * [{{site.data.keyword.icpfull_notm}} バックアップ GitHub](https://github.com/ibm-cloud-architecture/icp-backup/)
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

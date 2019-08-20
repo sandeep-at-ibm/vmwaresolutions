@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-06"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -68,8 +68,3 @@ subcollection: vmware-solutions
 作业：“Caveo 日志”异常分数大于 90 时，将资产标记为隔离，并向 Slack 通道发送通知。`
 作业：“Caveo 网络”异常分数大于 95 时，隔离资产并发送电子邮件通知，另外还发送 UI 通知。
 ```
-
-## 相关链接
-{: #caveonix-terminology-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

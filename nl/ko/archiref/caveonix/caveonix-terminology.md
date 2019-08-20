@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-06"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -68,8 +68,3 @@ subcollection: vmware-solutions
 작업: "Caveo 로그" 이상 항목 점수가 > 90이면 격리하도록 자산에 표시히고 슬랙 채널에 알림을 보냅니다.`
 작업: "Caveo 네트워크" 이상 항목 점수가 > 95이면 자산을 격리하고 이메일 알림을 보내며 UI 알림도 보냅니다.
 ```
-
-## 관련 링크
-{: #caveonix-terminology-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

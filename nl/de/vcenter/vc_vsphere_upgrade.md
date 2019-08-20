@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-30"
 
 keywords: vSphere upgrade, NSX upgrade, PSC upgrade
 
@@ -60,7 +60,7 @@ Führen Sie die folgenden Schritte aus, um einen VSI-Jump-Box-Server zu bestelle
 Überspringen Sie den ersten Schritt, wenn Sie bereits über einen VSI-Jump-Box-Server in Ihrer Umgebung verfügen.
 {:note}
 
-1. Bestellen Sie über das [Kundenportal der IBM Cloud-Infrastruktur](https://control.softlayer.com/){:external} eine VSI auf stündlicher oder monatlicher Basis. Bestellen Sie die folgenden Attribute:
+1. Bestellen Sie über das Kundenportal der [{{site.data.keyword.cloud_notm}}-Infrastruktur](https://control.softlayer.com/){:external} eine VSI auf stündlicher oder monatlicher Basis. Bestellen Sie die folgenden Attribute:
   * Windows 2012 oder 2016 Server Standard
   * 2 CPUs
   * 16 GB Speicher
@@ -171,7 +171,7 @@ Obwohl bei verknüpften vCenter Server-Instanzen empfohlen wird, für alle vCent
 #### Vorgehensweise beim Upgrade von vCenter
 {: #vc_vsphere_upgrade-procedure-vcenter-procedure}
 
-1. Melden Sie sich bei PSC (``https://<psc-fqdn>:5480``) und den vCenter-Benutzerschnittstellen für das Appliance-Management an, um zu überprüfen, ob das Rootkennwort abgelaufen ist. Wenn das Ablaufdatum für das Kennwort **1970** lautet, ist es abgelaufen, und Sie müssen SSH und die Bash-Shell in der PSC-Benutzerschnittstelle für das Appliance-Management aktivieren.
+1. Melden Sie sich bei PSC (`https://<psc-fqdn>:5480`) und den vCenter-Benutzerschnittstellen für das Appliance-Management an, um zu überprüfen, ob das Rootkennwort abgelaufen ist. Wenn das Ablaufdatum für das Kennwort **1970** lautet, ist es abgelaufen, und Sie müssen SSH und die Bash-Shell in der PSC-Benutzerschnittstelle für das Appliance-Management aktivieren.
     1. Greifen Sie über SSH mit der Root-ID und dem entsprechenden Kennwort auf PSC zu. Auch wenn das Kennwort abgelaufen ist, können Sie sich anmelden.
     2. Verwenden Sie den Shell-Befehl **passwd**, um ein neues Rootkennwort für PSC und vCenter festzulegen.
     3. Speichern Sie die Kennwörter, die in der {{site.data.keyword.vmwaresolutions_short}}-Konsole angezeigt werden oder die Sie von IBM Support erhalten haben. Diese Kennwörter werden später wiederverwendet, wenn Sie ein Upgrade für die Appliances durchführen.
@@ -321,7 +321,7 @@ Weitere Informationen hierzu finden Sie im Abschnitt [Enhanced vMotion Compatibi
 ## Ergebnisse nach dem Upgrade von vCenter Server vSphere-Software
 {: #vc_vsphere_upgrade-results}
 
-Wenn Sie die vSAN-Statusprüfung nach Abschluss des Upgrades ausführen, können Warnungen zu Firmware-Updates für die von IBM gelieferten RAID- und Netzcontroller angezeigt werden. Nachdem Sie die Hosts ermittelt haben, für die Firmware-Updates erforderlich sind, öffnen Sie ein Ticket bei IBM Support, um die Firmware auf die empfohlenen Versionen zu aktualisieren.
+Wenn Sie die vSAN-Statusprüfung nach Abschluss des Upgrades ausführen, können Warnungen zu Firmware-Updates für die von {{site.data.keyword.cloud_notm}} gelieferten RAID- und Netzcontroller angezeigt werden. Nachdem Sie die Hosts ermittelt haben, für die Firmware-Updates erforderlich sind, öffnen Sie ein Ticket bei IBM Support, um die Firmware auf die empfohlenen Versionen zu aktualisieren.
 
 1. Wählen Sie in der vCenter-Benutzerschnittstelle den Cluster aus, der die vSAN-Instanz enthält, deren Status überprüft werden soll.
 2. Wählen Sie die Registerkarte **Überwachen** und anschließend die Registerkarte **vSAN** aus.

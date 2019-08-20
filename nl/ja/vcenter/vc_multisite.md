@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-16"
 
 keywords: vCenter Server multi-site, multi-site configuration, multi-site deployment vCenter Server
 
@@ -32,16 +32,16 @@ vCenter Server インスタンスのマルチサイト構成は、V2.0 以降の
 マルチサイト・デプロイメントは、以下のコンポーネントで構成されます。
 
 * **プライマリー・インスタンス**: VMware vCenter Server プライマリー・インスタンスの構成は次のとおりです。
-  *  Microsoft Active Directory (AD) および DNS (ドメイン・ネーム・システム) ルート・ドメイン
-  *  vCenter Server サブドメイン
-  *  SSO (シングル・サインオン) ドメイン
-  *  SSO サイト名
+  * Microsoft Active Directory (AD) および DNS (ドメイン・ネーム・システム) ルート・ドメイン
+  * vCenter Server サブドメイン
+  * SSO (シングル・サインオン) ドメイン
+  * SSO サイト名
+  * V2.8 以降でデプロイされたプライマリー・インスタンスの場合: 組み込み Platform Services Controller (PSC) を備えた vCenter Server Appliance (vCSA)
 * **セカンダリー・インスタンス**: プライマリー・インスタンスにリンクされた 1 つ以上の vCenter Server セカンダリー・インスタンス。構成は次のとおりです。
-   *  SSO サイト名
-   *  プライマリー・インスタンスのルート・ドメインにリンクされた DNS サブドメイン
-   *  プライマリー・インスタンスとセカンダリー・インスタンスの AD 仮想マシン間にセットアップされた DNS および AD のレプリケーション
-   *  V2.8 以降でデプロイされたプライマリー・インスタンスの場合: 組み込み Platform Services Controller (PSC) を備えた vCenter Server Appliance (vCSA) がデプロイされ、構成されます
-   *  セカンダリー・インスタンスの VMware vCenter には、プライマリー・インスタンスの vCenter との拡張リンク・モードがセットアップされます
+  * SSO サイト名
+  * プライマリー・インスタンスのルート・ドメインにリンクされた DNS サブドメイン
+  * プライマリー・インスタンスとセカンダリー・インスタンスの AD 仮想マシン間にセットアップされた DNS および AD のレプリケーション
+  * セカンダリー・インスタンスの VMware vCenter には、プライマリー・インスタンスの vCenter との拡張リンク・モードがセットアップされます
 
 ## vCenter Server のマルチサイト・デプロイメント
 {: #vc_multisite-deployment}

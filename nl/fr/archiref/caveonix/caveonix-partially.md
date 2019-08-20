@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -60,8 +60,3 @@ Tableau 3. Paramètres du collecteur distant
 |Disque	|1 To|
 |Système d'exploitation	|CentOS 7|
 |Composants d'application installés	|Collecteur distant|
-
-## Liens connexes
-{: #caveonix-partially-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

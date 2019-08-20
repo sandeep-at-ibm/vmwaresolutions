@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -54,7 +54,7 @@ Vous pouvez maintenant utiliser l'interface utilisateur Web de l'optimiseur de r
 ### Régulation de la bande passante de migration
 {: #hcxclient-monitoring-mig-bandwidth}
 
-Avant de migrer les machines virtuelles, vous devez effectuer une évaluation de la liaison réseau utilisée. A l'aide des ingénieurs réseau, travaillez sur le réseau qui contient l'instance source de vSphere ou examinez l'utilisation hebdomadaire et mensuelle du trafic. Limitez la bande passante disponible pour les migrations si ce trafic passe à travers une liaison critique pour votre entreprise, surtout si cette liaison est inférieure à 1 Gbits/s. Utilisez le côté possédant une bande passante plus restreinte (généralement le côté client).
+Avant de migrer les machines virtuelles, vous devez effectuer une évaluation de la liaison réseau utilisée. A l'aide des spécialistes réseau, travaillez sur le réseau qui contient l'instance source de vSphere ou examinez l'utilisation hebdomadaire et mensuelle du trafic. Limitez la bande passante disponible pour les migrations si ce trafic passe à travers une liaison critique pour votre entreprise, surtout si cette liaison est inférieure à 1 Gbits/s. Utilisez le côté possédant une bande passante plus restreinte (généralement le côté client).
 
 Utilisez cette procédure lorsque vous déployez les composants de flotte dans l'interface client HCX. Après le déploiement, vous devez aller dans l'interface utilisateur de l'optimiseur de réseau WAN.
 

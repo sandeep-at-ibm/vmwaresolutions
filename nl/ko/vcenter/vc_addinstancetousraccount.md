@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-23"
 
 keywords: vCenter Server migrate instance, add account vCenter Server, migrate cloud account
 
@@ -49,4 +49,4 @@ IaaS 전용 계정을 PaaS 계정에 연결하는 방법에 대한 자세한 정
 
 * [IAM에서 사용자 액세스 관리](/docs/services/vmwaresolutions/services?topic=vmware-solutions-iam#iam)
 * [서비스 및 리소스에 액세스하기 위한 사용자 초대](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-iamuserinvite)
-* [IBM Cloud IAM 개념](/docs/iam?topic=iam-iamoverview)
+* [{{site.data.keyword.cloud_notm}} IAM 개념](/docs/iam?topic=iam-iamoverview)

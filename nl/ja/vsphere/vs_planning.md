@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-20"
+lastupdated: "2019-08-06"
 
 keywords: planning vSphere, data center, vSphere data centers
 
@@ -34,6 +34,11 @@ ESXi サーバーがデプロイされた後は、お客様が、環境をセッ
 {: #vs_planning-dc-availability}
 
 vSphere のデプロイメントには、物理インフラストラクチャーに関する厳密な要件があります。 そのため、要件を満たす {{site.data.keyword.CloudDataCents_notm}}にしかクラスターはデプロイできません。 vSphere のデプロイメントには、以下の {{site.data.keyword.CloudDataCent_notm}}を使用可能です。
+
+Cascade Lake {{site.data.keyword.baremetal_short}} は、マルチゾーン領域
+{{site.data.keyword.CloudDataCents_notm}} で使用可能です。詳しくは、[マルチゾーン領域 (MZR) の概要
+](/docs/infrastructure/loadbalancer-service?topic=loadbalancer-service-multi-zone-region-mzr-overview) を参照してください。
+
 
 vSAN コンポーネントを選択した場合は、SSD (ソリッド・ステート・ディスク) の使用可否によってロケーション・リストがフィルタリングされます。
 {:note}

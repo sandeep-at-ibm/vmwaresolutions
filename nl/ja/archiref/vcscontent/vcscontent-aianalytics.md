@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -21,9 +21,10 @@ Stock Trader をエンリッチするという段階は、一度踏めば済む�
 ## AI Watson Tone Analyzer
 {: #vcscontent-aianalytics-ai-watson}
 
-以下の例は、アプリケーションをエンリッチする簡単な方法ですが、これは見かけによらず強力です。 Jane は [AI](https://cloud.ibm.com/catalog/?category=ai) サービスや [分析](https://cloud.ibm.com/catalog/?category=analytics)サービスを求めて [{{site.data.keyword.cloud}} カタログ](https://cloud.ibm.com/catalog/)を閲覧し、カタログに豊富なコンテンツがあることを知りました。
+以下の例は、アプリケーションをエンリッチする簡単な方法ですが、これは見かけによらず強力です。 Jane は [AI](https://cloud.ibm.com/catalog?category=ai) サービスや [分析](https://cloud.ibm.com/catalog?category=analytics)サービスを求めて [{{site.data.keyword.cloud}} カタログ](https://cloud.ibm.com/catalog)を閲覧し、カタログに豊富なコンテンツがあることを知りました。
 
 Jane が [Tone Analyzer](https://cloud.ibm.com/catalog/services/tone-analyzer) を選んで標準プランを選択すると、呼び出すための資格情報が提供されました。
+
 Jane は Stock Trader をリファクタリングし、Tone Analyzer 用の Kubernetes シークレットを作成するだけです。 このように、プランや地域を変更してもコードを再作成する必要はありません。
 
 リファクタリングのおかげで、Jane はユーザー・エクスペリエンスを中断することなく、さまざまなユーザー・インターフェース・フレームワークを試せました。 その結果、ユーザー・フィードバックのトーンを理解するために使用できる新しいユーザー・インターフェースを用意できました。
@@ -50,8 +51,3 @@ Stock Service が変わったことに気が付いたでしょうか。
 今では、株式サービスを変更しても、自分で作成した簡単な API へのマップ方法を変えるだけでよく、コードの再起動さえ不要になったので、Jane はたいへん喜んでいます。 Stock Trader ソリューションは、変更など何もなかったかのように、同じ API にデータを要求し続けていました。 すべての API 変更は水面下で行われます。
 
 さらに、API Connect でのモニターと計測により、Jane は自分の簡易 API をだれが使用しているかを追跡できます。
-
-## 関連リンク
-{: #vcscontent-aianalytics-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

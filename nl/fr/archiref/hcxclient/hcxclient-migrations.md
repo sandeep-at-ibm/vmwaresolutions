@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -36,9 +36,9 @@ La fonctionnalité vMotion de HCX étend la capacité de vSphere vMotion pour fo
 ### Concepts et pratiques recommandées pour vMotion
 {: #hcxclient-migrations-best-practices-vmotion}
 
-HCX est essentiellement un proxy bidirectionnel vMotion. Chaque instance de HCX émule un seul hôte ESXi dans le centre de données vSphere, en dehors de tout cluster qui est lui-même un "front" pour le composant de flotte de la passerelle de cloud (CGW). Un hôte proxy apparaît pour chaque site HCX qui est lié au site actuellement consulté. Lorsqu'une vMotion est initiée vers un hôte distant, l'hôte ESXi local va transférer cette machine virtuelle vers l'hôte ESXi proxy local qui fait face à la passerelle CGW et qui maintient également un tunnel crypté avec la passerelle CGW du côté distant.
+HCX est essentiellement un proxy bidirectionnel vMotion. Chaque instance de HCX émule un seul hôte ESXi dans le centre de données vSphere, en dehors de tout cluster qui est lui-même un "front" pour le composant de flotte de la passerelle de cloud (CGW). Un hôte proxy apparaît pour chaque site HCX qui est lié au site actuellement consulté. Lorsqu'une vMotion est initiée vers un hôte distant, l'hôte ESXi local va migrer cette machine virtuelle vers l'hôte ESXi proxy local qui fait face à la passerelle CGW et qui maintient également un tunnel crypté avec la passerelle CGW du côté distant.
 
-En même temps, une migration vMotion est lancée de l'hôte proxy ESXi distant vers l'hôte ESXi physique vSphere de destination, alors qu'il reçoit les données de la passerelle CGW source via le tunnel. Lorsqu'une migration vMotion est utilisée, contrairement à l'option de migration en bloc, une seule opération de migration de machine virtuelle est exécutée à la fois. C'est pourquoi, pour la migration d'un grand nombre de machines virtuelles, il est recommandé d'utiliser vMotion uniquement lorsque les temps d'arrêt ne sont pas envisageables ou s'il existe un risque de redémarrage de la VM. Cependant, comme pour la vMotion standard, la machine virtuelle peut être sous tension pendant le processus.
+Une migration vMotion est lancée de l'hôte proxy ESXi distant vers l'hôte ESXi physique vSphere de destination, alors qu'il reçoit les données de la passerelle CGW source via le tunnel. Lorsqu'une migration vMotion est utilisée, contrairement à l'option de migration en bloc, une seule opération de migration de machine virtuelle est exécutée à la fois. C'est pourquoi, pour la migration d'un grand nombre de machines virtuelles, il est recommandé d'utiliser vMotion uniquement lorsque les temps d'arrêt ne sont pas envisageables ou s'il existe un risque de redémarrage de la VM. Cependant, comme pour la vMotion standard, la machine virtuelle peut être sous tension pendant le processus.
 
 Il a été constaté qu'une seule vMotion peut atteindre environ 1,7 Gbits/s sur le LAN et 300 à 400 Mbits/s sur le WAN grâce à l'optimiseur de réseau WAN. Cela ne signifie pas que 1,7 Gbits/s sur le réseau LAN équivaut à 400 Mbits/s sur le réseau WAN grâce à l'optimiseur de réseau WAN, mais uniquement que ces valeurs maximales ont été observées dans des environnements spécifiques. L'environnement sur lequel cela a été observé consistait en un réseau LAN vMotion de 10 Go et une liaison Internet montante de 1 Go, partagés avec le trafic Web de production.
 
@@ -121,7 +121,7 @@ Après la migration, les volumes iSCSI peuvent être dupliqués avec le système
 - Bande passante (~1 Gbits/s pour un réseau étendu)
 - Bande passante sous-jacente de la liaison
 
-Après le cycle de vie de la migration, testez les applications de développement ou de préproduction avant de passer en production. La QoS peut être utilisée pour le trafic tunnel sous-jacent (udp 500/4500) entre les dispositifs L2C de HCX qui prennent en charge des réseaux L2 étendus sensibles à la latence.
+Après le cycle de vie de la migration, testez les applications de développement ou de préproduction avant de passer en production. La QoS (qualité de service) peut être utilisée pour le trafic tunnel sous-jacent (UDP 500/4500) entre les dispositifs L2C de HCX qui prennent en charge des réseaux L2 étendus sensibles à la latence.
 
 ## Basculement du réseau
 {: #hcxclient-migrations-network-swing}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-23"
 
 keywords: HTKC WebGUI, HTKC console, enable internet HTKC
 
@@ -63,7 +63,7 @@ Da bei rein privaten vCenter Server-Umgebungen VMware NSX Edge Services Gateway 
 1. Führen Sie die Schritte 1 - 3 der vorherigen Prozedur aus.
 2. Klicken Sie auf **Einstellungen** und danach auf **Schnittstellen**. Notieren Sie die IP-Adresse für den privaten Uplink. Diese Adresse wird zum neuen Standardgateway.
 3. Klicken Sie auf **Home > Hosts und Cluster** und suchen Sie die virtuellen HyTrust-Maschinen. Klicken Sie mit der rechten Maustaste auf eine der virtuellen Maschinen und klicken Sie auf **Konsole öffnen**.
-4. Melden Sie sich an der Konsole mithilfe der Konsolenberechtigungsnachweise an, die auf der Detailseite des Service 'HyTrust KeyControl on IBM Cloud' in der {{site.data.keyword.vmwaresolutions_short}}-Konsole angegeben sind.
+4. Melden Sie sich an der Konsole mithilfe der Konsolenberechtigungsnachweise an, die auf der Detailseite des Service 'HyTrust KeyControl on {{site.data.keyword.cloud_notm}}' in der {{site.data.keyword.vmwaresolutions_short}}-Konsole angegeben sind.
 5. Klicken Sie zum Abrufen der IP-Adresse des aktuellen Standardgateways der virtuellen Maschine auf **Netzeinstellungen verwalten > Aktuelle Netzkonfiguration anzeigen**. Notieren Sie die IP-Adresse, die für **Gateway** aufgelistet ist. Diese Adresse wird das Gateway, das für die statische Route verwendet wird.
 6. Klicken Sie zum Festlegen einer statischen Route für die virtuelle Maschine auf **Netzeinstellungen verwalten > Statische Routen verwalten > Statische Route hinzufügen**. Legen Sie für **Netzadresse** den Wert `10.0.0.0/8` und für **Gateway** die IP-Adresse fest, die Sie im vorherigen Schritt notiert haben.
 7. Klicken Sie zum Festlegen der IP-Adresse für das Standardgateway für die VM auf **Netzeinstellungen verwalten > Aktuelle Netzkonfiguration ändern**. Falls eine Warnung auftritt, klicken Sie auf **OK** und anschließend auf **Angepasste Konfiguration**. Geben Sie im Feld **Gateway** die IP-Adresse für den privaten Uplink ein, die Sie in Schritt 2 notiert haben, und klicken Sie auf **OK**. Warten Sie, bis die neue Netzkonfiguration installiert ist und die Netzservices erneut gestartet werden.

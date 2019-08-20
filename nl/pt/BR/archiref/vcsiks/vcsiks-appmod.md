@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -24,7 +24,7 @@ Essa arquitetura híbrida permite à Acme Skateboards:
 - Use o Cloud Automation Manager (CAM) para o infrastructure as code (IaC) de script para editar e orquestrar serviços que são feitos por meio de MVs e contêineres para integrar às suas cadeias de ferramentas do DevOps e à sua solução ITSM.
 
 A arquitetura de referência tem os componentes principais a seguir:
-- **Virtualização no local** - a virtualização no local é um cluster do VMware que hospeda atualmente as MVs do Acme Skateboards. Essas MVs estão hospedando atualmente os aplicativos a serem modernizados. É necessário que esse cluster atenda aos pré-requisitos da [Arquitetura da solução VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro) para que ele possa executar o HCX.
+- **Virtualização no local** - a virtualização no local é um cluster do VMware que hospeda atualmente as MVs do Acme Skateboards. Essas MVs estão hospedando atualmente os aplicativos a serem modernizados. Esse cluster deve atender aos pré-requisitos da [Arquitetura da solução VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro) para que ele possa executar o HCX.
 
 O HCX amplia as redes no local para o {{site.data.keyword.cloud_notm}} permitindo que os clientes migrem MVs para a instância do VMware vCenter Server on {{site.data.keyword.cloud_notm}} que é executada no {{site.data.keyword.cloud_notm}} e de volta se necessário.
 - **{{site.data.keyword.cloud_notm}} for VMware Solutions** - a instância do vCenter Server fornece os blocos de construção fundamentais do VMware, como vSphere, vCenter Server, NSX-V e opções de armazenamento que incluem o armazenamento do vSAN ou do Endurance do {{site.data.keyword.cloud_notm}}, necessários para implementar automaticamente uma solução VMware Software Defined Data Center (SDDC). O cluster do VMware é o destino para as MVs migradas e alguns dos aplicativos modernizados em contêineres hospedados no {{site.data.keyword.icpfull_notm}}. Os componentes principais no vCenter Server são conforme a seguir:
@@ -90,8 +90,3 @@ uma chave. Esses segredos são criptografados por padrão e asseguram que o aces
 Os clientes voltados para plataformas de aplicativos nativos de nuvem, como o {{site.data.keyword.icpfull_notm}} e o {{site.data.keyword.containerlong_notm}} concentram-se na velocidade e na inovação e nem sempre têm segurança e rede em mente. O tempo de maturação do aplicativo diminuirá se ele precisar esperar até que a rede ou as equipes de segurança possam pedir serviços como balanceadores de carga, firewalls, comutadores e roteadores.
 
 Essa arquitetura de referência mostra como o VCS, o {{site.data.keyword.icpfull_notm}} e o {{site.data.keyword.containerlong_notm}} movem o Acme Skateboards de forma segura pela jornada de modernização do aplicativo.
-
-## Links relacionados
-{: #vcsiks-appmod-related}
-
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

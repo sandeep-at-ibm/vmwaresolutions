@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-22"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -67,9 +67,7 @@ CPU|2 - 56 个核心|4 - 28 个核心
 ## 虚拟结构
 {: #vcsiks-arch-overview-infrastructure-virtual-structure}
 
-![{{site.data.keyword.containerlong_notm}} 和 {{site.data.keyword.icpfull_notm}} 部署的
-物理结构图]（../../images/vcsiks-phy-ics-iks-deployment.svg "{{site.data.keyword.containerlong_notm}} 和 {{site.data.keyword.icpfull_notm}} 部署的
-物理结构图"）{: caption="图 1. {{site.data.keyword.containerlong_notm}} 和 {{site.data.keyword.icpfull_notm}} 部署的物理结构" caption-side="bottom"}
+![{{site.data.keyword.containerlong_notm}} 和 {{site.data.keyword.icpfull_notm}} 部署的物理结构图](../../images/vcsiks-phy-ics-iks-deployment.svg "{{site.data.keyword.containerlong_notm}} 和 {{site.data.keyword.icpfull_notm}} 部署的物理结构图")
 
 在 vCenter Server 实例中，客户 VMS 会部署到专用 NSX Edge 服务网关 (ESG) 和分布式逻辑路由器 (DLR)。
 
@@ -105,7 +103,9 @@ Controller
 ### NSX ESG / DLR
 {: #vcsiks-arch-overview-infrastructure-nsx-esg}
 
-将部署 NSX Edge 服务网关 (ESG) 对。在所有情况下，都会使用一个网关对来处理位于专用网络中的自动化组件的出站流量。对于 vCenter Server 和 {{site.data.keyword.icpfull_notm}}，将部署另一个网关（称为 ICP 管理的 Edge），并将其配置为使用上行链路连接到公用网络，还会配置一个分配给专用网络的接口。管理员可以配置任何必需的 NSX 组件，例如分布式逻辑路由器 (DLR)、逻辑交换机和防火墙。有关作为解决方案的一部分部署的 NSX Edge 的更多信息，请参阅 [vCenter Server 联网指南](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro)。
+将部署 NSX Edge 服务网关 (ESG) 对。在所有情况下，都会使用一个网关对来处理位于专用网络中的自动化组件的出站流量。对于 vCenter Server 和 {{site.data.keyword.icpfull_notm}}，将部署另一个网关（称为 ICP 管理的 Edge），并将其配置为使用上行链路连接到公用网络，还会配置一个分配给专用网络的接口。
+
+管理员可以配置任何必需的 NSX 组件，例如分布式逻辑路由器 (DLR)、逻辑交换机和防火墙。有关作为解决方案的一部分部署的 NSX Edge 的更多信息，请参阅 [vCenter Server 联网指南](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro)。
 
 以下各表总结了 {{site.data.keyword.icpfull_notm}} ESG/DLR 规范。
 
@@ -141,8 +141,3 @@ Kubernetes 主节点的任务是管理集群中的所有计算、网络和存储
 {: #vcsiks-arch-overview-infrastructure-worker-node}
 
 每个工作程序节点都是一个物理机器（裸机）或在云环境中的物理硬件上运行的 VM。在供应工作程序节点时，您应确定可供在该工作程序节点上托管的容器使用的资源。工作程序节点现成设置为使用 IBM 管理的 Docker 引擎、不同的计算资源、联网和卷服务。内置安全功能提供了隔离、资源管理功能和工作节点安全合规性。
-
-## 相关链接
-{: #vcsiks-arch-overview-infrastructure-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

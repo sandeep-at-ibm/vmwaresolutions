@@ -152,4 +152,4 @@ Ruby vSphere Console (RVC) 是面向 vSphere 的基于 Ruby 的命令行界面�
 {: #vum-updating-vsan-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 解决方案体系结构](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on IBM Cloud 数字技术互动](https://ibm-dte.mybluemix.net/vmware)（演示）
+* [VMware Solutions on IBM Cloud 数字技术互动](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/)（演示）

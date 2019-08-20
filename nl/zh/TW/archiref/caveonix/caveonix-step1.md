@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -45,8 +45,3 @@ subcollection: vmware-solutions
   -	隨資產數目增加而使用更多資料節點來進行橫向擴充。
 
 在任何 VM 部署之前，所有元件都必須具有 FQDN，並已登錄在 DNS 中。此步驟由 IBM Cloud for VMware Solutions 自動化針對起始「全功能」部署來完成，但擴充部署則是您的責任。
-
-## 相關鏈結
-{: #caveonix-step1-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

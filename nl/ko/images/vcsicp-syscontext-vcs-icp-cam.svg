@@ -608,19 +608,19 @@
          id="rect152" />
       <text
          x="589"
-         y="374"
+         y="380"
          id="text154">
         <tspan
            style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
-           id="tspan4496">배치 / 라이프사이클</tspan>
+           id="tspan4496">앱 배치 / </tspan>
       </text>
       <text
          x="589"
-         y="402"
+         y="396"
          id="text156">
         <tspan
            style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
-           id="tspan4498">앱</tspan>
+           id="tspan4498">라이프사이클</tspan>
       </text>
     </g>
     <g
@@ -637,19 +637,19 @@
          style="fill:#ffffff;stroke-width:0" />
       <text
          x="490"
-         y="602"
+         y="608"
          id="text162">
         <tspan
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gulim;-inkscape-font-specification:Gulim"
-           id="tspan4488">배치 / 라이프사이클</tspan>
+           id="tspan4488">앱 배치 / </tspan>
       </text>
       <text
          x="490"
-         y="628"
+         y="622"
          id="text164">
         <tspan
            style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
-           id="tspan4490">앱</tspan>
+           id="tspan4490">라이프사이클</tspan>
       </text>
     </g>
     <path
@@ -785,7 +785,7 @@
       <text
          x="409.5"
          y="753.5"
-         id="text202">On cloud VM</text>
+         id="text202">온클라우드 VM</text>
     </g>
     <g
        pointer-events="none"
@@ -878,16 +878,16 @@
          stroke-width="0"
          id="rect234" />
       <text
-         x="809.5"
-         y="216.5"
+         x="819.5"
+         y="226.5"
          id="text236">
         <tspan
            style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
            id="tspan4502">서비스</tspan>
       </text>
       <text
-         x="809.5"
-         y="230.5"
+         x="819.5"
+         y="240.5"
          id="text238">
         <tspan
            style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
@@ -1012,7 +1012,7 @@
        transform="translate(197.5,784.5)"
        id="g274">
       <switch
-         transform="translate(0,2)"
+         transform="translate(20,-5)"
          id="switch276">
         <foreignObject
            width="43"
@@ -1031,7 +1031,7 @@
                display="inline-block"
                text-align="inherit"
                text-decoration="inherit"
-               style="background-color:#ffffff">Manage</xhtml:div>
+               style="background-color:#ffffff">관리</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text
@@ -1099,11 +1099,11 @@
       <text
          x="850.5"
          y="543.5"
-         id="text294">배치 / 라이프사이클</text>
+         id="text294">앱 배치 / </text>
       <text
          x="850.5"
          y="557.5"
-         id="text296">앱</text>
+         id="text296">라이프사이클</text>
     </g>
     <rect
        x="945"

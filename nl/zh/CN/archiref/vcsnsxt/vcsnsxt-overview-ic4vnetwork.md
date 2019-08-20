@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-22"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -87,8 +87,3 @@ VLAN|子网类型|描述
 在实现此设计时，VLAN 上的物理主机和虚拟系统实例 (VSI) 都配置为指向作为缺省路径的 {{site.data.keyword.cloud_notm}} BCR（后端“专用网络”客户路由器）。虽然 vCenter Server 实例支持使用软件定义的联网，但 NSX 创建的包含到 VLAN 子网的路由的任何网络覆盖并不为 {{site.data.keyword.cloud_notm}} 管理的路由器所知。您可能需要创建静态路由、防火墙规则和 NAT 规则，才能正确管理网络流。
 
 专用网络连接配置为使用 MTU 大小为 9000 的巨型帧，这将提高存储和 vMotion 等大型数据传输的性能。这是 VMware 和 {{site.data.keyword.cloud_notm}} 中允许的最大 MTU。公用网络连接使用标准以太网 MTU，即 1500。必须保留此设置不变，因为对此设置的任何更改都可能导致因特网上发生包分段。
-
-## 相关链接
-{: #vcsnsxt-overview-ic4vnetwork-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

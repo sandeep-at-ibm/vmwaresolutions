@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-21"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -71,8 +71,3 @@ Tabella 2. Informazioni predefinite utilizzate nell'impostazione dell'applicazio
 |Attività |Sono impostate quattro attività: scansione degli asset (Asset Scan), flussi NSX (NSX Flows), scansione dell'infrastruttura VMware (VMware Infrastructure Scan) e vulnerabilità WMware (VMware Vulnerability). Il nome della scansione (ScanName) è impostato su DC1AssetScan, NSXFlows, VMWInfraScan, VMWVulnScan |
 |Attività |Sono impostate quattro attività: scansione degli asset (Asset Scan), flussi NSX (NSX Flows), scansione dell'infrastruttura VMware (VMware Infrastructure Scan) e vulnerabilità WMware (VMware Vulnerability). Il tipo (Type) è impostato su vCenter, NSX, VMWareInfrastructureScan, VMWareVulnerabilityScan |
 |Attività |La pianificazione (Schedule) è impostata su Hourly (Oraria) per DC1AssetScan e Daily (Giornaliera) per le altre. |
-
-## Link correlati
-{: #caveonix-step4-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

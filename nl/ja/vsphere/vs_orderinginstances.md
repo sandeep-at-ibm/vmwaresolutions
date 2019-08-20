@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-06"
 
 keywords: vSphere order cluster, order vSphere, order vSphere cluster
 
@@ -40,7 +40,12 @@ subcollection: vmware-solutions
 ### クラスター名
 {: #vs_orderinginstances-cluster-name}
 
-クラスター名は、アカウント内で固有でなければなりません。
+クラスター名は、以下の要件を満たしている必要があります。
+* 英字の小文字、数字、およびダッシュ (-) の文字だけを使用できます。
+* クラスター名は小文字の英字で始まらなければなりません。
+* クラスター名は小文字の英字または数字で終わらなければなりません。
+* クラスター名の最大の長さは 10 文字です。
+* クラスター名は、アカウント内で固有でなければなりません。
 
 ## ライセンス交付の設定
 {: #vs_orderinginstances-licensing-settings}
@@ -72,7 +77,7 @@ IBM ビジネス・パートナーのユーザーの場合、ライセンス持�
 {: #vs_orderinginstances-individual-components-for-non-bp-users}
 
 非ビジネス・パートナーは、vSphere クラスターに以下のコンポーネントを選択できます。
-* VMware vSphere Enterprise Plus 6.7 U1 または 6.5 U2
+* VMware vSphere Enterprise Plus 6.7 U2 または 6.5 U2
 * VMware vCenter Server
 * VMware NSX
 * VMware vSAN
@@ -123,6 +128,21 @@ vSphere Enterprise Plus と vCenter Server を除き、ライセンスを購入�
 | Dual Intel Xeon Gold 6140 Processor / 合計 36 コア、2.3 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 {: caption="表 2. Skylake {{site.data.keyword.baremetal_short}}のオプション" caption-side="top"}
 
+### Cascade
+{: #vs_orderinginstance-cascade}
+
+**「Cascade」**設定の場合、**「CPU モデル」**と**「RAM」**には複数のオプションがあります。
+
+Cascade {{site.data.keyword.baremetal_short}} は、VMware vSphere Enterprise Plus 6.7 U2 インスタンスでのみ使用できます。
+{:note}
+
+| CPU モデル・オプション        | RAM オプション       |
+|:------------- |:------------- |
+| Dual Intel Xeon Gold 4210 Processor / 合計 20 コア、2.3 GHz | 64 GB、96 GB、128 GB、192 GB、768 GB、1.5 TB |
+| Dual Intel Xeon Gold 5218 Processor / 合計 32 コア、2.3 GHz | 64 GB、96 GB、128 GB、192 GB、768 GB、1.5 TB |
+| Dual Intel Xeon Gold 6248 Processor / 合計 40 コア、2.5 GHz | 64 GB、96 GB、128 GB、192 GB、768 GB、1.5 TB |
+{: caption="表 3. Cascade {{site.data.keyword.baremetal_short}}のオプション" caption-side="top"}
+
 ### SAP 認定
 {: #vs_orderinginstances-sap}
 
@@ -146,7 +166,7 @@ VMware vSAN を以前に選択した場合、**「SAP 認定」**タブは使用
 |:------------- |:------------- |
 | クワッド Intel Xeon E7-4820 v4 / 合計 40 コア、2.0 GHz | 128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 | クワッド Intel Xeon E7-4850 v4 / 合計 64 コア、2.1 GHz | 128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
-{: caption="表 3. Broadwell {{site.data.keyword.baremetal_short}}のオプション" caption-side="top"}
+{: caption="表 4. Broadwell {{site.data.keyword.baremetal_short}}のオプション" caption-side="top"}
 
 ### ベア・メタル・サーバーの数
 {: #vs_orderinginstances-bare-metal-number}
@@ -167,7 +187,7 @@ vSAN ありの注文の場合、ESXi サーバー用に 12 ディスクのシャ
 * **vSAN 容量ディスクの数**: 追加する容量ディスク数を指定します。
 * 容量ディスクを上限の 8 個を超えて追加する場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。 このオプションでは、合計 10 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されますので、より少ない待ち時間とより高い IOPS スループットが求められるワークロードを扱うときに役立ちます。
 
-  **「High-Performance Intel Optane」**オプションは、Skylake CPU モデルでのみ使用できます。
+  **「High-Performance Intel Optane」**オプションは、Skylake および Cascade の CPU モデルでのみ使用できます。
   {:note}
 
 * **「Disk Type for vSAN Cache Disks」**および**「Number of vSAN Cache Disks」**の値を確認します。 これらの値は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けたかどうかによって異なります。
@@ -183,25 +203,28 @@ vSAN ありの注文の場合、ESXi サーバー用に 12 ディスクのシャ
 ホスト名は、すべてのベア・メタル・サーバーの注文で使用されます。 vCenter Server および NSX などのすべての管理仮想マシンで、このホスト名を使用することをお勧めします。
 
 ホスト名接頭部は、次の要件を満たす必要があります。
-* この名前の先頭と末尾は英数字である必要があります。
-* 英数字とダッシュ (-) の文字だけを使用できます。
-* 最大長は 10 文字です。
+* 英字の小文字、数字、およびダッシュ (-) の文字だけを使用できます。
+* ホスト名接頭部は小文字の英字で始まらなければなりません。
+* ホスト名接頭部は小文字の英字または数字で終わらなければなりません。
+* ホスト名接頭部の最大長は 10 文字です。
 
 ### サブドメイン・ラベル
 {: #vs_orderinginstances-subdomain-label}
 
 サブドメイン・ラベルは、次の要件を満たす必要があります。
-*  英数字とダッシュ (-) の文字だけを使用できます。
-*  サブドメイン・ラベルの先頭と末尾は英数字である必要があります。
-*  サブドメイン・ラベルの最大長は 10 文字です。
+* 英字の小文字、数字、およびダッシュ (-) の文字だけを使用できます。
+* サブドメイン・ラベルは小文字の英字で始まらなければなりません。
+* サブドメイン・ラベルは小文字の英字または数字で終わらなければなりません。
+* サブドメイン・ラベルの最大長は 10 文字です。
 
 ### ドメイン・ネーム
 {: #vs_orderinginstances-domain-name}
 
 ドメイン・ネームは、すべての{{site.data.keyword.baremetal_short}}で使用されます。次の要件を満たす必要があります。
-* ピリオド (.) で区切られた 2 つ以上の文字列で構成された名前である必要があります。
-* 英数字とダッシュ (-) の文字だけを使用できます。
-* 各文字列は英字で始まり英数字で終わる必要があり、最後の文字列には英字しか含められません。
+* ドメイン・ネームは、ピリオド (.) で区切られた 2 つ以上のストリングで構成されていなければなりません。
+* 英字の小文字、数字、およびダッシュ (-) の文字だけを使用できます。
+* 各文字列は、小文字の英字で始まり、小文字の英字または数字で終わらなければなりません。
+* 最後の文字列には、英字の小文字しか使用できません。
 * 最後の文字列の長さは、2 文字から 24 文字までの範囲でなければなりません。
 * 他の文字列の長さは、1 文字から 63 文字までの範囲でなければなりません。
 * ドメイン・ネームの最大長は 189 文字です。
@@ -216,12 +239,12 @@ vSAN ありの注文の場合、ESXi サーバー用に 12 ディスクのシャ
 
 ネットワーク設定は、**「新規 VLAN を注文」**と**「既存の VLAN を選択」**のどちらを選択するかによって異なります。
 
-クラスターの注文には、パブリック VLAN 1 つとプライベート VLAN 2 つが必要です。 2 つのプライベート VLAN は各ベア・メタル・サーバーにトランキングされます。
-
 #### 新規 VLAN を注文
 {: #vs_orderinginstances-new-vlans}
 
-新規パブリック VLAN 1 つと新規プライベート VLAN 2 つを注文することを選択します。
+パブリック・ネットワークとプライベート・ネットワークを対象に注文する場合、クラスターの注文には 1 つのパブリック VLAN と 2 つのプライベート VLAN が必要です。2 つのプライベート VLAN は各ベア・メタル・サーバーにトランキングされます。
+
+プライベート・ネットワークを対象に注文する場合、クラスターの注文には 2 つのプライベート VLAN のみが必要です。
 
 #### 既存の VLAN を選択
 {: #vs_orderinginstances-existing-vlans}
@@ -230,10 +253,10 @@ vSAN ありの注文の場合、ESXi サーバー用に 12 ディスクのシャ
 
   既存のパブリック VLAN とプライベート VLAN を再使用することを選択した場合は、それらの VLAN とサブネットを指定します。
   * **パブリック VLAN** は、パブリック・ネットワーク・アクセスに使用されます。
+  * **プライマリー・サブネット**は、パブリック・ネットワーク・アクセス用に物理ホストに割り当てられます。
   * **プライベート VLAN** は、{{site.data.keyword.cloud_notm}} 内部のデータ・センターとサービスの間の接続に使用されます。
   * **セカンダリー・プライベート VLAN** は、vSAN などの VMware 機能に使用されます。
-  * **プライマリー・サブネット**は、パブリック・ネットワーク・アクセス用に物理ホストに割り当てられます。
-  * **プライマリー・プライベート・サブネット**は、管理トラフィック用に物理ホストに割り当てられます。
+  * **プライベート・プライマリー・サブネット**は、管理トラフィック用に物理ホストに割り当てられます。
 
 ##### 重要
 {: #vs_orderinginstances-important}
@@ -245,6 +268,9 @@ vSAN ありの注文の場合、ESXi サーバー用に 12 ディスクのシャ
 {: #vs_orderinginstances-fortigate-physical-appliance}
 
 また、クラウド環境を保護するために FortiGate 物理アプライアンス 300 シリーズ HA ペアを含めるかどうかも選択できます。 詳しくは、[FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations)を参照してください。
+
+このオプションは、パブリック・ネットワークとプライベート・ネットワークの両方が含まれる注文にのみ使用できます。
+{:note}
 
 ## 注文のサマリー
 {: #vs_orderinginstances-order-summary}
@@ -269,7 +295,7 @@ vSAN ありの注文の場合、ESXi サーバー用に 12 ディスクのシャ
 5. ベア・メタル・サーバーの設定を次の手順で実行します。
    1. クラスターをホストする {{site.data.keyword.CloudDataCent_notm}}を選択します。
    2. ベア・メタル・サーバー構成を選択します。
-      * **「Skylake」**または**「Broadwell」**を選択した場合は、CPU モデルと RAM サイズを指定します。
+      * **「Skylake」**、**「Cascade」**、または**「Broadwell」**を選択した場合は、CPU モデルと RAM サイズを指定します。
       * **「SAP 認定」**を選択した場合は、事前設定構成のいずれかを選択します。
    3. ベア・メタル・サーバーの数を指定します。
 6. **VMware vSAN** コンポーネントを選択した場合は、vSAN ストレージの構成を完了します。 容量ディスクおよびキャッシュ・ディスクのディスク・タイプとディスク数を指定します。 さらにストレージが必要な場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。
@@ -279,7 +305,7 @@ vSAN ありの注文の場合、ESXi サーバー用に 12 ディスクのシャ
    3. 使用するネットワーク・インターフェースを選択します。
     * 新規のパブリック VLAN とプライベート VLAN を注文する場合は、**「新規 VLAN を注文」**をクリックします。
     * 既存のパブリック VLAN とプライベート VLAN を使用できる場合に再利用するには、**「既存の VLAN を選択」**をクリックし、該当する VLAN とオプションでサブネットを指定します。
-    4. クラウド環境を保護するために FortiGate 物理アプライアンス 300 シリーズ HA ペアを適用するかどうかを指定します。  
+    4. パブリック VLAN を注文する場合、クラウド環境を保護するために FortiGate 物理アプライアンス 300 シリーズ HA ペアを適用するかどうかを指定します。
 8. **「注文のサマリー」**ペインで、クラスター構成と見積もりコストを確認します。
    * 注文を実行せずに構成をテンプレートとして保存するには、**「構成の保存」**をクリックします。
    * 注文を実行するには、課金されるアカウントが正しいことを確認し、使用条件を確認して承諾してから、**「プロビジョン」**をクリックします。

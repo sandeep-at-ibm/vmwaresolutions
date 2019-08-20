@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-06"
 
 keywords: vCenter Server NSX-T add cluster, view cluster vCenter Server NSX-T, delete cluster vCenter Server NSX-T
 
@@ -20,8 +20,6 @@ subcollection: vmware-solutions
 
 # Cluster für vCenter Server with NSX-T-Instanzen hinzufügen, anzeigen und löschen
 {: #vc_nsx-t_addingviewingcluster}
-
-Die ESXi-Server, die Sie bei der Bestellung einer Instanz konfiguriert haben, werden standardmäßig unter **cluster1** gruppiert.
 
 Sie können eigene Cluster zu VMware vCenter Server with NSX-T-Instanzen hinzufügen, um die Rechen- und Speicherkapazität zu erweitern. In einem Cluster können Sie ESXi-Server verwalten, um eine bessere Ressourcenzuordnung und hohe Verfügbarkeit zu erreichen. Löschen Sie die hinzufügten Cluster aus Ihrer Instanz, wenn sie nicht mehr benötigt werden.
 
@@ -43,10 +41,11 @@ Wenn Sie einen Cluster für eine vCenter Server with NSX-T-Instanz hinzufügen, 
 {: #vc_nsx-t_addingviewingclusters-adding-cluster-name}
 
 Der Clustername muss die folgenden Anforderungen erfüllen:
-* Es sind nur alphanumerische Zeichen und Bindestriche (-) zulässig.
-* Der Clustername muss mit einem alphanumerischen Zeichen beginnen und enden.
-* Die maximale Anzahl an Zeichen beträgt 30.
-* Der Clustername muss innerhalb der vCenter Server-Instanz eindeutig sein.
+* Es sind nur Kleinbuchstaben, Ziffern und Gedankenstriche (-) zulässig.
+* Der Clustername muss mit einem Kleinbuchstaben beginnen.
+* Der Clustername muss entweder auf einen Kleinbuchstaben oder auf eine Ziffer enden.
+* Die maximale Länge des Clusternamens beträgt 30 Zeichen.
+* Der Clustername muss innerhalb der vCenter Server with NSX-T-Instanz eindeutig sein.
 
 #### Standort des Rechenzentrums
 {: #vc_nsx-t_addingviewingclusters-adding-dc-location}
@@ -58,7 +57,7 @@ Wenn Sie den Cluster in einem anderen {{site.data.keyword.CloudDataCent_notm}}- 
 ### Einstellungen für Bare Metal Server
 {: #vc_nsx-t_addingviewingclusters-bare-metal-settings}
 
-Sie können **Skylake** oder **Broadwell** auswählen.
+Sie können **Skylake**, **Cascade** oder **Broadwell** auswählen.
 
 #### Skylake
 {: #vc_nsx-t_addingviewingclusters-adding-skylake}
@@ -72,6 +71,21 @@ Für die Einstellung **Skylake** stehen Ihnen Optionen für **CPU-Modell** und *
 | Dual Intel Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 {: caption="Tabelle 1. Optionen für Skylake {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
+#### Cascade
+{: #vc_nsx-t_addingviewingclusters-adding-cascade}
+
+Für die Einstellung **Cascade** stehen Ihnen Optionen für **CPU-Modell** und **RAM** zur Verfügung.
+
+Cascade-{{site.data.keyword.baremetal_short}} stehen nur für VMware vSphere Enterprise Plus 6.7u2-Instanzen zur Verfügung.
+{:note}
+
+| CPU-Modelloptionen        | RAM-Optionen       |
+|:------------- |:------------- |
+|Dual Intel Xeon Gold 4210-Prozessor / 20 Kerne insgesamt, 2,3 GHz| 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1,5 TB |
+|Dual Intel Xeon Gold 5218-Prozessor / 32 Kerne insgesamt, 2,3 GHz| 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1,5 TB |
+|Dual Intel Xeon Gold 6248-Prozessor / 40 Kerne insgesamt, 2,5 GHz| 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1,5 TB |
+{: caption="Tabelle 2. Optionen für Cascade-{{site.data.keyword.baremetal_short}}" caption-side="top"}
+
 #### Broadwell
 {: #vc_nsx-t_addingviewingclusters-adding-broadwell}
 
@@ -81,7 +95,7 @@ Für die Einstellung **Broadwell** steht eine Reihe von Optionen für **CPU-Mode
 |:------------- |:------------- |
 | Quad Intel Xeon E7-4820 v4 / 40 Kerne insgesamt, 1,9 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 Kerne insgesamt, 2,2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
-{: caption="Tabelle 2. Optionen für Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
+{: caption="Tabelle 3. Optionen für Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 #### Bare Metal Server-Anzahl
 {: #vc_nsx-t_addingviewingclusters-adding-bare-metal-number}
@@ -103,7 +117,7 @@ Geben Sie die folgenden vSAN-Optionen an:
 * **Anzahl der vSAN-Kapazitätsplatten**: Geben Sie die Anzahl der hinzuzufügenden Kapazitätsplatten an.
 * Wenn Sie über den Grenzwert von zehn Stück hinaus Kapazitätsplatten hinzufügen möchten, müssen Sie das Feld für **Hohe Leistung mit Intel Optane** auswählen. Diese Option stellt zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 12 Kapazitätsplatten bereit und ist für Workloads nützlich, die eine geringere Latenzzeit und einen höheren Durchsatz an E/A-Operationen pro Sekunde erfordern.
 
-  Die Option **Hohe Leistung mit Intel Optane** ist nur für die Skylake-CPU-Modelle verfügbar.
+  Die Option **Hohe Leistung mit Intel Optane** ist nur für die Skylake- und Cascade-CPU-Modelle verfügbar.
   {:note}
 
 * Überprüfen Sie die Werte für **Plattentyp für vSAN-Cacheplatten** und **Anzahl der vSAN-Cacheplatten**. Diese Werte hängen davon ab, ob Sie das Feld **Hohe Leistung mit Intel Optane** ausgewählt haben.
@@ -133,7 +147,7 @@ Details der Leistungsstufe:
 | 2 IOPS/GB | Diese Option ist für die meisten allgemeinen Workloads geeignet. Anwendungsbeispiele sind das Hosting von kompakten Datenbanken, die Sicherung von Webanwendungen oder Plattenimages von virtuellen Maschinen (VM) für einen Hypervisor. |
 | 4 IOPS/GB | Diese Option ist für Workloads mit höherer Intensität geeignet, die zu einem bestimmten Zeitpunkt einen hohen Prozentsatz an aktiven Daten aufweisen. Anwendungsbeispiele sind transaktionsorientierte Datenbanken. |
 | 10 IOPS/GB | Diese Option ist für die aufwändigsten Workloadtypen wie beispielsweise die Analyse gedacht. Anwendungsbeispiele sind Hochtransaktionsdatenbanken und andere leistungskritische Datenbanken. Diese Leistungsstufe ist auf eine maximale Kapazität von 4 TB pro gemeinsam genutzte Dateiressource begrenzt. |
-{: caption="Tabelle 3. Optionen für die NFS-Leistungsstufe" caption-side="top"}
+{: caption="Tabelle 4. Optionen für die NFS-Leistungsstufe" caption-side="top"}
 
 ### Lizenzierungseinstellungen
 {: #vc_nsx-t_addingviewingclusters-adding-licensing-settings}
@@ -223,12 +237,12 @@ Der Clustername kann nicht geändert werden. Wenn Sie den Clusternamen ändern, 
 
 | Element        | Beschreibung       |  
 |:------------- |:------------- |
-| Name | Der Name des ESXi-Servers weist das folgende Format auf:<br> `<host_prefix><n>.<subdomain_label>.<root_domain>` <br> Hierbei gilt Folgendes:<br> `host_prefix` ist das Hostnamenspräfix,<br> `n` ist die Folgenummer des Servers,<br> `subdomain_label` ist die Unterdomänenbezeichnung und<br> `root_domain` ist der Rootdomänenname |
+| Name | Der Name des ESXi-Servers hat das Format `<data_center>-<host_prefix><n>.<subdomain_label>.<root_domain>`, wobei `n` die Folgenummer des ESXi-Servers ist. |
 | Version | Die Version des ESXi-Servers. |
 | Berechtigungsnachweise | Der Benutzername und das Kennwort für den Zugriff auf den ESXi-Server. |
 | Private IP | Die private IP-Adresse des ESXi-Servers. |
 | Status | Der Status des ESXi-Servers, der einen der folgenden Werte aufweisen kann:<br> **Hinzugefügt** Der ESXi-Server wurde hinzugefügt und kann verwendet werden.<br> **Wird hinzugefügt** Der ESXi-Server wird gerade hinzugefügt.<br> **Wird gelöscht** Der ESXi-Server wird gerade gelöscht. |
-{: caption="Tabelle 4. Details zum ESXi-Server" caption-side="top"}
+{: caption="Tabelle 5. Details zum ESXi-Server" caption-side="top"}
 
 Speicherdetails anzeigen:
 
@@ -238,7 +252,7 @@ Speicherdetails anzeigen:
 | Größe | Die Kapazität des Speichers. |
 | IOPS/GB | Die Leistungsstufe des Speichers. |
 | NFS-Protokoll | Die NFS-Version des Speichers. |
-{: caption="Tabelle 5. Speicherdetails" caption-side="top"}
+{: caption="Tabelle 6. Speicherdetails" caption-side="top"}
 
 Details der Netzschnittstelle anzeigen:
 
@@ -248,7 +262,7 @@ Details der Netzschnittstelle anzeigen:
 | Beschreibung | Die Beschreibung des VLAN.  |
 | Standort | Der Standort des Rechenzentrums. |
 | Primäre Route | Die primäre Route des VLAN. |
-{: caption="Tabelle 6. Netzschnittstelle - VLAN-Details" caption-side="top"}
+{: caption="Tabelle 7. Netzschnittstelle - VLAN-Details" caption-side="top"}
 
 Klicken Sie auf **Ressourcen anzeigen**, um auf die VLAN-Details zuzugreifen.
 
@@ -259,7 +273,7 @@ Details des Teilnetzes anzeigen:
 | Name | Der Teilnetzname. Klicken Sie auf den Namen, um auf die Teilnetzdetails zuzugreifen. |
 | Typ | Der Typ des Teilnetzes: primär oder portierbar. |
 | Beschreibung | Die Beschreibung des Teilnetzes. |
-{: caption="Tabelle 7. Netzschnittstelle - Teilnetzdetails" caption-side="top"}
+{: caption="Tabelle 8. Netzschnittstelle - Teilnetzdetails" caption-side="top"}
 
 Details der IP-Adressen anzeigen:
 
@@ -268,7 +282,7 @@ Details der IP-Adressen anzeigen:
 | IP | Die IP-Adresse. |
 | Status | Der Status der IP-Adresse. |
 | Beschreibung |Die Beschreibung der IP-Adresse.  |
-{: caption="Tabelle 8. Netzschnittstelle - IP-Details" caption-side="top"}
+{: caption="Tabelle 9. Netzschnittstelle - IP-Details" caption-side="top"}
 
 ## Cluster aus vCenter Server with NSX-T-Instanzen löschen
 {: #vc_nsx-t_addingviewingclusters-deleting}

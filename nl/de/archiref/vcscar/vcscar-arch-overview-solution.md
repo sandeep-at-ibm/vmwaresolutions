@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -184,8 +184,3 @@ Eine grafische Benutzerschnittstelle zum Erstellen von Terraform-Vorlagen mit ei
 {: #vcscar-arch-overview-solution-maria-db}
 
 Die Datenbank für die Vorlagendesigneranwendung.
-
-## Zugehörige Links
-{: #vcscar-arch-overview-solution-related}
-
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

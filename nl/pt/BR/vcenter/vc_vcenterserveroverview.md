@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-07-26"
 
 keywords: vCenter Server, vCenter Server architecture, tech specs vCenter Server
 
@@ -75,6 +75,7 @@ A disponibilidade e a precificação de configurações padronizadas de hardware
 
 É possível pedir três ou mais {{site.data.keyword.baremetal_short}} com uma das configurações a seguir:
 * **Skylake**: servidores de geração do Intel Skylake de 2 CPUs (série Intel Xeon 4100/5100/6100) com o seu modelo de CPU selecionado e o tamanho de RAM.
+* **Cascade**: servidores de geração Intel Cascade de 2 CPUs (série Intel Xeon 4200/5200/6200) com seu modelo de CPU e tamanho de RAM selecionados.
 * **Certificado pela SAP**: servidores de geração Intel Skylake ou Intel Broadwell (série Intel Xeon 6140/E5-2690/E7-8890) com seu modelo de CPU selecionado.
 * **Broadwell**: servidores de geração Intel Broadwell de 4 CPUs (Intel Xeon série E7-4800) com o seu modelo de CPU e tamanho de RAM selecionados.
 
@@ -150,7 +151,7 @@ A opção de discos locais, disponível somente para a configuração Bare Metal
 ### Licenças (fornecidas pela IBM ou BYOL) e taxas
 {: #vc_vcenterserveroverview-license-and-fee}
 
-* VMware vSphere Enterprise Plus 6.5u2 ou 6.7u1
+* VMware vSphere Enterprise Plus 6.5u2 ou 6.7u2
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Edition (Base, Advanced ou Enterprise) 6.4
 * (Para clusters do vSAN) VMware vSAN Advanced ou Enterprise 6.6
@@ -169,7 +170,7 @@ Um Bare Metal Server com a configuração apresentada em [Especificações técn
 ### Licenças e taxas para os nós de expansão
 {: #vc_vcenterserveroverview-expansion-node-license-and-fee}
 
-* Um VMware vSphere Enterprise Plus 6.5u2 ou 6.7u1
+* Um VMware vSphere Enterprise Plus 6.5u2 ou 6.7u2
 * Um VMware NSX Service Providers Edition (Base, Advanced ou Enterprise) 6.4
 * Uma taxa de suporte e de serviços
 * (Para clusters do vSAN) VMware vSAN Advanced ou Enterprise 6.6

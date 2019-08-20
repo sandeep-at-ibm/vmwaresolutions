@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-05"
 
 keywords: VMware HCX deployment, HCX configuration, order HCX
 
@@ -21,34 +21,39 @@ subcollection: vmware-solutions
 # VMware HCX on IBM Cloud の注文
 {: #hcx_ordering}
 
-VMware HCX on {{site.data.keyword.cloud}} サービスを注文するには、そのサービスを組み込む形で新しい VMware vCenter Server with Hybridity Bundle インスタンスを注文するか、そのサービスを既存のインスタンスに追加します。
+VMware HCX on {{site.data.keyword.cloud}} サービスを注文するには、そのサービスを組み込む形で新しい VMware vCenter Server を注文するか、そのサービスを既存のインスタンスに追加します。
 
-## 新しいインスタンスでの VMware HCX on IBM Cloud の注文
-{: #hcx_ordering-new}
+VMware HCX on {{site.data.keyword.cloud_notm}} サービスを注文する際は、12 カ月間のコミットメントが必要です。12 カ月のコミットメント期間が終了する前にホストまたはクラスターを削除した場合、アカウントには HCX コンポーネントに対する課金が引き続き発生します。
+{:important}
 
-VMware HCX on {{site.data.keyword.cloud_notm}} を組み込む形で新しい VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle インスタンスを注文する場合は、{{site.data.keyword.vmwaresolutions_short}} コンソールからインスタンスを注文する時に、**「サービス」**セクションで**「VMware HCX on IBM Cloud」**を選択します。
+VMware HCX on {{site.data.keyword.cloud_notm}} を組み込む形で新しい VMware vCenter Server インスタンスを注文する場合は、{{site.data.keyword.vmwaresolutions_short}} コンソールからインスタンスを注文する時に、**「サービス」**セクションで**「HCX on IBM Cloud 3.5」**を選択します。
 
 
 ## 既存のインスタンスでの VMware HCX on IBM Cloud の注文
 {: #hcx_ordering-existing}
 
-既存の VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle インスタンスに VMware HCX on {{site.data.keyword.cloud_notm}} サービスを追加する場合は、サービスを追加する対象のインスタンスを表示し、左側のナビゲーション・ペインにある**「サービス」**をクリックし、**「追加」**をクリックします。
+既存の VMware vCenter Server インスタンスに VMware HCX on {{site.data.keyword.cloud_notm}} サービスを追加する場合は、サービスを追加する対象のインスタンスを表示し、左側のナビゲーション・ペインにある**「サービス」**をクリックし、**「追加」**をクリックします。
 
 ## VMware HCX on IBM Cloud の構成
 {: #hcx_ordering-config}
 
 HCX on {{site.data.keyword.cloud_notm}} をインストールするには、以下の設定を行います。
-1. **「HCX interconnect type」**を指定します。以下のいずれかのオプションを選択します。
-  * **Public network:** HCX がパブリック・ネットワークでサイト間の暗号化接続を作成します。 ライセンスの登録と課金は、パブリック・ネットワークを介して行われます。
-  * **Private interconnect:** HCX がプライベート・ネットワークでサイト間の暗号化接続を作成します。 ライセンスの登録と課金は、パブリック・ネットワークを介して行われます。
-  * **Private network:** HCX がプライベート・ネットワークでサイト間の暗号化接続を作成します。 ライセンスの登録と課金は、HTTP プロキシーを介してプライベート・ネットワーク上で行われます。
-3. **「Private network」**を選択した場合は、以下のフィールドに入力します。
+1. チェック・ボックスを選択して、HCX on {{site.data.keyword.cloud_notm}} サービスの注文に関連した利用条件に同意していることを確認します。
+
+   12 カ月のコミットメントの満了日を過ぎると、それらのチェック・ボックスは表示されなくなります。
+   {:note}
+
+2. 以下のいずれかのオプションを選択して、**HCX ネットワーク接続**を指定します。
+  * **Public Network:** HCX がパブリック・ネットワークでサイト間の暗号化接続を作成します。 ライセンスの登録と課金は、パブリック・ネットワークを介して行われます。
+  * **Private Interconnect:** HCX がプライベート・ネットワークでサイト間の暗号化接続を作成します。 ライセンスの登録と課金は、パブリック・ネットワークを介して行われます。
+  * **Private Network:** HCX がプライベート・ネットワークでサイト間の暗号化接続を作成します。 ライセンスの登録と課金は、HTTP プロキシーを介してプライベート・ネットワーク上で行われます。
+3. **「Private Network」**を選択した場合は、以下のフィールドに入力します。
   * **プロキシー・アドレス (Proxy Address):** プロキシー・サーバーの IPv4 アドレス。
   * **プロキシー・ポート (Proxy Port):** プロキシー・サーバーのポート。 ポート番号は通常、8080 または 3128 です。
   * **ユーザー名 (Username):** プロキシー認証が必要な場合のユーザー名。
   * **パスワード (Password):** プロキシー認証が必要な場合のパスワード。
   * **パスワードの再入力 (Reenter Password):** プロキシー認証の検証のためにパスワードを再入力します。
-2. **「Public endpoint certificate type」**を指定します。 **「CA 証明書」**を選択する場合、以下の設定を構成してください。
+2. **「Public Endpoint Certificate Type」**を指定します。 **「CA 証明書」**を選択する場合、以下の設定を構成してください。
   * **証明書の内容:** CA 証明書の内容を入力します。
   * **秘密鍵:** CA 証明書の秘密鍵を入力します。
   * (オプション) **パスワード:** 秘密鍵が暗号化されている場合は、秘密鍵のパスワードを入力します。
@@ -59,7 +64,7 @@ HCX on {{site.data.keyword.cloud_notm}} をインストールするには、以�
 ## HCX on IBM Cloud のデプロイメント・プロセス
 {: #hcx_ordering-deploy}
 
-HCX on {{site.data.keyword.cloud_notm}} のデプロイメントは自動的に行われます。 このサービスを組み込む形で vCenter Server with Hybridity Bundle インスタンスを注文する場合でも、このサービスを後でインスタンスにデプロイする場合でも、{{site.data.keyword.vmwaresolutions_short}} の自動化プロセスによって以下の手順が実行されます。
+HCX on {{site.data.keyword.cloud_notm}} のデプロイメントは自動的に行われます。 このサービスを組み込む形で vCenter Server インスタンスを注文する場合でも、このサービスを後でインスタンスにデプロイする場合でも、{{site.data.keyword.vmwaresolutions_short}} の自動化プロセスによって以下の手順が実行されます。
 1. {{site.data.keyword.cloud_notm}} インフラストラクチャー上の HCX 用に、次の 3 つのサブネットが注文されます。
    * HCX 管理用プライベート・ポータブル・サブネットを 1 つ。
    * HCX 相互接続用プライベート・ポータブル・サブネットを 1 つ。 このサブネットは、**「HCX interconnect type」**として**「Private network」**オプションを選択した場合に使用されます。
@@ -67,7 +72,7 @@ HCX on {{site.data.keyword.cloud_notm}} のデプロイメントは自動的に�
 
    HCX 用に注文されたサブネット内の IP アドレスは、VMware on {{site.data.keyword.cloud_notm}} の自動化機能によって管理されるようになっています。 ユーザーが作成した VMware リソース (VM や NSX Edge など) にこれらの IP アドレスを割り当てることはできません。 VMware 成果物用に追加の IP アドレスが必要な場合は、{{site.data.keyword.cloud_notm}} 上の独自のサブネットを注文する必要があります。
    {:important}
-2. **「HCX interconnect type」**に対して**「Private network」**が選択された場合、**SDDC-DPortGroup-HCX-Private** という名前のポート・グループがプライベート分散仮想スイッチ (DVS) に作成されます。
+2. **「HCX Network Connection」**に対して**「Private Network」**が選択された場合、**SDDC-DPortGroup-HCX-Private** という名前のポート・グループがプライベート分散仮想スイッチ (DVS) に作成されます。
 3. HCX アクティベーション・キーが VMware から注文されます。
 4. HCX 用のリソース・プールと VM フォルダーが 3 つずつ作成されます。これらは、HCX 相互接続、ローカル HCX コンポーネント、リモート HCX コンポーネントに必要です。
 5. HCX 管理トラフィック用の VMware NSX Edge Services Gateway (ESG) のペアがデプロイされ、構成されます。
@@ -92,7 +97,7 @@ HCX on {{site.data.keyword.cloud_notm}} のデプロイメントは自動的に�
 
 * [HCX on {{site.data.keyword.cloud_notm}} の概要](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_considerations#hcx_considerations)
 * [HCX on {{site.data.keyword.cloud_notm}} の管理](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghcx)
-* [vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
+* [vCenter Server インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
 * [HCX の用語集](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
 * [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [VMware Hybrid Cloud Extension の概要](https://cloud.vmware.com/vmware-hcx){:external}

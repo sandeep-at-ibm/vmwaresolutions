@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-25"
 
 keywords: single-node trial, migration app modernization, order migration app modernization
 
@@ -44,9 +44,10 @@ subcollection: vmware-solutions
 ### Voraussetzungen für Instanznamen
 {: #cloud_modern_bundle_orderinginstance-inst-name-req}
 
-Machen Sie sich mit den Anforderungen für die Instanznamen vertraut:
-* Es sind nur alphanumerische Zeichen und Bindestriche (-) zulässig.
-* Der Instanzname muss mit einem alphabetischen Zeichen beginnen und mit einem alphanumerischen Zeichen enden.
+Der Instanzname muss die folgenden Anforderungen erfüllen:
+* Es sind nur Kleinbuchstaben, Ziffern und Gedankenstriche (-) zulässig.
+* Der Instanzname muss mit einem Kleinbuchstaben beginnen.
+* Der Instanzname muss entweder auf einen Kleinbuchstaben oder auf eine Ziffer enden.
 * Die maximale Länge des Instanznamens beträgt 10 Zeichen.
 * Der Instanzname muss innerhalb Ihres Kontos eindeutig sein.
 
@@ -190,8 +191,8 @@ Führen Sie folgende Schritte aus, um eine Single-node Trial-Instanz für Migrat
 ## Zugehörige Links
 {: #cloud_modern_bundle_orderinginstance-related}
 
-* [vCenter Server und IBM Cloud Private - Leitfaden](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [Ticket für IBM Cloud Private öffnen](https://www.ibm.com/mysupport/s/?language=en_US){:external}
+* [vCenter Server and {{site.data.keyword.cloud_notm}} Private - Leitfaden](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
+* [Ticket für {{site.data.keyword.cloud_notm}} Private öffnen](https://www.ibm.com/mysupport/s/?language=en_US){:external}
 * [VMware HCX-Ressourcen](https://hcx.vmware.com/#/docs){:external}
 * [Benutzerhandbuch zu VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}
 * [Virtuelle Server stornieren](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)

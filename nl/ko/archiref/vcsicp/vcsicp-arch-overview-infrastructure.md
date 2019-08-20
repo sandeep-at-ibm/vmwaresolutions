@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-22"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -18,7 +18,7 @@ subcollection: vmware-solutions
 ## VRF(Virtual Routing and Forwarding)
 {: #vcsicp-arch-overview-infrastructure-vrf}
 
-서브넷 IP 블록 간에 자동 글로벌 라우팅을 사용하여 VRF(Virtual Routing and Forwarding) 계정으로 {{site.data.keyword.cloud}} 계정을 구성할 수 있습니다. Direct Link 연결의 모든 계정은 VRF 계정으로 변환되거나 VRF 계정으로 작성되어야 합니다.
+서브넷 IP 블록 간에 자동 글로벌 라우팅을 사용하여 VRF(Virtual Routing and Forwarding) 계정으로 {{site.data.keyword.cloud}} 계정을 구성할 수 있습니다. Direct-Link 연결의 모든 계정은 VRF 계정으로 변환되거나 VRF 계정으로 작성되어야 합니다.
 
 ## Direct Link
 {: #vcsicp-arch-overview-infrastructure-direct-link}
@@ -36,7 +36,7 @@ strongSwan IPSec VPN 서비스는 업계 표준 인터넷 프로토콜 보안(IP
 ### Hybridity(HCX)
 {: #vcsicp-arch-overview-infrastructure-hcx}
 
-vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle은 {{site.data.keyword.cloud_notm}}로 온프레미스 데이터 센터의 네트워크를 원활하게 확장할 수 있으며, 이를 통해 변환이나 변경 없이 {{site.data.keyword.cloud_notm}}에서 가상 머신(VM)을 마이그레이션할 수 있습니다.
+vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle은 온프레미스 데이터 센터의 네트워크를 {{site.data.keyword.cloud_notm}}로 원활하게 확장합니다. 이 프로세스를 통해 변환이나 변경 없이 가상 머신(VM)을 {{site.data.keyword.cloud_notm}}로 마이그레이션할 수 있습니다.
 
 ## 물리적 구조
 {: #vcsicp-arch-overview-infrastructure-phys-struct}
@@ -64,8 +64,3 @@ vCenter Server 인스턴스 내에서, {{site.data.keyword.icpfull_notm}} 인스
 ESG는 아웃바운드 트래픽을 허용하도록 소스 NAT 규칙(SNAT)을 사용하여 구성되며, 인터넷 연결을 통해 {{site.data.keyword.icpfull_notm}} 전제조건을 다운로드하고 GitHub 및 Docker에 연결할 수 있습니다. 또는 인터넷 연결을 위해 웹 프록시를 사용할 수 있습니다. 또한 ESG는 DNS 및 NTP 서비스에 대한 액세스를 제공하도록 구성됩니다.
 
 ESG는 또한 {{site.data.keyword.cloud_notm}} 10.x 네트워크에서 VXLAN 환경으로 {{site.data.keyword.icpfull_notm}} 마스터/프록시 가상 IP 주소에 대한 대상 NAT 규칙(DNAT)을 사용하여 구성됩니다.
-
-## 관련 링크
-{: #vcsicp-arch-overview-infrastructure-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

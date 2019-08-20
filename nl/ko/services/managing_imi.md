@@ -39,7 +39,7 @@ IMI는 vCenter Server 인스턴스에 대한 관리 서비스를 제공합니다
 2. 페이지를 아래로 스크롤하여 **VMware 관리 서비스**에서 **IMI의 관리 서비스** 카드를 클릭하십시오.
 3. **IMI의 관리 서비스** 페이지의 **IMI 사전 영업 참여** 상자에 IMI 서비스에 대한 요구사항을 입력하고 **컨설팅 요청**을 클릭하십시오.
 
-  {{site.data.keyword.cloud_notm}} 담당자는 사용자에게 필요한 솔루션에 대한 도움을 드리기 위해 사용자의 {{site.data.keyword.cloud_notm}} 연락처 정보를 사용하여 연락을 드립니다.
+  {{site.data.keyword.cloud_notm}} 담당자가 사용자에게 필요한 솔루션에 대한 도움을 드리기 위해 사용자의 {{site.data.keyword.cloud_notm}} 연락처 정보를 사용하여 연락을 드립니다.
 
 ## 관련 링크
 {: #managing_imi-related}

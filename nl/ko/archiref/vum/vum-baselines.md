@@ -40,4 +40,4 @@ VUM에는 다음 디바이스 중 하나를 스캔하여 사용자 환경의 호
 {: #vum-baselines-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 솔루션 아키텍처](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} 디지털 기술 업무](https://ibm-dte.mybluemix.net/vmware)(데모)
+* [{{site.data.keyword.vmwaresolutions_full}} 데모](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/)

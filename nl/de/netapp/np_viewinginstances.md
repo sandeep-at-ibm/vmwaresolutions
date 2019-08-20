@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-25"
 
 keywords: view NetApp, view instance, view instance details
 
@@ -127,7 +127,7 @@ Wenn bei der Bereitstellung oder beim Löschen von Instanzen Fehler auftreten, w
 
 | Element        | Beschreibung       |  
 |:------------|:----------------- |
-| Name | Der Name des ESXi-Servers hat das Format `<host_prefix><n>.<subdomain_label>.<root_domain>`. Dabei gilt Folgendes:<br><br>`host_prefix` ist das Hostnamenspräfix, `n` ist die Folgenummer des Servers, `subdomain_label` ist die Unterdomänenbezeichnung und `root_domain` ist der Rootdomänenname. |
+| Name | Der Name des ESXi-Servers hat das Format `<data_center>-<host_prefix><n>.<subdomain_label>.<root_domain>`, wobei `n` die Folgenummer des ESXi-Servers ist. |
 | Version | Die Version des ESXi-Servers. |
 | Berechtigungsnachweise | Der Benutzername und das Kennwort für den Zugriff auf den ESXi-Server. |
 | Private IP | Die private IP-Adresse des ESXi-Servers. |

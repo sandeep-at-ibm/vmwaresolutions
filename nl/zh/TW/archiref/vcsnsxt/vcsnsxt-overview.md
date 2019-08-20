@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -48,8 +48,3 @@ vCenter Server Hybridity Bundle 不是受管理服務，但您可以新增 IBM �
 vCenter Server Hybridity Bundle 的平台整合選項不侷限於 VMware 提供的選項（例如 vRealize Suite 或 vSphere with Operations Management），但可跨越多個 {{site.data.keyword.cloud_notm}} 服務供應項目（例如 [vCenter Server 和 {{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsiks?topic=vmware-solutions-vcsiks-intro) 及 [vCenter Server 和 {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)），使用開放程式碼 Terraform 將基礎架構當作程式碼來管理及遞送。
 
 vCenter Server Hybridity Bundle 適用廣泛的服務組合和多供應項目整合選項，提供真正的混合平台，讓 Hybridity 能夠成為「服務」。
-
-## 相關鏈結
-{: #vcsnsxt-overview-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

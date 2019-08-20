@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-27"
+lastupdated: "2019-08-01"
 
 keywords: vCenter Server add service, view service vCenter Server, remove service vCenter Server
 
@@ -22,6 +22,9 @@ subcollection: vmware-solutions
 
 災害復旧ソリューションなど、VMware vCenter Server インスタンス向けのサービスを注文できます。 これらのサービスが不要になった場合は、インスタンスから削除できます。
 
+VMware HCX on {{site.data.keyword.cloud_notm}} サービスを注文する際は、12 カ月間のコミットメントが必要です。12 カ月の期間が満了するまでサービスを削除することはできません。12 カ月のコミットメント満了日は、HCX on {{site.data.keyword.cloud_notm}} の詳細ページに示されています。サービス詳細の表示について詳しくは、[vCenter Server インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure)を参照してください。
+{:note}
+
 ## vCenter Server インスタンスで使用可能なサービス
 {: #vc_addingremovingservices-available-services}
 
@@ -33,6 +36,7 @@ vCenter Server インスタンスで使用できるサービスと、インス�
 | [F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations) | BIG-IP VE v14.1.0.2 | V1.9 以降 |
 | [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations) | 300 シリーズ | V2.0 以降 |
 | [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations) | 6.0.3 | V2.0 以降 |
+| [HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_considerations) | 3.5.1 | V2.1 以降 |
 | [HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htcc_considerations) | 5.5.1 | V2.3 以降 |
 | [HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htdc_considerations)  | 4.3.2 | V2.3 以降 |
 | [HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htkc_considerations) | 4.3.2 | V2.5 以降 |
@@ -40,6 +44,7 @@ vCenter Server インスタンスで使用できるサービスと、インス�
 | [IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-spp_considerations) | 10.1.3 | V2.2 以降 |
 | [KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations) | 2.0  | N/A  |
 | [Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations) | 9.5u4 | V1.8 以降 |
+| [VMware vRealize Operations and vRealize Log Insight on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vrops_overview) | 9.7 | V3.2 以降 |
 | [Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr) | 6.5 update 3 | V1.2 以降 |
 {: caption="表 1. vCenter Server インスタンスに使用可能なサービス" caption-side="top"}
 
@@ -61,6 +66,8 @@ vCenter Server インスタンスにサービスを追加するには、前の�
 3. 左側のナビゲーション・ペインの**「サービス」**をクリックします。
 4. **「サービス」**ページでサービスをクリックし、そのサービスの情報 (サービス状況などの詳細) を確認します。
 5. 表示したサービスによっては、サービスの詳細情報に記されている資格情報を使用してサービス・コンソールにアクセスし、そこからサービスを管理することもできます。
+
+VMware HCX on {{site.data.keyword.cloud_notm}} の 12 カ月のコミットメント満了日は、HCX on {{site.data.keyword.cloud_notm}} の詳細ページに示されています。{:note}
 
 ## vCenter Server インスタンス用サービスを削除する手順
 {: #vc_addingremovingservices-removing-procedure}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -128,8 +128,3 @@ Die {{site.data.keyword.icpfull_notm}} NSX NAT ist mit den folgenden NATs konfig
 *	SNAT für VXLAN-Zugriff auf öffentliche Netze
 *	SNAT für VXLAN-Zugriff auf private {{site.data.keyword.cloud_notm}}-Netze
 *	DNAT für {{site.data.keyword.icpfull_notm}}-Cluster-vIPs
-
-## Zugehörige Links
-{: #vcsicp-detail-design-network-related}
-
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

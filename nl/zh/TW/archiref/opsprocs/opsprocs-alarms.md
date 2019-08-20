@@ -205,7 +205,7 @@ VMware 提供下列各表格所述的預先配置 vCenter 警示，然而它們�
 | 未正確地配置 VMKernel NIC * |配置為在發生下列嚴重事件時傳送電子郵件一次：在 `/Migrate/VMknic` 中指定的 `vmknic` 無效。| [Troubleshooting Networking](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.networking.doc/GUID-217384C2-B361-471D-90C8-BC2676A0ECA6.html){:new_window} |
 | 無法連接至儲存空間 * |配置為在發生下列嚴重事件時傳送電子郵件一次：儲存空間連線中斷、儲存空間路徑備援遺失、儲存空間路徑備援欠佳，或 NFS 伺服器連線中斷。| [Identifying Fibre Channel, iSCSI, and NFS storage issues on ESX/ESXi hosts (1003659)g](https://kb.vmware.com/s/article/1003659){:new_window} |
 | 移轉錯誤 * | 配置為在發生下列嚴重事件時傳送電子郵件一次：無法移轉 VM，移轉錯誤，移轉主機錯誤，無法重新定位 VM 或 VM 孤立。| [vMotion or Storage vMotion of a VM fails with the error: The migration has exceeded the maximum switchover time of 100 seconds (2141355)](https://kb.vmware.com/s/article/2141355){:new_window} |
-| 結束待命錯誤 |在 vCenter Server 實例中未配置，因為不建議使用 DPM。| vSphere Distributed Power Management (DPM) 提供內部部署的省電功能，方法是在將 VM 移轉至較少的主機並且關閉不需要之必要 ESX 主機的電源時，於較低資源使用率期間動態合併工作負載。關閉 IBM Cloud Bare Metal Server 的電源，無法節省耗電量。|
+| 結束待命錯誤 |在 vCenter Server 實例中未配置，因為不建議使用 DPM。| vSphere Distributed Power Management (DPM) 提供內部部署的省電功能，方法是在將 VM 移轉至較少的主機並且關閉不需要的 ESX 主機電源時，於較低資源使用率期間動態合併工作負載。關閉 IBM Cloud Bare Metal Server 的電源，無法節省耗電量。|
 
 \* 表示無狀態警示。vCenter 不會保留無狀態警示的資料、不會計算或顯示其狀態。無法確認或重設無狀態警示。
 {:note}

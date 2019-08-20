@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -187,8 +187,3 @@ VMware on {{site.data.keyword.cloud_notm}} は、IBM Cloud の世界規模のデ
 {: #vcsiks-overview-network-sec-compliance}
 
 真のコンプライアンスを促進するために、{{site.data.keyword.cloud_notm}} はお客様に代わって業界の厳しいガイドラインを満たすための作業を既に施しています。 [Compliance on the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/compliance) では、セキュリティーおよびプライバシーのための具体的なコンプライアンス認定、グローバル規制、調整、およびフレームワークについて詳しく説明しています。 [{{site.data.keyword.containerlong_notm}} のセキュリティー](/docs/containers?topic=containers-security#security)では、{{site.data.keyword.containerlong_notm}} のセキュリティー機能について詳しく説明しています。
-
-## 関連リンク
-{: #vcsiks-overview-network-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-01"
+lastupdated: "2019-07-16"
 
 keywords: release notes, what's new, version 3.1
 
@@ -82,7 +82,7 @@ NSX Server 기본 인스턴스에 대해 생성된 NSX Manager 비밀번호는 �
 ### IBM Cloud의 Caveonix RiskForesight
 {: #relnotes_v31-services-caveonix}
 
-현재 릴리스는 새로 배치된 모든 인스턴스에 Caveonix RiskForesight 2.2.1을 설치합니다. Caveonix RiskForesight에 대한 자세한 정보는 [Caveonix 웹 사이트](https://www.caveonix.com/){:external}를 참조하십시오.
+현재 릴리스는 새로 배치된 모든 인스턴스에 Caveonix RiskForesight 2.2.1을 설치합니다. Caveonix RiskForesight에 대한 자세한 정보는 [Caveonix 웹 사이트](https://www.caveonix.com){:external}를 참조하십시오.
 
 ### HyTrust 라이센스 자동 갱신
 {: #relnotes_v31-services-ht}

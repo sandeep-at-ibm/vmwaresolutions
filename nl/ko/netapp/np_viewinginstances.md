@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-25"
 
 keywords: view NetApp, view instance, view instance details
 
@@ -127,7 +127,7 @@ subcollection: vmware-solutions
 
 |항목        |설명       |  
 |:------------|:----------------- |
-|이름 |ESXi 서버의 이름은 `<host_prefix><n>.<subdomain_label>.<root_domain>` 형식으로 되어 있습니다. 여기서,<br><br>`host_prefix`는 호스트 이름 접두부입니다. `n`은 서버의 순서입니다. `subdomain_label`은 하위 도메인 레이블입니다. `root_domain`은 루트 도메인 이름입니다. |
+|이름 |ESXi 서버의 이름은 `<data_center>-<host_prefix><n>.<subdomain_label>.<root_domain>` 형식으로 되어 있습니다. 여기서 `n`은 ESXi 서버의 순서입니다. |
 |버전 |ESXi 서버의 버전입니다. |
 |인증 정보 |ESXi 서버에 액세스하는 데 사용되는 사용자 이름 및 비밀번호입니다. |
 |사설 IP |ESXi 서버의 사설 IP 주소입니다. |

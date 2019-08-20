@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -34,7 +34,7 @@ può essere installato su qualsiasi versione di vSphere supportata da HCX, presu
 
 HCX è un servizio. HCX è concesso su licenza per ogni sito e per ogni VM (virtual machine) con gestione eseguita tramite i server di licenze mantenuti da VMware. Le istanze del lato client e di quello cloud HCX richiedono le comunicazioni con il sito di registrazione VMware in tutto il loro ciclo di vita.
 - Il traffico su 80 e 443 deve essere consentito a `https://connect.hybridity.vmware.com`
-- Una chiave di registrazione monouso viene fornita per l'installazione lato client fornita dalla console {{site.data.keyword.vmwaresolutions_full}}. È richiesta una chiave per ogni installazione HCX lato client.
+- Una chiave di registrazione monouso viene fornita dalla console {{site.data.keyword.vmwaresolutions_full}} per l'installazione lato client. È richiesta una chiave per ogni installazione HCX lato client.
 
 ### Procedura per ordinare le licenze HCX in loco
 {: #hcxclient-vcs-client-deployment-license-ordering-procedure}
@@ -119,7 +119,7 @@ Tabella 1. Valori di esempio per le proprietà di rete
   * Seleziona la casella **Power on after deployment**.
   * Controlla le impostazioni di Hybrid Cloud Services e fai clic su **Finish**. Potrebbero essere necessari diversi minuti per l'accensione del dispositivo Hybrid Cloud Services.
   * Per controllare lo stato, vai alla home page del client web e sulla scheda **Home**, vai a **Inventories** e fai clic su **Hosts and Clusters**. Espandi la gerarchia del data center e fai clic sulla VM (Virtual Machine) del servizio Hybrid Cloud Services per visualizzare un riepilogo nel pannello centrale.
-  * Visualizza la scheda **Summary**, la console legge **Powered On** e il pulsante **Play** è verde.
+  * Visualizza la scheda **Summary**, la console legge **Powered On** e l'icona **Play** è verde.
 10. L'HCX Manager è acceso ed è pronto per essere registrato con il vCenter in loco.
 
 ## Configurazione iniziale del dispositivo HCX Manager
@@ -145,11 +145,10 @@ Tabella 1. Valori di esempio per le proprietà di rete
 {: #hcxclient-vcs-client-deployment-reg-vcenter}
 
 1. Accedi al dispositivo virtuale del servizio Hybrid Cloud Services.
-2. Fai clic sul tile **Manage Settings**.
+2. Nel pannello **Dashboard**, completa la seguente procedura:
   1. Nel pannello di sinistra, in **Configure Systems**, seleziona vCenter.
   2. Fai clic su **Add vCenter** in alto a destra.
-  3. Immetti l'indirizzo IP del vCenter Server nel formato `https://vCenter-host-name` o `https://vCenter-IP-address`.
-    * Ad esempio, `https://My-vCenter` o `https://10.108.26.211`.
+  3. Immetti l'indirizzo IP del vCenter Server nel formato `https://vCenter-host-name` o `https://vCenter-IP-address`. Ad esempio, `https://My-vCenter` o `https://10.108.26.211`
   4. Immetti il nome utente e la password vCenter Server. L'account che viene utilizzato deve avere il ruolo di amministratore di vCenter.
   5. Fai clic su **OK**. Non riavviare quando viene visualizzato il messaggio _You need to restart the app_.
 3. Configura il servizio di ricerca / SSO.

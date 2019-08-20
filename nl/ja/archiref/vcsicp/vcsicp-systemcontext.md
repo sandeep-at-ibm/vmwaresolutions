@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -60,8 +60,3 @@ Chef | 構成管理とコンプライアンス自動化を行います。 Chef �
 Watson | このリファレンス・アーキテクチャーの Acme Skateboards 社の例では、Watson が「コンセプト・カー」アーキテクチャーで使用される AI サービスです。
 
 アプリケーション・モダナイゼーションにおいて最も難しい側面は、多くの場合、アプリケーションのマイグレーション、ネットワーキング、およびセキュリティーです。 vCenter Server、VMware Hybridity、VMware NSX、{{site.data.keyword.icpfull_notm}}、および {{site.data.keyword.containerlong_notm}} により、これらの課題に対処して、弾力性、堅牢性、および機密保護機能を備えた最新のアプリケーションを構築できます。
-
-## 関連リンク
-{: #vcsicp-systemcontext-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

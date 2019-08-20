@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-23"
 
 keywords: vCenter Server compliance, compliance info, vCenter Server policy
 
@@ -57,7 +57,7 @@ Ce service cloud n'est pas destiné à des exigences de sécurité spécifiques 
 ## Configurations de règles
 {: #vc_compl_info-default-policy-config}
 
-Le mot de passe vCenter généré pour les instances principales de vCenter Server est maintenant composé de 15 caractères. Auparavant, le mot de passe généré était la valeur par défaut vCenter de huit caractères. 
+Le mot de passe vCenter généré pour les instances principales de vCenter Server est maintenant composé de 15 caractères. Auparavant, le mot de passe généré était la valeur par défaut vCenter de huit caractères.
 
 Le tableau suivant décrit en détail les configurations de règles vCenter pour une nouvelle instance principale :
 
@@ -73,7 +73,7 @@ Le mot de passe NSX Manager généré pour les instances principales de vCenter 
 ## Politique d'accès aux instances des clients
 {: #vc_compl_info-policy-for-access-client-inst}
 
-Les environnements VMware vCenter Server, distribués en tant que solutions {{site.data.keyword.vmwaresolutions_short}}, fournissent à nos clients une couche de plateforme de gestion VMware afin de leur permettre gérer les fonctions de virtualisation. Tout au long du cycle de vie des produits et services IBM Cloud for VMware, il peut s'avérer nécessaire de faire appel au support IBM pour garantir leur bon fonctionnement. Dans la plupart des cas, une intervention du support IBM résulte d'une demande du client (au moyen de la création d'un ticket de demande de service). Toutefois, dans de rares cas, le support IBM peut fournir de l'aide de manière proactive et sans qu'un ticket de demande de service ne soit créé par le client, afin de prévenir de futurs problèmes. Cet accès, qui s'effectue via le réseau de support interne IBM Cloud, est documenté dans un ticket de demande de service généré par le support IBM et fait l'objet d'une surveillance en continu de la part d'IBM Cloud SOC. Le support IBM ne peut en aucun cas modifier la configuration d'instance sans le consentement préalable du client. Le support IBM accède aux composants de gestion VMware et/ou aux composants de gestion IBM Cloud, mais jamais aux machines virtuelles ou aux applications du client.
+Les environnements VMware vCenter Server, distribués en tant que solutions {{site.data.keyword.vmwaresolutions_short}}, fournissent à nos clients une couche de plateforme de gestion VMware afin de leur permettre gérer les fonctions de virtualisation. Tout au long du cycle de vie des produits et services {{site.data.keyword.cloud_notm}} for VMware, il peut s'avérer nécessaire de faire appel au support IBM pour garantir leur bon fonctionnement. Dans la plupart des cas, une intervention du support IBM résulte d'une demande du client (au moyen de la création d'un ticket de demande de service). Toutefois, dans de rares cas, le support IBM peut fournir de l'aide de manière proactive et sans qu'un ticket de demande de service ne soit créé par le client, afin de prévenir de futurs problèmes. Cet accès, qui s'effectue via le réseau de support interne {{site.data.keyword.cloud_notm}}, est documenté dans un ticket de demande de service généré par le support IBM et fait l'objet d'une surveillance en continu de la part d'{{site.data.keyword.cloud_notm}} SOC. Le support IBM ne peut en aucun cas modifier la configuration d'instance sans le consentement préalable du client. Le support IBM accède aux composants de gestion VMware et/ou aux composants de gestion {{site.data.keyword.cloud_notm}}, mais jamais aux machines virtuelles ou aux applications du client.
 
 ## Support proactif
 {: #vc_compl_info-proactive-support}
@@ -83,14 +83,14 @@ Les environnements VMware vCenter Server, distribués en tant que solutions {{si
 
 * Durant le processus initial de commande et de mise à disposition d'une instance ou d'un service, le support IBM peut accéder aux instances et aux informations du client sans le prévenir préalablement, afin de s'assurer que les commandes sont correctement exécutées.
 * Le support IBM surveille activement les opérations de cycle de vie des instances, par exemple, l'ajout de nouveaux hôtes, en plus des processus de commande, de mise à disposition et d'installation.
-* Pour résoudre des problèmes qui sont survenus ou des incidents susceptibles de se produire, le support IBM peut exécuter un certain nombre d'actions, notamment passer en revue les caractéristiques d'une commande client, redémarrer les travaux d'automatisation, effectuer des opérations de rechargement de système d'exploitation ou créer des tickets de demande de service en utilisant le nom d'utilisateur et la clé d'API IBM Cloud du client.
+* Pour résoudre des problèmes qui sont survenus ou des incidents susceptibles de se produire, le support IBM peut exécuter un certain nombre d'actions, notamment passer en revue les caractéristiques d'une commande client, redémarrer les travaux d'automatisation, effectuer des opérations de rechargement de système d'exploitation ou créer des tickets de demande de service {{site.data.keyword.cloud_notm}} en utilisant le nom d'utilisateur et la clé d'API {{site.data.keyword.cloud_notm}} du client.
 
 ### Support proactif pour les opérations d'état stabilisé
 {: #vc_compl_info-proactive-support-for-steady-state-operations}
 
 * Dans de rares cas, le support IBM peut avoir besoin d'accéder aux instances du client lors des opérations d'état stabilisé afin d'identifier et résoudre des incidents de manière proactive sur une instance ou de vérifier le fonctionnement des services ou composants mis à disposition.
-* Cet accès s'effectue via le réseau de support interne IBM Cloud. Le support IBM ne peut en aucun cas modifier la configuration d'instance sans le consentement préalable du client.
-* Le support IBM accède aux composants de gestion VMware et/ou aux composants de gestion IBM Cloud, mais jamais aux machines virtuelles ou aux applications du client.
+* Cet accès s'effectue via le réseau de support interne {{site.data.keyword.cloud_notm}}. Le support IBM ne peut en aucun cas modifier la configuration d'instance sans le consentement préalable du client.
+* Le support IBM accède aux composants de gestion VMware et/ou aux composants de gestion {{site.data.keyword.cloud_notm}}, mais jamais aux machines virtuelles ou aux applications du client.
 
 ### Tickets de demande de service
 {: #vc_compl_info-support-tickets}
@@ -105,8 +105,8 @@ Les environnements VMware vCenter Server, distribués en tant que solutions {{si
 ## Responsabilités du client
 {: #vc_compl_info-client-responsibilities}
 
-* Bien que nous recommandions aux clients de prendre certaines mesures pour renforcer la sécurité de leurs environnements, il convient de noter que certaines pratiques peuvent avoir des effets néfastes sur l'efficacité d'IBM Cloud for VMware.
-* Les clients sont responsables des pare-feu qu'ils créent et des limitations qui en découlent sur les communications entre les composants IBM Cloud for VMware. Ces pare-feu peuvent également compromettre la capacité du support IBM à accéder aux instances du client et à résoudre les problèmes.
+* Bien que nous recommandions aux clients de prendre certaines mesures pour renforcer la sécurité de leurs environnements, il convient de noter que certaines pratiques peuvent avoir des effets néfastes sur l'efficacité d'{{site.data.keyword.cloud_notm}} for VMware.
+* Les clients sont responsables des pare-feu qu'ils créent et des limitations qui en découlent sur les communications entre les composants {{site.data.keyword.cloud_notm}} for VMware. Ces pare-feu peuvent également compromettre la capacité du support IBM à accéder aux instances du client et à résoudre les problèmes.
 * Les clients sont chargés de chiffrer les données contenues dans leur système.
 * Après le déploiement initial, l'automatisation de l'offre et le compte du client sont dissociés. Le client est autorisé et encouragé à modifier tous les mots de passe fournis par IBM dans le portail.
 * Les données d'identification et les droits d'accès à vCenter sont créés durant les déploiements initiaux et fournis au client. Dans le cadre des conditions requises pour notre offre, le support IBM doit conserver un accès complet à la couche de gestion pour fournir une gestion du cycle de vie et un support à nos clients.

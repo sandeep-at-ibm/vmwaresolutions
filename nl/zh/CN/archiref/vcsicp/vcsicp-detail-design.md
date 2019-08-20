@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-09"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -60,8 +60,3 @@ NSX-T 设计为使一个可以连接到任何类型应用程序（基于虚拟�
 {{site.data.keyword.icpfull_notm}} 提供了一个选项，用于将 Calico 联网替换为 NSX-T 实例，从而提供单个位置来管理网络和安全性。
 
 ![{{site.data.keyword.icpfull_notm}}（带 NSX-V 联网）](../../images/vcsicp-icp-nsxt-networking.svg "{{site.data.keyword.icpfull_notm}}（带 NSX-V 联网）")
-
-## 相关链接
-{: #vcsicp-detail-design-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-23"
 
 keywords: vmware solutions data sheet, vmware solutions developerWorks, vmware solutions video
 
@@ -37,7 +37,7 @@ subcollection: vmware-solutions
 ## IBM Cloud のパターン
 {: #additional_resources-patterns}
 
-* [IBM Cloud のパターン](https://ibmcloudpatterns.mybluemix.net/#862581F800007C53/862581F800007DD5/862581D000837B23){:external}
+* [{{site.data.keyword.cloud_notm}} パターン](https://ibmcloudpatterns.mybluemix.net/#862581F800007C53/862581F800007DD5/862581D000837B23){:external}
 
 ## プラットフォーム拡張
 {: #additional_resources-plat-extensions}
@@ -54,9 +54,18 @@ subcollection: vmware-solutions
 ## ビデオおよびデモンストレーション
 {: #additional_resources-demos}
 
+### Digital Technical Engagement
+{: #additional_resources-dte}
+
+* [VMware on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/){:external}
+* [Veeam on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/demos/collection/Veeam-on-IBM-Cloud){:external}
+* [Zerto on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/demos/collection/Zerto-on-IBM-Cloud){:external}
+
+### その他のビデオおよびデモンストレーション
+{: #additional_resources-more}
+
 * [リソースおよびビデオ](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/resources){:external}
-* [Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware){:external}
-* [主なリソースおよびケース・スタディー](https://www.ibm.com/cloud/vmware/resources){:external}
+* [主なリソースおよびケース・スタディー](https://www.ibm.com/cloud/vmware){:external}
 
 ## VMware の資料
 {: #additional_resources-vmware-doc}

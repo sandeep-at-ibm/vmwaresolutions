@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -120,8 +120,3 @@ nollie-heelflip to frontside-boardslide
 {: #vcscar-concepts-relevance}
 
 技巧语言是一个关键的构造，用于训练 Watson 来识别和摄入滑板文档和媒体，同时形成与用户对话的基础。
-
-## 相关链接
-{: #vcscar-concepts-related}
-
-* [vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)  

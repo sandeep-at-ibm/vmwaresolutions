@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-01"
 
 keywords: FAQ, user account, patch management
 
@@ -31,7 +31,7 @@ Encontre respostas às perguntas mais frequentes sobre o {{site.data.keyword.vmw
 * **Conta IBMid**. Esta conta é necessária para acessar o console do {{site.data.keyword.vmwaresolutions_short}}. O console é uma interface com o usuário independente separada do {{site.data.keyword.slportal}}. Para obter mais informações, veja
 [Introdução](/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started).
 * **Conta {{site.data.keyword.cloud_notm}}**. Esta conta é necessária para fornecimento. É possível inscrever-se para uma conta do {{site.data.keyword.cloud_notm}} usando um **IBMid** existente ou criando um novo **IBMid**.
-* ** {{site.data.keyword.cloud_notm}}  conta de infraestrutura **. Essa conta é usada para efetuar login no portal do cliente de infraestrutura do {{site.data.keyword.cloud_notm}} que fornece alguma função adicional para gerenciar produtos e serviços de infraestrutura. É possível obter uma conta de infraestrutura do {{site.data.keyword.cloud_notm}} fazendo upgrade de sua **conta do {{site.data.keyword.cloud_notm}}** para uma conta faturável ou vinculando sua conta de infraestrutura existente do {{site.data.keyword.cloud_notm}} à conta do {{site.data.keyword.cloud_notm}}. A conta de infraestrutura do {{site.data.keyword.cloud_notm}} que você está usando deve atender a determinados requisitos. Para obter mais informações, consulte [Inscrevendo-se para contas necessárias](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts) e [Requisitos da conta de infraestrutura do {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req).
+* ** {{site.data.keyword.cloud_notm}}  conta de infraestrutura **. Essa conta é usada para efetuar login no portal do cliente de infraestrutura do {{site.data.keyword.cloud_notm}} que fornece alguma função adicional para gerenciar produtos e serviços de infraestrutura. É possível obter uma conta de infraestrutura do {{site.data.keyword.cloud_notm}} fazendo upgrade de sua **conta do {{site.data.keyword.cloud_notm}}** para uma conta faturável ou vinculando sua conta de infraestrutura existente do {{site.data.keyword.cloud_notm}} à conta do {{site.data.keyword.cloud_notm}}. A conta de infraestrutura do {{site.data.keyword.cloud_notm}} que você está usando deve atender a determinados requisitos. Para obter mais informações, consulte [Inscrevendo-se em contas necessárias](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts) e [Requisitos da conta de infraestrutura do {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req).
 
 ## Como eu associo minhas credenciais de infraestrutura do IBM Cloud ao console do IBM Cloud for VMware Solutions?
 {: #faq-associate-credentials}
@@ -89,7 +89,7 @@ Quando um terceiro nó é incluído em um cluster de dois nós, o vCenter Server
 {: #faq-rename-cluster}
 {: faq}
 
-Para uma nova instância do vCenter Server, o primeiro cluster que é criado durante a implementação tem um nome padrão de **cluster1**. É possível renomear o cluster padrão no VMware vSphere Client. Ao incluir um cluster em uma instância do vCenter Server, é possível especificar o nome que você deseja no console do {{site.data.keyword.vmwaresolutions_short}}.
+Para uma nova instância do vCenter Server, é possível configurar o nome do cluster inicial que é criado durante a implementação. Ao incluir um cluster em uma instância do vCenter Server, é possível especificar o nome que você deseja no console do {{site.data.keyword.vmwaresolutions_short}}.
 
 ## Como as correções são gerenciadas?
 {: #faq-patches}
@@ -107,7 +107,6 @@ Para instâncias que foram implementadas na V2.0 ou superior, o VMware Update Ma
 Para obter mais informações, consulte os recursos a seguir:
 * [Suporte ao VMware](https://www.vmware.com/support.html){:external}
 * [Aplicando atualizações a instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates)
-* [Aplicando atualizações a instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_applyingupdates)
 
 ## O NSX Edge de serviços de gerenciamento representa um risco de segurança?
 {: #faq-mgmt-nsx}
@@ -137,7 +136,6 @@ As implementações da instância têm requisitos estritos de infraestrutura fí
 
 Para obter mais informações, veja as seções _Disponibilidade do IBM Cloud Data Center_ em:
 * [Requisitos e planejamento para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
-* [Requisitos e planejamento para instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)
 * [Requisitos e planejamento para o VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning)
 * [Requisitos e planejamento para instâncias do NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_planning)
 

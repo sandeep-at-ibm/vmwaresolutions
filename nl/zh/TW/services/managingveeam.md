@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-23"
 
 keywords: Veeam console, Veeam backup restore, update Veeam license
 
@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 
 將服務部署至實例之後，您可以使用 RDP 來存取 Veeam 主控台，以管理環境中所有虛擬機器的備份及還原（包括管理元件的備份及還原）。您也可以從 Veeam 網站下載並安裝 Veeam 更新，以升級服務。
 
-針對 1.8 版之前版本中所部署的實例，如果您要使用 Veeam on {{site.data.keyword.cloud}} 服務，則必須取代實例中的現有 Veeam VSI。如需相關資訊，請參閱[將 1.8 版之前的實例的 Veeam VSI 取代為 Veeam on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam#managingveeam-replace-vsi)。
+針對 1.8 版之前版本中所部署的實例，如果您要使用 Veeam on {{site.data.keyword.cloud}} 服務，則必須取代實例中的現有 Veeam VSI。如需相關資訊，請參閱[將 1.8 版之前的實例的 Veeam VSI 取代為 Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam#managingveeam-replace-vsi)。
 
 ## 使用 RDP 來存取 Veeam 主控台
 {: #managingveeam-accessing}

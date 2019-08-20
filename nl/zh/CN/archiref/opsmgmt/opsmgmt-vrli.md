@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-01"
+lastupdated: "2019-08-05"
 
 ---
 
@@ -139,11 +139,10 @@ Manager
 * VMware NSX for vSphere
 * vRealize Network Insight
 
-其他内容包可以从 [vReize Log Insight 内容包](https://marketplace.vmware.com/vsx/?contentType=2&listingStyle=table){:new_window}中获取。
+其他内容包可以从 [vRealize Log Insight 内容包](https://marketplace.vmware.com/vsx/?contentType=2&listingStyle=table){:new_window}中获取。
 
 ## 相关链接
 {: #opsmgmt-vrli-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
 * [调整 vRealize Log Insight 虚拟设备的大小](https://docs.vmware.com/en/vRealize-Log-Insight/4.6/com.vmware.log-insight.getting-started.doc/GUID-284FC5F4-B832-47A7-912E-D407A760CAE4.html){:new_window}
 * [vRealize Log Insight](https://docs.vmware.com/en/vRealize-Log-Insight/index.html){:new_window}

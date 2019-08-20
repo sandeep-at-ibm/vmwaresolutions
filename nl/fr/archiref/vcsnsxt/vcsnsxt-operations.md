@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -105,10 +105,5 @@ Les utilisateurs peuvent mettre à disposition un environnement {{site.data.keyw
 
 Les déploiements d'application dans {{site.data.keyword.containerlong_notm}} peuvent être effectués à l'aide des méthodes suivantes :
 -	Le développement de la connexion et des services {{site.data.keyword.containerlong_notm}} dans CAM et leur publication dans le catalogue {{site.data.keyword.icpfull_notm}}.
--	L'apport d'améliorations à Multi Cloud Manager pour la gestion des instances {{site.data.keyword.containerlong_notm}}.
--	L'interface de ligne de commande Helm.
-
-## Liens connexes
-{: #vcsnsxt-operations-related}
-
-* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+- L'apport d'améliorations à Multi Cloud Manager pour la gestion des instances {{site.data.keyword.containerlong_notm}}.
+- L'interface de ligne de commande Helm.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -105,11 +105,6 @@ RiskForesight 安裝包含下列高階步驟：
 |VM 總計|1	|4	|48 |
 
 **附註：**當您移除 {{site.data.keyword.cloud_notm}} 服務上的 Caveonix RiskForesight 時，{{site.data.keyword.vmwaresolutions_short}} 自動化只會刪除已部署的單一「全功能」的 Caveonix VM，以及針對其訂購的專用子網路。因此，
-* 如果您將 Caveonix VM 擴充為多部 VM，額外的 VM 不會被移除。 
-* 如果您已使用額外 VM 上的專用子網路的 IP 位址，必須對那些 VM 指派新的 IP 位址，才能夠繼續運作。 
+* 如果您將 Caveonix VM 擴充為多部 VM，額外的 VM 不會被移除。
+* 如果您已使用額外 VM 上的專用子網路的 IP 位址，必須對那些 VM 指派新的 IP 位址，才能夠繼續運作。
 * 如果您刪除已安裝 Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} 服務的 vCenter Server 實例 A，而且您使用針對 vCenter Server 實例 B 中的服務所訂購的專用子網路的 IP 位址，則專用子網路會在刪除 vCenter Server 實例 A 時立即被取消。
-
-## 相關鏈結
-{: #caveonix-deploy-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

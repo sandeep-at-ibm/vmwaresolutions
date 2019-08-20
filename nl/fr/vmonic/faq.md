@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-01"
 
 keywords: FAQ, user account, patch management
 
@@ -88,7 +88,7 @@ Vous pouvez configurer vCenter à haute disponibilité, mais le prise en charge 
 {: #faq-rename-cluster}
 {: faq}
 
-Pour une nouvelle instance vCenter Server, le premier cluster créé lors du déploiement est, par défaut, nommé **cluster1**. Vous pouvez le renommer dans le client VMware vSphere. Lorsque vous ajoutez un cluster à une instance vCenter Server, vous pouvez spécifier le nom de votre choix sur la console {{site.data.keyword.vmwaresolutions_short}}.
+Pour une nouvelle instance vCenter Server, vous pouvez définir le nom du cluster initial créé lors du déploiement. Lorsque vous ajoutez un cluster à une instance vCenter Server, vous pouvez spécifier le nom de votre choix sur la console {{site.data.keyword.vmwaresolutions_short}}.
 
 ## Comment sont gérés les modules de correction ?
 {: #faq-patches}
@@ -106,7 +106,6 @@ Pour les instances déployées en version 2.0 ou ultérieure, le gestionnaire de
 Pour plus d'informations, consultez les ressources suivantes :
 * [Support VMware](https://www.vmware.com/support.html){:external}
 * [Application de mises à jour à des instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates)
-* [Application de mises à jour à des instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_applyingupdates)
 
 ## La passerelle NSX Edge des services de gestion présente-t-elle un risque pour la sécurité ?
 {: #faq-mgmt-nsx}
@@ -136,7 +135,6 @@ Les déploiements d'instance sont soumis à des exigences strictes en matière d
 
 Pour plus d'informations, voir les sections _Disponibilité d'IBM Cloud Data Center_ dans :
 * [Exigences et planification pour les instances vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
-* [Exigences et planification pour les instances vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)
 * [Exigences et planification pour VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning)
 * [Exigences et planification pour les instances NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_planning)
 

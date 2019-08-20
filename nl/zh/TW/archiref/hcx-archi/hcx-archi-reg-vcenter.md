@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-27"
+lastupdated: "2019-07-08"
 
 subcollection: vmware-solutions
 
@@ -24,10 +24,10 @@ subcollection: vmware-solutions
 {: #hcx-archi-reg-vcenter-proc-register}
 
 1. 登入 Hybrid Cloud Services 服務虛擬應用裝置。例如，`https:My-HCX-Manager:9443/`。
-2. 按一下**管理設定**磚。
+2. 在**儀表板**畫面上，完成下列步驟：
   1. 在左窗格的**配置系統**下，選取 vCenter。
   2. 按一下右上方的**新增 vCenter**。
-  3. 以 `https:vCenter-host-name` 或 `https:vCenter-IP-address` 形式，輸入 vCenter Server 的 IP 位址。例如，`https:My-vCenter` 或 `https:10.108.26.211`。
+  3. 以 `https:vCenter-host-name` 或 `https:vCenter-IP-address` 形式，輸入 vCenter Server 的 IP 位址。例如，`https:My-vCenter` 或 `https:10.108.26.211`
   4. 輸入 vCenter Server 使用者名稱及密碼。使用的帳戶必須有「vCenter 管理者」角色。
   5. 按一下**確定**。當顯示_您需要重新啟動應用程式_ 訊息時，請不要重新啟動。
 3. 配置查閱服務。

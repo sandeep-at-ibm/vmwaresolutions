@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-21"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -35,7 +35,7 @@ La configuration du locataire ou de l'organisation comporte sept sous-étapes :
 - Etape 1 : Organisation - Ajoutez les détails de votre organisation principale. Vous pouvez également créer des sous-organisations. Utilisez les organisations pour segmenter vos utilisateurs, ou comme un moyen de regrouper vos actifs. Vous pouvez créer d'autres organisations avec l'une de vos organisations existantes comme parent. Lorsque vous créez une nouvelle organisation, vous pouvez sélectionner la **valeur d'impact métier**, qui est utilisée pour générer des scores de risque cybernétique.
 - Etape 2 : Actifs de l'organisation - Les nouveaux actifs et les nouvelles charges de travail sont automatiquement regroupés par emplacement, fournisseur de cloud et référentiel d'actifs. Les actifs ne peuvent être affectés qu'à une seule organisation à la fois. Le fournisseur de service doit affecter les actifs à une organisation.
 - Etape 3 : Associer un environnement et un emplacement – Facultatif. Les environnements sont définis par le fournisseur de service.
-- Etapes 4 et 5 : Créez des sous-applications ou des applications – Cette étape permet de regrouper des actifs par emplacements ou organisations et de voir les flux et les politiques qui leur sont associés. Créez des applications qui correspondent à des services IT ou commerciaux. Par exemple, Application=SAP, Sous-applications=SAP Front End, SAP Middle Tier et SAP Back End. La **valeur d'impact métier** correspond à une application. Les régimes de conformité s'appliquent à une application. 
+- Etapes 4 et 5 : Créez des sous-applications ou des applications – Cette étape permet de regrouper des actifs par emplacements ou organisations et de voir les flux et les politiques qui leur sont associés. Créez des applications qui correspondent à des services IT ou commerciaux. Par exemple, Application=SAP, Sous-applications=SAP Front End, SAP Middle Tier et SAP Back End. La **valeur d'impact métier** correspond à une application. Les régimes de conformité s'appliquent à une application.
 - Etape 6 : Accès distant - Un accès distant est requis pour exécuter des analyses sur les actifs. Il peut s'agit d'un compte de service par défaut ou d'un compte spécifique à un actif.
 - Etape 7 : Planificateur de tâches - Planifiez des analyses à exécuter périodiquement. Les types de tâches incluent : l'analyse de vulnérabilité SCAP, l'analyse SCAP XCCDF, l'analyse de flux NSX, l'analyse logicielle, l'analyse d'extraction de journaux.
 
@@ -71,8 +71,3 @@ Tableau 2. Informations par défaut utilisées dans la configuration de l'applic
 |Tâche |Quatre tâches sont configurées : l'analyse des actifs, l'analyse des flux NSX, l'analyse de l'infrastructure VMware et de la vulnérabilité VMware. ScanName est défini sur DC1AssetScan, NSXFlows, VMWInfraScan, VMWVulnScan |
 |Tâche |Quatre tâches sont configurées : l'analyse des actifs, l'analyse des flux NSX, l'analyse de l'infrastructure VMware et de la vulnérabilité VMware. Type est défini sur vCenter, NSX, VMWareInfrastructureScan, VMWareVulnerabilityScan |
 |Tâche |Schedule est défini sur Hourly pour DC1AssetScan et Daily pour les autres |
-
-## Liens connexes
-{: #caveonix-step4-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

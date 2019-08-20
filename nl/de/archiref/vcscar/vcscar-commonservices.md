@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -32,8 +32,3 @@ Die Bereitstellung verwendet die bereitgestellten AD-VSIs als DNS-Server für di
 {: #vcscar-commonservices-ntp}
 
 Die vCenter Server-Bereitstellung nutzt die Server für Network Time Protocol (NTP) der {{site.data.keyword.cloud_notm}}-Infrastruktur. Alle bereitgestellten Komponenten werden so konfiguriert, dass sie diese NTP-Server verwenden. Dass alle Komponenten dieselben NTP-Server verwenden, ist für die korrekte Funktion von Zertifikaten und die AD-Authentifizierung von kritischer Bedeutung.
-
-## Zugehörige Links
-{: #vcscar-commonservices-related}
-
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

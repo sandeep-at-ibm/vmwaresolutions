@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-20"
+lastupdated: "2019-08-06"
 
 keywords: planning vSphere, data center, vSphere data centers
 
@@ -34,6 +34,9 @@ Das {{site.data.keyword.cloud_notm}}-Konto, das Sie verwenden, muss bestimmte Vo
 {: #vs_planning-dc-availability}
 
 Die vSphere-Bereitstellung stellt strenge Anforderungen an die physische Infrastruktur. Sie können Cluster daher nur in {{site.data.keyword.CloudDataCents_notm}} bereitstellen, die diese Anforderungen erfüllen. Die folgenden {{site.data.keyword.CloudDataCent_notm}} stehen für die Bereitstellung von vSphere zur Verfügung.
+
+Cascade Lake-{{site.data.keyword.baremetal_short}} sind in Mehrzonen-Regionen (MZR)-{{site.data.keyword.CloudDataCents_notm}} verfügbar. Weitere Informationen finden Sie in [Mehrzonen-Region (MZR) - Übersicht
+](/docs/infrastructure/loadbalancer-service?topic=loadbalancer-service-multi-zone-region-mzr-overview).
 
 Falls Sie eine vSAN-Komponente auswählen, wird die Liste der Standorte nach Verfügbarkeit von SSD (Solid-State-Platten) gefiltert.
 {:note}

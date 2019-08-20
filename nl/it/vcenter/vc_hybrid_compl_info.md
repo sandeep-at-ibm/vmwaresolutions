@@ -51,7 +51,7 @@ Questo servizio cloud non è progettato per requisiti specifici di sicurezza per
 ## Politica per l'accesso alle istanze client
 {: #vc_hybrid_compl_info-policy-for-access-client-inst}
 
-Gli ambienti vCenter Server, che vengono forniti come {{site.data.keyword.vmwaresolutions_short}}, forniscono un livello della piattaforma di gestione VMware per i nostri clienti per gestire le funzionalità di virtualizzazione. Durante tutto il ciclo di vita dei prodotti e dei servizi IBM Cloud for VMware, può essere richiesto il supporto di IBM per contribuire a garantire i risultati. Nella maggior parte dei casi, l'intervento del supporto IBM è il risultato di una richiesta client (cioè un ticket di supporto). Tuttavia, in rare occasioni, il supporto IBM può aiutare in modo proattivo e senza un ticket di supporto scritto dal client per evitare problemi futuri. Questo accesso avviene tramite la rete di supporto interno di IBM Cloud ed è documentato tramite un ticket di supporto aperto dal supporto IBM e monitorato continuamente da IBM Cloud SOC. In nessun momento il supporto IBM modifica la configurazione dell'istanza senza il previo consenso del cliente. L'accesso è ai componenti di gestione VMware e/o ai componenti di gestione di IBM Cloud e mai alle macchine o alle applicazioni virtuali del cliente.
+Gli ambienti vCenter Server, che vengono forniti come {{site.data.keyword.vmwaresolutions_short}}, forniscono un livello della piattaforma di gestione VMware per i nostri clienti per gestire le funzionalità di virtualizzazione. Durante tutto il ciclo di vita dei prodotti e dei servizi IBM Cloud for VMware, può essere richiesto il supporto di IBM per contribuire a garantire i risultati. Nella maggior parte dei casi, l'intervento del supporto IBM è il risultato di una richiesta client (cioè un ticket di supporto). Tuttavia, in rare occasioni, il supporto IBM può aiutare in modo proattivo e senza un ticket di supporto scritto dal client per evitare problemi futuri. Questo accesso avviene tramite la rete di supporto interno di IBM Cloud ed è documentato tramite un ticket di supporto aperto dal supporto IBM e monitorato continuamente da IBM Cloud SOC. In nessun momento il supporto IBM modifica la configurazione dell'istanza senza il previo consenso del cliente. L'accesso è ai componenti di gestione VMware e/o ai componenti di gestione di IBM Cloud e mai alle applicazioni o alle macchine virtuali del cliente.
 
 ## Supporto proattivo
 {: #vc_hybrid_compl_info-proactive-support}
@@ -68,7 +68,7 @@ Gli ambienti vCenter Server, che vengono forniti come {{site.data.keyword.vmware
 
 * In rare occasioni, il supporto IBM potrebbe richiedere l'accesso alle istanze client durante le operazioni in stato stabile per risolvere proattivamente un problema di istanza o per verificare la funzione dei servizi o componenti forniti.
 * Questo accesso avviene tramite la rete di supporto interno di IBM Cloud. In nessun momento il supporto IBM modifica la configurazione dell'istanza senza il previo consenso del cliente.
-* L'accesso è ai componenti di gestione VMware e/o ai componenti di gestione di IBM Cloud e mai alle macchine o alle applicazioni virtuali del cliente.
+* L'accesso è ai componenti di gestione VMware e/o ai componenti di gestione di IBM Cloud e mai alle applicazioni o alle macchine virtuali del cliente.
 
 ### Ticket di supporto
 {: #vc_hybrid_compl_info-support-tickets}

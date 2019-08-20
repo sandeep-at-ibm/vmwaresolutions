@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-27"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -16,7 +16,7 @@ subcollection: vmware-solutions
 
 既然 Stock Trader 正在容器中執行，而且 Jane 滿意現行微服務，她及 Todd 就可以處理如何利用額外的功能來加強應用程式。藉由重構 Stock Trader 微服務來處理增加的活動及可調整性，他們都會看到將中介軟體新增至 {{site.data.keyword.cloud}} Private 的需求。某個中介軟體已存在於其資料中心，因此，在新增某個新中介軟體的情況下，會成為更換平台練習。
 
-![Stock Trader 重構](../../images/vcscontent-refactor.svg "Stock Trader 重構")
+![Stock Trader 重構](../../images/vcscontent-refactor.svg "Stock Trader 重構"){: caption="圖 1. Stock Trader 的重構" caption-side="bottom"}
 
 此解決方案重構可讓一般平台執行應用程式及必要服務，並引入更簡單的管理平面。
 
@@ -230,16 +230,11 @@ Todd 一開始會從使用者介面中選取要在中介軟體取得的 NodePort
 
 Jane 想要統一的程式碼庫，即使 Stock Trader 可在多個雲端上執行也是一樣。下圖中的密碼 Db2 具有不同的遞送詳細資料，但格式相同。Jane 的組合微服務在部署時會尋找 Db2 密碼端點參數，以連接至適當的 Db2 實例。Stock Trader 應用程式不在意它在 VMware 虛擬機器中、容器化服務中執行，還是作為雲端管理的服務執行。
 
-![Stock Trader 樞軸服務](../../images/vcscontent-pivot-services.svg "Stock Trader 樞軸服務")
+![Stock Trader 樞軸服務](../../images/vcscontent-pivot-services.svg "Stock Trader 樞軸服務"){: caption="圖 2. Stock Trader - 樞軸服務" caption-side="bottom"}
 
 ## 結果
 {: #vcscontent-addmidware-result}
 
 因為 Jane 已確定重構其 Stock Trader 解決方案，而且 Todd 將中介軟體安裝至 {{site.data.keyword.cloud_notm}} Private Hosted，所以所有核心 Stock Trader 解決方案都是在專用雲端中執行。Jane 現在新增更多微服務，例如 Twitter 通知服務。Istio 遞送規則透過內部 Slack 頻道或公用 Twitter 頻道，啟用動態忠誠度層次傳訊。
 
-![Stock Trader 擴充](../../images/vcscontent-enrich.svg "Stock Trader 擴充")
-
-## 相關鏈結
-{: #vcscontent-addmidware-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+![Stock Trader 擴充](../../images/vcscontent-enrich.svg "Stock Trader 擴充"){: caption="圖 3. Stock Trader 的擴充" caption-side="bottom"}

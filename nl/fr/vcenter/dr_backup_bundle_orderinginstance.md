@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-25"
 
 keywords: single-node trial, data protection DR, order data protection DR
 
@@ -47,9 +47,10 @@ Assurez-vous que les conditions requises suivantes sont réunies et exécutez le
 ### Exigences relatives au nom d'instance
 {: #dr_backup_bundle_orderinginstance-inst-name-req}
 
-Passez en revue les exigences relatives au nom d'instance :
-* Seuls les caractères alphanumériques et le tiret (-) sont autorisés.
-* Le nom d'instance doit commencer par un caractère alphabétique et se terminer par un caractère alphanumérique.
+Le nom de l'instance qui doit respecter les règles suivantes :
+* Seuls les caractères alphabétiques minuscules, numériques et tirets (-) sont autorisés.
+* Le nom d'instance doit commencer par un caractère alphabétique minuscule.
+* Le nom d'instance doit se terminer par un caractère alphabétique minuscule ou un caractère numérique.
 * Le nom d'instance ne doit pas dépasser 10 caractères.
 * Le nom d'instance doit être unique au sein de votre compte.
 
@@ -193,8 +194,8 @@ Procédez comme suit pour supprimer une instance Single-node Trial for Data Prot
 ## Liens connexes
 {: #dr_backup_bundle_orderinginstance-related}
 
-* [Guide vCenter Server et IBM Cloud Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [Ouvrir un ticket au sujet d'IBM Cloud Private](https://www.ibm.com/mysupport/s/?language=fr_FR){:external}
+* [Guide vCenter Server et {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
+* [Ouvrir un ticket au sujet d'{{site.data.keyword.cloud_notm}} Private](https://www.ibm.com/mysupport/s/?language=en_US){:external}
 * [Ressources VMware HCX](https://hcx.vmware.com/#/docs){:external}
 * [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}
 * [Annulation de serveurs virtuels](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)

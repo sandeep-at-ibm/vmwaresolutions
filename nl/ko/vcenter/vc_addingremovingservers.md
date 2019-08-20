@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-01"
 
 keywords: vCenter Server add host, add server vCenter Server, remove host vCenter Server
 
@@ -23,6 +23,7 @@ subcollection: vmware-solutions
 
 비즈니스 요구사항에 따라 ESXi 서버 또는 네트워크 파일 시스템(NFS) 스토리지를 추가하거나 제거하여 VMware vCenter Server 인스턴스의 용량을 확장하거나 축소할 수 있습니다.
 
+* V3.2 릴리스부터 vSphere Enterprise Plus 6.7u1을 사용하는 기존 인스턴스에 vSphere Enterprise Plus 6.7u1 또는 vSphere Enterprise Plus 6.7u2와 함께 새 호스트를 추가하는 옵션이 있습니다. 
 * V3.1 릴리스부터는 클러스터에서 기존 호스트가 아닌 기존 구성 또는 대체 구성을 선택하여 새 ESXi 서버를 기존 클러스터에 추가할 수 있습니다. 새 서버 주문 시 인스턴스를 선택하는 데 기존 구성을 사용할 수 있습니다. 성능 또는 안전성 문제를 방지하기 위해 클러스터가 CPU, RAM 및 스토리지와 관련하여 동일하거나 유사한 구성을 사용하는 것이 좋습니다. 이 기능은 동일한 클러스터 내의 하드웨어 업데이트에 유용합니다. 클러스터에는 하나의 스토리지 유형만 허용됩니다.
 * V3.0 릴리스부터 NFS 스토리지 및 ESXi 서버를 **사용할 준비가 됨** 상태의 클러스터에 동시에 추가하거나 제거할 수 있습니다. 예를 들어, 한 클러스터에서 ESXi 서버를 추가하거나 제거하고 다른 클러스터에서 NFS 스토리지를 추가하거나 제거할 수 있습니다.
 * V2.9 릴리스부터는 서버가 유지보수 모드에 있는 동안 새 ESXi 서버를 클러스터에 추가할 수 있습니다. 또한 여러 클러스터에서 ESXi 서버를 동시에 추가 또는 제거할 수 있습니다.
@@ -60,7 +61,8 @@ subcollection: vmware-solutions
 8. 베어메탈 구성을 완료하십시오.
    * 클러스터의 기존 호스트에서 구성을 선택하십시오.
    * 새 {{site.data.keyword.baremetal_short_sing}} 구성을 선택하십시오.
-      * **Skylake** 또는 **Broadwell**의 경우 **CPU 모델**, **RAM** 크기 및 **{{site.data.keyword.baremetal_short}} 수**를 지정하십시오.     
+      * vSphere Enterprise Plus 6.7u1을 사용하는 인스턴스의 경우 새 호스트에 대한 Vmware vSphere 버전을 지정하십시오.
+      * **Skylake**, **Cascade** 또는 **Broadwell**의 경우 **CPU 모델**, **RAM** 크기 및 **{{site.data.keyword.baremetal_short}} 수**를 지정하십시오.     
       * **SAP 인증**의 경우 **CPU 모델 및 RAM**과 **{{site.data.keyword.baremetal_short}} 수**를 지정하십시오.
 9. 스토리지 구성을 완료하십시오. 용량 및 캐시 디스크의 디스크 유형과 디스크 수 및 vSAN License 에디션을 지정하십시오. 더 많은 스토리지를 원하는 경우 **고성능 Intel Optane** 상자를 선택하십시오.
 10. 예상 비용을 검토하고 **추가**를 클릭하십시오.
@@ -91,6 +93,9 @@ subcollection: vmware-solutions
 * F5 on {{site.data.keyword.cloud_notm}} 또는 FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} 서비스가 설치된 ESXi 서버를 제거하기 전에 VM을 호스팅하는 ESXi 서버와 다른 ESXi 서버로 F5 BIG-IP 및 FortiGate VM을 마이그레이션해야 합니다.
 * 활성 상태의 오퍼레이션으로 인해 ESXi 서버가 제거되지 않을 수 있으므로, IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} 서비스가 설치된 상태에서 ESXi 서버를 제거하기 전에 활성 상태가 아닌(실패 또는 진행 중) 백업 또는 복원 오퍼레이션이 있는지 확인하십시오.
 * ESXi 서버를 제거하는 경우 서버가 유지보수 모드로 설정되고, 그 이후 서버에서 실행되는 모든 VM이 vCenter Server에서 제거되기 전에 마이그레이션됩니다. VM의 재배치에 대한 제어를 최대화하려면 제거할 ESXi 서버를 유지보수 모드로 설정하고 VMware vSphere Web Client를 사용하여 수동으로 ESXi 서버에서 실행되는 VM을 마이그레이션하는 것이 좋습니다. 그런 다음, {{site.data.keyword.vmwaresolutions_short}} 콘솔을 사용하여 ESXi 서버를 제거하십시오.
+
+VMware HCX on {{site.data.keyword.cloud_notm}} 서비스를 주문할 때 12개월 약정이 필요합니다. 12개월 약정 기간이 끝나기 전에 클러스터를 삭제하는 경우 사용자 계정에 HCX 컴포넌트에 대한 비용이 계속 청구됩니다. 12개월 약정 만기 날짜는 HCX on {{site.data.keyword.cloud_notm}} 세부사항 페이지에서 볼 수 있습니다. 서비스 세부사항 확인에 대한 자세한 정보는 [vCenter Server 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure)를 참조하십시오.
+{:important}
 
 ### ESXi 서버를 제거하는 프로시저
 {: #vc_addingremovingservers-removing-procedure}

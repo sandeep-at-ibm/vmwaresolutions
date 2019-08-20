@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -17,7 +17,7 @@ subcollection: vmware-solutions
 ## VMware vCenter Server on IBM Cloud 元件
 {: #vcscar-arch-overview-solution-vcs-comp}
 
-![vCenter Server 環境](../../images/vcscar-vcs.svg "vCenter Server 環境")
+![vCenter Server 環境](../../images/vcscar-vcs.svg "vCenter Server 環境"){: caption="圖 1. vCenter Server 環境圖" caption-side="bottom"}
 
 ### 平台服務控制器
 {: #vcscar-arch-overview-solution-psc}
@@ -71,7 +71,7 @@ Edge Services Gateway| 虛擬應用裝置
 
 {{site.data.keyword.icpfull_notm}} 是一個應用程式平台，用於開發及管理內部部署容器化應用程式。{{site.data.keyword.icpfull_notm}} 是用來管理容器的整合環境，其中包括容器編排程式 Kubernetes、專用映像檔儲存庫、管理主控台和監視架構。
 
-![具有 vCenter Server 的虛擬 {{site.data.keyword.icpfull_notm}} 部署](../../images/vcscar-icp.svg "具有 vCenter Server 的虛擬 {{site.data.keyword.icpfull_notm}} 部署")
+![具有 vCenter Server 的虛擬 {{site.data.keyword.icpfull_notm}} 部署](../../images/vcscar-icp.svg "具有 vCenter Server 的虛擬 {{site.data.keyword.icpfull_notm}} 部署"){: caption="圖 2. 具有 vCenter Server 的虛擬 {{site.data.keyword.icpfull_notm}} 部署" caption-side="bottom"}
 
 ### 啟動節點
 {: #vcscar-arch-overview-solution-boot-node}
@@ -133,7 +133,7 @@ CAM 需要工作者節點具有較高的 vCPU 和記憶體配置。
 
 {{site.data.keyword.cloud_notm}} Automation Manager (CAM) 是在 {{site.data.keyword.icpfull_notm}} 上執行的多重雲端自助式管理平台，協助開發人員與管理者能夠滿足商業需求。
 
-![CAM 元件參考](../../images/vcscar-cam-components.svg "CAM 元件參考")
+![CAM 元件參考資料](../../images/vcscar-cam-components.svg "CAM 元件參考資料"){: caption="圖 3. CAM 元件參考資料" caption-side="bottom"}
 
 ### CAM Proxy
 {: #vcscar-arch-overview-solution-cam-proxy}
@@ -184,8 +184,3 @@ Redis 資料庫可用來儲存 CAM 內的階段作業快取和鎖定。
 {: #vcscar-arch-overview-solution-maria-db}
 
 Template Designer 應用程式的資料庫。
-
-## 相關鏈結
-{: #vcscar-arch-overview-solution-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

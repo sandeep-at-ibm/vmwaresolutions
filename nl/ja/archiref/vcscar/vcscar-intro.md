@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -47,7 +47,7 @@ Acme Skate Advisor アプリケーションは、Watson プラットフォーム
 ### アプリケーション・モダナイゼーションのデモンストレーション
 {: #vcscar-intro-app-mod-demo}
 
-アプリケーション・モダナイゼーション・プラットフォームにデプロイされたアプリケーションをデモンストレーションします。このプラットフォームには、VMware vCenter Server on {{site.data.keyword.cloud_notm}} オファリングで {{site.data.keyword.cloud_notm}} に
+アプリケーション・モダナイゼーション・プラットフォームにデプロイされたアプリケーションをデモンストレーションします。 このプラットフォームには、VMware vCenter Server on {{site.data.keyword.cloud_notm}} オファリングで {{site.data.keyword.cloud_notm}} に
 デプロイされた {{site.data.keyword.icpfull_notm}}、CAM、および NSX の各コンポーネントが含まれています。
 
 ### Watson Assistant を使用した Watson 音声認識
@@ -113,8 +113,3 @@ IBM が提供しているアプリケーション・モダナイゼーション�
 * [vCenter Server ネットワーキング](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro) - vCenter Server、{{site.data.keyword.icpfull_notm}}、および {{site.data.keyword.containerlong_notm}} 間の統合に使用されるネットワーク・テクノロジー (NSX-V や Calico など) 、およびテクノロジー・プレビューの NSX-T に焦点を当てて説明しています。
 * _VMware および Skate Advisor コンセプト・カー・ガイド_ - 「コンセプト・カー」であるリファレンス・アーキテクチャー。コンセプト・カーとは、現実の世界の問題を解決するテクノロジーに焦点を当てて見せるためのメカニズムです。 IBM が実演したかったのは、Watson AI と機械学習の対話です。 スケートボードの文化を通してユニークな方法でクラウド・サービスを披露しています。 この「コンセプト・カー」は、Skate Advisor という Acme Skateboard アプリケーションの機能拡張として実装されています。 Skate Advisor は、Watson 駆動型エンジンとの間でスケートボードの技についての会話ができるツールです。
 * [VMware: Stock Trader のモダナイゼーション・ジャーニー](/docs/services/vmwaresolutions/archiref/vcscontent?topic=vmware-solutions-vcscontent-modjourney) - このリファレンス・ユース・ケースでは、クラシックな WebSphere Application Server アプリケーションを、{{site.data.keyword.cloud_notm}} Private、IBM Middleware コンテンツ、{{site.data.keyword.containerlong_notm}}、および vCenter Server on {{site.data.keyword.cloud_notm}} を利用してモダナイズする方法について説明しています。 だれもがクラウド・ジャーニーの途上にいますが、ジャーニーのどの段階にいるかは人それぞれです。 アプリケーション設計者 Jane とクラウド・インフラストラクチャー設計者 Todd が段階的に手順を踏んで、Stock Trader という既存のアプリケーションをモダナイズしていきます。 ジャーニーの段階を踏んでいくときに参考になる例や、各段階の規模に関係なくビジネスにもたらされる価値を記載しています。 アプリケーション、DevOps、統合、および管理という 4 つのテーマに焦点を当てています。 すべてのテーマが組み合わさって目標の実現を可能にします。 他を残して 1 つのテーマだけをモダナイズしてもうまくいかない可能性があります。
-
-## 関連リンク
-{: #vcscar-intro-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

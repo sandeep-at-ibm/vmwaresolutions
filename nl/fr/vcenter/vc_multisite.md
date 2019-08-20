@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-16"
 
 keywords: vCenter Server multi-site, multi-site configuration, multi-site deployment vCenter Server
 
@@ -32,16 +32,16 @@ La configuration multisite pour des instances vCenter Server est uniquement pris
 Un déploiement multisite est constitué des composants suivants.
 
 * **Instance principale** : l'instance principale VMware vCenter Server présente la configuration suivante :
-  *  Domaine racine Microsoft Active Directory (AD) et système de noms de domaine (DNS, Domain Name System)
-  *  Sous-domaine vCenter Server
-  *  Domaine de connexion unique
-  *  Nom de site de connexion unique
+  * Domaine racine Microsoft Active Directory (AD) et système de noms de domaine (DNS, Domain Name System)
+  * Sous-domaine vCenter Server
+  * Domaine de connexion unique
+  * Nom de site de connexion unique
+  * Pour les instances principales déployées dans la version 2.8 ou une version ultérieure : vCenter Server Appliance (vCSA) avec contrôleur PSC (Platform Services Controller) intégré
 * **Instance ou instances secondaires** : une ou plusieurs instances vCenter Server liées à l'instance principale, qui présentent la configuration suivante :
-   *  Nom de site de connexion unique
-   *  Sous-domaine DNS lié au domaine racine sur l'instance principale
-   *  Réplication DNS et AD configurée entre les machines virtuelles AD de l'instance principale et des instances secondaires
-   *  Pour les instances principales qui sont déployées dans la version 2.8 ou une version ultérieure : vCenter Server Appliance (vCSA) avec contrôleur PSC (Platform Services Controller) intégré, déployé et configuré
-   *  VMware vCenter sur les instances secondaires configuré en mode lien étendu (Enhanced Linked) sur le serveur vCenter de l'instance principale
+  * Nom de site de connexion unique
+  * Sous-domaine DNS lié au domaine racine sur l'instance principale
+  * Réplication DNS et AD configurée entre les machines virtuelles AD de l'instance principale et des instances secondaires
+  * VMware vCenter sur les instances secondaires configuré en mode lien étendu (Enhanced Linked) sur le serveur vCenter de l'instance principale
 
 ## Déploiement multisite vCenter Server
 {: #vc_multisite-deployment}

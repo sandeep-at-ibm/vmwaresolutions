@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -57,8 +57,3 @@ En résumé, les avantages des offres {{site.data.keyword.vmwaresolutions_short}
 Les clients qui se tournent vers des plateformes applicatives natives en cloud, telles qu'{{site.data.keyword.icpfull_notm}} et {{site.data.keyword.containerlong_notm}}, se concentrent sur la vitesse et l'innovation et perdent parfois de vue la sécurité et la mise en réseau. Attendre que les équipes dédiées à la mise en réseau ou à la sécurité commandent des services, tels que les équilibreurs de charge, les pare-feux, les commutateurs et les routeurs, a pour conséquence de réduire leur délai de rentabilisation.
 
 Cette architecture de référence montre comment vCenter Server, {{site.data.keyword.icpfull_notm}} et {{site.data.keyword.containerlong_notm}} permettent à l'entreprise Acme Skateboards de se déplacer en toute sécurité tout au long de son parcours de modernisation des applications.
-
-## Liens connexes
-{: #vcsicp-appmod-related}
-
-* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

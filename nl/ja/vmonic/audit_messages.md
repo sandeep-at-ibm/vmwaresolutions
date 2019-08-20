@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-07-24"
 
 keywords: history message, audit history, error messages
 
@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 # インスタンスの履歴メッセージ
 {: #audit_messages}
 
-VMware インスタンスに対して {{site.data.keyword.cloud_notm}} が実行した操作はすべて、インスタンス履歴に記録されます。 お客様は、インスタンス履歴を参照情報として使用して、それらの操作を確認することができます。 インスタンス履歴の確認方法について詳しくは、[vCenter Server インスタンスのデプロイメント履歴を表示する手順](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances#vc_viewinginstances-procedure-view-deploy-history)を参照してください。
+VMware インスタンスに対して {{site.data.keyword.cloud}} が実行した操作はすべて、インスタンス履歴に記録されます。 お客様は、インスタンス履歴を参照情報として使用して、それらの操作を確認することができます。 インスタンス履歴の確認方法について詳しくは、[vCenter Server インスタンスのデプロイメント履歴を表示する手順](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances#vc_viewinginstances-procedure-view-deploy-history)を参照してください。
 
 ここでは、インスタンス履歴に対して発行される可能性があるすべてのメッセージを複数のセクションに分けて記載します。
 
@@ -51,7 +51,7 @@ VMware インスタンスに対して {{site.data.keyword.cloud_notm}} が実行
 * ``<environment> の追加料金を取り消しています... (Cancelling <environment> upcharges...)``
 * ``VMware ライセンスの取り消しが進行中... (VMware license cancellation in progress...)``
 * ``VMware ライセンスの取り消しが完了しました。(VMware license cancellation is complete.)``
-* ``SoftLayer の注文が失敗したか、タイムアウトになりました。(The SoftLayer order failed or timed out.)``
+* ``{{site.data.keyword.cloud_notm}} インフラストラクチャーの注文が失敗したか、タイムアウトになりました。(The {{site.data.keyword.cloud_notm}} infrastructure order failed or timed out.)``
 
 ## インスタンスのエラー・メッセージ
 {: #audit_messages-error}
@@ -60,9 +60,9 @@ VMware インスタンスに対して {{site.data.keyword.cloud_notm}} が実行
 
 * ``VMware ライセンスのご注文において、エラーがありました。 アシスタンスが必要であれば、サービス・チケットをオープンしてください。``
 * ``サブネットのご注文において、エラーがありました。 アシスタンスが必要であれば、サービス・チケットをオープンしてください。``
-* ``エラー: SoftLayer API 鍵が無効です。 アシスタンスが必要であれば、サービス・チケットをオープンしてください。``
-* ``エラー: SoftLayer データ・センターが無効です。 アシスタンスが必要であれば、サービス・チケットをオープンしてください。``
-* ``指定された SoftLayer アカウントで共有イメージを使用しているときに、エラーがありました。 アシスタンスが必要であれば、サービス・チケットをオープンしてください。``
+* ``エラー: {{site.data.keyword.cloud_notm}} インフラストラクチャー API キーが無効です。 アシスタンスが必要であれば、サービス・チケットをオープンしてください。``
+* ``エラー: {{site.data.keyword.cloud_notm}} インフラストラクチャー・データ・センターが無効です。 アシスタンスが必要であれば、サービス・チケットをオープンしてください。``
+* ``指定された {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントで共有イメージを使用しているときに、エラーがありました。 アシスタンスが必要であれば、サービス・チケットをオープンしてください。``
 * ``サービス・エントリーのご注文において、エラーがありました。 アシスタンスが必要であれば、サービス・チケットをオープンしてください。``
 * ``サブネットのご注文において、エラーがありました。 アシスタンスが必要であれば、サービス・チケットをオープンしてください。``
 * ``ライセンスのご注文において、エラーがありました。 アシスタンスが必要であれば、サービス・チケットをオープンしてください。``
@@ -235,18 +235,6 @@ VMware インスタンスに対して {{site.data.keyword.cloud_notm}} が実行
 * ``デフォルト・サービスが正常に有効化されました。(The default services are successfully enabled.)``
 * ``サービス・エントリーの取り消しが進行中です...``
 * ``サービス・エントリーの取り消しが完了しました。(Service entry cancellation is complete.)``
-
-## vCenter Server with Hybridity Bundle の履歴メッセージ
-{: #audit_messages-hybridity}
-
-{{site.data.keyword.vmwaresolutions_short}} では、vCenter Server with Hybridity Bundle インスタンスに関して以下のメッセージが発行されます。
-
-* ``vCenter Server with Hybridity Bundle ライセンスを注文しています... (Ordering vCenter Server with Hybridity Bundle licenses...)``
-* ``vCenter Server with Hybridity Bundle 変換を開始しています... (Starting the vCenter Server with Hybridity Bundle conversion...)``
-* ``vCenter Server with Hybridity Bundle 変換が完了しました。(The vCenter Server with Hybridity Bundle conversion is complete.)``
-* ``vCenter Server with Hybridity Bundle を削除しています... (Removing the vCenter Server with Hybridity Bundle...)``
-* ``vCenter Server with Hybridity Bundle が正常に削除されました。(The vCenter Server with Hybridity Bundle is successfully removed.)``
-* ``vCenter Server with Hybridity Bundle 変換を取り消しています... (Cancelling the vCenter Server with Hybridity Bundle conversion...)``
 
 ## 関連リンク
 {: #audit_messages-related}

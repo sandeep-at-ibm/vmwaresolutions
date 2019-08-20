@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-22"
 
 keywords: VMware HCX standalone, HCX on-premises, tech specs HCX
 
@@ -29,7 +29,7 @@ subcollection: vmware-solutions
 ## 安装内部部署 HCX on IBM Cloud 实例之前的注意事项
 {: #standalone_considerations-install}
 
-HCX on {{site.data.keyword.cloud_notm}} 组件必须同时安装在 {{site.data.keyword.cloud_notm}} 和内部部署 vSphere 环境中。在安装内部部署 HCX on {{site.data.keyword.cloud_notm}} 实例之前，建议您将 HCX on {{site.data.keyword.cloud_notm}} 服务安装到 {{site.data.keyword.cloud_notm}} 上的 vCenter Server with Hybridity Bundle 实例中。有关更多信息，请参阅[安装 HCX on {{site.data.keyword.cloud_notm}} 时的注意事项](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-hcx_considerations#hcx_considerations-install)。
+HCX on {{site.data.keyword.cloud_notm}} 组件必须同时安装在 {{site.data.keyword.cloud_notm}} 和内部部署 vSphere 环境中。在安装内部部署 HCX on {{site.data.keyword.cloud_notm}} 实例之前，建议您将 HCX on {{site.data.keyword.cloud_notm}} 服务安装到 {{site.data.keyword.cloud_notm}} 上的 vCenter Server 实例中。有关更多信息，请参阅[安装 HCX on {{site.data.keyword.cloud_notm}} 时的注意事项](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-hcx_considerations#hcx_considerations-install)。
 
 ### IP 地址需求
 {: #standalone_considerations-ip}

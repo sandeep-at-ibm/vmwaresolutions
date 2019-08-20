@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-21"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -56,8 +56,3 @@ NSX-V|vCenter Server 上的 NSX-V 提供软件定义的覆盖网络，该覆盖�
 CAM|{{site.data.keyword.cloud_notm}} Automation Manager (CAM) 在 {{site.data.keyword.icpfull_notm}} 上运行，并提供了一个窗格，可使用模板来供应基于 VM 的工作负载以及基于 Kubernetes 的工作负载。CAM 支持开发者：<br> - 在 vCenter Server、{{site.data.keyword.icpfull_notm}} 或 {{site.data.keyword.containerlong_notm}} 上供应工作负载。<br> - 编写和编排由 VM 和容器组成的服务。<br> - 集成其 DevOps 工具链和 Day-2 ITSM 解决方案。
 容器化应用程序|完成了应用程序现代化之旅并且现在作为容器运行的应用程序。对于此参考体系结构以及此 Acme Skateboards 示例，其中一个容器化应用程序是 Web 服务器，这是联机在线工作负载的一部分。
 Watson|对于此参考体系结构以及此 Acme Skateboards 示例，Watson 表示_概念车体系结构_中使用的 AI 服务。
-
-## 相关链接
-{: #vcsnsxt-systemcontext-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

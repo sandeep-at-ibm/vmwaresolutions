@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-02"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -41,8 +41,3 @@ Hybridity는 온프레미스와
 
 Todd는 Stock Trader를
 온프레미스 VMware 환경에서 VMware on {{site.data.keyword.cloud_notm}} 환경으로 마이그레이션할 수 있으며 가동 중단 시간이 없이 애플리케이션을 다시 구성할 필요 없는 요구사항을 충족시킬 수 있습니다.
-
-## 관련 링크
-{: #vcscontent-hcx-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

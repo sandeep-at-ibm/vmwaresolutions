@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 
 虛擬基礎架構層級包含 VMware 軟體元件，這些元件會將實體基礎架構層級中提供的運算、儲存空間及網路資源虛擬化：VMware vSphere ESXi、VMware NSX-V 或 NSX-T，以及選用的 VMware vSAN。
 
-![虛擬基礎架構](../../images/vcsv4radiagrams-ra-virtinfra.svg "虛擬基礎架構")
+![虛擬基礎架構](../../images/vcsv4radiagrams-ra-virtinfra.svg "虛擬基礎架構"){: caption="圖 1. 虛擬基礎架構" caption-side="bottom"}
 
 ## VMware vSphere 設計
 {: #design_virtualinfrastructure-vsphere-design}
@@ -70,7 +70,7 @@ vSphere 叢集可存放虛擬機器 (VM)，它們會管理 vCenter Server 實例
 
 如下圖所示，vSAN 會將多部 ESXi 主機間的本端儲存空間聚集在 vSphere 叢集內，並將聚集的儲存空間當成單一 VM 資料儲存庫來管理。在此設計中，運算節點包含「ESXi 作業系統」的本端磁碟機，以及 vSAN 資料儲存庫。不論節點屬於哪一個叢集，每個節點都會包含兩個作業系統磁碟機，以存放 ESXi 安裝。
 
-![vSAN 概念](../../images/vcsv4radiagrams-ra-vsan.svg "vSAN 在 vSphere 叢集內的多個 ESXi 主機中聚集本端儲存空間，並將聚集儲存空間作為單一 VM 資料儲存庫進行管理")
+![vSAN 概念](../../images/vcsv4radiagrams-ra-vsan.svg "vSAN 在 vSphere 叢集內的多個 ESXi 主機中聚集本端儲存空間，並將聚集儲存空間作為單一 VM 資料儲存庫進行管理"){: caption="圖 2. vSAN 概念" caption-side="bottom"}
 
 vSAN 會採用下列元件：
 * 兩個磁碟群組的 vSAN 設計；每個磁碟群組各有兩個以上的磁碟。群組裡大小最小的一個 SSD 或 NVMe 會充當快取層級，而其餘的 SSD 則充當容量層級。
@@ -133,7 +133,7 @@ vSAN 設定是根據在 {{site.data.keyword.cloud_notm}} 內部署 VMware 解決
 
 下圖顯示與架構中其他元件相對的 NSX Manager 放置。
 
-![NSX Manager 網路概觀](../../images/vcsv4radiagrams-ra-vcs-nsx-overview.svg "NSX Manager 與架構中其他元件的關係")
+![NSX Manager 網路概觀](../../images/vcsv4radiagrams-ra-vcs-nsx-overview.svg "NSX Manager 與架構中其他元件的關係"){: caption="圖 3. NSX Manager 網路概觀" caption-side="bottom"}
 
 在起始部署之後，{{site.data.keyword.cloud_notm}} 自動化會在起始叢集內部署三個 NSX Controller。每個控制器都會獲指派**專用 A** 可攜式子網路中的 VLAN 支援 IP 位址（這個子網路是指定給管理元件）。此外，此設計還會建立 VM-VM 反親緣性規則，以在叢集的主機之間區隔控制器。起始叢集必須至少包含三個節點，以確保控制器具有高可用性。
 
@@ -163,7 +163,7 @@ NSX Manager 會使用下表所列的規格進行安裝。
 
 此設計使用最少數目的「vDS 交換器」。叢集裡的主機已連接至公用及專用網路。主機已配置兩台分散式虛擬交換器。兩台交換器的使用遵循區隔公用與專用網路的 {{site.data.keyword.cloud_notm}} 網路作法。下圖顯示 vDS 設計。
 
-![分散交換器設計](../../images/vcsv4radiagrams-distributed-switch-design.svg "分散交換器設計")
+![分散交換器設計](../../images/vcsv4radiagrams-distributed-switch-design.svg "分散交換器設計"){: caption="圖 4. 分散交換器設計" caption-side="bottom"}
 
 如上圖所示，一個 vDS 已配置給公用網路連線功能 (SDDC-Dswitch-Public)，另一個 vDS 則配置給專用網路連線功能 (SDDC-Dswitch-Private)。需要區隔不同類型的資料流量，以降低競用及延遲並提高安全。
 
@@ -243,7 +243,7 @@ vSAN| SDDC-DPortGroup-VSAN |vSAN|9000
 * 微分段
 * 將「NSX 管理」鏈結至其他 VMware 實例
 
-![已部署範例客戶 NSX 拓蹼](../../images/vcsv4radiagrams-ra-vcs-nsx-topology-customer-example.svg "已部署範例客戶 NSX 拓蹼")
+![已部署範例客戶 NSX 拓蹼](../../images/vcsv4radiagrams-ra-vcs-nsx-topology-customer-example.svg "已部署範例客戶 NSX 拓蹼"){: caption="圖 5. 已部署範例客戶 NSX 拓蹼" caption-side="bottom"}
 
 ## 公用網路連線功能
 

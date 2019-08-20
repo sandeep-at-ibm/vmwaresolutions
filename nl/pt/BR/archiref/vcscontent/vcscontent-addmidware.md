@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-27"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -296,8 +296,3 @@ regras de roteamento do Istio ativam o sistema de mensagens de nível de fidelid
 interno do Slack ou um canal público do Twitter.
 
 ![Enriquecimento do Stock Trader](../../images/vcscontent-enrich.svg "Enriquecimento do Stock Trader")
-
-## Links relacionados
-{: #vcscontent-addmidware-related}
-
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

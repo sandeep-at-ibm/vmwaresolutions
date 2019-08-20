@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-01"
+lastupdated: "2019-07-16"
 
 keywords: release notes, what's new, version 3.1
 
@@ -24,12 +24,12 @@ subcollection: vmware-solutions
 
 此版本包括新增特性、元件更新、可用性加強功能及錯誤修正程式。如需不同版本的已修正問題、產品的已知問題以及使用 {{site.data.keyword.vmwaresolutions_full}} 之提示的清單，請參閱 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:external}。
 
-## Data Protection and Disaster Recovery 單一節點試用版實例
+## Single-node Trial for Data Protection and Disaster Recovery 實例
 {: #relnotes_v31-dr-bundle}
 
-利用 Data Protection and Disaster Recovery 單一節點試用版，可以快速測試 {{site.data.keyword.cloud_notm}} 以將 VMware 工作負載移轉和回復到 {{site.data.keyword.cloud_notm}}。此試用版是 VMware vCenter Server on IBM Cloud 的一個版本，這是一個單一承租戶 VMware 平台，可以使用與內部部署環境相同的熟悉工具進行管理。此試用版包含 Veeam on {{site.data.keyword.cloud_notm}}、VMware HCX on {{site.data.keyword.cloud_notm}} 和 Zerto on {{site.data.keyword.cloud_notm}} 服務。
+Single-node Trial for Data Protection and Disaster Recovery 可以快速地測試 {{site.data.keyword.cloud_notm}} 以將 VMware 工作負載移轉和回復到 {{site.data.keyword.cloud_notm}}。此試用版是 VMware vCenter Server on IBM Cloud 的一個版本，這是一個單一承租戶 VMware 平台，可以使用與內部部署環境相同的熟悉工具進行管理。此試用版包含 Veeam on {{site.data.keyword.cloud_notm}}、VMware HCX on {{site.data.keyword.cloud_notm}} 和 Zerto on {{site.data.keyword.cloud_notm}} 服務。
 
-如需相關資訊，請參閱 [Disaster Recovery 單一節點試用版概觀](/docs/services/vmwaresolutions?topic=vmware-solutions-dr_backup_bundle_overview)。
+如需相關資訊，請參閱 [Single-node Trial for Disaster Recovery 概觀](/docs/services/vmwaresolutions?topic=vmware-solutions-dr_backup_bundle_overview)。
 
 ## IBM Cloud Expert Services
 {: #relnotes_v31-expert-services}
@@ -82,7 +82,7 @@ subcollection: vmware-solutions
 ### Caveonix RiskForesight on IBM Cloud
 {: #relnotes_v31-services-caveonix}
 
-現行版本會將 Caveonix RiskForesight 2.2.1 安裝在所有新部署的實例。如需 Caveonix RiskForesight 的相關資訊，請參閱 [Caveonix 網站](https://www.caveonix.com/){:external}。
+現行版本會將 Caveonix RiskForesight 2.2.1 安裝在所有新部署的實例。如需 Caveonix RiskForesight 的相關資訊，請參閱 [Caveonix 網站](https://www.caveonix.com){:external}。
 
 ### HyTrust 授權的自動更新
 {: #relnotes_v31-services-ht}

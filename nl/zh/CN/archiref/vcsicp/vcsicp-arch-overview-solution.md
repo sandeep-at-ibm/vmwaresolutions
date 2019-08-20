@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-12"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -41,7 +41,7 @@ Controller
 
 {{site.data.keyword.cloud}} 自动化会在初始集群中部署三个 NSX Controller。将从指定用于管理组件的专用可移植子网中为控制器分配支持 VLAN 的 IP 地址。
 
-### NSX Edge / DLR
+### NSX Edge 和分布式逻辑路由器 (DLR)
 {: #vcsicp-arch-overview-solution-nsx-edge}
 
 将部署 NSX Edge 服务网关 (ESG) 对。在所有情况下，都会使用一个网关对来处理位于专用网络中的自动化组件的出站流量。对于 vCenter Server 和 {{site.data.keyword.icpfull_notm}}，将部署另一个网关（称为 ICP 管理的 Edge），并将其配置为使用上行链路连接到公用网络，还会配置一个分配给专用网络的接口。管理员可以配置任何必需的 NSX 组件，例如分布式逻辑路由器 (DLR)、逻辑交换机和防火墙。[vCenter Server 联网指南](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro)提供了有关网络设计的更多详细信息。
@@ -178,8 +178,3 @@ Redis 数据库用于存储 CAM 中的会话高速缓存和锁定。
 {: #vcsicp-arch-overview-solution-maria-db}
 
 模板设计器应用程序的数据库。
-
-## 相关链接
-{: #vcsicp-arch-overview-solution-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

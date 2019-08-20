@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-23"
 
 keywords: vCenter Server compliance, compliance info, vCenter Server policy
 
@@ -73,7 +73,7 @@ A senha do NSX Manager gerada para as instâncias primárias do vCenter Server t
 ## Política para acessar instâncias do cliente
 {: #vc_compl_info-policy-for-access-client-inst}
 
-Os ambientes do VMware vCenter Server, que são entregues como {{site.data.keyword.vmwaresolutions_short}}, fornecem uma camada de plataforma de gerenciamento do VMware para os nossos clientes gerenciarem os recursos de virtualização. Ao longo do ciclo de vida de produtos e serviços do IBM Cloud for VMware, o Suporte IBM pode ser necessário para ajudar a garantir seu sucesso. Na maioria das vezes, a intervenção pelo Suporte IBM é o resultado de uma solicitação do cliente (ou seja, um chamado de suporte). No entanto, em raras ocasiões, o Suporte IBM pode ajudar proativamente e sem um chamado de suporte por escrito pelo cliente para evitar problemas futuros. Esse acesso é por meio da rede de suporte interno do IBM Cloud e é documentado por meio de um chamado de suporte aberto pelo Suporte IBM e monitorado continuamente pelo IBM Cloud SOC. Em nenhum momento o Suporte IBM modificará a configuração da instância sem o consentimento prévio do cliente. O acesso é para componentes de gerenciamento do VMware e/ou componentes de gerenciamento do IBM Cloud e nunca para as máquinas virtuais do cliente ou aplicativos.
+Os ambientes do VMware vCenter Server, que são entregues como {{site.data.keyword.vmwaresolutions_short}}, fornecem uma camada de plataforma de gerenciamento do VMware para os nossos clientes gerenciarem os recursos de virtualização. Em todo o ciclo de vida de produtos e serviços do {{site.data.keyword.cloud_notm}} for VMware, o Suporte IBM pode ser necessário para ajudar a garantir seu sucesso. Na maioria das vezes, a intervenção pelo Suporte IBM é o resultado de uma solicitação do cliente (ou seja, um chamado de suporte). No entanto, em raras ocasiões, o Suporte IBM pode ajudar proativamente e sem um chamado de suporte por escrito pelo cliente para evitar problemas futuros. Esse acesso é por meio da rede de suporte interno do {{site.data.keyword.cloud_notm}} e é documentado por meio de um chamado de suporte aberto pelo Suporte IBM e monitorado continuamente pelo {{site.data.keyword.cloud_notm}} SOC. Em nenhum momento o Suporte IBM modificará a configuração da instância sem o consentimento prévio do cliente. O acesso é para componentes de gerenciamento do VMware e/ou componentes de gerenciamento do {{site.data.keyword.cloud_notm}} e nunca para as máquinas virtuais do cliente ou aplicativos.
 
 ## Suporte proativo
 {: #vc_compl_info-proactive-support}
@@ -83,14 +83,14 @@ Os ambientes do VMware vCenter Server, que são entregues como {{site.data.keywo
 
 * Durante o pedido e o fornecimento iniciais de uma instância ou um serviço, o Suporte IBM pode acessar instâncias e informações do cliente sem notificação prévia do cliente para assegurar que os pedidos sejam devidamente cumpridos.
 * O Suporte IBM monitora ativamente as operações de ciclo de vida da instância, como a inclusão de novos hosts, além dos processos de pedido, fornecimento e instalação.
-* Para corrigir problemas que surgiram ou podem surgir no futuro, o Suporte IBM pode tomar várias ações, incluindo, mas não se limitando a: revisar detalhes do pedido do cliente, reiniciar tarefas de automação, executar operações de recarregamento do Sistema operacional ou abrir chamados do IBM Cloud usando o nome de usuário e a chave API do IBM Cloud do cliente fornecido.
+* Para corrigir problemas que surgiram ou podem surgir no futuro, o Suporte IBM pode tomar várias ações, incluindo, entre outras: revisar detalhes do pedido do cliente, reiniciar tarefas de automação, executar operações de recarregamento do Sistema Operacional ou abrir chamados do {{site.data.keyword.cloud_notm}} usando o nome do usuário e a chave de API do {{site.data.keyword.cloud_notm}} do cliente fornecido.
 
 ### Suporte proativo para operações de estado estável
 {: #vc_compl_info-proactive-support-for-steady-state-operations}
 
 * Em raras ocasiões, o Suporte IBM pode requerer acesso a instâncias do cliente durante operações de estado estável para solucionar proativamente um problema de instância ou para verificar a função de serviços ou componentes provisionados.
-* Esse acesso é por meio da rede de suporte interno do IBM Cloud. Em nenhum momento o Suporte IBM modificará a configuração da instância sem o consentimento prévio do cliente.
-* O acesso é para componentes de gerenciamento do VMware e/ou componentes de gerenciamento do IBM Cloud e nunca para as máquinas virtuais do cliente ou aplicativos.
+* Esse acesso é por meio da rede de suporte interno do {{site.data.keyword.cloud_notm}}. Em nenhum momento o Suporte IBM modificará a configuração da instância sem o consentimento prévio do cliente.
+* O acesso é para componentes de gerenciamento do VMware e/ou componentes de gerenciamento do {{site.data.keyword.cloud_notm}} e nunca para as máquinas virtuais do cliente ou aplicativos.
 
 ### Chamados de Suporte
 {: #vc_compl_info-support-tickets}
@@ -105,8 +105,8 @@ Os ambientes do VMware vCenter Server, que são entregues como {{site.data.keywo
 ## Responsabilidades do cliente
 {: #vc_compl_info-client-responsibilities}
 
-* Enquanto elogiamos os clientes que tomam medidas para tornar seus ambientes mais seguros, é necessário observar que algumas práticas podem ter efeitos adversos na eficácia do IBM Cloud for VMware.
-* Os clientes são responsáveis pelos firewalls que criam e pelas limitações resultantes impostas às comunicações entre os componentes do IBM Cloud for VMware. Esses firewalls também podem impedir a capacidade de o Suporte IBM acessar instâncias do cliente e resolver problemas.
+* Apesar de apreciarmos os clientes que estão tomando medidas para tornar seus ambientes mais seguros, é necessário observar que algumas práticas podem ter efeitos adversos na efetividade do {{site.data.keyword.cloud_notm}} for VMware.
+* Os clientes são responsáveis pelos firewalls que eles criam e as limitações resultantes impostas às comunicações entre os componentes do {{site.data.keyword.cloud_notm}} for VMware. Esses firewalls também podem impedir a capacidade de o Suporte IBM acessar instâncias do cliente e resolver problemas.
 * Os clientes são totalmente responsáveis por criptografar os dados em seu sistema.
 * Na implementação inicial, a automação da oferta e a conta do cliente são separadas. O cliente tem permissão e é encorajado a mudar todas as senhas fornecidas pela IBM no portal.
 * O acesso ao vCenter e as credenciais são criados durante as implementações iniciais e fornecidos para o cliente. Como parte do requisito de nossa oferta, o Suporte IBM deve reter acesso total à camada de gerenciamento para fornecer gerenciamento de ciclo de vida, bem como suporte para nossos clientes.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -118,4 +118,3 @@ Utilisez les éléments suivants pour les déploiements d'application dans {{sit
 * [Ajout de noeuds worker en redimensionnant un pool de noeuds worker existant](/docs/containers?topic=containers-clusters)
 * [Procédure de sauvegarde et de restauration d'{{site.data.keyword.cloud_notm}} Private](https://medium.com/ibm-cloud/how-to-backup-and-restore-ibm-cloud-private-part-1-b6300dc1d7d8)
 * [Sauvegarde {{site.data.keyword.icpfull_notm}} GitHub](https://github.com/ibm-cloud-architecture/icp-backup/)
-* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-06"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -85,9 +85,3 @@ Tabela 2. VLAN e sub-redes
 |Privada B 	|Móvel 	|Designado para vSAN, se em uso.|
 |Privada B 	|Móvel 	|Designado para o NAS, se em uso.|
 |Privada B 	|Móvel 	|Designada ao vMotion.|
-
-
-## Links relacionados
-{: #caveonix-detailed-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -66,8 +66,3 @@ A instalação do {{site.data.keyword.icpfull_notm}} é carregada na sub-rede VX
 O ESG é configurado com uma regra NAT de origem (SNAT) para permitir tráfego de saída, que permite que a conectividade de Internet faça download dos pré-requisitos do {{site.data.keyword.icpfull_notm}} e se conecte ao GitHub e ao Docker. Como alternativa, é possível usar um proxy da web para conectividade de Internet. O ESG também é configurado para fornecer acesso a serviços DNS e NTP.
 
 O ESG também é configurado com uma regra NAT de destino (DNAT) para os endereços IP virtuais Principais/Proxy do {{site.data.keyword.icpfull_notm}} da rede {{site.data.keyword.cloud_notm}} 10.x para o ambiente VXLAN.
-
-## Links relacionados
-{: #vcscar-arch-overview-infrastructure-related}
-
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

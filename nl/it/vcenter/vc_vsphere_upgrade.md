@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-30"
 
 keywords: vSphere upgrade, NSX upgrade, PSC upgrade
 
@@ -60,7 +60,7 @@ Completa i seguenti passi per ordinare un jumpbox VSI.
 Ignora il primo passo se hai già un jumpbox VSI nel tuo ambiente.
 {:note}
 
-1. Ordina una VSI oraria o mensile dal [portale del cliente dell'infrastruttura IBM Cloud](https://control.softlayer.com/){:external}. Ordina i seguenti attributi:
+1. Ordina una VSI oraria o mensile dal [{{site.data.keyword.cloud_notm}}portale del cliente dell'infrastruttura](https://control.softlayer.com/){:external}. Ordina i seguenti attributi:
   * Windows 2012 o 2016 Server Standard
   * 2 CPU
   * 16 GB di memoria
@@ -171,7 +171,7 @@ Per le istanze collegate vCenter Server, sebbene ti consigliamo di eseguire l'up
 #### Procedura per eseguire l'upgrade di vCenter
 {: #vc_vsphere_upgrade-procedure-vcenter-procedure}
 
-1. Accedi alle interfacce utente di gestione del dispositivo di PSC, ``https://<psc-fqdn>:5480`` e di vCenter per confermare se la password root è scaduta o meno. Se la data di scadenza della password è **1970**, è scaduta e devi abilitare SSH e la shell bash nell'interfaccia utente di gestione del dispositivo PSC.
+1. Accedi alle interfacce utente di gestione del dispositivo di PSC, `https://<psc-fqdn>:5480` e di vCenter per confermare se la password root è scaduta o meno. Se la data di scadenza della password è **1970**, è scaduta e devi abilitare SSH e la shell bash nell'interfaccia utente di gestione del dispositivo PSC.
     1. Esegui SSH in PSC con l'ID e la password root. Anche se la password è scaduta, ti consente di eseguire l'accesso.
     2. Utilizza il comando shell **passwd** per impostare una nuova password root sia per PSC che per vCenter.
     3. Salva le password visualizzate nella console {{site.data.keyword.vmwaresolutions_short}} o che ti sono state fornite dal supporto IBM. Queste password vengono riutilizzate in un secondo momento quando esegui l'upgrade dei dispositivi.
@@ -320,7 +320,7 @@ Per ulteriori informazioni, vedi [Enhanced vMotion Compatibility (EVC) processor
 ## Risultati dopo l'upgrade del software vCenter Server vSphere
 {: #vc_vsphere_upgrade-results}
 
-L'esecuzione del controllo di integrità vSAN una volta che hai completato l'upgrade, potrebbe presentare avvertenze firmware per i controller di rete e RAID forniti da IBM Cloud. Una volta che hai stabilito gli host che necessitano di aggiornamenti firmware, apri un ticket con il supporto IBM per ottenere il firmware aggiornato alle versioni consigliate.
+L'esecuzione del controllo di integrità vSAN una volta che hai completato l'upgrade, potrebbe presentare avvertenze sugli aggiornamenti del firmware per i controller di rete e RAID forniti da {{site.data.keyword.cloud_notm}}. Una volta che hai stabilito gli host che necessitano di aggiornamenti firmware, apri un ticket con il supporto IBM per ottenere il firmware aggiornato alle versioni consigliate.
 
 1. Dall'interfaccia utente vCenter, seleziona il cluster che contiene il vSAN con l'integrità da controllare.
 2. Seleziona la scheda **Monitor** e quindi seleziona la scheda **vSAN**.

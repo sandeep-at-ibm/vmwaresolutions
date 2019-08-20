@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-23"
 
 keywords: vCenter Server compliance, compliance info, vCenter Server policy
 
@@ -73,7 +73,7 @@ HIPAA 客户不支持 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 
 ## 用于访问客户实例的策略
 {: #vc_compl_info-policy-for-access-client-inst}
 
-VMware vCenter Server 环境作为 {{site.data.keyword.vmwaresolutions_short}} 交付，用于为客户提供 VMware 管理平台层来管理虚拟化功能。在 IBM Cloud for VMware 产品和服务的整个生命周期中，可能需要 IBM 支持人员来帮助确保这些产品和服务成功使用。在大多数情况下，IBM 支持人员的干预是客户请求（即，支持凭单）的结果。但是，在极少数情况下，IBM 支持人员可能会主动提供帮助，而无需客户的书面支持凭单，目的是预防未来发生进一步的问题。此类访问通过 IBM Cloud 内部支持网络执行，通过 IBM 支持人员开具的支持凭单进行记录，并由 IBM Cloud SOC 持续监控。在任何情况下，IBM 支持人员都不会未经客户同意就修改实例配置。访问的对象是 VMware 管理组件和/或 IBM Cloud 管理组件，永远不会访问客户的虚拟机或应用程序。
+VMware vCenter Server 环境作为 {{site.data.keyword.vmwaresolutions_short}} 交付，用于为客户提供 VMware 管理平台层来管理虚拟化功能。在 {{site.data.keyword.cloud_notm}} for VMware 产品和服务的整个生命周期中，可能需要 IBM 支持人员来帮助确保这些产品和服务成功使用。在大多数情况下，IBM 支持人员的干预是客户请求（即，支持凭单）的结果。但是，在极少数情况下，IBM 支持人员可能会主动提供帮助，而无需客户的书面支持凭单，目的是预防未来发生进一步的问题。此类访问通过 {{site.data.keyword.cloud_notm}} 内部支持网络执行，通过 IBM 支持人员开具的支持凭单进行记录，并由 {{site.data.keyword.cloud_notm}} SOC 持续监控。在任何情况下，IBM 支持人员都不会未经客户同意就修改实例配置。访问的对象是 VMware 管理组件和/或 {{site.data.keyword.cloud_notm}} 管理组件，永远不会访问客户的虚拟机或应用程序。
 
 ## 主动支持
 {: #vc_compl_info-proactive-support}
@@ -83,14 +83,14 @@ VMware vCenter Server 环境作为 {{site.data.keyword.vmwaresolutions_short}} �
 
 * 在初始订购和供应实例或服务期间，IBM 支持人员可能会在未事先通知客户的情况下访问客户实例和信息，目的是为了确保正确执行订单。
 * 除了订购、供应和安装过程外，IBM 支持人员还会主动监视实例生命周期内的操作（例如，添加新主机）。
-* 为了解决已经出现或未来可能出现的问题，IBM 支持人员可能会执行若干操作，包括但不限于：复查客户订单详细信息、重新启动自动化作业、执行操作系统重装操作或使用为客户提供的 IBM Cloud 用户名和 API 密钥来开具 IBM Cloud 凭单。
+* 为了解决已经出现或未来可能出现的问题，IBM 支持人员可能会执行若干操作，包括但不限于：复查客户订单详细信息、重新启动自动化作业、执行操作系统重装操作或使用为客户提供的 {{site.data.keyword.cloud_notm}} 用户名和 API 密钥来开具 {{site.data.keyword.cloud_notm}} 凭单。
 
 ### 主动支持稳态运行
 {: #vc_compl_info-proactive-support-for-steady-state-operations}
 
 * 在极少数情况下，IBM 支持人员可能需要在稳态运行期间访问客户的实例，以主动对实例问题进行故障诊断或验证所供应的服务或组件的功能。
-* 此类访问通过 IBM Cloud 内部支持网络执行。在任何情况下，IBM 支持人员都不会未经客户同意就修改实例配置。
-* 访问的对象是 VMware 管理组件和/或 IBM Cloud 管理组件，永远不会访问客户的虚拟机或应用程序。
+* 此类访问通过 {{site.data.keyword.cloud_notm}} 内部支持网络执行。在任何情况下，IBM 支持人员都不会未经客户同意就修改实例配置。
+* 访问的对象是 VMware 管理组件和/或 {{site.data.keyword.cloud_notm}} 管理组件，永远不会访问客户的虚拟机或应用程序。
 
 ### 支持凭单
 {: #vc_compl_info-support-tickets}
@@ -105,8 +105,8 @@ VMware vCenter Server 环境作为 {{site.data.keyword.vmwaresolutions_short}} �
 ## 客户责任
 {: #vc_compl_info-client-responsibilities}
 
-* 虽然我们建议客户采取措施加强其环境的安全性，但应该注意的是，某些做法可能会对 IBM Cloud for VMware 的有效性产生负面影响。
-* 客户负责自己创建的防火墙以及因此对 IBM Cloud for VMware 组件之间的通信所施加的限制。这些防火墙还可能影响 IBM 支持人员访问客户实例和解决问题的能力。
+* 虽然我们建议客户采取措施加强其环境的安全性，但应该注意的是，某些做法可能会对 {{site.data.keyword.cloud_notm}} for VMware 的有效性产生负面影响。
+* 客户负责自己创建的防火墙以及因此对 {{site.data.keyword.cloud_notm}} for VMware 组件之间的通信所施加的限制。这些防火墙还可能影响 IBM 支持人员访问客户实例和解决问题的能力。
 * 客户完全负责对其系统中的数据进行加密。
 * 初始部署时，产品的自动化和客户的帐户是分开的。允许并鼓励客户更改 IBM 在门户网站中提供的所有密码。
 * vCenter 访问权和凭证在初始部署期间创建，并提供给客户。作为产品需求的一部分，IBM 支持人员必须保留对管理层的完全访问权，以提供生命周期管理以及对客户的支持。

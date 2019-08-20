@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -33,7 +33,7 @@ Die HCX-Clientseite kann in jeder Version von vSphere bereitgestellt werden, die
 
 HCX ist ein Service. HCX wird pro Standort und pro virtuelle Maschine (VM) lizenziert, die über Lizenzserver verwaltet wird, die von VMware verwaltet werden. Die cloud- und clientseitigen Instanzen von HCX erfordern eine Kommunikation mit der VMware-Registrierungsstandort über ihren gesamten Lebenszyklus.
 - Der Datenverkehr für 80 und 443 muss auf `https://connect.hybridity.vmware.com` zugreifen können.
-- Für die clientseitige Installation, die von der {{site.data.keyword.vmwaresolutions_full}}-Konsole bereitgestellt wird, wird ein Einmal-Registrierungsschlüssel bereitgestellt. Für jede clientseitige HCX-Installation ist ein Schlüssel erforderlich.
+- Ein Registrierungsschlüssel für die einmalige Verwendung wird von der {{site.data.keyword.vmwaresolutions_full}}-Konsole für die clientseitige Installation angegeben. Für jede clientseitige HCX-Installation ist ein Schlüssel erforderlich.
 
 ### Vorgehensweise zum Bestellen lokaler HCX-Lizenzen
 {: #hcxclient-vcs-client-deployment-license-ordering-procedure}
@@ -117,7 +117,7 @@ Tabelle 1. Beispielwerte für Netzeigenschaften
   * Aktivieren Sie das Kontrollkästchen **Nach Bereitstellung einschalten**.
   * Überprüfen Sie die Einstellung für Hybrid-Cloud-Services und klicken Sie auf **Fertigstellen**. Es kann einige Minuten dauern, bis die Hybrid-Cloud-Services-Appliance eingeschaltet ist.
   * Zur Überprüfung des Status wechseln Sie zur Homepage von vSphere Web Client, gehen Sie in der Registerkarte **Home** zu **Bestand** und klicken Sie auf **Hosts und Cluster**. Erweitern Sie die Hierarchie der Rechenzentren und klicken Sie auf die virtuelle Hybrid-Cloud-Services-Maschine, um im mittleren Teilfenster eine Zusammenfassung anzuzeigen.
-  * Zeigen Sie die Registerkarte **Zusammenfassung** an. In der Konsole wird **Eingeschaltet** angezeigt und die Schaltfläche **Wiedergabe** ist grün.
+  * Zeigen Sie die Registerkarte **Zusammenfassung** an. In der Konsole wird **Eingeschaltet** angezeigt und das Symbol **Wiedergabe** ist grün.
 10. HCX Manager ist eingeschaltet und bereit für die Registrierung beim lokalen vCenter.
 
 ## Erstkonfiguration der HCX Manager-Appliance
@@ -125,7 +125,7 @@ Tabelle 1. Beispielwerte für Netzeigenschaften
 
 1. Stellen Sie sicher, dass die virtuelle Appliance des Hybrid-Cloud-Service über abgehenden Zugriff auf `https://connect.hcx.vmware.com` verfügt.
 2. Melden Sie sich an der Administratorschnittstelle für die virtuelle Appliance des Hybrid-Cloud-Service `https://<IP>:9443` unter Verwendung von **admin** an.
-3. Geben Sie den Lizenzschlüssel an, der in den Clientseitigen Voraussetzungen erfasst wurde.
+3. Geben Sie den Lizenzschlüssel an, der in den clientseitigen Voraussetzungen erfasst wurde.
 4. Position des HCX-Cloud-Rechenzentrums
     - Geben Sie die Stadt ein, deren Entfernung zu dem Rechenzentrum am niedrigsten ist, in dem sich die HCX-Cloud-Instanz befindet. Wenn die Stadt nicht angegeben ist, wählen Sie nächstgrößere Stadt aus.
 5. Geben Sie den Systemnamen an.
@@ -143,11 +143,10 @@ Tabelle 1. Beispielwerte für Netzeigenschaften
 {: #hcxclient-vcs-client-deployment-reg-vcenter}
 
 1. Melden Sie sich bei der virtuellen Hybrid-Cloud-Services-Appliance an.
-2. Klicken Sie auf die Kachel **Einstellungen verwalten**.
+2. Führen Sie in der **Dashboardanzeige** die folgenden Schritte aus:
   1. Wählen Sie im linken Teilfenster unter **Systeme konfigurieren** die Option "vCenter" aus.
   2. Klicken Sie oben rechts auf **vCenter hinzufügen**.
-  3. Geben Sie die IP-Adresse von vCenter Server im Format `https://vCenter-host-name` oder `https://vCenter-IP-address` ein.
-    * Beispiel: `https://My-vCenter` oder `https://10.108.26.211`.
+  3. Geben Sie die IP-Adresse von vCenter Server im Format `https://vCenter-host-name` oder `https://vCenter-IP-address` ein. Beispiel: `https://My-vCenter` oder `https://10.108.26.211`
   4. Geben Sie Benutzername und Kennwort für vCenter Server ein. Das verwendete Konto muss über die Rolle des vCenter-Administrators verfügen.
   5. Klicken Sie auf **OK**. Wenn die Nachricht _Die Anwendung muss neu gestartet werden_ angezeigt wird, führen Sie keinen Neustart aus.
 3. Konfigurieren Sie SSO bzw. den Suchservice.

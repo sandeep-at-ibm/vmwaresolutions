@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-07-23"
 
 keywords: user account, user permissions, VRF account
 
@@ -55,12 +55,12 @@ subcollection: vmware-solutions
 {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントは、Virtual Routing and Forwarding (VRF) アカウントでなければなりません。 VRF 以外のアカウントは、VRF アカウントに変換する必要があります。 また、VRF アカウントでサービス・エンドポイントを使用できるようにすることも推奨されています。
 
 詳しくは、以下を参照してください。
-* [IBM Cloud での VRF の概要](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-* [アカウントでサービス・エンドポイントを使用できるようにする方法](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
+* [{{site.data.keyword.cloud_notm}} での VRF の概要](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
+* [サービス・エンドポイントの有効化](/docs/account?topic=account-vrf-service-endpoint#service-endpoint)
 
 ## 関連リンク
 {: #cloud-infra-acct-req-related}
 
 * [vCenter Server インスタンスの要件](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [ユーザー・アカウントと設定](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)
-* [IBM Cloud での VRF の概要](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
+* [{{site.data.keyword.cloud_notm}} での VRF の概要](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)

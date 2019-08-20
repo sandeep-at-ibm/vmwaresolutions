@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-29"
 
 keywords: IBM Cloud Private, ICP, tech specs ICP
 
@@ -27,9 +27,8 @@ subcollection: vmware-solutions
 * V2.7 以降にデプロイ (または V2.7 以降にアップグレード) された vCenter Server with Hybridity Bundle インスタンス
 * V2.5 以降にデプロイ (または V2.5 以降にアップグレード) された vCenter Server インスタンス
 
-現在インストールされている IBM Cloud Private のバージョンは 3.1.2 です。{{site.data.keyword.cloud_notm}} Automation Manager は、{{site.data.keyword.cloud}} Private Hosted サービス注文の一部としてもデプロイされます。
+現在インストールされている IBM Cloud Private のバージョンは 3.1.2 です。 {{site.data.keyword.cloud_notm}} Automation Manager は、{{site.data.keyword.cloud}} Private Hosted サービス注文の一部としてもデプロイされます。
 {:note}
-
 
 ## IBM Cloud Private Hosted の技術仕様
 {: #icp_overview-specs}

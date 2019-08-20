@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -27,8 +27,3 @@ subcollection: vmware-solutions
 - 所有服务的证书
 
 在此步骤结束时，应用程序组件会安装在必需的虚拟机 (VM) 上。
-
-## 相关链接
-{: #caveonix-step3-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

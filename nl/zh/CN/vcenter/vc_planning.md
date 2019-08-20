@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-27"
+lastupdated: "2019-08-06"
 
 keywords: planning vCenter Server, data center, vCenter Server data centers
 
@@ -12,6 +12,10 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # 针对 vCenter Server 实例的需求和规划
 {: #vc_planning}
@@ -26,7 +30,10 @@ subcollection: vmware-solutions
 ## IBM Cloud Data Center 可用性
 {: #vc_planning-dc-availability}
 
-vCenter Server 部署对物理基础架构有严格要求。因此，只能将实例部署在满足这些需求的 {{site.data.keyword.CloudDataCents_notm}} 中。以下 {{site.data.keyword.CloudDataCents_notm}} 可用于 vCenter Server 部署：
+vCenter Server 部署对物理基础架构有严格要求。因此，只能将实例部署在满足这些需求的 {{site.data.keyword.CloudDataCents_notm}} 中。以下 {{site.data.keyword.CloudDataCents_notm}} 可用于 vCenter Server 部署。
+
+Cascade Lake {{site.data.keyword.baremetal_short}} 在多专区区域 {{site.data.keyword.CloudDataCents_notm}} 上可用。有关更多信息，请参阅[多专区区域 (MZR) 概述](/docs/infrastructure/loadbalancer-service?topic=loadbalancer-service-multi-zone-region-mzr-overview)。
+{:note}
 
 | {{site.data.keyword.CloudDataCent_notm}} |位置|区域|服务器选项|
 |:----------------------|:---------|:-------|:---------------|
@@ -89,6 +96,22 @@ vCenter Server 部署对物理基础架构有严格要求。因此，只能将�
 
 针对 vCenter Server with NSX-T 实例支持服务。
 {:note}
+
+### 规划 VMware HCX on IBM Cloud
+{: #vc_planning-addon-services-hcx}
+
+VMware HCX on {{site.data.keyword.cloud_notm}} 服务可以将内部部署数据中心的网络无缝扩展到 {{site.data.keyword.cloud_notm}}，这允许虚拟机 (VM) 在不进行任何转换或更改的情况下，迁移到 {{site.data.keyword.cloud_notm}} 或从中迁移出来。
+
+部署此服务时，请完成以下设置：
+* 通过选择下列其中一个选项来指定 **HCX 互连类型**：
+  * **公用网络**：HCX 通过公用网络在站点之间创建加密连接。
+  * **专用网络**：HCX 通过专用网络在站点之间创建加密连接。
+* 指定**公共端点证书类型**。如果选择 **CA 证书**，请配置以下设置：
+  * **证书内容**：输入 CA 证书的内容。
+  * **专用密钥**：输入 CA 证书的专用密钥。
+  * （可选）**密码**：输入专用密钥的密码（如果对专用密钥进行了加密）。
+  * （可选）**重新输入密码**：重新输入专用密钥的密码。
+  * （可选）**主机名**：输入要映射到 CA 证书的公共名称 (CN) 的主机名。HCX on {{site.data.keyword.cloud_notm}} 需要 CA 证书采用 NSX Edge 接受的格式。有关 NSX Edge 证书格式的更多信息，请参阅[导入 SSL 证书](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html){:external}。
 
 ## 容量注意事项
 {: #vc_planning-capacity-considerations}

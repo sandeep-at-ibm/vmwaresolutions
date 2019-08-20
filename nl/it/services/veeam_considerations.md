@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-02"
 
 keywords: Veeam, Veeam install, tech specs Veeam
 
@@ -23,7 +23,7 @@ subcollection: vmware-solutions
 
 Il servizio Veeam on {{site.data.keyword.cloud}} si integra perfettamente con i tuoi hypervisor VMware per aiutare la tua azienda a raggiungere l'alta disponibilità. Questo servizio fornisce obiettivi di tempo e punti di ripristino per le tue applicazioni e i tuoi dati. Gli obiettivi di tempo e punti di ripristino possono essere forniti in meno di 15 minuti dopo il completamento della configurazione. Utilizzando questo servizio, controlli il backup e il ripristino di tutte le VM (Virtual Machine) per la tua infrastruttura direttamente dalla console Veeam.
 
-Questo servizio è disponibile solo per le istanze distribuite nella V1.8 o successive. La versione Veeam corrente installata è la 9.5u4.
+Questo servizio è disponibile solo per le istanze distribuite nella V1.8 o successive. La versione Veeam corrente installata è la 9.5u4b.
 {:note}
 
 ## Specifiche tecniche per Veeam on IBM Cloud

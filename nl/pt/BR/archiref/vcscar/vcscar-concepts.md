@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -120,8 +120,3 @@ nollie-heelflip to frontside-boardslide
 {: #vcscar-concepts-relevance}
 
 A Linguagem de manobra é a construção chave usada para treinar o Watson para reconhecer e alimentar documentos e mídia de skating e também formar a base de conversas com o usuário.
-
-## Links relacionados
-{: #vcscar-concepts-related}
-
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)  

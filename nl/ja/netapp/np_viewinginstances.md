@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-25"
 
 keywords: view NetApp, view instance, view instance details
 
@@ -127,7 +127,7 @@ subcollection: vmware-solutions
 
 | 項目        | 説明       |  
 |:------------|:----------------- |
-| 名前 | ESXi サーバーの名前は、`<host_prefix><n>.<subdomain_label>.<root_domain>` という形式です。各部の意味は次のとおりです。<br><br>`host_prefix` はホスト名接頭部、`n` はサーバーのシーケンス、`subdomain_label` はサブドメイン・ラベル、`root_domain` はルート・ドメイン・ネームです。 |
+| 名前 | ESXi サーバーの名前は、`<data_center>-<host_prefix><n>.<subdomain_label>.<root_domain>` という形式です。ここで、`n` は ESXi サーバーのシーケンスです。|
 | バージョン | ESXi サーバーのバージョン。 |
 | 資格情報 | ESXi サーバーにアクセスするために使用するユーザー名とパスワード。 |
 | プライベート IP | ESXi サーバーのプライベート IP アドレス。 |

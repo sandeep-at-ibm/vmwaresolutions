@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-20"
+lastupdated: "2019-08-06"
 
 keywords: planning vSphere, data center, vSphere data centers
 
@@ -34,6 +34,8 @@ subcollection: vmware-solutions
 {: #vs_planning-dc-availability}
 
 vSphere 部署对物理基础架构有严格要求。因此，只能将集群部署在满足这些需求的 {{site.data.keyword.CloudDataCents_notm}} 中。以下 {{site.data.keyword.CloudDataCent_notm}} 可用于 vSphere 部署。
+
+Cascade Lake {{site.data.keyword.baremetal_short}} 在多专区区域 {{site.data.keyword.CloudDataCents_notm}} 上可用。有关更多信息，请参阅[多专区区域 (MZR) 概述](/docs/infrastructure/loadbalancer-service?topic=loadbalancer-service-multi-zone-region-mzr-overview)。
 
 如果选择的是 vSAN 组件，那么位置列表将按 SSD（固态磁盘）可用性进行过滤。
 {:note}

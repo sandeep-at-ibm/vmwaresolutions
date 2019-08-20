@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -21,9 +21,10 @@ L'arricchimento di Stock Trader non è un passo da compiere solo una volta. Per 
 ## AI Watson Tone Analyzer
 {: #vcscontent-aianalytics-ai-watson}
 
-Il seguente esempio è un modo semplice per arricchire un'applicazione, ma è ingannevolmente potente. Jane sfoglia il [catalogo {{site.data.keyword.cloud}}](https://cloud.ibm.com/catalog/) per i servizi [AI](https://cloud.ibm.com/catalog/?category=ai) e [Analytics](https://cloud.ibm.com/catalog/?category=analytics) e trova il catalogo ricco di contenuti.
+Il seguente esempio è un modo semplice per arricchire un'applicazione, ma è ingannevolmente potente. Jane sfoglia il [catalogo {{site.data.keyword.cloud}}](https://cloud.ibm.com/catalog) per i servizi [AI](https://cloud.ibm.com/catalog?category=ai) e [Analytics](https://cloud.ibm.com/catalog?category=analytics) e trova il catalogo ricco di contenuti.
 
 Jane seleziona [Tone Analyzer](https://cloud.ibm.com/catalog/services/tone-analyzer), optando per il piano Standard e quindi riceve le credenziali per chiamare.
+
 Jane ha effettuato il refactoring di Stock Trader e crea solo un segreto Kubernetes per Tone Analyzer. In questo modo, anche se Jane cambia piani o regioni, non è necessario ricostruire il codice.
 
 Grazie al refactoring, Jane ha sperimentato vari framework di interfacce utente senza interrompere l'esperienza dell'utente. Di conseguenza, la nuova interfaccia utente è disponibile per l'uso e aiuta a comprendere il tono del feedback degli utenti.
@@ -61,9 +62,3 @@ le modifiche API sono state mascherate dietro le quinte.
 
 Inoltre, con il monitoraggio e la misurazione in API Connect, Jane è in grado di rintracciare
 chi utilizza la sua API semplificata.
-
-## Link correlati
-{: #vcscontent-aianalytics-related}
-
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

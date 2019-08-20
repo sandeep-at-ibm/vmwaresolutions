@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -22,7 +22,7 @@ A lista a seguir é uma visão geral dos fluxos de trabalho iniciais:
 3.	A Organização do locatário e os Ativos são inicialmente configurados por meio do vCenter. Um Aplicativo e um Subaplicativo são configurados para a instância do VMware vCenter Server.
 4.	Os painéis são preenchidos para que o Locatário gerencie sua Postura de Risco cibernético e de Conformidade:
     - Gerenciamento de conformidade
-    - Gerenciamento de risco
+    - Gerenciamento de Risco
     - Gerenciamento de perícia
 5.	O cliente instala os Coletores Remotos.
 6.	O cliente também pode usar o RiskForesight para gerenciar seu data center no local.
@@ -52,8 +52,3 @@ Os principais benefícios fornecidos pelo Caveonix RiskForesight on IBM Cloud in
 -	Gerenciamento proativo dos riscos gerais dentro da nuvem híbrida antes de poderem ser usados.
 -	Manutenção de um entendimento de "pilha completa" das vulnerabilidades de carga de trabalho e dos problemas de configuração na infraestrutura, na plataforma e no nível do aplicativo no contexto de ameaças e requisitos de conformidade.
 -	Permitir que a empresa implemente uma Risk Management Framework proativa do National Institute of Standards and Technology (NIST).
-
-## Links relacionados
-{: #caveonix-on-vcs-related}
-
-*   [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

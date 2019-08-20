@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-22"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -67,9 +67,7 @@ Speicher | 100 GB |  SATA: 2 TB / SSD: 960 GB
 ## Virtuelle Struktur
 {: #vcsiks-arch-overview-infrastructure-virtual-structure}
 
-![Diagramm zur physischen Struktur der {{site.data.keyword.containerlong_notm}}- und {{site.data.keyword.icpfull_notm}}-Bereitstellung
-](../../images/vcsiks-phy-ics-iks-deployment.svg "Diagramm zur physischen Struktur der {{site.data.keyword.containerlong_notm}}- und {{site.data.keyword.icpfull_notm}}-Bereitstellung
-"){: caption="Abbildung 1. Physische Struktur von {{site.data.keyword.containerlong_notm}}- und {{site.data.keyword.icpfull_notm}}-Bereitstellungen" caption-side="bottom"}
+![Physische Struktur von {{site.data.keyword.containerlong_notm}} und {{site.data.keyword.icpfull_notm}} - Bereitstellungsdiagramm](../../images/vcsiks-phy-ics-iks-deployment.svg "Physische Struktur von {{site.data.keyword.containerlong_notm}} und {{site.data.keyword.icpfull_notm}} - Bereitstellungsdiagramm")
 
 Innerhalb der vCenter Server-Instanz werden die virtuellen Maschinen des Kunden für dedizierte Instanzen von NSX Edge Services Gateway (ESG) und Distributed Logical Router (DLR) bereitgestellt.
 
@@ -88,8 +86,7 @@ Die vCenter Server-Bereitstellung verwendet einen einzelnen externen Platform Se
 ### vCenter Server
 {: #vcsiks-arch-overview-infrastructure-vcs}
 
-Wie der PSC wird vCenter Server als Appliance bereitgestellt.
-Darüber hinaus wird vCenter in einem portierbaren Teilnetz im privaten VLAN installiert, das den Management-VMs zugeordnet ist. Das zugehörige Standardgateway wird auf den BCR (Back-end Customer Router, Back-End-Kundenrouter) eingestellt.
+Wie der PSC wird vCenter Server als Appliance bereitgestellt. Darüber hinaus wird vCenter in einem portierbaren Teilnetz im privaten VLAN installiert, das den Management-VMs zugeordnet ist. Das zugehörige Standardgateway wird auf den BCR (Back-end Customer Router, Back-End-Kundenrouter) eingestellt.
 
 ### NSX-Manager
 {: #vcsiks-arch-overview-infrastructure-nsx-manager}
@@ -105,6 +102,7 @@ Die {{site.data.keyword.cloud_notm}}-Automatisierung stellt drei NSX-Controller 
 {: #vcsiks-arch-overview-infrastructure-nsx-esg}
 
 NSX Edge Services Gateway-Paare werden bereitgestellt. In allen Fällen wird ein Gateway-Paar für den abgehenden Datenverkehr aus Automatisierungskomponenten verwendet, die sich im privaten Netz befinden. Für vCenter Server und {{site.data.keyword.icpfull_notm}} wird ein zweites Gateway, das als ICP-verwaltete Edge bezeichnet wird, bereitgestellt und mit einem Uplink zum öffentlichen Netz sowie einer Schnittstelle, die dem privaten Netz zugeordnet ist, konfiguriert.
+
 Alle erforderlichen NSX-Komponenten, wie z. B. Distributed Logical Router (DLR), logische Switches und Firewalls, können vom Administrator konfiguriert werden. Weitere Informationen zu den NSX Edge-Instanzen, die im Rahmen der Lösung bereitgestellt werden, enthält der [Leitfaden für den vCenter Server-Netzbetrieb](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro).
 
 In den folgenden Tabellen sind die {{site.data.keyword.icpfull_notm}} ESG/DLR-Spezifikationen zusammengefasst.
@@ -141,8 +139,3 @@ Der Kubernetes-Master hat die Aufgabe, alle Rechen-, Netz- und Speicherressource
 {: #vcsiks-arch-overview-infrastructure-worker-node}
 
 Jeder Worker-Knoten ist eine physische Maschine (Bare Metal) oder eine VM, die auf physischer Hardware in der Cloudumgebung ausgeführt wird. Bei der Bereitstellung eines Workerknotens legen Sie die Ressourcen fest, die für die auf diesem Workerknoten gehosteten Container verfügbar sind. Im Bereitstellungszustand sind Ihre Workerknoten mit einer von IBM verwalteten Docker Engine, separaten Rechenressourcen, Netzbetrieb und einem Datenträgerservice konfiguriert. Die integrierten Sicherheitsfunktionen bieten Isolation, Funktionalität für das Ressourcenmanagement sowie Einhaltung von Sicherheitsbestimmungen für Workerknoten.
-
-## Zugehörige Links
-{: #vcsiks-arch-overview-infrastructure-related}
-
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

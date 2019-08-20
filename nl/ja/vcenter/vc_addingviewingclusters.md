@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-06"
 
 keywords: vCenter Server add cluster, view cluster vCenter Server, delete cluster vCenter Server
 
@@ -20,8 +20,6 @@ subcollection: vmware-solutions
 
 # vCenter Server インスタンスのクラスターの追加、表示、削除
 {: #vc_addingviewingclusters}
-
-インスタンスの注文時に構成した ESXi サーバーは、デフォルトでは **cluster1** としてグループ化されます。
 
 VMware vCenter Server インスタンスに独自のクラスターを追加して、コンピュート能力やストレージ容量を拡張できます。 クラスター内で ESXi サーバーを管理すると、リソース割り振りを改善したり高可用性を実現したりできます。 不要になった場合は、追加したクラスターをインスタンスから削除します。
 
@@ -48,9 +46,10 @@ vCenter Server インスタンスにクラスターを追加するときには�
 {: #vc_addingviewingclusters-adding-cluster-name}
 
 クラスター名は、以下の要件を満たしている必要があります。
-* 英数字とダッシュ (-) の文字だけを使用できます。
-* クラスター名の先頭と末尾は、英数字でなければなりません。
-* 最大文字数は 30 です。
+* 英字の小文字、数字、およびダッシュ (-) の文字だけを使用できます。
+* クラスター名は小文字の英字で始まらなければなりません。
+* クラスター名は小文字の英字または数字で終わらなければなりません。
+* クラスター名の最大の長さは 30 文字です。
 * クラスター名は、vCenter Server インスタンス内で固有のものでなければなりません。
 
 #### データ・センターの場所
@@ -63,7 +62,7 @@ vCenter Server インスタンスにクラスターを追加するときには�
 ### ベア・メタル・サーバーの設定
 {: #vc_addingviewingclusters-bare-metal-settings}
 
-**「Skylake」**、**「SAP 認定」**、または**「Broadwell」**のいずれかを選択できます。 オプションは、インスタンスを最初にデプロイしたバージョンによって異なる場合があります。
+**「Skylake」**、**「Cascade」**、**「SAP 認定」**、または**「Broadwell」**のいずれかを選択できます。 オプションは、インスタンスを最初にデプロイしたバージョンによって異なる場合があります。
 
 #### Skylake
 {: #vc_addingviewingclusters-adding-skylake}
@@ -76,6 +75,21 @@ vCenter Server インスタンスにクラスターを追加するときには�
 | Dual Intel Xeon Gold 5120 Processor / 合計 28 コア、2.2 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 | Dual Intel Xeon Gold 6140 Processor / 合計 36 コア、2.3 GHz | 64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 {: caption="表 1. Skylake {{site.data.keyword.baremetal_short}}のオプション" caption-side="top"}
+
+#### Cascade
+{: #vc_addingviewingclusters-adding-cascade}
+
+**「Cascade」**設定の場合、**「CPU モデル」**と**「RAM」**には複数のオプションがあります。
+
+Cascade {{site.data.keyword.baremetal_short}} は、VMware vSphere Enterprise Plus 6.7 U2 インスタンスでのみ使用できます。
+{:note}
+
+| CPU モデル・オプション        | RAM オプション       |
+|:------------- |:------------- |
+| Dual Intel Xeon Gold 4210 Processor / 合計 20 コア、2.3 GHz | 64 GB、96 GB、128 GB、192 GB、768 GB、1.5 TB |
+| Dual Intel Xeon Gold 5218 Processor / 合計 32 コア、2.3 GHz | 64 GB、96 GB、128 GB、192 GB、768 GB、1.5 TB |
+| Dual Intel Xeon Gold 6248 Processor / 合計 40 コア、2.5 GHz | 64 GB、96 GB、128 GB、192 GB、768 GB、1.5 TB |
+{: caption="表 2. Cascade {{site.data.keyword.baremetal_short}}のオプション" caption-side="top"}
 
 #### SAP 認定
 {: #vc_addingviewingclusters-adding-sap}
@@ -100,7 +114,7 @@ vCenter Server インスタンスにクラスターを追加するときには�
 |:------------- |:------------- |
 | クワッド Intel Xeon E7-4820 v4 / 合計 40 コア、1.9 GHz | 128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 | クワッド Intel Xeon E7-4850 v4 / 合計 64 コア、2.2 GHz | 128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
-{: caption="表 2. Broadwell {{site.data.keyword.baremetal_short}}のオプション" caption-side="top"}
+{: caption="表 3. Broadwell {{site.data.keyword.baremetal_short}}のオプション" caption-side="top"}
 
 #### ベア・メタル・サーバーの数
 {: #vc_addingviewingclusters-adding-bare-metal-number}
@@ -122,7 +136,7 @@ vCenter Server インスタンスにクラスターを追加するときには�
 * **vSAN 容量ディスクの数**: 追加する容量ディスク数を指定します。
 * 容量ディスクを上限の 10 個を超えて追加する場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。 このオプションでは、合計 12 個の容量ディスクに 2 つの追加の容量ディスク・ベイが提供されますので、より少ない待ち時間とより高い IOPS スループットが求められるワークロードを扱うときに役立ちます。
 
-  **「High-Performance Intel Optane」**オプションは、Skylake CPU モデルでのみ使用できます。
+  **「High-Performance Intel Optane」**オプションは、Skylake および Cascade の CPU モデルでのみ使用できます。
   {:note}
 
 * **「Disk Type for vSAN Cache Disks」**および**「Number of vSAN Cache Disks」**の値を確認します。 これらの値は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けたかどうかによって異なります。
@@ -152,7 +166,7 @@ vCenter Server インスタンスにクラスターを追加するときには�
 | 2 IOPS/GB | このオプションは、最も汎用的なワークロード用に設計されています。 例えば、小規模なデータベースのホスト、Web アプリケーションのバックアップ、ハイパーバイザーの仮想マシン (VM) ディスク・イメージなどの用途があります。 |
 | 4 IOPS/GB | このオプションは、同時に高い割合のデータがアクティブになる高負荷のワークロード用に設計されています。 例えば、トランザクション・データベースなどの用途があります。 |
 | 10 IOPS/GB | このオプションは、分析などの最も要求の厳しいワークロード・タイプ用に設計されています。 例えば、トランザクションの多いデータベースやその他のパフォーマンス重視のデータベースなどの用途があります。 このパフォーマンス・レベルは、ファイル共有あたり最大 4 TB の容量に制限されています。 |
-{: caption="表 3. NFS パフォーマンス・レベルのオプション" caption-side="top"}
+{: caption="表 4. NFS パフォーマンス・レベルのオプション" caption-side="top"}
 
 ### ローカル・ディスク
 {: #vc_addingviewingclusters-adding-local-disks}
@@ -171,11 +185,42 @@ vCenter Server インスタンスにクラスターを追加するときには�
 ### ネットワーク・インターフェースの設定
 {: #vc_addingviewingclusters-adding-network-interface-settings}
 
+vCenter Server インスタンスにクラスターを追加するときには、以下のネットワーク・インターフェース設定を指定する必要があります。
+
+#### パブリックまたはプライベート・ネットワーク
+
 ネットワーク・インターフェース・カード (NIC) の有効化設定は、**「パブリック・ネットワークとプライベート・ネットワーク (Public and Private Network)」**と**「プライベート・ネットワークのみ」**のどちらを選択したかに基づきます。 以下のアドオン・サービスはパブリック NIC を必要とするため、プライベート・オプションを選択した場合は利用できません。
 
 * F5 on {{site.data.keyword.cloud_notm}}
 * Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
 * Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
+
+#### VLAN
+{: #vc_orderinginstance-vlans}
+
+ネットワーク設定は、**「新規 VLAN を注文」**と**「既存の VLAN を選択」**のどちらを選択するかによって異なります。
+
+インスタンスの注文には、パブリック VLAN 1 つとプライベート VLAN 2 つが必要です。 2 つのプライベート VLAN は各ベア・メタル・サーバーにトランキングされます。
+
+##### 新規 VLAN を注文
+{: #vc_orderinginstance-new-vlans}
+
+新規パブリック VLAN 1 つと新規プライベート VLAN 2 つを注文することを選択します。
+
+##### 既存の VLAN を選択
+{: #vc_orderinginstance-existing-vlans}
+
+選択した {{site.data.keyword.CloudDataCent_notm}}によっては、既存のパブリック VLAN とプライベート VLAN を使用できることがあります。
+
+既存のパブリック VLAN とプライベート VLAN を再使用することを選択した場合は、それらの VLAN とサブネットを指定します。
+* **パブリック VLAN** は、パブリック・ネットワーク・アクセスに使用されます。
+* **プライベート VLAN** は、{{site.data.keyword.cloud_notm}} 内部のデータ・センターとサービスの間の接続に使用されます。
+* **セカンダリー・プライベート VLAN** は、vSAN などの VMware 機能に使用されます。
+* **プライマリー・サブネット**は、パブリック・ネットワーク・アクセス用に物理ホストに割り当てられます。
+* **プライマリー・プライベート・サブネット**は、管理トラフィック用に物理ホストに割り当てられます。
+
+選択した VLAN のファイアウォール構成が管理用データ・トラフィックをブロックしていないことを確認してください。 選択したすべての VLAN が同じポッドに含まれていることも確認してください。 複数のポッドの VLAN に ESXi サーバーをプロビジョンすることはできません。
+{:important}
 
 ### 注文のサマリー
 {: #vc_addingviewingclusters-adding-order-summary}
@@ -196,7 +241,7 @@ vCenter Server インスタンスにクラスターを追加するときには�
 4. **「Add Cluster」**ページで、クラスター名を入力します。
 5. インスタンスのホスト以外の {{site.data.keyword.CloudDataCent_notm}} でクラスターをホストする場合は、**「Bare Metal Server」**で**「Select a different location」**チェック・ボックスにチェック・マークを付けて、インスタンスをホストする {{site.data.keyword.CloudDataCent_notm}} を選択します。
 6. ベア・メタル構成を次の手順で実行します。
-   * **「Skylake」**または**「Broadwell」**を選択した場合は、**CPU モデル**、**RAM** 量、**{{site.data.keyword.baremetal_short}}の数**を指定します。
+   * **「Skylake」**、**「Cascade」**、または**「Broadwell」**を選択した場合は、**CPU モデル**、**RAM** 量、**{{site.data.keyword.baremetal_short}}の数**を指定します。
    * **「SAP 認定」**を選択した場合は、CPU モデルを指定します。
 7. ストレージ構成を次の手順で実行します。
   * **「vSAN Storage」**を選択した場合は、容量ディスクおよびキャッシュ・ディスクのディスク・タイプ、ディスク数、vSAN ライセンス・エディションを指定します。 さらにストレージが必要な場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。
@@ -256,12 +301,12 @@ ESXi サーバーの詳細を表示します。
 
 | 項目        | 説明       |  
 |:------------- |:------------- |
-| 名前 | ESXi サーバーの名前は以下の形式です。<br> `<host_prefix><n>.<subdomain_label>.<root_domain>` <br> 各部の意味は、次のとおりです。<br> `host_prefix` はホスト名の接頭部です<br> `n` はサーバーの順序です<br> `subdomain_label` はサブドメイン・ラベルです<br> `root_domain` はルート・ドメイン名です |
+| 名前 | ESXi サーバーの名前は、`<data_center>-<host_prefix><n>.<subdomain_label>.<root_domain>` という形式です。ここで、`n` は ESXi サーバーのシーケンスです。|
 | バージョン | ESXi サーバーのバージョン。 |
 | 資格情報 | ESXi サーバーにアクセスするために使用するユーザー名とパスワード。 |
 | プライベート IP | ESXi サーバーのプライベート IP アドレス。 |
 | 状況 | ESXi サーバーの状況。次の値のいずれかになります。<br> **追加済み** ESXi サーバーが追加され、使用可能な状態です。<br> **追加中** ESXi サーバーが追加されています。<br> **削除中** ESXi サーバーが削除されています。 |
-{: caption="表 4. ESXi サーバーの詳細" caption-side="top"}
+{: caption="表 5. ESXi サーバーの詳細" caption-side="top"}
 
 追加の詳細を表示するには、ESXi サーバーを展開します。
 
@@ -272,7 +317,7 @@ ESXi サーバーの詳細を表示します。
 | カスタマイズ済み vSAN ディスク | クラスター内の vSAN ディスクの数 (ディスク・タイプおよび容量も含む)。 |
 | vSAN キャッシュ・ディスク | vSAN キャッシュ・ディスクのタイプと数。 |
 | ネットワーキング |ネットワーク・インターフェース・カード (NIC) の有効化設定 (「パブリック・ネットワークとプライベート・ネットワーク (Public and Private Network)」と「プライベート・ネットワークのみ」)。 |
-{: caption="表 5. ESXi サーバーの追加の詳細" caption-side="top"}
+{: caption="表 6. ESXi サーバーの追加の詳細" caption-side="top"}
 
 ストレージの詳細を表示します。
 
@@ -282,7 +327,7 @@ ESXi サーバーの詳細を表示します。
 | サイズ | ストレージの容量。 |
 | IOPS/GB | ストレージのパフォーマンス・レベル。 |
 | NFS プロトコル | ストレージの NFS バージョン。 |
-{: caption="表 6. ストレージの詳細" caption-side="top"}
+{: caption="表 7. ストレージの詳細" caption-side="top"}
 
 ネットワーク・インターフェースの詳細を表示します。
 
@@ -292,7 +337,7 @@ ESXi サーバーの詳細を表示します。
 | 説明 | VLAN の説明。  |
 | ロケーション | データ・センターのロケーション。 |
 | 1 次経路 | VLAN の 1 次経路。 |
-{: caption="表 7. ネットワーク・インターフェース - VLAN の詳細" caption-side="top"}
+{: caption="表 8. ネットワーク・インターフェース - VLAN の詳細" caption-side="top"}
 
 VLAN の詳細にアクセスするには**「リソースの表示」**をクリックします。
 
@@ -303,7 +348,7 @@ VLAN の詳細にアクセスするには**「リソースの表示」**をク�
 | 名前 | サブネット名。 サブネットの詳細にアクセスするには名前をクリックします。 |
 | タイプ | サブネットのタイプ: 1 次またはポータブル。 |
 | 説明 | サブネットの説明。 |
-{: caption="表 8. ネットワーク・インターフェース - サブネットの詳細" caption-side="top"}
+{: caption="表 9. ネットワーク・インターフェース - サブネットの詳細" caption-side="top"}
 
 IP の詳細を表示します。
 
@@ -312,7 +357,7 @@ IP の詳細を表示します。
 | IP | IP アドレス。 |
 | 状況 | IP アドレスの状況。 |
 | 説明 |IP アドレスの説明。  |
-{: caption="表 9. ネットワーク・インターフェース - IP の詳細" caption-side="top"}
+{: caption="表 10. ネットワーク・インターフェース - IP の詳細" caption-side="top"}
 
 ## vCenter Server インスタンスからのクラスターの削除
 {: #vc_addingviewingclusters-deleting}
@@ -329,6 +374,9 @@ IP の詳細を表示します。
 * クラスターを削除する前に、クラスター内のすべてのノードが電源オンの状態で作動可能であることを確認します。
 * クラスターを削除すると、クラスターのすべての VM も削除され、復旧できなくなります。 VM を保持したい場合は、他のクラスターに移行してください。
 * デフォルトのクラスターは削除できません。
+
+VMware HCX on {{site.data.keyword.cloud_notm}} サービスを注文する際は、12 カ月間のコミットメントが必要です。12 カ月のコミットメント期間が終了する前にクラスターを削除した場合、アカウントには HCX コンポーネントに対する課金が引き続き発生します。12 カ月のコミットメント満了日は、HCX on {{site.data.keyword.cloud_notm}} の詳細ページに示されています。サービス詳細の表示について詳しくは、[vCenter Server インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure)を参照してください。
+{:important}
 
 ### vCenter Server インスタンスからクラスターを削除する手順
 {: #vc_addingviewingclusters-deleting-procedure}

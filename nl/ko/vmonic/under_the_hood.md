@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-09"
 
 keywords: about vmware solutions, product overview, benefits
 
@@ -44,7 +44,7 @@ vCenter Server 인스턴스를 주문하려면 먼저 VMware Solutions 카탈로
 
 vCenter Server 인스턴스를 주문할 때 먼저 이름과 VMware vSphere 버전을 선택합니다. 모든 VMware 인스턴스는 Microsoft Active Directory 도메인 제어기와 함께 배치되며 싱글 사인온 용도로 인스턴스를 기본 또는 보조 사이트로 지정해야 합니다. 기본 인스턴스가 싱글 사인온 도메인의 첫 번째 또는 유일한 인스턴스입니다. 추가 보조 인스턴스를 배치하고 이를 기존 기본 인스턴스의 동일한 싱글 사인온 도메인과 연관시킬 수 있습니다. 그런 다음 고유 VMware 라이센스를 가져올지 여부 또는 {{site.data.keyword.cloud_notm}}에서 임대할 라이센스의 개정판을 선택합니다. 마지막으로 클러스터에 있는 호스트의 CPU 및 메모리 특성뿐만 아니라 인스턴스의 {{site.data.keyword.cloud_notm}} 지역 및 데이터 센터를 선택합니다.
 
-주문 페이지의 다음 파트에서는 인스턴스에 대한 스토리지 및 네트워킹 특성을 입력합니다. 클러스터에 대해 vSAN과 NFS 스토리지 간에 선택할 수 있으며, vSAN 플래시 디스크와 vSAN 라이센스 에디션의 크기와 수 또는 NFS 스토리지 볼륨의 크기와 개수 및 성능을 선택할 수 있습니다. 네트워킹을 위해 호스트의 호스트 이름 접두부와 클러스터의 하위 도메인 및 도메인을 선택합니다. Active Directory 제어기를 단일 {{site.data.keyword.cloud_notm}} 가상 서버 인스턴스(VSI)로 배치하는 옵션 또는 라이센싱 및 활성화를 제공해야 하는 클러스터 내 두 개의 가상 머신이 있습니다.
+주문 페이지의 다음 파트에서는 인스턴스에 대한 스토리지 및 네트워킹 특성을 입력합니다. 클러스터에 대해 vSAN과 NFS 스토리지 간에 선택할 수 있으며, vSAN 플래시 디스크와 vSAN 라이센스 에디션의 크기와 수 또는 NFS 스토리지 볼륨의 크기와 개수 및 성능을 선택할 수 있습니다. 네트워킹을 위해 호스트의 호스트 이름 접두부와 클러스터의 하위 도메인 및 도메인을 선택합니다. Active Directory 제어기를 단일 {{site.data.keyword.cloud_notm}} 가상 서버 인스턴스(VSI)로 배치하는 옵션이 있습니다. 또는 제어기를 클러스터 내에 두 개의 가상 머신으로 배치할 수 있습니다(이러한 VM의 경우 라이센싱 및 활성화를 제공해야 함).
 
 vCenter Server 주문 페이지의 맨 아래에서는 VMware 인스턴스에 대해 배치할 수 있고 {{site.data.keyword.cloud_notm}} 계정에 비용 청구되는 다양한 추가 기능 서비스 중에서 선택할 수 있습니다. 일부 서비스에는 주문 양식의 일부로 지정한 추가 구성이 필요합니다.
 
@@ -65,7 +65,7 @@ VMware 인스턴스는 35개의 서로 다른 {{site.data.keyword.CloudDataCents
 새 VMware vCenter 인스턴스를 주문하면 인스턴스 위치와 스펙을 선택합니다. {{site.data.keyword.vmwaresolutions_short}}는 이전에 선택한 {{site.data.keyword.cloud_notm}} 사용자 이름 및 API 키를 사용하여 가상화 환경 주문, 설치 및 구성의 전체 프로세스를 오케스트레이션합니다. 다음이 포함됩니다.
 
 1. 네트워킹을 위한 VLAN 및 서브넷 주문.
-2. vSphere Hypervisor가 설치된 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}의 주문.
+2. vSphere Hypervisor가 설치된 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} 주문.
 3. 임베디드 Platform Services Controller, VMware NSX Manager, 제어기 및 Edge Services Gateway를 사용하여 VMware vCenter Server 배치 및 구성.
 4. VMware vSAN 또는 {{site.data.keyword.cloud_notm}} Endurance 스토리지를 포함하여 클러스터 스토리지 주문 및 구성.
 5. IBM CloudDriver라는 IBM 관리 컴포넌트 배치.
@@ -126,7 +126,7 @@ CloudBuilder와 마찬가지로 IBM CloudDriver는 인스턴스에서 후속 오
 ### 추가 컴포넌트
 {: #under_the_hood-add-comp}
 
-선택에 따라 하나의 Microsoft Windows VSI 또는 두 개의 Microsoft Windows 가상 머신이 함께 배치되거나 클러스터에 관리 컴포넌트를 위한 Active Directory 서버로서 배치됩니다. 선택적으로 고유 Active Directory 서버를 관리 액세스를 위한 추가 ID 소스로서 추가할 수 있습니다.
+선택에 따라 하나의 Microsoft Windows VSI 또는 두 개의 Microsoft Windows VM이 함께 배치되거나 클러스터에 관리 컴포넌트를 위한 Active Directory 서버로 배치됩니다. 선택적으로 고유 Active Directory 서버를 관리 액세스를 위한 추가 ID 소스로서 추가할 수 있습니다.
 
 고유 워크로드에 비즈니스 연속성을 제공하도록 선택하는 방법에 관계없이 {{site.data.keyword.cloud_notm}}는 인스턴스의 관리 컴포넌트를 백업하는 것이 좋습니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔을 사용하면 인스턴스와 함께 통합된 IBM Spectrum Protect Plus 백업 서버 또는 Veeam Backup & Replication 백업 서버를 배치할 수 있습니다. 이러한 백업 서비스는 인스턴스의 [완전한 백업 솔루션](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_backingup)의 일부로 사용할 수 있습니다.
 

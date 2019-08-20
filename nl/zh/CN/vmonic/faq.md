@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-01"
 
 keywords: FAQ, user account, patch management
 
@@ -88,7 +88,7 @@ subcollection: vmware-solutions
 {: #faq-rename-cluster}
 {: faq}
 
-对于新的 vCenter Server 实例，在部署期间创建的第一个集群具有缺省名称 **cluster1**。可以在 VMware vSphere Client 中重命名缺省集群。在您将集群添加到 a vCenter Server 实例时，可以在 {{site.data.keyword.vmwaresolutions_short}} 控制台上指定所需名称。
+对于新的 vCenter Server 实例，可以设置在部署期间创建的初始集群的名称。在您将集群添加到 a vCenter Server 实例时，可以在 {{site.data.keyword.vmwaresolutions_short}} 控制台上指定所需名称。
 
 ## 如何管理补丁？
 {: #faq-patches}
@@ -106,7 +106,6 @@ IBM 通过按需部署 IBM CloudDriver 虚拟服务器实例 (VSI)，提供 IBM 
 有关更多信息，请参阅以下资源：
 * [VMware 支持](https://www.vmware.com/support.html){:external}
 * [对 vCenter Server 实例应用更新](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates)
-* [对 vCenter Server with Hybridity Bundle 实例应用更新](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_applyingupdates)
 
 ## 管理服务 NSX Edge 会构成安全风险吗？
 {: #faq-mgmt-nsx}
@@ -136,7 +135,6 @@ IBM 通过按需部署 IBM CloudDriver 虚拟服务器实例 (VSI)，提供 IBM 
 
 有关更多信息，请参阅以下内容中的 _IBM Cloud Data Center 可用性_部分：
 * [针对 vCenter Server 实例的需求和规划](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
-* [针对 vCenter Server with Hybridity Bundle 实例的需求和规划](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)
 * [针对 VMware vSphere on {{site.data.keyword.cloud_notm}} 的需求和规划](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning)
 * [针对 NetApp ONTAP Select 实例的需求和规划](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_planning)
 

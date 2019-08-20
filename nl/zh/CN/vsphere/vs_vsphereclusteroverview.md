@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-26"
 
 keywords: vSphere, vSphere component, tech specs vSphere
 
@@ -41,7 +41,7 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} 不会自动安装、配置�
 {: #vs_vsphereclusteroverview-specs-vmware-components}
 
 选择用于以下 VMware 组件的许可证（IBM 提供或 BYOL）：
-* VMware vSphere Enterprise Plus 6.7 U1 或 6.5 U2
+* VMware vSphere Enterprise Plus 6.7 U2 或 6.5 U2
 * 以下 VMware 组件是可选的：
    * VMware vCenter Server Standard
    * VMware NSX（Base、Advanced 或 Enterprise）
@@ -56,6 +56,7 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} 不会自动安装、配置�
 
 可以使用下列其中一个配置来订购一个或更多 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}：
 * **Skylake**：具有所选 CPU 型号和 RAM 大小的 2 个 CPU Intel Skylake 代服务器（Intel Xeon 4100/5100/6100 系列）。
+* **Cascade**：具有所选 CPU 型号和 RAM 大小的 2 个 CPU Intel Cascade 代服务器（Intel Xeon 4200/5200/6200 系列）。
 * **SAP 认证**：具有所选 CPU 型号的 Intel Skylake 或 Intel Broadwell 代服务器（Intel Xeon 6140/E5-2690/E7-8890 系列）。
 * **Broadwell**：具有所选 CPU 型号和 RAM 大小的 4 个 CPU 的 Intel Broadwell 代服务器（Intel Xeon E7-4800 系列）。
 
@@ -102,7 +103,7 @@ VMware vSphere on {{site.data.keyword.cloud_notm}} 不会自动安装、配置�
 ### 扩展节点的 VMware 组件
 {: #vs_vsphereclusteroverview-expansion-node-specs-vmware-components}
 
-* 一个 {{site.data.keyword.cloud_notm}} 裸机服务器，带 VMware vSphere Enterprise Plus 6.7u1 或 6.5u2。  
+* 一个 {{site.data.keyword.cloud_notm}} 裸机服务器，带 VMware vSphere Enterprise Plus 6.7u2 或 6.5u2。  
 * 可选的 VMware 组件在 [VMware vSphere on {{site.data.keyword.cloud_notm}} 集群的技术规范](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#specs)中显示。
 
 您只能在 {{site.data.keyword.slportal}} 中管理订购并交付给您的 {{site.data.keyword.cloud_notm}} 帐户的 ESXi 服务器、可选 VMware 组件以及其他硬件。在 {{site.data.keyword.vmwaresolutions_short}} 控制台中创建新集群后，可以返回到控制台并使用保存的信息扩展新集群。有关更多信息，请参阅[缩放现有 vSphere 集群](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters)。

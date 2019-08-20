@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -36,9 +36,9 @@ HCX 中的 vMotion 功能扩展了 vSphere vMotion 功能，适用于不同版�
 ### vMotion 的概念和最佳实践
 {: #hcxclient-migrations-best-practices-vmotion}
 
-HCX 本质上是一个 vMotion 双向代理。每个 HCX 实例都会在任何集群外部模拟 vSphere 数据中心内的一个 ESXi 主机，该主机本身是云网关系列组件 (CGW) 的“前端”。对于链接到当前所查看站点的每个 HCX 站点，会显示代理主机。vMotion 启动到远程主机时，本地 ESXi 主机会通过 vMotion 将该 VM 移至作为 CGW 前端的本地代理 ESXi 主机，该主机还维护与远程端 CGW 的加密隧道。
+HCX 本质上是一个 vMotion 双向代理。每个 HCX 实例都会在任何集群外部模拟 vSphere 数据中心内的一个 ESXi 主机，该主机本身是云网关系列组件 (CGW) 的“前端”。对于链接到当前所查看站点的每个 HCX 站点，会显示代理主机。vMotion 启动到远程主机时，本地 ESXi 主机会将该 VM 迁移到作为 CGW 前端的本地代理 ESXi 主机，该主机还维护与远程端 CGW 的加密隧道。
 
-同时，vMotion 在通过该隧道收到来自源 CGW 的数据时，会启动从远程 ESXi 代理主机到目标 vSphere 物理 ESXi 主机的 vMotion 迁移。应用 vMotion 时，一次只能运行一个 VM 迁移操作，这与批量迁移选项不同。因此，对于要迁移大量 VM 的情况，建议仅在不允许停机时或在重新引导 VM 有风险时，才使用 vMotion。但是，与标准 vMotion 一样，VM 在此过程中可以保持活动状态。
+vMotion 在通过该隧道收到来自源 CGW 的数据时，会启动从远程 ESXi 代理主机到目标 vSphere 物理 ESXi 主机的 vMotion 迁移。应用 vMotion 时，一次只能运行一个 VM 迁移操作，这与批量迁移选项不同。因此，对于要迁移大量 VM 的情况，建议仅在不允许停机时或在重新引导 VM 有风险时，才使用 vMotion。但是，与标准 vMotion 一样，VM 在此过程中可以保持活动状态。
 
 据观察，在 LAN 上，单个 vMotion 在约 1.7 Gbps 的速度时会达到极限，如果在 WAN 上通过 WAN Optimizer，那么在 300 到 400 Mbps 时达到极限。这并不意味着 LAN 上的 1.7 Gbps 等于 WAN 上通过 WAN Optimizer
 的 400 Mbps，而只是说明在特定环境上观察到这些最大值。此类环境由 10 GB LAN vMotion 网络和 1 GB 因特网上行链路（与生产 Web 流量共享）组成。
@@ -120,7 +120,7 @@ NFS 通常用于在许多服务器之间共享数据，例如 Web 服务器内�
 - 带宽（每个延伸网络约 1 Gbps）
 - 下层链路带宽
 
-迁移生命周期结束后，在尝试用于生产之前，测试开发或编译打包应用程序。对于支持等待时间敏感性 L2 延伸网络的 L2C HCX 设备之间的下层隧道流量 (udp 500 / 4500)，可以应用 QoS。
+迁移生命周期结束后，在尝试用于生产之前，测试开发或编译打包应用程序。对于支持与等待时间相关的 L2 延伸网络的 L2C HCX 设备之间的底层隧道流量 (UDP 500/4500)，可以应用 QoS。
 
 ## 网络摆动
 {: #hcxclient-migrations-network-swing}

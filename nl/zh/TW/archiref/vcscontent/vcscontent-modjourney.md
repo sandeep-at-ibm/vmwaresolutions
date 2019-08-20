@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -95,8 +95,3 @@ Todd 及 Jane 透過經驗得知將解決方案現代化的不錯旅程是從導
 6. 將 DevOps 現代化。在此旅程中，Jane 改善 Stock Trader 交付方式。
 
 7. 將管理現代化。Todd 及 Jane 合作以改善 Stock Trader 管理方式，以及其執行所在的平台，甚至跨多個叢集及雲端環境。
-
-## 相關鏈結
-{: #vcscontent-modjourney-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

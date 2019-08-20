@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-29"
 
 keywords: NetApp order instance, order NetApp ONTAP, order NetApp
 
@@ -42,8 +42,9 @@ Ao pedir uma instância do NetApp ONTAP Select, deve-se especificar as configura
 {: #np_orderinginstances-instance-name}
 
 O nome da instância deve atender aos requisitos a seguir:
-* Apenas caracteres alfanuméricos e o traço (-) são permitidos.
-* O nome da instância deve iniciar com um caractere alfabético e terminar com um caractere alfanumérico.
+* Somente caracteres alfabéticos minúsculos, numéricos e de traço (-) são permitidos.
+* O nome da instância deve começar com um caractere alfabético minúsculo.
+* O nome da instância deve terminar com um caractere alfabético minúsculo ou numérico.
 * O comprimento máximo do nome da instância é de 10 caracteres.
 * O nome da instância deve ser exclusivo dentro de sua conta.
 
@@ -56,26 +57,29 @@ Deve-se especificar as configurações de interface de rede a seguir ao solicita
 {: #np_orderinginstances-host-name-prefix}
 
 O prefixo de nome do host deve atender aos requisitos a seguir:
-*  Apenas caracteres alfanuméricos e o traço (-) são permitidos.
-*  O prefixo de nome do host deve iniciar e terminar com um caractere alfanumérico.
-*  O comprimento máximo do prefixo do nome do host é de 10 caracteres.
+* Somente caracteres alfabéticos minúsculos, numéricos e de traço (-) são permitidos.
+* O prefixo do nome do host deve começar com um caractere alfabético minúsculo.
+* O prefixo do nome do host deve terminar com um caractere alfabético minúsculo ou numérico.
+* O comprimento máximo do prefixo do nome do host é de 10 caracteres.
 
 ### Rótulo do subdomínio
 {: #np_orderinginstances-subdomain-label}
 
 O rótulo do subdomínio deve atender aos requisitos a seguir:
-*  Apenas caracteres alfanuméricos e o traço (-) são permitidos.
-*  O rótulo do subdomínio deve iniciar com um caractere alfabético e terminar com um caractere alfanumérico.
-*  O comprimento máximo do rótulo do subdomínio é de 10 caracteres.
+* Somente caracteres alfabéticos minúsculos, numéricos e de traço (-) são permitidos.
+* O rótulo do subdomínio deve começar com um caractere alfabético minúsculo.
+* O rótulo do subdomínio deve terminar com um caractere alfabético minúsculo ou numérico.
+* O comprimento máximo do rótulo do subdomínio é de 10 caracteres.
 
 ### Nome de domínio
 {: #np_orderinginstances-domain-name}
 
 O nome do domínio-raiz deve atender aos requisitos a seguir:
 * O nome de domínio deve consistir em duas ou mais sequências separadas por ponto (.)
-* A primeira sequência deve começar com um caractere alfabético e terminar com um caractere alfanumérico.
-* Todas as sequências, exceto a última, podem incluir somente caracteres alfanuméricos e traço (-).
-* A última sequência pode incluir somente caracteres alfabéticos.
+* A primeira sequência deve começar com um caractere alfabético minúsculo.
+* A primeira sequência deve terminar com um caractere alfabético minúsculo ou numérico.
+* Todas as sequências, exceto a última, podem conter somente caracteres alfabéticos minúsculos, numéricos e de traço (-).
+* A última sequência pode conter somente caracteres alfabéticos minúsculos.
 * O comprimento da última sequência deve estar no intervalo de 2 a 24 caracteres.
 
 O comprimento máximo do nome completo do domínio (FQDN) para hosts e máquinas virtuais (MVs) é de 50 caracteres. Os nomes de domínio devem ajustar-se a este comprimento máximo.
@@ -89,7 +93,7 @@ Deve-se fazer upload de quatro arquivos de licenciamento NetApp, um para cada um
 ## Configurações do Bare Metal Server
 {: #np_orderinginstances-bare-metal-settings}
 
-### Local do datacenter
+### Local do data center
 {: #np_orderinginstances-dc-location}
 
 Deve-se selecionar o {{site.data.keyword.CloudDataCent_notm}} no qual a instância deve ser hospedada.
@@ -108,7 +112,7 @@ As unidades SSD de 3,8 TB (Disco de estado sólido) são suportadas quando são 
 ### Número de Bare Metal Servers
 {: #np_orderinginstances-bare-metal-number}
 
-O número de servidores ESXi de uma instância do NetApp ONTAP Select é 4 por padrão. Isso não pode ser mudado. Todos os servidores ESXi compartilham a configuração.
+O número de servidores ESXi de uma instância do NetApp ONTAP Select é quatro por padrão. Isso não pode ser mudado. Todos os servidores ESXi compartilham a configuração.
 
 ## Resumo do Pedido
 {: #np_orderinginstances-order-summary}

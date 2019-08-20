@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-22"
 
 keywords: VMware HCX standalone, HCX on-premises, tech specs HCX
 
@@ -29,7 +29,7 @@ HCX on {{site.data.keyword.cloud_notm}}의 vCenter Server 인스턴스는 온프
 ## 온프레미스 HCX on IBM Cloud 인스턴스 설치 전 고려사항
 {: #standalone_considerations-install}
 
-HCX on {{site.data.keyword.cloud_notm}} 컴포넌트는 {{site.data.keyword.cloud_notm}} 및 사용자의 온프레미스 vSphere 환경 모두에 설치되어야 합니다. 온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스를 설치하기 전에 HCX on {{site.data.keyword.cloud_notm}} 서비스를 {{site.data.keyword.cloud_notm}}의 vCenter Server with Hybridity Bundle 인스턴스에 설치하는 것이 좋습니다. 자세한 정보는 [HCX on {{site.data.keyword.cloud_notm}} 설치 시 고려사항](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-hcx_considerations#hcx_considerations-install)을 참조하십시오.
+HCX on {{site.data.keyword.cloud_notm}} 컴포넌트는 {{site.data.keyword.cloud_notm}} 및 사용자의 온프레미스 vSphere 환경 모두에 설치되어야 합니다. 온프레미스 HCX on {{site.data.keyword.cloud_notm}} 인스턴스를 설치하기 전에 HCX on {{site.data.keyword.cloud_notm}} 서비스를 {{site.data.keyword.cloud_notm}}의 vCenter Server 인스턴스에 설치하는 것이 좋습니다. 자세한 정보는 [HCX on {{site.data.keyword.cloud_notm}} 설치 시 고려사항](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-hcx_considerations#hcx_considerations-install)을 참조하십시오.
 
 ### IP 주소 요구사항
 {: #standalone_considerations-ip}

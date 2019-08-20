@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-06"
 
 keywords: vCenter Server add cluster, view cluster vCenter Server, delete cluster vCenter Server
 
@@ -20,8 +20,6 @@ subcollection: vmware-solutions
 
 # vCenter Server 인스턴스의 클러스터 추가, 보기 및 삭제
 {: #vc_addingviewingclusters}
-
-인스턴스를 주문할 때 구성한 ESXi 서버는 기본적으로 **cluster1**로 그룹화됩니다.
 
 클러스터를 VMware vCenter Server 인스턴스에 추가하여 컴퓨팅 및 스토리지 용량을 확장할 수 있습니다. 클러스터 내에서 향상된 리소스 할당 및 고가용성을 위해 ESXi 서버를 관리할 수 있습니다. 더 이상 필요하지 않은 경우에는 인스턴스에서 추가된 클러스터를 삭제하십시오.
 
@@ -48,9 +46,10 @@ vCenter Server 인스턴스에 클러스터를 추가할 때는 다음 설정을
 {: #vc_addingviewingclusters-adding-cluster-name}
 
 클러스터 이름은 다음 요구사항을 충족해야 합니다.
-* 영숫자 문자 및 대시(-) 문자만 사용할 수 있습니다.
-* 클러스터 이름은 영숫자 문자로 시작하고 끝나야 합니다.
-* 최대 문자 수는 30자입니다.
+* 소문자 영문자, 숫자 및 대시(-) 문자만 사용할 수 있습니다.
+* 클러스터 이름은 소문자 영문자로 시작해야 합니다.
+* 클러스터 이름은 소문자 영문자 또는 숫자로 끝나야 합니다.
+* 클러스터 이름의 최대 길이는 30자입니다.
 * 클러스터 이름은 vCenter Server 인스턴스 내에서 고유해야 합니다.
 
 #### 데이터 센터 위치
@@ -63,7 +62,7 @@ vCenter Server 인스턴스에 클러스터를 추가할 때는 다음 설정을
 ### Bare Metal Server 설정
 {: #vc_addingviewingclusters-bare-metal-settings}
 
-**Skylake**, **SAP 인증** 또는 **Broadwell**을 선택할 수 있습니다. 옵션은 인스턴스가 처음에 배치된 버전에 따라 다를 수 있습니다.
+**Skylake**, **Cascade**, **SAP 인증** 또는 **Broadwell**을 선택할 수 있습니다. 옵션은 인스턴스가 처음에 배치된 버전에 따라 다를 수 있습니다.
 
 #### Skylake
 {: #vc_addingviewingclusters-adding-skylake}
@@ -76,6 +75,21 @@ vCenter Server 인스턴스에 클러스터를 추가할 때는 다음 설정을
 |듀얼 Intel Xeon Gold 5120 프로세서 / 총 28개의 코어, 2.2GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
 |듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개의 코어, 2.3GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
 {: caption="표 1. Skylake {{site.data.keyword.baremetal_short}}의 옵션" caption-side="top"}
+
+#### Cascade
+{: #vc_addingviewingclusters-adding-cascade}
+
+**Cascade** 설정의 경우 **CPU 모델** 및 **RAM**에 대한 옵션이 있습니다.
+
+Cascade {{site.data.keyword.baremetal_short}}는 VMware vSphere Enterprise Plus 6.7 U2 인스턴스에만 사용할 수 있습니다.
+{:note}
+
+| CPU 모델 옵션        |RAM 옵션       |
+|:------------- |:------------- |
+|듀얼 Intel Xeon Gold 4210 프로세서 / 총 20개의 코어, 2.3GHz |64GB, 96GB, 128GB, 192GB, 768GB, 1.5TB |
+|듀얼 Intel Xeon Gold 5218 프로세서 / 총 32개의 코어, 2.3GHz |64GB, 96GB, 128GB, 192GB, 768GB, 1.5TB |
+|듀얼 Intel Xeon Gold 6248 프로세서 / 총 40개의 코어, 2.5GHz |64GB, 96GB, 128GB, 192GB, 768GB, 1.5TB |
+{: caption="표 2. Cascade {{site.data.keyword.baremetal_short}}의 옵션" caption-side="top"}
 
 #### SAP 인증
 {: #vc_addingviewingclusters-adding-sap}
@@ -100,7 +114,7 @@ vCenter Server 인스턴스에 클러스터를 추가할 때는 다음 설정을
 |:------------- |:------------- |
 | 쿼드 Intel Xeon E7-4820 v4 / 총 40개의 코어, 1.9GHz |128GB, 256GB, 512GB, 1TB, 2TB, 3TB |
 | 쿼드 Intel Xeon E7-4850 v4 / 총 64개의 코어, 2.2GHz |128GB, 256GB, 512GB, 1TB, 2TB, 3TB |
-{: caption="표 2. Broadwell {{site.data.keyword.baremetal_short}}의 옵션" caption-side="top"}
+{: caption="표 3. Broadwell {{site.data.keyword.baremetal_short}}의 옵션" caption-side="top"}
 
 #### Bare Metal Server 수
 {: #vc_addingviewingclusters-adding-bare-metal-number}
@@ -122,7 +136,7 @@ vCenter Server 인스턴스에 클러스터를 추가할 때는 다음 설정을
 * **vSAN 용량 디스크 수**: 추가할 용량 디스크 수를 지정하십시오.
 * 용량 디스크를 10개 한계 이상으로 추가하려는 경우 **고성능 Intel Optane** 상자를 선택하십시오. 이 옵션은 총 12개 용량 디스크에 대해 2개의 추가 용량 디스크 베이를 제공하며 짧은 대기 시간과 높은 IOPS 처리량이 필요한 워크로드에 유용합니다.
 
-  **고성능 Intel Optane** 옵션은 Skylake CPU 모델에 대해서만 사용 가능합니다.
+  **고성능 Intel Optane** 옵션은 Skylake 및 Cascade CPU 모델에 대해서만 사용 가능합니다.
   {:note}
 
 * **vSAN 캐시 디스크의 디스크 유형** 및 **vSAN 캐시 디스크 수** 값을 검토하십시오. 이러한 값은 **고성능 Intel Optane** 상자를 선택했는지 여부에 따라 달라집니다.
@@ -152,7 +166,7 @@ vCenter Server 인스턴스에 클러스터를 추가할 때는 다음 설정을
 |2IOPS/GB |이 옵션은 가장 일반적인 워크로드를 위해 설계되었습니다. 애플리케이션 예로 소형 데이터베이스 호스팅, 웹 애플리케이션 백업 또는 하이퍼바이저용 가상 머신(VM) 디스크 이미지가 있습니다. |
 |4IOPS/GB |이 옵션은 동시에 활성 데이터의 높은 백분율을 보유한 고강도 워크로드를 위해 설계되었습니다. 애플리케이션 예로 트랜잭션 데이터베이스가 있습니다. |
 |10IOPS/GB |이 옵션은 분석과 같이 가장 처리가 어려운 워크로드 유형을 위해 설계되었습니다. 애플리케이션 예로 높은 트랜잭션 데이터베이스 및 기타 성능에 민감한 데이터베이스가 있습니다. 이 성능 레벨은 파일 공유당 4TB의 최대 용량으로 제한됩니다. |
-{: caption="표 3. NFS 성능 레벨 옵션" caption-side="top"}
+{: caption="표 4. NFS 성능 레벨 옵션" caption-side="top"}
 
 ### 로컬 디스크
 {: #vc_addingviewingclusters-adding-local-disks}
@@ -171,11 +185,42 @@ vCenter Server 인스턴스에 클러스터를 추가할 때는 다음 설정을
 ### 네트워크 인터페이스 설정
 {: #vc_addingviewingclusters-adding-network-interface-settings}
 
+vCenter Server 인스턴스에 클러스터를 추가할 때는 다음과 같은 네트워크 인터페이스 설정을 지정해야 합니다.
+
+#### 공용 또는 사설 네트워크
+
 네트워크 인터페이스 카드(NIC) 인에이블먼트 설정은 **공용 및 사설 네트워크** 또는 **사설 네트워크 전용** 중 사용자의 선택을 기반으로 합니다. 다음과 같은 추가 기능 서비스에는 공용 NIC가 필요하며 개인용 옵션을 선택하는 경우에는 서비스를 사용할 수 없습니다.
 
 * F5 on {{site.data.keyword.cloud_notm}}
 * Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
 * Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
+
+#### VLAN
+{: #vc_orderinginstance-vlans}
+
+네트워크 설정은 **새 VLAN 주문** 또는 **기존 VLAN 선택**의 선택에 따라 달라집니다.
+
+인스턴스 주문에 한 개의 공용 VLAN 및 두 개의 사설 VLAN이 필요합니다. 두 개의 사설 VLAN이 각 Bare Metal Server에 선택됩니다.
+
+##### 새 VLAN 주문
+{: #vc_orderinginstance-new-vlans}
+
+하나의 새 공용 VLAN 및 두 개의 새 사설 VLAN 주문을 선택하십시오.
+
+##### 기존 VLAN 선택
+{: #vc_orderinginstance-existing-vlans}
+
+선택한 {{site.data.keyword.CloudDataCent_notm}}에 따라 기존 공용 및 사설 VLAN을 사용할 수 있습니다.
+
+기존 공용 및 사설 VLAN을 재사용하도록 선택하는 경우에는 VLAN 및 서브넷을 지정하십시오.
+* **공용 VLAN**은 공용 네트워크 액세스를 위한 것입니다.
+* **사설 VLAN**은 {{site.data.keyword.cloud_notm}} 내의 데이터 센터 및 서비스 간의 연결을 위한 것입니다.
+* **보조 사설 VLAN**은 vSAN과 같은 VMware 기능을 위한 것입니다.
+* **기본 서브넷**은 공용 네트워크 액세스를 위한 실제 호스트에 지정됩니다.
+* **사설 기본 서브넷**은 관리 트래픽을 위한 실제 호스트에 지정됩니다.
+
+선택된 VLAN의 방화벽 구성이 관리 데이터 트래픽을 차단하지 않는지 확인하십시오. 또한 선택한 모든 VLAN이 동일한 팟(Pod)에 있는지 확인하십시오. 혼합 팟(pod) VLAN에서 ESXi 서버를 프로비저닝할 수 없습니다.
+{:important}
 
 ### 주문 요약
 {: #vc_addingviewingclusters-adding-order-summary}
@@ -196,7 +241,7 @@ vCenter Server 인스턴스에 클러스터를 추가할 때는 다음 설정을
 4. **클러스터 추가** 페이지에서 인스턴스 이름을 입력하십시오.
 5. 인스턴스가 호스팅되는 {{site.data.keyword.CloudDataCent_notm}}와 다른 IBM Cloud Data Center에서 클러스터를 호스팅하려면 **Bare Metal Server**에서 **다른 위치 선택** 선택란을 선택하고 인스턴스를 호스팅할 {{site.data.keyword.CloudDataCent_notm}}를 선택하십시오.
 6. 베어메탈 구성을 완료하십시오.
-   * **Skylake** 또는 **Broadwell**을 선택한 경우 **CPU 모델**, **RAM** 크기 및 **{{site.data.keyword.baremetal_short}} 수**를 지정하십시오.
+   * **Skylake**, **Cascade** 또는 **Broadwell**을 선택한 경우 **CPU 모델**, **RAM** 크기 및 **{{site.data.keyword.baremetal_short}} 수**를 지정하십시오.
    * **SAP 인증**을 선택한 경우 CPU 모델을 지정하십시오.
 7. 스토리지 구성을 완료하십시오.
   * **vSAN 스토리지**를 선택하는 경우 용량 및 캐시 디스크의 디스크 유형과 디스크 수 및 vSAN License 에디션을 지정하십시오. 더 많은 스토리지를 원하는 경우 **고성능 Intel Optane** 상자를 선택하십시오.
@@ -256,12 +301,12 @@ ESXi 서버 세부사항 보기:
 
 | 항목        | 설명       |  
 |:------------- |:------------- |
-|이름 | ESXi 서버의 이름은 다음 형식으로 되어 있습니다.<br> `<host_prefix><n>.<subdomain_label>.<root_domain>` <br> 여기서,<br> `host_prefix`는 호스트 이름 접두부이고<br> `n`은 서버의 순서이며<br> `subdomain_label`은 하위 도메인 레이블이고<br> `root_domain`은 루트 도메인 이름입니다. |
+|이름 |ESXi 서버의 이름은 `<data_center>-<host_prefix><n>.<subdomain_label>.<root_domain>` 형식으로 되어 있습니다. 여기서 `n`은 ESXi 서버의 순서입니다. |
 |버전 |ESXi 서버의 버전입니다. |
 |인증 정보 |ESXi 서버에 액세스하는 데 사용되는 사용자 이름 및 비밀번호입니다. |
 |사설 IP |ESXi 서버의 사설 IP 주소입니다. |
 |상태 |ESXi 서버의 상태이며, 다음 값 중 하나일 수 있습니다.<br> **추가됨** ESXi 서버가 추가되었으며 사용할 준비가 되었습니다.<br> **추가 중** ESXi 서버가 추가되고 있습니다.<br> **삭제 중** ESXi 서버가 삭제되고 있습니다. |
-{: caption="표 4. ESXi 서버 세부사항" caption-side="top"}
+{: caption="표 5. ESXi 서버 세부사항" caption-side="top"}
 
 추가 세부사항을 보려면 ESXi 서버를 확장하십시오.
 
@@ -272,7 +317,7 @@ ESXi 서버 세부사항 보기:
 |사용자 정의된 vSAN 디스크 |클러스터에 있는 vSAN 디스크의 수로, 디스크 유형 및 용량이 포함됩니다. |
 | vSAN 캐시 디스크 | vSAN 캐시 디스크의 유형 및 수입니다. |
 |네트워킹 |네트워크 인터페이스 카드(NIC) 인에이블먼트 설정은 공용 및 사설 네트워크 또는 사설 네트워크 전용 중 하나입니다. |
-{: caption="표 5. 추가 ESXi 서버 세부사항" caption-side="top"}
+{: caption="표 6. 추가 ESXi 서버 세부사항" caption-side="top"}
 
 스토리지 세부사항 보기:
 
@@ -282,17 +327,17 @@ ESXi 서버 세부사항 보기:
 |크기 |스토리지의 용량입니다. |
 |IOPS/GB |스토리지의 성능 레벨입니다. |
 |NFS 프로토콜 |스토리지의 NFS 버전입니다. |
-{: caption="표 6. 스토리지 세부사항" caption-side="top"}
+{: caption="표 7. 스토리지 세부사항" caption-side="top"}
 
 네트워크 인터페이스 세부사항 보기:
 
 | 항목        | 설명       |  
 |:------------- |:------------- |
 | VLAN 번호 | 고유한 VLAN 번호입니다.  |
-|설명 | VLAN의 설명입니다.  |
+| 설명 | VLAN의 설명입니다.  |
 | 위치 | 데이터 센터 위치입니다. |
 | 기본 라우트 | VLAN의 기본 라우트입니다. |
-{: caption="표 7. 네트워크 인터페이스 - VLAN 세부사항" caption-side="top"}
+{: caption="표 8. 네트워크 인터페이스 - VLAN 세부사항" caption-side="top"}
 
 VLAN 세부사항에 액세스하려면 **리소스 보기**를 클릭하십시오.
 
@@ -303,7 +348,7 @@ VLAN 세부사항에 액세스하려면 **리소스 보기**를 클릭하십시�
 |이름 | 서브넷 이름입니다. 서브넷 세부사항에 액세스하려면 이름을 클릭하십시오. |
 |유형 | 서브넷의 유형: 기본 또는 포터블. |
 | 설명 | 서브넷의 설명입니다. |
-{: caption="표 8. 네트워크 인터페이스 - 서브넷 세부사항" caption-side="top"}
+{: caption="표 9. 네트워크 인터페이스 - 서브넷 세부사항" caption-side="top"}
 
 IP 세부사항 보기:
 
@@ -311,8 +356,8 @@ IP 세부사항 보기:
 |:------------- |:------------- |
 | IP | IP 주소입니다. |
 |상태 | IP 주소의 상태입니다. |
-|설명 | IP 주소의 설명입니다.  |
-{: caption="표 9. 네트워크 인터페이스 - IP 세부사항" caption-side="top"}
+| 설명 | IP 주소의 설명입니다.  |
+{: caption="표 10. 네트워크 인터페이스 - IP 세부사항" caption-side="top"}
 
 ## vCenter Server 인스턴스에서 클러스터 삭제
 {: #vc_addingviewingclusters-deleting}
@@ -329,6 +374,9 @@ IP 세부사항 보기:
 * 클러스터를 삭제하기 전에 클러스터의 모든 노드가 켜져 있으며 가동 상태인지 확인하십시오.
 * 클러스터를 삭제하면 클러스터의 모든 VM도 삭제되며 이는 복구할 수 없습니다. VM을 보존하려는 경우에는 이들을 다른 클러스터로 마이그레이션하십시오.
 * 기본 클러스터는 삭제할 수 없습니다.
+
+VMware HCX on {{site.data.keyword.cloud_notm}} 서비스를 주문할 때 12개월 약정이 필요합니다. 12개월 약정 기간이 끝나기 전에 클러스터를 삭제하는 경우 사용자 계정에 HCX 컴포넌트에 대한 비용이 계속 청구됩니다. 12개월 약정 만기 날짜는 HCX on {{site.data.keyword.cloud_notm}} 세부사항 페이지에서 볼 수 있습니다. 서비스 세부사항 확인에 대한 자세한 정보는 [vCenter Server 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure)를 참조하십시오.
+{:important}
 
 ### vCenter Server 인스턴스에서 클러스터를 삭제하는 프로시저
 {: #vc_addingviewingclusters-deleting-procedure}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-09"
 
 keywords: about vmware solutions, product overview, benefits
 
@@ -44,7 +44,7 @@ subcollection: vmware-solutions
 
 訂購 vCenter Server 實例時，請先選擇其名稱及 VMware vSphere 版本。所有 VMware 實例都已與 Microsoft Active Directory 網域控制站一起部署，而且用於單一登入，您必須將實例指定為主要或次要站台。主要實例是您單一登入網域中的第一個或唯一的實例。您可以部署更多的次要實例，並將它們關聯至現有主要實例的相同單一登入網域。接下來，您選擇要攜帶您自己的 VMware 授權，還是要從 {{site.data.keyword.cloud_notm}} 租借的授權版本。最後，您選擇實例的 {{site.data.keyword.cloud_notm}} 地區和資料中心，以及叢集中主機的 CPU 和記憶體特徵。
 
-在訂單頁面的下一個部分中，輸入實例的儲存空間及網路特徵。您可以為叢集選擇 SAN 或 NFS 儲存空間，以及可以選擇 vSAN 快閃記憶體磁碟及 vSAN 授權版本的大小和數目，或是 NFS 儲存空間磁區的大小與計數和效能。對於網路，您可以選擇主機的主機名稱字首，以及叢集的子網域和網域。您可以選擇將 Active Directory 控制器部署為單一 {{site.data.keyword.cloud_notm}} 虛擬伺服器實例 (VSI)，或在叢集內部署您需要提供授權及啟動的兩部虛擬機器。
+在訂單頁面的下一個部分中，輸入實例的儲存空間及網路特徵。您可以為叢集選擇 SAN 或 NFS 儲存空間，以及可以選擇 vSAN 快閃記憶體磁碟及 vSAN 授權版本的大小和數目，或是 NFS 儲存空間磁區的大小與計數和效能。對於網路，您可以選擇主機的主機名稱字首，以及叢集的子網域和網域。您可以選擇將 Active Directory 控制器部署為單一 {{site.data.keyword.cloud_notm}} 虛擬伺服器實例 (VSI)。或者，您可以將這些控制器部署為叢集內的兩部虛擬機器 (VM)（針對這些 VM，您需要提供授權及啟動）。
 
 在 vCenter Server 訂單頁面底端，您可以選取可針對 VMware 實例所部署的各種附加服務，並向您的 {{site.data.keyword.cloud_notm}} 帳戶收費。部分服務需要您指定為訂單表單一部分的額外配置。
 
@@ -126,7 +126,7 @@ VMware 實例可以佈建於 35 個不同的 {{site.data.keyword.CloudDataCents_
 ### 其他元件
 {: #under_the_hood-add-comp}
 
-根據您的選擇，會部署一個 Microsoft Windows VSI 或同時部署兩個 Microsoft Windows 虛擬機器，或者將其部署至叢集，以作為管理元件的 Active Directory 伺服器。您可以選擇性地新增自己的 Active Directory 伺服器，作為管理存取權的其他身分來源。
+根據您的選擇，會部署一個 Microsoft Windows VSI 或同時部署兩個 Microsoft Windows VM，或者將其部署至叢集，以作為管理元件的 Active Directory 伺服器。您可以選擇性地新增自己的 Active Directory 伺服器，作為管理存取權的其他身分來源。
 
 不論您選擇如何為您自己的工作負載提供企業永續，{{site.data.keyword.cloud_notm}} 都強烈建議您備份實例的管理元件。{{site.data.keyword.vmwaresolutions_short}} 主控台可讓您將整合式 IBM Spectrum Protect Plus 備份伺服器或 Veeam Backup & Replication 備份伺服器與實例一起部署。您可以使用這些備份服務作為實例的[完整備份解決方案](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_backingup)一部分。
 

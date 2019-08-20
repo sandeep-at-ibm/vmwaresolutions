@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-05"
 
 keywords: VMware HCX deployment, HCX configuration, order HCX
 
@@ -21,24 +21,29 @@ subcollection: vmware-solutions
 # 訂購 VMware HCX on IBM Cloud
 {: #hcx_ordering}
 
-您可以在訂購包含服務的新 VMware vCenter Server with Hybridity Bundle 實例時，同時訂購 VMware HCX on {{site.data.keyword.cloud}} 服務，或將服務新增至現有實例。
+您可以在訂購包含 VMware HCX on {{site.data.keyword.cloud}} 服務的新 VMware vCenter Server 時，同時訂購該服務，也可以將該服務新增至現有實例。
 
-## 為新實例訂購 VMware HCX on IBM Cloud
-{: #hcx_ordering-new}
+當您訂購 VMware HCX on {{site.data.keyword.cloud_notm}} 服務時，需要 12 個月的承諾。如果您在 12 個月的承諾期間結束之前便刪除主機或叢集，則會持續向您的帳戶收取 HCX 元件的費用。
+{:important}
 
-若要訂購包含 VMware HCX on {{site.data.keyword.cloud_notm}} 的新 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 實例，當您從 {{site.data.keyword.vmwaresolutions_short}} 主控台訂購實例時，請選取**服務**區段中的 **VMware HCX on IBM Cloud**。
+若要訂購包含 VMware HCX on {{site.data.keyword.cloud_notm}} 的新 VMware vCenter Server 實例，當您從 {{site.data.keyword.vmwaresolutions_short}} 主控台訂購實例時，請選取**服務**區段中的 **HCX on IBM Cloud 3.5**。
 
 
 ## 為現有實例訂購 VMware HCX on IBM Cloud
 {: #hcx_ordering-existing}
 
-若要將 VMware HCX on {{site.data.keyword.cloud_notm}} 服務新增至現有 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 實例，請檢視您要為其新增服務的實例，按一下左導覽窗格上的**服務**，然後按一下**新增**。
+若要將 VMware HCX on {{site.data.keyword.cloud_notm}} 服務新增至現有 VMware vCenter Server 實例，請檢視您要對其新增服務的實例，接著按一下左導覽窗格中的**服務**，然後按一下**新增**。
 
 ## VMware HCX on IBM Cloud 配置
 {: #hcx_ordering-config}
 
 若要在 {{site.data.keyword.cloud_notm}} 上安裝 HCX，請完成下列設定：
-1. 選取下列其中一個選項，以指定 **HCX 交互連接類型**：
+1. 選取勾選框，確認您同意與訂購 HCX on {{site.data.keyword.cloud_notm}} 服務相關聯的條款。
+
+   在 12 個月的承諾到期日之後，就無法再顯示這些勾選框。
+   {:note}
+
+2. 選取下列其中一個選項，以指定 **HCX 網路連線**：
   * **公用網路：**HCX 會透過公用網路建立站台之間的已加密連線。授權登錄及計量是透過公用網路來執行。
   * **專用交互連接：**HCX 會透過專用網路建立站台之間的已加密連線。授權登錄及計量是透過公用網路來執行。
   * **專用網路：**HCX 會透過專用網路建立站台之間的已加密連線。授權登錄及計量是透過經由 HTTP Proxy 的專用網路來執行。
@@ -59,7 +64,7 @@ subcollection: vmware-solutions
 ## HCX on IBM Cloud 的部署處理程序
 {: #hcx_ordering-deploy}
 
-自動部署 HCX on {{site.data.keyword.cloud_notm}}。不論您要訂購包含此服務的 vCenter Server with Hybridity Bundle 實例，還是稍後將服務部署至實例，下列步驟都會透過 {{site.data.keyword.vmwaresolutions_short}} 自動化處理程序完成：
+自動部署 HCX on {{site.data.keyword.cloud_notm}}。不論您要訂購包含此服務的 vCenter Server 實例，還是稍後將服務部署至實例，下列步驟都會透過 {{site.data.keyword.vmwaresolutions_short}} 自動化處理程序完成：
 1. 從 {{site.data.keyword.cloud_notm}} 基礎架構訂購三個 HCX 的子網路：
    * 一個專用可攜式子網路，以進行 HCX 管理。
    * 一個專用可攜式子網路，以進行 HCX 交互連接。針對 **HCX 交互連接類型**選取**專用網路**選項時，會使用此子網路。
@@ -67,7 +72,7 @@ subcollection: vmware-solutions
 
    為 HCX 訂購的子網路中的 IP 位址，是要由 VMware on {{site.data.keyword.cloud_notm}} 自動化進行管理。這些 IP 位址無法指派給您建立的 VMware 資源（例如 VM 及 NSX Edge）。如果您需要 VMware 構件的其他 IP 位址，則必須從 {{site.data.keyword.cloud_notm}} 訂購自己的子網路。
    {:important}
-2. 如果已針對 **HCX 交互連接類型**選取**專用網路**，即會在專用「分散式虛擬交換器 (DVS)」上建立一個名為 **SDDC-DPortGroup-HCX-Private** 的埠群組。
+2. 如果已針對 **HCX 網路連線**選取**專用網路**，即會在專用「分散式虛擬交換器 (DVS)」上建立一個名為 **SDDC-DPortGroup-HCX-Private** 的埠群組。
 3. 從 VMware 訂購 HCX 啟動金鑰。
 4. 為 HCX 建立三個資源儲存區及 VM 資料夾，而 HCX 交互連接、本端 HCX 元件及遠端 HCX 元件需要這些資源儲存區及 VM 資料夾。
 5. 針對 HCX 管理資料流量，部署及配置一組 VMware NSX Edge Services Gateway (ESG)：
@@ -92,7 +97,7 @@ subcollection: vmware-solutions
 
 * [HCX on {{site.data.keyword.cloud_notm}} 概觀](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_considerations#hcx_considerations)
 * [管理 HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghcx)
-* [訂購、檢視及移除 vCenter Server with Hybridity Bundle 實例的服務](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
+* [訂購、檢視及移除 vCenter Server 實例的服務](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
 * [HCX 術語名詞解釋](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
 * [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [VMware Hybrid Cloud Extension 概觀](https://cloud.vmware.com/vmware-hcx){:external}

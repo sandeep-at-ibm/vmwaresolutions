@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-22"
 
 keywords: VMware HCX standalone, HCX on-premises, tech specs HCX
 
@@ -29,7 +29,7 @@ vCenter Server with HCX on {{site.data.keyword.cloud_notm}} インスタンス�
 ## オンプレミス HCX on IBM Cloud インスタンスをインストールする前の考慮事項
 {: #standalone_considerations-install}
 
-HCX on {{site.data.keyword.cloud_notm}} コンポーネントを {{site.data.keyword.cloud_notm}} とオンプレミス vSphere 環境の両方にインストールする必要があります。 HCX on {{site.data.keyword.cloud_notm}} サービスを {{site.data.keyword.cloud_notm}} 上の vCenter Server with Hybridity Bundle インスタンスにインストールしてから、オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスをインストールすることをお勧めします。 詳しくは、[HCX on {{site.data.keyword.cloud_notm}} をインストールする際の考慮事項](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-hcx_considerations#hcx_considerations-install)を参照してください。
+HCX on {{site.data.keyword.cloud_notm}} コンポーネントを {{site.data.keyword.cloud_notm}} とオンプレミス vSphere 環境の両方にインストールする必要があります。 HCX on {{site.data.keyword.cloud_notm}} サービスを {{site.data.keyword.cloud_notm}} 上の vCenter Server インスタンスにインストールしてから、オンプレミス HCX on {{site.data.keyword.cloud_notm}} インスタンスをインストールすることをお勧めします。 詳しくは、[HCX on {{site.data.keyword.cloud_notm}} をインストールする際の考慮事項](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-hcx_considerations#hcx_considerations-install)を参照してください。
 
 ### IP アドレス要件
 {: #standalone_considerations-ip}

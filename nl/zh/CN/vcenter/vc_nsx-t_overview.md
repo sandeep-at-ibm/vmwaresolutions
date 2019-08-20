@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-07-26"
 
 keywords: vCenter Server NSX-T, NSX-T, tech specs vCenter Server NSX-T
 
@@ -74,6 +74,7 @@ vCenter Server with NSX-T 实例中包含以下组件。
 
 可以使用下列其中一个配置来订购三个或更多 {{site.data.keyword.baremetal_short}}：
 * **Skylake**：具有所选 CPU 型号和 RAM 大小的 2 个 CPU Intel Skylake 代服务器（Intel Xeon 4100/5100/6100 系列）。  
+*  **Cascade**：具有所选 CPU 型号和 RAM 大小的 2 个 CPU Intel Cascade 代服务器（Intel Xeon 4200/5200/6200 系列）。
 * **Broadwell**：具有所选 CPU 型号和 RAM 大小的 4 个 CPU 的 Intel Broadwell 代服务器（Intel Xeon E7-4800 系列）。
 
 如果计划使用 vSAN 存储器，那么配置至少需要 4 个 {{site.data.keyword.baremetal_short}}。
@@ -137,7 +138,7 @@ NFS 选项为工作负载提供定制的共享文件级别存储器，具有各�
 ### 许可证（IBM 提供或 BYOL）和费用
 {: #vc_nsx-t_overview-license-and-fee}
 
-* VMware vSphere Enterprise Plus 6.7u1
+* VMware vSphere Enterprise Plus 6.7u2
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.4（仅限 IBM 提供）
 * （对于 vSAN 集群）VMware vSAN Advanced 或 Enterprise 6.6
@@ -156,13 +157,12 @@ NFS 选项为工作负载提供定制的共享文件级别存储器，具有各�
 ### 扩展节点的许可证和费用
 {: #vc_nsx-t_overview-expansion-node-license-and-fee}
 
-* 一个 VMware vSphere Enterprise Plus 6.7u1
+* 一个 VMware vSphere Enterprise Plus 6.7u2
 * 一个 VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.4
 * 一个支持和服务费用
 * （对于 vSAN 集群）VMware vSAN Advanced 或 Enterprise 6.6
 
-您只能在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理在 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能在 {{site.data.keyword.slportal}} 中或在该控制台外部通过其他任何方法对这些组件进行管理。如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步。
-在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部管理任何 {{site.data.keyword.vmwaresolutions_short}} 组件（在订购实例时已安装到 {{site.data.keyword.cloud_notm}} 帐户中）可能会使环境变得不稳定。这些管理活动包括：
+您只能在 {{site.data.keyword.vmwaresolutions_short}} 控制台中管理在 {{site.data.keyword.cloud_notm}} 帐户中创建的 {{site.data.keyword.vmwaresolutions_short}} 组件，而不能在 {{site.data.keyword.slportal}} 中或在该控制台外部通过其他任何方法对这些组件进行管理。如果在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部更改这些组件，那么这些更改与控制台不同步。在 {{site.data.keyword.vmwaresolutions_short}} 控制台外部管理任何 {{site.data.keyword.vmwaresolutions_short}} 组件（在订购实例时已安装到 {{site.data.keyword.cloud_notm}} 帐户中）可能会使环境变得不稳定。这些管理活动包括：
 *  添加、修改、返回或除去组件
 *  通过添加或除去 ESXi 服务器来扩展或收缩实例容量
 *  关闭组件电源

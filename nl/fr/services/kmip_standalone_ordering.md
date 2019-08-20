@@ -29,7 +29,7 @@ Assurez-vous que :
 {: #kmip_standalone_ordering-procedure}
 
 1. Dans la console {{site.data.keyword.vmwaresolutions_short}}, cliquez sur **Initiation** dans le panneau de navigation de gauche.
-2. Dans la section **Services VMware**, cliquez sur **KMIP for VMware on IBM Cloud**. 
+2. Dans la section **Services VMware**, cliquez sur **KMIP for VMware on IBM Cloud**.
 3. Sur la page **KMIP for VMware on IBM Cloud**, configurez les paramètres de service comme il convient.
 4. Cliquez sur **Mettre à disposition**.
 

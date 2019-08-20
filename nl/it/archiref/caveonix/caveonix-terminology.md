@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-06"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -68,8 +68,3 @@ Questo glossario fornisce alcune descrizioni per i termini che sono associati al
 Lavoro: "Log Caveo" Il punteggio dell'anomalia è > 90 allora contrassegna l'asset per la quarantena e invia una notifica al canale slack.`
 Lavoro: "Rete Caveo" Il punteggio dell'anomalia è > 95 quindi metti in quarantena l'asset e invia una notifica email e invia anche una notifica IU.
 ```
-
-## Link correlati
-{: #caveonix-terminology-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

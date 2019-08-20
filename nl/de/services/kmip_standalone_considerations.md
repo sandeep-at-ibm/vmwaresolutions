@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-18"
 
 keywords: KMIP for VMware, KMIP stand-alone, tech specs KMIP
 
@@ -31,7 +31,7 @@ Der Service "KMIP for VMware on {{site.data.keyword.cloud_notm}}" ist als eigens
 Die folgenden Spezifikationen werden mit dem Service "KMIP for VMware on {{site.data.keyword.cloud_notm}}" einbezogen:
 
 * Ein VMware-kompatibles Key Management Interoperability Protocol (KMIP)
-* Zwei verwaltete Services: [IBM Key Protect for {{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/catalog/services/key-protect){:external} und [{{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services){:external}
+* Zwei verwaltete Services: [Key Protect](https://cloud.ibm.com/catalog/services/key-protect){:external} und [Hyper Protect Crypto Services](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services){:external}
 * Verfügbar in mehreren geografischen Regionen weltweit
 * Zwei in jeder Region bereitgestellte KMIP-Netzserviceendpunkte für hohe Verfügbarkeit
 
@@ -40,7 +40,7 @@ Die folgenden Spezifikationen werden mit dem Service "KMIP for VMware on {{site.
 
 Lesen Sie die folgenden Hinweise, bevor Sie eine KMIP for VMware on {{site.data.keyword.cloud_notm}}-Instanz installieren:
 
-* KMIP for VMware on {{site.data.keyword.cloud_notm}} verwendet den IBM Key Protect for {{site.data.keyword.cloud_notm}}-Service oder den {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services-Service (HPCS), um Verschlüsselungsschlüssel zu erstellen, zu verschlüsseln und zu entschlüsseln. Daher müssen Sie vor der Installation von KMIP for VMware on {{site.data.keyword.cloud_notm}} Folgendes sicherstellen:
+* KMIP for VMware on {{site.data.keyword.cloud_notm}} verwendet den IBM Key Protect-Service oder die Hyper Protect Crypto Services (HPCS) zum Erstellen, Verschlüsseln und Entschlüsseln von Verschlüsselungsschlüsseln. Daher müssen Sie vor der Installation von KMIP for VMware on {{site.data.keyword.cloud_notm}} Folgendes sicherstellen:
    * Sie haben eine verwendbare Key Protect- oder HPCS-Serviceinstanz in der {{site.data.keyword.cloud_notm}}-Region bestellt, in der Ihre KMIP for VMware on {{site.data.keyword.cloud_notm}}-Instanz gehostet werden soll:
       * Weitere Informationen zum Erstellen einer Instanz von Key Protect finden Sie im Abschnitt zum [Bereitstellen des Service](/docs/services/key-protect?topic=key-protect-provision).
       * Weitere Informationen zum Erstellen einer Instanz von HPCS finden Sie im Abschnitt zum [Bereitstellen des Service](/docs/services/hs-crypto?topic=hs-crypto-provision#provision). Zusätzlich zur Bereitstellung des HPCS-Service müssen Sie [Ihre Crypto-Instanz auch initialisieren](/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-hsm), damit HPCS schlüsselbezogene Funktionen bereitstellen kann.
@@ -56,7 +56,7 @@ Lesen Sie die folgenden Hinweise, bevor Sie eine KMIP for VMware on {{site.data.
      **Wichtig:** Der Service kann nicht ohne Stammschlüssel für Kunden (Customer Root Key, CRK) bestellt werden. Es wird dringend empfohlen, das Verfahren für die Erstellung eines Stammschlüssels für Kunden unter Verwendung vorhandener Schlüsselinformationen zu verwenden und die erstellten Schlüsselinformationen zu sichern. Dadurch stellen Sie sicher, dass Sie Ihre Schlüssel im Falle eines Ausfalls des Rechenzentrums, in dem Key Protect oder HPCS Ihre Stammschlüssel für Kunden speichert, wiederherstellen können.
 * Stellen Sie sicher, dass Ihr {{site.data.keyword.cloud_notm}}-Infrastrukturkonto für Virtual Routing and Forwarding (VRF) und für die Verbindung zu Serviceendpunkten aktiviert ist. Weitere Informationen finden Sie in den folgenden Abschnitten:
    * [Virtual Routing and Forwarding (VRF) on IBM Cloud - Übersicht](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-   * [Konto über die IBM Cloud-CLI für die Verwendung von Serviceendpunkten aktivieren](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
+   * [Serviceendpunkte aktivieren](/docs/account?topic=account-vrf-service-endpoint#service-endpoint)
 * Da nur die private Verbindung unterstützt wird, müssen Sie keine Firewall- oder SNAT-Regeln in vCenter Server für die Netzkonnektivität von vCenter Server zum Endpunkt der KMIP for VMware on {{site.data.keyword.cloud_notm}}-Instanz konfigurieren.
 
 Weitere Informationen finden Sie unter [KMIP for VMware on IBM Cloud - Lösungsarchitektur](/docs/services/vmwaresolutions/archiref/kmip?topic=vmware-solutions-kmip-overview).

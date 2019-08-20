@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-21"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -71,8 +71,3 @@ Tabelle 2. Für die Anwendungskonfiguration verwendete Standardinformationen
 |Task |Es werden vier Tasks konfiguriert: Asset-Scan, Scan von NSX-Datenflüssen, Scan der VMware-Infrastruktur und Scan auf VMware-Sicherheitslücken. Der Name des Scans wird auf DC1AssetScan, NSXFlows, VMWInfraScan oder VMWVulnScan gesetzt |
 |Task |Es werden vier Tasks konfiguriert: Asset-Scan, Scan von NSX-Datenflüssen, Scan der VMware-Infrastruktur und Scan auf VMware-Sicherheitslücken. Der Typ wird auf vCenter, NSX, VMWareInfrastructureScan oder VMWareVulnerabilityScan gesetzt |
 |Task |Der Zeitplan wird für DC1AssetScan auf 'stündlich' und für die anderen auf 'täglich' gesetzt |
-
-## Zugehörige Links
-{: #caveonix-step4-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud}} mit Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,14 +4,14 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-31"
+lastupdated: "2019-08-05"
 
 ---
 
 # vRealize Network Insight
 {: #opsmgmt-vrni}
 
-vReize Network Insight (vRNI) 环境由两个虚拟机 (VM)、一个平台 (UI) 和一个控制器节点组成。
+vRealize Network Insight (vRNI) 环境由两个虚拟机 (VM)、一个平台 (UI) 和一个控制器节点组成。
 
 ![Network Insights 图](../../images/opsmgmt-vrninw.svg "Network Insights 图")
 
@@ -78,5 +78,4 @@ vRNI 用户认证直接通过 Active Directory 服务器执行。
 ## 相关链接
 {: #opsmgmt-vrni-links}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
 * [vRealize Network Insights](https://docs.vmware.com/en/VMware-vRealize-Network-Insight/index.html){:new_window}

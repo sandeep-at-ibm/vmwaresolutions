@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -95,8 +95,3 @@ Todd 和 Jane 根据经验得知，理想的解决方案现代化之旅应从路
 6. 将 DevOps 现代化。在此旅程中，Jane 改进了她交付 Stock Trader 的方式。
 
 7. 将管理现代化。Todd 和 Jane 致力于改进 Stock Trader 及其运行所在平台的管理方式，甚至可跨多个集群和云环境进行管理。
-
-## 相关链接
-{: #vcscontent-modjourney-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

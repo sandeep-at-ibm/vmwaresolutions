@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-06"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -47,13 +47,11 @@ Caveonix RiskForesight utilise un concept de zones :
 - Zone Fournisseurs de cloud - Cette zone fournit l'infrastructure sur laquelle les applications sont hébergées :
     - Privé – Plateformes VMware on {{site.data.keyword.cloud}} et de l'infrastructure VMware sur site. Ces plateformes sont intégrées dans RiskForesight via : vCenter, NSX Manager, VMware Cloud Director (vCD) ou vRealize Automation (vRA).
     - Public – Actuellement, le seul fournisseur de cloud public pris en charge est AWS. {{site.data.keyword.cloud_notm}} sera bientôt disponible.
-    - Conteneurs - Actuellement, seul le service AWS Elastic Kubernetes Service (EKS) est pris en charge. {{site.data.keyword.cloud_notm}} Private et {{site.data.keyword.cloud_notm}} Kubernetes Services seront bientôt disponibles. 
+    - Conteneurs - Actuellement, seul le service AWS Elastic Kubernetes Service (EKS) est pris en charge. {{site.data.keyword.cloud_notm}} Private et {{site.data.keyword.cloud_notm}} Kubernetes Services seront bientôt disponibles.
 -	Zone Locataire ou environnement client – Ces zones sont utilisées pour séparer les locataires, les clients et les unités commerciales. Des charges de travail existent dans ces zones et par conséquent un collecteur distant est requis. Pour un déploiement minimum, vous avez besoin d'un collecteur distant mais pour un déploiement général vous avez besoin d'un collecteur distant par locataire/client/unité commerciale.
 
 
 ## Liens connexes
 {: #caveonix-arch-related}
 
-
-*   [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
-*   [Conception détaillée de Caveonix](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-detailed)
+* [Conception détaillée de Caveonix](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-detailed)

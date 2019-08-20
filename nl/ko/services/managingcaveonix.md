@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-23"
 
 keywords: Caveonix console, Caveonix RiskForesight license, login Caveonix console
 
@@ -26,7 +26,7 @@ subcollection: vmware-solutions
 
 {{site.data.keyword.cloud}}의 Caveonix RiskForesight 서비스를 관리하려면 다음 단계를 완료하여 Caveonix RiskForesight 콘솔에 액세스해야 합니다.
 
-1. IBM Cloud 인프라 VPN 또는 점프 서버를 사용하여 Caveonix RiskForesight 가상 머신(VM)의 IP 주소에 대한 액세스를 허용하십시오. {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 {{site.data.keyword.cloud_notm}}의 Caveonix RiskForesight에 대한 서비스 세부사항 페이지에서 IP 주소를 찾을 수 있습니다. 구체적으로는 다음과 같습니다.
+1. {{site.data.keyword.cloud_notm}} 인프라 VPN 또는 점프 서버를 사용하여 Caveonix RiskForesight 가상 머신(VM)의 IP 주소에 대한 액세스를 허용하십시오. {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 {{site.data.keyword.cloud_notm}}의 Caveonix RiskForesight에 대한 서비스 세부사항 페이지에서 IP 주소를 찾을 수 있습니다. 구체적으로는 다음과 같습니다.
    1. {{site.data.keyword.cloud_notm}} 인프라 고객 포털에서 VPN 비밀번호를 작성하십시오.
    2. {{site.data.keyword.cloud_notm}} 인프라 VPN 인증 정보를 사용하여 데이터 센터 VPN 포털에 로그인하십시오.
    3. 로컬 컴퓨터에서 IP 주소 및 호스트 이름 맵핑을 `hosts` 파일에 추가하십시오. 다음 형식을 사용하십시오.

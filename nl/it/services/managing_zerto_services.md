@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-22"
 
 keywords: Zerto, request Zerto Orchestrated, Zerto managed service
 
@@ -50,7 +50,7 @@ Per ulteriori informazioni, vedi [IBM Resiliency Disaster Recovery as a Service]
 3. Nella pagina **Zerto on IBM Cloud**, controlla la descrizione e le specifiche tecniche per Zerto on {{site.data.keyword.cloud_notm}} come servizio gestito e fai clic su **Crea**.
 4. Specifica le impostazioni di configurazione in base ai tuoi requisiti o accetta i valori predefiniti.
 5. Fai clic su **vCenter Server** per aggiungere il servizio a una delle tue istanze.
-6. Per aggiungere il servizio mentre ordini una nuova istanza, fai clic su **Aggiungi alla nuova istanza** e continua quindi con l'ordine di una nuova istanza [vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance) o [vCenter Server with Hybridity](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance).
+6. Per aggiungere il servizio mentre ordini una nuova istanza, fai clic su **Aggiungi alla nuova istanza** e continua quindi con l'ordine di una nuova istanza [vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance).
 7. Per aggiungere il servizio a un'istanza esistente, fai clic su **Aggiungi all'istanza esistente**, seleziona l'istanza desiderata dall'elenco, quindi conferma di voler procedere con l'ordine facendo clic su **Fornitura**.
 
 ## Link correlati

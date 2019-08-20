@@ -262,12 +262,12 @@
          id="text73">IBM Cloud Private</text>
       <text
          x="46.5"
-         y="632"
+         y="630"
          id="text75">Cloud Automation Manager</text>
       <text
          x="243"
          y="630"
-         id="text77">Containers</text>
+         id="text77">Container</text>
     </g>
     <image
        x="199"
@@ -564,7 +564,7 @@
             <xhtml:div
                display="inline-block"
                text-align="inherit"
-               text-decoration="inherit">Worker Pool</xhtml:div>
+               text-decoration="inherit">작업자 풀</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text
@@ -674,7 +674,7 @@
        id="g205">
       <text
          x="554"
-         y="629"
+         y="630"
          id="text207">Direct Link</text>
     </g>
     <g

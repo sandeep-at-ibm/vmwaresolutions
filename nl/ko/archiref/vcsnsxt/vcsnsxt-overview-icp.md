@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -44,8 +44,3 @@ Calico를 사용하면 {{site.data.keyword.icpfull_notm}} 네트워크 관리가
 Calico는 OSI(Open System Interconnection) 모델의 계층 3 네트워크 계층을 사용합니다. Calico는 BGP(Border Gateway Protocol)를 사용하여 에이전트 노드 간의 통신을 용이하게 하는 라우팅 테이블을 빌드합니다.
 
 Calico 네트워킹에 대한 자세한 정보는 [{{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-iks)의 내용을 참조하십시오.
-
-## 관련 링크
-{: #vcsnsxt-overview-icp-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

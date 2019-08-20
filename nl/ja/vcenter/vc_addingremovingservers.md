@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-01"
 
 keywords: vCenter Server add host, add server vCenter Server, remove host vCenter Server
 
@@ -23,7 +23,8 @@ subcollection: vmware-solutions
 
 VMware vCenter Server インスタンスの容量は、ESXi サーバーまたはネットワーク・ファイル・システム (NFS) ストレージを追加/削除することで、ビジネス・ニーズに応じて拡張/縮小できます。
 
-* V3.1 リリース以降では、既存のクラスターに新しい ESXi サーバーを追加できます。その場合には、既存の構成か、クラスター内の既存のホストとは別の代替の構成を選択します。 新しいサーバーを注文する際には、既存の構成がすぐに選択できるように表示されます。 パフォーマンスや安定性で問題が生じるのを避けるため、CPU、RAM、ストレージに関しては、すべてのクラスターで同じか類似した構成を使用することをお勧めします。 この機能は、同じクラスター内でハードウェア更新を行うときに役立ちます。 1 つのクラスターに設定できるのは 1 つのタイプのストレージのみです。
+* V3.2 リリース以降では、vSphere Enterprise Plus 6.7u1 による既存のインスタンスに、vSphere Enterprise Plus 6.7u1 または vSphere Enterprise Plus 6.7u2 による新しいホストを追加するオプションがあります。
+* V3.1 リリース以降では、既存のクラスターに新しい ESXi サーバーを追加できます。そのためには、既存の構成か、クラスター内の既存のホストとは別の代替の構成を選択します。 新しいサーバーを注文する際には、既存の構成がすぐに選択できるように表示されます。 パフォーマンスや安定性で問題が生じるのを避けるため、CPU、RAM、ストレージに関しては、すべてのクラスターで同じか類似した構成を使用することをお勧めします。 この機能は、同じクラスター内でハードウェア更新を行うときに役立ちます。 1 つのクラスターに設定できるのは 1 つのタイプのストレージのみです。
 * V3.0 リリース以降、**「使用可能」**状態にある複数のクラスターで、NFS ストレージと ESXi サーバーを同時に追加/削除できるようになりました。 例えば、あるクラスターで ESXi サーバーを追加または削除したり、別のクラスターで NFS ストレージを追加または削除したりできます。
 * V2.9 リリース以降では、サーバーが保守モードの間に、新規 ESXi サーバーをクラスターに追加できます。 また、複数のクラスター間で同時に ESXi サーバーを追加または削除できます。
 
@@ -60,7 +61,8 @@ VMware vCenter Server インスタンスの容量は、ESXi サーバーまた�
 8. ベア・メタル構成を次の手順で実行します。
    * クラスター内の既存のホストから構成を選択します。
    * 新しい {{site.data.keyword.baremetal_short_sing}} 構成を選択します。
-      * **Skylake** または **Broadwell** の場合、**CPU モデル**、**RAM** の数、**{{site.data.keyword.baremetal_short}} の数**を指定します。     
+      * vSphere Enterprise Plus 6.7u1 によるインスタンスの場合、新しいホストに Vmware vSphere バージョンを指定します。
+      * **Skylake**、**Cascade**、または **Broadwell** の場合、**CPU モデル**、**RAM** の数、**{{site.data.keyword.baremetal_short}} の数**を指定します。     
       * **SAP 認定**の場合、**CPU モデル、RAM**、**{{site.data.keyword.baremetal_short}} の数**を指定します。
 9. ストレージ構成を次の手順で実行します。 容量ディスクおよびキャッシュ・ディスクのディスク・タイプ、ディスク数、vSAN ライセンス・エディションを指定します。 さらにストレージが必要な場合は、**「High-Performance Intel Optane」**ボックスにチェック・マークを付けます。
 10. 見積もりコストを確認し、**「追加」**をクリックします。
@@ -91,6 +93,9 @@ VMware vCenter Server インスタンスの容量は、ESXi サーバーまた�
 * F5 on {{site.data.keyword.cloud_notm}} サービスまたは FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} サービスがインストールされている ESXi サーバーの場合は、そのサーバーを削除する前に、F5 BIG-IP と FortiGate の VM を、VM をホスティングしている ESXi サーバーとは別のサーバーにマイグレーションする必要があります。
 * IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} サービスがインストールされている ESXi サーバーを削除する前に、アクティブな (失敗したか、進行中の) バックアップ操作またはリストア操作がないことを確認してください。こうしたアクティブな操作があると、ESXi サーバーが削除されない可能性があるためです。
 * ESXi サーバーを削除する際には、そのサーバーは保守モードになります。その後、そこで実行されているすべての VM は、vCenter Server からそのサーバーが削除される前にマイグレーションされます。 VM の再配置を最大限に制御するために、VMware vSphere Web Client を使用して、手動により、削除する ESXi サーバーを保守モードにし、サーバーで実行されている VM を移行することをお勧めします。 その後、{{site.data.keyword.vmwaresolutions_short}} コンソールを使用して ESXi サーバーを削除します。
+
+VMware HCX on {{site.data.keyword.cloud_notm}} サービスを注文する際は、12 カ月間のコミットメントが必要です。12 カ月のコミットメント期間が終了する前にクラスターを削除した場合、アカウントには HCX コンポーネントに対する課金が引き続き発生します。12 カ月のコミットメント満了日は、HCX on {{site.data.keyword.cloud_notm}} の詳細ページに示されています。サービス詳細の表示について詳しくは、[vCenter Server インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure)を参照してください。
+{:important}
 
 ### ESXi サーバーを削除する手順
 {: #vc_addingremovingservers-removing-procedure}

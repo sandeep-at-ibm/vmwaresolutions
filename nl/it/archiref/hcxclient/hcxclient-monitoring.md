@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -55,7 +55,7 @@ Puoi ora utilizzare l'IU web dell'ottimizzatore WAN per monitorare le velocità 
 ### Limitazione della larghezza di banda della migrazione
 {: #hcxclient-monitoring-mig-bandwidth}
 
-Prima di migrare le VM, esegui una valutazione del collegamento di rete utilizzato. Lavora con gli ingegneri di rete per la rete che contiene l'istanza di origine di vSphere oppure esamina l'utilizzo del traffico settimanale e mensile. Limita la larghezza di banda disponibile per le migrazioni se tale traffico transita su un collegamento di importanza critica per la tua attività di business, soprattutto se tale collegamento è inferiore a 1 Gbps. Utilizza il lato con la larghezza di banda più limitata, che è di solito il lato client.
+Prima di migrare le VM, esegui una valutazione del collegamento di rete utilizzato. Lavora con gli specialisti di rete per la rete che contiene l'istanza di origine di vSphere oppure esamina l'utilizzo del traffico settimanale e mensile. Limita la larghezza di banda disponibile per le migrazioni se tale traffico transita su un collegamento di importanza critica per la tua attività di business, soprattutto se tale collegamento è inferiore a 1 Gbps. Utilizza il lato con la larghezza di banda più limitata, che è di solito il lato client.
 
 Esegui tale operazione quando distribuisci i componenti della flotta nell'IU client HCX, ma la post-distribuzione richiede che tu vada nell'IU dell'ottimizzatore WAN.
 

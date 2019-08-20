@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-03"
+lastupdated: "2019-08-05"
 
 ---
 
@@ -168,8 +168,3 @@ vRLI 支持触发有关其运行状况的通知的警报，并在发生重要系
 |vRealize Operations Management Pack for Site Recovery Manager|8.1.1|
 |VMware vRealize Log Insight|4.7|
 |vRealize Log Insight Content Pack for NSX for vSphere|3.8|
-
-## 相关链接
-{: #opsmgmt-arch-components-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

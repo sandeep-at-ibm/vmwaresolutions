@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-03"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -14,7 +14,7 @@ subcollection: vmware-solutions
 # VMware NSX-T 設計
 {: #nsx-t-design}
 
-NSX-V (vSphere 上の NSX) とは異なり、VMware NSX-T は、異種のエンドポイントや技術スタックが混在したアプリケーション・フレームワークおよびアーキテクチャー向けに設計されています。 このような環境には、vSphere の他にも異種のハイパーバイザー、KVM、コンテナー、ベアメタルが存在することがあります。 NSX は、vSphere だけでなくそれ以外の各種プラットフォーム上のソフトウェア定義のネットワークとセキュリティー・インフラストラクチャーまで範囲が広がるように設計されています。 vSphere を必要とせずに NSX-T コンポーネントをデプロイすることもできますが、この設計は主に vCenter Server vSphere 自動デプロイメントの範囲の NSX-T とその統合に焦点を当てています。
+NSX-V (vSphere 上の NSX) とは異なり、VMware NSX-T は、異種のエンドポイントや技術スタックが混在したアプリケーション・フレームワークおよびアーキテクチャー向けに設計されています。 このような環境には、vSphere の他にも異種のハイパーバイザー、KVM、コンテナー、ベアメタルが存在することがあります。 VMware NSX は、vSphere だけでなくそれ以外の各種プラットフォーム上のソフトウェア定義のネットワークとセキュリティー・インフラストラクチャーまで範囲が広がるように設計されています。 vSphere を必要とせずに NSX-T コンポーネントをデプロイすることもできますが、この設計は主に vCenter Server vSphere 自動デプロイメントの範囲の NSX-T とその統合に焦点を当てています。
 
 ファイアウォール・ポリシー、ファイアウォール・ポリシーへのゲスト・イントロスぺクションの組み込み、高度なネット・フロー・トラッキングなど、NSX-T には高度な機能が数多く含まれています。 これらの機能を述べることは本資料の範囲を超えています。 NSX-T については、VMware の資料を参照してください。 この設計では、初期 vCenter Server クラスターのデプロイメント時に NSX-V の代わりに NSX-T 管理インフラストラクチャーがデプロイされます。
 
@@ -221,8 +221,3 @@ ICP - T0 間ゲートウェイのあるワークロード: 仮想エッジ・ク
 vCenter Server 上で ICP がどのように機能するかを完全に理解するには、vCenter Server 上の ICP に関するアーキテクチャー資料を参照してください。 お客様が指定した {{site.data.keyword.cloud_notm}} プライベート・ポータブル IP スペースおよびパブリック・ポータブル IP スペースが、お客様用に各 T0 に割り当てられます。
 
 この設計の時点で、vCenter Server インスタンスが廃止および削除されても、これらの IP 範囲を削除しないという選択肢があります。
-
-## 関連リンク
-{: #nsx-t-design-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

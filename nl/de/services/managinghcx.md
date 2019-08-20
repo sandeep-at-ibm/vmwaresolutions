@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-22"
 
 keywords: HCX updates, HCX management console, login HCX console
 
@@ -27,14 +27,14 @@ Um den Service "HCX on {{site.data.keyword.cloud}}" zu verwalten, müssen Sie au
 2. Klicken Sie zum Zugriff auf die HCX-Cloudkonsole auf der Seite mit den Details für den Service "HCX on {{site.data.keyword.cloud_notm}}" auf **HCX-Cloudkonsole anzeigen** und melden Sie sich dann mit den vCenter Server-Berechtigungsnachweisen an.
 3. Klicken Sie zum Zugriff auf die Administratorkonsole des HCX-Managers auf der Seite mit den Details für den Service "HCX on {{site.data.keyword.cloud_notm}}" auf **Verwaltungskonsole des HCX-Managers anzeigen** und melden Sie sich dann mit den Berechtigungsnachweisen für den HCX-Manager an, die auf derselben Servicedetailseite aufgeführt sind.
 
-Weitere Informationen finden Sie unter [Services für vCenter Server with Hybridity Bundle-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices).
+Weitere Informationen finden Sie unter [Services für vCenter Server-Instanzen bestellen, anzeigen und entfernen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).
 
 ## Updates auf HCX on IBM Cloud anwenden
 {: #managinghcx-updates}
 
 HCX on {{site.data.keyword.cloud_notm}} wird mit dem neuesten getesteten Build der VMware Hybrid Cloud Extension-Technologie bereitgestellt. VMware liefert regelmäßig Updates zu diesen Builds aus, die wichtige Fixes und neue Funktionen enthalten. Diese Builds werden automatisch mit Push-Operation an HCX on {{site.data.keyword.cloud}}-Installationen sowie an lokale HCX-Installationen übertragen.
 
-Zum Anwenden von Wartungsfixes, die mit Push-Operation an Ihre Umgebung übertragen wurden, müssen Sie die Administratorkonsole des HCX-Managers in Ihrem lokalen Rechenzentrum und Ihre vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle-Instanz verwenden.
+Zum Anwenden von Wartungsfixes, die mit Push-Operation an Ihre Umgebung übertragen wurden, müssen Sie die Administratorkonsole des HCX-Managers in Ihrem lokalen Rechenzentrum und Ihre vCenter Server on {{site.data.keyword.cloud_notm}}-Instanz verwenden.
 
 Wenn ein erwartetes Build-Update nicht angezeigt wird, wenn Probleme mit HCX auftreten oder wenn Sie möchten, dass der neueste HCX-Build sofort mit Push-Operation an Ihr System übertragen wird, öffnen Sie ein Support-Ticket. Befolgen Sie dazu die im Abschnitt [Kontaktaufnahme mit dem IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support) beschriebenen Schritte.
 

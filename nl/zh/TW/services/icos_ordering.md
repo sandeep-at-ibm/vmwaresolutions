@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-11"
 
 keywords: IBM Cloud Object Storage, ICOS configuration, order Cloud Object Storage
 
@@ -60,4 +60,4 @@ subcollection: vmware-solutions
 * [管理 Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
 * [Managed Services for Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
 * [與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
-* [常見問題](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
+* [Veeam on {{site.data.keyword.cloud_notm}} - 展示](https://www.ibm.com/demos/collection/Veeam-on-IBM-Cloud/){:external}

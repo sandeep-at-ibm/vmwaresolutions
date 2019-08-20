@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-01"
+lastupdated: "2019-07-22"
 
 keywords: single-node trial, data protection DR, tech specs data protection DR
 
@@ -18,16 +18,16 @@ subcollection: vmware-solutions
 {:note: .note}
 {:important: .important}
 
-# Data Protection and Disaster Recovery 單一節點試用版概觀
+# Single-node Trial for Data Protection and Disaster Recovery 概觀
 {: #dr_backup_bundle_overview}
 
-利用 Data Protection and Disaster Recovery 單一節點試用版，容許您測試 {{site.data.keyword.cloud}} 以將 VMware 工作負載移轉和回復到 {{site.data.keyword.cloud_notm}}。此外，Data Protection and Disaster Recovery 單一節點試用版包含 Veeam on {{site.data.keyword.cloud_notm}}、VMware HCX on {{site.data.keyword.cloud_notm}} 和 Zerto on {{site.data.keyword.cloud_notm}} 服務。
+利用 Single-node Trial for Data Protection and Disaster Recovery，容許您測試 {{site.data.keyword.cloud}} 以將 VMware 工作負載移轉和回復到 {{site.data.keyword.cloud_notm}}。此外，Single-node Trial for Data Protection and Disaster Recovery 包含 Veeam on {{site.data.keyword.cloud_notm}}、VMware HCX on {{site.data.keyword.cloud_notm}} 和 Zerto on {{site.data.keyword.cloud_notm}} 服務。
 
-單一節點試用版是 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 的試用版，提供了單一承租戶 VMware 平台，可使用與內部部署環境中相同的工具來管理該平台。您可以充分運用雲端的速度及規模，同時維護在內部部署提供之相同層次的控制權及可見性。
+單一節點試用版是 VMware vCenter Server on {{site.data.keyword.cloud_notm}} 的試用版，提供單一承租戶 VMware 平台，可使用與內部部署環境中相同的工具來管理該平台。您可以充分運用雲端的速度及規模，同時維護在內部部署提供之相同層次的控制權及可見性。
 
-該試用版旨在使用 vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 來移轉最多 20 個簡單的開發或測試工作負載。自動化功能將在 {{site.data.keyword.cloud_notm}} 中安裝和配置 VMware HCX，提供內部部署 HCX 啟動鍵，並在幾小時內安裝 Veeam on {{site.data.keyword.cloud_notm}} 和 Zerto on {{site.data.keyword.cloud_notm}}。您可以使用 Veeam on {{site.data.keyword.cloud_notm}} 和 Zerto on {{site.data.keyword.cloud_notm}} 來備份和抄寫 20 個虛擬機器 (VM)。
+試用版設計成使用 vCenter Server 來移轉最多 20 個簡單開發或測試工作負載。自動化功能將在 {{site.data.keyword.cloud_notm}} 中安裝和配置 VMware HCX，提供內部部署 HCX 啟動鍵，並在幾小時內安裝 Veeam on {{site.data.keyword.cloud_notm}} 和 Zerto on {{site.data.keyword.cloud_notm}}。您可以使用 Veeam on {{site.data.keyword.cloud_notm}} 和 Zerto on {{site.data.keyword.cloud_notm}} 來備份和抄寫 20 個虛擬機器 (VM)。
 
-Data Protection and Disaster Recovery 單一節點試用版僅用於概念驗證 (POC)。不要在此環境中執行正式作業工作負載。新增及移除主機和叢集、訂購其他附加程式服務，以及套用更新項目等管理功能皆不受支援。
+Single-node Trial for Data Protection and Disaster Recovery 僅用於概念驗證 (POC)。不要在此環境中執行正式作業工作負載。新增及移除主機和叢集、訂購其他附加程式服務，以及套用更新項目等管理功能皆不受支援。
 {:important}
 
 部署單一節點試用版實例之後，可以使用 [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:external} 提供的 [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:external} 來輔助使用實例。此外，[{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/){:external} 還可協助您透過最新的雲端原生作法來加速應用程式現代化。
@@ -38,10 +38,10 @@ Data Protection and Disaster Recovery 單一節點試用版僅用於概念驗證
 完成試用後，您可以刪除此環境，然後佈建符合您容量需求的新環境。
 
 
-## Data Protection and Disaster Recovery 單一節點試用版實例的技術規格
+## Single-node Trial for Data Protection and Disaster Recovery 實例的技術規格
 {: #dr_backup_bundle_overview-tech-specs}
 
-Data Protection and Disaster Recovery 單一節點試用版實例中包含下列元件。
+Single-node Trial for Data Protection and Disaster Recovery 實例中包含下列元件。
 
 標準化硬體配置的可用性及定價可能會根據選取以用於部署的 {{site.data.keyword.CloudDataCent_notm}} 而有所不同。
 {:note}
@@ -68,7 +68,7 @@ Skylake 雙重 Intel Xeon Gold 5120 處理器 / 總計 28 核心，含 384 GB RA
 * 2 TB 用於管理
 * 1 TB 用於客戶工作負載（適用於 20 部客戶 VM）
 
-### Data Protection and Disaster Recovery 單一節點試用版實例的網路連線功能規格
+### Single-node Trial for Data Protection and Disaster Recovery 實例的網路連線功能規格
 {: #dr_backup_bundle_overview-networking-specs}
 
 訂購了下列網路元件：
@@ -78,7 +78,7 @@ Skylake 雙重 Intel Xeon Gold 5120 處理器 / 總計 28 核心，含 384 GB RA
 *  兩個 VMware NSX Edge Services Gateway：
   * 用於出埠 HTTPS 管理資料流量的安全管理服務 VMware NSX Edge Services Gateway (ESG)，IBM 將它部署為管理網路拓蹼的一部分。IBM 管理 VM 使用此 ESG，以與跟自動化相關的特定外部 IBM 管理元件進行通訊。
 
-    您無法存取此 ESG，因此無法使用它。如果您修改它，則可能無法從 {{site.data.keyword.vmwaresolutions_short}} 主控台管理 Data Protection and Disaster Recovery 單一節點試用版實例。此外，請注意，使用防火牆或停用與外部 IBM 管理元件的 ESG 通訊，將導致 {{site.data.keyword.vmwaresolutions_short}} 變成無法使用。
+    您無法存取此 ESG，因此無法使用它。如果您修改它，則可能無法從 {{site.data.keyword.vmwaresolutions_short}} 主控台管理 Single-node Trial for Data Protection and Disaster Recovery 實例。此外，請注意，使用防火牆或停用與外部 IBM 管理元件的 ESG 通訊，將導致 {{site.data.keyword.vmwaresolutions_short}} 變成無法使用。
     {:important}
   * 用於出埠和入埠 HTTPS 工作負載資料流量的安全客戶管理 VMware NSX Edge Services Gateway，IBM 將它部署為範本，您可以修改它來提供 VPN 存取或公用存取。
 
@@ -95,21 +95,21 @@ Skylake 雙重 Intel Xeon Gold 5120 處理器 / 總計 28 核心，含 384 GB RA
 ### IBM 提供的授權及費用
 {: #dr_backup_bundle_overview-license-and-fee}
 
-Data Protection and Disaster Recovery 單一節點試用版實例訂單中包含下列授權。
+Single-node Trial for Data Protection and Disaster Recovery 實例訂單中包含下列授權。
 
-* vCenter Server with Hybridity Bundle 授權：
-  * VMware vSphere Enterprise Plus 6.7u1
+* vCenter Server 授權：
+  * VMware vSphere Enterprise Plus 6.7u2
   * VMware vCenter Server 6.5
   * VMware NSX Service Providers Advanced Edition 6.4
 * {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2
 
-Data Protection and Disaster Recovery 單一節點試用版實例不支援「自帶授權」。
+Single-node Trial for Data Protection and Disaster Recovery 實例不支援「自帶授權」。
 {:note}
 
 ## VMware HCX on IBM Cloud 的技術規格
 {: #dr_backup_bundle_overview-hcx-tech-specs}
 
-Data Protection and Disaster Recovery 單一節點試用版包含 HCX on {{site.data.keyword.cloud_notm}}。下列元件已訂購並包括在 HCX on {{site.data.keyword.cloud_notm}} 服務中。
+Single-node Trial for Data Protection and Disaster Recovery 包含 HCX on {{site.data.keyword.cloud_notm}}。下列元件已訂購並包括在 HCX on {{site.data.keyword.cloud_notm}} 服務中。
 
 內部部署 HCX 實例只包括授權及啟動。
 {:note}
@@ -140,7 +140,7 @@ Data Protection and Disaster Recovery 單一節點試用版包含 HCX on {{site.
 ## Veeam on {{site.data.keyword.cloud_notm}} 的技術規格
 {: #dr_backup_bundle_overview-veeam-tech-specs}
 
-Data Protection and Disaster Recovery 單一節點試用版包含 Veeam on {{site.data.keyword.cloud_notm}}。Veeam on {{site.data.keyword.cloud_notm}} 服務中訂購並包含了下列元件。
+Single-node Trial for Data Protection and Disaster Recovery 包含 Veeam on {{site.data.keyword.cloud_notm}}。Veeam on {{site.data.keyword.cloud_notm}} 服務中訂購並包含了下列元件。
 
 * Veeam Availability Suite 的 25 個套件授權
 * 4000 GB 儲存空間
@@ -154,7 +154,7 @@ Data Protection and Disaster Recovery 單一節點試用版包含 Veeam on {{sit
 ## Zerto on {{site.data.keyword.cloud_notm}} 的技術規格
 {: #dr_backup_bundle_overview-zerto-tech-specs}
 
-Data Protection and Disaster Recovery 單一節點試用版包含 Zerto on {{site.data.keyword.cloud_notm}}。下列元件已訂購並包括在 Zerto on {{site.data.keyword.cloud_notm}} 服務中。
+Single-node Trial for Data Protection and Disaster Recovery 包含 Zerto on {{site.data.keyword.cloud_notm}}。下列元件已訂購並包括在 Zerto on {{site.data.keyword.cloud_notm}} 服務中。
 
 * Zerto Virtual Replication 6.5u3 版授權
 * 一個虛擬服務實例 (VSI) - Zerto Virtual Manager
@@ -166,7 +166,7 @@ Data Protection and Disaster Recovery 單一節點試用版包含 Zerto on {{sit
 ## IBM Cloud Automation Manager 的技術規格
 {: #dr_backup_bundle_overview-cam-tech-specs}
 
-在所有 Data Protection and Disaster Recovery 單一節點試用版實例上，都會使用開發/測試拓蹼安裝 {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2。如需 {{site.data.keyword.cloud_notm}} Automation Manager 的相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} Automation Manager 文件](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: external}。
+在所有 Single-node Trial for Data Protection and Disaster Recovery 實例上，都會使用開發/測試拓蹼安裝 {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2。如需 {{site.data.keyword.cloud_notm}} Automation Manager 的相關資訊，請參閱 [{{site.data.keyword.cloud_notm}} Automation Manager 文件](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: external}。
 
 ## 相關鏈結
 {: #dr_backup_bundle_overview-related}

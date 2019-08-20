@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -71,8 +71,3 @@ sistema para recuperar Registros de Skate que correspondem aos parâmetros solic
 virtual que é gerenciada pelo vCenter Server.
 * Contêineres de aplicativo - os aplicativos que passaram pela jornada de modernização de aplicativo e agora estão sendo executados como contêineres. Para esta arquitetura de referência e neste exemplo para Acme Skateboards, um dos apps conteinerizados é um servidor da web que faz parte da carga de trabalho de presença on-line. Os contêineres ACME hospedam o aplicativo da web Acme e o aplicativo Acme Skate Advisor.
 * NSX Edge - os NSX Edges são dispositivos virtuais que gerenciam o tráfego norte-sul para dentro e para fora da instância do vCenter Server.
-
-## Links relacionados
-{: #vcscar-syscontext-related}
-
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

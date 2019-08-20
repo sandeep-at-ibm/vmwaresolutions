@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -14,7 +14,7 @@ subcollection: vmware-solutions
 # 前言
 {: #vcscar-preface}
 
-![我們自己設計的語言](../../images/vcscar-alood.svg "我們自己設計的語言")
+![我們自己設計的語言](../../images/vcscar-alood.svg "我們自己設計的語言"){: caption="圖 1. 我們自己設計的語言" caption-side="bottom"}
 
 ## 滑板運動語言簡介
 {: #vcscar-preface-intro}
@@ -66,8 +66,3 @@ Watson Knowledge Studio 會根據特定滑板玩家的查詢，使用技巧說�
 
 IT 系統產生新組合的創意層會提及滑板運動核心。不管我們在哪裏，它都可以跨全球帶入創意生活來激勵創新。
 沒有 {{site.data.keyword.cloud}}，就無法達到此目的。
-
-## 相關鏈結
-{: #vcscar-preface-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

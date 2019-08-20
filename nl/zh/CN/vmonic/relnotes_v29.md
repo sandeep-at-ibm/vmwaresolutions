@@ -49,7 +49,7 @@ VMware vCenter Server on {{site.data.keyword.cloud_notm}} 的实例。
 
 您现在可以选择与 VMware vCenter Server、VMware vCenter Server with Hybridity Bundle 和 VMware vSphere on {{site.data.keyword.cloud_notm}} 实例一起订购 VMware vSphere version 6.7 Update 1。
 
-此外，Migration and App Modernization 的单节点试用版实例现在随 vSphere Enterprise Plus 6.7u1 一起订购。
+此外，Single-node Trial for Migration and App Modernization 实例现在随 vSphere Enterprise Plus 6.7u1 一起订购。
 
 vSphere Enterprise Plus 6.7u1 仅可用于 Broadwell 和 Skylake {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}。
 

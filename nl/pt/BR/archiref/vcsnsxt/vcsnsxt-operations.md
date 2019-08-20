@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -71,7 +71,7 @@ A ampliação do ambiente segue um destes caminhos:
 #### Implementações multissite
 {: #vcsnsxt-operations-multi-site}
 
-O VMware on {{site.data.keyword.cloud_notm}} pode usar a presença mundial de data center do {{site.data.keyword.cloud_notm}} e o backbone de rede integrada para permitir que vários casos de uso de geografia cruzada sejam implementados e estejam funcionando dentro de uma fração do tempo que levaria para construir tal infraestrutura do zero. É possível localizar informações adicionais em [Configuração multisite para instâncias do vCenter Server on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_multisite).
+O VMware on {{site.data.keyword.cloud_notm}} pode usar a presença mundial de data center do {{site.data.keyword.cloud_notm}} e o backbone de rede integrada para permitir que vários casos de uso de geografia cruzada sejam implementados e estejam funcionando dentro de uma fração do tempo que levaria para construir tal infraestrutura do zero. Informações adicionais podem ser localizadas em [Configuração multisite para instâncias do vCenter Server on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_multisite).
 
 #### Ampliar com novo cluster
 {: #vcsnsxt-operations-scale-out-new-cluster}
@@ -105,10 +105,5 @@ Os usuários podem provisionar um ambiente do {{site.data.keyword.containerlong_
 
 As implementações do aplicativo no {{site.data.keyword.containerlong_notm}} são possíveis usando os métodos a seguir:
 -	A conexão e os serviços do {{site.data.keyword.containerlong_notm}} são desenvolvidos no CAM e publicados no catálogo do {{site.data.keyword.icpfull_notm}}.
--	Multi Cloud Manager, um aprimoramento futuro para gerenciar as instâncias do {{site.data.keyword.containerlong_notm}}.
--	Linha de comandos do Helm.
-
-## Links relacionados
-{: #vcsnsxt-operations-related}
-
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+- Multi Cloud Manager, um aprimoramento futuro para gerenciar as instâncias do {{site.data.keyword.containerlong_notm}}.
+- Linha de comandos do Helm.

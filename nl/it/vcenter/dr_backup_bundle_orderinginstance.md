@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-25"
 
 keywords: single-node trial, data protection DR, order data protection DR
 
@@ -47,9 +47,10 @@ Assicurati di confermare i seguenti requisiti e di completare le seguenti attivi
 ### Requisiti del nome dell'istanza
 {: #dr_backup_bundle_orderinginstance-inst-name-req}
 
-Controlla i requisiti del nome dell'istanza:
-* Sono consentiti solo caratteri alfanumerici e trattini (-).
-* Il nome dell'istanza deve iniziare con un carattere alfabetico e terminare con un carattere alfanumerico.
+Il nome dell'istanza deve rispettare i seguenti requisiti:
+* Sono consentiti solo caratteri alfabetici minuscoli, numerici e trattini (-).
+* Il nome dell'istanza deve iniziare con un carattere alfabetico minuscolo.
+* Il nome dell'istanza deve terminare con un carattere alfabetico minuscolo o un carattere numerico.
 * La lunghezza massima del nome dell'istanza è di 10 caratteri.
 * Il nome dell'istanza deve essere univoco all'interno del tuo account.
 
@@ -194,8 +195,8 @@ Completa la seguente procedura per eliminare un'istanza Single-node Trial for Da
 ## Link correlati
 {: #dr_backup_bundle_orderinginstance-related}
 
-* [Guida di vCenter Server e IBM Cloud Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [Apri un ticket per IBM Cloud privato](https://www.ibm.com/mysupport/s/?language=en_US){:external}
+* [Guida di vCenter Server e {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
+* [Apri un ticket per {{site.data.keyword.cloud_notm}} privato](https://www.ibm.com/mysupport/s/?language=en_US){:external}
 * [Risorse VMware HCX](https://hcx.vmware.com/#/docs){:external}
 * [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}
 * [Annullamento dei server virtuali](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)

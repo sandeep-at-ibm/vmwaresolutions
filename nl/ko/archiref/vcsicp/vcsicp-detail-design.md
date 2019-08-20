@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-09"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -60,8 +60,3 @@ NSX-T는 모든 유형의 애플리케이션에 연결할 수 있는 단일 네�
 {{site.data.keyword.icpfull_notm}}는 Calico 네트워킹을 NSX-T 인스턴스로 대체하기 위한 옵션을 제공하며 네트워킹 및 보안 관리를 위한 단일 위치를 제공합니다.
 
 ![NSX-T 네트워킹을 사용하는 {{site.data.keyword.icpfull_notm}}](../../images/vcsicp-icp-nsxt-networking.svg "NSX-T 네트워킹을 사용하는 {{site.data.keyword.icpfull_notm}}")
-
-## 관련 링크
-{: #vcsicp-detail-design-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

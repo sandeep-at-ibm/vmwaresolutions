@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-30"
 
 keywords: vCenter Server networking, networking components, networking vCenter
 
@@ -45,10 +45,11 @@ Viene distribuito anche un gateway dei servizi edge NSX per essere utilizzato da
 {: #vc_networkingonvcenterserver-change-nsx-component-password-considerations}
 {: faq}
 
-Esamina le seguenti considerazioni prima di modificare le password per NSX Manager, i controller NSX e gli edge NSX:
-* Non modificare la password di NSX Manager che puoi trovare nella pagina **Riepilogo** dell'istanza nella console {{site.data.keyword.vmwaresolutions_short}}.
-* Puoi modificare le password per i controller NSX. Per istruzioni su come modificare le password per i controller NSX, vedi [Change Controller Password](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/com.vmware.nsx.admin.doc/GUID-2667DD9E-E2F5-4403-BAC2-C7D1BBC23228.html){:external}.
-* Puoi modificare la password e le impostazioni SSH per il gateway dei servizi edge (ESG) VMware NSX gestito dal cliente. Non modificare la password per il gateway dei servizi edge (ESG) VMware NSX di gestione e il relativo DLR (Distributed Logical Router).
+Esamina le seguenti considerazioni prima di tentare di modificare le password per NSX Manager, i controller NSX e gli edge NSX:
+* Puoi modificare la password per NSX Manager. Questa password viene visualizzata nella pagina **Riepilogo** dell'istanza nella console {{site.data.keyword.vmwaresolutions_short}}.
+* Puoi modificare le password per i controller NSX. Per istruzioni su come modificare queste password, vedi [Change Controller Password](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/com.vmware.nsx.admin.doc/GUID-2667DD9E-E2F5-4403-BAC2-C7D1BBC23228.html){:external}.
+* Puoi modificare la password e le impostazioni SSH per il gateway dei servizi edge (ESG) VMware NSX gestito dal cliente. 
+* Non modificare le password per il gateway dei servizi edge (ESG) VMware NSX di gestione e il relativo DLR (Distributed Logical Router).
 
 ## Link correlati
 {: #vc_networkingonvcenterserver-related}

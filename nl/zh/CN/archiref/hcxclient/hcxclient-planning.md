@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -23,7 +23,7 @@ subcollection: vmware-solutions
 {: #hcxclient-planning-config-net}
 
 HCX 必须遍历公用因特网和专用线路，并连接到数据中心组件，例如网络、交换机和端口组。
-* [端口访问需求](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-port-req)列出了必须打开的端口，只有打开这些端口，HCX 虚拟设备才能成功安装。
+* 有关为了成功安装 HCX 虚拟设备而必须打开的端口的信息，请参阅[端口访问需求](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-port-req)。
 * 内部部署 vSphere 环境和 VCS HCX 云环境都必须允许 vSphere 内部部署设备和 VCS HCX 设备之间进行网络时间协议 (NTP) 时钟同步。UDP 端口 123 必须可由 HCX 虚拟设备和网络访问。
 
 ## 内部部署环境
@@ -100,12 +100,12 @@ HCX 系列的网络延伸组件非常稳定。如果一个特定客户拥有 20 
 ## 预检
 {: #hcxclient-planning-preflight-tests}
 
-预检涉及通过 vMotion 和批量迁移功能执行 HCX 迁移，以便确定基线传输速率。
+预检涉及通过 vMotion 和批量迁移功能执行 HCX 迁移，以确定基线传输速率。
 
 ## 迁移非生产应用程序
 {: #hcxclient-planning-mig-non-prod-apps}
 
-VM 的迁移将从不太关键的 VM 的计划阶段开始。开发、测试等操作会使用因特网连接进行迁移和处理 L2 延伸流量。
+VM 的迁移将从不太关键的 VM 的计划阶段开始。开发和测试团队会使用因特网连接进行迁移和处理 L2 延伸流量。
 
 ## 云网络设计和实施开始
 {: #hcxclient-planning-cloud-net-begins}

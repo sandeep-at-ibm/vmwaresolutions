@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-21"
+lastupdated: "2019-07-23"
 
 keywords: Mission Critical VMware, request Mission Critical, tech specs Mission Critical
 
@@ -20,7 +20,7 @@ Mission Critical VMware on {{site.data.keyword.cloud}} offre un'architettura a p
 
 Con questa architettura cloud, i clienti possono raggiungere una maggiore disponibilità e una percentuale di successo di failover rispetto a quella che la maggior parte dei client VMware possono raggiungere con gli ambienti in loco o con le piattaforme cloud concorrenti.
 
-Questa architettura supporta i carichi di lavoro esistenti di importanza critica e legacy, incluse le applicazioni native non cloud, ad una disponibilità aggregata mirata del 99,99%. Le regioni di IBM Cloud a più zone sono progettate per mantenere i carichi di lavoro di importanza critica online se si verifica un'interruzione del sito. I carichi di lavoro in un sito malfunzionante vengono riavviati automaticamente quasi in tempo reale, mentre i carichi di lavoro nei siti adiacenti rimangono online e disponibili.
+Questa architettura supporta i carichi di lavoro esistenti di importanza critica e legacy, incluse le applicazioni native non cloud, ad una disponibilità aggregata mirata del 99,99%. {{site.data.keyword.cloud_notm}}Le regioni a più zone sono progettate per mantenere i carichi di lavoro di importanza critica online se si verifica un'interruzione del sito. I carichi di lavoro in un sito malfunzionante vengono riavviati automaticamente quasi in tempo reale, mentre i carichi di lavoro nei siti adiacenti rimangono online e disponibili.
 
 L'architettura comprende vari servizi aziendali, tra cui reti, archiviazione, resilienza e altri strumenti creati per il monitoraggio e la risoluzione dei problemi delle applicazioni basate sul cloud. Inoltre, questa architettura può essere integrata con IBM Services Platform with Watson, creata su {{site.data.keyword.cloud_notm}}, per consentire un più ampio utilizzo dei servizi. Utilizzando le funzionalità cognitive della piattaforma, i client possono estrarre i dati in modo più efficace per le nuove informazioni aziendali per aiutare a mantenere le operazioni continue.
 
@@ -40,9 +40,9 @@ L'architettura Mission Critical VMware on {{site.data.keyword.cloud_notm}} è un
   * Modelli di resilienza (backup e ripristino)
 
 Mission Critical VMware on {{site.data.keyword.cloud_notm}} è disponibile nelle seguenti regioni:
-* America: Nord America meridionale - Tutti i data center IBM Cloud in Dallas e in Nord America orientale: tutti i data center IBM Cloud in Washington, DC
-* Europa: tutti i data center IBM Cloud in Francoforte e Londra
-* Asia Pacifico: tutti i data center IBM Cloud in Sydney e Tokyo
+* America: Nord America meridionale - Tutti i data center {{site.data.keyword.cloud_notm}} in Dallas e in Nord America orientale: tutti i data center {{site.data.keyword.cloud_notm}} in Washington, DC
+* Europa: tutti i data center {{site.data.keyword.cloud_notm}} in Francoforte e Londra
+* Asia Pacifico: tutti i data center {{site.data.keyword.cloud_notm}} in Sydney e Tokyo
 
 ### Specifiche dell'architettura dell'infrastruttura di base
 {: #mcv_overview-base-specs}
@@ -98,5 +98,5 @@ L'architettura di rete ha le seguenti specifiche:
 {: #mcv_overview-related}
 
 * [Servizi gestiti da IMI](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_imi)
-* [Servizi gestiti per Veeam on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
-* [Servizi gestiti per Zerto on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
+* [Servizi gestiti per Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
+* [Servizi gestiti per Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)

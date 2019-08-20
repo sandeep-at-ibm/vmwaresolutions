@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-01"
+lastupdated: "2019-07-22"
 
 keywords: single-node trial, data protection DR, tech specs data protection DR
 
@@ -25,7 +25,7 @@ Single-node Trial for Data Protection and Disaster Recovery vous permet de teste
 
 Single-node Trial est une version d'évaluation de VMware vCenter Server sur {{site.data.keyword.cloud_notm}} qui fournit la plateforme VMware à service exclusif pouvant être gérée à l'aide des mêmes outils que dans les environnements sur site. Vous pouvez ainsi bénéficier de la vitesse et de l'échelle du cloud tout en conservant le même niveau de contrôle et de visibilité que dans un environnement local.
 
-La version d'essai permet de migrer jusqu'à 20 charges de travail simples de développement ou de test à l'aide de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle. L'automatisation installe et configure VMware HCX dans {{site.data.keyword.cloud_notm}}, fournit une clé d'activation HCX locale, puis installe Veeam on {{site.data.keyword.cloud_notm}} et Zerto on {{site.data.keyword.cloud_notm}} en quelques heures. Vous pouvez sauvegarder et répliquer 20 machines virtuelles (VM) avec Veeam on {{site.data.keyword.cloud_notm}} et Zerto on {{site.data.keyword.cloud_notm}}. 
+La version d'essai permet de migrer jusqu'à 20 charges de travail simples de développement ou de test à l'aide de vCenter Server. L'automatisation installe et configure VMware HCX dans {{site.data.keyword.cloud_notm}}, fournit une clé d'activation HCX locale, puis installe Veeam on {{site.data.keyword.cloud_notm}} et Zerto on {{site.data.keyword.cloud_notm}} en quelques heures. Vous pouvez sauvegarder et répliquer 20 machines virtuelles (VM) avec Veeam on {{site.data.keyword.cloud_notm}} et Zerto on {{site.data.keyword.cloud_notm}}. 
 
 Single-node Trial for Data Protection and Disaster Recovery est destiné à une démonstration de faisabilité uniquement. N'exécutez pas de charges de travail de production dans cet environnement. Les fonctions de gestions, telles que l'ajout et le retrait d'hôtes et de clusters, la commande de services complémentaires supplémentaires et l'application de mises à jour ne sont pas prises en charge.
 {:important}
@@ -96,8 +96,8 @@ Les instances de serveur virtuel suivantes sont commandées :
 
 Les licences suivantes sont incluses dans votre commande d'instance Single-node Trial for Data Protection and Disaster Recovery.
 
-* Licences vCenter Server avec Hybridity Bundle :
-  * VMware vSphere Enterprise Plus 6.7u1
+* Licences vCenter Server :
+  * VMware vSphere Enterprise Plus 6.7u2
   * VMware vCenter Server 6.5
   * VMware NSX Service Providers Advanced Edition 6.4
 * {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2
@@ -141,7 +141,7 @@ Des dispositifs HCX supplémentaires sont déployés durant la configuration s'i
 
 Single-node Trial for Data Protection and Disaster Recovery inclut Veeam on {{site.data.keyword.cloud_notm}}. Les composants suivants sont commandés et inclus dans le service Veeam on {{site.data.keyword.cloud_notm}}.
 
-* Licence de 25 packages de Veeam Availability Suite 
+* Licence de 25 packages de Veeam Availability Suite
 * 4000 Go de stockage
 * 0,25 IOPS/Go de performances de stockage
 * Windows Server 2016 Standard Edition (64 bits)

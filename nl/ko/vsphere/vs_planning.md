@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-20"
+lastupdated: "2019-08-06"
 
 keywords: planning vSphere, data center, vSphere data centers
 
@@ -34,6 +34,9 @@ VMware vSphere on {{site.data.keyword.cloud}}를 주문하기 전에 다음 요�
 {: #vs_planning-dc-availability}
 
 vSphere 배치에는 실제 인프라에 대한 엄격한 요구사항이 있습니다. 그러므로, 요구사항을 충족하는 {{site.data.keyword.CloudDataCents_notm}}에만 클러스터를 배치할 수 있습니다. 다음 {{site.data.keyword.CloudDataCent_notm}}는 vSphere 배치에 사용 가능합니다.
+
+Cascade Lake {{site.data.keyword.baremetal_short}}는 다중 구역 지역(MZR) {{site.data.keyword.CloudDataCents_notm}}에서 사용 가능합니다. 자세한 정보는 [다중 구역 지역(MZR) 개요](/docs/infrastructure/loadbalancer-service?topic=loadbalancer-service-multi-zone-region-mzr-overview)를 참조하십시오.
+
 
 vSAN 컴포넌트를 선택하면 위치 목록이 SSD(Solid-State Disk) 가용성을 기준으로 필터링됩니다.
 {:note}

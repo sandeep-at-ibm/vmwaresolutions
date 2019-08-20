@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-21"
+lastupdated: "2019-07-23"
 
 keywords: Mission Critical VMware, request Mission Critical, tech specs Mission Critical
 
@@ -20,7 +20,7 @@ Mission Critical VMware on {{site.data.keyword.cloud}} 交付多专区云体系�
 
 利用这种云体系结构，客户可以实现的可用性和故障转移成功率，要高于大多数 VMware 客户机在内部部署环境或竞争对手的云平台中实现的可用性和故障转移成功率。
 
-此体系结构支持现有旧的任务关键型工作负载（包括非云本机应用程序），目标总体可用性达 99.99%。IBM Cloud 多专区区域旨在确保在发生站点中断时，使任务关键型工作负载保持联机状态。故障站点中的工作负载将近实时自动重新启动，而相邻站点中的工作负载会保持联机且可用。
+此体系结构支持现有旧的任务关键型工作负载（包括非云本机应用程序），目标总体可用性达 99.99%。{{site.data.keyword.cloud_notm}} 多专区区域旨在确保在发生站点中断时，使任务关键型工作负载保持联机状态。故障站点中的工作负载将近实时自动重新启动，而相邻站点中的工作负载会保持联机且可用。
 
 此体系结构涵盖各种企业服务，包括网络、存储器、弹性以及其他构建用于对基于云的应用程序进行监视和故障诊断的工具。此外，该体系结构还可与基于 {{site.data.keyword.cloud_notm}} 构建的 IBM Services Platform with Watson 相集成，以支持更广泛的服务用途。通过使用平台的认知能力，客户可以更有效地挖掘数据，以获取新的业务洞察，从而帮助保持持续运营。
 
@@ -40,9 +40,9 @@ Mission Critical VMware on {{site.data.keyword.cloud_notm}} 体系结构是一�
   * Resiliency 模式（备份和恢复）
 
 Mission Critical VMware on {{site.data.keyword.cloud_notm}} 在以下区域中可用：
-* 美洲：北美南部 - 达拉斯的所有 IBM Cloud Data Center；北美东部 - 华盛顿的所有 IBM Cloud Data Center
-* 欧洲：法兰克福和伦敦的所有 IBM Cloud Data Center
-* 亚太地区：悉尼和东京的所有 IBM Cloud Data Center
+* 美洲：北美南部 - 达拉斯的所有 {{site.data.keyword.cloud_notm}} Data Center；北美东部 - 华盛顿的所有 {{site.data.keyword.cloud_notm}} Data Center
+* 欧洲：法兰克福和伦敦的所有 {{site.data.keyword.cloud_notm}} Data Center
+* 亚太地区：悉尼和东京的所有 {{site.data.keyword.cloud_notm}} Data Center
 
 ### 基本基础架构体系结构规范
 {: #mcv_overview-base-specs}
@@ -98,5 +98,5 @@ vSphere + vSAN 延伸集群体系结构具有以下规范：
 {: #mcv_overview-related}
 
 * [IMI 中的受管服务](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_imi)
-* [Veeam on IBM Cloud 的受管服务](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
-* [Zerto on IBM Cloud 的受管服务](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
+* [Veeam on {{site.data.keyword.cloud_notm}} 的受管服务](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
+* [Zerto on {{site.data.keyword.cloud_notm}} 的受管服务](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)

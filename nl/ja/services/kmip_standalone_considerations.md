@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-18"
 
 keywords: KMIP for VMware, KMIP stand-alone, tech specs KMIP
 
@@ -31,7 +31,7 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} サービスは、VMware イ
 以下の仕様が KMIP for VMware on {{site.data.keyword.cloud_notm}} サービスに含まれています。
 
 * VMware と互換性のある Key Management Interoperability Protocol (KMIP)
-* 2 つの管理対象サービス: [IBM Key Protect for {{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/catalog/services/key-protect){:external} および [{{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services){:external}
+* 2 つの管理対象サービス: [Key Protect](https://cloud.ibm.com/catalog/services/key-protect){:external} および [Hyper Protect Crypto Services](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services){:external}
 * 世界各地にある複数の地理的領域で利用可能
 * 高可用性のために各地域に 2 つ用意される KMIP ネットワーク・サービス・エンドポイント
 
@@ -40,7 +40,7 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} サービスは、VMware イ
 
 KMIP for VMware on {{site.data.keyword.cloud_notm}} インスタンスをインストールする前に、以下の考慮事項を確認してください。
 
-* KMIP for VMware on {{site.data.keyword.cloud_notm}} は、IBM Key Protect for {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services (HPCS) サービスを使用して暗号鍵を作成、暗号化、復号します。 そのため、KMIP for VMware on {{site.data.keyword.cloud_notm}} をインストールする前に、以下を確認してください。
+* KMIP for VMware on {{site.data.keyword.cloud_notm}} は、IBM Key Protect サービスまたは the Hyper Protect Crypto Services (HPCS) サービスを使用して、暗号鍵を作成、暗号化、および復号します。そのため、KMIP for VMware on {{site.data.keyword.cloud_notm}} をインストールする前に、以下を確認してください。
    * KMIP for VMware on {{site.data.keyword.cloud_notm}} インスタンスをホストする {{site.data.keyword.cloud_notm}} の地域で使用可能な Key Protect または HPCS サービスを注文したこと。
       * Key Protect のインスタンスの作成について詳しくは、『[サービスのプロビジョニング](/docs/services/key-protect?topic=key-protect-provision)』を参照してください。
       * HPCS のインスタンスの作成について詳しくは、『[サービスのプロビジョニング](/docs/services/hs-crypto?topic=hs-crypto-provision#provision)』を参照してください。 HPCS サービスのプロビジョニングに加えて、HPCS が主要な関連機能を提供できるように[暗号インスタンスを初期化する](/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-hsm)必要もあります。
@@ -56,7 +56,7 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} インスタンスをイン�
      **重要:** CRK がなければサービスを注文することはできません。 既存の鍵素材を使用して CRK を作成するという方法を使用すると共に、作成している鍵素材のバックアップを取ることを強くお勧めします。 これにより、CRK の保管のために Key Protect または HPCS を適用しているデータ・センターの機能が障害によって失われた場合に、鍵をリカバリーできるようになります。
 * {{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの Virtual Routing and Forwarding (VRF) およびサービス・エンドポイントへの接続を有効にしたことを確認してください。 詳しくは、以下を参照してください。
    * [Virtual Routing and Forwarding (VRF) on IBM Cloud の概要](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-   * [IBM Cloud CLI を使用してアカウントでサービス・エンドポイントを使用できるようにする](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
+   * [サービス・エンドポイントの有効化](/docs/account?topic=account-vrf-service-endpoint#service-endpoint)
 * プライベート接続しかサポートされないので、vCenter Server から KMIP for VMware on {{site.data.keyword.cloud_notm}} インスタンスのエンドポイントへのネットワーク接続のために、ファイアウォールや SNAT 規則を vCenter Server に構成する必要はありません。
 
 詳しくは、[KMIP for VMware on IBM Cloud ソリューション・アーキテクチャー](/docs/services/vmwaresolutions/archiref/kmip?topic=vmware-solutions-kmip-overview)を参照してください。

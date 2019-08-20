@@ -115,7 +115,7 @@ Il livello di prestazioni di 10 IOPS/GB è ancora limitato a una capacità massi
 
 Il servizio Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} è ora disponibile per le istanze VMware vCenter Server distribuite nelle, o di cui è stato eseguito l'upgrade alle, release V2.9 o successive. Questo servizio può aiutare a gestire i rischi informatici e di conformità con un monitoraggio proattivo e dei controlli di difesa automatizzati per proteggere da minacce e soddisfare le normative del settore e quelle governative.
 
-Puoi ordinare le istanze vCenter Server con il servizio Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} includo oppure aggiungere questo servizio alle tue istanze vCenter Server esistenti in un secondo momento dalla scheda **Servizi** nella pagina dei dettagli dell'istanza.
+Puoi ordinare le istanze vCenter Server con il servizio Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} incluso oppure aggiungere questo servizio alle tue istanze vCenter Server esistenti in un secondo momento dalla scheda **Servizi** nella pagina dei dettagli dell'istanza.
 
 Puoi anche ordinare una licenza Caveonix RiskForesight autonoma senza associarla ad alcuna istanza VMware per la concessione della licenza e l'attivazione dei tuoi carichi di lavoro in loco.
 

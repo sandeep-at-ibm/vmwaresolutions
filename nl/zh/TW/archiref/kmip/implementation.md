@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-07-16"
 
 subcollection: vmware-solutions
 
@@ -23,7 +23,7 @@ subcollection: vmware-solutions
 
 若要使用 KMIP for VMware on {{site.data.keyword.cloud_notm}} 來啟用 vSphere 加密或 vSAN 加密，您需要完成下列作業：
 
-1. [使用 IBM Cloud CLI，以啟用您的帳戶來使用服務端點](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)。
+1. [在帳戶中啟用服務端點](/docs/account?topic=account-vrf-service-endpoint#service-endpoint)。
 2. 使用 [IBM Key Protect](/docs/services/key-protect?topic=key-protect-getting-started-tutorial) 或 [IBM Cloud Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-get-started#get-started) 來建立金鑰管理程式實例。如果您是使用 Hyper Protect Crypto Services，請務必[起始設定您的加密實例](/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-hsm)，讓 Hyper Protect Crypto Services 可以提供金鑰相關功能。
 3. 在金鑰管理程式實例內建立客戶根金鑰 (CRK)。
 4. 建立 Identity and Access Management (IAM) [服務 ID 及 API 金鑰](/docs/iam?topic=iam-serviceidapikeys)，以與 KMIP for VMware 搭配使用。將此服務 ID 平台檢視者存取權及服務寫入權授與金鑰管理程式實例。

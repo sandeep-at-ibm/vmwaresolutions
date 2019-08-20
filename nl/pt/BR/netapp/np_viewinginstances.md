@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-25"
 
 keywords: view NetApp, view instance, view instance details
 
@@ -117,7 +117,7 @@ Se ocorrerem erros durante a implementação ou exclusão da instância, a equip
 | CPU | A especificação de CPU dos servidores ESXi no cluster. |
 | Efetivo de armazenamento | A capacidade do disco total dos servidores ESXi no cluster. |
 | Memória | O tamanho da memória total dos servidores ESXi no cluster. |
-| Local do datacenter | O data center no qual o cluster está hospedado. É o mesmo com o local do data center da instância. |
+| Local do data center | O data center no qual o cluster está hospedado. É o mesmo com o local do data center da instância. |
 | Pod | O pod no qual o cluster é criado. |
 | Status | O status do cluster. O status pode ter um dos valores a seguir:<br>Inicializando: o cluster está sendo criado e configurado.<br>Modificando: O cluster está sendo modificado.<br>Pronto para uso: o cluster está pronto para uso. |
 | Ações | Clique no ícone **Excluir** para excluir o cluster. |
@@ -127,7 +127,7 @@ Se ocorrerem erros durante a implementação ou exclusão da instância, a equip
 
 | Item        | Descrição       |  
 |:------------|:----------------- |
-| Nome | O nome do servidor ESXi está no formato `<host_prefix><n>.<subdomain_label>.<root_domain>`, em que:<br><br>`host_prefix` é o prefixo de nome do host, `n` é a sequência do servidor, `subdomain_label` é o rótulo do subdomínio e `root_domain` é o nome de domínio raiz. |
+| Nome | O nome do servidor ESXi está no formato `<data_center>-<host_prefix><n>.<subdomain_label>.<root_domain>`, em que `n` é a sequência do servidor ESXi. |
 | Versão | A versão do servidor ESXi. |
 | Credenciais | O nome de usuário e a senha para acessar o servidor ESXi. |
 | IP privado | O endereço IP privado do servidor ESXi. |

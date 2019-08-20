@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-20"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -61,5 +61,4 @@ Caveonix RiskForesight 是混合式雲端的多方承租戶網路風險和「法
 ## 相關鏈結
 {: #caveonix-intro-related}
 
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
-* [Caveonix 網站](https://www.caveonix.com/)
+* [Caveonix 網站](https://www.caveonix.com)

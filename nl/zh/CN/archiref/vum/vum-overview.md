@@ -73,4 +73,4 @@ VUM 客户机界面提供了两个主视图：
 {: #vum-overview-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 解决方案体系结构](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} 数字技术互动](https://ibm-dte.mybluemix.net/vmware)（演示）
+* [{{site.data.keyword.vmwaresolutions_full}} 演示](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/)（演示）

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-21"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -123,8 +123,3 @@ NSX for vSphere を使用すると、組織は、実行場所とは無関係の�
 次の図は、セキュリティー・グループを作成して NSX-V のマイクロ・セグメンテーション機能の一部を実装する方法を大まかに示しています。 この例では、実動と開発がセキュリティー・グループであり、それらのグループに基づいてセキュリティー・ルールが割り当てられています。
 
 ![NSX-V セキュリティー](../../images/vcsnsxt-vsecurity.svg "NSX-V セキュリティー")
-
-## 関連リンク
-{: #vcsnsxt-overview-ic4vnsxv-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -95,8 +95,3 @@ Todd と Jane は、Stock Trader のジャーニーとして次の段階を踏�
 6. DevOps をモダナイズします。 このジャーニーを通して、Jane は Stock Trader のデリバリー方法を改善しました。
 
 7. 管理をモダナイズします。 Todd と Jane は協力して、Stock Trader 自体と、クラスター環境やクラウド環境さえいくつもまたいだ Stock Trader の実行プラットフォームの管理方法を改善しました。
-
-## 関連リンク
-{: #vcscontent-modjourney-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

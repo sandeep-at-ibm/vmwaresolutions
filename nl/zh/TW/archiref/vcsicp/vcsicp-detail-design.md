@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-09"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -60,8 +60,3 @@ NSX-T 的設計讓單一網路平台可以連接到任何類型的應用程式�
 {{site.data.keyword.icpfull_notm}} 提供將 Calico 網路取代為 NSX-T 實例的選項，並提供單一位置以便管理網路和安全。
 
 ![{{site.data.keyword.icpfull_notm}}（具有 NSX-V 網路連線功能）](../../images/vcsicp-icp-nsxt-networking.svg "{{site.data.keyword.icpfull_notm}}（具有 NSX-V 網路連線功能）")
-
-## 相關鏈結
-{: #vcsicp-detail-design-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

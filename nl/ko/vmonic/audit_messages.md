@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-07-24"
 
 keywords: history message, audit history, error messages
 
@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 # 인스턴스 히스토리 메시지
 {: #audit_messages}
 
-{{site.data.keyword.cloud_notm}}가 VMware 인스턴스에 대해 수행하는 모든 오퍼레이션이 인스턴스 히스토리에 로깅됩니다. 참조로 인스턴스 히스토리를 사용하여 이 오퍼레이션을 검토할 수 있습니다. 인스턴스 히스토리 검토에 대한 자세한 정보는 [vCenter Server 인스턴스에 대한 배치 히스토리를 보는 프로시저](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances#vc_viewinginstances-procedure-view-deploy-history)를 참조하십시오.
+{{site.data.keyword.cloud}}가 VMware 인스턴스에 대해 수행하는 모든 오퍼레이션이 인스턴스 히스토리에 로깅됩니다. 참조로 인스턴스 히스토리를 사용하여 이 오퍼레이션을 검토할 수 있습니다. 인스턴스 히스토리 검토에 대한 자세한 정보는 [vCenter Server 인스턴스에 대한 배치 히스토리를 보는 프로시저](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances#vc_viewinginstances-procedure-view-deploy-history)를 참조하십시오.
 
 다음 절에서는 인스턴스 히스토리에 발행될 수 있는 모든 메시지를 제공합니다.
 
@@ -51,7 +51,7 @@ subcollection: vmware-solutions
 * ``Cancelling <environment> upcharges...``
 * ``VMware license cancellation in progress...``
 * ``VMware license cancellation is complete.``
-* ``The SoftLayer order failed or timed out.``
+* ``The {{site.data.keyword.cloud_notm}} infrastructure order failed or timed out.``
 
 ## 인스턴스 오류 메시지
 {: #audit_messages-error}
@@ -60,9 +60,9 @@ subcollection: vmware-solutions
 
 * ``Error ordering VMware licenses. Open a service ticket for assistance.``
 * ``Error ordering subnets. Open a service ticket for assistance.``
-* ``Error: The SoftLayer API key is not valid. Open a service ticket for assistance.``
-* ``Error: The SoftLayer data center is not valid. Open a service ticket for assistance.``
-* ``Error using a shared image in the provided SoftLayer account. Open a service ticket for assistance.``
+* ``Error: The {{site.data.keyword.cloud_notm}} infrastructure API key is not valid. Open a service ticket for assistance.``
+* ``Error: The {{site.data.keyword.cloud_notm}} infrastructure data center is not valid. Open a service ticket for assistance.``
+* ``Error using a shared image in the provided {{site.data.keyword.cloud_notm}} infrastructure account. Open a service ticket for assistance.``
 * ``Error ordering service entries. Open a service ticket for assistance.``
 * ``Error ordering subnets. Open a service ticket for assistance.``
 * ``Error ordering licenses. Open a service ticket for assistance.``
@@ -235,18 +235,6 @@ subcollection: vmware-solutions
 * ``The default services are successfully enabled.``
 * ``Service entry cancellation in progress...``
 * ``Service entry cancellation is complete.``
-
-## vCenter Server with Hybridity Bundle 히스토리 메시지
-{: #audit_messages-hybridity}
-
-{{site.data.keyword.vmwaresolutions_short}}는 vCenter Server with Hybridity Bundle 인스턴스에 대한 다음 메시지를 발행합니다.
-
-* ``Ordering vCenter Server with Hybridity Bundle licenses...``
-* ``Starting the vCenter Server with Hybridity Bundle conversion...``
-* ``The vCenter Server with Hybridity Bundle conversion is complete.``
-* ``Removing the vCenter Server with Hybridity Bundle...``
-* ``The vCenter Server with Hybridity Bundle is successfully removed.``
-* ``Cancelling the vCenter Server with Hybridity Bundle conversion...``
 
 ## 관련 링크
 {: #audit_messages-related}

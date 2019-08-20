@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-01"
 
 keywords: FAQ, user account, patch management
 
@@ -88,7 +88,7 @@ Sie können vCenter für Hochgeschwindigkeit (High Availability, HA) konfigurier
 {: #faq-rename-cluster}
 {: faq}
 
-Bei einer neuen vCenter Server-Instanz hat der erste Cluster, der während der Implementierung erstellt wird, den Standardnamen **cluster1**. Sie können den Standardcluster in VMware vSphere Client umbenennen. Wenn Sie einen Cluster zu einer vCenter Server-Instanz hinzufügen, können Sie den gewünschten Namen in der {{site.data.keyword.vmwaresolutions_short}}-Konsole angeben.
+Bei einer neuen vCenter Server-Instanz können Sie den Namen des anfänglichen Clusters festlegen, der während der Bereitstellung erstellt wird. Wenn Sie einen Cluster zu einer vCenter Server-Instanz hinzufügen, können Sie den gewünschten Namen in der {{site.data.keyword.vmwaresolutions_short}}-Konsole angeben.
 
 ## Wie werden Patches verwaltet?
 {: #faq-patches}
@@ -106,7 +106,6 @@ Bei Instanzen, die in V2.0 oder höher bereitgestellt wurden, ist VMware Update 
 Weitere Informationen finden Sie in den folgenden Abschnitten:
 * [VMware Support](https://www.vmware.com/support.html){:external}
 * [Updates auf vCenter Server-Instanzen anwenden](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates)
-* [Updates auf vCenter Server with Hybridity Bundle-Instanzen anwenden](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_applyingupdates)
 
 ## Stellt das NSX Edge für Management-Services ein Sicherheitsrisiko dar?
 {: #faq-mgmt-nsx}
@@ -136,7 +135,6 @@ Die Instanzbereitstellungen stellen strenge Anforderungen an die physische Infra
 
 Weitere Informationen enthalten die Abschnitte zur _Verfügbarkeit des IBM Cloud-Rechenzentrums_ unter:
 * [Voraussetzungen und Planung für vCenter Server-Instanzen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
-* [Voraussetzungen und Planung für vCenter Server with Hybridity Bundle-Instanzen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)
 * [Voraussetzungen und Planung für VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning)
 * [Voraussetzungen und Planung für NetApp ONTAP Select-Instanzen](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_planning)
 

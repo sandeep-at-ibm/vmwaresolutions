@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-07-26"
 
 keywords: vCenter Server NSX-T, NSX-T, tech specs vCenter Server NSX-T
 
@@ -74,6 +74,7 @@ Verfügbarkeit und Preisgestaltung standardisierter Hardwarekonfigurationen kön
 
 Sie können drei oder mehr {{site.data.keyword.baremetal_short}}-Instanzen mit einer der folgenden Konfigurationen bestellen:
 * **Skylake**: 2-CPU Intel Skylake Generation-Server (Intel Xeon 4100/5100/6100 Series) mit dem ausgewählten CPU-Modell und der RAM-Größe.  
+*  **Cascade**: 2-CPU Intel Cascade Generation-Server (Intel Xeon 4200/5200/6200 series) mit dem ausgewählten CPU-Modell und der RAM-Größe.
 * **Broadwell**: 4-CPU Intel Broadwell Generation-Server (Intel Xeon E7-4800 Series) mit dem ausgewählten CPU-Modell und der RAM-Größe.
 
 Wenn Sie vSAN-Speicher verwenden möchten, sind für die Konfiguration mindestens vier {{site.data.keyword.baremetal_short}}-Instanzen erforderlich.
@@ -137,7 +138,7 @@ Wenn Sie die Option "NFS" auswählen, wird 1 gemeinsam genutzte Dateiressource m
 ### Lizenzen (von IBM bereitgestellt oder eigene) und Gebühren
 {: #vc_nsx-t_overview-license-and-fee}
 
-* VMware vSphere Enterprise Plus 6.7u1
+* VMware vSphere Enterprise Plus 6.7u2
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Edition (Base, Advanced oder Enterprise) 6.4 (nur von IBM bereitgestellt)
 * (Für vSAN-Cluster) VMware vSAN Advanced oder Enterprise 6.6
@@ -156,7 +157,7 @@ Jeder vCenter Server with NSX-T-Erweiterungsknoten stellt folgende Komponenten i
 ### Lizenzen und Gebühren für Erweiterungsknoten
 {: #vc_nsx-t_overview-expansion-node-license-and-fee}
 
-* 1 Lizenz für VMware vSphere Enterprise Plus 6.7u1
+* 1 Lizenz für VMware vSphere Enterprise Plus 6.7u2
 * 1 Lizenz für VMware NSX Service Providers Edition (Base, Advanced oder Enterprise) 6.4
 * 1 Support- und Servicegebühr
 * (Für vSAN-Cluster) VMware vSAN Advanced oder Enterprise 6.6

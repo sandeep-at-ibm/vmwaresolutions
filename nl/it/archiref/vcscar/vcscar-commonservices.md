@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -32,8 +32,3 @@ La distribuzione utilizza le VSI AD distribuite come server DNS (Domain Name Sys
 {: #vcscar-commonservices-ntp}
 
 La distribuzione di vCenter Server utilizza i server NTP (Network Time Protocol) dell'infrastruttura {{site.data.keyword.cloud_notm}}. Tutti i componenti distribuiti sono configurati per utilizzare questi server NTP. Per il corretto funzionamento dei certificati e dell'autenticazione di AD, è fondamentale che tutti i componenti utilizzino gli stessi server NTP.
-
-## Link correlati
-{: #vcscar-commonservices-related}
-
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

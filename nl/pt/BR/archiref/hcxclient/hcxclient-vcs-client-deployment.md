@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -39,7 +39,7 @@ cliente requerem comunicação com o site de registro do VMware
 em todo o seu ciclo de vida.
 - O tráfego na 80 e na 443 deve ser permitido para
 `https://connect.hybridity.vmware.com`
-- Uma chave de registro de uso único é fornecida para a instalação do lado do cliente fornecida pelo console do {{site.data.keyword.vmwaresolutions_full}}. É necessária uma chave para
+- Uma chave de registro de uso único é fornecida pelo console do {{site.data.keyword.vmwaresolutions_full}} para a instalação do lado do cliente. É necessária uma chave para
 cada instalação do HCX do lado do cliente.
 
 ### Procedimento para pedir licenças do HCX no local
@@ -130,8 +130,8 @@ Tabela 1. Valores de amostra para propriedades de rede
   * Marque a caixa **Ligar após a implementação**.
   * Revise as configurações do Hybrid Cloud Services e clique em **Concluir**. Pode levar vários minutos para que o dispositivo do Hybrid Cloud Services seja ligado.
   * Para verificar o status, acesse a página inicial do vSphere Web Client e, na guia **Página inicial**, acesse **Inventários** e clique em **Hosts e clusters**. Expanda a hierarquia do data center e clique na máquina virtual do serviço Hybrid Cloud Services para exibir um resumo na área de janela central.
-  * Visualize a guia **Resumo**, o console lê **Ligado** e o botão **Reproduzir** é verde.
-10. O HCX Manager está ligado e pronto para ser registrado com o On-Premise vCenter.
+  * Visualize a guia **Resumo**. O console lê **Ligado** e o ícone **Reproduzir** está verde.
+10. O HCX Manager está ligado e pronto para ser registrado com o vCenter no local.
 
 ## Configuração inicial do HCX Manager Appliance
 {: #hcxclient-vcs-client-deployment-inital-config}
@@ -156,11 +156,10 @@ Tabela 1. Valores de amostra para propriedades de rede
 {: #hcxclient-vcs-client-deployment-reg-vcenter}
 
 1. Efetue login no dispositivo virtual de serviço Hybrid Cloud Services.
-2. Clique no tile  ** Gerenciar configurações ** .
+2. Na área de janela **Painel**, conclua as etapas a seguir:
   1. Na área de janela esquerda, em **Configurar sistemas**, selecione vCenter.
   2. Clique em **Incluir vCenter** na parte superior direita.
-  3. Insira o endereço IP do vCenter Server no formato `https://vCenter-host-name` ou `https://vCenter-IP-address`.
-    * Por exemplo, `https://My-vCenter` ou `https://10.108.26.211`.
+  3. Insira o endereço IP do vCenter Server no formato `https://vCenter-host-name` ou `https://vCenter-IP-address`. Por exemplo, `https://My-vCenter` ou `https://10.108.26.211`
   4. Insira o nome do usuário e a senha do vCenter Server. A conta que é usada deve ter a função de Administrador do vCenter.
   5. Clique em **OK**. Não reinicie quando a mensagem _Você precisa reiniciar o app_ for exibida.
 3. Configure o serviço de SSO/consulta.

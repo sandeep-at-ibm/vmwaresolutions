@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -33,7 +33,7 @@ IBM Multi-Cluster Manager 提供使用者可見性、以應用程式為中心的
 
 下圖說明應用程式現代化基礎架構實作中 ACME Skate Advisor 應用程式的參照實作。
 
-![Skate Advisor 實體元件](../../images/vcscar-physical.svg "Skate Advisor 實體元件")
+![Skate Advisor 實體元件](../../images/vcscar-physical.svg "Skate Advisor 實體元件"){: caption="圖 1. Skate Advisor 實體元件" caption-side="bottom"}
 
 Skate Advisor 應用程式使用與 Watson 互動的微服務型元件以及 nginx 容器來延伸現有的 Acme Web 應用程式，以對 Web 及微服務容器的要求進行 Proxy 處理。
 
@@ -55,7 +55,7 @@ Skate Advisor 應用程式利用應用程式現代化平台來提供必要的管
 * Terraform 範本 - Terraform 範本是說明要部署之雲端資源的檔案。對於 Skate Advisor，會說明與 mysql 及資料庫綱目一起預先安裝的 Ubuntu 範本。
 * VMWare 範本 - VMWare 範本是已預先安裝 mysql 及資料庫綱目的 Ubuntu 範本。
 
-![CAM 編排](../../images/vcscar-cam.svg "CAM 編排")
+![CAM 編排](../../images/vcscar-cam.svg "CAM 編排"){: caption="圖 2. CAM 編排" caption-side="bottom"}
 
 ### 負載平衡與 Proxy 處理
 {: #vcscar-physical-load-balance-proxy}
@@ -99,7 +99,7 @@ Skate Advisor 需要下列通訊：
 
 應用程式現代化平台已設計提供下列元件，來
 
-![公用網路存取](../../images/vcscar-network.svg "公用網路存取")
+![公用網路存取](../../images/vcscar-network.svg "公用網路存取"){: caption="圖 3. 公用網路存取" caption-side="bottom"}
 
 {{site.data.keyword.cloud_notm}} 有兩個網路。公用網路容許從網際網路連接伺服器，而專用網路容許伺服器透過高速骨幹在所有 {{site.data.keyword.CloudDataCents_notm}} 中彼此通訊。
 
@@ -112,12 +112,11 @@ Skate Advisor 需要下列通訊：
 
 Skate Advisor 應用程式使用下列軟體元件。
 
-![Skate Advisor 軟體對映](../../images/vcscar-sw-mapping.svg "Skate Advisor 軟體對映")
+![Skate Advisor 軟體對映](../../images/vcscar-sw-mapping.svg "Skate Advisor 軟體對映"){: caption="圖 4. Skate Advisor 軟體對映" caption-side="bottom"}
 
 會使用下列軟體元件：
 
-* nginx	- 將反向 Proxy 服務提供給應用程式。
-微服務及應用程式要求會分佈至正確的容器端點。
+* nginx	- 將反向 Proxy 服務提供給應用程式。微服務及應用程式要求會分佈至正確的容器端點。
 * WebSphere Liberty - 管理 Acme 應用程式，這是 Spring 型 Java Platform Enterprise Edition 應用程式。
 * Node.js - 將微服務架構提供給聊天機器人。此應用程式使用來自 Watson 的服務。
 * mysql - 此應用程式資料庫由 Oracle Mysql 所提供。
@@ -128,13 +127,8 @@ Skate Advisor 應用程式使用下列軟體元件。
 
 Acme Skate Advisor 位於 {{site.data.keyword.cloud_notm}}，因此是「架構」的重要層面。{{site.data.keyword.cloud_notm}} 具有下列架構。
 
-![雲端管理](../../images/vcscar-cloud-management.svg "雲端管理")
+![雲端管理](../../images/vcscar-cloud-management.svg "雲端管理"){: caption="圖 5. 雲端管理" caption-side="bottom"}
 
 此圖代表 vCenter Server 實例上所部署的 {{site.data.keyword.icpfull_notm}} 及 CAM，以及與內部部署 vCenter 及 {{site.data.keyword.containerlong_notm}} 服務的連線。使用 CAM，系統管理者及開發人員可以將虛擬機器部署至內部部署或 vCenter Server 實例，以及將容器部署至 {{site.data.keyword.icpfull_notm}} 及 {{site.data.keyword.containerlong_notm}} 叢集。
 
 在圖表中，CAM 邏輯地建立與 vCenter、雲端提供者以及 {{site.data.keyword.icpfull_notm}} 和 {{site.data.keyword.containerlong_notm}} 環境的雲端連線。「{{site.data.keyword.icpfull_notm}} 叢集」部署至每個資料中心或雲端環境，並由 MCM 提供將 {{site.data.keyword.icpfull_notm}} 叢集連接至單一管理視圖的機制。
-
-## 相關鏈結
-{: #vcscar-physical-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

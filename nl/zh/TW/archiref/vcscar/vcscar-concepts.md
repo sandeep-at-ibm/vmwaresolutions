@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -75,7 +75,7 @@ trick = 'combo \+ \[“to” + combo\] \+ \[“to” \+ landing_combo\]'
 
 下圖是規則引擎的視覺化摘要。
 
-![Skate 語言概觀](../../images/vcscar-skate-language.svg "Skate 語言概觀")
+![Skate 語言概觀](../../images/vcscar-skate-language.svg "Skate 語言概觀"){: caption="圖 1. Skate 語言概觀" caption-side="bottom"}
 
 ## 範例技巧語言
 {: #vcscar-concepts-sample-trick}
@@ -120,8 +120,3 @@ nollie-heelflip to frontside-boardslide
 {: #vcscar-concepts-relevance}
 
 「技巧語言」是主要建構，用來訓練 Watson 辨識及汲取滑板運動文件和媒體，也可以形成與使用者的交談基準。
-
-## 相關鏈結
-{: #vcscar-concepts-related}
-
-* [vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)  

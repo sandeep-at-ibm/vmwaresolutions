@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-22"
 
 keywords: view vCenter Server, view instance, view instance details
 
@@ -77,7 +77,6 @@ subcollection: vmware-solutions
 |DNS - 根域|根域名是 DNS（域名系统）域名和 Microsoft Active Directory (AD) 林根名称。|
 |DNS - SSO 域|SSO 域是 vSphere Single Sign-On 域。SSO 域名针对所有部署的 vCenter Server 实例是固定的，值为 <samp class="ph codeph">vsphere.local</samp>。|
 |DNS - 子域|子域是本地 vCenter Server 实例主机名所在的根域名的 DNS 子域名。子域名的格式为 <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp>。|
-|Hybridity Bundle|指示是否安装了 vCenter Server with Hybridity Bundle。|
 |状态|实例的状态。<br><br>显示的信息提供有关部署进度或对实例所执行操作的更新。如果存在问题，那么可能会显示一条消息以帮助您调查和解决问题。|
 {: caption="表 3. vCenter Server 实例属性" caption-side="top"}
 

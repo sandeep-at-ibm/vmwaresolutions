@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-22"
 
 keywords: single-node trial, migration app modernization, tech specs migration app modernization
 
@@ -25,7 +25,7 @@ Single-node Trial for Migration and App Modernization では、VMware ワーク�
 
 この Single-node Trial は、VMware vCenter Server on {{site.data.keyword.cloud_notm}} に置かれた {{site.data.keyword.cloud_notm}} Private Hosted のトライアル・バージョンです。オンプレミス環境と同じツールで管理できる Kubernetes コンテナー管理プラットフォームと単一テナント VMware プラットフォームが提供されます。 制御性および可視性はオンプレミスと同じレベルに保ったまま、クラウドの速度およびスケールというメリットを享受できます。
 
-このトライアルの目的は、vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle を使用して開発用またはテスト用の単純なワークロードを最大 20 個移行し、Kubernetes ベースの {{site.data.keyword.cloud_notm}} Private Hosted アプリケーション開発プラットフォームを使用してそれらのワークロードをコンテナー化することです。 自動機能によって、VMware HCX が {{site.data.keyword.cloud_notm}} にインストールされて構成され、オンプレミス HCX アクティベーション・キーが提供され、小規模な開発/テスト用のトポロジーの {{site.data.keyword.cloud_notm}} Private Hosted が数時間のうちにインストールされて構成されます。
+このトライアルの目的は、vCenter Server on {{site.data.keyword.cloud_notm}} を使用して開発用またはテスト用の単純なワークロードを最大 20 個移行し、Kubernetes ベースの {{site.data.keyword.cloud_notm}} Private Hosted アプリケーション開発プラットフォームを使用してそれらのワークロードをコンテナー化することです。 自動機能によって、VMware HCX が {{site.data.keyword.cloud_notm}} にインストールされて構成され、オンプレミス HCX アクティベーション・キーが提供され、小規模な開発/テスト用のトポロジーの {{site.data.keyword.cloud_notm}} Private Hosted が数時間のうちにインストールされて構成されます。
 
 Single-node Trial for Migration and App Modernization は PoC (概念検証) のみを目的としています。 この環境では実動ワークロードを実行しないでください。 ホストやクラスターの追加と削除、アドオン・サービスの注文、更新の適用などの管理機能はサポートされません。
 {:important}
@@ -94,7 +94,7 @@ Dual Intel Xeon Gold 5120 プロセッサー / 合計 28 コア、2.2 GHz、384 
 
 Single-node Trial for Migration and App Modernization インスタンスの注文には、以下のライセンスが含まれています。
 
-* VMware vSphere Enterprise Plus 6.7u1
+* VMware vSphere Enterprise Plus 6.7u2
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Advanced Edition 6.4
 * {{site.data.keyword.cloud_notm}} Private Hosted 3.1.2

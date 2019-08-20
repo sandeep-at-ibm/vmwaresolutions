@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-27"
+lastupdated: "2019-07-08"
 
 subcollection: vmware-solutions
 
@@ -24,10 +24,10 @@ VMware vSphere Web Client에 하이브리드 클라우드 서비스 플러그인
 {: #hcx-archi-reg-vcenter-proc-register}
 
 1. 하이브리드 클라우드 서비스의 서비스 가상 어플라이언스에 로그인하십시오. 예를 들어, `https:My-HCX-Manager:9443/`입니다.
-2. **설정 관리** 타일을 클릭하십시오.
+2. **대시보드** 패널에서 다음 단계를 완료하십시오.
   1. 왼쪽 분할창의 **시스템 구성**에서 vCenter를 선택하십시오.
   2. 오른쪽 상단의 **vCenter 추가**를 클릭하십시오.
-  3. `https:vCenter-host-name` 또는 `https:vCenter-IP-address` 양식으로 된 vCenter Server의 IP 주소를 입력하십시오. 예를 들면, `https:My-vCenter` 또는 `https:10.108.26.211`입니다.
+  3. `https:vCenter-host-name` 또는 `https:vCenter-IP-address` 양식으로 된 vCenter Server의 IP 주소를 입력하십시오. 예를 들어, `https:My-vCenter` 또는 `https:10.108.26.211`입니다.
   4. vCenter Server 사용자 이름 및 비밀번호를 입력하십시오. 사용된 계정에는 vCenter 관리자 역할이 있어야 합니다.
   5. **확인**을 클릭하십시오. _앱을 다시 시작해야 합니다._ 메시지가 표시되면 다시 시작하지 마십시오.
 3. 검색 서비스를 구성하십시오.

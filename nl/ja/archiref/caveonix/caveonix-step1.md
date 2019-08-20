@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -45,8 +45,3 @@ Caveonix RiskForesight には、以下の 3 つのデプロイメント・モデ
   -	資産の数が増えるのに合わせて、スケールアウトに使用されるデータ・ノードをさらに追加します。
 
 すべてのコンポーネントに FQDN が必要です。VM のデプロイメントの前にすべてのコンポーネントを DNS に登録する必要があります。 このステップは、初期の「オールインワン」デプロイメントでは IBM Cloud for VMware Solutions の自動処理によって実行されますが、デプロイメントのスケーリングの時にはお客様の責任で行う必要があります。
-
-## 関連リンク
-{: #caveonix-step1-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

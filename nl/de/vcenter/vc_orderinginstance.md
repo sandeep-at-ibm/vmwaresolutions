@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-06"
 
 keywords: vCenter Server order instance, order vCenter Server, order vCenter Server instance
 
@@ -35,9 +35,9 @@ Stellen Sie sicher, dass Sie die folgenden Tasks ausgeführt haben:
 |:------------|:------------ |
 | Domänenname | `<root_domain>` |  
 | Anmeldebenutzername für vCenter Server | `<user_id>@<root_domain>` (Microsoft Active Directory-Benutzer) oder `administrator@vsphere.local` |
-| vCenter Server (mit integriertem PSC) FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. Die maximale Länge beträgt 50 Zeichen. |
+| vCenter Server (mit integriertem PSC) FQDN | `<instance_name>-vc.<root_domain>`. Die maximale Länge beträgt 50 Zeichen. |
 | SSO-Standortname | `<subdomain_label>` |
-| Vollständig qualifizierter Name des ESXi-Servers | `<host_prefix><n>.<subdomain_label>.<root_domain>`. Dabei ist `<n>` die Folgenummer des ESXi-Servers. Die maximale Länge beträgt 50 Zeichen. |
+| Vollständig qualifizierter Name des ESXi-Servers | `<data_center>-<host_prefix><n>.<subdomain_label>.<root_domain>`, wobei `n` die Folgenummer des ESXi-Servers ist. Die maximale Länge beträgt 50 Zeichen. |
 {: caption="Tabelle 1. Wertformat für Instanz- und Domänennamen" caption-side="top"}
 
 Nehmen Sie keine Änderungen an Werten vor, die während der Bestellung oder Bereitstellung der Instanz festgelegt werden. Dies kann dazu führen, dass Ihre Instanz unbrauchbar wird. Beispielsweise, wenn der öffentliche Netzbetrieb beendet wird, Server sowie virtuelle Serverinstanzen (VSIs) mitten in einer Bereitstellung hinter eine Vyatta-Einheit versetzt werden oder wenn die Virtual Server-Instanz für IBM CloudBuilder gestoppt oder gelöscht wird.
@@ -52,17 +52,28 @@ Sie müssen folgende Systemeinstellungen angeben, wenn Sie eine vCenter Server-I
 {: #vc_orderinginstance-inst-name}
 
 Der Instanzname muss die folgenden Anforderungen erfüllen:
-* Es sind nur alphanumerische Zeichen und Bindestriche (-) zulässig.
-* Der Instanzname muss mit einem alphabetischen Zeichen beginnen und mit einem alphanumerischen Zeichen enden.
+* Es sind nur Kleinbuchstaben, Ziffern und Gedankenstriche (-) zulässig.
+* Der Instanzname muss mit einem Kleinbuchstaben beginnen.
+* Der Instanzname muss entweder auf einen Kleinbuchstaben oder auf eine Ziffer enden.
 * Die maximale Länge des Instanznamens beträgt 10 Zeichen.
 * Der Instanzname muss innerhalb Ihres Kontos eindeutig sein.
 
-### VMware vSphere-Lizenzen
+### Anfänglicher Clustername
+{: #vc_orderinginstance-cluster-name}
+
+Der anfängliche Clustername muss die folgenden Anforderungen erfüllen:
+* Es sind nur Kleinbuchstaben, Ziffern und Gedankenstriche (-) zulässig.
+* Der Clustername muss mit einem Kleinbuchstaben beginnen.
+* Der Clustername muss entweder auf einen Kleinbuchstaben oder auf eine Ziffer enden.
+* Die maximale Länge des Clusternamens beträgt 30 Zeichen.
+* Der Clustername muss innerhalb der vCenter Server-Instanz eindeutig sein.
+
+### VMware vSphere-Version
 {: #vc_orderinginstance-vsphere-license}
 
-Wählen Sie aus, ob vSphere Enterprise Plus 6.7u1 oder vSphere Enterprise Plus 6.5u2 bestellt werden soll.
+Wählen Sie aus, ob vSphere Enterprise Plus 6.7u2 oder vSphere Enterprise Plus 6.5u2 bestellt werden soll.
 
-vSphere Enterprise Plus 6.7u1 ist nur für Broadwell und Skylake {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} verfügbar.
+vSphere Enterprise Plus 6.7u2 ist nur für Skylake-, Cascade- und Broadwell-{{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} verfügbar.
 {:note}
 
 ### Primär oder sekundär
@@ -77,6 +88,9 @@ Geben Sie die Lizenzierungsoptionen für die folgenden VMware-Komponenten in der
 * vCenter Server 6.5
 * vSphere Enterprise Plus 6.5 oder 6.7
 * NSX Service Providers 6.4 (Base, Advanced oder Enterprise Edition)
+
+Für den VMware HCX on {{site.data.keyword.cloud_notm}}-Service ist entweder die NSX Advanced- oder die NSX Enterprise Edition-Lizenz erforderlich.
+{:note}
 
 Für Benutzer der Kategorie "Business Partner" sind die vCenter Server-Lizenz (Standard Edition), die vSphere-Lizenz (Enterprise Plus Edition) und die NSX-Lizenz enthalten und werden in Ihrem Namen erworben. Für die NSX-Lizenz muss allerdings die Edition angegeben werden.
 
@@ -113,6 +127,22 @@ Wenn Sie **Skylake** auswählen, dann können Sie die Kombination aus CPU und RA
 | Dual Intel Xeon Gold 6140-Prozessor / 36 Kerne insgesamt, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 {: caption="Tabelle 2. Optionen für Skylake {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
+### Cascade
+{: #vc_orderinginstance-cascade}
+
+Für die Einstellung **Cascade** stehen Ihnen Optionen für **CPU-Modell** und **RAM** zur Verfügung.
+
+Cascade-{{site.data.keyword.baremetal_short}} stehen nur für VMware vSphere Enterprise Plus 6.7u2-Instanzen zur Verfügung.
+{:note}
+
+| CPU-Modelloptionen        | RAM-Optionen       |
+|:------------- |:------------- |
+|Dual Intel Xeon Gold 4210-Prozessor / 20 Kerne insgesamt, 2,3 GHz| 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1,5 TB |
+|Dual Intel Xeon Gold 5218-Prozessor / 32 Kerne insgesamt, 2,3 GHz| 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1,5 TB |
+|Dual Intel Xeon Gold 6248-Prozessor / 40 Kerne insgesamt, 2,5 GHz| 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1,5 TB |
+{: caption="Tabelle 3. Optionen für Cascade-{{site.data.keyword.baremetal_short}}" caption-side="top"}
+
+
 ### SAP-zertifiziert
 {: #vc_orderinginstance-sap}
 
@@ -136,7 +166,7 @@ Wenn Sie **Broadwell** auswählen, dann können Sie die Kombination aus CPU und 
 |:------------- |:------------- |
 | Quad Intel Xeon E7-4820 v4 / 40 Kerne insgesamt, 2,0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 Kerne insgesamt, 2,1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
-{: caption="Tabelle 3. Optionen für Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
+{: caption="Tabelle 4. Optionen für Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 ### Bare Metal Server-Anzahl
 {: #vc_orderinginstance-bare-metal-number}
@@ -156,12 +186,12 @@ Für Instanzen der Version 2.8 und höher können gemeinsam genutzte NFS-Speiche
 ### vSAN-Speicher
 {: #vc_orderinginstance-vsan-storage}
 
-vSAN ist nur für die Bare-Metal-Konfigurationen des Typs **Skylake** oder **Broadwell**verfügbar. Geben Sie die folgenden vSAN-Optionen an:
+vSAN ist nur für die **Skylake**-, **Cascade**- und **Broadwell**-Bare-Metal-Konfigurationen verfügbar. Geben Sie die folgenden vSAN-Optionen an:
 * **Plattentyp und Größe für vSAN-Kapazitätsplatten**: Wählen Sie die für die Kapazitätsplatten benötigte Option aus.
 * **Anzahl der vSAN-Kapazitätsplatten**: Geben Sie die Anzahl der hinzuzufügenden Kapazitätsplatten an.
 * Wenn Sie Kapazität über den Grenzwert von 10 Platten hinzufügen möchten, wählen Sie das Feld **Hohe Leistung mit Intel Optane** aus. Diese Option stellt zwei zusätzliche Kapazitätsplattenpositionen für eine Gesamtzahl von 12 Kapazitätsplatten bereit und ist für Workloads nützlich, die eine geringere Latenzzeit und einen höheren Durchsatz an E/A-Operationen pro Sekunde erfordern.
 
-  Die Option **Hohe Leistung mit Intel Optane** ist nur für die Skylake-CPU-Modelle verfügbar.
+  Die Option **Hohe Leistung mit Intel Optane** ist nur für die Skylake- und Cascade-CPU-Modelle verfügbar.
   {:note}
 
 * Überprüfen Sie die Werte für **Plattentyp für vSAN-Cacheplatten** und **Anzahl der vSAN-Cacheplatten**. Diese Werte hängen davon ab, ob Sie das Feld **Hohe Leistung mit Intel Optane** ausgewählt haben.
@@ -189,7 +219,7 @@ Wählen Sie abhängig von Ihren Anforderungen die gewünschten Optionen für die
 | 2 IOPS/GB | Diese Option ist für die meisten allgemeinen Workloads geeignet. Anwendungsbeispiele sind das Hosting von kompakten Datenbanken, die Sicherung von Webanwendungen oder Plattenimages von virtuellen Maschinen für einen Hypervisor. |
 | 4 IOPS/GB | Diese Option ist für Workloads mit höherer Intensität geeignet, die zu einem bestimmten Zeitpunkt einen hohen Prozentsatz an aktiven Daten aufweisen. Anwendungsbeispiele sind transaktionsorientierte Datenbanken. |
 | 10 IOPS/GB | Diese Option ist für die aufwändigsten Workloadtypen wie beispielsweise die Analyse gedacht. Anwendungsbeispiele sind Hochtransaktionsdatenbanken und andere leistungskritische Datenbanken. Diese Leistungsstufe ist auf eine maximale Kapazität von 4 TB pro gemeinsam genutzte Dateiressource begrenzt. |
-{: caption="Tabelle 4. Optionen für die NFS-Leistungsstufe" caption-side="top"}
+{: caption="Tabelle 5. Optionen für die NFS-Leistungsstufe" caption-side="top"}
 
 ### Lokale Platten
 {: #vc_orderinginstance-local-disks}
@@ -207,27 +237,30 @@ Sie müssen folgende Netzschnittstelleneinstellungen angeben, wenn Sie eine vCen
 {: #vc_orderinginstance-host-name-prefix}
 
 Das Hostnamenspräfix muss die folgenden Anforderungen erfüllen:
-*  Es sind nur alphanumerische Zeichen und Bindestriche (-) zulässig.
-*  Das Hostnamenspräfix muss mit einem alphanumerischen Zeichen beginnen und enden.
-*  Die maximale Länge des Hostnamenspräfix beträgt 10 Zeichen.
+* Es sind nur Kleinbuchstaben, Ziffern und Gedankenstriche (-) zulässig.
+* Das Hostnamen-Präfix muss mit einem Kleinbuchstaben beginnen.
+* Das Hostnamen-Präfix muss entweder auf einen Kleinbuchstaben oder auf eine Ziffer enden.
+* Die maximale Länge des Hostnamenspräfix beträgt 10 Zeichen.
 
 ### Unterdomänenbezeichnung
 {: #vc_orderinginstance-subdomain-label}
 
 Die Unterdomänenbezeichnung muss die folgenden Anforderungen erfüllen:
-*  Es sind nur alphanumerische Zeichen und Bindestriche (-) zulässig.
-*  Die Unterdomänenbezeichnung muss mit einem alphabetischen Zeichen beginnen und mit einem alphanumerischen Zeichen enden.
-*  Die maximale Länge der Unterdomänenbezeichnung beträgt 10 Zeichen.
-*  Die Unterdomänenbezeichnung muss in allen Instanzen in der Konfiguration mit mehreren Standorten eindeutig sein.
+* Es sind nur Kleinbuchstaben, Ziffern und Gedankenstriche (-) zulässig.
+* Die Unterdomänenbezeichnung muss mit einem Kleinbuchstaben beginnen.
+* Die Unterdomänenbezeichnung muss entweder auf einen Kleinbuchstaben oder auf eine Ziffer enden.
+* Die maximale Länge der Unterdomänenbezeichnung beträgt 10 Zeichen.
+* Die Unterdomänenbezeichnung muss in allen Instanzen in der Konfiguration mit mehreren Standorten eindeutig sein.
 
 ### Domänenname
 {: #vc_orderinginstance-domain-name}
 
 Der Rootdomänenname muss die folgenden Anforderungen erfüllen:
 * Der Domänenname muss aus zwei oder mehr Zeichenfolgen bestehen, die jeweils durch einen Punkt (.) voneinander getrennt sind.
-* Die erste Zeichenfolge muss mit einem alphabetischen Zeichen beginnen und mit einem alphanumerischen Zeichen enden.
-* Alle Zeichenfolgen mit Ausnahme der letzten darf nur alphanumerische Zeichen und Gedankenstriche (-) enthalten.
-* Die letzte Zeichenfolge darf nur Buchstaben enthalten.
+* Die erste Zeichenfolge muss mit einem Kleinbuchstaben beginnen.
+* Die erste Zeichenfolge muss entweder auf einen Kleinbuchstaben oder auf eine Ziffer enden.
+* Alle Zeichenfolgen mit Ausnahme der letzten dürfen nur Kleinbuchstaben, Ziffern und Gedankenstriche (-) enthalten.
+* Die letzte Zeichenfolge darf nur Kleinbuchstaben enthalten.
 * Die Länge der letzten Zeichenfolge muss zwischen 2 und 24 Zeichen betragen.
 
 Die maximale Länge des vollständig qualifizierten Domänennamens (FQDN = Fully Qualified Domain Name) für Hosts und VMs beträgt 50 Zeichen. Domänennamen müssen diese maximale Länge zulassen.
@@ -294,6 +327,8 @@ Weitere Informationen zur Bestellung von Lizenzen für Windows Server 2016 finde
 
 Beim Bestellen einer vCenter Server-Instanz können Sie auch Add-on-Services bestellen. Weitere Informationen zu den Services finden Sie unter [Verfügbare Services für vCenter Server-Instanzen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices#available-services-for-vcenter-server-instances).
 
+Für die Bestellung des VMware HCX on {{site.data.keyword.cloud_notm}}-Service ist eine Verpflichtung über 12 Monate erforderlich. {:note}
+
 ## Bestellübersicht
 {: #vc_orderinginstance-order-summary}
 
@@ -307,8 +342,8 @@ Sie können die bereitgestellten Ressourcen auch durch Klicken auf **Zur Schätz
 1. Klicken Sie im {{site.data.keyword.cloud_notm}}-Katalog im linken Navigationsfenster auf das Symbol **VMware** und anschließend im Abschnitt **Virtuelle VMware-Rechenzentren** auf die Karte **VMware vCenter Server on IBM Cloud**.
 2. Klicken Sie auf der Seite **VMware vCenter Server on IBM Cloud** auf die Karte **vCenter Server** und dann auf **Erstellen**.
 3. Geben Sie auf der Seite **vCenter Server** den Instanznamen ein.
-5. Wählen Sie die vSphere-Version aus.
-4. Wählen Sie den Instanztyp aus:
+4. Wählen Sie die vSphere-Version aus.
+5. Wählen Sie den Instanztyp aus:
    * Klicken Sie auf **Primäre Instanz**, um eine einzelne Instanz in der Umgebung bereitzustellen oder um die erste Instanz in einer Topologie mit mehreren Standorten bereitzustellen.
    * Klicken Sie auf **Sekundäre Instanz**, um die Instanz mit einer vorhandenen (primären) Instanz in der Umgebung zu verbinden, um eine hohe Verfügbarkeit zu erreichen, und führen Sie dann die folgenden Schritte aus:
      1. Wählen Sie die primäre Instanz aus, mit der die sekundäre Instanz verbunden werden soll.
@@ -321,7 +356,7 @@ Sie können die bereitgestellten Ressourcen auch durch Klicken auf **Zur Schätz
 7. Geben Sie die Bare Metal Server-Einstellungen an.
     1. Wählen Sie das {{site.data.keyword.CloudDataCent_notm}} als Host für die Instanz aus.
     2. Wählen Sie die Bare Metal Server-Konfiguration aus.
-       * Wenn Sie **Skylake** oder **Broadwell** auswählen, dann müssen Sie das CPU-Modell und die RAM-Größe angeben.
+       * Wenn Sie **Skylake**, **Cascade** oder **Broadwell** auswählen, geben Sie das CPU-Modell und die RAM-Größe an.
        * Wenn Sie **SAP-zertifiziert** auswählen, müssen Sie eine der voreingestellten Konfigurationen auswählen.
     3. Geben Sie die Anzahl der {{site.data.keyword.baremetal_short}}-Instanzen an. Wenn Sie vSAN-Speicher verwenden möchten, sind mindestens vier {{site.data.keyword.baremetal_short}} erforderlich.  
 8. Führen Sie die Speicherkonfiguration durch.
@@ -350,7 +385,7 @@ Weitere Informationen zum Angeben von Einstellungen für einen Service finden Si
 {: #vc_orderinginstance-results}
 
 * Die Bereitstellung der Instanz beginnt automatisch und Sie empfangen eine Bestätigung, dass die Bestellung bearbeitet wird. Sie können den Bereitstellungsstatus, einschließlich aller Probleme, die eventuell Ihre Aufmerksamkeit erfordern, durch Anzeigen des Abschnitts **Bereitstellungsverlauf** der Instanzdetails überprüfen.
-* Nachdem die Instanz erfolgreich bereitgestellt wurde, sind die Komponenten, die unter [Technische Spezifikationen für vCenter Server-Instanzen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs) beschrieben sind, auf Ihrer virtuellen VMware-Plattform installiert. Die von Ihnen bestellten ESXi-Server werden standardmäßig als **cluster1** gruppiert. Wenn Sie Add-on-Services bestellt haben, wird die Bereitstellung der Services gestartet, nachdem Ihre Bestellung abgeschlossen ist.
+* Nachdem die Instanz erfolgreich bereitgestellt wurde, sind die Komponenten, die unter [Technische Spezifikationen für vCenter Server-Instanzen](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs) beschrieben sind, auf Ihrer virtuellen VMware-Plattform installiert. Wenn Sie Add-on-Services bestellt haben, wird die Bereitstellung der Services gestartet, nachdem Ihre Bestellung abgeschlossen ist.
 * Sobald die Instanz einsatzbereit ist, ändert sich der Status der Instanz in **Bereit** und Sie empfangen per E-Mail eine Benachrichtigung.
 * Wenn Sie eine sekundäre Instanz bestellen, kann VMware vSphere Web Client für die primäre Instanz (mit der sekundären Instanz verknüpft) erneut gestartet werden, nachdem die Bestellung der sekundären Instanz abgeschlossen ist.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-02"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -35,8 +35,3 @@ Hybridity 會建立內部部署與 {{site.data.keyword.cloud_notm}} 之間的鬆
 * 安全原則的移轉 - 如果在內部部署使用 NSX，則任何安全原則、防火牆及其他安全項目都會隨著工作負載一起移動。
 
 Todd 可以將 Stock Trader 從其內部部署 VMware 環境移轉至 VMware on {{site.data.keyword.cloud_notm}} 環境，並滿足極短或沒有任何關閉時間且不需重新配置應用程式的需求。
-
-## 相關鏈結
-{: #vcscontent-hcx-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

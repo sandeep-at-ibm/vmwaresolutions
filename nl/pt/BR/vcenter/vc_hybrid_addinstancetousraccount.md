@@ -15,7 +15,7 @@ subcollection: vmware-solutions
 
 {:external: target="_blank" .external}
 
-# Migrando instâncias do vCenter Server with Hybridity Bundle pré-V2.5 para contas do IBM Cloud
+# Migrando instâncias do vCenter Server with Hybridity Bundle pré-V2.5 para as contas do IBM Cloud
 {: #vc_hybrid_addinstancetousraccount}
 
 As instâncias do VMware vCenter Server with Hybridity Bundle implementadas na V2.5 e mais recente na conta do {{site.data.keyword.cloud}} são incluídas automaticamente em sua conta. Essas instâncias são gerenciadas pelo {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM).

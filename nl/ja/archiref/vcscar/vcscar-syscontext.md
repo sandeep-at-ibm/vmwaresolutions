@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -51,8 +51,3 @@ Kubernetes ベースのワークロードをプロビジョンできる単一画
 * データベース - Acme Skate Advisor データベースは、vCenter Server によって管理される仮想マシン上にホストされます。
 * アプリケーション・コンテナー - アプリケーション・モダナイゼーション・ジャーニーを経て、コンテナーとして稼働するようになったアプリケーション。 このリファレンス・アーキテクチャーの Acme Skateboards 社の事例では、コンテナー化アプリケーションの 1 つは、オンライン・プレゼンス・ワークロードの一部である Web サーバーです。 ACME コンテナーは、Acme Web アプリケーションと Acme Skate Advisor アプリケーションをホストします。
 * NSX Edge - NSX Edge は、vCenter Server インスタンスとの間の North-South トラフィックを管理する仮想アプライアンスです。
-
-## 関連リンク
-{: #vcscar-syscontext-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

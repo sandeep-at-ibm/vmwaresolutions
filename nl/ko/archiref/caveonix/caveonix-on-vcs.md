@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -52,8 +52,3 @@ IBM Cloud의 Caveonix RiskForesight에서 제공하는 주요 이점은 다음�
 -	하이브리드 클라우드에서 위험이 사용되기 전에 사전 예방식으로 전체 위험을 관리합니다.
 -	인프라, 플랫폼 및 애플리케이션 레벨에서 위협 및 정부 규제 준수와 관련된 워크로드 취약성 및 구성 문제를 계속 "완벽하게" 이해합니다.
 -	기업이 NIST(National Institute of Standards and Technology) 사전 예방식 위험 관리 프레임워크를 구현할 수 있습니다.
-
-## 관련 링크
-{: #caveonix-on-vcs-related}
-
-*   [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

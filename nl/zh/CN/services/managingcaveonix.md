@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-23"
 
 keywords: Caveonix console, Caveonix RiskForesight license, login Caveonix console
 
@@ -26,7 +26,7 @@ subcollection: vmware-solutions
 
 要管理 Caveonix RiskForesight on {{site.data.keyword.cloud}} 服务，您必须通过完成以下步骤来访问 Caveonix RiskForesight 控制台：
 
-1. 使用 IBM Cloud 基础架构 VPN 或跳板机来允许访问 Caveonix RiskForesight 虚拟机 (VM) 的 IP 地址。可以在 {{site.data.keyword.vmwaresolutions_short}} 控制台上 Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} 的服务详细信息页面中找到该 IP 地址。具体步骤如下：
+1. 使用 {{site.data.keyword.cloud_notm}} 基础架构 VPN 或跳板机来允许访问 Caveonix RiskForesight 虚拟机 (VM) 的 IP 地址。可以在 {{site.data.keyword.vmwaresolutions_short}} 控制台上 Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} 的服务详细信息页面中找到该 IP 地址。具体步骤如下：
    1. 在 {{site.data.keyword.cloud_notm}} 基础架构客户门户网站中创建 VPN 密码。
    2. 使用 {{site.data.keyword.cloud_notm}} 基础架构 VPN 凭证，登录到数据中心 VPN 门户网站。
    3. 从本地计算机将 IP 地址和主机名映射添加到 `hosts` 文件中。使用以下格式：

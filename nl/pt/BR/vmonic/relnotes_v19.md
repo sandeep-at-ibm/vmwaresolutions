@@ -83,7 +83,7 @@ Para obter mais informações, consulte [Incluindo, visualizando e excluindo clu
 ### Mudando componentes
 {: #relnotes_v19-change-comp}
 
-Esta liberação elimina o impacto em operações dentro do console do {{site.data.keyword.vmwaresolutions_short}} quando o administrador de Single Sign-On muda alguns recursos do vCenter Server de uma ferramenta nativa do VMware. Por exemplo, agora é possível modificar o datacenter virtual, o cluster, os comutadores, os grupos de portas e os nomes de armazenamento de dados do VMware por meio do VMware vSphere Web Client para customizar implementações para convenções de nomenclatura pessoais ou da empresa e sem qualquer impacto no recebimento de dados nas operações de dentro do console do {{site.data.keyword.vmwaresolutions_short}}.
+Esta liberação elimina o impacto em operações dentro do console do {{site.data.keyword.vmwaresolutions_short}} quando o administrador de Single Sign-On muda alguns recursos do vCenter Server de uma ferramenta nativa do VMware. Por exemplo, agora é possível modificar o data center virtual, o cluster, os comutadores, os grupos de portas e os nomes de armazenamento de dados do VMware por meio do VMware vSphere Web Client para customizar implementações para convenções de nomenclatura pessoais ou da empresa e sem qualquer impacto no recebimento de dados nas operações de dentro do console do {{site.data.keyword.vmwaresolutions_short}}.
 
 Para obter mais informações, veja [Impactos da mudança de componentes para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter_chg_impact).
 

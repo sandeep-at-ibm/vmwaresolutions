@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -50,7 +50,7 @@ ACME Skate Advisor 應用程式利用 Watson 平台及應用程式現代化平�
 ### 使用 Watson Assistant 的 Watson 語音辨識
 {: #vcscar-intro-speech}
 
-Acme Skate Advisor 透過 Watson 平台所提供的語音轉文字及「文字轉語音服務」以與使用者進行通訊。
+Acme Skate Advisor 透過 Watson 平台所提供的 Speech to Text 及 Text to Speech 服務以與使用者進行通訊。
 
 ### Watson Discovery Service 用法及訓練
 {: #vcscar-intro-watson-disc}
@@ -110,8 +110,3 @@ IBM 提供您可以自訂的應用程式現代化方法，以因應獨特商業�
 * [vCenter Server 網路](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro) - 聚焦在用於 vCenter Server、{{site.data.keyword.icpfull_notm}} 與 {{site.data.keyword.containerlong_notm}} 之間整合的網路技術（例如 NSX-V 及 Calico），以及使用 NSX-T 的技術預覽。
 * _VMware 及 Skate Advisor 概念車手冊_ - 為「概念車」的參照架構，亦即，用來強調及顯示解決真實世界問題之技術的機制。我們想要以真實方式示範 Watson AI 與機器學習之間的互動。我們透過滑板運動的文化，以獨特方式來示範雲端服務。「概念車」的實作是一個稱為 Skate Advisor 的 Acme Skateboard 應用程式的延伸。Skate Advisor 是一個工具，它容許使用者與 Watson 驅動引擎進行滑板技巧對話。
 * [VMware：Stock Trader 的現代化旅程](/docs/services/vmwaresolutions/archiref/vcscontent?topic=vmware-solutions-vcscontent-modjourney) - 此參照使用案例說明如何使用 {{site.data.keyword.cloud_notm}} Private、IBM Middleware 內容、{{site.data.keyword.containerlong_notm}} 及 vCenter Server on {{site.data.keyword.cloud_notm}}，將典型 WebSphere Application Server 應用程式現代化。我們全都在雲端旅程中，而且各自在該旅程的不同定點上。透過應用程式架構設計師 Jane 與雲端基礎架構設計師 Todd 的漸進式步驟，我們將一個稱為 Stock Trader 的現有應用程式進行現代化。請檢閱範例，以協助您在旅程中採取每個步驟，並實現您的企業價值，不論每個步驟是大還是小。我們聚焦在以下四個主題：應用程式、DevOps、整合和管理。所有佈景主題都會共同運作，協助您達到目標。現代化一個佈景主題，而未現代化其他佈景主題，可能會導致問題。
-
-## 相關鏈結
-{: #vcscar-intro-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-22"
 
 keywords: VMware HCX standalone, HCX on-premises, order HCX
 
@@ -18,7 +18,7 @@ subcollection: vmware-solutions
 # 訂購內部部署 VMware HCX on IBM Cloud 實例
 {: #standalone_orderingserviceinstances}
 
-您可以訂購內部部署 HCX on {{site.data.keyword.cloud}} 實例，而不需要將其關聯至任何 vCenter Server with Hybridity Bundle 實例，以授權及啟動內部部署 HCX on {{site.data.keyword.cloud_notm}} 安裝。
+您可以訂購內部部署 HCX on {{site.data.keyword.cloud}} 實例，而不需要將其關聯至任何 vCenter Server  實例，以授權及啟動內部部署 HCX on {{site.data.keyword.cloud_notm}} 安裝。
 
 ## 開始之前
 {: #standalone_orderingserviceinstances-reqs}

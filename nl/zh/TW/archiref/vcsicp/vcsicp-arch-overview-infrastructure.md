@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-22"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -18,7 +18,7 @@ subcollection: vmware-solutions
 ## 虛擬遞送及轉遞
 {: #vcsicp-arch-overview-infrastructure-vrf}
 
-您可以將 {{site.data.keyword.cloud}} 帳戶配置為「虛擬遞送及轉遞 (VRF)」帳戶，以啟用子網路 IP 區塊之間的自動廣域遞送。所有具有「直接鏈結」連線的帳戶都必須轉換或建立為 VRF 帳戶。
+您可以將 {{site.data.keyword.cloud}} 帳戶配置為「虛擬遞送及轉遞 (VRF)」帳戶，以啟用子網路 IP 區塊之間的自動廣域遞送。所有具有 Direct Link 連線的帳戶都必須轉換或建立為 VRF 帳戶。
 
 ## Direct Link
 {: #vcsicp-arch-overview-infrastructure-direct-link}
@@ -36,7 +36,7 @@ strongSwan IPSec VPN 服務在網際網路上，提供以業界標準「網際�
 ### Hybridity (HCX)
 {: #vcsicp-arch-overview-infrastructure-hcx}
 
-vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 可以將內部部署資料中心的網路無縫地擴充至 {{site.data.keyword.cloud_notm}}，這容許將虛擬機器 (VM) 移轉至 {{site.data.keyword.cloud_notm}} 或從該處移轉，而不需要進行任何轉換或變更。
+vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 可以將內部部署資料中心的網路無縫地擴充至 {{site.data.keyword.cloud_notm}}。此處理程序容許將虛擬機器 (VM) 移轉至 {{site.data.keyword.cloud_notm}} 或從該處移轉，而不需要進行任何轉換或變更。
 
 ## 實體結構
 {: #vcsicp-arch-overview-infrastructure-phys-struct}
@@ -64,8 +64,3 @@ CPU | 28 核心 2.2 GHz | 28 核心 2.2 GHz
 ESG 配置成具有來源 NAT 規則 (SNAT) 以容許出埠資料流量，這會啟用網際網路連線功能來下載 {{site.data.keyword.icpfull_notm}} 必要條件，以及連接至 GitHub 及 Docker。或者，您也可以使用 Web Proxy 來提供網際網路連線功能。ESG 也會配置為提供對 DNS 和 NTP 服務的存取權。
 
 ESG 也配置成具有從 {{site.data.keyword.cloud_notm}} 10.x 網路之 {{site.data.keyword.icpfull_notm}} 主節點/Proxy 虛擬 IP 位址到 VXLAN 環境的目的地 NAT 規則 (DNAT)。
-
-## 相關鏈結
-{: #vcsicp-arch-overview-infrastructure-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

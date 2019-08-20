@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-26"
 
 keywords: vSphere, vSphere component, tech specs vSphere
 
@@ -41,7 +41,7 @@ VMware vSphere on {{site.data.keyword.cloud_notm}}의 컴포넌트를 검토하�
 {: #vs_vsphereclusteroverview-specs-vmware-components}
 
 다음 VMware 컴포넌트에 대한 라이센스(IBM 제공 또는 BYOL)를 선택하십시오.
-* VMware vSphere Enterprise Plus 6.7 U1 또는 6.5 U2
+* VMware vSphere Enterprise Plus 6.7 U2 또는 6.5 U2
 * 다음 VMware 컴포넌트는 선택사항입니다.
    * VMware vCenter Server Standard
    * VMware NSX(Base, Advanced 또는 Enterprise)
@@ -56,6 +56,7 @@ VMware vSphere on {{site.data.keyword.cloud_notm}}의 컴포넌트를 검토하�
 
 다음 구성 중 하나로 두 개 이상의 {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}를 주문할 수 있습니다.
 * **Skylake**: 선택한 CPU 모델 및 RAM 크기를 사용하는 두 개의 CPU Intel Skylake 세대 서버(Intel Xeon 4100/5100/6100 시리즈)
+* **Cascade**: 선택한 CPU 모델 및 RAM 크기를 사용하는 두 개의 CPU Intel Cascade 세대 서버(Intel Xeon 4200/5200/6200 시리즈)
 * **SAP-certified**: 선택한 CPU 모델을 사용하는 Intel Skylake 또는 Intel Broadwell 세대 서버(Intel Xeon 6140/E5-2690/E7-8890 시리즈)
 * **Broadwell**: 선택한 CPU 모델 및 RAM 크기를 사용하는 네 개의 Intel Broadwell 세대 서버(Intel Xeon E7-4800 시리즈)
 
@@ -102,7 +103,7 @@ VMware vSAN 컴포넌트가 선택될 때 vSAN 구성을 위한 사용자 정의
 ### 확장 노드를 위한 VMware 컴포넌트
 {: #vs_vsphereclusteroverview-expansion-node-specs-vmware-components}
 
-* VMware vSphere Enterprise Plus 6.7u1 이상 6.5u2가 있는 하나의 {{site.data.keyword.cloud_notm}} Bare Metal Server입니다.  
+* VMware vSphere Enterprise Plus 6.7u2 또는 6.5u2가 있는 하나의 {{site.data.keyword.cloud_notm}} Bare Metal Server입니다.  
 * [VMware vSphere on {{site.data.keyword.cloud_notm}} 클러스터의 기술 스펙](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#specs)에 표시된 선택적 VMware 컴포넌트입니다.
 
 {{site.data.keyword.slportal}}에서만 {{site.data.keyword.cloud_notm}} 계정에 주문되어 제공되는 ESXi 서버, 선택적 VMware 컴포넌트 및 추가적인 하드웨어를 관리해야 합니다. {{site.data.keyword.vmwaresolutions_short}} 콘솔에서 새 클러스터를 작성한 후에는 콘솔로 돌아가서 저장된 구성을 사용하여 새 클러스터를 스케일링할 수 있습니다. 자세한 정보는 [기존 vSphere 클러스터 스케일링](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters)을 참조하십시오.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-29"
 
 keywords: NetApp order instance, order NetApp ONTAP, order NetApp
 
@@ -42,8 +42,9 @@ Wenn Sie eine NetApp ONTAP Select-Instanz bestellen, müssen Sie die folgenden B
 {: #np_orderinginstances-instance-name}
 
 Der Instanzname muss die folgenden Anforderungen erfüllen:
-* Es sind nur alphanumerische Zeichen und Bindestriche (-) zulässig.
-* Der Instanzname muss mit einem alphabetischen Zeichen beginnen und mit einem alphanumerischen Zeichen enden.
+* Es sind nur Kleinbuchstaben, Ziffern und Gedankenstriche (-) zulässig.
+* Der Instanzname muss mit einem Kleinbuchstaben beginnen.
+* Der Instanzname muss entweder auf einen Kleinbuchstaben oder auf eine Ziffer enden.
 * Die maximale Länge des Instanznamens beträgt 10 Zeichen.
 * Der Instanzname muss innerhalb Ihres Kontos eindeutig sein.
 
@@ -56,26 +57,29 @@ Sie müssen die folgenden Netzschnittstelleneinstellungen angeben, wenn Sie eine
 {: #np_orderinginstances-host-name-prefix}
 
 Das Hostnamenspräfix muss die folgenden Anforderungen erfüllen:
-*  Es sind nur alphanumerische Zeichen und Bindestriche (-) zulässig.
-*  Das Hostnamenspräfix muss mit einem alphanumerischen Zeichen beginnen und enden.
-*  Die maximale Länge des Hostnamenspräfix beträgt 10 Zeichen.
+* Es sind nur Kleinbuchstaben, Ziffern und Gedankenstriche (-) zulässig.
+* Das Hostnamen-Präfix muss mit einem Kleinbuchstaben beginnen.
+* Das Hostnamen-Präfix muss entweder auf einen Kleinbuchstaben oder auf eine Ziffer enden.
+* Die maximale Länge des Hostnamenspräfix beträgt 10 Zeichen.
 
 ### Unterdomänenbezeichnung
 {: #np_orderinginstances-subdomain-label}
 
 Die Unterdomänenbezeichnung muss die folgenden Anforderungen erfüllen:
-*  Es sind nur alphanumerische Zeichen und Bindestriche (-) zulässig.
-*  Die Unterdomänenbezeichnung muss mit einem alphabetischen Zeichen beginnen und mit einem alphanumerischen Zeichen enden.
-*  Die maximale Länge der Unterdomänenbezeichnung beträgt 10 Zeichen.
+* Es sind nur Kleinbuchstaben, Ziffern und Gedankenstriche (-) zulässig.
+* Die Unterdomänenbezeichnung muss mit einem Kleinbuchstaben beginnen.
+* Die Unterdomänenbezeichnung muss entweder auf einen Kleinbuchstaben oder auf eine Ziffer enden.
+* Die maximale Länge der Unterdomänenbezeichnung beträgt 10 Zeichen.
 
 ### Domänenname
 {: #np_orderinginstances-domain-name}
 
 Der Rootdomänenname muss die folgenden Anforderungen erfüllen:
 * Der Domänenname muss aus zwei oder mehr Zeichenfolgen bestehen, die jeweils durch einen Punkt (.) voneinander getrennt sind.
-* Die erste Zeichenfolge muss mit einem alphabetischen Zeichen beginnen und mit einem alphanumerischen Zeichen enden.
-* In allen Zeichenfolgen mit Ausnahme der letzten dürfen nur alphanumerische Zeichen und Gedankenstriche (-) enthalten sein.
-* In der letzten Zeichenfolge dürfen nur Buchstaben enthalten sein.
+* Die erste Zeichenfolge muss mit einem Kleinbuchstaben beginnen.
+* Die erste Zeichenfolge muss entweder auf einen Kleinbuchstaben oder auf eine Ziffer enden.
+* Alle Zeichenfolgen mit Ausnahme der letzten dürfen nur Kleinbuchstaben, Ziffern und Gedankenstriche (-) enthalten.
+* Die letzte Zeichenfolge darf nur Kleinbuchstaben enthalten.
 * Die Länge der letzten Zeichenfolge muss zwischen 2 und 24 Zeichen betragen.
 
 Die maximale Länge des vollständig qualifizierten Domänennamens für Hosts und VMs beträgt 50 Zeichen. Domänennamen müssen diese maximale Länge zulassen.
@@ -108,7 +112,7 @@ Wählen Sie eine Ihren Anforderungen entsprechende Bare Metal Server-Konfigurati
 ### Bare Metal Server-Anzahl
 {: #np_orderinginstances-bare-metal-number}
 
-Die Anzahl der ESXi-Server einer NetApp ONTAP Select-Instanz ist standardmäßig 4. Dieser Wert kann nicht geändert werden. Alle ESXi-Server verfügen über dieselbe Konfiguration.
+Die Anzahl der ESXi-Server einer NetApp ONTAP Select-Instanz ist standardmäßig vier. Dieser Wert kann nicht geändert werden. Alle ESXi-Server verfügen über dieselbe Konfiguration.
 
 ## Bestellübersicht
 {: #np_orderinginstances-order-summary}

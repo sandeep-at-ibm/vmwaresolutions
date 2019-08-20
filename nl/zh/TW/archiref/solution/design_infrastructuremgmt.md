@@ -24,7 +24,7 @@ subcollection: vmware-solutions
 
 此設計使用整合至 vCenter Server 實例的 PSC 功能。PSC 及 vCenter Server 位於相同的虛擬機器 (VM) 內。
 
-![基礎架構管理](../../images/vcsv4radiagrams-ra-inframgmt.svg "基礎架構管理")
+![基礎架構管理](../../images/vcsv4radiagrams-ra-inframgmt.svg "基礎架構管理"){: caption="圖 1. 基礎架構管理" caption-side="bottom"}
 
 位於主要實例的 PSC 會獲指派預設 SSO 網域 `vsphere.local`。
 

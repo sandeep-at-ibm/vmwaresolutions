@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-07-16"
 
 subcollection: vmware-solutions
 
@@ -23,7 +23,7 @@ subcollection: vmware-solutions
 
 Per abilitare la codifica vSphere o vSAN utilizzando KMIP for VMware on {{site.data.keyword.cloud_notm}}, devi completare le seguenti attività:
 
-1. [Abilitazione del tuo account per l'utilizzo degli endpoint del servizio utilizzando la CLI IBM Cloud](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps).
+1. [Abilitazione degli endpoint del servizio nel tuo account](/docs/account?topic=account-vrf-service-endpoint#service-endpoint).
 2. Crea un'istanza del gestore chiavi, utilizzando [IBM Key Protect](/docs/services/key-protect?topic=key-protect-getting-started-tutorial) o [IBM Cloud Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-get-started#get-started). Se stai utilizzando Hyper Protect Crypto Services, assicurati di [inizializzare la tua istanza di crittografia](/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-hsm) in modo che Hyper Protect Crypto Services possa fornire le funzioni correlate alla chiave.
 3. Crea una chiave root del cliente (CRK) all'interno della tua istanza del gestore chiavi.
 4. Crea [un ID del servizio e una chiave API](/docs/iam?topic=iam-serviceidapikeys) Identity and Access Management (IAM) da utilizzare con KMIP for VMware. Concedi a questo ID del servizio l'accesso come visualizzatore alla piattaforma e come scrittore al servizio per la tua istanza del gestore chiavi.

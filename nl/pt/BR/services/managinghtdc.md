@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-23"
 
 keywords: HTDC WebGUI, HTDC console, enable internet HTDC
 
@@ -63,7 +63,7 @@ Para ambientes do vCenter Server somente privado, o VMware NSX Edge Services Gat
 1. Conclua as etapas de 1 a 3 no procedimento anterior.
 2. Clique em **Configurações** e, em seguida, em **Interfaces**. Anote o endereço IP para o uplink privado. Esse endereço se torna o novo gateway padrão.
 3. Clique em **Página inicial > Hosts e Clusters** e localize as VMs do HyTrust. Clique com o botão direito do mouse em uma das VMs e clique em **Abrir console**.
-4. Efetue login no console usando as credenciais do console que podem ser localizadas na página de detalhes do serviço HyTrust DataControl on IBM Cloud no console do {{site.data.keyword.vmwaresolutions_short}}.
+4. Efetue login no console usando as credenciais do console que podem ser localizadas na página de detalhes do serviço HyTrust DataControl on {{site.data.keyword.cloud_notm}} no console do {{site.data.keyword.vmwaresolutions_short}}.
 5. Para obter o endereço IP do gateway padrão atual a partir da VM, clique em **Gerenciar configurações de rede > Mostrar configuração de rede atual**. Anote o endereço IP que está listado para **Gateway**. Esse endereço se torna o gateway usado para a rota estática.
 6. Para configurar uma rota estática para a VM, clique em **Gerenciar configurações de rede > Gerenciar rotas estáticas > Incluir rota estática**. Configure **Endereço de rede** para `10.0.0.0/8` e **Gateway** para o endereço IP anotado na etapa anterior.
 7. Para configurar o IP do gateway padrão para a VM, clique em **Gerenciar configurações de rede > Mudar a configuração de rede atual**. Se você receber uma mensagem de aviso, clique em **OK** e, em seguida, clique em **Configuração customizada**. Configure o campo **Gateway** para o endereço IP de uplink privado anotado na etapa 2 e clique em **OK**. Aguarde até que a nova configuração de rede esteja instalada e os serviços de rede sejam reiniciados.
@@ -75,7 +75,7 @@ Para ambientes do vCenter Server somente privado, o VMware NSX Edge Services Gat
 ## Links relacionados
 {: #managinghtdc-related}
 
-* [HyTrust DataControl no {{site.data.keyword.cloud_notm}} visão geral](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htdc_considerations)
+* [Visão geral do HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htdc_considerations)
 * [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [Perguntas mais frequentes](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [HyTrust Website](https://www.hytrust.com/){:external}

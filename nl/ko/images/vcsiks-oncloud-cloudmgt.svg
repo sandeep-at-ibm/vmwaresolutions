@@ -262,12 +262,12 @@
          id="text73">IBM Cloud Private</text>
       <text
          x="46.5"
-         y="632"
+         y="630"
          id="text75">Cloud Automation Manager</text>
       <text
          x="243"
          y="630"
-         id="text77">Containers</text>
+         id="text77">Container</text>
     </g>
     <image
        x="199"
@@ -374,11 +374,11 @@
        id="g109">
       <text
          x="462.96"
-         y="140.87"
+         y="143.87"
          id="text111">IBM Cloud for</text>
       <text
          x="462.96"
-         y="157.87"
+         y="160.87"
          id="text113">VMware Solutions</text>
     </g>
     <g
@@ -388,11 +388,11 @@
        id="g115">
       <text
          x="649.36"
-         y="140.69"
+         y="143.69"
          id="text117">IBM Kubernetes</text>
       <text
          x="649.36"
-         y="157.69"
+         y="160.69"
          id="text119">
         <tspan
            style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
@@ -568,7 +568,7 @@
             <xhtml:div
                display="inline-block"
                text-align="inherit"
-               text-decoration="inherit">Worker Pool</xhtml:div>
+               text-decoration="inherit">작업자 풀</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text
@@ -839,7 +839,7 @@
        id="g255">
       <text
          x="629"
-         y="227.5"
+         y="222.5"
          id="text257">
         <tspan
            style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"

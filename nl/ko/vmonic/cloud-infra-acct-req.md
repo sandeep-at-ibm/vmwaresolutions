@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-07-23"
 
 keywords: user account, user permissions, VRF account
 
@@ -55,12 +55,12 @@ subcollection: vmware-solutions
 {{site.data.keyword.cloud_notm}} 인프라 계정은 VRF(Virtual Routing and Forwarding) 계정이어야 합니다. 사용자 계정이 비 VRF인 경우, VRF 계정으로 변환해야 합니다. 또한 서비스 엔드포인트를 사용하기 위해 VRF 계정을 사용으로 설정하는 것이 좋습니다.
 
 자세한 정보는 다음을 참조하십시오.
-* [IBM Cloud의 VRF 개요](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-* [서비스 엔드포인트 사용을 위해 계정 사용](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
+* [{{site.data.keyword.cloud_notm}}의 VRF 개요](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
+* [서비스 엔드포인트 사용](/docs/account?topic=account-vrf-service-endpoint#service-endpoint)
 
 ## 관련 링크
 {: #cloud-infra-acct-req-related}
 
 * [vCenter Server 인스턴스에 대한 요구사항](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [사용자 계정 및 설정](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)
-* [IBM Cloud의 VRF 개요](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
+* [{{site.data.keyword.cloud_notm}}의 VRF 개요](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -23,7 +23,7 @@ VMware HCX on IBM Cloud를 설치하려면 다음 소프트웨어 요구사항�
 {: #hcxclient-planning-config-net}
 
 HCX는 공용 인터넷 및 사설 회선을 순회하고 네트워크, 스위치 및 포트 그룹과 같은 데이터 센터 컴포넌트에 연결해야 합니다.
-* [포트 액세스 요구사항](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-port-req)에는 HCX 가상 어플라이언스가 설치될 수 있도록 열려 있어야 하는 포트가 나열되어 있습니다.
+* HCX 가상 어플라이언스가 설치될 수 있도록 열려 있어야 하는 포트에 대한 정보는 [포트 액세스 요구사항](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-port-req)을 참조하십시오.
 * 온프레미스 vSphere 환경 및 VCS HCX Cloud 환경은 모두 vSphere 온프레미스 디바이스와 VCS HCX 디바이스 사이에 NTP(Network Time Protocol) 클럭 동기화를 허용해야 합니다. UDP 포트 123은 HCX 가상 어플라이언스 및 네트워크에 액세스할 수 있어야 합니다.
 
 ## 온프레미스 환경
@@ -137,14 +137,12 @@ VXLAN 트래픽을 전환하는 것을 나타냅니다.
 ## 이동 전 테스트
 {: #hcxclient-planning-preflight-tests}
 
-이동 전 테스트에서는 기준선 전송 속도를 설정하기 위해
-vMotion과 대량 마이그레이션 기능을 모두 사용하여 HCX 마이그레이션을
-수행합니다.
+이동 전 테스트에서는 기준선 전송 속도를 설정하기 위해 vMotion과 대량 마이그레이션 기능을 모두 사용하여 HCX 마이그레이션을 수행합니다.
 
 ## 비프로덕션 앱 마이그레이션
 {: #hcxclient-planning-mig-non-prod-apps}
 
-VM 마이그레이션은 일련의 계획된 덜 중요한 VM 단계로 시작합니다. 개발과 테스트 등에서는 마이그레이션과 확장 L2 트래픽에 인터넷 연결을 사용합니다.
+VM 마이그레이션은 일련의 계획된 덜 중요한 VM 단계로 시작합니다. 개발 및 테스트 팀에서는 마이그레이션과 확장 L2 트래픽에 인터넷 연결을 사용합니다.
 
 ## 클라우드 네트워크 디자인 및 구현 시작
 {: #hcxclient-planning-cloud-net-begins}
@@ -171,10 +169,7 @@ HCX에서 마이그레이션과 확장 L2 트래픽에 전용 사설 네트워�
 
 물리적 디바이스와 마이그레이션된 VM 간에 연결이 유지보수되는 경우
 마이그레이션을 종료할 때 HCX를 제거하려면 서브넷이 소스와 대상에
-없어야 합니다. 즉, 확장 L2 네트워크에 있는
-소스 사이트에 남겨진 모든 물리적 디바이스는 클라우드 측으로
-라우팅될 수 있는 다른 네트워크 서브넷으로 마이그레이션해야
-합니다. 단, NSX L2 VPN과 같은 다른 확장 L2 기술을
+없어야 합니다. 즉, 확장 L2 네트워크에 있는 소스 사이트에 남겨진 모든 물리적 디바이스는 클라우드 측으로 라우팅될 수 있는 다른 네트워크 서브넷으로 마이그레이션해야 합니다. 단, NSX L2 VPN과 같은 다른 확장 L2 기술을
 사용하여 HCX 확장 L2 엔드포인트를 대체하는 경우는
 예외입니다.
 

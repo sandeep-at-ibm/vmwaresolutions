@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-07-26"
 
 keywords: vCenter Server, vCenter Server architecture, tech specs vCenter Server
 
@@ -75,6 +75,7 @@ VMware vSAN 也以專用儲存空間選項提供。若要增加 vSAN 叢集的 v
 
 您可以使用下列其中一項配置，訂購三部以上的 {{site.data.keyword.baremetal_short}}：
 * **Skylake**：2-CPU Intel Skylake 產生伺服器（Intel Xeon 4100/5100/6100 系列），搭配您選取的 CPU 型號及 RAM 大小。
+* **Cascade**：2-CPU Intel Cascade 世代伺服器（Intel Xeon 4200/5200/6200 系列），搭配您選取的 CPU 型號及 RAM 大小。
 * **SAP 認證**：Intel Skylake 或 Intel Broadwell 產生伺服器（Intel Xeon 6140/E5-2690/E7-8890 系列），搭配您選取的 CPU 型號。
 * **Broadwell**：4-CPU Intel Broadwell 世代伺服器（Intel Xeon E7-4800 系列），搭配您選取的 CPU 型號及 RAM 大小。
 
@@ -146,7 +147,7 @@ NFS 選項為工作負載提供自訂的共用檔案層次儲存空間，以及�
 ### 授權（IBM 提供或 BOYL）與費用
 {: #vc_vcenterserveroverview-license-and-fee}
 
-* VMware vSphere Enterprise Plus 6.5u2 或 6.7u1
+* VMware vSphere Enterprise Plus 6.5u2 或 6.7u2
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.4
 * （針對 vSAN 叢集）VMware vSAN Advanced 或 Enterprise 6.6
@@ -165,7 +166,7 @@ NFS 選項為工作負載提供自訂的共用檔案層次儲存空間，以及�
 ### 擴充節點的授權與費用
 {: #vc_vcenterserveroverview-expansion-node-license-and-fee}
 
-* 一個 VMware vSphere Enterprise Plus 6.5u2 或 6.7u1
+* 一個 VMware vSphere Enterprise Plus 6.5u2 或 6.7u2
 * 一個 VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.4
 * 一筆支援與服務費用
 * （針對 vSAN 叢集）VMware vSAN Advanced 或 Enterprise 6.6

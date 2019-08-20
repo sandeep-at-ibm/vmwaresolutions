@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -45,8 +45,3 @@ subcollection: vmware-solutions
   -	随着资产数量增加，增加用于横向扩展的数据节点。
 
 在任何 VM 部署之前，所有组件都必须具有 FQDN 并已在 DNS 中注册。此步骤由 IBM Cloud for VMware Solutions 自动化针对初始“一体化”部署执行，但在缩放部署时是您的责任。
-
-## 相关链接
-{: #caveonix-step1-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

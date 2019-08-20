@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-22"
 
 keywords: IBM Spectrum Protect Plus, SPP configuration, order SPP
 
@@ -25,14 +25,14 @@ subcollection: vmware-solutions
 
 以下のいずれかの方法を使用して、新しいインスタンスで IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} を注文できます。
 * {{site.data.keyword.vmwaresolutions_short}} コンソールから新しいインスタンスを注文する時に、**「サービス」**セクションで**「IBM Spectrum Protect Plus on IBM Cloud」**を選択します。
-* {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**アイコンをクリックしてから、**「VMware サービス」**セクションの**「IBM Spectrum Protect Plus on IBM Cloud」**カードをクリックします。サービス設定を指定し、**「Add to New Instance」**を選択します。
+* {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**アイコンをクリックしてから、**「VMware サービス」**セクションの**「IBM Spectrum Protect Plus on IBM Cloud」**カードをクリックします。 サービス設定を指定し、**「Add to New Instance」**を選択します。
 
 ## 既存のインスタンスでの IBM Spectrum Protect Plus on IBM Cloud の注文
 {: #spp_ordering-existing}
 
 以下のいずれかの方法を使用して、既存のインスタンスに IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} サービスを追加できます。
 * {{site.data.keyword.vmwaresolutions_short}} コンソールから、サービスを追加する対象のインスタンスを表示し、左側のナビゲーション・ペインにある**「サービス」**をクリックし、**「追加」**をクリックします。
-* {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**アイコンをクリックしてから、**「VMware サービス」**セクションの**「IBM Spectrum Protect Plus on IBM Cloud」**カードをクリックします。サービス設定を指定し、**「Add to Existing Instance」**を選択します。
+* {{site.data.keyword.cloud_notm}} のカタログで、左側のナビゲーション・ペインの**「VMware」**アイコンをクリックしてから、**「VMware サービス」**セクションの**「IBM Spectrum Protect Plus on IBM Cloud」**カードをクリックします。 サービス設定を指定し、**「Add to Existing Instance」**を選択します。
 
 ## IBM Spectrum Protect Plus on IBM Cloud サービスの構成
 {: #spp_ordering-config}
@@ -76,6 +76,5 @@ IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} のデプロイメ
 * [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} Preventive Service Planning](https://www-01.ibm.com/support/docview.wss?uid=swg22012650){:external}
 * [IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingspp) の管理
 * [vCenter Server インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
-* [vCenter Server with Hybridity Bundle インスタンスのサービスの注文、表示、削除](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
 * [IBM Spectrum Protect Plus の資料](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html){:external}
 * [IBM サポートへのお問い合わせ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

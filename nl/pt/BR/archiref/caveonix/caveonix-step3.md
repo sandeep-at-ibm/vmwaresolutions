@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -27,8 +27,3 @@ Para o ajuste de escala, o cliente precisa chamar o script para provisionar as t
 - Certificados para todos os serviços
 
 No final dessa etapa, os componentes do aplicativo são instalados nas máquinas virtuais (MVs) necessárias.
-
-## Links relacionados
-{: #caveonix-step3-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

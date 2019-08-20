@@ -53,7 +53,7 @@ Deve-se especificar as seguintes configurações do sistema ao pedir uma instân
 
 O nome da instância deve atender aos requisitos a seguir:
 * Apenas caracteres alfanuméricos e o traço (-) são permitidos.
-* O nome da instância deve iniciar com um caractere alfabético e terminar com um caractere alfanumérico.
+* O nome da instância deve começar com um caractere alfabético e terminar com um caractere alfanumérico.
 * O comprimento máximo do nome da instância é de 10 caracteres.
 * O nome da instância deve ser exclusivo dentro de sua conta.
 
@@ -93,7 +93,7 @@ As configurações de Bare Metal são baseadas em sua seleção de configuraçã
 
 Quatro servidores ESXi são necessários para os clusters iniciais e pós-implementação para configurações do vSAN. Todos os servidores ESXi compartilham a mesma configuração. Na pós-implementação, é possível incluir mais quatro clusters.
 
-### Local do datacenter
+### Local do data center
 {: #vc_hybrid_orderinginstance-dc-location}
 
 Selecione o {{site.data.keyword.CloudDataCent_notm}} no qual a instância deve ser hospedada.
@@ -158,7 +158,7 @@ Deve-se especificar as configurações da interface de rede a seguir ao pedir um
 
 O rótulo do subdomínio deve atender aos requisitos a seguir:
 * Apenas caracteres alfanuméricos e o traço (-) são permitidos.
-* O rótulo do subdomínio deve iniciar com um caractere alfabético e terminar com um caractere alfanumérico.
+* O rótulo do subdomínio deve começar com um caractere alfabético e terminar com um caractere alfanumérico.
 * O comprimento máximo do rótulo do subdomínio é de 10 caracteres.
 * O rótulo do subdomínio deve ser exclusivo em todas as instâncias em sua configuração de vários sites.
 
@@ -300,7 +300,7 @@ Se você mudar esses componentes fora do console do {{site.data.keyword.vmwareso
 ## Links relacionados
 {: #vc_hybrid_orderinginstance-related}
 
-* [Assinando uma conta do {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts)
+* [Inscrevendo-se em uma conta do {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts)
 * [Visualizando instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
 * [Configuração multissite para instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_multisite)
 * [Incluindo e visualizando clusters para instâncias do vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingviewingclusters)

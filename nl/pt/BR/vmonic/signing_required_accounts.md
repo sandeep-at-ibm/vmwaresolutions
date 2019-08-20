@@ -18,7 +18,7 @@ subcollection: vmware-solutions
 {:note: .note}
 {:important: .important}
 
-# Inscrevendo-se para contas necessárias
+# Inscrevendo-se em contas necessárias
 {: #signing_required_accounts￼}
 
 ## Inscrevendo-se para uma conta do IBM Cloud

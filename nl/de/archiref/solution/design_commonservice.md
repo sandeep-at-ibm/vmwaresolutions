@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -37,9 +37,9 @@ Das Design bietet darüber hinaus die Option, zwei hoch verfügbare MSAD-Server 
 Wenn Sie die Option mit zwei hoch verfügbaren MSAD-Servern auswählen, sind Sie für die Bereitstellung der Microsoft-Lizenzierung und -Aktivierung verantwortlich.
 {:note}
 
-Active Directory dient nur zur Authentifizierung von Zugriffen für die Verwaltung der VMware-Instanz und nicht zur Speicherung von Benutzern der Workloads in bereitgestellten Instanzen. Der Gesamtstrukturrootname des Active Directory-Servers stimmt mit dem DNS-Domänennamen überein, den Sie angeben. Dieser Domänenname wird nur für die primäre vCenter Server-Instanz angegeben, wenn mehrere Instanzen verknüpft sind. Bei verknüpften Instanzen enthält jede Instanz einen Active Directory Server, der sich im Rootreplikatring der Gesamtstruktur befindet. Die DNS-Zonendateien werden ebenfalls auf die Active Directory Server repliziert.
+Active Directory dient nur zur Authentifizierung von Zugriffen für die Verwaltung der VMware-Instanz und nicht zur Speicherung von Benutzern der Workloads in bereitgestellten Instanzen. Der Gesamtstrukturrootname des Active Directory-Servers stimmt mit dem DNS (Domain Name Services)-Domänennamen überein, den Sie angeben. Dieser Domänenname wird nur für die primäre vCenter Server-Instanz angegeben, wenn mehrere Instanzen verknüpft sind. Bei verknüpften Instanzen enthält jede Instanz einen Active Directory Server, der sich im Rootreplikatring der Gesamtstruktur befindet. Die DNS-Zonendateien werden ebenfalls auf die Active Directory Server repliziert.
 
-### vSphere-SSO-Domäne
+### vSphere-SSO (Single Sign-On)-Domäne
 {: #design_commonservice-vsphere-sso}
 
 Die SSO-Domäne (Single Sign On) für vSphere wird als erster Authentifizierungsmechanismus für eine einzelne Instanz oder mehrere verknüpfte Instanzen verwendet. Die SSO-Domäne dient außerdem dazu, eine VMware-Instanz oder mehrere verknüpfte Instanzen mit dem MSAD-Server zu verbinden. Die folgende SSO-Konfiguration wird angewendet:  
@@ -69,19 +69,19 @@ In diesem Design werden DNS-Services auf den AD-VSIs durch die folgende Konfigur
 ### Sekundäre vCenter Server-Instanzen
 {: #design_commonservice-secondary-vcs}
 
-Für die instanzenübergreifende Redundanz: Wenn die erste sekundäre vCenter Server-Instanz einer vorhandenen primären vCenter Server-Instanz oder der aktuellen eigenständigen vCenter Server-Instanz hinzugefügt wird, wird die IP-Adresse der primären AD/DNS-Server-Instanz in der sekundären vCenter Server-Instanz und allen nachfolgenden sekundären vCenter Server-Instanzen verwendet - "sekundärer DNS"-Eintrag für alle Komponenten, die einen DNS-Servereintrag erfordern. Beispiel: ESXi, vCenter und NSX Manager. Dazu gehören Add-on-Komponenten, wie z. B. HCX, Zerto und Veeam. Der sekundäre DNS-Eintrag des primären Standortes wird dann zur AD/DNS-IP-Adresse der ersten sekundären vCenter Server-Instanz geändert.
+Für die instanzenübergreifende Redundanz gilt: Wenn die erste sekundäre vCenter Server-Instanz einer vorhandenen primären vCenter Server-Instanz oder der aktuellen eigenständigen vCenter Server-Instanz hinzugefügt wird, wird die IP-Adresse der primären AD/DNS-Server-Instanz in der sekundären vCenter Server-Instanz und allen nachfolgenden sekundären vCenter Server-Instanzen verwendet - "sekundärer DNS"-Eintrag für alle Komponenten, die einen DNS-Servereintrag erfordern. Dies können z. B. ESXi, vCenter und NSX Manager sowie Add-on-Komponenten sein wie HCX, Zerto und Veeam. Der sekundäre DNS-Eintrag des primären Standortes wird dann zur AD/DNS-IP-Adresse der ersten sekundären vCenter Server-Instanz geändert.
 
 ## NTP-Services
 {: #design_commonservice-ntp}
 
-In diesem Design werden die NTP-Server der {{site.data.keyword.cloud_notm}}-Infrastruktur verwendet. Alle bereitgestellten Komponenten werden so konfiguriert, dass sie diese NTP-Server verwenden. Die Tatsache, dass alle Komponenten im Design denselben NTP-Server verwenden, ist für die korrekte Funktion von Zertifikaten und der Active Directory-Authentifizierung von kritischer Bedeutung.
+Bei diesem Design werden die NTP-Server der {{site.data.keyword.cloud_notm}}-Infrastruktur verwendet. Alle bereitgestellten Komponenten werden so konfiguriert, dass sie diese NTP-Server verwenden. Es ist wichtig, dass alle Komponenten im Design denselben NTP-Server verwenden, damit Zertifikate und die Active Directory-Authentifizierung korrekt funktionieren.
 
 ![NTP- und DNS-Services](../../images/vcsv4radiagrams-ra-servicesinterconnections.svg "NTP- und DNS-Services")
 
 ## Zertifizierungsstellenservices
 {: #design_commonservice-cas}
 
-VMware vSphere verwendet standardmäßig TLS-Zertifikate, die von der VMware-Zertifizierungsstelle (VMware Certificate Authority - VMCA) signiert werden, die sich auf der VMware Platform Services Controller-Appliance befindet.Diese Zertifikate werden von den Geräten oder Browsern der Endbenutzer nicht anerkannt. Es ist ein bewährtes Sicherheitsverfahren, die an Benutzer gerichteten Zertifikate durch Zertifikate zu ersetzen, die von einer Zertifizierungsstelle (CA) eines anderen Anbieters oder von einer Zertifizierungsstelle des Unternehmens signiert werden. Zertifikate für die Kommunikation zwischen Maschinen können als VMCA-signierte Zertifikate beibehalten werden. Allerdings wird empfohlen, die bewährten Verfahren der jeweiligen Organisation anzuwenden, die in der Regel die Verwendung einer identifizierten Unternehmenszertifizierungsstelle vorsehen.
+Standardmäßig verwendet VMware vSphere TLS-Zertifikate, die von der VMware-Zertifizierungsstelle (VMCA) signiert sind und sich auf der VMware Platform Services Controller-Appliance befinden. Diese Zertifikate werden von den Geräten oder Browsern der Benutzer nicht anerkannt. Es ist ein bewährtes Sicherheitsverfahren, die an Benutzer gerichteten Zertifikate durch Zertifikate zu ersetzen, die von einer Zertifizierungsstelle (CA) eines anderen Anbieters oder von einer Zertifizierungsstelle des Unternehmens signiert werden. Zertifikate für die Machine-to-Machine-Kommunikation können VMCA-signierte Zertifikate bleiben. Es wird jedoch empfohlen, den bewährten Verfahren für Ihre Organisation zu folgen, bei denen normalerweise eine angegebene Unternehmens-CA verwendet wird.
 
 Sie können die Windows-AD-Server in diesem Design verwenden, um Zertifikate zu erstellen, die von der lokalen Instanz signiert werden. Sie können bei Bedarf jedoch auch Zertifizierungsstellenservices (CA-Services) konfigurieren.
 

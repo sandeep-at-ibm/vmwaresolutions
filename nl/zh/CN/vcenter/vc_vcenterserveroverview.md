@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-07-26"
 
 keywords: vCenter Server, vCenter Server architecture, tech specs vCenter Server
 
@@ -75,6 +75,7 @@ vCenter Server 实例中包含以下组件。
 
 可以使用下列其中一个配置来订购三个或更多 {{site.data.keyword.baremetal_short}}：
 * **Skylake**：具有所选 CPU 型号和 RAM 大小的 2 个 CPU Intel Skylake 代服务器（Intel Xeon 4100/5100/6100 系列）。
+* **Cascade**：具有所选 CPU 型号和 RAM 大小的 2 个 CPU Intel Cascade 代服务器（Intel Xeon 4200/5200/6200 系列）。
 * **SAP 认证**：具有所选 CPU 型号的 Intel Skylake 或 Intel Broadwell 代服务器（Intel Xeon 6140/E5-2690/E7-8890 系列）。
 * **Broadwell**：具有所选 CPU 型号和 RAM 大小的 4 个 CPU 的 Intel Broadwell 代服务器（Intel Xeon E7-4800 系列）。
 
@@ -146,7 +147,7 @@ NFS 选项为工作负载提供定制的共享文件级别存储器，具有各�
 ### 许可证（IBM 提供或 BYOL）和费用
 {: #vc_vcenterserveroverview-license-and-fee}
 
-* VMware vSphere Enterprise Plus 6.5u2 或 6.7u1
+* VMware vSphere Enterprise Plus 6.5u2 或 6.7u2
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.4
 * （对于 vSAN 集群）VMware vSAN Advanced 或 Enterprise 6.6
@@ -165,7 +166,7 @@ NFS 选项为工作负载提供定制的共享文件级别存储器，具有各�
 ### 扩展节点的许可证和费用
 {: #vc_vcenterserveroverview-expansion-node-license-and-fee}
 
-* 一个 VMware vSphere Enterprise Plus 6.5u2 或 6.7u1
+* 一个 VMware vSphere Enterprise Plus 6.5u2 或 6.7u2
 * 一个 VMware NSX Service Providers Edition（Base、Advanced 或 Enterprise）6.4
 * 一个支持和服务费用
 * （对于 vSAN 集群）VMware vSAN Advanced 或 Enterprise 6.6

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-06"
 
 keywords: vSphere order cluster, order vSphere, order vSphere cluster
 
@@ -40,7 +40,12 @@ subcollection: vmware-solutions
 ### 클러스터 이름
 {: #vs_orderinginstances-cluster-name}
 
-클러스터 이름은 계정 내에서 고유해야 합니다.
+클러스터 이름은 다음 요구사항을 충족해야 합니다.
+* 소문자 영문자, 숫자 및 대시(-) 문자만 사용할 수 있습니다.
+* 클러스터 이름은 소문자 영문자로 시작해야 합니다.
+* 클러스터 이름은 소문자 영문자 또는 숫자로 끝나야 합니다.
+* 클러스터 이름의 최대 길이는 10자입니다.
+* 클러스터 이름은 계정 내에서 고유해야 합니다.
 
 ## 라이센스 부여 설정
 {: #vs_orderinginstances-licensing-settings}
@@ -72,7 +77,7 @@ IBM 비즈니스 파트너 사용자의 경우 BYOL(Bring Your Own License) 옵�
 {: #vs_orderinginstances-individual-components-for-non-bp-users}
 
 비즈니스 파트너가 아닌 사용자는 vSphere 클러스터에 대해 다음 컴포넌트를 선택할 수 있습니다.
-* VMware vSphere Enterprise Plus 6.7 U1 또는 6.5 U2
+* VMware vSphere Enterprise Plus 6.7 U2 또는 6.5 U2
 * VMware vCenter Server
 * VMware NSX
 * VMware vSAN
@@ -123,6 +128,21 @@ vSphere Enterprise Plus 및 vCenter Server를 제외한 라이센스를 구매�
 |듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개의 코어, 2.3GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
 {: caption="표 2. Skylake {{site.data.keyword.baremetal_short}}의 옵션" caption-side="top"}
 
+### Cascade
+{: #vs_orderinginstance-cascade}
+
+**Cascade** 설정의 경우 **CPU 모델** 및 **RAM**에 대한 옵션이 있습니다.
+
+Cascade {{site.data.keyword.baremetal_short}}는 VMware vSphere Enterprise Plus 6.7 U2 인스턴스에만 사용할 수 있습니다.
+{:note}
+
+| CPU 모델 옵션        |RAM 옵션       |
+|:------------- |:------------- |
+|듀얼 Intel Xeon Gold 4210 프로세서 / 총 20개의 코어, 2.3GHz |64GB, 96GB, 128GB, 192GB, 768GB, 1.5TB |
+|듀얼 Intel Xeon Gold 5218 프로세서 / 총 32개의 코어, 2.3GHz |64GB, 96GB, 128GB, 192GB, 768GB, 1.5TB |
+|듀얼 Intel Xeon Gold 6248 프로세서 / 총 40개의 코어, 2.5GHz |64GB, 96GB, 128GB, 192GB, 768GB, 1.5TB |
+{: caption="표 3. {{site.data.keyword.baremetal_short}}의 옵션" caption-side="top"}
+
 ### SAP 인증
 {: #vs_orderinginstances-sap}
 
@@ -146,7 +166,7 @@ vSphere Enterprise Plus 및 vCenter Server를 제외한 라이센스를 구매�
 |:------------- |:------------- |
 | 쿼드 Intel Xeon E7-4820 v4 / 총 40개의 코어, 2.0GHz |128GB, 256GB, 512GB, 1TB, 2TB, 3TB |
 | 쿼드 Intel Xeon E7-4850 v4 / 총 64개의 코어, 2.1GHz |128GB, 256GB, 512GB, 1TB, 2TB, 3TB |
-{: caption="표 3. Broadwell {{site.data.keyword.baremetal_short}}의 옵션" caption-side="top"}
+{: caption="표 4. Broadwell {{site.data.keyword.baremetal_short}}의 옵션" caption-side="top"}
 
 ### Bare Metal Server 수
 {: #vs_orderinginstances-bare-metal-number}
@@ -167,7 +187,7 @@ vSAN이 포함된 주문의 경우, 주문된 12개의 디스크 섀시와 4개�
 * **vSAN 용량 디스크 수**: 추가할 용량 디스크 수를 지정하십시오.
 * 용량 디스크를 8개 한계 이상으로 추가하려는 경우 **고성능 Intel Optane** 상자를 선택하십시오. 이 옵션은 총 10개 용량 디스크에 대해 2개의 추가 용량 디스크 베이를 제공하며 짧은 대기 시간과 높은 IOPS 처리량이 필요한 워크로드에 유용합니다.
 
-  **고성능 Intel Optane** 옵션은 Skylake CPU 모델에 대해서만 사용 가능합니다.
+  **고성능 Intel Optane** 옵션은 Skylake 및 Cascade CPU 모델에 대해서만 사용 가능합니다.
   {:note}
 
 * **vSAN 캐시 디스크의 디스크 유형** 및 **vSAN 캐시 디스크 수** 값을 검토하십시오. 이러한 값은 **고성능 Intel Optane** 상자를 선택했는지 여부에 따라 달라집니다.
@@ -180,28 +200,31 @@ vSAN이 포함된 주문의 경우, 주문된 12개의 디스크 섀시와 4개�
 ### 호스트 이름 접두부
 {: #vs_orderinginstances-host-name-prefix}
 
-호스트 이름은 베어메탈 서버 주문에 사용됩니다. vCenter Server 및 NSX와 같이 모든 관리 가상 머신에 호스트 이름을 사용하는 것이 좋습니다.
+호스트 이름은 모든 Bare Metal Server 주문에 사용됩니다. vCenter Server 및 NSX와 같이 모든 관리 가상 머신에 호스트 이름을 사용하는 것이 좋습니다.
 
 호스트 이름 접두부는 다음 요구사항을 충족해야 합니다.
-* 이름은 영숫자 문자로 시작하고 끝나야 합니다.
-* 영숫자 문자 및 대시(-) 문자만 사용할 수 있습니다.
-* 최대 길이는 10자입니다.
+* 소문자 영문자, 숫자 및 대시(-) 문자만 사용할 수 있습니다.
+* 호스트 이름 접두부는 소문자 영문자로 시작해야 합니다.
+* 호스트 이름 접두부는 소문자 영문자 또는 숫자로 끝나야 합니다.
+* 호스트 이름 접두부의 최대 길이는 10자입니다.
 
 ### 하위 도메인 레이블
 {: #vs_orderinginstances-subdomain-label}
 
 하위 도메인 레이블은 다음 요구사항을 충족해야 합니다.
-*  영숫자 문자 및 대시(-) 문자만 사용할 수 있습니다.
-*  하위 도메인 레이블은 영숫자 문자로 시작하고 끝나야 합니다.
-*  하위 도메인 레이블의 최대 길이는 10자입니다.
+* 소문자 영문자, 숫자 및 대시(-) 문자만 사용할 수 있습니다.
+* 하위 도메인 레이블은 소문자 영문자로 시작해야 합니다.
+* 하위 도메인 레이블은 소문자 영문자 또는 숫자로 끝나야 합니다.
+* 하위 도메인 레이블의 최대 길이는 10자입니다.
 
 ### 도메인 이름
 {: #vs_orderinginstances-domain-name}
 
 도메인 이름이 모든 {{site.data.keyword.baremetal_short}}에 사용되고 다음 요구사항을 충족해야 합니다.
-* 이름은 마침표(.)로 구분된 두 개 이상의 문자열로 구성되어야 합니다.
-* 영숫자 문자 및 대시(-) 문자만 사용할 수 있습니다.
-* 각 문자열은 영문자로 시작하고 영숫자로 끝나야 하며 마지막 문자열에는 영문자만 포함될 수 있습니다.
+* 도메인 이름은 마침표(.)로 구분된 두 개 이상의 문자열로 구성되어야 합니다.
+* 소문자 영문자, 숫자 및 대시(-) 문자만 사용할 수 있습니다.
+* 각 문자열은 소문자 영문자로 시작하고 소문자 영문자 또는 숫자로 끝나야 합니다.
+* 마지막 문자열에는 소문자 영문자만 포함될 수 있습니다.
 * 마지막 문자열의 길이는 2 - 24자 사이여야 합니다.
 * 기타 문자열의 길이는 1 - 63자 사이여야 합니다.
 * 도메인 이름의 최대 길이는 189자입니다.
@@ -216,12 +239,12 @@ vSAN이 포함된 주문의 경우, 주문된 12개의 디스크 섀시와 4개�
 
 네트워크 설정은 **새 VLAN 주문** 또는 **기존 VLAN 선택**의 선택에 따라 달라집니다.
 
-클러스터 주문에 한 개의 공용 VLAN 및 두 개의 사설 VLAN이 필요합니다. 두 개의 사설 VLAN이 각 Bare Metal Server에 선택됩니다.
-
 #### 새 VLAN 주문
 {: #vs_orderinginstances-new-vlans}
 
-하나의 새 공용 VLAN 및 두 개의 새 사설 VLAN 주문을 선택하십시오.
+공용 및 사설 네트워크용으로 주문하는 경우 클러스터 주문에 하나의 공용 VLAN 및 두 개의 사설 VLAN이 필요합니다. 두 개의 사설 VLAN이 각 Bare Metal Server에 선택됩니다.
+
+사설 네트워크용으로 주문하는 경우 클러스터 주문에 두 개의 사설 VLAN만 필요합니다.
 
 #### 기존 VLAN 선택
 {: #vs_orderinginstances-existing-vlans}
@@ -230,9 +253,9 @@ vSAN이 포함된 주문의 경우, 주문된 12개의 디스크 섀시와 4개�
 
   기존 공용 및 사설 VLAN을 재사용하도록 선택하는 경우에는 VLAN 및 서브넷을 지정하십시오.
   * **공용 VLAN**은 공용 네트워크 액세스를 위한 것입니다.
+  * **기본 서브넷**은 공용 네트워크 액세스를 위한 실제 호스트에 지정됩니다.
   * **사설 VLAN**은 {{site.data.keyword.cloud_notm}} 내의 데이터 센터 및 서비스 간의 연결을 위한 것입니다.
   * **보조 사설 VLAN**은 vSAN과 같은 VMware 기능을 위한 것입니다.
-  * **기본 서브넷**은 공용 네트워크 액세스를 위한 실제 호스트에 지정됩니다.
   * **사설 기본 서브넷**은 관리 트래픽을 위한 실제 호스트에 지정됩니다.
 
 ##### 중요
@@ -245,6 +268,9 @@ vSAN이 포함된 주문의 경우, 주문된 12개의 디스크 섀시와 4개�
 {: #vs_orderinginstances-fortigate-physical-appliance}
 
 클라우드 환경을 보호하기 위해 FortiGate Physical Appliance 300 Series HA 이중화를 포함시킬지 선택할 수도 있습니다. 자세한 정보는 [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 개요](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations)를 참조하십시오.
+
+이 옵션은 공용 및 사설 네트워크 모두가 포함된 주문의 경우에만 사용할 수 있습니다.
+{:note}
 
 ## 주문 요약
 {: #vs_orderinginstances-order-summary}
@@ -269,7 +295,7 @@ vSAN이 포함된 주문의 경우, 주문된 12개의 디스크 섀시와 4개�
 5. Bare Metal Server 설정을 완료하십시오.
    1. 클러스터를 호스팅할 {{site.data.keyword.CloudDataCent_notm}}를 선택하십시오.
    2. Bare Metal Server 구성을 선택하십시오.
-      * **Skylake** 또는 **Broadwell**을 선택하는 경우 CPU 모델 및 RAM 크기를 지정하십시오.
+      * **Skylake**, **Cascade** 또는 **Broadwell**을 선택하는 경우 CPU 모델 및 RAM 크기를 지정하십시오.
       * **SAP 인증**을 선택하는 경우, 사전 설정된 구성 중 하나를 선택하십시오.
    3. Bare Metal Server의 수를 지정하십시오.
 6. **VMware vSAN** 컴포넌트를 선택한 경우 vSAN 스토리지 구성을 완료하십시오. 용량 및 캐시 디스크에 대한 디스크 유형과 디스크 수를 지정하십시오. 더 많은 스토리지를 원하는 경우 **고성능 Intel Optane** 상자를 선택하십시오.
@@ -279,7 +305,7 @@ vSAN이 포함된 주문의 경우, 주문된 12개의 디스크 섀시와 4개�
    3. 사용할 네트워크 인터페이스를 선택하십시오.
     * 새 공용 및 사설 VALN을 주문하려면 **새 VLAN 주문**을 클릭하십시오.
     * 기존 공용 및 사설 VLAN이 사용 가능한 경우 이들을 재사용하려면 **기존 VLAN 선택**을 클릭하고 VLAN 및 서브넷(선택사항)을 지정하십시오.
-    4. 클라우드 환경을 보호하기 위해 FortiGate Physical Appliance 300 Series HA 이중화를 적용할지 지정하십시오.  
+    4. 공용 VLAN을 주문하는 경우 클라우드 환경을 보호하기 위해 FortiGate Physical Appliance 300 Series HA 이중화를 적용할지 지정하십시오.
 8. **주문 요약** 분할창에서 클러스터 구성 및 예상 비용을 확인하십시오.
    * 주문하지 않고 구성을 템플리트로 저장하려면 **구성 저장**을 클릭하십시오.
    * 주문하려는 경우에는 비용이 청구될 계정이 올바른지 확인하고, 이용 약관을 검토하고 이에 동의한 후 **프로비저닝**을 클릭하십시오.

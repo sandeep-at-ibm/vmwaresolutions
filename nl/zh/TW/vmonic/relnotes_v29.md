@@ -45,7 +45,7 @@ subcollection: vmware-solutions
 
 您現在可以選擇訂購 VMware vSphere 6.7 版 Update 1（具有 VMware vCenter Server）、VMware vCenter Server（具有 Hybridity Bundle），以及 VMware vSphere on {{site.data.keyword.cloud_notm}} 實例。
 
-此外，「單一節點試用版移轉及應用程式現代化」實例現在要和 vSphere Enterprise Plus 6.7u1 一起訂購。
+此外，Single-node Trial for Migration and App Modernization 實例現在要和 vSphere Enterprise Plus 6.7u1 一起訂購。
 
 vSphere Enterprise Plus 6.7u1 僅適用於 Broadwell 及 Skylake {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}。
 

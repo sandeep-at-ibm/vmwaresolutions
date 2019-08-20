@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-09"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -53,8 +53,3 @@ La VPN strongSwan viene utilizzata per stabilire la connettività con i contenit
 
 Nel diagramma, CAM crea in modo logico le connessioni cloud ai vCenter,
 ai provider cloud e agli ambienti {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}}. I cluster {{site.data.keyword.icpfull_notm}} devono essere distribuiti ad ogni ambiente cloud di data center, con MCM che fornisce il meccanismo per collegare i cluster {{site.data.keyword.icpfull_notm}} in una singola vista di gestione.
-
-## Link correlati
-{: #vcsicp-arch-overview-related}
-
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

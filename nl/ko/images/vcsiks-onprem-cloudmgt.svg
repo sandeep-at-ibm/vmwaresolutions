@@ -214,11 +214,11 @@
        id="g57">
       <text
          x="413.5"
-         y="578.5"
+         y="583.5"
          id="text59">HCX</text>
       <text
          x="46.5"
-         y="592"
+         y="583.5"
          id="text61">vCenter</text>
       <g
          text-anchor="middle"
@@ -268,16 +268,16 @@
        id="g75">
       <text
          x="243"
-         y="580.5"
+         y="583.5"
          id="text77">IBM Cloud Private</text>
       <text
          x="46.5"
-         y="632"
+         y="630"
          id="text79">Cloud Automation Manager</text>
       <text
          x="243"
-         y="616"
-         id="text81">Containers</text>
+         y="630"
+         id="text81">Container</text>
     </g>
     <image
        x="199"
@@ -548,15 +548,15 @@
        id="g159">
       <text
          x="554"
-         y="564"
+         y="569"
          id="text161">IBM</text>
       <text
          x="554"
-         y="578"
+         y="583.5"
          id="text163">Kubernetes</text>
       <text
          x="554"
-         y="592"
+         y="597"
          id="text165">
         <tspan
            style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
@@ -621,7 +621,7 @@
       </text>
     </g>
     <g
-       transform="translate(629.5,364.5)"
+       transform="translate(629.5,361.5)"
        id="g183">
       <switch
          id="switch185">
@@ -641,7 +641,7 @@
             <xhtml:div
                display="inline-block"
                text-align="inherit"
-               text-decoration="inherit">Cluster</xhtml:div>
+               text-decoration="inherit">클러스터</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text
@@ -872,7 +872,7 @@
        id="g257">
       <text
          x="670.5"
-         y="578.5"
+         y="583.5"
          id="text259">IBM Watson</text>
     </g>
     <rect
@@ -914,7 +914,7 @@
             <xhtml:div
                display="inline-block"
                text-align="inherit"
-               text-decoration="inherit">App</xhtml:div>
+               text-decoration="inherit">앱</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text
@@ -936,7 +936,7 @@
        id="g271">
       <text
          x="355"
-         y="248.5"
+         y="243.5"
          id="text273">
         <tspan
            style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"

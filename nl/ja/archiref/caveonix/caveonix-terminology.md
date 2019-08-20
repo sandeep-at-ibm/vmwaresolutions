@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-06"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -68,8 +68,3 @@ subcollection: vmware-solutions
 ジョブ:「Caveo Logs」は、異常スコアが 90 を上回った時に、資産に検疫のためのマークを付け、Slack チャネルに通知を送信します。`
 ジョブ:「Caveo Network」は、異常スコアが 95 を上回った時に、資産を検疫して、E メール通知と UI 通知を送信します。
 ```
-
-## 関連リンク
-{: #caveonix-terminology-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

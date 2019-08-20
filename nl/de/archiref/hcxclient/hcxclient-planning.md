@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -15,7 +15,7 @@ subcollection: vmware-solutions
 {: #hcxclient-planning-prep-install}
 
 Für die Installation von VMware HCX on IBM Cloud gelten die folgenden Softwarevoraussetzungen:
-* vSphere 5.5 Update 3 oder vSphere 6.0 Update 2 oder höher.
+* vSphere 5.5 Update 3 oder vSphere 6.0u2 oder höher.
 * Wird NSX verwendet, dann Version 6.2.2 oder höher. NSX ist für die Richtlinienmigration erforderlich.
 * Um cloudumfassende vMotion verwenden zu können, gelten für Clouds dieselben Affinitätsbeschränkungen, wie sie lokal gelten. Weitere Informationen finden Sie unter [VMware EVC und CPU-Kompatibilität - Häufig gestellte Fragen](https://kb.vmware.com/s/article/1005764).
 
@@ -23,14 +23,14 @@ Für die Installation von VMware HCX on IBM Cloud gelten die folgenden Softwarev
 {: #hcxclient-planning-config-net}
 
 HCX muss das öffentliche Internet und Privatleitungen traversieren sowie Verbindungen zu Rechenzentrumskomponenten wie Netze, Switches und Portgruppen herstellen.
-* [Portzugriffsvoraussetzungen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-port-req) listet Ports auf, die geöffnet werden müssen, damit die virtuellen HCX-Appliances erfolgreich installiert werden können.
-* Sowohl die lokale vSphere-Umgebung als auch die VCS HCX Cloud-Umgebung müssen die Uhrzeitsynchronisation "Network Time Protocol" (NTP) zwischen lokalen vSphere-Einheiten und den VCS HCX-Einheiten zulassen. UDP-Port 123 muss für virtuelle HCX-Appliances und -Netze zugänglich sein.
+* Informationen zu den Ports, die geöffnet sein müssen, damit virtuelle HCX-Appliances erfolgreich installiert werden können, finden Sie unter [Portzugriffsvoraussetzungen](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-port-req).
+* Sowohl die lokale vSphere-Umgebung als auch die VCS HCX Cloud-Umgebung müssen die Uhrzeitsynchronisation "Network Time Protocol" (NTP) zwischen den lokalen vSphere-Geräten und den VCS HCX-Geräten zulassen. UDP-Port 123 muss für virtuelle HCX-Appliances und -Netze zugänglich sein.
 
 ## Lokale Umgebung
 {: #hcxclient-planning-on-prem-env}
 
 Stellen Sie vor der Installation von HCX sicher, dass Ihre Umgebung die Tasks unterstützen kann, die Sie ausführen möchten. Die lokale Umgebung muss die folgenden Tasks unterstützen, damit HCX installiert werden kann.
-* Virtual Center mit vSphere 5.5 Update 3 oder 6.0 Update 2.
+* Virtual Center mit vSphere 5.5 Update 3 oder 6.0u2.
 * Die vMotion- und Richtlinienmigrationsfunktionen erfordern NSX Version 6.2.2 oder höher.
 * Ein vSphere-Servicekonto, dem die Systemrolle des vCenter Server-Administrators zugewiesen ist.
 * In vCenter ausreichend Plattenspeicherplatz für die zu installierenden HCX-Appliances.
@@ -38,7 +38,7 @@ Stellen Sie vor der Installation von HCX sicher, dass Ihre Umgebung die Tasks un
 * Die Ports und Firewalls sind wie in den Portzugriffsvoraussetzungen beschrieben geöffnet.
 * Wenn der SSO-Server (Single Sign-on) ein ferner Server ist, muss die URL von vCenter, dem externen SSO-Server oder dem Platform Services Controller (PSC), auf dem der externe Suchservice ausgeführt wird, angegeben werden. Wenn der HCX-Manager bei vCenter registriert ist, muss diese URL angegeben werden.
 * Wenn eine vCenter-Instanz über keine eigene interne Instanz des Suchservice verfügt, kann dies einen der folgenden Gründe haben:
-  * vCenter 6.0 Update 2 führt einen externen Platform Services Controller aus.
+  * vCenter 6.0u2 führt einen externen Platform Services Controller aus.
   * vCenter befindet sich im Verbindungsmodus (in dem die sekundäre vCenter-Instanz den SSO-Service der primären vCenter-Instanz oder eines externen SSO-Service verwendet).
 
 ## Layer-2-Installationsumgebung überprüfen
@@ -105,7 +105,7 @@ Bei den Vor-Tests wird eine HCX-Migration sowohl mit vMotion als auch mit der Ma
 ## Migration von Nicht-Produktions-Apps
 {: #hcxclient-planning-mig-non-prod-apps}
 
-Die Migration von virtuellen Maschinen beginnt mit den geplanten Stadien für weniger kritische virtuelle Maschinen. Für Entwicklung, Test usw. verwenden Sie die Internetkonnektivität für Migration und erweiterten L2-Datenverkehr.
+Die Migration von virtuellen Maschinen beginnt mit den geplanten Stadien für weniger kritische virtuelle Maschinen. Entwicklungs- und Testteams verwenden die Internetkonnektivität für Migration und erweiterten L2-Datenverkehr.
 
 ## Cloud-Netzdesign und -bereitstellung beginnen
 {: #hcxclient-planning-cloud-net-begins}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -191,8 +191,3 @@ Una GUI (graphical user interface) per creare modelli Terraform, con una funzion
 {: #vcscar-arch-overview-solution-maria-db}
 
 Il database per l'applicazione designer del modello.
-
-## Link correlati
-{: #vcscar-arch-overview-solution-related}
-
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

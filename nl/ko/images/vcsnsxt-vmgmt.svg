@@ -251,7 +251,7 @@
       <text
          x="546.18"
          y="89.69"
-         id="text76">VMwarePlatform</text>
+         id="text76">VMware Platform</text>
       <text
          x="546.18"
          y="103.69"
@@ -287,7 +287,7 @@
          stroke-width="0"
          id="rect86" />
       <text
-         x="97"
+         x="113"
          y="186.5"
          id="text88">IBM Cloud <tspan
    style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
@@ -360,7 +360,7 @@
          stroke-width="0"
          id="rect108" />
       <text
-         x="95"
+         x="120"
          y="342.5"
          id="text110">IBM Cloud <tspan
    style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
@@ -592,7 +592,7 @@
       <text
          x="265"
          y="89.5"
-         id="text182">Cluster</text>
+         id="text182">클러스터</text>
     </g>
     <path
        d="m185 138v20-8l-0.5 20"

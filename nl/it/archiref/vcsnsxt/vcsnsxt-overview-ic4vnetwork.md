@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-22"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -87,8 +87,3 @@ Privata B 	|Portatile 	|Assegnata per vMotion.
 Questa progettazione è implementata con host fisici e VSI (virtual system instance) sulle VLAN e configurata per puntare al BCR (router del cliente della “rete privata” di backend) {{site.data.keyword.cloud_notm}} come rotta predefinita. Mentre le istanze vCenter Server consentono l'utilizzo di SDN (software-defined networking), le eventuali sovrapposizioni di rete create da NSX che includono l'instradamento alle sottoreti VLAN non sono note ai router gestiti da {{site.data.keyword.cloud_notm}}. Potresti dover creare rotte statiche, regole del firewall e regole NAT per gestire correttamente i flussi di rete.
 
 Le connessioni alla rete privata sono configurate per utilizzare frame jumbo con una dimensione MTU di 9000, che migliora le prestazioni per i trasferimenti di dati di grandi dimensioni come l'archiviazione e vMotion. Questa è la MTU massima consentita in VMware e da {{site.data.keyword.cloud_notm}}. Le connessioni alla rete pubblica utilizzano una MTU Ethernet standard di 1500. Questo valore deve essere mantenuto poiché qualsiasi modifica potrebbe causare la frammentazione dei pacchetti su Internet.
-
-## Link correlati
-{: #vcsnsxt-overview-ic4vnetwork-related}
-
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

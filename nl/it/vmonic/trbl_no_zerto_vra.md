@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-08-01"
 
 keywords: troubleshooting, Zerto Virtual Replication, Zerto ESXi server
 
@@ -24,7 +24,7 @@ I dispositivi VRA (Virtual Replication Appliance) non vengono visualizzati sulla
 ## Risoluzione
 {: #trbl_no_zerto_vra-resolution}
 
-Per le istanze vCenter Server, il servizio di ripristino di emergenza Zerto viene installato solo sul server ESXi dal cluster predefinito, **cluster1**. Per qualsiasi cluster aggiuntivo nello stesso ambiente vCenter Server non viene installato automaticamente il ripristino di emergenza Zerto quando il cluster aggiuntivo viene creato, né quando il server ESXi viene aggiunto a quel cluster aggiuntivo.
+Il servizio di ripristino di emergenza Zerto viene installato solo sul server ESXi dal cluster predefinito (**cluster1** per le istanze distribuite nella V3.1 o precedenti). Per qualsiasi cluster aggiuntivo nello stesso ambiente vCenter Server non viene installato automaticamente il ripristino di emergenza Zerto quando il cluster aggiuntivo viene creato, né quando il server ESXi viene aggiunto a quel cluster aggiuntivo.
 
 Sui cluster aggiuntivi, devi installare il ripristino di emergenza Zerto separatamente.
 

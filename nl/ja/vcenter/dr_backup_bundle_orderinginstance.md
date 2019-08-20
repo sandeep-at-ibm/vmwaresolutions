@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-25"
 
 keywords: single-node trial, data protection DR, order data protection DR
 
@@ -47,9 +47,10 @@ Single-node Trial for Data Protection and Disaster Recovery インスタンス�
 ### インスタンス名の要件
 {: #dr_backup_bundle_orderinginstance-inst-name-req}
 
-インスタンス名の要件を確認します。
-* 英数字とダッシュ (-) の文字だけを使用できます。
-* インスタンス名の先頭は英字、末尾は英数字でなければなりません。
+インスタンス名は、次の要件を満たす必要があります。
+* 英字の小文字、数字、およびダッシュ (-) の文字だけを使用できます。
+* インスタンス名は小文字の英字で始まらなければなりません。
+* インスタンス名は小文字の英字または数字で終わらなければなりません。
 * インスタンス名の最大の長さは 10 文字です。
 * インスタンス名はアカウント内で固有である必要があります。
 
@@ -193,8 +194,8 @@ Single-node Trial for Data Protection and Disaster Recovery インスタンス�
 ## 関連リンク
 {: #dr_backup_bundle_orderinginstance-related}
 
-* [vCenter Server および IBM Cloud Private ガイド](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [IBM Cloud Private のチケットをオープン](https://www.ibm.com/mysupport/s/?language=en_US){:external}
+* [vCenter Server および {{site.data.keyword.cloud_notm}} Private ガイド](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
+* [{{site.data.keyword.cloud_notm}} Private のチケットをオープン](https://www.ibm.com/mysupport/s/?language=en_US){:external}
 * [VMware HCX リソース](https://hcx.vmware.com/#/docs){:external}
 * [VMware HCX ユーザー・ガイド](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}
 * [仮想サーバーのキャンセル](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)

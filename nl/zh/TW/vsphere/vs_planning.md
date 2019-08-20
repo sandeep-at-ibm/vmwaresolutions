@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-20"
+lastupdated: "2019-08-06"
 
 keywords: planning vSphere, data center, vSphere data centers
 
@@ -34,6 +34,8 @@ subcollection: vmware-solutions
 {: #vs_planning-dc-availability}
 
 vSphere 部署對實體基礎架構有嚴格的需求。因此，您只能在符合需求的 {{site.data.keyword.CloudDataCents_notm}} 中部署叢集。下列 {{site.data.keyword.CloudDataCent_notm}} 可用於 vSphere 部署。
+
+Cascade Lake {{site.data.keyword.baremetal_short}} 提供於多區域地區的 {{site.data.keyword.CloudDataCents_notm}}。如需相關資訊，請參閱[多區域地區 (MZR) 概觀](/docs/infrastructure/loadbalancer-service?topic=loadbalancer-service-multi-zone-region-mzr-overview)。
 
 如果您選取 vSAN 元件，則會依 SSD（固態硬碟）可用性來過濾位置清單。
 {:note}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-08-05"
 
 keywords: vCenter Server delete instance, delete vCenter Server, remove vCenter Server
 

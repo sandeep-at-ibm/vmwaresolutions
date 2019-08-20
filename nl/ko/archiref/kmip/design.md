@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-21"
+lastupdated: "2019-07-16"
 
 subcollection: vmware-solutions
 
@@ -102,7 +102,7 @@ KMIP for VMware는 많은 {{site.data.keyword.cloud_notm}} 다중 구역 지역(
 
 각 MZR 내에서 KMIP for VMware는 고가용성을 위해 {{site.data.keyword.cloud_notm}} 사설 네트워크에서 두 가지 네트워크 서비스 엔드포인트를 제공합니다. KMS 클러스터로 vCenter 키 관리 서버(KMS) 구성의 두 가지 엔드포인트를 구성하십시오. 각 MZR의 엔드포인트와 KMIP 서버 인증서 서명의 목록은 [KMIP for VMware 서비스 문서](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)를 참조하십시오.
 
-사설 네트워크를 통해 KMIP for VMware에 액세스하려면 {{site.data.keyword.cloud_notm}} 인프라 계정이 VRF(Virtual Routing and Forwarding)에 대해 사용으로 설정되어야 하고 {{site.data.keyword.cloud_notm}} 네트워크 서비스 엔드포인트 라우트가 사용자 계정의 VRF 라우트에 추가되어야 합니다. 자세한 정보는 [IBM Cloud CLI를 사용하여 서비스 엔드포인트를 사용할 계정 사용](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)을 참조하십시오.
+사설 네트워크를 통해 KMIP for VMware에 액세스하려면 {{site.data.keyword.cloud_notm}} 인프라 계정이 VRF(Virtual Routing and Forwarding)에 대해 사용으로 설정되어야 하고 {{site.data.keyword.cloud_notm}} 네트워크 서비스 엔드포인트 라우트가 사용자 계정의 VRF 라우트에 추가되어야 합니다. 자세한 정보는 [서비스 엔드포인트 사용](/docs/account?topic=account-vrf-service-endpoint#service-endpoint)을 참조하십시오.
 
 KMIP for VMware는 사설 인터넷이 아닌 {{site.data.keyword.cloud_notm}} 사설 네트워크를 사용하여 {{site.data.keyword.cloud_notm}} Key Protect에도 연결합니다.
 

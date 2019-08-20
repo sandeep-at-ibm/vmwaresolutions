@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-06"
 
 keywords: vCenter Server NSX-T order instance, order vCenter Server NSX-T, order NSX-T
 
@@ -35,9 +35,9 @@ Assurez-vous que :
 |:------------|:------------ |
 | Nom de domaine | `<root_domain>` |  
 | Nom d'utilisateur de connexion vCenter Server | `<user_id>@<root_domain>` (utilisateur Microsoft Active Directory) ou `administrator@vsphere.local` |
-| vCenter Server (avec PSC intégré) FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. La longueur maximale est de 50 caractères. |
+| vCenter Server (avec PSC intégré) FQDN | `<instance_name>-vc.<root_domain>`. La longueur maximale admise est de 50 caractères. |
 | Nom du site de connexion unique | `<subdomain_label>` |
-| Nom de serveur ESXi qualifié complet | `<host_prefix><n>.<subdomain_label>.<root_domain>`, où `<n>` est la séquence du serveur ESXi. La longueur maximale admise est de 50 caractères. |
+| Nom de serveur ESXi qualifié complet | `<data_center>-<host_prefix><n>.<subdomain_label>.<root_domain>`, où `n` est la séquence du serveur ESXi. La longueur maximale admise est de 50 caractères. |
 {: caption="Tableau 1. Format de la valeur des noms d'instance et de domaine" caption-side="top"}
 
 Ne modifiez aucune des valeurs définies lors de la commande ou du déploiement de l'instance. Cela rendrait votre instance inutilisable. Par exemple, si le réseau public s'arrête, si les serveurs et les instances de serveur virtuel passent derrière un mi-parcours Vyatta ou si l'instance de serveur virtuel IBM CloudBuilder s'arrête ou est supprimée.
@@ -52,15 +52,26 @@ Vous devez spécifier les paramètres système répertoriés ci-après lorsque v
 {: #vc_nsx-t_orderinginstance-inst-name}
 
 Le nom de l'instance qui doit respecter les règles suivantes :
-* Seuls les caractères alphanumériques et le tiret (-) sont autorisés.
-* Le nom d'instance doit commencer par un caractère alphabétique et se terminer par un caractère alphanumérique.
+* Seuls les caractères alphabétiques minuscules, numériques et tirets (-) sont autorisés.
+* Le nom d'instance doit commencer par un caractère alphabétique minuscule.
+* Le nom d'instance doit se terminer par un caractère alphabétique minuscule ou un caractère numérique.
 * Le nom d'instance ne doit pas dépasser 10 caractères.
 * Le nom d'instance doit être unique au sein de votre compte.
 
-### Licences VMware vSphere
+### Nom du cluster initial
+{: #vc_nsx-t_orderinginstance-cluster-name}
+
+Le nom du cluster initial doit respecter les règles suivantes :
+* Seuls les caractères alphabétiques minuscules, numériques et tirets (-) sont autorisés.
+* Le nom du cluster doit commencer par un caractère alphabétique minuscule.
+* Le nom du cluster doit se terminer par un caractère alphabétique minuscule ou un caractère numérique.
+* Le nom de cluster ne doit pas dépasser 30 caractères.
+* Le nom de cluster doit être unique au sein de l'instance vCenter Server.
+
+### Version de VMware vSphere
 {: ##vc_nsx-t_orderinginstance-vsphere-license}
 
-La licence vSphere Enterprise Plus 6.7u1 est sélectionnée par défaut.
+La licence vSphere Enterprise Plus 6.7u2 est sélectionnée par défaut.
 
 ### Principale ou secondaire
 {: #vc_nsx-t_orderinginstance-primary-secondary}
@@ -110,6 +121,21 @@ Lorsque vous sélectionnez **Skylake**, vous pouvez choisir la combinaison de mo
 | Processeur Dual Intel Xeon Gold 6140/36 coeurs au total, 2,3 GHz | 128 Go, 192 Go, 384 Go, 768 Go, 1.5 To |
 {: caption="Tableau 2. Options pour les serveurs Skylake {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
+### Cascade
+{: #vc_nsx-t_orderinginstance-cascade}
+
+Pour le paramétrage de **Cascade**, vous disposez d'options pour le **Modèle d'UC** et la **RAM**.
+
+Cascade {{site.data.keyword.baremetal_short}} est disponible uniquement pour les instances VMware vSphere Enterprise Plus 6.7 U2.
+{:note}
+
+| Options de modèle d'UC        | Options de RAM       |
+|:------------- |:------------- |
+|Processeur Dual Intel Xeon Gold 4210 / 20 coeurs au total, 2,3 GHz| 64 Go, 96 Go, 128 Go, 192 Go, 768 Go, 1,5 To |
+|Processeur Dual Intel Xeon Gold 5218 / 32 coeurs au total, 2,3 GHz| 64 Go, 96 Go, 128 Go, 192 Go, 768 Go, 1,5 To |
+|Processeur Dual Intel Xeon Gold 6248 / 40 coeurs au total, 2,5 GHz| 64 Go, 96 Go, 128 Go, 192 Go, 768 Go, 1,5 To |
+{: caption="Tableau 3. Options pour Cascade {{site.data.keyword.baremetal_short}}" caption-side="top"}
+
 ### Broadwell
 {: #vc_nsx-t_orderinginstance-broadwell}
 
@@ -119,7 +145,7 @@ Lorsque vous sélectionnez **Broadwell**, vous pouvez choisir la combinaison de 
 |:------------- |:------------- |
 | Quad Intel Xeon E7-4820 v4/40 coeurs au total, 2,0 GHz | 128 Go, 256 Go, 512 Go, 1 To, 2 To, 3 To |
 | Quad Intel Xeon E7-4850 v4/64 coeurs au total, 2,1 GHz | 128 Go, 256 Go, 512 Go, 1 To, 2 To, 3 To |
-{: caption="Tableau 3. Options pour les serveurs Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
+{: caption="Tableau 4. Options pour Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 ### Nombre de serveurs bare metal
 {: #vc_nsx-t_orderinginstance-bare-metal-number}
@@ -139,12 +165,12 @@ Pour les instances déployées, vous pouvez ajouter des partages de stockage NFS
 ### Stockage vSAN
 {: #vc_nsx-t_orderinginstance-vsan-storage}
 
-vSAN est uniquement disponible pour les configurations bare metal **Skylake** et **Broadwell**. Spécifiez les options vSAN suivantes :
+vSAN n'est disponible que pour les configurations bare metal **Skylake**, **Cascade** et **Broadwell**. Spécifiez les options vSAN suivantes :
 * **Type et taille de disque pour disques de capacité vSAN** : sélectionnez une option correspond aux disques de capacité dont vous avez besoin.
 * **Nombre de disques de capacité vSAN** : indiquez le nombre de disques de capacité que vous souhaitez ajouter.
 * Si vous souhaitez augmenter la capacité au-delà de la limite de 10 disques, cochez la case **Hautes performances avec Intel Optane**. Cette option fournit deux baies de disques de capacité supplémentaires pour un total de 12 disques de capacité. Elle s'avère utile pour les charges de travail qui nécessitent un temps d'attente plus court et une capacité de traitement d'IOPS plus élevée.
 
-  L'option **Hautes performances avec Intel Optane** n'est disponible que pour les modèles d'unités centrales Skylake.
+  L'option **Hautes performances avec Intel Optane** n'est disponible que pour les modèles d'unités centrales Skylake et Cascade.
   {:note}
 
 * Passez en revue les valeurs de **type de disque pour les disques de cache vSAN** et de **nombre de disques de cache vSAN**. Ces valeurs dépendent de la sélection de la case **Hautes performances avec Intel Optane**.
@@ -172,7 +198,7 @@ Détails relatifs au niveau de performance :
 | 2 IOPS/Go | Cette option est adaptée à la plupart des charges de travail d'usage général. Entre autres exemples d'application, citons l'hébergement de petites bases de données, la sauvegarde d'applications Web ou les images de disque de machine virtuelle pour un hyperviseur. |
 | 4 IOPS/Go | Cette option est adaptée aux charges de travail de grande intensité qui ont un pourcentage élevé de données actives simultanément. Les bases de données transactionnelles en sont un exemple. |
 | 10 IOPS/Go | Cette option est adaptée aux types de charge de travail les plus exigeants, tels que les analyses. Les bases de données à transactions élevées et autres bases de données sensibles aux performances en sont des exemples. Ce niveau de performance est limité à une capacité maximale de 4 To par partage de fichiers. |
-{: caption="Tableau 4. Options de niveau de performance NFS" caption-side="top"}
+{: caption="Tableau 5. Options de niveau de performance NFS" caption-side="top"}
 
 ## Paramètres d'interface réseau
 {: #vc_nsx-t_orderinginstance-network-interface-settings}
@@ -183,26 +209,29 @@ Vous devez spécifier les paramètres d'interface réseau répertoriés ci-aprè
 {: #vc_nsx-t_orderinginstance-host-name-prefix}
 
 Le préfixe du nom d'hôte qui doit respecter les règles suivantes :
-*  Seuls les caractères alphanumériques et le tiret (-) sont autorisés.
-*  Le préfixe de nom d'hôte doit commencer et se terminer par un caractère alphanumérique.
-*  Le préfixe de nom d'hôte ne doit pas dépasser 10 caractères.
+* Seuls les caractères alphabétiques minuscules, numériques et tirets (-) sont autorisés.
+* Le préfixe du nom d'hôte doit commencer par un caractère alphabétique minuscule.
+* Le préfixe du nom d'hôte doit se terminer par un caractère alphabétique minuscule ou un caractère numérique.
+* Le préfixe de nom d'hôte ne doit pas dépasser 10 caractères.
 
 ### Libellé de sous-domaine
 {: #vc_nsx-t_orderinginstance-subdomain-label}
 
 Le libellé du sous-domaine qui doit respecter les règles suivantes :
-*  Seuls les caractères alphanumériques et le tiret (-) sont autorisés.
-*  Le libellé de sous-domaine doit commencer par un caractère alphabétique et se terminer par un caractère alphanumérique.
-*  Le libellé de sous-domaine ne doit pas dépasser 10 caractères.
+* Seuls les caractères alphabétiques minuscules, numériques et tirets (-) sont autorisés.
+* Le libellé du sous-domaine doit commencer par un caractère alphabétique minuscule.
+* Le libellé du sous-domaine doit se terminer par un caractère alphabétique minuscule ou un caractère numérique.
+* Le libellé de sous-domaine ne doit pas dépasser 10 caractères.
 
 ### Nom de domaine
 {: #vc_nsx-t_orderinginstance-domain-name}
 
 Le nom du domaine racine qui doit respecter les règles suivantes :
 * Le nom de domaine doit être composé d'au moins deux chaînes séparées par un point (.)
-* La première chaîne doit commencer par un caractère alphabétique et se terminer par un caractère alphanumérique.
-* Toutes les chaînes, à l'exception de la dernière, ne peuvent contenir que des caractères alphanumériques et des tirets (-).
-* La dernière chaîne ne peut contenir que des caractères alphabétiques.
+* La première chaîne doit commencer par un caractère alphabétique minuscule.
+* La première chaîne doit se terminer par un caractère alphabétique minuscule ou un caractère numérique.
+* Toutes les chaînes, à l'exception de la dernière, ne peuvent contenir que des caractères numériques, alphabétiques minuscules et des tiret (-).
+* La dernière chaîne ne peut contenir que des caractères alphabétiques minuscules.
 * La dernière chaîne doit comporter entre 2 et 24 caractères.
 
 La longueur maximale du nom de domaine complet des hôtes et des machines virtuelles est de 50 caractères. Les noms de domaine doivent respecter cette longueur maximale.
@@ -306,7 +335,7 @@ Vous pouvez également ajouter les ressources mises à disposition à l’outil 
 {: #vc_nsx-t_orderinginstance-results}
 
 * Le déploiement de l'instance démarre automatiquement et vous recevez la confirmation que la commande est en cours de traitement. Vous pouvez vérifier l'état du déploiement, y compris tout problème pouvant nécessiter votre attention, en consultant la section **Historique de déploiement** des détails de l'instance.
-* Une fois l'instance correctement déployée, les composants décrits dans [Spécifications techniques relatives aux instances vCenter Server with NSX-T](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_overview#vc_nsx-t_overview-specs) sont installés sur votre plateforme virtuelle VMware. Les serveurs ESXi que vous avez commandés sont, par défaut, regroupés en **cluster1**.
+* Une fois l'instance correctement déployée, les composants décrits dans [Spécifications techniques relatives aux instances vCenter Server with NSX-T](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_overview#vc_nsx-t_overview-specs) sont installés sur votre plateforme virtuelle VMware.
 * Lorsque l'instance est prête pour utilisation, elle prend le statut **Prêt à l'emploi** et vous recevez une notification par courrier électronique.
 * Lorsque vous commandez une instance secondaire, le client Web VMware vSphere de l'instance principale (liée à l'instance secondaire) devra peut-être être redémarré une fois la commande d'instance secondaire honorée.
 

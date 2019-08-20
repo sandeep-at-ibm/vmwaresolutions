@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-07-23"
 
 keywords: user account, user permissions, VRF account
 
@@ -55,12 +55,12 @@ subcollection: vmware-solutions
 您的 {{site.data.keyword.cloud_notm}} 基础架构帐户必须是虚拟路由和转发 (VRF) 帐户。如果您的帐户是非 VRF 帐户，那么必须转换为 VRF 帐户。 另外建议您支持 VRF 帐户使用服务端点。
 
 有关更多信息，请参阅：
-* [VRF on IBM Cloud 概述](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-* [支持帐户使用服务端点](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
+* [VRF on {{site.data.keyword.cloud_notm}} 概述](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
+* [启用服务端点](/docs/account?topic=account-vrf-service-endpoint#service-endpoint)
 
 ## 相关链接
 {: #cloud-infra-acct-req-related}
 
 * [vCenter Server 实例的需求](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
 * [用户帐户和设置](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)
-* [VRF on IBM Cloud 概述](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
+* [VRF on {{site.data.keyword.cloud_notm}} 概述](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)

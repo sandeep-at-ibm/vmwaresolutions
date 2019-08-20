@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-06"
 
 keywords: vCenter Server BOM, bill of materials vCenter Server, BOM
 
@@ -42,13 +42,13 @@ subcollection: vmware-solutions
 
 |制造商|组件|版本|
 |:------------- |:------------------------------ |:------------- |
-|VMware|vSphere ESXi|6.7 Update 1（构建 6.7.0-13004448）或 <br/>6.5 Update 2（构建 6.5.0-13635690）|
+|VMware|vSphere ESXi|6.7 EP 10（构建 6.7.0-13981272）或<br/>6.5 Update 2（构建 6.5.0-13635690）|
 |VMware|vSphere 6.7|Distributed vSwitch 6.6.0|
 |VMware|vSphere 6.5|Distributed vSwitch 6.5.0|
-|VMware|vCenter Server Appliance|6.7 Update 1b（构建 6.7.0-11727113）或 <br/>6.5 Update 2g（构建 6.5.0-13638625）|
-|VMware|Platform Services Controller|6.7 Update 1b（构建 6.7.0-11727113）或 <br/>6.5 Update 2d（构建 6.5.0-10964411）|
+|VMware|vCenter Server Appliance|6.7 Update 2b (6.7.0-13843469) 或<br/>6.5 Update 2g（构建 6.5.0-13638625）|
+|VMware|Platform Services Controller|6.7 Update 2b (6.7.0-13843469) 或<br/>6.5 Update 2g（构建 6.5.0-13638625）|
 |VMware|vSAN|6.7 Update 1 或<br/>6.6.1|
-|VMware|NSX for vSphere| 6.4.4（构建 11197766）|
+|VMware|NSX for vSphere|6.4.5（构建 13282012）|
 |VMware|NSX-T for vSphere|2.4|
 |Microsoft|Windows Server Standard Edition|2016|
 {: caption="表 2. vCenter Server 实例中软件组件的 BOM" caption-side="top"}
@@ -137,6 +137,17 @@ vSphere 集群使用两个 vSphere 分布式交换机 (vDS)，一个用于公用
 
    更改 vDS 中的 MTU 大小后，连接的上行链路（物理 NIC）将停止，然后重新运行。这样一来，使用上行链路的 VM 会短暂中断。因此，建议在安排的停机时间内规划 MTU 设置更新。
    {:note}
+
+## 增强型 VMware vMotion 兼容性 (EVC) 方式设置
+{: #vc_bom-evc-mode-settings}
+
+查看下表以了解 vCenter Server 实例的 EVC 方式设置的概述，以及 vSphere 版本之间的差异。
+
+|裸机服务器 CPU 型号|vSphere 6.5|vSphere 6.7|
+|:------------- |:------------- |:------------- |
+|Broadwell|EVC 设置为 Intel **Broadwell** 代|EVC 设置为 Intel **Broadwell** 代|
+|Skylake|未设置|EVC 设置为 Intel **Skylake** 代|
+{: caption="表 6. vCenter Server 实例和集群的 EVC 方式设置" caption-side="top"}
 
 ## 相关链接
 {: #vc_bom-related}

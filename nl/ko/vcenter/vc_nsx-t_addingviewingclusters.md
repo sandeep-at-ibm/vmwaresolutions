@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-06"
 
 keywords: vCenter Server NSX-T add cluster, view cluster vCenter Server NSX-T, delete cluster vCenter Server NSX-T
 
@@ -20,8 +20,6 @@ subcollection: vmware-solutions
 
 # vCenter Server with NSX-T 인스턴스의 클러스터 추가, 보기 및 삭제
 {: #vc_nsx-t_addingviewingcluster}
-
-인스턴스를 주문할 때 구성한 ESXi 서버는 기본적으로 **cluster1**로 그룹화됩니다.
 
 클러스터를 VMware vCenter Server with NSX-T 인스턴스에 추가하여 컴퓨팅 및 스토리지 용량을 확장할 수 있습니다. 클러스터 내에서 향상된 리소스 할당 및 고가용성을 위해 ESXi 서버를 관리할 수 있습니다. 더 이상 필요하지 않은 경우에는 인스턴스에서 추가된 클러스터를 삭제하십시오.
 
@@ -43,10 +41,11 @@ vCenter Server with NSX-T 인스턴스에 클러스터를 추가할 때는 다�
 {: #vc_nsx-t_addingviewingclusters-adding-cluster-name}
 
 클러스터 이름은 다음 요구사항을 충족해야 합니다.
-* 영숫자 문자 및 대시(-) 문자만 사용할 수 있습니다.
-* 클러스터 이름은 영숫자 문자로 시작하고 끝나야 합니다.
-* 최대 문자 수는 30자입니다.
-* 클러스터 이름은 vCenter Server 인스턴스 내에서 고유해야 합니다.
+* 소문자 영문자, 숫자 및 대시(-) 문자만 사용할 수 있습니다.
+* 클러스터 이름은 소문자 영문자로 시작해야 합니다.
+* 클러스터 이름은 소문자 영문자 또는 숫자로 끝나야 합니다.
+* 클러스터 이름의 최대 길이는 30자입니다.
+* 클러스터 이름은 vCenter Server with NSX-T 인스턴스 내에서 고유해야 합니다.
 
 #### 데이터 센터 위치
 {: #vc_nsx-t_addingviewingclusters-adding-dc-location}
@@ -58,7 +57,7 @@ vCenter Server with NSX-T 인스턴스에 클러스터를 추가할 때는 다�
 ### Bare Metal Server 설정
 {: #vc_nsx-t_addingviewingclusters-bare-metal-settings}
 
-**Skylake** 또는 **Broadwell**을 선택할 수 있습니다.
+**Skylake**, **Cascade** 또는 **Broadwell**을 선택할 수 있습니다.
 
 #### Skylake
 {: #vc_nsx-t_addingviewingclusters-adding-skylake}
@@ -72,6 +71,21 @@ vCenter Server with NSX-T 인스턴스에 클러스터를 추가할 때는 다�
 |듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개의 코어, 2.3GHz | 128GB, 192GB, 384GB, 768GB, 1.5TB |
 {: caption="표 1. Skylake {{site.data.keyword.baremetal_short}}의 옵션" caption-side="top"}
 
+#### Cascade
+{: #vc_nsx-t_addingviewingclusters-adding-cascade}
+
+**Cascade** 설정의 경우 **CPU 모델** 및 **RAM**에 대한 옵션이 있습니다.
+
+Cascade {{site.data.keyword.baremetal_short}}는 VMware vSphere Enterprise Plus 6.7 U2 인스턴스에만 사용할 수 있습니다.
+{:note}
+
+| CPU 모델 옵션        |RAM 옵션       |
+|:------------- |:------------- |
+|듀얼 Intel Xeon Gold 4210 프로세서 / 총 20개의 코어, 2.3GHz |64GB, 96GB, 128GB, 192GB, 768GB, 1.5TB |
+|듀얼 Intel Xeon Gold 5218 프로세서 / 총 32개의 코어, 2.3GHz |64GB, 96GB, 128GB, 192GB, 768GB, 1.5TB |
+|듀얼 Intel Xeon Gold 6248 프로세서 / 총 40개의 코어, 2.5GHz |64GB, 96GB, 128GB, 192GB, 768GB, 1.5TB |
+{: caption="표 2. Cascade {{site.data.keyword.baremetal_short}}의 옵션" caption-side="top"}
+
 #### Broadwell
 {: #vc_nsx-t_addingviewingclusters-adding-broadwell}
 
@@ -81,7 +95,7 @@ vCenter Server with NSX-T 인스턴스에 클러스터를 추가할 때는 다�
 |:------------- |:------------- |
 | 쿼드 Intel Xeon E7-4820 v4 / 총 40개의 코어, 1.9GHz |128GB, 256GB, 512GB, 1TB, 2TB, 3TB |
 | 쿼드 Intel Xeon E7-4850 v4 / 총 64개의 코어, 2.2GHz |128GB, 256GB, 512GB, 1TB, 2TB, 3TB |
-{: caption="표 2. Broadwell {{site.data.keyword.baremetal_short}}의 옵션" caption-side="top"}
+{: caption="표 3. Broadwell {{site.data.keyword.baremetal_short}}의 옵션" caption-side="top"}
 
 #### Bare Metal Server 수
 {: #vc_nsx-t_addingviewingclusters-adding-bare-metal-number}
@@ -103,7 +117,7 @@ vCenter Server with NSX-T 인스턴스에 클러스터를 추가할 때는 다�
 * **vSAN 용량 디스크 수**: 추가할 용량 디스크 수를 지정하십시오.
 * 용량 디스크를 10개 한계 이상으로 추가하려는 경우 **고성능 Intel Optane** 상자를 선택하십시오. 이 옵션은 총 12개 용량 디스크에 대해 2개의 추가 용량 디스크 베이를 제공하며 짧은 대기 시간과 높은 IOPS 처리량이 필요한 워크로드에 유용합니다.
 
-  **고성능 Intel Optane** 옵션은 Skylake CPU 모델에 대해서만 사용 가능합니다.
+  **고성능 Intel Optane** 옵션은 Skylake 및 Cascade CPU 모델에 대해서만 사용 가능합니다.
   {:note}
 
 * **vSAN 캐시 디스크의 디스크 유형** 및 **vSAN 캐시 디스크 수** 값을 검토하십시오. 이러한 값은 **고성능 Intel Optane** 상자를 선택했는지 여부에 따라 달라집니다.
@@ -133,7 +147,7 @@ vCenter Server with NSX-T 인스턴스에 클러스터를 추가할 때는 다�
 |2IOPS/GB |이 옵션은 가장 일반적인 워크로드를 위해 설계되었습니다. 애플리케이션 예로 소형 데이터베이스 호스팅, 웹 애플리케이션 백업 또는 하이퍼바이저용 가상 머신(VM) 디스크 이미지가 있습니다. |
 |4IOPS/GB |이 옵션은 동시에 활성 데이터의 높은 백분율을 보유한 고강도 워크로드를 위해 설계되었습니다. 애플리케이션 예로 트랜잭션 데이터베이스가 있습니다. |
 |10IOPS/GB |이 옵션은 분석과 같이 가장 처리가 어려운 워크로드 유형을 위해 설계되었습니다. 애플리케이션 예로 높은 트랜잭션 데이터베이스 및 기타 성능에 민감한 데이터베이스가 있습니다. 이 성능 레벨은 파일 공유당 4TB의 최대 용량으로 제한됩니다. |
-{: caption="표 3. NFS 성능 레벨 옵션" caption-side="top"}
+{: caption="표 4. NFS 성능 레벨 옵션" caption-side="top"}
 
 ### 라이센스 부여 설정
 {: #vc_nsx-t_addingviewingclusters-adding-licensing-settings}
@@ -223,12 +237,12 @@ vCenter Server with NSX-T 인스턴스에 클러스터를 추가할 때는 다�
 
 | 항목        | 설명       |  
 |:------------- |:------------- |
-|이름 | ESXi 서버의 이름은 다음 형식으로 되어 있습니다.<br> `<host_prefix><n>.<subdomain_label>.<root_domain>` <br> 여기서,<br> `host_prefix`는 호스트 이름 접두부이고<br> `n`은 서버의 순서이며<br> `subdomain_label`은 하위 도메인 레이블이고<br> `root_domain`은 루트 도메인 이름입니다. |
+|이름 |ESXi 서버의 이름은 `<data_center>-<host_prefix><n>.<subdomain_label>.<root_domain>` 형식으로 되어 있습니다. 여기서 `n`은 ESXi 서버의 순서입니다. |
 |버전 |ESXi 서버의 버전입니다. |
 |인증 정보 |ESXi 서버에 액세스하는 데 사용되는 사용자 이름 및 비밀번호입니다. |
 |사설 IP |ESXi 서버의 사설 IP 주소입니다. |
 |상태 |ESXi 서버의 상태이며, 다음 값 중 하나일 수 있습니다.<br> **추가됨** ESXi 서버가 추가되었으며 사용할 준비가 되었습니다.<br> **추가 중** ESXi 서버가 추가되고 있습니다.<br> **삭제 중** ESXi 서버가 삭제되고 있습니다. |
-{: caption="표 4. ESXi 서버 세부사항" caption-side="top"}
+{: caption="표 5. ESXi 서버 세부사항" caption-side="top"}
 
 스토리지 세부사항 보기:
 
@@ -238,7 +252,7 @@ vCenter Server with NSX-T 인스턴스에 클러스터를 추가할 때는 다�
 |크기 |스토리지의 용량입니다. |
 |IOPS/GB |스토리지의 성능 레벨입니다. |
 |NFS 프로토콜 |스토리지의 NFS 버전입니다. |
-{: caption="표 5. 스토리지 세부사항" caption-side="top"}
+{: caption="표 6. 스토리지 세부사항" caption-side="top"}
 
 네트워크 인터페이스 세부사항 보기:
 
@@ -248,7 +262,7 @@ vCenter Server with NSX-T 인스턴스에 클러스터를 추가할 때는 다�
 |설명 | VLAN의 설명입니다.  |
 | 위치 | 데이터 센터 위치입니다. |
 | 기본 라우트 | VLAN의 기본 라우트입니다. |
-{: caption="표 6. 네트워크 인터페이스 - VLAN 세부사항" caption-side="top"}
+{: caption="표 7. 네트워크 인터페이스 - VLAN 세부사항" caption-side="top"}
 
 VLAN 세부사항에 액세스하려면 **리소스 보기**를 클릭하십시오.
 
@@ -259,7 +273,7 @@ VLAN 세부사항에 액세스하려면 **리소스 보기**를 클릭하십시�
 |이름 | 서브넷 이름입니다. 서브넷 세부사항에 액세스하려면 이름을 클릭하십시오. |
 |유형 | 서브넷의 유형: 기본 또는 포터블. |
 |설명 | 서브넷의 설명입니다. |
-{: caption="표 7. 네트워크 인터페이스 - 서브넷 세부사항" caption-side="top"}
+{: caption="표 8. 네트워크 인터페이스 - 서브넷 세부사항" caption-side="top"}
 
 IP 세부사항 보기:
 
@@ -268,7 +282,7 @@ IP 세부사항 보기:
 | IP | IP 주소입니다. |
 |상태 | IP 주소의 상태입니다. |
 |설명 | IP 주소의 설명입니다.  |
-{: caption="표 8. 네트워크 인터페이스 - IP 세부사항" caption-side="top"}
+{: caption="표 9. 네트워크 인터페이스 - IP 세부사항" caption-side="top"}
 
 ## vCenter Server with NSX-T 인스턴스에서 클러스터 삭제
 {: #vc_nsx-t_addingviewingclusters-deleting}

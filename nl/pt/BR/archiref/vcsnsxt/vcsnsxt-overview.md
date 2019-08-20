@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -48,8 +48,3 @@ O vCenter Server Hybridity Bundle não é um serviço gerenciado, embora seja po
 As opções de integração de plataforma do vCenter Server Hybridity Bundle não estão limitadas a opções disponíveis do VMware, como o vRealize Suite ou o vSphere with Operations Management, mas abrangem múltiplas ofertas de serviço do {{site.data.keyword.cloud_notm}}, como o [vCenter Server, o {{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsiks?topic=vmware-solutions-vcsiks-intro), o [vCenter Server e o {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro), que usam o Terraform de software livre para gerenciar e entregar a infraestrutura como código.
 
 O extenso portfólio de serviços e as opções de integração de múltiplas ofertas disponíveis para o vCenter Server Hybridity Bundle entregam uma plataforma realmente híbrida que torna possível o Hibridismo como um Serviço.
-
-## Links relacionados
-{: #vcsnsxt-overview-related}
-
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

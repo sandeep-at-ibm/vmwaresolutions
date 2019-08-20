@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-21"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -73,8 +73,3 @@ Vulnerabilidade do VMware. O ScanName é configurado como DC1AssetScan, NSXFlows
 |Tarefa |Quatro tarefas são configuradas: Varredura de ativo, Fluxos de NSX, Varredura da infraestrutura do VMware e
 Vulnerabilidade do VMware. O tipo é configurado como vCenter, NSX, VMWareInfrastructureScan, VMWareVulnerabilityScan |
 |Tarefa |O planejamento é configurado como Por hora para DC1AssetScan e Diário para os outros |
-
-## Links relacionados
-{: #caveonix-step4-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

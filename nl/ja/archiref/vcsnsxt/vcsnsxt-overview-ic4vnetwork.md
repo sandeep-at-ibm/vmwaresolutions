@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-22"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -87,8 +87,3 @@ VLAN 	|サブネット・タイプ 	|説明
 この設計は、VLAN 上の物理ホストと仮想システム・インスタンス (VSI) を使用して実装され、デフォルト・ルートとして {{site.data.keyword.cloud_notm}} BCR (「プライベート・ネットワーク」のバックエンド・カスタマー・ルーター) を指すように構成されます。 vCenter Server インスタンスによってソフトウェア定義ネットワーキングが使用可能になりますが、NSX によって作成されて VLAN サブネットへのルーティングを含むネットワーク・オーバーレイは、{{site.data.keyword.cloud_notm}} 管理ルーターから認識されません。 静的ルート、ファイアウォール・ルール、NAT ルールを作成して、ネットワーク・フローを適切に処理できるようにする必要があります。
 
 プライベート・ネットワーク接続は、MTU サイズが 9000 のジャンボ・フレームを使用するように構成されます。これにより、ストレージや vMotion などの大規模データ転送のパフォーマンスが向上します。 これは、VMware 内で、および {{site.data.keyword.cloud_notm}} によって許可される最大の MTU です。 パブリック・ネットワーク接続には標準的なイーサネット MTU の 1500 が使用されます。 これは維持する必要があります。変更すると、インターネット上でパケットのフラグメント化が発生する可能性があります。
-
-## 関連リンク
-{: #vcsnsxt-overview-ic4vnetwork-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

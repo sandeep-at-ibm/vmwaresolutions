@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-03"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -14,7 +14,7 @@ subcollection: vmware-solutions
 # VMware NSX-T 设计
 {: #nsx-t-design}
 
-与 NSX-V (NSX on vSphere) 不同，VMware NSX-T 旨在解决具有异构端点和技术堆栈的应用程序框架和体系结构。除了 vSphere 外，这些环境还可以包含其他系统管理程序、KVM、容器和裸机。NSX 旨在跨不同平台上的软件定义的网络和安全基础架构，而不仅仅用于 vSphere。虽然可以在不需要 vSphere 的情况下部署 NSX-T 组件，但此设计主要关注的是 NSX-T 及其在 vCenter Server vSphere 自动部署中的集成。
+与 NSX-V (NSX on vSphere) 不同，VMware NSX-T 旨在解决具有异构端点和技术堆栈的应用程序框架和体系结构。除了 vSphere 外，这些环境还可以包含其他系统管理程序、KVM、容器和裸机。VMware NSX 旨在跨不同平台上的软件定义的网络和安全基础架构，而不仅仅用于 vSphere。虽然可以在不需要 vSphere 的情况下部署 NSX-T 组件，但此设计主要关注的是 NSX-T 及其在 vCenter Server vSphere 自动部署中的集成。
 
 NSX-T 中有许多高级功能，例如防火墙策略、防火墙策略中包含的访客自省功能以及高级网络流跟踪。对这些功能的描述超出了本文档的范围。请参阅 VMware 文档来了解 NSX-T。在此设计中，NSX-T 管理基础架构在初始 vCenter Server 集群部署期间进行部署，以取代 NSX-V。
 
@@ -54,7 +54,7 @@ NSX-V 或 vSphere 本机|NSX-T
 
 属性|规范
 --|--
-**NSX Manager/Controller** |3 个虚拟设备
+**NSX Manager/Controller** |三个虚拟设备
 **vCPU 数**|4
 **内存**|16 GB
 **磁盘**|60 GB
@@ -216,13 +216,8 @@ IC4V 部署的拓扑 1 基本上与使用 NSX-V DLR 和边缘网关部署的拓�
 
 ![带 ICP NSX-T 集成和虚拟 T0 边缘网关的 NSX-T 已部署拓扑](../../images/vcsv4radiagrams-topology-3.svg "[带 ICP NSX-T 集成和虚拟 T0 边缘网关的 NSX-T 已部署拓扑")
 
-部署的拓扑 3 包含拓扑 1，并添加了一个 ICP 部署，其中采用 NSX-T 集成而不是 ICP 部署中的缺省联网堆栈 Calico。客户可以在 ICP 中供应其他容器名称空间，这将自动为每个名称空间创建逻辑交换机、IP 子网和 T1 网关实例。
+部署的拓扑 3 包含拓扑 1，并添加了一个 ICP 部署，其中采用 NSX-T 集成而不是 ICP 部署中的缺省联网堆栈 Calico。客户可以在 ICP 中供应更多容器名称空间，这将自动为每个名称空间创建逻辑交换机、IP 子网和 T1 网关实例。
 
 要全面了解 ICP 在 vCenter Server 上的运行方式，请参阅 ICP on vCenter Server 体系结构文档。客户指定的 {{site.data.keyword.cloud_notm}} 专用和公共可移植 IP 空间会分配给每个 T0，以供客户使用。 
 
 对于此设计，如果 vCenter Server 实例已停用并删除，那么可以选择不删除这些 IP 范围。
-
-## 相关链接
-{: #nsx-t-design-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

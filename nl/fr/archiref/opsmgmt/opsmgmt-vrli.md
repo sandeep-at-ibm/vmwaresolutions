@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-01"
+lastupdated: "2019-08-05"
 
 ---
 
@@ -27,7 +27,7 @@ Dans cette conception, chaque emplacement dispose d'un cluster vRLI indépendant
 * Noeud maître - noeud initial requis dans le cluster. Le noeud maître est responsable des requêtes et de l'ingestion des journaux. L'interface utilisateur Web du noeud maître est la seule interface de ce cluster vRealize Log Insight. Toutes les requêtes concernant les données sont dirigées vers le noeud maître qui, à son tour, répartit la charge de travail entre les noeuds worker.
 * Noeud worker - trois noeuds minimum sont requis pour former un cluster avec la possibilité d'ajouter plus des noeuds worker supplémentaires si une extension est nécessaire. Un noeud worker ingère et stocke les journaux localement.
 * Equilibreur de charge intégré - il offre une haute disponibilité grâce à une configuration d'équilibrage de charge propriétaire (aucun équilibreur de charge externe n'est requis).
-* Log Insight Forwarder – il est déployé pour recevoir les journaux des composants NSX superposés. De plus, il peut être exploité par un client s'il souhaite envoyer des journaux à partir de machines virtuelles de calcul. Log Insight Forwarder est un noeud maître unique de vRealize Log Insight qui est utilisé comme agrégateur syslog distant pour transmettre les alertes au cluster vRLI. Les adresses basées sur VXLAN étant en dehors de l'espace d'adressage BYOIP, les règles NAT doivent être implémentées sur la passerelle NSX ESG. 
+* Log Insight Forwarder – il est déployé pour recevoir les journaux des composants NSX superposés. De plus, il peut être exploité par un client s'il souhaite envoyer des journaux à partir de machines virtuelles de calcul. Log Insight Forwarder est un noeud maître unique de vRealize Log Insight qui est utilisé comme agrégateur syslog distant pour transmettre les alertes au cluster vRLI. Les adresses basées sur VXLAN étant en dehors de l'espace d'adressage BYOIP, les règles NAT doivent être implémentées sur la passerelle NSX ESG.
 
 Les tailles suivantes sont disponibles et la taille appropriée est sélectionnée :
 * Petit – 2 000 événements par seconde
@@ -141,6 +141,5 @@ Les autres packs de contenus sont décrits dans la section [Pack de contenus de 
 ## Liens connexes
 {: #opsmgmt-vrli-related}
 
-* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
 * [Redimensionnement du dispositif virtuel vRealize Log Insight](https://docs.vmware.com/en/vRealize-Log-Insight/4.6/com.vmware.log-insight.getting-started.doc/GUID-284FC5F4-B832-47A7-912E-D407A760CAE4.html){:new_window}
 * [vRealize Log Insight](https://docs.vmware.com/en/vRealize-Log-Insight/index.html){:new_window}

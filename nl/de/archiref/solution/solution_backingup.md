@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-14"
+lastupdated: "2019-07-16"
 
 subcollection: vmware-solutions
 
@@ -68,7 +68,7 @@ Wenn Sie Add-on-Lösungskomponenten in Ihrer Instanz bereitstellen, müssen Sie 
 
 * Zerto Virtual Replication: Das Zerto Virtual Manager-System (ZVM-System) wird als {{site.data.keyword.cloud_notm}}-VSI (virtuelle Serverinstanz) bereitgestellt und seine Sicherung wird von Veeam oder IBM Spectrum Protect Plus nicht unterstützt. Wenn Ihre Disaster-Recovery-Strategie erfordert, dass das ZVM-System ohne Durchführung eines Standortfailovers wiederhergestellt wird, sollten Sie Ihre bevorzugte Windows-Sicherungslösung verwenden und das ZVM-System wiederherstellen.
 * F5 BIG-IP: F5 empfiehlt eine [dateibasierte Sicherung der F5-Konfiguration](https://support.f5.com/csp/article/K13132){:new_window}, die Sie auf Ihren Dateiserver leiten können.
-* FortiGate Security Appliance oder VM: Fortinet empfiehlt eine [dateibasierte Sicherung der FortiGate-Konfiguration](http://help.fortinet.com/fos50hlp/54/Content/FortiOS/fortigate-best-practices-54/Firmware/Performing_Config_Backup.htm){:new_window}, die Sie auf Ihren Dateiserver leiten können.
+* FortiGate Security Appliance oder VM: Fortinet empfiehlt eine [dateibasierte Sicherung der FortiGate-Konfiguration](https://help.fortinet.com/fos50hlp/54/Content/FortiOS/fortigate-best-practices-54/Firmware/Performing_Config_Backup.htm){:new_window}, die Sie auf Ihren Dateiserver leiten können.
 * HyTrust Cloud Control und Data Control: HyTrust unterstützt sowohl image- als auch dateibasierte Sicherungen der HyTrust-Server-Appliances. Weitere Informationen finden Sie in den HyTrust-Administrationshandbüchern.
 * VMware HCX: Die HCX-Appliance-Managementschnittstelle bietet die Möglichkeit, ähnlich wie bei der vCenter Server Appliance eine dateibasierte Sicherung der HCX-Managerkonfiguration zu erstellen und herunterzuladen.
 

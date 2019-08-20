@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -54,7 +54,7 @@ subcollection: vmware-solutions
 ### 迁移带宽调速
 {: #hcxclient-monitoring-mig-bandwidth}
 
-迁移 VM 之前，请对使用的网络链路执行评估。请与包含 vSphere 源实例的网络的联网工程师合作，或者复查每周和每月的流量使用情况。如果该流量通过对业务关键的链路进行遍历，尤其是该链路小于 1 Gbps 时，请限制用于迁移的可用带宽。使用带宽限制最严格的一端，这通常是客户机端。
+迁移 VM 之前，请对使用的网络链路执行评估。请与包含 vSphere 源实例的网络的联网专业人员合作，或者复查每周和每月的流量使用情况。如果该流量通过对业务关键的链路进行遍历，尤其是该链路小于 1 Gbps 时，请限制用于迁移的可用带宽。使用带宽限制最严格的一端，这通常是客户机端。
 
 在 HCX 客户机 UI 中部署系列组件时执行此操作，但部署后需要转至 WAN Opt UI。
 

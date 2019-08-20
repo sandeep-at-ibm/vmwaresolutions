@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-21"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -122,8 +122,3 @@ NSX for vSphere 可讓組織將資料中心劃分為不同的安全區段，並�
 下圖顯示如何建立安全群組來實作一些 NSX-V 微分段特性的高階圖。在此範例中，production 及 development 是安全群組，並根據這些群組來指派安全規則。
 
 ![NSX-V 安全](../../images/vcsnsxt-vsecurity.svg "NSX-V 安全")
-
-## 相關鏈結
-{: #vcsnsxt-overview-ic4vnsxv-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

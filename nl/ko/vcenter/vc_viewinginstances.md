@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-22"
 
 keywords: view vCenter Server, view instance, view instance details
 
@@ -77,7 +77,6 @@ subcollection: vmware-solutions
 |DNS, 루트 도메인 |루트 도메인 이름은 DNS(Domain Name System) 도메인 이름 및 Microsoft Active Directory(AD) 포리스트 루트 이름입니다. |
 |DNS, SSO 도메인 |SSO 도메인은 vSphere Single Sign-On 도메인입니다. SSO 도메인 이름은 배치된 모든 vCenter Server 인스턴스(<samp class="ph codeph">vsphere.local</samp> 값 포함)에 대해 수정됩니다. |
 |DNS, 하위 도메인 |하위 도메인은 로컬 vCenter Server 인스턴스 호스트 이름이 상주하는 루트 도메인 이름의 DNS 하위 도메인 이름입니다. 하위 도메인 이름은 <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp> 형식으로 되어 있습니다. |
-| Hybridity Bundle |vCenter Server with Hybridity Bundle의 설치 여부를 표시합니다. |
 |상태  |인스턴스의 상태입니다.<br><br>표시된 정보는 배치의 진행상태 또는 인스턴스에서 수행되는 조치에 대한 업데이트를 제공합니다. 문제가 있는 경우 문제점을 조사하고 해결하는 데 도움이 되는 메시지가 표시될 수 있습니다. |
 {: caption="표 3. vCenter Server 인스턴스 특성" caption-side="top"}
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-22"
 
 keywords: HCX updates, HCX management console, login HCX console
 
@@ -27,14 +27,14 @@ subcollection: vmware-solutions
 2. 若要存取「HCX Cloud 主控台」，請在 HCX on {{site.data.keyword.cloud_notm}} 服務詳細資料頁面上按一下**檢視 HCX Cloud 主控台**，然後使用 vCenter Server 認證來登入。
 3. 若要存取「HCX Manager 管理主控台」，請在 HCX on {{site.data.keyword.cloud_notm}} 服務詳細資料頁面上按一下**檢視 HCX Manager 管理主控台**，然後使用相同服務詳細資料頁面上所列出的 HCX Manager 認證來登入。
 
-如需相關資訊，請參閱[訂購、檢視及移除 vCenter Server with Hybridity Bundle 實例的服務](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)。
+如需相關資訊，請參閱[訂購、檢視及移除 vCenter Server 實例的服務](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)。
 
 ## 將更新套用至 HCX on IBM Cloud
 {: #managinghcx-updates}
 
 HCX on {{site.data.keyword.cloud_notm}} 已部署最新已測試建置的 VMware Hybrid Cloud Extension 技術。VMware 會定期提供這些建置的更新，其中包括重要修正程式及新增特性。這些建置會自動推送至 HCX on {{site.data.keyword.cloud}} 安裝（包括內部部署 HCX 安裝）。
 
-若要套用任何已推送至環境的維護修正程式，您必須使用內部部署資料中心及 vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 實例中的「HCX Manager 管理主控台」。
+若要套用任何已推送至環境的維護修正程式，您必須使用內部部署資料中心及 vCenter Server on {{site.data.keyword.cloud_notm}} 實例中的「HCX Manager 管理主控台」。
 
 如果您看不到預期的建置更新、HCX 發生問題，或要立即將最新的 HCX 建置推送至系統，請遵循[與 IBM 支援中心聯絡](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)中的步驟來開立支援問題單。
 

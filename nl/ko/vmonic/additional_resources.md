@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-23"
 
 keywords: vmware solutions data sheet, vmware solutions developerWorks, vmware solutions video
 
@@ -37,7 +37,7 @@ subcollection: vmware-solutions
 ## IBM Cloud 패턴
 {: #additional_resources-patterns}
 
-* [IBM Cloud 패턴](https://ibmcloudpatterns.mybluemix.net/#862581F800007C53/862581F800007DD5/862581D000837B23){:external}
+* [{{site.data.keyword.cloud_notm}} 패턴](https://ibmcloudpatterns.mybluemix.net/#862581F800007C53/862581F800007DD5/862581D000837B23){:external}
 
 ## 플랫폼 확장
 {: #additional_resources-plat-extensions}
@@ -54,9 +54,18 @@ subcollection: vmware-solutions
 ## 동영상 및 데모
 {: #additional_resources-demos}
 
+### 디지털 기술 업무
+{: #additional_resources-dte}
+
+* [VMware on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/){:external}
+* [Veeam on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/demos/collection/Veeam-on-IBM-Cloud){:external}
+* [Zerto on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/demos/collection/Zerto-on-IBM-Cloud){:external}
+
+### 추가 동영상 및 데모
+{: #additional_resources-more}
+
 * [리소스 및 동영상](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/resources){:external}
-* [디지털 기술 업무](https://ibm-dte.mybluemix.net/vmware){:external}
-* [주요 리소스 및 케이스 연구](https://www.ibm.com/cloud/vmware/resources){:external}
+* [주요 리소스 및 케이스 연구](https://www.ibm.com/cloud/vmware){:external}
 
 ## VMware 문서
 {: #additional_resources-vmware-doc}

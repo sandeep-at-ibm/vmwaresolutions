@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-09"
 
 keywords: about vmware solutions, product overview, benefits
 
@@ -44,7 +44,7 @@ Antes de solicitar uma instância do vCenter Server, deve-se configurar a chave 
 
 Ao solicitar sua instância do vCenter Server, você primeiro escolhe seu nome e a versão do VMware vSphere. Todas as instâncias do VMware são implementadas com os controladores de domínio do Microsoft Active Directory e, para fins de conexão única, deve-se designar a instância como um site primário ou secundário. Uma instância primária é a primeira ou única instância em seu domínio de conexão única. É possível implementar mais instâncias secundárias e associá-las ao mesmo domínio de conexão única de uma instância primária existente. Em seguida, você escolhe entre trazer suas próprias licenças do VMware ou qual edição da licença alugar do {{site.data.keyword.cloud_notm}}. Finalmente, você escolhe a região e o data center do {{site.data.keyword.cloud_notm}} para sua instância, bem como as características de CPU e memória para os hosts em seu cluster.
 
-Na próxima parte da página do pedido, você insere as características de armazenamento e rede da sua instância. É possível escolher entre os armazenamentos vSAN e NFS para seu cluster, com opções de tamanho e número de discos vSAN Flash e da edição de licença do vSAN ou de tamanho, contagem e desempenho dos volumes de armazenamento NFS. Para a rede, você escolhe o prefixo do nome de seus hosts e o subdomínio e o domínio do cluster. Você tem a opção de implementar os controladores do Active Directory como uma única instância de servidor virtual (VSI) do {{site.data.keyword.cloud_notm}} ou como duas máquinas virtuais em seu cluster para as quais você precisa fornecer licenciamento e ativação.
+Na próxima parte da página do pedido, você insere as características de armazenamento e rede da sua instância. É possível escolher entre os armazenamentos vSAN e NFS para seu cluster, com opções de tamanho e número de discos vSAN Flash e da edição de licença do vSAN ou de tamanho, contagem e desempenho dos volumes de armazenamento NFS. Para a rede, você escolhe o prefixo do nome de seus hosts e o subdomínio e o domínio do cluster. Você tem a opção de implementar os controladores do Active Directory como uma única instância de servidor virtual (VSI) do {{site.data.keyword.cloud_notm}}. Ou, é possível implementar os controladores como duas máquinas virtuais (VMs) em seu cluster (para essas VMs, é necessário fornecer licenciamento e ativação).
 
 Na parte inferior da página do pedido do vCenter Server, é possível selecionar dentre diversos serviços complementares que podem ser implementados em sua instância do VMware e que são faturados para sua conta {{site.data.keyword.cloud_notm}}. Alguns serviços exigem configuração adicional, que é especificada como parte do formulário de pedido.
 
@@ -126,7 +126,7 @@ Para todas as instâncias, o vSphere Hypervisor é instalado nos servidores bare
 ### Componentes adicionais
 {: #under_the_hood-add-comp}
 
-Dependendo da sua escolha, uma VSI ou duas máquinas virtuais do Microsoft Windows são implementadas com ou no cluster, como servidores do Active Directory para componentes de gerenciamento. Opcionalmente, é possível incluir seus próprios servidores do Active Directory como origens de identidade adicionais para o acesso de gerenciamento.
+Dependendo de sua escolha, uma VSI do Microsoft Windows ou duas VMs do Microsoft Windows são implementadas paralelamente ou em seu cluster como servidores do Active Directory para componentes de gerenciamento. Opcionalmente, é possível incluir seus próprios servidores do Active Directory como origens de identidade adicionais para o acesso de gerenciamento.
 
 Independentemente de como você escolhe fornecer a continuidade de negócios para suas próprias cargas de trabalho, o {{site.data.keyword.cloud_notm}} recomenda fortemente que você faça backup dos componentes de gerenciamento de sua instância. O console do {{site.data.keyword.vmwaresolutions_short}} permite implementar um servidor de backup IBM Spectrum Protect Plus integrado ou um servidor de backup Veeam Backup & Replication com sua instância. Esses serviços de backup podem ser usados como parte de uma [solução de backup completa](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_backingup) para sua instância.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-01"
 
 keywords: FAQ, user account, patch management
 
@@ -88,7 +88,7 @@ subcollection: vmware-solutions
 {: #faq-rename-cluster}
 {: faq}
 
-對於新的 vCenter Server 實例，在部署期間建立的第一個叢集，其預設名稱為 **cluster1**。您可以在 VMware vSphere Client 中將預設叢集重新命名。當您將叢集新增至 vCenter Server 實例時，可以在 {{site.data.keyword.vmwaresolutions_short}} 主控台上指定您想要的名稱。
+對於新的 vCenter Server 實例，您可以設定在部署期間建立的初始叢集的名稱。當您將叢集新增至 vCenter Server 實例時，可以在 {{site.data.keyword.vmwaresolutions_short}} 主控台上指定您想要的名稱。
 
 ## 如何管理修補程式？
 {: #faq-patches}
@@ -106,7 +106,6 @@ IBM 提供 IBM 程式碼的持續更新，方法是隨需應變部署 IBM CloudD
 如需相關資訊，請參閱下列資源：
 * [VMware 支援](https://www.vmware.com/support.html){:external}
 * [將更新套用至 vCenter Server 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates)
-* [將更新套用至 vCenter Server with Hybridity Bundle 實例](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_applyingupdates)
 
 ## 管理服務 NSX Edge 是否造成安全風險？
 {: #faq-mgmt-nsx}
@@ -136,7 +135,6 @@ IBM 提供 IBM 程式碼的持續更新，方法是隨需應變部署 IBM CloudD
 
 如需相關資訊，請參閱以下的 _IBM Cloud Data Center 可用性_ 小節：
 * [vCenter Server 實例的需求及規劃](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
-* [vCenter Server with Hybridity Bundle 實例的需求及規劃](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)
 * [VMware vSphere on {{site.data.keyword.cloud_notm}} 的需求及規劃](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning)
 * [NetApp ONTAP Select 實例的需求及規劃](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_planning)
 
@@ -150,7 +148,7 @@ IBM 提供 IBM 程式碼的持續更新，方法是隨需應變部署 IBM CloudD
 {: #faq-vss-automation}
 {: faq}
 
-否。VMware vSphere on {{site.data.keyword.cloud_notm}} 並未使用來自 vCenter Server 平台的進階自動化。根據您訂購的內容，平台會提供選用的 VMware 授權、ESXi 伺服器，以及選擇性地提供 FortiGate 實體防火牆的 HA 配對。如果建立新的叢集，則也會佈建三個新的 VLAN：一個公用 VLAN，兩個專用 VLAN。
+不是，VMware vSphere on {{site.data.keyword.cloud_notm}} 未使用 vCenter Server 平台中的進階自動化。根據您訂購的內容，平台會提供選用的 VMware 授權、ESXi 伺服器，以及選擇性地提供 FortiGate 實體防火牆的 HA 配對。如果建立新的叢集，則也會佈建三個新的 VLAN：一個公用 VLAN，兩個專用 VLAN。
 
 VMware ESXi 會自動安裝在每一部裸機伺服器上，但您必須負責安裝其他任何 VMware 元件，諸如 vCenter Server 或 NSX。雖然 vSphere on {{site.data.keyword.cloud_notm}} 可確保根據所選取的 VMware 元件來訂購 VMware 相容硬體，但沒有自動化可配置及啟動 VMware 環境。您必須負責設計及架構 IBM 管理的環境。
 

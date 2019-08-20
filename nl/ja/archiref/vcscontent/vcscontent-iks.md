@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -20,8 +20,3 @@ Service](https://www.ibm.com/cloud/container-service) インスタンスを立�
 その後、Todd が strongSwan VPN を追加して各クラスターのプライベート・ネットワークを接続します。
 
 ![本当のハイブリッド・アプリケーションとしての Stock Trader](../../images/vcscontent-truehybrid.svg "本当のハイブリッド・アプリケーションとして Stock Trader")
-
-## 関連リンク
-{: #vcscontent-iks-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

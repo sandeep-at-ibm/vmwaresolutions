@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -105,11 +105,5 @@ Gli utenti possono eseguire il provisioning di un ambiente {{site.data.keyword.c
 
 Le distribuzioni dell'applicazione in {{site.data.keyword.containerlong_notm}} sono possibili utilizzando i seguenti metodi:
 -	La connessione e i servizi {{site.data.keyword.containerlong_notm}} sono sviluppati in CAM e pubblicati nel catalogo {{site.data.keyword.icpfull_notm}}.
--	Multi Cloud Manager, un miglioramento futuro per gestire le istanze {{site.data.keyword.containerlong_notm}}.
--	Riga di comando Helm.
-
-## Link correlati
-{: #vcsnsxt-operations-related}
-
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+- Multi Cloud Manager, un miglioramento futuro per gestire le istanze {{site.data.keyword.containerlong_notm}}.
+- Riga di comando Helm.

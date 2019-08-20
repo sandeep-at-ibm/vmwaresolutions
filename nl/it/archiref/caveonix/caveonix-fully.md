@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -126,8 +126,3 @@ Tabella 9. Raccoglitore remoto
 |Disco	|1 TB |
 |SO	|CentOS 7 |
 |Componenti dell'applicazione installati	|Raccoglitore remoto |
-
-## Link correlati
-{: #caveonix-fully-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

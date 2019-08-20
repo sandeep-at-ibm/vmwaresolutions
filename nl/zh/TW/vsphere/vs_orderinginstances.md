@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-06"
 
 keywords: vSphere order cluster, order vSphere, order vSphere cluster
 
@@ -40,7 +40,12 @@ subcollection: vmware-solutions
 ### 叢集名稱
 {: #vs_orderinginstances-cluster-name}
 
-叢集名稱在您的帳戶中必須是唯一的。
+叢集名稱必須滿足下列需求：
+* 只容許小寫英文字母、數字及橫線 (-) 字元。
+* 叢集名稱的開頭必須是小寫英文字母。
+* 叢集名稱的結尾必須是小寫英文字母或數值字元。
+* 叢集名稱的長度上限為 10 個字元。
+* 叢集名稱在您的帳戶中必須是唯一的。
 
 ## 授權設定
 {: #vs_orderinginstances-licensing-settings}
@@ -72,7 +77,7 @@ subcollection: vmware-solutions
 {: #vs_orderinginstances-individual-components-for-non-bp-users}
 
 如果您是非「事業夥伴」，則可以針對 vSphere 叢集選取下列元件：
-* VMware vSphere Enterprise Plus 6.7 U1 或 6.5 U2
+* VMware vSphere Enterprise Plus 6.7 U2 或 6.5 U2
 * VMware vCenter Server
 * VMware NSX
 * VMware vSAN
@@ -123,6 +128,21 @@ subcollection: vmware-solutions
 |雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB |
 {: caption="表 2. Skylake {{site.data.keyword.baremetal_short}} 的選項" caption-side="top"}
 
+### Cascade
+{: #vs_orderinginstance-cascade}
+
+若為 **Cascade** 設定，您有數個選項可用於 **CPU 型號**及 **RAM**。
+
+Cascade {{site.data.keyword.baremetal_short}} 僅適用於 VMware vSphere Enterprise Plus 6.7 U2 實例。
+{:note}
+
+| CPU 型號選項             |RAM 選項          |
+|:------------- |:------------- |
+|雙重 Intel Xeon Gold 4210 處理器 / 總計 20 核心，2.3 GHz| 64 GB、96 GB、128 GB、192 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon Gold 5218 處理器 / 總計 32 核心，2.3 GHz| 64 GB、96 GB、128 GB、192 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon Gold 6248 處理器 / 總計 40 核心，2.5 GHz| 64 GB、96 GB、128 GB、192 GB、768 GB、1.5 TB |
+{: caption="表 3. Cascade {{site.data.keyword.baremetal_short}} 的選項" caption-side="top"}
+
 ### SAP 認證
 {: #vs_orderinginstances-sap}
 
@@ -146,7 +166,7 @@ subcollection: vmware-solutions
 |:------------- |:------------- |
 |四重 Intel Xeon E7-4820 v4 / 總計 40 核心，2.0 GHz |128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 |四重 Intel Xeon E7-4850 v4 / 總計 64 核心，2.1 GHz |128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
-{: caption="表 3. Broadwell {{site.data.keyword.baremetal_short}} 的選項" caption-side="top"}
+{: caption="表 4. Broadwell {{site.data.keyword.baremetal_short}} 的選項" caption-side="top"}
 
 ### Bare Metal Server 數目
 {: #vs_orderinginstances-bare-metal-number}
@@ -167,7 +187,7 @@ subcollection: vmware-solutions
 * **vSAN 容量磁碟數目**：指定您要新增的容量磁碟數目。
 * 如果您要新增超過所限制的 8 個容量磁碟，請勾選**高效能 Intel Optane** 方框。這個選項提供 2 個額外容量磁碟機槽來放置共 10 個容量磁碟，並且適用於需要較少延遲且較高 IOPS 傳輸量的工作負載。
 
-  **高效能 Intel Optane** 選項僅適用於 Skylake CPU 型號。
+  **高效能 Intel Optane** 選項僅適用於 Skylake 及 Cascade CPU 型號。
   {:note}
 
 * 檢閱 **vSAN 快取磁碟的磁碟類型**及 **vSAN 快取磁碟數目**值。這些值取決於您是否已勾選**高效能 Intel Optane** 方框。
@@ -180,30 +200,33 @@ subcollection: vmware-solutions
 ### 主機名稱字首
 {: #vs_orderinginstances-host-name-prefix}
 
-主機名稱使用於所有裸機伺服器訂單。建議您對所有管理虛擬機器使用主機名稱（例如 vCenter Server 及 NSX）。
+主機名稱用於所有 Bare Metal Server 伺服器訂單。建議您對所有管理虛擬機器使用主機名稱（例如 vCenter Server 及 NSX）。
 
 主機名稱字首必須滿足下列需求：
-* 名稱的開頭及結尾必須是英數字元。
-* 只容許英數及橫線 (-) 字元。
-* 最大長度是 10 個字元。
+* 只容許小寫英文字母、數字及橫線 (-) 字元。
+* 主機名稱字首的開頭必須是小寫英文字母。
+* 主機名稱字首的結尾必須是小寫英文字母或數值字元。
+* 主機名稱字首的長度上限為 10 個字元。
 
 ### 子網域標籤
 {: #vs_orderinginstances-subdomain-label}
 
 子網域標籤必須滿足下列需求：
-*  只容許英數及橫線 (-) 字元。
-*  子網域標籤的開頭及結尾必須是英數字元。
-*  子網域標籤的長度上限為 10 個字元。
+* 只容許小寫英文字母、數字及橫線 (-) 字元。
+* 子網域標籤的開頭必須是小寫英文字母。
+* 子網域標籤的結尾必須是小寫英文字母或數值字元。
+* 子網域標籤的長度上限為 10 個字元。
 
 ### 網域名稱
 {: #vs_orderinginstances-domain-name}
 
 網域名稱使用於所有 {{site.data.keyword.baremetal_short}}，且必須滿足下列需求：
-* 名稱必須包含兩個以上以句點 (.) 區隔的字串
-* 只容許英數及橫線 (-) 字元。
-* 每一個字串的開頭都必須是英文字母、結尾必須是英數字元，而最後一個字串只能包含英文字母。
+* 網域名稱必須包含兩個以上以句點 (.) 區隔的字串
+* 只容許小寫英文字母、數字及橫線 (-) 字元。
+* 每個字串的開頭都必須是小寫英文字母，而且結尾必須是小寫英文字母或數值字元。
+* 最後一個字串只能包含小寫英文字母。
 * 最後一個字串的長度範圍必須在 2 到 24 個字元之間。
-* 其他字串的長度必須在 1 - 63 個字元的範圍內。
+* 其他字串的長度必須在 1 到 63 個字元範圍內。
 * 網域名稱的長度上限為 189 個字元。
 
 ### 公用或專用網路
@@ -216,12 +239,12 @@ subcollection: vmware-solutions
 
 網路設定是根據您選取**訂購新的 VLAN** 或**選取現有的 VLAN** 而定。
 
-您的叢集訂單需要一個公用 VLAN 及兩個專用 VLAN。兩個專用 VLAN 成為每部 Bare Metal Server 的主幹。
-
 #### 訂購新的 VLAN
 {: #vs_orderinginstances-new-vlans}
 
-選取訂購一個新的公用 VLAN 和兩個新的專用 VLAN。
+如果要訂購公用和專用網路，則訂購叢集時需要包含一個公用 VLAN 和兩個專用 VLAN。兩個專用 VLAN 成為每部 Bare Metal Server 的主幹。
+
+如果要訂購專用網路，則訂購叢集時只需要包含兩個專用 VLAN。
 
 #### 選取現有的 VLAN
 {: #vs_orderinginstances-existing-vlans}
@@ -230,10 +253,10 @@ subcollection: vmware-solutions
 
   當您選擇重複使用現有的公用及專用 VLAN 時，請指定 VLAN 及子網路：
   * **公用 VLAN** 適用於公用網路存取。
+  * **主要子網路**已指派給實體主機，以進行公用網路存取。
   * **專用 VLAN** 適用於 {{site.data.keyword.cloud_notm}} 內資料中心與服務之間的連線功能。
   * **次要專用 VLAN** 適用於 VMware 特性（例如 vSAN）。
-  * **主要子網路**已指派給實體主機，以進行公用網路存取。
-  * **主要專用子網路**已指派給實體主機，以處理管理資料流量。
+  * **專用主要子網路**已指派給實體主機，以處理管理資料流量。
 
 ##### 重要
 {: #vs_orderinginstances-important}
@@ -245,6 +268,9 @@ subcollection: vmware-solutions
 {: #vs_orderinginstances-fortigate-physical-appliance}
 
 您也可以選取是否包括「FortiGate Physical Appliance 300 系列 HA 配對」來保護雲端環境安全。如需相關資訊，請參閱 [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 概觀](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations)。
+
+此選項僅可用於同時訂購公用和專用網路的訂單。
+{:note}
 
 ## 訂單摘要
 {: #vs_orderinginstances-order-summary}
@@ -268,7 +294,7 @@ subcollection: vmware-solutions
 5. 完成 Bare Metal Server 設定：
    1. 選取 {{site.data.keyword.CloudDataCent_notm}} 來管理叢集。
    2. 選取 Bare Metal Server 配置。
-      * 當您選取 **Skylake** 或 **Broadwell** 時，請指定 CPU 型號及 RAM 大小。
+      * 當您選取 **Skylake**、**Cascade** 或 **Broadwell** 時，請指定 CPU 型號及 RAM 大小。
       * 當您選取 **SAP 認證**時，請選取其中一個預設配置。
    3. 指定 Bare Metal Server 數目。
 6. 如果您選取 **VMware vSAN** 元件，請完成 vSAN 儲存空間配置。指定容量及快取磁碟的磁碟類型以及磁碟數目。如果您要更多儲存空間，請勾選**高效能 Intel Optane** 方框。
@@ -278,7 +304,7 @@ subcollection: vmware-solutions
    3. 選取要使用的網路介面。
     * 如果您要訂購新的公用及專用 VLAN，則請按一下**訂購新的 VLAN**。
     * 如果您要重複使用可用的現有公用及專用 VLAN，則請按一下**選取現有的 VLAN**，然後指定 VLAN 及選用子網路。
-    4. 指定是否套用「FortiGate Physical Appliance 300 系列 HA 配對」來保護雲端環境安全。  
+    4. 如果要訂購公用 VLAN，請指定是否套用 FortiGate Physical Appliance 300 系列 HA 配對來保護雲端環境。
 8. 在**訂單摘要**窗格中，驗證叢集配置及預估成本。
    * 若要將配置儲存為範本而不下訂單，請按一下**儲存配置**。
    * 若要下訂單，請確定要收費的帳戶正確，請檢閱並接受條款，然後按一下**佈建**。

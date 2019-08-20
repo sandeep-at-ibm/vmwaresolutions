@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -33,7 +33,7 @@ subcollection: vmware-solutions
 
 HCX 是一項服務。透過 VMware 所維護的授權伺服器管理每個網站及每部虛擬機器 (VM) 的 HCX 授權。HCX 雲端和用戶端實例在其整個生命週期中需要與 VMware 登錄網站進行通訊。
 - 80 和 443 的資料流量必須容許傳輸至 `https://connect.hybridity.vmware.com`
-- 針對 {{site.data.keyword.vmwaresolutions_full}} 主控台提供的用戶端安裝，提供了單次使用的登錄金鑰。每一個用戶端 HCX 安裝都需要一個金鑰。
+- {{site.data.keyword.vmwaresolutions_full}} 主控台提供用於用戶端安裝的單次使用登錄金鑰。每一個用戶端 HCX 安裝都需要一個金鑰。
 
 ### 訂購內部部署 HCX 授權的程序
 {: #hcxclient-vcs-client-deployment-license-ordering-procedure}
@@ -118,15 +118,15 @@ HCX 是一項服務。透過 VMware 所維護的授權伺服器管理每個網�
   * 勾選**在部署之後開啟電源**方框。
   * 檢閱 Hybrid Cloud Services 設定，然後按一下**完成**。可能需要幾分鐘，才會開啟 Hybrid Cloud Services 應用裝置的電源。
   * 若要檢查狀態，請移至 vSphere Web Client 首頁，在**首頁**標籤上移至**庫存**，然後按一下**主機及叢集**。展開資料中心階層，然後按一下 Hybrid Cloud Services 服務虛擬機器，以在中心窗格內顯示摘要。
-  * 檢視**摘要**標籤，主控台會顯示**已開啟電源**，而且**播放**按鈕是綠色的。
+  * 檢視**摘要**標籤，主控台會顯示**已開啟電源**，並且**啟動**圖示為綠色。
 10. HCX Manager 已開啟電源並準備好向內部部署 vCenter 登錄。
 
 ## HX Manager Appliance 的初始配置
 {: #hcxclient-vcs-client-deployment-inital-config}
 
 1. 確保混合式雲端服務虛擬應用裝置具有對 `https://connect.hcx.vmware.com` 的出埠存取權
-2. 使用 **admin** 登入到混合式雲端服務虛擬應用裝置管理介面 `https://<ip>:9443`
-3. 提供用戶端必要條件中收集的授權碼。
+2. 使用 **admin** 登入到 Hybrid Cloud Services 虛擬應用裝置管理介面 `https://<IP>:9443`
+3. 提供「用戶端必要條件」中收集的授權碼。
 4. HCX 雲端資料中心位置
     - 輸入離 HCX 雲端實例所在資料中心最近的城市。如果該城市不存在，請選取最近的主要城市。
 5. 提供系統名稱
@@ -144,11 +144,10 @@ HCX 是一項服務。透過 VMware 所維護的授權伺服器管理每個網�
 {: #hcxclient-vcs-client-deployment-reg-vcenter}
 
 1. 登入 Hybrid Cloud Services 服務虛擬應用裝置。
-2. 按一下**管理設定**磚。
+2. 在**儀表板**窗格上，完成下列步驟：
   1. 在左窗格的**配置系統**下，選取 vCenter。
   2. 按一下右上方的**新增 vCenter**。
-  3. 輸入格式為 `https://vCenter` 或 `https://vCenter` 的 vCenter Server 的 IP 位址。
-    * 例如，`https://My-vCenter` 或 `https://10.108.26.211`。
+  3. 輸入格式為 `https://vCenter` 或 `https://vCenter` 的 vCenter Server 的 IP 位址。例如，`https://My-vCenter` 或 `https://10.108.26.211`
   4. 輸入 vCenter Server 使用者名稱及密碼。使用的帳戶必須有「vCenter 管理者」角色。
   5. 按一下**確定**。當顯示_您需要重新啟動應用程式_ 訊息時，請不要重新啟動。
 3. 配置 SSO/查閱服務。

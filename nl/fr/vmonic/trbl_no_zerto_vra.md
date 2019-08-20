@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-08-01"
 
 keywords: troubleshooting, Zerto Virtual Replication, Zerto ESXi server
 
@@ -24,7 +24,7 @@ Les dispositifs Virtual Replication Appliances (VRA) ne s'affichent pas sur la c
 ## Résolution
 {: #trbl_no_zerto_vra-resolution}
 
-Pour les instances vCenter Server, la reprise après incident Zerto n'est installée que sur le serveur ESXi à partir du cluster par défaut, **cluster1**. Tous les autres clusters du même environnement vCenter Server ne bénéficient pas automatiquement de la reprise après incident Zerto lorsqu'ils sont créés ou lorsque le serveur ESXi est ajouté à ces clusters supplémentaires.
+Le service de reprise après incident Zerto est installé uniquement sur le serveur ESXi à partir du cluster par défaut (**cluster1** pour les instances déployées dans la version 3.1 ou une version antérieure). Tous les autres clusters du même environnement vCenter Server ne bénéficient pas automatiquement de la reprise après incident Zerto lorsqu'ils sont créés ou lorsque le serveur ESXi est ajouté à ces clusters supplémentaires.
 
 Sur les clusters ajoutés, vous devez installer la reprise après incident Zerto séparément.
 

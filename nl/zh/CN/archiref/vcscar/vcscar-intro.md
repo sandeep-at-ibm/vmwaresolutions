@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -110,8 +110,3 @@ IBM 提供的正是这种应用程序现代化方法，您可对该方法加以�
 * [vCenter Server 联网](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro) - 重点关注用于 vCenter Server、{{site.data.keyword.icpfull_notm}} 和 {{site.data.keyword.containerlong_notm}} 之间集成的网络技术（例如 NSX-V 和 Calico）以及 NSX-T 的技术预览。
 * _VMware 和 Skate Advisor 概念车指南_ - 此参考体系结构是一种“概念车”，即用于重点说明并显示解决实际问题的技术的机制。我们希望以实际方式演示 Watson AI 与机器学习之间的互动。通过滑板文化，我们以独特的方式展示云服务。“概念车”的实现是对名为 Skate Advisor 的 Acme Skateboards 应用程序的扩展。Skate Advisor 是一种工具，支持用户与 Watson 驱动的引擎进行滑板技巧对话。
 * [VMware：Stock Trader 现代化之旅](/docs/services/vmwaresolutions/archiref/vcscontent?topic=vmware-solutions-vcscontent-modjourney) - 此参考用例描述了一个经典的 WebSphere Application Server 应用程序，该应用程序使用 {{site.data.keyword.cloud_notm}} Private、IBM Middleware 内容、{{site.data.keyword.containerlong_notm}} 和 vCenter Server on {{site.data.keyword.cloud_notm}} 进行现代化。我们虽然同在一个云旅程中，但处于该旅程的不同阶段。通过应用程序架构设计师 Jane 和云基础架构设计师 Todd 实施的递增步骤，我们将对名为 Stock Trader 的现有应用程序进行现代化。查看示例可帮助您完成旅程中的每个步骤，每个步骤无论大小都将为您的业务实现价值。我们专注于以下四个主题：应用程序、DevOps、集成和管理。所有主题协同工作，一起帮助您实现目标。如果只将一个主题现代化而忽略其他主题，可能会导致各种问题。
-
-## 相关链接
-{: #vcscar-intro-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

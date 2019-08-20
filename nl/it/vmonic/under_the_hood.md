@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-09"
 
 keywords: about vmware solutions, product overview, benefits
 
@@ -44,7 +44,7 @@ Prima di ordinare un'istanza vCenter Server, devi configurare la tua chiave API 
 
 Quando ordini l'istanza vCenter Server, devi prima scegliere il suo nome e la versione di VMware vSphere. Tutte le istanze VMware vengono distribuite insieme ai controller di dominio Microsoft Active Directory e, ai fini del Single Sign-On, devi designare la tua istanza come sito primario o secondario. Un'istanza primaria è la prima o l'unica istanza nel tuo dominio Single Sign-On. Puoi distribuire più istanze secondarie e associarle allo stesso dominio Single Sign-On di un'istanza primaria esistente. Successivamente, scegli se portare le tue proprie licenze VMware o quale edizione della licenza vuoi noleggiare da {{site.data.keyword.cloud_notm}}. Infine, scegli la regione e il data center {{site.data.keyword.cloud_notm}} per la tua istanza, nonché le caratteristiche della CPU e della memoria per gli host presenti nel tuo cluster.
 
-Nella parte successiva della pagina dell'ordine, immetti le caratteristiche di archiviazione e di rete per la tua istanza. Puoi scegliere tra l'archiviazione vSAN e NFS per il tuo cluster, con la possibilità di scegliere la dimensione e il numero di dischi Flash vSAN e l'edizione della licenza vSAN oppure la dimensione, il conteggio e le prestazioni dei volumi di archiviazione NFS. Per la rete, scegli il prefisso del nome host per i tuoi host e il dominio secondario e il dominio per il cluster. Hai la possibilità di distribuire i controller Active Directory come singola VSI (virtual server instance) {{site.data.keyword.cloud_notm}} o due macchine virtuali all'interno del tuo cluster per cui devi fornire la licenza e l'attivazione.
+Nella parte successiva della pagina dell'ordine, immetti le caratteristiche di archiviazione e di rete per la tua istanza. Puoi scegliere tra l'archiviazione vSAN e NFS per il tuo cluster, con la possibilità di scegliere la dimensione e il numero di dischi Flash vSAN e l'edizione della licenza vSAN oppure la dimensione, il conteggio e le prestazioni dei volumi di archiviazione NFS. Per la rete, scegli il prefisso del nome host per i tuoi host e il dominio secondario e il dominio per il cluster. Hai la possibilità di distribuire i controller Active Directory come singola VSI (virtual server instance) {{site.data.keyword.cloud_notm}}. Oppure puoi distribuire il controller come due macchine virtuali (VM) all'interno del tuo cluster (per tali VM, devi fornire la licenza e l'attivazione).
 
 Nella parte inferiore della pagina dell'ordine di vCenter Server, puoi scegliere tra vari servizi aggiuntivi che puoi distribuire per la tua istanza VMware e che vengono fatturati sul tuo account {{site.data.keyword.cloud_notm}}. Alcuni servizi richiedono una configurazione aggiuntiva, che specifichi come parte del modulo d'ordine.
 
@@ -126,7 +126,7 @@ Per tutte le istanze, vSphere Hypervisor è installato sui server bare metal. {{
 ### Componenti aggiuntivi
 {: #under_the_hood-add-comp}
 
-A seconda della tua scelta, una VSI Microsoft Windows o due macchine virtuali Microsoft Windows vengono distribuite insieme o all'interno del tuo cluster come server Active Directory per i componenti di gestione. Puoi facoltativamente aggiungere i tuoi propri server Active Directory come ulteriori origini di identità per l'accesso alla gestione.
+A seconda della tua scelta, una VSI Microsoft Windows o due VM Microsoft Windows vengono distribuite insieme o all'interno del tuo cluster come server Active Directory per i componenti di gestione. Puoi facoltativamente aggiungere i tuoi propri server Active Directory come ulteriori origini di identità per l'accesso alla gestione.
 
 Indipendentemente da come scegli di fornire la continuità delle operazioni di business per i tuoi carichi di lavoro, {{site.data.keyword.cloud_notm}} consiglia vivamente di eseguire il backup dei componenti di gestione della tua istanza. La console {{site.data.keyword.vmwaresolutions_short}} ti consente di distribuire un server di backup IBM Spectrum Protect Plus integrato o un server di backup Veeam Backup & Replication insieme alla tua istanza. Questi servizi di backup possono essere utilizzati come parte di una [soluzione di backup completa](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_backingup) per la tua istanza.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-03"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -14,7 +14,7 @@ subcollection: vmware-solutions
 # Design do VMware NSX-T
 {: #nsx-t-design}
 
-Diferentemente do NSX-V (NSX on vSphere), o VMware NSX-T é projetado para abordar estruturas de aplicativos e arquiteturas que têm terminais heterogêneos e pilhas de tecnologia. Além do vSphere, esses ambientes podem incluir outros hypervisors, KVM, contêineres e bare metal. O NSX é projetado para abranger uma rede definida pelo software e a infraestrutura de segurança em plataformas diferentes de apenas o vSphere. Embora seja possível implementar componentes do NSX-T sem precisar do vSphere, esse design se concentra no NSX-T e em sua integração principalmente dentro de uma implementação automatizada do vCenter Server vSphere.
+Diferentemente do NSX-V (NSX on vSphere), o VMware NSX-T é projetado para abordar estruturas de aplicativos e arquiteturas que têm terminais heterogêneos e pilhas de tecnologia. Além do vSphere, esses ambientes podem incluir outros hypervisors, KVM, contêineres e bare metal. O VMware NSX foi projetado para abranger uma infraestrutura de rede e segurança definida pelo software em outras plataformas, além de apenas o vSphere. Embora seja possível implementar componentes do NSX-T sem precisar do vSphere, esse design se concentra no NSX-T e em sua integração principalmente dentro de uma implementação automatizada do vCenter Server vSphere.
 
 Há muitos recursos avançados dentro do NSX-T, como políticas de firewall, inclusão de introspecção de guest dentro de políticas de firewall e rastreamento de fluxo de rede avançado. Descrever esses recursos está além do escopo deste documento. Consulte a documentação do VMware para NSX-T. Nesse design, a Infraestrutura de gerenciamento do NSX-T é implementada durante a implementação inicial do cluster do vCenter Server no lugar do NSX-V.
 
@@ -54,7 +54,7 @@ Tabela 2. NSX-T Manager - Especificações do controlador
 
 Atributo | Especificação
 --|--
-**NSX Manager / Controlador** | 3 dispositivos virtuais
+**NSX Manager / Controlador** | Três dispositivos virtuais
 **Número de vCPUs** | 4
 **Memória** |  16 GB
 **Disco** | 60 GB
@@ -68,7 +68,7 @@ A figura a seguir mostra o posicionamento dos controladores do NSX Manager em re
 ## Considerações de implementação
 {: #nsx-t-design-deployment}
 
-Com o NSX-T no vSphere, o N-VDS deve ser designado com os adaptadores físicos dentro dos hosts. Como um N-VDS pode ser configurado somente dentro do NSX-T Manager, isso implica que, se a redundância precisar ser mantida, nenhum adaptador físico estará disponível para o comutador local nativo ou para a designação do vDS em um cluster que aloja os componentes do NSX-T e os componentes de rede de sobreposição associados.
+Com o NSX-T no vSphere, o N-VDS deve ser designado com os adaptadores físicos dentro dos hosts. Como um N-VDS pode ser configurado somente no NSX-T Manager, isso implica que, se a redundância precisar ser mantida, nenhum adaptador físico estará disponível para a designação de comutador local nativo ou de vDS em um cluster que hospeda os componentes do NSX-T e os componentes de rede de sobreposição associados.
 
 Por essa razão, durante a instalação do NSX-T e de sua configuração, uma porta física do NIC em um adaptador deve permanecer designada para um vSphere vSwitch local ou um comutador virtual distribuído (vDS). Após a implementação do NSX-T, quaisquer portas do kernel do ESX precisam ser migradas para um N-VDS e fora de qualquer vSwitch local ou VDS. Após as portas do kernel serem removidas, as portas físicas do NIC restantes poderão ser designadas como um uplink do N-VDS atingindo redundância do N-VDS.
 
@@ -191,7 +191,7 @@ Um gateway lógico da Camada 1 do NSX-T tem portas de downlink para se conectar 
 #### Propaganda de rota da Camada 1 para Camada 0
 {: #nsx-t-design-tier-1-tier-0}
 
-Para fornecer a conectividade da Camada três entre VMs conectadas a comutadores lógicos que estão conectados a gateways lógicos diferentes de camada 1, é necessário ativar a propaganda de rota de camada 1 para a camada 0. Não é necessário configurar um protocolo de roteamento ou rotas estáticas entre os roteadores lógicos da camada 1 e camada 0. O NSX-T cria rotas estáticas automaticamente quando você ativa a propaganda de rota. Para esse design, a propaganda de rota é sempre ativada para qualquer gateway de T-1 criado por automação de IC4V.
+Para fornecer a conectividade da Camada 3 entre VMs conectadas a comutadores lógicos que estão conectados a gateways lógicos de camada 1 diferentes, é necessário ativar a propaganda de rota da camada 1 para a camada 0. Não é necessário configurar um protocolo de roteamento ou rotas estáticas entre os roteadores lógicos da camada 1 e camada 0. O NSX-T cria rotas estáticas automaticamente quando você ativa a propaganda de rota. Para esse design, a propaganda de rota é sempre ativada para qualquer gateway de T-1 criado por automação de IC4V.
 
 ### Topologias pré-configuradas
 {: #nsx-t-design-preconfig-topo}
@@ -216,13 +216,8 @@ Carga de trabalho com gateway do ICP para T0 – cluster de borda virtual:
 
 ![Topologia implementada NSX-T com integração ICP NSX-T e Gateway de borda T0 virtual](../../images/vcsv4radiagrams-topology-3.svg "Topologia implementada NSX-T com integração ICP NSX-T e Gateway de borda T0 virtual")
 
-A Topologia 3 implementada contém a Topologia 1 com a inclusão de uma implementação do ICP que apresenta a integração do NSX-T no lugar do Calico, que é a pilha de rede padrão dentro de uma implementação do ICP. O cliente pode provisionar espaços de nomes de contêineres adicionais dentro do ICP, o que automatiza a criação de comutadores lógicos, de sub-rede de IP e de instâncias do Gateway T1 por cada namespace.
+A Topologia 3 implementada contém a Topologia 1 com a inclusão de uma implementação do ICP que apresenta a integração do NSX-T no lugar do Calico, que é a pilha de rede padrão dentro de uma implementação do ICP. O cliente pode provisionar mais espaços de nome do contêiner dentro do ICP, o que automatiza a criação de comutadores lógicos, de sub-rede de IP e de instâncias de Gateway T1 por cada namespace.
 
 Para obter um entendimento completo de como o ICP funciona no vCenter Server, consulte o ICP na documentação de arquitetura do vCenter Server. Um espaço de IP móvel privado e público do {{site.data.keyword.cloud_notm}} designado pelo cliente é designado a cada T0 para uso do cliente.
 
 A partir desse design, você terá a opção de não excluir esses intervalos de IP se a instância do vCenter Server for desatribuída e excluída.
-
-## Links relacionados
-{: #nsx-t-design-related}
-
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

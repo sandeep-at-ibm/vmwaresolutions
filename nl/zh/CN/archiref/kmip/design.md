@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-21"
+lastupdated: "2019-07-16"
 
 subcollection: vmware-solutions
 
@@ -104,7 +104,7 @@ KMIP for VMware 在若干个 {{site.data.keyword.cloud_notm}} 多专区区域 (M
 
 在每个 MZR 中，KMIP for VMware 都会在 {{site.data.keyword.cloud_notm}} 专用网络上提供两个网络服务端点，以实现高可用性。请将 vCenter 密钥管理服务器 (KMS) 配置中的这两个端点配置为 KMS 集群。有关每个 MZR 中的端点的列表以及 KMIP 服务器证书签名的信息，请参阅 [KMIP for VMware 服务文档](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)。
 
-要通过专用网络访问 KMIP for VMware，必须为 {{site.data.keyword.cloud_notm}} 基础架构帐户启用虚拟路由和转发 (VRF)，并且必须将 {{site.data.keyword.cloud_notm}} 网络服务端点路径添加到帐户的 VRF 路径中。有关更多信息，请参阅[使用 IBM Cloud CLI 支持帐户使用服务端点](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)。
+要通过专用网络访问 KMIP for VMware，必须为 {{site.data.keyword.cloud_notm}} 基础架构帐户启用虚拟路由和转发 (VRF)，并且必须将 {{site.data.keyword.cloud_notm}} 网络服务端点路径添加到帐户的 VRF 路径中。有关更多信息，请参阅[启用服务端点](/docs/account?topic=account-vrf-service-endpoint#service-endpoint)。
 
 KMIP for VMware 还可使用 {{site.data.keyword.cloud_notm}} 专用网络（而不是公用因特网）来连接到 {{site.data.keyword.cloud_notm}} Key Protect。
 

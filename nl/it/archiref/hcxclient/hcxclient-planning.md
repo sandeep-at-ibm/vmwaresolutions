@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -23,7 +23,7 @@ L'installazione di VMware HCX on IBM Cloud ha i seguenti requisiti software:
 {: #hcxclient-planning-config-net}
 
 HCX deve attraversare internet pubblico e le linee private e connettersi ai componenti del data center, come ad esempio le reti, gli switch e i gruppi di porte.
-* [Requisiti di accesso alla porta](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-port-req) elenca le porte che devono essere aperte in modo che i dispositivi virtuali HCX possano essere installati correttamente.
+* Per informazioni sulle porte che devono essere aperte in modo che i dispositivi virtuali HCX possano essere installati correttamente, vedi [Requisiti di accesso alla porta](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-port-req).
 * Sia l'ambiente vSphere in loco che l'ambiente cloud VCS HCX devono consentire la sincronizzazione dell'orologio NTP (Network Time Protocol) con i dispositivi in loco vSphere e i dispositivi VCS HCX. La porta UDP 123 deve essere accessibile alle reti e ai dispositivi virtuali HCX.
 
 ## Ambiente in loco
@@ -104,14 +104,12 @@ Estendere la rete significa semplicemente prendere la VLAN o VXLAN esistente dal
 ## Test pre-flight
 {: #hcxclient-planning-preflight-tests}
 
-I test pre-flight comportano l'esecuzione di una migrazione HCX sia con vMotion sia con la funzione
-di migrazione in blocco per stabilire una velocità di trasferimento base di riferimento.
+I test pre-flight comportano l'esecuzione di una migrazione HCX sia con vMotion sia con la funzione di migrazione in blocco per stabilire una velocità di trasferimento base di riferimento.
 
 ## Migrazione di applicazioni non di produzione
 {: #hcxclient-planning-mig-non-prod-apps}
 
-La migrazione delle VM inizia con le fasi pianificate di VM meno critiche. Sviluppo, test e così via utilizzano la connettività internet per la migrazione
-e il traffico L2 esteso.
+La migrazione delle VM inizia con le fasi pianificate di VM meno critiche. I team di sviluppo e test utilizzano la connettività internet per la migrazione e il traffico L2 esteso.
 
 ## La progettazione e l'implementazione della rete cloud inizia
 {: #hcxclient-planning-cloud-net-begins}
@@ -137,9 +135,7 @@ con HCX. In questo scenario, HCX sta consentendo la migrazione nel cloud non sol
 
 Per rimuovere HCX alla fine della migrazione, la sottorete non può esistere nell'origine e nella
 destinazione se deve essere mantenuta la connessione tra i dispositivi fisici e le
-VM migrate. Questo implica che qualsiasi dispositivo fisico lasciato indietro al sito di origine che
-esiste sulle reti L2 estese deve essere migrato a un'altra sottorete di rete di cui sarebbe possibile
-l'instradamento al lato cloud. L'accezione a ciò è l'eventuale utilizzo di qualche altra tecnologia L2 estesa.
+VM migrate. Questo implica che qualsiasi dispositivo fisico lasciato indietro al sito di origine che esiste sulle reti L2 estese deve essere migrato a un'altra sottorete di rete che può essere instradata al lato cloud. L'accezione a ciò è l'eventuale utilizzo di qualche altra tecnologia L2 estesa.
 come ad esempio la VPN NSX L2, per sostituire gli endpoint L2 estesi HCX.
 
 ## Migra le applicazioni di produzione e complesse

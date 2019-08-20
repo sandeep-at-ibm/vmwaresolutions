@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-29"
 
 keywords: IBM Cloud Private, ICP, tech specs ICP
 
@@ -27,10 +27,8 @@ Dieser Service ist für die folgenden Instanzen verfügbar:
 * vCenter Server with Hybridity Bundle-Instanzen, die in Version 2.7 (oder höher) bereitgestellt werden oder für die ein Upgrade auf diese Version durchgeführt wurde
 * vCenter Server-Instanzen, die in Version 2.5 (oder höher) bereitgestellt werden oder für die ein Upgrade auf diese Version durchgeführt wurde
 
-Die aktuell installierte IBM Cloud Private-Version ist 3.1.2.
-{{site.data.keyword.cloud_notm}} Automation Manager wird auch als Teil des Serviceauftrags für {{site.data.keyword.cloud}} Private Hosted bereitgestellt.
+Die aktuell installierte IBM Cloud Private-Version ist 3.1.2. {{site.data.keyword.cloud_notm}} Automation Manager wird auch als Teil des Serviceauftrags für {{site.data.keyword.cloud}} Private Hosted bereitgestellt.
 {:note}
-
 
 ## Technische Spezifikationen für IBM Cloud Private Hosted
 {: #icp_overview-specs}

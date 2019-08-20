@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -68,8 +68,3 @@ Par exemple, un skateur peut demander à Watson Assistant la liste de toutes les
 {: #vcscar-preface-cloud-platform}
 
 La superposition créative des systèmes informatiques pour générer de nouvelles combinaisons est au coeur du skateboard. Elle a des répercussions sur les vies de personnes créatives et favorise l'innovation partout dans le monde, où que nous allions. Rien de tout cela ne serait possible sans {{site.data.keyword.cloud}}.
-
-## Liens connexes
-{: #vcscar-preface-related}
-
-* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

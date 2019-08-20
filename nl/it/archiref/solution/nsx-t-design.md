@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-03"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -14,7 +14,7 @@ subcollection: vmware-solutions
 # Progettazione di VMware NSX-T
 {: #nsx-t-design}
 
-A differenza di NSX-V (NSX on vSphere), VMware NSX-T è progettato per i framework applicativi e le architetture che hanno endpoint eterogenei e stack tecnologici. Oltre a vSphere, questi ambienti possono includere altri hypervisor, KVM, contenitori e bare metal. NSX è progettato per suddividere un'infrastruttura di sicurezza e una rete definita dal software tra le piattaforme invece che solo su vSphere. Mentre è possibile distribuire i componenti di NSX-T senza il bisogno di vSphere, questa progettazione si focalizza su NSX-T e la sua integrazione principalmente all'interno di una distribuzione automatizzata di vCenter Server vSphere.
+A differenza di NSX-V (NSX on vSphere), VMware NSX-T è progettato per i framework applicativi e le architetture che hanno endpoint eterogenei e stack tecnologici. Oltre a vSphere, questi ambienti possono includere altri hypervisor, KVM, contenitori e bare metal. VMware NSX è progettato per suddividere un'infrastruttura di sicurezza e una rete definita dal software tra le piattaforme invece che solo su vSphere. Mentre è possibile distribuire i componenti di NSX-T senza il bisogno di vSphere, questa progettazione si focalizza su NSX-T e la sua integrazione principalmente all'interno di una distribuzione automatizzata di vCenter Server vSphere.
 
 Esistono molte funzioni avanzate all'interno di NSX-T come le politiche del firewall, l'inclusione di guest introspection nelle politiche del firewall e il tracciamento del flusso di rete avanzato. La descrizione di queste funzioni esula dallo scopo di questo documento. Vedi la documentazione di VMware per NSX-T. In questa progettazione, l'infrastruttura di gestione NSX-T viene distribuita durante la distribuzione del cluster vCenter Server iniziale al posto di NSX-V.
 
@@ -54,7 +54,7 @@ Tabella 2. Specifiche NSX-T Manager - controller
 
 Attributo | Specifica
 --|--
-**NSX Manager / Controller** | 3 dispositivi virtuali
+**NSX Manager / Controller** | Tre dispositivi virtuali
 **Numero di CPU virtuali** | 4
 **Memoria** |  16 GB
 **Disco** | 60 GB
@@ -191,7 +191,7 @@ Un gateway logico NSX-T Tier-1 ha porte di downlink per la connessione agli swit
 #### Annuncio di rotte da Tier 1 a Tier 0
 {: #nsx-t-design-tier-1-tier-0}
 
-Per fornire la connettività a tre livelli tra le VM connesse agli switch logici collegate a gateway logici tier-1 diversi, è necessario abilitare l'annuncio di rotte tier-1 verso le tier-0. Non è necessario configurare un protocollo di instradamento o delle rotte statiche tra i router logici tier-1 e tier-0. NSX-T crea le rotte statiche automaticamente quando abiliti l'annuncio di rotte. Per questa progettazione, l'annuncio di rotte è sempre abilitato per tutti i gateway T-1 creati dall'automazione IC4V.
+Per fornire la connettività a 3 livelli tra le VM connesse agli switch logici collegate a gateway logici tier-1 diversi, è necessario abilitare l'annuncio di rotte tier-1 verso le tier-0. Non è necessario configurare un protocollo di instradamento o delle rotte statiche tra i router logici tier-1 e tier-0. NSX-T crea le rotte statiche automaticamente quando abiliti l'annuncio di rotte. Per questa progettazione, l'annuncio di rotte è sempre abilitato per tutti i gateway T-1 creati dall'automazione IC4V.
 
 ### Topologie preconfigurate
 {: #nsx-t-design-preconfig-topo}
@@ -221,8 +221,3 @@ La topologia 3 distribuita contiene la topologia 1 con l'aggiunta di una distrib
 Per una descrizione completa di come ICP funziona su vCenter Server, vedi la documentazione dell'architettura di ICP su vCenter Server. Viene assegnato uno spazio dell'IP portatile pubblico e privato {{site.data.keyword.cloud_notm}} designato ad ogni T0 per l'utilizzo da parte del cliente.
 
 A partire da questa progettazione, hai l'opzione di non eliminare questi intervalli di IP se l'istanza vCenter Server viene disattivata ed eliminata.
-
-## Link correlati
-{: #nsx-t-design-related}
-
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -19,9 +19,3 @@ subcollection: vmware-solutions
 - 透過 BCR 連接至 vCenter 及 NSX Manager。
 - 連接至「遠端收集器」，可在 VXLAN 上進行或由遠端部署管理。
 - 容許在擴充時由用戶端管理 IP 位址空間。
-
-
-## 相關鏈結
-{: #caveonix-step2-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

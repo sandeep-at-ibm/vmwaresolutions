@@ -156,10 +156,10 @@
             <xhtml:div
                display="inline-block"
                text-align="inherit"
-               text-decoration="inherit">Trains
+               text-decoration="inherit">훈련
        <xhtml:br />
 
-Builds Model
+모델 빌드
        <xhtml:br />
 </xhtml:div>
           </xhtml:div>

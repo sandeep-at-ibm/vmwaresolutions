@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-06"
 
 keywords: vCenter Server BOM, bill of materials vCenter Server, BOM
 
@@ -42,13 +42,13 @@ VMware vCenter Server 인스턴스에 대한 BOM(Bill of Materials) 정보를 �
 
 |제조업체  |컴포넌트                      |버전    |
 |:------------- |:------------------------------ |:------------- |
-|VMware       |vSphere ESXi                    | 6.7 Update 1(빌드 6.7.0-13004448) 또는 <br/>6.5 Update 2(빌드 6.5.0-13635690) |
+|VMware       |vSphere ESXi                    | 6.7 EP 10(빌드 6.7.0-13981272) 또는 <br/>6.5 Update 2(빌드 6.5.0-13635690) |
 |VMware       | vSphere 6.7                     | Distributed vSwitch 6.6.0 |
 |VMware       | vSphere 6.5                     | Distributed vSwitch 6.5.0 |
-|VMware       |vCenter Server Appliance        | 6.7 Update 1b(빌드 6.7.0-11727113) 또는 <br/>6.5 Update 2g(빌드 6.5.0-13638625) |
-|VMware       |Platform Services Controller    | 6.7 Update 1b(빌드 6.7.0-11727113) 또는 <br/>6.5 Update 2d(빌드 6.5.0-10964411) |
+|VMware       |vCenter Server Appliance        | 6.7 Update 2b(6.7.0-13843469) 또는 <br/>6.5 Update 2g(빌드 6.5.0-13638625) |
+|VMware       |Platform Services Controller    | 6.7 Update 2b(6.7.0-13843469) 또는 <br/>6.5 Update 2g(빌드 6.5.0-13638625) |
 |VMware       |vSAN                            | 6.7 Update 1 또는 <br/>6.6.1       |
-|VMware       |NSX for vSphere                 | 6.4.4(빌드 11197766)    |
+|VMware       |NSX for vSphere                 | 6.4.5(빌드 13282012)    |
 |VMware       | NSX-T for vSphere               |2.4                       |
 |Microsoft    |Windows Server Standard 에디션 | 2016       |
 {: caption="표 2. vCenter Server 인스턴스의 소프트웨어 컴포넌트에 대한 BOM" caption-side="top"}
@@ -137,6 +137,17 @@ V2.0 이하로 배치된 인스턴스의 경우에는 공용 스위치 MTU 설�
 
    vDS의 MTU 크기가 변경되면 연결된 업링크(실제 NIC)의 작동이 중지되었다가 재개됩니다. 따라서 해당 업링크를 사용 중인 VM에서 잠시 동안의 가동 중단이 발생합니다. 따라서 MTU 설정 업데이트는 스케줄된 작동 중단 동안 수행하도록 계획하는 것이 좋습니다.
    {:note}
+
+## EVC(Enhanced VMware vMotion Compatibility) 모드 설정
+{: #vc_bom-evc-mode-settings}
+
+다음 표에서 vCenter Server 인스턴스에 대한 EVC 모드 설정의 개요와 vSphere 버전 간의 차이점을 검토하십시오.
+
+| Bare Metal Server CPU 모델 | vSphere 6.5  | vSphere 6.7 |
+|:------------- |:------------- |:------------- |
+|Broadwell |EVC가 Intel **Broadwell** 세대로 설정됨 |EVC가 Intel **Broadwell** 세대로 설정됨 |
+|Skylake |설정되지 않음 |EVC가 Intel **Skylake** 세대로 설정됨 |
+{: caption="표 6. vCenter Server 인스턴스 및 클러스터에 대한 EVC 모드 설정" caption-side="top"}
 
 ## 관련 링크
 {: #vc_bom-related}

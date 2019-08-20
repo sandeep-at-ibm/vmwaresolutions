@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -57,8 +57,3 @@ Em resumo, as ofertas do {{site.data.keyword.vmwaresolutions_short}} fornecem os
 Os clientes voltados para plataformas de aplicativos nativos de nuvem, como o {{site.data.keyword.icpfull_notm}} e o {{site.data.keyword.containerlong_notm}} concentram-se na velocidade e na inovação e nem sempre têm segurança e rede em mente. O tempo de maturação do aplicativo diminuirá se ele precisar esperar até que a rede ou as equipes de segurança possam pedir serviços como balanceadores de carga, firewalls, comutadores e roteadores.
 
 Essa arquitetura de referência mostra como o vCenter Server, o {{site.data.keyword.icpfull_notm}} e o {{site.data.keyword.containerlong_notm}} movem o Acme Skateboards de forma segura ao longo da jornada de modernização do aplicativo.
-
-## Links relacionados
-{: #vcsicp-appmod-related}
-
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

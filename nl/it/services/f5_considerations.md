@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-02"
 
 keywords: F5 BIG-IP, F5 install, tech specs F5
 
@@ -25,7 +25,7 @@ Il servizio F5 on {{site.data.keyword.cloud}} (F5 BIG-IP® Virtual Edition) forn
 
 Puoi installare più di un'istanza di questo servizio a seconda delle necessità.
 
-Questo servizio è disponibile solo per le istanze distribuite nella V1.9 o successive. La versione BIG-IP VE corrente installata è la v14.1.0.2.
+Questo servizio è disponibile solo per le istanze distribuite nella V1.9 o successive. La versione BIG-IP VE corrente installata è la v15.0.0.
 {:note}
 
 ## Specifiche tecniche per F5 on IBM Cloud

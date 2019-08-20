@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-03"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -14,7 +14,7 @@ subcollection: vmware-solutions
 # VMware NSX-T 디자인
 {: #nsx-t-design}
 
-NSX-V(NSX on vSphere)와는 달리 VMware NSX-T는 이기종 엔드포인트와 기술 스택이 있는 애플리케이션 프레임워크와 아키텍처를 다루도록 설계되었습니다. 이러한 환경에는 vSphere 외에도 다른 하이퍼바이저, KVM, 컨테이너 및 베어메탈이 포함될 수 있습니다. NSX는 vSphere만이 아닌 플랫폼에서 소프트웨어 정의 네트워크 및 보안 인프라를 확장하도록 설계되었습니다. vSphere 없이 NSX-T 컴포넌트를 배치할 수 있으나 이 디자인은 vCenter Server vSphere 자동화 배치 내에서 주로 NSX-T 및 해당 통합에 중점을 둡니다.
+NSX-V(NSX on vSphere)와는 달리 VMware NSX-T는 이기종 엔드포인트와 기술 스택이 있는 애플리케이션 프레임워크와 아키텍처를 다루도록 설계되었습니다. 이러한 환경에는 vSphere 외에도 다른 하이퍼바이저, KVM, 컨테이너 및 베어메탈이 포함될 수 있습니다. VMware NSX는 vSphere만이 아닌 플랫폼에서 소프트웨어 정의 네트워크 및 보안 인프라를 확장하도록 설계되었습니다. vSphere 없이 NSX-T 컴포넌트를 배치할 수 있으나 이 디자인은 vCenter Server vSphere 자동화 배치 내에서 주로 NSX-T 및 해당 통합에 중점을 둡니다.
 
 방화벽 정책 내의 Guest Introspection 및 고급 넷 플로우 추적을 포함하여 NSX-T 내에 방화벽 정책과 같은 다수의 고급 기능이 있습니다. 이러한 기능에 대한 설명은 이 문서에서 다루지 않습니다. NSX-T는 VMware 문서를 참조하십시오. 이 디자인에서 NSX-T 관리 인프라는 NSX-V 대신 초기 vCenter Server 클러스터 배치 중에 배치됩니다.
 
@@ -221,8 +221,3 @@ ICP 대 T0 게이트웨이가 있는 워크로드 - 실제 에지 클러스터:
 vCenter Server에서 ICP가 작동하는 방법을 완전히 이해하려면 ICP on vCenter Server 아키텍처 문서를 참조하십시오. 고객이 지정한 {{site.data.keyword.cloud_notm}} 사설 및 공용 포터블 IP 공간은 고객 사용을 위해 각 T0에 지정됩니다.
 
 이 디자인에는 vCenter Server 인스턴스가 사용 중지되고 삭제되는 경우 이 IP 범위를 삭제하지 않는 옵션이 있습니다.
-
-## 관련 링크
-{: #nsx-t-design-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

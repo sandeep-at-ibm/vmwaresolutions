@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-16"
 
 keywords: vSphere BOM, bill of materials vSphere, BOM
 
@@ -22,7 +22,7 @@ La seguente tabella mostra in dettaglio le informazioni sulla distinta base (Dib
 
 | Produttore | Componente                       | Versione |
 |:-------------|:--------------------------------|:--------|
-| VMware       | vSphere ESXi                    | 6.7 Aggiornamento 1 o 6.5 Aggiornamento 2 |
+| VMware       | vSphere ESXi                    | 6.7 Aggiornamento 2 o 6.5 Aggiornamento 2 |
 {: caption="Tabella 1. Diba per i cluster VMware vSphere" caption-side="top"}
 
 ## Link correlati

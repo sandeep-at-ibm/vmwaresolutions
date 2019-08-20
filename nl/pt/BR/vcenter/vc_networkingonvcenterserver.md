@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-30"
 
 keywords: vCenter Server networking, networking components, networking vCenter
 
@@ -45,10 +45,11 @@ Um NSX Edge Services Gateway também é implementado para ser usado por suas má
 {: #vc_networkingonvcenterserver-change-nsx-component-password-considerations}
 {: faq}
 
-Revise as considerações a seguir antes de mudar as senhas para o NSX Manager, o NSX Controllers e o NSX Edges:
-* Não mude a senha do NSX Manager, que pode ser localizada na página **Resumo** da instância no console do {{site.data.keyword.vmwaresolutions_short}}.
-* É possível mudar senhas dos NSX Controllers. Para obter instruções sobre como mudar senhas dos NSX Controllers, veja [Mudar a senha do controlador](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/com.vmware.nsx.admin.doc/GUID-2667DD9E-E2F5-4403-BAC2-C7D1BBC23228.html){:external}.
-* É possível mudar a senha e as configurações do SSH para o VMware NSX Edge Services Gateway (ESG) gerenciado pelo cliente. Não mude a senha para o Management VMware NSX Edge Services Gateway (ESG) e o Roteador Lógico Distribuído relacionado.
+Revise as considerações a seguir antes de tentar mudar as senhas para o NSX Manager, NSX Controllers e NSX Edges:
+* É possível mudar a senha do NSX Manager. Essa senha é exibida na página de **Resumo** da instância no console do {{site.data.keyword.vmwaresolutions_short}}.
+* É possível mudar senhas dos NSX Controllers. Para obter instruções sobre como mudar essas senhas, consulte [Mudar senha do controlador](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/com.vmware.nsx.admin.doc/GUID-2667DD9E-E2F5-4403-BAC2-C7D1BBC23228.html){:external}.
+* É possível mudar a senha e as configurações do SSH para o VMware NSX Edge Services Gateway (ESG) gerenciado pelo cliente. 
+* Não mude as senhas para o Management VMware NSX Edge Services Gateway (ESG) e o Distributed Logical Router relacionado.
 
 ## Links relacionados
 {: #vc_networkingonvcenterserver-related}

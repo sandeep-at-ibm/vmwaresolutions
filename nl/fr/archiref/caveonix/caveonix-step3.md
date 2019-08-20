@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -27,8 +27,3 @@ Lors de la mise à l'échelle, le client doit appeler le script pour mettre à d
 - Certificats de tous les services
 
 A la fin de cette étape, les composants d'application sont installés sur les machines virtuelles requises.
-
-## Liens connexes
-{: #caveonix-step3-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

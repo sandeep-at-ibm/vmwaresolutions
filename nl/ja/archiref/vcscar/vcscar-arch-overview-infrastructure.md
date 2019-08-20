@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -66,8 +66,3 @@ vCenter Server インスタンス内で、{{site.data.keyword.icpfull_notm}} イ
 アウトバウンド・トラフィックを許可するためのソース NAT ルール (SNAT) が ESG に構成されます。これにより、インターネット接続で {{site.data.keyword.icpfull_notm}} 前提条件をダウンロードし、GitHub および Docker に接続できるようになります。 代わりに、Web プロキシーを使用してインターネットに接続することもできます。 DNS および NTP サービスにもアクセスできるように ESG が構成されます。
 
 {{site.data.keyword.cloud_notm}} 10.x ネットワークの {{site.data.keyword.icpfull_notm}} マスター/プロキシー仮想 IP アドレスを VXLAN 環境に変換する宛先 NAT ルール (DNAT) も ESG に構成されます。
-
-## 関連リンク
-{: #vcscar-arch-overview-infrastructure-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

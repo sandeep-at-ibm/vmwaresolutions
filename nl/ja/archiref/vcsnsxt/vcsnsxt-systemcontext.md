@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-21"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -56,8 +56,3 @@ NSX-V | vCenter Server の NSX-V は、システム管理者が管理するソ�
 CAM | {{site.data.keyword.cloud_notm}} Automation Manager (CAM) は、{{site.data.keyword.icpfull_notm}} 上で実行され、単一画面でテンプレートを使用して、Kubernetes ベースのワークロードと一緒に VM ベースのワークロードをプロビジョンできます。 開発者は、CAM を使用して以下を行うことができます。 <br> - vCenter Server、{{site.data.keyword.icpfull_notm}}、または {{site.data.keyword.containerlong_notm}} にワークロードをプロビジョンする。<br> - VM とコンテナーの両方から構成されるサービスを作成およびオーケストレーションする。 <br> - DevOps ツールチェーンと Day 2 の ITSM ソリューションを統合する。
 コンテナー化アプリケーション | アプリケーション・モダナイゼーション・ジャーニーを経て、コンテナーとして稼働するようになったアプリ。 このリファレンス・アーキテクチャーの Acme Skateboards 社の事例では、コンテナー化アプリケーションの 1 つは、オンライン・プレゼンス・ワークロードの一部である Web サーバーです。
 Watson | このリファレンス・アーキテクチャーの Acme Skateboards 社の例では、Watson が、_「コンセプト・カー」アーキテクチャー_で使用される AI サービスになります。
-
-## 関連リンク
-{: #vcsnsxt-systemcontext-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

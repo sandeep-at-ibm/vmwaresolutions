@@ -41,7 +41,7 @@ Cloud Private 카탈로그에서 하이브리드 클라우드 서비스를 노�
 서비스와의 연결을 통해 {{site.data.keyword.cloud_notm}} 인프라로 배치된 {{site.data.keyword.icpfull_notm}} 및 CAM을 표시합니다. 사용자는 가상 머신(VM)을 온프레미스에, VM을
 vCenter Server 인스턴스에, 컨테이너를 {{site.data.keyword.icpfull_notm}} 및 {{site.data.keyword.containerlong_notm}} 클러스터에 배치할 수 있습니다.
 
-![클라우드에서 - 클라우드 관리](../../images/vcsiks-oncloud-cloudmgt.svg "클라우드에서 - 클라우드 관리")
+![온클라우드 - 클라우드 관리](../../images/vcsiks-oncloud-cloudmgt.svg "온클라우드 - 클라우드 관리")
 
 다이어그램에서 CAM은 vCenter, 클라우드 제공자, {{site.data.keyword.icpfull_notm}} 및
 {{site.data.keyword.containerlong_notm}} 환경에 클라우드 연결을 논리적으로 작성합니다. {{site.data.keyword.icpfull_notm}} 클러스터를

@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-07-23"
 
-keywords: Caveonix license, Caveonix order license, order Caveonix license
+keywords: Caveonix license, Caveonix order license, Caveonix BYOL license
 
 subcollection: vmware-solutions
 
@@ -38,11 +38,6 @@ Vérifiez que vous avez configuré les données d'identification de l'infrastruc
 La commande de la licence Caveonix RiskForesight commence automatiquement. Vous recevez une confirmation que la commande est en cours de traitement et vous pouvez vérifier l'état de la commande en affichant les détails de la licence.
 
 Lorsque la licence est prête pour utilisation, elle prend le statut **Installé** et vous recevez une notification par courrier électronique.
-
-## Etape suivante
-{: #caveonix_license_ordering-next}
-
-Gérez les licences Caveonix RiskForesight que vous avez commandées.
 
 ## Liens connexes
 {: #caveonix_license_ordering-related}

@@ -34,7 +34,7 @@ Les événements sont classifiés en tant que :
 ### Alarmes
 {: #opsprocs-alarms-alarms}
 
-Les alarmes sont des notifications qui sont activées en réponse à un événement, un ensemble de conditions ou l'état d'un objet d'inventaire. 
+Les alarmes sont des notifications qui sont activées en réponse à un événement, un ensemble de conditions ou l'état d'un objet d'inventaire.
 
 Une définition d'alarme se compose des éléments suivants dans le client vSphere :
 * Nom et description - Fournit une étiquette d'identification et une description.
@@ -50,7 +50,7 @@ Les alarmes ont les niveaux de gravité suivants :
 ### Définition d'alarme
 {: #opsprocs-alarms-def}
 
-Les définitions d'alarme sont associées à l'objet sélectionné dans l'inventaire et surveillent le type d'objets d'inventaire spécifié dans sa définition. 
+Les définitions d'alarme sont associées à l'objet sélectionné dans l'inventaire et surveillent le type d'objets d'inventaire spécifié dans sa définition.
 
 Une définition d'alarme se compose des éléments suivants :
 * Nom et description - Fournit une étiquette d'identification et une description.

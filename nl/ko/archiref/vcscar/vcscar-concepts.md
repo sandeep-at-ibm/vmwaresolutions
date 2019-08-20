@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -120,8 +120,3 @@ nollie-heelflip to frontside-boardslide
 {: #vcscar-concepts-relevance}
 
 트릭 언어는 스케이팅 문서 및 매체를 인식하고 수집하도록 Watson을 훈련시키는 데 사용되고 사용자 대화의 기반을 형성하는 주요 구성입니다.
-
-## 관련 링크
-{: #vcscar-concepts-related}
-
-* [vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)  

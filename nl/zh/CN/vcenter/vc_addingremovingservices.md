@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-27"
+lastupdated: "2019-08-01"
 
 keywords: vCenter Server add service, view service vCenter Server, remove service vCenter Server
 
@@ -22,6 +22,9 @@ subcollection: vmware-solutions
 
 可以为 VMware vCenter Server 实例订购服务，例如灾难恢复解决方案。不再需要这些服务时，可以将其从实例中除去。
 
+订购 VMware HCX on {{site.data.keyword.cloud_notm}} 服务时，需要承诺使用 12 个月。无法在 12 个月的承诺期到期之前删除该服务。12 个月承诺期的到期日期在 HCX on {{site.data.keyword.cloud_notm}} 详细信息页面上提供。有关查看服务详细信息的更多信息，请参阅[订购、查看和除去 vCenter Server 实例的服务](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure)。
+{:note}
+
 ## 可用于 vCenter Server 实例的服务
 {: #vc_addingremovingservices-available-services}
 
@@ -33,6 +36,7 @@ subcollection: vmware-solutions
 |[F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations)| BIG-IP VE v14.1.0.2 | V1.9 和更高版本 |
 |[FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations)|300 系列| V2.0 和更高版本 |
 |[FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations)|6.0.3| V2.0 和更高版本 |
+|[HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_considerations)|3.5.1|V2.1 和更高版本|
 |[HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htcc_considerations)| 5.5.1 | V2.3 和更高版本 |
 |[HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htdc_considerations)| 4.3.2 | V2.3 和更高版本 |
 |[HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htkc_considerations)| 4.3.2 |V2.5 和更高版本|
@@ -40,6 +44,7 @@ subcollection: vmware-solutions
 |[IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-spp_considerations)|10.1.3| V2.2 和更高版本 |
 |[KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations)|2.0|不适用|
 |[Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)| 9.5u4 | V1.8 和更高版本 |
+|[VMware vRealize Operations 和 vRealize Log Insight on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vrops_overview)|9.7|V3.2 和更高版本|
 |[Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)| 6.5 update 3 | V1.2 和更高版本 |
 {: caption="表 1. 可用于 vCenter Server 实例的服务" caption-side="top"}
 
@@ -61,6 +66,9 @@ subcollection: vmware-solutions
 3. 在左侧导航窗格上，单击**服务**。
 4. 在**服务**页面上，单击某个服务以查看相关信息，例如服务状态和其他详细信息。
 5. 根据查看的服务，可以使用服务详细信息中提供的凭证来访问服务控制台，并可在其中管理该服务。
+
+VMware HCX on {{site.data.keyword.cloud_notm}} 的 12 个月承诺期的到期日期在 HCX on {{site.data.keyword.cloud_notm}} 详细信息页面上提供。
+{:note}
 
 ## 除去 vCenter Server 实例的服务的过程
 {: #vc_addingremovingservices-removing-procedure}

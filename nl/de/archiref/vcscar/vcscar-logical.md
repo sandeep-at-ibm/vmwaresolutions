@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -140,8 +140,3 @@ Nach dem Training kann der Discovery-Service Abfragen wie beispielsweise Folgend
 - Alle Tricks mit dem Basistrick "Heelflip" anzeigen
 - Alle Tricks anzeigen
 - Alle Tricks mit mehreren Combos anzeigen
-
-## Zugehörige Links
-{: #vcscar-logical-related}
-
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

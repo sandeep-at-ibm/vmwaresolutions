@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -139,8 +139,3 @@ Acme Skate Advisor は {{site.data.keyword.cloud_notm}} に存在します。こ
 この図では、CAM は、vCenter、クラウド・プロバイダー、{{site.data.keyword.icpfull_notm}} 環境、および {{site.data.keyword.containerlong_notm}} 環境へのクラウド接続を論理的に作成します。 {{site.data.keyword.icpfull_notm}} クラスターを
 単一の管理ビューに接続するメカニズムを提供する MCM を使用して、各データ・センター/クラウド環境に
 {{site.data.keyword.icpfull_notm}} クラスターがデプロイされます。
-
-## 関連リンク
-{: #vcscar-physical-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

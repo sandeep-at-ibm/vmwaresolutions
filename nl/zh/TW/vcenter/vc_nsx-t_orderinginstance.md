@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-06"
 
 keywords: vCenter Server NSX-T order instance, order vCenter Server NSX-T, order NSX-T
 
@@ -35,9 +35,9 @@ subcollection: vmware-solutions
 |:------------|:------------ |
 |網域名稱    | `<root_domain>` |  
 |vCenter Server 登入使用者名稱  | `<user_id>@<root_domain>`（Microsoft Active Directory 使用者）或 `administrator@vsphere.local` |
-|vCenter Server（具有內嵌的 PSC）FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`。長度上限為 50 個字元。|
+|vCenter Server（具有內嵌的 PSC）FQDN | `<instance_name>-vc.<root_domain>`。長度上限為 50 個字元。|
 |單一登入 (SSO) 站台名稱| `<subdomain_label>` |
-|完整的 ESXi 伺服器名稱| `<host_prefix><n>.<subdomain_label>.<root_domain>`，其中 `<n>` 是 ESXi 伺服器序列。長度上限為 50 個字元。|
+|完整的 ESXi 伺服器名稱| `<data_center>-<host_prefix><n>.<subdomain_label>.<root_domain>`，其中 `n` 是 ESXi 伺服器序列。長度上限為 50 個字元。|
 {: caption="表 1. 實例及網域名稱的值格式" caption-side="top"}
 
 請不要修改在訂購或部署實例期間設定的任何值。這樣做會讓您的實例無法使用。例如，如果公用網路關閉、伺服器和虛擬伺服器實例 (VSI) 在佈建進行中移到 Vyatta 之後，或者 IBM CloudBuilder VSI 停止或遭到刪除。
@@ -52,15 +52,26 @@ subcollection: vmware-solutions
 {: #vc_nsx-t_orderinginstance-inst-name}
 
 實例名稱必須滿足下列需求：
-* 只容許英數及橫線 (-) 字元。
-* 實例名稱的開頭必須是英文字母，而且結尾必須是英數字元。
+* 只容許小寫英文字母、數字及橫線 (-) 字元。
+* 實例名稱的開頭必須是小寫英文字母。
+* 實例名稱的結尾必須是小寫英文字母或數值字元。
 * 實例名稱的長度上限為 10 個字元。
 * 實例名稱在您的帳戶中必須是唯一的。
 
-### VMware vSphere 授權
+### 起始叢集名稱
+{: #vc_nsx-t_orderinginstance-cluster-name}
+
+起始叢集名稱必須滿足下列需求：
+* 只容許小寫英文字母、數字及橫線 (-) 字元。
+* 叢集名稱的開頭必須是小寫英文字母。
+* 叢集名稱的結尾必須是小寫英文字母或數值字元。
+* 叢集名稱的長度上限為 30 個字元。
+* 叢集名稱在 vCenter Server 實例中必須是唯一的。
+
+### VMware vSphere 版本
 {: ##vc_nsx-t_orderinginstance-vsphere-license}
 
-依預設，已選取 vSphere Enterprise Plus 6.7u1 授權。
+依預設，已選取 vSphere Enterprise Plus 6.7u2 授權。
 
 ### 主要或次要
 {: #vc_nsx-t_orderinginstance-primary-secondary}
@@ -110,6 +121,21 @@ subcollection: vmware-solutions
 |雙重 Intel Xeon Gold 6140 處理器 / 總計 36 核心，2.3 GHz| 128 GB、192 GB、384 GB、768 GB、1.5 TB |
 {: caption="表 2. Skylake {{site.data.keyword.baremetal_short}} 的選項" caption-side="top"}
 
+### Cascade
+{: #vc_nsx-t_orderinginstance-cascade}
+
+若為 **Cascade** 設定，您有數個選項可用於 **CPU 型號**及 **RAM**。
+
+Cascade {{site.data.keyword.baremetal_short}} 僅適用於 VMware vSphere Enterprise Plus 6.7 U2 實例。
+{:note}
+
+| CPU 型號選項             |RAM 選項          |
+|:------------- |:------------- |
+|雙重 Intel Xeon Gold 4210 處理器 / 總計 20 核心，2.3 GHz| 64 GB、96 GB、128 GB、192 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon Gold 5218 處理器 / 總計 32 核心，2.3 GHz| 64 GB、96 GB、128 GB、192 GB、768 GB、1.5 TB |
+|雙重 Intel Xeon Gold 6248 處理器 / 總計 40 核心，2.5 GHz| 64 GB、96 GB、128 GB、192 GB、768 GB、1.5 TB |
+{: caption="表 3. Cascade {{site.data.keyword.baremetal_short}} 的選項" caption-side="top"}
+
 ### Broadwell
 {: #vc_nsx-t_orderinginstance-broadwell}
 
@@ -119,7 +145,7 @@ subcollection: vmware-solutions
 |:------------- |:------------- |
 |四重 Intel Xeon E7-4820 v4 / 總計 40 核心，2.0 GHz |128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
 |四重 Intel Xeon E7-4850 v4 / 總計 64 核心，2.1 GHz |128 GB、256 GB、512 GB、1 TB、2 TB、3 TB |
-{: caption="表 3. Broadwell {{site.data.keyword.baremetal_short}} 的選項" caption-side="top"}
+{: caption="表 4. Broadwell {{site.data.keyword.baremetal_short}} 的選項" caption-side="top"}
 
 ### Bare Metal Server 數目
 {: #vc_nsx-t_orderinginstance-bare-metal-number}
@@ -139,12 +165,12 @@ subcollection: vmware-solutions
 ### vSAN 儲存空間
 {: #vc_nsx-t_orderinginstance-vsan-storage}
 
-vSAN 僅適用於 **Skylake** 或 **Broadwell** Bare Metal 配置。請指定下列 vSAN 選項：
+vSAN 僅可用於 **Skylake**、**Cascade** 和 **Broadwell** Bare Metal Server 配置。請指定下列 vSAN 選項：
 * **vSAN 容量磁碟的磁碟類型及大小**：選取所需容量磁碟的選項。
 * **vSAN 容量磁碟數目**：指定您要新增的容量磁碟數目。
 * 如果您要新增超過所限制的 10 個容量磁碟，請勾選**高效能 Intel Optane** 方框。這個選項提供 2 個額外容量磁碟機槽來放置共 12 個容量磁碟，並且適用於需要較少延遲且較高 IOPS 傳輸量的工作負載。
 
-  **高效能 Intel Optane** 選項僅適用於 Skylake CPU 型號。
+  **高效能 Intel Optane** 選項僅適用於 Skylake 及 Cascade CPU 型號。
   {:note}
 
 * 檢閱 **vSAN 快取磁碟的磁碟類型**及 **vSAN 快取磁碟數目**值。這些值取決於您是否已勾選**高效能 Intel Optane** 方框。
@@ -172,7 +198,7 @@ vSAN 僅適用於 **Skylake** 或 **Broadwell** Bare Metal 配置。請指定下
 |2 IOPS/GB |這個選項是為大部分一般工作負載而設計。應用的範例包括：管理小型資料庫、備份 Web 應用程式，或是 Hypervisor 用的虛擬機器磁碟映像檔。|
 |4 IOPS/GB |這個選項是為一次擁有高百分比作用中資料的高密度工作負載而設計。應用的範例包括：交易式資料庫。|
 |10 IOPS/GB |這個選項是為要求最嚴苛的工作負載類型而設計，例如分析。應用的範例包括：高交易量資料庫，以及其他對效能敏感的資料庫。此效能層次限制為每個檔案共用的容量上限為 4 TB。|
-{: caption="表 4. NFS 效能層次選項" caption-side="top"}
+{: caption="表 5. NFS 效能層次選項" caption-side="top"}
 
 ## 網路介面設定
 {: #vc_nsx-t_orderinginstance-network-interface-settings}
@@ -183,26 +209,29 @@ vSAN 僅適用於 **Skylake** 或 **Broadwell** Bare Metal 配置。請指定下
 {: #vc_nsx-t_orderinginstance-host-name-prefix}
 
 主機名稱字首必須滿足下列需求：
-*  只容許英數及橫線 (-) 字元。
-*  主機名稱字首的開頭及結尾必須是英數字元。
-*  主機名稱字首的長度上限為 10 個字元。
+* 只容許小寫英文字母、數字及橫線 (-) 字元。
+* 主機名稱字首的開頭必須是小寫英文字母。
+* 主機名稱字首的結尾必須是小寫英文字母或數值字元。
+* 主機名稱字首的長度上限為 10 個字元。
 
 ### 子網域標籤
 {: #vc_nsx-t_orderinginstance-subdomain-label}
 
 子網域標籤必須滿足下列需求：
-*  只容許英數及橫線 (-) 字元。
-*  子網域標籤的開頭必須是英文字母，而且結尾必須是英數字元。
-*  子網域標籤的長度上限為 10 個字元。
+* 只容許小寫英文字母、數字及橫線 (-) 字元。
+* 子網域標籤的開頭必須是小寫英文字母。
+* 子網域標籤的結尾必須是小寫英文字母或數值字元。
+* 子網域標籤的長度上限為 10 個字元。
 
 ### 網域名稱
 {: #vc_nsx-t_orderinginstance-domain-name}
 
 根網域名稱必須滿足下列需求：
 * 網域名稱必須包含兩個以上以句點 (.) 區隔的字串
-* 第一個字串的開頭必須是英文字母，而且結尾必須是英數字元。
-* 除了最後一個字串以外，所有字串都只能包含英數字元和橫線 (-) 字元。
-* 最後一個字串只能包含英文字母。
+* 第一個字串的開頭必須是小寫英文字母。
+* 第一個字串的結尾必須是小寫英文字母或數值字元。
+* 除了最後一個字串以外，所有字串都只能包含小寫英文字母、數字及橫線 (-) 字元。
+* 最後一個字串只能包含小寫英文字母。
 * 最後一個字串的長度範圍必須在 2 到 24 個字元之間。
 
 主機和 VM 的「完整網域名稱 (FQDN)」長度上限為 50 個字元。網域名稱必須在這個長度上限以內。
@@ -306,7 +335,7 @@ vSAN 僅適用於 **Skylake** 或 **Broadwell** Bare Metal 配置。請指定下
 {: #vc_nsx-t_orderinginstance-results}
 
 * 實例的部署會自動啟動，且您會收到確認，指出正在處理該訂單。您可以檢查部署狀態，包括可能需要注意的任何問題，方法是檢視實例詳細資料的**部署歷程**區段。
-* 順利部署實例之後，會在您的 VMware 虛擬平台上安裝 [vCenter Server with NSX-T 實例的技術規格](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_overview#vc_nsx-t_overview-specs)中所說明的元件。依預設，您所訂購的 ESXi 伺服器會分組為 **cluster1**。
+* 順利部署實例之後，會在您的 VMware 虛擬平台上安裝 [vCenter Server with NSX-T 實例的技術規格](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_overview#vc_nsx-t_overview-specs)中所說明的元件。
 * 實例已備妥可供使用時，實例的狀態會變更為**備妥使用**，而且您會透過電子郵件收到通知。
 * 當您訂購次要實例時，可能會在您完成次要實例訂單之後重新啟動主要實例（鏈結至次要實例）的 VMware vSphere Web Client。
 

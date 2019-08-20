@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -16,7 +16,7 @@ subcollection: vmware-solutions
 
 下圖顯示此參照架構的系統環境定義。系統環境定義圖是一個圖表，它定義系統的主要元素、系統界限、與它互動的實體以及互動。它是高階圖，提供讀者系統起始視圖。
 
-![系統環境定義](../../images/vcscar-system-context.svg "系統環境定義")
+![系統環境定義](../../images/vcscar-system-context.svg "系統環境定義"){: caption="圖 1. 系統環境定義" caption-side="bottom"}
 
 以下是系統環境定義的核心元件：
 - vCenter Server - VMware vCenter Server on {{site.data.keyword.cloud_notm}} 是 {{site.data.keyword.cloud_notm}} for VMware Services 實例，而此實例是從內部部署環境移轉虛擬機器 (VM) 的目標。它與內部部署「虛擬化」一起使用成為混合式環境，讓 VM 可以從某個環境移至另一個環境。
@@ -46,8 +46,3 @@ subcollection: vmware-solutions
 * 資料庫 - Acme Skate Advisor 資料庫是在 vCenter Server 所管理的虛擬機器上進行管理。
 * 應用程式容器 - 這些應用程式完成應用程式現代化旅程，且目前作為容器執行。對於此參照架構和此 Acme Skateboards 範例，其中一個容器化應用程式是 Web 伺服器，它是線上呈現工作負載的一部分。ACME 容器管理 Acme Web 應用程式及 ACME Skate Advisor 應用程式。
 * NSX Edge - NSX Edge 是虛擬應用裝置，管理進出 vCenter Server 實例的南北向資料流量。
-
-## 相關鏈結
-{: #vcscar-syscontext-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

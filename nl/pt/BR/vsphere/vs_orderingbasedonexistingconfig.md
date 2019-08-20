@@ -17,7 +17,7 @@ subcollection: vmware-solutions
 {:note: .note}
 {:important: .important}
 
-# Pedindo clusters do vSphere com base nas configurações existentes
+# Pedindo clusters do vSphere com base em configurações existentes
 {: #vs_orderingbasedonexistingconfig}
 
 É possível pedir um cluster do VMware vSphere com base em um modelo de configuração que você salvou. Use este procedimento para definir uma nova configuração de cluster com base em uma configuração de cluster existente.

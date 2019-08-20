@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-03"
+lastupdated: "2019-08-05"
 
 ---
 
@@ -32,7 +32,7 @@ O vROps Analytics Cluster é acessado usando uma interface com o usuário de ger
 * vRealize Log Insight
 
 O cliente pode realizar a integração manual nos produtos a seguir, caso tenham sido implementados:
-* Automação vRealize
+* vRealize Automation
 * vRealize Business
 
 O vROps coleta dados dos seguintes:
@@ -165,7 +165,7 @@ O VMware SDDC Health Management Pack for vROps monitora a pilha de gerenciamento
 * vCenter Server
 
 Além disso, se os seguintes tiverem sido instalados, poderão ser monitorados:
-* Automação vRealize
+* vRealize Automation
 * vRealize Orchestrator
 * vRealize Business for Cloud
 * VMware Site Recovery Manager
@@ -178,7 +178,7 @@ O VMware SDDC Health Management Pack fornece os painéis a seguir:
 Os plug-ins no VMware SDDC Health Management Pack coletam métricas para tipos de objetos contidos nos plug-ins. O Management Pack coleta métricas de funcionamento para os componentes a seguir:
 * vCenter Server
 * Management Pack for NSX for vSphere
-* Automação vRealize
+* vRealize Automation
 * vRealize Operations Manager
 * vRealize Business
 * vRealize Log Insight
@@ -219,7 +219,6 @@ O vRealize Operations Management Pack for HCX estende os recursos de Operations 
 ## Links relacionados
 {: #opsmgmt-vrops-management-links}
 
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
 * [Diretrizes de dimensionamento do vRealize Operations Manager 7.0](https://kb.vmware.com/s/article/57903){:new_window}
 * [Documentação do vRealize Operations Manager](https://docs.vmware.com/en/vRealize-Operations-Manager/index.html){:new_window}
 * [Management Pack for vSAN](https://marketplace.vmware.com/resources/vsx/product_files/31742/original/Management-Pack-for-vSAN-Guide6d2a8895b022a5f626a86e8e84b031b5.pdf){:new_window}

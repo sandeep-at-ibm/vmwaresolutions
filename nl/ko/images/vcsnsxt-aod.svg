@@ -135,7 +135,7 @@
          id="path33" />
     </g>
     <g
-       transform="translate(260.5,455)"
+       transform="translate(233.5,455)"
        id="g35">
       <switch
          id="switch37">
@@ -155,7 +155,7 @@
             <xhtml:div
                display="inline-block"
                text-align="inherit"
-               text-decoration="inherit">VM Migration</xhtml:div>
+               text-decoration="inherit">VM 마이그레이션</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text
@@ -240,7 +240,7 @@
          id="g65">
         <text
            x="215"
-           y="532.5"
+           y="538.5"
            id="text67">
           <tspan
              style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
@@ -287,12 +287,12 @@
          id="text79">IBM Cloud Private</text>
       <text
          x="46.5"
-         y="632"
+         y="630"
          id="text81">Cloud Automation Manager</text>
       <text
          x="243"
          y="630"
-         id="text83">Containers</text>
+         id="text83">Container</text>
     </g>
     <image
        x="199"
@@ -368,7 +368,7 @@
             <xhtml:div
                display="inline-block"
                text-align="inherit"
-               text-decoration="inherit">App</xhtml:div>
+               text-decoration="inherit">앱</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text
@@ -423,11 +423,11 @@
        id="g117">
       <text
          x="462.96"
-         y="140.87"
+         y="143.87"
          id="text119">IBM Cloud for</text>
       <text
          x="462.96"
-         y="157.87"
+         y="160.87"
          id="text121">VMware Solutions</text>
     </g>
     <g
@@ -437,11 +437,11 @@
        id="g123">
       <text
          x="649.36"
-         y="140.69"
+         y="143.69"
          id="text125">IBM Kubernetes</text>
       <text
          x="649.36"
-         y="157.69"
+         y="160.69"
          id="text127">
         <tspan
            style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
@@ -477,7 +477,7 @@
             <xhtml:div
                display="inline-block"
                text-align="inherit"
-               text-decoration="inherit">App</xhtml:div>
+               text-decoration="inherit">앱</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text
@@ -534,7 +534,7 @@
       </text>
     </g>
     <g
-       transform="translate(388.5,288.5)"
+       transform="translate(352.5,288.5)"
        id="g151">
       <switch
          id="switch153">
@@ -572,7 +572,7 @@
       </switch>
     </g>
     <g
-       transform="translate(411.5,187.5)"
+       transform="translate(411.5,184.5)"
        id="g159">
       <switch
          id="switch161">
@@ -699,7 +699,7 @@
             <xhtml:div
                display="inline-block"
                text-align="inherit"
-               text-decoration="inherit">Worker Pool</xhtml:div>
+               text-decoration="inherit">작업자 풀</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text
@@ -717,7 +717,7 @@
       </switch>
     </g>
     <g
-       transform="translate(629.5,363.5)"
+       transform="translate(629.5,360.5)"
        id="g193">
       <switch
          id="switch195">
@@ -737,7 +737,7 @@
             <xhtml:div
                display="inline-block"
                text-align="inherit"
-               text-decoration="inherit">Cluster</xhtml:div>
+               text-decoration="inherit">클러스터</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text
@@ -974,7 +974,7 @@
          id="image269" />
     </g>
     <g
-       transform="translate(520.5,234.5)"
+       transform="translate(520.5,237.5)"
        id="g271">
       <switch
          id="switch273">
@@ -994,7 +994,7 @@
             <xhtml:div
                display="inline-block"
                text-align="inherit"
-               text-decoration="inherit">App</xhtml:div>
+               text-decoration="inherit">앱</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text
@@ -1010,7 +1010,7 @@
       </switch>
     </g>
     <g
-       transform="translate(573.5,217.5)"
+       transform="translate(573.5,210.5)"
        id="g277">
       <switch
          id="switch279">
@@ -1030,7 +1030,7 @@
             <xhtml:div
                display="inline-block"
                text-align="inherit"
-               text-decoration="inherit">Multi-Cloud Manager</xhtml:div>
+               text-decoration="inherit">다중 클라우드 관리자</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text

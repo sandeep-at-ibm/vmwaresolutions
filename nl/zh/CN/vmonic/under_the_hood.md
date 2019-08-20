@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-09"
 
 keywords: about vmware solutions, product overview, benefits
 
@@ -44,7 +44,7 @@ subcollection: vmware-solutions
 
 订购 vCenter Server 实例时，请首先选择实例名称和 VMware vSphere 版本。所有 VMware 实例都与 Microsoft Active Directory 域控制器一起部署，并且为了实现单点登录，必须将实例指定为主站点或辅助站点。主实例是单点登录域中的第一个实例或唯一实例。可以部署更多辅助实例，并将这些实例与现有主实例的相同单点登录域相关联。接下来，选择是否使用自带 VMware 许可证，或者要向 {{site.data.keyword.cloud_notm}} 租用哪个许可证版本。最后，为实例选择 {{site.data.keyword.cloud_notm}} 区域和数据中心，以及集群中主机的 CPU 和内存特征。
 
-在订单页面的下一部分中，输入实例的存储器和联网特征。可以为集群选择 vSAN 或 NFS 存储器；对于 vSAN，能够选择 vSAN 闪存磁盘的大小和数量以及 vSAN 许可证版本，或者对于 NFS，可选择 NFS 存储卷的大小和计数以及性能。对于联网，可选择主机的主机名前缀以及集群的子域和域。可以选择将 Active Directory 控制器部署为单个 {{site.data.keyword.cloud_notm}} 虚拟服务器实例 (VSI)，或部署为集群中的两个虚拟机（需要为其提供许可和激活）。
+在订单页面的下一部分中，输入实例的存储器和联网特征。可以为集群选择 vSAN 或 NFS 存储器；对于 vSAN，能够选择 vSAN 闪存磁盘的大小和数量以及 vSAN 许可证版本，或者对于 NFS，可选择 NFS 存储卷的大小和计数以及性能。对于联网，可选择主机的主机名前缀以及集群的子域和域。可以选择将 Active Directory 控制器部署为单个 {{site.data.keyword.cloud_notm}} 虚拟服务器实例 (VSI)。或者，可以将这些控制器部署为集群中的两个虚拟机 (VM)（需要为这些 VM 提供许可和激活）。
 
 在 vCenter Server 订购页面的底部，可以从可为 VMware 实例部署的各种附加组件服务中进行选择，使用这些服务的费用将计入您的 {{site.data.keyword.cloud_notm}} 帐户。某些服务需要额外的配置，可在订购表单中进行指定。
 
@@ -126,7 +126,7 @@ VMware 实例可以在 35 个不同的 {{site.data.keyword.CloudDataCents_notm}}
 ### 其他组件
 {: #under_the_hood-add-comp}
 
-根据您的选择，会在集群中部署一个 Microsoft Windows VSI 或同时部署两个 Microsoft Windows 虚拟机作为管理组件的 Active Directory 服务器。您可以选择将自己的 Active Directory 服务器添加为其他身份源以用于管理访问。
+根据您的选择，会在集群中部署一个 Microsoft Windows VSI 或同时部署两个 Microsoft Windows VM 作为管理组件的 Active Directory 服务器。您可以选择将自己的 Active Directory 服务器添加为其他身份源以用于管理访问。
 
 无论您选择如何为自己的工作负载提供业务连续性，{{site.data.keyword.cloud_notm}} 都强烈建议您备份实例的管理组件。通过 {{site.data.keyword.vmwaresolutions_short}} 控制台，可以将集成的 IBM Spectrum Protect Plus 备份服务器或 Veeam Backup & Replication 备份服务器与实例一起部署。这些备份服务可以用作实例的[完整备份解决方案](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_backingup)的一部分。
 

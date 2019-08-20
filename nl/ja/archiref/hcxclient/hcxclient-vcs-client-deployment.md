@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -35,7 +35,7 @@ HCX のクライアント・サイドは、HCX でサポートされているど
 HCX はサービスです。 HCX のライセンスは、サイトごと、仮想マシン (VM) ごとに交付され、VMware 管理下のライセンス・サーバーで管理されます。 HCX のクラウド・サイドとクライアント・サイドのインスタンスでは、
 ライフサイクル全体で VMware 登録サイトとの通信が必要になります。
 - 80 と 443 で `https://connect.hybridity.vmware.com` へのトラフィックを許可する必要があります。
-- クライアント・サイドのインストールで使用する一回限りの登録キーが {{site.data.keyword.vmwaresolutions_full}} コンソールで提供されます。 クライアント・サイドの HCX インストールごとにキーが必要です。
+- クライアント・サイドのインストールで使用する一回限りの登録キーが {{site.data.keyword.vmwaresolutions_full}} コンソールで提供されます。クライアント・サイドの HCX インストールごとにキーが必要です。
 
 ### オンプレミス HCX ライセンスを注文する手順
 {: #hcxclient-vcs-client-deployment-license-ordering-procedure}
@@ -121,7 +121,7 @@ HCX Manager アプライアンスをオンプレミス vCenter にインスト�
   * **「デプロイメント後にパワーオン」**ボックスにチェック・マークを付けます。
   * ハイブリッド・クラウド・サービスの設定を確認し、**「終了」**をクリックします。 ハイブリッド・クラウド・サービスのアプライアンスが電源オンになるまで数分かかることがあります。
   * 状況を確認するには、vSphere Web Client のホーム・ページに移動し、**「ホーム」**タブの**「インベントリ」**に移動し、**「ホストおよびクラスタ」**をクリックします。 データ・センターの階層を展開し、ハイブリッド・クラウド・サービスの仮想マシンをクリックして、中央のペインにサマリーを表示します。
-  * **「サマリ」**タブを表示すると、コンソールに**「パワーオン」**と表示され、**「再生」**ボタンが緑色になっています。
+  * **「サマリ」**タブを表示すると、コンソールに**「パワーオン」**と表示され、**「再生」**アイコンが緑色になっています。
 10. HCX Manager が電源オンになり、オンプレミス vCenter に登録する準備ができました。
 
 ## HCX Manager アプライアンスの初期構成
@@ -147,11 +147,10 @@ HCX Manager アプライアンスをオンプレミス vCenter にインスト�
 {: #hcxclient-vcs-client-deployment-reg-vcenter}
 
 1. ハイブリッド・クラウド・サービスのサービス仮想アプライアンスにログインします。
-2. **「設定の管理 (Manage Settings)」**タイルをクリックします。
+2. **「ダッシュボード」**ペインで、以下の手順を実行します。
   1. 左のペインの**「システムの構成 (Configure Systems)」**で、vCenter を選択します。
   2. 右上の**「vCenter の追加 (Add vCenter)」**をクリックします。
-  3. vCenter Server の IP アドレスを `https://vCenter-host-name` または `https://vCenter-IP-address` という形式で入力します。
-    * 例えば、`https://My-vCenter` や `https://10.108.26.211` などです。
+  3. vCenter Server の IP アドレスを `https://vCenter-host-name` または `https://vCenter-IP-address` という形式で入力します。 例えば、`https://My-vCenter` や `https://10.108.26.211` などです。
   4. vCenter Server のユーザー名とパスワードを入力します。 使用するアカウントには、vCenter 管理者の役割が必要です。
   5. **「OK」**をクリックします。 _「アプリを再始動する必要があります (You need to restart the app)」_ というメッセージが表示された場合は、再始動しないでください。
 3. SSO/ルックアップ・サービスを構成します。

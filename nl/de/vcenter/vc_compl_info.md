@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-23"
 
 keywords: vCenter Server compliance, compliance info, vCenter Server policy
 
@@ -73,7 +73,7 @@ Die Länge des generierten NSX Manager-Kennworts für primäre vCenter Server-In
 ## Richtlinien für den Zugriff auf Kundeninstanzen
 {: #vc_compl_info-policy-for-access-client-inst}
 
-VMware vCenter Server-Umgebungen, die als {{site.data.keyword.vmwaresolutions_short}} bereitgestellt werden, stellen unseren Kunden eine Plattformschicht für das VMware-Management für die Verwaltung der Virtualisierungsfunktionalität zur Verfügung. Während des gesamten Lebenszyklus von IBM Cloud for VMware-Produkten und -Services kann es sein, dass Sie auf die Unterstützung von IBM Support zurückgreifen müssen, um die erfolgreiche Implementierung dieser Produkte zu gewährleisten. In den meisten Fällen ist die Intervention von IBM Support das Ergebnis einer Kundenanforderung (d. h. eines Support-Tickets). In seltenen Fällen kann IBM Support jedoch auch proaktiv Unterstützung ohne ein Support-Ticket vom Kunden anbieten, um zukünftige Probleme zu vermeiden. Dieser Zugriff erfolgt über das interne IBM Cloud-Unterstützungsnetz und wird durch ein Support-Ticket dokumentiert, das von IBM Support geöffnet und von IBM Cloud SOC fortlaufend überwacht wird. IBM Support ändert Instanzkonfigurationen nur mit der vorherigen Zustimmung des Kunden. Der Zugriff erfolgt auf VMware-Managementkomponenten und/oder IBM Cloud-Managementkomponenten und nie auf die virtuellen Maschinen oder Anwendungen der Kunden.
+VMware vCenter Server-Umgebungen, die als {{site.data.keyword.vmwaresolutions_short}} bereitgestellt werden, stellen unseren Kunden eine Plattformschicht für das VMware-Management für die Verwaltung der Virtualisierungsfunktionalität zur Verfügung. Während des gesamten Lebenszyklus von {{site.data.keyword.cloud_notm}} for VMware-Produkten und -Services kann es sein, dass Sie auf die Unterstützung von IBM Support zurückgreifen müssen, um die erfolgreiche Implementierung dieser Produkte zu gewährleisten. In den meisten Fällen ist die Intervention von IBM Support das Ergebnis einer Kundenanforderung (d. h. eines Support-Tickets). In seltenen Fällen kann IBM Support jedoch auch proaktiv Unterstützung ohne ein Support-Ticket vom Kunden anbieten, um zukünftige Probleme zu vermeiden. Dieser Zugriff erfolgt über das interne {{site.data.keyword.cloud_notm}}-Unterstützungsnetz und wird durch ein Support-Ticket dokumentiert, das von IBM Support geöffnet und von {{site.data.keyword.cloud_notm}} SOC fortlaufend überwacht wird. IBM Support ändert Instanzkonfigurationen nur mit der vorherigen Zustimmung des Kunden. Der Zugriff erfolgt auf VMware-Managementkomponenten und/oder {{site.data.keyword.cloud_notm}}-Managementkomponenten und nie auf die virtuellen Maschinen oder Anwendungen der Kunden.
 
 ## Proaktive Unterstützung
 {: #vc_compl_info-proactive-support}
@@ -83,14 +83,14 @@ VMware vCenter Server-Umgebungen, die als {{site.data.keyword.vmwaresolutions_sh
 
 * Während der ursprünglichen Bestellung und Bereitstellung einer Instanz oder eines Service kann IBM Support auf Kundeninstanzen und -informationen ohne vorherige Benachrichtigung des Kunden zugreifen, um sicherzustellen, dass die Bestellungen ordnungsgemäß ausgeführt werden.
 * Neben den Bestell-, Bereitstellungs- und Installationsprozessen überwacht IBM Support aktiv Lebenszyklusoperationen der Instanzen, wie das Hinzufügen neuer Hosts.
-* Um bereits aufgetretene oder zukünftige Probleme zu beheben, kann IBM Support eine Reihe von Maßnahmen ergreifen, darunter unter anderem das Überprüfen von Kundenauftragsdetails, das erneute Starten von Automationsjobs, das Durchführen von Operationen für das erneute Laden des Betriebssystems oder das Öffnen von IBM Cloud-Tickets mithilfe des bereitgestellten Benutzernamens und API-Schlüssels für IBM Cloud.
+* Um bereits aufgetretene oder zukünftige Probleme zu beheben, kann IBM Support eine Reihe von Maßnahmen ergreifen, darunter unter anderem das Überprüfen von Kundenauftragsdetails, das erneute Starten von Automationsjobs, das Durchführen von Operationen für das erneute Laden des Betriebssystems oder das Öffnen von {{site.data.keyword.cloud_notm}}-Tickets mithilfe des bereitgestellten Benutzernamens und API-Schlüssels für {{site.data.keyword.cloud_notm}}.
 
 ### Proaktive Unterstützung für Operationen im stabilen Zustand
 {: #vc_compl_info-proactive-support-for-steady-state-operations}
 
 * In seltenen Fällen kann IBM Support den Zugriff auf Kundeninstanzen während Operationen im stabilen Zustand anfordern, um proaktiv eine Fehlerbehebung für eine Instanz durchzuführen oder die Funktion von bereitgestellten Services oder Komponenten zu überprüfen.
-* Dieser Zugriff erfolgt über das interne IBM Cloud-Unterstützungsnetz. IBM Support ändert Instanzkonfigurationen nur mit der vorherigen Zustimmung des Kunden.
-* Der Zugriff erfolgt auf VMware-Managementkomponenten und/oder IBM Cloud-Managementkomponenten und nie auf die virtuellen Maschinen oder Anwendungen der Kunden.
+* Dieser Zugriff erfolgt über das interne {{site.data.keyword.cloud_notm}}-Unterstützungsnetz. IBM Support ändert Instanzkonfigurationen nur mit der vorherigen Zustimmung des Kunden.
+* Der Zugriff erfolgt auf VMware-Managementkomponenten und/oder {{site.data.keyword.cloud_notm}}-Managementkomponenten und nie auf die virtuellen Maschinen oder Anwendungen der Kunden.
 
 ### Support-Tickets
 {: #vc_compl_info-support-tickets}
@@ -105,8 +105,8 @@ VMware vCenter Server-Umgebungen, die als {{site.data.keyword.vmwaresolutions_sh
 ## Verantwortlichkeiten des Kunden
 {: #vc_compl_info-client-responsibilities}
 
-* Während wir den Kunden empfehlen, Schritte zu unternehmen, um ihre Umgebungen sicherer zu machen, sollte beachtet werden, dass einige Verfahren negative Auswirkungen auf die Effektivität von IBM Cloud for VMware haben können.
-* Kunden sind für die von ihnen erstellten Firewalls und die daraus resultierenden Einschränkungen, die für die Kommunikation zwischen IBM Cloud for VMware-Komponenten gelten, verantwortlich. Diese Firewalls können auch die Möglichkeiten von IBM Support beeinträchtigen, auf Kundeninstanzen zuzugreifen und Probleme zu beheben.
+* Während wir den Kunden empfehlen, Schritte zu unternehmen, um ihre Umgebungen sicherer zu machen, sollte beachtet werden, dass einige Verfahren negative Auswirkungen auf die Effektivität von {{site.data.keyword.cloud_notm}} for VMware haben können.
+* Kunden sind für die von ihnen erstellten Firewalls und die daraus resultierenden Einschränkungen, die für die Kommunikation zwischen {{site.data.keyword.cloud_notm}} for VMware-Komponenten gelten, verantwortlich. Diese Firewalls können auch die Möglichkeiten von IBM Support beeinträchtigen, auf Kundeninstanzen zuzugreifen und Probleme zu beheben.
 * Kunden sind vollständig für die Verschlüsselung der Daten in ihrem System verantwortlich.
 * Bei der ersten Bereitstellung laufen die Automatisierung des Angebots und das Konto des Kunden getrennt voneinander. Kunden sind berechtigt und werden dazu ermutigt, alle von IBM bereitgestellten Kennwörter im Portal zu ändern.
 * Der vCenter-Zugriff und die Berechtigungsnachweise werden während den ersten Implementierungen erstellt und dem Kunden bereitgestellt. Im Rahmen der Anforderung unseres Angebots muss IBM Support uneingeschränkten Zugriff auf die Managementschicht erhalten, um Lebenszyklusmanagement sowie Unterstützung für unsere Kunden bereitzustellen.

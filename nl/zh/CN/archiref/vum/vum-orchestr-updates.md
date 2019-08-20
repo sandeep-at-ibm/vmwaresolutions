@@ -68,4 +68,4 @@ VUM 允许您使用基线组来执行先主机后虚拟机的编排升级。将�
 {: #vum-orchestr-updates-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 解决方案体系结构](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} 数字技术互动](https://ibm-dte.mybluemix.net/vmware)（演示）
+* [{{site.data.keyword.vmwaresolutions_full}} 演示](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/)（演示）

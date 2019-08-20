@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-14"
+lastupdated: "2019-07-16"
 
 subcollection: vmware-solutions
 
@@ -68,7 +68,7 @@ VMware のバックアップ・ロケーションは空のフォルダーでな�
 
 * Zerto Virtual Replication: Zerto Virtual Manager (ZVM) システムは {{site.data.keyword.cloud_notm}} 仮想サーバー・インスタンス (VSI) としてデプロイされ、Veeam でも IBM Spectrum Protect Plus でもバックアップはサポートされません。 災害復旧戦略上、サイト・フェイルオーバーを行わずに ZVM をリカバリーする必要がある場合は、任意の Windows バックアップ・ソリューションを使用して ZVM のバックアップとリストアを行う必要があります。
 * F5 BIG-IP: F5 は、[F5 構成のファイル・ベースのバックアップ](https://support.f5.com/csp/article/K13132){:new_window}を推奨しています。このバックアップの送信先をファイル・サーバーにすることができます。
-* FortiGate Security Appliance または VM: Fortinet は、[FortiGate 構成のファイル・ベースのバックアップ](http://help.fortinet.com/fos50hlp/54/Content/FortiOS/fortigate-best-practices-54/Firmware/Performing_Config_Backup.htm){:new_window}を推奨しています。このバックアップの送信先をファイル・サーバーにすることができます。
+* FortiGate Security Appliance または VM: Fortinet は、[FortiGate 構成のファイル・ベースのバックアップ](https://help.fortinet.com/fos50hlp/54/Content/FortiOS/fortigate-best-practices-54/Firmware/Performing_Config_Backup.htm){:new_window}を推奨しています。このバックアップの送信先をファイル・サーバーにすることができます。
 * HyTrust Cloud Control および Data Control: HyTrust は、HyTrust サーバー・アプライアンスのイメージ・ベースのバックアップとファイル・ベースのバックアップの両方をサポートしています。 詳しくは、HyTrust 管理ガイドを参照してください。
 * VMware HCX: HCX アプライアンス管理インターフェースを使用することによって、vCenter Server Appliance に似た HCX マネージャー構成のファイル・ベースのバックアップを作成してダウンロードできます。
 

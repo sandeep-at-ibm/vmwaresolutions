@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-06"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -85,9 +85,3 @@ IP 서브넷, VLAN 할당은 다음 표에 설명되어 있습니다.
 |사설 B 	|포터블 	|사용 중인 경우 vSAN용으로 지정됩니다.|
 |사설 B 	|포터블 	|사용 중인 경우 NAS용으로 지정됩니다.|
 |사설 B 	|포터블 	|vMotion을 위해 지정됩니다.|
-
-
-## 관련 링크
-{: #caveonix-detailed-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

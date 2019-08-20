@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-02"
 
 keywords: F5 BIG-IP, F5 install, tech specs F5
 
@@ -25,7 +25,7 @@ F5 on {{site.data.keyword.cloud}} 서비스(F5 BIG-IP® Virtual Edition)는 로�
 
 필요에 따라 이 서비스의 인스턴스를 두 개 이상 설치할 수 있습니다.
 
-이 서비스는 V1.9 이상에 배치되는 인스턴스에 대해서만 사용 가능합니다. 설치되어 있는 현재 BIG-IP VE 버전은 v14.1.0.2입니다.
+이 서비스는 V1.9 이상에 배치되는 인스턴스에 대해서만 사용 가능합니다. 현재 설치된 BIG-IP VE 버전은 v15.0.0입니다.
 {:note}
 
 ## F5 on IBM Cloud의 기술 스펙

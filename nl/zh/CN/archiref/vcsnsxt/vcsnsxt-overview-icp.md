@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -42,8 +42,3 @@ subcollection: vmware-solutions
 使用 Calico 可方便地进行 {{site.data.keyword.icpfull_notm}} 网络管理。Calico 使用开放式系统互连 (OSI) 模型的第 3 层，即网络层。Calico 使用边界网关协议 (BGP) 来构建路由表，以便于代理程序节点之间进行通信。
 
 有关 Calico 联网的更多信息，请参阅 [{{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-iks)。
-
-## 相关链接
-{: #vcsnsxt-overview-icp-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

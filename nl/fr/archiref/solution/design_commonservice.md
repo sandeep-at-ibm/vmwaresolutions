@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -37,9 +37,9 @@ La conception permet également de déployer deux serveurs MSAD haute disponibil
 Si vous sélectionnez l'option avec deux serveurs MSAD haute disponibilité, vous êtes tenu de fournir l'octroi de licence et l'activation Microsoft.
 {:note}
 
-Active Directory sert à authentifier les accès uniquement pour gérer l'instance VMware et non pour héberger les utilisateurs des charges de travail dans les instances déployées. Le nom de domaine racine de forêt du serveur Active Directory est identique au nom de domaine DNS que vous spécifiez. Ce nom de domaine est indiqué uniquement pour l'instance vCenter Server principale si plusieurs instances sont liées. Pour les instances liées, chaque instance contient un serveur Active Directory qui se trouve dans l'anneau de réplique racine de forêt. Les fichiers de la zone DNS sont également répliqués sur les serveurs Active Directory.
+Active Directory sert à authentifier les accès uniquement pour gérer l'instance VMware et non pour héberger les utilisateurs des charges de travail dans les instances déployées. Le nom de domaine racine de forêt du serveur Active Directory est identique au nom de domaine DNS (Domain Name Services) que vous spécifiez. Ce nom de domaine est indiqué uniquement pour l'instance vCenter Server principale si plusieurs instances sont liées. Pour les instances liées, chaque instance contient un serveur Active Directory qui se trouve dans l'anneau de réplique racine de forêt. Les fichiers de la zone DNS sont également répliqués sur les serveurs Active Directory.
 
-### Domaine SSO vSphere
+### Domaine SSO (Single Sign On) vSphere
 {: #design_commonservice-vsphere-sso}
 
 Le domaine SSO (Single Sign On) vSphere est utilisé comme mécanisme d'authentification initial pour une seule instance ou pour plusieurs instances liées. Le domaine SSO est également utilisé pour connecter une instance VMware à plusieurs instances liées au serveur MSAD. La configuration SSO suivante est appliquée :  
@@ -71,19 +71,19 @@ Cette conception intègre les services DNS sur les instances de serveur virtuel 
 ### Instances vCenter Server secondaires
 {: #design_commonservice-secondary-vcs}
 
-Pour une redondance entre les instances ; lorsque la première instance vCenter Server secondaire est ajoutée à une instance vCenter Server principale existante ou à l'instance vCenter Server autonome en cours, l'adresse IP du serveur AD DNS de cette instance principale est utilisée dans l'instance vCenter Server secondaire et dans toutes les entrées “DNS secondaire” des instances vCenter Server secondaires suivantes pour tous les composants qui nécessitent une entrée de serveur DNS. Par exemple, ESXi, vCenter et NSX Manager. Cela inclut les composants complémentaires, tels que HCX, Zerto et Veeam. L'entrée DNS secondaire du site principal est alors remplacée par la première adresse IP AD/DNS des instances vCenter Server secondaires.
+Pour une redondance entre les instances, lorsque la première instance vCenter Server secondaire est ajoutée à une instance vCenter Server principale existante ou à l'instance vCenter Server autonome en cours, l'adresse IP du serveur AD DNS de cette instance principale est utilisée dans l'instance vCenter Server secondaire et dans toutes les entrées “DNS secondaire” des instances vCenter Server secondaires suivantes pour tous les composants qui nécessitent une entrée de serveur DNS. Par exemple, ESXi, vCenter et NSX manager, ainsi que des composants complémentaires tels que HCX, Zerto et Veeam. L'entrée DNS secondaire du site principal est alors remplacée par la première adresse IP AD/DNS des instances vCenter Server secondaires.
 
 ## Services NTP
 {: #design_commonservice-ntp}
 
-Cette conception utilise les serveurs NTP de l'infrastructure {{site.data.keyword.cloud_notm}}. Tous les composants déployés sont configurés pour utiliser ces serveurs NTP. Il est essentiel que tous les composants de la conception utilisent le même serveur NTP pour que les certificats et l'authentification Active Directory puissent fonctionner correctement.
+Cette conception utilise les serveurs NTP de l'infrastructure {{site.data.keyword.cloud_notm}}. Tous les composants déployés sont configurés pour utiliser ces serveurs NTP. Il est essentiel que tous les composants de la conception utilisent le même serveur NTP pour que les certificats et l'authentification Active Directory fonctionnent correctement.
 
 ![Services NTP et DN](../../images/vcsv4radiagrams-ra-servicesinterconnections.svg "Services NTP et DNS")
 
 ## Services d'autorité de certification
 {: #design_commonservice-cas}
 
-Par défaut, VMware vSphere utilise les certificats TLS qui sont signés par l'autorité de certification VMware (VMCA), qui se trouve sur le dispositif VMware Platform Services Controller.Ces certificats ne sont pas sécurisés par les terminaux ou les navigateurs de l'utilisateur final. La meilleure pratique en matière de sécurité consiste à remplacer les certificats d'utilisateur par des certificats qui sont signés par un tiers ou une autorité de certification d'entreprise. Les certificats pour la communication entre machines peuvent être conservés en tant que certificats signés par l'autorité de certification VMware (VMCA), toutefois, il est recommandé de suivre les meilleures pratiques pour votre organisation, ce qui implique généralement d'utiliser une autorité de certification d'entreprise identifiée.
+Par défaut, VMware vSphere utilise les certificats TLS qui sont signés par l'autorité de certification VMware (VMCA), qui se trouve sur le dispositif VMware Platform Services Controller.Ces certificats ne sont pas sécurisés par les terminaux ou les navigateurs de l'utilisateur final. La meilleure pratique en matière de sécurité consiste à remplacer les certificats d'utilisateur par des certificats qui sont signés par un tiers ou une autorité de certification d'entreprise. Les certificats pour la communication entre machines peuvent être conservés en tant que certificats signés par l'autorité de certification VMware (VMCA). Cependant, il est recommandé de suivre les meilleures pratiques pour votre organisation, ce qui implique généralement d'utiliser une autorité de certification d'entreprise identifiée.
 
 Vous pouvez utiliser les serveurs Windows AD dans cette conception pour créer des certificats qui sont signés par l'instance locale. Cependant, vous pouvez également choisir de configurer des services d'autorité de certification si nécessaire.
 

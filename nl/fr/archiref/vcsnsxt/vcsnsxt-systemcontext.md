@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-21"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -56,8 +56,3 @@ NSX-V | NSX-V on vCenter Server fournit le réseau dissocié défini par le logi
 CAM | {{site.data.keyword.cloud_notm}} Automation Manager (CAM) s'exécute sur {{site.data.keyword.icpfull_notm}} et permet à partir d'un point unique de mettre à disposition des charges de travail basées sur des machines virtuelles, ainsi que des charges de travail Kubernetes simplement en utilisant des modèles. CAM permet au développeur d'effectuer les actions suivantes : <br> - Mettre à disposition des charges de travail sur vCenter, {{site.data.keyword.icpfull_notm}} ou {{site.data.keyword.containerlong_notm}}.<br> - Composer et orchestrer des services constitués de machines virtuelles et de conteneurs. <br> - Intégrer ses chaînes d'outils DevOps et sa solution ITSM de 2 jours.
 Applications conteneurisées | Il s'agit des applications qui ont terminé le parcours de modernisation des applications et qui s'exécutent désormais en tant que conteneurs. Pour cette architecture de référence et pour Acme Skateboards, l'une des applications conteneurisées est un serveur Web, qui fait partie de la charge de travail de présence en ligne.
 Watson | Dans le cas de cette architecture de référence et pour Acme Skateboards, Watson représente le service d'intelligence artificielle qui est utilisé dans l'architecture _Concept Car architecture_.
-
-## Liens connexes
-{: #vcsnsxt-systemcontext-related}
-
-* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

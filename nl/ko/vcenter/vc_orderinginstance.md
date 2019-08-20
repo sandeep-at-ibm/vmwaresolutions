@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-06"
 
 keywords: vCenter Server order instance, order vCenter Server, order vCenter Server instance
 
@@ -35,9 +35,9 @@ subcollection: vmware-solutions
 |:------------|:------------ |
 |도메인 이름 | `<root_domain>` |  
 |vCenter Server 로그인 사용자 이름 | `<user_id>@<root_domain>`(Microsoft Active Directory 사용자) 또는 `administrator@vsphere.local` |
-|vCenter Server(임베디드 PSC 포함) FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. 최대 길이는 50자입니다. |
+|vCenter Server(임베디드 PSC 포함) FQDN | `<instance_name>-vc.<root_domain>`. 최대 길이는 50자입니다. |
 |SSO(Single Sign-On) 사이트 이름 | `<subdomain_label>` |
-|완전한 ESXi 서버 이름 | `<host_prefix><n>.<subdomain_label>.<root_domain>`, 여기서 `<n>`은 ESXi 서버의 순서입니다. 최대 길이는 50자입니다. |
+|완전한 ESXi 서버 이름 | `<data_center>-<host_prefix><n>.<subdomain_label>.<root_domain>`, 여기서 `n`은 ESXi 서버의 순서입니다. 최대 길이는 50자입니다. |
 {: caption="표 1. 인스턴스 및 도메인 이름의 값 형식" caption-side="top"}
 
 인스턴스 주문 또는 배치 중에 설정되는 값은 수정하지 마십시오. 수정하는 경우 인스턴스를 사용할 수 없게 됩니다. 예를 들어, 공용 네트워킹이 종료되는 경우, 서버 및 가상 서버 인스턴스(VSI)가 Vyatta 뒤로 이동하는 경우, IBM CloudBuilder VSI가 중지하거나 삭제된 경우입니다.
@@ -52,17 +52,28 @@ vCenter Server 인스턴스를 주문할 때는 다음 시스템 설정을 지�
 {: #vc_orderinginstance-inst-name}
 
 인스턴스 이름은 다음 요구사항을 충족해야 합니다.
-* 영숫자 문자 및 대시(-) 문자만 사용할 수 있습니다.
-* 인스턴스 이름은 영문자로 시작하고 영숫자로 끝나야 합니다.
+* 소문자 영문자, 숫자 및 대시(-) 문자만 사용할 수 있습니다.
+* 인스턴스 이름은 소문자 영문자로 시작해야 합니다.
+* 인스턴스 이름은 소문자 영문자 또는 숫자로 끝나야 합니다.
 * 인스턴스 이름의 최대 길이는 10자입니다.
 * 인스턴스 이름은 계정 내에서 고유해야 합니다.
 
-### VMware vSphere 라이센스
+### 초기 클러스터 이름
+{: #vc_orderinginstance-cluster-name}
+
+초기 클러스터 이름은 다음 요구사항을 충족해야 합니다.
+* 소문자 영문자, 숫자 및 대시(-) 문자만 사용할 수 있습니다.
+* 클러스터 이름은 소문자 영문자로 시작해야 합니다.
+* 클러스터 이름은 소문자 영문자 또는 숫자로 끝나야 합니다.
+* 클러스터 이름의 최대 길이는 30자입니다.
+* 클러스터 이름은 vCenter Server 인스턴스 내에서 고유해야 합니다.
+
+### VMware vSphere 버전
 {: #vc_orderinginstance-vsphere-license}
 
-vSphere Enterprise Plus 6.7u1 또는 vSphere Enterprise Plus 6.5u2를 주문할 것인지 여부를 선택하십시오.
+vSphere Enterprise Plus 6.7u2 또는 vSphere Enterprise Plus 6.5u2를 주문할 것인지를 선택하십시오.
 
-vSphere Enterprise Plus 6.7u1은 Broadwell 및 Skylake {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}용으로만 사용 가능합니다.
+vSphere Enterprise Plus 6.7u2는 Skylake, Cascade 및 Broadwell {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}에만 사용할 수 있습니다.
 {:note}
 
 ### 기본 또는 보조
@@ -77,6 +88,9 @@ vSphere Enterprise Plus 6.7u1은 Broadwell 및 Skylake {{site.data.keyword.cloud
 * vCenter Server 6.5
 * vSphere Enterprise Plus 6.5 또는 6.7
 * NSX Service Providers 6.4(Base, Advanced 또는 Enterprise 에디션)
+
+VMware HCX on {{site.data.keyword.cloud_notm}} 서비스에는 NSX Advanced 또는 NSX Enterprise 에디션 라이센스가 필요합니다.
+{:note}
 
 비즈니스 파트너 사용자의 경우, vCenter Server 라이센스(Standard 에디션), vSphere 라이센스(Enterprise Plus 에디션) 및 NSX 라이센스가 사용자를 대신하여 포함 및 구매됩니다. 그러나 NSX 라이센스의 에디션은 지정해야 합니다.
 
@@ -113,6 +127,22 @@ Bare Metal Server 설정은 데이터 센터 선택 및 Bare Metal Server 구성
 |듀얼 Intel Xeon Gold 6140 프로세서 / 총 36개의 코어, 2.3GHz |64GB, 96GB, 128GB, 192GB, 384GB, 768GB, 1.5TB |
 {: caption="표 2. Skylake {{site.data.keyword.baremetal_short}}의 옵션" caption-side="top"}
 
+### Cascade
+{: #vc_orderinginstance-cascade}
+
+**Cascade** 설정의 경우 **CPU 모델** 및 **RAM**에 대한 옵션이 있습니다.
+
+Cascade {{site.data.keyword.baremetal_short}}는 VMware vSphere Enterprise Plus 6.7 U2 인스턴스에만 사용할 수 있습니다.
+{:note}
+
+| CPU 모델 옵션        |RAM 옵션       |
+|:------------- |:------------- |
+|듀얼 Intel Xeon Gold 4210 프로세서 / 총 20개의 코어, 2.3GHz |64GB, 96GB, 128GB, 192GB, 768GB, 1.5TB |
+|듀얼 Intel Xeon Gold 5218 프로세서 / 총 32개의 코어, 2.3GHz |64GB, 96GB, 128GB, 192GB, 768GB, 1.5TB |
+|듀얼 Intel Xeon Gold 6248 프로세서 / 총 40개의 코어, 2.5GHz |64GB, 96GB, 128GB, 192GB, 768GB, 1.5TB |
+{: caption="표 3. {{site.data.keyword.baremetal_short}}의 옵션" caption-side="top"}
+
+
 ### SAP 인증
 {: #vc_orderinginstance-sap}
 
@@ -136,7 +166,7 @@ Bare Metal Server 설정은 데이터 센터 선택 및 Bare Metal Server 구성
 |:------------- |:------------- |
 | 쿼드 Intel Xeon E7-4820 v4 / 총 40개의 코어, 2.0GHz |128GB, 256GB, 512GB, 1TB, 2TB, 3TB |
 | 쿼드 Intel Xeon E7-4850 v4 / 총 64개의 코어, 2.1GHz |128GB, 256GB, 512GB, 1TB, 2TB, 3TB |
-{: caption="표 3. Broadwell {{site.data.keyword.baremetal_short}}의 옵션" caption-side="top"}
+{: caption="표 4. Broadwell {{site.data.keyword.baremetal_short}}의 옵션" caption-side="top"}
 
 ### Bare Metal Server 수
 {: #vc_orderinginstance-bare-metal-number}
@@ -156,12 +186,12 @@ Bare Metal Server 설정은 데이터 센터 선택 및 Bare Metal Server 구성
 ### vSAN 스토리지
 {: #vc_orderinginstance-vsan-storage}
 
-vSAN은 **Skylake** 및 **Broadwell** Bare Metal Server 구성에만 사용할 수 있습니다. 다음 vSAN 옵션을 지정하십시오.
+vSAN은 **Skylake**, **Cascade** 및 **Broadwell** Bare Metal Server 구성에만 사용할 수 있습니다. 다음 vSAN 옵션을 지정하십시오.
 * **vSAN 용량 디스크의 디스크 유형 및 크기**: 필요한 용량 디스크에 대한 옵션을 선택하십시오.
 * **vSAN 용량 디스크 수**: 추가할 용량 디스크 수를 지정하십시오.
 * 용량 디스크를 10개 한계 이상으로 추가하려는 경우 **Intel Optane을 사용한 고성능** 상자를 선택하십시오. 이 옵션은 총 12개 용량 디스크에 대해 2개의 추가 용량 디스크 베이를 제공하며 짧은 대기 시간과 높은 IOPS 처리량이 필요한 워크로드에 유용합니다.
 
-  **Intel Optane을 사용한 고성능** 옵션은 Skylake CPU 모델에 대해서만 사용 가능합니다.
+  **Intel Optane을 사용한 고성능** 옵션은 Skylake 및 Cascade CPU 모델에 대해서만 사용 가능합니다.
   {:note}
 
 * **vSAN 캐시 디스크의 디스크 유형** 및 **vSAN 캐시 디스크 수** 값을 검토하십시오. 이러한 값은 **Intel Optane을 사용한 고성능** 상자를 선택했는지 여부에 따라 달라집니다.
@@ -189,7 +219,7 @@ vSAN은 **Skylake** 및 **Broadwell** Bare Metal Server 구성에만 사용할 �
 |2IOPS/GB |이 옵션은 가장 일반적인 워크로드를 위해 설계되었습니다. 애플리케이션 예로 소형 데이터베이스 호스팅, 웹 애플리케이션 백업 또는 하이퍼바이저용 가상 머신 디스크 이미지가 있습니다. |
 |4IOPS/GB |이 옵션은 동시에 활성 데이터의 높은 백분율을 보유한 고강도 워크로드를 위해 설계되었습니다. 애플리케이션 예로 트랜잭션 데이터베이스가 있습니다. |
 |10IOPS/GB |이 옵션은 분석과 같이 가장 처리가 어려운 워크로드 유형을 위해 설계되었습니다. 애플리케이션 예로 높은 트랜잭션 데이터베이스 및 기타 성능에 민감한 데이터베이스가 있습니다. 이 성능 레벨은 파일 공유당 4TB의 최대 용량으로 제한됩니다. |
-{: caption="표 4. NFS 성능 레벨 옵션" caption-side="top"}
+{: caption="표 5. NFS 성능 레벨 옵션" caption-side="top"}
 
 ### 로컬 디스크
 {: #vc_orderinginstance-local-disks}
@@ -207,27 +237,30 @@ vCenter Server 인스턴스를 주문할 때는 다음 네트워크 인터페이
 {: #vc_orderinginstance-host-name-prefix}
 
 호스트 이름 접두부는 다음 요구사항을 충족해야 합니다.
-*  영숫자 문자 및 대시(-) 문자만 사용할 수 있습니다.
-*  호스트 이름 접두부는 영숫자 문자로 시작하고 끝나야 합니다.
-*  호스트 이름 접두부의 최대 길이는 10자입니다.
+* 소문자 영문자, 숫자 및 대시(-) 문자만 사용할 수 있습니다.
+* 호스트 이름 접두부는 소문자 영문자로 시작해야 합니다.
+* 호스트 이름 접두부는 소문자 영문자 또는 숫자로 끝나야 합니다.
+* 호스트 이름 접두부의 최대 길이는 10자입니다.
 
 ### 하위 도메인 레이블
 {: #vc_orderinginstance-subdomain-label}
 
 하위 도메인 레이블은 다음 요구사항을 충족해야 합니다.
-*  영숫자 문자 및 대시(-) 문자만 사용할 수 있습니다.
-*  하위 도메인 레이블은 영문자로 시작하고 영숫자로 끝나야 합니다.
-*  하위 도메인 레이블의 최대 길이는 10자입니다.
-*  하위 도메인 레이블은 다중 사이트 구성의 모든 인스턴스 내에서 고유해야 합니다.
+* 소문자 영문자, 숫자 및 대시(-) 문자만 사용할 수 있습니다.
+* 하위 도메인 레이블은 소문자 영문자로 시작해야 합니다.
+* 하위 도메인 레이블은 소문자 영문자 또는 숫자로 끝나야 합니다.
+* 하위 도메인 레이블의 최대 길이는 10자입니다.
+* 하위 도메인 레이블은 다중 사이트 구성의 모든 인스턴스 내에서 고유해야 합니다.
 
 ### 도메인 이름
 {: #vc_orderinginstance-domain-name}
 
 루트 도메인 이름은 다음 요구사항을 충족해야 합니다.
 * 도메인 이름은 마침표(.)로 구분된 두 개 이상의 문자열로 구성되어야 합니다.
-* 첫 번째 문자열은 영문자로 시작하고 영숫자로 끝나야 합니다.
-* 마지막 문자열을 제외한 모든 문자열은 영숫자 및 대시(-) 문자만 포함할 수 있습니다.
-* 마지막 문자열은 영문자만 포함할 수 있습니다.
+* 첫 번째 문자열은 소문자 영문자로 시작해야 합니다.
+* 첫 번째 문자열은 소문자 영문자 또는 숫자로 끝나야 합니다.
+* 마지막 문자열을 제외한 모든 문자열에는 소문자 영문자, 숫자 및 대시(-) 문자만 포함될 수 있습니다.
+* 마지막 문자열에는 소문자 영문자만 포함될 수 있습니다.
 * 마지막 문자열의 길이는 2 - 24자 사이여야 합니다.
 
 호스트 및 VM의 완전한 도메인 이름(FQDN)의 최대 길이는 50자입니다. 도메인 이름은 이 최대 길이를 포함할 수 있어야 합니다.
@@ -294,6 +327,9 @@ Windows Server 2016 라이센스 주문에 대한 자세한 정보는 [Get start
 
 vCenter Server 인스턴스를 주문하는 경우 추가 기능 서비스도 주문할 수 있습니다. 서비스에 대한 자세한 정보는 [vCenter Server 인스턴스에 대한 사용 가능 서비스](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices#available-services-for-vcenter-server-instances)를 참조하십시오.
 
+VMware HCX on {{site.data.keyword.cloud_notm}} 서비스를 주문할 때 12개월 약정이 필요합니다.
+{:note}
+
 ## 주문 요약
 {: #vc_orderinginstance-order-summary}
 
@@ -307,8 +343,8 @@ vCenter Server 인스턴스를 주문하는 경우 추가 기능 서비스도 �
 1. {{site.data.keyword.cloud_notm}} 카탈로그에서 왼쪽 탐색 분할창에 있는 **VMware** 아이콘을 클릭한 다음 **VMware 가상 데이터 센터** 섹션에 있는 **VMware vCenter Server on IBM Cloud** 카드를 클릭하십시오.
 2. **VMware vCenter Server on IBM Cloud** 페이지에서 **vCenter Server** 카드를 클릭하고 **작성**을 클릭하십시오.
 3. **vCenter Server** 페이지에서 인스턴스 이름을 입력하십시오.
-5. vSphere 버전을 선택하십시오.
-4. 인스턴스 유형을 선택하십시오.
+4. vSphere 버전을 선택하십시오.
+5. 인스턴스 유형을 선택하십시오.
    * 환경에 하나의 인스턴스를 배치하거나 다중 사이트 토폴로지에 첫 번째 인스턴스를 배치하려면 **기본 인스턴스**를 클릭하십시오.
    * 고가용성을 위해 인스턴스를 환경의 기존(기본) 인스턴스에 연결하려면 **보조 인스턴스**를 클릭하고 다음 단계를 완료하십시오.
      1. 보조 인스턴스를 연결할 기본 인스턴스를 선택하십시오.
@@ -321,7 +357,7 @@ vCenter Server 인스턴스를 주문하는 경우 추가 기능 서비스도 �
 7. Bare Metal Server 설정을 완료하십시오.
     1. {{site.data.keyword.CloudDataCent_notm}}를 선택하여 인스턴스를 호스팅하십시오.
     2. Bare Metal Server 구성을 선택하십시오.
-       * **Skylake** 또는 **Broadwell**을 선택하는 경우 CPU 모델 및 RAM 크기를 지정하십시오.
+       * **Skylake**, **Cascade** 또는 **Broadwell**을 선택하는 경우 CPU 모델 및 RAM 크기를 지정하십시오.
        * **SAP 인증**을 선택하는 경우, 사전 설정된 구성 중 하나를 선택하십시오.
     3. {{site.data.keyword.baremetal_short}}의 수를 지정하십시오. vSAN 스토리지를 사용할 경우 최소 4개의 {{site.data.keyword.baremetal_short}}가 필요합니다.  
 8. 스토리지 구성을 완료하십시오.
@@ -350,7 +386,7 @@ vCenter Server 인스턴스를 주문하는 경우 추가 기능 서비스도 �
 {: #vc_orderinginstance-results}
 
 * 인스턴스의 배치가 자동으로 시작되고 주문이 처리 중이라는 확인을 수신합니다. 인스턴스 세부사항의 **배치 히스토리** 섹션을 보고 주의해야 하는 문제가 포함된 배치 상태를 확인할 수 있습니다.
-* 인스턴스가 성공적으로 배치된 경우에는 [vCenter Server 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs)에서 설명된 컴포넌트가 VMware 가상 플랫폼에 설치됩니다. 기본적으로 주문한 ESXi 서버는 **cluster1**로 그룹화됩니다. 추가 기능 서비스를 주문한 경우 주문이 완료된 후 서비스의 배치가 시작됩니다.
+* 인스턴스가 성공적으로 배치된 경우에는 [vCenter Server 인스턴스의 기술 스펙](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs)에서 설명된 컴포넌트가 VMware 가상 플랫폼에 설치됩니다. 추가 기능 서비스를 주문한 경우 주문이 완료된 후 서비스의 배치가 시작됩니다.
 * 인스턴스를 사용할 준비가 되면 인스턴스의 상태가 **사용할 준비가 됨**으로 변경되고 이메일로 알림을 받습니다.
 * 보조 인스턴스를 주문하는 경우 보조 인스턴스 주문이 완료된 후 기본 인스턴스(보조 인스턴스로 링크됨)의 VMware vSphere Web Client가 다시 시작될 수 있습니다.
 

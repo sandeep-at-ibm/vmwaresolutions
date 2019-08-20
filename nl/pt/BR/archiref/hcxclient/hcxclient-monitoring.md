@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -61,9 +61,7 @@ Agora é possível usar a IU da web do WAN Opt para monitorar as taxas de rendim
 ### throttling da largura da banda da migração
 {: #hcxclient-monitoring-mig-bandwidth}
 
-Antes de migrar VMs, faça uma avaliação do link de rede usado. Trabalhe com os engenheiros
-de rede da rede que contém a instância de origem do vSphere ou
-revise o uso de tráfego semanalmente e mensalmente. Limite a largura de banda disponível para migrações se esse tráfego
+Antes de migrar VMs, faça uma avaliação do link de rede usado. Trabalhe com os especialistas em rede na rede que contém a instância de origem do vSphere ou revise o uso semanal e mensal do tráfego. Limite a largura de banda disponível para migrações se esse tráfego
 atravessar um link que for crítico para seus negócios,
 especialmente se esse link tiver menos que 1 Gbps. Use o
 lado com a largura de banda mais limitada, que geralmente é o

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-23"
 
 keywords: Veeam console, Veeam backup restore, update Veeam license
 
@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 
 서비스가 인스턴스에 배치된 후 RDP를 통해 Veeam 콘솔에 액세스하여 환경에 있는 모든 가상 머신의 백업 및 복원(관리 컴포넌트의 백업 및 복원 포함)을 관리할 수 있습니다. 또한 Veeam 웹 사이트에서 Veeam 업데이트를 다운로드하고 설치하여 서비스를 업그레이드할 수도 있습니다.
 
-이전 V1.8 이전의 릴리스에 배치된 인스턴스의 경우, Veeam on {{site.data.keyword.cloud}} 서비스를 사용하려면 인스턴스에서 기존 Veeam VSI를 대체해야 합니다. 자세한 정보는 [V1.8 이전 인스턴스의 Veeam VSI를 Veeam on IBM Cloud로 대체](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam#managingveeam-replace-vsi)를 참조하십시오.
+이전 V1.8 이전의 릴리스에 배치된 인스턴스의 경우, Veeam on {{site.data.keyword.cloud}} 서비스를 사용하려면 인스턴스에서 기존 Veeam VSI를 대체해야 합니다. 자세한 정보는 [V1.8 이전 인스턴스의 Veeam VSI를 Veeam on {{site.data.keyword.cloud_notm}}로 대체](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam#managingveeam-replace-vsi)를 참조하십시오.
 
 ## RDP를 사용하여 Veeam 콘솔에 액세스
 {: #managingveeam-accessing}

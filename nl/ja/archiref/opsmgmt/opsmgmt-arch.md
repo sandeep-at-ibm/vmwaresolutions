@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-03"
+lastupdated: "2019-08-05"
 
 ---
 
@@ -168,8 +168,3 @@ vRLI は、その健全性に関する通知をトリガーするアラートを
 |vRealize Operations Management Pack for Site Recovery Manager|8.1.1|
 |VMware vRealize Log Insight|4.7|
 |vRealize Log Insight Content Pack for NSX for vSphere|3.8|
-
-## 関連リンク
-{: #opsmgmt-arch-components-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

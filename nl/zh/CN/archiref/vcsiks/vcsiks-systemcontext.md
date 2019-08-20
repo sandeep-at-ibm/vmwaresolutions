@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -59,8 +59,3 @@ Chef|负责配置管理和合规性自动化。Chef 在 Terraform 完成初始�
 Watson|对于此参考体系结构和 Acme Skateboards，Watson 表示“概念车”体系结构中使用的 AI 服务。
 
 应用程序迁移、联网和安全性通常是应用程序现代化中最难对付的方面。VMware vCenter Server on {{site.data.keyword.cloud_notm}}、VMware Hybridity、VMware NSX、{{site.data.keyword.cloud_notm}} Private 和 {{site.data.keyword.containerlong_notm}} 能应对这些困难，并支持您构建弹性、安全和稳健的现代应用程序。
-
-## 相关链接
-{: #vcsiks-systemcontext-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

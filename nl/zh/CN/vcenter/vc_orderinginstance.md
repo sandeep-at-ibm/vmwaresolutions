@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-06"
 
 keywords: vCenter Server order instance, order vCenter Server, order vCenter Server instance
 
@@ -35,9 +35,9 @@ subcollection: vmware-solutions
 |:------------|:------------ |
 |域名| `<root_domain>` |  
 |vCenter Server 登录用户名|`<user_id>@<root_domain>`（Microsoft Active Directory 用户）或 `administrator@vsphere.local`|
-|vCenter Server（具有嵌入式 PSC）FQDN|`vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`。最大长度为 50 个字符。|
+|vCenter Server（具有嵌入式 PSC）FQDN|`<instance_name>-vc.<root_domain>`。最大长度为 50 个字符。|
 |Single Sign-On (SSO) 站点名称| `<subdomain_label>` |
-|标准 ESXi 服务器名称| `<host_prefix><n>.<subdomain_label>.<root_domain>`，其中 `<n>` 是 ESXi 服务器的序列。最大长度为 50 个字符。|
+|标准 ESXi 服务器名称|`<data_center>-<host_prefix><n>.<subdomain_label>.<root_domain>`，其中 `n` 是 ESXi 服务器的序列。最大长度为 50 个字符。|
 {: caption="表 1. 实例和域名的值格式" caption-side="top"}
 
 不要修改在实例订购或部署期间设置的任何值。这样做可能会使您的实例不可用。例如，如果公用网络关闭，如果服务器和虚拟服务器实例 (VSI) 在供应期间移至 Vyatta 后，或者如果 IBM CloudBuilder VSI 停止或被删除。
@@ -52,17 +52,28 @@ subcollection: vmware-solutions
 {: #vc_orderinginstance-inst-name}
 
 实例名称必须满足以下需求：
-* 只允许使用字母数字字符和短划线 (-) 字符。
-* 实例名称必须以字母字符开头并以字母数字字符结尾。
+* 只允许使用小写字母、数字和短划线 (-) 字符。
+* 实例名称必须以小写字母字符开头。
+* 实例名称必须以小写字母或数字字符结尾。
 * 实例名称的最大长度为 10 个字符。
 * 实例名称在您的帐户中必须唯一。
 
-### VMware vSphere 许可证
+### 初始集群名称
+{: #vc_orderinginstance-cluster-name}
+
+初始集群名称必须满足以下需求：
+* 只允许使用小写字母、数字和短划线 (-) 字符。
+* 集群名称必须以小写字母字符开头。
+* 集群名称必须以小写字母或数字字符结尾。
+* 集群名称的最大长度为 30 个字符。
+* 集群名称在 vCenter Server 实例中必须唯一。
+
+### VMware vSphere 版本
 {: #vc_orderinginstance-vsphere-license}
 
-选择是订购 vSphere Enterprise Plus 6.7u1 还是订购 vSphere Enterprise Plus 6.5u2。
+选择是订购 vSphere Enterprise Plus 6.7u2 还是订购 vSphere Enterprise Plus 6.5u2。
 
-vSphere Enterprise Plus 6.7u1 仅可用于 Broadwell 和 Skylake {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}。
+vSphere Enterprise Plus 6.7u2 仅可用于 Skylake、Cascade 和 Broadwell {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}。
 {:note}
 
 ### 主实例或辅助实例
@@ -77,6 +88,9 @@ vSphere Enterprise Plus 6.7u1 仅可用于 Broadwell 和 Skylake {{site.data.key
 * vCenter Server 6.5
 * vSphere Enterprise Plus 6.5 或 6.7
 * NSX Service Providers 6.4（Base Edition、Advanced Edition 或 Enterprise Edition）
+
+VMware HCX on {{site.data.keyword.cloud_notm}} 服务需要 NSX Advanced Edition 或 NSX Enterprise Edition 许可证。
+{:note}
 
 对于业务合作伙伴用户，会包含 vCenter Server 许可证 (Standard Edition)、vSphere 许可证 (Enterprise Plus Edition) 和 NSX 许可证，这些许可证以您的名义购买。但是，您必须指定 NSX 许可证的版本。
 
@@ -114,6 +128,22 @@ vSphere Enterprise Plus 6.7u1 仅可用于 Broadwell 和 Skylake {{site.data.key
 |双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
 {: caption="表 2. Skylake {{site.data.keyword.baremetal_short}} 的选项" caption-side="top"}
 
+### Cascade
+{: #vc_orderinginstance-cascade}
+
+对于 **Cascade** 设置，您有各种 **CPU 型号**和 **RAM** 选项。
+
+Cascade {{site.data.keyword.baremetal_short}} 仅可用于 VMware vSphere Enterprise Plus 6.7 U2 实例。
+{:note}
+
+| CPU 模型选项   |RAM 选项|
+|:------------- |:------------- |
+|双 Intel Xeon Gold 4210 处理器 / 共 20 个核心，2.3 GHz|64 GB、96 GB、128 GB、192 GB、768 GB、1.5 TB|
+|双 Intel Xeon Gold 5218 处理器 / 共 32 个核心，2.3 GHz|64 GB、96 GB、128 GB、192 GB、768 GB、1.5 TB|
+|双 Intel Xeon Gold 6248 处理器 / 共 40 个核心，2.5 GHz|64 GB、96 GB、128 GB、192 GB、768 GB、1.5 TB|
+{: caption="表 3. Cascade {{site.data.keyword.baremetal_short}} 的选项" caption-side="top"}
+
+
 ### SAP 认证
 {: #vc_orderinginstance-sap}
 
@@ -137,7 +167,7 @@ vSphere Enterprise Plus 6.7u1 仅可用于 Broadwell 和 Skylake {{site.data.key
 |:------------- |:------------- |
 |四核 Intel Xeon E7-4820 V4 / 共 40 个核心，2.0 GHz|128 GB、256 GB、512 GB、1 TB、2 TB、3 TB|
 |四核 Intel Xeon E7-4850 V4 / 共 64 个核心，2.1 GHz|128 GB、256 GB、512 GB、1 TB、2 TB、3 TB|
-{: caption="表 3. Broadwell {{site.data.keyword.baremetal_short}} 的选项" caption-side="top"}
+{: caption="表 4. Broadwell {{site.data.keyword.baremetal_short}} 的选项" caption-side="top"}
 
 ### 裸机服务器的数量
 {: #vc_orderinginstance-bare-metal-number}
@@ -157,13 +187,13 @@ vSphere Enterprise Plus 6.7u1 仅可用于 Broadwell 和 Skylake {{site.data.key
 ### vSAN 存储器
 {: #vc_orderinginstance-vsan-storage}
 
-vSAN 仅可用于 **Skylake** 和 **Broadwell** 裸机配置。请指定以下 vSAN 选项：
+vSAN 仅可用于 **Skylake**、**Cascade** 和 **Broadwell** 裸机配置。请指定以下 vSAN 选项：
 * **vSAN 容量磁盘的磁盘类型和大小**：选择与所需容量磁盘相应的选项。
 * **vSAN 容量磁盘数**：指定要添加的容量磁盘数。
 * 如果要添加的容量超过 10 个磁盘的限制，请选中**高性能（使用 Intel Optane）**框。此选项用于提供两个额外的容量磁盘托架，总共可容纳 12 个容量磁盘；此选项对于需要更短等待时间和更高 IOPS 吞吐量的工作负载而言非常有用。
 
-  **高性能（使用 Intel Optane）**选项仅可用于 Skylake CPU 型号。
-{:note}
+  **高性能（采用 Intel Optane）** 选项仅可用于 Skylake 和 Cascade CPU 型号。
+  {:note}
 
 * 查看 **vSAN 高速缓存磁盘的磁盘类型**和 **vSAN 高速缓存磁盘数**值。这些值依赖于是否选中了**高性能（使用 Intel Optane）**框。
 * **vSAN 许可证**：通过选择**购买时包含**对 vSAN 组件使用 IBM 提供的 VMware 许可证，或者通过选择**我将提供**并输入您自己的许可证密钥以自带许可证 (BYOL)。
@@ -190,7 +220,7 @@ vSAN 仅可用于 **Skylake** 和 **Broadwell** 裸机配置。请指定以下 v
 |2 IOPS/GB|此选项旨在用于大多数通用工作负载。示例应用包括：托管小型数据库、备份 Web 应用程序或系统管理程序的虚拟机磁盘映像。|
 |4 IOPS/GB|此选项旨在用于同时活动数据百分比高的更高强度工作负载。示例应用包括：事务性数据库。|
 |10 IOPS/GB|此选项旨在用于要求最苛刻的工作负载类型（如分析）。示例应用包括：高事务数据库和其他性能敏感型数据库。此性能级别限制为每个文件共享的最大容量为 4 TB。|
-{: caption="表 4. NFS 性能级别选项" caption-side="top"}
+{: caption="表 5. NFS 性能级别选项" caption-side="top"}
 
 ### 本地磁盘
 {: #vc_orderinginstance-local-disks}
@@ -209,27 +239,30 @@ vSAN 仅可用于 **Skylake** 和 **Broadwell** 裸机配置。请指定以下 v
 {: #vc_orderinginstance-host-name-prefix}
 
 主机名前缀必须满足以下需求：
-*  只允许使用字母数字字符和短划线 (-) 字符。
-*  主机名前缀必须以字母数字字符开头和结尾。
-*  主机名前缀的最大长度为 10 个字符。
+* 只允许使用小写字母、数字和短划线 (-) 字符。
+* 主机名前缀必须以小写字母字符开头。
+* 主机名前缀必须以小写字母或数字字符结尾。
+* 主机名前缀的最大长度为 10 个字符。
 
 ### 子域标签
 {: #vc_orderinginstance-subdomain-label}
 
 子域标签必须满足以下需求：
-*  只允许使用字母数字字符和短划线 (-) 字符。
-*  子域标签必须以字母字符开头并以字母数字字符结尾。
-*  子域标签的最大长度为 10 个字符。
-*  子域标签在多站点配置中的所有实例中必须唯一。
+* 只允许使用小写字母、数字和短划线 (-) 字符。
+* 子域标签必须以小写字母字符开头。
+* 子域标签必须以小写字母或数字字符结尾。
+* 子域标签的最大长度为 10 个字符。
+* 子域标签在多站点配置中的所有实例中必须唯一。
 
 ### 域名
 {: #vc_orderinginstance-domain-name}
 
 根域名必须满足以下需求：
 * 域名必须包含两个或更多用句点 (.) 分隔的字符串。
-* 第一个字符串必须以字母字符开头并以字母数字字符结尾。
-* 除了最后一个字符串外，其他所有字符串都只能包含字母数字和短划线 (-) 字符。
-* 最后一个字符串只能包含字母字符。
+* 第一个字符串必须以小写字母字符开头。
+* 第一个字符串必须以小写字母或数字字符结尾。
+* 除了最后一个字符串外，其他所有字符串都只能包含小写字母、数字和短划线 (-) 字符。
+* 最后一个字符串只能包含小写字母字符。
 * 最后一个字符串的长度必须在 2 到 24 个字符范围内。
 
 主机和 VM 的标准域名 (FQDN) 的最大长度为 50 个字符。域名必须符合此最大长度。
@@ -296,6 +329,9 @@ vSAN 仅可用于 **Skylake** 和 **Broadwell** 裸机配置。请指定以下 v
 
 订购 vCenter Server 实例时，还可以订购附加组件服务。有关服务的更多信息，请参阅 [vCenter Server 实例的可用服务](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices#available-services-for-vcenter-server-instances)。
 
+订购 VMware HCX on {{site.data.keyword.cloud_notm}} 服务时，需要承诺使用 12 个月。
+{:note}
+
 ## 订单摘要
 {: #vc_orderinginstance-order-summary}
 
@@ -309,8 +345,8 @@ vSAN 仅可用于 **Skylake** 和 **Broadwell** 裸机配置。请指定以下 v
 1. 在 {{site.data.keyword.cloud_notm}}“目录”中，单击左侧导航窗格中的 **VMware** 图标，然后单击 **VMware 虚拟数据中心**部分中的 **VMware vCenter Server on IBM Cloud** 卡。
 2. 在 **VMware vCenter Server on IBM Cloud** 页面上，单击 **vCenter Server** 卡，然后单击**创建**。
 3. 在 **vCenter Server** 页面上，输入实例名称。
-5. 选择 vSphere 版本。
-4. 选择实例类型：
+4. 选择 vSphere 版本。
+5. 选择实例类型：
    * 单击**主实例**以在环境中部署单个实例，或者在多站点拓扑中部署第一个实例。
    * 单击**辅助实例**以将该实例与环境中的现有（主）实例连接以获取高可用性，并完成以下步骤：
      1. 选择要与辅助实例连接的主实例。
@@ -323,7 +359,7 @@ vSAN 仅可用于 **Skylake** 和 **Broadwell** 裸机配置。请指定以下 v
 7. 完成裸机服务器设置。
     1. 选择要托管实例的 {{site.data.keyword.CloudDataCent_notm}}。
     2. 选择裸机服务器配置。
-       * 选择 **Skylake** 或 **Broadwell** 时，请指定 CPU 型号和 RAM 大小。
+       * 选择 **Skylake**、**Cascade** 或 **Broadwell** 时，请指定 CPU 型号和 RAM 大小。
        * 选择的是 **SAP 认证**时，请选择其中一个预设配置。
     3. 指定 {{site.data.keyword.baremetal_short}} 数。如果计划使用 vSAN 存储器，那么需要至少 4 个 {{site.data.keyword.baremetal_short}}。  
 8. 填写存储配置。
@@ -351,7 +387,7 @@ vSAN 仅可用于 **Skylake** 和 **Broadwell** 裸机配置。请指定以下 v
 {: #vc_orderinginstance-results}
 
 * 实例部署会自动启动，并且您将收到确认，指示正在处理订单。通过查看实例详细信息的**部署历史记录**部分，可以检查部署状态，包括可能需要注意的任何问题。
-* 成功部署实例后，[vCenter Server 实例的技术规范](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs)中描述的组件已安装在 VMware 虚拟平台上。缺省情况下，订购的 ESXi 服务器将分组为 **cluster1**。如果订购了附加组件服务，那么这些服务的部署将在订单完成后启动。
+* 成功部署实例后，[vCenter Server 实例的技术规范](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs)中描述的组件已安装在 VMware 虚拟平台上。如果订购了附加组件服务，那么这些服务的部署将在订单完成后启动。
 * 实例准备就绪可供使用后，该实例的状态会更改为**可供使用**，并且您将收到通过电子邮件发送的通知。
 * 订购辅助实例时，在完成辅助实例订单后，可能会重新启动主实例（链接到辅助实例）的 VMware vSphere Web Client。
 

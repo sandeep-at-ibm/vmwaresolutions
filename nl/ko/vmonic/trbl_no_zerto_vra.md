@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-08-01"
 
 keywords: troubleshooting, Zerto Virtual Replication, Zerto ESXi server
 
@@ -24,7 +24,7 @@ ESXi 서버를 Zerto 재해 복구가 설치된 VMware vCenter Server 인스턴�
 ## 해결
 {: #trbl_no_zerto_vra-resolution}
 
-vCenter Server 인스턴스의 경우, Zerto 재해 복구 서비스가 기본 클러스터인 **cluster1**의 ESXi 서버에만 설치됩니다. 동일한 vCenter Server 환경의 추가 클러스터에는 추가 클러스터가 작성되거나 ESXi 서버가 추가 클러스터에 추가되는 경우 Zerto 재해 복구가 자동으로 설치되지 않습니다.
+Zerto 재해 복구 서비스는 기본 클러스터(V3.1 이하에서 배치된 인스턴스의 경우 **cluster1**)의 ESXi 서버에만 설치됩니다. 동일한 vCenter Server 환경의 추가 클러스터에는 추가 클러스터가 작성되거나 ESXi 서버가 추가 클러스터에 추가되는 경우 Zerto 재해 복구가 자동으로 설치되지 않습니다.
 
 추가 클러스터에서 개별적으로 Zerto 재해 복구를 설치해야 합니다.
 

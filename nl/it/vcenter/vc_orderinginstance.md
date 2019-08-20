@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-06"
 
 keywords: vCenter Server order instance, order vCenter Server, order vCenter Server instance
 
@@ -35,9 +35,9 @@ Assicurati di aver completato le seguenti attività:
 |:------------|:------------ |
 | Nome dominio | `<root_domain>` |  
 | Nome utente di accesso vCenter Server | `<user_id>@<root_domain>` (Microsoft Active Directory user) o `administrator@vsphere.local` |
-| Dome di dominio completo vCenter Server (con PSC integrato) | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. La lunghezza massima è di 50 caratteri. |
+| Dome di dominio completo vCenter Server (con PSC integrato) | `<instance_name>-vc.<root_domain>`. La lunghezza massima è di 50 caratteri. |
 | Nome del sito SSO (Single Sign-On) | `<subdomain_label>` |
-| Nome completo server ESXi | `<host_prefix><n>.<subdomain_label>.<root_domain>`, dove `<n>` è la sequenza del server ESXi. La lunghezza massima è di 50 caratteri. |
+| Nome completo server ESXi | `<data_center>-<host_prefix><n>.<subdomain_label>.<root_domain>`, dove `n` è la sequenza del server ESXi. La lunghezza massima è di 50 caratteri. |
 {: caption="Tabella 1. Formato del valore per i nomi di istanza e di dominio" caption-side="top"}
 
 Non modificare alcun valore impostato durante l'ordine o la distribuzione dell'istanza. La modifica può rendere inutilizzabile la tua istanza. Ad esempio, se la rete pubblica si interrompe, se i server e le VSI (Virtual Server Instance) vanno dietro una fornitura media di Vyatta o se la VSI di IBM CloudBuilder si arresta o viene eliminata.
@@ -52,17 +52,28 @@ Quando ordini un'istanza vCenter Server, devi specificare le seguenti impostazio
 {: #vc_orderinginstance-inst-name}
 
 Il nome dell'istanza deve rispettare i seguenti requisiti:
-* Sono consentiti solo caratteri alfanumerici e trattini (-).
-* Il nome dell'istanza deve iniziare con un carattere alfabetico e terminare con un carattere alfanumerico.
+* Sono consentiti solo caratteri alfabetici minuscoli, numerici e trattini (-).
+* Il nome dell'istanza deve iniziare con un carattere alfabetico minuscolo.
+* Il nome dell'istanza deve terminare con un carattere alfabetico minuscolo o un carattere numerico.
 * La lunghezza massima del nome dell'istanza è di 10 caratteri.
 * Il nome dell'istanza deve essere univoco all'interno del tuo account.
 
-### Licenze VMware vSphere
+### Nome del cluster iniziale
+{: #vc_orderinginstance-cluster-name}
+
+Il nome del cluster iniziale deve rispettare i seguenti requisiti:
+* Sono consentiti solo caratteri alfabetici minuscoli, numerici e trattini (-).
+* Il nome del cluster deve iniziare con un carattere alfabetico minuscolo.
+* Il nome del cluster deve terminare con un carattere alfabetico minuscolo o un carattere numerico.
+* La lunghezza massima del nome del cluster è di 30 caratteri.
+* Il nome del cluster deve essere univoco all'interno dell'istanza vCenter Server.
+
+### Versione VMware vSphere
 {: #vc_orderinginstance-vsphere-license}
 
-Seleziona se ordinare vSphere Enterprise Plus 6.7u1 o vSphere Enterprise Plus 6.5u2.
+Seleziona se ordinare vSphere Enterprise Plus 6.7u2 o vSphere Enterprise Plus 6.5u2.
 
-vSphere Enterprise Plus 6.7u1 è disponibile solo per {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} Broadwell e Skylake.
+vSphere Enterprise Plus 6.7u2 è disponibile solo per Skylake, Cascade e Broadwell {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}.
 {:note}
 
 ### Primaria o secondaria
@@ -77,6 +88,9 @@ Specifica le opzioni di licenza per i seguenti componenti VMware nell'istanza:
 * vCenter Server 6.5
 * vSphere Enterprise Plus 6.5 o 6.7
 * NSX Service Providers 6.4 (Edizione Base, Advanced o Enterprise)
+
+Il servizio VMware HCX on {{site.data.keyword.cloud_notm}} richiede la licenza NSX Advanced o NSX Enterprise Edition.
+{:note}
 
 Per gli utenti Business Partner, la licenza vCenter Server (Standard edition), la licenza vSphere (Enterprise Plus edition) e la licenza NSX sono incluse e acquistate per tuo conto. Tuttavia, devi specificare l'edizione per la licenza NSX.
 
@@ -113,6 +127,22 @@ Se selezioni **Skylake**, puoi scegliere la combinazione di CPU e RAM del Bare M
 | Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 {: caption="Tabella 2. Opzioni per Skylake {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
+### Cascade
+{: #vc_orderinginstance-cascade}
+
+Per l'impostazione **Cascade**, hai opzioni per il **Modello CPU** e la **RAM**.
+
+Cascade {{site.data.keyword.baremetal_short}} sono disponibili solo per le istanze di VMware vSphere Enterprise Plus 6.7 U2.
+{:note}
+
+| Opzioni del modello CPU        | Opzioni RAM       |
+|:------------- |:------------- |
+| Processore Dual Intel Xeon Gold 4210 / 20 core totali, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
+| Processore Dual Intel Xeon Gold 5218 / 32 core totali, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
+| Processore Dual Intel Xeon Gold 6248 / 40 core totali, 2,5 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
+{: caption="Tabella 3. Opzioni per Cascade {{site.data.keyword.baremetal_short}}" caption-side="top"}
+
+
 ### Certificato SAP
 {: #vc_orderinginstance-sap}
 
@@ -136,7 +166,7 @@ Se selezioni **Broadwell**, puoi scegliere la combinazione di CPU e RAM del Bare
 |:------------- |:------------- |
 | Quad Intel Xeon E7-4820 v4 / 40 core totali, 2,0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 core totali, 2,1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
-{: caption="Tabella 3. Opzioni per Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
+{: caption="Tabella 4. Opzioni per Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 ### Numero di server Bare Metal
 {: #vc_orderinginstance-bare-metal-number}
@@ -156,12 +186,12 @@ Per le istanze V2.8 e successive, puoi aggiungere delle condivisioni di archivia
 ### Archiviazione vSAN
 {: #vc_orderinginstance-vsan-storage}
 
-vSAN è disponibile solo per la configurazione Bare Metal **Skylake** e **Broadwell**. Specifica le seguenti opzioni vSAN:
+vSAN è disponibile solo per la configurazione Bare Metal **Skylake**, **Cascade** e **Broadwell**. Specifica le seguenti opzioni vSAN:
 * **Tipo e dimensioni del disco per i dischi vSAN**: seleziona un'opzione per i dischi di capacità di cui hai bisogno.
 * **Numero di dischi vSAN**: specifica il numero di dischi di capacità che vuoi aggiungere.
 * Se vuoi aggiungere capacità oltre il limite di 10 dischi, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 12 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS.
 
-  L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i modelli di CPU Skylake.
+  L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i modelli di CPU Skylake e Cascade.
   {:note}
 
 * Riesamina i valori di **Tipo di disco per i dischi cache vSAN** e **Numero di dischi cache vSAN**. Questi valori dipendono dalla selezione della casella **Alte prestazioni con Intel Optane**.
@@ -189,7 +219,7 @@ Scegli le opzioni del livello di prestazioni in base alle tue esigenze.
 | 2 IOPS/GB | Questa opzione è progettata per i carichi di lavoro più generici. Applicazioni di esempio includono: hosting di piccoli database, backup di applicazioni web o immagini disco di macchine virtuali per un hypervisor. |
 | 4 IOPS/GB | Questa opzione è progettata per i carichi di lavoro ad alta intensità che hanno un'alta percentuale di dati attivi alla volta. Applicazioni di esempio includono: database transazionali. |
 | 10 IOPS/GB | Questa opzione è progettata per i tipi di carichi di lavoro più impegnativi, come l'analisi. Applicazioni di esempio includono: database ad alte transazioni e altri database sensibili alle prestazioni. Questo livello di prestazioni è limitato a una capacità massima di 4 TB per condivisione file. |
-{: caption="Tabella 4. Opzioni del livello di prestazioni NFS" caption-side="top"}
+{: caption="Tabella 5. Opzioni del livello di prestazioni NFS" caption-side="top"}
 
 ### Dischi locali
 {: #vc_orderinginstance-local-disks}
@@ -207,27 +237,30 @@ Quando ordini un'istanza vCenter Server, devi specificare le seguenti impostazio
 {: #vc_orderinginstance-host-name-prefix}
 
 Il prefisso del nome host deve rispettare i seguenti requisiti:
-*  Sono consentiti solo caratteri alfanumerici e trattini (-).
-*  Il prefisso del nome host deve iniziare e terminare con un carattere alfanumerico.
-*  La lunghezza massima del prefisso del nome host è di 10 caratteri.
+* Sono consentiti solo caratteri alfabetici minuscoli, numerici e trattini (-).
+* Il prefisso del nome host deve iniziare con un carattere alfabetico minuscolo.
+* Il prefisso del nome host deve terminare con un carattere alfabetico minuscolo o un carattere numerico.
+* La lunghezza massima del prefisso del nome host è di 10 caratteri.
 
 ### Etichetta dominio secondario
 {: #vc_orderinginstance-subdomain-label}
 
 L'etichetta del dominio secondario deve rispettare i seguenti requisiti:
-*  Sono consentiti solo caratteri alfanumerici e trattini (-).
-*  L'etichetta del dominio secondario deve iniziare con un carattere alfabetico e terminare con un carattere alfanumerico.
-*  La lunghezza massima dell'etichetta del dominio secondario è di 10 caratteri.
-*  L'etichetta del dominio secondario deve essere univoca all'interno di tutte le istanze nella tua configurazione multisito.
+* Sono consentiti solo caratteri alfabetici minuscoli, numerici e trattini (-).
+* L'etichetta del dominio secondario deve iniziare con un carattere alfabetico minuscolo.
+* L'etichetta del dominio secondario deve terminare con un carattere alfabetico minuscolo o un carattere numerico.
+* La lunghezza massima dell'etichetta del dominio secondario è di 10 caratteri.
+* L'etichetta del dominio secondario deve essere univoca all'interno di tutte le istanze nella tua configurazione multisito.
 
 ### Nome dominio
 {: #vc_orderinginstance-domain-name}
 
 Il nome del dominio root deve rispettare i seguenti requisiti:
 * Il nome del dominio deve essere composto da due o più stringhe separate da un punto (.)
-* La prima stringa deve iniziare con un carattere alfabetico e terminare con un carattere alfanumerico.
-* Tutte le stringhe, tranne l'ultima, possono contenere solo caratteri alfanumerici e trattini (-).
-* L'ultima stringa può contenere solo caratteri alfabetici.
+* La prima stringa deve iniziare con un carattere alfabetico minuscolo.
+* La prima stringa deve terminare con un carattere alfabetico minuscolo o un carattere numerico.
+* Tutte le stringhe, tranne l'ultima, possono contenere solo caratteri alfabetici minuscoli, numerici e trattini (-).
+* L'ultima stringa può contenere solo caratteri alfabetici minuscoli.
 * La lunghezza dell'ultima stringa deve essere compresa tra 2 e 24 caratteri.
 
 La lunghezza massima del nome di dominio completo (FQDN) per gli host e le VM (Virtual Machine) è di 50 caratteri. I nomi di dominio devono essere adattati a questa lunghezza massima.
@@ -294,6 +327,9 @@ Per ulteriori informazioni su come ordinare le licenze Windows Server 2016, vedi
 
 Quando ordini un'istanza vCenter Server, puoi anche ordinare servizi aggiuntivi. Per ulteriori informazioni sui servizi, vedi [Servizi disponibili per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices#available-services-for-vcenter-server-instances).
 
+È richiesto un impegno a termine di 12 mesi quando ordini il servizio VMware HCX on {{site.data.keyword.cloud_notm}}.
+{:note}
+
 ## Riepilogo ordine
 {: #vc_orderinginstance-order-summary}
 
@@ -307,8 +343,8 @@ Puoi anche aggiungere le risorse di cui è stato eseguito il provisioning allo s
 1. Dal catalogo {{site.data.keyword.cloud_notm}}, fai clic sull'icona **VMware** nel riquadro di navigazione a sinistra e quindi sulla scheda **VMware vCenter Server on IBM Cloud** nella sezione **VMware Virtual Data Centers**.
 2. Nella pagina **VMware vCenter Server on IBM Cloud**, fai clic sulla scheda **vCenter Server** e quindi su **Crea**.
 3. Nella pagina **vCenter Server**, immetti il nome dell'istanza.
-5. Seleziona la versione di vSphere.
-4. Seleziona il tipo di istanza:
+4. Seleziona la versione di vSphere.
+5. Seleziona il tipo di istanza:
    * Fai clic su **Istanza primaria** per distribuire una singola istanza nell'ambiente o per distribuire la prima istanza in una topologia multisito.
    * Fai clic su **Istanza secondaria** per connettere l'istanza a un'istanza esistente (primaria) nell'ambiente per l'alta disponibilità e completa quindi la seguente procedura:
      1. Seleziona l'istanza primaria a cui desideri collegare l'istanza secondaria.
@@ -321,7 +357,7 @@ Puoi anche aggiungere le risorse di cui è stato eseguito il provisioning allo s
 7. Completa le impostazioni di Bare Metal Server.
     1. Seleziona il {{site.data.keyword.CloudDataCent_notm}} in cui ospitare l'istanza.
     2. Seleziona la configurazione di Bare Metal Server.
-       * Se selezioni **Skylake** o **Broadwell**, specifica il modello di CPU e la dimensione della RAM.
+       * Se selezioni **Skylake**, **Cascade** o **Broadwell**, specifica il modello di CPU e la dimensione della RAM.
        * Quando selezioni **Certificato SAP**, scegli una delle configurazioni preimpostate.
     3. Specifica il numero di {{site.data.keyword.baremetal_short}}. Se intendi utilizzare l'archiviazione vSAN, sono richiesti almeno quattro {{site.data.keyword.baremetal_short}}.  
 8. Completa la configurazione di archiviazione.
@@ -350,7 +386,7 @@ Per ulteriori informazioni su come fornire le impostazioni per un servizio, vedi
 {: #vc_orderinginstance-results}
 
 * La distribuzione dell'istanza inizia automaticamente e ricevi una conferma che ti indica che l'ordine è in fase di elaborazione. Puoi verificare lo stato della distribuzione, inclusi gli eventuali problemi che potrebbero richiedere la tua attenzione, visualizzando la sezione **Cronologia distribuzione** dei dettagli dell'istanza.
-* Una volta che l'istanza è stata distribuita correttamente, i componenti descritti in [Specifiche tecniche per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs) vengono installati sulla tua piattaforma virtuale VMware. I server ESXi che hai ordinato vengono raggruppati come **cluster1** per impostazione predefinita. Se hai ordinato servizi aggiuntivi, la distribuzione dei servizi inizia dopo che il tuo ordine è stato completato.
+* Una volta che l'istanza è stata distribuita correttamente, i componenti descritti in [Specifiche tecniche per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs) vengono installati sulla tua piattaforma virtuale VMware. Se hai ordinato servizi aggiuntivi, la distribuzione dei servizi inizia dopo che il tuo ordine è stato completato.
 * Quando l'istanza è pronta per l'uso, lo stato dell'istanza viene modificato in **Pronto per l'utilizzo** e riceverai una notifica via e-mail.
 * Se ordini un'istanza secondaria, il client web VMware vSphere per l'istanza primaria (collegata a quella secondaria) potrebbe essere riavviato una volta completato l'ordine della tua istanza secondaria.
 

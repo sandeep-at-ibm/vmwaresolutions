@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-06"
 
 keywords: vCenter Server BOM, bill of materials vCenter Server, BOM
 
@@ -42,13 +42,13 @@ A tabela a seguir detalha as informações da BOM para componentes de software d
 
 | Fabricante  | Componente                      | Versão    |
 |:------------- |:------------------------------ |:------------- |
-| VMware       | vSphere ESXi                    | 6.7 Atualização 1 (construção 6.7.0-13004448) ou <br/>6.5 Atualização 2 (construção 6.5.0-13635690) |
+| VMware       | vSphere ESXi                    | 6.7 EP 10 (construção 6.7.0-13981272) ou <br/>6.5 Atualização 2 (construção 6.5.0-13635690) |
 | VMware       | vSphere 6.7                     | Distributed vSwitch 6.6.0 |
 | VMware       | vSphere 6.5                     | Distributed vSwitch 6.5.0 |
-| VMware       | vCenter Server Appliance        | 6.7 Atualização 1b (construção 6.7.0-11727113) ou <br/>6.5 Atualização 2g (construção 6.5.0-13638625) |
-| VMware       | Platform Services Controller    | 6.7 Atualização 1b (construção 6.7.0-11727113) ou <br/>6,5 Atualização 2d (construção 6.5.0-10964411) |
+| VMware       | vCenter Server Appliance        | 6.7 Atualização 2b (6.7.0-13843469) ou <br/>6.5 Atualização 2g (construção 6.5.0-13638625) |
+| VMware       | Platform Services Controller    | 6.7 Atualização 2b (6.7.0-13843469) ou <br/>6.5 Atualização 2g (construção 6.5.0-13638625) |
 | VMware       | vSAN                            | 6.7 Atualização 1 ou <br/>6.6.1       |
-| VMware       | NSX for vSphere                 | 6.4.4 (construção 11197766)    |
+| VMware       | NSX for vSphere                 | 6.4.5 (construção 13282012)    |
 | VMware       | NSX-T for vSphere               | 2.4                       |
 | Microsoft    | Windows Server Standard Edition | 2016       |
 {: caption="Tabela 2. BOM para os componentes de software em instâncias do vCenter Server" caption-side="top"}
@@ -139,6 +139,17 @@ Para atualizar a configuração de MTU para o comutador público, conclua as seg
    Quando o tamanho de MTU em um vDS é mudado, os uplinks anexos (NICs físicos) são desativados e ativados novamente. Como resultado, uma breve interrupção ocorre para as MVs que estão usando o uplink. Portanto, é
 recomendável planejar a atualização de configuração do MTU durante o tempo de inatividade planejado.
    {:note}
+
+## Configurações do modo Enhanced VMware vMotion Compatibility (EVC)
+{: #vc_bom-evc-mode-settings}
+
+Revise a tabela a seguir para obter uma visão geral das configurações do modo EVC para instâncias do vCenter Server e as diferenças entre as versões do vSphere.
+
+| Modelo de CPU do Bare Metal Server | vSphere 6.5  | vSphere 6.7 |
+|:------------- |:------------- |:------------- |
+| Broadwell | O EVC é configurado como a geração Intel **Broadwell** | O EVC é configurado como a geração Intel **Broadwell** |
+| Skylake | Não configurado | O EVC é configurado como a geração Intel **Skylake**|
+{: caption="Tabela 6. Configurações do modo EVC para instâncias e clusters do vCenter Server" caption-side="top"}
 
 ## Links relacionados
 {: #vc_bom-related}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-06"
 
 keywords: vCenter Server BOM, bill of materials vCenter Server, BOM
 
@@ -42,13 +42,13 @@ subcollection: vmware-solutions
 
 | 製造元  | コンポーネント                      | バージョン    |
 |:------------- |:------------------------------ |:------------- |
-| VMware       | vSphere ESXi                    | 6.7 Update 1 (ビルド 6.7.0-13004448) または <br/>6.5 Update 2 (ビルド 6.5.0-13635690) |
+| VMware       | vSphere ESXi                    | 6.7 EP 10 (ビルド 6.7.0-13981272) または <br/>6.5 Update 2 (ビルド 6.5.0-13635690) |
 | VMware       | vSphere 6.7                     | Distributed vSwitch 6.6.0 |
 | VMware       | vSphere 6.5                     | Distributed vSwitch 6.5.0 |
-| VMware       | vCenter Server Appliance        | 6.7 Update 1b (ビルド 6.7.0-11727113) または <br/>6.5 Update 2g (ビルド 6.5.0-13638625) |
-| VMware       | Platform Services Controller    | 6.7 Update 1b (ビルド 6.7.0-11727113) または <br/>6.5 Update 2d (ビルド 6.5.0-10964411) |
+| VMware       | vCenter Server Appliance        | 6.7 Update 2b (6.7.0-13843469) または <br/>6.5 Update 2g (ビルド 6.5.0-13638625) |
+| VMware       | Platform Services Controller    | 6.7 Update 2b (6.7.0-13843469) または <br/>6.5 Update 2g (ビルド 6.5.0-13638625) |
 | VMware       | vSAN                            | 6.7 Update 1 または <br/>6.6.1       |
-| VMware       | NSX for vSphere                 | 6.4.4 (ビルド 11197766)    |
+| VMware       | NSX for vSphere                 | 6.4.5 (ビルド 13282012)    |
 | VMware       | NSX-T for vSphere               | 2.4                       |
 | Microsoft    | Windows Server Standard Edition | 2016       |
 {: caption="表 2. vCenter Server インスタンス内のソフトウェア・コンポーネントの BOM" caption-side="top"}
@@ -137,6 +137,17 @@ V2.0 以前でデプロイされたインスタンスの場合は、パブリッ
 
    vDS の MTU サイズを変更すると、接続アップリンク (物理 NIC) が停止した後で再開されます。 結果として、アップリンクを使用している VM に短時間の停止が発生します。 そのため、スケジュールされたダウン時間中に MTU 設定更新を計画することをお勧めします。
    {:note}
+
+## Enhanced VMware vMotion Compatibility (EVC) のモード設定
+{: #vc_bom-evc-mode-settings}
+
+次の表で、vCenter Server インスタンス用の EVC モード設定の概要、および vSphere バージョン間の相違点を確認してください。
+
+| ベアメタル・サーバーの CPU モデル | vSphere 6.5  | vSphere 6.7 |
+|:------------- |:------------- |:------------- |
+| Broadwell | EVC は Intel **Broadwell** Generation に設定 | EVC は Intel **Broadwell** Generation に設定 |
+| Skylake | 未設定 | EVC は Intel **Skylake** Generation に設定 |
+{: caption="表 6. vCenter Server インスタンスおよびクラスター用の EVC モード設定" caption-side="top"}
 
 ## 関連リンク
 {: #vc_bom-related}

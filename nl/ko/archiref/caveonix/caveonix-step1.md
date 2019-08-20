@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -45,8 +45,3 @@ Caveonix RiskForesight 배치 모델은 다음과 같이 세 가지가 있습니
   -	자산 수가 증가함에 따라 스케일 확장에 사용되는 추가 데이터 노드.
 
 모든 컴포넌트에는 FQDN이 있어야 하며 VM 배치 전에 DNS에 등록되어야 합니다. 이 단계는 초기 "일체형" 배치를 수행하는 경우 IBM Cloud for VMware Solutions 자동화를 통해 수행되지만 배치 스케일링은 사용자가 수행해야 합니다.
-
-## 관련 링크
-{: #caveonix-step1-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

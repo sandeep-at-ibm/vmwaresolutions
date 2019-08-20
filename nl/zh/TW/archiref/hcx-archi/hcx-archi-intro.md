@@ -21,7 +21,7 @@ VMware HCX on IBM Cloud 服務會將此混合帶到下一步：藉由啟用建�
 
 部署為 IBM Cloud VMware 目標站台中虛擬機器的 VMware HCX on IBM Cloud 元件，能夠建立與安裝在對等節點內部部署來源站台之 VMware HCX on IBM Cloud 元件的連線。
 
-![VMware vCenter Server – Hybrid Cloud Services](../../images/cloudfoundation_hybrid_cloud_services.svg "VMware vCenter Server – Hybrid Cloud Services")
+![VMware vCenter Server – Hybrid Cloud Services](../../images/cloudfoundation_hybrid_cloud_services.svg "VMware vCenter Server – Hybrid Cloud Services"){: caption="圖 1. VMware vCenter Server – Hybrid Cloud Services" caption-side="bottom"}
 
 
 此連線會在內部部署與 IBM Cloud 之間建立鬆散耦合的交互連線，並且啟用下列這類功能：
@@ -29,7 +29,7 @@ VMware HCX on IBM Cloud 服務會將此混合帶到下一步：藉由啟用建�
 * 第 2 層延伸 - 內部部署網路延伸至雲端。這些網路包括內部部署子網路及 IP 定址。
 * 加密 - 在兩端之間安全地加密網路資料流量。
 * 最佳化網路 - 選取最佳連線，並有效率地溢滿連線，讓網路資料流量儘可能地快速移動。
-* 刪除重複資料 - 可讓網路資料流量減少達 50%
+* 刪除重複資料 - 可讓網路資料流量減少達 50%。
 * 智慧型遞送 - 當工作負載移動時，鄰近遞送可以變更網路路徑（即閘道），讓網路資料流量使用目標站台閘道，而不會「回流」到起始站台。
 * 運作零中斷移轉 - 可以使用 vMotion 將執行中系統移至雲端或從雲端移回。
 * 排定的移轉 - 可以將任意數目的虛擬機器抄寫至目的地站台，然後在該站台上依指定時間啟動，以取代在起始站台上執行的系統。

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-29"
 
 keywords: IBM Cloud Private, ICP, tech specs ICP
 
@@ -30,7 +30,6 @@ Ce service est disponible pour les instances suivantes :
 La version d'IBM Cloud Private en cours qui est installée est la version 3.1.2. {{site.data.keyword.cloud_notm}} Automation Manager est également déployé dans le cadre de la commande du service {{site.data.keyword.cloud}} Private Hosted.
 {:note}
 
-
 ## Spécifications techniques pour IBM Cloud Private Hosted
 {: #icp_overview-specs}
 
@@ -45,7 +44,7 @@ Le tableau ci-après répertorie les exigences minimales requises pour commander
 ### Besoins en ressources d'IBM Cloud Private Hosted
 {: #icp_overview-resource-req}
 
-Le tableau ci-après répertorie les besoins en ressources du service {{site.data.keyword.cloud_notm}} Private Hosted dans l'environnement Prêt pour la production. 
+Le tableau ci-après répertorie les besoins en ressources du service {{site.data.keyword.cloud_notm}} Private Hosted dans l'environnement Prêt pour la production.
 
 | Type de noeud  | Coeurs d'UC   |  Mémoire (Go) | Disque 1 (Go) | Disque 2 (Go) | Nombre de machines virtuelles |
 |:---------- |:----------- |:------------ |:----------- |:----------- |:------------- |
@@ -61,7 +60,7 @@ Le tableau ci-après répertorie les besoins en ressources du service {{site.dat
 | Contraintes documentées | 52 | 640 |  | 8 000 |   |
 {: caption="Tableau 2. Environnement Prêt pour la production" caption-side="top"}
 
-Le tableau ci-après répertorie les besoins en ressources du service {{site.data.keyword.cloud_notm}} Private Hosted dans les environnements Développement et Test. 
+Le tableau ci-après répertorie les besoins en ressources du service {{site.data.keyword.cloud_notm}} Private Hosted dans les environnements Développement et Test.
 
 | Type de noeud  | Coeurs d'UC   |  Mémoire (Go) | Disque 1 (Go) | Disque 2 (Go) | Nombre de machines virtuelles |
 |:---------- |:----------- |:------------ |:----------- |:----------- |:------------- |

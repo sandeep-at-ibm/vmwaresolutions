@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-02"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -35,8 +35,3 @@ Hybridity Bundle erstellt eine flexible gegenseitige Verbindung zwischen dem lok
 * Migration von Sicherheitsrichtlinien - Wenn NSX lokal verwendet wird, werden alle Sicherheitsrichtlinien, Firewalls und anderen Sicherheitseinrichtungen zusammen mit der Workload verlagert.
 
 Todd kann Stock Trader aus der lokalen VMware-Umgebung in die {{site.data.keyword.cloud_notm}}-Umgebung migrieren und hierbei die Anforderungen nach minimaler (bis hin zu keiner) Ausfallzeit und einer nicht erforderlichen Anwendungsrekonfiguration erfüllen.
-
-## Zugehörige Links
-{: #vcscontent-hcx-related}
-
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

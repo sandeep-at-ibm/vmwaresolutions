@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-20"
+lastupdated: "2019-08-06"
 
 keywords: planning vSphere, data center, vSphere data centers
 
@@ -34,6 +34,9 @@ Le compte {{site.data.keyword.cloud_notm}} que vous utilisez doit répondre à c
 {: #vs_planning-dc-availability}
 
 Un déploiement vSphere a des exigences strictes quant à l'infrastructure physique. Par conséquent, vous ne pouvez déployer des clusters que dans les {{site.data.keyword.CloudDataCents_notm}} qui répondent à ces exigences. Les {{site.data.keyword.CloudDataCent_notm}} suivants sont disponibles pour un déploiement vSphere.
+
+Cascade Lake {{site.data.keyword.baremetal_short}} est disponible dans la région multi-zone (MZR, Multi-Zone Region) {{site.data.keyword.CloudDataCents_notm}}. Pour
+plus d'informations, voir [Présentation des régions multi-zone](/docs/infrastructure/loadbalancer-service?topic=loadbalancer-service-multi-zone-region-mzr-overview).
 
 Si vous sélectionnez un composant vSAN, la liste des emplacements est filtrée par disponibilité SSD (Solid-State Disk).
 {:note}

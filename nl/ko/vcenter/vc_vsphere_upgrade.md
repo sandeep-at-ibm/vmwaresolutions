@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-30"
 
 keywords: vSphere upgrade, NSX upgrade, PSC upgrade
 
@@ -60,7 +60,7 @@ VSI 점프 박스를 주문하려면 다음 단계를 완료하십시오.
 사용자 환경에 VSI 점프 박스가 이미 설치되어 있으면 첫 번째 단계를 건너뛰십시오.
 {:note}
 
-1. [IBM Cloud 인프라 고객 포털](https://control.softlayer.com/){:external}에서 시간별 또는 월별 VSI를 주문하십시오. 다음 속성을 주문하십시오.
+1. [{{site.data.keyword.cloud_notm}} 인프라 고객 포털](https://control.softlayer.com/){:external}에서 시간별 또는 월별 VSI를 주문하십시오. 다음 속성을 주문하십시오.
   * Windows 2012 또는 2016 Server Standard
   * 2개의 CPU
   * 16GB 메모리
@@ -171,7 +171,7 @@ vCenter Server가 인스턴스에 연결된 경우 vCenter Server 기본 보조 
 #### vCenter를 업그레이드하는 프로시저
 {: #vc_vsphere_upgrade-procedure-vcenter-procedure}
 
-1. ``https://<psc-fqdn>:5480``에서 PSC 및 vCenter 어플라이언스 관리 사용자 인터페이스에 로그인하여 루트 비밀번호의 만료 여부를 확인하십시오. 비밀번호 만기 날짜의 연도가 **1970**인 경우 만료되었음에 따라 PSC 어플라이언스 관리 사용자 인터페이스에서 SSH 및 bash 쉘을 사용으로 설정해야 합니다.
+1. `https://<psc-fqdn>:5480`에서 PSC 및 vCenter 어플라이언스 관리 사용자 인터페이스에 로그인하여 루트 비밀번호의 만료 여부를 확인하십시오. 비밀번호 만기 날짜의 연도가 **1970**인 경우 만료되었음에 따라 PSC 어플라이언스 관리 사용자 인터페이스에서 SSH 및 bash 쉘을 사용으로 설정해야 합니다.
     1. 루트 ID 및 비밀번호를 사용하여 PSC에 SSH로 연결하십시오. 비밀번호가 만료된 경우에도 로그인할 수 있습니다.
     2. 쉘 **passwd** 명령을 사용하여 PSC 및 vCenter의 새 루트 비밀번호를 설정하십시오.
     3. {{site.data.keyword.vmwaresolutions_short}} 콘솔에 표시되거나 IBM 지원 센터에서 제공한 비밀번호를 저장하십시오. 어플라이언스를 업그레이드하면 나중에 이 비밀번호가 다시 사용됩니다.
@@ -320,7 +320,7 @@ VMware 게스트 도구와 유사하게 vCenter Server 환경 업그레이드로
 ## vCenter Server vSphere 소프트웨어를 업그레이드한 후의 결과
 {: #vc_vsphere_upgrade-results}
 
-업그레이드가 완료된 후에 vSAN 상태 검사를 실행하면 IBM Cloud에서 제공하는 RAID 및 네트워크 제어기의 펌웨어 업데이트에 대한 경고가 발생할 수 있습니다. 펌웨어 업데이트가 필요한 호스트를 판별한 후 IBM 지원 센터를 통해 티켓을 열어 권장되는 버전으로 펌웨어를 업데이트하십시오.
+업그레이드가 완료된 후에 vSAN 상태 검사를 실행하면 {{site.data.keyword.cloud_notm}}에서 제공하는 RAID 및 네트워크 제어기의 펌웨어 업데이트에 대한 경고가 발생할 수 있습니다. 펌웨어 업데이트가 필요한 호스트를 판별한 후 IBM 지원 센터를 통해 티켓을 열어 권장되는 버전으로 펌웨어를 업데이트하십시오.
 
 1. vCenter 사용자 인터페이스에서 상태를 확인할 vSAN이 포함된 클러스터를 선택하십시오.
 2. **모니터** 탭을 선택한 후 **vSAN** 탭을 선택하십시오.

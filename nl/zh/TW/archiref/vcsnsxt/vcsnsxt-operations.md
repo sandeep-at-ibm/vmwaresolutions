@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -105,10 +105,5 @@ VMware on {{site.data.keyword.cloud_notm}} 可以使用 {{site.data.keyword.clou
 
 使用下列方法，可以將應用程式部署至 {{site.data.keyword.containerlong_notm}}：
 -	在 CAM 中開發 {{site.data.keyword.containerlong_notm}} 連線及服務，並發佈至 {{site.data.keyword.icpfull_notm}} 型錄。
--	未來加強 Multi Cloud Manager，以管理 {{site.data.keyword.containerlong_notm}} 實例。
--	Helm 指令行。
-
-## 相關鏈結
-{: #vcsnsxt-operations-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+- 未來加強 Multi Cloud Manager，以管理 {{site.data.keyword.containerlong_notm}} 實例。
+- Helm 指令行。

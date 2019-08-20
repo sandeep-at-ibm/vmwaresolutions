@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -54,13 +54,8 @@ vCenter Server |관리자가 vCenter Server 인스턴스에서 온프레미스 V
 Terraform | VMware vSphere, {{site.data.keyword.cloud_notm}}, Microsoft Azure, Amazon Web Services, Google Cloud Platform 및 OpenStack과 같은 제공자를 사용하여 클라우드 및 인프라 리소스의 프로비저닝을 처리합니다.
 HELM |  Kubernetes의 패키지 관리자입니다. Helm 차트는 Kubernetes 리소스를 정의하고 애플리케이션을 배치하는 데 사용됩니다.
 Chef |  구성 관리 및 규제 준수 자동화를 담당합니다. Chef에서는 Terraform이 초기 프로비저닝을 완료한 후에 미들웨어 및 애플리케이션을 배치하고 구성합니다.
-서비스 |  관리자가 Kubernetes 리소스 및 하나 이상의 VM에서 구성된 서비스를 작성, 구성 및 디자인하는 위치인 Service Composer를 나타냅니다.
+서비스 | 관리자가 Kubernetes 리소스 및 하나 이상의 VM에서 구성된 서비스를 작성, 구성 및 디자인하는 위치인 Service Composer를 나타냅니다.
 컨테이너화된 애플리케이션 |  애플리케이션 현대화 과정을 완료하고 이제 컨테이너로 실행 중인 애플리케이션입니다. 이 참조 아키텍처 및 Acme Skateboards의 경우, 컨테이너화된 애플리케이션 중 하나가 웹 서버이며 온라인 상태 워크로드의 일부입니다.
 Watson | 이 참조 아키텍처 및 Acme Skateboards의 경우, Watson은 "컨셉트 카" 아키텍처에 사용되는 AI 서비스를 나타냅니다.
 
 애플리케이션 마이그레이션, 네트워킹 및 보안은 애플리케이션 현대화의 가장 어려운 과제입니다. vCenter Server, VMware Hybridity, VMware NSX, {{site.data.keyword.icpfull_notm}} 및 {{site.data.keyword.containerlong_notm}}를 통해 이러한 과제를 해결하고 복원 가능한 안전하고 강력한 현대 애플리케이션을 빌드할 수 있습니다.
-
-## 관련 링크
-{: #vcsicp-systemcontext-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

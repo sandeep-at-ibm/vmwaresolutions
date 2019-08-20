@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-29"
+lastupdated: "2019-08-05"
 
 ---
 
@@ -66,8 +66,3 @@ Pour une architecture d'entreprise complète, les couches suivantes peuvent êtr
 Pour plus d'informations sur la façon dont cette architecture peut être étendue à l'intégration Chef, voir [vRA with Chef integration reference Architecture](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_VRA_Chef_Integration_Architecture.pdf){:new_window}.
 
 * Couche de gestion des services - Cette couche se concentre sur le cycle de vie complet de l'environnement informatique et est généralement implémentée au niveau de l'entreprise en combinant les entrées de tous les silos des opérations et technologies informatiques. Cette couche a traditionnellement été architecturée sur des structures de gestion des services informatiques (ITSM) telles que l'IT Infrastructure Library (ITIL) et ISO/IEC 20000, qui constituent un ensemble des meilleures pratiques pour fournir les services informatiques dans les différents processus et étapes du cycle de vie du service informatique. Au niveau produit, ITSM est caractérisé par un système centralisé de gestion des flux de travail qui permet de gérer les incidents, les demandes de service, les problèmes, les changements et les connaissances liés à une base de données de gestion de configuration.
-
-## Liens connexes
-{: #opsmgmt-intro-related}
-
-* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

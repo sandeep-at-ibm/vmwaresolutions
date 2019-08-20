@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -43,8 +43,3 @@ Das {{site.data.keyword.icpfull_notm}}-Netzmanagement wird durch die Verwendung 
 Calico verwendet Layer 3 oder die Vermittlungsschicht des Modells von Open System Interconnection (OSI). Mithilfe von Border Gateway Protocol (BGP) erstellt Calico Routing-Tabellen, die die Kommunikation zwischen Agentenknoten vereinfachen.
 
 Weitere Informationen zum Netzbetrieb von Calico enthält der Abschnitt [{{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-iks).
-
-## Zugehörige Links
-{: #vcsnsxt-overview-icp-related}
-
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

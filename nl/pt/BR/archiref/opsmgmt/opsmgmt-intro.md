@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-29"
+lastupdated: "2019-08-05"
 
 ---
 
@@ -66,8 +66,3 @@ Para obter uma arquitetura empresarial completa, as camadas a seguir podem ser n
 Para obter mais informações sobre como essa arquitetura pode ser estendida com a integração do Chef, consulte [Arquitetura de referência da integração do vRA com o Chef](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_VRA_Chef_Integration_Architecture.pdf){:new_window}.
 
 * Camada de gerenciamento de serviços - Essa camada se concentra no ciclo de vida completo do ambiente de TI e é normalmente implementada no nível corporativo, combinando entradas de todos os silos de tecnologias e Operações de TI. Essa camada tem sido tradicionalmente arquitetada em estruturas de Gerenciamento de Serviço de TI (ITSM), como a Information Technology Infrastructure Library (ITIL) e a ISO/IEC 20000, que são estruturas de melhores práticas para a entrega de serviços de TI por meio dos processos e estágios do ciclo de vida do serviço de TI. Em um nível de produto, o ITSM é tipificado por um sistema de gerenciamento de fluxo de trabalho centralizado para a manipulação de incidentes, solicitações de serviço, problemas, mudanças e conhecimento conectados a um banco de dados de gerenciamento de configuração.
-
-## Links relacionados
-{: #opsmgmt-intro-related}
-
-* [Visão geral do vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

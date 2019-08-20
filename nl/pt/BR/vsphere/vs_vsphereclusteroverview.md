@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-26"
 
 keywords: vSphere, vSphere component, tech specs vSphere
 
@@ -41,7 +41,7 @@ A disponibilidade e a precificação de configurações padronizadas de hardware
 {: #vs_vsphereclusteroverview-specs-vmware-components}
 
 Selecione licenças (fornecidas pela IBM ou BYOL) para os seguintes componentes do VMware:
-* VMware vSphere Enterprise Plus 6.7 U1 ou 6.5 U2
+* VMware vSphere Enterprise Plus 6.7 U2 ou 6.5 U2
 * Os componentes do VMware a seguir são opcionais:
    * VMware vCenter Server Standard
    * VMware NSX (Base, Advanced ou Enterprise)
@@ -56,6 +56,7 @@ Selecione licenças (fornecidas pela IBM ou BYOL) para os seguintes componentes 
 
 É possível pedir um ou mais {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} com uma das configurações a seguir:
 * **Skylake**: servidores de geração do Intel Skylake de 2 CPUs (série Intel Xeon 4100/5100/6100) com o seu modelo de CPU selecionado e o tamanho de RAM.
+* **Cascade**: servidores de geração Intel Cascade de 2 CPUs (série Intel Xeon 4200/5200/6200) com seu modelo de CPU e tamanho de RAM selecionados.
 * **Certificado pela SAP**: servidores de geração Intel Skylake ou Intel Broadwell (série Intel Xeon 6140/E5-2690/E7-8890) com seu modelo de CPU selecionado.
 * **Broadwell**: servidores de geração Intel Broadwell de 4 CPUs (Intel Xeon série E7-4800) com o seu modelo de CPU e tamanho de RAM selecionados.
 
@@ -102,7 +103,7 @@ Um {{site.data.keyword.cloud_notm}} Bare Metal Server com a configuração de re
 ### Componentes do VMware para nós de expansão
 {: #vs_vsphereclusteroverview-expansion-node-specs-vmware-components}
 
-* Um {{site.data.keyword.cloud_notm}} Bare Metal Server com o VMware vSphere Enterprise Plus 6.7u1 ou 6.5u2.  
+* Um {{site.data.keyword.cloud_notm}} Bare Metal Server com VMware vSphere Enterprise Plus 6.7u2 ou 6.5u2.  
 * Componentes opcionais do VMware apresentados em [Especificações técnicas para clusters do VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#specs).
 
 Deve-se gerenciar os servidores ESXi, os componentes opcionais do VMware e o hardware adicional que são pedidos e entregues à sua conta do {{site.data.keyword.cloud_notm}} somente por meio do {{site.data.keyword.slportal}}. Depois de criar um novo cluster no console do {{site.data.keyword.vmwaresolutions_short}}, é possível retornar para o console e usar as informações salvas para escalar o novo cluster. Para obter mais informações, consulte [Ajustando a escala de clusters existentes do

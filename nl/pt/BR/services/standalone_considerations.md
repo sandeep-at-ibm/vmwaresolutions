@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-22"
 
 keywords: VMware HCX standalone, HCX on-premises, tech specs HCX
 
@@ -29,7 +29,7 @@ Uma instância do vCenter Server com HCX no {{site.data.keyword.cloud_notm}} é 
 ## Considerações antes de instalar as instâncias do HCX on IBM Cloud no local
 {: #standalone_considerations-install}
 
-Os componentes do HCX on {{site.data.keyword.cloud_notm}} devem ser instalados no {{site.data.keyword.cloud_notm}} e no ambiente do vSphere no local. É recomendado que você instale o serviço HCX on {{site.data.keyword.cloud_notm}} em sua instância do vCenter Server with Hybridity Bundle on {{site.data.keyword.cloud_notm}} antes de instalar a instância do HCX on {{site.data.keyword.cloud_notm}} no local. Para obter mais informações, consulte [Considerações ao instalar o HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-hcx_considerations#hcx_considerations-install).
+Os componentes do HCX on {{site.data.keyword.cloud_notm}} devem ser instalados no {{site.data.keyword.cloud_notm}} e no ambiente do vSphere no local. Recomenda-se instalar o serviço HCX on {{site.data.keyword.cloud_notm}} em sua instância do vCenter Server no {{site.data.keyword.cloud_notm}} antes de instalar a instância do HCX on {{site.data.keyword.cloud_notm}} no local. Para obter mais informações, consulte [Considerações ao instalar o HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-hcx_considerations#hcx_considerations-install).
 
 ### Requisitos de endereço IP
 {: #standalone_considerations-ip}

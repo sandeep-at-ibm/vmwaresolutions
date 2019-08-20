@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -161,8 +161,3 @@ Calico 提供一種高度可擴充網路及網路原則解決方案，以根據�
 -	**專用 VLAN 子網路：**
     - 主要專用子網路會決定在建立叢集期間指派給工作者節點的專用 IP 位址。相同 VLAN 上的多個叢集可以共用一個主要專用子網路。
     - 可攜式專用子網路只會連結至一個叢集，並提供該叢集 8 個專用 IP 位址。3 個 IP 保留給網路功能使用。1 個 IP 由預設專用 Ingress ALB 使用，而 4 個 IP 可以用來建立專用負載平衡器網路服務。可攜式專用 IP 是永久性的固定 IP 位址，可以用來透過網際網路存取負載平衡器服務。
-
-## 相關鏈結
-{: #vcsnsxt-overview-iks-links}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -128,8 +128,3 @@ Le pare-feu {{site.data.keyword.icpfull_notm}} NSX Edge est configuré avec des 
 *	SNAT pour l'accès des réseaux VXLAN à un accès public
 *	SNAT pour l'accès des réseaux VXLAN à un accès réseau {{site.data.keyword.cloud_notm}} privé
 *	DNAT pour des adresses IP virtuelles de cluster {{site.data.keyword.icpfull_notm}}
-
-## Liens connexes
-{: #vcsicp-detail-design-network-related}
-
-* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

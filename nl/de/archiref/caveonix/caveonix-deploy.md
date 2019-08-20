@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -106,11 +106,6 @@ Tabelle 4. Zusammenfassung
 
 **Hinweise:**
 Wenn Sie den Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}-Service entfernen, löscht die {{site.data.keyword.vmwaresolutions_short}}-Automatisierung nur die einzige, umfassende Caveonix-VM, die bereitgestellt wurde, und das dedizierte private Teilnetz, das für diese bestellt wurde. Dies bedeutet Folgendes:
-* Wenn Sie die Caveonix-VM auf mehrere VMs horizontal skaliert haben, werden diese zusätzlichen VMs nicht entfernt. 
-* Wenn Sie die IP-Adressen des dedizierten privaten Teilnetzes für zusätzliche VMs verwendet haben, müssen diesen VMs neue IP-Adressen zugeordnet werden, damit sie weiter funktionieren. 
+* Wenn Sie die Caveonix-VM auf mehrere VMs horizontal skaliert haben, werden diese zusätzlichen VMs nicht entfernt.
+* Wenn Sie die IP-Adressen des dedizierten privaten Teilnetzes für zusätzliche VMs verwendet haben, müssen diesen VMs neue IP-Adressen zugeordnet werden, damit sie weiter funktionieren.
 * Löschen Sie die vCenter Server-Instanz A mit dem installierten Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}-Service und haben Sie die IP-Adressen des für den Service bestellten dedizierten privaten Teilnetzes in vCenter Server-Instanz B verwendet, wird das dedizierte private Teilnetz bei der Löschung der vCenter Server-Instanz A storniert.
-
-## Zugehörige Links
-{: #caveonix-deploy-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} mit Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

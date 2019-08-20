@@ -74,7 +74,7 @@ CentOS와 Squid에 기반한 프록시 서버를 사용할 수 있습니다. 스
 |:--------- |:-------------- |
 | 이름 | 아웃바운드 Proxy01 |
 | 유형 | User |
-| 소스 |프록시 서버 IP |
+| 소스 | 프록시 서버 IP |
 | 대상 | any |
 | 서비스 | HTTP/HTTPS/ICMP Echo |
 | 조치 | Accept |
@@ -219,4 +219,4 @@ Squid는 최소 하드웨어 요구사항을 갖추고 있지 않지만 프록�
 {: #vum-init-config-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 솔루션 아키텍처](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} 디지털 기술 업무](https://ibm-dte.mybluemix.net/vmware)(데모)
+* [{{site.data.keyword.vmwaresolutions_full}} 데모](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/)

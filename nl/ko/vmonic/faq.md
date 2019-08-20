@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-01"
 
 keywords: FAQ, user account, patch management
 
@@ -88,7 +88,7 @@ vCenter HA를 구성할 수 있지만 구성 지원은 {{site.data.keyword.vmwar
 {: #faq-rename-cluster}
 {: faq}
 
-새 vCenter Server 인스턴스의 경우, 배치 중에 작성된 첫 번째 클러스터의 이름은 기본 이름인 **cluster1**입니다. VMware vSphere Client에서 기본 클러스터의 이름을 변경할 수 있습니다. 클러스터를 vCenter Server 인스턴스에 추가하는 경우 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 원하는 이름을 지정할 수 있습니다.
+새 vCenter Server 인스턴스의 경우 배치 중에 작성된 초기 클러스터의 이름을 설정할 수 있습니다. 클러스터를 vCenter Server 인스턴스에 추가하는 경우 {{site.data.keyword.vmwaresolutions_short}} 콘솔에 원하는 이름을 지정할 수 있습니다.
 
 ## 패치가 어떻게 관리되고 있습니까?
 {: #faq-patches}
@@ -106,7 +106,6 @@ V2.0 이상에 배치된 인스턴스의 경우, VUM(VMware Update Manager)은 v
 자세한 정보는 다음 리소스를 참조하십시오.
 * [VMware Support](https://www.vmware.com/support.html){:external}
 * [vCenter Server 인스턴스에 업데이트 적용](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates)
-* [vCenter Server with Hybridity Bundle 인스턴스에 업데이트 적용](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_applyingupdates)
 
 ## 관리 서비스 NSX Edge는 보안 문제점을 발생시킵니까?
 {: #faq-mgmt-nsx}
@@ -136,7 +135,6 @@ V2.0 이상에 배치된 인스턴스의 경우, VUM(VMware Update Manager)은 v
 
 자세한 정보는 _IBM Cloud Data Center 가용성_ 절을 참조하십시오.
 * [vCenter Server 인스턴스 요구사항 및 계획](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
-* [vCenter Server with Hybridity Bundle 인스턴스에 대한 요구사항 및 계획](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)
 * [VMware vSphere on {{site.data.keyword.cloud_notm}}에 대한 요구사항 및 계획](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning)
 * [NetApp ONTAP Select 인스턴스에 대한 요구사항 및 계획](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_planning)
 

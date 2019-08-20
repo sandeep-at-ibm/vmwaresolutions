@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -106,11 +106,6 @@ RiskForesight 安装包含以下高级别步骤：
 
 **注：**
 除去 Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} 服务时，{{site.data.keyword.vmwaresolutions_short}} 自动化仅删除已部署的单个“一体化”Caveonix VM 以及为其订购的专用子网。因此，
-* 如果 Caveonix VM 已横向扩展为多个 VM，那么不会除去这些额外的 VM。 
-* 如果在额外的 VM 上使用专用子网的 IP 地址，那么这些 VM 必须分配有新的 IP 地址才能继续正常运行。 
+* 如果 Caveonix VM 已横向扩展为多个 VM，那么不会除去这些额外的 VM。
+* 如果在额外的 VM 上使用专用子网的 IP 地址，那么这些 VM 必须分配有新的 IP 地址才能继续正常运行。
 * 如果删除已安装了 Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} 服务的 vCenter Server 实例 A，并且您已使用在 vCenter Server 实例 B 中为该服务订购的专用子网的 IP 地址，那么在删除 vCenter Server 实例 A 时将取消该专用子网。
-
-## 相关链接
-{: #caveonix-deploy-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-16"
 
 keywords: vCenter Server multi-site, multi-site configuration, multi-site deployment vCenter Server
 
@@ -32,16 +32,16 @@ subcollection: vmware-solutions
 多站点部署由以下组件构成。
 
 * **主实例**：主 VMware vCenter Server 实例具有以下配置：
-  *  Microsoft Active Directory (AD) 和 DNS（域名系统）根域
-  *  vCenter Server 子域
-  *  SSO (Single Sign-On) 域
-  *  SSO 站点名称
+  * Microsoft Active Directory (AD) 和 DNS（域名系统）根域
+  * vCenter Server 子域
+  * SSO (Single Sign-On) 域
+  * SSO 站点名称
+  * 对于在 V2.8 或更高版本中部署的主实例：具有嵌入式 Platform Services Controller (PSC) 的 vCenter Server Appliance (vCSA)
 * **辅助实例**：一个或多个辅助 vCenter Server 实例，这些实例与主实例相链接，配置如下：
-   *  SSO 站点名称
-   *  链接到主实例上根域的 DNS 子域
-   *  主实例和辅助实例上 AD 虚拟机之间的 DNS 和 AD 复制设置
-   *  对于在 V2.8 或更高版本中部署的主实例：部署并配置了具有嵌入式 Platform Services Controller (PSC) 的 vCenter Server Appliance (vCSA)
-   *  辅助实例上的 VMware vCenter 设置为以“增强链接方式”与主实例上的 vCenter 相链接
+  * SSO 站点名称
+  * 链接到主实例上根域的 DNS 子域
+  * 主实例和辅助实例上 AD 虚拟机之间的 DNS 和 AD 复制设置
+  * 辅助实例上的 VMware vCenter 设置为以“增强链接方式”与主实例上的 vCenter 相链接
 
 ## vCenter Server 多站点部署
 {: #vc_multisite-deployment}

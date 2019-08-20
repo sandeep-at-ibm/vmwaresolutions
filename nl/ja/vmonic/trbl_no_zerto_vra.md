@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-08-01"
 
 keywords: troubleshooting, Zerto Virtual Replication, Zerto ESXi server
 
@@ -24,7 +24,7 @@ Zerto 災害復旧がインストールされている VMware vCenter Server イ
 ## 解決方法
 {: #trbl_no_zerto_vra-resolution}
 
-vCenter Server インスタンスでは、Zerto 災害復旧サービスは、デフォルト・クラスター **cluster1** に含まれる ESXi サーバーにのみインストールされます。 同じ vCenter Server 環境内に追加のクラスターを作成しても、その追加クラスターに Zerto 災害復旧が自動的にインストールされるわけではありません。その追加クラスターに ESXi サーバーを追加してもインストールされません。
+Zerto 災害復旧サービスは、デフォルト・クラスター (V3.1 以前でデプロイされたインスタンスの場合は **cluster1**) に含まれる ESXi サーバーにのみインストールされます。同じ vCenter Server 環境内に追加のクラスターを作成しても、その追加クラスターに Zerto 災害復旧が自動的にインストールされるわけではありません。その追加クラスターに ESXi サーバーを追加してもインストールされません。
 
 別途、追加クラスターに Zerto 災害復旧をインストールする必要があります。
 

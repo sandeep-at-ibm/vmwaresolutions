@@ -33,7 +33,7 @@ subcollection: vmware-solutions
 
 如需儲存空間的相關資訊，請參閱[共用儲存空間架構](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits)。
 
-![實體基礎架構](../../images/vcsv4radiagrams-ra-physinfra.svg "實體基礎架構")
+![實體基礎架構](../../images/vcsv4radiagrams-ra-physinfra.svg "實體基礎架構"){: caption="圖 1. 實體基礎架構" caption-side="bottom"}
 
 ## 實體運算設計
 {: #design_physicalinfrastructure-host-design}
@@ -63,7 +63,7 @@ Bare Metal Server 的規格如下：
 
 {{site.data.keyword.cloud_notm}} 的實體網路分成兩個不同的網路：公用和專用。專用網路也包含實體伺服器的管理「智慧型平台管理介面 (IPMI)」資料流量。
 
-![{{site.data.keyword.cloud_notm}} 高階網路](../../images/vcsv4radiagrams-ra-ibmcloudnetwork.svg "{{site.data.keyword.cloud_notm}} 高階網路")
+![{{site.data.keyword.cloud_notm}} 高階網路](../../images/vcsv4radiagrams-ra-ibmcloudnetwork.svg "{{site.data.keyword.cloud_notm}} 高階網路"){: caption="圖 2. {{site.data.keyword.cloud_notm}} 高階網路" caption-side="bottom"}
 
 #### 公用網路
 {: #design_physicalinfrastructure-public-net}
@@ -91,7 +91,7 @@ Bare Metal Server 的規格如下：
 
 {{site.data.keyword.cloud_notm}} 配置兩種類型的 IP 位址，以在 {{site.data.keyword.cloud_notm}} 基礎架構內使用：
 * 主要 IP 位址會被指派給 {{site.data.keyword.cloud_notm}} 所佈建的裝置、Bare Metal Server 及虛擬伺服器。不要指派這些區塊中的任何 IP 位址。
-* 我們提供了可攜式 IP 位址，供您視需要指派及管理。vCenter Server 會佈建數個可攜式 IP 範圍，以供其使用。僅使用指派給特定 NSX-T 或 NSX-V 元件並指定供客戶使用的可攜式 IP 位址範圍。例如，**客戶 EDGE**。
+* 我們提供了可攜式 IP 位址，供您視需要指派及管理。vCenter Server 會佈建數個可攜式 IP 範圍，以供其使用。對於指定供客戶使用的特定 NSX-T 或 NSX-V 元件，請僅使用指派給這些元件的可攜式 IP 位址範圍。例如，**客戶 EDGE**。
 
 當帳戶配置為**虛擬遞送及轉遞 (VRF)** 帳戶時，可以將主要或可攜式 IP 位址變成可遞送給您帳戶內的任何 VLAN。
 
@@ -109,7 +109,7 @@ Bare Metal Server 的規格如下：
 
 無法移除與 vCenter Server 供應項目中使用的 Bare Metal Server 伺服器的公用或專用網路的實體網路連線功能。可以停用裸機內部 NIC 上的實體埠，但不支援拔除纜線。
 
-![實體主機連線](../../images/vcsv4radiagrams-ra-physical-host-connections.svg "實體主機連線")
+![實體主機連線](../../images/vcsv4radiagrams-ra-physical-host-connections.svg "實體主機連線"){: caption="圖 3. 實體主機連線" caption-side="bottom"}
 
 #### VLAN 與基礎至層疊遞送
 {: #design_physicalinfrastructure-vlans}
@@ -123,7 +123,7 @@ Bare Metal Server 的規格如下：
 * 第二個子網路用於管理虛擬機器（例如 vCenter Server Appliance 及 Platform Services Controller）。
 * 第三個子網路用於透過 NSX Manager 指派給每部主機的封裝層疊網路「通道端點 (VTEP)」。
 
-除了「專用 VLAN A」外，還有另一個專用 VLAN（這裡指定為「專用 VLAN B」）存在，可以支援 vSAN、vMotion、NFS<!--, and iSCSI--> 等 VMware 特性。因此，VLAN 分為兩個、三個或四個可攜式子網路：
+除了「專用 VLAN A」外，還有另一個專用 VLAN（這裡指定為「專用 VLAN B」）存在，可以支援 vSAN、vMotion、NFS 等 VMware 特性。因此，VLAN 分為兩個、三個或四個可攜式子網路：
 * 第一個子網路會指派給 vMotion 資料流量用的核心埠群組。
 * 剩餘的子網路用於儲存空間資料流量：
    * 使用 vSAN 時，會將子網路指派給用於 vSAN 資料流量的核心埠群組。
@@ -175,7 +175,7 @@ vSphere ESXi Hypervisor 會安裝在持續性位置中。因此，實體主機�
 
 儲存空間使用 NFS v3 通訊協定以 2 IOPS/GB 層次從 IBM Cloud 進行連接。
 
-![連接到 VMware 部署的 NFS 共用](../../images/vcsv4radiagrams-ra-nfs-shares.svg "連接到 VMware 部署的 NFS 共用：管理共用和客戶指定的共用")
+![連接到 VMware 部署的 NFS 共用](../../images/vcsv4radiagrams-ra-nfs-shares.svg "連接到 VMware 部署的 NFS 共用：管理共用和客戶指定的共用"){: caption="圖 4. 連接到 VMware 部署的 NFS 共用" caption-side="bottom"}
 
 您可以在購買時或之後在主控台內，針對工作負載在所有主機上配置及裝載更多檔案共用。您可以從對應 {{site.data.keyword.CloudDataCent_notm}} 的可用「{{site.data.keyword.cloud_notm}} 耐久性」檔案儲存空間容量選項及效能層級中進行選取。所有共用均使用 NFS v3 通訊協定進行連接。此外，套用 NetApp ONTAP Select 供應項目，即可連接 NFS 第 3 版檔案共用。
 

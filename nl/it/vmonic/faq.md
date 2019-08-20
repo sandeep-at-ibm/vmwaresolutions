@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-01"
 
 keywords: FAQ, user account, patch management
 
@@ -88,7 +88,7 @@ Puoi configurare vCenter HA, ma il supporto della configurazione non è fornito 
 {: #faq-rename-cluster}
 {: faq}
 
-Per una nuova istanza vCenter Server, il primo cluster creato durante la distribuzione ha il nome predefinito **cluster1**. Puoi rinominare il cluster predefinito nel client VMware vSphere. Quando aggiungi un cluster a un'istanza vCenter Server, puoi specificare il nome che vuoi nella console {{site.data.keyword.vmwaresolutions_short}}.
+Per una nuova istanza vCenter Server, puoi impostare il nome del cluster iniziale creato durante la distribuzione. Quando aggiungi un cluster a un'istanza vCenter Server, puoi specificare il nome che vuoi nella console {{site.data.keyword.vmwaresolutions_short}}.
 
 ## Come vengono gestite le patch?
 {: #faq-patches}
@@ -106,7 +106,6 @@ Per le istanze distribuite nella V2.0 o superiore, VMware Update Manager (VUM) �
 Per ulteriori informazioni, consulta le seguenti risorse:
 * [Supporto VMware](https://www.vmware.com/support.html){:external}
 * [Applicazione di aggiornamenti alle istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates)
-* [Applicazione di aggiornamenti alle istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_applyingupdates)
 
 ## L'edge NSX dei servizi di gestione rappresenta un rischio per la sicurezza?
 {: #faq-mgmt-nsx}
@@ -136,7 +135,6 @@ Le distribuzioni delle istanze hanno requisiti rigorosi in materia di infrastrut
 
 Per ulteriori informazioni, vedi le sezioni _Disponibilità dei data center IBM Cloud_ in:
 * [Requisiti e pianificazione per le istanze vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
-* [Requisiti e pianificazione per le istanze vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)
 * [Requisiti e pianificazione per VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning)
 * [Requisiti e pianificazione per le istanze NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_planning)
 

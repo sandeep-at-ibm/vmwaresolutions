@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-21"
+lastupdated: "2019-07-16"
 
 subcollection: vmware-solutions
 
@@ -58,7 +58,7 @@ KMIP for VMware 與 vSAN 加密或 vSphere 加密搭配使用時，具有數層�
 
 如果您計劃替換金鑰，則請檢閱可替換金鑰之層次的下列資訊：
 * 您的客戶根金鑰 (CRK) 保護所有 VMware 金鑰。在與 KMIP for VMware 實例相關聯的 IBM Key Protect 或 Hyper Protect Crypto Services 實例中，可以替換金鑰。
-* KMIP for VMware 使用 CRK 來保護由它所產生並配送至 VMware 的金鑰。VMware 將這些視為_金鑰加密金鑰」(KEK)_。
+* KMIP for VMware 使用 CRK 來保護由它所產生並配送至 VMware 的金鑰。VMware 將這些視為_金鑰加密金鑰 (KEK)_。
   * 如果您使用 vSphere 加密，則可以使用 **Set-VMEncryptionKey** PowerShell 指令來替換金鑰。
   * 如果您使用 vSAN 加密，則可以在 vSAN 使用者介面上替換金鑰。
 * VMware 使用這些 KEK 來保護它用來加密磁碟機及 VM 磁碟的實際金鑰。您可以使用 VMware 稱為「深度」重設金鑰的項目，來替換這些金鑰。此作業會重新加密所有已加密資料，因此可能需要較長的時間。
@@ -102,11 +102,11 @@ KMIP for VMware 可用於許多個 {{site.data.keyword.cloud_notm}} 多區域地
 
 在每個 MZR 內，KMIP for VMware 在 {{site.data.keyword.cloud_notm}} 專用網路上提供兩個服務端點，以取得高可用性。請將 vCenter 金鑰管理伺服器 (KMS) 中的這兩個端點配置都配置為 KMS 叢集。如需每個 MZR 中的端點清單及 KMIP 伺服器憑證簽章，請參閱 [KMIP for VMware 服務文件](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)。
 
-若要透過專用網路存取 KMIP for VMware，必須針對虛擬遞送及轉遞 (VRF) 啟用您的 {{site.data.keyword.cloud_notm}} 基礎架構帳戶，而且還必須將 {{site.data.keyword.cloud_notm}} 網路服務端點新增至您帳戶的 VRF 路徑。如需相關資訊，請參閱[使用 IBM Cloud CLI，以啟用您的帳戶來使用服務端點](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)。
+若要透過專用網路存取 KMIP for VMware，必須針對虛擬遞送及轉遞 (VRF) 啟用您的 {{site.data.keyword.cloud_notm}} 基礎架構帳戶，而且還必須將 {{site.data.keyword.cloud_notm}} 網路服務端點新增至您帳戶的 VRF 路徑。如需相關資訊，請參閱[啟用服務端點](/docs/account?topic=account-vrf-service-endpoint#service-endpoint)。
 
 KMIP for VMware 還使用 {{site.data.keyword.cloud_notm}} 專用網路而非公用網際網路來連接至 {{site.data.keyword.cloud_notm}} Key Protect。
 
-![KMIP for VMware on {{site.data.keyword.cloud_notm}} 的元件](../../images/kmip-key-protect.svg "該解決方案藉由使用 IBM Key Protect 中儲存的根金鑰實現 VMware vSphere 加密和 vSAN 加密。")
+![KMIP for VMware on {{site.data.keyword.cloud_notm}} 的元件](../../images/kmip-key-protect.svg "該解決方案藉由使用 IBM Key Protect 中儲存的根金鑰實現 VMware vSphere 加密和 vSAN 加密。"){: caption="圖 1. 使用 IBM Key Protect 時的 KMIP for VMware on {{site.data.keyword.cloud_notm}} 元件" caption-side="bottom"}
 
 使用 IBM Cloud Hyper Protect Crypto Services 時，您的金鑰會儲存在 IBM zSeries HSM 而非 CloudHSM 中。此外，KMIP for VMware 與 {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services 之間的連線會透過公用網路進行傳送，但受到 TLS 加密及鑑別的保護。
 

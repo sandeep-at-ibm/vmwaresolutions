@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 keywords: VMware HCX, HCX, tech specs HCX
 
@@ -21,16 +21,23 @@ subcollection: vmware-solutions
 # VMware HCX on IBM Cloud 概述
 {: #hcx_considerations}
 
-HCX on {{site.data.keyword.cloud}} 服务可将内部部署数据中心的网络无缝扩展到 {{site.data.keyword.cloud_notm}}，这允许虚拟机 (VM) 在不进行任何转换或更改的情况下，迁移到 {{site.data.keyword.cloud_notm}} 或从中迁移出来。
+HCX on {{site.data.keyword.cloud}} 服务可将内部部署数据中心的网络无缝扩展到 {{site.data.keyword.cloud_notm}}，这允许虚拟机 (VM) 在不进行任何转换或更改的情况下，迁移到 {{site.data.keyword.cloud_notm}} 或从中迁移出来。HCX 会创建一个抽象层，通过安全延伸的网络，支持应用程序移动性和基础架构混合性。您只需将 VMware 环境从 vSphere 5.1 升级到最新的 vSphere 版本，而无需重构或修改现有应用程序，因为 HCX 支持此无缝转换。HCX 支持您将自己的 IP 子网范围用于 {{site.data.keyword.cloud_notm}}，通过混合部署确保 IP 一致性，同时使用端到端 Suite B 加密来提供高级别安全性。
 
-此服务仅可用于在 V2.3 和更高发行版中部署的 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 实例。
-当前安装的 HCX on {{site.data.keyword.cloud_notm}} 版本为 3.5.1。
+HCX on {{site.data.keyword.cloud_notm}} 需要您使用 BYOL（自带许可证）通过 {{site.data.keyword.cloud_notm}} 或等效版本来使用 NSX Advanced Edition 或 NSX Enterprise Edition。订购 VMware HCX on {{site.data.keyword.cloud_notm}} 服务时，需要承诺使用 12 个月。初始部署 HCX 后，将向您收取连续 12 个月的费用。任何其他节点都遵循此初始供应到期日期。在 12 个月承诺期到期后，您可以在 {{site.data.keyword.cloud_notm}} 服务上安装和卸载 HCX，并且可以添加和除去主机和集群，没有任何限制。随后会按月向您的帐户收费，您可以随时取消。
+
+12 个月承诺期的到期日期在 HCX on {{site.data.keyword.cloud_notm}} 详细信息页面上提供。有关查看服务详细信息的更多信息，请参阅[订购、查看和除去 vCenter Server 实例的服务](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure)。
 {:note}
-
-可以将现有 vCenter Server 实例升级到 vCenter Server with Hybridity Bundle 实例。有关升级实例和部署 HCX on {{site.data.keyword.cloud_notm}} 服务的更多信息，请参阅[升级到 Hybridity Bundle 的过程](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_upgrade-lic#vc_upgrade-lic-procedure-upgrade-to-hybridity)。
 
 具有 HCX on {{site.data.keyword.cloud_notm}} 的 vCenter Server 实例限制为可同时从内部部署站点建立三个连接。
-{:note}
+
+
+以下平台上支持 HCX on {{site.data.keyword.cloud_notm}}：
+
+* vSphere 5.1（仅通过 API 用于 vCenter 5.1 的命令行）
+* vSphere 5.5（vCenter 5.5u3 及更高版本上支持的 Web 客户机 UI）
+* vSphere 6.0
+* vSphere 6.5（vDS 必须为 6.0 级别）
+* vSphere 6.7
 
 ## HCX on IBM Cloud 的技术规范
 {: #hcx_considerations-specs}
@@ -97,6 +104,7 @@ HCX on {{site.data.keyword.cloud_notm}} 服务中订购并包含了以下组件�
 
 * [订购 HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_ordering)
 * [管理 HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghcx)
+* [VMware HCX on IBM Cloud guided demo: Learn how to migrate a VM by using HCX](https://www.ibm.com/cloud/garage/dte/producttour/vmware-hcx-ibm-cloud-guided-demo-learn-how-migrate-vm-using-hcx){:external}
 * [HCX 术语的词汇表](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
 * [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [VMware Hybrid Cloud Extension 概述](https://cloud.vmware.com/vmware-hcx){:external}

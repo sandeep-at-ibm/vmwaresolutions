@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-22"
 
 keywords: single-node trial, migration app modernization, tech specs migration app modernization
 
@@ -25,7 +25,7 @@ subcollection: vmware-solutions
 
 단일 노드 평가판은 컨테이너를 위한 Kubernetes 관리 플랫폼 및 온프레미스 환경과 같은 도구를 사용하여 관리될 수 있는 싱글 테넌트 VMware 플랫폼을 제공하는 {{site.data.keyword.cloud_notm}}의 {{site.data.keyword.cloud_notm}} Private Hosted on VMware vCenter Server 평가판 버전입니다. 온프레미스로 제공되는 동일한 레벨의 제어 및 가시성을 유지하면서 클라우드의 속도와 스케일의 이점을 이용할 수 있습니다.
 
-평가판은 최대 20개의 단순 개발에 대한 마이그레이션 또는 vCenter Server on IBM Cloud with Hybridity Bundle을 사용한 워크로드 테스트와 Kubernetes 기반 {{site.data.keyword.cloud_notm}} Private Hosted 애플리케이션 개발 플랫폼을 사용한 해당 워크로드의 컨테이너화를 위해 설계되었습니다. 자동화는 몇 시간 내에 {{site.data.keyword.cloud_notm}}에서 VMware HCX를 설치 및 구성하고, 온프레미스 HCX 활성화 키를 제공하고, {{site.data.keyword.cloud_notm}} Private Hosted에서 소규모 개발/테스트 토폴로지를 설치 및 구성합니다.
+평가판은 최대 20개의 단순 개발에 대한 마이그레이션 또는 vCenter Server on {{site.data.keyword.cloud_notm}}를 사용한 워크로드 테스트와 Kubernetes 기반 {{site.data.keyword.cloud_notm}} Private Hosted 애플리케이션 개발 플랫폼을 사용한 해당 워크로드의 컨테이너화를 위해 설계되었습니다. 자동화는 몇 시간 내에 {{site.data.keyword.cloud_notm}}에서 VMware HCX를 설치 및 구성하고, 온프레미스 HCX 활성화 키를 제공하고, {{site.data.keyword.cloud_notm}} Private Hosted에서 소규모 개발/테스트 토폴로지를 설치 및 구성합니다.
 
 마이그레이션 및 앱 현대화를 위한 단일 노드 평가판은 개념 증명(POC)에만 사용됩니다. 이 환경에 프로덕션 워크로드를 실행하지 마십시오. 호스트 및 클러스터 추가 및 제거, 추가 기능 서비스 주문 및 업데이트 적용과 같은 관리 기능은 지원되지 않습니다.
 {:important}
@@ -94,7 +94,7 @@ subcollection: vmware-solutions
 
 다음 라이센스는 마이그레이션 및 현대화를 위한 단일 노드 평가판 인스턴스 주문에 포함됩니다.
 
-* VMware vSphere Enterprise Plus 6.7u1
+* VMware vSphere Enterprise Plus 6.7u2
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Advanced Edition 6.4
 * {{site.data.keyword.cloud_notm}} Private Hosted 3.1.2

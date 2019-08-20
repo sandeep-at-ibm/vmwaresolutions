@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-01"
+lastupdated: "2019-07-22"
 
 keywords: single-node trial, data protection DR, tech specs data protection DR
 
@@ -26,7 +26,7 @@ VMware 워크로드를 {{site.data.keyword.cloud_notm}}에 마이그레이션하
 
 단일 노드 평가판은 온프레미스 환경과 동일한 도구를 사용하여 관리될 수 있는 싱글 테넌트 VMware 플랫폼을 제공하는 VMware vCenter Server on {{site.data.keyword.cloud_notm}}의 평가판 버전입니다. 온프레미스로 제공되는 동일한 레벨의 제어 및 가시성을 유지하면서 클라우드의 속도와 스케일의 이점을 이용할 수 있습니다.
 
-평가판은 최대 20개의 단순 개발에 대한 마이그레이션 또는 vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle을 사용한 워크로드 테스트를 위해 설계되었습니다. 자동화는 몇 시간 내에 {{site.data.keyword.cloud_notm}}에서 VMware HCX를 설치 및 구성하고, Veeam on {{site.data.keyword.cloud_notm}} 및 Zerto on {{site.data.keyword.cloud_notm}}를 설치합니다. Veeam on {{site.data.keyword.cloud_notm}} 및 Zerto on {{site.data.keyword.cloud_notm}}를 사용하여 20개의 가상 머신(VM)을 백업하고 복제할 수 있습니다. 
+평가판은 최대 20개의 단순 개발에 대한 마이그레이션 또는 vCenter Server를 사용한 워크로드 테스트를 위해 설계되었습니다. 자동화는 몇 시간 내에 {{site.data.keyword.cloud_notm}}에서 VMware HCX를 설치 및 구성하고, Veeam on {{site.data.keyword.cloud_notm}} 및 Zerto on {{site.data.keyword.cloud_notm}}를 설치합니다. Veeam on {{site.data.keyword.cloud_notm}} 및 Zerto on {{site.data.keyword.cloud_notm}}를 사용하여 20개의 가상 머신(VM)을 백업하고 복제할 수 있습니다.
 
 데이터 보호 및 재해 복구를 위한 단일 노드 평가판은 개념 증명(POC)에만 사용됩니다. 이 환경에 프로덕션 워크로드를 실행하지 마십시오. 호스트 및 클러스터 추가 및 제거, 추가 기능 서비스 추가 주문 및 업데이트 적용과 같은 관리 기능은 지원되지 않습니다.
 {:important}
@@ -97,8 +97,8 @@ Skylake 듀얼 Intel Xeon Gold 5120 프로세서 / 총 28개의 코어, 2.2 GHz 
 
 다음 라이센스는 데이터 보호 및 재해 복구를 위한 단일 노드 평가판 인스턴스 주문에 포함됩니다.
 
-* vCenter Server with Hybridity Bundle 라이센스:
-  * VMware vSphere Enterprise Plus 6.7u1
+* vCenter Server 라이센스:
+  * VMware vSphere Enterprise Plus 6.7u2
   * VMware vCenter Server 6.5
   * VMware NSX Service Providers Advanced Edition 6.4
 * {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2

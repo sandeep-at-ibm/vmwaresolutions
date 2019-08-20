@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-09"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -60,8 +60,3 @@ NSX-T は、vSphere 環境の内部と外部のどちらで実行されていよ
 {{site.data.keyword.icpfull_notm}} には Calico ネットワーキングを NSX-T インスタンスに置き換えるオプションがあるので、{{site.data.keyword.icpfull_notm}} はネットワーキングとセキュリティーを管理するための単一のロケーションになります。
 
 ![NSX-T を使用する場合の {{site.data.keyword.icpfull_notm}} のネットワーキング](../../images/vcsicp-icp-nsxt-networking.svg "NSX-T を使用する場合の {{site.data.keyword.icpfull_notm}} のネットワーキング")
-
-## 関連リンク
-{: #vcsicp-detail-design-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

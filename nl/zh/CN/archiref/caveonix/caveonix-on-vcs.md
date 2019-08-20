@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -52,8 +52,3 @@ Caveonix RiskForesight on IBM Cloud 提供的主要优点包括：
 -	主动管理混合云中的总体风险以防止被攻击者利用。
 -	在各种威胁和合规性需求的背景下，始终“全堆栈”了解基础架构、平台和应用程序级别的工作负载漏洞和配置问题。
 -	支持企业实施美国国家标准技术学会 (NIST) 的主动风险管理框架。
-
-## 相关链接
-{: #caveonix-on-vcs-related}
-
-*   [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

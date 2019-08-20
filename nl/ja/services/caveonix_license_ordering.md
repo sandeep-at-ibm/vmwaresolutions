@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-07-23"
 
-keywords: Caveonix license, Caveonix order license, order Caveonix license
+keywords: Caveonix license, Caveonix order license, Caveonix BYOL license
 
 subcollection: vmware-solutions
 
@@ -38,11 +38,6 @@ Caveonix RiskForesight ライセンスを注文するときに、オンプレミ
 Caveonix RiskForesight ライセンスの注文が自動的に開始されます。 お客様は、注文を処理していることを示す確認メッセージを受信します。ライセンスの詳細を参照して、注文状況を確認できます。
 
 ライセンスを使用する準備ができると、ライセンスの状況が**「インストール済み」**に変更され、お客様は E メールで通知を受け取ります。
-
-## 次に行うこと
-{: #caveonix_license_ordering-next}
-
-注文した Caveonix RiskForesight ライセンスを管理します。
 
 ## 関連リンク
 {: #caveonix_license_ordering-related}

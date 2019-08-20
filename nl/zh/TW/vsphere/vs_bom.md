@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-16"
 
 keywords: vSphere BOM, bill of materials vSphere, BOM
 
@@ -22,7 +22,7 @@ subcollection: vmware-solutions
 
 |製造商       |元件                            |版本|
 |:-------------|:--------------------------------|:--------|
-|VMware       |vSphere ESXi                    |6.7 Update 1 或 6.5 Update 2 |
+|VMware       |vSphere ESXi                    |6.7 Update 2 或 6.5 Update 2|
 {: caption="表 1. VMware vSphere 叢集的 BOM" caption-side="top"}
 
 ## 相關鏈結

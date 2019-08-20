@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-21"
+lastupdated: "2019-07-16"
 
 subcollection: vmware-solutions
 
@@ -73,7 +73,7 @@ VMware の vSAN 暗号化および vSphere 暗号化は、多数の鍵管理サ�
 ### 鍵の中の鍵
 {: #kmip-design-keys}
 
-鍵管理システムは、一般的に、*エンベロープ暗号化*として知られる手法を使用して、鍵を他の鍵でラップまたは保護します。 このような鍵のことを、_ルート鍵_ または_鍵暗号化鍵 (KEK)_ と呼びます。鍵を利用するときには、その鍵に対応するルート鍵を使用して、鍵を復号またはアンラップします。 ルート鍵を破棄すれば、そのルート鍵で保護されているすべての鍵を効率的に無効化できます。 それらの鍵をルート鍵の近くに保管しておく必要はありません。 ルート鍵へのアクセスの制御が重要になります。
+鍵管理システムは、一般的に、*エンベロープ暗号化*として知られる手法を使用して、鍵を他の鍵でラップまたは保護します。 このような鍵のことを、_ルート鍵_ または_鍵暗号化鍵 (KEK)_ と呼びます。 鍵を利用するときには、その鍵に対応するルート鍵を使用して、鍵を復号またはアンラップします。 ルート鍵を破棄すれば、そのルート鍵で保護されているすべての鍵を効率的に無効化できます。 それらの鍵をルート鍵の近くに保管しておく必要はありません。 ルート鍵へのアクセスの制御が重要になります。
 
 {{site.data.keyword.cloud_notm}} Key Protect および Hyper Protect Crypto Services は、*カスタマー・ルート鍵* (CRK) を使用して、このようなサービスを提供するものです。 Key Protect では、鍵の取り出しが不可能な {{site.data.keyword.cloud_notm}} CloudHSM ハードウェアの中に CRK を排他的に保管します。Hyper Protect Crypto Services では IBM zSeries HSM に保管します。 保管されたそれらの CRK が、KMIP for VMware で VMware インスタンス用に生成された暗号鍵などの他の暗号鍵をラップするために使用されます。
 
@@ -102,7 +102,7 @@ KMIP for VMware は、多数の {{site.data.keyword.cloud_notm}} マルチゾー
 
 KMIP for VMware では、高可用性を実現するために、MZR ごとに 2 つのネットワーク・サービス・エンドポイントが {{site.data.keyword.cloud_notm}} プライベート・ネットワーク上に用意されています。 これらの両方のエンドポイントを KMS クラスターとして vCenter 鍵管理サーバー (KMS) 構成に構成してください。 各 MZR 内のエンドポイントのリストと、KMIP サーバー証明書の署名については、[KMIP for VMware サービスの資料](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)を参照してください。
 
-プライベート・ネットワークを介して KMIP for VMware にアクセスするために、{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの Virtual Routing and Forwarding (VRF) を有効にし、アカウントの VRF ルートに {{site.data.keyword.cloud_notm}} ネットワーク・サービス・エンドポイントのルートを追加しておく必要があります。 詳しくは、[IBM Cloud CLI を使用してアカウントでサービス・エンドポイントを使用できるようにする方法](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)を参照してください。
+プライベート・ネットワークを介して KMIP for VMware にアクセスするために、{{site.data.keyword.cloud_notm}} インフラストラクチャー・アカウントの Virtual Routing and Forwarding (VRF) を有効にし、アカウントの VRF ルートに {{site.data.keyword.cloud_notm}} ネットワーク・サービス・エンドポイントのルートを追加しておく必要があります。 詳しくは、[サービス・エンドポイントの有効化](/docs/account?topic=account-vrf-service-endpoint#service-endpoint)を参照してください。
 
 また、KMIP for VMware は、公衆インターネットではなく {{site.data.keyword.cloud_notm}} プライベート・ネットワークを使用して {{site.data.keyword.cloud_notm}} Key Protect に接続します。
 

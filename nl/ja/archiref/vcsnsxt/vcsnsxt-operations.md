@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -105,10 +105,5 @@ VMware on {{site.data.keyword.cloud_notm}} では、{{site.data.keyword.cloud_no
 
 {{site.data.keyword.containerlong_notm}} へのアプリケーション・デプロイメントは、以下の方法で行えます。
 -	{{site.data.keyword.containerlong_notm}} 接続およびサービスを CAM で開発して、{{site.data.keyword.icpfull_notm}} カタログに公開する。
--	{{site.data.keyword.containerlong_notm}} インスタンスを管理する拡張機能である Multi Cloud Manager。
--	Helm コマンド・ライン。
-
-## 関連リンク
-{: #vcsnsxt-operations-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+- {{site.data.keyword.containerlong_notm}} インスタンスを管理する拡張機能である Multi Cloud Manager。
+- Helm コマンド・ライン。

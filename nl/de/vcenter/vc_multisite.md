@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-16"
 
 keywords: vCenter Server multi-site, multi-site configuration, multi-site deployment vCenter Server
 
@@ -32,16 +32,16 @@ Die Konfiguration mit mehreren Standorten für vCenter Server-Instanzen wird nur
 Eine Bereitstellung mit mehreren Standorten besteht aus den folgenden Komponenten.
 
 * **Primäre Instanz**: Die primäre VMware vCenter Server-Instanz weist die folgende Konfiguration auf:
-  *  Microsoft Active Directory (AD) und DNS-Rootdomäne
-  *  vCenter Server-Unterdomäne
-  *  SSO-Domäne
-  *  SSO-Standortname
+  * Microsoft Active Directory (AD) und DNS-Rootdomäne
+  * vCenter Server-Unterdomäne
+  * SSO-Domäne
+  * SSO-Standortname
+  * Für primäre Instanzen, die in Version 2.8 oder höher bereitgestellt werden: vCenter Server Appliance (vCSA) mit integriertem Platform Services Controller (PSC)
 * **Sekundäre Instanz(en)**: Eine oder mehrere sekundäre vCenter Server-Instanzen sind mit der primären Instanz verbunden und weisen die folgende Konfiguration auf:
-   *  SSO-Standortname
-   *  Mit der Rootdomäne der primären Instanz verknüpfte DNS-Unterdomäne
-   *  Konfigurierte DNS- und AD-Replikation zwischen den virtuellen AD-Maschinen in der primären und der sekundären Instanz
-   *  Für primäre Instanzen, die in Version 2.8 oder höher bereitgestellt werden: vCenter Server Appliance (vCSA) mit integriertem Platform Services Controller (PSC), bereitgestellt und konfiguriert
-   *  Konfiguration von VMware vCenter in den sekundären Instanzen mit erweitertem Verbindungsmodus zu vCenter in der primären Instanz
+  * SSO-Standortname
+  * Mit der Rootdomäne der primären Instanz verknüpfte DNS-Unterdomäne
+  * Konfigurierte DNS- und AD-Replikation zwischen den virtuellen AD-Maschinen in der primären und der sekundären Instanz
+  * Konfiguration von VMware vCenter in den sekundären Instanzen mit erweitertem Verbindungsmodus zu vCenter in der primären Instanz
 
 ## vCenter Server-Bereitstellung mit mehreren Standorten
 {: #vc_multisite-deployment}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-01"
+lastupdated: "2019-07-16"
 
 keywords: release notes, what's new, version 3.1
 
@@ -40,14 +40,14 @@ IBM Expert Services がご利用いただけるようになりました。IBM Ex
 
 ## IBM Cloud コスト見積もりツールとの統合
 
-{{site.data.keyword.cloud_notm}} フレームワークに備わっている統一された見積もりツールを使用して、{{site.data.keyword.vmwaresolutions_short}} リソースのコストを見積もることができるようになりました。 この機能を使用すると、{{site.data.keyword.cloud_notm}} カタログにあるリソースのスナップショットを取って、それを単一の PDF ファイルに格納し、それを後ほどダウンロードして参照することができます。 コスト見積もりツールの結果は、契約でも正式な見積書でもなく、合計コストの推定額に過ぎません。
+{{site.data.keyword.cloud_notm}} フレームワークにより提供される統一された見積もりツール内で、{{site.data.keyword.vmwaresolutions_short}} リソースのコストを見積もることができるようになりました。 この機能を使用すると、{{site.data.keyword.cloud_notm}} カタログにあるリソースのスナップショットを保存して単一の PDF ファイルに格納し、後でこのファイルをダウンロードして参照することができます。 コスト見積もりツールの結果は、契約でも正式な見積書でもなく、合計コストの推定額に過ぎません。
 
 コスト見積もりツールの詳細については、[コストの見積もり](/docs/billing-usage?topic=billing-usage-cost)を参照してください。
 
 ## VMware vCenter Server インスタンスの更新
 {: #relnotes_v31-vcs}
 
-このリリースでは、新しくデプロイされるインスタンス、クラスター、ホストに関して、以下のアップグレードと機能改善が適用されます。
+このリリースでは、新しくデプロイされるインスタンス、クラスター、ホストに対して、以下のアップグレードと機能改善が適用されます。
 
 * vSphere ESXi 6.5 Update 2 (ビルド 6.5.0-13635690)
 * vCenter Server Appliance 6.5 Update 2g (ビルド 6.5.0-13638625)
@@ -57,7 +57,7 @@ IBM Expert Services がご利用いただけるようになりました。IBM Ex
 ### クラスターの代替 ESXi サーバー構成
 {: #relnotes_v31-esxi-config}
 
-既存のクラスターに新しい ESXi サーバーを追加できるようになりました。その場合には、既存の構成か、クラスター内の既存のホストとは別の代替の構成を選択します。 **「サーバーの追加」**ウィンドウから新しいサーバーを注文する際は、簡単にクラスター内の既存の構成を選択するか、新しい {{site.data.keyword.baremetal_short_sing}} 構成を選択できます。 これは、すべての vCenter Server、vCenter Server with Hybridity、および vCenter Server with NSX-T の各インスタンスに適用されます。
+既存のクラスターに新しい ESXi サーバーを追加できるようになりました。そのためには、既存の構成か、クラスター内の既存のホストとは別の代替の構成を選択します。 **「サーバーの追加」**ウィンドウから新しいサーバーを注文する際は、クラスター内の既存の構成を即座に選択することも、新しい {{site.data.keyword.baremetal_short_sing}} 構成を選択することもできます。 これは、すべての vCenter Server、vCenter Server with Hybridity、および vCenter Server with NSX-T の各インスタンスに適用されます。
 
 パフォーマンスや安定性で問題が生じるのを避けるため、CPU、RAM、ストレージに関しては、すべてのクラスターで同じか類似した構成を使用することをお勧めします。 この機能は、同じクラスター内でハードウェア更新を行うときに役立ちます。
 
@@ -68,7 +68,7 @@ IBM Expert Services がご利用いただけるようになりました。IBM Ex
 
 vCenter Server プライマリー・インスタンス用に生成される vCenter パスワードの長さが 15 文字になり、パスワードとロックアウトに関する以下のポリシー構成が追加されました。
 
-* vCenter パスワードのポリシーとして、vCenter パスワードの最小長が 15 文字になりました。
+* vCenter パスワードのポリシーでの vCenter パスワードの最小長が 15 文字になりました。
 * vCenter ロックアウト・ポリシーで許容される失敗ログイン試行最大回数が 3 回になりました。
 * vCenter ロックアウト・ポリシーで許容される失敗間の間隔が 900 秒になりました。
 
@@ -82,7 +82,7 @@ vCenter Server プライマリー・インスタンス用に生成される NSX 
 ### Caveonix RiskForesight on IBM Cloud
 {: #relnotes_v31-services-caveonix}
 
-現行リリースでは、新しくデプロイするすべてのインスタンスで、Caveonix RiskForesight 2.2.1 がインストールされます。 Caveonix RiskForesight について詳しくは、[Caveonix の Web サイト](https://www.caveonix.com/){:external}を参照してください。
+現行リリースでは、新しくデプロイするすべてのインスタンスで、Caveonix RiskForesight 2.2.1 がインストールされます。 Caveonix RiskForesight について詳しくは、[Caveonix の Web サイト](https://www.caveonix.com){:external}を参照してください。
 
 ### HyTrust ライセンスの自動更新
 {: #relnotes_v31-services-ht}
@@ -112,14 +112,14 @@ vCenter Server プライマリー・インスタンス用に生成される NSX 
 
 V3.1 以降でデプロイされた新しいインスタンスでは、Zerto on {{site.data.keyword.cloud_notm}} のインストールのために {{site.data.keyword.cloud_notm}} 請求可能アカウントが必要になります。 VM レプリケーションの料金に、{{site.data.keyword.cloud_notm}} インフラストラクチャー請求ではなく {{site.data.keyword.cloud_notm}} 請求可能プランが使用されるようになりました。
 
-Zerto on {{site.data.keyword.cloud_notm}} を注文するには、{{site.data.keyword.cloud_notm}} アカウントが特定の要件を満たしている必要があります。 既存の Zerto on {{site.data.keyword.cloud_notm}} インストールがある場合には、Zerto VM 請求タイプを請求可能に変換することができます。 詳しくは、[Zerto レプリケーションの請求](/docs/services/vmwaresolutions?topic=vmware-solutions-zerto_ordering#zerto_ordering-billing)を参照してください。
+Zerto on {{site.data.keyword.cloud_notm}} を注文するには、{{site.data.keyword.cloud_notm}} アカウントが特定の要件を満たしている必要があります。 既存の Zerto on {{site.data.keyword.cloud_notm}} インストール済み環境がある場合には、Zerto VM 請求タイプを請求可能に変換することができます。 詳しくは、[Zerto レプリケーションの請求](/docs/services/vmwaresolutions?topic=vmware-solutions-zerto_ordering#zerto_ordering-billing)を参照してください。
 
 ## 新規資料および更新された資料
 {: #relnotes_v31-updated-doc}
 
 * Activity Tracker インスタンス管理のイベントと KMIP for VMware on IBM Cloud サービスのイベントが更新されました。 詳しくは、[Activity Tracker イベント](/docs/services/vmwaresolutions?topic=vmware-solutions-at-events)を参照してください。
 * ユーザー ID のリファレンス資料に、{{site.data.keyword.cloud_notm}} サービスの自動化機能によるサービスのインストールと構成で使用されるユーザー ID に関連した更新が加えられました。 詳しくは、[IBM ユーザー ID](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_user_ids) の*サービス・ユーザー ID* のセクションを参照してください。
-* ``クラスター API のネットワーク・インターフェース詳細の取得`` に関する新しいリファレンス資料が用意されました。 詳しくは、[API リファレンス](https://cloud.ibm.com/apidocs/vmware-solutions){:external}を参照してください。
+* 新しい ``クラスターのネットワーク・インターフェース詳細の取得`` API 用のリファレンス資料が利用できるようになりました。 詳しくは、[API リファレンス](https://cloud.ibm.com/apidocs/vmware-solutions){:external}を参照してください。
 * ユーザー資料の*リファレンス*のセクションに、新しく以下の技術資料が追加されました。
   * [運用管理](/docs/services/vmwaresolutions?topic=vmware-solutions-opsmgmt-intro)
   * [Day 2 運用手順](/docs/services/vmwaresolutions?topic=vmware-solutions-opsprocs-intro)

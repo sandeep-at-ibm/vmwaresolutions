@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -54,7 +54,7 @@ Sie können jetzt die Webbenutzerschnittstelle des WAN-Optimierungsprogramms ver
 ### Bandbreitenregulierung bei der Migration
 {: #hcxclient-monitoring-mig-bandwidth}
 
-Bevor Sie virtuelle Maschinen migrieren, führen Sie eine Bewertung der verwendeten Netzverbindung durch. Arbeiten Sie zusammen mit Netzentwicklern an dem Netz, das die Quelleninstanz von vSphere enthält, oder prüfen Sie wöchentlich und monatlich den Datenverkehr. Begrenzen Sie die verfügbare Bandbreite für Migrationen, wenn dieser Datenverkehr einen für Ihr Geschäft kritischen Link überquert, insbesondere wenn dieser Link weniger als 1 Gb/s beträgt. Verwenden Sie die Seite mit der am stärksten eingeschränkten Bandbreite. Typischerweise ist dies die Clientseite.
+Bevor Sie virtuelle Maschinen migrieren, führen Sie eine Bewertung der verwendeten Netzverbindung durch. Arbeiten Sie zusammen mit Netzspezialisten an dem Netz, das die Quelleninstanz von vSphere enthält, oder prüfen Sie wöchentlich und monatlich den Datenverkehr. Begrenzen Sie die verfügbare Bandbreite für Migrationen, wenn dieser Datenverkehr einen für Ihr Geschäft kritischen Link überquert, insbesondere wenn dieser Link weniger als 1 Gb/s beträgt. Verwenden Sie die Seite mit der am stärksten eingeschränkten Bandbreite. Typischerweise ist dies die Clientseite.
 
 Dies ist dann angebracht, wenn Sie die Paketkomponenten in der HCX-Client-Benutzerschnittstelle bereitstellen, aber die Nachbereitstellung erfordert, dass Sie zur Benutzerschnittstelle für die WAN-Optimierung wechseln.
 

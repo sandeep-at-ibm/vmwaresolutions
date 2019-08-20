@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -21,9 +21,10 @@ L'enrichissement de Stock Trader ne se fait pas en une seule étape. Pour Todd e
 ## AI Watson Tone Analyzer
 {: #vcscontent-aianalytics-ai-watson}
 
-L'exemple ci-après illustre une façon simple, mais étonnamment puissante, d'enrichir une application. Jane recherche dans le [catalogue {{site.data.keyword.cloud}}](https://cloud.ibm.com/catalog/) les services [AI](https://cloud.ibm.com/catalog/?category=ai) et [Analytics](https://cloud.ibm.com/catalog/?category=analytics) et découvre un catalogue riche en contenus.
+L'exemple ci-après illustre une façon simple, mais étonnamment puissante, d'enrichir une application. Jane recherche dans le [catalogue {{site.data.keyword.cloud}}](https://cloud.ibm.com/catalog) les services [AI](https://cloud.ibm.com/catalog?category=ai) et [Analytics](https://cloud.ibm.com/catalog?category=analytics) et découvre un catalogue riche en contenus.
 
 Jane sélectionne [Tone Analyzer](https://cloud.ibm.com/catalog/services/tone-analyzer), avec le plan standard, puis elle récupère des données d'identification pour effectuer l'appel.
+
 Jane a restructuré Stock Trader et elle crée simplement un secret Kubernetes pour Tone Analyzer. Ainsi, même si elle modifie des plans ou des régions, elle n'a pas besoin de régénérer le code.
 
 Grâce à la restructuration, Jane a pu essayer différentes infrastructures d'interface utilisateur sans interrompre l'expérience utilisateur. Par conséquent, la nouvelle interface utilisateur est disponible pour être utilisée et pour permettre de comprendre le ton des commentaires en retour de l'utilisateur.
@@ -49,8 +50,3 @@ Au départ, elle a utilisé API Connect pour simplifier la réponse du service d
 A présent, Jane est ravie car lors de la modification du service de courtage, elle a simplement changé la façon dont ce service est mappé à l'API simplifiée qu'elle a créée, et son code n'a même pas eu besoin de redémarrer. La solution Stock Trader a simplement continué de demander les données à la même API comme si elle n'avait pas changé. Toutes les modifications de l'API ont été effectuées en coulisse.
 
 De plus, grâce aux fonctions de surveillance et de décompte d'API Connect, Jane peut savoir qui utilise son API simplifiée.
-
-## Liens connexes
-{: #vcscontent-aianalytics-related}
-
-* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

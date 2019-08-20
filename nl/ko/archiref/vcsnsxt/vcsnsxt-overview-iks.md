@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -162,8 +162,3 @@ Calico는 인터넷과 동일한 IP 네트워킹 프린시펄을 기반으로 Ku
 -	**사설 VLAN 서브넷:**
     - 기본 사설 서브넷은 클러스터 작성 중에 작업자 노드에 지정되는 사설 IP 주소를 판별합니다. 동일한 VLAN에 있는 여러 클러스터는 하나의 기본 사설 서브넷을 공유할 수 있습니다.
     - 포터블 사설 서브넷은 한 클러스터에만 바인드되고 클러스터에 8개의 사설 IP 주소를 제공합니다. 3개의 IP는 네트워크 기능에 예약됩니다. 1개의 IP는 기본 사설 Ingress ALB에서 사용되고 4개의 IP는 사설 로드 밸런서 네트워킹 서비스를 작성하는 데 사용할 수 있습니다. 포터블 사설 IP는 인터넷을 통해 로드 밸런서 서비스에 액세스할 때 사용할 수 있는 영구적인 고정 IP 주소입니다.
-
-## 관련 링크
-{: #vcsnsxt-overview-iks-links}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

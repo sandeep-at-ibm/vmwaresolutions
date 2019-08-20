@@ -16,12 +16,12 @@ subcollection: vmware-solutions
 
 此发行版包含新增功能、组件更新、易用性增强功能和错误修订。有关不同发行版中的已修复问题、产品已知问题以及使用 {{site.data.keyword.vmwaresolutions_full}} 的提示的列表，请参阅 [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}。
 
-## Migration and App Modernization 单节点试用版实例
+## Single-node Trial for Migration and App Modernization 实例
 {: #relnotes_v28-single-node-trial}
 
-通过 Migration and App Modernization 单节点试用版，可以快速试用 {{site.data.keyword.cloud_notm}}，以将 VMware 工作负载迁移到 {{site.data.keyword.cloud_notm}}，然后使用容器对工作负载进行现代化。此试用版是 {{site.data.keyword.icpfull_notm}} Hosted on VMware vCenter Server on {{site.data.keyword.cloud_notm}} 的一个版本，提供了针对容器的 Kubernetes 管理平台，同时提供了可以使用与内部部署环境相同的熟悉工具进行管理的单租户 VMware 平台。
+通过 Single-node Trial for Migration and App Modernization，可以快速试用 {{site.data.keyword.cloud_notm}}，以将 VMware 工作负载迁移到 {{site.data.keyword.cloud_notm}}，然后使用容器对工作负载进行现代化。此试用版是 {{site.data.keyword.icpfull_notm}} Hosted on VMware vCenter Server on {{site.data.keyword.cloud_notm}} 的一个版本，提供了针对容器的 Kubernetes 管理平台，同时提供了可以使用与内部部署环境相同的熟悉工具进行管理的单租户 VMware 平台。
 
-有关更多信息，请参阅 [Migration and App Modernization 单节点试用版概述](/docs/services/vmwaresolutions?topic=vmware-solutions-cloud_modern_bundle_overview#cloud_modern_bundle_overview)。
+有关更多信息，请参阅 [Single-node Trial for Migration and App Modernization 概述](/docs/services/vmwaresolutions?topic=vmware-solutions-cloud_modern_bundle_overview#cloud_modern_bundle_overview)。
 
 ## 添加和除去网络文件系统存储器
 {: #relnotes_v28-nfs}

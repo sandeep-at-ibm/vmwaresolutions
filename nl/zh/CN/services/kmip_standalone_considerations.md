@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-18"
 
 keywords: KMIP for VMware, KMIP stand-alone, tech specs KMIP
 
@@ -31,7 +31,7 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} 服务作为独立服务提�
 KMIP for VMware on {{site.data.keyword.cloud_notm}} 服务随附以下规范：
 
 * 与 VMware 兼容的密钥管理互操作性协议 (KMIP)
-* 两个受管服务：[IBM Key Protect for {{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/catalog/services/key-protect){:external} 和 [{{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services){:external}
+* 两个受管服务：[Key Protect](https://cloud.ibm.com/catalog/services/key-protect){:external} 和 [Hyper Protect Crypto Services](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services){:external}
 * 在全球多个地理区域中可用
 * 每个区域中提供两个 KMIP 网络服务端点，以实现高可用性
 
@@ -40,7 +40,7 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} 服务随附以下规范：
 
 安装 KMIP for VMware on {{site.data.keyword.cloud_notm}} 实例之前，请查看以下注意事项：
 
-* KMIP for VMware on {{site.data.keyword.cloud_notm}} 使用 IBM Key Protect for {{site.data.keyword.cloud_notm}} (Key Protect) 服务或 {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services (HPCS) 服务来创建、加密和解密加密密钥。因此，安装 KMIP for VMware on {{site.data.keyword.cloud_notm}} 之前，确保：
+* KMIP for VMware on {{site.data.keyword.cloud_notm}} 使用 IBM Key Protect 服务或 Hyper Protect Crypto Services (HPCS) 服务来创建、加密和解密加密密钥。因此，安装 KMIP for VMware on {{site.data.keyword.cloud_notm}} 之前，确保：
    * 已在要托管 KMIP for VMware on {{site.data.keyword.cloud_notm}} 实例的 {{site.data.keyword.cloud_notm}} 区域中订购了可用的 Key Protect 或 HPCS 服务实例。
       * 有关创建 Key Protect 实例的更多信息，请参阅[供应服务](/docs/services/key-protect?topic=key-protect-provision)。
       * 有关创建 HPCS 实例的更多信息，请参阅[供应服务](/docs/services/hs-crypto?topic=hs-crypto-provision#provision)。 除了供应 HPCS 服务外，还必须[初始化加密实例](/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-hsm)，以便 HPCS 可以提供密钥相关功能。
@@ -56,7 +56,7 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} 服务随附以下规范：
      **重要信息**：没有 CRK，无法订购此服务。强烈建议您通过该方法来使用现有密钥资料创建 CRK，并备份创建的密钥资料。通过执行此操作，可确保如果在其中应用 Key Protect 或 HPCS 来存储 CRK 的数据中心发生故障，您也可以恢复密钥。
 * 确保 {{site.data.keyword.cloud_notm}} 基础架构帐户已启用支持虚拟路由和转发 (VRF) 以及与服务端点的连接。有关更多信息，请参阅：
    * [IBM Cloud 上的虚拟路由和转发 (VRF) 概述](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-   * [使用 IBM Cloud CLI 支持帐户使用服务端点](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
+   * [启用服务端点](/docs/account?topic=account-vrf-service-endpoint#service-endpoint)
 * 由于仅支持专用连接，因此无需在 vCenter Server 中配置任何防火墙或 SNAT 规则，以用于从 vCenter Server 到 KMIP for VMware on {{site.data.keyword.cloud_notm}} 实例的端点的网络连接。
 
 有关更多信息，请参阅 [KMIP for VMware on IBM Cloud 解决方案体系结构](/docs/services/vmwaresolutions/archiref/kmip?topic=vmware-solutions-kmip-overview)。

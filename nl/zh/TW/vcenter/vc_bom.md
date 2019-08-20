@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-06"
 
 keywords: vCenter Server BOM, bill of materials vCenter Server, BOM
 
@@ -42,13 +42,13 @@ subcollection: vmware-solutions
 
 |製造商       |元件                            |版本|
 |:------------- |:------------------------------ |:------------- |
-|VMware       |vSphere ESXi                    | 6.7 Update 1（建置 6.7.0-13004448）或 <br/>6.5 Update 2（建置 6.5.0-13635690）|
+|VMware       |vSphere ESXi                    | 6.7 EP 10（建置 6.7.0-13981272）或 <br/>6.5 Update 2（建置 6.5.0-13635690）|
 |VMware       | vSphere 6.7                     | Distributed vSwitch 6.6.0 |
 |VMware       | vSphere 6.5                     | Distributed vSwitch 6.5.0 |
-|VMware       |vCenter Server Appliance        | 6.7 Update 1b（建置 6.7.0-11727113）或 <br/>6.5 Update 2g（建置 6.5.0-13638625）|
-|VMware       |Platform Services Controller    | 6.7 Update 1b（建置 6.7.0-11727113）或 <br/>6.5 Update 2d（建置 6.5.0-10964411）|
+|VMware       |vCenter Server Appliance        | 6.7 Update 2b (6.7.0-13843469) 或 <br/>6.5 Update 2g（建置 6.5.0-13638625）|
+|VMware       |Platform Services Controller    | 6.7 Update 2b (6.7.0-13843469) 或 <br/>6.5 Update 2g（建置 6.5.0-13638625）|
 |VMware       |vSAN                            | 6.7 Update 1 或 <br/>6.6.1        |
-|VMware       |NSX for vSphere                 | 6.4.4（建置 11197766）   |
+|VMware       |NSX for vSphere                 | 6.4.5（建置 13282012）|
 |VMware       | NSX-T for vSphere               |2.4          |
 |Microsoft    |Windows Server Standard Edition | 2016       |
 {: caption="表 2. vCenter Server 實例中的軟體元件的 BOM" caption-side="top"}
@@ -137,6 +137,17 @@ vSphere 叢集使用兩個 vSphere Distributed Switch (vDS)：一個用於公用
 
    當 vDS 中的 MTU 大小變更時，會將連接的上行鏈路（實體 NIC）卸下再重新連接。因此，使用此上行鏈路的 VM 會短暫的中斷。所以，建議您在排定的關閉時間計劃 MTU 設定更新。
    {:note}
+
+## 增強型 VMware vMotion 相容性 (EVC) 模式設定
+{: #vc_bom-evc-mode-settings}
+
+請檢閱下表，以取得 vCenter Server 實例的 EVC 模式設定的概觀，以及 vSphere 版本之間的差異。
+
+|Bare Metal Server CPU 型號| vSphere 6.5                     | vSphere 6.7                     |
+|:------------- |:------------- |:------------- |
+|Broadwell| EVC 設為 Intel **Broadwell** 世代| EVC 設為 Intel **Broadwell** 世代|
+|Skylake|未設定 | EVC 設為 Intel **Skylake** 世代|
+{: caption="表 6. vCenter Server 實例及叢集的 EVC 模式設定" caption-side="top"}
 
 ## 相關鏈結
 {: #vc_bom-related}

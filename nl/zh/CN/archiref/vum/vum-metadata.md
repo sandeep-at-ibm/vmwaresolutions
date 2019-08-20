@@ -46,4 +46,4 @@ VUM 显示由 vSAN 生成的系统管理的基线。系统管理的基线会自�
 {: #vum-metadata-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} 解决方案体系结构](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [VMware Solutions on {{site.data.keyword.cloud_notm}} 数字技术互动](https://ibm-dte.mybluemix.net/vmware)（演示）
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} 数字技术互动](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/)（演示）

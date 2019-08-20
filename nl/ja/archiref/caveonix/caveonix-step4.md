@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-21"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -71,8 +71,3 @@ subcollection: vmware-solutions
 |タスク |4 つのタスク (資産スキャン、NSX フロー、VMware インフラストラクチャー・スキャン、VMware 脆弱性) がセットアップされます。 スキャン名は、DC1AssetScan、NSXFlows、VMWInfraScan、VMWVulnScan に設定されます |
 |タスク |4 つのタスク (資産スキャン、NSX フロー、VMware インフラストラクチャー・スキャン、VMware 脆弱性) がセットアップされます。 タイプは、vCenter、NSX、VMWareInfrastructureScan、VMWareVulnerabilityScan に設定されます |
 |タスク |スケジュールは、DC1AssetScan が毎時に設定され、その他が毎日に設定されます |
-
-## 関連リンク
-{: #caveonix-step4-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

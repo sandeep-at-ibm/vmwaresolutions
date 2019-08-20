@@ -19,7 +19,7 @@ O instalador provisiona e configura uma máquina virtual para cada dispositivo v
 {: #hcx-archi-install-cfg-hybrid-prereq}
 
 * O HCX Manager deve ser instalado no local e registrado com um terminal de nuvem ativado para VCS HCX.
-* O datacenter virtual de destino deve ter recursos suficientes.
+* O data center virtual de destino deve ter recursos suficientes.
 
 ## Visão Geral da Configuração
 {: #hcx-archi-install-cfg-hybrid-config-ovw}
@@ -137,7 +137,7 @@ Amplie uma rede da Camada 2 do data center no local para a nuvem ativada para VC
 4. Na página **Selecionar grupos de portas de origem**, confirme as informações sobre o grupo de portas e insira o **Endereço IP do gateway** e o prefixo da rede. Clique em **Avançar**.
 5. Na página **Selecionar gateway de destino**, conclua as etapas a seguir:
   1. Selecione a Organização em nuvem do VCS Hybrid Cloud Services no menu **Organização**.
-  2. Selecione o datacenter virtual em Nuvem do VCS Hybrid Cloud Services no menu virtual.
+  2. Selecione o data center virtual em Nuvem do VCS Hybrid Cloud Services no menu virtual.
   3. Deixe **Roteamento de proximidade** desativado para forçar uma VM dentro do VCS Hybrid Cloud Services ativado para sempre usar o gateway no local para acessar a Internet. Por padrão, o tráfego que se origina de uma VM na nuvem ativada para o VCS Hybrid Cloud Services atravessa o caminho de dados da Camada 2 de volta para o data center no local e para o gateway padrão. Se **Roteamento de proximidade** estiver marcado, uma VM dentro da nuvem ativada para o VCS Hybrid Cloud Services poderá acessar a Internet sem atravessar o caminho de dados da Camada 2 para o vSphere.
   4. Selecione o gateway de destino remoto na lista de gateways clicando na linha. Clique em **Avançar**.
 6. Na página **Pronto para concluir**, revise todos os valores fornecidos. Clique em **Concluir**.

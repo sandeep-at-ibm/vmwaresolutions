@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-29"
+lastupdated: "2019-08-05"
 
 ---
 
@@ -66,8 +66,3 @@ Für eine vollständige Unternehmensarchitektur sind unter Umständen die folgen
 Weitere Informationen dazu, wie diese Architektur durch die Integration von Chef erweitert werden kann, finden Sie unter [Referenzarchitektur für vRA mit Chef-Integration](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_VRA_Chef_Integration_Architecture.pdf){:new_window}.
 
 * Service-Management-Schicht – Diese Schicht konzentriert sich auf den kompletten Lebenszyklus der IT-Umgebung und wird typischerweise auf Unternehmensebene implementiert, wobei sie Eingaben aus allen IT-Operations- und -Technologiesilos kombiniert. Diese Schicht wurde üblicherweise in IT Service Management-Frameworks (ITSM) konzipiert wie IT Infrastructure Library (ITIL) und ISO/IEC 20000. Dabei handelt es sich um Frameworks von Best Practices für die Bereitstellung von IT-Services in den Prozessen und Phasen des IT-Service-Lebenszyklus. Auf Produktebene wird ITSM durch ein zentralisiertes Workflow-Management-System für die Behandlung von Vorfällen, Serviceanforderungen, Problemen, Änderungen und Wissen im Zusammenhang mit einer Configuration Management Database verkörpert.
-
-## Zugehörige Links
-{: #opsmgmt-intro-related}
-
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

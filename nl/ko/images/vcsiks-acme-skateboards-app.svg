@@ -93,7 +93,7 @@
             <xhtml:div
                display="inline-block"
                text-align="inherit"
-               text-decoration="inherit">ICP Cluster</xhtml:div>
+               text-decoration="inherit">ICP 클러스터</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text
@@ -140,7 +140,7 @@
          id="rect24" />
     </g>
     <g
-       transform="translate(122.5,478.5)"
+       transform="translate(122.5,475.5)"
        id="g26">
       <switch
          id="switch28">
@@ -160,7 +160,7 @@
             <xhtml:div
                display="inline-block"
                text-align="inherit"
-               text-decoration="inherit">Pod</xhtml:div>
+               text-decoration="inherit">팟(Pod)</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text
@@ -194,7 +194,7 @@
        stroke="#666"
        id="rect34" />
     <g
-       transform="translate(95.5,428.5)"
+       transform="translate(95.5,425.5)"
        id="g36">
       <switch
          id="switch38">
@@ -214,7 +214,7 @@
             <xhtml:div
                display="inline-block"
                text-align="inherit"
-               text-decoration="inherit">Acme Web App</xhtml:div>
+               text-decoration="inherit">Acme 웹 앱</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text
@@ -231,7 +231,7 @@
       </switch>
     </g>
     <g
-       transform="translate(108.5,458.5)"
+       transform="translate(108.5,455.5)"
        id="g42">
       <switch
          id="switch44">
@@ -251,7 +251,7 @@
             <xhtml:div
                display="inline-block"
                text-align="inherit"
-               text-decoration="inherit">Container</xhtml:div>
+               text-decoration="inherit">컨테이너</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text
@@ -269,7 +269,7 @@
       </switch>
     </g>
     <g
-       transform="translate(101.5,508.5)"
+       transform="translate(101.5,505.5)"
        id="g48">
       <switch
          id="switch50">
@@ -289,7 +289,7 @@
             <xhtml:div
                display="inline-block"
                text-align="inherit"
-               text-decoration="inherit">Worker Node</xhtml:div>
+               text-decoration="inherit">작업자 노드</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text
@@ -316,7 +316,7 @@
        stroke="#00f"
        id="rect54" />
     <g
-       transform="translate(287.5,273.5)"
+       transform="translate(287.5,270.5)"
        id="g56">
       <switch
          id="switch58">
@@ -336,7 +336,7 @@
             <xhtml:div
                display="inline-block"
                text-align="inherit"
-               text-decoration="inherit">Proxy Node</xhtml:div>
+               text-decoration="inherit">프록시 노드</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text
@@ -363,7 +363,7 @@
        stroke="#00f"
        id="rect62" />
     <g
-       transform="translate(271.5,248.5)"
+       transform="translate(271.5,245.5)"
        id="g64">
       <switch
          id="switch66">
@@ -383,7 +383,7 @@
             <xhtml:div
                display="inline-block"
                text-align="inherit"
-               text-decoration="inherit">Ingress Controller</xhtml:div>
+               text-decoration="inherit">수신 제어기</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text
@@ -427,7 +427,7 @@
          id="rect76" />
     </g>
     <g
-       transform="translate(281.5,158.5)"
+       transform="translate(281.5,155.5)"
        id="g78">
       <switch
          id="switch80">
@@ -447,7 +447,7 @@
             <xhtml:div
                display="inline-block"
                text-align="inherit"
-               text-decoration="inherit">10.xx (natted)</xhtml:div>
+               text-decoration="inherit">10.xx(natted)</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text
@@ -489,7 +489,7 @@
          id="rect90" />
     </g>
     <g
-       transform="translate(307.5,478.5)"
+       transform="translate(307.5,475.5)"
        id="g92">
       <switch
          id="switch94">
@@ -509,7 +509,7 @@
             <xhtml:div
                display="inline-block"
                text-align="inherit"
-               text-decoration="inherit">Pod</xhtml:div>
+               text-decoration="inherit">팟(Pod)</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text
@@ -543,7 +543,7 @@
        stroke="#666"
        id="rect100" />
     <g
-       transform="translate(280.5,428.5)"
+       transform="translate(280.5,425.5)"
        id="g102">
       <switch
          id="switch104">
@@ -563,7 +563,7 @@
             <xhtml:div
                display="inline-block"
                text-align="inherit"
-               text-decoration="inherit">Acme Web App</xhtml:div>
+               text-decoration="inherit">Acme 웹 앱</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text
@@ -580,7 +580,7 @@
       </switch>
     </g>
     <g
-       transform="translate(294.5,458.5)"
+       transform="translate(294.5,455.5)"
        id="g108">
       <switch
          id="switch110">
@@ -600,7 +600,7 @@
             <xhtml:div
                display="inline-block"
                text-align="inherit"
-               text-decoration="inherit">Container</xhtml:div>
+               text-decoration="inherit">컨테이너</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text
@@ -618,7 +618,7 @@
       </switch>
     </g>
     <g
-       transform="translate(287.5,508.5)"
+       transform="translate(287.5,505.5)"
        id="g114">
       <switch
          id="switch116">
@@ -638,7 +638,7 @@
             <xhtml:div
                display="inline-block"
                text-align="inherit"
-               text-decoration="inherit">Worker Node</xhtml:div>
+               text-decoration="inherit">작업자 노드</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text
@@ -684,7 +684,7 @@
          id="rect126" />
     </g>
     <g
-       transform="translate(488.5,478.5)"
+       transform="translate(488.5,475.5)"
        id="g128">
       <switch
          id="switch130">
@@ -704,7 +704,7 @@
             <xhtml:div
                display="inline-block"
                text-align="inherit"
-               text-decoration="inherit">Pod</xhtml:div>
+               text-decoration="inherit">팟(Pod)</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text
@@ -738,7 +738,7 @@
        stroke="#666"
        id="rect136" />
     <g
-       transform="translate(461.5,428.5)"
+       transform="translate(461.5,425.5)"
        id="g138">
       <switch
          id="switch140">
@@ -758,7 +758,7 @@
             <xhtml:div
                display="inline-block"
                text-align="inherit"
-               text-decoration="inherit">Acme Web App</xhtml:div>
+               text-decoration="inherit">Acme 웹 앱</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text
@@ -775,7 +775,7 @@
       </switch>
     </g>
     <g
-       transform="translate(475.5,458.5)"
+       transform="translate(475.5,455.5)"
        id="g144">
       <switch
          id="switch146">
@@ -795,7 +795,7 @@
             <xhtml:div
                display="inline-block"
                text-align="inherit"
-               text-decoration="inherit">Container</xhtml:div>
+               text-decoration="inherit">컨테이너</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text
@@ -813,7 +813,7 @@
       </switch>
     </g>
     <g
-       transform="translate(468.5,508.5)"
+       transform="translate(468.5,505.5)"
        id="g150">
       <switch
          id="switch152">
@@ -833,7 +833,7 @@
             <xhtml:div
                display="inline-block"
                text-align="inherit"
-               text-decoration="inherit">Worker Node</xhtml:div>
+               text-decoration="inherit">작업자 노드</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text
@@ -869,7 +869,7 @@
        stroke="#00f"
        id="rect158" />
     <g
-       transform="translate(300.5,583.5)"
+       transform="translate(300.5,580.5)"
        id="g160">
       <switch
          id="switch162">
@@ -903,7 +903,7 @@
       </switch>
     </g>
     <g
-       transform="translate(283.5,613.5)"
+       transform="translate(283.5,610.5)"
        id="g166">
       <switch
          id="switch168">
@@ -923,7 +923,7 @@
             <xhtml:div
                display="inline-block"
                text-align="inherit"
-               text-decoration="inherit">Virtual Machine</xhtml:div>
+               text-decoration="inherit">가상 머신</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text
@@ -979,7 +979,7 @@
             <xhtml:div
                display="inline-block"
                text-align="inherit"
-               text-decoration="inherit">VCS Cluster</xhtml:div>
+               text-decoration="inherit">VCS 클러스터</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text

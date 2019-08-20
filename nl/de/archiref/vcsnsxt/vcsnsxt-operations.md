@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -105,10 +105,5 @@ Benutzer können eine {{site.data.keyword.containerlong_notm}}-Umgebung über da
 
 Anwendungsbereitstellungen in {{site.data.keyword.containerlong_notm}} sind mit den folgenden Verfahren möglich:
 -	{{site.data.keyword.containerlong_notm}}-Verbindungen und -Services werden in CAM entwickelt und im {{site.data.keyword.icpfull_notm}}-Katalog veröffentlicht.
--	Multi Cloud Manager, eine zukünftige Erweiterung für das Management von {{site.data.keyword.containerlong_notm}}-Instanzen.
--	Helm-Befehlszeile.
-
-## Zugehörige Links
-{: #vcsnsxt-operations-related}
-
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+- Multi Cloud Manager, eine zukünftige Erweiterung für das Management von {{site.data.keyword.containerlong_notm}}-Instanzen.
+- Helm-Befehlszeile.

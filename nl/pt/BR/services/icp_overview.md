@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-29"
 
 keywords: IBM Cloud Private, ICP, tech specs ICP
 
@@ -29,7 +29,6 @@ Esse serviço está disponível para as instâncias a seguir:
 
 A versão atual do IBM Cloud Private instalada é a 3.1.2. O {{site.data.keyword.cloud_notm}} Automation Manager também é implementado como parte da ordem de serviço do {{site.data.keyword.cloud}} Private Hosted.
 {:note}
-
 
 ## Especificações técnicas para o IBM Cloud Private Hosted
 {: #icp_overview-specs}

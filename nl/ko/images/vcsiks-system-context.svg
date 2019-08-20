@@ -350,7 +350,7 @@
        stroke-miterlimit="10"
        id="path88" />
     <g
-       transform="translate(472.5,569.5)"
+       transform="translate(472.5,594.5)"
        id="g90">
       <switch
          id="switch92">
@@ -371,7 +371,7 @@
                display="inline-block"
                text-align="inherit"
                text-decoration="inherit"
-               style="background-color:#ffffff">Hybridity</xhtml:div>
+               style="background-color:#ffffff">하이브리디티</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text
@@ -420,7 +420,7 @@
        stroke-miterlimit="10"
        id="path104" />
     <g
-       transform="translate(807.5,585.5)"
+       transform="translate(807.5,600.5)"
        id="g106">
       <switch
          id="switch108">
@@ -441,7 +441,7 @@
                display="inline-block"
                text-align="inherit"
                text-decoration="inherit"
-               style="background-color:#ffffff">Hybridity</xhtml:div>
+               style="background-color:#ffffff">하이브리디티</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text
@@ -853,7 +853,7 @@
       <text
          x="129.5"
          y="790.5"
-         id="text224">On cloud VM</text>
+         id="text224">온클라우드 VM</text>
     </g>
     <ellipse
        cx="925"
@@ -922,7 +922,7 @@
        stroke-miterlimit="10"
        id="path244" />
     <g
-       transform="translate(644.5,913.5)"
+       transform="translate(656.5,913.5)"
        id="g246">
       <switch
          id="switch248">
@@ -943,7 +943,7 @@
                display="inline-block"
                text-align="inherit"
                text-decoration="inherit"
-               style="background-color:#ffffff">Consume Services</xhtml:div>
+               style="background-color:#ffffff">서비스 이용</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text

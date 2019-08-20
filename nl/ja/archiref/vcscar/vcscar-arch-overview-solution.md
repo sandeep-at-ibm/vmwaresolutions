@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -184,8 +184,3 @@ Terraform テンプレートを作成するためのグラフィカル・ユー�
 {: #vcscar-arch-overview-solution-maria-db}
 
 Template Designer アプリケーションのデータベース。
-
-## 関連リンク
-{: #vcscar-arch-overview-solution-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

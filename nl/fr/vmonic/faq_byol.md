@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-07-23"
 
 keywords: FAQ, license, BYOL
 
@@ -146,42 +146,6 @@ Avec l'introduction de la fonction BYOL, il n'est pas recommandé de continuer �
 {: faq}
 
 Non, parce que ces produits VMware ne font pas partie du déploiement de l'instance. Ces produits VMware peuvent être installés en sus du déploiement initial, ce qui implique que les clients ou leurs agents procèdent à l'installation et à l'octroi de licence.
-
-## Puis-je commander un stockage NFS avec vCenter Server with Hybridity Bundle ?
-{: #faq_byol-nfs}
-{: faq}
-
-Pour les instances nouvellement déployées, seul le stockage vSAN All-Flash est pris en charge. L'offre vCenter Server with Hybridity Bundle inclut l'octroi de licence vSAN Advanced ou Enterprise.
-
-Si vous possédez une instance vCenter Server dotée de stockage NFS, vous pouvez mettre à niveau votre instance existante vers vCenter Server with Hybridity Bundle. Bien que l'octroi de licence vSAN Advanced soit commandé durant la mise à niveau, vous n'êtes pas tenu de mettre à disposition un cluster All-flash vSAN.
-
-## Puis-je utiliser le mode BYOL avec vCenter Server with Hybridity Bundle ?
-{: #faq_byol-hybridity}
-{: faq}
-
-Vous ne pouvez pas utiliser votre propre licence VMware (BYOL) sur {{site.data.keyword.cloud_notm}}. vCenter Server with Hybridity Bundle exige que toutes les licences VMware soient fournies par IBM.
-
-## Quelle est la différence entre l'octroi de licence vCenter Server with Hybridity Bundle et l'octroi de licence vCenter Server ?
-{: #faq_byol-hybridity-vcs}
-{: faq}
-
-Les licences VMware individuelles disponibles dans vCenter Server sont facturées par unité centrale. Comme avec toutes les licences VMware facturées par unité centrale fournies par IBM, le prix est majoré de 1.3x sur tous les serveurs dotés de plus de 16 coeurs par unité centrale, pour Dual Intel Xeon Gold 6140.
-
-vCenter Server with Hybridity Bundle est un ensemble prescrit de licences et d'éditions VMware soumis à une licence par coeur et non par unité centrale. Par conséquent, le prix de la licence pour ces instances ne change pas.
-
-## Quels sont les composants et éditions de licence VMware fournis par IBM disponibles pour vCenter Server with Hybridity Bundle ?
-{: #faq_byol-hybridity-avail}
-{: faq}
-
-Les nouvelles instances de vCenter Server with Hybridity Bundle incluent VMware vSphere Enterprise Plus, VMware vCenter Standard, VMware NSX Advanced ou Enterprise, VMware vSAN Advanced ou Enterprise et VMware Hybrid Cloud Extension (HCX).
-
-Si vous disposez d'une instance vCenter Server avec une édition NSX Base, une mise à niveau vers l'édition NSX Advanced est effectuée automatiquement lorsque vous commandez vCenter Server with Hybridity Bundle.
-
-## Puis-je mettre à niveau l'édition NSX Advanced qui est incluse dans vCenter Server with Hybridity Bundle vers l'édition NSX Enterprise ?
-{: #faq_byol-nsx-upgrade}
-{: faq}
-
-Bien que vCenter Server with Hybridity Bundle inclut l'édition NSX Advanced, vous pouvez effectuer une mise à niveau vers l'édition NSX Enterprise après avoir commandé vCenter Server with Hybridity Bundle. Pour ce faire, utilisez l'onglet **Mise à jour et module de correction** de la page des détails d'instance sur la console {{site.data.keyword.vmwaresolutions_short}}.
 
 ## Liens connexes
 {: #faq_byol-related}

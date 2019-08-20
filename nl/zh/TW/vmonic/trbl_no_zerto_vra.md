@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-08-01"
 
 keywords: troubleshooting, Zerto Virtual Replication, Zerto ESXi server
 
@@ -24,7 +24,7 @@ subcollection: vmware-solutions
 ## 解決方法
 {: #trbl_no_zerto_vra-resolution}
 
-對於 vCenter Server 實例，Zerto 災難回復服務只從預設叢集 **cluster1** 安裝在 ESXi 伺服器上。不是建立其他叢集，或是將 ESXi 伺服器新增至其他叢集，相同 vCenter Server 環境中的任何其他叢集都不會自動安裝 Zerto 災難回復。
+Zerto 災難回復服務只從預設叢集（對於部署在 3.1 版或更早版本中的實例，預設叢集為 **cluster1**）安裝在 ESXi 伺服器上。不是建立其他叢集，或是將 ESXi 伺服器新增至其他叢集，相同 vCenter Server 環境中的任何其他叢集都不會自動安裝 Zerto 災難回復。
 
 在其他叢集上，您必須個別安裝 Zerto 災難回復。
 

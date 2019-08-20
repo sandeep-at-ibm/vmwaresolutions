@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -41,13 +41,8 @@ Im Systemkontextdiagramm sind die folgenden Systeme angegeben:
 * Knowledge Studio - Watson Studio ist ein Tool, mit dem die Skater-Sprache für das System entworfen und zum Erkennen von Dokumenten aus dem Web verwendet werden kann, die die Skater-Sprache implementieren.
 * Speech to Text - Wandelt Sprache in Text um. Diese Komponente akzeptiert Eingaben in Audioform von einem Gerät, auf dem der Chatbot ausgeführt wird, und konvertiert sie zur Verarbeitung durch Watson in Text.
 * Text to Speech - Erstellt synthetische Sprache aus Text. Diese Komponente akzeptiert Text aus der Anwendung "Skate Advisor" und konvertiert sie in eine Sprachausgabe für das Gerät, auf dem der Chatbot ausgeführt wird.
-* Discovery-Service - Mithilfe des Watson Discovery-Service ruft das System Datensätze für das Skateboarding ab, die den angeforderten Parametern entsprechen. Ein Beispiel wäre `Alle Datensätze für den Trick "Casper" auflisten`. 
+* Discovery-Service - Mithilfe des Watson Discovery-Service ruft das System Datensätze für das Skateboarding ab, die den angeforderten Parametern entsprechen. Ein Beispiel wäre `Alle Datensätze für den Trick "Casper" auflisten`.
 * Watson Assistant - Mithilfe des Watson Discovery-Service ruft das System Skater-relevanten Inhalt ab, der den angeforderten Parametern entspricht. Ein Beispiel wäre `Alle Datensätze für den Trick "Casper" auflisten`. Watson Discovery nutzt intelligente Techniken des maschinellen Lernens, um die relevantesten Passagen aus dem aufgenommenen Inhalt zu extrahieren.
 * Datenbank - Die Datenbank für die Anwendung "Acme Skate Advisor" befindet sich auf einer virtuellen Maschine, die durch vCenter Server verwaltet wird.
 * Anwendungscontainer - Dies sind die Anwendungen, die den Anwendungsmodernisierungsprozess durchlaufen haben und jetzt als Container ausgeführt werden. Bei dieser Referenzarchitektur und in diesem Beispiel für Acme Skateboards ist eine der containerisierten Anwendungen ein Web-Server, der Teil der Workload für die Onlinepräsenz ist. Die Acme-Container dienen als Hosts für die Acme-Webanwendung und die Anwendung "Acme Skate Advisor".
 * NSX Edge - NSX Edge-Instanzen sind virtuelle Appliances, die den ein- und ausgehenden Nord-Süd-Datenverkehr der vCenter Server-Instanz verwalten.
-
-## Zugehörige Links
-{: #vcscar-syscontext-related}
-
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

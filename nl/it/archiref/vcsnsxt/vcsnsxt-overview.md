@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -48,9 +48,3 @@ vCenter Server Hybridity Bundle non è un servizio gestito, anche se puoi aggiun
 Le opzioni di integrazione della piattaforma di vCenter Server Hybridity Bundle non sono limitate alle opzioni disponibili da VMware come vRealize Suite o vSphere with Operations Management, ma si estendono a più offerte di servizi di {{site.data.keyword.cloud_notm}} quali [vCenter Server e {{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsiks?topic=vmware-solutions-vcsiks-intro) e [vCenter Server e {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro), che utilizzano Terraform open source per gestire e fornire l'IaC (Infrastructure as Code).
 
 Il vasto portafoglio di servizi e opzioni di integrazione di più offerte disponibili per vCenter Server Hybridity Bundle forniscono una piattaforma realmente ibrida che rende l'ibridità un servizio possibile.
-
-## Link correlati
-{: #vcsnsxt-overview-related}
-
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

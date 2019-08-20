@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-06"
 
 keywords: vCenter Server BOM, bill of materials vCenter Server, BOM
 
@@ -42,13 +42,13 @@ Le tableau suivant fournit des informations de nomenclature détaillées concern
 
 | Fabricant  | Composant                      | Version    |
 |:------------- |:------------------------------ |:------------- |
-| VMware       | vSphere ESXi                    | 6.7 mise à jour 1 (build 6.7.0-13004448) ou <br/>6.5 mise à jour 2 (build 6.5.0-13635690) |
+| VMware       | vSphere ESXi                    | 6.7 EP 10 (build 6.7.0-13981272) ou <br/>6.5 Update 2 (build 6.5.0-13635690) |
 | VMware       | vSphere 6.7                     | Distributed vSwitch 6.6.0 |
 | VMware       | vSphere 6.5                     | Distributed vSwitch 6.5.0 |
-| VMware       | vCenter Server Appliance        | 6.7 mise à jour 1b (build 6.7.0-11727113) ou <br/>6.5 mise à jour 2g (build 6.5.0-13638625) |
-| VMware       | Contrôleur PSC (Platform Services Controller)    | 6.7 mise à jour 1b (build 6.7.0-11727113) ou <br/>6.5 mise à jour 2d (build 6.5.0-10964411) |
+| VMware       | vCenter Server Appliance        | 6.7 Update 2b (6.7.0-13843469) ou <br/>6.5 Update 2g (build 6.5.0-13638625) |
+| VMware       | Contrôleur PSC (Platform Services Controller)    | 6.7 Update 2b (6.7.0-13843469) ou <br/>6.5 Update 2g (build 6.5.0-13638625) |
 | VMware       | vSAN                            | 6.7 mise à jour 1 ou <br/>6.6.1       |
-| VMware       | NSX for vSphere                 | 6.4.4 (build 11197766)    |
+| VMware       | NSX for vSphere                 | 6.4.5 (build 13282012)    |
 | VMware       | NSX-T for vSphere               | 2.4                       |
 | Microsoft    | Windows Server édition Standard | 2016       |
 {: caption="Tableau 2. Nomenclature des composants logiciels des instances vCenter Server" caption-side="top"}
@@ -137,6 +137,17 @@ Afin de mettre à jour le paramètre de MTU pour le commutateur public, procéde
 
    Lorsque la taille de MTU dans un commutateur vDS est modifiée, les liaisons montantes connectées (cartes d'interface réseau physiques) sont désactivées, puis réactivées. Il en résulte une brève indisponibilité pour les machines virtuelles qui utilisent la liaison montante. Par conséquent, il est recommandé de planifier la mise à jour du paramètre de MTU durant le temps d'indisponibilité planifié.
    {:note}
+
+## Paramètres du mode EVC (Enhanced VMware vMotion Compatibility)
+{: #vc_bom-evc-mode-settings}
+
+Consultez le tableau suivant une présentation des paramètres du mode EVC pour les instances vCenter Server et des différences entre les versions vSphere.
+
+| Modèle d'UC du serveur bare metal | vSphere 6.5  | vSphere 6.7 |
+|:------------- |:------------- |:------------- |
+| Broadwell | EVC est défini sur la génération Intel **Broadwell** | EVC est défini sur la génération Intel **Broadwell** |
+| Skylake | Non défini | EVC est défini sur la génération Intel **Skylake** |
+{: caption="Tableau 6. Paramètres du mode EVC pour les instances et les clusters vCenter Server" caption-side="top"}
 
 ## Liens connexes
 {: #vc_bom-related}

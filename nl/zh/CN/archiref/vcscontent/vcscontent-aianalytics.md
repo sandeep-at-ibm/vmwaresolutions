@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -21,9 +21,11 @@ subcollection: vmware-solutions
 ## AI Watson Tone Analyzer
 {: #vcscontent-aianalytics-ai-watson}
 
-以下样本中用于扩充应用程序的方法虽然简单，但看上去十分强大。Jane 浏览 [{{site.data.keyword.cloud}} 目录](https://cloud.ibm.com/catalog/)以查找 [AI](https://cloud.ibm.com/catalog/?category=ai) 和 [Analytics](https://cloud.ibm.com/catalog/?category=analytics) 服务，并发现目录中有丰富的内容。
+以下样本中用于扩充应用程序的方法虽然简单，但看上去十分强大。Jane 浏览 [{{site.data.keyword.cloud}} 目录](https://cloud.ibm.com/catalog)以查找 [AI](https://cloud.ibm.com/catalog?category=ai) 和 [Analytics](https://cloud.ibm.com/catalog?category=analytics) 服务，并发现目录中有丰富的内容。
 
-Jane 选择了 [Tone Analyzer](https://cloud.ibm.com/catalog/services/tone-analyzer)，再选择了标准套餐，然后获得了要调用的凭证。Jane 重构了 Stock Trader，并且仅创建了用于 Tone Analyzer 的 Kubernetes 私钥。这样，即使 Jane 更改套餐或区域，也无需重建代码。
+Jane 选择了 [Tone Analyzer](https://cloud.ibm.com/catalog/services/tone-analyzer)，再选择了标准套餐，然后获得了要调用的凭证。
+
+Jane 重构了 Stock Trader，并且仅创建了用于 Tone Analyzer 的 Kubernetes 私钥。这样，即使 Jane 更改套餐或区域，也无需重建代码。
 
 借助重构，Jane 在不中断用户体验的情况下试验了各种用户界面框架。结果，提供了新的用户界面供使用，并帮助了解用户反馈的语气。
 
@@ -46,8 +48,3 @@ Jane 与 Todd 交流后，Todd 添加了[服务](https://cloud.ibm.com/catalog/s
 现在，Jane 非常高兴，因为她更改股票服务时，只会更改将其映射到自己所创建的简化 API 的方式，而她的代码甚至无需重新启动。Stock Trader 解决方案仍然一直通过同一 API 请求数据，就好像它并没有更改一样。所有 API 更改都被隐藏在后台。
 
 此外，通过 API Connect 中的监视和测量功能，Jane 能够跟踪谁在使用她的简化 API。
-
-## 相关链接
-{: #vcscontent-aianalytics-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

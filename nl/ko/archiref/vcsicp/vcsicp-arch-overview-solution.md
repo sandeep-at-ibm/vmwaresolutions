@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-12"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -40,7 +40,7 @@ Controller
 
 {{site.data.keyword.cloud}} 자동화는 초기 클러스터 내에 3개의 NSX Controller를 배치합니다. 제어기에는 관리 컴포넌트용으로 지정된 사설 포터블 서브넷의 VLAN 지원 IP 주소가 지정됩니다.
 
-### NSX Edge/DLR
+### NSX Edge 및 DLR(Distributed Logical Router)
 {: #vcsicp-arch-overview-solution-nsx-edge}
 
 NSX Edge Services Gateway(ESG) 쌍이 배치됩니다. 모든 경우에, 하나의 게이트웨이 쌍은 사설 네트워크에 상주하는 자동화 컴포넌트의 아웃바운드 트래픽에 사용됩니다. vCenter Server 및 {{site.data.keyword.icpfull_notm}}의 경우, ICP 관리 에지라고 하는 두 번째 게이트웨이가 배치되며 사설 네트워크에 지정된 인터페이스와 공용 네트워크에 대한 업링크로 구성됩니다. 관리자는 DLR(Distributed Logical Router), 논리 스위치 및 방화벽과 같은 필수 컴포넌트를 구성할 수 있습니다. [vCenter Server 네트워킹 안내서](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro)에서는 네트워크 디자인에 대해 자세히 설명합니다.
@@ -147,7 +147,7 @@ CAM API는 둘 이상의 컨테이너로 분할됩니다.
 ### Helm
 {: #vcsicp-arch-overview-solution-helm}
 
-Helm 차트를 Kubernetes 클러스터로 배치하기 위해 필수 바이너리가 포함된 컨테이너
+Helm 차트를 Kubernetes 클러스터로 배치하기 위해 필수 바이너리 파일이 포함된 컨테이너
 
 ### Terraform
 {: #vcsicp-arch-overview-solution-terraform}
@@ -178,8 +178,3 @@ Terraform 모듈의 끌어서 놓기 기능을 사용하여 Terraform 템플리�
 {: #vcsicp-arch-overview-solution-maria-db}
 
 템플리트 디자이너 애플리케이션의 데이터베이스
-
-## 관련 링크
-{: #vcsicp-arch-overview-solution-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

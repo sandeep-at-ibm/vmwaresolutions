@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -141,9 +141,3 @@ Dopo la formazione, il Discovery Service può rispondere a query come:
 - Mostrami tutti i trick con il trick di base heelflip.
 - Mostrami tutti i trick.
 - Mostrami tutti i trick con più combo.
-
-## Link correlati
-{: #vcscar-logical-related}
-
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

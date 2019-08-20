@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -216,9 +216,3 @@ La sezione [Pianificazione della tua impostazione di cluster e nodi di lavoro](/
 {: #vcsiks-overview-network-sec-compliance}
 
 Quando si tratta di rispettare rigorose linee guida di settore, {{site.data.keyword.cloud_notm}} ha svolto il lavoro per te, promuovendo un'autentica conformità. In [Compliance on the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/compliance) vengono forniti dettagli su specifiche certificazioni di conformità, regolamenti globali, allineamenti e framework per la sicurezza e la privacy. La sezione [Sicurezza per {{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-security#security) descrive le funzioni di sicurezza di {{site.data.keyword.containerlong_notm}}.
-
-## Link correlati
-{: #vcsiks-overview-network-related}
-
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

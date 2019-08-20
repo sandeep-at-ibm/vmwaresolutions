@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-22"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -67,7 +67,7 @@ CPU | 2 – 56 コア | 4 – 28 コア
 ## 仮想構造
 {: #vcsiks-arch-overview-infrastructure-virtual-structure}
 
-![{{site.data.keyword.containerlong_notm}} および {{site.data.keyword.icpfull_notm}} デプロイメントの物理構造図](../../images/vcsiks-phy-ics-iks-deployment.svg "{{site.data.keyword.containerlong_notm}} および {{site.data.keyword.icpfull_notm}} デプロイメントの物理構造図"){: caption="図 1. {{site.data.keyword.containerlong_notm}} と {{site.data.keyword.icpfull_notm}} デプロイメントの物理構造" caption-side="bottom"}
+![{{site.data.keyword.containerlong_notm}} および {{site.data.keyword.icpfull_notm}} デプロイメントの物理構造の図](../../images/vcsiks-phy-ics-iks-deployment.svg "{{site.data.keyword.containerlong_notm}} および {{site.data.keyword.icpfull_notm}} デプロイメントの物理構造の図")
 
 vCenter Server インスタンス内で、お客様の VMS は専用の NSX
 Edge Services Gateway (ESG) と分散論理ルーター (DLR) にデプロイされます。
@@ -88,8 +88,7 @@ vCenter Server デプロイメントでは、管理 VM に関連付けられた�
 ### vCenter Server
 {: #vcsiks-arch-overview-infrastructure-vcs}
 
-PSC と同様に、vCenter Server はアプライアンスとしてデプロイされます。
-また、vCenter は、管理 VM に関連付けられたプライベート VLAN 上のポータブル・サブネットにインストールされます。 このデフォルト・ゲートウェイは、BCR に設定されます。
+PSC と同様に、vCenter Server はアプライアンスとしてデプロイされます。 また、vCenter は、管理 VM に関連付けられたプライベート VLAN 上のポータブル・サブネットにインストールされます。 このデフォルト・ゲートウェイは、BCR に設定されます。
 
 ### NSX Manager
 {: #vcsiks-arch-overview-infrastructure-nsx-manager}
@@ -105,6 +104,7 @@ NSX Manager は初期 vCenter Server クラスター内にデプロイされま�
 {: #vcsiks-arch-overview-infrastructure-nsx-esg}
 
 NSX Edge Services Gateway (ESG) のペアがデプロイされます。 すべての場合において、プライベート・ネットワークに常駐する自動化コンポーネントからのアウトバウンド・トラフィックにゲートウェイ・ペアが 1 つ使用されます。 vCenter Server と {{site.data.keyword.icpfull_notm}} のための 2 つ目のゲートウェイ ({{site.data.keyword.icpfull_notm}} 管理エッジと呼ばれる) がデプロイされ、パブリック・ネットワークへのアップリンクとプライベート・ネットワークに割り当てられたインターフェースが構成されます。
+
 分散論理ルーター (DLR)、論理スイッチ、ファイアウォールなどの必要な NSX コンポーネントは、管理者が構成できます。 ソリューションの一部としてデプロイされる NSX Edges について詳しくは、[vCenter Server ネットワーキング・ガイド](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro)を参照してください。
 
 次の表は、{{site.data.keyword.icpfull_notm}} ESG/DLR の仕様を要約したものです。
@@ -141,8 +141,3 @@ Kubernetes マスターは、クラスター内のすべてのコンピュート
 {: #vcsiks-arch-overview-infrastructure-worker-node}
 
 各ワーカー・ノードは、物理マシン (ベア・メタル) であるか、クラウド環境内の物理ハードウェアで実行される VM です。 ワーカー・ノードをプロビジョンする際に、そのワーカー・ノード上でホストされるコンテナーで使用できるリソースを決定します。 すぐに使用できるように、ワーカー・ノードには、IBM 管理の Docker エンジン、別個のコンピュート・リソース、ネットワーキング、ボリューム・サービスがセットアップされます。 標準装備のセキュリティー機能は、分離機能、リソース管理機能、そしてワーカー・ノードのセキュリティー・コンプライアンスを提供します。
-
-## 関連リンク
-{: #vcsiks-arch-overview-infrastructure-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

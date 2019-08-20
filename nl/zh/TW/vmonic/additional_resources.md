@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-23"
 
 keywords: vmware solutions data sheet, vmware solutions developerWorks, vmware solutions video
 
@@ -37,7 +37,7 @@ subcollection: vmware-solutions
 ## IBM Cloud 型樣
 {: #additional_resources-patterns}
 
-* [IBM Cloud 型樣](https://ibmcloudpatterns.mybluemix.net/#862581F800007C53/862581F800007DD5/862581D000837B23){:external}
+* [{{site.data.keyword.cloud_notm}} Patterns](https://ibmcloudpatterns.mybluemix.net/#862581F800007C53/862581F800007DD5/862581D000837B23){:external}
 
 ## 平台延伸規格
 {: #additional_resources-plat-extensions}
@@ -54,9 +54,18 @@ subcollection: vmware-solutions
 ## 視訊及示範
 {: #additional_resources-demos}
 
+### Digital Technical Engagement
+{: #additional_resources-dte}
+
+* [VMware on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/){:external}
+* [Veeam on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/demos/collection/Veeam-on-IBM-Cloud){:external}
+* [Zerto on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/demos/collection/Zerto-on-IBM-Cloud){:external}
+
+### 其他視訊及示範
+{: #additional_resources-more}
+
 * [Resources and videos](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/resources){:external}
-* [Digital Technical Engagement](https://ibm-dte.mybluemix.net/vmware){:external}
-* [Featured resources and case studies](https://www.ibm.com/cloud/vmware/resources){:external}
+* [Featured resources and case studies](https://www.ibm.com/cloud/vmware){:external}
 
 ## VMware 文件
 {: #additional_resources-vmware-doc}

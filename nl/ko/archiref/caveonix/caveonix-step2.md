@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -19,9 +19,3 @@ subcollection: vmware-solutions
 - BCR을 통해 vCenter와 NSX Manager에 연결합니다.
 - VXLAN 또는 호스팅된 오프프레미스의 원격 커넥터에 연결합니다.
 - 범위를 확장할 때 클라이언트에서 IP 주소 공간을 관리할 수 있습니다.
-
-
-## 관련 링크
-{: #caveonix-step2-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-14"
+lastupdated: "2019-07-16"
 
 subcollection: vmware-solutions
 
@@ -68,7 +68,7 @@ VMware는 백업 위치가 비어 있는 폴더여야 하므로 각 후속 백�
 
 * Zerto Virtual Replication: ZVM(Zerto Virtual Manager) 시스템은 {{site.data.keyword.cloud_notm}} VSI(Virtual Server Instance)로서 배치되며 해당 백업은 Veeam 또는 IBM Spectrum Protect Plus에 의해 지원되지 않습니다. 재해 복구 전략에서 사이트 장애 복구를 수행하지 않는 ZVM 복구를 요구하는 경우에는 선호하는 Windows 백업 솔루션을 사용하여 ZVM을 백업하고 복원해야 합니다.
 * F5 BIG-IP: F5에서는 사용자가 파일 서버로 경로 지정할 수 있는 [F5 구성의 파일 기반 백업](https://support.f5.com/csp/article/K13132){:new_window}을 권장합니다.
-* FortiGate Security Appliance 또는 VM: Fortinet에서는 사용자가 파일 서버로 경로 지정할 수 있는 [FortiGate 구성의 파일 기반 백업](http://help.fortinet.com/fos50hlp/54/Content/FortiOS/fortigate-best-practices-54/Firmware/Performing_Config_Backup.htm){:new_window}을 권장합니다.
+* FortiGate Security Appliance 또는 VM: Fortinet에서는 사용자가 파일 서버로 경로 지정할 수 있는 [FortiGate 구성의 파일 기반 백업](https://help.fortinet.com/fos50hlp/54/Content/FortiOS/fortigate-best-practices-54/Firmware/Performing_Config_Backup.htm){:new_window}을 권장합니다.
 * HyTrust Cloud Control 및 Data Control: HyTrust에서는 HyTrust 서버 어플라이언스의 이미지 및 파일 기반 백업을 둘 다 지원합니다. 자세한 정보는 HyTrust 관리 안내서를 참조하십시오.
 * VMware HCX: HCX 어플라이언스 관리 인터페이스를 사용하면 vCenter Server Appliance와 유사한 HCX 관리자 구성의 파일 기반 백업을 작성하고 다운로드할 수 있습니다.
 

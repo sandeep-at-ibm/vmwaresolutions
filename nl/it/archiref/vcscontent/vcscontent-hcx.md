@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-02"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -57,9 +57,3 @@ le politiche di sicurezza, i firewall e altri elementi di sicurezza vengono spos
 Todd è in grado di migrare Stock Trader dal proprio
 ambiente VMware in loco all'ambiente VMware on {{site.data.keyword.cloud_notm}} e soddisfa i loro requisiti di tempo di inattività minimo o inesistente
 e di nessuna riconfigurazione dell'applicazione.
-
-## Link correlati
-{: #vcscontent-hcx-related}
-
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

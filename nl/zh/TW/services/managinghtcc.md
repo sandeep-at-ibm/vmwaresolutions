@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-03-23"
 
 keywords: HTCC WebGUI, HTCC console, enable internet HTCC
 
@@ -65,7 +65,7 @@ subcollection: vmware-solutions
 
 1. 完成上一個程序中的步驟 1-3。
 2. 按一下**設定**，然後按一下**介面**。記下專用上行鏈路的 IP 位址，這將成為新的預設閘道。
-3. 移至 HyTrust CloudControl on IBM Cloud 服務詳細資料頁面，按一下**檢視 HTCC Web 使用者介面**，然後使用服務詳細資料頁面中的認證登入。
+3. 移至 HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 服務詳細資料頁面，並按一下**檢視 HTCC Web 使用者介面**，然後使用服務詳細資料頁面中的認證登入。
 4. 記下現有預設閘道。例如，對於 HTCC 5.5.1，按一下**配置 > 網路**。記下列出的閘道 IP 位址，這將成為靜態路徑的閘道。
 5. 新增靜態路徑。例如，對於 HTCC 5.5.1，按一下**配置 > 靜態路徑**。按一下**新增**，輸入下列資訊，然後按一下**確定**。
 
@@ -83,7 +83,7 @@ subcollection: vmware-solutions
 
   主要 VM 現在就可以存取網際網路了。
 
-7. 若要確認主要 VM 能存取網際網路，請對公用 IP 位址或網站執行 `wget` 指令。若要這麼做，請回到 vCenter 並用滑鼠右鍵按一下 **CC1 > 開啟主控台**。使用 HyTrust CloudControl on IBM Cloud 服務詳細資料頁面的主控台認證登入到主控台。執行 `wget` 指令（例如 `wget www.ibm.com`），您應該會立即獲得回應。請確認已傳送要求，且收到 `200` 回應。
+7. 若要確認主要 VM 能存取網際網路，請對公用 IP 位址或網站執行 `wget` 指令。若要這麼做，請回到 vCenter 並用滑鼠右鍵按一下 **CC1 > 開啟主控台**。使用 HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 服務詳細資料頁面的主控台認證登入主控台。執行 `wget` 指令（例如 `wget www.ibm.com`），您應該會立即獲得回應。請確認已傳送要求，且收到 `200` 回應。
 
 ## 相關鏈結
 {: #managinghtcc-related}

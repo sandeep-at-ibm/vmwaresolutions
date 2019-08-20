@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-14"
+lastupdated: "2019-07-16"
 
 subcollection: vmware-solutions
 
@@ -68,7 +68,7 @@ VMware 需要備份位置是空的資料夾，因此，請規劃備份輪替或�
 
 * Zerto Virtual Replication：Zerto Virtual Manager (ZVM) 系統部署為 {{site.data.keyword.cloud_notm}} 虛擬伺服器實例 (VSI)，而且 Veeam 或 IBM Spectrum Protect Plus 不支援其備份。如果災難回復策略需要您回復 ZVM，而不執行站台失效接手，則您應該使用偏好的 Windows 備份解決方案來備份及還原 ZVM。
 * F5 BIG-IP：F5 建議 [F5 配置的檔案型備份](https://support.f5.com/csp/article/K13132){:new_window}，您可以將它導向至檔案伺服器。
-* FortiGate Security Appliance 或 VM：Fortinet 建議 [FortiGate 配置的檔案型備份](http://help.fortinet.com/fos50hlp/54/Content/FortiOS/fortigate-best-practices-54/Firmware/Performing_Config_Backup.htm){:new_window}，您可以將它導向至檔案伺服器。
+* FortiGate Security Appliance 或 VM：Fortinet 建議 [FortiGate 配置的檔案型備份](https://help.fortinet.com/fos50hlp/54/Content/FortiOS/fortigate-best-practices-54/Firmware/Performing_Config_Backup.htm){:new_window}，您可以將它導向至檔案伺服器。
 * HyTrust CloudControl 及 DataControl：HyTrust 同時支援 HyTrust 伺服器應用裝置的映像檔及檔案型備份。如需相關資訊，請參閱 HyTrust 管理手冊。
 * VMware HCX：HCX 應用裝置管理介面容許您建立及下載與 vCenter Server Appliance 類似的 HCX 管理程式配置檔案型備份。
 

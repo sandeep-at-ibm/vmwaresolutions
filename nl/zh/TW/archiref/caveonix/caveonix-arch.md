@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-06"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -16,7 +16,7 @@ subcollection: vmware-solutions
 
 下圖顯示 Caveonix RiskForesight 架構。
 
-![架構圖](../../images/caveonix-architecture.svg "架構圖")
+![架構圖](../../images/caveonix-architecture.svg "架構圖"){: caption="圖 1. Caveonix RiskForesight 的架構" caption-side="bottom"}
 
 Caveonix RiskForesight 架構有四層：
 -	偵測 -「偵測」模組已完全整合至 VMware 堆疊和許多公用雲端。利用外掛程式，RiskForesight 使用 vCenter 和 NSX Manager 作為「資產儲存庫」，收集虛擬機器 (VM)、網路及網路流量等詳細資料。遠端收集器會掃描工作量、作業系統及應用程式，以獲得對法規遵循及漏洞的「全面」檢視。
@@ -39,7 +39,7 @@ Caveonix RiskForesight 架構有四層：
 
 Caveonix RiskForesight 有區域的概念：
 
-![區域圖](../../images/caveonix-zones.svg "區域圖")
+![區域圖](../../images/caveonix-zones.svg "區域圖"){: caption="圖 2. Caveonix RiskForesight 區域" caption-side="bottom"}
 
 -	管理或服務提供者區域 - 管理或服務提供者區域包括下列元件：
     - RiskForesight 應用程式 - 這包含多個元件，將在「應用程式元件」區段中詳細說明。
@@ -47,13 +47,11 @@ Caveonix RiskForesight 有區域的概念：
 - 雲端提供者 - 此區域提供管理應用程式所在的基礎架構：
     - 專用 - {{site.data.keyword.cloud}} 上的 VMWare，以及內部部署的 VMware 基礎架構平台。這些平台透過下列方式整合至 RiskForesight：vCenter、NSX Manager、VMware Cloud Director (vCD) 或 vRealize Automation (vRA)。
     - 公用 - 目前唯一受支援的公用雲端提供者為 AWS。即將提供 {{site.data.keyword.cloud_notm}}。
-    - 容器 - 目前只支援 AWS Elastic Kubernetes Service (EKS)。即將提供 {{site.data.keyword.cloud_notm}} Private and {{site.data.keyword.cloud_notm}} Kubernetes Services。
+    - 容器 - 目前只支援 AWS Elastic Kubernetes Service (EKS)。即將提供 {{site.data.keyword.cloud_notm}} Private 及 {{site.data.keyword.cloud_notm}} Kubernetes Services。
 -	承租戶或客戶環境區域 - 這些區域用來隔離承租戶、客戶或業務單位。這些區域中有工作負載，因此需要遠端收集器。以最小部署而言，您需要一個遠端收集器，但如果是一般部署，則每個承租戶/客戶/業務單位都需要一個遠端收集器。
 
 
 ## 相關鏈結
 {: #caveonix-arch-related}
 
-
-*   [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
-*   [Caveonix 詳細設計](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-detailed)
+* [Caveonix 詳細設計](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-detailed)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-12"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -39,7 +39,7 @@ NSX Manager 部署在起始叢集上。此外，NSX Manager 會獲指派專用�
 
 {{site.data.keyword.cloud}} 自動化會在起始叢集內部署三個 NSX Controller。控制器會獲指派專用可攜式子網路中的 VLAN 支援 IP 位址（這個子網路已指定給管理元件）。
 
-### NSX Edge / DLR
+### NSX Edge 及分散式邏輯路由器 (DLR)
 {: #vcsicp-arch-overview-solution-nsx-edge}
 
 已部署 NSX Edge Services Gateway (ESG) 配對。無論如何，都會將一個閘道配對用於來自位於專用網路之自動化元件的出埠資料流量。對於 vCenter Server 及 {{site.data.keyword.icpfull_notm}}，會部署稱為 ICP 管理邊緣的第二個閘道，並為其配置連往公用網路的上行鏈路，以及指派給專用網路的介面。管理者可以配置任何必要的 NSX 元件，例如「分散式邏輯路由器 (DLR)」、邏輯交換器和防火牆。[vCenter Server 網路手冊](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro)提供有關網路設計的更多詳細資料。
@@ -145,7 +145,7 @@ CAM API 分散於多個容器。
 ### Helm
 {: #vcsicp-arch-overview-solution-helm}
 
-含有必要二進位檔的容器，可將 helm 圖表部署至 Kubernetes 叢集。
+含有必要二進位檔的容器，可將 Helm 圖表部署至 Kubernetes 叢集。
 
 ### Terraform
 {: #vcsicp-arch-overview-solution-terraform}
@@ -176,8 +176,3 @@ Redis 資料庫可用來儲存 CAM 內的階段作業快取和鎖定。
 {: #vcsicp-arch-overview-solution-maria-db}
 
 Template Designer 應用程式的資料庫。
-
-## 相關鏈結
-{: #vcsicp-arch-overview-solution-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

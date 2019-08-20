@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-06"
 
 keywords: vCenter Server order instance, order vCenter Server, order vCenter Server instance
 
@@ -35,9 +35,9 @@ Assegure-se de que tenha concluído as tarefas a seguir:
 |:------------|:------------ |
 | Nome de domínio | `<root_domain>` |  
 | Nome do usuário de login do vCenter Server | `<user_id>@<root_domain>` (usuário do Microsoft Active Directory) ou `administrator@vsphere.local` |
-| FQDN do vCenter Server (com PSC integrado) | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. O comprimento máximo é 50 caracteres. |
+| FQDN do vCenter Server (com PSC integrado) | `<instance_name>-vc.<root_domain>`. O comprimento máximo é de 50 caracteres. |
 | Nome do site de Conexão única (SSO) | `<subdomain_label>` |
-| Nome do servidor ESXi totalmente qualificado | `<host_prefix><n>.<subdomain_label>.<root_domain>`, em que `<n>` é a sequência do servidor ESXi. O comprimento máximo é de 50 caracteres. |
+| Nome do servidor ESXi totalmente qualificado | `<data_center>-<host_prefix><n>.<subdomain_label>.<root_domain>`, em que `n` é a sequência do servidor ESXi. O comprimento máximo é de 50 caracteres. |
 {: caption="Tabela 1. Formato de valor para nomes de instância e de domínio" caption-side="top"}
 
 Não modifique nenhum valor que seja configurado durante o pedido ou a implementação da instância. Fazer isso pode tornar sua instância inutilizável. Por exemplo, se a rede pública for encerrada, se os servidores e as Virtual Server Instances (VSIs) ficarem atrás de uma provisão intermediária do Vyatta ou se o IBM CloudBuilder VSI parar ou for excluído.
@@ -52,17 +52,28 @@ Deve-se especificar as seguintes configurações do sistema ao pedir uma instân
 {: #vc_orderinginstance-inst-name}
 
 O nome da instância deve atender aos requisitos a seguir:
-* Apenas caracteres alfanuméricos e o traço (-) são permitidos.
-* O nome da instância deve iniciar com um caractere alfabético e terminar com um caractere alfanumérico.
+* Somente caracteres alfabéticos minúsculos, numéricos e de traço (-) são permitidos.
+* O nome da instância deve começar com um caractere alfabético minúsculo.
+* O nome da instância deve terminar com um caractere alfabético minúsculo ou numérico.
 * O comprimento máximo do nome da instância é de 10 caracteres.
 * O nome da instância deve ser exclusivo dentro de sua conta.
 
-### Licenças do VMware vSphere
+### Nome do cluster inicial
+{: #vc_orderinginstance-cluster-name}
+
+O nome do cluster inicial deve atender aos requisitos a seguir:
+* Somente caracteres alfabéticos minúsculos, numéricos e de traço (-) são permitidos.
+* O nome do cluster deve começar com um caractere alfabético minúsculo.
+* O nome do cluster deve terminar com um caractere alfabético minúsculo ou numérico.
+* O comprimento máximo do nome do cluster é de 30 caracteres.
+* O nome do cluster deve ser exclusivo dentro da instância do vCenter Server.
+
+### Versão do VMware vSphere
 {: #vc_orderinginstance-vsphere-license}
 
-Selecione se deve-se pedir o vSphere Enterprise Plus 6.7u1 ou o vSphere Enterprise Plus 6.5u2.
+Selecione se deverá ser pedido o vSphere Plus Enterprise Plus 6.7u2 ou o vSphere Enterprise Plus 6.5u2.
 
-O vSphere Enterprise Plus 6.7u1 está disponível para apenas Broadwell e Skylake {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}.
+O vSphere Enterprise Plus 6.7u2 está disponível somente para {{site.data.keyword.cloud_notm}}{{site.data.keyword.baremetal_short}} Skylake, Cascade e Broadwell.
 {:note}
 
 ### Principal ou secundário
@@ -77,6 +88,9 @@ Especifique as opções de licenciamento para os seguintes componentes do VMware
 * vCenter Server 6.5
 * vSphere Enterprise Plus 6.5 ou 6.7
 * NSX Service Providers 6.4 (Edição Base, Advanced ou Enterprise)
+
+O serviço VMware HCX on {{site.data.keyword.cloud_notm}} requer a licença de edição NSX Advanced ou NSX Enterprise.
+{:note}
 
 Para usuários do Parceiro de Negócios, a licença do vCenter Server (Standard Edition), a licença do vSphere (Enterprise Plus Edition) e a licença do NSX são incluídas e compradas em seu nome. No entanto, deve-se especificar a edição para a licença do NSX.
 
@@ -96,7 +110,7 @@ Para usuários que não são Parceiros de Negócios, é possível usar licenças
 
 As configurações de Bare Metal são baseadas em sua seleção de data center e na configuração do servidor bare metal.
 
-### Local do datacenter
+### Local do data center
 {: #vc_orderinginstance-dc-location}
 
 Selecione o {{site.data.keyword.CloudDataCent_notm}} no qual a instância deve ser hospedada.
@@ -112,6 +126,22 @@ Quando você seleciona **Skylake**, é possível escolher a combinação de CPU 
 | Processador Dual Intel Xeon Gold 5120/total de 28 núcleos, 2,2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 | Processador Dual Intel Xeon Gold 6140/Total de 36 núcleos, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 {: caption="Tabela 2. Opções para o Skylake {{site.data.keyword.baremetal_short}}" caption-side="top"}
+
+### Cascade
+{: #vc_orderinginstance-cascade}
+
+Para a configuração **Cascade**, você tem opções para o **Modelo de CPU** e **RAM**.
+
+Os {{site.data.keyword.baremetal_short}} Cascade estão disponíveis somente para instâncias do VMware vSphere Enterprise Plus 6.7 U2.
+{:note}
+
+| Opções de modelo da CPU        | Opções de RAM       |
+|:------------- |:------------- |
+| Processador Dual Intel Xeon Gold 4210/Total de 20 núcleos, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1,5 TB |
+| Processador Dual Intel Xeon Gold 5218/Total de 32 núcleos, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1,5 TB |
+| Processador Dual Intel Xeon Gold 6248/Total de 40 núcleos, 2.5 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1,5 TB |
+{: caption="Tabela 3. Opções para {{site.data.keyword.baremetal_short}} Cascade" caption-side="top"}
+
 
 ### SAP-certificado
 {: #vc_orderinginstance-sap}
@@ -136,7 +166,7 @@ Quando você seleciona **Broadwell**, é possível escolher a combinação de CP
 |:------------- |:------------- |
 | Quad Intel Xeon E7-4820 v4/total de 40 núcleos, 2.0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4/total de 64 núcleos, 2.1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
-{: caption="Tabela 3. Opções para o Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
+{: caption="Tabela 4. Opções para {{site.data.keyword.baremetal_short}} Broadwell" caption-side="top"}
 
 ### Número de Bare Metal Servers
 {: #vc_orderinginstance-bare-metal-number}
@@ -160,12 +190,12 @@ e reduzindo capacidade para instâncias do vCenter Server](/docs/services/vmware
 ### Armazenamento vSAN
 {: #vc_orderinginstance-vsan-storage}
 
-O vSAN está disponível somente para a configuração de Bare Metal **Skylake** e **Broadwell**. Especifique as seguintes opções vSAN:
+O vSAN está disponível somente para a configuração de Bare Metal **Skylake**, **Cascade** e **Broadwell**. Especifique as seguintes opções vSAN:
 * **Tipo de disco e tamanho para discos de capacidade vSAN**: selecione uma opção para os discos de capacidade necessários.
 * **Número de discos de capacidade vSAN**: especifique o número de discos de capacidade que deseja incluir.
 * Se você desejar incluir capacidade acima do limite de 10 discos, selecione a caixa **Alto desempenho com Intel Optane**. Essa opção fornece dois compartimentos de disco de capacidade extra para um total de 12 discos de capacidade e é útil para cargas de trabalho que requerem menos latência e rendimento superior de IOPS.
 
-  A opção **Alto desempenho com Intel Optane** está disponível somente para os modelos de CPU Skylake.
+  A opção **Alto desempenho com Intel Optane** está disponível somente para os modelos de CPU Skylake e Cascade.
   {:note}
 
 * Revise os valores **Tipo de disco para discos de cache vSAN** e **Número de discos de cache vSAN**. Esses valores dependem de você ter marcado a caixa **Alto desempenho com Intel Optane** .
@@ -194,7 +224,7 @@ Escolha as opções de nível de desempenho de acordo com suas necessidades.
 | 2 IOPS/GB | Esta opção foi projetada para a maioria de cargas de trabalho de propósito geral. Os aplicativos de exemplo incluem: hospedagem de bancos de dados pequenos, backup de aplicativos da web ou imagens de disco da máquina virtual para um hypervisor. |
 | 4 IOPS/GB | Esta opção foi projetada para cargas de trabalho de maior intensidade que possuem uma alta porcentagem de dados ativos de cada vez. Os aplicativos de exemplo incluem: bancos de dados transacionais. |
 | 10 IOPS/GB | Esta opção foi projetada para os tipos de carga de trabalho mais exigentes, como analítica. Os aplicativos de exemplo incluem: bancos de dados de alta transação e outros bancos de dados sensíveis ao desempenho. Esse nível de desempenho é limitado a uma capacidade máxima de 4 TB por compartilhamento de arquivo. |
-{: caption="Tabela 4. Opções de nível de desempenho do NFS" caption-side="top"}
+{: caption="Tabela 5. Opções de nível de desempenho do NFS" caption-side="top"}
 
 ### Discos Locais
 {: #vc_orderinginstance-local-disks}
@@ -212,27 +242,30 @@ Deve-se especificar as seguintes configurações de interface de rede ao pedir u
 {: #vc_orderinginstance-host-name-prefix}
 
 O prefixo de nome do host deve atender aos requisitos a seguir:
-*  Apenas caracteres alfanuméricos e o traço (-) são permitidos.
-*  O prefixo de nome do host deve iniciar e terminar com um caractere alfanumérico.
-*  O comprimento máximo do prefixo do nome do host é de 10 caracteres.
+* Somente caracteres alfabéticos minúsculos, numéricos e de traço (-) são permitidos.
+* O prefixo do nome do host deve começar com um caractere alfabético minúsculo.
+* O prefixo do nome do host deve terminar com um caractere alfabético minúsculo ou numérico.
+* O comprimento máximo do prefixo do nome do host é de 10 caracteres.
 
 ### Rótulo do subdomínio
 {: #vc_orderinginstance-subdomain-label}
 
 O rótulo do subdomínio deve atender aos requisitos a seguir:
-*  Apenas caracteres alfanuméricos e o traço (-) são permitidos.
-*  O rótulo do subdomínio deve iniciar com um caractere alfabético e terminar com um caractere alfanumérico.
-*  O comprimento máximo do rótulo do subdomínio é de 10 caracteres.
-*  O rótulo do subdomínio deve ser exclusivo em todas as instâncias em sua configuração de vários sites.
+* Somente caracteres alfabéticos minúsculos, numéricos e de traço (-) são permitidos.
+* O rótulo do subdomínio deve começar com um caractere alfabético minúsculo.
+* O rótulo do subdomínio deve terminar com um caractere alfabético minúsculo ou numérico.
+* O comprimento máximo do rótulo do subdomínio é de 10 caracteres.
+* O rótulo do subdomínio deve ser exclusivo em todas as instâncias em sua configuração de vários sites.
 
 ### Nome de domínio
 {: #vc_orderinginstance-domain-name}
 
 O nome do domínio-raiz deve atender aos requisitos a seguir:
 * O nome de domínio deve consistir em duas ou mais sequências separadas por ponto (.)
-* A primeira sequência deve começar com um caractere alfabético e terminar com um caractere alfanumérico.
-* Todas as sequências, exceto a última, podem conter apenas caracteres alfanuméricos e de traço (-).
-* A última sequência pode conter apenas caracteres alfabéticos.
+* A primeira sequência deve começar com um caractere alfabético minúsculo.
+* A primeira sequência deve terminar com um caractere alfabético minúsculo ou numérico.
+* Todas as sequências, exceto a última, podem conter somente caracteres alfabéticos minúsculos, numéricos e de traço (-).
+* A última sequência pode conter somente caracteres alfabéticos minúsculos.
 * O comprimento da última sequência deve estar no intervalo de 2 a 24 caracteres.
 
 O comprimento máximo do Nome Completo do Domínio (FQDN) para hosts e MVs é de 50 caracteres. Os nomes de domínio devem ajustar-se a este comprimento máximo.
@@ -299,6 +332,9 @@ Para obter mais informações sobre o pedido de licenças do Windows Server 2016
 
 Ao pedir uma instância do vCenter Server, também é possível pedir serviços complementares. Para obter mais informações sobre os serviços, veja [Serviços disponíveis para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices#available-services-for-vcenter-server-instances).
 
+Um compromisso de 12 meses é necessário quando você pede o serviço VMware HCX on {{site.data.keyword.cloud_notm}}.
+{:note}
+
 ## Resumo do Pedido
 {: #vc_orderinginstance-order-summary}
 
@@ -312,8 +348,8 @@ Também é possível incluir os recursos provisionados na ferramenta de estimati
 1. No catálogo do {{site.data.keyword.cloud_notm}}, clique no ícone **VMware** da área de janela de navegação esquerda e, em seguida, clique no cartão **VMware vCenter Server on IBM Cloud** da seção **Data centers virtuais do VMware**.
 2. Na página **VMware vCenter Server on IBM Cloud**, clique no cartão **vCenter Server** e clique em **Criar**.
 3. Na página **vCenter Server**, insira o nome da instância.
-5. Selecione a versão do vSphere.
-4. Selecione o tipo de instância:
+4. Selecione a versão do vSphere.
+5. Selecione o tipo de instância:
    * Clique em **Instância primária** para implementar uma única instância no ambiente ou para implementar a primeira instância em uma topologia multissite.
    * Clique em **Instância secundária** para conectar a instância a uma instância existente (primária) no ambiente para alta disponibilidade e conclua as etapas a seguir:
      1. Selecione a instância primária à qual deseja que a instância secundária seja conectada.
@@ -326,7 +362,7 @@ Também é possível incluir os recursos provisionados na ferramenta de estimati
 7. Conclua as configurações de Bare Metal Server.
     1. Selecione o {{site.data.keyword.CloudDataCent_notm}} para hospedar a instância.
     2. Selecione a configuração do Bare Metal Server.
-       * Ao selecionar **Skylake** ou **Broadwell**, especifique o modelo de CPU e o tamanho da RAM.
+       * Quando você selecionar **Skylake**, **Cascade** ou **Broadwell**, especifique o modelo de CPU e o tamanho de RAM.
        * Quando você selecionar **Certificado pelo SAP**, escolha uma das configurações pré-configuradas.
     3. Especifique o número de {{site.data.keyword.baremetal_short}}. Se você estiver planejando usar o armazenamento vSAN, um mínimo de quatro {{site.data.keyword.baremetal_short}} será necessário.  
 8. Conclua a configuração de armazenamento.
@@ -355,7 +391,7 @@ Para obter mais informações sobre como fornecer configurações para um servi�
 {: #vc_orderinginstance-results}
 
 * A implementação da instância é iniciada automaticamente e você recebe a confirmação de que o pedido está sendo processado. É possível verificar o status de implementação, incluindo quaisquer problemas que possam precisar de sua atenção, visualizando a seção **Histórico de implementação** dos detalhes da instância.
-* Quando a instância for implementada com êxito, os componentes que estão descritos em [Especificações técnicas para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs) serão instalados em sua plataforma virtual VMware. Os servidores ESXi pedidos são agrupados como **cluster1** por padrão. Se você pediu serviços complementares, a implementação dos serviços será iniciada após a conclusão de seu pedido.
+* Quando a instância for implementada com êxito, os componentes que estão descritos em [Especificações técnicas para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs) serão instalados em sua plataforma virtual VMware. Se você pediu serviços complementares, a implementação dos serviços será iniciada após a conclusão de seu pedido.
 * Quando a instância estiver pronta para usar, seu status mudará para **Pronta para usar** e você receberá uma notificação por e-mail.
 * Quando você pedir uma instância secundária, o VMware vSphere Web Client da instância primária (vinculado à secundária) poderá ser reiniciado depois que o pedido da instância secundária estiver concluído.
 
@@ -380,7 +416,7 @@ Se você mudar esses componentes fora do console do {{site.data.keyword.vmwareso
 ## Links relacionados
 {: #vc_orderinginstance-related}
 
-* [Assinando uma conta do {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts)
+* [Inscrevendo-se em uma conta do {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts)
 * [Visualizando instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
 * [Configuração de vários sites para instâncias do vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_multisite)
 * [Incluindo, visualizando e excluindo clusters para instâncias do vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)

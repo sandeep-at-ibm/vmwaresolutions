@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -36,9 +36,9 @@ HCX 內的 vMotion 功能可延伸 vSphere vMotion 功能，能在不同版本�
 ### vMotion 的概念和最佳作法
 {: #hcxclient-migrations-best-practices-vmotion}
 
-HCX 實際上就是 vMotion 雙向 Proxy。每一個 HCX 實例模擬 vSphere 資料中心內的單一 ESXi 主機，在任何叢集之外，它本身就是雲端閘道機群元件 (CGW) 的「前端」。對於每一個連結至目前所檢視網站的 HCX 網站，都會出現一部 Proxy 主機。當 vMotion 起始至遠端主機時，本端 ESXi 主機會以 vMotion 讓 VM 連接至本端 Proxy ESXi 主機，其成為 CGW 的前端，同時使用遠端系統上的 CGW 來維護加密通道。
+HCX 實際上就是 vMotion 雙向 Proxy。每一個 HCX 實例模擬 vSphere 資料中心內的單一 ESXi 主機，在任何叢集之外，它本身就是雲端閘道機群元件 (CGW) 的「前端」。對於每一個連結至目前所檢視網站的 HCX 網站，都會出現一部 Proxy 主機。當 vMotion 起始至遠端主機時，本端 ESXi 主機會將該 VM 移轉至本端 Proxy ESXi 主機，其成為 CGW 的前端，同時使用遠端系統上的 CGW 來維護加密通道。
 
-同時，會從遠端 ESXi Proxy 主機起始 vMotion 移轉至目的地 vSphere 實體 ESXi 主機，同時它會從通道接收來源 CGW 的資料。應用 vMotion 時，一次只能執行一個 VM 移轉作業，這與大量移轉選項不同。因此，對於要移轉大量 VM 的情況，建議僅在不允許停機時或在將 VM 重新開機有風險時，才使用 vMotion。不過，就像標準 vMotion 一樣，VM 在此處理程序期間內可以是即時狀態。
+vMotion 在通過該通道收到來自來源 CGW 的資料時，會起始從遠端 ESXi Proxy 主機到目的地 vSphere 實體 ESXi 主機的 vMotion 移轉。應用 vMotion 時，一次只能執行一個 VM 移轉作業，這與大量移轉選項不同。因此，對於要移轉大量 VM 的情況，建議僅在不允許停機時或在將 VM 重新開機有風險時，才使用 vMotion。不過，就像標準 vMotion 一樣，VM 在此處理程序期間內可以是即時狀態。
 
 我們觀察到，單一 vMotion 在 LAN 上大約 1.7 Gbps，以及在 WAN 上 300 到 400 Mbps 將達到最高點（透過 WAN 最佳化工具）。這不表示 LAN 上的 1.7 Gbps 等於 WAN 上的 400 Mbps（透過 WAN 最佳化工具），而是在特定環境上觀察到這些最大值。此類環境由 10 GB LAN vMotion 網路和 1 GB 網際網路上行鏈路（與正式作業 Web 資料流量共用）組成。
 
@@ -119,7 +119,7 @@ NFS 通常用來共用許多伺服器之間的資料，例如 Web 伺服器內�
 - 頻寬（每個延伸網路為 ~1 Gbps）
 - 基礎鏈結頻寬
 
-在移轉生命週期之後，請先測試開發或暫置應用程式，然後再嘗試正式作業。您可以在支援延遲敏感延伸 L2 網路的 L2C HCX 應用裝置之間，對基礎通道資料流量 (udp 500 / 4500) 採用 QoS（服務品質）。
+在移轉生命週期之後，請先測試開發或暫置應用程式，然後再嘗試正式作業。您可以在支援延遲敏感延伸 L2 網路的 L2C HCX 應用裝置之間，對基礎通道資料流量 (UDP 500/4500) 採用 QoS（服務品質）。
 
 ## 網路擺盪 (Network Swing)
 {: #hcxclient-migrations-network-swing}

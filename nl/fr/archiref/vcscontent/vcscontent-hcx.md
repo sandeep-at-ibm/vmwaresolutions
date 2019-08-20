@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-02"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -35,8 +35,3 @@ Le service vCenter Server with Hybridity Bundle crée une interconnectivité à 
 * Migration de règles de sécurité – Si NSX est utilisé sur site, toutes les règles de sécurité, tous les pare-feux et d'autres éléments de sécurité sont déplacés en même temps que la charge de travail.
 
 Todd peut faire migrer Stock Trader depuis son environnement VMware sur site vers l'environnement VMware on {{site.data.keyword.cloud_notm}} et répondre à ses deux exigences, à savoir réduire ou éliminer ses temps d'indisponibilité et ne pas avoir à reconfigurer les applications.
-
-## Liens connexes
-{: #vcscontent-hcx-related}
-
-* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

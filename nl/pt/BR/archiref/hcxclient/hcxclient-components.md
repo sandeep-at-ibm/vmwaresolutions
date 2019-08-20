@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-01"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -14,7 +14,7 @@ subcollection: vmware-solutions
 # Glossário de componentes e termos do HCX
 {: #hcxclient-components}
 
-O HCX consiste em um lado da nuvem (ambiente de destino/VCD) e em um ou mais clientes (origem). Uma instância do HCX deverá ser implementada por vCenter, mesmo se os
+O HCX consiste em um lado da nuvem (ambiente de destino ou VCD) e em um ou mais clientes (origem). Uma instância do HCX deverá ser implementada por vCenter, mesmo se os
 vCenters nos quais o HCX está implementado estiverem vinculados no mesmo domínio SSO no
 lado do cliente ou da nuvem. As configurações suportadas pelo HCX são, uma para uma,
 uma para muitas, muitas para uma e muitas para muitas.
@@ -22,11 +22,10 @@ uma para muitas, muitas para uma e muitas para muitas.
 ## Lado do destino e lado do cliente
 {: #hcxclient-components-cloud-client-side}
 
-O HCX tem o conceito de lado da nuvem (ambiente de destino/VCD) e lado do cliente (origem).
+O HCX tem o conceito de lado da nuvem (ambiente de destino ou VCD) e de lado do cliente (origem).
 
 - Lado do destino - o HCX Cloud Manager é pré-implementado e configurado com os perfis de rede e de cálculo prontos para criação do Service Mesh.  
-- Lado do cliente - Quaisquer instâncias do vSphere que atendam aos pré-requisitos
-para instalação e operação. O lado do cliente do HCX é o mestre que
+- Lado do cliente - quaisquer instâncias do vSphere que atendam aos pré-requisitos para instalação e operação. O lado do cliente do HCX é o mestre que
 controla a instância escrava do lado da nuvem por meio de seu snap-in da interface com o usuário (IU) do Web client
 do vCenter.
 
@@ -63,8 +62,7 @@ sem perda de funcionalidade.
 ## Portais do usuário do HCX
 {: #hcxclient-components-hcx-user-portals}
 
-- UI da web do cliente - O portal da web do cliente HCX é a IU principal para o HCX. Quando o gerenciador do HCX do lado do cliente é instalado, ele
-aparece como um snap-in para a IU da web do vCenter. Ele controla o registro
+- UI da web do cliente - O portal da web do cliente HCX é a IU principal para o HCX. Após o HCX Manager do lado do cliente ser instalado, ele será mostrado como um snap-in para a IU da web do vCenter. Ele controla o registro
 do HCX da nuvem remota (emparelhamento de site), a implementação do componente de frota, o esticamento da rede e a migração da MV para dentro e para fora da nuvem.
 - IU do lado da nuvem - A IU do HCX do lado da nuvem é acessível por meio da URL de registro
 público fornecida para o registro do cliente HCX. Por padrão, ela usa as credenciais de Administrador do vCenter do lado da nuvem `administrator@vsphere.local`. Ela é usada geralmente para fazer upgrade da

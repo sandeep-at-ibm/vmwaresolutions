@@ -96,7 +96,7 @@ V2.7 이상에 배치되는 Zerto on {{site.data.keyword.cloud_notm}} 서비스�
 * [VMware Update Manager 안내서](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-intro)
 * [vCenter Server 네트워킹 안내서](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro)
 * [vCenter Server 및 {{site.data.keyword.cloud_notm}} Private 안내서](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [vCenter Server 및 IBM Kubernetes Service 안내서](/docs/services/vmwaresolutions/archiref/vcsiks?topic=vmware-solutions-vcsiks-intro)
+* [vCenter Server 및 IBM Kubernetes 서비스 안내서](/docs/services/vmwaresolutions/archiref/vcsiks?topic=vmware-solutions-vcsiks-intro)
 * [VMware 및 Skate Advisor Concept Car 안내서](/docs/services/vmwaresolutions/archiref/vcscar?topic=vmware-solutions-vcscar-intro)
 * [VMware - Stock Trader의 현대화 과정](/docs/services/vmwaresolutions/archiref/vcscontent?topic=vmware-solutions-vcscontent-modjourney)
 

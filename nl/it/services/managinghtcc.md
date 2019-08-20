@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-03-23"
 
 keywords: HTCC WebGUI, HTCC console, enable internet HTCC
 
@@ -65,7 +65,7 @@ La seguente procedura si applica per l'aggiornamento delle impostazioni di rete 
 
 1. Completa i passi da 1 a 3 nella procedura precedente.
 2. Fai clic su **Settings** e fai quindi clic su **Interfaces**. Prendi nota dell'indirizzo IP per l'uplink privato, che diventa il nuovo gateway predefinito.
-3. Vai alla pagina dei dettagli del servizio HyTrust CloudControl on IBM Cloud, fai clic su **View HTCC Web UI** ed esegui l'accesso con le credenziali dalla pagina dei dettagli del servizio.
+3. Vai alla pagina dei dettagli del servizio HyTrust CloudControl on {{site.data.keyword.cloud_notm}}, fai clic su **View HTCC Web UI** ed esegui l'accesso con le credenziali dalla pagina dei dettagli del servizio.
 4. Prendi nota del gateway predefinito esistente. Ad esempio, per HTCC 5.5.1, fai clic su **Configuration > Network**. Prendi nota dell'indirizzo IP gateway elencato, che diventa il gateway per la rotta statica.
 5. Aggiungi una rotta statica. Ad esempio, per HTCC 5.5.1, fai clic su **Configuration > Static Routes**. Fai clic su **Add**, immetti le seguenti informazioni e fai clic su **OK**.
 
@@ -83,7 +83,7 @@ La seguente procedura si applica per l'aggiornamento delle impostazioni di rete 
 
   La VM primaria avrà ora accesso a internet.
 
-7. Per confermare che la VM primaria ha accesso a internet, esegui un comando `wget` su un indirizzo IP pubblico o un sito web. Per eseguire tale operazione, torna a vCenter e fai clic con il tasto destro del mouse su **CC1 > Open Console**. Esegui l'accesso alla console utilizzando le credenziali della console dalla pagina dei dettagli del servizio HyTrust CloudControl on IBM Cloud. Esegui un comando `wget` come `wget www.ibm.com` e dovresti ricevere una risposta immediata. Conferma che la richiesta sia stata inviata e che sia stata ricevuta una risposta `200`.
+7. Per confermare che la VM primaria ha accesso a internet, esegui un comando `wget` su un indirizzo IP pubblico o un sito web. Per eseguire tale operazione, torna a vCenter e fai clic con il tasto destro del mouse su **CC1 > Open Console**. Esegui l'accesso alla console utilizzando le credenziali della console dalla pagina dei dettagli del servizio HyTrust CloudControl on {{site.data.keyword.cloud_notm}}. Esegui un comando `wget` come `wget www.ibm.com` e dovresti ricevere una risposta immediata. Conferma che la richiesta sia stata inviata e che sia stata ricevuta una risposta `200`.
 
 ## Link correlati
 {: #managinghtcc-related}

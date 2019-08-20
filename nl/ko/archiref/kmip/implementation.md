@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-07-16"
 
 subcollection: vmware-solutions
 
@@ -23,7 +23,7 @@ subcollection: vmware-solutions
 
 KMIP for VMware on {{site.data.keyword.cloud_notm}}를 사용하여 vSphere 암호화 또는 vSAN 암호화를 사용으로 설정하려면 다음 태스크를 완료해야 합니다.
 
-1. [IBM Cloud CLI를 사용하여 서비스 엔드포인트를 사용할 계정을 사용](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)하십시오.
+1. [계정에서 서비스 엔드포인트를 사용으로 설정](/docs/account?topic=account-vrf-service-endpoint#service-endpoint)하십시오.
 2. [IBM Key Protect](/docs/services/key-protect?topic=key-protect-getting-started-tutorial) 또는 [IBM Cloud Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-get-started#get-started)를 사용하여 키 관리자 인스턴스를 작성하십시오. Hyper Protect Crypto Services를 사용하는 경우 Hyper Protect Crypto Services가 키 관련 기능을 제공할 수 있도록 [암호화 인스턴스를 초기화](/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-hsm)해야 합니다.
 3. 키 관리자 인스턴스 내의 고객 루트 키(CRK)를 작성하십시오.
 4. KMIP for VMware에 사용할 IAM(Identity and Access Management) [서비스 ID 및 API 키](/docs/iam?topic=iam-serviceidapikeys)를 작성하십시오. 키 관리자 인스턴스에 대한 이 서비스 ID 플랫폼 뷰어 액세스 권한과 서비스 쓰기 액세스 권한을 부여하십시오.

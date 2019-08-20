@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -92,7 +92,7 @@ Skate Advisor의 핵심 데이터 요소는 트릭입니다. 트릭 언어는 �
 7 | Skate Advisor가 Discovery Service에서 데이터 세트를 요청합니다.
 8 | Discovery Service가 조회를 평가하고 응답을 보냅니다.
 9 |Skate Advisor가 응답을 만들어 챗봇에 텍스트로 보냅니다.
-10 | 챗봇이 텍스트 응답을 문자-음성 변환 서비스로 보냅니다.
+10 | 챗봇이 텍스트 응답을 Text to Speech 서비스로 보냅니다.
 11 | 챗봇을 통해 결과가 사용자에게 전송됩니다.
 
 ### 동영상 렌더링
@@ -141,8 +141,3 @@ Skate Advisor의 경우, 모델은 모델 작성을 위한 규칙 기반 훈련�
 - heelflip 기본 트릭이 있는 모든 트릭을 보여주십시오.
 - 모든 트릭을 보여주십시오.
 - 여러 콤보가 있는 모든 트릭을 보여주십시오.
-
-## 관련 링크
-{: #vcscar-logical-related}
-
-* [vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

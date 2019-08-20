@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-05"
 
 keywords: VMware HCX deployment, HCX configuration, order HCX
 
@@ -21,24 +21,29 @@ subcollection: vmware-solutions
 # 订购 VMware HCX on IBM Cloud
 {: #hcx_ordering}
 
-订购 VMware HCX on {{site.data.keyword.cloud}} 服务时，可订购包含此服务的新 VMware vCenter Server with Hybridity Bundle 实例，也可通过向现有实例添加此服务来进行订购。
+订购 VMware HCX on {{site.data.keyword.cloud}} 服务时，可订购包含此服务的新 VMware vCenter Server 实例，也可通过向现有实例添加此服务来进行订购。
 
-## 为新实例订购 VMware HCX on IBM Cloud
-{: #hcx_ordering-new}
+订购 VMware HCX on {{site.data.keyword.cloud_notm}} 服务时，需要承诺使用 12 个月。如果在 12 个月的承诺期结束之前删除主机或集群，那么将继续向您的帐户收取 HCX 组件的费用。
+{:important}
 
-要订购包含 VMware HCX on {{site.data.keyword.cloud_notm}} 的新 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 实例，请在从 {{site.data.keyword.vmwaresolutions_short}} 控制台订购该实例时在**服务**部分中选择 **VMware HCX on IBM Cloud**。
+要订购包含 VMware HCX on {{site.data.keyword.cloud_notm}} 的新 VMware vCenter Server 实例，请在 {{site.data.keyword.vmwaresolutions_short}} 控制台中订购该实例时在**服务**部分中选择 **HCX on IBM Cloud 3.5**。
 
 
 ## 为现有实例订购 VMware HCX on IBM Cloud
 {: #hcx_ordering-existing}
 
-要将 VMware HCX on {{site.data.keyword.cloud_notm}} 服务添加到现有 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 实例，请查看要为其添加服务的实例，单击左侧导航窗格上的**服务**，然后单击**添加**。
+要将 VMware HCX on {{site.data.keyword.cloud_notm}} 服务添加到现有 VMware vCenter Server 实例，请查看要为其添加该服务的实例，单击左侧导航窗格上的**服务**，然后单击**添加**。
 
 ## VMware HCX on IBM Cloud 配置
 {: #hcx_ordering-config}
 
 要安装 HCX on {{site.data.keyword.cloud_notm}}，请完成以下设置：
-1. 通过选择下列其中一个选项来指定 **HCX 互连类型**：
+1. 选中相应复选框以确认您同意与订购 HCX on {{site.data.keyword.cloud_notm}} 服务关联的条款。
+
+   在 12 个月的承诺期到期日期之后，这些复选框即不会再显示。
+   {:note}
+
+2. 通过选择下列其中一个选项来指定 **HCX 网络连接**：
   * **公用网络**：HCX 通过公用网络在站点之间创建加密连接。许可证注册和计量通过公用网络执行。
   * **专用互联**：HCX 通过专用网络在站点之间创建加密连接。许可证注册和计量通过公用网络执行。
   * **专用网络**：HCX 通过专用网络在站点之间创建加密连接。许可证注册和计量通过专用网络经由 HTTP 代理执行。
@@ -59,7 +64,7 @@ subcollection: vmware-solutions
 ## HCX on IBM Cloud 的部署过程
 {: #hcx_ordering-deploy}
 
-部署 HCX on {{site.data.keyword.cloud_notm}} 会自动执行。无论是订购 vCenter Server with Hybridity Bundle 实例时包含此服务，还是稍后再将此服务部署到实例中，都会通过 {{site.data.keyword.vmwaresolutions_short}} 自动过程来完成以下步骤：
+部署 HCX on {{site.data.keyword.cloud_notm}} 会自动执行。无论是订购 vCenter Server 实例时包含此服务，还是稍后再将此服务部署到实例中，都会通过 {{site.data.keyword.vmwaresolutions_short}} 自动过程来完成以下步骤：
 1. 为 {{site.data.keyword.cloud_notm}} 基础架构中的 HCX 订购三个子网：
    * 一个专有可移植子网，用于 HCX 管理。
    * 一个用于 HCX 互联的专用可移植子网。在为 **HCX 互联类型**选择了**专用网络**选项的情况下，会使用此子网。
@@ -67,7 +72,7 @@ subcollection: vmware-solutions
 
    为 HCX 订购的子网中的 IP 地址旨在由 VMware on {{site.data.keyword.cloud_notm}} 自动化进行管理。这些 IP 地址无法分配给您所创建的 VMware 资源，例如 VM 和 NSX Edge。如果需要更多 IP 地址用于 VMware 工件，那么必须向 {{site.data.keyword.cloud_notm}} 订购您自己的子网。
    {:important}
-2. 如果针对 **HCX 互连类型**选择了**专用网络**，那么将在专用分布式虚拟交换机 (DVS) 上创建名为 **SDDC-DPortGroup-HCX-Private** 的端口组。
+2. 如果针对 **HCX 网络连接**选择了**专用网络**，那么将在专用分布式虚拟交换机 (DVS) 上创建名为 **SDDC-DPortGroup-HCX-Private** 的端口组。
 3. 向 VMware 订购 HCX 激活密钥。
 4. 为 HCX 创建三个资源池和 VM 文件夹，以用于 HCX 互连、本地 HCX 组件和远程 HCX 组件。
 5. 部署并配置 VMware NSX Edge 服务网关 (ESG) 对，以用于 HCX 管理流量：
@@ -92,7 +97,7 @@ subcollection: vmware-solutions
 
 * [HCX on {{site.data.keyword.cloud_notm}} 概述](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_considerations#hcx_considerations)
 * [管理 HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghcx)
-* [订购、查看和除去 vCenter Server with Hybridity Bundle 实例的服务](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
+* [订购、查看和除去 vCenter Server 实例的服务](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
 * [HCX 术语的词汇表](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
 * [联系 IBM 支持人员](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [VMware Hybrid Cloud Extension 概述](https://cloud.vmware.com/vmware-hcx){:external}

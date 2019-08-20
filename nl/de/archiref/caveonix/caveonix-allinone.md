@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -40,8 +40,3 @@ Tabelle 2. Ferner Kollektor
 |Platte	|1 TB|
 |BS	|CentOS 7|
 |Installierte Anwendungskomponenten	|Ferner Kollektor|
-
-## Zugehörige Links
-{: #caveonix-allinone-related}
-
-*   [VMware vCenter Server on {{site.data.keyword.cloud}} mit Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-07-26"
 
 keywords: vCenter Server NSX-T, NSX-T, tech specs vCenter Server NSX-T
 
@@ -74,6 +74,7 @@ vCenter Server with NSX-T 인스턴스는 개념 증명(POC) 또는 샌드박스
 
 다음 구성 중 하나로 세 개 이상의 {{site.data.keyword.baremetal_short}}를 주문할 수 있습니다.
 * **Skylake**: 선택한 CPU 모델 및 RAM 크기를 사용하는 두 개의 CPU Intel Skylake 세대 서버(Intel Xeon 4100/5100/6100 시리즈)  
+*  **Cascade**: 선택한 CPU 모델 및 RAM 크기를 사용하는 두 개의 CPU Intel Cascade 세대 서버(Intel Xeon 4200/5200/6200 시리즈)
 * **Broadwell**: 선택한 CPU 모델 및 RAM 크기를 사용하는 네 개의 Intel Broadwell 세대 서버(Intel Xeon E7-4800 시리즈)
 
 vSAN 스토리지를 사용하려는 경우 구성에 최소 4개의 {{site.data.keyword.baremetal_short}}가 필요합니다.
@@ -137,7 +138,7 @@ NFS 옵션을 선택한 경우에는 관리 컴포넌트용으로 하나의 2TB 
 ### 라이센스(IBM 제공 또는 BYOL) 및 요금
 {: #vc_nsx-t_overview-license-and-fee}
 
-* VMware vSphere Enterprise Plus 6.7u1
+* VMware vSphere Enterprise Plus 6.7u2
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Edition(Base, Advanced 또는 Enterprise) 6.4(IBM 제공만 해당)
 * (vSAN 클러스터의 경우) VMware vSAN Advanced 또는 Enterprise 6.6
@@ -156,7 +157,7 @@ NFS 옵션을 선택한 경우에는 관리 컴포넌트용으로 하나의 2TB 
 ### 확장 노드의 라이센스 및 요금
 {: #vc_nsx-t_overview-expansion-node-license-and-fee}
 
-* 하나의 VMware vSphere Enterprise Plus 6.7u1
+* 하나의 VMware vSphere Enterprise Plus 6.7u2
 * 하나의 VMware NSX Service Providers Edition(Base, Advanced 또는 Enterprise) 6.4
 * 하나의 지원 및 서비스 요금
 * (vSAN 클러스터의 경우) VMware vSAN Advanced 또는 Enterprise 6.6

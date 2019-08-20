@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-20"
+lastupdated: "2019-08-06"
 
 keywords: planning vSphere, data center, vSphere data centers
 
@@ -34,6 +34,9 @@ L'account {{site.data.keyword.cloud_notm}} che utilizzi deve soddisfare determin
 {: #vs_planning-dc-availability}
 
 La distribuzione di vSphere ha requisiti rigorosi sull'infrastruttura fisica. Pertanto, puoi distribuire i cluster solo nei {{site.data.keyword.CloudDataCents_notm}} che soddisfano i requisiti. Per la distribuzione di vSphere sono disponibili i seguenti {{site.data.keyword.CloudDataCent_notm}}.
+
+Cascade Lake {{site.data.keyword.baremetal_short}} sono disponibili in una regione multizona {{site.data.keyword.CloudDataCents_notm}}. Per ulteriori informazioni, vedi [Panoramica della regione multizona (o MZR, Multi-Zone Region)
+](/docs/infrastructure/loadbalancer-service?topic=loadbalancer-service-multi-zone-region-mzr-overview).
 
 Se selezioni un componente vSAN, l'elenco di ubicazioni viene filtrato in base alla disponibilità SSD (Solid-State Disk).
 {:note}

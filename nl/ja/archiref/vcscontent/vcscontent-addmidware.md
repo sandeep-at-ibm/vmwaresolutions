@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-27"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -221,7 +221,7 @@ Kubernetes に合うように Jane のマイクロサービスを最適化する
 -	パイプラインを追加しました (Jenkins を使用しました)
 -	Maven を使用して構築しました
 
-次の例は、Jane の[コード・リポジトリー](https://github.com/IBMStockTrader/)、Jenkins ファイル、server.xml などを示しています。これにより、Jane は、ODM や Watson などのサービスや、GitHub の個々のリポジトリーである他のマイクロサービスにシークレットを使用してアクセスし、追加の機能を自由にコーディングできます。
+次の例は、Jane の[コード・リポジトリー](https://github.com/IBMStockTrader/)、Jenkins ファイル、server.xml などを示しています。 これにより、Jane は、ODM や Watson などのサービスや、GitHub の個々のリポジトリーである他のマイクロサービスにシークレットを使用してアクセスし、追加の機能を自由にコーディングできます。
 
 ### シークレットの追加
 {: #vcscontent-addmidware-add-secrets}
@@ -240,8 +240,3 @@ Stock Trader は複数のクラウドで実行する可能性がありますが�
 Jane が Stock Trader ソリューションのリファクタリングに、Todd が {{site.data.keyword.cloud_notm}} Private Hosted へのミドルウェアのインストールに献身的に取り組んだ結果、中核の Stock Trader ソリューションを構成するすべての要素がプライベート・クラウドで実行されるようになりました。 Jane はさらに Twitter 通知サービスなどのマイクロサービスを追加します。 Istio ルーティング・ルールにより、Slack の社内チャネルや Twitter の公開チャネルでロイヤルティー・レベルのメッセージングを動的に行えるようにします。
 
 ![Stock Trader エンリッチ](../../images/vcscontent-enrich.svg "Stock Trader エンリッチ")
-
-## 関連リンク
-{: #vcscontent-addmidware-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

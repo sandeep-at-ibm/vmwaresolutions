@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-01"
 
 keywords: FAQ, user account, patch management
 
@@ -88,7 +88,7 @@ vCenter HA は構成できますが、{{site.data.keyword.vmwaresolutions_short}
 {: #faq-rename-cluster}
 {: faq}
 
-新規 vCenter Server インスタンスの場合、デプロイ時に作成される最初のクラスターのデフォルト名は **cluster1** です。 VMware vSphere Client でデフォルト・クラスターの名前を変更できます。 vCenter Server インスタンスにクラスターを追加するときに、{{site.data.keyword.vmwaresolutions_short}} コンソールで任意の名前を指定できます。
+新規 vCenter Server インスタンスの場合、デプロイ時に作成される初期クラスターの名前を設定できます。vCenter Server インスタンスにクラスターを追加するときに、{{site.data.keyword.vmwaresolutions_short}} コンソールで任意の名前を指定できます。
 
 ## パッチはどのように管理されていますか?
 {: #faq-patches}
@@ -106,7 +106,6 @@ V2.0 以上でデプロイしたインスタンスの場合は、VMware Update M
 詳しくは、以下のリソースを参照してください。
 * [VMware サポート](https://www.vmware.com/support.html){:external}
 * [vCenter Server インスタンスへの更新の適用](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates)
-* [vCenter Server with Hybridity Bundle インスタンスへの更新の適用](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_applyingupdates)
 
 ## 管理サービスの NSX Edge にはセキュリティーのリスクがありますか?
 {: #faq-mgmt-nsx}
@@ -136,7 +135,6 @@ V2.0 以上でデプロイしたインスタンスの場合は、VMware Update M
 
 詳しくは、以下の資料にある『_IBM Cloud データ・センターの使用可否_』セクションを参照してください。
 * [vCenter Server インスタンスの要件と計画](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
-* [vCenter Server with Hybridity Bundle インスタンスの要件と計画](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)
 * [VMware vSphere on {{site.data.keyword.cloud_notm}} の要件と計画](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning)
 * [NetApp ONTAP Select インスタンスの要件と計画](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_planning)
 

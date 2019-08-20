@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-06"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -67,8 +67,3 @@ subcollection: vmware-solutions
 工作："Caveo Logs" 異常評分 > 90 時，標示「資產」進行隔離，並傳送「通知」至 Slack 頻道。`
 工作："Caveo Network" 異常評分 > 95 時，隔離資產，並傳送電子郵件通知，同時傳送使用者介面通知。
 ```
-
-## 相關鏈結
-{: #caveonix-terminology-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

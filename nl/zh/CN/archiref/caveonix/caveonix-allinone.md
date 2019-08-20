@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -40,8 +40,3 @@ subcollection: vmware-solutions
 |磁盘|1 TB|
 |操作系统|CentOS 7|
 |已安装的应用程序组件|远程收集器|
-
-## 相关链接
-{: #caveonix-allinone-related}
-
-*   [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

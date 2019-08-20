@@ -272,12 +272,12 @@
          id="text77">IBM Cloud Private</text>
       <text
          x="46.5"
-         y="632"
+         y="630"
          id="text79">Cloud Automation Manager</text>
       <text
          x="243"
-         y="616"
-         id="text81">Containers</text>
+         y="630"
+         id="text81">Container</text>
     </g>
     <image
        x="199"
@@ -413,7 +413,7 @@
       <text
          x="648.36"
          y="148.69"
-         id="text125">Service</text>
+         id="text125">서비스</text>
     </g>
     <image
        x="577"
@@ -608,7 +608,7 @@
       </text>
     </g>
     <g
-       transform="translate(629.5,364.5)"
+       transform="translate(629.5,361.5)"
        id="g183">
       <switch
          id="switch185">
@@ -628,7 +628,7 @@
             <xhtml:div
                display="inline-block"
                text-align="inherit"
-               text-decoration="inherit">Cluster</xhtml:div>
+               text-decoration="inherit">클러스터</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text
@@ -900,7 +900,7 @@
             <xhtml:div
                display="inline-block"
                text-align="inherit"
-               text-decoration="inherit">App</xhtml:div>
+               text-decoration="inherit">앱</xhtml:div>
           </xhtml:div>
         </foreignObject>
         <text
@@ -924,7 +924,7 @@
        id="g271">
       <text
          x="355"
-         y="248.5"
+         y="238.5"
          id="text273">
         <tspan
            style="-inkscape-font-specification:Gulim;font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"

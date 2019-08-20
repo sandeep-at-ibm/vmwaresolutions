@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -120,9 +120,3 @@ nollie-heelflip to frontside-boardslide
 {: #vcscar-concepts-relevance}
 
 Il linguaggio di trick è il costrutto chiave utilizzato per addestrare Watson a riconoscere e acquisire supporti multimediali e documenti di skating e costituisce inoltre la base delle conversazioni con l'utente.
-
-## Link correlati
-{: #vcscar-concepts-related}
-
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle
-](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-21"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -16,7 +16,7 @@ subcollection: vmware-solutions
 
 系統環境定義圖會定義系統的主要元素、系統界限，以及與其互動的實體和互動。它是高階圖，提供讀者系統起始視圖。
 
-![系統環境定義圖](../../images/vcsnsxt-networking.svg "系統環境定義圖")
+![系統環境定義圖](../../images/vcsnsxt-networking.svg "系統環境定義圖"){: caption="圖 1. 系統環境定義" caption-side="bottom"}
 
 網路視景中的四個核心元件如下：
 - **內部部署虛擬化** - 此 VMware 環境裝載於用戶端內部部署或協力廠商，並且目前管理正在執行要現代化之應用程式的虛擬機器 (VM)。它是 VM 移轉的來源環境，並且透過 VMware HCX 與 {{site.data.keyword.cloud}} 鬆散耦合。
@@ -56,8 +56,3 @@ NSX-V| vCenter Server 上的 NSX-V 提供由系統管理者管理的軟體定義
 CAM| {{site.data.keyword.cloud_notm}} Automation Manager (CAM) 在 {{site.data.keyword.icpfull_notm}} 上執行，並提供單一窗格，可以使用範本，同時佈建 VM 型工作負載及 Kubernetes 型工作負載。CAM 容許「開發人員」執行下列動作：<br> - 在 vCenter Server、{{site.data.keyword.icpfull_notm}} 或 {{site.data.keyword.containerlong_notm}} 上佈建工作負載。<br> - 組合及編排可理解 VM 和容器的服務。<br> - 整合其 DevOps 工具鏈及 Day 2 ITSM 解決方案。
 容器化應用程式 | 這些應用程式完成應用程式現代化旅程，且目前作為容器執行。對於此參照架構和此 Acme Skateboards 範例，其中一個容器化應用程式是 Web 伺服器，它是線上呈現工作負載的一部分。
 Watson | 對於此參照架構和此 Acme Skateboards 範例而言，Watson 代表_概念車架構_ 中使用的 AI 服務。
-
-## 相關鏈結
-{: #vcsnsxt-systemcontext-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概觀](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

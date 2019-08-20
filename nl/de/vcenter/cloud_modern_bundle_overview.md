@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-22"
 
 keywords: single-node trial, migration app modernization, tech specs migration app modernization
 
@@ -25,7 +25,7 @@ Mit Single-node Trial für Migration und App-Modernisierung können Sie {{site.d
 
 Single-node Trial ist eine Testversion von {{site.data.keyword.cloud_notm}} Private Hosted auf VMware vCenter Server on {{site.data.keyword.cloud_notm}}, mit der die Kubernetes-Managementplattform für Container und die Single-Tenant-VMware-Plattform bereitstellt wird, die mit den gleichen Tools wie in lokalen Umgebungen verwaltet werden kann. Sie können die Geschwindigkeit und die Skalierung der Cloud nutzen und gleichzeitig das gleiche Niveau an Kontrolle und Sichtbarkeit aufrechterhalten, das Sie auch beim lokalen Betrieb erhalten.
 
-Die Testversion ist für die Migration von bis zu 20 einfachen Entwicklungs- oder Testworkloads mit vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle und Containerisierung dieser Workloads mit der Kubernetes-basierten Anwendungsentwicklungsplattform "{{site.data.keyword.cloud_notm}} Private Hosted" konzipiert. Mittels Automatisierung wird VMware HCX in {{site.data.keyword.cloud_notm}} installiert und konfiguriert, provide ein lokaler HCX-Aktivierungsschlüssel wird bereitgestellt und eine kleine Entwicklungs- und Test-Topologie {{site.data.keyword.cloud_notm}} Private Hosted wird innerhalb weniger Stunden installiert und konfiguriert.
+Die Testversion wurde für die Migration von bis zu 20 einfachen Entwicklungs- oder Testworkloads mit vCenter Server on {{site.data.keyword.cloud_notm}} und Containerisierung dieser Workloads mit der Kubernetes-basierten {{site.data.keyword.cloud_notm}} Private Hosted-Anwendungsentwicklungsplattform konzipiert. Mittels Automatisierung wird VMware HCX in {{site.data.keyword.cloud_notm}} installiert und konfiguriert, provide ein lokaler HCX-Aktivierungsschlüssel wird bereitgestellt und eine kleine Entwicklungs- und Test-Topologie {{site.data.keyword.cloud_notm}} Private Hosted wird innerhalb weniger Stunden installiert und konfiguriert.
 
 Single-node Trial für Migration und App-Modernisierung ist nur für den Machbarkeitsnachweis (proof of concept, POC) vorgesehen. Die Umgebung ist nicht für Workloads im Produktionsbetrieb geeignet. Managementfunktionen wie das Hinzufügen und Entfernen von Hosts und Clustern, das Bestellen von Add-on-Services und das Anwenden von Updates werden nicht unterstützt.
 {:important}
@@ -94,7 +94,7 @@ Die folgenden VSIs (Virtual Server-Instanzen) werden bestellt:
 
 Ihre Bestellung der Single-node Trial-Instanz für Migration und Anwendungsmodernisierung enthält die folgenden Lizenzen:
 
-* VMware vSphere Enterprise Plus 6.7u1
+* VMware vSphere Enterprise Plus 6.7u2
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Advanced Edition 6.4
 * {{site.data.keyword.cloud_notm}} Private Hosted 3.1.2

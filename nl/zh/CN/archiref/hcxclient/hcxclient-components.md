@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-01"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -14,12 +14,12 @@ subcollection: vmware-solutions
 # HCX 组件和术语的词汇表
 {: #hcxclient-components}
 
-HCX 由一个云端（目标/VCD 环境）和一个或多个客户机（源）组成。必须为每个 vCenter 部署一个 HCX 实例，即使部署了 HCX 的 vCenter 在客户机或云端的同一 SSO 域中链接也是如此。HCX 支持的配置为一对一、一对多、多对一和多对多。
+HCX 由一个云端（目标或 VCD 环境）和一个或多个客户机（源）组成。必须为每个 vCenter 部署一个 HCX 实例，即使部署了 HCX 的 vCenter 在客户机或云端的同一 SSO 域中链接也是如此。HCX 支持的配置为一对一、一对多、多对一和多对多。
 
 ## 目标端和客户机端
 {: #hcxclient-components-cloud-client-side}
 
-HCX 具有云端（目标/VCD 环境）和客户机端（源）的概念。
+HCX 具有云端（目标或 VCD 环境）和客户机端（源）的概念。
 
 - 目标端 - HCX Cloud Manager 预先部署并配置了网络和计算概要文件，可随时用于创建服务网。  
 - 客户机端 - 满足安装和运行先决条件的任何 vSphere 实例。HCX 的客户机端是主实例，通过其 vCenter Web 客户机用户界面 (UI) 插入件来控制云端从属实例。
@@ -45,7 +45,7 @@ HCX 服务网组件负责在客户机和云端之间创建数据和控制平面�
 ## HCX 用户门户网站
 {: #hcxclient-components-hcx-user-portals}
 
-- 客户机 Web UI - HCX 客户机 Web 门户网站是 HCX 的主 UI。在安装客户机端 HCX Manager 后，它显示为 vCenter Web UI 的插入件。它可控制远程云 HCX 注册（站点配对）、系列组件部署、网络延伸以及将 VM 迁入云中和从云中迁出 VM。
+- 客户机 Web UI - HCX 客户机 Web 门户网站是 HCX 的主 UI。客户机端 HCX Manager 安装后，会显示为 vCenter Web UI 的插入件。它可控制远程云 HCX 注册（站点配对）、系列组件部署、网络延伸以及将 VM 迁入云中和从云中迁出 VM。
 - 云端 UI - 通过为 HCX 客户机注册提供的公共注册 URL，可以访问云端 HCX UI。缺省情况下，会使用云端 vCenter Admin 凭证 `administrator@vsphere.local`。此 UI 通常用于升级安装和修改某些网络配置。
 
 ## 相关链接

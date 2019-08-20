@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -66,8 +66,3 @@ vCenter Server 提供了设计最适合工作负载的 VMware 软件定义的数
 向云本机应用程序平台（如 {{site.data.keyword.icpfull_notm}} 和 {{site.data.keyword.containerlong_notm}}）迁移的客户可专注于速度和创新，而不必时刻关注安全性和联网。对于需要等待联网或安全团队能够订购负载均衡器、防火墙、交换机和路由器等服务的情况，这可缩短应用程序的价值实现时间。
 
 此参考体系结构显示了 VCS、{{site.data.keyword.icpfull_notm}} 和 {{site.data.keyword.containerlong_notm}} 如何在应用程序现代化的旅程中安全地迁移 Acme Skateboards。
-
-## 相关链接
-{: #vcsiks-appmod-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 概述](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

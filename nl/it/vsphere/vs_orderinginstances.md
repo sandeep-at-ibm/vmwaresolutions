@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-06"
 
 keywords: vSphere order cluster, order vSphere, order vSphere cluster
 
@@ -40,7 +40,12 @@ Quando ordini un nuovo cluster vSphere, devi specificare le seguenti impostazion
 ### Nome cluster
 {: #vs_orderinginstances-cluster-name}
 
-Il nome del cluster deve essere univoco all'interno del tuo account.
+Il nome del cluster deve rispettare i seguenti requisiti:
+* Sono consentiti solo caratteri alfabetici minuscoli, numerici e trattini (-).
+* Il nome del cluster deve iniziare con un carattere alfabetico minuscolo.
+* Il nome del cluster deve terminare con un carattere alfabetico minuscolo o un carattere numerico.
+* La lunghezza massima del nome del cluster è di 10 caratteri.
+* Il nome del cluster deve essere univoco all'interno del tuo account.
 
 ## Impostazioni di licenza
 {: #vs_orderinginstances-licensing-settings}
@@ -72,7 +77,7 @@ Per gli utenti Business Partner IBM, l'opzione BYOL (Bring Your Own License) non
 {: #vs_orderinginstances-individual-components-for-non-bp-users}
 
 Se non sei un Business Partner, puoi selezionare i seguenti componenti per il tuo cluster vSphere:
-* VMware vSphere Enterprise Plus 6.7 U1 o 6.5 U2
+* VMware vSphere Enterprise Plus 6.7 U2 o 6.5 U2
 * VMware vCenter Server
 * VMware NSX
 * VMware vSAN
@@ -123,6 +128,21 @@ Se selezioni **Skylake**, puoi scegliere la combinazione di CPU e RAM del Bare M
 | Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 {: caption="Tabella 2. Opzioni per Skylake {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
+### Cascade
+{: #vs_orderinginstance-cascade}
+
+Per l'impostazione **Cascade**, hai opzioni per il **Modello CPU** e la **RAM**.
+
+Cascade {{site.data.keyword.baremetal_short}} sono disponibili solo per le istanze di VMware vSphere Enterprise Plus 6.7 U2.
+{:note}
+
+| Opzioni del modello CPU        | Opzioni RAM       |
+|:------------- |:------------- |
+| Processore Dual Intel Xeon Gold 4210 / 20 core totali, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
+| Processore Dual Intel Xeon Gold 5218 / 32 core totali, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
+| Processore Dual Intel Xeon Gold 6248 / 40 core totali, 2,5 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
+{: caption="Tabella 3. Opzioni per Cascade {{site.data.keyword.baremetal_short}}" caption-side="top"}
+
 ### Certificato SAP
 {: #vs_orderinginstances-sap}
 
@@ -146,7 +166,7 @@ Se selezioni **Broadwell**, puoi scegliere la combinazione di CPU e RAM del Bare
 |:------------- |:------------- |
 | Quad Intel Xeon E7-4820 v4 / 40 core totali, 2,0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 core totali, 2,1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
-{: caption="Tabella 3. Opzioni per Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
+{: caption="Tabella 4. Opzioni per Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 ### Numero di server Bare Metal
 {: #vs_orderinginstances-bare-metal-number}
@@ -167,7 +187,7 @@ Se per il cluster selezioni il componente VMware vSAN, specifica le seguenti imp
 * **Numero di dischi vSAN**: specifica il numero di dischi di capacità che vuoi aggiungere.
 * Se vuoi aggiungere dischi di capacità oltre il limite di otto, seleziona la casella **Alte prestazioni con Intel Optane**. Questa opzione fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 10 dischi di capacità ed è utile per i carichi di lavoro che richiedono meno latenza e una maggiore velocità IOPS.
 
-  L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i modelli di CPU Skylake.
+  L'opzione **Alte prestazioni con Intel Optane** è disponibile solo per i modelli di CPU Skylake e Cascade.
   {:note}
 
 * Riesamina i valori di **Tipo di disco per i dischi cache vSAN** e **Numero di dischi cache vSAN**. Questi valori dipendono dalla selezione della casella **Alte prestazioni con Intel Optane**.
@@ -180,28 +200,31 @@ Quando ordini un nuovo cluster vSphere, devi specificare le seguenti impostazion
 ### Prefisso nome host
 {: #vs_orderinginstances-host-name-prefix}
 
-Il nome host è utilizzato per tutti gli ordini di server bare metal. Si consiglia di utilizzare il nome host per tutte le VM (Virtual Machine) di gestione, come vCenter Server e NSX.
+Il nome host è utilizzato per tutti gli ordini di server Bare Metal. Si consiglia di utilizzare il nome host per tutte le VM (Virtual Machine) di gestione, come vCenter Server e NSX.
 
 Il prefisso del nome host deve rispettare i seguenti requisiti:
-* Il nome deve iniziare e terminare con un carattere alfanumerico.
-* Sono consentiti solo caratteri alfanumerici e trattini (-).
-* La lunghezza massima è di 10 caratteri.
+* Sono consentiti solo caratteri alfabetici minuscoli, numerici e trattini (-).
+* Il prefisso del nome host deve iniziare con un carattere alfabetico minuscolo.
+* Il prefisso del nome host deve terminare con un carattere alfabetico minuscolo o un carattere numerico.
+* La lunghezza massima del prefisso del nome host è di 10 caratteri.
 
 ### Etichetta dominio secondario
 {: #vs_orderinginstances-subdomain-label}
 
 L'etichetta del dominio secondario deve rispettare i seguenti requisiti:
-*  Sono consentiti solo caratteri alfanumerici e trattini (-).
-*  L'etichetta del dominio secondario deve iniziare e terminare con un carattere alfanumerico.
-*  La lunghezza massima dell'etichetta del dominio secondario è di 10 caratteri.
+* Sono consentiti solo caratteri alfabetici minuscoli, numerici e trattini (-).
+* L'etichetta del dominio secondario deve iniziare con un carattere alfabetico minuscolo.
+* L'etichetta del dominio secondario deve terminare con un carattere alfabetico minuscolo o un carattere numerico.
+* La lunghezza massima dell'etichetta del dominio secondario è di 10 caratteri.
 
 ### Nome dominio
 {: #vs_orderinginstances-domain-name}
 
 Il nome dominio viene utilizzato per tutti i {{site.data.keyword.baremetal_short}} e deve rispettare i seguenti requisiti:
-* Il nome deve essere composto da due o più stringhe separate da un punto (.)
-* Sono consentiti solo caratteri alfanumerici e trattini (-).
-* Ogni stringa deve iniziare con un carattere alfabetico e terminare con un carattere alfanumerico e l'ultima stringa può contenere solo caratteri alfabetici.
+* Il nome del dominio deve essere composto da due o più stringhe separate da un punto (.)
+* Sono consentiti solo caratteri alfabetici minuscoli, numerici e trattini (-).
+* Ogni stringa deve iniziare con un carattere alfabetico minuscolo e terminare con un carattere alfabetico minuscolo o un carattere numerico.
+* L'ultima stringa può contenere solo caratteri alfabetici minuscoli.
 * La lunghezza dell'ultima stringa deve essere compresa tra 2 e 24 caratteri.
 * La lunghezza delle altre stringhe deve essere compresa tra 1 e 63 caratteri.
 * La lunghezza massima del nome del dominio è di 189 caratteri.
@@ -216,12 +239,12 @@ Le impostazioni di abilitazione della scheda di interfaccia di rete (NIC) si bas
 
 Le impostazioni di rete si basano sulla tua selezione di **Ordina nuove VLAN** o **Seleziona VLAN esistenti**.
 
-Per l'ordine del tuo cluster sono richieste una VLAN pubblica e due VLAN private. Le due VLAN private sono collegate a ogni Bare Metal Server.
-
 #### Ordina nuove VLAN
 {: #vs_orderinginstances-new-vlans}
 
-Seleziona questa opzione per ordinare una nuova VLAN pubblica e due nuove VLAN private.
+Se stai eseguendo l'ordine per una rete pubblica e privata, per l'ordine del tuo cluster sono richieste una VLAN pubblica e due VLAN private. Le due VLAN private sono collegate a ogni Bare Metal Server.
+
+Se stai eseguendo l'ordine per una rete privata, per l'ordine del tuo cluster sono richieste solo due VLAN private. 
 
 #### Seleziona VLAN esistenti
 {: #vs_orderinginstances-existing-vlans}
@@ -230,10 +253,10 @@ A seconda del {{site.data.keyword.CloudDataCent_notm}} che hai selezionato, potr
 
   Se scegli di riutilizzare VLAN pubbliche e private esistenti, specifica le VLAN e le sottoreti:
   * La **VLAN pubblica** serve per l'accesso alla rete pubblica.
+  * La **Sottorete primaria** è assegnata agli host fisici per l'accesso alla rete pubblica.
   * La **VLAN privata** serve per la connettività tra i data center e i servizi in {{site.data.keyword.cloud_notm}}.
   * La **VLAN privata secondaria** serve per le funzioni di VMware come vSAN.
-  * La **Sottorete primaria** è assegnata agli host fisici per l'accesso alla rete pubblica.
-  * La **Sottorete privata primaria** è assegnata agli host fisici per il traffico di gestione.
+  * La **Sottorete primaria privata** è assegnata agli host fisici per il traffico di gestione.
 
 ##### Importante
 {: #vs_orderinginstances-important}
@@ -245,6 +268,9 @@ A seconda del {{site.data.keyword.CloudDataCent_notm}} che hai selezionato, potr
 {: #vs_orderinginstances-fortigate-physical-appliance}
 
 Puoi anche scegliere se includere la coppia FortiGate Physical Appliance 300 Series HA per proteggere il tuo ambiente cloud. Per ulteriori informazioni, vedi [Panoramica di FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations).
+
+Questa opzione è disponibile solo per un ordine sia con una rete pubblica che privata.
+{:note}
 
 ## Riepilogo ordine
 {: #vs_orderinginstances-order-summary}
@@ -269,7 +295,7 @@ Puoi anche aggiungere le risorse di cui è stato eseguito il provisioning allo s
 5. Completa le impostazioni di Bare Metal Server:
    1. Seleziona il {{site.data.keyword.CloudDataCent_notm}} in cui ospitare il cluster.
    2. Seleziona la configurazione di Bare Metal Server.
-      * Se selezioni **Skylake** o **Broadwell**, specifica il modello di CPU e la dimensione della RAM.
+      * Se selezioni **Skylake**, **Cascade** o **Broadwell**, specifica il modello di CPU e la dimensione della RAM.
       * Quando selezioni **Certificato SAP**, scegli una delle configurazioni preimpostate.
    3. Specifica il numero di server bare metal.
 6. Se hai selezionato il componente **VMware vSAN**, completa la configurazione dell'archiviazione vSAN. Specifica i tipi di disco per i dischi di capacità e cache e il numero di dischi. Se vuoi più spazio di archiviazione, seleziona la casella **Alte prestazioni con Intel Optane**.
@@ -279,7 +305,7 @@ Puoi anche aggiungere le risorse di cui è stato eseguito il provisioning allo s
    3. Seleziona l'interfaccia di rete che vuoi utilizzare.
     * Se vuoi ordinare nuove VLAN pubbliche e private, fai clic su **Ordina nuove VLAN**.
     * Se vuoi riutilizzare le VLAN pubbliche e private esistenti quando sono disponibili, fai clic su **Seleziona VLAN esistenti** e specifica le VLAN e, facoltativamente, le sottoreti.
-    4. Specifica se applicare la coppia FortiGate Physical Appliance 300 Series HA per proteggere il tuo ambiente cloud.  
+    4. Se stai ordinando delle VLAN pubbliche, specifica se applicare la coppia FortiGate Physical Appliance 300 Series HA per proteggere il tuo ambiente cloud.
 8. Nel riquadro **Riepilogo ordine**, verifica la configurazione del cluster e il costo stimato.
    * Per salvare la configurazione come template senza effettuare un ordine, fai clic su **Salva configurazione**.
    * Per effettuare l'ordine, assicurati che l'account da addebitare sia corretto, esamina e accetta i termini e infine fai clic su **Fornitura**.

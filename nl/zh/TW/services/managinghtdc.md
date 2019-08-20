@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-23"
 
 keywords: HTDC WebGUI, HTDC console, enable internet HTDC
 
@@ -63,7 +63,7 @@ subcollection: vmware-solutions
 1. 完成前一個程序中的步驟 1 - 3。
 2. 按一下**設定**、**介面**。記下專用上行鏈路的 IP 位址。這個位址變成新的預設閘道。
 3. 按一下**首頁 > 主機及叢集**，並找到 HyTrust VM。在其中一個 VM 按一下滑鼠右鍵，然後按一下**開啟主控台**。
-4. 使用可在 {{site.data.keyword.vmwaresolutions_short}} 主控台上的 HyTrust DataControl on IBM Cloud 服務詳細資料頁面上找到的主控台認證，登入到主控台。
+4. 使用可在 {{site.data.keyword.vmwaresolutions_short}} 主控台上的 HyTrust DataControl on {{site.data.keyword.cloud_notm}} 服務詳細資料頁面上找到的主控台認證，登入主控台。
 5. 若要從 VM 取得現行預設閘道 IP 位址，請按一下**管理網路設定 > 顯示現行網路配置**。記下針對**閘道**列出的 IP 位址。此位址將成為用於靜態路徑的閘道。
 6. 若要設定 VM 的靜態路徑，請按一下**管理網路設定 > 管理靜態路徑 > 新增靜態路徑**。將**網址**設定為 `10.0.0.0/8`，將**閘道**設定為前一步驟中記下的 IP 位址。
 7. 若要設定 VM 的預設閘道 IP，請按一下**管理網路設定 > 顯示現行網路配置**。如果得到警告訊息，請按一下**確定**，然後按一下**自訂配置**。將**閘道**欄位設定為步驟 2 中記下的專用上行鏈路 IP 位址，然後按一下**確定**。等待直到新的網路配置已安裝且網路服務已重新啟動。

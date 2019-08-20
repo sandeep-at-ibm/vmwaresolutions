@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-29"
 
 keywords: NetApp order instance, order NetApp ONTAP, order NetApp
 
@@ -42,8 +42,9 @@ Quando ordini un'istanza NetApp ONTAP Select, devi specificare le seguenti impos
 {: #np_orderinginstances-instance-name}
 
 Il nome dell'istanza deve rispettare i seguenti requisiti:
-* Sono consentiti solo caratteri alfanumerici e trattini (-).
-* Il nome dell'istanza deve iniziare con un carattere alfabetico e terminare con un carattere alfanumerico.
+* Sono consentiti solo caratteri alfabetici minuscoli, numerici e trattini (-).
+* Il nome dell'istanza deve iniziare con un carattere alfabetico minuscolo.
+* Il nome dell'istanza deve terminare con un carattere alfabetico minuscolo o un carattere numerico.
 * La lunghezza massima del nome dell'istanza è di 10 caratteri.
 * Il nome dell'istanza deve essere univoco all'interno del tuo account.
 
@@ -56,26 +57,29 @@ Quando ordini un'istanza NetApp ONTAP Select, devi specificare le seguenti impos
 {: #np_orderinginstances-host-name-prefix}
 
 Il prefisso del nome host deve rispettare i seguenti requisiti:
-*  Sono consentiti solo caratteri alfanumerici e trattini (-).
-*  Il prefisso del nome host deve iniziare e terminare con un carattere alfanumerico.
-*  La lunghezza massima del prefisso del nome host è di 10 caratteri.
+* Sono consentiti solo caratteri alfabetici minuscoli, numerici e trattini (-).
+* Il prefisso del nome host deve iniziare con un carattere alfabetico minuscolo.
+* Il prefisso del nome host deve terminare con un carattere alfabetico minuscolo o un carattere numerico.
+* La lunghezza massima del prefisso del nome host è di 10 caratteri.
 
 ### Etichetta dominio secondario
 {: #np_orderinginstances-subdomain-label}
 
 L'etichetta del dominio secondario deve rispettare i seguenti requisiti:
-*  Sono consentiti solo caratteri alfanumerici e trattini (-).
-*  L'etichetta del dominio secondario deve iniziare con un carattere alfabetico e terminare con un carattere alfanumerico.
-*  La lunghezza massima dell'etichetta del dominio secondario è di 10 caratteri.
+* Sono consentiti solo caratteri alfabetici minuscoli, numerici e trattini (-).
+* L'etichetta del dominio secondario deve iniziare con un carattere alfabetico minuscolo.
+* L'etichetta del dominio secondario deve terminare con un carattere alfabetico minuscolo o un carattere numerico.
+* La lunghezza massima dell'etichetta del dominio secondario è di 10 caratteri.
 
 ### Nome dominio
 {: #np_orderinginstances-domain-name}
 
 Il nome del dominio root deve rispettare i seguenti requisiti:
 * Il nome del dominio deve essere composto da due o più stringhe separate da un punto (.)
-* La prima stringa deve iniziare con un carattere alfabetico e terminare con un carattere alfanumerico.
-* Tutte le stringhe, eccetto l'ultima, possono includere solo caratteri alfanumerici e trattini (-).
-* L'ultima stringa può includere solo caratteri alfabetici.
+* La prima stringa deve iniziare con un carattere alfabetico minuscolo.
+* La prima stringa deve terminare con un carattere alfabetico minuscolo o un carattere numerico.
+* Tutte le stringhe, tranne l'ultima, possono contenere solo caratteri alfabetici minuscoli, numerici e trattini (-).
+* L'ultima stringa può contenere solo caratteri alfabetici minuscoli.
 * La lunghezza dell'ultima stringa deve essere compresa tra 2 e 24 caratteri.
 
 La lunghezza massima del nome di dominio completo (o FQDN, Fully Qualified Domain Name) per gli host e le VM (Virtual Machine) è di 50 caratteri. I nomi di dominio devono essere adattati a questa lunghezza massima.
@@ -108,7 +112,7 @@ Le unità SSD (Solid-State Disk) da 3,8 TB sono supportate quando vengono rese g
 ### Numero di server Bare Metal
 {: #np_orderinginstances-bare-metal-number}
 
-Il numero di server ESXi di un'istanza NetApp ONTAP Select è 4 per impostazione predefinita. Non puoi modificare questo valore. Tutti i server ESXi condividono la configurazione.
+Il numero di server ESXi di un'istanza NetApp ONTAP Select è quattro per impostazione predefinita. Non puoi modificare questo valore. Tutti i server ESXi condividono la configurazione.
 
 ## Riepilogo ordine
 {: #np_orderinginstances-order-summary}

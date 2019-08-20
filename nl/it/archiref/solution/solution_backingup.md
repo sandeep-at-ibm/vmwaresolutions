@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-14"
+lastupdated: "2019-07-16"
 
 subcollection: vmware-solutions
 
@@ -68,7 +68,7 @@ Se distribuisci componenti aggiuntivi della soluzione nella tua istanza, devi an
 
 * Zerto Virtual Replication: il sistema Zerto Virtual Manager (ZVM) viene distribuito come VSI (Virtual Server Instance) di {{site.data.keyword.cloud_notm}} e il suo backup non è supportato da Veeam o IBM Spectrum Protect Plus. Se la tua strategia di ripristino di emergenza richiede il ripristino del sistema ZVM senza eseguire un failover del sito, devi utilizzare la tua soluzione di backup Windows preferita per eseguire il backup e il ripristino di ZVM.
 * F5 BIG-IP: F5 raccomanda il [backup basato su file della configurazione F5](https://support.f5.com/csp/article/K13132){:new_window}, che puoi indirizzare al tuo file server.
-* FortiGate Security Appliance o VM: Fortinet raccomanda il [backup basato su file della configurazione FortiGate](http://help.fortinet.com/fos50hlp/54/Content/FortiOS/fortigate-best-practices-54/Firmware/Performing_Config_Backup.htm){:new_window}, che puoi indirizzare al tuo file server.
+* FortiGate Security Appliance o VM: Fortinet raccomanda il [backup basato su file della configurazione FortiGate](https://help.fortinet.com/fos50hlp/54/Content/FortiOS/fortigate-best-practices-54/Firmware/Performing_Config_Backup.htm){:new_window}, che puoi indirizzare al tuo file server.
 * HyTrust Cloud Control e Data Control: HyTrust supporta sia il backup basato su immagine sia quello basato su file dei dispositivi server HyTrust. Per ulteriori informazioni, consulta le guide di amministrazione HyTrust.
 * VMware HCX: l'interfaccia di gestione del dispositivo HCX ti consente di creare e scaricare un backup basato su file della configurazione del gestore HCX simile a vCenter Server Appliance.
 

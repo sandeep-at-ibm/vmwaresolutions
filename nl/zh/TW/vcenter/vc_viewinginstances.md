@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-22"
 
 keywords: view vCenter Server, view instance, view instance details
 
@@ -77,7 +77,6 @@ subcollection: vmware-solutions
 |DNS、根網域|根網域名稱是 DNS（網域名稱系統）網域名稱及 Microsoft Active Directory (AD) 樹系根名稱。|
 |DNS、SSO 網域|SSO 網域是 vSphere Single Sign-On 網域。針對值為 <samp class="ph codeph">vsphere.local</samp> 的所有已部署 vCenter Server 實例，SSO 網域名稱是固定的。|
 |DNS、子網域|子網域是本端 vCenter Server 實例主機名稱所在之根網域名稱的 DNS 子網域名稱。子網域名稱的格式為 <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp>。|
-| Hybridity Bundle |指出是否已安裝 vCenter Server with Hybridity Bundle。|
 |狀態|實例的狀態。<br><br>顯示的資訊會提供關於部署進度或對實例所採取動作的更新。如果發生問題，可能會顯示訊息，以協助您調查及解決問題。|
 {: caption="表 3. vCenter Server 實例內容" caption-side="top"}
 

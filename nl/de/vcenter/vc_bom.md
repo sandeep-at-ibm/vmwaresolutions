@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-06"
 
 keywords: vCenter Server BOM, bill of materials vCenter Server, BOM
 
@@ -42,13 +42,13 @@ Die folgende Tabelle enthält detaillierte Informationen zur Teileliste für die
 
 | Hersteller  | Komponente                      | Version    |
 |:------------- |:------------------------------ |:------------- |
-| VMware       | vSphere ESXi                    | 6.7 Update 1 (Build 6.7.0-13004448) oder <br/>6.5 Update 2 (Build 6.5.0-13635690) |
+| VMware       | vSphere ESXi                    | 6.7 EP 10 (Build 6.7.0-13981272) oder <br/>6.5u2 (Build 6.5.0-13635690) |
 | VMware       | vSphere 6.7                     | Distributed vSwitch 6.6.0 |
 | VMware       | vSphere 6.5                     | Distributed vSwitch 6.5.0 |
-| VMware       | vCenter Server Appliance        | 6.7 Update 1b (Build 6.7.0-11727113) oder <br/>6.5 Update 2g (Build 6.5.0-13638625) |
-| VMware       | Platform Services Controller    | 6.7 Update 1b (Build 6.7.0-11727113) oder <br/>6.5 Update 2d (Build 6.5.0-10964411) |
+| VMware       | vCenter Server Appliance        | 6.7u2b (6.7.0-13843469) oder <br/>6.5u2g (Build 6.5.0-13638625) |
+| VMware       | Platform Services Controller    | 6.7u2b (6.7.0-13843469) oder <br/>6.5u2g (Build 6.5.0-13638625) |
 | VMware       | vSAN                            | 6.7 Update 1 oder <br/>6.6.1       |
-| VMware       | NSX for vSphere                 | 6.4.4 (Build 11197766)    |
+| VMware       | NSX for vSphere                 | 6.4.5 (Build 13282012)    |
 | VMware       | NSX-T for vSphere               | 2.4                       |
 | Microsoft    | Windows Server Standard Edition | 2016       |
 {: caption="Tabelle 2. Teileliste für Softwarekomponenten in vCenter Server-Instanzen" caption-side="top"}
@@ -137,6 +137,17 @@ Führen Sie zum Aktualisieren der MTU-Einstellung für den öffentlichen Switch 
 
    Wenn die MTU-Größe in einem vSphere Distributed Switch (vDS) geändert wird, werden die angehängten Uplinks (physischen NICs) herunter- und wieder hochgefahren. Aus diesem Grund kommt es bei den VMs, die den betreffenden Uplink verwenden, zu einem kurzen Ausfall. Daher wird empfohlen, die Aktualisierung der MTU-Einstellung auf eine geplante Ausfallzeit zu legen.
    {:note}
+
+## Enhanced VMware vMotion Compatibility (EVC) - Moduseinstellungen
+{: #vc_bom-evc-mode-settings}
+
+Die folgende Tabelle gibt Ihnen eine Übersicht über die EVC-Moduseinstellungen für vCenter Server-Instanzen und die Unterschiede zwischen vSphere-Versionen.
+
+| CPU-Modell der Bare-Metal-Server | vSphere 6.5  | vSphere 6.7 |
+|:------------- |:------------- |:------------- |
+| Broadwell | EVC wird auf Intel **Broadwell** Generation gesetzt | EVC wird auf Intel **Broadwell** Generation gesetzt |
+| Skylake | Nicht festgelegt | EVC wird auf Intel **Skylake** Generation gesetzt |
+{: caption="Tabelle 6. EVC-Moduseinstellungen für vCenter Server-Instanzen und -Cluster" caption-side="top"}
 
 ## Zugehörige Links
 {: #vc_bom-related}

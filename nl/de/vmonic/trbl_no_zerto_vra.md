@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-08-01"
 
 keywords: troubleshooting, Zerto Virtual Replication, Zerto ESXi server
 
@@ -24,7 +24,7 @@ Virtual Replication Appliances (VRA) werden in der Konsole von Zerto Virtual Rep
 ## Lösung
 {: #trbl_no_zerto_vra-resolution}
 
-Bei vCenter Server-Instanzen wird der Service für die Disaster-Recovery mit Zerto nur auf dem ESXi-Server aus dem Standardcluster **cluster1** installiert. Auf allen zusätzlichen Clustern in derselben vCenter Server-Umgebung wird die Disaster-Recovery mit Zerto weder beim Erstellen eines zusätzlichen Clusters noch beim Hinzufügen des ESXi-Server zu diesem zusätzlichen Cluster automatisch installiert.
+Der Service für die Disaster-Recovery mit Zerto wird nur auf dem ESXi-Server aus dem Standardcluster installiert (**cluster1** für Instanzen, die in V3.1 oder darunter bereitgestellt wurden). Auf allen zusätzlichen Clustern in derselben vCenter Server-Umgebung wird die Disaster-Recovery mit Zerto weder beim Erstellen eines zusätzlichen Clusters noch beim Hinzufügen des ESXi-Server zu diesem zusätzlichen Cluster automatisch installiert.
 
 Für die zusätzlichen Cluster müssen Sie die Disaster-Recovery mit Zerto gesondert installieren.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-22"
 
 keywords: Zerto, request Zerto Orchestrated, Zerto managed service
 
@@ -50,7 +50,7 @@ Zerto on {{site.data.keyword.cloud}} 服务提供了复制和灾难恢复功能�
 3. 在 **Zerto on IBM Cloud** 页面上，查看 Zerto on {{site.data.keyword.cloud_notm}} 作为受管服务的描述和技术规范，然后单击**创建**。
 4. 根据需求指定配置设置，或者接受缺省值。
 5. 单击 **vCenter Server** 以将相应服务添加到其中一个实例。
-6. 要在订购新实例期间添加服务，请单击**添加到新实例**，然后继续订购新的 [vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance) 或 [vCenter Server with Hybridity](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance) 实例。
+6. 要在订购新实例期间添加服务，请单击**添加到新实例**，然后继续订购新的 [vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance) 实例。
 7. 要将服务添加到现有实例，请单击**添加到现有实例**，从列表中选择所需实例，然后通过单击**供应**以确认要继续处理订单。
 
 ## 相关链接

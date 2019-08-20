@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-16"
 
 keywords: vCenter Server multi-site, multi-site configuration, multi-site deployment vCenter Server
 
@@ -32,16 +32,16 @@ vCenter Server 인스턴스에 대한 다중 사이트 구성은 V2.0 이상 인
 다중 사이트 배치는 다음 컴포넌트로 구성됩니다.
 
 * **기본 인스턴스**: 기본 VMware vCenter Server 인스턴스의 구성은 다음과 같습니다.
-  *  Microsoft Active Directory(AD) 및 DNS(Domain Name System) 루트 도메인
-  *  vCenter Server 하위 도메인
-  *  SSO(Single Sign-On) 도메인
-  *  SSO 사이트 이름
+  * Microsoft Active Directory(AD) 및 DNS(Domain Name System) 루트 도메인
+  * vCenter Server 하위 도메인
+  * SSO(Single Sign-On) 도메인
+  * SSO 사이트 이름
+  * V2.8 이상에 배치된 기본 인스턴스의 경우: 임베디드 PSC(Platform Services Controller)가 포함된 vCSA(vCenter Server Appliance)
 * **보조 인스턴스**: 기본 인스턴스에 연결된 하나 이상의 보조 vCenter Server 인스턴스의 구성은 다음과 같습니다.
-   *  SSO 사이트 이름
-   *  기본 인스턴스의 루트 도메인에 연결된 DNS 하위 도메인
-   *  기본 및 보조 인스턴스의 AD 가상 머신 간에 DNS 및 AD 복제 설정
-   *  V2.8 이상에 배치된 기본 인스턴스의 경우: 임베디드 PSC(Platform Services Controller)가 포함된 vCSA(vCenter Server Appliance)가 배치 및 구성됨
-   *  보조 인스턴스의 VMware vCenter가 기본 인스턴스에서 vCenter에 대한 향상된 연결 모드로 설정됨
+  * SSO 사이트 이름
+  * 기본 인스턴스의 루트 도메인에 연결된 DNS 하위 도메인
+  * 기본 및 보조 인스턴스의 AD 가상 머신 간에 DNS 및 AD 복제 설정
+  * 보조 인스턴스의 VMware vCenter가 기본 인스턴스에서 vCenter에 대한 향상된 연결 모드로 설정됨
 
 ## vCenter Server 다중 사이트 배치
 {: #vc_multisite-deployment}

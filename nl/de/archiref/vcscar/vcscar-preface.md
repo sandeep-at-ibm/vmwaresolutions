@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -65,8 +65,3 @@ Ein Skater kann Watson Assistant beispielsweise nach einer Liste aller mögliche
 {: #vcscar-preface-cloud-platform}
 
 Die kreative Ebene von IT-Systemen für die Generierung neuer Kombinationen spricht den Kernpunkt des Skateboardings an. Sie ist in der Lage, sich allmählich im Leben von Kreativen auszubreiten und sie überall auf der  ganzen Welt zu Innovationen zu inspirieren. All dies wäre ohne die {{site.data.keyword.cloud}} nicht möglich.
-
-## Zugehörige Links
-{: #vcscar-preface-related}
-
-* [Übersicht über vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

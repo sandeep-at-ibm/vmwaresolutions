@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 keywords: VMware HCX, HCX, tech specs HCX
 
@@ -21,15 +21,22 @@ subcollection: vmware-solutions
 # VMware HCX on IBM Cloud Visão Geral
 {: #hcx_considerations}
 
-O serviço HCX on {{site.data.keyword.cloud}} amplia perfeitamente as redes de data centers no local para o {{site.data.keyword.cloud_notm}}, o que permite que você migre máquinas virtuais (MVs) para e do {{site.data.keyword.cloud_notm}} sem nenhuma conversão ou mudança.
+O serviço HCX on {{site.data.keyword.cloud}} amplia perfeitamente as redes de data centers no local para o {{site.data.keyword.cloud_notm}}, o que permite que você migre máquinas virtuais (MVs) para e do {{site.data.keyword.cloud_notm}} sem nenhuma conversão ou mudança. O HCX cria uma camada de abstração que permite a mobilidade de aplicativo e a hibridismo de infraestrutura por meio de redes estendidas com segurança. É possível modernizar de forma simples seu ambiente do VMware do vSphere 5.1 para a versão mais recente do vSphere sem precisar refatorar ou modificar seu aplicativo existente, pois o HCX permite essa transformação contínua. O HCX permite que você traga seus intervalos de sub-rede IP para o {{site.data.keyword.cloud_notm}} assegurando a consistência de IP por meio de uma implementação híbrida, enquanto fornece segurança de alto nível com criptografias de Conjunto B de ponta a ponta.
 
-Esse serviço está disponível somente para instâncias do VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle que são implementadas na V2.3 e mais recente. A versão atual do HCX on {{site.data.keyword.cloud_notm}} que está instalada é 3.5.1.
+O HCX on {{site.data.keyword.cloud_notm}} requer que você consuma o NSX Advanced ou Enterprise por meio do {{site.data.keyword.cloud_notm}} ou de uma versão equivalente usando BYOL (Bring Your Own License). Um compromisso de 12 meses é necessário quando você pede o serviço VMware HCX on {{site.data.keyword.cloud_notm}}. Você é cobrado por 12 meses consecutivos após a implementação inicial do HCX. Quaisquer nós adicionais são incluídos dentro da data de expiração de fornecimento inicial. Depois que o compromisso de 12 meses expirar, será possível instalar e desinstalar o serviço HCX on {{site.data.keyword.cloud_notm}} e será possível incluir e remover hosts e clusters sem restrições. Sua conta será então cobrada em uma base mensal e será possível cancelar a qualquer momento.
+
+A data de expiração do compromisso de 12 meses está disponível na página de detalhes do HCX on {{site.data.keyword.cloud_notm}}. Para obter mais informações sobre como visualizar detalhes do serviço, consulte [Pedindo, visualizando e removendo serviços para instâncias do vCenter Server](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure).
 {:note}
-
-É possível fazer upgrade de sua instância do vCenter Server existente para uma instância do vCenter Server with Hybridity Bundle. Para obter mais informações sobre como fazer upgrade de sua instância e implementar o serviço HCX on {{site.data.keyword.cloud_notm}}, consulte [Procedimento para fazer upgrade para o Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_upgrade-lic#vc_upgrade-lic-procedure-upgrade-to-hybridity).
 
 Uma instância do vCenter Server com HCX no {{site.data.keyword.cloud_notm}} é limitada a três conexões simultâneas por meio de sites no local.
-{:note}
+
+O HCX on {{site.data.keyword.cloud_notm}} é suportado nas plataformas a seguir:
+
+* vSphere 5.1 (somente linha de comandos para o vCenter 5.1 usando a API)
+* vSphere 5.5 (IU do cliente da web suportado no vCenter 5.5u3 e acima.)
+* vSphere 6.0
+* vSphere 6.5 (o vDS deve estar em um nível 6.0)
+* vSphere 6.7
 
 ## Especificações técnicas para HCX on IBM Cloud
 {: #hcx_considerations-specs}
@@ -96,6 +103,7 @@ Revise as considerações a seguir antes de remover o serviço HCX no {{site.dat
 
 * [Solicitando HCX no {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_ordering)
 * [Gerenciando o HCX no {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghcx)
+* [Demonstração guiada do VMware HCX on IBM Cloud: saiba como migrar uma VM usando o HCX](https://www.ibm.com/cloud/garage/dte/producttour/vmware-hcx-ibm-cloud-guided-demo-learn-how-migrate-vm-using-hcx){:external}
 * [Glossário de termos do HCX](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
 * [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [Visão geral do VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx){:external}

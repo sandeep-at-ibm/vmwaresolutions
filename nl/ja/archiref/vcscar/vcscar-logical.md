@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -140,8 +140,3 @@ Skate Advisor のモデルは、モデルを作成するためのルール・ベ
 - ヒールフリップの基本トリックが含まれたトリックをすべて見せて。
 - トリックをすべて見せて。
 - コンボがいくつも含まれたトリックをすべて見せて。
-
-## 関連リンク
-{: #vcscar-logical-related}
-
-* [vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle の概要](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

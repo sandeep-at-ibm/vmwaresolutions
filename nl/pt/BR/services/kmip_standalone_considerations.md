@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-18"
 
 keywords: KMIP for VMware, KMIP stand-alone, tech specs KMIP
 
@@ -32,7 +32,7 @@ O serviço KMIP for VMware on {{site.data.keyword.cloud_notm}} está disponível
 As especificações a seguir são incluídas com o serviço KMIP for VMware on {{site.data.keyword.cloud_notm}}:
 
 * Um Key Management Interoperability Protocol (KMIP) compatível com VMware
-* Dois serviços gerenciados: [IBM Key Protect for {{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/catalog/services/key-protect){:external} e [{{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services){:external}
+* Dois serviços gerenciados: [Key Protect](https://cloud.ibm.com/catalog/services/key-protect){:external} e [Hyper Protect Crypto Services](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services){:external}
 * Disponível em múltiplas regiões geográficas em todo o mundo
 * Dois terminais em serviço de rede KMIP fornecidos em cada região para alta disponibilidade
 
@@ -41,7 +41,7 @@ As especificações a seguir são incluídas com o serviço KMIP for VMware on {
 
 Revise as considerações a seguir antes de instalar uma instância do KMIP for VMware on {{site.data.keyword.cloud_notm}}:
 
-* O KMIP for VMware on {{site.data.keyword.cloud_notm}} usa o serviço do IBM Key Protect for {{site.data.keyword.cloud_notm}} (Key Protect) ou o serviço {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services (HPCS) para criar, criptografar e decriptografar chaves de criptografia. Portanto, antes de instalar o KMIP for VMware on {{site.data.keyword.cloud_notm}}, assegure-se de que:
+* O KMIP for VMware on {{site.data.keyword.cloud_notm}} usa o serviço IBM Key Protect ou o serviço do Hyper Protect Crypto Services (HPCS) para criar, criptografar e decriptografar chaves de criptografia. Portanto, antes de instalar o KMIP for VMware on {{site.data.keyword.cloud_notm}}, assegure-se de que:
    * Você pediu uma instância de serviço do Key Protect ou HPCS utilizável na região do {{site.data.keyword.cloud_notm}} na qual a instância do KMIP for VMware on {{site.data.keyword.cloud_notm}} deve ser hospedada:
       * Para obter mais informações sobre como criar uma instância do Key Protect, consulte [Provisionando o serviço](/docs/services/key-protect?topic=key-protect-provision).
       * Para obter mais informações sobre como criar uma instância do HPCS, consulte [Provisionando o serviço](/docs/services/hs-crypto?topic=hs-crypto-provision#provision). Além de provisionar o serviço HPCS, deve-se também [inicializar sua instância criptográfica](/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-hsm) para que o HPCS possa fornecer funções relacionadas à chave.
@@ -59,7 +59,7 @@ Revise as considerações a seguir antes de instalar uma instância do KMIP for 
 para criar uma CRK utilizando o material de chave existente e faça backup do material de chave que você está criando. Ao fazer isso, você assegura que poderá recuperar suas chaves se ocorrer uma falha do data center no qual o Key Protect ou HPCS é aplicado para armazenar seus CRKs.
 * Assegure-se de que sua conta de infraestrutura do {{site.data.keyword.cloud_notm}} esteja ativada para Virtual Routing and Forwarding (VRF) e para conectividade com os Terminais em serviço. Para obter mais informações, veja:
    * [Visão geral do Virtual Routing and Forwarding (VRF) no IBM Cloud](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-   * [Ativando sua conta para usar Terminais em serviço usando a CLI do IBM Cloud](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps)
+   * [Ativando terminais em serviço](/docs/account?topic=account-vrf-service-endpoint#service-endpoint)
 * Como somente a conexão privada é suportada, você não precisa configurar nenhuma regra de firewall ou SNAT no vCenter Server para a conectividade de rede do vCenter Server para o terminal da instância do KMIP for VMware on {{site.data.keyword.cloud_notm}}.
 
 Para obter mais informações, veja [Arquitetura da solução KMIP for VMware on IBM Cloud](/docs/services/vmwaresolutions/archiref/kmip?topic=vmware-solutions-kmip-overview).
@@ -76,5 +76,5 @@ Todos os dados protegidos pelo serviço KMIP for VMware on IBM Cloud, incluindo 
 * [Incluindo, visualizando e excluindo certificados para instâncias do KMIP for VMware on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_addingdeletingcert)
 * [Visualizando instâncias do KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_viewing)
 * [Excluindo o KMIP for VMware em {{site.data.keyword.cloud_notm}} instâncias](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_deleting)
-* [Eventos do Activity Tracker](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-at-events)
+* [Eventos de rastreador de atividade](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-at-events)
 * [Entrando em contato com o Suporte IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

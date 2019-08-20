@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -32,8 +32,3 @@ VMware vCenter Server on {{site.data.keyword.cloud_notm}} 자동화의 일부로
 {: #vcscar-commonservices-ntp}
 
 vCenter Server 배치에서는 {{site.data.keyword.cloud_notm}} 인프라 NTP(Network Time Protocol) 서버를 사용합니다. 배치된 모든 컴포넌트는 이러한 NTP 서버를 사용하도록 구성되어 있습니다. 인증서와 AD 인증이 올바르게 작동하려면 동일한 NTP 서버를 사용하는 모든 컴포넌트가 있어야 합니다.
-
-## 관련 링크
-{: #vcscar-commonservices-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

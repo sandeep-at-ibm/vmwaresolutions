@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-21"
+lastupdated: "2019-07-23"
 
 keywords: Mission Critical VMware, request Mission Critical, tech specs Mission Critical
 
@@ -20,7 +20,7 @@ Mission Critical VMware on {{site.data.keyword.cloud}}는 다중 구역 클라�
 
 이 클라우드 아키텍처를 사용하면, 고객들은 대부분의 VMware 클라이언트가 온프레미스 환경 또는 경쟁 클라우드 플랫폼에서 달성할 수 있는 것보다 더 높은 가용성 및 장애 복구 성공률을 달성할 수 있습니다.
 
-이 아키텍처는 99.99%의 목표 집계 가용성으로 비클라우드 고유 애플리케이션을 포함한 기존의 미션 크리티컬, 레거시 워크로드를 지원합니다. IBM Cloud 다중 구역 지역(MZR)은 사이트 가동 중단이 발생하는 경우에도 미션 크리티컬 워크로드를 온라인 상태로 유지하도록 설계되었습니다. 장애가 발생한 사이트의 워크로드는 거의 실시간으로 자동으로 다시 시작되며 인접 사이트의 워크로드는 사용 가능한 온라인 상태로 유지됩니다.
+이 아키텍처는 99.99%의 목표 집계 가용성으로 비클라우드 고유 애플리케이션을 포함한 기존의 미션 크리티컬, 레거시 워크로드를 지원합니다. {{site.data.keyword.cloud_notm}} 다중 구역 지역(MZR)은 사이트 가동 중단이 발생하는 경우에도 미션 크리티컬 워크로드를 온라인 상태로 유지하도록 설계되었습니다. 장애가 발생한 사이트의 워크로드는 거의 실시간으로 자동으로 다시 시작되며 인접 사이트의 워크로드는 사용 가능한 온라인 상태로 유지됩니다.
 
 이 아키텍처에는 클라우드 기반 애플리케이션의 모니터링 및 문제점 해결을 위해 구축된 네트워크, 스토리지, 복원 및 기타 도구를 포함하여 다양한 엔터프라이즈 서비스가 포함됩니다. 또한 서비스를 폭넓게 사용할 수 있도록 {{site.data.keyword.cloud_notm}}에 구축된 IBM Services Platform with Watson과 이 아키텍처를 통합할 수 있습니다. 클라이언트는 플랫폼의 코그너티브 기능을 사용하여 지속적인 운영을 유지하는 데 도움이 되도록 새로운 비즈니스 인사이트를 위해 보다 효과적으로 데이터를 마이닝할 수 있습니다.
 
@@ -40,9 +40,9 @@ Mission Critical VMware on {{site.data.keyword.cloud_notm}} 아키텍처는 고�
   * 복원 패턴(백업 및 복구)
 
 Mission Critical VMware on {{site.data.keyword.cloud_notm}}는 다음 지역에서 사용할 수 있습니다.
-* 미국: 북미 남부 - 댈러스에 있는 모든 IBM Cloud 데이터 센터, 북미 동부: 워싱턴 DC에 있는 모든 IBM Cloud 데이터 센터
-* 유럽: 프랑크푸르트 및 런던에 있는 모든 IBM Cloud 데이터 센터
-* 아시아 태평양: 시드니 및 도쿄에 있는 모든 IBM Cloud 데이터 센터
+* 미국: 북미 남부 - 댈러스에 있는 모든 {{site.data.keyword.cloud_notm}} 데이터 센터, 북미 동부: 워싱턴 DC에 있는 모든 {{site.data.keyword.cloud_notm}} 데이터 센터
+* 유럽: 프랑크푸르트 및 런던에 있는 모든 {{site.data.keyword.cloud_notm}} 데이터 센터
+* 아시아 태평양: 시드니 및 도쿄에 있는 모든 {{site.data.keyword.cloud_notm}} 데이터 센터
 
 ### 기본 인프라 아키텍처 스펙
 {: #mcv_overview-base-specs}
@@ -98,5 +98,5 @@ vSphere + vSAN 확장 클러스터 아키텍처에는 다음과 같은 스펙이
 {: #mcv_overview-related}
 
 * [IMI의 관리 서비스](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_imi)
-* [Veeam on IBM Cloud에 대한 관리 서비스](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
-* [Zerto on IBM Cloud에 대한 관리 서비스](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
+* [Veeam on {{site.data.keyword.cloud_notm}}에 대한 관리 서비스](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
+* [Zerto on {{site.data.keyword.cloud_notm}}에 대한 관리 서비스](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)

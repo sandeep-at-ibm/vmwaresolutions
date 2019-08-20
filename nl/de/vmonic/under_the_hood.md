@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-09"
 
 keywords: about vmware solutions, product overview, benefits
 
@@ -44,7 +44,7 @@ Bevor Sie eine vCenter Server-Instanz bestellen, müssen Sie den API-Schlüssel 
 
 Wenn Sie Ihre vCenter Server-Instanz bestellen, wählen Sie zuerst den Namen und die VMware vSphere-Version aus. Alle VMware-Instanzen werden zusammen mit den Microsoft Active Directory-Domänencontrollern bereitgestellt; für Single Sign-on (SSO) müssen Sie Ihre Instanz entweder als primäre oder sekundäre Site angeben. Eine primäre Instanz ist die erste oder einzige Instanz in einer Single-Sign-on-Domäne. Sie können weitere sekundäre Instanzen bereitstellen und sie derselben Single-Sign-on-Domäne einer vorhandenen primären Instanz zuordnen. Als Nächstes entscheiden Sie, ob Sie eigene VMware-Lizenzen verwenden bzw. welche Edition einer Lizenz Sie von {{site.data.keyword.cloud_notm}} mieten möchten. Zum Schluss wählen Sie die {{site.data.keyword.cloud_notm}}-Region und das Rechenzentrum für die Instanz sowie die Merkmale für CPU und Hauptspeicher der Hosts im Cluster aus.
 
-Im nächsten Teil der Bestellseite geben Sie die Merkmale für Speicher und Netzbetrieb der Instanz an. Sie können zwischen vSAN- und NFS-Speicher für den Cluster wählen und haben die Möglichkeit, die Größe und Anzahl der vSAN-Flash-Platten und die vSAN-Lizenzedition bzw. die Größe, Anzahl und Leistung der NFS-Speicherdatenträger auszuwählen. Für den Netzbetrieb wählen Sie das Hostnamenspräfix für die Hosts und die Unterdomäne und die Domäne für den Cluster aus. Sie haben die Möglichkeit, die Active Directory-Controller als einzelne virtuelle {{site.data.keyword.cloud_notm}}-Serverinstanz oder als zwei virtuelle Maschinen im Cluster bereitzustellen, für die Sie die Lizenzierung und Aktivierung bereitstellen müssen.
+Im nächsten Teil der Bestellseite geben Sie die Merkmale für Speicher und Netzbetrieb der Instanz an. Sie können zwischen vSAN- und NFS-Speicher für den Cluster wählen und haben die Möglichkeit, die Größe und Anzahl der vSAN-Flash-Platten und die vSAN-Lizenzedition bzw. die Größe, Anzahl und Leistung der NFS-Speicherdatenträger auszuwählen. Für den Netzbetrieb wählen Sie das Hostnamenspräfix für die Hosts und die Unterdomäne und die Domäne für den Cluster aus. Sie haben die Möglichkeit, die Active Directory-Controller als einzelne virtuelle {{site.data.keyword.cloud_notm}}-Serverinstanz (VSI) bereitzustellen. Alternativ können Sie die Controller als zwei virtuelle Maschinen (VMs) in Ihrem Cluster bereistellen (für diese VMs müssen Sie die Lizenzierung und Aktivierung angeben).
 
 Unten auf der vCenter Server-Bestellseite können Sie verschiedene Add-on-Services auswählen, die Sie für die VMware-Instanz bereitstellen können und die Ihrem {{site.data.keyword.cloud_notm}}-Konto in Rechnung gestellt werden. Für einige Services ist eine zusätzliche Konfiguration erforderlich, die Sie als Teil des Bestellformulars angeben.
 

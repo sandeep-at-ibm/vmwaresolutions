@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-07-23"
 
 keywords: FAQ, license, BYOL
 
@@ -146,42 +146,6 @@ BYOL 功能不可用于业务合作伙伴用户。
 {: faq}
 
 不支持，因为这些 VMware 产品不是实例部署的一部分。除了初始部署以外可能还安装了这些 VMware 产品，这就需要客户机或其代理程序来安装和许可这些产品。
-
-## 可以通过 vCenter Server with Hybridity Bundle 订购 NFS 存储器吗？
-{: #faq_byol-nfs}
-{: faq}
-
-对于新部署的实例，仅支持 vSAN 全闪存存储器。vCenter Server with Hybridity Bundle 包含 vSAN Advanced 或 vSAN Enterprise 许可。
-
-如果您的 vCenter Server 实例具有 NFS 存储器，那么可以将现有实例升级到 vCenter Server with Hybridity Bundle。虽然在升级期间会订购 vSAN Advanced 许可，但您无需供应全闪存 vSAN 集群。
-
-## 可以将 BYOL 用于 vCenter Server with Hybridity Bundle 吗？
-{: #faq_byol-hybridity}
-{: faq}
-
-不能提供自己的 VMware 许可 (BYOL) 用于 {{site.data.keyword.cloud_notm}}。vCenter Server with Hybridity Bundle 要求所有 VMware 许可证均由 IBM 提供。
-
-## vCenter Server with Hybridity Bundle 许可和 vCenter Server 许可有何不同？
-{: #faq_byol-hybridity-vcs}
-{: faq}
-
-vCenter Server 中提供的各个 VMware 许可证按 CPU 定价。与 IBM 提供的所有按 CPU 定价的 VMware 许可证一样，在每个 CPU 的核心数超过 16 个的所有服务器上，将提价 1.3 倍，例如对于双 Intel Xeon Gold 6140。
-
-vCenter Server with Hybridity Bundle 是一组按核心（而不按 CPU）许可的规定 VMware 许可证和版本。因此，这些实例的许可价格不会更改。
-
-## 哪些 IBM 提供的 VMware 许可证组件和版本可用于 vCenter Server with Hybridity Bundle？
-{: #faq_byol-hybridity-avail}
-{: faq}
-
-vCenter Server with Hybridity Bundle 的新实例包括 VMware vSphere Enterprise Plus、VMware vCenter Standard、VMware NSX Advanced 或 Enterprise、VMware vSAN Advanced 或 Enterprise 以及 VMware Hybrid Cloud Extension (HCX)。
-
-如果您的 vCenter Server 实例具有 NSX Base Edition，那么在订购 vCenter Server with Hybridity Bundle 时，会自动将其升级到 NSX Advanced。
-
-## 可以将 vCenter Server with Hybridity Bundle 中包含的 NSX Advanced Edition 升级到 NSX Enterprise Edition 吗？
-{: #faq_byol-nsx-upgrade}
-{: faq}
-
-虽然 vCenter Server with Hybridity Bundle 包含 NSX Advanced，但在订购 vCenter Server with Hybridity Bundle 后，可以升级到 NSX Enterprise Edition。要进行升级，请使用 {{site.data.keyword.vmwaresolutions_short}} 控制台中实例详细信息页面选项卡上的**更新和补丁**选项卡。
 
 ## 相关链接
 {: #faq_byol-related}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -23,8 +23,8 @@ VMware HCX on IBM Cloud 安裝具有下列軟體需求：
 {: #hcxclient-planning-config-net}
 
 HCX 必須遍訪公用網際網路及專用線路，並連接至資料中心元件（例如網路、交換器及埠群組）。
-* [埠存取需求](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-port-req)列出的埠必須開啟，才能順利安裝 HCX 虛擬應用裝置。
-* 內部部署 vSphere 環境及 VCS HCX Cloud 環境都必須允許 vSphere 內部部署裝置及 VCS HCX 裝置中的「網路時間通訊協定 (NTP)」時鐘同步化。HCX 虛擬應用裝置及網路必須可存取 UDP 埠 123。
+* 如需必須開啟才能順利安裝 HCX 虛擬應用裝置的埠的相關資訊，請參閱[埠存取需求](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-port-req)。
+* 內部部署 vSphere 環境和 VCS HCX 雲端環境都必須容許 vSphere 內部部署裝置與 VCS HCX 裝置之間進行網路時間通訊協定 (NTP) 時鐘同步化。HCX 虛擬應用裝置及網路必須可存取 UDP 埠 123。
 
 ## 內部部署環境
 {: #hcxclient-planning-on-prem-env}
@@ -100,15 +100,15 @@ HCX 機群的網路延伸元件非常穩定。一位特定客戶有超過 20 個
 
 延伸網路僅意味著從虛擬分散式交換器埠群組 (vDS) 代表的來源 vSphere 環境中使用現有的 VLAN 或 VXLAN，然後將它延伸至 HCX 雲端上的 NSX VXLAN。
 
-## 啟航前測試
+## 預先測試
 {: #hcxclient-planning-preflight-tests}
 
-啟航前測試包含以 vMotion 及大量移轉功能執行 HCX 移轉，以建立基準線傳送速率。
+預先測試包含以 vMotion 及大量移轉功能執行 HCX 移轉，來建立基準線傳送速率。
 
 ## 非正式作業應用程式的移轉
 {: #hcxclient-planning-mig-non-prod-apps}
 
-VM 的移轉會從不太重要的 VM 的計劃階段開始。開發、測試等階段則使用網際網路連線功能來進行移轉和延伸的 L2 資料流量。
+VM 的移轉會從不太重要的 VM 的計劃階段開始。開發和測試團隊會使用網際網路連線功能來進行移轉和延伸的 L2 資料流量。
 
 ## 雲端網路設計及實作開始
 {: #hcxclient-planning-cloud-net-begins}
@@ -125,7 +125,7 @@ VM 的移轉會從不太重要的 VM 的計劃階段開始。開發、測試等�
 
 當目標是要將資料中心移轉至雲端時，可評量與移轉中 VM 互動的任何實體伺服器是要以 VM (P2V)、裸機移轉至 {{site.data.keyword.cloud_notm}}，或保留在來源處。如果實體伺服器要保留在來源中，並且 HCX 在移轉期間僅會使用到建立專用網路時，則務必瞭解該實體伺服器是否位於已使用 HCX 延伸到雲端中的任何網路上。在此情境中，HCX 不僅容許 VM 移轉到雲端中，還容許整個子網路移轉到雲端中。
 
-若要在移轉結束時移除 HCX，而且如果要維持實體裝置與已移轉的 VM 之間的連線，則該子網路不能存在於來源與目的地。這意味著位於延伸 L2 網路的來源網站上所留下的任何實體裝置，都必須移轉至能夠遞送至雲端的另一個網路子網路。但如運用了其他延伸 L2 技術（例如 NSX L2 VPN）來取代 HCX 延伸 L2 端點，則為例外狀況。
+若要在移轉結束時移除 HCX，而且如果要維持實體裝置與已移轉的 VM 之間的連線，則該子網路不能存在於來源與目的地。這意味著位於延伸 L2 網路的來源網站上所留下的任何實體裝置，都必須移轉至可以遞送至雲端的另一個網路子網路。但如運用了其他延伸 L2 技術（例如 NSX L2 VPN）來取代 HCX 延伸 L2 端點，則為例外狀況。
 
 ## 移轉正式作業和複合應用程式
 {: #hcxclient-planning-mig-prod-complex-app}

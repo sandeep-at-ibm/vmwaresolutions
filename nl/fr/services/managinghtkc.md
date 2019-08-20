@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-23"
 
 keywords: HTKC WebGUI, HTKC console, enable internet HTKC
 
@@ -63,12 +63,12 @@ Pour les environnements vCenter Server exclusivement privés, la passerelle VMwa
 1. Effectuez les étapes 1 à 3 de la procédure précédente.
 2. Cliquez sur **Paramètres**, puis sur **Interfaces**. Notez l'adresse IP de la liaison montante privée. Cette adresse est la nouvelle passerelle par défaut.
 3. Cliquez sur **Home > Hosts and Clusters** et recherchez les machines virtuelles (VM) HyTrust. Cliquez avec le bouton droit de la souris sur l'une des VM, puis cliquez sur **Ouvrir la console**.
-4. Connectez-vous à la console à l'aide des données d'identification de console qui figurent sur la page des détails du service HyTrust KeyControl on IBM Cloud sur la console {{site.data.keyword.vmwaresolutions_short}}.
+4. Connectez-vous à la console à l'aide des données d'identification de console qui figurent sur la page des détails du service HyTrust KeyControl on {{site.data.keyword.cloud_notm}} sur la console {{site.data.keyword.vmwaresolutions_short}}.
 5. Pour obtenir l'adresse IP de passerelle par défaut actuelle de la machine virtuelle, cliquez sur **Manage Network Settings > Show Current Network Configuration**. Notez l'adresse IP répertoriée pour **Gateway**. Cette adresse devient la passerelle utilisée pour la route statique.
 6. Pour définir une route statique pour la machine virtuelle, cliquez sur **Manage Network Settings > Manage Static Routes > Add Static Route**. Définissez **Network address** sur `10.0.0.0/8` et **Gateway** sur l'adresse IP indiquée à l'étape précédente.
 7. Pour définir l'adresse IP de passerelle par défaut pour la machine virtuelle, cliquez sur **Manage Network Settings > Change Current Network Configuration**. Si vous recevez un message d'avertissement, cliquez sur **OK**, puis sur **Custom Configuration**. Définissez la zone **Gateway** sur l'adresse IP de liaison montante privée notée à l'étape 2, puis cliquez sur **OK**. Attendez que la nouvelle configuration réseau soit installée et que les services réseau soient redémarrés.
 8. Si vous voyez un message demandant une nouvelle authentification HyTrust SecureOS, cliquez sur **OK** et entrez l'adresse IP de l'autre machine virtuelle HyTrust pour cette installation. Si vous êtes invité à indiquer un mot de passe composé de 16 caractères, appuyez sur entrée pour revenir au menu principal. Vérifiez la configuration réseau pour vous assurer que les modifications sont appliquées.
-9. Pour confirmer que la machine virtuelle dispose d'un accès à internet, exécuter la commande ping sur l'adresse IP publique ou le site web. Cliquez sur **Manage Network Settings > Network Diagnostic Tools > Test Inbound Ports of Another Server**. Entrez une adresse de site Web public, par exemple, `www.ibm.com`, cliquez sur **OK**, entrez `80 443` pour les ports (ou tout autre port que vous souhaitez tester). Une réponse doit s'afficher immédiatement avec les ports d'entrée et un message tel que `80 (OK) 443 (OK)`. 
+9. Pour confirmer que la machine virtuelle dispose d'un accès à internet, exécuter la commande ping sur l'adresse IP publique ou le site web. Cliquez sur **Manage Network Settings > Network Diagnostic Tools > Test Inbound Ports of Another Server**. Entrez une adresse de site Web public, par exemple, `www.ibm.com`, cliquez sur **OK**, entrez `80 443` pour les ports (ou tout autre port que vous souhaitez tester). Une réponse doit s'afficher immédiatement avec les ports d'entrée et un message tel que `80 (OK) 443 (OK)`.
 10. Répétez les étapes 3 à 9 pour l'autre machine virtuelle HyTrust.
 
 ## Liens connexes

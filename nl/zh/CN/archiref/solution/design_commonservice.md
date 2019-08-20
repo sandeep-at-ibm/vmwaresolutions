@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -37,9 +37,9 @@ subcollection: vmware-solutions
 如果选择具有两个高可用性 MSAD 服务器的选项，那么您负责提供 Microsoft 许可和激活。
 {:note}
 
-Active Directory 用于认证的访问权仅要求管理 VMware 实例，而不是容纳已部署实例中工作负载的用户。Active Directory 服务器的林根域名与您指定的 DNS 域名相同。如果链接了多个 vCenter Server 实例，将仅为主实例指定此域名。对于链接的实例，每个实例都包含位于林根副本环中的一个 Active Directory 服务器。此外，还会在 Active Directory 服务器上复制 DNS 区域文件。
+Active Directory 用于认证的访问权仅要求管理 VMware 实例，而不是容纳已部署实例中工作负载的用户。Active Directory 服务器的林根域名与您指定的域名服务 (DNS) 域名相同。如果链接了多个 vCenter Server 实例，将仅为主实例指定此域名。对于链接的实例，每个实例都包含位于林根副本环中的一个 Active Directory 服务器。此外，还会在 Active Directory 服务器上复制 DNS 区域文件。
 
-### vSphere SSO 域
+### vSphere Single Sign On (SSO) 域
 {: #design_commonservice-vsphere-sso}
 
 vSphere Single Sign On (SSO) 域用作单个实例或多个链接实例的初始认证机制。SSO 域还用于将一个 VMware 实例或多个链接的实例连接到 MSAD 服务器。将应用以下 SSO 配置：  
@@ -69,19 +69,19 @@ vCenter Server 部署使用已部署的 AD VSI 作为实例的 DNS 服务器。�
 ### 辅助 vCenter Server 实例
 {: #design_commonservice-secondary-vcs}
 
-为了实现跨实例冗余，将第一个辅助 vCenter Server 实例添加到现有主 vCenter Server 实例或当前独立的 vCenter Server 实例时，该主实例 AD DNS 服务器 IP 地址将用于需要 DNS 服务器条目的所有组件的辅助 vCenter Server 实例和任何后续辅助 vCenter Server 实例“辅助 DNS”条目。例如，ESXi、vCenter 和 NSX Manager。这包括附加组件，例如 HCX、Zerto 和 Veeam。然后，主站点辅助 DNS 条目会更改为第一个辅助 vCenter Server 实例 AD/DNS IP 地址。
+为了实现跨实例冗余，将第一个辅助 vCenter Server 实例添加到现有主 vCenter Server 实例或当前独立的 vCenter Server 实例时，该主实例 AD DNS 服务器 IP 地址将用于需要 DNS 服务器条目的所有组件的辅助 vCenter Server 实例和任何后续辅助 vCenter Server 实例“辅助 DNS”条目。例如，ESXi、vCenter 和 NSX Manager 以及 HCX、Zerto 和 Veeam 等附加组件。然后，主站点辅助 DNS 条目会更改为第一个辅助 vCenter Server 实例 AD/DNS IP 地址。
 
 ## NTP 服务
 {: #design_commonservice-ntp}
 
-此设计利用 {{site.data.keyword.cloud_notm}} 基础架构 NTP 服务器。所有部署的组件均配置为利用这些 NTP 服务器。使设计中的所有组件都使用相同的 NTP 服务器对于证书和 Active Directory 认证正确运行至关重要。
+此设计使用 {{site.data.keyword.cloud_notm}} 基础架构 NTP 服务器。所有部署的组件均配置为使用这些 NTP 服务器。使设计中的所有组件都使用相同的 NTP 服务器对于证书和 Active Directory 认证正确运行至关重要。
 
 ![NTP 和 DNS 服务](../../images/vcsv4radiagrams-ra-servicesinterconnections.svg "NTP 和 DNS 服务")
 
 ## 认证中心服务
 {: #design_commonservice-cas}
 
-缺省情况下，VMware vSphere 使用由 VMware Certificate Authority (VMCA) 签署且位于 VMware Platform Services Controller 设备上的 TLS 证书。最终用户设备或浏览器并不信任这些证书。安全最佳实践是将面向用户的证书替换为由第三方或企业认证中心 (CA) 签署的证书。用于机器对机器通信的证书仍然可以是 VMCA 签署的证书，但是建议您遵循组织的最佳实践，这通常涉及使用识别到的企业 CA。
+缺省情况下，VMware vSphere 使用由 VMware Certificate Authority (VMCA) 签署且位于 VMware Platform Services Controller 设备上的 TLS 证书。用户设备或浏览器并不信任这些证书。安全最佳实践是将面向用户的证书替换为由第三方或企业认证中心 (CA) 签署的证书。用于机器对机器通信的证书仍然可以是 VMCA 签署的证书。但是建议您遵循组织的最佳实践，这通常涉及使用识别到的企业 CA。
 
 可以在此设计中使用 Windows AD 服务器来创建由本地实例签署的证书。但是，您还可以根据需要选择配置 CA 服务。
 

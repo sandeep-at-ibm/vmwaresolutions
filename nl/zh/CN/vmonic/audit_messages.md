@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-07-24"
 
 keywords: history message, audit history, error messages
 
@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 # 实例历史记录消息
 {: #audit_messages}
 
-{{site.data.keyword.cloud_notm}} 对 VMware 实例执行的所有操作都会记录在实例历史记录中。可以使用实例历史记录作为参考来复查这些操作。有关查看实例历史记录的更多信息，请参阅[查看 vCenter Server 实例的部署历史记录的过程](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances#vc_viewinginstances-procedure-view-deploy-history)。
+{{site.data.keyword.cloud}} 对 VMware 实例执行的所有操作都会记录在实例历史记录中。可以使用实例历史记录作为参考来复查这些操作。有关查看实例历史记录的更多信息，请参阅[查看 vCenter Server 实例的部署历史记录的过程](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances#vc_viewinginstances-procedure-view-deploy-history)。
 
 以下各部分提供了可以发布到实例历史记录的所有可能的消息。
 
@@ -51,7 +51,7 @@ subcollection: vmware-solutions
 * ``正在取消 <environment> 附加费用...``
 * ``正在取消 VMware 许可证...``
 * ``VMware 许可证取消完成。``
-* ``SoftLayer 订购失败或超时。``
+* ``{{site.data.keyword.cloud_notm}} 基础架构订购失败或超时。``
 
 ## 实例错误消息
 {: #audit_messages-error}
@@ -60,9 +60,9 @@ subcollection: vmware-solutions
 
 * ``订购 VMware 许可证时出错。请开具服务凭单以获取帮助。``
 * ``订购子网时出错。请开具服务凭单以获取帮助。``
-* ``错误：SoftLayer API 密钥无效。请开具服务凭单以获取帮助。``
-* ``错误：SoftLayer 数据中心无效。请开具服务凭单以获取帮助。``
-* ``在提供的 SoftLayer 帐户中使用共享映像时出错。请开具服务凭单以获取帮助。``
+* ``错误：{{site.data.keyword.cloud_notm}} 基础架构 API 密钥无效。请开具服务凭单以获取帮助。``
+* ``错误：{{site.data.keyword.cloud_notm}} 基础架构数据中心无效。请开具服务凭单以获取帮助。``
+* ``在提供的 {{site.data.keyword.cloud_notm}} 基础架构帐户中使用共享映像时出错。请开具服务凭单以获取帮助。``
 * ``订购服务项时出错。请开具服务凭单以获取帮助。``
 * ``订购子网时出错。请开具服务凭单以获取帮助。``
 * ``订购许可证时出错。请开具服务凭单以获取帮助。``
@@ -235,18 +235,6 @@ subcollection: vmware-solutions
 * ``缺省服务已成功启用。``
 * ``正在取消服务项...``
 * ``服务项取消完成。``
-
-## vCenter Server with Hybridity Bundle 历史记录消息
-{: #audit_messages-hybridity}
-
-{{site.data.keyword.vmwaresolutions_short}} 会对 vCenter Server with Hybridity Bundle 实例发出以下消息：
-
-* ``正在订购 vCenter Server with Hybridity Bundle 许可证...``
-* ``正在启动 vCenter Server with Hybridity Bundle 转换...``
-* ``vCenter Server with Hybridity Bundle 转换完成。``
-* ``正在除去 vCenter Server with Hybridity Bundle...``
-* ``vCenter Server with Hybridity Bundle 已成功除去。``
-* ``正在取消 vCenter Server with Hybridity Bundle 转换...``
 
 ## 相关链接
 {: #audit_messages-related}

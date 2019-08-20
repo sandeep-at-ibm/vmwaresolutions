@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -43,8 +43,3 @@ La gestion de réseau {{site.data.keyword.icpfull_notm}} est facilitée par l'ut
 Calico utilise la couche 3 ou la couche réseau du modèle Open System Interconnection (OSI). Calico utilise le protocole BGP (Border Gateway Protocol) pour créer des tables de routage qui facilitent la communication entre les noeuds worker.
 
 Pour plus d'informations sur la mise en réseau Calico, voir [{{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-iks).
-
-## Liens connexes
-{: #vcsnsxt-overview-icp-related}
-
-* [Présentation de vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

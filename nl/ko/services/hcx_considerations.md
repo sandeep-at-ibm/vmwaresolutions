@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 keywords: VMware HCX, HCX, tech specs HCX
 
@@ -21,15 +21,22 @@ subcollection: vmware-solutions
 # VMware HCX on IBM Cloud 개요
 {: #hcx_considerations}
 
-HCX on {{site.data.keyword.cloud}} 서비스는 온프레미스 데이터 센터의 네트워크를 {{site.data.keyword.cloud_notm}}로 원활하게 확장하며, 이를 통해 변환이나 변경 없이 {{site.data.keyword.cloud_notm}} 간에 가상 머신(VM)을 마이그레이션할 수 있습니다.
+HCX on {{site.data.keyword.cloud}} 서비스는 온프레미스 데이터 센터의 네트워크를 {{site.data.keyword.cloud_notm}}로 원활하게 확장하며, 이를 통해 변환이나 변경 없이 {{site.data.keyword.cloud_notm}} 간에 가상 머신(VM)을 마이그레이션할 수 있습니다. HCX는 안전하게 확장된 네트워크를 통해 애플리케이션 이동성 및 인프라 하이브리디티를 사용으로 설정하는 추상 계층을 작성합니다. HCX를 통해 이 원활한 변환이 가능하기 때문에 기존 애플리케이션을 리팩토링하거나 수정할 필요 없이 vSphere 5.1에서 최신 vSphere 버전으로 VMware 환경을 간단히 현대화할 수 있습니다. HCX를 사용하면 엔드-투-엔드 스위트 B 암호화를 통해 상위 레벨의 보안을 제공하는 동시에 하이브리드 배치를 통해 IP 일관성을 보장하여 IP 서브넷 범위를 {{site.data.keyword.cloud_notm}}로 가져올 수 있습니다.
 
-이 서비스는 V2.3 이상에 배치된 VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 인스턴스에만 사용 가능합니다. 설치된 현재 HCX on {{site.data.keyword.cloud_notm}} 버전은 3.5.1입니다.
+HCX on {{site.data.keyword.cloud_notm}}에서는 {{site.data.keyword.cloud_notm}}를 통해 NSX Advanced 또는 Enterprise를 이용하거나 BYOL(Bring Your Own License)을 사용하여 동등한 버전을 이용해야 합니다. VMware HCX on {{site.data.keyword.cloud_notm}} 서비스를 주문할 때 12개월 약정이 필요합니다. 초기 HCX 배치 후 12개월 연속 비용이 청구됩니다. 추가 노드는 초기 프로비저닝 만기 날짜 내에 포함됩니다. 12개월 약정이 만료된 후 HCX on {{site.data.keyword.cloud_notm}} 서비스를 설치하고 설치 제거할 수 있으며 제한사항 없이 호스트 및 클러스터를 추가하고 제거할 수 있습니다. 그런 다음 사용자 계정에 월별로 비용이 청구되며 언제든지 취소할 수 있습니다.
+
+12개월 약정 만기 날짜는 HCX on {{site.data.keyword.cloud_notm}} 세부사항 페이지에서 볼 수 있습니다. 서비스 세부사항 확인에 대한 자세한 정보는 [vCenter Server 인스턴스에 대한 서비스 주문, 보기 및 제거](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure)를 참조하십시오.
 {:note}
-
-기존 vCenter Server 인스턴스를 vCenter Server with Hybridity Bundle 인스턴스로 업그레이드할 수 있습니다. 인스턴스 업그레이드 및 HCX on {{site.data.keyword.cloud_notm}} 서비스 배치에 대한 자세한 정보는 [Hybridity Bundle로 업그레이드하는 프로시저](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_upgrade-lic#vc_upgrade-lic-procedure-upgrade-to-hybridity)를 참조하십시오.
 
 HCX on {{site.data.keyword.cloud_notm}}의 vCenter Server 인스턴스는 온프레미스 사이트의 세 개의 동시 연결로 제한됩니다.
-{:note}
+
+HCX on {{site.data.keyword.cloud_notm}}는 다음 플랫폼에서 지원됩니다.
+
+* vSphere 5.1(API를 사용한 vCenter 5.1의 명령행만)
+* vSphere 5.5(vCenter 5.5u3 이상에서 지원되는 웹 클라이언트 UI)
+* vSphere 6.0
+* vSphere 6.5(vDS는 6.0 레벨이어야 함)
+*  vSphere 6.7
 
 ## HCX on IBM Cloud의 기술 스펙
 {: #hcx_considerations-specs}
@@ -96,6 +103,7 @@ HCX on {{site.data.keyword.cloud_notm}} 서비스를 제거하기 전에 다음 
 
 * [HCX on {{site.data.keyword.cloud_notm}} 주문](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_ordering)
 * [HCX on {{site.data.keyword.cloud_notm}} 관리](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghcx)
+* [VMware HCX on IBM Cloud guided demo: Learn how to migrate a VM by using HCX](https://www.ibm.com/cloud/garage/dte/producttour/vmware-hcx-ibm-cloud-guided-demo-learn-how-migrate-vm-using-hcx){:external}
 * [HCX 용어집](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
 * [IBM 지원 센터에 문의](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [VMware Hybrid Cloud Extension 개요](https://cloud.vmware.com/vmware-hcx){:external}

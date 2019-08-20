@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -45,8 +45,3 @@ Há três modelos de implementação do Caveonix RiskForesight:
   -	Mais Nós de dados que são usados para Ampliação, conforme o número de ativos aumenta.
 
 Todos os componentes devem ter um FQDN e serem registrados no DNS antes de qualquer implementação da MV. Essa etapa é concluída pela automação do IBM Cloud for VMware Solutions para a implementação inicial "tudo em um", mas é de sua responsabilidade ao fazer o ajuste de escala da implementação.
-
-## Links relacionados
-{: #caveonix-step1-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

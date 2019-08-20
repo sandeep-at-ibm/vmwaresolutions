@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-29"
+lastupdated: "2019-08-05"
 
 ---
 
@@ -66,8 +66,3 @@ Per un'architettura aziendale completa, potrebbero essere richiesti i seguenti l
 Per ulteriori informazioni su come poter estendere questa architettura con l'integrazione di Chef, vedi [Architettura di riferimento per l'integrazione di vRA con Chef](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_VRA_Chef_Integration_Architecture.pdf){:new_window}.
 
 * Livello di gestione del servizio – Questo livello si concentra sull'intero ciclo di vita dell'ambiente IT e viene generalmente implementato a livello aziendale combinando gli input provenienti da tutti i silos delle operazioni e delle tecnologie IT. Questo livello è stato tradizionalmente architettato su framework ITSM (IT Service Management), quali ITIL (IT Infrastructure Library) e ISO/IEC 20000, che sono un framework delle procedure ottimali per la fornitura dei servizi IT attraverso i processi e le fasi del ciclo di vita del servizio IT. A livello di prodotto, ITSM è caratterizzato da un sistema di gestione del flusso di lavoro centralizzato per gestire incidenti, richieste di servizio, problemi, modifiche e conoscenze connesso a un database di gestione della configurazione.
-
-## Link correlati
-{: #opsmgmt-intro-related}
-
-* [Panoramica di vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

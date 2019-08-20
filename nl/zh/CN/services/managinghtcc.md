@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-03-23"
 
 keywords: HTCC WebGUI, HTCC console, enable internet HTCC
 
@@ -65,7 +65,7 @@ subcollection: vmware-solutions
 
 1. 完成上一个过程中的步骤 1-3。
 2. 单击**设置**，然后单击**接口**。记下专用上行链路的 IP 地址，这将成为新的缺省网关。
-3. 转至 HyTrust CloudControl on IBM Cloud 服务详细信息页面，单击**查看 HTCC Web UI**，然后使用服务详细信息页面中的凭证登录。
+3. 转至 HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 服务详细信息页面，单击**查看 HTCC Web UI**，然后使用服务详细信息页面中的凭证登录。
 4. 记下现有缺省网关。例如，对于 HTCC 5.5.1，单击**配置 > 网络**。记下列出的网关 IP 地址，这将成为静态路由的网关。
 5. 添加静态路由。例如，对于 HTCC 5.5.1，单击**配置 > 静态路由**。单击**添加**，输入以下信息，然后单击**确定**。
 
@@ -83,7 +83,7 @@ subcollection: vmware-solutions
 
   主 VM 现在就可以访问因特网了。
 
-7. 要确认主 VM 是否具有因特网访问权，请对公共 IP 地址或 Web 站点运行 `wget` 命令。要执行此操作，请返回到 vCenter 并右键单击 **CC1 > 打开控制台**。使用 HyTrust CloudControl on IBM Cloud 服务详细信息页面的控制台凭证登录到控制台。运行 `wget` 命令，如 `wget www.ibm.com`，您应该会立即获得响应。确认请求已发送，并收到 `200` 响应。
+7. 要确认主 VM 是否具有因特网访问权，请对公共 IP 地址或 Web 站点运行 `wget` 命令。要执行此操作，请返回到 vCenter 并右键单击 **CC1 > 打开控制台**。使用 HyTrust CloudControl on {{site.data.keyword.cloud_notm}} 服务详细信息页面中的控制台凭证登录到控制台。运行 `wget` 命令，如 `wget www.ibm.com`，您应该会立即获得响应。确认请求已发送，并收到 `200` 响应。
 
 ## 相关链接
 {: #managinghtcc-related}

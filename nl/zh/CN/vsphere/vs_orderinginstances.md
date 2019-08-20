@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-06"
 
 keywords: vSphere order cluster, order vSphere, order vSphere cluster
 
@@ -40,7 +40,12 @@ subcollection: vmware-solutions
 ### 集群名称
 {: #vs_orderinginstances-cluster-name}
 
-集群名称在您的帐户中必须唯一。
+集群名称必须满足以下需求：
+* 只允许使用小写字母、数字和短划线 (-) 字符。
+* 集群名称必须以小写字母字符开头。
+* 集群名称必须以小写字母或数字字符结尾。
+* 集群名称的最大长度为 10 个字符。
+* 集群名称在您的帐户中必须唯一。
 
 ## 许可证设置
 {: #vs_orderinginstances-licensing-settings}
@@ -72,7 +77,7 @@ subcollection: vmware-solutions
 {: #vs_orderinginstances-individual-components-for-non-bp-users}
 
 如果您是非业务合作伙伴，那么可以为 vSphere 集群选择以下组件：
-* VMware vSphere Enterprise Plus 6.7 U1 或 6.5 U2
+* VMware vSphere Enterprise Plus 6.7 U2 或 6.5 U2
 * VMware vCenter Server
 * VMware NSX
 * VMware vSAN
@@ -124,6 +129,21 @@ subcollection: vmware-solutions
 |双 Intel Xeon Gold 6140 处理器 / 共 36 个核心，2.3 GHz|64 GB、96 GB、128 GB、192 GB、384 GB、768 GB、1.5 TB|
 {: caption="表 2. Skylake {{site.data.keyword.baremetal_short}} 的选项" caption-side="top"}
 
+### Cascade
+{: #vs_orderinginstance-cascade}
+
+对于 **Cascade** 设置，您有各种 **CPU 型号**和 **RAM** 选项。
+
+Cascade {{site.data.keyword.baremetal_short}} 仅可用于 VMware vSphere Enterprise Plus 6.7 U2 实例。
+{:note}
+
+| CPU 模型选项   |RAM 选项|
+|:------------- |:------------- |
+|双 Intel Xeon Gold 4210 处理器 / 共 20 个核心，2.3 GHz|64 GB、96 GB、128 GB、192 GB、768 GB、1.5 TB|
+|双 Intel Xeon Gold 5218 处理器 / 共 32 个核心，2.3 GHz|64 GB、96 GB、128 GB、192 GB、768 GB、1.5 TB|
+|双 Intel Xeon Gold 6248 处理器 / 共 40 个核心，2.5 GHz|64 GB、96 GB、128 GB、192 GB、768 GB、1.5 TB|
+{: caption="表 3. Cascade {{site.data.keyword.baremetal_short}} 的选项" caption-side="top"}
+
 ### SAP 认证
 {: #vs_orderinginstances-sap}
 
@@ -147,7 +167,7 @@ subcollection: vmware-solutions
 |:------------- |:------------- |
 |四核 Intel Xeon E7-4820 V4 / 共 40 个核心，2.0 GHz|128 GB、256 GB、512 GB、1 TB、2 TB、3 TB|
 |四核 Intel Xeon E7-4850 V4 / 共 64 个核心，2.1 GHz|128 GB、256 GB、512 GB、1 TB、2 TB、3 TB|
-{: caption="表 3. Broadwell {{site.data.keyword.baremetal_short}} 的选项" caption-side="top"}
+{: caption="表 4. Broadwell {{site.data.keyword.baremetal_short}} 的选项" caption-side="top"}
 
 ### 裸机服务器的数量
 {: #vs_orderinginstances-bare-metal-number}
@@ -168,8 +188,8 @@ subcollection: vmware-solutions
 * **vSAN 容量磁盘数**：指定要添加的容量磁盘数。
 * 如果要添加的容量磁盘数超过 8 个的限制，请选中**高性能 Intel Optane** 框。此选项用于提供两个额外的容量磁盘托架，总共可容纳 10 个容量磁盘；此选项对于需要更短等待时间和更高 IOPS 吞吐量的工作负载而言非常有用。
 
-  **高性能 Intel Optane** 选项仅可用于 Skylake CPU 型号。
-{:note}
+  **高性能 Intel Optane** 选项仅可用于 Skylake 和 Cascade CPU 型号。
+  {:note}
 
 * 查看 **vSAN 高速缓存磁盘的磁盘类型**和 **vSAN 高速缓存磁盘数**值。这些值依赖于是否选中了**高性能 Intel Optane** 框。
 
@@ -184,25 +204,28 @@ subcollection: vmware-solutions
 主机名用于所有裸机服务器订单。建议将主机名用于所有管理虚拟机，例如 vCenter Server 和 NSX。
 
 主机名前缀必须满足以下需求：
-* 名称必须以字母数字字符开头和结尾。
-* 只允许使用字母数字字符和短划线 (-) 字符。
-* 最大长度为 10 个字符。
+* 只允许使用小写字母、数字和短划线 (-) 字符。
+* 主机名前缀必须以小写字母字符开头。
+* 主机名前缀必须以小写字母或数字字符结尾。
+* 主机名前缀的最大长度为 10 个字符。
 
 ### 子域标签
 {: #vs_orderinginstances-subdomain-label}
 
 子域标签必须满足以下需求：
-*  只允许使用字母数字字符和短划线 (-) 字符。
-*  子域标签必须以字母数字字符开头和结尾。
-*  子域标签的最大长度为 10 个字符。
+* 只允许使用小写字母、数字和短划线 (-) 字符。
+* 子域标签必须以小写字母字符开头。
+* 子域标签必须以小写字母或数字字符结尾。
+* 子域标签的最大长度为 10 个字符。
 
 ### 域名
 {: #vs_orderinginstances-domain-name}
 
 域名用于所有 {{site.data.keyword.baremetal_short}} 且必须满足以下需求：
-* 名称必须包含两个或更多用句点 (.) 分隔的字符串。
-* 只允许使用字母数字字符和短划线 (-) 字符。
-* 每个字符串必须以字母字符开头并以字母数字字符结尾，并且最后一个字符串只能包含字母字符。
+* 域名必须包含两个或更多用句点 (.) 分隔的字符串。
+* 只允许使用小写字母、数字和短划线 (-) 字符。
+* 每个字符串必须以小写字母字符开头，并且以小写字母或数字字符结尾。
+* 最后一个字符串只能包含小写字母字符。
 * 最后一个字符串的长度必须在 2 到 24 个字符范围内。
 * 其他字符串的长度必须在 1 到 63 个字符范围内。
 * 域名的最大长度为 189 个字符。
@@ -217,12 +240,12 @@ subcollection: vmware-solutions
 
 网络设置基于您选择的是**订购新 VLAN** 还是**选择现有 VLAN**。
 
-订购集群时，需要包含一个公用 VLAN 和两个专用 VLAN。两个专用 VLAN 用于中继到每个裸机服务器中。
-
 #### 订购新的 VLAN
 {: #vs_orderinginstances-new-vlans}
 
-选择此项可订购一个新的公用 VLAN 和两个新的专用 VLAN。
+如果要订购公用和专用网络，那么订购集群时需要包含一个公用 VLAN 和两个专用 VLAN。两个专用 VLAN 用于中继到每个裸机服务器中。
+
+如果要订购专用网络，那么订购集群时只需要包含两个专用 VLAN。
 
 #### 选择现有 VLAN
 {: #vs_orderinginstances-existing-vlans}
@@ -231,10 +254,10 @@ subcollection: vmware-solutions
 
   选择复用现有公用和专用 VLAN 时，请指定 VLAN 和子网：
   * **公用 VLAN** 用于公用网络访问。
+  * **主子网**分配给物理主机以用于公用网络访问。
   * **专用 VLAN** 用于连接 {{site.data.keyword.cloud_notm}} 中的各数据中心和服务。
   * **辅助专用 VLAN** 用于 VMware 功能部件，例如 vSAN。
-  * **主子网**分配给物理主机以用于公用网络访问。
-  * **主专用子网**分配给物理主机以用于管理流量。
+  * **专用主子网**分配给物理主机以用于管理流量。
 
 ##### 重要
 {: #vs_orderinginstances-important}
@@ -246,6 +269,9 @@ subcollection: vmware-solutions
 {: #vs_orderinginstances-fortigate-physical-appliance}
 
 您还可以选择是否包含 FortiGate Physical Appliance 300 系列 HA 对以确保云环境安全。有关更多信息，请参阅 [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} 概述](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations)。
+
+此选项仅可用于同时订购公用和专用网络的订单。
+{:note}
 
 ## 订单摘要
 {: #vs_orderinginstances-order-summary}
@@ -269,7 +295,7 @@ subcollection: vmware-solutions
 5. 完成裸机服务器设置：
    1. 选择要托管集群的 {{site.data.keyword.CloudDataCent_notm}}。
    2. 选择裸机服务器配置。
-      * 选择 **Skylake** 或 **Broadwell** 时，请指定 CPU 型号和 RAM 大小。
+      * 选择 **Skylake**、**Cascade** 或 **Broadwell** 时，请指定 CPU 型号和 RAM 大小。
       * 选择的是 **SAP 认证**时，请选择其中一个预设配置。
    3. 指定裸机服务器数。
 6. 如果选择的是 **VMware vSAN** 组件，请完成 vSAN 存储配置。指定容量和高速缓存磁盘的磁盘类型以及磁盘数。如果需要更多存储器，请选中**高性能 Intel Optane** 框。
@@ -279,7 +305,7 @@ subcollection: vmware-solutions
    3. 选择要使用的网络接口。
     * 如果要订购新的公用和专用 VLAN，请单击**订购新的 VLAN**。
     * 如果要复用可用的现有公用和专用 VLAN，请单击**选择现有 VLAN**，然后指定 VLAN 和（可选）子网。
-    4. 指定是否应用 FortiGate Physical Appliance 300 系列 HA 对以确保云环境安全。  
+    4. 如果要订购公用 VLAN，请指定是否应用 FortiGate Physical Appliance 300 系列 HA 对来保护云环境。
 8. 在**订单摘要**窗格中，验证集群配置和估算成本。
    * 要将配置另存为模板而不下订单，请单击**保存配置**。
    * 要下订单，请确保要向其收费的帐户正确，复查并接受条款，然后单击**供应**。

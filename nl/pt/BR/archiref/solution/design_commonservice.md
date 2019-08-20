@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -37,9 +37,9 @@ O design também fornece a opção de implementar dois servidores do MSAD altame
 Se você escolher a opção com dois servidores do MSAD altamente disponíveis, será responsável por fornecer o licenciamento e a ativação da Microsoft.
 {:note}
 
-O Active Directory serve para autenticar acessos somente para gerenciar a instância do VMware e não para hospedar usuários das cargas de trabalho nas instâncias implementadas. O nome de domínio-raiz da floresta do Active Directory Server é igual ao nome de domínio do DNS especificado. Esse nome de domínio será especificado somente para a instância primária do vCenter Server se múltiplas instâncias estiverem vinculadas. Para instâncias vinculadas, cada instância contém um servidor Active Directory que fica no anel de réplica raiz da floresta. Os arquivos de zona do DNS também são replicados nos Active Directory Servers.
+O Active Directory serve para autenticar acessos somente para gerenciar a instância do VMware e não para hospedar usuários das cargas de trabalho nas instâncias implementadas. O nome do domínio-raiz da floresta do servidor do Active Directory é igual ao nome do domínio do Domain Name Services (DNS) que você especifica. Esse nome de domínio será especificado somente para a instância primária do vCenter Server se múltiplas instâncias estiverem vinculadas. Para instâncias vinculadas, cada instância contém um servidor Active Directory que fica no anel de réplica raiz da floresta. Os arquivos de zona do DNS também são replicados nos Active Directory Servers.
 
-### Domínio SSO do vSphere
+### Domínio de Conexão Única (SSO) do vSphere
 {: #design_commonservice-vsphere-sso}
 
 O domínio de Conexão Única (SSO) do vSphere é usado como o mecanismo de autenticação inicial para uma única instância ou múltiplas instâncias vinculadas. O domínio de SSO também serve para conectar uma instância do VMware ou múltiplas instâncias vinculadas ao servidor do MSAD. A configuração de SSO a seguir é aplicada:  
@@ -71,19 +71,19 @@ Esse design integra serviços do DNS nas VSIs do AD na configuração a seguir:
 ### Instâncias secundárias do vCenter Server
 {: #design_commonservice-secondary-vcs}
 
-Para redundância de instância cruzada, quando a primeira instância secundária do vCenter Server for incluída em uma instância primária existente do vCenter Server ou em uma instância independente atual do vCenter Server, esse endereço IP do servidor do DNS do AD da instância primária será usado na instância secundária do vCenter Server e qualquer entrada de "DNS secundário" da instância secundária subsequente do vCenter Server para todos os componentes que requeiram uma entrada do servidor do DNS. Por exemplo, o gerenciador do ESXi, do vCenter e do NSX. Isso inclui componentes complementares, como o HCX, o Zerto e o Veeam. A entrada do DNS secundária do site primário é, então, mudada para o primeiro endereço IP do AD/DNS de instâncias secundárias do vCenter Server.
+Para redundância de instância cruzada, quando a primeira instância secundária do vCenter Server é incluída em uma instância primária do vCenter Server existente ou na instância independente do vCenter Server atual, esse endereço IP do servidor DNS do AD da instância primária é usado na instância secundária do vCenter Server e em qualquer entrada de “DNS secundário” da instância secundária do vCenter Server subsequente para todos os componentes que requerem uma entrada do servidor DNS. Por exemplo, o ESXi, o vCenter e o NSX Manager, além de componentes complementares, como o HCX, o Zerto e o Veeam. A entrada do DNS secundária do site primário é, então, mudada para o primeiro endereço IP do AD/DNS de instâncias secundárias do vCenter Server.
 
 ## Serviços NTP
 {: #design_commonservice-ntp}
 
-Esse design utiliza os servidores NTP de infraestrutura do {{site.data.keyword.cloud_notm}}. Todos os componentes implementados são configurados para utilizar esses servidores NTP. Ter todos os componentes dentro do design usando o mesmo servidor NTP é crítico para que os certificados e a autenticação do Active Directory funcionem corretamente.
+Esse design usa os servidores NTP de infraestrutura do {{site.data.keyword.cloud_notm}}. Todos os componentes implementados são configurados para usar esses servidores NTP. É essencial que todos os componentes dentro do design usem o mesmo servidor NTP a fim de que os certificados e a autenticação do Active Directory funcionem corretamente.
 
 ![Serviços NTP e DNS](../../images/vcsv4radiagrams-ra-servicesinterconnections.svg "Serviços NTP e DNS")
 
 ## Serviços de autoridade de certificação
 {: #design_commonservice-cas}
 
-Por padrão, o VMware vSphere usa certificados TLS que são assinados pela VMware Certificate Authority (VMCA), que reside no dispositivo VMware Platform Services Controller. Esses certificados não são confiáveis pelos dispositivos ou navegadores do usuário final. A melhor prática de segurança é substituir certificados voltados ao usuário por certificados que são assinados por uma autoridade de certificação (CA) de terceiro ou corporativa. Os certificados para comunicação máquina a máquina podem permanecer como certificados assinados pela VMCA, no entanto, é recomendado seguir as melhores práticas para sua organização, que geralmente envolvem o uso de uma CA corporativa identificada.
+Por padrão, o VMware vSphere usa certificados TLS que são assinados pelo VMware certificate authority (VMCA), localizados no dispositivo do VMware Platform Services Controller. Os dispositivos do usuário ou os navegadores não confiam nesses certificados. A melhor prática de segurança é substituir certificados voltados ao usuário por certificados que são assinados por uma autoridade de certificação (CA) de terceiro ou corporativa. Os certificados para comunicação de máquina a máquina podem permanecer como certificados assinados pelo VMCA. No entanto, é recomendado que você siga as melhores práticas para sua organização, que geralmente envolvem o uso de uma CA corporativa identificada.
 
 É possível usar os servidores Windows AD dentro desse design para criar certificados que são assinados pela instância local. No entanto, também é possível escolher configurar os serviços de CA, se necessário.
 

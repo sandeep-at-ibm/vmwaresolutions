@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -27,8 +27,3 @@ Für die Skalierung muss der Client das Script aufrufen, um die teilweise oder v
 - Zertifikate für alle Services
 
 Am Ende dieses Schritts werden die Anwendungskomponenten auf den erforderlichen virtuellen Maschinen (VMs) installiert.
-
-## Zugehörige Links
-{: #caveonix-step3-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud}} mit Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

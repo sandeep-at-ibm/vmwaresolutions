@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-21"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -35,7 +35,7 @@ subcollection: vmware-solutions
 - 步驟 1：組織 - 新增主要組織的詳細資料。您也可以建立子組織。使用組織將您的使用者區隔，或使用其中一種方式將資產分組。您可以建立更多組織，並以其中一個現有組織作為母組織。當您建立新的組織時，可以選取用來產生網路風險評分的**業務衝擊值**。
 - 步驟 2：組織資產 - 新資產 / 工作負載會依位置、雲端提供者及資產儲存庫自動分組。資產一次只能指派給一個組織。「服務提供者」需要將資產指派給組織。
 - 步驟 3：使環境和位置相關聯 - 選用。「服務提供者」會定義環境。
-- 步驟 4 及 5：建立子應用程式或應用程式 - 用於跨位置和組織將資產分組，並查看相關聯的流量與原則。建立符合商業及 IT 服務的應用程式。例如，應用程式=SAP，子應用程式=SAP 前端系統、SAP 中間層、SAP 後端系統。**業務衝擊值**對應於應用程式，法規遵循制度套用至應用程式。
+- 步驟 4 及 5：建立子應用程式或應用程式 - 用於跨位置和組織將資產分組，並查看相關聯的流量與原則。建立符合商業及 IT 服務的應用程式。例如，應用程式=SAP，子應用程式=SAP 前端系統、SAP 中間層、SAP 後端系統。**業務衝擊值**對應於應用程式，法規遵循制度適用於應用程式。
 - 步驟 6：遠端存取 - 對資產執行掃描時需要「遠端存取」，它可以是預設服務帳戶或資產特定帳戶。
 - 步驟 7：作業排程器 - 排定定期執行掃描。作業類型包括：SCAP 掃描漏洞、SCAP Scan-XCCDF、NSX 流量掃描、軟體掃描、日誌擷取掃描。
 
@@ -71,8 +71,3 @@ subcollection: vmware-solutions
 |作業 |已設定四項作業：「資產掃描」、「NSX 流量」、「VMware 基礎架構掃描」及「VMware 漏洞」。ScanName 設為 DC1AssetScan、NSXFlows、VMWInfraScan、VMWVulnScan |
 |作業 |已設定四項作業：「資產掃描」、「NSX 流量」、「VMware 基礎架構掃描」及「VMware 漏洞」。類型設為 vCenter、NSX、VMWareInfrastructureScan、VMWareVulnerabilityScan |
 |作業 |DC1AssetScan 的排程設為每小時，其他設為每日 |
-
-## 相關鏈結
-{: #caveonix-step4-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

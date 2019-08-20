@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-09"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -31,7 +31,7 @@ Cloud Automation Manager Service Composer를 사용하여 {{site.data.keyword.cl
 
 다음 다이어그램은 {{site.data.keyword.cloud_notm}}에 배치된 온프레미스 vCenter 및 {{site.data.keyword.containerlong_notm}}와의 연결을 통해 {{site.data.keyword.cloud_notm}} 인프라에 배치된 {{site.data.keyword.icpfull_notm}} 및 CAM의 예입니다. 사용자는 가상 머신(VM)을 온프레미스에, VM을 vCenter Server 인스턴스에, 컨테이너를 {{site.data.keyword.icpfull_notm}} 및 {{site.data.keyword.containerlong_notm}} 클러스터에 배치할 수 있습니다.
 
-![클라우드에서 - 클라우드 관리](../../images/vcsicp-oncloud-cloudmgt.svg "클라우드에서 - 클라우드 관리")
+![온클라우드 - 클라우드 관리](../../images/vcsicp-oncloud-cloudmgt.svg "온클라우드 - 클라우드 관리")
 
 다이어그램에서 CAM은 vCenter, 클라우드 제공자, {{site.data.keyword.icpfull_notm}} 및 {{site.data.keyword.containerlong_notm}} 환경에 클라우드 연결을 논리적으로 작성합니다. {{site.data.keyword.icpfull_notm}} 클러스터를 단일 관리 보기로 연결하기 위한 메커니즘을 제공하는 MCM을 사용하여 각각의 데이터 센터 클라우드 환경에 {{site.data.keyword.icpfull_notm}} 클러스터를 배치해야 합니다.
 
@@ -49,8 +49,3 @@ NSX-T를 사용하는 {{site.data.keyword.icpfull_notm}}의 경우 사용자가 
 strongSwan VPN은 배치된 {{site.data.keyword.containerlong_notm}} 컨테이너에 대한 연결을 설정하는 데 사용됩니다. strongSwan VPM은 Direct Link 연결로 대체될 수 있습니다.
 
 다이어그램에서 CAM은 vCenter, 클라우드 제공자, {{site.data.keyword.icpfull_notm}} 및 {{site.data.keyword.containerlong_notm}} 환경에 클라우드 연결을 논리적으로 작성합니다. {{site.data.keyword.icpfull_notm}} 클러스터를 단일 관리 보기로 연결하기 위한 메커니즘을 제공하는 MCM을 사용하여 각각의 데이터 센터 클라우드 환경에 {{site.data.keyword.icpfull_notm}} 클러스터를 배치해야 합니다.
-
-## 관련 링크
-{: #vcsicp-arch-overview-related}
-
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle 개요](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
