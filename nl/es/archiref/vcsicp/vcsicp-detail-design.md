@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-09"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -60,8 +60,3 @@ NSX-T se ha diseñado de modo que una sola plataforma de red se pueda conectar a
 {{site.data.keyword.icpfull_notm}} proporciona una opción para sustituir la red Calico por una instancia NSX-T, proporcionando una única ubicación para gestionar la red y la seguridad.
 
 ![{{site.data.keyword.icpfull_notm}} con redes NSX-T](../../images/vcsicp-icp-nsxt-networking.svg "{{site.data.keyword.icpfull_notm}} con redes NSX-T")
-
-## Enlaces relacionados
-{: #vcsicp-detail-design-related}
-
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

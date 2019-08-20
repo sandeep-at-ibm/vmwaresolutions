@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -118,4 +118,3 @@ Utilice lo siguiente para despliegues de aplicaciones en {{site.data.keyword.con
 * [Adición de nodos trabajadores cambiando el tamaño de una agrupación de nodos trabajadores existente](/docs/containers?topic=containers-clusters)
 * [Cómo hacer copia de seguridad y restaurar {{site.data.keyword.cloud_notm}} Private](https://medium.com/ibm-cloud/how-to-backup-and-restore-ibm-cloud-private-part-1-b6300dc1d7d8)
 * [GitHub de copia de seguridad de {{site.data.keyword.icpfull_notm}}](https://github.com/ibm-cloud-architecture/icp-backup/)
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

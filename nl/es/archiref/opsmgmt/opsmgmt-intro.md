@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-29"
+lastupdated: "2019-08-05"
 
 ---
 
@@ -66,8 +66,3 @@ Para una arquitectura de empresa completa, es posible que se necesiten las capas
 Para obtener más información sobre cómo se puede ampliar esta arquitectura con la integración de Chef, consulte [Arquitectura de referencia de vRA con integración de Chef](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_VRA_Chef_Integration_Architecture.pdf){:new_window}.
 
 * Capa de gestión de servicios – Esta capa se centra en el ciclo de vida completo del entorno de TI y se implementa generalmente a nivel de empresa, combinando entradas de todos los silos de Operaciones y tecnologías de TI. Esta capa, tradicionalmente se ha incluido en la arquitectura de infraestructuras de gestión de servicios de TI (ITSM) como por ejemplo: IT Infrastructure Library (ITIL) y la ISO/IEC 20000, que son un marco de las mejores prácticas para proporcionar servicios de TI a través de los procesos y las fases del ciclo de vida del servicio de TI. A nivel de producto, ITSM está tipificado por un sistema de gestión de flujos de trabajo centralizado para manejar incidentes, solicitudes de servicio, problemas, cambios y conocimiento, conectado a una base de datos de gestión de la configuración.
-
-## Enlaces relacionados
-{: #opsmgmt-intro-related}
-
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-23"
 
 keywords: vCenter Server compliance, compliance info, vCenter Server policy
 
@@ -73,7 +73,7 @@ La contraseña del gestor de NSX generada para las instancias primarias de vCent
 ## Política para acceder a instancias de clientes
 {: #vc_compl_info-policy-for-access-client-inst}
 
-Los entornos VMware vCenter Server, que se suministran como {{site.data.keyword.vmwaresolutions_short}}, proporcionan una capa de plataforma de gestión de VMware para que nuestros clientes gestionen las funciones de virtualización. A lo largo del ciclo de vida de los productos y servicios de IBM Cloud for VMware, es posible que se requiera el servicio de soporte de IBM para garantizar su éxito. Generalmente, la intervención del equipo de soporte de IBM es el resultado de una solicitud del cliente (es decir, una incidencia de soporte). Sin embargo, en raras ocasiones, el servicio de soporte de IBM puede ayudar de forma proactiva y sin una incidencia de soporte escrita por el cliente para evitar problemas futuros. Este acceso se realiza a través de la red de soporte interna de IBM Cloud y se documenta a través de una incidencia de soporte abierta por el servicio de soporte de IBM y supervisada continuamente por IBM Cloud SOC. En ningún momento el servicio de soporte de IBM modificará la configuración de la instancia sin el consentimiento previo del cliente. El acceso se realiza a los componentes de gestión de VMware y/o a los componentes de gestión de IBM Cloud y nunca a las máquinas virtuales ni a las aplicaciones del cliente.
+Los entornos VMware vCenter Server, que se suministran como {{site.data.keyword.vmwaresolutions_short}}, proporcionan una capa de plataforma de gestión de VMware para que nuestros clientes gestionen las funciones de virtualización. A lo largo del ciclo de vida de los productos y servicios de {{site.data.keyword.cloud_notm}} for VMware, es posible que se requiera el servicio de soporte de IBM para garantizar su éxito. Generalmente, la intervención del equipo de soporte de IBM es el resultado de una solicitud del cliente (es decir, una incidencia de soporte). Sin embargo, en raras ocasiones, el servicio de soporte de IBM puede ayudar de forma proactiva y sin una incidencia de soporte escrita por el cliente para evitar problemas futuros. Este acceso se realiza a través de la red de soporte interna de {{site.data.keyword.cloud_notm}} y se documenta a través de una incidencia de soporte abierta por el servicio de soporte de IBM y supervisada continuamente por {{site.data.keyword.cloud_notm}} SOC. En ningún momento el servicio de soporte de IBM modificará la configuración de la instancia sin el consentimiento previo del cliente. El acceso se realiza a los componentes de gestión de VMware y/o a los componentes de gestión de {{site.data.keyword.cloud_notm}} y nunca a las máquinas virtuales ni a las aplicaciones cliente.
 
 ## Soporte proactivo
 {: #vc_compl_info-proactive-support}
@@ -83,14 +83,14 @@ Los entornos VMware vCenter Server, que se suministran como {{site.data.keyword.
 
 * Durante el pedido inicial y el suministro de una instancia o servicio, el soporte de IBM puede acceder a las instancias del cliente y a la información sin notificación previa del cliente para asegurarse de que los pedidos se han cumplido correctamente.
 * El soporte de IBM supervisa de forma activa las operaciones del ciclo de vida de las instancias como, por ejemplo, la adición de nuevos hosts, además de los procesos de pedido, suministro e instalación.
-* Para solucionar los problemas que se hayan producido o que pueden surgir en el futuro, el soporte de IBM puede emprender varias acciones, entre ellas revisar los detalles del pedido del cliente, reiniciar trabajos de automatización, realizar operaciones de recarga de sistema operativo o abrir incidencias de IBM Cloud utilizando el nombre de usuario y la clave de API del cliente de IBM Cloud.
+* Para solucionar los problemas que se hayan producido o que pueden surgir en el futuro, el soporte de IBM puede emprender varias acciones, entre ellas revisar los detalles del pedido del cliente, reiniciar trabajos de automatización, realizar operaciones de recarga de sistema operativo o abrir incidencias de {{site.data.keyword.cloud_notm}} utilizando el nombre de usuario y la clave de API del cliente de {{site.data.keyword.cloud_notm}}.
 
 ### Soporte proactivo para operaciones de estado estable
 {: #vc_compl_info-proactive-support-for-steady-state-operations}
 
 * En raras ocasiones, el servicio de soporte de IBM puede requerir acceso a instancias de cliente durante operaciones de estado estable para resolver de forma proactiva un problema de una instancia o para verificar el funcionamiento de los servicios o componentes suministrados.
-* Este acceso se realiza a través de la red de soporte interno de IBM Cloud. En ningún momento el servicio de soporte de IBM modificará la configuración de la instancia sin el consentimiento previo del cliente.
-* El acceso se realiza a los componentes de gestión de VMware y/o a los componentes de gestión de IBM Cloud y nunca a las máquinas virtuales ni a las aplicaciones del cliente.
+* Este acceso se realiza a través de la red de soporte interno de {{site.data.keyword.cloud_notm}}. En ningún momento el servicio de soporte de IBM modificará la configuración de la instancia sin el consentimiento previo del cliente.
+* El acceso se realiza a los componentes de gestión de VMware y/o a los componentes de gestión de {{site.data.keyword.cloud_notm}} y nunca a las máquinas virtuales ni a las aplicaciones cliente.
 
 ### Incidencias de soporte
 {: #vc_compl_info-support-tickets}
@@ -105,8 +105,8 @@ Los entornos VMware vCenter Server, que se suministran como {{site.data.keyword.
 ## Responsabilidades del cliente
 {: #vc_compl_info-client-responsibilities}
 
-* Si bien recomendamos a los clientes que tomen medidas para hacer que sus entornos sean más seguros, cabe señalar que algunas prácticas pueden tener efectos negativos sobre la eficacia de IBM Cloud for VMware.
-* Los clientes son responsables de los cortafuegos que creen y de las limitaciones resultantes impuestos en las comunicaciones entre componentes de IBM Cloud for VMware. Estos cortafuegos también pueden obstaculizar la capacidad de soporte de IBM para acceder a las instancias del cliente y resolver problemas.
+* Si bien recomendamos a los clientes que tomen medidas para hacer que sus entornos sean más seguros, cabe señalar que algunas prácticas pueden tener efectos negativos sobre la eficacia de {{site.data.keyword.cloud_notm}} for VMware.
+* Los clientes son responsables de los cortafuegos que creen y de las limitaciones resultantes impuestos en las comunicaciones entre componentes de {{site.data.keyword.cloud_notm}} for VMware. Estos cortafuegos también pueden obstaculizar la capacidad de soporte de IBM para acceder a las instancias del cliente y resolver problemas.
 * Los clientes son totalmente responsables de cifrar los datos en su sistema.
 * Tras el despliegue inicial, la automatización de la oferta y la cuenta del cliente son independientes. El cliente puede, y de hecho es lo recomendable, cambiar todas las contraseñas que proporcione IBM en el portal.
 * El acceso a vCenter y las credenciales se crean durante los despliegues iniciales y se proporcionan al cliente. Como parte del requisito de nuestra oferta, el servicio de soporte de IBM debe conservar acceso completo a la capa de gestión para proporcionar gestión del ciclo de vida, así como soporte a nuestros clientes.

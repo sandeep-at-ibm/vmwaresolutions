@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -46,8 +46,3 @@ El diagrama del contexto del sistema identifica los siguientes sistemas:
 * Base de datos: la base de datos de Acme Skate Advisor se aloja en una máquina virtual gestionada por vCenter Server.
 * Contenedores de aplicaciones: las aplicaciones que han pasado por el proceso de modernización de aplicaciones y que ahora se ejecutan como contenedores. En el caso de esta arquitectura de referencia y en este ejemplo de Acme Skateboards, una de las apps contenerizadas es un servidor web que forma parte de la carga de trabajo con presencia en línea. Los contenedores de ACME alojan la aplicación web Acme y la aplicación Acme Skate Advisor.
 * NSX Edge - los extremos NSX son dispositivos virtuales que gestionan el tráfico de norte a sur de entrada y de salida de la instancia de vCenter Server.
-
-## Enlaces relacionados
-{: #vcscar-syscontext-related}
-
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

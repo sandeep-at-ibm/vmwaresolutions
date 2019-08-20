@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-07-24"
 
 keywords: history message, audit history, error messages
 
@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 # Mensajes de historial de instancia
 {: #audit_messages}
 
-Todas las operaciones que realiza {{site.data.keyword.cloud_notm}} para la instancia de VMware se registran en el historial de instancia. Puede utilizar el historial de instancia como referencia para revisar estas operaciones. Para obtener más información sobre cómo revisar el historial de instancia, consulte
+Todas las operaciones que realiza {{site.data.keyword.cloud}} para la instancia de VMware se registran en el historial de instancia. Puede utilizar el historial de instancia como referencia para revisar estas operaciones. Para obtener más información sobre cómo revisar el historial de instancia, consulte
 [Procedimiento para ver el historial de despliegue para instancias de vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances#vc_viewinginstances-procedure-view-deploy-history).
 
 En las secciones siguientes se proporcionan todos los mensajes posibles que se pueden emitir en el historial de instancia.
@@ -52,7 +52,7 @@ En las secciones siguientes se proporcionan todos los mensajes posibles que se p
 * ``Cancelando recargos de <environment>...``
 * ``Cancelación de licencia de VMware en curso...``
 * ``La cancelación de la licencia de VMware se ha completado.``
-* ``La solicitud de SoftLayer ha fallado o se ha agotado el tiempo de espera.``
+* ``La orden de infraestructura {{site.data.keyword.cloud_notm}} ha fallado o se ha agotado el tiempo de espera.``
 
 ## Mensajes de error de instancia
 {: #audit_messages-error}
@@ -61,9 +61,9 @@ En las secciones siguientes se proporcionan todos los mensajes posibles que se p
 
 * ``Error al solicitar licencias de VMware. Abra una incidencia de servicio para obtener ayuda.``
 * ``Error al solicitar subredes. Abra una incidencia de servicio para obtener ayuda.``
-* ``Error: la clave de API de SoftLayer no es válida. Abra una incidencia de servicio para obtener ayuda.``
-* ``Error: el centro de datos de SoftLayer no es válido. Abra una incidencia de servicio para obtener ayuda.``
-* ``Error al utilizar una imagen compartida en la cuenta de SoftLayer proporcionada. Abra una incidencia de servicio para obtener ayuda.``
+* ``Error: la clave de API de la infraestructura de {{site.data.keyword.cloud_notm}} no es válida. Abra una incidencia de servicio para obtener ayuda.``
+* ``Error: el centro de datos API de la infraestructura de {{site.data.keyword.cloud_notm}} no es válida. Abra una incidencia de servicio para obtener ayuda.``
+* ``Error al utilizar una imagen compartida en la cuenta de infraestructura de {{site.data.keyword.cloud_notm}} proporcionada. Abra una incidencia de servicio para obtener ayuda.``
 * ``Error al solicitar entradas de servicio. Abra una incidencia de servicio para obtener ayuda.``
 * ``Error al solicitar subredes. Abra una incidencia de servicio para obtener ayuda.``
 * ``Error al solicitar licencias. Abra una incidencia de servicio para obtener ayuda.``
@@ -236,18 +236,6 @@ En las secciones siguientes se proporcionan todos los mensajes posibles que se p
 * ``Los servicios predeterminados se han habilitado correctamente.``
 * ``Cancelación de entrada de servicio en curso...``
 * ``La cancelación de entrada de servicio se ha completado.``
-
-## Mensajes de historial de vCenter Server con el paquete híbrido (Hybridity)
-{: #audit_messages-hybridity}
-
-{{site.data.keyword.vmwaresolutions_short}} emite los mensajes siguientes para instancias de vCenter Server con el paquete híbrido (Hybridity):
-
-* ``Solicitando licencias de vCenter Server con el paquete híbrido...``
-* ``Iniciando la conversión de vCenter Server con el paquete híbrido...``
-* ``La conversión de vCenter Server con el paquete híbrido se ha completado.``
-* ``Eliminando vCenter Server con el paquete híbrido...``
-* ``vCenter Server con el paquete híbrido se ha eliminado correctamente.``
-* ``Cancelando la conversión de vCenter Server con el paquete híbrido...``
 
 ## Enlaces relacionados
 {: #audit_messages-related}

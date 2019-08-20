@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-02"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -38,8 +38,3 @@ La hibridación crea una interconexión ligeramente acoplada entre {{site.data.k
 * Migración de políticas de seguridad: si NSX se utiliza en local, las políticas de seguridad, los cortafuegos y otros elementos de seguridad se trasladan junto con la carga de trabajo.
 
 Todd puede migrar Stock Trader de su entorno VMware local al entorno VMware on {{site.data.keyword.cloud_notm}}, cumpliendo con sus requisitos de poco tiempo de inactividad, o nada, y de no tener que volver a configurar las aplicaciones.
-
-## Enlaces relacionados
-{: #vcscontent-hcx-related}
-
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

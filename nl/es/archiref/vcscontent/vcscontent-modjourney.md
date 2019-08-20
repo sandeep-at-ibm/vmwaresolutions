@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -95,8 +95,3 @@ Para Todd y Jane, los pasos a seguir en el proceso de Stock Trader son estos:
 6. Modernizar DevOps. Durante este proceso, Jane mejora la forma de distribuir Stock Trader.
 
 7. Modernizar la gestión. Todd y Jane han trabajado para mejorar la forma de gestionar Stock Trader y la plataforma en la que se ejecuta, incluye a través de más de un clúster y entorno de nube.
-
-## Enlaces relacionados
-{: #vcscontent-modjourney-related}
-
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-16"
 
 keywords: vSphere BOM, bill of materials vSphere, BOM
 
@@ -22,7 +22,7 @@ En la tabla siguiente se muestra información detallada sobre la lista de materi
 
 | Fabricante | Componente                       | Versión |
 |:-------------|:--------------------------------|:--------|
-| VMware       | vSphere ESXi                    | 6.7 Actualización 1 o 6.5 Actualización 2 |
+| VMware       | vSphere ESXi                    | 6.7 Actualización 2 o 6.5 Actualización 2 |
 {: caption="Tabla 1. Lista de materiales para clústeres de VMware vSphere" caption-side="top"}
 
 ## Enlaces relacionados

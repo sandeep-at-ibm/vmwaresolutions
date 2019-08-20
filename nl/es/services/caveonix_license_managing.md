@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-21"
+lastupdated: "2019-07-23"
 
 keywords: Caveonix view license, Caveonix manage license, delete Caveonix license
 
@@ -13,47 +13,51 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
+{:tip: .tip}
 {:note: .note}
 {:important: .important}
-{:tip: .tip}
 
 # Gestión de licencias de Caveonix RiskForesight
 {: #caveonix_license_managing}
 
-Puede gestionar las licencias de Caveonix RiskForesight que ha solicitado para el uso autónomo visualizándolas o suprimiéndolas y editando sus notas.
+Puede ver, editar notas o suprimir las licencias de Caveonix RiskForesight que ha solicitado para uso autónomo.
 
 ## Procedimiento de visualización de licencias de Caveonix RiskForesight
 {: #caveonix_license_managing_procedure-view}
 
-Puede ver el resumen y los detalles de las licencias de Caveonix RiskForesight que ha solicitado.
+1. Pulse **Recursos** en el panel de navegación izquierdo y desplácese a la tabla **Licencias de Caveonix RiskForesight**.
 
-1. Pulse **Recursos** en el panel de navegación izquierdo y desplácese a la tabla **Licencias de Caveonix RiskForesight** para ver el resumen de las licencias de Caveonix RiskForesight que ha solicitado.
-
-| Elemento | Descripción |
-|:-----|:------------|
-| Nombre | El nombre de la licencia. |
-| Hora de creación | La fecha y hora en que se ha creado la licencia. |
-| Estado | El estado de la licencia: <br>Modificando: Se está creando la licencia.<br>Instalado: La licencia está lista para su uso.<br>Eliminando: La licencia se está suprimiendo. |
-{: caption="Tabla 1. Descripción de los elementos de licencia de Caveonix RiskForesight" caption-side="top"}
+   | Elemento | Descripción |
+   |:-----|:------------|
+   | Nombre | El nombre de la licencia. |
+   | Hora de creación | La fecha y hora en que se ha creado la licencia. |
+   | Estado | El estado de la licencia: <br>Modificando: Se está creando la licencia.<br>Instalado: La licencia está lista para su uso.<br>Eliminando: La licencia se está suprimiendo. |
+   {: caption="Tabla 1. Descripción de los elementos de licencia de Caveonix RiskForesight" caption-side="top"}
 
 2. Para ver los detalles de una licencia específica, pulse la licencia.
 
-## Procedimiento de edición de notas de licencias de Caveonix RiskForesight
+## Procedimiento para editar notas para las licencias de Caveonix RiskForesight
 {: #caveonix_license_managing_procedure-edit}
-
-Puede editar las notas de las licencias de Caveonix RiskForesight que ha solicitado.
 
 1. Pulse **Recursos** en el panel de navegación izquierdo.
 2. Desplácese hacia abajo hasta la tabla **Licencias de Caveonix RiskForesight** y pulse la licencia para la que desea editar las notas.
 3. En la página de detalles de licencia, edite las notas de la licencia y, a continuación, pulse **Confirmar**.
 
+## Problemas conocidos acerca de la visualización de la fecha de la licencia
+{: #caveonix_license_considerations-date}
+
+Si utiliza Mozilla Firefox como navegador, es posible que las fechas de inicio y de finalización de la licencia no muestren ningún valor en la consola de Caveonix RiskForesight. Para resolver el problema, visualice la información de la licencia en otro navegador, como Google Chrome.
+
+Si tiene este problema y el único navegador que puede utilizar es Firefox, póngase en contacto con el
+[Soporte de Caveonix](https://www.caveonix.com/support/){:external} para obtener ayuda.
+{:note}
+
 ## Procedimiento de supresión de licencias de Caveonix RiskForesight
 {: #caveonix_license_managing_procedure-delete}
 
-Puede suprimir las licencias de Caveonix RiskForesight cuando ya no las necesite.
-
-Antes de suprimir la licencia de Caveonix RiskForesight, asegúrese de revisar las consideraciones de [Consideraciones sobre la supresión de licencias de Caveonix RiskForesight](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_license_considerations#caveonix_license_considerations-remove).
-{:note}
+Supresión de una licencia de Caveonix RiskForesight no elimina el servicio Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} que está instalado en una instancia de vCenter Server. Para eliminar el servicio, debe hacerlo en la consola de {{site.data.keyword.vmwaresolutions_short}}. Para obtener más información, consulte [Procedimiento para eliminar servicios para instancias de vCenter Server](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-removing-procedure).
+{:note:}
 
 1. Pulse **Recursos** en el panel de navegación izquierdo.
 2. Desplácese hacia abajo hasta la tabla **Licencias de Caveonix RiskForesight** y busque la licencia que desea suprimir.
@@ -64,5 +68,5 @@ Antes de suprimir la licencia de Caveonix RiskForesight, asegúrese de revisar l
 ## Enlaces relacionados
 {: #caveonix_license_managing-related}
 
-* [Consideraciones sobre licencias de Caveonix RiskForesight](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_license_considerations)
+* [Visión general de Caveonix RiskForesight]()
 * [Solicitud de licencias de Caveonix RiskForesight](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_license_ordering)

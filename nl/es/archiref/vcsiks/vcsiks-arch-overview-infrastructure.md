@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-22"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -67,7 +67,7 @@ Almacenamiento | 100 GB |  SATA: 2 TB / SSD: 960 GB
 ## Estructura virtual
 {: #vcsiks-arch-overview-infrastructure-virtual-structure}
 
-![Diagrama de la estructura física del despliegue de {{site.data.keyword.containerlong_notm}} y {{site.data.keyword.icpfull_notm}}](../../images/vcsiks-phy-ics-iks-deployment.svg "Diagrama de la estructura física del despliegue de {{site.data.keyword.containerlong_notm}} y {{site.data.keyword.icpfull_notm}}"){: caption="Figura 1. Estructura física de los despliegues {{site.data.keyword.containerlong_notm}} e {{site.data.keyword.icpfull_notm}}" caption-side="bottom"}
+![Estructura física del diagrama de despliegue {{site.data.keyword.containerlong_notm}} y {{site.data.keyword.icpfull_notm}}](../../images/vcsiks-phy-ics-iks-deployment.svg "Estructura física del diagrama de despliegue {{site.data.keyword.containerlong_notm}} y {{site.data.keyword.icpfull_notm}}")
 
 Dentro de la instancia de vCenter Server, las VMS del cliente se despliegan en NSX Edge Services Gateways (ESG) y Distributed Logical Routers (DLR) dedicados.
 
@@ -86,8 +86,7 @@ El despliegue de vCenter Server utiliza un único controlador externo de servici
 ### vCenter Server
 {: #vcsiks-arch-overview-infrastructure-vcs}
 
-Al igual que el PSC, vCenter Server se despliega como un dispositivo.
-Además, el vCenter se instala en una subred portátil en la VLAN privada que está asociada con las VM de gestión. Su pasarela predeterminada se establece en BCR.
+Al igual que el PSC, vCenter Server se despliega como un dispositivo. Además, el vCenter se instala en una subred portátil en la VLAN privada que está asociada con las VM de gestión. Su pasarela predeterminada se establece en BCR.
 
 ### NSX Manager
 {: #vcsiks-arch-overview-infrastructure-nsx-manager}
@@ -103,6 +102,7 @@ La automatización de {{site.data.keyword.cloud_notm}} despliega tres controlado
 {: #vcsiks-arch-overview-infrastructure-nsx-esg}
 
 Se despliegan pares NSX Edge Services Gateway (ESG). En todos los casos, se utiliza un par de pasarela para el tráfico de salida de los componentes de automatización que residen en la red privada. Para vCenter Server e {{site.data.keyword.icpfull_notm}}, una segunda pasarela, conocida como el borde gestionado por el cliente, se despliega y se configura con un enlace ascendente a la red pública y una interfaz asignada a la red privada.
+
 El administrador puede configurar los componentes NSX necesarios como, por ejemplo, el direccionador lógico distribuido (DLR), los conmutadores lógicos y los cortafuegos. Para obtener más información sobre los NSX Edges que se despliegan como parte de la solución, consulte la [Guía de red de vCenter Server](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro).
 
 En la tabla siguiente se resumen las especificaciones de {{site.data.keyword.icpfull_notm}} ESG/DLR.
@@ -133,14 +133,9 @@ Disco	| 1000 GB en almacén de datos local
 ### Kubernetes maestro
 {: #vcsiks-arch-overview-infrastructure-kube-master}
 
-El nodo maestro de Kubernetes se encarga de gestionar todos los recursos de cálculo, de red y de almacenamiento del clúster. El nodo maestro de Kubernetes garantiza que las apps y servicios contenerizados se despliegan de forma equitativa en los nodos de trabajador del clúster.
+El nodo maestro de Kubernetes se encarga de gestionar todos los recursos de cálculo, de red y de almacenamiento del clúster. El nodo maestro de Kubernetes garantiza que las apps y servicios contenerizados se despliegan de forma equitativa en los nodos trabajadores del clúster.
 
 ###	Nodo trabajador
 {: #vcsiks-arch-overview-infrastructure-worker-node}
 
 Cada nodo trabajador es una máquina física (nativa) o una máquina virtual que se ejecuta en el hardware físico en el entorno de nube. Cuando suministra un nodo trabajador, determina los recursos que están disponibles para los contenedores que están alojados en dicho nodo trabajador. De forma automática, los nodos trabajadores se configuran con un motor de Docker gestionado por IBM, recursos de cálculo independientes, redes y un servicio de volúmenes. Las características integradas de seguridad ofrecen aislamiento, funciones de gestión de recursos y conformidad con la seguridad de los nodos trabajadores.
-
-## Enlaces relacionados
-{: #vcsiks-arch-overview-infrastructure-related}
-
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

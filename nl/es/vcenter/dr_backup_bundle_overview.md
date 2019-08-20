@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-01"
+lastupdated: "2019-07-22"
 
 keywords: single-node trial, data protection DR, tech specs data protection DR
 
@@ -25,7 +25,7 @@ La Prueba de un solo nodo de Protección de datos y Recuperación tras desastre 
 
 La Prueba de un solo nodo es una versión de prueba de VMware vCenter Server on {{site.data.keyword.cloud_notm}} que proporciona la plataforma VMware de un solo arrendatario que se puede gestionar utilizando las mismas herramientas que en los entornos de instalaciones locales. Puede aprovechar la velocidad y la capacidad de escalado de la nube mientras mantiene el mismo nivel de control y visibilidad que se proporciona en el entorno local.
 
-La Prueba está diseñada para la migración de un máximo de 20 cargas de trabajo sencillas de desarrollo o de prueba utilizando vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity). La automatización instalará y configurará VMware HCX on {{site.data.keyword.cloud_notm}}, proporciona una clave de activación de HCX para instalaciones locales e instala Veeam on {{site.data.keyword.cloud_notm}} y Zerto on {{site.data.keyword.cloud_notm}} en cuestión de horas. Puede hacer copia de seguridad y replicar 20 máquinas virtuales (VM) con Veeam on {{site.data.keyword.cloud_notm}} y Zerto on {{site.data.keyword.cloud_notm}}. 
+La Prueba está diseñada para la migración de un máximo de 20 cargas de trabajo sencillas de desarrollo o de prueba utilizando vCenter Server. La automatización instalará y configurará VMware HCX on {{site.data.keyword.cloud_notm}}, proporciona una clave de activación de HCX para instalaciones locales e instala Veeam on {{site.data.keyword.cloud_notm}} y Zerto on {{site.data.keyword.cloud_notm}} en cuestión de horas. Puede hacer copia de seguridad y replicar 20 máquinas virtuales (VM) con Veeam on {{site.data.keyword.cloud_notm}} y Zerto on {{site.data.keyword.cloud_notm}}. 
 
 La Prueba de un solo nodo para protección de datos y recuperación tras desastre es solo como muestra de viabilidad(POC). No ejecute cargas de trabajo de producción en este entorno. Las funciones de gestión, como la adición y eliminación de hosts y clústeres, la solicitud de servicios complementarios adicionales y la aplicación de actualizaciones, no reciben soporte.
 {:important}
@@ -96,8 +96,8 @@ Se solicitan las siguientes instancias de servidor virtual (VSI):
 
 En el pedido de la instancia de prueba de un solo nodo para la protección de datos y recuperación tras desastre se incluyen las licencias siguientes.
 
-* Licencias de vCenter Server with Hybridity Bundle:
-  * VMware vSphere Enterprise Plus 6.7u1
+* Las licencias de vCenter Server:
+  * VMware vSphere Enterprise Plus 6.7u2
   * VMware vCenter Server 6.5
   * VMware NSX Service Providers Advanced Edition 6.4
 * {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2

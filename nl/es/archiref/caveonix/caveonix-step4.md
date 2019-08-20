@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-21"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -71,8 +71,3 @@ Tabla 2. Información predeterminada utilizada en la configuración de la aplica
 |Tarea |Se configuran cuatro tareas: exploración de activos, flujos de NSX, exploración de infraestructura VMware y vulnerabilidad de VMware. ScanName se establece en DC1AssetScan, NSXFlows, VMWInfraScan, VMWVulnScan |
 |Tarea |Se configuran cuatro tareas: exploración de activos, flujos de NSX, exploración de infraestructura VMware y vulnerabilidad de VMware. El tipo se establece en vCenter, NSX, VMWareInfrastructureScan, VMWareVulnerabilityScan |
 |Tarea |La planificación se establece en Por hora para DC1AssetScan y Diaria para los otros |
-
-## Enlaces relacionados
-{: #caveonix-step4-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

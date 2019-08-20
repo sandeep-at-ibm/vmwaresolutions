@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-13"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -106,11 +106,6 @@ Tabla 4. Resumen
 
 **Notas:**
 Cuando se elimina el servicio Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}, la automatización de {{site.data.keyword.vmwaresolutions_short}} suprime sólo la única máquina virtual "todo en uno" de Caveonix que se ha desplegado y la subred privada dedicada que se ha solicitado para ella. Por tanto,
-* Si ha escalado la máquina virtual de Caveonix en varias máquinas virtuales, esas máquinas virtuales adicionales no se eliminan. 
-* Si ha utilizado las direcciones IP de la subred privada dedicada en máquinas virtuales adicionales, se deben asignar nuevas direcciones IP a esas máquinas virtuales para que continúen funcionando. 
+* Si ha escalado la máquina virtual de Caveonix en varias máquinas virtuales, esas máquinas virtuales adicionales no se eliminan.
+* Si ha utilizado las direcciones IP de la subred privada dedicada en máquinas virtuales adicionales, se deben asignar nuevas direcciones IP a esas máquinas virtuales para que continúen funcionando.
 * Si suprime la instancia A de vCenter Server con el servicio Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} instalado y ha utilizado las direcciones IP de la subred privada dedicada solicitada para el servicio en la instancia B de vCenter Server, la subred privada dedicada se cancela tras la supresión de la instancia A de vCenter Server.
-
-## Enlaces relacionados
-{: #caveonix-deploy-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

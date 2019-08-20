@@ -104,7 +104,7 @@ Para obtener más información sobre las nuevas características de
 ### KMIP for VMware on IBM Cloud
 {: #relnotes_v30-services-kmip}
 
-Ahora hay disponibles dos nuevos puntos finales en Londres y el este de EE.UU. para el servicio de KMIP for VMware on {{site.data.keyword.cloud_notm}}. Para obtener más información, consulte [Configuración de servicio de KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering-config#kmip_standalone_ordering-config).
+Ahora hay disponibles dos nuevos puntos finales en Londres y EE.UU. este para el servicio de KMIP for VMware on {{site.data.keyword.cloud_notm}}. Para obtener más información, consulte [Configuración de servicio de KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering-config#kmip_standalone_ordering-config).
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 {: #relnotes_v30-services-spp}

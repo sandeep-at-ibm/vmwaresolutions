@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-06"
 
 keywords: vCenter Server BOM, bill of materials vCenter Server, BOM
 
@@ -43,13 +43,13 @@ En la tabla siguiente se muestra la información de la lista de materiales para 
 
 | Fabricante  | Componente                      | Versión    |
 |:------------- |:------------------------------ |:------------- |
-| VMware       | vSphere ESXi                    | 6.7 Update 1 (build 6.7.0-13004448) o <br/>6.5 Update 2 (build 6.5.0-13635690) |
+| VMware       | vSphere ESXi                    | 6.7 EP 10 (build 6.7.0-13981272) o <br/>6.5 Actualización 2 (build 6.5.0-13635690) |
 | VMware       | vSphere 6.7                     | vSwitch distribuido 6.6.0 |
 | VMware       | vSphere 6.5                     | vSwitch distribuido 6.5.0 |
-| VMware       | vCenter Server Appliance        | 6.7 Update 1b (build 6.7.0-11727113) o <br/>6.5 Update 2g (build 6.5.0-13638625) |
-| VMware       | Platform Services Controller    | 6.7 Update 1b (compilación 6.7.0-11727113) o <br/>6.5 Update 2d (compilación 6.5.0-10964411) |
-| VMware       | vSAN                            | 6.7 Update 1 o <br/>6.6.1       |
-| VMware       | NSX for vSphere                 | 6.4.4 (build 11197766)    |
+| VMware       | vCenter Server Appliance        | 6.7 Actualización 2b (6.7.0-13843469) o <br/>6.5 Actualización 2g (build 6.5.0-13638625) |
+| VMware       | Platform Services Controller    | 6.7 Actualización 2b (6.7.0-13843469) o <br/>6.5 Actualización 2g (build 6.5.0-13638625) |
+| VMware       | vSAN                            | 6.7 Actualización 1 o <br/>6.6.1       |
+| VMware       | NSX for vSphere                 | 6.4.5 (build 13282012)    |
 | VMware       | NSX-T for vSphere               | 2.4                       |
 | Microsoft    | Windows Server Standard Edition | 2016       |
 {: caption="Tabla 2. Lista de materiales para los componentes de software de instancias de vCenter Server" caption-side="top"}
@@ -138,6 +138,17 @@ Para actualizar el valor de MTU del conmutador público, siga estos pasos en el 
 
    Cuando se cambia el tamaño de MTU en un vDS, los enlaces ascendentes adjuntos (NIC físicos) se detienen y se vuelven a iniciar. Como resultado se produce una breve parada para las máquinas virtuales que están utilizando el enlace ascendente. Por lo tanto se recomienda planear la actualización del valor de la MTU durante una parada planificada.
    {:note}
+
+## Valores de modalidad de Enhanced VMware vMotion Compatibility (EVC)
+{: #vc_bom-evc-mode-settings}
+
+Revise la tabla siguiente para obtener una visión general de los valores de modalidad de EVC para instancias de vCenter Server y las diferencias entre las versiones de vSphere.
+
+| Modelo de CPU de servidor nativo | vSphere 6.5  | vSphere 6.7 |
+|:------------- |:------------- |:------------- |
+| Broadwell | EVC se establece en la generación de Intel **Broadwell** | EVC se establece en la generación de Intel **Broadwell** |
+| Skylake | No definido | EVC se establece en la generación de Intel **Skylake** |
+{: caption="Tabla 6. Valores de modalidad de EVC para instancias y clústeres de vCenter Server" caption-side="top"}
 
 ## Enlaces relacionados
 {: #vc_bom-related}

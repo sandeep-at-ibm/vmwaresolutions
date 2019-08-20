@@ -215,7 +215,7 @@ En función de la configuración seleccionada para la instancia, el coste estima
 9. En el panel **Resumen del pedido**, verifique la configuración de la instancia antes de realizar el pedido.
    1. Revise los valores de la instancia.
    2. Pulse el enlace o enlaces de los términos que se aplican a su pedido y confirme que acepta estos términos antes de solicitar la instancia.
-   3. Para revisar el coste estimado de los servicios, pulse el enlace de coste que hay bajo **Calcular coste**. Para guardar o imprimir el resumen del pedido, pulse el icono **Imprimir** o **Descargar** en la parte superior derecha de la ventana del PDF.
+   3. Para revisar el coste estimado de la instancia, pulse el enlace de coste que hay bajo **Calcular coste**. Para guardar o imprimir el resumen del pedido, pulse el icono **Imprimir** o **Descargar** en la parte superior derecha de la ventana del PDF.
    4. Pulse **Suministro**.
 
 ## Resultados

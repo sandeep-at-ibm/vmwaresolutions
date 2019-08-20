@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -140,8 +140,3 @@ Después del entrenamiento, Discovery Service puede responder a consultas como:
 - Enséñame todos los trucos cuyo truco básico sea heelflip.
 - Enséñame todos los trucos.
 - Enséñame todos los trucos con varios combos.
-
-## Enlaces relacionados
-{: #vcscar-logical-related}
-
-* [Visión general de vCenter Server on {{site.data.keyword.cloud}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

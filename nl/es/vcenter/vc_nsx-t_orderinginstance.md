@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-06"
 
 keywords: vCenter Server NSX-T order instance, order vCenter Server NSX-T, order NSX-T
 
@@ -35,9 +35,9 @@ Asegúrese de haber realizado las tareas siguientes:
 |:------------|:------------ |
 | Nombre de dominio | `<root_domain>` |  
 | Nombre usuario inicio sesión vCenter Server | `<user_id>@<root_domain>` (usuario de Microsoft Active Directory) o `administrator@vsphere.local` |
-| vCenter Server (con PSC incorporado) FQDN | `vcenter-<subdomain_label>.<subdomain_label>.<root_domain>`. La longitud máxima es de 50 caracteres. |
+| vCenter Server (con PSC incorporado) FQDN | `<instance_name>-vc.<root_domain>`. La longitud máxima es de 50 caracteres. |
 | Nombre sitio inicio sesión único (SSO) | `<subdomain_label>` |
-| Nombre completo de servidor ESXi | `<host_prefix><n>.<subdomain_label>.<root_domain>`, donde `<n>` es la secuencia del servidor ESXi. La longitud máxima es de 50 caracteres. |
+| Nombre completo de servidor ESXi | `<data_center>-<host_prefix><n>.<subdomain_label>.<root_domain>`, donde `n` es la secuencia del servidor ESXi. La longitud máxima es de 50 caracteres. |
 {: caption="Tabla 1. Formato del valor de nombres de instancia y de dominio" caption-side="top"}
 
 No modifique ningún valor definido durante la solicitud o el despliegue de la instancia. Hacerlo puede hacer que la instancia se vuelva inutilizable. Por ejemplo, si se cierra la red pública, si los servidores y las Instancias de servidor virtual (VSI) se mueven detrás de una media disposición de Vyatta, o si el VSI de IBM CloudBuilder se detiene o se suprime.
@@ -52,15 +52,26 @@ Debe especificar los valores del sistema siguientes cuando solicite una instanci
 {: #vc_nsx-t_orderinginstance-inst-name}
 
 El nombre de instancia debe cumplir los siguientes requisitos:
-* Solo se permiten caracteres alfanuméricos y el guión (-).
-* El nombre de instancia debe empezar por un carácter alfabético y terminar por un carácter alfanumérico.
+* Solo se permiten caracteres alfabéticos en minúsculas, numéricos y el guión (-).
+* El nombre de instancia debe empezar por un carácter alfabético en minúsculas.
+* El nombre de instancia debe terminar en un carácter alfabético o numérico en minúsculas.
 * La longitud máxima del nombre de instancia es de 10 caracteres.
 * El nombre de instancia debe ser exclusivo dentro de su cuenta.
 
-### Licencias de VMware vSphere
+### Nombre de clúster inicial
+{: #vc_nsx-t_orderinginstance-cluster-name}
+
+El nombre de clúster inicial debe cumplir los requisitos siguientes:
+* Solo se permiten caracteres alfabéticos en minúsculas, numéricos y el guión (-).
+* El nombre de clúster debe empezar por un carácter alfabético en minúsculas.
+* El nombre de clúster debe terminar en un carácter alfabético o numérico en minúsculas.
+* La longitud máxima del nombre del clúster es de 30 caracteres.
+* El nombre del clúster debe ser exclusivo dentro de la instancia de vCenter Server.
+
+### Versión de VMware vSphere
 {: ##vc_nsx-t_orderinginstance-vsphere-license}
 
-La licencia de vSphere Enterprise Plus 6.7u1 está seleccionada de forma predeterminada.
+De forma predeterminada, está seleccionada la licencia de vSphere Enterprise Plus 6.7u2.
 
 ### Primaria o secundaria
 {: #vc_nsx-t_orderinginstance-primary-secondary}
@@ -110,6 +121,21 @@ Si selecciona **Skylake**, puede elegir la combinación de CPU y RAM del servido
 | Dual Intel Xeon Gold Procesador 6140 / 36 núcleos en total, 2,3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 {: caption="Tabla 2. Opciones para {{site.data.keyword.baremetal_short}} Skylake" caption-side="top"}
 
+### Cascade
+{: #vc_nsx-t_orderinginstance-cascade}
+
+Para el valor **Cascade**, dispone de varias opciones para **Modelo de CPU** y **RAM**.
+
+Cascade {{site.data.keyword.baremetal_short}} sólo está disponible para instancias de VMware vSphere Enterprise Plus 6.7 U2.
+{:note}
+
+| Opciones de modelo de CPU        | Opciones de RAM       |
+|:------------- |:------------- |
+| Dual Intel Xeon Gold Procesador 4210 / 20 núcleos en total, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold Procesador 5218 / 32 núcleos en total, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold Procesador 6248 / 40 núcleos en total, 2,5 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
+{: caption="Tabla 3. Opciones para {{site.data.keyword.baremetal_short}} Cascade" caption-side="top"}
+
 ### Broadwell
 {: #vc_nsx-t_orderinginstance-broadwell}
 
@@ -119,7 +145,7 @@ Si selecciona **Broadwell**, puede elegir la combinación de CPU y RAM del servi
 |:------------- |:------------- |
 | Quad Intel Xeon E7-4820 v4 / 40 núcleos en total, 2,0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 núcleos en total, 2,1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
-{: caption="Tabla 3. Opciones para {{site.data.keyword.baremetal_short}} Broadwell" caption-side="top"}
+{: caption="Tabla 4. Opciones para {{site.data.keyword.baremetal_short}} Broadwell" caption-side="top"}
 
 ### Número de servidores nativos
 {: #vc_nsx-t_orderinginstance-bare-metal-number}
@@ -139,12 +165,12 @@ Para instancias desplegadas, puede añadir comparticiones de almacenamiento NFS 
 ### Almacenamiento vSAN
 {: #vc_nsx-t_orderinginstance-vsan-storage}
 
-vSAN está disponible solo para configuraciones de servidor nativo **Skylake** o **Broadwell**. Especifique las siguientes opciones de vSAN:
+vSAN está disponible solo para las configuraciones de servidor nativo **Skylake**, **Cascade** y **Broadwell**. Especifique las siguientes opciones de vSAN:
 * **Tipo y tamaño de disco para discos de capacidad vSAN**: Seleccione una opción para los discos de capacidad que necesite.
 * **Número de discos de capacidad de vSAN**: Especifique el número de discos de capacidad que desea añadir.
 * Si desea añadir discos de capacidad por encima del límite de 10, marque el recuadro **Intel Optane de alto rendimiento**. Esta opción proporciona dos bahías de disco de capacidad adicional para un total de 12 discos de capacidad y es útil para cargas de trabajo que requieren menos latencia y un rendimiento de IOPS más alto.
 
-  La opción **Alto rendimiento con Intel Optane** está disponible únicamente para los modelos de CPU Skylake.
+  La opción **Alto rendimiento con Intel Optane** está disponible únicamente para los modelos de CPU Skylake y Cascade.
   {:note}
 
 * Revise los valores **Tipo de disco para discos de memoria caché vSAN** y **Número de discos de memoria caché de vSAN**. Estos valores dependen de si ha marcado el recuadro **Intel Optane de alto rendimiento**.
@@ -172,7 +198,7 @@ Detalles de nivel de rendimiento:
 | 2 IOPS/GB | Esta opción está diseñada para la mayoría de cargas de trabajo generales. Entre las aplicaciones de ejemplo se encuentran alojamiento de bases de datos pequeñas, copia de seguridad de aplicaciones web o imágenes de disco de máquina virtual para un hipervisor. |
 | 4 IOPS/GB | Esta opción está diseñada para cargas de trabajo de mayor intensidad que tienen un alto porcentaje de datos activos en un momento determinado. Las aplicaciones de ejemplo incluyen bases de datos transaccionales. |
 | 10 IOPS/GB | Esta opción está diseñada para los tipos de carga de trabajo más exigentes, como las analíticas. Las aplicaciones de ejemplo incluyen bases de datos con un gran número de transacciones y otras bases de datos sensibles al rendimiento. Este nivel de rendimiento está limitado a una capacidad máxima de 4 TB por compartición de archivo. |
-{: caption="Tabla 4. Opciones de nivel de rendimiento de NFS" caption-side="top"}
+{: caption="Tabla 5. Opciones de nivel de rendimiento de NFS" caption-side="top"}
 
 ## Valores de interfaz de red
 {: #vc_nsx-t_orderinginstance-network-interface-settings}
@@ -183,26 +209,29 @@ Debe especificar los siguientes valores de interfaz de red cuando solicite una i
 {: #vc_nsx-t_orderinginstance-host-name-prefix}
 
 El prefijo del nombre de host debe cumplir los siguientes requisitos:
-*  Solo se permiten caracteres alfanuméricos y el guión (-).
-*  El prefijo de nombre de host debe empezar y terminar por un carácter alfanumérico.
-*  La longitud máxima del prefijo de nombre de host es de 10 caracteres.
+* Solo se permiten caracteres alfabéticos en minúsculas, numéricos y el guión (-).
+* El prefijo de nombre de host debe empezar por un carácter alfabético en minúsculas.
+* El prefijo de nombre de host debe terminar en un carácter alfabético o numérico en minúsculas.
+* La longitud máxima del prefijo de nombre de host es de 10 caracteres.
 
 ### Etiqueta de subdominio
 {: #vc_nsx-t_orderinginstance-subdomain-label}
 
 La etiqueta de subdominio debe cumplir los siguientes requisitos:
-*  Solo se permiten caracteres alfanuméricos y el guión (-).
-*  La etiqueta de subdominio debe empezar por un carácter alfabético y terminar por un carácter alfanumérico.
-*  La longitud máxima de la etiqueta de subdominio es de 10 caracteres.
+* Solo se permiten caracteres alfabéticos en minúsculas, numéricos y el guión (-).
+* La etiqueta de subdominio debe empezar por un carácter alfabético en minúsculas.
+* La etiqueta de subdominio debe terminar en un carácter alfabético o numérico en minúsculas.
+* La longitud máxima de la etiqueta de subdominio es de 10 caracteres.
 
 ### Nombre de dominio
 {: #vc_nsx-t_orderinginstance-domain-name}
 
 El nombre del dominio raíz debe cumplir los siguientes requisitos:
 * El nombre de dominio debe constar de dos o más series de caracteres separadas por un punto (.)
-* La primera serie debe empezar por un carácter alfabético y terminar por un carácter alfanumérico.
-* Todas las series, excepto la última, solo pueden contener caracteres alfanuméricos y caracteres de guión (-).
-* La última serie solo puede contener caracteres alfabéticos.
+* La primera serie debe empezar por un carácter alfabético en minúsculas.
+* La primera serie debe terminar en un carácter alfabético o numérico en minúsculas.
+* Todas las series, excepto la última, sólo pueden contener caracteres alfabéticos en minúsculas, numéricos y el guión (-).
+* La última serie solo puede contener caracteres alfabéticos en minúsculas.
 * La longitud de la última serie debe estar comprendida entre 2 y 24 caracteres.
 
 La longitud máxima del nombre de dominio completo (FQDN) para hosts y VM es de 50 caracteres. Los nombres de dominio deben cumplir con esta longitud máxima.
@@ -306,7 +335,7 @@ También puede añadir los recursos suministrados a la herramienta de estimació
 {: #vc_nsx-t_orderinginstance-results}
 
 * El despliegue de la instancia se inicia automáticamente y se recibe la confirmación de que el pedido se está procesando. Puede comprobar el estado de despliegue, incluidos los problemas que puedan requerir su atención, mediante la visualización de la sección **Historial de despliegue** de los detalles de la instancia.
-* Cuando la instancia se haya desplegado correctamente, los componentes que se describen en [Especificaciones técnicas para las instancias de vCenter Server con NSX-T](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_overview#vc_nsx-t_overview-specs) se instalan en la plataforma virtual de VMware. Los servidores ESXi que ha solicitado se agrupan de forma predeterminada como **cluster1**.
+* Cuando la instancia se haya desplegado correctamente, los componentes que se describen en [Especificaciones técnicas para las instancias de vCenter Server con NSX-T](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_overview#vc_nsx-t_overview-specs) se instalan en la plataforma virtual de VMware.
 * Cuando la instancia esté lista para ser utilizada, el estado de la instancia pasará a ser **Listo para su uso** y recibirá una notificación por correo electrónico.
 * Cuando se solicita una instancia secundaria, es posible que el cliente web de VMware vSphere para la instancia primaria (enlazada a la secundaria) se rearranque cuando finalice el pedido de la instancia secundaria.
 

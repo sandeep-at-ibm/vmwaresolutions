@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-27"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -246,8 +246,3 @@ Jane desea una base de código unificada, aunque Stock Trader se puede ejecutar 
 Puesto que Jane se ha comprometido en refactorizar la solución de Stock Trader y Todd ha instalado middleware en {{site.data.keyword.cloud_notm}} Private Hosted, toda la solución básica de Stock Trader se ejecuta en una nube privada. Jane añade más microservicios como un servicio de notificación de Twitter. Las reglas de direccionamiento de Istio permiten la mensajería de nivel de fidelidad dinámica a través de un canal de Slack interno o de un canal de Twitter público.
 
 ![Mejora de Stock Trader](../../images/vcscontent-enrich.svg "Mejora de Stock Trader")
-
-## Enlaces relacionados
-{: #vcscontent-addmidware-related}
-
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

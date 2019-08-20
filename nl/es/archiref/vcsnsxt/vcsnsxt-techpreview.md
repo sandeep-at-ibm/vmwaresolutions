@@ -96,7 +96,7 @@ Se configura lo siguiente:
 Lo que NO se configura:
 -	Conmutadores lógicos de superposición.
 -	Microsegmentación.
--	Gestión de NSX enlazada con otras estancias de VMware.
+-	Gestión de NSX enlazada con otras instancias de VMware.
 
 ### vCenter Server con NSX-V y NSX-T
 {: #vcsnsxt-techpreview-vcs-nsx-v-nsx-t}

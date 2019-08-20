@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -40,8 +40,3 @@ Tabla 2. Recopilador remoto
 |Disco	|1 TB|
 |SO	|CentOS 7|
 |Componentes de aplicación instalados	|Recopilador remoto|
-
-## Enlaces relacionados
-{: #caveonix-allinone-related}
-
-*   [VMware vCenter Server on {{site.data.keyword.cloud}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -27,8 +27,3 @@ Para el escalado, el cliente tiene que llamar al script para suministrar las top
 - Certificados para todos los servicios
 
 Al final de este paso, los componentes de la aplicación se instalan en las máquinas virtuales necesarias (VM).
-
-## Enlaces relacionados
-{: #caveonix-step3-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

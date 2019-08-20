@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-22"
 
 keywords: single-node trial, migration app modernization, tech specs migration app modernization
 
@@ -25,7 +25,7 @@ La prueba de un solo nodo para la migración y modernización de apps le permite
 
 La prueba de un solo nodo es una versión de prueba de {{site.data.keyword.cloud_notm}} Private Hosted on VMware vCenter Server on {{site.data.keyword.cloud_notm}} que proporciona la plataforma de gestión de Kubernetes para contenedores y la plataforma VMware de un solo arrendatario que se puede gestionar utilizando las mismas herramientas que en entornos locales. Puede aprovechar la velocidad y la capacidad de escalado de la nube mientras mantiene el mismo nivel de control y visibilidad que se proporciona en el entorno local.
 
-La prueba está diseñada para la migración de un máximo de 20 cargas de trabajo sencillas de desarrollo o de prueba utilizando vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity) y la contenerización de dichas cargas de trabajo con la plataforma de desarrollo de aplicaciones de {{site.data.keyword.cloud_notm}} Private Hosted basada en Kubernetes. La automatización instalará y configurará VMware HCX en {{site.data.keyword.cloud_notm}}, proporcionará una clave de activación de HCX local e instalará y configurará una pequeña topología de desarrollo o prueba de {{site.data.keyword.cloud_notm}} Private Hosted en cuestión de horas.
+La prueba está diseñada para la migración de un máximo de 20 cargas de trabajo sencillas de desarrollo o de prueba utilizando vCenter Server on {{site.data.keyword.cloud_notm}} y la contenerización de dichas cargas de trabajo con la plataforma de desarrollo de aplicaciones de {{site.data.keyword.cloud_notm}} Private Hosted basada en Kubernetes. La automatización instalará y configurará VMware HCX en {{site.data.keyword.cloud_notm}}, proporcionará una clave de activación de HCX local e instalará y configurará una pequeña topología de desarrollo o prueba de {{site.data.keyword.cloud_notm}} Private Hosted en cuestión de horas.
 
 La prueba de un solo nodo para la migración y modernización de apps es solo para la prueba de concepto (POC). No ejecute cargas de trabajo de producción en este entorno. Las funciones de gestión, como la adición y eliminación de hosts y clústeres, la solicitud de servicios complementarios y la aplicación de actualizaciones, no reciben soporte.
 {:important}
@@ -94,7 +94,7 @@ Se solicitan las siguientes instancias de servidor virtual (VSI):
 
 En el pedido de la instancia de prueba de un solo nodo para la migración y modernización de apps se incluyen las siguientes licencias.
 
-* VMware vSphere Enterprise Plus 6.7u1
+* VMware vSphere Enterprise Plus 6.7u2
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Advanced Edition 6.4
 * {{site.data.keyword.cloud_notm}} Private Hosted 3.1.2

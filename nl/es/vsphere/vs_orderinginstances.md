@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-06"
 
 keywords: vSphere order cluster, order vSphere, order vSphere cluster
 
@@ -40,7 +40,12 @@ Debe especificar los siguientes valores de sistema cuando solicite un nuevo clú
 ### Nombre de clúster
 {: #vs_orderinginstances-cluster-name}
 
-El nombre del clúster debe ser exclusivo dentro de su cuenta.
+El nombre del clúster debe cumplir los siguientes requisitos:
+* Solo se permiten caracteres alfabéticos en minúsculas, numéricos y el guión (-).
+* El nombre de clúster debe empezar por un carácter alfabético en minúsculas.
+* El nombre de clúster debe terminar en un carácter alfabético o numérico en minúsculas.
+* La longitud máxima del nombre de clúster es de 10 caracteres.
+* El nombre del clúster debe ser exclusivo dentro de su cuenta.
 
 ## Valores de licencia
 {: #vs_orderinginstances-licensing-settings}
@@ -72,7 +77,7 @@ Para los usuarios de IBM Business Partner, la opción Traiga su propia licencia 
 {: #vs_orderinginstances-individual-components-for-non-bp-users}
 
 Si no es un Business Partner, puede seleccionar los siguientes componentes para el clúster de vSphere:
-* VMware vSphere Enterprise Plus 6.7 U1 o 6.5 U2
+* VMware vSphere Enterprise Plus 6.7 U2, o 6.5 U2
 * VMware vCenter Server
 * VMware NSX
 * VMware vSAN
@@ -123,6 +128,21 @@ Si selecciona **Skylake**, puede elegir la combinación de CPU y RAM del servido
 | Dual Intel Xeon Gold Procesador 6140 / 36 núcleos en total, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1,5 TB |
 {: caption="Tabla 2. Opciones para {{site.data.keyword.baremetal_short}} Skylake" caption-side="top"}
 
+### Cascade
+{: #vs_orderinginstance-cascade}
+
+Para el valor **Cascade**, dispone de varias opciones para **Modelo de CPU** y **RAM**.
+
+Cascade {{site.data.keyword.baremetal_short}} sólo está disponible para instancias de VMware vSphere Enterprise Plus 6.7 U2.
+{:note}
+
+| Opciones de modelo de CPU        | Opciones de RAM       |
+|:------------- |:------------- |
+| Dual Intel Xeon Gold Procesador 4210 / 20 núcleos en total, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold Procesador 5218 / 32 núcleos en total, 2,3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold Procesador 6248 / 40 núcleos en total, 2,5 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
+{: caption="Tabla 3. Opciones para {{site.data.keyword.baremetal_short}} Cascade" caption-side="top"}
+
 ### Certificado por SAP
 {: #vs_orderinginstances-sap}
 
@@ -146,7 +166,7 @@ Si selecciona **Broadwell**, puede elegir la combinación de CPU y RAM del servi
 |:------------- |:------------- |
 | Quad Intel Xeon E7-4820 v4 / 40 núcleos en total, 2,0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 núcleos en total, 2,1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
-{: caption="Tabla 3. Opciones para {{site.data.keyword.baremetal_short}} Broadwell" caption-side="top"}
+{: caption="Tabla 4. Opciones para {{site.data.keyword.baremetal_short}} Broadwell" caption-side="top"}
 
 ### Número de servidores nativos
 {: #vs_orderinginstances-bare-metal-number}
@@ -167,7 +187,7 @@ Si selecciona el componente VMware vSAN para el clúster, especifique los valore
 * **Número de discos de capacidad de vSAN**: Especifique el número de discos de capacidad que desea añadir.
 * Si desea añadir discos de capacidad por encima del límite de ocho, marque el recuadro **Intel Optane de alto rendimiento**. Esta opción proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad y es útil para cargas de trabajo que requieren menos latencia y un rendimiento de IOPS más alto.
 
-  La opción **Alto rendimiento con Intel Optane** está disponible únicamente para los modelos de CPU Skylake.
+  La opción **Alto rendimiento con Intel Optane** está disponible únicamente para los modelos de CPU Skylake y Cascade.
   {:note}
 
 * Revise los valores **Tipo de disco para discos de memoria caché vSAN** y **Número de discos de memoria caché de vSAN**. Estos valores dependen de si ha marcado el recuadro **Intel Optane de alto rendimiento**.
@@ -183,27 +203,30 @@ Debe especificar los siguientes valores de interfaz de red cuando solicite un nu
 El nombre de host se utiliza para todos los pedidos de servidores nativos. Se recomienda utilizar el nombre de host para todas las máquinas virtuales de gestión, como por ejemplo vCenter Server y NSX.
 
 El prefijo del nombre de host debe cumplir los siguientes requisitos:
-* El nombre debe empezar y terminar por un carácter alfanumérico.
-* Solo se permiten caracteres alfanuméricos y el guión (-).
-* La longitud máxima es de 10 caracteres.
+* Solo se permiten caracteres alfabéticos en minúsculas, numéricos y el guión (-).
+* El prefijo de nombre de host debe empezar por un carácter alfabético en minúsculas.
+* El prefijo de nombre de host debe terminar en un carácter alfabético o numérico en minúsculas.
+* La longitud máxima del prefijo de nombre de host es de 10 caracteres.
 
 ### Etiqueta de subdominio
 {: #vs_orderinginstances-subdomain-label}
 
 La etiqueta de subdominio debe cumplir los siguientes requisitos:
-*  Solo se permiten caracteres alfanuméricos y el guión (-).
-*  La etiqueta de subdominio debe empezar y terminar por un carácter alfanumérico.
-*  La longitud máxima de la etiqueta de subdominio es de 10 caracteres.
+* Solo se permiten caracteres alfabéticos en minúsculas, numéricos y el guión (-).
+* La etiqueta de subdominio debe empezar por un carácter alfabético en minúsculas.
+* La etiqueta de subdominio debe terminar en un carácter alfabético o numérico en minúsculas.
+* La longitud máxima de la etiqueta de subdominio es de 10 caracteres.
 
 ### Nombre de dominio
 {: #vs_orderinginstances-domain-name}
 
 El nombre de dominio se utiliza para todos los {{site.data.keyword.baremetal_short}} y debe cumplir los siguientes requisitos:
-* El nombre debe constar de dos o más series de caracteres separadas por un punto (.)
-* Solo se permiten caracteres alfanuméricos y el guión (-).
-* Cada serie de caracteres debe comenzar por un carácter alfabético y terminar por un carácter alfanumérico y la última serie solo puede contener caracteres alfabéticos.
+* El nombre de dominio debe constar de dos o más series de caracteres separadas por un punto (.)
+* Solo se permiten caracteres alfabéticos en minúsculas, numéricos y el guión (-).
+* Cada serie debe empezar por un carácter alfabético en minúsculas y terminar en un carácter alfabético o numérico en minúsculas.
+* La última serie solo puede contener caracteres alfabéticos en minúsculas.
 * La longitud de la última serie debe estar comprendida entre 2 y 24 caracteres.
-* La longitud de otras series de caracteres debe estar comprendida entre 1 y 63 caracteres.
+* La longitud de las otras series de caracteres debe estar comprendida entre 1 y 63 caracteres.
 * La longitud máxima del nombre de dominio es de 189 caracteres.
 
 ### Red pública o privada
@@ -216,12 +239,12 @@ Los valores de habilitación de la tarjeta de interfaz de red (NIC) se basan en 
 
 Los valores del sistema de redes dependen de si ha seleccionado **Realizar pedido de nuevas VLAN** o **Seleccionar las VLAN existentes**.
 
-Se necesita una VLAN pública y dos VLAN privadas para el pedido del clúster. Las dos VLAN privadas se conectan en modalidad troncal en cada servidor nativo.
-
 #### Realizar pedido de nuevas VLAN
 {: #vs_orderinginstances-new-vlans}
 
-Seleccione esta opción para solicitar una VLAN pública nueva y dos VLAN privadas nuevas.
+Si solicita de una red pública y privada, se necesita una VLAN pública y dos VLAN privadas para este pedido de clúster. Las dos VLAN privadas se conectan en modalidad troncal en cada servidor nativo.
+
+Si solicita una red privada, sólo se necesitan dos VLAN privadas para el pedido de clúster.
 
 #### Seleccionar las VLAN existentes
 {: #vs_orderinginstances-existing-vlans}
@@ -230,9 +253,9 @@ En función del {{site.data.keyword.CloudDataCent_notm}} que haya seleccionado, 
 
   Cuando seleccione reutilizar las VLAN públicas y privadas existentes, especifique las VLAN y las subredes:
   * **VLAN pública** es para acceder a la red pública.
+  * **Subred primaria** se asigna a hosts físicos para acceder a la red pública.
   * **VLAN privada** es para la conectividad entre los centros de datos y los servicios de {{site.data.keyword.cloud_notm}}.
   * **VLAN privada secundaria** es para las características de VMware, como vSAN.
-  * **Subred primaria** se asigna a hosts físicos para acceder a la red pública.
   * **Subred primaria privada** se asigna a hosts físicos para el tráfico de gestión.
 
 ##### Importante
@@ -245,6 +268,9 @@ En función del {{site.data.keyword.CloudDataCent_notm}} que haya seleccionado, 
 {: #vs_orderinginstances-fortigate-physical-appliance}
 
 También puede seleccionar si desea incluir el par de alta disponibilidad de dispositivos físicos FortiGate serie 300 para proteger el entorno de nube. Para obtener más información, consulte [Visión general de FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations).
+
+Esta opción sólo está disponible para un pedido con una red pública y privada.
+{:note}
 
 ## Resumen del pedido
 {: #vs_orderinginstances-order-summary}
@@ -269,7 +295,7 @@ También puede añadir los recursos suministrados a la herramienta de estimació
 5. Complete los valores del servidor nativo:
    1. Seleccione el {{site.data.keyword.CloudDataCent_notm}} en el que se va a alojar el clúster.
    2. Seleccione la configuración del servidor nativo.
-      * Si seleccione **Skylake** o **Broadwell**, especifique el modelo de CPU y el tamaño de RAM.
+      * Si seleccione **Skylake**, **Cascade**, o **Broadwell**, especifique el modelo de CPU y el tamaño de RAM.
       * Si selecciona **Certificado por SAP**, elija una de las configuraciones preestablecidas.
    3. Especifique el número de Servidores nativos.
 6. Si ha seleccionado el componente **VMware vSAN**, complete la configuración de almacenamiento de vSAN. Especifique los tipos de disco para la capacidad y los discos de memoria caché y el número de discos. Si desea más almacenamiento, marque el recuadro **Intel Optane de alto rendimiento**.
@@ -279,7 +305,7 @@ También puede añadir los recursos suministrados a la herramienta de estimació
    3. Seleccione la interfaz de red que desea utilizar.
     * Si desea solicitar nuevas VLAN públicas y privadas, pulse **Realizar pedido de nuevas VLAN**.
     * Si desea reutilizar las VLAN públicas y privadas existentes cuando estén disponibles, pulse **Seleccionar las VLAN existentes** y especifique las VLAN y opcionalmente las subredes.
-    4. Especifique si desea aplicar el par de alta disponibilidad de dispositivos físicos FortiGate serie 300 para proteger el entorno de nube.  
+    4. Si solicita VLAN públicas, especifique si desea aplicar el par de alta disponibilidad de dispositivos físicos FortiGate serie 300 para proteger el entorno de nube.
 8. En el panel **Resumen del pedido**, verifique la configuración del clúster y el coste estimado.
    * Para guardar la configuración como una plantilla sin realizar un pedido, pulse **Guardar configuración**.
    * Para realizar el pedido, asegúrese de que la cuenta a la que se va a realizar el cobro es correcta; revise y acepte los términos y, a continuación, pulse **Suministro**.

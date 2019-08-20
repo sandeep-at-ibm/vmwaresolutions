@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-21"
+lastupdated: "2019-07-23"
 
 keywords: Mission Critical VMware, request Mission Critical, tech specs Mission Critical
 
@@ -20,7 +20,7 @@ Mission Critical VMware on {{site.data.keyword.cloud}} proporciona una arquitect
 
 Con esta arquitectura de nube, los clientes pueden conseguir una mayor disponibilidad y una tasa de éxito de migración tras error superior al que obtienen la mayoría de los clientes de VMware con entornos locales o con plataformas de nube de la competencia.
 
-Esta arquitectura da soporte a las cargas de trabajo existentes, críticas y antiguas, incluidas las aplicaciones nativas que no son de nube, con una disponibilidad agregada de destino del 99,99%. Las regiones multizona de IBM Cloud están diseñadas para mantener las cargas de trabajo críticas en línea si se produce una caída en el sitio. Las cargas de trabajo de un sitio fallido se reinician automáticamente casi en tiempo real, mientras que las cargas de trabajo de los sitios adyacentes permanecen en línea y disponibles.
+Esta arquitectura da soporte a las cargas de trabajo existentes, críticas y antiguas, incluidas las aplicaciones nativas que no son de nube, con una disponibilidad agregada de destino del 99,99%. Las regiones multizona de {{site.data.keyword.cloud_notm}} están diseñadas para mantener las cargas de trabajo críticas en línea si se produce una caída en el sitio. Las cargas de trabajo de un sitio fallido se reinician automáticamente casi en tiempo real, mientras que las cargas de trabajo de los sitios adyacentes permanecen en línea y disponibles.
 
 La arquitectura cubre varios servicios empresariales, que incluyen redes, almacenamiento, resiliencia y otras herramientas creadas para la supervisión y la resolución de problemas de aplicaciones basadas en la nube. Además, esta arquitectura se puede integrar con IBM Services Platform with Watson, incorporada en {{site.data.keyword.cloud_notm}}, para permitir un consumo más amplio de servicios. Mediante la utilización de las funciones cognitivas de la plataforma, los clientes pueden extraer datos de forma más eficiente para obtener nuevos conocimientos empresariales a fin de ayudar a mantener la continuidad de las operaciones.
 
@@ -40,9 +40,9 @@ La arquitectura Critical VMware on {{site.data.keyword.cloud_notm}} es una arqui
   * Patrones de resiliencia (copia de seguridad y recuperación)
 
 Mission Critical VMware on {{site.data.keyword.cloud_notm}} está disponible en las siguientes regiones:
-* América: NA sur - todos los centros de datos de IBM Cloud de Dallas y NA este: todos los centros de datos de IBM Cloud de Washington, DC
-* Europa: todos los centros de datos de IBM Cloud de Frankfurt y Londres
-* Asia Pacífico: todos los centros de datos de IBM Cloud de Sídney y Tokio
+* América: NA sur - todos los centros de datos de {{site.data.keyword.cloud_notm}} de Dallas y NA este: todos los centros de datos de {{site.data.keyword.cloud_notm}} de Washington, DC
+* Europa: todos los centros de datos de {{site.data.keyword.cloud_notm}} de Frankfurt y Londres
+* Asia Pacífico: todos los centros de datos de {{site.data.keyword.cloud_notm}} de Sídney y Tokio
 
 ### Especificaciones de la arquitectura de la infraestructura base
 {: #mcv_overview-base-specs}
@@ -99,5 +99,5 @@ La arquitectura de red tiene las siguientes especificaciones:
 {: #mcv_overview-related}
 
 * [Servicios gestionados de IMI](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_imi)
-* [Servicios gestionados para Veeam on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
-* [Servicios gestionados para Zerto on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
+* [Servicios gestionados para Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
+* [Servicios gestionados para Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)

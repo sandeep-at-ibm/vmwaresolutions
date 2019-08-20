@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-06"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -68,8 +68,3 @@ Este glosario proporciona algunas descripciones para los términos que están as
 Trabajo: La puntuación de la anomalía "Caveo Logs" es > 90, entonces Marcar el activo para cuarentena y enviar una notificación al canal de Slack.`
 Trabajo: La puntuación de la anomalía "Caveo Network" es > 95, entonces Poner en cuarentena el activo y enviar notificación por correo electrónico y también enviar notificación por interfaz de usuario.
 ```
-
-## Enlaces relacionados
-{: #caveonix-terminology-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-16"
 
 keywords: vCenter Server multi-site, multi-site configuration, multi-site deployment vCenter Server
 
@@ -32,16 +32,16 @@ La configuración de varios sitios para instancias de vCenter Server solo recibe
 Un despliegue de varios sitios consta de los siguientes componentes.
 
 * **Instancia primaria**: la instancia primaria de VMware vCenter Server tiene la siguiente configuración:
-  *  Dominio raíz Microsoft Active Directory (AD) y DNS (Sistema de nombres de dominio)
-  *  Subdominio de vCenter Server
-  *  Dominio SSO (inicio de sesión único)
-  *  Nombre del sitio SSO
+  * Dominio raíz Microsoft Active Directory (AD) y DNS (Sistema de nombres de dominio)
+  * Subdominio de vCenter Server
+  * Dominio SSO (inicio de sesión único)
+  * Nombre del sitio SSO
+  * Para instancias primarias desplegadas en V2.8 o posteriores: vCenter Server Appliance (vCSA) con Platform Services Controller (PSC) incorporado
 * **Instancia o instancias secundarias**: una o varias instancias secundarias de vCenter Server, enlazadas a la instancia primaria, con la configuración siguiente:
-   *  Nombre del sitio SSO
-   *  Subdominio DNS enlazado al dominio raíz en la instancia primaria
-   *  Réplica de DNS y AD configurada entre las máquinas virtuales AD en las instancias primaria y secundarias
-   *  Para instancias primarias que se han desplegado en V2.8 o posteriores: Se despliega y configura vCenter Server Appliance (vCSA) con Platform Services Controller (PSC) incorporado
-   *  VMware vCenter en las instancias secundarias se configura con la modalidad enlazada mejorada con el vCenter en la instancia primaria
+  * Nombre del sitio SSO
+  * Subdominio DNS enlazado al dominio raíz en la instancia primaria
+  * Réplica de DNS y AD configurada entre las máquinas virtuales AD en las instancias primaria y secundarias
+  * VMware vCenter en las instancias secundarias se configura con la modalidad enlazada mejorada con el vCenter en la instancia primaria
 
 ## Despliegue de varios sitios de vCenter Server
 {: #vc_multisite-deployment}

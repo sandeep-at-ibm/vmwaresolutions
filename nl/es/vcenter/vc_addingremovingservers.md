@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-01"
 
 keywords: vCenter Server add host, add server vCenter Server, remove host vCenter Server
 
@@ -23,6 +23,7 @@ subcollection: vmware-solutions
 
 Puede ampliar o reducir la capacidad de la instancia de VMware vCenter Server según sus necesidades empresariales añadiendo o eliminando servidores ESXi o almacenamiento del sistema de archivos de red (NFS).
 
+* A partir del release V3.2, las instancias existentes con vSphere Enterprise Plus 6.7u1 tienen la opción de añadir hosts nuevos con vSphere Enterprise Plus 6.7u1 o vSphere Enterprise Plus 6.7u2.
 * A partir del release de v3.1, puede añadir nuevos servidores ESXi a un clúster existente seleccionando una configuración existente o una configuración alternativa a la de los hosts existentes en el clúster. Las configuraciones existentes están disponibles para la selección instantánea cuando se hace el pedido del nuevo servidor. Para evitar problemas de rendimiento o estabilidad, se recomienda que los clústeres utilicen la misma configuración o una configuración similar con respecto a la CPU, la RAM y el almacenamiento. Esta funcionalidad es útil para actualizaciones de hardware dentro del mismo clúster. Un clúster sólo puede tener un tipo de almacenamiento.
 * A partir del release V3.0, puede añadir o eliminar de forma simultánea almacenamiento NFS y servidores ESXi en los clústeres que tengan el estado
 **Listo para su uso**. Por ejemplo, puede añadir o eliminar un servidor ESXi en un clúster y añadir o eliminar almacenamiento NFS en otro clúster.
@@ -40,8 +41,8 @@ Puede ampliar o reducir la capacidad de la instancia de VMware vCenter Server se
 
 * Siempre que sea posible, añada servidores ESXi utilizando la consola de {{site.data.keyword.vmwaresolutions_full}}, ya que los cambios que realice en el cliente web de VMware vSphere no se sincronizan con la consola de {{site.data.keyword.vmwaresolutions_short}}. Por lo tanto, añada servidores ESXi a vCenter Server solo para servidores ESXi locales o servidores ESXi que no pueda o no vaya a gestionar en la consola de
 {{site.data.keyword.vmwaresolutions_short}}.
-* Una instancia de vCenter Server con almacenamiento NFS debe tener como mínimo 2 servidores ESXi. Para las instancias desplegadas en la V2.1 o posterior, puede ampliar el clúster predeterminado para que tenga hasta un máximo de 51 servidores ESXi. Cada uno de los clústeres no predeterminados se puede ampliar hasta tener un máximo de 59 servidores ESXi.
-* Una instancia de vCenter Server con almacenamiento vSAN debe tener como mínimo 4 servidores ESXi.
+* Una instancia de vCenter Server con almacenamiento NFS debe tener al menos dos servidores ESXi. Para las instancias desplegadas en la V2.1 o posterior, puede ampliar el clúster predeterminado para que tenga hasta un máximo de 51 servidores ESXi. Cada uno de los clústeres no predeterminados se puede ampliar hasta tener un máximo de 59 servidores ESXi.
+* Una instancia de vCenter Server con almacenamiento vSAN debe tener al menos cuatro servidores ESXi.
 * Para instancias de vCenter Server desplegados en V2.0 o anterior, puede ampliar cada clúster para que tenga un máximo de 32 servidores ESXi.
 * Puede añadir entre 1 y 20 servidores ESXi a la vez. Para obtener más información sobre el número mínimo de servidores ESXi, consulte [¿Está altamente disponible una instancia de vCenter Server de dos nodos?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)
 
@@ -62,7 +63,8 @@ Puede ampliar o reducir la capacidad de la instancia de VMware vCenter Server se
 8. Complete la configuración del servidor nativo.
    * Seleccione una configuración a partir de los hosts existentes en el clúster.
    * Seleccione una configuración nueva de {{site.data.keyword.baremetal_short_sing}}.
-      * Para **Skylake** o **Broadwell**, especifique el valor de **Modelo de CPU**, la cantidad de **RAM** y el valor de **Número de {{site.data.keyword.baremetal_short}}**.     
+      * Para las instancias con vSphere Enterprise Plus 6.7u1, especifique la versión de Vmware vSphere del nuevo host.
+      * Para **Skylake**, **Cascade** o **Broadwell**, especifique el valor de **Modelo de CPU**, la cantidad de **RAM** y el valor de **Número de {{site.data.keyword.baremetal_short}}**.     
       * Para **Certificado por SAP**, especifique el **modelo de CPU y RAM** y el **Número de {{site.data.keyword.baremetal_short}}**.
 9. Complete la configuración del almacenamiento. Especifique los tipos de disco para la capacidad y los
 discos de memoria caché, el número de discos y la edición de licencia vSAN. Si desea más almacenamiento, marque el recuadro **Intel Optane de alto rendimiento**.
@@ -92,10 +94,13 @@ Si va a añadir servidores ESXi durante la modalidad de mantenimiento, las máqu
 
 * Siempre que sea posible, elimine servidores ESXi utilizando la consola de {{site.data.keyword.vmwaresolutions_full}}, ya que los cambios que realice en el cliente web de vSphere no se sincronizan con la consola de {{site.data.keyword.vmwaresolutions_short}}. Por lo tanto, elimine servidores ESXi de vCenter Server solo para servidores ESXi locales o servidores ESXi que no pueda o no vaya a gestionar en la consola de
 {{site.data.keyword.vmwaresolutions_short}}.
-* Una instancia de vCenter Server con almacenamiento NFS debe tener como mínimo 2 servidores ESXi y una instancia de vCenter Server con almacenamiento vSAN debe tener como mínimo 4 servidores ESXi.
+* Una instancia de vCenter Server con almacenamiento NFS debe tener como mínimo 2 servidores ESXi y una instancia de vCenter Server con almacenamiento vSAN debe tener al menos cuatro servidores ESXi.
 * Antes de eliminar servidores ESXi con el servicio de F5 on {{site.data.keyword.cloud_notm}} o FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} instalado, debe migrar las máquinas virtuales de F5 BIG-IP y FortiGate a un servidor ESXi distinto al que está alojando las máquinas virtuales.
 * Antes de eliminar servidores ESXi con el servicio IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} instalado, asegúrese de que no haya operaciones de copia de seguridad o restauración activas (anómalas o en curso), porque estas operaciones activas podrían impedir que se eliminaran los servidores ESXi.
 * Si se eliminan servidores ESXi, los servidores se colocan en modalidad de mantenimiento, y, después de eso, todas las VM que se ejecutan en los servidores se migran antes de que se eliminen de vCenter Server. Para tener el máximo control sobre la reubicación de las VM, se recomienda colocar los servidores ESXi que se van a eliminar en modalidad de mantenimiento y migrar manualmente las VM que se ejecutan en los mismos mediante el cliente web de VMware vSphere. Después de eso, elimine los servidores ESXi utilizando la consola de {{site.data.keyword.vmwaresolutions_short}}.
+
+Se exige un compromiso de 12 meses al hacer un pedido del servicio VMware HCX on {{site.data.keyword.cloud_notm}}. Los costes de los componentes de HCX se siguen cargando en la cuenta si se suprime un clúster antes del fin del periodo de compromiso de 12 meses. La fecha de expiración de 12 meses está disponible en la página de detalles de HCX on {{site.data.keyword.cloud_notm}}. Para obtener más información sobre cómo ver los detalles del servicio, consulte [Solicitud, visualización y eliminación de servicios para instancias de vCenter Server](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure).
+{:important}
 
 ### Procedimiento para eliminar servidores ESXi
 {: #vc_addingremovingservers-removing-procedure}

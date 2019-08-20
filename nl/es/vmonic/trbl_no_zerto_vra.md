@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-08-01"
 
 keywords: troubleshooting, Zerto Virtual Replication, Zerto ESXi server
 
@@ -24,7 +24,7 @@ Los dispositivos de réplica virtual (VRA) no se muestran en la consola de répl
 ## Solución
 {: #trbl_no_zerto_vra-resolution}
 
-Para instancias de vCenter Server, el servicio de recuperación tras desastre de Zerto solo se instala en el servidor ESXi desde el clúster predeterminado, **cluster1**. En los clústeres adicionales del mismo entorno de vCenter Server, no se instala automáticamente el servicio de recuperación tras desastre de Zerto cuando se crea el clúster adicional ni cuando se añade el servidor ESXi a dicho clúster adicional.
+El servicio de recuperación tras desastre de Zerto solo se instala en el servidor ESXi desde el clúster predeterminado (**cluster1** para las instancias desplegadas en V3.1 o anterior). En los clústeres adicionales del mismo entorno de vCenter Server, no se instala automáticamente el servicio de recuperación tras desastre de Zerto cuando se crea el clúster adicional ni cuando se añade el servidor ESXi a dicho clúster adicional.
 
 En los clústeres adicionales, debe instalar el servicio de recuperación tras desastre de Zerto por separado.
 

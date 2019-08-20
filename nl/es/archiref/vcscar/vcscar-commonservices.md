@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -32,8 +32,3 @@ El despliegue utiliza los AD VSI como servidores del sistema de nombres de domin
 {: #vcscar-commonservices-ntp}
 
 El despliegue de vCenter Server utiliza los servidores del protocolo de tiempo de red (NTP) de la infraestructura de {{site.data.keyword.cloud_notm}}. Todos los componentes desplegados se configuran para utilizar estos servidores NTP. El hecho de que todos los componentes utilicen los mismos servidores NTP resulta crítico para que los certificados y la autenticación de AD funcionen correctamente.
-
-## Enlaces relacionados
-{: #vcscar-commonservices-related}
-
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

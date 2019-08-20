@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -187,8 +187,3 @@ En [Planificación de la configuración del clúster y de los nodos trabajadores
 {: #vcsiks-overview-network-sec-compliance}
 
 Cuando se trata de cumplir con directrices estrictas de la industria, {{site.data.keyword.cloud_notm}} se encarga del trabajo, consiguiendo una conformidad real. En [Conformidad con {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/compliance) encontrará detalles sobre certificados de conformidad específicos, normativas globales, ajustes e infraestructuras para seguridad y privacidad. [Seguridad para {{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-security#security) contiene información sobre las características de seguridad de {{site.data.keyword.containerlong_notm}}.
-
-## Enlaces relacionados
-{: #vcsiks-overview-network-related}
-
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

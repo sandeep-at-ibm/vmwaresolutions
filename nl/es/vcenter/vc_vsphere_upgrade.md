@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-30"
 
 keywords: vSphere upgrade, NSX upgrade, PSC upgrade
 
@@ -63,7 +63,7 @@ Realice los pasos siguientes para solicitar un saltador de VSI.
 Omita el primer paso si ya tiene un saltador de VSI en el entorno.
 {:note}
 
-1. Solicite una VSI por hora o por mes desde el [Portal de clientes de infraestructura de IBM Cloud](https://control.softlayer.com/){:external}. Solicite los atributos siguientes:
+1. Solicite una VSI por hora o por mes desde el [Portal de clientes de infraestructura de {{site.data.keyword.cloud_notm}}](https://control.softlayer.com/){:external}. Solicite los atributos siguientes:
   * Windows 2012 o 2016 Server Standard
   * 2 CPU
   * 16 GB de memoria
@@ -187,7 +187,7 @@ Para instancias enlazadas a vCenter Server, aunque se recomienda actualizar toda
 #### Procedimiento para actualizar vCenter
 {: #vc_vsphere_upgrade-procedure-vcenter-procedure}
 
-1. Inicie sesión en las interfaces de usuario de gestión de dispositivos de vCenter y de PSC, ``https://<psc-fqdn>:5480``, para confirmar si ha caducado o no la contraseña de root. Si la fecha de caducidad de la contraseña es **1970**, entonces habrá caducado y deberá habilitar SSH y el shell bash en la interfaz de usuario de gestión de dispositivos de PSC.
+1. Inicie sesión en las interfaces de usuario de gestión de dispositivos de vCenter y de PSC, `https://<psc-fqdn>:5480`, para confirmar si ha caducado o no la contraseña de root. Si la fecha de caducidad de la contraseña es **1970**, entonces habrá caducado y deberá habilitar SSH y el shell bash en la interfaz de usuario de gestión de dispositivos de PSC.
     1. Utilice SSH en PSC con el ID y la contraseña de root. Aunque la contraseña haya caducado, le permitirá iniciar sesión.
     2. Utilice el mandato **passwd** de shell para establecer una nueva contraseña de root tanto para PSC como para vCenter.
     3. Guarde las contraseñas que se han mostrado en la consola de
@@ -355,7 +355,7 @@ Para obtener más información, consulte [Soporte de procesador de EVC (compatib
 ## Resultados tras actualizar el software de vSphere de vCenter Server
 {: #vc_vsphere_upgrade-results}
 
-La ejecución de la comprobación de estado de vSAN después de que finalice la actualización puede producir avisos acerca de actualizaciones de firmware para los controladores de red y RAID proporcionados por IBM Cloud. Tras determinar los hosts que necesitan actualizaciones de firmware, abra una incidencia con el soporte de IBM para solicitar que se actualice el firmware a las versiones recomendadas.
+La ejecución de la comprobación de estado de vSAN después de que finalice la actualización puede producir avisos acerca de actualizaciones de firmware para los controladores de red y RAID proporcionados por {{site.data.keyword.cloud_notm}}. Tras determinar los hosts que necesitan actualizaciones de firmware, abra una incidencia con el soporte de IBM para solicitar que se actualice el firmware a las versiones recomendadas.
 
 1. En la interfaz de usuario de vCenter, seleccione el clúster que contiene la vSAN cuyo estado se debe comprobar.
 2. Seleccione el separador **Supervisar** y, a continuación, seleccione el separador **vSAN**.

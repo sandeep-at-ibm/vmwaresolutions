@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-01"
 
 keywords: FAQ, user account, patch management
 
@@ -90,7 +90,7 @@ Puede configurar la alta disponibilidad de vCenter, pero {{site.data.keyword.vmw
 {: #faq-rename-cluster}
 {: faq}
 
-Para una instancia nueva de vCenter Server, el primer clúster que se crea durante el despliegue tiene el nombre predeterminado **cluster1**. Puede cambiar el nombre del clúster predeterminado en el cliente de VMware vSphere. Cuando añada un clúster a una instancia de vCenter Server, puede especificar el nombre que desee en la consola de {{site.data.keyword.vmwaresolutions_short}}.
+Para una instancia nueva de vCenter Server, se puede establecer el nombre del clúster inicial que se crea durante el despliegue. Cuando añada un clúster a una instancia de vCenter Server, puede especificar el nombre que desee en la consola de {{site.data.keyword.vmwaresolutions_short}}.
 
 ## ¿Cómo se gestionan los parches?
 {: #faq-patches}
@@ -108,7 +108,6 @@ Para las instancias desplegadas en V2.0 o posteriores, VMware Update Manager (VU
 Para más información, consulte los siguientes recursos:
 * [Soporte de VMware](https://www.vmware.com/support.html){:external}
 * [Aplicación de actualizaciones a instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates)
-* [Aplicación de actualizaciones a instancias de vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_applyingupdates)
 
 ## ¿Representa NSX Edge de servicios de gestión un riesgo para la seguridad?
 {: #faq-mgmt-nsx}
@@ -138,7 +137,6 @@ Los despliegues de instancia tienen requisitos de infraestructura física estric
 
 Para obtener más información, consulte las secciones _Disponibilidad de IBM Cloud Data Center_ en:
 * [Requisitos y planificación de instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
-* [Requisitos y planificación de instancias de vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)
 * [Requisitos y planificación de VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning)
 * [Requisitos y planificación de las instancias de NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_planning)
 

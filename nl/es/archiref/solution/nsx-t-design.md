@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-03"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -14,7 +14,7 @@ subcollection: vmware-solutions
 # Diseño de VMware NSX-T
 {: #nsx-t-design}
 
-A diferencia de NSX-V (NSX on vSphere), VMware NSX-T está diseñado para ofrecer entornos de aplicaciones y arquitecturas que tienen puntos finales y pilas de tecnologías heterogéneos. Además de vSphere, estos entornos pueden incluir otros hipervisores, KVM, contenedores y servidores nativos. NSX está diseñado para abarcar una red definida por software y una infraestructura de seguridad también en plataformas distintas a vSphere. Aunque es posible desplegar componentes de NSX-T sin que vSphere sea necesario, este diseño se centra en NSX-T y su integración principalmente dentro de un despliegue automatizado de vSphere de vCenter Server.
+A diferencia de NSX-V (NSX on vSphere), VMware NSX-T está diseñado para ofrecer entornos de aplicaciones y arquitecturas que tienen puntos finales y pilas de tecnologías heterogéneos. Además de vSphere, estos entornos pueden incluir otros hipervisores, KVM, contenedores y servidores nativos. VMware NSX está diseñado para abarcar una red definida por software y una infraestructura de seguridad también en plataformas distintas a vSphere. Aunque es posible desplegar componentes de NSX-T sin que vSphere sea necesario, este diseño se centra en NSX-T y su integración principalmente dentro de un despliegue automatizado de vSphere de vCenter Server.
 
 Hay muchas características avanzadas dentro de NSX-T, como políticas de cortafuegos, la inclusión de introspección de invitado dentro de las políticas de cortafuegos y el seguimiento de flujo de red avanzado. La descripción de estas características va más allá del ámbito de este documento. Consulte la documentación de VMware para NSX-T. En este diseño, la infraestructura de gestión de NSX-T se despliega durante el despliegue en clúster inicial de vCenter Server en lugar de NSX-V.
 
@@ -54,7 +54,7 @@ Tabla 2. Gestor NSX-T - Especificaciones de controlador
 
 Atributo | Especificación
 --|--
-**Gestor / controlador NSX** | 3 dispositivos virtuales
+**Gestor / controlador NSX** | Tres dispositivos virtuales
 **Número de vCPU** | 4
 **Memoria** |  16 GB
 **Disco** | 60 GB
@@ -130,7 +130,7 @@ Nombre de perfil de enlace ascendente | VLAN | Agrupaciones incluidas | MTU
 --|:-----|:---|:---
 **SDDC-Private-Uplink** | predeterminada | Predeterminada, Gestión | 9000
 **SDDC-Public-Uplink** | predeterminada| Predeterminada | 1500
-**SDDC-Storage-Uplink** | VLAN de almacenamiento | vSAN, iSCSI-A&B,NFS | 9000
+**SDDC-Storage-Uplink** | VLAN de almacenamiento | vSAN, iSCSI-A&B, NFS | 9000
 
 ## Agrupación
 {: #nsx-t-design-teaming}
@@ -193,7 +193,7 @@ Una pasarela lógica de nivel 1 NSX-T tiene puertos de enlace descendente para c
 #### Anuncio de rutas de nivel 1 a nivel 0
 {: #nsx-t-design-tier-1-tier-0}
 
-Para proporcionar conectividad de capa tres entre las máquinas virtuales conectadas a los conmutadores lógicos agregados a distintas pasarelas lógicas de nivel 1, es necesario habilitar el anuncio de rutas de nivel 1 hacia el nivel 0. No es necesario configurar un protocolo de direccionamiento ni rutas estáticas entre los direccionadores lógicos de nivel 1 y de nivel 0. NSX-T crea rutas estáticas automáticamente cuando se habilita el anuncio de rutas. En este diseño, el anuncio de rutas siempre está habilitado para cualquier pasarela T-1 creada por la automatización IC4V.
+Para proporcionar conectividad de capa 3 entre las máquinas virtuales conectadas a los conmutadores lógicos agregados a distintas pasarelas lógicas de nivel 1, es necesario habilitar el anuncio de rutas de nivel 1 hacia el nivel 0. No es necesario configurar un protocolo de direccionamiento ni rutas estáticas entre los direccionadores lógicos de nivel 1 y de nivel 0. NSX-T crea rutas estáticas automáticamente cuando se habilita el anuncio de rutas. En este diseño, el anuncio de rutas siempre está habilitado para cualquier pasarela T-1 creada por la automatización IC4V.
 
 ### Topologías preconfiguradas
 {: #nsx-t-design-preconfig-topo}
@@ -218,13 +218,8 @@ Carga de trabajo con ICP a la pasarela T0 - clúster de extremo virtual:
 
 ![Topología desplegada de NSX-T con integración de ICP NSX-T y pasarela de extremo T0 virtual](../../images/vcsv4radiagrams-topology-3.svg "Topología desplegada de NSX-T con integración de ICP NSX-T y pasarela de extremo T0 virtual")
 
-La topología 3 desplegada contiene la topología 1 con la adición de un despliegue ICP que ofrece la integración NSX-T en lugar de Calico, que es la pila de conexión de redes predeterminada dentro de un despliegue ICP. El cliente puede suministrar espacios de nombres de contenedor adicionales dentro de ICP, que automatiza la creación de conmutadores lógicos, subredes de IP e instancias de pasarela T1 para cada espacio de nombres.
+La topología 3 desplegada contiene la topología 1 con la adición de un despliegue ICP que ofrece la integración NSX-T en lugar de Calico, que es la pila de conexión de redes predeterminada dentro de un despliegue ICP. El cliente puede suministrar más espacios de nombres de contenedor dentro de ICP, que automatiza la creación de conmutadores lógicos, subredes de IP e instancias de pasarela T1 para cada espacio de nombres.
 
 Para obtener información completa sobre cómo funciona ICP en vCenter Server, consulte la documentación de ICP en la arquitectura vCenter Server. Se asigna un espacio de IP portátil público y privado de {{site.data.keyword.cloud_notm}} designado por el cliente a cada T0 para uso del cliente.
 
 A partir de este diseño, tiene la opción de no suprimir estos rangos de IP si la instancia de vCenter Server queda fuera de servicio y se suprime.
-
-## Enlaces relacionados
-{: #nsx-t-design-related}
-
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

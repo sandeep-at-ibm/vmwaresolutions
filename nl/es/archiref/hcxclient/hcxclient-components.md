@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-01"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -14,15 +14,15 @@ subcollection: vmware-solutions
 # Glosario de componentes y términos de HCX
 {: #hcxclient-components}
 
-HCX consta de un lado de nube (entorno VCD/destino) y uno o más clientes (origen). Se debe desplegar una instancia de HCX por vCenter, incluso si los vCenters en los que se despliega HCX están enlazados en el mismo dominio de SSO en el cliente o en la nube. Las configuraciones que admite HCX son, de uno a uno, de uno a muchos, de muchos a uno y de muchos a muchos.
+HCX consta de un lado de nube (destino o entorno VCD) y uno o más clientes (origen). Se debe desplegar una instancia de HCX por vCenter, incluso si los vCenters en los que se despliega HCX están enlazados en el mismo dominio de SSO en el cliente o en la nube. Las configuraciones que admite HCX son, de uno a uno, de uno a muchos, de muchos a uno y de muchos a muchos.
 
 ## Lado del destino y lado del cliente
 {: #hcxclient-components-cloud-client-side}
 
-HCX tiene el concepto de lado de la nube (destino/Entorno VCD) y lado del cliente (origen).
+HCX tiene el concepto de lado de la nube (destino o entorno VCD) y lado del cliente (origen).
 
 - Lado del destino: el gestor de nube de HCX está predesplegado y configurado con los perfiles de red y de cálculo listos para la creación de malla de servicio.  
-- Lado del cliente: cualquier instancia de vSphere que cumpla los requisitos previos para la instalación y la operación. El lado del cliente de HCX es el maestro que controla la instancia de esclavo del lado de la nube a través de su complemento de interfaz de usuario de cliente web de vCenter.
+- Lado del cliente: cualesquiera instancias de vSphere que cumplan los requisitos previos para la instalación y la operación. El lado del cliente de HCX es el maestro que controla la instancia de esclavo del lado de la nube a través de su complemento de interfaz de usuario de cliente web de vCenter.
 
 ## Gestores HCX
 {: #hcxclient-components-hcx-manager}

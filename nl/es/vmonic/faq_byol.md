@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-07-23"
 
 keywords: FAQ, license, BYOL
 
@@ -146,42 +146,6 @@ Con la introducción de la característica BYOL, no se recomienda seguir utiliza
 {: faq}
 
 No, porque estos productos VMware no forman parte del despliegue de la instancia. Estos productos VMware se pueden instalar además del despliegue inicial, lo que requiere que los clientes o sus agentes instalen y adquieran la licencia de dichos productos.
-
-## ¿Puedo solicitar almacenamiento de NFS con vCenter Server con el paquete híbrido (Hybridity)?
-{: #faq_byol-nfs}
-{: faq}
-
-Para instancias desplegadas recientemente, solo se da soporte al almacenamiento all-flash de vSAN. La oferta de vCenter Server con el paquete híbrido (Hybridity) incluye licencia de vSAN Advanced o Enterprise.
-
-Si tiene una instancia de vCenter Server con almacenamiento NFS, puede actualizar la instancia existente a vCenter Server con el paquete híbrido (Hybridity). Aunque la licencia de vSAN Advanced se solicite durante la actualización, no será necesario que suministre un clúster all-flash vSAN.
-
-## ¿Puedo utilizar BYOL con vCenter Server con el paquete híbrido (Hybridity)?
-{: #faq_byol-hybridity}
-{: faq}
-
-No puede traer su propia licencia VMware (BYOL) a {{site.data.keyword.cloud_notm}}. vCenter Server con el paquete híbrido (Hybridity) requiere que IBM proporcione todas las licencias de VMware.
-
-## ¿Cuál es la diferencia entre vCenter Server con licencia del paquete híbrido (Hybridity) y licencia de vCenter Server?
-{: #faq_byol-hybridity-vcs}
-{: faq}
-
-Las licencias individuales de VMware que están disponibles en vCenter Server se tarifican por CPU. Al igual que todas las licencias por CPU VMware proporcionadas por IBM, hay un recargo de 1,3x en el precio en todos los servidores que tienen más de 16 núcleos por CPU, por ejemplo, para Dual Intel Xeon Gold 6140.
-
-vCenter Server con el paquete híbrido (Hybridity) es un conjunto prescrito de licencias y ediciones de VMware que se licencian por núcleo, y no por CPU. Por lo tanto, el precio de licencias para estas instancias no cambia.
-
-## ¿Qué componentes y ediciones de licencia de VMware proporcionados por IBM están disponibles para vCenter Server con el paquete híbrido (Hybridity)?
-{: #faq_byol-hybridity-avail}
-{: faq}
-
-Las nuevas instancias de vCenter Server con el paquete híbrido (Hybridity) incluyen VMware vSphere Enterprise Plus, VMware vCenter Standard, VMware NSX Advanced o Enterprise, VMware vSAN Advanced o Enterprise y VMware Hybrid Cloud Extension (HCX).
-
-Si tiene una instancia de vCenter Server con la edición NSX Base, se le actualizará a NSX Advanced automáticamente al solicitar vCenter Server con el paquete híbrido (Hybridity).
-
-## ¿Puedo actualizar la edición de NSX Advanced que se incluye en vCenter Server con el paquete híbrido (Hybridity) a la edición NSX Enterprise?
-{: #faq_byol-nsx-upgrade}
-{: faq}
-
-Aunque el vCenter Server con el paquete híbrido (Hybridity) incluye NSX Advanced, puede actualizar a la edición NSX Enterprise después de solicitar el vCenter Server con el paquete híbrido (Hybridity). Para ello, utilice el separador **Actualización y parche** en el separador de página de detalles de instancia de la consola de {{site.data.keyword.vmwaresolutions_short}}.
 
 ## Enlaces relacionados
 {: #faq_byol-related}

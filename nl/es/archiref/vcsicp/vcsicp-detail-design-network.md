@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -90,7 +90,7 @@ El modo en que se llenan las tablas de rutas en el ESG y en los vRouters depende
 2.	Se utiliza DNS para resolver la solicitud destinada a la dirección IP de la base de datos.
 3.	El contenedor envía la solicitud a Calico vRouter.
 4.	El vRouter tiene su tabla de rutas, que contiene los rangos de direcciones IP alojadas en la instancia de vCenter Server.
-5.	El vRouter reenvía la solicitud, pero utiliza SNAT para cambiar la dirección IP de origen de la dirección IP del pod a la dirección IP del nodo de trabajador.
+5.	El vRouter reenvía la solicitud, pero utiliza SNAT para cambiar la dirección IP de origen de la dirección IP del pod a la dirección IP del nodo trabajador.
 6.	El nodo trabajador que aloja el vRouter envía la solicitud al ESG.
 7.	El ESG la reenvía al DLR.
 8.	El DLR coloca la solicitud en el VXLAN necesario.
@@ -128,8 +128,3 @@ El cortafuegos {{site.data.keyword.icpfull_notm}} NSX Edge está configurado con
 *	SNAT para el acceso de redes VXLAN a acceso público.
 *	SNAT para el acceso de redes VXLAN a acceso a red privada de {{site.data.keyword.cloud_notm}}.
 *	DNAT para vIPs de clúster {{site.data.keyword.icpfull_notm}}.
-
-## Enlaces relacionados
-{: #vcsicp-detail-design-network-related}
-
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

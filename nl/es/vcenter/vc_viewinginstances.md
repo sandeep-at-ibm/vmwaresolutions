@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-22"
 
 keywords: view vCenter Server, view instance, view instance details
 
@@ -77,7 +77,6 @@ Para ver los detalles de las propiedades de una instancia:
 | DNS, Root Domain | El nombre del dominio raíz es el nombre del dominio DNS (Sistema de nombres de dominio) y el nombre raíz del grupo Microsoft Active Directory (AD). |
 | DNS, SSO Domain | El dominio SSO es el dominio de inicio de sesión único (Single Sign-On) de vSphere. El nombre de dominio SSO es fijo para todas las instancias de vCenter Server desplegadas y tiene el valor <samp class="ph codeph">vsphere.local</samp>. |
 | DNS, Subdomain | El subdominio es el nombre del subdominio DNS del nombre del dominio raíz en el que residen los nombres de host de la instancia local de vCenter Server. El nombre del subdominio está en el formato <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp>. |
-| Hybridity Bundle | Indica si está instalado vCenter Server con el paquete híbrido (Hybridity). |
 | Estado  | El estado de la instancia.<br><br>La información que se muestra proporciona una actualización sobre el progreso del despliegue o de la acción que se realiza sobre la instancia. Si hay algún problema, se muestra un mensaje para ayudarle a investigar y a resolver el problema. |
 {: caption="Tabla 3. Propiedades de la instancia de vCenter Server" caption-side="top"}
 

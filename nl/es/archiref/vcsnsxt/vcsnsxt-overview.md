@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -48,8 +48,3 @@ vCenter Server con el paquete híbrido (Hybridity) no es un servicio gestionado,
 Las opciones de integración de plataforma de vCenter Server con el paquete híbrido (Hybridity) no se limitan a las opciones disponibles en VMware, como vRealize Suite o vSphere con gestión de operaciones, sino que abarcan varias ofertas de servicio de {{site.data.keyword.cloud_notm}}, como [vCenter Server e {{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsiks?topic=vmware-solutions-vcsiks-intro) y [vCenter Server e {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro), que utilizan Terraform de código abierto para gestionar y suministrar la infraestructura como código.
 
 La amplia gama de servicios y opciones de integración de varias ofertas disponibles para vCenter Server con el paquete híbrido (Hybridity) ofrecen una verdadera plataforma híbrida, que facilita la hibridación como servicio.
-
-## Enlaces relacionados
-{: #vcsnsxt-overview-related}
-
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

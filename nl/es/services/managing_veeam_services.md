@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-22"
 
 keywords: Veeam, request Veeam, Veeam managed service
 
@@ -34,7 +34,7 @@ Cuando solicita servicios gestionados para Veeam on {{site.data.keyword.cloud_no
 3. En la página **Veeam on IBM Cloud**, revise la descripción y las especificaciones técnicas para Veeam on {{site.data.keyword.cloud_notm}} como un servicio gestionado y, a continuación, pulse **Crear**.
 4. Especifique los valores de configuración que se ajusten a sus necesidades o acepte los valores predeterminados.
 5. Pulse **vCenter Server** para añadir el servicio a una de sus instancias.
-6. Para añadir el servicio mientras solicita una nueva instancia, pulse **Añadir a nueva instancia** y, a continuación, continúe con el pedido de una nueva instancia de [vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance) o [vCenter Server con Hybridity](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance).
+6. Para añadir el servicio mientras solicita una nueva instancia, pulse **Añadir a nueva instancia** y, a continuación, continúe con el pedido de una nueva instancia de [vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance).
 7. Para añadir el servicio a una instancia existente, pulse **Añadir a instancia existente**, seleccione la instancia que desee en la lista y, a continuación, confirme que desea continuar con el pedido pulsando **Suministro**.
 
 ## Enlaces relacionados

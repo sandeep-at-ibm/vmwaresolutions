@@ -15,10 +15,10 @@ subcollection: vmware-solutions
 
 {:external: target="_blank" .external}
 
-# Información de conformidad para vCenter Server con el paquete híbrido (Hybridity)
+# Información de conformidad para vCenter Server con las instancias de paquete híbrido (Hybridity)
 {: #vc_hybrid_compl_info}
 
-Revise la información siguiente para obtener detalles sobre la conformidad de las instancias de VMware vCenter Server con el paquete híbrido (Hybridity).
+Revise la información siguiente para obtener detalles sobre la conformidad de las instancias de VMware vCenter Server con las instancias de paquete híbrido (Hybridity).
 
 ## Responsabilidad del cliente y de IBM con relación a vCenter Server IBM Cloud con el paquete híbrido (Hybridity)
 {: #vc_hybrid_compl_info-responsibility}

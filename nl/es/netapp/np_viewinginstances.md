@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-25"
 
 keywords: view NetApp, view instance, view instance details
 
@@ -127,8 +127,7 @@ Si se producen errores durante el despliegue o durante la supresión de la insta
 
 | Elemento        | Descripción       |  
 |:------------|:----------------- |
-| Nombre | El nombre del servidor ESXi tiene el formato
-`<host_prefix><n>.<subdomain_label>.<root_domain>`, donde:<br><br>`host_prefix` es el prefijo del nombre de host, `n` es la secuencia del servidor, `subdomain_label` es la etiqueta del subdominio y `root_domain` es el nombre del dominio raíz. |
+| Nombre | El nombre del servidor ESXi tiene el formato `<data_center>-<host_prefix><n>.<subdomain_label>.<root_domain>`, donde `n` es la secuencia del servidor ESXi. |
 | Versión | La versión del servidor ESXi. |
 | Credenciales | El nombre de usuario y la contraseña para acceder al servidor ESXi. |
 | IP privada | La dirección IP privada del servidor ESXi. |

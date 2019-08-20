@@ -95,7 +95,7 @@ El modo en que se llenan las tablas de rutas en el ESG y en los vRouters depende
 2.	Se utiliza DNS para resolver la solicitud destinada a la dirección IP de la base de datos.
 3.	El contenedor envía la solicitud a Calico vRouter.
 4.	El vRouter tiene su tabla de rutas, que contiene los rangos de direcciones IP alojadas en la instancia de vCenter Server.
-5.	El vRouter reenvía la solicitud, pero utiliza SNAT para cambiar la dirección IP de origen de la dirección IP del pod a la dirección IP del nodo de trabajador.
+5.	El vRouter reenvía la solicitud, pero utiliza SNAT para cambiar la dirección IP de origen de la dirección IP del pod a la dirección IP del nodo trabajador.
 6.	El nodo trabajador que aloja el vRouter envía la solicitud al BCR.
 7.	El BCR reenvía la solicitud al ESG.
 8.	El ESG la reenvía al DLR.
@@ -110,7 +110,7 @@ El modo en que se llenan las tablas de rutas en el ESG y en los vRouters depende
 2.	Se utiliza DNS para resolver la solicitud destinada a la dirección IP de la base de datos.
 3.	El contenedor envía la solicitud a Calico vRouter.
 4.	El vRouter tiene su tabla de rutas, que contiene los rangos de direcciones IP alojadas en la instancia de vCenter Server.
-5.	El vRouter reenvía la solicitud, pero utiliza SNAT para cambiar la dirección IP de origen de la dirección IP del pod a la dirección IP del nodo de trabajador.
+5.	El vRouter reenvía la solicitud, pero utiliza SNAT para cambiar la dirección IP de origen de la dirección IP del pod a la dirección IP del nodo trabajador.
 6.	El nodo trabajador que aloja el vRouter envía la solicitud al ESG.
 7.	El ESG la reenvía al DLR.
 8.	El DLR coloca la solicitud en el VXLAN necesario.

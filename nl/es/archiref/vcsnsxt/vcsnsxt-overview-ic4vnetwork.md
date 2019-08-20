@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-22"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -89,8 +89,3 @@ por NSX que incluyan direccionamiento a subredes VLAN no son conocidas por los d
 {{site.data.keyword.cloud_notm}}. Es posible que tenga que crear rutas estáticas, reglas de cortafuegos y reglas NAT para gestionar adecuadamente los flujos de red.
 
 Las conexiones de red privada están configuradas para utilizar tramas jumbo con un tamaño de MTU de 9000, lo que mejora el rendimiento de las grandes transferencias de datos, como el almacenamiento y vMotion. Este es el MTU máximo permitido dentro de VMware y por {{site.data.keyword.cloud_notm}}. Las conexiones de red pública utilizan una MTU Ethernet estándar de 1500. Eso se debe mantener, ya que cualquier cambio puede provocar la fragmentación de paquetes a través de Internet.
-
-## Enlaces relacionados
-{: #vcsnsxt-overview-ic4vnetwork-related}
-
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

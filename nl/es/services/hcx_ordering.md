@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-08-05"
 
 keywords: VMware HCX deployment, HCX configuration, order HCX
 
@@ -21,24 +21,29 @@ subcollection: vmware-solutions
 # Solicitud de VMware HCX on IBM Cloud
 {: #hcx_ordering}
 
-Puede solicitar el servicio de VMware HCX on {{site.data.keyword.cloud}} al pedir una instancia nueva de VMware vCenter Server con el paquete híbrido (Hybridity) incluida con el servicio o añadiendo el servicio a la instancia existente.
+Puede solicitar el servicio de VMware HCX on {{site.data.keyword.cloud}} al pedir una instancia nueva de VMware vCenter Server con el servicio o añadiendo el servicio a la instancia existente.
 
-## Solicitud de VMware HCX on IBM Cloud para una nueva instancia
-{: #hcx_ordering-new}
+Se exige un compromiso de 12 meses al hacer un pedido del servicio VMware HCX on {{site.data.keyword.cloud_notm}}. Los costes de los componentes de HCX se siguen cargando en la cuenta si se suprime un host o un clúster antes del fin del periodo de compromiso de 12 meses.
+{:important}
 
-Para solicitar una nueva instancia de VMware vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity) con VMware HCX on {{site.data.keyword.cloud_notm}}, seleccione **VMware HCX on IBM Cloud** en la sección **Servicios** al solicitar la instancia desde la consola de {{site.data.keyword.vmwaresolutions_short}}.
+Para solicitar una nueva instancia de VMware vCenter Server con VMware HCX on {{site.data.keyword.cloud_notm}}, seleccione **HCX on IBM Cloud 3.5** en la sección **Servicios** al solicitar la instancia desde la consola de {{site.data.keyword.vmwaresolutions_short}}.
 
 
 ## Solicitud de VMware HCX on IBM Cloud para una instancia existente
 {: #hcx_ordering-existing}
 
-Para añadir el servicio de VMware HCX on {{site.data.keyword.cloud_notm}} a una instancia existente de VMware vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity), visualice la instancia para la que desea añadir el servicio, pulse **Servicios** en el panel de navegación izquierdo y pulse **Añadir**.
+Para añadir el servicio de VMware HCX on {{site.data.keyword.cloud_notm}} a una instancia existente de VMware vCenter Server visualice la instancia para la que desea añadir el servicio, pulse **Servicios** en el panel de navegación izquierdo y pulse **Añadir**.
 
 ## Configuración de VMware HCX on IBM Cloud
 {: #hcx_ordering-config}
 
 Para instalar HCX on {{site.data.keyword.cloud_notm}}, siga los valores siguientes:
-1. Especifique el **Tipo de interconexión de HCX** seleccionando una de las opciones siguientes:
+1. Marque los recuadros de selección para confirmar que está de acuerdo con los términos asociados con el pedido del servicio HCX on {{site.data.keyword.cloud_notm}}.
+
+   Tras la fecha de expiración del compromiso de 12 meses, estos recuadros de selección ya no son visibles.
+   {:note}
+
+2. Especifique el **Conexión de red HCX** seleccionando una de las opciones siguientes:
   * **Red pública:** HCX crea una conexión cifrada entre sitios de la red pública. El registro de licencia y la calibración se realizan a través de la red pública.
   * **Interconexión privada:** HCX crea una conexión cifrada entre sitios a través de la red privada. El registro de licencia y la calibración se realizan a través de la red pública.
   * **Red privada:** HCX crea una conexión cifrada entre sitios de la red privada. El registro de licencia y la medición se realizan a través de la red privada a través del proxy HTTP.
@@ -59,7 +64,7 @@ Para instalar HCX on {{site.data.keyword.cloud_notm}}, siga los valores siguient
 ## Proceso de despliegue de HCX on IBM Cloud
 {: #hcx_ordering-deploy}
 
-El despliegue de HCX on {{site.data.keyword.cloud_notm}} es automático. Tanto si solicita una instancia de vCenter Server con el paquete híbrido (Hybridity) con el servicio incluido como si despliega el servicio posteriormente en la instancia, los pasos siguientes se completan mediante el proceso de automatización de {{site.data.keyword.vmwaresolutions_short}}:
+El despliegue de HCX on {{site.data.keyword.cloud_notm}} es automático. Tanto si solicita una instancia de vCenter Server con el servicio incluido como si despliega el servicio posteriormente en la instancia, los pasos siguientes se completan mediante el proceso de automatización de {{site.data.keyword.vmwaresolutions_short}}:
 1. Se solicitan tres subredes para HCX desde la infraestructura de {{site.data.keyword.cloud_notm}}:
    * Una subred portátil privada para la gestión de HCX.
    * Una subred portátil privada para interconexiones HCX. Esta subred se utiliza cuando se selecciona la opción **Red privada** para el **tipo de interconexión HCX**.
@@ -67,7 +72,7 @@ El despliegue de HCX on {{site.data.keyword.cloud_notm}} es automático. Tanto s
 
    Las direcciones IP de las subredes solicitadas para HCX están pensadas para que las gestione la automatización de VMware on {{site.data.keyword.cloud_notm}}. Estas direcciones IP no se pueden asignar a recursos de VMware, como VM y NSX Edges, creados por el cliente. Si necesita direcciones IP adicionales para los artefactos de VMware, debe solicitar sus propias subredes de {{site.data.keyword.cloud_notm}}.
    {:important}
-2. Si se ha seleccionado **Red privada** como **Tipo de interconexión de HCX**, se crea un grupo de puertos llamado **SDDC-DPortGroup-HCX-Private** en el conmutador virtual distribuido (DVS).
+2. Si se ha seleccionado **Red privada** como **Conexión de red HCX**, se crea un grupo de puertos denominado **SDDC-DPortGroup-HCX-Private** en el conmutador virtual distribuido (DVS).
 3. Se solicita a VMware una clave de activación de HCX.
 4. Se crean tres agrupaciones de recursos y carpetas de VM para HCX, que son necesarias para las interconexiones de HCX, los componentes locales de HCX y los componentes remotos de HCX.
 5. Se despliega y se configura un par de VMware NSX Edge Services Gateways (ESG) para el tráfico de gestión de HCX:
@@ -92,7 +97,7 @@ El despliegue de HCX on {{site.data.keyword.cloud_notm}} es automático. Tanto s
 
 * [Visión general de HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_considerations#hcx_considerations)
 * [Gestión de HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghcx)
-* [Solicitud, visualización y eliminación de servicios para instancias de vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
+* [Solicitud, visualización y eliminación de servicios para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
 * [Glosario de términos de HCX](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
 * [Cómo ponerse en contacto con el equipo de soporte de IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [Visión general de VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx){:external}

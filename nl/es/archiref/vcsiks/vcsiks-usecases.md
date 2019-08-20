@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -52,8 +52,3 @@ Los productos {{site.data.keyword.icpfull_notm}} y Cloud Automation Manager (CAM
 El diagrama siguiente representa {{site.data.keyword.icpfull_notm}} que se ejecuta sobre una instancia de vCenter Server. NSX-V está configurado con una conmutación/VXLAN dedicada, un DLR y un ESG específicamente diseñado para la red de superposición de {{site.data.keyword.icpfull_notm}}, y el direccionamiento se configura a través del ESG para acceder a la red subyacente.
 
 Mediante la automatización de {{site.data.keyword.cloud_notm}}, Acme Skateboards puede ofrecer una solución híbrida que incluye VMware on {{site.data.keyword.cloud_notm}} para ejecutar sus VM de base de datos e {{site.data.keyword.icpfull_notm}} on VMware en {{site.data.keyword.cloud_notm}} para ejecutar sus apps y servicios web de cara al cliente en contenedores. NSX les ofrece un conjunto común de herramientas de gestión para red y seguridad en la red subyacente.
-
-## Enlaces relacionados
-{: #vcsiks-usecases-related}
-
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

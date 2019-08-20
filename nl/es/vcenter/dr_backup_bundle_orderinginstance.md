@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-25"
 
 keywords: single-node trial, data protection DR, order data protection DR
 
@@ -48,9 +48,10 @@ Asegúrese de cumplir con los siguientes requisitos y de haber completado las ta
 ### Requisitos de nombre de instancia
 {: #dr_backup_bundle_orderinginstance-inst-name-req}
 
-Revise los requisitos del nombre de la instancia:
-* Solo se permiten caracteres alfanuméricos y el guión (-).
-* El nombre de instancia debe empezar por un carácter alfabético y terminar por un carácter alfanumérico.
+El nombre de instancia debe cumplir los siguientes requisitos:
+* Solo se permiten caracteres alfabéticos en minúsculas, numéricos y el guión (-).
+* El nombre de instancia debe empezar por un carácter alfabético en minúsculas.
+* El nombre de instancia debe terminar en un carácter alfabético o numérico en minúsculas.
 * La longitud máxima del nombre de instancia es de 10 caracteres.
 * El nombre de instancia debe ser exclusivo dentro de su cuenta.
 
@@ -200,8 +201,8 @@ Siga los pasos siguientes para suprimir una instancia de prueba de un solo nodo 
 ## Enlaces relacionados
 {: #dr_backup_bundle_orderinginstance-related}
 
-* [Guía de vCenter Server e IBM Cloud Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [Apertura de una incidencia para IBM Cloud privado](https://www.ibm.com/mysupport/s/?language=en_US){:external}
+* [Guía de vCenter Server e {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
+* [Apertura de una incidencia para {{site.data.keyword.cloud_notm}} Private](https://www.ibm.com/mysupport/s/?language=en_US){:external}
 * [Recursos de VMware HCX](https://hcx.vmware.com/#/docs){:external}
 * [Guía de usuario de VMware HCX](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}
 * [Cancelación de servidores virtuales](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)

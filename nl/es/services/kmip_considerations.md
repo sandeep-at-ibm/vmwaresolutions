@@ -39,7 +39,7 @@ KMIP for VMware on {{site.data.keyword.cloud_notm}} utiliza el servicio IBM Key 
 * Se ha creado un ID de servicio de {{site.data.keyword.cloud_notm}} siguiendo los pasos indicados en [Creación de un ID de servicio](../../../iam/serviceid.html). Este ID de servicio se utiliza para acceder a la instancia del servicio Key Protect que ha creado.
 * Ha otorgado los siguientes niveles de acceso al ID de servicio:
    * A nivel de acceso a la plataforma: autorización de visualización a la instancia de IBM Key Protect.
-   * A nivel de acceso al servicio: autorización de escritura a la de IBM Key Protect.
+   * A nivel de acceso al servicio: autorización de escritura a la instancia de IBM Key Protect.
 * Tiene una clave de API para el ID de servicio creado. La clave es necesaria al solicitar el servicio.
 * Ha creado al menos una clave raíz de cliente (CRK) desde la interfaz de usuario de Key Protect siguiendo los pasos del apartado [Creación de claves raíz](../../keymgmt/keyprotect_create_root.html) o utilizando la API REST de [IBM Key Protect](https://cloud.ibm.com/apidocs/key-protect).
 

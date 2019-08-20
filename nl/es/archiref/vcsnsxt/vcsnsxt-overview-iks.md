@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -80,7 +80,7 @@ Hay tres opciones para el tráfico norte-sur en {{site.data.keyword.containerlon
 ## Componentes del servicio IBM Cloud Kubernetes
 {: #vcsnsxt-overview-iks-components}
 
-Los nodos trabajadores están gestionados por un nodo maestro de Kubernetes que controla y supervisa de forma centralizada todos los recursos de Kubernetes del clúster. Cuando un desarrollador despliega los recursos para un contenedor, el nodo maestro decide el nodo de trabajador en el que desplegar dichos recursos, teniendo en cuenta los requisitos de despliegue y la capacidad disponible en el clúster. Los nodos maestro y trabajadores se comunican entre sí a través de certificados TLS seguros y una conexión openVPN a través de la red pública de {{site.data.keyword.cloud_notm}}. Los desarrolladores acceden a kube-apiserver, alojado en el nodo maestro a través de internet.
+Los nodos trabajadores están gestionados por un nodo maestro de Kubernetes que controla y supervisa de forma centralizada todos los recursos de Kubernetes del clúster. Cuando un desarrollador despliega los recursos para un contenedor, el nodo maestro decide el nodo trabajador en el que desplegar dichos recursos, teniendo en cuenta los requisitos de despliegue y la capacidad disponible en el clúster. Los nodos maestro y trabajadores se comunican entre sí a través de certificados TLS seguros y una conexión openVPN a través de la red pública de {{site.data.keyword.cloud_notm}}. Los desarrolladores acceden a kube-apiserver, alojado en el nodo maestro a través de internet.
 
 El kubelet del nodo trabajador examina el kube-apiserver en el nodo maestro en busca de actualizaciones e informa del estado. El kubelet es un pod que se ejecuta en cada nodo trabajador y que se encarga de supervisar el estado de los pods que se ejecutan en el nodo trabajador y de examinar si hay sucesos que envía el servidor de API de Kubernetes. En función de los sucesos, el kubelet crea o elimina pods, emite pruebas de actividad y de preparación e informa sobre el estado de los pods al servidor de API de Kubernetes.
 
@@ -153,7 +153,7 @@ De forma predeterminada, {{site.data.keyword.containerlong_notm}} configura el c
 
 La primera vez que se crea un clúster en una zona, se suministran automáticamente una VLAN pública y una VLAN privada en dicha zona en la cuenta de la infraestructura de {{site.data.keyword.cloud_notm}}. Para cada clúster que se crea posteriormente en dicha zona, puede reutilizar la misma VLAN pública y privada, ya que varios clústeres pueden compartir las VLAN.
 
-Los nodos de trabajo se pueden conectar tanto a una VLAN pública como a la VLAN privada, o solo a la VLAN privada. Si desea conectar los nodos trabajadores solo a una VLAN privada, puede utilizar el ID de una VLAN privada existente o puede crear una VLAN privada y utilizar el ID durante la creación del clúster.
+Los nodos trabajadores se pueden conectar tanto a una VLAN pública como a la VLAN privada, o solo a la VLAN privada. Si desea conectar los nodos trabajadores solo a una VLAN privada, puede utilizar el ID de una VLAN privada existente o puede crear una VLAN privada y utilizar el ID durante la creación del clúster.
 
 Las subredes IP para los nodos trabajadores y los pods también se suministran automáticamente en las VLAN. Las subredes proporcionan conectividad con los componentes del clúster, asignándoles direcciones IP. Las subredes siguientes se suministran automáticamente en las VLAN públicas y privadas predeterminadas:
 -	**Subredes VLAN públicas:**
@@ -162,8 +162,3 @@ Las subredes IP para los nodos trabajadores y los pods también se suministran a
 -	**Subredes VLAN privadas:**
     - La subred privada primaria determina las direcciones IP privadas que se asignan a los nodos trabajadores durante la creación del clúster. Varios clústeres de la misma VLAN pueden compartir una subred privada primaria.
     - La subred privada portátil está enlazada a un solo clúster y proporciona al clúster 8 direcciones IP privadas. Se reservan 3 IP para las funciones de red. 1 IP la utiliza el servicio ALB Ingress privado predeterminado y 4 IP se pueden utilizar para crear servicios de red de equilibrador de carga privados. Las IP privadas portátiles son permanentes, direcciones IP fijas que se pueden utilizar para acceder a los servicios de equilibrador de carga a través de Internet.
-
-## Enlaces relacionados
-{: #vcsnsxt-overview-iks-links}
-
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

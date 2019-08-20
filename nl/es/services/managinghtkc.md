@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-23"
 
 keywords: HTKC WebGUI, HTKC console, enable internet HTKC
 
@@ -63,7 +63,7 @@ Para entornos de servidor de vCenter sólo privados, no se añade el VMware NSX 
 1. Complete los pasos 1-3 en el procedimiento anterior.
 2. Pulse **Valores** y, a continuación, **Interfaces**. Anote la dirección IP para el enlace ascendente privado. Esta dirección será la nueva pasarela predeterminada.
 3. Pulse **Inicio > Hosts y clústeres** y busque las máquinas virtuales HyTrust. Pulse el botón derecho del ratón sobre una de las máquinas virtuales y pulse **Abrir consola**.
-4. Inicie sesión en la consola utilizando las credenciales de la consola que puede encontrar en la página de detalles del servicio HyTrust KeyControl on IBM Cloud, en la consola de {{site.data.keyword.vmwaresolutions_short}}.
+4. Inicie sesión en la consola utilizando las credenciales de la consola que puede encontrar en la página de detalles del servicio HyTrust KeyControl on {{site.data.keyword.cloud_notm}}, en la consola de {{site.data.keyword.vmwaresolutions_short}}.
 5. Para obtener la dirección IP de pasarela predeterminada actual de la máquina virtual, pulse **Gestionar Network Settings > Mostrar configuración de red actual**. Anote la dirección IP que aparece en la lista de **Pasarela**. Esta dirección se convierte en la pasarela utilizada para la ruta estática.
 6. Para establecer una ruta estática para la máquina virtual, pulse **Gestionar valores de
 red > Gestionar rutas estáticas > Añadir ruta estática**. Establezca **Dirección de red** en `10.0.0.0/8` y **Pasarela** en la dirección IP indicada en el paso anterior.

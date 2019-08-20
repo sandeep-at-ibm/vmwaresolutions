@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-27"
+lastupdated: "2019-07-08"
 
 subcollection: vmware-solutions
 
@@ -24,10 +24,10 @@ El dispositivo virtual Hybrid Cloud Services debe estar encendido para que se pu
 {: #hcx-archi-reg-vcenter-proc-register}
 
 1. Inicie sesión en el dispositivo virtual de servicio de Hybrid Cloud Services. Por ejemplo, `https:My-HCX-Manager:9443/`.
-2. Pulse el separador **Gestionar valores**.
+2. En el panel **Panel de control**, complete los pasos siguientes:
   1. En el panel izquierdo, en **Configurar sistemas**, seleccione vCenter.
   2. Pulse **Añadir vCenter** en la parte superior derecha.
-  3. Escriba la dirección IP de vCenter Server en el formato `https:vCenter-host-name` o `https:vCenter-IP-address`. Por ejemplo, `https:My-vCenter` o `https:10.108.26.211`.
+  3. Escriba la dirección IP de vCenter Server en el formato `https:vCenter-host-name` o `https:vCenter-IP-address`. Por ejemplo, `https:My-vCenter` o `https:10.108.26.211`
   4. Escriba el nombre de usuario y la contraseña de vCenter Server. La cuenta que se utilice debe tener el rol de administrador de vCenter.
   5. Pulse **Aceptar**. No se reinicie cuando aparezca el mensaje _Se tiene que reiniciar la app_.
 3. Configure el servicio de búsqueda.

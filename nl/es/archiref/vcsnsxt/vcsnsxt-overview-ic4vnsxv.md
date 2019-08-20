@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-21"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -123,8 +123,3 @@ Estos son algunos de los principales componentes de NSX:
 En el siguiente diagrama se muestra cómo puede implementar algunas de las características de microsegmentación de NSX-V mediante la creación de grupos de seguridad. En este ejemplo, producción y desarrollo son los grupos de seguridad y las reglas de seguridad se asignan en función de estos grupos.
 
 ![Seguridad de NSX-V](../../images/vcsnsxt-vsecurity.svg "Seguridad de NSX-V")
-
-## Enlaces relacionados
-{: #vcsnsxt-overview-ic4vnsxv-related}
-
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

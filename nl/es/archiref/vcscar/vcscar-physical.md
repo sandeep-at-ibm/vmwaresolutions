@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -145,8 +145,3 @@ Acme Skate Advisor reside en {{site.data.keyword.cloud_notm}} y, como tal, const
 Este diagrama representa {{site.data.keyword.icpfull_notm}} y CAM desplegados en una instancia de vCenter Server, con conexiones con el vCenter local y el servicio {{site.data.keyword.containerlong_notm}}. Con CAM, los administradores del sistema y los desarrolladores pueden desplegar máquinas virtuales locales en la instancia de vCenter Server y los contenedores en los clústeres de {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}}.
 
 En el diagrama, CAM crea de forma lógica conexiones en la nube con los entornos de vCenters, proveedores de nube, {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}}. Los clústeres de {{site.data.keyword.icpfull_notm}} se despliegan en cada entorno de centro de datos o de nube, y MCM proporciona el mecanismo para conectar los clústeres de {{site.data.keyword.icpfull_notm}} en una única vista de gestión.
-
-## Enlaces relacionados
-{: #vcscar-physical-related}
-
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

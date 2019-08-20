@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-07-22"
 
 keywords: about vmware solutions, product overview, benefits
 
@@ -50,13 +50,6 @@ Puede desplegar fácilmente sus entornos virtuales de VMware y gestionar los rec
 La oferta vCenter Server le permite desplegar un entorno virtual VMware utilizando los recursos de cálculo, almacenamiento y red personalizados que mejor se ajusten a los requisitos de su empresa.
 
 Para obtener más información, consulte [Visión general de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview).
-
-### VMware vCenter Server on IBM Cloud con el paquete híbrido (Hybridity)
-{: #prod_overview-hybridity}
-
-La oferta de vCenter Server con el paquete híbrido (Hybridity) es una nube privada alojada que permite ampliar la infraestructura local a la nube de forma rápida y sencilla. El entorno VMware se basa en licencias de centro de datos definido por software de VMware proporcionadas por IBM e incluye VMware Hybrid Cloud Extension (HCX). Mediante el uso de HCX, puede conectarse de forma segura a un entorno vSphere 5.0+ local con sitios de {{site.data.keyword.cloud_notm}} para ofrecer una infraestructura híbrida y una auténtica movilidad de aplicaciones.
-
-Para obtener más información, consulte [Visión general de vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview).
 
 ### VMware vSphere on IBM Cloud
 {: #prod_overview-vss}

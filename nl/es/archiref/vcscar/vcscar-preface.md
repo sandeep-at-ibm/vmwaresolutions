@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -74,8 +74,3 @@ Por ejemplo, un skater puede pedir a Watson Assistant una lista de todas las var
 {: #vcscar-preface-cloud-platform}
 
 La capa creativa de los sistemas de TI para generar nuevas combinaciones constituye la parte más apreciada para los skaters. Tiene la capacidad de conectar con su creatividad para inspirar formas de innovar, en cualquier punto del globo. Nada de esto se habría conseguido sin {{site.data.keyword.cloud}}.
-
-## Enlaces relacionados
-{: #vcscar-preface-related}
-
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

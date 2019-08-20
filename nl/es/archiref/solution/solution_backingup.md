@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-14"
+lastupdated: "2019-07-16"
 
 subcollection: vmware-solutions
 
@@ -68,7 +68,7 @@ Si despliega componentes de solución de complemento en la instancia, también d
 
 * Zerto Virtual Replication: El sistema Zerto Virtual Manager (ZVM) se despliega como una instancia de servidor virtual (VSI) de {{site.data.keyword.cloud_notm}} y su copia de seguridad no está soportada por Veeam ni IBM Spectrum Protect Plus. Si la estrategia de recuperación tras desastre requiere que recupere el ZVM sin realizar una migración tras error del sitio, debe utilizar la solución de copia de seguridad de Windows preferida para realizar una copia de seguridad y restaurar el ZVM.
 * F5 BIG-IP: F5 recomienda [copia de seguridad basada en archivos de la configuración de F5](https://support.f5.com/csp/article/K13132){:new_window}, que puede dirigir al servidor de archivos.
-* FortiGate Security Appliance o VM: Fortinet recomienda [copia de seguridad basada en archivos de la configuración de FortiGate](http://help.fortinet.com/fos50hlp/54/Content/FortiOS/fortigate-best-practices-54/Firmware/Performing_Config_Backup.htm){:new_window}, que puede dirigir al servidor de archivos.
+* FortiGate Security Appliance o VM: Fortinet recomienda [copia de seguridad basada en archivos de la configuración de FortiGate](https://help.fortinet.com/fos50hlp/54/Content/FortiOS/fortigate-best-practices-54/Firmware/Performing_Config_Backup.htm){:new_window}, que puede dirigir al servidor de archivos.
 * HyTrust Cloud Control y Data Control: HyTrust soporta tanto la imagen como la copia de seguridad basada en archivos de los dispositivos del servidor HyTrust. Para obtener más información, consulte las guías de administración de HyTrust.
 * VMware HCX: La interfaz de gestión de dispositivos HCX le permite crear y descargar una copia de seguridad basada en archivos de la configuración del gestor HCX similar a la de vCenter Server Appliance.
 

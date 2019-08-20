@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-09"
 
 keywords: about vmware solutions, product overview, benefits
 
@@ -55,7 +55,7 @@ Antes de solicitar una instancia de vCenter Server, debe configurar la clave de 
 
 Al solicitar su instancia de vCenter Server, elija primero su nombre y la versión de VMware vSphere. Todas las instancias de VMware se despliegan conjuntamente con controladores de dominio de Microsoft Active Directory, y para fines del inicio de sesión único, debe designar la instancia como un sitio primario o secundario. Una instancia primaria es la primera o la única instancia del dominio de inicio de sesión único. Puede desplegar más instancias secundarias y asociarlas al mismo dominio de inicio de sesión único de una instancia primaria existente. A continuación, elija si desea traer sus propias licencias de VMware o la edición de la licencia que desee alquilar de {{site.data.keyword.cloud_notm}}. Por último, elija la región de {{site.data.keyword.cloud_notm}} y el centro de datos para su instancia, así como las características de CPU y memoria de los hosts del clúster.
 
-En la siguiente parte de la página del pedido, debe especificar las características de almacenamiento y redes de la instancia. Puede elegir entre el almacenamiento vSAN y NFS para el clúster, con la posibilidad de elegir el tamaño y el número de discos flash vSAN y la edición de la licencia de vSAN, o el tamaño, recuento y rendimiento de los volúmenes de almacenamiento NFS. Para la red, puede elegir el prefijo de nombre de red de los hosts y el subdominio y el dominio del clúster. Tiene la opción de desplegar los controladores de Active Directory como una instancia de servidor virtual (VSI) de {{site.data.keyword.cloud_notm}} individual, o dos máquinas virtuales dentro del clúster para el que necesita proporcionar licencias y activación.
+En la siguiente parte de la página del pedido, debe especificar las características de almacenamiento y redes de la instancia. Puede elegir entre el almacenamiento vSAN y NFS para el clúster, con la posibilidad de elegir el tamaño y el número de discos flash vSAN y la edición de la licencia de vSAN, o el tamaño, recuento y rendimiento de los volúmenes de almacenamiento NFS. Para la red, puede elegir el prefijo de nombre de red de los hosts y el subdominio y el dominio del clúster. Tiene la opción de desplegar los controladores de Active Directory como una instancia de servidor virtual (VSI) de {{site.data.keyword.cloud_notm}} individual. O bien puede desplegar los controladores como dos máquinas virtuales (VM) dentro del clúster (para esas VM tiene que proporcionar licencias y activación).
 
 En la parte inferior de la página del pedido de vCenter Server, puede seleccionar entre diversos servicios adicionales que puede desplegar para su instancia de VMware y que se facturarán en su cuenta de {{site.data.keyword.cloud_notm}}. Algunos servicios requieren configuración adicional, que puede especificar como parte del formulario de pedido.
 

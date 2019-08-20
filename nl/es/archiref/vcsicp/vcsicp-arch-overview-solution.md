@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-12"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -39,7 +39,7 @@ NSX Manager se despliega en el clúster inicial. Se asigna a NSX Manager una dir
 
 La automatización de {{site.data.keyword.cloud}} despliega tres controladores NSX dentro del clúster inicial. Se asigna a los controladores una dirección IP respaldada por VLAN desde la subred portátil privada que está destinada a los componentes de gestión.
 
-### NSX Edge / DLR
+### NSX Edge y direccionador lógico distribuido (DLR)
 {: #vcsicp-arch-overview-solution-nsx-edge}
 
 Se despliegan pares NSX Edge Services Gateway (ESG). En todos los casos, se utiliza un par de pasarela para el tráfico de salida de los componentes de automatización que residen en la red privada. Para vCenter Server e {{site.data.keyword.icpfull_notm}}, una segunda pasarela, conocida como el borde gestionado por el cliente, se despliega y se configura con un enlace ascendente a la red pública y una interfaz asignada a la red privada. El administrador puede configurar los componentes NSX necesarios como, por ejemplo, el direccionador lógico distribuido (DLR), los conmutadores lógicos y los cortafuegos. La [guía de red de vCenter Server](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro) contiene más detalles sobre el diseño de red.
@@ -146,7 +146,7 @@ Las API de CAM se dividen en más de un contenedor.
 ### Helm
 {: #vcsicp-arch-overview-solution-helm}
 
-Un contenedor con los binarios necesarios para desplegar diagramas de helm en clústeres de Kubernetes.
+Un contenedor con los archivos binarios necesarios para desplegar diagramas de helm en clústeres de Kubernetes.
 
 ### Terraform
 {: #vcsicp-arch-overview-solution-terraform}
@@ -177,8 +177,3 @@ Una interfaz gráfica de usuario para crear plantillas de Terraform, con capacid
 {: #vcsicp-arch-overview-solution-maria-db}
 
 La base de datos para la aplicación del diseñador de plantillas.
-
-## Enlaces relacionados
-{: #vcsicp-arch-overview-solution-related}
-
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

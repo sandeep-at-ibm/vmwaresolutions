@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-21"
+lastupdated: "2019-08-02"
 
 keywords: Zerto, Zerto components, tech specs Zerto
 
@@ -22,6 +22,9 @@ subcollection: vmware-solutions
 {: #addingzertodr}
 
 El servicio Zerto on {{site.data.keyword.cloud}} integra las funciones de réplica y de recuperación en caso de desastre en las ofertas de despliegue para proteger y recuperar datos en el entorno virtual de VMware en {{site.data.keyword.cloud_notm}}.
+
+La versión actual de Zerto on {{site.data.keyword.cloud_notm}} que se instala es la versión 6.5 actualización 4.
+{:note}
 
 ## Antes de empezar
 {: #addingzertodr-req}

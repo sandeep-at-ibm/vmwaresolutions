@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -185,8 +185,3 @@ Una interfaz gráfica de usuario para crear plantillas de Terraform, con una car
 {: #vcscar-arch-overview-solution-maria-db}
 
 La base de datos para la aplicación del diseñador de plantillas.
-
-## Enlaces relacionados
-{: #vcscar-arch-overview-solution-related}
-
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

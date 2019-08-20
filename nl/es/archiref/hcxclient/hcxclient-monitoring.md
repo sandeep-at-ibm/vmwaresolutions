@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -54,7 +54,7 @@ Ahora ya puede utilizar la interfaz de usuario web del optimizador de WAN para s
 ### Limitación de ancho de banda de migración
 {: #hcxclient-monitoring-mig-bandwidth}
 
-Antes de migrar las máquinas virtuales, realice una evaluación del enlace de red que se utiliza. Trabaje con los ingenieros de redes para la red que contiene la instancia de origen de vSphere o revise el uso de tráfico mensual o semanalmente. Limite el ancho de banda disponible para las migraciones si el tráfico atraviesa un enlace que es crítico para el negocio, especialmente si dicho enlace es inferior a 1 Gbps. Utilice el lado con el ancho de banda más limitado, que suele ser el lado del cliente.
+Antes de migrar las máquinas virtuales, realice una evaluación del enlace de red que se utiliza. Trabaje con los especialistas en redes en la red que contiene la instancia de origen de vSphere o revise el uso de tráfico mensual o semanalmente. Limite el ancho de banda disponible para las migraciones si el tráfico atraviesa un enlace que es crítico para el negocio, especialmente si dicho enlace es inferior a 1 Gbps. Utilice el lado con el ancho de banda más limitado, que suele ser el lado del cliente.
 
 Realice esta acción cuando despliegue los componentes de flota en la interfaz de usuario del cliente de HCX, pero el despliegue posterior requiere que vaya a la interfaz de usuario del optimizador de WAN.
 

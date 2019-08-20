@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-07-09"
 
 subcollection: vmware-solutions
 
@@ -23,7 +23,7 @@ La instalación de VMware HCX on IBM Cloud tiene los siguientes requisitos de so
 {: #hcxclient-planning-config-net}
 
 HCX debe cruzar internet público y líneas privadas, y conectar con los componentes del centro de datos, como redes, conmutadores y grupos de puertos.
-* En [Requisitos de acceso a puertos](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-port-req) encontrará los puertos que deben estar abiertos para que los dispositivos virtuales HCX se puedan instalar correctamente.
+* Para obtener información sobre los puertos que se deben abrir para que los dispositivos virtuales HCX se puedan instalar satisfactoriamente, consulte [Requisitos de acceso a puertos](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-port-req).
 * Tanto el entorno de vSphere local como el entorno de VCS HCX Cloud deben permitir la sincronización de reloj de Network Time Protocol (NTP) entre los dispositivos locales de vSphere y los dispositivos de VCS HCX. El puerto UDP 123 debe resultar accesible para los dispositivos virtuales y las redes de HCX.
 
 ## Entorno local
@@ -100,12 +100,12 @@ La extensión de la red significa básicamente coger la VLAN o VXLAN existente d
 ## Pruebas previas
 {: #hcxclient-planning-preflight-tests}
 
-Las pruebas previas consisten en realizar una migración de HCX con la función de migración masiva y de vMotion con el objetivo de establecer una velocidad de transferencia de línea base.
+Las pruebas previas consisten en realizar una migración de HCX con la función de migración masiva y de vMotion para establecer una velocidad de transferencia de línea base.
 
 ## Migración de apps de no producción
 {: #hcxclient-planning-mig-non-prod-apps}
 
-La migración de máquinas virtuales empieza con las etapas planificadas de máquinas virtuales que son menos críticas. El desarrollo o las pruebas, entre otros, utilizan la conectividad de Internet para la migración y el tráfico de la L2 extendida.
+La migración de máquinas virtuales empieza con las etapas planificadas de máquinas virtuales que son menos críticas. Los equipos de desarrollo y de pruebas utilizan la conectividad de Internet para la migración y el tráfico de la L2 extendida.
 
 ## Empieza el diseño y la implementación de la red en la nube
 {: #hcxclient-planning-cloud-net-begins}
@@ -122,7 +122,7 @@ Mientras las migraciones siguen en curso, se solicita la conectividad de red de 
 
 Cuando el objetivo es la migración del centro de datos a la nube, cualquier servidor físico que interactúe con las máquinas virtuales que se están migrando se puede evaluar para determinar la migración a {{site.data.keyword.cloud_notm}} como máquina virtual (P2V), servidor nativo o permanecer en el origen. Si el servidor físico va a permanecer en el origen, y HCX solo se utilizará durante la migración hasta que se establezca una red dedicada, es importante comprender si reside en cualquier red que se extienda en la nube con HCX. En este caso de ejemplo, HCX no solo permite migrar las máquinas virtuales, sino toda la subred a la nube.
 
-Para eliminar HCX al final de la migración, la subred no puede existir en el origen y en el destino si se desea mantener la conexión entre los dispositivos físicos y las máquinas virtuales migradas. Esto implica que los dispositivos físicos que quedan en el sitio de origen y que existen en las redes L2 extendidas, deben migrarse a otra subred de red que pueda ser direccionada al lado de la nube. La excepción a esto es si se utiliza alguna otra tecnología de L2 extendida, como NSX L2 VPN, para sustituir los puntos finales de la L2 extendida de HCX.
+Para eliminar HCX al final de la migración, la subred no puede existir en el origen y en el destino si se desea mantener la conexión entre los dispositivos físicos y las máquinas virtuales migradas. Esto implica que los dispositivos físicos que quedan en el sitio de origen y que existen en las redes L2 extendidas, deben migrarse a otra subred de red que se pueda direccionar al lado de la nube. La excepción a esto es si se utiliza alguna otra tecnología de L2 extendida, como NSX L2 VPN, para sustituir los puntos finales de la L2 extendida de HCX.
 
 ## Migración de aplicaciones complejas y de producción
 {: #hcxclient-planning-mig-prod-complex-app}

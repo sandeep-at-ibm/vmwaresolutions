@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -62,8 +62,3 @@ En este documento se proporcionan distintas vistas sobre las tecnologías utiliz
 * _Red de vCenter Server_: la guía actual se centra en las tecnologías de red utilizadas para la integración entre vCenter, {{site.data.keyword.icpfull_notm}} e {{site.data.keyword.containerlong_notm}}, como NSX-V y Calico, junto con una presentación técnica de NSX-T.
 * [VMware y Skate Advisor Concept Car](/docs/services/vmwaresolutions/archiref/vcscar?topic=vmware-solutions-vcscar-intro): esta arquitectura de referencia es un "concept car" (prototipo), es decir, un mecanismo para resaltar y mostrar tecnologías que solucionan problemas del mundo real. El objetivo era demostrar una interacción entre Watson AI y Machine Learning con un ejemplo real. A través de la cultura del skateboarding, demostramos de forma global los servicios de la nube de una forma única. La implementación del “concept car” constituye una extensión de la aplicación de Acme Skateboard llamada Skate Advisor. Skate Advisor es una herramienta que permite a los usuarios tener conversaciones sobre skateboarding con un motor controlado por Watson.
 * [VMware: el proceso de modernización de Stock Trader](/docs/services/vmwaresolutions/archiref/vcscontent?topic=vmware-solutions-vcscontent-modjourney): nuestro caso de uso de referencia describe una aplicación de WebSphere Application Server clásica que se moderniza con {{site.data.keyword.cloud_notm}} Private, contenido de IBM Middleware, {{site.data.keyword.containerlong_notm}} y vCenter Server on {{site.data.keyword.cloud_notm}}. Todos estamos en un proceso de transición a la nube, y cada uno de nosotros está en un punto diferente del proceso. Siguiendo los pasos indicados por la arquitecta de la aplicación, Jane, y por el arquitecto de la infraestructura de nube, Todd, modernizamos una aplicación existente denominada Stock Trader. Muestra ejemplos que pueden ayudar en cada paso del proceso y el valor que supone para la empresa, independientemente del tamaño de cada paso. Nos centramos en cuatro temas: aplicaciones, DevOps, integración y gestión. Cada tema trabaja en combinación con los demás para ayudarle a alcanzar sus objetivos. El hecho de modernizar un tema sin los otros podría dar lugar a problemas.
-
-## Enlaces relacionados
-{: #vcsnsxt-intro-related}
-
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

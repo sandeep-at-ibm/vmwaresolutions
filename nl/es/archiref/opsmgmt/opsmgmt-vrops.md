@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-03"
+lastupdated: "2019-08-05"
 
 ---
 
@@ -219,7 +219,6 @@ El paquete de vRealize Operations Management para HCX amplía las capacidades de
 ## Enlaces relacionados
 {: #opsmgmt-vrops-management-links}
 
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
 * [Directrices de dimensionamiento de vRealize Operations Manager 7.0](https://kb.vmware.com/s/article/57903){:new_window}
 * [Documentación de vRealize Operations Manager](https://docs.vmware.com/en/vRealize-Operations-Manager/index.html){:new_window}
 * [Paquete de gestión para vSAN](https://marketplace.vmware.com/resources/vsx/product_files/31742/original/Management-Pack-for-vSAN-Guide6d2a8895b022a5f626a86e8e84b031b5.pdf){:new_window}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-27"
+lastupdated: "2019-07-26"
 
 keywords: vCenter Server, vCenter Server architecture, tech specs vCenter Server
 
@@ -76,6 +76,7 @@ La disponibilidad y los precios de las configuraciones estandarizadas de hardwar
 
 Puede solicitar tres o más {{site.data.keyword.baremetal_short}} con una de las siguientes configuraciones:
 * **Skylake**: servidores de generación Intel Skylake de 2 CPU (Intel Xeon serie 4100/5100/6100) con el modelo de CPU y el tamaño de RAM que seleccione.
+* **Cascade**: servidores de generación Intel Cascade de 2 CPU (Intel Xeon serie 4200/5200/6200) con el modelo de CPU y el tamaño de RAM que seleccione.
 * **Certificado por SAP**: servidores de generación Intel Skylake o Intel Broadwell (Intel Xeon serie 6140/E5-2690/E7-8890) con el modelo de CPU que elija.
 * **Broadwell**: servidores de generación Intel Broadwell de 4 CPU (Intel Xeon serie E7-4800) con el modelo de CPU y el tamaño de RAM que seleccione.
 
@@ -147,7 +148,7 @@ La opción de discos locales, que solo está disponible para las configuraciones
 ### Licencias (proporcionadas por IBM o BYOL) y cuotas
 {: #vc_vcenterserveroverview-license-and-fee}
 
-* VMware vSphere Enterprise Plus 6.5u2 o 6.7u1
+* VMware vSphere Enterprise Plus 6.5u2 o 6.7u2
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.4
 * (Para clústeres vSAN) VMware vSAN Advanced o Enterprise 6.6
@@ -166,7 +167,7 @@ Un servidor nativo con la configuración presentada en [Especificaciones técnic
 ### Licencias y tarifas correspondientes a nodos de expansión
 {: #vc_vcenterserveroverview-expansion-node-license-and-fee}
 
-* Un VMware vSphere Enterprise Plus 6.5u2 o 6.7u1
+* VMware vSphere Enterprise Plus 6.5u2 o 6.7u2
 * Un VMware NSX Service Providers Edition (Base, Advanced o Enterprise) 6.4
 * Una cuota de soporte y servicios
 * (Para clústeres vSAN) VMware vSAN Advanced o Enterprise 6.6

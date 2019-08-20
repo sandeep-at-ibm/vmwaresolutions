@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -59,8 +59,3 @@ Aplicaciones contenerizadas | Aplicaciones que han completado el proceso de mode
 Watson | En el caso de esta arquitectura de referencia y Acme Skateboards, Watson representa el servicio de IA que se utiliza en la arquitectura "Concept Car".
 
 La migración de aplicaciones, la red y la seguridad suelen ser son los puntos que presentan mayor dificultad en el proceso de modernización de aplicaciones. VMware vCenter Server on {{site.data.keyword.cloud_notm}}, VMware Hybridity, VMware NSX, {{site.data.keyword.cloud_notm}} Private e {{site.data.keyword.containerlong_notm}} abordan estos retos y le permiten crear aplicaciones moderas resistentes, seguras y potentes.
-
-## Enlaces relacionados
-{: #vcsiks-systemcontext-related}
-
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

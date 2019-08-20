@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-07-16"
 
 subcollection: vmware-solutions
 
@@ -23,7 +23,7 @@ subcollection: vmware-solutions
 
 Para habilitar el cifrado de vSphere o el cifrado de vSAN utilizando KMIP for VMware on {{site.data.keyword.cloud_notm}}, debe completar las tareas siguientes:
 
-1. [Habilitación de la cuenta para que utilice puntos finales de servicio mediante la CLI de IBM Cloud](/docs/services/service-endpoint?topic=service-endpoint-getting-started#cs_cli_install_steps).
+1. [Habilite los puntos finales de servicio en su cuenta](/docs/account?topic=account-vrf-service-endpoint#service-endpoint).
 2. Cree una instancia de gestor de claves, utilizando
 [IBM Key Protect](/docs/services/key-protect?topic=key-protect-getting-started-tutorial) o [IBM Cloud Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-get-started#get-started). Si utiliza Hyper Protect Crypto Services, asegúrese de [inicializar la instancia criptográfica](/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-hsm) para que Hyper Protect Crypto Services pueda proporcionar funciones relacionadas con claves.
 3. Cree una clave raíz de cliente (CRK) dentro de la instancia del gestor de claves.

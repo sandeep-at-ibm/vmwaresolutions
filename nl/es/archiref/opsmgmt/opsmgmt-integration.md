@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-29"
+lastupdated: "2019-08-05"
 
 ---
 
@@ -62,7 +62,6 @@ El cliente quiere utilizar su sistema operativo, su middleware y sus herramienta
 ## Enlaces relacionados
 {: #opsmgmt-integration-related}
 
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
 * [API RESTful de operaciones de vRealize](https://docs.vmware.com/en/vRealize-Operations-Manager/7.0/vrealize-operations-manager-70-api-guide.pdf){:new_window}
 * [Explorador de API de código VMware](https://code.vmware.com/apis?socv=1&numPerPage=164&sorter=pv){:new_window}
 * [Herramienta de recopilación de cliente de Postman para operaciones vRealize](https://code.vmware.com/samples/4663/postman-client-collection-for-vrealize-operations-rest-apis){:new_window}

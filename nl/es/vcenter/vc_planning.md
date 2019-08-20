@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-27"
+lastupdated: "2019-08-06"
 
 keywords: planning vCenter Server, data center, vCenter Server data centers
 
@@ -12,6 +12,10 @@ subcollection: vmware-solutions
 
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Requisitos y planificación de instancias de vCenter Server
 {: #vc_planning}
@@ -26,7 +30,12 @@ La cuenta de {{site.data.keyword.cloud_notm}} que utilice debe cumplir ciertos r
 ## Disponibilidad del centro de datos de IBM Cloud
 {: #vc_planning-dc-availability}
 
-El despliegue de vCenter Server impone requisitos estrictos en cuanto a la infraestructura física. Por lo tanto, en {{site.data.keyword.CloudDataCents_notm}} solo puede desplegar instancias que cumplan los requisitos. Están disponibles los siguientes {{site.data.keyword.CloudDataCents_notm}} para el despliegue de vCenter Server:
+El despliegue de vCenter Server impone requisitos estrictos en cuanto a la infraestructura física. Por lo tanto, en {{site.data.keyword.CloudDataCents_notm}} solo puede desplegar instancias que cumplan los requisitos. Están disponibles los siguientes {{site.data.keyword.CloudDataCents_notm}} para el despliegue de vCenter Server.
+
+Cascade Lake {{site.data.keyword.baremetal_short}} está disponible en las regiones multizona de
+{{site.data.keyword.CloudDataCents_notm}}. Para obtener más información, consulte [Visión general de regiones multizona (MZR)
+](/docs/infrastructure/loadbalancer-service?topic=loadbalancer-service-multi-zone-region-mzr-overview).
+{:note}
 
 | {{site.data.keyword.CloudDataCent_notm}} | Ubicación | Región | Opciones servidor |
 |:----------------------|:---------|:-------|:---------------|
@@ -89,6 +98,22 @@ Puede solicitar servicios complementarios para su instancia en función de sus n
 
 Los servicios están soportados para vCenter Server con instancias de NSX-T.
 {:note}
+
+### Planificación de VMware HCX on IBM Cloud
+{: #vc_planning-addon-services-hcx}
+
+El servicio VMware HCX on {{site.data.keyword.cloud_notm}} permite ampliar fácilmente las redes de centros de datos locales en {{site.data.keyword.cloud_notm}}, lo que permite migrar las máquinas virtuales (VM) de {{site.data.keyword.cloud_notm}} y al mismo sin realizar ninguna conversión ni cambio.
+
+Al desplegar este servicio, siga los valores siguientes:
+* Especifique el **Tipo de interconexión de HCX** seleccionando una de las opciones siguientes:
+  * **Red pública**: HCX crea una conexión cifrada entre sitios de la red pública.
+  * **Red privada**: HCX crea una conexión cifrada entre sitios de la red privada.
+* Especifique el **Tipo de certificado de punto final público**. Si selecciona **Certificado de CA**, configure los valores siguientes:
+  * **Contenido del certificado**: especifique el contenido del certificado de CA.
+  * **Clave privada**: especifique la clave privada del certificado de CA.
+  * (Opcional) **Contraseña**: especifique la contraseña para la clave privada si está cifrada.
+  * (Opcional) **Vuelva a escribir la contraseña**: vuelva a escribir la contraseña para la clave privada.
+  * (Opcional) **Nombre de host**: especifique el nombre de host que se correlacionará con el nombre común (CN) del certificado de CA. HCX on {{site.data.keyword.cloud_notm}} requiere que el certificado de CA esté en un formato aceptado por NSX Edge. Para obtener más información sobre los formatos de certificado NSX Edge, consulte [Importación de certificados SSL](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html){:external}.
 
 ## Consideraciones de capacidad
 {: #vc_planning-capacity-considerations}

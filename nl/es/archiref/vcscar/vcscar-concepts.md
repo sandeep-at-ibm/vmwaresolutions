@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -120,8 +120,3 @@ nollie-heelflip to frontside-boardslide
 {: #vcscar-concepts-relevance}
 
 El lenguaje de trucos es la construcción principal que se utiliza para enseñar a Watson a reconocer y a ingerir documentos e información en medios sobre skating y también constituye la base de las conversaciones con el usuario.
-
-## Enlaces relacionados
-{: #vcscar-concepts-related}
-
-* [Visión general de vCenter Server on {{site.data.keyword.cloud}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)  

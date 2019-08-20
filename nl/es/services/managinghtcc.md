@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-03-23"
 
 keywords: HTCC WebGUI, HTCC console, enable internet HTCC
 
@@ -65,7 +65,7 @@ Estos pasos se aplican a la actualización de los valores de red HTCC en la máq
 
 1. Complete los pasos 1-3 en el procedimiento anterior.
 2. Pulse **Valores** y, a continuación, **Interfaces**. Anote la dirección IP para el enlace ascendente privado, que se convierte en la nueva pasarela predeterminada. 
-3. Vaya a la página de detalles del servicio HyTrust CloudControl on IBM Cloud, pulse **Ver IU web de HTCC** e inicie sesión con las credenciales de la página de detalles de servicio.
+3. Vaya a la página de detalles del servicio HyTrust CloudControl on {{site.data.keyword.cloud_notm}}, pulse **Ver IU web de HTCC** e inicie sesión con las credenciales de la página de detalles de servicio.
 4. Anote la pasarela predeterminada existente. Por ejemplo, para HTCC 5.5.1, pulse **Configuración > Red**. Anote la dirección IP de pasarela que aparece en la lista, que se convierte en la pasarela para la ruta estática.
 5. Añada una ruta estática. Por ejemplo, para HTCC 5.5.1, pulse **Configuración > Rutas estáticas**. Pulse **Añadir**, especifique la información siguiente y pulse en **Aceptar**.
 
@@ -84,7 +84,7 @@ en el paso 3, y pulse **Guardar**. 
 
   La máquina virtual primaria ya tendrá acceso a Internet.
 
-7. Para confirmar que la máquina virtual primaria tiene acceso a Internet, ejecute un mandato `wget` a una dirección IP o sitio web que sean públicos. Para ello, vuelva a vCenter y pulse el botón derecho del ratón en **CC1 > Abrir consola**. Inicie la sesión en la consola utilizando las credenciales de la consola de la página de detalles del servicio HyTrust CloudControl on IBM Cloud. Ejecute un mandato `wget` como, por ejemplo, `wget www.ibm.com`, y deberá obtener una respuesta inmediata. Confirme que se ha enviado la solicitud y que se ha recibido una respuesta `200`.
+7. Para confirmar que la máquina virtual primaria tiene acceso a Internet, ejecute un mandato `wget` a una dirección IP o sitio web que sean públicos. Para ello, vuelva a vCenter y pulse el botón derecho del ratón en **CC1 > Abrir consola**. Inicie la sesión en la consola utilizando las credenciales de la consola de la página de detalles del servicio HyTrust CloudControl on {{site.data.keyword.cloud_notm}}. Ejecute un mandato `wget` como, por ejemplo, `wget www.ibm.com`, y deberá obtener una respuesta inmediata. Confirme que se ha enviado la solicitud y que se ha recibido una respuesta `200`.
 
 ## Enlaces relacionados
 {: #managinghtcc-related}

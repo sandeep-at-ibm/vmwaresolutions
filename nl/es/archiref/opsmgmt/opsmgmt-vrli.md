@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-01"
+lastupdated: "2019-08-05"
 
 ---
 
@@ -22,7 +22,7 @@ vRealize Log Insight (vRLI) habilita el registro en tiempo real de componentes e
 
 ![Diagrama de red de Log Insights](../../images/opsmgmt-vrlinw.svg "Diagrama de red de Log Insights")
 
-En este diseño, cada ubicación tiene un clúster vRLI independiente, que se despliega en el clúster de gestión. El clúster vRLI se despliega en la subred de herramientas, utilizando direcciones IP portátiles de {{site.data.keyword.cloud_notm}}. Esto facilita la comunicación a todos los componentes que se redirigen hacia fuera del espacio de direcciones RFC1918 de {{site.data.keyword.cloud_notm}}. Estos componentes incluyen: hosts de vSphere, vCenter, Platform Services Controller, NSX Manager, y Controladores NSX. Un clúster vRLI contiene un nodo maestro y, como mínimo, dos nodos de trabajo con un equilibrador de carga integrado.
+En este diseño, cada ubicación tiene un clúster vRLI independiente, que se despliega en el clúster de gestión. El clúster vRLI se despliega en la subred de herramientas, utilizando direcciones IP portátiles de {{site.data.keyword.cloud_notm}}. Esto facilita la comunicación a todos los componentes que se redirigen hacia fuera del espacio de direcciones RFC1918 de {{site.data.keyword.cloud_notm}}. Estos componentes incluyen: hosts de vSphere, vCenter, Platform Services Controller, NSX Manager, y Controladores NSX. Un clúster vRLI contiene un nodo maestro y, como mínimo, dos nodos trabajadores con un equilibrador de carga integrado.
 
 * Nodo maestro: Nodo inicial obligatorio en el clúster. El Nodo maestro es responsable de las consultas y de la ingesta de registros. La interfaz de usuario web del nodo maestro es el único panel de interacción con el clúster de vRealize Log Insight. Todas las consultas sobre datos se dirigen al maestro que, a su vez distribuye la carga de trabajo a los Trabajadores.
 * Nodo trabajador: se requieren al menos tres nodos mínimos para formar un clúster con la posibilidad de añadir más trabajadores para escalarlo. Un nodo trabajador ingiere registros y almacena registros localmente.
@@ -141,6 +141,5 @@ Se pueden obtener otros paquetes de contenido de [Paquete de contenido de vReali
 ## Enlaces relacionados
 {: #opsmgmt-vrli-related}
 
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
 * [Dimensionamiento del dispositivo virtual vRealize Log Insight](https://docs.vmware.com/en/vRealize-Log-Insight/4.6/com.vmware.log-insight.getting-started.doc/GUID-284FC5F4-B832-47A7-912E-D407A760CAE4.html){:new_window}
 * [vRealize Log Insight](https://docs.vmware.com/en/vRealize-Log-Insight/index.html){:new_window}

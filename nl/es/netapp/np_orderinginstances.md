@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-29"
 
 keywords: NetApp order instance, order NetApp ONTAP, order NetApp
 
@@ -42,8 +42,9 @@ Cuando solicite una instancia de NetApp ONTAP Select, debe especificar los sigui
 {: #np_orderinginstances-instance-name}
 
 El nombre de instancia debe cumplir los siguientes requisitos:
-* Solo se permiten caracteres alfanuméricos y el guión (-).
-* El nombre de instancia debe empezar por un carácter alfabético y terminar por un carácter alfanumérico.
+* Solo se permiten caracteres alfabéticos en minúsculas, numéricos y el guión (-).
+* El nombre de instancia debe empezar por un carácter alfabético en minúsculas.
+* El nombre de instancia debe terminar en un carácter alfabético o numérico en minúsculas.
 * La longitud máxima del nombre de instancia es de 10 caracteres.
 * El nombre de instancia debe ser exclusivo dentro de su cuenta.
 
@@ -56,26 +57,29 @@ Debe especificar los siguientes valores de interfaz de red cuando solicite una i
 {: #np_orderinginstances-host-name-prefix}
 
 El prefijo del nombre de host debe cumplir los siguientes requisitos:
-*  Solo se permiten caracteres alfanuméricos y el guión (-).
-*  El prefijo de nombre de host debe empezar y terminar por un carácter alfanumérico.
-*  La longitud máxima del prefijo de nombre de host es de 10 caracteres.
+* Solo se permiten caracteres alfabéticos en minúsculas, numéricos y el guión (-).
+* El prefijo de nombre de host debe empezar por un carácter alfabético en minúsculas.
+* El prefijo de nombre de host debe terminar en un carácter alfabético o numérico en minúsculas.
+* La longitud máxima del prefijo de nombre de host es de 10 caracteres.
 
 ### Etiqueta de subdominio
 {: #np_orderinginstances-subdomain-label}
 
 La etiqueta de subdominio debe cumplir los siguientes requisitos:
-*  Solo se permiten caracteres alfanuméricos y el guión (-).
-*  La etiqueta de subdominio debe empezar por un carácter alfabético y terminar por un carácter alfanumérico.
-*  La longitud máxima de la etiqueta de subdominio es de 10 caracteres.
+* Solo se permiten caracteres alfabéticos en minúsculas, numéricos y el guión (-).
+* La etiqueta de subdominio debe empezar por un carácter alfabético en minúsculas.
+* La etiqueta de subdominio debe terminar en un carácter alfabético o numérico en minúsculas.
+* La longitud máxima de la etiqueta de subdominio es de 10 caracteres.
 
 ### Nombre de dominio
 {: #np_orderinginstances-domain-name}
 
 El nombre del dominio raíz debe cumplir los siguientes requisitos:
 * El nombre de dominio debe constar de dos o más series de caracteres separadas por un punto (.)
-* La primera serie debe empezar por un carácter alfabético y terminar por un carácter alfanumérico.
-* Todas las series, excepto la última, solo pueden incluir caracteres alfanuméricos y caracteres de guión (-).
-* La última serie solo puede incluir caracteres alfabéticos.
+* La primera serie debe empezar por un carácter alfabético en minúsculas.
+* La primera serie debe terminar en un carácter alfabético o numérico en minúsculas.
+* Todas las series, excepto la última, sólo pueden contener caracteres alfabéticos en minúsculas, numéricos y el guión (-).
+* La última serie solo puede contener caracteres alfabéticos en minúsculas.
 * La longitud de la última serie debe estar comprendida entre 2 y 24 caracteres.
 
 La longitud máxima del FQDN (nombre de dominio completo) para hosts y máquinas virtuales (VM) es de 50 caracteres. Los nombres de dominio deben cumplir con esta longitud máxima.
@@ -108,7 +112,7 @@ Las unidades SSD (disco de estado sólido, Solid-State Disk) de 3,8 TB reciben s
 ### Número de servidores nativos
 {: #np_orderinginstances-bare-metal-number}
 
-El número de servidores ESXi de una instancia de NetApp ONTAP Select es 4 de forma predeterminada. No lo puede modificar. Todos los servidores ESXi comparten la configuración.
+De forma predeterminada, el número de servidores ESXi de una instancia de NetApp ONTAP Select es cuatro. No se puede modificar. Todos los servidores ESXi comparten la configuración.
 
 ## Resumen del pedido
 {: #np_orderinginstances-order-summary}

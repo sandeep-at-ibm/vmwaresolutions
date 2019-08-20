@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-23"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -105,8 +105,3 @@ Al final, las opciones de diseño resultantes de Stock Trader son las siguientes
 
 Todd no ha modificado el origen de los datos durante el paso de transformación. Transformation Advisor toma la configuración de origen de datos de WebSphere Application Server Network Deployment y los añade al archivo server.xml del contenedor Liberty.
 {:important}
-
-## Enlaces relacionados
-{: #vcscontent-stocktrmod-related}
-
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

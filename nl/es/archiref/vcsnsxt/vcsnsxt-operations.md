@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-15"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -105,10 +105,5 @@ Los usuarios pueden suministrar un entorno {{site.data.keyword.containerlong_not
 
 Los despliegues de aplicaciones en {{site.data.keyword.containerlong_notm}} son posibles con los métodos siguientes:
 -	La conexión y los servicios de {{site.data.keyword.containerlong_notm}} se desarrollan en CAM y se publican en el catálogo de {{site.data.keyword.icpfull_notm}}.
--	Multi Cloud Manager, una futura mejora para gestionar instancias de {{site.data.keyword.containerlong_notm}}.
--	Línea de mandatos de Helm.
-
-## Enlaces relacionados
-{: #vcsnsxt-operations-related}
-
-* [Visión general de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)
+- Multi Cloud Manager, una futura mejora para gestionar instancias de {{site.data.keyword.containerlong_notm}}.
+- Línea de mandatos de Helm.

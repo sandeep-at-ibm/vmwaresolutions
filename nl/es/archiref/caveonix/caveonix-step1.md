@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-04"
+lastupdated: "2019-08-05"
 
 subcollection: vmware-solutions
 
@@ -45,8 +45,3 @@ Existen tres modelos de despliegue de Caveonix RiskForesight:
   -	Se utilizan más nodos de datos para el escalado porque aumenta el número de activos.
 
 Todos los componentes deben tener un FQDN y registrarse en DNS antes de cualquier despliegue de máquina virtual. Este paso lo realiza la automatización de IBM Cloud for VMware Solutions para el despliegue "todo en uno" inicial, pero es responsabilidad del usuario elegir cuándo escalar el despliegue.
-
-## Enlaces relacionados
-{: #caveonix-step1-related}
-
-* [VMware vCenter Server on {{site.data.keyword.cloud}} con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcs-hybridity-intro)

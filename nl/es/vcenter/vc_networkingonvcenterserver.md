@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-07-30"
 
 keywords: vCenter Server networking, networking components, networking vCenter
 
@@ -45,10 +45,11 @@ También se despliega una NSX Edge Services Gateway para que la utilicen las má
 {: #vc_networkingonvcenterserver-change-nsx-component-password-considerations}
 {: faq}
 
-Revise las siguientes consideraciones antes de cambiar las contraseñas de NSX Manager, controladores NSX y NSX Edges:
-* No cambie la contraseña de NSX Manager que encontrará en la página **Resumen** de la instancia en la consola de {{site.data.keyword.vmwaresolutions_short}}.
-* Puede cambiar las contraseñas de los controladores NSX. Para ver instrucciones sobre cómo cambiar las contraseñas de los controladores NSX, consulte [Cambio de la contraseña del controlador](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/com.vmware.nsx.admin.doc/GUID-2667DD9E-E2F5-4403-BAC2-C7D1BBC23228.html){:external}.
-* Puede cambiar la contraseña y los valores de SSH de la Edge Services Gateway (ESG) de NSX de VMware gestionada por el cliente. No cambie la contraseña de la Edge Services Gateway (ESG) de NSX de VMware de gestión ni el direccionador lógico distribuido relacionado.
+Revise las siguientes consideraciones antes de intentar cambiar las contraseñas de NSX Manager, controladores NSX y NSX Edges:
+* Puede cambiar la contraseña de NSX Manager. Esta contraseña se muestra en la página **Resumen** de la instancia en la consola de {{site.data.keyword.vmwaresolutions_short}}.
+* Puede cambiar las contraseñas de los controladores NSX. Para ver instrucciones sobre cómo cambiar estas contraseñas, consulte [Cambio de la contraseña del controlador](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/com.vmware.nsx.admin.doc/GUID-2667DD9E-E2F5-4403-BAC2-C7D1BBC23228.html){:external}.
+* Puede cambiar la contraseña y los valores de SSH de la Edge Services Gateway (ESG) de NSX de VMware gestionada por el cliente. 
+* No cambie las contraseñas de la Edge Services Gateway (ESG) de NSX de VMware de gestión ni del direccionador lógico distribuido relacionado.
 
 ## Enlaces relacionados
 {: #vc_networkingonvcenterserver-related}

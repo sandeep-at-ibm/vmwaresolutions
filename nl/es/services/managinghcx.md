@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-07-22"
 
 keywords: HCX updates, HCX management console, login HCX console
 
@@ -27,14 +27,14 @@ Para gestionar el servicio HCX on {{site.data.keyword.cloud}}, debe acceder a la
 2. Para acceder a la consola de Cloud HCX, pulse **Ver consola de HCX Cloud** en la página de detalles del servicio HCX on {{site.data.keyword.cloud_notm}} e inicie una sesión utilizando las credenciales de vCenter Server.
 3. Para acceder a la consola de administración de HCX Manager, pulse **Ver la consola de administración de HCX Manager** en la página de detalles del servicio HCX on {{site.data.keyword.cloud_notm}} e inicie una sesión utilizando las credenciales de HCX Manager que aparecen en la misma página de detalles del servicio.
 
-Para obtener más información, consulte [Solicitud, visualización y eliminación de servicios para instancias de vCenter Server con el paquete híbrido (Hybridity)](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices).
+Para obtener más información, consulte [Solicitud, visualización y eliminación de servicios para instancias de vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).
 
 ## Aplicación de actualizaciones a HCX on IBM Cloud
 {: #managinghcx-updates}
 
 HCX on {{site.data.keyword.cloud_notm}} se despliega con la última compilación probada de la tecnología de VMware Hybrid Cloud Extension. VMware envía actualizaciones a estas compilaciones regularmente, lo que incluye arreglos importantes y características nuevas. Estas compilaciones se envían a instalaciones de HCX on {{site.data.keyword.cloud}} automáticamente, incluidas instalaciones de HCX locales.
 
-Para aplicar los arreglos de mantenimiento enviados a su entorno, debe utilizar la Consola de administración de HCX Manager en el centro de datos local y la instancia de vCenter Server on {{site.data.keyword.cloud_notm}} con el paquete híbrido (Hybridity).
+Para aplicar los arreglos de mantenimiento enviados a su entorno, debe utilizar la Consola de administración de HCX Manager en el centro de datos local y la instancia de vCenter Server on {{site.data.keyword.cloud_notm}}.
 
 Si no ve una actualización de compilación que está esperando, si tiene problemas con HCX, o si desea que se envíe al sistema la última compilación de HCX enviada inmediatamente, abra una incidencia de soporte siguiendo los pasos de [Cómo ponerse en contacto con el soporte de IBM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
 
