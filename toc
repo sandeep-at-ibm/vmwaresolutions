@@ -245,6 +245,7 @@ IBM Cloud for VMware Solutions
         vmonic/faq_byol.md
         vcenter/vcenter_chg_impact.md
         vmonic/trbl_limitations.md
+        archiref/vcs/vmware-inventory-export.md
 
     {: .topicgroup}
     Troubleshooting
@@ -395,6 +396,22 @@ IBM Cloud for VMware Solutions
         archiref/vcsiks/vcsiks-arch-overview.md
         archiref/vcsiks/vcsiks-arch-overview-infrastructure.md
         archiref/vcsiks/vcsiks-overview-network.md
+
+    {: .topicgroup}
+    vCenter Server and Red Hat OpenShift architecture
+        archiref/vcs-openshift/vcs-openshift-intro.md
+        archiref/vcs-openshift/vcs-openshift-syscontext.md
+        archiref/vcs-openshift/vcs-openshift-redhat-arch.md
+        archiref/vcs-openshift/vcs-openshift-arch.md
+        archiref/vcs-openshift/vcs-openshift-sddc-infra.md
+        archiref/vcs-openshift/vcs-openshift-storage.md
+
+    {: .topicgroup}
+    vCenter Server and VMware Horizon 7 architecture
+        archiref/horizon/horizon-arch-ovw.md
+        archiref/horizon/horizon-deploy-arch.md
+        archiref/horizon/horizon-deploy-config.md
+        archiref/horizon/horizon-use-cases.md
 
     {: .topicgroup}
     VMware and Skate Advisor Concept Car guide
