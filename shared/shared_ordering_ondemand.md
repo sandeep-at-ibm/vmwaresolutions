@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-08-08"
+lastupdated: "2019-08-26"
 
 keywords: shared order resource, order on demand shared, order on demand resources
 
@@ -77,4 +77,5 @@ The virtual data center name *should* meet the following requirements. Naming re
 * [Overview of {{site.data.keyword.cloud_notm}} for VMware Solutions Shared](/docs/services/vmwaresolutions/services?topic=vmware-solutions-shared_overview)
 * [Ordering Shared Reserved](/docs/services/vmwaresolutions/services?topic=vmware-solutions-shared_ordering_reserved)
 * [Managing {{site.data.keyword.cloud_notm}} for VMware Solutions Shared](/docs/services/vmwaresolutions/services?topic=vmware-solutions-shared_managing)
+* [IBM Cloud for VMware Solutions Shared operations](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vcd-ops-guide)
 * [VMware vCloud Director](https://www.vmware.com/ca/products/vcloud-director.html){:external}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-13"
+lastupdated: "2019-09-06"
 
 keywords: VMware HCX standalone, HCX on-premises, tech specs HCX
 
@@ -31,7 +31,7 @@ A vCenter Server instance with HCX on {{site.data.keyword.cloud_notm}} is limite
 
 The HCX on {{site.data.keyword.cloud_notm}} components must be installed both on {{site.data.keyword.cloud_notm}} and in your on-premises vSphere environment. It is recommended that you install the HCX on {{site.data.keyword.cloud_notm}} service into your vCenter Server instance on {{site.data.keyword.cloud_notm}} before you install the on-premises HCX on {{site.data.keyword.cloud_notm}} instance. For more information, see [Considerations when you install HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-hcx_considerations#hcx_considerations-install).
 
-**Notes:**
+**Notes for HCX on {{site.data.keyword.cloud_notm}} installations:**
 
 * Before the service is installed in your environment, a check is performed against the available capacity of the default cluster in the environment to ensure that the service components can fit.
 * If the capacity check fails, the service is not installed and the service state is set to **Capacity Validation Failed** on the console. In addition, a console message with more details is displayed and you are notified by email.
@@ -81,9 +81,6 @@ Review the following considerations before you delete an HCX on {{site.data.keyw
 
    For more information, see [Deleting on-premises HCX on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_deletingserviceinstances).
 3. In the VMware vSphere Web Client, delete the on-premises HCX Manager.
-
-Only the virtual machines (VMs) that were deployed during the initial installation of the on-premises HCX on {{site.data.keyword.cloud_notm}} instances are deleted. Any node that is deployed after the installation will not be cleaned up.
-{:note}
 
 ## Related links
 {: #standalone_considerations-related}

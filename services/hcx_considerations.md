@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-14"
+lastupdated: "2019-09-03"
 
 keywords: VMware HCX, HCX, tech specs HCX
 
@@ -96,7 +96,6 @@ Before you install the HCX on {{site.data.keyword.cloud_notm}} service, you must
 This section does not apply to vCenter Server with Hybridity Bundle instances.
 
 A 12-month commitment is required when you order the HCX on {{site.data.keyword.cloud_notm}} service. You cannot delete the service until your 12-month period has expired. The 12-month commitment expiration date is available on the HCX on {{site.data.keyword.cloud_notm}} details page. For information about viewing service details, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure). The 12-month commitment and charging structure do not apply to existing vCenter Server with Hybridity Bundle instances.
-
 {:note}
 
 Review the following considerations before you remove the HCX on {{site.data.keyword.cloud_notm}} service:
@@ -110,6 +109,9 @@ Review the following considerations before you remove the HCX on {{site.data.key
    * If empty, the HCX-related resource pools are removed.
    * If empty, the HCX-related folders are removed.
    * The HCX management edge appliances are deleted.
+
+Only the virtual machines (VMs) that were deployed during the initial installation of the HCX on {{site.data.keyword.cloud_notm}} instances are deleted. Any node that is deployed after the installation will not be cleaned up.
+{:note}
 
 ## Related links
 {: #hcx_considerations-related}

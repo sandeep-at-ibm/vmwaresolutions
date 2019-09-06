@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-08-15"
+lastupdated: "2019-08-26"
 
 keywords: vmware solutions shared, get started shared, tech specs shared
 
@@ -123,4 +123,5 @@ When you create or deploy vApps or VMs, a storage policy is selected. There are 
 * [Ordering Shared On-demand](/docs/services/vmwaresolutions/services?topic=vmware-solutions-shared_ordering_ondemand)
 * [Ordering Shared Reserved](/docs/services/vmwaresolutions/services?topic=vmware-solutions-shared_ordering_reserved)
 * [Managing {{site.data.keyword.cloud_notm}} for VMware Solutions Shared](/docs/services/vmwaresolutions/services?topic=vmware-solutions-shared_managing)
+* [IBM Cloud for VMware Solutions Shared operations](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vcd-ops-guide)
 * [VMware vCloud Director](https://docs.vmware.com/en/vCloud-Director/9.7/com.vmware.vcloud.tenantportal.doc/GUID-74C9E10D-9197-43B0-B469-126FFBCB5121.html){:external}

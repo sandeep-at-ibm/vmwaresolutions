@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-08-08"
+lastupdated: "2019-08-26"
 
 keywords: manage shared resources, shared resources, shared resource tasks
 
@@ -139,6 +139,7 @@ Perform the delete operation from the Virtual Data Center details page or from t
 {: #shared_managing-related}
 
 * [Overview of {{site.data.keyword.vmwaresolutions_short}} Shared](/docs/services/vmwaresolutions/services?topic=vmware-solutions-shared_overview)
+* [IBM Cloud for VMware Solutions Shared operations](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vcd-ops-guide)
 * [Ordering Shared On-demand](/docs/services/vmwaresolutions/services?topic=vmware-solutions-shared_ordering_ondemand)
 * [Ordering Shared Reserved](/docs/services/vmwaresolutions/services?topic=vmware-solutions-shared_ordering_reserved)
 * [VMware vCloud Director](https://www.vmware.com/ca/products/vcloud-director.html){:external}

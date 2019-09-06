@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-13"
+lastupdated: "2019-09-03"
 
 keywords: vmware solutions data sheet, vmware solutions developer, vmware solutions video
 
@@ -52,6 +52,7 @@ Review the architecture of all the [Virtualization Platform Extensions](https://
 ### Digital Technical Engagement
 {: #additional_resources-dte}
 
+* [Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/demos/collection/Caveonix-RiskForesight-on-IBM-Cloud/){:external}
 * [VMware on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/){:external}
 * [Veeam on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/demos/collection/Veeam-on-IBM-Cloud){:external}
 * [Zerto on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/demos/collection/Zerto-on-IBM-Cloud){:external}

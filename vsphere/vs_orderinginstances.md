@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-06"
+lastupdated: "2019-08-22"
 
 keywords: vSphere order cluster, order vSphere, order vSphere cluster
 
@@ -103,6 +103,8 @@ Using individual license keys together with the combined license keys does not m
 
 ## Bare Metal Server settings
 {: #vs_orderinginstances-bare-metal-settings}
+
+When you size the capacity of your servers, consider your current requirements and include extra capacity to accommodate anticipated growth. For more information about sizing properly, see [Exporting VMware inventory](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vmware-inventory-export).
 
 ### Data center location
 {: #vs_orderinginstances-dc-location}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-15"
+lastupdated: "2019-08-22"
 
 keywords: vCenter Server order instance, order vCenter Server, order vCenter Server instance
 
@@ -108,7 +108,7 @@ For users who are not Business Partners, you can use the IBM-provided VMware lic
 ## Bare Metal Server settings
 {: #vc_orderinginstance-bare-metal-settings}
 
-Bare Metal settings are based on your data center selection and bare metal server configuration.
+Bare Metal settings are based on your data center selection and bare metal server configuration. When you size the capacity of your servers, consider your current requirements and include extra capacity to accommodate anticipated growth. For more information about sizing properly, see [Exporting VMware inventory](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vmware-inventory-export).
 
 ### Data center location
 {: #vc_orderinginstance-dc-location}
@@ -120,7 +120,7 @@ Select the {{site.data.keyword.CloudDataCent_notm}} where the instance is to be 
 
 When you select **Skylake**, you can choose the CPU and RAM combination for the Bare Metal Server according to your needs.
 
-| CPU model options        | RAM options       |
+| CPU model options | RAM options |
 |:------------- |:------------- |
 | Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
@@ -141,7 +141,6 @@ Cascade {{site.data.keyword.baremetal_short}} are available only for VMware vSph
 | Dual Intel Xeon Gold 5218 Processor / 32 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 6248 Processor / 40 cores total, 2.5 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
 {: caption="Table 3. Options for Cascade {{site.data.keyword.baremetal_short}}" caption-side="top"}
-
 
 ### SAP-certified
 {: #vc_orderinginstance-sap}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-16"
+lastupdated: "2019-09-03"
 
 keywords: vCenter Server add service, view service vCenter Server, remove service vCenter Server
 
@@ -44,7 +44,7 @@ The following table shows the services that are available to vCenter Server inst
 | [KMIP for VMware on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations) | 2.0  | N/A  |
 | [Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations) | 9.5u4b | V1.8 and later |
 | [VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_considerations#hcx_considerations) | 3.5.1-14222959 | V2.1 and later |
-| [VMware vRealize Operations and vRealize Log Insight on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vrops_overview) | 9.7 | V3.2 and later |
+| [VMware vRealize Operations and vRealize Log Insight on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vrops_overview) | vROps 7.5 and vRLI 4.8 | V3.2 and later |
 | [Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr) | 6.5 update 4 | V1.2 and later |
 {: caption="Table 1. Available services for vCenter Server instances" caption-side="top"}
 

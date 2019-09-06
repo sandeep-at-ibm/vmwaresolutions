@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-08-28"
 
 keywords: IBM Cloud for VMware Solutions, getting started, vmware solutions offerings, add-on services for vmwaresolutions, vmwaresolutions use cases
 
@@ -116,8 +116,7 @@ After you decide upon a deployment offering, which is managed as an instance in 
 
 For information about how to order an instance, see the following topics based on your selection of deployment offering:
 * [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [Ordering vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
-* [Ordering new vSphere clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
+* [Ordering vSphere clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
 * [Ordering NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)
 
 ## Step 4: Viewing the instance

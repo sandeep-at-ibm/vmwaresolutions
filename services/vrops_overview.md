@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-08-12"
+lastupdated: "2019-08-29"
 
 keywords: vRealize, vRealize info, tech specs vRealize
 
@@ -29,15 +29,15 @@ It also includes vRLI so that you can more quickly troubleshoot issues using log
 
 Like the other VMware components in the stack, you have the flexibility to bring your enterprise licenses to the cloud (per CPU or OSI) or to rent VMware licenses from {{site.data.keyword.cloud_notm}}.
 
-This service is available only to VMware vCenter Server on {{site.data.keyword.cloud_notm}} instances that are deployed in V3.2 and later releases. The current versions that are installed are vROps 7.6 and vRLI 4.6.
+This service is available only to VMware vCenter Server on {{site.data.keyword.cloud_notm}} instances that are deployed in V3.2 and later releases. The current versions that are installed are vROps 7.5 and vRLI 4.8.
 {:note}
 
 ## Technical specifications for VMware vRealize Operations and vRealize Log Insight on IBM Cloud
 {: #vrops_overview-specs}
 
 The following components are ordered and included in the VMware vRealize Operations and vRealize Log Insight on {{site.data.keyword.cloud_notm}} service:
-* VMware vRealize Operations (vROps) 7.6
-* VMware vRealize Log Insight (vRLI) 4.6
+* VMware vRealize Operations (vROps) 7.5
+* VMware vRealize Log Insight (vRLI) 4.8
 
 For information about the design, requirements and preconfigured management packs, see [Operations management architecture overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-opsmgmt-arch).
 
