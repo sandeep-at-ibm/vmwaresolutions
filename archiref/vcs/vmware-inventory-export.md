@@ -4,14 +4,14 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-08-21"
+lastupdated: "2019-09-10"
 
 ---
 
 # Exporting VMware inventory
 {: #vmware-inventory-export}
 
-You can export a vCenter resource inventory into CSV files. The contents of the exported CSV files is used to size a target IBM Cloud for VMware Solutions vCenter Server environment. It can also provide insights to the virtual machines in the source environment to help with migration planning.
+You can export a VMware vCenter resource inventory into CSV files. The contents of the exported CSV files is used to size a target IBM Cloud for VMware Solutions vCenter Server environment. It can also provide insights to the virtual machines in the source environment to help with migration planning.
 
 ## Exporting lists
 {: #export-lists}
@@ -25,7 +25,7 @@ You can export the contents of an inventory list into a CSV file.
 
     You can access list views of objects from the Global Inventory Lists and the search results.
 
-2. Click the Export icon at the lower right corner of a Global Inventory or Resources list view. From the vCenter user interface, pressing <CTRL><ALT><7> opens the navigator view.
+2. Click the Export icon at the lower right corner of a Global Inventory or Resources list view. To open the navigator view, press `CTRL+ALT+7`.
 
 3. Select each row to be listed in the CSV file for each of the following sections:
     - Global Inventory Lists -> Virtual Machines
