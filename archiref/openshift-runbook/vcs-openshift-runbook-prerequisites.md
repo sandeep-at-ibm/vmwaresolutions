@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-09-04"
+lastupdated: "2019-09-11"
 
 subcollection: vmware-solutions
 
@@ -52,7 +52,7 @@ Access the [OpenShift Infrastructure Providers page](https://cloud.redhat.com/op
 1. Download the installer.
 2. Download the Pull Secret.
 3. Download the Red Hat Enterprise Linux CoreOS (RHEL CoreOS) OVA image or download the OVA using curl:
-  ```curl -O https://mirror.openshift.com/pub/openshift-v4/dependencies/rhcos/4.1/latest/rhcos-4.1.0-x86_64-vmware.ova```
+  `curl -O https://mirror.openshift.com/pub/openshift-v4/dependencies/rhcos/4.1/latest/rhcos-4.1.0-x86_64-vmware.ova`.
 4. Download the command-line tools if you want to run the commands from a desktop or outside Bastion host.
 
 ## Downloading RHEL 7.6 ISO
@@ -83,15 +83,15 @@ govc will be used to upload the OVF and ISO to a datastore from the jump-server 
 
 If your jump-host or remote device uses Windows, then download from [Downloads](https://github.com/vmware/govmomi/releases){:external}.
 
-If your remote device uses macOS, then use the following terminal command; ```brew install govmomi/tap/govc```
+If your remote device uses macOS, then use the following terminal command; `brew install govmomi/tap/govc`.
 
 If you need to install Homebrew, then review [Installing Homebrew on a Mac](https://treehouse.github.io/installation-guides/mac/homebrew){:external}.
 
 If your jump-host or remote device uses Linux then:
 
 1. Download govc and make it executable:
-  ```curl -L https://github.com/vmware/govmomi/releases/download/v0.20.0/govc_linux_amd64.gz | gunzip > /usr/local/bin/govc```
-2. ```chmod +x /usr/local/bin/govc```
+  `curl -L https://github.com/vmware/govmomi/releases/download/v0.20.0/govc_linux_amd64.gz | gunzip > /usr/local/bin/govc`.
+2. `chmod +x /usr/local/bin/govc`.
 
 ## Uploading the OVA image to vCenter
 {: #openshift-runbook-runbook-prereq-cloud-ic4v}

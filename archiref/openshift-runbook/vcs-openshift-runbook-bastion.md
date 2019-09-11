@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-09-04"
+lastupdated: "2019-09-11"
 
 subcollection: vmware-solutions
 
@@ -93,7 +93,7 @@ For this step, you require your Red Hat subscription details:
 * Password
 * Subscription Pool
 
-After the bastion node has been deployed, you are required to register and subscribe it with the Red Hat public repositories. This is achieved by connecting to the bastion node by using SSH, from the jump-host or remote device, and getting root privileges with ```su ``` and issuing the following commands after replacing the Username, Password, and Pool with your variables.
+After the bastion node has been deployed, you are required to register and subscribe it with the Red Hat public repositories. This is achieved by connecting to the bastion node by using SSH, from the jump-host or remote device, and getting root privileges with `su` and issuing the following commands after replacing the Username, Password, and Pool with your variables.
 
 ```bash
 export rhel_subscription_username=<email address>
@@ -123,8 +123,8 @@ The deployment of the OpenShift nodes uses Ignition, and this process requires a
   enabled=1
   ```
 
-3. Press Esc to get back to command mode and then type ```:wq``` to save the file and exit vi.
-4. Use the ```yum``` command to install the NGINX package.
+3. Press Esc to get back to command mode and then type `:wq` to save the file and exit vi.
+4. Use the `yum` command to install the NGINX package.
 
   ```bash
   yum update
@@ -150,7 +150,7 @@ The deployment of the OpenShift nodes uses Ignition, and this process requires a
   }
   ```
 
-7. Press Esc to get back to command mode and then type ```:wq``` to save the file and exit vi.
+7. Press Esc to get back to command mode and then type `:wq` to save the file and exit vi.
 8. Run the following commands to start NGINX.
 
   ```bash

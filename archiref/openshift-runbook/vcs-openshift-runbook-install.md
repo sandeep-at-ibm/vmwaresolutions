@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-09-04"
+lastupdated: "2019-09-11"
 
 subcollection: vmware-solutions
 
@@ -40,7 +40,7 @@ For more information about installing the OpenShift user provider infrastructure
 
 Use the following table to document the parameters you will need for your deployment, examples are shown that match the deployment described in this document.
 
-* The SSH key can be copied after being displayed by using the command: ```cat /root/.ssh/id_rsa.pub```
+* The SSH key can be copied after being displayed by using the command: `cat /root/.ssh/id_rsa.pub`.
 * The pull secret collected from Red Hat. For more information, see [OpenShift Infrastructure Providers](https://cloud.redhat.com/openshift/install/vsphere/user-provisioned){:external}.
 
 | Parameters | Example | Your Deployment |
@@ -102,7 +102,7 @@ cd /opt/ocp41install
 vi install-config.yaml
 ```
 
-Type ```i``` to enter insert mode, paste the file contents. Press Esc, then type ```:wq``` to save the file and exit the vi editor.
+Type `i` to enter insert mode, paste the file contents. Press Esc, then type `:wq` to save the file and exit the vi editor.
 
 The OpenShift Installer will delete this file so to keep a copy use the following command:
 
@@ -163,10 +163,10 @@ The DNS IP details are hardcoded within the Terraform template. You must change 
 | DNS1 | 10.187.214.66 | |
 {: caption="Table 2. ignition.tf file parameters" caption-side="top"}
 
-1. In the SSH session to the bastion node, with root privileges, use the following command to open the file; ```vi /opt/ocpInstall/installer/upi/vsphere/machine/ignition.tf ```
-2. Type ```i``` to enter insert mode, and then scroll down to the DNS1 entry.
+1. In the SSH session to the bastion node, with root privileges, use the following command to open the file; `vi /opt/ocpInstall/installer/upi/vsphere/machine/ignition.tf `.
+2. Type `i` to enter insert mode, and then scroll down to the DNS1 entry.
 3. Update the IP address from 8.8.8.8 to match the deployment.
-4. Press Esc, then type ```:wq``` to save the file and exit the vi editor.
+4. Press Esc, then type `:wq` to save the file and exit the vi editor.
 
 The file should be similar to the following example:
 
@@ -256,8 +256,8 @@ Use the following table to document the parameters you will need for your deploy
 
 The ignition files can be copied after using the following commands to display the files:
 
-```cat /opt/ocp41install/master.ign```
-```cat /opt/ocp41install/worker.ign```
+`cat /opt/ocp41install/master.ign`
+`cat /opt/ocp41install/worker.ign`
 
 | Parameter | Example | Your Deployment |
 | --- | --- | --- |
@@ -315,19 +315,19 @@ END_OF_WORKER_IGNITION
 ```
 
 The terraform.tfvars file is created as follows:
-1. In the SSH session to the bastion node, with root privileges, use the following command to open the file; ```vi /opt/ocp41install/installer/upi/vsphere/terraform.tfvars```
-2. Type ```i``` to enter insert mode, paste the file contents.
-3. Press Esc, then type ```:wq``` to save the file and exit the vi editor.
+1. In the SSH session to the bastion node, with root privileges, use the following command to open the file; `vi /opt/ocp41install/installer/upi/vsphere/terraform.tfvars`.
+2. Type `i` to enter insert mode, paste the file contents.
+3. Press Esc, then type `:wq` to save the file and exit the vi editor.
 
 ### main.tf - Remove the DNS section
 {: #openshift-runbook-runbook-install-terraform-main}
 
 Remove the dns module section as the file expects to use AWS route 53 for DNS. The main.tf file is updated as follows:
-1. In the SSH session to the bastion node, with root privileges, use the following command to open the file; ```vi /opt/ocp41install/installer/upi/vsphere/main.tf```
-2. Type ```i``` to enter insert mode.
+1. In the SSH session to the bastion node, with root privileges, use the following command to open the file; `vi /opt/ocp41install/installer/upi/vsphere/main.tf`.
+2. Type `i` to enter insert mode.
 3. Scroll down the file until you reach the DNS module section.
 4. Delete the entire section shown in "File 3: Section to be removed".
-5. Press Esc, then type ```:wq``` to save the file and exit the vi editor.
+5. Press Esc, then type `:wq` to save the file and exit the vi editor.
 
 File 3: Section to be removed
 
@@ -416,7 +416,7 @@ INFO Access the OpenShift web-console here: https://console-openshift-console.op
 INFO Login to the console with user: kubeadmin, password: my-kube-password
 ```
 
-The password for the user that was created during installation can also be found in the auth subdirectory in the install-dir. It lets you log in through oc login and also gives you access to the web console. The URL for the console is ```https://console-openshift-console.<cluster>.<base_domain>```
+The password for the user that was created during installation can also be found in the auth subdirectory in the install-dir. It lets you log in through oc login and also gives you access to the web console. The URL for the console is `https://console-openshift-console.<cluster>.<base_domain>`.
 
 6. Run the following command from the */opt/ocp41install* directory:
 
