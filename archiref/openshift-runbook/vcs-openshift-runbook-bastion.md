@@ -112,7 +112,7 @@ subscription-manager repos --enable  rhel-server-rhscl-7-rpms
 
 The deployment of the OpenShift nodes uses Ignition, and this process requires an HTTP Server to be available to download the required configuration. This deployment uses an NGINX instance running on the bastion node. To install NGNIX, complete the following steps after you are connected to the bastion node and have root privileges:
 
-1. Use a text editor such as vi to create the following file ```vi /etc/yum.repos.d/nginx.repo```
+1. Use a text editor such as vi to create the following file `vi /etc/yum.repos.d/nginx.repo`.
 2. Type `i` to insert and paste the following information into the file:
 
   ```bash
