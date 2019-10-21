@@ -225,7 +225,7 @@ IBM Cloud for VMware Solutions
         shared/shared_ordering_reserved.md
         shared/shared_managing.md
         shared/shared_private_network.md
-        shared/shared_vcd-ops-guide.md
+        shared/vcd-ops-guide.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
